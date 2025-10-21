@@ -1,10 +1,10 @@
 # Creating a game using events
 
-Have you ever wondered how websites know when you click a button or type in a text box? That's the magic of event-driven programming! And what better way to learn this essential skill than by building something absolutely fun - a typing speed game that reacts to every keystroke you make.
+Have you ever wondered how websites know when you click a button or type in a text box? That's the magic of event-driven programming! What better way to learn this essential skill than by building something useful - a typing speed game that reacts to every keystroke you make.
 
-I'm genuinely excited to walk you through this project because you're going to see firsthand how web browsers "talk" to your JavaScript code. Every time you click, type, or move your mouse, the browser is sending little messages (we call them events) to your code, and you get to decide how to respond!
+You're going to see firsthand how web browsers "talk" to your JavaScript code. Every time you click, type, or move your mouse, the browser is sending little messages (we call them events) to your code, and you get to decide how to respond!
 
-By the time we're done here, you'll have built a real typing game that tracks your speed and accuracy. More importantly, you'll understand the fundamental concepts that power every interactive website you've ever used. Ready to make some magic happen? Let's jump in!
+By the time we're done here, you'll have built a real typing game that tracks your speed and accuracy. More importantly, you'll understand the fundamental concepts that power every interactive website you've ever used. Let's dive in!
 
 ## Pre-Lecture Quiz
 
@@ -14,15 +14,15 @@ By the time we're done here, you'll have built a real typing game that tracks yo
 
 Think about your favorite app or website - what makes it feel alive and responsive? It's all about how it reacts to what you do! Every tap, click, swipe, or keystroke creates what we call an "event," and that's where the real magic of web development happens.
 
-Here's the thing that makes programming for the web so interesting (and sometimes tricky): we never know when someone will click that button or start typing in a text box. They might click immediately, wait five minutes, or maybe never click at all! This unpredictability means we need to think differently about how we write our code.
+Here's what makes programming for the web so interesting: we never know when someone will click that button or start typing in a text box. They might click immediately, wait five minutes, or maybe never click at all! This unpredictability means we need to think differently about how we write our code.
 
-Instead of writing code that runs from top to bottom like a recipe, we write code that sits patiently waiting for something to happen. It's like having a really attentive waiter who's always ready to spring into action the moment you need something!
+Instead of writing code that runs from top to bottom like a recipe, we write code that sits patiently waiting for something to happen. It's similar to how telegraph operators in the 1800s would sit by their machines, ready to respond the moment a message came through the wire.
 
-So what exactly is an "event"? Simply put, it's just something that happens! When you click a button - that's an event. When you type a letter - that's an event. When you move your mouse - yep, another event.
+So what exactly is an "event"? Simply put, it's something that happens! When you click a button - that's an event. When you type a letter - that's an event. When you move your mouse - that's another event.
 
-The beautiful thing about event-driven programming is that we can set up our code to be like a good friend who's always listening. We create special functions called **event listeners** that wait patiently for specific things to happen, then jump into action when they do.
+Event-driven programming lets us set up our code to listen and respond. We create special functions called **event listeners** that wait patiently for specific things to happen, then spring into action when they do.
 
-Think of event listeners like having a doorbell for your code. You set up the doorbell (`addEventListener()`), tell it what sound to listen for (like a 'click' or 'keypress'), and then specify what should happen when someone rings it (your custom function). Pretty neat, right?
+Think of event listeners like having a doorbell for your code. You set up the doorbell (`addEventListener()`), tell it what sound to listen for (like a 'click' or 'keypress'), and then specify what should happen when someone rings it (your custom function).
 
 **Here's how event listeners work:**
 - **Listens** for specific user actions like clicks, keystrokes, or mouse movements
@@ -53,9 +53,9 @@ There are [dozens of events](https://developer.mozilla.org/docs/Web/Events) avai
 
 ## Creating the game
 
-Now that you understand how events work, let's put that knowledge into practice by building something engaging and useful. We'll create a typing speed game that demonstrates event handling while helping you develop a crucial developer skill.
+Now that you understand how events work, let's put that knowledge into practice by building something useful. We'll create a typing speed game that demonstrates event handling while helping you develop an important developer skill.
 
-We are going to create a game to explore how events work in JavaScript. Our game is going to test a player's typing skill, which is one of the most underrated skills all developers should have. We should all be practicing our typing! The general flow of the game will look like this:
+We're going to create a game to explore how events work in JavaScript. Our game will test a player's typing skill, which is one of the most underrated skills all developers should have. Fun fact: the QWERTY keyboard layout we use today was actually designed in the 1870s for typewriters - and good typing skills are still just as valuable for programmers today! The general flow of the game will look like this:
 
 ```mermaid
 flowchart TD
@@ -84,7 +84,7 @@ Let's build our game, and learn about events!
 
 ### File structure
 
-Before we start coding, let's get organized! I know it might seem like extra work now, but trust me - having a clean file structure from the beginning will save you tons of headaches later. Plus, it'll make you look like a pro! 😊
+Before we start coding, let's get organized! Having a clean file structure from the beginning will save you headaches later and make your project more professional. 😊
 
 We're going to keep things simple with just three files: `index.html` for our page structure, `script.js` for all our game logic, and `style.css` to make everything look great. This is the classic trio that powers most of the web!
 
@@ -121,9 +121,9 @@ code .
 
 ## Create the user interface
 
-Alright, let's build the stage where all our game action will happen! Think of this like designing the control panel for a spaceship - we need to make sure everything our players need is right where they expect it to be.
+Now let's build the stage where all our game action will happen! Think of this like designing the control panel for a spaceship - we need to make sure everything our players need is right where they expect it to be.
 
-Let's figure out what our game actually needs. If you were playing a typing game, what would you want to see on the screen? Here's what I'm thinking we'll need:
+Let's figure out what our game actually needs. If you were playing a typing game, what would you want to see on the screen? Here's what we'll need:
 
 | UI Element | Purpose | HTML Element |
 |------------|---------|-------------|
@@ -204,7 +204,7 @@ You should now see the page you created! Let's add some functionality.
 
 ## Add the CSS
 
-Now for one of my favorite parts - making things look good! You know how satisfying it is when an app gives you instant feedback? Like when a button changes color when you hover over it, or when a form field turns red if you've made a mistake? That's exactly what we're going to create.
+Now let's make things look good! Visual feedback has been crucial for user interfaces since the early days of computing. In the 1980s, researchers discovered that immediate visual feedback dramatically improves user performance and reduces errors. That's exactly what we're going to create.
 
 Our game needs to be crystal clear about what's happening. Players should immediately know which word they're supposed to type, and if they make a mistake, they should see it right away. Let's create some simple but effective styling:
 
@@ -236,9 +236,9 @@ Create a new file named `style.css` and add the following syntax.
 
 ## JavaScript
 
-Okay, here's where things get really fun! 🎉 We've got our HTML structure and our CSS styling, but right now our game is like a beautiful car without an engine. JavaScript is going to be that engine - it's what makes everything actually work and respond to what players do.
+Here's where things get interesting! 🎉 We've got our HTML structure and our CSS styling, but right now our game is like a beautiful car without an engine. JavaScript is going to be that engine - it's what makes everything actually work and respond to what players do.
 
-I love this part because you'll literally see your creation come to life. We're going to tackle this step by step so nothing feels overwhelming:
+This is where you'll see your creation come to life. We're going to tackle this step by step so nothing feels overwhelming:
 
 | Step | Purpose | What You'll Learn |
 |------|---------|------------------|
@@ -256,7 +256,7 @@ But first, create a new file named `script.js`.
 
 ### Add the constants
 
-Before we dive into the action, let's gather all our ingredients! Just like when you're cooking, it's so much easier when you have everything prepped and ready to go. This saves us from hunting around for things later and helps prevent those annoying typos that can drive you crazy.
+Before we dive into the action, let's gather all our resources! Just like how NASA mission control sets up all their monitoring systems before launch, it's much easier when you have everything prepared and ready to go. This saves us from hunting around for things later and helps prevent typos.
 
 Here's what we need to set up first:
 
@@ -322,9 +322,9 @@ Take a minute to watch a video on using `const`, `let` and `var`
 
 ### Add start logic
 
-This is it - the moment where everything clicks into place! 🚀 You're about to write your first real event listener, and I have to say, there's something pretty magical about the first time you see your code respond to a button click.
+This is where everything clicks into place! 🚀 You're about to write your first real event listener, and there's something quite satisfying about seeing your code respond to a button click.
 
-Think about it: somewhere out there, a player is going to click that "Start" button, and your code needs to be ready for them. We have no idea when they'll click it - could be immediately, could be after they grab a coffee - but when they do, boom! Your game springs to life.
+Think about it: somewhere out there, a player is going to click that "Start" button, and your code needs to be ready for them. We have no idea when they'll click it - could be immediately, could be after they grab a coffee - but when they do, your game springs to life.
 
 When the user clicks `start`, we need to select a quote, setup the user interface, and setup tracking for the current word and timing. Below is the JavaScript you'll need to add; we discuss it just after the script block.
 
@@ -387,9 +387,9 @@ document.getElementById('start').addEventListener('click', () => {
 
 ### Add typing logic
 
-Alright, here's where we tackle the heart of our game! Don't worry if this seems like a lot at first - I'm going to walk you through every piece, and by the end, you'll be amazed at how logical it all is.
+Here's where we tackle the heart of our game! Don't worry if this seems like a lot at first - we'll walk through every piece, and by the end, you'll see how logical it all is.
 
-What we're building here is pretty cool: every single time someone types a letter, our code is going to check what they typed, give them feedback, and decide what should happen next. It's like having a really fast, really patient teacher looking over their shoulder!
+What we're building here is quite sophisticated: every single time someone types a letter, our code is going to check what they typed, give them feedback, and decide what should happen next. It's similar to how early word processors like WordStar in the 1970s provided real-time feedback to typists.
 
 ```javascript
 // at the end of script.js
@@ -469,9 +469,9 @@ flowchart TD
 
 ## Test your application
 
-Holy moly, look what you've accomplished! 🎉 You just built a real, working typing game from scratch using event-driven programming. Seriously, take a moment to appreciate that - this is no small feat!
+Look what you've accomplished! 🎉 You just built a real, working typing game from scratch using event-driven programming. Take a moment to appreciate that - this is no small feat!
 
-Now comes the fun part - testing your creation! I always get a little nervous and excited at this stage. Will it work? Did I miss something? Here's the thing: if something doesn't work perfectly right away, that's totally normal. I've been doing this for years, and I still find bugs in my code all the time. It's all part of the process!
+Now comes the testing phase! Will it work as expected? Did we miss something? Here's the thing: if something doesn't work perfectly right away, that's completely normal. Even experienced developers find bugs in their code regularly. It's all part of the development process!
 
 Click on `start`, and start typing away! It should look a little like the animation we saw before.
 

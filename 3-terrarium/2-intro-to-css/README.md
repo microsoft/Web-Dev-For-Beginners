@@ -3,13 +3,13 @@
 ![Introduction to CSS](../../sketchnotes/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Remember how your HTML terrarium looked pretty... basic? Well, that's about to change completely! CSS is where we turn that plain structure into something absolutely gorgeous.
+Remember how your HTML terrarium looked quite basic? CSS is where we transform that plain structure into something visually appealing.
 
-If HTML is like building the frame of a house, then CSS is everything that makes it feel like home - the paint colors, the furniture arrangement, the lighting, even the way the rooms flow together. It's the difference between a bare construction site and a place you'd actually want to live.
+If HTML is like building the frame of a house, then CSS is everything that makes it feel like home - the paint colors, the furniture arrangement, the lighting, and how the rooms flow together. Think of how the Palace of Versailles started as a simple hunting lodge, but careful attention to decoration and layout transformed it into one of the world's most magnificent buildings.
 
-Today, we're going to transform your terrarium from "functional but boring" to "wow, did I really build that?" You'll learn how to position elements exactly where you want them, make things respond beautifully to different screen sizes, and create that polished, professional look that makes websites feel alive.
+Today, we'll transform your terrarium from functional to polished. You'll learn how to position elements precisely, make layouts respond to different screen sizes, and create the visual appeal that makes websites engaging.
 
-By the time we're done, you'll be amazed at what a few lines of CSS can do. Ready to add some serious style to your terrarium? Let's make it beautiful!
+By the end of this lesson, you'll see how strategic CSS styling can dramatically improve your project. Let's add some style to your terrarium.
 
 ## Pre-Lecture Quiz
 
@@ -17,9 +17,9 @@ By the time we're done, you'll be amazed at what a few lines of CSS can do. Read
 
 ## Getting Started with CSS
 
-Here's the thing about CSS - people sometimes think it's just about "making things pretty," but it's so much more! CSS is like being the director of a movie. You control not just how everything looks, but how it moves, how it responds when people interact with it, and how it adapts to different situations.
+CSS is often thought of as just "making things pretty," but it serves a much broader purpose. CSS is like being the director of a movie - you control not just how everything looks, but how it moves, responds to interaction, and adapts to different situations.
 
-The best part? Modern CSS is incredibly smart. You can write code that automatically adjusts your layout for phones, tablets, and desktop computers. You can create smooth animations that guide users' attention exactly where you want it. It's pretty magical when you see it all come together!
+Modern CSS is remarkably capable. You can write code that automatically adjusts layouts for phones, tablets, and desktop computers. You can create smooth animations that guide users' attention where needed. The results can be quite impressive when everything works together.
 
 > 💡 **Pro Tip**: CSS is constantly evolving with new features and capabilities. Always check [CanIUse.com](https://caniuse.com) to verify browser support for newer CSS features before using them in production projects.
 
@@ -55,9 +55,9 @@ In your terrarium folder, create a new file called `style.css`, then link it in 
 
 ## Understanding the CSS Cascade
 
-Ever wondered why CSS is called "Cascading" Style Sheets? It's because styles literally cascade down like a waterfall, and sometimes they bump into each other!
+Ever wondered why CSS is called "Cascading" Style Sheets? Styles cascade down like a waterfall, and sometimes they conflict with each other.
 
-Imagine you're getting dressed and someone gives you three different instructions: "wear something blue," "wear something red," and "wear that specific red shirt." Your brain automatically knows the most specific instruction wins - you'd wear the red shirt. CSS works the same way, and once you understand this "pecking order," debugging becomes way less frustrating.
+Consider how military command structures work - a general order might say "all troops wear green," but a specific order to your unit might say "wear dress blues for the ceremony." The more specific instruction takes precedence. CSS follows similar logic, and understanding this hierarchy makes debugging much more manageable.
 
 ### Experimenting with Cascade Priority
 
@@ -96,9 +96,9 @@ h1 {
 
 ## CSS Inheritance in Action
 
-CSS inheritance is just like genetics - kids inherit certain traits from their parents! If you set the font family on the body element, all the text inside automatically gets that same font. It's like saying "everyone in this family has brown eyes" and not having to specify it for each person individually.
+CSS inheritance works like genetics - elements inherit certain properties from their parent elements. If you set the font family on the body element, all text inside automatically uses that same font. It's similar to how the Habsburg family's distinctive jawline appeared across generations without being specified for each individual.
 
-But here's the catch - not everything gets inherited. Text styles like fonts and colors? Yes. Layout stuff like margins and borders? Nope. It's kind of like how kids might inherit eye color but not their parent's choice of clothing!
+However, not everything gets inherited. Text styles like fonts and colors do inherit, but layout properties like margins and borders do not. Just as children might inherit physical traits but not their parents' fashion choices.
 
 ### Observing Font Inheritance
 
@@ -128,9 +128,9 @@ Open your browser's developer tools (F12), navigate to the Elements tab, and ins
 
 ## Mastering CSS Selectors
 
-Think of CSS selectors as your way of pointing at things and saying "style THIS one!" They're like being super specific when giving directions - instead of saying "the house," you might say "the blue house with the red door on Maple Street."
+CSS selectors are your way of targeting specific elements for styling. They work like giving precise directions - instead of saying "the house," you might say "the blue house with the red door on Maple Street."
 
-CSS gives you different ways to be specific, and choosing the right one is like choosing the right tool for the job. Sometimes you want to paint every door in the neighborhood the same color, and sometimes you just want to paint one specific door.
+CSS provides different ways to be specific, and choosing the right selector is like choosing the appropriate tool for the task. Sometimes you need to style every door in the neighborhood, and sometimes just one specific door.
 
 ### Element Selectors (Tags)
 
@@ -279,9 +279,9 @@ Now add these styles to your `style.css` file:
 
 ## Understanding CSS Positioning
 
-CSS positioning is like being the stage director for a play - you get to tell every actor exactly where to stand and how to move around the stage. Some actors follow the script and stand in normal formation, while others might need to be positioned in very specific spots for dramatic effect.
+CSS positioning is like being the stage director for a play - you direct where every actor stands and how they move around the stage. Some actors follow the standard formation, while others need specific positioning for dramatic effect.
 
-Once you get the hang of positioning, you'll feel like you have superpowers. Want that navigation bar to stick to the top while people scroll? Easy. Want to create a tooltip that appears exactly where someone clicks? You've got this!
+Once you understand positioning, many layout challenges become manageable. Need a navigation bar that stays at the top while users scroll? Positioning handles that. Want a tooltip that appears at a specific location? That's positioning too.
 
 ### The Five Position Values
 
@@ -332,9 +332,9 @@ Our terrarium uses a strategic combination of positioning types to create the de
 
 ## Building the Terrarium with CSS
 
-Okay, here's where things get really fun - we're going to build a glass jar using nothing but CSS! No images, no fancy graphics software, just pure code magic.
+Now we'll build a glass jar using only CSS - no images or graphics software required.
 
-It's kind of mind-blowing when you realize you can create realistic-looking glass, shadows, and depth effects using just some clever positioning and transparency tricks. By the end of this, you'll look at websites completely differently - you'll start seeing the CSS "building blocks" behind every design!
+Creating realistic-looking glass, shadows, and depth effects using positioning and transparency demonstrates CSS's visual capabilities. This technique mirrors how architects in the Bauhaus movement used simple geometric forms to create complex, beautiful structures. Once you understand these principles, you'll recognize the CSS techniques behind many web designs.
 
 ### Creating the Glass Jar Components
 
@@ -430,9 +430,9 @@ Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/int
 
 ## 🚀 Challenge: Adding Glass Reflections
 
-Want to take your terrarium from "pretty good" to "absolutely stunning"? Let's add some glass reflections that'll make it look like you could actually reach out and touch it!
+Ready to enhance your terrarium with realistic glass reflections? This technique will add depth and realism to the design.
 
-This is where you get to play artist and scientist at the same time. You'll be creating those little highlights that trick your brain into seeing real glass. Here's what you're aiming for:
+You'll create subtle highlights that simulate how light reflects off glass surfaces. This approach is similar to how Renaissance painters like Jan van Eyck used light and reflection to make painted glass appear three-dimensional. Here's what you're aiming for:
 
 ![finished terrarium](./images/terrarium-final.png)
 
@@ -449,13 +449,13 @@ This is where you get to play artist and scientist at the same time. You'll be c
 
 ## Expand Your CSS Knowledge
 
-Don't worry if CSS feels overwhelming at first - everyone goes through that "how is this even possible?" phase! The secret is that once you understand the core concepts (which you're learning right now), everything else starts clicking into place.
+CSS can feel complex initially, but understanding these core concepts provides a solid foundation for more advanced techniques.
 
-**Your next CSS adventures:**
-- **Flexbox** - makes aligning things so much easier (seriously, you'll wonder how you lived without it)
-- **CSS Grid** - like having superpowers for creating complex layouts
-- **CSS Variables** - because nobody likes repeating the same color code 47 times
-- **Responsive design** - making your sites look great on everything from phones to giant monitors
+**Your next CSS learning areas:**
+- **Flexbox** - simplifies alignment and distribution of elements
+- **CSS Grid** - provides powerful tools for creating complex layouts
+- **CSS Variables** - reduces repetition and improves maintainability
+- **Responsive design** - ensures sites work well across different screen sizes
 
 ### Interactive Learning Resources
 

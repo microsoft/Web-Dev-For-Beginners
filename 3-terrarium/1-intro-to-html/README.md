@@ -5,9 +5,9 @@
 
 HTML, or HyperText Markup Language, is the foundation of every website you've ever visited. Think of HTML as the skeleton that gives structure to web pages – it defines where content goes, how it's organized, and what each piece represents. While CSS will later "dress up" your HTML with colors and layouts, and JavaScript will bring it to life with interactivity, HTML provides the essential structure that makes everything else possible.
 
-In this exciting lesson, you'll create the HTML structure for a beautiful virtual terrarium interface. This hands-on project will teach you fundamental HTML concepts while building something visually engaging. You'll learn how to organize content using semantic elements, work with images, and create the foundation for an interactive web application.
+In this lesson, you'll create the HTML structure for a virtual terrarium interface. This hands-on project will teach you fundamental HTML concepts while building something visually engaging. You'll learn how to organize content using semantic elements, work with images, and create the foundation for an interactive web application.
 
-By the end of this lesson, you'll have a working HTML page displaying plant images in organized columns, ready for styling in the next lesson. Don't worry if it looks basic at first – that's exactly what HTML should do before CSS adds the visual polish. Let's dive in and start building your first web project!
+By the end of this lesson, you'll have a working HTML page displaying plant images in organized columns, ready for styling in the next lesson. Don't worry if it looks basic at first – that's exactly what HTML should do before CSS adds the visual polish.
 
 ## Pre-Lecture Quiz
 
@@ -136,7 +136,7 @@ Update your HTML file to include the `<body>` element:
 - **Creates** an empty body ready for your visible content
 - **Follows** modern web development best practices
 
-Now you're ready to add the visible elements of your terrarium! We'll use `<div>` elements as containers to organize different sections of content, and `<img>` elements to display the plant images.
+Now you're ready to add the visible elements of your terrarium. We'll use `<div>` elements as containers to organize different sections of content, and `<img>` elements to display the plant images.
 
 ### Working with Images and Layout Containers
 
@@ -213,7 +213,7 @@ Now add the plant images organized in two columns between your `<body></body>` t
 - **Assigns** unique IDs to each plant image for JavaScript interaction later
 - **Includes** proper file paths pointing to the images folder
 
-> 🤔 **Consider This**: Notice that all images currently have the same alt text "plant". This isn't ideal for accessibility! Screen reader users would hear "plant" repeated 14 times without knowing which specific plant each image shows. Can you think of better, more descriptive alt text for each image?
+> 🤔 **Consider This**: Notice that all images currently have the same alt text "plant". This isn't ideal for accessibility. Screen reader users would hear "plant" repeated 14 times without knowing which specific plant each image shows. Can you think of better, more descriptive alt text for each image?
 
 > 📝 **HTML Element Types**: `<div>` elements are "block-level" and take up full width, while `<span>` elements are "inline" and only take up necessary width. What do you think would happen if you changed all these `<div>` tags to `<span>` tags?
 
@@ -249,7 +249,7 @@ Let's add a proper heading to your terrarium page. Insert this line right after 
 | Button | `<button>Click me</button>` | `<span onclick="...">Click me</span>` |
 | Article content | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
-> 🎥 **See It in Action**: Watch [how screen readers interact with web pages](https://www.youtube.com/watch?v=OUDV1gqs9GA) to understand why semantic markup is crucial for accessibility. Notice how proper HTML structure helps users navigate efficiently!
+> 🎥 **See It in Action**: Watch [how screen readers interact with web pages](https://www.youtube.com/watch?v=OUDV1gqs9GA) to understand why semantic markup is crucial for accessibility. Notice how proper HTML structure helps users navigate efficiently.
 
 ## Creating the Terrarium Container
 
@@ -284,7 +284,7 @@ Insert this markup above the last `</div>` tag (before the closing tag of the pa
 
 ---
 
-## GitHub Copilot Agent Challenge 🚀
+## GitHub Copilot Agent Challenge
 
 Use the Agent mode to complete the following challenge:
 
@@ -294,11 +294,11 @@ Use the Agent mode to complete the following challenge:
 
 Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
 
-## 🚀 Explore HTML History Challenge
+## Explore HTML History Challenge
 
 **Learning About Web Evolution**
 
-HTML has evolved significantly since its creation in the 1990s. Some older tags like `<marquee>` are now deprecated because they don't work well with modern accessibility standards and responsive design principles.
+HTML has evolved significantly since Tim Berners-Lee created the first web browser at CERN in 1990. Some older tags like `<marquee>` are now deprecated because they don't work well with modern accessibility standards and responsive design principles.
 
 **Try This Experiment:**
 1. Temporarily wrap your `<h1>` title in a `<marquee>` tag: `<marquee><h1>My Terrarium</h1></marquee>`

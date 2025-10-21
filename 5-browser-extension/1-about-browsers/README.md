@@ -9,19 +9,17 @@
 
 ### Introduction
 
-Have you ever wished you could add a custom button to your browser or automatically fill in forms with your information? That's exactly what browser extensions do! They're like having a personal assistant built right into your browser, ready to help with whatever you need.
+Browser extensions are mini-applications that enhance your web browsing experience. Like Tim Berners-Lee's original vision of an interactive web, extensions extend the browser's capabilities beyond simple document viewing. From password managers that keep your accounts secure to color pickers that help designers grab perfect shades, extensions solve everyday browsing challenges.
 
-Browser extensions are mini-applications that live inside your browser - think of them as your browser's superpowers. From password managers that keep your accounts secure to color pickers that help designers grab perfect shades, extensions make your web browsing so much more efficient and enjoyable.
+Before we build your first extension, let's understand how browsers work. Just as Alexander Graham Bell needed to understand sound transmission before inventing the telephone, knowing browser fundamentals will help you create extensions that integrate seamlessly with existing browser systems.
 
-Before we jump into building your very own extension, let's take a peek under the hood to see how browsers actually work. Don't worry - this isn't going to be a boring technical deep-dive! Understanding these basics will help you build extensions that work smoothly and make sense to your users.
-
-By the end of this lesson, you'll not only understand how browsers tick, but you'll also have started building your first real extension. Pretty exciting, right? Let's get started!
+By the end of this lesson, you'll understand browser architecture and have started building your first extension.
 
 ## Understanding Web Browsers
 
-Let's start with the basics - what exactly is a browser, and how does it work its magic? Understanding this will help you build extensions that feel natural and work seamlessly with what your browser is already doing.
+A web browser is essentially a sophisticated document interpreter. When you type "google.com" into the address bar, the browser performs a complex series of operations - requesting content from servers worldwide, then parsing and rendering that code into the interactive web pages you see.
 
-Think of your web browser as a super-smart translator. When you type "google.com" into the address bar, your browser doesn't just magically know what to show you. It's actually doing a lot of behind-the-scenes work - like asking servers around the world for content, then translating all that code into the beautiful, interactive web pages you see every day.
+This process mirrors how the first web browser, WorldWideWeb, was designed by Tim Berners-Lee in 1990 to make hyperlinked documents accessible to everyone.
 
 ✅ **A little history**: The first browser was called 'WorldWideWeb' and was created by Sir Timothy Berners-Lee in 1990.
 
@@ -30,7 +28,7 @@ Think of your web browser as a super-smart translator. When you type "google.com
 
 ### How Browsers Process Web Content
 
-Ever wonder what happens in those few seconds between hitting Enter and seeing a webpage? Let's follow that journey together - it's actually pretty fascinating!
+The process between entering a URL and seeing a webpage involves several coordinated steps that happen within seconds:
 
 ```mermaid
 sequenceDiagram
@@ -56,7 +54,7 @@ sequenceDiagram
 
 ### Browser Core Features
 
-Now here's where it gets interesting for us extension builders! Modern browsers come packed with features that we can tap into to make our extensions awesome:
+Modern browsers provide numerous features that extension developers can leverage:
 
 | Feature | Purpose | Extension Opportunities |
 |---------|---------|------------------------|
@@ -74,7 +72,7 @@ Now here's where it gets interesting for us extension builders! Modern browsers 
 
 ### Cross-Browser Development Considerations
 
-Here's something that might surprise you - not all browsers are created equal! Each one has its own personality, if you will. Chrome might handle something differently than Firefox, and that's totally normal. As we build extensions together, we'll learn to work with these differences rather than fight against them.
+Different browsers implement standards with slight variations, similar to how different programming languages might handle the same algorithm differently. Chrome, Firefox, and Safari each have unique characteristics that developers must consider during extension development.
 
 > 💡 **Pro Tip**: Use [caniuse.com](https://www.caniuse.com) to check which web technologies are supported across different browsers. This is invaluable when planning your extension's features!
 
@@ -88,9 +86,9 @@ Here's something that might surprise you - not all browsers are created equal! E
 
 ## Understanding Browser Extensions
 
-You know those little moments when you're browsing and think "I wish I could just..."? Maybe you want to quickly save an article for later, or grab that perfect color from a website, or translate a funny meme your friend sent you. That's exactly where browser extensions shine!
+Browser extensions solve common web browsing challenges by adding functionality directly to the browser interface. Rather than requiring separate applications or complex workflows, extensions provide immediate access to tools and features.
 
-Extensions are like having a toolbox right inside your browser. Instead of opening separate apps or switching between windows, everything you need is just a click away. They're designed to solve those everyday web browsing frustrations and make your online life smoother.
+This concept mirrors how early computer pioneers like Douglas Engelbart envisioned augmenting human capabilities with technology - extensions augment your browser's basic functionality.
 
 **Popular extension categories and their benefits:**
 - **Productivity Tools**: Task managers, note-taking apps, and time trackers that help you stay organized
@@ -102,9 +100,7 @@ Extensions are like having a toolbox right inside your browser. Instead of openi
 
 ## Installing and Managing Extensions
 
-Before we start building, let's get familiar with how extensions actually get into your browser. Think of this as learning the neighborhood before you move in - it'll help you understand what your users will experience when they install your creation!
-
-The good news? Installing extensions is pretty straightforward across all browsers. There are a few small differences here and there, but once you've done it in one browser, you'll feel comfortable in any of them.
+Understanding the extension installation process helps you anticipate the user experience when people install your extension. The installation process is standardized across modern browsers, with minor variations in interface design.
 
 ![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](images/install-on-edge.png)
 
@@ -146,13 +142,13 @@ npm run build
 
 ## Building Your Carbon Footprint Extension
 
-Ready to build something cool? We're going to create a browser extension that shows you the carbon footprint of your region's energy use. Not only will this teach you all the essential extension development skills, but you'll also end up with something that's actually meaningful and useful!
+We'll create a browser extension that displays the carbon footprint of your region's energy use. This project demonstrates essential extension development concepts while creating a practical tool for environmental awareness.
 
-I love this project because it combines learning with purpose. Every time you use your extension, you'll get a little reminder about your environmental impact. Plus, you might be surprised by what you discover about your local energy sources - I know I was when I first built this!
+This approach follows the principle of "learning by doing" that has proven effective since John Dewey's educational theories - combining technical skills with meaningful real-world applications.
 
 ### Project Requirements
 
-Before we dive into the fun stuff, let's gather everything we need. Don't worry - it's not as complicated as it might look!
+Before beginning development, let's gather the required resources and dependencies:
 
 **Required API Access:**
 - **[CO2 Signal API key](https://www.co2signal.com/)**: Enter your email address to receive your free API key
@@ -166,7 +162,7 @@ Before we dive into the fun stuff, let's gather everything we need. Don't worry 
 
 ### Understanding the Project Structure
 
-Let's take a quick tour of our extension's folder structure. Think of this as getting familiar with your new workspace - once you know where everything lives, development becomes so much smoother!
+Understanding the project structure helps organize development work efficiently. Like how the Library of Alexandria was organized for easy knowledge retrieval, a well-structured codebase makes development more efficient:
 
 ```
 project-root/
@@ -192,9 +188,9 @@ project-root/
 
 ## Creating the Extension Interface
 
-Time for the exciting part - building what users will actually see and interact with! We're going to create two simple but effective screens that work together beautifully.
+Now we'll build the user interface components. The extension uses a two-screen approach: a configuration screen for initial setup and a results screen for data display.
 
-Think of it like this: the first screen is where users tell your extension about themselves (like their region and API key), and the second screen is where the magic happens - showing them their carbon footprint data. It's a simple, logical flow that won't confuse anyone.
+This follows the progressive disclosure principle used in interface design since the early days of computing - revealing information and options in a logical sequence to avoid overwhelming users.
 
 ### Extension Views Overview
 
@@ -206,7 +202,7 @@ Think of it like this: the first screen is where users tell your extension about
 
 ### Building the Configuration Form
 
-Let's start with the setup form - this is where users will enter their information the first time they use your extension. The cool thing is, once they've set it up, they won't need to do this again!
+The setup form collects user configuration data during initial use. Once configured, this information persists in browser storage for future sessions.
 
 In the `/dist/index.html` file, add this form structure:
 
@@ -284,13 +280,13 @@ At this point, you can test your extension:
 3. **Verify** that the form displays correctly and looks professional
 4. **Check** that all form elements are properly aligned and functional
 
-**Look at what you've accomplished:**
+**What you've accomplished:**
 - **Built** the foundational HTML structure for your extension
-- **Created** both configuration and results interfaces that actually look professional
-- **Set up** a modern development workflow (you're basically a pro now!)
-- **Prepared** everything for the next phase where we'll bring it to life with JavaScript
+- **Created** both configuration and results interfaces with proper semantic markup
+- **Set up** a modern development workflow using industry-standard tools
+- **Prepared** the foundation for adding interactive JavaScript functionality
 
-Seriously, take a moment to appreciate what you've just done! You've taken the first major step in browser extension development. The hardest part - getting started - is behind you. In our next lesson, we'll add the JavaScript magic that will make your extension truly interactive and useful. You're going to love seeing it come together!
+You've completed the first phase of browser extension development. Like how the Wright brothers first needed to understand aerodynamics before achieving flight, understanding these foundational concepts prepares you for building more complex interactive features in the next lesson.
 
 ## GitHub Copilot Agent Challenge 🚀
 

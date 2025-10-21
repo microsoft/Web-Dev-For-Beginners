@@ -1,10 +1,10 @@
 # Browser Extension Project Part 3: Learn about Background Tasks and Performance
 
-Ever wonder what makes some browser extensions feel snappy and responsive while others seem sluggish? The secret lies in what's happening behind the scenes! While users click around your extension's interface, there's a whole world of background processes quietly managing data fetching, icon updates, and system resources.
+Ever wonder what makes some browser extensions feel snappy and responsive while others seem sluggish? The secret lies in what's happening behind the scenes. While users click around your extension's interface, there's a whole world of background processes quietly managing data fetching, icon updates, and system resources.
 
-This is our final lesson in the browser extension series, and we're going to make your carbon footprint tracker really shine. You'll add those satisfying dynamic icon updates and learn how to spot performance issues before they become problems. Think of it as giving your extension a turbo boost!
+This is our final lesson in the browser extension series, and we're going to make your carbon footprint tracker work smoothly. You'll add dynamic icon updates and learn how to spot performance issues before they become problems. It's like tuning a race car - small optimizations can make a huge difference in how everything runs.
 
-By the time we're done, you'll not only have a polished extension that works beautifully, but you'll also understand the performance principles that separate good web apps from great ones. Ready to make your extension lightning-fast? Let's jump in!
+By the time we're done, you'll have a polished extension and understand the performance principles that separate good web apps from great ones. Let's dive into the world of browser optimization.
 
 ## Pre-Lecture Quiz
 
@@ -12,23 +12,23 @@ By the time we're done, you'll not only have a polished extension that works bea
 
 ### Introduction
 
-Look how far you've come! In our previous lessons, you built a form, connected it to an API, and even tackled asynchronous data fetching. Your extension is looking pretty good already, isn't it?
+In our previous lessons, you built a form, connected it to an API, and tackled asynchronous data fetching. Your extension is taking shape nicely.
 
-Now we need to add the finishing touches - like making that extension icon change colors based on the carbon data. This is the perfect moment to peek under the hood and see how browsers actually handle these background tasks. You'll be amazed at what's happening behind the scenes every time your code runs!
+Now we need to add the finishing touches - like making that extension icon change colors based on the carbon data. This reminds me of how NASA had to optimize every system on the Apollo spacecraft. They couldn't afford any wasted cycles or memory because lives depended on performance. While our browser extension isn't quite that critical, the same principles apply - efficient code creates better user experiences.
 
 ## Web Performance Basics
 
-Here's something cool: when your code runs efficiently, people can actually *feel* the difference! You know that satisfying moment when a page loads instantly or an animation flows perfectly? That's good performance at work, and you can learn to create those "wow" moments too.
+When your code runs efficiently, people can actually *feel* the difference. You know that moment when a page loads instantly or an animation flows smoothly? That's good performance at work.
 
-Performance isn't just about speed - it's about making web experiences that feel smooth and natural instead of clunky and frustrating. Let's explore the detective tools that help you figure out what's slowing things down, and then we'll use these insights to make your browser extension absolutely fly.
+Performance isn't just about speed - it's about making web experiences that feel natural instead of clunky and frustrating. Back in the early days of computing, Grace Hopper famously kept a nanosecond (a piece of wire about a foot long) on her desk to show how far light travels in one billionth of a second. It was her way of explaining why every microsecond matters in computing. Let's explore the detective tools that help you figure out what's slowing things down.
 
 > "Website performance is about two things: how fast the page loads, and how fast the code on it runs." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
 The topic of how to make your websites blazingly fast on all kinds of devices, for all kinds of users, in all kinds of situations, is unsurprisingly vast. Here are some points to keep in mind as you build either a standard web project or a browser extension.
 
-The first step in making your site blazing fast? You need to see what's actually happening under the hood! Fortunately, your browser comes with amazing detective tools built right in.
+The first step in optimizing your site is understanding what's actually happening under the hood. Fortunately, your browser comes with powerful detective tools built right in.
 
-To open Developer Tools in Edge, just click those three dots in the top right corner, then go to More Tools > Developer Tools. Or if you're feeling speedy, use `Ctrl` + `Shift` + `I` on Windows or `Option` + `Command` + `I` on Mac. Once you're there, click on the Performance tab - this is where the magic happens!
+To open Developer Tools in Edge, click those three dots in the top right corner, then go to More Tools > Developer Tools. Or use the keyboard shortcut: `Ctrl` + `Shift` + `I` on Windows or `Option` + `Command` + `I` on Mac. Once you're there, click on the Performance tab - this is where you'll do your investigation.
 
 **Here's your performance detective toolkit:**
 - **Open** Developer Tools (you'll use these constantly as a developer!)
@@ -36,7 +36,7 @@ To open Developer Tools in Edge, just click those three dots in the top right co
 - **Hit** that Record button and watch your page in action
 - **Study** the results to spot what's slowing things down
 
-Let's try this out! Open a website (Microsoft.com works great for this) and click that 'Record' button. Now refresh the page and watch the profiler capture everything that happens. When you stop recording, you'll see a fascinating breakdown of how the browser 'scripts', 'renders', and 'paints' the site. It's like watching a time-lapse of your webpage coming to life!
+Let's try this out. Open a website (Microsoft.com works well for this) and click that 'Record' button. Now refresh the page and watch the profiler capture everything that happens. When you stop recording, you'll see a detailed breakdown of how the browser 'scripts', 'renders', and 'paints' the site. It reminds me of how mission control monitors every system during a rocket launch - you get real-time data on exactly what's happening and when.
 
 ![Edge profiler](./images/profiler.png)
 
@@ -58,15 +58,15 @@ Check the Event Log pane to see if any event took longer than 15 ms:
 
 ## What to Look For When Profiling
 
-Running the profiler is just the beginning - the real skill is knowing what those colorful charts are actually telling you! Don't worry, you'll get the hang of reading them. Experienced developers have learned to spot the warning signs before they become full-blown problems.
+Running the profiler is just the beginning - the real skill is knowing what those colorful charts are actually telling you. Don't worry, you'll get the hang of reading them. Experienced developers have learned to spot the warning signs before they become full-blown problems.
 
-Let's talk about the usual suspects - the performance troublemakers that love to sneak into web projects and cause headaches later. Catching these early will save you (and your users) a lot of frustration!
+Let's talk about the usual suspects - the performance troublemakers that tend to sneak into web projects. Like how Marie Curie had to carefully monitor radiation levels in her lab, we need to watch for certain patterns that indicate trouble brewing. Catching these early will save you (and your users) a lot of frustration.
 
-**Asset sizes**: Here's something interesting - websites have been getting "heavier" over the years, and a lot of that extra weight comes from images. It's like we've been stuffing more and more into our digital suitcases!
+**Asset sizes**: Websites have been getting "heavier" over the years, and a lot of that extra weight comes from images. It's like we've been stuffing more and more into our digital suitcases.
 
-✅ Check out the [Internet Archive](https://httparchive.org/reports/page-weight) to see how dramatically page sizes have grown over time - it's pretty eye-opening!
+✅ Check out the [Internet Archive](https://httparchive.org/reports/page-weight) to see how page sizes have grown over time - it's quite revealing.
 
-**Here's how to keep your assets lean and mean:**
+**Here's how to keep your assets optimized:**
 - **Compress** those images! Modern formats like WebP can cut file sizes dramatically
 - **Serve** the right image size for each device - no need to send huge desktop images to phones
 - **Minify** your CSS and JavaScript - every byte counts
@@ -94,9 +94,9 @@ Now that you have an idea of how the browser renders the assets you send to it, 
 
 ### Create a function to calculate color
 
-Time for the fun part! We're going to create a function that turns boring numbers into meaningful colors. Think of it like a traffic light system - green for clean energy, red for high carbon intensity.
+Now we'll create a function that turns numerical data into meaningful colors. Think of it like a traffic light system - green for clean energy, red for high carbon intensity.
 
-This function will take the CO2 data from our API and figure out what color best represents the environmental impact. Pretty cool, right? Let's add this to `/src/index.js`, right after those `const` variables we set up earlier:
+This function will take the CO2 data from our API and determine what color best represents the environmental impact. It's similar to how scientists use color-coding in heat maps to visualize complex data patterns - from ocean temperatures to star formation. Let's add this to `/src/index.js`, right after those `const` variables we set up earlier:
 
 ```javascript
 function calculateColor(value) {
@@ -148,7 +148,7 @@ The `chrome.runtime` [API](https://developer.chrome.com/extensions/runtime) is l
 
 ### Set a default icon color
 
-Before we start fetching real data, let's give our extension a starting point. Nobody likes staring at a blank or broken-looking icon! We'll start with a friendly green color so users know the extension is working right from the get-go.
+Before we start fetching real data, let's give our extension a starting point. Nobody likes staring at a blank or broken-looking icon. We'll start with a green color so users know the extension is working from the moment they install it.
 
 In your `init()` function, let's set up that default green icon:
 
@@ -168,7 +168,7 @@ chrome.runtime.sendMessage({
 - **Ensures** users see a functional extension before data loads
 ### Call the function, execute the call
 
-Now for the moment of truth! Let's connect everything together so that when fresh CO2 data comes in, your icon automatically updates with the right color. It's like watching your extension come alive!
+Now let's connect everything together so that when fresh CO2 data comes in, your icon automatically updates with the right color. It's like connecting the final circuit in an electronic device - suddenly all the individual components work as one system.
 
 Add this line right after you get the CO2 data from the API:
 
@@ -212,25 +212,23 @@ function drawIcon(value) {
 }
 ```
 
-**Here's what this background script magic does:**
-- **Listens** for messages from your main script (like a receptionist taking calls!)
+**Here's what this background script does:**
+- **Listens** for messages from your main script (like a receptionist taking calls)
 - **Processes** those 'updateIcon' requests to change your toolbar icon
-- **Creates** brand new icons on the fly using the Canvas API
+- **Creates** new icons on the fly using the Canvas API
 - **Draws** a simple colored circle that shows the current carbon intensity
 - **Updates** your browser toolbar with the fresh icon
-- **Uses** OffscreenCanvas for smooth performance (no UI blocking!)
+- **Uses** OffscreenCanvas for smooth performance (no UI blocking)
 
 ✅ You'll learn more about the Canvas API in the [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
 
-**Time to test your masterpiece:**
+**Time to test your extension:**
 - **Build** everything with `npm run build`
-- **Reload** your extension in the browser (don't forget this step!)
-- **Open** your extension and watch that icon change colors like magic
+- **Reload** your extension in the browser (don't forget this step)
+- **Open** your extension and watch that icon change colors
 - **Check** how it responds to real carbon data from around the world
 
-How cool is that? Now you'll know at a glance whether it's a good time for that load of laundry or if you should wait for cleaner energy!
-
-You've just built something genuinely useful AND learned a ton about browser performance along the way. That's what I call a win-win!
+Now you'll know at a glance whether it's a good time for that load of laundry or if you should wait for cleaner energy. You've just built something genuinely useful and learned about browser performance along the way.
 
 ## GitHub Copilot Agent Challenge 🚀
 
@@ -244,13 +242,13 @@ Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/int
 
 ## 🚀 Challenge
 
-Here's a fun detective mission: pick a few open source websites that have been around for years (think Wikipedia, GitHub, or Stack Overflow) and dig into their commit history. Can you spot where they made performance improvements? What problems kept cropping up?
+Here's an interesting detective mission: pick a few open source websites that have been around for years (think Wikipedia, GitHub, or Stack Overflow) and dig into their commit history. Can you spot where they made performance improvements? What problems kept cropping up?
 
-**Your investigation toolkit:**
-- **Dive** into commit messages looking for words like "optimize," "performance," or "faster"
+**Your investigation approach:**
+- **Search** commit messages for words like "optimize," "performance," or "faster"
 - **Look** for patterns - do they keep fixing the same types of issues?
-- **Spot** the common culprits that slow down websites
-- **Share** what you discover - other developers love learning from real-world examples!
+- **Identify** the common culprits that slow down websites
+- **Share** what you discover - other developers learn from real-world examples
 
 ## Post-Lecture Quiz
 

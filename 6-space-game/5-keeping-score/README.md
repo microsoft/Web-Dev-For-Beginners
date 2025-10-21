@@ -4,13 +4,13 @@
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Ready to make your space game feel like a real game? Let's add the satisfying elements that keep players coming back for more - scoring points and managing lives! This is where your game truly comes alive.
+Ready to make your space game feel like a real game? Let's add scoring points and managing lives - the core mechanics that transformed early arcade games like Space Invaders from simple demonstrations into addictive entertainment. This is where your game becomes truly playable.
 
 ## Drawing Text on Screen - Your Game's Voice
 
-Want to show off that epic score you're racking up? We need to learn how to put text on the screen! The secret weapon here is the `fillText()` method on your canvas object. Think of it as your game's way of talking to the player.
+To display your score, we need to learn how to render text on the canvas. The `fillText()` method is your primary tool for this - it's the same technique used in classic arcade games to show scores and status information.
 
-Here's the cool part - you get to control everything about how that text looks:
+You have complete control over the text appearance:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -23,20 +23,20 @@ ctx.fillText("show this on the screen", 0, 0);
 
 ## Lives - More Than Just a Number
 
-Here's something interesting: in games, a "life" is really just a number that counts down. But what makes it feel meaningful? In space games, you typically start with a few lives, and each time an enemy ship crashes into you, you lose one. 
+In game design, a "life" represents the player's margin for error. This concept dates back to pinball machines, where you'd get multiple balls to play with. In early video games like Asteroids, lives gave players permission to take risks and learn from mistakes.
 
-The magic happens when you represent this visually - instead of just showing "Lives: 3", you might display tiny ship icons or hearts. It's amazing how much more engaging this feels for players!
+Visual representation matters significantly - displaying ship icons instead of just "Lives: 3" creates immediate visual recognition, similar to how early arcade cabinets used iconography to communicate across language barriers.
 
 ## Building Your Game's Reward System
 
-Time to add those satisfying game elements that'll make players want to keep playing! Here's what we're going to implement:
+Now we'll implement the core feedback systems that keep players engaged:
 
-- **Scoring system**: Every enemy ship you blast out of the sky earns you points - let's say 100 points per ship because round numbers feel good! We'll display this score in the bottom left corner.
-- **Life counter**: Your hero starts with three lives (the classic amount!). Each collision with an enemy costs you one life. We'll show this in the bottom right using this neat little graphic ![life image](solution/assets/life.png).
+- **Scoring system**: Each destroyed enemy ship awards 100 points (round numbers are easier for players to calculate mentally). The score displays in the bottom left corner.
+- **Life counter**: Your hero starts with three lives - a standard established by early arcade games to balance challenge with playability. Each collision with an enemy costs one life. We'll display remaining lives in the bottom right using ship icons ![life image](solution/assets/life.png).
 
 ## Let's Get Building!
 
-First things first - let's get your workspace ready. Navigate to the files in your `your-work` sub folder. You should see these familiar files waiting for you:
+First, set up your workspace. Navigate to the files in your `your-work` sub folder. You should see these files:
 
 ```bash
 -| assets
@@ -48,14 +48,14 @@ First things first - let's get your workspace ready. Navigate to the files in yo
 -| package.json
 ```
 
-Ready to see your game in action? Start your project by jumping into the `your_work` folder and firing up the server:
+To test your game, start the development server from the `your_work` folder:
 
 ```bash
 cd your-work
 npm start
 ```
 
-This creates a local server at `http://localhost:5000`. Pop that address into your browser, and you should see your hero ready for action! Try moving with the arrow keys and shooting down some enemies - satisfying, right?
+This runs a local server at `http://localhost:5000`. Open this address in your browser to see your game. Test the controls with arrow keys and try shooting enemies to verify everything works.
 
 ### Time to Code!
 
@@ -77,7 +77,7 @@ This creates a local server at `http://localhost:5000`. Pop that address into yo
   
 2. **Set up your game variables**. Add some code to track your total score (starting at 0) and remaining lives (starting at 3). We'll display these on screen so players always know where they stand.
 
-3. **Make collisions matter**. Extend your `updateGameObjects()` function to detect when enemies crash into your hero:
+3. **Implement collision detection**. Extend your `updateGameObjects()` function to detect when enemies collide with your hero:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -130,7 +130,7 @@ This creates a local server at `http://localhost:5000`. Pop that address into yo
         drawLife();
         ```
 
-1. **Make the game rules feel real**. Now for the exciting part - implementing the consequences and rewards:
+1. **Implement game consequences and rewards**. Now we'll add the feedback systems that make player actions meaningful:
 
    1. **Collisions cost lives**. Every time your hero crashes into an enemy, you should lose a life.
    
@@ -145,7 +145,7 @@ This creates a local server at `http://localhost:5000`. Pop that address into yo
         }
         ```
 
-   2. **Shooting enemies earns points**. Every successful hit should reward you with 100 points - because destroying space enemies is no small feat!
+   2. **Shooting enemies earns points**. Each successful hit awards 100 points, providing immediate positive feedback for accurate shooting.
 
       Extend your Hero class with this increment method:
     
@@ -172,9 +172,9 @@ This creates a local server at `http://localhost:5000`. Pop that address into yo
 
 ✅ Curious about other games built with JavaScript and Canvas? Do some exploring - you might be amazed at what's possible!
 
-When you're done with all this coding, take a step back and admire what you've built! You should now see those little life ship icons in the bottom right, your points proudly displayed in the bottom left, and watch as your life count drops when enemies hit you and your points climb when you blast them away. 
+After implementing these features, test your game to see the complete feedback system in action. You should see life icons in the bottom right, your score in the bottom left, and watch as collisions reduce lives while successful shots increase your score.
 
-This is starting to feel like a real game, isn't it? You're almost there!
+Your game now has the essential mechanics that made early arcade games so compelling - clear goals, immediate feedback, and meaningful consequences for player actions.
 
 ---
 
@@ -190,7 +190,7 @@ Use the Agent mode to complete the following challenge:
 
 ## 🚀 Challenge
 
-You're so close to having a complete game! What features are you excited to add next?
+You now have a functional game with scoring and lives. Consider what additional features might enhance the player experience.
 
 ## Post-Lecture Quiz
 
