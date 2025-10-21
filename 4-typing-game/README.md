@@ -2,26 +2,30 @@
 
 ## Introduction
 
-Typing is one of the most underrated skills of the developer. The ability to quickly transfer thoughts from your head to your editor allows creativity to flow freely. One of the best ways to learn is to play a game!
+Here's something every developer knows but rarely talks about: typing fast is a superpower! 🚀 Think about it - the faster you can get your ideas from your brain to your code editor, the more your creativity can flow. It's like having a direct pipeline between your thoughts and the screen.
 
-> So, let's build a typing game!
+Want to know one of the best ways to level up this skill? You guessed it - we're going to build a game!
 
-You're going to use the JavaScript, HTML and CSS skills you have built up so far to create a typing game. The game will present the player with a random quote (we're using [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) quotes) and time how long the player takes to type it out accurately. You're going to use the JavaScript, HTML and CSS skills you have built up so far to create a typing game.
+> Let's create an awesome typing game together!
+
+Ready to put all those JavaScript, HTML, and CSS skills you've been learning to work? We're going to build a typing game that'll challenge you with random quotes from the legendary detective [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes). The game will track how fast and accurately you can type - and trust me, it's more addictive than you might think!
 
 ![demo](images/demo.gif)
 
-## Prerequisites
+## What You'll Need to Know
 
-This lesson assumes you're familiar with the following concepts:
+Before we dive in, make sure you're comfortable with these concepts (don't worry if you need a quick refresher - we've all been there!):
 
 - Creating text input and button controls
-- CSS and setting styles using classes
+- CSS and setting styles using classes  
 - JavaScript basics
   - Creating an array
   - Creating a random number
   - Getting the current time
 
-## Lesson
+If any of these feel a bit rusty, that's totally fine! Sometimes the best way to solidify your knowledge is by jumping into a project and figuring things out as you go.
+
+## Let's Build This Thing!
 
 [Creating a typing game by using event driven programming](./typing-game/README.md)
 

@@ -9,140 +9,284 @@
 
 ### Introduction
 
-Browser extensions add additional functionality to a browser. But before you build one, you should learn a little about how browsers do their work.
+Browser extensions are mini-applications that enhance your web browsing experience. Like Tim Berners-Lee's original vision of an interactive web, extensions extend the browser's capabilities beyond simple document viewing. From password managers that keep your accounts secure to color pickers that help designers grab perfect shades, extensions solve everyday browsing challenges.
 
-### About the browser
+Before we build your first extension, let's understand how browsers work. Just as Alexander Graham Bell needed to understand sound transmission before inventing the telephone, knowing browser fundamentals will help you create extensions that integrate seamlessly with existing browser systems.
 
-In this series of lessons, you'll learn how to build a browser extension that will work on Chrome, Firefox and Edge browsers. In this part, you'll discover how browsers work and scaffold out the elements of the browser extension.
+By the end of this lesson, you'll understand browser architecture and have started building your first extension.
 
-But what is a browser exactly? It is a software application that allows an end user to access content from a server and display it on web pages.
+## Understanding Web Browsers
 
-✅ A little history: the first browser was called 'WorldWideWeb' and was created by Sir Timothy Berners-Lee in 1990.
+A web browser is essentially a sophisticated document interpreter. When you type "google.com" into the address bar, the browser performs a complex series of operations - requesting content from servers worldwide, then parsing and rendering that code into the interactive web pages you see.
+
+This process mirrors how the first web browser, WorldWideWeb, was designed by Tim Berners-Lee in 1990 to make hyperlinked documents accessible to everyone.
+
+✅ **A little history**: The first browser was called 'WorldWideWeb' and was created by Sir Timothy Berners-Lee in 1990.
 
 ![early browsers](images/earlybrowsers.jpg)
 > Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-When a user connected to the internet using a URL (Uniform Resource Locator) address, usually using Hypertext Transfer Protocol via an `http` or `https` address, the browser communicates with a web server and fetches a web page.
+### How Browsers Process Web Content
 
-At this point, the browser's rendering engine displays it on the user's device, which might be a mobile phone, desktop, or laptop.
+The process between entering a URL and seeing a webpage involves several coordinated steps that happen within seconds:
 
-Browsers also have the ability to cache content so that it doesn't have to be retrieved from the server every time. They can record the history of a user's browsing activity, store 'cookies', which are small bits of data that contain information used to store a user's activity, and more. 
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-A really important thing to remember about browsers is that they are not all the same! Each browser has its strengths and weaknesses, and a professional web developer needs to understand how to make web pages perform well cross-browser. This includes handling small viewports such as a mobile phone's, as well as a user who is offline.
+**Here's what this process accomplishes:**
+- **Translates** the human-readable URL into a server IP address through DNS lookup
+- **Establishes** a secure connection with the web server using HTTP or HTTPS protocols
+- **Requests** the specific web page content from the server
+- **Receives** HTML markup, CSS styling, and JavaScript code from the server
+- **Renders** all content into the interactive web page you see
 
-A really useful website that you probably should bookmark in whatever browser you prefer to use is [caniuse.com](https://www.caniuse.com). When you are building web pages, it's very helpful to use caniuse's lists of supported technologies so that you can best support your users.
+### Browser Core Features
 
-✅ How can you tell what browsers are most popular with your web site's user base? Check your analytics - you can install various analytics packages as part of your web development process, and they will tell you what browsers are most used by the various popular browsers.
+Modern browsers provide numerous features that extension developers can leverage:
 
-## Browser extensions
+| Feature | Purpose | Extension Opportunities |
+|---------|---------|------------------------|
+| **Rendering Engine** | Displays HTML, CSS, and JavaScript | Content modification, styling injection |
+| **JavaScript Engine** | Executes JavaScript code | Custom scripts, API interactions |
+| **Local Storage** | Saves data locally | User preferences, cached data |
+| **Network Stack** | Handles web requests | Request monitoring, data analysis |
+| **Security Model** | Protects users from malicious content | Content filtering, security enhancements |
 
-Why would you want to build a browser extension? It's a handy thing to attach to your browser when you need quick access to tasks that you tend to repeat. For example, if you find yourself needing to check colors on the various web pages that you interact with, you might install a color-picker browser extension. If you have trouble remembering passwords, you might use a password-management browser extension. 
+**Understanding these features helps you:**
+- **Identify** where your extension can add the most value
+- **Choose** the right browser APIs for your extension's functionality
+- **Design** extensions that work efficiently with browser systems
+- **Ensure** your extension follows browser security best practices
 
-Browser extensions are fun to develop, too. They tend to manage a finite number of tasks that they perform well.
+### Cross-Browser Development Considerations
 
-✅ What are your favorite browser extensions? What tasks do they perform?
+Different browsers implement standards with slight variations, similar to how different programming languages might handle the same algorithm differently. Chrome, Firefox, and Safari each have unique characteristics that developers must consider during extension development.
 
-### Installing extensions
+> 💡 **Pro Tip**: Use [caniuse.com](https://www.caniuse.com) to check which web technologies are supported across different browsers. This is invaluable when planning your extension's features!
 
-Before you start building, take a look at the process of building and deploying a browser extension. While each browser varies a bit in how they manage this task, the process is similar on Chrome and Firefox to this example on Edge:
+**Key considerations for extension development:**
+- **Test** your extension across Chrome, Firefox, and Edge browsers
+- **Adapt** to different browser extension APIs and manifest formats
+- **Handle** varying performance characteristics and limitations
+- **Provide** fallbacks for browser-specific features that may not be available
+
+✅ **Analytics Insight**: You can determine which browsers your users prefer by installing analytics packages in your web development projects. This data helps you prioritize which browsers to support first.
+
+## Understanding Browser Extensions
+
+Browser extensions solve common web browsing challenges by adding functionality directly to the browser interface. Rather than requiring separate applications or complex workflows, extensions provide immediate access to tools and features.
+
+This concept mirrors how early computer pioneers like Douglas Engelbart envisioned augmenting human capabilities with technology - extensions augment your browser's basic functionality.
+
+**Popular extension categories and their benefits:**
+- **Productivity Tools**: Task managers, note-taking apps, and time trackers that help you stay organized
+- **Security Enhancements**: Password managers, ad blockers, and privacy tools that protect your data
+- **Developer Tools**: Code formatters, color pickers, and debugging utilities that streamline development
+- **Content Enhancement**: Reading modes, video downloaders, and screenshot tools that improve your web experience
+
+✅ **Reflection Question**: What are your favorite browser extensions? What specific tasks do they perform, and how do they improve your browsing experience?
+
+## Installing and Managing Extensions
+
+Understanding the extension installation process helps you anticipate the user experience when people install your extension. The installation process is standardized across modern browsers, with minor variations in interface design.
 
 ![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](images/install-on-edge.png)
 
-> Note: Make sure to toggle on developer mode and allow extension from other stores.
+> **Important**: Make sure to toggle on developer mode and allow extensions from other stores when testing your own extensions.
 
-In essence, the process will be:
+### Development Extension Installation Process
 
-- build your extension using `npm run build` 
-- navigate in the browser to the extensions pane using the "Settings and more" button (the `...` icon) on the top right
-- if it's a new installation, choose `load unpacked` to upload a fresh extension from its build folder (in our case it is `/dist`) 
-- or, click `reload` if you are reloading the already-installed extension
+When you're developing and testing your own extensions, follow this workflow:
 
-✅ These instructions pertain to extensions you build yourself; to install extensions that have been released to the browser extension store associated to each browser, you should navigate to those [stores](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) and install the extension of your choice.
+```bash
+# Step 1: Build your extension
+npm run build
+```
 
-### Get Started
+**What this command accomplishes:**
+- **Compiles** your source code into browser-ready files
+- **Bundles** JavaScript modules into optimized packages
+- **Generates** the final extension files in the `/dist` folder
+- **Prepares** your extension for installation and testing
 
-You're going to build a browser extension that displays your region's carbon footprint, showing your region's energy usage and the source of the energy. The extension will have a form that collects an API key so that you can access
-CO2 Signal's API.
+**Step 2: Navigate to Browser Extensions**
+1. **Open** your browser's extensions management page
+2. **Click** the "Settings and more" button (the `...` icon) on the top right
+3. **Select** "Extensions" from the dropdown menu
 
-**You need:**
+**Step 3: Load Your Extension**
+- **For new installations**: Choose `load unpacked` and select your `/dist` folder
+- **For updates**: Click `reload` next to your already-installed extension
+- **For testing**: Enable "Developer mode" to access additional debugging features
 
-- [an API key](https://www.co2signal.com/); enter your email in the box on this page and one will be sent to you
-- the [code for your region](http://api.electricitymap.org/v3/zones) corresponding to the [Electricity Map](https://www.electricitymap.org/map) (in Boston, for example, I use 'US-NEISO').
-- the [starter code](../start). Download the `start` folder; you will be completing code in this folder.
-- [NPM](https://www.npmjs.com) - NPM is a package management tool; install it locally and the packages listed in your `package.json` file will be installed for use by your web asset
+### Production Extension Installation
 
-✅ Learn more about package management in this [excellent Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+> ✅ **Note**: These development instructions are specifically for extensions you build yourself. To install published extensions, visit the official browser extension stores like the [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
 
-Take a minute to look through the codebase:
+**Understanding the difference:**
+- **Development installations** let you test unpublished extensions during development
+- **Store installations** provide vetted, published extensions with automatic updates
+- **Sideloading** allows installation of extensions from outside official stores (requires developer mode)
 
-dist
-    -|manifest.json (defaults set here)
-    -|index.html (front-end HTML markup here)
-    -|background.js (background JS here)
-    -|main.js (built JS)
-src
-    -|index.js (your JS code goes here)
+## Building Your Carbon Footprint Extension
 
-✅ Once you have your API key and Region code handy, store those somewhere in a note for future use.
+We'll create a browser extension that displays the carbon footprint of your region's energy use. This project demonstrates essential extension development concepts while creating a practical tool for environmental awareness.
 
-### Build the HTML for the extension
+This approach follows the principle of "learning by doing" that has proven effective since John Dewey's educational theories - combining technical skills with meaningful real-world applications.
 
-This extension has two views. One to gather the API key and region code:
+### Project Requirements
 
+Before beginning development, let's gather the required resources and dependencies:
+
+**Required API Access:**
+- **[CO2 Signal API key](https://www.co2signal.com/)**: Enter your email address to receive your free API key
+- **[Region code](http://api.electricitymap.org/v3/zones)**: Find your region code using the [Electricity Map](https://www.electricitymap.org/map) (for example, Boston uses 'US-NEISO')
+
+**Development Tools:**
+- **[Node.js and NPM](https://www.npmjs.com)**: Package management tool for installing project dependencies
+- **[Starter code](../start)**: Download the `start` folder to begin development
+
+✅ **Learn More**: Enhance your package management skills with this [comprehensive Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+
+### Understanding the Project Structure
+
+Understanding the project structure helps organize development work efficiently. Like how the Library of Alexandria was organized for easy knowledge retrieval, a well-structured codebase makes development more efficient:
+
+```
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
+
+**Breaking down what each file accomplishes:**
+- **`manifest.json`**: **Defines** extension metadata, permissions, and entry points
+- **`index.html`**: **Creates** the user interface that appears when users click your extension
+- **`background.js`**: **Handles** background tasks and browser event listeners
+- **`main.js`**: **Contains** the final bundled JavaScript after the build process
+- **`src/index.js`**: **Houses** your main development code that gets compiled into `main.js`
+
+> 💡 **Organization Tip**: Store your API key and region code in a secure note for easy reference during development. You'll need these values to test your extension's functionality.
+
+✅ **Security Note**: Never commit API keys or sensitive credentials to your code repository. We'll show you how to handle these securely in the next steps.
+
+## Creating the Extension Interface
+
+Now we'll build the user interface components. The extension uses a two-screen approach: a configuration screen for initial setup and a results screen for data display.
+
+This follows the progressive disclosure principle used in interface design since the early days of computing - revealing information and options in a logical sequence to avoid overwhelming users.
+
+### Extension Views Overview
+
+**Setup View** - First-time user configuration:
 ![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](images/1.png)
 
-And the second to display the region's carbon usage:
-
+**Results View** - Carbon footprint data display:
 ![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](images/2.png)
 
-Let's start by building the HTML for the form and styling it with CSS.
+### Building the Configuration Form
 
-In the `/dist` folder, you will build a form and a result area. In the `index.html` file, populate the delineated form area:
+The setup form collects user configuration data during initial use. Once configured, this information persists in browser storage for future sessions.
 
-```HTML
+In the `/dist/index.html` file, add this form structure:
+
+```html
 <form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
+    <div>
+        <h2>New? Add your Information</h2>
+    </div>
+    <div>
+        <label for="region">Region Name</label>
+        <input type="text" id="region" required class="region-name" />
+    </div>
+    <div>
+        <label for="api">Your API Key from tmrow</label>
+        <input type="text" id="api" required class="api-key" />
+    </div>
+    <button class="search-btn">Submit</button>
+</form>
 ```
-This is the form where your saved information will be input and saved to local storage.
 
-Next, create the results area; under the final form tag, add some divs:
+**Here's what this form accomplishes:**
+- **Creates** a semantic form structure with proper labels and input associations
+- **Enables** browser autocomplete functionality for improved user experience
+- **Requires** both fields to be filled before submission using the `required` attribute
+- **Organizes** inputs with descriptive class names for easy styling and JavaScript targeting
+- **Provides** clear instructions for users who are setting up the extension for the first time
 
-```HTML
+### Building the Results Display
+
+Next, create the results area that will show the carbon footprint data. Add this HTML below the form:
+
+```html
 <div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
+    <div class="loading">loading...</div>
+    <div class="errors"></div>
+    <div class="data"></div>
+    <div class="result-container">
+        <p><strong>Region: </strong><span class="my-region"></span></p>
+        <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+        <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+    </div>
+    <button class="clear-btn">Change region</button>
 </div>
 ```
-At this point, you can try a build. Make sure to install the package dependencies of this extension:
 
-```
+**Breaking down what this structure provides:**
+- **`loading`**: **Displays** a loading message while API data is being fetched
+- **`errors`**: **Shows** error messages if API calls fail or data is invalid
+- **`data`**: **Holds** raw data for debugging purposes during development
+- **`result-container`**: **Presents** formatted carbon footprint information to users
+- **`clear-btn`**: **Allows** users to change their region and reconfigure the extension
+
+### Setting Up the Build Process
+
+Now let's install the project dependencies and test the build process:
+
+```bash
 npm install
 ```
 
-This command will use npm, the Node Package Manager, to install webpack for your extension's build process. Webpack is a bundler that handles compiling code. You can see the output of this process by looking in `/dist/main.js` - you see the code has been bundled.
+**What this installation process accomplishes:**
+- **Downloads** Webpack and other development dependencies specified in `package.json`
+- **Configures** the build toolchain for compiling modern JavaScript
+- **Prepares** the development environment for extension building and testing
+- **Enables** code bundling, optimization, and cross-browser compatibility features
 
-For now, the extension should build and, if you deploy it into Edge as an extension, you'll see a form neatly displayed.
+> 💡 **Build Process Insight**: Webpack bundles your source code from `/src/index.js` into `/dist/main.js`. This process optimizes your code for production and ensures browser compatibility.
 
-Congratulations, you've taken the first steps towards building a browser extension. In subsequent lessons, you'll make it more functional and useful.
+### Testing Your Progress
+
+At this point, you can test your extension:
+
+1. **Run** the build command to compile your code
+2. **Load** the extension into your browser using the developer mode
+3. **Verify** that the form displays correctly and looks professional
+4. **Check** that all form elements are properly aligned and functional
+
+**What you've accomplished:**
+- **Built** the foundational HTML structure for your extension
+- **Created** both configuration and results interfaces with proper semantic markup
+- **Set up** a modern development workflow using industry-standard tools
+- **Prepared** the foundation for adding interactive JavaScript functionality
+
+You've completed the first phase of browser extension development. Like how the Wright brothers first needed to understand aerodynamics before achieving flight, understanding these foundational concepts prepares you for building more complex interactive features in the next lesson.
 
 ## GitHub Copilot Agent Challenge 🚀
 
@@ -152,7 +296,7 @@ Use the Agent mode to complete the following challenge:
 
 **Prompt:** Create JavaScript validation functions that check if the API key field contains at least 20 characters and if the region code follows the correct format (like 'US-NEISO'). Add visual feedback by changing input border colors to green for valid inputs and red for invalid ones. Also add a toggle feature to show/hide the API key for security purposes.
 
----
+Learn more about [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) here.
 
 ## 🚀 Challenge
 
