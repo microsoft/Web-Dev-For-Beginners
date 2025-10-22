@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5958491a27a8dd97a4777f34f9214bca",
-  "translation_date": "2025-10-20T21:00:43+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-22T15:17:18+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "tl"
 }
@@ -15,7 +15,11 @@ CO_OP_TRANSLATOR_METADATA:
 ## Pre-Lecture Quiz
 [Pre-lecture quiz](https://ff-quizzes.netlify.app)
 
-Kapag iniisip natin ang pagsusulat ng code, palagi nating nais tiyakin na ang ating code ay madaling basahin. Bagamat tila kabaligtaran ito, ang code ay mas madalas basahin kaysa isulat. Isa sa mga pangunahing kasangkapan ng isang developer upang matiyak ang maayos na code ay ang **function**.
+Ang paulit-ulit na pagsusulat ng parehong code ay isa sa mga pinakakaraniwang pagkadismaya sa programming. Ang mga function ay nag-aalok ng solusyon sa problemang ito sa pamamagitan ng pagpapahintulot sa iyo na i-package ang code sa mga reusable na bloke. Isipin ang mga function na parang mga standardized na bahagi na nagpa-rebolusyon sa assembly line ni Henry Ford – kapag nakagawa ka ng maaasahang bahagi, magagamit mo ito kahit saan nang hindi kailangang magsimula mula sa simula.
+
+Ang mga function ay nagbibigay-daan sa iyo na mag-bundle ng mga piraso ng code upang magamit mo ito sa buong programa. Sa halip na kopyahin at i-paste ang parehong lohika sa lahat ng lugar, maaari kang lumikha ng isang function nang isang beses at tawagin ito tuwing kinakailangan. Ang ganitong paraan ay nagpapanatili ng organisado ang iyong code at mas madali ang pag-update.
+
+Sa araling ito, matututunan mo kung paano lumikha ng sarili mong mga function, magpasa ng impormasyon sa mga ito, at makakuha ng kapaki-pakinabang na resulta. Malalaman mo ang pagkakaiba ng mga function at pamamaraan, matutunan ang mga modernong syntax na pamamaraan, at makikita kung paano maaaring magtrabaho ang mga function kasama ang iba pang mga function. Bubuuin natin ang mga konseptong ito nang hakbang-hakbang.
 
 [![Mga Pamamaraan at Function](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Mga Pamamaraan at Function")
 
@@ -25,13 +29,15 @@ Kapag iniisip natin ang pagsusulat ng code, palagi nating nais tiyakin na ang at
 
 ## Mga Function
 
-Sa pinakapundasyon nito, ang function ay isang bloke ng code na maaari nating patakbuhin kapag kinakailangan. Perpekto ito para sa mga sitwasyon kung saan kailangan nating gawin ang parehong gawain nang maraming beses; sa halip na ulitin ang lohika sa iba't ibang lokasyon (na magpapahirap sa pag-update kapag dumating ang oras), maaari nating i-centralize ito sa isang lokasyon, at tawagin ito tuwing kailangan ang operasyon - maaari mo pang tawagin ang mga function mula sa ibang function!
+Ang function ay isang self-contained na bloke ng code na gumaganap ng isang partikular na gawain. Pinagsasama nito ang lohika na maaari mong isagawa tuwing kinakailangan.
 
-Kasinghalaga rin ang kakayahang pangalanan ang isang function. Bagamat tila simpleng bagay ito, ang pangalan ay nagbibigay ng mabilis na paraan upang idokumento ang isang bahagi ng code. Maaari mong isipin ito bilang label sa isang button. Kung pipindutin ko ang isang button na may nakasulat na "Cancel timer", alam kong ihihinto nito ang pagtakbo ng orasan.
+Sa halip na isulat ang parehong code nang maraming beses sa buong programa, maaari mo itong i-package sa isang function at tawagin ang function na iyon tuwing kailangan mo ito. Ang ganitong paraan ay nagpapanatili ng malinis ang iyong code at mas madali ang pag-update. Isipin ang hamon sa pagpapanatili kung kailangan mong baguhin ang lohika na nakakalat sa 20 iba't ibang lokasyon sa iyong codebase.
+
+Napakahalaga ng pagbibigay ng deskriptibong pangalan sa iyong mga function. Ang isang maayos na pinangalanang function ay malinaw na nagpapahayag ng layunin nito – kapag nakita mo ang `cancelTimer()`, agad mong mauunawaan kung ano ang ginagawa nito, tulad ng isang malinaw na label sa isang pindutan na nagsasabi sa iyo kung ano ang mangyayari kapag na-click mo ito.
 
 ## Paglikha at pagtawag ng isang function
 
-Ang syntax para sa isang function ay ganito ang hitsura:
+Tingnan natin kung paano lumikha ng isang function. Ang syntax ay sumusunod sa isang pare-parehong pattern:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Kung nais kong lumikha ng isang function upang magpakita ng pagbati, maaaring ganito ang hitsura nito:
+Narito ang paliwanag:
+- Ang keyword na `function` ay nagsasabi sa JavaScript na "Hoy, gumagawa ako ng isang function!"
+- Ang `nameOfFunction` ay kung saan mo bibigyan ng deskriptibong pangalan ang iyong function
+- Ang mga parentheses `()` ay kung saan maaari kang magdagdag ng mga parameter (pag-uusapan natin ito mamaya)
+- Ang mga curly braces `{}` ay naglalaman ng aktwal na code na tumatakbo kapag tinawag mo ang function
+
+Gumawa tayo ng simpleng greeting function upang makita ito sa aksyon:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Tuwing nais nating tawagin (o i-invoke) ang ating function, ginagamit natin ang pangalan ng function na sinusundan ng `()`. Mahalagang tandaan na ang ating function ay maaaring tukuyin bago o pagkatapos natin itong tawagin; hahanapin ito ng JavaScript compiler para sa iyo.
+Ang function na ito ay nagpi-print ng "Hello, world!" sa console. Kapag na-define mo na ito, magagamit mo ito nang maraming beses kung kinakailangan.
+
+Upang isagawa (o "tawagin") ang iyong function, isulat ang pangalan nito na sinusundan ng mga parentheses. Pinapayagan ng JavaScript na i-define ang iyong function bago o pagkatapos mo itong tawagin – ang JavaScript engine ang bahala sa pagkakasunod-sunod ng pagpapatupad.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Mayroong espesyal na uri ng function na tinatawag na **method**, na ginagamit mo na! Sa katunayan, nakita natin ito sa ating demo sa itaas nang ginamit natin ang `console.log`. Ang kaibahan ng method sa function ay ang method ay nakakabit sa isang object (`console` sa ating halimbawa), habang ang function ay malayang nakahiwalay. Maraming developer ang gumagamit ng mga terminong ito nang palitan.
+Kapag pinatakbo mo ang linyang ito, isinasagawa nito ang lahat ng code sa loob ng iyong `displayGreeting` function, na nagpapakita ng "Hello, world!" sa console ng iyong browser. Maaari mong tawagin ang function na ito nang paulit-ulit.
+
+> **Note:** Gumagamit ka na ng **mga pamamaraan** sa buong mga araling ito. Ang `console.log()` ay isang pamamaraan – mahalagang isang function na kabilang sa `console` object. Ang pangunahing pagkakaiba ay ang mga pamamaraan ay nakakabit sa mga object, habang ang mga function ay nakatayo nang mag-isa. Maraming developer ang gumagamit ng mga terminong ito nang palitan sa kaswal na usapan.
 
 ### Mga pinakamahusay na kasanayan sa function
 
-May ilang mga pinakamahusay na kasanayan na dapat tandaan kapag gumagawa ng mga function:
+Narito ang ilang mga tip upang matulungan kang magsulat ng mahusay na mga function:
 
-- Gaya ng dati, gumamit ng mga deskriptibong pangalan upang malaman mo kung ano ang gagawin ng function
-- Gumamit ng **camelCasing** upang pagsamahin ang mga salita
-- Panatilihing nakatuon ang iyong mga function sa isang partikular na gawain
+- Bigyan ang iyong mga function ng malinaw, deskriptibong mga pangalan – pasasalamatan ka ng iyong sarili sa hinaharap!
+- Gumamit ng **camelCasing** para sa mga pangalan na may maraming salita (tulad ng `calculateTotal` sa halip na `calculate_total`)
+- Panatilihing nakatuon ang bawat function sa paggawa ng isang bagay nang mahusay
 
 ## Pagpapasa ng impormasyon sa isang function
 
-Upang gawing mas magagamit ang isang function, madalas mong nais na magpasa ng impormasyon dito. Kung isasaalang-alang natin ang halimbawa ng `displayGreeting` sa itaas, ipapakita lamang nito ang **Hello, world!**. Hindi ito ang pinaka-kapaki-pakinabang na function na maaaring likhain. Kung nais nating gawing mas flexible ito, tulad ng pagpapahintulot sa isang tao na tukuyin ang pangalan ng taong babatiin, maaari tayong magdagdag ng **parameter**. Ang parameter (minsan tinatawag ding **argument**) ay karagdagang impormasyon na ipinapadala sa isang function.
+Ang ating `displayGreeting` function ay limitado – maaari lamang itong magpakita ng "Hello, world!" para sa lahat. Ang mga parameter ay nagbibigay-daan sa atin na gawing mas flexible at kapaki-pakinabang ang mga function.
 
-Ang mga parameter ay nakalista sa bahagi ng kahulugan sa loob ng mga parenthesis at pinaghihiwalay ng kuwit tulad ng sumusunod:
+Ang **mga parameter** ay kumikilos na parang mga placeholder kung saan maaari kang magpasok ng iba't ibang mga halaga sa bawat paggamit ng function. Sa ganitong paraan, ang parehong function ay maaaring gumana sa iba't ibang impormasyon sa bawat tawag.
+
+Ililista mo ang mga parameter sa loob ng mga parentheses kapag dine-define mo ang iyong function, na pinaghihiwalay ang maraming parameter gamit ang mga comma:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Maaari nating i-update ang ating `displayGreeting` upang tanggapin ang isang pangalan at ipakita ito.
+Ang bawat parameter ay kumikilos na parang placeholder – kapag may tumawag sa iyong function, magbibigay sila ng aktwal na mga halaga na ilalagay sa mga spot na ito.
+
+I-update natin ang ating greeting function upang tanggapin ang pangalan ng isang tao:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Kapag nais nating tawagin ang ating function at ipasa ang parameter, tinutukoy natin ito sa parenthesis.
+Pansinin kung paano natin ginagamit ang backticks (`` ` ``) at `${}` upang direktang ipasok ang pangalan sa ating mensahe – ito ay tinatawag na template literal, at ito ay isang napaka-kapaki-pakinabang na paraan upang bumuo ng mga string na may halong mga variable.
+
+Ngayon kapag tinawag natin ang ating function, maaari tayong magpasa ng anumang pangalan:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
+Kinukuha ng JavaScript ang string na `'Christopher'`, itinalaga ito sa parameter na `name`, at lumilikha ng personalized na mensahe na "Hello, Christopher!"
+
 ## Mga default na halaga
 
-Maaari nating gawing mas flexible ang ating function sa pamamagitan ng pagdaragdag ng mas maraming parameter. Ngunit paano kung ayaw nating gawing kinakailangan ang bawat halaga? Sa pagpapatuloy ng ating halimbawa ng pagbati, maaari nating iwanan ang pangalan bilang kinakailangan (kailangan nating malaman kung sino ang binabati), ngunit nais nating pahintulutan ang pagbati mismo na i-customize kung nais. Kung ayaw ng isang tao na i-customize ito, nagbibigay tayo ng default na halaga sa halip. Upang magbigay ng default na halaga sa isang parameter, itinakda natin ito tulad ng paraan ng pagtatakda ng halaga para sa isang variable - `parameterName = 'defaultValue'`. Upang makita ang isang buong halimbawa:
+Paano kung gusto nating gawing opsyonal ang ilang mga parameter? Dito nagiging kapaki-pakinabang ang mga default na halaga!
+
+Sabihin nating gusto nating bigyan ang mga tao ng kakayahang i-customize ang salitang pagbati, ngunit kung hindi sila magbibigay ng isa, gagamitin na lang natin ang "Hello" bilang fallback. Maaari kang mag-set up ng mga default na halaga sa pamamagitan ng paggamit ng equals sign, tulad ng pag-set ng variable:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Kapag tinawag natin ang function, maaari nating piliin kung nais nating magtakda ng halaga para sa `salutation`.
+Dito, ang `name` ay kinakailangan pa rin, ngunit ang `salutation` ay may backup na halaga na `'Hello'` kung walang magbigay ng ibang pagbati.
+
+Ngayon maaari nating tawagin ang function na ito sa dalawang magkaibang paraan:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
+Sa unang tawag, ginagamit ng JavaScript ang default na "Hello" dahil hindi tayo nagbigay ng salutation. Sa pangalawang tawag, ginagamit nito ang ating custom na "Hi" sa halip. Ang flexibility na ito ay ginagawang adaptable ang mga function sa iba't ibang sitwasyon.
+
 ## Mga return value
 
-Hanggang ngayon, ang function na ginawa natin ay palaging maglalabas sa [console](https://developer.mozilla.org/docs/Web/API/console). Minsan ito ay eksaktong hinahanap natin, lalo na kapag gumagawa tayo ng mga function na tatawag sa ibang serbisyo. Ngunit paano kung nais kong lumikha ng helper function upang magsagawa ng kalkulasyon at ibigay ang halaga pabalik upang magamit ko ito sa ibang lugar?
+Ang ating mga function sa ngayon ay nagpi-print lang ng mga mensahe sa console, ngunit paano kung gusto mong mag-compute ang isang function at ibalik sa iyo ang resulta?
 
-Maaari nating gawin ito sa pamamagitan ng paggamit ng **return value**. Ang return value ay ibinabalik ng function, at maaaring itago sa isang variable tulad ng maaari nating itago ang literal na halaga tulad ng string o numero.
+Dito pumapasok ang **mga return value**. Sa halip na magpakita lang ng isang bagay, ang isang function ay maaaring magbigay sa iyo ng isang halaga na maaari mong i-store sa isang variable o gamitin sa iba pang bahagi ng iyong code.
 
-Kung ang isang function ay nagbabalik ng isang bagay, ginagamit ang keyword na `return`. Ang keyword na `return` ay inaasahan ang isang halaga o reference ng kung ano ang ibinabalik tulad ng sumusunod:
+Upang magpadala ng isang halaga pabalik, gagamitin mo ang keyword na `return` na sinusundan ng anumang nais mong ibalik:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Maaari tayong lumikha ng isang function upang lumikha ng mensahe ng pagbati at ibalik ang halaga pabalik sa tumatawag.
+Narito ang mahalaga: kapag ang isang function ay umabot sa isang `return` statement, agad itong humihinto sa pagtakbo at ibinabalik ang halagang iyon sa tumawag dito.
+
+Baguhin natin ang ating greeting function upang ibalik ang mensahe sa halip na i-print ito:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Kapag tinawag ang function na ito, itatago natin ang halaga sa isang variable. Katulad ito ng paraan ng pagtatakda ng variable sa isang static na halaga (tulad ng `const name = 'Christopher'`).
+Ngayon sa halip na i-print ang greeting, ang function na ito ay lumilikha ng mensahe at ibinibigay ito sa atin.
+
+Upang magamit ang ibinalik na halaga, maaari natin itong i-store sa isang variable tulad ng anumang ibang halaga:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
+Ngayon ang `greetingMessage` ay naglalaman ng "Hello, Christopher" at magagamit natin ito kahit saan sa ating code – upang ipakita ito sa isang webpage, isama ito sa isang email, o ipasa ito sa ibang function.
+
 ## Mga function bilang parameter para sa mga function
 
-Habang umuunlad ka sa iyong karera sa programming, makakakita ka ng mga function na tumatanggap ng mga function bilang mga parameter. Ang kahanga-hangang trick na ito ay karaniwang ginagamit kapag hindi natin alam kung kailan may mangyayari o matatapos, ngunit alam natin na kailangan nating magsagawa ng operasyon bilang tugon.
+Ang mga function ay maaaring ipasa bilang mga parameter sa iba pang mga function. Bagama't maaaring mukhang kumplikado ang konseptong ito sa simula, ito ay isang makapangyarihang tampok na nagbibigay-daan sa mga flexible na pattern ng programming.
 
-Halimbawa, isaalang-alang ang [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), na nagsisimula ng timer at magsasagawa ng code kapag natapos ito. Kailangan nating sabihin dito kung anong code ang nais nating isagawa. Tunog na perpektong trabaho para sa isang function!
+Ang pattern na ito ay karaniwang ginagamit kapag gusto mong sabihin na "kapag may nangyari, gawin ang ibang bagay." Halimbawa, "kapag natapos ang timer, patakbuhin ang code na ito" o "kapag na-click ng user ang button, tawagin ang function na ito."
 
-Kung patakbuhin mo ang code sa ibaba, pagkatapos ng 3 segundo makikita mo ang mensahe **3 seconds has elapsed**.
+Tingnan natin ang `setTimeout`, na isang built-in na function na naghihintay ng tiyak na dami ng oras at pagkatapos ay nagpapatakbo ng ilang code. Kailangan nating sabihin dito kung anong code ang tatakbo – perpektong kaso para sa pagpapasa ng isang function!
+
+Subukan ang code na ito – pagkatapos ng 3 segundo, makakakita ka ng mensahe:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
+Pansinin kung paano natin ipinapasa ang `displayDone` (nang walang parentheses) sa `setTimeout`. Hindi natin tinatawag ang function mismo – ibinibigay natin ito sa `setTimeout` at sinasabing "tawagin ito sa loob ng 3 segundo."
+
 ### Mga Anonymous Function
 
-Tingnan natin muli ang ginawa natin. Gumagawa tayo ng isang function na may pangalan na gagamitin nang isang beses. Habang nagiging mas kumplikado ang ating application, makikita natin ang ating sarili na gumagawa ng maraming function na gagamitin lamang nang isang beses. Hindi ito ideal. Sa katunayan, hindi palaging kailangan nating magbigay ng pangalan!
+Minsan kailangan mo ng function para sa isang bagay lang at ayaw mong bigyan ito ng pangalan. Isipin mo – kung gagamitin mo lang ang isang function nang isang beses, bakit mo pa ito bibigyan ng pangalan?
 
-Kapag nagpapasa tayo ng function bilang parameter, maaari nating iwasan ang paggawa ng isa nang maaga at sa halip ay bumuo ng isa bilang bahagi ng parameter. Ginagamit natin ang parehong keyword na `function`, ngunit sa halip ay binubuo natin ito bilang parameter.
+Pinapayagan ka ng JavaScript na lumikha ng **mga anonymous function** – mga function na walang pangalan na maaari mong i-define kung saan mo ito kailangan.
 
-Isulat natin muli ang code sa itaas upang gumamit ng anonymous function:
+Narito kung paano natin maaaring isulat muli ang ating timer example gamit ang isang anonymous function:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Kung patakbuhin mo ang bagong code natin, mapapansin mong makakakuha tayo ng parehong resulta. Gumawa tayo ng function, ngunit hindi natin kailangang bigyan ito ng pangalan!
+Nakakamit nito ang parehong resulta, ngunit ang function ay dine-define nang direkta sa loob ng tawag sa `setTimeout`, na inaalis ang pangangailangan para sa isang hiwalay na deklarasyon ng function.
 
-### Fat Arrow Function
+### Mga Fat Arrow Function
 
-Isang shortcut na karaniwan sa maraming programming language (kasama ang JavaScript) ay ang kakayahang gumamit ng tinatawag na **arrow** o **fat arrow** function. Gumagamit ito ng espesyal na indicator na `=>`, na mukhang arrow - kaya ang pangalan! Sa pamamagitan ng paggamit ng `=>`, maaari nating laktawan ang keyword na `function`.
+Ang modernong JavaScript ay may mas maikling paraan upang magsulat ng mga function na tinatawag na **arrow functions**. Ginagamit nila ang `=>` (na mukhang isang arrow – gets mo?) at napakapopular sa mga developer.
 
-Isulat natin muli ang code natin upang gumamit ng fat arrow function:
+Ang mga arrow function ay nagbibigay-daan sa iyo na laktawan ang keyword na `function` at magsulat ng mas maikli na code.
+
+Narito ang ating timer example gamit ang isang arrow function:
 
 ```javascript
 setTimeout(() => {
@@ -183,9 +225,11 @@ setTimeout(() => {
 }, 3000);
 ```
 
+Ang `()` ay kung saan ilalagay ang mga parameter (walang laman sa kasong ito), pagkatapos ay ang arrow `=>`, at sa wakas ang katawan ng function sa mga curly braces. Nagbibigay ito ng parehong functionality na may mas maikling syntax.
+
 ### Kailan gagamitin ang bawat estratehiya
 
-Ngayon ay nakita mo na mayroon tayong tatlong paraan upang magpasa ng function bilang parameter at maaaring nagtataka ka kung kailan gagamitin ang bawat isa. Kung alam mong gagamitin mo ang function nang higit sa isang beses, gawin ito nang normal. Kung gagamitin mo ito para lamang sa isang lokasyon, mas mainam na gumamit ng anonymous function. Kung gagamit ka ng fat arrow function o ang mas tradisyunal na syntax na `function`, nasa iyo ang desisyon, ngunit mapapansin mong mas gusto ng karamihan sa mga modernong developer ang `=>`.
+Kailan mo dapat gamitin ang bawat pamamaraan? Isang praktikal na gabay: kung gagamitin mo ang function nang maraming beses, bigyan ito ng pangalan at i-define ito nang hiwalay. Kung ito ay para sa isang partikular na paggamit, isaalang-alang ang isang anonymous function. Parehong valid ang arrow functions at tradisyunal na syntax, bagama't ang arrow functions ay laganap sa mga modernong JavaScript codebase.
 
 ---
 
@@ -193,29 +237,31 @@ Ngayon ay nakita mo na mayroon tayong tatlong paraan upang magpasa ng function b
 
 ## 🚀 Hamon
 
-Maaari mo bang ipaliwanag sa isang pangungusap ang pagkakaiba ng function at method? Subukan mo!
+Maaari mo bang ipaliwanag sa isang pangungusap ang pagkakaiba ng mga function at pamamaraan? Subukan mo!
 
 ## Hamon ng GitHub Copilot Agent 🚀
 
-Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:
+Gamitin ang Agent mode upang kumpletuhin ang sumusunod na hamon:
 
-**Deskripsyon:** Gumawa ng utility library ng mga mathematical function na nagpapakita ng iba't ibang konsepto ng function na tinalakay sa araling ito, kabilang ang mga parameter, default na halaga, return value, at arrow function.
+**Deskripsyon:** Gumawa ng utility library ng mga mathematical function na nagpapakita ng iba't ibang konsepto ng function na tinalakay sa araling ito, kabilang ang mga parameter, default na halaga, return value, at arrow functions.
 
 **Prompt:** Gumawa ng JavaScript file na tinatawag na `mathUtils.js` na naglalaman ng mga sumusunod na function:
-1. Isang function na `add` na may dalawang parameter at nagbabalik ng kanilang kabuuan
+1. Isang function na `add` na tumatanggap ng dalawang parameter at ibinabalik ang kanilang kabuuan
 2. Isang function na `multiply` na may default na halaga ng parameter (ang pangalawang parameter ay default sa 1)
-3. Isang arrow function na `square` na tumatanggap ng numero at nagbabalik ng square nito
+3. Isang arrow function na `square` na tumatanggap ng isang numero at ibinabalik ang square nito
 4. Isang function na `calculate` na tumatanggap ng isa pang function bilang parameter at dalawang numero, pagkatapos ay inilalapat ang function sa mga numerong iyon
 5. Ipakita ang pagtawag sa bawat function gamit ang mga angkop na test case
+
+Alamin ang higit pa tungkol sa [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) dito.
 
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ff-quizzes.netlify.app)
 
 ## Review & Self Study
 
-Sulit na [magbasa pa tungkol sa arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), dahil mas madalas itong ginagamit sa mga code base. Magpraktis sa pagsusulat ng isang function, at pagkatapos ay isulat ito muli gamit ang syntax na ito.
+Sulit na [magbasa pa tungkol sa arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), dahil mas madalas na ginagamit ang mga ito sa mga code base. Magpraktis sa pagsusulat ng isang function, at pagkatapos ay isulat ito muli gamit ang syntax na ito.
 
-## Takdang-Aralin
+## Assignment
 
 [Masaya sa Mga Function](assignment.md)
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "300c1562e01f21065ae0b8e9d9181a86",
-  "translation_date": "2025-10-20T21:02:48+00:00",
+  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
+  "translation_date": "2025-10-22T15:22:26+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "tl"
 }
@@ -15,29 +15,31 @@ CO_OP_TRANSLATOR_METADATA:
 ## Pre-Lecture Quiz
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
-> Ang kapangyarihan ng Web ay nasa pagiging unibersal nito. Ang pag-access ng lahat, anuman ang kapansanan, ay mahalagang aspeto.
+> Ang kapangyarihan ng Web ay nasa pagiging pangkalahatan nito. Ang pag-access ng lahat, anuman ang kapansanan, ay mahalagang aspeto.
 >
 > \- Sir Timothy Berners-Lee, Direktor ng W3C at imbentor ng World Wide Web
 
-Ang web accessibility ay hindi lamang isang magandang karagdagan—ito ay isang pangunahing prinsipyo na nagpapahalaga sa internet bilang tunay na unibersal. Kapag gumagawa ka ng mga accessible na website, hindi mo lang tinutulungan ang mga taong may kapansanan; lumilikha ka rin ng mas magagandang karanasan para sa lahat. Isipin ang mga curb cuts na idinisenyo para sa mga wheelchair na nakakatulong din sa mga taong may stroller, bagahe, o bisikleta. Ang accessible na disenyo ng web ay gumagana sa parehong paraan.
+Narito ang isang bagay na maaaring magulat ka: kapag gumagawa ka ng mga accessible na website, hindi mo lang tinutulungan ang mga taong may kapansanan—ginagawa mo rin ang web na mas mahusay para sa lahat!
 
-Sa araling ito, matutuklasan mo kung paano gumawa ng mga website na gumagana para sa lahat, anuman ang kanilang kakayahan o teknolohiyang ginagamit nila sa pag-browse sa web. Matututo ka ng mga praktikal na teknik na nakapaloob sa mga modernong pamantayan ng web, mag-eexplore ng mga makapangyarihang tool sa pagsusuri ng accessibility, at mauunawaan kung paano pinapahusay ng accessibility ang usability para sa lahat ng user.
+Napansin mo ba ang mga curb cuts sa mga kanto ng kalye? Orihinal na idinisenyo ang mga ito para sa mga wheelchair, ngunit ngayon nakakatulong ito sa mga taong may stroller, mga delivery worker na may dolly, mga manlalakbay na may rolling luggage, at mga siklista rin. Ganyan ang gumagana ang accessible na disenyo ng web—ang mga solusyon na tumutulong sa isang grupo ay kadalasang nagiging kapaki-pakinabang para sa lahat. Ang galing, di ba?
 
-Sa pagtatapos ng araling ito, magkakaroon ka ng kaalaman at mga tool upang gawing natural na bahagi ng iyong proseso ng pag-develop ang accessibility mula sa simula. Tuklasin natin kung paano ang maingat na mga desisyon sa disenyo ay maaaring magbukas ng web para sa bilyun-bilyong user sa buong mundo.
+Sa araling ito, tatalakayin natin kung paano gumawa ng mga website na talagang gumagana para sa lahat, anuman ang paraan nila ng pag-browse sa web. Matutuklasan mo ang mga praktikal na teknik na nakapaloob na sa mga pamantayan ng web, magkakaroon ng hands-on na karanasan sa mga testing tools, at makikita kung paano ginagawang mas magagamit ng accessibility ang iyong mga site para sa lahat ng user.
+
+Sa pagtatapos ng araling ito, magkakaroon ka ng kumpiyansa na gawing natural na bahagi ng iyong workflow sa pag-develop ang accessibility. Handa ka na bang tuklasin kung paano ang mga maingat na desisyon sa disenyo ay maaaring magbukas ng web para sa bilyon-bilyong user? Tara na!
 
 > Maaari mong kunin ang araling ito sa [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Pag-unawa sa Assistive Technologies
 
-Bago tayo sumabak sa paggawa ng mga accessible na website, unawain muna natin kung paano nagna-navigate ang mga taong may iba't ibang kakayahan sa web. Ang kaalamang ito ay makakatulong sa iyo na gumawa ng mas maayos na desisyon tungkol sa iyong mga disenyo at pagpipilian sa pag-develop.
+Bago tayo magsimula sa coding, maglaan muna tayo ng sandali upang maunawaan kung paano talaga nararanasan ng mga taong may iba't ibang kakayahan ang web. Hindi lang ito teorya—ang pag-unawa sa mga pattern ng real-world navigation ay magpapahusay sa iyo bilang developer!
 
-Ang assistive technologies ay mga espesyal na tool na tumutulong sa mga taong may kapansanan na makipag-ugnayan sa digital na nilalaman. Ang pag-unawa kung paano gumagana ang mga tool na ito ay mahalaga para sa paglikha ng tunay na accessible na karanasan sa web.
+Ang assistive technologies ay mga kamangha-manghang tool na tumutulong sa mga taong may kapansanan na makipag-ugnayan sa mga website sa mga paraang maaaring ikagulat mo. Kapag nakuha mo na ang tamang paraan ng paggamit ng mga teknolohiyang ito, ang paggawa ng mga accessible na karanasan sa web ay nagiging mas intuitive. Para bang natututo kang makita ang iyong code sa mata ng iba.
 
 ### Screen readers
 
-[Screen readers](https://en.wikipedia.org/wiki/Screen_reader) ay mga kahanga-hangang assistive technologies na nagko-convert ng digital na teksto sa speech o braille output. Pangunahing ginagamit ito ng mga taong may kapansanan sa paningin, ngunit nakakatulong din ito sa mga user na may learning disabilities tulad ng dyslexia.
+[Screen readers](https://en.wikipedia.org/wiki/Screen_reader) ay mga sopistikadong teknolohiya na nagko-convert ng digital na teksto sa speech o braille output. Bagama't pangunahing ginagamit ito ng mga taong may kapansanan sa paningin, napaka-kapaki-pakinabang din ito para sa mga user na may learning disabilities tulad ng dyslexia.
 
-Isipin ang screen reader bilang isang tagapagsalaysay ng web. Binabasa nito ang nilalaman nang malakas sa isang lohikal na pagkakasunod-sunod, ina-anunsyo ang mga interactive na elemento tulad ng mga button at link, at nagbibigay ng mga keyboard shortcut para sa mas epektibong pag-navigate. Gayunpaman, ang mga screen reader ay epektibo lamang kung ang mga website ay ginawa gamit ang tamang istruktura at makabuluhang nilalaman.
+Iniisip ko ang screen reader na parang isang matalinong tagapagsalaysay na nagbabasa ng libro para sa iyo. Binabasa nito ang nilalaman nang malakas sa lohikal na pagkakasunod-sunod, ina-anunsyo ang mga interactive na elemento tulad ng "button" o "link," at nagbibigay ng mga keyboard shortcut para sa mabilisang pag-navigate sa isang pahina. Ngunit narito ang bagay—ang mga screen reader ay maaari lamang gumana nang maayos kung gagawa tayo ng mga website na may tamang istruktura at makabuluhang nilalaman. Dito ka papasok bilang developer!
 
 **Mga sikat na screen readers sa iba't ibang platform:**
 - **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (libre at pinakasikat), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (built-in)
@@ -45,20 +47,20 @@ Isipin ang screen reader bilang isang tagapagsalaysay ng web. Binabasa nito ang 
 - **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (built-in)
 - **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (libre at open-source)
 
-**Paano nagna-navigate ang mga screen reader sa web content:**
+**Paano nagna-navigate ang screen readers sa web content:**
 
-Ang mga screen reader ay nagbibigay ng maraming paraan ng pag-navigate na ginagawang mas epektibo ang pag-browse para sa mga bihasang user:
+Ang mga screen reader ay nagbibigay ng iba't ibang paraan ng pag-navigate na ginagawang mas mabilis ang pag-browse para sa mga bihasang user:
 - **Sequential reading**: Binabasa ang nilalaman mula itaas hanggang ibaba, tulad ng pagbabasa ng libro
 - **Landmark navigation**: Tumalon sa pagitan ng mga seksyon ng pahina (header, nav, main, footer)
 - **Heading navigation**: Lumaktaw sa pagitan ng mga heading upang maunawaan ang istruktura ng pahina
-- **Link lists**: Gumawa ng listahan ng lahat ng link para sa mabilisang pag-access
-- **Form controls**: Direktang mag-navigate sa pagitan ng mga input field at button
+- **Link lists**: Gumagawa ng listahan ng lahat ng link para sa mabilisang pag-access
+- **Form controls**: Direktang nagna-navigate sa pagitan ng mga input field at button
 
-> 💡 **Insight ng Developer**: 68% ng mga user ng screen reader ay pangunahing nagna-navigate gamit ang mga heading ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding)). Kaya't napakahalaga ng tamang istruktura ng heading!
+> 💡 **Narito ang isang bagay na ikinagulat ko**: 68% ng mga user ng screen reader ay pangunahing nagna-navigate gamit ang mga heading ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding)). Nangangahulugan ito na ang istruktura ng iyong heading ay parang roadmap para sa mga user—kapag tama ang pagkakagawa mo, literal mong tinutulungan ang mga tao na mas mabilis na mahanap ang nilalaman!
 
-### Pagbuo ng iyong workflow sa pagsusuri
+### Pagbuo ng iyong testing workflow
 
-Ang epektibong pagsusuri ng accessibility ay nangangailangan ng parehong automated tools at manual na beripikasyon. Narito ang isang sistematikong paraan na nakakahuli ng karamihan sa mga isyu:
+Narito ang magandang balita—ang epektibong accessibility testing ay hindi kailangang nakaka-overwhelm! Gusto mong pagsamahin ang automated tools (napakahusay sa pag-detect ng mga halatang isyu) sa ilang hands-on na testing. Narito ang sistematikong approach na napatunayan kong nakakahuli ng pinakamaraming isyu nang hindi nauubos ang buong araw mo:
 
 **Essential manual testing workflow:**
 
@@ -81,62 +83,62 @@ graph TD
 1. **Keyboard navigation**: Gumamit lamang ng Tab, Shift+Tab, Enter, Space, at Arrow keys
 2. **Screen reader testing**: I-enable ang NVDA, VoiceOver, o Narrator at mag-navigate nang nakapikit ang mata
 3. **Zoom testing**: Subukan sa 200% at 400% zoom levels
-4. **Color contrast verification**: Suriin ang lahat ng teksto at UI components
+4. **Color contrast verification**: I-check ang lahat ng teksto at UI components
 5. **Focus indicator testing**: Siguraduhing lahat ng interactive na elemento ay may nakikitang focus states
 
-✅ **Simulan gamit ang Lighthouse**: Buksan ang DevTools ng iyong browser, magpatakbo ng Lighthouse accessibility audit, pagkatapos ay gamitin ang mga resulta upang gabayan ang iyong mga focus area sa manual testing.
+✅ **Simulan sa Lighthouse**: Buksan ang DevTools ng iyong browser, mag-run ng Lighthouse accessibility audit, pagkatapos gamitin ang resulta upang gabayan ang iyong manual testing focus areas.
 
 ### Zoom at magnification tools
 
-Maraming user ang umaasa sa magnification upang gawing mas nababasa ang nilalaman. Kasama dito ang mga taong may mababang paningin, matatanda, at maging ang mga user sa maliwanag na sikat ng araw o may pansamantalang isyu sa paningin. Ang modernong zoom technologies ay mas advanced na ngayon kaysa sa simpleng pag-scale ng imahe.
+Alam mo ba kung paano minsan pinipinch mo ang iyong phone para mag-zoom kapag masyadong maliit ang teksto, o nagpipilit kang magbasa sa laptop screen sa maliwanag na sikat ng araw? Maraming user ang umaasa sa magnification tools upang gawing nababasa ang nilalaman araw-araw. Kasama dito ang mga taong may mababang paningin, matatanda, at sinumang sinubukang magbasa ng website sa labas.
 
-Ang pag-unawa kung paano gumagana ang zoom ay tumutulong sa iyo na lumikha ng mga responsive na disenyo na nananatiling functional at maganda sa anumang antas ng magnification.
+Ang modernong zoom technologies ay umunlad na lampas sa simpleng pagpapalaki ng mga bagay. Ang pag-unawa kung paano gumagana ang mga tool na ito ay makakatulong sa iyo na lumikha ng mga responsive na disenyo na nananatiling functional at kaakit-akit sa anumang antas ng magnification.
 
 **Modern browser zoom capabilities:**
-- **Page zoom**: Ini-scale ang lahat ng nilalaman nang proporsyonal (teksto, imahe, layout) - ito ang mas pinapaboran
+- **Page zoom**: Pinapalaki ang lahat ng nilalaman nang proporsyonal (teksto, imahe, layout) - ito ang mas pinapaboran na paraan
 - **Text-only zoom**: Pinapalaki ang font size habang pinapanatili ang orihinal na layout
-- **Pinch-to-zoom**: Suporta sa mobile gesture para sa pansamantalang magnification
+- **Pinch-to-zoom**: Mobile gesture support para sa pansamantalang magnification
 - **Browser support**: Lahat ng modernong browser ay sumusuporta sa zoom hanggang 500% nang hindi nasisira ang functionality
 
 **Specialized magnification software:**
 - **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (built-in), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
 - **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (built-in na may advanced features)
 
-> ⚠️ **Design Consideration**: Ang WCAG ay nangangailangan na ang nilalaman ay nananatiling functional kapag ini-zoom sa 200%. Sa antas na ito, ang horizontal scrolling ay dapat minimal, at lahat ng interactive na elemento ay dapat nananatiling accessible.
+> ⚠️ **Design Consideration**: Ang WCAG ay nangangailangan na ang nilalaman ay nananatiling functional kapag naka-zoom sa 200%. Sa antas na ito, ang horizontal scrolling ay dapat minimal, at lahat ng interactive na elemento ay dapat nananatiling accessible.
 
-✅ **Subukan ang iyong responsive design**: I-zoom ang iyong browser sa 200% at 400%. Ang iyong layout ba ay maayos na umaangkop? Maa-access mo pa rin ba ang lahat ng functionality nang walang labis na pag-scroll?
+✅ **Subukan ang iyong responsive design**: I-zoom ang iyong browser sa 200% at 400%. Ang layout ba ay maayos na umaangkop? Maa-access mo pa rin ba ang lahat ng functionality nang walang labis na pag-scroll?
 
 ## Modern Accessibility Testing Tools
 
-Ngayon na nauunawaan mo kung paano gumagana ang assistive technologies, tuklasin natin ang mga tool na tumutulong sa iyo na bumuo at mag-test ng mga accessible na website. Ang pagsasama ng automated testing sa manual na beripikasyon ay nagbibigay ng kumpiyansa na ang iyong mga site ay gumagana para sa lahat.
+Ngayon na nauunawaan mo kung paano nagna-navigate ang mga tao sa web gamit ang assistive technologies, tuklasin natin ang mga tool na tumutulong sa iyo na bumuo at mag-test ng mga accessible na website.
 
-Ang modernong pagsusuri ng accessibility ay sumusunod sa isang komprehensibong paraan: ang automated tools ay nakakahuli ng mga halatang isyu, habang ang manual testing ay nagsisiguro ng usability sa totoong mundo.
+Isipin mo ito: ang automated tools ay mahusay sa pag-detect ng mga halatang isyu (tulad ng nawawalang alt text), habang ang hands-on testing ay tumutulong sa iyo na tiyakin na ang iyong site ay maganda ang pakiramdam gamitin sa totoong mundo. Magkasama, nagbibigay ito ng kumpiyansa na ang iyong mga site ay gumagana para sa lahat.
 
 ### Color contrast testing
 
-Ang color contrast ay isa sa mga pinakakaraniwang isyu sa accessibility, ngunit ito rin ang isa sa pinakamadaling ayusin. Ang magandang contrast ay nakikinabang sa lahat—mula sa mga user na may kapansanan sa paningin hanggang sa mga taong tumitingin sa screen sa maliwanag na sikat ng araw.
+Narito ang magandang balita: ang color contrast ay isa sa mga pinakakaraniwang isyu sa accessibility, ngunit isa rin ito sa pinakamadaling ayusin. Ang magandang contrast ay kapaki-pakinabang para sa lahat—mula sa mga user na may kapansanan sa paningin hanggang sa mga taong nagbabasa ng kanilang mga phone sa tabing dagat.
 
-**Mga kinakailangan sa contrast ng WCAG:**
+**WCAG contrast requirements:**
 
 | Uri ng Teksto | WCAG AA (Minimum) | WCAG AAA (Enhanced) |
 |---------------|-------------------|---------------------|
-| **Normal na teksto** (mas mababa sa 18pt) | 4.5:1 contrast ratio | 7:1 contrast ratio |
+| **Normal na teksto** (sa ilalim ng 18pt) | 4.5:1 contrast ratio | 7:1 contrast ratio |
 | **Malaking teksto** (18pt+ o 14pt+ bold) | 3:1 contrast ratio | 4.5:1 contrast ratio |
 | **UI components** (mga button, form borders) | 3:1 contrast ratio | 3:1 contrast ratio |
 
-**Mga mahalagang tool sa pagsusuri:**
+**Essential testing tools:**
 - [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Desktop app na may color picker
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Web-based na may instant feedback
 - [Stark](https://www.getstark.co/) - Plugin ng design tool para sa Figma, Sketch, Adobe XD
 - [Accessible Colors](https://accessible-colors.com/) - Hanapin ang mga accessible na color palettes
 
-✅ **Bumuo ng mas magagandang color palettes**: Simulan sa iyong brand colors at gamitin ang mga contrast checkers upang lumikha ng mga accessible na variation. I-dokumenta ang mga ito bilang mga accessible na color tokens ng iyong design system.
+✅ **Gumawa ng mas mahusay na color palettes**: Simulan sa iyong brand colors at gamitin ang mga contrast checkers upang lumikha ng mga accessible na variation. I-dokumenta ang mga ito bilang mga accessible na color tokens ng iyong design system.
 
 ### Comprehensive accessibility auditing
 
-Ang pinaka-epektibong pagsusuri ng accessibility ay ang pagsasama ng iba't ibang paraan. Walang isang tool na nakakahuli ng lahat, kaya ang pagbuo ng routine sa pagsusuri gamit ang iba't ibang pamamaraan ay nagsisiguro ng mas malawak na coverage.
+Ang pinaka-epektibong accessibility testing ay pinagsasama ang iba't ibang approach. Walang isang tool ang nakakakita ng lahat, kaya ang pagbuo ng testing routine na may iba't ibang paraan ay nagsisiguro ng masusing coverage.
 
-**Browser-based testing (built into DevTools):**
+**Browser-based testing (built-in sa DevTools):**
 - **Chrome/Edge**: Lighthouse accessibility audit + Accessibility panel
 - **Firefox**: Accessibility Inspector na may detalyadong tree view
 - **Safari**: Audit tab sa Web Inspector na may VoiceOver simulation
@@ -151,42 +153,42 @@ Ang pinaka-epektibong pagsusuri ng accessibility ay ang pagsasama ng iba't ibang
 - [Pa11y](https://pa11y.org/) - Command-line accessibility testing tool
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Automated accessibility scoring
 
-> 🎯 **Testing Goal**: Sikapin ang Lighthouse accessibility score na 95+ bilang baseline. Tandaan, ang automated tools ay nakakahuli lamang ng humigit-kumulang 30-40% ng mga isyu sa accessibility—ang manual testing ay mahalaga pa rin!
+> 🎯 **Testing Goal**: Maghangad ng Lighthouse accessibility score na 95+ bilang baseline. Tandaan, ang automated tools ay nakakakita lamang ng humigit-kumulang 30-40% ng mga isyu sa accessibility—ang manual testing ay mahalaga pa rin!
 
 ## Pagbuo ng Accessibility mula sa Simula
 
-Ang pinaka-epektibong paraan sa web accessibility ay ang pagbuo nito sa iyong pundasyon mula sa simula. Ang pag-retrofit ng accessibility sa huli ay hindi lamang mas mahal at mas matrabaho—madalas itong nagreresulta sa hindi gaanong maayos na karanasan ng user.
+Ang susi sa tagumpay ng accessibility ay ang pagbuo nito sa iyong pundasyon mula sa simula. Alam kong nakaka-tukso na isipin "Idadagdag ko ang accessibility mamaya," ngunit para itong sinusubukang magdagdag ng rampa sa isang bahay pagkatapos itong maitayo. Posible? Oo. Madali? Hindi talaga.
 
-Isipin ang accessibility tulad ng pagbuo ng bahay: mas madali itong isama ang wheelchair accessibility sa mga paunang plano ng arkitektura kaysa magdagdag ng mga rampa at mas malalaking pintuan pagkatapos ng konstruksyon.
+Isipin ang accessibility na parang pagpaplano ng bahay—mas madali itong isama ang wheelchair accessibility sa iyong mga paunang plano sa arkitektura kaysa i-retrofit ang lahat pagkatapos.
 
-### Ang mga prinsipyo ng POUR: Ang iyong pundasyon sa accessibility
+### Ang mga prinsipyo ng POUR: Ang pundasyon ng iyong accessibility
 
-Ang Web Content Accessibility Guidelines (WCAG) ay binuo sa paligid ng apat na pangunahing prinsipyo na kilala bilang POUR. Ang mga prinsipyong ito ay nagbibigay ng framework para gawing accessible ang nilalaman sa mga user na may iba't ibang kakayahan at teknolohiya.
+Ang Web Content Accessibility Guidelines (WCAG) ay nakabatay sa apat na pangunahing prinsipyo na bumubuo sa POUR. Huwag mag-alala—hindi ito mga mahigpit na akademikong konsepto! Ang mga ito ay talagang praktikal na gabay para sa paggawa ng nilalaman na gumagana para sa lahat.
 
-Ang pag-unawa sa POUR ay tumutulong sa iyo na gumawa ng mga desisyon sa accessibility na lumilikha ng inclusive na karanasan para sa lahat.
+Kapag nakuha mo ang tamang paraan ng POUR, ang paggawa ng mga desisyon sa accessibility ay nagiging mas intuitive. Para itong pagkakaroon ng mental checklist na gumagabay sa iyong mga desisyon sa disenyo. Tuklasin natin ito:
 
 **🔍 Perceivable**: Ang impormasyon ay dapat maipakita sa mga paraan na maaaring ma-perceive ng mga user sa pamamagitan ng kanilang available na senses
 
 - Magbigay ng text alternatives para sa non-text content (mga imahe, video, audio)
 - Siguraduhin ang sapat na color contrast para sa lahat ng teksto at UI components
 - Magbigay ng captions at transcripts para sa multimedia content
-- Disenyuhin ang nilalaman na nananatiling functional kapag ini-resize hanggang 200%
-- Gumamit ng maraming sensory characteristics (hindi lang kulay) upang magpahayag ng impormasyon
+- Disenyuhan ang nilalaman na nananatiling functional kapag na-resize hanggang 200%
+- Gumamit ng maraming sensory characteristics (hindi lang kulay) upang magpahiwatig ng impormasyon
 
 **🎮 Operable**: Lahat ng interface components ay dapat ma-operate sa pamamagitan ng available na input methods
 
 - Gawing accessible ang lahat ng functionality sa pamamagitan ng keyboard navigation
 - Magbigay ng sapat na oras para sa mga user na basahin at makipag-ugnayan sa nilalaman
 - Iwasan ang nilalaman na nagdudulot ng seizures o vestibular disorders
-- Tulungan ang mga user na mag-navigate nang epektibo gamit ang malinaw na istruktura at landmarks
-- Siguraduhin ang interactive na mga elemento ay may sapat na target sizes (44px minimum)
+- Tulungan ang mga user na mag-navigate nang mahusay gamit ang malinaw na istruktura at landmarks
+- Siguraduhin na ang mga interactive na elemento ay may sapat na target sizes (44px minimum)
 
-**📖 Understandable**: Ang impormasyon at operasyon ng UI ay dapat malinaw at madaling maunawaan
+**📖 Understandable**: Ang impormasyon at UI operation ay dapat malinaw at madaling maunawaan
 
 - Gumamit ng malinaw, simpleng wika na angkop para sa iyong audience
-- Siguraduhin ang nilalaman ay lumilitaw at gumagana sa predictable, consistent na paraan
-- Magbigay ng malinaw na mga instruksyon at error messages para sa user input
-- Tulungan ang mga user na maunawaan at maitama ang mga pagkakamali sa mga form
+- Siguraduhin na ang nilalaman ay lumilitaw at gumagana sa predictable, consistent na paraan
+- Magbigay ng malinaw na instruksyon at error messages para sa user input
+- Tulungan ang mga user na maunawaan at maitama ang mga pagkakamali sa forms
 - Ayusin ang nilalaman na may lohikal na reading order at information hierarchy
 
 **💪 Robust**: Ang nilalaman ay dapat gumana nang maaasahan sa iba't ibang teknolohiya at assistive devices
@@ -194,27 +196,26 @@ Ang pag-unawa sa POUR ay tumutulong sa iyo na gumawa ng mga desisyon sa accessib
 - Gumamit ng valid, semantic HTML bilang iyong pundasyon
 - Siguraduhin ang compatibility sa kasalukuyan at hinaharap na assistive technologies
 - Sundin ang web standards at best practices para sa markup
-- Mag-test sa iba't ibang browser, device, at assistive tools
-- Istruktura ang nilalaman upang ito ay mag-degrade nang maayos kapag ang advanced features ay hindi suportado
+- Mag-test sa iba't ibang browser, devices, at assistive tools
+- Istruktura ang nilalaman upang ito ay mag-degrade gracefully kapag ang advanced features ay hindi suportado
 
-## Paglikha ng Accessible Visual Design
+## Paglikha ng Accessible na Visual Design
 
-Ang magandang visual design at accessibility ay magkaugnay. Kapag nagdisenyo ka nang may accessibility sa isip, madalas mong matutuklasan na ang mga limitasyong ito ay nagdudulot ng mas malinis, mas eleganteng solusyon na nakikinabang sa lahat ng user.
+Ang magandang visual design at accessibility ay magkasabay. Kapag nagdisenyo ka nang may accessibility sa isip, madalas mong matutuklasan na ang mga limitasyong ito ay humahantong sa mas malinis, mas eleganteng solusyon na kapaki-pakinabang para sa lahat ng user.
 
-Tuklasin natin kung paano lumikha ng mga disenyo na kaaya-aya sa mata at gumagana para sa lahat, anuman ang kanilang kakayahan sa paningin o ang mga kondisyon kung saan nila tinitingnan ang iyong nilalaman.
+Tuklasin natin kung paano lumikha ng mga visually appealing na disenyo na gumagana para sa lahat, anuman ang kanilang visual abilities o ang mga kondisyon kung saan nila tinitingnan ang iyong nilalaman.
 
-### Mga estratehiya sa kulay at visual accessibility
+### Mga Estratehiya sa Kulay at Visual Accessibility
+Ang kulay ay makapangyarihan para sa komunikasyon, ngunit hindi ito dapat maging tanging paraan upang maipahayag ang mahalagang impormasyon. Ang disenyo na lampas sa kulay ay lumilikha ng mas matibay at inklusibong karanasan na gumagana sa mas maraming sitwasyon.
 
-Ang kulay ay makapangyarihan para sa komunikasyon, ngunit hindi ito dapat ang tanging paraan upang maipahayag ang mahalagang impormasyon. Ang pagdidisenyo nang lampas sa kulay ay lumilikha ng mas matibay, inclusive na karanasan na gumagana sa mas maraming sitwasyon.
+**Magdisenyo para sa mga pagkakaiba sa paningin ng kulay:**
 
-**Disenyo para sa mga pagkakaiba sa color vision:**
-
-Humigit-kumulang 8% ng mga lalaki at 0.5% ng mga babae ay may ilang uri ng pagkakaiba sa color vision (madalas na tinatawag na "color blindness"). Ang mga pinakakaraniwang uri ay:
+Tinatayang 8% ng mga lalaki at 0.5% ng mga babae ang may ilang uri ng pagkakaiba sa paningin ng kulay (madalas na tinatawag na "color blindness"). Ang mga pinakakaraniwang uri ay:
 - **Deuteranopia**: Hirap sa pagkilala ng pula at berde
-- **Protanopia**: Ang pula ay mas dim
+- **Protanopia**: Ang pula ay mukhang mas madilim
 - **Tritanopia**: Hirap sa asul at dilaw (bihira)
 
-**Mga inclusive na estratehiya sa kulay:**
+**Mga inklusibong estratehiya sa kulay:**
 
 ```css
 /* ❌ Bad: Using only color to indicate status */
@@ -242,17 +243,18 @@ Humigit-kumulang 8% ng mga lalaki at 0.5% ng mga babae ay may ilang uri ng pagka
 ```
 
 **Lampas sa mga pangunahing kinakailangan sa contrast:**
-- Subukan ang iyong mga pagpipilian sa kulay gamit ang mga color blind simulators
+- Subukan ang iyong mga pagpipilian sa kulay gamit ang mga color blind simulator
 - Gumamit ng mga pattern, texture, o hugis kasabay ng color coding
-- Siguraduhin ang interactive states ay nananatiling naiiba kahit walang kulay
-- Isaalang-alang kung paano ang iyong disenyo ay lumilitaw sa high contrast mode
+- Siguraduhing ang mga interactive na estado ay nananatiling naiiba kahit walang kulay
+- Isaalang-alang kung paano ang disenyo mo ay magmumukha sa high contrast mode
 
-✅ **Subukan ang iyong color accessibility**: Gumamit ng mga tool tulad ng [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) upang makita kung paano lumilitaw ang iyong site sa mga user na may iba't ibang uri ng color vision.
-### Mga Indicator ng Pokus at Disenyo ng Interaksyon
+✅ **Subukan ang accessibility ng iyong kulay**: Gumamit ng mga tool tulad ng [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) upang makita kung paano ang hitsura ng iyong site sa mga gumagamit na may iba't ibang uri ng paningin ng kulay.
 
-Ang mga indicator ng pokus ay katumbas ng cursor sa digital—ipinapakita nila sa mga gumagamit ng keyboard kung nasaan sila sa pahina. Ang maayos na disenyo ng mga indicator ng pokus ay nagpapabuti sa karanasan ng lahat sa pamamagitan ng paggawa ng malinaw at predictable na interaksyon.
+### Mga focus indicator at disenyo ng interaksyon
 
-**Mga modernong best practices para sa indicator ng pokus:**
+Ang mga focus indicator ay katumbas ng cursor sa digital—ipinapakita nila sa mga gumagamit ng keyboard kung nasaan sila sa pahina. Ang maayos na disenyo ng focus indicator ay nagpapahusay sa karanasan para sa lahat sa pamamagitan ng paggawa ng mga interaksyon na malinaw at predictable.
+
+**Mga modernong best practice para sa focus indicator:**
 
 ```css
 /* Enhanced focus styles that work across browsers */
@@ -281,21 +283,21 @@ button:focus:not(:focus-visible) {
 }
 ```
 
-**Mga kinakailangan para sa indicator ng pokus:**
-- **Visibility**: Dapat may hindi bababa sa 3:1 na contrast ratio sa mga nakapaligid na elemento
-- **Lapad**: Minimum na 2px na kapal sa buong elemento
-- **Persistence**: Dapat manatiling nakikita hanggang sa lumipat ang pokus sa ibang lugar
-- **Distinction**: Dapat visually naiiba sa iba pang estado ng UI
+**Mga kinakailangan para sa focus indicator:**
+- **Visibility**: Dapat may hindi bababa sa 3:1 contrast ratio sa mga nakapaligid na elemento
+- **Width**: Minimum na kapal na 2px sa buong elemento
+- **Persistence**: Dapat manatiling nakikita hanggang sa lumipat ang focus sa ibang lugar
+- **Distinction**: Dapat visually naiiba mula sa ibang estado ng UI
 
-> 💡 **Tip sa Disenyo**: Ang mahusay na mga indicator ng pokus ay kadalasang gumagamit ng kombinasyon ng outline, box-shadow, at pagbabago ng kulay upang matiyak ang visibility sa iba't ibang background at konteksto.
+> 💡 **Tip sa Disenyo**: Ang magagandang focus indicator ay madalas gumagamit ng kombinasyon ng outline, box-shadow, at pagbabago ng kulay upang matiyak ang visibility sa iba't ibang background at konteksto.
 
-✅ **I-audit ang mga indicator ng pokus**: Mag-tab sa iyong website at suriin kung aling mga elemento ang may malinaw na indicator ng pokus. Mayroon bang mahirap makita o ganap na nawawala?
+✅ **I-audit ang mga focus indicator**: Mag-tab sa iyong website at tandaan kung aling mga elemento ang may malinaw na focus indicator. Mayroon bang mahirap makita o ganap na nawawala?
 
 ### Semantic HTML: Ang pundasyon ng accessibility
 
-Ang Semantic HTML ay parang pagbibigay ng malinaw na mapa para sa mga assistive technologies. Kapag ginamit mo ang tamang mga elemento ng HTML para sa kanilang layunin, nagbibigay ka ng impormasyon sa mga screen reader, keyboard, at iba pang tools upang matulungan ang mga user na mag-navigate nang epektibo.
+Ang Semantic HTML ay parang pagbibigay ng GPS system sa mga assistive technologies para sa iyong website. Kapag ginamit mo ang tamang HTML elements para sa kanilang layunin, nagbibigay ka ng detalyadong roadmap sa mga screen reader, keyboard, at iba pang tools upang matulungan ang mga gumagamit na mag-navigate nang epektibo.
 
-Isipin ang Semantic HTML bilang pagkakaiba ng maayos na organisadong library na may malinaw na kategorya at mga palatandaan kumpara sa isang warehouse kung saan ang mga libro ay nakakalat nang walang sistema. Pareho silang may parehong impormasyon, ngunit isa lang ang tunay na magagamit.
+Narito ang isang analogy na talagang tumatak sa akin: ang Semantic HTML ay ang pagkakaiba sa pagitan ng maayos na organisadong library na may malinaw na kategorya at mga kapaki-pakinabang na palatandaan kumpara sa isang warehouse kung saan ang mga libro ay nakakalat nang random. Parehong may parehong mga libro, ngunit alin ang mas gusto mong hanapan ng isang bagay? Eksakto!
 
 **Mga pundasyon ng accessible na istruktura ng pahina:**
 
@@ -358,28 +360,28 @@ Isipin ang Semantic HTML bilang pagkakaiba ng maayos na organisadong library na 
 |------------------|---------|---------------------------|
 | `<header>` | Header ng pahina o seksyon | "Banner landmark" - mabilis na pag-navigate sa itaas |
 | `<nav>` | Mga navigation link | "Navigation landmark" - listahan ng mga seksyon ng nav |
-| `<main>` | Pangunahing nilalaman ng pahina | "Main landmark" - direktang pagpunta sa nilalaman |
+| `<main>` | Pangunahing nilalaman ng pahina | "Main landmark" - direktang pagtalon sa nilalaman |
 | `<article>` | Self-contained na nilalaman | Ipinapahayag ang mga hangganan ng artikulo |
-| `<section>` | Mga grupo ng nilalaman na may tema | Nagbibigay ng istruktura ng nilalaman |
+| `<section>` | Mga grupong may tema na nilalaman | Nagbibigay ng istruktura ng nilalaman |
 | `<aside>` | Kaugnay na nilalaman sa sidebar | "Complementary landmark" |
 | `<footer>` | Footer ng pahina o seksyon | "Contentinfo landmark" |
 
 **Mga superpower ng screen reader gamit ang Semantic HTML:**
-- **Landmark navigation**: Mabilis na paglipat sa mga pangunahing seksyon ng pahina
+- **Landmark navigation**: Mabilis na pagtalon sa mga pangunahing seksyon ng pahina
 - **Heading outlines**: Gumawa ng table of contents mula sa istruktura ng heading
 - **Element lists**: Gumawa ng listahan ng lahat ng link, button, o form controls
-- **Context awareness**: Nauunawaan ang relasyon sa pagitan ng mga seksyon ng nilalaman
+- **Context awareness**: Maunawaan ang mga relasyon sa pagitan ng mga seksyon ng nilalaman
 
-> 🎯 **Mabilis na Pagsubok**: Subukang mag-navigate sa iyong site gamit ang screen reader gamit ang mga shortcut sa landmark (D para sa landmark, H para sa heading, K para sa link sa NVDA/JAWS). Angkop ba ang navigation?
+> 🎯 **Mabilis na Pagsubok**: Subukang mag-navigate sa iyong site gamit ang screen reader gamit ang mga shortcut sa landmark (D para sa landmark, H para sa heading, K para sa link sa NVDA/JAWS). Ang navigation ba ay may katuturan?
 
-✅ **I-audit ang iyong semantic na istruktura**: Gamitin ang Accessibility panel sa DevTools ng iyong browser upang makita ang accessibility tree at tiyaking ang iyong markup ay lumilikha ng lohikal na istruktura.
+✅ **I-audit ang iyong semantic na istruktura**: Gamitin ang Accessibility panel sa DevTools ng iyong browser upang tingnan ang accessibility tree at tiyakin na ang iyong markup ay lumilikha ng lohikal na istruktura.
 
 ### Hierarchy ng Heading: Paglikha ng lohikal na outline ng nilalaman
 
-Ang mga heading ang gulugod ng accessible na istruktura ng nilalaman. Ang mga gumagamit ng screen reader ay lubos na umaasa sa mga heading upang maunawaan at mag-navigate sa iyong nilalaman—parang nagbibigay ng detalyadong table of contents para sa iyong pahina.
+Ang mga heading ay napakahalaga para sa accessible na nilalaman—parang gulugod na nagtataguyod sa lahat. Ang mga gumagamit ng screen reader ay lubos na umaasa sa mga heading upang maunawaan at mag-navigate sa iyong nilalaman. Isipin ito bilang pagbibigay ng table of contents para sa iyong pahina.
 
-**Ang panuntunan sa hierarchy ng heading:**
-Huwag laktawan ang mga antas ng heading. Palaging magpatuloy nang lohikal mula `<h1>` hanggang `<h2>` hanggang `<h3>`, at iba pa. Isipin ang mga heading na parang outline structure sa isang dokumento.
+**Narito ang gintong tuntunin para sa mga heading:**
+Huwag laktawan ang mga antas. Palaging magpatuloy nang lohikal mula `<h1>` hanggang `<h2>` hanggang `<h3>`, at iba pa. Tandaan ang paggawa ng mga outline noong nasa paaralan? Pareho lang ang prinsipyo—hindi ka lilipat mula sa "I. Pangunahing Punto" diretso sa "C. Sub-sub-point" nang walang "A. Sub-point" sa pagitan, tama?
 
 **Halimbawa ng perpektong istruktura ng heading:**
 
@@ -420,32 +422,32 @@ Huwag laktawan ang mga antas ng heading. Palaging magpatuloy nang lohikal mula `
 <h1>Another main heading?</h1> <!-- Multiple h1s -->
 ```
 
-**Mga best practices sa heading:**
-- **Isang `<h1>` bawat pahina**: Karaniwang ang pangunahing pamagat ng pahina o pangunahing heading ng nilalaman
+**Mga best practice para sa heading:**
+- **Isang `<h1>` bawat pahina**: Karaniwan ang iyong pangunahing pamagat ng pahina o pangunahing heading ng nilalaman
 - **Lohikal na pag-unlad**: Huwag laktawan ang mga antas (h1 → h2 → h3, hindi h1 → h3)
-- **Descriptive na nilalaman**: Gawing makabuluhan ang mga heading kahit basahin nang wala sa konteksto
+- **Descriptive na nilalaman**: Gawing makabuluhan ang mga heading kapag binasa nang wala sa konteksto
 - **Visual styling gamit ang CSS**: Gamitin ang CSS para sa hitsura, HTML levels para sa istruktura
 
 **Mga istatistika ng navigation ng screen reader:**
 - 68% ng mga gumagamit ng screen reader ay nag-navigate gamit ang mga heading ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))
-- Inaasahan ng mga user na makakita ng lohikal na outline ng heading
-- Ang mga heading ang pinakamabilis na paraan upang maunawaan ang istruktura ng pahina
+- Inaasahan ng mga gumagamit na makakita ng lohikal na outline ng heading
+- Ang mga heading ay nagbibigay ng pinakamabilis na paraan upang maunawaan ang istruktura ng pahina
 
-> 💡 **Pro Tip**: Gumamit ng mga browser extension tulad ng "HeadingsMap" upang makita ang istruktura ng iyong heading. Dapat itong basahin na parang maayos na table of contents.
+> 💡 **Pro Tip**: Gumamit ng mga browser extension tulad ng "HeadingsMap" upang makita ang istruktura ng iyong heading. Dapat itong basahin tulad ng isang maayos na organisadong table of contents.
 
-✅ **Subukan ang istruktura ng iyong heading**: Gamitin ang heading navigation ng screen reader (H key sa NVDA) upang tumalon sa iyong mga heading. Angkop ba ang progression sa kwento ng iyong nilalaman?
+✅ **Subukan ang istruktura ng iyong heading**: Gamitin ang navigation ng heading ng screen reader (H key sa NVDA) upang mag-jump sa iyong mga heading. Ang pag-unlad ba ay nagsasabi ng kuwento ng iyong nilalaman nang lohikal?
 
-### Mga Advanced na Teknik sa Visual Accessibility
+### Mga advanced na teknik sa visual accessibility
 
-Bukod sa mga pangunahing kaalaman ng contrast at kulay, may mga sopistikadong teknik na tumutulong sa paglikha ng tunay na inclusive na visual na karanasan. Ang mga pamamaraang ito ay tinitiyak na ang iyong nilalaman ay gumagana sa iba't ibang kondisyon ng pagtingin at assistive technologies.
+Lampas sa mga pangunahing kaalaman ng contrast at kulay, may mga sopistikadong teknik na tumutulong sa paglikha ng tunay na inklusibong visual na karanasan. Ang mga pamamaraang ito ay tinitiyak na ang iyong nilalaman ay gumagana sa iba't ibang kondisyon ng pagtingin at assistive technologies.
 
-**Mga mahalagang estratehiya sa visual na komunikasyon:**
+**Mga mahahalagang estratehiya sa visual na komunikasyon:**
 
 - **Multi-modal feedback**: Pagsamahin ang visual, textual, at minsan audio cues
 - **Progressive disclosure**: Ipakita ang impormasyon sa mga digestible na bahagi
-- **Consistent interaction patterns**: Gumamit ng pamilyar na UI conventions
+- **Consistent interaction patterns**: Gumamit ng mga pamilyar na UI conventions
 - **Responsive typography**: I-scale ang teksto nang naaangkop sa iba't ibang device
-- **Loading at error states**: Magbigay ng malinaw na feedback para sa lahat ng aksyon ng user
+- **Loading at error states**: Magbigay ng malinaw na feedback para sa lahat ng aksyon ng gumagamit
 
 **Mga utility ng CSS para sa pinahusay na accessibility:**
 
@@ -509,19 +511,19 @@ Bukod sa mga pangunahing kaalaman ng contrast at kulay, may mga sopistikadong te
 
 ## Paggawa ng Makabuluhang Link Text
 
-Ang mga link ang daan ng web, ngunit ang hindi maayos na pagsulat ng link text ay nagdudulot ng hadlang para sa mga gumagamit na may kapansanan. Ang mahusay na link text ay ginagawang scannable at navigable ang iyong nilalaman para sa lahat.
+Ang mga link ay parang mga highway ng web, ngunit ang hindi maayos na isinulat na link text ay parang may mga road sign na nagsasabing "Lugar" sa halip na "Downtown Chicago." Hindi masyadong kapaki-pakinabang, di ba?
 
-Maaaring kunin ng mga screen reader ang lahat ng link mula sa isang pahina at ipakita ang mga ito bilang isang listahan—isipin kung ang iyong mga link ay lumitaw bilang isang direktoryo. Maiintindihan ba ang bawat link nang walang nakapaligid na konteksto?
+Narito ang isang bagay na talagang nagbigay-liwanag sa akin nang una kong malaman ito: ang mga screen reader ay maaaring kunin ang lahat ng mga link mula sa isang pahina at ipakita ang mga ito bilang isang malaking listahan. Isipin kung may nagbigay sa iyo ng direktoryo ng bawat link sa iyong pahina. Ang bawat isa ba ay may kahulugan sa sarili nito? Iyan ang pagsubok na kailangang maipasa ng iyong link text!
 
 ### Pag-unawa sa mga pattern ng navigation ng link
 
-Nag-aalok ang mga screen reader ng makapangyarihang mga feature ng navigation ng link na umaasa sa maayos na pagsulat ng link text:
+Ang mga screen reader ay nag-aalok ng makapangyarihang mga feature sa navigation ng link na umaasa sa maayos na isinulat na link text:
 
 **Mga paraan ng navigation ng link:**
-- **Sequential reading**: Binabasa ang mga link sa konteksto bilang bahagi ng daloy ng nilalaman
-- **Link list generation**: Lahat ng link sa pahina ay pinagsama sa isang searchable na direktoryo
-- **Quick navigation**: Tumalon sa pagitan ng mga link gamit ang keyboard shortcuts (K sa NVDA)
-- **Search functionality**: Hanapin ang partikular na mga link sa pamamagitan ng pag-type ng partial na teksto
+- **Sequential reading**: Ang mga link ay binabasa sa konteksto bilang bahagi ng daloy ng nilalaman
+- **Link list generation**: Lahat ng mga link sa pahina ay pinagsama sa isang searchable na direktoryo
+- **Quick navigation**: Tumalon sa pagitan ng mga link gamit ang mga keyboard shortcut (K sa NVDA)
+- **Search functionality**: Hanapin ang mga partikular na link sa pamamagitan ng pag-type ng partial na text
 
 **Bakit mahalaga ang konteksto:**
 Kapag ang mga gumagamit ng screen reader ay bumuo ng listahan ng link, makikita nila ang ganito:
@@ -531,11 +533,11 @@ Kapag ang mga gumagamit ng screen reader ay bumuo ng listahan ng link, makikita 
 - "Privacy policy"
 - "I-click dito"
 
-Dalawa lang sa mga link na ito ang nagbibigay ng kapaki-pakinabang na impormasyon kapag binasa nang wala sa konteksto!
+Dalawa lamang sa mga link na ito ang nagbibigay ng kapaki-pakinabang na impormasyon kapag binasa nang wala sa konteksto!
 
-> 📊 **Epekto sa User**: Ang mga gumagamit ng screen reader ay nag-scan ng mga listahan ng link upang mabilis na maunawaan ang nilalaman ng pahina. Ang generic na link text ay pinipilit silang bumalik sa konteksto ng bawat link, na lubos na nagpapabagal sa kanilang karanasan sa pag-browse.
+> 📊 **Epekto sa Gumagamit**: Ang mga gumagamit ng screen reader ay nag-scan ng mga listahan ng link upang mabilis na maunawaan ang nilalaman ng pahina. Ang generic na link text ay pinipilit silang bumalik sa konteksto ng bawat link, na lubos na nagpapabagal sa kanilang karanasan sa pag-browse.
 
-### Mga Karaniwang Pagkakamali sa Link Text na Dapat Iwasan
+### Mga karaniwang pagkakamali sa link text na dapat iwasan
 
 Ang pag-unawa sa kung ano ang hindi gumagana ay tumutulong sa iyo na kilalanin at ayusin ang mga isyu sa accessibility sa umiiral na nilalaman.
 
@@ -566,12 +568,12 @@ Ang pag-unawa sa kung ano ang hindi gumagana ay tumutulong sa iyo na kilalanin a
 ```
 
 **Bakit nabigo ang mga pattern na ito:**
-- **"I-click dito"** ay walang sinasabi sa mga user tungkol sa destinasyon
-- **"Basahin pa"** na paulit-ulit ay nagdudulot ng kalituhan
+- **"I-click dito"** ay walang sinasabi sa mga gumagamit tungkol sa destinasyon
+- **"Basahin pa"** na inuulit nang maraming beses ay nagdudulot ng kalituhan
 - **Raw URLs** ay mahirap bigkasin nang malinaw ng mga screen reader
 - **Mga solong salita** tulad ng "Punta" o "Tingnan" ay kulang sa descriptive na konteksto
 
-### Pagsulat ng Mahusay na Link Text
+### Pagsulat ng mahusay na link text
 
 Ang descriptive na link text ay kapaki-pakinabang para sa lahat—ang mga gumagamit na may paningin ay maaaring mabilis na mag-scan ng mga link, at ang mga gumagamit ng screen reader ay agad na nauunawaan ang mga destinasyon.
 
@@ -602,14 +604,14 @@ Ang descriptive na link text ay kapaki-pakinabang para sa lahat—ang mga gumaga
 <a href="/help">Get help with your account</a>
 ```
 
-**Mga best practices sa link text:**
+**Mga best practice para sa link text:**
 - **Maging specific**: "I-download ang quarterly financial report" kumpara sa "I-download"
-- **Isama ang file type at size**: "(PDF, 1.2MB)" para sa mga downloadable na file
+- **Isama ang uri ng file at laki**: "(PDF, 1.2MB)" para sa mga downloadable na file
 - **Banggitin kung ang mga link ay magbubukas sa labas**: "(magbubukas sa bagong window)" kung naaangkop
 - **Gumamit ng active na wika**: "Makipag-ugnayan sa amin" kumpara sa "Contact page"
-- **Panatilihing maikli**: Hangarin ang 2-8 salita kung maaari
+- **Panatilihin itong maikli**: Hangarin ang 2-8 salita kung maaari
 
-### Mga Advanced na Pattern ng Accessibility ng Link
+### Mga advanced na pattern sa accessibility ng link
 
 Minsan ang mga constraint sa visual na disenyo o teknikal na kinakailangan ay nangangailangan ng espesyal na solusyon. Narito ang mga sopistikadong teknik para sa mga karaniwang hamon:
 
@@ -633,7 +635,7 @@ Minsan ang mga constraint sa visual na disenyo o teknikal na kinakailangan ay na
 <p id="sustainability-summary">Detailed breakdown of our 2024 environmental goals and achievements</p>
 ```
 
-**Pagpapahiwatig ng mga file type at external na destinasyon:**
+**Pagpapahiwatig ng uri ng file at mga destinasyong panlabas:**
 
 ```html
 <!-- Method 1: Include information in visible link text -->
@@ -682,36 +684,36 @@ Minsan ang mga constraint sa visual na disenyo o teknikal na kinakailangan ay na
 }
 ```
 
-> ⚠️ **Mahalaga**: Kapag gumagamit ng `target="_blank"`, palaging ipaalam sa mga user na ang link ay magbubukas sa bagong window o tab. Ang hindi inaasahang pagbabago sa navigation ay maaaring magdulot ng disorientasyon.
+> ⚠️ **Mahalaga**: Kapag gumagamit ng `target="_blank"`, palaging ipaalam sa mga gumagamit na ang link ay magbubukas sa bagong window o tab. Ang hindi inaasahang pagbabago sa navigation ay maaaring magdulot ng pagkalito.
 
-✅ **Subukan ang konteksto ng iyong link**: Gamitin ang developer tools ng iyong browser upang bumuo ng listahan ng lahat ng link sa iyong pahina. Maiintindihan ba ang layunin ng bawat link nang walang nakapaligid na konteksto?
+✅ **Subukan ang konteksto ng iyong link**: Gamitin ang developer tools ng iyong browser upang bumuo ng listahan ng lahat ng mga link sa iyong pahina. Nauunawaan mo ba ang layunin ng bawat link nang walang anumang nakapaligid na konteksto?
 
 ## ARIA: Pagpapalakas ng Accessibility ng HTML
 
-[Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) ay parang universal translator sa pagitan ng iyong mga kumplikadong web application at assistive technologies. Kapag hindi kayang ipahayag ng HTML ang buong kahulugan ng iyong mga interactive na component, pinupunan ng ARIA ang mga puwang.
+[Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) ay parang universal translator sa pagitan ng iyong mga kumplikadong web application at assistive technologies. Kapag ang HTML lamang ay hindi maipahayag ang lahat ng ginagawa ng iyong mga interactive na component, ang ARIA ang pumupuno sa mga puwang.
 
-Isipin ang ARIA bilang pagdaragdag ng mga kapaki-pakinabang na annotation sa iyong HTML—parang mga direksyon sa entablado sa isang script ng dula na tumutulong sa mga aktor na maunawaan ang kanilang mga papel at relasyon.
+Iniisip ko ang ARIA bilang pagdaragdag ng mga kapaki-pakinabang na annotation sa iyong HTML—parang mga direksyon sa entablado sa isang script ng dula na tumutulong sa mga aktor na maunawaan ang kanilang mga papel at relasyon.
 
-**Ang pangunahing panuntunan ng ARIA**: Gamitin muna ang semantic HTML, ARIA pangalawa. Ang ARIA ay dapat magpahusay at maglinaw, hindi kailanman papalitan ang tamang istruktura ng HTML.
+**Narito ang pinakamahalagang tuntunin tungkol sa ARIA**: Palaging gumamit ng semantic HTML muna, pagkatapos ay idagdag ang ARIA upang mapahusay ito. Isipin ang ARIA bilang pampalasa, hindi ang pangunahing ulam. Dapat nitong linawin at pagandahin ang istruktura ng iyong HTML, hindi kailanman palitan ito. Unahin ang tamang pundasyon!
 
-### Strategic na Implementasyon ng ARIA
+### Strategic na implementasyon ng ARIA
 
-Makapangyarihan ang ARIA, ngunit may kaakibat na responsibilidad ang kapangyarihan. Ang maling paggamit ng ARIA ay maaaring magpalala ng accessibility kaysa sa wala nito. Narito kung kailan at paano ito epektibong gamitin:
+Ang ARIA ay makapangyarihan, ngunit may kasamang responsibilidad ang kapangyarihan. Ang maling ARIA ay maaaring magpalala ng accessibility kaysa sa wala. Narito kung kailan at paano ito gamitin nang epektibo:
 
-**✅ Gamitin ang ARIA kapag:**
+**✅ Gumamit ng ARIA kapag:**
 - Gumagawa ng custom na interactive widgets (accordions, tabs, carousels)
 - Gumagawa ng dynamic na nilalaman na nagbabago nang walang page reloads
 - Nagbibigay ng karagdagang konteksto para sa mga kumplikadong relasyon sa UI
-- Nagpapahiwatig ng loading states o live content updates
-- Gumagawa ng app-like interfaces na may custom controls
+- Nagpapahiwatig ng mga loading states o live na update ng nilalaman
+- Gumagawa ng app-like interfaces na may custom na controls
 
 **❌ Iwasan ang ARIA kapag:**
-- Ang mga standard na elemento ng HTML ay nagbibigay na ng kinakailangang semantics
-- Hindi ka sigurado kung paano ito ipapatupad nang tama
+- Ang mga standard na HTML elements ay nagbibigay na ng kinakailangang semantics
+- Hindi ka sigurado kung paano ito i-implement nang tama
 - Inuulit nito ang impormasyon na ibinibigay na ng semantic HTML
 - Hindi mo pa ito nasubukan gamit ang aktwal na assistive technology
 
-> 🎯 **Golden Rule ng ARIA**: "Huwag baguhin ang semantics maliban kung talagang kailangan, tiyakin ang accessibility ng keyboard palagi, at subukan gamit ang totoong assistive technology."
+> 🎯 **Golden Rule ng ARIA**: "Huwag baguhin ang semantics maliban kung talagang kailangan, tiyakin ang keyboard accessibility palagi, at subukan gamit ang tunay na assistive technology."
 
 **Ang limang kategorya ng ARIA:**
 
@@ -721,9 +723,9 @@ Makapangyarihan ang ARIA, ngunit may kaakibat na responsibilidad ang kapangyarih
 4. **Landmarks**: Nasaan ito sa istruktura ng pahina? (`banner`, `navigation`, `main`)
 5. **Live regions**: Paano dapat i-anunsyo ang mga pagbabago? (`aria-live`, `aria-atomic`)
 
-### Mga Mahahalagang Pattern ng ARIA para sa Modernong Web Apps
+### Mga mahahalagang pattern ng ARIA para sa modernong web apps
 
-Ang mga pattern na ito ay naglutas ng mga karaniwang hamon sa accessibility sa mga interactive na web application:
+Ang mga pattern na ito ay naglutas ng mga pinakakaraniwang hamon sa accessibility sa mga interactive na web application:
 
 **Pagpapangalan at paglalarawan ng mga elemento:**
 
@@ -808,19 +810,16 @@ function toggleAccordion(trigger) {
 }
 ```
 
-### Mga Best Practices sa Implementasyon ng ARIA
+### Mga best practice sa implementasyon ng ARIA
 
-Makapangyarihan ang ARIA ngunit nangangailangan ng maingat na implementasyon. Ang pagsunod sa mga alituntuning ito ay tumutulong na matiyak na ang iyong ARIA ay nagpapahusay sa halip na nakakasama sa accessibility:
+Ang ARIA ay makapangyarihan ngunit nangangailangan ng maingat na implementasyon. Ang pagsunod sa mga alituntuning ito ay tumutulong upang matiyak na ang iyong ARIA ay nagpapahusay sa halip na nagpapahirap sa accessibility:
 
 **🛡️ Mga pangunahing prinsipyo:**
 
-1. **Semantic HTML muna**: Palaging piliin ang `<button>` kaysa sa `<div role="button">`
-2. **Huwag sirain ang semantics**: Huwag kailanman i-override ang umiiral na kahulugan ng HTML (iwasan ang `<h1 role="button">`)
-3. **Panatilihin ang accessibility ng keyboard**: Ang lahat ng interactive na elemento ng ARIA ay dapat ganap na accessible sa keyboard
-4. **Subukan sa totoong mga user**: Ang suporta sa ARIA ay lubos na nag-iiba sa pagitan ng assistive technologies
-5. **Magsimula nang simple**: Ang mga kumplikadong implementasyon ng ARIA ay mas malamang na magkaroon ng mga error
+1. **Semantic HTML muna**: Pal
+5. **Magsimula nang simple**: Ang mga komplikadong ARIA implementation ay mas malamang na magkamali
 
-**🔍 Workflow ng Pagsubok:**
+**🔍 Workflow sa Pagsusuri:**
 
 ```mermaid
 graph TD
@@ -834,31 +833,48 @@ graph TD
     G --> B
 ```
 
-**🚫 Mga Karaniwang Pagkakamali sa ARIA na Dapat Iwasan:**
+**🚫 Karaniwang Pagkakamali sa ARIA na Dapat Iwasan:**
 
-- **Conflicting information**: Huwag kontrahin ang semantics ng HTML
-- **Over-labeling**: Ang sobrang impormasyon ng ARIA ay nakakalito sa mga user
-- **Static ARIA**: Nakakalimutang i-update ang mga estado ng ARIA kapag nagbago ang nilalaman
-- **Hindi nasubukang implementasyon**: ARIA na gumagana sa teorya ngunit nabibigo sa praktika
-- **Kakulangan sa suporta sa keyboard**: Mga role ng ARIA na walang kaukulang interaksyon sa keyboard
+- **Nagkakasalungat na impormasyon**: Huwag kontrahin ang HTML semantics
+- **Sobrang pag-label**: Ang sobrang impormasyon sa ARIA ay nakakalito sa mga user
+- **Static ARIA**: Nakakalimutang i-update ang ARIA states kapag nagbabago ang content
+- **Hindi nasubukang mga implementation**: ARIA na gumagana sa teorya ngunit pumapalya sa aktwal na paggamit
+- **Kulang sa suporta sa keyboard**: Mga ARIA roles na walang kaukulang keyboard interactions
 
-> 💡 **Mga Resource sa Pagsubok**: Gumamit ng mga tool tulad ng [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) para sa automated na validation ng ARIA, ngunit palaging subukan gamit ang totoong screen readers para sa kumpletong karanasan.
+> 💡 **Mga Resource sa Pagsusuri**: Gumamit ng mga tool tulad ng [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) para sa automated na ARIA validation, ngunit laging subukan gamit ang mga tunay na screen reader para sa kumpletong karanasan.
 
-✅ **Matuto mula sa mga eksperto**: Pag-aralan ang [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) para sa mga subok na pattern at implementasyon ng mga kumplikadong interactive na widget.
+✅ **Matuto mula sa mga eksperto**: Pag-aralan ang [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) para sa mga subok na pattern at implementation ng mga komplikadong interactive widgets.
 
-## Paggawa ng Accessible na Mga Larawan at Media
+## Pagiging Accessible ng Mga Imahe at Media
 
-Ang visual at audio na nilalaman ay mahalagang bahagi ng modernong web experiences, ngunit maaari itong magdulot ng hadlang kung hindi maingat na ipinatupad. Ang layunin ay tiyakin na ang impormasyon at emosyonal na epekto ng iyong media ay maabot ang bawat user.
+Ang visual at audio content ay mahalagang bahagi ng modernong web experience, ngunit maaari itong magdulot ng hadlang kung hindi maayos ang pagkakagawa. Ang layunin ay tiyakin na ang impormasyon at emosyonal na epekto ng iyong media ay maabot ang bawat user. Kapag nasanay ka na, nagiging natural na ito.
 
-Ang iba't ibang uri ng nilalaman ng media ay nangangailangan ng iba't ibang diskarte sa accessibility—ang pag-un
-**Mga Functional na Imahe** - nagsisilbing mga button o kontrol:
+Iba't ibang uri ng media ang nangangailangan ng iba't ibang diskarte sa accessibility. Parang pagluluto—hindi mo gagamutin ang isang maselan na isda sa parehong paraan ng isang matibay na steak. Ang pag-unawa sa mga pagkakaibang ito ay tumutulong sa iyo na pumili ng tamang solusyon para sa bawat sitwasyon.
+
+### Diskarte sa Accessibility ng Imahe
+
+Ang bawat imahe sa iyong website ay may layunin. Ang pag-unawa sa layuning iyon ay tumutulong sa iyo na magsulat ng mas mahusay na alternative text at lumikha ng mas inklusibong karanasan.
+
+**Ang apat na uri ng imahe at ang kanilang mga estratehiya sa alt text:**
+
+**Mga Informative na Imahe** - nagbibigay ng mahalagang impormasyon:
+```html
+<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.tl.png" alt="Sales increased 25% from Q1 to Q2 2024">
+```
+
+**Mga Decorative na Imahe** - purong visual na walang halaga sa impormasyon:
+```html
+<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.tl.png" alt="" role="presentation">
+```
+
+**Mga Functional na Imahe** - nagsisilbing mga button o control:
 ```html
 <button>
   <img src="search-icon.svg" alt="Search">
 </button>
 ```
 
-**Mga Komplikadong Imahe** - mga tsart, diagram, infographics:
+**Mga Komplikadong Imahe** - mga chart, diagram, infographics:
 ```html
 <img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.tl.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
@@ -869,8 +885,8 @@ Ang iba't ibang uri ng nilalaman ng media ay nangangailangan ng iba't ibang disk
 ### Accessibility ng Video at Audio
 
 **Mga Pangangailangan sa Video:**
-- **Mga Caption**: Tekstong bersyon ng sinasalitang nilalaman at mga sound effect
-- **Audio Descriptions**: Pagkukuwento ng mga visual na elemento para sa mga bulag na gumagamit
+- **Captions**: Tekstong bersyon ng nilalaman na sinasabi at mga sound effect
+- **Audio descriptions**: Paglalarawan ng mga visual na elemento para sa mga bulag na user
 - **Transcripts**: Buong tekstong bersyon ng lahat ng audio at visual na nilalaman
 
 ```html
@@ -882,12 +898,12 @@ Ang iba't ibang uri ng nilalaman ng media ay nangangailangan ng iba't ibang disk
 ```
 
 **Mga Pangangailangan sa Audio:**
-- **Transcripts**: Tekstong bersyon ng lahat ng sinasalitang nilalaman
-- **Mga Visual na Indikasyon**: Para sa audio-only na nilalaman, magbigay ng mga visual na palatandaan
+- **Transcripts**: Tekstong bersyon ng lahat ng sinasabi
+- **Visual indicators**: Para sa audio-only na nilalaman, magbigay ng visual na palatandaan
 
-### Makabagong Teknik sa Imahe
+### Modernong Teknik sa Imahe
 
-**Paggamit ng CSS para sa mga dekoratibong imahe:**
+**Paggamit ng CSS para sa mga decorative na imahe:**
 ```css
 .hero-section {
   background-image: url('decorative-hero.jpg');
@@ -895,7 +911,7 @@ Ang iba't ibang uri ng nilalaman ng media ay nangangailangan ng iba't ibang disk
 }
 ```
 
-**Mga Responsive na Imahe na may Accessibility:**
+**Responsive na mga imahe na may accessibility:**
 ```html
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
@@ -904,25 +920,25 @@ Ang iba't ibang uri ng nilalaman ng media ay nangangailangan ng iba't ibang disk
 </picture>
 ```
 
-✅ **Subukan ang accessibility ng imahe**: Gumamit ng screen reader upang mag-navigate sa isang pahina na may mga imahe. Nakakakuha ka ba ng sapat na impormasyon upang maunawaan ang nilalaman?
+✅ **Subukan ang accessibility ng imahe**: Gumamit ng screen reader para mag-navigate sa isang pahina na may mga imahe. Nakakakuha ka ba ng sapat na impormasyon para maunawaan ang nilalaman?
 
-## Keyboard Navigation at Pamamahala ng Focus
+## Keyboard Navigation at Focus Management
 
-Maraming gumagamit ang umaasa lamang sa keyboard navigation. Mahalagang tiyakin na gumagana nang maayos ang iyong site gamit ang input ng keyboard para sa accessibility.
+Maraming user ang nagna-navigate sa web gamit lamang ang kanilang mga keyboard. Kasama dito ang mga taong may motor disabilities, mga power user na mas mabilis gumamit ng keyboard kaysa mouse, at sinumang nasira ang mouse. Ang pagtiyak na gumagana nang maayos ang iyong site gamit ang keyboard input ay mahalaga at madalas na nagpapahusay sa site para sa lahat.
 
-### Mahahalagang Pattern ng Keyboard Navigation
+### Mahahalagang Pattern sa Keyboard Navigation
 
-**Karaniwang Interaksyon sa Keyboard:**
-- **Tab**: Ilipat ang focus pasulong sa mga interactive na elemento
-- **Shift + Tab**: Ilipat ang focus pabalik
+**Karaniwang interaksyon sa keyboard:**
+- **Tab**: Mag-move ng focus pasulong sa mga interactive na elemento
+- **Shift + Tab**: Mag-move ng focus pabalik
 - **Enter**: I-activate ang mga button at link
 - **Space**: I-activate ang mga button, i-check ang mga checkbox
-- **Arrow keys**: Mag-navigate sa loob ng mga grupo ng component (mga radio button, menu)
-- **Escape**: Isara ang mga modal, dropdown, o kanselahin ang mga operasyon
+- **Arrow keys**: Mag-navigate sa loob ng mga grupo ng component (radio buttons, menus)
+- **Escape**: Isara ang modals, dropdowns, o kanselahin ang mga operasyon
 
-### Mga Pinakamahusay na Praktika sa Pamamahala ng Focus
+### Mga Pinakamahusay na Praktika sa Focus Management
 
-**Mga Nakikitang Indikasyon ng Focus:**
+**Mga nakikitang focus indicator:**
 ```css
 /* Ensure focus is always visible */
 button:focus-visible {
@@ -936,7 +952,7 @@ button:focus-visible {
 }
 ```
 
-**Mga Skip Link para sa Mas Mabisang Navigation:**
+**Skip links para sa mas epektibong navigation:**
 ```html
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -949,7 +965,7 @@ button:focus-visible {
 </main>
 ```
 
-**Tamang Tab Order:**
+**Tamang tab order:**
 ```html
 <!-- Use semantic HTML for natural tab order -->
 <form>
@@ -963,9 +979,9 @@ button:focus-visible {
 </form>
 ```
 
-### Focus Trapping sa Mga Modal
+### Focus Trapping sa Modals
 
-Kapag nagbukas ng modal dialogs, dapat nakatrap ang focus sa loob ng modal:
+Kapag nagbukas ng modal dialogs, ang focus ay dapat manatili sa loob ng modal:
 
 ```javascript
 // Modern focus trap implementation
@@ -998,13 +1014,13 @@ function trapFocus(element) {
 }
 ```
 
-✅ **Subukan ang keyboard navigation**: Subukang mag-navigate sa iyong website gamit lamang ang Tab key. Naabot mo ba ang lahat ng interactive na elemento? Ang order ng focus ba ay lohikal? Malinaw ba ang mga indikasyon ng focus?
+✅ **Subukan ang keyboard navigation**: Subukang mag-navigate sa iyong website gamit lamang ang Tab key. Naabot mo ba ang lahat ng interactive na elemento? Ang order ba ng focus ay lohikal? Ang mga focus indicator ba ay malinaw na nakikita?
 
 ## Accessibility ng Form
 
-Ang mga form ay mahalaga para sa interaksyon ng gumagamit at nangangailangan ng espesyal na atensyon para sa accessibility.
+Ang mga form ay mahalaga para sa interaksyon ng user at nangangailangan ng espesyal na atensyon sa accessibility.
 
-### Asosasyon ng Label at Form Control
+### Association ng Label at Form Control
 
 **Ang bawat form control ay nangangailangan ng label:**
 ```html
@@ -1022,9 +1038,9 @@ Ang mga form ay mahalaga para sa interaksyon ng gumagamit at nangangailangan ng 
 <input type="search" aria-label="Search products" placeholder="Search...">
 ```
 
-### Paghawak ng Error at Pag-validate
+### Error Handling at Validation
 
-**Mga Accessible na Mensahe ng Error:**
+**Accessible na mga error message:**
 ```html
 <label for="email">Email Address:</label>
 <input type="email" id="email" name="email" 
@@ -1035,9 +1051,9 @@ Ang mga form ay mahalaga para sa interaksyon ng gumagamit at nangangailangan ng 
 </div>
 ```
 
-**Mga Pinakamahusay na Praktika sa Pag-validate ng Form:**
-- Gumamit ng `aria-invalid` upang ipakita ang mga invalid na field
-- Magbigay ng malinaw, tiyak na mga mensahe ng error
+**Mga Pinakamahusay na Praktika sa Form Validation:**
+- Gumamit ng `aria-invalid` para ipakita ang mga invalid na field
+- Magbigay ng malinaw, tiyak na mga error message
 - Gumamit ng `role="alert"` para sa mahahalagang anunsyo ng error
 - Ipakita ang mga error parehong agad-agad at sa pag-submit ng form
 
@@ -1066,31 +1082,33 @@ Ang mga form ay mahalaga para sa interaksyon ng gumagamit at nangangailangan ng 
 
 ## Ang Iyong Accessibility Journey: Mga Pangunahing Aral
 
-Binabati kita! Natutunan mo na ang mga pangunahing kaalaman upang lumikha ng tunay na inklusibong karanasan sa web. Ang web accessibility ay hindi lamang tungkol sa pagsunod—ito ay tungkol sa pagkilala sa iba't ibang paraan ng interaksyon ng mga tao sa digital na nilalaman at pagdidisenyo para sa masalimuot na kagandahan na iyon.
+Binabati kita! Nakuha mo na ang pangunahing kaalaman para lumikha ng tunay na inklusibong web experience. Nakakatuwa ito! Ang web accessibility ay hindi lamang tungkol sa pagsunod sa mga regulasyon—ito ay tungkol sa pagkilala sa iba't ibang paraan ng interaksyon ng mga tao sa digital na nilalaman at pagdidisenyo para sa kahanga-hangang kompleksidad na iyon.
 
-**🎯 Ang iyong toolkit sa accessibility ngayon ay naglalaman ng:**
+Ikaw ngayon ay bahagi ng lumalaking komunidad ng mga developer na nauunawaan na ang mahusay na disenyo ay gumagana para sa lahat. Maligayang pagdating sa grupo!
+
+**🎯 Ang iyong accessibility toolkit ay ngayon ay naglalaman ng:**
 
 | Pangunahing Prinsipyo | Implementasyon | Epekto |
 |----------------|----------------|---------|
-| **Semantic HTML Foundation** | Gumamit ng tamang HTML elements para sa kanilang layunin | Ang mga screen reader ay maaaring mag-navigate nang mahusay, ang mga keyboard ay awtomatikong gumagana |
+| **Semantic HTML Foundation** | Gumamit ng tamang HTML elements para sa kanilang layunin | Ang mga screen reader ay maaaring mag-navigate nang epektibo, ang mga keyboard ay awtomatikong gumagana |
 | **Inclusive Visual Design** | Sapat na contrast, makabuluhang paggamit ng kulay, nakikitang focus indicators | Malinaw para sa lahat sa anumang kondisyon ng ilaw |
-| **Descriptive Content** | Makabuluhang link text, alt text, headings | Nauunawaan ng mga gumagamit ang nilalaman nang walang visual na konteksto |
+| **Descriptive Content** | Makabuluhang link text, alt text, headings | Nauunawaan ng mga user ang nilalaman kahit walang visual na konteksto |
 | **Keyboard Accessibility** | Tab order, keyboard shortcuts, focus management | Accessibility para sa motor at kahusayan ng power user |
-| **ARIA Enhancement** | Strategic na paggamit upang punan ang semantic gaps | Gumagana ang mga komplikadong aplikasyon sa assistive technologies |
-| **Comprehensive Testing** | Mga automated na tool + manual na beripikasyon + totoong user testing | Nahuhuli ang mga isyu bago makaapekto sa mga gumagamit |
+| **ARIA Enhancement** | Strategic na paggamit para punan ang semantic gaps | Gumagana ang mga komplikadong application sa assistive technologies |
+| **Comprehensive Testing** | Automated tools + manual verification + real user testing | Nahuhuli ang mga isyu bago makaapekto sa mga user |
 
 **🚀 Ang iyong susunod na hakbang:**
 
-1. **Isama ang accessibility sa iyong workflow**: Gawing natural na bahagi ng iyong proseso ng pag-develop ang testing
-2. **Matuto mula sa totoong mga gumagamit**: Humingi ng feedback mula sa mga taong gumagamit ng assistive technologies
+1. **Isama ang accessibility sa iyong workflow**: Gawing natural na bahagi ng iyong proseso ng development ang pagsusuri
+2. **Matuto mula sa mga tunay na user**: Humingi ng feedback mula sa mga taong gumagamit ng assistive technologies
 3. **Manatiling updated**: Ang mga teknik sa accessibility ay nagbabago kasabay ng mga bagong teknolohiya at pamantayan
-4. **I-promote ang inklusyon**: Ibahagi ang iyong kaalaman at gawing prayoridad ng team ang accessibility
+4. **I-promote ang inclusivity**: Ibahagi ang iyong kaalaman at gawing prayoridad ng team ang accessibility
 
-> 💡 **Tandaan**: Ang mga limitasyon sa accessibility ay madalas na humahantong sa mga makabago, eleganteng solusyon na kapaki-pakinabang para sa lahat. Ang curb cuts, captions, at voice controls ay nagsimula bilang mga feature ng accessibility at naging mainstream na mga pagpapabuti.
+> 💡 **Tandaan**: Ang mga limitasyon sa accessibility ay madalas na humahantong sa mga makabago at eleganteng solusyon na kapaki-pakinabang para sa lahat. Ang curb cuts, captions, at voice controls ay nagsimula bilang mga feature sa accessibility at naging mainstream na mga pagpapabuti.
 
-**Malinaw ang business case**: Ang mga accessible na website ay umaabot sa mas maraming gumagamit, mas mataas ang ranggo sa search engines, mas mababa ang gastos sa maintenance, at naiiwasan ang mga legal na panganib. Ngunit higit sa lahat, ang mga accessible na website ay sumasalamin sa pinakamagandang halaga ng web—pagiging bukas, inklusibo, at pantay na access sa impormasyon.
+**Malinaw ang business case**: Ang mga accessible na website ay umaabot sa mas maraming user, mas mataas ang ranggo sa search engines, mas mababa ang maintenance cost, at naiiwasan ang legal na panganib. Ngunit sa totoo lang? Ang tunay na dahilan para magmalasakit sa accessibility ay mas malalim pa. Ang mga accessible na website ay sumasalamin sa pinakamahusay na mga halaga ng web—pagiging bukas, inclusivity, at ang ideya na ang lahat ay nararapat sa pantay na access sa impormasyon.
 
-Handa ka na ngayong bumuo ng inklusibong web ng hinaharap. Ang bawat accessible na site na iyong nililikha ay ginagawang mas welcoming ang internet para sa lahat.
+Ikaw ay handa nang bumuo ng inklusibong web ng hinaharap. Ang bawat accessible na site na iyong nilikha ay ginagawang mas welcoming ang internet para sa lahat. Napakaganda nito kapag iniisip mo!
 
 ## Karagdagang Resources
 
@@ -1098,32 +1116,32 @@ Ipagpatuloy ang iyong pag-aaral sa accessibility gamit ang mga mahahalagang reso
 
 **📚 Opisyal na Pamantayan at Gabay:**
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Ang opisyal na pamantayan sa accessibility na may quick reference
-- [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - Komprehensibong patterns para sa mga interactive na widget
+- [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - Komprehensibong pattern para sa interactive widgets
 - [WebAIM Guidelines](https://webaim.org/) - Praktikal, beginner-friendly na gabay sa accessibility
 
-**🛠️ Mga Tool at Resources sa Testing:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - Industry-standard na accessibility testing
-- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Step-by-step na beripikasyon sa accessibility
+**🛠️ Mga Tool at Resource sa Pagsusuri:**
+- [axe DevTools](https://www.deque.com/axe/devtools/) - Industry-standard na pagsusuri sa accessibility
+- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Step-by-step na pagsusuri sa accessibility
 - [Accessibility Insights](https://accessibilityinsights.io/) - Komprehensibong testing suite ng Microsoft
-- [Color Oracle](https://colororacle.org/) - Simulator ng color blindness para sa design testing
+- [Color Oracle](https://colororacle.org/) - Simulator ng color blindness para sa pagsusuri ng disenyo
 
 **🎓 Pag-aaral at Komunidad:**
-- [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey9/) - Mga totoong preference at behavior ng user
+- [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey9/) - Mga tunay na preference at behavior ng user
 - [Inclusive Components](https://inclusive-components.design/) - Modernong accessible na component patterns
-- [A11y Coffee](https://a11y.coffee/) - Mga mabilisang tips at insights sa accessibility
+- [A11y Coffee](https://a11y.coffee/) - Mga mabilisang tip at insight sa accessibility
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) - Komprehensibong resources sa accessibility ng W3C
 
 **🎥 Hands-on Learning:**
 - [Accessibility Developer Guide](https://www.accessibility-developer-guide.com/) - Praktikal na gabay sa implementasyon
 - [Deque University](https://dequeuniversity.com/) - Mga propesyonal na kurso sa accessibility training
 
-## Hamon ng GitHub Copilot Agent 🚀
+## Hamon sa GitHub Copilot Agent 🚀
 
-Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:
+Gamitin ang Agent mode para tapusin ang sumusunod na hamon:
 
-**Deskripsyon:** Gumawa ng accessible na modal dialog component na nagpapakita ng tamang pamamahala ng focus, ARIA attributes, at mga pattern ng keyboard navigation.
+**Deskripsyon:** Gumawa ng accessible na modal dialog component na nagpapakita ng tamang focus management, ARIA attributes, at keyboard navigation patterns.
 
-**Prompt:** Bumuo ng kumpletong modal dialog component gamit ang HTML, CSS, at JavaScript na may kasamang: tamang focus trapping, ESC key para isara, click sa labas para isara, ARIA attributes para sa screen readers, at nakikitang focus indicators. Ang modal ay dapat maglaman ng form na may tamang labels at paghawak ng error. Tiyakin na ang component ay sumusunod sa WCAG 2.1 AA standards.
+**Prompt:** Bumuo ng kumpletong modal dialog component gamit ang HTML, CSS, at JavaScript na may kasamang: tamang focus trapping, ESC key para isara, click outside para isara, ARIA attributes para sa screen readers, at nakikitang focus indicators. Ang modal ay dapat maglaman ng form na may tamang label at error handling. Siguraduhin na ang component ay sumusunod sa WCAG 2.1 AA standards.
 
 ## 🚀 Hamon
 
@@ -1187,9 +1205,9 @@ Kunin ang HTML na ito at isulat muli upang maging mas accessible, gamit ang mga 
 
 **Mga Key na Pagpapabuti na Ginawa:**
 - Nagdagdag ng tamang semantic HTML structure
-- Inayos ang hierarchy ng heading (isang h1, lohikal na progression)
+- Inayos ang heading hierarchy (isang h1, lohikal na progression)
 - Nagdagdag ng makabuluhang link text sa halip na "click here"
-- Isinama ang tamang ARIA labels para sa navigation
+- Naglagay ng tamang ARIA labels para sa navigation
 - Nagdagdag ng lang attribute at tamang meta tags
 - Gumamit ng button element para sa mga interactive na elemento
 - Istruktura ng footer content gamit ang tamang landmarks
@@ -1199,10 +1217,10 @@ Kunin ang HTML na ito at isulat muli upang maging mas accessible, gamit ang mga 
 
 ## Review at Pag-aaral sa Sarili
 
-Maraming gobyerno ang may mga batas tungkol sa accessibility requirements. Magbasa tungkol sa mga batas sa accessibility ng iyong sariling bansa. Ano ang saklaw, at ano ang hindi? Isang halimbawa ay [ang website ng gobyerno na ito](https://accessibility.blog.gov.uk/).
+Maraming gobyerno ang may mga batas tungkol sa accessibility requirements. Magbasa tungkol sa mga batas sa accessibility ng iyong sariling bansa. Ano ang saklaw, at ano ang hindi? Halimbawa ay [ang website ng gobyerno na ito](https://accessibility.blog.gov.uk/).
 
-## Takdang-Aralin
-
+## Assignment
+ 
 [Pag-aralan ang isang hindi-accessible na website](assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
