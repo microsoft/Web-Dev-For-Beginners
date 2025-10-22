@@ -1,4 +1,4 @@
-name: Co-op Translator
+name: Co-op Translator 
 
 on:
   push:
