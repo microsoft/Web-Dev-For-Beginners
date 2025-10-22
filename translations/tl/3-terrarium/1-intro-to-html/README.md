@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f6235d42b9e6862267e92c53f1be2655",
-  "translation_date": "2025-10-20T21:06:39+00:00",
+  "original_hash": "20c72cf2e5b0050d38ca3cb14a75a9df",
+  "translation_date": "2025-10-22T15:32:18+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "tl"
 }
@@ -12,74 +12,87 @@ CO_OP_TRANSLATOR_METADATA:
 ![Panimula sa HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.tl.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
+Ang HTML, o HyperText Markup Language, ang pundasyon ng bawat website na iyong binisita. Isipin ang HTML bilang kalansay na nagbibigay ng istruktura sa mga web page – ito ang nagtatakda kung saan ilalagay ang nilalaman, paano ito iaayos, at ano ang kinakatawan ng bawat bahagi. Habang ang CSS ang "magbibihis" sa iyong HTML gamit ang mga kulay at layout, at ang JavaScript ang magbibigay ng interaktibidad, ang HTML ang nagbibigay ng mahalagang istruktura na nagpapahintulot sa lahat ng iba pang bagay na mangyari.
+
+Sa araling ito, gagawa ka ng istruktura ng HTML para sa isang virtual na interface ng terrarium. Ang proyektong ito ay magtuturo sa iyo ng mga pangunahing konsepto ng HTML habang gumagawa ng isang bagay na kaakit-akit sa paningin. Matututuhan mo kung paano ayusin ang nilalaman gamit ang mga semantic na elemento, magtrabaho gamit ang mga imahe, at lumikha ng pundasyon para sa isang interaktibong web application.
+
+Sa pagtatapos ng araling ito, magkakaroon ka ng gumaganang HTML page na nagpapakita ng mga imahe ng halaman sa maayos na mga kolum, handa na para sa pag-istilo sa susunod na aralin. Huwag mag-alala kung mukhang basic ito sa simula – ganyan talaga ang HTML bago magdagdag ng visual polish ang CSS.
+
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/15)
 
-
-> Panoorin ang video
-
+> 📺 **Manood at Matuto**: Tingnan ang kapaki-pakinabang na video overview
 > 
-> [![Git at GitHub basics video](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
+> [![HTML Fundamentals Video](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
 
-### Panimula
+## Pagsisimula ng Iyong Proyekto
 
-Ang HTML, o HyperText Markup Language, ay ang 'balangkas' ng web. Kung ang CSS ang 'nagpapaganda' sa iyong HTML at ang JavaScript ang nagbibigay-buhay dito, ang HTML ang katawan ng iyong web application. Ang syntax ng HTML ay sumasalamin sa ideyang ito, dahil kasama nito ang mga tag na "head", "body", at "footer".
+Bago tayo sumabak sa HTML code, mag-set up muna tayo ng maayos na workspace para sa iyong proyekto ng terrarium. Ang paggawa ng organisadong istruktura ng file mula sa simula ay isang mahalagang ugali na magagamit mo sa buong paglalakbay mo sa web development.
 
-Sa araling ito, gagamit tayo ng HTML upang mag-layout ng 'balangkas' ng interface ng ating virtual terrarium. Magkakaroon ito ng pamagat at tatlong kolum: isang kanan at kaliwang kolum kung saan matatagpuan ang mga draggable na halaman, at isang gitnang lugar na magiging parang salamin na terrarium. Sa pagtatapos ng araling ito, makikita mo ang mga halaman sa mga kolum, ngunit medyo kakaiba ang hitsura ng interface; huwag mag-alala, sa susunod na seksyon magdadagdag ka ng mga estilo ng CSS upang mas maganda ang hitsura nito.
+### Gawain: Gumawa ng Istruktura ng Proyekto
 
-### Gawain
+Gagawa ka ng dedikadong folder para sa iyong proyekto ng terrarium at magdadagdag ng iyong unang HTML file. Narito ang dalawang paraan na maaari mong gamitin:
 
-Sa iyong computer, gumawa ng folder na tinatawag na 'terrarium' at sa loob nito, isang file na tinatawag na 'index.html'. Maaari mo itong gawin sa Visual Studio Code pagkatapos mong likhain ang folder ng terrarium sa pamamagitan ng pagbukas ng bagong VS Code window, pag-click sa 'open folder', at pag-navigate sa iyong bagong folder. I-click ang maliit na 'file' button sa Explorer pane at gumawa ng bagong file:
+**Opsyon 1: Gamit ang Visual Studio Code**
+1. Buksan ang Visual Studio Code
+2. I-click ang "File" → "Open Folder" o gamitin ang `Ctrl+K, Ctrl+O` (Windows/Linux) o `Cmd+K, Cmd+O` (Mac)
+3. Gumawa ng bagong folder na tinatawag na `terrarium` at piliin ito
+4. Sa Explorer pane, i-click ang "New File" icon
+5. Pangalanan ang iyong file na `index.html`
 
-![explorer sa VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.tl.png)
+![VS Code Explorer na nagpapakita ng paggawa ng bagong file](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.tl.png)
 
-O
+**Opsyon 2: Gamit ang Terminal Commands**
+```bash
+mkdir terrarium
+cd terrarium
+touch index.html
+code index.html
+```
 
-Gamitin ang mga command na ito sa iyong git bash:
-* `mkdir terrarium`
-* `cd terrarium`
-* `touch index.html`
-* `code index.html` o `nano index.html`
+**Narito ang nagagawa ng mga command na ito:**
+- **Gumagawa** ng bagong direktoryo na tinatawag na `terrarium` para sa iyong proyekto
+- **Nagna-navigate** sa loob ng direktoryo ng terrarium
+- **Gumagawa** ng walang laman na `index.html` file
+- **Binubuksan** ang file sa Visual Studio Code para sa pag-edit
 
-> Ang mga index.html file ay nagpapahiwatig sa browser na ito ang default na file sa isang folder; ang mga URL tulad ng `https://anysite.com/test` ay maaaring binuo gamit ang istruktura ng folder na may kasamang folder na tinatawag na `test` na may `index.html` sa loob nito; hindi kailangang ipakita ang `index.html` sa URL.
+> 💡 **Pro Tip**: Ang filename na `index.html` ay espesyal sa web development. Kapag may bumisita sa isang website, awtomatikong hinahanap ng mga browser ang `index.html` bilang default na page na ipapakita. Nangangahulugan ito na ang URL tulad ng `https://mysite.com/projects/` ay awtomatikong magsisilbi sa `index.html` file mula sa `projects` folder nang hindi kailangang tukuyin ang filename sa URL.
 
----
+## Pag-unawa sa Istruktura ng HTML Document
 
-## Ang DocType at mga html tag
+Ang bawat HTML document ay sumusunod sa isang partikular na istruktura na kailangan ng mga browser upang maunawaan at maipakita nang tama. Isipin ang istruktura na ito tulad ng isang pormal na liham – mayroon itong mga kinakailangang elemento sa tamang pagkakasunod-sunod na tumutulong sa tatanggap (sa kasong ito, ang browser) na iproseso nang maayos ang nilalaman.
 
-Ang unang linya ng isang HTML file ay ang doctype nito. Medyo nakakagulat na kailangan mong magkaroon ng linyang ito sa pinakataas ng file, ngunit sinasabi nito sa mga lumang browser na kailangang i-render ng browser ang pahina sa standard mode, na sumusunod sa kasalukuyang html specification.
+Simulan natin sa pagdaragdag ng mahalagang pundasyon na kailangan ng bawat HTML document.
 
-> Tip: sa VS Code, maaari kang mag-hover sa isang tag at makakuha ng impormasyon tungkol sa paggamit nito mula sa MDN Reference guides.
+### Ang DOCTYPE Declaration at Root Element
 
-Ang pangalawang linya ay dapat ang opening tag ng `<html>`, na sinusundan ng closing tag nito `</html>`. Ang mga tag na ito ang root elements ng iyong interface.
+Ang unang dalawang linya ng anumang HTML file ay nagsisilbing "panimula" ng dokumento sa browser:
 
-### Gawain
-
-Idagdag ang mga linyang ito sa itaas ng iyong `index.html` file:
-
-```HTML
+```html
 <!DOCTYPE html>
 <html></html>
 ```
 
-✅ May ilang iba't ibang mode na maaaring matukoy sa pamamagitan ng pag-set ng DocType gamit ang query string: [Quirks Mode at Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Ang mga mode na ito ay ginagamit upang suportahan ang mga lumang browser na hindi na karaniwang ginagamit ngayon (Netscape Navigator 4 at Internet Explorer 5). Maaari kang manatili sa standard na deklarasyon ng doctype.
+**Pag-unawa sa ginagawa ng code na ito:**
+- **Idinedeklara** ang uri ng dokumento bilang HTML5 gamit ang `<!DOCTYPE html>`
+- **Gumagawa** ng root `<html>` element na maglalaman ng lahat ng nilalaman ng page
+- **Itinatakda** ang modernong web standards para sa tamang pag-render ng browser
+- **Tinitiyak** ang pare-parehong pagpapakita sa iba't ibang browser at device
 
----
+> 💡 **VS Code Tip**: I-hover ang anumang HTML tag sa VS Code upang makita ang kapaki-pakinabang na impormasyon mula sa MDN Web Docs, kabilang ang mga halimbawa ng paggamit at detalye ng compatibility ng browser.
 
-## Ang 'head' ng dokumento
+> 📚 **Matuto Pa**: Ang DOCTYPE declaration ay pumipigil sa mga browser na pumasok sa "quirks mode," na ginamit upang suportahan ang napakalumang mga website. Ang modernong web development ay gumagamit ng simpleng `<!DOCTYPE html>` declaration upang matiyak ang [standards-compliant rendering](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
 
-Ang 'head' na bahagi ng HTML document ay naglalaman ng mahalagang impormasyon tungkol sa iyong web page, na kilala rin bilang [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Sa ating kaso, sinasabi natin sa web server kung saan ipapadala ang pahinang ito upang ma-render, ang apat na bagay na ito:
+## Pagdaragdag ng Mahalagang Metadata ng Dokumento
 
--   ang pamagat ng pahina
--   metadata ng pahina kabilang ang:
-    -   ang 'character set', na nagsasabi kung anong character encoding ang ginagamit sa pahina
-    -   impormasyon ng browser, kabilang ang `x-ua-compatible` na nagpapahiwatig na ang IE=edge browser ay suportado
-    -   impormasyon tungkol sa kung paano dapat kumilos ang viewport kapag ito ay na-load. Ang pag-set ng viewport upang magkaroon ng initial scale na 1 ay kumokontrol sa zoom level kapag unang na-load ang pahina.
+Ang `<head>` na seksyon ng isang HTML document ay naglalaman ng mahalagang impormasyon na kailangan ng mga browser at search engine, ngunit hindi direktang nakikita ng mga bisita sa page. Isipin ito bilang "behind-the-scenes" na impormasyon na tumutulong sa iyong webpage na gumana nang maayos at lumitaw nang tama sa iba't ibang device at platform.
 
-### Gawain
+Ang metadata na ito ay nagsasabi sa mga browser kung paano ipapakita ang iyong page, anong character encoding ang gagamitin, at kung paano hahawakan ang iba't ibang laki ng screen – lahat ng ito ay mahalaga para sa paggawa ng propesyonal, accessible na mga web page.
 
-Magdagdag ng 'head' block sa iyong dokumento sa pagitan ng opening at closing `<html>` tags.
+### Gawain: Idagdag ang Document Head
+
+Ipasok ang `<head>` na seksyon sa pagitan ng iyong pagbubukas at pagsasara ng `<html>` tags:
 
 ```html
 <head>
@@ -90,17 +103,28 @@ Magdagdag ng 'head' block sa iyong dokumento sa pagitan ng opening at closing `<
 </head>
 ```
 
-✅ Ano ang mangyayari kung mag-set ka ng viewport meta tag tulad nito: `<meta name="viewport" content="width=600">`? Basahin pa ang tungkol sa [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
+**Pagbubuo ng ginagawa ng bawat elemento:**
+- **Itinatakda** ang pamagat ng page na lumilitaw sa mga tab ng browser at resulta ng paghahanap
+- **Tinutukoy** ang UTF-8 character encoding para sa tamang pagpapakita ng teksto sa buong mundo
+- **Tinitiyak** ang compatibility sa mga modernong bersyon ng Internet Explorer
+- **Kinokontrol** ang disenyo ng responsive sa pamamagitan ng pagtatakda ng viewport na tumutugma sa lapad ng device
+- **Kinokontrol** ang initial zoom level upang ipakita ang nilalaman sa natural na laki
 
----
+> 🤔 **Pag-isipan Ito**: Ano ang mangyayari kung magtakda ka ng viewport meta tag tulad nito: `<meta name="viewport" content="width=600">`? Pipilitin nitong palaging maging 600 pixels ang lapad ng page, na sisira sa disenyo ng responsive! Matuto pa tungkol sa [tamang configuration ng viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
-## Ang `body` ng dokumento
+## Pagbuo ng Katawan ng Dokumento
 
-### Mga HTML Tag
+Ang `<body>` na elemento ay naglalaman ng lahat ng nakikitang nilalaman ng iyong webpage – lahat ng makikita at makikipag-ugnayan ang mga user. Habang ang `<head>` na seksyon ay nagbibigay ng mga tagubilin sa browser, ang `<body>` na seksyon ay naglalaman ng aktwal na nilalaman: teksto, mga imahe, mga button, at iba pang elemento na bumubuo sa iyong user interface.
 
-Sa HTML, nagdadagdag ka ng mga tag sa iyong .html file upang lumikha ng mga elemento ng isang web page. Ang bawat tag ay karaniwang may opening at closing tag, tulad nito: `<p>hello</p>` upang ipahiwatig ang isang talata. Gumawa ng katawan ng iyong interface sa pamamagitan ng pagdaragdag ng isang set ng `<body>` tags sa loob ng `<html>` tag pair; ang iyong markup ay ngayon ganito:
+Magdagdag tayo ng istruktura ng katawan at unawain kung paano nagtutulungan ang mga HTML tag upang lumikha ng makabuluhang nilalaman.
 
-### Gawain
+### Pag-unawa sa Istruktura ng HTML Tag
+
+Gumagamit ang HTML ng mga paired tag upang tukuyin ang mga elemento. Karamihan sa mga tag ay may opening tag tulad ng `<p>` at closing tag tulad ng `</p>`, na may nilalaman sa pagitan: `<p>Hello, world!</p>`. Lumilikha ito ng paragraph element na naglalaman ng teksto na "Hello, world!".
+
+### Gawain: Idagdag ang Body Element
+
+I-update ang iyong HTML file upang isama ang `<body>` na elemento:
 
 ```html
 <!DOCTYPE html>
@@ -115,17 +139,28 @@ Sa HTML, nagdadagdag ka ng mga tag sa iyong .html file upang lumikha ng mga elem
 </html>
 ```
 
-Ngayon, maaari mong simulan ang pagbuo ng iyong pahina. Karaniwan, ginagamit mo ang `<div>` tags upang lumikha ng mga hiwalay na elemento sa isang pahina. Gumawa tayo ng serye ng `<div>` elements na maglalaman ng mga larawan.
+**Narito ang ibinibigay ng kumpletong istruktura na ito:**
+- **Itinatakda** ang pangunahing framework ng HTML5 document
+- **Kasama** ang mahalagang metadata para sa tamang pag-render ng browser
+- **Gumagawa** ng walang laman na katawan na handa para sa iyong nakikitang nilalaman
+- **Sumusunod** sa mga modernong best practices ng web development
 
-### Mga Larawan
+Ngayon handa ka nang magdagdag ng mga nakikitang elemento ng iyong terrarium. Gagamit tayo ng `<div>` na mga elemento bilang mga lalagyan upang ayusin ang iba't ibang seksyon ng nilalaman, at `<img>` na mga elemento upang ipakita ang mga imahe ng halaman.
 
-Ang isang html tag na hindi nangangailangan ng closing tag ay ang `<img>` tag, dahil mayroon itong `src` element na naglalaman ng lahat ng impormasyon na kailangan ng pahina upang i-render ang item.
+### Paggamit ng Mga Imahe at Layout Containers
 
-Gumawa ng folder sa iyong app na tinatawag na `images` at sa loob nito, idagdag ang lahat ng mga larawan sa [source code folder](../../../../3-terrarium/solution/images); (mayroong 14 na larawan ng mga halaman).
+Ang mga imahe ay espesyal sa HTML dahil gumagamit sila ng "self-closing" na mga tag. Hindi tulad ng mga elemento tulad ng `<p></p>` na bumabalot sa nilalaman, ang `<img>` na tag ay naglalaman ng lahat ng impormasyong kailangan nito sa loob ng tag mismo gamit ang mga attributes tulad ng `src` para sa file path ng imahe at `alt` para sa accessibility.
 
-### Gawain
+Bago magdagdag ng mga imahe sa iyong HTML, kailangan mong ayusin ang iyong mga file ng proyekto nang maayos sa pamamagitan ng paggawa ng folder ng mga imahe at pagdaragdag ng mga graphics ng halaman.
 
-Idagdag ang mga larawan ng halaman sa dalawang kolum sa pagitan ng `<body></body>` tags:
+**Una, i-set up ang iyong mga imahe:**
+1. Gumawa ng folder na tinatawag na `images` sa loob ng iyong terrarium project folder
+2. I-download ang mga imahe ng halaman mula sa [solution folder](../../../../3-terrarium/solution/images) (14 na imahe ng halaman lahat)
+3. Kopyahin ang lahat ng imahe ng halaman sa iyong bagong `images` folder
+
+### Gawain: Gumawa ng Layout ng Display ng Halaman
+
+Ngayon idagdag ang mga imahe ng halaman na nakaayos sa dalawang kolum sa pagitan ng iyong `<body></body>` tags:
 
 ```html
 <div id="page">
@@ -178,37 +213,62 @@ Idagdag ang mga larawan ng halaman sa dalawang kolum sa pagitan ng `<body></body
 </div>
 ```
 
-> Note: Spans vs. Divs. Ang Divs ay itinuturing na 'block' elements, at ang Spans ay 'inline'. Ano ang mangyayari kung i-transform mo ang mga divs sa spans?
+**Hakbang-hakbang, narito ang nangyayari sa code na ito:**
+- **Gumagawa** ng pangunahing lalagyan ng page na may `id="page"` upang maglaman ng lahat ng nilalaman
+- **Nagtatakda** ng dalawang lalagyan ng kolum: `left-container` at `right-container`
+- **Inaayos** ang 7 halaman sa kaliwang kolum at 7 halaman sa kanang kolum
+- **Binabalot** ang bawat imahe ng halaman sa isang `plant-holder` div para sa indibidwal na pagpoposisyon
+- **Nag-aaplay** ng pare-parehong class names para sa pag-istilo ng CSS sa susunod na aralin
+- **Nag-aassign** ng mga unique na ID sa bawat imahe ng halaman para sa interaksyon ng JavaScript sa hinaharap
+- **Kasama** ang tamang file paths na tumuturo sa folder ng mga imahe
 
-Sa markup na ito, ang mga halaman ay ngayon makikita sa screen. Mukhang hindi maganda, dahil hindi pa sila naka-style gamit ang CSS, at gagawin natin iyon sa susunod na aralin.
+> 🤔 **Pag-isipan Ito**: Pansinin na lahat ng imahe ay may parehong alt text na "plant" sa kasalukuyan. Hindi ito ideal para sa accessibility. Ang mga gumagamit ng screen reader ay maririnig ang "plant" na inuulit ng 14 na beses nang hindi nalalaman kung aling partikular na halaman ang ipinapakita ng bawat imahe. Makakaisip ka ba ng mas maganda, mas deskriptibong alt text para sa bawat imahe?
 
-Ang bawat larawan ay may alt text na lalabas kahit hindi mo makita o ma-render ang isang larawan. Ito ay isang mahalagang attribute na isama para sa accessibility. Matuto pa tungkol sa accessibility sa mga susunod na aralin; sa ngayon, tandaan na ang alt attribute ay nagbibigay ng alternatibong impormasyon para sa isang larawan kung sakaling hindi ito makita ng user (dahil sa mabagal na koneksyon, error sa src attribute, o kung gumagamit ang user ng screen reader).
+> 📝 **Mga Uri ng HTML Element**: Ang `<div>` na mga elemento ay "block-level" at kumukuha ng buong lapad, habang ang `<span>` na mga elemento ay "inline" at kumukuha lamang ng kinakailangang lapad. Ano sa tingin mo ang mangyayari kung papalitan mo ang lahat ng `<div>` tags ng `<span>` tags?
 
-✅ Napansin mo ba na ang bawat larawan ay may parehong alt tag? Magandang kasanayan ba ito? Bakit o bakit hindi? Maaari mo bang pagandahin ang code na ito?
+Sa pagdaragdag ng markup na ito, ang mga halaman ay lilitaw sa screen, bagaman hindi pa ito mukhang polished – iyon ang layunin ng CSS sa susunod na aralin! Sa ngayon, mayroon kang solidong pundasyon ng HTML na maayos na nag-aayos ng iyong nilalaman at sumusunod sa mga best practices ng accessibility.
 
----
+## Paggamit ng Semantic HTML para sa Accessibility
 
-## Semantic markup
+Ang Semantic HTML ay nangangahulugang pagpili ng mga HTML na elemento batay sa kanilang kahulugan at layunin, hindi lamang sa kanilang hitsura. Kapag gumamit ka ng semantic markup, ipinapahayag mo ang istruktura at kahulugan ng iyong nilalaman sa mga browser, search engine, at assistive technologies tulad ng screen readers.
 
-Sa pangkalahatan, mas mainam na gumamit ng makabuluhang 'semantics' kapag nagsusulat ng HTML. Ano ang ibig sabihin nito? Nangangahulugan ito na ginagamit mo ang mga HTML tag upang kumatawan sa uri ng data o interaksyon na dinisenyo para sa kanila. Halimbawa, ang pangunahing pamagat na teksto sa isang pahina ay dapat gumamit ng `<h1>` tag.
+Ang approach na ito ay nagpapaganda ng accessibility ng iyong mga website para sa mga gumagamit na may kapansanan at tumutulong sa mga search engine na mas maunawaan ang iyong nilalaman. Isa itong pangunahing prinsipyo ng modernong web development na lumilikha ng mas magagandang karanasan para sa lahat.
 
-Idagdag ang sumusunod na linya sa ibaba ng iyong opening `<body>` tag:
+### Pagdaragdag ng Semantic Page Title
+
+Magdagdag tayo ng tamang heading sa iyong terrarium page. Ipasok ang linyang ito pagkatapos ng iyong pagbubukas na `<body>` tag:
 
 ```html
 <h1>My Terrarium</h1>
 ```
 
-Ang paggamit ng semantic markup tulad ng pagkakaroon ng mga header na `<h1>` at ang mga unordered list na naka-render bilang `<ul>` ay tumutulong sa mga screen reader na mag-navigate sa isang pahina. Sa pangkalahatan, ang mga button ay dapat isulat bilang `<button>` at ang mga listahan ay dapat na `<li>`. Bagama't _posible_ na gumamit ng mga espesyal na styled `<span>` elements na may click handlers upang gayahin ang mga button, mas mabuti para sa mga may kapansanan na gumamit ng mga teknolohiya upang matukoy kung saan sa isang pahina matatagpuan ang isang button, at makipag-ugnayan dito, kung ang elemento ay lumilitaw bilang isang button. Para sa kadahilanang ito, subukang gumamit ng semantic markup hangga't maaari.
+**Bakit mahalaga ang semantic markup:**
+- **Tumutulong** sa mga screen reader na mag-navigate at maunawaan ang istruktura ng page
+- **Pinapabuti** ang search engine optimization (SEO) sa pamamagitan ng pagpapaliwanag ng hierarchy ng nilalaman
+- **Pinapalakas** ang accessibility para sa mga gumagamit na may kapansanan sa paningin o cognitive differences
+- **Lumilikha** ng mas magagandang karanasan ng user sa lahat ng device at platform
+- **Sumusunod** sa mga web standards at best practices para sa propesyonal na development
 
-✅ Tingnan ang isang screen reader at [kung paano ito nakikipag-ugnayan sa isang web page](https://www.youtube.com/watch?v=OUDV1gqs9GA). Nakikita mo ba kung bakit ang pagkakaroon ng non-semantic markup ay maaaring makainis sa user?
+**Mga Halimbawa ng semantic vs. non-semantic na mga pagpipilian:**
 
-## Ang terrarium
+| Layunin | ✅ Semantic Choice | ❌ Non-Semantic Choice |
+|---------|-------------------|------------------------|
+| Pangunahing heading | `<h1>Title</h1>` | `<div class="big-text">Title</div>` |
+| Navigation | `<nav><ul><li></li></ul></nav>` | `<div class="menu"><div></div></div>` |
+| Button | `<button>Click me</button>` | `<span onclick="...">Click me</span>` |
+| Nilalaman ng artikulo | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
-Ang huling bahagi ng interface na ito ay kinabibilangan ng paglikha ng markup na i-style upang lumikha ng isang terrarium.
+> 🎥 **Panoorin Ito**: Panoorin [kung paano nakikipag-ugnayan ang mga screen reader sa mga web page](https://www.youtube.com/watch?v=OUDV1gqs9GA) upang maunawaan kung bakit mahalaga ang semantic markup. Pansinin kung paano nakakatulong ang tamang istruktura ng HTML sa mga user na mag-navigate nang mahusay.
 
-### Gawain:
+## Paglikha ng Terrarium Container
 
-Idagdag ang markup na ito sa itaas ng huling `</div>` tag:
+Ngayon magdagdag tayo ng istruktura ng HTML para sa terrarium mismo – ang glass container kung saan ilalagay ang mga halaman. Ang seksyong ito ay nagpapakita ng mahalagang konsepto: Ang HTML ay nagbibigay ng istruktura, ngunit kung walang CSS styling, ang mga elementong ito ay hindi pa makikita.
+
+Ang markup ng terrarium ay gumagamit ng mga deskriptibong class names na gagawing intuitive at madaling mapanatili ang CSS styling sa susunod na aralin.
+
+### Gawain: Idagdag ang Istruktura ng Terrarium
+
+Ipasok ang markup na ito sa itaas ng huling `</div>` tag (bago ang closing tag ng page container):
 
 ```html
 <div id="terrarium">
@@ -222,38 +282,84 @@ Idagdag ang markup na ito sa itaas ng huling `</div>` tag:
 </div>
 ```
 
-✅ Kahit na idinagdag mo ang markup na ito sa screen, wala kang makikitang na-render. Bakit?
+**Pag-unawa sa istruktura ng terrarium na ito:**
+- **Gumagawa** ng pangunahing terrarium container na may unique na ID para sa pag-istilo
+- **Tinutukoy** ang magkakahiwalay na elemento para sa bawat visual na bahagi (top, walls, dirt, bottom)
+- **Kasama** ang nested na mga elemento para sa glass reflection effects (glossy elements)
+- **Gumagamit** ng deskriptibong class names na malinaw na nagpapahiwatig ng layunin ng bawat elemento
+- **Inihahanda** ang istruktura para sa CSS styling na lilikha ng glass terrarium appearance
+
+> 🤔 **Pansinin Ito**: Kahit na idinagdag mo ang markup na ito, wala kang makikitang bago sa page! Ito ay perpektong nagpapakita kung paano nagbibigay ng istruktura ang HTML habang ang CSS ang nagbibigay ng hitsura. Ang mga `<div>` na elemento ay umiiral ngunit wala pang visual styling – darating iyon sa susunod na aralin!
 
 ---
 
-## Hamon ng GitHub Copilot Agent 🚀
+## Hamon ng GitHub Copilot Agent
 
 Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:
 
-**Deskripsyon:** Gumawa ng semantic HTML na istruktura para sa isang seksyon ng gabay sa pangangalaga ng halaman na maaaring idagdag sa proyekto ng terrarium.
+**Deskripsyon:** Gumawa ng semantic HTML na istruktura para sa isang seksyon ng plant care guide na maaaring idagdag sa proyekto ng terrarium.
+**Prompt:** Gumawa ng semantic HTML section na may pangunahing pamagat na "Plant Care Guide", tatlong subseksyon na may mga pamagat na "Watering", "Light Requirements", at "Soil Care", bawat isa ay naglalaman ng talata ng impormasyon tungkol sa pag-aalaga ng halaman. Gumamit ng tamang semantic HTML tags tulad ng `<section>`, `<h2>`, `<h3>`, at `<p>` upang maayos na maistruktura ang nilalaman.
 
-**Prompt:** Gumawa ng semantic HTML section na naglalaman ng pangunahing pamagat na "Plant Care Guide", tatlong subseksyon na may mga pamagat na "Watering", "Light Requirements", at "Soil Care", bawat isa ay naglalaman ng talata ng impormasyon sa pangangalaga ng halaman. Gumamit ng tamang semantic HTML tags tulad ng `<section>`, `<h2>`, `<h3>`, at `<p>` upang maayos na maistruktura ang nilalaman.
+Alamin pa tungkol sa [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) dito.
 
-## 🚀Hamon
+## Tuklasin ang Hamon sa Kasaysayan ng HTML
 
-May ilang kakaibang 'lumang' tag sa HTML na masaya pa ring gamitin, bagama't hindi mo dapat gamitin ang mga deprecated na tag tulad ng [mga tag na ito](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) sa iyong markup. Gayunpaman, magagamit mo ba ang lumang `<marquee>` tag upang mag-scroll nang pahalang ang pamagat na h1? (kung gagawin mo, huwag kalimutang alisin ito pagkatapos)
+**Pag-aaral Tungkol sa Ebolusyon ng Web**
 
-## Post-Lecture Quiz
+Ang HTML ay malaki ang ipinagbago mula nang likhain ni Tim Berners-Lee ang unang web browser sa CERN noong 1990. Ang ilang mas lumang mga tag tulad ng `<marquee>` ay hindi na ginagamit dahil hindi ito angkop sa mga modernong pamantayan ng accessibility at prinsipyo ng responsive design.
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/16)
+**Subukan ang Eksperimentong Ito:**
+1. Pansamantalang balutin ang iyong pamagat na `<h1>` sa isang `<marquee>` tag: `<marquee><h1>My Terrarium</h1></marquee>`
+2. Buksan ang iyong pahina sa browser at obserbahan ang scrolling effect
+3. Isipin kung bakit hindi na ginagamit ang tag na ito (hint: isipin ang karanasan ng user at accessibility)
+4. Alisin ang `<marquee>` tag at bumalik sa semantic markup
 
-## Review & Self Study
+**Mga Tanong sa Pagmumuni-muni:**
+- Paano maaaring makaapekto ang isang scrolling na pamagat sa mga user na may kapansanan sa paningin o sensitivity sa galaw?
+- Anong modernong mga teknik sa CSS ang maaaring makamit ang katulad na visual effects nang mas accessible?
+- Bakit mahalaga ang paggamit ng kasalukuyang pamantayan sa web sa halip na mga hindi na ginagamit na elemento?
 
-Ang HTML ay ang 'subok na sistema ng pagbuo' na tumulong sa pagbuo ng web sa kung ano ito ngayon. Alamin ang kaunti tungkol sa kasaysayan nito sa pamamagitan ng pag-aaral ng ilang lumang at bagong mga tag. Kaya mo bang alamin kung bakit ang ilang mga tag ay na-deprecate at ang iba ay idinagdag? Anong mga tag ang maaaring ipakilala sa hinaharap?
+Tuklasin pa ang tungkol sa [mga lipas at hindi na ginagamit na HTML elements](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) upang maunawaan kung paano umuunlad ang mga pamantayan sa web para mapabuti ang karanasan ng user.
 
-Matuto pa tungkol sa pagbuo ng mga site para sa web at mga mobile device sa [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
+
+## Quiz Pagkatapos ng Leksyon
+
+[Quiz pagkatapos ng leksyon](https://ff-quizzes.netlify.app/web/quiz/16)
+
+## Review at Pag-aaral sa Sarili
+
+**Palalimin ang Iyong Kaalaman sa HTML**
+
+Ang HTML ay naging pundasyon ng web sa loob ng mahigit 30 taon, mula sa isang simpleng wika para sa pagmarka ng dokumento hanggang sa isang sopistikadong platform para sa paggawa ng mga interactive na aplikasyon. Ang pag-unawa sa ebolusyong ito ay tumutulong sa iyo na pahalagahan ang mga modernong pamantayan sa web at gumawa ng mas mahusay na mga desisyon sa pag-develop.
+
+**Mga Inirerekomendang Landas sa Pag-aaral:**
+
+1. **Kasaysayan at Ebolusyon ng HTML**
+   - Saliksikin ang timeline mula HTML 1.0 hanggang HTML5
+   - Tuklasin kung bakit ang ilang mga tag ay hindi na ginagamit (accessibility, pagiging angkop sa mobile, maintainability)
+   - Suriin ang mga umuusbong na tampok ng HTML at mga panukala
+
+2. **Malalim na Pag-aaral sa Semantic HTML**
+   - Pag-aralan ang kumpletong listahan ng [HTML5 semantic elements](https://developer.mozilla.org/docs/Web/HTML/Element)
+   - Magpraktis sa pagtukoy kung kailan gagamitin ang `<article>`, `<section>`, `<aside>`, at `<main>`
+   - Alamin ang tungkol sa ARIA attributes para sa mas pinahusay na accessibility
+
+3. **Modernong Pag-develop ng Web**
+   - Tuklasin ang [pagbuo ng mga responsive na website](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon) sa Microsoft Learn
+   - Unawain kung paano pinagsasama ang HTML sa CSS at JavaScript
+   - Alamin ang tungkol sa mga pinakamahusay na kasanayan sa web performance at SEO
+
+**Mga Tanong sa Pagmumuni-muni:**
+- Anong mga hindi na ginagamit na HTML tags ang natuklasan mo, at bakit inalis ang mga ito?
+- Anong mga bagong tampok ng HTML ang iminungkahi para sa mga susunod na bersyon?
+- Paano nakakatulong ang semantic HTML sa accessibility ng web at SEO?
 
 
 ## Takdang-Aralin
 
-[Sanayin ang iyong HTML: Gumawa ng mockup ng blog](assignment.md)
+[Magpraktis sa iyong HTML: Gumawa ng mockup ng blog](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na mapagkakatiwalaang pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

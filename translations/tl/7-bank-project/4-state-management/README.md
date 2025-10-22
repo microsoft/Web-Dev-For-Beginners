@@ -1,73 +1,118 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "923d32d2c405b709ef18e20d096f4200",
-  "translation_date": "2025-10-20T21:06:58+00:00",
+  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
+  "translation_date": "2025-10-22T15:33:14+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "tl"
 }
 -->
-# Gumawa ng Banking App Bahagi 4: Mga Konsepto ng Pamamahala ng Estado
+# Gumawa ng Banking App Bahagi 4: Mga Konsepto ng State Management
 
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/47)
 
-### Panimula
+## Panimula
 
-Habang lumalaki ang isang web application, nagiging hamon ang pagsubaybay sa lahat ng daloy ng data. Aling code ang kumukuha ng data, anong pahina ang gumagamit nito, saan at kailan ito kailangang i-update...madaling magresulta sa magulong code na mahirap panatilihin. Lalo na kung kailangan mong magbahagi ng data sa iba't ibang pahina ng iyong app, halimbawa ang data ng user. Ang konsepto ng *pamamahala ng estado* ay palaging umiiral sa lahat ng uri ng programa, ngunit habang patuloy na lumalaki ang mga web app sa pagiging kumplikado, ito ay naging mahalagang punto na dapat isaalang-alang sa panahon ng pag-develop.
+Ang state management ay parang navigation system sa Voyager spacecraft – kapag maayos ang lahat, halos hindi mo mapapansin na naroroon ito. Ngunit kapag nagkaproblema, ito ang nagiging pagkakaiba sa pagitan ng pag-abot sa interstellar space at pagkaligaw sa cosmic void. Sa web development, ang state ay kumakatawan sa lahat ng kailangang tandaan ng iyong application: status ng user login, data ng form, history ng navigation, at mga pansamantalang estado ng interface.
 
-Sa huling bahagi na ito, titingnan natin ang app na ginawa natin upang muling pag-isipan kung paano pinamamahalaan ang estado, na nagbibigay-daan sa suporta para sa pag-refresh ng browser sa anumang punto, at pagpapanatili ng data sa iba't ibang sesyon ng user.
+Habang ang iyong banking app ay umunlad mula sa simpleng login form patungo sa mas sopistikadong application, malamang na nakaranas ka ng ilang karaniwang hamon. I-refresh ang pahina at biglang nalog-out ang mga user. Isara ang browser at mawawala ang lahat ng progreso. Mag-debug ng problema at maghahanap ka sa maraming function na lahat ay nagbabago ng parehong data sa iba't ibang paraan.
 
-### Paunang Kailangan
+Hindi ito palatandaan ng masamang pag-code – ito ay natural na mga hamon na nangyayari kapag ang mga application ay umabot sa isang tiyak na antas ng pagiging kumplikado. Ang bawat developer ay nakakaranas ng mga hamong ito habang ang kanilang mga app ay lumilipat mula sa "proof of concept" patungo sa "production ready."
 
-Kailangan mong tapusin ang bahagi ng [data fetching](../3-data/README.md) ng web app para sa araling ito. Kailangan mo ring i-install ang [Node.js](https://nodejs.org) at [patakbuhin ang server API](../api/README.md) nang lokal upang ma-manage ang data ng account.
+Sa araling ito, magpapatupad tayo ng centralized state management system na magpapabago sa iyong banking app patungo sa isang maaasahan at propesyonal na application. Matututo kang pamahalaan ang daloy ng data nang predictable, panatilihin ang user sessions nang naaangkop, at lumikha ng smooth na user experience na kinakailangan ng modernong web applications.
 
-Maaari mong subukan kung maayos na tumatakbo ang server sa pamamagitan ng pag-execute ng command na ito sa terminal:
+## Mga Kinakailangan
+
+Bago sumabak sa mga konsepto ng state management, kailangan mong maayos ang iyong development environment at ang pundasyon ng iyong banking app. Ang araling ito ay direktang nakabatay sa mga konsepto at code mula sa mga nakaraang bahagi ng seryeng ito.
+
+Siguraduhing handa ang mga sumusunod na bahagi bago magpatuloy:
+
+**Kinakailangang Setup:**
+- Kumpletuhin ang [data fetching lesson](../3-data/README.md) - dapat matagumpay na ma-load at ma-display ng iyong app ang account data
+- I-install ang [Node.js](https://nodejs.org) sa iyong sistema para sa pagtakbo ng backend API
+- I-start ang [server API](../api/README.md) nang lokal para sa paghawak ng mga operasyon sa account data
+
+**Pag-test ng Iyong Environment:**
+
+I-verify na maayos ang pagtakbo ng iyong API server sa pamamagitan ng pag-execute ng command na ito sa terminal:
 
 ```sh
 curl http://localhost:5000/api
 # -> should return "Bank API v1.0.0" as a result
 ```
 
+**Ano ang ginagawa ng command na ito:**
+- **Nagpapadala** ng GET request sa iyong lokal na API server
+- **Nagtetest** ng koneksyon at nagve-verify na tumutugon ang server
+- **Nagbabalik** ng impormasyon ng API version kung maayos ang lahat
+
 ---
 
-## Muling pag-isipan ang pamamahala ng estado
+## Pagsusuri sa Kasalukuyang Isyu ng Estado
 
-Sa [nakaraang aralin](../3-data/README.md), ipinakilala namin ang pangunahing konsepto ng estado sa aming app gamit ang global na `account` variable na naglalaman ng bank data para sa kasalukuyang naka-log in na user. Gayunpaman, ang kasalukuyang implementasyon namin ay may ilang mga kakulangan. Subukan ang pag-refresh ng pahina kapag nasa dashboard ka. Ano ang nangyayari?
+Tulad ni Sherlock Holmes na sinusuri ang crime scene, kailangan nating maunawaan nang eksakto kung ano ang nangyayari sa ating kasalukuyang implementasyon bago natin malutas ang misteryo ng nawawalang user sessions.
 
-Mayroong 3 isyu sa kasalukuyang code:
+Gawin natin ang isang simpleng eksperimento na magpapakita ng mga hamon sa state management:
 
-- Ang estado ay hindi napapanatili, dahil ang pag-refresh ng browser ay ibabalik ka sa login page.
-- Mayroong maraming mga function na nagbabago sa estado. Habang lumalaki ang app, maaari itong maging mahirap subaybayan ang mga pagbabago at madaling makalimutan ang pag-update ng isa.
-- Ang estado ay hindi nalilinis, kaya kapag nag-click ka sa *Logout*, ang data ng account ay nananatili pa rin kahit na nasa login page ka na.
+**🧪 Subukan ang Diagnostic Test na Ito:**
+1. Mag-login sa iyong banking app at pumunta sa dashboard
+2. I-refresh ang browser page
+3. Obserbahan kung ano ang nangyayari sa iyong login status
 
-Maaari naming i-update ang aming code upang harapin ang mga isyung ito isa-isa, ngunit lilikha ito ng mas maraming pag-uulit ng code at gagawing mas kumplikado at mahirap panatilihin ang app. O maaari tayong mag-pause ng ilang minuto at muling pag-isipan ang aming estratehiya.
+Kung ikaw ay na-redirect pabalik sa login screen, natuklasan mo ang klasikong problema sa state persistence. Ang behavior na ito ay nangyayari dahil ang kasalukuyang implementasyon natin ay nag-iimbak ng user data sa JavaScript variables na nare-reset sa bawat page load.
 
-> Anong mga problema ang talagang sinusubukan nating lutasin dito?
+**Mga Problema sa Kasalukuyang Implementasyon:**
 
-Ang [pamamahala ng estado](https://en.wikipedia.org/wiki/State_management) ay tungkol sa paghahanap ng magandang paraan upang malutas ang dalawang partikular na problemang ito:
+Ang simpleng `account` variable mula sa ating [nakaraang aralin](../3-data/README.md) ay nagdudulot ng tatlong pangunahing isyu na nakakaapekto sa parehong user experience at code maintainability:
 
-- Paano mapanatili ang daloy ng data sa isang app na madaling maunawaan?
-- Paano mapanatili ang estado ng data na palaging naka-sync sa user interface (at vice versa)?
+| Problema | Teknikal na Dahilan | Epekto sa User |
+|----------|---------------------|----------------|
+| **Pagkawala ng Session** | Ang page refresh ay naglilinis ng JavaScript variables | Kailangang mag-reauthenticate ng mga user nang madalas |
+| **Kalituhan sa Updates** | Maraming function ang direktang nagbabago ng state | Nagiging mahirap ang pag-debug |
+| **Hindi Kumpletong Cleanup** | Ang logout ay hindi naglilinis ng lahat ng state references | Posibleng mga isyu sa seguridad at privacy |
 
-Kapag naayos mo na ang mga ito, ang anumang iba pang mga isyu na maaaring mayroon ka ay maaaring naayos na o naging mas madali nang ayusin. Maraming posibleng paraan para malutas ang mga problemang ito, ngunit gagamit tayo ng karaniwang solusyon na binubuo ng **pag-centralize ng data at mga paraan para baguhin ito**. Ang daloy ng data ay magiging ganito:
+**Ang Hamon sa Arkitektura:**
 
-![Schema na nagpapakita ng daloy ng data sa pagitan ng HTML, mga aksyon ng user, at estado](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.tl.png)
+Tulad ng compartmentalized design ng Titanic na tila matibay hanggang sa sabay-sabay na pagbaha ng maraming compartments, ang pag-aayos ng mga isyung ito nang paisa-isa ay hindi sasagot sa pangunahing problema sa arkitektura. Kailangan natin ng komprehensibong solusyon sa state management.
 
-> Hindi natin tatalakayin dito ang bahagi kung saan ang data ay awtomatikong nagti-trigger ng pag-update ng view, dahil ito ay nauugnay sa mas advanced na mga konsepto ng [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). Ito ay isang magandang follow-up na paksa kung handa kang mag-dive ng mas malalim.
+> 💡 **Ano ang talagang sinusubukan nating makamit dito?**
 
-✅ Maraming mga library ang may iba't ibang mga approach sa pamamahala ng estado, ang [Redux](https://redux.js.org) ay isang popular na opsyon. Tingnan ang mga konsepto at pattern na ginagamit dahil madalas itong magandang paraan upang matutunan kung anong mga potensyal na isyu ang maaaring harapin sa malalaking web app at kung paano ito malulutas.
+Ang [state management](https://en.wikipedia.org/wiki/State_management) ay tungkol sa paglutas ng dalawang pangunahing palaisipan:
 
-### Gawain
+1. **Nasaan ang Aking Data?**: Pagtukoy kung anong impormasyon ang mayroon tayo at saan ito nanggagaling
+2. **Pareho ba ang Nakikita ng Lahat?**: Pagtitiyak na ang nakikita ng mga user ay tumutugma sa aktwal na nangyayari
 
-Magsisimula tayo sa kaunting refactoring. Palitan ang deklarasyon ng `account`:
+**Ang Ating Plano:**
+
+Sa halip na maghabol ng sarili nating buntot, gagawa tayo ng **centralized state management** system. Isipin ito na parang may isang maayos na tao na namamahala sa lahat ng mahalagang bagay:
+
+![Schema na nagpapakita ng daloy ng data sa pagitan ng HTML, user actions, at state](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.tl.png)
+
+**Pag-unawa sa daloy ng data na ito:**
+- **Pinagsasama-sama** ang lahat ng application state sa isang lokasyon
+- **Inaayos** ang lahat ng pagbabago sa state sa pamamagitan ng kontroladong mga function
+- **Tinitiyak** na ang UI ay nananatiling naka-synchronize sa kasalukuyang state
+- **Nagbibigay** ng malinaw at predictable na pattern para sa pamamahala ng data
+
+> 💡 **Insight ng Propesyonal**: Ang araling ito ay nakatuon sa mga pangunahing konsepto. Para sa mas kumplikadong mga application, ang mga library tulad ng [Redux](https://redux.js.org) ay nagbibigay ng mas advanced na mga feature sa state management. Ang pag-unawa sa mga pangunahing prinsipyo na ito ay makakatulong sa iyong ma-master ang anumang state management library.
+
+> ⚠️ **Advanced na Paksa**: Hindi natin tatalakayin ang automatic UI updates na triggered ng state changes, dahil ito ay may kinalaman sa mga konsepto ng [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). Isipin ito bilang isang mahusay na susunod na hakbang para sa iyong pag-aaral!
+
+### Gawain: I-centralize ang State Structure
+
+Simulan natin ang pag-transform ng ating scattered state management patungo sa isang centralized system. Ang unang hakbang na ito ay nagtatatag ng pundasyon para sa lahat ng mga susunod na pagpapabuti.
+
+**Hakbang 1: Gumawa ng Central State Object**
+
+Palitan ang simpleng deklarasyon ng `account`:
 
 ```js
 let account = null;
 ```
 
-Gamit:
+Gamit ang structured state object:
 
 ```js
 let state = {
@@ -75,27 +120,76 @@ let state = {
 };
 ```
 
-Ang ideya ay *i-centralize* ang lahat ng data ng app sa isang solong state object. Sa ngayon, mayroon lamang tayong `account` sa estado kaya hindi ito masyadong nagbabago, ngunit ito ay lumilikha ng landas para sa mga ebolusyon.
+**Bakit mahalaga ang pagbabagong ito:**
+- **Pinagsasama-sama** ang lahat ng application data sa isang lokasyon
+- **Inihahanda** ang istruktura para sa pagdaragdag ng mas maraming state properties sa hinaharap
+- **Lumilikha** ng malinaw na hangganan sa pagitan ng state at iba pang mga variable
+- **Nagtatatag** ng pattern na maaaring mag-scale habang lumalaki ang iyong app
 
-Kailangan din nating i-update ang mga function na gumagamit nito. Sa mga function na `register()` at `login()`, palitan ang `account = ...` ng `state.account = ...`;
+**Hakbang 2: I-update ang State Access Patterns**
 
-Sa itaas ng function na `updateDashboard()`, idagdag ang linyang ito:
+I-update ang iyong mga function upang gamitin ang bagong state structure:
 
+**Sa mga `register()` at `login()` function**, palitan:
+```js
+account = ...
+```
+
+Gamit:
+```js
+state.account = ...
+```
+
+**Sa `updateDashboard()` function**, idagdag ang linyang ito sa itaas:
 ```js
 const account = state.account;
 ```
 
-Ang refactoring na ito mismo ay hindi nagdala ng maraming pagpapabuti, ngunit ang ideya ay ilatag ang pundasyon para sa mga susunod na pagbabago.
+**Ano ang nagagawa ng mga update na ito:**
+- **Pinapanatili** ang kasalukuyang functionality habang pinapabuti ang istruktura
+- **Inihahanda** ang iyong code para sa mas sopistikadong state management
+- **Lumilikha** ng consistent na pattern para sa pag-access ng state data
+- **Nagtatatag** ng pundasyon para sa centralized state updates
 
-## Subaybayan ang mga pagbabago sa data
+> 💡 **Tandaan**: Ang refactoring na ito ay hindi agad-agad na malulutas ang ating mga problema, ngunit nililikha nito ang mahalagang pundasyon para sa mga makapangyarihang pagpapabuti na darating!
 
-Ngayon na nailagay na natin ang `state` object upang mag-imbak ng ating data, ang susunod na hakbang ay i-centralize ang mga update. Ang layunin ay gawing mas madali ang pagsubaybay sa anumang mga pagbabago at kung kailan ito nangyayari.
+## Pagpapatupad ng Controlled State Updates
 
-Upang maiwasan ang mga pagbabago na ginawa sa `state` object, magandang kasanayan din na isaalang-alang ito bilang [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), ibig sabihin ay hindi ito maaaring baguhin. Nangangahulugan din ito na kailangan mong lumikha ng bagong state object kung gusto mong baguhin ang anumang bagay dito. Sa paggawa nito, bumubuo ka ng proteksyon laban sa mga posibleng hindi gustong [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)), at nagbubukas ng mga posibilidad para sa mga bagong feature sa iyong app tulad ng pag-implement ng undo/redo, habang ginagawang mas madali ang pag-debug. Halimbawa, maaari mong i-log ang bawat pagbabago na ginawa sa estado at panatilihin ang kasaysayan ng mga pagbabago upang maunawaan ang pinagmulan ng isang bug.
+Kapag centralized na ang ating state, ang susunod na hakbang ay ang pagtatatag ng kontroladong mekanismo para sa mga pagbabago sa data. Ang approach na ito ay tinitiyak ang predictable na state changes at mas madaling pag-debug.
 
-Sa JavaScript, maaari mong gamitin ang [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) upang lumikha ng isang immutable na bersyon ng isang object. Kung susubukan mong gumawa ng mga pagbabago sa isang immutable na object, isang exception ang itataas.
+Ang pangunahing prinsipyo ay parang air traffic control: sa halip na payagan ang maraming function na magbago ng state nang independiyente, idadaan natin ang lahat ng pagbabago sa isang solong, kontroladong function. Ang pattern na ito ay nagbibigay ng malinaw na oversight kung kailan at paano nagbabago ang data.
 
-✅ Alam mo ba ang pagkakaiba sa pagitan ng isang *shallow* at isang *deep* immutable object? Maaari mong basahin ito [dito](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+**Immutable State Management:**
+
+Ituturing natin ang ating `state` object bilang [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), ibig sabihin hindi natin ito direktang babaguhin. Sa halip, bawat pagbabago ay lumilikha ng bagong state object na may updated na data.
+
+Bagamat ang approach na ito ay maaaring mukhang hindi efficient kumpara sa direktang pagbabago, nagbibigay ito ng malaking benepisyo para sa debugging, testing, at pagpapanatili ng predictability ng application.
+
+**Mga Benepisyo ng Immutable State Management:**
+
+| Benepisyo | Deskripsyon | Epekto |
+|----------|-------------|--------|
+| **Predictability** | Ang mga pagbabago ay nangyayari lamang sa pamamagitan ng kontroladong mga function | Mas madaling i-debug at i-test |
+| **History Tracking** | Ang bawat pagbabago sa state ay lumilikha ng bagong object | Nagbibigay-daan sa undo/redo functionality |
+| **Side Effect Prevention** | Walang aksidenteng pagbabago | Pinipigilan ang misteryosong mga bug |
+| **Performance Optimization** | Madaling matukoy kung kailan nagbago ang state | Nagbibigay-daan sa efficient na UI updates |
+
+**JavaScript Immutability gamit ang `Object.freeze()`:**
+
+Nagbibigay ang JavaScript ng [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) upang pigilan ang mga pagbabago sa object:
+
+```js
+const immutableState = Object.freeze({ account: userData });
+// Any attempt to modify immutableState will throw an error
+```
+
+**Pag-unawa sa nangyayari dito:**
+- **Pinipigilan** ang direktang pag-assign o pag-delete ng properties
+- **Nagbibigay** ng exceptions kung may pagtatangkang baguhin ang object
+- **Tinitiyak** na ang mga pagbabago sa state ay dapat dumaan sa kontroladong mga function
+- **Lumilikha** ng malinaw na kontrata kung paano maaaring ma-update ang state
+
+> 💡 **Malalim na Pagsisiyasat**: Alamin ang pagkakaiba sa pagitan ng *shallow* at *deep* immutable objects sa [MDN documentation](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Mahalagang maunawaan ang pagkakaibang ito para sa mga kumplikadong state structures.
 
 ### Gawain
 
@@ -110,9 +204,9 @@ function updateState(property, newData) {
 }
 ```
 
-Sa function na ito, gumagawa kami ng bagong state object at kinokopya ang data mula sa nakaraang estado gamit ang [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Pagkatapos ay pinapalitan namin ang isang partikular na property ng state object gamit ang [bracket notation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` para sa assignment. Sa wakas, nilalock namin ang object upang maiwasan ang mga pagbabago gamit ang `Object.freeze()`. Sa ngayon, mayroon lamang kaming `account` property na naka-imbak sa estado, ngunit sa approach na ito maaari kang magdagdag ng maraming property hangga't kailangan mo sa estado.
+Sa function na ito, gumagawa tayo ng bagong state object at kinokopya ang data mula sa nakaraang state gamit ang [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Pagkatapos, pinapalitan natin ang partikular na property ng state object gamit ang [bracket notation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` para sa assignment. Sa huli, nilalock natin ang object upang pigilan ang mga pagbabago gamit ang `Object.freeze()`. Sa ngayon, mayroon lamang tayong `account` property na naka-store sa state, ngunit sa approach na ito maaari kang magdagdag ng mas maraming properties sa state.
 
-I-update din natin ang initialization ng `state` upang matiyak na ang initial state ay frozen din:
+I-update din natin ang `state` initialization upang matiyak na ang initial state ay frozen din:
 
 ```js
 let state = Object.freeze({
@@ -120,19 +214,19 @@ let state = Object.freeze({
 });
 ```
 
-Pagkatapos nito, i-update ang function na `register` sa pamamagitan ng pagpapalit ng `state.account = result;` assignment sa:
+Pagkatapos nito, i-update ang `register` function sa pamamagitan ng pagpapalit ng `state.account = result;` assignment sa:
 
 ```js
 updateState('account', result);
 ```
 
-Gawin din ito sa function na `login`, palitan ang `state.account = data;` ng:
+Gawin din ito sa `login` function, palitan ang `state.account = data;` ng:
 
 ```js
 updateState('account', data);
 ```
 
-Ngayon ay gagamitin natin ang pagkakataon upang ayusin ang isyu ng data ng account na hindi nalilinis kapag ang user ay nag-click sa *Logout*.
+Ngayon, samantalahin natin ang pagkakataon upang ayusin ang isyu ng hindi pag-clear ng account data kapag nag-click ang user sa *Logout*.
 
 Gumawa ng bagong function na `logout()`:
 
@@ -145,47 +239,103 @@ function logout() {
 
 Sa `updateDashboard()`, palitan ang redirection na `return navigate('/login');` ng `return logout()`;
 
-Subukang magrehistro ng bagong account, mag-logout, at mag-login muli upang suriin kung maayos pa rin ang lahat.
+Subukang mag-register ng bagong account, mag-logout, at mag-login muli upang suriin kung maayos pa rin ang lahat.
 
-> Tip: maaari mong tingnan ang lahat ng mga pagbabago sa estado sa pamamagitan ng pagdaragdag ng `console.log(state)` sa ibaba ng `updateState()` at buksan ang console sa mga tool ng developer ng iyong browser.
+> Tip: maaari mong tingnan ang lahat ng pagbabago sa state sa pamamagitan ng pagdaragdag ng `console.log(state)` sa ibaba ng `updateState()` at pagbukas ng console sa development tools ng iyong browser.
 
-## Panatilihin ang estado
+## Pagpapatupad ng Data Persistence
 
-Karamihan sa mga web app ay kailangang magpanatili ng data upang gumana nang maayos. Ang lahat ng kritikal na data ay karaniwang naka-imbak sa isang database at ina-access sa pamamagitan ng isang server API, tulad ng data ng user account sa aming kaso. Ngunit minsan, interesante rin na panatilihin ang ilang data sa client app na tumatakbo sa iyong browser, para sa mas magandang karanasan ng user o upang mapabuti ang performance ng pag-load.
+Ang isyu ng session loss na natukoy natin kanina ay nangangailangan ng persistence solution na nagpapanatili ng user state sa mga session ng browser. Binabago nito ang ating application mula sa isang pansamantalang karanasan patungo sa isang maaasahan at propesyonal na tool.
 
-Kapag gusto mong magpanatili ng data sa iyong browser, may ilang mahahalagang tanong na dapat mong itanong sa iyong sarili:
+Isipin kung paano pinapanatili ng atomic clocks ang eksaktong oras kahit na may power outages sa pamamagitan ng pag-iimbak ng critical state sa non-volatile memory. Katulad nito, ang mga web application ay nangangailangan ng persistent storage mechanisms upang mapanatili ang mahalagang user data sa mga session ng browser at page refreshes.
 
-- *Sensitive ba ang data?* Dapat mong iwasan ang pag-iimbak ng anumang sensitibong data sa client, tulad ng mga password ng user.
-- *Gaano katagal mo kailangang panatilihin ang data na ito?* Plano mo bang i-access ang data na ito para lamang sa kasalukuyang session o gusto mo itong i-store magpakailanman?
+**Mga Strategic na Tanong para sa Data Persistence:**
 
-Maraming paraan ng pag-iimbak ng impormasyon sa loob ng isang web app, depende sa kung ano ang gusto mong makamit. Halimbawa, maaari mong gamitin ang mga URL upang mag-imbak ng query sa paghahanap, at gawing maibabahagi ito sa pagitan ng mga user. Maaari mo ring gamitin ang [HTTP cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies) kung ang data ay kailangang ibahagi sa server, tulad ng impormasyon sa [authentication](https://en.wikipedia.org/wiki/Authentication).
+Bago magpatupad ng persistence, isaalang-alang ang mga kritikal na salik na ito:
 
-Isa pang opsyon ay ang paggamit ng isa sa maraming browser APIs para sa pag-iimbak ng data. Dalawa sa mga ito ang partikular na interesante:
+| Tanong | Konteksto ng Banking App | Epekto ng Desisyon |
+|-------|--------------------------|-------------------|
+| **Sensitive ba ang data?** | Account balance, transaction history | Pumili ng secure na storage methods |
+| **Gaano katagal dapat mag-persist?** | Login state vs. temporary UI preferences | Pumili ng naaangkop na storage duration |
+| **Kailangan ba ito ng server?** | Authentication tokens vs. UI settings | Tukuyin ang mga sharing requirements |
 
-- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): isang [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) na nagpapahintulot na magpanatili ng data na partikular sa kasalukuyang website sa iba't ibang session. Ang data na naka-save dito ay hindi kailanman nag-e-expire.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): ito ay gumagana nang katulad sa `localStorage` maliban na ang data na naka-imbak dito ay nabubura kapag natapos ang session (kapag isinara ang browser).
+**Mga Opsyon sa Browser Storage:**
 
-Tandaan na ang parehong mga API na ito ay nagpapahintulot lamang na mag-imbak ng [strings](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Kung gusto mong mag-imbak ng mga kumplikadong object, kailangan mong i-serialize ito sa [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) format gamit ang [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Nagbibigay ang modernong browsers ng ilang storage mechanisms, bawat isa ay idinisenyo para sa iba't ibang use cases:
 
-✅ Kung gusto mong gumawa ng web app na hindi gumagana sa isang server, posible rin na gumawa ng database sa client gamit ang [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Ang API na ito ay nakalaan para sa mga advanced na use case o kung kailangan mong mag-imbak ng malaking dami ng data, dahil mas kumplikado itong gamitin.
+**Pangunahing Storage APIs:**
 
-### Gawain
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Persistent [Key/Value storage](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Nagpapanatili** ng data sa mga session ng browser nang walang hanggan  
+   - **Nananatili** kahit i-restart ang browser at computer
+   - **Nakatuon** sa partikular na domain ng website
+   - **Perpekto** para sa user preferences at login states
 
-Gusto naming manatiling naka-log in ang aming mga user hanggang sa sila mismo ang mag-click sa *Logout* button, kaya gagamit kami ng `localStorage` upang mag-imbak ng data ng account. Una, mag-define tayo ng key na gagamitin natin upang mag-imbak ng data.
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Temporary session storage
+   - **Gumagana** nang katulad sa localStorage sa mga aktibong session
+   - **Awtomatikong nawawala** kapag isinara ang browser tab
+   - **Mainam** para sa pansamantalang data na hindi dapat mag-persist
+
+3. **[HTTP Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Server-shared storage
+   - **Awtomatikong** ipinapadala sa bawat server request
+   - **Perpekto** para sa [authentication](https://en.wikipedia.org/wiki/Authentication) tokens
+   - **Limitado** ang laki at maaaring makaapekto sa performance
+
+**Kinakailangan ang Data Serialization:**
+
+Ang parehong `localStorage` at `sessionStorage` ay nag-iimbak lamang ng [strings](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String):
+
+```js
+// Convert objects to JSON strings for storage
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parse JSON strings back to objects when retrieving
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Pag-unawa sa serialization:**
+- **Nagko-convert** ng JavaScript objects sa JSON strings gamit ang [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- **Binubuo muli** ang objects mula sa JSON gamit ang [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- **Awtomatikong hinahandle** ang mga kumplikadong nested objects at arrays
+- **Hindi gumagana** sa functions, undefined values, at circular references
+> 💡 **Advanced Option**: Para sa mga kumplikadong offline na aplikasyon na may malalaking dataset, isaalang-alang ang [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Nagbibigay ito ng buong client-side database ngunit nangangailangan ng mas kumplikadong implementasyon.
+
+### Gawain: Ipatupad ang localStorage Persistence
+
+Ipatupad natin ang persistent storage upang manatiling naka-log in ang mga user hanggang sa sila mismo ang mag-log out. Gagamit tayo ng `localStorage` para i-store ang account data sa iba't ibang browser session.
+
+**Hakbang 1: Tukuyin ang Storage Configuration**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Pagkatapos idagdag ang linyang ito sa dulo ng function na `updateState()`:
+**Ano ang ibinibigay ng constant na ito:**
+- **Lumilikha** ng consistent identifier para sa ating stored data
+- **Pinipigilan** ang mga typo sa storage key references
+- **Ginagawang** madali ang pagbabago ng storage key kung kinakailangan
+- **Sumusunod** sa best practices para sa maintainable na code
+
+**Hakbang 2: Magdagdag ng Automatic Persistence**
+
+Idagdag ang linyang ito sa dulo ng `updateState()` function:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-Sa ganito, ang data ng user account ay mapapanatili at palaging up-to-date dahil na-centralize na natin ang lahat ng mga update sa estado. Dito natin sinisimulan ang benepisyo ng lahat ng ating mga naunang refactor 🙂.
+**Pag-unawa sa nangyayari dito:**
+- **Kinoconvert** ang account object sa JSON string para sa storage
+- **Sinasave** ang data gamit ang ating consistent storage key
+- **Ina-execute** ito nang awtomatiko tuwing may pagbabago sa state
+- **Tinitiyak** na ang stored data ay palaging synchronized sa kasalukuyang state
 
-Dahil ang data ay na-save, kailangan din nating alagaan ang pag-restore nito kapag na-load ang app. Dahil magsisimula na tayong magkaroon ng mas maraming initialization code, maaaring magandang ideya na gumawa ng bagong `init` function, na kasama rin ang ating dating code sa ibaba ng `app.js`:
+> 💡 **Benepisyo ng Arkitektura**: Dahil na-centralize natin ang lahat ng state updates sa pamamagitan ng `updateState()`, ang pagdaragdag ng persistence ay nangangailangan lamang ng isang linya ng code. Ipinapakita nito ang kapangyarihan ng mahusay na desisyon sa arkitektura!
+
+**Hakbang 3: Ibalik ang State sa Pag-load ng App**
+
+Gumawa ng initialization function para maibalik ang na-save na data:
 
 ```js
 function init() {
@@ -202,17 +352,49 @@ function init() {
 init();
 ```
 
-Dito natin kinukuha ang na-save na data, at kung mayroon, ina-update natin ang estado nang naaayon. Mahalagang gawin ito *bago* i-update ang route, dahil maaaring may code na umaasa sa estado sa panahon ng pag-update ng pahina.
+**Pag-unawa sa proseso ng initialization:**
+- **Kinukuha** ang anumang na-save na account data mula sa localStorage
+- **Pinoproseso** ang JSON string pabalik sa JavaScript object
+- **Ina-update** ang state gamit ang ating controlled update function
+- **Ibinabalik** ang session ng user nang awtomatiko sa pag-load ng page
+- **Ina-execute** ito bago ang mga update sa ruta upang matiyak na available ang state
 
-Maaari rin nating gawing default page ng ating application ang *Dashboard* page, dahil ngayon ay pinapanatili na natin ang data ng account. Kung walang data na natagpuan, ang dashboard ang bahala sa pag-redirect sa *Login* page. Sa `updateRoute()`, palitan ang fallback na `return navigate('/login');` ng `return navigate('/dashboard');`.
+**Hakbang 4: I-optimize ang Default Route**
 
-Ngayon mag-login sa app at subukang i-refresh ang pahina. Dapat kang manatili sa dashboard. Sa update na ito, naayos na natin ang lahat ng ating mga paunang isyu...
+I-update ang default route upang magamit ang persistence:
 
-## I-refresh ang data
+Sa `updateRoute()`, palitan:
+```js
+// Replace: return navigate('/login');
+return navigate('/dashboard');
+```
 
-...Ngunit maaaring nakagawa rin tayo ng bago. Oops!
+**Bakit makatuwiran ang pagbabagong ito:**
+- **Ginagamit** nang epektibo ang bagong persistence system
+- **Pinapayagan** ang dashboard na mag-handle ng authentication checks
+- **Nagre-redirect** sa login nang awtomatiko kung walang na-save na session
+- **Lumilikha** ng mas seamless na karanasan para sa user
 
-Pumunta sa dashboard gamit ang `test` account, pagkatapos ay patakbuhin ang command na ito sa terminal upang gumawa ng bagong transaction:
+**Pagsubok sa Iyong Implementasyon:**
+
+1. Mag-log in sa iyong banking app
+2. I-refresh ang browser page
+3. Tiyaking nananatili kang naka-log in at nasa dashboard
+4. Isara at muling buksan ang iyong browser
+5. Bumalik sa iyong app at kumpirmahing naka-log in ka pa rin
+
+🎉 **Achievement Unlocked**: Matagumpay mong naipatupad ang persistent state management! Ang iyong app ay kumikilos na tulad ng isang propesyonal na web application.
+
+## Pagbalanse ng Persistence at Data Freshness
+
+Ang ating persistence system ay matagumpay na nagpapanatili ng user sessions, ngunit nagdadala ng bagong hamon: data staleness. Kapag maraming user o aplikasyon ang nagbabago ng parehong server data, ang lokal na naka-cache na impormasyon ay nagiging luma.
+
+Ang sitwasyong ito ay kahalintulad ng mga Viking navigator na umaasa sa parehong naka-store na star charts at kasalukuyang celestial observations. Ang charts ay nagbibigay ng consistency, ngunit kailangan ng mga navigator ng sariwang obserbasyon upang ma-account ang mga nagbabagong kondisyon. Katulad nito, ang ating aplikasyon ay nangangailangan ng parehong persistent user state at kasalukuyang server data.
+
+**🧪 Pagdiskubre sa Problema ng Data Freshness:**
+
+1. Mag-log in sa dashboard gamit ang `test` account
+2. Patakbuhin ang command na ito sa terminal upang mag-simulate ng transaction mula sa ibang source:
 
 ```sh
 curl --request POST \
@@ -221,15 +403,31 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Subukang i-refresh ang iyong dashboard page sa browser ngayon. Ano ang nangyayari? Nakikita mo ba ang bagong transaction?
+3. I-refresh ang iyong dashboard page sa browser
+4. Obserbahan kung makikita mo ang bagong transaction
 
-Ang estado ay pinapanatili nang walang hanggan salamat sa `localStorage`, ngunit nangangahulugan din ito na hindi ito kailanman na-update hanggang sa mag-log out ka sa app at mag-log in muli!
+**Ano ang ipinapakita ng test na ito:**
+- **Ipinapakita** kung paano nagiging "stale" (luma) ang local storage
+- **Sinasalamin** ang mga real-world scenario kung saan nagbabago ang data sa labas ng iyong app
+- **Ibinubunyag** ang tensyon sa pagitan ng persistence at data freshness
 
-Ang isang posibleng estratehiya upang ayusin iyon ay ang i-reload ang data ng account tuwing na-load ang dashboard, upang maiwasan ang stall data.
+**Ang Hamon ng Data Staleness:**
 
-### Gawain
+| Problema | Sanhi | Epekto sa User |
+|----------|-------|----------------|
+| **Stale Data** | Ang localStorage ay hindi awtomatikong nag-e-expire | Nakikita ng user ang lumang impormasyon |
+| **Server Changes** | Binabago ng ibang apps/users ang parehong data | Hindi consistent ang view sa iba't ibang platform |
+| **Cache vs. Reality** | Ang lokal na cache ay hindi tumutugma sa server state | Mahinang karanasan ng user at kalituhan |
 
-Gumawa ng bagong function na `updateAccountData`:
+**Solusyon na Estratehiya:**
+
+Magpapatupad tayo ng "refresh on load" pattern na nagbabalanse sa benepisyo ng persistence at pangangailangan para sa sariwang data. Ang approach na ito ay nagpapanatili ng maayos na karanasan ng user habang tinitiyak ang katumpakan ng data.
+
+### Gawain: Ipatupad ang Data Refresh System
+
+Gagawa tayo ng sistema na awtomatikong kumukuha ng sariwang data mula sa server habang pinapanatili ang benepisyo ng ating persistent state management.
+
+**Hakbang 1: Gumawa ng Account Data Updater**
 
 ```js
 async function updateAccountData() {
@@ -247,9 +445,15 @@ async function updateAccountData() {
 }
 ```
 
-Ang method na ito ay nagche-check na kasalukuyan kang naka-log in pagkatapos ay i-reload ang data ng account mula sa server.
+**Pag-unawa sa lohika ng function na ito:**
+- **Sinusuri** kung ang user ay kasalukuyang naka-log in (may state.account)
+- **Nagre-redirect** sa logout kung walang valid session
+- **Kumukuha** ng sariwang account data mula sa server gamit ang umiiral na `getAccount()` function
+- **Ina-handle** ang server errors nang maayos sa pamamagitan ng pag-log out ng invalid sessions
+- **Ina-update** ang state gamit ang sariwang data sa pamamagitan ng ating controlled update system
+- **Nagti-trigger** ng awtomatikong localStorage persistence sa pamamagitan ng `updateState()` function
 
-Gumawa ng isa pang function na tinatawag na `refresh`:
+**Hakbang 2: Gumawa ng Dashboard Refresh Handler**
 
 ```js
 async function refresh() {
@@ -258,7 +462,15 @@ async function refresh() {
 }
 ```
 
-Ina-update ng function na ito ang data ng account, pagkatapos ay ina-update ang HTML ng dashboard page. Ito ang kailangan nating tawagin kapag na-load ang dashboard route. I-update ang route definition gamit:
+**Ano ang nagagawa ng refresh function na ito:**
+- **Kinokoordina** ang proseso ng data refresh at UI update
+- **Naghihintay** para ma-load ang sariwang data bago i-update ang display
+- **Tinitiyak** na ang dashboard ay nagpapakita ng pinakabagong impormasyon
+- **Pinapanatili** ang malinis na paghihiwalay sa pagitan ng data management at UI updates
+
+**Hakbang 3: Isama sa Route System**
+
+I-update ang iyong route configuration upang awtomatikong mag-trigger ng refresh:
 
 ```js
 const routes = {
@@ -267,28 +479,63 @@ const routes = {
 };
 ```
 
-Subukang i-reload ang dashboard ngayon, dapat nitong ipakita ang na-update na data ng account.
+**Paano gumagana ang integration na ito:**
+- **Ina-execute** ang refresh function tuwing naglo-load ang dashboard route
+- **Tinitiyak** na sariwang data ang palaging ipinapakita kapag nag-navigate ang user sa dashboard
+- **Pinapanatili** ang umiiral na route structure habang nagdadagdag ng data freshness
+- **Nagbibigay** ng consistent na pattern para sa route-specific initialization
+
+**Pagsubok sa Iyong Data Refresh System:**
+
+1. Mag-log in sa iyong banking app
+2. Patakbuhin ang curl command mula kanina upang gumawa ng bagong transaction
+3. I-refresh ang iyong dashboard page o mag-navigate palayo at bumalik
+4. Tiyaking lumalabas agad ang bagong transaction
+
+🎉 **Perfect Balance Achieved**: Ang iyong app ay ngayon pinagsasama ang maayos na karanasan ng persistent state at ang katumpakan ng sariwang server data!
 
 ## Hamon ng GitHub Copilot Agent 🚀
 
-Gamitin ang Agent mode upang makumpleto ang sumusunod na hamon:
+Gamitin ang Agent mode upang kumpletuhin ang sumusunod na hamon:
 
-**Paglalarawan:** Ipatupad ang isang komprehensibong sistema ng pamamahala ng estado na may undo/redo functionality para sa banking app. Ang hamon na ito ay makakatulong sa iyo na magsanay ng mga advanced na konsepto ng pamamahala ng estado kabilang ang pagsubaybay sa kasaysayan ng estado, immutable updates, at pag-synchronize ng user interface.
-**Prompt:** Gumawa ng mas pinahusay na sistema ng pamamahala ng estado na may kasamang: 1) Isang array ng kasaysayan ng estado na nagtatala ng lahat ng nakaraang estado, 2) Mga function ng undo at redo na maaaring bumalik sa mga nakaraang estado, 3) Mga UI button para sa mga operasyon ng undo/redo sa dashboard, 4) Isang maximum na limitasyon ng kasaysayan na 10 estado upang maiwasan ang mga isyu sa memorya, at 5) Wastong paglilinis ng kasaysayan kapag nag-log out ang user. Siguraduhin na gumagana ang undo/redo functionality sa mga pagbabago sa balanse ng account at nananatili kahit na mag-refresh ang browser.
+**Deskripsyon:** Ipatupad ang isang komprehensibong state management system na may undo/redo functionality para sa banking app. Ang hamon na ito ay makakatulong sa iyo na magsanay sa advanced state management concepts kabilang ang state history tracking, immutable updates, at user interface synchronization.
 
-## 🚀 Hamon
+**Prompt:** Gumawa ng enhanced state management system na kinabibilangan ng: 1) Isang state history array na nagta-track ng lahat ng nakaraang states, 2) Undo at redo functions na maaaring bumalik sa mga nakaraang states, 3) UI buttons para sa undo/redo operations sa dashboard, 4) Maximum history limit na 10 states upang maiwasan ang memory issues, at 5) Tamang cleanup ng history kapag nag-log out ang user. Tiyaking gumagana ang undo/redo functionality sa mga pagbabago sa account balance at nananatili ito sa browser refreshes.
 
-Ngayon na nire-reload natin ang data ng account tuwing binubuksan ang dashboard, sa tingin mo ba kailangan pa nating i-save *lahat ng data ng account*?
+Alamin pa ang tungkol sa [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) dito.
 
-Subukang magtulungan upang baguhin kung ano ang sine-save at niloload mula sa `localStorage` upang isama lamang ang mga talagang kinakailangan para gumana ang app.
+## 🚀 Hamon: Storage Optimization
 
-## Quiz Pagkatapos ng Leksyon
+Ang iyong implementasyon ay ngayon humahawak sa user sessions, data refresh, at state management nang epektibo. Gayunpaman, isaalang-alang kung ang kasalukuyang approach ay optimal sa pagbalanse ng storage efficiency at functionality.
 
-[Quiz pagkatapos ng leksyon](https://ff-quizzes.netlify.app/web/quiz/48)
+Tulad ng mga chess masters na nakikilala ang mahalagang piraso mula sa mga expendable pawns, ang epektibong state management ay nangangailangan ng pagtukoy kung aling data ang kailangang mag-persist kumpara sa kung alin ang dapat palaging sariwa mula sa server.
+
+**Optimization Analysis:**
+
+Suriin ang iyong kasalukuyang localStorage implementation at isaalang-alang ang mga estratehikong tanong na ito:
+- Ano ang minimum na impormasyon na kinakailangan upang mapanatili ang user authentication?
+- Aling data ang madalas magbago kaya't ang lokal na caching ay nagbibigay ng kaunting benepisyo?
+- Paano makakatulong ang storage optimization sa pagpapabuti ng performance nang hindi nakokompromiso ang karanasan ng user?
+
+**Implementation Strategy:**
+- **Tukuyin** ang mahalagang data na kailangang mag-persist (malamang user identification lang)
+- **Baguhin** ang iyong localStorage implementation upang mag-store lamang ng critical session data
+- **Tiyakin** na ang sariwang data ay palaging na-load mula sa server sa mga pagbisita sa dashboard
+- **Subukan** kung ang iyong optimized approach ay nagpapanatili ng parehong karanasan ng user
+
+**Advanced Consideration:**
+- **Ihambing** ang trade-offs sa pagitan ng pag-store ng buong account data vs. authentication tokens lamang
+- **I-dokumenta** ang iyong mga desisyon at pangangatwiran para sa mga susunod na miyembro ng team
+
+Ang hamon na ito ay makakatulong sa iyo na mag-isip tulad ng isang propesyonal na developer na isinasaalang-alang ang parehong karanasan ng user at kahusayan ng aplikasyon. Maglaan ng oras upang mag-eksperimento sa iba't ibang approach!
+
+## Post-Lecture Quiz
+
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Takdang-Aralin
 
-[Ipapatupad ang "Add transaction" dialog](assignment.md)
+[Implement "Add transaction" dialog](assignment.md)
 
 Narito ang isang halimbawa ng resulta pagkatapos makumpleto ang takdang-aralin:
 
@@ -297,4 +544,4 @@ Narito ang isang halimbawa ng resulta pagkatapos makumpleto ang takdang-aralin:
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi eksaktong pagsasalin. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.

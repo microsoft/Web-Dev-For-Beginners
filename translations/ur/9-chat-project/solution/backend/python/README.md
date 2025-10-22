@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:46:02+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-22T14:51:21+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "ur"
 }
@@ -18,23 +18,31 @@ python -m venv venv
 source ./venv/bin/activate
 ```
 
-## انحصارات انسٹال کریں
+## ضروریات انسٹال کریں
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## API چلائیں
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## API ٹیسٹ کریں
+
+انٹرایکٹو API دستاویزات پر جائیں: `http://localhost:5000/docs`
 
 ## فرنٹ اینڈ چلائیں
 
 یقینی بنائیں کہ آپ فرنٹ اینڈ فولڈر میں موجود ہیں
 
-*app.js* تلاش کریں، `BASE_URL` کو اپنے بیک اینڈ URL پر تبدیل کریں
+*app.js* تلاش کریں، `BASE_URL` کو اپنے بیک اینڈ URL میں تبدیل کریں
 
 اسے چلائیں
 
@@ -42,11 +50,11 @@ python api.py
 npx http-server -p 8000
 ```
 
-چیٹ میں کوئی پیغام ٹائپ کرنے کی کوشش کریں، آپ کو ایک جواب نظر آنا چاہیے (بشرطیکہ آپ یہ Codespace میں چلا رہے ہوں یا ایکسیس ٹوکن ترتیب دیا ہو)۔
+چیٹ میں ایک پیغام لکھنے کی کوشش کریں، آپ کو جواب نظر آنا چاہیے (اگر آپ اسے Codespace میں چلا رہے ہیں یا ایک ایکسیس ٹوکن ترتیب دیا ہے)۔
 
-## ایکسیس ٹوکن ترتیب دیں (اگر آپ یہ Codespace میں نہیں چلا رہے)
+## ایکسیس ٹوکن ترتیب دیں (اگر آپ اسے Codespace میں نہیں چلا رہے ہیں)
 
-[ذاتی ایکسیس ٹوکن ترتیب دیں](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) دیکھیں۔
+[ذاتی ایکسیس ٹوکن ترتیب دیں](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) دیکھیں
 
 ---
 

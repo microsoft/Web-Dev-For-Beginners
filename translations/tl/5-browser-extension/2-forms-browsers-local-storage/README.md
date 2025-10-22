@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7e164d318e19925330cfcaeea954e7b5",
-  "translation_date": "2025-10-20T21:11:53+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-22T15:44:14+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "tl"
 }
 -->
-# Proyekto ng Browser Extension Bahagi 2: Tumawag sa API, gumamit ng Local Storage
+# Proyekto ng Browser Extension Bahagi 2: Tumawag sa API, Gumamit ng Local Storage
 
 ## Pre-Lecture Quiz
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Panimula
+## Panimula
 
-Sa araling ito, tatawag ka sa isang API sa pamamagitan ng pagsusumite ng form ng iyong browser extension at ipapakita ang mga resulta sa iyong browser extension. Bukod dito, matututunan mo kung paano mag-imbak ng data sa local storage ng iyong browser para sa hinaharap na paggamit.
+Naalala mo ba ang browser extension na sinimulan mong gawin? Sa ngayon, mayroon kang magandang form, ngunit ito ay static pa rin. Ngayon, bibigyan natin ito ng buhay sa pamamagitan ng pagkonekta sa totoong data at pagbibigay ng memorya.
 
-✅ Sundin ang mga numerong segment sa mga naaangkop na file upang malaman kung saan ilalagay ang iyong code.
+Isipin ang mga computer ng Apollo mission control - hindi lang sila nagpapakita ng nakapirming impormasyon. Patuloy silang nakikipag-ugnayan sa spacecraft, ina-update gamit ang telemetry data, at naaalala ang mahahalagang parameter ng misyon. Ganitong uri ng dynamic na pag-uugali ang itatayo natin ngayon. Ang iyong extension ay makakakuha ng totoong environmental data mula sa internet at maaalala ang iyong mga setting para sa susunod.
 
-### I-set up ang mga elementong gagamitin sa extension:
+Ang API integration ay maaaring mukhang kumplikado, ngunit ito ay talagang pagtuturo sa iyong code kung paano makipag-usap sa ibang mga serbisyo. Kung ikaw ay kumukuha ng data ng panahon, mga feed ng social media, o impormasyon tungkol sa carbon footprint tulad ng gagawin natin ngayon, ito ay tungkol sa pagtatatag ng mga digital na koneksyon. Susuriin din natin kung paano maaaring mag-imbak ng impormasyon ang mga browser - katulad ng kung paano ginamit ng mga library ang mga card catalog upang maalala kung saan naroroon ang mga libro.
 
-Sa puntong ito, naitayo mo na ang HTML para sa form at resulta `<div>` ng iyong browser extension. Simula ngayon, kakailanganin mong magtrabaho sa file na `/src/index.js` at buuin ang iyong extension nang paunti-unti. Sumangguni sa [nakaraang aralin](../1-about-browsers/README.md) para sa pag-set up ng iyong proyekto at sa proseso ng pagbuo.
+Sa pagtatapos ng araling ito, magkakaroon ka ng browser extension na kumukuha ng totoong data, nag-iimbak ng mga kagustuhan ng user, at nagbibigay ng maayos na karanasan. Simulan na natin!
 
-Sa pagtrabaho sa iyong `index.js` file, magsimula sa pamamagitan ng paglikha ng ilang `const` na mga variable upang hawakan ang mga halaga na nauugnay sa iba't ibang mga field:
+✅ Sundin ang mga naka-number na segment sa mga kaukulang file upang malaman kung saan ilalagay ang iyong code.
 
-```JavaScript
+## I-set up ang mga elemento na gagamitin sa extension
+
+Bago manipulahin ng iyong JavaScript ang interface, kailangan nito ng mga reference sa mga partikular na HTML element. Isipin ito na parang teleskopyo na kailangang itutok sa mga partikular na bituin - bago mapag-aralan ni Galileo ang mga buwan ng Jupiter, kailangan niyang hanapin at ituon ang Jupiter mismo.
+
+Sa iyong `index.js` file, gagawa tayo ng mga `const` variable na kumukuha ng mga reference sa bawat mahalagang elemento ng form. Katulad ito ng kung paano nilalagyan ng label ng mga siyentipiko ang kanilang kagamitan - sa halip na maghanap sa buong laboratoryo sa bawat oras, maaari nilang direktang ma-access ang kanilang kailangan.
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,208 +47,301 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Ang lahat ng mga field na ito ay tinutukoy sa pamamagitan ng kanilang css class, tulad ng itinakda mo sa HTML sa nakaraang aralin.
+**Narito ang ginagawa ng code na ito:**
+- **Kinukuha** ang mga elemento ng form gamit ang `document.querySelector()` na may CSS class selectors
+- **Gumagawa** ng mga reference sa mga input field para sa pangalan ng rehiyon at API key
+- **Nag-eestablish** ng mga koneksyon sa mga elemento ng display para sa carbon usage data
+- **Nagse-set up** ng access sa mga UI element tulad ng loading indicators at error messages
+- **Nag-iimbak** ng bawat reference ng elemento sa isang `const` variable para sa madaling paggamit sa buong code
 
-### Magdagdag ng mga listener
+## Magdagdag ng event listeners
 
-Susunod, magdagdag ng mga event listener sa form at sa clear button na nagre-reset ng form, upang kapag ang isang user ay nagsumite ng form o nag-click sa reset button, may mangyayari, at idagdag ang tawag upang i-initialize ang app sa ibaba ng file:
+Ngayon gagawin natin ang iyong extension na tumugon sa mga aksyon ng user. Ang mga event listener ay paraan ng iyong code upang subaybayan ang mga interaksyon ng user. Isipin ito na parang mga operator sa mga maagang telephone exchanges - nakikinig sila para sa mga papasok na tawag at ikinokonekta ang tamang circuit kapag may gustong tumawag.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Pansinin ang pinaikling paraan na ginamit upang makinig sa isang submit o click event, at kung paano ipinapasa ang event sa handleSubmit o reset functions. Kaya mo bang isulat ang katumbas ng pinaikling ito sa mas mahabang format? Alin ang mas gusto mo?
+**Pag-unawa sa mga konsepto:**
+- **Nag-a-attach** ng submit listener sa form na nagti-trigger kapag pinindot ng user ang Enter o ang submit button
+- **Nagkokonekta** ng click listener sa clear button para i-reset ang form
+- **Nagpapasa** ng event object `(e)` sa mga handler function para sa karagdagang kontrol
+- **Tumatawag** sa `init()` function kaagad upang i-set up ang initial state ng iyong extension
 
-### Buuin ang init() function at ang reset() function:
+✅ Pansinin ang shorthand arrow function syntax na ginamit dito. Ang modernong JavaScript na approach na ito ay mas malinis kaysa sa tradisyunal na function expressions, ngunit pareho silang gumagana nang maayos!
 
-Ngayon ay bubuuin mo ang function na nag-i-initialize ng extension, na tinatawag na init():
+## Bumuo ng initialization at reset functions
 
-```JavaScript
+Gumawa tayo ng initialization logic para sa iyong extension. Ang `init()` function ay parang navigation system ng barko na nagche-check ng mga instrumento - tinutukoy nito ang kasalukuyang estado at ina-adjust ang interface nang naaayon. Tinitingnan nito kung may gumamit na sa iyong extension dati at ina-load ang kanilang mga nakaraang setting.
+
+Ang `reset()` function ay nagbibigay sa mga user ng bagong simula - katulad ng kung paano nire-reset ng mga siyentipiko ang kanilang mga instrumento sa pagitan ng mga eksperimento upang matiyak ang malinis na data.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-Sa function na ito, mayroong ilang kawili-wiling lohika. Sa pagbabasa nito, makikita mo ba kung ano ang nangyayari?
+**Pagbubuo ng mga nangyayari dito:**
+- **Kinukuha** ang naka-imbak na API key at rehiyon mula sa local storage ng browser
+- **Tinitingnan** kung ito ay unang beses na user (walang naka-imbak na credentials) o bumabalik na user
+- **Ipinapakita** ang setup form para sa mga bagong user at itinatago ang ibang mga elemento ng interface
+- **Ina-load** ang naka-save na data nang awtomatiko para sa mga bumabalik na user at ipinapakita ang reset option
+- **Pinamamahalaan** ang estado ng user interface batay sa available na data
 
-- Dalawang `const` ang itinakda upang suriin kung ang user ay nag-imbak ng APIKey at region code sa local storage.
-- Kung alinman sa mga ito ay null, ipakita ang form sa pamamagitan ng pagbabago ng estilo nito upang maipakita bilang 'block'.
-- Itago ang mga resulta, loading, at clearBtn at itakda ang anumang error text sa isang walang laman na string.
-- Kung mayroong key at rehiyon, simulan ang isang routine upang:
-  - Tumawag sa API upang makuha ang data ng carbon usage.
-  - Itago ang lugar ng resulta.
-  - Itago ang form.
-  - Ipakita ang reset button.
+**Mga pangunahing konsepto tungkol sa Local Storage:**
+- **Nagpapanatili** ng data sa pagitan ng mga session ng browser (hindi tulad ng session storage)
+- **Nag-iimbak** ng data bilang key-value pairs gamit ang `getItem()` at `setItem()`
+- **Nagbabalik** ng `null` kapag walang data para sa isang partikular na key
+- **Nagbibigay** ng simpleng paraan upang maalala ang mga kagustuhan at setting ng user
 
-Bago magpatuloy, kapaki-pakinabang na matutunan ang tungkol sa isang napakahalagang konsepto na magagamit sa mga browser: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). Ang LocalStorage ay isang kapaki-pakinabang na paraan upang mag-imbak ng mga string sa browser bilang isang `key-value` pair. Ang ganitong uri ng web storage ay maaaring manipulahin ng JavaScript upang pamahalaan ang data sa browser. Ang LocalStorage ay hindi nag-e-expire, habang ang SessionStorage, isa pang uri ng web storage, ay nalilinis kapag isinara ang browser. Ang iba't ibang uri ng storage ay may mga kalamangan at kahinaan sa kanilang paggamit.
+> 💡 **Pag-unawa sa Browser Storage**: Ang [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) ay parang pagbibigay ng persistent memory sa iyong extension. Isipin kung paano ang sinaunang Library of Alexandria ay nag-imbak ng mga scroll - nananatiling available ang impormasyon kahit na umalis at bumalik ang mga iskolar.
+>
+> **Mga pangunahing katangian:**
+> - **Nagpapanatili** ng data kahit na isara mo ang browser
+> - **Nananatili** kahit na i-restart ang computer o mag-crash ang browser
+> - **Nagbibigay** ng malaking storage space para sa mga kagustuhan ng user
+> - **Nag-aalok** ng instant access nang walang network delays
 
-> Tandaan - Ang iyong browser extension ay may sariling local storage; ang pangunahing window ng browser ay isang hiwalay na instance at gumagana nang hiwalay.
+> **Mahalagang Paalala**: Ang browser extension mo ay may sariling hiwalay na local storage na iba sa regular na mga web page. Nagbibigay ito ng seguridad at pumipigil sa mga conflict sa ibang mga website.
 
-Itakda ang iyong APIKey upang magkaroon ng string value, halimbawa, at makikita mo na ito ay nakatakda sa Edge sa pamamagitan ng "pag-inspect" ng isang web page (maaari mong i-right-click ang browser upang i-inspect) at pumunta sa Applications tab upang makita ang storage.
+Makikita mo ang iyong naka-imbak na data sa pamamagitan ng pagbukas ng Developer Tools ng browser (F12), pagpunta sa **Application** tab, at pag-expand sa **Local Storage** section.
 
 ![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.tl.png)
 
-✅ Mag-isip tungkol sa mga sitwasyon kung saan HINDI mo gustong mag-imbak ng ilang data sa LocalStorage. Sa pangkalahatan, ang paglalagay ng API Keys sa LocalStorage ay isang masamang ideya! Nakikita mo ba kung bakit? Sa aming kaso, dahil ang aming app ay purong para sa pag-aaral at hindi ilalathala sa isang app store, gagamitin namin ang pamamaraang ito.
+> ⚠️ **Pagsasaalang-alang sa Seguridad**: Sa mga production application, ang pag-iimbak ng API keys sa LocalStorage ay may mga panganib sa seguridad dahil maa-access ng JavaScript ang data na ito. Para sa layunin ng pag-aaral, ang approach na ito ay maayos, ngunit ang mga totoong application ay dapat gumamit ng secure server-side storage para sa mga sensitibong credentials.
 
-Pansinin na ginagamit mo ang Web API upang manipulahin ang LocalStorage, alinman sa pamamagitan ng paggamit ng `getItem()`, `setItem()`, o `removeItem()`. Malawak itong sinusuportahan sa iba't ibang browser.
+## Paano i-submit ang form
 
-Bago buuin ang `displayCarbonUsage()` function na tinatawag sa `init()`, buuin muna ang functionality upang hawakan ang paunang pagsusumite ng form.
+Ngayon, haharapin natin kung ano ang mangyayari kapag may nag-submit ng iyong form. Sa default, nire-reload ng mga browser ang page kapag na-submit ang mga form, ngunit i-intercept natin ang behavior na ito upang lumikha ng mas maayos na karanasan.
 
-### Hawakan ang pagsusumite ng form
+Ang approach na ito ay katulad ng kung paano hinahandle ng mission control ang komunikasyon ng spacecraft - sa halip na i-reset ang buong sistema para sa bawat transmission, pinapanatili nila ang tuloy-tuloy na operasyon habang pinoproseso ang bagong impormasyon.
 
-Gumawa ng function na tinatawag na `handleSubmit` na tumatanggap ng argumentong event `(e)`. Pigilan ang event na magpatuloy (sa kasong ito, gusto nating pigilan ang browser na mag-refresh) at tawagan ang bagong function, `setUpUser`, na ipinapasa ang mga argumentong `apiKey.value` at `region.value`. Sa ganitong paraan, magagamit mo ang dalawang halaga na dinala sa pamamagitan ng paunang form kapag napunan ang mga naaangkop na field.
+Gumawa ng function na kumukuha ng event ng form submission at nag-eextract ng input ng user:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ I-refresh ang iyong memorya - ang HTML na itinakda mo sa nakaraang aralin ay may dalawang input field na ang mga `values` ay kinukuha sa pamamagitan ng `const` na itinakda mo sa itaas ng file, at pareho silang `required` kaya pinipigilan ng browser ang mga user na maglagay ng null values.
+**Sa itaas, ginawa natin ang:**
+- **Pinipigilan** ang default na behavior ng form submission na magre-refresh ng page
+- **Kinukuha** ang mga input value ng user mula sa API key at region fields
+- **Ipinapasa** ang data ng form sa `setUpUser()` function para sa pagproseso
+- **Pinapanatili** ang single-page application behavior sa pamamagitan ng pag-iwas sa page reloads
 
-### I-set up ang user
+✅ Tandaan na ang iyong HTML form fields ay may `required` attribute, kaya awtomatikong tinitiyak ng browser na magbigay ang user ng parehong API key at rehiyon bago tumakbo ang function na ito.
 
-Sa paglipat sa `setUpUser` function, dito mo itinatakda ang mga local storage value para sa apiKey at regionName. Magdagdag ng bagong function:
+## I-set up ang mga kagustuhan ng user
 
-```JavaScript
+Ang `setUpUser` function ang responsable sa pag-save ng credentials ng user at pag-initiate ng unang API call. Ito ay lumilikha ng maayos na transition mula sa setup patungo sa pagpapakita ng resulta.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-Ang function na ito ay nagtatakda ng loading message upang ipakita habang tinatawag ang API. Sa puntong ito, narating mo na ang paglikha ng pinakamahalagang function ng browser extension na ito!
+**Hakbang-hakbang, narito ang nangyayari:**
+- **Sine-save** ang API key at pangalan ng rehiyon sa local storage para sa susunod na paggamit
+- **Ipinapakita** ang loading indicator upang ipaalam sa user na kumukuha ng data
+- **Nililinis** ang anumang naunang error messages mula sa display
+- **Ipinapakita** ang clear button para sa user na i-reset ang kanilang mga setting sa hinaharap
+- **Ini-initiate** ang API call upang kumuha ng totoong carbon usage data
 
-### Ipakita ang Carbon Usage
+Ang function na ito ay lumilikha ng seamless user experience sa pamamagitan ng pamamahala ng parehong data persistence at mga update sa user interface sa isang coordinated na aksyon.
 
-Sa wakas, oras na upang mag-query sa API!
+## Ipakita ang carbon usage data
 
-Bago magpatuloy, dapat nating talakayin ang mga API. Ang mga API, o [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), ay isang kritikal na elemento ng toolbox ng isang web developer. Nagbibigay ang mga ito ng mga standard na paraan para sa mga programa na makipag-ugnayan at makipag-interface sa isa't isa. Halimbawa, kung gumagawa ka ng isang website na kailangang mag-query sa isang database, maaaring may gumawa ng API para magamit mo. Bagama't maraming uri ng API, isa sa mga pinakasikat ay ang [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Ngayon, ikokonekta natin ang iyong extension sa mga external data sources sa pamamagitan ng APIs. Binabago nito ang iyong extension mula sa isang standalone tool patungo sa isang bagay na maaaring ma-access ang real-time na impormasyon mula sa internet.
 
-✅ Ang terminong 'REST' ay nangangahulugang 'Representational State Transfer' at nagtatampok ng paggamit ng iba't ibang naka-configure na mga URL upang makuha ang data. Mag-research ng kaunti tungkol sa iba't ibang uri ng API na magagamit ng mga developer. Anong format ang mas gusto mo?
+**Pag-unawa sa APIs**
 
-May mga mahalagang bagay na dapat tandaan tungkol sa function na ito. Una, pansinin ang [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Ang pagsulat ng iyong mga function upang tumakbo nang asynchronous ay nangangahulugan na maghihintay sila para sa isang aksyon, tulad ng data na ibinalik, na makumpleto bago magpatuloy.
+[APIs](https://www.webopedia.com/TERM/A/API.html) ang paraan kung paano nagkakaroon ng komunikasyon ang iba't ibang application sa isa't isa. Isipin ito na parang telegraph system na nagkonekta sa mga malalayong lungsod noong ika-19 na siglo - ang mga operator ay nagpapadala ng mga request sa malalayong istasyon at tumatanggap ng mga sagot na may hinihinging impormasyon. Sa tuwing nagche-check ka ng social media, nagtatanong sa voice assistant, o gumagamit ng delivery app, ang APIs ang nagpapadali sa mga data exchanges.
+
+**Mga pangunahing konsepto tungkol sa REST APIs:**
+- **REST** ay nangangahulugang 'Representational State Transfer'
+- **Gumagamit** ng standard HTTP methods (GET, POST, PUT, DELETE) upang makipag-ugnayan sa data
+- **Nagbabalik** ng data sa predictable formats, karaniwang JSON
+- **Nagbibigay** ng consistent, URL-based endpoints para sa iba't ibang uri ng request
+
+✅ Ang [CO2 Signal API](https://www.co2signal.com/) na gagamitin natin ay nagbibigay ng real-time carbon intensity data mula sa mga electrical grid sa buong mundo. Nakakatulong ito sa mga user na maunawaan ang environmental impact ng kanilang electricity usage!
+
+> 💡 **Pag-unawa sa Asynchronous JavaScript**: Ang [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) ay nagbibigay-daan sa iyong code na mag-handle ng maraming operasyon nang sabay-sabay. Kapag humihiling ka ng data mula sa server, ayaw mong mag-freeze ang buong extension - parang air traffic control na humihinto sa lahat ng operasyon habang naghihintay ng sagot mula sa isang eroplano.
+>
+> **Mga pangunahing benepisyo:**
+> - **Pinapanatili** ang responsiveness ng extension habang naglo-load ang data
+> - **Pinapayagan** ang ibang code na magpatuloy sa pag-execute habang may network requests
+> - **Pinapaganda** ang readability ng code kumpara sa tradisyunal na callback patterns
+> - **Nagbibigay** ng graceful error handling para sa mga network issues
 
 Narito ang isang mabilis na video tungkol sa `async`:
 
-[![Async at Await para sa pamamahala ng mga pangako](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async at Await para sa pamamahala ng mga pangako")
+[![Async and Await para sa pamamahala ng promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await para sa pamamahala ng promises")
 
-> 🎥 I-click ang imahe sa itaas para sa isang video tungkol sa async/await.
+> 🎥 I-click ang imahe sa itaas para sa video tungkol sa async/await.
 
-Gumawa ng bagong function upang mag-query sa C02Signal API:
+Gumawa ng function upang kumuha at ipakita ang carbon usage data:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Ito ay isang malaking function. Ano ang nangyayari dito?
+**Pagbubuo ng mga nangyayari dito:**
+- **Gumagamit** ng modernong `fetch()` API sa halip na mga external libraries tulad ng Axios para sa mas malinis, dependency-free na code
+- **Nagpapatupad** ng tamang error checking gamit ang `response.ok` upang ma-catch ang API failures nang maaga
+- **Nagha-handle** ng asynchronous operations gamit ang `async/await` para sa mas nababasang code flow
+- **Nag-aauthenticate** sa CO2 Signal API gamit ang `auth-token` header
+- **Nagpa-parse** ng JSON response data at kumukuha ng carbon intensity information
+- **Nag-a-update** ng maraming UI elements gamit ang formatted environmental data
+- **Nagbibigay** ng user-friendly error messages kapag nabigo ang API calls
 
-- Ayon sa pinakamahusay na kasanayan, ginagamit mo ang `async` keyword upang gawing asynchronous ang function na ito. Ang function ay naglalaman ng `try/catch` block dahil magbabalik ito ng pangako kapag ang API ay nagbalik ng data. Dahil wala kang kontrol sa bilis ng pagtugon ng API (maaaring hindi ito tumugon!), kailangan mong harapin ang kawalang-katiyakan na ito sa pamamagitan ng pagtawag dito nang asynchronous.
-- Nag-query ka sa co2signal API upang makuha ang data ng iyong rehiyon, gamit ang iyong API Key. Upang magamit ang key na iyon, kailangan mong gumamit ng uri ng authentication sa iyong header parameters.
-- Kapag tumugon ang API, itinalaga mo ang iba't ibang elemento ng response data nito sa mga bahagi ng iyong screen na itinakda mo upang ipakita ang data na ito.
-- Kung may error, o kung walang resulta, magpapakita ka ng error message.
+**Mga modernong JavaScript concepts na ipinakita:**
+- **Template literals** gamit ang `${}` syntax para sa malinis na string formatting
+- **Error handling** gamit ang try/catch blocks para sa mas robust na applications
+- **Async/await** pattern para sa maayos na pag-handle ng network requests
+- **Object destructuring** upang kumuha ng partikular na data mula sa API responses
+- **Method chaining** para sa maraming DOM manipulations
 
-✅ Ang paggamit ng asynchronous programming patterns ay isa pang napaka-kapaki-pakinabang na tool sa iyong toolbox. Basahin [ang iba't ibang paraan](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) kung paano mo mai-configure ang ganitong uri ng code.
+✅ Ang function na ito ay nagpapakita ng ilang mahahalagang konsepto sa web development - pakikipag-ugnayan sa mga external server, pag-handle ng authentication, pagproseso ng data, pag-update ng interface, at maayos na pag-handle ng errors. Ito ay mga pangunahing kasanayan na regular na ginagamit ng mga propesyonal na developer.
 
-Binabati kita! Kung itatayo mo ang iyong extension (`npm run build`) at i-refresh ito sa iyong extensions pane, mayroon ka nang gumaganang extension! Ang tanging hindi gumagana ay ang icon, at aayusin mo ito sa susunod na aralin.
+🎉 **Ang iyong nagawa:** Nakagawa ka ng browser extension na:
+- **Kumokonekta** sa internet at kumukuha ng totoong environmental data
+- **Nagpapanatili** ng mga setting ng user sa pagitan ng mga session
+- **Nagha-handle** ng errors nang maayos sa halip na mag-crash
+- **Nagbibigay** ng maayos, propesyonal na user experience
+
+Subukan ang iyong ginawa sa pamamagitan ng pag-run ng `npm run build` at pag-refresh ng iyong extension sa browser. Mayroon ka na ngayong functional carbon footprint tracker. Sa susunod na aralin, magdadagdag tayo ng dynamic icon functionality upang makumpleto ang extension.
 
 ---
 
 ## Hamon ng GitHub Copilot Agent 🚀
 
-Gamitin ang Agent mode upang kumpletuhin ang sumusunod na hamon:
+Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:
 
-**Deskripsyon:** Pagandahin ang browser extension sa pamamagitan ng pagdaragdag ng mga pagpapabuti sa error handling at mga tampok sa karanasan ng user. Ang hamon na ito ay makakatulong sa iyo na magsanay sa paggamit ng mga API, local storage, at DOM manipulation gamit ang modernong JavaScript patterns.
+**Deskripsyon:** Pagandahin ang browser extension sa pamamagitan ng pagdaragdag ng mga improvement sa error handling at mga feature para sa user experience. Ang hamon na ito ay makakatulong sa iyo na magpraktis sa paggamit ng APIs, local storage, at DOM manipulation gamit ang modernong JavaScript patterns.
 
-**Prompt:** Gumawa ng pinahusay na bersyon ng displayCarbonUsage function na kinabibilangan ng: 1) Isang retry mechanism para sa mga nabigong API calls na may exponential backoff, 2) Input validation para sa region code bago gumawa ng API call, 3) Isang loading animation na may progress indicators, 4) Caching ng mga API responses sa localStorage na may expiration timestamps (cache para sa 30 minuto), at 5) Isang tampok upang ipakita ang historical data mula sa mga nakaraang API calls. Magdagdag din ng tamang TypeScript-style JSDoc comments upang idokumento ang lahat ng mga parameter ng function at mga uri ng return.
+**Prompt:** Gumawa ng mas pinahusay na bersyon ng displayCarbonUsage function na may kasamang: 1) Isang retry mechanism para sa mga nabigong API calls na may exponential backoff, 2) Input validation para sa region code bago gumawa ng API call, 3) Isang loading animation na may progress indicators, 4) Caching ng API responses sa localStorage na may expiration timestamps (cache para sa 30 minuto), at 5) Isang feature upang ipakita ang historical data mula sa mga nakaraang API calls. Magdagdag din ng tamang TypeScript-style JSDoc comments upang i-document ang lahat ng function parameters at return types.
+
+Alamin pa ang tungkol sa [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) dito.
 
 ## 🚀 Hamon
 
-Napag-usapan natin ang ilang uri ng API sa mga araling ito. Pumili ng isang web API at mag-research nang malalim kung ano ang inaalok nito. Halimbawa, tingnan ang mga API na magagamit sa loob ng mga browser tulad ng [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Ano ang gumagawa ng isang mahusay na API sa iyong opinyon?
+Palawakin ang iyong pag-unawa sa APIs sa pamamagitan ng pag-explore sa iba't ibang browser-based APIs na available para sa web development. Pumili ng isa sa mga browser APIs na ito at gumawa ng maliit na demonstration:
+
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Kunin ang kasalukuyang lokasyon ng user
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Magpadala ng desktop notifications
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Gumawa ng interactive drag interfaces
+- [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) - Advanced na local storage techniques
+- [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) - Modernong alternatibo sa XMLHttpRequest
+
+**Mga tanong sa pananaliksik na dapat isaalang-alang:**
+- Anong mga problema sa totoong mundo ang nilulutas ng API na ito?
+- Paano hinahandle ng API ang errors at edge cases?
+- Anong mga pagsasaalang-alang sa seguridad ang umiiral kapag ginagamit ang API na ito?
+- Gaano kalawak ang suporta ng API na ito sa iba't ibang browser?
+
+Pagkatapos ng iyong pananaliksik, tukuyin kung anong mga katangian ang nagpapaganda at maaasahan sa isang API para sa mga developer.
 
 ## Post-Lecture Quiz
 
 [Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Review & Self Study
+Natutunan mo ang tungkol sa LocalStorage at APIs sa araling ito, parehong napakahalaga para sa propesyonal na web developer. Maiisip mo ba kung paano nagtutulungan ang dalawang ito? Isipin kung paano mo ididisenyo ang isang website na mag-iimbak ng mga item na gagamitin ng isang API.
 
-Natutunan mo ang tungkol sa LocalStorage at mga API sa araling ito, parehong napaka-kapaki-pakinabang para sa propesyonal na web developer. Maiisip mo ba kung paano gumagana ang dalawang bagay na ito nang magkasama? Isipin kung paano mo ididisenyo ang isang website na mag-iimbak ng mga item na gagamitin ng isang API.
+## Takdang-Aralin
 
-## Assignment
-
-[Adopt an API](assignment.md)
+[Mag-ampon ng API](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na mapagkakatiwalaang pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
