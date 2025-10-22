@@ -1,83 +1,41 @@
-/* ==========================================================================
-   Design Tokens and Theming
-   ========================================================================== */
-
 :root {
-  /* Brand */
+  /* Colors */
   --primary: #0091ea;
-  --primary-600: #007ccc;
-  --primary-700: #0066a8;
-
-  /* Neutrals */
-  --text: #1b1f24;
-  --muted: #5a6370;
-  --white: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #f5f7fb;
-  --border: #c7cdd8;
-
-  /* Accents */
+  --primary-light: #7bbde6;
   --accent: #546e7a;
-  --error: #ff5522;
-
-  /* Backgrounds */
+  --grey: #445;
+  --error: #f52;
   --background: #f5f5f6;
-  --background-accent: #e8f2fb;
-
-  /* Effects */
-  --shadow-sm: 0 1px 2px rgba(16, 24, 40, .06);
-  --shadow-md: 0 6px 16px rgba(16, 24, 40, .12);
-  --focus: 3px solid rgba(0, 145, 234, .4);
-
-  /* Radius and Spacing */
-  --radius: 12px;
-  --radius-sm: 8px;
-  --space-2xs: 4px;
-  --space-xs: 6px;
+  --background-accent: #cfe5f2;
+  --white: #fff;
+  --border: #99a;
+  /* Sizes */
+  --radius: 10px;
+  --space-xs: 5px;
   --space-sm: 10px;
   --space-md: 20px;
-  --space-lg: 28px;
   --space-xl: 40px;
-
-  /* Typography */
-  --font-ui: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  --font-size: 16px;
-
-  /* Opt into user color schemes */
-  color-scheme: light dark;
 }
 
-/* Dark theme via user preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #e9edf4;
-    --muted: #aab4c3;
-    --surface: #131720;
-    --surface-2: #0f131b;
-    --background: #0b0e14;
-    --background-accent: #0f1822;
-    --border: #2a3443;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,.45);
-    --shadow-md: 0 8px 24px rgba(0,0,0,.5);
-    --focus: 3px solid rgba(0, 145, 234, .55);
-  }
+/* START: Dark Mode Variables */
+:root.dark-mode {
+  --primary: #5cb3ff; /* Lighter primary for contrast */
+  --primary-light: #004d80;
+  --grey: #a0aec0; /* Lighter grey for text */
+  --background: #1a202c; /* Dark background */
+  --background-accent: #2d3748; /* Slightly lighter dark background */
+  --white: #1f2937; /* Dark equivalent of 'white' for containers */
+  --border: #4a5568;
 }
+/* END: Dark Mode Variables */
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 1ms !important;
-    scroll-behavior: auto !important;
-  }
+/* ------------------------------------------------------------------------ */
+/* Micro reset */
+/* ------------------------------------------------------------------------ */
+
+* {
+  box-sizing: border-box;
 }
-
-/* ==========================================================================
-   Base and Reset
-   ========================================================================== */
-
-* { box-sizing: border-box; }
 
 html, body, #app {
   margin: 0;
@@ -85,183 +43,125 @@ html, body, #app {
   height: 100%;
 }
 
-html {
-  font-size: 100%;
-}
+/* ------------------------------------------------------------------------ */
+/* General styles */
+/* ------------------------------------------------------------------------ */
 
 body {
-  font-family: var(--font-ui);
-  font-size: var(--font-size);
-  color: var(--text);
-  background: var(--background);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  accent-color: var(--primary);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  /* Apply background and foreground colors from variables */
+  background-color: var(--background);
+  color: var(--grey);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
-
-/* Utilities */
-.text-center { text-align: center; }
-.hide-xs { display: none; }
-@media (min-width: 480px) { .hide-xs { display: initial; } }
-
-.sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 1px, 1px);
-  white-space: nowrap; border: 0;
-}
-
-/* Focus states (WCAG-friendly) */
-:where(a, button, [role="button"], input, select, textarea):focus-visible {
-  outline: var(--focus);
-  outline-offset: 2px;
-  border-radius: 6px;
-}
-
-/* ==========================================================================
-   Headings and Text
-   ========================================================================== */
 
 h2 {
   color: var(--primary);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1.5rem;
   margin: var(--space-md) 0;
 }
-
-/* Muted text helper */
-.muted { color: var(--muted); }
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
 
 form {
   display: flex;
   flex-direction: column;
   margin: var(--space-sm) var(--space-md);
-  gap: var(--space-xs);
+}
+
+input {
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  height: 45px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: 0;
 }
 
 label {
-  color: var(--muted);
+  color: var(--grey);
   text-transform: uppercase;
   font-size: 80%;
-  letter-spacing: .02em;
 }
 
-input, select, textarea {
-  height: 44px;
-  padding: 0 var(--space-sm);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-  transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+button {
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--white);
+  height: 40px;
+  padding: var(--space-xs);
+  border: 0;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  min-width: 100px;
+  margin: var(--space-sm) 0;
 }
 
-input::placeholder,
-textarea::placeholder { color: color-mix(in oklab, var(--muted) 80%, var(--text)); }
+.button-alt {
+  background-color: transparent;
+  color: var(--primary);
+}
 
-input:focus {
-  border-color: var(--primary-600);
-  outline: 0;
-  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 20%, transparent);
+button:hover {
+  filter: brightness(115%);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  border: 3px solid var(--grey);
 }
 
 .error {
   color: var(--error);
-  margin: var(--space-2xs) 0;
+  margin: var(--space-xs) 0;
 }
 
-.error:empty { display: none; }
-
-/* Native UI controls pick up brand via accent-color */
-input[type="checkbox"],
-input[type="radio"],
-input[type="range"],
-progress { accent-color: var(--primary); }
-
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-
-button,
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-weight: 700;
-  background-color: var(--primary);
-  color: var(--white);
-  height: 40px;
-  padding: 0 var(--space-md);
-  border: 0;
-  border-radius: var(--radius-sm);
-  text-transform: uppercase;
-  min-width: 110px;
-  margin: var(--space-sm) 0;
-  box-shadow: var(--shadow-sm);
-  transition: filter .12s ease, transform .12s ease, background-color .12s ease;
+.error:empty {
+  display: none;
 }
 
-button:hover,
-.btn:hover { filter: brightness(110%); cursor: pointer; }
-
-button:active,
-.btn:active { transform: translateY(1px); }
-
-button:focus-visible,
-.btn:focus-visible { outline: var(--focus); }
-
-.button-alt,
-.btn-ghost {
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid color-mix(in oklab, var(--primary) 40%, var(--border));
-  box-shadow: none;
+/* START: Dark Mode specific button style */
+.dashboard-header button#theme-toggle {
+    background: transparent;
+    color: var(--grey);
+    padding: var(--space-xs);
+    margin: 0;
+    border: none;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-header button#theme-toggle:hover {
+    filter: none;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.btn-icon {
-  min-width: auto;
-  width: 40px; height: 40px;
-  padding: 0;
-  border-radius: 50%;
+.dark-mode .dashboard-header {
+    background-color: var(--background-accent);
 }
-
-/* ==========================================================================
-   Login Page
-   ========================================================================== */
-
-.login-page {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(800px 500px at 20% -10%, color-mix(in oklab, var(--primary) 30%, transparent), transparent 60%),
-    radial-gradient(800px 500px at 120% 10%, color-mix(in oklab, var(--primary-600) 20%, transparent), transparent 55%),
-    linear-gradient(var(--primary), var(--primary-600));
+.dark-mode .dashboard-header button {
+    border-color: var(--primary);
 }
+/* END: Dark Mode specific button style */
 
-.login-container {
-  flex: auto;
-  max-width: 520px;
-  max-height: 100%;
-  overflow: auto;
-  padding: var(--space-sm);
-}
+/* ------------------------------------------------------------------------ */
+/* Login page */
+/* ------------------------------------------------------------------------ */
 
 .login-title {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: bold;
   color: var(--white);
   margin: var(--space-md);
-  text-align: center;
 }
 
 .login-logo {
@@ -269,13 +169,26 @@ button:focus-visible,
   vertical-align: middle;
 }
 
-.login-content {
-  background-color: var(--surface);
-  padding: var(--space-md);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border);
+.login-page {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--primary), var(--primary-light));
 }
+
+.login-container {
+  flex: auto;
+  max-width: 480px;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.login-content {
+  background-color: var(--white); /* Now uses variable for easy dark mode switch */
+  padding: var(--space-sm);
+}
+
 
 .login-separator {
   position: relative;
@@ -287,15 +200,14 @@ button:focus-visible,
 
 .login-separator > span {
   position: relative;
-  top: -0.6em;
-  background-color: var(--surface);
-  padding: 0 var(--space-sm);
-  color: var(--muted);
+  top: -0.5em;
+  background-color: var(--white); /* Use var(--white) here as well */
+  padding: var(--space-sm);
 }
 
-/* ==========================================================================
-   Dashboard
-   ========================================================================== */
+/* ------------------------------------------------------------------------ */
+/* Dashboard page */
+/* ------------------------------------------------------------------------ */
 
 .dashboard-page {
   display: flex;
@@ -303,35 +215,24 @@ button:focus-visible,
   flex-direction: column;
 }
 
-/* Make content responsive to its own width (container queries) */
-.dashboard-content {
-  width: 100%;
-  max-width: 960px;
-  align-self: center;
-  padding: var(--space-sm);
-  container-type: inline-size;
-  container-name: dash;
-}
-
 .dashboard-header {
-  background-color: var(--accent);
-  padding: var(--space-xs) var(--space-sm);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: var(--accent); /* Used to be --grey, switched to --accent for a better variable fit */
+  padding: 0 var(--space-sm)
 }
 
 .dashboard-header button {
-  border: 1px solid color-mix(in oklab, var(--white) 35%, transparent);
+  float: right;
+  border: 1px solid;
   background-color: transparent;
-  color: var(--white);
+  color: var(--white); /* Ensure buttons are visible in dark header */
 }
 
 .dashboard-title {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: bold;
   color: var(--white);
-  margin: 0 var(--space-sm);
+  vertical-align: middle;
+  margin: 0 var(--space-sm)
 }
 
 .dashboard-logo {
@@ -341,22 +242,19 @@ button:focus-visible,
 }
 
 .balance {
-  background: radial-gradient(circle at center, var(--primary), var(--primary-600));
+  background: radial-gradient(circle at center, var(--primary), var(--primary-light));
   text-align: center;
-  padding: var(--space-md) var(--space-sm);
 }
 
 .balance > div {
   color: var(--white);
-  padding-top: var(--space-2xs);
+  padding-top: var(--space-xs);
   text-transform: uppercase;
-  letter-spacing: .08em;
 }
 
 .balance > span {
   color: var(--white);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
+  font-size: 3rem;
 }
 
 .transactions-title {
@@ -365,9 +263,8 @@ button:focus-visible,
   align-items: center;
   padding: 0 var(--space-sm);
   color: var(--accent);
-  font-weight: 800;
-  font-size: 1.25rem;
-  gap: var(--space-sm);
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .transactions-title > div {
@@ -376,30 +273,21 @@ button:focus-visible,
   white-space: nowrap;
 }
 
-/* ==========================================================================
-   Transactions Table
-   ========================================================================== */
-
 .transactions-table {
   width: 100%;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   padding: var(--space-sm);
   margin: 0;
   border-spacing: 0;
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--background);
 }
 
 .transactions-table thead th {
   border-bottom: 1px solid var(--border);
-  color: var(--muted);
-  font-weight: 700;
 }
 
 .transactions-table tr:nth-child(even) {
-  background-color: var(--surface-2);
+  background-color: var(--background-accent);
 }
 
 .transactions-table td,
@@ -410,6 +298,7 @@ button:focus-visible,
 
 .transactions-table td:first-child,
 .transactions-table th:first-child {
+  /* Make first column use the minimum width */
   width: 1%;
   white-space: nowrap;
 }
@@ -419,90 +308,88 @@ button:focus-visible,
   text-align: right;
 }
 
-/* Condense table in narrow containers */
-@container dash (width < 520px) {
-  .transactions-table {
-    font-size: 1rem;
-    border-radius: var(--radius-sm);
-    padding: var(--space-xs);
+.dialog {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  animation: slideFromTop 0.3s ease-in-out;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dialog.show {
+  display: flex;
+}
+
+@keyframes slideFromTop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
   }
 }
 
-/* ==========================================================================
-   Dialog (Modal)
-   ========================================================================== */
-
-.dialog {
-  display: none;
-  position: fixed;
-  inset: 0;
-  overflow: auto;
-  background-color: rgba(0,0,0,.45);
-  justify-content: center;
-  align-items: flex-start;
-  padding: var(--space-sm);
-  z-index: 1000;
-}
-
-.dialog.show { display: flex; }
-
 .dialog-content {
   flex: auto;
-  background-color: var(--surface);
-  color: var(--text);
-  max-width: 520px;
+  background-color: var(--white);
+  max-width: 480px;
   max-height: 100%;
-  padding: var(--space-md);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-md);
-  margin-top: var(--space-xl);
-  transform: translateY(-8px);
-  animation: dialogIn .25s ease-out both;
-}
-
-@keyframes dialogIn {
-  from { opacity: 0; transform: translateY(-14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  padding: var(--space-sm);
 }
 
 .dialog-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--space-sm);
+  text-align: right;
 }
 
-/* ==========================================================================
-   Responsive
-   ========================================================================== */
+/* ------------------------------------------------------------------------ */
+/* Utilities */
+/* ------------------------------------------------------------------------ */
 
-@media (min-width: 480px) {
+.text-center {
+  text-align: center;
+}
+
+.hide-xs {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Responsive adaptations */
+/* ------------------------------------------------------------------------ */
+
+@media only screen and (min-width: 480px) {
+  .hide-xs {
+    display: initial;
+  }
+
   .login-content,
   .dialog-content {
     border-radius: var(--radius);
   }
-}
 
-@media (min-width: 768px) {
-  .dashboard-content {
-    max-width: 900px;
+  .dialog-content {
+    margin-top: var(--space-xl);
   }
 }
 
-/* ==========================================================================
-   Legacy compatibility mappings (existing class names)
-   ========================================================================== */
+@media only screen and (min-width: 768px) {
+  .transactions-table {
+    border-radius: var(--radius);
+  }
 
-.button-alt { /* keep existing alias */
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid color-mix(in oklab, var(--primary) 40%, var(--border));
-}
-
-/* Keep original variable names for backward compatibility where possible */
-:root {
-  --space-xs: var(--space-xs);
-  --space-sm: var(--space-sm);
-  --space-md: var(--space-md);
-  --space-xl: var(--space-xl);
+  .dashboard-content {
+    width: 100%;
+    max-width: 768px;
+    align-self: center;
+  }
 }

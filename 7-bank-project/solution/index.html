@@ -1,96 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="auto">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0a7cff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Squirrel Banking</title>
-
-  <!-- Local Font Awesome (ensure this path exists locally) -->
-  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-
-  <!-- App styles -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- App logic -->
   <script src="app.js" defer></script>
 </head>
 <body>
-  <noscript>Please enable JavaScript to use this app.</noscript>
-
-  <!-- SPA mount point -->
-  <div id="app" aria-live="polite">Loading…</div>
+  <!-- Placeholder where we will insert our app HTML based on route -->
+  <div id="app">Loading...</div>
 
   <!-- Login page template -->
   <template id="login">
-    <section class="page page-auth" aria-labelledby="loginTitle">
-      <div class="auth-card">
-        <div class="brand">
-          <i class="fa-solid fa-squirrel brand-icon" aria-hidden="true"></i>
-          <h1 id="loginTitle" class="brand-title">
-            <span class="hide-xs">Squirrel</span>
-            <img class="brand-logo" src="logo.svg" alt="Squirrel Banking Logo">
-            <span class="hide-xs">Banking</span>
-          </h1>
+    <section class="login-page">
+      <div class="login-container">
+        <div class="login-title text-center">
+          <span class="hide-xs">Squirrel</span>
+          <img class="login-logo" src="logo.svg" alt="Squirrel Banking Logo">
+          <span class="hide-xs">Banking</span>
         </div>
-
-        <div class="auth-panels">
-          <section class="auth-panel" aria-labelledby="loginHeading">
-            <h2 id="loginHeading" class="panel-title">
-              <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Login
-            </h2>
-            <form id="loginForm" action="javascript:void(0)" novalidate>
-              <label for="username" class="field-label">Username</label>
-              <div class="field">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
-                <input id="username" name="user" type="text" maxlength="20" autocomplete="username" required>
-              </div>
-              <div id="loginError" class="error" role="alert" aria-live="polite"></div>
-              <button class="btn btn-primary" type="submit">
-                <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
-                Login
-              </button>
-            </form>
-          </section>
-
-          <div class="auth-sep" role="separator" aria-label="Or">OR</div>
-
-          <section class="auth-panel" aria-labelledby="registerHeading">
-            <h2 id="registerHeading" class="panel-title">
-              <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Register
-            </h2>
-            <form id="registerForm" action="javascript:void(0)" novalidate>
-              <label for="user" class="field-label">Username (required)</label>
-              <div class="field">
-                <i class="fa-solid fa-id-badge" aria-hidden="true"></i>
-                <input id="user" name="user" type="text" maxlength="20" autocomplete="username" required>
-              </div>
-
-              <label for="currency" class="field-label">Currency (required)</label>
-              <div class="field">
-                <i class="fa-solid fa-coins" aria-hidden="true"></i>
-                <input id="currency" name="currency" type="text" maxlength="5" placeholder="INR or ₹" required>
-              </div>
-
-              <label for="description" class="field-label">Description</label>
-              <div class="field">
-                <i class="fa-solid fa-note-sticky" aria-hidden="true"></i>
-                <input id="description" name="description" type="text" maxlength="100" placeholder="About the account">
-              </div>
-
-              <label for="current-balance" class="field-label">Current balance</label>
-              <div class="field">
-                <i class="fa-solid fa-wallet" aria-hidden="true"></i>
-                <input id="current-balance" name="balance" type="number" value="0" step="any" inputmode="decimal">
-              </div>
-
-              <div id="registerError" class="error" role="alert" aria-live="polite"></div>
-              <button class="btn btn-ghost" type="submit">
-                <i class="fa-solid fa-user-check" aria-hidden="true"></i>
-                Register
-              </button>
-            </form>
-          </section>
+        <div class="login-content">
+          <h2 class="text-center">Login</h2>
+          <form id="loginForm" action="javascript:login()">
+            <label for="username">Username</label>
+            <input id="username" name="user" type="text" maxlength="20" required>
+            <div id="loginError" class="error" role="alert"></div>
+            <button>Login</button>
+          </form>
+          <p class="login-separator text-center"><span>OR</span></p>
+          <h2 class="text-center">Register</h2>
+          <form id="registerForm" action="javascript:register()">
+            <label for="user">Username (required)</label>
+            <input id="user" name="user" type="text" maxlength="20" required>
+            <label for="currency">Currency (required)</label>
+            <input id="currency" name="currency" type="text" maxlength="5" value="$" required>
+            <label for="description">Description</label>
+            <input id="description" name="description" type="text" maxlength="100">
+            <label for="current-balance">Current balance</label>
+            <input id="current-balance" name="balance" type="number" value="0">
+            <div id="registerError" class="error" role="alert"></div>
+            <button>Register</button>
+          </form>
         </div>
       </div>
     </section>
@@ -98,109 +49,73 @@
 
   <!-- Dashboard page template -->
   <template id="dashboard">
-    <section class="page page-dash">
-      <header class="dash-header">
-        <div class="brand compact">
-          <img class="brand-logo" src="logo.svg" alt="">
-          <h1 class="brand-title hide-xs">Squirrel Banking</h1>
-        </div>
-        <div class="header-actions">
-          <button class="btn btn-icon" type="button" id="themeToggle" aria-label="Toggle theme">
-            <i class="fa-solid fa-moon" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn-icon" type="button" onclick="logout()" aria-label="Logout">
-            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
-          </button>
-        </div>
+    <section class="dashboard-page">
+      <header class="dashboard-header">
+        <img class="dashboard-logo" src="logo.svg" alt="Squirrel Banking Logo">
+        <h1 class="dashboard-title hide-xs">Squirrel Banking</h1>
+        <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme">
+            <!-- Moon Icon (for Light mode) -->
+            <svg id="moon-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <!-- Sun Icon (for Dark mode, hidden by default) -->
+            <svg id="sun-icon" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+        </button>
+        <button onclick="logout()">Logout</button>
       </header>
-
-      <section class="summary">
-        <div class="balance" aria-live="polite">
-          <div class="balance-label">
-            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-            Balance
-          </div>
-          <div class="balance-value">
-            <span id="balance">0</span>
-            <span id="balance-currency"></span>
-          </div>
+      <div class="balance">
+        <div>Balance</div>
+        <span id="balance"></span>
+        <span id="balance-currency"></span>
+      </div>
+      <!-- START: CHANGED SECTION for Theme Toggle and Logout -->
+        <div class="header-actions">
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme">
+                <!-- Moon Icon (for Light mode) -->
+                <svg id="moon-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <!-- Sun Icon (for Dark mode, hidden by default) -->
+                <svg id="sun-icon" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
+            <button onclick="logout()">Logout</button>
         </div>
-        <div class="account-meta">
-          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-          <span id="account-info" class="muted"></span>
-        </div>
-      </section>
-
-      <section class="dash-content">
+        <!-- END: CHANGED SECTION -->
+      <div class="dashboard-content">
         <div class="transactions-title">
-          <h2 id="transactions-description">
-            <i class="fa-solid fa-receipt" aria-hidden="true"></i>
-            Transactions
-          </h2>
-          <button class="btn btn-primary" type="button" onclick="addTransaction()">
-            <i class="fa-solid fa-plus" aria-hidden="true"></i>
-            Add transaction
-          </button>
+          <h2 id="transactions-description"></h2>
+          <button onclick="addTransaction()">Add transaction</button>
         </div>
-
         <table class="transactions-table" aria-label="Transactions">
           <thead>
             <tr>
-              <th scope="col"><i class="fa-solid fa-calendar-day" aria-hidden="true"></i> Date</th>
-              <th scope="col"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Object</th>
-              <th scope="col" class="num"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i> Amount</th>
+              <th>Date</th>
+              <th>Object</th>
+              <th>Amount</th>
             </tr>
           </thead>
           <tbody id="transactions"></tbody>
         </table>
-      </section>
+      </div>
     </section>
-
-    <!-- Modal dialog: Add transaction -->
-    <section id="transactionDialog" class="dialog" hidden>
-      <div class="dialog-backdrop" data-dismiss></div>
-      <div class="dialog-content"
-           role="dialog"
-           aria-modal="true"
-           aria-labelledby="txDialogTitle"
-           aria-describedby="txDialogDesc">
-        <h2 id="txDialogTitle" class="text-center">
-          <i class="fa-solid fa-square-plus" aria-hidden="true"></i>
-          Add transaction
-        </h2>
-        <p id="txDialogDesc" class="muted text-center">
-          Use negative amount for debit and positive for credit; Esc closes [web guideline aligned]. 
-        </p>
-        <form id="transactionForm" action="javascript:void(0)" novalidate>
-          <label for="date">Date</label>
-          <div class="field">
-            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
-            <input id="date" name="date" type="date" required>
-          </div>
-
-          <label for="object">Object</label>
-          <div class="field">
-            <i class="fa-solid fa-tag" aria-hidden="true"></i>
-            <input id="object" name="object" type="text" maxlength="50" required>
-          </div>
-
-          <label for="amount">Amount (negative for debit)</label>
-          <div class="field">
-            <i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i>
-            <input id="amount" name="amount" type="number" value="0" step="any" inputmode="decimal" required>
-          </div>
-
-          <div id="transactionError" class="error" role="alert" aria-live="polite"></div>
-
+    <section id="transactionDialog" class="dialog">
+      <div class="dialog-content">
+        <h2 class="text-center">Add transaction</h2>
+        <form id="transactionForm" action="javascript:void(0)">
+          <label for="date">Date</label> 
+          <input id="date" name="date" type="date" required>
+          <label for="object">Object</label> 
+          <input id="object" name="object" type="text" maxlength="50" required>
+          <label for="amount">Amount (use negative value for debit)</label> 
+          <input id="amount" name="amount" type="number" value="0" step="any" required>
+          <div id="transactionError" class="error" role="alert"></div>
           <div class="dialog-buttons">
-            <button type="button" class="btn btn-ghost" data-dismiss>
-              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-              Cancel
-            </button>
-            <button type="submit" class="btn btn-primary">
-              <i class="fa-solid fa-check" aria-hidden="true"></i>
-              OK
-            </button>
+            <button type="button" class="button-alt" formaction="javascript:cancelTransaction()" formnovalidate>Cancel</button>
+            <button formaction="javascript:confirmTransaction()">OK</button>
           </div>
         </form>
       </div>
@@ -212,7 +127,7 @@
     <tr>
       <td></td>
       <td></td>
-      <td class="num"></td>
+      <td></td>
     </tr>
   </template>
 </body>
