@@ -1,312 +1,729 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
-  "translation_date": "2025-08-29T01:08:46+00:00",
+  "original_hash": "b24f28fc46dd473aa9080f174182adde",
+  "translation_date": "2025-10-23T01:33:10+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "he"
 }
 -->
-# בניית אפליקציית בנק חלק 2: יצירת טופס כניסה והרשמה
+# בניית אפליקציית בנקאות חלק 2: יצירת טופס כניסה והרשמה
 
 ## שאלון לפני השיעור
 
 [שאלון לפני השיעור](https://ff-quizzes.netlify.app/web/quiz/43)
 
-### הקדמה
+האם אי פעם מילאתם טופס אונליין והוא דחה את פורמט האימייל שלכם? או איבדתם את כל המידע כשניסיתם לשלוח אותו? כולנו נתקלנו בחוויות מתסכלות כאלה.
 
-בכמעט כל אפליקציית אינטרנט מודרנית, ניתן ליצור חשבון אישי כדי לקבל מרחב פרטי משלך. מכיוון שמשתמשים רבים יכולים לגשת לאפליקציה בו זמנית, יש צורך במנגנון שיאפשר לשמור את הנתונים האישיים של כל משתמש בנפרד ולהציג את המידע הרלוונטי. לא נעסוק בנושא [ניהול זהות משתמש בצורה מאובטחת](https://en.wikipedia.org/wiki/Authentication), שכן זהו נושא רחב בפני עצמו, אך נדאג שכל משתמש יוכל ליצור חשבון בנק אחד (או יותר) באפליקציה שלנו.
+טפסים הם הגשר בין המשתמשים שלכם לבין הפונקציונליות של האפליקציה שלכם. כמו הפרוטוקולים המדויקים שמשתמשים בהם פקחי טיסה כדי להנחות מטוסים בבטחה ליעדם, טפסים מעוצבים היטב מספקים משוב ברור ומונעים טעויות יקרות. טפסים גרועים, לעומת זאת, יכולים להרחיק משתמשים מהר יותר מאי הבנה בשדה תעופה עמוס.
 
-בחלק הזה נשתמש בטפסי HTML כדי להוסיף כניסה והרשמה לאפליקציה שלנו. נלמד כיצד לשלוח את הנתונים ל-API של השרת בצורה תכנותית, ולבסוף נגדיר כללי אימות בסיסיים עבור הקלטים של המשתמש.
+בשיעור הזה, נהפוך את אפליקציית הבנקאות הסטטית שלכם לאפליקציה אינטראקטיבית. תלמדו לבנות טפסים שמאמתים את קלט המשתמש, מתקשרים עם שרתים ומספקים משוב מועיל. חשבו על זה כעל בניית ממשק שליטה שמאפשר למשתמשים לנווט בתכונות האפליקציה שלכם.
 
-### דרישות מקדימות
+בסיום השיעור, תהיה לכם מערכת כניסה והרשמה מלאה עם אימות שמכוונת את המשתמשים להצלחה במקום לתסכול.
 
-עליכם להשלים את [תבניות HTML וניתוב](../1-template-route/README.md) של האפליקציה עבור שיעור זה. כמו כן, יש להתקין את [Node.js](https://nodejs.org) ולהריץ את [API של השרת](../api/README.md) באופן מקומי כדי שתוכלו לשלוח נתונים ליצירת חשבונות.
+## דרישות מוקדמות
 
-**שימו לב**
-יהיו לכם שני טרמינלים פעילים בו זמנית כפי שמפורט להלן:
-1. עבור אפליקציית הבנק הראשית שבנינו בשיעור [תבניות HTML וניתוב](../1-template-route/README.md)
-2. עבור [API של שרת אפליקציית הבנק](../api/README.md) שהגדרנו קודם.
+לפני שנתחיל לבנות טפסים, בואו נוודא שהכל מוגדר כראוי. השיעור הזה ממשיך בדיוק מהמקום שבו עצרנו בשיעור הקודם, אז אם דילגתם קדימה, אולי כדאי לחזור אחורה ולהפעיל את הבסיס קודם.
 
-יש להפעיל את שני השרתים כדי להמשיך עם השיעור. הם מאזינים על פורטים שונים (פורט `3000` ופורט `5000`), כך שהכול אמור לעבוד בצורה תקינה.
+### הגדרות נדרשות
 
-ניתן לבדוק שהשרת פועל כראוי על ידי ביצוע הפקודה הבאה בטרמינל:
+| רכיב | סטטוס | תיאור |
+|------|-------|-------|
+| [תבניות HTML](../1-template-route/README.md) | ✅ נדרש | מבנה בסיסי של אפליקציית הבנקאות שלכם |
+| [Node.js](https://nodejs.org) | ✅ נדרש | סביבת ריצה של JavaScript לשרת |
+| [שרת API של הבנק](../api/README.md) | ✅ נדרש | שירות אחורי לאחסון נתונים |
 
-```sh
+> 💡 **טיפ לפיתוח**: תפעילו שני שרתים נפרדים בו-זמנית – אחד לאפליקציית הבנקאות הקדמית שלכם ואחד לשרת ה-API האחורי. הגדרה זו משקפת פיתוח בעולם האמיתי שבו שירותי קדימה ואחורה פועלים באופן עצמאי.
+
+### הגדרת שרת
+
+**סביבת הפיתוח שלכם תכלול:**
+- **שרת קדמי**: מספק את אפליקציית הבנקאות שלכם (בדרך כלל פורט `3000`)
+- **שרת API אחורי**: מטפל באחסון ושליפת נתונים (פורט `5000`)
+- **שני השרתים** יכולים לפעול בו-זמנית ללא התנגשויות
+
+**בדיקת חיבור ה-API שלכם:**
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+**אם אתם רואים את תגובת גרסת ה-API, אתם מוכנים להמשיך!**
 
 ---
 
-## טופס ושליטה
+## הבנת טפסי HTML ושליטה
 
-אלמנט `<form>` עוטף חלק במסמך HTML שבו המשתמש יכול להזין ולשלוח נתונים באמצעות רכיבי ממשק אינטראקטיביים. ישנם סוגים רבים של רכיבי ממשק משתמש (UI) שניתן להשתמש בהם בתוך טופס, כאשר הנפוצים ביותר הם אלמנטים `<input>` ו-`<button>`.
+טפסי HTML הם הדרך שבה משתמשים מתקשרים עם האפליקציה שלכם. חשבו עליהם כמערכת הטלגרף שחיברה מקומות רחוקים במאה ה-19 – הם פרוטוקול התקשורת בין כוונת המשתמש לתגובת האפליקציה. כאשר הם מעוצבים בצורה מחושבת, הם תופסים טעויות, מנחים את עיצוב הקלט ומספקים הצעות מועילות.
 
-ישנם סוגים רבים ושונים של [קלטים](https://developer.mozilla.org/docs/Web/HTML/Element/input). לדוגמה, כדי ליצור שדה שבו המשתמש יכול להזין את שם המשתמש שלו, ניתן להשתמש ב:
+טפסים מודרניים מתקדמים בהרבה מקלטי טקסט בסיסיים. HTML5 הציגה סוגי קלט מיוחדים שמטפלים באימות אימייל, עיצוב מספרים ובחירת תאריכים באופן אוטומטי. שיפורים אלה מועילים גם לנגישות וגם לחוויות משתמשים ניידים.
+
+### רכיבי טופס חיוניים
+
+**אבני הבניין שכל טופס צריך:**
 
 ```html
-<input id="username" name="username" type="text">
+<!-- Basic form structure -->
+<form id="userForm" method="POST">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" required>
+  
+  <button type="submit">Submit</button>
+</form>
 ```
 
-המאפיין `name` ישמש כשם המאפיין כאשר נתוני הטופס יישלחו. המאפיין `id` משמש לקשר בין `<label>` לבין רכיב הטופס.
+**מה הקוד הזה עושה:**
+- **יוצר** מיכל טופס עם מזהה ייחודי
+- **מציין** את שיטת HTTP לשליחת נתונים
+- **מקשר** תוויות עם קלטים לנגישות
+- **מגדיר** כפתור שליחה לעיבוד הטופס
 
-> עיינו ברשימה המלאה של [סוגי `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) ו-[רכיבי טופס אחרים](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) כדי לקבל מושג על כל רכיבי הממשק הטבעיים שתוכלו להשתמש בהם בעת בניית ממשק המשתמש שלכם.
+### סוגי קלט מודרניים ותכונות
 
-✅ שימו לב ש-`<input>` הוא [אלמנט ריק](https://developer.mozilla.org/docs/Glossary/Empty_element) שאין להוסיף לו תג סגירה תואם. עם זאת, ניתן להשתמש בסימון `<input/>` הסוגר את האלמנט בעצמו, אך זה אינו חובה.
+| סוג קלט | מטרה | דוגמת שימוש |
+|---------|------|------------|
+| `text` | קלט טקסט כללי | `<input type="text" name="username">` |
+| `email` | אימות אימייל | `<input type="email" name="email">` |
+| `password` | קלט טקסט מוסתר | `<input type="password" name="password">` |
+| `number` | קלט מספרי | `<input type="number" name="balance" min="0">` |
+| `tel` | מספרי טלפון | `<input type="tel" name="phone">` |
 
-אלמנט `<button>` בתוך טופס הוא מעט מיוחד. אם לא תציינו את מאפיין `type`, הוא יגיש את נתוני הטופס לשרת באופן אוטומטי כאשר לוחצים עליו. הנה הערכים האפשריים עבור `type`:
+> 💡 **יתרון HTML5 מודרני**: שימוש בסוגי קלט ספציפיים מספק אימות אוטומטי, מקלדות ניידות מתאימות ותמיכה טובה יותר בנגישות ללא JavaScript נוסף!
 
-- `submit`: ברירת המחדל בתוך `<form>`, הכפתור מפעיל את פעולת שליחת הטופס.
-- `reset`: הכפתור מאפס את כל רכיבי הטופס לערכים הראשוניים שלהם.
-- `button`: אינו מקצה פעולה ברירת מחדל כאשר לוחצים על הכפתור. ניתן להקצות לו פעולות מותאמות אישית באמצעות JavaScript.
+### סוגי כפתורים והתנהגותם
 
-### משימה
+```html
+<!-- Different button behaviors -->
+<button type="submit">Save Data</button>     <!-- Submits the form -->
+<button type="reset">Clear Form</button>    <!-- Resets all fields -->
+<button type="button">Custom Action</button> <!-- No default behavior -->
+```
 
-נתחיל בהוספת טופס לתבנית `login`. נצטרך שדה *שם משתמש* וכפתור *כניסה*.
+**מה כל סוג כפתור עושה:**
+- **כפתורי שליחה**: מפעילים שליחת טופס ושולחים נתונים לנקודת הקצה שצוינה
+- **כפתורי איפוס**: משחזרים את כל שדות הטופס למצבם ההתחלתי
+- **כפתורים רגילים**: אינם מספקים התנהגות ברירת מחדל ודורשים JavaScript מותאם אישית לפונקציונליות
+
+> ⚠️ **הערה חשובה**: אלמנט `<input>` הוא סגור בעצמו ואינו דורש תג סגירה. הפרקטיקה המודרנית היא לכתוב `<input>` ללא הסלאש.
+
+### יצירת טופס כניסה
+
+עכשיו ניצור טופס כניסה מעשי שמדגים את שיטות העבודה המודרניות של טפסי HTML. נתחיל עם מבנה בסיסי ונשפר אותו בהדרגה עם תכונות נגישות ואימות.
 
 ```html
 <template id="login">
   <h1>Bank App</h1>
   <section>
     <h2>Login</h2>
-    <form id="loginForm">
-      <label for="username">Username</label>
-      <input id="username" name="user" type="text">
-      <button>Login</button>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="user" type="text" required 
+               autocomplete="username" placeholder="Enter your username">
+      </div>
+      <button type="submit">Login</button>
     </form>
   </section>
 </template>
 ```
 
-אם תסתכלו מקרוב, תוכלו להבחין שהוספנו גם אלמנט `<label>` כאן. אלמנטים `<label>` משמשים להוספת שם לרכיבי ממשק משתמש, כמו שדה שם המשתמש שלנו. תוויות חשובות לקריאות הטפסים שלכם, אך הן גם מביאות יתרונות נוספים:
+**פירוט מה קורה כאן:**
+- **מארגן** את הטופס עם אלמנטים סמנטיים של HTML5
+- **מקבץ** אלמנטים קשורים באמצעות מיכלי `div` עם מחלקות משמעותיות
+- **מקשר** תוויות עם קלטים באמצעות תכונות `for` ו-`id`
+- **כולל** תכונות מודרניות כמו `autocomplete` ו-`placeholder` לחוויית משתמש טובה יותר
+- **מוסיף** `novalidate` כדי לטפל באימות עם JavaScript במקום ברירת המחדל של הדפדפן
 
-- על ידי קישור תווית לרכיב טופס, היא עוזרת למשתמשים המשתמשים בטכנולוגיות מסייעות (כמו קורא מסך) להבין איזה נתונים הם אמורים לספק.
-- ניתן ללחוץ על התווית כדי למקד ישירות את הקלט המשויך, מה שמקל על הגישה במכשירים מבוססי מסך מגע.
+### כוחם של תוויות נכונות
 
-> [נגישות](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) באינטרנט היא נושא חשוב מאוד שלעתים קרובות מתעלמים ממנו. בזכות [אלמנטים HTML סמנטיים](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) לא קשה ליצור תוכן נגיש אם משתמשים בהם בצורה נכונה. תוכלו [לקרוא עוד על נגישות](https://developer.mozilla.org/docs/Web/Accessibility) כדי להימנע מטעויות נפוצות ולהפוך למפתחים אחראיים.
+**מדוע תוויות חשובות לפיתוח ווב מודרני:**
 
-כעת נוסיף טופס שני להרשמה, ממש מתחת לטופס הקודם:
+```mermaid
+graph TD
+    A[Label Element] --> B[Screen Reader Support]
+    A --> C[Click Target Expansion]
+    A --> D[Form Validation]
+    A --> E[SEO Benefits]
+    
+    B --> F[Accessible to all users]
+    C --> G[Better mobile experience]
+    D --> H[Clear error messaging]
+    E --> I[Better search ranking]
+```
+
+**מה תוויות נכונות משיגות:**
+- **מאפשרות** לקוראי מסך להכריז על שדות הטופס בצורה ברורה
+- **מרחיבות** את שטח הלחיצה (לחיצה על התווית ממקדת את הקלט)
+- **משפרות** את השימושיות בנייד עם מטרות מגע גדולות יותר
+- **תומכות** באימות טופס עם הודעות שגיאה משמעותיות
+- **משפרות** SEO על ידי מתן משמעות סמנטית לאלמנטים של הטופס
+
+> 🎯 **מטרה לנגישות**: כל קלט טופס צריך להיות מקושר לתווית. פרקטיקה פשוטה זו הופכת את הטפסים שלכם לשימושיים עבור כולם, כולל משתמשים עם מוגבלויות, ומשפרת את החוויה עבור כל המשתמשים.
+
+### יצירת טופס ההרשמה
+
+טופס ההרשמה דורש מידע מפורט יותר כדי ליצור חשבון משתמש מלא. בואו נבנה אותו עם תכונות HTML5 מודרניות ונגישות משופרת.
 
 ```html
 <hr/>
 <h2>Register</h2>
-<form id="registerForm">
-  <label for="user">Username</label>
-  <input id="user" name="user" type="text">
-  <label for="currency">Currency</label>
-  <input id="currency" name="currency" type="text" value="$">
-  <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <label for="balance">Current balance</label>
-  <input id="balance" name="balance" type="number" value="0">
-  <button>Register</button>
+<form id="registerForm" novalidate>
+  <div class="form-group">
+    <label for="user">Username</label>
+    <input id="user" name="user" type="text" required 
+           autocomplete="username" placeholder="Choose a username">
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency</label>
+    <input id="currency" name="currency" type="text" value="$" 
+           required maxlength="3" placeholder="USD, EUR, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" placeholder="Personal savings, checking, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" value="0" 
+           min="0" step="0.01" placeholder="0.00">
+  </div>
+  
+  <button type="submit">Create Account</button>
 </form>
 ```
 
-באמצעות מאפיין `value` ניתן להגדיר ערך ברירת מחדל עבור קלט מסוים. שימו לב גם שהקלט עבור `balance` הוא מסוג `number`. האם הוא נראה שונה מהקלטים האחרים? נסו לתקשר איתו.
+**בקטע הקוד לעיל:**
+- **ארגנו** כל שדה במיכלי div לשיפור העיצוב והפריסה
+- **הוספנו** תכונות `autocomplete` מתאימות לתמיכה במילוי אוטומטי של הדפדפן
+- **כללנו** טקסט עזר ב-`placeholder` להנחיית קלט המשתמש
+- **הגדרנו** ערכי ברירת מחדל באמצעות תכונת `value`
+- **יישמנו** תכונות אימות כמו `required`, `maxlength`, ו-`min`
+- **השתמשנו** ב-`type="number"` לשדה היתרה עם תמיכה בעשרונים
 
-✅ האם אתם יכולים לנווט ולהשתמש בטפסים רק באמצעות מקלדת? איך הייתם עושים זאת?
+### חקר סוגי קלט והתנהגותם
 
-## שליחת נתונים לשרת
+**סוגי קלט מודרניים מספקים פונקציונליות משופרת:**
 
-כעת, לאחר שיש לנו ממשק משתמש פונקציונלי, השלב הבא הוא לשלוח את הנתונים לשרת. בואו נעשה בדיקה מהירה באמצעות הקוד הנוכחי שלנו: מה קורה אם תלחצו על כפתור *כניסה* או *הרשמה*?
+| תכונה | יתרון | דוגמה |
+|-------|-------|-------|
+| `type="number"` | מקלדת מספרית בנייד | הזנת יתרה קלה יותר |
+| `step="0.01"` | שליטה בדיוק עשרוני | מאפשר סנטים במטבע |
+| `autocomplete` | מילוי אוטומטי של הדפדפן | השלמת טופס מהירה יותר |
+| `placeholder` | רמזים הקשריים | מנחה את ציפיות המשתמש |
 
-האם שמתם לב לשינוי בכתובת ה-URL של הדפדפן?
+> 🎯 **אתגר נגישות**: נסו לנווט בטפסים באמצעות המקלדת בלבד! השתמשו ב-`Tab` כדי לעבור בין שדות, `Space` כדי לסמן תיבות, ו-`Enter` כדי לשלוח. חוויה זו תעזור לכם להבין כיצד משתמשי קוראי מסך מתקשרים עם הטפסים שלכם.
 
-![צילום מסך של שינוי כתובת ה-URL בדפדפן לאחר לחיצה על כפתור ההרשמה](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.he.png)
+## הבנת שיטות שליחת טפסים
 
-פעולת ברירת המחדל של `<form>` היא לשלוח את הטופס לכתובת השרת הנוכחית באמצעות [שיטת GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), תוך הוספת נתוני הטופס ישירות לכתובת ה-URL. לשיטה זו יש כמה חסרונות:
+כשמישהו ממלא את הטופס שלכם ולוחץ על שלח, הנתונים צריכים להגיע לאנשהו – בדרך כלל לשרת שיכול לשמור אותם. יש כמה דרכים שונות שזה יכול לקרות, וידיעת הדרך הנכונה יכולה לחסוך לכם כאבי ראש בהמשך.
 
-- הנתונים שנשלחים מוגבלים בגודלם (כ-2000 תווים)
-- הנתונים גלויים ישירות בכתובת ה-URL (לא אידיאלי עבור סיסמאות)
-- היא אינה עובדת עם העלאות קבצים
+בואו נבחן מה באמת קורה כשמישהו לוחץ על כפתור השליחה.
 
-לכן ניתן לשנות אותה לשימוש בשיטת [POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ששולחת את נתוני הטופס לשרת בגוף הבקשה של HTTP, ללא המגבלות הקודמות.
+### התנהגות ברירת מחדל של טופס
 
-> בעוד ש-POST היא השיטה הנפוצה ביותר לשליחת נתונים, [במצבים מסוימים](https://www.w3.org/2001/tag/doc/whenToUseGet.html) עדיף להשתמש בשיטת GET, למשל בעת יישום שדה חיפוש.
+ראשית, נבחן מה קורה עם שליחת טופס בסיסית:
 
-### משימה
+**בדקו את הטפסים הנוכחיים שלכם:**
+1. לחצו על כפתור *הרשמה* בטופס שלכם
+2. שימו לב לשינויים בשורת הכתובת של הדפדפן שלכם
+3. שימו לב כיצד הדף נטען מחדש והנתונים מופיעים בכתובת ה-URL
 
-הוסיפו מאפייני `action` ו-`method` לטופס ההרשמה:
+![צילום מסך של שינוי כתובת ה-URL בדפדפן לאחר לחיצה על כפתור הרשמה](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.he.png)
 
-```html
-<form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
+### השוואת שיטות HTTP
+
+```mermaid
+graph TD
+    A[Form Submission] --> B{HTTP Method}
+    B -->|GET| C[Data in URL]
+    B -->|POST| D[Data in Request Body]
+    
+    C --> E[Visible in address bar]
+    C --> F[Limited data size]
+    C --> G[Bookmarkable]
+    
+    D --> H[Hidden from URL]
+    D --> I[Large data capacity]
+    D --> J[More secure]
 ```
 
-כעת נסו להירשם לחשבון חדש עם שמכם. לאחר לחיצה על כפתור *הרשמה* אתם אמורים לראות משהו כזה:
+**הבנת ההבדלים:**
+
+| שיטה | שימוש | מיקום נתונים | רמת אבטחה | מגבלת גודל |
+|------|-------|-------------|-----------|------------|
+| `GET` | שאילתות חיפוש, מסננים | פרמטרים ב-URL | נמוכה (גלויה) | ~2000 תווים |
+| `POST` | חשבונות משתמשים, נתונים רגישים | גוף הבקשה | גבוהה (מוסתרת) | ללא מגבלה מעשית |
+
+**הבנת ההבדלים הבסיסיים:**
+- **GET**: מוסיף נתוני טופס לכתובת ה-URL כפרמטרים (מתאים לפעולות חיפוש)
+- **POST**: כולל נתונים בגוף הבקשה (חיוני למידע רגיש)
+- **מגבלות GET**: מגבלות גודל, נתונים גלויים, היסטוריית דפדפן מתמשכת
+- **יתרונות POST**: קיבולת נתונים גדולה, הגנה על פרטיות, תמיכה בהעלאת קבצים
+
+> 💡 **פרקטיקה מומלצת**: השתמשו ב-`GET` לטפסי חיפוש ומסננים (שליפת נתונים), השתמשו ב-`POST` להרשמת משתמשים, כניסה ויצירת נתונים.
+
+### הגדרת שליחת טופס
+
+בואו נגדיר את טופס ההרשמה שלכם לתקשר כראוי עם שרת ה-API האחורי באמצעות שיטת POST:
+
+```html
+<form id="registerForm" action="//localhost:5000/api/accounts" 
+      method="POST" novalidate>
+```
+
+**מה ההגדרה הזו עושה:**
+- **מכוונת** את שליחת הטופס לנקודת הקצה של ה-API שלכם
+- **משתמשת** בשיטת POST להעברת נתונים מאובטחת
+- **כוללת** `novalidate` כדי לטפל באימות עם JavaScript
+
+### בדיקת שליחת טופס
+
+**בצעו את השלבים הבאים כדי לבדוק את הטופס שלכם:**
+1. **מלאו** את טופס ההרשמה עם המידע שלכם
+2. **לחצו** על כפתור "צור חשבון"
+3. **שימו לב** לתגובת השרת בדפדפן שלכם
 
 ![חלון דפדפן בכתובת localhost:5000/api/accounts, מציג מחרוזת JSON עם נתוני משתמש](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.he.png)
 
-אם הכול עובד כראוי, השרת אמור לענות לבקשה שלכם עם תגובת [JSON](https://www.json.org/json-en.html) המכילה את נתוני החשבון שנוצר.
+**מה שאתם אמורים לראות:**
+- **הדפדפן מפנה** לכתובת נקודת הקצה של ה-API
+- **תגובת JSON** המכילה את נתוני החשבון החדש שלכם
+- **אישור השרת** שהחשבון נוצר בהצלחה
 
-✅ נסו להירשם שוב עם אותו שם. מה קורה?
+> 🧪 **זמן ניסוי**: נסו להירשם שוב עם אותו שם משתמש. איזו תגובה אתם מקבלים? זה עוזר לכם להבין כיצד השרת מטפל בנתונים כפולים ובתנאי שגיאה.
 
-## שליחת נתונים ללא טעינת הדף
+### הבנת תגובות JSON
 
-כפי שכנראה שמתם לב, יש בעיה קטנה בגישה שבה השתמשנו: כאשר שולחים את הטופס, אנחנו יוצאים מהאפליקציה והדפדפן מפנה לכתובת ה-URL של השרת. אנחנו מנסים להימנע מכל טעינת דף באפליקציה שלנו, שכן אנחנו יוצרים [אפליקציה חד-עמודית (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
-
-כדי לשלוח את נתוני הטופס לשרת מבלי לגרום לטעינת דף, עלינו להשתמש בקוד JavaScript. במקום לשים כתובת URL במאפיין `action` של אלמנט `<form>`, ניתן להשתמש בכל קוד JavaScript שמתחיל במחרוזת `javascript:` כדי לבצע פעולה מותאמת אישית. שימוש בגישה זו גם אומר שתצטרכו ליישם כמה משימות שהדפדפן ביצע באופן אוטומטי:
-
-- אחזור נתוני הטופס
-- המרה וקידוד נתוני הטופס לפורמט מתאים
-- יצירת בקשת HTTP ושליחתה לשרת
-
-### משימה
-
-החליפו את מאפיין `action` של טופס ההרשמה ב:
-
-```html
-<form id="registerForm" action="javascript:register()">
+**כאשר השרת מעבד את הטופס שלכם בהצלחה:**
+```json
+{
+  "user": "john_doe",
+  "currency": "$",
+  "description": "Personal savings",
+  "balance": 100,
+  "id": "unique_account_id"
+}
 ```
 
-פתחו את `app.js` והוסיפו פונקציה חדשה בשם `register`:
+**תגובה זו מאשרת:**
+- **יוצרת** חשבון חדש עם הנתונים שציינתם
+- **מעניקה** מזהה ייחודי להתייחסות עתידית
+- **מחזירה** את כל מידע החשבון לאימות
+- **מציינת** אחסון מוצלח בבסיס הנתונים
 
-```js
+## טיפול מודרני בטפסים עם JavaScript
+
+שליחת טפסים מסורתית גורמת לטעינה מחדש של הדף כולו, בדומה לאופן שבו משימות חלל מוקדמות דרשו איפוס מלא של המערכת לתיקון מסלול. גישה זו משבשת את חוויית המשתמש ומאבדת את מצב האפליקציה.
+
+טיפול בטפסים באמצעות JavaScript עובד כמו מערכות הנחיה רציפות המשמשות חלליות מודרניות – ביצוע התאמות בזמן אמת מבלי לאבד את הקשר הניווט. אנחנו יכולים ליירט שליחת טפסים, לספק משוב מיידי, לטפל בשגיאות בצורה חלקה ולעדכן את הממשק על סמך תגובות השרת תוך שמירה על מיקום המשתמש באפליקציה.
+
+### מדוע להימנע מטעינת דפים מחדש?
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant SPA
+    participant Server
+    
+    User->>SPA: Submits form
+    SPA->>Server: AJAX request
+    Server-->>SPA: JSON response
+    SPA->>User: Updates interface
+    
+    Note over User,SPA: No page reload!
+```
+
+**יתרונות טיפול בטפסים באמצעות JavaScript:**
+- **שומר** על מצב האפליקציה והקשר המשתמש
+- **מספק** משוב מיידי ואינדיקטורים לטעינה
+- **מאפשר** טיפול דינמי בשגיאות ואימות
+- **יוצר** חוויות משתמש חלקות, כמו אפליקציות
+- **מאפשר** לוגיקה מותנית על בסיס תגובות השרת
+
+### מעבר מטפסים מסורתיים למודרניים
+
+**אתגרי הגישה המסורתית:**
+- **מפנה** משתמשים מחוץ לאפליקציה שלכם
+- **מאבד** את מצב האפליקציה והקשר הנוכחי
+- **דורש** טעינה מחדש של הדף לפעולות פשוטות
+- **מספק** שליטה מוגבלת על משוב המשתמש
+
+**יתרונות הגישה המודרנית של JavaScript:**
+- **שומר** על המשתמשים בתוך האפליקציה שלכם
+- **משמר** את כל מצב האפליקציה והנתונים
+- **מאפשר** אימות ומשוב בזמן אמת
+- **תומך** בשיפור הדרגתי ונגישות
+
+### יישום טיפול בטפסים באמצעות JavaScript
+
+בואו נחליף את שליחת הטופס המסורתית עם טיפול באירועים מודרני באמצעות JavaScript:
+
+```html
+<!-- Remove the action attribute and add event handling -->
+<form id="registerForm" method="POST" novalidate>
+```
+
+**הוסיפו את לוגיקת ההרשמה לקובץ `app.js` שלכם:**
+
+```javascript
+// Modern event-driven form handling
 function register() {
   const registerForm = document.getElementById('registerForm');
   const formData = new FormData(registerForm);
   const data = Object.fromEntries(formData);
   const jsonData = JSON.stringify(data);
+  
+  console.log('Form data prepared:', data);
 }
+
+// Attach event listener when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const registerForm = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    register();
+  });
+});
 ```
 
-כאן אנחנו מאחזרים את אלמנט הטופס באמצעות `getElementById()` ומשתמשים בעוזר [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) כדי לחלץ את הערכים מרכיבי הטופס כסט של זוגות מפתח/ערך. לאחר מכן אנו ממירים את הנתונים לאובייקט רגיל באמצעות [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) ולבסוף מסדרים את הנתונים ל-[JSON](https://www.json.org/json-en.html), פורמט נפוץ להחלפת נתונים באינטרנט.
+**פירוט מה קורה כאן:**
+- **מונע** שליחת טופס ברירת מחדל באמצעות `event.preventDefault()`
+- **מאחזר** את אלמנט הטופס באמצעות בחירה מודרנית של DOM
+- **מוציא** נתוני טופס באמצעות API החזק `FormData`
+- **ממיר** את FormData לאובייקט פשוט עם `Object.fromEntries()`
+- **משרשר** את הנתונים לפורמט JSON לתקשורת עם השרת
+- **רושם** את הנתונים המעובדים לצורך ניפוי שגיאות ואימות
 
-הנתונים מוכנים כעת לשליחה לשרת. צרו פונקציה חדשה בשם `createAccount`:
+### הבנת API של FormData
 
-```js
-async function createAccount(account) {
-  try {
-    const response = await fetch('//localhost:5000/api/accounts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: account
-    });
-    return await response.json();
-  } catch (error) {
-    return { error: error.message || 'Unknown error' };
-  }
-}
+**API של FormData מספק טיפול טפסים חזק:**
+
+```javascript
+// Example of what FormData captures
+const formData = new FormData(registerForm);
+
+// FormData automatically captures:
+// {
+//   "user": "john_doe",
+//   "currency": "$", 
+//   "description": "Personal account",
+//   "balance": "100"
+// }
 ```
 
-מה עושה הפונקציה הזו? ראשית, שימו לב למילת המפתח `async` כאן. משמעות הדבר היא שהפונקציה מכילה קוד שיבוצע [באופן אסינכרוני](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). כאשר משתמשים במילת המפתח `await`, ניתן להמתין לביצוע קוד אסינכרוני - כמו המתנה לתשובת השרת כאן - לפני שממשיכים.
+**יתרונות API של FormData:**
+- **איסוף מקיף**: לוכד את כל אלמנטי הטופס כולל טקסט, קבצים וקלטים מורכבים
+- **מודעות סוג**: מטפל בסוגי קלט שונים באופן אוטומטי ללא קוד מותאם אישית
+- **יעילות**: מבטל איסוף שדות
+- **מספק** הודעות שגיאה מפורטות לצורך איתור בעיות
+- **מחזיר** מבנה נתונים עקבי למקרים של הצלחה ושגיאה
 
-הנה סרטון קצר על שימוש ב-`async/await`:
+### הכוח של Fetch API המודרני
 
-[![Async and Await לניהול הבטחות](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await לניהול הבטחות")
+**יתרונות Fetch API על פני שיטות ישנות:**
 
-> 🎥 לחצו על התמונה למעלה לסרטון על async/await.
+| תכונה | יתרון | יישום |
+|-------|-------|-------|
+| מבוסס הבטחה | קוד אסינכרוני נקי | `await fetch()` |
+| התאמה אישית של בקשות | שליטה מלאה ב-HTTP | כותרות, שיטות, גוף |
+| טיפול בתגובות | ניתוח נתונים גמיש | `.json()`, `.text()`, `.blob()` |
+| טיפול בשגיאות | לכידת שגיאות מקיפה | בלוקים של Try/catch |
 
-אנחנו משתמשים ב-API של `fetch()` כדי לשלוח נתוני JSON לשרת. שיטה זו מקבלת שני פרמטרים:
+> 🎥 **למידע נוסף**: [מדריך Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - הבנת דפוסי JavaScript אסינכרוניים לפיתוח אתרים מודרני.
 
-- כתובת ה-URL של השרת, לכן אנחנו מחזירים כאן את `//localhost:5000/api/accounts`.
-- הגדרות הבקשה. כאן אנחנו מגדירים את השיטה ל-`POST` ומספקים את `body` של הבקשה. מכיוון שאנחנו שולחים נתוני JSON לשרת, עלינו גם להגדיר את כותרת `Content-Type` ל-`application/json` כדי שהשרת ידע כיצד לפרש את התוכן.
+**מושגים מרכזיים לתקשורת עם שרת:**
+- **פונקציות אסינכרוניות** מאפשרות להשהות את הביצוע עד לקבלת תגובות מהשרת
+- **מילת המפתח await** גורמת לקוד אסינכרוני להיראות כמו קוד סינכרוני
+- **Fetch API** מספק בקשות HTTP מודרניות מבוססות הבטחה
+- **טיפול בשגיאות** מבטיח שהאפליקציה שלך תגיב בצורה חלקה לבעיות רשת
 
-מכיוון שהשרת יענה לבקשה עם JSON, ניתן להשתמש ב-`await response.json()` כדי לנתח את תוכן ה-JSON ולהחזיר את האובייקט המתקבל. שימו לב ששיטה זו היא אסינכרונית, ולכן אנחנו משתמשים במילת המפתח `await` כאן לפני ההחזרה כדי לוודא שכל שגיאה במהלך הניתוח תיתפס גם כן.
+### השלמת פונקציית ההרשמה
 
-כעת הוסיפו קצת קוד לפונקציה `register` כדי לקרוא ל-`createAccount()`:
+בואו נשלב הכל יחד עם פונקציית הרשמה מלאה ומוכנה לייצור:
 
-```js
-const result = await createAccount(jsonData);
-```
-
-מכיוון שאנחנו משתמשים במילת המפתח `await` כאן, עלינו להוסיף את מילת המפתח `async` לפני הפונקציה register:
-
-```js
-async function register() {
-```
-
-לבסוף, נוסיף כמה לוגים כדי לבדוק את התוצאה. הפונקציה הסופית צריכה להיראות כך:
-
-```js
+```javascript
 async function register() {
   const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const jsonData = JSON.stringify(Object.fromEntries(formData));
-  const result = await createAccount(jsonData);
-
-  if (result.error) {
-    return console.log('An error occurred:', result.error);
+  const submitButton = registerForm.querySelector('button[type="submit"]');
+  
+  try {
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Creating Account...';
+    
+    // Process form data
+    const formData = new FormData(registerForm);
+    const jsonData = JSON.stringify(Object.fromEntries(formData));
+    
+    // Send to server
+    const result = await createAccount(jsonData);
+    
+    if (result.error) {
+      console.error('Registration failed:', result.error);
+      alert(`Registration failed: ${result.error}`);
+      return;
+    }
+    
+    console.log('Account created successfully!', result);
+    alert(`Welcome, ${result.user}! Your account has been created.`);
+    
+    // Reset form after successful registration
+    registerForm.reset();
+    
+  } catch (error) {
+    console.error('Unexpected error:', error);
+    alert('An unexpected error occurred. Please try again.');
+  } finally {
+    // Restore button state
+    submitButton.disabled = false;
+    submitButton.textContent = 'Create Account';
   }
-
-  console.log('Account created!', result);
 }
 ```
 
-זה היה קצת ארוך, אבל הגענו לשם! אם תפתחו את [כלי המפתחים של הדפדפן](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools), ותנסו להירשם לחשבון חדש, לא תראו שום שינוי בדף האינטרנט, אך הודעה תופיע בקונסולה המאשרת שהכול עובד.
+**היישום המשופר הזה כולל:**
+- **מספק** משוב חזותי במהלך שליחת הטופס
+- **משבית** את כפתור השליחה כדי למנוע שליחה כפולה
+- **מטפל** בשגיאות צפויות ולא צפויות בצורה חלקה
+- **מציג** הודעות הצלחה ושגיאה ידידותיות למשתמש
+- **מאפס** את הטופס לאחר הרשמה מוצלחת
+- **משחזר** את מצב ממשק המשתמש ללא קשר לתוצאה
 
-![צילום מסך המציג הודעת לוג בקונסולת הדפדפן](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.he.png)
+### בדיקת היישום שלך
 
-✅ האם לדעתכם הנתונים נשלחים לשרת בצורה מאובטחת? מה אם מישהו יוכל ליירט את הבקשה? תוכלו לקרוא על [HTTPS](https://en.wikipedia.org/wiki/HTTPS) כדי ללמוד עוד על תקשורת נתונים מאובטחת.
+**פתח את כלי המפתחים בדפדפן ובדוק את ההרשמה:**
 
-## אימות נתונים
+1. **פתח** את קונסולת הדפדפן (F12 → לשונית Console)
+2. **מלא** את טופס ההרשמה
+3. **לחץ** על "צור חשבון"
+4. **צפה** בהודעות הקונסולה ובמשוב למשתמש
 
-אם תנסו להירשם לחשבון חדש מבלי להגדיר שם משתמש תחילה, תוכלו לראות שהשרת מחזיר שגיאה עם קוד סטטוס [400 (בקשה שגויה)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+![צילום מסך המציג הודעת יומן בקונסולת הדפדפן](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.he.png)
 
-לפני שליחת נתונים לשרת, מומלץ [לאמת את נתוני הטופס](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) מראש כאשר הדבר אפשרי, כדי לוודא שאתם שולחים בקשה תקפה. רכיבי טפסים ב-HTML5 מספקים אימות מובנה באמצעות מאפיינים שונים:
+**מה שאתה אמור לראות:**
+- **מצב טעינה** מופיע על כפתור השליחה
+- **יומני קונסולה** מציגים מידע מפורט על התהליך
+- **הודעת הצלחה** מופיעה כאשר יצירת החשבון מצליחה
+- **הטופס מתאפס** באופן אוטומטי לאחר שליחה מוצלחת
 
-- `required`: השדה חייב להיות מלא אחרת הטופס לא יכול להישלח.
-- `minlength` ו-`maxlength`: מגדירים את מספר התווים המינימלי והמקסימלי בשדות טקסט.
-- `min` ו-`max`: מגדירים את הערך המינימלי והמקסימלי של שדה מספרי.
-- `type`: מגדיר את סוג הנתונים הצפוי, כמו `number`, `email`, `file` או [סוגים מובנים אחרים](https://developer.mozilla.org/docs/Web/HTML/Element/input). מאפיין זה עשוי גם לשנות את התצוגה החזותית של רכיב הטופס.
-- `pattern`: מאפשר להגדיר [ביטוי רגולרי](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) כדי לבדוק אם הנתונים שהוזנו תקפים או לא.
-טיפ: ניתן להתאים את המראה של פקדי הטופס שלך בהתאם לשאלה אם הם תקינים או לא, באמצעות פסאודו-מחלקות ה-CSS `:valid` ו-`:invalid`.
-### משימה
+> 🔒 **שיקול אבטחה**: נכון לעכשיו, הנתונים מועברים דרך HTTP, שאינו מאובטח לייצור. באפליקציות אמיתיות, תמיד השתמש ב-HTTPS כדי להצפין את העברת הנתונים. למידע נוסף על [אבטחת HTTPS](https://en.wikipedia.org/wiki/HTTPS) ולמה זה חיוני להגנה על נתוני משתמשים.
 
-ישנם שני שדות חובה ליצירת חשבון חדש תקין: שם משתמש ומטבע. שאר השדות הם אופציונליים. עדכנו את ה-HTML של הטופס, תוך שימוש בתכונה `required` ובטקסט בתווית השדה כך ש:
+## ולידציה מקיפה לטפסים
 
-```html
-<label for="user">Username (required)</label>
-<input id="user" name="user" type="text" required>
-...
-<label for="currency">Currency (required)</label>
-<input id="currency" name="currency" type="text" value="$" required>
+ולידציה לטפסים מונעת את החוויה המתסכלת של גילוי שגיאות רק לאחר השליחה. כמו מערכות בטיחות מרובות בתחנת החלל הבינלאומית, ולידציה אפקטיבית משתמשת בשכבות רבות של בדיקות בטיחות.
+
+הגישה האופטימלית משלבת ולידציה ברמת הדפדפן לצורך משוב מיידי, ולידציה ב-JavaScript לשיפור חוויית המשתמש, וולידציה בצד השרת לצורך אבטחה ושלמות נתונים. ריבוי שכבות זה מבטיח גם שביעות רצון משתמשים וגם הגנה על המערכת.
+
+### הבנת שכבות הוולידציה
+
+```mermaid
+graph TD
+    A[User Input] --> B[HTML5 Validation]
+    B --> C[Custom JavaScript Validation]
+    C --> D[Client-Side Complete]
+    D --> E[Server-Side Validation]
+    E --> F[Data Storage]
+    
+    B -->|Invalid| G[Browser Error Message]
+    C -->|Invalid| H[Custom Error Display]
+    E -->|Invalid| I[Server Error Response]
 ```
 
-למרות שמימוש השרת הספציפי הזה אינו אוכף מגבלות מסוימות על אורך מקסימלי של השדות, תמיד מומלץ להגדיר מגבלות סבירות עבור כל הזנת טקסט של משתמש.
+**אסטרטגיית ולידציה רב-שכבתית:**
+- **ולידציה HTML5**: בדיקות מיידיות מבוססות דפדפן
+- **ולידציה JavaScript**: לוגיקה מותאמת וחוויית משתמש
+- **ולידציה בצד השרת**: בדיקות אבטחה ושלמות נתונים סופיות
+- **שיפור פרוגרסיבי**: עובד גם אם JavaScript מושבת
 
-הוסיפו תכונה `maxlength` לשדות הטקסט:
+### מאפייני ולידציה ב-HTML5
 
-```html
-<input id="user" name="user" type="text" maxlength="20" required>
-...
-<input id="currency" name="currency" type="text" value="$" maxlength="5" required>
-...
-<input id="description" name="description" type="text" maxlength="100">
+**כלי ולידציה מודרניים העומדים לרשותך:**
+
+| מאפיין | מטרה | שימוש לדוגמה | התנהגות דפדפן |
+|---------|-------|--------------|----------------|
+| `required` | שדות חובה | `<input required>` | מונע שליחה ריקה |
+| `minlength`/`maxlength` | מגבלות אורך טקסט | `<input maxlength="20">` | אוכף מגבלות תווים |
+| `min`/`max` | טווחים מספריים | `<input min="0" max="1000">` | מאמת גבולות מספריים |
+| `pattern` | כללי רגקס מותאמים | `<input pattern="[A-Za-z]+">` | מתאים פורמטים ספציפיים |
+| `type` | ולידציה של סוג נתונים | `<input type="email">` | ולידציה ספציפית לפורמט |
+
+### עיצוב ולידציה עם CSS
+
+**צור משוב חזותי למצבי ולידציה:**
+
+```css
+/* Valid input styling */
+input:valid {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+/* Invalid input styling */
+input:invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Focus states for better accessibility */
+input:focus:valid {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
 ```
 
-כעת, אם תלחצו על כפתור *Register* ושדה כלשהו אינו עומד בכללי האימות שהגדרנו, תראו משהו כזה:
+**מה משיגים הרמזים החזותיים הללו:**
+- **גבולות ירוקים**: מצביעים על ולידציה מוצלחת, כמו אור ירוק במרכז הבקרה
+- **גבולות אדומים**: מסמנים שגיאות ולידציה הדורשות תשומת לב
+- **הדגשת פוקוס**: מספקת הקשר חזותי ברור למיקום הקלט הנוכחי
+- **עיצוב עקבי**: יוצר דפוסי ממשק צפויים שהמשתמשים יכולים ללמוד
 
-![צילום מסך שמראה את שגיאת האימות בעת ניסיון לשלוח את הטופס](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.he.png)
+> 💡 **טיפ מקצועי**: השתמש במחלקות CSS `:valid` ו-`:invalid` כדי לספק משוב חזותי מיידי בזמן שהמשתמשים מקלידים, וליצור ממשק תגובתי ומועיל.
 
-אימות כזה שמתבצע *לפני* שליחת נתונים לשרת נקרא **אימות בצד הלקוח**. אך שימו לב שלא תמיד ניתן לבצע את כל הבדיקות מבלי לשלוח את הנתונים. לדוגמה, לא נוכל לבדוק כאן אם כבר קיים חשבון עם אותו שם משתמש מבלי לשלוח בקשה לשרת. אימות נוסף שמתבצע בשרת נקרא **אימות בצד השרת**.
+### יישום ולידציה מקיפה
 
-בדרך כלל יש צורך ליישם את שניהם, וכשמשתמשים באימות בצד הלקוח זה משפר את חוויית המשתמש על ידי מתן משוב מיידי, אך אימות בצד השרת הוא קריטי כדי לוודא שהנתונים שאתם מעבדים הם תקינים ובטוחים.
+בואו נשפר את טופס ההרשמה שלכם עם ולידציה חזקה שמספקת חוויית משתמש מעולה ואיכות נתונים:
+
+```html
+<form id="registerForm" method="POST" novalidate>
+  <div class="form-group">
+    <label for="user">Username <span class="required">*</span></label>
+    <input id="user" name="user" type="text" required 
+           minlength="3" maxlength="20" 
+           pattern="[a-zA-Z0-9_]+" 
+           autocomplete="username"
+           title="Username must be 3-20 characters, letters, numbers, and underscores only">
+    <small class="form-text">Choose a unique username (3-20 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency <span class="required">*</span></label>
+    <input id="currency" name="currency" type="text" required 
+           value="$" maxlength="3" 
+           pattern="[A-Z$€£¥₹]+" 
+           title="Enter a valid currency symbol or code">
+    <small class="form-text">Currency symbol (e.g., $, €, £)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" 
+           placeholder="Personal savings, checking, etc.">
+    <small class="form-text">Optional description (up to 100 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" 
+           value="0" min="0" step="0.01" 
+           title="Enter a positive number for your starting balance">
+    <small class="form-text">Initial account balance (minimum $0.00)</small>
+  </div>
+  
+  <button type="submit">Create Account</button>
+</form>
+```
+
+**הבנת הוולידציה המשופרת:**
+- **משלב** אינדיקטורים לשדות חובה עם תיאורים מועילים
+- **כולל** מאפייני `pattern` לוולידציה של פורמטים
+- **מספק** מאפייני `title` לנגישות וטיפים
+- **מוסיף** טקסט עזר להנחיית הקלט של המשתמש
+- **משתמש** במבנה HTML סמנטי לנגישות טובה יותר
+
+### כללי ולידציה מתקדמים
+
+**מה כל כלל ולידציה משיג:**
+
+| שדה | כללי ולידציה | יתרון למשתמש |
+|-----|--------------|--------------|
+| שם משתמש | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | מבטיח מזהים תקינים וייחודיים |
+| מטבע | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | מקבל סמלי מטבע נפוצים |
+| יתרה | `min="0"`, `step="0.01"`, `type="number"` | מונע יתרות שליליות |
+| תיאור | `maxlength="100"` | מגבלות אורך סבירות |
+
+### בדיקת התנהגות ולידציה
+
+**נסה את תרחישי הוולידציה הבאים:**
+1. **שלח** את הטופס עם שדות חובה ריקים
+2. **הכנס** שם משתמש קצר מ-3 תווים
+3. **נסה** תווים מיוחדים בשדה שם המשתמש
+4. **הכנס** סכום יתרה שלילי
+
+![צילום מסך המציג שגיאת ולידציה בעת ניסיון לשלוח את הטופס](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.he.png)
+
+**מה שתראה:**
+- **הדפדפן מציג** הודעות ולידציה מקוריות
+- **שינויים בעיצוב** מבוססי `:valid` ו-`:invalid`
+- **שליחת הטופס** נמנעת עד שכל הוולידציות עוברות
+- **הפוקוס עובר אוטומטית** לשדה הראשון שאינו תקין
+
+### ולידציה בצד לקוח מול ולידציה בצד שרת
+
+```mermaid
+graph LR
+    A[Client-Side Validation] --> B[Instant Feedback]
+    A --> C[Better UX]
+    A --> D[Reduced Server Load]
+    
+    E[Server-Side Validation] --> F[Security]
+    E --> G[Data Integrity]
+    E --> H[Business Rules]
+    
+    A -.-> I[Both Required]
+    E -.-> I
+```
+
+**למה צריך את שתי השכבות:**
+- **ולידציה בצד לקוח**: מספקת משוב מיידי ומשפרת את חוויית המשתמש
+- **ולידציה בצד שרת**: מבטיחה אבטחה ומטפלת בכללים עסקיים מורכבים
+- **גישה משולבת**: יוצרת אפליקציות חזקות, ידידותיות למשתמש ובטוחות
+- **שיפור פרוגרסיבי**: עובד גם כאשר JavaScript מושבת
+
+> 🛡️ **תזכורת אבטחה**: לעולם אל תסמוך רק על ולידציה בצד לקוח! משתמשים זדוניים יכולים לעקוף בדיקות בצד לקוח, ולכן ולידציה בצד שרת חיונית לאבטחה ושלמות נתונים.
 
 ---
 
+---
+
+## אתגר סוכן GitHub Copilot 🚀
+
+השתמש במצב סוכן כדי להשלים את האתגר הבא:
+
+**תיאור:** שפר את טופס ההרשמה עם ולידציה מקיפה בצד לקוח ומשוב למשתמש. אתגר זה יעזור לך לתרגל ולידציה לטפסים, טיפול בשגיאות ושיפור חוויית המשתמש עם משוב אינטראקטיבי.
+
+**הנחיה:** צור מערכת ולידציה מלאה לטופס ההרשמה הכוללת: 1) משוב ולידציה בזמן אמת לכל שדה בזמן שהמשתמש מקליד, 2) הודעות ולידציה מותאמות שמופיעות מתחת לכל שדה קלט, 3) שדה אישור סיסמה עם ולידציה של התאמה, 4) אינדיקטורים חזותיים (כמו סימני וי ירוקים לשדות תקינים ואזהרות אדומות לשדות לא תקינים), 5) כפתור שליחה שמופעל רק כאשר כל הוולידציות עוברות. השתמש במאפייני ולידציה של HTML5, CSS לעיצוב מצבי הוולידציה, ו-JavaScript להתנהגות אינטראקטיבית.
+
+למידע נוסף על [מצב סוכן](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) כאן.
+
 ## 🚀 אתגר
 
-הציגו הודעת שגיאה ב-HTML אם המשתמש כבר קיים.
+הצג הודעת שגיאה ב-HTML אם המשתמש כבר קיים.
 
 הנה דוגמה לאיך עמוד ההתחברות הסופי יכול להיראות לאחר מעט עיצוב:
 
 ![צילום מסך של עמוד ההתחברות לאחר הוספת סגנונות CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.he.png)
 
-## שאלון לאחר ההרצאה
+## מבחן לאחר ההרצאה
 
-[שאלון לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/44)
+[מבחן לאחר ההרצאה](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## סקירה ולימוד עצמי
 
-מפתחים הפכו יצירתיים מאוד בכל הנוגע לבניית טפסים, במיוחד בכל הנוגע לאסטרטגיות אימות. למדו על זרימות טפסים שונות על ידי עיון ב-[CodePen](https://codepen.com); האם תוכלו למצוא טפסים מעניינים ומעוררי השראה?
+מפתחים הפכו יצירתיים מאוד במאמצי בניית הטפסים שלהם, במיוחד בכל הנוגע לאסטרטגיות ולידציה. למד על זרימות טפסים שונות על ידי עיון ב-[CodePen](https://codepen.com); האם תוכל למצוא טפסים מעניינים ומעוררי השראה?
 
 ## משימה
 
-[עצבו את אפליקציית הבנק שלכם](assignment.md)
+[עצב את אפליקציית הבנק שלך](assignment.md)
 
 ---
 
-**כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית נחשב למקור הסמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי בני אדם. איננו נושאים באחריות לכל אי-הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.
+**הצהרת אחריות**:  
+מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.

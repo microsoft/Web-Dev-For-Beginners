@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "957547b822c40042e07d591c4fbfde4f",
-  "translation_date": "2025-08-27T21:07:27+00:00",
+  "original_hash": "5adea7059676fcdb1b546ccd54c956c2",
+  "translation_date": "2025-10-23T00:38:12+00:00",
   "source_file": "4-typing-game/README.md",
   "language_code": "fi"
 }
@@ -11,32 +11,36 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Johdanto
 
-Kirjoittaminen on yksi aliarvostetuimmista taidoista kehittäjälle. Kyky siirtää ajatukset nopeasti päästä editoriin antaa luovuuden virrata vapaasti. Yksi parhaista tavoista oppia on pelata peliä!
+Tässä on jotain, mitä jokainen kehittäjä tietää, mutta harvoin puhuu: nopea kirjoittaminen on supervoima! 🚀 Mieti sitä - mitä nopeammin saat ideasi aivoistasi koodieditoriin, sitä paremmin luovuutesi pääsee virtaamaan. Se on kuin suora yhteys ajatustesi ja näytön välillä.
 
-> Joten, tehdään kirjoituspeli!
+Haluatko tietää yhden parhaista tavoista kehittää tätä taitoa? Arvasit oikein - rakennamme pelin!
 
-Käytät tähän asti oppimiasi JavaScript-, HTML- ja CSS-taitoja luodaksesi kirjoituspelin. Peli esittää pelaajalle satunnaisen lainauksen (käytämme [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) -lainauksia) ja mittaa, kuinka kauan pelaajalta kestää kirjoittaa se tarkasti. Käytät tähän asti oppimiasi JavaScript-, HTML- ja CSS-taitoja luodaksesi kirjoituspelin.
+> Luodaan yhdessä mahtava kirjoituspeli!
+
+Valmiina hyödyntämään kaikkia niitä JavaScript-, HTML- ja CSS-taitoja, joita olet oppinut? Rakennamme kirjoituspelin, joka haastaa sinut satunnaisilla lainauksilla legendaariselta etsivältä [Sherlock Holmesilta](https://en.wikipedia.org/wiki/Sherlock_Holmes). Peli seuraa, kuinka nopeasti ja tarkasti pystyt kirjoittamaan - ja usko pois, se on koukuttavampaa kuin luuletkaan!
 
 ![demo](../../../4-typing-game/images/demo.gif)
 
-## Esitiedot
+## Mitä sinun tulisi osata
 
-Tämä oppitunti olettaa, että olet perehtynyt seuraaviin käsitteisiin:
+Ennen kuin sukellamme projektiin, varmista, että hallitset nämä käsitteet (ei haittaa, jos tarvitset pienen kertauksen - me kaikki olemme olleet siinä tilanteessa!):
 
 - Tekstikentän ja painikkeiden luominen
-- CSS ja tyylien asettaminen luokkien avulla
+- CSS ja tyylien asettaminen luokkien avulla  
 - JavaScriptin perusteet
   - Taulukon luominen
   - Satunnaisen numeron luominen
   - Nykyisen ajan hakeminen
 
-## Oppitunti
+Jos jokin näistä tuntuu hieman epäselvältä, ei hätää! Joskus paras tapa vahvistaa osaamistasi on hypätä projektiin ja oppia tekemällä.
+
+## Rakennetaan tämä!
 
 [Kirjoituspelin luominen tapahtumapohjaisen ohjelmoinnin avulla](./typing-game/README.md)
 
 ## Kiitokset
 
-Kirjoitettu ♥️:lla [Christopher Harrison](http://www.twitter.com/geektrainer)
+Kirjoittanut ♥️:lla [Christopher Harrison](http://www.twitter.com/geektrainer)
 
 ---
 

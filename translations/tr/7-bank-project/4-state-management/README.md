@@ -1,73 +1,118 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b46acf79da8550d76445eed00b06c878",
-  "translation_date": "2025-10-03T13:00:56+00:00",
+  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
+  "translation_date": "2025-10-22T23:59:52+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "tr"
 }
 -->
-# Bir Bankacılık Uygulaması Oluşturma Bölüm 4: Durum Yönetimi Kavramları
+# Bankacılık Uygulaması Yapımı Bölüm 4: Durum Yönetimi Kavramları
 
 ## Ders Öncesi Test
 
 [Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/47)
 
-### Giriş
+## Giriş
 
-Bir web uygulaması büyüdükçe, tüm veri akışlarını takip etmek zorlaşır. Hangi kod veriyi alıyor, hangi sayfa bunu kullanıyor, nerede ve ne zaman güncellenmesi gerekiyor... karmaşık ve zor yönetilebilir bir kod yığınına dönüşmek kolaydır. Bu durum, özellikle uygulamanızın farklı sayfaları arasında veri paylaşmanız gerektiğinde, örneğin kullanıcı verileri gibi, daha da belirgin hale gelir. *Durum yönetimi* kavramı her tür programda her zaman var olmuştur, ancak web uygulamaları karmaşıklık açısından büyüdükçe, artık geliştirme sırasında düşünülmesi gereken önemli bir nokta haline gelmiştir.
+Durum yönetimi, Voyager uzay aracındaki navigasyon sistemi gibidir – her şey sorunsuz çalıştığında, varlığını neredeyse fark etmezsiniz. Ancak işler ters gittiğinde, yıldızlararası uzaya ulaşmak ile kozmik boşlukta kaybolmak arasındaki farkı yaratır. Web geliştirmede, durum uygulamanızın hatırlaması gereken her şeyi temsil eder: kullanıcı giriş durumu, form verileri, gezinme geçmişi ve geçici arayüz durumları.
 
-Bu son bölümde, oluşturduğumuz uygulamayı gözden geçirerek durumun nasıl yönetildiğini yeniden düşüneceğiz. Bu, tarayıcı yenilemesini herhangi bir noktada desteklemeyi ve kullanıcı oturumları arasında verileri kalıcı hale getirmeyi sağlayacaktır.
+Bankacılık uygulamanız basit bir giriş formundan daha karmaşık bir uygulamaya dönüştükçe, muhtemelen bazı yaygın zorluklarla karşılaştınız. Sayfayı yenileyin ve kullanıcılar beklenmedik bir şekilde çıkış yapar. Tarayıcıyı kapatın ve tüm ilerleme kaybolur. Bir sorunu ayıklayın ve aynı veriyi farklı şekillerde değiştiren birden fazla işlev arasında kaybolursunuz.
 
-### Ön Koşul
+Bunlar kötü kodlamanın işaretleri değil – uygulamalar belirli bir karmaşıklık eşiğine ulaştığında ortaya çıkan doğal büyüme sancılarıdır. Her geliştirici, uygulamaları "konsept kanıtı"ndan "üretime hazır" hale geçerken bu zorluklarla karşılaşır.
 
-Bu ders için web uygulamasının [veri çekme](../3-data/README.md) bölümünü tamamlamış olmanız gerekiyor. Ayrıca [Node.js](https://nodejs.org) yüklemeniz ve [sunucu API'sini](../api/README.md) yerel olarak çalıştırmanız gerekiyor, böylece hesap verilerini yönetebilirsiniz.
+Bu derste, bankacılık uygulamanızı güvenilir, profesyonel bir uygulamaya dönüştüren merkezi bir durum yönetim sistemi uygulayacağız. Veri akışlarını tahmin edilebilir bir şekilde yönetmeyi, kullanıcı oturumlarını uygun şekilde sürdürmeyi ve modern web uygulamalarının gerektirdiği akıcı kullanıcı deneyimini oluşturmayı öğreneceksiniz.
 
-Sunucunun düzgün çalıştığını test etmek için bir terminalde şu komutu çalıştırabilirsiniz:
+## Ön Koşullar
+
+Durum yönetimi kavramlarına dalmadan önce, geliştirme ortamınızın düzgün bir şekilde ayarlandığından ve bankacılık uygulamanızın temelinin hazır olduğundan emin olmanız gerekir. Bu ders, bu serinin önceki bölümlerindeki kavramlar ve kod üzerine doğrudan inşa edilmiştir.
+
+Devam etmeden önce aşağıdaki bileşenlerin hazır olduğundan emin olun:
+
+**Gerekli Kurulum:**
+- [Veri alma dersi](../3-data/README.md)'ni tamamlayın - uygulamanızın hesap verilerini başarıyla yükleyip görüntülemesi gerekiyor
+- [Node.js](https://nodejs.org) 'i arka uç API'sini çalıştırmak için sisteminize kurun
+- Hesap veri işlemlerini yönetmek için [sunucu API'sını](../api/README.md) yerel olarak başlatın
+
+**Ortamınızı Test Etme:**
+
+API sunucunuzun doğru çalıştığını aşağıdaki komutu bir terminalde çalıştırarak doğrulayın:
 
 ```sh
 curl http://localhost:5000/api
 # -> should return "Bank API v1.0.0" as a result
 ```
 
+**Bu komut ne yapar:**
+- **Bir GET isteği gönderir** yerel API sunucunuza
+- **Bağlantıyı test eder** ve sunucunun yanıt verdiğini doğrular
+- **API sürüm bilgilerini döndürür** her şey düzgün çalışıyorsa
+
 ---
 
-## Durum Yönetimini Yeniden Düşünmek
+## Mevcut Durum Sorunlarını Teşhis Etme
 
-[Önceki derste](../3-data/README.md), uygulamamızda şu anda oturum açmış kullanıcıya ait banka verilerini içeren global `account` değişkeni ile temel bir durum kavramını tanıttık. Ancak, mevcut uygulamamızda bazı eksiklikler var. Dashboard sayfasındayken sayfayı yenilemeyi deneyin. Ne oluyor?
+Sherlock Holmes'un bir suç mahallini incelemesi gibi, kullanıcı oturumlarının kaybolması gizemini çözmeden önce mevcut uygulamamızda tam olarak neler olduğunu anlamamız gerekiyor.
 
-Mevcut kodda 3 sorun var:
+Mevcut durum yönetimi zorluklarını ortaya çıkaran basit bir deney yapalım:
 
-- Durum kalıcı değil, tarayıcı yenilemesi sizi giriş sayfasına geri götürüyor.
-- Durumu değiştiren birden fazla fonksiyon var. Uygulama büyüdükçe, değişiklikleri takip etmek zorlaşabilir ve birini güncellemeyi unutmak kolaydır.
-- Durum temizlenmiyor, bu yüzden *Çıkış Yap* düğmesine tıkladığınızda, giriş sayfasında olsanız bile hesap verileri hala orada duruyor.
+**🧪 Bu Tanı Testini Deneyin:**
+1. Bankacılık uygulamanıza giriş yapın ve kontrol paneline gidin
+2. Tarayıcı sayfasını yenileyin
+3. Giriş durumunuza ne olduğunu gözlemleyin
 
-Bu sorunları tek tek ele almak için kodumuzu güncelleyebiliriz, ancak bu daha fazla kod tekrarı yaratır ve uygulamayı daha karmaşık ve zor yönetilebilir hale getirir. Ya da birkaç dakika durup stratejimizi yeniden düşünebiliriz.
+Eğer giriş ekranına geri yönlendirildiyseniz, klasik durum devamlılığı sorununu keşfettiniz demektir. Bu davranış, mevcut uygulamamızın kullanıcı verilerini her sayfa yüklemesinde sıfırlanan JavaScript değişkenlerinde saklamasından kaynaklanır.
 
-> Burada gerçekten çözmeye çalıştığımız sorunlar nelerdir?
+**Mevcut Uygulama Sorunları:**
 
-[Durum yönetimi](https://en.wikipedia.org/wiki/State_management), bu iki özel sorunu çözmek için iyi bir yaklaşım bulmakla ilgilidir:
+[Önceki dersten](../3-data/README.md) basit `account` değişkeni, hem kullanıcı deneyimini hem de kodun sürdürülebilirliğini etkileyen üç önemli sorun yaratır:
 
-- Bir uygulamadaki veri akışlarını nasıl anlaşılır hale getirebiliriz?
-- Durum verilerini her zaman kullanıcı arayüzüyle (ve tam tersi) nasıl senkronize tutabiliriz?
+| Sorun | Teknik Sebep | Kullanıcı Etkisi |
+|-------|--------------|------------------|
+| **Oturum Kaybı** | Sayfa yenileme JavaScript değişkenlerini sıfırlar | Kullanıcılar sık sık yeniden kimlik doğrulaması yapmak zorunda kalır |
+| **Dağınık Güncellemeler** | Birden fazla işlev doğrudan durumu değiştirir | Hata ayıklama giderek zorlaşır |
+| **Eksik Temizlik** | Çıkış tüm durum referanslarını temizlemez | Potansiyel güvenlik ve gizlilik endişeleri |
 
-Bu sorunları çözdüğünüzde, karşılaşabileceğiniz diğer sorunlar ya zaten çözülmüş olur ya da çözülmesi daha kolay hale gelir. Bu sorunları çözmek için birçok olası yaklaşım vardır, ancak biz **verileri ve bunları değiştirme yollarını merkezileştirme** içeren yaygın bir çözümle ilerleyeceğiz. Veri akışları şu şekilde olur:
+**Mimari Zorluk:**
 
-![HTML, kullanıcı eylemleri ve durum arasındaki veri akışlarını gösteren şema](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.tr.png)
+Titanik'in bölümlere ayrılmış tasarımı gibi, bireysel sorunları çözmek, altta yatan mimari sorunu ele almayacaktır. Kapsamlı bir durum yönetimi çözümüne ihtiyacımız var.
 
-> Burada verilerin otomatik olarak görünümü güncelleme kısmını ele almayacağız, çünkü bu daha ileri düzey [Reaktif Programlama](https://en.wikipedia.org/wiki/Reactive_programming) kavramlarına bağlıdır. Derinlemesine bir inceleme yapmak istiyorsanız, bu iyi bir takip konusu olabilir.
+> 💡 **Burada aslında neyi başarmaya çalışıyoruz?**
 
-✅ Durum yönetimi için farklı yaklaşımlara sahip birçok kütüphane var, [Redux](https://redux.js.org) popüler bir seçenek. Büyük web uygulamalarında karşılaşabileceğiniz potansiyel sorunları ve bunların nasıl çözülebileceğini öğrenmek için kullanılan kavramlara ve desenlere göz atabilirsiniz.
+[Durum yönetimi](https://en.wikipedia.org/wiki/State_management) aslında iki temel bulmacayı çözmekle ilgilidir:
 
-### Görev
+1. **Verim Nerede?**: Hangi bilgilere sahip olduğumuzu ve nereden geldiğini takip etmek
+2. **Herkes Aynı Sayfada mı?**: Kullanıcıların gördüklerinin gerçekte olanlarla eşleştiğinden emin olmak
 
-Biraz yeniden düzenleme ile başlayacağız. `account` tanımını şu şekilde değiştirin:
+**Planımız:**
+
+Kendi etrafımızda dönmek yerine, **merkezi bir durum yönetimi** sistemi oluşturacağız. Bunu, tüm önemli şeylerin sorumluluğunu üstlenen gerçekten organize bir kişi gibi düşünün:
+
+![HTML, kullanıcı eylemleri ve durum arasındaki veri akışını gösteren şema](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.tr.png)
+
+**Bu veri akışını anlamak:**
+- **Merkezi hale getirir** tüm uygulama durumunu tek bir yerde
+- **Yönlendirir** tüm durum değişikliklerini kontrol edilen işlevler aracılığıyla
+- **UI'nin** mevcut durumla senkronize kalmasını sağlar
+- **Net ve tahmin edilebilir bir veri yönetimi modeli sunar**
+
+> 💡 **Profesyonel Görüş**: Bu ders temel kavramlara odaklanmaktadır. Karmaşık uygulamalar için [Redux](https://redux.js.org) gibi kütüphaneler daha gelişmiş durum yönetimi özellikleri sunar. Bu temel ilkeleri anlamak, herhangi bir durum yönetimi kütüphanesini ustalıkla kullanmanıza yardımcı olacaktır.
+
+> ⚠️ **İleri Seviye Konu**: Durum değişiklikleri tarafından tetiklenen otomatik UI güncellemelerini ele almayacağız, çünkü bu [Reaktif Programlama](https://en.wikipedia.org/wiki/Reactive_programming) kavramlarını içerir. Bunu öğrenme yolculuğunuz için mükemmel bir sonraki adım olarak düşünebilirsiniz!
+
+### Görev: Durum Yapısını Merkezileştirme
+
+Dağınık durum yönetimimizi merkezi bir sisteme dönüştürmeye başlayalım. Bu ilk adım, takip eden tüm iyileştirmeler için temeli oluşturur.
+
+**Adım 1: Merkezi Bir Durum Nesnesi Oluşturun**
+
+Basit `account` tanımını şu şekilde değiştirin:
 
 ```js
 let account = null;
 ```
 
-Şununla:
+Yapılandırılmış bir durum nesnesiyle değiştirin:
 
 ```js
 let state = {
@@ -75,31 +120,80 @@ let state = {
 };
 ```
 
-Buradaki fikir, tüm uygulama verilerimizi tek bir durum nesnesinde *merkezileştirmek*. Şu anda durum içinde yalnızca `account` var, bu yüzden çok fazla değişiklik olmuyor, ancak gelişim için bir yol oluşturuyor.
+**Bu değişikliğin önemi:**
+- **Merkezi hale getirir** tüm uygulama verilerini tek bir yerde
+- **Daha fazla durum özelliği eklemek için** yapıyı hazırlar
+- **Durum ve diğer değişkenler arasında** net bir sınır oluşturur
+- **Uygulamanız büyüdükçe ölçeklenebilir bir model oluşturur**
 
-Bunu kullanan fonksiyonları da güncellememiz gerekiyor. `register()` ve `login()` fonksiyonlarında, `account = ...` ifadesini `state.account = ...` ile değiştirin.
+**Adım 2: Durum Erişim Modellerini Güncelleyin**
 
-`updateDashboard()` fonksiyonunun başına şu satırı ekleyin:
+İşlevlerinizi yeni durum yapısını kullanacak şekilde güncelleyin:
 
+**`register()` ve `login()` işlevlerinde**, şu satırı değiştirin:
+```js
+account = ...
+```
+
+Şununla:
+```js
+state.account = ...
+```
+
+**`updateDashboard()` işlevinde**, şu satırı en üste ekleyin:
 ```js
 const account = state.account;
 ```
 
-Bu yeniden düzenleme tek başına çok fazla iyileştirme sağlamadı, ancak sonraki değişiklikler için temel oluşturmayı amaçladı.
+**Bu güncellemelerin sağladıkları:**
+- **Mevcut işlevselliği korur** ve yapıyı iyileştirir
+- **Daha sofistike durum yönetimi için** kodunuzu hazırlar
+- **Durum verilerine erişim için** tutarlı modeller oluşturur
+- **Merkezi durum güncellemeleri için** temel oluşturur
 
-## Veri Değişikliklerini Takip Etmek
+> 💡 **Not**: Bu yeniden yapılandırma sorunlarımızı hemen çözmez, ancak güçlü iyileştirmeler için gerekli temeli oluşturur!
 
-Artık verilerimizi saklamak için `state` nesnesini oluşturduğumuza göre, bir sonraki adım güncellemeleri merkezileştirmek. Amaç, herhangi bir değişikliği ve ne zaman gerçekleştiğini takip etmeyi kolaylaştırmaktır.
+## Kontrollü Durum Güncellemelerini Uygulama
 
-`state` nesnesinde değişiklik yapılmasını önlemek için, onu tamamen [*değişmez*](https://en.wikipedia.org/wiki/Immutable_object) olarak düşünmek de iyi bir uygulamadır, yani hiç değiştirilemez. Bu aynı zamanda, içinde bir şey değiştirmek istiyorsanız yeni bir durum nesnesi oluşturmanız gerektiği anlamına gelir. Bunu yaparak, potansiyel olarak istenmeyen [yan etkilerden](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) korunma sağlar ve uygulamanızda geri al/yeniden yap gibi yeni özellikler uygulama olasılıklarını açar, ayrıca hata ayıklamayı kolaylaştırır. Örneğin, duruma yapılan her değişikliği kaydedebilir ve bir hatanın kaynağını anlamak için değişikliklerin geçmişini tutabilirsiniz.
+Durumumuzu merkezileştirdikten sonra, veri değişiklikleri için kontrollü mekanizmalar oluşturma adımına geçiyoruz. Bu yaklaşım, tahmin edilebilir durum değişikliklerini ve daha kolay hata ayıklamayı sağlar.
 
-JavaScript'te [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) kullanarak bir nesnenin değişmez bir versiyonunu oluşturabilirsiniz. Değişmez bir nesneye değişiklik yapmaya çalışırsanız, bir istisna oluşur.
+Temel ilke hava trafik kontrolüne benzer: birden fazla işlevin durumu bağımsız olarak değiştirmesine izin vermek yerine, tüm değişiklikleri tek bir kontrol edilen işlev aracılığıyla yönlendireceğiz. Bu model, veri değişikliklerinin ne zaman ve nasıl gerçekleştiği konusunda net bir denetim sağlar.
 
-✅ *Yüzeysel* ve *derin* değişmez nesne arasındaki farkı biliyor musunuz? [Buradan](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) okuyabilirsiniz.
+**Değiştirilemez Durum Yönetimi:**
+
+`state` nesnemizi [*değiştirilemez*](https://en.wikipedia.org/wiki/Immutable_object) olarak ele alacağız, yani doğrudan değiştirmeyeceğiz. Bunun yerine, her değişiklik, güncellenmiş verilerle yeni bir durum nesnesi oluşturur.
+
+Bu yaklaşım, doğrudan değişikliklere kıyasla başlangıçta verimsiz görünebilir, ancak hata ayıklama, test etme ve uygulama tahmin edilebilirliğini koruma açısından önemli avantajlar sağlar.
+
+**Değiştirilemez durum yönetiminin faydaları:**
+
+| Fayda | Açıklama | Etki |
+|-------|----------|------|
+| **Tahmin Edilebilirlik** | Değişiklikler yalnızca kontrol edilen işlevler aracılığıyla gerçekleşir | Hata ayıklama ve test daha kolay |
+| **Geçmiş Takibi** | Her durum değişikliği yeni bir nesne oluşturur | Geri al/yeniden yap işlevselliğini mümkün kılar |
+| **Yan Etki Önleme** | Kazara değişiklikler olmaz | Gizemli hataları önler |
+| **Performans Optimizasyonu** | Durumun gerçekten değiştiğini kolayca tespit eder | Verimli UI güncellemelerini mümkün kılar |
+
+**JavaScript'te `Object.freeze()` ile Değiştirilemezlik:**
+
+JavaScript [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) sağlar, nesne değişikliklerini önlemek için:
+
+```js
+const immutableState = Object.freeze({ account: userData });
+// Any attempt to modify immutableState will throw an error
+```
+
+**Burada olanları açıklamak:**
+- **Doğrudan özellik atamalarını veya silmelerini önler**
+- **Değişiklik girişimlerinde** istisnalar oluşturur
+- **Durum değişikliklerinin kontrol edilen işlevlerden geçmesini sağlar**
+- **Durumun nasıl güncellenebileceği konusunda** net bir sözleşme oluşturur
+
+> 💡 **Derinlemesine İnceleme**: [MDN belgelerinde](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) *yüzeysel* ve *derin* değiştirilemez nesneler arasındaki farkı öğrenin. Bu ayrımı anlamak, karmaşık durum yapıları için çok önemlidir.
 
 ### Görev
 
-Yeni bir `updateState()` fonksiyonu oluşturalım:
+Yeni bir `updateState()` işlevi oluşturalım:
 
 ```js
 function updateState(property, newData) {
@@ -110,9 +204,9 @@ function updateState(property, newData) {
 }
 ```
 
-Bu fonksiyonda, önceki durumdan veri kopyalayarak yeni bir durum nesnesi oluşturuyoruz ve ardından [köşeli parantez notasyonu](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` kullanarak durum nesnesinin belirli bir özelliğini yeni veriyle değiştiriyoruz. Son olarak, `Object.freeze()` kullanarak nesneyi değişikliklere karşı kilitliyoruz. Şu anda durum içinde yalnızca `account` özelliği saklanıyor, ancak bu yaklaşımla duruma ihtiyaç duyduğunuz kadar çok özellik ekleyebilirsiniz.
+Bu işlevde, [*yayılma (`...`) operatörünü*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) kullanarak önceki durumdan veri kopyalayıp yeni bir durum nesnesi oluşturuyoruz. Ardından, durum nesnesinin belirli bir özelliğini yeni verilerle [köşeli parantez notasyonu](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` kullanarak değiştiriyoruz. Son olarak, `Object.freeze()` kullanarak nesneyi değişikliklere karşı kilitliyoruz. Şu anda yalnızca `account` özelliği duruma kaydedilmiş durumda, ancak bu yaklaşımla duruma ihtiyacınız olan kadar çok özellik ekleyebilirsiniz.
 
-Durumun başlangıçta da kilitli olduğundan emin olmak için `state` başlatmasını güncelleyeceğiz:
+Durum başlatmasını da güncelleyerek başlangıç durumunun da dondurulduğundan emin olun:
 
 ```js
 let state = Object.freeze({
@@ -120,21 +214,21 @@ let state = Object.freeze({
 });
 ```
 
-Bundan sonra, `register` fonksiyonunda `state.account = result;` atamasını şu şekilde değiştirin:
+Ardından, `register` işlevini güncelleyerek `state.account = result;` atamasını şu şekilde değiştirin:
 
 ```js
 updateState('account', result);
 ```
 
-Aynı işlemi `login` fonksiyonunda yapın, `state.account = data;` ifadesini şu şekilde değiştirin:
+Aynı işlemi `login` işlevi için yaparak `state.account = data;` satırını şu şekilde değiştirin:
 
 ```js
 updateState('account', data);
 ```
 
-Şimdi kullanıcı *Çıkış Yap* düğmesine tıkladığında hesap verilerinin temizlenmemesi sorununu düzeltme fırsatını değerlendireceğiz.
+Şimdi, kullanıcı *Çıkış Yap* düğmesine tıkladığında hesap verilerinin temizlenmemesi sorununu düzeltme fırsatını değerlendireceğiz.
 
-Yeni bir `logout()` fonksiyonu oluşturun:
+Yeni bir `logout()` işlevi oluşturun:
 
 ```js
 function logout() {
@@ -143,49 +237,105 @@ function logout() {
 }
 ```
 
-`updateDashboard()` içinde, `return navigate('/login');` yönlendirmesini `return logout();` ile değiştirin.
+`updateDashboard()` içinde, yönlendirme `return navigate('/login');` satırını `return logout();` ile değiştirin.
 
-Yeni bir hesap kaydetmeyi, çıkış yapmayı ve tekrar giriş yapmayı deneyin, her şeyin hala düzgün çalıştığını kontrol edin.
+Yeni bir hesap kaydetmeyi, çıkış yapmayı ve tekrar giriş yapmayı deneyerek her şeyin hala düzgün çalıştığını kontrol edin.
 
-> İpucu: Tüm durum değişikliklerini görmek için `updateState()` fonksiyonunun altına `console.log(state)` ekleyebilir ve tarayıcınızın geliştirme araçlarındaki konsolu açabilirsiniz.
+> İpucu: Tüm durum değişikliklerini görmek için `updateState()` işlevinin altına `console.log(state)` ekleyebilir ve tarayıcınızın geliştirme araçlarındaki konsolu açabilirsiniz.
 
-## Durumu Kalıcı Hale Getirmek
+## Veri Kalıcılığını Uygulama
 
-Çoğu web uygulaması, doğru çalışabilmek için verileri kalıcı hale getirmeye ihtiyaç duyar. Tüm kritik veriler genellikle bir veritabanında saklanır ve bir sunucu API'si aracılığıyla erişilir, örneğin kullanıcı hesap verileri gibi. Ancak bazen, daha iyi bir kullanıcı deneyimi veya yükleme performansını artırmak için tarayıcıda çalışan istemci uygulamasında bazı verileri kalıcı hale getirmek de ilginç olabilir.
+Daha önce belirlediğimiz oturum kaybı sorunu, kullanıcı durumunu tarayıcı oturumları arasında koruyan bir kalıcılık çözümü gerektirir. Bu, uygulamamızı geçici bir deneyimden güvenilir, profesyonel bir araca dönüştürür.
 
-Tarayıcınızda veri kalıcı hale getirmek istediğinizde, kendinize sormanız gereken birkaç önemli soru vardır:
+Atomik saatlerin güç kesintileri sırasında bile hassas zamanı koruyarak kritik durumu uçucu olmayan bellekte saklaması gibi, web uygulamalarının da tarayıcı oturumları ve sayfa yenilemeleri arasında temel kullanıcı verilerini korumak için kalıcı depolama mekanizmalarına ihtiyacı vardır.
 
-- *Veri hassas mı?* Kullanıcı şifreleri gibi hassas verileri istemcide saklamaktan kaçınmalısınız.
-- *Bu veriyi ne kadar süreyle saklamanız gerekiyor?* Bu veriye yalnızca mevcut oturum için mi erişmeyi planlıyorsunuz yoksa sonsuza kadar mı saklamak istiyorsunuz?
+**Veri Kalıcılığı için Stratejik Sorular:**
 
-Bir web uygulamasında bilgi saklamanın, ne elde etmek istediğinize bağlı olarak birçok yolu vardır. Örneğin, bir arama sorgusunu saklamak için URL'leri kullanabilir ve bunu kullanıcılar arasında paylaşılabilir hale getirebilirsiniz. Ayrıca, [kimlik doğrulama](https://en.wikipedia.org/wiki/Authentication) bilgileri gibi verilerin sunucuyla paylaşılması gerekiyorsa [HTTP çerezlerini](https://developer.mozilla.org/docs/Web/HTTP/Cookies) kullanabilirsiniz.
+Kalıcılığı uygulamadan önce, bu kritik faktörleri göz önünde bulundurun:
 
-Veri saklamak için birçok tarayıcı API'si vardır. İkisi özellikle ilginçtir:
+| Soru | Bankacılık Uygulaması Bağlamı | Karar Etkisi |
+|------|-------------------------------|--------------|
+| **Veriler hassas mı?** | Hesap bakiyesi, işlem geçmişi | Güvenli depolama yöntemlerini seçin |
+| **Ne kadar süreyle kalıcı olmalı?** | Giriş durumu vs. geçici UI tercihleri | Uygun depolama süresini seçin |
+| **Sunucu bunu ihtiyaç duyuyor mu?** | Kimlik doğrulama jetonları vs. UI ayarları | Paylaşım gereksinimlerini belirleyin |
 
-- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): belirli bir web sitesine özgü verileri farklı oturumlar arasında kalıcı hale getiren bir [Anahtar/Değer deposu](https://en.wikipedia.org/wiki/Key%E2%80%93value_database). İçindeki veriler asla sona ermez.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): bu, `localStorage` ile aynı şekilde çalışır, ancak içinde saklanan veriler oturum sona erdiğinde (tarayıcı kapatıldığında) temizlenir.
+**Tarayıcı Depolama Seçenekleri:**
 
-Her iki API'nin de yalnızca [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) saklamaya izin verdiğini unutmayın. Karmaşık nesneleri saklamak istiyorsanız, bunu [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) kullanarak [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) formatında serileştirmeniz gerekir.
+Modern tarayıcılar, farklı kullanım durumları için tasarlanmış birkaç depolama mekanizması sağlar:
 
-✅ Bir sunucuyla çalışmayan bir web uygulaması oluşturmak istiyorsanız, istemcide bir veritabanı oluşturmak için [`IndexedDB` API'sini](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) kullanmak da mümkündür. Bu, ileri düzey kullanım durumları veya önemli miktarda veri saklamanız gerektiğinde ayrılmıştır, çünkü kullanımı daha karmaşıktır.
+**Birincil Depolama API'leri:**
 
-### Görev
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Kalıcı [Anahtar/Değer depolama](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Tarayıcı oturumları arasında** verileri kalıcı olarak saklar  
+   - **Tarayıcı yeniden başlatmalarında ve bilgisayar yeniden başlatmalarında** verileri korur
+   - **Belirli web sitesi alanına** özgüdür
+   - **Kullanıcı tercihleri ve giriş durumları için** mükemmeldir
 
-Kullanıcılarımızın *Çıkış Yap* düğmesine açıkça tıklayana kadar oturumlarının açık kalmasını istiyoruz, bu yüzden hesap verilerini saklamak için `localStorage` kullanacağız. Öncelikle, verilerimizi saklamak için kullanacağımız bir anahtar tanımlayalım.
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Geçici oturum depolama
+   - **localStorage ile aynı şekilde çalışır** aktif oturumlar sırasında
+   - **Tarayıcı sekmesi kapandığında** otomatik olarak temizlenir
+   - **Geçici veriler için idealdir** ve kalıcı olmamalıdır
+
+3. **[HTTP Çerezleri](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Sunucu ile paylaşılan depolama
+   - **Her sunucu isteğiyle** otomatik olarak gönderilir
+   - **Kimlik doğrulama** jetonları için mükemmeldir
+   - **Boyut olarak sınırlıdır** ve performansı etkileyebilir
+
+**Veri Serileştirme Gereksinimi:**
+
+Hem `localStorage` hem de `sessionStorage` yalnızca [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) depolar:
+
+```js
+// Convert objects to JSON strings for storage
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parse JSON strings back to objects when retrieving
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Serileştirmeyi anlamak:**
+- **JavaScript nesnelerini JSON stringlerine dönüştürür** [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) kullanarak
+- **JSON'dan nesneleri yeniden oluşturur** [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) kullanarak
+- **Karmaşık iç içe geçmiş nesneleri ve dizileri** otomatik olarak işler
+- **Fonksiyonlar, tanımsız değerler ve döngüsel referanslarda** başarısız olur
+> 💡 **Gelişmiş Seçenek**: Büyük veri setlerine sahip karmaşık çevrimdışı uygulamalar için [`IndexedDB` API'sini](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) düşünün. Bu API, tam bir istemci tarafı veritabanı sağlar ancak daha karmaşık bir uygulama gerektirir.
+
+### Görev: localStorage Kalıcılığını Uygulama
+
+Kullanıcıların açıkça çıkış yapana kadar oturumlarını koruyabilmesi için kalıcı bir depolama sistemi uygulayalım. Hesap verilerini tarayıcı oturumları arasında saklamak için `localStorage` kullanacağız.
+
+**Adım 1: Depolama Yapılandırmasını Tanımlayın**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Ardından `updateState()` fonksiyonunun sonuna şu satırı ekleyin:
+**Bu sabitin sağladıkları:**
+- **Saklanan verilerimiz için** tutarlı bir tanımlayıcı oluşturur
+- **Depolama anahtar referanslarında** yazım hatalarını önler
+- **Depolama anahtarını değiştirmeyi** kolaylaştırır
+- **Bakımı kolay kod için** en iyi uygulamaları takip eder
+
+**Adım 2: Otomatik Kalıcılık Ekleyin**
+
+`updateState()` fonksiyonunun sonuna şu satırı ekleyin:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-Bununla, kullanıcı hesap verileri kalıcı hale gelecek ve daha önce tüm durum güncellemelerini merkezileştirdiğimiz için her zaman güncel olacak. İşte önceki yeniden düzenlemelerimizin faydalarını görmeye başladığımız yer 🙂.
+**Burada olanların açıklaması:**
+- **Hesap nesnesini** depolama için bir JSON stringine dönüştürür
+- **Veriyi** tutarlı depolama anahtarı kullanarak kaydeder
+- **Durum değişiklikleri olduğunda** otomatik olarak çalışır
+- **Saklanan verilerin** her zaman mevcut durumla senkronize olmasını sağlar
 
-Veriler kaydedildiği için, uygulama yüklendiğinde bunları geri yüklemekle de ilgilenmemiz gerekiyor. Daha fazla başlatma koduna sahip olmaya başlayacağımız için, `app.js` dosyasının altındaki önceki kodumuzu da içeren yeni bir `init` fonksiyonu oluşturmak iyi bir fikir olabilir:
+> 💡 **Mimari Avantajı**: Tüm durum güncellemelerini `updateState()` üzerinden merkezileştirdiğimiz için, kalıcılık eklemek yalnızca bir satır kod gerektirdi. Bu, iyi mimari kararların gücünü gösterir!
+
+**Adım 3: Uygulama Yüklemesinde Durumu Geri Yükleme**
+
+Kaydedilen verileri geri yüklemek için bir başlatma fonksiyonu oluşturun:
 
 ```js
 function init() {
@@ -202,17 +352,49 @@ function init() {
 init();
 ```
 
-Burada kaydedilen verileri alıyoruz ve varsa durumu buna göre güncelliyoruz. Bunu *sayfayı güncellemeden önce* yapmak önemlidir, çünkü sayfa güncellemesi sırasında duruma güvenen kodlar olabilir.
+**Başlatma sürecini anlama:**
+- **localStorage'dan** daha önce kaydedilmiş hesap verilerini alır
+- **JSON stringini** tekrar bir JavaScript nesnesine dönüştürür
+- **Durumu** kontrollü güncelleme fonksiyonumuzu kullanarak günceller
+- **Kullanıcının oturumunu** sayfa yüklemesinde otomatik olarak geri yükler
+- **Durumun** kullanılabilir olmasını sağlamak için rota güncellemelerinden önce çalışır
 
-Artık hesap verilerini kalıcı hale getirdiğimiz için *Dashboard* sayfasını uygulamamızın varsayılan sayfası yapabiliriz. Eğer veri bulunmazsa, dashboard zaten *Giriş* sayfasına yönlendirme işlemini gerçekleştiriyor. `updateRoute()` içinde, geri dönüş `return navigate('/login');` ifadesini `return navigate('/dashboard');` ile değiştirin.
+**Adım 4: Varsayılan Rotayı Optimize Etme**
 
-Şimdi uygulamada oturum açın ve sayfayı yenilemeyi deneyin. Dashboard'da kalmalısınız. Bu güncelleme ile tüm başlangıç sorunlarımızı ele aldık...
+Varsayılan rotayı kalıcılıktan yararlanacak şekilde güncelleyin:
 
-## Verileri Yenilemek
+`updateRoute()` içinde şunu değiştirin:
+```js
+// Replace: return navigate('/login');
+return navigate('/dashboard');
+```
 
-...Ama aynı zamanda yeni bir sorun yaratmış olabiliriz. Oops!
+**Bu değişikliğin mantıklı olmasının nedeni:**
+- **Yeni kalıcılık sistemimizden** etkili bir şekilde yararlanır
+- **Gösterge panelinin** kimlik doğrulama kontrollerini ele almasına izin verir
+- **Kaydedilmiş bir oturum yoksa** otomatik olarak girişe yönlendirir
+- **Daha sorunsuz bir kullanıcı deneyimi oluşturur**
 
-`test` hesabını kullanarak dashboard'a gidin, ardından bir terminalde şu komutu çalıştırarak yeni bir işlem oluşturun:
+**Uygulamanızı Test Etme:**
+
+1. Bankacılık uygulamanıza giriş yapın
+2. Tarayıcı sayfasını yenileyin
+3. Giriş yapmış ve gösterge panelinde olduğunuzu doğrulayın
+4. Tarayıcınızı kapatıp tekrar açın
+5. Uygulamanıza geri dönün ve hala giriş yapmış olduğunuzu doğrulayın
+
+🎉 **Başarı Kilidi Açıldı**: Kalıcı durum yönetimini başarıyla uyguladınız! Uygulamanız artık profesyonel bir web uygulaması gibi davranıyor.
+
+## Kalıcılığı Veri Tazeliği ile Dengelemek
+
+Kalıcılık sistemimiz kullanıcı oturumlarını başarıyla koruyor, ancak yeni bir zorluk ortaya çıkarıyor: veri bayatlığı. Birden fazla kullanıcı veya uygulama aynı sunucu verisini değiştirdiğinde, yerel önbelleğe alınmış bilgiler güncelliğini yitirir.
+
+Bu durum, hem depolanmış yıldız haritalarına hem de mevcut göksel gözlemlere güvenen Viking denizcilerine benzer. Haritalar tutarlılık sağlarken, denizciler değişen koşulları hesaba katmak için taze gözlemlere ihtiyaç duyar. Benzer şekilde, uygulamamızın hem kalıcı kullanıcı durumuna hem de güncel sunucu verilerine ihtiyacı var.
+
+**🧪 Veri Tazeliği Sorununu Keşfetmek:**
+
+1. `test` hesabını kullanarak gösterge paneline giriş yapın
+2. Başka bir kaynaktan işlem simüle etmek için terminalde şu komutu çalıştırın:
 
 ```sh
 curl --request POST \
@@ -221,15 +403,31 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Şimdi tarayıcıdaki dashboard sayfasını yenilemeyi deneyin. Ne oluyor? Yeni işlemi görüyor musunuz?
+3. Tarayıcıdaki gösterge paneli sayfasını yenileyin
+4. Yeni işlemi görüp görmediğinizi gözlemleyin
 
-Durum `localStorage` sayesinde süresiz olarak kalıcı hale geldi, ancak bu aynı zamanda uygulamadan çıkış yapıp tekrar giriş yapana kadar hiç güncellenmediği anlamına geliyor!
+**Bu testin gösterdikleri:**
+- **Yerel depolamanın** "bayat" (güncel olmayan) hale gelebileceğini gösterir
+- **Uygulamanızın dışında** veri değişikliklerinin gerçekleştiği gerçek dünya senaryolarını simüle eder
+- **Kalıcılık ile veri tazeliği arasındaki gerilimi** ortaya çıkarır
 
-Bunu düzeltmek için olası bir strateji, dashboard her yüklendiğinde hesap verilerini yeniden yüklemek olabilir, böylece eski verilerden kaçınılır.
+**Veri Bayatlığı Sorunu:**
 
-### Görev
+| Sorun | Sebep | Kullanıcı Etkisi |
+|-------|-------|------------------|
+| **Bayat Veri** | localStorage otomatik olarak süresi dolmaz | Kullanıcılar güncel olmayan bilgiler görür |
+| **Sunucu Değişiklikleri** | Diğer uygulamalar/kullanıcılar aynı veriyi değiştirir | Platformlar arasında tutarsız görünümler |
+| **Önbellek vs. Gerçeklik** | Yerel önbellek sunucu durumuyla eşleşmez | Kötü kullanıcı deneyimi ve kafa karışıklığı |
 
-Yeni bir `updateAccountData` fonksiyonu oluşturun:
+**Çözüm Stratejisi:**
+
+Kalıcılığın faydalarını korurken veri doğruluğunu sağlamak için "yüklemede yenileme" modelini uygulayacağız. Bu yaklaşım, sorunsuz kullanıcı deneyimini korurken veri doğruluğunu sağlar.
+
+### Görev: Veri Yenileme Sistemi Uygulama
+
+Kalıcı durum yönetimimizin avantajlarını korurken, sunucudan otomatik olarak taze veri çeken bir sistem oluşturacağız.
+
+**Adım 1: Hesap Verisi Güncelleyici Oluşturma**
 
 ```js
 async function updateAccountData() {
@@ -247,9 +445,15 @@ async function updateAccountData() {
 }
 ```
 
-Bu yöntem, şu anda oturum açmış olduğumuzu kontrol eder ve ardından hesap verilerini sunucudan yeniden yükler.
+**Bu fonksiyonun mantığını anlama:**
+- **Kullanıcının** şu anda giriş yapıp yapmadığını kontrol eder (state.account mevcut)
+- **Geçerli bir oturum bulunmazsa** çıkışa yönlendirir
+- **Mevcut `getAccount()` fonksiyonunu kullanarak** sunucudan taze hesap verilerini çeker
+- **Sunucu hatalarını** geçersiz oturumları çıkış yaparak zarif bir şekilde ele alır
+- **Durumu** kontrollü güncelleme sistemimizi kullanarak taze verilerle günceller
+- **`updateState()` fonksiyonu aracılığıyla** otomatik localStorage kalıcılığını tetikler
 
-`refresh` adında başka bir fonksiyon oluşturun:
+**Adım 2: Gösterge Paneli Yenileme İşleyicisi Oluşturma**
 
 ```js
 async function refresh() {
@@ -258,7 +462,15 @@ async function refresh() {
 }
 ```
 
-Bu, hesap verilerini günceller ve ardından dashboard sayfasının HTML'sini günceller. Dashboard rotası yüklendiğinde çağırmamız gereken şey budur. Rota tanımını şu şekilde güncelleyin:
+**Bu yenileme fonksiyonunun sağladıkları:**
+- **Veri yenileme ve UI güncelleme sürecini** koordine eder
+- **Taze verilerin** yüklenmesini bekler ve ardından ekranı günceller
+- **Gösterge panelinin** en güncel bilgileri göstermesini sağlar
+- **Veri yönetimi ve UI güncellemeleri arasında** temiz bir ayrım korur
+
+**Adım 3: Rota Sistemi ile Entegrasyon**
+
+Rota yapılandırmanızı otomatik yenilemeyi tetikleyecek şekilde güncelleyin:
 
 ```js
 const routes = {
@@ -267,28 +479,69 @@ const routes = {
 };
 ```
 
-Şimdi dashboard'u yenilemeyi deneyin, güncellenmiş hesap verilerini göstermesi gerekir.
+**Bu entegrasyon nasıl çalışır:**
+- **Her seferinde** gösterge paneli rotası yüklendiğinde yenileme fonksiyonunu çalıştırır
+- **Kullanıcılar gösterge paneline** yöneldiğinde her zaman taze verilerin gösterilmesini sağlar
+- **Mevcut rota yapısını korurken** veri tazeliği ekler
+- **Rota özelinde başlatma için** tutarlı bir model sağlar
 
----
+**Veri Yenileme Sisteminizi Test Etme:**
 
-## 🚀 Zorluk
+1. Bankacılık uygulamanıza giriş yapın
+2. Daha önceki curl komutunu çalıştırarak yeni bir işlem oluşturun
+3. Gösterge paneli sayfasını yenileyin veya başka bir yere gidip geri dönün
+4. Yeni işlemin hemen göründüğünü doğrulayın
 
-Artık dashboard her yüklendiğinde hesap verilerini yeniden yüklüyoruz, sizce *tüm hesap* verilerini kalıcı hale getirmemiz hala gerekli mi?
+🎉 **Mükemmel Denge Sağlandı**: Uygulamanız artık kalıcı durumun sorunsuz deneyimini, taze sunucu verilerinin doğruluğu ile birleştiriyor!
 
-Birlikte çalışarak `localStorage`'da saklanan ve yüklenen verileri yalnızca uygulamanın çalışması için kesinlikle gerekli olanlarla sınırlamayı deneyin.
+## GitHub Copilot Agent Challenge 🚀
+
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+
+**Açıklama:** Bankacılık uygulaması için geri al/yeniden yap işlevselliği içeren kapsamlı bir durum yönetim sistemi uygulayın. Bu meydan okuma, durum geçmişi takibi, değişmez güncellemeler ve kullanıcı arayüzü senkronizasyonu gibi gelişmiş durum yönetimi kavramlarını uygulamanıza yardımcı olacaktır.
+
+**Talimat:** Gelişmiş bir durum yönetim sistemi oluşturun ve şunları içermesini sağlayın: 1) Tüm önceki durumları takip eden bir durum geçmişi dizisi, 2) Önceki durumlara geri dönebilen geri al ve yeniden yap fonksiyonları, 3) Gösterge panelinde geri al/yeniden yap işlemleri için UI düğmeleri, 4) Bellek sorunlarını önlemek için maksimum 10 durum geçmişi sınırı, ve 5) Kullanıcı çıkış yaptığında geçmişin düzgün bir şekilde temizlenmesi. Geri al/yeniden yap işlevselliğinin hesap bakiyesi değişiklikleriyle çalıştığından ve tarayıcı yenilemeleri arasında kalıcı olduğundan emin olun.
+
+Daha fazla bilgi için [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında buradan bilgi edinin.
+
+## 🚀 Meydan Okuma: Depolama Optimizasyonu
+
+Uygulamanız artık kullanıcı oturumlarını, veri yenilemeyi ve durum yönetimini etkili bir şekilde ele alıyor. Ancak, mevcut yaklaşımımızın depolama verimliliğini işlevsellikle en iyi şekilde dengeleyip dengelemediğini düşünün.
+
+Satranç ustalarının temel taşlar ile feda edilebilir piyonlar arasındaki farkı ayırt etmesi gibi, etkili durum yönetimi, hangi verilerin kalıcı olması gerektiğini ve hangilerinin her zaman sunucudan taze alınması gerektiğini belirlemeyi gerektirir.
+
+**Optimizasyon Analizi:**
+
+Mevcut localStorage uygulamanızı değerlendirin ve şu stratejik soruları göz önünde bulundurun:
+- Kullanıcı kimlik doğrulamasını sürdürmek için gereken minimum bilgi nedir?
+- Hangi veriler o kadar sık değişiyor ki yerel önbellekleme çok az fayda sağlıyor?
+- Depolama optimizasyonu, kullanıcı deneyimini bozmadan performansı nasıl artırabilir?
+
+**Uygulama Stratejisi:**
+- **Kalıcı olması gereken** temel verileri belirleyin (muhtemelen sadece kullanıcı kimliği)
+- **localStorage uygulamanızı** yalnızca kritik oturum verilerini saklayacak şekilde değiştirin
+- **Gösterge paneli ziyaretlerinde** her zaman sunucudan taze verilerin yüklendiğinden emin olun
+- **Optimize edilmiş yaklaşımınızın** aynı kullanıcı deneyimini koruduğunu test edin
+
+**Gelişmiş Düşünce:**
+- **Tam hesap verilerini saklamak ile sadece kimlik doğrulama tokenlerini saklamak arasındaki** ödünleşimleri karşılaştırın
+- **Kararlarınızı ve gerekçelerinizi** gelecekteki ekip üyeleri için belgeleyin
+
+Bu meydan okuma, hem kullanıcı deneyimini hem de uygulama verimliliğini düşünen profesyonel bir geliştirici gibi düşünmenize yardımcı olacaktır. Farklı yaklaşımları denemek için zaman ayırın!
 
 ## Ders Sonrası Test
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
+
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Ödev
 
-["İşlem ekle" diyalog kutusunu uygulayın](assignment.md)
+["İşlem ekleme" diyaloğunu uygulayın](assignment.md)
 
-Ödevi tamamladıktan sonra ortaya çıkan örnek sonuç aşağıda gösterilmiştir:
+İşte ödevi tamamladıktan sonra ortaya çıkan örnek sonuç:
 
-!["İşlem ekle" diyalog kutusunun örnek ekran görüntüsü](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.tr.png)
+!["İşlem ekleme" diyaloğunu gösteren ekran görüntüsü](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.tr.png)
 
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul edilmez.

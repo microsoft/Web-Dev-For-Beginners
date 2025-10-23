@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "957547b822c40042e07d591c4fbfde4f",
-  "translation_date": "2025-08-26T00:54:15+00:00",
+  "original_hash": "5adea7059676fcdb1b546ccd54c956c2",
+  "translation_date": "2025-10-23T00:04:21+00:00",
   "source_file": "4-typing-game/README.md",
   "language_code": "tr"
 }
@@ -11,26 +11,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Giriş
 
-Yazma, geliştiricilerin en az değer verilen becerilerinden biridir. Düşüncelerinizi hızlı bir şekilde zihninizden editörünüze aktarma yeteneği, yaratıcılığın özgürce akmasını sağlar. Öğrenmenin en iyi yollarından biri oyun oynamaktır!
+Her geliştiricinin bildiği ama nadiren dile getirdiği bir şey var: hızlı yazmak bir süper güçtür! 🚀 Bir düşünün - fikirlerinizi beyninizden kod editörüne ne kadar hızlı aktarabilirseniz, yaratıcılığınız o kadar akıcı olur. Bu, düşüncelerinizle ekran arasında doğrudan bir bağlantıya sahip olmak gibidir.
 
-> Hadi, bir yazma oyunu yapalım!
+Bu beceriyi geliştirmek için en iyi yollardan birini öğrenmek ister misiniz? Tahmin ettiniz - bir oyun yapacağız!
 
-Şimdiye kadar edindiğiniz JavaScript, HTML ve CSS becerilerini kullanarak bir yazma oyunu oluşturacaksınız. Oyun, oyuncuya rastgele bir alıntı sunacak (biz [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) alıntılarını kullanıyoruz) ve oyuncunun bunu doğru bir şekilde yazması için geçen süreyi ölçecek. Şimdiye kadar edindiğiniz JavaScript, HTML ve CSS becerilerini kullanarak bir yazma oyunu oluşturacaksınız.
+> Hadi birlikte harika bir yazma oyunu oluşturalım!
+
+JavaScript, HTML ve CSS becerilerinizi kullanmaya hazır mısınız? Efsanevi dedektif [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes)'tan rastgele alıntılarla sizi zorlayacak bir yazma oyunu yapacağız. Oyun, ne kadar hızlı ve doğru yazabildiğinizi takip edecek - ve inanın bana, düşündüğünüzden daha bağımlılık yapıcı!
 
 ![demo](../../../4-typing-game/images/demo.gif)
 
-## Ön Koşullar
+## Bilmeniz Gerekenler
 
-Bu ders aşağıdaki kavramlara aşina olduğunuzu varsayar:
+Başlamadan önce, bu kavramlara aşina olduğunuzdan emin olun (endişelenmeyin, hızlı bir hatırlatma gerekiyorsa - hepimiz oradan geçtik!):
 
 - Metin girişi ve düğme kontrolleri oluşturma
-- CSS ve sınıflar kullanarak stiller ayarlama
+- CSS ve sınıflar kullanarak stiller ayarlama  
 - JavaScript temelleri
   - Bir dizi oluşturma
   - Rastgele bir sayı oluşturma
   - Mevcut zamanı alma
 
-## Ders
+Eğer bunlardan bazıları size biraz paslanmış gibi geliyorsa, hiç sorun değil! Bazen bilgilerinizi pekiştirmenin en iyi yolu bir projeye dalmak ve ilerledikçe öğrenmektir.
+
+## Hadi Bu Şeyi İnşa Edelim!
 
 [Olay tabanlı programlama kullanarak bir yazma oyunu oluşturma](./typing-game/README.md)
 
@@ -38,5 +42,7 @@ Bu ders aşağıdaki kavramlara aşina olduğunuzu varsayar:
 
 ♥️ ile yazan [Christopher Harrison](http://www.twitter.com/geektrainer)
 
+---
+
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlama durumunda sorumluluk kabul edilmez.

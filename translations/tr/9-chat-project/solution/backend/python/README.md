@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:47:48+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-22T23:56:59+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "tr"
 }
 -->
-# Kod çalıştırma
+# Kod Çalıştırma
 
 ## Kurulum
 
@@ -21,20 +21,28 @@ source ./venv/bin/activate
 ## Bağımlılıkları yükle
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## API'yi çalıştır
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## API'yi test et
+
+Etkileşimli API dokümantasyonunu ziyaret edin: `http://localhost:5000/docs`
 
 ## Frontend'i çalıştır
 
-Frontend klasöründe olduğunuzdan emin olun.
+Frontend klasöründe olduğunuzdan emin olun
 
-*app.js* dosyasını bulun, `BASE_URL` değerini backend URL'nize göre değiştirin.
+*app.js* dosyasını bulun, `BASE_URL` değerini backend URL'nize göre değiştirin
 
 Çalıştırın
 
@@ -42,13 +50,13 @@ Frontend klasöründe olduğunuzdan emin olun.
 npx http-server -p 8000
 ```
 
-Sohbette bir mesaj yazmayı deneyin, bir yanıt görmelisiniz (eğer bunu bir Codespace içinde çalıştırıyorsanız veya bir erişim tokeni ayarladıysanız).
+Sohbet kutusuna bir mesaj yazmayı deneyin, bir yanıt görmelisiniz (eğer bunu bir Codespace içinde çalıştırıyorsanız veya bir erişim tokeni ayarladıysanız).
 
-## Erişim tokeni ayarlama (eğer bunu bir Codespace içinde çalıştırmıyorsanız)
+## Erişim tokeni ayarla (eğer bunu bir Codespace içinde çalıştırmıyorsanız)
 
-[Set up PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) adresine bakın.
+[PAT Ayarla](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) adresine bakın
 
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlama durumunda sorumluluk kabul edilmez.

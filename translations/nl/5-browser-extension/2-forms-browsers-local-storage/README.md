@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T00:56:58+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-23T01:07:36+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "nl"
 }
 -->
 # Browserextensieproject Deel 2: Een API aanroepen, gebruik maken van Local Storage
 
-## Pre-Lecture Quiz
+## Quiz voor de les
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/25)
+[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Introductie
+## Introductie
 
-In deze les leer je hoe je een API kunt aanroepen door het formulier van je browserextensie in te dienen en de resultaten in je extensie weer te geven. Daarnaast leer je hoe je gegevens kunt opslaan in de lokale opslag van je browser voor toekomstig gebruik en referentie.
+Weet je nog die browserextensie die je bent begonnen te bouwen? Op dit moment heb je een mooi ogend formulier, maar het is eigenlijk statisch. Vandaag gaan we het tot leven brengen door het te verbinden met echte gegevens en het geheugen te geven.
+
+Denk aan de Apollo-missiecontrolecomputers - ze gaven niet alleen vaste informatie weer. Ze communiceerden voortdurend met ruimtevaartuigen, werkten bij met telemetriegegevens en onthielden kritieke missieparameters. Dat is het soort dynamisch gedrag dat we vandaag gaan bouwen. Jouw extensie zal verbinding maken met het internet, echte milieugegevens ophalen en jouw instellingen onthouden voor de volgende keer.
+
+API-integratie klinkt misschien ingewikkeld, maar het is eigenlijk gewoon je code leren communiceren met andere diensten. Of je nu weergegevens, sociale mediafeeds of informatie over de ecologische voetafdruk ophaalt, zoals we vandaag gaan doen, het draait allemaal om het tot stand brengen van deze digitale verbindingen. We zullen ook onderzoeken hoe browsers informatie kunnen bewaren - vergelijkbaar met hoe bibliotheken kaartenbakken hebben gebruikt om te onthouden waar boeken thuishoren.
+
+Aan het einde van deze les heb je een browserextensie die echte gegevens ophaalt, gebruikersvoorkeuren opslaat en een soepele ervaring biedt. Laten we beginnen!
 
 ✅ Volg de genummerde segmenten in de juiste bestanden om te weten waar je je code moet plaatsen.
 
-### Stel de elementen in die je in de extensie wilt manipuleren:
+## Stel de elementen in om te manipuleren in de extensie
 
-Op dit punt heb je de HTML gebouwd voor het formulier en de resultaten `<div>` van je browserextensie. Vanaf nu werk je in het bestand `/src/index.js` en bouw je je extensie stap voor stap. Raadpleeg de [vorige les](../1-about-browsers/README.md) over het opzetten van je project en het bouwproces.
+Voordat je JavaScript de interface kan manipuleren, heeft het referenties naar specifieke HTML-elementen nodig. Denk eraan als een telescoop die op bepaalde sterren gericht moet worden - voordat Galileo de manen van Jupiter kon bestuderen, moest hij Jupiter zelf lokaliseren en erop focussen.
 
-Werkend in je `index.js`-bestand, begin je met het maken van enkele `const`-variabelen om de waarden te bewaren die gekoppeld zijn aan verschillende velden:
+In je `index.js`-bestand maken we `const`-variabelen die referenties vastleggen naar elk belangrijk formelement. Dit is vergelijkbaar met hoe wetenschappers hun apparatuur labelen - in plaats van elke keer door het hele laboratorium te zoeken, kunnen ze direct toegang krijgen tot wat ze nodig hebben.
 
-```JavaScript
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,123 +47,175 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Al deze velden worden gerefereerd via hun CSS-klasse, zoals je hebt ingesteld in de HTML in de vorige les.
+**Wat deze code doet:**
+- **Vastleggen** van formelementen met behulp van `document.querySelector()` en CSS-klasse-selectors
+- **Creëren** van referenties naar invoervelden voor de regio-naam en API-sleutel
+- **Opzetten** van verbindingen met resultaatweergeven elementen voor gegevens over koolstofgebruik
+- **Toegang instellen** tot UI-elementen zoals laadindicatoren en foutmeldingen
+- **Opslaan** van elke elementreferentie in een `const`-variabele voor eenvoudig hergebruik in je code
 
-### Voeg listeners toe
+## Voeg event listeners toe
 
-Voeg vervolgens event listeners toe aan het formulier en de knop om het formulier te wissen, zodat er iets gebeurt wanneer een gebruiker het formulier indient of op die resetknop klikt. Voeg ook de aanroep toe om de app te initialiseren onderaan het bestand:
+Nu gaan we ervoor zorgen dat je extensie reageert op gebruikersacties. Event listeners zijn de manier waarop je code gebruikersinteracties in de gaten houdt. Denk aan ze als de operators in vroege telefooncentrales - ze luisterden naar inkomende oproepen en verbonden de juiste circuits wanneer iemand een verbinding wilde maken.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Let op de verkorte notatie die wordt gebruikt om te luisteren naar een submit- of klikgebeurtenis, en hoe de gebeurtenis wordt doorgegeven aan de functies handleSubmit of reset. Kun je de equivalente langere versie van deze verkorte notatie schrijven? Welke versie heeft jouw voorkeur?
+**Begrijp deze concepten:**
+- **Bevestigt** een submit listener aan het formulier die wordt geactiveerd wanneer gebruikers op Enter drukken of op verzenden klikken
+- **Verbindt** een kliklistener aan de knop 'wissen' om het formulier opnieuw in te stellen
+- **Geeft** het event-object `(e)` door aan handlerfuncties voor extra controle
+- **Roept** de `init()`-functie onmiddellijk aan om de initiële status van je extensie in te stellen
 
-### Bouw de init()-functie en de reset()-functie uit:
+✅ Let op de korte pijlfunctie-syntaxis die hier wordt gebruikt. Deze moderne JavaScript-aanpak is overzichtelijker dan traditionele functie-expressies, maar beide werken even goed!
 
-Nu ga je de functie bouwen die de extensie initialiseert, genaamd init():
+## Bouw de initialisatie- en resetfuncties
 
-```JavaScript
+Laten we de initialisatielogica voor je extensie maken. De `init()`-functie is als het navigatiesysteem van een schip dat zijn instrumenten controleert - het bepaalt de huidige status en past de interface dienovereenkomstig aan. Het controleert of iemand je extensie eerder heeft gebruikt en laadt hun eerdere instellingen.
+
+De `reset()`-functie biedt gebruikers een frisse start - vergelijkbaar met hoe wetenschappers hun instrumenten tussen experimenten resetten om schone gegevens te garanderen.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-In deze functie zit interessante logica. Kun je zien wat er gebeurt?
+**Wat hier gebeurt:**
+- **Haalt** opgeslagen API-sleutel en regio op uit de lokale opslag van de browser
+- **Controleert** of dit een nieuwe gebruiker is (geen opgeslagen gegevens) of een terugkerende gebruiker
+- **Toont** het instellingsformulier voor nieuwe gebruikers en verbergt andere interface-elementen
+- **Laadt** automatisch opgeslagen gegevens voor terugkerende gebruikers en toont de resetoptie
+- **Beheert** de status van de gebruikersinterface op basis van beschikbare gegevens
 
-- Twee `const` worden ingesteld om te controleren of de gebruiker een APIKey en regio-code heeft opgeslagen in de lokale opslag.
-- Als een van deze null is, wordt het formulier weergegeven door de stijl ervan te veranderen naar 'block'.
-- Verberg de resultaten, de laadindicator en de clearBtn en stel eventuele foutmeldingen in op een lege string.
-- Als er een sleutel en regio bestaan, start een routine om:
-  - De API aan te roepen om gegevens over koolstofgebruik op te halen.
-  - Het resultatengebied te verbergen.
-  - Het formulier te verbergen.
-  - De resetknop weer te geven.
+**Belangrijke concepten over Local Storage:**
+- **Bewaren** van gegevens tussen browsersessies (in tegenstelling tot sessieopslag)
+- **Opslaan** van gegevens als sleutel-waardeparen met behulp van `getItem()` en `setItem()`
+- **Geeft** `null` terug wanneer er geen gegevens bestaan voor een bepaalde sleutel
+- **Biedt** een eenvoudige manier om gebruikersvoorkeuren en instellingen te onthouden
 
-Voordat je verder gaat, is het handig om meer te leren over een belangrijk concept dat beschikbaar is in browsers: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage is een handige manier om strings in de browser op te slaan als een `key-value`-paar. Dit type webopslag kan worden gemanipuleerd door JavaScript om gegevens in de browser te beheren. LocalStorage verloopt niet, terwijl SessionStorage, een ander soort webopslag, wordt gewist wanneer de browser wordt gesloten. De verschillende soorten opslag hebben hun eigen voor- en nadelen.
+> 💡 **Begrip van Browseropslag**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) is als het geven van persistent geheugen aan je extensie. Denk aan hoe de oude Bibliotheek van Alexandrië rollen opsloeg - informatie bleef beschikbaar, zelfs wanneer geleerden vertrokken en terugkwamen.
+>
+> **Belangrijke kenmerken:**
+> - **Bewaren** van gegevens, zelfs nadat je je browser sluit
+> - **Overleven** van computerherstarts en browsercrashes
+> - **Bieden** van aanzienlijke opslagruimte voor gebruikersvoorkeuren
+> - **Directe toegang** zonder netwerkvertragingen
 
-> Opmerking - je browserextensie heeft zijn eigen lokale opslag; het hoofdvenster van de browser is een andere instantie en gedraagt zich afzonderlijk.
+> **Belangrijke opmerking**: Je browserextensie heeft zijn eigen geïsoleerde lokale opslag die gescheiden is van gewone webpagina's. Dit biedt veiligheid en voorkomt conflicten met andere websites.
 
-Je stelt je APIKey in met een stringwaarde, bijvoorbeeld, en je kunt zien dat deze is ingesteld in Edge door een webpagina te "inspecteren" (je kunt met de rechtermuisknop op een browser klikken om te inspecteren) en naar het tabblad Toepassingen te gaan om de opslag te bekijken.
+Je kunt je opgeslagen gegevens bekijken door de ontwikkelaarstools van de browser te openen (F12), naar het tabblad **Application** te gaan en de sectie **Local Storage** uit te vouwen.
 
 ![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.nl.png)
 
-✅ Denk na over situaties waarin je bepaalde gegevens NIET in LocalStorage zou willen opslaan. Over het algemeen is het een slecht idee om API-sleutels in LocalStorage te plaatsen! Kun je zien waarom? In ons geval, omdat onze app puur bedoeld is om te leren en niet zal worden gepubliceerd in een app store, gebruiken we deze methode.
+> ⚠️ **Veiligheidsoverweging**: In productie-applicaties brengt het opslaan van API-sleutels in LocalStorage beveiligingsrisico's met zich mee, omdat JavaScript toegang heeft tot deze gegevens. Voor leerdoeleinden werkt deze aanpak prima, maar echte applicaties zouden veilige server-side opslag moeten gebruiken voor gevoelige gegevens.
 
-Merk op dat je de Web API gebruikt om LocalStorage te manipuleren, door gebruik te maken van `getItem()`, `setItem()`, of `removeItem()`. Het wordt breed ondersteund in browsers.
+## Verwerk formulierinzending
 
-Voordat je de functie `displayCarbonUsage()` bouwt die wordt aangeroepen in `init()`, laten we de functionaliteit bouwen om de initiële formulierinzending te verwerken.
+Nu gaan we verwerken wat er gebeurt wanneer iemand je formulier indient. Standaard herladen browsers de pagina wanneer formulieren worden ingediend, maar we zullen dit gedrag onderscheppen om een soepelere ervaring te creëren.
 
-### Verwerk de formulierinzending
+Deze aanpak weerspiegelt hoe missiecontrole omgaat met communicatie van ruimtevaartuigen - in plaats van het hele systeem opnieuw in te stellen voor elke transmissie, behouden ze continue werking terwijl ze nieuwe informatie verwerken.
 
-Maak een functie genaamd `handleSubmit` die een event-argument `(e)` accepteert. Stop de gebeurtenis van propagatie (in dit geval willen we voorkomen dat de browser ververst) en roep een nieuwe functie aan, `setUpUser`, waarbij je de argumenten `apiKey.value` en `region.value` doorgeeft. Op deze manier gebruik je de twee waarden die via het initiële formulier worden binnengebracht wanneer de juiste velden zijn ingevuld.
+Maak een functie die het formulierinzendingsevenement vastlegt en de invoer van de gebruiker extraheert:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ Verfris je geheugen - de HTML die je in de vorige les hebt ingesteld, heeft twee invoervelden waarvan de `values` worden vastgelegd via de `const` die je bovenaan het bestand hebt ingesteld, en ze zijn beide `required`, zodat de browser gebruikers stopt van het invoeren van null-waarden.
+**In het bovenstaande hebben we:**
+- **Voorkomen** van het standaardgedrag van formulierinzending dat de pagina zou verversen
+- **Extraheert** gebruikersinvoergegevens uit de API-sleutel- en regiovelden
+- **Geeft** de formuliergegevens door aan de `setUpUser()`-functie voor verwerking
+- **Behoudt** single-page applicatiegedrag door paginaherlaadacties te vermijden
 
-### Stel de gebruiker in
+✅ Onthoud dat je HTML-formuliervelden het `required`-attribuut bevatten, zodat de browser automatisch valideert dat gebruikers zowel de API-sleutel als de regio opgeven voordat deze functie wordt uitgevoerd.
 
-Ga verder met de functie `setUpUser`, hier stel je de waarden voor lokale opslag in voor apiKey en regionName. Voeg een nieuwe functie toe:
+## Stel gebruikersvoorkeuren in
 
-```JavaScript
+De `setUpUser`-functie is verantwoordelijk voor het opslaan van de gebruikersgegevens en het initiëren van de eerste API-aanroep. Dit zorgt voor een soepele overgang van de setup naar het weergeven van resultaten.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-Deze functie stelt een laadbericht in om te tonen terwijl de API wordt aangeroepen. Op dit punt ben je aangekomen bij het maken van de belangrijkste functie van deze browserextensie!
+**Stap voor stap, wat hier gebeurt:**
+- **Slaat** de API-sleutel en regiocode op in de lokale opslag voor toekomstig gebruik
+- **Toont** een laadindicator om gebruikers te informeren dat gegevens worden opgehaald
+- **Verwijdert** eventuele eerdere foutmeldingen van de weergave
+- **Toont** de knop 'wissen' zodat gebruikers hun instellingen later kunnen resetten
+- **Start** de API-aanroep om echte gegevens over koolstofgebruik op te halen
 
-### Toon koolstofgebruik
+Deze functie creëert een naadloze gebruikerservaring door zowel gegevensopslag als gebruikersinterface-updates in één gecoördineerde actie te beheren.
 
-Eindelijk is het tijd om de API te raadplegen!
+## Toon gegevens over koolstofgebruik
 
-Voordat we verder gaan, moeten we APIs bespreken. APIs, of [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), zijn een cruciaal onderdeel van de gereedschapskist van een webontwikkelaar. Ze bieden standaard manieren voor programma's om met elkaar te communiceren en te interfacen. Bijvoorbeeld, als je een website bouwt die een database moet raadplegen, heeft iemand mogelijk een API gemaakt die je kunt gebruiken. Hoewel er veel soorten APIs zijn, is een van de meest populaire een [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Nu gaan we je extensie verbinden met externe gegevensbronnen via APIs. Dit transformeert je extensie van een op zichzelf staande tool naar iets dat toegang heeft tot realtime informatie van over het hele internet.
 
-✅ De term 'REST' staat voor 'Representational State Transfer' en maakt gebruik van verschillende geconfigureerde URLs om gegevens op te halen. Doe wat onderzoek naar de verschillende soorten APIs die beschikbaar zijn voor ontwikkelaars. Welk formaat spreekt jou aan?
+**Begrip van APIs**
 
-Er zijn belangrijke dingen om op te merken over deze functie. Ten eerste, let op het [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Door je functies zo te schrijven dat ze asynchroon werken, wachten ze op een actie, zoals het retourneren van gegevens, voordat ze doorgaan.
+[APIs](https://www.webopedia.com/TERM/A/API.html) zijn hoe verschillende applicaties met elkaar communiceren. Denk aan ze als het telegraafsysteem dat in de 19e eeuw verre steden met elkaar verbond - operators stuurden verzoeken naar verre stations en ontvingen antwoorden met de gevraagde informatie. Elke keer dat je sociale media controleert, een vraag stelt aan een spraakassistent of een bezorgapp gebruikt, faciliteren APIs deze gegevensuitwisselingen.
+
+**Belangrijke concepten over REST APIs:**
+- **REST** staat voor 'Representational State Transfer'
+- **Gebruikt** standaard HTTP-methoden (GET, POST, PUT, DELETE) om met gegevens te werken
+- **Geeft** gegevens terug in voorspelbare formaten, meestal JSON
+- **Biedt** consistente, URL-gebaseerde eindpunten voor verschillende soorten verzoeken
+
+✅ De [CO2 Signal API](https://www.co2signal.com/) die we gaan gebruiken biedt realtime gegevens over koolstofintensiteit van elektriciteitsnetten wereldwijd. Dit helpt gebruikers de milieueffecten van hun elektriciteitsgebruik te begrijpen!
+
+> 💡 **Begrip van Asynchrone JavaScript**: Het [`async`-keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) stelt je code in staat om meerdere operaties tegelijkertijd te verwerken. Wanneer je gegevens van een server opvraagt, wil je niet dat je hele extensie vastloopt - dat zou zijn alsof luchtverkeersleiding alle operaties stopt terwijl ze wachten op één vliegtuig om te reageren.
+>
+> **Belangrijke voordelen:**
+> - **Behoudt** de responsiviteit van de extensie terwijl gegevens worden geladen
+> - **Staat** andere code toe om door te gaan met uitvoeren tijdens netwerkverzoeken
+> - **Verbetert** de leesbaarheid van code in vergelijking met traditionele callbackpatronen
+> - **Maakt** gracieus foutbeheer mogelijk bij netwerkproblemen
 
 Hier is een korte video over `async`:
 
@@ -165,70 +223,119 @@ Hier is een korte video over `async`:
 
 > 🎥 Klik op de afbeelding hierboven voor een video over async/await.
 
-Maak een nieuwe functie om de C02Signal API te raadplegen:
+Maak de functie om gegevens over koolstofgebruik op te halen en weer te geven:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Dit is een grote functie. Wat gebeurt hier?
+**Wat hier gebeurt:**
+- **Gebruikt** de moderne `fetch()` API in plaats van externe bibliotheken zoals Axios voor schonere, afhankelijkheidsvrije code
+- **Implementeert** correcte foutcontrole met `response.ok` om API-fouten vroegtijdig op te vangen
+- **Behandelt** asynchrone operaties met `async/await` voor een meer leesbare codeflow
+- **Authenticeert** met de CO2 Signal API via de `auth-token` header
+- **Parseert** JSON-reactiegegevens en extraheert informatie over koolstofintensiteit
+- **Update** meerdere UI-elementen met geformatteerde milieugegevens
+- **Biedt** gebruiksvriendelijke foutmeldingen wanneer API-aanroepen mislukken
 
-- Volgens best practices gebruik je een `async` keyword om deze functie asynchroon te laten werken. De functie bevat een `try/catch`-blok omdat het een belofte zal retourneren wanneer de API gegevens retourneert. Omdat je geen controle hebt over de snelheid waarmee de API zal reageren (het kan helemaal niet reageren!), moet je deze onzekerheid asynchroon afhandelen.
-- Je raadpleegt de co2signal API om gegevens over je regio op te halen, met behulp van je API-sleutel. Om die sleutel te gebruiken, moet je een soort authenticatie gebruiken in je headerparameters.
-- Zodra de API reageert, wijs je verschillende elementen van de responsgegevens toe aan de delen van je scherm die je hebt ingesteld om deze gegevens weer te geven.
-- Als er een fout is, of als er geen resultaat is, toon je een foutmelding.
+**Belangrijke moderne JavaScript-concepten die worden gedemonstreerd:**
+- **Template literals** met `${}`-syntaxis voor schone stringopmaak
+- **Foutbeheer** met try/catch-blokken voor robuuste applicaties
+- **Async/await**-patroon voor gracieus omgaan met netwerkverzoeken
+- **Object destructuring** om specifieke gegevens uit API-reacties te halen
+- **Method chaining** voor meerdere DOM-manipulaties
 
-✅ Het gebruik van asynchrone programmeerpatronen is een andere zeer nuttige tool in je gereedschapskist. Lees [over de verschillende manieren](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) waarop je dit type code kunt configureren.
+✅ Deze functie demonstreert verschillende belangrijke webontwikkelingsconcepten - communiceren met externe servers, omgaan met authenticatie, gegevens verwerken, interfaces bijwerken en fouten gracieus beheren. Dit zijn fundamentele vaardigheden die professionele ontwikkelaars regelmatig gebruiken.
 
-Gefeliciteerd! Als je je extensie bouwt (`npm run build`) en deze ververst in je extensiepaneel, heb je een werkende extensie! Het enige dat nog niet werkt, is het pictogram, en dat fix je in de volgende les.
+🎉 **Wat je hebt bereikt:** Je hebt een browserextensie gemaakt die:
+- **Verbindt** met het internet en echte milieugegevens ophaalt
+- **Bewaren** van gebruikersinstellingen tussen sessies
+- **Behandelt** fouten gracieus in plaats van te crashen
+- **Biedt** een soepele, professionele gebruikerservaring
+
+Test je werk door `npm run build` uit te voeren en je extensie in de browser te vernieuwen. Je hebt nu een functionele tracker voor de ecologische voetafdruk. De volgende les voegt dynamische pictogramfunctionaliteit toe om de extensie compleet te maken.
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+
+**Beschrijving:** Verbeter de browserextensie door foutafhandelingsverbeteringen en gebruikerservaringsfuncties toe te voegen. Deze uitdaging helpt je oefenen met het werken met APIs, lokale opslag en DOM-manipulatie met moderne JavaScript-patronen.
+
+**Prompt:** Maak een verbeterde versie van de displayCarbonUsage-functie die het volgende bevat: 1) Een retry-mechanisme voor mislukte API-aanroepen met exponentiële backoff, 2) Invoervalidatie voor de regiocode voordat de API-aanroep wordt gedaan, 3) Een laadanimatie met voortgangsindicatoren, 4) Caching van API-reacties in localStorage met vervaltijdstempels (cache voor 30 minuten), en 5) Een functie om historische gegevens van eerdere API-aanroepen weer te geven. Voeg ook correcte TypeScript-stijl JSDoc-commentaar toe om alle functieparameters en retourtypes te documenteren.
+
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
+
 ## 🚀 Uitdaging
 
-We hebben tot nu toe verschillende soorten APIs besproken in deze lessen. Kies een web-API en onderzoek in detail wat deze biedt. Bekijk bijvoorbeeld de APIs die beschikbaar zijn binnen browsers, zoals de [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Wat maakt volgens jou een geweldige API?
+Breid je begrip van APIs uit door de rijkdom aan browsergebaseerde APIs te verkennen die beschikbaar zijn voor webontwikkeling. Kies een van deze browser-APIs en bouw een kleine demonstratie:
 
-## Post-Lecture Quiz
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Verkrijg de huidige locatie van de gebruiker
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Stuur desktopmeldingen
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Maak interactieve sleepinterfaces
+- [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) - Geavanceerde technieken voor lokale opslag
+- [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) - Moderne alternatief voor XMLHttpRequest
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/26)
+**Onderzoeksvragen om te overwegen:**
+- Welke problemen in de echte wereld lost deze API op?
+- Hoe gaat de API om met fouten en randgevallen?
+- Welke veiligheidsaspecten zijn er bij het gebruik van deze API?
+- Hoe breed wordt deze API ondersteund door verschillende browsers?
+
+Na je onderzoek, identificeer welke kenmerken een API gebruiksvriendelijk en betrouwbaar maken.
+
+## Quiz na de les
+
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Review & Zelfstudie
-
-Je hebt in deze les geleerd over LocalStorage en APIs, beide zeer nuttig voor de professionele webontwikkelaar. Kun je bedenken hoe deze twee dingen samenwerken? Denk na over hoe je een website zou ontwerpen die items opslaat om te worden gebruikt door een API.
+Je hebt in deze les geleerd over LocalStorage en API's, beide erg nuttig voor de professionele webontwikkelaar. Kun je bedenken hoe deze twee dingen samenwerken? Denk na over hoe je een website zou ontwerpen die items opslaat om te worden gebruikt door een API.
 
 ## Opdracht
 
@@ -237,4 +344,4 @@ Je hebt in deze les geleerd over LocalStorage en APIs, beide zeer nuttig voor de
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

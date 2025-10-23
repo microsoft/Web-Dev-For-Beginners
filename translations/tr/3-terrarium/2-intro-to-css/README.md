@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
-  "translation_date": "2025-08-29T00:28:32+00:00",
+  "original_hash": "92c4431eac70670b0450b02c1d11279a",
+  "translation_date": "2025-10-22T23:58:06+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "tr"
 }
@@ -12,273 +12,475 @@ CO_OP_TRANSLATOR_METADATA:
 ![CSS'e Giriş](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.tr.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
+HTML teraryumunuzun oldukça basit göründüğünü hatırlıyor musunuz? CSS, bu sade yapıyı görsel olarak çekici bir şeye dönüştürdüğümüz yerdir.
+
+Eğer HTML bir evin iskeleti gibiyse, CSS o evi ev gibi hissettiren her şeydir - boya renkleri, mobilya düzeni, aydınlatma ve odaların birbirine uyumu. Versailles Sarayı'nın basit bir av köşkü olarak başladığını, ancak dekorasyon ve düzenlemeye gösterilen özenle dünyanın en görkemli binalarından birine dönüştüğünü düşünün.
+
+Bugün, teraryumunuzu işlevsel bir yapıdan şık bir tasarıma dönüştüreceğiz. Öğreneceğiniz şeyler arasında öğeleri tam olarak konumlandırmak, düzenleri farklı ekran boyutlarına uyumlu hale getirmek ve web sitelerini çekici kılan görsel cazibeyi yaratmak var.
+
+Bu dersin sonunda, stratejik CSS stillendirmesinin projenizi nasıl dramatik bir şekilde geliştirebileceğini göreceksiniz. Haydi teraryumunuza biraz stil ekleyelim.
+
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/17)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/17)
 
-### Giriş
+## CSS ile Başlangıç
 
-CSS, yani Cascading Style Sheets, web geliştirme dünyasında önemli bir sorunu çözer: web sitenizi nasıl güzel görünecek şekilde tasarlarsınız. Uygulamalarınızı stilize etmek, onları daha kullanışlı ve estetik hale getirir; ayrıca CSS kullanarak Responsive Web Design (RWD) oluşturabilirsiniz - bu, uygulamalarınızın hangi ekran boyutunda görüntülenirse görüntülensin iyi görünmesini sağlar. CSS sadece uygulamanızı güzel göstermekle kalmaz; spesifikasyonu, uygulamalarınız için gelişmiş etkileşimler sağlayabilecek animasyonlar ve dönüşümleri de içerir. CSS Çalışma Grubu, mevcut CSS spesifikasyonlarını korumaya yardımcı olur; çalışmalarını [World Wide Web Consortium'un sitesinden](https://www.w3.org/Style/CSS/members) takip edebilirsiniz.
+CSS genellikle sadece "şeyleri güzel yapmak" olarak düşünülür, ancak çok daha geniş bir amaca hizmet eder. CSS, bir filmin yönetmeni olmak gibidir - sadece her şeyin nasıl göründüğünü değil, aynı zamanda nasıl hareket ettiğini, etkileşimlere nasıl tepki verdiğini ve farklı durumlara nasıl uyum sağladığını kontrol edersiniz.
 
-> Not: CSS, webdeki her şey gibi gelişen bir dildir ve tüm tarayıcılar spesifikasyonun yeni bölümlerini desteklemez. Uygulamalarınızı her zaman [CanIUse.com](https://caniuse.com) adresinden kontrol ederek doğrulayın.
+Modern CSS oldukça yeteneklidir. Telefonlar, tabletler ve masaüstü bilgisayarlar için düzenleri otomatik olarak ayarlayan kodlar yazabilirsiniz. Kullanıcıların dikkatini gerektiği yere yönlendiren akıcı animasyonlar oluşturabilirsiniz. Her şey bir araya geldiğinde sonuçlar oldukça etkileyici olabilir.
 
-Bu derste, çevrimiçi teraryumumuza stiller ekleyeceğiz ve CSS'in birkaç konsepti hakkında daha fazla bilgi edineceğiz: kaskad, kalıtım, seçicilerin kullanımı, konumlandırma ve CSS kullanarak düzen oluşturma. Bu süreçte teraryumu düzenleyecek ve gerçek teraryumu oluşturacağız.
+> 💡 **Profesyonel İpucu**: CSS sürekli olarak yeni özellikler ve yeteneklerle gelişiyor. Üretim projelerinde daha yeni CSS özelliklerini kullanmadan önce her zaman [CanIUse.com](https://caniuse.com) adresinden tarayıcı desteğini kontrol edin.
+
+**Bu derste neler başaracağız:**
+- Modern CSS tekniklerini kullanarak teraryumunuz için eksiksiz bir görsel tasarım **oluşturacağız**
+- Cascade, kalıtım ve CSS seçicileri gibi temel kavramları **keşfedeceğiz**
+- Duyarlı konumlandırma ve düzen stratejilerini **uygulayacağız**
+- CSS şekilleri ve stillendirme kullanarak teraryum kabını **inşa edeceğiz**
 
 ### Ön Koşul
 
-Teraryumunuz için HTML'nin oluşturulmuş ve stilize edilmeye hazır olması gerekir.
+Bir önceki dersten teraryumunuz için HTML yapısını tamamlamış olmalı ve stillendirmeye hazır olmalısınız.
 
-> Videoyu kontrol edin
+> 📺 **Video Kaynağı**: Bu faydalı video rehberine göz atın
+>
+> [![CSS Temelleri Eğitimi](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
-> 
-> [![Git ve GitHub temel bilgileri videosu](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+### CSS Dosyanızı Ayarlama
 
-### Görev
+Stil vermeye başlamadan önce CSS'i HTML'e bağlamamız gerekiyor. Bu bağlantı, tarayıcıya teraryumumuz için stil talimatlarını nerede bulacağını söyler.
 
-Teraryum klasörünüzde `style.css` adında yeni bir dosya oluşturun. Bu dosyayı `<head>` bölümüne dahil edin:
+Teraryum klasörünüzde `style.css` adında yeni bir dosya oluşturun ve ardından HTML belgenizin `<head>` bölümüne bağlayın:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
 ```
 
----
+**Bu kodun yaptığı şeyler:**
+- HTML ve CSS dosyalarınız arasında bir bağlantı **oluşturur**
+- Tarayıcıya `style.css` dosyasından stilleri yüklemesini ve uygulamasını **söyler**
+- Bu dosyanın bir CSS dosyası olduğunu belirtmek için `rel="stylesheet"` özelliğini **kullanır**
+- Dosya yolunu `href="./style.css"` ile **referans alır**
 
-## Kaskad
+## CSS Cascade'i Anlamak
 
-Cascading Style Sheets, stillerin 'kaskad' olduğu fikrini içerir; bu, bir stilin uygulanmasının önceliğine göre yönlendirildiği anlamına gelir. Bir web sitesi yazarı tarafından ayarlanan stiller, bir tarayıcı tarafından ayarlanan stillerden önceliklidir. 'Inline' olarak ayarlanan stiller, harici bir stil dosyasında ayarlanan stillerden önceliklidir.
+CSS'in neden "Cascading" Style Sheets olarak adlandırıldığını hiç merak ettiniz mi? Stiller bir şelale gibi aşağı doğru akar ve bazen birbirleriyle çakışabilir.
 
-### Görev
+Askeri komuta yapılarının nasıl çalıştığını düşünün - bir generalin emri "tüm askerler yeşil giyinsin" diyebilir, ancak biriminize özel bir emir "tören için mavi elbise giyin" diyebilir. Daha spesifik talimat öncelik kazanır. CSS benzer bir mantığı takip eder ve bu hiyerarşiyi anlamak hata ayıklamayı çok daha yönetilebilir hale getirir.
 
-`<h1>` etiketinize "color: red" inline stilini ekleyin:
+### Cascade Önceliğini Deneyimlemek
 
-```HTML
+Bir stil çatışması yaratarak cascade'i görelim. Öncelikle `<h1>` etiketinize bir inline stil ekleyin:
+
+```html
 <h1 style="color: red">My Terrarium</h1>
 ```
 
-Ardından, `style.css` dosyanıza aşağıdaki kodu ekleyin:
+**Bu kodun yaptığı şeyler:**
+- Inline stil kullanarak `<h1>` öğesine doğrudan kırmızı bir renk **uygular**
+- CSS'i doğrudan HTML'e gömmek için `style` özelliğini **kullanır**
+- Bu belirli öğe için en yüksek öncelikli stil kuralını **oluşturur**
 
-```CSS
+Sonra, `style.css` dosyanıza şu kuralı ekleyin:
+
+```css
 h1 {
- color: blue;
+  color: blue;
 }
 ```
 
-✅ Web uygulamanızda hangi renk görüntüleniyor? Neden? Stilleri geçersiz kılmanın bir yolunu bulabilir misiniz? Bunu ne zaman yapmak istersiniz veya neden yapmazsınız?
+**Yukarıdaki kodda:**
+- Tüm `<h1>` öğelerini hedefleyen bir CSS kuralı **tanımladık**
+- Metin rengini mavi olarak ayarladık ve bunu harici bir stil dosyasıyla **yaptık**
+- Inline stillere kıyasla daha düşük öncelikli bir kural **oluşturduk**
 
----
+✅ **Bilgi Kontrolü**: Web uygulamanızda hangi renk görüntüleniyor? Neden o renk kazandı? Stilleri geçersiz kılmak isteyebileceğiniz senaryolar düşünebilir misiniz?
 
-## Kalıtım
+> 💡 **CSS Öncelik Sırası (yüksekten düşüğe):**
+> 1. **Inline stiller** (style özelliği)
+> 2. **ID'ler** (#myId)
+> 3. **Sınıflar** (.myClass) ve özellikler
+> 4. **Element seçiciler** (h1, div, p)
+> 5. **Tarayıcı varsayılanları**
 
-Stiller, bir üst öğeden bir alt öğeye miras alınır; bu, iç içe geçmiş öğelerin ebeveynlerinin stillerini miras aldığı anlamına gelir.
+## CSS Kalıtımını Anlamak
 
-### Görev
+CSS kalıtımı genetik gibi çalışır - öğeler, ebeveyn öğelerinden belirli özellikleri miras alır. Eğer body öğesinde yazı tipi ailesini ayarlarsanız, içindeki tüm metinler otomatik olarak aynı yazı tipini kullanır. Bu, Habsburg ailesinin belirgin çene yapısının nesiller boyunca her birey için özel olarak belirtilmeden ortaya çıkmasına benzer.
 
-Body'nin fontunu belirli bir fonta ayarlayın ve iç içe geçmiş bir öğenin fontunu kontrol edin:
+Ancak her şey miras alınmaz. Yazı tipleri ve renkler gibi metin stilleri miras alınır, ancak kenar boşlukları ve çerçeveler gibi düzen özellikleri miras alınmaz. Tıpkı çocukların fiziksel özellikleri miras alması ama ebeveynlerinin moda seçimlerini miras almaması gibi.
 
-```CSS
+### Yazı Tipi Kalıtımını Gözlemlemek
+
+`<body>` öğesinde bir yazı tipi ailesi ayarlayarak kalıtımı görelim:
+
+```css
 body {
-	font-family: helvetica, arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ```
 
-Tarayıcınızın 'Elements' sekmesini açın ve H1'in fontunu gözlemleyin. Tarayıcıda belirtildiği gibi, fontunu body'den miras alır:
+**Burada olanları açıklayalım:**
+- `<body>` öğesini hedef alarak tüm sayfa için yazı tipi ailesini **ayarlar**
+- Daha iyi tarayıcı uyumluluğu için yedek seçeneklerle bir yazı tipi yığını **kullanır**
+- Farklı işletim sistemlerinde harika görünen modern sistem yazı tiplerini **uygular**
+- Tüm alt öğelerin bu yazı tipini, özellikle geçersiz kılınmadıkça, **miras almasını sağlar**
 
-![miras alınan font](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.tr.png)
+Tarayıcınızın geliştirici araçlarını (F12) açın, Elemanlar sekmesine gidin ve `<h1>` öğenizi inceleyin. `<body>` öğesinden yazı tipi ailesini miras aldığını göreceksiniz:
 
-✅ İç içe geçmiş bir stilin farklı bir özelliği miras almasını sağlayabilir misiniz?
+![miras alınan yazı tipi](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.tr.png)
 
----
+✅ **Deney Zamanı**: `<body>` öğesinde `color`, `line-height` veya `text-align` gibi diğer miras alınabilir özellikleri ayarlamayı deneyin. Başlığınıza ve diğer öğelere ne olur?
 
-## CSS Seçiciler
+> 📝 **Miras Alınabilir Özellikler**: `color`, `font-family`, `font-size`, `line-height`, `text-align`, `visibility`
+>
+> **Miras Alınamayan Özellikler**: `margin`, `padding`, `border`, `width`, `height`, `position`
 
-### Etiketler
+## CSS Seçicilerini Anlamak
 
-Şu ana kadar, `style.css` dosyanızda yalnızca birkaç etiket stilize edildi ve uygulama oldukça garip görünüyor:
+CSS seçicileri, belirli öğeleri stil vermek için hedeflemenin yoludur. Bu, kesin talimatlar vermek gibidir - "ev" demek yerine "Maple Caddesi'ndeki kırmızı kapılı mavi ev" diyebilirsiniz.
 
-```CSS
+CSS, spesifik olmanın farklı yollarını sunar ve doğru seçiciyi seçmek, görev için uygun aracı seçmek gibidir. Bazen mahalledeki her kapıyı stil vermeniz gerekir, bazen de sadece belirli bir kapıyı.
+
+### Element Seçiciler (Etiketler)
+
+Element seçiciler, HTML öğelerini etiket adlarına göre hedefler. Sayfanızda genel olarak uygulanacak temel stiller ayarlamak için mükemmeldir:
+
+```css
 body {
-	font-family: helvetica, arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-	color: #3a241d;
-	text-align: center;
+  color: #3a241d;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 ```
 
-Bu etiketleri stilize etme yöntemi, benzersiz öğeler üzerinde kontrol sağlar, ancak teraryumunuzdaki birçok bitkinin stillerini kontrol etmeniz gerekir. Bunu yapmak için CSS seçicilerinden yararlanmanız gerekir.
+**Bu stilleri anlamak:**
+- `body` seçici ile tüm sayfa boyunca tutarlı tipografi **ayarlar**
+- Daha iyi kontrol için varsayılan tarayıcı kenar boşluklarını ve dolgusunu **kaldırır**
+- Tüm başlık öğelerini renk, hizalama ve boşluklarla **stilize eder**
+- Ölçeklenebilir, erişilebilir yazı tipi boyutları için `rem` birimlerini **kullanır**
 
-### Id'ler
+Element seçiciler genel stil vermek için iyi çalışsa da, teraryumunuzdaki bitkiler gibi bireysel bileşenleri stilize etmek için daha spesifik seçicilere ihtiyacınız olacak.
 
-Sol ve sağ konteynerleri düzenlemek için biraz stil ekleyin. İşaretlemede yalnızca bir sol konteyner ve bir sağ konteyner olduğu için, bunlara id'ler verilmiştir. Stil vermek için `#` kullanın:
+### Benzersiz Öğeler için ID Seçiciler
 
-```CSS
+ID seçiciler `#` sembolünü kullanır ve belirli `id` özelliklerine sahip öğeleri hedefler. ID'ler bir sayfada benzersiz olmalıdır, bu nedenle teraryumunuzun sol ve sağ bitki kapları gibi özel öğeleri stilize etmek için mükemmeldir.
+
+Teraryumunuzdaki bitkilerin yer alacağı yan kaplar için stil oluşturmayı deneyelim:
+
+```css
 #left-container {
-	background-color: #eee;
-	width: 15%;
-	left: 0px;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+  background-color: #f5f5f5;
+  width: 15%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 #right-container {
-	background-color: #eee;
-	width: 15%;
-	right: 0px;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+  background-color: #f5f5f5;
+  width: 15%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 ```
 
-Burada, bu konteynerleri ekranın en soluna ve en sağına mutlak konumlandırma ile yerleştirdiniz ve genişlikleri için yüzde kullandınız, böylece küçük mobil ekranlar için ölçeklenebilirler.
+**Bu kodun yaptığı şeyler:**
+- `absolute` konumlandırmayı kullanarak kapları ekranın sol ve sağ kenarlarına **yerleştirir**
+- Ekran boyutuna uyum sağlayan duyarlı yükseklik için `vh` birimlerini **kullanır**
+- `box-sizing: border-box` özelliğini **uygular**, böylece dolgu toplam genişliğe dahil edilir
+- Sıfır değerlerinden gereksiz `px` birimlerini **kaldırır** ve kodu daha temiz hale getirir
+- Gözleri yormayan hafif bir arka plan rengi **ayarlar**
 
-✅ Bu kod oldukça tekrarlı, dolayısıyla "DRY" (Don't Repeat Yourself - Kendini Tekrarlama) değil; id'leri stilize etmek için daha iyi bir yol bulabilir misiniz, belki bir id ve bir sınıf ile? İşaretlemeyi değiştirmeniz ve CSS'i yeniden düzenlemeniz gerekir:
+✅ **Kod Kalitesi Meydan Okuması**: Bu CSS'in DRY (Kendini Tekrarlama) ilkesini ihlal ettiğini fark ettiniz mi? Bunu hem bir ID hem de bir sınıf kullanarak nasıl yeniden düzenleyebilirsiniz?
 
+**Geliştirilmiş yaklaşım:**
 ```html
 <div id="left-container" class="container"></div>
+<div id="right-container" class="container"></div>
 ```
 
-### Sınıflar
+```css
+.container {
+  background-color: #f5f5f5;
+  width: 15%;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 
-Yukarıdaki örnekte, ekrandaki iki benzersiz öğeyi stilize ettiniz. Ekrandaki birçok öğeye stil uygulamak istiyorsanız, CSS sınıflarını kullanabilirsiniz. Sol ve sağ konteynerlerdeki bitkileri düzenlemek için bunu yapın.
+#left-container {
+  left: 0;
+}
 
-HTML işaretlemesindeki her bitkinin id'ler ve sınıfların bir kombinasyonuna sahip olduğunu fark edin. Buradaki id'ler, teraryum bitki yerleşimini manipüle etmek için daha sonra ekleyeceğiniz JavaScript tarafından kullanılır. Ancak sınıflar, tüm bitkilere belirli bir stil verir.
+#right-container {
+  right: 0;
+}
+```
 
+### Yeniden Kullanılabilir Stiller için Sınıf Seçiciler
+
+Sınıf seçiciler `.` sembolünü kullanır ve birden fazla öğeye aynı stilleri uygulamak istediğinizde mükemmeldir. ID'lerin aksine, sınıflar HTML boyunca tekrar kullanılabilir, bu da onları tutarlı stil kalıpları için ideal kılar.
+
+Teraryumumuzda, her bitkinin benzer bir stil alması gerekiyor, ancak aynı zamanda bireysel konumlandırmaya da ihtiyaç duyuyor. Paylaşılan stiller için sınıfların ve benzersiz konumlandırma için ID'lerin bir kombinasyonunu kullanacağız.
+
+**Her bitki için HTML yapısı:**
 ```html
 <div class="plant-holder">
-	<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.tr.png" />
 </div>
 ```
 
-`style.css` dosyanıza aşağıdakileri ekleyin:
+**Anahtar öğeler açıklandı:**
+- Tüm bitkiler için tutarlı kaplama stilleri sağlamak için `class="plant-holder"` **kullanır**
+- Paylaşılan görüntü stilleri ve davranışı için `class="plant"` **uygular**
+- Bireysel konumlandırma ve JavaScript etkileşimi için benzersiz `id="plant1"` **içerir**
+- Ekran okuyucu erişilebilirliği için açıklayıcı alt metin **sağlar**
 
-```CSS
+Şimdi bu stilleri `style.css` dosyanıza ekleyin:
+
+```css
 .plant-holder {
-	position: relative;
-	height: 13%;
-	left: -10px;
+  position: relative;
+  height: 13%;
+  left: -0.6rem;
 }
 
 .plant {
-	position: absolute;
-	max-width: 150%;
-	max-height: 150%;
-	z-index: 2;
+  position: absolute;
+  max-width: 150%;
+  max-height: 150%;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.plant:hover {
+  transform: scale(1.05);
 }
 ```
 
-Bu kod parçasında dikkat çeken şey, göreceli ve mutlak konumlandırmanın karışımıdır; bunu bir sonraki bölümde ele alacağız. Yüksekliklerin yüzde ile nasıl ele alındığına bir göz atın:
+**Bu stilleri açıklamak:**
+- Konumlandırma bağlamı oluşturmak için bitki tutucusuna göreli konumlandırma **uygular**
+- Tüm bitki tutucularını dikey olarak kaydırmadan sığacak şekilde %13 yükseklik **ayarlar**
+- Tutucuları hafifçe sola kaydırarak bitkileri kaplar içinde daha iyi **merkezler**
+- Bitkilerin `max-width` ve `max-height` özellikleriyle duyarlı bir şekilde ölçeklenmesine **izin verir**
+- Bitkileri teraryumdaki diğer öğelerin üzerine yerleştirmek için `z-index` **kullanır**
+- Daha iyi kullanıcı etkileşimi için CSS geçişleriyle hafif bir hover efekti **ekler**
 
-Bitki tutucunun yüksekliğini %13 olarak ayarladınız, bu, tüm bitkilerin dikey konteynerlerde kaydırma gerektirmeden görüntülenmesini sağlamak için iyi bir sayıdır.
+✅ **Eleştirel Düşünme**: Neden hem `.plant-holder` hem de `.plant` seçicilerine ihtiyacımız var? Sadece birini kullanmaya çalışsaydık ne olurdu?
 
-Bitki tutucuyu sola hareket ettirerek bitkilerin konteyner içinde daha ortalanmış görünmesini sağladınız. Görsellerin büyük bir miktarda şeffaf arka planı vardır, bu da onları daha sürüklenebilir hale getirir, bu yüzden ekranda daha iyi oturması için sola itilmesi gerekir.
+> 💡 **Tasarım Deseni**: Kaplama (`.plant-holder`) düzen ve konumlandırmayı kontrol ederken, içerik (`.plant`) görünüm ve ölçeklemeyi kontrol eder. Bu ayrım kodu daha sürdürülebilir ve esnek hale getirir.
 
-Ardından, bitkinin kendisine %150 maksimum genişlik verildi. Bu, tarayıcı küçüldükçe küçülmesini sağlar. Tarayıcınızı yeniden boyutlandırmayı deneyin; bitkiler konteynerlerinde kalır ancak küçülerek sığar.
+## CSS Konumlandırmayı Anlamak
 
-Ayrıca dikkat çeken bir diğer şey, z-index'in kullanımıdır; bu, bir öğenin göreceli yüksekliğini kontrol eder (bitkilerin konteynerin üstünde oturması ve teraryumun içinde görünmesi için).
+CSS konumlandırma, bir oyunun sahne yönetmeni olmak gibidir - her aktörün nerede duracağını ve sahnede nasıl hareket edeceğini yönetirsiniz. Bazı aktörler standart düzene uyar, bazıları ise dramatik etki için özel bir konumlandırmaya ihtiyaç duyar.
 
-✅ Neden hem bir bitki tutucu hem de bir bitki CSS seçicisine ihtiyacınız var?
+Konumlandırmayı anladığınızda, birçok düzen zorluğu yönetilebilir hale gelir. Kullanıcılar kaydırırken üstte kalan bir navigasyon çubuğuna mı ihtiyacınız var? Konumlandırma bunu halleder. Belirli bir konumda görünen bir araç ipucu mu istiyorsunuz? Bu da konumlandırma ile yapılır.
 
-## CSS Konumlandırma
+### Beş Konum Değeri
 
-Konum özelliklerini karıştırmak (statik, göreceli, sabit, mutlak ve yapışkan konumlar) biraz karmaşık olabilir, ancak doğru yapıldığında sayfalarınızdaki öğeler üzerinde iyi bir kontrol sağlar.
+| Konum Değeri | Davranış | Kullanım Durumu |
+|--------------|----------|-----------------|
+| `static` | Varsayılan akış, top/left/right/bottom'u yok sayar | Normal belge düzeni |
+| `relative` | Normal konumuna göre konumlandırılır | Küçük ayarlamalar, konumlandırma bağlamı oluşturma |
+| `absolute` | En yakın konumlandırılmış ata öğeye göre konumlandırılır | Hassas yerleştirme, üst üste bindirmeler |
+| `fixed` | Görüntüleme alanına göre konumlandırılır | Navigasyon çubukları, yüzer öğeler |
+| `sticky` | Kaydırmaya göre relative ve fixed arasında geçiş yapar | Kaydırma sırasında yapışan başlıklar |
 
-Mutlak konumlandırılmış öğeler, en yakın konumlandırılmış atalarına göre konumlandırılır ve eğer yoksa, belge gövdesine göre konumlandırılır.
+### Teraryumumuzda Konumlandırma
 
-Göreceli konumlandırılmış öğeler, CSS'in yerleştirme talimatlarına göre başlangıç konumundan uzaklaştırılarak konumlandırılır.
+Teraryumumuz, istenen düzeni oluşturmak için konumlandırma türlerinin stratejik bir kombinasyonunu kullanır:
 
-Örneğimizde, `plant-holder` mutlak konumlandırılmış bir konteyner içinde konumlandırılmış göreceli bir öğedir. Sonuçta ortaya çıkan davranış, yan çubuk konteynerlerin sola ve sağa sabitlenmesi ve bitki tutucunun iç içe geçerek yan çubuklar içinde ayarlanması, bitkilerin dikey bir sırada yerleştirilmesi için alan sağlamasıdır.
+```css
+/* Container positioning */
+.container {
+  position: absolute; /* Removes from normal flow */
+  /* ... other styles ... */
+}
 
-> `plant` öğesinin kendisi de mutlak konumlandırmaya sahiptir, bu da onu sürüklenebilir hale getirmek için gereklidir; bunu bir sonraki derste keşfedeceksiniz.
+/* Plant holder positioning */
+.plant-holder {
+  position: relative; /* Creates positioning context */
+  /* ... other styles ... */
+}
 
-✅ Yan konteynerlerin ve bitki tutucunun konumlandırma türlerini değiştirmeyi deneyin. Ne oluyor?
+/* Plant positioning */
+.plant {
+  position: absolute; /* Allows precise placement within holder */
+  /* ... other styles ... */
+}
+```
 
-## CSS Düzenleri
+**Konumlandırma stratejisini anlamak:**
+- **Mutlak kaplar**, normal belge akışından çıkarılır ve ekran kenarlarına sabitlenir
+- **Göreli bitki tutucular**, belge akışında kalırken bir konumlandırma bağlamı oluşturur
+- **Mutlak bitkiler**, göreli kaplar içinde hassas bir şekilde konumlandırılabilir
+- **Bu kombinasyon**, bitkilerin dikey olarak istiflenmesine ve bireysel olarak konumlandırılabilir olmasına olanak tanır
 
-Şimdi öğrendiklerinizi kullanarak teraryumun kendisini tamamen CSS kullanarak oluşturacaksınız!
+> 🎯 **Neden Önemli**: `plant` öğelerinin bir sonraki derste sürüklenebilir hale gelmesi için mutlak konumlandırmaya ihtiyacı var. Mutlak konumlandırma, onları normal düzen akışından çıkarır ve sürükle-bırak etkileşimlerini mümkün kılar.
 
-İlk olarak, `.terrarium` div çocuklarını CSS kullanarak yuvarlak bir dikdörtgen olarak stilize edin:
+✅ **Deney Zamanı**: Konumlandırma değerlerini değiştirmeyi deneyin ve sonuçları gözlemleyin:
+- `.container`'ı `absolute` yerine `relative` olarak değiştirirseniz ne olur?
+- `.plant-holder`'ı `relative` yerine `absolute` olarak ayarlarsanız düzen nasıl değişir?
+- `.plant`'ı `relative` konumlandırmaya geçirirseniz ne olur?
 
-```CSS
+## CSS ile Teraryum İnşa Etmek
+
+Şimdi sadece CSS kullanarak bir cam kavanoz yapacağız - hiçbir resim veya grafik yazılımı gerekmiyor.
+
+Konumlandırma ve şeffaflık kullanarak gerçekçi görünümlü cam, gölgeler ve derinlik efektleri oluşturmak, CSS'in görsel yeteneklerini gösterir. Bu teknik, Bauhaus hareketindeki mimarların basit geometrik formları kullanarak karmaşık, güzel yapılar yaratma yöntemlerini yansıtır. Bu prensipleri anladığınızda, birçok web tasarımının arkasındaki CSS tekniklerini tanıyabilirsiniz.
+
+### Cam Kavanoz Bileşenlerini Oluşturma
+Hadi, teraryum kavanozunu parça parça oluşturalım. Her bir parça, duyarlı tasarım için yüzde tabanlı boyutlandırma ve mutlak konumlandırma kullanır:
+
+```css
 .jar-walls {
-	height: 80%;
-	width: 60%;
-	background: #d1e1df;
-	border-radius: 1rem;
-	position: absolute;
-	bottom: 0.5%;
-	left: 20%;
-	opacity: 0.5;
-	z-index: 1;
+  height: 80%;
+  width: 60%;
+  background: #d1e1df;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0.5%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: 1;
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.1);
 }
 
 .jar-top {
-	width: 50%;
-	height: 5%;
-	background: #d1e1df;
-	position: absolute;
-	bottom: 80.5%;
-	left: 25%;
-	opacity: 0.7;
-	z-index: 1;
+  width: 50%;
+  height: 5%;
+  background: #d1e1df;
+  position: absolute;
+  bottom: 80.5%;
+  left: 25%;
+  opacity: 0.7;
+  z-index: 1;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .jar-bottom {
-	width: 50%;
-	height: 1%;
-	background: #d1e1df;
-	position: absolute;
-	bottom: 0%;
-	left: 25%;
-	opacity: 0.7;
+  width: 50%;
+  height: 1%;
+  background: #d1e1df;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  opacity: 0.7;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .dirt {
-	width: 60%;
-	height: 5%;
-	background: #3a241d;
-	position: absolute;
-	border-radius: 0 0 1rem 1rem;
-	bottom: 1%;
-	left: 20%;
-	opacity: 0.7;
-	z-index: -1;
+  width: 60%;
+  height: 5%;
+  background: #3a241d;
+  position: absolute;
+  border-radius: 0 0 1rem 1rem;
+  bottom: 1%;
+  left: 20%;
+  opacity: 0.7;
+  z-index: -1;
 }
 ```
 
-Burada yüzde kullanımına dikkat edin. Tarayıcınızı küçülttüğünüzde, kavanozun nasıl ölçeklendiğini görebilirsiniz. Ayrıca kavanoz öğelerinin genişlik ve yükseklik yüzdelerine ve her öğenin merkezde, görünümün altına sabitlenmiş şekilde mutlak olarak konumlandırılmasına dikkat edin.
+**Teraryum yapısını anlama:**
+- **Kullanır** yüzde tabanlı boyutlar, tüm ekran boyutlarında duyarlı ölçekleme için
+- **Konumlandırır** öğeleri mutlak olarak, onları tam olarak üst üste ve hizalamak için
+- **Uygular** farklı opaklık değerleri, cam şeffaflık efekti oluşturmak için
+- **Kullanır** `z-index` katmanlaması, bitkilerin kavanozun içinde görünmesini sağlamak için
+- **Ekler** ince kutu gölgesi ve rafine edilmiş kenar yuvarlama, daha gerçekçi bir görünüm için
 
-Ayrıca `rem` kullanıyoruz, bu bir fonta göre uzunluk ölçüsüdür. Bu tür göreceli ölçüm hakkında daha fazla bilgi için [CSS spesifikasyonu](https://www.w3.org/TR/css-values-3/#font-relative-lengths) adresini okuyun.
+### Yüzde ile Duyarlı Tasarım
 
-✅ Kavanoz renklerini ve opaklığını toprakla karşılaştırarak değiştirmeyi deneyin. Ne oluyor? Neden?
+Tüm boyutların sabit piksel değerleri yerine yüzde kullanmasına dikkat edin:
+
+**Neden önemli:**
+- **Sağlar** teraryumun herhangi bir ekran boyutunda orantılı olarak ölçeklenmesini
+- **Korur** kavanoz bileşenleri arasındaki görsel ilişkileri
+- **Sunar** mobil telefonlardan büyük masaüstü monitörlere kadar tutarlı bir deneyim
+- **İzin verir** tasarımın görsel düzeni bozmadan uyum sağlamasına
+
+### CSS Birimlerinin Kullanımı
+
+Kenarlık yuvarlama için `rem` birimlerini kullanıyoruz, bu birimler kök yazı tipi boyutuna göre ölçeklenir. Bu, kullanıcı yazı tipi tercihlerini dikkate alan daha erişilebilir tasarımlar oluşturur. [CSS göreceli birimler](https://www.w3.org/TR/css-values-3/#font-relative-lengths) hakkında daha fazla bilgi edinin.
+
+✅ **Görsel Deneyim**: Bu değerleri değiştirin ve etkilerini gözlemleyin:
+- Kavanoz opaklığını 0.5'ten 0.8'e değiştirin – cam görünümünü nasıl etkiliyor?
+- Toprağın rengini `#3a241d`'den `#8B4513`'e ayarlayın – görsel etkisi nedir?
+- Toprağın `z-index` değerini 2 olarak değiştirin – katmanlama üzerinde ne oluyor?
 
 ---
 
-## 🚀Meydan Okuma
+## GitHub Copilot Agent Challenge 🚀
 
-Kavanozun sol alt bölgesine bir 'baloncuk' parlaklığı ekleyerek daha cam gibi görünmesini sağlayın. `.jar-glossy-long` ve `.jar-glossy-short` öğelerini yansıyan bir parlaklık gibi görünmesi için stilize edeceksiniz. İşte nasıl görüneceği:
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
 
-![tamamlanmış teraryum](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.tr.png)
+**Açıklama:** Teraryum bitkilerinin doğal bir rüzgar etkisi simüle ederek hafifçe sallanmasını sağlayan bir CSS animasyonu oluşturun. Bu, CSS animasyonları, dönüşümler ve keyframe'leri pratik yaparken teraryumun görsel çekiciliğini artırmanıza yardımcı olacak.
 
-Ders sonrası testi tamamlamak için şu Learn modülünü inceleyin: [HTML uygulamanızı CSS ile stilize edin](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+**İpucu:** Bitkilerin teraryumda hafifçe sağa sola sallanmasını sağlayan CSS keyframe animasyonları ekleyin. Her bitkiyi hafifçe (2-3 derece) sola ve sağa döndüren bir sallanma animasyonu oluşturun, 3-4 saniye süresince ve `.plant` sınıfına uygulayın. Animasyonun sonsuz döngüye sahip olduğundan ve doğal bir hareket için bir easing fonksiyonuna sahip olduğundan emin olun.
+
+[agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında daha fazla bilgi edinin.
+
+## 🚀 Meydan Okuma: Cam Yansımaları Ekleme
+
+Teraryumunuzu gerçekçi cam yansımalarıyla geliştirmeye hazır mısınız? Bu teknik tasarıma derinlik ve gerçekçilik katacak.
+
+Cam yüzeylerinden ışığın nasıl yansıdığını simüle eden ince vurgular oluşturacaksınız. Bu yaklaşım, Jan van Eyck gibi Rönesans ressamlarının boyalı camı üç boyutlu göstermek için ışık ve yansımayı nasıl kullandığına benzer. İşte hedefiniz:
+
+![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.tr.png)
+
+**Meydan okumanız:**
+- **Oluşturun** cam yansımaları için ince beyaz veya açık renkli oval şekiller
+- **Konumlandırın** bunları kavanozun sol tarafında stratejik olarak
+- **Uygulayın** gerçekçi ışık yansıması için uygun opaklık ve bulanıklık efektleri
+- **Kullanın** `border-radius` organik, baloncuk benzeri şekiller oluşturmak için
+- **Deneyin** daha fazla gerçekçilik için gradyanlar veya kutu gölgeleri
 
 ## Ders Sonrası Test
 
 [Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Gözden Geçirme ve Kendi Kendine Çalışma
+## CSS Bilginizi Genişletin
 
-CSS aldatıcı bir şekilde basit görünebilir, ancak bir uygulamayı tüm tarayıcılar ve ekran boyutları için mükemmel bir şekilde stilize etmeye çalışırken birçok zorlukla karşılaşabilirsiniz. CSS-Grid ve Flexbox, işi biraz daha yapılandırılmış ve güvenilir hale getirmek için geliştirilmiş araçlardır. Bu araçlar hakkında bilgi edinmek için [Flexbox Froggy](https://flexboxfroggy.com/) ve [Grid Garden](https://codepip.com/games/grid-garden/) oynayın.
+CSS başlangıçta karmaşık gelebilir, ancak bu temel kavramları anlamak daha ileri teknikler için sağlam bir temel sağlar.
+
+**Bir sonraki CSS öğrenme alanlarınız:**
+- **Flexbox** - öğelerin hizalanmasını ve dağıtımını basitleştirir
+- **CSS Grid** - karmaşık düzenler oluşturmak için güçlü araçlar sunar
+- **CSS Değişkenleri** - tekrarı azaltır ve sürdürülebilirliği artırır
+- **Duyarlı tasarım** - sitelerin farklı ekran boyutlarında iyi çalışmasını sağlar
+
+### Etkileşimli Öğrenme Kaynakları
+
+Bu eğlenceli, uygulamalı oyunlarla bu kavramları pratik yapın:
+- 🐸 [Flexbox Froggy](https://flexboxfroggy.com/) - Eğlenceli meydan okumalarla Flexbox'ı öğrenin
+- 🌱 [Grid Garden](https://codepip.com/games/grid-garden/) - Sanal havuçlar yetiştirerek CSS Grid'i öğrenin
+- 🎯 [CSS Battle](https://cssbattle.dev/) - CSS becerilerinizi kodlama meydan okumalarıyla test edin
+
+### Ek Öğrenme
+
+Kapsamlı CSS temelleri için bu Microsoft Learn modülünü tamamlayın: [HTML uygulamanızı CSS ile stilize edin](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Ödev
 
-[CSS Yeniden Düzenleme](assignment.md)
+[CSS Refactoring](assignment.md)
 
 ---
 
 **Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.

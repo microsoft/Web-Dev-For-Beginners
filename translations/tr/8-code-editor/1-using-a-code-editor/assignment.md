@@ -1,263 +1,584 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
-  "translation_date": "2025-08-29T00:30:00+00:00",
+  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
+  "translation_date": "2025-10-22T23:47:14+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "tr"
 }
 -->
-# VSCode.dev kullanarak bir özgeçmiş web sitesi oluşturun
+# VSCode.dev Kullanarak Özgeçmiş Web Sitesi Oluşturma
 
-_Bir işe alım uzmanının özgeçmişinizi istemesi ve sizin ona bir URL göndermeniz ne kadar havalı olurdu?_ 😎
+Kariyer fırsatlarınızı, becerilerinizi ve deneyimlerinizi interaktif, modern bir formatta sergileyen profesyonel bir özgeçmiş web sitesi oluşturarak dönüştürün. Geleneksel PDF'ler göndermek yerine, niteliklerinizi ve web geliştirme yeteneklerinizi gösteren şık, duyarlı bir web sitesi sunmayı hayal edin.
 
-<!----
-TODO: isteğe bağlı bir resim ekle
-![Bir kod editörü kullanma](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.tr.png)
-> Sketchnote by [Author name](https://example.com)
----->
+Bu uygulamalı ödev, VSCode.dev becerilerinizi pratikte kullanmanızı sağlarken kariyeriniz için gerçekten faydalı bir şey yaratmanıza olanak tanır. Tüm web geliştirme iş akışını – depo oluşturmadan yayına kadar – tamamen tarayıcınızda deneyimleyeceksiniz.
 
-<!---
-## Ders Öncesi Quiz
-[Ders öncesi quiz](https://ff-quizzes.netlify.app/web/quiz/3)
----->
+Bu projeyi tamamladığınızda, potansiyel işverenlerle kolayca paylaşabileceğiniz, becerileriniz geliştikçe güncelleyebileceğiniz ve kişisel markanıza uygun şekilde özelleştirebileceğiniz profesyonel bir çevrimiçi varlığa sahip olacaksınız. Bu, gerçek dünya web geliştirme becerilerini gösteren tam anlamıyla pratik bir projedir.
 
-## Amaçlar
+## Öğrenme Hedefleri
 
-Bu ödevi tamamladıktan sonra şunları öğreneceksiniz:
+Bu ödevi tamamladıktan sonra şunları yapabileceksiniz:
 
-- Özgeçmişinizi sergilemek için bir web sitesi oluşturma
+- VSCode.dev kullanarak eksiksiz bir web geliştirme projesi **oluşturmak** ve yönetmek
+- Semantik HTML öğelerini kullanarak profesyonel bir web sitesi **yapılandırmak**
+- Modern CSS teknikleriyle duyarlı düzenler **tasarlamak**
+- Temel web teknolojilerini kullanarak interaktif özellikler **uygulamak**
+- Paylaşılabilir bir URL aracılığıyla erişilebilen canlı bir web sitesi **yayınlamak**
+- Geliştirme süreci boyunca versiyon kontrolü en iyi uygulamalarını **göstermek**
 
-### Ön Koşullar
+## Ön Koşullar
 
-1. Bir GitHub hesabı. [GitHub](https://github.com/) adresine gidin ve henüz bir hesabınız yoksa bir hesap oluşturun.
+Bu ödeve başlamadan önce şunlara sahip olduğunuzdan emin olun:
 
-## Adımlar
+- Bir GitHub hesabı ([github.com](https://github.com/) adresinden oluşturabilirsiniz)
+- VSCode.dev dersini tamamlamış olmak (arayüz navigasyonu ve temel işlemler hakkında bilgi sahibi olmak)
+- HTML yapısı ve CSS stil kavramları hakkında temel bilgi
 
-**Adım 1:** Yeni bir GitHub deposu oluşturun ve ona `my-resume` adını verin.
+## Proje Kurulumu ve Depo Oluşturma
 
-**Adım 2:** Depoda bir `index.html` dosyası oluşturun. github.com üzerinde en az bir dosya ekleyeceğiz çünkü vscode.dev üzerinde boş bir depo açamazsınız.
+Proje temelini oluşturarak başlayalım. Bu süreç, projelerin doğru depo başlatma ve yapı planlaması ile başladığı gerçek dünya geliştirme iş akışlarını yansıtır.
 
-`Yeni bir dosya oluşturma` bağlantısına tıklayın, `index.html` adını yazın ve `Yeni dosyayı kaydet` düğmesini seçin.
+### Adım 1: GitHub Deposu Oluşturma
 
-![github.com üzerinde yeni bir dosya oluşturma](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.tr.png)
+Özel bir depo oluşturmak, projenizin başından itibaren düzgün bir şekilde organize edilmesini ve versiyon kontrolü yapılmasını sağlar.
 
-**Adım 3:** [VSCode.dev](https://vscode.dev) adresini açın ve `Uzaktan Depo Aç` düğmesini seçin.
+1. [GitHub.com](https://github.com) adresine gidin ve hesabınıza giriş yapın
+2. Sağ üst köşedeki yeşil "New" düğmesine veya "+" simgesine **tıklayın**
+3. Depoya `my-resume` adını verin (veya `john-smith-resume` gibi kişiselleştirilmiş bir ad seçin)
+4. Kısa bir açıklama ekleyin: "HTML ve CSS ile oluşturulmuş profesyonel özgeçmiş web sitesi"
+5. Özgeçmişinizi potansiyel işverenlere erişilebilir kılmak için "Public" seçeneğini **seçin**
+6. İlk proje açıklamasını oluşturmak için "Add a README file" kutusunu **işaretleyin**
+7. Kurulumu tamamlamak için "Create repository" düğmesine **tıklayın**
 
-Özgeçmiş siteniz için yeni oluşturduğunuz deponun URL'sini kopyalayın ve giriş kutusuna yapıştırın:
+> 💡 **Depo Adı İpucu**: Projenin amacını açıkça belirten açıklayıcı, profesyonel isimler kullanın. Bu, işverenlerle paylaşırken veya portföy incelemelerinde yardımcı olur.
 
-_`your-username` kısmını GitHub kullanıcı adınızla değiştirin._
+### Adım 2: Proje Yapısını Başlatma
 
+VSCode.dev'in bir depoyu açması için en az bir dosya gerektirdiğinden, web düzenleyicisine geçmeden önce ana HTML dosyamızı doğrudan GitHub'da oluşturacağız.
+
+1. Yeni deponuzda "creating a new file" bağlantısına **tıklayın**
+2. Dosya adı olarak `index.html` yazın
+3. Bu başlangıç HTML yapısını ekleyin:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Professional Resume</title>
+</head>
+<body>
+    <h1>Your Name</h1>
+    <p>Professional Resume Website</p>
+</body>
+</html>
 ```
-https://github.com/your-username/my-resume
-```
 
-✅ Başarılı olursa, projenizi ve metin editöründe tarayıcıda açılan `index.html` dosyasını göreceksiniz.
+4. Bir commit mesajı yazın: "Add initial HTML structure"
+5. Değişikliklerinizi kaydetmek için "Commit new file" düğmesine **tıklayın**
 
-![Yeni bir dosya oluşturma](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.tr.png)
+![GitHub'da ilk dosyayı oluşturma](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.tr.png)
 
-**Adım 4:** `index.html` dosyasını açın, aşağıdaki kodu kod alanınıza yapıştırın ve kaydedin.
+**Bu başlangıç kurulumu şunları sağlar:**
+- HTML5 belge yapısını semantik öğelerle **oluşturur**
+- Duyarlı tasarım uyumluluğu için viewport meta etiketini **ekler**
+- Tarayıcı sekmelerinde görünen açıklayıcı bir sayfa başlığı **ayarlar**
+- Profesyonel içerik organizasyonu için temel **oluşturur**
+
+## VSCode.dev'de Çalışma
+
+Depo temeliniz oluşturulduğuna göre, ana geliştirme çalışmaları için VSCode.dev'e geçelim. Bu web tabanlı düzenleyici, profesyonel web geliştirme için gereken tüm araçları sağlar.
+
+### Adım 3: Projenizi VSCode.dev'de Açma
+
+1. Yeni bir tarayıcı sekmesinde [vscode.dev](https://vscode.dev) adresine **gidin**
+2. Karşılama ekranında "Open Remote Repository" seçeneğine **tıklayın**
+3. GitHub'dan depo URL'nizi kopyalayın ve giriş alanına yapıştırın
+
+   Format: `https://github.com/your-username/my-resume`
+   
+   *`your-username` kısmını gerçek GitHub kullanıcı adınızla değiştirin*
+
+4. Projenizi yüklemek için Enter tuşuna **basın**
+
+✅ **Başarı göstergesi**: Proje dosyalarınızı Explorer yan çubuğunda ve `index.html` dosyasını düzenleme için ana düzenleyici alanında görmelisiniz.
+
+![VSCode.dev'de yüklenen proje](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.tr.png)
+
+**Arayüzde göreceğiniz şeyler:**
+- **Explorer yan çubuğu**: Depo dosyalarınızı ve klasör yapınızı **gösterir**
+- **Düzenleyici alanı**: Seçilen dosyaların içeriğini düzenlemek için **gösterir**
+- **Etkinlik çubuğu**: Kaynak Kontrol ve Uzantılar gibi özelliklere erişim **sağlar**
+- **Durum çubuğu**: Bağlantı durumu ve mevcut dal bilgilerini **gösterir**
+
+### Adım 4: Özgeçmiş İçeriğinizi Oluşturma
+
+`index.html` dosyasındaki yer tutucu içeriği, kapsamlı bir özgeçmiş yapısıyla değiştirin. Bu HTML, niteliklerinizi profesyonel bir şekilde sunmak için temel sağlar.
 
 <details>
-    <summary><b>Özgeçmiş web sitenizin içeriğinden sorumlu HTML kodu.</b></summary>
+<summary><b>Eksiksiz HTML Özgeçmiş Yapısı</b></summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Your Name - Professional Resume</title>
+</head>
+<body>
+    <header id="header">
+        <h1>Your Full Name</h1>
+        <hr>
+        <p class="role">Your Professional Title</p>
+        <hr>
+    </header>
     
-        <html>
-
-            <head>
-                <link href="style.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                <title>Adınız Buraya Gelecek!</title>
-            </head>
-            <body>
-                <header id="header">
-                    <!-- özgeçmiş başlığı, adınız ve unvanınız -->
-                    <h1>Adınız Buraya Gelecek!</h1>
-                    <hr>
-                    Rolünüz!
-                    <hr>
-                </header>
-                <main>
-                    <article id="mainLeft">
-                        <section>
-                            <h2>İLETİŞİM</h2>
-                            <!-- sosyal medya dahil iletişim bilgileri -->
-                            <p>
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:username@domain.top-level domain">E-posta adresinizi buraya yazın</a>
-                            </p>
-                            <p>
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                                <a href="github.com/yourGitHubUsername">Kullanıcı adınızı buraya yazın!</a>
-                            </p>
-                            <p>
-                                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <a href="linkedin.com/yourLinkedInUsername">Kullanıcı adınızı buraya yazın!</a>
-                            </p>
-                        </section>
-                        <section>
-                            <h2>BECERİLER</h2>
-                            <!-- becerileriniz -->
-                            <ul>
-                                <li>Beceri 1!</li>
-                                <li>Beceri 2!</li>
-                                <li>Beceri 3!</li>
-                                <li>Beceri 4!</li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h2>EĞİTİM</h2>
-                            <!-- eğitim bilgileriniz -->
-                            <h3>Kursunuzu buraya yazın!</h3>
-                            <p>
-                                Kurumunuzu buraya yazın!
-                            </p>
-                            <p>
-                                Başlangıç - Bitiş Tarihi
-                            </p>
-                        </section>            
-                    </article>
-                    <article id="mainRight">
-                        <section>
-                            <h2>HAKKINDA</h2>
-                            <!-- kendiniz hakkında -->
-                            <p>Kendiniz hakkında kısa bir yazı yazın!</p>
-                        </section>
-                        <section>
-                            <h2>İŞ DENEYİMİ</h2>
-                            <!-- iş deneyimleriniz -->
-                            <h3>İş Unvanı</h3>
-                            <p>
-                                Kurum Adı Buraya Gelecek | Başlangıç Ayı – Bitiş Ayı
-                            </p>
-                            <ul>
-                                    <li>Görev 1 - Ne yaptığınızı yazın!</li>
-                                    <li>Görev 2 - Ne yaptığınızı yazın!</li>
-                                    <li>Katkılarınızın sonuçlarını/etkisini yazın</li>
-                                    
-                            </ul>
-                            <h3>İş Unvanı 2</h3>
-                            <p>
-                                Kurum Adı Buraya Gelecek | Başlangıç Ayı – Bitiş Ayı
-                            </p>
-                            <ul>
-                                    <li>Görev 1 - Ne yaptığınızı yazın!</li>
-                                    <li>Görev 2 - Ne yaptığınızı yazın!</li>
-                                    <li>Katkılarınızın sonuçlarını/etkisini yazın</li>
-                                    
-                            </ul>
-                        </section>
-                    </article>
-                </main>
-            </body>
-        </html>
+    <main>
+        <article id="mainLeft">
+            <section>
+                <h2>CONTACT</h2>
+                <p>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:your.email@domain.com">your.email@domain.com</a>
+                </p>
+                <p>
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <a href="https://github.com/your-username">github.com/your-username</a>
+                </p>
+                <p>
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a>
+                </p>
+            </section>
+            
+            <section>
+                <h2>SKILLS</h2>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Version Control (Git)</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>EDUCATION</h2>
+                <h3>Your Degree or Certification</h3>
+                <p>Institution Name</p>
+                <p>Start Date - End Date</p>
+            </section>
+        </article>
+        
+        <article id="mainRight">
+            <section>
+                <h2>ABOUT</h2>
+                <p>Write a compelling summary that highlights your passion for web development, key achievements, and career goals. This section should give employers insight into your personality and professional approach.</p>
+            </section>
+            
+            <section>
+                <h2>WORK EXPERIENCE</h2>
+                <div class="job">
+                    <h3>Job Title</h3>
+                    <p class="company">Company Name | Start Date – End Date</p>
+                    <ul>
+                        <li>Describe a key accomplishment or responsibility</li>
+                        <li>Highlight specific skills or technologies used</li>
+                        <li>Quantify impact where possible (e.g., "Improved efficiency by 25%")</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <h3>Previous Job Title</h3>
+                    <p class="company">Previous Company | Start Date – End Date</p>
+                    <ul>
+                        <li>Focus on transferable skills and achievements</li>
+                        <li>Demonstrate growth and learning progression</li>
+                        <li>Include any leadership or collaboration experiences</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>PROJECTS</h2>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Brief description of what the project accomplishes and technologies used.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
+```
 </details>
 
-HTML kodundaki _yer tutucu metni_ değiştirerek özgeçmiş bilgilerinizi ekleyin.
+**Özelleştirme yönergeleri:**
+- Tüm yer tutucu metni kendi gerçek bilgilerinizle **değiştirin**
+- Deneyim seviyenize ve kariyer odaklarınıza göre bölümleri **ayarlayın**
+- Gerekirse bölümler ekleyin veya çıkarın (örneğin, Sertifikalar, Gönüllü Çalışmalar, Diller)
+- Gerçek profillerinize ve projelerinize bağlantılar **ekleyin**
 
-**Adım 5:** My-Resume klasörünün üzerine gelin, `Yeni Dosya ...` simgesine tıklayın ve projenizde 2 yeni dosya oluşturun: `style.css` ve `codeswing.json` dosyaları.
+### Adım 5: Destekleyici Dosyalar Oluşturma
 
-**Adım 6:** `style.css` dosyasını açın, aşağıdaki kodu yapıştırın ve kaydedin.
+Profesyonel web siteleri, düzenli dosya yapıları gerektirir. Eksiksiz bir proje için gerekli olan CSS stil dosyasını ve yapılandırma dosyalarını oluşturun.
+
+1. Explorer yan çubuğunda proje klasörünüzün üzerine **gelin**
+2. Görünen "Yeni Dosya" simgesine (📄+) **tıklayın**
+3. Bu dosyaları tek tek **oluşturun**:
+   - `style.css` (stil ve düzen için)
+   - `codeswing.json` (önizleme uzantısı yapılandırması için)
+
+**CSS dosyasını oluşturma (`style.css`):**
 
 <details>
-        <summary><b>Sitenin düzenini biçimlendirmek için CSS kodu.</b></summary>
-            
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 16px;
-                max-width: 960px;
-                margin: auto;
-            }
-            h1 {
-                font-size: 3em;
-                letter-spacing: .6em;
-                padding-top: 1em;
-                padding-bottom: 1em;
-            }
+<summary><b>Profesyonel CSS Stili</b></summary>
 
-            h2 {
-                font-size: 1.5em;
-                padding-bottom: 1em;
-            }
+```css
+/* Modern Resume Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+}
 
-            h3 {
-                font-size: 1em;
-                padding-bottom: 1em;
-            }
-            main { 
-                display: grid;
-                grid-template-columns: 40% 60%;
-                margin-top: 3em;
-            }
-            header {
-                text-align: center;
-                margin: auto 2em;
-            }
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 2em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-            section {
-                margin: auto 1em 4em 2em;
-            }
+h1 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2em;
+    font-weight: 300;
+}
 
-            i {
-                margin-right: .5em;
-            }
+.role {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 1em 0;
+}
 
-            p {
-                margin: .2em auto
-            }
+/* Main Content Layout */
+main {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 3em;
+    margin-top: 3em;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-            hr {
-                border: none;
-                background-color: lightgray;
-                height: 1px;
-            }
+/* Typography */
+h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.3em;
+}
 
-            h1, h2, h3 {
-                font-weight: 100;
-                margin-bottom: 0;
-            }
-            #mainLeft {
-                border-right: 1px solid lightgray;
-            }
-            
+h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 2.5em;
+}
+
+#mainLeft {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 2em;
+}
+
+/* Contact Links */
+section a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Icons */
+i {
+    margin-right: 0.8em;
+    width: 20px;
+    text-align: center;
+    color: #667eea;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 0.5em 0;
+    padding: 0.3em 0;
+    position: relative;
+}
+
+li:before {
+    content: "▸";
+    color: #667eea;
+    margin-right: 0.5em;
+}
+
+/* Work Experience */
+.job, .project {
+    margin-bottom: 2em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.company {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+    
+    #mainLeft {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding-right: 0;
+        padding-bottom: 2em;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    header {
+        background: none;
+        color: black;
+        box-shadow: none;
+    }
+    
+    main {
+        box-shadow: none;
+    }
+}
+```
 </details>
 
-**Adım 6:** `codeswing.json` dosyasını açın, aşağıdaki kodu yapıştırın ve kaydedin.
+**Yapılandırma dosyasını oluşturma (`codeswing.json`):**
 
-    {
+```json
+{
     "scripts": [],
     "styles": []
-    }
+}
+```
 
-**Adım 7:** Özgeçmiş web sitesini kod alanında görselleştirmek için `Codeswing uzantısını` yükleyin.
+**CSS özelliklerini anlama:**
+- Duyarlı, profesyonel düzen yapısı için CSS Grid **kullanır**
+- Gradient başlıklarla modern renk şemaları **uygular**
+- Etkileşim için hover efektleri ve yumuşak geçişler **ekler**
+- Tüm cihaz boyutlarında çalışan duyarlı tasarım **sağlar**
+- PDF oluşturma için yazdırma dostu stiller **ekler**
 
-Etkinlik çubuğundaki _`Uzantılar`_ simgesine tıklayın ve Codeswing yazın. Uzantıyı yüklemek için genişletilmiş etkinlik çubuğundaki _mavi yükleme düğmesine_ tıklayın veya uzantıyı seçtiğinizde kod alanında görünen yükleme düğmesini kullanın. Uzantıyı yükledikten hemen sonra, projenizdeki değişiklikleri kod alanında gözlemleyin 😃
+### Adım 6: Uzantıları Yükleme ve Yapılandırma
 
-![Uzantıları yükleme](../../../../8-code-editor/images/install-extension.gif)
+Uzantılar, geliştirme deneyiminizi iyileştirerek canlı önizleme yetenekleri ve geliştirilmiş iş akışı araçları sağlar. CodeSwing uzantısı, özellikle web geliştirme projeleri için oldukça kullanışlıdır.
 
-Uzantıyı yükledikten sonra ekranınızda göreceğiniz şey budur.
+**CodeSwing Uzantısını Yükleme:**
 
-![Codeswing uzantısı çalışırken](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.tr.png)
+1. Etkinlik Çubuğunda Uzantılar simgesine (🧩) **tıklayın**
+2. Pazar yeri arama kutusunda "CodeSwing" arayın
+3. Arama sonuçlarından CodeSwing uzantısını **seçin**
+4. Mavi "Install" düğmesine **tıklayın**
 
-Yaptığınız değişikliklerden memnunsanız, `Değişiklikler` klasörünün üzerine gelin ve değişiklikleri aşamalandırmak için `+` düğmesine tıklayın.
+![CodeSwing uzantısını yükleme](../../../../8-code-editor/images/install-extension.gif)
 
-Bir commit mesajı yazın _(Projede yaptığınız değişikliğin açıklaması)_ ve değişikliklerinizi `onay işareti`ne tıklayarak kaydedin. Projenizde çalışmayı tamamladıktan sonra, GitHub'daki depoya geri dönmek için sol üstteki hamburger menü simgesini seçin.
+**CodeSwing'in sağladıkları:**
+- Düzenleme yaparken web sitenizin canlı önizlemesini **etkinleştirir**
+- Manuel yenileme olmadan değişiklikleri gerçek zamanlı olarak **gösterir**
+- HTML, CSS ve JavaScript dahil olmak üzere birden fazla dosya türünü **destekler**
+- Entegre bir geliştirme ortamı deneyimi **sağlar**
 
-Tebrikler 🎉 Sadece birkaç adımda vscode.dev kullanarak özgeçmiş web sitenizi oluşturdunuz.
+**Yükleme sonrası anında sonuçlar:**
+CodeSwing yüklendikten sonra, özgeçmiş web sitenizin canlı önizlemesi düzenleyicide görünür. Bu, siteyi düzenlerken tam olarak nasıl göründüğünü görmenizi sağlar.
 
-## 🚀 Meydan Okuma
+![CodeSwing uzantısı canlı önizleme gösteriyor](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.tr.png)
 
-Değişiklik yapma izniniz olan bir uzak depo açın ve bazı dosyaları güncelleyin. Ardından, değişikliklerinizle yeni bir dal oluşturmayı ve bir Pull Request yapmayı deneyin.
+**Geliştirilmiş arayüzü anlama:**
+- **Bölünmüş görünüm**: Kodunuzu bir tarafta ve canlı önizlemeyi diğer tarafta **gösterir**
+- **Gerçek zamanlı güncellemeler**: Yazarken değişiklikleri anında **yansıtır**
+- **Etkileşimli önizleme**: Bağlantıları ve etkileşimleri test etmenize **olanak tanır**
+- **Mobil simülasyon**: Duyarlı tasarım test yetenekleri **sağlar**
 
-<!----
-## Ders Sonrası Quiz
-[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/4)
----->
+### Adım 7: Versiyon Kontrolü ve Yayınlama
+
+Artık özgeçmiş web siteniz tamamlandığına göre, Git'i kullanarak çalışmalarınızı kaydedin ve çevrimiçi olarak erişilebilir hale getirin.
+
+**Değişikliklerinizi kaydetme:**
+
+1. Etkinlik Çubuğunda Kaynak Kontrol simgesine (🌿) **tıklayın**
+2. "Changes" bölümünde oluşturduğunuz ve değiştirdiğiniz tüm dosyaları **gözden geçirin**
+3. Her dosyanın yanındaki "+" simgesine **tıklayarak** değişikliklerinizi aşamalı hale getirin
+4. Açıklayıcı bir commit mesajı yazın, örneğin:
+   - "Duyarlı tasarımla eksiksiz özgeçmiş web sitesi eklendi"
+   - "Profesyonel stil ve içerik yapısı uygulandı"
+5. Değişikliklerinizi commit ve push etmek için onay işaretine (✓) **tıklayın**
+
+**Etkili commit mesajı örnekleri:**
+- "Profesyonel özgeçmiş içeriği ve stili eklendi"
+- "Mobil uyumluluk için duyarlı tasarım uygulandı"
+- "İletişim bilgileri ve proje bağlantıları güncellendi"
+
+> 💡 **Profesyonel İpucu**: İyi yazılmış commit mesajları, projenizin evrimini takip etmeye yardımcı olur ve detaylara gösterilen özeni ortaya koyar – işverenlerin değer verdiği nitelikler.
+
+**Yayınlanmış sitenize erişim:**
+Commit işlemi tamamlandıktan sonra, sol üst köşedeki hamburger menüsünü (☰) kullanarak GitHub deponuza geri dönebilirsiniz. Özgeçmiş web siteniz artık versiyon kontrolüne alınmış ve yayına hazır.
+
+## Sonuçlar ve Sonraki Adımlar
+
+**Tebrikler! 🎉** VSCode.dev kullanarak profesyonel bir özgeçmiş web sitesi oluşturmayı başardınız. Projeniz şunları gösteriyor:
+**Gösterilen teknik beceriler:**
+- **Depo yönetimi**: Eksiksiz bir proje yapısı oluşturma ve düzenleme
+- **Web geliştirme**: Modern HTML5 ve CSS3 kullanarak duyarlı bir web sitesi oluşturma
+- **Versiyon kontrolü**: Anlamlı commit'lerle doğru bir Git iş akışı uygulama
+- **Araç becerisi**: VSCode.dev'in arayüzünü ve uzantı sistemini etkili bir şekilde kullanma
+
+**Elde edilen profesyonel sonuçlar:**
+- **Çevrimiçi varlık**: Niteliklerinizi sergileyen paylaşılabilir bir URL
+- **Modern format**: Geleneksel PDF özgeçmişlere interaktif bir alternatif
+- **Gösterilebilir beceriler**: Web geliştirme yeteneklerinizin somut kanıtı
+- **Kolay güncellemeler**: Sürekli geliştirebileceğiniz ve özelleştirebileceğiniz bir temel
+
+### Yayınlama Seçenekleri
+
+Özgeçmişinizi işverenlere erişilebilir kılmak için şu barındırma seçeneklerini değerlendirin:
+
+**GitHub Pages (Önerilen):**
+1. GitHub'da depo Ayarlarına gidin
+2. "Pages" bölümüne kadar aşağı kaydırın
+3. "Deploy from a branch" seçeneğini seçin ve "main" dalını seçin
+4. Siteniz şu adreste erişilebilir olacak: `https://your-username.github.io/my-resume`
+
+**Alternatif platformlar:**
+- **Netlify**: Özel alan adlarıyla otomatik yayınlama
+- **Vercel**: Modern barındırma özellikleriyle hızlı yayınlama
+- **GitHub Codespaces**: Entegre önizleme ile geliştirme ortamı
+
+### Geliştirme Önerileri
+
+Beceri setinizi geliştirmeye devam ederek şu özellikleri ekleyebilirsiniz:
+
+**Teknik iyileştirmeler:**
+- **JavaScript etkileşimi**: Yumuşak kaydırma veya interaktif öğeler ekleyin
+- **Karanlık mod geçişi**: Kullanıcı tercihi için tema değiştirme özelliği ekleyin
+- **İletişim formu**: Potansiyel işverenlerle doğrudan iletişim sağlayın
+- **SEO optimizasyonu**: Daha iyi arama görünürlüğü için meta etiketler ve yapılandırılmış veri ekleyin
+
+**İçerik geliştirmeleri:**
+- **Proje portföyü**: GitHub depolarına ve canlı demolarına bağlantılar ekleyin
+- **Beceri görselleştirme**: İlerleme çubukları veya beceri derecelendirme sistemleri oluşturun
+- **Referanslar bölümü**: Meslektaşlarınızdan veya eğitmenlerinizden öneriler ekleyin
+- **Blog entegrasyonu**: Öğrenme yolculuğunuzu sergilemek için bir blog bölümü ekleyin
+
+## GitHub Copilot Agent Challenge 🚀
+
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+
+**Açıklama:** Profesyonel web geliştirme yeteneklerini ve modern tasarım ilkelerini gösteren gelişmiş özelliklerle özgeçmiş web sitenizi geliştirin.
+
+**Talimat:** Mevcut özgeçmiş web sitenizi temel alarak şu gelişmiş özellikleri uygulayın:
+1. Karanlık/açık tema geçişi ekleyin ve yumuşak geçişler sağlayın
+2. Animasyonlu ilerleme çubuklarıyla interaktif bir beceri bölümü oluşturun
+3. Form doğrulama ile bir iletişim formu uygulayın
+4. Hover efektleri ve modal pop-up'larla bir proje portföyü bölümü ekleyin
+5. Öğrenme yolculuğunuz hakkında en az 3 örnek yazı içeren bir blog bölümü ekleyin
+6. SEO için uygun meta etiketler, yapılandırılmış veri ve performans optimizasyonu ekleyin
+7. Geliştirilmiş siteyi GitHub Pages veya Netlify kullanarak yayınlayın
+8. README.md dosyanızda tüm yeni özellikleri ekran görüntüleriyle belgeleyin
+
+Geliştirilmiş web siteniz, duyarlı tasarım, JavaScript etkileşimi ve profesyonel yayınlama iş akışlarını içeren modern web geliştirme uygulamalarında ustalığınızı göstermelidir.
+
+## Meydan Okuma Uzantısı
+
+Becerilerinizi daha ileriye taşımaya hazır mısınız? Bu gelişmiş meydan okumaları deneyin:
+
+**📱 Mobil-Öncelikli Yeniden Tasarım:** CSS Grid ve Flexbox ile mobil-öncelikli bir yaklaşım kullanarak sitenizi tamamen yeniden oluşturun
+
+**🔍 SEO Optimizasyonu:** Meta etiketler, yapılandırılmış veri ve performans optimizasyonu dahil kapsamlı bir SEO uygulayın
+
+**🌐 Çok Dilli Destek:** Birden fazla dili desteklemek için uluslararasılaştırma özellikleri ekleyin
+
+**📊 Analitik Entegrasyonu:** Ziyaretçi etkileşimini izlemek ve içeriğinizi optimize etmek için Google Analytics ekleyin
+
+**🚀 Performans Optimizasyonu:** Tüm kategorilerde mükemmel Lighthouse puanları elde edin
 
 ## İnceleme ve Kendi Kendine Çalışma
 
-[VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) ve diğer özellikleri hakkında daha fazla bilgi edinin.
+Bilginizi şu kaynaklarla genişletin:
+
+**Gelişmiş VSCode.dev Özellikleri:**
+- [VSCode.dev Belgeleri](https
+- **Erişilebilirlik**: Kapsayıcı web tasarımı için WCAG yönergelerini öğrenin  
+- **Performans**: Optimizasyon için Lighthouse gibi araçları keşfedin  
+- **SEO**: Arama motoru optimizasyonunun temel prensiplerini anlayın  
+
+**Profesyonel Gelişim:**  
+- **Portföy Oluşturma**: Çeşitli becerilerinizi sergilemek için ek projeler oluşturun  
+- **Açık Kaynak**: İş birliği deneyimi kazanmak için mevcut projelere katkıda bulunun  
+- **Ağ Kurma**: Özgeçmiş web sitenizi geliştirici topluluklarında paylaşarak geri bildirim alın  
+- **Sürekli Öğrenme**: Web geliştirme trendleri ve teknolojileriyle güncel kalın  
+
+---
+
+**Sonraki Adımlarınız:** Özgeçmiş web sitenizi arkadaşlarınız, aileniz veya mentorlarınızla paylaşarak geri bildirim alın. Onların önerilerini kullanarak tasarımınızı geliştirin ve iyileştirin. Unutmayın, bu proje sadece bir özgeçmiş değil – aynı zamanda bir web geliştirici olarak büyümenizin bir göstergesi!
 
 ---
 
 **Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.

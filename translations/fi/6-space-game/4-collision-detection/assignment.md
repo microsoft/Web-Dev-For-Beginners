@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a0a097b45e7c75a611e2795e4013f16",
-  "translation_date": "2025-08-27T20:27:16+00:00",
+  "original_hash": "124efddbb65166cddb38075ad6dae324",
+  "translation_date": "2025-10-23T00:42:10+00:00",
   "source_file": "6-space-game/4-collision-detection/assignment.md",
   "language_code": "fi"
 }
@@ -11,13 +11,50 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ohjeet
 
-Ymmärtääksesi paremmin, miten törmäykset toimivat, rakenna hyvin pieni peli, jossa on muutamia törmääviä esineitä. Tee niistä liikuteltavia näppäinpainalluksilla tai hiiren klikkauksilla, ja saa jotain tapahtumaan yhdelle esineistä, kun se osuu toiseen. Se voi olla esimerkiksi meteori, joka osuu maahan, tai törmäilyautoja. Ole luova!
+Hyödynnä tietämystäsi törmäysten tunnistamisesta luomalla oma minipeli, joka esittelee erilaisia objektien vuorovaikutuksia. Tämä tehtävä auttaa sinua ymmärtämään törmäysmekaniikkaa luovan toteutuksen ja kokeilun kautta.
+
+### Projektivaatimukset
+
+**Luo pieni interaktiivinen peli, joka sisältää:**
+- **Useita liikkuvia objekteja**, joita voi ohjata näppäimistön tai hiiren avulla
+- **Törmäysten tunnistusjärjestelmä**, joka käyttää oppitunnilla käsiteltyjä suorakulmion leikkausperiaatteita
+- **Visuaalista palautetta**, kun törmäyksiä tapahtuu (objektien tuhoutuminen, värimuutokset, efektit)
+- **Pelinsäännöt**, jotka tekevät törmäyksistä merkityksellisiä ja kiinnostavia
+
+### Luovia ehdotuksia
+
+**Voit harkita seuraavien skenaarioiden toteuttamista:**
+- **Asteroidikenttä**: Ohjaa alusta vaarallisen avaruusromun läpi
+- **Törmäilyautot**: Luo fysiikkapohjainen törmäysareena
+- **Meteorisuojaus**: Suojaa Maata lähestyviltä avaruuskiviltä
+- **Keräyspeli**: Kerää esineitä samalla kun välttelet esteitä
+- **Alueen hallinta**: Kilpailevat objektit yrittävät vallata tilaa
+
+### Tekninen toteutus
+
+**Ratkaisusi tulisi osoittaa:**
+- Suorakulmiopohjaisen törmäystunnistuksen oikea käyttö
+- Tapahtumapohjainen ohjelmointi käyttäjän syötteille
+- Objektien elinkaaren hallinta (luominen ja tuhoaminen)
+- Selkeä koodin organisointi asianmukaisella luokkarakenteella
+
+### Lisähaasteet
+
+**Paranna peliäsi lisäominaisuuksilla:**
+- **Hiukkasefektit**, kun törmäyksiä tapahtuu
+- **Ääniefektit** eri törmäystyypeille
+- **Pisteytysjärjestelmä**, joka perustuu törmäysten lopputuloksiin
+- **Useita törmäystyyppejä**, joilla on erilaisia käyttäytymisiä
+- **Progressiivinen vaikeustaso**, joka kasvaa ajan myötä
 
 ## Arviointikriteerit
 
-| Kriteeri | Erinomainen                                                                                                              | Riittävä                       | Parannettavaa     |
-| -------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ----------------- |
-|          | Täydellinen toimiva koodiesimerkki on tuotettu, esineet on piirretty kankaalle, perus-törmäykset tapahtuvat ja reaktiot näkyvät | Koodi on jollain tapaa keskeneräinen | Koodi ei toimi    |
+| Kriteeri | Erinomainen | Riittävä | Parannettavaa |
+|----------|-------------|----------|---------------|
+| **Törmäystunnistus** | Toteuttaa tarkan suorakulmiopohjaisen törmäystunnistuksen useilla objektityypeillä ja kehittyneillä vuorovaikutussäännöillä | Perustason törmäystunnistus toimii oikein yksinkertaisilla objektivuorovaikutuksilla | Törmäystunnistuksessa on ongelmia tai se ei toimi johdonmukaisesti |
+| **Koodin laatu** | Selkeä, hyvin organisoitu koodi, jossa on asianmukainen luokkarakenne, merkitykselliset muuttujanimet ja sopivat kommentit | Koodi toimii, mutta voisi olla paremmin organisoitu tai dokumentoitu | Koodi on vaikeasti ymmärrettävää tai huonosti rakennettua |
+| **Käyttäjävuorovaikutus** | Reagoivat ohjaimet, sujuva pelattavuus, selkeä visuaalinen palaute ja kiinnostavat mekaniikat | Perusohjaimet toimivat riittävällä palautteella | Ohjaimet eivät reagoi kunnolla tai ovat sekavia |
+| **Luovuus** | Omaperäinen konsepti, jossa on ainutlaatuisia ominaisuuksia, visuaalista viimeistelyä ja innovatiivisia törmäyskäyttäytymisiä | Tavanomainen toteutus, jossa on joitakin luovia elementtejä | Perustoiminnallisuus ilman luovia parannuksia |
 
 ---
 

@@ -1,263 +1,588 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "bd3aa6d2b879c30ea496c43aec1c49ed",
-  "translation_date": "2025-08-29T00:13:21+00:00",
+  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
+  "translation_date": "2025-10-22T23:21:58+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
   "language_code": "it"
 }
 -->
-# Crea un sito web per il tuo curriculum usando vscode.dev
+# Crea un sito web per il curriculum utilizzando VSCode.dev
 
-_Quanto sarebbe fantastico se un recruiter ti chiedesse il curriculum e tu gli inviassi un URL?_ 😎
+Trasforma le tue prospettive di carriera creando un sito web professionale per il tuo curriculum che metta in mostra le tue competenze e la tua esperienza in un formato interattivo e moderno. Invece di inviare PDF tradizionali, immagina di fornire ai recruiter un sito web elegante e reattivo che dimostri sia le tue qualifiche che le tue capacità di sviluppo web.
 
-<!----
-TODO: aggiungere un'immagine opzionale
-![Usare un editor di codice](../../../../translated_images/webdev101-vscode-dev.f53c14e8dad231ea09d9e07a2db4a01551d2dc6cdf21225038389e11156af023.it.png)
-> Sketchnote di [Nome Autore](https://example.com)
----->
+Questo esercizio pratico ti permetterà di mettere in pratica tutte le tue competenze su VSCode.dev, creando qualcosa di veramente utile per la tua carriera. Vivrai l'intero flusso di lavoro dello sviluppo web – dalla creazione del repository al deployment – tutto direttamente dal tuo browser.
 
-<!---
-## Quiz Pre-Lettura
-[Quiz pre-lettura](https://ff-quizzes.netlify.app/web/quiz/3)
----->
+Completando questo progetto, avrai una presenza online professionale che potrai facilmente condividere con potenziali datori di lavoro, aggiornare man mano che le tue competenze crescono e personalizzare per riflettere il tuo brand personale. Questo è esattamente il tipo di progetto pratico che dimostra competenze reali nello sviluppo web.
 
-## Obiettivi
+## Obiettivi di apprendimento
 
-Dopo questo compito, imparerai a:
+Dopo aver completato questo esercizio, sarai in grado di:
 
-- Creare un sito web per mostrare il tuo curriculum
+- **Creare** e gestire un progetto completo di sviluppo web utilizzando VSCode.dev
+- **Strutturare** un sito web professionale utilizzando elementi HTML semantici
+- **Stilizzare** layout reattivi con tecniche moderne di CSS
+- **Implementare** funzionalità interattive utilizzando tecnologie web di base
+- **Pubblicare** un sito web live accessibile tramite un URL condivisibile
+- **Dimostrare** le migliori pratiche di controllo di versione durante il processo di sviluppo
 
-### Prerequisiti
+## Prerequisiti
 
-1. Un account GitHub. Vai su [GitHub](https://github.com/) e crea un account se non lo hai già fatto.
+Prima di iniziare questo esercizio, assicurati di avere:
 
-## Passaggi
+- Un account GitHub (creane uno su [github.com](https://github.com/) se necessario)
+- Completato la lezione su VSCode.dev che copre la navigazione dell'interfaccia e le operazioni di base
+- Una comprensione di base della struttura HTML e dei concetti di stilizzazione CSS
 
-**Passaggio 1:** Crea un nuovo repository GitHub e assegnagli il nome `my-resume`
+## Configurazione del progetto e creazione del repository
 
-**Passaggio 2:** Crea un file `index.html` nel tuo repository. Aggiungeremo almeno un file direttamente su github.com perché non è possibile aprire un repository vuoto su vscode.dev.
+Iniziamo impostando le basi del tuo progetto. Questo processo rispecchia i flussi di lavoro di sviluppo reali, in cui i progetti iniziano con una corretta inizializzazione del repository e una pianificazione della struttura.
 
-Clicca sul link `creating a new file`, digita il nome `index.html` e seleziona il pulsante `Commit new file`.
+### Passo 1: Crea il tuo repository GitHub
 
-![Crea un nuovo file su github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.it.png)
+Impostare un repository dedicato garantisce che il tuo progetto sia organizzato correttamente e controllato in versione fin dall'inizio.
 
-**Passaggio 3:** Apri [VSCode.dev](https://vscode.dev) e seleziona il pulsante `Open Remote Repository`.
+1. **Vai** su [GitHub.com](https://github.com) e accedi al tuo account
+2. **Clicca** sul pulsante verde "New" o sull'icona "+" nell'angolo in alto a destra
+3. **Dai un nome** al tuo repository `my-resume` (o scegli un nome personalizzato come `mario-rossi-resume`)
+4. **Aggiungi** una breve descrizione: "Sito web professionale per il curriculum costruito con HTML e CSS"
+5. **Seleziona** "Public" per rendere il tuo curriculum accessibile ai potenziali datori di lavoro
+6. **Spunta** "Add a README file" per creare una descrizione iniziale del progetto
+7. **Clicca** su "Create repository" per completare la configurazione
 
-Copia l'URL del repository che hai appena creato per il tuo sito del curriculum e incollalo nella casella di input:
+> 💡 **Suggerimento per il nome del repository**: Usa nomi descrittivi e professionali che indicano chiaramente lo scopo del progetto. Questo aiuta quando lo condividi con i datori di lavoro o durante le revisioni del portfolio.
 
-_Sostituisci `your-username` con il tuo username GitHub._
+### Passo 2: Inizializza la struttura del progetto
 
+Poiché VSCode.dev richiede almeno un file per aprire un repository, creeremo il nostro file HTML principale direttamente su GitHub prima di passare all'editor web.
+
+1. **Clicca** sul link "creating a new file" nel tuo nuovo repository
+2. **Digita** `index.html` come nome del file
+3. **Aggiungi** questa struttura HTML iniziale:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Professional Resume</title>
+</head>
+<body>
+    <h1>Your Name</h1>
+    <p>Professional Resume Website</p>
+</body>
+</html>
 ```
-https://github.com/your-username/my-resume
-```
 
-✅ Se il processo è andato a buon fine, vedrai il tuo progetto e il file index.html aperti nell'editor di testo nel browser.
+4. **Scrivi** un messaggio di commit: "Aggiungi struttura HTML iniziale"
+5. **Clicca** su "Commit new file" per salvare le modifiche
 
-![Crea un nuovo file](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.it.png)
+![Creazione del file iniziale su GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.it.png)
 
-**Passaggio 4:** Apri il file `index.html`, incolla il codice qui sotto nell'area di codice e salva.
+**Ecco cosa realizza questa configurazione iniziale:**
+- **Stabilisce** una corretta struttura del documento HTML5 con elementi semantici
+- **Include** il meta tag viewport per la compatibilità con il design reattivo
+- **Imposta** un titolo descrittivo della pagina che appare nelle schede del browser
+- **Crea** la base per l'organizzazione professionale dei contenuti
+
+## Lavorare su VSCode.dev
+
+Ora che le basi del tuo repository sono state stabilite, passiamo a VSCode.dev per il lavoro principale di sviluppo. Questo editor basato sul web fornisce tutti gli strumenti necessari per lo sviluppo web professionale.
+
+### Passo 3: Apri il tuo progetto su VSCode.dev
+
+1. **Vai** su [vscode.dev](https://vscode.dev) in una nuova scheda del browser
+2. **Clicca** su "Open Remote Repository" nella schermata di benvenuto
+3. **Copia** l'URL del tuo repository da GitHub e incollalo nel campo di input
+
+   Formato: `https://github.com/tuo-username/my-resume`
+   
+   *Sostituisci `tuo-username` con il tuo vero username GitHub*
+
+4. **Premi** Invio per caricare il tuo progetto
+
+✅ **Indicatore di successo**: Dovresti vedere i file del tuo progetto nella barra laterale Explorer e `index.html` disponibile per la modifica nell'area principale dell'editor.
+
+![Progetto caricato su VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.it.png)
+
+**Cosa vedrai nell'interfaccia:**
+- **Barra laterale Explorer**: **Mostra** i file e la struttura delle cartelle del tuo repository
+- **Area dell'editor**: **Mostra** il contenuto dei file selezionati per la modifica
+- **Barra delle attività**: **Fornisce** accesso a funzionalità come Source Control ed Extensions
+- **Barra di stato**: **Indica** lo stato della connessione e le informazioni sul branch corrente
+
+### Passo 4: Crea il contenuto del tuo curriculum
+
+Sostituisci il contenuto segnaposto in `index.html` con una struttura completa del curriculum. Questo HTML fornisce la base per una presentazione professionale delle tue qualifiche.
 
 <details>
-    <summary><b>Codice HTML responsabile del contenuto del tuo sito web per il curriculum.</b></summary>
+<summary><b>Struttura completa del curriculum HTML</b></summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Your Name - Professional Resume</title>
+</head>
+<body>
+    <header id="header">
+        <h1>Your Full Name</h1>
+        <hr>
+        <p class="role">Your Professional Title</p>
+        <hr>
+    </header>
     
-        <html>
-
-            <head>
-                <link href="style.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                <title>Il tuo nome qui!</title>
-            </head>
-            <body>
-                <header id="header">
-                    <!-- intestazione del curriculum con il tuo nome e titolo -->
-                    <h1>Il tuo nome qui!</h1>
-                    <hr>
-                    Il tuo ruolo!
-                    <hr>
-                </header>
-                <main>
-                    <article id="mainLeft">
-                        <section>
-                            <h2>CONTATTI</h2>
-                            <!-- informazioni di contatto inclusi i social media -->
-                            <p>
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:username@domain.top-level domain">Scrivi qui la tua email</a>
-                            </p>
-                            <p>
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                                <a href="github.com/yourGitHubUsername">Scrivi qui il tuo username!</a>
-                            </p>
-                            <p>
-                                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                <a href="linkedin.com/yourLinkedInUsername">Scrivi qui il tuo username!</a>
-                            </p>
-                        </section>
-                        <section>
-                            <h2>COMPETENZE</h2>
-                            <!-- le tue competenze -->
-                            <ul>
-                                <li>Competenza 1!</li>
-                                <li>Competenza 2!</li>
-                                <li>Competenza 3!</li>
-                                <li>Competenza 4!</li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h2>ISTRUZIONE</h2>
-                            <!-- la tua istruzione -->
-                            <h3>Scrivi qui il tuo corso!</h3>
-                            <p>
-                                Scrivi qui la tua istituzione!
-                            </p>
-                            <p>
-                                Data di inizio - Data di fine
-                            </p>
-                        </section>            
-                    </article>
-                    <article id="mainRight">
-                        <section>
-                            <h2>CHI SONO</h2>
-                            <!-- informazioni su di te -->
-                            <p>Scrivi una breve descrizione su di te!</p>
-                        </section>
-                        <section>
-                            <h2>ESPERIENZA LAVORATIVA</h2>
-                            <!-- la tua esperienza lavorativa -->
-                            <h3>Titolo del lavoro</h3>
-                            <p>
-                                Nome dell'organizzazione | Mese di inizio – Mese di fine
-                            </p>
-                            <ul>
-                                    <li>Attività 1 - Scrivi cosa hai fatto!</li>
-                                    <li>Attività 2 - Scrivi cosa hai fatto!</li>
-                                    <li>Scrivi i risultati/impatti del tuo contributo</li>
-                                    
-                            </ul>
-                            <h3>Titolo del lavoro 2</h3>
-                            <p>
-                                Nome dell'organizzazione | Mese di inizio – Mese di fine
-                            </p>
-                            <ul>
-                                    <li>Attività 1 - Scrivi cosa hai fatto!</li>
-                                    <li>Attività 2 - Scrivi cosa hai fatto!</li>
-                                    <li>Scrivi i risultati/impatti del tuo contributo</li>
-                                    
-                            </ul>
-                        </section>
-                    </article>
-                </main>
-            </body>
-        </html>
+    <main>
+        <article id="mainLeft">
+            <section>
+                <h2>CONTACT</h2>
+                <p>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:your.email@domain.com">your.email@domain.com</a>
+                </p>
+                <p>
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <a href="https://github.com/your-username">github.com/your-username</a>
+                </p>
+                <p>
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a>
+                </p>
+            </section>
+            
+            <section>
+                <h2>SKILLS</h2>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Version Control (Git)</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>EDUCATION</h2>
+                <h3>Your Degree or Certification</h3>
+                <p>Institution Name</p>
+                <p>Start Date - End Date</p>
+            </section>
+        </article>
+        
+        <article id="mainRight">
+            <section>
+                <h2>ABOUT</h2>
+                <p>Write a compelling summary that highlights your passion for web development, key achievements, and career goals. This section should give employers insight into your personality and professional approach.</p>
+            </section>
+            
+            <section>
+                <h2>WORK EXPERIENCE</h2>
+                <div class="job">
+                    <h3>Job Title</h3>
+                    <p class="company">Company Name | Start Date – End Date</p>
+                    <ul>
+                        <li>Describe a key accomplishment or responsibility</li>
+                        <li>Highlight specific skills or technologies used</li>
+                        <li>Quantify impact where possible (e.g., "Improved efficiency by 25%")</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <h3>Previous Job Title</h3>
+                    <p class="company">Previous Company | Start Date – End Date</p>
+                    <ul>
+                        <li>Focus on transferable skills and achievements</li>
+                        <li>Demonstrate growth and learning progression</li>
+                        <li>Include any leadership or collaboration experiences</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>PROJECTS</h2>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>Brief description of what the project accomplishes and technologies used.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
+```
 </details>
 
-Aggiungi i dettagli del tuo curriculum per sostituire il _testo segnaposto_ nel codice HTML.
+**Linee guida per la personalizzazione:**
+- **Sostituisci** tutto il testo segnaposto con le tue informazioni reali
+- **Adatta** le sezioni in base al tuo livello di esperienza e al tuo focus professionale
+- **Aggiungi** o rimuovi sezioni secondo necessità (es. Certificazioni, Volontariato, Lingue)
+- **Includi** link ai tuoi profili e progetti reali
 
-**Passaggio 5:** Passa con il mouse sulla cartella My-Resume, clicca sull'icona `New File ...` e crea 2 nuovi file nel tuo progetto: `style.css` e `codeswing.json`.
+### Passo 5: Crea file di supporto
 
-**Passaggio 6:** Apri il file `style.css`, incolla il codice qui sotto e salva.
+I siti web professionali richiedono strutture di file organizzate. Crea il foglio di stile CSS e i file di configurazione necessari per un progetto completo.
+
+1. **Passa il mouse** sopra il nome della cartella del tuo progetto nella barra laterale Explorer
+2. **Clicca** sull'icona "New File" (📄+) che appare
+3. **Crea** questi file uno alla volta:
+   - `style.css` (per stilizzazione e layout)
+   - `codeswing.json` (per la configurazione dell'estensione di anteprima)
+
+**Creazione del file CSS (`style.css`):**
 
 <details>
-        <summary><b>Codice CSS per formattare il layout del sito.</b></summary>
-            
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 16px;
-                max-width: 960px;
-                margin: auto;
-            }
-            h1 {
-                font-size: 3em;
-                letter-spacing: .6em;
-                padding-top: 1em;
-                padding-bottom: 1em;
-            }
+<summary><b>Stilizzazione CSS professionale</b></summary>
 
-            h2 {
-                font-size: 1.5em;
-                padding-bottom: 1em;
-            }
+```css
+/* Modern Resume Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+}
 
-            h3 {
-                font-size: 1em;
-                padding-bottom: 1em;
-            }
-            main { 
-                display: grid;
-                grid-template-columns: 40% 60%;
-                margin-top: 3em;
-            }
-            header {
-                text-align: center;
-                margin: auto 2em;
-            }
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 2em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-            section {
-                margin: auto 1em 4em 2em;
-            }
+h1 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2em;
+    font-weight: 300;
+}
 
-            i {
-                margin-right: .5em;
-            }
+.role {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 1em 0;
+}
 
-            p {
-                margin: .2em auto
-            }
+/* Main Content Layout */
+main {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 3em;
+    margin-top: 3em;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-            hr {
-                border: none;
-                background-color: lightgray;
-                height: 1px;
-            }
+/* Typography */
+h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.3em;
+}
 
-            h1, h2, h3 {
-                font-weight: 100;
-                margin-bottom: 0;
-            }
-            #mainLeft {
-                border-right: 1px solid lightgray;
-            }
-            
+h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 2.5em;
+}
+
+#mainLeft {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 2em;
+}
+
+/* Contact Links */
+section a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Icons */
+i {
+    margin-right: 0.8em;
+    width: 20px;
+    text-align: center;
+    color: #667eea;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 0.5em 0;
+    padding: 0.3em 0;
+    position: relative;
+}
+
+li:before {
+    content: "▸";
+    color: #667eea;
+    margin-right: 0.5em;
+}
+
+/* Work Experience */
+.job, .project {
+    margin-bottom: 2em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.company {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+    
+    #mainLeft {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding-right: 0;
+        padding-bottom: 2em;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    header {
+        background: none;
+        color: black;
+        box-shadow: none;
+    }
+    
+    main {
+        box-shadow: none;
+    }
+}
+```
 </details>
 
-**Passaggio 6:** Apri il file `codeswing.json`, incolla il codice qui sotto e salva.
+**Creazione del file di configurazione (`codeswing.json`):**
 
-    {
+```json
+{
     "scripts": [],
     "styles": []
-    }
+}
+```
 
-**Passaggio 7:** Installa l'estensione `Codeswing` per visualizzare il sito web del curriculum nell'area di codice.
+**Comprensione delle funzionalità CSS:**
+- **Utilizza** CSS Grid per una struttura di layout reattiva e professionale
+- **Implementa** schemi di colori moderni con intestazioni a gradiente
+- **Include** effetti hover e transizioni fluide per l'interattività
+- **Fornisce** un design reattivo che funziona su tutte le dimensioni dei dispositivi
+- **Aggiunge** stili compatibili con la stampa per la generazione di PDF
 
-Clicca sull'icona _`Extensions`_ nella barra delle attività e digita Codeswing. Clicca sul pulsante _blu install_ nella barra delle attività espansa per installare oppure usa il pulsante di installazione che appare nell'area di codice una volta selezionata l'estensione per caricare ulteriori informazioni. Subito dopo aver installato l'estensione, osserva l'area di codice per vedere i cambiamenti nel tuo progetto 😃.
+### Passo 6: Installa e configura le estensioni
 
-![Installa estensioni](../../../../8-code-editor/images/install-extension.gif)
+Le estensioni migliorano la tua esperienza di sviluppo fornendo funzionalità di anteprima live e strumenti di flusso di lavoro avanzati. L'estensione CodeSwing è particolarmente utile per i progetti di sviluppo web.
 
-Questo è ciò che vedrai sullo schermo dopo aver installato l'estensione.
+**Installazione dell'estensione CodeSwing:**
 
-![Estensione Codeswing in azione](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.it.png)
+1. **Clicca** sull'icona Extensions (🧩) nella barra delle attività
+2. **Cerca** "CodeSwing" nella casella di ricerca del marketplace
+3. **Seleziona** l'estensione CodeSwing dai risultati della ricerca
+4. **Clicca** sul pulsante blu "Install"
 
-Se sei soddisfatto delle modifiche che hai apportato, passa con il mouse sulla cartella `Changes` e clicca sul pulsante `+` per mettere in stage le modifiche.
+![Installazione dell'estensione CodeSwing](../../../../8-code-editor/images/install-extension.gif)
 
-Digita un messaggio di commit _(Una descrizione delle modifiche apportate al progetto)_ e conferma le modifiche cliccando sul `check`. Una volta terminato il lavoro sul progetto, seleziona l'icona del menu hamburger in alto a sinistra per tornare al repository su GitHub.
+**Cosa offre CodeSwing:**
+- **Abilita** l'anteprima live del tuo sito web mentre lo modifichi
+- **Mostra** le modifiche in tempo reale senza necessità di aggiornamento manuale
+- **Supporta** tipi di file multipli, inclusi HTML, CSS e JavaScript
+- **Fornisce** un'esperienza di ambiente di sviluppo integrato
 
-Congratulazioni 🎉 Hai appena creato il tuo sito web per il curriculum usando vscode.dev in pochi passaggi.
+**Risultati immediati dopo l'installazione:**
+Una volta installato CodeSwing, vedrai un'anteprima live del tuo sito web per il curriculum apparire nell'editor. Questo ti permette di vedere esattamente come appare il tuo sito mentre apporti modifiche.
 
-## 🚀 Sfida
+![Estensione CodeSwing che mostra l'anteprima live](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.it.png)
 
-Apri un repository remoto su cui hai i permessi per apportare modifiche e aggiorna alcuni file. Successivamente, prova a creare un nuovo branch con le tue modifiche e fai una Pull Request.
+**Comprensione dell'interfaccia migliorata:**
+- **Vista divisa**: **Mostra** il tuo codice da un lato e l'anteprima live dall'altro
+- **Aggiornamenti in tempo reale**: **Riflette** le modifiche immediatamente mentre scrivi
+- **Anteprima interattiva**: **Permette** di testare link e interazioni
+- **Simulazione mobile**: **Fornisce** capacità di test del design reattivo
 
-<!----
-## Quiz Post-Lettura
-[Quiz post-lettura](https://ff-quizzes.netlify.app/web/quiz/4)
----->
+### Passo 7: Controllo di versione e pubblicazione
 
-## Revisione e Studio Autonomo
+Ora che il tuo sito web per il curriculum è completo, utilizza Git per salvare il tuo lavoro e renderlo disponibile online.
 
-Leggi di più su [VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) e alcune delle sue altre funzionalità.
+**Commettere le modifiche:**
+
+1. **Clicca** sull'icona Source Control (🌿) nella barra delle attività
+2. **Rivedi** tutti i file che hai creato e modificato nella sezione "Changes"
+3. **Stagia** le modifiche cliccando sull'icona "+" accanto a ogni file
+4. **Scrivi** un messaggio di commit descrittivo, come:
+   - "Aggiungi sito web completo per il curriculum con design reattivo"
+   - "Implementa stilizzazione professionale e struttura dei contenuti"
+5. **Clicca** sul segno di spunta (✓) per commettere e pushare le modifiche
+
+**Esempi di messaggi di commit efficaci:**
+- "Aggiungi contenuto e stilizzazione professionale per il curriculum"
+- "Implementa design reattivo per compatibilità mobile"
+- "Aggiorna informazioni di contatto e link ai progetti"
+
+> 💡 **Suggerimento professionale**: Buoni messaggi di commit aiutano a tracciare l'evoluzione del tuo progetto e dimostrano attenzione ai dettagli – qualità che i datori di lavoro apprezzano.
+
+**Accesso al tuo sito pubblicato:**
+Una volta commesso, puoi tornare al tuo repository GitHub utilizzando il menu hamburger (☰) nell'angolo in alto a sinistra. Il tuo sito web per il curriculum è ora controllato in versione e pronto per il deployment o la condivisione.
+
+## Risultati e prossimi passi
+
+**Congratulazioni! 🎉** Hai creato con successo un sito web professionale per il curriculum utilizzando VSCode.dev. Il tuo progetto dimostra:
+**Competenze tecniche dimostrate:**
+- **Gestione del repository**: Creazione e organizzazione di una struttura di progetto completa
+- **Sviluppo web**: Creazione di un sito web reattivo utilizzando HTML5 e CSS3 moderni
+- **Controllo di versione**: Implementazione di un flusso di lavoro Git corretto con commit significativi
+- **Competenza negli strumenti**: Utilizzo efficace dell'interfaccia e del sistema di estensioni di VSCode.dev
+
+**Risultati professionali raggiunti:**
+- **Presenza online**: Un URL condivisibile che mostra le tue qualifiche
+- **Formato moderno**: Un'alternativa interattiva ai curriculum PDF tradizionali
+- **Competenze dimostrabili**: Prove concrete delle tue capacità di sviluppo web
+- **Aggiornamenti facili**: Una base che puoi migliorare e personalizzare continuamente
+
+### Opzioni di deployment
+
+Per rendere il tuo curriculum accessibile ai datori di lavoro, considera queste opzioni di hosting:
+
+**GitHub Pages (Consigliato):**
+1. Vai alle impostazioni del tuo repository su GitHub
+2. Scorri fino alla sezione "Pages"
+3. Seleziona "Deploy from a branch" e scegli "main"
+4. Il tuo sito sarà disponibile su `https://tuo-username.github.io/my-resume`
+
+**Piattaforme alternative:**
+- **Netlify**: Deployment automatico con domini personalizzati
+- **Vercel**: Deployment veloce con funzionalità di hosting moderne
+- **GitHub Codespaces**: Ambiente di sviluppo con anteprima integrata
+
+### Suggerimenti per miglioramenti
+
+Continua a sviluppare le tue competenze aggiungendo queste funzionalità:
+
+**Miglioramenti tecnici:**
+- **Interattività JavaScript**: Aggiungi scrolling fluido o elementi interattivi
+- **Toggle modalità scura**: Implementa il cambio di tema per preferenze utente
+- **Modulo di contatto**: Abilita la comunicazione diretta con i potenziali datori di lavoro
+- **Ottimizzazione SEO**: Aggiungi meta tag e dati strutturati per una migliore visibilità nei motori di ricerca
+
+**Miglioramenti del contenuto:**
+- **Portfolio progetti**: Link ai repository GitHub e dimostrazioni live
+- **Visualizzazione competenze**: Crea barre di progresso o sistemi di valutazione delle competenze
+- **Sezione testimonianze**: Includi raccomandazioni di colleghi o istruttori
+- **Integrazione blog**: Aggiungi una sezione blog per mostrare il tuo percorso di apprendimento
+
+## Sfida GitHub Copilot Agent 🚀
+
+Usa la modalità Agent per completare la seguente sfida:
+
+**Descrizione:** Migliora il tuo sito web per il curriculum con funzionalità avanzate che dimostrano capacità professionali di sviluppo web e principi di design moderni.
+
+**Prompt:** Basandoti sul tuo sito web per il curriculum esistente, implementa queste funzionalità avanzate:
+1. Aggiungi un toggle per il tema scuro/chiaro con transizioni fluide
+2. Crea una sezione competenze interattiva con barre di progresso animate
+3. Implementa un modulo di contatto con validazione del modulo
+4. Aggiungi una sezione portfolio progetti con effetti hover e popup modali
+5. Includi una sezione blog con almeno 3 post di esempio sul tuo percorso di apprendimento
+6. Ottimizza per SEO con meta tag appropriati, dati strutturati e prestazioni
+7. Pubblica il sito migliorato utilizzando GitHub Pages o Netlify
+8. Documenta tutte le nuove funzionalità nel tuo README.md con screenshot
+
+Il tuo sito web migliorato dovrebbe dimostrare padronanza delle pratiche moderne di sviluppo web, inclusi design reattivo, interattività JavaScript e flussi di lavoro di deployment professionali.
+
+## Estensione della sfida
+
+Pronto a portare le tue competenze ancora più avanti? Prova queste sfide avanzate:
+
+**📱 Redesign Mobile-First:** Ricostruisci completamente il tuo sito utilizzando un approccio mobile-first con CSS Grid e Flexbox
+
+**🔍 Ottimizzazione SEO:** Implementa un'ottimizzazione SEO completa, inclusi meta tag, dati strutturati e ottimizzazione delle prestazioni
+
+**🌐 Supporto multilingue:** Aggiungi funzionalità di internazionalizzazione per supportare più lingue
+
+**📊 Integrazione Analytics:** Aggiungi Google Analytics per monitorare il coinvolgimento dei visitatori e ottimizzare i tuoi contenuti
+
+**🚀 Ottimizzazione delle prestazioni:** Ottieni punteggi perfetti su Lighthouse in tutte le categorie
+
+## Revisione e studio autonomo
+
+Amplia le tue conoscenze con queste risorse:
+
+**Funzionalità avanzate di VSCode.dev:**
+- [Documentazione VSCode.dev](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) - Guida completa all'editing basato sul web
+- [GitHub Codespaces](https://docs.github.com/en/codespaces) - Ambienti di sviluppo cloud
+
+**Best practices per lo sviluppo web:**
+- **Design reattivo**: Studia CSS Grid e Flexbox per layout moderni
+- **Accessibilità**: Impara le linee guida WCAG per un design web inclusivo  
+- **Prestazioni**: Esplora strumenti come Lighthouse per l'ottimizzazione  
+- **SEO**: Comprendi i fondamenti dell'ottimizzazione per i motori di ricerca  
+
+**Sviluppo Professionale:**  
+- **Creazione del Portfolio**: Realizza progetti aggiuntivi per mostrare competenze diversificate  
+- **Open Source**: Contribuisci a progetti esistenti per acquisire esperienza di collaborazione  
+- **Networking**: Condividi il tuo sito web curriculum nelle comunità di sviluppatori per ricevere feedback  
+- **Apprendimento Continuo**: Rimani aggiornato sulle tendenze e tecnologie dello sviluppo web  
+
+---
+
+**I tuoi prossimi passi:** Condividi il tuo sito web curriculum con amici, familiari o mentori per ricevere feedback. Usa i loro suggerimenti per iterare e migliorare il tuo design. Ricorda, questo progetto non è solo un curriculum – è una dimostrazione della tua crescita come sviluppatore web!
 
 ---
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

@@ -1,50 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
-  "translation_date": "2025-08-28T23:37:27+00:00",
+  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
+  "translation_date": "2025-10-22T22:55:07+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "mo"
 }
 -->
 # 建立太空遊戲第一部分：介紹
 
-![video](../../../../6-space-game/images/pewpew.gif)
+![太空遊戲動畫展示遊戲玩法](../../../../6-space-game/images/pewpew.gif)
+
+就像 NASA 的任務控制在太空發射期間協調多個系統一樣，我們將建立一個太空遊戲，展示程式的不同部分如何無縫協作。在創建一個實際可以玩的遊戲的同時，您將學習適用於任何軟體專案的基本編程概念。
+
+我們將探討組織程式碼的兩種基本方法：繼承和組合。這些不僅僅是學術概念——它們是從電子遊戲到銀行系統的所有事物的運作模式。我們還將實現一個名為 pub/sub 的通信系統，它的工作方式類似於航天器使用的通信網絡，允許不同的組件共享信息而不產生依賴性。
+
+在本系列結束時，您將了解如何構建可以擴展和演變的應用程式——無論您是在開發遊戲、網頁應用程式還是其他任何軟體系統。
 
 ## 課前測驗
 
 [課前測驗](https://ff-quizzes.netlify.app/web/quiz/29)
 
-### 遊戲開發中的繼承與組合
+## 繼承與組合在遊戲開發中的應用
 
-在之前的課程中，由於專案範圍較小，您不需要太擔心應用程式的設計架構。然而，當應用程式的規模和範圍擴大時，架構設計的決策就變得更加重要。在 JavaScript 中，建立大型應用程式有兩種主要方法：*組合* 或 *繼承*。這兩種方法各有優缺點，以下我們將以遊戲的背景來解釋它們。
+隨著專案的複雜性增加，程式碼的組織變得至關重要。一開始可能只是簡單的腳本，但如果沒有適當的結構，維護起來會變得困難——就像阿波羅任務需要仔細協調數千個組件一樣。
 
-✅ 有一本非常著名的程式設計書籍是關於[設計模式](https://en.wikipedia.org/wiki/Design_Patterns)的。
+我們將探討組織程式碼的兩種基本方法：繼承和組合。每種方法都有其獨特的優勢，了解這兩者有助於您在不同情況下選擇合適的方法。我們將通過我們的太空遊戲來演示這些概念，其中英雄、敵人、增強道具和其他物件必須高效地互動。
 
-在遊戲中，您會有 `遊戲物件`，這些物件存在於螢幕上。這意味著它們在笛卡爾座標系統中有一個位置，具體來說就是 `x` 和 `y` 座標。當您開發遊戲時，您會發現所有的遊戲物件都有一些標準屬性，這些屬性是每個遊戲中都通用的，主要包括以下幾個元素：
+✅ 最著名的編程書籍之一與[設計模式](https://en.wikipedia.org/wiki/Design_Patterns)有關。
 
-- **基於位置**：大多數（如果不是全部的話）遊戲元素都是基於位置的。這意味著它們有一個位置，即 `x` 和 `y`。
-- **可移動**：這些物件可以移動到新位置。通常是英雄、怪物或 NPC（非玩家角色），但例如像樹這樣的靜態物件則不是。
-- **自我銷毀**：這些物件只存在於一段時間內，然後會自動標記為刪除。通常這是通過一個 `dead` 或 `destroyed` 的布林值來表示，告訴遊戲引擎該物件不再需要渲染。
-- **冷卻時間**：冷卻時間是短暫存在的物件中常見的屬性。一個典型的例子是文字或圖形效果（如爆炸），這些效果只應該顯示幾毫秒。
+在任何遊戲中，您都會有 `遊戲物件`——填充遊戲世界的互動元素。英雄、敵人、增強道具和視覺效果都是遊戲物件。每個物件都使用 `x` 和 `y` 值存在於特定的螢幕座標上，類似於在坐標平面上繪製點。
 
-✅ 想想像《吃豆人》這樣的遊戲。您能在這個遊戲中識別出上述四種類型的物件嗎？
+儘管它們在外觀上有所不同，但這些物件通常具有共同的基本行為：
 
-### 表達行為
+- **它們存在於某處**——每個物件都有 x 和 y 座標，因此遊戲知道在哪裡繪製它
+- **許多物件可以移動**——英雄奔跑，敵人追逐，子彈在螢幕上飛行
+- **它們有壽命**——有些物件會永遠存在，其他物件（如爆炸）會短暫出現然後消失
+- **它們會對事物做出反應**——當物件碰撞時，增強道具被收集，生命值條更新
 
-上述描述的所有內容都是遊戲物件可能具有的行為。那麼，我們如何編碼這些行為呢？我們可以將這些行為表達為與類別或物件相關聯的方法。
+✅ 想想像 Pac-Man 這樣的遊戲。您能在這個遊戲中識別出上述四種物件類型嗎？
 
-**類別**
+### 通過程式碼表達行為
 
-這種方法的核心思想是使用 `類別` 和 `繼承` 來為類別添加特定的行為。
+現在您已經了解了遊戲物件共享的常見行為，讓我們來探討如何在 JavaScript 中實現這些行為。您可以通過附加到類或單個物件的方法來表達物件行為，並且有幾種方法可供選擇。
 
-✅ 繼承是一個重要的概念。可以在 [MDN 的繼承文章](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 中了解更多。
+**基於類的方式**
 
-用程式碼表達時，一個遊戲物件通常看起來像這樣：
+類和繼承提供了一種結構化的方法來組織遊戲物件。就像卡爾·林奈斯（Carl Linnaeus）開發的分類系統一樣，您可以從包含常見屬性的基類開始，然後創建繼承這些基礎並添加特定功能的專門類。
+
+✅ 繼承是一個重要的概念。了解更多請參考 [MDN 的繼承文章](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+
+以下是如何使用類和繼承來實現遊戲物件：
 
 ```javascript
-
-//set up the class GameObject
+// Step 1: Create the base GameObject class
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -52,187 +61,310 @@ class GameObject {
     this.type = type;
   }
 }
+```
 
-//this class will extend the GameObject's inherent class properties
+**讓我們逐步解析：**
+- 我們正在創建每個遊戲物件都可以使用的基本模板
+- 建構函數保存物件的位置（`x`，`y`）以及物件的類型
+- 這成為所有遊戲物件構建的基礎
+
+```javascript
+// Step 2: Add movement capability through inheritance
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type); // Call parent constructor
   }
 
-//this movable object can be moved on the screen
+  // Add the ability to move to a new position
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
-class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
-  }
-}
-
-//this class, on the other hand, only inherits the GameObject properties
-class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
-  }
-}
-
-//a hero can move...
-const hero = new Hero();
-hero.moveTo(5,5);
-
-//but a tree cannot
-const tree = new Tree();
 ```
 
-✅ 花幾分鐘重新構想一個《吃豆人》的英雄（例如 Inky、Pinky 或 Blinky），並思考如何用 JavaScript 編寫它。
-
-**組合**
-
-另一種處理物件繼承的方法是使用 *組合*。在這種情況下，物件的行為表達如下：
+**在上面的程式碼中，我們：**
+- **擴展**了 GameObject 類以添加移動功能
+- 使用 `super()` **調用**父建構函數以初始化繼承的屬性
+- **添加**了一個 `moveTo()` 方法來更新物件的位置
 
 ```javascript
-//create a constant gameObject
+// Step 3: Create specific game object types
+class Hero extends Movable {
+  constructor(x, y) {
+    super(x, y, 'Hero'); // Set type automatically
+  }
+}
+
+class Tree extends GameObject {
+  constructor(x, y) {
+    super(x, y, 'Tree'); // Trees don't need movement
+  }
+}
+
+// Step 4: Use your game objects
+const hero = new Hero(0, 0);
+hero.moveTo(5, 5); // Hero can move!
+
+const tree = new Tree(10, 15);
+// tree.moveTo() would cause an error - trees can't move
+```
+
+**理解這些概念：**
+- **創建**繼承適當行為的專門物件類型
+- **展示**了繼承如何允許選擇性地包含功能
+- **顯示**英雄可以移動，而樹木保持靜止
+- **說明**類層次結構如何防止不適當的操作
+
+✅ 花幾分鐘重新構想一個 Pac-Man 的英雄（例如 Inky、Pinky 或 Blinky），並思考如何用 JavaScript 編寫它。
+
+**組合方式**
+
+組合遵循模組化設計哲學，類似於工程師設計具有可互換組件的航天器。與其從父類繼承，不如通過組合特定行為來創建具有所需功能的物件。這種方法提供了靈活性，而不受嚴格的層次結構限制。
+
+```javascript
+// Step 1: Create base behavior objects
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
-}
-//then the constant movableObject is composed of the gameObject and movable constants
-const movableObject = {...gameObject, ...movable};
+};
+```
 
-//then create a function to create a new Hero who inherits the movableObject properties
+**這段程式碼的作用：**
+- **定義**了一個基礎的 `gameObject`，具有位置和類型屬性
+- **創建**了一個單獨的 `movable` 行為物件，具有移動功能
+- **分離**關注點，保持位置數據和移動邏輯獨立
+
+```javascript
+// Step 2: Compose objects by combining behaviors
+const movableObject = { ...gameObject, ...movable };
+
+// Step 3: Create factory functions for different object types
 function createHero(x, y) {
   return {
     ...movableObject,
     x,
     y,
     type: 'Hero'
-  }
+  };
 }
-//...and a static object that inherits only the gameObject properties
+
 function createStatic(x, y, type) {
   return {
-    ...gameObject
+    ...gameObject,
     x,
     y,
     type
-  }
+  };
 }
-//create the hero and move it
-const hero = createHero(10,10);
-hero.moveTo(5,5);
-//and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**應該使用哪種模式？**
-
-選擇哪種模式完全取決於您。JavaScript 支援這兩種範式。
-
---
-
-在遊戲開發中，還有另一種常見的模式，用於解決遊戲的用戶體驗和效能問題。
-
-## Pub/Sub 模式
-
-✅ Pub/Sub 代表「發布-訂閱」
-
-這種模式的核心思想是應用程式的不同部分不應該彼此了解。為什麼呢？這樣可以更容易了解整體情況，並且如果需要改變行為，也會更加簡單。我們如何實現這一點？我們通過建立以下概念來實現：
-
-- **訊息**：訊息通常是一個文字字串，並可能附帶一個可選的有效負載（用於說明訊息內容的一段資料）。遊戲中的典型訊息可以是 `KEY_PRESSED_ENTER`。
-- **發布者**：這個元素*發布*一個訊息，並將其發送給所有訂閱者。
-- **訂閱者**：這個元素*監聽*特定的訊息，並在接收到該訊息後執行某些任務，例如發射雷射。
-
-這種模式的實現非常簡單，但功能非常強大。以下是它的實現方式：
+**在上面的程式碼中，我們：**
+- 使用展開語法 **組合**了基礎物件屬性和移動行為
+- **創建**了返回自定義物件的工廠函數
+- **啟用**了靈活的物件創建，而不受嚴格的類層次結構限制
+- **允許**物件擁有它們需要的行為
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+// Step 4: Create and use your composed objects
+const hero = createHero(10, 10);
+hero.moveTo(5, 5); // Works perfectly!
+
+const tree = createStatic(0, 0, 'Tree');
+// tree.moveTo() is undefined - no movement behavior was composed
+```
+
+**需要記住的關鍵點：**
+- 通過混合行為而不是繼承來 **組合**物件
+- 比僵化的繼承層次結構提供了更多的 **靈活性**
+- **允許**物件擁有它們需要的功能
+- 使用現代 JavaScript 的展開語法進行乾淨的物件組合
+
+```
+
+**Which Pattern Should You Choose?**
+
+> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+> 
+**Here's when to use each approach:**
+- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
+- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
+- **Consider** your team's preferences and project requirements
+- **Remember** that you can mix both approaches in the same application
+
+## Communication Patterns: The Pub/Sub System
+
+As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+
+Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+
+✅ **Pub/Sub** stands for 'publish-subscribe'
+
+### Understanding the Pub/Sub Architecture
+
+The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+
+**The key players in pub/sub:**
+- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
+- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
+- **Subscribers** – The objects that say "I care about that event" and react when it happens
+- **Event System** – The middleman that makes sure messages get to the right listeners
+
+### Building an Event System
+
+Let's create a simple but powerful event system that demonstrates these concepts:
+
+```javascript
+// Step 1: Create the EventEmitter class
 class EventEmitter {
   constructor() {
-    this.listeners = {};
+    this.listeners = {}; // Store all event listeners
   }
-//when a message is received, let the listener to handle its payload
+  
+  // Register a listener for a specific message type
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  
+  // Send a message to all registered listeners
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach(listener => {
+        listener(message, payload);
+      });
     }
   }
 }
-
 ```
 
-要使用上述程式碼，我們可以建立一個非常簡單的實現：
+**解析這裡發生的事情：**
+- 使用簡單的類 **創建**了一個中心事件管理系統
+- **存儲**按消息類型組織的監聽器
+- 使用 `on()` 方法 **註冊**新的監聽器
+- 使用 `emit()` **廣播**消息給所有感興趣的監聽器
+- 支援可選的數據負載以傳遞相關信息
+
+### 整合：實際範例
+
+好了，讓我們來看看這是如何運作的！我們將建立一個簡單的移動系統，展示 pub/sub 的清晰和靈活性：
 
 ```javascript
-//set up a message structure
+// Step 1: Define your message types
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
+  HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
+  ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
-//invoke the eventEmitter you set up above
+
+// Step 2: Create your event system and game objects
 const eventEmitter = new EventEmitter();
-//set up a hero
-const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+const hero = createHero(0, 0);
+```
+
+**這段程式碼的作用：**
+- **定義**了一個常量物件以防止消息名稱中的拼寫錯誤
+- **創建**了一個事件發送器實例來處理所有通信
+- **初始化**了一個位於起始位置的英雄物件
+
+```javascript
+// Step 3: Set up event listeners (subscribers)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.moveTo(hero.x - 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
+  hero.moveTo(hero.x + 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
+});
+```
+
+**在上面的程式碼中，我們：**
+- **註冊**了響應移動消息的事件監聽器
+- 根據移動方向 **更新**了英雄的位置
+- 添加了控制台日誌以跟踪英雄的位置變化
+- **分離**了移動邏輯和輸入處理
+
+```javascript
+// Step 4: Connect keyboard input to events (publishers)
+window.addEventListener('keydown', (event) => {
+  switch(event.key) {
+    case 'ArrowLeft':
+      eventEmitter.emit(Messages.HERO_MOVE_LEFT);
+      break;
+    case 'ArrowRight':
+      eventEmitter.emit(Messages.HERO_MOVE_RIGHT);
+      break;
   }
 });
 ```
 
-在上面的例子中，我們連接了一個鍵盤事件 `ArrowLeft`，並發送了 `HERO_MOVE_LEFT` 訊息。我們監聽該訊息，並據此移動 `hero`。這種模式的優勢在於事件監聽器和英雄彼此之間並不知道對方的存在。您可以將 `ArrowLeft` 重新映射到 `A` 鍵。此外，通過對 eventEmitter 的 `on` 函數進行一些編輯，還可以在 `ArrowLeft` 上執行完全不同的操作：
+**理解這些概念：**
+- **連接**鍵盤輸入到遊戲事件，而不需要緊密耦合
+- **使能**輸入系統間接與遊戲物件通信
+- **允許**多個系統對相同的鍵盤事件做出響應
+- **使得**更改按鍵綁定或添加新的輸入方法變得容易
 
-```javascript
-eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
-});
-```
+> 💡 **專業提示**：這種模式的美妙之處在於它的靈活性！您可以輕鬆添加音效、螢幕震動或粒子效果，只需添加更多的事件監聽器——無需修改現有的鍵盤或移動程式碼。
+> 
+**您會喜歡這種方法的原因：**
+- 添加新功能變得非常簡單——只需監聽您關心的事件
+- 多個事物可以對同一事件做出反應，而不會互相干擾
+- 測試變得更加簡單，因為每個部分都能獨立工作
+- 當某些東西出現問題時，您知道確切的問題所在
 
-隨著遊戲規模的增長，事情會變得更加複雜，但這種模式的複雜度保持不變，並且您的程式碼仍然保持乾淨。非常推薦採用這種模式。
+### 為什麼 Pub/Sub 能有效擴展
+
+隨著應用程式的複雜性增加，pub/sub 模式保持了簡單性。無論是管理數十個敵人、動態 UI 更新還是音效系統，該模式都能在不進行架構更改的情況下處理規模的增長。新功能可以集成到現有的事件系統中，而不影響已建立的功能。
+
+> ⚠️ **常見錯誤**：不要在早期創建過多的特定消息類型。從廣泛的類別開始，隨著遊戲需求的明確逐步完善它們。
+> 
+**最佳實踐：**
+- **將**相關消息分組到邏輯類別中
+- 使用描述性名稱 **清楚地指示**發生了什麼
+- **保持**消息負載簡單且專注
+- **記錄**您的消息類型以便團隊協作
 
 ---
 
+## GitHub Copilot Agent 挑戰 🚀
+
+使用 Agent 模式完成以下挑戰：
+
+**描述：** 使用繼承和 pub/sub 模式創建一個簡單的遊戲物件系統。您將實現一個基本遊戲，其中不同物件可以通過事件進行通信，而不直接了解彼此。
+
+**提示：** 使用以下要求創建一個 JavaScript 遊戲系統：1) 創建一個具有 x、y 座標和類型屬性的基礎 GameObject 類。2) 創建一個擴展 GameObject 並可以移動的 Hero 類。3) 創建一個擴展 GameObject 並可以追逐英雄的 Enemy 類。4) 實現一個用於 pub/sub 模式的 EventEmitter 類。5) 設置事件監聽器，當英雄移動時，附近的敵人接收到 'HERO_MOVED' 事件並更新其位置以追逐英雄。包括 console.log 語句以顯示物件之間的通信。
+
+了解更多有關 [Agent 模式](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) 的信息。
+
 ## 🚀 挑戰
 
-思考 Pub/Sub 模式如何提升遊戲的表現。哪些部分應該發出事件，遊戲應該如何對這些事件做出反應？現在是發揮創意的時候，想像一個新遊戲以及它的各個部分可能如何運作。
+考慮 pub-sub 模式如何增強遊戲架構。確定哪些組件應該發送事件以及系統應如何響應。設計一個遊戲概念並繪製其組件之間的通信模式。
 
 ## 課後測驗
 
 [課後測驗](https://ff-quizzes.netlify.app/web/quiz/30)
 
-## 複習與自學
+## 回顧與自學
 
-透過[閱讀相關內容](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon)來進一步了解 Pub/Sub。
+通過[閱讀相關資料](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon)了解更多有關 Pub/Sub 的信息。
 
 ## 作業
 
-[設計一個遊戲原型](assignment.md)
+[設計一個遊戲](assignment.md)
 
 ---
 
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋不承擔責任。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

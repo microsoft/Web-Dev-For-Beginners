@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f7009631b73556168ca435120a231c98",
-  "translation_date": "2025-08-29T00:26:31+00:00",
+  "original_hash": "90a3c32c3377f83ab750c2447c77ab98",
+  "translation_date": "2025-10-22T23:45:49+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "tr"
 }
@@ -13,11 +13,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
+Hiç uygulamaların nasıl akıllıca kararlar verdiğini merak ettiniz mi? Örneğin, bir navigasyon sisteminin en hızlı rotayı nasıl seçtiğini veya bir termostatın ısıtmayı ne zaman açacağına nasıl karar verdiğini? İşte bu, programlamada karar verme kavramının temelidir.
+
+Charles Babbage'ın Analitik Motoru'nun koşullara bağlı olarak farklı işlem dizilerini takip etmek üzere tasarlandığı gibi, modern JavaScript programlarının da değişen durumlara göre seçim yapması gerekir. Bu dallanma ve karar verme yeteneği, statik kodu duyarlı ve akıllı uygulamalara dönüştüren şeydir.
+
+Bu derste, programlarınızda koşullu mantığı nasıl uygulayacağınızı öğreneceksiniz. Koşullu ifadeleri, karşılaştırma operatörlerini ve kodunuzun durumları değerlendirip uygun şekilde yanıt vermesini sağlayan mantıksal ifadeleri keşfedeceğiz.
+
 ## Ders Öncesi Test
 
 [Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Karar vermek ve kodunuzun çalışma sırasını kontrol etmek, kodunuzu yeniden kullanılabilir ve sağlam hale getirir. Bu bölüm, JavaScript'te veri akışını kontrol etme sözdizimini ve bunun Boolean veri türleriyle kullanıldığında önemini ele alır.
+Karar verme ve program akışını kontrol etme yeteneği, programlamanın temel bir yönüdür. Bu bölüm, JavaScript programlarınızın yürütme yolunu Boolean değerleri ve koşullu mantık kullanarak nasıl kontrol edeceğinizi kapsar.
 
 [![Karar Verme](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Karar Verme")
 
@@ -25,76 +31,96 @@ Karar vermek ve kodunuzun çalışma sırasını kontrol etmek, kodunuzu yeniden
 
 > Bu dersi [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon) üzerinden alabilirsiniz!
 
-## Boolean'lar Hakkında Kısa Bir Hatırlatma
+## Boolean'lar Üzerine Kısa Bir Hatırlatma
 
-Boolean'lar yalnızca iki değere sahip olabilir: `true` veya `false`. Boolean'lar, belirli koşullar sağlandığında hangi kod satırlarının çalışması gerektiğine karar vermeye yardımcı olur.
+Karar vermeyi keşfetmeden önce, önceki dersimizden Boolean değerlerini tekrar gözden geçirelim. Matematikçi George Boole'un adını taşıyan bu değerler, ikili durumları temsil eder – ya `true` ya da `false`. Hiçbir belirsizlik yok, ara bir durum yok.
 
-Boolean'ınızı şu şekilde true veya false olarak ayarlayın:
+Bu ikili değerler, tüm hesaplama mantığının temelini oluşturur. Programınızın verdiği her karar nihayetinde bir Boolean değerlendirmesine indirgenir.
 
-`let myTrueBool = true`  
-`let myFalseBool = false`
+Boolean değişkenler oluşturmak oldukça basittir:
 
-✅ Boolean'lar, İngiliz matematikçi, filozof ve mantıkçı George Boole (1815–1864) adına adlandırılmıştır.
+```javascript
+let myTrueBool = true;
+let myFalseBool = false;
+```
+
+Bu, açık Boolean değerlerine sahip iki değişken oluşturur.
+
+✅ Boolean'lar, İngiliz matematikçi, filozof ve mantıkçı George Boole (1815–1864) adını taşır.
 
 ## Karşılaştırma Operatörleri ve Boolean'lar
 
-Operatörler, koşulları değerlendirerek Boolean değerler oluşturmak için karşılaştırmalar yapmak amacıyla kullanılır. İşte sıkça kullanılan operatörlerin bir listesi:
+Pratikte, Boolean değerlerini manuel olarak ayarlamanız nadirdir. Bunun yerine, koşulları değerlendirerek onları oluşturursunuz: "Bu sayı diğerinden büyük mü?" veya "Bu değerler eşit mi?"
 
-| Sembol | Açıklama                                                                                                                                                     | Örnek              |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Küçüktür**: İki değeri karşılaştırır ve sol taraftaki değer sağdakinden küçükse `true` Boolean veri türünü döndürür                                         | `5 < 6 // true`    |
-| `<=`   | **Küçük veya eşittir**: İki değeri karşılaştırır ve sol taraftaki değer sağdakinden küçük veya eşitse `true` Boolean veri türünü döndürür                     | `5 <= 6 // true`   |
-| `>`    | **Büyüktür**: İki değeri karşılaştırır ve sol taraftaki değer sağdakinden büyükse `true` Boolean veri türünü döndürür                                         | `5 > 6 // false`   |
-| `>=`   | **Büyük veya eşittir**: İki değeri karşılaştırır ve sol taraftaki değer sağdakinden büyük veya eşitse `true` Boolean veri türünü döndürür                     | `5 >= 6 // false`  |
-| `===`  | **Sıkı eşitlik**: İki değeri karşılaştırır ve sağdaki ve soldaki değerler eşit VE aynı veri türündeyse `true` Boolean veri türünü döndürür                    | `5 === 6 // false` |
-| `!==`  | **Eşitsizlik**: İki değeri karşılaştırır ve sıkı eşitlik operatörünün döndüreceği değerin tersini döndürür                                                    | `5 !== 6 // true`  |
+Karşılaştırma operatörleri bu değerlendirmeleri mümkün kılar. Değerleri karşılaştırır ve operatörlerin ilişkisinden yola çıkarak Boolean sonuçlar döndürür.
 
-✅ Tarayıcınızın konsolunda bazı karşılaştırmalar yazarak bilginizi test edin. Döndürülen veriler sizi şaşırtıyor mu?
+| Sembol | Açıklama                                                                                                                                                   | Örnek              |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`    | **Küçüktür**: İki değeri karşılaştırır ve sol taraftaki değer sağ taraftakinden küçükse `true` Boolean veri türünü döndürür                                | `5 < 6 // true`    |
+| `<=`   | **Küçük veya eşittir**: İki değeri karşılaştırır ve sol taraftaki değer sağ taraftakinden küçük veya eşitse `true` Boolean veri türünü döndürür            | `5 <= 6 // true`   |
+| `>`    | **Büyüktür**: İki değeri karşılaştırır ve sol taraftaki değer sağ taraftakinden büyükse `true` Boolean veri türünü döndürür                                | `5 > 6 // false`   |
+| `>=`   | **Büyük veya eşittir**: İki değeri karşılaştırır ve sol taraftaki değer sağ taraftakinden büyük veya eşitse `true` Boolean veri türünü döndürür            | `5 >= 6 // false`  |
+| `===`  | **Kesin eşitlik**: İki değeri karşılaştırır ve sağ ve sol taraftaki değerler hem eşit hem de aynı veri türündeyse `true` Boolean veri türünü döndürür      | `5 === 6 // false` |
+| `!==`  | **Eşitsizlik**: İki değeri karşılaştırır ve kesin eşitlik operatörünün döndüreceği Boolean değerin tersini döndürür                                        | `5 !== 6 // true`  |
+
+✅ Bilginizi kontrol etmek için tarayıcınızın konsolunda bazı karşılaştırmalar yazın. Döndürülen veriler sizi şaşırtıyor mu?
 
 ## If İfadesi
 
-If ifadesi, koşul doğru olduğunda blokları arasındaki kodu çalıştırır.
+`if` ifadesi, kodunuzda bir soru sormak gibidir. "Eğer bu koşul doğruysa, o zaman bu şeyi yap." JavaScript'te karar vermek için kullanacağınız en önemli araçlardan biridir.
+
+İşte nasıl çalıştığı:
 
 ```javascript
 if (condition) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
 }
 ```
 
-Mantıksal operatörler genellikle koşul oluşturmak için kullanılır.
+Koşul parantezlerin içine gider ve eğer `true` ise, JavaScript süslü parantezlerin içindeki kodu çalıştırır. Eğer `false` ise, JavaScript o bloğu tamamen atlar.
+
+Bu koşulları oluşturmak için genellikle karşılaştırma operatörlerini kullanırsınız. İşte pratik bir örnek:
 
 ```javascript
-let currentMoney;
-let laptopPrice;
+let currentMoney = 1000;
+let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 }
 ```
+
+`1000 >= 800` `true` olarak değerlendirildiği için, blok içindeki kod çalışır ve konsolda "Yeni bir laptop alınıyor!" mesajını gösterir.
 
 ## If..Else İfadesi
 
-`else` ifadesi, koşul yanlış olduğunda blokları arasındaki kodu çalıştırır. `if` ifadesiyle kullanımı isteğe bağlıdır.
+Peki ya koşul yanlış olduğunda programınızın farklı bir şey yapmasını istiyorsanız? İşte burada `else` devreye girer – yedek bir plan gibi.
+
+`else` ifadesi, "eğer bu koşul doğru değilse, bunun yerine başka bir şey yap" demenizi sağlar.
 
 ```javascript
-let currentMoney;
-let laptopPrice;
+let currentMoney = 500;
+let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 } else {
-  //Condition is false. Code in this block will run.
+  // Condition is false. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
-✅ Bu kodu ve aşağıdaki kodu tarayıcı konsolunda çalıştırarak anlayışınızı test edin. Döndürülen `console.log()` değerini değiştirmek için currentMoney ve laptopPrice değişkenlerinin değerlerini değiştirin.
+Şimdi `500 >= 800` `false` olduğu için, JavaScript ilk bloğu atlar ve bunun yerine `else` bloğunu çalıştırır. Konsolda "Henüz yeni bir laptop alacak kadar param yok!" mesajını görürsünüz.
+
+✅ Bu kodu ve aşağıdaki kodu tarayıcı konsolunda çalıştırarak anlayışınızı test edin. `currentMoney` ve `laptopPrice` değişkenlerinin değerlerini değiştirerek döndürülen `console.log()` çıktısını değiştirin.
 
 ## Switch İfadesi
 
-`switch` ifadesi, farklı koşullara bağlı olarak farklı işlemler gerçekleştirmek için kullanılır. `switch` ifadesini, çalıştırılacak birçok kod bloğundan birini seçmek için kullanabilirsiniz.
+Bazen bir değeri birden fazla seçeneğe karşı karşılaştırmanız gerekir. Birkaç `if..else` ifadesini zincirleyebilirsiniz, ancak bu yaklaşım karmaşık hale gelir. `switch` ifadesi, birden fazla ayrık değeri ele almak için daha düzenli bir yapı sağlar.
+
+Bu konsept, erken dönem telefon santrallerinde kullanılan mekanik anahtarlama sistemlerine benzer – bir giriş değeri, yürütmenin hangi özel yolu izleyeceğini belirler.
 
 ```javascript
 switch (expression) {
@@ -105,61 +131,83 @@ switch (expression) {
     // code block
     break;
   default:
-  // code block
+    // code block
 }
 ```
+
+İşte yapısı:
+- JavaScript ifadeyi bir kez değerlendirir
+- Her bir `case`i kontrol eder ve eşleşme arar
+- Eşleşme bulduğunda, o kod bloğunu çalıştırır
+- `break`, JavaScript'e durmasını ve switch'ten çıkmasını söyler
+- Hiçbir case eşleşmezse, `default` bloğunu çalıştırır (varsa)
 
 ```javascript
-// program using switch statement
-let a = 2;
+// Program using switch statement for day of week
+let dayNumber = 2;
+let dayName;
 
-switch (a) {
+switch (dayNumber) {
   case 1:
-    a = "one";
+    dayName = "Monday";
     break;
   case 2:
-    a = "two";
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
     break;
   default:
-    a = "not found";
+    dayName = "Unknown day";
     break;
 }
-console.log(`The value is ${a}`);
+console.log(`Today is ${dayName}`);
 ```
 
-✅ Bu kodu ve aşağıdaki kodu tarayıcı konsolunda çalıştırarak anlayışınızı test edin. Döndürülen `console.log()` değerini değiştirmek için a değişkeninin değerlerini değiştirin.
+Bu örnekte, JavaScript `dayNumber`ın `2` olduğunu görür, eşleşen `case 2`yi bulur, `dayName`i "Salı" olarak ayarlar ve ardından switch'ten çıkar. Sonuç? Konsolda "Bugün Salı" mesajı görüntülenir.
+
+✅ Bu kodu ve aşağıdaki kodu tarayıcı konsolunda çalıştırarak anlayışınızı test edin. `a` değişkeninin değerlerini değiştirerek döndürülen `console.log()` çıktısını değiştirin.
 
 ## Mantıksal Operatörler ve Boolean'lar
 
-Kararlar birden fazla karşılaştırma gerektirebilir ve mantıksal operatörlerle birleştirilerek Boolean değerler oluşturulabilir.
+Karmaşık kararlar genellikle birden fazla koşulu aynı anda değerlendirmeyi gerektirir. Boolean cebiri, matematikçilerin mantıksal ifadeleri birleştirmesine olanak tanıdığı gibi, programlama da birden fazla Boolean koşulunu bağlamak için mantıksal operatörler sağlar.
+
+Bu operatörler, basit doğru/yanlış değerlendirmeleri birleştirerek karmaşık koşullu mantık sağlar.
 
 | Sembol | Açıklama                                                                                     | Örnek                                                                 |
-| ------ | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `&&`   | **Mantıksal VE**: İki Boolean ifadeyi karşılaştırır. Her iki taraf da doğruysa true döndürür   | `(5 > 6) && (5 < 6 ) //Bir taraf yanlış, diğer doğru. False döner`    |
-| `\|\|` | **Mantıksal VEYA**: İki Boolean ifadeyi karşılaştırır. En az bir taraf doğruysa true döndürür | `(5 > 6) \|\| (5 < 6) //Bir taraf yanlış, diğer doğru. True döner`    |
-| `!`    | **Mantıksal DEĞİL**: Bir Boolean ifadenin ters değerini döndürür                              | `!(5 > 6) // 5, 6'dan büyük değil, ancak "!" true döndürür`           |
+| ------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `&&`   | **Mantıksal VE**: İki Boolean ifadeyi karşılaştırır. Her iki taraf da doğruysa `true` döner   | `(5 > 3) && (5 < 10) // Her iki taraf doğru. true döner`              |
+| `\|\|` | **Mantıksal VEYA**: İki Boolean ifadeyi karşılaştırır. En az bir taraf doğruysa `true` döner  | `(5 > 10) \|\| (5 < 10) // Bir taraf yanlış, diğer doğru. true döner` |
+| `!`    | **Mantıksal DEĞİL**: Bir Boolean ifadesinin ters değerini döner                              | `!(5 > 10) // 5, 10'dan büyük değil, bu yüzden "!" bunu doğru yapar`  |
+
+Bu operatörler, koşulları faydalı şekillerde birleştirmenizi sağlar:
+- VE (`&&`) her iki koşulun da doğru olması gerektiği anlamına gelir
+- VEYA (`||`) en az bir koşulun doğru olması gerektiği anlamına gelir  
+- DEĞİL (`!`) doğruyu yanlışa (ve tam tersine) çevirir
 
 ## Mantıksal Operatörlerle Koşullar ve Kararlar
 
-Mantıksal operatörler, if..else ifadelerinde koşul oluşturmak için kullanılabilir.
+Bu mantıksal operatörlerin daha gerçekçi bir örnekle nasıl çalıştığını görelim:
 
 ```javascript
-let currentMoney;
-let laptopPrice;
-let laptopDiscountPrice = laptopPrice - laptopPrice * 0.2; //Laptop price at 20 percent off
+let currentMoney = 600;
+let laptopPrice = 800;
+let laptopDiscountPrice = laptopPrice - (laptopPrice * 0.2); // Laptop price at 20 percent off
 
 if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 } else {
-  //Condition is true. Code in this block will run.
+  // Condition is false. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
+Bu örnekte: %20 indirimli fiyatı (640) hesaplıyoruz, ardından mevcut paramızın ya tam fiyatı ya da indirimli fiyatı karşılayıp karşılamadığını değerlendiriyoruz. 600, indirimli fiyat eşiğini (640) karşıladığı için koşul doğru olarak değerlendirilir.
+
 ### Negasyon Operatörü
 
-Şimdiye kadar, koşullu mantık oluşturmak için bir `if...else` ifadesi kullanabileceğinizi gördünüz. `if` içine giren her şey true/false olarak değerlendirilmelidir. `!` operatörünü kullanarak ifadeyi _tersine çevirebilirsiniz_. Şöyle görünür:
+Bazen bir şeyin doğru OLMADIĞI durumları düşünmek daha kolaydır. Örneğin, "Kullanıcı giriş yaptı mı?" diye sormak yerine "Kullanıcı giriş yapmadı mı?" diye sorabilirsiniz. Ünlem işareti (`!`) operatörü mantığı sizin için tersine çevirir.
 
 ```javascript
 if (!condition) {
@@ -169,15 +217,19 @@ if (!condition) {
 }
 ```
 
+`!` operatörü, "tam tersi..." demek gibidir – bir şey `true` ise, `!` bunu `false` yapar ve tam tersi.
+
 ### Ternary İfadeler
 
-Karar mantığını ifade etmek için yalnızca `if...else` kullanmak zorunda değilsiniz. Ayrıca ternary operatör adı verilen bir şey kullanabilirsiniz. Sözdizimi şu şekilde görünür:
+Basit koşullu atamalar için JavaScript, **ternary operatörünü** sağlar. Bu kısa sözdizimi, bir koşullu ifadeyi tek bir satırda yazmanıza olanak tanır ve bir koşula bağlı olarak iki değerden birini atamanız gerektiğinde kullanışlıdır.
 
 ```javascript
-let variable = condition ? <return this if true> : <return this if false>
+let variable = condition ? returnThisIfTrue : returnThisIfFalse;
 ```
 
-Aşağıda daha somut bir örnek bulunmaktadır:
+Bu, bir soru gibi okunur: "Bu koşul doğru mu? Evetse, bu değeri kullan. Hayırsa, şu değeri kullan."
+
+Aşağıda daha somut bir örnek verilmiştir:
 
 ```javascript
 let firstNumber = 20;
@@ -185,15 +237,11 @@ let secondNumber = 10;
 let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
-✅ Bu kodu birkaç kez okuyarak bir dakika ayırın. Bu operatörlerin nasıl çalıştığını anlıyor musunuz?
+✅ Bu kodu birkaç kez okuyarak bir dakikanızı ayırın. Bu operatörlerin nasıl çalıştığını anlıyor musunuz?
 
-Yukarıdaki ifade şunu belirtir:
+Bu satır şunu söylüyor: "`firstNumber` `secondNumber`dan büyük mü? Evetse, `firstNumber`ı `biggestNumber`a koy. Hayırsa, `secondNumber`ı `biggestNumber`a koy."
 
-- Eğer `firstNumber`, `secondNumber`'dan büyükse
-- `firstNumber`'ı `biggestNumber`'a atayın
-- aksi takdirde `secondNumber`'ı atayın.
-
-Ternary ifade, aşağıdaki kodu yazmanın daha kompakt bir yoludur:
+Ternary operatörü, bu geleneksel `if..else` ifadesini daha kısa bir şekilde yazmanın bir yoludur:
 
 ```javascript
 let biggestNumber;
@@ -204,13 +252,39 @@ if (firstNumber > secondNumber) {
 }
 ```
 
----
-
-## 🚀 Zorluk
-
-Mantıksal operatörlerle yazılmış bir program oluşturun ve ardından bunu bir ternary ifade kullanarak yeniden yazın. Tercih ettiğiniz sözdizimi hangisi?
+Her iki yaklaşım da aynı sonuçları üretir. Ternary operatörü kısalık sunarken, geleneksel if-else yapısı karmaşık koşullar için daha okunabilir olabilir.
 
 ---
+
+## 🚀 Meydan Okuma
+
+Önce mantıksal operatörlerle yazılmış, ardından bir ternary ifade kullanılarak yeniden yazılmış bir program oluşturun. Hangi sözdizimini tercih ediyorsunuz?
+
+---
+
+## GitHub Copilot Agent Meydan Okuması 🚀
+
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+
+**Açıklama:** Bu dersteki birden fazla karar verme konseptini içeren kapsamlı bir not hesaplayıcı oluşturun. Bu, if-else ifadeleri, switch ifadeleri, mantıksal operatörler ve ternary ifadeleri içermelidir.
+
+**Talimat:** Bir öğrencinin sayısal notunu (0-100) alan ve aşağıdaki kriterlere göre harf notunu belirleyen bir JavaScript programı yazın:
+- A: 90-100
+- B: 80-89  
+- C: 70-79
+- D: 60-69
+- F: 60'ın altında
+
+Gereksinimler:
+1. Harf notunu belirlemek için bir if-else ifadesi kullanın
+2. Öğrencinin geçip geçmediğini (not >= 60) VE onur derecesine sahip olup olmadığını (not >= 90) kontrol etmek için mantıksal operatörler kullanın
+3. Her harf notu için özel geri bildirim sağlamak için bir switch ifadesi kullanın
+4. Öğrencinin bir sonraki kursa uygun olup olmadığını (not >= 70) belirlemek için bir ternary operatörü kullanın
+5. Notun 0 ile 100 arasında olduğundan emin olmak için giriş doğrulaması ekleyin
+
+Programınızı 59, 60, 89, 90 ve geçersiz girişler gibi çeşitli notlarla test edin.
+
+Daha fazla bilgi için [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) bağlantısını ziyaret edin.
 
 ## Ders Sonrası Test
 
@@ -218,7 +292,7 @@ Mantıksal operatörlerle yazılmış bir program oluşturun ve ardından bunu b
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Kullanıcıya sunulan birçok operatör hakkında daha fazla bilgi edinin [MDN'de](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+Kullanıcıya sunulan birçok operatör hakkında daha fazla bilgi edinmek için [MDN'de](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators) okuyun.
 
 Josh Comeau'nun harika [operatör rehberine](https://joshwcomeau.com/operator-lookup/) göz atın!
 
@@ -229,4 +303,4 @@ Josh Comeau'nun harika [operatör rehberine](https://joshwcomeau.com/operator-lo
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.

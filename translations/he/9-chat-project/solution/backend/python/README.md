@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:48:41+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-23T01:24:24+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "he"
 }
 -->
 # הפעלת קוד
 
-## הגדרה
+## הגדרות
 
-צור סביבת עבודה וירטואלית
+יצירת סביבה וירטואלית
 
 ```sh
 python -m venv venv
@@ -21,34 +21,42 @@ source ./venv/bin/activate
 ## התקנת תלותים
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## הפעלת API
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## בדיקת API
+
+בקרו בתיעוד האינטראקטיבי של ה-API בכתובת: `http://localhost:5000/docs`
 
 ## הפעלת ממשק קדמי
 
-וודא שאתה נמצא בתיקיית ה-frontend
+וודאו שאתם נמצאים בתיקיית הממשק הקדמי
 
-מצא את *app.js*, שנה את `BASE_URL` לכתובת ה-URL של ה-backend שלך
+אתרו את *app.js*, שנו את `BASE_URL` לכתובת ה-URL של ה-backend שלכם
 
-הפעל את זה
+הפעילו את זה
 
 ```
 npx http-server -p 8000
 ```
 
-נסה להקליד הודעה בצ'אט, אתה אמור לראות תגובה (בתנאי שאתה מפעיל את זה ב-Codespace או שהגדרת אסימון גישה).
+נסו להקליד הודעה בצ'אט, אתם אמורים לראות תגובה (בתנאי שאתם מפעילים את זה ב-Codespace או שהגדרתם אסימון גישה).
 
-## הגדרת אסימון גישה (אם אינך מפעיל את זה ב-Codespace)
+## הגדרת אסימון גישה (אם אינכם מפעילים את זה ב-Codespace)
 
-ראה [Set up PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+ראו [Set up PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 ---
 
-**כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור הסמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+**הצהרת אחריות**:  
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או פירושים שגויים הנובעים משימוש בתרגום זה.

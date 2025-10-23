@@ -1,56 +1,103 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
-  "translation_date": "2025-08-29T00:47:25+00:00",
+  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
+  "translation_date": "2025-10-23T00:38:20+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "fi"
 }
 -->
 # Pelin luominen tapahtumien avulla
 
-## Ennakkokysely
+Oletko koskaan miettinyt, miten verkkosivustot tietävät, kun klikkaat painiketta tai kirjoitat tekstikenttään? Se on tapahtumapohjaisen ohjelmoinnin taikaa! Mikä olisikaan parempi tapa oppia tämä olennainen taito kuin rakentaa jotain hyödyllistä – kirjoitusnopeuspeli, joka reagoi jokaiseen näppäimen painallukseen.
 
-[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/21)
+Tulet näkemään omin silmin, miten verkkoselaimet "keskustelevat" JavaScript-koodisi kanssa. Joka kerta kun klikkaat, kirjoitat tai liikutat hiirtä, selain lähettää pieniä viestejä (kutsumme niitä tapahtumiksi) koodillesi, ja sinä päätät, miten niihin reagoidaan!
+
+Kun olemme valmiita, olet rakentanut oikean kirjoituspelin, joka seuraa nopeuttasi ja tarkkuuttasi. Vielä tärkeämpää on, että ymmärrät peruskonseptit, jotka ovat jokaisen interaktiivisen verkkosivuston taustalla. Aloitetaan!
+
+## Ennen luentoa - kysely
+
+[Ennen luentoa - kysely](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Tapahtumapohjainen ohjelmointi
 
-Kun luomme selainpohjaisen sovelluksen, tarjoamme käyttäjälle graafisen käyttöliittymän (GUI), jonka avulla hän voi olla vuorovaikutuksessa luomamme kanssa. Yleisin tapa olla vuorovaikutuksessa selaimen kanssa on klikkaaminen ja kirjoittaminen eri elementteihin. Kehittäjänä kohtaamme haasteen: emme tiedä, milloin käyttäjä suorittaa nämä toiminnot!
+Ajattele suosikkisovellustasi tai -verkkosivustoasi – mikä tekee siitä elävän ja reagoivan? Kaikki liittyy siihen, miten se reagoi toimintaasi! Jokainen napautus, klikkaus, pyyhkäisy tai näppäimen painallus luo sen, mitä kutsumme "tapahtumaksi", ja juuri siinä web-kehityksen todellinen taika tapahtuu.
 
-[Tapahtumapohjainen ohjelmointi](https://en.wikipedia.org/wiki/Event-driven_programming) on ohjelmointityyppi, jota tarvitsemme GUI:n luomiseen. Jos tarkastelemme tätä termiä tarkemmin, huomaamme, että ydin on sana **tapahtuma**. [Tapahtuma](https://www.merriam-webster.com/dictionary/event) määritellään Merriam-Websterin mukaan "joksikin, joka tapahtuu". Tämä kuvaa tilannettamme täydellisesti. Tiedämme, että jotain tulee tapahtumaan, ja haluamme suorittaa koodia vastauksena siihen, mutta emme tiedä, milloin se tapahtuu.
+Tässä on se, mikä tekee web-ohjelmoinnista niin mielenkiintoista: emme koskaan tiedä, milloin joku klikkaa painiketta tai alkaa kirjoittaa tekstikenttään. He voivat klikata heti, odottaa viisi minuuttia tai eivät ehkä klikkaa ollenkaan! Tämä arvaamattomuus tarkoittaa, että meidän on ajateltava eri tavalla, kun kirjoitamme koodia.
 
-Tapa, jolla merkitsemme koodin osan, jonka haluamme suorittaa, on luoda funktio. Kun ajattelemme [proseduraalista ohjelmointia](https://en.wikipedia.org/wiki/Procedural_programming), funktiot kutsutaan tietyssä järjestyksessä. Sama pätee tapahtumapohjaiseen ohjelmointiin. Erona on **miten** funktiot kutsutaan.
+Sen sijaan, että kirjoittaisimme koodia, joka suoritetaan ylhäältä alas kuin resepti, kirjoitamme koodia, joka odottaa kärsivällisesti, että jotain tapahtuu. Se on vähän kuin 1800-luvun lennätinoperaattorit, jotka istuivat koneidensa ääressä valmiina reagoimaan heti, kun viesti saapui langan kautta.
 
-Tapahtumien (kuten napin painallusten tai kirjoittamisen) käsittelemiseksi rekisteröimme **tapahtumakuuntelijoita**. Tapahtumakuuntelija on funktio, joka kuuntelee tapahtuman tapahtumista ja suorittaa koodia vastauksena. Tapahtumakuuntelijat voivat päivittää käyttöliittymää, tehdä palvelinkutsuja tai mitä tahansa muuta, mitä käyttäjän toiminta vaatii. Lisäämme tapahtumakuuntelijan käyttämällä [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)-funktiota ja tarjoamalla suoritettavan funktion.
+Mikä tarkalleen ottaen on "tapahtuma"? Yksinkertaisesti sanottuna se on jotain, joka tapahtuu! Kun klikkaat painiketta – se on tapahtuma. Kun kirjoitat kirjaimen – se on tapahtuma. Kun liikutat hiirtä – se on toinen tapahtuma.
 
-> **NOTE:** On syytä huomata, että on olemassa lukuisia tapoja luoda tapahtumakuuntelijoita. Voit käyttää anonyymejä funktioita tai luoda nimettyjä. Voit käyttää erilaisia oikoteitä, kuten asettamalla `click`-ominaisuuden tai käyttämällä `addEventListener`-funktiota. Harjoituksessamme keskitymme `addEventListener`-funktioon ja anonyymeihin funktioihin, koska se on todennäköisesti yleisin tekniikka, jota web-kehittäjät käyttävät. Se on myös joustavin, koska `addEventListener` toimii kaikille tapahtumille, ja tapahtuman nimi voidaan antaa parametrina.
+Tapahtumapohjainen ohjelmointi antaa meille mahdollisuuden asettaa koodimme kuuntelemaan ja reagoimaan. Luomme erityisiä funktioita, joita kutsutaan **tapahtumakuuntelijoiksi**, jotka odottavat kärsivällisesti tiettyjen asioiden tapahtumista ja aktivoituvat, kun ne tapahtuvat.
 
-### Yleisiä tapahtumia
+Ajattele tapahtumakuuntelijoita kuin koodisi ovikelloa. Asetat ovikellon (`addEventListener()`), kerrot sille, mitä ääntä kuunnella (kuten 'click' tai 'keypress'), ja määrität, mitä tapahtuu, kun joku soittaa sitä (oma funktiosi).
 
-Sovellusta luodessasi voit kuunnella [kymmeniä tapahtumia](https://developer.mozilla.org/docs/Web/Events). Käytännössä kaikki, mitä käyttäjä tekee sivulla, laukaisee tapahtuman, mikä antaa sinulle paljon valtaa varmistaa, että käyttäjä saa haluamasi kokemuksen. Onneksi tarvitset yleensä vain pienen joukon tapahtumia. Tässä muutamia yleisiä (mukaan lukien kaksi, joita käytämme pelimme luomisessa):
+**Näin tapahtumakuuntelijat toimivat:**
+- **Kuuntelevat** tiettyjä käyttäjän toimintoja, kuten klikkauksia, näppäinpainalluksia tai hiiren liikkeitä
+- **Suorittavat** mukautettua koodiasi, kun määritetty tapahtuma tapahtuu
+- **Reagoivat** välittömästi käyttäjän vuorovaikutuksiin, luoden saumattoman kokemuksen
+- **Käsittelevät** useita tapahtumia samalla elementillä eri kuuntelijoiden avulla
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Käyttäjä klikkasi jotain, yleensä nappia tai hyperlinkkiä
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Käyttäjä klikkasi hiiren oikeaa painiketta
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Käyttäjä valitsi tekstiä
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Käyttäjä syötti tekstiä
+> **NOTE:** On syytä korostaa, että tapahtumakuuntelijoita voi luoda monella eri tavalla. Voit käyttää anonyymejä funktioita tai luoda nimettyjä. Voit käyttää erilaisia pikakuvakkeita, kuten asettamalla `click`-ominaisuuden tai käyttämällä `addEventListener()`. Harjoituksessamme keskitymme `addEventListener()`-menetelmään ja anonyymeihin funktioihin, koska se on todennäköisesti yleisin tekniikka, jota web-kehittäjät käyttävät. Se on myös joustavin, sillä `addEventListener()` toimii kaikille tapahtumille, ja tapahtuman nimi voidaan antaa parametrina.
+
+### Yleiset tapahtumat
+
+Vaikka verkkoselaimet tarjoavat kymmeniä erilaisia tapahtumia, joita voit kuunnella, useimmat interaktiiviset sovellukset luottavat vain muutamaan keskeiseen tapahtumaan. Näiden ydintapahtumien ymmärtäminen antaa sinulle perustan rakentaa monimutkaisia käyttäjävuorovaikutuksia.
+
+[Dozens of events](https://developer.mozilla.org/docs/Web/Events) ovat käytettävissäsi, kun luot sovellusta. Käytännössä kaikki, mitä käyttäjä tekee sivulla, luo tapahtuman, mikä antaa sinulle paljon valtaa varmistaa, että he saavat haluamansa kokemuksen. Onneksi tarvitset yleensä vain pienen joukon tapahtumia. Tässä muutama yleinen (mukaan lukien kaksi, joita käytämme pelimme luomisessa):
+
+| Tapahtuma | Kuvaus | Yleiset käyttötapaukset |
+|-----------|---------|-------------------------|
+| `click` | Käyttäjä klikkasi jotain | Painikkeet, linkit, interaktiiviset elementit |
+| `contextmenu` | Käyttäjä klikkasi hiiren oikeaa painiketta | Mukautetut oikean klikkauksen valikot |
+| `select` | Käyttäjä korosti tekstiä | Tekstin muokkaus, kopiointitoiminnot |
+| `input` | Käyttäjä syötti tekstiä | Lomakkeiden validointi, reaaliaikainen haku |
+
+**Näiden tapahtumatyyppien ymmärtäminen:**
+- **Aktivoituu**, kun käyttäjät vuorovaikuttavat tiettyjen elementtien kanssa sivullasi
+- **Tarjoaa** yksityiskohtaista tietoa käyttäjän toiminnasta tapahtumaobjektien kautta
+- **Mahdollistaa** responsiivisten, interaktiivisten verkkosovellusten luomisen
+- **Toimii** johdonmukaisesti eri selaimissa ja laitteissa
 
 ## Pelin luominen
 
-Luomme pelin tutkiaksemme, miten tapahtumat toimivat JavaScriptissä. Pelimme testaa pelaajan kirjoitustaitoa, joka on yksi aliarvostetuimmista taidoista, joita kaikilla kehittäjillä tulisi olla. Meidän kaikkien tulisi harjoitella kirjoittamista! Pelin yleinen kulku näyttää tältä:
+Nyt kun ymmärrät, miten tapahtumat toimivat, laitetaan tieto käytäntöön rakentamalla jotain hyödyllistä. Luomme kirjoitusnopeuspelin, joka havainnollistaa tapahtumien käsittelyä samalla kun kehität tärkeää ohjelmoijan taitoa.
 
-- Pelaaja klikkaa aloitusnappia ja saa kirjoitettavakseen lainauksen
-- Pelaaja kirjoittaa lainauksen mahdollisimman nopeasti tekstikenttään
-  - Kun jokainen sana on valmis, seuraava korostetaan
-  - Jos pelaaja tekee kirjoitusvirheen, tekstikenttä muuttuu punaiseksi
-  - Kun pelaaja suorittaa lainauksen, näytetään onnistumisviesti ja kulunut aika
+Luomme pelin tutkiaksemme, miten tapahtumat toimivat JavaScriptissä. Pelimme testaa pelaajan kirjoitustaitoa, joka on yksi aliarvostetuimmista taidoista, joita kaikilla kehittäjillä pitäisi olla. Hauska fakta: QWERTY-näppäimistöasettelu, jota käytämme tänään, suunniteltiin 1870-luvulla kirjoituskoneille – ja hyvät kirjoitustaidot ovat edelleen yhtä arvokkaita ohjelmoijille tänään! Pelin yleinen kulku näyttää tältä:
+
+```mermaid
+flowchart TD
+    A[Player clicks Start] --> B[Random quote displays]
+    B --> C[Player types in textbox]
+    C --> D{Word complete?}
+    D -->|Yes| E[Highlight next word]
+    D -->|No| F{Correct so far?}
+    F -->|Yes| G[Keep normal styling]
+    F -->|No| H[Show error styling]
+    E --> I{Quote complete?}
+    I -->|No| C
+    I -->|Yes| J[Show success message with time]
+    G --> C
+    H --> C
+```
+
+**Näin pelimme toimii:**
+- **Alkaa**, kun pelaaja klikkaa aloituspainiketta ja satunnainen lainaus näytetään
+- **Seuraa** pelaajan kirjoitusprosessia sana sanalta reaaliajassa
+- **Korostaa** nykyisen sanan ohjatakseen pelaajan keskittymistä
+- **Tarjoaa** välitöntä visuaalista palautetta kirjoitusvirheistä
+- **Laskee** ja näyttää kokonaisajan, kun lainaus on valmis
 
 Rakennetaan peli ja opitaan tapahtumista!
 
 ### Tiedostorakenne
 
-Tarvitsemme yhteensä kolme tiedostoa: **index.html**, **script.js** ja **style.css**. Aloitetaan niiden luomisesta, jotta työskentely olisi helpompaa.
+Ennen kuin aloitamme koodaamisen, järjestäydymme! Selkeä tiedostorakenne alusta alkaen säästää myöhemmin päänvaivaa ja tekee projektistasi ammattimaisemman. 😊
 
-- Luo uusi kansio työllesi avaamalla konsoli tai pääteikkuna ja suorittamalla seuraava komento:
+Pidämme asiat yksinkertaisina vain kolmella tiedostolla: `index.html` sivun rakenteelle, `script.js` kaikelle pelilogiikalle ja `style.css`, jotta kaikki näyttäisi hyvältä. Tämä on klassinen kolmikko, joka pyörittää suurinta osaa verkosta!
+
+**Luo uusi kansio työllesi avaamalla konsoli tai terminaali ja suorittamalla seuraava komento:**
 
 ```bash
 # Linux or macOS
@@ -60,29 +107,49 @@ mkdir typing-game && cd typing-game
 md typing-game && cd typing-game
 ```
 
-- Avaa Visual Studio Code
+**Näin nämä komennot toimivat:**
+- **Luo** uuden hakemiston nimeltä `typing-game` projektitiedostoillesi
+- **Siirtyy** automaattisesti juuri luotuun hakemistoon
+- **Asettaa** puhtaan työtilan pelin kehittämistä varten
+
+**Avaa Visual Studio Code:**
 
 ```bash
 code .
 ```
 
-- Lisää kansioon kolme tiedostoa Visual Studio Codessa seuraavilla nimillä:
-  - index.html
-  - script.js
-  - style.css
+**Tämä komento:**
+- **Käynnistää** Visual Studio Coden nykyisessä hakemistossa
+- **Avaa** projektikansiosi editorissa
+- **Tarjoaa** pääsyn kaikkiin tarvittaviin kehitystyökaluihin
+
+**Lisää kolme tiedostoa kansioon Visual Studio Codessa seuraavilla nimillä:**
+- `index.html` - Sisältää pelin rakenteen ja sisällön
+- `script.js` - Käsittelee kaiken pelilogiikan ja tapahtumakuuntelijat
+- `style.css` - Määrittää visuaalisen ulkoasun ja tyylin
 
 ## Käyttöliittymän luominen
 
-Jos tarkastelemme vaatimuksia, tiedämme, että tarvitsemme HTML-sivullemme muutamia elementtejä. Tämä on vähän kuin resepti, jossa tarvitsemme ainesosia:
+Nyt rakennetaan näyttämö, jossa kaikki pelin toiminta tapahtuu! Ajattele tätä kuin avaruusaluksen ohjauspaneelin suunnittelua – meidän täytyy varmistaa, että kaikki, mitä pelaajat tarvitsevat, on juuri siellä, missä he odottavat sen olevan.
 
-- Paikka, jossa näytetään käyttäjälle kirjoitettava lainaus
-- Paikka, jossa näytetään viestejä, kuten onnistumisviesti
-- Tekstikenttä kirjoittamista varten
-- Aloitusnappi
+Mietitään, mitä pelimme oikeastaan tarvitsee. Jos pelaisit kirjoituspeliä, mitä haluaisit nähdä näytöllä? Tässä on, mitä tarvitsemme:
 
-Jokaiselle näistä annetaan ID, jotta voimme käsitellä niitä JavaScriptissä. Lisäämme myös viittaukset luotaviin CSS- ja JavaScript-tiedostoihin.
+| Käyttöliittymän elementti | Tarkoitus | HTML-elementti |
+|---------------------------|-----------|----------------|
+| Lainauksen näyttö | Näyttää kirjoitettavan tekstin | `<p>` ja `id="quote"` |
+| Viestialue | Näyttää tilan ja onnistumisen viestit | `<p>` ja `id="message"` |
+| Tekstikenttä | Paikka, jossa pelaajat kirjoittavat lainauksen | `<input>` ja `id="typed-value"` |
+| Aloituspainike | Aloittaa pelin | `<button>` ja `id="start"` |
 
-Luo uusi tiedosto nimeltä **index.html**. Lisää seuraava HTML:
+**Käyttöliittymän rakenteen ymmärtäminen:**
+- **Järjestää** sisällön loogisesti ylhäältä alas
+- **Määrittää** ainutlaatuiset ID:t elementeille JavaScriptin kohdistamista varten
+- **Tarjoaa** selkeän visuaalisen hierarkian paremman käyttäjäkokemuksen takaamiseksi
+- **Sisältää** semanttisia HTML-elementtejä saavutettavuuden parantamiseksi
+
+Jokaiselle näistä elementeistä tarvitaan ID:t, jotta voimme työskennellä niiden kanssa JavaScriptissä. Lisäämme myös viittaukset luotaviin CSS- ja JavaScript-tiedostoihin.
+
+Luo uusi tiedosto nimeltä `index.html`. Lisää seuraava HTML:
 
 ```html
 <!-- inside index.html -->
@@ -105,26 +172,52 @@ Luo uusi tiedosto nimeltä **index.html**. Lisää seuraava HTML:
 </html>
 ```
 
+**Tämän HTML-rakenteen tarkoitus:**
+- **Linkittää** CSS-tyylitiedoston `<head>`-osioon ulkoasua varten
+- **Luo** selkeän otsikon ja ohjeet käyttäjille
+- **Asettaa** paikkamerkkikappaleet, joilla on erityiset ID:t dynaamista sisältöä varten
+- **Sisältää** syöttökentän saavutettavuusominaisuuksilla
+- **Tarjoaa** aloituspainikkeen pelin käynnistämiseksi
+- **Lataa** JavaScript-tiedoston lopussa optimaalisen suorituskyvyn takaamiseksi
+
 ### Sovelluksen käynnistäminen
 
-On aina parasta kehittää iteratiivisesti ja tarkistaa, miltä asiat näyttävät. Käynnistetään sovellus. Visual Studio Codessa on upea laajennus nimeltä [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), joka sekä isännöi sovellustasi paikallisesti että päivittää selaimen aina, kun tallennat.
+Sovelluksen testaaminen kehityksen aikana auttaa havaitsemaan ongelmat ajoissa ja näkemään edistymisen reaaliajassa. Live Server on korvaamaton työkalu, joka päivittää selaimen automaattisesti aina, kun tallennat muutoksia, mikä tekee kehittämisestä paljon tehokkaampaa.
 
-- Asenna [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) seuraamalla linkkiä ja klikkaamalla **Install**
-  - Selain kehottaa sinua avaamaan Visual Studio Coden, ja Visual Studio Code kehottaa suorittamaan asennuksen
-  - Käynnistä Visual Studio Code uudelleen, jos sitä pyydetään
-- Kun laajennus on asennettu, klikkaa Visual Studio Codessa Ctrl-Shift-P (tai Cmd-Shift-P) avataksesi komentopaletti
-- Kirjoita **Live Server: Open with Live Server**
-  - Live Server alkaa isännöidä sovellustasi
-- Avaa selain ja siirry osoitteeseen **https://localhost:5500**
-- Näet nyt luomasi sivun!
+On aina parasta kehittää iteratiivisesti, jotta näet, miltä asiat näyttävät. Käynnistetään sovellus. Visual Studio Codessa on upea laajennus nimeltä [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), joka isännöi sovellustasi paikallisesti ja päivittää selaimen aina, kun tallennat.
 
-Lisätään toiminnallisuutta.
+**Asenna [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) seuraamalla linkkiä ja klikkaamalla Asenna:**
+
+**Näin asennus etenee:**
+- **Avaa** selaimesi Visual Studio Codeen
+- **Ohjaa** sinut laajennuksen asennusprosessin läpi
+- **Saattaa vaatia** Visual Studio Coden uudelleenkäynnistämistä asennuksen viimeistelyyn
+
+**Kun laajennus on asennettu, avaa Visual Studio Codessa Ctrl-Shift-P (tai Cmd-Shift-P) avataksesi komentoikkunan:**
+
+**Komentoikkunan ymmärtäminen:**
+- **Tarjoaa** nopean pääsyn kaikkiin VS Coden komentoihin
+- **Etsii** komentoja kirjoittaessasi
+- **Tarjoaa** pikanäppäimiä nopeampaan kehitykseen
+
+**Kirjoita "Live Server: Open with Live Server":**
+
+**Mitä Live Server tekee:**
+- **Käynnistää** paikallisen kehityspalvelimen projektillesi
+- **Päivittää** selaimen automaattisesti, kun tallennat tiedostoja
+- **Palvelee** tiedostosi paikallisesta URL-osoitteesta (tyypillisesti `localhost:5500`)
+
+**Avaa selain ja siirry osoitteeseen `https://localhost:5500`:**
+
+Nyt sinun pitäisi nähdä luomasi sivu! Lisätään siihen toiminnallisuutta.
 
 ## Lisää CSS
 
-Kun HTML on luotu, lisätään CSS perusmuotoilua varten. Meidän täytyy korostaa sana, jonka pelaajan tulisi kirjoittaa, ja värjätä tekstikenttä punaiseksi, jos kirjoitus on virheellinen. Teemme tämän kahdella luokalla.
+Nyt tehdään ulkoasusta houkutteleva! Visuaalinen palaute on ollut tärkeää käyttöliittymissä tietotekniikan alkuajoista lähtien. 1980-luvulla tutkijat huomasivat, että välitön visuaalinen palaute parantaa merkittävästi käyttäjän suorituskykyä ja vähentää virheitä. Juuri sitä aiomme luoda.
 
-Luo uusi tiedosto nimeltä **style.css** ja lisää seuraava syntaksi.
+Pelimme täytyy olla kristallinkirkas siitä, mitä tapahtuu. Pelaajien pitäisi heti tietää, mikä sana heidän pitäisi kirjoittaa, ja jos he tekevät virheen, heidän pitäisi nähdä se välittömästi. Luodaan yksinkertainen mutta tehokas ulkoasu:
+
+Luo uusi tiedosto nimeltä `style.css` ja lisää seuraava syntaksi.
 
 ```css
 /* inside style.css */
@@ -138,6 +231,12 @@ Luo uusi tiedosto nimeltä **style.css** ja lisää seuraava syntaksi.
 }
 ```
 
+**Näiden CSS-luokkien ymmärtäminen:**
+- **Korostaa** nykyisen sanan keltaisella taustalla selkeän visuaalisen ohjauksen vuoksi
+- **Ilmoittaa** kirjoitusvirheistä vaalean korallin värisellä taustavärillä
+- **Tarjoaa** välitöntä palautetta häiritsemättä käyttäjän kirjoitusvirtaa
+- **Käyttää** kontrastivärejä saavutettavuuden ja selkeän visuaalisen viestinnän vuoksi
+
 ✅ CSS:n osalta voit asettaa sivusi ulkoasun haluamallasi tavalla. Käytä hetki aikaa ja tee sivusta houkuttelevampi:
 
 - Valitse eri fontti
@@ -146,28 +245,34 @@ Luo uusi tiedosto nimeltä **style.css** ja lisää seuraava syntaksi.
 
 ## JavaScript
 
-Kun käyttöliittymä on luotu, keskitymme JavaScriptiin, joka tarjoaa logiikan. Jaamme tämän muutamaan vaiheeseen:
+Nyt päästään mielenkiintoiseen osioon! 🎉 Meillä on HTML-rakenne ja CSS-tyylit, mutta tällä hetkellä pelimme on kuin kaunis auto ilman moottoria. JavaScript tulee olemaan se moottori – se saa kaiken toimimaan ja reagoimaan pelaajien toimintaan.
 
-- [Määritä vakioarvot](../../../../4-typing-game/typing-game)
-- [Tapahtumakuuntelija pelin aloittamiseen](../../../../4-typing-game/typing-game)
-- [Tapahtumakuuntelija kirjoittamiseen](../../../../4-typing-game/typing-game)
+Tässä vaiheessa näet luomuksesi heräävän eloon. Käymme tämän läpi askel askeleelta, jotta mikään ei tunnu liian ylivoimaiselta:
 
-Mutta ensin, luo uusi tiedosto nimeltä **script.js**.
+| Vaihe | Tarkoitus | Mitä opit |
+|-------|-----------|-----------|
+| [Luo vakioita](../../../../4-typing-game/typing-game) | Aseta lainaukset ja DOM-viittaukset | Muuttujien hallinta ja DOM-valinta |
+| [Tapahtumakuuntelija pelin aloittamiseksi](../../../../4-typing-game/typing-game) | Käsittele pelin aloitus | Tapahtumien käsittely ja käyttöliittymän päivitykset |
+| [Tapahtumakuuntelija kirjoittamiseen](../../../../4-typing-game/typing-game) | Käsittele käyttäjän syötteitä reaaliajassa | Syötteen validointi ja dynaaminen palaute |
 
-### Lisää vakioarvot
+**Tämä jäsennelty lähestymistapa auttaa sinua:**
+- **Järjestämään** koodisi loogisiin, hallittaviin osiin
+- **Rakentamaan** toiminnallisuutta vaiheittain helpompaa virheenkorjausta varten
+- **Ymmärtämään**, miten eri osat sovelluksestasi toimivat yhdessä
+- **Luomaan** uudelleenkäytettäviä malleja tulevia projekteja varten
 
-Tarvitsemme muutamia asioita, jotka helpottavat ohjelmointia. Jälleen, vähän kuin resepti, tässä on, mitä tarvitsemme:
+Mut
+| Lainauslista | Tallenna kaikki mahdolliset lainaukset peliä varten | `['Lainaus 1', 'Lainaus 2', ...]` |
+| Sanalista | Jaa nykyinen lainaus yksittäisiin sanoihin | `['Kun', 'sinulla', 'on', ...]` |
+| Sanan indeksi | Seuraa, mitä sanaa pelaaja kirjoittaa | `0, 1, 2, 3...` |
+| Aloitusaika | Laske kulunut aika pisteytystä varten | `Date.now()` |
 
-- Taulukko, joka sisältää kaikki lainaukset
-- Tyhjä taulukko, johon tallennetaan nykyisen lainauksen sanat
-- Paikka, jossa säilytetään pelaajan kirjoittaman sanan indeksi
-- Aika, jolloin pelaaja klikkasi aloitusta
-
-Tarvitsemme myös viittaukset käyttöliittymän elementteihin:
-
-- Tekstikenttä (**typed-value**)
-- Lainauksen näyttö (**quote**)
-- Viesti (**message**)
+**Tarvitsemme myös viittaukset käyttöliittymän elementteihin:**
+| Elementti | ID | Tarkoitus |
+|-----------|----|----------|
+| Tekstikenttä | `typed-value` | Paikka, jossa pelaajat kirjoittavat |
+| Lainauksen näyttö | `quote` | Näyttää kirjoitettavan lainauksen |
+| Viestialue | `message` | Näyttää tilapäivitykset |
 
 ```javascript
 // inside script.js
@@ -192,21 +297,36 @@ const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
+**Mitä tämä alustus tekee:**
+- **Tallentaa** Sherlock Holmes -lainaukset taulukkoon käyttäen `const`, koska lainaukset eivät muutu
+- **Alustaa** seurantamuuttujat käyttäen `let`, koska arvot muuttuvat pelin aikana
+- **Hakee** viittaukset DOM-elementteihin käyttäen `document.getElementById()` tehokasta käyttöä varten
+- **Luo** perustan kaikelle pelin toiminnallisuudelle selkeillä ja kuvaavilla muuttujanimillä
+- **Järjestää** liittyvät tiedot ja elementit loogisesti helpottaakseen koodin ylläpitoa
+
 ✅ Lisää peliisi lisää lainauksia
 
-> **NOTE:** Voimme hakea elementit aina, kun haluamme, käyttämällä `document.getElementById`. Koska viittaamme näihin elementteihin säännöllisesti, vältämme kirjoitusvirheitä käyttämällä vakioita. Kehykset, kuten [Vue.js](https://vuejs.org/) tai [React](https://reactjs.org/), voivat auttaa sinua hallitsemaan koodiasi keskitetysti.
+> 💡 **Vinkki**: Voimme hakea elementit koodissa milloin tahansa käyttämällä `document.getElementById()`. Koska viittaamme näihin elementteihin säännöllisesti, vältämme kirjoitusvirheet käyttämällä vakioita. Kehykset, kuten [Vue.js](https://vuejs.org/) tai [React](https://reactjs.org/), voivat auttaa sinua hallitsemaan koodin keskittämistä paremmin.
+>
+**Miksi tämä lähestymistapa toimii hyvin:**
+- **Estää** kirjoitusvirheet, kun viitataan elementteihin useita kertoja
+- **Parantaa** koodin luettavuutta kuvaavilla vakionimillä
+- **Mahdollistaa** paremman IDE-tuen automaattisen täydennyksen ja virhetarkistuksen avulla
+- **Helpottaa** refaktorointia, jos elementtien ID:t muuttuvat myöhemmin
 
-Katso minuutin mittainen video `const`, `let` ja `var` -muuttujien käytöstä
+Katso video `const`, `let` ja `var` käytöstä
 
 [![Muuttujatyypit](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Muuttujatyypit")
 
-> 🎥 Klikkaa yllä olevaa kuvaa katsoaksesi videon muuttujista.
+> 🎥 Klikkaa yllä olevaa kuvaa nähdäksesi videon muuttujista.
 
 ### Lisää aloituslogiikka
 
-Pelin aloittamiseksi pelaaja klikkaa aloitusnappia. Tietenkään emme tiedä, milloin hän klikkaa sitä. Tässä kohtaa [tapahtumakuuntelija](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) tulee mukaan. Tapahtumakuuntelija antaa meille mahdollisuuden kuunnella jotain tapahtumaa ja suorittaa koodia vastauksena. Meidän tapauksessamme haluamme suorittaa koodia, kun käyttäjä klikkaa aloitusta.
+Tässä kaikki loksahtaa kohdalleen! 🚀 Olet kirjoittamassa ensimmäistä oikeaa tapahtumankuuntelijaa, ja on jotain erityisen tyydyttävää nähdä koodisi reagoivan painikkeen klikkaukseen.
 
-Kun käyttäjä klikkaa **aloitusta**, meidän täytyy valita lainaus, asettaa käyttöliittymä ja aloittaa sanan ja ajan seuranta. Alla on JavaScript, jonka tarvitset lisätäksesi; käsittelemme sitä tarkemmin koodilohkon jälkeen.
+Ajattele: jossain joku pelaaja aikoo klikata "Aloita"-painiketta, ja koodisi täytyy olla valmis. Emme tiedä, milloin he klikkaavat - heti, kahvikupin hakemisen jälkeen - mutta kun he tekevät sen, pelisi herää eloon.
+
+Kun käyttäjä klikkaa `start`, meidän täytyy valita lainaus, asettaa käyttöliittymä, ja valmistella seuranta nykyiselle sanalle ja ajastukselle. Alla on JavaScript-koodi, jonka sinun täytyy lisätä; käsittelemme sitä tarkemmin skriptin jälkeen.
 
 ```javascript
 // at the end of script.js
@@ -241,27 +361,35 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-Käydään koodi läpi!
+**Puretaan koodi loogisiin osiin:**
 
-- Sanan seurannan asettaminen
-  - [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)- ja [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random)-funktioiden avulla voimme valita satunnaisesti lainauksen `quotes`-taulukosta
-  - Muutamme `quote`-muuttujan `words`-taulukoksi, jotta voimme seurata pelaajan kirjoittamaa sanaa
-  - `wordIndex` asetetaan arvoon 0, koska pelaaja aloittaa ensimmäisestä sanasta
-- Käyttöliittymän asettaminen
-  - Luodaan `spanWords`-taulukko, joka sisältää jokaisen sanan `span`-elementin sisällä
-    - Tämä mahdollistaa sanan korostamisen näytöllä
-  - `join`-metodilla luodaan merkkijono, jota käytetään `quoteElement`-elementin `innerHTML`-arvon päivittämiseen
-    - Tämä näyttää lainauksen pelaajalle
-  - Asetetaan ensimmäisen `span`-elementin `className` arvoksi `highlight`, jotta se korostetaan keltaiseksi
-  - Tyhjennetään `messageElement` asettamalla `innerText` arvoksi `''`
-- Tekstikentän asettaminen
-  - Tyhjennetään nykyinen `value` `typedValueElement`-elementistä
-  - Asetetaan `focus` `typedValueElement`-elementtiin
-- Ajastimen käynnistäminen kutsumalla `getTime`
+**📊 Sanaseurannan alustus:**
+- **Valitsee** satunnaisen lainauksen käyttäen `Math.floor()` ja `Math.random()` vaihtelun vuoksi
+- **Muuttaa** lainauksen yksittäisten sanojen taulukoksi käyttäen `split(' ')`
+- **Nollaa** `wordIndex` arvoksi 0, koska pelaajat aloittavat ensimmäisestä sanasta
+- **Valmistelee** pelitilan uutta kierrosta varten
+
+**🎨 Käyttöliittymän asettelu ja näyttö:**
+- **Luo** taulukon `<span>`-elementtejä, jotka ympäröivät jokaisen sanan yksittäistä tyylittelyä varten
+- **Yhdistää** span-elementit yhdeksi merkkijonoksi tehokasta DOM-päivitystä varten
+- **Korostaa** ensimmäisen sanan lisäämällä `highlight` CSS-luokan
+- **Tyhjentää** aiemmat peliviestit tarjotakseen puhtaan aloituksen
+
+**⌨️ Tekstikentän valmistelu:**
+- **Tyhjentää** olemassa olevan tekstin syöttökentästä
+- **Asettaa kohdistuksen** tekstikenttään, jotta pelaajat voivat aloittaa kirjoittamisen heti
+- **Valmistelee** syöttöalueen uutta pelisessiota varten
+
+**⏱️ Ajastimen alustus:**
+- **Tallentaa** nykyisen aikaleiman käyttäen `new Date().getTime()`
+- **Mahdollistaa** kirjoitusnopeuden ja suoritusajan tarkan laskennan
+- **Käynnistää** pelisession suorituskyvyn seurannan
 
 ### Lisää kirjoituslogiikka
 
-Kun pelaaja kirjoittaa, `input`-tapahtuma laukaistaan. Tämä tapahtumakuuntelija tarkistaa, kirjoittaako pelaaja sanan oikein, ja käsittelee pelin nykyisen tilan. Palataan **script.js**-tiedostoon ja lisää seuraava koodi loppuun. Käsittelemme sitä tarkemmin koodilohkon jälkeen.
+Tässä käsittelemme pelimme ydintä! Älä huoli, jos tämä vaikuttaa aluksi monimutkaiselta - käymme läpi jokaisen osan, ja lopulta huomaat, kuinka loogista kaikki on.
+
+Tässä rakennamme jotain melko hienostunutta: joka kerta, kun joku kirjoittaa kirjaimen, koodimme tarkistaa, mitä he kirjoittivat, antaa palautetta ja päättää, mitä seuraavaksi tapahtuu. Se on samanlaista kuin varhaiset tekstinkäsittelyohjelmat, kuten WordStar 1970-luvulla, jotka antoivat reaaliaikaista palautetta kirjoittajille.
 
 ```javascript
 // at the end of script.js
@@ -300,53 +428,119 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Käydään koodi läpi! Aloitamme hakemalla nykyisen sanan ja pelaajan tähän mennessä kirjoittaman arvon. Sitten käytämme vesiputouslogiikkaa tarkistaaksemme, onko lainaus valmis, sana valmis, sana oikein vai (lopuksi) onko virhe.
+**Ymmärrä kirjoituslogiikan kulku:**
 
-- Lainaus on valmis, jos `typedValue` on yhtä kuin `currentWord` ja `wordIndex` on yhtä kuin `words`-taulukon pituus miinus yksi
-  - Lasketaan `elapsedTime` vähentämällä `startTime` nykyisestä ajasta
-  - Jaetaan `elapsedTime` luvulla 1 000, jotta se muunnetaan millisekunneista sekunneiksi
-  - Näytetään onnistumisviesti
-- Sana on valmis, jos `typedValue` päättyy välilyöntiin (sanan loppu) ja `typedValue` on yhtä kuin `currentWord`
-  - Asetetaan `typedElement`-elementin `value` arvoksi `''`, jotta seuraava sana voidaan kirjoittaa
-  - Kasvatetaan `wordIndex`-arvoa siirtyäksemme seuraavaan sanaan
-  - Käydään läpi kaikki `quoteElement`-elementin `childNodes`-solmut ja asetetaan niiden `className` arvoksi `''`, jotta ne palautuvat oletusnäkymään
-  - Asetetaan nykyisen sanan `className` arvoksi `highlight`, jotta se merkitään seuraavaksi kirjoitettavaksi sanaksi
-- Sana on tällä hetkellä oikein kirjoitettu (mutta ei valmis), jos `currentWord` alkaa `typedValue`-arvolla
-  - Varmistetaan, että `typedValueElement` näkyy oletusarvoisena tyhjentämällä `className`
-- Jos pääsemme tähän asti, olemme tehneet virheen
-  - Asetetaan `typedValueElement`-elementin `className` arvoksi `error`
+Tämä funktio käyttää vesiputouslähestymistapaa, jossa tarkistetaan ehtoja spesifisimmästä yleisimpään. Puretaan jokainen skenaario:
+
+```mermaid
+flowchart TD
+    A[Player types character] --> B[Get current word and typed value]
+    B --> C{Quote complete?}
+    C -->|Yes| D[Show completion message with time]
+    C -->|No| E{Word complete with space?}
+    E -->|Yes| F[Clear input, move to next word, update highlight]
+    E -->|No| G{Typing correctly so far?}
+    G -->|Yes| H[Remove error styling]
+    G -->|No| I[Show error styling]
+```
+
+**🏁 Lainaus valmis (Skenaario 1):**
+- **Tarkistaa**, vastaako kirjoitettu arvo nykyistä sanaa JA ollaanko viimeisessä sanassa
+- **Laskee** kuluneen ajan vähentämällä aloitusaika nykyisestä ajasta
+- **Muuntaa** millisekunnit sekunneiksi jakamalla 1 000:lla
+- **Näyttää** onnittelutekstin ja suoritusajan
+
+**✅ Sana valmis (Skenaario 2):**
+- **Havaitsee** sanan valmistumisen, kun syöte päättyy välilyöntiin
+- **Varmistaa**, että trimmattu syöte vastaa nykyistä sanaa täsmälleen
+- **Tyhjentää** syöttökentän seuraavaa sanaa varten
+- **Siirtyy** seuraavaan sanaan kasvattamalla `wordIndex`-arvoa
+- **Päivittää** visuaalisen korostuksen poistamalla kaikki luokat ja korostamalla uuden sanan
+
+**📝 Kirjoittaminen käynnissä (Skenaario 3):**
+- **Varmistaa**, että nykyinen sana alkaa sillä, mitä on tähän mennessä kirjoitettu
+- **Poistaa** virhetyylittelyn osoittaakseen, että syöte on oikein
+- **Mahdollistaa** kirjoittamisen jatkamisen keskeytyksettä
+
+**❌ Virhetila (Skenaario 4):**
+- **Aktivoi**, kun kirjoitettu teksti ei vastaa odotettua sanan alkua
+- **Lisää** virheellisen CSS-luokan tarjotakseen välitöntä visuaalista palautetta
+- **Auttaa** pelaajia tunnistamaan ja korjaamaan virheet nopeasti
 
 ## Testaa sovellustasi
 
-Olet päässyt loppuun! Viimeinen vaihe on varmistaa, että sovelluksemme toimii. Kokeile sitä! Älä huoli, jos virheitä ilmenee; **kaikilla kehittäjillä** on virheitä. Tarkastele viestejä ja korjaa tarvittaessa.
+Katso, mitä olet saavuttanut! 🎉 Olet juuri rakentanut toimivan kirjoituspelin alusta alkaen käyttäen tapahtumapohjaista ohjelmointia. Ota hetki aikaa arvostaaksesi saavutustasi - tämä ei ole mikään pieni juttu!
 
-Klikkaa **aloita** ja ala kirjoittaa! Sen pitäisi näyttää vähän tältä animaatiolta, jonka näimme aiemmin.
+Nyt on testauksen aika! Toimiiko kaikki odotetusti? Jäikö jotain huomaamatta? Tässä on juttu: jos jokin ei toimi täydellisesti heti, se on täysin normaalia. Kokeneetkin kehittäjät löytävät säännöllisesti bugeja koodistaan. Se kuuluu kehitysprosessiin!
 
-![Pelin animaatio toiminnassa](../../../../4-typing-game/images/demo.gif)
+Klikkaa `start` ja aloita kirjoittaminen! Sen pitäisi näyttää hieman samalta kuin aiemmin näkemämme animaatio.
+
+![Pelin toiminnan animaatio](../../../../4-typing-game/images/demo.gif)
+
+**Mitä testata sovelluksessasi:**
+- **Varmista**, että klikkaamalla Aloita näytetään satunnainen lainaus
+- **Tarkista**, että kirjoittaminen korostaa nykyisen sanan oikein
+- **Varmista**, että virhetyylittely näkyy väärin kirjoitettaessa
+- **Tarkista**, että sanojen valmistuminen siirtää korostuksen oikein
+- **Testaa**, että lainauksen valmistuminen näyttää suoritusviestin ja ajan
+
+**Yleisiä virheenkorjausvinkkejä:**
+- **Tarkista** selaimen konsoli (F12) JavaScript-virheiden varalta
+- **Varmista**, että kaikki tiedostonimet täsmäävät tarkasti (kirjainkoko huomioiden)
+- **Varmista**, että Live Server toimii ja päivittyy oikein
+- **Testaa** eri lainauksia varmistaaksesi, että satunnainen valinta toimii
 
 ---
 
+## GitHub Copilot Agent -haaste 🎮
+
+Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
+
+**Kuvaus:** Laajenna kirjoituspeliä toteuttamalla vaikeustasojärjestelmä, joka mukauttaa peliä pelaajan suorituksen perusteella. Tämä haaste auttaa sinua harjoittelemaan kehittynyttä tapahtumien käsittelyä, datan analysointia ja dynaamista käyttöliittymän päivitystä.
+
+**Tehtävä:** Luo kirjoituspeliin vaikeustasojärjestelmä, joka:
+1. Seuraa pelaajan kirjoitusnopeutta (sanoja minuutissa) ja tarkkuusprosenttia
+2. Mukautuu automaattisesti kolmeen vaikeustasoon: Helppo (yksinkertaiset lainaukset), Keskivaikea (nykyiset lainaukset), Vaikea (monimutkaiset lainaukset välimerkeillä)
+3. Näyttää nykyisen vaikeustason ja pelaajan tilastot käyttöliittymässä
+4. Toteuttaa sarjalaskurin, joka nostaa vaikeustasoa kolmen peräkkäisen hyvän suorituksen jälkeen
+5. Lisää visuaalista palautetta (värit, animaatiot) vaikeustason muutosten ilmaisemiseksi
+
+Lisää tarvittavat HTML-elementit, CSS-tyylit ja JavaScript-funktiot toteuttaaksesi tämän ominaisuuden. Sisällytä asianmukainen virheenkäsittely ja varmista, että peli pysyy saavutettavana sopivilla ARIA-tunnisteilla.
+
+Lisätietoja [agent-tilasta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) täällä.
+
 ## 🚀 Haaste
 
-Lisää toiminnallisuutta
+Valmis viemään kirjoituspelisi seuraavalle tasolle? Kokeile toteuttaa nämä edistyneet ominaisuudet syventääksesi ymmärrystäsi tapahtumien käsittelystä ja DOM-manipulaatiosta:
 
-- Poista `input`-tapahtumakuuntelija käytöstä, kun peli on valmis, ja ota se uudelleen käyttöön, kun nappia klikataan
-- Poista tekstikenttä käytöstä, kun pelaaja suorittaa lainauksen
-- Näytä modaalidialogi onnistumisviestillä
-- Tallenna parhaat tulokset käyttämällä [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
+**Lisää toiminnallisuutta:**
+
+| Ominaisuus | Kuvaus | Harjoiteltavat taidot |
+|------------|--------|-----------------------|
+| **Syötteen hallinta** | Poista käytöstä `input`-tapahtumankuuntelija valmistumisen jälkeen ja ota se uudelleen käyttöön, kun painiketta klikataan | Tapahtumien hallinta ja tilan hallinta |
+| **Käyttöliittymän tilanhallinta** | Poista tekstikenttä käytöstä, kun pelaaja suorittaa lainauksen | DOM-ominaisuuksien manipulointi |
+| **Modal-ikkuna** | Näytä modal-ikkuna onnistumisviestillä | Kehittyneet käyttöliittymäkuviot ja saavutettavuus |
+| **Ennätysjärjestelmä** | Tallenna ennätykset käyttäen `localStorage` | Selaimen tallennus-API:t ja datan pysyvyys |
+
+**Toteutusvinkkejä:**
+- **Tutki** `localStorage.setItem()` ja `localStorage.getItem()` pysyvää tallennusta varten
+- **Harjoittele** tapahtumankuuntelijoiden lisäämistä ja poistamista dynaamisesti
+- **Tutki** HTML-dialogielementtejä tai CSS-modal-kuvioita
+- **Huomioi** saavutettavuus, kun lomakekontrolleja poistetaan käytöstä ja otetaan käyttöön
+
 ## Luentojälkeinen kysely
 
 [Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Kertaus ja itseopiskelu
 
-Lue lisää [kaikista tapahtumista](https://developer.mozilla.org/docs/Web/Events), jotka ovat kehittäjän käytettävissä verkkoselaimen kautta, ja pohdi tilanteita, joissa käyttäisit kutakin niistä.
+Lue lisää [kaikista saatavilla olevista tapahtumista](https://developer.mozilla.org/docs/Web/Events), joita verkkoselain tarjoaa kehittäjälle, ja pohdi tilanteita, joissa käyttäisit kutakin niistä.
 
 ## Tehtävä
 
-[Luo uusi näppäimistöpeli](assignment.md)
+[Luo uusi kirjoituspeli](assignment.md)
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

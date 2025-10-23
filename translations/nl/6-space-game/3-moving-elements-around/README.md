@@ -1,76 +1,106 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T00:57:21+00:00",
+  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
+  "translation_date": "2025-10-23T01:03:53+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Ruimtespel Deel 3: Beweging Toevoegen
 
-## Quiz voor de les
+Denk eens aan je favoriete games – wat ze boeiend maakt, is niet alleen de mooie graphics, maar ook hoe alles beweegt en reageert op jouw acties. Op dit moment is je ruimtespel als een prachtig schilderij, maar we gaan beweging toevoegen om het tot leven te brengen.
 
-[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/33)
+Toen de ingenieurs van NASA de besturingscomputer voor de Apollo-missies programmeerden, stonden ze voor een vergelijkbare uitdaging: hoe zorg je ervoor dat een ruimtevaartuig reageert op de input van de piloot terwijl het automatisch koerscorrecties uitvoert? De principes die we vandaag leren, weerspiegelen dezelfde concepten – het beheren van door spelers gecontroleerde bewegingen naast automatische systeemgedragingen.
 
-Spellen worden pas echt leuk wanneer er aliens rondrennen op het scherm! In dit spel maken we gebruik van twee soorten bewegingen:
+In deze les leer je hoe je ruimteschepen soepel over het scherm laat glijden, laat reageren op spelerscommando's en vloeiende bewegingspatronen creëert. We breken alles op in beheersbare concepten die logisch op elkaar voortbouwen.
 
-- **Toetsenbord/Muis beweging**: wanneer de gebruiker interactie heeft met het toetsenbord of de muis om een object op het scherm te verplaatsen.
-- **Spel-geïnduceerde beweging**: wanneer het spel een object beweegt met een bepaalde tijdsinterval.
+Aan het einde van deze les kunnen spelers hun heldenschip over het scherm vliegen terwijl vijandelijke schepen boven hun hoofd patrouilleren. Nog belangrijker is dat je de kernprincipes begrijpt die bewegingssystemen in games aandrijven.
 
-Hoe verplaatsen we dingen op een scherm? Het draait allemaal om cartesiaanse coördinaten: we veranderen de locatie (x,y) van het object en tekenen vervolgens het scherm opnieuw.
+## Pre-Lecture Quiz
 
-Meestal heb je de volgende stappen nodig om *beweging* op een scherm te realiseren:
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
-1. **Stel een nieuwe locatie in** voor een object; dit is nodig om het object als verplaatst te ervaren.
-2. **Maak het scherm leeg**, het scherm moet tussen de tekeningen worden leeggemaakt. Dit kan door een rechthoek te tekenen die we vullen met een achtergrondkleur.
-3. **Teken het object opnieuw** op de nieuwe locatie. Door dit te doen, verplaatsen we het object uiteindelijk van de ene locatie naar de andere.
+## Beweging in Games Begrijpen
 
-Hier is hoe dat eruit kan zien in code:
+Games komen tot leven wanneer dingen beginnen te bewegen, en er zijn fundamenteel twee manieren waarop dit gebeurt:
+
+- **Door spelers gecontroleerde beweging**: Wanneer je een toets indrukt of met je muis klikt, beweegt er iets. Dit is de directe verbinding tussen jou en de spelwereld.
+- **Automatische beweging**: Wanneer het spel zelf besluit dingen te bewegen – zoals die vijandelijke schepen die over het scherm moeten patrouilleren, ongeacht wat jij doet.
+
+Objecten op een computerscherm laten bewegen is eenvoudiger dan je denkt. Weet je nog die x- en y-coördinaten uit de wiskundeles? Dat is precies waar we hier mee werken. Toen Galileo in 1610 de manen van Jupiter observeerde, deed hij in wezen hetzelfde – posities in de tijd plotten om bewegingspatronen te begrijpen.
+
+Dingen op het scherm laten bewegen is als het maken van een flipboekanimatie – je moet deze drie eenvoudige stappen volgen:
+
+1. **Update de positie** – Verander waar je object moet zijn (bijvoorbeeld 5 pixels naar rechts bewegen)
+2. **Wis het oude frame** – Maak het scherm schoon zodat je geen spookachtige sporen ziet
+3. **Teken het nieuwe frame** – Plaats je object op zijn nieuwe plek
+
+Doe dit snel genoeg, en voilà! Je hebt een vloeiende beweging die natuurlijk aanvoelt voor spelers.
+
+Zo kan het eruitzien in code:
 
 ```javascript
-//set the hero's location
+// Set the hero's location
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Clear the rectangle that hosts the hero
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Redraw the game background and hero
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Kun je een reden bedenken waarom het herhaaldelijk tekenen van je held meerdere frames per seconde prestatiekosten kan veroorzaken? Lees meer over [alternatieven voor dit patroon](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+**Wat deze code doet:**
+- **Update** de x-coördinaat van de held met 5 pixels om horizontaal te bewegen
+- **Wist** het hele canvasgebied om het vorige frame te verwijderen
+- **Vult** het canvas met een zwarte achtergrondkleur
+- **Tekent** de heldafbeelding op zijn nieuwe positie
 
-## Toetsenbordgebeurtenissen afhandelen
+✅ Kun je bedenken waarom het herhaaldelijk opnieuw tekenen van je held meerdere frames per seconde prestatiekosten kan veroorzaken? Lees meer over [alternatieven voor dit patroon](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
-Je handelt gebeurtenissen af door specifieke gebeurtenissen aan code te koppelen. Toetsenbordgebeurtenissen worden geactiveerd op het hele venster, terwijl muisgebeurtenissen zoals een `klik` kunnen worden gekoppeld aan het klikken op een specifiek element. We zullen toetsenbordgebeurtenissen gebruiken gedurende dit project.
+## Keyboard Events Afhandelen
 
-Om een gebeurtenis af te handelen, moet je de `addEventListener()`-methode van het venster gebruiken en deze voorzien van twee invoerparameters. De eerste parameter is de naam van de gebeurtenis, bijvoorbeeld `keyup`. De tweede parameter is de functie die moet worden aangeroepen als gevolg van de gebeurtenis.
+Hier verbinden we de input van de speler met de actie in het spel. Wanneer iemand op de spatiebalk drukt om een laser af te vuren of op een pijltoets tikt om een asteroïde te ontwijken, moet je spel die input detecteren en erop reageren.
+
+Keyboard events vinden plaats op het niveau van het venster, wat betekent dat je hele browservenster luistert naar die toetsaanslagen. Muisclicks daarentegen kunnen worden gekoppeld aan specifieke elementen (zoals het klikken op een knop). Voor ons ruimtespel richten we ons op toetsenbordbediening, omdat dat spelers dat klassieke arcadegevoel geeft.
+
+Dit doet me denken aan hoe telegraafoperators in de 19e eeuw morsecode moesten vertalen naar betekenisvolle berichten – we doen iets soortgelijks, namelijk toetsaanslagen vertalen naar spelcommando's.
+
+Om een event af te handelen, moet je de `addEventListener()`-methode van het venster gebruiken en deze voorzien van twee invoerparameters. De eerste parameter is de naam van het event, bijvoorbeeld `keyup`. De tweede parameter is de functie die moet worden aangeroepen als gevolg van het plaatsvinden van het event.
 
 Hier is een voorbeeld:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = string representation of the key
   if (evt.key === 'ArrowUp') {
     // do something
   }
-})
+});
 ```
 
-Voor toetsenbordgebeurtenissen zijn er twee eigenschappen op de gebeurtenis die je kunt gebruiken om te zien welke toets is ingedrukt:
+**Wat hier gebeurt:**
+- **Luistert** naar keyboard events op het hele venster
+- **Vangt** het event-object dat informatie bevat over welke toets is ingedrukt
+- **Controleert** of de ingedrukte toets overeenkomt met een specifieke toets (in dit geval de pijl omhoog)
+- **Voert** code uit wanneer aan de voorwaarde wordt voldaan
 
-- `key`, dit is een stringrepresentatie van de ingedrukte toets, bijvoorbeeld `ArrowUp`.
-- `keyCode`, dit is een numerieke representatie, bijvoorbeeld `37`, wat overeenkomt met `ArrowLeft`.
+Voor toetsenbordevents zijn er twee eigenschappen op het event die je kunt gebruiken om te zien welke toets is ingedrukt:
 
-✅ Manipulatie van toetsenbordgebeurtenissen is nuttig buiten gameontwikkeling. Aan welke andere toepassingen kun je denken voor deze techniek?
+- `key` - dit is een stringrepresentatie van de ingedrukte toets, bijvoorbeeld `'ArrowUp'`
+- `keyCode` - dit is een numerieke representatie, bijvoorbeeld `37`, wat overeenkomt met `ArrowLeft`
 
-### Speciale toetsen: een kanttekening
+✅ Manipulatie van toetsenbordevents is ook buiten gameontwikkeling nuttig. Kun je andere toepassingen bedenken voor deze techniek?
 
-Er zijn enkele *speciale* toetsen die invloed hebben op het venster. Dat betekent dat als je luistert naar een `keyup`-gebeurtenis en je deze speciale toetsen gebruikt om je held te verplaatsen, het ook horizontaal scrollen zal uitvoeren. Om die reden wil je mogelijk dit ingebouwde browsergedrag *uitschakelen* terwijl je je spel ontwikkelt. Je hebt code zoals deze nodig:
+### Speciale toetsen: een waarschuwing!
+
+Sommige toetsen hebben ingebouwde browsergedragingen die je spel kunnen verstoren. Pijltoetsen scrollen de pagina en de spatiebalk springt naar beneden – gedragingen die je niet wilt wanneer iemand probeert zijn ruimteschip te besturen.
+
+We kunnen deze standaardgedragingen voorkomen en onze game de input laten afhandelen. Dit is vergelijkbaar met hoe vroege computerprogrammeurs systeemonderbrekingen moesten overschrijven om aangepaste gedragingen te creëren – wij doen dit op browserniveau. Zo werkt het:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
@@ -88,27 +118,43 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-De bovenstaande code zorgt ervoor dat pijltjestoetsen en de spatiebalk hun *standaard* gedrag uitschakelen. Het *uitschakel*-mechanisme treedt in werking wanneer we `e.preventDefault()` aanroepen.
+**Wat deze preventiecode doet:**
+- **Controleert** op specifieke key codes die ongewenst browsergedrag kunnen veroorzaken
+- **Voorkomt** de standaard browseractie voor pijltoetsen en spatiebalk
+- **Laat** andere toetsen normaal functioneren
+- **Gebruikt** `e.preventDefault()` om het ingebouwde gedrag van de browser te stoppen
 
-## Spel-geïnduceerde beweging
+## Door het spel geïnduceerde beweging
 
-We kunnen dingen vanzelf laten bewegen door timers te gebruiken zoals de `setTimeout()`- of `setInterval()`-functie die de locatie van het object bijwerkt bij elke tik, of tijdsinterval. Hier is hoe dat eruit kan zien:
+Laten we nu praten over objecten die bewegen zonder input van de speler. Denk aan vijandelijke schepen die over het scherm cruisen, kogels die in rechte lijnen vliegen, of wolken die op de achtergrond drijven. Deze autonome beweging maakt je spelwereld levendig, zelfs wanneer niemand de besturing aanraakt.
+
+We gebruiken de ingebouwde timers van JavaScript om posities op regelmatige intervallen bij te werken. Dit concept is vergelijkbaar met hoe slingerklokken werken – een regelmatig mechanisme dat consistente, getimede acties triggert. Zo eenvoudig kan het zijn:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Move the enemy on the y axis
   enemy.y += 10;
-})
+}, 100);
 ```
 
-## De spel-lus
+**Wat deze bewegingscode doet:**
+- **Creëert** een timer die elke 100 milliseconden draait
+- **Update** de y-coördinaat van de vijand met 10 pixels bij elke cyclus
+- **Slaat** het interval-ID op zodat we het later kunnen stoppen indien nodig
+- **Beweegt** de vijand automatisch naar beneden op het scherm
 
-De spel-lus is een concept dat in wezen een functie is die op regelmatige intervallen wordt aangeroepen. Het wordt de spel-lus genoemd omdat alles wat zichtbaar moet zijn voor de gebruiker in de lus wordt getekend. De spel-lus maakt gebruik van alle spelobjecten die deel uitmaken van het spel en tekent ze allemaal, tenzij ze om een bepaalde reden niet meer deel uitmaken van het spel. Bijvoorbeeld, als een object een vijand is die door een laser is geraakt en explodeert, maakt het geen deel meer uit van de huidige spel-lus (je leert hier meer over in latere lessen).
+## De Game Loop
 
-Hier is hoe een spel-lus er typisch uitziet, uitgedrukt in code:
+Hier is het concept dat alles samenbrengt – de game loop. Als je spel een film was, zou de game loop de filmprojector zijn, die frame na frame zo snel laat zien dat alles soepel lijkt te bewegen.
+
+Elk spel heeft een van deze loops die op de achtergrond draait. Het is een functie die alle spelobjecten bijwerkt, het scherm opnieuw tekent en dit proces continu herhaalt. Dit houdt je held, alle vijanden, eventuele rondvliegende lasers – de hele spelstatus – bij.
+
+Dit concept doet me denken aan hoe vroege filmtekenaars zoals Walt Disney personages frame voor frame moesten tekenen om de illusie van beweging te creëren. Wij doen hetzelfde, maar dan met code in plaats van potloden.
+
+Zo kan een game loop er in code uitzien:
 
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,21 +162,33 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-De bovenstaande lus wordt elke `200` milliseconden aangeroepen om het canvas opnieuw te tekenen. Je kunt het beste interval kiezen dat logisch is voor jouw spel.
+**Begrijpen van de structuur van de game loop:**
+- **Wist** het hele canvas om het vorige frame te verwijderen
+- **Vult** de achtergrond met een effen kleur
+- **Tekent** alle spelobjecten op hun huidige posities
+- **Herhaalt** dit proces elke 200 milliseconden om een vloeiende animatie te creëren
+- **Beheert** de framerate door de intervaltijd te regelen
 
-## Verder met het Ruimtespel
+## Het Ruimtespel Voortzetten
 
-Je neemt de bestaande code en breidt deze uit. Begin met de code die je hebt voltooid tijdens deel I of gebruik de code in [Deel II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
+Nu gaan we beweging toevoegen aan de statische scène die je eerder hebt gebouwd. We gaan het transformeren van een screenshot naar een interactieve ervaring. We werken dit stap voor stap uit om ervoor te zorgen dat elk onderdeel voortbouwt op het vorige.
 
-- **Beweeg de held**: je voegt code toe om ervoor te zorgen dat je de held kunt bewegen met de pijltjestoetsen.
-- **Beweeg vijanden**: je moet ook code toevoegen om ervoor te zorgen dat de vijanden van boven naar beneden bewegen met een bepaalde snelheid.
+Pak de code van waar we in de vorige les zijn gebleven (of begin met de code in de [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work) map als je een frisse start nodig hebt).
+
+**Wat we vandaag gaan bouwen:**
+- **Heldbesturing**: Pijltoetsen besturen je ruimteschip over het scherm
+- **Vijandelijke beweging**: Die buitenaardse schepen beginnen hun aanval
+
+Laten we beginnen met het implementeren van deze functies.
 
 ## Aanbevolen stappen
 
-Vind de bestanden die voor je zijn aangemaakt in de submap `your-work`. Het zou het volgende moeten bevatten:
+Zoek de bestanden die voor je zijn aangemaakt in de submap `your-work`. Deze zou het volgende moeten bevatten:
 
 ```bash
 -| assets
@@ -141,25 +199,29 @@ Vind de bestanden die voor je zijn aangemaakt in de submap `your-work`. Het zou 
 -| package.json
 ```
 
-Je start je project in de map `your_work` door het volgende te typen:
+Je start je project in de map `your-work` door het volgende in te typen:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Het bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Open een browser en voer dat adres in, op dit moment zou het de held en alle vijanden moeten weergeven; niets beweegt - nog niet!
+**Wat dit commando doet:**
+- **Navigeert** naar je projectmap
+- **Start** een HTTP-server op adres `http://localhost:5000`
+- **Serveert** je spelbestanden zodat je ze in een browser kunt testen
+
+Het bovenstaande start een HTTP-server op adres `http://localhost:5000`. Open een browser en voer dat adres in; op dit moment zou het de held en alle vijanden moeten weergeven; er beweegt nog niets – maar dat komt nog!
 
 ### Code toevoegen
 
-1. **Voeg toegewijde objecten toe** voor `hero`, `enemy` en `game object`, ze moeten `x`- en `y`-eigenschappen hebben. (Herinner je het gedeelte over [Erfenis of compositie](../README.md)).
+1. **Voeg toegewijde objecten toe** voor `hero`, `enemy` en `game object`, ze moeten `x`- en `y`-eigenschappen hebben. (Denk aan het gedeelte over [Inheritance or composition](../README.md)).
 
    *TIP* `game object` moet degene zijn met `x` en `y` en de mogelijkheid om zichzelf op een canvas te tekenen.
 
-   >tip: begin met het toevoegen van een nieuwe GameObject-klasse met zijn constructor zoals hieronder aangegeven, en teken het vervolgens op het canvas:
-  
+   > **Tip**: Begin met het toevoegen van een nieuwe `GameObject`-klasse met de constructor zoals hieronder beschreven, en teken deze vervolgens op het canvas:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +239,22 @@ Het bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Ope
     }
     ```
 
-    Breid nu dit GameObject uit om de Hero en Enemy te maken.
+    **Begrijpen van deze basisklasse:**
+    - **Definieert** gemeenschappelijke eigenschappen die alle spelobjecten delen (positie, grootte, afbeelding)
+    - **Bevat** een `dead`-vlag om bij te houden of het object moet worden verwijderd
+    - **Biedt** een `draw()`-methode die het object op het canvas tekent
+    - **Stelt** standaardwaarden in voor alle eigenschappen die door onderliggende klassen kunnen worden overschreven
+
+    Breid nu deze `GameObject` uit om de `Hero` en `Enemy` te maken:
     
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,129 +263,152 @@ Het bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Ope
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Voeg handlers voor toetsenbordgebeurtenissen toe** om navigatie met toetsen te verwerken (beweeg de held omhoog/omlaag links/rechts).
+    **Belangrijke concepten in deze klassen:**
+    - **Erft** van `GameObject` met behulp van het `extends`-sleutelwoord
+    - **Roept** de ouderconstructor aan met `super(x, y)`
+    - **Stelt** specifieke afmetingen en eigenschappen in voor elk type object
+    - **Implementeert** automatische beweging voor vijanden met behulp van `setInterval()`
+
+2. **Voeg key-event handlers toe** om navigatie met toetsen te beheren (beweeg de held omhoog/omlaag links/rechts)
 
    *ONTHOUD* het is een cartesiaans systeem, linksboven is `0,0`. Vergeet ook niet code toe te voegen om *standaardgedrag* te stoppen.
 
-   >tip: maak je onKeyDown-functie en koppel deze aan het venster:
+   > **Tip**: Maak je `onKeyDown`-functie en koppel deze aan het venster:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Add the code from the lesson above to stop default behavior
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Arrow keys
+       case 32:
+         e.preventDefault();
+         break; // Space
+       default:
+         break; // do not block other keys
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Controleer op dit punt je browserconsole en bekijk de toetsaanslagen die worden geregistreerd.
+   **Wat deze event handler doet:**
+   - **Luistert** naar keydown-events op het hele venster
+   - **Logt** de key code om je te helpen debuggen welke toetsen worden ingedrukt
+   - **Voorkomt** standaard browsergedrag voor pijltoetsen en spatiebalk
+   - **Laat** andere toetsen normaal functioneren
+   
+   Controleer op dit punt je browserconsole en kijk hoe de toetsaanslagen worden gelogd. 
 
-3. **Implementeer** het [Pub sub patroon](../README.md), dit houdt je code schoon terwijl je de resterende delen volgt.
+3. **Implementeer** het [Pub sub pattern](../README.md), dit houdt je code overzichtelijk terwijl je de resterende onderdelen volgt.
+
+   Het Publish-Subscribe patroon helpt je code te organiseren door eventdetectie te scheiden van eventafhandeling. Dit maakt je code modulairder en gemakkelijker te onderhouden.
 
    Om dit laatste deel te doen, kun je:
 
    1. **Voeg een event listener toe** aan het venster:
 
        ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
+       window.addEventListener("keyup", (evt) => {
+         if (evt.key === "ArrowUp") {
+           eventEmitter.emit(Messages.KEY_EVENT_UP);
+         } else if (evt.key === "ArrowDown") {
+           eventEmitter.emit(Messages.KEY_EVENT_DOWN);
+         } else if (evt.key === "ArrowLeft") {
+           eventEmitter.emit(Messages.KEY_EVENT_LEFT);
+         } else if (evt.key === "ArrowRight") {
+           eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
+         }
+       });
+       ```
 
-    1. **Maak een EventEmitter-klasse** om berichten te publiceren en te abonneren:
+   **Wat dit eventsysteem doet:**
+   - **Detecteert** toetsenbordinput en zet deze om in aangepaste game-events
+   - **Scheidt** inputdetectie van de spel-logica
+   - **Maakt** het eenvoudig om later de besturing te wijzigen zonder de gamecode te beïnvloeden
+   - **Staat toe** dat meerdere systemen reageren op dezelfde input
 
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
+   2. **Maak een EventEmitter-klasse** om berichten te publiceren en te abonneren:
 
-    1. **Voeg constanten toe** en stel de EventEmitter in:
+       ```javascript
+       class EventEmitter {
+         constructor() {
+           this.listeners = {};
+         }
+       
+         on(message, listener) {
+           if (!this.listeners[message]) {
+             this.listeners[message] = [];
+           }
+           this.listeners[message].push(listener);
+         }
+       
+   3. **Voeg constanten toe** en stel de EventEmitter in:
 
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
+       ```javascript
+       const Messages = {
+         KEY_EVENT_UP: "KEY_EVENT_UP",
+         KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
+         KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
+         KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
+       };
+       
+       let heroImg, 
+           enemyImg, 
+           laserImg,
+           canvas, ctx, 
+           gameObjects = [], 
+           hero, 
+           eventEmitter = new EventEmitter();
+       ```
 
-    1. **Initialiseer het spel**
+   **Begrijpen van de setup:**
+   - **Definieert** berichtconstanten om typfouten te voorkomen en refactoring eenvoudiger te maken
+   - **Declareert** variabelen voor afbeeldingen, canvascontext en spelstatus
+   - **Creëert** een globale event emitter voor het pub-sub systeem
+   - **Initialiseert** een array om alle spelobjecten te bevatten
 
-    ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
-    
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
-    
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
-    }
-    ```
+   4. **Initialiseer het spel**
 
-1. **Stel de spel-lus in**
+       ```javascript
+       function initGame() {
+         gameObjects = [];
+         createEnemies();
+         createHero();
+       
+         eventEmitter.on(Messages.KEY_EVENT_UP, () => {
+           hero.y -= 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
+           hero.y += 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
+           hero.x -= 5;
+         });
+       
+4. **Stel de game loop in**
 
-   Refactor de window.onload-functie om het spel te initialiseren en een spel-lus op een goed interval in te stellen. Je voegt ook een laserstraal toe:
+   Herstructureer de `window.onload`-functie om het spel te initialiseren en een game loop op een goed interval in te stellen. Je voegt ook een laserstraal toe:
 
     ```javascript
     window.onload = async () => {
@@ -324,19 +419,25 @@ Het bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Ope
       laserImg = await loadTexture("assets/laserRed.png");
     
       initGame();
-      let gameLoopId = setInterval(() => {
+      const gameLoopId = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawGameObjects(ctx);
-      }, 100)
-      
+      }, 100);
     };
     ```
 
-5. **Voeg code toe** om vijanden op een bepaald interval te bewegen
+   **Begrijpen van de game setup:**
+   - **Wacht** tot de pagina volledig is geladen voordat het spel start
+   - **Haalt** het canvas-element en de 2D-renderingcontext op
+   - **Laadt** alle afbeeldingsassets asynchroon met behulp van `await`
+   - **Start** de game loop die elke 100 ms draait (10 FPS)
+   - **Wist** en tekent het hele scherm opnieuw bij elk frame
 
-    Refactor de `createEnemies()`-functie om de vijanden te maken en ze in de nieuwe gameObjects-klasse te plaatsen:
+5. **Voeg code toe** om vijanden op een bepaald interval te laten bewegen
+
+    Herstructureer de `createEnemies()`-functie om de vijanden te creëren en ze in de nieuwe gameObjects-klasse te plaatsen:
 
     ```javascript
     function createEnemies() {
@@ -354,8 +455,50 @@ Het bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Ope
       }
     }
     ```
+
+    **Wat de vijandcreatie doet:**
+    - **Bereken** posities om vijanden in het midden van het scherm te plaatsen
+- **Maakt** een raster van vijanden met geneste lussen  
+- **Wijst** de vijandafbeelding toe aan elk vijandobject  
+- **Voegt** elke vijand toe aan de globale array van game-objecten  
+
+en voeg een `createHero()`-functie toe om een soortgelijk proces voor de held uit te voeren.  
+
+    ```javascript
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
+    }
+    ```
+  
+**Wat de held-creatie doet:**  
+- **Positioneert** de held onderaan in het midden van het scherm  
+- **Wijst** de heldafbeelding toe aan het heldobject  
+- **Voegt** de held toe aan de array van game-objecten voor weergave  
+
+en voeg ten slotte een `drawGameObjects()`-functie toe om het tekenen te starten:  
+
+    ```javascript
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
+    }
+    ```
+  
+**Begrijpen van de tekenfunctie:**  
+- **Itereert** door alle game-objecten in de array  
+- **Roep** de `draw()`-methode aan op elk object  
+- **Geeft** de canvascontext door zodat objecten zichzelf kunnen weergeven  
+
+Je vijanden zouden nu moeten beginnen met het aanvallen van je heldenruimteschip!  
+}  
+}  
+    ```
     
-    en voeg een `createHero()`-functie toe om een vergelijkbaar proces voor de held uit te voeren.
+    and add a `createHero()` function to do a similar process for the hero.
     
     ```javascript
     function createHero() {
@@ -367,36 +510,68 @@ Het bovenstaande start een HTTP-server op het adres `http://localhost:5000`. Ope
       gameObjects.push(hero);
     }
     ```
-
-    en voeg ten slotte een `drawGameObjects()`-functie toe om het tekenen te starten:
+  
+en voeg ten slotte een `drawGameObjects()`-functie toe om het tekenen te starten:  
 
     ```javascript
     function drawGameObjects(ctx) {
       gameObjects.forEach(go => go.draw(ctx));
     }
     ```
-
-    Je vijanden zouden nu je heldenruimteschip moeten beginnen te benaderen!
+  
+Je vijanden zouden nu moeten beginnen met het aanvallen van je heldenruimteschip!  
 
 ---
 
-## 🚀 Uitdaging
+## GitHub Copilot Agent Challenge 🚀  
 
-Zoals je kunt zien, kan je code veranderen in 'spaghetti-code' wanneer je functies, variabelen en klassen begint toe te voegen. Hoe kun je je code beter organiseren zodat deze beter leesbaar is? Schets een systeem om je code te organiseren, zelfs als het nog steeds in één bestand staat.
+Hier is een uitdaging die de afwerking van je game zal verbeteren: het toevoegen van grenzen en vloeiende besturing. Op dit moment kan je held van het scherm vliegen en voelt de beweging misschien wat schokkerig aan.  
 
-## Quiz na de les
+**Jouw missie:** Laat je ruimteschip realistischer aanvoelen door schermgrenzen en vloeiende beweging te implementeren. Dit lijkt op hoe NASA's vluchtcontrolesystemen voorkomen dat ruimtevaartuigen veilige operationele parameters overschrijden.  
 
-[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/34)
+**Wat je moet bouwen:** Maak een systeem dat ervoor zorgt dat je heldenruimteschip op het scherm blijft en zorg dat de besturing vloeiend aanvoelt. Wanneer spelers een pijltoets ingedrukt houden, moet het schip soepel glijden in plaats van in discrete stappen te bewegen. Overweeg visuele feedback toe te voegen wanneer het schip de schermgrenzen bereikt – misschien een subtiel effect om de rand van het speelgebied aan te geven.  
 
-## Review & Zelfstudie
+Lees meer over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hier.  
 
-Hoewel we ons spel schrijven zonder frameworks, zijn er veel op JavaScript gebaseerde canvas-frameworks voor gameontwikkeling. Neem de tijd om [hierover te lezen](https://github.com/collections/javascript-game-engines).
+## 🚀 Uitdaging  
 
-## Opdracht
+Codeorganisatie wordt steeds belangrijker naarmate projecten groeien. Je hebt misschien gemerkt dat je bestand vol raakt met functies, variabelen en klassen die allemaal door elkaar staan. Dit doet me denken aan hoe de ingenieurs die de Apollo-missie organiseerden duidelijke, onderhoudbare systemen moesten creëren waarmee meerdere teams tegelijkertijd konden werken.  
 
-[Geef commentaar op je code](assignment.md)
+**Jouw missie:**  
+Denk als een softwarearchitect. Hoe zou je je code organiseren zodat je (of een teamgenoot) over zes maanden begrijpt wat er gebeurt? Zelfs als alles voorlopig in één bestand blijft, kun je een betere organisatie creëren:  
+
+- **Groeperen van gerelateerde functies** met duidelijke commentaarheaders  
+- **Scheiding van verantwoordelijkheden** - houd de gamelogica gescheiden van de weergave  
+- **Consistente naamgeving** gebruiken voor variabelen en functies  
+- **Modules of namespaces maken** om verschillende aspecten van je game te organiseren  
+- **Documentatie toevoegen** die het doel van elk belangrijk onderdeel uitlegt  
+
+**Reflectievragen:**  
+- Welke delen van je code zijn het moeilijkst te begrijpen als je er later op terugkomt?  
+- Hoe kun je je code organiseren zodat het gemakkelijker is voor iemand anders om bij te dragen?  
+- Wat zou er gebeuren als je nieuwe functies zoals power-ups of verschillende vijandtypes wilt toevoegen?  
+
+## Quiz na de les  
+
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/34)  
+
+## Review & Zelfstudie  
+
+We hebben alles vanaf nul opgebouwd, wat geweldig is om te leren, maar hier is een klein geheim – er zijn enkele geweldige JavaScript-frameworks die veel werk voor je kunnen doen. Zodra je je comfortabel voelt met de basis die we hebben behandeld, is het de moeite waard om [te ontdekken wat er beschikbaar is](https://github.com/collections/javascript-game-engines).  
+
+Denk aan frameworks als een goed gevulde gereedschapskist in plaats van elk gereedschap met de hand te maken. Ze kunnen veel van die uitdagingen met codeorganisatie oplossen en bieden functies die weken zouden kosten om zelf te bouwen.  
+
+**Dingen die de moeite waard zijn om te verkennen:**  
+- Hoe game-engines code organiseren – je zult versteld staan van de slimme patronen die ze gebruiken  
+- Prestatie-trucs om canvasgames soepel te laten draaien  
+- Moderne JavaScript-functies die je code schoner en beter onderhoudbaar maken  
+- Verschillende benaderingen om game-objecten en hun relaties te beheren  
+
+## Opdracht  
+
+[Commentaar op je code](assignment.md)  
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

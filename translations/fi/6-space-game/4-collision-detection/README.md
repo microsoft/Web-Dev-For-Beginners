@@ -1,89 +1,119 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
-  "translation_date": "2025-08-29T00:41:05+00:00",
+  "original_hash": "4b1d441cfd31924084956000c0fee5a5",
+  "translation_date": "2025-10-23T00:41:40+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "fi"
 }
 -->
-# Rakenna avaruuspeli, osa 4: Lisää laser ja tunnista törmäykset
+# Rakenna avaruuspeli osa 4: Lisää laser ja tunnista törmäykset
 
 ## Ennakkokysely
 
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/35)
 
-Tässä osiossa opit ampumaan lasereita JavaScriptillä! Lisäämme peliimme kaksi asiaa:
+Ajattele Star Wars -elokuvan hetkeä, kun Luken protonitorpedot osuivat Kuolemantähden pakoputkeen. Juuri tuo tarkka törmäyksen tunnistus muutti galaksin kohtalon! Peleissä törmäyksen tunnistus toimii samalla tavalla – se määrittää, milloin objektit ovat vuorovaikutuksessa ja mitä tapahtuu seuraavaksi.
 
-- **Laserin**: tämä laser ammutaan sankarisi aluksesta pystysuoraan ylöspäin.
-- **Törmäyksen tunnistuksen**: osana ampumistoiminnon toteutusta lisäämme myös seuraavat pelisäännöt:
-   - **Laser osuu viholliseen**: Vihollinen tuhoutuu, jos laser osuu siihen.
-   - **Laser osuu ruudun yläreunaan**: Laser tuhoutuu, jos se osuu ruudun yläosaan.
-   - **Vihollinen ja sankari törmäävät**: Vihollinen ja sankari tuhoutuvat, jos ne törmäävät toisiinsa.
-   - **Vihollinen osuu ruudun alareunaan**: Vihollinen ja sankari tuhoutuvat, jos vihollinen saavuttaa ruudun alareunan.
+Tässä oppitunnissa lisäät laseraseet avaruuspeliisi ja toteutat törmäyksen tunnistuksen. Aivan kuten NASAn tehtäväsuunnittelijat laskevat avaruusalusten reittejä välttääkseen avaruusromun, opit tunnistamaan, milloin pelin objektit leikkaavat toisensa. Pilkomme tämän hallittaviin osiin, jotka rakentuvat toistensa päälle.
 
-Lyhyesti sanottuna, sinun -- *sankarin* -- täytyy tuhota kaikki viholliset laserilla ennen kuin ne ehtivät ruudun alareunaan.
+Lopuksi sinulla on toimiva taistelujärjestelmä, jossa laserit tuhoavat vihollisia ja törmäykset käynnistävät pelitapahtumia. Samoja törmäyksen tunnistusperiaatteita käytetään kaikkeen fysiikkasimulaatioista interaktiivisiin verkkokäyttöliittymiin.
 
-✅ Tee hieman tutkimusta ensimmäisestä koskaan kirjoitetusta tietokonepelistä. Millainen sen toiminnallisuus oli?
-
-Ollaan sankareita yhdessä!
+✅ Tee hieman tutkimusta ensimmäisestä koskaan kirjoitetusta tietokonepelistä. Mitä toiminnallisuuksia siinä oli?
 
 ## Törmäyksen tunnistus
 
-Miten tunnistamme törmäykset? Meidän täytyy ajatella pelin objekteja suorakulmioina, jotka liikkuvat ympäriinsä. Miksi näin, saatat kysyä? No, kuva, jota käytetään pelin objektin piirtämiseen, on suorakulmio: sillä on `x`, `y`, `leveys` ja `korkeus`.
+Törmäyksen tunnistus toimii kuin Apollo-kuumoduulin läheisyysanturit – se tarkistaa jatkuvasti etäisyyksiä ja antaa hälytyksiä, kun objektit tulevat liian lähelle. Peleissä tämä järjestelmä määrittää, milloin objektit ovat vuorovaikutuksessa ja mitä pitäisi tapahtua seuraavaksi.
 
-Jos kaksi suorakulmiota, esimerkiksi sankari ja vihollinen, *leikkaavat* toisiaan, tapahtuu törmäys. Mitä sen jälkeen tapahtuu, riippuu pelin säännöistä. Törmäyksen tunnistuksen toteuttamiseksi tarvitset seuraavat asiat:
+Käyttämämme lähestymistapa käsittelee jokaista peliobjektia suorakulmiona, aivan kuten lennonjohtojärjestelmät käyttävät yksinkertaistettuja geometrisia muotoja lentokoneiden seuraamiseen. Tämä suorakulmainen menetelmä saattaa vaikuttaa yksinkertaiselta, mutta se on laskennallisesti tehokas ja toimii hyvin useimmissa pelitilanteissa.
 
-1. Tavan saada pelin objektista suorakulmion esitys, esimerkiksi näin:
+### Suorakulmion määrittely
 
-   ```javascript
-   rectFromGameObject() {
-     return {
-       top: this.y,
-       left: this.x,
-       bottom: this.y + this.height,
-       right: this.x + this.width
-     }
-   }
-   ```
-
-2. Vertailufunktion, joka voi näyttää tältä:
-
-   ```javascript
-   function intersectRect(r1, r2) {
-     return !(r2.left > r1.right ||
-       r2.right < r1.left ||
-       r2.top > r1.bottom ||
-       r2.bottom < r1.top);
-   }
-   ```
-
-## Miten tuhoamme asioita
-
-Asioiden tuhoaminen pelissä tarkoittaa, että pelille kerrotaan, ettei sen enää tarvitse piirtää kyseistä objektia pelisilmukassa, joka käynnistyy tietyin väliajoin. Tämä voidaan tehdä merkitsemällä pelin objekti *kuolleeksi*, kun jotain tapahtuu, esimerkiksi näin:
+Jokaisella peliobjektilla on oltava koordinaattirajat, aivan kuten Mars Pathfinder -mönkijä kartoitti sijaintinsa Marsin pinnalla. Näin määrittelemme nämä rajakoordinaatit:
 
 ```javascript
-// collision happened
-enemy.dead = true
+rectFromGameObject() {
+  return {
+    top: this.y,
+    left: this.x,
+    bottom: this.y + this.height,
+    right: this.x + this.width
+  }
+}
 ```
 
-Sen jälkeen voit käsitellä *kuolleet* objektit ennen ruudun uudelleenpiirtämistä, esimerkiksi näin:
+**Puretaan tämä osiin:**
+- **Yläreuna**: Se on vain objektin pystysuuntainen aloituskohta (sen y-sijainti)
+- **Vasemmassa reunassa**: Missä se alkaa vaakasuunnassa (sen x-sijainti)
+- **Alareuna**: Lisää korkeus y-sijaintiin – nyt tiedät, mihin se päättyy!
+- **Oikea reuna**: Lisää leveys x-sijaintiin – ja sinulla on täydelliset rajat.
+
+### Leikkausalgoritmi
+
+Suorakulmion leikkausten tunnistaminen käyttää logiikkaa, joka on samanlainen kuin Hubble-avaruusteleskoopin tapa määrittää, ovatko taivaankappaleet päällekkäin sen näkökentässä. Algoritmi tarkistaa erottelun:
 
 ```javascript
-gameObjects = gameObject.filter(go => !go.dead);
+function intersectRect(r1, r2) {
+  return !(r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top);
+}
 ```
 
-## Miten ammutaan laser
+**Erottelutesti toimii kuin tutkajärjestelmät:**
+- Onko suorakulmio 2 kokonaan suorakulmion 1 oikealla puolella?
+- Onko suorakulmio 2 kokonaan suorakulmion 1 vasemmalla puolella?
+- Onko suorakulmio 2 kokonaan suorakulmion 1 alapuolella?
+- Onko suorakulmio 2 kokonaan suorakulmion 1 yläpuolella?
 
-Laserin ampuminen tarkoittaa näppäintapahtumaan reagoimista ja objektin luomista, joka liikkuu tiettyyn suuntaan. Meidän täytyy suorittaa seuraavat vaiheet:
+Jos mikään näistä ehdoista ei ole totta, suorakulmiot ovat päällekkäin. Tämä lähestymistapa muistuttaa sitä, miten tutkaoperaattorit määrittävät, ovatko kaksi lentokonetta turvallisella etäisyydellä toisistaan.
 
-1. **Luo laser-objekti**: sankarisi aluksen yläosasta, joka alkaa liikkua ylöspäin kohti ruudun yläosaa heti luomisen jälkeen.
-2. **Liitä koodi näppäintapahtumaan**: meidän täytyy valita näppäin, joka edustaa pelaajan laserin ampumista.
-3. **Luo pelin objekti, joka näyttää laserilta**, kun näppäintä painetaan.
+## Objektien elinkaaren hallinta
 
-## Laserin viive
+Kun laser osuu viholliseen, molemmat objektit on poistettava pelistä. Objektien poistaminen kesken silmukan voi kuitenkin aiheuttaa kaatumisia – oppitunti, joka opittiin kantapään kautta varhaisissa tietokonejärjestelmissä, kuten Apollo Guidance Computerissa. Sen sijaan käytämme "merkitse poistettavaksi" -lähestymistapaa, joka poistaa objektit turvallisesti ruutujen välillä.
 
-Laserin täytyy ampua aina, kun painat näppäintä, esimerkiksi *välilyöntiä*. Jotta peli ei tuottaisi liian monta laseria lyhyessä ajassa, meidän täytyy korjata tämä. Korjaus tehdään toteuttamalla niin sanottu *viive*, ajastin, joka varmistaa, että laser voidaan ampua vain tietyn ajan välein. Voit toteuttaa sen seuraavasti:
+Näin merkitsemme jotain poistettavaksi:
+
+```javascript
+// Mark object for removal
+enemy.dead = true;
+```
+
+**Miksi tämä lähestymistapa toimii:**
+- Merkitsemme objektin "kuolleeksi", mutta emme poista sitä heti
+- Tämä antaa nykyisen peliruudun valmistua turvallisesti
+- Ei kaatumisia, kun yritetään käyttää jotain, joka on jo poistettu!
+
+Sitten suodatamme merkityt objektit ennen seuraavaa renderöintikierrosta:
+
+```javascript
+gameObjects = gameObjects.filter(go => !go.dead);
+```
+
+**Mitä tämä suodatus tekee:**
+- Luo uuden listan, jossa on vain "elävät" objektit
+- Poistaa kaiken, mikä on merkitty kuolleeksi
+- Pitää pelin sujuvana
+- Estää muistin täyttymisen tuhoutuneista objekteista
+
+## Laserin mekaniikan toteuttaminen
+
+Laserprojektiilit peleissä toimivat samalla periaatteella kuin Star Trekin fotonitorpedot – ne ovat erillisiä objekteja, jotka liikkuvat suoraviivaisesti, kunnes osuvat johonkin. Jokainen välilyöntinäppäimen painallus luo uuden laserobjektin, joka liikkuu ruudulla.
+
+Tämän toteuttamiseksi meidän on koordinoitava muutamia eri osia:
+
+**Keskeiset toteutettavat osat:**
+- **Luo** laserobjekteja, jotka syntyvät sankarin sijainnista
+- **Käsittele** näppäimistön syötteet laserin luomisen käynnistämiseksi
+- **Hallinnoi** laserin liikettä ja elinkaarta
+- **Toteuta** visuaalinen esitys laserprojektiileille
+
+## Tulinopeuden hallinnan toteuttaminen
+
+Rajoittamaton tulinopeus kuormittaisi pelimoottoria liikaa ja tekisi pelaamisesta liian helppoa. Todelliset asejärjestelmät kohtaavat samanlaisia rajoituksia – jopa USS Enterprisen faaserit tarvitsivat aikaa latautuakseen laukauksien välillä.
+
+Toteutamme jäähdytysjärjestelmän, joka estää nopean tulituksen samalla kun säilyttää ohjainten reagoivuuden:
 
 ```javascript
 class Cooldown {
@@ -91,41 +121,55 @@ class Cooldown {
     this.cool = false;
     setTimeout(() => {
       this.cool = true;
-    }, time)
+    }, time);
   }
 }
 
 class Weapon {
-  constructor {
+  constructor() {
+    this.cooldown = null;
   }
+  
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // Create laser projectile
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // Weapon is still cooling down
     }
   }
 }
 ```
 
-✅ Palaa avaruuspelisarjan ensimmäiseen osaan muistuttaaksesi itseäsi *viiveistä*.
+**Miten jäähdytys toimii:**
+- Luotaessa ase on "kuuma" (ei voi ampua vielä)
+- Aikakatkaisun jälkeen se muuttuu "viileäksi" (valmis ampumaan)
+- Ennen ampumista tarkistamme: "Onko ase viileä?"
+- Tämä estää nopean klikkailun ja pitää ohjaimet reagoivina
 
-## Mitä rakennetaan
+✅ Palaa avaruuspelisarjan ensimmäiseen oppituntiin muistuttaaksesi itseäsi jäähdytyksistä.
 
-Otat olemassa olevan koodin (jonka olet siivonnut ja refaktoroinut) edellisestä osasta ja laajennat sitä. Voit joko aloittaa osan II koodista tai käyttää koodia kohdasta [Osa III - aloitus](../../../../../../../../../your-work).
+## Törmäysjärjestelmän rakentaminen
 
-> vinkki: laser, jonka kanssa työskentelet, on jo assets-kansiossasi ja viitattu koodissasi
+Laajennat olemassa olevaa avaruuspelikoodiasi luodaksesi törmäyksen tunnistusjärjestelmän. Kuten Kansainvälisen avaruusaseman automatisoitu törmäyksen välttämisjärjestelmä, pelisi seuraa jatkuvasti objektien sijainteja ja reagoi leikkauksiin.
 
-- **Lisää törmäyksen tunnistus**, kun laser osuu johonkin, seuraavien sääntöjen tulisi päteä:
-   1. **Laser osuu viholliseen**: vihollinen tuhoutuu, jos laser osuu siihen.
-   2. **Laser osuu ruudun yläreunaan**: laser tuhoutuu, jos se osuu ruudun yläosaan.
-   3. **Vihollinen ja sankari törmäävät**: vihollinen ja sankari tuhoutuvat, jos ne törmäävät toisiinsa.
-   4. **Vihollinen osuu ruudun alareunaan**: vihollinen ja sankari tuhoutuvat, jos vihollinen saavuttaa ruudun alareunan.
+Aloittaen edellisen oppitunnin koodista, lisäät törmäyksen tunnistuksen erityisillä säännöillä, jotka ohjaavat objektien vuorovaikutusta.
 
-## Suositellut vaiheet
+> 💡 **Vinkki**: Laser-sprite on jo mukana omaisuuskansiossasi ja viitattu koodissasi, valmiina toteutettavaksi.
 
-Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi sisältää seuraavat:
+### Toteutettavat törmäyssäännöt
+
+**Lisättävät pelimekaniikat:**
+1. **Laser osuu viholliseen**: Vihollisobjekti tuhoutuu, kun laserprojektiili osuu siihen
+2. **Laser osuu ruudun rajaan**: Laser poistetaan, kun se saavuttaa ruudun yläreunan
+3. **Vihollinen ja sankari törmäävät**: Molemmat objektit tuhoutuvat, kun ne leikkaavat toisensa
+4. **Vihollinen saavuttaa alareunan**: Pelin loppumistila, kun viholliset saavuttavat ruudun alareunan
+
+## Kehitysympäristön asettaminen
+
+Hyviä uutisia – olemme jo valmistelleet suurimman osan pohjatyöstä sinulle! Kaikki pelin omaisuudet ja perusrakenne odottavat sinua `your-work`-alikansiossa, valmiina lisättäväksi siisteihin törmäystoimintoihin.
+
+### Projektin rakenne
 
 ```bash
 -| assets
@@ -137,175 +181,273 @@ Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi si
 -| package.json
 ```
 
-Aloita projektisi `your_work`-kansiossa kirjoittamalla:
+**Tiedostorakenteen ymmärtäminen:**
+- **Sisältää** kaikki pelin objektien tarvitsemat sprite-kuvat
+- **Sisältää** pääasiallisen HTML-dokumentin ja JavaScript-sovellustiedoston
+- **Tarjoaa** pakettikonfiguraation paikalliselle kehityspalvelimelle
+
+### Kehityspalvelimen käynnistäminen
+
+Siirry projektikansioosi ja käynnistä paikallinen palvelin:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä kyseinen osoite. Tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, mutta mikään ei vielä liiku :).
+**Tämä komentosekvenssi:**
+- **Siirtyy** työprojektikansioon
+- **Käynnistää** paikallisen HTTP-palvelimen osoitteessa `http://localhost:5000`
+- **Palvelee** pelitiedostosi testaukseen ja kehitykseen
+- **Mahdollistaa** live-kehityksen automaattisella päivityksellä
 
-### Lisää koodi
+Avaa selaimesi ja siirry osoitteeseen `http://localhost:5000` nähdäksesi nykyisen pelitilasi, jossa sankari ja viholliset on renderöity ruudulle.
 
-1. **Määritä pelin objektin suorakulmion esitys törmäyksen käsittelyä varten** Alla oleva koodi mahdollistaa suorakulmion esityksen saamisen `GameObject`-objektista. Muokkaa GameObject-luokkaasi laajentaaksesi sitä:
+### Toteutuksen vaiheittainen eteneminen
 
-    ```javascript
-    rectFromGameObject() {
-        return {
-          top: this.y,
-          left: this.x,
-          bottom: this.y + this.height,
-          right: this.x + this.width,
-        };
-      }
-    ```
+Kuten systemaattinen lähestymistapa, jota NASA käytti Voyager-avaruusaluksen ohjelmointiin, toteutamme törmäyksen tunnistuksen metodisesti, rakentaen jokaisen komponentin vaihe vaiheelta.
 
-2. **Lisää koodi, joka tarkistaa törmäykset** Tämä on uusi funktio, joka testaa, leikkaavatko kaksi suorakulmiota toisiaan:
+#### 1. Lisää suorakulmion törmäysrajat
 
-    ```javascript
-    function intersectRect(r1, r2) {
-      return !(
-        r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top
-      );
-    }
-    ```
+Ensiksi opetetaan peliobjekteille, miten ne kuvaavat rajansa. Lisää tämä metodi `GameObject`-luokkaasi:
 
-3. **Lisää laserin ampumiskyky**
-   1. **Lisää näppäintapahtumaviesti**. *Välilyönti*-näppäimen pitäisi luoda laser juuri sankarialuksen yläpuolelle. Lisää kolme vakioarvoa Messages-objektiin:
+```javascript
+rectFromGameObject() {
+    return {
+      top: this.y,
+      left: this.x,
+      bottom: this.y + this.height,
+      right: this.x + this.width,
+    };
+  }
+```
 
-       ```javascript
-        KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
-        COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
-        COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
-       ```
+**Tämä metodi tekee:**
+- **Luo** suorakulmio-objektin tarkkojen rajakoordinaattien kanssa
+- **Laskee** alareunan ja oikean reunan sijainnin lisäämällä mitat
+- **Palauttaa** objektin, joka on valmis törmäyksen tunnistusalgoritmeille
+- **Tarjoaa** standardoidun rajapinnan kaikille peliobjekteille
 
-   1. **Käsittele välilyöntinäppäin**. Muokkaa `window.addEventListener`-keyup-funktiota käsittelemään välilyöntiä:
+#### 2. Toteuta leikkausten tunnistus
 
-      ```javascript
-        } else if(evt.keyCode === 32) {
-          eventEmitter.emit(Messages.KEY_EVENT_SPACE);
-        }
-      ```
+Nyt luodaan törmäysten tunnistaja – funktio, joka osaa kertoa, milloin kaksi suorakulmiota ovat päällekkäin:
 
-    1. **Lisää kuuntelijat**. Muokkaa `initGame()`-funktiota varmistaaksesi, että sankari voi ampua, kun välilyöntiä painetaan:
+```javascript
+function intersectRect(r1, r2) {
+  return !(
+    r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top
+  );
+}
+```
 
-       ```javascript
-       eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
-        if (hero.canFire()) {
-          hero.fire();
-        }
-       ```
+**Tämä algoritmi toimii:**
+- **Testaa** neljä erotteluehtoa suorakulmioiden välillä
+- **Palauttaa** `false`, jos jokin erotteluehto on totta
+- **Ilmaisee** törmäyksen, kun erottelua ei ole
+- **Käyttää** negatiivista logiikkaa tehokkaaseen leikkausten testaukseen
 
-       ja lisää uusi `eventEmitter.on()`-funktio varmistaaksesi toiminnan, kun vihollinen törmää laseriin:
+#### 3. Toteuta laserin ampumisjärjestelmä
 
-          ```javascript
-          eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-            first.dead = true;
-            second.dead = true;
-          })
-          ```
+Nyt asiat muuttuvat jännittäviksi! Luodaan laserin ampumisjärjestelmä.
 
-   1. **Liikuta objektia**, Varmista, että laser liikkuu vähitellen ruudun yläosaan. Luo uusi Laser-luokka, joka laajentaa `GameObject`-luokkaa, kuten aiemmin:
+##### Viestikonstantit
 
-      ```javascript
-        class Laser extends GameObject {
-        constructor(x, y) {
-          super(x,y);
-          (this.width = 9), (this.height = 33);
-          this.type = 'Laser';
-          this.img = laserImg;
-          let id = setInterval(() => {
-            if (this.y > 0) {
-              this.y -= 15;
-            } else {
-              this.dead = true;
-              clearInterval(id);
-            }
-          }, 100)
-        }
-      }
-      ```
+Määritellään ensin joitain viestityyppejä, jotta pelin eri osat voivat kommunikoida keskenään:
 
-   1. **Käsittele törmäykset**, Toteuta laserin törmäyssäännöt. Lisää `updateGameObjects()`-funktio, joka testaa törmäyksiä:
+```javascript
+KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
+COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
+COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
+```
 
-      ```javascript
-      function updateGameObjects() {
-        const enemies = gameObjects.filter(go => go.type === 'Enemy');
-        const lasers = gameObjects.filter((go) => go.type === "Laser");
-      // laser hit something
-        lasers.forEach((l) => {
-          enemies.forEach((m) => {
-            if (intersectRect(l.rectFromGameObject(), m.rectFromGameObject())) {
-            eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
-              first: l,
-              second: m,
-            });
-          }
-         });
-      });
+**Nämä konstantit tarjoavat:**
+- **Standardoi** tapahtumien nimet koko sovelluksessa
+- **Mahdollistaa** johdonmukaisen viestinnän pelijärjestelmien välillä
+- **Estää** kirjoitusvirheet tapahtumankäsittelijöiden rekisteröinnissä
 
-        gameObjects = gameObjects.filter(go => !go.dead);
-      }  
-      ```
+##### Näppäimistön syötteen käsittely
 
-      Varmista, että lisäät `updateGameObjects()`-funktion pelisilmukkaasi `window.onload`-kohdassa.
+Lisää välilyöntinäppäimen tunnistus näppäintapahtumien kuuntelijaan:
 
-   4. **Toteuta viive** laserille, jotta sitä voidaan ampua vain tietyn ajan välein.
+```javascript
+} else if(evt.keyCode === 32) {
+  eventEmitter.emit(Messages.KEY_EVENT_SPACE);
+}
+```
 
-      Lopuksi, muokkaa Hero-luokkaa niin, että se voi käyttää viivettä:
+**Tämä syötteen käsittelijä:**
+- **Tunnistaa** välilyöntinäppäimen painallukset käyttämällä keyCode 32
+- **Lähettää** standardoidun tapahtumaviestin
+- **Mahdollistaa** irrotetun ampumislogiikan
 
-       ```javascript
-      class Hero extends GameObject {
-        constructor(x, y) {
-          super(x, y);
-          (this.width = 99), (this.height = 75);
-          this.type = "Hero";
-          this.speed = { x: 0, y: 0 };
-          this.cooldown = 0;
-        }
-        fire() {
-          gameObjects.push(new Laser(this.x + 45, this.y - 10));
-          this.cooldown = 500;
+##### Tapahtumankuuntelijan asettaminen
+
+Rekisteröi ampumiskäyttäytyminen `initGame()`-funktiossasi:
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
+ if (hero.canFire()) {
+   hero.fire();
+ }
+});
+```
+
+**Tämä tapahtumankuuntelija:**
+- **Reagoi** välilyöntinäppäimen tapahtumiin
+- **Tarkistaa** ampumisen jäähdytysajan tilan
+- **Käynnistää** laserin luomisen, kun se on sallittua
+
+Lisää törmäyksen käsittely laser-vihollinen vuorovaikutuksille:
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+  first.dead = true;
+  second.dead = true;
+});
+```
+
+**Tämä törmäyksen käsittelijä:**
+- **Vastaanottaa** törmäystapahtuman tiedot molemmista objekteista
+- **Merkitsee** molemmat objektit poistettaviksi
+- **Varmistaa** asianmukaisen siivouksen törmäyksen jälkeen
+
+#### 4. Luo Laser-luokka
+
+Toteuta laserprojektiili, joka liikkuu ylöspäin ja hallitsee omaa elinkaartaan:
+
+```javascript
+class Laser extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 9;
+    this.height = 33;
+    this.type = 'Laser';
+    this.img = laserImg;
     
-          let id = setInterval(() => {
-            if (this.cooldown > 0) {
-              this.cooldown -= 100;
-            } else {
-              clearInterval(id);
-            }
-          }, 200);
-        }
-        canFire() {
-          return this.cooldown === 0;
-        }
+    let id = setInterval(() => {
+      if (this.y > 0) {
+        this.y -= 15;
+      } else {
+        this.dead = true;
+        clearInterval(id);
       }
-      ```
+    }, 100);
+  }
+}
+```
 
-Tässä vaiheessa pelissäsi on joitakin toiminnallisuuksia! Voit liikkua nuolinäppäimillä, ampua laserin välilyönnillä, ja viholliset katoavat, kun osut niihin. Hyvin tehty!
+**Tämä luokan toteutus:**
+- **Laajentaa** GameObject-luokkaa perien perustoiminnallisuuden
+- **Asettaa** sopivat mitat laser-sprite-kuvalle
+- **Luo** automaattisen ylöspäin liikkeen käyttämällä `setInterval()`
+- **Käsittelee** itsensä tuhoamisen, kun se saavuttaa ruudun yläreunan
+- **Hallinnoi** omaa animaatioaikatauluaan ja siivousta
+
+#### 5. Toteuta törmäyksen tunnistusjärjestelmä
+
+Luo kattava törmäyksen tunnistusfunktio:
+
+```javascript
+function updateGameObjects() {
+  const enemies = gameObjects.filter(go => go.type === 'Enemy');
+  const lasers = gameObjects.filter(go => go.type === "Laser");
+  
+  // Test laser-enemy collisions
+  lasers.forEach((laser) => {
+    enemies.forEach((enemy) => {
+      if (intersectRect(laser.rectFromGameObject(), enemy.rectFromGameObject())) {
+        eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
+          first: laser,
+          second: enemy,
+        });
+      }
+    });
+  });
+
+  // Remove destroyed objects
+  gameObjects = gameObjects.filter(go => !go.dead);
+}
+```
+
+**Tämä törmäysjärjestelmä:**
+- **Suodattaa** peliobjektit tyypin mukaan tehokasta testausta varten
+- **Testaa** jokaisen laserin ja vihollisen leikkaukset
+- **Lähettää** törmäystapahtumia, kun leikkauksia havaitaan
+- **Siivoaa** tuhoutuneet objektit törmäyskäsittelyn jälkeen
+
+> ⚠️ **Tärkeää**: Lisää `updateGameObjects()` pääpelisilmukkaasi `window.onload`-kohdassa aktivoidaksesi törmäyksen tunnistuksen.
+
+#### 6. Lisää jäähdytysjärjestelmä Hero-luokkaan
+
+Paranna Hero-luokkaa ampumismekaniikalla ja tulinopeuden rajoituksella:
+
+```javascript
+class Hero extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 99;
+    this.height = 75;
+    this.type = "Hero";
+    this.speed = { x: 0, y: 0 };
+    this.cooldown = 0;
+  }
+  
+  fire() {
+    gameObjects.push(new Laser(this.x + 45, this.y - 10));
+    this.cooldown = 500;
+
+    let id = setInterval(() => {
+      if (this.cooldown > 0) {
+        this.cooldown -= 100;
+      } else {
+        clearInterval(id);
+      }
+    }, 200);
+  }
+  
+  canFire() {
+    return this.cooldown === 0;
+  }
+}
+```
+
+**Parannetun Hero-luokan ymmärtäminen:**
+- **Alustaa** jäähdytystimerin nollaan (valmis ampumaan)
+- **Luo** laserobjekteja sankarialuksen yläpuolelle
+- **Asettaa** jäähdytysajan estääkseen nopean ampumisen
+- **Vähentää** jäähdytystimeriä intervallipohjaisilla päivityksillä
+- **Tarjoaa** ampumistilan tarkistuksen `canFire()`-metodin kautta
+
+### Toteutuksen testaus
+
+Avaruuspeliisi on nyt lisätty täydellinen törmäyksen tunnistus ja taistelumekaniikka. 🚀 Testaa nämä uudet ominaisuudet:
+- **Liiku** nuolinäppäimillä varmistaaksesi liikkeen hallinnan
+- **Ammu lasereita** välilyöntinäppäimellä – huomaa, kuinka jäähdytys estää nopean klikkailun
+- **Tarkkaile törmäyksiä**, kun laserit osuvat vihollisiin ja käynnistävät poistamisen
+- **Varmista siivous**, kun tuhoutuneet objektit katoavat pelistä
+
+Olet onnistuneesti toteuttanut törmäyksen tunnistusjärjestelmän käyttäen samoja matemaattisia periaatteita, jotka ohjaavat avaruusalusten navigointia ja robotiikkaa.
+
+## GitHub Copilot Agent -haaste 🚀
+
+Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
+
+**Kuvaus:** Paranna törmäyksen tunnistusjärjestelmää toteuttamalla voimaesineitä, jotka syntyvät satunnaisesti ja tarjoavat väliaikaisia kykyjä, kun sankarialus kerää ne.
+
+**Tehtävä:** Luo PowerUp-luokka, joka laajentaa GameObject-luokkaa, ja toteuta törmäyksen tunnistus sankarin ja voimaesineiden välillä. Lisää vähintään kaksi voimaesinetyyppiä: yksi, joka lisää tulinopeutta (vähentää jäähdytystä), ja toinen, joka luo väliaikaisen suojan. Sisällytä syntymislogiikka, joka luo voimaesineitä satunnaisin väliajoin ja paikoissa.
 
 ---
 
+
+
 ## 🚀 Haaste
 
-Lisää räjähdys! Tutustu pelin assetteihin [Space Art -repo](../../../../6-space-game/solution/spaceArt/readme.txt) -kohdassa ja yritä lisätä räjähdys, kun laser osuu viholliseen.
-
-## Jälkikysely
-
-[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/36)
-
-## Kertaus ja itseopiskelu
-
-Kokeile pelisi aikavälejä tähän mennessä. Mitä tapahtuu, kun muutat niitä? Lue lisää [JavaScriptin ajoitustapahtumista](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
-
-## Tehtävä
-
-[Tutki törmäyksiä](assignment.md)
+Lisää räjähdys! Katso pelin omaisuuksia [Space Art -repo](../../../../6-space-game/solution/spaceArt/readme.txt) ja yritä lisätä
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
