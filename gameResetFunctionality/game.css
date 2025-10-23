@@ -1,0 +1,82 @@
+body {
+    background-color: #34495e;
+    color: #ecf0f1;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+  }
+  .container {
+    background-color: #2c3e50;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 80%;
+    max-width: 700px;
+  }
+  h1 {
+    color: #3498db;
+  }
+  #quote-display {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .word-correct {
+    color: #2ecc71; /* Green for correct */
+  }
+  .word-incorrect {
+    color: #e74c3c; /* Red for incorrect */
+    text-decoration: underline;
+  }
+  .highlight {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  #typed-value {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    box-sizing: border-box;
+  }
+  #typed-value:disabled {
+    background-color: #95a5a6;
+  }
+  #message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    height: 20px; /* Reserve space to prevent layout shift */
+  }
+  /* --- MODIFIED ---: Style for the main action button */
+  #action-button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  /* --- NEW ---: Classes for different button states */
+  .btn-start, .btn-success {
+    background-color: #2ecc71; /* Green for start and success */
+  }
+  .btn-start:hover, .btn-success:hover {
+    background-color: #27ae60;
+  }
+  .btn-reset {
+    background-color: #e67e22; /* Orange for reset */
+  }
+  .btn-reset:hover {
+    background-color: #d35400;
+  }
