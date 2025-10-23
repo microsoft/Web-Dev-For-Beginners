@@ -1,50 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
-  "translation_date": "2025-08-29T07:55:57+00:00",
+  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
+  "translation_date": "2025-10-23T21:48:34+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "sv"
 }
 -->
 # Bygg ett rymdspel Del 1: Introduktion
 
-![video](../../../../6-space-game/images/pewpew.gif)
+![Animering av rymdspel som visar spelupplevelse](../../../../6-space-game/images/pewpew.gif)
 
-## Quiz före föreläsning
+Precis som NASAs kontrollcenter koordinerar flera system under en rymduppskjutning, ska vi bygga ett rymdspel som visar hur olika delar av ett program kan fungera smidigt tillsammans. Genom att skapa något du faktiskt kan spela, kommer du att lära dig viktiga programmeringskoncept som gäller för alla mjukvaruprojekt.
 
-[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/29)
+Vi kommer att utforska två grundläggande sätt att organisera kod: arv och komposition. Dessa är inte bara akademiska begrepp – de är samma mönster som driver allt från videospel till banksystem. Vi kommer också att implementera ett kommunikationssystem kallat pub/sub som fungerar som kommunikationsnätverk som används i rymdfarkoster, vilket gör det möjligt för olika komponenter att dela information utan att skapa beroenden.
 
-### Arv och komposition inom spelutveckling
+I slutet av denna serie kommer du att förstå hur man bygger applikationer som kan skalas och utvecklas – oavsett om du utvecklar spel, webbapplikationer eller något annat mjukvarusystem.
 
-I tidigare lektioner behövde du inte tänka så mycket på designarkitekturen för de appar du byggde, eftersom projekten var mycket små. Men när dina applikationer växer i storlek och omfattning blir arkitektoniska beslut en större fråga. Det finns två huvudsakliga tillvägagångssätt för att skapa större applikationer i JavaScript: *komposition* eller *arv*. Båda har sina för- och nackdelar, men låt oss förklara dem inom kontexten av ett spel.
+## Quiz före föreläsningen
 
-✅ En av de mest kända programmeringsböckerna någonsin handlar om [designmönster](https://en.wikipedia.org/wiki/Design_Patterns).
+[Quiz före föreläsningen](https://ff-quizzes.netlify.app/web/quiz/29)
 
-I ett spel har du `spelobjekt`, vilket är objekt som existerar på en skärm. Detta innebär att de har en plats i ett kartesiskt koordinatsystem, kännetecknat av att ha en `x`- och `y`-koordinat. När du utvecklar ett spel kommer du att märka att alla dina spelobjekt har en standardegenskap, gemensam för varje spel du skapar, nämligen element som är:
+## Arv och komposition inom spelutveckling
 
-- **platsbaserade** De flesta, om inte alla, spelelement är platsbaserade. Detta innebär att de har en plats, en `x` och `y`.
-- **rörliga** Dessa är objekt som kan flytta till en ny plats. Det är vanligtvis en hjälte, ett monster eller en NPC (en icke-spelbar karaktär), men inte till exempel ett statiskt objekt som ett träd.
-- **självförstörande** Dessa objekt existerar bara under en viss tidsperiod innan de förbereder sig för att tas bort. Vanligtvis representeras detta av en `död` eller `förstörd` boolean som signalerar till spelmotorn att detta objekt inte längre ska renderas.
-- **nedkylningsperiod** 'Nedkylningsperiod' är en typisk egenskap bland kortlivade objekt. Ett typiskt exempel är en textbit eller en grafisk effekt som en explosion som bara ska synas under några millisekunder.
+När projekt växer i komplexitet blir kodorganisation avgörande. Det som börjar som ett enkelt skript kan bli svårt att underhålla utan rätt struktur – ungefär som hur Apollo-missionerna krävde noggrann samordning mellan tusentals komponenter.
+
+Vi kommer att utforska två grundläggande sätt att organisera kod: arv och komposition. Varje har sina tydliga fördelar, och att förstå båda hjälper dig att välja rätt metod för olika situationer. Vi kommer att demonstrera dessa koncept genom vårt rymdspel, där hjältar, fiender, power-ups och andra objekt måste interagera effektivt.
+
+✅ En av de mest kända programmeringsböckerna som någonsin skrivits handlar om [designmönster](https://en.wikipedia.org/wiki/Design_Patterns).
+
+I vilket spel som helst har du `spelobjekt` – de interaktiva elementen som fyller din spelvärld. Hjältar, fiender, power-ups och visuella effekter är alla spelobjekt. Varje existerar på specifika skärmkoordinater med hjälp av `x` och `y`-värden, liknande att plotta punkter på ett koordinatplan.
+
+Trots sina visuella skillnader delar dessa objekt ofta grundläggande beteenden:
+
+- **De existerar någonstans** – Varje objekt har x- och y-koordinater så att spelet vet var det ska ritas
+- **Många kan röra sig** – Hjältar springer, fiender jagar, kulor flyger över skärmen
+- **De har en livslängd** – Vissa stannar kvar för alltid, andra (som explosioner) dyker upp kort och försvinner
+- **De reagerar på saker** – När saker kolliderar, samlas power-ups in, hälsomätare uppdateras
 
 ✅ Tänk på ett spel som Pac-Man. Kan du identifiera de fyra objekttyperna som nämns ovan i detta spel?
 
-### Att uttrycka beteende
+### Att uttrycka beteende genom kod
 
-Allt vi beskrev ovan är beteenden som spelobjekt kan ha. Så hur kodar vi dessa? Vi kan uttrycka detta beteende som metoder kopplade till antingen klasser eller objekt.
+Nu när du förstår de gemensamma beteenden som spelobjekt delar, låt oss utforska hur man implementerar dessa beteenden i JavaScript. Du kan uttrycka objektbeteende genom metoder som är kopplade till antingen klasser eller individuella objekt, och det finns flera tillvägagångssätt att välja mellan.
 
-**Klasser**
+**Den klassbaserade metoden**
 
-Idén är att använda `klasser` i kombination med `arv` för att lägga till ett visst beteende till en klass.
+Klasser och arv ger ett strukturerat sätt att organisera spelobjekt. Precis som det taxonomiska klassificeringssystemet utvecklat av Carl von Linné, börjar du med en basklass som innehåller gemensamma egenskaper, och sedan skapar du specialiserade klasser som ärver dessa grunder samtidigt som de lägger till specifika funktioner.
 
-✅ Arv är ett viktigt koncept att förstå. Läs mer i [MDN:s artikel om arv](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+✅ Arv är ett viktigt koncept att förstå. Läs mer i [MDNs artikel om arv](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Uttryckt via kod kan ett spelobjekt typiskt se ut så här:
+Så här kan du implementera spelobjekt med hjälp av klasser och arv:
 
 ```javascript
-
-//set up the class GameObject
+// Step 1: Create the base GameObject class
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -52,177 +61,299 @@ class GameObject {
     this.type = type;
   }
 }
+```
 
-//this class will extend the GameObject's inherent class properties
+**Låt oss bryta ner detta steg för steg:**
+- Vi skapar en grundläggande mall som varje spelobjekt kan använda
+- Konstruktoren sparar var objektet är (`x`, `y`) och vilken typ av sak det är
+- Detta blir grunden som alla dina spelobjekt kommer att bygga på
+
+```javascript
+// Step 2: Add movement capability through inheritance
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type); // Call parent constructor
   }
 
-//this movable object can be moved on the screen
+  // Add the ability to move to a new position
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
-class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
-  }
-}
-
-//this class, on the other hand, only inherits the GameObject properties
-class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
-  }
-}
-
-//a hero can move...
-const hero = new Hero();
-hero.moveTo(5,5);
-
-//but a tree cannot
-const tree = new Tree();
 ```
+
+**I ovanstående har vi:**
+- **Utökat** GameObject-klassen för att lägga till rörelsefunktionalitet
+- **Anropat** föräldrakonstruktorn med `super()` för att initiera ärvda egenskaper
+- **Lagt till** en `moveTo()`-metod som uppdaterar objektets position
+
+```javascript
+// Step 3: Create specific game object types
+class Hero extends Movable {
+  constructor(x, y) {
+    super(x, y, 'Hero'); // Set type automatically
+  }
+}
+
+class Tree extends GameObject {
+  constructor(x, y) {
+    super(x, y, 'Tree'); // Trees don't need movement
+  }
+}
+
+// Step 4: Use your game objects
+const hero = new Hero(0, 0);
+hero.moveTo(5, 5); // Hero can move!
+
+const tree = new Tree(10, 15);
+// tree.moveTo() would cause an error - trees can't move
+```
+
+**Att förstå dessa koncept:**
+- **Skapar** specialiserade objekttyper som ärver lämpliga beteenden
+- **Demonstrerar** hur arv möjliggör selektiv funktionalitet
+- **Visar** att hjältar kan röra sig medan träd förblir stillastående
+- **Illustrerar** hur klasshierarkin förhindrar olämpliga handlingar
 
 ✅ Ta några minuter och föreställ dig en Pac-Man-hjälte (Inky, Pinky eller Blinky, till exempel) och hur den skulle skrivas i JavaScript.
 
-**Komposition**
+**Kompositionsmetoden**
 
-Ett annat sätt att hantera objektarv är att använda *komposition*. Då uttrycker objekt sitt beteende så här:
+Komposition följer en modulär designfilosofi, liknande hur ingenjörer designar rymdfarkoster med utbytbara komponenter. Istället för att ärva från en föräldraklass, kombinerar du specifika beteenden för att skapa objekt med exakt den funktionalitet de behöver. Denna metod erbjuder flexibilitet utan stela hierarkiska begränsningar.
 
 ```javascript
-//create a constant gameObject
+// Step 1: Create base behavior objects
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
-}
-//then the constant movableObject is composed of the gameObject and movable constants
-const movableObject = {...gameObject, ...movable};
+};
+```
 
-//then create a function to create a new Hero who inherits the movableObject properties
+**Här är vad denna kod gör:**
+- **Definierar** ett grundläggande `gameObject` med position och typ-egenskaper
+- **Skapar** ett separat `movable` beteendeobjekt med rörelsefunktionalitet
+- **Separerar** ansvar genom att hålla positionsdata och rörelselogik oberoende
+
+```javascript
+// Step 2: Compose objects by combining behaviors
+const movableObject = { ...gameObject, ...movable };
+
+// Step 3: Create factory functions for different object types
 function createHero(x, y) {
   return {
     ...movableObject,
     x,
     y,
     type: 'Hero'
-  }
+  };
 }
-//...and a static object that inherits only the gameObject properties
+
 function createStatic(x, y, type) {
   return {
-    ...gameObject
+    ...gameObject,
     x,
     y,
     type
-  }
+  };
 }
-//create the hero and move it
-const hero = createHero(10,10);
-hero.moveTo(5,5);
-//and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**Vilket mönster ska jag använda?**
-
-Det är upp till dig vilket mönster du väljer. JavaScript stödjer båda dessa paradigmer.
-
---
-
-Ett annat mönster som är vanligt inom spelutveckling handlar om att hantera spelets användarupplevelse och prestanda.
-
-## Pub/sub-mönster
-
-✅ Pub/Sub står för 'publish-subscribe'
-
-Detta mönster handlar om idén att de olika delarna av din applikation inte ska känna till varandra. Varför är det så? Det gör det mycket enklare att förstå vad som händer i allmänhet om olika delar är separerade. Det gör det också enklare att plötsligt ändra beteende om det behövs. Hur uppnår vi detta? Vi gör det genom att etablera några koncept:
-
-- **meddelande**: Ett meddelande är vanligtvis en textsträng åtföljd av en valfri nyttolast (en bit data som förtydligar vad meddelandet handlar om). Ett typiskt meddelande i ett spel kan vara `KEY_PRESSED_ENTER`.
-- **utgivare**: Detta element *publicerar* ett meddelande och skickar det till alla prenumeranter.
-- **prenumerant**: Detta element *lyssnar* på specifika meddelanden och utför en uppgift som resultat av att ha mottagit detta meddelande, som att avfyra en laser.
-
-Implementationen är ganska liten i storlek men det är ett mycket kraftfullt mönster. Så här kan det implementeras:
+**I ovanstående har vi:**
+- **Kombinerat** grundläggande objekt-egenskaper med rörelsebeteende med hjälp av spridningssyntax
+- **Skapat** fabriksfunktioner som returnerar anpassade objekt
+- **Möjliggjort** flexibel objektgenerering utan stela klasshierarkier
+- **Tillåtit** objekt att ha exakt de beteenden de behöver
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+// Step 4: Create and use your composed objects
+const hero = createHero(10, 10);
+hero.moveTo(5, 5); // Works perfectly!
+
+const tree = createStatic(0, 0, 'Tree');
+// tree.moveTo() is undefined - no movement behavior was composed
+```
+
+**Viktiga punkter att komma ihåg:**
+- **Komponerar** objekt genom att blanda beteenden istället för att ärva dem
+- **Ger** mer flexibilitet än stela arvshierarkier
+- **Tillåter** objekt att ha exakt de funktioner de behöver
+- **Använder** modern JavaScript-spridningssyntax för ren objektkombination 
+```
+
+**Which Pattern Should You Choose?**
+
+> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+> 
+**Here's when to use each approach:**
+- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
+- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
+- **Consider** your team's preferences and project requirements
+- **Remember** that you can mix both approaches in the same application
+
+## Communication Patterns: The Pub/Sub System
+
+As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+
+Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+
+✅ **Pub/Sub** stands for 'publish-subscribe'
+
+### Understanding the Pub/Sub Architecture
+
+The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+
+**The key players in pub/sub:**
+- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
+- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
+- **Subscribers** – The objects that say "I care about that event" and react when it happens
+- **Event System** – The middleman that makes sure messages get to the right listeners
+
+### Building an Event System
+
+Let's create a simple but powerful event system that demonstrates these concepts:
+
+```javascript
+// Step 1: Create the EventEmitter class
 class EventEmitter {
   constructor() {
-    this.listeners = {};
+    this.listeners = {}; // Store all event listeners
   }
-//when a message is received, let the listener to handle its payload
+  
+  // Register a listener for a specific message type
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  
+  // Send a message to all registered listeners
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach(listener => {
+        listener(message, payload);
+      });
     }
   }
 }
-
 ```
 
-För att använda koden ovan kan vi skapa en mycket liten implementation:
+**Bryter ner vad som händer här:**
+- **Skapar** ett centralt händelsehanteringssystem med hjälp av en enkel klass
+- **Lagrar** lyssnare i ett objekt organiserat efter meddelandetyp
+- **Registrerar** nya lyssnare med hjälp av `on()`-metoden
+- **Sänder** meddelanden till alla intresserade lyssnare med hjälp av `emit()`
+- **Stöder** valfria datapaket för att skicka relevant information
+
+### Sätta ihop allt: Ett praktiskt exempel
+
+Okej, låt oss se detta i praktiken! Vi ska bygga ett enkelt rörelsesystem som visar hur rent och flexibelt pub/sub kan vara:
 
 ```javascript
-//set up a message structure
+// Step 1: Define your message types
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
+  HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
+  ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
-//invoke the eventEmitter you set up above
+
+// Step 2: Create your event system and game objects
 const eventEmitter = new EventEmitter();
-//set up a hero
-const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+const hero = createHero(0, 0);
+```
+
+**Här är vad denna kod gör:**
+- **Definierar** ett konstantobjekt för att förhindra stavfel i meddelandenamn
+- **Skapar** en händelseutgivare-instans för att hantera all kommunikation
+- **Initierar** ett hjälteobjekt vid startpositionen
+
+```javascript
+// Step 3: Set up event listeners (subscribers)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.moveTo(hero.x - 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
+  hero.moveTo(hero.x + 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
+});
+```
+
+**I ovanstående har vi:**
+- **Registrerat** händelselyssnare som svarar på rörelsemeddelanden
+- **Uppdaterat** hjälteobjektets position baserat på rörelseriktningen
+- **Lagt till** konsolloggar för att spåra hjälteobjektets positionsförändringar
+- **Separerat** rörelselogiken från inmatningshanteringen
+
+```javascript
+// Step 4: Connect keyboard input to events (publishers)
+window.addEventListener('keydown', (event) => {
+  switch(event.key) {
+    case 'ArrowLeft':
+      eventEmitter.emit(Messages.HERO_MOVE_LEFT);
+      break;
+    case 'ArrowRight':
+      eventEmitter.emit(Messages.HERO_MOVE_RIGHT);
+      break;
   }
 });
 ```
 
-Ovan kopplar vi en tangentbordshändelse, `ArrowLeft`, och skickar meddelandet `HERO_MOVE_LEFT`. Vi lyssnar på det meddelandet och flyttar `hero` som ett resultat. Styrkan med detta mönster är att händelselyssnaren och hjälten inte känner till varandra. Du kan mappa om `ArrowLeft` till `A`-tangenten. Dessutom skulle det vara möjligt att göra något helt annat på `ArrowLeft` genom att göra några ändringar i eventEmitter's `on`-funktion:
+**Att förstå dessa koncept:**
+- **Kopplar** tangentbordsinmatning till spelhändelser utan hård koppling
+- **Möjliggör** att inmatningssystemet kommunicerar med spelobjekt indirekt
+- **Tillåter** flera system att reagera på samma tangentbordshändelser
+- **Gör** det enkelt att ändra tangentbindningar eller lägga till nya inmatningsmetoder
 
-```javascript
-eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
-});
-```
+> 💡 **Proffstips**: Det fina med detta mönster är flexibiliteten! Du kan enkelt lägga till ljudeffekter, skärmryckningar eller partikeleffekter genom att helt enkelt lägga till fler händelselyssnare – ingen anledning att ändra den befintliga tangentbords- eller rörelsekoden.
+> 
+**Här är varför du kommer att älska denna metod:**
+- Att lägga till nya funktioner blir superenkelt – lyssna bara på de händelser du bryr dig om
+- Flera saker kan reagera på samma händelse utan att störa varandra
+- Testning blir mycket enklare eftersom varje del fungerar oberoende
+- När något går fel vet du exakt var du ska leta
 
-När saker blir mer komplicerade när ditt spel växer, förblir detta mönster lika enkelt och din kod förblir ren. Det rekommenderas verkligen att anta detta mönster.
+### Varför Pub/Sub skalar effektivt
+
+Pub/sub-mönstret bibehåller enkelheten när applikationer växer i komplexitet. Oavsett om det handlar om att hantera dussintals fiender, dynamiska UI-uppdateringar eller ljudsystem, hanterar mönstret ökad skala utan arkitektoniska förändringar. Nya funktioner integreras i det befintliga händelsesystemet utan att påverka etablerad funktionalitet.
+
+> ⚠️ **Vanligt misstag**: Skapa inte för många specifika meddelandetyper tidigt. Börja med breda kategorier och förfina dem när ditt spels behov blir tydligare.
+> 
+**Bästa praxis att följa:**
+- **Grupperar** relaterade meddelanden i logiska kategorier
+- **Använder** beskrivande namn som tydligt anger vad som hände
+- **Håller** meddelandepaket enkla och fokuserade
+- **Dokumenterar** dina meddelandetyper för samarbete i teamet
 
 ---
 
+## GitHub Copilot Agent-utmaning 🚀
+
+Använd Agent-läget för att slutföra följande utmaning:
+
+**Beskrivning:** Skapa ett enkelt system för spelobjekt med både arv och pub/sub-mönstret. Du ska implementera ett grundläggande spel där olika objekt kan kommunicera genom händelser utan att direkt känna till varandra.
+
+**Uppgift:** Skapa ett JavaScript-spelsystem med följande krav: 1) Skapa en bas GameObject-klass med x-, y-koordinater och en typ-egenskap. 2) Skapa en Hero-klass som utökar GameObject och kan röra sig. 3) Skapa en Enemy-klass som utökar GameObject och kan jaga hjälten. 4) Implementera en EventEmitter-klass för pub/sub-mönstret. 5) Ställ in händelselyssnare så att när hjälten rör sig, får närliggande fiender ett 'HERO_MOVED'-meddelande och uppdaterar sin position för att röra sig mot hjälten. Inkludera konsolloggar för att visa kommunikationen mellan objekten.
+
+Läs mer om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.
+
 ## 🚀 Utmaning
 
-Fundera på hur pub-sub-mönstret kan förbättra ett spel. Vilka delar bör skicka ut händelser, och hur ska spelet reagera på dem? Nu har du chansen att vara kreativ och tänka ut ett nytt spel och hur dess delar kan bete sig.
+Fundera på hur pub-sub-mönstret kan förbättra spelarkitekturen. Identifiera vilka komponenter som bör sända händelser och hur systemet ska svara. Designa ett spelkoncept och kartlägg kommunikationsmönstren mellan dess komponenter.
 
-## Quiz efter föreläsning
+## Quiz efter föreläsningen
 
-[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/30)
+[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Granskning & Självstudier
 
@@ -230,9 +361,9 @@ Lär dig mer om Pub/Sub genom att [läsa om det](https://docs.microsoft.com/azur
 
 ## Uppgift
 
-[Skissa upp ett spel](assignment.md)
+[Skapa en spelmockup](assignment.md)
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

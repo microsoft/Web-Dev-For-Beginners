@@ -1,61 +1,105 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "61c14b27044861e5e69db35dd52c4403",
-  "translation_date": "2025-08-29T08:19:50+00:00",
+  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
+  "translation_date": "2025-10-23T22:02:15+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "da"
 }
 -->
-# Terrarium Projekt Del 3: DOM-manipulation og en Closure
+# Terrarium Projekt Del 3: DOM-manipulation og JavaScript Closures
 
 ![DOM og en closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.da.png)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
+
+Velkommen til en af de mest engagerende aspekter af webudvikling - at gøre ting interaktive! Document Object Model (DOM) fungerer som en bro mellem din HTML og JavaScript, og i dag vil vi bruge det til at bringe dit terrarium til live. Da Tim Berners-Lee skabte den første webbrowser, forestillede han sig en web, hvor dokumenter kunne være dynamiske og interaktive - DOM gør den vision mulig.
+
+Vi vil også udforske JavaScript closures, som måske lyder skræmmende i starten. Tænk på closures som "hukommelseslommer", hvor dine funktioner kan huske vigtig information. Det er som om hver plante i dit terrarium har sin egen dataregistrering til at spore sin position. Ved slutningen af denne lektion vil du forstå, hvor naturlige og nyttige de er.
+
+Her er, hvad vi bygger: et terrarium, hvor brugere kan trække og slippe planter hvor som helst. Du vil lære DOM-manipulationsteknikker, der driver alt fra drag-and-drop filuploads til interaktive spil. Lad os få dit terrarium til at komme til live.
 
 ## Quiz før lektionen
 
 [Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/19)
 
-### Introduktion
+## Forståelse af DOM: Din adgang til interaktive websider
 
-Manipulation af DOM, eller "Document Object Model", er en central del af webudvikling. Ifølge [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction) er "Document Object Model (DOM) den datarepræsentation af objekterne, der udgør strukturen og indholdet af et dokument på nettet." Udfordringerne ved DOM-manipulation på nettet har ofte været årsagen til, at man bruger JavaScript-frameworks i stedet for ren JavaScript til at håndtere DOM, men vi klarer os selv!
+Document Object Model (DOM) er, hvordan JavaScript kommunikerer med dine HTML-elementer. Når din browser indlæser en HTML-side, skaber den en struktureret repræsentation af den side i hukommelsen - det er DOM. Tænk på det som et stamtræ, hvor hvert HTML-element er et familiemedlem, som JavaScript kan få adgang til, ændre eller omarrangere.
 
-Derudover vil denne lektion introducere ideen om en [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures), som du kan tænke på som en funktion, der er indkapslet af en anden funktion, så den indre funktion har adgang til den ydre funktions scope.
-
-> JavaScript closures er et omfattende og komplekst emne. Denne lektion berører den mest grundlæggende idé, nemlig at du i terrariets kode vil finde en closure: en indre funktion og en ydre funktion konstrueret på en måde, der giver den indre funktion adgang til den ydre funktions scope. For meget mere information om, hvordan dette fungerer, kan du besøge den [udførlige dokumentation](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
-
-Vi vil bruge en closure til at manipulere DOM.
-
-Tænk på DOM som et træ, der repræsenterer alle de måder, et webside-dokument kan manipuleres på. Forskellige API'er (Application Program Interfaces) er blevet skrevet, så programmører, ved hjælp af deres foretrukne programmeringssprog, kan få adgang til DOM og redigere, ændre, omarrangere og på anden måde administrere det.
+DOM-manipulation forvandler statiske sider til interaktive websites. Hver gang du ser en knap skifte farve ved hover, indhold opdateres uden sideopfriskning, eller elementer du kan trække rundt, er det DOM-manipulation i aktion.
 
 ![DOM-træ repræsentation](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.da.png)
 
-> En repræsentation af DOM og HTML-markup, der refererer til det. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> En repræsentation af DOM og HTML-markeringen, der refererer til det. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-I denne lektion vil vi færdiggøre vores interaktive terrarieprojekt ved at skabe den JavaScript, der gør det muligt for en bruger at manipulere planterne på siden.
+**Her er, hvad der gør DOM kraftfuld:**
+- **Giver** en struktureret måde at få adgang til ethvert element på din side
+- **Muliggør** dynamiske indholdsopdateringer uden sideopfriskninger
+- **Tillader** realtidsrespons på brugerinteraktioner som klik og træk
+- **Skaber** fundamentet for moderne interaktive webapplikationer
 
-### Forudsætning
+## JavaScript Closures: Skab organiseret, kraftfuld kode
 
-Du bør have HTML og CSS til dit terrarium klar. Ved slutningen af denne lektion vil du kunne flytte planterne ind og ud af terrariet ved at trække dem.
+En [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) er som at give en funktion sin egen private arbejdsplads med vedvarende hukommelse. Tænk på, hvordan Darwins finker på Galápagos-øerne hver udviklede specialiserede næb baseret på deres specifikke miljø - closures fungerer på samme måde, og skaber specialiserede funktioner, der "husker" deres specifikke kontekst, selv efter deres overordnede funktion er afsluttet.
 
-### Opgave
+I vores terrarium hjælper closures hver plante med at huske sin egen position uafhængigt. Dette mønster optræder overalt i professionel JavaScript-udvikling, hvilket gør det til et værdifuldt koncept at forstå.
 
-I din terrarium-mappe skal du oprette en ny fil kaldet `script.js`. Importér den fil i `<head>`-sektionen:
+> 💡 **Forståelse af Closures**: Closures er et vigtigt emne i JavaScript, og mange udviklere bruger dem i årevis, før de fuldt ud forstår alle de teoretiske aspekter. I dag fokuserer vi på praktisk anvendelse - du vil se closures naturligt opstå, mens vi bygger vores interaktive funktioner. Forståelsen vil udvikle sig, når du ser, hvordan de løser reelle problemer.
+
+![DOM-træ repræsentation](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.da.png)
+
+> En repræsentation af DOM og HTML-markeringen, der refererer til det. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+
+I denne lektion vil vi færdiggøre vores interaktive terrariumprojekt ved at skabe JavaScript, der giver en bruger mulighed for at manipulere planterne på siden.
+
+## Før vi begynder: Forberedelse til succes
+
+Du skal bruge dine HTML- og CSS-filer fra de tidligere terrarium-lektioner - vi er ved at gøre det statiske design interaktivt. Hvis du er med for første gang, vil det give vigtig kontekst at gennemføre de lektioner først.
+
+Her er, hvad vi bygger:
+- **Glidende drag-and-drop** for alle terrariumplanter
+- **Koordinatsporing**, så planter husker deres positioner
+- **Et komplet interaktivt interface** ved hjælp af vanilla JavaScript
+- **Ren, organiseret kode** ved hjælp af closure-mønstre
+
+## Opsætning af din JavaScript-fil
+
+Lad os oprette JavaScript-filen, der gør dit terrarium interaktivt.
+
+**Trin 1: Opret din script-fil**
+
+I din terrarium-mappe skal du oprette en ny fil kaldet `script.js`.
+
+**Trin 2: Link JavaScript til din HTML**
+
+Tilføj denne script-tag til `<head>` sektionen af din `index.html` fil:
 
 ```html
-	<script src="./script.js" defer></script>
+<script src="./script.js" defer></script>
 ```
 
-> Bemærk: Brug `defer`, når du importerer en ekstern JavaScript-fil i HTML-filen, så JavaScript kun eksekveres, efter HTML-filen er fuldt indlæst. Du kunne også bruge attributten `async`, som tillader scriptet at eksekvere, mens HTML-filen parses, men i vores tilfælde er det vigtigt, at HTML-elementerne er fuldt tilgængelige til at trække, før vi tillader drag-scriptet at blive eksekveret.
+**Hvorfor `defer` attributten er vigtig:**
+- **Sikrer**, at din JavaScript venter, indtil al HTML er indlæst
+- **Forhindrer** fejl, hvor JavaScript leder efter elementer, der ikke er klar endnu
+- **Garanterer**, at alle dine planteelementer er tilgængelige for interaktion
+- **Giver** bedre ydeevne end at placere scripts nederst på siden
+
+> ⚠️ **Vigtig Bemærkning**: `defer` attributten forhindrer almindelige timingproblemer. Uden den kan JavaScript forsøge at få adgang til HTML-elementer, før de er indlæst, hvilket forårsager fejl.
+
 ---
 
-## DOM-elementerne
+## Forbind JavaScript til dine HTML-elementer
 
-Det første, du skal gøre, er at oprette referencer til de elementer, du vil manipulere i DOM. I vores tilfælde er det de 14 planter, der i øjeblikket venter i sidebjælkerne.
+Før vi kan gøre elementer dragbare, skal JavaScript finde dem i DOM. Tænk på dette som et bibliotekskatalogsystem - når du har katalognummeret, kan du finde præcis den bog, du har brug for, og få adgang til alt dens indhold.
 
-### Opgave
+Vi vil bruge metoden `document.getElementById()` til at lave disse forbindelser. Det er som at have et præcist arkiveringssystem - du giver et ID, og det lokaliserer præcis det element, du har brug for i din HTML.
 
-```html
+### Aktivering af drag-funktionalitet for alle planter
+
+Tilføj denne kode til din `script.js` fil:
+
+```javascript
+// Enable drag functionality for all 14 plants
 dragElement(document.getElementById('plant1'));
 dragElement(document.getElementById('plant2'));
 dragElement(document.getElementById('plant3'));
@@ -72,153 +116,369 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Hvad sker der her? Du refererer til dokumentet og søger gennem dets DOM for at finde et element med et bestemt Id. Husk fra den første lektion om HTML, at du gav individuelle Id'er til hvert plantebillede (`id="plant1"`)? Nu vil du gøre brug af den indsats. Efter at have identificeret hvert element, sender du det til en funktion kaldet `dragElement`, som du vil bygge om lidt. Dermed bliver elementet i HTML nu drag-aktiveret, eller vil snart blive det.
+**Her er, hvad denne kode opnår:**
+- **Finder** hvert planteelement i DOM ved hjælp af dets unikke ID
+- **Henter** en JavaScript-reference til hvert HTML-element
+- **Sender** hvert element til en `dragElement` funktion (som vi vil oprette næste)
+- **Forbereder** hver plante til drag-and-drop interaktion
+- **Forbinder** din HTML-struktur med JavaScript-funktionalitet
 
-✅ Hvorfor refererer vi til elementer via Id? Hvorfor ikke via deres CSS-klasse? Du kan henvise til den tidligere lektion om CSS for at besvare dette spørgsmål.
+> 🎯 **Hvorfor bruge IDs i stedet for klasser?** IDs giver unikke identifikatorer for specifikke elementer, mens CSS-klasser er designet til at style grupper af elementer. Når JavaScript skal manipulere individuelle elementer, giver IDs den præcision og ydeevne, vi har brug for.
+
+> 💡 **Pro Tip**: Bemærk, hvordan vi kalder `dragElement()` for hver plante individuelt. Denne tilgang sikrer, at hver plante får sin egen uafhængige drag-adfærd, hvilket er essentielt for en glat brugerinteraktion.
 
 ---
 
-## Closure
+## Bygning af Drag Element Closure
 
-Nu er du klar til at oprette `dragElement`-closure, som er en ydre funktion, der indkapsler en indre funktion eller funktioner (i vores tilfælde vil vi have tre).
+Nu vil vi oprette hjertet af vores drag-funktionalitet: en closure, der styrer drag-adfærden for hver plante. Denne closure vil indeholde flere indre funktioner, der arbejder sammen for at spore musebevægelser og opdatere elementpositioner.
 
-Closures er nyttige, når en eller flere funktioner skal have adgang til en ydre funktions scope. Her er et eksempel:
+Closures er perfekte til denne opgave, fordi de giver os mulighed for at skabe "private" variabler, der vedvarer mellem funktionskald, hvilket giver hver plante sit eget uafhængige koordinatsporingssystem.
+
+### Forståelse af Closures med et simpelt eksempel
+
+Lad mig demonstrere closures med et simpelt eksempel, der illustrerer konceptet:
 
 ```javascript
-function displayCandy(){
-	let candy = ['jellybeans'];
-	function addCandy(candyType) {
-		candy.push(candyType)
-	}
-	addCandy('gumdrops');
+function createCounter() {
+    let count = 0; // This is like a private variable
+    
+    function increment() {
+        count++; // The inner function remembers the outer variable
+        return count;
+    }
+    
+    return increment; // We're giving back the inner function
 }
-displayCandy();
-console.log(candy)
+
+const myCounter = createCounter();
+console.log(myCounter()); // 1
+console.log(myCounter()); // 2
 ```
 
-I dette eksempel omgiver funktionen `displayCandy` en funktion, der tilføjer en ny type slik til en array, der allerede eksisterer i funktionen. Hvis du kører denne kode, vil arrayet `candy` være undefined, da det er en lokal variabel (lokal for closure).
+**Her er, hvad der sker i dette closure-mønster:**
+- **Opretter** en privat `count` variabel, der kun eksisterer inden for denne closure
+- **Den indre funktion** kan få adgang til og ændre den ydre variabel (closure-mekanismen)
+- **Når vi returnerer** den indre funktion, bevarer den sin forbindelse til de private data
+- **Selv efter** `createCounter()` afslutter sin eksekvering, vedvarer `count` og husker sin værdi
 
-✅ Hvordan kan du gøre arrayet `candy` tilgængeligt? Prøv at flytte det uden for closure. På denne måde bliver arrayet globalt i stedet for kun at være tilgængeligt i closure's lokale scope.
+### Hvorfor Closures er perfekte til Drag-funktionalitet
 
-### Opgave
+For vores terrarium skal hver plante huske sine aktuelle positionskoordinater. Closures giver den perfekte løsning:
 
-Under elementdeklarationerne i `script.js` skal du oprette en funktion:
+**Nøglefordele for vores projekt:**
+- **Bevarer** private positionsvariabler for hver plante uafhængigt
+- **Vedvarer** koordinatdata mellem drag-events
+- **Forhindrer** variabelkonflikter mellem forskellige dragbare elementer
+- **Skaber** en ren, organiseret kode-struktur
+
+> 🎯 **Læringsmål**: Du behøver ikke mestre alle aspekter af closures lige nu. Fokusér på at se, hvordan de hjælper os med at organisere kode og vedligeholde tilstand for vores drag-funktionalitet.
+
+### Oprettelse af dragElement-funktionen
+
+Nu skal vi bygge hovedfunktionen, der håndterer al drag-logik. Tilføj denne funktion under dine planteelementdeklarationer:
 
 ```javascript
 function dragElement(terrariumElement) {
-	//set 4 positions for positioning on the screen
-	let pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	terrariumElement.onpointerdown = pointerDrag;
+    // Initialize position tracking variables
+    let pos1 = 0,  // Previous mouse X position
+        pos2 = 0,  // Previous mouse Y position  
+        pos3 = 0,  // Current mouse X position
+        pos4 = 0;  // Current mouse Y position
+    
+    // Set up the initial drag event listener
+    terrariumElement.onpointerdown = pointerDrag;
 }
 ```
 
-`dragElement` får sit `terrariumElement`-objekt fra deklarationerne øverst i scriptet. Derefter sætter du nogle lokale positioner til `0` for det objekt, der sendes ind i funktionen. Disse er de lokale variabler, der vil blive manipuleret for hvert element, når du tilføjer drag-and-drop-funktionalitet inden for closure til hvert element. Terrariet vil blive fyldt med disse trukne elementer, så applikationen skal holde styr på, hvor de placeres.
+**Forståelse af positionssporingssystemet:**
+- **`pos1` og `pos2`**: Gemmer forskellen mellem gamle og nye musepositioner
+- **`pos3` og `pos4`**: Sporer de aktuelle musekoordinater
+- **`terrariumElement`**: Det specifikke planteelement, vi gør dragbart
+- **`onpointerdown`**: Eventet, der udløses, når brugeren begynder at trække
 
-Derudover tildeles det `terrariumElement`, der sendes til denne funktion, en `pointerdown`-event, som er en del af [web-API'er](https://developer.mozilla.org/docs/Web/API) designet til at hjælpe med DOM-håndtering. `onpointerdown` udløses, når en knap trykkes, eller i vores tilfælde, når et dragbart element berøres. Denne event handler fungerer på både [web- og mobilbrowsere](https://caniuse.com/?search=onpointerdown), med få undtagelser.
+**Her er, hvordan closure-mønsteret fungerer:**
+- **Opretter** private positionsvariabler for hvert planteelement
+- **Bevarer** disse variabler gennem hele drag-livscyklussen
+- **Sikrer**, at hver plante sporer sine egne koordinater uafhængigt
+- **Giver** en ren grænseflade gennem `dragElement` funktionen
 
-✅ [Event handleren `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) har meget mere støtte på tværs af browsere; hvorfor ville du ikke bruge den her? Tænk over den præcise type skærminteraktion, du prøver at skabe her.
+### Hvorfor bruge Pointer Events?
+
+Du undrer dig måske over, hvorfor vi bruger `onpointerdown` i stedet for det mere velkendte `onclick`. Her er forklaringen:
+
+| Eventtype | Bedst til | Udfordringen |
+|-----------|-----------|--------------|
+| `onclick` | Enkle knapklik | Kan ikke håndtere drag (kun klik og slip) |
+| `onpointerdown` | Både mus og berøring | Nyere, men godt understøttet i dag |
+| `onmousedown` | Kun desktop-mus | Udelukker mobilbrugere |
+
+**Hvorfor pointer-events er perfekte til det, vi bygger:**
+- **Fungerer godt**, uanset om nogen bruger en mus, finger eller endda en stylus
+- **Føles ens** på en bærbar computer, tablet eller telefon
+- **Håndterer** den faktiske drag-bevægelse (ikke kun klik-og-færdig)
+- **Skaber** en glat oplevelse, som brugere forventer af moderne webapps
+
+> 💡 **Fremtidssikring**: Pointer-events er den moderne måde at håndtere brugerinteraktioner på. I stedet for at skrive separat kode for mus og berøring, får du begge dele gratis. Ret smart, ikke?
 
 ---
 
-## Pointerdrag-funktionen
+## Funktionen pointerDrag: Fange starten på en drag
 
-`terrariumElement` er klar til at blive trukket rundt; når `onpointerdown`-eventen udløses, kaldes funktionen `pointerDrag`. Tilføj den funktion lige under denne linje: `terrariumElement.onpointerdown = pointerDrag;`:
+Når en bruger trykker ned på en plante (uanset om det er med et museklik eller en fingerberøring), aktiveres `pointerDrag`-funktionen. Denne funktion fanger de indledende koordinater og opsætter drag-systemet.
 
-### Opgave 
+Tilføj denne funktion inde i din `dragElement` closure, lige efter linjen `terrariumElement.onpointerdown = pointerDrag;`:
 
 ```javascript
 function pointerDrag(e) {
-	e.preventDefault();
-	console.log(e);
-	pos3 = e.clientX;
-	pos4 = e.clientY;
+    // Prevent default browser behavior (like text selection)
+    e.preventDefault();
+    
+    // Capture the initial mouse/touch position
+    pos3 = e.clientX;  // X coordinate where drag started
+    pos4 = e.clientY;  // Y coordinate where drag started
+    
+    // Set up event listeners for the dragging process
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
 }
 ```
 
-Flere ting sker. Først forhindrer du de standardevents, der normalt sker ved pointerdown, i at finde sted ved at bruge `e.preventDefault();`. På denne måde har du mere kontrol over grænsefladens opførsel.
+**Trin for trin, her er hvad der sker:**
+- **Forhindrer** standardbrowseradfærd, der kan forstyrre drag
+- **Registrerer** de præcise koordinater, hvor brugeren startede drag-bevægelsen
+- **Etablerer** event listeners for den igangværende drag-bevægelse
+- **Forbereder** systemet til at spore mus/fingerbevægelser over hele dokumentet
 
-> Vend tilbage til denne linje, når du har bygget scriptfilen helt, og prøv det uden `e.preventDefault()` - hvad sker der?
+### Forståelse af Event Prevention
 
-For det andet skal du åbne `index.html` i et browservindue og inspicere grænsefladen. Når du klikker på en plante, kan du se, hvordan 'e'-eventen fanges. Undersøg eventen for at se, hvor meget information der indsamles ved én pointerdown-event!  
+Linjen `e.preventDefault()` er afgørende for en glat drag-oplevelse:
 
-Dernæst bemærk, hvordan de lokale variabler `pos3` og `pos4` sættes til e.clientX. Du kan finde `e`-værdierne i inspektionspanelet. Disse værdier fanger plantens x- og y-koordinater i det øjeblik, du klikker på eller berører den. Du vil have fin kontrol over planternes opførsel, når du klikker og trækker dem, så du holder styr på deres koordinater.
+**Uden forebyggelse kan browsere:**
+- **Markere** tekst, når der trækkes hen over siden
+- **Udløse** kontekstmenuer ved højreklik-drag
+- **Forstyrre** vores tilpassede drag-adfærd
+- **Skabe** visuelle artefakter under drag-operationen
 
-✅ Bliver det mere klart, hvorfor hele denne app er bygget med én stor closure? Hvis den ikke var det, hvordan ville du opretholde scope for hver af de 14 dragbare planter?
+> 🔍 **Eksperiment**: Efter at have afsluttet denne lektion, prøv at fjerne `e.preventDefault()` og se, hvordan det påvirker drag-oplevelsen. Du vil hurtigt forstå, hvorfor denne linje er essentiel!
 
-Fuldfør den indledende funktion ved at tilføje to mere pointer-event-manipulationer under `pos4 = e.clientY`:
+### Koordinatsporingssystem
 
-```html
+Egenskaberne `e.clientX` og `e.clientY` giver os præcise mus/berøringskoordinater:
+
+| Egenskab | Hvad måler den | Anvendelse |
+|----------|----------------|------------|
+| `clientX` | Vandret position i forhold til viewport | Sporing af venstre-højre bevægelse |
+| `clientY` | Lodret position i forhold til viewport | Sporing af op-ned bevægelse |
+
+**Forståelse af disse koordinater:**
+- **Giver** pixel-præcis positionsinformation
+- **Opdateres** i realtid, mens brugeren bevæger sin pointer
+- **Forbliver** konsistent på tværs af forskellige skærmstørrelser og zoomniveauer
+- **Muliggør** glatte, responsive drag-interaktioner
+
+### Opsætning af dokumentniveau event listeners
+
+Bemærk, hvordan vi tilføjer move- og stop-events til hele `document`, ikke kun planteelementet:
+
+```javascript
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Nu angiver du, at du vil have planten til at blive trukket med pointeren, mens du bevæger den, og at trækbevægelserne skal stoppe, når du fravælger planten. `onpointermove` og `onpointerup` er alle dele af den samme API som `onpointerdown`. Grænsefladen vil nu kaste fejl, da du endnu ikke har defineret funktionerne `elementDrag` og `stopElementDrag`, så byg dem ud næste gang.
 
-## Funktionerne elementDrag og stopElementDrag
+**Hvorfor tilføje til dokumentet:**
+- **Fortsætter** med at spore, selv når musen forlader planteelementet
+- **Forhindrer** afbrydelse af drag, hvis brugeren bevæger sig hurtigt
+- **Giver** glat drag over hele skærmen
+- **Håndterer** kanttilfælde, hvor cursoren bevæger sig uden for browservinduet
 
-Du vil fuldføre din closure ved at tilføje to flere interne funktioner, der vil håndtere, hvad der sker, når du trækker en plante og stopper med at trække den. Den opførsel, du ønsker, er, at du kan trække enhver plante til enhver tid og placere den hvor som helst på skærmen. Denne grænseflade er ret uopinioneret (der er f.eks. ingen dropzone) for at give dig mulighed for at designe dit terrarium præcis, som du vil, ved at tilføje, fjerne og omplacere planter.
+> ⚡ **Ydelsesnotat**: Vi rydder op i disse dokumentniveau lyttere, når drag stopper for at undgå hukommelseslækager og ydeevneproblemer.
 
-### Opgave
+## Afslutning af drag-systemet: Bevægelse og oprydning
+
+Nu vil vi tilføje de to resterende funktioner, der håndterer den faktiske drag-bevægelse og oprydningen, når drag stopper. Disse funktioner arbejder sammen for at skabe glat, responsiv plantebevægelse over dit terrarium.
+
+### Funktionen elementDrag: Sporing af bevægelse
 
 Tilføj funktionen `elementDrag` lige efter den afsluttende krøllede parentes for `pointerDrag`:
 
 ```javascript
 function elementDrag(e) {
-	pos1 = pos3 - e.clientX;
-	pos2 = pos4 - e.clientY;
-	pos3 = e.clientX;
-	pos4 = e.clientY;
-	console.log(pos1, pos2, pos3, pos4);
-	terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
-	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
+    // Calculate the distance moved since the last event
+    pos1 = pos3 - e.clientX;  // Horizontal distance moved
+    pos2 = pos4 - e.clientY;  // Vertical distance moved
+    
+    // Update the current position tracking
+    pos3 = e.clientX;  // New current X position
+    pos4 = e.clientY;  // New current Y position
+    
+    // Apply the movement to the element's position
+    terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
+    terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
 }
 ```
-I denne funktion redigerer du en masse af de oprindelige positioner 1-4, som du satte som lokale variabler i den ydre funktion. Hvad sker der her?
 
-Mens du trækker, tildeler du `pos1` ved at gøre det lig med `pos3` (som du tidligere satte som `e.clientX`) minus den aktuelle `e.clientX`-værdi. Du udfører en lignende operation på `pos2`. Derefter nulstiller du `pos3` og `pos4` til de nye X- og Y-koordinater for elementet. Du kan se disse ændringer i konsollen, mens du trækker. Derefter manipulerer du plantens CSS-stil for at sætte dens nye position baseret på de nye positioner af `pos1` og `pos2`, og beregner plantens top- og venstre X- og Y-koordinater baseret på sammenligning af dens offset med disse nye positioner.
+**Forståelse af koordinatmatematikken:**
+- **`pos1` og `pos2`**: Beregner, hvor langt musen er flyttet siden sidste opdatering
+- **`pos3` og `pos4`**: Gem den aktuelle museposition til næste beregning
+- **`offsetTop` og `offsetLeft`**: Hent elementets aktuelle position på siden
+- **Subtraktionslogik**: Flytter elementet med samme afstand, som musen bevægede sig
 
-> `offsetTop` og `offsetLeft` er CSS-egenskaber, der sætter et elements position baseret på dets forælder; dets forælder kan være ethvert element, der ikke er positioneret som `static`. 
+**Her er en oversigt over bevægelsesberegningen:**
+1. **Måler** forskellen mellem den gamle og nye museposition
+2. **Beregner**, hvor meget elementet skal flyttes baseret på musebevægelsen
+3. **Opdaterer** elementets CSS-positionsegenskaber i realtid
+4. **Gemmer** den nye position som udgangspunkt for næste bevægelsesberegning
 
-Alle disse genberegninger af positioner giver dig mulighed for at finjustere terrariets og planternes opførsel.
+### Visuel repræsentation af matematikken
 
-### Opgave 
+```mermaid
+sequenceDiagram
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    Mouse->>JavaScript: Move from (100,50) to (110,60)
+    JavaScript->>JavaScript: Calculate: moved 10px right, 10px down
+    JavaScript->>Plant: Update position by +10px right, +10px down
+    Plant->>Plant: Render at new position
+```
 
-Den sidste opgave for at fuldføre grænsefladen er at tilføje funktionen `stopElementDrag` efter den afsluttende krøllede parentes for `elementDrag`:
+### stopElementDrag-funktionen: Ryd op
+
+Tilføj oprydningsfunktionen efter den afsluttende krøllede parentes i `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
-	document.onpointerup = null;
-	document.onpointermove = null;
+    // Remove the document-level event listeners
+    document.onpointerup = null;
+    document.onpointermove = null;
 }
 ```
 
-Denne lille funktion nulstiller `onpointerup`- og `onpointermove`-events, så du enten kan genstarte plantens fremgang ved at begynde at trække den igen, eller begynde at trække en ny plante.
+**Hvorfor oprydning er vigtig:**
+- **Forhindrer** hukommelseslækager fra hængende event listeners
+- **Stopper** trækadfærden, når brugeren slipper planten
+- **Muliggør**, at andre elementer kan trækkes uafhængigt
+- **Nulstiller** systemet til næste trækoperation
 
-✅ Hvad sker der, hvis du ikke sætter disse events til null?
+**Hvad der sker uden oprydning:**
+- Event listeners fortsætter med at køre, selv efter trækning stopper
+- Ydeevnen forringes, da ubrugte listeners hober sig op
+- Uventet adfærd ved interaktion med andre elementer
+- Browserressourcer spildes på unødvendig eventhåndtering
 
-Nu har du fuldført dit projekt!
+### Forståelse af CSS-positionsegenskaber
 
-🥇Tillykke! Du har færdiggjort dit smukke terrarium. ![færdigt terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.da.png)
+Vores træksystem manipulerer to nøgle-CSS-egenskaber:
+
+| Egenskab | Hvad den styrer | Hvordan vi bruger den |
+|----------|-----------------|-----------------------|
+| `top` | Afstand fra den øverste kant | Lodret placering under træk |
+| `left` | Afstand fra den venstre kant | Vandret placering under træk |
+
+**Vigtige indsigter om offset-egenskaber:**
+- **`offsetTop`**: Aktuel afstand fra toppen af det positionerede overordnede element
+- **`offsetLeft`**: Aktuel afstand fra venstre side af det positionerede overordnede element
+- **Positioneringskontekst**: Disse værdier er relative til den nærmeste positionerede forfader
+- **Realtidsopdateringer**: Ændres straks, når vi modificerer CSS-egenskaberne
+
+> 🎯 **Designfilosofi**: Dette træksystem er bevidst fleksibelt – der er ingen "drop-zoner" eller begrænsninger. Brugere kan placere planter hvor som helst og få fuld kreativ kontrol over deres terrariumdesign.
+
+## Samlet oversigt: Dit komplette træksystem
+
+Tillykke! Du har lige bygget et sofistikeret træk-og-slip-system ved hjælp af ren JavaScript. Din komplette `dragElement`-funktion indeholder nu en kraftfuld closure, der styrer:
+
+**Hvad din closure opnår:**
+- **Vedligeholder** private positionsvariabler for hver plante uafhængigt
+- **Håndterer** hele træklivscyklussen fra start til slut
+- **Sikrer** jævn, responsiv bevægelse over hele skærmen
+- **Rydder** ressourcer korrekt for at forhindre hukommelseslækager
+- **Skaber** en intuitiv, kreativ grænseflade til terrariumdesign
+
+### Test dit interaktive terrarium
+
+Test nu dit interaktive terrarium! Åbn din `index.html`-fil i en webbrowser og prøv funktionaliteten:
+
+1. **Klik og hold** på en plante for at starte trækning
+2. **Flyt musen eller fingeren**, og se planten følge med jævnt
+3. **Slip**, for at placere planten i dens nye position
+4. **Eksperimenter** med forskellige arrangementer for at udforske grænsefladen
+
+🥇 **Resultat**: Du har skabt en fuldt interaktiv webapplikation ved hjælp af kernekoncepter, som professionelle udviklere bruger dagligt. Denne træk-og-slip-funktionalitet anvender de samme principper som filuploads, kanban-tavler og mange andre interaktive grænseflader.
+
+![færdigt terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.da.png)
 
 ---
 
-## 🚀Udfordring
+## GitHub Copilot Agent Challenge 🚀
 
-Tilføj en ny event handler til din closure for at gøre noget mere med planterne; for eksempel dobbeltklik på en plante for at bringe den foran. Vær kreativ!
+Brug Agent-tilstand til at fuldføre følgende udfordring:
 
-## Quiz efter lektionen
+**Beskrivelse:** Forbedr terrariumprojektet ved at tilføje en nulstillingsfunktion, der returnerer alle planter til deres oprindelige positioner med glatte animationer.
 
-[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/20)
+**Prompt:** Opret en nulstillingsknap, der, når den klikkes, animerer alle planter tilbage til deres oprindelige sidebar-positioner ved hjælp af CSS-overgange. Funktionen skal gemme de oprindelige positioner, når siden indlæses, og glat overføre planterne tilbage til disse positioner over 1 sekund, når nulstillingsknappen trykkes.
 
-## Gennemgang & Selvstudie
+Læs mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
 
-Selvom det virker trivielt at trække elementer rundt på skærmen, er der mange måder at gøre dette på og mange faldgruber, afhængigt af den effekt, du søger. Faktisk er der en hel [drag and drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API), som du kan prøve. Vi brugte den ikke i dette modul, fordi den effekt, vi ønskede, var lidt anderledes, men prøv denne API på dit eget projekt og se, hvad du kan opnå.
+## 🚀 Ekstra udfordring: Udvid dine færdigheder
 
-Find mere information om pointer-events på [W3C-dokumentation](https://www.w3.org/TR/pointerevents1/) og på [MDN web docs](https://developer.mozilla.org/docs/Web/API/Pointer_events).
+Klar til at tage dit terrarium til næste niveau? Prøv at implementere disse forbedringer:
 
-Tjek altid browserkapabiliteter ved hjælp af [CanIUse.com](https://caniuse.com/).
+**Kreative udvidelser:**
+- **Dobbeltklik** på en plante for at bringe den foran (z-index-manipulation)
+- **Tilføj visuel feedback** som en subtil glød ved hover over planter
+- **Implementer grænser** for at forhindre planter i at blive trukket uden for terrariet
+- **Opret en gemmefunktion**, der husker plantepositioner ved hjælp af localStorage
+- **Tilføj lydeffekter** til at samle op og placere planter
+
+> 💡 **Læringsmulighed**: Hver af disse udfordringer vil lære dig nye aspekter af DOM-manipulation, eventhåndtering og brugeroplevelsesdesign.
+
+## Quiz efter forelæsning
+
+[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/20)
+
+## Gennemgang & Selvstudie: Uddyb din forståelse
+
+Du har mestret grundlæggende DOM-manipulation og closures, men der er altid mere at udforske! Her er nogle veje til at udvide din viden og færdigheder.
+
+### Alternative træk-og-slip-metoder
+
+Vi brugte pointer events for maksimal fleksibilitet, men webudvikling tilbyder flere metoder:
+
+| Metode | Bedst til | Læringsværdi |
+|--------|-----------|--------------|
+| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Filuploads, formelle trækzoner | Forståelse af native browserfunktioner |
+| [Touch Events](https://developer.mozilla.org/docs/Web/API/Touch_events) | Mobile-specifikke interaktioner | Mobile-first udviklingsmønstre |
+| CSS `transform`-egenskaber | Glatte animationer | Teknikker til optimering af ydeevne |
+
+### Avancerede DOM-manipulationsemner
+
+**Næste skridt i din læringsrejse:**
+- **Event delegation**: Effektiv håndtering af events for flere elementer
+- **Intersection Observer**: Registrering af, hvornår elementer kommer ind/ud af visningsområdet
+- **Mutation Observer**: Overvågning af ændringer i DOM-strukturen
+- **Web Components**: Oprettelse af genanvendelige, indkapslede UI-elementer
+- **Virtuelle DOM-koncepter**: Forståelse af, hvordan frameworks optimerer DOM-opdateringer
+
+### Væsentlige ressourcer til fortsat læring
+
+**Teknisk dokumentation:**
+- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Omfattende pointer event-reference
+- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Officiel standarddokumentation
+- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Avancerede closure-mønstre
+
+**Browserkompatibilitet:**
+- [CanIUse.com](https://caniuse.com/) - Tjek funktionssupport på tværs af browsere
+- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Detaljeret kompatibilitetsinformation
+
+**Praktiske muligheder:**
+- **Byg** et puslespil ved hjælp af lignende træk-mekanik
+- **Opret** en kanban-tavle med træk-og-slip opgavestyring
+- **Design** et billedgalleri med flytbare fotoarrangementer
+- **Eksperimenter** med berøringsbevægelser til mobile grænseflader
+
+> 🎯 **Læringsstrategi**: Den bedste måde at styrke disse koncepter på er gennem praksis. Prøv at bygge variationer af trækbare grænseflader – hvert projekt vil lære dig noget nyt om brugerinteraktion og DOM-manipulation.
 
 ## Opgave
 
@@ -227,4 +487,4 @@ Tjek altid browserkapabiliteter ved hjælp af [CanIUse.com](https://caniuse.com/
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

@@ -1,31 +1,76 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9e2f84e351a6fcb44bfc4066d98525f0",
-  "translation_date": "2025-10-03T10:02:54+00:00",
+  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
+  "translation_date": "2025-10-23T22:20:26+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
   "language_code": "no"
 }
 -->
+# Oppgave: Utforske moderne verktøy for webutvikling
+
 ## Instruksjoner
 
-Det finnes mange verktøy som en webutvikler kan ha behov for, som er listet opp i [MDN-dokumentasjonen for verktøy på klientsiden](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview). Velg **tre verktøy** som **ikke er dekket i denne leksjonen** (unntatt [list spesifikke verktøy eller referer til leksjonsinnhold]), forklar **hvorfor** en webutvikler ville bruke hvert verktøy, og finn et verktøy som passer til hver kategori. For hvert verktøy, del en lenke til den offisielle dokumentasjonen (ikke eksempelet brukt på MDN).
+Økosystemet for webutvikling inkluderer hundrevis av spesialiserte verktøy som hjelper utviklere med å bygge, teste og vedlikeholde applikasjoner effektivt. Din oppgave er å undersøke og forstå verktøy som utfyller de som er dekket i denne leksjonen.
 
-**Format:**  
-- Navn på verktøy  
-- Hvorfor en webutvikler ville bruke det (2-3 setninger)  
-- Lenke til dokumentasjon
+**Din oppgave:** Velg **tre verktøy** som **ikke er dekket i denne leksjonen** (unngå å velge kodeeditorer, nettlesere eller kommandolinjeverktøy som allerede er nevnt). Fokuser på verktøy som løser spesifikke problemer i moderne arbeidsflyter for webutvikling.
 
-**Lengde:**  
-- Hver forklaring skal være 2-3 setninger.
+**For hvert verktøy, oppgi:**
+
+1. **Verktøynavn og kategori** (f.eks. "Figma - Designverktøy" eller "Jest - Testrammeverk")
+2. **Formål og fordeler** - Forklar i 2-3 setninger hvorfor en webutvikler ville bruke dette verktøyet og hvilke problemer det løser
+3. **Lenke til offisiell dokumentasjon** - Oppgi en lenke til verktøyets offisielle dokumentasjon eller nettsted (ikke bare opplæringssider)
+4. **Reell kontekst** - Nevn én måte dette verktøyet passer inn i en profesjonell utviklingsarbeidsflyt
+
+## Foreslåtte verktøyskategorier
+
+Vurder å utforske verktøy fra disse kategoriene:
+
+| Kategori | Eksempler | Hva de gjør |
+|----------|----------|--------------|
+| **Byggeverktøy** | Vite, Webpack, Parcel, esbuild | Pakker og optimaliserer kode for produksjon med raske utviklingsservere |
+| **Testrammeverk** | Vitest, Jest, Cypress, Playwright | Sikrer at koden fungerer korrekt og fanger opp feil før utrulling |
+| **Designverktøy** | Figma, Adobe XD, Penpot | Lager mockups, prototyper og designsystemer i samarbeid |
+| **Plattformer for utrulling** | Netlify, Vercel, Cloudflare Pages | Vert og distribuer nettsteder med automatisk CI/CD |
+| **Versjonskontroll** | GitHub, GitLab, Bitbucket | Administrerer kodeendringer, samarbeid og prosjektarbeidsflyter |
+| **CSS-rammeverk** | Tailwind CSS, Bootstrap, Bulma | Akselererer styling med forhåndsbygde komponentbiblioteker |
+| **Pakkehåndterere** | npm, pnpm, Yarn | Installerer og administrerer kodebiblioteker og avhengigheter |
+| **Tilgjengelighetsverktøy** | axe-core, Lighthouse, Pa11y | Tester for inkluderende design og WCAG-samsvar |
+| **API-utvikling** | Postman, Insomnia, Thunder Client | Tester og dokumenterer API-er under utvikling |
+
+## Formatkrav
+
+**For hvert verktøy:**
+```
+### [Tool Name] - [Category]
+
+**Purpose:** [2-3 sentences explaining why developers use this tool]
+
+**Documentation:** [Official website/documentation link]
+
+**Workflow Integration:** [1 sentence about how it fits into development process]
+```
+
+## Kvalitetsretningslinjer
+
+- **Velg aktuelle verktøy**: Velg verktøy som aktivt vedlikeholdes og er mye brukt i 2025
+- **Fokuser på verdi**: Forklar de spesifikke fordelene, ikke bare hva verktøyet gjør
+- **Profesjonell kontekst**: Vurder verktøy som brukes av utviklingsteam, ikke bare individuelle hobbyutviklere
+- **Variert utvalg**: Velg verktøy fra forskjellige kategorier for å vise bredden i økosystemet
+- **Moderne relevans**: Prioriter verktøy som samsvarer med nåværende trender og beste praksis innen webutvikling
 
 ## Vurderingskriterier
 
-Eksemplarisk | Tilfredsstillende | Trenger forbedring
---- | --- | -- |
-Forklarte hvorfor webutvikler ville bruke verktøyet | Forklarte hvordan, men ikke hvorfor utvikler ville bruke verktøyet | Nevnte ikke hvordan eller hvorfor en utvikler ville bruke verktøyet |
+| Utmerket | Bra | Trenger forbedring |
+|-----------|------|-------------------|
+| **Forklarte tydelig hvorfor utviklere bruker hvert verktøy og hvilke problemer det løser** | **Forklarte hva verktøyet gjør, men manglet noe kontekst om verdien** | **Listet opp verktøy, men forklarte ikke formålet eller fordelene** |
+| **Oppga lenker til offisiell dokumentasjon for alle verktøy** | **Oppga for det meste offisielle lenker med 1-2 opplæringssider** | **Stolte hovedsakelig på opplæringssider i stedet for offisiell dokumentasjon** |
+| **Valgte aktuelle, profesjonelt brukte verktøy fra ulike kategorier** | **Valgte gode verktøy, men begrenset variasjon i kategorier** | **Valgte utdaterte verktøy eller bare fra én kategori** |
+| **Demonstrerte forståelse av hvordan verktøy passer inn i utviklingsarbeidsflyter** | **Viste noe forståelse av profesjonell kontekst** | **Fokuserte bare på verktøyfunksjoner uten arbeidsflytkontekst** |
+
+> 💡 **Forskningsråd**: Se etter verktøy som nevnes i stillingsannonser for webutviklere, sjekk populære utviklerundersøkelser, eller utforsk avhengigheter brukt av vellykkede open-source-prosjekter på GitHub!
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

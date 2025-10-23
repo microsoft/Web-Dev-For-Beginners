@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:48:08+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-23T21:38:00+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "sv"
 }
@@ -21,18 +21,26 @@ source ./venv/bin/activate
 ## Installera beroenden
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## Kör API
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## Testa API
+
+Besök den interaktiva API-dokumentationen på: `http://localhost:5000/docs`
 
 ## Kör frontend
 
-Se till att du befinner dig i frontend-mappen
+Se till att du står i frontend-mappen
 
 Leta upp *app.js*, ändra `BASE_URL` till din backend-URL
 
@@ -51,4 +59,4 @@ Se [Ställ in PAT](https://docs.github.com/en/authentication/keeping-your-accoun
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

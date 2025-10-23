@@ -1,159 +1,255 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b91cbf14240ee59411b96448b994ace1",
-  "translation_date": "2025-10-03T12:26:53+00:00",
+  "original_hash": "eb358f3f4c2c082f9f3a4f98efa1d337",
+  "translation_date": "2025-10-23T22:38:36+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "no"
 }
 -->
-# Browserutvidelsesprosjekt del 3: Lær om bakgrunnsoppgaver og ytelse
+# Nettleserutvidelsesprosjekt Del 3: Lær om bakgrunnsoppgaver og ytelse
 
-## Quiz før forelesning
+Har du noen gang lurt på hvorfor noen nettleserutvidelser føles raske og responsive, mens andre virker trege? Hemmeligheten ligger i hva som skjer bak kulissene. Mens brukerne klikker rundt i grensesnittet til utvidelsen din, er det en hel verden av bakgrunnsprosesser som stille og rolig håndterer datahenting, ikonoppdateringer og systemressurser.
 
-[Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/27)
+Dette er vår siste leksjon i serien om nettleserutvidelser, og vi skal få din karbonfotavtrykk-tracker til å fungere knirkefritt. Du vil legge til dynamiske ikonoppdateringer og lære hvordan du kan oppdage ytelsesproblemer før de blir et problem. Det er som å finjustere en racerbil - små optimaliseringer kan gjøre en enorm forskjell i hvordan alt fungerer.
+
+Når vi er ferdige, vil du ha en polert utvidelse og forstå ytelsesprinsippene som skiller gode webapplikasjoner fra de virkelig gode. La oss dykke inn i nettleseroptimaliseringens verden.
+
+## Quiz før leksjonen
+
+[Quiz før leksjonen](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Introduksjon
 
-I de to siste leksjonene i dette modulen lærte du hvordan du bygger et skjema og et visningsområde for data hentet fra en API. Dette er en veldig standard måte å skape en webtilstedeværelse på nettet. Du lærte til og med hvordan du håndterer asynkron datainnhenting. Nettleserutvidelsen din er nesten ferdig.
+I våre tidligere leksjoner har du laget et skjema, koblet det til en API og taklet asynkron datahenting. Utvidelsen din begynner å ta form.
 
-Det gjenstår å håndtere noen bakgrunnsoppgaver, inkludert å oppdatere fargen på utvidelsens ikon. Dette er derfor et godt tidspunkt å snakke om hvordan nettleseren håndterer denne typen oppgaver. La oss tenke på disse nettleseroppgavene i konteksten av ytelsen til dine webressurser mens du bygger dem.
+Nå må vi legge til de siste detaljene - som å få ikonet til utvidelsen til å endre farger basert på karbondataene. Dette minner meg om hvordan NASA måtte optimalisere hvert system på Apollo-romfartøyet. De kunne ikke tillate noen bortkastede sykluser eller minne fordi liv avhang av ytelsen. Selv om nettleserutvidelsen vår ikke er fullt så kritisk, gjelder de samme prinsippene - effektiv kode skaper bedre brukeropplevelser.
 
 ## Grunnleggende om webytelse
 
-> "Nettstedytelse handler om to ting: hvor raskt siden lastes, og hvor raskt koden på den kjører." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+Når koden din kjører effektivt, kan folk faktisk *føle* forskjellen. Du vet det øyeblikket når en side lastes umiddelbart eller en animasjon flyter jevnt? Det er god ytelse i arbeid.
 
-Temaet om hvordan du gjør nettstedene dine lynraske på alle typer enheter, for alle typer brukere, i alle typer situasjoner, er ikke overraskende omfattende. Her er noen punkter å huske på når du bygger enten et standard webprosjekt eller en nettleserutvidelse.
+Ytelse handler ikke bare om hastighet - det handler om å skape webopplevelser som føles naturlige i stedet for klønete og frustrerende. Tilbake i datamaskinens tidlige dager hadde Grace Hopper berømt en nanosekund (et stykke ledning omtrent en fot lang) på skrivebordet sitt for å vise hvor langt lyset reiser på en milliarddel av et sekund. Det var hennes måte å forklare hvorfor hver mikrosekund betyr noe i databehandling. La oss utforske detektivverktøyene som hjelper deg med å finne ut hva som bremser ting.
 
-Det første du må gjøre for å sikre at nettstedet ditt kjører effektivt, er å samle data om ytelsen. Det første stedet å gjøre dette er i utviklerverktøyene til nettleseren din. I Edge kan du velge "Innstillinger og mer"-knappen (ikonet med tre prikker øverst til høyre i nettleseren), deretter navigere til Flere verktøy > Utviklerverktøy og åpne Ytelse-fanen. Du kan også bruke hurtigtastene `Ctrl` + `Shift` + `I` på Windows eller `Option` + `Command` + `I` på Mac for å åpne utviklerverktøyene.
+> "Nettstedsytelse handler om to ting: hvor raskt siden lastes, og hvor raskt koden på den kjører." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Ytelse-fanen inneholder et profileringsverktøy. Åpne et nettsted (prøv for eksempel [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) og klikk på 'Record'-knappen, deretter oppdater nettstedet. Stopp opptaket når som helst, og du vil kunne se rutinene som genereres for å 'skrive', 'rendre' og 'male' nettstedet:
+Temaet om hvordan du gjør nettstedene dine lynraske på alle slags enheter, for alle slags brukere, i alle slags situasjoner, er ikke overraskende omfattende. Her er noen punkter å huske på når du bygger enten et standard webprosjekt eller en nettleserutvidelse.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.no.png)
+Det første steget i å optimalisere nettstedet ditt er å forstå hva som faktisk skjer under panseret. Heldigvis kommer nettleseren din med kraftige detektivverktøy innebygd.
 
-✅ Besøk [Microsoft-dokumentasjonen](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) om Ytelse-panelet i Edge
+For å åpne Developer Tools i Edge, klikk på de tre prikkene øverst til høyre, gå deretter til Flere verktøy > Utviklerverktøy. Eller bruk hurtigtasten: `Ctrl` + `Shift` + `I` på Windows eller `Option` + `Command` + `I` på Mac. Når du er der, klikker du på Ytelse-fanen - det er her du skal gjøre undersøkelsene dine.
 
-> Tips: For å få en nøyaktig måling av nettstedets oppstartstid, tøm nettleserens cache.
+**Her er ditt ytelsesdetektivverktøy:**
+- **Åpne** Developer Tools (du vil bruke disse konstant som utvikler!)
+- **Gå til** Ytelse-fanen - tenk på det som din webapps treningssporer
+- **Trykk** på opptaksknappen og se siden din i aksjon
+- **Studer** resultatene for å finne ut hva som bremser ting
+
+La oss prøve dette. Åpne et nettsted (Microsoft.com fungerer godt for dette) og klikk på 'Opptak'-knappen. Oppdater siden og se hvordan profileren fanger alt som skjer. Når du stopper opptaket, vil du se en detaljert oversikt over hvordan nettleseren 'skriver', 'renderer' og 'maler' siden. Det minner meg om hvordan kontrollsenteret overvåker hvert system under en rakettoppskyting - du får sanntidsdata om nøyaktig hva som skjer og når.
+
+✅ [Microsoft-dokumentasjonen](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) har massevis av detaljer hvis du vil dykke dypere.
+
+> Proff-tips: Tøm nettleserens cache før testing for å se hvordan nettstedet ditt presterer for førstegangsbesøkende - det er vanligvis ganske annerledes enn ved gjentatte besøk!
 
 Velg elementer i profilens tidslinje for å zoome inn på hendelser som skjer mens siden din lastes.
 
 Få et øyeblikksbilde av sidens ytelse ved å velge en del av profilens tidslinje og se på oppsummeringspanelet:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.no.png)
+✅ Bli kjent med profileren din! Åpne utviklerverktøyene på dette nettstedet og se om det er noen flaskehalser. Hva er den tregest lastende ressursen? Den raskeste?
 
-Sjekk hendelseslogg-panelet for å se om noen hendelser tok lengre tid enn 15 ms:
+## Hva du bør se etter når du profilerer
 
-![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.no.png)
+Å kjøre profileren er bare begynnelsen - den virkelige ferdigheten er å vite hva de fargerike diagrammene faktisk forteller deg. Ikke bekymre deg, du vil lære å lese dem. Erfarne utviklere har lært å oppdage faresignalene før de blir fullverdige problemer.
 
-✅ Bli kjent med profileringsverktøyet ditt! Åpne utviklerverktøyene på dette nettstedet og se om det er noen flaskehalser. Hva er den tregest lastende ressursen? Den raskeste?
+La oss snakke om de vanlige mistenkte - ytelsesproblemene som har en tendens til å snike seg inn i webprosjekter. Som Marie Curie måtte nøye overvåke strålingsnivåene i laboratoriet sitt, må vi se etter visse mønstre som indikerer problemer som brygger. Å fange disse tidlig vil spare deg (og brukerne dine) for mye frustrasjon.
 
-## Profileringstester
+**Ressursstørrelser**: Nettsteder har blitt "tyngre" gjennom årene, og mye av den ekstra vekten kommer fra bilder. Det er som om vi har stappet mer og mer inn i våre digitale kofferter.
 
-Generelt er det noen "problemområder" som enhver webutvikler bør være oppmerksom på når de bygger et nettsted for å unngå ubehagelige overraskelser når det er tid for å distribuere til produksjon.
+✅ Sjekk ut [Internet Archive](https://httparchive.org/reports/page-weight) for å se hvordan sidestørrelser har vokst over tid - det er ganske avslørende.
 
-**Ressursstørrelser**: Nettet har blitt 'tyngre', og dermed tregere, de siste årene. Noe av denne vekten har å gjøre med bruken av bilder.
+**Slik holder du ressursene dine optimalisert:**
+- **Komprimer** bildene! Moderne formater som WebP kan redusere filstørrelser dramatisk
+- **Server** riktig bildestørrelse for hver enhet - det er ikke nødvendig å sende store skrivebordsbilder til telefoner
+- **Minimer** CSS og JavaScript - hver byte teller
+- **Bruk** lazy loading slik at bilder bare lastes ned når brukerne faktisk ruller til dem
 
-✅ Se gjennom [Internet Archive](https://httparchive.org/reports/page-weight) for en historisk oversikt over sidens vekt og mer.
+**DOM-traverseringer**: Nettleseren må bygge sitt Document Object Model basert på koden du skriver, så det er i interesse for god sideytelse å holde taggene minimale, og bare bruke og style det siden trenger. For eksempel kan overflødig CSS assosiert med en side optimaliseres; stiler som bare trenger å brukes på én side, trenger ikke å inkluderes i hovedstilarket.
 
-En god praksis er å sørge for at bildene dine er optimalisert og levert i riktig størrelse og oppløsning for brukerne dine.
+**Nøkkelstrategier for DOM-optimalisering:**
+- **Minimerer** antall HTML-elementer og nivåer av nesting
+- **Fjerner** ubrukte CSS-regler og konsoliderer stilark effektivt
+- **Organiserer** CSS for å laste bare det som trengs for hver side
+- **Strukturerer** HTML semantisk for bedre nettleserparsing
 
-**DOM-traverseringer**: Nettleseren må bygge sitt Document Object Model basert på koden du skriver, så det er i interesse av god sideytelse å holde taggene minimale, kun bruke og style det siden trenger. Til dette punktet kan overflødig CSS knyttet til en side optimaliseres; stiler som bare trenger å brukes på én side, trenger ikke å inkluderes i hovedstilarket, for eksempel.
+**JavaScript**: Hver JavaScript-utvikler bør passe på 'render-blocking'-skript som må lastes før resten av DOM kan traverseres og males til nettleseren. Vurder å bruke `defer` med dine inline-skript (som gjort i Terrarium-modulen).
 
-**JavaScript**: Hver JavaScript-utvikler bør passe på 'render-blokkerende' skript som må lastes før resten av DOM kan traverseres og males til nettleseren. Vurder å bruke `defer` med dine inline-skript (som det gjøres i Terrarium-modulen).
+**Moderne JavaScript-optimaliseringsteknikker:**
+- **Bruker** `defer`-attributtet for å laste skript etter DOM-parsing
+- **Implementerer** kode-splitting for å laste bare nødvendig JavaScript
+- **Bruker** lazy loading for ikke-kritisk funksjonalitet
+- **Minimerer** bruken av tunge biblioteker og rammeverk når mulig
 
-✅ Prøv noen nettsteder på en [Site Speed Test-nettside](https://www.webpagetest.org/) for å lære mer om de vanlige testene som utføres for å bestemme nettstedets ytelse.
+✅ Prøv noen nettsteder på en [Site Speed Test-nettside](https://www.webpagetest.org/) for å lære mer om de vanlige kontrollene som gjøres for å bestemme nettstedets ytelse.
 
-Nå som du har en idé om hvordan nettleseren rendrer ressursene du sender til den, la oss se på de siste tingene du må gjøre for å fullføre utvidelsen din:
+Nå som du har en idé om hvordan nettleseren renderer ressursene du sender til den, la oss se på de siste tingene du trenger å gjøre for å fullføre utvidelsen din:
 
 ### Lag en funksjon for å beregne farge
 
-Arbeid i `/src/index.js`, og legg til en funksjon kalt `calculateColor()` etter serien av `const`-variabler du satte for å få tilgang til DOM:
+Nå skal vi lage en funksjon som gjør numeriske data om til meningsfulle farger. Tenk på det som et trafikklyssystem - grønt for ren energi, rødt for høy karbonintensitet.
 
-```JavaScript
+Denne funksjonen vil ta CO2-dataene fra vår API og bestemme hvilken farge som best representerer miljøpåvirkningen. Det ligner på hvordan forskere bruker fargekoding i varmekart for å visualisere komplekse dataprofiler - fra havtemperaturer til stjernedannelse. La oss legge dette til `/src/index.js`, rett etter de `const`-variablene vi satte opp tidligere:
+
+```javascript
 function calculateColor(value) {
-	let co2Scale = [0, 150, 600, 750, 800];
-	let colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
+	// Define CO2 intensity scale (grams per kWh)
+	const co2Scale = [0, 150, 600, 750, 800];
+	// Corresponding colors from green (clean) to dark brown (high carbon)
+	const colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
 
-	let closestNum = co2Scale.sort((a, b) => {
+	// Find the closest scale value to our input
+	const closestNum = co2Scale.sort((a, b) => {
 		return Math.abs(a - value) - Math.abs(b - value);
 	})[0];
-	console.log(value + ' is closest to ' + closestNum);
-	let num = (element) => element > closestNum;
-	let scaleIndex = co2Scale.findIndex(num);
+	
+	console.log(`${value} is closest to ${closestNum}`);
+	
+	// Find the index for color mapping
+	const num = (element) => element > closestNum;
+	const scaleIndex = co2Scale.findIndex(num);
 
-	let closestColor = colors[scaleIndex];
+	const closestColor = colors[scaleIndex];
 	console.log(scaleIndex, closestColor);
 
+	// Send color update message to background script
 	chrome.runtime.sendMessage({ action: 'updateIcon', value: { color: closestColor } });
 }
 ```
 
-Hva skjer her? Du sender inn en verdi (karbonintensiteten) fra API-kallet du fullførte i forrige leksjon, og deretter beregner du hvor nær verdien er indeksen som presenteres i fargearrayen. Deretter sender du den nærmeste fargeverdien til chrome runtime.
+**La oss bryte ned denne smarte lille funksjonen:**
+- **Setter opp** to arrays - en for CO2-nivåer, en annen for farger (grønn = ren, brun = skitten!)
+- **Finner** den nærmeste matchen til vår faktiske CO2-verdi ved hjelp av noen smarte array-sorteringer
+- **Henter** den matchende fargen ved hjelp av findIndex()-metoden
+- **Sender** en melding til Chromes bakgrunnsskript med vår valgte farge
+- **Bruker** malstrenger (de backticks) for renere strengformatering
+- **Holder** alt organisert med const-deklarasjoner
 
-Chrome.runtime har [en API](https://developer.chrome.com/extensions/runtime) som håndterer alle slags bakgrunnsoppgaver, og utvidelsen din utnytter dette:
+`chrome.runtime` [API](https://developer.chrome.com/extensions/runtime) er som nervesystemet til utvidelsen din - det håndterer all kommunikasjon og oppgaver bak kulissene:
 
-> "Bruk chrome.runtime API for å hente bakgrunnssiden, returnere detaljer om manifestet, og lytte til og svare på hendelser i app- eller utvidelseslivssyklusen. Du kan også bruke denne API-en for å konvertere den relative banen til URL-er til fullstendig kvalifiserte URL-er."
+> "Bruk chrome.runtime API for å hente bakgrunnssiden, returnere detaljer om manifestet, og lytte til og svare på hendelser i appen eller utvidelsens livssyklus. Du kan også bruke denne API-en for å konvertere relative URL-stier til fullt kvalifiserte URL-er."
 
-✅ Hvis du utvikler denne nettleserutvidelsen for Edge, kan det overraske deg at du bruker en chrome API. De nyere Edge-nettleserversjonene kjører på Chromium-nettlesermotoren, så du kan utnytte disse verktøyene.
+**Hvorfor Chrome Runtime API er så nyttig:**
+- **Lar** forskjellige deler av utvidelsen din snakke med hverandre
+- **Håndterer** bakgrunnsarbeid uten å fryse brukergrensesnittet
+- **Administrerer** utvidelsens livssyklus-hendelser
+- **Gjør** meldingsutveksling mellom skript superenkelt
 
-> Merk, hvis du vil profilere en nettleserutvidelse, start utviklerverktøyene fra selve utvidelsen, da den er sin egen separate nettleserinstans.
+✅ Hvis du utvikler denne nettleserutvidelsen for Edge, kan det overraske deg at du bruker en Chrome API. De nyere Edge-nettleserversjonene kjører på Chromium-nettlesermotoren, så du kan dra nytte av disse verktøyene.
+
+> **Proff-tips**: Hvis du vil profilere en nettleserutvidelse, åpne utviklerverktøyene fra selve utvidelsen, da den er sin egen separate nettleserinstans. Dette gir deg tilgang til utvidelsesspesifikke ytelsesmetrikker.
 
 ### Sett en standard ikonfarge
 
-Nå, i `init()`-funksjonen, sett ikonet til å være generisk grønt til å begynne med ved å igjen kalle chromes `updateIcon`-handling:
+Før vi begynner å hente ekte data, la oss gi utvidelsen vår et utgangspunkt. Ingen liker å stirre på et tomt eller ødelagt ikon. Vi starter med en grønn farge slik at brukerne vet at utvidelsen fungerer fra det øyeblikket de installerer den.
 
-```JavaScript
+I din `init()`-funksjon, la oss sette opp det standard grønne ikonet:
+
+```javascript
 chrome.runtime.sendMessage({
 	action: 'updateIcon',
-		value: {
-			color: 'green',
-		},
+	value: {
+		color: 'green',
+	},
 });
 ```
+
+**Hva denne initialiseringen oppnår:**
+- **Setter** en nøytral grønn farge som standardtilstand
+- **Gir** umiddelbar visuell tilbakemelding når utvidelsen lastes
+- **Etablerer** kommunikasjonsmønsteret med bakgrunnsskriptet
+- **Sikrer** at brukerne ser en funksjonell utvidelse før data lastes
+
 ### Kall funksjonen, utfør kallet
 
-Deretter, kall funksjonen du nettopp opprettet ved å legge den til løftet som returneres av C02Signal API:
+Nå skal vi koble alt sammen slik at når ferske CO2-data kommer inn, oppdateres ikonet ditt automatisk med riktig farge. Det er som å koble den siste kretsen i en elektronisk enhet - plutselig fungerer alle de individuelle komponentene som ett system.
 
-```JavaScript
-//let CO2...
+Legg til denne linjen rett etter at du får CO2-dataene fra API-en:
+
+```javascript
+// After retrieving CO2 data from the API
+// let CO2 = data.data[0].intensity.actual;
 calculateColor(CO2);
 ```
 
+**Denne integrasjonen oppnår:**
+- **Kobler** API-datastrømmen med det visuelle indikator-systemet
+- **Trigger** ikonoppdateringer automatisk når nye data ankommer
+- **Sikrer** sanntids visuell tilbakemelding basert på nåværende karbonintensitet
+- **Opprettholder** separasjonen mellom datahenting og visningslogikk
+
 Og til slutt, i `/dist/background.js`, legg til lytteren for disse bakgrunnsaksjonskallene:
 
-```JavaScript
+```javascript
+// Listen for messages from the content script
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
 		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
-//borrowed from energy lollipop extension, nice feature!
-function drawIcon(value) {
-	let canvas = new OffscreenCanvas(200, 200);
-	let context = canvas.getContext('2d');
 
+// Draw dynamic icon using Canvas API
+// Borrowed from energy lollipop extension - nice feature!
+function drawIcon(value) {
+	// Create an offscreen canvas for better performance
+	const canvas = new OffscreenCanvas(200, 200);
+	const context = canvas.getContext('2d');
+
+	// Draw a colored circle representing carbon intensity
 	context.beginPath();
 	context.fillStyle = value.color;
 	context.arc(100, 100, 50, 0, 2 * Math.PI);
 	context.fill();
 
+	// Return the image data for the browser icon
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
 
-I denne koden legger du til en lytter for eventuelle meldinger som kommer til bakgrunnsoppgavebehandleren. Hvis den kalles 'updateIcon', kjøres den neste koden for å tegne et ikon med riktig farge ved hjelp av Canvas API.
+**Hva dette bakgrunnsskriptet gjør:**
+- **Lytter** etter meldinger fra hovedskriptet ditt (som en resepsjonist som tar imot samtaler)
+- **Behandler** disse 'updateIcon'-forespørslene for å endre verktøylinjeikonet ditt
+- **Oppretter** nye ikoner på farten ved hjelp av Canvas API
+- **Tegner** en enkel farget sirkel som viser nåværende karbonintensitet
+- **Oppdaterer** nettleserens verktøylinje med det ferske ikonet
+- **Bruker** OffscreenCanvas for jevn ytelse (ingen UI-blokkering)
 
 ✅ Du vil lære mer om Canvas API i [Space Game-leksjonene](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Nå, bygg utvidelsen din på nytt (`npm run build`), oppdater og start utvidelsen din, og se fargen endre seg. Er det et godt tidspunkt å ta en pause eller vaske opp? Nå vet du!
+**Tid for å teste utvidelsen din:**
+- **Bygg** alt med `npm run build`
+- **Last** utvidelsen din på nytt i nettleseren (ikke glem dette steget)
+- **Åpne** utvidelsen din og se ikonet endre farger
+- **Sjekk** hvordan det reagerer på ekte karbondata fra hele verden
 
-Gratulerer, du har bygget en nyttig nettleserutvidelse og lært mer om hvordan nettleseren fungerer og hvordan du profilerer ytelsen.
+Nå vil du vite med et blikk om det er et godt tidspunkt for den klesvasken eller om du bør vente på renere energi. Du har nettopp bygget noe genuint nyttig og lært om nettleserytelse underveis.
 
----
+## GitHub Copilot Agent-utfordring 🚀
+
+Bruk Agent-modus for å fullføre følgende utfordring:
+
+**Beskrivelse:** Forbedre nettleserutvidelsens ytelsesovervåkingskapabiliteter ved å legge til en funksjon som sporer og viser lastetider for forskjellige komponenter i utvidelsen.
+
+**Prompt:** Lag et ytelsesovervåkingssystem for nettleserutvidelsen som måler og logger tiden det tar å hente CO2-data fra API-en, beregne farger og oppdatere ikonet. Legg til en funksjon kalt `performanceTracker` som bruker Performance API for å måle disse operasjonene og viser resultatene i nettleserkonsollen med tidsstempler og varighetsmetrikker.
+
+Lær mer om [agent-modus](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
 
 ## 🚀 Utfordring
+Her er et interessant detektivoppdrag: velg noen åpne kildekode-nettsteder som har eksistert i flere år (tenk Wikipedia, GitHub eller Stack Overflow) og dykk ned i deres commit-historikk. Kan du finne ut hvor de har gjort ytelsesforbedringer? Hvilke problemer dukker stadig opp?
 
-Undersøk noen åpne kildekode-nettsteder som har eksistert lenge, og basert på deres GitHub-historie, se om du kan avgjøre hvordan de ble optimalisert for ytelse gjennom årene, hvis i det hele tatt. Hva er det vanligste problemet?
+**Din undersøkelsesmetode:**
+- **Søk** i commit-meldinger etter ord som "optimalisere," "ytelse," eller "raskere"
+- **Se** etter mønstre - fikser de stadig de samme typene problemer?
+- **Identifiser** de vanlige årsakene til at nettsteder blir tregere
+- **Del** det du oppdager - andre utviklere kan lære av eksempler fra virkeligheten
 
 ## Quiz etter forelesning
 
@@ -161,9 +257,9 @@ Undersøk noen åpne kildekode-nettsteder som har eksistert lenge, og basert på
 
 ## Gjennomgang og selvstudium
 
-Vurder å melde deg på et [ytelsesnyhetsbrev](https://perf.email/)
+Vurder å melde deg på et [nyhetsbrev om ytelse](https://perf.email/)
 
-Undersøk noen av måtene nettlesere vurderer webytelse ved å se gjennom ytelsespanelene i deres webverktøy. Finner du noen store forskjeller?
+Undersøk noen av måtene nettlesere måler webytelse ved å se gjennom ytelsesfanene i deres webverktøy. Finner du noen store forskjeller?
 
 ## Oppgave
 
@@ -172,4 +268,4 @@ Undersøk noen av måtene nettlesere vurderer webytelse ved å se gjennom ytelse
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-29T08:34:16+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-23T22:38:22+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "no"
 }
@@ -13,11 +13,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Quiz før forelesning](https://ff-quizzes.netlify.app/web/quiz/37)
 
-I denne leksjonen skal du lære hvordan du legger til poeng i et spill og beregner liv.
+Klar for å gjøre romspillet ditt til et ekte spill? La oss legge til poengsystem og livshåndtering - de grunnleggende mekanismene som forvandlet tidlige arkadespill som Space Invaders fra enkle demonstrasjoner til avhengighetsskapende underholdning. Dette er punktet hvor spillet ditt blir virkelig spillbart.
 
-## Tegn tekst på skjermen
+## Tegne tekst på skjermen - Spillets stemme
 
-For å kunne vise poengsummen i spillet på skjermen, må du vite hvordan du plasserer tekst på skjermen. Svaret er å bruke metoden `fillText()` på canvas-objektet. Du kan også kontrollere andre aspekter som hvilken font som skal brukes, fargen på teksten og til og med justeringen (venstre, høyre, senter). Nedenfor er litt kode som tegner tekst på skjermen.
+For å vise poengsummen din, må vi lære hvordan vi kan vise tekst på lerretet. Metoden `fillText()` er ditt viktigste verktøy for dette - det er samme teknikk som ble brukt i klassiske arkadespill for å vise poengsummer og statusinformasjon.
+
+Du har full kontroll over tekstens utseende:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Les mer om [hvordan legge til tekst på et canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), og føl deg fri til å gjøre din versjon mer fancy!
+✅ Utforsk mer om [å legge til tekst på et lerret](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - du kan bli overrasket over hvor kreativ du kan være med skrifttyper og styling!
 
-## Liv som et spillkonsept
+## Liv - Mer enn bare et tall
 
-Konseptet med å ha liv i et spill er bare et tall. I konteksten av et romspill er det vanlig å tildele et sett med liv som reduseres ett etter ett når skipet ditt tar skade. Det er fint om du kan vise en grafisk representasjon av dette, som små skip eller hjerter, i stedet for bare et tall.
+I spilldesign representerer et "liv" spillerens margin for feil. Dette konseptet stammer fra flipperspill, hvor du fikk flere baller å spille med. I tidlige videospill som Asteroids ga liv spillerne tillatelse til å ta risiko og lære av feil.
 
-## Hva skal bygges
+Visuell representasjon er svært viktig - å vise skip-ikoner i stedet for bare "Liv: 3" skaper umiddelbar visuell gjenkjennelse, på samme måte som tidlige arkadekabinetter brukte ikonografi for å kommunisere på tvers av språkbarrierer.
 
-La oss legge til følgende i spillet ditt:
+## Bygg belønningssystemet i spillet ditt
 
-- **Poengsum i spillet**: For hvert fiendeskip som blir ødelagt, skal helten få poeng. Vi foreslår 100 poeng per skip. Poengsummen skal vises nederst til venstre.
-- **Liv**: Skipet ditt har tre liv. Du mister ett liv hver gang et fiendeskip kolliderer med deg. Antall liv skal vises nederst til høyre og være laget av følgende grafikk ![livsbilde](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.no.png).
+Nå skal vi implementere de grunnleggende tilbakemeldingssystemene som holder spillerne engasjert:
 
-## Anbefalte steg
+- **Poengsystem**: Hvert ødelagt fiendeskip gir 100 poeng (runde tall er enklere for spillere å regne ut mentalt). Poengsummen vises nederst til venstre.
+- **Livsteller**: Helten din starter med tre liv - en standard etablert av tidlige arkadespill for å balansere utfordring med spillbarhet. Hver kollisjon med en fiende koster ett liv. Vi viser gjenværende liv nederst til høyre ved hjelp av skip-ikoner ![livsbilde](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.no.png).
 
-Finn filene som er opprettet for deg i undermappen `your-work`. Den skal inneholde følgende:
+## La oss komme i gang!
+
+Først, sett opp arbeidsområdet ditt. Naviger til filene i `your-work` undermappen. Du bør se disse filene:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Finn filene som er opprettet for deg i undermappen `your-work`. Den skal innehol
 -| package.json
 ```
 
-Start prosjektet ditt i `your_work`-mappen ved å skrive:
+For å teste spillet ditt, start utviklingsserveren fra `your_work`-mappen:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en nettleser og skriv inn den adressen. Akkurat nå skal den vise helten og alle fiendene, og når du trykker på venstre- og høyrepilene, beveger helten seg og kan skyte ned fiender.
+Dette kjører en lokal server på `http://localhost:5000`. Åpne denne adressen i nettleseren din for å se spillet ditt. Test kontrollene med piltastene og prøv å skyte fiender for å verifisere at alt fungerer.
 
-### Legg til kode
+### Tid for koding!
 
-1. **Kopier over nødvendige ressurser** fra mappen `solution/assets/` til `your-work`-mappen; du skal legge til ressursen `life.png`. Legg til `lifeImg` i `window.onload`-funksjonen:
+1. **Hent de visuelle ressursene du trenger**. Kopier `life.png`-ressursen fra `solution/assets/`-mappen til `your-work`-mappen din. Legg deretter til lifeImg i din window.onload-funksjon:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Legg til `lifeImg` i listen over ressurser:
+1. Ikke glem å legge til `lifeImg` i ressurslisten din:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
     eventEmitter = new EventEmitter();
     ```
   
-2. **Legg til variabler**. Legg til kode som representerer din totale poengsum (0) og antall gjenværende liv (3), og vis disse på skjermen.
+2. **Sett opp spillvariablene dine**. Legg til litt kode for å spore din totale poengsum (starter på 0) og gjenværende liv (starter på 3). Vi viser disse på skjermen slik at spillerne alltid vet hvor de står.
 
-3. **Utvid funksjonen `updateGameObjects()`**. Utvid funksjonen `updateGameObjects()` for å håndtere kollisjoner med fiender:
+3. **Implementer kollisjonsdeteksjon**. Utvid `updateGameObjects()`-funksjonen din for å oppdage når fiender kolliderer med helten din:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
       })
     ```
 
-4. **Legg til `liv` og `poeng`**. 
-   1. **Initialiser variabler**. Under `this.cooldown = 0` i klassen `Hero`, sett liv og poeng:
+4. **Legg til livs- og poengsporing til helten din**. 
+   1. **Initialiser tellerne**. Under `this.cooldown = 0` i din `Hero`-klasse, sett opp liv og poeng:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Tegn variabler på skjermen**. Tegn disse verdiene på skjermen:
+   1. **Vis disse verdiene til spilleren**. Lag funksjoner for å tegne disse verdiene på skjermen:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
 
         ```
 
-   1. **Legg til metoder i spill-løkken**. Sørg for å legge til disse funksjonene i `window.onload`-funksjonen under `updateGameObjects()`:
+   1. **Koble alt til spill-loopen din**. Legg til disse funksjonene i din window.onload-funksjon rett etter `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implementer spillregler**. Implementer følgende spillregler:
+1. **Implementer konsekvenser og belønninger i spillet**. Nå skal vi legge til tilbakemeldingssystemene som gjør spillerens handlinger meningsfulle:
 
-   1. **For hver kollisjon mellom helten og en fiende**, trekk fra ett liv.
+   1. **Kollisjoner koster liv**. Hver gang helten din krasjer inn i en fiende, bør du miste et liv.
    
-      Utvid klassen `Hero` for å gjøre dette fratrekket:
+      Legg til denne metoden i din `Hero`-klasse:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         }
         ```
 
-   2. **For hver laser som treffer en fiende**, øk poengsummen med 100 poeng.
+   2. **Å skyte fiender gir poeng**. Hvert vellykket treff gir 100 poeng, som gir umiddelbar positiv tilbakemelding for presis skyting.
 
-      Utvid klassen `Hero` for å gjøre denne økningen:
+      Utvid Hero-klassen din med denne inkrementeringsmetoden:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
           }
         ```
 
-        Legg til disse funksjonene i dine Collision Event Emitters:
+        Koble nå disse funksjonene til kollisjonshendelsene dine:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,15 +179,27 @@ Dette vil starte en HTTP-server på adressen `http://localhost:5000`. Åpne en n
         });
         ```
 
-✅ Gjør litt research for å oppdage andre spill som er laget med JavaScript/Canvas. Hva er deres fellestrekk?
+✅ Nysgjerrig på andre spill laget med JavaScript og Canvas? Utforsk litt - du kan bli overrasket over hva som er mulig!
 
-Når du er ferdig med dette arbeidet, skal du se små "liv"-skip nederst til høyre, poeng nederst til venstre, og du skal se at antall liv reduseres når du kolliderer med fiender, og poengene øker når du skyter fiender. Bra jobbet! Spillet ditt er nesten ferdig.
+Etter å ha implementert disse funksjonene, test spillet ditt for å se det komplette tilbakemeldingssystemet i aksjon. Du bør se livsikoner nederst til høyre, poengsummen din nederst til venstre, og se hvordan kollisjoner reduserer livene mens vellykkede skudd øker poengsummen din.
+
+Spillet ditt har nå de essensielle mekanismene som gjorde tidlige arkadespill så fengslende - klare mål, umiddelbar tilbakemelding og meningsfulle konsekvenser for spillerens handlinger.
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Bruk Agent-modus for å fullføre følgende utfordring:
+
+**Beskrivelse:** Forbedre romspillets poengsystem ved å implementere en high score-funksjon med vedvarende lagring og bonuspoengmekanismer.
+
+**Oppgave:** Lag et high score-system som lagrer spillerens beste poengsum til localStorage. Legg til bonuspoeng for påfølgende fiendedrap (kombosystem) og implementer forskjellige poengverdier for ulike fiendetyper. Inkluder en visuell indikator når spilleren oppnår en ny high score og vis den nåværende high scoren på spillskjermen.
+
+
+
 ## 🚀 Utfordring
 
-Koden din er nesten ferdig. Kan du se for deg neste steg?
+Du har nå et funksjonelt spill med poeng og liv. Tenk over hvilke ekstra funksjoner som kan forbedre spilleropplevelsen.
 
 ## Quiz etter forelesning
 
@@ -191,7 +207,7 @@ Koden din er nesten ferdig. Kan du se for deg neste steg?
 
 ## Gjennomgang og selvstudium
 
-Undersøk noen måter du kan øke og redusere poeng og liv i spill. Det finnes noen interessante spillmotorer som [PlayFab](https://playfab.com). Hvordan kunne bruk av en slik motor forbedret spillet ditt?
+Vil du utforske mer? Undersøk forskjellige tilnærminger til poeng- og livssystemer i spill. Det finnes fascinerende spillmotorer der ute som [PlayFab](https://playfab.com) som håndterer poengsummer, rangeringer og spillerutvikling. Hvordan kan integrering av noe slikt ta spillet ditt til neste nivå?
 
 ## Oppgave
 
@@ -200,4 +216,4 @@ Undersøk noen måter du kan øke og redusere poeng og liv i spill. Det finnes n
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.

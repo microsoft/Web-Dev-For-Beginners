@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T08:15:38+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-23T21:52:49+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "da"
 }
@@ -12,12 +12,16 @@ CO_OP_TRANSLATOR_METADATA:
 ![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.da.png)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Quiz før forelæsning
-[Quiz før forelæsning](https://ff-quizzes.netlify.app)
+## Quiz før lektionen
+[Quiz før lektionen](https://ff-quizzes.netlify.app)
 
-Når vi tænker på at skrive kode, vil vi altid sikre os, at vores kode er læsbar. Selvom det kan lyde kontraintuitivt, bliver kode læst mange flere gange, end den bliver skrevet. Et af de vigtigste værktøjer i en udviklers værktøjskasse for at sikre vedligeholdelig kode er **funktionen**.
+At skrive den samme kode igen og igen er en af de mest frustrerende ting ved programmering. Funktioner løser dette problem ved at lade dig pakke kode ind i genanvendelige blokke. Tænk på funktioner som de standardiserede dele, der gjorde Henry Fords samlebånd revolutionerende – når du først har skabt en pålidelig komponent, kan du bruge den hvor som helst uden at skulle bygge den fra bunden igen.
 
-[![Methods and Functions](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Methods and Functions")
+Funktioner giver dig mulighed for at samle stykker af kode, så du kan genbruge dem i hele dit program. I stedet for at kopiere og indsætte den samme logik overalt, kan du oprette en funktion én gang og kalde den, når det er nødvendigt. Denne tilgang holder din kode organiseret og gør opdateringer meget nemmere.
+
+I denne lektion lærer du, hvordan du opretter dine egne funktioner, sender information til dem og får nyttige resultater tilbage. Du vil opdage forskellen mellem funktioner og metoder, lære moderne syntaksmetoder og se, hvordan funktioner kan arbejde sammen med andre funktioner. Vi bygger disse koncepter trin for trin.
+
+[![Metoder og Funktioner](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metoder og Funktioner")
 
 > 🎥 Klik på billedet ovenfor for en video om metoder og funktioner.
 
@@ -25,13 +29,15 @@ Når vi tænker på at skrive kode, vil vi altid sikre os, at vores kode er læs
 
 ## Funktioner
 
-I sin kerne er en funktion en blok af kode, som vi kan udføre efter behov. Dette er perfekt til scenarier, hvor vi skal udføre den samme opgave flere gange; i stedet for at duplikere logikken flere steder (hvilket ville gøre det svært at opdatere senere), kan vi centralisere den ét sted og kalde den, når vi har brug for operationen udført - du kan endda kalde funktioner fra andre funktioner!
+En funktion er en selvstændig blok af kode, der udfører en specifik opgave. Den indkapsler logik, som du kan udføre, når det er nødvendigt.
 
-Lige så vigtigt er evnen til at navngive en funktion. Selvom det måske virker trivielt, giver navnet en hurtig måde at dokumentere en sektion af kode. Du kan tænke på det som en etiket på en knap. Hvis jeg klikker på en knap, der siger "Annuller timer", ved jeg, at den vil stoppe uret.
+I stedet for at skrive den samme kode flere gange i dit program, kan du pakke den ind i en funktion og kalde den funktion, når du har brug for det. Denne tilgang holder din kode ren og gør opdateringer meget nemmere. Tænk på, hvor besværligt det ville være at ændre logik, der var spredt over 20 forskellige steder i din kodebase.
+
+Det er vigtigt at give dine funktioner beskrivende navne. En godt navngivet funktion kommunikerer dens formål klart – når du ser `cancelTimer()`, forstår du straks, hvad den gør, ligesom en tydeligt mærket knap fortæller dig præcis, hvad der vil ske, når du klikker på den.
 
 ## Oprettelse og kald af en funktion
 
-Syntaksen for en funktion ser sådan ud:
+Lad os undersøge, hvordan man opretter en funktion. Syntaksen følger et konsekvent mønster:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Hvis jeg ville oprette en funktion til at vise en hilsen, kunne det se sådan ud:
+Lad os bryde det ned:
+- Nøgleordet `function` fortæller JavaScript "Hey, jeg opretter en funktion!"
+- `nameOfFunction` er, hvor du giver din funktion et beskrivende navn
+- Parenteserne `()` er, hvor du kan tilføje parametre (det kommer vi snart til)
+- Krøllede parenteser `{}` indeholder den faktiske kode, der kører, når du kalder funktionen
+
+Lad os oprette en simpel hilsningsfunktion for at se dette i praksis:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Når vi vil kalde (eller udføre) vores funktion, bruger vi navnet på funktionen efterfulgt af `()`. Det er værd at bemærke, at vores funktion kan defineres før eller efter, vi beslutter at kalde den; JavaScript-kompilatoren vil finde den for dig.
+Denne funktion udskriver "Hello, world!" til konsollen. Når du først har defineret den, kan du bruge den så mange gange, som du har brug for.
+
+For at udføre (eller "kalde") din funktion skal du skrive dens navn efterfulgt af parenteser. JavaScript tillader dig at definere din funktion før eller efter, du kalder den – JavaScript-motoren håndterer eksekveringsrækkefølgen.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Der er en speciel type funktion kendt som en **metode**, som du allerede har brugt! Faktisk så vi dette i vores demo ovenfor, da vi brugte `console.log`. Det, der gør en metode anderledes end en funktion, er, at en metode er knyttet til et objekt (`console` i vores eksempel), mens en funktion er fritstående. Du vil høre mange udviklere bruge disse termer i flæng.
+Når du kører denne linje, udfører den al koden inde i din `displayGreeting`-funktion og viser "Hello, world!" i din browsers konsol. Du kan kalde denne funktion gentagne gange.
+
+> **Note:** Du har brugt **metoder** gennem hele disse lektioner. `console.log()` er en metode – i bund og grund en funktion, der tilhører `console`-objektet. Den væsentlige forskel er, at metoder er knyttet til objekter, mens funktioner står selvstændigt. Mange udviklere bruger disse termer ombytteligt i uformelle samtaler.
 
 ### Bedste praksis for funktioner
 
-Der er nogle få bedste praksis at huske på, når du opretter funktioner:
+Her er nogle tips til at hjælpe dig med at skrive gode funktioner:
 
-- Som altid, brug beskrivende navne, så du ved, hvad funktionen vil gøre
-- Brug **camelCasing** til at kombinere ord
-- Hold dine funktioner fokuseret på en specifik opgave
+- Giv dine funktioner klare, beskrivende navne – din fremtidige selv vil takke dig!
+- Brug **camelCasing** til navne med flere ord (som `calculateTotal` i stedet for `calculate_total`)
+- Hold hver funktion fokuseret på at gøre én ting godt
 
-## Overførsel af information til en funktion
+## At sende information til en funktion
 
-For at gøre en funktion mere genanvendelig vil du ofte gerne overføre information til den. Hvis vi ser på vores `displayGreeting`-eksempel ovenfor, vil det kun vise **Hello, world!**. Ikke den mest nyttige funktion, man kunne oprette. Hvis vi vil gøre den lidt mere fleksibel, som at give nogen mulighed for at angive navnet på den person, der skal hilses, kan vi tilføje en **parameter**. En parameter (nogle gange også kaldet et **argument**) er yderligere information, der sendes til en funktion.
+Vores `displayGreeting`-funktion er begrænset – den kan kun vise "Hello, world!" for alle. Parametre giver os mulighed for at gøre funktioner mere fleksible og nyttige.
 
-Parametre er angivet i definitionsdelen inden for parenteser og er kommaseparerede som følger:
+**Parametre** fungerer som pladsholdere, hvor du kan indsætte forskellige værdier hver gang du bruger funktionen. På denne måde kan den samme funktion arbejde med forskellig information ved hver kald.
+
+Du angiver parametre inden for parenteserne, når du definerer din funktion, og adskiller flere parametre med kommaer:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Vi kan opdatere vores `displayGreeting` til at acceptere et navn og få det vist.
+Hver parameter fungerer som en pladsholder – når nogen kalder din funktion, giver de faktiske værdier, der indsættes i disse pladser.
+
+Lad os opdatere vores hilsningsfunktion til at acceptere en persons navn:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Når vi vil kalde vores funktion og overføre parameteren, angiver vi den i parenteserne.
+Bemærk, hvordan vi bruger backticks (`` ` ``) og `${}` til at indsætte navnet direkte i vores besked – dette kaldes en template literal, og det er en virkelig praktisk måde at bygge strenge med variabler blandet ind.
+
+Nu, når vi kalder vores funktion, kan vi sende ethvert navn:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
+JavaScript tager strengen `'Christopher'`, tildeler den til parameteren `name` og skaber den personlige besked "Hello, Christopher!"
+
 ## Standardværdier
 
-Vi kan gøre vores funktion endnu mere fleksibel ved at tilføje flere parametre. Men hvad hvis vi ikke vil kræve, at hver værdi angives? Hvis vi holder os til vores hilsningseksempel, kunne vi lade navnet være obligatorisk (vi skal vide, hvem vi hilser på), men vi vil give mulighed for, at selve hilsningen kan tilpasses efter ønske. Hvis nogen ikke ønsker at tilpasse det, giver vi en standardværdi i stedet. For at give en standardværdi til en parameter, angiver vi den på samme måde, som vi angiver en værdi for en variabel - `parameterName = 'defaultValue'`. For at se et fuldt eksempel:
+Hvad hvis vi vil gøre nogle parametre valgfrie? Det er her, standardværdier kommer til nytte!
+
+Lad os sige, at vi vil give folk mulighed for at tilpasse hilsningsordet, men hvis de ikke angiver et, bruger vi bare "Hello" som en reserve. Du kan opsætte standardværdier ved at bruge lighedstegnet, ligesom når du sætter en variabel:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Når vi kalder funktionen, kan vi derefter beslutte, om vi vil angive en værdi for `salutation`.
+Her er `name` stadig påkrævet, men `salutation` har en reserveværdi på `'Hello'`, hvis ingen angiver en anden hilsen.
+
+Nu kan vi kalde denne funktion på to forskellige måder:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
+Ved det første kald bruger JavaScript standardværdien "Hello", da vi ikke angav en hilsen. Ved det andet kald bruger den vores tilpassede "Hi" i stedet. Denne fleksibilitet gør funktioner tilpasningsdygtige til forskellige scenarier.
+
 ## Returneringsværdier
 
-Indtil nu vil den funktion, vi har bygget, altid outputte til [konsollen](https://developer.mozilla.org/docs/Web/API/console). Nogle gange kan dette være præcis, hvad vi leder efter, især når vi opretter funktioner, der vil kalde andre tjenester. Men hvad hvis jeg vil oprette en hjælpefunktion til at udføre en beregning og give værdien tilbage, så jeg kan bruge den andre steder?
+Vores funktioner indtil videre har bare udskrevet beskeder til konsollen, men hvad hvis du vil have en funktion til at beregne noget og give dig resultatet tilbage?
 
-Vi kan gøre dette ved at bruge en **returneringsværdi**. En returneringsværdi returneres af funktionen og kan gemmes i en variabel på samme måde, som vi kunne gemme en bogstavelig værdi som en streng eller et tal.
+Det er her **returneringsværdier** kommer ind. I stedet for bare at vise noget kan en funktion give dig en værdi, som du kan gemme i en variabel eller bruge i andre dele af din kode.
 
-Hvis en funktion returnerer noget, bruges nøgleordet `return`. Nøgleordet `return` forventer en værdi eller reference af, hvad der returneres, som følger:
+For at sende en værdi tilbage bruger du nøgleordet `return` efterfulgt af det, du vil returnere:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Vi kunne oprette en funktion til at oprette en hilsningsbesked og returnere værdien tilbage til den, der kalder den.
+Her er noget vigtigt: når en funktion rammer en `return`-sætning, stopper den straks med at køre og sender den værdi tilbage til den, der kaldte den.
+
+Lad os ændre vores hilsningsfunktion til at returnere beskeden i stedet for at udskrive den:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Når vi kalder denne funktion, gemmer vi værdien i en variabel. Dette er meget på samme måde, som vi ville sætte en variabel til en statisk værdi (som `const name = 'Christopher'`).
+Nu, i stedet for at udskrive hilsningen, skaber denne funktion beskeden og giver den tilbage til os.
+
+For at bruge den returnerede værdi kan vi gemme den i en variabel, ligesom enhver anden værdi:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
+Nu indeholder `greetingMessage` "Hello, Christopher", og vi kan bruge den hvor som helst i vores kode – til at vise den på en webside, inkludere den i en e-mail eller sende den til en anden funktion.
+
 ## Funktioner som parametre for funktioner
 
-Når du udvikler dig i din programmeringskarriere, vil du støde på funktioner, der accepterer funktioner som parametre. Dette smarte trick bruges ofte, når vi ikke ved, hvornår noget vil ske eller afsluttes, men vi ved, at vi skal udføre en operation som svar.
+Funktioner kan sendes som parametre til andre funktioner. Selvom dette koncept kan virke komplekst i starten, er det en kraftfuld funktion, der muliggør fleksible programmeringsmønstre.
 
-Som et eksempel kan vi se på [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), som starter en timer og vil udføre kode, når den er færdig. Vi skal fortælle den, hvilken kode vi vil udføre. Lyder som et perfekt job for en funktion!
+Dette mønster er meget almindeligt, når du vil sige "når noget sker, gør dette andet." For eksempel, "når timeren er færdig, kør denne kode" eller "når brugeren klikker på knappen, kald denne funktion."
 
-Hvis du kører koden nedenfor, vil du efter 3 sekunder se beskeden **3 sekunder er gået**.
+Lad os se på `setTimeout`, som er en indbygget funktion, der venter en vis tid og derefter kører noget kode. Vi skal fortælle den, hvilken kode der skal køres – perfekt brugsscenarie til at sende en funktion!
+
+Prøv denne kode – efter 3 sekunder vil du se en besked:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
+Bemærk, hvordan vi sender `displayDone` (uden parenteser) til `setTimeout`. Vi kalder ikke funktionen selv – vi giver den videre til `setTimeout` og siger "kald denne om 3 sekunder."
+
 ### Anonyme funktioner
 
-Lad os tage et nyt kig på, hvad vi har bygget. Vi opretter en funktion med et navn, som kun vil blive brugt én gang. Efterhånden som vores applikation bliver mere kompleks, kan vi se os selv oprette mange funktioner, som kun vil blive kaldt én gang. Dette er ikke ideelt. Som det viser sig, behøver vi ikke altid at give et navn!
+Nogle gange har du brug for en funktion til kun én ting og vil ikke give den et navn. Tænk over det – hvis du kun bruger en funktion én gang, hvorfor så fylde din kode med et ekstra navn?
 
-Når vi overfører en funktion som en parameter, kan vi undgå at oprette en på forhånd og i stedet bygge en som en del af parameteren. Vi bruger det samme nøgleord `function`, men i stedet bygger vi det som en parameter.
+JavaScript lader dig oprette **anonyme funktioner** – funktioner uden navne, som du kan definere lige der, hvor du har brug for dem.
 
-Lad os omskrive koden ovenfor til at bruge en anonym funktion:
+Her er, hvordan vi kan omskrive vores timer-eksempel ved hjælp af en anonym funktion:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Hvis du kører vores nye kode, vil du bemærke, at vi får de samme resultater. Vi har oprettet en funktion, men behøvede ikke at give den et navn!
+Dette opnår det samme resultat, men funktionen er defineret direkte inden for `setTimeout`-kaldet, hvilket eliminerer behovet for en separat funktionsdeklaration.
 
-### Fat arrow-funktioner
+### Fed pil-funktioner
 
-En genvej, der er almindelig i mange programmeringssprog (inklusive JavaScript), er evnen til at bruge det, der kaldes en **arrow** eller **fat arrow**-funktion. Den bruger en speciel indikator `=>`, som ligner en pil - deraf navnet! Ved at bruge `=>` kan vi springe nøgleordet `function` over.
+Moderne JavaScript har en endnu kortere måde at skrive funktioner på, kaldet **pil-funktioner**. De bruger `=>` (som ligner en pil – forstået?) og er super populære blandt udviklere.
 
-Lad os omskrive vores kode endnu en gang til at bruge en fat arrow-funktion:
+Pil-funktioner lader dig springe nøgleordet `function` over og skrive mere kortfattet kode.
+
+Her er vores timer-eksempel ved hjælp af en pil-funktion:
 
 ```javascript
 setTimeout(() => {
@@ -183,22 +225,41 @@ setTimeout(() => {
 }, 3000);
 ```
 
+`()` er, hvor parametre ville gå (tom i dette tilfælde), derefter kommer pilen `=>`, og til sidst funktionskroppen i krøllede parenteser. Dette giver samme funktionalitet med mere kortfattet syntaks.
+
 ### Hvornår skal man bruge hver strategi
 
-Du har nu set, at vi har tre måder at overføre en funktion som en parameter og undrer dig måske over, hvornår man skal bruge hver. Hvis du ved, at du vil bruge funktionen mere end én gang, skal du oprette den som normalt. Hvis du kun vil bruge den til én placering, er det generelt bedst at bruge en anonym funktion. Om du bruger en fat arrow-funktion eller den mere traditionelle `function`-syntaks, er op til dig, men du vil bemærke, at de fleste moderne udviklere foretrækker `=>`.
+Hvornår skal du bruge hver tilgang? En praktisk retningslinje: Hvis du vil bruge funktionen flere gange, skal du give den et navn og definere den separat. Hvis det er til én specifik brug, kan du overveje en anonym funktion. Både pil-funktioner og traditionel syntaks er gyldige valg, selvom pil-funktioner er udbredte i moderne JavaScript-kodebaser.
 
 ---
 
+
+
 ## 🚀 Udfordring
 
-Kan du formulere forskellen mellem funktioner og metoder i én sætning? Giv det et forsøg!
+Kan du formulere forskellen mellem funktioner og metoder i én sætning? Prøv det!
 
-## Quiz efter forelæsning
-[Quiz efter forelæsning](https://ff-quizzes.netlify.app)
+## GitHub Copilot Agent Udfordring 🚀
+
+Brug Agent-tilstand til at fuldføre følgende udfordring:
+
+**Beskrivelse:** Opret et hjælpebibliotek med matematiske funktioner, der demonstrerer forskellige funktionelle koncepter, der er dækket i denne lektion, herunder parametre, standardværdier, returneringsværdier og pil-funktioner.
+
+**Opgave:** Opret en JavaScript-fil kaldet `mathUtils.js`, der indeholder følgende funktioner:
+1. En funktion `add`, der tager to parametre og returnerer deres sum
+2. En funktion `multiply` med standardparameter-værdier (anden parameter har som standard værdien 1)
+3. En pil-funktion `square`, der tager et tal og returnerer dets kvadrat
+4. En funktion `calculate`, der accepterer en anden funktion som parameter og to tal, og derefter anvender funktionen på disse tal
+5. Demonstrer kald af hver funktion med passende testcases
+
+Læs mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
+
+## Quiz efter lektionen
+[Quiz efter lektionen](https://ff-quizzes.netlify.app)
 
 ## Gennemgang & Selvstudie
 
-Det er værd at [læse lidt mere om arrow-funktioner](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), da de i stigende grad bruges i kodebaser. Øv dig i at skrive en funktion og derefter omskrive den med denne syntaks.
+Det er værd at [læse lidt mere om pil-funktioner](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), da de i stigende grad bruges i kodebaser. Øv dig i at skrive en funktion og derefter omskrive den med denne syntaks.
 
 ## Opgave
 
@@ -207,4 +268,4 @@ Det er værd at [læse lidt mere om arrow-funktioner](https://developer.mozilla.
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

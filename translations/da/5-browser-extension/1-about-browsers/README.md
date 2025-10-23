@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-29T08:09:51+00:00",
+  "original_hash": "33a875c522f237a2026e4653240dfc07",
+  "translation_date": "2025-10-23T22:14:23+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "da"
 }
@@ -12,151 +12,303 @@ CO_OP_TRANSLATOR_METADATA:
 ![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.da.jpg)
 > Sketchnote af [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## Quiz før lektionen
+## Quiz før forelæsning
 
-[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/23)
+[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introduktion
 
-Browserudvidelser tilføjer ekstra funktionalitet til en browser. Men før du bygger en, bør du lære lidt om, hvordan browsere fungerer.
+Browserudvidelser er små applikationer, der forbedrer din webbrowseroplevelse. Ligesom Tim Berners-Lees oprindelige vision om en interaktiv web, udvider udvidelser browserens kapaciteter ud over simpel dokumentvisning. Fra adgangskodeadministratorer, der holder dine konti sikre, til farvevælgere, der hjælper designere med at finde de perfekte nuancer, løser udvidelser daglige browsingudfordringer.
 
-### Om browseren
+Før vi bygger din første udvidelse, lad os forstå, hvordan browsere fungerer. Ligesom Alexander Graham Bell måtte forstå lydtransmission, før han opfandt telefonen, vil kendskab til browserens grundlæggende funktioner hjælpe dig med at skabe udvidelser, der integreres problemfrit med eksisterende browsersystemer.
 
-I denne lektionsserie lærer du, hvordan du bygger en browserudvidelse, der fungerer på Chrome, Firefox og Edge. I denne del vil du opdage, hvordan browsere fungerer, og hvordan du opbygger elementerne i en browserudvidelse.
+Ved slutningen af denne lektion vil du forstå browserarkitektur og være begyndt at bygge din første udvidelse.
 
-Men hvad er en browser egentlig? Det er en softwareapplikation, der gør det muligt for en slutbruger at få adgang til indhold fra en server og vise det på websider.
+## Forståelse af webbrowsere
 
-✅ Lidt historie: Den første browser hed 'WorldWideWeb' og blev skabt af Sir Timothy Berners-Lee i 1990.
+En webbrowser er i bund og grund en sofistikeret dokumentfortolker. Når du skriver "google.com" i adressefeltet, udfører browseren en kompleks række operationer - anmoder om indhold fra servere verden over, derefter analyserer og gengiver den kode til de interaktive websider, du ser.
+
+Denne proces afspejler, hvordan den første webbrowser, WorldWideWeb, blev designet af Tim Berners-Lee i 1990 for at gøre hyperlinkede dokumenter tilgængelige for alle.
+
+✅ **Lidt historie**: Den første browser blev kaldt 'WorldWideWeb' og blev skabt af Sir Timothy Berners-Lee i 1990.
 
 ![tidlige browsere](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.da.jpg)
 > Nogle tidlige browsere, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-Når en bruger forbinder til internettet ved hjælp af en URL (Uniform Resource Locator)-adresse, typisk via Hypertext Transfer Protocol med en `http` eller `https` adresse, kommunikerer browseren med en webserver og henter en webside.
+### Hvordan browsere behandler webindhold
 
-På dette tidspunkt viser browserens rendering-motor siden på brugerens enhed, som kan være en mobiltelefon, en stationær computer eller en bærbar.
+Processen fra at indtaste en URL til at se en webside involverer flere koordinerede trin, der sker inden for få sekunder:
 
-Browsere har også evnen til at cache indhold, så det ikke behøver at blive hentet fra serveren hver gang. De kan registrere en brugers browserhistorik, gemme 'cookies', som er små datastykker, der indeholder information om brugerens aktivitet, og meget mere.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-En vigtig ting at huske om browsere er, at de ikke alle er ens! Hver browser har sine styrker og svagheder, og en professionel webudvikler skal forstå, hvordan man får websider til at fungere godt på tværs af browsere. Dette inkluderer at håndtere små skærmstørrelser som en mobiltelefons samt brugere, der er offline.
+**Dette opnår processen:**
+- **Oversætter** den menneskeligt læsbare URL til en server-IP-adresse via DNS-opslag
+- **Etablerer** en sikker forbindelse med webserveren ved hjælp af HTTP- eller HTTPS-protokoller
+- **Anmoder** om det specifikke websideindhold fra serveren
+- **Modtager** HTML-markup, CSS-styling og JavaScript-kode fra serveren
+- **Gengiver** alt indhold til den interaktive webside, du ser
 
-En virkelig nyttig hjemmeside, som du sandsynligvis bør bogmærke i den browser, du foretrækker at bruge, er [caniuse.com](https://www.caniuse.com). Når du bygger websider, er det meget hjælpsomt at bruge caniuse's lister over understøttede teknologier, så du bedst kan støtte dine brugere.
+### Browserens kernefunktioner
 
-✅ Hvordan kan du finde ud af, hvilke browsere der er mest populære blandt brugerne af din hjemmeside? Tjek din analytics - du kan installere forskellige analyseværktøjer som en del af din webudviklingsproces, og de vil fortælle dig, hvilke browsere der bruges mest af de forskellige populære browsere.
+Moderne browsere tilbyder adskillige funktioner, som udvidelsesudviklere kan udnytte:
 
-## Browserudvidelser
+| Funktion | Formål | Muligheder for udvidelser |
+|----------|--------|---------------------------|
+| **Gengivelsesmotor** | Viser HTML, CSS og JavaScript | Indholdsmodifikation, stylingindsprøjtning |
+| **JavaScript-motor** | Udfører JavaScript-kode | Brugerdefinerede scripts, API-interaktioner |
+| **Lokal lagring** | Gemmer data lokalt | Brugerpræferencer, cachelagrede data |
+| **Netværksstak** | Håndterer webanmodninger | Anmodningsovervågning, dataanalyse |
+| **Sikkerhedsmodel** | Beskytter brugere mod skadeligt indhold | Indholdsfiltrering, sikkerhedsforbedringer |
 
-Hvorfor skulle du ønske at bygge en browserudvidelse? Det er en praktisk ting at tilføje til din browser, når du har brug for hurtig adgang til opgaver, som du ofte gentager. For eksempel, hvis du ofte har brug for at tjekke farver på de websider, du interagerer med, kan du installere en farvevælger-browserudvidelse. Hvis du har svært ved at huske adgangskoder, kan du bruge en adgangskodehåndterings-browserudvidelse.
+**At forstå disse funktioner hjælper dig med:**
+- **Identificere** hvor din udvidelse kan tilføje mest værdi
+- **Vælge** de rigtige browser-API'er til din udvidelses funktionalitet
+- **Designe** udvidelser, der fungerer effektivt med browsersystemer
+- **Sikre** at din udvidelse følger browserens sikkerhedsbedste praksis
 
-Browserudvidelser er også sjove at udvikle. De har en tendens til at håndtere et begrænset antal opgaver, som de udfører godt.
+### Overvejelser om udvikling på tværs af browsere
 
-✅ Hvad er dine yndlingsbrowserudvidelser? Hvilke opgaver udfører de?
+Forskellige browsere implementerer standarder med små variationer, ligesom forskellige programmeringssprog kan håndtere den samme algoritme forskelligt. Chrome, Firefox og Safari har hver deres unikke karakteristika, som udviklere skal tage højde for under udvidelsesudvikling.
 
-### Installation af udvidelser
+> 💡 **Pro Tip**: Brug [caniuse.com](https://www.caniuse.com) til at tjekke, hvilke webteknologier der understøttes på tværs af forskellige browsere. Dette er uvurderligt, når du planlægger din udvidelses funktioner!
 
-Før du begynder at bygge, skal du tage et kig på processen med at bygge og implementere en browserudvidelse. Selvom hver browser varierer lidt i, hvordan de håndterer denne opgave, er processen på Chrome og Firefox nogenlunde den samme som dette eksempel på Edge:
+**Vigtige overvejelser for udvidelsesudvikling:**
+- **Test** din udvidelse på tværs af Chrome, Firefox og Edge-browsere
+- **Tilpas** til forskellige browserudvidelses-API'er og manifestformater
+- **Håndter** varierende ydeevneegenskaber og begrænsninger
+- **Tilbyd** alternativer for browserspecifikke funktioner, der måske ikke er tilgængelige
+
+✅ **Analyseindsigt**: Du kan finde ud af, hvilke browsere dine brugere foretrækker, ved at installere analysepakker i dine webudviklingsprojekter. Disse data hjælper dig med at prioritere, hvilke browsere der skal understøttes først.
+
+## Forståelse af browserudvidelser
+
+Browserudvidelser løser almindelige webbrowserudfordringer ved at tilføje funktionalitet direkte til browserens grænseflade. I stedet for at kræve separate applikationer eller komplekse arbejdsgange, giver udvidelser øjeblikkelig adgang til værktøjer og funktioner.
+
+Dette koncept afspejler, hvordan tidlige computerpionerer som Douglas Engelbart forestillede sig at forstærke menneskelige kapaciteter med teknologi - udvidelser forstærker browserens grundlæggende funktionalitet.
+
+**Populære udvidelseskategorier og deres fordele:**
+- **Produktivitetsværktøjer**: Opgavestyring, notatapps og tidsregistrering, der hjælper dig med at holde dig organiseret
+- **Sikkerhedsforbedringer**: Adgangskodeadministratorer, annonceblokering og privatlivsværktøjer, der beskytter dine data
+- **Udviklingsværktøjer**: Kodeformateringsværktøjer, farvevælgere og fejlfindingsværktøjer, der effektiviserer udviklingen
+- **Indholdsforbedring**: Læsetilstande, videodownloadere og skærmbilledeværktøjer, der forbedrer din weboplevelse
+
+✅ **Reflektionsspørgsmål**: Hvad er dine yndlingsbrowserudvidelser? Hvilke specifikke opgaver udfører de, og hvordan forbedrer de din browseroplevelse?
+
+## Installation og administration af udvidelser
+
+At forstå udvidelsesinstallationsprocessen hjælper dig med at forudse brugeroplevelsen, når folk installerer din udvidelse. Installationsprocessen er standardiseret på tværs af moderne browsere, med mindre variationer i grænsefladedesign.
 
 ![skærmbillede af Edge-browseren, der viser den åbne edge://extensions-side og åbne indstillingsmenu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.da.png)
 
-> Bemærk: Sørg for at slå udviklertilstand til og tillade udvidelser fra andre butikker.
+> **Vigtigt**: Sørg for at aktivere udviklertilstand og tillade udvidelser fra andre butikker, når du tester dine egne udvidelser.
 
-I det væsentlige vil processen være:
+### Udviklingsudvidelses installationsproces
 
-- byg din udvidelse ved hjælp af `npm run build` 
-- naviger i browseren til udvidelsespanelet ved hjælp af knappen "Indstillinger og mere" (ikonet `...`) øverst til højre
-- hvis det er en ny installation, vælg `load unpacked` for at uploade en ny udvidelse fra dens build-mappe (i vores tilfælde er det `/dist`) 
-- eller klik på `reload`, hvis du genindlæser en allerede installeret udvidelse
+Når du udvikler og tester dine egne udvidelser, skal du følge denne arbejdsgang:
 
-✅ Disse instruktioner gælder for udvidelser, du selv bygger; for at installere udvidelser, der er udgivet i browserens udvidelsesbutik, skal du navigere til disse [butikker](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) og installere den udvidelse, du ønsker.
-
-### Kom i gang
-
-Du skal bygge en browserudvidelse, der viser din regions CO2-aftryk, herunder energiforbrug og energikilde. Udvidelsen vil have en formular, der indsamler en API-nøgle, så du kan få adgang til CO2 Signal's API.
-
-**Du skal bruge:**
-
-- [en API-nøgle](https://www.co2signal.com/); indtast din e-mail i boksen på denne side, og en nøgle vil blive sendt til dig
-- koden for din region fra [Electricity Map](http://api.electricitymap.org/v3/zones) (for eksempel bruger jeg 'US-NEISO' i Boston)
-- [startkoden](../../../../5-browser-extension/start). Download `start`-mappen; du skal færdiggøre koden i denne mappe.
-- [NPM](https://www.npmjs.com) - NPM er et værktøj til pakkehåndtering; installer det lokalt, og de pakker, der er angivet i din `package.json`-fil, vil blive installeret til brug i dit webprojekt
-
-✅ Lær mere om pakkehåndtering i dette [fremragende Learn-modul](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
-
-Tag et øjeblik til at kigge på kodebasen:
-
-dist
-    -|manifest.json (standardindstillinger her)
-    -|index.html (HTML-markup til front-end her)
-    -|background.js (baggrunds-JS her)
-    -|main.js (bygget JS)
-src
-    -|index.js (din JS-kode går her)
-
-✅ Når du har din API-nøgle og regionskode klar, skal du gemme dem et sted som en note til senere brug.
-
-### Byg HTML til udvidelsen
-
-Denne udvidelse har to visninger. En til at indsamle API-nøglen og regionskoden:
-
-![skærmbillede af den færdige udvidelse åbnet i en browser, der viser en formular med inputfelter til regionsnavn og API-nøgle.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.da.png)
-
-Og den anden til at vise regionens CO2-forbrug:
-
-![skærmbillede af den færdige udvidelse, der viser værdier for CO2-forbrug og procentdelen af fossile brændstoffer for regionen US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.da.png)
-
-Lad os starte med at bygge HTML til formularen og style den med CSS.
-
-I `/dist`-mappen skal du bygge en formular og et resultatområde. I `index.html`-filen skal du udfylde det afgrænsede formularområde:
-
-```HTML
-<form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
+```bash
+# Step 1: Build your extension
+npm run build
 ```
-Dette er formularen, hvor dine gemte oplysninger vil blive indtastet og gemt i lokal lagring.
 
-Dernæst skal du oprette resultatområdet; under den sidste form-tag skal du tilføje nogle divs:
+**Hvad denne kommando opnår:**
+- **Kompilerer** din kildekode til browserklare filer
+- **Pakker** JavaScript-moduler i optimerede pakker
+- **Genererer** de endelige udvidelsesfiler i `/dist`-mappen
+- **Forbereder** din udvidelse til installation og test
 
-```HTML
+**Trin 2: Naviger til browserudvidelser**
+1. **Åbn** din browsers udvidelsesadministrationsside
+2. **Klik** på "Indstillinger og mere"-knappen (ikonet `...`) øverst til højre
+3. **Vælg** "Udvidelser" fra rullemenuen
+
+**Trin 3: Indlæs din udvidelse**
+- **For nye installationer**: Vælg `load unpacked` og vælg din `/dist`-mappe
+- **For opdateringer**: Klik på `reload` ved siden af din allerede installerede udvidelse
+- **For test**: Aktiver "Udviklertilstand" for at få adgang til yderligere fejlfindingsfunktioner
+
+### Produktion Udvidelsesinstallation
+
+> ✅ **Bemærk**: Disse udviklingsinstruktioner er specifikt for udvidelser, du selv bygger. For at installere offentliggjorte udvidelser, besøg de officielle browserudvidelsesbutikker som [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
+
+**Forstå forskellen:**
+- **Udviklingsinstallationer** giver dig mulighed for at teste upublicerede udvidelser under udvikling
+- **Butiksinstallationer** tilbyder godkendte, offentliggjorte udvidelser med automatiske opdateringer
+- **Sideloading** tillader installation af udvidelser fra udenfor officielle butikker (kræver udviklertilstand)
+
+## Bygning af din CO2-fodaftryk-udvidelse
+
+Vi vil skabe en browserudvidelse, der viser CO2-fodaftrykket af din regions energiforbrug. Dette projekt demonstrerer essentielle udvidelsesudviklingskoncepter, mens det skaber et praktisk værktøj til miljøbevidsthed.
+
+Denne tilgang følger princippet om "learning by doing", som har vist sig effektivt siden John Deweys uddannelsesteorier - kombinerer tekniske færdigheder med meningsfulde virkelige applikationer.
+
+### Projektkrav
+
+Før du begynder udviklingen, lad os samle de nødvendige ressourcer og afhængigheder:
+
+**Påkrævet API-adgang:**
+- **[CO2 Signal API-nøgle](https://www.co2signal.com/)**: Indtast din e-mailadresse for at modtage din gratis API-nøgle
+- **[Regionskode](http://api.electricitymap.org/v3/zones)**: Find din regionskode ved hjælp af [Electricity Map](https://www.electricitymap.org/map) (for eksempel bruger Boston 'US-NEISO')
+
+**Udviklingsværktøjer:**
+- **[Node.js og NPM](https://www.npmjs.com)**: Pakkehåndteringsværktøj til installation af projektets afhængigheder
+- **[Startkode](../../../../5-browser-extension/start)**: Download `start`-mappen for at begynde udviklingen
+
+✅ **Lær Mere**: Forbedr dine færdigheder inden for pakkehåndtering med dette [omfattende Learn-modul](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+
+### Forståelse af projektstrukturen
+
+At forstå projektstrukturen hjælper med at organisere udviklingsarbejdet effektivt. Ligesom hvordan Biblioteket i Alexandria blev organiseret for nem videnhentning, gør en velstruktureret kodebase udviklingen mere effektiv:
+
+```
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
+
+**Hvad hver fil opnår:**
+- **`manifest.json`**: **Definerer** udvidelses metadata, tilladelser og indgangspunkter
+- **`index.html`**: **Skaber** brugergrænsefladen, der vises, når brugere klikker på din udvidelse
+- **`background.js`**: **Håndterer** baggrundsopgaver og browserhændelseslyttere
+- **`main.js`**: **Indeholder** den endelige bundtede JavaScript efter byggeprocessen
+- **`src/index.js`**: **Indeholder** din hovedudviklingskode, der bliver kompileret til `main.js`
+
+> 💡 **Organisations Tip**: Gem din API-nøgle og regionskode i en sikker note for nem reference under udviklingen. Du vil få brug for disse værdier for at teste din udvidelses funktionalitet.
+
+✅ **Sikkerhedsnotat**: Undlad at gemme API-nøgler eller følsomme legitimationsoplysninger i dit koderepository. Vi viser dig, hvordan du håndterer disse sikkert i de næste trin.
+
+## Skabelse af udvidelsesgrænsefladen
+
+Nu bygger vi komponenterne til brugergrænsefladen. Udvidelsen bruger en to-skærms tilgang: en konfigurationsskærm til den første opsætning og en resultatskærm til datavisning.
+
+Dette følger princippet om progressiv afsløring, der bruges i grænsefladedesign siden de tidlige dage af computing - at afsløre information og muligheder i en logisk rækkefølge for at undgå at overvælde brugerne.
+
+### Oversigt over udvidelsesvisninger
+
+**Opsætningsvisning** - Førstegangs brugeropsætning:
+![skærmbillede af den færdige udvidelse åbnet i en browser, der viser en formular med inputfelter for regionsnavn og API-nøgle.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.da.png)
+
+**Resultatvisning** - Visning af CO2-fodaftryksdata:
+![skærmbillede af den færdige udvidelse, der viser værdier for CO2-forbrug og procentdel af fossile brændstoffer for regionen US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.da.png)
+
+### Bygning af konfigurationsformularen
+
+Opsætningsformularen indsamler brugerens konfigurationsdata under første brug. Når den er konfigureret, gemmes disse oplysninger i browserens lager til fremtidige sessioner.
+
+I filen `/dist/index.html`, tilføj denne formularstruktur:
+
+```html
+<form class="form-data" autocomplete="on">
+    <div>
+        <h2>New? Add your Information</h2>
+    </div>
+    <div>
+        <label for="region">Region Name</label>
+        <input type="text" id="region" required class="region-name" />
+    </div>
+    <div>
+        <label for="api">Your API Key from tmrow</label>
+        <input type="text" id="api" required class="api-key" />
+    </div>
+    <button class="search-btn">Submit</button>
+</form>
+```
+
+**Hvad denne formular opnår:**
+- **Skaber** en semantisk formularstruktur med korrekte etiketter og inputforbindelser
+- **Muliggør** browserens autofuldførelsesfunktionalitet for forbedret brugeroplevelse
+- **Kræver** begge felter udfyldt før indsendelse ved hjælp af attributten `required`
+- **Organiserer** input med beskrivende klassenavne for nem styling og JavaScript-målretning
+- **Giver** klare instruktioner til brugere, der opsætter udvidelsen for første gang
+
+### Bygning af resultatvisningen
+
+Dernæst opretter vi resultatområdet, der viser CO2-fodaftryksdataene. Tilføj denne HTML under formularen:
+
+```html
 <div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
+    <div class="loading">loading...</div>
+    <div class="errors"></div>
+    <div class="data"></div>
+    <div class="result-container">
+        <p><strong>Region: </strong><span class="my-region"></span></p>
+        <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+        <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+    </div>
+    <button class="clear-btn">Change region</button>
 </div>
 ```
-På dette tidspunkt kan du prøve at bygge. Sørg for at installere pakkeafhængighederne for denne udvidelse:
 
-```
+**Hvad denne struktur tilbyder:**
+- **`loading`**: **Viser** en indlæsningsmeddelelse, mens API-data hentes
+- **`errors`**: **Viser** fejlmeddelelser, hvis API-opkald mislykkes eller data er ugyldige
+- **`data`**: **Indeholder** rå data til fejlfinding under udvikling
+- **`result-container`**: **Præsenterer** formateret CO2-fodaftryksinformation til brugere
+- **`clear-btn`**: **Giver** brugere mulighed for at ændre deres region og rekonfigurere udvidelsen
+
+### Opsætning af byggeprocessen
+
+Lad os nu installere projektets afhængigheder og teste byggeprocessen:
+
+```bash
 npm install
 ```
 
-Denne kommando vil bruge npm, Node Package Manager, til at installere webpack til din udvidelses byggeproces. Webpack er en bundler, der håndterer kompilering af kode. Du kan se outputtet af denne proces ved at kigge i `/dist/main.js` - du vil se, at koden er blevet bundlet.
+**Hvad denne installationsproces opnår:**
+- **Downloader** Webpack og andre udviklingsafhængigheder specificeret i `package.json`
+- **Konfigurerer** byggeværktøjskæden til at kompilere moderne JavaScript
+- **Forbereder** udviklingsmiljøet til udvidelsesbygning og test
+- **Muliggør** kodebundtning, optimering og funktioner til kompatibilitet på tværs af browsere
 
-For nu bør udvidelsen bygge, og hvis du implementerer den i Edge som en udvidelse, vil du se en pænt vist formular.
+> 💡 **Indsigt i byggeprocessen**: Webpack bundter din kildekode fra `/src/index.js` til `/dist/main.js`. Denne proces optimerer din kode til produktion og sikrer browserkompatibilitet.
 
-Tillykke, du har taget de første skridt mod at bygge en browserudvidelse. I de næste lektioner vil du gøre den mere funktionel og nyttig.
+### Test af din fremgang
 
----
+På dette tidspunkt kan du teste din udvidelse:
+
+1. **Kør** byggekommandoen for at kompilere din kode
+2. **Indlæs** udvidelsen i din browser ved hjælp af udviklertilstand
+3. **Bekræft** at formularen vises korrekt og ser professionel ud
+4. **Kontroller** at alle formelementer er korrekt justeret og funktionelle
+
+**Hvad du har opnået:**
+- **Bygget** den grundlæggende HTML-struktur til din udvidelse
+- **Skabt** både konfigurations- og resultatgrænseflader med korrekt semantisk markup
+- **Opsat** en moderne udviklingsarbejdsgang ved hjælp af industristandardværktøjer
+- **Forberedt** fundamentet til at tilføje interaktiv JavaScript-funktionalitet
+
+Du har fuldført den første fase af browserudvidelsesudvikling. Ligesom hvordan Wright-brødrene først måtte forstå aerodynamik, før de opnåede flyvning, forbereder forståelsen af disse grundlæggende koncepter dig til at bygge mere komplekse interaktive funktioner i den næste lektion.
+
+## GitHub Copilot Agent Challenge 🚀
+
+Brug Agent-tilstand til at fuldføre følgende udfordring:
+**Beskrivelse:** Forbedr browserudvidelsen ved at tilføje formularvalidering og brugerfeedbackfunktioner for at forbedre brugeroplevelsen, når der indtastes API-nøgler og regionskoder.
+
+**Opgave:** Opret JavaScript-valideringsfunktioner, der kontrollerer, om API-nøglefeltet indeholder mindst 20 tegn, og om regionskoden følger det korrekte format (som 'US-NEISO'). Tilføj visuel feedback ved at ændre inputgrænsefarver til grøn for gyldige input og rød for ugyldige. Tilføj også en skiftefunktion til at vise/skjule API-nøglen af sikkerhedsmæssige årsager.
+
+Læs mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
 
 ## 🚀 Udfordring
 
-Tag et kig på en browserudvidelsesbutik, og installer en udvidelse i din browser. Du kan undersøge dens filer på interessante måder. Hvad opdager du?
+Tag et kig på en browserudvidelsesbutik og installer en udvidelse i din browser. Du kan undersøge dens filer på interessante måder. Hvad opdager du?
 
 ## Quiz efter lektionen
 
@@ -164,7 +316,7 @@ Tag et kig på en browserudvidelsesbutik, og installer en udvidelse i din browse
 
 ## Gennemgang & Selvstudie
 
-I denne lektion lærte du lidt om webbrowserens historie; brug denne mulighed til at lære om, hvordan opfinderne af World Wide Web forestillede sig dens brug ved at læse mere om dens historie. Nogle nyttige sider inkluderer:
+I denne lektion lærte du lidt om webbrowserens historie; benyt lejligheden til at lære om, hvordan opfinderne af World Wide Web forestillede sig dens anvendelse ved at læse mere om dens historie. Nogle nyttige sider inkluderer:
 
 [Historien om webbrowsere](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -179,4 +331,4 @@ I denne lektion lærte du lidt om webbrowserens historie; brug denne mulighed ti
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

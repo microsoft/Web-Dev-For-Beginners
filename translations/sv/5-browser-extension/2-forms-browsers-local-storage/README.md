@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T07:53:19+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-23T21:50:00+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sv"
 }
 -->
 # Webbläsartillägg Projekt Del 2: Anropa en API, använd Lokal Lagring
 
-## Förhandsquiz
+## Förföreläsningsquiz
 
-[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/25)
+[Förföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Introduktion
+## Introduktion
 
-I denna lektion kommer du att anropa en API genom att skicka in formuläret i ditt webbläsartillägg och visa resultaten i tillägget. Dessutom kommer du att lära dig hur du kan lagra data i webbläsarens lokala lagring för framtida referens och användning.
+Kommer du ihåg det webbläsartillägg du började bygga? Just nu har du ett snyggt formulär, men det är i princip statiskt. Idag ska vi ge det liv genom att koppla det till verklig data och ge det minne.
+
+Tänk på Apollo-uppdragskontrollens datorer - de visade inte bara fast information. De kommunicerade ständigt med rymdfarkosten, uppdaterades med telemetridata och kom ihåg kritiska uppdragsparametrar. Det är den typen av dynamiskt beteende vi bygger idag. Ditt tillägg kommer att nå ut på internet, hämta verklig miljödata och komma ihåg dina inställningar till nästa gång.
+
+API-integrering kan låta komplext, men det handlar egentligen bara om att lära din kod att kommunicera med andra tjänster. Oavsett om du hämtar väderdata, sociala medieflöden eller information om koldioxidavtryck som vi ska göra idag, handlar det om att etablera dessa digitala kopplingar. Vi kommer också att utforska hur webbläsare kan lagra information - ungefär som hur bibliotek har använt kortkataloger för att komma ihåg var böcker hör hemma.
+
+I slutet av denna lektion kommer du att ha ett webbläsartillägg som hämtar verklig data, lagrar användarpreferenser och ger en smidig upplevelse. Låt oss sätta igång!
 
 ✅ Följ de numrerade segmenten i de relevanta filerna för att veta var du ska placera din kod.
 
-### Ställ in elementen att manipulera i tillägget:
+## Ställ in elementen att manipulera i tillägget
 
-Vid det här laget har du byggt HTML för formuläret och resultat-`<div>` för ditt webbläsartillägg. Från och med nu behöver du arbeta i filen `/src/index.js` och bygga ditt tillägg steg för steg. Hänvisa till [föregående lektion](../1-about-browsers/README.md) för att få ditt projekt uppsatt och för byggprocessen.
+Innan din JavaScript kan manipulera gränssnittet behöver det referenser till specifika HTML-element. Tänk på det som ett teleskop som behöver riktas mot specifika stjärnor - innan Galileo kunde studera Jupiters månar, var han tvungen att lokalisera och fokusera på Jupiter själv.
 
-Arbeta i din `index.js`-fil och börja med att skapa några `const`-variabler för att hålla värdena som är kopplade till olika fält:
+I din `index.js`-fil skapar vi `const`-variabler som fångar referenser till varje viktigt formulärelement. Detta liknar hur forskare märker sin utrustning - istället för att söka genom hela laboratoriet varje gång kan de direkt komma åt det de behöver.
 
-```JavaScript
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,120 +47,173 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Alla dessa fält refereras till med sina CSS-klasser, som du ställde in i HTML i föregående lektion.
+**Vad denna kod gör:**
+- **Fångar** formulärelement med `document.querySelector()` och CSS-klassväljare
+- **Skapar** referenser till inmatningsfält för regionnamn och API-nyckel
+- **Etablerar** kopplingar till resultatvisningselement för koldioxidanvändningsdata
+- **Ställer in** åtkomst till UI-element som laddningsindikatorer och felmeddelanden
+- **Lagrar** varje elementreferens i en `const`-variabel för enkel återanvändning i din kod
 
-### Lägg till lyssnare
+## Lägg till händelselyssnare
 
-Lägg sedan till eventlyssnare för formuläret och rensningsknappen som återställer formuläret, så att något händer om en användare skickar in formuläret eller klickar på återställningsknappen. Lägg också till anropet för att initiera appen längst ner i filen:
+Nu ska vi få ditt tillägg att reagera på användarens handlingar. Händelselyssnare är din kods sätt att övervaka användarinteraktioner. Tänk på dem som operatörerna i tidiga telefonväxlar - de lyssnade efter inkommande samtal och kopplade rätt kretsar när någon ville göra en anslutning.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Notera den förkortade syntaxen som används för att lyssna på ett submit- eller klick-event, och hur eventet skickas till funktionerna handleSubmit eller reset. Kan du skriva motsvarigheten till denna förkortning i ett längre format? Vilken föredrar du?
+**Förstå dessa koncept:**
+- **Fäster** en lyssnare för inskickning till formuläret som triggas när användare trycker på Enter eller klickar på skicka
+- **Kopplar** en klicklyssnare till rensa-knappen för att återställa formuläret
+- **Skickar** händelseobjektet `(e)` till hanteringsfunktioner för ytterligare kontroll
+- **Anropar** funktionen `init()` direkt för att ställa in tilläggets initiala tillstånd
 
-### Bygg init()-funktionen och reset()-funktionen:
+✅ Lägg märke till den korta pilfunktionssyntaxen som används här. Denna moderna JavaScript-metod är renare än traditionella funktionsuttryck, men båda fungerar lika bra!
 
-Nu ska du bygga funktionen som initierar tillägget, kallad init():
+## Bygg initialiserings- och återställningsfunktioner
 
-```JavaScript
+Låt oss skapa initialiseringslogiken för ditt tillägg. Funktionen `init()` är som ett skepps navigationssystem som kontrollerar sina instrument - den avgör det aktuella tillståndet och justerar gränssnittet därefter. Den kontrollerar om någon har använt ditt tillägg tidigare och laddar deras tidigare inställningar.
+
+Funktionen `reset()` ger användare en ny start - ungefär som hur forskare återställer sina instrument mellan experiment för att säkerställa ren data.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
-I denna funktion finns det intressant logik. När du läser igenom den, kan du se vad som händer?
 
-- Två `const` sätts upp för att kontrollera om användaren har lagrat en API-nyckel och regionskod i lokal lagring.
-- Om någon av dessa är null, visa formuläret genom att ändra dess stil till att visas som 'block'.
-- Dölj resultaten, laddningsindikatorn och clearBtn och sätt eventuell feltext till en tom sträng.
-- Om det finns en nyckel och region, starta en rutin för att:
-  - Anropa API:t för att få data om koldioxidanvändning.
-  - Dölj resultatområdet.
-  - Dölj formuläret.
-  - Visa återställningsknappen.
+**Bryta ner vad som händer här:**
+- **Hämtar** lagrad API-nyckel och region från webbläsarens lokala lagring
+- **Kontrollerar** om detta är en förstagångsanvändare (inga lagrade uppgifter) eller återkommande användare
+- **Visar** inställningsformuläret för nya användare och döljer andra gränssnittselement
+- **Laddar** sparad data automatiskt för återkommande användare och visar återställningsalternativet
+- **Hantera** användargränssnittets tillstånd baserat på tillgänglig data
 
-Innan du går vidare är det användbart att lära sig om ett mycket viktigt koncept som finns tillgängligt i webbläsare: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage är ett användbart sätt att lagra strängar i webbläsaren som ett `key-value`-par. Denna typ av webblagring kan manipuleras med JavaScript för att hantera data i webbläsaren. LocalStorage löper inte ut, medan SessionStorage, en annan typ av webblagring, rensas när webbläsaren stängs. De olika typerna av lagring har för- och nackdelar med sin användning.
+**Nyckelkoncept om Lokal Lagring:**
+- **Består** data mellan webbläsarsessioner (till skillnad från sessionslagring)
+- **Lagrar** data som nyckel-värdepar med `getItem()` och `setItem()`
+- **Returnerar** `null` när ingen data finns för en given nyckel
+- **Ger** ett enkelt sätt att komma ihåg användarpreferenser och inställningar
 
-> Notera - ditt webbläsartillägg har sin egen lokala lagring; huvudwebbläsarfönstret är en separat instans och beter sig annorlunda.
+> 💡 **Förstå Webbläsarlagring**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) är som att ge ditt tillägg ett bestående minne. Tänk på hur det antika biblioteket i Alexandria lagrade skriftrullar - informationen förblev tillgänglig även när forskare lämnade och återvände.
+>
+> **Nyckelkarakteristika:**
+> - **Består** data även efter att du stänger din webbläsare
+> - **Överlever** omstarter av datorn och webbläsarkrascher
+> - **Ger** betydande lagringsutrymme för användarpreferenser
+> - **Erbjuder** omedelbar åtkomst utan nätverksfördröjningar
 
-Du ställer in din API-nyckel med ett strängvärde, till exempel, och du kan se att den är inställd i Edge genom att "inspektera" en webbsida (du kan högerklicka på en webbläsare för att inspektera) och gå till fliken Applications för att se lagringen.
+Du kan se din lagrade data genom att öppna webbläsarens utvecklarverktyg (F12), navigera till fliken **Application** och expandera sektionen **Local Storage**.
 
 ![Panel för lokal lagring](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sv.png)
 
-✅ Fundera på situationer där du INTE skulle vilja lagra viss data i LocalStorage. Generellt sett är det en dålig idé att placera API-nycklar i LocalStorage! Kan du se varför? I vårt fall, eftersom vår app är enbart för lärande och inte kommer att distribueras till en appbutik, kommer vi att använda denna metod.
+> ⚠️ **Säkerhetsövervägande**: I produktionsapplikationer utgör lagring av API-nycklar i LocalStorage säkerhetsrisker eftersom JavaScript kan komma åt denna data. För inlärningsändamål fungerar denna metod bra, men riktiga applikationer bör använda säker serverlagring för känsliga uppgifter.
 
-Notera att du använder Web API för att manipulera LocalStorage, antingen genom att använda `getItem()`, `setItem()` eller `removeItem()`. Det stöds brett över webbläsare.
+## Hantera formulärinskickning
 
-Innan du bygger funktionen `displayCarbonUsage()` som anropas i `init()`, låt oss bygga funktionaliteten för att hantera den initiala formulärinlämningen.
+Nu ska vi hantera vad som händer när någon skickar in ditt formulär. Som standard laddar webbläsare om sidan när formulär skickas in, men vi kommer att avbryta detta beteende för att skapa en smidigare upplevelse.
 
-### Hantera formulärinlämningen
+Denna metod speglar hur uppdragskontroll hanterar rymdfarkostkommunikation - istället för att återställa hela systemet för varje överföring, upprätthåller de kontinuerlig drift medan de bearbetar ny information.
 
-Skapa en funktion kallad `handleSubmit` som accepterar ett event-argument `(e)`. Stoppa eventet från att spridas (i detta fall vill vi stoppa webbläsaren från att uppdatera) och anropa en ny funktion, `setUpUser`, med argumenten `apiKey.value` och `region.value`. På detta sätt använder du de två värdena som hämtas via det initiala formuläret när de relevanta fälten är ifyllda.
+Skapa en funktion som fångar formulärinskickningshändelsen och extraherar användarens inmatning:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
-✅ Fräscha upp ditt minne - HTML:en du ställde in i förra lektionen har två inmatningsfält vars `values` fångas via `const` du ställde in högst upp i filen, och de är båda `required` så att webbläsaren hindrar användare från att mata in null-värden.
 
-### Ställ in användaren
+**I ovanstående har vi:**
+- **Förhindrar** standardbeteendet för formulärinskickning som skulle uppdatera sidan
+- **Extraherar** användarinmatningsvärden från API-nyckel- och regionfälten
+- **Skickar** formulärdata till funktionen `setUpUser()` för bearbetning
+- **Upprätthåller** en en-sidig applikationsbeteende genom att undvika siduppdateringar
 
-Vidare till funktionen `setUpUser`, här ställer du in värden för lokal lagring för apiKey och regionName. Lägg till en ny funktion:
+✅ Kom ihåg att dina HTML-formulärfält inkluderar attributet `required`, så webbläsaren validerar automatiskt att användare tillhandahåller både API-nyckel och region innan denna funktion körs.
 
-```JavaScript
+## Ställ in användarpreferenser
+
+Funktionen `setUpUser` ansvarar för att spara användarens uppgifter och initiera det första API-anropet. Detta skapar en smidig övergång från inställning till att visa resultat.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-Denna funktion visar ett laddningsmeddelande medan API:t anropas. Vid denna punkt har du kommit fram till att skapa den viktigaste funktionen i detta webbläsartillägg!
 
-### Visa koldioxidanvändning
+**Steg för steg, här är vad som händer:**
+- **Sparar** API-nyckeln och regionnamnet i lokal lagring för framtida användning
+- **Visar** en laddningsindikator för att informera användare om att data hämtas
+- **Rensar** eventuella tidigare felmeddelanden från visningen
+- **Avslöjar** rensa-knappen för användare att återställa sina inställningar senare
+- **Initierar** API-anropet för att hämta verklig koldioxidanvändningsdata
 
-Slutligen är det dags att fråga API:t!
+Denna funktion skapar en sömlös användarupplevelse genom att hantera både datalagring och gränssnittsuppdateringar i en samordnad åtgärd.
 
-Innan vi går vidare bör vi diskutera API:er. API:er, eller [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), är en kritisk del av en webbutvecklares verktygslåda. De tillhandahåller standardiserade sätt för program att interagera och kommunicera med varandra. Till exempel, om du bygger en webbplats som behöver fråga en databas, kanske någon har skapat en API för dig att använda. Även om det finns många typer av API:er, är en av de mest populära en [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+## Visa koldioxidanvändningsdata
 
-✅ Termen 'REST' står för 'Representational State Transfer' och innebär att använda olika konfigurerade URL:er för att hämta data. Gör lite research om de olika typerna av API:er som finns tillgängliga för utvecklare. Vilket format tilltalar dig?
+Nu ska vi koppla ditt tillägg till externa datakällor via API:er. Detta förvandlar ditt tillägg från ett fristående verktyg till något som kan få tillgång till realtidsinformation från hela internet.
 
-Det finns viktiga saker att notera om denna funktion. Först, notera nyckelordet [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Att skriva dina funktioner så att de körs asynkront innebär att de väntar på en åtgärd, såsom att data returneras, innan de fortsätter.
+**Förstå API:er**
+
+[API:er](https://www.webopedia.com/TERM/A/API.html) är hur olika applikationer kommunicerar med varandra. Tänk på dem som telegrafsystemet som kopplade avlägsna städer på 1800-talet - operatörer skickade förfrågningar till avlägsna stationer och fick svar med den begärda informationen. Varje gång du kollar sociala medier, ställer en fråga till en röstassistent eller använder en leveransapp, underlättar API:er dessa datautbyten.
+
+**Nyckelkoncept om REST API:er:**
+- **REST** står för 'Representational State Transfer'
+- **Använder** standard HTTP-metoder (GET, POST, PUT, DELETE) för att interagera med data
+- **Returnerar** data i förutsägbara format, vanligtvis JSON
+- **Tillhandahåller** konsekventa, URL-baserade slutpunkter för olika typer av förfrågningar
+
+✅ [CO2 Signal API](https://www.co2signal.com/) vi ska använda tillhandahåller realtidsdata om koldioxidintensitet från elektriska nät världen över. Detta hjälper användare att förstå miljöpåverkan av deras elförbrukning!
+
+> 💡 **Förstå Asynkron JavaScript**: Nyckelordet [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) gör det möjligt för din kod att hantera flera operationer samtidigt. När du begär data från en server vill du inte att hela tillägget ska frysa - det skulle vara som att flygtrafikledningen stoppar all verksamhet medan de väntar på svar från ett flygplan.
+>
+> **Nyckelfördelar:**
+> - **Upprätthåller** tilläggets responsivitet medan data laddas
+> - **Tillåter** annan kod att fortsätta exekveras under nätverksförfrågningar
+> - **Förbättrar** kodläsbarheten jämfört med traditionella callback-mönster
+> - **Möjliggör** graciös felhantering för nätverksproblem
 
 Här är en snabb video om `async`:
 
@@ -162,76 +221,125 @@ Här är en snabb video om `async`:
 
 > 🎥 Klicka på bilden ovan för en video om async/await.
 
-Skapa en ny funktion för att fråga C02Signal API:
+Skapa funktionen för att hämta och visa koldioxidanvändningsdata:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Detta är en stor funktion. Vad händer här?
+**Bryta ner vad som händer här:**
+- **Använder** den moderna `fetch()`-API:n istället för externa bibliotek som Axios för renare, beroendefri kod
+- **Implementerar** korrekt felkontroll med `response.ok` för att fånga API-fel tidigt
+- **Hantera** asynkrona operationer med `async/await` för mer läsbar kodflöde
+- **Autentiserar** med CO2 Signal API med hjälp av `auth-token`-headern
+- **Analyserar** JSON-svar och extraherar information om koldioxidintensitet
+- **Uppdaterar** flera UI-element med formaterad miljödata
+- **Tillhandahåller** användarvänliga felmeddelanden när API-anrop misslyckas
 
-- Enligt bästa praxis använder du nyckelordet `async` för att få denna funktion att bete sig asynkront. Funktionen innehåller ett `try/catch`-block eftersom den kommer att returnera ett löfte när API:t returnerar data. Eftersom du inte har kontroll över hastigheten som API:t svarar (det kanske inte svarar alls!), behöver du hantera denna osäkerhet genom att anropa det asynkront.
-- Du frågar co2signal API för att få data om din regions koldioxidanvändning, med din API-nyckel. För att använda den nyckeln måste du använda en typ av autentisering i dina header-parametrar.
-- När API:t svarar tilldelar du olika element av dess svar till de delar av din skärm som du ställde in för att visa denna data.
-- Om det finns ett fel, eller om det inte finns något resultat, visar du ett felmeddelande.
+**Nyckelmoderna JavaScript-koncept som demonstreras:**
+- **Mallsträngar** med `${}`-syntax för ren strängformatering
+- **Felhantering** med try/catch-block för robusta applikationer
+- **Async/await**-mönster för att hantera nätverksförfrågningar graciöst
+- **Objektdestrukturering** för att extrahera specifik data från API-svar
+- **Metodkedjning** för flera DOM-manipulationer
 
-✅ Att använda asynkrona programmeringsmönster är ett annat mycket användbart verktyg i din verktygslåda. Läs [om de olika sätten](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) du kan konfigurera denna typ av kod.
+✅ Denna funktion demonstrerar flera viktiga webbutvecklingskoncept - kommunikation med externa servrar, hantering av autentisering, bearbetning av data, uppdatering av gränssnitt och hantering av fel graciöst. Dessa är grundläggande färdigheter som professionella utvecklare använder regelbundet.
 
-Grattis! Om du bygger ditt tillägg (`npm run build`) och uppdaterar det i din tilläggspanel, har du ett fungerande tillägg! Det enda som inte fungerar är ikonen, och du kommer att fixa det i nästa lektion.
+🎉 **Vad du har åstadkommit:** Du har skapat ett webbläsartillägg som:
+- **Kopplar** till internet och hämtar verklig miljödata
+- **Består** användarinställningar mellan sessioner
+- **Hantera** fel graciöst istället för att krascha
+- **Tillhandahåller** en smidig, professionell användarupplevelse
+
+Testa ditt arbete genom att köra `npm run build` och uppdatera ditt tillägg i webbläsaren. Du har nu en fungerande spårare för koldioxidavtryck. Nästa lektion kommer att lägga till dynamisk ikonfunktionalitet för att slutföra tillägget.
 
 ---
 
+## GitHub Copilot Agent-utmaning 🚀
+
+Använd Agent-läget för att slutföra följande utmaning:
+
+**Beskrivning:** Förbättra webbläsartillägget genom att lägga till förbättringar för felhantering och användarupplevelsefunktioner. Denna utmaning hjälper dig att öva på att arbeta med API:er, lokal lagring och DOM-manipulation med moderna JavaScript-mönster.
+
+**Uppmaning:** Skapa en förbättrad version av funktionen displayCarbonUsage som inkluderar: 1) En återförsöksmekanism för misslyckade API-anrop med exponentiell backoff, 2) Inmatningsvalidering för regionskoden innan API-anropet görs, 3) En laddningsanimation med progressindikatorer, 4) Caching av API-svar i lokal lagring med utgångstidsstämplar (cache i 30 minuter), och 5) En funktion för att visa historiska data från tidigare API-anrop. Lägg också till korrekta TypeScript-stil JSDoc-kommentarer för att dokumentera alla funktionsparametrar och returtyper.
+
+Läs mer om [agentläge](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.
+
 ## 🚀 Utmaning
 
-Vi har diskuterat flera typer av API:er hittills i dessa lektioner. Välj en web-API och undersök i detalj vad det erbjuder. Till exempel, ta en titt på API:er som finns tillgängliga i webbläsare såsom [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Vad gör ett API bra enligt dig?
+Utöka din förståelse för API:er genom att utforska den stora mängden webbläsarbaserade API:er som finns tillgängliga för webbutveckling. Välj en av dessa webbläsar-API:er och bygg en liten demonstration:
+
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Hämta användarens aktuella plats
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Skicka skrivbordsnotifikationer
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Skapa interaktiva draggränssnitt
+- [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) - Avancerade tekniker för lokal lagring
+- [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) - Modernt alternativ till XMLHttpRequest
+
+**Forskningsfrågor att överväga:**
+- Vilka verkliga problem löser detta API?
+- Hur hanterar API:et fel och kantfall?
+- Vilka säkerhetsöverväganden finns vid användning av detta API?
+- Hur brett stöds detta API i olika webbläsare?
+
+Efter din forskning, identifiera vilka egenskaper som gör ett API utvecklarvänligt och pålitligt.
 
 ## Efterföreläsningsquiz
 
 [Efterföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Granskning & Självstudier
-
-Du lärde dig om LocalStorage och API:er i denna lektion, båda mycket användbara för den professionella webbutvecklaren. Kan du tänka på hur dessa två saker fungerar tillsammans? Fundera på hur du skulle designa en webbplats som lagrar objekt för att användas av en API.
+Du lärde dig om LocalStorage och API:er i denna lektion, båda mycket användbara för den professionella webbutvecklaren. Kan du fundera på hur dessa två saker fungerar tillsammans? Tänk på hur du skulle designa en webbplats som lagrar objekt för att användas av ett API.
 
 ## Uppgift
 
-[Adoptera en API](assignment.md)
+[Adoptera ett API](assignment.md)
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen notera att automatiska översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

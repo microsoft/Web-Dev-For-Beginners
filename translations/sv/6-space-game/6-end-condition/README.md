@@ -1,41 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "05be6c37791668e3719c4fba94566367",
-  "translation_date": "2025-08-29T07:55:35+00:00",
+  "original_hash": "46bcdd9a0174031655a49bb062aa279c",
+  "translation_date": "2025-10-23T21:47:20+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "sv"
 }
 -->
-# Bygg ett rymdspel del 6: Slut och starta om
+# Bygg ett Rymdspel Del 6: Slut och Starta om
 
-## Quiz före föreläsning
+Varje bra spel behöver tydliga slutvillkor och en smidig omstartsmekanism. Du har byggt ett imponerande rymdspel med rörelse, strid och poängräkning - nu är det dags att lägga till de sista bitarna som gör det komplett.
 
-[Quiz före föreläsning](https://ff-quizzes.netlify.app/web/quiz/39)
+Ditt spel körs för närvarande oändligt, precis som Voyager-sonderna som NASA skickade ut 1977 - fortfarande på väg genom rymden decennier senare. Även om det är bra för rymdutforskning, behöver spel definierade slutpunkter för att skapa en tillfredsställande upplevelse.
 
-Det finns olika sätt att uttrycka ett *slutvillkor* i ett spel. Det är upp till dig som skapare av spelet att bestämma varför spelet har tagit slut. Här är några anledningar, om vi antar att vi pratar om rymdspelet du har byggt hittills:
+Idag ska vi implementera ordentliga vinst-/förlustvillkor och ett omstartssystem. I slutet av denna lektion kommer du ha ett polerat spel som spelare kan avsluta och spela om, precis som de klassiska arkadspelen som definierade mediet.
 
-- **`N` fiendeskepp har förstörts**: Det är ganska vanligt att dela upp ett spel i olika nivåer där du behöver förstöra `N` fiendeskepp för att klara en nivå.
-- **Ditt skepp har förstörts**: Det finns definitivt spel där du förlorar om ditt skepp förstörs. Ett annat vanligt tillvägagångssätt är att ha ett koncept med liv. Varje gång ditt skepp förstörs förlorar du ett liv. När alla liv är slut förlorar du spelet.
-- **Du har samlat `N` poäng**: Ett annat vanligt slutvillkor är att samla poäng. Hur du får poäng är upp till dig, men det är ganska vanligt att tilldela poäng för olika aktiviteter, som att förstöra ett fiendeskepp eller kanske samla föremål som *släpps* när de förstörs.
-- **Klarat en nivå**: Detta kan innebära flera villkor, såsom att `X` fiendeskepp förstörts, `Y` poäng samlats eller kanske att ett specifikt föremål har samlats in.
+## Förhandsquiz
 
-## Starta om
+[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Om folk gillar ditt spel kommer de troligtvis vilja spela det igen. När spelet tar slut av någon anledning bör du erbjuda ett alternativ att starta om.
+## Förstå Spelslutvillkor
 
-✅ Fundera lite på under vilka villkor du tycker att ett spel tar slut, och hur du blir uppmanad att starta om.
+När ska ditt spel sluta? Denna grundläggande fråga har format speldesign sedan den tidiga arkaderan. Pac-Man slutar när du fångas av spöken eller rensar alla prickar, medan Space Invaders slutar när utomjordingarna når botten eller du förstör dem alla.
 
-## Vad du ska bygga
+Som spelkreatör definierar du vinst- och förlustvillkoren. För vårt rymdspel är här beprövade metoder som skapar engagerande spelupplevelser:
 
-Du kommer att lägga till dessa regler i ditt spel:
+- **`N` fiendeskepp har förstörts**: Det är ganska vanligt att dela upp ett spel i olika nivåer där du måste förstöra `N` fiendeskepp för att klara en nivå.
+- **Ditt skepp har förstörts**: Det finns definitivt spel där du förlorar om ditt skepp förstörs. En annan vanlig metod är att ha ett livsystem. Varje gång ditt skepp förstörs dras ett liv av. När alla liv är slut förlorar du spelet.
+- **Du har samlat `N` poäng**: Ett annat vanligt slutvillkor är att samla poäng. Hur du får poäng är upp till dig, men det är ganska vanligt att tilldela poäng till olika aktiviteter som att förstöra ett fiendeskepp eller kanske samla föremål som föremål *släpper* när de förstörs.
+- **Slutföra en nivå**: Detta kan innebära flera villkor såsom `X` fiendeskepp förstörda, `Y` poäng samlade eller kanske att ett specifikt föremål har samlats in.
 
-1. **Vinna spelet**. När alla fiendeskepp har förstörts vinner du spelet. Visa dessutom någon form av segermeddelande.
-1. **Starta om**. När alla dina liv är slut eller spelet är vunnet bör du erbjuda ett sätt att starta om spelet. Kom ihåg! Du måste initiera spelet på nytt och rensa det tidigare spelstatuset.
+## Implementera Omstartsfunktionalitet
 
-## Rekommenderade steg
+Bra spel uppmuntrar till att spela om genom smidiga omstartsmekanismer. När spelare avslutar ett spel (eller möter nederlag) vill de ofta försöka igen direkt - antingen för att slå sitt rekord eller förbättra sin prestation.
 
-Leta upp filerna som har skapats åt dig i undermappen `your-work`. Den bör innehålla följande:
+Tetris exemplifierar detta perfekt: när dina block når toppen kan du direkt starta ett nytt spel utan att navigera genom komplicerade menyer. Vi ska bygga ett liknande omstartssystem som rensar spelets tillstånd och snabbt får spelare tillbaka i action.
+
+✅ **Reflektion**: Tänk på spelen du har spelat. Under vilka villkor slutar de, och hur uppmanas du att starta om? Vad gör en omstartsupplevelse smidig kontra frustrerande?
+
+## Vad Du Kommer Att Bygga
+
+Du kommer att implementera de sista funktionerna som förvandlar ditt projekt till en komplett spelupplevelse. Dessa element skiljer polerade spel från grundläggande prototyper.
+
+**Här är vad vi lägger till idag:**
+
+1. **Vinstvillkor**: Förstör alla fiender och få en ordentlig firning (du har förtjänat det!)
+2. **Förlustvillkor**: Förlora alla liv och möt nederlaget med en förlustskärm
+3. **Omstartsmekanism**: Tryck på Enter för att hoppa direkt tillbaka in - för ett spel är aldrig nog
+4. **Tillståndshantering**: Ren start varje gång - inga kvarvarande fiender eller konstiga buggar från förra spelet
+
+## Kom igång
+
+Låt oss förbereda din utvecklingsmiljö. Du bör ha alla dina rymdspelsfiler från de tidigare lektionerna redo.
+
+**Ditt projekt bör se ut ungefär så här:**
 
 ```bash
 -| assets
@@ -48,189 +66,303 @@ Leta upp filerna som har skapats åt dig i undermappen `your-work`. Den bör inn
 -| package.json
 ```
 
-Starta ditt projekt i mappen `your_work` genom att skriva:
+**Starta din utvecklingsserver:**
 
 ```bash
 cd your-work
 npm start
 ```
 
-Ovanstående startar en HTTP-server på adressen `http://localhost:5000`. Öppna en webbläsare och ange den adressen. Ditt spel bör vara i ett spelbart tillstånd.
+**Detta kommando:**
+- Kör en lokal server på `http://localhost:5000`
+- Serverar dina filer korrekt
+- Uppdaterar automatiskt när du gör ändringar
 
-> tips: för att undvika varningar i Visual Studio Code, redigera funktionen `window.onload` så att den anropar `gameLoopId` som den är (utan `let`), och deklarera `gameLoopId` högst upp i filen, separat: `let gameLoopId;`
+Öppna `http://localhost:5000` i din webbläsare och verifiera att ditt spel körs. Du bör kunna röra dig, skjuta och interagera med fiender. När detta är bekräftat kan vi gå vidare med implementeringen.
 
-### Lägg till kod
+> 💡 **Proffstips**: För att undvika varningar i Visual Studio Code, deklarera `gameLoopId` högst upp i din fil som `let gameLoopId;` istället för att deklarera det inne i funktionen `window.onload`. Detta följer moderna JavaScript-principer för variabeldeklaration.
 
-1. **Spåra slutvillkor**. Lägg till kod som håller koll på antalet fiender, eller om hjälteskeppet har förstörts genom att lägga till dessa två funktioner:
+## Implementeringssteg
 
-    ```javascript
-    function isHeroDead() {
-      return hero.life <= 0;
+### Steg 1: Skapa Funktioner för Att Spåra Slutvillkor
+
+Vi behöver funktioner för att övervaka när spelet ska sluta. Precis som sensorer på den internationella rymdstationen som ständigt övervakar kritiska system, kommer dessa funktioner kontinuerligt att kontrollera spelets tillstånd.
+
+```javascript
+function isHeroDead() {
+  return hero.life <= 0;
+}
+
+function isEnemiesDead() {
+  const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
+  return enemies.length === 0;
+}
+```
+
+**Vad som händer bakom kulisserna:**
+- **Kontrollerar** om vår hjälte har slut på liv (aj!)
+- **Räknar** hur många fiender som fortfarande är vid liv
+- **Returnerar** `true` när slagfältet är fritt från fiender
+- **Använder** enkel true/false-logik för att hålla det enkelt
+- **Filtrerar** genom alla spelobjekt för att hitta överlevande
+
+### Steg 2: Uppdatera Händelsehanterare för Slutvillkor
+
+Nu ska vi koppla dessa villkorskontroller till spelets händelsesystem. Varje gång en kollision inträffar kommer spelet att utvärdera om det utlöser ett slutvillkor. Detta skapar omedelbar feedback för viktiga händelser i spelet.
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+    first.dead = true;
+    second.dead = true;
+    hero.incrementPoints();
+
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
     }
+});
 
-    function isEnemiesDead() {
-      const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
-      return enemies.length === 0;
+eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
+    enemy.dead = true;
+    hero.decrementLife();
+    if (isHeroDead())  {
+      eventEmitter.emit(Messages.GAME_END_LOSS);
+      return; // loss before victory
     }
-    ```
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
+    }
+});
 
-1. **Lägg till logik i meddelandehanterare**. Redigera `eventEmitter` för att hantera dessa villkor:
+eventEmitter.on(Messages.GAME_END_WIN, () => {
+    endGame(true);
+});
+  
+eventEmitter.on(Messages.GAME_END_LOSS, () => {
+  endGame(false);
+});
+```
 
-    ```javascript
-    eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-        first.dead = true;
-        second.dead = true;
-        hero.incrementPoints();
+**Vad som händer här:**
+- **Laser träffar fiende**: Båda försvinner, du får poäng, och vi kontrollerar om du har vunnit
+- **Fiende träffar dig**: Du förlorar ett liv, och vi kontrollerar om du fortfarande är vid liv
+- **Smart ordning**: Vi kontrollerar nederlag först (ingen vill vinna och förlora samtidigt!)
+- **Omedelbara reaktioner**: Så snart något viktigt händer, vet spelet om det
 
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
+### Steg 3: Lägg till Nya Meddelandekonstanter
 
-    eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
-        enemy.dead = true;
-        hero.decrementLife();
-        if (isHeroDead())  {
-          eventEmitter.emit(Messages.GAME_END_LOSS);
-          return; // loss before victory
-        }
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
-    
-    eventEmitter.on(Messages.GAME_END_WIN, () => {
-        endGame(true);
-    });
-      
-    eventEmitter.on(Messages.GAME_END_LOSS, () => {
-      endGame(false);
-    });
-    ```
+Du måste lägga till nya meddelandetyper till ditt `Messages`-konstantobjekt. Dessa konstanter hjälper till att upprätthålla konsekvens och förhindra stavfel i ditt händelsesystem.
 
-1. **Lägg till nya meddelandetyper**. Lägg till dessa meddelanden i objektet constants:
+```javascript
+GAME_END_LOSS: "GAME_END_LOSS",
+GAME_END_WIN: "GAME_END_WIN",
+```
 
-    ```javascript
-    GAME_END_LOSS: "GAME_END_LOSS",
-    GAME_END_WIN: "GAME_END_WIN",
-    ```
+**I ovanstående har vi:**
+- **Lagt till** konstanter för spelsluthändelser för att upprätthålla konsekvens
+- **Använt** beskrivande namn som tydligt anger händelsens syfte
+- **Följt** den befintliga namngivningskonventionen för meddelandetyper
 
-2. **Lägg till omstartskod**. Lägg till kod som startar om spelet vid tryck på en vald knapp.
+### Steg 4: Implementera Omstartskontroller
 
-   1. **Lyssna på knapptryck `Enter`**. Redigera din fönsters eventListener för att lyssna på detta tryck:
+Nu ska du lägga till tangentbordskontroller som tillåter spelare att starta om spelet. Enter-tangenten är ett naturligt val eftersom den ofta förknippas med att bekräfta åtgärder och starta nya spel.
 
-    ```javascript
-     else if(evt.key === "Enter") {
-        eventEmitter.emit(Messages.KEY_EVENT_ENTER);
-      }
-    ```
+**Lägg till Enter-tangentdetektering till din befintliga keydown-händelselyssnare:**
 
-   1. **Lägg till omstartsmeddelande**. Lägg till detta meddelande i ditt meddelandekonstant:
+```javascript
+else if(evt.key === "Enter") {
+   eventEmitter.emit(Messages.KEY_EVENT_ENTER);
+}
+```
 
-        ```javascript
-        KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
-        ```
+**Lägg till den nya meddelandekonstanten:**
 
-1. **Implementera spelregler**. Implementera följande spelregler:
+```javascript
+KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
+```
 
-   1. **Spelarens vinstvillkor**. När alla fiendeskepp är förstörda, visa ett segermeddelande.
+**Vad du behöver veta:**
+- **Utökar** ditt befintliga tangentbordshanteringssystem
+- **Använder** Enter-tangenten som omstartstrigger för intuitiv användarupplevelse
+- **Sänder** en anpassad händelse som andra delar av ditt spel kan lyssna på
+- **Bibehåller** samma mönster som dina andra tangentbordskontroller
 
-      1. Skapa först en funktion `displayMessage()`:
+### Steg 5: Skapa Meddelandesystemet
 
-        ```javascript
-        function displayMessage(message, color = "red") {
-          ctx.font = "30px Arial";
-          ctx.fillStyle = color;
-          ctx.textAlign = "center";
-          ctx.fillText(message, canvas.width / 2, canvas.height / 2);
-        }
-        ```
+Ditt spel behöver kommunicera resultat tydligt till spelare. Vi ska skapa ett meddelandesystem som visar vinst- och förlusttillstånd med färgkodad text, liknande terminalgränssnitt på tidiga datorsystem där grönt indikerade framgång och rött signalerade fel.
 
-      1. Skapa en funktion `endGame()`:
+**Skapa funktionen `displayMessage()`:**
 
-        ```javascript
-        function endGame(win) {
-          clearInterval(gameLoopId);
-        
-          // set a delay so we are sure any paints have finished
-          setTimeout(() => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "black";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            if (win) {
-              displayMessage(
-                "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
-                "green"
-              );
-            } else {
-              displayMessage(
-                "You died !!! Press [Enter] to start a new game Captain Pew Pew"
-              );
-            }
-          }, 200)  
-        }
-        ```
+```javascript
+function displayMessage(message, color = "red") {
+  ctx.font = "30px Arial";
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  ctx.fillText(message, canvas.width / 2, canvas.height / 2);
+}
+```
 
-   1. **Omstartlogik**. När alla liv är slut eller spelaren har vunnit spelet, visa att spelet kan startas om. Starta dessutom om spelet när *omstartsknappen* trycks (du kan bestämma vilken knapp som ska användas för omstart).
+**Steg för steg, här är vad som händer:**
+- **Ställer in** teckensnittsstorlek och familj för tydlig, läsbar text
+- **Använder** en färgparameter med "röd" som standard för varningar
+- **Centrerar** texten horisontellt och vertikalt på canvasen
+- **Använder** moderna JavaScript-standardparametrar för flexibla färgalternativ
+- **Utnyttjar** canvas 2D-kontexten för direkt textåtergivning
 
-      1. Skapa funktionen `resetGame()`:
+**Skapa funktionen `endGame()`:**
 
-        ```javascript
-        function resetGame() {
-          if (gameLoopId) {
-            clearInterval(gameLoopId);
-            eventEmitter.clear();
-            initGame();
-            gameLoopId = setInterval(() => {
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              ctx.fillStyle = "black";
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-              drawPoints();
-              drawLife();
-              updateGameObjects();
-              drawGameObjects(ctx);
-            }, 100);
-          }
-        }
-        ```
+```javascript
+function endGame(win) {
+  clearInterval(gameLoopId);
 
-     1. Lägg till ett anrop till `eventEmitter` för att återställa spelet i `initGame()`:
+  // Set a delay to ensure any pending renders complete
+  setTimeout(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (win) {
+      displayMessage(
+        "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
+        "green"
+      );
+    } else {
+      displayMessage(
+        "You died !!! Press [Enter] to start a new game Captain Pew Pew"
+      );
+    }
+  }, 200)  
+}
+```
 
-        ```javascript
-        eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
-          resetGame();
-        });
-        ```
+**Vad denna funktion gör:**
+- **Fryser** allt på plats - inga fler rörliga skepp eller laserstrålar
+- **Tar** en liten paus (200ms) för att låta den sista bilden ritas klart
+- **Rensar** skärmen och målar den svart för dramatisk effekt
+- **Visar** olika meddelanden för vinnare och förlorare
+- **Färgkodar** nyheterna - grönt för bra, rött för... ja, inte så bra
+- **Berättar** för spelare exakt hur de kan hoppa tillbaka in
 
-     1. Lägg till en funktion `clear()` i EventEmitter:
+### Steg 6: Implementera Spelåterställningsfunktionalitet
 
-        ```javascript
-        clear() {
-          this.listeners = {};
-        }
-        ```
+Återställningssystemet måste helt rensa det aktuella speltillståndet och initiera en ny spelsession. Detta säkerställer att spelare får en ren start utan kvarvarande data från föregående spel.
 
-👽 💥 🚀 Grattis, Kapten! Ditt spel är klart! Bra jobbat! 🚀 💥 👽
+**Skapa funktionen `resetGame()`:**
 
----
+```javascript
+function resetGame() {
+  if (gameLoopId) {
+    clearInterval(gameLoopId);
+    eventEmitter.clear();
+    initGame();
+    gameLoopId = setInterval(() => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      drawPoints();
+      drawLife();
+      updateGameObjects();
+      drawGameObjects(ctx);
+    }, 100);
+  }
+}
+```
 
-## 🚀 Utmaning
+**Låt oss förstå varje del:**
+- **Kontrollerar** om en spelloop för närvarande körs innan återställning
+- **Rensar** den befintliga spelloopen för att stoppa all aktuell spelaktivitet
+- **Tar bort** alla händelselyssnare för att förhindra minnesläckor
+- **Initierar** speltillståndet med nya objekt och variabler
+- **Startar** en ny spelloop med alla nödvändiga spelfunktioner
+- **Bibehåller** samma 100ms-intervall för konsekvent spelprestanda
 
-Lägg till ett ljud! Kan du lägga till ett ljud för att förbättra spelupplevelsen, kanske när det sker en laserträff, eller när hjälten dör eller vinner? Ta en titt på denna [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) för att lära dig hur man spelar ljud med JavaScript.
+**Lägg till Enter-tangentens händelsehanterare till din `initGame()`-funktion:**
 
-## Quiz efter föreläsning
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
+  resetGame();
+});
+```
 
-[Quiz efter föreläsning](https://ff-quizzes.netlify.app/web/quiz/40)
+**Lägg till metoden `clear()` till din EventEmitter-klass:**
+
+```javascript
+clear() {
+  this.listeners = {};
+}
+```
+
+**Viktiga punkter att komma ihåg:**
+- **Kopplar** Enter-tangenttryckning till återställningsfunktionen
+- **Registrerar** denna händelselyssnare under spelinitiering
+- **Ger** ett rent sätt att ta bort alla händelselyssnare vid återställning
+- **Förhindrar** minnesläckor genom att rensa händelsehanterare mellan spel
+- **Återställer** lyssnarobjektet till ett tomt tillstånd för ny initiering
+
+## Grattis! 🎉
+
+👽 💥 🚀 Du har framgångsrikt byggt ett komplett spel från grunden. Precis som programmerarna som skapade de första videospelen på 1970-talet har du förvandlat kodrader till en interaktiv upplevelse med ordentliga spelmekanismer och användarfeedback. 🚀 💥 👽
+
+**Du har uppnått:**
+- **Implementerat** kompletta vinst- och förlustvillkor med användarfeedback
+- **Skapat** ett sömlöst omstartssystem för kontinuerligt spelande
+- **Designat** tydlig visuell kommunikation för speltillstånd
+- **Hanterat** komplexa övergångar och rensning av speltillstånd
+- **Satt ihop** alla komponenter till ett sammanhängande, spelbart spel
+
+## GitHub Copilot Agent-utmaning 🚀
+
+Använd Agent-läget för att slutföra följande utmaning:
+
+**Beskrivning:** Förbättra rymdspelet genom att implementera ett nivåprogressionssystem med ökande svårighetsgrad och bonusfunktioner.
+
+**Uppmaning:** Skapa ett flernivåsystem för rymdspelet där varje nivå har fler fiendeskepp med ökad hastighet och hälsa. Lägg till en poängmultiplikator som ökar med varje nivå och implementera power-ups (som snabb eld eller sköld) som slumpmässigt dyker upp när fiender förstörs. Inkludera en nivåavslutningsbonus och visa den aktuella nivån på skärmen tillsammans med befintliga poäng och liv.
+
+Läs mer om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.
+
+## 🚀 Valfri Förbättringsutmaning
+
+**Lägg till ljud till ditt spel**: Förbättra din spelupplevelse genom att implementera ljudeffekter! Överväg att lägga till ljud för:
+
+- **Laserstrålar** när spelaren skjuter
+- **Fiendens förstörelse** när skepp träffas
+- **Hjälteskada** när spelaren träffas
+- **Segermusik** när spelet vinns
+- **Förlustljud** när spelet förloras
+
+**Exempel på ljudimplementering:**
+
+```javascript
+// Create audio objects
+const laserSound = new Audio('assets/laser.wav');
+const explosionSound = new Audio('assets/explosion.wav');
+
+// Play sounds during game events
+function playLaserSound() {
+  laserSound.currentTime = 0; // Reset to beginning
+  laserSound.play();
+}
+```
+
+**Vad du behöver veta:**
+- **Skapar** ljudobjekt för olika ljudeffekter
+- **Återställer** `currentTime` för att tillåta snabba ljudeffekter
+- **Hantera** webbläsarens autoplay-policy genom att trigga ljud från användarinteraktioner
+- **Hantera** ljudvolym och timing för bättre spelupplevelse
+
+> 💡 **Lärresurs**: Utforska denna [ljudsandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) för att lära dig mer om att implementera ljud i JavaScript-spel.
+
+## Efterföreläsningsquiz
+
+[Efterföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## Granskning & Självstudier
 
-Din uppgift är att skapa ett nytt exempelspel, så utforska några av de intressanta spelen där ute för att se vilken typ av spel du kanske vill bygga.
+Din uppgift är att skapa ett nytt provspel, så utforska några intressanta spel där ute för att se vilken typ av spel du kan bygga.
 
 ## Uppgift
 
-[Bygg ett exempelspel](assignment.md)
+[Bygg ett Provspel](assignment.md)
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller inexaktheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
