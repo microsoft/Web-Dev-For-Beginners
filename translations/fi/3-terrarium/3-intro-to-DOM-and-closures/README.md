@@ -1,61 +1,105 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "61c14b27044861e5e69db35dd52c4403",
-  "translation_date": "2025-08-29T00:45:42+00:00",
+  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
+  "translation_date": "2025-10-23T00:28:19+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "fi"
 }
 -->
-# Terrarium-projekti Osa 3: DOM-manipulointi ja sulkeuma
+# Terrarium-projekti, osa 3: DOM-manipulointi ja JavaScript-sulkeet
 
-![DOM ja sulkeuma](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.fi.png)
+![DOM ja sulke](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
+
+Tervetuloa web-kehityksen kiehtovimpaan osaan - interaktiivisuuden luomiseen! Document Object Model (DOM) toimii sillan tavoin HTML:n ja JavaScriptin välillä, ja tänään käytämme sitä herättääksemme terrariumisi eloon. Kun Tim Berners-Lee loi ensimmäisen verkkoselaimen, hän visioi verkon, jossa dokumentit voisivat olla dynaamisia ja interaktiivisia - DOM tekee tämän vision mahdolliseksi.
+
+Tutustumme myös JavaScript-sulkeisiin, jotka saattavat aluksi kuulostaa pelottavilta. Ajattele sulkeita "muistilokeroina", joissa funktiot voivat muistaa tärkeitä tietoja. Se on kuin jokaisella terrariumin kasvilla olisi oma tietueensa, joka seuraa sen sijaintia. Tämän oppitunnin lopussa ymmärrät, kuinka luonnollisia ja hyödyllisiä ne ovat.
+
+Tässä on, mitä rakennamme: terrarium, jossa käyttäjät voivat siirtää kasveja mihin tahansa haluavat. Opit DOM-manipulointitekniikoita, jotka mahdollistavat kaiken drag-and-drop-tiedostojen lataamisesta interaktiivisiin peleihin. Tehdään terrariumistasi elävä.
 
 ## Ennakkokysely
 
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/19)
 
-### Johdanto
+## Ymmärrä DOM: porttisi interaktiivisiin verkkosivuihin
 
-DOM-manipulointi eli "Document Object Model" on keskeinen osa verkkosivujen kehittämistä. [MDN:n](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction) mukaan "Document Object Model (DOM) on verkkosivun rakenteen ja sisällön muodostavien objektien tietoesitys." DOM-manipuloinnin haasteet ovat usein johtaneet siihen, että JavaScript-kehyksiä käytetään sen hallintaan sen sijaan, että käytettäisiin pelkkää JavaScriptiä. Tässä projektissa pärjäämme kuitenkin ilman kehyksiä!
+Document Object Model (DOM) on tapa, jolla JavaScript kommunikoi HTML-elementtien kanssa. Kun selaimesi lataa HTML-sivun, se luo rakenteellisen esityksen sivusta muistiin - tämä on DOM. Ajattele sitä sukupuuna, jossa jokainen HTML-elementti on perheenjäsen, jonka JavaScript voi tavoittaa, muokata tai järjestää uudelleen.
 
-Lisäksi tässä oppitunnissa esitellään [JavaScript-sulkeuma](https://developer.mozilla.org/docs/Web/JavaScript/Closures), jonka voi ajatella olevan funktio, joka on suljettu toisen funktion sisään, jolloin sisempi funktio pääsee käsiksi ulomman funktion laajuuteen.
-
-> JavaScript-sulkeumat ovat laaja ja monimutkainen aihe. Tässä oppitunnissa käsitellään perusidea, joka liittyy terrariumin koodiin: sulkeuma, jossa sisempi funktio ja ulompi funktio on rakennettu siten, että sisempi funktio pääsee käsiksi ulomman funktion laajuuteen. Lisätietoja aiheesta löytyy [laajasta dokumentaatiosta](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
-
-Käytämme sulkeumaa DOM-manipulointiin.
-
-Ajattele DOM:ia puuna, joka edustaa kaikkia tapoja, joilla verkkosivun dokumenttia voidaan manipuloida. Erilaisia API:ita (Application Program Interfaces) on kirjoitettu, jotta ohjelmoijat voivat käyttää DOM:ia ja muokata, järjestellä ja hallita sitä haluamallaan tavalla.
+DOM-manipulointi muuttaa staattiset sivut interaktiivisiksi verkkosivustoiksi. Joka kerta, kun näet painikkeen vaihtavan väriä hiiren osoittimen liikkuessa sen päällä, sisällön päivittyvän ilman sivun uudelleenlatausta tai elementtejä, joita voit siirtää, kyseessä on DOM-manipulointi.
 
 ![DOM-puun esitys](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.fi.png)
 
-> DOM:n ja siihen viittaavan HTML-merkinnän esitys. Lähde: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> DOM:n ja siihen viittaavan HTML-koodin esitys. Lähde: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-Tässä oppitunnissa viimeistelemme interaktiivisen terrarium-projektimme luomalla JavaScriptin, joka mahdollistaa kasvien siirtämisen sivulla.
+**Mikä tekee DOM:sta tehokkaan:**
+- **Tarjoaa** rakenteellisen tavan päästä käsiksi mihin tahansa elementtiin sivullasi
+- **Mahdollistaa** dynaamiset sisällön päivitykset ilman sivun uudelleenlatausta
+- **Sallii** reaaliaikaisen reagoinnin käyttäjän toimintoihin, kuten klikkauksiin ja siirtoihin
+- **Luo** perustan moderneille interaktiivisille verkkosovelluksille
 
-### Esitietovaatimukset
+## JavaScript-sulkeet: järjestäytynyttä ja tehokasta koodia
 
-Sinulla tulisi olla terrariumin HTML ja CSS valmiina. Oppitunnin lopussa pystyt siirtämään kasveja terrariumiin ja sieltä pois vetämällä niitä.
+[JavaScript-sulke](https://developer.mozilla.org/docs/Web/JavaScript/Closures) on kuin antaisi funktiolle oman yksityisen työtilan, jossa on pysyvä muisti. Mieti, kuinka Darwinin peipot Galápagossaarilla kehittivät erikoistuneita nokkia ympäristönsä mukaan - sulkeet toimivat samalla tavalla, luoden erikoistuneita funktioita, jotka "muistavat" oman kontekstinsa, vaikka niiden vanhempi funktio olisi jo päättynyt.
 
-### Tehtävä
+Terrariumissamme sulkeet auttavat jokaista kasvia muistamaan oman sijaintinsa itsenäisesti. Tämä malli esiintyy laajalti ammattimaisessa JavaScript-kehityksessä, joten sen ymmärtäminen on arvokasta.
 
-Luo terrarium-kansioon uusi tiedosto nimeltä `script.js`. Tuo tämä tiedosto `<head>`-osioon:
+> 💡 **Sulkeiden ymmärtäminen**: Sulkeet ovat merkittävä aihe JavaScriptissä, ja monet kehittäjät käyttävät niitä vuosia ennen kuin ymmärtävät täysin kaikki teoreettiset näkökohdat. Tänään keskitymme käytännön sovelluksiin - näet, kuinka sulkeet syntyvät luonnollisesti, kun rakennamme interaktiivisia ominaisuuksia. Ymmärrys kehittyy, kun näet, kuinka ne ratkaisevat todellisia ongelmia.
+
+![DOM-puun esitys](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.fi.png)
+
+> DOM:n ja siihen viittaavan HTML-koodin esitys. Lähde: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+
+Tässä oppitunnissa viimeistelemme interaktiivisen terrarium-projektimme luomalla JavaScriptin, joka mahdollistaa käyttäjän manipuloida kasveja sivulla.
+
+## Ennen kuin aloitamme: Valmistautuminen onnistumiseen
+
+Tarvitset HTML- ja CSS-tiedostosi edellisistä terrarium-oppitunneista - olemme juuri tekemässä staattisesta suunnittelusta interaktiivisen. Jos olet mukana ensimmäistä kertaa, aiempien oppituntien suorittaminen tarjoaa tärkeää kontekstia.
+
+Tässä on, mitä rakennamme:
+- **Sujuva drag-and-drop** kaikille terrariumin kasveille
+- **Koordinaattien seuranta**, jotta kasvit muistavat sijaintinsa
+- **Täydellinen interaktiivinen käyttöliittymä** käyttämällä pelkkää JavaScriptiä
+- **Siisti ja järjestäytynyt koodi** sulkemismallien avulla
+
+## JavaScript-tiedoston luominen
+
+Luodaan JavaScript-tiedosto, joka tekee terrariumistasi interaktiivisen.
+
+**Vaihe 1: Luo skriptitiedosto**
+
+Luo terrarium-kansioosi uusi tiedosto nimeltä `script.js`.
+
+**Vaihe 2: Linkitä JavaScript HTML-tiedostoon**
+
+Lisää tämä skriptitag HTML-tiedostosi `<head>`-osioon:
 
 ```html
-	<script src="./script.js" defer></script>
+<script src="./script.js" defer></script>
 ```
 
-> Huom: käytä `defer`-attribuuttia tuodessasi ulkoisen JavaScript-tiedoston HTML-tiedostoon, jotta JavaScript suoritetaan vasta, kun HTML-tiedosto on ladattu kokonaan. Voisit myös käyttää `async`-attribuuttia, joka sallii skriptin suorittamisen HTML-tiedoston jäsentämisen aikana, mutta tässä tapauksessa on tärkeää, että HTML-elementit ovat täysin saatavilla ennen kuin vetämistoiminto suoritetaan.
+**Miksi `defer`-attribuutti on tärkeä:**
+- **Varmistaa**, että JavaScript odottaa, kunnes kaikki HTML on ladattu
+- **Estää** virheet, joissa JavaScript etsii elementtejä, jotka eivät ole vielä valmiita
+- **Takaa**, että kaikki kasvielementit ovat käytettävissä interaktiota varten
+- **Tarjoaa** paremman suorituskyvyn kuin skriptien sijoittaminen sivun alareunaan
+
+> ⚠️ **Tärkeä huomautus**: `defer`-attribuutti estää yleisiä ajoitusongelmia. Ilman sitä JavaScript saattaa yrittää käyttää HTML-elementtejä ennen niiden latautumista, mikä aiheuttaa virheitä.
+
 ---
 
-## DOM-elementit
+## JavaScriptin yhdistäminen HTML-elementteihin
 
-Ensimmäinen tehtäväsi on luoda viittaukset DOM:ssa oleviin elementteihin, joita haluat manipuloida. Meidän tapauksessamme nämä ovat 14 kasvia, jotka odottavat sivupalkissa.
+Ennen kuin voimme tehdä elementtejä siirrettäviksi, JavaScriptin täytyy löytää ne DOM:sta. Ajattele tätä kuin kirjaston luettelointijärjestelmää - kun sinulla on luettelonumero, voit löytää juuri tarvitsemasi kirjan ja käyttää sen sisältöä.
 
-### Tehtävä
+Käytämme `document.getElementById()`-metodia näiden yhteyksien luomiseen. Se on kuin tarkka arkistointijärjestelmä - annat ID:n, ja se löytää juuri tarvitsemasi elementin HTML:stä.
 
-```html
+### Siirrettävyyden mahdollistaminen kaikille kasveille
+
+Lisää tämä koodi `script.js`-tiedostoosi:
+
+```javascript
+// Enable drag functionality for all 14 plants
 dragElement(document.getElementById('plant1'));
 dragElement(document.getElementById('plant2'));
 dragElement(document.getElementById('plant3'));
@@ -72,159 +116,352 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Mitä tässä tapahtuu? Viittaat dokumenttiin ja etsit sen DOM:sta elementin, jolla on tietty Id. Muistatko ensimmäisestä HTML-oppitunnista, että annoit yksilölliset Id:t jokaiselle kasvikuvalle (`id="plant1"`)? Nyt hyödynnät tätä työtä. Kun olet tunnistanut jokaisen elementin, välität sen funktiolle nimeltä `dragElement`, jonka rakennat hetken kuluttua. Näin HTML-elementti on nyt vedettävissä, tai tulee olemaan pian.
+**Tämä koodi tekee seuraavaa:**
+- **Löytää** jokaisen kasvielementin DOM:sta sen yksilöllisen ID:n avulla
+- **Hakee** JavaScript-viittauksen jokaiseen HTML-elementtiin
+- **Välittää** jokaisen elementin `dragElement`-funktiolle (jonka luomme seuraavaksi)
+- **Valmistelee** jokaisen kasvin drag-and-drop-interaktiota varten
+- **Yhdistää** HTML-rakenteesi JavaScript-toiminnallisuuteen
 
-✅ Miksi viittaamme elementteihin Id:n avulla? Miksi emme CSS-luokan avulla? Voit palata edelliseen CSS-oppituntiin vastataksesi tähän kysymykseen.
+> 🎯 **Miksi käyttää ID:tä luokkien sijaan?** ID:t tarjoavat yksilöllisiä tunnisteita tietyille elementeille, kun taas CSS-luokat on suunniteltu ryhmien tyylittelyyn. Kun JavaScriptin täytyy manipuloida yksittäisiä elementtejä, ID:t tarjoavat tarvitsemamme tarkkuuden ja suorituskyvyn.
+
+> 💡 **Vinkki**: Huomaa, kuinka kutsumme `dragElement()`-funktiota erikseen jokaiselle kasville. Tämä lähestymistapa varmistaa, että jokainen kasvi saa oman itsenäisen siirtokäyttäytymisensä, mikä on olennaista sujuvan käyttäjäkokemuksen kannalta.
 
 ---
 
-## Sulkeuma
+## Drag-elementin sulkeen rakentaminen
 
-Nyt olet valmis luomaan `dragElement`-sulkeuman, joka on ulompi funktio, joka sulkee sisemmän funktion tai funktiot (meidän tapauksessamme niitä on kolme).
+Nyt luomme siirtotoiminnallisuuden ytimen: sulkeen, joka hallitsee jokaisen kasvin siirtokäyttäytymistä. Tämä sulke sisältää useita sisäisiä funktioita, jotka toimivat yhdessä seuratakseen hiiren liikkeitä ja päivittääkseen elementtien sijainteja.
 
-Sulkeumat ovat hyödyllisiä, kun yksi tai useampi funktio tarvitsee pääsyn ulomman funktion laajuuteen. Tässä esimerkki:
+Sulkeet ovat täydellisiä tähän tehtävään, koska ne mahdollistavat "yksityisten" muuttujien luomisen, jotka säilyvät funktiokutsujen välillä, antaen jokaiselle kasville oman itsenäisen koordinaattien seurantajärjestelmän.
+
+### Sulkeiden ymmärtäminen yksinkertaisella esimerkillä
+
+Annetaan sulkeista yksinkertainen esimerkki, joka havainnollistaa konseptia:
 
 ```javascript
-function displayCandy(){
-	let candy = ['jellybeans'];
-	function addCandy(candyType) {
-		candy.push(candyType)
-	}
-	addCandy('gumdrops');
+function createCounter() {
+    let count = 0; // This is like a private variable
+    
+    function increment() {
+        count++; // The inner function remembers the outer variable
+        return count;
+    }
+    
+    return increment; // We're giving back the inner function
 }
-displayCandy();
-console.log(candy)
+
+const myCounter = createCounter();
+console.log(myCounter()); // 1
+console.log(myCounter()); // 2
 ```
 
-Tässä esimerkissä `displayCandy`-funktio ympäröi funktion, joka lisää uuden karkkityypin jo olemassa olevaan taulukkoon. Jos suorittaisit tämän koodin, `candy`-taulukko olisi määrittelemätön, koska se on paikallinen muuttuja (paikallinen sulkeumalle).
+**Tässä sulkemismallissa tapahtuu seuraavaa:**
+- **Luo** yksityisen `count`-muuttujan, joka on olemassa vain tämän sulkeen sisällä
+- **Sisäinen funktio** voi käyttää ja muokata ulkoista muuttujaa (sulkemismekanismi)
+- **Kun palautamme** sisäisen funktion, se säilyttää yhteyden yksityisiin tietoihin
+- **Vaikka** `createCounter()` suoritus päättyy, `count` säilyy ja muistaa arvonsa
 
-✅ Kuinka voit tehdä `candy`-taulukon saatavilla? Kokeile siirtää se sulkeuman ulkopuolelle. Näin taulukosta tulee globaali, eikä se jää vain sulkeuman paikalliseen laajuuteen.
+### Miksi sulkeet sopivat täydellisesti siirtotoiminnallisuuteen
 
-### Tehtävä
+Terrariumissamme jokaisen kasvin täytyy muistaa nykyiset sijaintikoordinaattinsa. Sulkeet tarjoavat täydellisen ratkaisun:
 
-Luo `script.js`-tiedoston elementtien määrittelyjen alle funktio:
+**Keskeiset hyödyt projektissamme:**
+- **Säilyttää** yksityiset sijaintimuuttujat jokaiselle kasville itsenäisesti
+- **Säilyttää** koordinaattitiedot siirtotapahtumien välillä
+- **Estää** muuttujien ristiriidat eri siirrettävien elementtien välillä
+- **Luo** siistin ja järjestäytyneen koodirakenteen
+
+> 🎯 **Oppimistavoite**: Sinun ei tarvitse hallita kaikkia sulkeiden teoreettisia puolia juuri nyt. Keskity siihen, kuinka ne auttavat meitä järjestämään koodia ja ylläpitämään tilaa siirtotoiminnallisuudelle.
+
+### DragElement-funktion luominen
+
+Rakennetaan nyt pääfunktio, joka käsittelee kaiken siirtologiikan. Lisää tämä funktio kasvielementtien määrittelyjen alle:
 
 ```javascript
 function dragElement(terrariumElement) {
-	//set 4 positions for positioning on the screen
-	let pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	terrariumElement.onpointerdown = pointerDrag;
+    // Initialize position tracking variables
+    let pos1 = 0,  // Previous mouse X position
+        pos2 = 0,  // Previous mouse Y position  
+        pos3 = 0,  // Current mouse X position
+        pos4 = 0;  // Current mouse Y position
+    
+    // Set up the initial drag event listener
+    terrariumElement.onpointerdown = pointerDrag;
 }
 ```
 
-`dragElement` saa `terrariumElement`-objektinsa skriptin yläosassa tehdyistä määrittelyistä. Sitten asetat joitakin paikallisia sijainteja `0`:ksi funktiolle välitetylle objektille. Nämä ovat paikallisia muuttujia, joita manipuloidaan jokaiselle elementille, kun lisäät vetämis- ja pudotustoiminnallisuuden sulkeuman sisällä. Terrarium täytetään näillä vedettävillä elementeillä, joten sovelluksen täytyy pitää kirjaa siitä, mihin ne sijoitetaan.
+**Sijainnin seurantajärjestelmän ymmärtäminen:**
+- **`pos1` ja `pos2`**: Tallentavat eron vanhojen ja uusien hiiren sijaintien välillä
+- **`pos3` ja `pos4`**: Seuraavat nykyisiä hiiren koordinaatteja
+- **`terrariumElement`**: Tietty kasvielementti, jota teemme siirrettäväksi
+- **`onpointerdown`**: Tapahtuma, joka käynnistyy, kun käyttäjä aloittaa siirtämisen
 
-Lisäksi funktiolle välitetty `terrariumElement`-objekti saa `pointerdown`-tapahtuman, joka on osa [web-API:ita](https://developer.mozilla.org/docs/Web/API), jotka on suunniteltu auttamaan DOM:n hallinnassa. `onpointerdown` laukeaa, kun painiketta painetaan, tai meidän tapauksessamme, kun vedettävää elementtiä kosketetaan. Tämä tapahtumankäsittelijä toimii sekä [web- että mobiiliselaimissa](https://caniuse.com/?search=onpointerdown), muutamia poikkeuksia lukuun ottamatta.
+**Sulkemismallin toiminta:**
+- **Luo** yksityiset sijaintimuuttujat jokaiselle kasvielementille
+- **Säilyttää** nämä muuttujat koko siirtosykliä varten
+- **Varmistaa**, että jokainen kasvi seuraa omia koordinaattejaan itsenäisesti
+- **Tarjoaa** siistin käyttöliittymän `dragElement`-funktion kautta
 
-✅ [Tapahtumankäsittelijä `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) on paljon laajemmin tuettu eri selaimissa; miksi et käyttäisi sitä tässä? Mieti tarkasti, millaista ruudun vuorovaikutusta yrität luoda tässä.
+### Miksi käyttää osoitintapahtumia?
+
+Saatat ihmetellä, miksi käytämme `onpointerdown`-tapahtumaa emmekä tutumpaa `onclick`-tapahtumaa. Tässä syy:
+
+| Tapahtumatyyppi | Paras käyttö | Haittapuoli |
+|-----------------|-------------|-------------|
+| `onclick` | Yksinkertaiset painallukset | Ei voi käsitellä siirtämistä (vain klikkaukset ja vapautukset) |
+| `onpointerdown` | Sekä hiiri että kosketus | Uudempi, mutta nykyään hyvin tuettu |
+| `onmousedown` | Vain työpöytähiiri | Jättää mobiilikäyttäjät ulkopuolelle |
+
+**Miksi osoitintapahtumat sopivat täydellisesti siihen, mitä rakennamme:**
+- **Toimii hyvin**, käytitpä hiirtä, sormea tai jopa kynää
+- **Tuntuu samalta** kannettavalla, tabletilla tai puhelimella
+- **Käsittelee** varsinaista siirtoliikettä (ei vain klikkausta ja vapautusta)
+- **Luo** sujuvan kokemuksen, jota käyttäjät odottavat moderneilta verkkosovelluksilta
+
+> 💡 **Tulevaisuuden varmistaminen**: Osoitintapahtumat ovat moderni tapa käsitellä käyttäjän vuorovaikutuksia. Sen sijaan, että kirjoittaisit erillistä koodia hiirelle ja kosketukselle, saat molemmat ilmaiseksi. Aika kätevää, eikö?
 
 ---
 
-## Pointerdrag-funktio
+## PointerDrag-funktio: Siirron aloituksen tallentaminen
 
-`terrariumElement` on valmis vedettäväksi; kun `onpointerdown`-tapahtuma laukeaa, funktio `pointerDrag` kutsutaan. Lisää tämä funktio heti tämän rivin alle: `terrariumElement.onpointerdown = pointerDrag;`:
+Kun käyttäjä painaa kasvia (hiiren klikkauksella tai sormella), `pointerDrag`-funktio aktivoituu. Tämä funktio tallentaa alkuperäiset koordinaatit ja asettaa siirtojärjestelmän.
 
-### Tehtävä 
+Lisää tämä funktio `dragElement`-sulkeen sisälle, heti rivin `terrariumElement.onpointerdown = pointerDrag;` jälkeen:
 
 ```javascript
 function pointerDrag(e) {
-	e.preventDefault();
-	console.log(e);
-	pos3 = e.clientX;
-	pos4 = e.clientY;
+    // Prevent default browser behavior (like text selection)
+    e.preventDefault();
+    
+    // Capture the initial mouse/touch position
+    pos3 = e.clientX;  // X coordinate where drag started
+    pos4 = e.clientY;  // Y coordinate where drag started
+    
+    // Set up event listeners for the dragging process
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
 }
 ```
 
-Useita asioita tapahtuu. Ensinnäkin estät oletustapahtumat, jotka normaalisti tapahtuvat pointerdown-tapahtumassa, käyttämällä `e.preventDefault();`. Näin sinulla on enemmän hallintaa käyttöliittymän käyttäytymisestä.
+**Askel askeleelta, mitä tapahtuu:**
+- **Estää** oletusselaimen käyttäytymisen, joka voisi häiritä siirtämistä
+- **Tallentaa** tarkat koordinaatit, joissa käyttäjä aloitti siirtoliikkeen
+- **Asettaa** tapahtumakuuntelijat jatkuvalle siirtoliikkeelle
+- **Valmistelee** järjestelmän seuraamaan hiiren/sormen liikettä koko dokumentin alueella
 
-> Palaa tähän kohtaan, kun olet rakentanut skriptitiedoston kokonaan, ja kokeile ilman `e.preventDefault()` - mitä tapahtuu?
+### Tapahtumien estämisen ymmärtäminen
 
-Toiseksi avaa `index.html` selaimessa ja tarkastele käyttöliittymää. Kun napsautat kasvia, näet kuinka 'e'-tapahtuma tallennetaan. Tutki tapahtumaa nähdäksesi, kuinka paljon tietoa kerätään yhdestä pointerdown-tapahtumasta!  
+Rivi `e.preventDefault()` on olennainen sujuvan siirtämisen kannalta:
 
-Seuraavaksi huomaa, kuinka paikalliset muuttujat `pos3` ja `pos4` asetetaan arvoon e.clientX. Voit löytää `e`-arvot tarkastelupaneelista. Nämä arvot tallentavat kasvin x- ja y-koordinaatit sillä hetkellä, kun napsautat tai kosketat sitä. Tarvitset tarkkaa hallintaa kasvien käyttäytymisestä, kun napsautat ja vedät niitä, joten pidät kirjaa niiden koordinaateista.
+**Ilman estämistä selaimet saattavat:**
+- **Valita** tekstiä siirrettäessä sivua pitkin
+- **Käynnistää** kontekstivalikoita oikean klikkauksen siirrossa
+- **Häiritä** mukautettua siirtokäyttäytymistä
+- **Luoda** visuaalisia artefakteja siirtotoiminnon aikana
 
-✅ Alkaako olla selvempää, miksi koko sovellus rakennetaan yhdellä suurella sulkeumalla? Jos ei olisi, kuinka ylläpitäisit laajuutta jokaiselle 14 vedettävälle kasville?
+> 🔍 **Kokeile**: Kun olet suorittanut tämän oppitunnin, kokeile poistaa `e.preventDefault()` ja katso, miten se vaikuttaa siirtokokemukseen. Ymmärrät nopeasti, miksi tämä rivi on olennainen!
 
-Täydennä alkuperäinen funktio lisäämällä kaksi muuta pointer-tapahtuman käsittelyä `pos4 = e.clientY`-rivin alle:
+### Koordinaattien seurantajärjestelmä
 
-```html
+Ominaisuudet `e.clientX` ja `e.clientY` antavat meille tarkat hiiren/kosketuksen koordinaatit:
+
+| Ominaisuus | Mitä se mittaa | Käyttötarkoitus |
+|------------|----------------|-----------------|
+| `clientX` | Vaakasuora sijainti suhteessa näkymään | Vasemman-oikean liikkeen seuranta |
+| `clientY` | Pystysuora sijainti suhteessa näkymään | Ylös-alas liikkeen seuranta |
+
+**Näiden koordinaattien ymmärtäminen:**
+- **Tarjoaa** pikselintarkkaa sijaintitietoa
+- **Päivittyy** reaaliajassa käyttäjän liikuttaessa osoitinta
+- **Säilyy** johdonmukaisena eri näyttökokojen ja zoomaustasojen välillä
+- **Mahdollistaa** sujuvat, responsiiviset siirtotoiminnot
+
+### Dokumenttitason tapahtumakuuntelijoiden asettaminen
+
+Huomaa, kuinka liitämme liike- ja lopetustapahtumat koko `document`-elementtiin, ei vain kasvielementtiin:
+
+```javascript
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Nyt ilmoitat, että haluat kasvin liikkuvan osoittimen mukana, kun siirrät sitä, ja että vetämisliike pysähtyy, kun lopetat kasvin valinnan. `onpointermove` ja `onpointerup` ovat kaikki osa samaa API:ta kuin `onpointerdown`. Käyttöliittymä heittää nyt virheitä, koska et ole vielä määritellyt `elementDrag`- ja `stopElementDrag`-funktioita, joten rakenna ne seuraavaksi.
 
-## elementDrag- ja stopElementDrag-funktiot
+**Miksi liittää dokumenttiin:**
+- **Jatkaa** seurantaa, vaikka hiiri poistuisi kasvielementistä
+- **Estää** siirron keskeytymisen, jos käyttäjä liikkuu nopeasti
+- **Tarjoaa** sujuvan siirtämisen koko näytön alueella
+- **Käsittelee** reunatapaukset, joissa osoitin siirtyy selaimen ikkunan ulkopuolelle
 
-Viimeistelet sulkeumasi lisäämällä kaksi sisäistä funktiota, jotka käsittelevät, mitä tapahtuu, kun vedät kasvia ja lopetat sen vetämisen. Haluttu käyttäytyminen on, että voit vetää mitä tahansa kasvia milloin tahansa ja sijoittaa sen mihin tahansa ruudulla. Tämä käyttöliittymä on melko joustava (esimerkiksi pudotusaluetta ei ole), jotta voit suunnitella terrariumin juuri haluamallasi tavalla lisäämällä, poistamalla ja siirtämällä kasveja.
+> ⚡ **Suorituskykyhuomio**: Puhdistamme nämä dokumenttitason kuuntelijat, kun siirto päättyy, välttääksemme muistivuodot ja suorituskykyongelmat.
 
-### Tehtävä
+## Siirtojärjestelmän viimeistely: Liike ja siivous
 
-Lisää `elementDrag`-funktio heti `pointerDrag`-funktion sulkevan aaltosulkeen jälkeen:
+Lisät
+- **`pos3` ja `pos4`**: Tallentavat hiiren nykyisen sijainnin seuraavaa laskentaa varten  
+- **`offsetTop` ja `offsetLeft`**: Hakevat elementin nykyisen sijainnin sivulla  
+- **Vähennyslogiikka**: Siirtää elementtiä saman verran kuin hiiri liikkuu  
 
-```javascript
-function elementDrag(e) {
-	pos1 = pos3 - e.clientX;
-	pos2 = pos4 - e.clientY;
-	pos3 = e.clientX;
-	pos4 = e.clientY;
-	console.log(pos1, pos2, pos3, pos4);
-	terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
-	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
-}
+**Liikkeen laskennan erittely:**  
+1. **Mittaa** vanhan ja uuden hiiren sijainnin välisen eron  
+2. **Laskee**, kuinka paljon elementtiä tulee siirtää hiiren liikkeen perusteella  
+3. **Päivittää** elementin CSS-sijaintiominaisuudet reaaliajassa  
+4. **Tallentaa** uuden sijainnin seuraavan liikkeen laskennan lähtökohdaksi  
+
+### Matematiikan visuaalinen esitys  
+
+```mermaid
+sequenceDiagram
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    Mouse->>JavaScript: Move from (100,50) to (110,60)
+    JavaScript->>JavaScript: Calculate: moved 10px right, 10px down
+    JavaScript->>Plant: Update position by +10px right, +10px down
+    Plant->>Plant: Render at new position
 ```
-Tässä funktiossa muokkaat paljon alkuperäisiä sijainteja 1-4, jotka asetettiin paikallisiksi muuttujiksi ulommassa funktiossa. Mitä tässä tapahtuu?
+  
+### stopElementDrag-funktio: Siivous  
 
-Kun vedät, määrität `pos1`:n uudelleen tekemällä siitä yhtä suuri kuin `pos3` (jonka asetit aiemmin arvoksi `e.clientX`) miinus nykyinen `e.clientX`-arvo. Teet samanlaisen operaation `pos2`:lle. Sitten asetat `pos3`:n ja `pos4`:n uudelleen elementin uusiin x- ja y-koordinaatteihin. Voit seurata näitä muutoksia konsolissa vetämisen aikana. Sitten muokkaat kasvin css-tyyliä asettaaksesi sen uuden sijainnin perustuen uusiin `pos1`- ja `pos2`-sijainteihin, laskemalla kasvin ylä- ja vasemman x- ja y-koordinaatin sen offsetin perusteella.
-
-> `offsetTop` ja `offsetLeft` ovat CSS-ominaisuuksia, jotka asettavat elementin sijainnin sen vanhemman elementin perusteella; vanhempi elementti voi olla mikä tahansa, joka ei ole asetettu `static`-sijaintiin. 
-
-Kaikki tämä sijainnin uudelleenlaskenta mahdollistaa terrariumin ja sen kasvien käyttäytymisen hienosäädön.
-
-### Tehtävä 
-
-Viimeinen tehtävä käyttöliittymän viimeistelemiseksi on lisätä `stopElementDrag`-funktio `elementDrag`-funktion sulkevan aaltosulkeen jälkeen:
+Lisää siivousfunktio `elementDrag`-funktion sulkevan aaltosulkeen jälkeen:  
 
 ```javascript
 function stopElementDrag() {
-	document.onpointerup = null;
-	document.onpointermove = null;
+    // Remove the document-level event listeners
+    document.onpointerup = null;
+    document.onpointermove = null;
 }
 ```
+  
+**Miksi siivous on tärkeää:**  
+- **Estää** muistivuodot jäljelle jäävistä tapahtumakuuntelijoista  
+- **Lopettaa** vetämisen, kun käyttäjä vapauttaa kasvin  
+- **Mahdollistaa**, että muut elementit voidaan vetää itsenäisesti  
+- **Nollaa** järjestelmän seuraavaa vetotoimintoa varten  
 
-Tämä pieni funktio nollaa `onpointerup`- ja `onpointermove`-tapahtumat, jotta voit joko aloittaa kasvin siirtämisen uudelleen tai aloittaa uuden kasvin vetämisen.
+**Mitä tapahtuu ilman siivousta:**  
+- Tapahtumakuuntelijat jatkavat toimintaansa, vaikka vetäminen loppuu  
+- Suorituskyky heikkenee käyttämättömien kuuntelijoiden kertyessä  
+- Odottamatonta käyttäytymistä muiden elementtien kanssa  
+- Selaimen resursseja tuhlaantuu tarpeettomaan tapahtumien käsittelyyn  
 
-✅ Mitä tapahtuu, jos et aseta näitä tapahtumia nulliksi?
+### CSS-sijaintiominaisuuksien ymmärtäminen  
 
-Nyt olet valmis projektiisi!
+Vetojärjestelmämme muokkaa kahta keskeistä CSS-ominaisuutta:  
 
-🥇Onnittelut! Olet viimeistellyt kauniin terrariumisi. ![valmis terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.fi.png)
+| Ominaisuus | Mitä se hallitsee | Kuinka käytämme sitä |
+|------------|-------------------|-----------------------|
+| `top` | Etäisyys yläreunasta | Pystysuuntainen sijainti vedon aikana |
+| `left` | Etäisyys vasemmasta reunasta | Vaakasuuntainen sijainti vedon aikana |
+
+**Keskeisiä havaintoja offset-ominaisuuksista:**  
+- **`offsetTop`**: Nykyinen etäisyys asemoidun vanhemman elementin yläreunasta  
+- **`offsetLeft`**: Nykyinen etäisyys asemoidun vanhemman elementin vasemmasta reunasta  
+- **Asemointikonteksti**: Nämä arvot ovat suhteessa lähimpään asemoituun esivanhempaan  
+- **Reaaliaikaiset päivitykset**: Muutokset tapahtuvat välittömästi, kun muokkaamme CSS-ominaisuuksia  
+
+> 🎯 **Suunnittelufilosofia**: Tämä vetojärjestelmä on tarkoituksella joustava – ei ole "pudotusalueita" tai rajoituksia. Käyttäjät voivat sijoittaa kasveja minne tahansa, mikä antaa heille täydellisen luovan vapauden terrariumin suunnittelussa.  
+
+## Kaiken yhdistäminen: Täydellinen vetojärjestelmäsi  
+
+Onnittelut! Olet juuri rakentanut kehittyneen vedä ja pudota -järjestelmän käyttämällä pelkkää JavaScriptiä. Täydellinen `dragElement`-funktiosi sisältää nyt tehokkaan sulkufunktion, joka hallitsee:  
+
+**Mitä sulkusi saavuttaa:**  
+- **Säilyttää** yksityiset sijaintimuuttujat jokaiselle kasville itsenäisesti  
+- **Käsittelee** koko vedon elinkaaren alusta loppuun  
+- **Tarjoaa** sujuvan ja responsiivisen liikkeen koko näytön alueella  
+- **Siivoaa** resurssit kunnolla muistivuotojen estämiseksi  
+- **Luo** intuitiivisen ja luovan käyttöliittymän terrariumin suunnitteluun  
+
+### Testaa interaktiivista terrariumiasi  
+
+Testaa nyt interaktiivista terrariumiasi! Avaa `index.html`-tiedosto verkkoselaimessa ja kokeile toiminnallisuutta:  
+
+1. **Klikkaa ja pidä pohjassa** mitä tahansa kasvia aloittaaksesi vetämisen  
+2. **Liikuta hiirtä tai sormea** ja katso, kuinka kasvi seuraa sujuvasti  
+3. **Vapauta** pudottaaksesi kasvin uuteen sijaintiin  
+4. **Kokeile** erilaisia järjestelyjä tutkiaksesi käyttöliittymää  
+
+🥇 **Saavutus**: Olet luonut täysin interaktiivisen verkkosovelluksen käyttämällä ydinkonsepteja, joita ammattilaiskehittäjät käyttävät päivittäin. Tämä vedä ja pudota -toiminnallisuus hyödyntää samoja periaatteita kuin tiedostojen lataus, kanban-taulut ja monet muut interaktiiviset käyttöliittymät.  
+
+![valmis terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.fi.png)  
 
 ---
 
-## 🚀Haaste
+## GitHub Copilot Agent -haaste 🚀  
 
-Lisää uusi tapahtumankäsittelijä sulkeumaasi, jotta kasveille tapahtuisi jotain muuta; esimerkiksi kaksoisnapsauta kasvia tuodaksesi sen etualalle. Ole luova!
+Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:  
 
-## Jälkikysely
+**Kuvaus:** Paranna terrarium-projektia lisäämällä palautustoiminto, joka palauttaa kaikki kasvit alkuperäisiin paikkoihinsa sulavilla animaatioilla.  
 
-[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/20)
+**Ohje:** Luo palautuspainike, joka napsautettaessa animoi kaikki kasvit takaisin alkuperäisiin sivupalkin paikkoihin käyttäen CSS-siirtymiä. Funktion tulisi tallentaa alkuperäiset sijainnit sivun latautuessa ja siirtää kasvit sujuvasti takaisin näihin paikkoihin yhden sekunnin aikana, kun palautuspainiketta painetaan.  
 
-## Kertaus ja itseopiskelu
+Lisätietoja [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) -tilasta löydät täältä.  
 
-Vaikka elementtien vetäminen ruudulla vaikuttaa yksinkertaiselta, on olemassa monia tapoja tehdä tämä ja monia sudenkuoppia riippuen halutusta efektistä. Itse asiassa on olemassa kokonainen [drag and drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API), jota voit kokeilla. Emme käyttäneet sitä tässä moduulissa, koska haluamamme efekti oli hieman erilainen, mutta kokeile tätä API:a omassa projektissasi ja katso, mitä saat aikaan.
+## 🚀 Lisähaaste: Laajenna taitojasi  
 
-Lisätietoja pointer-tapahtumista löytyy [W3C-dokumenteista](https://www.w3.org/TR/pointerevents1/) ja [MDN-web-dokumenteista](https://developer.mozilla.org/docs/Web/API/Pointer_events).
+Valmis viemään terrariumisi seuraavalle tasolle? Kokeile toteuttaa nämä parannukset:  
 
-Tarkista aina selainten yhteensopivuus [CanIUse.com](https://caniuse.com/)-sivustolla.
+**Luovat laajennukset:**  
+- **Kaksoisnapsauta** kasvia tuodaksesi sen etualalle (z-indexin manipulointi)  
+- **Lisää visuaalista palautetta**, kuten hienovarainen hehku, kun viet hiiren kasvin päälle  
+- **Toteuta rajat**, jotka estävät kasveja siirtymästä terrariumin ulkopuolelle  
+- **Luo tallennustoiminto**, joka muistaa kasvien sijainnit käyttämällä localStoragea  
+- **Lisää äänitehosteita** kasvien nostamiseen ja asettamiseen  
 
-## Tehtävä
+> 💡 **Oppimismahdollisuus**: Jokainen näistä haasteista opettaa sinulle uusia asioita DOM-manipulaatiosta, tapahtumien käsittelystä ja käyttäjäkokemuksen suunnittelusta.  
 
-[Työskentele hieman lisää DOM:n kanssa](assignment.md)
+## Luentojälkeinen kysely  
+
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/20)  
+
+## Kertaus ja itseopiskelu: Syvennä ymmärrystäsi  
+
+Olet hallinnut DOM-manipulaation ja sulkufunktioiden perusteet, mutta aina on lisää opittavaa! Tässä muutamia polkuja, joiden avulla voit laajentaa tietämystäsi ja taitojasi.  
+
+### Vaihtoehtoiset vedä ja pudota -lähestymistavat  
+
+Käytimme osoitintapahtumia maksimaalisen joustavuuden saavuttamiseksi, mutta verkkokehityksessä on useita lähestymistapoja:  
+
+| Lähestymistapa | Parhaimmillaan | Oppimisarvo |
+|----------------|----------------|-------------|
+| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Tiedostojen lataukset, viralliset vetovyöhykkeet | Selaimen natiivien ominaisuuksien ymmärtäminen |
+| [Kosketustapahtumat](https://developer.mozilla.org/docs/Web/API/Touch_events) | Mobiilikohtaiset vuorovaikutukset | Mobiililähtöiset kehitysmallit |
+| CSS `transform` -ominaisuudet | Sulavat animaatiot | Suorituskyvyn optimointitekniikat |
+
+### Edistyneet DOM-manipulaation aiheet  
+
+**Seuraavat askeleet oppimismatkallasi:**  
+- **Tapahtumien delegointi**: Tapahtumien tehokas käsittely useille elementeille  
+- **Intersection Observer**: Havaitse, kun elementit tulevat tai poistuvat näkymästä  
+- **Mutation Observer**: Seuraa muutoksia DOM-rakenteessa  
+- **Web Components**: Luo uudelleenkäytettäviä, kapseloituja käyttöliittymäelementtejä  
+- **Virtuaalinen DOM**: Ymmärrä, miten kehykset optimoivat DOM-päivityksiä  
+
+### Keskeiset resurssit jatko-opiskeluun  
+
+**Tekninen dokumentaatio:**  
+- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Kattava osoitintapahtumien viite  
+- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Virallinen standardidokumentaatio  
+- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Edistyneet sulkumallit  
+
+**Selaimen yhteensopivuus:**  
+- [CanIUse.com](https://caniuse.com/) - Tarkista ominaisuuksien tuki eri selaimissa  
+- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Yksityiskohtaiset yhteensopivuustiedot  
+
+**Harjoittelumahdollisuudet:**  
+- **Rakenna** palapeli, joka käyttää samanlaisia vetomekaniikkoja  
+- **Luo** kanban-taulu, jossa on vedä ja pudota -tehtävien hallinta  
+- **Suunnittele** kuvagalleria, jossa on siirrettävät valokuvajärjestelyt  
+- **Kokeile** kosketuseleitä mobiilikäyttöliittymiä varten  
+
+> 🎯 **Oppimisstrategia**: Paras tapa vahvistaa näitä konsepteja on harjoittelu. Kokeile rakentaa erilaisia vedettävien käyttöliittymien variaatioita – jokainen projekti opettaa sinulle jotain uutta käyttäjävuorovaikutuksesta ja DOM-manipulaatiosta.  
+
+## Tehtävä  
+
+[Työskentele hieman lisää DOM:n kanssa](assignment.md)  
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

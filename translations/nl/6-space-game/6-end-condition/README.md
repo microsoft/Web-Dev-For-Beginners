@@ -1,41 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "05be6c37791668e3719c4fba94566367",
-  "translation_date": "2025-08-29T00:58:51+00:00",
+  "original_hash": "46bcdd9a0174031655a49bb062aa279c",
+  "translation_date": "2025-10-23T01:05:05+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "nl"
 }
 -->
-# Bouw een Ruimtespel Deel 6: Einde en Herstart
+# Bouw een Ruimtegame Deel 6: Einde en Herstart
 
-## Quiz voor de Les
+Elke geweldige game heeft duidelijke eindvoorwaarden en een soepel herstartmechanisme nodig. Je hebt al een indrukwekkende ruimtegame gebouwd met beweging, gevechten en scores - nu is het tijd om de laatste stukjes toe te voegen die het compleet maken.
+
+Je game draait momenteel eindeloos, net zoals de Voyager-sondes die NASA in 1977 lanceerde - nog steeds reizend door de ruimte decennia later. Hoewel dat prima is voor ruimteverkenning, hebben games gedefinieerde eindpunten nodig om een bevredigende ervaring te creëren.
+
+Vandaag gaan we win/verlies-voorwaarden en een herstartsysteem implementeren. Aan het einde van deze les heb je een gepolijste game die spelers kunnen voltooien en opnieuw kunnen spelen, net zoals de klassieke arcadegames die het medium hebben gedefinieerd.
+
+## Quiz voor de les
 
 [Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Er zijn verschillende manieren om een *eindconditie* in een spel te definiëren. Het is aan jou als maker van het spel om te bepalen waarom het spel eindigt. Hier zijn enkele redenen, ervan uitgaande dat we het hebben over het ruimtespel dat je tot nu toe hebt gebouwd:
+## Begrijpen van Eindvoorwaarden in Games
 
-- **`N` Vijandelijke schepen zijn vernietigd**: Het is vrij gebruikelijk dat je, als je een spel in verschillende niveaus verdeelt, `N` vijandelijke schepen moet vernietigen om een niveau te voltooien.
-- **Je schip is vernietigd**: Er zijn zeker spellen waarin je verliest als je schip wordt vernietigd. Een andere veelvoorkomende aanpak is het concept van levens. Elke keer dat je schip wordt vernietigd, verlies je een leven. Als alle levens op zijn, verlies je het spel.
-- **Je hebt `N` punten verzameld**: Een andere veelvoorkomende eindconditie is dat je punten verzamelt. Hoe je punten verdient, is aan jou, maar het is vrij gebruikelijk om punten toe te kennen aan verschillende activiteiten, zoals het vernietigen van een vijandelijk schip of het verzamelen van items die verschijnen wanneer ze worden vernietigd.
-- **Voltooi een niveau**: Dit kan verschillende voorwaarden omvatten, zoals `X` vijandelijke schepen vernietigd, `Y` punten verzameld of misschien een specifiek item dat is verzameld.
+Wanneer moet je game eindigen? Deze fundamentele vraag heeft het ontwerp van games gevormd sinds de vroege arcadeperiode. Pac-Man eindigt wanneer je wordt gepakt door geesten of alle stippen hebt verzameld, terwijl Space Invaders eindigt wanneer aliens de bodem bereiken of je ze allemaal vernietigt.
 
-## Herstarten
+Als maker van de game bepaal jij de overwinning- en verliesvoorwaarden. Voor onze ruimtegame zijn hier bewezen benaderingen die zorgen voor boeiende gameplay:
 
-Als mensen je spel leuk vinden, willen ze het waarschijnlijk opnieuw spelen. Zodra het spel om welke reden dan ook eindigt, moet je een optie bieden om opnieuw te beginnen.
+- **`N` Vijandelijke schepen zijn vernietigd**: Het is vrij gebruikelijk dat je een level moet voltooien door een bepaald aantal vijandelijke schepen te vernietigen.
+- **Je schip is vernietigd**: Er zijn zeker games waarin je verliest als je schip wordt vernietigd. Een andere veelvoorkomende aanpak is het concept van levens. Elke keer dat je schip wordt vernietigd, verlies je een leven. Zodra alle levens verloren zijn, verlies je de game.
+- **Je hebt `N` punten verzameld**: Een andere veelvoorkomende eindvoorwaarde is het verzamelen van punten. Hoe je punten verzamelt, is aan jou, maar het is vrij gebruikelijk om punten toe te kennen aan verschillende activiteiten, zoals het vernietigen van een vijandelijk schip of het verzamelen van items die worden gedropt wanneer ze worden vernietigd.
+- **Voltooi een level**: Dit kan verschillende voorwaarden omvatten, zoals `X` vijandelijke schepen vernietigd, `Y` punten verzameld of misschien een specifiek item dat is verzameld.
 
-✅ Denk eens na over de voorwaarden waaronder een spel eindigt en hoe je wordt aangespoord om opnieuw te beginnen.
+## Implementeren van Herstartfunctionaliteit
 
-## Wat te bouwen
+Goede games moedigen herhaalbaarheid aan door middel van soepele herstartmechanismen. Wanneer spelers een game voltooien (of verliezen), willen ze vaak meteen opnieuw proberen - of het nu is om hun score te verbeteren of hun prestaties te verbeteren.
 
-Je gaat deze regels aan je spel toevoegen:
+Tetris is hier een perfect voorbeeld van: wanneer je blokken de bovenkant bereiken, kun je direct een nieuw spel starten zonder door complexe menu's te navigeren. We bouwen een vergelijkbaar herstartsysteem dat de game-status schoon reset en spelers snel weer in actie brengt.
 
-1. **Het spel winnen**. Zodra alle vijandelijke schepen zijn vernietigd, win je het spel. Toon daarnaast een soort overwinningsbericht.
-1. **Herstarten**. Zodra al je levens op zijn of het spel is gewonnen, moet je een manier bieden om het spel opnieuw te starten. Vergeet niet! Je moet het spel opnieuw initialiseren en de vorige spelstatus wissen.
+✅ **Reflectie**: Denk aan de games die je hebt gespeeld. Onder welke voorwaarden eindigen ze, en hoe word je aangespoord om opnieuw te starten? Wat maakt een herstartervaring soepel versus frustrerend?
 
-## Aanbevolen stappen
+## Wat je gaat bouwen
 
-Zoek de bestanden die voor je zijn aangemaakt in de map `your-work`. Deze map zou het volgende moeten bevatten:
+Je implementeert de laatste functies die je project transformeren tot een complete game-ervaring. Deze elementen onderscheiden gepolijste games van eenvoudige prototypes.
+
+**Dit voegen we vandaag toe:**
+
+1. **Overwinningsvoorwaarde**: Vernietig alle vijanden en krijg een gepaste viering (je hebt het verdiend!)
+2. **Verliesvoorwaarde**: Raak je levens kwijt en zie een verlies-scherm
+3. **Herstartmechanisme**: Druk op Enter om meteen opnieuw te beginnen - want één spel is nooit genoeg
+4. **Statusbeheer**: Elke keer een schone lei - geen overgebleven vijanden of rare glitches van het vorige spel
+
+## Aan de slag
+
+Laten we je ontwikkelomgeving voorbereiden. Je zou alle bestanden van je ruimtegame uit de vorige lessen klaar moeten hebben.
+
+**Je project zou er ongeveer zo uit moeten zien:**
 
 ```bash
 -| assets
@@ -48,189 +66,303 @@ Zoek de bestanden die voor je zijn aangemaakt in de map `your-work`. Deze map zo
 -| package.json
 ```
 
-Start je project in de map `your_work` door het volgende in te typen:
+**Start je ontwikkelserver:**
 
 ```bash
 cd your-work
 npm start
 ```
 
-Hiermee start je een HTTP-server op het adres `http://localhost:5000`. Open een browser en voer dat adres in. Je spel zou speelbaar moeten zijn.
+**Deze opdracht:**
+- Draait een lokale server op `http://localhost:5000`
+- Serveert je bestanden correct
+- Vernieuwt automatisch wanneer je wijzigingen aanbrengt
 
-> tip: om waarschuwingen in Visual Studio Code te vermijden, bewerk de functie `window.onload` zodat deze `gameLoopId` aanroept zoals het is (zonder `let`), en declareer `gameLoopId` bovenaan het bestand, onafhankelijk: `let gameLoopId;`
+Open `http://localhost:5000` in je browser en controleer of je game draait. Je zou moeten kunnen bewegen, schieten en interactie hebben met vijanden. Zodra dit is bevestigd, kunnen we doorgaan met de implementatie.
 
-### Code toevoegen
+> 💡 **Pro Tip**: Om waarschuwingen in Visual Studio Code te vermijden, declareer `gameLoopId` bovenaan je bestand als `let gameLoopId;` in plaats van het te declareren binnen de `window.onload` functie. Dit volgt moderne JavaScript variabele declaratie best practices.
 
-1. **Eindconditie bijhouden**. Voeg code toe die het aantal vijanden bijhoudt, of of het heldenschip is vernietigd door deze twee functies toe te voegen:
+## Implementatiestappen
 
-    ```javascript
-    function isHeroDead() {
-      return hero.life <= 0;
+### Stap 1: Maak Functies voor het Bijhouden van Eindvoorwaarden
+
+We hebben functies nodig om te monitoren wanneer de game moet eindigen. Net zoals sensoren op het internationale ruimtestation die constant kritieke systemen monitoren, zullen deze functies continu de status van de game controleren.
+
+```javascript
+function isHeroDead() {
+  return hero.life <= 0;
+}
+
+function isEnemiesDead() {
+  const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
+  return enemies.length === 0;
+}
+```
+
+**Wat er onder de motorkap gebeurt:**
+- **Controleert** of onze held geen levens meer heeft (au!)
+- **Telt** hoeveel vijanden nog leven en actief zijn
+- **Geeft** `true` terug wanneer het slagveld vrij is van vijanden
+- **Gebruikt** eenvoudige true/false logica om het overzichtelijk te houden
+- **Filtert** door alle game-objecten om de overlevenden te vinden
+
+### Stap 2: Update Eventhandlers voor Eindvoorwaarden
+
+Nu verbinden we deze conditiechecks met het event-systeem van de game. Elke keer dat er een botsing plaatsvindt, evalueert de game of dit een eindvoorwaarde activeert. Dit zorgt voor directe feedback bij kritieke game-events.
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+    first.dead = true;
+    second.dead = true;
+    hero.incrementPoints();
+
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
     }
+});
 
-    function isEnemiesDead() {
-      const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
-      return enemies.length === 0;
+eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
+    enemy.dead = true;
+    hero.decrementLife();
+    if (isHeroDead())  {
+      eventEmitter.emit(Messages.GAME_END_LOSS);
+      return; // loss before victory
     }
-    ```
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
+    }
+});
 
-1. **Logica toevoegen aan berichtverwerkers**. Bewerk de `eventEmitter` om deze voorwaarden te verwerken:
+eventEmitter.on(Messages.GAME_END_WIN, () => {
+    endGame(true);
+});
+  
+eventEmitter.on(Messages.GAME_END_LOSS, () => {
+  endGame(false);
+});
+```
 
-    ```javascript
-    eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-        first.dead = true;
-        second.dead = true;
-        hero.incrementPoints();
+**Wat hier gebeurt:**
+- **Laser raakt vijand**: Beide verdwijnen, je krijgt punten, en we controleren of je hebt gewonnen
+- **Vijand raakt jou**: Je verliest een leven, en we controleren of je nog in leven bent
+- **Slimme volgorde**: We controleren eerst op verlies (niemand wil tegelijkertijd winnen en verliezen!)
+- **Directe reacties**: Zodra er iets belangrijks gebeurt, weet de game het
 
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
+### Stap 3: Voeg Nieuwe Berichtconstanten Toe
 
-    eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
-        enemy.dead = true;
-        hero.decrementLife();
-        if (isHeroDead())  {
-          eventEmitter.emit(Messages.GAME_END_LOSS);
-          return; // loss before victory
-        }
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
-    
-    eventEmitter.on(Messages.GAME_END_WIN, () => {
-        endGame(true);
-    });
-      
-    eventEmitter.on(Messages.GAME_END_LOSS, () => {
-      endGame(false);
-    });
-    ```
+Je moet nieuwe berichttypes toevoegen aan je `Messages` constant object. Deze constanten helpen consistentie te behouden en voorkomen typefouten in je event-systeem.
 
-1. **Nieuwe berichttypes toevoegen**. Voeg deze berichten toe aan het constants-object:
+```javascript
+GAME_END_LOSS: "GAME_END_LOSS",
+GAME_END_WIN: "GAME_END_WIN",
+```
 
-    ```javascript
-    GAME_END_LOSS: "GAME_END_LOSS",
-    GAME_END_WIN: "GAME_END_WIN",
-    ```
+**In het bovenstaande hebben we:**
+- **Toegevoegd** constanten voor game-einde events om consistentie te behouden
+- **Gebruikt** beschrijvende namen die duidelijk het doel van het event aangeven
+- **Gevolgd** de bestaande naamgevingsconventie voor berichttypes
 
-2. **Herstartcode toevoegen**. Voeg code toe die het spel opnieuw start bij het indrukken van een geselecteerde knop.
+### Stap 4: Implementeer Herstartbediening
 
-   1. **Luister naar toetsdruk `Enter`**. Bewerk de eventListener van je venster om naar deze toets te luisteren:
+Nu voeg je toetsenbordbediening toe waarmee spelers de game kunnen herstarten. De Enter-toets is een logische keuze, omdat deze vaak wordt geassocieerd met het bevestigen van acties en het starten van nieuwe games.
 
-    ```javascript
-     else if(evt.key === "Enter") {
-        eventEmitter.emit(Messages.KEY_EVENT_ENTER);
-      }
-    ```
+**Voeg detectie van de Enter-toets toe aan je bestaande keydown eventlistener:**
 
-   1. **Herstartbericht toevoegen**. Voeg dit bericht toe aan je Messages constant:
+```javascript
+else if(evt.key === "Enter") {
+   eventEmitter.emit(Messages.KEY_EVENT_ENTER);
+}
+```
 
-        ```javascript
-        KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
-        ```
+**Voeg de nieuwe berichtconstante toe:**
 
-1. **Spelregels implementeren**. Implementeer de volgende spelregels:
+```javascript
+KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
+```
 
-   1. **Winconditie speler**. Wanneer alle vijandelijke schepen zijn vernietigd, toon een overwinningsbericht.
+**Wat je moet weten:**
+- **Breidt** je bestaande toetsenbord event-handlingsysteem uit
+- **Gebruikt** de Enter-toets als herstarttrigger voor intuïtieve gebruikerservaring
+- **Stuurt** een aangepast event uit dat andere delen van je game kunnen beluisteren
+- **Behoudt** hetzelfde patroon als je andere toetsenbordbedieningen
 
-      1. Maak eerst een functie `displayMessage()`:
+### Stap 5: Maak het Berichtweergavesysteem
 
-        ```javascript
-        function displayMessage(message, color = "red") {
-          ctx.font = "30px Arial";
-          ctx.fillStyle = color;
-          ctx.textAlign = "center";
-          ctx.fillText(message, canvas.width / 2, canvas.height / 2);
-        }
-        ```
+Je game moet resultaten duidelijk communiceren naar spelers. We maken een berichtensysteem dat overwinnings- en verliesstatussen weergeeft met kleurgecodeerde tekst, vergelijkbaar met de terminalinterfaces van vroege computersystemen waar groen succes aangaf en rood fouten signaleerde.
 
-      1. Maak een functie `endGame()`:
+**Maak de functie `displayMessage()`:**
 
-        ```javascript
-        function endGame(win) {
-          clearInterval(gameLoopId);
-        
-          // set a delay so we are sure any paints have finished
-          setTimeout(() => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "black";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            if (win) {
-              displayMessage(
-                "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
-                "green"
-              );
-            } else {
-              displayMessage(
-                "You died !!! Press [Enter] to start a new game Captain Pew Pew"
-              );
-            }
-          }, 200)  
-        }
-        ```
+```javascript
+function displayMessage(message, color = "red") {
+  ctx.font = "30px Arial";
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  ctx.fillText(message, canvas.width / 2, canvas.height / 2);
+}
+```
 
-   1. **Herstartlogica**. Wanneer alle levens op zijn of de speler het spel heeft gewonnen, geef aan dat het spel opnieuw kan worden gestart. Start het spel opnieuw wanneer de *herstart*-toets wordt ingedrukt (je kunt zelf bepalen welke toets wordt toegewezen aan herstart).
+**Stap voor stap, wat er gebeurt:**
+- **Stelt** de lettergrootte en -familie in voor duidelijke, leesbare tekst
+- **Past** een kleurparameter toe met "rood" als standaard voor waarschuwingen
+- **Centreert** de tekst horizontaal en verticaal op het canvas
+- **Gebruikt** moderne JavaScript standaardparameters voor flexibele kleurkeuzes
+- **Benut** de canvas 2D-context voor directe tekstweergave
 
-      1. Maak de functie `resetGame()`:
+**Maak de functie `endGame()`:**
 
-        ```javascript
-        function resetGame() {
-          if (gameLoopId) {
-            clearInterval(gameLoopId);
-            eventEmitter.clear();
-            initGame();
-            gameLoopId = setInterval(() => {
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              ctx.fillStyle = "black";
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-              drawPoints();
-              drawLife();
-              updateGameObjects();
-              drawGameObjects(ctx);
-            }, 100);
-          }
-        }
-        ```
+```javascript
+function endGame(win) {
+  clearInterval(gameLoopId);
 
-     1. Voeg een aanroep toe aan de `eventEmitter` om het spel opnieuw in te stellen in `initGame()`:
+  // Set a delay to ensure any pending renders complete
+  setTimeout(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (win) {
+      displayMessage(
+        "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
+        "green"
+      );
+    } else {
+      displayMessage(
+        "You died !!! Press [Enter] to start a new game Captain Pew Pew"
+      );
+    }
+  }, 200)  
+}
+```
 
-        ```javascript
-        eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
-          resetGame();
-        });
-        ```
+**Wat deze functie doet:**
+- **Bevriest** alles - geen bewegende schepen of lasers meer
+- **Neemt** een korte pauze (200ms) om het laatste frame te laten tekenen
+- **Maakt** het scherm schoon en kleurt het zwart voor een dramatisch effect
+- **Toont** verschillende berichten voor winnaars en verliezers
+- **Kleurcodeert** het nieuws - groen voor goed, rood voor... nou ja, niet zo goed
+- **Vertelt** spelers precies hoe ze weer kunnen beginnen
 
-     1. Voeg een `clear()`-functie toe aan de EventEmitter:
+### Stap 6: Implementeer Game Reset Functionaliteit
 
-        ```javascript
-        clear() {
-          this.listeners = {};
-        }
-        ```
+Het resetsysteem moet de huidige game-status volledig opruimen en een nieuwe gamesessie initialiseren. Dit zorgt ervoor dat spelers een frisse start krijgen zonder overgebleven gegevens van het vorige spel.
 
-👽 💥 🚀 Gefeliciteerd, Kapitein! Je spel is compleet! Goed gedaan! 🚀 💥 👽
+**Maak de functie `resetGame()`:**
 
----
+```javascript
+function resetGame() {
+  if (gameLoopId) {
+    clearInterval(gameLoopId);
+    eventEmitter.clear();
+    initGame();
+    gameLoopId = setInterval(() => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      drawPoints();
+      drawLife();
+      updateGameObjects();
+      drawGameObjects(ctx);
+    }, 100);
+  }
+}
+```
 
-## 🚀 Uitdaging
+**Laten we elk onderdeel begrijpen:**
+- **Controleert** of er momenteel een game-loop actief is voordat er wordt gereset
+- **Maakt** de bestaande game-loop leeg om alle huidige game-activiteit te stoppen
+- **Verwijdert** alle eventlisteners om geheugenlekken te voorkomen
+- **Initialiseert** de game-status opnieuw met nieuwe objecten en variabelen
+- **Start** een nieuwe game-loop met alle essentiële gamefuncties
+- **Behoudt** hetzelfde 100ms-interval voor consistente gameprestaties
 
-Voeg een geluid toe! Kun je een geluid toevoegen om je gameplay te verbeteren, bijvoorbeeld wanneer er een laser raakt, of wanneer de held sterft of wint? Bekijk deze [sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) om te leren hoe je geluid afspeelt met JavaScript.
+**Voeg de Enter-toets eventhandler toe aan je `initGame()` functie:**
 
-## Quiz na de Les
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
+  resetGame();
+});
+```
+
+**Voeg de `clear()` methode toe aan je EventEmitter klasse:**
+
+```javascript
+clear() {
+  this.listeners = {};
+}
+```
+
+**Belangrijke punten om te onthouden:**
+- **Verbindt** het indrukken van de Enter-toets met de reset game-functionaliteit
+- **Registreert** deze eventlistener tijdens de game-initialisatie
+- **Biedt** een schone manier om alle eventlisteners te verwijderen bij het resetten
+- **Voorkomt** geheugenlekken door eventhandlers tussen games te wissen
+- **Reset** het listeners-object naar een lege status voor nieuwe initialisatie
+
+## Gefeliciteerd! 🎉
+
+👽 💥 🚀 Je hebt met succes een complete game vanaf de basis opgebouwd. Net als de programmeurs die de eerste videogames in de jaren '70 creëerden, heb je regels code omgezet in een interactieve ervaring met goede game-mechanica en gebruikersfeedback. 🚀 💥 👽
+
+**Je hebt bereikt:**
+- **Geïmplementeerd** volledige win- en verliesvoorwaarden met gebruikersfeedback
+- **Gecreëerd** een naadloos herstartsysteem voor continue gameplay
+- **Ontworpen** duidelijke visuele communicatie voor gamestatussen
+- **Beheerd** complexe game-statusovergangen en opruiming
+- **Samengesteld** alle componenten tot een samenhangende, speelbare game
+
+## GitHub Copilot Agent Challenge 🚀
+
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+
+**Beschrijving:** Verbeter de ruimtegame door een levelprogressiesysteem te implementeren met toenemende moeilijkheidsgraad en bonusfuncties.
+
+**Prompt:** Maak een multi-level ruimtegame systeem waarbij elk level meer vijandelijke schepen heeft met verhoogde snelheid en gezondheid. Voeg een scorevermenigvuldiger toe die toeneemt met elk level, en implementeer power-ups (zoals snel schieten of een schild) die willekeurig verschijnen wanneer vijanden worden vernietigd. Voeg een levelvoltooiingsbonus toe en toon het huidige level op het scherm naast de bestaande score en levens.
+
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
+
+## 🚀 Optionele Uitdaging voor Verbetering
+
+**Voeg Audio toe aan je Game**: Verhoog de spelervaring door geluidseffecten toe te voegen! Overweeg om audio toe te voegen voor:
+
+- **Laser schoten** wanneer de speler vuurt
+- **Vijandelijke vernietiging** wanneer schepen worden geraakt
+- **Schade aan de held** wanneer de speler geraakt wordt
+- **Overwinningsmuziek** wanneer de game wordt gewonnen
+- **Verliesgeluid** wanneer de game verloren is
+
+**Voorbeeld van audio-implementatie:**
+
+```javascript
+// Create audio objects
+const laserSound = new Audio('assets/laser.wav');
+const explosionSound = new Audio('assets/explosion.wav');
+
+// Play sounds during game events
+function playLaserSound() {
+  laserSound.currentTime = 0; // Reset to beginning
+  laserSound.play();
+}
+```
+
+**Wat je moet weten:**
+- **Maakt** Audio-objecten voor verschillende geluidseffecten
+- **Reset** de `currentTime` om snelle geluidseffecten mogelijk te maken
+- **Behandelt** autoplay-beleid van browsers door geluiden te activeren via gebruikersinteracties
+- **Beheert** audiovolume en timing voor een betere game-ervaring
+
+> 💡 **Leermiddel**: Verken deze [audio sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) om meer te leren over het implementeren van audio in JavaScript-games.
+
+## Quiz na de les
 
 [Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/40)
 
-## Herziening & Zelfstudie
+## Review & Zelfstudie
 
-Je opdracht is om een nieuw voorbeeldspel te maken, dus verken enkele interessante spellen om te zien wat voor soort spel je zou kunnen bouwen.
+Je opdracht is om een nieuw voorbeeldspel te maken, dus verken enkele interessante games om te zien wat voor soort game je zou kunnen bouwen.
 
 ## Opdracht
 
-[Bouw een Voorbeeldspel](assignment.md)
+[Maak een Voorbeeldspel](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

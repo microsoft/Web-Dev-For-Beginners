@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T00:26:06+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-22T23:44:37+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "tr"
 }
@@ -15,7 +15,11 @@ CO_OP_TRANSLATOR_METADATA:
 ## Ders Öncesi Quiz
 [Ders öncesi quiz](https://ff-quizzes.netlify.app)
 
-Kod yazmayı düşündüğümüzde, kodumuzun okunabilir olmasını her zaman sağlamak isteriz. Bu kulağa ters gibi gelse de, kod yazıldığından çok daha fazla kez okunur. Geliştiricinin araç kutusundaki sürdürülebilir kodu sağlamak için temel araçlardan biri **fonksiyon**dur.
+Aynı kodu tekrar tekrar yazmak, programlamanın en yaygın sıkıntılarından biridir. Fonksiyonlar, kodu yeniden kullanılabilir bloklar halinde paketlemenize olanak tanıyarak bu sorunu çözer. Fonksiyonları, Henry Ford'un montaj hattını devrimsel hale getiren standart parçalar gibi düşünebilirsiniz – bir kez güvenilir bir bileşen oluşturduğunuzda, onu yeniden sıfırdan yapmadan ihtiyaç duyduğunuz her yerde kullanabilirsiniz.
+
+Fonksiyonlar, kod parçalarını paketlemenize ve programınız boyunca yeniden kullanmanıza olanak tanır. Aynı mantığı her yerde kopyalayıp yapıştırmak yerine, bir kez bir fonksiyon oluşturabilir ve ihtiyaç duyduğunuzda çağırabilirsiniz. Bu yaklaşım kodunuzu düzenli tutar ve güncellemeleri çok daha kolay hale getirir.
+
+Bu derste, kendi fonksiyonlarınızı nasıl oluşturacağınızı, onlara nasıl bilgi aktaracağınızı ve faydalı sonuçlar almayı öğreneceksiniz. Fonksiyonlar ile metotlar arasındaki farkı keşfedecek, modern sözdizimi yaklaşımlarını öğrenecek ve fonksiyonların diğer fonksiyonlarla nasıl çalışabileceğini göreceksiniz. Bu kavramları adım adım oluşturacağız.
 
 [![Metotlar ve Fonksiyonlar](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metotlar ve Fonksiyonlar")
 
@@ -25,13 +29,15 @@ Kod yazmayı düşündüğümüzde, kodumuzun okunabilir olmasını her zaman sa
 
 ## Fonksiyonlar
 
-Temelde bir fonksiyon, talep üzerine çalıştırabileceğimiz bir kod bloğudur. Bu, aynı görevi birden fazla kez gerçekleştirmemiz gereken senaryolar için mükemmeldir; mantığı birden fazla yerde çoğaltmak yerine (bu, güncelleme zamanı geldiğinde zor olurdu), onu tek bir yerde merkezileştirebilir ve işlemi gerçekleştirmek istediğimizde çağırabiliriz - hatta diğer fonksiyonlardan fonksiyon çağırabilirsiniz!
+Bir fonksiyon, belirli bir görevi yerine getiren bağımsız bir kod bloğudur. İhtiyaç duyduğunuzda çalıştırabileceğiniz mantığı kapsar.
 
-Bir fonksiyona isim verebilmek de aynı derecede önemlidir. Bu önemsiz gibi görünse de, isim bir kod bölümünü hızlı bir şekilde belgelemek için bir yol sağlar. Bunu bir düğme üzerindeki etiket gibi düşünebilirsiniz. "Zamanlayıcıyı iptal et" yazan bir düğmeye tıklarsam, saati durduracağını bilirim.
+Programınız boyunca aynı kodu birden fazla kez yazmak yerine, bunu bir fonksiyon içinde paketleyebilir ve ihtiyaç duyduğunuzda çağırabilirsiniz. Bu yaklaşım kodunuzu temiz tutar ve güncellemeleri çok daha kolay hale getirir. Kod tabanınızda 20 farklı yerde dağılmış mantığı değiştirmek zorunda kalırsanız bakım zorluğunu düşünün.
 
-## Fonksiyon Oluşturma ve Çağırma
+Fonksiyonlarınıza açıklayıcı isimler vermek çok önemlidir. İyi adlandırılmış bir fonksiyon amacını açıkça iletir – `cancelTimer()` gördüğünüzde, ne yaptığını hemen anlarsınız, tıpkı açıkça etiketlenmiş bir düğmenin tıklanıldığında ne olacağını size söylemesi gibi.
 
-Bir fonksiyonun sözdizimi şu şekilde görünür:
+## Fonksiyon oluşturma ve çağırma
+
+Bir fonksiyonun nasıl oluşturulacağını inceleyelim. Sözdizimi tutarlı bir deseni takip eder:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Bir selamlama mesajı göstermek için bir fonksiyon oluşturmak isteseydim, bu şöyle görünebilirdi:
+Bunu parçalayalım:
+- `function` anahtar kelimesi JavaScript'e "Hey, bir fonksiyon oluşturuyorum!" der.
+- `nameOfFunction` fonksiyonunuza açıklayıcı bir isim verdiğiniz yerdir.
+- Parantezler `()` parametreler ekleyebileceğiniz yerdir (buna birazdan geleceğiz).
+- Süslü parantezler `{}` fonksiyonu çağırdığınızda çalışacak olan gerçek kodu içerir.
+
+Bunu eylemde görmek için basit bir selamlama fonksiyonu oluşturalım:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Fonksiyonumuzu çağırmak (veya çalıştırmak) istediğimizde, fonksiyonun adını ve ardından `()` kullanırız. Fonksiyonumuzun çağrılmadan önce veya sonra tanımlanabileceğini belirtmekte fayda var; JavaScript derleyicisi onu sizin için bulacaktır.
+Bu fonksiyon konsola "Hello, world!" yazdırır. Bir kez tanımladıktan sonra, ihtiyacınız olduğu kadar kullanabilirsiniz.
+
+Fonksiyonunuzu çalıştırmak (veya "çağırmak") için adını yazın ve ardından parantez ekleyin. JavaScript, fonksiyonunuzu çağırmadan önce veya sonra tanımlamanıza izin verir – JavaScript motoru yürütme sırasını halleder.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** **Metot** olarak bilinen özel bir fonksiyon türü vardır ve bunu zaten kullanıyordunuz! Aslında, yukarıdaki demoda `console.log` kullandığımızda bunu gördük. Bir metodu bir fonksiyondan ayıran şey, bir metodun bir nesneye (`console` örneğimizde) bağlı olmasıdır, oysa bir fonksiyon serbest dolaşımdadır. Birçok geliştiricinin bu terimleri birbirinin yerine kullandığını duyacaksınız.
+Bu satırı çalıştırdığınızda, `displayGreeting` fonksiyonunuzun içindeki tüm kodu çalıştırır ve tarayıcınızın konsolunda "Hello, world!" görüntüler. Bu fonksiyonu tekrar tekrar çağırabilirsiniz.
 
-### Fonksiyonlar için En İyi Uygulamalar
+> **Not:** Bu derslerde **metotlar** kullanıyordunuz. `console.log()` bir metottur – esasen `console` nesnesine ait bir fonksiyondur. Temel fark, metotların nesnelere bağlı olması, fonksiyonların ise bağımsız olmasıdır. Birçok geliştirici bu terimleri günlük konuşmalarda birbirinin yerine kullanır.
 
-Fonksiyonlar oluştururken akılda tutulması gereken birkaç en iyi uygulama vardır:
+### Fonksiyon yazma en iyi uygulamaları
 
-- Her zaman olduğu gibi, fonksiyonun ne yapacağını bilmek için açıklayıcı isimler kullanın
-- Kelimeleri birleştirmek için **camelCasing** kullanın
-- Fonksiyonlarınızı belirli bir göreve odaklanmış tutun
+İşte harika fonksiyonlar yazmanıza yardımcı olacak birkaç ipucu:
 
-## Fonksiyona Bilgi Aktarma
+- Fonksiyonlarınıza açık, açıklayıcı isimler verin – gelecekteki kendinize teşekkür edeceksiniz!
+- Çok kelimeli isimler için **camelCasing** kullanın (örneğin, `calculateTotal` yerine `calculate_total`).
+- Her fonksiyonun bir şeyi iyi yapmaya odaklanmasını sağlayın.
 
-Bir fonksiyonu daha yeniden kullanılabilir hale getirmek için genellikle ona bilgi aktarmak istersiniz. Yukarıdaki `displayGreeting` örneğimizi düşünürsek, yalnızca **Hello, world!** gösterecektir. Birinin oluşturabileceği en kullanışlı fonksiyon değil. Biraz daha esnek hale getirmek istersek, selamlanacak kişinin adını belirtmesine izin vermek gibi, bir **parametre** ekleyebiliriz. Parametre (bazen **argüman** olarak da adlandırılır), bir fonksiyona gönderilen ek bilgidir.
+## Fonksiyona bilgi aktarma
 
-Parametreler, tanım kısmında parantez içinde listelenir ve şu şekilde virgülle ayrılır:
+`displayGreeting` fonksiyonumuz sınırlı – herkes için sadece "Hello, world!" görüntüleyebilir. Parametreler, fonksiyonları daha esnek ve kullanışlı hale getirmemizi sağlar.
+
+**Parametreler**, fonksiyonu her kullandığınızda farklı değerler ekleyebileceğiniz yerler gibi davranır. Bu şekilde, aynı fonksiyon her çağrıda farklı bilgilerle çalışabilir.
+
+Fonksiyonunuzu tanımlarken parametreleri parantez içine listeleyin ve birden fazla parametreyi virgülle ayırın:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-`displayGreeting` fonksiyonumuzu bir isim kabul edecek ve bunu gösterecek şekilde güncelleyebiliriz.
+Her parametre bir yer tutucu gibi davranır – birisi fonksiyonunuzu çağırdığında, bu yerlere yerleştirilecek gerçek değerler sağlar.
+
+Selamlama fonksiyonumuzu birinin adını kabul edecek şekilde güncelleyelim:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Fonksiyonumuzu çağırmak ve parametreyi aktarmak istediğimizde, bunu parantez içinde belirtiriz.
+Adı doğrudan mesajımıza eklemek için ters tırnak işaretleri (`` ` ``) ve `${}` kullandığımıza dikkat edin – buna şablon dizesi denir ve değişkenlerle karışık dizeler oluşturmanın gerçekten kullanışlı bir yoludur.
+
+Şimdi fonksiyonumuzu çağırdığımızda, istediğimiz herhangi bir adı geçirebiliriz:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
-## Varsayılan Değerler
+JavaScript, `'Christopher'` dizgesini alır, `name` parametresine atar ve "Hello, Christopher!" şeklinde kişiselleştirilmiş mesajı oluşturur.
 
-Fonksiyonumuzu daha da esnek hale getirmek için daha fazla parametre ekleyebiliriz. Ancak her değerin belirtilmesini istemezsek ne olur? Selamlama örneğimizle devam edersek, adı gerekli bırakabiliriz (kimi selamladığımızı bilmemiz gerekiyor), ancak selamlamanın kendisinin istenildiği gibi özelleştirilmesine izin vermek isteriz. Birisi bunu özelleştirmek istemezse, bunun yerine bir varsayılan değer sağlarız. Bir parametreye varsayılan bir değer sağlamak için, bir değişken için değer belirlediğimiz gibi ayarlarız - `parameterName = 'defaultValue'`. Tam bir örnek görmek için:
+## Varsayılan değerler
+
+Bazı parametreleri isteğe bağlı yapmak istersek ne olur? İşte burada varsayılan değerler devreye girer!
+
+Diyelim ki insanlar selamlama kelimesini özelleştirebilsin istiyoruz, ancak bir şey belirtmezlerse, yedek olarak "Hello" kullanacağız. Varsayılan değerleri, bir değişken ayarlamak gibi eşittir işareti kullanarak ayarlayabilirsiniz:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Fonksiyonu çağırdığımızda, `salutation` için bir değer belirlemek isteyip istemediğimize karar verebiliriz.
+Burada, `name` hala gereklidir, ancak `salutation` için kimse farklı bir selamlama sağlamazsa `'Hello'` yedek değeri vardır.
+
+Artık bu fonksiyonu iki farklı şekilde çağırabiliriz:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
-## Dönen Değerler
+İlk çağrıda, selamlama belirtmediğimiz için JavaScript varsayılan "Hello"yu kullanır. İkinci çağrıda ise özel "Hi" kullanır. Bu esneklik, fonksiyonları farklı senaryolara uyarlanabilir hale getirir.
 
-Şimdiye kadar oluşturduğumuz fonksiyon her zaman [console](https://developer.mozilla.org/docs/Web/API/console)'a çıktı verecek. Bazen bu tam olarak aradığımız şey olabilir, özellikle diğer hizmetleri çağıracak fonksiyonlar oluşturduğumuzda. Ancak bir hesaplama yapmak ve değeri geri döndürmek için bir yardımcı fonksiyon oluşturmak istersem, böylece başka bir yerde kullanabilirim?
+## Geri dönen değerler
 
-Bunu bir **dönen değer** kullanarak yapabiliriz. Dönen bir değer, fonksiyon tarafından döndürülür ve bir değişkende saklanabilir, tıpkı bir dize veya sayı gibi sabit bir değer saklayabileceğimiz gibi.
+Şimdiye kadar fonksiyonlarımız sadece konsola mesajlar yazdırıyordu, ancak bir fonksiyonun bir şey hesaplamasını ve sonucu size geri vermesini istiyorsanız ne olur?
 
-Bir fonksiyon bir şey döndürüyorsa, `return` anahtar kelimesi kullanılır. `return` anahtar kelimesi döndürülen şeyin bir değerini veya referansını bekler, şu şekilde:
+İşte burada **geri dönen değerler** devreye girer. Bir şey görüntülemek yerine, bir fonksiyon size bir değer verebilir ve bu değeri bir değişkende saklayabilir veya kodunuzun diğer bölümlerinde kullanabilirsiniz.
+
+Bir değeri geri göndermek için `return` anahtar kelimesini ve ardından geri göndermek istediğiniz şeyi kullanırsınız:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Bir selamlama mesajı oluşturmak ve değeri çağırana geri döndürmek için bir fonksiyon oluşturabiliriz.
+Önemli bir nokta: Bir fonksiyon bir `return` ifadesine ulaştığında, hemen çalışmayı durdurur ve bu değeri kendisini çağıran kişiye geri gönderir.
+
+Selamlama fonksiyonumuzu mesajı yazdırmak yerine geri dönecek şekilde değiştirelim:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Bu fonksiyonu çağırdığımızda, değeri bir değişkende saklayacağız. Bu, sabit bir değeri bir değişkene ayarladığımız şekilde çok benzer (örneğin `const name = 'Christopher'`).
+Artık bu fonksiyon selamlamayı yazdırmak yerine mesajı oluşturur ve bize geri verir.
+
+Geri dönen değeri kullanmak için, diğer herhangi bir değer gibi bir değişkende saklayabiliriz:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
-## Fonksiyonları Fonksiyonlara Parametre Olarak Geçirme
+Artık `greetingMessage` "Hello, Christopher" içerir ve bunu kodunuzun herhangi bir yerinde kullanabilirsiniz – bir web sayfasında görüntülemek, bir e-postaya eklemek veya başka bir fonksiyona iletmek için.
 
-Programlama kariyerinizde ilerledikçe, parametre olarak fonksiyon kabul eden fonksiyonlarla karşılaşacaksınız. Bu güzel numara, bir şeyin ne zaman gerçekleşeceğini veya tamamlanacağını bilmediğimizde, ancak buna yanıt olarak bir işlem gerçekleştirmemiz gerektiğinde yaygın olarak kullanılır.
+## Fonksiyonları diğer fonksiyonlara parametre olarak geçirme
 
-Bir örnek olarak, [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)'u düşünün, bir zamanlayıcı başlatır ve tamamlandığında kodu çalıştırır. Hangi kodu çalıştırmak istediğimizi ona söylememiz gerekiyor. Mükemmel bir iş gibi görünüyor!
+Fonksiyonlar, diğer fonksiyonlara parametre olarak geçirilebilir. Bu kavram başlangıçta karmaşık görünebilir, ancak esnek programlama desenlerini mümkün kılan güçlü bir özelliktir.
 
-Aşağıdaki kodu çalıştırırsanız, 3 saniye sonra **3 saniye geçti** mesajını görürsünüz.
+Bu desen, "bir şey olduğunda, şu diğer şeyi yap" demek istediğinizde çok yaygındır. Örneğin, "zamanlayıcı bittiğinde, bu kodu çalıştır" veya "kullanıcı düğmeye tıkladığında, bu fonksiyonu çağır."
+
+`setTimeout`'a bakalım, bu yerleşik bir fonksiyondur ve belirli bir süre bekler, ardından bir kodu çalıştırır. Hangi kodu çalıştıracağını söylememiz gerekir – fonksiyon geçirme için mükemmel bir kullanım durumu!
+
+Bu kodu deneyin – 3 saniye sonra bir mesaj göreceksiniz:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
-### İsimsiz Fonksiyonlar
+`setTimeout`'a `displayDone`'ı (parantezsiz) geçirdiğimize dikkat edin. Fonksiyonu kendimiz çağırmıyoruz – onu `setTimeout`'a teslim ediyoruz ve "3 saniye içinde bunu çağır" diyoruz.
 
-Oluşturduğumuz şeye bir kez daha bakalım. Bir kez kullanılacak bir isimle bir fonksiyon oluşturuyoruz. Uygulamamız daha karmaşık hale geldikçe, yalnızca bir kez çağrılacak birçok fonksiyon oluşturduğumuzu görebiliriz. Bu ideal değil. Görünüşe göre, her zaman bir isim vermemiz gerekmiyor!
+### İsimsiz fonksiyonlar
 
-Bir fonksiyonu parametre olarak geçirirken, önceden bir tane oluşturmayı atlayabilir ve bunun yerine bir parametre olarak oluşturabiliriz. Aynı `function` anahtar kelimesini kullanırız, ancak bunu bir parametre olarak oluştururuz.
+Bazen bir fonksiyona sadece bir şey için ihtiyacınız olur ve ona bir isim vermek istemezsiniz. Düşünün – bir fonksiyonu sadece bir kez kullanıyorsanız, neden kodunuzu fazladan bir isimle karmaşıklaştırasınız?
 
-Yukarıdaki kodu isimsiz bir fonksiyon kullanacak şekilde yeniden yazalım:
+JavaScript, **isimsiz fonksiyonlar** oluşturmanıza olanak tanır – sadece ihtiyacınız olan yerde tanımlayabileceğiniz isimsiz fonksiyonlar.
+
+Zamanlayıcı örneğimizi bir isimsiz fonksiyon kullanarak yeniden yazabiliriz:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Yeni kodumuzu çalıştırırsanız, aynı sonuçları aldığımızı fark edeceksiniz. Bir fonksiyon oluşturduk, ancak ona bir isim vermemiz gerekmedi!
+Bu aynı sonucu sağlar, ancak fonksiyon doğrudan `setTimeout` çağrısı içinde tanımlanır, ayrı bir fonksiyon bildirimi gereksiz hale gelir.
 
-### Fat Arrow Fonksiyonları
+### Ok fonksiyonları
 
-Birçok programlama dilinde (JavaScript dahil) yaygın olan bir kısayol, **ok** veya **fat arrow** fonksiyon olarak adlandırılan bir şey kullanma yeteneğidir. `=>` adlı özel bir gösterge kullanır, bu bir oka benzer - bu yüzden adı bu! `=>` kullanarak, `function` anahtar kelimesini atlayabiliriz.
+Modern JavaScript, **ok fonksiyonları** adı verilen daha kısa bir fonksiyon yazma yöntemi sunar. `=>` (ok gibi görünür – anladınız mı?) kullanırlar ve geliştiriciler arasında oldukça popülerdir.
 
-Kodumuzu bir kez daha fat arrow fonksiyon kullanacak şekilde yeniden yazalım:
+Ok fonksiyonları, `function` anahtar kelimesini atlamanıza ve daha özlü kod yazmanıza olanak tanır.
+
+Zamanlayıcı örneğimizi bir ok fonksiyonu kullanarak yazalım:
 
 ```javascript
 setTimeout(() => {
@@ -183,22 +225,41 @@ setTimeout(() => {
 }, 3000);
 ```
 
-### Hangi Stratejiyi Ne Zaman Kullanmalı
+`()` parametrelerin gideceği yerdir (bu durumda boş), ardından ok `=>` gelir ve son olarak süslü parantezler içinde fonksiyon gövdesi. Bu, daha özlü bir sözdizimiyle aynı işlevselliği sağlar.
 
-Artık bir fonksiyonu parametre olarak geçmek için üç yolumuz olduğunu gördünüz ve her birini ne zaman kullanacağınızı merak ediyor olabilirsiniz. Fonksiyonu birden fazla kez kullanacağınızı biliyorsanız, normal şekilde oluşturun. Sadece bir konum için kullanacaksanız, genellikle isimsiz bir fonksiyon kullanmak en iyisidir. Fat arrow fonksiyon mu yoksa daha geleneksel `function` sözdizimini mi kullanacağınız size bağlıdır, ancak çoğu modern geliştiricinin `=>` tercih ettiğini fark edeceksiniz.
+### Hangi stratejiyi ne zaman kullanmalı
+
+Hangi yaklaşımı kullanmalısınız? Pratik bir kılavuz: Fonksiyonu birden fazla kez kullanacaksanız, ona bir isim verin ve ayrı olarak tanımlayın. Sadece belirli bir kullanım içinse, bir isimsiz fonksiyon düşünün. Hem ok fonksiyonları hem de geleneksel sözdizimi geçerli seçeneklerdir, ancak ok fonksiyonları modern JavaScript kod tabanlarında yaygındır.
 
 ---
 
-## 🚀 Zorluk
 
-Fonksiyonlar ve metotlar arasındaki farkı bir cümleyle ifade edebilir misiniz? Deneyin!
+
+## 🚀 Meydan Okuma
+
+Fonksiyonlar ve metotlar arasındaki farkı bir cümleyle açıklayabilir misiniz? Deneyin!
+
+## GitHub Copilot Agent Meydan Okuması 🚀
+
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+
+**Açıklama:** Bu derste ele alınan farklı fonksiyon kavramlarını içeren matematiksel fonksiyonlardan oluşan bir yardımcı kütüphane oluşturun. Parametreler, varsayılan değerler, geri dönen değerler ve ok fonksiyonlarını içermelidir.
+
+**Talimat:** `mathUtils.js` adlı bir JavaScript dosyası oluşturun ve şu fonksiyonları içersin:
+1. İki parametre alan ve toplamlarını döndüren bir `add` fonksiyonu
+2. Varsayılan parametre değerleri olan bir `multiply` fonksiyonu (ikinci parametre varsayılan olarak 1)
+3. Bir sayı alıp karesini döndüren bir ok fonksiyonu `square`
+4. Başka bir fonksiyonu parametre olarak ve iki sayı kabul eden, ardından bu fonksiyonu bu sayılara uygulayan bir `calculate` fonksiyonu
+5. Her fonksiyonu uygun test durumlarıyla çağırmayı gösterin
+
+[Agent modunu](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) burada öğrenin.
 
 ## Ders Sonrası Quiz
 [Ders sonrası quiz](https://ff-quizzes.netlify.app)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-[Ok fonksiyonları hakkında biraz daha okumaya](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) değer, çünkü kod tabanlarında giderek daha fazla kullanılıyorlar. Bir fonksiyon yazmayı ve ardından bu sözdizimiyle yeniden yazmayı pratik edin.
+[Ok fonksiyonları hakkında biraz daha okumaya](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) değer, çünkü kod tabanlarında giderek daha fazla kullanılıyorlar. Bir fonksiyon yazmayı ve ardından bu sözdizimiyle yeniden yazmayı deneyin.
 
 ## Ödev
 
@@ -207,4 +268,4 @@ Fonksiyonlar ve metotlar arasındaki farkı bir cümleyle ifade edebilir misiniz
 ---
 
 **Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel bir insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.

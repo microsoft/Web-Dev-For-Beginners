@@ -1,290 +1,649 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
-  "translation_date": "2025-08-29T00:35:59+00:00",
+  "original_hash": "b24f28fc46dd473aa9080f174182adde",
+  "translation_date": "2025-10-23T00:36:48+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "fi"
 }
 -->
-# Rakenna pankkisovellus Osa 2: Luo kirjautumis- ja rekisteröintilomake
+# Rakenna pankkisovellus, osa 2: Kirjautumis- ja rekisteröintilomakkeen luominen
 
 ## Ennakkokysely
 
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/43)
 
-### Johdanto
+Oletko koskaan täyttänyt verkkolomaketta, joka hylkää sähköpostiosoitteesi muodon? Tai menettänyt kaikki tiedot painettuasi "lähetä"-painiketta? Me kaikki olemme kohdanneet näitä turhauttavia tilanteita.
 
-Lähes kaikissa moderneissa verkkosovelluksissa voit luoda tilin saadaksesi oman yksityisen tilan. Koska useat käyttäjät voivat käyttää verkkosovellusta samanaikaisesti, tarvitaan mekanismi, jolla jokaisen käyttäjän henkilökohtaiset tiedot tallennetaan erikseen ja valitaan, mitä tietoja näytetään. Emme käsittele [käyttäjän identiteetin turvallista hallintaa](https://en.wikipedia.org/wiki/Authentication), sillä se on laaja aihe itsessään, mutta varmistamme, että jokainen käyttäjä voi luoda yhden (tai useamman) pankkitilin sovelluksessamme.
+Lomakkeet ovat silta käyttäjien ja sovelluksesi toiminnallisuuden välillä. Kuten lennonjohtajien tarkat protokollat, jotka ohjaavat lentokoneet turvallisesti määränpäähänsä, hyvin suunnitellut lomakkeet antavat selkeää palautetta ja estävät kalliita virheitä. Huonosti suunnitellut lomakkeet taas voivat karkottaa käyttäjät yhtä nopeasti kuin väärinkäsitys vilkkaalla lentokentällä.
 
-Tässä osassa käytämme HTML-lomakkeita lisätäksemme kirjautumisen ja rekisteröinnin verkkosovellukseemme. Näemme, kuinka tiedot lähetetään ohjelmallisesti palvelimen API:lle ja lopulta määritämme perusvalidointisäännöt käyttäjän syötteille.
+Tässä oppitunnissa muutamme staattisen pankkisovelluksesi interaktiiviseksi sovellukseksi. Opit rakentamaan lomakkeita, jotka validoivat käyttäjän syötteet, kommunikoivat palvelimien kanssa ja antavat hyödyllistä palautetta. Ajattele tätä ohjausliittymän rakentamisena, joka antaa käyttäjille mahdollisuuden navigoida sovelluksesi ominaisuuksissa.
 
-### Esivaatimukset
+Lopuksi sinulla on täydellinen kirjautumis- ja rekisteröintijärjestelmä, joka ohjaa käyttäjiä onnistumiseen turhautumisen sijaan.
 
-Sinun tulee olla suorittanut verkkosovelluksen [HTML-mallien ja reitityksen](../1-template-route/README.md) osion ennen tämän oppitunnin aloittamista. Sinun tulee myös asentaa [Node.js](https://nodejs.org) ja [käynnistää palvelimen API](../api/README.md) paikallisesti, jotta voit lähettää tietoja tilien luomista varten.
+## Esivaatimukset
 
-**Huomioi**
-Sinulla tulee olla kaksi terminaalia käynnissä samanaikaisesti, kuten alla on lueteltu:
-1. Pääpankkisovellusta varten, jonka rakensimme [HTML-mallien ja reitityksen](../1-template-route/README.md) oppitunnissa.
-2. [Pankkisovelluksen palvelin-API](../api/README.md), jonka juuri asensimme.
+Ennen kuin aloitamme lomakkeiden rakentamisen, varmistetaan, että kaikki on asetettu oikein. Tämä oppitunti jatkuu suoraan siitä, mihin edellinen jäi, joten jos olet hypännyt eteenpäin, kannattaa palata takaisin ja varmistaa perusasioiden toimivuus ensin.
 
-Molemmat palvelimet tulee olla käynnissä, jotta voit jatkaa oppituntia. Ne kuuntelevat eri porteilla (portti `3000` ja portti `5000`), joten kaiken pitäisi toimia moitteettomasti.
+### Vaadittavat asetukset
 
-Voit testata, että palvelin toimii oikein suorittamalla tämän komennon terminaalissa:
+| Komponentti | Tila | Kuvaus |
+|-------------|------|--------|
+| [HTML-mallit](../1-template-route/README.md) | ✅ Vaadittu | Pankkisovelluksesi perusrakenne |
+| [Node.js](https://nodejs.org) | ✅ Vaadittu | JavaScript-ajonaika palvelimelle |
+| [Pankin API-palvelin](../api/README.md) | ✅ Vaadittu | Tietojen tallennuksen taustapalvelu |
 
-```sh
+> 💡 **Kehitysvinkki**: Sinulla tulee olla kaksi erillistä palvelinta käynnissä samanaikaisesti – yksi pankkisovelluksen käyttöliittymälle ja toinen taustapalvelulle. Tämä asettelu jäljittelee todellista kehitysympäristöä, jossa käyttöliittymä ja taustapalvelut toimivat itsenäisesti.
+
+### Palvelimen konfigurointi
+
+**Kehitysympäristösi sisältää:**
+- **Käyttöliittymäpalvelin**: Palvelee pankkisovellustasi (tyypillisesti portti `3000`)
+- **Taustapalvelin**: Käsittelee tietojen tallennuksen ja haun (portti `5000`)
+- **Molemmat palvelimet** voivat toimia samanaikaisesti ilman konflikteja
+
+**API-yhteyden testaaminen:**
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+**Jos näet API-version vastauksen, voit jatkaa!**
 
 ---
 
-## Lomake ja ohjaimet
+## HTML-lomakkeiden ja kontrollien ymmärtäminen
 
-`<form>`-elementti kapseloi HTML-dokumentin osan, jossa käyttäjä voi syöttää ja lähettää tietoja interaktiivisten ohjainten avulla. Lomakkeessa voi käyttää monenlaisia käyttöliittymäohjaimia (UI), joista yleisimmät ovat `<input>`- ja `<button>`-elementit.
+HTML-lomakkeet ovat tapa, jolla käyttäjät kommunikoivat verkkosovelluksesi kanssa. Ajattele niitä kuin 1800-luvun lennätinjärjestelmää, joka yhdisti kaukaiset paikat – ne ovat viestintäprotokolla käyttäjän tarkoituksen ja sovelluksen vastauksen välillä. Huolellisesti suunnitellut lomakkeet havaitsevat virheet, ohjaavat syötteen muotoilua ja antavat hyödyllisiä ehdotuksia.
 
-On olemassa monia erilaisia [tyyppejä](https://developer.mozilla.org/docs/Web/HTML/Element/input) `<input>`-elementille. Esimerkiksi, jos haluat luoda kentän, johon käyttäjä voi syöttää käyttäjänimensä, voit käyttää:
+Modernit lomakkeet ovat huomattavasti kehittyneempiä kuin perinteiset tekstikentät. HTML5 esitteli erikoistuneita syötetyyppejä, jotka käsittelevät sähköpostin validointia, numeromuotoilua ja päivämäärän valintaa automaattisesti. Nämä parannukset hyödyttävät sekä saavutettavuutta että mobiilikäyttäjäkokemuksia.
+
+### Keskeiset lomake-elementit
+
+**Rakennuspalikat, joita jokainen lomake tarvitsee:**
 
 ```html
-<input id="username" name="username" type="text">
+<!-- Basic form structure -->
+<form id="userForm" method="POST">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" required>
+  
+  <button type="submit">Submit</button>
+</form>
 ```
 
-`name`-attribuuttia käytetään ominaisuuden nimenä, kun lomaketiedot lähetetään. `id`-attribuuttia käytetään `<label>`-elementin yhdistämiseen lomakeohjaimeen.
+**Mitä tämä koodi tekee:**
+- **Luo** lomakekontainerin, jolla on yksilöllinen tunniste
+- **Määrittää** HTTP-menetelmän tietojen lähettämiseen
+- **Yhdistää** etiketit syötteisiin saavutettavuuden parantamiseksi
+- **Määrittää** lähetyspainikkeen lomakkeen käsittelyyn
 
-> Tutustu koko listaan [`<input>`-tyypeistä](https://developer.mozilla.org/docs/Web/HTML/Element/input) ja [muista lomakeohjaimista](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), jotta saat käsityksen kaikista natiivista käyttöliittymäelementeistä, joita voit käyttää UI:n rakentamisessa.
+### Modernit syötetyypit ja attribuutit
 
-✅ Huomaa, että `<input>` on [tyhjä elementti](https://developer.mozilla.org/docs/Glossary/Empty_element), johon ei tule lisätä vastaavaa sulkevaa tagia. Voit kuitenkin käyttää itse sulkevaa `<input/>`-merkintää, mutta se ei ole pakollista.
+| Syötetyyppi | Tarkoitus | Esimerkki |
+|-------------|-----------|-----------|
+| `text` | Yleinen tekstisyöte | `<input type="text" name="username">` |
+| `email` | Sähköpostin validointi | `<input type="email" name="email">` |
+| `password` | Piilotettu tekstisyöte | `<input type="password" name="password">` |
+| `number` | Numeraalinen syöte | `<input type="number" name="balance" min="0">` |
+| `tel` | Puhelinnumerot | `<input type="tel" name="phone">` |
 
-`<button>`-elementti lomakkeessa on hieman erityinen. Jos et määritä sen `type`-attribuuttia, se lähettää lomaketiedot automaattisesti palvelimelle, kun sitä painetaan. Tässä ovat mahdolliset `type`-arvot:
+> 💡 **Modernin HTML5:n etu**: Erityisten syötetyyppien käyttö tarjoaa automaattisen validoinnin, sopivat mobiilinäppäimistöt ja paremman saavutettavuuden ilman lisättyä JavaScriptiä!
 
-- `submit`: Oletusarvo lomakkeessa, painike käynnistää lomakkeen lähetyksen.
-- `reset`: Painike palauttaa kaikki lomakeohjaimet alkuperäisiin arvoihinsa.
-- `button`: Ei määritä oletuskäyttäytymistä painettaessa. Voit määrittää sille mukautettuja toimintoja JavaScriptin avulla.
+### Painiketyypit ja niiden toiminta
 
-### Tehtävä
+```html
+<!-- Different button behaviors -->
+<button type="submit">Save Data</button>     <!-- Submits the form -->
+<button type="reset">Clear Form</button>    <!-- Resets all fields -->
+<button type="button">Custom Action</button> <!-- No default behavior -->
+```
 
-Aloitetaan lisäämällä lomake `login`-malliin. Tarvitsemme *käyttäjänimi*-kentän ja *Kirjaudu sisään* -painikkeen.
+**Mitä kukin painiketyyppi tekee:**
+- **Lähetyspainikkeet**: Käynnistävät lomakkeen lähetyksen ja lähettävät tiedot määritettyyn osoitteeseen
+- **Palautuspainikkeet**: Palauttavat kaikki lomakekentät alkuperäiseen tilaan
+- **Tavalliset painikkeet**: Eivät tarjoa oletustoimintoa, vaativat mukautettua JavaScriptiä toimiakseen
+
+> ⚠️ **Tärkeä huomio**: `<input>`-elementti on itsestään sulkeutuva eikä vaadi sulkevaa tagia. Moderni käytäntö on kirjoittaa `<input>` ilman vinoviivaa.
+
+### Kirjautumislomakkeen rakentaminen
+
+Rakennetaan käytännöllinen kirjautumislomake, joka demonstroi moderneja HTML-lomakekäytäntöjä. Aloitamme perusrakenteesta ja parannamme sitä vähitellen saavutettavuusominaisuuksilla ja validoinnilla.
 
 ```html
 <template id="login">
   <h1>Bank App</h1>
   <section>
     <h2>Login</h2>
-    <form id="loginForm">
-      <label for="username">Username</label>
-      <input id="username" name="user" type="text">
-      <button>Login</button>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="user" type="text" required 
+               autocomplete="username" placeholder="Enter your username">
+      </div>
+      <button type="submit">Login</button>
     </form>
   </section>
 </template>
 ```
 
-Jos tarkastelet tarkemmin, huomaat, että lisäsimme myös `<label>`-elementin. `<label>`-elementtejä käytetään antamaan nimi käyttöliittymäohjaimille, kuten käyttäjänimikentällemme. Tunnisteet ovat tärkeitä lomakkeiden luettavuuden kannalta, mutta niillä on myös muita etuja:
+**Mitä tässä tapahtuu:**
+- **Rakentaa** lomakkeen semanttisilla HTML5-elementeillä
+- **Ryhmittelee** liittyvät elementit `div`-kontainereihin merkityksellisillä luokilla
+- **Yhdistää** etiketit syötteisiin `for`- ja `id`-attribuuttien avulla
+- **Sisältää** moderneja attribuutteja, kuten `autocomplete` ja `placeholder`, paremman käyttökokemuksen takaamiseksi
+- **Lisää** `novalidate`-attribuutin, jotta validointi voidaan hoitaa JavaScriptillä selaimen oletusten sijaan
 
-- Yhdistämällä tunniste lomakeohjaimeen se auttaa avustavia teknologioita (kuten ruudunlukijoita) ymmärtämään, mitä tietoja käyttäjältä odotetaan.
-- Voit klikata tunnistetta asettaaksesi kohdistuksen suoraan siihen liittyvään syöttökenttään, mikä helpottaa käyttöä kosketusnäyttölaitteilla.
+### Oikeiden etikettien voima
 
-> [Saavutettavuus](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) verkossa on erittäin tärkeä aihe, jota usein laiminlyödään. Kiitos [semanttisten HTML-elementtien](https://developer.mozilla.org/docs/Learn/Accessibility/HTML), saavutettavan sisällön luominen ei ole vaikeaa, jos käytät niitä oikein. Voit [lukea lisää saavutettavuudesta](https://developer.mozilla.org/docs/Web/Accessibility) välttääksesi yleiset virheet ja tullaksesi vastuulliseksi kehittäjäksi.
+**Miksi etiketit ovat tärkeitä modernissa verkkokehityksessä:**
 
-Lisätään nyt toinen lomake rekisteröintiä varten, heti edellisen alle:
+```mermaid
+graph TD
+    A[Label Element] --> B[Screen Reader Support]
+    A --> C[Click Target Expansion]
+    A --> D[Form Validation]
+    A --> E[SEO Benefits]
+    
+    B --> F[Accessible to all users]
+    C --> G[Better mobile experience]
+    D --> H[Clear error messaging]
+    E --> I[Better search ranking]
+```
+
+**Mitä oikeat etiketit saavuttavat:**
+- **Mahdollistavat** ruudunlukijoiden selkeän ilmoituksen lomakekentistä
+- **Laajentavat** klikkausaluetta (etiketin klikkaaminen kohdistaa syötteen)
+- **Parantavat** mobiilikäytettävyyttä suuremmilla kosketuskohteilla
+- **Tukevat** lomakevalidointia merkityksellisillä virheilmoituksilla
+- **Parantavat** hakukoneoptimointia antamalla semanttista merkitystä lomake-elementeille
+
+> 🎯 **Saavutettavuustavoite**: Jokaisella lomakekentällä tulisi olla siihen liittyvä etiketti. Tämä yksinkertainen käytäntö tekee lomakkeistasi käytettäviä kaikille, mukaan lukien vammaiset käyttäjät, ja parantaa kaikkien käyttäjien kokemusta.
+
+### Rekisteröintilomakkeen luominen
+
+Rekisteröintilomake vaatii yksityiskohtaisempia tietoja täydellisen käyttäjätilin luomiseksi. Rakennetaan se moderneilla HTML5-ominaisuuksilla ja parannetulla saavutettavuudella.
 
 ```html
 <hr/>
 <h2>Register</h2>
-<form id="registerForm">
-  <label for="user">Username</label>
-  <input id="user" name="user" type="text">
-  <label for="currency">Currency</label>
-  <input id="currency" name="currency" type="text" value="$">
-  <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <label for="balance">Current balance</label>
-  <input id="balance" name="balance" type="number" value="0">
-  <button>Register</button>
+<form id="registerForm" novalidate>
+  <div class="form-group">
+    <label for="user">Username</label>
+    <input id="user" name="user" type="text" required 
+           autocomplete="username" placeholder="Choose a username">
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency</label>
+    <input id="currency" name="currency" type="text" value="$" 
+           required maxlength="3" placeholder="USD, EUR, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" placeholder="Personal savings, checking, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" value="0" 
+           min="0" step="0.01" placeholder="0.00">
+  </div>
+  
+  <button type="submit">Create Account</button>
 </form>
 ```
 
-`value`-attribuutin avulla voimme määrittää oletusarvon tietylle syöttökentälle. Huomaa myös, että `balance`-kentän tyyppi on `number`. Näyttääkö se erilaiselta kuin muut syöttökentät? Kokeile sen kanssa vuorovaikutusta.
+**Yllä olevassa olemme:**
+- **Järjestäneet** jokaisen kentän kontainer-diveihin paremman tyylin ja asettelun vuoksi
+- **Lisänneet** sopivat `autocomplete`-attribuutit selaimen automaattisen täytön tukemiseksi
+- **Sisällyttäneet** hyödyllistä placeholder-tekstiä ohjaamaan käyttäjän syötettä
+- **Asettaneet** järkevät oletusarvot `value`-attribuutin avulla
+- **Soveltaneet** validointiattribuutteja, kuten `required`, `maxlength` ja `min`
+- **Käyttäneet** `type="number"`-syötettä saldo-kentässä desimaalitarkkuuden tukemiseksi
 
-✅ Voitko navigoida ja käyttää lomakkeita pelkästään näppäimistön avulla? Kuinka tekisit sen?
+### Syötetyyppien ja toiminnan tutkiminen
 
-## Tietojen lähettäminen palvelimelle
+**Modernit syötetyypit tarjoavat parannettua toiminnallisuutta:**
 
-Nyt kun meillä on toimiva käyttöliittymä, seuraava askel on lähettää tiedot palvelimelle. Tehdään nopea testi nykyisellä koodillamme: mitä tapahtuu, jos klikkaat *Kirjaudu sisään* tai *Rekisteröidy* -painiketta?
+| Ominaisuus | Hyöty | Esimerkki |
+|------------|-------|-----------|
+| `type="number"` | Numeronäppäimistö mobiilissa | Helpompi saldon syöttö |
+| `step="0.01"` | Desimaalitarkkuuden hallinta | Mahdollistaa senttien käytön valuutassa |
+| `autocomplete` | Selaimen automaattinen täyttö | Nopeampi lomakkeen täyttö |
+| `placeholder` | Kontekstuaaliset vihjeet | Ohjaa käyttäjän odotuksia |
 
-Huomasitko muutoksen selaimen URL-osoiteosiossa?
+> 🎯 **Saavutettavuushaaste**: Kokeile navigoida lomakkeissa pelkästään näppäimistön avulla! Käytä `Tab`-näppäintä siirtyäksesi kenttien välillä, `Space`-näppäintä valintaruutujen valitsemiseen ja `Enter`-näppäintä lomakkeen lähettämiseen. Tämä kokemus auttaa ymmärtämään, miten ruudunlukijan käyttäjät vuorovaikuttavat lomakkeidesi kanssa.
 
-![Kuvakaappaus selaimen URL-muutoksesta Rekisteröidy-painikkeen klikkauksen jälkeen](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.fi.png)
+## Lomakkeen lähetysmenetelmien ymmärtäminen
 
-Lomakkeen oletustoiminto on lähettää lomake nykyiseen palvelimen URL-osoitteeseen käyttäen [GET-metodia](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), liittäen lomaketiedot suoraan URL-osoitteeseen. Tällä metodilla on kuitenkin joitakin puutteita:
+Kun joku täyttää lomakkeesi ja painaa "lähetä", tiedot täytyy lähettää jonnekin – yleensä palvelimelle, joka voi tallentaa ne. Tämä voi tapahtua eri tavoilla, ja oikean menetelmän valitseminen voi säästää sinut myöhemmiltä ongelmilta.
 
-- Lähetettävien tietojen koko on hyvin rajallinen (noin 2000 merkkiä).
-- Tiedot näkyvät suoraan URL-osoitteessa (ei hyvä salasanoille).
-- Se ei toimi tiedostojen latausten kanssa.
+Katsotaanpa, mitä oikeastaan tapahtuu, kun joku klikkaa lähetyspainiketta.
 
-Siksi voit vaihtaa sen käyttämään [POST-metodia](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5), joka lähettää lomaketiedot palvelimelle HTTP-pyynnön rungossa ilman edellä mainittuja rajoituksia.
+### Lomakkeen oletuskäyttäytyminen
 
-> Vaikka POST on yleisimmin käytetty metodi tietojen lähettämiseen, [joissakin erityistilanteissa](https://www.w3.org/2001/tag/doc/whenToUseGet.html) on suositeltavaa käyttää GET-metodia, esimerkiksi hakukentän toteuttamisessa.
+Ensin tarkastellaan, mitä tapahtuu peruslomakkeen lähetyksessä:
 
-### Tehtävä
+**Testaa nykyiset lomakkeesi:**
+1. Klikkaa lomakkeesi *Rekisteröidy*-painiketta
+2. Tarkkaile muutoksia selaimen osoiterivillä
+3. Huomaa, kuinka sivu latautuu uudelleen ja tiedot näkyvät URL-osoitteessa
 
-Lisää `action`- ja `method`-ominaisuudet rekisteröintilomakkeeseen:
+![Kuvakaappaus selaimen URL-osoitteen muutoksesta Rekisteröidy-painikkeen klikkauksen jälkeen](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.fi.png)
 
-```html
-<form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
+### HTTP-menetelmien vertailu
+
+```mermaid
+graph TD
+    A[Form Submission] --> B{HTTP Method}
+    B -->|GET| C[Data in URL]
+    B -->|POST| D[Data in Request Body]
+    
+    C --> E[Visible in address bar]
+    C --> F[Limited data size]
+    C --> G[Bookmarkable]
+    
+    D --> H[Hidden from URL]
+    D --> I[Large data capacity]
+    D --> J[More secure]
 ```
 
-Kokeile nyt rekisteröidä uusi tili omalla nimelläsi. Kun klikkaat *Rekisteröidy*-painiketta, sinun pitäisi nähdä jotain tällaista:
+**Ymmärrä erot:**
+
+| Menetelmä | Käyttötapaus | Tietojen sijainti | Turvallisuustaso | Kokorajoitus |
+|-----------|--------------|-------------------|------------------|--------------|
+| `GET` | Hakukyselyt, suodattimet | URL-parametrit | Matala (näkyvä) | ~2000 merkkiä |
+| `POST` | Käyttäjätilit, arkaluontoiset tiedot | Pyynnön runko | Korkea (piilotettu) | Ei käytännön rajoitusta |
+
+**Peruserojen ymmärtäminen:**
+- **GET**: Liittää lomaketiedot URL-osoitteeseen kyselyparametreina (sopii hakutoimintoihin)
+- **POST**: Sisältää tiedot pyynnön rungossa (välttämätön arkaluontoisille tiedoille)
+- **GET-rajoitukset**: Koon rajoitukset, näkyvät tiedot, pysyvä selaushistoria
+- **POST-edut**: Suuri tietokapasiteetti, yksityisyyden suoja, tiedostojen lataustuki
+
+> 💡 **Paras käytäntö**: Käytä `GET`-menetelmää hakulomakkeisiin ja suodattimiin (tietojen haku), käytä `POST`-menetelmää käyttäjätilien luomiseen, kirjautumiseen ja tietojen luomiseen.
+
+### Lomakkeen lähetyksen konfigurointi
+
+Konfiguroidaan rekisteröintilomake kommunikoimaan oikein taustapalvelimen API:n kanssa POST-menetelmää käyttäen:
+
+```html
+<form id="registerForm" action="//localhost:5000/api/accounts" 
+      method="POST" novalidate>
+```
+
+**Mitä tämä konfiguraatio tekee:**
+- **Ohjaa** lomakkeen lähetyksen API-päätepisteeseen
+- **Käyttää** POST-menetelmää turvalliseen tiedonsiirtoon
+- **Sisältää** `novalidate`-attribuutin, jotta validointi voidaan hoitaa JavaScriptillä
+
+### Lomakkeen lähetyksen testaaminen
+
+**Seuraa näitä vaiheita testataksesi lomakettasi:**
+1. **Täytä** rekisteröintilomake omilla tiedoillasi
+2. **Klikkaa** "Luo tili" -painiketta
+3. **Tarkkaile** palvelimen vastausta selaimessasi
 
 ![Selaimen ikkuna osoitteessa localhost:5000/api/accounts, jossa näkyy JSON-merkkijono käyttäjätiedoilla](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.fi.png)
 
-Jos kaikki menee hyvin, palvelin vastaa pyyntöösi [JSON](https://www.json.org/json-en.html)-vastauksella, joka sisältää luodun tilin tiedot.
+**Mitä sinun pitäisi nähdä:**
+- **Selaimen uudelleenohjaus** API-päätepisteen URL-osoitteeseen
+- **JSON-vastaus**, joka sisältää juuri luodut tilitiedot
+- **Palvelimen vahvistus** siitä, että tili on luotu onnistuneesti
 
-✅ Kokeile rekisteröityä uudelleen samalla nimellä. Mitä tapahtuu?
+> 🧪 **Kokeiluaika**: Kokeile rekisteröityä uudelleen samalla käyttäjänimellä. Minkälaisen vastauksen saat? Tämä auttaa sinua ymmärtämään, miten palvelin käsittelee päällekkäisiä tietoja ja virhetilanteita.
 
-## Tietojen lähettäminen ilman sivun uudelleenlatausta
+### JSON-vastausten ymmärtäminen
 
-Kuten todennäköisesti huomasit, tässä lähestymistavassa on pieni ongelma: kun lomake lähetetään, poistumme sovelluksestamme ja selain ohjautuu palvelimen URL-osoitteeseen. Yritämme välttää kaikki sivun uudelleenlataukset verkkosovelluksessamme, koska teemme [yksisivuisen sovelluksen (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
-
-Jotta voimme lähettää lomaketiedot palvelimelle ilman sivun uudelleenlatausta, meidän täytyy käyttää JavaScript-koodia. Sen sijaan, että asetamme URL-osoitteen `<form>`-elementin `action`-ominaisuuteen, voimme käyttää mitä tahansa JavaScript-koodia, joka alkaa `javascript:`-merkkijonolla suorittaaksemme mukautetun toiminnon. Käyttämällä tätä sinun täytyy toteuttaa joitakin tehtäviä, jotka selain aiemmin teki automaattisesti:
-
-- Lomaketietojen hakeminen
-- Lomaketietojen muuntaminen ja koodaus sopivaan muotoon
-- HTTP-pyynnön luominen ja lähettäminen palvelimelle
-
-### Tehtävä
-
-Korvaa rekisteröintilomakkeen `action` seuraavalla:
-
-```html
-<form id="registerForm" action="javascript:register()">
-```
-
-Avaa `app.js` ja lisää uusi funktio nimeltä `register`:
-
-```js
-function register() {
-  const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const data = Object.fromEntries(formData);
-  const jsonData = JSON.stringify(data);
+**Kun palvelin käsittelee lomakkeesi onnistuneesti:**
+```json
+{
+  "user": "john_doe",
+  "currency": "$",
+  "description": "Personal savings",
+  "balance": 100,
+  "id": "unique_account_id"
 }
 ```
 
-Tässä haemme lomake-elementin `getElementById()`-metodilla ja käytämme [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData)-apuvälinettä lomakeohjaimien arvojen hakemiseen avain/arvo-pareina. Sitten muunnamme tiedot tavalliseksi objektiksi käyttäen [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) ja lopulta sarjoitamme tiedot [JSON](https://www.json.org/json-en.html)-muotoon, joka on yleisesti käytetty tiedonvaihtomuoto verkossa.
+**Tämä vastaus vahvistaa:**
+- **Luo** uuden tilin määritetyillä tiedoillasi
+- **Määrittää** yksilöllisen tunnisteen tulevaa käyttöä varten
+- **Palauttaa** kaikki tilitiedot tarkistusta varten
+- **Ilmoittaa** onnistuneesta tietokannan tallennuksesta
 
-Tiedot ovat nyt valmiita lähetettäväksi palvelimelle. Luo uusi funktio nimeltä `createAccount`:
+## Moderni lomakkeiden käsittely JavaScriptillä
 
-```js
-async function createAccount(account) {
+Perinteiset lomakelähetykset aiheuttavat koko sivun uudelleenlatauksia, kuten varhaiset avaruuslennot vaativat täydellisiä järjestelmän nollauksia kurssikorjauksia varten. Tämä lähestymistapa häiritsee käyttäjäkokemusta ja menettää sovelluksen tilan.
+
+JavaScript-lomakkeiden käsittely toimii kuin modernien avaruusalusten jatkuvat ohjausjärjestelmät – tehden reaaliaikaisia säätöjä menettämättä navigointikontekstia. Voimme siepata lomakelähetykset, antaa välitöntä palautetta, käsitellä virheitä sujuvasti ja päivittää käyttöliittymää palvelimen vastausten perusteella samalla, kun säilytämme käyttäjän sijainnin sovelluksessa.
+
+### Miksi välttää sivun uudelleenlatauksia?
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant SPA
+    participant Server
+    
+    User->>SPA: Submits form
+    SPA->>Server: AJAX request
+    Server-->>SPA: JSON response
+    SPA->>User: Updates interface
+    
+    Note over User,SPA: No page reload!
+```
+
+**JavaScript-lomakkeiden käsittelyn edut:**
+- **Säilyttää** sovelluksen tilan ja käyttäjän kontekstin
+- **Tarjoaa** välitöntä palautetta ja latausindikaattoreita
+- **Mahdollistaa** dynaamisen virheenkäsittelyn ja validoinnin
+- **Luo** sujuvia, sovellusmaisia käyttäjäkokemuksia
+- **Mahdollistaa** ehdollisen logiikan palvelimen vastausten perusteella
+
+### Siirtyminen perinteisistä moderneihin lomakkeisiin
+
+**Perinteisen lähestymistavan haasteet:**
+- **Uudelleenohjaa** käyttäjät pois sovelluksestasi
+- **Menettää** nykyisen sovelluksen tilan ja kontekstin
+- **Vaatii** koko sivun uudelleenlatauksia yksinkertaisille toiminnoille
+- **Tarjoaa** rajallisen hallinnan käyttäjäpalautteesta
+
+**Modernin JavaScript-lähestymistavan edut:**
+- **Pitää** käyttäjät sovelluksesi sisällä
+- **Säilyttää** kaikki sovelluksen tilan ja tiedot
+- **Mahdollistaa** reaaliaikaisen validoinnin ja palautteen
+- **Tukee** progressiivista parannusta ja saavutettavuutta
+
+### JavaScript-lomakke
+- **Tarjoaa** yksityiskohtaisia virheilmoituksia virheenkorjaukseen
+- **Palauttaa** johdonmukaisen tietorakenteen onnistumis- ja virhetapauksissa
+
+### Modernin Fetch API:n voima
+
+**Fetch API:n edut vanhempiin menetelmiin verrattuna:**
+
+| Ominaisuus | Etu | Toteutus |
+|------------|-----|----------|
+| Lupauspohjainen | Selkeä asynkroninen koodi | `await fetch()` |
+| Pyynnön räätälöinti | Täysi HTTP-kontrolli | Otsikot, metodit, sisältö |
+| Vastauksen käsittely | Joustava datan jäsentely | `.json()`, `.text()`, `.blob()` |
+| Virheenkäsittely | Kattava virheiden hallinta | Try/catch-lohkot |
+
+> 🎥 **Lisätietoja**: [Async/Await-opas](https://youtube.com/watch?v=YwmlRkrxvkk) - Ymmärrä asynkronisen JavaScriptin mallit modernia web-kehitystä varten.
+
+**Keskeiset käsitteet palvelimen kanssa kommunikointiin:**
+- **Asynkroniset funktiot** mahdollistavat suorituksen keskeyttämisen palvelimen vastauksia odotettaessa
+- **Await-avainsana** tekee asynkronisesta koodista helpommin luettavaa
+- **Fetch API** tarjoaa modernin, lupauspohjaisen HTTP-pyyntöjen käsittelyn
+- **Virheenkäsittely** varmistaa, että sovellus reagoi verkko-ongelmiin sujuvasti
+
+### Rekisteröintifunktion viimeistely
+
+Kootaan kaikki yhteen ja luodaan valmis, tuotantokäyttöön sopiva rekisteröintifunktio:
+
+```javascript
+async function register() {
+  const registerForm = document.getElementById('registerForm');
+  const submitButton = registerForm.querySelector('button[type="submit"]');
+  
   try {
-    const response = await fetch('//localhost:5000/api/accounts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: account
-    });
-    return await response.json();
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Creating Account...';
+    
+    // Process form data
+    const formData = new FormData(registerForm);
+    const jsonData = JSON.stringify(Object.fromEntries(formData));
+    
+    // Send to server
+    const result = await createAccount(jsonData);
+    
+    if (result.error) {
+      console.error('Registration failed:', result.error);
+      alert(`Registration failed: ${result.error}`);
+      return;
+    }
+    
+    console.log('Account created successfully!', result);
+    alert(`Welcome, ${result.user}! Your account has been created.`);
+    
+    // Reset form after successful registration
+    registerForm.reset();
+    
   } catch (error) {
-    return { error: error.message || 'Unknown error' };
+    console.error('Unexpected error:', error);
+    alert('An unexpected error occurred. Please try again.');
+  } finally {
+    // Restore button state
+    submitButton.disabled = false;
+    submitButton.textContent = 'Create Account';
   }
 }
 ```
 
-Mitä tämä funktio tekee? Huomaa ensin `async`-avainsana. Tämä tarkoittaa, että funktio sisältää koodia, joka suoritetaan [**asynkronisesti**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Kun sitä käytetään yhdessä `await`-avainsanan kanssa, se mahdollistaa odottamisen asynkronisen koodin suorittamiselle - kuten odottamisen palvelimen vastaukselle tässä - ennen kuin jatketaan.
+**Tämä parannettu toteutus sisältää:**
+- **Tarjoaa** visuaalista palautetta lomakkeen lähetyksen aikana
+- **Poistaa käytöstä** lähetyspainikkeen kaksoislähetysten estämiseksi
+- **Käsittelee** sekä odotetut että odottamattomat virheet sujuvasti
+- **Näyttää** käyttäjäystävälliset onnistumis- ja virheilmoitukset
+- **Nollaa** lomakkeen onnistuneen rekisteröinnin jälkeen
+- **Palauttaa** käyttöliittymän tilan riippumatta lopputuloksesta
 
-Tässä on lyhyt video `async/await`-käytöstä:
+### Toteutuksen testaaminen
 
-[![Async ja Await lupauksien hallintaan](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async ja Await lupauksien hallintaan")
+**Avaa selaimen kehittäjätyökalut ja testaa rekisteröinti:**
 
-> 🎥 Klikkaa yllä olevaa kuvaa katsoaksesi videon async/awaitista.
+1. **Avaa** selaimen konsoli (F12 → Konsoli-välilehti)
+2. **Täytä** rekisteröintilomake
+3. **Klikkaa** "Luo tili"
+4. **Tarkkaile** konsoliviestejä ja käyttäjäpalautetta
 
-Käytämme `fetch()`-API:a JSON-tietojen lähettämiseen palvelimelle. Tämä metodi ottaa kaksi parametria:
+![Näyttökuva selaimen konsoliviestistä](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.fi.png)
 
-- Palvelimen URL-osoitteen, joten laitamme takaisin `//localhost:5000/api/accounts` tähän.
-- Pyynnön asetukset. Tässä asetamme metodiksi `POST` ja annamme pyynnön `body`-sisällön. Koska lähetämme JSON-tietoja palvelimelle, meidän täytyy myös asettaa `Content-Type`-otsikko `application/json`, jotta palvelin tietää, miten sisältö tulkitaan.
+**Mitä sinun pitäisi nähdä:**
+- **Lataustila** näkyy lähetyspainikkeessa
+- **Konsolilokit** näyttävät yksityiskohtaista tietoa prosessista
+- **Onnistumisviesti** ilmestyy, kun tilin luominen onnistuu
+- **Lomake nollautuu** automaattisesti onnistuneen lähetyksen jälkeen
 
-Koska palvelin vastaa pyyntöön JSON-muodossa, voimme käyttää `await response.json()`-metodia JSON-sisällön jäsentämiseen ja palauttaa tuloksena olevan objektin. Huomaa, että tämä metodi on asynkroninen, joten käytämme `await`-avainsanaa ennen palauttamista varmistaaksemme, että mahdolliset virheet jäsentämisen aikana myös havaitaan.
+> 🔒 **Tietoturva huomio**: Tällä hetkellä data kulkee HTTP:n kautta, mikä ei ole turvallista tuotantokäyttöön. Oikeissa sovelluksissa käytä aina HTTPS:ää datan salaukseen. Lue lisää [HTTPS-turvallisuudesta](https://en.wikipedia.org/wiki/HTTPS) ja miksi se on tärkeää käyttäjätietojen suojaamiseksi.
 
-Lisää nyt hieman koodia `register`-funktioon kutsuaksesi `createAccount()`:
+## Kattava lomakkeen validointi
 
-```js
-const result = await createAccount(jsonData);
+Lomakkeen validointi estää turhauttavan kokemuksen, jossa virheet havaitaan vasta lähetyksen jälkeen. Kuten Kansainvälisen avaruusaseman moninkertaiset varajärjestelmät, tehokas validointi käyttää useita turvakerroksia.
+
+Optimaalinen lähestymistapa yhdistää selaintason validoinnin välittömän palautteen antamiseksi, JavaScript-validoinnin käyttäjäkokemuksen parantamiseksi ja palvelinpuolen validoinnin turvallisuuden ja tietojen eheyden varmistamiseksi. Tämä redundanssi takaa sekä käyttäjätyytyväisyyden että järjestelmän suojan.
+
+### Validointikerrosten ymmärtäminen
+
+```mermaid
+graph TD
+    A[User Input] --> B[HTML5 Validation]
+    B --> C[Custom JavaScript Validation]
+    C --> D[Client-Side Complete]
+    D --> E[Server-Side Validation]
+    E --> F[Data Storage]
+    
+    B -->|Invalid| G[Browser Error Message]
+    C -->|Invalid| H[Custom Error Display]
+    E -->|Invalid| I[Server Error Response]
 ```
 
-Koska käytämme `await`-avainsanaa tässä, meidän täytyy lisätä `async`-avainsana ennen register-funktiota:
+**Monikerroksinen validointistrategia:**
+- **HTML5-validointi**: Välittömät selaimen suorittamat tarkistukset
+- **JavaScript-validointi**: Räätälöity logiikka ja parempi käyttäjäkokemus
+- **Palvelinvalidointi**: Lopulliset turvallisuus- ja tietojen eheyden tarkistukset
+- **Progressiivinen parannus**: Toimii myös ilman JavaScriptiä
 
-```js
-async function register() {
-```
+### HTML5-validointiominaisuudet
 
-Lopuksi, lisätään joitakin lokitietoja tuloksen tarkistamiseksi. Lopullinen funktio näyttää tältä:
+**Modernit validointityökalut käytettävissäsi:**
 
-```js
-async function register() {
-  const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const jsonData = JSON.stringify(Object.fromEntries(formData));
-  const result = await createAccount(jsonData);
+| Ominaisuus | Tarkoitus | Käyttöesimerkki | Selaimen toiminta |
+|------------|-----------|-----------------|-------------------|
+| `required` | Pakolliset kentät | `<input required>` | Estää tyhjän lähetyksen |
+| `minlength`/`maxlength` | Tekstin pituusrajat | `<input maxlength="20">` | Varmistaa merkkirajat |
+| `min`/`max` | Numeraaliset rajat | `<input min="0" max="1000">` | Tarkistaa numerorajat |
+| `pattern` | Mukautetut regex-säännöt | `<input pattern="[A-Za-z]+">` | Varmistaa tietyn muodon |
+| `type` | Datatyypin validointi | `<input type="email">` | Muotokohtainen validointi |
 
-  if (result.error) {
-    return console.log('An error occurred:', result.error);
-  }
+### CSS-validointityylit
 
-  console.log('Account created!', result);
+**Luo visuaalista palautetta validointitiloille:**
+
+```css
+/* Valid input styling */
+input:valid {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+/* Invalid input styling */
+input:invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Focus states for better accessibility */
+input:focus:valid {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 ```
 
-Se oli hieman pitkä, mutta pääsimme perille! Jos avaat [selaimen kehittäjätyökalut](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) ja yrität rekisteröidä uuden tilin, sinun ei pitäisi nähdä muutosta verkkosivulla, mutta konsolissa näkyy viesti, joka vahvistaa, että kaikki toimii.
+**Mitä nämä visuaaliset vihjeet saavuttavat:**
+- **Vihreät reunat**: Ilmaisevat onnistunutta validointia, kuten vihreät valot ohjauskeskuksessa
+- **Punaiset reunat**: Osoittavat validointivirheitä, jotka vaativat huomiota
+- **Kohdistuksen korostukset**: Antavat selkeän visuaalisen kontekstin nykyiselle syöttökohdalle
+- **Johdonmukainen tyyli**: Luo ennakoitavia käyttöliittymämalleja, joita käyttäjät voivat oppia
 
-![Kuvakaappaus selaimen konsolissa näkyvästä lokiviestistä](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.fi.png)
+> 💡 **Vinkki**: Käytä `:valid` ja `:invalid` CSS-pseudoluokkia antaaksesi välitöntä visuaalista palautetta käyttäjille heidän kirjoittaessaan, luoden reagoivan ja hyödyllisen käyttöliittymän.
 
-✅ Lähetetäänkö tiedot palvelimelle turvallisesti? Entä jos joku pystyy sieppaamaan pyynnön? Voit lukea [HTTPS:stä](https://en.wikipedia.org/wiki/HTTPS) saadaksesi lisätietoa turvallisesta tiedonsiirrosta.
+### Kattavan validoinnin toteuttaminen
 
-## Tietojen validointi
-
-Jos yrität rekisteröidä uuden tilin ilman, että asetat ensin käyttäjänimen, näet, että palvelin palauttaa virheen tilakoodilla [400 (Bad Request)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
-
-Ennen tietojen lähettämistä palvelimelle on hyvä käytäntö [validoida lomaketiedot](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) etukäteen, kun mahdollista, varmistaakseen, että lähetät kelvollisen pyynnön. HTML5-lomakeohjaimet tarjoavat sisäänrakennetun validoinnin eri attribuuttien avulla:
-
-- `required`: kenttä täytyy täyttää, muuten lomaketta ei voi lähettää.
-- `minlength` ja `maxlength`: määrittävät tekstikenttien vähimmäis- ja enimmäismerkkimäärän.
-- `min` ja `max`: määrittävät numeerisen kentän vähimmäis- ja enimmäisarvon.
-- `type`: määrittää odotetun datatyypin, kuten `number`, `email`, `file` tai [muut sisäänrakennetut tyypit](https://developer.mozilla.org/docs/Web/HTML/Element/input). Tämä attribuutti voi myös muuttaa lomakeohjaimen visuaalista esitystä.
-- `pattern`: mahdollistaa [säännöllisen lausekkeen](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) määrittämisen, jolla testataan, onko syötetty data kelvollista vai ei.
-> Vinkki: Voit mukauttaa lomakekontrolliesi ulkoasua sen mukaan, ovatko ne kelvollisia vai eivät, käyttämällä CSS:n `:valid`- ja `:invalid`-pseudoluokkia.
-### Tehtävä
-
-Uuden tilin luomiseen vaaditaan kaksi kenttää: käyttäjänimi ja valuutta. Muut kentät ovat vapaaehtoisia. Päivitä lomakkeen HTML niin, että käytät sekä `required`-attribuuttia että tekstimuotoista ohjetta kentän otsikossa:
+Parannetaan rekisteröintilomakettasi vankalla validoinnilla, joka tarjoaa erinomaisen käyttäjäkokemuksen ja datan laadun:
 
 ```html
-<label for="user">Username (required)</label>
-<input id="user" name="user" type="text" required>
-...
-<label for="currency">Currency (required)</label>
-<input id="currency" name="currency" type="text" value="$" required>
+<form id="registerForm" method="POST" novalidate>
+  <div class="form-group">
+    <label for="user">Username <span class="required">*</span></label>
+    <input id="user" name="user" type="text" required 
+           minlength="3" maxlength="20" 
+           pattern="[a-zA-Z0-9_]+" 
+           autocomplete="username"
+           title="Username must be 3-20 characters, letters, numbers, and underscores only">
+    <small class="form-text">Choose a unique username (3-20 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency <span class="required">*</span></label>
+    <input id="currency" name="currency" type="text" required 
+           value="$" maxlength="3" 
+           pattern="[A-Z$€£¥₹]+" 
+           title="Enter a valid currency symbol or code">
+    <small class="form-text">Currency symbol (e.g., $, €, £)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" 
+           placeholder="Personal savings, checking, etc.">
+    <small class="form-text">Optional description (up to 100 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" 
+           value="0" min="0" step="0.01" 
+           title="Enter a positive number for your starting balance">
+    <small class="form-text">Initial account balance (minimum $0.00)</small>
+  </div>
+  
+  <button type="submit">Create Account</button>
+</form>
 ```
 
-Vaikka tämä palvelinimplementaatio ei aseta erityisiä rajoituksia kenttien maksimipituudelle, on aina hyvä käytäntö määritellä kohtuulliset rajat käyttäjän syöttämälle tekstille.
+**Parannetun validoinnin ymmärtäminen:**
+- **Yhdistää** pakollisten kenttien merkinnät hyödyllisiin kuvauksiin
+- **Sisältää** `pattern`-ominaisuudet muotovalidointiin
+- **Tarjoaa** `title`-ominaisuudet saavutettavuuden ja työkaluvihjeiden vuoksi
+- **Lisää** aputekstiä ohjaamaan käyttäjän syöttöä
+- **Käyttää** semanttista HTML-rakennetta paremman saavutettavuuden vuoksi
 
-Lisää `maxlength`-attribuutti tekstikenttiin:
+### Kehittyneet validointisäännöt
 
-```html
-<input id="user" name="user" type="text" maxlength="20" required>
-...
-<input id="currency" name="currency" type="text" value="$" maxlength="5" required>
-...
-<input id="description" name="description" type="text" maxlength="100">
+**Mitä kukin validointisääntö saavuttaa:**
+
+| Kenttä | Validointisäännöt | Käyttäjän hyöty |
+|--------|-------------------|-----------------|
+| Käyttäjänimi | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Varmistaa kelvolliset, yksilölliset tunnisteet |
+| Valuutta | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Hyväksyy yleiset valuuttasymbolit |
+| Saldo | `min="0"`, `step="0.01"`, `type="number"` | Estää negatiiviset saldot |
+| Kuvaus | `maxlength="100"` | Kohtuulliset pituusrajat |
+
+### Validointikäyttäytymisen testaaminen
+
+**Kokeile näitä validointitilanteita:**
+1. **Lähetä** lomake tyhjillä pakollisilla kentillä
+2. **Syötä** käyttäjänimi, joka on alle 3 merkkiä pitkä
+3. **Kokeile** erikoismerkkejä käyttäjänimi-kentässä
+4. **Syötä** negatiivinen saldo
+
+![Näyttökuva validointivirheestä lomaketta lähetettäessä](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.fi.png)
+
+**Mitä huomaat:**
+- **Selaimen näyttämät** natiivivalidointiviestit
+- **Tyylimuutokset** perustuvat `:valid` ja `:invalid`-tiloihin
+- **Lomakkeen lähetys** estetään, kunnes kaikki validoinnit läpäistään
+- **Kohdistus siirtyy automaattisesti** ensimmäiseen virheelliseen kenttään
+
+### Asiakas- vs palvelinpuolen validointi
+
+```mermaid
+graph LR
+    A[Client-Side Validation] --> B[Instant Feedback]
+    A --> C[Better UX]
+    A --> D[Reduced Server Load]
+    
+    E[Server-Side Validation] --> F[Security]
+    E --> G[Data Integrity]
+    E --> H[Business Rules]
+    
+    A -.-> I[Both Required]
+    E -.-> I
 ```
 
-Jos nyt painat *Rekisteröidy*-painiketta ja jokin kenttä ei täytä määriteltyjä validointisääntöjä, näet jotain tällaista:
+**Miksi tarvitset molemmat kerrokset:**
+- **Asiakaspuolen validointi**: Tarjoaa välitöntä palautetta ja parantaa käyttäjäkokemusta
+- **Palvelinpuolen validointi**: Varmistaa turvallisuuden ja käsittelee monimutkaiset liiketoimintasäännöt
+- **Yhdistetty lähestymistapa**: Luo vankan, käyttäjäystävällisen ja turvallisen sovelluksen
+- **Progressiivinen parannus**: Toimii myös, kun JavaScript on pois päältä
 
-![Kuvakaappaus, jossa näkyy validointivirhe lomakkeen lähetysyrityksen yhteydessä](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.fi.png)
-
-Tällaista validointia, joka suoritetaan *ennen* datan lähettämistä palvelimelle, kutsutaan **asiakaspuolen** validoinniksi. Huomaa kuitenkin, että kaikkia tarkistuksia ei ole aina mahdollista suorittaa ilman datan lähettämistä. Esimerkiksi emme voi tarkistaa tässä, onko käyttäjänimi jo olemassa, ilman että lähetämme pyynnön palvelimelle. Lisävalidointi, joka suoritetaan palvelimella, kutsutaan **palvelinpuolen** validoinniksi.
-
-Yleensä molemmat validointitavat täytyy toteuttaa. Asiakaspuolen validointi parantaa käyttäjäkokemusta tarjoamalla välitöntä palautetta, mutta palvelinpuolen validointi on välttämätöntä, jotta käsittelemäsi käyttäjätiedot ovat luotettavia ja turvallisia.
+> 🛡️ **Tietoturvamuistutus**: Älä koskaan luota pelkkään asiakaspuolen validointiin! Haitalliset käyttäjät voivat ohittaa asiakaspuolen tarkistukset, joten palvelinpuolen validointi on välttämätöntä turvallisuuden ja tietojen eheyden varmistamiseksi.
 
 ---
+
+
+
+---
+
+## GitHub Copilot Agent -haaste 🚀
+
+Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
+
+**Kuvaus:** Paranna rekisteröintilomaketta kattavalla asiakaspuolen validoinnilla ja käyttäjäpalautteella. Tämä haaste auttaa sinua harjoittelemaan lomakkeen validointia, virheenkäsittelyä ja käyttäjäkokemuksen parantamista interaktiivisella palautteella.
+
+**Tehtävä:** Luo täydellinen lomakkeen validointijärjestelmä rekisteröintilomakkeelle, joka sisältää: 1) Reaaliaikaisen validointipalautteen jokaiselle kentälle käyttäjän kirjoittaessa, 2) Mukautetut validointiviestit, jotka näkyvät kunkin syöttökentän alla, 3) Salasanan vahvistuskentän, jossa on vastaavuusvalidointi, 4) Visuaaliset indikaattorit (kuten vihreät valintamerkit kelvollisille kentille ja punaiset varoitukset virheellisille), 5) Lähetyspainikkeen, joka aktivoituu vasta, kun kaikki validoinnit läpäistään. Käytä HTML5-validointiominaisuuksia, CSS:ää validointitilojen tyylittelyyn ja JavaScriptiä interaktiiviseen käyttäytymiseen.
+
+Lue lisää [agent-tilasta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) täältä.
 
 ## 🚀 Haaste
 
@@ -292,11 +651,11 @@ Näytä virheilmoitus HTML:ssä, jos käyttäjä on jo olemassa.
 
 Tässä esimerkki siitä, miltä lopullinen kirjautumissivu voi näyttää pienen tyylittelyn jälkeen:
 
-![Kuvakaappaus kirjautumissivusta CSS-tyylien lisäämisen jälkeen](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.fi.png)
+![Näyttökuva kirjautumissivusta CSS-tyylien lisäämisen jälkeen](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.fi.png)
 
-## Luennon jälkeinen visailu
+## Luentojälkeinen kysely
 
-[Luennon jälkeinen visailu](https://ff-quizzes.netlify.app/web/quiz/44)
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/44)
 
 ## Kertaus ja itseopiskelu
 
@@ -309,4 +668,4 @@ Kehittäjät ovat olleet erittäin luovia lomakkeiden rakentamisessa, erityisest
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

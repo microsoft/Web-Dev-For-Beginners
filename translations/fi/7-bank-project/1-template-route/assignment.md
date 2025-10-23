@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8223e429218befa731dd5bfd22299520",
-  "translation_date": "2025-08-27T21:03:17+00:00",
+  "original_hash": "df0dcecddcd28ea8cbf6ede0ad57d673",
+  "translation_date": "2025-10-23T00:35:48+00:00",
   "source_file": "7-bank-project/1-template-route/assignment.md",
   "language_code": "fi"
 }
@@ -11,16 +11,46 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ohjeet
 
-Reittien määrittely sisältää tällä hetkellä vain käytettävän mallin tunnisteen. Uuden sivun näyttäminen vaatii kuitenkin joskus hieman enemmän. Parannetaan reitityksen toteutusta kahdella lisäominaisuudella:
+Nyt kun olet rakentanut perusreititysjärjestelmän, on aika kehittää sitä ammattimaisilla ominaisuuksilla, jotka parantavat käyttäjäkokemusta ja tarjoavat parempia työkaluja kehittäjille. Todelliset sovellukset tarvitsevat enemmän kuin pelkkää mallien vaihtamista – ne vaativat dynaamisia sivun otsikoita, elinkaarikoukkuja ja laajennettavia arkkitehtuureja.
 
-- Anna jokaiselle mallille otsikko ja päivitä selainikkunan otsikko tällä uudella otsikolla, kun malli vaihtuu.
-- Lisää vaihtoehto suorittaa koodia mallin vaihtumisen jälkeen. Haluamme tulostaa `'Dashboard is shown'` kehittäjäkonsoliin aina, kun hallintapaneelin sivu näytetään.
+Tässä tehtävässä laajennat reitityksen toteutusta kahdella olennaisella ominaisuudella, jotka ovat yleisiä tuotantokäytössä olevissa verkkosovelluksissa. Nämä parannukset tekevät pankkisovelluksestasi viimeistellymmän ja luovat pohjan tuleville toiminnallisuuksille.
+
+Reittien määrittely sisältää tällä hetkellä vain käytettävän mallin ID:n. Mutta uuden sivun näyttäminen vaatii joskus hieman enemmän. Parannetaan reitityksen toteutusta kahdella lisäominaisuudella:
+
+### Ominaisuus 1: Dynaamiset sivun otsikot
+**Tavoite:** Anna jokaiselle mallille otsikko ja päivitä ikkunan otsikko tällä uudella otsikolla, kun malli vaihtuu.
+
+**Miksi tämä on tärkeää:**
+- **Parantaa** käyttäjäkokemusta näyttämällä kuvailevia selaimen välilehtiotsikoita
+- **Lisää** saavutettavuutta ruudunlukijoille ja apuvälineille  
+- **Tarjoaa** parempaa kirjanmerkki- ja selaushistoriakontekstia
+- **Noudattaa** ammattimaisia verkkokehityksen parhaita käytäntöjä
+
+**Toteutustapa:**
+- **Laajenna** reittien objektia sisällyttämään otsikkotiedot jokaiselle reitille
+- **Muokkaa** `updateRoute()`-funktiota päivittämään `document.title` dynaamisesti
+- **Testaa**, että otsikot vaihtuvat oikein siirryttäessä näkymien välillä
+
+### Ominaisuus 2: Reitin elinkaarikoukut  
+**Tavoite:** Lisää mahdollisuus suorittaa koodia mallin vaihtamisen jälkeen. Haluamme tulostaa `'Dashboard is shown'` kehittäjäkonsoliin aina, kun dashboard-sivu näytetään.
+
+**Miksi tämä on tärkeää:**
+- **Mahdollistaa** mukautetun logiikan suorittamisen, kun tietyt reitit latautuvat
+- **Tarjoaa** koukkuja analytiikkaa, lokitusta tai alustuskoodia varten
+- **Luo** pohjan monimutkaisemmille reittikäyttäytymisille
+- **Havainnollistaa** observer-mallia verkkokehityksessä
+
+**Toteutustapa:**
+- **Lisää** reittikonfiguraatioihin valinnainen callback-funktio-ominaisuus
+- **Suorita** callback-funktio (jos määritelty) mallin renderöinnin jälkeen
+- **Varmista**, että ominaisuus toimii kaikilla reiteillä, joilla on määritelty callback
+- **Testaa**, että konsoliviesti ilmestyy dashboard-sivulla vieraillessa
 
 ## Arviointikriteerit
 
-| Kriteeri | Erinomainen                                                                                                                        | Riittävä                                                                                                                                                                                  | Parannettavaa                                         |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-|          | Molemmat ominaisuudet on toteutettu ja toimivat. Otsikon ja koodin lisäys toimii myös uudelle reitille, joka on lisätty `routes`-määrittelyyn. | Molemmat ominaisuudet toimivat, mutta toiminta on kovakoodattu eikä konfiguroitavissa `routes`-määrittelyn kautta. Kolmannen reitin lisääminen otsikon ja koodin lisäyksellä ei toimi tai toimii osittain. | Jompikumpi ominaisuus puuttuu tai ei toimi kunnolla. |
+| Kriteeri | Erinomainen                                                                                                                          | Riittävä                                                                                                                                                                                  | Parannettavaa                                       |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+|          | Molemmat ominaisuudet on toteutettu ja toimivat. Otsikon ja koodin lisäys toimii myös uudelle reitille, joka lisätään `routes`-määrittelyyn. | Molemmat ominaisuudet toimivat, mutta toiminta on kovakoodattu eikä konfiguroitavissa `routes`-määrittelyn kautta. Kolmannen reitin lisääminen otsikon ja koodin lisäyksellä ei toimi tai toimii osittain. | Toinen ominaisuuksista puuttuu tai ei toimi kunnolla. |
 
 ---
 

@@ -1,23 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-29T00:40:45+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-23T00:42:56+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "fi"
 }
 -->
-# Rakenna avaruuspeli, osa 5: Pisteet ja elämät
+# Rakenna avaruuspeli osa 5: Pisteet ja elämät
 
-## Ennakkokysely
+## Ennakkoquiz
 
-[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/37)
+[Ennakkoquiz](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Tässä oppitunnissa opit lisäämään pisteytyksen peliin ja laskemaan elämiä.
+Valmis tekemään avaruuspelistäsi oikean pelin? Lisätään pisteiden kerääminen ja elämien hallinta - ydintoiminnot, jotka muuttivat varhaiset arcade-pelit, kuten Space Invaders, yksinkertaisista demonstraatioista koukuttavaksi viihteeksi. Tässä vaiheessa pelisi muuttuu todella pelattavaksi.
 
-## Piirrä teksti ruudulle
+## Tekstin piirtäminen ruudulle - pelisi ääni
 
-Jotta voit näyttää pelin pisteet ruudulla, sinun täytyy tietää, miten teksti sijoitetaan ruudulle. Ratkaisu on käyttää `fillText()`-metodia canvas-objektissa. Voit myös hallita muita ominaisuuksia, kuten fonttia, tekstin väriä ja sen kohdistusta (vasen, oikea, keskitetty). Alla on koodia, joka piirtää tekstiä ruudulle.
+Näyttääksemme pisteesi, meidän täytyy oppia renderöimään tekstiä canvas-elementille. `fillText()`-metodi on päätyökalusi tähän - se on sama tekniikka, jota käytettiin klassisissa arcade-peleissä pisteiden ja tilatietojen näyttämiseen.
+
+Sinulla on täydellinen hallinta tekstin ulkoasusta:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Lue lisää [tekstin lisäämisestä canvasille](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), ja voit halutessasi tehdä omastasi näyttävämmän!
+✅ Sukella syvemmälle [tekstin lisäämiseen canvas-elementille](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - saatat yllättyä, kuinka luovaksi voit ryhtyä fonttien ja tyylien kanssa!
 
-## Elämä pelikonseptina
+## Elämät - enemmän kuin vain numero
 
-Elämä pelissä on vain numero. Avaruuspeliä ajatellen on yleistä antaa tietty määrä elämiä, jotka vähenevät yksi kerrallaan, kun aluksesi ottaa vahinkoa. On mukavaa, jos voit näyttää tämän graafisesti, esimerkiksi pienillä aluksilla tai sydämillä numeron sijaan.
+Pelisuunnittelussa "elämä" edustaa pelaajan virhemarginaalia. Tämä konsepti juontaa juurensa flipperikoneista, joissa pelaajalla oli useita palloja pelattavaksi. Varhaisissa videopeleissä, kuten Asteroids, elämät antoivat pelaajille luvan ottaa riskejä ja oppia virheistään.
 
-## Mitä rakennetaan
+Visuaalinen esitys on erittäin tärkeää - alusten kuvakkeiden näyttäminen pelkän "Elämät: 3" sijaan luo välittömän visuaalisen tunnistettavuuden, aivan kuten varhaiset arcade-kaapit käyttivät ikonografiaa viestinnässä kielimuurien yli.
 
-Lisätään peliin seuraavat ominaisuudet:
+## Pelin palkitsemisjärjestelmän rakentaminen
 
-- **Pelipisteet**: Jokaisesta tuhotusta vihollisaluksesta sankari saa pisteitä, esimerkiksi 100 pistettä per alus. Pelipisteet tulisi näyttää vasemmassa alakulmassa.
-- **Elämät**: Aluksellasi on kolme elämää. Menetät yhden elämän aina, kun vihollisalus törmää sinuun. Elämät tulisi näyttää oikeassa alakulmassa ja niiden tulisi koostua seuraavasta graafisesta elementistä ![elämäkuva](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.fi.png).
+Nyt toteutamme keskeiset palautemekanismit, jotka pitävät pelaajat mukana:
 
-## Suositellut vaiheet
+- **Pistejärjestelmä**: Jokainen tuhottu vihollisalus antaa 100 pistettä (pyöreät luvut ovat helpompia pelaajille laskea mielessään). Pisteet näytetään vasemmassa alakulmassa.
+- **Elämälaskuri**: Sankarisi aloittaa kolmella elämällä - standardi, jonka varhaiset arcade-pelit asettivat tasapainottamaan haastetta ja pelattavuutta. Jokainen törmäys viholliseen maksaa yhden elämän. Näytämme jäljellä olevat elämät oikeassa alakulmassa aluksen kuvakkeilla ![elämäkuva](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.fi.png).
 
-Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansioon. Sen pitäisi sisältää seuraavat:
+## Aloitetaan rakentaminen!
+
+Ensiksi, valmistele työtilasi. Siirry tiedostoihin `your-work`-alikansiossa. Sinun pitäisi nähdä nämä tiedostot:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansioon. Sen pitäisi sis
 -| package.json
 ```
 
-Aloitat projektisi `your_work`-kansiosta kirjoittamalla:
+Testataksesi peliäsi, käynnistä kehityspalvelin `your_work`-kansiosta:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä tämä osoite. Tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, ja kun painat vasenta ja oikeaa nuolinäppäintä, sankari liikkuu ja voi ampua vihollisia.
+Tämä käynnistää paikallisen palvelimen osoitteessa `http://localhost:5000`. Avaa tämä osoite selaimessasi nähdäksesi pelisi. Testaa ohjaimia nuolinäppäimillä ja kokeile ampua vihollisia varmistaaksesi, että kaikki toimii.
 
-### Lisää koodia
+### Koodauksen aika!
 
-1. **Kopioi tarvittavat resurssit** `solution/assets/`-kansiosta `your-work`-kansioon; lisää `life.png`-resurssi. Lisää lifeImg `window.onload`-funktioon:
+1. **Hanki tarvitsemasi visuaaliset resurssit**. Kopioi `life.png`-resurssi `solution/assets/`-kansiosta `your-work`-kansioon. Lisää sitten lifeImg `window.onload`-funktioon: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Lisää `lifeImg` resurssien listaan:
+1. Älä unohda lisätä `lifeImg`-kuvaa resurssilistaan:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:
     eventEmitter = new EventEmitter();
     ```
   
-2. **Lisää muuttujia**. Lisää koodi, joka edustaa kokonaispisteitäsi (0) ja jäljellä olevia elämiä (3), ja näytä nämä arvot ruudulla.
+2. **Aseta pelin muuttujat**. Lisää koodi, joka seuraa kokonaispisteitäsi (alkaen 0) ja jäljellä olevia elämiäsi (alkaen 3). Näytämme nämä ruudulla, jotta pelaajat tietävät aina tilanteensa.
 
-3. **Laajenna `updateGameObjects()`-funktiota**. Laajenna `updateGameObjects()`-funktiota käsittelemään vihollisten törmäyksiä:
+3. **Toteuta törmäysten tunnistus**. Laajenna `updateGameObjects()`-funktiotasi tunnistamaan, kun viholliset törmäävät sankariisi:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:
       })
     ```
 
-4. **Lisää `life` ja `points`**. 
-   1. **Alusta muuttujat**. Lisää `this.cooldown = 0`-kohdan alle `Hero`-luokassa elämät ja pisteet:
+4. **Lisää elämien ja pisteiden seuranta sankarillesi**. 
+   1. **Alusta laskurit**. Lisää `this.cooldown = 0`-kohdan alle `Hero`-luokassasi elämät ja pisteet:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Piirrä muuttujat ruudulle**. Näytä nämä arvot ruudulla:
+   1. **Näytä nämä arvot pelaajalle**. Luo funktiot, jotka piirtävät nämä arvot ruudulle:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:
 
         ```
 
-   1. **Lisää metodit pelisilmukkaan**. Varmista, että lisäät nämä funktiot `window.onload`-funktioon `updateGameObjects()`-kohdan alle:
+   1. **Liitä kaikki pelisilmukkaan**. Lisää nämä funktiot `window.onload`-funktioon heti `updateGameObjects()`-kohdan jälkeen:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Toteuta pelisäännöt**. Toteuta seuraavat pelisäännöt:
+1. **Toteuta pelin seuraukset ja palkinnot**. Nyt lisätään palautemekanismit, jotka tekevät pelaajan toimista merkityksellisiä:
 
-   1. **Jokaisesta sankarin ja vihollisen törmäyksestä** vähennä yksi elämä.
+   1. **Törmäykset maksavat elämiä**. Joka kerta, kun sankarisi törmää viholliseen, menetät yhden elämän.
    
-      Laajenna `Hero`-luokkaa tekemään tämä vähennys:
+      Lisää tämä metodi `Hero`-luokkaasi:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:
         }
         ```
 
-   2. **Jokaisesta laserista, joka osuu viholliseen**, lisää pelipisteisiin 100 pistettä.
+   2. **Vihollisten ampuminen ansaitsee pisteitä**. Jokainen onnistunut osuma antaa 100 pistettä, tarjoten välitöntä positiivista palautetta tarkasta ampumisesta.
 
-      Laajenna `Hero`-luokkaa tekemään tämä lisäys:
+      Laajenna Hero-luokkaasi tällä lisäysmetodilla:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:
           }
         ```
 
-        Lisää nämä funktiot törmäystapahtumien käsittelijöihin:
+        Nyt yhdistä nämä funktiot törmäystapahtumiin:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,29 +179,39 @@ Yllä oleva komento käynnistää HTTP-palvelimen osoitteessa `http://localhost:
         });
         ```
 
-✅ Tee hieman tutkimusta ja selvitä, mitä muita pelejä on luotu JavaScriptillä ja Canvasilla. Mitkä ovat niiden yhteiset piirteet?
+✅ Kiinnostunut muista JavaScriptillä ja Canvasilla tehdyistä peleistä? Tutki lisää - saatat yllättyä siitä, mitä kaikkea on mahdollista tehdä!
 
-Kun olet saanut tämän valmiiksi, sinun pitäisi nähdä pienet "elämä"-alukset oikeassa alakulmassa, pisteet vasemmassa alakulmassa, ja elämien määrä vähenee, kun törmäät vihollisiin, ja pisteet kasvavat, kun ammut vihollisia. Hienoa työtä! Pelisi on melkein valmis.
+Kun olet toteuttanut nämä ominaisuudet, testaa peliäsi nähdäksesi täydellisen palautemekanismin toiminnassa. Sinun pitäisi nähdä elämän kuvakkeet oikeassa alakulmassa, pisteesi vasemmassa alakulmassa, ja huomata, kuinka törmäykset vähentävät elämiä ja onnistuneet laukaukset lisäävät pisteitä.
+
+Pelissäsi on nyt olennaiset mekanismit, jotka tekivät varhaisista arcade-peleistä niin koukuttavia - selkeät tavoitteet, välitön palaute ja merkitykselliset seuraukset pelaajan toimille.
 
 ---
 
+## GitHub Copilot Agent -haaste 🚀
+
+Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
+
+**Kuvaus:** Paranna avaruuspelin pistejärjestelmää toteuttamalla ennätyspisteiden ominaisuus pysyvällä tallennuksella ja bonuspisteiden mekanismilla.
+
+**Tehtävä:** Luo ennätyspistejärjestelmä, joka tallentaa pelaajan parhaan tuloksen localStorageen. Lisää bonuspisteitä peräkkäisistä vihollistaposta (kombosysteemi) ja toteuta erilaiset pistemäärät eri vihollistyypeille. Lisää visuaalinen indikaattori, kun pelaaja saavuttaa uuden ennätyspisteen, ja näytä nykyinen ennätyspiste peliruudulla.
+
 ## 🚀 Haaste
 
-Koodisi on melkein valmis. Mitä seuraavaksi voisit tehdä?
+Sinulla on nyt toimiva peli pisteiden ja elämien kanssa. Mieti, mitkä lisäominaisuudet voisivat parantaa pelaajakokemusta.
 
-## Jälkikysely
+## Jälkiquiz
 
-[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/38)
+[Jälkiquiz](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Kertaus ja itseopiskelu
 
-Tutki tapoja, joilla voit lisätä ja vähentää pelipisteitä ja elämiä. On olemassa mielenkiintoisia pelimoottoreita, kuten [PlayFab](https://playfab.com). Miten tällaisen moottorin käyttö voisi parantaa peliäsi?
+Haluatko tutkia lisää? Tutki erilaisia lähestymistapoja pelin piste- ja elämäsysteemeihin. On olemassa kiehtovia pelimoottoreita, kuten [PlayFab](https://playfab.com), jotka käsittelevät pisteitä, tulostaulukoita ja pelaajien etenemistä. Miten tällaisen integrointi voisi viedä pelisi seuraavalle tasolle?
 
 ## Tehtävä
 
-[Rakenna pisteytyspeli](assignment.md)
+[Rakenna pistepeli](assignment.md)
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

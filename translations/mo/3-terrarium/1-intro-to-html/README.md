@@ -1,84 +1,98 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
-  "translation_date": "2025-08-28T23:39:19+00:00",
+  "original_hash": "20c72cf2e5b0050d38ca3cb14a75a9df",
+  "translation_date": "2025-10-22T22:46:11+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "mo"
 }
 -->
-# Terrarium 專案第一部分：HTML 入門
+# 玻璃花園專案第一部分：HTML入門
 
-![HTML 入門](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.mo.png)  
-> 手繪筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
+![HTML入門](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.mo.png)
+> 繪圖筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
+
+HTML（超文本標記語言）是您曾經瀏覽過的每個網站的基礎。可以將HTML想像成網頁的骨架——它定義了內容的位置、組織方式以及每個部分的意義。雖然CSS稍後會用顏色和佈局來“裝飾”您的HTML，JavaScript則會通過互動性使其“活起來”，但HTML提供了使其他一切成為可能的基本結構。
+
+在本課程中，您將為虛擬玻璃花園介面創建HTML結構。這個動手專案將教您基本的HTML概念，同時構建一些視覺上吸引人的內容。您將學習如何使用語義元素組織內容、處理圖片以及為互動式網頁應用程式建立基礎。
+
+在本課程結束時，您將擁有一個工作中的HTML頁面，顯示有序排列的植物圖片，為下一課程中的樣式設置做好準備。不要擔心它一開始看起來很基本——在CSS添加視覺效果之前，HTML的作用就是如此。
 
 ## 課前測驗
 
 [課前測驗](https://ff-quizzes.netlify.app/web/quiz/15)
 
-> 觀看影片
-
+> 📺 **觀看並學習**：查看這段有用的影片概述
 > 
-> [![Git 和 GitHub 基礎影片](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
+> [![HTML基礎影片](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
 
-### 簡介
+## 設置您的專案
 
-HTML，全名為超文本標記語言 (HyperText Markup Language)，是網頁的「骨架」。如果說 CSS 是為 HTML「穿上衣服」，JavaScript 則是讓它「活起來」，那麼 HTML 就是網頁應用的「身體」。HTML 的語法甚至反映了這個概念，因為它包含了「head」、「body」和「footer」等標籤。
+在我們深入HTML代碼之前，讓我們為您的玻璃花園專案設置一個合適的工作空間。從一開始就創建一個有組織的文件結構是一個重要的習慣，這將在您的網頁開發過程中對您大有幫助。
 
-在這節課中，我們將使用 HTML 來設計虛擬玻璃花園介面的「骨架」。它將包含一個標題和三個欄位：左右兩側欄位放置可拖曳的植物，中間區域則是實際的玻璃花園。到本課結束時，你將能看到植物出現在欄位中，但介面看起來可能有點奇怪；別擔心，在下一節課中，我們會用 CSS 為介面添加樣式，使其更美觀。
+### 任務：創建您的專案結構
 
-### 任務
+您將為您的玻璃花園專案創建一個專用文件夾並添加您的第一個HTML文件。以下是您可以使用的兩種方法：
 
-在你的電腦上，建立一個名為 `terrarium` 的資料夾，並在其中建立一個名為 `index.html` 的檔案。你可以在 Visual Studio Code 中完成這個操作：打開一個新的 VS Code 視窗，點擊「打開資料夾」，然後導航到新建的資料夾。接著在 Explorer 面板中點擊小的「檔案」按鈕，建立新檔案：
+**選項1：使用Visual Studio Code**
+1. 打開Visual Studio Code
+2. 點擊“File” → “Open Folder”或使用快捷鍵`Ctrl+K, Ctrl+O`（Windows/Linux）或`Cmd+K, Cmd+O`（Mac）
+3. 創建一個名為`terrarium`的新文件夾並選擇它
+4. 在Explorer面板中，點擊“New File”圖標
+5. 將文件命名為`index.html`
 
-![VS Code 中的 Explorer](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.mo.png)
+![VS Code Explorer顯示新文件創建](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.mo.png)
 
-或者
+**選項2：使用終端命令**
+```bash
+mkdir terrarium
+cd terrarium
+touch index.html
+code index.html
+```
 
-使用以下指令在 Git Bash 中完成：
-* `mkdir terrarium`
-* `cd terrarium`
-* `touch index.html`
-* `code index.html` 或 `nano index.html`
+**這些命令的作用：**
+- **創建**一個名為`terrarium`的新目錄作為您的專案文件夾
+- **進入**terrarium目錄
+- **創建**一個空的`index.html`文件
+- **打開**該文件以便在Visual Studio Code中進行編輯
 
-> `index.html` 檔案告訴瀏覽器它是資料夾中的預設檔案；例如，`https://anysite.com/test` 可能是由一個名為 `test` 的資料夾結構建立的，該資料夾中包含 `index.html`；`index.html` 不一定會顯示在 URL 中。
+> 💡 **專業提示**：文件名`index.html`在網頁開發中具有特殊意義。當有人訪問網站時，瀏覽器會自動尋找`index.html`作為默認顯示的頁面。這意味著像`https://mysite.com/projects/`這樣的URL會自動從`projects`文件夾中提供`index.html`文件，而無需在URL中指定文件名。
 
----
+## 理解HTML文件結構
 
-## DocType 和 html 標籤
+每個HTML文件都遵循特定的結構，瀏覽器需要這些結構來正確理解和顯示內容。可以將這種結構想像成一封正式的信件——它有特定順序的必要元素，幫助接收者（在這裡是瀏覽器）正確處理內容。
 
-HTML 檔案的第一行是它的 DocType。這行必須位於檔案的最頂部，雖然看起來有些奇怪，但它告訴舊版瀏覽器需要以標準模式渲染頁面，遵循當前的 HTML 規範。
+讓我們從添加每個HTML文件所需的基本框架開始。
 
-> 提示：在 VS Code 中，你可以將滑鼠懸停在標籤上，從 MDN 參考指南中獲取有關其用途的資訊。
+### DOCTYPE聲明和根元素
 
-第二行應該是 `<html>` 標籤的開啟標籤，接著是它的關閉標籤 `</html>`。這些標籤是介面的根元素。
+任何HTML文件的前兩行都是向瀏覽器介紹文件的“開場白”：
 
-### 任務
-
-在你的 `index.html` 檔案頂部添加以下內容：
-
-```HTML
+```html
 <!DOCTYPE html>
 <html></html>
 ```
 
-✅ DocType 可以通過查詢字串設定不同的模式：[Quirks Mode 和 Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)。這些模式曾用於支援非常舊的瀏覽器（如 Netscape Navigator 4 和 Internet Explorer 5），但現在已不常用。你可以堅持使用標準的 DocType 聲明。
+**理解這段代碼的作用：**
+- **聲明**文件類型為HTML5，使用`<!DOCTYPE html>`
+- **創建**包含所有頁面內容的根`<html>`元素
+- **建立**現代網頁標準以確保瀏覽器正確渲染
+- **確保**在不同瀏覽器和設備上的一致顯示
 
----
+> 💡 **VS Code提示**：在VS Code中將鼠標懸停在任何HTML標籤上，可以查看MDN Web Docs提供的有用信息，包括使用示例和瀏覽器兼容性細節。
 
-## 文件的 'head'
+> 📚 **了解更多**：DOCTYPE聲明可以防止瀏覽器進入“怪異模式”，該模式曾用於支持非常舊的網站。現代網頁開發使用簡單的`<!DOCTYPE html>`聲明來確保[符合標準的渲染](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)。
 
-HTML 文件的 'head' 區域包含有關網頁的重要資訊，也稱為 [元數據](https://developer.mozilla.org/docs/Web/HTML/Element/meta)。在我們的例子中，我們告訴將渲染此頁面的網頁伺服器以下四件事：
+## 添加必要的文件元數據
 
--   頁面的標題
--   頁面元數據，包括：
-    -   字元集，告訴頁面使用的字元編碼
-    -   瀏覽器資訊，包括 `x-ua-compatible`，表示支援 IE=edge 瀏覽器
-    -   關於視窗載入時應如何行為的資訊。將視窗設定為初始縮放比例為 1，可以控制頁面首次載入時的縮放級別。
+HTML文件的`<head>`部分包含瀏覽器和搜索引擎需要的重要信息，但訪問者不會直接在頁面上看到這些信息。可以將其視為幫助您的網頁正常運行並在不同設備和平台上正確顯示的“幕後信息”。
 
-### 任務
+這些元數據告訴瀏覽器如何顯示您的頁面、使用什麼字符編碼以及如何處理不同的屏幕尺寸——這些都是創建專業、可訪問網頁的必要條件。
 
-在 `<html>` 標籤的開啟和關閉標籤之間，添加一個 'head' 區塊。
+### 任務：添加文件頭部
+
+在您的開頭和結尾`<html>`標籤之間插入以下`<head>`部分：
 
 ```html
 <head>
@@ -89,17 +103,28 @@ HTML 文件的 'head' 區域包含有關網頁的重要資訊，也稱為 [元�
 </head>
 ```
 
-✅ 如果你將視窗的 meta 標籤設置為這樣：`<meta name="viewport" content="width=600">`，會發生什麼？閱讀更多關於 [視窗](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag) 的資訊。
+**分解每個元素的作用：**
+- **設置**在瀏覽器標籤和搜索結果中顯示的頁面標題
+- **指定**UTF-8字符編碼以便全球範圍內正確顯示文本
+- **確保**與現代版本的Internet Explorer兼容
+- **配置**響應式設計，通過設置視窗與設備寬度匹配
+- **控制**初始縮放級別以自然大小顯示內容
 
----
+> 🤔 **思考一下**：如果您設置了一個像這樣的視窗meta標籤：`<meta name="viewport" content="width=600">`會發生什麼？這將強制頁面始終保持600像素寬，破壞響應式設計！了解更多關於[正確的視窗配置](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag)。
 
-## 文件的 `body`
+## 建立文件主體
 
-### HTML 標籤
+`<body>`元素包含網頁的所有可見內容——用戶將看到和交互的所有內容。雖然`<head>`部分向瀏覽器提供指令，但`<body>`部分包含實際內容：文本、圖片、按鈕以及創建用戶介面的其他元素。
 
-在 HTML 中，你可以在 .html 檔案中添加標籤來建立網頁的元素。每個標籤通常有一個開啟和關閉標籤，例如：`<p>hello</p>` 表示一段文字。通過在 `<html>` 標籤對內添加一組 `<body>` 標籤來建立介面的主體；你的標記現在看起來像這樣：
+讓我們添加主體結構並了解HTML標籤如何協同工作以創建有意義的內容。
 
-### 任務
+### 理解HTML標籤結構
+
+HTML使用成對的標籤來定義元素。大多數標籤都有像`<p>`這樣的開頭標籤和像`</p>`這樣的結尾標籤，中間包含內容：`<p>Hello, world!</p>`。這創建了一個包含文本“Hello, world!”的段落元素。
+
+### 任務：添加主體元素
+
+更新您的HTML文件以包含`<body>`元素：
 
 ```html
 <!DOCTYPE html>
@@ -114,100 +139,136 @@ HTML 文件的 'head' 區域包含有關網頁的重要資訊，也稱為 [元�
 </html>
 ```
 
-現在，你可以開始建立頁面了。通常，你會使用 `<div>` 標籤來建立頁面中的各個元素。我們將建立一系列的 `<div>` 元素來包含圖片。
+**這個完整結構提供了以下內容：**
+- **建立**基本的HTML5文件框架
+- **包含**正確的元數據以便瀏覽器正確渲染
+- **創建**一個空的主體以容納可見內容
+- **遵循**現代網頁開發的最佳實踐
 
-### 圖片
+現在您已準備好添加玻璃花園的可見元素。我們將使用`<div>`元素作為容器來組織不同的內容部分，並使用`<img>`元素顯示植物圖片。
 
-有一個 HTML 標籤不需要關閉標籤，那就是 `<img>` 標籤，因為它有一個 `src` 屬性，包含頁面渲染該項目所需的所有資訊。
+### 使用圖片和佈局容器
 
-在你的應用中建立一個名為 `images` 的資料夾，並將 [原始碼資料夾](../../../../3-terrarium/solution/images) 中的所有圖片添加到該資料夾中；（共有 14 張植物圖片）。
+圖片在HTML中是特殊的，因為它們使用“自閉合”標籤。與`<p></p>`等包裹內容的元素不同，`<img>`標籤在標籤本身內包含所有必要信息，使用像`src`（圖片文件路徑）和`alt`（可訪問性）這樣的屬性。
 
-### 任務
+在將圖片添加到HTML之前，您需要通過創建一個圖片文件夾並添加植物圖形來正確組織您的專案文件。
 
-在 `<body></body>` 標籤之間添加這些植物圖片到兩個欄位中：
+**首先，設置您的圖片：**
+1. 在您的玻璃花園專案文件夾內創建一個名為`images`的文件夾
+2. 從[解決方案文件夾](../../../../3-terrarium/solution/images)下載植物圖片（共14張植物圖片）
+3. 將所有植物圖片複製到您的新`images`文件夾中
+
+### 任務：創建植物展示佈局
+
+現在在您的`<body></body>`標籤之間添加有序排列的植物圖片：
 
 ```html
 <div id="page">
 	<div id="left-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/plant1.d87946a2ca70cc4316bda6e6c3af7210fbe9ada5539a7885141a9ce0efaf7be3.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant2" src="./images/plant2.png" />
+			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/plant2.8daa1606c9c1ad896bb171212c7d1d882e504b76b8ec3a2d1c337d775cf50dc3.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant3" src="./images/plant3.png" />
+			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/plant3.8b0d484381a2a2a77c5c06ad97ab6ae5b7023da8c6c7678b0183bc0e46ea17a7.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant4" src="./images/plant4.png" />
+			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/plant4.656e16ae1df37be2af5f4e7b5ab6c5decc432c3d3ec2eb98b904ddbecad49db0.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant5" src="./images/plant5.png" />
+			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/plant5.2b41b9355f11ebccd62d327f5f14e56531ecda9c6f970bc89e386ee9f0273bb0.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant6" src="./images/plant6.png" />
+			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/plant6.3d1827d03b6569946be13ae5da1f32947ae56732638a43757a7c616a6adccc5d.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant7" src="./images/plant7.png" />
+			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/plant7.8152c302ac97f621a6c595bdf3939103568f9efc7d3b06a0f02a1ea66f479de0.mo.png" />
 		</div>
 	</div>
 	<div id="right-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant8" src="./images/plant8.png" />
+			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/plant8.38d6428174ffa850a47cd1b81d528fa528adda7d23f3ae0bb42f4a27356ca5e6.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant9" src="./images/plant9.png" />
+			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/plant9.f0e38d3327c37fc29cd2734d48d20c2cf69300898ece6d46708829e02ce540e3.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant10" src="./images/plant10.png" />
+			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/plant10.b159d6d6e985595f56d86b4b38061b8e7b4c9969c210c199fe967269cf935e7f.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant11" src="./images/plant11.png" />
+			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/plant11.2a03a1c2ec8ea84ef3a80c06cc6883f3960fbb669f2c0b0bd824ba33d7eb7d32.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant12" src="./images/plant12.png" />
+			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/plant12.60e9b53e538fbaf3e5797ebf800acb483baf5639e6cf378292ac2321ab8a5ea9.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant13" src="./images/plant13.png" />
+			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/plant13.07a51543c820bcf57f67a9a6c0acbd6211ff795e2e67a42a9718224534e95fab.mo.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant14" src="./images/plant14.png" />
+			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/plant14.6e486371ba7d36ba3520d9828887993cb4c3edad8bdd8ff9b1b315717ff8cb63.mo.png" />
 		</div>
 	</div>
 </div>
 ```
 
-> 注意：Span 和 Div 的區別。Div 被認為是「區塊」元素，而 Span 是「內聯」元素。如果你將這些 div 轉換為 span，會發生什麼？
+**逐步解析此代碼的作用：**
+- **創建**一個`id="page"`的主頁面容器以容納所有內容
+- **建立**兩個列容器：`left-container`和`right-container`
+- **組織**左列7個植物，右列7個植物
+- **將**每個植物圖片包裹在`plant-holder`的div中以便單獨定位
+- **應用**一致的類名以便在下一課程中進行CSS樣式設置
+- **分配**唯一的ID給每個植物圖片以便稍後進行JavaScript交互
+- **包含**指向圖片文件夾的正確文件路徑
 
-使用這些標記，植物現在會顯示在螢幕上。看起來可能很糟，因為它們尚未使用 CSS 進行樣式設計，我們會在下一節課中完成這部分。
+> 🤔 **思考一下**：注意所有圖片目前都有相同的alt文字“plant”。這對於可訪問性來說並不理想。使用螢幕閱讀器的用戶會聽到“plant”重複14次，無法知道每張圖片顯示的是哪種植物。您能否為每張圖片想出更好、更具描述性的alt文字？
 
-每張圖片都有替代文字，即使你無法看到或渲染圖片，這些文字也會顯示出來。這是一個重要的屬性，有助於提升無障礙性。在未來的課程中，我們會學習更多關於無障礙性的內容；目前請記住，alt 屬性為圖片提供了替代資訊，當使用者因某些原因無法查看圖片時（例如網速慢、src 屬性錯誤，或使用者使用螢幕閱讀器），這些資訊會顯示出來。
+> 📝 **HTML元素類型**：`<div>`元素是“塊級”的，佔據整個寬度，而`<span>`元素是“內聯”的，只佔據必要的寬度。如果您將所有這些`<div>`標籤更改為`<span>`標籤，您認為會發生什麼？
 
-✅ 你是否注意到每張圖片都有相同的 alt 標籤？這是好的做法嗎？為什麼？你能改進這段程式碼嗎？
+添加此標記後，植物將出現在螢幕上，儘管它們看起來還不夠精緻——這就是下一課程中CSS的作用！目前，您已經擁有一個堅實的HTML基礎，可以正確地組織您的內容並遵循可訪問性最佳實踐。
 
----
+## 使用語義HTML提升可訪問性
 
-## 語義化標記
+語義HTML意味著根據元素的意義和用途選擇HTML元素，而不僅僅是它們的外觀。當您使用語義標記時，您是在向瀏覽器、搜索引擎和像螢幕閱讀器這樣的輔助技術傳達內容的結構和意義。
 
-一般來說，在撰寫 HTML 時，使用有意義的「語義」是更好的選擇。這意味著你應該使用 HTML 標籤來表示它們設計用於的數據或交互類型。例如，頁面上的主要標題文字應使用 `<h1>` 標籤。
+這種方法使您的網站對於有障礙的用戶更具可訪性，並幫助搜索引擎更好地理解您的內容。這是現代網頁開發的一個基本原則，旨在為所有人創造更好的使用體驗。
 
-在開啟的 `<body>` 標籤下方添加以下內容：
+### 添加語義頁面標題
+
+讓我們為您的玻璃花園頁面添加一個合適的標題。在您的開頭`<body>`標籤之後插入以下行：
 
 ```html
 <h1>My Terrarium</h1>
 ```
 
-使用語義化標記，例如將標題設為 `<h1>`，將無序列表渲染為 `<ul>`，有助於螢幕閱讀器導航頁面。一般來說，按鈕應該寫為 `<button>`，列表應該是 `<li>`。雖然可以使用特別樣式的 `<span>` 元素和點擊處理器來模仿按鈕，但對於使用輔助技術的使用者來說，這樣的元素可能無法被正確識別為按鈕。因此，盡量使用語義化標記。
+**語義標記的重要性：**
+- **幫助**螢幕閱讀器導航和理解頁面結構
+- **改善**搜索引擎優化（SEO），明確內容層次結構
+- **增強**視障或認知障礙用戶的可訪性
+- **創造**更好的跨所有設備和平台的用戶體驗
+- **遵循**網頁標準和專業開發的最佳實踐
 
-✅ 看看螢幕閱讀器 [如何與網頁互動](https://www.youtube.com/watch?v=OUDV1gqs9GA)。你能理解為什麼非語義化標記可能會讓使用者感到沮喪嗎？
+**語義與非語義選擇的示例：**
 
-## 玻璃花園
+| 用途 | ✅ 語義選擇 | ❌ 非語義選擇 |
+|------|------------|--------------|
+| 主標題 | `<h1>標題</h1>` | `<div class="big-text">標題</div>` |
+| 導航 | `<nav><ul><li></li></ul></nav>` | `<div class="menu"><div></div></div>` |
+| 按鈕 | `<button>點擊我</button>` | `<span onclick="...">點擊我</span>` |
+| 文章內容 | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
-介面的最後一部分是建立將被樣式化為玻璃花園的標記。
+> 🎥 **觀看實際操作**：觀看[螢幕閱讀器如何與網頁互動](https://www.youtube.com/watch?v=OUDV1gqs9GA)，了解語義標記對可訪性的重要性。注意正確的HTML結構如何幫助用戶高效地導航。
 
-### 任務：
+## 創建玻璃花園容器
 
-在最後一個 `</div>` 標籤上方添加以下標記：
+現在讓我們添加玻璃花園本身的HTML結構——植物最終將被放置的玻璃容器。這部分展示了一個重要概念：HTML提供結構，但如果沒有CSS樣式，這些元素尚未可見。
+
+玻璃花園的標記使用了描述性的類名，這將使下一課程中的CSS樣式設置更加直觀和易於維護。
+
+### 任務：添加玻璃花園結構
+
+在最後的`</div>`標籤（頁面容器的閉合標籤之前）插入以下標記：
 
 ```html
 <div id="terrarium">
@@ -221,13 +282,44 @@ HTML 文件的 'head' 區域包含有關網頁的重要資訊，也稱為 [元�
 </div>
 ```
 
-✅ 即使你將這些標記添加到螢幕上，你仍然看不到任何渲染。為什麼？
+**理解這個玻璃花園結構：**
+- **創建**一個具有唯一ID的主玻璃花園容器以便樣式設置
+- **定義**每個視覺組件的單獨元素（頂部、牆壁、泥土、底部）
+- **包含**用於玻璃反射效果的嵌套元素（光澤元素）
+- **使用**清晰指示每個元素用途的描述性類名
+- **準備**結構以便在下一課程中使用CSS樣式設置，創建玻璃花園外觀
+
+> 🤔 **注意到什麼了嗎？**：即使您添加了此標記，頁面上也不會出現任何新內容！這完美地說明了HTML如何提供結構，而CSS則提供外觀。這些`<div>`元素已存在，但尚未有任何視覺樣式——這部分將在下一課程中完成！
 
 ---
 
-## 🚀挑戰
+## GitHub Copilot Agent 挑戰
 
-HTML 中有一些有趣的「舊」標籤，雖然你不應該在標記中使用已棄用的標籤，例如 [這些標籤](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)。不過，你能使用舊的 `<marquee>` 標籤讓 h1 標題水平滾動嗎？（如果你這麼做，記得之後將其移除）
+使用Agent模式完成以下挑戰：
+
+**描述：** 為可以添加到玻璃花園專案中的植物護理指南部分創建語義HTML結構。
+**提示：** 建立一個語義化的 HTML 區段，包括主標題「植物護理指南」，三個子區段分別為「澆水」、「光照需求」和「土壤護理」，每個子區段包含一段植物護理資訊。使用適當的語義化 HTML 標籤，例如 `<section>`、`<h2>`、`<h3>` 和 `<p>` 來適當地結構化內容。
+
+了解更多關於 [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode)。
+
+## 探索 HTML 歷史挑戰
+
+**了解網頁演進**
+
+自從 Tim Berners-Lee 在 1990 年於 CERN 創建第一個網頁瀏覽器以來，HTML 已經有了顯著的演進。一些較舊的標籤，例如 `<marquee>`，現在已被棄用，因為它們不符合現代的無障礙標準和響應式設計原則。
+
+**試試這個實驗：**
+1. 暫時將你的 `<h1>` 標題包裹在 `<marquee>` 標籤中：`<marquee><h1>我的小型植物園</h1></marquee>`
+2. 在瀏覽器中打開你的頁面並觀察滾動效果
+3. 思考為什麼這個標籤被棄用（提示：考慮用戶體驗和無障礙性）
+4. 移除 `<marquee>` 標籤並返回語義化標記
+
+**反思問題：**
+- 滾動的標題可能如何影響視覺障礙或對運動敏感的用戶？
+- 有哪些現代 CSS 技術可以更無障礙地實現類似的視覺效果？
+- 為什麼使用當前的網頁標準而不是棄用的元素很重要？
+
+探索更多關於 [過時和棄用的 HTML 元素](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements)，了解網頁標準如何演進以改善用戶體驗。
 
 ## 課後測驗
 
@@ -235,9 +327,31 @@ HTML 中有一些有趣的「舊」標籤，雖然你不應該在標記中使用
 
 ## 回顧與自學
 
-HTML 是構建網頁的「經典」基石系統，幫助網路發展成今天的樣子。通過學習一些舊標籤和新標籤，了解它的歷史。你能弄清楚為什麼某些標籤被棄用，而某些標籤被添加嗎？未來可能會引入哪些標籤？
+**深化你的 HTML 知識**
 
-了解更多關於為網頁和行動裝置建立網站的內容，請參考 [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon)。
+HTML 作為網頁的基礎已經超過 30 年，從一個簡單的文檔標記語言演變為構建互動式應用程序的複雜平台。了解這種演進有助於你更好地理解現代網頁標準並做出更好的開發決策。
+
+**推薦學習路徑：**
+
+1. **HTML 的歷史與演進**
+   - 研究從 HTML 1.0 到 HTML5 的時間線
+   - 探索為什麼某些標籤被棄用（無障礙性、移動友好性、可維護性）
+   - 調查新興的 HTML 功能和提案
+
+2. **語義化 HTML 深入探討**
+   - 學習完整的 [HTML5 語義元素列表](https://developer.mozilla.org/docs/Web/HTML/Element)
+   - 練習何時使用 `<article>`、`<section>`、`<aside>` 和 `<main>`
+   - 了解用於增強無障礙性的 ARIA 屬性
+
+3. **現代網頁開發**
+   - 探索如何在 Microsoft Learn 上 [建立響應式網站](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon)
+   - 理解 HTML 如何與 CSS 和 JavaScript 集成
+   - 學習網頁性能和 SEO 的最佳實踐
+
+**反思問題：**
+- 你發現了哪些被棄用的 HTML 標籤？它們為什麼被移除？
+- 有哪些新的 HTML 功能正在提議用於未來版本？
+- 語義化 HTML 如何促進網頁的無障礙性和 SEO？
 
 ## 作業
 
@@ -246,4 +360,4 @@ HTML 是構建網頁的「經典」基石系統，幫助網路發展成今天的
 ---
 
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。
+本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。

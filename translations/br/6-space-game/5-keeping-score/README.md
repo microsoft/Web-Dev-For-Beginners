@@ -1,23 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-28T23:52:25+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-22T23:16:19+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "br"
 }
 -->
-# Construindo um Jogo Espacial Parte 5: Pontuação e Vidas
+# Construa um Jogo Espacial Parte 5: Pontuação e Vidas
 
 ## Quiz Pré-Aula
 
 [Quiz pré-aula](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Nesta lição, você aprenderá como adicionar pontuação a um jogo e calcular vidas.
+Pronto para fazer seu jogo espacial parecer um jogo de verdade? Vamos adicionar pontuação e gerenciar vidas - as mecânicas principais que transformaram os primeiros jogos de arcade, como Space Invaders, de simples demonstrações em entretenimento viciante. É aqui que seu jogo se torna realmente jogável.
 
-## Exibir texto na tela
+## Exibindo Texto na Tela - A Voz do Seu Jogo
 
-Para exibir a pontuação do jogo na tela, você precisará saber como colocar texto na tela. A resposta é usar o método `fillText()` no objeto canvas. Você também pode controlar outros aspectos, como qual fonte usar, a cor do texto e até mesmo seu alinhamento (esquerda, direita, centro). Abaixo está um código que desenha texto na tela.
+Para exibir sua pontuação, precisamos aprender como renderizar texto no canvas. O método `fillText()` é sua principal ferramenta para isso - é a mesma técnica usada nos jogos de arcade clássicos para mostrar pontuações e informações de status.
+
+Você tem controle total sobre a aparência do texto:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Leia mais sobre [como adicionar texto a um canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) e sinta-se à vontade para deixar o seu mais estiloso!
+✅ Explore mais sobre [como adicionar texto a um canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - você pode se surpreender com o quão criativo pode ser com fontes e estilos!
 
-## Vida, como um conceito de jogo
+## Vidas - Mais do que Apenas um Número
 
-O conceito de ter vidas em um jogo é apenas um número. No contexto de um jogo espacial, é comum atribuir um conjunto de vidas que são deduzidas uma a uma quando sua nave sofre dano. É interessante mostrar uma representação gráfica disso, como mini-naves ou corações, em vez de apenas um número.
+No design de jogos, uma "vida" representa a margem de erro do jogador. Esse conceito remonta às máquinas de pinball, onde você tinha várias bolas para jogar. Em jogos de vídeo antigos como Asteroids, vidas davam aos jogadores permissão para correr riscos e aprender com os erros.
 
-## O que construir
+A representação visual é muito importante - exibir ícones de naves em vez de apenas "Vidas: 3" cria um reconhecimento visual imediato, semelhante à forma como os gabinetes de arcade antigos usavam iconografia para se comunicar além das barreiras linguísticas.
 
-Vamos adicionar o seguinte ao seu jogo:
+## Construindo o Sistema de Recompensas do Seu Jogo
 
-- **Pontuação do jogo**: Para cada nave inimiga destruída, o herói deve ganhar alguns pontos. Sugerimos 100 pontos por nave. A pontuação do jogo deve ser exibida no canto inferior esquerdo.
-- **Vidas**: Sua nave tem três vidas. Você perde uma vida toda vez que uma nave inimiga colide com você. A contagem de vidas deve ser exibida no canto inferior direito e ser composta pelo seguinte gráfico ![imagem de vida](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.br.png).
+Agora vamos implementar os sistemas de feedback principais que mantêm os jogadores engajados:
 
-## Passos recomendados
+- **Sistema de pontuação**: Cada nave inimiga destruída concede 100 pontos (números redondos são mais fáceis para os jogadores calcularem mentalmente). A pontuação será exibida no canto inferior esquerdo.
+- **Contador de vidas**: Seu herói começa com três vidas - um padrão estabelecido pelos jogos de arcade antigos para equilibrar desafio e jogabilidade. Cada colisão com um inimigo custa uma vida. Vamos exibir as vidas restantes no canto inferior direito usando ícones de naves ![imagem de vida](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.br.png).
 
-Localize os arquivos que foram criados para você na subpasta `your-work`. Ela deve conter o seguinte:
+## Vamos Começar!
+
+Primeiro, configure seu ambiente de trabalho. Navegue até os arquivos na subpasta `your-work`. Você deve ver os seguintes arquivos:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Localize os arquivos que foram criados para você na subpasta `your-work`. Ela d
 -| package.json
 ```
 
-Você inicia seu projeto na pasta `your_work` digitando:
+Para testar seu jogo, inicie o servidor de desenvolvimento a partir da pasta `your_work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`. Abra um navegador e insira esse endereço. No momento, ele deve renderizar o herói e todos os inimigos, e, ao pressionar as setas esquerda e direita, o herói se move e pode derrubar inimigos.
+Isso executa um servidor local em `http://localhost:5000`. Abra este endereço no seu navegador para ver seu jogo. Teste os controles com as teclas de seta e tente atirar nos inimigos para verificar se tudo está funcionando.
 
-### Adicionar código
+### Hora de Codificar!
 
-1. **Copie os recursos necessários** da pasta `solution/assets/` para a pasta `your-work`; você adicionará o recurso `life.png`. Adicione o `lifeImg` à função window.onload:
+1. **Pegue os recursos visuais necessários**. Copie o arquivo `life.png` da pasta `solution/assets/` para sua pasta `your-work`. Depois, adicione o `lifeImg` à função window.onload:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Adicione o `lifeImg` à lista de recursos:
+1. Não se esqueça de adicionar o `lifeImg` à sua lista de recursos:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
     eventEmitter = new EventEmitter();
     ```
   
-2. **Adicione variáveis**. Adicione código que represente sua pontuação total (0) e vidas restantes (3), exibindo essas pontuações na tela.
+2. **Configure as variáveis do jogo**. Adicione algum código para rastrear sua pontuação total (começando em 0) e vidas restantes (começando em 3). Vamos exibir essas informações na tela para que os jogadores sempre saibam sua situação.
 
-3. **Estenda a função `updateGameObjects()`**. Estenda a função `updateGameObjects()` para lidar com colisões de inimigos:
+3. **Implemente a detecção de colisão**. Estenda sua função `updateGameObjects()` para detectar quando inimigos colidem com seu herói:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
       })
     ```
 
-4. **Adicione `vidas` e `pontos`**. 
-   1. **Inicialize variáveis**. Sob `this.cooldown = 0` na classe `Hero`, defina vidas e pontos:
+4. **Adicione rastreamento de vidas e pontos ao seu Herói**. 
+   1. **Inicialize os contadores**. Sob `this.cooldown = 0` na sua classe `Hero`, configure vidas e pontos:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Exiba variáveis na tela**. Desenhe esses valores na tela:
+   1. **Mostre esses valores ao jogador**. Crie funções para desenhar esses valores na tela:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
 
         ```
 
-   1. **Adicione métodos ao loop do jogo**. Certifique-se de adicionar essas funções à sua função window.onload sob `updateGameObjects()`:
+   1. **Conecte tudo ao loop do jogo**. Adicione essas funções à sua função window.onload logo após `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implemente as regras do jogo**. Implemente as seguintes regras do jogo:
+1. **Implemente consequências e recompensas no jogo**. Agora vamos adicionar os sistemas de feedback que tornam as ações do jogador significativas:
 
-   1. **Para cada colisão entre herói e inimigo**, deduza uma vida.
+   1. **Colisões custam vidas**. Toda vez que seu herói colidir com um inimigo, você deve perder uma vida.
    
-      Estenda a classe `Hero` para realizar essa dedução:
+      Adicione este método à sua classe `Hero`:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
         }
         ```
 
-   2. **Para cada laser que atinge um inimigo**, aumente a pontuação do jogo em 100 pontos.
+   2. **Atirar nos inimigos concede pontos**. Cada acerto bem-sucedido concede 100 pontos, proporcionando um feedback positivo imediato para tiros precisos.
 
-      Estenda a classe Hero para realizar esse incremento:
+      Estenda sua classe Hero com este método de incremento:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
           }
         ```
 
-        Adicione essas funções aos emissores de eventos de colisão:
+        Agora conecte essas funções aos eventos de colisão:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,23 +179,33 @@ O comando acima iniciará um servidor HTTP no endereço `http://localhost:5000`.
         });
         ```
 
-✅ Faça uma pequena pesquisa para descobrir outros jogos criados usando JavaScript/Canvas. Quais são suas características comuns?
+✅ Curioso sobre outros jogos criados com JavaScript e Canvas? Faça algumas explorações - você pode se surpreender com o que é possível!
 
-Ao final deste trabalho, você deverá ver as pequenas naves de 'vida' no canto inferior direito, os pontos no canto inferior esquerdo, e deverá ver sua contagem de vidas diminuir conforme colide com inimigos e sua pontuação aumentar ao atirar nos inimigos. Muito bem! Seu jogo está quase completo.
+Depois de implementar esses recursos, teste seu jogo para ver o sistema de feedback completo em ação. Você deve ver ícones de vidas no canto inferior direito, sua pontuação no canto inferior esquerdo, e observar como as colisões reduzem vidas enquanto os tiros bem-sucedidos aumentam sua pontuação.
+
+Seu jogo agora tem as mecânicas essenciais que tornaram os primeiros jogos de arcade tão envolventes - objetivos claros, feedback imediato e consequências significativas para as ações do jogador.
 
 ---
 
+## Desafio do Agente GitHub Copilot 🚀
+
+Use o modo Agent para completar o seguinte desafio:
+
+**Descrição:** Melhore o sistema de pontuação do jogo espacial implementando um recurso de pontuação máxima com armazenamento persistente e mecânicas de pontuação bônus.
+
+**Prompt:** Crie um sistema de pontuação máxima que salve a melhor pontuação do jogador no localStorage. Adicione pontos bônus para mortes consecutivas de inimigos (sistema de combo) e implemente valores de pontos diferentes para tipos diferentes de inimigos. Inclua um indicador visual quando o jogador alcançar uma nova pontuação máxima e exiba a pontuação máxima atual na tela do jogo.
+
 ## 🚀 Desafio
 
-Seu código está quase completo. Consegue imaginar os próximos passos?
+Agora você tem um jogo funcional com pontuação e vidas. Considere quais recursos adicionais podem melhorar a experiência do jogador.
 
 ## Quiz Pós-Aula
 
 [Quiz pós-aula](https://ff-quizzes.netlify.app/web/quiz/38)
 
-## Revisão e Autoestudo
+## Revisão & Autoestudo
 
-Pesquise algumas maneiras de incrementar e decrementar pontuações e vidas em jogos. Existem alguns motores de jogo interessantes, como [PlayFab](https://playfab.com). Como o uso de um desses poderia melhorar seu jogo?
+Quer explorar mais? Pesquise diferentes abordagens para sistemas de pontuação e vidas em jogos. Existem motores de jogos fascinantes como [PlayFab](https://playfab.com) que lidam com pontuação, rankings e progressão de jogadores. Como integrar algo assim poderia levar seu jogo para o próximo nível?
 
 ## Tarefa
 
@@ -200,4 +214,4 @@ Pesquise algumas maneiras de incrementar e decrementar pontuações e vidas em j
 ---
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

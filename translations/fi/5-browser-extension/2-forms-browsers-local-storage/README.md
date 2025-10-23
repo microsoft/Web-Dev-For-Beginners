@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T00:39:43+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-23T00:44:02+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "fi"
 }
 -->
-# Selaimen laajennusprojekti osa 2: API:n kutsuminen, Local Storagen käyttö
+# Selaimen laajennusprojekti Osa 2: API-kutsut ja paikallinen tallennus
 
-## Ennakkoquiz
+## Ennen luentoa - Kysely
 
-[Ennakkoquiz](https://ff-quizzes.netlify.app/web/quiz/25)
+[Ennen luentoa - kysely](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Johdanto
+## Johdanto
 
-Tässä oppitunnissa opit kutsumaan API:a lähettämällä selaimen laajennuksen lomakkeen ja näyttämään tulokset laajennuksessa. Lisäksi opit, kuinka voit tallentaa tietoja selaimen local storageen tulevaa käyttöä varten.
+Muistatko selaimen laajennuksen, jonka aloitit rakentamaan? Tällä hetkellä sinulla on hienon näköinen lomake, mutta se on käytännössä staattinen. Tänään herätämme sen eloon yhdistämällä sen oikeaan dataan ja antamalla sille muistin.
 
-✅ Seuraa numeroituja osioita oikeissa tiedostoissa tietääksesi, mihin koodi sijoitetaan.
+Ajattele Apollo-mission ohjaustietokoneita - ne eivät vain näyttäneet kiinteää tietoa. Ne kommunikoivat jatkuvasti avaruusalusten kanssa, päivittivät telemetriatietoja ja muistivat kriittiset tehtäväparametrit. Juuri tällaista dynaamista toimintaa rakennamme tänään. Laajennuksesi hakee internetistä oikeaa ympäristötietoa ja muistaa asetuksesi seuraavaa kertaa varten.
 
-### Aseta laajennuksessa käsiteltävät elementit:
+API-integraatio saattaa kuulostaa monimutkaiselta, mutta se on pohjimmiltaan vain koodin opettamista kommunikoimaan muiden palveluiden kanssa. Olipa kyseessä säätiedot, sosiaalisen median syötteet tai hiilijalanjälkitiedot, kuten tänään, kyse on digitaalisten yhteyksien luomisesta. Tutustumme myös siihen, miten selaimet voivat säilyttää tietoa - kuten kirjastot ovat käyttäneet kortistokatalogeja kirjojen sijainnin muistamiseen.
 
-Tässä vaiheessa olet jo rakentanut HTML:n lomakkeelle ja tulosten `<div>`-elementille selaimen laajennusta varten. Tästä eteenpäin sinun tulee työskennellä `/src/index.js`-tiedostossa ja rakentaa laajennusta pala palalta. Viittaa [edelliseen oppituntiin](../1-about-browsers/README.md) projektin asennuksesta ja rakennusprosessista.
+Tämän oppitunnin lopussa sinulla on selaimen laajennus, joka hakee oikeaa dataa, tallentaa käyttäjän asetukset ja tarjoaa sujuvan käyttökokemuksen. Aloitetaan!
 
-Työskennellessäsi `index.js`-tiedostossa aloita luomalla joitakin `const`-muuttujia, jotka pitävät arvot eri kentille:
+✅ Seuraa numeroituja osioita asianmukaisissa tiedostoissa tietääksesi, mihin koodi sijoitetaan.
 
-```JavaScript
+## Aseta elementit laajennuksen käsittelyä varten
+
+Ennen kuin JavaScript voi käsitellä käyttöliittymää, sen täytyy viitata tiettyihin HTML-elementteihin. Ajattele sitä kuin teleskoopin täytyy kohdistaa tiettyihin tähtiin - ennen kuin Galileo pystyi tutkimaan Jupiterin kuita, hänen täytyi ensin löytää ja kohdistaa Jupiteriin.
+
+`index.js`-tiedostossasi luomme `const`-muuttujia, jotka tallentavat viittaukset jokaiseen tärkeään lomake-elementtiin. Tämä on kuin tiedemiehet merkitsisivät laitteensa - sen sijaan, että he etsisivät koko laboratoriota joka kerta, he voivat suoraan käyttää sitä, mitä tarvitsevat.
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,197 +47,277 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Kaikki nämä kentät viittaavat niiden CSS-luokkaan, kuten määritit HTML:ssä edellisessä oppitunnissa.
+**Mitä tämä koodi tekee:**
+- **Taltioi** lomake-elementit käyttämällä `document.querySelector()`-metodia CSS-luokkavalitsimilla
+- **Luo** viittaukset syöttökenttiin alueen nimeä ja API-avainta varten
+- **Muodostaa** yhteydet tulosten näyttöelementteihin hiilenkäyttötietoja varten
+- **Asettaa** pääsyn käyttöliittymäelementteihin, kuten latausindikaattoreihin ja virheilmoituksiin
+- **Tallentaa** jokaisen elementtiviittauksen `const`-muuttujaan helppoa uudelleenkäyttöä varten koodissa
 
-### Lisää kuuntelijat
+## Lisää tapahtumakuuntelijat
 
-Seuraavaksi lisää tapahtumakuuntelijat lomakkeelle ja tyhjennysnapille, joka nollaa lomakkeen. Näin käyttäjän lähettäessä lomakkeen tai klikattaessa tyhjennysnappia tapahtuu jotain. Lisää myös kutsu sovelluksen alustamiseen tiedoston loppuun:
+Nyt saamme laajennuksesi reagoimaan käyttäjän toimintoihin. Tapahtumakuuntelijat ovat koodisi tapa seurata käyttäjän vuorovaikutuksia. Ajattele niitä kuin varhaisten puhelinkeskusten operaattoreita - he kuuntelivat saapuvia puheluita ja yhdistivät oikeat piirit, kun joku halusi soittaa.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Huomaa lyhyt tapa kuunnella submit- tai click-tapahtumaa ja kuinka tapahtuma välitetään handleSubmit- tai reset-funktioille. Voitko kirjoittaa tämän lyhyen muodon pidemmässä muodossa? Kumpaa tapaa suosittelet?
+**Näiden käsitteiden ymmärtäminen:**
+- **Liittää** lomakkeeseen tapahtumakuuntelijan, joka aktivoituu, kun käyttäjä painaa Enteriä tai klikkaa lähetä-painiketta
+- **Yhdistää** klikkauskuuntelijan tyhjennä-painikkeeseen lomakkeen nollaamiseksi
+- **Välittää** tapahtumaobjektin `(e)` käsittelyfunktioille lisäohjaukseen
+- **Kutsuu** `init()`-funktion välittömästi laajennuksen alkuasetusten määrittämiseksi
 
-### Rakenna init()- ja reset()-funktiot:
+✅ Huomaa tässä käytetty lyhyt nuolifunktion syntaksi. Tämä moderni JavaScript-lähestymistapa on siistimpi kuin perinteiset funktioilmaisut, mutta molemmat toimivat yhtä hyvin!
 
-Nyt rakennat funktiota, joka alustaa laajennuksen, nimeltään init():
+## Luo alustus- ja nollausfunktiot
 
-```JavaScript
+Luodaan laajennuksesi alustuslogiikka. `init()`-funktio on kuin laivan navigointijärjestelmä, joka tarkistaa instrumenttinsa - se määrittää nykyisen tilan ja säätää käyttöliittymän sen mukaisesti. Se tarkistaa, onko joku käyttänyt laajennustasi aiemmin ja lataa heidän aiemmat asetuksensa.
+
+`reset()`-funktio tarjoaa käyttäjille uuden alun - kuten tiedemiehet nollaavat instrumenttinsa kokeiden välillä varmistaakseen puhtaat tiedot.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
-Tässä funktiossa on mielenkiintoista logiikkaa. Lukemalla sen läpi, näetkö mitä tapahtuu?
 
-- Kaksi `const`-muuttujaa asetetaan tarkistamaan, onko käyttäjä tallentanut APIKey:n ja aluekoodin local storageen.
-- Jos jompikumpi näistä on null, näytä lomake muuttamalla sen tyyliä 'block'-näkyväksi.
-- Piilota tulokset, latausviesti ja clearBtn sekä aseta virheteksti tyhjäksi.
-- Jos avain ja aluekoodi ovat olemassa, aloita rutiini:
-  - kutsu API saadaksesi hiilidioksidinkäyttötiedot
-  - piilota tulosalue
-  - piilota lomake
-  - näytä tyhjennysnappi
+**Tässä tapahtuu seuraavaa:**
+- **Hakee** tallennetun API-avaimen ja alueen selaimen paikallisesta tallennuksesta
+- **Tarkistaa**, onko kyseessä ensimmäistä kertaa laajennusta käyttävä käyttäjä (ei tallennettuja tietoja) vai palaava käyttäjä
+- **Näyttää** asetuslomakkeen uusille käyttäjille ja piilottaa muut käyttöliittymäelementit
+- **Lataa** tallennetut tiedot automaattisesti palaaville käyttäjille ja näyttää nollausvaihtoehdon
+- **Hallinnoi** käyttöliittymän tilaa saatavilla olevan datan perusteella
 
-Ennen kuin jatkat, on hyödyllistä oppia tärkeästä selaimissa saatavilla olevasta käsitteestä: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage on hyödyllinen tapa tallentaa merkkijonoja selaimeen `key-value`-parina. Tämäntyyppistä verkkotallennusta voidaan käsitellä JavaScriptillä tietojen hallintaan selaimessa. LocalStorage ei vanhene, kun taas SessionStorage, toinen verkkotallennustyyppi, tyhjennetään selaimen sulkemisen yhteydessä. Eri tallennustyypeillä on omat hyvät ja huonot puolensa.
+**Keskeisiä käsitteitä paikallisesta tallennuksesta:**
+- **Säilyttää** tietoa selaimen istuntojen välillä (toisin kuin istuntotallennus)
+- **Tallentaa** tietoa avain-arvo-pareina käyttäen `getItem()`- ja `setItem()`-metodeja
+- **Palauttaa** `null`, kun tiettyä avainta vastaavaa tietoa ei ole
+- **Tarjoaa** yksinkertaisen tavan muistaa käyttäjän mieltymykset ja asetukset
 
-> Huomio - selaimen laajennuksella on oma local storage; pääselaimen ikkuna on eri instanssi ja käyttäytyy erillään.
+> 💡 **Ymmärrä selaimen tallennus**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) antaa laajennuksellesi pysyvän muistin. Mieti, kuinka muinainen Aleksandrian kirjasto säilytti kääröjä - tieto pysyi saatavilla, vaikka tutkijat lähtivät ja palasivat.
+>
+> **Keskeiset ominaisuudet:**
+> - **Säilyttää** tietoa, vaikka sulkisit selaimen
+> - **Selviää** tietokoneen uudelleenkäynnistyksistä ja selaimen kaatumisista
+> - **Tarjoaa** huomattavan tallennustilan käyttäjän asetuksille
+> - **Mahdollistaa** välittömän pääsyn ilman verkkoviiveitä
 
-Asetat APIKey:lle merkkijonoarvon esimerkiksi, ja voit nähdä sen Edgessä "tarkastamalla" verkkosivua (voit klikata selainta oikealla ja valita tarkasta) ja siirtymällä Sovellukset-välilehteen nähdäksesi tallennuksen.
+> **Tärkeä huomautus**: Selaimen laajennuksella on oma erillinen paikallinen tallennustila, joka on erillään tavallisista verkkosivuista. Tämä tarjoaa turvallisuutta ja estää ristiriidat muiden verkkosivustojen kanssa.
 
-![Local storage -näkymä](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.fi.png)
+Voit tarkastella tallennettuja tietoja avaamalla selaimen kehittäjätyökalut (F12), siirtymällä **Application**-välilehdelle ja laajentamalla **Local Storage**-osio.
 
-✅ Mieti tilanteita, joissa et haluaisi tallentaa tietoja LocalStorageen. Yleisesti ottaen API-avainten tallentaminen LocalStorageen on huono idea! Näetkö miksi? Meidän tapauksessamme, koska sovelluksemme on tarkoitettu vain oppimiseen eikä sitä julkaista sovelluskaupassa, käytämme tätä menetelmää.
+![Paikallisen tallennuksen näkymä](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.fi.png)
 
-Huomaa, että käytät Web API:a LocalStoragen käsittelyyn joko `getItem()`, `setItem()` tai `removeItem()`-metodeilla. Se on laajasti tuettu eri selaimissa.
+> ⚠️ **Turvallisuushuomio**: Tuotantosovelluksissa API-avainten tallentaminen LocalStorageen aiheuttaa turvallisuusriskin, koska JavaScript voi käyttää näitä tietoja. Oppimiskäyttöön tämä lähestymistapa toimii hyvin, mutta oikeissa sovelluksissa tulisi käyttää turvallista palvelinpuolen tallennusta arkaluontoisille tunnuksille.
 
-Ennen kuin rakennat `displayCarbonUsage()`-funktion, joka kutsutaan `init()`-funktiossa, rakennetaan toiminnallisuus alkuperäisen lomakkeen lähettämisen käsittelyyn.
+## Lomakkeen lähetyksen käsittely
 
-### Käsittele lomakkeen lähetys
+Nyt käsittelemme, mitä tapahtuu, kun joku lähettää lomakkeesi. Oletuksena selaimet lataavat sivun uudelleen, kun lomakkeet lähetetään, mutta me estämme tämän toiminnan luodaksemme sujuvamman käyttökokemuksen.
 
-Luo funktio nimeltä `handleSubmit`, joka hyväksyy tapahtuma-argumentin `(e)`. Estä tapahtuman eteneminen (tässä tapauksessa haluamme estää selainta päivittämästä) ja kutsu uusi funktio, `setUpUser`, välittäen argumentit `apiKey.value` ja `region.value`. Näin käytät kahta arvoa, jotka tuodaan alkuperäisestä lomakkeesta, kun asianmukaiset kentät on täytetty.
+Tämä lähestymistapa muistuttaa, kuinka tehtävänhallinta käsittelee avaruusalusten viestintää - sen sijaan, että järjestelmä nollattaisiin jokaisen lähetyksen yhteydessä, se ylläpitää jatkuvaa toimintaa samalla kun käsittelee uutta tietoa.
 
-```JavaScript
+Luo funktio, joka taltioi lomakkeen lähetyksen ja poimii käyttäjän syötteen:
+
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
-✅ Kertaa muistiasi - HTML, jonka rakensit viime oppitunnilla, sisältää kaksi syöttökenttää, joiden `values`-arvot tallennetaan `const`-muuttujiin tiedoston alussa, ja ne ovat molemmat `required`, joten selain estää käyttäjiä syöttämästä null-arvoja.
 
-### Käyttäjän asettaminen
+**Yllä olevassa tapahtuu:**
+- **Estää** oletusarvoisen lomakkeen lähetyskäyttäytymisen, joka päivittäisi sivun
+- **Poimii** käyttäjän syöttöarvot API-avaimen ja alueen kentistä
+- **Välittää** lomakedatan `setUpUser()`-funktiolle käsittelyä varten
+- **Säilyttää** yhden sivun sovelluskäyttäytymisen välttämällä sivun uudelleenlatauksia
 
-Siirrytään `setUpUser`-funktioon, jossa asetetaan local storagen arvot apiKey:lle ja regionName:lle. Lisää uusi funktio:
+✅ Muista, että HTML-lomakekentissäsi on `required`-attribuutti, joten selain varmistaa automaattisesti, että käyttäjät antavat sekä API-avaimen että alueen ennen kuin tämä funktio suoritetaan.
 
-```JavaScript
+## Aseta käyttäjän mieltymykset
+
+`setUpUser`-funktio vastaa käyttäjän tunnusten tallentamisesta ja ensimmäisen API-kutsun aloittamisesta. Tämä luo sujuvan siirtymän asetuksista tulosten näyttämiseen.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-Tämä funktio näyttää latausviestin, kun API:a kutsutaan. Tässä vaiheessa olet saapunut selaimen laajennuksen tärkeimmän funktion luomiseen!
 
-### Näytä hiilidioksidinkäyttö
+**Vaihe vaiheelta, tässä tapahtuu:**
+- **Tallentaa** API-avaimen ja alueen nimen paikalliseen tallennukseen tulevaa käyttöä varten
+- **Näyttää** latausindikaattorin, joka kertoo käyttäjille datan hakemisesta
+- **Poistaa** aiemmat virheilmoitukset näytöstä
+- **Paljastaa** tyhjennä-painikkeen, jotta käyttäjät voivat myöhemmin nollata asetuksensa
+- **Aloittaa** API-kutsun oikean hiilenkäyttötiedon hakemiseksi
 
-Lopuksi on aika kysyä API:lta!
+Tämä funktio luo saumattoman käyttökokemuksen hallitsemalla sekä datan pysyvyyttä että käyttöliittymän päivityksiä yhdessä koordinoidussa toiminnossa.
 
-Ennen kuin jatkamme, meidän tulisi keskustella API:sta. API:t eli [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html) ovat kriittinen osa web-kehittäjän työkalupakkia. Ne tarjoavat standardoituja tapoja ohjelmien vuorovaikutukseen ja rajapintaan keskenään. Esimerkiksi, jos rakennat verkkosivustoa, joka tarvitsee kysyä tietokantaa, joku on saattanut luoda API:n, jota voit käyttää. Vaikka API:ita on monenlaisia, yksi suosituimmista on [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+## Näytä hiilenkäyttötiedot
 
-✅ Termi 'REST' tarkoittaa 'Representational State Transfer' ja sisältää erilaisten URL-osoitteiden käyttämisen datan hakemiseen. Tee hieman tutkimusta eri API-tyypeistä, jotka ovat kehittäjien saatavilla. Mikä formaatti miellyttää sinua?
+Nyt yhdistämme laajennuksesi ulkoisiin tietolähteisiin API:en kautta. Tämä muuttaa laajennuksesi itsenäisestä työkalusta sellaiseksi, joka voi käyttää reaaliaikaista tietoa internetistä.
 
-Tässä funktiossa on tärkeää huomioida [`async`-avainsana](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Kirjoittamalla funktiosi niin, että ne toimivat asynkronisesti, ne odottavat toiminnon, kuten datan palauttamisen, valmistumista ennen jatkamista.
+**API:en ymmärtäminen**
 
-Tässä on lyhyt video `async`-toiminnasta:
+[API:t](https://www.webopedia.com/TERM/A/API.html) ovat tapa, jolla eri sovellukset kommunikoivat keskenään. Ajattele niitä kuin lennätinjärjestelmää, joka yhdisti kaukaisia kaupunkeja 1800-luvulla - operaattorit lähettivät pyyntöjä kaukaisiin asemiin ja saivat vastauksia pyydetyllä tiedolla. Joka kerta kun tarkistat sosiaalista mediaa, kysyt kysymyksen ääniavustajalta tai käytät toimitussovellusta, API:t mahdollistavat nämä tiedonvaihdot.
+
+**Keskeisiä käsitteitä REST API:sta:**
+- **REST** tarkoittaa 'Representational State Transfer'
+- **Käyttää** standardoituja HTTP-menetelmiä (GET, POST, PUT, DELETE) datan käsittelyyn
+- **Palauttaa** dataa ennustettavissa olevissa muodoissa, yleensä JSON
+- **Tarjoaa** johdonmukaisia, URL-pohjaisia päätepisteitä eri tyyppisille pyynnöille
+
+✅ [CO2 Signal API](https://www.co2signal.com/), jota käytämme, tarjoaa reaaliaikaista hiilen intensiteettitietoa sähköverkoista ympäri maailmaa. Tämä auttaa käyttäjiä ymmärtämään sähkönkulutuksensa ympäristövaikutuksia!
+
+> 💡 **Asynkronisen JavaScriptin ymmärtäminen**: [`async`-avainsana](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) mahdollistaa koodisi käsittelemään useita operaatioita samanaikaisesti. Kun pyydät dataa palvelimelta, et halua koko laajennuksen jäätyvän - se olisi kuin lennonjohto pysäyttäisi kaikki toiminnot odottaessaan yhden lentokoneen vastausta.
+>
+> **Keskeiset edut:**
+> - **Säilyttää** laajennuksen reagointikyvyn datan lataamisen aikana
+> - **Mahdollistaa**, että muu koodi jatkaa suorittamista verkkopyyntöjen aikana
+> - **Parantaa** koodin luettavuutta verrattuna perinteisiin callback-malleihin
+> - **Mahdollistaa** sujuvan virheenkäsittelyn verkkohäiriöiden varalta
+
+Tässä on lyhyt video `async`-toiminnosta:
 
 [![Async ja Await lupauksien hallintaan](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async ja Await lupauksien hallintaan")
 
-> 🎥 Klikkaa yllä olevaa kuvaa nähdäksesi videon async/await-toiminnasta.
+> 🎥 Klikkaa yllä olevaa kuvaa katsoaksesi videon async/awaitista.
 
-Luo uusi funktio kysyäksesi C02Signal API:lta:
+Luo funktio hiilenkäyttötiedon hakemiseen ja näyttämiseen:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Tämä on iso funktio. Mitä tässä tapahtuu?
+**Tässä tapahtuu seuraavaa:**
+- **Käyttää** modernia `fetch()`-API:a ulkoisten kirjastojen, kuten Axiosin, sijaan puhtaamman ja riippumattoman koodin vuoksi
+- **Toteuttaa** asianmukaisen virhetarkistuksen `response.ok`-menetelmällä API-virheiden varhaiseksi havaitsemiseksi
+- **Käsittelee** asynkronisia operaatioita `async/await`-menetelmällä koodin selkeyden parantamiseksi
+- **Autentikoi** CO2 Signal API:n kanssa käyttämällä `auth-token`-otsikkoa
+- **Jäsentää** JSON-vastausdatan ja poimii hiilen intensiteettitiedot
+- **Päivittää** useita käyttöliittymäelementtejä muotoillulla ympäristötiedolla
+- **Tarjoaa** käyttäjäystävällisiä virheilmoituksia, kun API-kutsut epäonnistuvat
 
-- Parhaiden käytäntöjen mukaisesti käytät `async`-avainsanaa, jotta funktio toimii asynkronisesti. Funktio sisältää `try/catch`-lohkon, koska se palauttaa lupauksen, kun API palauttaa dataa. Koska et voi hallita API:n vastausnopeutta (se ei ehkä vastaa ollenkaan!), sinun täytyy käsitellä tämä epävarmuus kutsumalla sitä asynkronisesti.
-- Kysyt co2signal API:lta saadaksesi alueesi dataa käyttämällä API-avaintasi. Käyttääksesi avainta sinun täytyy käyttää eräänlaista autentikointia header-parametreissa.
-- Kun API vastaa, määrität sen vastausdatan eri elementit näytön osiin, jotka olet asettanut näyttämään nämä tiedot.
-- Jos tapahtuu virhe tai tulosta ei ole, näytät virheviestin.
+**Keskeisiä moderneja JavaScript-käsitteitä:**
+- **Mallilausekkeet** `${}`-syntaksilla siistiin merkkijonojen muotoiluun
+- **Virheenkäsittely** try/catch-lohkoilla vankkoja sovelluksia varten
+- **Async/await**-malli verkkopyyntöjen sujuvaan käsittelyyn
+- **Olioiden purkaminen** tiettyjen tietojen poimimiseen API-vastauksista
+- **Metodiketjutus** useiden DOM-muokkausten suorittamiseen
 
-✅ Asynkronisten ohjelmointimallien käyttö on toinen erittäin hyödyllinen työkalu työkalupakissasi. Lue [eri tavoista](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), joilla voit konfiguroida tämän tyyppistä koodia.
+✅ Tämä funktio havainnollistaa useita tärkeitä web-kehityksen käsitteitä - kommunikointia ulkoisten palvelimien kanssa, autentikointia, datan käsittelyä, käyttöliittymän päivittämistä ja virheiden hallintaa sujuvasti. Nämä ovat keskeisiä taitoja, joita ammattilaiskehittäjät käyttävät säännöllisesti.
 
-Onnittelut! Jos rakennat laajennuksesi (`npm run build`) ja päivität sen laajennuspaneelissa, sinulla on toimiva laajennus! Ainoa asia, joka ei toimi, on kuvake, ja korjaat sen seuraavassa oppitunnissa.
+🎉 **Mitä olet saavuttanut:** Olet luonut selaimen laajennuksen, joka:
+- **Yhdistyy** internetiin ja hakee oikeaa ympäristötietoa
+- **Säilyttää** käyttäjän asetukset istuntojen välillä
+- **Käsittelee** virheitä sujuvasti sen sijaan, että kaatuisi
+- **Tarjoaa** sujuvan ja ammattimaisen käyttökokemuksen
+
+Testaa työsi suorittamalla `npm run build` ja päivittämällä laajennuksesi selaimessa. Sinulla on nyt toimiva hiilijalanjäljen seurantaohjelma. Seuraavassa oppitunnissa lisätään dynaaminen kuvake toiminnallisuus laajennuksen viimeistelemiseksi.
 
 ---
 
-## 🚀 Haaste
+## GitHub Copilot Agent -haaste 🚀
 
-Olemme keskustelleet useista API-tyypeistä näissä oppitunneissa. Valitse verkkosivusto API ja tutki syvällisesti, mitä se tarjoaa. Esimerkiksi tutustu selaimissa saatavilla oleviin API:ihin, kuten [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Mikä tekee API:sta mielestäsi hyvän?
+Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
 
-## Jälkiquiz
+**Kuvaus:** Paranna selaimen laajennusta lisäämällä virheenkäsittelyä ja käyttökokemuksen ominaisuuksia. Tämä haaste auttaa sinua harjoittelemaan API:en, paikallisen tallennuksen ja DOM-manipulaation käyttöä moderneilla JavaScript-malleilla.
 
-[Jälkiquiz](https://ff-quizzes.netlify.app/web/quiz/26)
+**Tehtävä:** Luo parannettu versio displayCarbonUsage-funktiosta, joka sisältää: 1) Uudelleenyritysmekanismin epäonnistuneille API-kutsuille eksponentiaalisella viiveellä, 2) Syötteen validoinnin aluekoodille ennen API-kutsua, 3) Latausanimaation edistymisindikaattoreilla, 4) API-vastausten välimuistituksen localStoragessa vanhenemisaikaleimoilla (välimuisti 30 minuutiksi), ja 5) Ominaisuuden näyttää historialliset tiedot aiemmista API-kutsuista. Lisää myös asianmukaiset TypeScript-tyyliset JSDoc-kommentit dokumentoimaan kaikki funktion parametrit ja palautustyypit.
 
-## Kertaus ja itseopiskelu
-
-Tässä oppitunnissa opit LocalStoragesta ja API:ista, jotka ovat molemmat erittäin hyödyllisiä ammattimaiselle web-kehittäjälle. Voitko miettiä, kuinka nämä kaksi asiaa toimivat yhdessä? Mieti, kuinka suunnittelisit verkkosivuston, joka tallentaisi kohteita API:n käytettäväksi.
+Lisätietoja [Agent-tilasta](https://code.visualstudio.com/blog
+Tässä oppitunnissa opit LocalStoragesta ja API:ista, jotka molemmat ovat erittäin hyödyllisiä ammattimaiselle web-kehittäjälle. Voitko miettiä, miten nämä kaksi asiaa toimivat yhdessä? Mieti, miten suunnittelisit verkkosivuston, joka tallentaisi kohteita API:n käytettäväksi.
 
 ## Tehtävä
 
-[Adoptoi API](assignment.md)
+[Ota API käyttöön](assignment.md)
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

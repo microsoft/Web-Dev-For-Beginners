@@ -1,13 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b91cbf14240ee59411b96448b994ace1",
-  "translation_date": "2025-10-03T12:27:44+00:00",
+  "original_hash": "eb358f3f4c2c082f9f3a4f98efa1d337",
+  "translation_date": "2025-10-23T01:06:58+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "nl"
 }
 -->
 # Browserextensieproject Deel 3: Leer over Achtergrondtaken en Prestaties
+
+Heb je je ooit afgevraagd waarom sommige browserextensies snel en responsief aanvoelen, terwijl andere traag lijken? Het geheim zit in wat er achter de schermen gebeurt. Terwijl gebruikers door de interface van je extensie klikken, is er een hele wereld van achtergrondprocessen die stilletjes gegevens ophalen, iconen bijwerken en systeembronnen beheren.
+
+Dit is onze laatste les in de browserextensiereeks, en we gaan ervoor zorgen dat jouw CO2-voetafdruktracker soepel werkt. Je voegt dynamische icoonupdates toe en leert hoe je prestatieproblemen kunt opsporen voordat ze echte problemen worden. Het is alsof je een raceauto afstemt - kleine optimalisaties kunnen een enorm verschil maken in hoe alles werkt.
+
+Tegen de tijd dat we klaar zijn, heb je een gepolijste extensie en begrijp je de prestatieprincipes die goede webapps onderscheiden van geweldige. Laten we ons verdiepen in de wereld van browseroptimalisatie.
 
 ## Pre-Lecture Quiz
 
@@ -15,29 +21,41 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Introductie
 
-In de laatste twee lessen van deze module heb je geleerd hoe je een formulier en een weergavegebied kunt bouwen voor gegevens die worden opgehaald via een API. Dit is een zeer standaard manier om een webaanwezigheid te creëren op het internet. Je hebt zelfs geleerd hoe je gegevens asynchroon kunt ophalen. Je browserextensie is bijna klaar.
+In onze vorige lessen heb je een formulier gebouwd, verbonden met een API en asynchrone gegevensophaling aangepakt. Je extensie begint al mooi vorm te krijgen.
 
-Wat nog rest is het beheren van enkele achtergrondtaken, waaronder het verversen van de kleur van het pictogram van de extensie. Dit is een goed moment om te bespreken hoe de browser dit soort taken beheert. Laten we nadenken over deze browsertaken in de context van de prestaties van je webassets terwijl je ze bouwt.
+Nu moeten we de laatste puntjes op de i zetten - zoals het laten veranderen van de kleur van het extensie-icoon op basis van de CO2-gegevens. Dit doet me denken aan hoe NASA elk systeem op het Apollo-ruimtevaartuig moest optimaliseren. Ze konden zich geen verspilde cycli of geheugen veroorloven omdat levens afhankelijk waren van prestaties. Hoewel onze browserextensie niet zo kritisch is, gelden dezelfde principes - efficiënte code zorgt voor betere gebruikerservaringen.
 
 ## Basisprincipes van Webprestaties
 
-> "Websiteprestaties gaan over twee dingen: hoe snel de pagina laadt en hoe snel de code erop wordt uitgevoerd." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+Wanneer je code efficiënt draait, kunnen mensen het verschil daadwerkelijk *voelen*. Je kent dat moment wel wanneer een pagina direct laadt of een animatie soepel verloopt? Dat is goede prestatie aan het werk.
 
-Het onderwerp hoe je je websites razendsnel kunt maken op allerlei soorten apparaten, voor allerlei soorten gebruikers, in allerlei situaties, is niet verrassend enorm uitgebreid. Hier zijn enkele punten om in gedachten te houden terwijl je een standaard webproject of een browserextensie bouwt.
+Prestaties gaan niet alleen over snelheid - het gaat om het creëren van webervaringen die natuurlijk aanvoelen in plaats van haperend en frustrerend. In de vroege dagen van de informatica hield Grace Hopper een nanoseconde (een stukje draad van ongeveer een voet lang) op haar bureau om te laten zien hoe ver licht reist in een miljardste van een seconde. Het was haar manier om uit te leggen waarom elke microseconde telt in de informatica. Laten we de detectietools verkennen die je helpen te achterhalen wat dingen vertraagt.
 
-Het eerste wat je moet doen om ervoor te zorgen dat je site efficiënt werkt, is gegevens verzamelen over de prestaties ervan. De eerste plek om dit te doen is in de ontwikkelaarstools van je webbrowser. In Edge kun je de knop "Instellingen en meer" selecteren (het pictogram met drie stippen rechtsboven in de browser), vervolgens navigeren naar Meer Hulpmiddelen > Ontwikkelaarstools en het tabblad Prestaties openen. Je kunt ook de sneltoetsen `Ctrl` + `Shift` + `I` op Windows of `Option` + `Command` + `I` op Mac gebruiken om de ontwikkelaarstools te openen.
+> "Websiteprestaties gaan over twee dingen: hoe snel de pagina laadt en hoe snel de code erop draait." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Het tabblad Prestaties bevat een Profiling-tool. Open een website (probeer bijvoorbeeld [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) en klik op de knop 'Record', ververs vervolgens de site. Stop de opname op elk moment en je kunt de routines zien die worden gegenereerd om de site te 'script', 'renderen' en 'schilderen':
+Het onderwerp hoe je je websites razendsnel maakt op allerlei apparaten, voor allerlei gebruikers, in allerlei situaties, is begrijpelijkerwijs enorm. Hier zijn enkele punten om in gedachten te houden terwijl je een standaard webproject of een browserextensie bouwt.
+
+De eerste stap in het optimaliseren van je site is begrijpen wat er daadwerkelijk onder de motorkap gebeurt. Gelukkig heeft je browser krachtige detectietools ingebouwd.
+
+Om Developer Tools in Edge te openen, klik je op die drie puntjes rechtsboven, ga je naar Meer Hulpmiddelen > Developer Tools. Of gebruik de sneltoets: `Ctrl` + `Shift` + `I` op Windows of `Option` + `Command` + `I` op Mac. Zodra je daar bent, klik je op het tabblad Prestaties - hier ga je je onderzoek doen.
+
+**Hier is je prestatie-detective toolkit:**
+- **Open** Developer Tools (je zult deze constant gebruiken als ontwikkelaar!)
+- **Ga naar** het tabblad Prestaties - zie het als de fitness tracker van je webapp
+- **Druk op** de opnameknop en bekijk je pagina in actie
+- **Bestudeer** de resultaten om te zien wat dingen vertraagt
+
+Laten we dit uitproberen. Open een website (Microsoft.com werkt goed hiervoor) en klik op die 'Opnemen'-knop. Vernieuw nu de pagina en bekijk hoe de profiler alles vastlegt wat er gebeurt. Wanneer je stopt met opnemen, zie je een gedetailleerd overzicht van hoe de browser de site 'script', 'rendert' en 'schildert'. Het doet me denken aan hoe missiecontrole elk systeem monitort tijdens een raketlancering - je krijgt realtime gegevens over precies wat er gebeurt en wanneer.
 
 ![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.nl.png)
 
-✅ Bezoek de [Microsoft Documentatie](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) over het Prestaties-paneel in Edge.
+✅ De [Microsoft Documentatie](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) heeft veel meer details als je dieper wilt duiken.
 
-> Tip: om een nauwkeurige meting van de opstarttijd van je website te krijgen, wis je de cache van je browser.
+> Pro tip: Wis je browsercache voordat je test om te zien hoe je site presteert voor nieuwe bezoekers - dit is meestal heel anders dan herhaalbezoeken!
 
-Selecteer elementen van de profiel-tijdlijn om in te zoomen op gebeurtenissen die plaatsvinden terwijl je pagina laadt.
+Selecteer elementen van de profieltijdlijn om in te zoomen op gebeurtenissen die plaatsvinden terwijl je pagina laadt.
 
-Krijg een momentopname van de prestaties van je pagina door een deel van de profiel-tijdlijn te selecteren en naar het samenvattingspaneel te kijken:
+Krijg een momentopname van de prestaties van je pagina door een deel van de profieltijdlijn te selecteren en naar het samenvattingspaneel te kijken:
 
 ![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.nl.png)
 
@@ -45,125 +63,211 @@ Controleer het Event Log-paneel om te zien of een gebeurtenis langer dan 15 ms d
 
 ![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.nl.png)
 
-✅ Leer je profiler kennen! Open de ontwikkelaarstools op deze site en kijk of er knelpunten zijn. Wat is het langzaamst ladende asset? Het snelst?
+✅ Leer je profiler kennen! Open de ontwikkelaarstools op deze site en kijk of er knelpunten zijn. Wat is het langzaamst ladende bestand? Het snelste?
 
-## Profiling-controles
+## Waarop te letten bij profileren
 
-Over het algemeen zijn er enkele "probleemgebieden" waar elke webontwikkelaar op moet letten bij het bouwen van een site om vervelende verrassingen te voorkomen wanneer het tijd is om naar productie te gaan.
+De profiler uitvoeren is slechts het begin - de echte vaardigheid is weten wat die kleurrijke grafieken je eigenlijk vertellen. Maak je geen zorgen, je zult het leren. Ervaren ontwikkelaars hebben geleerd de waarschuwingssignalen te herkennen voordat ze volledige problemen worden.
 
-**Assetgroottes**: Het web is de afgelopen jaren 'zwaarder' en dus langzamer geworden. Een deel van dit gewicht heeft te maken met het gebruik van afbeeldingen.
+Laten we het hebben over de gebruikelijke verdachten - de prestatieproblemen die vaak in webprojecten sluipen. Net zoals Marie Curie zorgvuldig de stralingsniveaus in haar laboratorium moest monitoren, moeten wij letten op bepaalde patronen die op problemen wijzen. Deze vroegtijdig opsporen bespaart jou (en je gebruikers) veel frustratie.
 
-✅ Bekijk het [Internet Archive](https://httparchive.org/reports/page-weight) voor een historisch overzicht van paginagewicht en meer.
+**Bestandsgroottes**: Websites zijn door de jaren heen "zwaarder" geworden, en veel van dat extra gewicht komt van afbeeldingen. Het is alsof we steeds meer in onze digitale koffers stoppen.
 
-Een goede praktijk is ervoor te zorgen dat je afbeeldingen zijn geoptimaliseerd en worden geleverd op de juiste grootte en resolutie voor je gebruikers.
+✅ Bekijk het [Internet Archive](https://httparchive.org/reports/page-weight) om te zien hoe paginagroottes in de loop van de tijd zijn gegroeid - het is behoorlijk onthullend.
 
-**DOM-traversals**: De browser moet zijn Document Object Model bouwen op basis van de code die je schrijft, dus het is in het belang van goede pagina-prestaties om je tags minimaal te houden, alleen te gebruiken en te stylen wat de pagina nodig heeft. Tot dit punt kan overtollige CSS die aan een pagina is gekoppeld worden geoptimaliseerd; stijlen die alleen op één pagina hoeven te worden gebruikt, hoeven bijvoorbeeld niet te worden opgenomen in het hoofdstijlblad.
+**Hier is hoe je je bestanden geoptimaliseerd houdt:**
+- **Comprimeer** die afbeeldingen! Moderne formaten zoals WebP kunnen bestandsgroottes drastisch verkleinen
+- **Lever** de juiste afbeeldingsgrootte voor elk apparaat - geen enorme desktopafbeeldingen naar telefoons sturen
+- **Minimaliseer** je CSS en JavaScript - elke byte telt
+- **Gebruik** lazy loading zodat afbeeldingen alleen worden gedownload wanneer gebruikers er daadwerkelijk naartoe scrollen
 
-**JavaScript**: Elke JavaScript-ontwikkelaar moet letten op 'render-blocking' scripts die moeten worden geladen voordat de rest van de DOM kan worden doorlopen en naar de browser kan worden geschilderd. Overweeg het gebruik van `defer` met je inline scripts (zoals gedaan in de Terrarium-module).
+**DOM-traversals**: De browser moet zijn Document Object Model bouwen op basis van de code die je schrijft, dus het is in het belang van goede paginaprestaties om je tags minimaal te houden, alleen te gebruiken en te stylen wat de pagina nodig heeft. Overbodige CSS die aan een pagina is gekoppeld, kan bijvoorbeeld worden geoptimaliseerd; stijlen die alleen op één pagina nodig zijn, hoeven niet in het hoofdstijlblad te worden opgenomen.
+
+**Belangrijke strategieën voor DOM-optimalisatie:**
+- **Minimaliseer** het aantal HTML-elementen en nestingsniveaus
+- **Verwijder** ongebruikte CSS-regels en consolideer stijlen efficiënt
+- **Organiseer** CSS om alleen te laden wat nodig is voor elke pagina
+- **Structureer** HTML semantisch voor betere browserparsing
+
+**JavaScript**: Elke JavaScript-ontwikkelaar moet letten op 'render-blocking' scripts die moeten worden geladen voordat de rest van de DOM kan worden doorlopen en weergegeven in de browser. Overweeg het gebruik van `defer` met je inline scripts (zoals gedaan in de Terrarium-module).
+
+**Moderne JavaScript-optimalisatietechnieken:**
+- **Gebruik** het `defer`-attribuut om scripts te laden na DOM-parsing
+- **Implementeer** code-splitsing om alleen noodzakelijke JavaScript te laden
+- **Pas** lazy loading toe voor niet-kritieke functionaliteit
+- **Minimaliseer** het gebruik van zware bibliotheken en frameworks waar mogelijk
 
 ✅ Probeer enkele sites op een [Site Speed Test website](https://www.webpagetest.org/) om meer te leren over de gebruikelijke controles die worden uitgevoerd om de prestaties van een site te bepalen.
 
-Nu je een idee hebt van hoe de browser de assets rendert die je naar hem stuurt, laten we kijken naar de laatste paar dingen die je moet doen om je extensie te voltooien:
+Nu je een idee hebt van hoe de browser de bestanden rendert die je naar hem stuurt, laten we kijken naar de laatste paar dingen die je moet doen om je extensie te voltooien:
 
 ### Maak een functie om kleur te berekenen
 
-Werkend in `/src/index.js`, voeg een functie genaamd `calculateColor()` toe na de reeks `const`-variabelen die je hebt ingesteld om toegang te krijgen tot de DOM:
+Nu gaan we een functie maken die numerieke gegevens omzet in betekenisvolle kleuren. Denk aan een verkeerslichtsysteem - groen voor schone energie, rood voor hoge koolstofintensiteit.
 
-```JavaScript
+Deze functie neemt de CO2-gegevens van onze API en bepaalt welke kleur het beste de milieueffecten vertegenwoordigt. Het is vergelijkbaar met hoe wetenschappers kleurcodering gebruiken in warmtekaarten om complexe gegevenspatronen te visualiseren - van oceaantemperaturen tot stervorming. Laten we dit toevoegen aan `/src/index.js`, direct na die `const`-variabelen die we eerder hebben ingesteld:
+
+```javascript
 function calculateColor(value) {
-	let co2Scale = [0, 150, 600, 750, 800];
-	let colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
+	// Define CO2 intensity scale (grams per kWh)
+	const co2Scale = [0, 150, 600, 750, 800];
+	// Corresponding colors from green (clean) to dark brown (high carbon)
+	const colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
 
-	let closestNum = co2Scale.sort((a, b) => {
+	// Find the closest scale value to our input
+	const closestNum = co2Scale.sort((a, b) => {
 		return Math.abs(a - value) - Math.abs(b - value);
 	})[0];
-	console.log(value + ' is closest to ' + closestNum);
-	let num = (element) => element > closestNum;
-	let scaleIndex = co2Scale.findIndex(num);
+	
+	console.log(`${value} is closest to ${closestNum}`);
+	
+	// Find the index for color mapping
+	const num = (element) => element > closestNum;
+	const scaleIndex = co2Scale.findIndex(num);
 
-	let closestColor = colors[scaleIndex];
+	const closestColor = colors[scaleIndex];
 	console.log(scaleIndex, closestColor);
 
+	// Send color update message to background script
 	chrome.runtime.sendMessage({ action: 'updateIcon', value: { color: closestColor } });
 }
 ```
 
-Wat gebeurt hier? Je geeft een waarde door (de koolstofintensiteit) van de API-aanroep die je in de vorige les hebt voltooid, en vervolgens bereken je hoe dicht de waarde bij de index in de kleurenarray ligt. Vervolgens stuur je die dichtstbijzijnde kleurwaarde naar de chrome runtime.
+**Laten we deze slimme kleine functie opsplitsen:**
+- **Stelt** twee arrays in - één voor CO2-niveaus, een andere voor kleuren (groen = schoon, bruin = vervuild!)
+- **Vindt** de dichtstbijzijnde match met onze werkelijke CO2-waarde met behulp van een nette array-sorting
+- **Pakt** de bijpassende kleur met behulp van de findIndex()-methode
+- **Stuurt** een bericht naar Chrome's achtergrondscript met onze gekozen kleur
+- **Gebruikt** template literals (die backticks) voor schonere stringformattering
+- **Houdt** alles georganiseerd met const-declaraties
 
-De chrome.runtime heeft [een API](https://developer.chrome.com/extensions/runtime) die allerlei achtergrondtaken afhandelt, en je extensie maakt hier gebruik van:
+De `chrome.runtime` [API](https://developer.chrome.com/extensions/runtime) is als het zenuwstelsel van je extensie - het handelt alle communicatie en taken achter de schermen af:
 
-> "Gebruik de chrome.runtime API om de achtergrondpagina op te halen, details over het manifest te retourneren en te luisteren naar en te reageren op gebeurtenissen in de levenscyclus van de app of extensie. Je kunt deze API ook gebruiken om het relatieve pad van URL's om te zetten naar volledig gekwalificeerde URL's."
+> "Gebruik de chrome.runtime API om de achtergrondpagina op te halen, details over het manifest terug te geven en te luisteren naar en te reageren op gebeurtenissen in de levenscyclus van de app of extensie. Je kunt deze API ook gebruiken om het relatieve pad van URL's om te zetten naar volledig gekwalificeerde URL's."
 
-✅ Als je deze browserextensie voor Edge ontwikkelt, kan het je verrassen dat je een chrome API gebruikt. De nieuwere Edge-browserversies draaien op de Chromium-browserengine, dus je kunt deze tools gebruiken.
+**Waarom de Chrome Runtime API zo handig is:**
+- **Laat** verschillende delen van je extensie met elkaar communiceren
+- **Handelt** achtergrondwerk af zonder de gebruikersinterface te bevriezen
+- **Beheert** de levenscyclusgebeurtenissen van je extensie
+- **Maakt** berichtuitwisseling tussen scripts super eenvoudig
 
-> Let op, als je een browserextensie wilt profileren, start je de ontwikkelaarstools vanuit de extensie zelf, omdat deze een eigen aparte browserinstantie is.
+✅ Als je deze browserextensie voor Edge ontwikkelt, kan het je verrassen dat je een chrome API gebruikt. De nieuwere Edge-browserversies draaien op de Chromium-browserengine, waardoor je deze tools kunt gebruiken.
 
-### Stel een standaardkleur voor het pictogram in
+> **Pro Tip**: Als je een browserextensie wilt profileren, start de ontwikkelaarstools vanuit de extensie zelf, aangezien dit een aparte browserinstantie is. Dit geeft je toegang tot extensiespecifieke prestatiestatistieken.
 
-Stel nu in de `init()`-functie het pictogram in op een generieke groene kleur door opnieuw de `updateIcon`-actie van chrome aan te roepen:
+### Stel een standaard icoonkleur in
 
-```JavaScript
+Voordat we echte gegevens gaan ophalen, geven we onze extensie een startpunt. Niemand houdt ervan om naar een leeg of kapot ogend icoon te staren. We beginnen met een groene kleur, zodat gebruikers weten dat de extensie werkt vanaf het moment dat ze deze installeren.
+
+In je `init()`-functie, laten we die standaard groene icoon instellen:
+
+```javascript
 chrome.runtime.sendMessage({
 	action: 'updateIcon',
-		value: {
-			color: 'green',
-		},
+	value: {
+		color: 'green',
+	},
 });
 ```
+
+**Wat deze initialisatie bereikt:**
+- **Stelt** een neutrale groene kleur in als de standaardstatus
+- **Biedt** onmiddellijke visuele feedback wanneer de extensie wordt geladen
+- **Vestigt** het communicatiepatroon met het achtergrondscript
+- **Zorgt ervoor** dat gebruikers een functionele extensie zien voordat gegevens worden geladen
+
 ### Roep de functie aan, voer de oproep uit
 
-Roep vervolgens de functie die je zojuist hebt gemaakt aan door deze toe te voegen aan de belofte die wordt geretourneerd door de C02Signal API:
+Laten we nu alles met elkaar verbinden, zodat wanneer er nieuwe CO2-gegevens binnenkomen, je icoon automatisch wordt bijgewerkt met de juiste kleur. Het is alsof je de laatste schakeling in een elektronisch apparaat aansluit - ineens werken alle afzonderlijke componenten als één systeem.
 
-```JavaScript
-//let CO2...
+Voeg deze regel toe direct nadat je de CO2-gegevens van de API hebt ontvangen:
+
+```javascript
+// After retrieving CO2 data from the API
+// let CO2 = data.data[0].intensity.actual;
 calculateColor(CO2);
 ```
 
-En voeg ten slotte in `/dist/background.js` de listener toe voor deze achtergrondactie-oproepen:
+**Wat deze integratie bereikt:**
+- **Verbindt** de gegevensstroom van de API met het visuele indicatorensysteem
+- **Activeert** icoonupdates automatisch wanneer nieuwe gegevens binnenkomen
+- **Zorgt voor** realtime visuele feedback op basis van de huidige koolstofintensiteit
+- **Behoudt** de scheiding van verantwoordelijkheden tussen gegevensophaling en weergavelogica
 
-```JavaScript
+En tot slot, voeg in `/dist/background.js` de listener toe voor deze achtergrondactie-oproepen:
+
+```javascript
+// Listen for messages from the content script
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
 		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
-//borrowed from energy lollipop extension, nice feature!
-function drawIcon(value) {
-	let canvas = new OffscreenCanvas(200, 200);
-	let context = canvas.getContext('2d');
 
+// Draw dynamic icon using Canvas API
+// Borrowed from energy lollipop extension - nice feature!
+function drawIcon(value) {
+	// Create an offscreen canvas for better performance
+	const canvas = new OffscreenCanvas(200, 200);
+	const context = canvas.getContext('2d');
+
+	// Draw a colored circle representing carbon intensity
 	context.beginPath();
 	context.fillStyle = value.color;
 	context.arc(100, 100, 50, 0, 2 * Math.PI);
 	context.fill();
 
+	// Return the image data for the browser icon
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
 
-In deze code voeg je een listener toe voor alle berichten die naar de backend-taakbeheerder worden verzonden. Als het 'updateIcon' wordt genoemd, wordt de volgende code uitgevoerd om een pictogram van de juiste kleur te tekenen met behulp van de Canvas API.
+**Wat dit achtergrondscript doet:**
+- **Luistert** naar berichten van je hoofdscript (zoals een receptionist die telefoontjes aanneemt)
+- **Verwerkt** die 'updateIcon'-verzoeken om je werkbalkicoon te wijzigen
+- **Creëert** nieuwe iconen on-the-fly met behulp van de Canvas API
+- **Tekent** een eenvoudige gekleurde cirkel die de huidige koolstofintensiteit weergeeft
+- **Werk bij** je browserwerkbalk met het nieuwe icoon
+- **Gebruikt** OffscreenCanvas voor soepele prestaties (geen UI-blokkering)
 
 ✅ Je leert meer over de Canvas API in de [Space Game-lessen](../../6-space-game/2-drawing-to-canvas/README.md).
 
-Bouw nu je extensie opnieuw (`npm run build`), ververs en start je extensie, en kijk hoe de kleur verandert. Is het een goed moment om een boodschap te doen of de afwas te doen? Nu weet je het!
+**Tijd om je extensie te testen:**
+- **Bouw** alles met `npm run build`
+- **Herlaad** je extensie in de browser (vergeet deze stap niet)
+- **Open** je extensie en bekijk hoe dat icoon van kleur verandert
+- **Controleer** hoe het reageert op echte CO2-gegevens van over de hele wereld
 
-Gefeliciteerd, je hebt een nuttige browserextensie gebouwd en meer geleerd over hoe de browser werkt en hoe je de prestaties ervan kunt profileren.
+Nu weet je in één oogopslag of het een goed moment is voor die lading was of dat je beter kunt wachten op schonere energie. Je hebt zojuist iets echt nuttigs gebouwd en geleerd over browserprestaties onderweg.
 
----
+## GitHub Copilot Agent Challenge 🚀
+
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+
+**Beschrijving:** Verbeter de prestatiemonitoringmogelijkheden van de browserextensie door een functie toe te voegen die de laadtijden voor verschillende componenten van de extensie bijhoudt en weergeeft.
+
+**Prompt:** Maak een prestatiemonitoringssysteem voor de browserextensie dat de tijd meet en registreert die nodig is om CO2-gegevens van de API op te halen, kleuren te berekenen en het icoon bij te werken. Voeg een functie genaamd `performanceTracker` toe die de Performance API gebruikt om deze operaties te meten en de resultaten weergeeft in de browserconsole met tijdstempels en duurmetingen.
+
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
 
 ## 🚀 Uitdaging
+Hier is een interessante detective-missie: kies een paar open source websites die al jaren bestaan (denk aan Wikipedia, GitHub of Stack Overflow) en duik in hun commitgeschiedenis. Kun je ontdekken waar ze prestatieverbeteringen hebben doorgevoerd? Welke problemen bleven steeds terugkomen?
 
-Onderzoek enkele open source-websites die al lang bestaan, en kijk op basis van hun GitHub-geschiedenis of je kunt bepalen hoe ze in de loop der jaren zijn geoptimaliseerd voor prestaties, als dat al is gebeurd. Wat is het meest voorkomende pijnpunt?
+**Jouw onderzoeksaanpak:**
+- **Zoek** in commitberichten naar woorden zoals "optimaliseren," "prestatie," of "sneller"
+- **Let op** patronen - blijven ze dezelfde soorten problemen oplossen?
+- **Identificeer** de veelvoorkomende oorzaken die websites vertragen
+- **Deel** wat je ontdekt - andere ontwikkelaars leren van voorbeelden uit de praktijk
 
-## Post-Lecture Quiz
+## Quiz na de les
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/28)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/28)
 
 ## Review & Zelfstudie
 
-Overweeg je aan te melden voor een [prestaties-nieuwsbrief](https://perf.email/).
+Overweeg je aan te melden voor een [prestatie-nieuwsbrief](https://perf.email/)
 
-Onderzoek enkele manieren waarop browsers webprestaties meten door de prestatietabbladen in hun webtools te bekijken. Vind je grote verschillen?
+Onderzoek enkele manieren waarop browsers webprestaties meten door de prestatietabbladen in hun webtools te bekijken. Zie je grote verschillen?
 
 ## Opdracht
 
@@ -172,4 +276,4 @@ Onderzoek enkele manieren waarop browsers webprestaties meten door de prestatiet
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

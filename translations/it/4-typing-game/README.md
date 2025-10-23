@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "957547b822c40042e07d591c4fbfde4f",
-  "translation_date": "2025-08-26T00:54:06+00:00",
+  "original_hash": "5adea7059676fcdb1b546ccd54c956c2",
+  "translation_date": "2025-10-22T23:36:54+00:00",
   "source_file": "4-typing-game/README.md",
   "language_code": "it"
 }
@@ -11,26 +11,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introduzione
 
-Digitare è una delle abilità più sottovalutate per uno sviluppatore. La capacità di trasferire rapidamente i pensieri dalla tua mente al tuo editor permette alla creatività di fluire liberamente. Uno dei modi migliori per imparare è giocare!
+Ecco qualcosa che ogni sviluppatore sa ma di cui raramente parla: digitare velocemente è un superpotere! 🚀 Pensaci - più velocemente riesci a trasferire le tue idee dal cervello al tuo editor di codice, più la tua creatività può fluire. È come avere un collegamento diretto tra i tuoi pensieri e lo schermo.
 
-> Quindi, costruiamo un gioco di digitazione!
+Vuoi sapere uno dei modi migliori per migliorare questa abilità? Esatto - costruiremo un gioco!
 
-Utilizzerai le competenze in JavaScript, HTML e CSS che hai acquisito finora per creare un gioco di digitazione. Il gioco presenterà al giocatore una citazione casuale (stiamo usando citazioni di [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes)) e misurerà quanto tempo impiega il giocatore a digitarla correttamente. Utilizzerai le competenze in JavaScript, HTML e CSS che hai acquisito finora per creare un gioco di digitazione.
+> Creiamo insieme un fantastico gioco di digitazione!
+
+Pronto a mettere in pratica tutte quelle competenze di JavaScript, HTML e CSS che hai imparato? Costruiremo un gioco di digitazione che ti sfiderà con citazioni casuali del leggendario detective [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes). Il gioco terrà traccia di quanto velocemente e accuratamente riesci a digitare - e fidati, è più coinvolgente di quanto tu possa immaginare!
 
 ![demo](../../../4-typing-game/images/demo.gif)
 
-## Prerequisiti
+## Cosa Devi Sapere
 
-Questa lezione presuppone che tu abbia familiarità con i seguenti concetti:
+Prima di iniziare, assicurati di sentirti a tuo agio con questi concetti (non preoccuparti se hai bisogno di un rapido ripasso - ci siamo passati tutti!):
 
 - Creare controlli di input di testo e pulsanti
-- CSS e impostazione degli stili utilizzando le classi
-- Basi di JavaScript
+- CSS e impostare stili usando le classi  
+- Fondamenti di JavaScript
   - Creare un array
   - Generare un numero casuale
   - Ottenere l'ora corrente
 
-## Lezione
+Se qualcuno di questi concetti ti sembra un po' arrugginito, va benissimo! A volte il modo migliore per consolidare le tue conoscenze è immergerti in un progetto e scoprire le cose man mano.
+
+## Costruiamo Questo Gioco!
 
 [Creare un gioco di digitazione utilizzando la programmazione event-driven](./typing-game/README.md)
 
@@ -38,5 +42,7 @@ Questa lezione presuppone che tu abbia familiarità con i seguenti concetti:
 
 Scritto con ♥️ da [Christopher Harrison](http://www.twitter.com/geektrainer)
 
+---
+
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatizzate possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

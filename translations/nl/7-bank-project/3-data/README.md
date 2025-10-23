@@ -1,67 +1,150 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
-  "translation_date": "2025-08-29T00:52:23+00:00",
+  "original_hash": "2c1164912414820c8efd699b43f64954",
+  "translation_date": "2025-10-23T00:59:58+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "nl"
 }
 -->
-# Bouw een Bankapp Deel 3: Methoden voor het Ophalen en Gebruiken van Gegevens
+# Een bankapp bouwen Deel 3: Methoden voor het ophalen en gebruiken van gegevens
 
-## Pre-Lecture Quiz
+Denk aan de computer van de Enterprise in Star Trek - wanneer Captain Picard vraagt om de status van het schip, verschijnt de informatie direct zonder dat de hele interface opnieuw moet worden opgebouwd. Die naadloze informatiestroom is precies wat we hier proberen te bouwen met dynamisch ophalen van gegevens.
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/45)
+Op dit moment is jouw bankapp als een gedrukt dagblad - informatief maar statisch. We gaan het transformeren naar iets dat lijkt op de missiecontrole van NASA, waar gegevens continu stromen en in real-time worden bijgewerkt zonder de workflow van de gebruiker te onderbreken.
 
-### Introductie
+Je leert hoe je asynchroon met servers kunt communiceren, hoe je gegevens kunt verwerken die op verschillende momenten binnenkomen, en hoe je ruwe informatie kunt omzetten in iets betekenisvols voor je gebruikers. Dit is het verschil tussen een demo en software die klaar is voor productie.
 
-Aan de kern van elke webapplicatie staat *data*. Data kan vele vormen aannemen, maar het hoofddoel is altijd om informatie aan de gebruiker te tonen. Nu webapps steeds interactiever en complexer worden, is de manier waarop gebruikers toegang krijgen tot en omgaan met informatie een belangrijk onderdeel van webontwikkeling.
+## Quiz voorafgaand aan de les
 
-In deze les gaan we zien hoe we gegevens asynchroon van een server kunnen ophalen en deze gegevens kunnen gebruiken om informatie op een webpagina weer te geven zonder de HTML opnieuw te laden.
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Vereisten
 
-Je moet het [Login- en Registratieformulier](../2-forms/README.md) van de webapp hebben gebouwd voor deze les. Je moet ook [Node.js](https://nodejs.org) installeren en [de server-API](../api/README.md) lokaal uitvoeren om toegang te krijgen tot accountgegevens.
+Voordat we beginnen met het ophalen van gegevens, zorg ervoor dat je de volgende onderdelen klaar hebt:
 
-Je kunt testen of de server correct werkt door dit commando in een terminal uit te voeren:
+- **Vorige les**: Voltooi het [Login- en registratieformulier](../2-forms/README.md) - we bouwen hierop voort
+- **Lokale server**: Installeer [Node.js](https://nodejs.org) en [start de server-API](../api/README.md) om accountgegevens te leveren
+- **API-verbinding**: Test je serververbinding met dit commando:
 
-```sh
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+Deze snelle test zorgt ervoor dat alle componenten correct communiceren:
+- Verifieert dat Node.js correct werkt op je systeem
+- Bevestigt dat je API-server actief is en reageert
+- Valideert dat je app de server kan bereiken (zoals het controleren van radiocontact voor een missie)
 
 ---
 
-## AJAX en gegevens ophalen
+## Begrijpen van gegevens ophalen in moderne webapps
 
-Traditionele websites werken de weergegeven inhoud bij wanneer de gebruiker een link selecteert of gegevens indient via een formulier, door de volledige HTML-pagina opnieuw te laden. Elke keer dat nieuwe gegevens moeten worden geladen, retourneert de webserver een volledig nieuwe HTML-pagina die door de browser moet worden verwerkt, wat de huidige gebruikersactie onderbreekt en interacties tijdens het herladen beperkt. Deze workflow wordt ook wel een *Multi-Page Application* of *MPA* genoemd.
+De manier waarop webapplicaties gegevens verwerken is de afgelopen twee decennia drastisch veranderd. Het begrijpen van deze evolutie helpt je te waarderen waarom moderne technieken zoals AJAX en de Fetch API zo krachtig zijn en waarom ze essentiële tools zijn geworden voor webontwikkelaars.
 
-![Update workflow in een multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.nl.png)
+Laten we eens kijken hoe traditionele websites werkten in vergelijking met de dynamische, responsieve applicaties die we vandaag de dag bouwen.
 
-Toen webapplicaties complexer en interactiever begonnen te worden, ontstond een nieuwe techniek genaamd [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Deze techniek stelt webapps in staat om gegevens asynchroon van een server te verzenden en op te halen met JavaScript, zonder de HTML-pagina opnieuw te laden, wat resulteert in snellere updates en soepelere gebruikersinteracties. Wanneer nieuwe gegevens van de server worden ontvangen, kan de huidige HTML-pagina ook worden bijgewerkt met JavaScript via de [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Na verloop van tijd is deze aanpak geëvolueerd tot wat nu een [*Single-Page Application* of *SPA*](https://en.wikipedia.org/wiki/Single-page_application) wordt genoemd.
+### Traditionele Multi-Page Applicaties (MPA)
 
-![Update workflow in een single-page application](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.nl.png)
+In de begindagen van het web was elke klik alsof je van kanaal wisselde op een oude televisie - het scherm werd zwart en stemde langzaam af op de nieuwe inhoud. Dit was de realiteit van vroege webapplicaties, waarbij elke interactie betekende dat de hele pagina opnieuw moest worden opgebouwd.
 
-Toen AJAX voor het eerst werd geïntroduceerd, was de enige beschikbare API om gegevens asynchroon op te halen [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Maar moderne browsers implementeren nu ook de meer handige en krachtige [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), die gebruikmaakt van promises en beter geschikt is voor het manipuleren van JSON-gegevens.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    
+    User->>Browser: Clicks link or submits form
+    Browser->>Server: Requests new HTML page
+    Note over Browser: Page goes blank
+    Server->>Browser: Returns complete HTML page
+    Browser->>User: Displays new page (flash/reload)
+```
 
-> Hoewel alle moderne browsers de `Fetch API` ondersteunen, is het altijd een goed idee om de [compatibiliteitstabel op caniuse.com](https://caniuse.com/fetch) te controleren als je wilt dat je webapplicatie werkt op oudere browsers.
+![Update workflow in een multi-page applicatie](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.nl.png)
 
-### Taak
+**Waarom deze aanpak onhandig aanvoelde:**
+- Elke klik betekende dat de hele pagina opnieuw moest worden opgebouwd
+- Gebruikers werden midden in hun gedachten onderbroken door die vervelende paginaflitsen
+- Je internetverbinding werkte overuren om steeds dezelfde header en footer opnieuw te downloaden
+- Apps voelden meer als bladeren door een archiefkast dan als het gebruik van software
 
-In [de vorige les](../2-forms/README.md) hebben we het registratieformulier geïmplementeerd om een account aan te maken. We gaan nu code toevoegen om in te loggen met een bestaand account en de gegevens op te halen. Open het bestand `app.js` en voeg een nieuwe `login`-functie toe:
+### Moderne Single-Page Applicaties (SPA)
 
-```js
+AJAX (Asynchronous JavaScript and XML) veranderde dit paradigma volledig. Net zoals het modulaire ontwerp van het internationale ruimtestation, waar astronauten individuele componenten kunnen vervangen zonder de hele structuur opnieuw op te bouwen, stelt AJAX ons in staat om specifieke delen van een webpagina bij te werken zonder alles opnieuw te laden. Hoewel de naam XML noemt, gebruiken we tegenwoordig meestal JSON, maar het kernprincipe blijft hetzelfde: alleen bijwerken wat moet veranderen.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant JavaScript
+    participant Server
+    
+    User->>Browser: Interacts with page
+    Browser->>JavaScript: Triggers event handler
+    JavaScript->>Server: Fetches only needed data
+    Server->>JavaScript: Returns JSON data
+    JavaScript->>Browser: Updates specific page elements
+    Browser->>User: Shows updated content (no reload)
+```
+
+![Update workflow in een single-page applicatie](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.nl.png)
+
+**Waarom SPAs zoveel beter aanvoelen:**
+- Alleen de delen die daadwerkelijk zijn veranderd worden bijgewerkt (slim, toch?)
+- Geen schokkende onderbrekingen meer - je gebruikers blijven in hun flow
+- Minder gegevens die over de lijn reizen betekent snellere laadtijden
+- Alles voelt snel en responsief, zoals de apps op je telefoon
+
+### De evolutie naar de moderne Fetch API
+
+Moderne browsers bieden de [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), die de oudere [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) vervangt. Net zoals het verschil tussen het bedienen van een telegraaf en het gebruik van e-mail, gebruikt de Fetch API promises voor schonere asynchrone code en verwerkt JSON van nature.
+
+| Functie | XMLHttpRequest | Fetch API |
+|---------|----------------|-----------|
+| **Syntax** | Complex, op callbacks gebaseerd | Schoon, op promises gebaseerd |
+| **JSON-verwerking** | Handmatige parsing vereist | Ingebouwde `.json()`-methode |
+| **Foutafhandeling** | Beperkte foutinformatie | Uitgebreide foutdetails |
+| **Moderne ondersteuning** | Compatibiliteit met oudere systemen | ES6+ promises en async/await |
+
+> 💡 **Browsercompatibiliteit**: Goed nieuws - de Fetch API werkt in alle moderne browsers! Als je nieuwsgierig bent naar specifieke versies, [caniuse.com](https://caniuse.com/fetch) heeft het volledige compatibiliteitsverhaal.
+> 
+**Kort samengevat:**
+- Werkt uitstekend in Chrome, Firefox, Safari en Edge (praktisch overal waar je gebruikers zijn)
+- Alleen Internet Explorer heeft extra hulp nodig (en eerlijk gezegd, het is tijd om afscheid te nemen van IE)
+- Bereidt je perfect voor op de elegante async/await-patronen die we later zullen gebruiken
+
+### Implementatie van gebruikerslogin en gegevens ophalen
+
+Laten we nu het inlogsysteem implementeren dat je bankapp transformeert van een statische weergave naar een functionele applicatie. Net zoals de authenticatieprotocollen die worden gebruikt in beveiligde militaire faciliteiten, verifiëren we gebruikersgegevens en bieden we vervolgens toegang tot hun specifieke gegevens.
+
+We bouwen dit stapsgewijs op, te beginnen met basisauthenticatie en vervolgens het toevoegen van mogelijkheden voor gegevens ophalen.
+
+#### Stap 1: Maak de basis voor de loginfunctie
+
+Open je `app.js`-bestand en voeg een nieuwe `login`-functie toe. Deze zal het authenticatieproces van de gebruiker afhandelen:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
 }
 ```
 
-Hier beginnen we met het ophalen van het formulier-element met `getElementById()`, en vervolgens halen we de gebruikersnaam op uit de invoer met `loginForm.user.value`. Elk formuliercontrole-element kan worden benaderd via zijn naam (ingesteld in de HTML met het `name`-attribuut) als een eigenschap van het formulier.
+**Laten we dit ontleden:**
+- Dat `async`-trefwoord? Het vertelt JavaScript "hé, deze functie moet misschien even wachten"
+- We halen ons formulier van de pagina (niets bijzonders, gewoon vinden via zijn ID)
+- Vervolgens halen we op wat de gebruiker heeft ingevoerd als gebruikersnaam
+- Hier is een handige truc: je kunt elk formulierinvoer bereiken via zijn `name`-attribuut - geen extra getElementById-aanroepen nodig!
 
-Net zoals we deden voor de registratie, maken we een andere functie om een serveraanvraag uit te voeren, maar deze keer om de accountgegevens op te halen:
+> 💡 **Formulier toegangspatroon**: Elke formuliercontrole kan worden benaderd via zijn naam (ingesteld in de HTML met het `name`-attribuut) als een eigenschap van het formelement. Dit biedt een schone, leesbare manier om formuliergegevens op te halen.
 
-```js
+#### Stap 2: Maak de functie voor het ophalen van accountgegevens
+
+Vervolgens maken we een speciale functie om accountgegevens van de server op te halen. Dit volgt hetzelfde patroon als je registratiefunctie, maar richt zich op het ophalen van gegevens:
+
+```javascript
 async function getAccount(user) {
   try {
     const response = await fetch('//localhost:5000/api/accounts/' + encodeURIComponent(user));
@@ -72,15 +155,41 @@ async function getAccount(user) {
 }
 ```
 
-We gebruiken de `fetch` API om de gegevens asynchroon van de server op te halen, maar deze keer hebben we geen extra parameters nodig behalve de URL die we willen aanroepen, omdat we alleen gegevens opvragen. Standaard maakt `fetch` een [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) HTTP-aanvraag, wat precies is wat we hier nodig hebben.
+**Wat deze code doet:**
+- **Gebruikt** de moderne `fetch` API om gegevens asynchroon op te vragen
+- **Stelt** een GET-verzoek-URL samen met de gebruikersnaamparameter
+- **Past** `encodeURIComponent()` toe om speciale tekens in URL's veilig te verwerken
+- **Converteert** de respons naar JSON-formaat voor eenvoudige gegevensmanipulatie
+- **Handelt** fouten netjes af door een foutobject te retourneren in plaats van te crashen
 
-✅ `encodeURIComponent()` is een functie die speciale tekens voor een URL ontsnapt. Welke problemen zouden we kunnen tegenkomen als we deze functie niet aanroepen en de `user`-waarde direct in de URL gebruiken?
+> ⚠️ **Beveiligingsopmerking**: De functie `encodeURIComponent()` verwerkt speciale tekens in URL's. Net zoals coderingssystemen in maritieme communicatie, zorgt het ervoor dat je bericht precies aankomt zoals bedoeld, en voorkomt dat tekens zoals "#" of "&" verkeerd worden geïnterpreteerd.
+> 
+**Waarom dit belangrijk is:**
+- Voorkomt dat speciale tekens URL's breken
+- Beschermt tegen aanvallen waarbij URL's worden gemanipuleerd
+- Zorgt ervoor dat je server de bedoelde gegevens ontvangt
+- Volgt veilige coderingspraktijken
 
-Laten we nu onze `login`-functie bijwerken om `getAccount` te gebruiken:
+#### Begrijpen van HTTP GET-verzoeken
 
-```js
+Hier is iets dat je misschien verrast: wanneer je `fetch` gebruikt zonder extra opties, maakt het automatisch een [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-verzoek. Dit is perfect voor wat we doen - de server vragen "hé, mag ik de accountgegevens van deze gebruiker zien?"
+
+Denk aan GET-verzoeken als beleefd vragen om een boek te lenen uit de bibliotheek - je vraagt om iets te zien dat al bestaat. POST-verzoeken (die we gebruikten voor registratie) zijn meer zoals het indienen van een nieuw boek om aan de collectie toe te voegen.
+
+| GET-verzoek | POST-verzoek |
+|-------------|--------------|
+| **Doel** | Bestaande gegevens ophalen | Nieuwe gegevens naar de server sturen |
+| **Parameters** | In URL-pad/querystring | In de request body |
+| **Caching** | Kan worden gecached door browsers | Wordt meestal niet gecached |
+| **Beveiliging** | Zichtbaar in URL/logs | Verborgen in de request body |
+
+#### Stap 3: Alles samenbrengen
+
+Nu komt het bevredigende deel - laten we je functie voor het ophalen van accountgegevens koppelen aan het inlogproces. Hier komt alles samen:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
   const data = await getAccount(user);
 
@@ -93,94 +202,260 @@ async function login() {
 }
 ```
 
-Omdat `getAccount` een asynchrone functie is, moeten we deze combineren met het `await`-keyword om te wachten op het serverresultaat. Zoals bij elke serveraanvraag, moeten we ook omgaan met foutgevallen. Voor nu voegen we alleen een logbericht toe om de fout weer te geven en komen we hier later op terug.
+Deze functie volgt een duidelijke volgorde:
+- Haal de gebruikersnaam uit de formulierinvoer
+- Vraag de accountgegevens van de gebruiker op bij de server
+- Handel eventuele fouten af die tijdens het proces optreden
+- Sla de accountgegevens op en navigeer naar het dashboard bij succes
 
-Vervolgens moeten we de gegevens ergens opslaan zodat we deze later kunnen gebruiken om de dashboardinformatie weer te geven. Aangezien de variabele `account` nog niet bestaat, maken we een globale variabele bovenaan ons bestand:
+> 🎯 **Async/Await-patroon**: Omdat `getAccount` een asynchrone functie is, gebruiken we het `await`-trefwoord om de uitvoering te pauzeren totdat de server reageert. Dit voorkomt dat de code doorgaat met ongedefinieerde gegevens.
 
-```js
+#### Stap 4: Een plek creëren voor je gegevens
+
+Je app heeft een plek nodig om de accountinformatie te onthouden zodra deze is geladen. Denk aan dit als het kortetermijngeheugen van je app - een plek om de gegevens van de huidige gebruiker bij de hand te houden. Voeg deze regel toe aan de bovenkant van je `app.js`-bestand:
+
+```javascript
+// This holds the current user's account data
 let account = null;
 ```
 
-Nadat de gebruikersgegevens in een variabele zijn opgeslagen, kunnen we van de *login*-pagina naar het *dashboard* navigeren met behulp van de `navigate()`-functie die we al hebben.
+**Waarom we dit nodig hebben:**
+- Houdt de accountgegevens toegankelijk vanuit elke plek in je app
+- Beginnen met `null` betekent "niemand is nog ingelogd"
+- Wordt bijgewerkt wanneer iemand succesvol inlogt of registreert
+- Werkt als een enkele bron van waarheid - geen verwarring over wie er is ingelogd
 
-Ten slotte moeten we onze `login`-functie aanroepen wanneer het loginformulier wordt ingediend, door de HTML te wijzigen:
+#### Stap 5: Verbind je formulier
+
+Laten we nu je gloednieuwe inlogfunctie verbinden met je HTML-formulier. Werk je formuliertag als volgt bij:
 
 ```html
 <form id="loginForm" action="javascript:login()">
+  <!-- Your existing form inputs -->
+</form>
 ```
 
-Test of alles correct werkt door een nieuw account te registreren en te proberen in te loggen met hetzelfde account.
+**Wat deze kleine verandering doet:**
+- Stopt het formulier van zijn standaardgedrag om de hele pagina opnieuw te laden
+- Roept in plaats daarvan je aangepaste JavaScript-functie aan
+- Houdt alles soepel en single-page-app-achtig
+- Geeft je volledige controle over wat er gebeurt wanneer gebruikers op "Login" klikken
 
-Voordat we verder gaan met het volgende deel, kunnen we ook de `register`-functie voltooien door dit aan het einde van de functie toe te voegen:
+#### Stap 6: Verbeter je registratiefunctie
 
-```js
+Voor consistentie, werk je `register`-functie bij om ook accountgegevens op te slaan en naar het dashboard te navigeren:
+
+```javascript
+// Add these lines at the end of your register function
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Wist je dat je standaard alleen server-API's kunt aanroepen vanaf hetzelfde domein en dezelfde poort als de webpagina die je bekijkt? Dit is een beveiligingsmechanisme dat door browsers wordt afgedwongen. Maar wacht, onze webapp draait op `localhost:3000` terwijl de server-API draait op `localhost:5000`, waarom werkt het dan? Door gebruik te maken van een techniek genaamd [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS), is het mogelijk om cross-origin HTTP-aanvragen uit te voeren als de server speciale headers toevoegt aan de respons, waardoor uitzonderingen voor specifieke domeinen worden toegestaan.
+**Deze verbetering biedt:**
+- **Naadloze** overgang van registratie naar dashboard
+- **Consistente** gebruikerservaring tussen inlog- en registratieprocessen
+- **Directe** toegang tot accountgegevens na succesvolle registratie
 
-> Leer meer over API's door deze [les](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon) te volgen.
+#### Test je implementatie
 
-## HTML bijwerken om gegevens weer te geven
-
-Nu we de gebruikersgegevens hebben, moeten we de bestaande HTML bijwerken om deze weer te geven. We weten al hoe we een element uit de DOM kunnen ophalen, bijvoorbeeld met `document.getElementById()`. Nadat je een basiselement hebt, zijn hier enkele API's die je kunt gebruiken om het te wijzigen of kindelementen toe te voegen:
-
-- Met de [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent)-eigenschap kun je de tekst van een element wijzigen. Merk op dat het wijzigen van deze waarde alle kinderen van het element (indien aanwezig) verwijdert en vervangt door de opgegeven tekst. Het is dus ook een efficiënte methode om alle kinderen van een gegeven element te verwijderen door een lege string `''` toe te wijzen.
-
-- Met [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) in combinatie met de [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-methode kun je een of meer nieuwe kindelementen maken en toevoegen.
-
-✅ Met de [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML)-eigenschap van een element is het ook mogelijk om de HTML-inhoud ervan te wijzigen, maar deze moet worden vermeden omdat het kwetsbaar is voor [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-aanvallen.
-
-### Taak
-
-Voordat we verder gaan met het dashboard-scherm, is er nog iets dat we moeten doen op de *login*-pagina. Op dit moment, als je probeert in te loggen met een gebruikersnaam die niet bestaat, wordt er een bericht weergegeven in de console, maar voor een normale gebruiker verandert er niets en weet je niet wat er aan de hand is.
-
-Laten we een placeholder-element toevoegen in het loginformulier waar we indien nodig een foutmelding kunnen weergeven. Een goede plek zou net voor de login-`<button>` zijn:
-
-```html
-...
-<div id="loginError"></div>
-<button>Login</button>
-...
+```mermaid
+flowchart TD
+    A[User enters credentials] --> B[Login function called]
+    B --> C[Fetch account data from server]
+    C --> D{Data received successfully?}
+    D -->|Yes| E[Store account data globally]
+    D -->|No| F[Display error message]
+    E --> G[Navigate to dashboard]
+    F --> H[User stays on login page]
 ```
 
-Dit `<div>`-element is leeg, wat betekent dat er niets op het scherm wordt weergegeven totdat we er inhoud aan toevoegen. We geven het ook een `id` zodat we het gemakkelijk kunnen ophalen met JavaScript.
+**Tijd om het uit te proberen:**
+1. Maak een nieuw account om te controleren of alles werkt
+2. Probeer in te loggen met dezelfde inloggegevens
+3. Kijk in de console van je browser (F12) als er iets niet klopt
+4. Zorg ervoor dat je op het dashboard terechtkomt na een succesvolle login
 
-Ga terug naar het bestand `app.js` en maak een nieuwe hulpfunctie `updateElement`:
+Als er iets niet werkt, geen paniek! De meeste problemen zijn eenvoudig op te lossen, zoals typfouten of vergeten de API-server te starten.
 
-```js
+#### Een kort woord over cross-origin magie
+
+Je vraagt je misschien af: "Hoe communiceert mijn webapp met deze API-server terwijl ze op verschillende poorten draaien?" Goede vraag! Dit raakt aan iets waar elke webontwikkelaar uiteindelijk mee te maken krijgt.
+
+> 🔒 **Cross-Origin Security**: Browsers handhaven een "same-origin policy" om ongeautoriseerde communicatie tussen verschillende domeinen te voorkomen. Net zoals het controlesysteem bij het Pentagon, verifiëren ze dat communicatie is geautoriseerd voordat gegevensoverdracht wordt toegestaan.
+> 
+**In onze setup:**
+- Je webapp draait op `localhost:3000` (ontwikkelserver)
+- Je API-server draait op `localhost:5000` (backendserver)
+- De API-server bevat [CORS headers](https://developer.mozilla.org/docs/Web/HTTP/CORS) die expliciet communicatie van je webapp autoriseren
+
+Deze configuratie weerspiegelt de echte wereld, waar frontend- en backendapplicaties meestal op afzonderlijke servers draaien.
+
+> 📚 **Meer leren**: Verdiep je verder in API's en gegevens ophalen met deze uitgebreide [Microsoft Learn module over API's](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
+
+## Je gegevens tot leven brengen in HTML
+
+Nu gaan we de opgehaalde gegevens zichtbaar maken voor gebruikers via DOM-manipulatie. Net zoals het ontwikkelen van foto's in een donkere kamer, nemen we onzichtbare gegevens en renderen we ze tot iets dat gebruikers kunnen zien en ermee kunnen interageren.
+
+DOM-manipulatie is de techniek die statische webpagina's transformeert in dynamische applicaties die hun inhoud bijwerken op basis van gebruikersinteracties en serverreacties.
+
+### Het juiste gereedschap kiezen voor de klus
+
+Als het gaat om het bijwerken van je HTML met JavaScript, heb je verschillende opties. Denk aan deze als verschillende gereedschappen in een gereedschapskist - elk perfect voor specifieke taken:
+
+| Methode | Waar het goed voor is | Wanneer te gebruiken | Veiligheidsniveau |
+|---------|-----------------------|----------------------|-------------------|
+| `textContent` | Veilig weergeven van gebruikersgegevens | Altijd wanneer je tekst toont | ✅ Zeer veilig |
+| `createElement()` + `append()` | Complexe layouts bouwen | Nieuwe secties/lijsten maken | ✅ Zeer betrouwbaar |
+| `innerHTML` | HTML-inhoud instellen | ⚠️ Probeer dit te vermijden | ❌ Risicovol |
+
+#### De veilige manier om tekst te tonen: textContent
+
+De [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent)-eigenschap is je beste vriend bij het weergeven van gebruikersgegevens. Het is alsof je een portier hebt voor je webpagina - niets schadelijks komt erdoor:
+
+```javascript
+// The safe, reliable way to update text
+const balanceElement = document.getElementById('balance');
+balanceElement.textContent = account.balance;
+```
+
+**Voordelen van textContent:**
+- Behandelt alles als gewone tekst (voorkomt scriptuitvoering)
+- Leegt automatisch bestaande inhoud
+- Efficiënt voor eenvoudige tekstupdates
+- Biedt ingebouwde beveiliging tegen schadelijke inhoud
+
+#### Dynamische HTML-elementen maken
+Voor complexere inhoud kun je [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) combineren met de methode [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append):
+
+```javascript
+// Safe way to create new elements
+const transactionItem = document.createElement('div');
+transactionItem.className = 'transaction-item';
+transactionItem.textContent = `${transaction.date}: ${transaction.description}`;
+container.append(transactionItem);
+```
+
+**Begrijp deze aanpak:**
+- **Maakt** nieuwe DOM-elementen op een programmeerbare manier
+- **Biedt** volledige controle over de attributen en inhoud van elementen
+- **Maakt** complexe, geneste structuren mogelijk
+- **Waarborgt** veiligheid door structuur en inhoud te scheiden
+
+> ⚠️ **Veiligheidsoverweging**: Hoewel [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) vaak voorkomt in tutorials, kan het ingesloten scripts uitvoeren. Net zoals de veiligheidsprotocollen bij CERN ongeautoriseerde code-uitvoering voorkomen, bieden `textContent` en `createElement` veiligere alternatieven.
+> 
+**Risico's van innerHTML:**
+- Voert eventuele `<script>`-tags in gebruikersgegevens uit
+- Kwetsbaar voor code-injectie-aanvallen
+- Creëert potentiële beveiligingsproblemen
+- De veiligere alternatieven die we gebruiken bieden vergelijkbare functionaliteit
+
+### Foutmeldingen gebruiksvriendelijk maken
+
+Op dit moment verschijnen inlogfouten alleen in de browserconsole, wat onzichtbaar is voor gebruikers. Net zoals het verschil tussen interne diagnostiek van een piloot en het informatiesysteem voor passagiers, moeten we belangrijke informatie via het juiste kanaal communiceren.
+
+Door zichtbare foutmeldingen te implementeren, krijgen gebruikers direct feedback over wat er misging en hoe ze verder kunnen.
+
+#### Stap 1: Voeg een plek toe voor foutmeldingen
+
+Laten we eerst een plek maken voor foutmeldingen in je HTML. Voeg dit toe vlak voor je inlogknop, zodat gebruikers het vanzelf zien:
+
+```html
+<!-- This is where error messages will appear -->
+<div id="loginError" role="alert"></div>
+<button>Login</button>
+```
+
+**Wat gebeurt hier:**
+- We maken een lege container die onzichtbaar blijft totdat deze nodig is
+- Het is geplaatst waar gebruikers van nature kijken na het klikken op "Inloggen"
+- Die `role="alert"` is een mooie toevoeging voor schermlezers - het vertelt hulpmiddelen voor toegankelijkheid "hé, dit is belangrijk!"
+- De unieke `id` geeft onze JavaScript een eenvoudig doelwit
+
+#### Stap 2: Maak een handige hulpfunctie
+
+Laten we een kleine hulpfunctie maken die de tekst van elk element kan bijwerken. Dit is een van die "één keer schrijven, overal gebruiken"-functies die je tijd zullen besparen:
+
+```javascript
 function updateElement(id, text) {
   const element = document.getElementById(id);
   element.textContent = text;
 }
 ```
 
-Deze functie is vrij eenvoudig: gegeven een element-*id* en *tekst*, zal het de tekstinhoud van het DOM-element met de bijbehorende `id` bijwerken. Laten we deze methode gebruiken in plaats van het vorige foutbericht in de `login`-functie:
+**Voordelen van de functie:**
+- Eenvoudige interface die alleen een element-ID en tekstinhoud vereist
+- Lokaliseert en werkt DOM-elementen veilig bij
+- Herbruikbaar patroon dat codeherhaling vermindert
+- Zorgt voor consistent gedrag bij het bijwerken in de hele applicatie
 
-```js
+#### Stap 3: Toon fouten waar gebruikers ze kunnen zien
+
+Laten we nu die verborgen consolemelding vervangen door iets dat gebruikers daadwerkelijk kunnen zien. Werk je inlogfunctie bij:
+
+```javascript
+// Instead of just logging to console, show the user what's wrong
 if (data.error) {
   return updateElement('loginError', data.error);
 }
 ```
 
-Nu, als je probeert in te loggen met een ongeldig account, zou je iets moeten zien zoals dit:
+**Deze kleine verandering maakt een groot verschil:**
+- Foutmeldingen verschijnen precies waar gebruikers kijken
+- Geen mysterieuze stille fouten meer
+- Gebruikers krijgen directe, bruikbare feedback
+- Je app voelt professioneel en doordacht aan
 
-![Screenshot met de foutmelding weergegeven tijdens het inloggen](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.nl.png)
+Nu, wanneer je test met een ongeldig account, zie je een nuttige foutmelding direct op de pagina!
 
-Nu hebben we fouttekst die visueel wordt weergegeven, maar als je het probeert met een schermlezer, zul je merken dat er niets wordt aangekondigd. Om ervoor te zorgen dat tekst die dynamisch aan een pagina wordt toegevoegd wordt aangekondigd door schermlezers, moet het gebruik maken van iets dat een [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) wordt genoemd. Hier gaan we een specifiek type live region gebruiken, genaamd een alert:
+![Screenshot waarop de foutmelding tijdens het inloggen wordt weergegeven](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.nl.png)
+
+#### Stap 4: Inclusief zijn met toegankelijkheid
+
+Hier is iets cools over die `role="alert"` die we eerder hebben toegevoegd - het is niet alleen decoratie! Dit kleine attribuut creëert wat een [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) wordt genoemd, die wijzigingen onmiddellijk aankondigt aan schermlezers:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
-Implementeer hetzelfde gedrag voor de fouten in de `register`-functie (vergeet niet de HTML bij te werken).
+**Waarom dit belangrijk is:**
+- Schermlezergebruikers horen de foutmelding zodra deze verschijnt
+- Iedereen krijgt dezelfde belangrijke informatie, ongeacht hoe ze navigeren
+- Het is een eenvoudige manier om je app voor meer mensen te laten werken
+- Laat zien dat je geeft om het creëren van inclusieve ervaringen
 
-## Informatie weergeven op het dashboard
+Kleine details zoals deze onderscheiden goede ontwikkelaars van geweldige ontwikkelaars!
 
-Met dezelfde technieken die we zojuist hebben gezien, gaan we ook de accountinformatie op het dashboard weergeven.
+#### Stap 5: Pas hetzelfde patroon toe op registratie
 
-Dit is hoe een accountobject dat van de server wordt ontvangen eruitziet:
+Voor consistentie implementeer je identieke foutafhandeling in je registratieformulier:
+
+1. **Voeg** een foutweergave-element toe aan je registratie-HTML:
+```html
+<div id="registerError" role="alert"></div>
+```
+
+2. **Werk** je registratiefunctie bij om hetzelfde foutweergavepatroon te gebruiken:
+```javascript
+if (data.error) {
+  return updateElement('registerError', data.error);
+}
+```
+
+**Voordelen van consistente foutafhandeling:**
+- **Biedt** een uniforme gebruikerservaring in alle formulieren
+- **Vermindert** cognitieve belasting door vertrouwde patronen te gebruiken
+- **Vereenvoudigt** onderhoud met herbruikbare code
+- **Zorgt** ervoor dat toegankelijkheidsnormen overal in de app worden nageleefd
+
+## Je dynamische dashboard maken
+
+Nu gaan we je statische dashboard transformeren in een dynamische interface die echte accountgegevens weergeeft. Net zoals het verschil tussen een geprinte vluchtschema en de live vertrekborden op luchthavens, gaan we van statische informatie naar realtime, responsieve weergaven.
+
+Met behulp van de DOM-manipulatietechnieken die je hebt geleerd, maken we een dashboard dat automatisch wordt bijgewerkt met actuele accountinformatie.
+
+### Je gegevens leren kennen
+
+Voordat we beginnen met bouwen, kijken we naar wat voor soort gegevens je server terugstuurt. Wanneer iemand succesvol inlogt, krijg je deze schat aan informatie om mee te werken:
 
 ```json
 {
@@ -192,15 +467,34 @@ Dit is hoe een accountobject dat van de server wordt ontvangen eruitziet:
     { "id": "1", "date": "2020-10-01", "object": "Pocket money", "amount": 50 },
     { "id": "2", "date": "2020-10-03", "object": "Book", "amount": -10 },
     { "id": "3", "date": "2020-10-04", "object": "Sandwich", "amount": -5 }
-  ],
+  ]
 }
 ```
 
-> Opmerking: om het je gemakkelijker te maken, kun je het vooraf bestaande `test`-account gebruiken dat al is gevuld met gegevens.
+**Deze datastructuur biedt:**
+- **`user`**: Perfect om de ervaring te personaliseren ("Welkom terug, Sarah!")
+- **`currency`**: Zorgt ervoor dat we geldbedragen correct weergeven
+- **`description`**: Een vriendelijke naam voor het account
+- **`balance`**: Het belangrijke huidige saldo
+- **`transactions`**: De volledige transactiegeschiedenis met alle details
 
-### Taak
+Alles wat je nodig hebt om een professioneel ogend bankdashboard te bouwen!
 
-Laten we beginnen met het vervangen van de "Balance"-sectie in de HTML om placeholder-elementen toe te voegen:
+> 💡 **Handige tip**: Wil je je dashboard meteen in actie zien? Gebruik de gebruikersnaam `test` bij het inloggen - deze is vooraf geladen met voorbeeldgegevens, zodat je alles kunt zien werken zonder eerst transacties te hoeven maken.
+> 
+**Waarom het testaccount handig is:**
+- Wordt geleverd met realistische voorbeeldgegevens die al zijn geladen
+- Perfect om te zien hoe transacties worden weergegeven
+- Geweldig om je dashboardfuncties te testen
+- Bespaart je de moeite om handmatig testgegevens te maken
+
+### De dashboardweergeven maken
+
+Laten we je dashboardinterface stap voor stap bouwen, te beginnen met de samenvattingsinformatie van het account en vervolgens verder naar meer complexe functies zoals transactielijsten.
+
+#### Stap 1: Werk je HTML-structuur bij
+
+Vervang eerst de statische "Saldo"-sectie door dynamische placeholder-elementen die je JavaScript kan invullen:
 
 ```html
 <section>
@@ -208,17 +502,25 @@ Laten we beginnen met het vervangen van de "Balance"-sectie in de HTML om placeh
 </section>
 ```
 
-We voegen ook een nieuwe sectie toe net eronder om de accountbeschrijving weer te geven:
+Voeg vervolgens een sectie toe voor de accountbeschrijving. Omdat dit fungeert als een titel voor de dashboardinhoud, gebruik je semantische HTML:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Omdat de accountbeschrijving functioneert als een titel voor de inhoud eronder, wordt deze semantisch gemarkeerd als een heading. Leer meer over hoe [heading-structuur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) belangrijk is voor toegankelijkheid, en bekijk de pagina kritisch om te bepalen wat nog meer een heading zou kunnen zijn.
+**Begrijp de HTML-structuur:**
+- **Gebruikt** afzonderlijke `<span>`-elementen voor saldo en valuta voor individuele controle
+- **Past** unieke ID's toe op elk element voor JavaScript-doelgerichtheid
+- **Volgt** semantische HTML door `<h2>` te gebruiken voor de accountbeschrijving
+- **Creëert** een logische hiërarchie voor schermlezers en SEO
 
-Vervolgens maken we een nieuwe functie in `app.js` om de placeholder in te vullen:
+> ✅ **Inzicht in toegankelijkheid**: De accountbeschrijving fungeert als een titel voor de dashboardinhoud, dus deze is semantisch gemarkeerd als een kop. Lees meer over hoe [kopstructuur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) toegankelijkheid beïnvloedt. Kun je andere elementen op je pagina identificeren die baat zouden hebben bij kop-tags?
 
-```js
+#### Stap 2: Maak de dashboard-updatefunctie
+
+Maak nu een functie die je dashboard vult met echte accountgegevens:
+
+```javascript
 function updateDashboard() {
   if (!account) {
     return navigate('/login');
@@ -230,40 +532,71 @@ function updateDashboard() {
 }
 ```
 
-Eerst controleren we of we de benodigde accountgegevens hebben voordat we verder gaan. Vervolgens gebruiken we de `updateElement()`-functie die we eerder hebben gemaakt om de HTML bij te werken.
+**Stap voor stap, dit doet de functie:**
+- **Valideert** dat accountgegevens bestaan voordat verder wordt gegaan
+- **Redirects** niet-geauthenticeerde gebruikers terug naar de inlogpagina
+- **Update** de accountbeschrijving met behulp van de herbruikbare `updateElement`-functie
+- **Formatteert** het saldo om altijd twee decimalen weer te geven
+- **Toont** het juiste valutasymbool
 
-> Om de balansweergave mooier te maken, gebruiken we de methode [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) om de waarde met 2 cijfers na de komma weer te geven.
+> 💰 **Geldformattering**: Die [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)-methode is een redder in nood! Het zorgt ervoor dat je saldo er altijd uitziet als echt geld - "75.00" in plaats van alleen "75". Je gebruikers zullen het waarderen om vertrouwde valutaformattering te zien.
 
-Nu moeten we onze `updateDashboard()`-functie aanroepen elke keer dat het dashboard wordt geladen. Als je de [les 1 opdracht](../1-template-route/assignment.md) al hebt voltooid, zou dit eenvoudig moeten zijn, anders kun je de volgende implementatie gebruiken.
+#### Stap 3: Zorg ervoor dat je dashboard wordt bijgewerkt
 
-Voeg deze code toe aan het einde van de `updateRoute()`-functie:
+Om ervoor te zorgen dat je dashboard wordt vernieuwd met actuele gegevens telkens wanneer iemand het bezoekt, moeten we aansluiten op je navigatiesysteem. Als je de [les 1 opdracht](../1-template-route/assignment.md) hebt voltooid, zou dit bekend moeten aanvoelen. Zo niet, maak je geen zorgen - hier is wat je nodig hebt:
 
-```js
+Voeg dit toe aan het einde van je `updateRoute()`-functie:
+
+```javascript
 if (typeof route.init === 'function') {
   route.init();
 }
 ```
 
-En werk de route-definitie bij met:
+Werk vervolgens je routes bij om de dashboardinitialisatie op te nemen:
 
-```js
+```javascript
 const routes = {
   '/login': { templateId: 'login' },
   '/dashboard': { templateId: 'dashboard', init: updateDashboard }
 };
 ```
 
-Met deze wijziging wordt de functie `updateDashboard()` elke keer dat de dashboardpagina wordt weergegeven, aangeroepen. Na een login zou je dan de accountbalans, valuta en beschrijving moeten kunnen zien.
+**Wat deze slimme setup doet:**
+- Controleert of een route speciale initialisatiecode heeft
+- Voert die code automatisch uit wanneer de route wordt geladen
+- Zorgt ervoor dat je dashboard altijd actuele gegevens toont
+- Houdt je routeringslogica schoon en georganiseerd
 
-## Tabelrijen dynamisch maken met HTML-sjablonen
+#### Testen van je dashboard
 
-In de [eerste les](../1-template-route/README.md) hebben we HTML-sjablonen gebruikt in combinatie met de [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild)-methode om de navigatie in onze app te implementeren. Sjablonen kunnen ook kleiner zijn en worden gebruikt om herhalende delen van een pagina dynamisch in te vullen.
+Na het implementeren van deze wijzigingen, test je je dashboard:
 
-We gaan een vergelijkbare aanpak gebruiken om de lijst met transacties in de HTML-tabel weer te geven.
+1. **Log in** met een testaccount
+2. **Controleer** of je wordt doorgestuurd naar het dashboard
+3. **Controleer** of de accountbeschrijving, het saldo en de valuta correct worden weergegeven
+4. **Probeer uitloggen en opnieuw inloggen** om ervoor te zorgen dat gegevens correct worden vernieuwd
 
-### Taak
+Je dashboard zou nu dynamische accountinformatie moeten weergeven die wordt bijgewerkt op basis van de gegevens van de ingelogde gebruiker!
 
-Voeg een nieuwe sjabloon toe in de HTML `<body>`:
+## Slimme transactielijsten maken met sjablonen
+
+In plaats van handmatig HTML te maken voor elke transactie, gebruiken we sjablonen om automatisch consistente opmaak te genereren. Net zoals gestandaardiseerde componenten worden gebruikt in de ruimtevaartproductie, zorgen sjablonen ervoor dat elke transactieregel dezelfde structuur en uitstraling heeft.
+
+Deze techniek schaalt efficiënt van een paar transacties naar duizenden, terwijl consistente prestaties en presentatie behouden blijven.
+
+```mermaid
+flowchart LR
+    A[Transaction Data] --> B[HTML Template]
+    B --> C[Clone Template]
+    C --> D[Populate with Data]
+    D --> E[Add to DOM]
+    E --> F[Repeat for Each Transaction]
+```
+
+### Stap 1: Maak het transactiesjabloon
+
+Voeg eerst een herbruikbaar sjabloon voor transactieregels toe aan je HTML `<body>`:
 
 ```html
 <template id="transaction">
@@ -275,17 +608,30 @@ Voeg een nieuwe sjabloon toe in de HTML `<body>`:
 </template>
 ```
 
-Deze sjabloon vertegenwoordigt een enkele tabelrij, met de 3 kolommen die we willen invullen: *datum*, *object* en *bedrag* van een transactie.
+**Begrijp HTML-sjablonen:**
+- **Definieert** de structuur voor een enkele tabelrij
+- **Blijft** onzichtbaar totdat het wordt gekloond en gevuld met JavaScript
+- **Bevat** drie cellen voor datum, beschrijving en bedrag
+- **Biedt** een herbruikbaar patroon voor consistente opmaak
 
-Voeg vervolgens deze `id`-eigenschap toe aan het `<tbody>`-element van de tabel binnen de dashboard-sjabloon om het gemakkelijker te vinden met JavaScript:
+### Stap 2: Bereid je tabel voor op dynamische inhoud
+
+Voeg vervolgens een `id` toe aan je tabelbody zodat JavaScript deze gemakkelijk kan targeten:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-Onze HTML is klaar, laten we overschakelen naar JavaScript-code en een nieuwe functie `createTransactionRow` maken:
+**Wat dit bereikt:**
+- **Creëert** een duidelijk doelwit voor het invoegen van transactieregels
+- **Scheidt** de tabelstructuur van de dynamische inhoud
+- **Maakt** eenvoudig wissen en opnieuw vullen van transactiegegevens mogelijk
 
-```js
+### Stap 3: Bouw de transactieregel-fabrieksfunctie
+
+Maak nu een functie die transactiegegevens omzet in HTML-elementen:
+
+```javascript
 function createTransactionRow(transaction) {
   const template = document.getElementById('transaction');
   const transactionRow = template.content.cloneNode(true);
@@ -297,9 +643,19 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Deze functie doet precies wat de naam aangeeft: met behulp van de sjabloon die we eerder hebben gemaakt, maakt het een nieuwe tabelrij en vult deze in met transactiegegevens. We gaan dit gebruiken in onze `updateDashboard()`-functie om de tabel in te vullen:
+**Uitleg van deze fabrieksfunctie:**
+- **Haalt** het sjabloonelement op via zijn ID
+- **Kloont** de sjablooninhoud voor veilige manipulatie
+- **Selecteert** de tabelrij binnen de gekloonde inhoud
+- **Vult** elke cel met transactiegegevens
+- **Formatteert** het bedrag om juiste decimalen weer te geven
+- **Geeft** de voltooide rij terug, klaar voor invoeging
 
-```js
+### Stap 4: Genereer efficiënt meerdere transactieregels
+
+Voeg deze code toe aan je `updateDashboard()`-functie om alle transacties weer te geven:
+
+```javascript
 const transactionsRows = document.createDocumentFragment();
 for (const transaction of account.transactions) {
   const transactionRow = createTransactionRow(transaction);
@@ -308,11 +664,20 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Hier gebruiken we de methode [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) die een nieuw DOM-fragment maakt waarop we kunnen werken, voordat we het uiteindelijk aan onze HTML-tabel koppelen.
+**Begrijp deze efficiënte aanpak:**
+- **Maakt** een documentfragment om DOM-bewerkingen te groeperen
+- **Itereert** door alle transacties in de accountgegevens
+- **Genereert** een rij voor elke transactie met behulp van de fabrieksfunctie
+- **Verzamelt** alle rijen in het fragment voordat ze aan de DOM worden toegevoegd
+- **Voert** een enkele DOM-update uit in plaats van meerdere individuele invoegingen
 
-Er is nog één ding dat we moeten doen voordat deze code kan werken, aangezien onze `updateElement()`-functie momenteel alleen tekstinhoud ondersteunt. Laten we de code een beetje aanpassen:
+> ⚡ **Prestatieoptimalisatie**: [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) werkt als het assemblageproces bij Boeing - componenten worden buiten de hoofdlijn voorbereid en vervolgens als een complete eenheid geïnstalleerd. Deze batching-aanpak minimaliseert DOM-herberekeningen door een enkele invoeging uit te voeren in plaats van meerdere individuele bewerkingen.
 
-```js
+### Stap 5: Verbeter de updatefunctie voor gemengde inhoud
+
+Je `updateElement()`-functie behandelt momenteel alleen tekstinhoud. Werk deze bij om te werken met zowel tekst als DOM-knooppunten:
+
+```javascript
 function updateElement(id, textOrNode) {
   const element = document.getElementById(id);
   element.textContent = ''; // Removes all children
@@ -320,18 +685,57 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-We gebruiken de [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-methode omdat deze het mogelijk maakt om zowel tekst als [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) aan een ouderelement te koppelen, wat perfect is voor al onze gebruiksscenario's.
-Als je probeert in te loggen met het `test` account, zou je nu een transactielijst op het dashboard moeten zien 🎉.
+**Belangrijke verbeteringen in deze update:**
+- **Wist** bestaande inhoud voordat nieuwe inhoud wordt toegevoegd
+- **Accepteert** zowel tekststrings als DOM-knooppunten als parameters
+- **Gebruikt** de [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append)-methode voor flexibiliteit
+- **Behoudt** achterwaartse compatibiliteit met bestaande tekstgebaseerd gebruik
+
+### Je dashboard testen
+
+Tijd voor de waarheid! Laten we je dynamische dashboard in actie zien:
+
+1. Log in met het `test`-account (het heeft voorbeeldgegevens klaarstaan)
+2. Navigeer naar je dashboard
+3. Controleer of transactieregels verschijnen met de juiste opmaak
+4. Zorg ervoor dat datums, beschrijvingen en bedragen er allemaal goed uitzien
+
+Als alles werkt, zou je een volledig functionele transactielijst op je dashboard moeten zien! 🎉
+
+**Wat je hebt bereikt:**
+- Een dashboard gebouwd dat schaalbaar is met elke hoeveelheid gegevens
+- Herbruikbare sjablonen gemaakt voor consistente opmaak
+- Efficiënte DOM-manipulatietechnieken geïmplementeerd
+- Functionaliteit ontwikkeld die vergelijkbaar is met productie-bankapplicaties
+
+Je hebt een statische webpagina succesvol getransformeerd in een dynamische webapplicatie.
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+
+**Beschrijving:** Verbeter de bankapp door een zoek- en filterfunctie voor transacties te implementeren waarmee gebruikers specifieke transacties kunnen vinden op basis van datumbereik, bedrag of beschrijving.
+**Prompt:** Maak een zoekfunctionaliteit voor de bankapp die het volgende bevat: 1) Een zoekformulier met invoervelden voor datumbereik (van/tot), minimum/maximum bedrag en trefwoorden voor transactieomschrijving, 2) Een `filterTransactions()`-functie die de array account.transactions filtert op basis van de zoekcriteria, 3) Werk de `updateDashboard()`-functie bij om gefilterde resultaten weer te geven, en 4) Voeg een knop "Filters wissen" toe om de weergave te resetten. Gebruik moderne JavaScript-arraymethoden zoals `filter()` en behandel randgevallen voor lege zoekcriteria.
+
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
+
 ## 🚀 Uitdaging
 
-Werk samen om de dashboardpagina eruit te laten zien als een echte bankapp. Als je je app al hebt gestyled, probeer dan [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) te gebruiken om een [responsief ontwerp](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) te maken dat goed werkt op zowel desktop- als mobiele apparaten.
+Klaar om je bankapp naar een hoger niveau te tillen? Laten we het er aantrekkelijker uit laten zien en aanvoelen, zodat je het echt wilt gebruiken. Hier zijn enkele ideeën om je creativiteit te stimuleren:
 
-Hier is een voorbeeld van een gestylede dashboardpagina:
+**Maak het mooi**: Voeg CSS-styling toe om je functionele dashboard om te toveren tot iets visueel aantrekkelijk. Denk aan strakke lijnen, goede spacing en misschien zelfs subtiele animaties.
+
+**Maak het responsief**: Probeer [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) te gebruiken om een [responsief ontwerp](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) te maken dat geweldig werkt op telefoons, tablets en desktops. Je gebruikers zullen je dankbaar zijn!
+
+**Voeg wat flair toe**: Overweeg om transacties kleurcodes te geven (groen voor inkomsten, rood voor uitgaven), iconen toe te voegen of hover-effecten te creëren die de interface interactief maken.
+
+Zo zou een gepolijst dashboard eruit kunnen zien:
 
 ![Screenshot van een voorbeeldresultaat van het dashboard na styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.nl.png)
+
+Voel je niet verplicht om dit precies na te maken - gebruik het als inspiratie en maak er je eigen versie van!
 
 ## Quiz na de les
 
@@ -344,4 +748,4 @@ Hier is een voorbeeld van een gestylede dashboardpagina:
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

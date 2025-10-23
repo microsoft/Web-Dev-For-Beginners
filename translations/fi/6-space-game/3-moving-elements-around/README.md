@@ -1,76 +1,106 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T00:40:14+00:00",
+  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
+  "translation_date": "2025-10-23T00:39:23+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "fi"
 }
 -->
 # Rakenna avaruuspeli, osa 3: Liikkeen lisääminen
 
+Ajattele suosikkipelejäsi – mikä tekee niistä kiehtovia? Ei pelkästään kauniit grafiikat, vaan se, miten kaikki liikkuu ja reagoi toimintaasi. Tällä hetkellä avaruuspelisi on kuin kaunis maalaus, mutta nyt aiomme lisätä liikettä, joka herättää sen eloon.
+
+Kun NASAn insinöörit ohjelmoivat Apollo-missioiden ohjaustietokonetta, he kohtasivat samanlaisen haasteen: miten saada avaruusalus reagoimaan pilotin komentoihin samalla kun se automaattisesti korjaa kurssiaan? Tänään opimme periaatteita, jotka muistuttavat näitä samoja konsepteja – pelaajan ohjaaman liikkeen hallintaa yhdessä automaattisten järjestelmätoimintojen kanssa.
+
+Tässä oppitunnissa opit, miten avaruusalukset liukuvat ruudulla, reagoivat pelaajan komentoihin ja luovat sulavia liikemalleja. Jaamme kaiken hallittaviin osiin, jotka rakentuvat luonnollisesti toistensa päälle.
+
+Lopuksi pelaajat voivat lentää sankarialustaan ruudulla samalla kun vihollisalukset partioivat yläpuolella. Vielä tärkeämpää on, että ymmärrät pelin liikejärjestelmien keskeiset periaatteet.
+
 ## Ennakkokysely
 
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Pelit eivät ole kovin hauskoja, ennen kuin ruudulla vilisee avaruusolioita! Tässä pelissä käytämme kahta erilaista liikettä:
+## Pelin liikkeen ymmärtäminen
 
-- **Näppäimistö/hiiriliike**: kun käyttäjä käyttää näppäimistöä tai hiirtä liikuttaakseen objektia ruudulla.
-- **Pelistä johtuva liike**: kun peli liikuttaa objektia tietyin aikavälein.
+Pelit heräävät eloon, kun asiat alkavat liikkua, ja periaatteessa tämä tapahtuu kahdella tavalla:
 
-Miten siis saamme objektit liikkumaan ruudulla? Kyse on kartesiolaisista koordinaateista: muutamme objektin sijaintia (x,y) ja piirrämme ruudun uudelleen.
+- **Pelaajan ohjaama liike**: Kun painat näppäintä tai klikkaat hiirtä, jokin liikkuu. Tämä on suora yhteys sinun ja pelimaailman välillä.
+- **Automaattinen liike**: Kun peli itse päättää liikuttaa asioita – kuten vihollisaluksia, jotka partioivat ruudulla riippumatta siitä, teetkö mitään vai et.
 
-Liikkeen toteuttamiseksi ruudulla tarvitaan yleensä seuraavat vaiheet:
+Esineiden liikuttaminen tietokoneen näytöllä on yksinkertaisempaa kuin luuletkaan. Muistatko matematiikan tunnilta x- ja y-koordinaatit? Juuri niiden kanssa työskentelemme täällä. Kun Galileo seurasi Jupiterin kuita vuonna 1610, hän teki pohjimmiltaan samaa – kartoitti sijainteja ajan kuluessa ymmärtääkseen liikeratoja.
 
-1. **Aseta uusi sijainti** objektille; tämä on tarpeen, jotta objekti näyttää liikkuvan.
-2. **Tyhjennä ruutu**, ruutu täytyy tyhjentää piirtojen välillä. Voimme tyhjentää sen piirtämällä suorakulmion, jonka täytämme taustavärillä.
-3. **Piirrä objekti uudelleen** uuteen sijaintiin. Näin saamme objektin siirtymään paikasta toiseen.
+Esineiden liikuttaminen ruudulla on kuin flipbook-animaation luomista – sinun täytyy noudattaa näitä kolmea yksinkertaista vaihetta:
+
+1. **Päivitä sijainti** – Muuta, missä esineesi pitäisi olla (ehkä siirrä sitä 5 pikseliä oikealle)
+2. **Poista vanha ruutu** – Tyhjennä ruutu, jotta et näe haamujälkiä kaikkialla
+3. **Piirrä uusi ruutu** – Aseta esineesi uuteen paikkaan
+
+Tee tämä tarpeeksi nopeasti, ja voilà! Sinulla on sulava liike, joka tuntuu pelaajista luonnolliselta.
 
 Tältä se voi näyttää koodissa:
 
 ```javascript
-//set the hero's location
+// Set the hero's location
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Clear the rectangle that hosts the hero
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Redraw the game background and hero
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Voitko keksiä syyn, miksi sankarin piirtäminen monta kertaa sekunnissa voi aiheuttaa suorituskykyongelmia? Lue lisää [vaihtoehdoista tähän malliin](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+**Mitä tämä koodi tekee:**
+- **Päivittää** sankarin x-koordinaatin 5 pikselillä liikuttaakseen sitä vaakasuunnassa
+- **Tyhjentää** koko canvas-alueen poistaakseen edellisen ruudun
+- **Täyttää** canvasin mustalla taustavärillä
+- **Piirtää** sankarin kuvan sen uudessa sijainnissa
+
+✅ Voitko keksiä syyn, miksi sankarin uudelleenpiirtäminen monta kertaa sekunnissa saattaa aiheuttaa suorituskykyongelmia? Lue lisää [vaihtoehdoista tähän malliin](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Näppäimistötapahtumien käsittely
 
-Tapahtumia käsitellään liittämällä tiettyjä tapahtumia koodiin. Näppäimistötapahtumat aktivoituvat koko ikkunassa, kun taas hiiritapahtumat, kuten `click`, voidaan liittää tiettyyn elementtiin. Käytämme näppäimistötapahtumia koko projektin ajan.
+Tässä yhdistämme pelaajan syötteen pelin toimintaan. Kun joku painaa välilyöntiä laukaistakseen laserin tai napauttaa nuolinäppäintä väistääkseen asteroidin, pelisi täytyy havaita ja reagoida tähän syötteeseen.
 
-Tapahtuman käsittelemiseksi sinun täytyy käyttää ikkunan `addEventListener()`-metodia ja antaa sille kaksi syötettä. Ensimmäinen syöte on tapahtuman nimi, esimerkiksi `keyup`. Toinen syöte on funktio, joka kutsutaan tapahtuman tapahtuessa.
+Näppäimistötapahtumat tapahtuvat ikkunatasolla, mikä tarkoittaa, että koko selaimen ikkuna kuuntelee näitä näppäinpainalluksia. Hiiren klikkaukset taas voidaan sitoa tiettyihin elementteihin (kuten painikkeen klikkaamiseen). Avaruuspeliämme varten keskitymme näppäimistöohjaukseen, koska se antaa pelaajille sen klassisen arcade-tunnelman.
 
-Esimerkki:
+Tämä muistuttaa minua siitä, miten 1800-luvun lennätinoperaattorit joutuivat kääntämään morsekoodin syötteen merkityksellisiksi viesteiksi – teemme jotain vastaavaa, kääntäen näppäinpainallukset pelikomennoksi.
+
+Tapahtuman käsittelemiseksi sinun täytyy käyttää ikkunan `addEventListener()`-metodia ja antaa sille kaksi syöttöparametria. Ensimmäinen parametri on tapahtuman nimi, esimerkiksi `keyup`. Toinen parametri on funktio, joka pitäisi kutsua tapahtuman tapahtuessa.
+
+Tässä esimerkki:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = string representation of the key
   if (evt.key === 'ArrowUp') {
     // do something
   }
-})
+});
 ```
 
-Näppäimistötapahtumissa on kaksi ominaisuutta, joiden avulla voit tarkistaa, mikä näppäin painettiin:
+**Mitä tässä tapahtuu:**
+- **Kuuntelee** näppäimistötapahtumia koko ikkunassa
+- **Tallentaa** tapahtumaobjektin, joka sisältää tiedot siitä, mikä näppäin painettiin
+- **Tarkistaa**, vastaako painettu näppäin tiettyä näppäintä (tässä tapauksessa nuoli ylös)
+- **Suorittaa** koodia, kun ehto täyttyy
 
-- `key`, joka on painetun näppäimen merkkijonoesitys, esimerkiksi `ArrowUp`.
-- `keyCode`, joka on numeroinen esitys, esimerkiksi `37`, vastaa `ArrowLeft`.
+Näppäintapahtumille on kaksi ominaisuutta, joita voit käyttää nähdäksesi, mikä näppäin painettiin:
 
-✅ Näppäimistötapahtumien manipulointi on hyödyllistä myös pelikehityksen ulkopuolella. Mihin muihin tarkoituksiin voisit käyttää tätä tekniikkaa?
+- `key` - tämä on painetun näppäimen merkkijonoesitys, esimerkiksi `'ArrowUp'`
+- `keyCode` - tämä on numeroinen esitys, esimerkiksi `37`, joka vastaa `ArrowLeft`
 
-### Erikoisnäppäimet: huomioitavaa
+✅ Näppäintapahtumien manipulointi on hyödyllistä myös pelinkehityksen ulkopuolella. Mihin muihin tarkoituksiin voisit käyttää tätä tekniikkaa?
 
-On olemassa joitakin *erikoisnäppäimiä*, jotka vaikuttavat ikkunaan. Tämä tarkoittaa, että jos kuuntelet `keyup`-tapahtumaa ja käytät näitä erikoisnäppäimiä liikuttaaksesi sankaria, se voi myös aiheuttaa vaakasuoraa vieritystä. Tästä syystä saatat haluta *poistaa käytöstä* tämän sisäänrakennetun selaimen toiminnan pelin kehittämisen aikana. Tarvitset koodia, kuten tämä:
+### Erikoisnäppäimet: huomio!
+
+Joillakin näppäimillä on sisäänrakennettuja selaimen toimintoja, jotka voivat häiritä peliäsi. Nuolinäppäimet vierittävät sivua ja välilyönti hyppää alas – toimintoja, joita et halua, kun joku yrittää ohjata avaruusalustaan.
+
+Voimme estää nämä oletustoiminnot ja antaa pelin käsitellä syötteen sen sijaan. Tämä on samanlaista kuin miten varhaiset tietokoneohjelmoijat joutuivat ohittamaan järjestelmän keskeytykset luodakseen mukautettuja toimintoja – me vain teemme sen selaintasolla. Näin se onnistuu:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
@@ -88,27 +118,43 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Yllä oleva koodi varmistaa, että nuolinäppäimillä ja välilyöntinäppäimellä on *oletuskäyttäytyminen* poistettu käytöstä. *Poistomekanismi* tapahtuu, kun kutsumme `e.preventDefault()`.
+**Tämän estokoodin ymmärtäminen:**
+- **Tarkistaa** tietyt näppäinkoodit, jotka saattavat aiheuttaa ei-toivottua selaimen toimintaa
+- **Estää** oletusselaintoiminnon nuolinäppäimille ja välilyönnille
+- **Sallii** muiden näppäinten toimia normaalisti
+- **Käyttää** `e.preventDefault()`-metodia pysäyttääkseen selaimen sisäänrakennetun toiminnan
 
-## Pelistä johtuva liike
+## Pelin automaattinen liike
 
-Voimme saada objektit liikkumaan itsestään käyttämällä ajastimia, kuten `setTimeout()` tai `setInterval()`-funktiota, jotka päivittävät objektin sijaintia jokaisella aikavälillä. Tältä se voi näyttää:
+Puhutaan nyt esineistä, jotka liikkuvat ilman pelaajan syötettä. Ajattele vihollisaluksia, jotka risteilevät ruudulla, luoteja, jotka lentävät suoraan eteenpäin, tai pilviä, jotka ajelehtivat taustalla. Tämä autonominen liike saa pelimaailmasi tuntumaan elävältä, vaikka kukaan ei koskisi ohjaimiin.
+
+Käytämme JavaScriptin sisäänrakennettuja ajastimia päivittääksemme sijainteja säännöllisin väliajoin. Tämä konsepti on samanlainen kuin heilurikellojen toiminta – säännöllinen mekanismi, joka laukaisee johdonmukaisia, ajastettuja toimintoja. Näin yksinkertaista se voi olla:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Move the enemy on the y axis
   enemy.y += 10;
-})
+}, 100);
 ```
 
-## Pelisilmukka
+**Mitä tämä liikkumiskoodi tekee:**
+- **Luo** ajastimen, joka käynnistyy 100 millisekunnin välein
+- **Päivittää** vihollisen y-koordinaatin 10 pikselillä joka kerta
+- **Tallentaa** intervallin tunnuksen, jotta sen voi tarvittaessa pysäyttää myöhemmin
+- **Liikuttaa** vihollista automaattisesti alaspäin ruudulla
 
-Pelisilmukka on konsepti, joka käytännössä tarkoittaa funktiota, joka kutsutaan säännöllisin väliajoin. Sitä kutsutaan pelisilmukaksi, koska kaikki, mikä pitäisi olla näkyvissä käyttäjälle, piirretään silmukkaan. Pelisilmukka käyttää kaikkia pelin osia, jotka ovat osa peliä, piirtäen ne kaikki, ellei jokin syy estä niitä olemasta osa peliä. Esimerkiksi jos objekti on vihollinen, joka osui laseriin ja räjähti, se ei enää ole osa nykyistä pelisilmukkaa (opit tästä lisää myöhemmissä oppitunneissa).
+## Pelin silmukka
 
-Tältä pelisilmukka voi tyypillisesti näyttää koodissa:
+Tässä on konsepti, joka sitoo kaiken yhteen – pelin silmukka. Jos pelisi olisi elokuva, pelin silmukka olisi filmiprojektori, joka näyttää ruutuja niin nopeasti, että kaikki näyttää liikkuvan sulavasti.
+
+Jokaisessa pelissä on tällainen silmukka taustalla. Se on funktio, joka päivittää kaikki pelin objektit, piirtää ruudun uudelleen ja toistaa tämän prosessin jatkuvasti. Tämä pitää kirjaa sankaristasi, kaikista vihollisista, lentävistä lasereista – koko pelitilasta.
+
+Tämä konsepti muistuttaa minua siitä, miten varhaiset animaattorit, kuten Walt Disney, joutuivat piirtämään hahmot ruutu ruudulta luodakseen liikkeen illuusion. Me teemme samaa, mutta koodilla kynien sijaan.
+
+Tältä pelin silmukka yleensä näyttää koodissa:
 
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,21 +162,33 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-Yllä oleva silmukka kutsutaan joka `200` millisekunti ruudun uudelleenpiirtämiseksi. Voit valita parhaan aikavälin, joka sopii peliisi.
+**Pelin silmukan rakenteen ymmärtäminen:**
+- **Tyhjentää** koko canvasin poistaakseen edellisen ruudun
+- **Täyttää** taustan yhtenäisellä värillä
+- **Piirtää** kaikki pelin objektit niiden nykyisiin sijainteihin
+- **Toistaa** tämän prosessin 200 millisekunnin välein luodakseen sulavan animaation
+- **Hallinnoi** ruutunopeutta ohjaamalla intervalliaikaa
 
 ## Avaruuspeli jatkuu
 
-Otat olemassa olevan koodin ja laajennat sitä. Voit joko aloittaa koodilla, jonka olet tehnyt osassa I, tai käyttää koodia [Osa II - aloitus](../../../../6-space-game/3-moving-elements-around/your-work).
+Nyt lisäämme liikettä aiemmin rakentamaasi staattiseen näkymään. Muutamme sen kuvakaappauksesta interaktiiviseksi kokemukseksi. Käymme tämän läpi askel askeleelta varmistaaksemme, että jokainen osa rakentuu edellisen päälle.
 
-- **Sankarin liikuttaminen**: lisäät koodia, joka mahdollistaa sankarin liikuttamisen nuolinäppäimillä.
-- **Vihollisten liikuttaminen**: lisäät myös koodia, joka saa viholliset liikkumaan ylhäältä alas tietyllä nopeudella.
+Hae koodi siitä, mihin jäimme edellisessä oppitunnissa (tai aloita koodilla [Osa II - aloitus](../../../../6-space-game/3-moving-elements-around/your-work)-kansiosta, jos tarvitset uuden aloituksen).
+
+**Tätä rakennamme tänään:**
+- **Sankarin ohjaus**: Nuolinäppäimillä ohjataan avaruusalusta ruudulla
+- **Vihollisten liike**: Nuo avaruusolentojen alukset aloittavat etenemisensä
+
+Aloitetaan näiden ominaisuuksien toteuttaminen.
 
 ## Suositellut vaiheet
 
-Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi sisältää seuraavat:
+Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansioon. Sen pitäisi sisältää seuraavat:
 
 ```bash
 -| assets
@@ -141,25 +199,29 @@ Etsi tiedostot, jotka on luotu sinulle `your-work`-alikansiossa. Sen pitäisi si
 -| package.json
 ```
 
-Aloita projektisi `your_work`-kansiossa kirjoittamalla:
+Aloita projektisi `your-work`-kansiossa kirjoittamalla:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä tuo osoite; tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset, mutta mikään ei liiku - vielä!
+**Mitä tämä komento tekee:**
+- **Siirtyy** projektihakemistoon
+- **Käynnistää** HTTP-palvelimen osoitteessa `http://localhost:5000`
+- **Palvelee** pelitiedostosi, jotta voit testata niitä selaimessa
+
+Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. Avaa selain ja syötä kyseinen osoite, tällä hetkellä sen pitäisi näyttää sankari ja kaikki viholliset; mikään ei kuitenkaan vielä liiku!
 
 ### Lisää koodia
 
-1. **Lisää omistettuja objekteja** `hero`, `enemy` ja `game object`, joilla on `x` ja `y` ominaisuudet. (Muista osio [Perintä tai koostumus](../README.md)).
+1. **Lisää omistettuja objekteja** `hero`, `enemy` ja `game object`, joilla on `x` ja `y` -ominaisuudet. (Muista osio [Periytyminen tai koostumus](../README.md)).
 
-   *VINKKI* `game object` pitäisi olla se, jolla on `x` ja `y` sekä kyky piirtää itsensä kankaalle.
+   *VINKKI* `game object` pitäisi olla se, jolla on `x` ja `y` sekä kyky piirtää itsensä canvasille.
 
-   >vinkki: aloita lisäämällä uusi GameObject-luokka, jonka konstruktori on määritelty alla, ja piirrä se kankaalle:
-  
+   > **Vinkki**: Aloita lisäämällä uusi `GameObject`-luokka, jonka konstruktori on määritelty alla, ja piirrä se sitten canvasille:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +239,22 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
     }
     ```
 
-    Laajenna nyt tätä GameObjectia luodaksesi Hero ja Enemy.
+    **Tämän perusluokan ymmärtäminen:**
+    - **Määrittää** yhteiset ominaisuudet, jotka kaikki pelin objektit jakavat (sijainti, koko, kuva)
+    - **Sisältää** `dead`-lipun, joka seuraa, pitäisikö objekti poistaa
+    - **Tarjoaa** `draw()`-metodin, joka piirtää objektin canvasille
+    - **Asettaa** oletusarvot kaikille ominaisuuksille, joita aliluokat voivat korvata
+
+    Nyt laajenna tätä `GameObject`-luokkaa luodaksesi `Hero` ja `Enemy`:
     
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,129 +263,152 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Lisää näppäimistötapahtumien käsittelijät** sankarin liikkumisen hallintaan (liikuta sankaria ylös/alas vasemmalle/oikealle)
+    **Keskeiset käsitteet näissä luokissa:**
+    - **Perii** `GameObject`-luokasta käyttäen `extends`-avainsanaa
+    - **Kutsuu** vanhemman konstruktorin `super(x, y)`-kutsulla
+    - **Asettaa** erityiset mitat ja ominaisuudet kullekin objektityypille
+    - **Toteuttaa** automaattisen liikkeen vihollisille käyttäen `setInterval()`
 
-   *MUISTA* kyseessä on kartesiolainen järjestelmä, vasen yläkulma on `0,0`. Muista myös lisätä koodi oletuskäyttäytymisen estämiseksi.
+2. **Lisää näppäintapahtumien käsittelijät** sankarin liikuttamiseksi ylös/alas/vasemmalle/oikealle
 
-   >vinkki: luo oma onKeyDown-funktio ja liitä se ikkunaan:
+   *MUISTA*, että kyseessä on kartesiolainen järjestelmä, vasen yläkulma on `0,0`. Muista myös lisätä koodi oletuskäyttäytymisen estämiseksi.
+
+   > **Vinkki**: Luo `onKeyDown`-funktiosi ja liitä se ikkunaan:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Add the code from the lesson above to stop default behavior
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Arrow keys
+       case 32:
+         e.preventDefault();
+         break; // Space
+       default:
+         break; // do not block other keys
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Tarkista selaimen konsoli tässä vaiheessa ja katso, kuinka näppäinpainallukset kirjautuvat.
+   **Mitä tämä tapahtumankäsittelijä tekee:**
+   - **Kuuntelee** näppäinten painalluksia koko ikkunassa
+   - **Kirjaa** näppäinkoodin auttaakseen sinua debuggaamaan, mitä näppäimiä painetaan
+   - **Estää** oletusselaintoiminnan nuolinäppäimille ja välilyönnille
+   - **Sallii** muiden näppäinten toimia normaalisti
+   
+   Tarkista selaimesi konsoli tässä vaiheessa ja katso, kuinka näppäinpainallukset kirjautuvat.
 
 3. **Toteuta** [Pub sub -malli](../README.md), tämä pitää koodisi siistinä, kun seuraat jäljellä olevia osia.
 
-   Tämän viimeisen osan tekemiseksi voit:
+   Publish-Subscribe-malli auttaa järjestämään koodisi erottamalla tapahtumien havaitsemisen niiden käsittelystä. Tämä tekee koodistasi modulaarisemman ja helpommin ylläpidettävän.
 
-   1. **Lisätä tapahtumakuuntelijan** ikkunaan:
+   Tämän viimeisen osan toteuttamiseksi voit:
+
+   1. **Lisätä tapahtumankuuntelijan** ikkunaan:
 
        ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
+       window.addEventListener("keyup", (evt) => {
+         if (evt.key === "ArrowUp") {
+           eventEmitter.emit(Messages.KEY_EVENT_UP);
+         } else if (evt.key === "ArrowDown") {
+           eventEmitter.emit(Messages.KEY_EVENT_DOWN);
+         } else if (evt.key === "ArrowLeft") {
+           eventEmitter.emit(Messages.KEY_EVENT_LEFT);
+         } else if (evt.key === "ArrowRight") {
+           eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
+         }
+       });
+       ```
 
-    1. **Luo EventEmitter-luokka** viestien julkaisemiseen ja tilaamiseen:
+   **Mitä tämä tapahtumajärjestelmä tekee:**
+   - **Havaitsee** näppäimistösyötteen ja muuntaa sen mukautetuiksi pelitapahtumiksi
+   - **Erottaa** syötteen havaitsemisen pelilogiikasta
+   - **Helpottaa** ohjainten muuttamista myöhemmin vaikuttamatta pelin koodiin
+   - **Mahdollistaa**, että useat järjestelmät voivat reagoida samaan syötteeseen
 
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
+   2. **Luo EventEmitter-luokka** viestien julkaisemista ja tilaamista varten:
 
-    1. **Lisää vakioita** ja aseta EventEmitter:
+       ```javascript
+       class EventEmitter {
+         constructor() {
+           this.listeners = {};
+         }
+       
+         on(message, listener) {
+           if (!this.listeners[message]) {
+             this.listeners[message] = [];
+           }
+           this.listeners[message].push(listener);
+         }
+       
+   3. **Lisää vakioita** ja aseta EventEmitter:
 
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
+       ```javascript
+       const Messages = {
+         KEY_EVENT_UP: "KEY_EVENT_UP",
+         KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
+         KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
+         KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
+       };
+       
+       let heroImg, 
+           enemyImg, 
+           laserImg,
+           canvas, ctx, 
+           gameObjects = [], 
+           hero, 
+           eventEmitter = new EventEmitter();
+       ```
 
-    1. **Alusta peli**
+   **Ymmärrä asetukset:**
+   - **Määrittää** viestivakiot välttääkseen kirjoitusvirheitä ja helpottaakseen refaktorointia
+   - **Ilmoittaa** muuttujat kuville, canvas-kontekstille ja pelitilalle
+   - **Luo** globaalin tapahtumaemitterin pub-sub-järjestelmää varten
+   - **Alustaa** taulukon kaikkien pelin objektien tallentamiseksi
 
-    ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
-    
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
-    
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
-    }
-    ```
+   4. **Alusta peli**
 
-1. **Aseta pelisilmukka**
+       ```javascript
+       function initGame() {
+         gameObjects = [];
+         createEnemies();
+         createHero();
+       
+         eventEmitter.on(Messages.KEY_EVENT_UP, () => {
+           hero.y -= 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
+           hero.y += 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
+           hero.x -= 5;
+         });
+       
+4. **Aseta pelin silmukka**
 
-   Refaktoroi window.onload-funktio pelin alustamiseksi ja pelisilmukan asettamiseksi hyvällä aikavälillä. Lisää myös laser-säde:
+   Refaktoroi `window.onload`-funktio alustamaan peli ja asettamaan pelin silmukka hyvällä intervallilla. Lisää myös laser:
 
     ```javascript
     window.onload = async () => {
@@ -324,17 +419,23 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       laserImg = await loadTexture("assets/laserRed.png");
     
       initGame();
-      let gameLoopId = setInterval(() => {
+      const gameLoopId = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawGameObjects(ctx);
-      }, 100)
-      
+      }, 100);
     };
     ```
 
-5. **Lisää koodia** vihollisten liikuttamiseksi tietyin aikavälein
+   **Pelin asetusten ymmärtäminen:**
+   - **Odottaa**, että sivu latautuu kokonaan ennen aloittamista
+   - **Hakee** canvas-elementin ja sen 2D-piirtokontekstin
+   - **Lataa** kaikki kuvatiedostot asynkronisesti käyttäen `await`
+   - **Käynnistää** pelin silmukan, joka pyörii 100 ms välein (10 FPS)
+   - **Tyhjentää** ja piirtää koko ruudun uudelleen jokaisessa ruudussa
+
+5. **Lisää koodia** vihollisten liikuttamiseksi tietyin väliajoin
 
     Refaktoroi `createEnemies()`-funktio luomaan viholliset ja lisäämään ne uuteen gameObjects-luokkaan:
 
@@ -354,8 +455,49 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       }
     }
     ```
+
+    **Mitä vihollisten luominen tekee
+- **Luo** vihollisten ruudukon käyttämällä sisäkkäisiä silmukoita  
+- **Määrittää** viholliskuvan jokaiselle vihollisobjektille  
+- **Lisää** jokaisen vihollisen globaalin pelin objektien taulukkoon  
+
+ja lisää `createHero()`-funktio, joka tekee samanlaisen prosessin sankarille.  
+
+    ```javascript
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
+    }
+    ```
+  
+**Mitä sankarin luonti tekee:**  
+- **Asettaa** sankarin näytön alareunaan keskelle  
+- **Määrittää** sankarikuvan sankariobjektille  
+- **Lisää** sankarin pelin objektien taulukkoon renderöintiä varten  
+
+ja lopuksi lisää `drawGameObjects()`-funktio piirtämisen aloittamiseksi:  
+
+    ```javascript
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
+    }
+    ```
+  
+**Piirtämisfunktion ymmärtäminen:**  
+- **Käy läpi** kaikki pelin objektit taulukossa  
+- **Kutsuu** `draw()`-metodia jokaiselle objektille  
+- **Välittää** canvas-kontekstin, jotta objektit voivat piirtää itsensä  
+
+Vihollisesi alkavat edetä kohti sankarisi avaruusalusta!  
+}  
+}  
+    ```
     
-    ja lisää `createHero()`-funktio tekemään saman prosessin sankarille.
+    and add a `createHero()` function to do a similar process for the hero.
     
     ```javascript
     function createHero() {
@@ -367,36 +509,68 @@ Yllä oleva käynnistää HTTP-palvelimen osoitteessa `http://localhost:5000`. A
       gameObjects.push(hero);
     }
     ```
-
-    ja lopuksi lisää `drawGameObjects()`-funktio piirtämisen aloittamiseksi:
+  
+ja lopuksi lisää `drawGameObjects()`-funktio piirtämisen aloittamiseksi:  
 
     ```javascript
     function drawGameObjects(ctx) {
       gameObjects.forEach(go => go.draw(ctx));
     }
     ```
-
-    Vihollisesi alkavat edetä sankarialuksesi kimppuun!
+  
+Vihollisesi alkavat edetä kohti sankarisi avaruusalusta!  
 
 ---
 
-## 🚀 Haaste
+## GitHub Copilot Agent -haaste 🚀  
 
-Kuten huomaat, koodisi voi muuttua "spagettikoodiksi", kun alat lisätä funktioita, muuttujia ja luokkia. Miten voisit järjestää koodisi paremmin, jotta se olisi luettavampaa? Piirrä järjestelmä koodisi järjestämiseksi, vaikka se pysyisi yhdessä tiedostossa.
+Tässä on haaste, joka parantaa pelisi viimeistelyä: rajojen lisääminen ja sulavat ohjaimet. Tällä hetkellä sankarisi voi lentää pois näytöltä, ja liike saattaa tuntua nykivältä.  
 
-## Jälkikysely
+**Tehtäväsi:** Tee avaruusaluksestasi realistisempi toteuttamalla näytön rajat ja sulava liike. Tämä on samanlaista kuin NASA:n lentokontrollijärjestelmät, jotka estävät avaruusaluksia ylittämästä turvallisia toimintarajoja.  
 
-[Jälkikysely](https://ff-quizzes.netlify.app/web/quiz/34)
+**Tässä mitä sinun tulee rakentaa:** Luo järjestelmä, joka pitää sankarisi avaruusaluksen näytöllä ja tekee ohjauksesta sulavan. Kun pelaajat pitävät nuolinäppäintä painettuna, aluksen tulisi liukua jatkuvasti sen sijaan, että se liikkuisi erillisinä askelina. Harkitse visuaalisen palautteen lisäämistä, kun alus saavuttaa näytön rajat – esimerkiksi hienovarainen efekti, joka osoittaa pelialueen reunan.  
 
-## Kertaus ja itseopiskelu
+Lisätietoja [agent mode -tilasta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) löydät täältä.  
 
-Vaikka kirjoitamme pelimme ilman kehyksiä, on olemassa monia JavaScript-pohjaisia canvas-kehyksiä pelikehitykseen. Käytä aikaa [lukemiseen näistä](https://github.com/collections/javascript-game-engines).
+## 🚀 Haaste  
 
-## Tehtävä
+Koodin organisointi tulee yhä tärkeämmäksi projektien kasvaessa. Olet ehkä huomannut, että tiedostosi täyttyy funktioista, muuttujista ja luokista, jotka ovat kaikki sekaisin keskenään. Tämä muistuttaa minua siitä, kuinka Apollo-mission insinöörit joutuivat luomaan selkeitä ja ylläpidettäviä järjestelmiä, joiden parissa useat tiimit pystyivät työskentelemään samanaikaisesti.  
 
-[Kommentoi koodisi](assignment.md)
+**Tehtäväsi:**  
+Ajattele kuin ohjelmistoarkkitehti. Kuinka järjestäisit koodisi niin, että kuuden kuukauden päästä sinä (tai tiimikaverisi) ymmärtäisitte, mitä siinä tapahtuu? Vaikka kaikki pysyisi yhdessä tiedostossa toistaiseksi, voit luoda parempaa organisointia:  
+
+- **Ryhmittele** liittyvät funktiot yhteen selkeillä kommenttiosioilla  
+- **Erota vastuut** – pidä pelilogiikka erillään renderöinnistä  
+- **Käytä johdonmukaisia nimeämiskäytäntöjä** muuttujille ja funktioille  
+- **Luo moduuleja** tai nimiavaruuksia pelisi eri osa-alueiden järjestämiseksi  
+- **Lisää dokumentaatiota**, joka selittää jokaisen pääosion tarkoituksen  
+
+**Pohdintakysymyksiä:**  
+- Mitkä osat koodistasi ovat vaikeimpia ymmärtää, kun palaat niiden pariin?  
+- Kuinka voisit järjestää koodisi, jotta joku muu voisi helpommin osallistua sen kehittämiseen?  
+- Mitä tapahtuisi, jos haluaisit lisätä uusia ominaisuuksia, kuten voimaesineitä tai erilaisia vihollistyyppejä?  
+
+## Luentojälkeinen kysely  
+
+[Luentojälkeinen kysely](https://ff-quizzes.netlify.app/web/quiz/34)  
+
+## Kertaus ja itseopiskelu  
+
+Olemme rakentaneet kaiken alusta asti, mikä on loistavaa oppimisen kannalta, mutta tässä pieni salaisuus – on olemassa upeita JavaScript-kehyksiä, jotka voivat hoitaa paljon raskasta työtä puolestasi. Kun tunnet olosi mukavaksi käsittelemämme perusteiden kanssa, kannattaa [tutkia, mitä on tarjolla](https://github.com/collections/javascript-game-engines).  
+
+Ajattele kehyksiä kuin hyvin varusteltua työkalupakkia sen sijaan, että tekisit jokaisen työkalun itse. Ne voivat ratkaista monia niistä koodin organisointiin liittyvistä haasteista, joista puhuimme, ja tarjota ominaisuuksia, joiden rakentaminen itse veisi viikkoja.  
+
+**Tutustumisen arvoisia asioita:**  
+- Kuinka pelimoottorit järjestävät koodin – tulet hämmästymään niiden käyttämistä älykkäistä malleista  
+- Suorituskykytemppuja, jotka saavat canvas-pelit pyörimään sulavasti  
+- Modernit JavaScript-ominaisuudet, jotka voivat tehdä koodistasi siistimmän ja helpommin ylläpidettävän  
+- Erilaisia lähestymistapoja pelin objektien ja niiden suhteiden hallintaan  
+
+## Tehtävä  
+
+[Kommentoi koodisi](assignment.md)  
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskääntämistä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinkäsityksistä tai virhetulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

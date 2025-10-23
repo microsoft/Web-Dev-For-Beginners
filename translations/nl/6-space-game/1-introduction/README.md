@@ -1,50 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
-  "translation_date": "2025-08-29T00:59:08+00:00",
+  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
+  "translation_date": "2025-10-23T01:06:16+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "nl"
 }
 -->
 # Bouw een Ruimtespel Deel 1: Introductie
 
-![video](../../../../6-space-game/images/pewpew.gif)
+![Animatie van een ruimtespel met gameplay](../../../../6-space-game/images/pewpew.gif)
 
-## Pre-Lecture Quiz
+Net zoals de missiecontrole van NASA meerdere systemen coördineert tijdens een lancering, gaan we een ruimtespel bouwen dat laat zien hoe verschillende onderdelen van een programma naadloos kunnen samenwerken. Terwijl je iets maakt dat je daadwerkelijk kunt spelen, leer je essentiële programmeerconcepten die toepasbaar zijn op elk softwareproject.
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/29)
+We gaan twee fundamentele benaderingen verkennen om code te organiseren: overerving en compositie. Dit zijn niet alleen academische concepten – het zijn dezelfde patronen die alles aandrijven, van videogames tot banksystemen. Daarnaast implementeren we een communicatiesysteem genaamd pub/sub, dat werkt zoals de communicatienetwerken in ruimtevaartuigen, waardoor verschillende componenten informatie kunnen delen zonder afhankelijkheden te creëren.
 
-### Overerving en Compositie in game-ontwikkeling
+Aan het einde van deze serie begrijp je hoe je applicaties kunt bouwen die schaalbaar en flexibel zijn – of je nu games, webapplicaties of andere softwaresystemen ontwikkelt.
 
-In eerdere lessen hoefde je je niet veel zorgen te maken over de ontwerpstructuur van de apps die je bouwde, omdat de projecten erg klein van omvang waren. Maar naarmate je applicaties groter worden, worden architecturale beslissingen belangrijker. Er zijn twee belangrijke benaderingen om grotere applicaties in JavaScript te maken: *compositie* of *overerving*. Beide hebben voor- en nadelen, maar laten we ze uitleggen in de context van een spel.
+## Quiz voor de les
 
-✅ Een van de beroemdste programmeerboeken ooit geschreven gaat over [ontwerppatronen](https://en.wikipedia.org/wiki/Design_Patterns).
+[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/29)
 
-In een spel heb je `game objects`, objecten die op een scherm bestaan. Dit betekent dat ze een locatie hebben in een cartesiaans coördinatensysteem, gekenmerkt door een `x`- en `y`-coördinaat. Tijdens het ontwikkelen van een spel zul je merken dat al je game-objecten een standaard eigenschap hebben, gemeenschappelijk voor elk spel dat je maakt, namelijk elementen die:
+## Overerving en Compositie in Game Development
 
-- **locatie-gebaseerd** zijn. De meeste, zo niet alle, game-elementen zijn locatie-gebaseerd. Dit betekent dat ze een locatie hebben, een `x` en `y`.
-- **beweegbaar** zijn. Dit zijn objecten die naar een nieuwe locatie kunnen bewegen. Dit is meestal een held, een monster of een NPC (een niet-speler personage), maar bijvoorbeeld geen statisch object zoals een boom.
-- **zelfvernietigend** zijn. Deze objecten bestaan slechts voor een bepaalde tijd voordat ze zichzelf markeren voor verwijdering. Meestal wordt dit weergegeven door een `dead` of `destroyed` boolean die aangeeft aan de game-engine dat dit object niet langer gerenderd moet worden.
-- **cool-down** hebben. 'Cool-down' is een typische eigenschap van kortlevende objecten. Een typisch voorbeeld is een stuk tekst of een grafisch effect zoals een explosie die slechts enkele milliseconden zichtbaar moet zijn.
+Naarmate projecten complexer worden, wordt het organiseren van code cruciaal. Wat begint als een eenvoudig script kan moeilijk te onderhouden worden zonder een goede structuur – net zoals de Apollo-missies zorgvuldige coördinatie vereisten tussen duizenden componenten.
+
+We gaan twee fundamentele benaderingen voor het organiseren van code verkennen: overerving en compositie. Elk heeft zijn eigen voordelen, en door beide te begrijpen kun je de juiste aanpak kiezen voor verschillende situaties. We demonstreren deze concepten via ons ruimtespel, waarin helden, vijanden, power-ups en andere objecten efficiënt met elkaar moeten samenwerken.
+
+✅ Een van de meest beroemde programmeerboeken ooit geschreven gaat over [design patterns](https://en.wikipedia.org/wiki/Design_Patterns).
+
+In elk spel heb je `game objects` – de interactieve elementen die je spelwereld bevolken. Helden, vijanden, power-ups en visuele effecten zijn allemaal game-objecten. Elk bevindt zich op specifieke schermcoördinaten met behulp van `x`- en `y`-waarden, vergelijkbaar met het plotten van punten op een coördinatenvlak.
+
+Ondanks hun visuele verschillen delen deze objecten vaak fundamenteel gedrag:
+
+- **Ze bestaan ergens** – Elk object heeft x- en y-coördinaten zodat het spel weet waar het moet worden getekend
+- **Veel kunnen bewegen** – Helden rennen, vijanden achtervolgen, kogels vliegen over het scherm
+- **Ze hebben een levensduur** – Sommige blijven altijd, andere (zoals explosies) verschijnen kort en verdwijnen
+- **Ze reageren op dingen** – Wanneer dingen botsen, worden power-ups verzameld, gezondheidsbalken bijgewerkt
 
 ✅ Denk aan een spel zoals Pac-Man. Kun je de vier hierboven genoemde objecttypen in dit spel identificeren?
 
-### Gedrag uitdrukken
+### Gedrag uitdrukken via code
 
-Alles wat we hierboven beschreven zijn gedragingen die game-objecten kunnen hebben. Maar hoe coderen we die? We kunnen dit gedrag uitdrukken als methoden die geassocieerd zijn met klassen of objecten.
+Nu je begrijpt welk gedrag game-objecten gemeen hebben, laten we onderzoeken hoe je dit gedrag kunt implementeren in JavaScript. Je kunt het gedrag van objecten uitdrukken via methoden die zijn gekoppeld aan klassen of individuele objecten, en er zijn verschillende benaderingen om uit te kiezen.
 
-**Klassen**
+**De Klasse-gebaseerde Benadering**
 
-Het idee is om `klassen` in combinatie met `overerving` te gebruiken om een bepaald gedrag aan een klasse toe te voegen.
+Klassen en overerving bieden een gestructureerde aanpak om game-objecten te organiseren. Net zoals het taxonomische classificatiesysteem ontwikkeld door Carl Linnaeus, begin je met een basisklasse die gemeenschappelijke eigenschappen bevat, en vervolgens maak je gespecialiseerde klassen die deze basisprincipes erven terwijl ze specifieke mogelijkheden toevoegen.
 
 ✅ Overerving is een belangrijk concept om te begrijpen. Lees meer in [MDN's artikel over overerving](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Uitgedrukt in code kan een game-object er typisch zo uitzien:
+Hier is hoe je game-objecten kunt implementeren met klassen en overerving:
 
 ```javascript
-
-//set up the class GameObject
+// Step 1: Create the base GameObject class
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -52,187 +61,309 @@ class GameObject {
     this.type = type;
   }
 }
+```
 
-//this class will extend the GameObject's inherent class properties
+**Laten we dit stap voor stap bekijken:**
+- We maken een basis sjabloon die elk game-object kan gebruiken
+- De constructor slaat op waar het object is (`x`, `y`) en wat voor soort ding het is
+- Dit wordt de basis waarop al je game-objecten zullen voortbouwen
+
+```javascript
+// Step 2: Add movement capability through inheritance
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type); // Call parent constructor
   }
 
-//this movable object can be moved on the screen
+  // Add the ability to move to a new position
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
-class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
-  }
-}
-
-//this class, on the other hand, only inherits the GameObject properties
-class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
-  }
-}
-
-//a hero can move...
-const hero = new Hero();
-hero.moveTo(5,5);
-
-//but a tree cannot
-const tree = new Tree();
 ```
 
-✅ Neem een paar minuten om een Pac-Man held (bijvoorbeeld Inky, Pinky of Blinky) opnieuw te bedenken en hoe deze in JavaScript geschreven zou worden.
-
-**Compositie**
-
-Een andere manier om object-overerving te behandelen is door gebruik te maken van *Compositie*. Objecten drukken hun gedrag dan als volgt uit:
+**In het bovenstaande hebben we:**
+- **Uitgebreid** de GameObject-klasse om bewegingsfunctionaliteit toe te voegen
+- **Aangeroepen** de ouderconstructor met behulp van `super()` om geërfde eigenschappen te initialiseren
+- **Toegevoegd** een `moveTo()`-methode die de positie van het object bijwerkt
 
 ```javascript
-//create a constant gameObject
+// Step 3: Create specific game object types
+class Hero extends Movable {
+  constructor(x, y) {
+    super(x, y, 'Hero'); // Set type automatically
+  }
+}
+
+class Tree extends GameObject {
+  constructor(x, y) {
+    super(x, y, 'Tree'); // Trees don't need movement
+  }
+}
+
+// Step 4: Use your game objects
+const hero = new Hero(0, 0);
+hero.moveTo(5, 5); // Hero can move!
+
+const tree = new Tree(10, 15);
+// tree.moveTo() would cause an error - trees can't move
+```
+
+**Begrijp deze concepten:**
+- **Creëert** gespecialiseerde objecttypen die geschikt gedrag erven
+- **Toont** hoe overerving selectieve functietoewijzing mogelijk maakt
+- **Laat zien** dat helden kunnen bewegen terwijl bomen stil blijven staan
+- **Illustreert** hoe de klassenhiërarchie ongepaste acties voorkomt
+
+✅ Neem een paar minuten de tijd om een Pac-Man held (Inky, Pinky of Blinky bijvoorbeeld) opnieuw te bedenken en hoe deze in JavaScript zou worden geschreven.
+
+**De Compositiebenadering**
+
+Compositie volgt een modulaire ontwerpfilosofie, vergelijkbaar met hoe ingenieurs ruimtevaartuigen ontwerpen met verwisselbare componenten. In plaats van te erven van een bovenliggende klasse, combineer je specifieke gedragingen om objecten te creëren met precies de functionaliteit die ze nodig hebben. Deze aanpak biedt flexibiliteit zonder rigide hiërarchische beperkingen.
+
+```javascript
+// Step 1: Create base behavior objects
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
-}
-//then the constant movableObject is composed of the gameObject and movable constants
-const movableObject = {...gameObject, ...movable};
+};
+```
 
-//then create a function to create a new Hero who inherits the movableObject properties
+**Dit doet deze code:**
+- **Definieert** een basis `gameObject` met positie- en type-eigenschappen
+- **Creëert** een apart `movable` gedrag-object met bewegingsfunctionaliteit
+- **Scheidt** verantwoordelijkheden door positiegegevens en bewegingslogica onafhankelijk te houden
+
+```javascript
+// Step 2: Compose objects by combining behaviors
+const movableObject = { ...gameObject, ...movable };
+
+// Step 3: Create factory functions for different object types
 function createHero(x, y) {
   return {
     ...movableObject,
     x,
     y,
     type: 'Hero'
-  }
+  };
 }
-//...and a static object that inherits only the gameObject properties
+
 function createStatic(x, y, type) {
   return {
-    ...gameObject
+    ...gameObject,
     x,
     y,
     type
-  }
+  };
 }
-//create the hero and move it
-const hero = createHero(10,10);
-hero.moveTo(5,5);
-//and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**Welk patroon moet ik gebruiken?**
-
-Het is aan jou welk patroon je kiest. JavaScript ondersteunt beide paradigma's.
-
---
-
-Een ander patroon dat vaak voorkomt in game-ontwikkeling richt zich op het omgaan met de gebruikerservaring en prestaties van het spel.
-
-## Pub/sub-patroon
-
-✅ Pub/Sub staat voor 'publish-subscribe'
-
-Dit patroon richt zich op het idee dat de verschillende delen van je applicatie niets van elkaar hoeven te weten. Waarom is dat? Het maakt het veel gemakkelijker om in het algemeen te zien wat er gebeurt als verschillende delen gescheiden zijn. Het maakt het ook eenvoudiger om gedrag plotseling te veranderen als dat nodig is. Hoe bereiken we dit? Door enkele concepten vast te stellen:
-
-- **bericht**: Een bericht is meestal een tekststring vergezeld van een optionele payload (een stukje data dat verduidelijkt waar het bericht over gaat). Een typisch bericht in een spel kan zijn `KEY_PRESSED_ENTER`.
-- **publisher**: Dit element *publiceert* een bericht en stuurt het naar alle abonnees.
-- **subscriber**: Dit element *luistert* naar specifieke berichten en voert een taak uit als gevolg van het ontvangen van dit bericht, zoals het afvuren van een laser.
-
-De implementatie is vrij klein van omvang, maar het is een zeer krachtig patroon. Hier is hoe het kan worden geïmplementeerd:
+**In het bovenstaande hebben we:**
+- **Gecombineerd** basisobjecteigenschappen met bewegingsgedrag met behulp van spread-syntaxis
+- **Gecreëerd** fabrieksfuncties die aangepaste objecten retourneren
+- **Mogelijk gemaakt** flexibele objectcreatie zonder rigide klassenhiërarchieën
+- **Toegestaan** dat objecten precies het gedrag hebben dat ze nodig hebben
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+// Step 4: Create and use your composed objects
+const hero = createHero(10, 10);
+hero.moveTo(5, 5); // Works perfectly!
+
+const tree = createStatic(0, 0, 'Tree');
+// tree.moveTo() is undefined - no movement behavior was composed
+```
+
+**Belangrijke punten om te onthouden:**
+- **Combineren** van objecten door gedragingen te mixen in plaats van ze te erven
+- **Biedt** meer flexibiliteit dan rigide overervingshiërarchieën
+- **Maakt** het mogelijk dat objecten precies de functies hebben die ze nodig hebben
+- **Gebruikt** moderne JavaScript spread-syntaxis voor schone objectcombinatie 
+```
+
+**Which Pattern Should You Choose?**
+
+> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+> 
+**Here's when to use each approach:**
+- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
+- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
+- **Consider** your team's preferences and project requirements
+- **Remember** that you can mix both approaches in the same application
+
+## Communication Patterns: The Pub/Sub System
+
+As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+
+Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+
+✅ **Pub/Sub** stands for 'publish-subscribe'
+
+### Understanding the Pub/Sub Architecture
+
+The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+
+**The key players in pub/sub:**
+- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
+- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
+- **Subscribers** – The objects that say "I care about that event" and react when it happens
+- **Event System** – The middleman that makes sure messages get to the right listeners
+
+### Building an Event System
+
+Let's create a simple but powerful event system that demonstrates these concepts:
+
+```javascript
+// Step 1: Create the EventEmitter class
 class EventEmitter {
   constructor() {
-    this.listeners = {};
+    this.listeners = {}; // Store all event listeners
   }
-//when a message is received, let the listener to handle its payload
+  
+  // Register a listener for a specific message type
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  
+  // Send a message to all registered listeners
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach(listener => {
+        listener(message, payload);
+      });
     }
   }
 }
-
 ```
 
-Om de bovenstaande code te gebruiken, kunnen we een zeer kleine implementatie maken:
+**Uitleg van wat hier gebeurt:**
+- **Creëert** een centraal evenementbeheersysteem met een eenvoudige klasse
+- **Slaat** luisteraars op in een object georganiseerd per berichttype
+- **Registreert** nieuwe luisteraars met de `on()`-methode
+- **Zend** berichten uit naar alle geïnteresseerde luisteraars met `emit()`
+- **Ondersteunt** optionele gegevenspayloads om relevante informatie door te geven
+
+### Alles samenvoegen: Een praktisch voorbeeld
+
+Oké, laten we dit in actie zien! We bouwen een eenvoudig bewegingssysteem dat laat zien hoe schoon en flexibel pub/sub kan zijn:
 
 ```javascript
-//set up a message structure
+// Step 1: Define your message types
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
+  HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
+  ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
-//invoke the eventEmitter you set up above
+
+// Step 2: Create your event system and game objects
 const eventEmitter = new EventEmitter();
-//set up a hero
-const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+const hero = createHero(0, 0);
+```
+
+**Dit doet deze code:**
+- **Definieert** een constantenobject om typefouten in berichtnamen te voorkomen
+- **Creëert** een event emitter-instantie om alle communicatie af te handelen
+- **Initialiseert** een held-object op de startpositie
+
+```javascript
+// Step 3: Set up event listeners (subscribers)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.moveTo(hero.x - 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
+  hero.moveTo(hero.x + 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
+});
+```
+
+**In het bovenstaande hebben we:**
+- **Geregistreerd** event listeners die reageren op bewegingsberichten
+- **Bijgewerkt** de positie van de held op basis van de bewegingsrichting
+- **Toegevoegd** console logging om de positieveranderingen van de held bij te houden
+- **Gescheiden** de bewegingslogica van de invoerafhandeling
+
+```javascript
+// Step 4: Connect keyboard input to events (publishers)
+window.addEventListener('keydown', (event) => {
+  switch(event.key) {
+    case 'ArrowLeft':
+      eventEmitter.emit(Messages.HERO_MOVE_LEFT);
+      break;
+    case 'ArrowRight':
+      eventEmitter.emit(Messages.HERO_MOVE_RIGHT);
+      break;
   }
 });
 ```
 
-Hierboven verbinden we een toetsenbordgebeurtenis, `ArrowLeft`, en sturen het bericht `HERO_MOVE_LEFT`. We luisteren naar dat bericht en verplaatsen de `hero` als gevolg. De kracht van dit patroon is dat de event listener en de hero niets van elkaar weten. Je kunt de `ArrowLeft` opnieuw toewijzen aan de `A`-toets. Daarnaast zou het mogelijk zijn om iets totaal anders te doen op `ArrowLeft` door een paar aanpassingen te maken aan de `on`-functie van de eventEmitter:
+**Begrijp deze concepten:**
+- **Verbindt** toetsenbordinvoer met game-evenementen zonder strakke koppeling
+- **Maakt** het mogelijk dat het invoersysteem indirect communiceert met game-objecten
+- **Staat toe** dat meerdere systemen reageren op dezelfde toetsenbordgebeurtenissen
+- **Maakt** het eenvoudig om toetsbindingen te wijzigen of nieuwe invoermethoden toe te voegen
 
-```javascript
-eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
-});
-```
+> 💡 **Pro Tip**: Het mooie van dit patroon is flexibiliteit! Je kunt eenvoudig geluidseffecten, schermschokken of deeltjeseffecten toevoegen door simpelweg meer event listeners toe te voegen – je hoeft de bestaande toetsenbord- of bewegingscode niet aan te passen.
+> 
+**Waarom je van deze aanpak zult houden:**
+- Nieuwe functies toevoegen wordt super eenvoudig – luister gewoon naar de gebeurtenissen die je interesseren
+- Meerdere dingen kunnen reageren op hetzelfde evenement zonder elkaar in de weg te zitten
+- Testen wordt veel eenvoudiger omdat elk onderdeel onafhankelijk werkt
+- Als er iets misgaat, weet je precies waar je moet zoeken
 
-Naarmate je spel groeit en complexer wordt, blijft dit patroon even eenvoudig en blijft je code overzichtelijk. Het wordt sterk aanbevolen om dit patroon te gebruiken.
+### Waarom Pub/Sub effectief schaalt
+
+Het pub/sub-patroon behoudt eenvoud terwijl applicaties complexer worden. Of je nu tientallen vijanden beheert, dynamische UI-updates of geluidssystemen, het patroon kan omgaan met toenemende schaal zonder architecturale wijzigingen. Nieuwe functies integreren in het bestaande evenementen-systeem zonder de bestaande functionaliteit te beïnvloeden.
+
+> ⚠️ **Veelgemaakte fout**: Maak niet te vroeg te veel specifieke berichttypen. Begin met brede categorieën en verfijn ze naarmate de behoeften van je spel duidelijker worden.
+> 
+**Beste praktijken om te volgen:**
+- **Groeperen** van gerelateerde berichten in logische categorieën
+- **Gebruik** beschrijvende namen die duidelijk aangeven wat er is gebeurd
+- **Houd** berichtpayloads eenvoudig en gericht
+- **Documenteer** je berichttypen voor samenwerking binnen het team
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+
+**Beschrijving:** Maak een eenvoudig game-object systeem met zowel overerving als het pub/sub-patroon. Je implementeert een basisgame waarin verschillende objecten via evenementen kunnen communiceren zonder direct van elkaar te weten.
+
+**Opdracht:** Maak een JavaScript game-systeem met de volgende vereisten: 1) Maak een basis GameObject-klasse met x-, y-coördinaten en een type-eigenschap. 2) Maak een Hero-klasse die GameObject uitbreidt en kan bewegen. 3) Maak een Enemy-klasse die GameObject uitbreidt en de held kan achtervolgen. 4) Implementeer een EventEmitter-klasse voor het pub/sub-patroon. 5) Stel event listeners in zodat wanneer de held beweegt, nabije vijanden een 'HERO_MOVED'-evenement ontvangen en hun positie bijwerken om naar de held toe te bewegen. Voeg console.log-verklaringen toe om de communicatie tussen objecten te tonen.
+
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
+
 ## 🚀 Uitdaging
 
-Denk na over hoe het pub-sub-patroon een spel kan verbeteren. Welke onderdelen zouden gebeurtenissen moeten uitzenden, en hoe zou het spel daarop moeten reageren? Dit is je kans om creatief te zijn en na te denken over een nieuw spel en hoe de onderdelen ervan zich zouden kunnen gedragen.
+Denk na over hoe het pub-sub-patroon de game-architectuur kan verbeteren. Identificeer welke componenten evenementen zouden moeten uitzenden en hoe het systeem zou moeten reageren. Ontwerp een gameconcept en breng de communicatiepatronen tussen de componenten in kaart.
 
-## Post-Lecture Quiz
+## Quiz na de les
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/30)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Review & Zelfstudie
 
-Leer meer over Pub/Sub door [er meer over te lezen](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Leer meer over Pub/Sub door [erover te lezen](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
 ## Opdracht
 
-[Maak een mock-up van een spel](assignment.md)
+[Maak een mock-up van een game](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

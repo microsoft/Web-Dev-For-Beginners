@@ -1,170 +1,322 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-29T00:55:15+00:00",
+  "original_hash": "33a875c522f237a2026e4653240dfc07",
+  "translation_date": "2025-10-23T01:08:12+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "nl"
 }
 -->
-# Browserextensieproject Deel 1: Alles over Browsers
+# Browser Extensie Project Deel 1: Alles over Browsers
 
 ![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.nl.jpg)
 > Sketchnote door [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## Quiz vóór de les
+## Pre-Lecture Quiz
 
-[Quiz vóór de les](https://ff-quizzes.netlify.app/web/quiz/23)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introductie
 
-Browserextensies voegen extra functionaliteit toe aan een browser. Maar voordat je er een bouwt, is het handig om eerst te begrijpen hoe browsers werken.
+Browserextensies zijn mini-applicaties die je webbrowserervaring verbeteren. Net zoals Tim Berners-Lee's oorspronkelijke visie van een interactieve web, breiden extensies de mogelijkheden van de browser uit voorbij het simpelweg bekijken van documenten. Van wachtwoordmanagers die je accounts beveiligen tot kleurkiezers die ontwerpers helpen perfecte tinten te vinden, extensies lossen alledaagse browse-uitdagingen op.
 
-### Over de browser
+Voordat we je eerste extensie gaan bouwen, is het belangrijk om te begrijpen hoe browsers werken. Net zoals Alexander Graham Bell geluidsoverdracht moest begrijpen voordat hij de telefoon uitvond, zal kennis van de basisprincipes van browsers je helpen extensies te maken die naadloos integreren met bestaande browsersystemen.
 
-In deze lessenreeks leer je hoe je een browserextensie bouwt die werkt in Chrome, Firefox en Edge. In dit deel ontdek je hoe browsers werken en zet je de basis op voor de elementen van de browserextensie.
+Aan het einde van deze les begrijp je de architectuur van browsers en ben je begonnen met het bouwen van je eerste extensie.
 
-Maar wat is een browser precies? Het is een softwaretoepassing waarmee een eindgebruiker inhoud van een server kan ophalen en deze kan weergeven op webpagina's.
+## Begrip van Web Browsers
 
-✅ Een beetje geschiedenis: de eerste browser heette 'WorldWideWeb' en werd in 1990 gemaakt door Sir Timothy Berners-Lee.
+Een webbrowser is in wezen een geavanceerde documentvertaler. Wanneer je "google.com" in de adresbalk typt, voert de browser een complexe reeks bewerkingen uit - het opvragen van inhoud van servers wereldwijd, en vervolgens het parseren en weergeven van die code in de interactieve webpagina's die je ziet.
+
+Dit proces weerspiegelt hoe de eerste webbrowser, WorldWideWeb, werd ontworpen door Tim Berners-Lee in 1990 om hyperlinked documenten toegankelijk te maken voor iedereen.
+
+✅ **Een beetje geschiedenis**: De eerste browser heette 'WorldWideWeb' en werd in 1990 gecreëerd door Sir Timothy Berners-Lee.
 
 ![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.nl.jpg)
 > Enkele vroege browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-Wanneer een gebruiker verbinding maakt met het internet via een URL (Uniform Resource Locator)-adres, meestal met behulp van het Hypertext Transfer Protocol via een `http`- of `https`-adres, communiceert de browser met een webserver en haalt een webpagina op.
+### Hoe Browsers Webinhoud Verwerken
 
-Op dat moment toont de render-engine van de browser de pagina op het apparaat van de gebruiker, zoals een mobiele telefoon, desktop of laptop.
+Het proces tussen het invoeren van een URL en het zien van een webpagina omvat verschillende gecoördineerde stappen die binnen enkele seconden plaatsvinden:
 
-Browsers kunnen ook inhoud cachen, zodat deze niet elke keer opnieuw van de server hoeft te worden opgehaald. Ze kunnen de geschiedenis van het browsegedrag van een gebruiker bijhouden, 'cookies' opslaan (kleine stukjes data met informatie over het gebruikersgedrag), en meer.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-Een belangrijk punt om te onthouden is dat browsers niet allemaal hetzelfde zijn! Elke browser heeft zijn eigen sterke en zwakke punten, en een professionele webontwikkelaar moet begrijpen hoe webpagina's goed kunnen presteren in verschillende browsers. Dit omvat het omgaan met kleine schermen, zoals die van een mobiele telefoon, en gebruikers die offline zijn.
+**Wat dit proces bereikt:**
+- **Vertaalt** de mens-leesbare URL naar een server IP-adres via DNS-lookup
+- **Stelt** een veilige verbinding met de webserver in via HTTP- of HTTPS-protocollen
+- **Vraagt** de specifieke webpagina-inhoud op van de server
+- **Ontvangt** HTML-markup, CSS-styling en JavaScript-code van de server
+- **Rendert** alle inhoud tot de interactieve webpagina die je ziet
 
-Een erg handige website die je waarschijnlijk zou moeten bookmarken in je favoriete browser is [caniuse.com](https://www.caniuse.com). Bij het bouwen van webpagina's is het erg nuttig om de lijsten met ondersteunde technologieën van caniuse te gebruiken, zodat je je gebruikers zo goed mogelijk kunt ondersteunen.
+### Kernfuncties van Browsers
 
-✅ Hoe kun je zien welke browsers het populairst zijn bij de gebruikers van je website? Controleer je analytics - je kunt verschillende analysetools installeren als onderdeel van je webontwikkelingsproces, en deze laten zien welke browsers het meest worden gebruikt.
+Moderne browsers bieden tal van functies die ontwikkelaars van extensies kunnen benutten:
 
-## Browserextensies
+| Functie | Doel | Mogelijkheden voor extensies |
+|---------|---------|------------------------|
+| **Rendering Engine** | Geeft HTML, CSS en JavaScript weer | Inhoudsmodificatie, stylinginjectie |
+| **JavaScript Engine** | Voert JavaScript-code uit | Aangepaste scripts, API-interacties |
+| **Lokale opslag** | Slaat gegevens lokaal op | Gebruikersvoorkeuren, gecachte gegevens |
+| **Netwerkstack** | Behandelt webverzoeken | Verzoekmonitoring, data-analyse |
+| **Beveiligingsmodel** | Beschermt gebruikers tegen schadelijke inhoud | Inhoudsfiltering, beveiligingsverbeteringen |
 
-Waarom zou je een browserextensie willen bouwen? Het is een handige toevoeging aan je browser voor snelle toegang tot taken die je vaak herhaalt. Als je bijvoorbeeld vaak kleuren moet controleren op verschillende webpagina's, kun je een kleurkiezer-extensie installeren. Als je moeite hebt om wachtwoorden te onthouden, kun je een wachtwoordbeheer-extensie gebruiken.
+**Het begrijpen van deze functies helpt je:**
+- **Identificeren** waar je extensie de meeste waarde kan toevoegen
+- **Kiezen** van de juiste browser-API's voor de functionaliteit van je extensie
+- **Ontwerpen** van extensies die efficiënt werken met browsersystemen
+- **Zorgen** dat je extensie voldoet aan de beste beveiligingspraktijken van de browser
 
-Browserextensies zijn ook leuk om te ontwikkelen. Ze richten zich meestal op een beperkt aantal taken die ze goed uitvoeren.
+### Overwegingen voor Cross-Browser Ontwikkeling
 
-✅ Wat zijn jouw favoriete browserextensies? Welke taken voeren ze uit?
+Verschillende browsers implementeren standaarden met kleine variaties, vergelijkbaar met hoe verschillende programmeertalen hetzelfde algoritme anders kunnen verwerken. Chrome, Firefox en Safari hebben elk unieke kenmerken waarmee ontwikkelaars rekening moeten houden bij het ontwikkelen van extensies.
 
-### Extensies installeren
+> 💡 **Pro Tip**: Gebruik [caniuse.com](https://www.caniuse.com) om te controleren welke webtechnologieën worden ondersteund door verschillende browsers. Dit is van onschatbare waarde bij het plannen van de functies van je extensie!
 
-Voordat je begint met bouwen, is het handig om te kijken naar het proces van het bouwen en implementeren van een browserextensie. Hoewel elk browserplatform hier iets anders mee omgaat, is het proces op Chrome en Firefox vergelijkbaar met dit voorbeeld op Edge:
+**Belangrijke overwegingen voor extensieontwikkeling:**
+- **Test** je extensie op Chrome, Firefox en Edge browsers
+- **Pas aan** aan verschillende browserextensie-API's en manifestformaten
+- **Behandel** variërende prestatiekenmerken en beperkingen
+- **Voorzie** in alternatieven voor browserspecifieke functies die mogelijk niet beschikbaar zijn
 
-![screenshot van de Edge-browser met de geopende edge://extensions-pagina en het instellingenmenu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.nl.png)
+✅ **Analytics Inzicht**: Je kunt bepalen welke browsers je gebruikers prefereren door analysetools te installeren in je webontwikkelingsprojecten. Deze gegevens helpen je prioriteiten te stellen welke browsers je eerst moet ondersteunen.
 
-> Opmerking: Zorg ervoor dat je de ontwikkelaarsmodus inschakelt en extensies van andere winkels toestaat.
+## Begrip van Browserextensies
 
-In essentie zal het proces er als volgt uitzien:
+Browserextensies lossen veelvoorkomende browse-uitdagingen op door functionaliteit direct toe te voegen aan de browserinterface. In plaats van aparte applicaties of complexe workflows te vereisen, bieden extensies directe toegang tot tools en functies.
 
-- bouw je extensie met `npm run build`  
-- navigeer in de browser naar het extensiepaneel via de knop "Instellingen en meer" (het `...`-pictogram) rechtsboven  
-- als het een nieuwe installatie betreft, kies `load unpacked` om een nieuwe extensie te uploaden vanuit de buildmap (in ons geval is dat `/dist`)  
-- of klik op `reload` als je een al geïnstalleerde extensie opnieuw wilt laden  
+Dit concept weerspiegelt hoe vroege computerpioniers zoals Douglas Engelbart zich voorstelden dat technologie menselijke capaciteiten zou kunnen vergroten - extensies vergroten de basisfunctionaliteit van je browser.
 
-✅ Deze instructies zijn van toepassing op extensies die je zelf bouwt; om extensies te installeren die beschikbaar zijn in de extensiewinkel van een browser, navigeer je naar die [winkels](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) en installeer je de extensie van je keuze.
+**Populaire extensiecategorieën en hun voordelen:**
+- **Productiviteitstools**: Takenbeheerders, notitie-apps en tijdtrackers die je helpen georganiseerd te blijven
+- **Beveiligingsverbeteringen**: Wachtwoordmanagers, adblockers en privacytools die je gegevens beschermen
+- **Ontwikkelaarstools**: Codeformatters, kleurkiezers en debugginghulpmiddelen die ontwikkeling stroomlijnen
+- **Inhoudsverbetering**: Leesmodi, videodownloaders en screenshottools die je webervaring verbeteren
 
-### Aan de slag
+✅ **Reflectievraag**: Wat zijn jouw favoriete browserextensies? Welke specifieke taken voeren ze uit en hoe verbeteren ze jouw browse-ervaring?
 
-Je gaat een browserextensie bouwen die de CO2-voetafdruk van jouw regio weergeeft, inclusief het energieverbruik en de bron van de energie. De extensie bevat een formulier waarin je een API-sleutel kunt invoeren om toegang te krijgen tot de API van CO2 Signal.
+## Extensies Installeren en Beheren
 
-**Wat je nodig hebt:**
+Het begrijpen van het installatieproces van extensies helpt je de gebruikerservaring te anticiperen wanneer mensen jouw extensie installeren. Het installatieproces is gestandaardiseerd in moderne browsers, met kleine variaties in interfaceontwerp.
 
-- [een API-sleutel](https://www.co2signal.com/); voer je e-mailadres in op deze pagina en je ontvangt een sleutel  
-- de [code voor jouw regio](http://api.electricitymap.org/v3/zones) die overeenkomt met de [Electricity Map](https://www.electricitymap.org/map) (in Boston gebruik ik bijvoorbeeld 'US-NEISO')  
-- de [starter code](../../../../5-browser-extension/start). Download de `start`-map; je voltooit de code in deze map  
-- [NPM](https://www.npmjs.com) - NPM is een pakketbeheerder; installeer het lokaal en de pakketten die in je `package.json`-bestand staan, worden geïnstalleerd voor gebruik in je webproject  
+![screenshot van de Edge-browser met de geopende edge://extensions pagina en het geopende instellingenmenu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.nl.png)
 
-✅ Meer leren over pakketbeheer? Bekijk deze [uitstekende Learn-module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+> **Belangrijk**: Zorg ervoor dat je ontwikkelaarsmodus inschakelt en extensies van andere winkels toestaat bij het testen van je eigen extensies.
 
-Neem even de tijd om de codebase te bekijken:
+### Installatieproces voor Ontwikkelingsextensies
 
-dist  
-    -|manifest.json (standaardinstellingen hier)  
-    -|index.html (HTML-markup hier)  
-    -|background.js (achtergrond-JS hier)  
-    -|main.js (gebundelde JS)  
-src  
-    -|index.js (je JS-code komt hier)  
+Wanneer je je eigen extensies ontwikkelt en test, volg je deze workflow:
 
-✅ Zodra je je API-sleutel en regiocode hebt, sla deze ergens op voor toekomstig gebruik.
+```bash
+# Step 1: Build your extension
+npm run build
+```
 
-### Bouw de HTML voor de extensie
+**Wat deze opdracht bereikt:**
+- **Compileert** je broncode tot browserklare bestanden
+- **Bundelt** JavaScript-modules in geoptimaliseerde pakketten
+- **Genereert** de uiteindelijke extensiebestanden in de `/dist` map
+- **Bereidt** je extensie voor op installatie en testen
 
-Deze extensie heeft twee weergaven. Eén om de API-sleutel en regiocode in te voeren:
+**Stap 2: Navigeer naar Browserextensies**
+1. **Open** de extensiebeheerpagina van je browser
+2. **Klik** op de knop "Instellingen en meer" (het `...` icoon) rechtsboven
+3. **Selecteer** "Extensies" in het dropdownmenu
 
-![screenshot van de voltooide extensie geopend in een browser, met een formulier met invoervelden voor regiocode en API-sleutel.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.nl.png)
+**Stap 3: Laad je extensie**
+- **Voor nieuwe installaties**: Kies `load unpacked` en selecteer je `/dist` map
+- **Voor updates**: Klik op `reload` naast je al geïnstalleerde extensie
+- **Voor testen**: Schakel "Ontwikkelaarsmodus" in om toegang te krijgen tot extra debuggingfuncties
 
-En een tweede om het koolstofverbruik van de regio weer te geven:
+### Productie Extensie Installatie
 
-![screenshot van de voltooide extensie met waarden voor koolstofverbruik en percentage fossiele brandstoffen voor de regio US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.nl.png)
+> ✅ **Let op**: Deze ontwikkelinstructies zijn specifiek voor extensies die je zelf bouwt. Om gepubliceerde extensies te installeren, bezoek je de officiële browserextensiewinkels zoals de [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
 
-Laten we beginnen met het bouwen van de HTML voor het formulier en het stylen met CSS.
+**Het verschil begrijpen:**
+- **Ontwikkelingsinstallaties** stellen je in staat om niet-gepubliceerde extensies te testen tijdens de ontwikkeling
+- **Winkelinstallaties** bieden gecontroleerde, gepubliceerde extensies met automatische updates
+- **Sideloading** maakt installatie van extensies buiten officiële winkels mogelijk (vereist ontwikkelaarsmodus)
 
-In de `/dist`-map bouw je een formulier en een resultaatgebied. Vul in het `index.html`-bestand het aangegeven formuliergebied in:
+## Je CO2-voetafdruk Extensie Bouwen
 
-```HTML
-<form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
-```  
-Dit is het formulier waarin je opgeslagen informatie wordt ingevoerd en opgeslagen in de lokale opslag.
+We gaan een browserextensie maken die de CO2-voetafdruk van het energieverbruik in jouw regio weergeeft. Dit project demonstreert essentiële concepten van extensieontwikkeling terwijl het een praktische tool voor milieubewustzijn creëert.
 
-Maak vervolgens het resultaatgebied; voeg onder de laatste form-tag enkele divs toe:
+Deze aanpak volgt het principe van "leren door te doen" dat effectief is gebleken sinds de onderwijstheorieën van John Dewey - het combineren van technische vaardigheden met zinvolle toepassingen in de echte wereld.
 
-```HTML
-<div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
-</div>
-```  
-Op dit punt kun je een build proberen. Zorg ervoor dat je de pakketafhankelijkheden van deze extensie installeert:
+### Projectvereisten
+
+Voordat we beginnen met ontwikkelen, verzamelen we de benodigde bronnen en afhankelijkheden:
+
+**Vereiste API-toegang:**
+- **[CO2 Signal API key](https://www.co2signal.com/)**: Voer je e-mailadres in om je gratis API-sleutel te ontvangen
+- **[Regiocode](http://api.electricitymap.org/v3/zones)**: Vind je regiocode met behulp van de [Electricity Map](https://www.electricitymap.org/map) (bijvoorbeeld, Boston gebruikt 'US-NEISO')
+
+**Ontwikkelingstools:**
+- **[Node.js en NPM](https://www.npmjs.com)**: Pakketbeheerder voor het installeren van projectafhankelijkheden
+- **[Starter code](../../../../5-browser-extension/start)**: Download de `start` map om te beginnen met ontwikkelen
+
+✅ **Meer leren**: Verbeter je vaardigheden in pakketbeheer met deze [uitgebreide Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+
+### Begrip van de Projectstructuur
+
+Het begrijpen van de projectstructuur helpt om ontwikkelingswerk efficiënt te organiseren. Net zoals de Bibliotheek van Alexandrië was georganiseerd voor gemakkelijke kennisopslag, maakt een goed gestructureerde codebase ontwikkeling efficiënter:
 
 ```
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
+
+**Wat elk bestand doet:**
+- **`manifest.json`**: **Definieert** extensiemetadata, permissies en startpunten
+- **`index.html`**: **Creëert** de gebruikersinterface die verschijnt wanneer gebruikers op je extensie klikken
+- **`background.js`**: **Behandelt** achtergrondtaken en browsergebeurtenissen
+- **`main.js`**: **Bevat** de uiteindelijke gebundelde JavaScript na het bouwproces
+- **`src/index.js`**: **Bevat** je belangrijkste ontwikkelingscode die wordt gecompileerd tot `main.js`
+
+> 💡 **Organisatietip**: Bewaar je API-sleutel en regiocode in een veilige notitie voor eenvoudige referentie tijdens de ontwikkeling. Je hebt deze waarden nodig om de functionaliteit van je extensie te testen.
+
+✅ **Beveiligingsnotitie**: Sla nooit API-sleutels of gevoelige inloggegevens op in je code repository. We laten je zien hoe je deze veilig kunt beheren in de volgende stappen.
+
+## De Extensie Interface Maken
+
+Nu gaan we de gebruikersinterfacecomponenten bouwen. De extensie gebruikt een tweeschermbenadering: een configuratiescherm voor de eerste setup en een resultatenpagina voor het weergeven van gegevens.
+
+Dit volgt het principe van progressieve onthulling dat sinds de vroege dagen van computergebruik wordt toegepast - informatie en opties worden in een logische volgorde onthuld om gebruikers niet te overweldigen.
+
+### Overzicht van Extensie Weergaven
+
+**Setup Weergave** - Configuratie voor eerste gebruik:
+![screenshot van de voltooide extensie geopend in een browser, met een formulier met invoervelden voor regio en API-sleutel.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.nl.png)
+
+**Resultaten Weergave** - Weergave van CO2-voetafdrukgegevens:
+![screenshot van de voltooide extensie die waarden weergeeft voor CO2-gebruik en percentage fossiele brandstoffen voor de regio US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.nl.png)
+
+### Het Configuratieformulier Bouwen
+
+Het setupformulier verzamelt gebruikersconfiguratiegegevens tijdens het eerste gebruik. Zodra het is geconfigureerd, blijven deze gegevens opgeslagen in de browser voor toekomstige sessies.
+
+Voeg deze formulierstructuur toe in het bestand `/dist/index.html`:
+
+```html
+<form class="form-data" autocomplete="on">
+    <div>
+        <h2>New? Add your Information</h2>
+    </div>
+    <div>
+        <label for="region">Region Name</label>
+        <input type="text" id="region" required class="region-name" />
+    </div>
+    <div>
+        <label for="api">Your API Key from tmrow</label>
+        <input type="text" id="api" required class="api-key" />
+    </div>
+    <button class="search-btn">Submit</button>
+</form>
+```
+
+**Wat dit formulier bereikt:**
+- **Creëert** een semantische formulierstructuur met correcte labels en inputassociaties
+- **Schakelt** browser-autocomplete functionaliteit in voor een verbeterde gebruikerservaring
+- **Vereist** dat beide velden worden ingevuld voordat het formulier wordt ingediend met behulp van het `required` attribuut
+- **Organiseert** inputs met beschrijvende klassenamen voor eenvoudige styling en JavaScript targeting
+- **Biedt** duidelijke instructies voor gebruikers die de extensie voor de eerste keer instellen
+
+### Het Resultaatweergave Bouwen
+
+Maak vervolgens het resultatengebied dat de CO2-voetafdrukgegevens zal tonen. Voeg deze HTML toe onder het formulier:
+
+```html
+<div class="result">
+    <div class="loading">loading...</div>
+    <div class="errors"></div>
+    <div class="data"></div>
+    <div class="result-container">
+        <p><strong>Region: </strong><span class="my-region"></span></p>
+        <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+        <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+    </div>
+    <button class="clear-btn">Change region</button>
+</div>
+```
+
+**Wat deze structuur biedt:**
+- **`loading`**: **Toont** een laadbericht terwijl API-gegevens worden opgehaald
+- **`errors`**: **Geeft** foutmeldingen weer als API-aanroepen mislukken of gegevens ongeldig zijn
+- **`data`**: **Bevat** ruwe gegevens voor debugging tijdens ontwikkeling
+- **`result-container`**: **Presenteert** geformatteerde CO2-voetafdrukinformatie aan gebruikers
+- **`clear-btn`**: **Maakt** het mogelijk voor gebruikers om hun regio te wijzigen en de extensie opnieuw in te stellen
+
+### Het Bouwproces Instellen
+
+Laten we nu de projectafhankelijkheden installeren en het bouwproces testen:
+
+```bash
 npm install
-```  
+```
 
-Met dit commando gebruik je npm, de Node Package Manager, om webpack te installeren voor het buildproces van je extensie. Webpack is een bundelaar die code compileert. Je kunt het resultaat van dit proces bekijken in `/dist/main.js` - je ziet dat de code is gebundeld.
+**Wat dit installatieproces bereikt:**
+- **Downloadt** Webpack en andere ontwikkelingsafhankelijkheden gespecificeerd in `package.json`
+- **Configureert** de bouwtoolchain voor het compileren van moderne JavaScript
+- **Bereidt** de ontwikkelomgeving voor op het bouwen en testen van extensies
+- **Schakelt** codebundeling, optimalisatie en cross-browser compatibiliteitsfuncties in
 
-Voor nu zou de extensie moeten bouwen en, als je deze in Edge als extensie implementeert, zie je een net weergegeven formulier.
+> 💡 **Inzicht in het Bouwproces**: Webpack bundelt je broncode van `/src/index.js` naar `/dist/main.js`. Dit proces optimaliseert je code voor productie en zorgt voor browsercompatibiliteit.
 
-Gefeliciteerd, je hebt de eerste stappen gezet in het bouwen van een browserextensie. In de volgende lessen maak je deze functioneler en nuttiger.
+### Je Voortgang Testen
 
----
+Op dit punt kun je je extensie testen:
+
+1. **Voer** de bouwopdracht uit om je code te compileren
+2. **Laad** de extensie in je browser met behulp van de ontwikkelaarsmodus
+3. **Controleer** of het formulier correct wordt weergegeven en er professioneel uitziet
+4. **Controleer** of alle formelementen correct zijn uitgelijnd en functioneel
+
+**Wat je hebt bereikt:**
+- **Gebouwd** de fundamentele HTML-structuur voor je extensie
+- **Gecreëerd** zowel configuratie- als resultateninterfaces met correcte semantische markup
+- **Ingesteld** een moderne ontwikkelworkflow met industriestandaard tools
+- **Voorbereid** de basis voor het toevoegen van interactieve JavaScript-functionaliteit
+
+Je hebt de eerste fase van browserextensieontwikkeling voltooid. Net zoals de gebroeders Wright eerst aerodynamica moesten begrijpen voordat ze konden vliegen, bereidt het begrijpen van deze fundamentele concepten je voor op het bouwen van meer complexe interactieve functies in de volgende les.
+
+## GitHub Copilot Agent Uitdaging 🚀
+
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+**Beschrijving:** Verbeter de browserextensie door formuliervalidatie en gebruikersfeedback toe te voegen om de gebruikerservaring te verbeteren bij het invoeren van API-sleutels en regiocodes.
+
+**Opdracht:** Maak JavaScript-validatiefuncties die controleren of het API-sleutelsveld minimaal 20 tekens bevat en of de regiocode het juiste formaat heeft (zoals 'US-NEISO'). Voeg visuele feedback toe door de randkleuren van invoervelden te veranderen naar groen voor geldige invoer en rood voor ongeldige invoer. Voeg ook een schakeloptie toe om de API-sleutel te tonen/verbergen voor beveiligingsdoeleinden.
+
+Lees meer over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hier.
 
 ## 🚀 Uitdaging
 
-Bekijk een extensiewinkel van een browser en installeer een extensie in je browser. Onderzoek de bestanden van de extensie. Wat ontdek je?
+Bekijk een browserextensiewinkel en installeer er een op je browser. Je kunt de bestanden op interessante manieren onderzoeken. Wat ontdek je?
 
 ## Quiz na de les
 
 [Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/24)
 
-## Herhaling & Zelfstudie
+## Review & Zelfstudie
 
-In deze les heb je iets geleerd over de geschiedenis van de webbrowser; neem de tijd om meer te leren over hoe de uitvinders van het World Wide Web het gebruik ervan voor ogen hadden door meer te lezen over de geschiedenis. Enkele nuttige sites zijn:
+In deze les heb je iets geleerd over de geschiedenis van de webbrowser; neem de tijd om meer te leren over hoe de uitvinders van het World Wide Web het gebruik ervan voor ogen hadden door meer te lezen over de geschiedenis ervan. Enkele nuttige sites zijn:
 
 [De geschiedenis van webbrowsers](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -174,9 +326,9 @@ In deze les heb je iets geleerd over de geschiedenis van de webbrowser; neem de 
 
 ## Opdracht 
 
-[Restyle je extensie](assignment.md)  
+[Restyle je extensie](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, willen we u erop wijzen dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

@@ -1,73 +1,118 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b46acf79da8550d76445eed00b06c878",
-  "translation_date": "2025-10-03T13:07:17+00:00",
+  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
+  "translation_date": "2025-10-23T00:59:02+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "nl"
 }
 -->
-# Een Banking App Bouwen Deel 4: Concepten van State Management
+# Een bankapp bouwen Deel 4: Concepten van State Management
 
-## Pre-Lecture Quiz
+## Quiz voor de les
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/47)
+[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/47)
 
-### Introductie
+## Introductie
 
-Naarmate een webapplicatie groeit, wordt het steeds moeilijker om alle datastromen bij te houden. Welke code haalt de data op, welke pagina gebruikt het, waar en wanneer moet het worden bijgewerkt... Het is gemakkelijk om te eindigen met rommelige code die moeilijk te onderhouden is. Dit geldt vooral wanneer je gegevens moet delen tussen verschillende pagina's van je app, zoals gebruikersgegevens. Het concept van *state management* heeft altijd bestaan in allerlei soorten programma's, maar nu webapps steeds complexer worden, is het een belangrijk punt om over na te denken tijdens de ontwikkeling.
+State management is als het navigatiesysteem op het Voyager-ruimteschip – als alles soepel werkt, merk je nauwelijks dat het er is. Maar als er iets misgaat, kan het het verschil maken tussen het bereiken van de interstellaire ruimte en verloren raken in de kosmische leegte. In webontwikkeling vertegenwoordigt de state alles wat je applicatie moet onthouden: gebruikersloginstatus, formuliergegevens, navigatiegeschiedenis en tijdelijke interface-statussen.
 
-In dit laatste deel bekijken we de app die we hebben gebouwd om opnieuw na te denken over hoe de state wordt beheerd, zodat ondersteuning voor browserverversing op elk moment mogelijk is en gegevens behouden blijven tussen gebruikerssessies.
+Nu je bankapp is geëvolueerd van een eenvoudige inlogformulier naar een meer geavanceerde applicatie, ben je waarschijnlijk enkele veelvoorkomende uitdagingen tegengekomen. Vernieuw de pagina en gebruikers worden onverwacht uitgelogd. Sluit de browser en alle voortgang verdwijnt. Probeer een probleem op te lossen en je zoekt door meerdere functies die allemaal op verschillende manieren dezelfde gegevens wijzigen.
 
-### Vereisten
+Dit zijn geen tekenen van slecht programmeren – het zijn de natuurlijke groeipijnen die optreden wanneer applicaties een bepaalde complexiteitsdrempel bereiken. Elke ontwikkelaar wordt met deze uitdagingen geconfronteerd wanneer hun apps overgaan van "proof of concept" naar "productieklaar."
 
-Je moet het [data ophalen](../3-data/README.md) deel van de webapp hebben voltooid voor deze les. Je moet ook [Node.js](https://nodejs.org) installeren en [de server-API](../api/README.md) lokaal uitvoeren, zodat je accountgegevens kunt beheren.
+In deze les implementeren we een gecentraliseerd state management systeem dat je bankapp transformeert in een betrouwbare, professionele applicatie. Je leert gegevensstromen voorspelbaar te beheren, gebruikerssessies op de juiste manier te behouden en de soepele gebruikerservaring te creëren die moderne webapplicaties vereisen.
 
-Je kunt testen of de server correct werkt door dit commando in een terminal uit te voeren:
+## Vereisten
+
+Voordat je je verdiept in de concepten van state management, moet je ervoor zorgen dat je ontwikkelomgeving goed is ingesteld en dat de basis van je bankapp in orde is. Deze les bouwt direct voort op de concepten en code uit de eerdere delen van deze serie.
+
+Zorg ervoor dat je de volgende componenten klaar hebt voordat je verder gaat:
+
+**Benodigdheden:**
+- Voltooi de [les over gegevens ophalen](../3-data/README.md) - je app moet succesvol accountgegevens laden en weergeven
+- Installeer [Node.js](https://nodejs.org) op je systeem om de backend-API te draaien
+- Start de [server-API](../api/README.md) lokaal om accountgegevens te verwerken
+
+**Test je omgeving:**
+
+Controleer of je API-server correct werkt door dit commando uit te voeren in een terminal:
 
 ```sh
 curl http://localhost:5000/api
 # -> should return "Bank API v1.0.0" as a result
 ```
 
+**Wat dit commando doet:**
+- **Verstuurt** een GET-verzoek naar je lokale API-server
+- **Test** de verbinding en controleert of de server reageert
+- **Geeft** de API-versie-informatie terug als alles correct werkt
+
 ---
 
-## Herziening van state management
+## Diagnosticeer de huidige state-problemen
 
-In de [vorige les](../3-data/README.md) introduceerden we een basisconcept van state in onze app met de globale `account`-variabele die de bankgegevens bevat van de momenteel ingelogde gebruiker. Onze huidige implementatie heeft echter enkele tekortkomingen. Probeer de pagina te verversen terwijl je op het dashboard bent. Wat gebeurt er?
+Net als Sherlock Holmes die een plaats delict onderzoekt, moeten we precies begrijpen wat er gebeurt in onze huidige implementatie voordat we het mysterie van verdwijnende gebruikerssessies kunnen oplossen.
 
-Er zijn drie problemen met de huidige code:
+Laten we een eenvoudig experiment uitvoeren dat de onderliggende uitdagingen van state management onthult:
 
-- De state wordt niet behouden, omdat een browserverversing je terugbrengt naar de inlogpagina.
-- Er zijn meerdere functies die de state wijzigen. Naarmate de app groeit, kan dit het moeilijk maken om de wijzigingen bij te houden en is het gemakkelijk om te vergeten een update uit te voeren.
-- De state wordt niet opgeruimd, dus wanneer je op *Uitloggen* klikt, blijven de accountgegevens aanwezig, zelfs als je op de inlogpagina bent.
+**🧪 Probeer deze diagnostische test:**
+1. Log in op je bankapp en navigeer naar het dashboard
+2. Vernieuw de browserpagina
+3. Observeer wat er gebeurt met je loginstatus
 
-We zouden onze code kunnen bijwerken om deze problemen één voor één aan te pakken, maar dat zou meer code duplicatie creëren en de app complexer en moeilijker te onderhouden maken. Of we kunnen een paar minuten pauzeren en onze strategie heroverwegen.
+Als je wordt doorgestuurd naar het inlogscherm, heb je het klassieke probleem van state-persistentie ontdekt. Dit gedrag treedt op omdat onze huidige implementatie gebruikersgegevens opslaat in JavaScript-variabelen die bij elke paginalading worden gereset.
 
-> Welke problemen proberen we hier echt op te lossen?
+**Huidige implementatieproblemen:**
 
-[State management](https://en.wikipedia.org/wiki/State_management) draait om het vinden van een goede aanpak om deze twee specifieke problemen op te lossen:
+De eenvoudige `account`-variabele uit onze [vorige les](../3-data/README.md) veroorzaakt drie belangrijke problemen die zowel de gebruikerservaring als de onderhoudbaarheid van de code beïnvloeden:
 
-- Hoe houden we de datastromen in een app begrijpelijk?
-- Hoe zorgen we ervoor dat de state data altijd synchroon loopt met de gebruikersinterface (en vice versa)?
+| Probleem | Technische oorzaak | Impact op gebruiker |
+|----------|--------------------|---------------------|
+| **Sessieverlies** | Pagina vernieuwen wist JavaScript-variabelen | Gebruikers moeten vaak opnieuw inloggen |
+| **Verspreide updates** | Meerdere functies wijzigen de state direct | Debuggen wordt steeds moeilijker |
+| **Onvolledige opruiming** | Uitloggen wist niet alle state-referenties | Mogelijke beveiligings- en privacyproblemen |
 
-Als je deze hebt aangepakt, zijn eventuele andere problemen die je hebt mogelijk al opgelost of gemakkelijker op te lossen. Er zijn veel mogelijke benaderingen om deze problemen op te lossen, maar we kiezen voor een veelgebruikte oplossing die bestaat uit **het centraliseren van de data en de manieren om deze te wijzigen**. De datastromen zouden er als volgt uitzien:
+**De architecturale uitdaging:**
 
-![Schema dat de datastromen toont tussen de HTML, gebruikersacties en state](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.nl.png)
+Net als het compartimentontwerp van de Titanic dat robuust leek totdat meerdere compartimenten tegelijkertijd overstroomden, zal het afzonderlijk oplossen van deze problemen de onderliggende architecturale uitdaging niet aanpakken. We hebben een uitgebreide oplossing voor state management nodig.
 
-> We behandelen hier niet het deel waarin de data automatisch de weergave-update triggert, omdat dit gekoppeld is aan meer geavanceerde concepten van [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). Dit is een goed onderwerp om verder in te duiken als je er klaar voor bent.
+> 💡 **Wat proberen we hier eigenlijk te bereiken?**
 
-✅ Er zijn veel bibliotheken met verschillende benaderingen voor state management, waarbij [Redux](https://redux.js.org) een populaire optie is. Bekijk de concepten en patronen die worden gebruikt, omdat dit vaak een goede manier is om te leren welke potentiële problemen je kunt tegenkomen in grote webapps en hoe deze kunnen worden opgelost.
+[State management](https://en.wikipedia.org/wiki/State_management) draait eigenlijk om het oplossen van twee fundamentele puzzels:
 
-### Taak
+1. **Waar zijn mijn gegevens?**: Bijhouden welke informatie we hebben en waar die vandaan komt
+2. **Is iedereen op dezelfde pagina?**: Zorgen dat wat gebruikers zien overeenkomt met wat er daadwerkelijk gebeurt
 
-We beginnen met een beetje refactoring. Vervang de `account`-verklaring:
+**Ons actieplan:**
+
+In plaats van achter de feiten aan te lopen, gaan we een **gecentraliseerd state management** systeem creëren. Denk eraan als één echt georganiseerd persoon die verantwoordelijk is voor alle belangrijke zaken:
+
+![Schema dat de gegevensstromen tussen de HTML, gebruikersacties en state toont](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.nl.png)
+
+**Begrijpen van deze gegevensstroom:**
+- **Centraliseert** alle applicatiestate op één locatie
+- **Routet** alle state-wijzigingen via gecontroleerde functies
+- **Zorgt ervoor** dat de UI gesynchroniseerd blijft met de huidige state
+- **Biedt** een duidelijk, voorspelbaar patroon voor gegevensbeheer
+
+> 💡 **Professioneel inzicht**: Deze les richt zich op fundamentele concepten. Voor complexe applicaties bieden bibliotheken zoals [Redux](https://redux.js.org) meer geavanceerde functies voor state management. Het begrijpen van deze kernprincipes helpt je om elke state management-bibliotheek onder de knie te krijgen.
+
+> ⚠️ **Geavanceerd onderwerp**: We behandelen geen automatische UI-updates die worden geactiveerd door state-wijzigingen, omdat dit concepten van [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming) omvat. Beschouw dit als een uitstekende volgende stap in je leertraject!
+
+### Taak: Centraliseer de structuur van de state
+
+Laten we beginnen met het transformeren van ons verspreide state management naar een gecentraliseerd systeem. Deze eerste stap legt de basis voor alle verbeteringen die volgen.
+
+**Stap 1: Maak een gecentraliseerd state-object**
+
+Vervang de eenvoudige `account`-verklaring:
 
 ```js
 let account = null;
 ```
 
-Met:
+Door een gestructureerd state-object:
 
 ```js
 let state = {
@@ -75,31 +120,80 @@ let state = {
 };
 ```
 
-Het idee is om *alle app-data te centraliseren* in een enkel state-object. We hebben momenteel alleen `account` in de state, dus het verandert niet veel, maar het creëert een pad voor toekomstige uitbreidingen.
+**Waarom deze verandering belangrijk is:**
+- **Centraliseert** alle applicatiegegevens op één locatie
+- **Bereidt** de structuur voor om later meer state-eigenschappen toe te voegen
+- **Creëert** een duidelijke scheiding tussen state en andere variabelen
+- **Legt** een patroon vast dat schaalbaar is naarmate je app groeit
 
-We moeten ook de functies bijwerken die het gebruiken. Vervang in de `register()`- en `login()`-functies `account = ...` door `state.account = ...`;
+**Stap 2: Update state-toegangspatronen**
 
-Voeg aan het begin van de `updateDashboard()`-functie deze regel toe:
+Update je functies om de nieuwe state-structuur te gebruiken:
 
+**In de functies `register()` en `login()`**, vervang:
+```js
+account = ...
+```
+
+Door:
+```js
+state.account = ...
+```
+
+**In de functie `updateDashboard()`**, voeg deze regel toe bovenaan:
 ```js
 const account = state.account;
 ```
 
-Deze refactoring op zichzelf heeft niet veel verbeteringen gebracht, maar het idee was om de basis te leggen voor de volgende wijzigingen.
+**Wat deze updates bereiken:**
+- **Behoudt** bestaande functionaliteit terwijl de structuur wordt verbeterd
+- **Bereidt** je code voor op meer geavanceerd state management
+- **Creëert** consistente patronen voor toegang tot state-gegevens
+- **Legt** de basis voor gecentraliseerde state-updates
 
-## Gegevenswijzigingen bijhouden
+> 💡 **Opmerking**: Deze refactoring lost onze problemen niet onmiddellijk op, maar creëert de essentiële basis voor de krachtige verbeteringen die volgen!
 
-Nu we het `state`-object hebben geïntroduceerd om onze gegevens op te slaan, is de volgende stap om de updates te centraliseren. Het doel is om het gemakkelijker te maken om eventuele wijzigingen en wanneer ze plaatsvinden bij te houden.
+## Gecontroleerde state-updates implementeren
 
-Om te voorkomen dat wijzigingen worden aangebracht in het `state`-object, is het ook een goede gewoonte om het te beschouwen als [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), wat betekent dat het helemaal niet kan worden gewijzigd. Dit betekent ook dat je een nieuw state-object moet maken als je iets wilt wijzigen. Door dit te doen, bouw je een bescherming tegen mogelijk ongewenste [bijwerkingen](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) en open je mogelijkheden voor nieuwe functies in je app, zoals het implementeren van undo/redo, terwijl het ook gemakkelijker wordt om te debuggen. Bijvoorbeeld, je zou elke wijziging in de state kunnen loggen en een geschiedenis van de wijzigingen kunnen bijhouden om de bron van een bug te begrijpen.
+Met onze state gecentraliseerd, is de volgende stap het opzetten van gecontroleerde mechanismen voor gegevenswijzigingen. Deze aanpak zorgt voor voorspelbare state-wijzigingen en gemakkelijker debuggen.
 
-In JavaScript kun je [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) gebruiken om een immutable versie van een object te maken. Als je probeert wijzigingen aan te brengen in een immutable object, wordt er een uitzondering gegenereerd.
+Het kernprincipe lijkt op luchtverkeersleiding: in plaats van meerdere functies toe te staan om de state onafhankelijk te wijzigen, leiden we alle wijzigingen door een enkele, gecontroleerde functie. Dit patroon biedt duidelijk toezicht op wanneer en hoe gegevens worden gewijzigd.
 
-✅ Ken je het verschil tussen een *shallow* en een *deep* immutable object? Je kunt er [hier](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze) meer over lezen.
+**Immutable State Management:**
+
+We behandelen ons `state`-object als [*immutable*](https://en.wikipedia.org/wiki/Immutable_object), wat betekent dat we het nooit direct wijzigen. In plaats daarvan creëert elke wijziging een nieuw state-object met de bijgewerkte gegevens.
+
+Hoewel deze aanpak in eerste instantie misschien inefficiënt lijkt in vergelijking met directe wijzigingen, biedt het aanzienlijke voordelen voor debuggen, testen en het behouden van voorspelbaarheid van de applicatie.
+
+**Voordelen van immutable state management:**
+
+| Voordeel | Beschrijving | Impact |
+|----------|--------------|--------|
+| **Voorspelbaarheid** | Wijzigingen gebeuren alleen via gecontroleerde functies | Makkelijker te debuggen en testen |
+| **Geschiedenis bijhouden** | Elke state-wijziging creëert een nieuw object | Maakt undo/redo-functionaliteit mogelijk |
+| **Voorkomen van bijwerkingen** | Geen onbedoelde wijzigingen | Voorkomt mysterieuze bugs |
+| **Prestatieoptimalisatie** | Makkelijk te detecteren wanneer de state daadwerkelijk is gewijzigd | Maakt efficiënte UI-updates mogelijk |
+
+**JavaScript Immutability met `Object.freeze()`:**
+
+JavaScript biedt [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) om objectwijzigingen te voorkomen:
+
+```js
+const immutableState = Object.freeze({ account: userData });
+// Any attempt to modify immutableState will throw an error
+```
+
+**Wat hier gebeurt:**
+- **Voorkomt** directe toewijzing of verwijdering van eigenschappen
+- **Geeft** uitzonderingen als er pogingen tot wijzigingen worden gedaan
+- **Zorgt ervoor** dat state-wijzigingen via gecontroleerde functies moeten gaan
+- **Creëert** een duidelijke afspraak over hoe de state kan worden bijgewerkt
+
+> 💡 **Verdieping**: Lees meer over het verschil tussen *shallow* en *deep* immutable objecten in de [MDN-documentatie](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Het begrijpen van dit onderscheid is cruciaal voor complexe state-structuren.
 
 ### Taak
 
-Laten we een nieuwe `updateState()`-functie maken:
+Laten we een nieuwe functie `updateState()` maken:
 
 ```js
 function updateState(property, newData) {
@@ -110,9 +204,9 @@ function updateState(property, newData) {
 }
 ```
 
-In deze functie maken we een nieuw state-object en kopiëren we gegevens van de vorige state met behulp van de [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Vervolgens overschrijven we een specifieke eigenschap van het state-object met de nieuwe gegevens met behulp van de [bracket notatie](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` voor toewijzing. Ten slotte vergrendelen we het object om wijzigingen te voorkomen met `Object.freeze()`. We hebben momenteel alleen de `account`-eigenschap opgeslagen in de state, maar met deze aanpak kun je zoveel eigenschappen toevoegen als je nodig hebt.
+In deze functie maken we een nieuw state-object en kopiëren gegevens van de vorige state met behulp van de [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Vervolgens overschrijven we een specifieke eigenschap van het state-object met de nieuwe gegevens met behulp van de [bracket notatie](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` voor toewijzing. Ten slotte vergrendelen we het object om wijzigingen te voorkomen met `Object.freeze()`. Voor nu hebben we alleen de eigenschap `account` opgeslagen in de state, maar met deze aanpak kun je zoveel eigenschappen toevoegen als je nodig hebt in de state.
 
-We zullen ook de `state`-initialisatie bijwerken om ervoor te zorgen dat de initiële state ook bevroren is:
+We zullen ook de `state`-initialisatie bijwerken om ervoor te zorgen dat de initiële state ook wordt bevroren:
 
 ```js
 let state = Object.freeze({
@@ -120,7 +214,7 @@ let state = Object.freeze({
 });
 ```
 
-Daarna werk je de `register`-functie bij door de toewijzing `state.account = result;` te vervangen door:
+Daarna, update de `register`-functie door de toewijzing `state.account = result;` te vervangen door:
 
 ```js
 updateState('account', result);
@@ -132,7 +226,7 @@ Doe hetzelfde met de `login`-functie, vervang `state.account = data;` door:
 updateState('account', data);
 ```
 
-We nemen nu de kans om het probleem op te lossen waarbij accountgegevens niet worden gewist wanneer de gebruiker op *Uitloggen* klikt.
+We nemen nu de kans om het probleem op te lossen waarbij accountgegevens niet worden gewist wanneer de gebruiker op *Logout* klikt.
 
 Maak een nieuwe functie `logout()`:
 
@@ -143,49 +237,105 @@ function logout() {
 }
 ```
 
-Vervang in `updateDashboard()` de omleiding `return navigate('/login');` door `return logout()`;
+In `updateDashboard()`, vervang de redirect `return navigate('/login');` door `return logout();`
 
 Probeer een nieuw account te registreren, uit te loggen en opnieuw in te loggen om te controleren of alles nog steeds correct werkt.
 
-> Tip: je kunt alle state-wijzigingen bekijken door `console.log(state)` toe te voegen onderaan `updateState()` en de console te openen in de ontwikkeltools van je browser.
+> Tip: je kunt alle state-wijzigingen bekijken door `console.log(state)` onderaan `updateState()` toe te voegen en de console in je browserontwikkeltools te openen.
 
-## De state behouden
+## Gegevenspersistentie implementeren
 
-De meeste webapps moeten gegevens behouden om correct te kunnen werken. Alle kritieke gegevens worden meestal opgeslagen in een database en benaderd via een server-API, zoals de gebruikersaccountgegevens in ons geval. Maar soms is het ook interessant om enkele gegevens te behouden in de client-app die in je browser draait, voor een betere gebruikerservaring of om de laadsnelheid te verbeteren.
+Het probleem van sessieverlies dat we eerder hebben geïdentificeerd, vereist een persistentieoplossing die de gebruikersstate behoudt over browsersessies. Dit transformeert onze applicatie van een tijdelijke ervaring naar een betrouwbare, professionele tool.
 
-Wanneer je gegevens wilt behouden in je browser, zijn er een paar belangrijke vragen die je jezelf moet stellen:
+Denk aan hoe atoomklokken nauwkeurige tijd behouden, zelfs tijdens stroomstoringen, door kritieke state op te slaan in niet-vluchtig geheugen. Op dezelfde manier hebben webapplicaties persistente opslagmechanismen nodig om essentiële gebruikersgegevens te behouden over browsersessies en paginavernieuwingen.
 
-- *Zijn de gegevens gevoelig?* Je moet vermijden om gevoelige gegevens op de client op te slaan, zoals gebruikerswachtwoorden.
-- *Hoe lang moet je deze gegevens bewaren?* Wil je deze gegevens alleen voor de huidige sessie gebruiken of wil je dat ze voor altijd worden opgeslagen?
+**Strategische vragen voor gegevenspersistentie:**
 
-Er zijn meerdere manieren om informatie binnen een webapp op te slaan, afhankelijk van wat je wilt bereiken. Bijvoorbeeld, je kunt de URL's gebruiken om een zoekopdracht op te slaan en deze deelbaar te maken tussen gebruikers. Je kunt ook [HTTP-cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies) gebruiken als de gegevens moeten worden gedeeld met de server, zoals [authenticatie](https://en.wikipedia.org/wiki/Authentication) informatie.
+Voordat je persistentie implementeert, overweeg deze kritieke factoren:
 
-Een andere optie is om een van de vele browser-API's te gebruiken voor het opslaan van gegevens. Twee daarvan zijn bijzonder interessant:
+| Vraag | Context van de bankapp | Impact van beslissing |
+|-------|------------------------|-----------------------|
+| **Zijn de gegevens gevoelig?** | Rekeningbalans, transactiegeschiedenis | Kies veilige opslagmethoden |
+| **Hoe lang moet het blijven bestaan?** | Loginstatus vs. tijdelijke UI-voorkeuren | Selecteer geschikte opslagduur |
+| **Heeft de server het nodig?** | Authenticatietokens vs. UI-instellingen | Bepaal delingsvereisten |
 
-- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): een [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) waarmee gegevens specifiek voor de huidige website kunnen worden behouden tussen verschillende sessies. De opgeslagen gegevens verlopen nooit.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): deze werkt hetzelfde als `localStorage`, behalve dat de opgeslagen gegevens worden gewist wanneer de sessie eindigt (wanneer de browser wordt gesloten).
+**Browseropslagopties:**
 
-Let op dat beide API's alleen [strings](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) kunnen opslaan. Als je complexe objecten wilt opslaan, moet je ze serialiseren naar het [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON)-formaat met [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Moderne browsers bieden verschillende opslagmechanismen, elk ontworpen voor verschillende gebruiksscenario's:
 
-✅ Als je een webapp wilt maken die niet met een server werkt, is het ook mogelijk om een database op de client te maken met de [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Deze is gereserveerd voor geavanceerde gebruiksscenario's of als je een aanzienlijke hoeveelheid gegevens moet opslaan, omdat het complexer is om te gebruiken.
+**Primaire opslag-API's:**
 
-### Taak
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Persistente [Key/Value-opslag](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Behoudt** gegevens over browsersessies heen  
+   - **Overleeft** browserherstarts en computerreboots
+   - **Gebonden** aan het specifieke website-domein
+   - **Perfect** voor gebruikersvoorkeuren en loginstatussen
 
-We willen dat onze gebruikers ingelogd blijven totdat ze expliciet op de *Uitloggen*-knop klikken, dus we gebruiken `localStorage` om de accountgegevens op te slaan. Laten we eerst een sleutel definiëren die we zullen gebruiken om onze gegevens op te slaan.
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Tijdelijke sessieopslag
+   - **Werkt** identiek aan localStorage tijdens actieve sessies
+   - **Wist** automatisch wanneer het browsertabblad wordt gesloten
+   - **Ideaal** voor tijdelijke gegevens die niet moeten blijven bestaan
+
+3. **[HTTP-cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Servergedeelde opslag
+   - **Automatisch** verzonden met elk serververzoek
+   - **Perfect** voor [authenticatie](https://en.wikipedia.org/wiki/Authentication) tokens
+   - **Beperkt** in grootte en kan prestaties beïnvloeden
+
+**Vereiste gegevensserialisatie:**
+
+Zowel `localStorage` als `sessionStorage` slaan alleen [strings](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) op:
+
+```js
+// Convert objects to JSON strings for storage
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parse JSON strings back to objects when retrieving
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Begrijpen van serialisatie:**
+- **Converteert** JavaScript-objecten naar JSON-strings met [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- **Reconstrueert** objecten uit JSON met [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- **Behandelt** automatisch complexe geneste objecten en arrays
+- **Faalt** bij functies, ongedefinieerde waarden en circulaire referenties
+> 💡 **Geavanceerde Optie**: Voor complexe offline applicaties met grote datasets, overweeg de [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Dit biedt een volledige client-side database, maar vereist een complexere implementatie.
+
+### Taak: Implementeer localStorage Persistentie
+
+Laten we een persistent opslagmechanisme implementeren zodat gebruikers ingelogd blijven totdat ze expliciet uitloggen. We gebruiken `localStorage` om accountgegevens op te slaan tussen browsersessies.
+
+**Stap 1: Definieer Opslagconfiguratie**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Voeg vervolgens deze regel toe aan het einde van de `updateState()`-functie:
+**Wat deze constante biedt:**
+- **Creëert** een consistente identifier voor onze opgeslagen gegevens
+- **Voorkomt** typefouten in opslagkeys
+- **Maakt** het eenvoudig om de opslagkey te wijzigen indien nodig
+- **Volgt** best practices voor onderhoudbare code
+
+**Stap 2: Voeg Automatische Persistentie Toe**
+
+Voeg deze regel toe aan het einde van de `updateState()` functie:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-Hiermee worden de gebruikersaccountgegevens behouden en altijd up-to-date gehouden, omdat we eerder alle state-updates hebben gecentraliseerd. Dit is waar we beginnen te profiteren van al onze eerdere refactors 🙂.
+**Uitleg van wat hier gebeurt:**
+- **Converteert** het accountobject naar een JSON-string voor opslag
+- **Slaat** de gegevens op met onze consistente opslagkey
+- **Wordt** automatisch uitgevoerd wanneer er statuswijzigingen plaatsvinden
+- **Zorgt ervoor** dat opgeslagen gegevens altijd gesynchroniseerd zijn met de huidige status
 
-Omdat de gegevens worden opgeslagen, moeten we ook zorgen voor het herstellen ervan wanneer de app wordt geladen. Aangezien we meer initialisatiecode beginnen te krijgen, kan het een goed idee zijn om een nieuwe `init`-functie te maken, die ook onze eerdere code onderaan `app.js` bevat:
+> 💡 **Architectuurvoordeel**: Omdat we alle statusupdates hebben gecentraliseerd via `updateState()`, was het toevoegen van persistentie slechts één regel code. Dit toont de kracht van goede architectonische beslissingen!
+
+**Stap 3: Herstel Status bij App-opstart**
+
+Maak een initialisatiefunctie om opgeslagen gegevens te herstellen:
 
 ```js
 function init() {
@@ -202,17 +352,49 @@ function init() {
 init();
 ```
 
-Hier halen we de opgeslagen gegevens op, en als er gegevens zijn, werken we de state dienovereenkomstig bij. Het is belangrijk om dit *voor* het bijwerken van de route te doen, omdat er mogelijk code is die afhankelijk is van de state tijdens de pagina-update.
+**Begrip van het initialisatieproces:**
+- **Haalt** eerder opgeslagen accountgegevens op uit localStorage
+- **Parseert** de JSON-string terug naar een JavaScript-object
+- **Update** de status met behulp van onze gecontroleerde updatefunctie
+- **Herstelt** automatisch de sessie van de gebruiker bij het laden van de pagina
+- **Wordt uitgevoerd** voordat route-updates plaatsvinden om ervoor te zorgen dat de status beschikbaar is
 
-We kunnen ook de *Dashboard*-pagina de standaardpagina van onze applicatie maken, omdat we nu de accountgegevens behouden. Als er geen gegevens worden gevonden, zorgt het dashboard ervoor dat het doorverwijst naar de *Inloggen*-pagina. Vervang in `updateRoute()` de fallback `return navigate('/login');` door `return navigate('/dashboard');`.
+**Stap 4: Optimaliseer de Standaardroute**
 
-Log nu in op de app en probeer de pagina te verversen. Je zou op het dashboard moeten blijven. Met die update hebben we alle oorspronkelijke problemen opgelost...
+Werk de standaardroute bij om gebruik te maken van persistentie:
 
-## De gegevens verversen
+In `updateRoute()`, vervang:
+```js
+// Replace: return navigate('/login');
+return navigate('/dashboard');
+```
 
-...Maar we hebben mogelijk ook een nieuw probleem gecreëerd. Oeps!
+**Waarom deze wijziging logisch is:**
+- **Benut** ons nieuwe persistentiesysteem effectief
+- **Laat** het dashboard authenticatiecontroles uitvoeren
+- **Leidt** automatisch door naar inloggen als er geen opgeslagen sessie is
+- **Creëert** een meer naadloze gebruikerservaring
 
-Ga naar het dashboard met het `test`-account en voer vervolgens dit commando uit in een terminal om een nieuwe transactie te maken:
+**Testen van je Implementatie:**
+
+1. Log in op je bankapp
+2. Vernieuw de browserpagina
+3. Controleer of je ingelogd blijft en op het dashboard blijft
+4. Sluit en heropen je browser
+5. Navigeer terug naar je app en bevestig dat je nog steeds ingelogd bent
+
+🎉 **Prestatie Behaald**: Je hebt succesvol een persistent statusbeheersysteem geïmplementeerd! Je app gedraagt zich nu als een professionele webapplicatie.
+
+## Balans tussen Persistentie en Gegevensactualiteit
+
+Ons persistentiesysteem behoudt succesvol gebruikerssessies, maar introduceert een nieuwe uitdaging: verouderde gegevens. Wanneer meerdere gebruikers of applicaties dezelfde servergegevens wijzigen, worden lokaal gecachte gegevens verouderd.
+
+Deze situatie lijkt op Vikingnavigators die zowel opgeslagen sterrenkaarten als actuele waarnemingen van de sterrenhemel gebruikten. De kaarten boden consistentie, maar navigators hadden actuele waarnemingen nodig om rekening te houden met veranderende omstandigheden. Evenzo heeft onze applicatie zowel persistente gebruikersstatus als actuele servergegevens nodig.
+
+**🧪 Het Probleem van Gegevensveroudering Ontdekken:**
+
+1. Log in op het dashboard met het `test` account
+2. Voer dit commando uit in een terminal om een transactie vanuit een andere bron te simuleren:
 
 ```sh
 curl --request POST \
@@ -221,15 +403,31 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Probeer nu je dashboardpagina in de browser te verversen. Wat gebeurt er? Zie je de nieuwe transactie?
+3. Vernieuw je dashboardpagina in de browser
+4. Observeer of je de nieuwe transactie ziet
 
-De state wordt onbeperkt behouden dankzij de `localStorage`, maar dat betekent ook dat deze nooit wordt bijgewerkt totdat je uitlogt en opnieuw inlogt!
+**Wat deze test aantoont:**
+- **Laat zien** hoe localStorage "verouderd" kan raken
+- **Simuleert** realistische scenario's waarin gegevens buiten je app veranderen
+- **Toont** de spanning tussen persistentie en gegevensactualiteit
 
-Een mogelijke strategie om dat op te lossen is om de accountgegevens opnieuw te laden telkens wanneer het dashboard wordt geladen, om verouderde gegevens te voorkomen.
+**De Uitdaging van Verouderde Gegevens:**
 
-### Taak
+| Probleem | Oorzaak | Impact op Gebruiker |
+|----------|---------|---------------------|
+| **Verouderde Gegevens** | localStorage verloopt nooit automatisch | Gebruikers zien verouderde informatie |
+| **Serverwijzigingen** | Andere apps/gebruikers wijzigen dezelfde gegevens | Inconsistente weergaven tussen platforms |
+| **Cache vs. Realiteit** | Lokale cache komt niet overeen met serverstatus | Slechte gebruikerservaring en verwarring |
 
-Maak een nieuwe functie `updateAccountData`:
+**Oplossingsstrategie:**
+
+We implementeren een "verversen bij laden"-patroon dat de voordelen van persistentie in balans brengt met de noodzaak van actuele gegevens. Deze aanpak behoudt de soepele gebruikerservaring en zorgt tegelijkertijd voor gegevensnauwkeurigheid.
+
+### Taak: Implementeer Gegevensverversingssysteem
+
+We maken een systeem dat automatisch actuele gegevens van de server ophaalt terwijl we de voordelen van ons persistente statusbeheer behouden.
+
+**Stap 1: Maak Accountgegevens-Updater**
 
 ```js
 async function updateAccountData() {
@@ -247,9 +445,15 @@ async function updateAccountData() {
 }
 ```
 
-Deze methode controleert of we momenteel zijn ingelogd en laadt vervolgens de accountgegevens opnieuw van de server.
+**Begrip van de logica van deze functie:**
+- **Controleert** of een gebruiker momenteel is ingelogd (state.account bestaat)
+- **Leidt** door naar uitloggen als er geen geldige sessie is
+- **Haalt** actuele accountgegevens op van de server met behulp van de bestaande `getAccount()` functie
+- **Handelt** serverfouten netjes af door ongeldige sessies uit te loggen
+- **Update** de status met actuele gegevens via ons gecontroleerde updatesysteem
+- **Activeert** automatische localStorage-persistentie via de `updateState()` functie
 
-Maak een andere functie genaamd `refresh`:
+**Stap 2: Maak Dashboard Verversingshandler**
 
 ```js
 async function refresh() {
@@ -258,7 +462,15 @@ async function refresh() {
 }
 ```
 
-Deze functie werkt de accountgegevens bij en zorgt vervolgens voor het bijwerken van de HTML van de dashboardpagina. Dit is wat we moeten aanroepen wanneer de dashboardroute wordt geladen. Werk de routedefinitie bij met:
+**Wat deze verversingsfunctie bereikt:**
+- **Coördineert** het gegevensverversings- en UI-updateproces
+- **Wacht** tot actuele gegevens zijn geladen voordat de weergave wordt bijgewerkt
+- **Zorgt ervoor** dat het dashboard de meest actuele informatie toont
+- **Behoudt** een duidelijke scheiding tussen gegevensbeheer en UI-updates
+
+**Stap 3: Integreer met Routesysteem**
+
+Werk je routeconfiguratie bij om automatisch te verversen:
 
 ```js
 const routes = {
@@ -267,28 +479,69 @@ const routes = {
 };
 ```
 
-Probeer nu het dashboard te verversen, het zou de bijgewerkte accountgegevens moeten weergeven.
+**Hoe deze integratie werkt:**
+- **Voert** de verversingsfunctie uit elke keer dat de dashboardroute wordt geladen
+- **Zorgt ervoor** dat actuele gegevens altijd worden weergegeven wanneer gebruikers naar het dashboard navigeren
+- **Behoudt** de bestaande routestructuur terwijl gegevensactualiteit wordt toegevoegd
+- **Biedt** een consistent patroon voor route-specifieke initialisatie
 
----
+**Testen van je Gegevensverversingssysteem:**
 
-## 🚀 Uitdaging
+1. Log in op je bankapp
+2. Voer het eerder genoemde curl-commando uit om een nieuwe transactie te maken
+3. Vernieuw je dashboardpagina of navigeer weg en terug
+4. Controleer of de nieuwe transactie direct verschijnt
 
-Nu we de accountgegevens opnieuw laden telkens wanneer het dashboard wordt geladen, denk je dat we nog steeds *alle accountgegevens* moeten behouden?
+🎉 **Perfecte Balans Bereikt**: Je app combineert nu de soepele ervaring van persistente status met de nauwkeurigheid van actuele servergegevens!
 
-Probeer samen te werken om te veranderen wat wordt opgeslagen en geladen vanuit `localStorage` zodat alleen wordt opgenomen wat absoluut nodig is voor de app om te werken.
+## GitHub Copilot Agent Uitdaging 🚀
 
-## Post-Lecture Quiz
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
+
+**Beschrijving:** Implementeer een uitgebreid statusbeheersysteem met ongedaan maken/herstellen-functionaliteit voor de bankapp. Deze uitdaging helpt je geavanceerde concepten van statusbeheer te oefenen, waaronder het bijhouden van statusgeschiedenis, onveranderlijke updates en synchronisatie van de gebruikersinterface.
+
+**Prompt:** Maak een verbeterd statusbeheersysteem dat omvat: 1) Een statusgeschiedenis-array die alle eerdere statussen bijhoudt, 2) Ongedaan maken- en herstellenfuncties die naar eerdere statussen kunnen terugkeren, 3) UI-knoppen voor ongedaan maken/herstellen op het dashboard, 4) Een maximale geschiedenisgrens van 10 statussen om geheugenproblemen te voorkomen, en 5) Correct opruimen van geschiedenis wanneer de gebruiker uitlogt. Zorg ervoor dat de ongedaan maken/herstellen-functionaliteit werkt met wijzigingen in het accountsaldo en blijft bestaan na browserverversingen.
+
+Lees meer over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hier.
+
+## 🚀 Uitdaging: Opslagoptimalisatie
+
+Je implementatie beheert nu gebruikerssessies, gegevensverversing en statusbeheer effectief. Overweeg echter of onze huidige aanpak opslag efficiënt balanceert met functionaliteit.
+
+Net als schaakmeesters die onderscheid maken tussen essentiële stukken en inwisselbare pionnen, vereist effectief statusbeheer het identificeren van welke gegevens moeten worden behouden versus welke altijd vers van de server moeten komen.
+
+**Optimalisatieanalyse:**
+
+Evalueer je huidige localStorage-implementatie en overweeg deze strategische vragen:
+- Wat is de minimale informatie die nodig is om gebruikersauthenticatie te behouden?
+- Welke gegevens veranderen zo vaak dat lokale caching weinig voordeel biedt?
+- Hoe kan opslagoptimalisatie de prestaties verbeteren zonder de gebruikerservaring te verslechteren?
+
+**Implementatiestrategie:**
+- **Identificeer** de essentiële gegevens die moeten worden behouden (waarschijnlijk alleen gebruikersidentificatie)
+- **Pas** je localStorage-implementatie aan om alleen kritieke sessiegegevens op te slaan
+- **Zorg ervoor** dat actuele gegevens altijd van de server worden geladen bij dashboardbezoeken
+- **Test** of je geoptimaliseerde aanpak dezelfde gebruikerservaring behoudt
+
+**Geavanceerde Overweging:**
+- **Vergelijk** de afwegingen tussen het opslaan van volledige accountgegevens versus alleen authenticatietokens
+- **Documenteer** je beslissingen en redeneringen voor toekomstige teamleden
+
+Deze uitdaging helpt je denken als een professionele ontwikkelaar die zowel de gebruikerservaring als de efficiëntie van de applicatie in overweging neemt. Neem de tijd om te experimenteren met verschillende benaderingen!
+
+## Quiz na de Les
+
 [Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Opdracht
 
-[Implementeer de dialoog "Transactie toevoegen"](assignment.md)
+[Implementeer "Transactie toevoegen" dialoogvenster](assignment.md)
 
-Hier is een voorbeeld van het resultaat na het voltooien van de opdracht:
+Hier is een voorbeeldresultaat na het voltooien van de opdracht:
 
-![Screenshot met een voorbeeld van de dialoog "Transactie toevoegen"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.nl.png)
+![Screenshot van een voorbeeld "Transactie toevoegen" dialoogvenster](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.nl.png)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
