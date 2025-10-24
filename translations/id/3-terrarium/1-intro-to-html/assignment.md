@@ -1,53 +1,152 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5a764667bbe82aa72ac0a67f4c97ff4a",
-  "translation_date": "2025-10-03T10:18:56+00:00",
+  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
+  "translation_date": "2025-10-24T14:09:16+00:00",
   "source_file": "3-terrarium/1-intro-to-html/assignment.md",
   "language_code": "id"
 }
 -->
 # Tugas Praktik HTML: Membuat Mockup Blog
 
-## Tujuan
+## Tujuan Pembelajaran
 
-Merancang dan menulis struktur HTML untuk halaman utama blog pribadi. Latihan ini akan membantu Anda mempraktikkan HTML semantik, perencanaan tata letak, dan pengorganisasian kode.
+Gunakan pengetahuan HTML Anda dengan merancang dan membuat struktur halaman utama blog yang lengkap. Tugas praktis ini akan memperkuat konsep HTML semantik, praktik terbaik aksesibilitas, dan keterampilan organisasi kode profesional yang akan Anda gunakan sepanjang perjalanan pengembangan web Anda.
 
-## Instruksi
+**Dengan menyelesaikan tugas ini, Anda akan:**
+- Berlatih merencanakan tata letak situs web sebelum mulai coding
+- Menggunakan elemen HTML semantik dengan tepat
+- Membuat markup yang terstruktur dan mudah diakses
+- Mengembangkan kebiasaan coding profesional dengan komentar dan organisasi yang baik
 
-1. **Rancang Mockup Blog Anda**
-   - Buat sketsa visual mockup halaman utama blog Anda. Sertakan bagian-bagian utama seperti header, navigasi, konten utama, sidebar, dan footer.
-   - Anda dapat menggunakan kertas dan memindai sketsa Anda, atau menggunakan alat digital (misalnya, Figma, Adobe XD, Canva, atau bahkan PowerPoint).
+## Persyaratan Proyek
 
-2. **Identifikasi Elemen HTML**
-   - Daftar elemen HTML yang akan Anda gunakan untuk setiap bagian (misalnya, `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<footer>`, `<section>`, `<h1>`–`<h6>`, `<p>`, `<img>`, `<ul>`, `<li>`, `<a>`, dll.).
+### Bagian 1: Perencanaan Desain (Mockup Visual)
 
-3. **Tulis Markup HTML**
-   - Tulis kode HTML untuk mockup Anda secara manual. Fokus pada struktur semantik dan praktik terbaik.
-   - Sertakan setidaknya 10 elemen HTML yang berbeda.
-   - Tambahkan komentar untuk menjelaskan pilihan dan struktur Anda.
+**Buat mockup visual dari halaman utama blog Anda yang mencakup:**
+- Header dengan judul situs dan navigasi
+- Area konten utama dengan setidaknya 2-3 pratinjau postingan blog
+- Sidebar dengan informasi tambahan (bagian tentang, postingan terbaru, kategori)
+- Footer dengan informasi kontak atau tautan
 
-4. **Kirimkan Pekerjaan Anda**
-   - Unggah sketsa/mockup dan file HTML Anda.
-   - Opsional, berikan refleksi singkat (2–3 kalimat) tentang keputusan desain Anda.
+**Opsi Pembuatan Mockup:**
+- **Sketsa tangan**: Gunakan kertas dan pensil, lalu foto atau scan desain Anda
+- **Alat digital**: Figma, Adobe XD, Canva, PowerPoint, atau aplikasi gambar lainnya
+- **Alat wireframe**: Balsamiq, MockFlow, atau perangkat lunak wireframing serupa
+
+**Labeli bagian mockup Anda** dengan elemen HTML yang Anda rencanakan untuk digunakan (misalnya, "Header - `<header>`", "Postingan Blog - `<article>`").
+
+### Bagian 2: Perencanaan Elemen HTML
+
+**Buat daftar yang memetakan setiap bagian dari mockup Anda ke elemen HTML tertentu:**
+
+```
+Example:
+- Site Header → <header>
+- Main Navigation → <nav> with <ul> and <li>
+- Blog Post → <article> with <h2>, <p>, <time>
+- Sidebar → <aside> with <section> elements
+- Page Footer → <footer>
+```
+
+**Elemen yang Wajib Disertakan:**
+HTML Anda harus mengandung setidaknya 10 elemen semantik berbeda dari daftar ini:
+- `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
+- `<h1>`, `<h2>`, `<h3>`, `<p>`, `<ul>`, `<li>`, `<a>`
+- `<img>`, `<time>`, `<blockquote>`, `<strong>`, `<em>`
+
+### Bagian 3: Implementasi HTML
+
+**Kodekan halaman utama blog Anda dengan mengikuti standar berikut:**
+
+1. **Struktur Dokumen**: Sertakan DOCTYPE, html, head, dan body yang benar
+2. **Markup Semantik**: Gunakan elemen HTML sesuai tujuan penggunaannya
+3. **Aksesibilitas**: Sertakan teks alt yang sesuai untuk gambar dan teks tautan yang bermakna
+4. **Kualitas Kode**: Gunakan indentasi yang konsisten dan komentar yang bermakna
+5. **Konten**: Sertakan konten blog yang realistis (Anda dapat menggunakan teks placeholder)
+
+**Contoh Struktur HTML:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+</head>
+<body>
+    <!-- Main site header -->
+    <header>
+        <h1>My Blog Title</h1>
+        <nav>
+            <!-- Navigation menu -->
+        </nav>
+    </header>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Blog posts go here -->
+    </main>
+    
+    <!-- Sidebar content -->
+    <aside>
+        <!-- Additional information -->
+    </aside>
+    
+    <!-- Site footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
+```
+
+### Bagian 4: Refleksi
+
+**Tulis refleksi singkat (3-5 kalimat) yang membahas:**
+- Elemen HTML mana yang paling Anda kuasai?
+- Tantangan apa yang Anda hadapi saat merencanakan atau coding?
+- Bagaimana HTML semantik membantu mengorganisasi konten Anda?
+- Apa yang akan Anda lakukan berbeda di proyek HTML berikutnya?
+
+## Daftar Periksa Pengiriman
+
+**Sebelum mengirimkan, pastikan Anda telah:**
+- [ ] Mockup visual dengan elemen HTML yang diberi label
+- [ ] File HTML lengkap dengan struktur dokumen yang benar
+- [ ] Setidaknya 10 elemen HTML semantik yang digunakan dengan tepat
+- [ ] Komentar bermakna yang menjelaskan struktur kode Anda
+- [ ] Sintaks HTML yang valid (uji di browser)
+- [ ] Refleksi tertulis yang menjawab pertanyaan prompt
 
 ## Rubrik Penilaian
 
-| Kriteria         | Unggul                                                                                     | Memadai                                                                         | Perlu Peningkatan                                                               |
-|------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Mockup Visual    | Mockup yang jelas, terperinci dengan bagian yang diberi label dan tata letak yang dipikirkan dengan baik | Mockup dasar dengan beberapa bagian yang diberi label                           | Mockup minimal atau tidak jelas; tidak ada label bagian                         |
-| Elemen HTML      | Menggunakan 10+ elemen HTML semantik; menunjukkan pemahaman tentang struktur dan praktik terbaik | Menggunakan 5–9 elemen HTML; beberapa struktur semantik                         | Menggunakan kurang dari 5 elemen; kurang struktur semantik                      |
-| Kualitas Kode    | Kode yang terorganisir dengan baik, mudah dibaca dengan komentar; mengikuti standar HTML    | Kode sebagian besar terorganisir; sedikit komentar                              | Kode tidak terorganisir; tidak ada komentar                                     |
-| Refleksi         | Refleksi yang mendalam tentang pilihan desain dan tantangan                                | Refleksi dasar                                                                  | Tidak ada refleksi atau kurang relevan                                          |
+| Kriteria | Unggul (4) | Cukup (3) | Berkembang (2) | Awal (1) |
+|----------|------------|-----------|----------------|----------|
+| **Perencanaan & Desain** | Mockup yang terperinci dan diberi label dengan baik menunjukkan pemahaman yang jelas tentang tata letak dan struktur HTML semantik | Mockup yang jelas dengan sebagian besar bagian diberi label dengan tepat | Mockup dasar dengan beberapa label, menunjukkan pemahaman umum | Mockup minimal atau tidak jelas, kurang identifikasi bagian yang tepat |
+| **Penggunaan HTML Semantik** | Menggunakan 10+ elemen semantik dengan tepat, menunjukkan pemahaman mendalam tentang struktur HTML dan aksesibilitas | Menggunakan 8-9 elemen semantik dengan benar, menunjukkan pemahaman yang baik tentang markup semantik | Menggunakan 6-7 elemen semantik, beberapa kebingungan tentang penggunaan yang tepat | Menggunakan kurang dari 6 elemen atau salah menggunakan elemen semantik |
+| **Kualitas & Organisasi Kode** | Kode yang sangat terorganisasi, indentasi yang benar, komentar yang komprehensif, dan sintaks HTML yang sempurna | Kode yang terorganisasi dengan baik, indentasi yang baik, komentar yang membantu, dan sintaks yang valid | Kode yang sebagian besar terorganisasi dengan beberapa komentar, masalah sintaks minor | Organisasi yang buruk, komentar minimal, banyak kesalahan sintaks |
+| **Aksesibilitas & Praktik Terbaik** | Pertimbangan aksesibilitas yang sangat baik, teks alt yang bermakna, hierarki heading yang benar, mengikuti semua praktik terbaik HTML modern | Fitur aksesibilitas yang baik, penggunaan heading dan teks alt yang sesuai, mengikuti sebagian besar praktik terbaik | Beberapa pertimbangan aksesibilitas, teks alt dan struktur heading dasar | Fitur aksesibilitas terbatas, struktur heading yang buruk, tidak mengikuti praktik terbaik |
+| **Refleksi & Pembelajaran** | Refleksi yang mendalam menunjukkan pemahaman yang kuat tentang konsep HTML dan analisis pembelajaran yang bijaksana | Refleksi yang baik menunjukkan pemahaman tentang konsep utama dan beberapa kesadaran diri tentang pembelajaran | Refleksi dasar dengan wawasan terbatas tentang konsep HTML atau proses pembelajaran | Refleksi minimal atau tidak ada, menunjukkan sedikit pemahaman tentang konsep yang dipelajari |
 
-## Tips
+## Sumber Belajar
 
-- Gunakan tag HTML semantik untuk aksesibilitas dan SEO yang lebih baik.
-- Organisasikan kode Anda dengan indentasi dan komentar.
-- Lihat [Referensi Elemen HTML MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) untuk panduan.
-- Pikirkan bagaimana tata letak Anda dapat diperluas atau ditata dalam tugas-tugas mendatang.
+**Referensi Penting:**
+- [MDN HTML Elements Reference](https://developer.mozilla.org/docs/Web/HTML/Element) - Panduan lengkap untuk semua elemen HTML
+- [HTML5 Semantic Elements](https://developer.mozilla.org/docs/Web/HTML/Element#content_sectioning) - Memahami markup semantik
+- [Web Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Membuat konten web yang dapat diakses
+- [HTML Validator](https://validator.w3.org/) - Periksa sintaks HTML Anda
+
+**Tips Sukses:**
+- Mulailah dengan mockup Anda sebelum menulis kode
+- Gunakan alat pengembang browser untuk memeriksa struktur HTML Anda
+- Uji halaman Anda dengan berbagai ukuran layar (bahkan tanpa CSS)
+- Bacakan HTML Anda dengan keras untuk memeriksa apakah struktur masuk akal secara logis
+- Pertimbangkan bagaimana pembaca layar akan menafsirkan struktur halaman Anda
+
+> 💡 **Ingat**: Tugas ini berfokus pada struktur dan semantik HTML. Jangan khawatir tentang gaya visual – itu tugas CSS! Halaman Anda mungkin terlihat sederhana, tetapi harus terstruktur dengan baik dan bermakna.
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.

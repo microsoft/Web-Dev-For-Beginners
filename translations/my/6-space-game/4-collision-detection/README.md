@@ -1,89 +1,117 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
-  "translation_date": "2025-08-28T18:39:05+00:00",
+  "original_hash": "4b1d441cfd31924084956000c0fee5a5",
+  "translation_date": "2025-10-24T16:58:36+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "my"
 }
 -->
-# အာကာသဂိမ်း တည်ဆောက်ခြင်း အပိုင်း ၄: လေဆာထည့်သွင်းခြင်းနှင့် တိုက်မိမှုများကို စစ်ဆေးခြင်း
+# အာကာသဂိမ်းတည်ဆောက်ခြင်း အပိုင်း ၄: လေဆာထည့်သွင်းခြင်းနှင့် တိုက်မိမှုများကို ရှာဖွေခြင်း
 
-## သင်ခန်းစာမတိုင်မီ မေးခွန်းများ
+## မိန့်ခွန်းမပြောမီ စမ်းမေးခွန်း
 
-[သင်ခန်းစာမတိုင်မီ မေးခွန်းများ](https://ff-quizzes.netlify.app/web/quiz/35)
+[မိန့်ခွန်းမပြောမီ စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/35)
 
-ဒီသင်ခန်းစာမှာ JavaScript ကို အသုံးပြုပြီး လေဆာပစ်ပေါက်နည်းကို သင်ယူပါမယ်! ဂိမ်းမှာ အောက်ပါအရာ ၂ ခုကို ထည့်သွင်းပါမယ်-
+Star Wars မှာ Luke ရဲ့ proton torpedoes က Death Star ရဲ့ exhaust port ကို ထိမှန်တဲ့အချိန်ကို သတိရပါ။ အဲ့ဒီတိကျတဲ့ တိုက်မိမှုရှာဖွေမှုက ဂလက်ဆီရဲ့ အနာဂတ်ကို ပြောင်းလဲစေခဲ့ပါတယ်! ဂိမ်းတွေမှာလည်း တိုက်မိမှုရှာဖွေမှုက အတူတူပဲ - အရာဝတ္ထုတွေ အပြန်အလှန်ဆက်သွယ်တဲ့အခါ ဘာတွေဖြစ်မလဲဆိုတာကို ဆုံးဖြတ်ပေးပါတယ်။
 
-- **လေဆာ**: ဒီလေဆာကို သင့်ရဲ့ ဟီးရိုးရဲ့ သင်္ဘောကနေ အပေါ်ဘက်ကို ပစ်ပေါက်ပါမယ်။
-- **တိုက်မိမှု စစ်ဆေးခြင်း**: *ပစ်ပေါက်ခြင်း* စနစ်ကို အကောင်အထည်ဖော်ရာမှာ ဂိမ်းစည်းကမ်းများကို ထည့်သွင်းပါမယ်။
-   - **လေဆာက ရန်သူကို ထိမိခြင်း**: ရန်သူဟာ လေဆာကို ထိမိရင် သေဆုံးပါမယ်။
-   - **လေဆာက မျက်နှာပြင်အပေါ်ဘက်ကို ထိမိခြင်း**: လေဆာဟာ မျက်နှာပြင်အပေါ်ဘက်ကို ထိမိရင် ဖျက်သိမ်းပါမယ်။
-   - **ရန်သူနှင့် ဟီးရိုး တိုက်မိခြင်း**: ရန်သူနှင့် ဟီးရိုး တိုက်မိရင် နှစ်ခုလုံး ဖျက်သိမ်းပါမယ်။
-   - **ရန်သူက မျက်နှာပြင်အောက်ဘက်ကို ရောက်ခြင်း**: ရန်သူက မျက်နှာပြင်အောက်ဘက်ကို ရောက်ရင် ရန်သူနှင့် ဟီးရိုး နှစ်ခုလုံး ဖျက်သိမ်းပါမယ်။
+ဒီသင်ခန်းစာမှာ သင့်အာကာသဂိမ်းမှာ လေဆာလက်နက်တွေ ထည့်သွင်းပြီး တိုက်မိမှုရှာဖွေမှုကို အကောင်အထည်ဖော်ပါမယ်။ NASA ရဲ့ မစ်ရှင်အစီအစဉ်ရေးဆွဲသူတွေက အာကာသယာဉ်တွေ debris တွေကို ရှောင်ရှားဖို့ trajectory တွေတွက်ချက်တဲ့အတိုင်း သင်လည်း ဂိမ်းအရာဝတ္ထုတွေ intersection ဖြစ်တဲ့အခါကို ရှာဖွေတတ်လာပါမယ်။ ဒီကို အဆင့်ဆင့် ခွဲခြားပြီး လေ့လာသွားမှာဖြစ်ပါတယ်။
 
-အတိုချုံး来说ရင် သင် -- *ဟီးရိုး* -- ဟာ ရန်သူတွေကို မျက်နှာပြင်အောက်ဘက်ကို မရောက်ခင် လေဆာနဲ့ ပစ်ပေါက်ရပါမယ်။
+သင်ခန်းစာအဆုံးမှာတော့ လေဆာတွေက ရန်သူတွေကို ဖျက်ဆီးပြီး တိုက်မိမှုတွေက ဂိမ်းအဖြစ်အပျက်တွေကို ဖြစ်ပေါ်စေတဲ့ combat system တစ်ခုကို ရရှိမှာဖြစ်ပါတယ်။ ဒီတိုက်မိမှုအခြေခံအချက်တွေဟာ physics simulation တွေကနေ interactive web interface တွေထိ အားလုံးမှာ အသုံးပြုနေပါတယ်။
 
-✅ ကွန်ပျူတာဂိမ်းပထမဆုံးရေးသားခဲ့တဲ့ ဂိမ်းအကြောင်းကို သုတေသန လုပ်ကြည့်ပါ။ အဲဒီဂိမ်းရဲ့ လုပ်ဆောင်ချက်တွေက ဘာတွေလဲ?
+✅ ပထမဆုံးရေးသားခဲ့တဲ့ ကွန်ပျူတာဂိမ်းအကြောင်းကို သုတေသနလေးလုပ်ကြည့်ပါ။ အဲ့ဒီဂိမ်းရဲ့ လုပ်ဆောင်ချက်က ဘာလဲ?
 
-အတူတူ ဟီးရိုးဖြစ်ကြရအောင်!
+## တိုက်မိမှုရှာဖွေမှု
 
-## တိုက်မိမှု စစ်ဆေးခြင်း
+တိုက်မိမှုရှာဖွေမှုဟာ Apollo lunar module ရဲ့ proximity sensors လိုပဲ - အမြဲတမ်း အကွာအဝေးတွေကို စစ်ဆေးပြီး အရာဝတ္ထုတွေ အနီးကပ်လာတဲ့အခါ alert တွေကို trigger လုပ်ပါတယ်။ ဂိမ်းတွေမှာတော့ ဒီစနစ်က အရာဝတ္ထုတွေ အပြန်အလှန်ဆက်သွယ်တဲ့အခါ ဘာတွေဖြစ်မလဲဆိုတာကို ဆုံးဖြတ်ပေးပါတယ်။
 
-တိုက်မိမှုကို ဘယ်လို စစ်ဆေးမလဲ? ဂိမ်းအရာဝတ္ထုတွေကို လှုပ်ရှားနေတဲ့ စတုရန်းပုံစံအနေနဲ့ တွေးရပါမယ်။ ဘာကြောင့်လဲဆိုတော့ ဂိမ်းအရာဝတ္ထုကို ရေးဆွဲဖို့ အသုံးပြုတဲ့ ပုံရိပ်ဟာ စတုရန်းပုံစံဖြစ်ပါတယ်။ အဲဒါမှာ `x`, `y`, `width` နဲ့ `height` ရှိပါတယ်။
+ဒီသင်ခန်းစာမှာ သင့်အာကာသဂိမ်းမှာ လေဆာလက်နက်တွေ ထည့်သွင်းပြီး တိုက်မိမှုရှာဖွေမှုကို အကောင်အထည်ဖော်ပါမယ်။ NASA ရဲ့ မစ်ရှင်အစီအစဉ်ရေးဆွဲသူတွေက အာကာသယာဉ်တွေ debris တွေကို ရှောင်ရှားဖို့ trajectory တွေတွက်ချက်တဲ့အတိုင်း သင်လည်း ဂိမ်းအရာဝတ္ထုတွေ intersection ဖြစ်တဲ့အခါကို ရှာဖွေတတ်လာပါမယ်။ 
 
-ဟီးရိုးနဲ့ ရန်သူ စတုရန်းပုံစံ ၂ ခု *ထိတွေ့*ရင် တိုက်မိမှု ဖြစ်ပါတယ်။ အဲဒီအချိန်မှာ ဘာဖြစ်ရမလဲဆိုတာက ဂိမ်းစည်းကမ်းတွေ အပေါ် မူတည်ပါတယ်။ တိုက်မိမှု စစ်ဆေးဖို့အတွက် အောက်ပါအရာတွေ လိုအပ်ပါတယ်-
+### Rectangle ကိုယ်စားပြုမှု
 
-1. ဂိမ်းအရာဝတ္ထုရဲ့ စတုရန်းပုံစံကို ရယူနိုင်တဲ့ နည်းလမ်းတစ်ခု:
-
-   ```javascript
-   rectFromGameObject() {
-     return {
-       top: this.y,
-       left: this.x,
-       bottom: this.y + this.height,
-       right: this.x + this.width
-     }
-   }
-   ```
-
-2. နှိုင်းယှဉ်မှုလုပ်ဆောင်တဲ့ function တစ်ခု၊ ဒီ function ဟာ အောက်ပါအတိုင်း ဖြစ်နိုင်ပါတယ်-
-
-   ```javascript
-   function intersectRect(r1, r2) {
-     return !(r2.left > r1.right ||
-       r2.right < r1.left ||
-       r2.top > r1.bottom ||
-       r2.bottom < r1.top);
-   }
-   ```
-
-## အရာတွေကို ဘယ်လို ဖျက်သိမ်းမလဲ
-
-ဂိမ်းမှာ အရာတွေကို ဖျက်သိမ်းဖို့အတွက် ဂိမ်းကို အဲဒီအရာကို မျက်နှာပြင်မှာ ထပ်မပုံဖော်ဖို့ ပြောရပါမယ်။ အဲဒါကို *သေဆုံး*အဖြစ် သတ်မှတ်ခြင်းအားဖြင့် လုပ်ဆောင်နိုင်ပါတယ်၊ ဥပမာ-
+ဂိမ်းအရာဝတ္ထုတိုင်းမှာ coordinate boundaries လိုအပ်ပါတယ်။ Mars Pathfinder rover က Martian မျက်နှာပြင်ပေါ်မှာ သူ့ရဲ့တည်နေရာကို map လုပ်တဲ့အတိုင်းပဲ။ ဒီ boundary coordinates တွေကို ဘယ်လိုသတ်မှတ်မလဲဆိုတာကတော့:
 
 ```javascript
-// collision happened
-enemy.dead = true
+rectFromGameObject() {
+  return {
+    top: this.y,
+    left: this.x,
+    bottom: this.y + this.height,
+    right: this.x + this.width
+  }
+}
 ```
 
-ပြီးရင် *သေဆုံး*အရာတွေကို မျက်နှာပြင်ပုံဖော်မယ့်အခါမှာ စီမံနိုင်ပါတယ်၊ ဥပမာ-
+**ဒီကို ခွဲခြားကြည့်ရအောင်:**
+- **ထိပ်စွန်း**: အရာဝတ္ထု vertical (y position) မှာ စတင်တဲ့နေရာ
+- **ဘယ်ဘက်စွန်း**: horizontal (x position) မှာ စတင်တဲ့နေရာ
+- **အောက်စွန်း**: height ကို y position နဲ့ ပေါင်းလိုက်ပါ - အခုတော့ အဆုံးနားကို သိနိုင်ပါပြီ!
+- **ညာဘက်စွန်း**: width ကို x position နဲ့ ပေါင်းလိုက်ပါ - boundary အပြည့်အစုံကို ရရှိပါပြီ
+
+### Intersection algorithm
+
+Rectangle intersection တွေကို ရှာဖွေဖို့ Hubble Space Telescope က သူ့ရဲ့ field of view မှာ celestial objects တွေ overlap ဖြစ်နေလားဆိုတာ စစ်ဆေးတဲ့ logic ကို အသုံးပြုပါတယ်။ Algorithm က separation ကို စစ်ဆေးပါတယ်:
 
 ```javascript
-gameObjects = gameObject.filter(go => !go.dead);
+function intersectRect(r1, r2) {
+  return !(r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top);
+}
 ```
 
-## လေဆာကို ဘယ်လို ပစ်ပေါက်မလဲ
+**Separation test ဟာ radar systems လိုပဲ:**
+- Rectangle 2 ဟာ Rectangle 1 ရဲ့ညာဘက်မှာ အပြည့်အဝရှိလား?
+- Rectangle 2 ဟာ Rectangle 1 ရဲ့ဘယ်ဘက်မှာ အပြည့်အဝရှိလား?
+- Rectangle 2 ဟာ Rectangle 1 ရဲ့အောက်မှာ အပြည့်အဝရှိလား?
+- Rectangle 2 ဟာ Rectangle 1 ရဲ့ထိပ်မှာ အပြည့်အဝရှိလား?
 
-လေဆာပစ်ပေါက်ခြင်းဟာ key-event ကို တုံ့ပြန်ပြီး အပေါ်ဘက်ကို လှုပ်ရှားတဲ့ object တစ်ခုကို ဖန်တီးခြင်းဖြစ်ပါတယ်။ အဲဒီအတွက် အောက်ပါအဆင့်တွေ လိုအပ်ပါတယ်-
+ဒီ condition တွေက တစ်ခုမှမှန်မယ်ဆိုရင် Rectangle တွေ overlap ဖြစ်နေလို့ ဖြစ်ပါတယ်။ Radar operator တွေ Aircraft ၂ခု safe distance မှာရှိလားဆိုတာကို စစ်ဆေးတဲ့နည်းလမ်းနဲ့ တူပါတယ်။
 
-1. **လေဆာ object တစ်ခု ဖန်တီးပါ**: ဟီးရိုးရဲ့ သင်္ဘောအပေါ်ဘက်ကနေ ဖန်တီးပြီး မျက်နှာပြင်အပေါ်ဘက်ကို လှုပ်ရှားပါမယ်။
-2. **key event နဲ့ code ကို ချိတ်ဆက်ပါ**: ကီးဘုတ်မှာ လေဆာပစ်ပေါက်ကို ကိုယ်စားပြုတဲ့ key တစ်ခုကို ရွေးချယ်ရပါမယ်။
-3. **လေဆာပုံစံရှိတဲ့ ဂိမ်းအရာဝတ္ထုကို ဖန်တီးပါ**: key ကို နှိပ်တဲ့အခါ။
+## Object တွေရဲ့ lifecycle ကို စီမံခြင်း
 
-## လေဆာပစ်ပေါက်အတွက် Cooldown
+လေဆာက ရန်သူကို ထိမှန်တဲ့အခါမှာ အရာဝတ္ထု ၂ခုလုံးကို ဂိမ်းကနေ ဖယ်ရှားရပါမယ်။ ဒါပေမဲ့ loop အတွင်းမှာ အရာဝတ္ထုတွေကို ဖျက်လိုက်ရင် crash ဖြစ်နိုင်ပါတယ် - Apollo Guidance Computer လို အစောပိုင်းကွန်ပျူတာစနစ်တွေမှာ အတွေ့အကြုံရှိခဲ့တဲ့ သင်ခန်းစာတစ်ခုပါ။ အဲ့ဒါကြောင့် "mark for deletion" ဆိုတဲ့နည်းလမ်းကို အသုံးပြုပြီး frame တွေကြားမှာ အရာဝတ္ထုတွေကို လုံခြုံစွာဖယ်ရှားပါတယ်။
 
-လေဆာဟာ သင့်ရဲ့ key ကို နှိပ်တိုင်း ပစ်ပေါက်ရပါမယ်၊ ဥပမာ *space* key ကို။ ဂိမ်းမှာ အလွန်များပြားတဲ့ လေဆာတွေကို အတိုင်းမသိ ဖန်တီးမရအောင် ကန့်သတ်ဖို့ လိုအပ်ပါတယ်။ အဲဒီကန့်သတ်မှုကို *cooldown* timer ကို အသုံးပြုပြီး လေဆာကို အချိန် interval တစ်ခုအတွင်းမှာပဲ ပစ်ပေါက်နိုင်အောင် လုပ်ဆောင်ရပါမယ်။ အဲဒီနည်းလမ်းကို အောက်ပါအတိုင်း အကောင်အထည်ဖော်နိုင်ပါတယ်-
+```javascript
+// Mark object for removal
+enemy.dead = true;
+```
+
+**ဒီနည်းလမ်းက အလုပ်လုပ်တဲ့အကြောင်း:**
+- Object ကို "dead" အဖြစ် mark လုပ်ပေမဲ့ ချက်ချင်း ဖျက်မထားပါဘူး
+- အဲ့ဒီနောက်မှာတော့ လက်ရှိ game frame ကို လုံခြုံစွာပြီးမြောက်စေပါတယ်
+- ဖျက်ပြီးသားအရာဝတ္ထုကို အသုံးပြုရင်း crash ဖြစ်တာကို ကာကွယ်ပေးပါတယ်!
+
+Render cycle နောက်တစ်ခုမတိုင်ခင်မှာ mark လုပ်ထားတဲ့ object တွေကို filter လုပ်ပါ:
+
+```javascript
+gameObjects = gameObjects.filter(go => !go.dead);
+```
+
+**ဒီ filtering က ဘာလုပ်ပေးလဲဆိုရင်:**
+- "အသက်ရှင်"နေတဲ့ object တွေကိုသာ ထည့်ထားတဲ့ fresh list တစ်ခု ဖန်တီးပေးပါတယ်
+- "dead" အဖြစ် mark လုပ်ထားတဲ့အရာဝတ္ထုတွေကို ဖယ်ရှားပေးပါတယ်
+- ဂိမ်းကို အဆင်ပြေပြေ လည်ပတ်စေပါတယ်
+- ဖျက်ဆီးပြီးသား object တွေ accumulation ဖြစ်တာကို ကာကွယ်ပေးပါတယ်
+
+## လေဆာ mechanics ကို အကောင်အထည်ဖော်ခြင်း
+
+ဂိမ်းထဲမှာ လေဆာ projectiles တွေဟာ Star Trek ရဲ့ photon torpedoes လိုပဲ - အရာဝတ္ထုတွေကို တိုက်မိတဲ့အထိ တိုက်ရိုက်လိုက်ပါမယ်။ Spacebar ကိုနှိပ်တိုင်း hero ရဲ့တည်နေရာကနေ laser object အသစ်တစ်ခုကို ဖန်တီးပြီး screen ပေါ်မှာ ရွေ့လျားစေပါတယ်။
+
+ဒီကို အကောင်အထည်ဖော်ဖို့အတွက် အစိတ်အပိုင်းအချို့ကို ကိုက်ညီစွာ စီမံရပါမယ်:
+
+**အဓိကလိုအပ်ချက်များ:**
+- **ဖန်တီး** hero ရဲ့တည်နေရာကနေ laser object တွေကို spawn လုပ်ပါ
+- **ကိုင်တွယ်** keyboard input ကို အသုံးပြုပြီး laser creation ကို trigger လုပ်ပါ
+- **စီမံ** laser ရဲ့ရွေ့လျားမှုနဲ့ lifecycle
+- **အကောင်အထည်ဖော်** laser projectile တွေရဲ့ visual representation
+
+## Firing rate control ကို အကောင်အထည်ဖော်ခြင်း
+
+Firing rate အကန့်အသတ်မရှိရင် ဂိမ်း engine ကို overload ဖြစ်စေပြီး gameplay ကိုလွယ်ကူလွန်းစေမှာဖြစ်ပါတယ်။ အမှန်တကယ်လက်နက်စနစ်တွေမှာလည်း အတူတူပဲ - USS Enterprise ရဲ့ phasers တွေတောင် shot တစ်ခုပြီးရင် recharge လုပ်ဖို့အချိန်လိုပါတယ်။
+
+Rapid-fire spamming ကို ကာကွယ်ပေးတဲ့ cooldown system ကို အကောင်အထည်ဖော်ပါမယ်:
 
 ```javascript
 class Cooldown {
@@ -91,41 +119,55 @@ class Cooldown {
     this.cool = false;
     setTimeout(() => {
       this.cool = true;
-    }, time)
+    }, time);
   }
 }
 
 class Weapon {
-  constructor {
+  constructor() {
+    this.cooldown = null;
   }
+  
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // Create laser projectile
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // Weapon is still cooling down
     }
   }
 }
 ```
 
-✅ *cooldowns* အကြောင်းကို အာကာသဂိမ်း စီးရီးရဲ့ အပိုင်း ၁ မှာ ပြန်လည်သတိရပါ။
+**Cooldown system အလုပ်လုပ်ပုံ:**
+- Weapon ကို "hot" (မပစ်နိုင်သေး) အဖြစ်စတင်ပါ
+- Timeout period ပြည့်တဲ့အခါ "cool" (ပစ်နိုင်) ဖြစ်လာပါမယ်
+- ပစ်ခါနီးမှာ "Weapon cool ဖြစ်လား?" ဆိုတာကို စစ်ဆေးပါ
+- Spam-clicking ကို ကာကွယ်ပေးပြီး control တွေကို responsive ဖြစ်စေပါတယ်
 
-## ဘာကို တည်ဆောက်မလဲ
+✅ Space game series ရဲ့ lesson 1 ကို ပြန်လည်သွားကြည့်ပြီး cooldowns အကြောင်းကို သတိရပါ။
 
-အရင်သင်ခန်းစာကနေ ရှိပြီးသား code ကို (သင့်ရဲ့ code ကို သန့်စင်ပြီး ပြန်လည်စီမံထားသင့်ပါတယ်) ယူပြီး တိုးချဲ့ပါမယ်။ အပိုင်း II မှ code ကို စတင်သုံးပါ၊ ဒါမှမဟုတ် [အပိုင်း III- starter](../../../../../../../../../your-work) မှ code ကို အသုံးပြုပါ။
+## တိုက်မိမှုစနစ်ကို တည်ဆောက်ခြင်း
 
-> အကြံပြုချက်: သင်လုပ်ဆောင်မယ့် လေဆာဟာ assets folder မှာ ရှိပြီး သင့်ရဲ့ code မှာ reference လုပ်ထားပါတယ်။
+သင့်ရဲ့ space game code ကို တိုးချဲ့ပြီး တိုက်မိမှုရှာဖွေမှုစနစ်ကို ဖန်တီးပါမယ်။ International Space Station ရဲ့ automated collision avoidance system လိုပဲ သင့်ဂိမ်းက အမြဲတမ်း object တွေရဲ့တည်နေရာကို စောင့်ကြည့်ပြီး intersection တွေကို တုံ့ပြန်ပါမယ်။
 
-- **တိုက်မိမှု စစ်ဆေးခြင်း** ထည့်သွင်းပါ၊ လေဆာဟာ တိုက်မိတဲ့အခါ အောက်ပါစည်းကမ်းတွေကို လိုက်နာရပါမယ်-
-   1. **လေဆာက ရန်သူကို ထိမိခြင်း**: ရန်သူဟာ လေဆာကို ထိမိရင် သေဆုံးပါမယ်။
-   2. **လေဆာက မျက်နှာပြင်အပေါ်ဘက်ကို ထိမိခြင်း**: လေဆာဟာ မျက်နှာပြင်အပေါ်ဘက်ကို ထိမိရင် ဖျက်သိမ်းပါမယ်။
-   3. **ရန်သူနှင့် ဟီးရိုး တိုက်မိခြင်း**: ရန်သူနှင့် ဟီးရိုး တိုက်မိရင် နှစ်ခုလုံး ဖျက်သိမ်းပါမယ်။
-   4. **ရန်သူက မျက်နှာပြင်အောက်ဘက်ကို ရောက်ခြင်း**: ရန်သူနှင့် ဟီးရိုး နှစ်ခုလုံး ဖျက်သိမ်းပါမယ်။
+ယခင်သင်ခန်းစာရဲ့ code ကနေစပြီး object interaction တွေကို စီမံတဲ့ တိုက်မိမှုရှာဖွေမှုစနစ်ကို ထည့်သွင်းပါမယ်။
 
-## အကြံပြုထားတဲ့ အဆင့်များ
+> 💡 **အကြံပေးချက်**: Laser sprite ဟာ assets folder ထဲမှာ ရှိပြီး code မှာ reference လုပ်ထားပြီးသားဖြစ်ပါတယ်၊ အကောင်အထည်ဖော်ဖို့အဆင်သင့်ဖြစ်ပါတယ်။
 
-`your-work` sub folder မှာ ဖန်တီးထားတဲ့ ဖိုင်တွေကို ရှာပါ။ အဲဒီ folder မှာ အောက်ပါအရာတွေ ပါဝင်သင့်ပါတယ်-
+### တိုက်မိမှုစည်းမျဉ်းများ
+
+**ထည့်သွင်းရန် Game mechanics:**
+1. **Laser ရန်သူကို ထိမှန်ခြင်း**: Laser projectile က ရန်သူ object ကို ထိမှန်တဲ့အခါ ဖျက်ဆီးပါ
+2. **Laser screen boundary ကို ထိမှန်ခြင်း**: Laser က screen ရဲ့ထိပ်စွန်းကို ရောက်တဲ့အခါ ဖယ်ရှားပါ
+3. **ရန်သူနဲ့ hero တိုက်မိခြင်း**: Object ၂ခုလုံး တိုက်မိတဲ့အခါ ဖျက်ဆီးပါ
+4. **ရန်သူ screen အောက်ကို ရောက်ခြင်း**: ရန်သူတွေ screen အောက်ကို ရောက်တဲ့အခါ Game over ဖြစ်ပါမယ်
+
+## Development environment ကို စတင်ခြင်း
+
+သတင်းကောင်း - အခြေခံအလုပ်တွေကို အားလုံး ပြင်ဆင်ပြီးသားဖြစ်ပါတယ်! သင့်ရဲ့ game assets နဲ့ အခြေခံဖွဲ့စည်းမှုတွေဟာ `your-work` subfolder ထဲမှာရှိပြီး collision features တွေကို ထည့်သွင်းဖို့အဆင်သင့်ဖြစ်ပါတယ်။
+
+### Project ဖွဲ့စည်းမှု
 
 ```bash
 -| assets
@@ -137,175 +179,200 @@ class Weapon {
 -| package.json
 ```
 
-သင့်ရဲ့ project ကို `your_work` folder မှာ စတင်ဖို့အတွက် အောက်ပါ command ကို ရိုက်ပါ-
+**File structure ကို နားလည်ခြင်း:**
+- **Sprite images** တွေကို game objects အတွက် ထည့်သွင်းထားပါတယ်
+- **Main HTML document** နဲ့ JavaScript application file ပါဝင်ပါတယ်
+- **Local development server** အတွက် package configuration ကို ပေးထားပါတယ်
+
+### Development server ကို စတင်ခြင်း
+
+Project folder ကိုသွားပြီး local server ကို စတင်ပါ:
 
 ```bash
 cd your-work
 npm start
 ```
 
-အထက်ပါ command ဟာ HTTP Server ကို `http://localhost:5000` မှာ စတင်ပါမယ်။ Browser ကို ဖွင့်ပြီး အဲဒီလိပ်စာကို ထည့်ပါ၊ အခုအချိန်မှာ ဟီးရိုးနဲ့ ရန်သူတွေကို ပြသပေမယ့် ဘာမှ မလှုပ်ရှားသေးပါဘူး။
+**ဒီ command sequence:**
+- **Directory** ကို သင့်ရဲ့ project folder ကို ပြောင်းပါ
+- **Local HTTP server** ကို `http://localhost:5000` မှာ စတင်ပါ
+- **Game files** တွေကို testing နဲ့ development အတွက် serve လုပ်ပါ
+- **Live development** ကို automatic reloading နဲ့ အဆင်ပြေစေပါတယ်
 
-### Code ထည့်သွင်းပါ
+Browser ကိုဖွင့်ပြီး `http://localhost:5000` ကို သွားပါ။ Hero နဲ့ ရန်သူတွေ screen ပေါ်မှာ render ဖြစ်နေတဲ့ current game state ကို ကြည့်နိုင်ပါမယ်။
 
-1. **ဂိမ်းအရာဝတ္ထုရဲ့ စတုရန်းပုံစံကို တည်ဆောက်ပါ**: တိုက်မိမှုကို စစ်ဆေးဖို့အတွက် အောက်ပါ code ဟာ `GameObject` ရဲ့ စတုရန်းပုံစံကို ရယူနိုင်ပါတယ်။ သင့်ရဲ့ `GameObject` class ကို ပြင်ဆင်ပါ-
+### အဆင့်ဆင့် အကောင်အထည်ဖော်ခြင်း
 
-    ```javascript
-    rectFromGameObject() {
-        return {
-          top: this.y,
-          left: this.x,
-          bottom: this.y + this.height,
-          right: this.x + this.width,
-        };
-      }
-    ```
+NASA က Voyager spacecraft ကို program လုပ်တဲ့ systematic approach လိုပဲ တိုက်မိမှုရှာဖွေမှုကို အဆင့်ဆင့်တည်ဆောက်သွားပါမယ်။
 
-2. **တိုက်မိမှုကို စစ်ဆေးတဲ့ code ထည့်ပါ**: စတုရန်း ၂ ခု *ထိတွေ့*မိတာကို စစ်ဆေးတဲ့ function အသစ်တစ်ခုကို ဖန်တီးပါ-
+#### ၁. Rectangle collision bounds ထည့်သွင်းပါ
 
-    ```javascript
-    function intersectRect(r1, r2) {
-      return !(
-        r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top
-      );
-    }
-    ```
+ပထမဆုံးမှာတော့ game objects တွေ boundary ကို ဖော်ပြတတ်အောင် သင်ကြားပါမယ်။ `GameObject` class မှာ ဒီ method ကို ထည့်သွင်းပါ:
 
-3. **လေဆာပစ်ပေါက်စနစ် ထည့်သွင်းပါ**
-   1. **key-event message ထည့်ပါ**: *space* key ဟာ ဟီးရိုးရဲ့ သင်္ဘောအပေါ်မှာ လေဆာကို ဖန်တီးရပါမယ်။ `Messages` object မှာ constants ၃ ခုကို ထည့်ပါ-
+```javascript
+rectFromGameObject() {
+    return {
+      top: this.y,
+      left: this.x,
+      bottom: this.y + this.height,
+      right: this.x + this.width,
+    };
+  }
+```
 
-       ```javascript
-        KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
-        COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
-        COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
-       ```
+**ဒီ method ရဲ့လုပ်ဆောင်ချက်:**
+- **Rectangle object** ကို precise boundary coordinates တွေနဲ့ ဖန်တီးပေးပါတယ်
+- **Bottom နဲ့ right edges** ကို position နဲ့ dimensions ကို အသုံးပြုပြီးတွက်ချက်ပေးပါတယ်
+- **Object** တစ်ခုကို collision detection algorithm တွေအတွက် အသုံးပြုနိုင်တဲ့အခြေအနေဖြစ်စေပါတယ်
+- **Standardized interface** ကို game objects အားလုံးအတွက် ပေးစွမ်းပါတယ်
 
-   1. **space key ကို handle လုပ်ပါ**: `window.addEventListener` keyup function ကို ပြင်ဆင်ပြီး space key ကို handle လုပ်ပါ-
+#### ၂. Intersection detection ကို အကောင်အထည်ဖော်ပါ
 
-      ```javascript
-        } else if(evt.keyCode === 32) {
-          eventEmitter.emit(Messages.KEY_EVENT_SPACE);
-        }
-      ```
+အခုတော့ collision detective - rectangle ၂ခု overlap ဖြစ်နေလားဆိုတာကို ပြောပြနိုင်တဲ့ function ကို ဖန်တီးပါမယ်:
 
-    1. **listeners ထည့်ပါ**: `initGame()` function ကို ပြင်ဆင်ပြီး space bar ကို နှိပ်တဲ့အခါ ဟီးရိုးက လေဆာပစ်နိုင်အောင်လုပ်ပါ-
+```javascript
+function intersectRect(r1, r2) {
+  return !(
+    r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top
+  );
+}
+```
 
-       ```javascript
-       eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
-        if (hero.canFire()) {
-          hero.fire();
-        }
-       ```
+**ဒီ algorithm ရဲ့လုပ်ဆောင်ချက်:**
+- **Separation conditions** ၄ခုကို rectangle တွေကြားမှာ စစ်ဆေးပါတယ်
+- **False** ကို separation condition တစ်ခုမှန်ရင် return လုပ်ပါတယ်
+- **Collision** ဖြစ်နေတဲ့အခါ separation မရှိတဲ့အခြေအနေကို ပြောပြပါတယ်
+- **Negation logic** ကို အသုံးပြုပြီး intersection testing ကို အကျိုးရှိရှိလုပ်ဆောင်ပါတယ်
 
-       နဲ့ `eventEmitter.on()` function အသစ်ကို ထည့်ပြီး ရန်သူဟာ လေဆာနဲ့ တိုက်မိတဲ့အခါ behavior ကို သတ်မှတ်ပါ-
+#### ၃. Laser firing system ကို အကောင်အထည်ဖော်ပါ
 
-          ```javascript
-          eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-            first.dead = true;
-            second.dead = true;
-          })
-          ```
+အခုတော့ စိတ်လှုပ်ရှားစရာအချိန်ရောက်ပါပြီ! Laser firing system ကို စတင်တည်ဆောက်ပါ။
 
-   1. **object ကို လှုပ်ရှားပါ**: လေဆာဟာ မျက်နှာပြင်အပေါ်ဘက်ကို တဖြည်းဖြည်း လှုပ်ရှားရပါမယ်။ `GameObject` ကို extend လုပ်တဲ့ `Laser` class အသစ်ကို ဖန်တီးပါ-
+##### Message constants
 
-      ```javascript
-        class Laser extends GameObject {
-        constructor(x, y) {
-          super(x,y);
-          (this.width = 9), (this.height = 33);
-          this.type = 'Laser';
-          this.img = laserImg;
-          let id = setInterval(() => {
-            if (this.y > 0) {
-              this.y -= 15;
-            } else {
-              this.dead = true;
-              clearInterval(id);
-            }
-          }, 100)
-        }
-      }
-      ```
+ပထမဆုံးမှာတော့ game system တွေ အပြန်အလှန် ဆက်သွယ်နိုင်ဖို့ message types တွေကို သတ်မှတ်ပါ:
 
-   1. **တိုက်မိမှုကို handle လုပ်ပါ**: လေဆာအတွက် တိုက်မိမှုစည်းကမ်းတွေကို အကောင်အထည်ဖော်ပါ။ `updateGameObjects()` function ကို ဖန်တီးပြီး တိုက်မိတဲ့ object တွေကို စစ်ဆေးပါ-
+```javascript
+KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
+COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
+COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
+```
 
-      ```javascript
-      function updateGameObjects() {
-        const enemies = gameObjects.filter(go => go.type === 'Enemy');
-        const lasers = gameObjects.filter((go) => go.type === "Laser");
-      // laser hit something
-        lasers.forEach((l) => {
-          enemies.forEach((m) => {
-            if (intersectRect(l.rectFromGameObject(), m.rectFromGameObject())) {
-            eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
-              first: l,
-              second: m,
-            });
-          }
-         });
-      });
+**ဒီ constants ရဲ့အကျိုးကျေးဇူး:**
+- **Event names** တွေကို application တစ်ခုလုံးမှာ standardize လုပ်ပေးပါတယ်
+- **Game systems** တွေကြားမှာ consistent communication ကို အကောင်အထည်ဖော်ပေးပါတယ်
+- **Event handler registration** မှာ typo ဖြစ်တာကို ကာကွယ်ပေးပါတယ်
 
-        gameObjects = gameObjects.filter(go => !go.dead);
-      }  
-      ```
+##### Keyboard input handling
 
-      `updateGameObjects()` function ကို `window.onload` ရဲ့ game loop မှာ ထည့်သွင်းပါ။
+Key event listener မှာ space key detection ကို ထည့်သွင်းပါ:
 
-   4. **လေဆာအတွက် cooldown ကို အကောင်အထည်ဖော်ပါ**: လေဆာကို အချိန် interval တစ်ခုအတွင်းမှာပဲ ပစ်နိုင်အောင်လုပ်ပါ။
+```javascript
+} else if(evt.keyCode === 32) {
+  eventEmitter.emit(Messages.KEY_EVENT_SPACE);
+}
+```
 
-      နောက်ဆုံးမှာ `Hero` class ကို ပြင်ဆင်ပြီး cooldown လုပ်နိုင်အောင်လုပ်ပါ-
+**ဒီ input handler:**
+- **Space key presses** ကို keyCode 32 နဲ့ detect လုပ်ပါတယ်
+- **Standardized event message** ကို emit လုပ်ပါတယ်
+- **Decoupled firing logic** ကို enable လုပ်ပါတယ်
 
-       ```javascript
-      class Hero extends GameObject {
-        constructor(x, y) {
-          super(x, y);
-          (this.width = 99), (this.height = 75);
-          this.type = "Hero";
-          this.speed = { x: 0, y: 0 };
-          this.cooldown = 0;
-        }
-        fire() {
-          gameObjects.push(new Laser(this.x + 45, this.y - 10));
-          this.cooldown = 500;
+##### Event listener setup
+
+`initGame()` function မှာ firing behavior ကို register လုပ်ပါ:
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
+ if (hero.canFire()) {
+   hero.fire();
+ }
+});
+```
+
+**ဒီ event listener:**
+- **Space key events** ကို တုံ့ပြန်ပါတယ်
+- **Firing cooldown status** ကို စစ်ဆေးပါတယ်
+- **Laser creation** ကို ခွင့်ပြုတဲ့အခါ trigger လုပ်ပါတယ်
+
+Laser-enemy interaction တွေကို collision handling ထည့်သွင်းပါ:
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+  first.dead = true;
+  second.dead = true;
+});
+```
+
+**ဒီ collision handler:**
+- **Collision event data** ကို object ၂ခုနဲ့အတူ လက်ခံပါတယ်
+- **Object ၂ခုလုံးကို ဖျက်ဆီးဖို့ mark လုပ်ပါတယ်
+- **Collision cleanup** ကို သေချာစေပါတယ်
+
+#### ၄. Laser class ကို ဖန်တီးပါ
+
+Laser projectile ကို အပေါ်ဘက်ရွေ့လျားပြီး သူ့ရဲ့ lifecycle ကို စီမံနိုင်တဲ့အခြေအနေဖြစ်စေပါ:
+
+```javascript
+class Laser extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 9;
+    this.height = 33;
+    this.type = 'Laser';
+    this.img = laserImg;
     
-          let id = setInterval(() => {
-            if (this.cooldown > 0) {
-              this.cooldown -= 100;
-            } else {
-              clearInterval(id);
-            }
-          }, 200);
-        }
-        canFire() {
-          return this.cooldown === 0;
-        }
+    let id = setInterval(() => {
+      if (this.y > 0) {
+        this.y -= 15;
+      } else {
+        this.dead = true;
+        clearInterval(id);
       }
-      ```
+    }, 100);
+  }
+}
+```
 
-ဒီအချိန်မှာ သင့်ရဲ့ဂိမ်းမှာ functionality ရှိပါပြီ! Arrow keys နဲ့ navigation လုပ်နိုင်ပြီး space bar နဲ့ လေဆာပစ်နိုင်ပါတယ်၊ ရန်သူတွေကို ထိမိရင် ဖျက်သိမ်းပါမယ်။ အောင်မြင်ပါတယ်!
+**ဒီ class implementation:**
+- **GameObject** ကို extend လုပ်ပြီး အခြေခံလုပ်ဆောင်ချက်တွေကို ရယူပါတယ်
+- **Laser sprite** အတွက် အရွယ်အစားကို သတ်မှတ်ပါတယ်
+- **Automatic upward movement** ကို `setInterval()` အသုံးပြုပြီး ဖန်တီးပါတယ်
+- **Screen top** ကို ရောက်တဲ့အခါ self-destruction ကို handle လုပ်ပါတယ်
+- **Animation timing နဲ့ cleanup** ကို စီမံပါတယ်
 
----
+#### ၅. Collision detection system ကို အကောင်အထည်ဖော်ပါ
 
-## 🚀 စိန်ခေါ်မှု
+Comprehensive collision detection function ကို ဖန်တီးပါ:
 
-ပေါက်ကွဲမှုကို ထည့်သွင်းပါ! [Space Art repo](../../../../6-space-game/solution/spaceArt/readme.txt) မှ assets တွေကို ကြည့်ပြီး ရန်သူဟာ လေဆာနဲ့ တိုက်မိတဲ့အခါ ပေါက်ကွဲမှုကို ထည့်သွင်းကြည့်ပါ။
+```javascript
+function updateGameObjects() {
+  const enemies = gameObjects.filter(go => go.type === 'Enemy');
+  const lasers = gameObjects.filter(go => go.type === "Laser");
+  
+  // Test laser-enemy collisions
+  lasers.forEach((laser) => {
+    enemies.forEach((enemy) => {
+      if (intersectRect(laser.rectFromGameObject(), enemy.rectFromGameObject())) {
+        eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
+          first: laser,
+          second: enemy,
+        });
+      }
+    });
+  });
 
-## သင်ခန်းစာပြီးနောက် မေးခွန်းများ
+  // Remove destroyed objects
+  gameObjects = gameObjects.filter(go => !go.dead);
+}
+```
 
-[သင်ခန်းစာပြီးနောက် မေးခွန်းများ](https://ff-quizzes.netlify.app/web/quiz/36)
-
-## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
-
-ဂိမ်းမှာ interval တွေကို စမ်းသပ်ကြည့်ပါ။ အဲဒီ interval တွေကို ပြောင်းလဲတဲ့အခါ ဘာဖြစ်မလဲ? [JavaScript timing events](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/) အကြောင်းပိုမိုဖတ်ရှုပါ။
-
-## လုပ်ငန်းတာဝန်
-
-[တိုက်မိမှုများကို စမ်းသပ်ပါ](assignment.md)
+**ဒီ collision system:
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှုကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွတ်များ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရ အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

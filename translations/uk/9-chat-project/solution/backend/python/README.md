@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:50:21+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-24T15:39:38+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "uk"
 }
@@ -18,19 +18,27 @@ python -m venv venv
 source ./venv/bin/activate
 ```
 
-## Встановлення залежностей
+## Встановіть залежності
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
-## Запуск API
+## Запустіть API
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-## Запуск фронтенду
+## Тестування API
+
+Відвідайте інтерактивну документацію API за адресою: `http://localhost:5000/docs`
+
+## Запустіть фронтенд
 
 Переконайтеся, що ви знаходитеся в папці фронтенду
 
@@ -42,7 +50,7 @@ python api.py
 npx http-server -p 8000
 ```
 
-Спробуйте ввести повідомлення в чаті, ви повинні побачити відповідь (за умови, що ви запускаєте це в Codespace або налаштували токен доступу).
+Спробуйте написати повідомлення в чаті, ви повинні побачити відповідь (за умови, що ви запускаєте це в Codespace або налаштували токен доступу).
 
 ## Налаштування токена доступу (якщо ви не запускаєте це в Codespace)
 

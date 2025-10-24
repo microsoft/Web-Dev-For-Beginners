@@ -1,100 +1,126 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f7009631b73556168ca435120a231c98",
-  "translation_date": "2025-08-28T18:41:49+00:00",
+  "original_hash": "90a3c32c3377f83ab750c2447c77ab98",
+  "translation_date": "2025-10-24T16:08:41+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "my"
 }
 -->
-# JavaScript အခြေခံများ: ဆုံးဖြတ်ချက်များချခြင်း
+# JavaScript အခြေခံ: ဆုံးဖြတ်ချက်များလုပ်ခြင်း
 
-![JavaScript အခြေခံများ - ဆုံးဖြတ်ချက်များချခြင်း](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.my.png)
+![JavaScript အခြေခံ - ဆုံးဖြတ်ချက်များလုပ်ခြင်း](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.my.png)
 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## မိန့်ခွန်းမတိုင်မီ စစ်ဆေးမှု
+အက်ပလီကေးရှင်းတွေ ဘယ်လိုအလိုအလျောက် ဆုံးဖြတ်ချက်တွေ လုပ်နိုင်သလဲဆိုတာ သင်မေးဖူးပါသလား? ဥပမာ - လမ်းကြောင်းအမြန်ဆုံးကို ရွေးချယ်တဲ့ navigation system, အပူပေးစနစ်ကို ဘယ်အချိန်မှာ ဖွင့်ရမလဲဆိုတာ ဆုံးဖြတ်တဲ့ thermostat စသည်တို့ပါ။ ဒီဟာက programming မှာ အခြေခံသော ဆုံးဖြတ်ချက်လုပ်ခြင်း၏ အဓိကအယူအဆဖြစ်ပါတယ်။
 
-[မိန့်ခွန်းမတိုင်မီ စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/11)
+Charles Babbage ရဲ့ Analytical Engine က အခြေအနေအပေါ် မူတည်ပြီး လုပ်ဆောင်မှုအဆင့်တွေကို အခြားနည်းလမ်းတွေနဲ့ လိုက်နာဖို့ ဒီဇိုင်းဆွဲထားသလိုပဲ၊ ယနေ့ခေတ် JavaScript အစီအစဉ်တွေဟာ အခြေအနေအမျိုးမျိုးအပေါ် မူတည်ပြီး ရွေးချယ်မှုတွေ လုပ်ဖို့ လိုအပ်ပါတယ်။ ဒီလို branch လုပ်ပြီး ဆုံးဖြတ်ချက်တွေ လုပ်နိုင်စွမ်းက static code ကို responsive, intelligent applications အဖြစ် ပြောင်းလဲပေးပါတယ်။
 
-ဆုံးဖြတ်ချက်များချခြင်းနှင့် သင့်ကုဒ်ကို အစဉ်လိုက်အောင် စီမံခြင်းသည် သင့်ကုဒ်ကို ပြန်လည်အသုံးပြုနိုင်စေပြီး ခိုင်မာစေသည်။ ဤအပိုင်းတွင် JavaScript တွင် ဒေတာလှည့်ပတ်မှုကို ထိန်းချုပ်ရန် သုံးသည့် သဒ္ဒါနှင့် Boolean ဒေတာအမျိုးအစားများနှင့်အတူ အသုံးပြုသောအခါ၌ ၎င်း၏ အရေးပါမှုကို ဖော်ပြထားသည်။
+ဒီသင်ခန်းစာမှာ သင့်ရဲ့အစီအစဉ်တွေမှာ conditional logic ကို ဘယ်လိုအသုံးပြုရမလဲ သင်ယူပါမယ်။ Conditional statements, comparison operators, logical expressions တွေကို လေ့လာပြီး သင့် code က အခြေအနေတွေကို အကဲဖြတ်ပြီး သင့်တော်တဲ့အဖြေကို ပြန်လည်ပေးနိုင်စေပါမယ်။
 
-[![ဆုံးဖြတ်ချက်များချခြင်း](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "ဆုံးဖြတ်ချက်များချခြင်း")
+## သင်ခန်းစာမတိုင်မီ Quiz
 
-> 🎥 အထက်ပါပုံကို နှိပ်၍ ဆုံးဖြတ်ချက်များချခြင်းအကြောင်း ဗီဒီယိုကို ကြည့်ပါ။
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-> ဤသင်ခန်းစာကို [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon) တွင် လေ့လာနိုင်ပါသည်။
+အစီအစဉ်တွေကို ဆုံးဖြတ်ချက်လုပ်နိုင်စွမ်းနဲ့ control လုပ်နိုင်စွမ်းက programming ရဲ့ အခြေခံအပိုင်းဖြစ်ပါတယ်။ ဒီအပိုင်းမှာ Boolean values နဲ့ conditional logic ကို အသုံးပြုပြီး သင့် JavaScript အစီအစဉ်တွေကို ဘယ်လို control လုပ်ရမလဲကို လေ့လာပါမယ်။
 
-## Boolean များအကြောင်း အကျဉ်းချုပ်
+[![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
-Boolean များတွင် `true` သို့မဟုတ် `false` ဆိုသည့် တန်ဖိုးနှစ်ခုသာ ရှိနိုင်သည်။ Boolean များသည် အခြေအနေတစ်ခုခုဖြင့် သတ်မှတ်ထားသောအခါ သင့်ကုဒ်၏ ဘယ်လိုလိုင်းများကို အလုပ်လုပ်မည်ကို ဆုံးဖြတ်ရန် အထောက်အကူပြုသည်။
+> 🎥 အပေါ်ကပုံကို click လုပ်ပြီး ဆုံးဖြတ်ချက်လုပ်ခြင်းအကြောင်း video ကို ကြည့်ပါ။
 
-သင့် Boolean ကို `true` သို့မဟုတ် `false` အဖြစ် သတ်မှတ်ပါ-
+> ဒီသင်ခန်းစာကို [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon) မှာလည်း လေ့လာနိုင်ပါတယ်။
 
-`let myTrueBool = true`  
-`let myFalseBool = false`
+## Booleans အကြောင်းအကျဉ်းချုပ်
 
-✅ Boolean များကို အင်္ဂလိပ် သင်္ချာပညာရှင်၊ ဒဿနပညာရှင်နှင့် သဘောတရားပညာရှင် George Boole (1815–1864) ၏ နာမည်မှ ဆောင်ယူထားသည်။
+ဆုံးဖြတ်ချက်လုပ်ခြင်းကို လေ့လာမယ့်အခါမှာ၊ အရင်ဆုံး Boolean values ကို ပြန်လည်သုံးသပ်ကြရအောင်။ George Boole ဆိုတဲ့ သင်္ချာပညာရှင်ရဲ့နာမည်ကို ယူထားတဲ့ ဒီ values တွေဟာ binary states ကို ကိုယ်စားပြုပါတယ် - `true` ဒါမှမဟုတ် `false` ဖြစ်ပါတယ်။ အဓိကအားဖြင့် အလယ်အလတ်အခြေအနေမရှိပါဘူး။
 
-## နှိုင်းယှဉ်မှု Operator များနှင့် Boolean များ
+ဒီ binary values တွေဟာ computational logic အားလုံးရဲ့ အခြေခံဖြစ်ပါတယ်။ သင့်ရဲ့အစီအစဉ်က ဆုံးဖြတ်ချက်လုပ်တဲ့အခါမှာ အဆုံးသတ်မှာ Boolean အကဲဖြတ်မှုတစ်ခုအဖြစ် ပြောင်းလဲသွားပါတယ်။
 
-Operator များကို အခြေအနေများကို သုံးသပ်ရန် အသုံးပြုပြီး Boolean တန်ဖိုးကို ဖန်တီးရန် နှိုင်းယှဉ်မှုများ ပြုလုပ်သည်။ အောက်တွင် မကြာခဏ အသုံးပြုသော Operator များစာရင်းကို ဖော်ပြထားသည်။
+Boolean variables ဖန်တီးခြင်းက ရိုးရှင်းပါတယ်။
 
-| သင်္ကေတ | ဖော်ပြချက်                                                                                                                                                   | ဥပမာ               |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `<`      | **ငယ်သည်**: တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ဘယ်ဘက်တန်ဖိုးသည် ညာဘက်ထက် ငယ်လျှင် `true` Boolean တန်ဖိုးကို ပြန်ပေးသည်                              | `5 < 6 // true`     |
-| `<=`     | **ငယ်သည် သို့မဟုတ် ငြိမ်သည်**: တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ဘယ်ဘက်တန်ဖိုးသည် ညာဘက်ထက် ငယ် သို့မဟုတ် ငြိမ်လျှင် `true` Boolean တန်ဖိုးကို ပြန်ပေးသည် | `5 <= 6 // true`    |
-| `>`      | **ကြီးသည်**: တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ဘယ်ဘက်တန်ဖိုးသည် ညာဘက်ထက် ကြီးလျှင် `true` Boolean တန်ဖိုးကို ပြန်ပေးသည်                         | `5 > 6 // false`    |
-| `>=`     | **ကြီးသည် သို့မဟုတ် ငြိမ်သည်**: တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ဘယ်ဘက်တန်ဖိုးသည် ညာဘက်ထက် ကြီး သို့မဟုတ် ငြိမ်လျှင် `true` Boolean တန်ဖိုးကို ပြန်ပေးသည် | `5 >= 6 // false`   |
-| `===`    | **တိကျသော တန်းတူမှု**: တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး ဘယ်ဘက်နှင့် ညာဘက်တန်ဖိုးများသည် တူပြီး ဒေတာအမျိုးအစားလည်း တူလျှင် `true` Boolean တန်ဖိုးကို ပြန်ပေးသည် | `5 === 6 // false`  |
-| `!==`    | **မတူညီမှု**: တန်ဖိုးနှစ်ခုကို နှိုင်းယှဉ်ပြီး တိကျသော တန်းတူမှု Operator ပြန်ပေးမည့် Boolean တန်ဖိုး၏ ဆန့်ကျင်ဘက်ကို ပြန်ပေးသည်                | `5 !== 6 // true`   |
+```javascript
+let myTrueBool = true;
+let myFalseBool = false;
+```
 
-✅ သင့် browser console တွင် နှိုင်းယှဉ်မှုများကို ရေးသားပြီး သင့်အသိပညာကို စစ်ဆေးပါ။ ပြန်ပေးသော ဒေတာများထဲတွင် အံ့ဩစရာရှိပါသလား။
+ဒီဟာက explicit Boolean values တွေပါရှိတဲ့ variables နှစ်ခုကို ဖန်တီးပေးပါတယ်။
+
+✅ Booleans တွေဟာ အင်္ဂလိပ်သင်္ချာပညာရှင်၊ အတွေးအမြင်ပညာရှင်နဲ့ logic ပညာရှင် George Boole (1815–1864) ရဲ့နာမည်ကို ယူထားတာဖြစ်ပါတယ်။
+
+## Comparison Operators နဲ့ Booleans
+
+အမှန်တကယ်မှာ Boolean values တွေကို လက်နဲ့မထည့်ရပါဘူး။ အစားအစား အခြေအနေတွေကို အကဲဖြတ်ခြင်းမှတစ်ဆင့် ဖန်တီးရပါမယ် - "ဒီနံပါတ်က အဲဒီနံပါတ်ထက် ကြီးနေလား?" ဒါမှမဟုတ် "ဒီ values တွေ တူနေလား?"
+
+Comparison operators တွေက ဒီအကဲဖြတ်မှုတွေကို လုပ်ဆောင်နိုင်စေပါတယ်။ ဒါတွေက values တွေကို နှိုင်းယှဉ်ပြီး operands တွေကြားက ဆက်စပ်မှုအပေါ် မူတည်ပြီး Boolean results တွေကို ပြန်ပေးပါတယ်။
+
+| Symbol | Description                                                                                                                                                   | Example            |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`    | **Less than**: ဘယ်ဘက်က value ဟာ ညာဘက်က value ထက် သေးနေရင် `true` Boolean data type ကို ပြန်ပေးပါတယ်                              | `5 < 6 // true`    |
+| `<=`   | **Less than or equal to**: ဘယ်ဘက်က value ဟာ ညာဘက်က value ထက် သေးနေရင် ဒါမှမဟုတ် တူနေရင် `true` Boolean data type ကို ပြန်ပေးပါတယ်      | `5 <= 6 // true`   |
+| `>`    | **Greater than**: ဘယ်ဘက်က value ဟာ ညာဘက်က value ထက် ကြီးနေရင် `true` Boolean data type ကို ပြန်ပေးပါတယ်                         | `5 > 6 // false`   |
+| `>=`   | **Greater than or equal to**: ဘယ်ဘက်က value ဟာ ညာဘက်က value ထက် ကြီးနေရင် ဒါမှမဟုတ် တူနေရင် `true` Boolean data type ကို ပြန်ပေးပါတယ် | `5 >= 6 // false`  |
+| `===`  | **Strict equality**: ဘယ်ဘက်နဲ့ ညာဘက်က values တွေ တူပြီး data type လည်း တူနေရင် `true` Boolean data type ကို ပြန်ပေးပါတယ်       | `5 === 6 // false` |
+| `!==`  | **Inequality**: Strict equality operator က ပြန်ပေးမယ့် Boolean value ရဲ့ ဆန့်ကျင်ဘက်ကို ပြန်ပေးပါတယ်                                    | `5 !== 6 // true`  |
+
+✅ သင့် browser ရဲ့ console မှာ comparison တွေ ရေးပြီး သင့်ရဲ့အသိပညာကို စမ်းသပ်ပါ။ ပြန်ပေးတဲ့ data တွေထဲမှာ အံ့ဩစရာရှိပါသလား?
 
 ## If Statement
 
-`if` statement သည် အခြေအနေသည် `true` ဖြစ်ပါက ၎င်း၏ block များအတွင်းရှိ ကုဒ်ကို အလုပ်လုပ်စေသည်။
+`if` statement က သင့် code မှာ မေးခွန်းတစ်ခုမေးတာလိုပါပဲ။ "ဒီအခြေအနေက true ဖြစ်ရင် ဒီဟာကိုလုပ်ပါ။" JavaScript မှာ ဆုံးဖြတ်ချက်လုပ်ဖို့ အရေးကြီးဆုံး tool တစ်ခုပါ။
+
+ဒါကို ဘယ်လိုအလုပ်လုပ်သလဲဆိုတာ ကြည့်ပါ:
 
 ```javascript
 if (condition) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
 }
 ```
 
-အခြေအနေဖွဲ့စည်းရာတွင် Logical Operator များကို မကြာခဏ အသုံးပြုသည်။
+Condition ကို parentheses အတွင်းမှာ ထည့်ပြီး၊ `true` ဖြစ်ရင် JavaScript က curly braces အတွင်းမှာရှိတဲ့ code ကို run လုပ်ပါတယ်။ `false` ဖြစ်ရင်တော့ JavaScript က အဲဒီ block အားလုံးကို ကျော်သွားပါတယ်။
+
+Comparison operators တွေကို သုံးပြီး ဒီ conditions တွေကို ဖန်တီးရမှာဖြစ်ပါတယ်။ အကဲဖြတ်မှုတစ်ခုကို ကြည့်ပါ:
 
 ```javascript
-let currentMoney;
-let laptopPrice;
+let currentMoney = 1000;
+let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 }
 ```
+
+`1000 >= 800` က `true` ဖြစ်တဲ့အတွက် block အတွင်းမှာရှိတဲ့ code ကို run လုပ်ပြီး console မှာ "Getting a new laptop!" ဆိုတဲ့စာကို ပြသပါတယ်။
 
 ## If..Else Statement
 
-`else` statement သည် အခြေအနေသည် `false` ဖြစ်ပါက ၎င်း၏ block များအတွင်းရှိ ကုဒ်ကို အလုပ်လုပ်စေသည်။ ၎င်းသည် `if` statement နှင့်အတူ ရွေးချယ်စရာဖြစ်သည်။
+ဒါပေမယ့် condition က false ဖြစ်တဲ့အခါမှာ အခြားအရာတစ်ခုကို လုပ်ချင်ရင်ရော? ဒီအချိန်မှာ `else` က အကူအညီပေးပါတယ် - backup plan တစ်ခုလိုပါပဲ။
+
+`else` statement က "ဒီ condition true မဖြစ်ရင် အခြားအရာတစ်ခုကို လုပ်ပါ" ဆိုတဲ့နည်းလမ်းကို ပေးပါတယ်။
 
 ```javascript
-let currentMoney;
-let laptopPrice;
+let currentMoney = 500;
+let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 } else {
-  //Condition is false. Code in this block will run.
+  // Condition is false. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
-✅ ဤကုဒ်နှင့် အောက်ပါကုဒ်ကို browser console တွင် အလုပ်လုပ်စေပြီး သင့်နားလည်မှုကို စစ်ဆေးပါ။ `currentMoney` နှင့် `laptopPrice` variable များ၏ တန်ဖိုးများကို ပြောင်းလဲပြီး `console.log()` ပြန်ပေးသောအရာကို ပြောင်းလဲကြည့်ပါ။
+အခုတော့ `500 >= 800` က `false` ဖြစ်တဲ့အတွက် JavaScript က ပထမ block ကို ကျော်ပြီး `else` block ကို run လုပ်ပါတယ်။ Console မှာ "Can't afford a new laptop, yet!" ဆိုတဲ့စာကို တွေ့ရပါမယ်။
+
+✅ ဒီ code နဲ့ အောက်မှာရှိတဲ့ code ကို browser console မှာ run လုပ်ပြီး သင့်ရဲ့အသိပညာကို စမ်းသပ်ပါ။ currentMoney နဲ့ laptopPrice variables တွေကို ပြောင်းလဲပြီး console.log() ရဲ့ output ကို ပြောင်းလဲကြည့်ပါ။
 
 ## Switch Statement
 
-`switch` statement ကို အခြေအနေအမျိုးမျိုးအပေါ် မူတည်၍ ကွဲပြားသော လုပ်ဆောင်မှုများကို ပြုလုပ်ရန် အသုံးပြုသည်။ `switch` statement ကို အသုံးပြု၍ အလုပ်လုပ်စေမည့် ကုဒ် block တစ်ခုကို ရွေးချယ်ပါ။
+တစ်ခါတစ်ရံမှာ value တစ်ခုကို အများကြီး options တွေကို နှိုင်းယှဉ်ဖို့ လိုအပ်တတ်ပါတယ်။ `if..else` statements အများကြီးကို chain လုပ်နိုင်ပေမယ့် ဒီနည်းလမ်းက မလွယ်ကူပါဘူး။ `switch` statement က အများကြီး options တွေကို handle လုပ်ဖို့ သန့်ရှင်းတဲ့ structure ကို ပေးပါတယ်။
+
+ဒီ concept က အစောပိုင်းတယ်လီဖုန်း switch systems တွေလိုမျိုး - input value တစ်ခုက execution path ကို ဆုံးဖြတ်ပေးပါတယ်။
 
 ```javascript
 switch (expression) {
@@ -105,61 +131,83 @@ switch (expression) {
     // code block
     break;
   default:
-  // code block
+    // code block
 }
 ```
 
-```javascript
-// program using switch statement
-let a = 2;
+ဒီဟာက ဒီလိုအလုပ်လုပ်ပါတယ်:
+- JavaScript က expression ကို တစ်ခါသာ အကဲဖြတ်တယ်
+- `case` တစ်ခုချင်းစီကို match ရှာတယ်
+- match တွေ့ရင် အဲဒီ code block ကို run လုပ်တယ်
+- `break` က JavaScript ကို switch ထဲကနေ ထွက်ဖို့ ပြောတယ်
+- ဘယ် case မှ မကိုက်ရင် `default` block ကို run လုပ်တယ် (default ရှိရင်)
 
-switch (a) {
+```javascript
+// Program using switch statement for day of week
+let dayNumber = 2;
+let dayName;
+
+switch (dayNumber) {
   case 1:
-    a = "one";
+    dayName = "Monday";
     break;
   case 2:
-    a = "two";
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
     break;
   default:
-    a = "not found";
+    dayName = "Unknown day";
     break;
 }
-console.log(`The value is ${a}`);
+console.log(`Today is ${dayName}`);
 ```
 
-✅ ဤကုဒ်နှင့် အောက်ပါကုဒ်ကို browser console တွင် အလုပ်လုပ်စေပြီး သင့်နားလည်မှုကို စစ်ဆေးပါ။ `a` variable ၏ တန်ဖိုးများကို ပြောင်းလဲပြီး `console.log()` ပြန်ပေးသောအရာကို ပြောင်းလဲကြည့်ပါ။
+ဒီဥပမာမှာ JavaScript က `dayNumber` ကို `2` ဖြစ်တာကို တွေ့ပြီး `case 2` ကို match လုပ်တယ်၊ `dayName` ကို "Tuesday" အဖြစ် သတ်မှတ်ပြီး switch ထဲကနေ ထွက်သွားတယ်။ အဖြေက "Today is Tuesday" ဆိုပြီး console မှာ ပြသပါတယ်။
 
-## Logical Operator များနှင့် Boolean များ
+✅ ဒီ code နဲ့ အောက်မှာရှိတဲ့ code ကို browser console မှာ run လုပ်ပြီး သင့်ရဲ့အသိပညာကို စမ်းသပ်ပါ။ variable a ရဲ့ value ကို ပြောင်းလဲပြီး console.log() ရဲ့ output ကို ပြောင်းလဲကြည့်ပါ။
 
-ဆုံးဖြတ်ချက်များသည် တစ်ခုထက်ပိုသော နှိုင်းယှဉ်မှုများကို လိုအပ်နိုင်ပြီး Logical Operator များဖြင့် ဆက်စပ်၍ Boolean တန်ဖိုးကို ထုတ်နိုင်သည်။
+## Logical Operators နဲ့ Booleans
 
-| သင်္ကေတ | ဖော်ပြချက်                                                                                     | ဥပမာ                                                                 |
-| -------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `&&`     | **Logical AND**: Boolean ဖော်ပြချက်နှစ်ခုကို နှိုင်းယှဉ်သည်။ နှစ်ဖက်လုံး `true` ဖြစ်လျှင်သာ `true` ပြန်ပေးသည် | `(5 > 6) && (5 < 6 ) //ဖက်တစ်ဖက်သည် false, ဖက်တစ်ဖက်သည် true. false ပြန်ပေးသည်` |
-| `\|\|`   | **Logical OR**: Boolean ဖော်ပြချက်နှစ်ခုကို နှိုင်းယှဉ်သည်။ ဖက်တစ်ဖက် `true` ဖြစ်လျှင် `true` ပြန်ပေးသည်     | `(5 > 6) \|\| (5 < 6) //ဖက်တစ်ဖက်သည် false, ဖက်တစ်ဖက်သည် true. true ပြန်ပေးသည်` |
-| `!`      | **Logical NOT**: Boolean ဖော်ပြချက်၏ ဆန့်ကျင်ဘက်တန်ဖိုးကို ပြန်ပေးသည်                             | `!(5 > 6) // 5 သည် 6 ထက် ကြီးမဟုတ်ပါ, သို့သော် "!" သည် true ပြန်ပေးမည်`         |
+ခက်ခဲတဲ့ ဆုံးဖြတ်ချက်တွေဟာ အခြေအနေများစွာကို တစ်ချိန်တည်းမှာ အကဲဖြတ်ဖို့ လိုအပ်တတ်ပါတယ်။ Boolean algebra က mathematicians တွေကို logical expressions တွေကို ပေါင်းစပ်ဖို့ ခွင့်ပြုသလိုပဲ၊ programming က logical operators တွေကို ပေးပြီး Boolean conditions တွေကို ပေါင်းစပ်နိုင်စေပါတယ်။
 
-## Logical Operator များနှင့် If..Else Statement များဖြင့် ဆုံးဖြတ်ချက်များ
+ဒီ operators တွေက ရိုးရှင်းတဲ့ true/false အကဲဖြတ်မှုတွေကို ပေါင်းစပ်ပြီး ခက်ခဲတဲ့ conditional logic တွေကို ဖန်တီးနိုင်စေပါတယ်။
 
-Logical Operator များကို If..Else Statement များတွင် အခြေအနေဖွဲ့စည်းရန် အသုံးပြုနိုင်သည်။
+| Symbol | Description                                                                                     | Example                                                                 |
+| ------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `&&`   | **Logical AND**: Boolean expressions နှစ်ခုကို နှိုင်းယှဉ်တယ်။ နှစ်ဖက်လုံး true ဖြစ်ရင်သာ true ကို ပြန်ပေးတယ် | `(5 > 3) && (5 < 10) // နှစ်ဖက်လုံး true ဖြစ်တယ်။ true ကို ပြန်ပေးတယ်` |
+| `\|\|` | **Logical OR**: Boolean expressions နှစ်ခုကို နှိုင်းယှဉ်တယ်။ တစ်ဖက်ခုခု true ဖြစ်ရင် true ကို ပြန်ပေးတယ်     | `(5 > 10) \|\| (5 < 10) // တစ်ဖက် false, တစ်ဖက် true. true ကို ပြန်ပေးတယ်` |
+| `!`    | **Logical NOT**: Boolean expression ရဲ့ ဆန့်ကျင်ဘက်ကို ပြန်ပေးတယ်                             | `!(5 > 10) // 5 က 10 ထက် ကြီးမဟုတ်ဘူး၊ ဒါကြောင့် "!" က true ဖြစ်စေတယ်`         |
+
+ဒီ operators တွေက conditions တွေကို အသုံးချဖို့ အကျိုးရှိတဲ့နည်းလမ်းတွေကို ပေးပါတယ်:
+- AND (`&&`) ဆိုတာ conditions နှစ်ခုလုံး true ဖြစ်ရမယ်
+- OR (`||`) ဆိုတာ condition တစ်ခုခု true ဖြစ်ရမယ်  
+- NOT (`!`) ဆိုတာ true ကို false ပြောင်း (false ကို true ပြောင်း)
+
+## Logical Operators နဲ့ Conditions
+
+Logical operators တွေကို အသုံးပြုပြီး ပိုမိုလက်တွေ့ကျတဲ့ ဥပမာကို ကြည့်ပါ:
 
 ```javascript
-let currentMoney;
-let laptopPrice;
-let laptopDiscountPrice = laptopPrice - laptopPrice * 0.2; //Laptop price at 20 percent off
+let currentMoney = 600;
+let laptopPrice = 800;
+let laptopDiscountPrice = laptopPrice - (laptopPrice * 0.2); // Laptop price at 20 percent off
 
 if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 } else {
-  //Condition is true. Code in this block will run.
+  // Condition is false. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
+ဒီဥပမာမှာ - 20% discount price (640) ကိုတွက်ပြီး၊ full price OR discounted price ကို ကျော်နိုင်မလားဆိုတာ အကဲဖြတ်တယ်။ 600 က discounted price threshold (640) ကို ကျော်နိုင်တဲ့အတွက် condition က true ဖြစ်ပါတယ်။
+
 ### Negation Operator
 
-`if...else` statement ကို အသုံးပြု၍ အခြေအနေဆိုင်ရာ logical ကို ဖန်တီးနိုင်ပုံကို ယခင်က ကြည့်ခဲ့ပါသည်။ `if` အတွင်းသို့ သွားသော အရာအားလုံးသည် `true/false` အဖြစ် သတ်မှတ်ရမည်။ `!` operator ကို အသုံးပြု၍ ဖော်ပြချက်ကို _ဆန့်ကျင်_ ပြုလုပ်နိုင်သည်။ ၎င်းသည် အောက်ပါအတိုင်း ဖြစ်မည်-
+တစ်ခါတစ်ရံမှာ တစ်ခုခု NOT true ဖြစ်တဲ့အခါကို စဉ်းစားရတာ ပိုလွယ်တတ်ပါတယ်။ ဥပမာ - "User logged in ဖြစ်နေလား?" ဆိုတာမေးမယ့်အစား "User NOT logged in ဖြစ်နေလား?" ဆိုတာမေးချင်တတ်ပါတယ်။ Exclamation mark (`!`) operator က logic ကို ပြောင်းပေးပါတယ်။
 
 ```javascript
 if (!condition) {
@@ -169,15 +217,19 @@ if (!condition) {
 }
 ```
 
-### Ternary Expression များ
+`!` operator က "ဆန့်ကျင်ဘက်..." ဆိုတာလိုပါပဲ - တစ်ခုခု `true` ဖြစ်ရင် `!` က `false` ဖြစ်စေတယ်၊ `false` ဖြစ်ရင် `true` ဖြစ်စေတယ်။
 
-`if...else` သည် ဆုံးဖြတ်ချက် logical ကို ဖော်ပြရန် တစ်ခုတည်းသော နည်းလမ်းမဟုတ်ပါ။ Ternary Operator ဟုခေါ်သော အရာတစ်ခုကိုလည်း အသုံးပြုနိုင်သည်။ ၎င်း၏ သဒ္ဒါသည် အောက်ပါအတိုင်း ဖြစ်သည်-
+### Ternary Expressions
+
+ရိုးရှင်းတဲ့ conditional assignments တွေအတွက် JavaScript က **ternary operator** ကို ပေးထားပါတယ်။ ဒီ syntax က condition တစ်ခုကို single line မှာရေးနိုင်စေပြီး condition အပေါ်မူတည်ပြီး value နှစ်ခုထဲက တစ်ခုကို assign လုပ်ဖို့ အသုံးဝင်ပါတယ်။
 
 ```javascript
-let variable = condition ? <return this if true> : <return this if false>
+let variable = condition ? returnThisIfTrue : returnThisIfFalse;
 ```
 
-အောက်တွင် ပိုမိုလက်တွေ့ကျသော ဥပမာတစ်ခုကို ဖော်ပြထားသည်-
+ဒါဟာ မေးခွန်းတစ်ခုလိုဖတ်ရတယ် - "ဒီ condition true ဖြစ်လား? true ဖြစ်ရင် ဒီ value ကို သုံးပါ။ false ဖြစ်ရင် အဲဒီ value ကို သုံးပါ။"
+
+အောက်မှာ ပိုမိုလက်တွေ့ကျတဲ့ ဥပမာကို ကြည့်ပါ:
 
 ```javascript
 let firstNumber = 20;
@@ -185,15 +237,11 @@ let secondNumber = 10;
 let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
-✅ ဤကုဒ်ကို အချိန်ယူဖတ်ပါ။ Operator များအလုပ်လုပ်ပုံကို နားလည်ပါသလား။
+✅ ဒီ code ကို အချိန်ယူပြီး အကြိမ်ကြိမ်ဖတ်ပါ။ ဒီ operators တွေ ဘယ်လိုအလုပ်လုပ်နေလဲဆိုတာ နားလည်ပါသလား?
 
-အထက်ပါကုဒ်သည် အောက်ပါအတိုင်း ဆိုလိုသည်-
+ဒီ line က "firstNumber က secondNumber ထက် ကြီးနေလား? true ဖြစ်ရင် firstNumber ကို biggestNumber ထဲထည့်ပါ။ false ဖြစ်ရင် secondNumber ကို biggestNumber ထဲထည့်ပါ။" ဆိုတာကို ပြောပါတယ်။
 
-- `firstNumber` သည် `secondNumber` ထက် ကြီးလျှင်  
-- `firstNumber` ကို `biggestNumber` သို့ သတ်မှတ်ပါ  
-- မဟုတ်လျှင် `secondNumber` ကို သတ်မှတ်ပါ။
-
-Ternary Expression သည် အောက်ပါကုဒ်ကို ရေးသားရန် အတိုချုံးနည်းလမ်းသာဖြစ်သည်-
+Ternary operator က traditional `if..else` statement ကို ရေးတဲ့နည်းလမ်းကို ပိုမိုတိုတောင်းစေပါတယ်:
 
 ```javascript
 let biggestNumber;
@@ -204,29 +252,36 @@ if (firstNumber > secondNumber) {
 }
 ```
 
+နည်းလမ်းနှစ်ခုလုံးက အတူတူရလဒ်တွေကို ထုတ်ပေးပါတယ်။ Ternary operator က တိုတောင်းမှုကို ပေးပြီး၊ traditional if-else structure က ခက်ခဲတဲ့ conditions တွေအတွက် ပိုမိုဖတ်ရှင်းနိုင်စေပါတယ်။
+
 ---
 
 ## 🚀 စိန်ခေါ်မှု
 
-Logical Operator များကို အသုံးပြု၍ ရေးသားထားသော ပရိုဂရမ်တစ်ခုကို ဖန်တီးပါ၊ ထို့နောက် Ternary Expression ကို အသုံးပြု၍ ထပ်မံရေးသားပါ။ သင့်အကြိုက်ဆုံး သဒ္ဒါသည် ဘယ်ဟာလဲ?
+Logical operators ကို အသုံးပြုပြီး အစီအစဉ်တစ်ခုကို ရေးပါ၊ ပြီးတော့ ternary expression ကို အသုံးပြုပြီး ပြန်ရေးပါ။ သင့်အကြိုက်ဆုံး syntax က ဘာလဲ?
 
 ---
 
-## မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု
+## GitHub Copilot Agent Challenge 🚀
 
-[မိန့်ခွန်းပြီးနောက် စစ်ဆေးမှု](https://ff-quizzes.netlify.app/web/quiz/12)
+Agent mode ကို အသုံးပြုပြီး အောက်ပါစိန်ခေါ်မှုကို ပြီးမြောက်ပါ:
 
-## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
+**ဖော်ပြချက်:** ဒီသင်ခန်းစာရဲ့ ဆုံးဖြတ်ချက်လုပ်နိုင်စွမ်း concept အများကြီးကို အသုံးပြုထားတဲ့ grade calculator တစ်ခုကို ဖန်တီးပါ။ အဲဒီမှာ if-else statements, switch statements, logical operators, ternary expressions တွေ ပါဝင်ရပါမယ်။
 
-အသုံးပြုသူအတွက် ရရှိနိုင်သော Operator များစွာအကြောင်းကို [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators) တွင် ဖတ်ရှုပါ။
+**အကြောင်းအရာ:** ကျောင်းသားတစ်ဦးရဲ့ အမှတ် (0-100) ကိုယူပြီး အောက်ပါအခြေခံချက်အတိုင်း letter grade ကို သတ်မှတ်ပါ:
+- A: 90-100
+- B: 80-89  
+- C: 70-79
+- D: 60-69
+- F: 60 ထက်နည်း
 
-Josh Comeau ၏ အလွန်အမင်းအထောက်အကူပြုသော [operator lookup](https://joshwcomeau.com/operator-lookup/) ကို လေ့လာပါ။
-
-## လုပ်ငန်းတာဝန်
-
-[Operators](assignment.md)
+လိုအပ်ချက်များ:
+1. Letter grade ကို သတ်မှတ်ဖို့ if-else statement ကို အသုံးပြုပါ
+2. ကျောင်းသားက pass (grade >= 60) ဖြစ်ပြီး honors (grade >= 90) ရရှိလားဆိုတာ logical operators ကို အသုံးပြုပြီး စစ်ပါ
+3. Letter grade တစ်ခုချင်းစီအတွက် specific feedback ပေးဖို့ switch statement ကို အသုံးပြုပါ
+4. ကျောင်းသားက next course (grade >= 70) အတွက် အရည်အချ
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွဲအချော်အချော်များ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

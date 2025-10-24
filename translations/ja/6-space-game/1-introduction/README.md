@@ -1,50 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
-  "translation_date": "2025-08-28T17:54:00+00:00",
+  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
+  "translation_date": "2025-10-24T15:16:09+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "ja"
 }
 -->
 # 宇宙ゲームを作ろう パート1: はじめに
 
-![video](../../../../6-space-game/images/pewpew.gif)
+![ゲームプレイを示す宇宙ゲームのアニメーション](../../../../6-space-game/images/pewpew.gif)
 
-## 講義前クイズ
+NASAのミッションコントロールが宇宙打ち上げ中に複数のシステムを調整するのと同じように、異なるプログラムの部分がシームレスに連携する方法を示す宇宙ゲームを作ります。実際にプレイできるものを作りながら、あらゆるソフトウェアプロジェクトに適用できる基本的なプログラミングの概念を学びます。
 
-[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/29)
+コードを整理するための基本的なアプローチである「継承」と「コンポジション」について探求します。これらは単なる学術的な概念ではなく、ビデオゲームから銀行システムまで、あらゆるものを支えるパターンです。また、宇宙船で使用される通信ネットワークのように、異なるコンポーネントが依存関係を作らずに情報を共有できる「pub/sub」という通信システムも実装します。
 
-### ゲーム開発における継承とコンポジション
+このシリーズの終わりまでに、ゲーム、ウェブアプリケーション、その他のソフトウェアシステムを開発する際に、スケールアップや進化が可能なアプリケーションの構築方法を理解できるようになります。
 
-これまでのレッスンでは、作成したアプリの設計アーキテクチャについてあまり考える必要はありませんでした。なぜなら、プロジェクトの規模が非常に小さかったからです。しかし、アプリケーションの規模や範囲が大きくなるにつれて、アーキテクチャの決定が重要な課題となります。JavaScriptで大規模なアプリケーションを作成するには、主に2つのアプローチがあります：*コンポジション* または *継承*。どちらにも長所と短所がありますが、ゲームの文脈で説明してみましょう。
+## 講義前のクイズ
 
-✅ プログラミングに関する最も有名な本の1つは、[デザインパターン](https://en.wikipedia.org/wiki/Design_Patterns)に関するものです。
+[講義前のクイズ](https://ff-quizzes.netlify.app/web/quiz/29)
 
-ゲームでは、`ゲームオブジェクト`という画面上に存在するオブジェクトがあります。これらは、デカルト座標系上の位置を持ち、`x`座標と`y`座標で特徴付けられます。ゲームを開発していくと、すべてのゲームオブジェクトが標準的なプロパティを持っていることに気づくでしょう。それは、以下のような要素です：
+## ゲーム開発における継承とコンポジション
 
-- **位置ベース** ほとんどのゲーム要素は位置ベースです。つまり、`x`と`y`の位置を持っています。
-- **移動可能** 新しい位置に移動できるオブジェクトです。通常、ヒーロー、モンスター、またはNPC（非プレイヤーキャラクター）が該当しますが、例えば木のような静的オブジェクトは該当しません。
-- **自己破壊** 一定期間だけ存在し、その後削除されるオブジェクトです。通常、`dead`や`destroyed`というブール値で表され、ゲームエンジンにそのオブジェクトを描画しないよう指示します。
-- **クールダウン** 短命なオブジェクトに共通するプロパティです。典型的な例としては、数ミリ秒だけ表示されるテキストや爆発のようなグラフィカルエフェクトがあります。
+プロジェクトが複雑になるにつれて、コードの整理が重要になります。単純なスクリプトとして始まったものが、適切な構造がないと維持が難しくなることがあります。これは、アポロ計画が数千のコンポーネント間の慎重な調整を必要としたのと似ています。
+
+コードを整理するための基本的なアプローチとして「継承」と「コンポジション」を探求します。それぞれに独自の利点があり、両方を理解することで、状況に応じて適切なアプローチを選択できるようになります。これらの概念を宇宙ゲームを通じて実演します。ヒーロー、敵、パワーアップ、その他のオブジェクトが効率的に相互作用する必要があります。
+
+✅ 最も有名なプログラミングの本の一つは、[デザインパターン](https://en.wikipedia.org/wiki/Design_Patterns)に関するものです。
+
+どんなゲームでも「ゲームオブジェクト」が存在します。これはゲームの世界を構成するインタラクティブな要素です。ヒーロー、敵、パワーアップ、視覚効果などがゲームオブジェクトに該当します。それぞれが座標平面上の点をプロットするように、`x`と`y`の値を使用して特定の画面座標に存在します。
+
+見た目は異なりますが、これらのオブジェクトはしばしば基本的な動作を共有しています：
+
+- **どこかに存在する** – すべてのオブジェクトは`x`と`y`座標を持ち、ゲームがそれを描画する場所を知ることができます
+- **多くは移動できる** – ヒーローは走り、敵は追いかけ、弾丸は画面を横切ります
+- **寿命がある** – 一部は永遠に存在し、他のもの（爆発など）は一時的に現れて消えます
+- **何かに反応する** – 衝突が起きると、パワーアップが収集され、体力バーが更新されます
 
 ✅ パックマンのようなゲームを考えてみてください。このゲームで上記の4つのオブジェクトタイプを特定できますか？
 
-### 振る舞いの表現
+### コードで動作を表現する
 
-上記で説明したのは、ゲームオブジェクトが持つ可能性のある振る舞いです。それでは、これらをどのようにコード化するのでしょうか？これらの振る舞いは、クラスやオブジェクトに関連付けられたメソッドとして表現できます。
+ゲームオブジェクトが共有する共通の動作を理解したところで、これらの動作をJavaScriptで実装する方法を探ってみましょう。オブジェクトの動作は、クラスや個々のオブジェクトに付属するメソッドを通じて表現できます。いくつかのアプローチがあります。
 
-**クラス**
+**クラスベースのアプローチ**
 
-`クラス`と`継承`を組み合わせて、特定の振る舞いをクラスに追加する方法があります。
+クラスと継承は、ゲームオブジェクトを整理するための構造化されたアプローチを提供します。カール・リンネによって開発された分類学的分類システムのように、共通のプロパティを含む基本クラスから始め、これらの基本を継承しながら特定の機能を追加する専門化されたクラスを作成します。
 
-✅ 継承は理解すべき重要な概念です。[MDNの継承に関する記事](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)でさらに学びましょう。
+✅ 継承は理解すべき重要な概念です。[MDNの継承に関する記事](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく学びましょう。
 
-コードで表現すると、ゲームオブジェクトは通常次のようになります：
+以下は、クラスと継承を使用してゲームオブジェクトを実装する方法です：
 
 ```javascript
-
-//set up the class GameObject
+// Step 1: Create the base GameObject class
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -52,181 +61,303 @@ class GameObject {
     this.type = type;
   }
 }
+```
 
-//this class will extend the GameObject's inherent class properties
+**これをステップごとに分解すると：**
+- すべてのゲームオブジェクトが使用できる基本テンプレートを作成しています
+- コンストラクタはオブジェクトがどこにあるか（`x`、`y`）とどのような種類のものかを保存します
+- これがすべてのゲームオブジェクトが基づく基盤となります
+
+```javascript
+// Step 2: Add movement capability through inheritance
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type); // Call parent constructor
   }
 
-//this movable object can be moved on the screen
+  // Add the ability to move to a new position
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
-class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
-  }
-}
-
-//this class, on the other hand, only inherits the GameObject properties
-class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
-  }
-}
-
-//a hero can move...
-const hero = new Hero();
-hero.moveTo(5,5);
-
-//but a tree cannot
-const tree = new Tree();
 ```
 
-✅ パックマンのヒーロー（例えばインキー、ピンキー、ブリンキー）を再構想し、それをJavaScriptでどのように記述するか考えてみてください。
-
-**コンポジション**
-
-オブジェクトの継承を扱う別の方法として、*コンポジション*を使用する方法があります。この場合、オブジェクトは次のように振る舞いを表現します：
+**上記では：**
+- GameObjectクラスを**拡張**して移動機能を追加しました
+- 継承されたプロパティを初期化するために`super()`を使用して親コンストラクタを**呼び出しました**
+- オブジェクトの位置を更新する`moveTo()`メソッドを**追加しました**
 
 ```javascript
-//create a constant gameObject
+// Step 3: Create specific game object types
+class Hero extends Movable {
+  constructor(x, y) {
+    super(x, y, 'Hero'); // Set type automatically
+  }
+}
+
+class Tree extends GameObject {
+  constructor(x, y) {
+    super(x, y, 'Tree'); // Trees don't need movement
+  }
+}
+
+// Step 4: Use your game objects
+const hero = new Hero(0, 0);
+hero.moveTo(5, 5); // Hero can move!
+
+const tree = new Tree(10, 15);
+// tree.moveTo() would cause an error - trees can't move
+```
+
+**これらの概念を理解することで：**
+- 適切な動作を継承する専門化されたオブジェクトタイプを**作成**できます
+- 継承が選択的な機能の追加を可能にする方法を**示します**
+- ヒーローが移動できる一方で、木は静止したままであることを**示します**
+- クラス階層が不適切な動作を防ぐ方法を**説明します**
+
+✅ パックマンのヒーロー（例えばインキー、ピンキー、ブリンキー）をJavaScriptでどのように書くか再考してみてください。
+
+**コンポジションアプローチ**
+
+コンポジションはモジュール設計哲学に従い、エンジニアが交換可能なコンポーネントで宇宙船を設計する方法に似ています。親クラスから継承する代わりに、特定の動作を組み合わせて、必要な機能を正確に持つオブジェクトを作成します。このアプローチは、堅固な階層的制約なしで柔軟性を提供します。
+
+```javascript
+// Step 1: Create base behavior objects
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
-}
-//then the constant movableObject is composed of the gameObject and movable constants
-const movableObject = {...gameObject, ...movable};
+};
+```
 
-//then create a function to create a new Hero who inherits the movableObject properties
+**このコードが行うこと：**
+- 位置とタイププロパティを持つ基本`gameObject`を**定義**します
+- 移動機能を持つ別の`movable`動作オブジェクトを**作成**します
+- 位置データと移動ロジックを独立して保持することで**関心を分離**します
+
+```javascript
+// Step 2: Compose objects by combining behaviors
+const movableObject = { ...gameObject, ...movable };
+
+// Step 3: Create factory functions for different object types
 function createHero(x, y) {
   return {
     ...movableObject,
     x,
     y,
     type: 'Hero'
-  }
+  };
 }
-//...and a static object that inherits only the gameObject properties
+
 function createStatic(x, y, type) {
   return {
-    ...gameObject
+    ...gameObject,
     x,
     y,
     type
-  }
+  };
 }
-//create the hero and move it
-const hero = createHero(10,10);
-hero.moveTo(5,5);
-//and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**どのパターンを使うべきか？**
-
-どちらのパターンを選ぶかはあなた次第です。JavaScriptはこれら両方のパラダイムをサポートしています。
-
---
-
-ゲーム開発で一般的なもう1つのパターンは、ゲームのユーザーエクスペリエンスとパフォーマンスを管理する問題に対処するものです。
-
-## Pub/subパターン
-
-✅ Pub/Subは「publish-subscribe（発行-購読）」の略です。
-
-このパターンは、アプリケーションの異なる部分がお互いを知らないようにするという考え方に基づいています。なぜそうするのでしょうか？アプリケーションの各部分が分離されていると、全体の状況を把握しやすくなります。また、必要に応じて振る舞いを突然変更するのも簡単になります。これをどのように実現するのでしょうか？以下の概念を確立することで実現します：
-
-- **メッセージ**: メッセージは通常、テキスト文字列と、メッセージの内容を明確にするためのオプションのペイロード（データ片）で構成されます。ゲームでの典型的なメッセージは`KEY_PRESSED_ENTER`です。
-- **パブリッシャー**: この要素はメッセージを*発行*し、すべてのサブスクライバーに送信します。
-- **サブスクライバー**: この要素は特定のメッセージを*受信*し、そのメッセージを受け取った結果として何らかのタスクを実行します（例：レーザーを発射する）。
-
-この実装は非常に小規模ですが、非常に強力なパターンです。以下のように実装できます：
+**上記では：**
+- スプレッド構文を使用して基本オブジェクトプロパティと移動動作を**組み合わせました**
+- カスタマイズされたオブジェクトを返すファクトリ関数を**作成**しました
+- 堅固なクラス階層なしで柔軟なオブジェクト作成を**可能にしました**
+- 必要な動作だけを持つオブジェクトを**許可しました**
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+// Step 4: Create and use your composed objects
+const hero = createHero(10, 10);
+hero.moveTo(5, 5); // Works perfectly!
+
+const tree = createStatic(0, 0, 'Tree');
+// tree.moveTo() is undefined - no movement behavior was composed
+```
+
+**覚えておくべき重要なポイント：**
+- 継承するのではなく動作を混合することでオブジェクトを**構成**します
+- 堅固な継承階層よりも柔軟性を**提供**します
+- 必要な機能だけを持つオブジェクトを**許可**します
+- クリーンなオブジェクトの組み合わせのためにモダンなJavaScriptスプレッド構文を**使用**します
+```
+
+**Which Pattern Should You Choose?**
+
+> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+> 
+**Here's when to use each approach:**
+- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
+- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
+- **Consider** your team's preferences and project requirements
+- **Remember** that you can mix both approaches in the same application
+
+## Communication Patterns: The Pub/Sub System
+
+As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+
+Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+
+✅ **Pub/Sub** stands for 'publish-subscribe'
+
+### Understanding the Pub/Sub Architecture
+
+The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+
+**The key players in pub/sub:**
+- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
+- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
+- **Subscribers** – The objects that say "I care about that event" and react when it happens
+- **Event System** – The middleman that makes sure messages get to the right listeners
+
+### Building an Event System
+
+Let's create a simple but powerful event system that demonstrates these concepts:
+
+```javascript
+// Step 1: Create the EventEmitter class
 class EventEmitter {
   constructor() {
-    this.listeners = {};
+    this.listeners = {}; // Store all event listeners
   }
-//when a message is received, let the listener to handle its payload
+  
+  // Register a listener for a specific message type
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  
+  // Send a message to all registered listeners
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach(listener => {
+        listener(message, payload);
+      });
     }
   }
 }
-
 ```
 
-上記のコードを使用して、非常に小さな実装を作成できます：
+**ここで何が起きているかを分解すると：**
+- シンプルなクラスを使用して中央のイベント管理システムを**作成**します
+- メッセージタイプごとに整理されたオブジェクトにリスナーを**保存**します
+- `on()`メソッドを使用して新しいリスナーを**登録**します
+- `emit()`を使用してすべての関心のあるリスナーにメッセージを**送信**します
+- 関連情報を渡すためのオプションのデータペイロードを**サポート**します
+
+### 実践例：すべてをまとめる
+
+さて、これを実際に見てみましょう！pub/subのクリーンで柔軟な動作を示す簡単な移動システムを構築します：
 
 ```javascript
-//set up a message structure
+// Step 1: Define your message types
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
+  HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
+  ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
-//invoke the eventEmitter you set up above
+
+// Step 2: Create your event system and game objects
 const eventEmitter = new EventEmitter();
-//set up a hero
-const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+const hero = createHero(0, 0);
+```
+
+**このコードが行うこと：**
+- メッセージ名のタイプミスを防ぐために定数オブジェクトを**定義**します
+- すべての通信を処理するイベントエミッターインスタンスを**作成**します
+- 初期位置でヒーローオブジェクトを**初期化**します
+
+```javascript
+// Step 3: Set up event listeners (subscribers)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.moveTo(hero.x - 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
+  hero.moveTo(hero.x + 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
+});
+```
+
+**上記では：**
+- 移動メッセージに応答するイベントリスナーを**登録**しました
+- 移動方向に基づいてヒーローの位置を**更新**しました
+- ヒーローの位置変更を追跡するためにコンソールログを**追加**しました
+- 入力処理から移動ロジックを**分離**しました
+
+```javascript
+// Step 4: Connect keyboard input to events (publishers)
+window.addEventListener('keydown', (event) => {
+  switch(event.key) {
+    case 'ArrowLeft':
+      eventEmitter.emit(Messages.HERO_MOVE_LEFT);
+      break;
+    case 'ArrowRight':
+      eventEmitter.emit(Messages.HERO_MOVE_RIGHT);
+      break;
   }
 });
 ```
 
-上記では、キーボードイベント`ArrowLeft`を接続し、`HERO_MOVE_LEFT`メッセージを送信しています。このメッセージをリッスンして、結果として`hero`を移動させます。このパターンの強みは、イベントリスナーとヒーローがお互いを知らないことです。`ArrowLeft`を`A`キーに再マッピングすることもできます。また、イベントエミッターの`on`関数を少し編集するだけで、`ArrowLeft`でまったく異なる動作をさせることも可能です：
+**これらの概念を理解することで：**
+- キーボード入力をゲームイベントに直接結びつけることなく**接続**します
+- 入力システムがゲームオブジェクトと間接的に通信することを**可能にします**
+- 同じキーボードイベントに複数のシステムが応答することを**許可**します
+- キーバインディングを変更したり新しい入力方法を追加するのが簡単になります
 
-```javascript
-eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
-});
-```
+> 💡 **プロのヒント**: このパターンの美しさは柔軟性にあります！音響効果、画面の揺れ、またはパーティクル効果を簡単に追加できます。既存のキーボードや移動コードを変更する必要はありません。
+> 
+**このアプローチが好きになる理由：**
+- 新しい機能の追加が非常に簡単になります – 必要なイベントをリッスンするだけ
+- 同じイベントに複数のものが反応しても互いに干渉しません
+- 各部分が独立して動作するためテストが非常に簡単になります
+- 問題が発生した場合、どこを調べればよいかがすぐにわかります
 
-ゲームが成長して複雑になるにつれて、このパターンの複雑さは変わらず、コードはクリーンなままです。このパターンを採用することを強くお勧めします。
+### Pub/Subが効果的にスケールする理由
+
+pub/subパターンは、アプリケーションが複雑になるにつれてシンプルさを維持します。敵が多数いる場合、動的なUI更新、または音響システムを管理する場合でも、このパターンはアーキテクチャの変更なしでスケールアップを処理します。新しい機能は既存のイベントシステムに統合され、既存の機能に影響を与えません。
+
+> ⚠️ **よくある間違い**: 初期段階で特定のメッセージタイプを作りすぎないでください。広範なカテゴリから始め、ゲームのニーズが明確になるにつれてそれを洗練してください。
+> 
+**守るべきベストプラクティス：**
+- 関連するメッセージを論理的なカテゴリに**グループ化**します
+- 何が起きたかを明確に示す記述的な名前を**使用**します
+- メッセージペイロードをシンプルで焦点を絞ったものに**保ちます**
+- チームでのコラボレーションのためにメッセージタイプを**文書化**します
 
 ---
 
+## GitHub Copilot Agent チャレンジ 🚀
+
+Agentモードを使用して以下のチャレンジを完了してください：
+
+**説明:** 継承とpub/subパターンの両方を使用して簡単なゲームオブジェクトシステムを作成します。異なるオブジェクトが互いを直接知らずにイベントを通じて通信できる基本的なゲームを実装します。
+
+**プロンプト:** 以下の要件を満たすJavaScriptゲームシステムを作成してください：1) x, y座標とtypeプロパティを持つ基本GameObjectクラスを作成する。2) GameObjectを拡張し、移動可能なHeroクラスを作成する。3) GameObjectを拡張し、ヒーローを追いかけるEnemyクラスを作成する。4) pub/subパターン用のEventEmitterクラスを実装する。5) ヒーローが移動すると、近くの敵が'HERO_MOVED'イベントを受信し、ヒーローに向かって位置を更新するようにイベントリスナーを設定する。オブジェクト間の通信を示すconsole.logステートメントを含める。
+
+[Agentモードについて詳しくはこちら](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode)。
+
 ## 🚀 チャレンジ
 
-Pub/Subパターンがゲームをどのように強化できるか考えてみましょう。どの部分がイベントを発行すべきで、ゲームはそれにどう反応すべきでしょうか？新しいゲームを考え、そのパーツがどのように振る舞うかを創造的に考えるチャンスです。
+pub-subパターンがゲームアーキテクチャをどのように強化できるかを考えてみましょう。どのコンポーネントがイベントを発行すべきか、システムがどのように応答すべきかを特定してください。ゲームのコンセプトを設計し、そのコンポーネント間の通信パターンをマッピングしてください。
 
-## 講義後クイズ
+## 講義後のクイズ
 
-[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/30)
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## 復習と自己学習
 
-Pub/Subについてさらに学ぶには、[こちらを読んでください](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon)。
+Pub/Subについてもっと学ぶには、[こちらを読んでください](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon)。
 
 ## 課題
 
@@ -235,4 +366,4 @@ Pub/Subについてさらに学ぶには、[こちらを読んでください](h
 ---
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確さが含まれる可能性があります。元の言語で記載された原文が公式な情報源と見なされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤認について、当社は一切の責任を負いません。
+この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてご参照ください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の利用に起因する誤解や誤認について、当方は一切の責任を負いません。

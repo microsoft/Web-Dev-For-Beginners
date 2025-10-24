@@ -1,53 +1,152 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5a764667bbe82aa72ac0a67f4c97ff4a",
-  "translation_date": "2025-10-03T10:21:59+00:00",
+  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
+  "translation_date": "2025-10-24T14:33:08+00:00",
   "source_file": "3-terrarium/1-intro-to-html/assignment.md",
   "language_code": "ms"
 }
 -->
 # Tugasan Amali HTML: Membina Reka Bentuk Blog
 
-## Objektif
+## Objektif Pembelajaran
 
-Reka bentuk dan kodkan struktur HTML untuk laman utama blog peribadi. Latihan ini akan membantu anda mempraktikkan HTML semantik, perancangan susun atur, dan pengorganisasian kod.
+Gunakan pengetahuan HTML anda dengan mereka bentuk dan menulis kod struktur laman utama blog yang lengkap. Tugasan praktikal ini akan mengukuhkan konsep HTML semantik, amalan terbaik kebolehaksesan, dan kemahiran organisasi kod profesional yang akan anda gunakan sepanjang perjalanan pembangunan web anda.
 
-## Arahan
+**Dengan menyelesaikan tugasan ini, anda akan:**
+- Berlatih merancang susun atur laman web sebelum menulis kod
+- Menggunakan elemen HTML semantik dengan betul
+- Mencipta markup yang boleh diakses dan tersusun dengan baik
+- Membangunkan tabiat pengekodan profesional dengan komen dan organisasi
 
-1. **Reka Bentuk Reka Bentuk Blog Anda**
-   - Lukiskan reka bentuk visual untuk laman utama blog anda. Sertakan bahagian utama seperti header, navigasi, kandungan utama, sidebar, dan footer.
-   - Anda boleh menggunakan kertas dan imbas lakaran anda, atau gunakan alat digital (contohnya, Figma, Adobe XD, Canva, atau PowerPoint).
+## Keperluan Projek
 
-2. **Kenal Pasti Elemen HTML**
-   - Senaraikan elemen HTML yang anda rancang untuk digunakan bagi setiap bahagian (contohnya, `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<footer>`, `<section>`, `<h1>`–`<h6>`, `<p>`, `<img>`, `<ul>`, `<li>`, `<a>`, dll.).
+### Bahagian 1: Perancangan Reka Bentuk (Reka Bentuk Visual)
 
-3. **Tulis Markup HTML**
-   - Kodkan HTML untuk reka bentuk anda secara manual. Fokus pada struktur semantik dan amalan terbaik.
-   - Sertakan sekurang-kurangnya 10 elemen HTML yang berbeza.
-   - Tambahkan komen untuk menerangkan pilihan dan struktur anda.
+**Cipta reka bentuk visual laman utama blog anda yang merangkumi:**
+- Header dengan tajuk laman dan navigasi
+- Kawasan kandungan utama dengan sekurang-kurangnya 2-3 pratonton pos blog
+- Sidebar dengan maklumat tambahan (bahagian tentang, pos terkini, kategori)
+- Footer dengan maklumat hubungan atau pautan
 
-4. **Hantar Kerja Anda**
-   - Muat naik lakaran/reka bentuk anda dan fail HTML anda.
-   - Secara pilihan, berikan refleksi ringkas (2–3 ayat) tentang keputusan reka bentuk anda.
+**Pilihan Penciptaan Reka Bentuk:**
+- **Lakaran tangan**: Gunakan kertas dan pensel, kemudian ambil gambar atau imbas reka bentuk anda
+- **Alat digital**: Figma, Adobe XD, Canva, PowerPoint, atau mana-mana aplikasi lukisan
+- **Alat wireframe**: Balsamiq, MockFlow, atau perisian wireframe yang serupa
 
-## Rubrik
+**Labelkan bahagian reka bentuk anda** dengan elemen HTML yang anda rancang untuk digunakan (contohnya, "Header - `<header>`", "Pos Blog - `<article>`").
 
-| Kriteria         | Cemerlang                                                                                  | Memadai                                                                         | Perlu Penambahbaikan                                                            |
-|------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Reka Bentuk Visual | Reka bentuk yang jelas, terperinci dengan bahagian berlabel dan susun atur yang teliti    | Reka bentuk asas dengan beberapa bahagian berlabel                              | Reka bentuk minimum atau tidak jelas; tiada label bahagian                      |
-| Elemen HTML      | Menggunakan 10+ elemen HTML semantik; menunjukkan pemahaman struktur dan amalan terbaik    | Menggunakan 5–9 elemen HTML; beberapa struktur semantik                         | Menggunakan kurang daripada 5 elemen; tiada struktur semantik                   |
-| Kualiti Kod      | Kod yang teratur, mudah dibaca dengan komen; mematuhi piawaian HTML                        | Kod yang agak teratur; sedikit komen                                            | Kod tidak teratur; tiada komen                                                  |
-| Refleksi         | Refleksi yang mendalam tentang pilihan reka bentuk dan cabaran                             | Refleksi asas                                                                   | Tiada refleksi atau tidak relevan                                               |
+### Bahagian 2: Perancangan Elemen HTML
 
-## Petua
+**Cipta senarai yang memetakan setiap bahagian reka bentuk anda kepada elemen HTML tertentu:**
 
-- Gunakan tag HTML semantik untuk aksesibiliti dan SEO yang lebih baik.
-- Susun kod anda dengan indentasi dan komen.
-- Rujuk [Rujukan Elemen HTML MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) untuk panduan.
-- Fikirkan bagaimana susun atur anda boleh diperluaskan atau digayakan dalam tugasan masa depan.
+```
+Example:
+- Site Header → <header>
+- Main Navigation → <nav> with <ul> and <li>
+- Blog Post → <article> with <h2>, <p>, <time>
+- Sidebar → <aside> with <section> elements
+- Page Footer → <footer>
+```
+
+**Elemen Wajib Disertakan:**
+HTML anda mesti mengandungi sekurang-kurangnya 10 elemen semantik yang berbeza daripada senarai ini:
+- `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
+- `<h1>`, `<h2>`, `<h3>`, `<p>`, `<ul>`, `<li>`, `<a>`
+- `<img>`, `<time>`, `<blockquote>`, `<strong>`, `<em>`
+
+### Bahagian 3: Pelaksanaan HTML
+
+**Tulis kod laman utama blog anda mengikut piawaian ini:**
+
+1. **Struktur Dokumen**: Sertakan DOCTYPE, html, head, dan elemen body yang betul
+2. **Markup Semantik**: Gunakan elemen HTML untuk tujuan yang dimaksudkan
+3. **Kebolehaksesan**: Sertakan teks alt yang sesuai untuk imej dan teks pautan yang bermakna
+4. **Kualiti Kod**: Gunakan indentasi yang konsisten dan komen yang bermakna
+5. **Kandungan**: Sertakan kandungan blog yang realistik (anda boleh menggunakan teks tempat letak)
+
+**Contoh Struktur HTML:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+</head>
+<body>
+    <!-- Main site header -->
+    <header>
+        <h1>My Blog Title</h1>
+        <nav>
+            <!-- Navigation menu -->
+        </nav>
+    </header>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Blog posts go here -->
+    </main>
+    
+    <!-- Sidebar content -->
+    <aside>
+        <!-- Additional information -->
+    </aside>
+    
+    <!-- Site footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
+```
+
+### Bahagian 4: Refleksi
+
+**Tulis refleksi ringkas (3-5 ayat) yang merangkumi:**
+- Elemen HTML mana yang paling anda yakin untuk digunakan?
+- Cabaran apa yang anda hadapi semasa merancang atau menulis kod?
+- Bagaimana HTML semantik membantu mengatur kandungan anda?
+- Apa yang akan anda lakukan secara berbeza dalam projek HTML anda yang seterusnya?
+
+## Senarai Semak Penyerahan
+
+**Sebelum menyerahkan, pastikan anda telah:**
+- [ ] Reka bentuk visual dengan elemen HTML yang dilabelkan
+- [ ] Fail HTML lengkap dengan struktur dokumen yang betul
+- [ ] Sekurang-kurangnya 10 elemen HTML semantik yang digunakan dengan betul
+- [ ] Komen bermakna yang menerangkan struktur kod anda
+- [ ] Sintaks HTML yang sah (uji dalam pelayar)
+- [ ] Refleksi bertulis yang menjawab soalan prompt
+
+## Rubrik Penilaian
+
+| Kriteria | Cemerlang (4) | Mahir (3) | Sedang Berkembang (2) | Permulaan (1) |
+|----------|---------------|-----------|-----------------------|---------------|
+| **Perancangan & Reka Bentuk** | Reka bentuk terperinci, dilabelkan dengan baik menunjukkan pemahaman yang jelas tentang susun atur dan struktur HTML semantik | Reka bentuk yang jelas dengan kebanyakan bahagian dilabelkan dengan betul | Reka bentuk asas dengan beberapa label, menunjukkan pemahaman umum | Reka bentuk minimum atau tidak jelas, kekurangan pengenalan bahagian yang betul |
+| **Penggunaan HTML Semantik** | Menggunakan 10+ elemen semantik dengan betul, menunjukkan pemahaman mendalam tentang struktur HTML dan kebolehaksesan | Menggunakan 8-9 elemen semantik dengan betul, menunjukkan pemahaman yang baik tentang markup semantik | Menggunakan 6-7 elemen semantik, beberapa kekeliruan tentang penggunaan yang betul | Menggunakan kurang daripada 6 elemen atau salah menggunakan elemen semantik |
+| **Kualiti & Organisasi Kod** | Kod yang sangat teratur, diindentas dengan betul dengan komen yang komprehensif dan sintaks HTML yang sempurna | Kod yang teratur dengan indentasi yang baik, komen yang berguna, dan sintaks yang sah | Kod yang kebanyakannya teratur dengan beberapa komen, isu sintaks kecil | Organisasi yang lemah, komen minimum, banyak kesalahan sintaks |
+| **Kebolehaksesan & Amalan Terbaik** | Pertimbangan kebolehaksesan yang sangat baik, teks alt yang bermakna, hierarki tajuk yang betul, mengikuti semua amalan terbaik HTML moden | Ciri kebolehaksesan yang baik, penggunaan tajuk dan teks alt yang sesuai, mengikuti kebanyakan amalan terbaik | Beberapa pertimbangan kebolehaksesan, teks alt dan struktur tajuk asas | Ciri kebolehaksesan terhad, struktur tajuk yang lemah, tidak mengikuti amalan terbaik |
+| **Refleksi & Pembelajaran** | Refleksi yang mendalam menunjukkan pemahaman yang mendalam tentang konsep HTML dan analisis yang teliti tentang proses pembelajaran | Refleksi yang baik menunjukkan pemahaman tentang konsep utama dan sedikit kesedaran diri tentang pembelajaran | Refleksi asas dengan sedikit wawasan tentang konsep HTML atau proses pembelajaran | Refleksi minimum atau tiada, menunjukkan sedikit pemahaman tentang konsep yang dipelajari |
+
+## Sumber Pembelajaran
+
+**Rujukan Penting:**
+- [MDN HTML Elements Reference](https://developer.mozilla.org/docs/Web/HTML/Element) - Panduan lengkap kepada semua elemen HTML
+- [HTML5 Semantic Elements](https://developer.mozilla.org/docs/Web/HTML/Element#content_sectioning) - Memahami markup semantik
+- [Web Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Mencipta kandungan web yang boleh diakses
+- [HTML Validator](https://validator.w3.org/) - Periksa sintaks HTML anda
+
+**Petua Profesional untuk Kejayaan:**
+- Mulakan dengan reka bentuk anda sebelum menulis sebarang kod
+- Gunakan alat pembangun pelayar untuk memeriksa struktur HTML anda
+- Uji halaman anda dengan saiz skrin yang berbeza (walaupun tanpa CSS)
+- Baca HTML anda dengan kuat untuk memeriksa sama ada struktur itu masuk akal
+- Pertimbangkan bagaimana pembaca skrin akan mentafsirkan struktur halaman anda
+
+> 💡 **Ingat**: Tugasan ini memberi tumpuan kepada struktur dan semantik HTML. Jangan risau tentang gaya visual – itu adalah tugas CSS! Halaman anda mungkin kelihatan ringkas, tetapi ia harus tersusun dengan baik dan bermakna.
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

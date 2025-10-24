@@ -1,56 +1,103 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
-  "translation_date": "2025-08-29T09:17:03+00:00",
+  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
+  "translation_date": "2025-10-24T14:13:26+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "id"
 }
 -->
-# Membuat Game Menggunakan Event
+# Membuat game menggunakan event
 
-## Kuis Sebelum Kuliah
+Pernahkah Anda bertanya-tanya bagaimana situs web tahu saat Anda mengklik tombol atau mengetik di kotak teks? Itulah keajaiban pemrograman berbasis event! Cara terbaik untuk mempelajari keterampilan penting ini adalah dengan membangun sesuatu yang berguna - sebuah game kecepatan mengetik yang merespons setiap ketikan yang Anda lakukan.
 
-[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/21)
+Anda akan melihat secara langsung bagaimana browser web "berbicara" dengan kode JavaScript Anda. Setiap kali Anda mengklik, mengetik, atau menggerakkan mouse, browser mengirimkan pesan kecil (kami menyebutnya event) ke kode Anda, dan Anda yang memutuskan bagaimana meresponsnya!
 
-## Pemrograman Berbasis Event
+Saat kita selesai, Anda akan memiliki game mengetik sungguhan yang melacak kecepatan dan akurasi Anda. Yang lebih penting, Anda akan memahami konsep dasar yang mendukung setiap situs web interaktif yang pernah Anda gunakan. Mari kita mulai!
 
-Saat membuat aplikasi berbasis browser, kita menyediakan antarmuka pengguna grafis (GUI) untuk digunakan pengguna ketika berinteraksi dengan apa yang telah kita bangun. Cara paling umum untuk berinteraksi dengan browser adalah melalui klik dan mengetik pada berbagai elemen. Tantangan yang kita hadapi sebagai pengembang adalah kita tidak tahu kapan mereka akan melakukan operasi tersebut!
+## Kuis Pra-Kuliah
 
-[Event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming) adalah istilah untuk jenis pemrograman yang perlu kita lakukan untuk membuat GUI. Jika kita memecah frasa ini, kita akan melihat kata inti di sini adalah **event**. [Event](https://www.merriam-webster.com/dictionary/event), menurut Merriam-Webster, didefinisikan sebagai "sesuatu yang terjadi". Ini menggambarkan situasi kita dengan sempurna. Kita tahu sesuatu akan terjadi yang memerlukan eksekusi kode sebagai respons, tetapi kita tidak tahu kapan itu akan terjadi.
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/21)
 
-Cara kita menandai bagian kode yang ingin kita eksekusi adalah dengan membuat fungsi. Ketika kita memikirkan [pemrograman prosedural](https://en.wikipedia.org/wiki/Procedural_programming), fungsi dipanggil dalam urutan tertentu. Hal yang sama berlaku untuk pemrograman berbasis event. Perbedaannya adalah **bagaimana** fungsi tersebut akan dipanggil.
+## Pemrograman berbasis event
 
-Untuk menangani event (klik tombol, mengetik, dll.), kita mendaftarkan **event listener**. Event listener adalah fungsi yang "mendengarkan" suatu event terjadi dan mengeksekusi kode sebagai respons. Event listener dapat memperbarui UI, melakukan panggilan ke server, atau apa pun yang perlu dilakukan sebagai respons terhadap tindakan pengguna. Kita menambahkan event listener dengan menggunakan [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) dan menyediakan fungsi untuk dieksekusi.
+Pikirkan tentang aplikasi atau situs web favorit Anda - apa yang membuatnya terasa hidup dan responsif? Semuanya tentang bagaimana ia merespons apa yang Anda lakukan! Setiap ketukan, klik, gesekan, atau ketikan menciptakan apa yang kita sebut "event," dan di situlah keajaiban pengembangan web terjadi.
 
-> **NOTE:** Perlu dicatat bahwa ada banyak cara untuk membuat event listener. Anda dapat menggunakan fungsi anonim, atau membuat fungsi bernama. Anda juga dapat menggunakan berbagai pintasan, seperti mengatur properti `click`, atau menggunakan `addEventListener`. Dalam latihan ini, kita akan fokus pada `addEventListener` dan fungsi anonim, karena ini adalah teknik yang paling umum digunakan oleh pengembang web. Ini juga yang paling fleksibel, karena `addEventListener` bekerja untuk semua event, dan nama event dapat diberikan sebagai parameter.
+Inilah yang membuat pemrograman untuk web begitu menarik: kita tidak pernah tahu kapan seseorang akan mengklik tombol itu atau mulai mengetik di kotak teks. Mereka mungkin mengklik segera, menunggu lima menit, atau mungkin tidak pernah mengklik sama sekali! Ketidakpastian ini berarti kita perlu berpikir berbeda tentang bagaimana kita menulis kode kita.
 
-### Event yang Umum
+Alih-alih menulis kode yang berjalan dari atas ke bawah seperti resep, kita menulis kode yang duduk dengan sabar menunggu sesuatu terjadi. Ini mirip dengan bagaimana operator telegraf di tahun 1800-an akan duduk di dekat mesin mereka, siap merespons saat pesan datang melalui kabel.
 
-Ada [puluhan event](https://developer.mozilla.org/docs/Web/Events) yang tersedia untuk Anda dengarkan saat membuat aplikasi. Pada dasarnya, apa pun yang dilakukan pengguna di halaman akan memicu event, yang memberi Anda banyak kekuatan untuk memastikan mereka mendapatkan pengalaman yang Anda inginkan. Untungnya, Anda biasanya hanya membutuhkan beberapa event saja. Berikut adalah beberapa event umum (termasuk dua yang akan kita gunakan saat membuat game):
+Jadi, apa sebenarnya "event" itu? Sederhananya, itu adalah sesuatu yang terjadi! Ketika Anda mengklik tombol - itu adalah event. Ketika Anda mengetik huruf - itu adalah event. Ketika Anda menggerakkan mouse - itu adalah event lainnya.
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Pengguna mengklik sesuatu, biasanya tombol atau tautan
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Pengguna mengklik tombol kanan mouse
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Pengguna menyorot beberapa teks
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Pengguna memasukkan teks
+Pemrograman berbasis event memungkinkan kita mengatur kode kita untuk mendengarkan dan merespons. Kita membuat fungsi khusus yang disebut **event listener** yang menunggu dengan sabar untuk hal-hal tertentu terjadi, lalu bertindak saat itu terjadi.
 
-## Membuat Game
+Pikirkan event listener seperti memiliki bel pintu untuk kode Anda. Anda mengatur bel pintu (`addEventListener()`), memberitahunya suara apa yang harus didengarkan (seperti 'klik' atau 'keypress'), dan kemudian menentukan apa yang harus terjadi saat seseorang menekannya (fungsi khusus Anda).
 
-Kita akan membuat game untuk mengeksplorasi bagaimana event bekerja di JavaScript. Game kita akan menguji keterampilan mengetik pemain, yang merupakan salah satu keterampilan paling penting yang harus dimiliki semua pengembang. Kita semua harus berlatih mengetik! Alur umum game ini akan terlihat seperti ini:
+**Begini cara kerja event listener:**
+- **Mendengarkan** tindakan pengguna tertentu seperti klik, ketikan, atau gerakan mouse
+- **Menjalankan** kode khusus Anda saat event yang ditentukan terjadi
+- **Merespons** interaksi pengguna secara langsung, menciptakan pengalaman yang mulus
+- **Menangani** beberapa event pada elemen yang sama menggunakan listener yang berbeda
 
-- Pemain mengklik tombol mulai dan diberikan sebuah kutipan untuk diketik
-- Pemain mengetik kutipan secepat mungkin di dalam kotak teks
-  - Saat setiap kata selesai, kata berikutnya disorot
-  - Jika pemain membuat kesalahan ketik, kotak teks akan berubah menjadi merah
-  - Ketika pemain menyelesaikan kutipan, pesan sukses ditampilkan dengan waktu yang telah berlalu
+> **NOTE:** Perlu dicatat bahwa ada banyak cara untuk membuat event listener. Anda dapat menggunakan fungsi anonim, atau membuat fungsi bernama. Anda dapat menggunakan berbagai pintasan, seperti mengatur properti `click`, atau menggunakan `addEventListener()`. Dalam latihan kita, kita akan fokus pada `addEventListener()` dan fungsi anonim, karena ini adalah teknik yang paling umum digunakan oleh pengembang web. Ini juga yang paling fleksibel, karena `addEventListener()` bekerja untuk semua event, dan nama event dapat diberikan sebagai parameter.
 
-Mari kita bangun game ini dan belajar tentang event!
+### Event umum
 
-### Struktur File
+Meskipun browser web menawarkan puluhan event berbeda yang dapat Anda dengarkan, sebagian besar aplikasi interaktif hanya bergantung pada beberapa event penting. Memahami event inti ini akan memberi Anda dasar untuk membangun interaksi pengguna yang canggih.
 
-Kita akan membutuhkan tiga file: **index.html**, **script.js**, dan **style.css**. Mari kita mulai dengan menyiapkan file-file tersebut agar lebih mudah.
+Ada [puluhan event](https://developer.mozilla.org/docs/Web/Events) yang tersedia untuk Anda dengarkan saat membuat aplikasi. Pada dasarnya, apa pun yang dilakukan pengguna di halaman akan memicu event, yang memberi Anda banyak kekuatan untuk memastikan mereka mendapatkan pengalaman yang Anda inginkan. Untungnya, Anda biasanya hanya membutuhkan sedikit event. Berikut beberapa event umum (termasuk dua yang akan kita gunakan saat membuat game kita):
 
-- Buat folder baru untuk pekerjaan Anda dengan membuka konsol atau terminal dan menjalankan perintah berikut:
+| Event | Deskripsi | Penggunaan Umum |
+|-------|-----------|----------------|
+| `click` | Pengguna mengklik sesuatu | Tombol, tautan, elemen interaktif |
+| `contextmenu` | Pengguna mengklik tombol mouse kanan | Menu klik kanan khusus |
+| `select` | Pengguna menyorot teks | Pengeditan teks, operasi salin |
+| `input` | Pengguna memasukkan teks | Validasi formulir, pencarian real-time |
+
+**Memahami jenis event ini:**
+- **Memicu** saat pengguna berinteraksi dengan elemen tertentu di halaman Anda
+- **Memberikan** informasi rinci tentang tindakan pengguna melalui objek event
+- **Memungkinkan** Anda membuat aplikasi web yang responsif dan interaktif
+- **Bekerja** secara konsisten di berbagai browser dan perangkat
+
+## Membuat game
+
+Sekarang setelah Anda memahami cara kerja event, mari kita praktikkan pengetahuan itu dengan membangun sesuatu yang berguna. Kita akan membuat game kecepatan mengetik yang menunjukkan penanganan event sambil membantu Anda mengembangkan keterampilan penting sebagai pengembang.
+
+Kita akan membuat game untuk mengeksplorasi cara kerja event di JavaScript. Game kita akan menguji keterampilan mengetik pemain, yang merupakan salah satu keterampilan yang paling diremehkan yang harus dimiliki semua pengembang. Fakta menarik: tata letak keyboard QWERTY yang kita gunakan saat ini sebenarnya dirancang pada tahun 1870-an untuk mesin tik - dan keterampilan mengetik yang baik masih sama berharganya bagi programmer hingga saat ini! Alur umum game akan terlihat seperti ini:
+
+```mermaid
+flowchart TD
+    A[Player clicks Start] --> B[Random quote displays]
+    B --> C[Player types in textbox]
+    C --> D{Word complete?}
+    D -->|Yes| E[Highlight next word]
+    D -->|No| F{Correct so far?}
+    F -->|Yes| G[Keep normal styling]
+    F -->|No| H[Show error styling]
+    E --> I{Quote complete?}
+    I -->|No| C
+    I -->|Yes| J[Show success message with time]
+    G --> C
+    H --> C
+```
+
+**Begini cara kerja game kita:**
+- **Dimulai** saat pemain mengklik tombol mulai dan menampilkan kutipan acak
+- **Melacak** kemajuan mengetik pemain kata demi kata secara real-time
+- **Menyoroti** kata saat ini untuk memandu fokus pemain
+- **Memberikan** umpan balik visual langsung untuk kesalahan mengetik
+- **Menghitung** dan menampilkan total waktu saat kutipan selesai
+
+Mari kita bangun game kita, dan pelajari tentang event!
+
+### Struktur file
+
+Sebelum kita mulai coding, mari kita atur! Memiliki struktur file yang rapi sejak awal akan menghemat banyak waktu dan membuat proyek Anda lebih profesional. 😊
+
+Kita akan membuatnya sederhana dengan hanya tiga file: `index.html` untuk struktur halaman kita, `script.js` untuk semua logika game kita, dan `style.css` untuk membuat semuanya terlihat menarik. Ini adalah trio klasik yang mendukung sebagian besar web!
+
+**Buat folder baru untuk pekerjaan Anda dengan membuka konsol atau jendela terminal dan menjalankan perintah berikut:**
 
 ```bash
 # Linux or macOS
@@ -60,29 +107,49 @@ mkdir typing-game && cd typing-game
 md typing-game && cd typing-game
 ```
 
-- Buka Visual Studio Code
+**Begini cara kerja perintah ini:**
+- **Membuat** direktori baru bernama `typing-game` untuk file proyek Anda
+- **Masuk** ke direktori yang baru dibuat secara otomatis
+- **Menyiapkan** ruang kerja yang bersih untuk pengembangan game Anda
+
+**Buka Visual Studio Code:**
 
 ```bash
 code .
 ```
 
-- Tambahkan tiga file ke folder di Visual Studio Code dengan nama berikut:
-  - index.html
-  - script.js
-  - style.css
+**Perintah ini:**
+- **Meluncurkan** Visual Studio Code di direktori saat ini
+- **Membuka** folder proyek Anda di editor
+- **Memberikan** akses ke semua alat pengembangan yang Anda butuhkan
 
-## Membuat Antarmuka Pengguna
+**Tambahkan tiga file ke folder di Visual Studio Code dengan nama berikut:**
+- `index.html` - Berisi struktur dan konten game Anda
+- `script.js` - Menangani semua logika game dan event listener
+- `style.css` - Mendefinisikan tampilan visual dan gaya
 
-Jika kita melihat persyaratan, kita tahu bahwa kita akan membutuhkan beberapa elemen di halaman HTML kita. Ini seperti resep, di mana kita membutuhkan beberapa bahan:
+## Membuat antarmuka pengguna
 
-- Tempat untuk menampilkan kutipan yang akan diketik oleh pengguna
-- Tempat untuk menampilkan pesan, seperti pesan sukses
-- Kotak teks untuk mengetik
-- Tombol mulai
+Sekarang mari kita bangun panggung tempat semua aksi game kita akan berlangsung! Pikirkan ini seperti merancang panel kontrol untuk pesawat luar angkasa - kita perlu memastikan semua yang dibutuhkan pemain ada di tempat yang mereka harapkan.
 
-Setiap elemen tersebut akan membutuhkan ID agar kita dapat bekerja dengannya di JavaScript. Kita juga akan menambahkan referensi ke file CSS dan JavaScript yang akan kita buat.
+Mari kita tentukan apa yang sebenarnya dibutuhkan game kita. Jika Anda bermain game mengetik, apa yang ingin Anda lihat di layar? Berikut yang kita butuhkan:
 
-Buat file baru bernama **index.html**. Tambahkan HTML berikut:
+| Elemen UI | Tujuan | Elemen HTML |
+|-----------|--------|-------------|
+| Tampilan Kutipan | Menampilkan teks untuk diketik | `<p>` dengan `id="quote"` |
+| Area Pesan | Menampilkan status dan pesan keberhasilan | `<p>` dengan `id="message"` |
+| Input Teks | Tempat pemain mengetik kutipan | `<input>` dengan `id="typed-value"` |
+| Tombol Mulai | Memulai game | `<button>` dengan `id="start"` |
+
+**Memahami struktur UI:**
+- **Mengorganisasi** konten secara logis dari atas ke bawah
+- **Menetapkan** ID unik untuk elemen agar dapat ditargetkan oleh JavaScript
+- **Memberikan** hierarki visual yang jelas untuk pengalaman pengguna yang lebih baik
+- **Menyertakan** elemen HTML semantik untuk aksesibilitas
+
+Setiap elemen tersebut membutuhkan ID agar kita dapat bekerja dengannya di JavaScript kita. Kita juga akan menambahkan referensi ke file CSS dan JavaScript yang akan kita buat.
+
+Buat file baru bernama `index.html`. Tambahkan HTML berikut:
 
 ```html
 <!-- inside index.html -->
@@ -105,26 +172,52 @@ Buat file baru bernama **index.html**. Tambahkan HTML berikut:
 </html>
 ```
 
-### Meluncurkan Aplikasi
+**Penjelasan tentang apa yang dicapai oleh struktur HTML ini:**
+- **Menautkan** stylesheet CSS di `<head>` untuk styling
+- **Membuat** heading yang jelas dan instruksi untuk pengguna
+- **Membuat** paragraf placeholder dengan ID spesifik untuk konten dinamis
+- **Menyertakan** bidang input dengan atribut aksesibilitas
+- **Menyediakan** tombol mulai untuk memulai game
+- **Memuat** file JavaScript di akhir untuk kinerja optimal
 
-Selalu lebih baik untuk mengembangkan secara bertahap untuk melihat bagaimana hasilnya. Mari kita luncurkan aplikasi kita. Ada ekstensi luar biasa untuk Visual Studio Code bernama [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) yang akan meng-host aplikasi Anda secara lokal dan menyegarkan browser setiap kali Anda menyimpan.
+### Meluncurkan aplikasi
 
-- Instal [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) dengan mengikuti tautan dan mengklik **Install**
-  - Anda akan diminta oleh browser untuk membuka Visual Studio Code, lalu oleh Visual Studio Code untuk melakukan instalasi
-  - Restart Visual Studio Code jika diminta
-- Setelah diinstal, di Visual Studio Code, klik Ctrl-Shift-P (atau Cmd-Shift-P) untuk membuka command palette
-- Ketik **Live Server: Open with Live Server**
-  - Live Server akan mulai meng-host aplikasi Anda
-- Buka browser dan navigasikan ke **https://localhost:5500**
-- Anda sekarang seharusnya melihat halaman yang Anda buat!
+Menguji aplikasi Anda secara berkala selama pengembangan membantu Anda menemukan masalah lebih awal dan melihat kemajuan Anda secara real-time. Live Server adalah alat yang sangat berharga yang secara otomatis menyegarkan browser Anda setiap kali Anda menyimpan perubahan, membuat pengembangan jauh lebih efisien.
 
-Mari tambahkan beberapa fungsionalitas.
+Selalu lebih baik untuk mengembangkan secara bertahap untuk melihat bagaimana semuanya terlihat. Mari kita luncurkan aplikasi kita. Ada ekstensi yang luar biasa untuk Visual Studio Code yang disebut [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) yang akan meng-host aplikasi Anda secara lokal dan menyegarkan browser setiap kali Anda menyimpan.
 
-## Menambahkan CSS
+**Instal [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) dengan mengikuti tautan dan klik Install:**
 
-Dengan HTML kita yang sudah dibuat, mari tambahkan CSS untuk styling inti. Kita perlu menyorot kata yang harus diketik oleh pemain, dan memberi warna pada kotak teks jika yang mereka ketik salah. Kita akan melakukannya dengan dua kelas.
+**Begini yang terjadi selama instalasi:**
+- **Meminta** browser Anda untuk membuka Visual Studio Code
+- **Membimbing** Anda melalui proses instalasi ekstensi
+- **Mungkin memerlukan** restart Visual Studio Code untuk menyelesaikan pengaturan
 
-Buat file baru bernama **style.css** dan tambahkan sintaks berikut.
+**Setelah terinstal, di Visual Studio Code, klik Ctrl-Shift-P (atau Cmd-Shift-P) untuk membuka command palette:**
+
+**Memahami command palette:**
+- **Memberikan** akses cepat ke semua perintah VS Code
+- **Mencari** perintah saat Anda mengetik
+- **Menawarkan** pintasan keyboard untuk pengembangan lebih cepat
+
+**Ketik "Live Server: Open with Live Server":**
+
+**Apa yang dilakukan Live Server:**
+- **Memulai** server pengembangan lokal untuk proyek Anda
+- **Secara otomatis** menyegarkan browser saat Anda menyimpan file
+- **Melayani** file Anda dari URL lokal (biasanya `localhost:5500`)
+
+**Buka browser dan navigasikan ke `https://localhost:5500`:**
+
+Sekarang Anda seharusnya melihat halaman yang Anda buat! Mari tambahkan beberapa fungsionalitas.
+
+## Tambahkan CSS
+
+Sekarang mari kita buat tampilannya menarik! Umpan balik visual sangat penting untuk antarmuka pengguna sejak awal era komputasi. Pada tahun 1980-an, para peneliti menemukan bahwa umpan balik visual langsung secara dramatis meningkatkan kinerja pengguna dan mengurangi kesalahan. Itulah yang akan kita buat.
+
+Game kita perlu sangat jelas tentang apa yang sedang terjadi. Pemain harus segera tahu kata mana yang harus mereka ketik, dan jika mereka membuat kesalahan, mereka harus melihatnya langsung. Mari kita buat beberapa gaya yang sederhana namun efektif:
+
+Buat file baru bernama `style.css` dan tambahkan sintaks berikut.
 
 ```css
 /* inside style.css */
@@ -138,36 +231,57 @@ Buat file baru bernama **style.css** dan tambahkan sintaks berikut.
 }
 ```
 
-✅ Untuk CSS, Anda dapat mengatur tata letak halaman sesuai keinginan Anda. Luangkan waktu untuk membuat halaman terlihat lebih menarik:
+**Memahami kelas CSS ini:**
+- **Menyoroti** kata saat ini dengan latar belakang kuning untuk panduan visual yang jelas
+- **Menandai** kesalahan mengetik dengan warna latar belakang coral muda
+- **Memberikan** umpan balik langsung tanpa mengganggu alur mengetik pengguna
+- **Menggunakan** warna kontras untuk aksesibilitas dan komunikasi visual yang jelas
+
+✅ Untuk CSS, Anda dapat mengatur tata letak halaman sesuai keinginan Anda. Luangkan sedikit waktu dan buat halaman terlihat lebih menarik:
 
 - Pilih font yang berbeda
-- Beri warna pada header
+- Warnai header
 - Ubah ukuran elemen
 
 ## JavaScript
 
-Dengan UI kita yang sudah dibuat, saatnya fokus pada JavaScript yang akan menyediakan logika. Kita akan membaginya menjadi beberapa langkah:
+Di sinilah semuanya menjadi menarik! 🎉 Kita sudah memiliki struktur HTML dan gaya CSS, tetapi saat ini game kita seperti mobil cantik tanpa mesin. JavaScript akan menjadi mesin itu - inilah yang membuat semuanya benar-benar bekerja dan merespons apa yang dilakukan pemain.
 
-- [Membuat konstanta](../../../../4-typing-game/typing-game)
-- [Event listener untuk memulai game](../../../../4-typing-game/typing-game)
-- [Event listener untuk mengetik](../../../../4-typing-game/typing-game)
+Di sini Anda akan melihat kreasi Anda menjadi hidup. Kita akan mengatasi langkah ini satu per satu agar tidak terasa terlalu membingungkan:
 
-Namun pertama-tama, buat file baru bernama **script.js**.
+| Langkah | Tujuan | Apa yang Akan Anda Pelajari |
+|---------|--------|-----------------------------|
+| [Buat konstanta](../../../../4-typing-game/typing-game) | Menyiapkan kutipan dan referensi DOM | Manajemen variabel dan seleksi DOM |
+| [Event listener untuk memulai game](../../../../4-typing-game/typing-game) | Menangani inisialisasi game | Penanganan event dan pembaruan UI |
+| [Event listener untuk mengetik](../../../../4-typing-game/typing-game) | Memproses input pengguna secara real-time | Validasi input dan umpan balik dinamis |
 
-### Menambahkan Konstanta
+**Pendekatan terstruktur ini membantu Anda:**
+- **Mengorganisasi** kode Anda ke dalam bagian yang logis dan mudah dikelola
+- **Membangun** fungsionalitas secara bertahap untuk debugging yang lebih mudah
+- **Memahami** bagaimana bagian-bagian berbeda dari aplikasi Anda bekerja bersama
+- **Membuat** pola yang dapat digunakan kembali untuk proyek di masa depan
 
-Kita akan membutuhkan beberapa item untuk mempermudah pemrograman. Lagi-lagi, seperti resep, berikut yang kita butuhkan:
+Namun pertama-tama, buat file baru bernama `script.js`.
 
-- Array dengan daftar semua kutipan
-- Array kosong untuk menyimpan semua kata dari kutipan saat ini
-- Ruang untuk menyimpan indeks kata yang sedang diketik oleh pemain
-- Waktu ketika pemain mengklik mulai
+### Tambahkan konstanta
 
-Kita juga akan membutuhkan referensi ke elemen UI:
+Sebelum kita masuk ke aksi, mari kita kumpulkan semua sumber daya kita! Seperti bagaimana pusat kendali NASA menyiapkan semua sistem pemantauan mereka sebelum peluncuran, jauh lebih mudah saat Anda memiliki semuanya siap dan tersedia. Ini menghemat waktu dari mencari-cari sesuatu nanti dan membantu mencegah kesalahan ketik.
 
-- Kotak teks (**typed-value**)
-- Tampilan kutipan (**quote**)
-- Pesan (**message**)
+Berikut yang perlu kita siapkan terlebih dahulu:
+
+| Jenis Data | Tujuan | Contoh |
+|------------|--------|--------|
+| Array of quotes | Simpan semua kutipan yang mungkin untuk permainan | `['Quote 1', 'Quote 2', ...]` |
+| Word array | Pecah kutipan saat ini menjadi kata-kata individu | `['When', 'you', 'have', ...]` |
+| Word index | Lacak kata mana yang sedang diketik oleh pemain | `0, 1, 2, 3...` |
+| Start time | Hitung waktu yang berlalu untuk penilaian | `Date.now()` |
+
+**Kita juga membutuhkan referensi ke elemen UI kita:**
+| Elemen | ID | Tujuan |
+|--------|----|--------|
+| Input teks | `typed-value` | Tempat pemain mengetik |
+| Tampilan kutipan | `quote` | Menampilkan kutipan untuk diketik |
+| Area pesan | `message` | Menampilkan pembaruan status |
 
 ```javascript
 // inside script.js
@@ -192,21 +306,36 @@ const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
-✅ Silakan tambahkan lebih banyak kutipan ke game Anda
+**Memecah apa yang dilakukan oleh kode pengaturan ini:**
+- **Menyimpan** array kutipan Sherlock Holmes menggunakan `const` karena kutipan tidak akan berubah
+- **Menginisialisasi** variabel pelacakan dengan `let` karena nilai-nilai ini akan diperbarui selama permainan
+- **Menangkap** referensi ke elemen DOM menggunakan `document.getElementById()` untuk akses yang efisien
+- **Menyiapkan** dasar untuk semua fungsi permainan dengan nama variabel yang jelas dan deskriptif
+- **Mengorganisasi** data dan elemen terkait secara logis untuk mempermudah pemeliharaan kode
 
-> **NOTE:** Kita dapat mengambil elemen kapan saja dalam kode dengan menggunakan `document.getElementById`. Karena kita akan sering merujuk elemen-elemen ini, kita akan menghindari kesalahan ketik dengan string literal dengan menggunakan konstanta. Framework seperti [Vue.js](https://vuejs.org/) atau [React](https://reactjs.org/) dapat membantu Anda lebih baik dalam mengelola sentralisasi kode Anda.
+✅ Silakan tambahkan lebih banyak kutipan ke permainan Anda
+
+> 💡 **Tips Pro**: Kita dapat mengambil elemen kapan saja dalam kode dengan menggunakan `document.getElementById()`. Karena kita akan sering merujuk elemen-elemen ini, kita dapat menghindari kesalahan ketik dengan literal string menggunakan konstanta. Framework seperti [Vue.js](https://vuejs.org/) atau [React](https://reactjs.org/) dapat membantu Anda mengelola sentralisasi kode dengan lebih baik.
+>
+**Mengapa pendekatan ini sangat efektif:**
+- **Mencegah** kesalahan ejaan saat merujuk elemen berkali-kali
+- **Meningkatkan** keterbacaan kode dengan nama konstanta yang deskriptif
+- **Memungkinkan** dukungan IDE yang lebih baik dengan autocomplete dan pemeriksaan kesalahan
+- **Mempermudah** refactoring jika ID elemen berubah di kemudian hari
 
 Luangkan waktu untuk menonton video tentang penggunaan `const`, `let`, dan `var`
 
-[![Jenis Variabel](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Jenis Variabel")
+[![Jenis variabel](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Jenis variabel")
 
 > 🎥 Klik gambar di atas untuk video tentang variabel.
 
-### Menambahkan Logika Mulai
+### Tambahkan logika mulai
 
-Untuk memulai game, pemain akan mengklik tombol mulai. Tentu saja, kita tidak tahu kapan mereka akan mengklik mulai. Di sinilah [event listener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) berperan. Event listener memungkinkan kita mendengarkan sesuatu yang terjadi (event) dan mengeksekusi kode sebagai respons. Dalam kasus kita, kita ingin mengeksekusi kode ketika pengguna mengklik mulai.
+Di sinilah semuanya mulai berjalan! 🚀 Anda akan menulis pendengar acara pertama Anda, dan ada sesuatu yang sangat memuaskan tentang melihat kode Anda merespons klik tombol.
 
-Ketika pengguna mengklik **mulai**, kita perlu memilih kutipan, mengatur antarmuka pengguna, dan melacak kata saat ini serta waktu. Berikut adalah JavaScript yang perlu Anda tambahkan; kita akan membahasnya setelah blok skrip.
+Pikirkan ini: di suatu tempat di luar sana, seorang pemain akan mengklik tombol "Start", dan kode Anda harus siap untuk mereka. Kita tidak tahu kapan mereka akan mengkliknya - bisa langsung, bisa setelah mereka mengambil kopi - tetapi ketika mereka melakukannya, permainan Anda akan hidup.
+
+Ketika pengguna mengklik `start`, kita perlu memilih kutipan, mengatur antarmuka pengguna, dan mengatur pelacakan untuk kata saat ini dan waktu. Di bawah ini adalah JavaScript yang perlu Anda tambahkan; kita akan membahasnya setelah blok skrip.
 
 ```javascript
 // at the end of script.js
@@ -241,27 +370,35 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-Mari kita uraikan kode ini!
+**Mari kita pecah kode menjadi bagian logis:**
 
-- Mengatur pelacakan kata
-  - Menggunakan [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) dan [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) memungkinkan kita memilih kutipan secara acak dari array `quotes`
-  - Kita mengonversi `quote` menjadi array `words` sehingga kita dapat melacak kata yang sedang diketik oleh pemain
-  - `wordIndex` diatur ke 0, karena pemain akan memulai dari kata pertama
-- Mengatur UI
-  - Membuat array `spanWords`, yang berisi setiap kata di dalam elemen `span`
-    - Ini memungkinkan kita menyorot kata pada tampilan
-  - `join` array untuk membuat string yang dapat kita gunakan untuk memperbarui `innerHTML` pada `quoteElement`
-    - Ini akan menampilkan kutipan kepada pemain
-  - Mengatur `className` elemen `span` pertama menjadi `highlight` untuk menyorotnya sebagai kuning
-  - Membersihkan `messageElement` dengan mengatur `innerText` menjadi `''`
-- Mengatur kotak teks
-  - Menghapus `value` saat ini pada `typedValueElement`
-  - Mengatur `focus` ke `typedValueElement`
-- Memulai timer dengan memanggil `getTime`
+**📊 Pengaturan Pelacakan Kata:**
+- **Memilih** kutipan acak menggunakan `Math.floor()` dan `Math.random()` untuk variasi
+- **Mengonversi** kutipan menjadi array kata-kata individu menggunakan `split(' ')`
+- **Mengatur ulang** `wordIndex` ke 0 karena pemain mulai dengan kata pertama
+- **Mempersiapkan** status permainan untuk putaran baru
 
-### Menambahkan Logika Mengetik
+**🎨 Pengaturan dan Tampilan UI:**
+- **Membuat** array elemen `<span>`, membungkus setiap kata untuk penataan individu
+- **Menggabungkan** elemen span menjadi satu string untuk pembaruan DOM yang efisien
+- **Menyoroti** kata pertama dengan menambahkan kelas CSS `highlight`
+- **Menghapus** pesan permainan sebelumnya untuk memberikan awal yang bersih
 
-Saat pemain mengetik, event `input` akan dipicu. Event listener ini akan memeriksa apakah pemain mengetik kata dengan benar, dan menangani status game saat ini. Kembali ke **script.js**, tambahkan kode berikut di akhir. Kita akan membahasnya setelahnya.
+**⌨️ Persiapan Kotak Teks:**
+- **Menghapus** teks yang ada di bidang input
+- **Mengatur fokus** ke kotak teks sehingga pemain dapat mulai mengetik segera
+- **Mempersiapkan** area input untuk sesi permainan baru
+
+**⏱️ Inisialisasi Timer:**
+- **Menangkap** cap waktu saat ini menggunakan `new Date().getTime()`
+- **Memungkinkan** perhitungan kecepatan mengetik dan waktu penyelesaian yang akurat
+- **Memulai** pelacakan kinerja untuk sesi permainan
+
+### Tambahkan logika mengetik
+
+Di sinilah kita menangani inti dari permainan kita! Jangan khawatir jika ini terlihat banyak pada awalnya - kita akan membahas setiap bagian, dan pada akhirnya, Anda akan melihat betapa logisnya semuanya.
+
+Apa yang kita bangun di sini cukup canggih: setiap kali seseorang mengetikkan huruf, kode kita akan memeriksa apa yang mereka ketik, memberikan umpan balik, dan memutuskan apa yang harus dilakukan selanjutnya. Ini mirip dengan bagaimana pengolah kata awal seperti WordStar di tahun 1970-an memberikan umpan balik waktu nyata kepada pengetik.
 
 ```javascript
 // at the end of script.js
@@ -300,47 +437,113 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Mari kita uraikan kode ini! Kita mulai dengan mengambil kata saat ini dan nilai yang telah diketik oleh pemain sejauh ini. Kemudian kita memiliki logika bertingkat, di mana kita memeriksa apakah kutipan selesai, kata selesai, kata benar, atau (akhirnya), jika ada kesalahan.
+**Memahami alur logika mengetik:**
 
-- Kutipan selesai, ditunjukkan oleh `typedValue` yang sama dengan `currentWord`, dan `wordIndex` sama dengan satu kurang dari `length` dari `words`
-  - Menghitung `elapsedTime` dengan mengurangi `startTime` dari waktu saat ini
-  - Membagi `elapsedTime` dengan 1.000 untuk mengonversi dari milidetik ke detik
-  - Menampilkan pesan sukses
-- Kata selesai, ditunjukkan oleh `typedValue` yang diakhiri dengan spasi (akhir kata) dan `typedValue` yang sama dengan `currentWord`
-  - Mengatur `value` pada `typedElement` menjadi `''` untuk memungkinkan kata berikutnya diketik
-  - Meningkatkan `wordIndex` untuk pindah ke kata berikutnya
-  - Melalui semua `childNodes` dari `quoteElement` untuk mengatur `className` menjadi `''` untuk mengembalikan ke tampilan default
-  - Mengatur `className` dari kata saat ini menjadi `highlight` untuk menandainya sebagai kata berikutnya yang harus diketik
-- Kata saat ini diketik dengan benar (tetapi belum selesai), ditunjukkan oleh `currentWord` yang diawali dengan `typedValue`
-  - Memastikan `typedValueElement` ditampilkan sebagai default dengan menghapus `className`
-- Jika kita sampai sejauh ini, berarti ada kesalahan
-  - Mengatur `className` pada `typedValueElement` menjadi `error`
+Fungsi ini menggunakan pendekatan waterfall, memeriksa kondisi dari yang paling spesifik hingga yang paling umum. Mari kita pecah setiap skenario:
 
-## Uji Aplikasi Anda
+```mermaid
+flowchart TD
+    A[Player types character] --> B[Get current word and typed value]
+    B --> C{Quote complete?}
+    C -->|Yes| D[Show completion message with time]
+    C -->|No| E{Word complete with space?}
+    E -->|Yes| F[Clear input, move to next word, update highlight]
+    E -->|No| G{Typing correctly so far?}
+    G -->|Yes| H[Remove error styling]
+    G -->|No| I[Show error styling]
+```
 
-Anda telah sampai di akhir! Langkah terakhir adalah memastikan aplikasi kita berfungsi. Cobalah! Jangan khawatir jika ada kesalahan; **semua pengembang** pasti mengalami kesalahan. Periksa pesan dan debug sesuai kebutuhan.
+**🏁 Kutipan Selesai (Skenario 1):**
+- **Memeriksa** apakah nilai yang diketik cocok dengan kata saat ini DAN kita berada di kata terakhir
+- **Menghitung** waktu yang berlalu dengan mengurangi waktu mulai dari waktu saat ini
+- **Mengonversi** milidetik ke detik dengan membagi dengan 1.000
+- **Menampilkan** pesan selamat dengan waktu penyelesaian
 
-Klik **mulai**, dan mulailah mengetik! Seharusnya terlihat seperti animasi yang kita lihat sebelumnya.
+**✅ Kata Selesai (Skenario 2):**
+- **Mendeteksi** penyelesaian kata saat input diakhiri dengan spasi
+- **Memvalidasi** bahwa input yang dipangkas cocok dengan kata saat ini secara tepat
+- **Menghapus** bidang input untuk kata berikutnya
+- **Melanjutkan** ke kata berikutnya dengan menambah `wordIndex`
+- **Memperbarui** penyorotan visual dengan menghapus semua kelas dan menyoroti kata baru
 
-![Animasi game dalam aksi](../../../../4-typing-game/images/demo.gif)
+**📝 Proses Mengetik (Skenario 3):**
+- **Memverifikasi** bahwa kata saat ini dimulai dengan apa yang telah diketik sejauh ini
+- **Menghapus** gaya kesalahan untuk menunjukkan bahwa input benar
+- **Memungkinkan** kelanjutan mengetik tanpa gangguan
+
+**❌ Status Kesalahan (Skenario 4):**
+- **Memicu** saat teks yang diketik tidak cocok dengan awal kata yang diharapkan
+- **Menerapkan** kelas CSS kesalahan untuk memberikan umpan balik visual langsung
+- **Membantu** pemain dengan cepat mengidentifikasi dan memperbaiki kesalahan
+
+## Uji aplikasi Anda
+
+Lihat apa yang telah Anda capai! 🎉 Anda baru saja membangun permainan mengetik yang nyata dan berfungsi dari awal menggunakan pemrograman berbasis acara. Luangkan waktu sejenak untuk menghargai itu - ini bukanlah pencapaian kecil!
+
+Sekarang saatnya fase pengujian! Apakah ini bekerja seperti yang diharapkan? Apakah kita melewatkan sesuatu? Begini: jika ada sesuatu yang tidak bekerja dengan sempurna langsung, itu sangat normal. Bahkan pengembang berpengalaman sering menemukan bug dalam kode mereka. Itu semua adalah bagian dari proses pengembangan!
+
+Klik `start`, dan mulailah mengetik! Seharusnya terlihat seperti animasi yang kita lihat sebelumnya.
+
+![Animasi permainan dalam aksi](../../../../4-typing-game/images/demo.gif)
+
+**Apa yang harus diuji dalam aplikasi Anda:**
+- **Memverifikasi** bahwa mengklik Start menampilkan kutipan acak
+- **Mengonfirmasi** bahwa mengetik menyoroti kata saat ini dengan benar
+- **Memeriksa** bahwa gaya kesalahan muncul untuk mengetik yang salah
+- **Memastikan** bahwa menyelesaikan kata-kata memajukan penyorotan dengan benar
+- **Menguji** bahwa menyelesaikan kutipan menunjukkan pesan penyelesaian dengan waktu
+
+**Tips debugging umum:**
+- **Periksa** konsol browser (F12) untuk kesalahan JavaScript
+- **Verifikasi** bahwa semua nama file cocok persis (case-sensitive)
+- **Pastikan** Live Server berjalan dan menyegarkan dengan benar
+- **Uji** kutipan yang berbeda untuk memverifikasi pemilihan acak berfungsi
 
 ---
 
+## Tantangan GitHub Copilot Agent 🎮
+
+Gunakan mode Agent untuk menyelesaikan tantangan berikut:
+
+**Deskripsi:** Perluas permainan mengetik dengan menerapkan sistem kesulitan yang menyesuaikan permainan berdasarkan kinerja pemain. Tantangan ini akan membantu Anda berlatih penanganan acara tingkat lanjut, analisis data, dan pembaruan UI dinamis.
+
+**Prompt:** Buat sistem penyesuaian kesulitan untuk permainan mengetik yang:
+1. Melacak kecepatan mengetik pemain (kata per menit) dan persentase akurasi
+2. Secara otomatis menyesuaikan ke tiga tingkat kesulitan: Mudah (kutipan sederhana), Sedang (kutipan saat ini), Sulit (kutipan kompleks dengan tanda baca)
+3. Menampilkan tingkat kesulitan saat ini dan statistik pemain di UI
+4. Menerapkan penghitung streak yang meningkatkan kesulitan setelah 3 performa baik berturut-turut
+5. Menambahkan umpan balik visual (warna, animasi) untuk menunjukkan perubahan kesulitan
+
+Tambahkan elemen HTML, gaya CSS, dan fungsi JavaScript yang diperlukan untuk menerapkan fitur ini. Sertakan penanganan kesalahan yang tepat dan pastikan permainan tetap dapat diakses dengan label ARIA yang sesuai.
+
+Pelajari lebih lanjut tentang [mode agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
+
 ## 🚀 Tantangan
 
-Tambahkan lebih banyak fungsionalitas
+Siap membawa permainan mengetik Anda ke tingkat berikutnya? Cobalah menerapkan fitur-fitur canggih ini untuk memperdalam pemahaman Anda tentang penanganan acara dan manipulasi DOM:
 
-- Nonaktifkan event listener `input` saat selesai, dan aktifkan kembali saat tombol diklik
-- Nonaktifkan kotak teks ketika pemain menyelesaikan kutipan
-- Tampilkan kotak dialog modal dengan pesan sukses
-- Simpan skor tertinggi menggunakan [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-## Kuis Setelah Kuliah
+**Tambahkan lebih banyak fungsi:**
 
-[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/22)
+| Fitur | Deskripsi | Keterampilan yang Akan Anda Latih |
+|-------|-----------|----------------------------------|
+| **Kontrol Input** | Nonaktifkan pendengar acara `input` saat selesai, dan aktifkan kembali saat tombol diklik | Manajemen acara dan kontrol status |
+| **Manajemen Status UI** | Nonaktifkan kotak teks saat pemain menyelesaikan kutipan | Manipulasi properti DOM |
+| **Dialog Modal** | Tampilkan kotak dialog modal dengan pesan keberhasilan | Pola UI tingkat lanjut dan aksesibilitas |
+| **Sistem Skor Tertinggi** | Simpan skor tertinggi menggunakan `localStorage` | API penyimpanan browser dan persistensi data |
 
-## Tinjauan & Belajar Mandiri
+**Tips implementasi:**
+- **Pelajari** `localStorage.setItem()` dan `localStorage.getItem()` untuk penyimpanan yang persisten
+- **Latih** menambahkan dan menghapus pendengar acara secara dinamis
+- **Jelajahi** elemen dialog HTML atau pola modal CSS
+- **Pertimbangkan** aksesibilitas saat menonaktifkan dan mengaktifkan kontrol formulir
 
-Baca tentang [semua event yang tersedia](https://developer.mozilla.org/docs/Web/Events) untuk pengembang melalui browser web, dan pertimbangkan skenario di mana Anda akan menggunakan masing-masing event tersebut.
+## Kuis Pasca-Kuliah
+
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/22)
+
+## Tinjauan & Studi Mandiri
+
+Baca tentang [semua acara yang tersedia](https://developer.mozilla.org/docs/Web/Events) untuk pengembang melalui browser web, dan pertimbangkan skenario di mana Anda akan menggunakan masing-masing acara tersebut.
 
 ## Tugas
 
@@ -349,4 +552,4 @@ Baca tentang [semua event yang tersedia](https://developer.mozilla.org/docs/Web/
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.

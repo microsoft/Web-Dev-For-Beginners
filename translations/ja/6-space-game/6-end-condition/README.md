@@ -1,41 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "05be6c37791668e3719c4fba94566367",
-  "translation_date": "2025-08-28T17:53:40+00:00",
+  "original_hash": "46bcdd9a0174031655a49bb062aa279c",
+  "translation_date": "2025-10-24T15:14:41+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "ja"
 }
 -->
 # 宇宙ゲームを作ろう パート6: 終了と再スタート
 
-## 講義前クイズ
+素晴らしいゲームには、明確な終了条件とスムーズな再スタートの仕組みが必要です。これまでに移動、戦闘、スコアリングを備えた印象的な宇宙ゲームを作り上げてきましたが、今回はゲームを完成させるための最後の要素を追加します。
 
-[講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/39)
+現在のゲームは、1977年にNASAが打ち上げたボイジャー探査機のように、無限に続く仕様になっています。宇宙探査ではそれで問題ありませんが、ゲームには満足感を与えるための明確な終了点が必要です。
 
-ゲームの「終了条件」を表現する方法はいくつかあります。ゲームの制作者として、なぜゲームが終了したのかを決めるのはあなた次第です。これまで作ってきた宇宙ゲームを例にすると、以下のような理由が考えられます：
+今回は、適切な勝敗条件と再スタートシステムを実装します。このレッスンが終わる頃には、プレイヤーがクリアして再挑戦できる、完成度の高いゲームが出来上がります。これは、アーケードゲームの黄金時代を象徴するゲームのような体験を提供します。
 
-- **`N` 隻の敵船を撃破**: ゲームをレベルごとに分ける場合、`N` 隻の敵船を撃破することでレベルをクリアするというのはよくあるパターンです。
-- **自分の船が破壊された**: 自分の船が破壊されるとゲームオーバーになるゲームもあります。もう一つの一般的な方法は「ライフ」の概念を導入することです。自分の船が破壊されるたびにライフが減り、すべてのライフを失うとゲームオーバーになります。
-- **`N` ポイントを獲得**: ポイントを集めることが終了条件になることもあります。ポイントの獲得方法は自由ですが、敵船を撃破したり、破壊されたアイテムが落とすものを集めたりすることでポイントを得るのが一般的です。
-- **レベルをクリア**: これには、`X` 隻の敵船を撃破、`Y` ポイントを獲得、特定のアイテムを収集するなど、複数の条件が含まれる場合があります。
+## 講義前のクイズ
 
-## 再スタート
+[講義前のクイズ](https://ff-quizzes.netlify.app/web/quiz/39)
 
-ゲームを楽しんでくれる人がいれば、再プレイしたいと思うはずです。ゲームがどんな理由で終了したとしても、再スタートの選択肢を提供するべきです。
+## ゲーム終了条件を理解する
 
-✅ ゲームが終了する条件と、再スタートを促される方法について少し考えてみましょう。
+ゲームはいつ終わるべきでしょうか？この基本的な問いは、初期のアーケード時代からゲームデザインを形作ってきました。例えば、パックマンはゴーストに捕まるか、すべてのドットをクリアすると終了します。スペースインベーダーでは、エイリアンが画面下部に到達するか、すべてを倒すと終了します。
 
-## 作成する内容
+ゲームクリエイターとして、勝利と敗北の条件を定義するのはあなたです。私たちの宇宙ゲームでは、以下のようなプレイを盛り上げるための実績あるアプローチを採用します：
 
-以下のルールをゲームに追加します：
+- **`N`体の敵船を撃破する**: ゲームをレベルに分ける場合、`N`体の敵船を撃破することでレベルをクリアするのが一般的です。
+- **自分の船が破壊される**: 自分の船が破壊されるとゲームオーバーになるゲームもあります。また、ライフの概念を導入することも一般的です。船が破壊されるたびにライフが減り、すべてのライフを失うとゲームオーバーになります。
+- **`N`ポイントを獲得する**: ポイントを集めることが終了条件になることもあります。ポイントの獲得方法は自由ですが、敵船を破壊したり、破壊されたアイテムを収集したりすることでポイントを得るのが一般的です。
+- **レベルをクリアする**: これには、`X`体の敵船を撃破する、`Y`ポイントを獲得する、特定のアイテムを収集するなど、複数の条件が含まれる場合があります。
 
-1. **ゲームの勝利条件**: 敵船をすべて撃破するとゲームに勝利します。また、勝利メッセージを表示してください。
-1. **再スタート**: ライフをすべて失った場合やゲームに勝利した場合、ゲームを再スタートする方法を提供してください。注意！ゲームを再初期化し、以前のゲーム状態をクリアする必要があります。
+## ゲーム再スタート機能の実装
 
-## 推奨手順
+良いゲームはスムーズな再スタートの仕組みを通じてリプレイ性を高めます。プレイヤーがゲームをクリアしたり敗北したりすると、すぐに再挑戦したいと思うことが多いです。スコアを更新したり、プレイを改善したりするためです。
 
-`your-work` サブフォルダに作成されたファイルを確認してください。以下の内容が含まれているはずです：
+テトリスはその完璧な例です。ブロックが画面上部に到達すると、複雑なメニューを経ることなくすぐに新しいゲームを開始できます。同様の再スタートシステムを構築し、ゲーム状態をきれいにリセットしてプレイヤーをすぐにアクションに戻します。
+
+✅ **振り返り**: あなたがプレイしたゲームについて考えてみてください。それらはどのような条件で終了し、どのように再スタートを促されましたか？スムーズな再スタート体験とイライラする体験の違いは何でしょうか？
+
+## 作成するもの
+
+プロジェクトを完成したゲーム体験に変えるための最終的な機能を実装します。これらの要素は、完成度の高いゲームと基本的なプロトタイプを区別するものです。
+
+**今日追加する内容:**
+
+1. **勝利条件**: 敵をすべて撃破して、適切な祝福を受ける（その価値があります！）
+2. **敗北条件**: ライフを使い果たして敗北画面を表示
+3. **再スタート機能**: Enterキーを押してすぐに再挑戦 - 一度のプレイでは物足りない！
+4. **状態管理**: 毎回クリーンな状態 - 前回のゲームからの残りの敵や奇妙なバグはなし
+
+## 準備を始めよう
+
+開発環境を準備しましょう。これまでのレッスンで作成した宇宙ゲームのファイルをすべて用意してください。
+
+**プロジェクトは以下のような構成になっているはずです:**
 
 ```bash
 -| assets
@@ -48,183 +66,297 @@ CO_OP_TRANSLATOR_METADATA:
 -| package.json
 ```
 
-プロジェクトを開始するには、`your_work` フォルダで以下を入力してください：
+**開発サーバーを起動する:**
 
 ```bash
 cd your-work
 npm start
 ```
 
-上記のコマンドで、`http://localhost:5000` アドレスでHTTPサーバーが起動します。ブラウザを開き、そのアドレスを入力してください。ゲームがプレイ可能な状態になっているはずです。
+**このコマンドは以下を行います:**
+- `http://localhost:5000`でローカルサーバーを実行
+- ファイルを適切に提供
+- 変更を加えると自動的にリフレッシュ
 
-> ヒント: Visual Studio Codeで警告を避けるために、`window.onload` 関数を編集して `gameLoopId` をそのまま呼び出し（`let` を付けずに）、ファイルの先頭で独立して `let gameLoopId;` を宣言してください。
+ブラウザで`http://localhost:5000`を開き、ゲームが正常に動作していることを確認してください。移動、射撃、敵とのインタラクションができるはずです。確認が終わったら、実装を進めましょう。
 
-### コードを追加
+> 💡 **プロのヒント**: Visual Studio Codeで警告を避けるために、`gameLoopId`をファイルの先頭で`let gameLoopId;`として宣言してください。`window.onload`関数内で宣言するのではなく、これにより最新のJavaScript変数宣言のベストプラクティスに従うことができます。
 
-1. **終了条件を追跡**: 敵の数やヒーロー船が破壊されたかどうかを追跡するコードを追加します。以下の2つの関数を追加してください：
+## 実装手順
 
-    ```javascript
-    function isHeroDead() {
-      return hero.life <= 0;
+### ステップ1: 終了条件を追跡する関数を作成
+
+ゲームが終了すべきタイミングを監視する関数が必要です。国際宇宙ステーションのセンサーが重要なシステムを常に監視しているように、これらの関数はゲーム状態を継続的にチェックします。
+
+```javascript
+function isHeroDead() {
+  return hero.life <= 0;
+}
+
+function isEnemiesDead() {
+  const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
+  return enemies.length === 0;
+}
+```
+
+**内部で何が起きているか:**
+- **チェック**: ヒーローがライフを使い果たしているか（痛い！）
+- **カウント**: まだ生き残っている敵の数
+- **返却**: 戦場が敵でクリアされた場合に`true`を返す
+- **使用**: シンプルなtrue/falseロジックでわかりやすく
+- **フィルタリング**: すべてのゲームオブジェクトを通じて生存者を探す
+
+### ステップ2: 終了条件のイベントハンドラーを更新
+
+これらの条件チェックをゲームのイベントシステムに接続します。衝突が発生するたびに、ゲームは終了条件を評価します。これにより、重要なゲームイベントに対する即時フィードバックが得られます。
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+    first.dead = true;
+    second.dead = true;
+    hero.incrementPoints();
+
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
     }
+});
 
-    function isEnemiesDead() {
-      const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
-      return enemies.length === 0;
+eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
+    enemy.dead = true;
+    hero.decrementLife();
+    if (isHeroDead())  {
+      eventEmitter.emit(Messages.GAME_END_LOSS);
+      return; // loss before victory
     }
-    ```
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
+    }
+});
 
-1. **メッセージハンドラーにロジックを追加**: `eventEmitter` を編集してこれらの条件を処理します：
+eventEmitter.on(Messages.GAME_END_WIN, () => {
+    endGame(true);
+});
+  
+eventEmitter.on(Messages.GAME_END_LOSS, () => {
+  endGame(false);
+});
+```
 
-    ```javascript
-    eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-        first.dead = true;
-        second.dead = true;
-        hero.incrementPoints();
+**ここで何が起きているか:**
+- **レーザーが敵に命中**: 両方が消え、ポイントを獲得し、勝利条件をチェック
+- **敵がプレイヤーに命中**: ライフを失い、まだ生きているかをチェック
+- **スマートな順序付け**: 敗北を最初にチェック（誰も勝利と敗北を同時に経験したくありません！）
+- **即時反応**: 重要なことが起きた瞬間にゲームが認識
 
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
+### ステップ3: 新しいメッセージ定数を追加
 
-    eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
-        enemy.dead = true;
-        hero.decrementLife();
-        if (isHeroDead())  {
-          eventEmitter.emit(Messages.GAME_END_LOSS);
-          return; // loss before victory
-        }
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
-    
-    eventEmitter.on(Messages.GAME_END_WIN, () => {
-        endGame(true);
-    });
-      
-    eventEmitter.on(Messages.GAME_END_LOSS, () => {
-      endGame(false);
-    });
-    ```
+`Messages`定数オブジェクトに新しいメッセージタイプを追加する必要があります。これらの定数は一貫性を維持し、イベントシステムでのタイプミスを防ぎます。
 
-1. **新しいメッセージタイプを追加**: 以下のメッセージをconstantsオブジェクトに追加してください：
+```javascript
+GAME_END_LOSS: "GAME_END_LOSS",
+GAME_END_WIN: "GAME_END_WIN",
+```
 
-    ```javascript
-    GAME_END_LOSS: "GAME_END_LOSS",
-    GAME_END_WIN: "GAME_END_WIN",
-    ```
+**上記で行ったこと:**
+- **追加**: 一貫性を維持するためのゲーム終了イベントの定数
+- **使用**: イベントの目的を明確に示す記述的な名前
+- **従う**: メッセージタイプの既存の命名規則
 
-2. **再スタートコードを追加**: 選択したボタンを押すことでゲームを再スタートするコードを追加します。
+### ステップ4: 再スタートの操作を実装
 
-   1. **キー押下 `Enter` を監視**: ウィンドウのeventListenerを編集してこのキー押下を監視します：
+プレイヤーがゲームを再スタートできるようにするキーボード操作を追加します。Enterキーは、アクションの確認や新しいゲームの開始に一般的に使用されるため、自然な選択です。
 
-    ```javascript
-     else if(evt.key === "Enter") {
-        eventEmitter.emit(Messages.KEY_EVENT_ENTER);
-      }
-    ```
+**既存のkeydownイベントリスナーにEnterキー検出を追加:**
 
-   1. **再スタートメッセージを追加**: 以下のメッセージをMessages定数に追加してください：
+```javascript
+else if(evt.key === "Enter") {
+   eventEmitter.emit(Messages.KEY_EVENT_ENTER);
+}
+```
 
-        ```javascript
-        KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
-        ```
+**新しいメッセージ定数を追加:**
 
-1. **ゲームルールを実装**: 以下のゲームルールを実装します：
+```javascript
+KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
+```
 
-   1. **プレイヤーの勝利条件**: 敵船をすべて撃破したら、勝利メッセージを表示します。
+**知っておくべきこと:**
+- **既存のキーボードイベント処理システムを拡張**
+- **Enterキーを直感的なユーザー体験のための再スタートトリガーとして使用**
+- **カスタムイベントを発行し、ゲームの他の部分がリスニング可能**
+- **他のキーボード操作と同じパターンを維持**
 
-      1. まず、`displayMessage()` 関数を作成します：
+### ステップ5: メッセージ表示システムを作成
 
-        ```javascript
-        function displayMessage(message, color = "red") {
-          ctx.font = "30px Arial";
-          ctx.fillStyle = color;
-          ctx.textAlign = "center";
-          ctx.fillText(message, canvas.width / 2, canvas.height / 2);
-        }
-        ```
+ゲームは結果をプレイヤーに明確に伝える必要があります。勝利と敗北状態を色分けされたテキストで表示するメッセージシステムを作成します。これは、初期のコンピュータシステムのターミナルインターフェースに似ており、緑が成功を示し、赤がエラーを示します。
 
-      1. 次に、`endGame()` 関数を作成します：
+**`displayMessage()`関数を作成:**
 
-        ```javascript
-        function endGame(win) {
-          clearInterval(gameLoopId);
-        
-          // set a delay so we are sure any paints have finished
-          setTimeout(() => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "black";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            if (win) {
-              displayMessage(
-                "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
-                "green"
-              );
-            } else {
-              displayMessage(
-                "You died !!! Press [Enter] to start a new game Captain Pew Pew"
-              );
-            }
-          }, 200)  
-        }
-        ```
+```javascript
+function displayMessage(message, color = "red") {
+  ctx.font = "30px Arial";
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  ctx.fillText(message, canvas.width / 2, canvas.height / 2);
+}
+```
 
-   1. **再スタートロジック**: ライフをすべて失った場合やプレイヤーがゲームに勝利した場合、再スタート可能であることを表示します。また、再スタートキーが押されたときにゲームを再スタートします（どのキーを再スタートに割り当てるかは自由です）。
+**ステップごとの説明:**
+- **フォントサイズとフォントファミリーを設定**: 読みやすいテキストを表示
+- **色パラメータを適用**: 警告にはデフォルトで「赤」を使用
+- **テキストをキャンバスの中央に配置**: 水平方向と垂直方向に
+- **モダンなJavaScriptのデフォルトパラメータを使用**: 柔軟な色オプションを提供
+- **キャンバス2Dコンテキストを活用**: テキストを直接レンダリング
 
-      1. `resetGame()` 関数を作成します：
+**`endGame()`関数を作成:**
 
-        ```javascript
-        function resetGame() {
-          if (gameLoopId) {
-            clearInterval(gameLoopId);
-            eventEmitter.clear();
-            initGame();
-            gameLoopId = setInterval(() => {
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              ctx.fillStyle = "black";
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-              drawPoints();
-              drawLife();
-              updateGameObjects();
-              drawGameObjects(ctx);
-            }, 100);
-          }
-        }
-        ```
+```javascript
+function endGame(win) {
+  clearInterval(gameLoopId);
 
-     1. `initGame()` 内でゲームをリセットするために `eventEmitter` を呼び出すコードを追加します：
+  // Set a delay to ensure any pending renders complete
+  setTimeout(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (win) {
+      displayMessage(
+        "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
+        "green"
+      );
+    } else {
+      displayMessage(
+        "You died !!! Press [Enter] to start a new game Captain Pew Pew"
+      );
+    }
+  }, 200)  
+}
+```
 
-        ```javascript
-        eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
-          resetGame();
-        });
-        ```
+**この関数が行うこと:**
+- **すべてを停止**: 船やレーザーの移動を停止
+- **短いポーズを取る**: 最後のフレームが描画を完了するために200ms
+- **画面を完全に消去し、黒で塗りつぶす**: 劇的な効果を演出
+- **勝者と敗者に異なるメッセージを表示**
+- **ニュースを色分け**: 良い知らせは緑、悪い知らせは赤
+- **プレイヤーに再挑戦方法を明確に伝える**
 
-     1. EventEmitterに `clear()` 関数を追加します：
+### ステップ6: ゲームリセット機能を実装
 
-        ```javascript
-        clear() {
-          this.listeners = {};
-        }
-        ```
+リセットシステムは、現在のゲーム状態を完全にクリーンアップし、新しいゲームセッションを初期化する必要があります。これにより、前回のゲームからの残りデータなしでプレイヤーがクリーンなスタートを切ることができます。
 
-👽 💥 🚀 おめでとうございます、キャプテン！ゲームが完成しました！よくやりました！ 🚀 💥 👽
+**`resetGame()`関数を作成:**
 
----
+```javascript
+function resetGame() {
+  if (gameLoopId) {
+    clearInterval(gameLoopId);
+    eventEmitter.clear();
+    initGame();
+    gameLoopId = setInterval(() => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      drawPoints();
+      drawLife();
+      updateGameObjects();
+      drawGameObjects(ctx);
+    }, 100);
+  }
+}
+```
 
-## 🚀 チャレンジ
+**各部分を理解する:**
+- **現在ゲームループが実行中かどうかをチェック**
+- **既存のゲームループをクリア**: 現在のゲーム活動をすべて停止
+- **すべてのイベントリスナーを削除**: メモリリークを防止
+- **新しいオブジェクトと変数でゲーム状態を再初期化**
+- **すべての重要なゲーム機能を備えた新しいゲームループを開始**
+- **一貫したゲームパフォーマンスのために同じ100ms間隔を維持**
 
-音を追加してみましょう！レーザーが命中したとき、ヒーローが死んだとき、または勝利したときなど、ゲームプレイを盛り上げる音を追加できますか？JavaScriptで音を再生する方法については、こちらの [サンドボックス](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) を参考にしてください。
+**`initGame()`関数にEnterキーイベントハンドラーを追加:**
 
-## 講義後クイズ
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
+  resetGame();
+});
+```
 
-[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/40)
+**EventEmitterクラスに`clear()`メソッドを追加:**
+
+```javascript
+clear() {
+  this.listeners = {};
+}
+```
+
+**覚えておくべきポイント:**
+- **Enterキー押下をゲームリセット機能に接続**
+- **ゲーム初期化中にこのイベントリスナーを登録**
+- **ゲーム間でイベントハンドラーをクリアするクリーンな方法を提供**
+- **メモリリークを防ぐためにゲーム間でリスナーオブジェクトを空の状態にリセット**
+- **新しい初期化のためにリスナーをリセット**
+
+## おめでとうございます！ 🎉
+
+👽 💥 🚀 あなたはゼロから完全なゲームを作り上げました。1970年代に最初のビデオゲームを作ったプログラマーたちのように、コードの行をインタラクティブな体験に変えました。 🚀 💥 👽
+
+**達成したこと:**
+- **勝利と敗北条件をユーザーフィードバック付きで実装**
+- **連続プレイのためのスムーズな再スタートシステムを作成**
+- **ゲーム状態を明確に伝える視覚的コミュニケーションを設計**
+- **複雑なゲーム状態の遷移とクリーンアップを管理**
+- **すべてのコンポーネントを統合してプレイ可能なゲームを完成**
+
+## GitHub Copilot Agent チャレンジ 🚀
+
+Agentモードを使用して以下のチャレンジを完了してください:
+
+**説明:** レベル進行システムを実装し、難易度を上げ、ボーナス機能を追加して宇宙ゲームを強化してください。
+
+**プロンプト:** 各レベルで敵船の数、速度、耐久力を増加させるマルチレベル宇宙ゲームシステムを作成してください。レベルごとにスコア倍率を増加させ、敵が破壊されたときにランダムに出現するパワーアップ（例: 連射やシールド）を実装してください。レベルクリアボーナスを追加し、現在のレベルをスコアやライフと並んで画面に表示してください。
+
+[Agentモード](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode)について詳しくはこちらをご覧ください。
+
+## 🚀 オプションの強化チャレンジ
+
+**ゲームに音声を追加**: サウンドエフェクトを実装してゲームプレイ体験を向上させましょう！以下の音声を追加することを検討してください:
+
+- **レーザー発射音**: プレイヤーが射撃する際
+- **敵の破壊音**: 敵船が命中した際
+- **ヒーローのダメージ音**: プレイヤーがダメージを受けた際
+- **勝利音楽**: ゲームに勝利した際
+- **敗北音**: ゲームに敗北した際
+
+**音声実装例:**
+
+```javascript
+// Create audio objects
+const laserSound = new Audio('assets/laser.wav');
+const explosionSound = new Audio('assets/explosion.wav');
+
+// Play sounds during game events
+function playLaserSound() {
+  laserSound.currentTime = 0; // Reset to beginning
+  laserSound.play();
+}
+```
+
+**知っておくべきこと:**
+- **異なるサウンドエフェクト用のAudioオブジェクトを作成**
+- **`currentTime`をリセット**: 連射音声を可能にする
+- **ブラウザの自動再生ポリシーに対応**: ユーザー操作から音声をトリガー
+- **音声の音量とタイミングを管理**: より良いゲーム体験を提供
+
+> 💡 **学習リソース**: この[audio sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play)を探索して、JavaScriptゲームでの音声実装について学びましょう。
+
+## 講義後のクイズ
+
+[講義後のクイズ](https://ff-quizzes.netlify.app/web/quiz/40)
 
 ## 復習と自己学習
 
-新しいサンプルゲームを作成する課題がありますので、興味深いゲームをいくつか探索して、どのようなゲームを作るか考えてみましょう。
+課題は新しいサンプルゲームを作成することです。どのようなゲームを作るかを考えるために、興味深いゲームをいくつか探索してみてください。
 
 ## 課題
 
@@ -233,4 +365,4 @@ npm start
 ---
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知おきください。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当方は一切の責任を負いません。
+この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてご参照ください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤認について、当方は一切の責任を負いません。

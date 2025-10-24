@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
-  "translation_date": "2025-08-29T09:14:23+00:00",
+  "original_hash": "20c72cf2e5b0050d38ca3cb14a75a9df",
+  "translation_date": "2025-10-24T14:08:48+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "id"
 }
@@ -12,74 +12,87 @@ CO_OP_TRANSLATOR_METADATA:
 ![Pengantar HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kuis Sebelum Kuliah
+HTML, atau HyperText Markup Language, adalah dasar dari setiap situs web yang pernah Anda kunjungi. Anggaplah HTML sebagai kerangka yang memberikan struktur pada halaman web – HTML menentukan di mana konten berada, bagaimana konten diatur, dan apa yang diwakili oleh setiap bagian. Sementara CSS nantinya akan "mendandani" HTML Anda dengan warna dan tata letak, dan JavaScript akan menghidupkannya dengan interaktivitas, HTML menyediakan struktur penting yang membuat semuanya menjadi mungkin.
 
-[Kuis sebelum kuliah](https://ff-quizzes.netlify.app/web/quiz/15)
+Dalam pelajaran ini, Anda akan membuat struktur HTML untuk antarmuka terrarium virtual. Proyek praktis ini akan mengajarkan Anda konsep dasar HTML sambil membangun sesuatu yang menarik secara visual. Anda akan belajar cara mengatur konten menggunakan elemen semantik, bekerja dengan gambar, dan membuat dasar untuk aplikasi web interaktif.
 
+Pada akhir pelajaran ini, Anda akan memiliki halaman HTML yang berfungsi, menampilkan gambar tanaman dalam kolom yang terorganisir, siap untuk ditata di pelajaran berikutnya. Jangan khawatir jika terlihat sederhana pada awalnya – itulah yang seharusnya dilakukan HTML sebelum CSS menambahkan sentuhan visual.
 
-> Tonton video
+## Kuis Pra-Pelajaran
 
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/15)
+
+> 📺 **Tonton dan Pelajari**: Lihat video ulasan yang bermanfaat ini
 > 
-> [![Video dasar Git dan GitHub](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
+> [![Video Dasar-Dasar HTML](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
 
-### Pengantar
+## Menyiapkan Proyek Anda
 
-HTML, atau HyperText Markup Language, adalah 'kerangka' dari web. Jika CSS 'mendandani' HTML Anda dan JavaScript memberikan kehidupan, maka HTML adalah tubuh dari aplikasi web Anda. Sintaks HTML bahkan mencerminkan ide tersebut, karena mencakup tag "head", "body", dan "footer".
+Sebelum kita mulai menulis kode HTML, mari kita siapkan ruang kerja yang tepat untuk proyek terrarium Anda. Membuat struktur file yang terorganisir sejak awal adalah kebiasaan penting yang akan sangat membantu Anda selama perjalanan pengembangan web.
 
-Dalam pelajaran ini, kita akan menggunakan HTML untuk membuat kerangka antarmuka terrarium virtual kita. Antarmuka ini akan memiliki judul dan tiga kolom: kolom kanan dan kiri tempat tanaman yang dapat digeser berada, serta area tengah yang akan menjadi terrarium yang terlihat seperti kaca. Pada akhir pelajaran ini, Anda akan dapat melihat tanaman di kolom-kolom tersebut, tetapi antarmuka akan terlihat agak aneh; jangan khawatir, di bagian berikutnya Anda akan menambahkan gaya CSS ke antarmuka untuk membuatnya terlihat lebih baik.
+### Tugas: Buat Struktur Proyek Anda
 
-### Tugas
+Anda akan membuat folder khusus untuk proyek terrarium Anda dan menambahkan file HTML pertama Anda. Berikut adalah dua pendekatan yang dapat Anda gunakan:
 
-Di komputer Anda, buat folder bernama 'terrarium' dan di dalamnya, buat file bernama 'index.html'. Anda dapat melakukannya di Visual Studio Code setelah Anda membuat folder terrarium dengan membuka jendela VS Code baru, mengklik 'open folder', dan menavigasi ke folder baru Anda. Klik tombol kecil 'file' di panel Explorer dan buat file baru:
+**Opsi 1: Menggunakan Visual Studio Code**
+1. Buka Visual Studio Code
+2. Klik "File" → "Open Folder" atau gunakan `Ctrl+K, Ctrl+O` (Windows/Linux) atau `Cmd+K, Cmd+O` (Mac)
+3. Buat folder baru bernama `terrarium` dan pilih folder tersebut
+4. Di panel Explorer, klik ikon "New File"
+5. Beri nama file Anda `index.html`
 
-![explorer di VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.id.png)
+![Explorer VS Code menunjukkan pembuatan file baru](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.id.png)
 
-Atau
+**Opsi 2: Menggunakan Perintah Terminal**
+```bash
+mkdir terrarium
+cd terrarium
+touch index.html
+code index.html
+```
 
-Gunakan perintah ini di git bash Anda:
-* `mkdir terrarium`
-* `cd terrarium`
-* `touch index.html`
-* `code index.html` atau `nano index.html`
+**Berikut adalah apa yang dilakukan perintah ini:**
+- **Membuat** direktori baru bernama `terrarium` untuk proyek Anda
+- **Masuk** ke direktori terrarium 
+- **Membuat** file kosong `index.html`
+- **Membuka** file di Visual Studio Code untuk diedit
 
-> File index.html menunjukkan kepada browser bahwa itu adalah file default dalam folder; URL seperti `https://anysite.com/test` mungkin dibangun menggunakan struktur folder yang mencakup folder bernama `test` dengan `index.html` di dalamnya; `index.html` tidak harus muncul di URL.
+> 💡 **Tips Pro**: Nama file `index.html` memiliki arti khusus dalam pengembangan web. Ketika seseorang mengunjungi sebuah situs web, browser secara otomatis mencari `index.html` sebagai halaman default untuk ditampilkan. Ini berarti URL seperti `https://mysite.com/projects/` akan secara otomatis menampilkan file `index.html` dari folder `projects` tanpa perlu menyebutkan nama file di URL.
 
----
+## Memahami Struktur Dokumen HTML
 
-## DocType dan tag html
+Setiap dokumen HTML mengikuti struktur tertentu yang diperlukan agar browser dapat memahami dan menampilkan dengan benar. Anggaplah struktur ini seperti surat resmi – memiliki elemen yang diperlukan dalam urutan tertentu yang membantu penerima (dalam hal ini, browser) memproses konten dengan benar.
 
-Baris pertama dari file HTML adalah doctype-nya. Agak mengejutkan bahwa Anda perlu memiliki baris ini di bagian paling atas file, tetapi ini memberi tahu browser lama bahwa browser perlu merender halaman dalam mode standar, mengikuti spesifikasi html saat ini.
+Mari kita mulai dengan menambahkan fondasi penting yang dibutuhkan setiap dokumen HTML.
 
-> Tip: di VS Code, Anda dapat mengarahkan kursor ke tag dan mendapatkan informasi tentang penggunaannya dari panduan Referensi MDN.
+### Deklarasi DOCTYPE dan Elemen Root
 
-Baris kedua harus berupa tag pembuka `<html>`, diikuti langsung oleh tag penutupnya `</html>`. Tag ini adalah elemen root dari antarmuka Anda.
+Dua baris pertama dari file HTML mana pun berfungsi sebagai "pengantar" dokumen ke browser:
 
-### Tugas
-
-Tambahkan baris-baris ini di bagian atas file `index.html` Anda:
-
-```HTML
+```html
 <!DOCTYPE html>
 <html></html>
 ```
 
-✅ Ada beberapa mode berbeda yang dapat ditentukan dengan mengatur DocType menggunakan string kueri: [Quirks Mode dan Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Mode ini dulu mendukung browser yang sangat lama yang biasanya tidak digunakan lagi saat ini (Netscape Navigator 4 dan Internet Explorer 5). Anda dapat tetap menggunakan deklarasi doctype standar.
+**Memahami apa yang dilakukan kode ini:**
+- **Mendeklarasikan** jenis dokumen sebagai HTML5 menggunakan `<!DOCTYPE html>`
+- **Membuat** elemen root `<html>` yang akan berisi semua konten halaman
+- **Menetapkan** standar web modern untuk rendering browser yang tepat
+- **Memastikan** tampilan konsisten di berbagai browser dan perangkat
 
----
+> 💡 **Tips VS Code**: Arahkan kursor ke tag HTML mana pun di VS Code untuk melihat informasi bermanfaat dari MDN Web Docs, termasuk contoh penggunaan dan detail kompatibilitas browser.
 
-## 'Head' dokumen
+> 📚 **Pelajari Lebih Lanjut**: Deklarasi DOCTYPE mencegah browser memasuki "quirks mode," yang digunakan untuk mendukung situs web yang sangat lama. Pengembangan web modern menggunakan deklarasi sederhana `<!DOCTYPE html>` untuk memastikan [rendering yang sesuai standar](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
 
-Area 'head' dari dokumen HTML mencakup informasi penting tentang halaman web Anda, yang juga dikenal sebagai [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Dalam kasus kita, kita memberi tahu server web tempat halaman ini akan dikirim untuk dirender, empat hal ini:
+## Menambahkan Metadata Dokumen yang Penting
 
--   judul halaman
--   metadata halaman termasuk:
-    -   'character set', yang memberi tahu tentang pengkodean karakter yang digunakan di halaman
-    -   informasi browser, termasuk `x-ua-compatible` yang menunjukkan bahwa browser IE=edge didukung
-    -   informasi tentang bagaimana viewport harus berperilaku saat dimuat. Mengatur viewport untuk memiliki skala awal 1 mengontrol tingkat zoom saat halaman pertama kali dimuat.
+Bagian `<head>` dari dokumen HTML berisi informasi penting yang dibutuhkan browser dan mesin pencari, tetapi tidak langsung terlihat oleh pengunjung di halaman. Anggaplah ini sebagai informasi "di balik layar" yang membantu halaman web Anda berfungsi dengan baik dan tampil dengan benar di berbagai perangkat dan platform.
 
-### Tugas
+Metadata ini memberi tahu browser cara menampilkan halaman Anda, pengkodean karakter apa yang digunakan, dan cara menangani berbagai ukuran layar – semua hal penting untuk membuat halaman web yang profesional dan mudah diakses.
 
-Tambahkan blok 'head' ke dokumen Anda di antara tag pembuka dan penutup `<html>`.
+### Tugas: Tambahkan Bagian Head Dokumen
+
+Masukkan bagian `<head>` ini di antara tag pembuka dan penutup `<html>` Anda:
 
 ```html
 <head>
@@ -90,17 +103,28 @@ Tambahkan blok 'head' ke dokumen Anda di antara tag pembuka dan penutup `<html>`
 </head>
 ```
 
-✅ Apa yang akan terjadi jika Anda mengatur tag meta viewport seperti ini: `<meta name="viewport" content="width=600">`? Baca lebih lanjut tentang [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
+**Penjelasan tentang apa yang dilakukan setiap elemen:**
+- **Menetapkan** judul halaman yang muncul di tab browser dan hasil pencarian
+- **Menentukan** pengkodean karakter UTF-8 untuk tampilan teks yang benar di seluruh dunia
+- **Memastikan** kompatibilitas dengan versi modern Internet Explorer
+- **Mengonfigurasi** desain responsif dengan menetapkan viewport sesuai lebar perangkat
+- **Mengontrol** tingkat zoom awal untuk menampilkan konten dalam ukuran alami
 
----
+> 🤔 **Pikirkan Ini**: Apa yang akan terjadi jika Anda menetapkan tag meta viewport seperti ini: `<meta name="viewport" content="width=600">`? Ini akan memaksa halaman selalu memiliki lebar 600 piksel, yang akan merusak desain responsif! Pelajari lebih lanjut tentang [konfigurasi viewport yang tepat](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
-## `Body` dokumen
+## Membangun Bagian Body Dokumen
 
-### Tag HTML
+Elemen `<body>` berisi semua konten yang terlihat dari halaman web Anda – segala sesuatu yang akan dilihat dan berinteraksi dengan pengguna. Sementara bagian `<head>` memberikan instruksi kepada browser, bagian `<body>` berisi konten sebenarnya: teks, gambar, tombol, dan elemen lainnya yang membentuk antarmuka pengguna Anda.
 
-Dalam HTML, Anda menambahkan tag ke file .html Anda untuk membuat elemen halaman web. Setiap tag biasanya memiliki tag pembuka dan penutup, seperti ini: `<p>hello</p>` untuk menunjukkan paragraf. Buat tubuh antarmuka Anda dengan menambahkan satu set tag `<body>` di dalam pasangan tag `<html>`; markup Anda sekarang terlihat seperti ini:
+Mari tambahkan struktur body dan pahami bagaimana tag HTML bekerja bersama untuk menciptakan konten yang bermakna.
 
-### Tugas
+### Memahami Struktur Tag HTML
+
+HTML menggunakan tag berpasangan untuk mendefinisikan elemen. Sebagian besar tag memiliki tag pembuka seperti `<p>` dan tag penutup seperti `</p>`, dengan konten di antaranya: `<p>Hello, world!</p>`. Ini menciptakan elemen paragraf yang berisi teks "Hello, world!".
+
+### Tugas: Tambahkan Elemen Body
+
+Perbarui file HTML Anda untuk menyertakan elemen `<body>`:
 
 ```html
 <!DOCTYPE html>
@@ -115,100 +139,136 @@ Dalam HTML, Anda menambahkan tag ke file .html Anda untuk membuat elemen halaman
 </html>
 ```
 
-Sekarang, Anda dapat mulai membangun halaman Anda. Biasanya, Anda menggunakan tag `<div>` untuk membuat elemen-elemen terpisah di halaman. Kita akan membuat serangkaian elemen `<div>` yang akan berisi gambar.
+**Berikut adalah apa yang disediakan oleh struktur lengkap ini:**
+- **Menetapkan** kerangka dokumen HTML5 dasar
+- **Menyertakan** metadata penting untuk rendering browser yang tepat
+- **Membuat** body kosong yang siap untuk konten yang terlihat
+- **Mengikuti** praktik terbaik pengembangan web modern
 
-### Gambar
+Sekarang Anda siap untuk menambahkan elemen yang terlihat dari terrarium Anda. Kita akan menggunakan elemen `<div>` sebagai wadah untuk mengatur berbagai bagian konten, dan elemen `<img>` untuk menampilkan gambar tanaman.
 
-Satu tag html yang tidak membutuhkan tag penutup adalah tag `<img>`, karena memiliki elemen `src` yang berisi semua informasi yang dibutuhkan halaman untuk merender item.
+### Bekerja dengan Gambar dan Wadah Tata Letak
 
-Buat folder di aplikasi Anda bernama `images` dan di dalamnya, tambahkan semua gambar di [folder kode sumber](../../../../3-terrarium/solution/images); (ada 14 gambar tanaman).
+Gambar memiliki keistimewaan dalam HTML karena menggunakan tag "self-closing". Tidak seperti elemen seperti `<p></p>` yang mengelilingi konten, tag `<img>` berisi semua informasi yang dibutuhkan dalam tag itu sendiri menggunakan atribut seperti `src` untuk jalur file gambar dan `alt` untuk aksesibilitas.
 
-### Tugas
+Sebelum menambahkan gambar ke HTML Anda, Anda perlu mengatur file proyek Anda dengan benar dengan membuat folder gambar dan menambahkan grafik tanaman.
 
-Tambahkan gambar-gambar tanaman tersebut ke dalam dua kolom di antara tag `<body></body>`:
+**Pertama, siapkan gambar Anda:**
+1. Buat folder bernama `images` di dalam folder proyek terrarium Anda
+2. Unduh gambar tanaman dari [folder solusi](../../../../3-terrarium/solution/images) (total 14 gambar tanaman)
+3. Salin semua gambar tanaman ke folder `images` baru Anda
+
+### Tugas: Buat Tata Letak Tampilan Tanaman
+
+Sekarang tambahkan gambar tanaman yang diatur dalam dua kolom di antara tag `<body></body>` Anda:
 
 ```html
 <div id="page">
 	<div id="left-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/plant1.d87946a2ca70cc4316bda6e6c3af7210fbe9ada5539a7885141a9ce0efaf7be3.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant2" src="./images/plant2.png" />
+			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/plant2.8daa1606c9c1ad896bb171212c7d1d882e504b76b8ec3a2d1c337d775cf50dc3.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant3" src="./images/plant3.png" />
+			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/plant3.8b0d484381a2a2a77c5c06ad97ab6ae5b7023da8c6c7678b0183bc0e46ea17a7.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant4" src="./images/plant4.png" />
+			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/plant4.656e16ae1df37be2af5f4e7b5ab6c5decc432c3d3ec2eb98b904ddbecad49db0.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant5" src="./images/plant5.png" />
+			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/plant5.2b41b9355f11ebccd62d327f5f14e56531ecda9c6f970bc89e386ee9f0273bb0.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant6" src="./images/plant6.png" />
+			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/plant6.3d1827d03b6569946be13ae5da1f32947ae56732638a43757a7c616a6adccc5d.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant7" src="./images/plant7.png" />
+			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/plant7.8152c302ac97f621a6c595bdf3939103568f9efc7d3b06a0f02a1ea66f479de0.id.png" />
 		</div>
 	</div>
 	<div id="right-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant8" src="./images/plant8.png" />
+			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/plant8.38d6428174ffa850a47cd1b81d528fa528adda7d23f3ae0bb42f4a27356ca5e6.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant9" src="./images/plant9.png" />
+			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/plant9.f0e38d3327c37fc29cd2734d48d20c2cf69300898ece6d46708829e02ce540e3.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant10" src="./images/plant10.png" />
+			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/plant10.b159d6d6e985595f56d86b4b38061b8e7b4c9969c210c199fe967269cf935e7f.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant11" src="./images/plant11.png" />
+			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/plant11.2a03a1c2ec8ea84ef3a80c06cc6883f3960fbb669f2c0b0bd824ba33d7eb7d32.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant12" src="./images/plant12.png" />
+			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/plant12.60e9b53e538fbaf3e5797ebf800acb483baf5639e6cf378292ac2321ab8a5ea9.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant13" src="./images/plant13.png" />
+			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/plant13.07a51543c820bcf57f67a9a6c0acbd6211ff795e2e67a42a9718224534e95fab.id.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant14" src="./images/plant14.png" />
+			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/plant14.6e486371ba7d36ba3520d9828887993cb4c3edad8bdd8ff9b1b315717ff8cb63.id.png" />
 		</div>
 	</div>
 </div>
 ```
 
-> Catatan: Spans vs. Divs. Divs dianggap sebagai elemen 'block', dan Spans adalah 'inline'. Apa yang akan terjadi jika Anda mengubah divs ini menjadi spans?
+**Langkah demi langkah, berikut adalah apa yang terjadi dalam kode ini:**
+- **Membuat** wadah halaman utama dengan `id="page"` untuk menampung semua konten
+- **Menetapkan** dua wadah kolom: `left-container` dan `right-container`
+- **Mengatur** 7 tanaman di kolom kiri dan 7 tanaman di kolom kanan
+- **Membungkus** setiap gambar tanaman dalam div `plant-holder` untuk posisi individu
+- **Menerapkan** nama kelas yang konsisten untuk penataan CSS di pelajaran berikutnya
+- **Menetapkan** ID unik untuk setiap gambar tanaman untuk interaksi JavaScript nanti
+- **Menyertakan** jalur file yang benar yang mengarah ke folder gambar
 
-Dengan markup ini, tanaman sekarang muncul di layar. Tampaknya cukup buruk, karena mereka belum diberi gaya menggunakan CSS, dan kita akan melakukannya di pelajaran berikutnya.
+> 🤔 **Pertimbangkan Ini**: Perhatikan bahwa semua gambar saat ini memiliki teks alt yang sama "plant". Ini tidak ideal untuk aksesibilitas. Pengguna pembaca layar akan mendengar "plant" diulang 14 kali tanpa mengetahui tanaman spesifik yang ditampilkan oleh setiap gambar. Bisakah Anda memikirkan teks alt yang lebih baik dan lebih deskriptif untuk setiap gambar?
 
-Setiap gambar memiliki teks alt yang akan muncul bahkan jika Anda tidak dapat melihat atau merender gambar. Ini adalah atribut penting untuk disertakan demi aksesibilitas. Pelajari lebih lanjut tentang aksesibilitas di pelajaran mendatang; untuk saat ini, ingatlah bahwa atribut alt memberikan informasi alternatif untuk gambar jika pengguna karena suatu alasan tidak dapat melihatnya (karena koneksi lambat, kesalahan dalam atribut src, atau jika pengguna menggunakan pembaca layar).
+> 📝 **Jenis Elemen HTML**: Elemen `<div>` adalah "block-level" dan mengambil lebar penuh, sedangkan elemen `<span>` adalah "inline" dan hanya mengambil lebar yang diperlukan. Apa yang menurut Anda akan terjadi jika Anda mengganti semua tag `<div>` ini dengan tag `<span>`?
 
-✅ Apakah Anda memperhatikan bahwa setiap gambar memiliki tag alt yang sama? Apakah ini praktik yang baik? Mengapa atau mengapa tidak? Bisakah Anda memperbaiki kode ini?
+Dengan markup ini ditambahkan, tanaman akan muncul di layar, meskipun belum terlihat rapi – itulah fungsi CSS di pelajaran berikutnya! Untuk saat ini, Anda memiliki fondasi HTML yang solid yang mengatur konten Anda dengan benar dan mengikuti praktik terbaik aksesibilitas.
 
----
+## Menggunakan HTML Semantik untuk Aksesibilitas
 
-## Markup semantik
+HTML semantik berarti memilih elemen HTML berdasarkan makna dan tujuannya, bukan hanya tampilannya. Ketika Anda menggunakan markup semantik, Anda mengkomunikasikan struktur dan makna konten Anda kepada browser, mesin pencari, dan teknologi bantu seperti pembaca layar.
 
-Secara umum, lebih baik menggunakan 'semantik' yang bermakna saat menulis HTML. Apa artinya itu? Artinya Anda menggunakan tag HTML untuk mewakili jenis data atau interaksi yang dirancang untuk mereka. Misalnya, teks judul utama di halaman harus menggunakan tag `<h1>`.
+Pendekatan ini membuat situs web Anda lebih mudah diakses oleh pengguna dengan disabilitas dan membantu mesin pencari memahami konten Anda dengan lebih baik. Ini adalah prinsip dasar pengembangan web modern yang menciptakan pengalaman yang lebih baik untuk semua orang.
 
-Tambahkan baris berikut tepat di bawah tag pembuka `<body>` Anda:
+### Menambahkan Judul Halaman Semantik
+
+Mari tambahkan heading yang sesuai untuk halaman terrarium Anda. Masukkan baris ini tepat setelah tag pembuka `<body>`:
 
 ```html
 <h1>My Terrarium</h1>
 ```
 
-Menggunakan markup semantik seperti memiliki header sebagai `<h1>` dan daftar tidak berurutan sebagai `<ul>` membantu pembaca layar menavigasi melalui halaman. Secara umum, tombol harus ditulis sebagai `<button>` dan daftar harus berupa `<li>`. Meskipun _mungkin_ menggunakan elemen `<span>` yang dirancang khusus dengan pengendali klik untuk meniru tombol, lebih baik bagi pengguna yang memiliki disabilitas untuk menggunakan teknologi untuk menentukan di mana tombol berada di halaman, dan berinteraksi dengannya, jika elemen tersebut muncul sebagai tombol. Untuk alasan ini, cobalah menggunakan markup semantik sebanyak mungkin.
+**Mengapa markup semantik penting:**
+- **Membantu** pembaca layar menavigasi dan memahami struktur halaman
+- **Meningkatkan** optimasi mesin pencari (SEO) dengan memperjelas hierarki konten
+- **Meningkatkan** aksesibilitas bagi pengguna dengan gangguan penglihatan atau perbedaan kognitif
+- **Menciptakan** pengalaman pengguna yang lebih baik di semua perangkat dan platform
+- **Mengikuti** standar web dan praktik terbaik untuk pengembangan profesional
 
-✅ Lihatlah pembaca layar dan [bagaimana ia berinteraksi dengan halaman web](https://www.youtube.com/watch?v=OUDV1gqs9GA). Bisakah Anda melihat mengapa memiliki markup non-semantik mungkin membuat pengguna frustrasi?
+**Contoh pilihan semantik vs. non-semantik:**
 
-## Terrarium
+| Tujuan | ✅ Pilihan Semantik | ❌ Pilihan Non-Semantik |
+|--------|---------------------|-------------------------|
+| Judul utama | `<h1>Judul</h1>` | `<div class="big-text">Judul</div>` |
+| Navigasi | `<nav><ul><li></li></ul></nav>` | `<div class="menu"><div></div></div>` |
+| Tombol | `<button>Klik saya</button>` | `<span onclick="...">Klik saya</span>` |
+| Konten artikel | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
-Bagian terakhir dari antarmuka ini melibatkan pembuatan markup yang akan diberi gaya untuk membuat terrarium.
+> 🎥 **Lihat Dalam Aksi**: Tonton [bagaimana pembaca layar berinteraksi dengan halaman web](https://www.youtube.com/watch?v=OUDV1gqs9GA) untuk memahami mengapa markup semantik sangat penting untuk aksesibilitas. Perhatikan bagaimana struktur HTML yang tepat membantu pengguna menavigasi dengan efisien.
 
-### Tugas:
+## Membuat Wadah Terrarium
 
-Tambahkan markup ini di atas tag `</div>` terakhir:
+Sekarang mari kita tambahkan struktur HTML untuk terrarium itu sendiri – wadah kaca tempat tanaman nantinya akan ditempatkan. Bagian ini menunjukkan konsep penting: HTML menyediakan struktur, tetapi tanpa penataan CSS, elemen-elemen ini belum terlihat.
+
+Markup terrarium menggunakan nama kelas deskriptif yang akan membuat penataan CSS menjadi intuitif dan mudah dikelola di pelajaran berikutnya.
+
+### Tugas: Tambahkan Struktur Terrarium
+
+Masukkan markup ini di atas tag `</div>` terakhir (sebelum tag penutup dari wadah halaman):
 
 ```html
 <div id="terrarium">
@@ -222,30 +282,84 @@ Tambahkan markup ini di atas tag `</div>` terakhir:
 </div>
 ```
 
-✅ Meskipun Anda menambahkan markup ini ke layar, Anda sama sekali tidak melihat apa pun yang dirender. Mengapa?
+**Memahami struktur terrarium ini:**
+- **Membuat** wadah terrarium utama dengan ID unik untuk penataan
+- **Menentukan** elemen terpisah untuk setiap komponen visual (atas, dinding, tanah, bawah)
+- **Menyertakan** elemen bersarang untuk efek refleksi kaca (elemen glossy)
+- **Menggunakan** nama kelas deskriptif yang jelas menunjukkan tujuan setiap elemen
+- **Mempersiapkan** struktur untuk penataan CSS yang akan menciptakan tampilan terrarium kaca
+
+> 🤔 **Perhatikan Sesuatu?**: Meskipun Anda telah menambahkan markup ini, Anda tidak melihat apa pun yang baru di halaman! Ini dengan sempurna menggambarkan bagaimana HTML menyediakan struktur sementara CSS menyediakan tampilan. Elemen `<div>` ini ada tetapi belum memiliki penataan visual – itu akan datang di pelajaran berikutnya!
 
 ---
 
-## 🚀Tantangan
+## Tantangan Agen GitHub Copilot
 
-Ada beberapa tag 'lama' yang menarik di HTML yang masih menyenangkan untuk dimainkan, meskipun Anda sebaiknya tidak menggunakan tag yang sudah usang seperti [tag-tag ini](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) dalam markup Anda. Namun, bisakah Anda menggunakan tag lama `<marquee>` untuk membuat judul h1 bergulir secara horizontal? (jika Anda melakukannya, jangan lupa untuk menghapusnya setelahnya)
+Gunakan mode Agen untuk menyelesaikan tantangan berikut:
 
-## Kuis Setelah Kuliah
+**Deskripsi:** Buat struktur HTML semantik untuk bagian panduan perawatan tanaman yang dapat ditambahkan ke proyek terrarium.
+**Prompt:** Buat bagian HTML semantik yang mencakup judul utama "Panduan Perawatan Tanaman", tiga subbagian dengan judul "Penyiraman", "Kebutuhan Cahaya", dan "Perawatan Tanah", masing-masing berisi paragraf informasi perawatan tanaman. Gunakan tag HTML semantik yang sesuai seperti `<section>`, `<h2>`, `<h3>`, dan `<p>` untuk menyusun konten dengan tepat.
 
-[Kuis setelah kuliah](https://ff-quizzes.netlify.app/web/quiz/16)
+Pelajari lebih lanjut tentang [mode agen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
-## Tinjauan & Studi Mandiri
+## Jelajahi Tantangan Sejarah HTML
 
-HTML adalah sistem blok bangunan 'teruji dan benar' yang telah membantu membangun web menjadi seperti sekarang ini. Pelajari sedikit tentang sejarahnya dengan mempelajari beberapa tag lama dan baru. Bisakah Anda memahami mengapa beberapa tag dihapus dan beberapa ditambahkan? Tag apa yang mungkin diperkenalkan di masa depan?
+**Belajar Tentang Evolusi Web**
 
-Pelajari lebih lanjut tentang membangun situs untuk web dan perangkat seluler di [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
+HTML telah berkembang pesat sejak Tim Berners-Lee menciptakan browser web pertama di CERN pada tahun 1990. Beberapa tag lama seperti `<marquee>` sekarang sudah tidak digunakan karena tidak sesuai dengan standar aksesibilitas modern dan prinsip desain responsif.
+
+**Coba Eksperimen Ini:**
+1. Sementara bungkus judul `<h1>` Anda dalam tag `<marquee>`: `<marquee><h1>Terrarium Saya</h1></marquee>`
+2. Buka halaman Anda di browser dan amati efek gulirnya
+3. Pertimbangkan mengapa tag ini tidak lagi digunakan (petunjuk: pikirkan tentang pengalaman pengguna dan aksesibilitas)
+4. Hapus tag `<marquee>` dan kembali ke markup semantik
+
+**Pertanyaan Refleksi:**
+- Bagaimana judul yang bergulir dapat memengaruhi pengguna dengan gangguan penglihatan atau sensitivitas terhadap gerakan?
+- Teknik CSS modern apa yang dapat mencapai efek visual serupa dengan lebih aksesibel?
+- Mengapa penting untuk menggunakan standar web terkini daripada elemen yang sudah tidak digunakan?
+
+Jelajahi lebih lanjut tentang [elemen HTML yang usang dan tidak digunakan](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) untuk memahami bagaimana standar web berkembang demi meningkatkan pengalaman pengguna.
+
+
+## Kuis Pasca-Kuliah
+
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/16)
+
+## Tinjauan & Belajar Mandiri
+
+**Perdalam Pengetahuan HTML Anda**
+
+HTML telah menjadi dasar web selama lebih dari 30 tahun, berkembang dari bahasa markup dokumen sederhana menjadi platform canggih untuk membangun aplikasi interaktif. Memahami evolusi ini membantu Anda menghargai standar web modern dan membuat keputusan pengembangan yang lebih baik.
+
+**Jalur Pembelajaran yang Direkomendasikan:**
+
+1. **Sejarah dan Evolusi HTML**
+   - Teliti garis waktu dari HTML 1.0 hingga HTML5
+   - Jelajahi mengapa beberapa tag tidak lagi digunakan (aksesibilitas, ramah seluler, kemudahan pemeliharaan)
+   - Selidiki fitur HTML yang sedang berkembang dan proposal baru
+
+2. **Pendalaman HTML Semantik**
+   - Pelajari daftar lengkap [elemen semantik HTML5](https://developer.mozilla.org/docs/Web/HTML/Element)
+   - Latih diri untuk mengidentifikasi kapan harus menggunakan `<article>`, `<section>`, `<aside>`, dan `<main>`
+   - Pelajari atribut ARIA untuk meningkatkan aksesibilitas
+
+3. **Pengembangan Web Modern**
+   - Jelajahi [membangun situs web responsif](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon) di Microsoft Learn
+   - Pahami bagaimana HTML terintegrasi dengan CSS dan JavaScript
+   - Pelajari praktik terbaik untuk kinerja web dan SEO
+
+**Pertanyaan Refleksi:**
+- Tag HTML mana yang sudah tidak digunakan yang Anda temukan, dan mengapa tag tersebut dihapus?
+- Fitur HTML baru apa yang sedang diusulkan untuk versi mendatang?
+- Bagaimana HTML semantik berkontribusi pada aksesibilitas web dan SEO?
 
 
 ## Tugas
 
-[Latih HTML Anda: Bangun mockup blog](assignment.md)
+[Latih HTML Anda: Buat mockup blog](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang salah yang timbul dari penggunaan terjemahan ini.

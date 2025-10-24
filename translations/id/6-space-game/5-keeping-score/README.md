@@ -1,23 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-29T09:10:40+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-24T14:17:22+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Game Luar Angkasa Bagian 5: Skor dan Nyawa
 
-## Kuis Pra-Pelajaran
+## Kuis Pra-Kuliah
 
-[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/37)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Dalam pelajaran ini, Anda akan belajar cara menambahkan skor ke dalam game dan menghitung nyawa.
+Siap membuat game luar angkasa Anda terasa seperti game sungguhan? Mari tambahkan sistem skor dan pengelolaan nyawa - mekanik inti yang mengubah game arcade awal seperti Space Invaders dari sekadar demonstrasi menjadi hiburan yang adiktif. Di sinilah game Anda menjadi benar-benar bisa dimainkan.
 
-## Menampilkan teks di layar
+## Menampilkan Teks di Layar - Suara Game Anda
 
-Untuk dapat menampilkan skor game di layar, Anda perlu tahu cara meletakkan teks di layar. Caranya adalah dengan menggunakan metode `fillText()` pada objek canvas. Anda juga dapat mengontrol aspek lain seperti font yang digunakan, warna teks, dan bahkan perataan teks (kiri, kanan, tengah). Berikut adalah kode untuk menampilkan teks di layar.
+Untuk menampilkan skor Anda, kita perlu belajar cara merender teks di kanvas. Metode `fillText()` adalah alat utama Anda untuk ini - teknik yang sama yang digunakan dalam game arcade klasik untuk menunjukkan skor dan informasi status.
+
+Anda memiliki kendali penuh atas tampilan teks:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Baca lebih lanjut tentang [cara menambahkan teks ke canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), dan jangan ragu untuk membuatnya terlihat lebih menarik!
+✅ Pelajari lebih dalam tentang [menambahkan teks ke kanvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - Anda mungkin akan terkejut dengan seberapa kreatif Anda bisa bermain dengan font dan gaya!
 
-## Nyawa, sebagai konsep dalam game
+## Nyawa - Lebih dari Sekadar Angka
 
-Konsep nyawa dalam game hanyalah sebuah angka. Dalam konteks game luar angkasa, biasanya diberikan sejumlah nyawa yang akan berkurang satu per satu saat kapal Anda terkena serangan. Akan lebih menarik jika Anda dapat menampilkan representasi grafis seperti kapal kecil atau hati daripada hanya angka.
+Dalam desain game, "nyawa" mewakili margin kesalahan pemain. Konsep ini berasal dari mesin pinball, di mana Anda mendapatkan beberapa bola untuk dimainkan. Dalam video game awal seperti Asteroids, nyawa memberikan izin kepada pemain untuk mengambil risiko dan belajar dari kesalahan.
 
-## Apa yang akan dibuat
+Representasi visual sangat penting - menampilkan ikon kapal alih-alih hanya "Nyawa: 3" menciptakan pengenalan visual langsung, mirip dengan cara kabinet arcade awal menggunakan ikonografi untuk berkomunikasi melintasi hambatan bahasa.
 
-Mari tambahkan hal berikut ke dalam game Anda:
+## Membangun Sistem Penghargaan Game Anda
 
-- **Skor game**: Untuk setiap kapal musuh yang dihancurkan, pemain akan mendapatkan poin. Kami menyarankan 100 poin per kapal. Skor game harus ditampilkan di bagian kiri bawah.
-- **Nyawa**: Kapal Anda memiliki tiga nyawa. Anda kehilangan satu nyawa setiap kali kapal musuh bertabrakan dengan Anda. Skor nyawa harus ditampilkan di bagian kanan bawah dan menggunakan grafik berikut ![gambar nyawa](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.id.png).
+Sekarang kita akan mengimplementasikan sistem umpan balik inti yang membuat pemain tetap terlibat:
 
-## Langkah yang disarankan
+- **Sistem skor**: Setiap kapal musuh yang dihancurkan memberikan 100 poin (angka bulat lebih mudah dihitung secara mental oleh pemain). Skor ditampilkan di sudut kiri bawah.
+- **Penghitung nyawa**: Pahlawan Anda memulai dengan tiga nyawa - standar yang ditetapkan oleh game arcade awal untuk menyeimbangkan tantangan dengan kemampuan bermain. Setiap tabrakan dengan musuh mengurangi satu nyawa. Kita akan menampilkan sisa nyawa di sudut kanan bawah menggunakan ikon kapal ![gambar nyawa](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.id.png).
 
-Temukan file yang telah dibuat untuk Anda di sub folder `your-work`. Folder tersebut harus berisi:
+## Mari Mulai Membangun!
+
+Pertama, siapkan ruang kerja Anda. Navigasikan ke file di folder `your-work`. Anda seharusnya melihat file-file ini:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Temukan file yang telah dibuat untuk Anda di sub folder `your-work`. Folder ters
 -| package.json
 ```
 
-Mulailah proyek Anda di folder `your_work` dengan mengetik:
+Untuk menguji game Anda, jalankan server pengembangan dari folder `your_work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. Buka browser dan masukkan alamat tersebut. Saat ini, Anda seharusnya dapat melihat hero dan semua musuh, dan saat Anda menekan tombol panah kiri dan kanan, hero akan bergerak dan dapat menembak musuh.
+Ini akan menjalankan server lokal di `http://localhost:5000`. Buka alamat ini di browser Anda untuk melihat game Anda. Uji kontrol dengan tombol panah dan coba tembak musuh untuk memastikan semuanya berfungsi.
 
-### Tambahkan kode
+### Saatnya Coding!
 
-1. **Salin aset yang diperlukan** dari folder `solution/assets/` ke folder `your-work`; Anda akan menambahkan aset `life.png`. Tambahkan `lifeImg` ke fungsi window.onload: 
+1. **Ambil aset visual yang Anda butuhkan**. Salin aset `life.png` dari folder `solution/assets/` ke folder `your-work`. Kemudian tambahkan lifeImg ke fungsi window.onload Anda:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Tambahkan `lifeImg` ke daftar aset:
+1. Jangan lupa tambahkan `lifeImg` ke daftar aset Anda:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
     eventEmitter = new EventEmitter();
     ```
   
-2. **Tambahkan variabel**. Tambahkan kode yang merepresentasikan total skor (0) dan nyawa yang tersisa (3), lalu tampilkan skor ini di layar.
+2. **Siapkan variabel game Anda**. Tambahkan beberapa kode untuk melacak total skor Anda (dimulai dari 0) dan sisa nyawa (dimulai dari 3). Kita akan menampilkan ini di layar sehingga pemain selalu tahu posisi mereka.
 
-3. **Perluas fungsi `updateGameObjects()`**. Perluas fungsi `updateGameObjects()` untuk menangani tabrakan dengan musuh:
+3. **Implementasikan deteksi tabrakan**. Perluas fungsi `updateGameObjects()` Anda untuk mendeteksi saat musuh bertabrakan dengan pahlawan Anda:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
       })
     ```
 
-4. **Tambahkan `life` dan `points`**. 
-   1. **Inisialisasi variabel**. Di bawah `this.cooldown = 0` dalam kelas `Hero`, tetapkan nyawa dan poin:
+4. **Tambahkan pelacakan nyawa dan poin ke Pahlawan Anda**. 
+   1. **Inisialisasi penghitung**. Di bawah `this.cooldown = 0` dalam kelas `Hero` Anda, siapkan nyawa dan poin:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Gambar variabel di layar**. Tampilkan nilai-nilai ini di layar:
+   1. **Tampilkan nilai-nilai ini kepada pemain**. Buat fungsi untuk menggambar nilai-nilai ini di layar:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
 
         ```
 
-   1. **Tambahkan metode ke Game loop**. Pastikan Anda menambahkan fungsi ini ke fungsi window.onload di bawah `updateGameObjects()`:
+   1. **Hubungkan semuanya ke loop game Anda**. Tambahkan fungsi-fungsi ini ke fungsi window.onload Anda tepat setelah `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Terapkan aturan game**. Terapkan aturan game berikut:
+1. **Implementasikan konsekuensi dan penghargaan dalam game**. Sekarang kita akan menambahkan sistem umpan balik yang membuat tindakan pemain menjadi bermakna:
 
-   1. **Untuk setiap tabrakan antara hero dan musuh**, kurangi satu nyawa.
+   1. **Tabrakan mengurangi nyawa**. Setiap kali pahlawan Anda menabrak musuh, Anda harus kehilangan satu nyawa.
    
-      Perluas kelas `Hero` untuk melakukan pengurangan ini:
+      Tambahkan metode ini ke kelas `Hero` Anda:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
         }
         ```
 
-   2. **Untuk setiap laser yang mengenai musuh**, tambahkan skor game sebesar 100 poin.
+   2. **Menembak musuh menghasilkan poin**. Setiap tembakan yang berhasil memberikan 100 poin, memberikan umpan balik positif langsung untuk tembakan yang akurat.
 
-      Perluas kelas Hero untuk melakukan penambahan ini:
+      Perluas kelas Hero Anda dengan metode peningkatan ini:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
           }
         ```
 
-        Tambahkan fungsi ini ke Collision Event Emitters:
+        Sekarang hubungkan fungsi-fungsi ini ke peristiwa tabrakan:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,29 +179,39 @@ Perintah di atas akan memulai HTTP Server pada alamat `http://localhost:5000`. B
         });
         ```
 
-✅ Lakukan sedikit penelitian untuk menemukan game lain yang dibuat menggunakan JavaScript/Canvas. Apa saja ciri-ciri umum mereka?
+✅ Penasaran dengan game lain yang dibuat dengan JavaScript dan Canvas? Lakukan eksplorasi - Anda mungkin akan terkejut dengan apa yang mungkin dilakukan!
 
-Pada akhir pekerjaan ini, Anda seharusnya dapat melihat kapal kecil 'nyawa' di bagian kanan bawah, poin di bagian kiri bawah, dan Anda akan melihat jumlah nyawa berkurang saat Anda bertabrakan dengan musuh serta poin bertambah saat Anda menembak musuh. Kerja bagus! Game Anda hampir selesai.
+Setelah mengimplementasikan fitur-fitur ini, uji game Anda untuk melihat sistem umpan balik lengkap dalam aksi. Anda seharusnya melihat ikon nyawa di sudut kanan bawah, skor Anda di sudut kiri bawah, dan menyaksikan bagaimana tabrakan mengurangi nyawa sementara tembakan yang berhasil meningkatkan skor Anda.
+
+Game Anda sekarang memiliki mekanik penting yang membuat game arcade awal begitu menarik - tujuan yang jelas, umpan balik langsung, dan konsekuensi yang bermakna untuk tindakan pemain.
 
 ---
 
+## Tantangan GitHub Copilot Agent 🚀
+
+Gunakan mode Agent untuk menyelesaikan tantangan berikut:
+
+**Deskripsi:** Tingkatkan sistem skor game luar angkasa dengan mengimplementasikan fitur skor tertinggi dengan penyimpanan yang persisten dan mekanik bonus skor.
+
+**Prompt:** Buat sistem skor tertinggi yang menyimpan skor terbaik pemain ke localStorage. Tambahkan poin bonus untuk pembunuhan musuh berturut-turut (sistem kombo) dan implementasikan nilai poin yang berbeda untuk jenis musuh yang berbeda. Sertakan indikator visual saat pemain mencapai skor tertinggi baru dan tampilkan skor tertinggi saat ini di layar game.
+
 ## 🚀 Tantangan
 
-Kode Anda hampir selesai. Bisakah Anda membayangkan langkah berikutnya?
+Sekarang Anda memiliki game yang berfungsi dengan skor dan nyawa. Pertimbangkan fitur tambahan apa yang mungkin meningkatkan pengalaman pemain.
 
-## Kuis Pasca-Pelajaran
+## Kuis Pasca-Kuliah
 
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/38)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/38)
 
 ## Tinjauan & Studi Mandiri
 
-Teliti beberapa cara untuk menambah dan mengurangi skor game serta nyawa. Ada beberapa mesin game menarik seperti [PlayFab](https://playfab.com). Bagaimana penggunaan salah satu dari mesin ini dapat meningkatkan game Anda?
+Ingin menjelajahi lebih banyak? Teliti pendekatan berbeda untuk sistem skor dan nyawa dalam game. Ada mesin game yang menarik di luar sana seperti [PlayFab](https://playfab.com) yang menangani skor, papan peringkat, dan perkembangan pemain. Bagaimana integrasi sesuatu seperti itu dapat membawa game Anda ke tingkat berikutnya?
 
 ## Tugas
 
-[Buat Game dengan Skor](assignment.md)
+[Bangun Game dengan Sistem Skor](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
