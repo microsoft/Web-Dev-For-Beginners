@@ -14,7 +14,7 @@ const fossilfuel = document.querySelector('.fossil-fuel');
 const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 
-calculateColor = async (value) => {
+const calculateColor = async (value) => {
 	let co2Scale = [0, 150, 600, 750, 800];
 	let colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
 
