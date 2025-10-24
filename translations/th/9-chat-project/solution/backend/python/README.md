@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:48:02+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-23T21:01:48+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "th"
 }
 -->
 # รันโค้ด
 
-## การตั้งค่า
+## ตั้งค่า
 
 สร้าง virtual environment
 
@@ -21,20 +21,28 @@ source ./venv/bin/activate
 ## ติดตั้ง dependencies
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## รัน API
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## ทดสอบ API
+
+เข้าไปที่เอกสาร API แบบโต้ตอบได้ที่: `http://localhost:5000/docs`
 
 ## รัน frontend
 
 ตรวจสอบให้แน่ใจว่าคุณอยู่ในโฟลเดอร์ frontend
 
-ค้นหา *app.js* และเปลี่ยน `BASE_URL` ให้เป็น URL ของ backend ของคุณ
+ค้นหา *app.js* และเปลี่ยน `BASE_URL` เป็น URL ของ backend ของคุณ
 
 รันโปรแกรม
 
@@ -51,4 +59,4 @@ npx http-server -p 8000
 ---
 
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้องมากที่สุด แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราจะไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้

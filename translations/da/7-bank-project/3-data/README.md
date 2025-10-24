@@ -1,67 +1,150 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
-  "translation_date": "2025-08-29T08:06:10+00:00",
+  "original_hash": "2c1164912414820c8efd699b43f64954",
+  "translation_date": "2025-10-23T22:05:43+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "da"
 }
 -->
-# Byg en Bankapp Del 3: Metoder til Hentning og Brug af Data
+# Byg en bankapp del 3: Metoder til at hente og bruge data
 
-## Quiz før forelæsning
+Tænk på Enterprise's computer i Star Trek - når kaptajn Picard spørger om skibets status, vises informationen øjeblikkeligt uden at hele grænsefladen lukker ned og genopbygges. Den sømløse informationsstrøm er præcis, hvad vi bygger her med dynamisk datahentning.
 
-[Quiz før forelæsning](https://ff-quizzes.netlify.app/web/quiz/45)
+Lige nu er din bankapp som en trykt avis - informativ, men statisk. Vi vil transformere den til noget mere som mission control hos NASA, hvor data flyder kontinuerligt og opdateres i realtid uden at forstyrre brugerens arbejdsflow.
 
-### Introduktion
+Du vil lære, hvordan man kommunikerer med servere asynkront, håndterer data, der ankommer på forskellige tidspunkter, og omdanner rå information til noget meningsfuldt for dine brugere. Dette er forskellen mellem en demo og software, der er klar til produktion.
 
-Kernen i enhver webapplikation er *data*. Data kan tage mange former, men dens hovedformål er altid at vise information til brugeren. Med webapps, der bliver stadig mere interaktive og komplekse, er måden, hvorpå brugeren tilgår og interagerer med information, nu en nøglekomponent i webudvikling.
+## Quiz før lektionen
 
-I denne lektion vil vi se, hvordan man henter data fra en server asynkront og bruger disse data til at vise information på en webside uden at genindlæse HTML'en.
+[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Forudsætninger
 
-Du skal have bygget [Login- og Registreringsformularen](../2-forms/README.md) som en del af webappen for denne lektion. Du skal også installere [Node.js](https://nodejs.org) og [køre server-API'et](../api/README.md) lokalt, så du får kontodata.
+Før du dykker ned i datahentning, skal du sikre dig, at du har disse komponenter klar:
 
-Du kan teste, om serveren kører korrekt, ved at udføre denne kommando i en terminal:
+- **Forrige lektion**: Fuldfør [Login- og registreringsformularen](../2-forms/README.md) - vi bygger videre på dette fundament
+- **Lokal server**: Installer [Node.js](https://nodejs.org) og [kør server-API'en](../api/README.md) for at levere kontodata
+- **API-forbindelse**: Test din serverforbindelse med denne kommando:
 
-```sh
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+Denne hurtige test sikrer, at alle komponenter kommunikerer korrekt:
+- Bekræfter, at Node.js kører korrekt på dit system
+- Bekræfter, at din API-server er aktiv og reagerer
+- Validerer, at din app kan nå serveren (som at tjekke radiokontakt før en mission)
 
 ---
 
-## AJAX og datahentning
+## Forstå datahentning i moderne webapps
 
-Traditionelle websites opdaterer det viste indhold, når brugeren vælger et link eller sender data via en formular, ved at genindlæse hele HTML-siden. Hver gang nye data skal indlæses, returnerer webserveren en helt ny HTML-side, som skal behandles af browseren, hvilket afbryder den aktuelle brugerhandling og begrænser interaktioner under genindlæsningen. Denne arbejdsgang kaldes også en *Multi-Page Application* eller *MPA*.
+Måden, webapplikationer håndterer data på, har udviklet sig dramatisk over de sidste to årtier. At forstå denne udvikling vil hjælpe dig med at værdsætte, hvorfor moderne teknikker som AJAX og Fetch API er så kraftfulde og hvorfor de er blevet essentielle værktøjer for webudviklere.
 
-![Opdateringsarbejdsgang i en multi-side applikation](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.da.png)
+Lad os udforske, hvordan traditionelle websites fungerede sammenlignet med de dynamiske, responsive applikationer, vi bygger i dag.
 
-Da webapplikationer begyndte at blive mere komplekse og interaktive, opstod en ny teknik kaldet [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Denne teknik gør det muligt for webapps at sende og hente data fra en server asynkront ved hjælp af JavaScript, uden at skulle genindlæse HTML-siden, hvilket resulterer i hurtigere opdateringer og mere glidende brugerinteraktioner. Når nye data modtages fra serveren, kan den aktuelle HTML-side også opdateres med JavaScript ved hjælp af [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)-API'en. Over tid har denne tilgang udviklet sig til det, der nu kaldes en [*Single-Page Application* eller *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+### Traditionelle multi-side applikationer (MPA)
 
-![Opdateringsarbejdsgang i en single-side applikation](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.da.png)
+I internettets tidlige dage var hvert klik som at skifte kanal på et gammelt fjernsyn - skærmen blev sort, og derefter tunede den langsomt ind på det nye indhold. Dette var virkeligheden for tidlige webapplikationer, hvor hver interaktion betød, at hele siden blev genopbygget fra bunden.
 
-Da AJAX først blev introduceret, var den eneste API tilgængelig for asynkron datahentning [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Men moderne browsere implementerer nu også den mere praktiske og kraftfulde [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), som bruger promises og er bedre egnet til at manipulere JSON-data.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    
+    User->>Browser: Clicks link or submits form
+    Browser->>Server: Requests new HTML page
+    Note over Browser: Page goes blank
+    Server->>Browser: Returns complete HTML page
+    Browser->>User: Displays new page (flash/reload)
+```
 
-> Selvom alle moderne browsere understøtter `Fetch API`, er det altid en god idé at tjekke [kompatibilitetstabellen på caniuse.com](https://caniuse.com/fetch), hvis du vil have din webapplikation til at fungere på ældre browsere.
+![Opdateringsworkflow i en multi-side applikation](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.da.png)
 
-### Opgave
+**Hvorfor denne tilgang føltes klodset:**
+- Hvert klik betød, at hele siden blev genopbygget fra bunden
+- Brugere blev afbrudt midt i deres tanker af de irriterende sideblink
+- Din internetforbindelse arbejdede overtid med at downloade den samme header og footer igen og igen
+- Apps føltes mere som at klikke gennem et arkivskab end at bruge software
 
-I [den forrige lektion](../2-forms/README.md) implementerede vi registreringsformularen for at oprette en konto. Nu vil vi tilføje kode til at logge ind med en eksisterende konto og hente dens data. Åbn filen `app.js` og tilføj en ny `login`-funktion:
+### Moderne single-side applikationer (SPA)
 
-```js
+AJAX (Asynchronous JavaScript and XML) ændrede denne paradigme fuldstændigt. Ligesom det modulære design af den internationale rumstation, hvor astronauter kan udskifte individuelle komponenter uden at genopbygge hele strukturen, giver AJAX os mulighed for at opdatere specifikke dele af en webside uden at genindlæse alt. Selvom navnet nævner XML, bruger vi mest JSON i dag, men grundprincippet forbliver: opdater kun det, der skal ændres.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant JavaScript
+    participant Server
+    
+    User->>Browser: Interacts with page
+    Browser->>JavaScript: Triggers event handler
+    JavaScript->>Server: Fetches only needed data
+    Server->>JavaScript: Returns JSON data
+    JavaScript->>Browser: Updates specific page elements
+    Browser->>User: Shows updated content (no reload)
+```
+
+![Opdateringsworkflow i en single-side applikation](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.da.png)
+
+**Hvorfor SPAs føles så meget bedre:**
+- Kun de dele, der faktisk ændres, bliver opdateret (smart, ikke?)
+- Ingen flere forstyrrende afbrydelser - dine brugere forbliver i deres flow
+- Mindre data, der rejser over nettet, betyder hurtigere indlæsning
+- Alt føles hurtigt og responsivt, som apps på din telefon
+
+### Udviklingen til moderne Fetch API
+
+Moderne browsere tilbyder [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), som erstatter den ældre [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Ligesom forskellen mellem at betjene en telegraf og bruge e-mail, bruger Fetch API promises for renere asynkron kode og håndterer JSON naturligt.
+
+| Funktion | XMLHttpRequest | Fetch API |
+|----------|----------------|-----------|
+| **Syntaks** | Kompliceret callback-baseret | Ren promise-baseret |
+| **JSON-håndtering** | Kræver manuel parsing | Indbygget `.json()`-metode |
+| **Fejlhåndtering** | Begrænset fejlinformation | Omfattende fejldetaljer |
+| **Moderne support** | Legacy-kompatibilitet | ES6+ promises og async/await |
+
+> 💡 **Browserkompatibilitet**: Gode nyheder - Fetch API fungerer i alle moderne browsere! Hvis du er nysgerrig på specifikke versioner, har [caniuse.com](https://caniuse.com/fetch) den komplette kompatibilitetshistorik.
+> 
+**Konklusionen:**
+- Fungerer godt i Chrome, Firefox, Safari og Edge (grundlæggende overalt, hvor dine brugere er)
+- Kun Internet Explorer har brug for ekstra hjælp (og ærligt talt, det er tid til at sige farvel til IE)
+- Forbereder dig perfekt til de elegante async/await-mønstre, vi vil bruge senere
+
+### Implementering af brugerlogin og datahentning
+
+Lad os nu implementere login-systemet, der forvandler din bankapp fra en statisk visning til en funktionel applikation. Ligesom autentifikationsprotokoller, der bruges i sikre militæranlæg, vil vi verificere brugerens legitimationsoplysninger og derefter give adgang til deres specifikke data.
+
+Vi bygger dette trin for trin, startende med grundlæggende autentifikation og derefter tilføje datahentningsfunktioner.
+
+#### Trin 1: Opret fundamentet for login-funktionen
+
+Åbn din `app.js`-fil og tilføj en ny `login`-funktion. Denne vil håndtere brugerens autentifikationsproces:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
 }
 ```
 
-Her starter vi med at hente formular-elementet med `getElementById()`, og derefter får vi brugernavnet fra inputfeltet med `loginForm.user.value`. Hvert formularfelt kan tilgås via dets navn (sat i HTML med attributten `name`) som en egenskab af formularen.
+**Lad os bryde dette ned:**
+- Det `async` nøgleord? Det fortæller JavaScript "hey, denne funktion skal måske vente på ting"
+- Vi henter vores formular fra siden (ikke noget fancy, bare finder den via dens ID)
+- Derefter trækker vi det ud, som brugeren har indtastet som deres brugernavn
+- Her er et smart trick: du kan få adgang til enhver formularinput via dens `name`-attribut - ingen grund til ekstra getElementById-opkald!
 
-På samme måde som vi gjorde for registreringen, vil vi oprette en anden funktion til at udføre en serverforespørgsel, men denne gang for at hente kontodata:
+> 💡 **Formularadgangsmønster**: Hver formularkontrol kan tilgås via dens navn (angivet i HTML ved hjælp af `name`-attributten) som en egenskab af form-elementet. Dette giver en ren, læsbar måde at få formulardata på.
 
-```js
+#### Trin 2: Opret funktionen til at hente kontodata
+
+Dernæst opretter vi en dedikeret funktion til at hente kontodata fra serveren. Dette følger samme mønster som din registreringsfunktion, men fokuserer på datahentning:
+
+```javascript
 async function getAccount(user) {
   try {
     const response = await fetch('//localhost:5000/api/accounts/' + encodeURIComponent(user));
@@ -72,15 +155,41 @@ async function getAccount(user) {
 }
 ```
 
-Vi bruger `fetch`-API'et til at anmode om data asynkront fra serveren, men denne gang behøver vi ikke andre parametre end URL'en, da vi kun forespørger data. Som standard opretter `fetch` en [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-HTTP-forespørgsel, hvilket er præcis, hvad vi har brug for her.
+**Her er, hvad denne kode opnår:**
+- **Bruger** det moderne `fetch` API til at anmode om data asynkront
+- **Konstruerer** en GET-anmodnings-URL med brugernavnparameteren
+- **Anvender** `encodeURIComponent()` for sikkert at håndtere specialtegn i URL'er
+- **Konverterer** svaret til JSON-format for nem datamanipulation
+- **Håndterer** fejl elegant ved at returnere et fejlobjekt i stedet for at gå ned
 
-✅ `encodeURIComponent()` er en funktion, der undgår specialtegn i en URL. Hvilke problemer kunne vi muligvis have, hvis vi ikke kalder denne funktion og bruger `user`-værdien direkte i URL'en?
+> ⚠️ **Sikkerhedsnotat**: Funktionen `encodeURIComponent()` håndterer specialtegn i URL'er. Ligesom kodningssystemer, der bruges i flådekommunikation, sikrer den, at din besked ankommer præcis som tilsigtet, og forhindrer tegn som "#" eller "&" i at blive misfortolket.
+> 
+**Hvorfor dette er vigtigt:**
+- Forhindrer specialtegn i at ødelægge URL'er
+- Beskytter mod URL-manipulationsangreb
+- Sikrer, at din server modtager de tilsigtede data
+- Følger sikre kodningspraksisser
 
-Lad os nu opdatere vores `login`-funktion til at bruge `getAccount`:
+#### Forstå HTTP GET-anmodninger
 
-```js
+Her er noget, der måske overrasker dig: når du bruger `fetch` uden ekstra muligheder, opretter den automatisk en [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)-anmodning. Dette er perfekt til det, vi gør - spørger serveren "hey, kan jeg se denne brugers kontodata?"
+
+Tænk på GET-anmodninger som høfligt at bede om at låne en bog fra biblioteket - du anmoder om at se noget, der allerede eksisterer. POST-anmodninger (som vi brugte til registrering) er mere som at indsende en ny bog, der skal tilføjes til samlingen.
+
+| GET-anmodning | POST-anmodning |
+|---------------|----------------|
+| **Formål** | Hente eksisterende data | Sende nye data til serveren |
+| **Parametre** | I URL-sti/spørgsmålstegn | I anmodningskroppen |
+| **Caching** | Kan caches af browsere | Typisk ikke cached |
+| **Sikkerhed** | Synlig i URL/logs | Skjult i anmodningskroppen |
+
+#### Trin 3: Samle det hele
+
+Nu til den tilfredsstillende del - lad os forbinde din kontohentningsfunktion til login-processen. Dette er, hvor alt falder på plads:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
   const data = await getAccount(user);
 
@@ -93,94 +202,260 @@ async function login() {
 }
 ```
 
-Først, da `getAccount` er en asynkron funktion, skal vi matche den med nøgleordet `await` for at vente på serverresultatet. Som med enhver serverforespørgsel skal vi også håndtere fejltilfælde. For nu vil vi kun tilføje en logbesked for at vise fejlen og vende tilbage til det senere.
+Denne funktion følger en klar sekvens:
+- Udtrækker brugernavnet fra formularinputtet
+- Anmoder om brugerens kontodata fra serveren
+- Håndterer eventuelle fejl, der opstår under processen
+- Gemmer kontodataene og navigerer til dashboardet ved succes
 
-Derefter skal vi gemme dataene et sted, så vi senere kan bruge dem til at vise dashboard-informationen. Da variablen `account` endnu ikke eksisterer, opretter vi en global variabel til den øverst i vores fil:
+> 🎯 **Async/Await-mønster**: Da `getAccount` er en asynkron funktion, bruger vi nøgleordet `await` for at pause udførelsen, indtil serveren svarer. Dette forhindrer koden i at fortsætte med udefinerede data.
 
-```js
+#### Trin 4: Opret et hjem for dine data
+
+Din app har brug for et sted at huske kontoinformationen, når den er indlæst. Tænk på dette som appens korttidshukommelse - et sted at holde den aktuelle brugers data lige ved hånden. Tilføj denne linje øverst i din `app.js`-fil:
+
+```javascript
+// This holds the current user's account data
 let account = null;
 ```
 
-Efter brugerdataene er gemt i en variabel, kan vi navigere fra *login*-siden til *dashboard*-siden ved hjælp af funktionen `navigate()`, som vi allerede har.
+**Hvorfor vi har brug for dette:**
+- Holder kontodataene tilgængelige fra hvor som helst i din app
+- Start med `null` betyder "ingen er logget ind endnu"
+- Bliver opdateret, når nogen logger ind eller registrerer sig med succes
+- Fungerer som en enkelt sandhedskilde - ingen forvirring om, hvem der er logget ind
 
-Endelig skal vi kalde vores `login`-funktion, når loginformularen sendes, ved at ændre HTML'en:
+#### Trin 5: Tilslut din formular
+
+Lad os nu forbinde din nye login-funktion til din HTML-formular. Opdater din formular-tag sådan her:
 
 ```html
 <form id="loginForm" action="javascript:login()">
+  <!-- Your existing form inputs -->
+</form>
 ```
 
-Test, at alt fungerer korrekt ved at registrere en ny konto og forsøge at logge ind med den samme konto.
+**Hvad denne lille ændring gør:**
+- Stopper formularen fra at udføre sin standard "genindlæs hele siden"-adfærd
+- Kalder din brugerdefinerede JavaScript-funktion i stedet
+- Holder alt glat og single-page-app-lignende
+- Giver dig fuld kontrol over, hvad der sker, når brugerne trykker på "Login"
 
-Før vi går videre til næste del, kan vi også fuldføre `register`-funktionen ved at tilføje dette nederst i funktionen:
+#### Trin 6: Forbedr din registreringsfunktion
 
-```js
+For konsistens, opdater din `register`-funktion til også at gemme kontodata og navigere til dashboardet:
+
+```javascript
+// Add these lines at the end of your register function
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Vidste du, at du som standard kun kan kalde server-API'er fra *samme domæne og port* som den webside, du ser? Dette er en sikkerhedsmekanisme, der håndhæves af browsere. Men vent, vores webapp kører på `localhost:3000`, mens server-API'et kører på `localhost:5000`. Hvorfor virker det? Ved at bruge en teknik kaldet [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) er det muligt at udføre cross-origin HTTP-forespørgsler, hvis serveren tilføjer særlige headers til svaret, der tillader undtagelser for specifikke domæner.
+**Denne forbedring giver:**
+- **Sømløs** overgang fra registrering til dashboard
+- **Konsistent** brugeroplevelse mellem login- og registreringsforløb
+- **Øjeblikkelig** adgang til kontodata efter vellykket registrering
 
-> Lær mere om API'er ved at tage denne [lektion](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
+#### Test din implementering
 
-## Opdater HTML for at vise data
-
-Nu hvor vi har brugerdataene, skal vi opdatere den eksisterende HTML for at vise dem. Vi ved allerede, hvordan man henter et element fra DOM'en, for eksempel ved hjælp af `document.getElementById()`. Når du har et baseelement, er her nogle API'er, du kan bruge til at ændre det eller tilføje underordnede elementer til det:
-
-- Ved at bruge egenskaben [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) kan du ændre teksten i et element. Bemærk, at ændring af denne værdi fjerner alle elementets underordnede (hvis der er nogen) og erstatter det med den angivne tekst. Som sådan er det også en effektiv metode til at fjerne alle underordnede af et givet element ved at tildele en tom streng `''` til det.
-
-- Ved at bruge [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) sammen med metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) kan du oprette og vedhæfte et eller flere nye underordnede elementer.
-
-✅ Ved at bruge egenskaben [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) for et element er det også muligt at ændre dets HTML-indhold, men denne metode bør undgås, da den er sårbar over for [cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting)-angreb.
-
-### Opgave
-
-Før vi går videre til dashboard-skærmen, er der én ting mere, vi bør gøre på *login*-siden. I øjeblikket, hvis du forsøger at logge ind med et brugernavn, der ikke eksisterer, vises en besked i konsollen, men for en almindelig bruger ændres der ingenting, og du ved ikke, hvad der foregår.
-
-Lad os tilføje et pladsholderelement i loginformularen, hvor vi kan vise en fejlmeddelelse, hvis det er nødvendigt. Et godt sted ville være lige før login-`<button>`:
-
-```html
-...
-<div id="loginError"></div>
-<button>Login</button>
-...
+```mermaid
+flowchart TD
+    A[User enters credentials] --> B[Login function called]
+    B --> C[Fetch account data from server]
+    C --> D{Data received successfully?}
+    D -->|Yes| E[Store account data globally]
+    D -->|No| F[Display error message]
+    E --> G[Navigate to dashboard]
+    F --> H[User stays on login page]
 ```
 
-Dette `<div>`-element er tomt, hvilket betyder, at der ikke vises noget på skærmen, før vi tilføjer noget indhold til det. Vi giver det også et `id`, så vi nemt kan hente det med JavaScript.
+**Tid til at prøve det af:**
+1. Opret en ny konto for at sikre, at alt fungerer
+2. Prøv at logge ind med de samme legitimationsoplysninger
+3. Kig på din browsers konsol (F12), hvis noget virker forkert
+4. Sørg for, at du lander på dashboardet efter en vellykket login
 
-Gå tilbage til filen `app.js` og opret en ny hjælpefunktion `updateElement`:
+Hvis noget ikke fungerer, så gå ikke i panik! De fleste problemer er simple rettelser som tastefejl eller at glemme at starte API-serveren.
 
-```js
+#### Et hurtigt ord om Cross-Origin magi
+
+Du undrer dig måske: "Hvordan taler min webapp med denne API-server, når de kører på forskellige porte?" Godt spørgsmål! Dette berører noget, som enhver webudvikler støder på før eller siden.
+
+> 🔒 **Cross-Origin sikkerhed**: Browsere håndhæver en "same-origin policy" for at forhindre uautoriseret kommunikation mellem forskellige domæner. Ligesom kontrolsystemet ved Pentagon verificerer de, at kommunikationen er autoriseret, før de tillader dataoverførsel.
+> 
+**I vores opsætning:**
+- Din webapp kører på `localhost:3000` (udviklingsserver)
+- Din API-server kører på `localhost:5000` (backend-server)
+- API-serveren inkluderer [CORS headers](https://developer.mozilla.org/docs/Web/HTTP/CORS), der eksplicit autoriserer kommunikation fra din webapp
+
+Denne konfiguration afspejler virkelighedens udvikling, hvor frontend- og backend-applikationer typisk kører på separate servere.
+
+> 📚 **Lær mere**: Dyk dybere ned i API'er og datahentning med dette omfattende [Microsoft Learn modul om API'er](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
+
+## Bring dine data til live i HTML
+
+Nu vil vi gøre de hentede data synlige for brugerne gennem DOM-manipulation. Ligesom processen med at fremkalde fotografier i et mørkekammer, tager vi usynlige data og gør dem til noget, brugerne kan se og interagere med.
+
+DOM-manipulation er teknikken, der forvandler statiske websider til dynamiske applikationer, der opdaterer deres indhold baseret på brugerinteraktioner og serverrespons.
+
+### Vælg det rigtige værktøj til opgaven
+
+Når det kommer til at opdatere din HTML med JavaScript, har du flere muligheder. Tænk på disse som forskellige værktøjer i en værktøjskasse - hver perfekt til specifikke opgaver:
+
+| Metode | Hvad det er godt til | Hvornår man skal bruge det | Sikkerhedsniveau |
+|--------|----------------------|---------------------------|------------------|
+| `textContent` | Vise brugerdata sikkert | Når som helst du viser tekst | ✅ Stensikkert |
+| `createElement()` + `append()` | Bygge komplekse layouts | Oprette nye sektioner/lister | ✅ Skudsikkert |
+| `innerHTML` | Indstille HTML-indhold | ⚠️ Prøv at undgå denne | ❌ Risikabelt |
+
+#### Den sikre måde at vise tekst på: textContent
+
+Egenskaben [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) er din bedste ven, når du viser brugerdata. Det er som at have en dørmand for din webside - intet skadeligt slipper igennem:
+
+```javascript
+// The safe, reliable way to update text
+const balanceElement = document.getElementById('balance');
+balanceElement.textContent = account.balance;
+```
+
+**Fordele ved textContent:**
+- Behandler alt som almindelig tekst (forhindrer script-eksekvering)
+- Rydder automatisk eksisterende indhold
+- Effektivt til enkle tekstopdateringer
+- Giver indbygget sikkerhed mod skadeligt indhold
+
+#### Oprettelse af dynamiske HTML-elementer
+For mere komplekse indhold, kombiner [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) med metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append):
+
+```javascript
+// Safe way to create new elements
+const transactionItem = document.createElement('div');
+transactionItem.className = 'transaction-item';
+transactionItem.textContent = `${transaction.date}: ${transaction.description}`;
+container.append(transactionItem);
+```
+
+**Forstå denne tilgang:**
+- **Opretter** nye DOM-elementer programmatisk
+- **Giver** fuld kontrol over elementattributter og indhold
+- **Muliggør** komplekse, indlejrede elementstrukturer
+- **Bevarer** sikkerheden ved at adskille struktur fra indhold
+
+> ⚠️ **Sikkerhedsovervejelse**: Selvom [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) ofte ses i tutorials, kan det udføre indlejrede scripts. Ligesom sikkerhedsprotokollerne på CERN, der forhindrer uautoriseret kodeudførelse, giver brugen af `textContent` og `createElement` sikrere alternativer.
+> 
+**Risici ved innerHTML:**
+- Udfører eventuelle `<script>` tags i brugerdata
+- Sårbar over for kodeinjektionsangreb
+- Skaber potentielle sikkerhedsproblemer
+- De sikrere alternativer, vi bruger, tilbyder tilsvarende funktionalitet
+
+### Gør fejlmeddelelser brugervenlige
+
+I øjeblikket vises login-fejl kun i browserens konsol, hvilket er usynligt for brugerne. Ligesom forskellen mellem en pilots interne diagnostik og passagerinformationssystemet, skal vi kommunikere vigtig information gennem den rette kanal.
+
+Implementering af synlige fejlmeddelelser giver brugerne øjeblikkelig feedback om, hvad der gik galt, og hvordan de kan gå videre.
+
+#### Trin 1: Tilføj et sted til fejlmeddelelser
+
+Først skal vi give fejlmeddelelser et hjem i din HTML. Tilføj dette lige før din login-knap, så brugerne naturligt vil se det:
+
+```html
+<!-- This is where error messages will appear -->
+<div id="loginError" role="alert"></div>
+<button>Login</button>
+```
+
+**Hvad der sker her:**
+- Vi opretter en tom container, der forbliver usynlig, indtil den er nødvendig
+- Den er placeret, hvor brugerne naturligt kigger efter at have klikket på "Login"
+- `role="alert"` er en fin detalje for skærmlæsere - det fortæller hjælpemidler "hey, dette er vigtigt!"
+- Den unikke `id` giver vores JavaScript et nemt mål
+
+#### Trin 2: Opret en praktisk hjælpefunktion
+
+Lad os lave en lille hjælpefunktion, der kan opdatere teksten i et hvilket som helst element. Dette er en af de funktioner, du skriver én gang og bruger overalt, og som vil spare dig tid:
+
+```javascript
 function updateElement(id, text) {
   const element = document.getElementById(id);
   element.textContent = text;
 }
 ```
 
-Denne funktion er ret ligetil: givet et element-*id* og *tekst* vil den opdatere tekstindholdet i DOM-elementet med det matchende `id`. Lad os bruge denne metode i stedet for den tidligere fejlmeddelelse i `login`-funktionen:
+**Fordele ved funktionen:**
+- Enkel grænseflade, der kun kræver et element-ID og tekstindhold
+- Finder og opdaterer DOM-elementer sikkert
+- Genanvendeligt mønster, der reducerer kode-duplikering
+- Bevarer ensartet opdateringsadfærd på tværs af applikationen
 
-```js
+#### Trin 3: Vis fejl, hvor brugerne kan se dem
+
+Nu skal vi erstatte den skjulte konsolmeddelelse med noget, som brugerne faktisk kan se. Opdater din login-funktion:
+
+```javascript
+// Instead of just logging to console, show the user what's wrong
 if (data.error) {
   return updateElement('loginError', data.error);
 }
 ```
 
-Nu, hvis du forsøger at logge ind med en ugyldig konto, bør du se noget som dette:
+**Denne lille ændring gør en stor forskel:**
+- Fejlmeddelelser vises lige der, hvor brugerne kigger
+- Ingen flere mystiske, tavse fejl
+- Brugerne får øjeblikkelig, handlingsrettet feedback
+- Din app begynder at føles professionel og gennemtænkt
+
+Nu, når du tester med en ugyldig konto, vil du se en nyttig fejlmeddelelse direkte på siden!
 
 ![Skærmbillede, der viser fejlmeddelelsen under login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.da.png)
 
-Nu har vi en fejltekst, der vises visuelt, men hvis du prøver det med en skærmlæser, vil du bemærke, at der ikke bliver annonceret noget. For at tekst, der dynamisk tilføjes til en side, kan blive annonceret af skærmlæsere, skal den bruge noget, der kaldes en [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Her vil vi bruge en specifik type live region kaldet en alert:
+#### Trin 4: Vær inkluderende med tilgængelighed
+
+Her er noget sejt ved det `role="alert"`, vi tilføjede tidligere - det er ikke bare pynt! Denne lille attribut skaber det, der kaldes en [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), som straks annoncerer ændringer til skærmlæsere:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
-Implementer den samme adfærd for fejl i `register`-funktionen (husk at opdatere HTML'en).
+**Hvorfor dette er vigtigt:**
+- Brugere af skærmlæsere hører fejlmeddelelsen, så snart den vises
+- Alle får den samme vigtige information, uanset hvordan de navigerer
+- Det er en enkel måde at få din app til at fungere for flere mennesker
+- Viser, at du bekymrer dig om at skabe inkluderende oplevelser
 
-## Vis information på dashboardet
+Små detaljer som denne adskiller gode udviklere fra fremragende!
 
-Ved hjælp af de samme teknikker, vi lige har set, vil vi også tage os af at vise kontoinformationen på dashboard-siden.
+#### Trin 5: Anvend det samme mønster til registrering
 
-Sådan ser et kontoobjekt modtaget fra serveren ud:
+For konsistens skal du implementere identisk fejlhåndtering i din registreringsformular:
+
+1. **Tilføj** et fejlvisningselement til din registrerings-HTML:
+```html
+<div id="registerError" role="alert"></div>
+```
+
+2. **Opdater** din register-funktion til at bruge det samme fejlvisningsmønster:
+```javascript
+if (data.error) {
+  return updateElement('registerError', data.error);
+}
+```
+
+**Fordele ved ensartet fejlhåndtering:**
+- **Giver** en ensartet brugeroplevelse på tværs af alle formularer
+- **Reducerer** kognitiv belastning ved at bruge velkendte mønstre
+- **Forenkler** vedligeholdelse med genanvendelig kode
+- **Sikrer**, at tilgængelighedsstandarder opfyldes i hele appen
+
+## Skab dit dynamiske dashboard
+
+Nu vil vi forvandle dit statiske dashboard til en dynamisk grænseflade, der viser reelle kontooplysninger. Ligesom forskellen mellem en trykt flyplan og de live afgangstavler i lufthavne, går vi fra statisk information til realtids, responsive visninger.
+
+Ved at bruge de DOM-manipulationsteknikker, du har lært, vil vi skabe et dashboard, der automatisk opdateres med aktuelle kontooplysninger.
+
+### Lær dine data at kende
+
+Før vi begynder at bygge, lad os kigge på, hvilken slags data din server sender tilbage. Når nogen logger ind med succes, her er den skattekiste af information, du får at arbejde med:
 
 ```json
 {
@@ -192,15 +467,34 @@ Sådan ser et kontoobjekt modtaget fra serveren ud:
     { "id": "1", "date": "2020-10-01", "object": "Pocket money", "amount": 50 },
     { "id": "2", "date": "2020-10-03", "object": "Book", "amount": -10 },
     { "id": "3", "date": "2020-10-04", "object": "Sandwich", "amount": -5 }
-  ],
+  ]
 }
 ```
 
-> Bemærk: for at gøre dit liv lettere kan du bruge den foruddefinerede `test`-konto, der allerede er fyldt med data.
+**Denne datastruktur giver:**
+- **`user`**: Perfekt til at personliggøre oplevelsen ("Velkommen tilbage, Sarah!")
+- **`currency`**: Sikrer, at vi viser pengebeløb korrekt
+- **`description`**: Et venligt navn til kontoen
+- **`balance`**: Den altafgørende aktuelle saldo
+- **`transactions`**: Den komplette transaktionshistorik med alle detaljer
 
-### Opgave
+Alt, hvad du behøver for at bygge et professionelt udseende bankdashboard!
 
-Lad os starte med at erstatte sektionen "Balance" i HTML'en for at tilføje pladsholderelementer:
+> 💡 **Pro Tip**: Vil du se dit dashboard i aktion med det samme? Brug brugernavnet `test`, når du logger ind - det kommer forudindlæst med eksempeldata, så du kan se alt fungere uden først at skulle oprette transaktioner.
+> 
+**Hvorfor testkontoen er praktisk:**
+- Kommer med realistiske eksempeldata allerede indlæst
+- Perfekt til at se, hvordan transaktioner vises
+- Fantastisk til at teste dine dashboardfunktioner
+- Sparer dig for at skulle oprette dummy-data manuelt
+
+### Oprettelse af dashboard-visningselementer
+
+Lad os bygge dit dashboard trin for trin, startende med kontosammendraget og derefter gå videre til mere komplekse funktioner som transaktionslister.
+
+#### Trin 1: Opdater din HTML-struktur
+
+Først skal du erstatte den statiske "Saldo"-sektion med dynamiske pladsholderelementer, som din JavaScript kan udfylde:
 
 ```html
 <section>
@@ -208,17 +502,25 @@ Lad os starte med at erstatte sektionen "Balance" i HTML'en for at tilføje plad
 </section>
 ```
 
-Vi tilføjer også en ny sektion lige nedenunder for at vise kontobeskrivelsen:
+Dernæst skal du tilføje en sektion til kontobeskrivelsen. Da dette fungerer som en titel for dashboard-indholdet, skal du bruge semantisk HTML:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Da kontobeskrivelsen fungerer som en titel for indholdet nedenunder, er den semantisk markeret som en overskrift. Lær mere om, hvordan [overskriftsstruktur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) er vigtig for tilgængelighed, og tag et kritisk kig på siden for at afgøre, hvad der ellers kunne være en overskrift.
+**Forstå HTML-strukturen:**
+- **Bruger** separate `<span>` elementer til saldo og valuta for individuel kontrol
+- **Anvender** unikke ID'er til hvert element for JavaScript-målretning
+- **Følger** semantisk HTML ved at bruge `<h2>` til kontobeskrivelsen
+- **Skaber** en logisk hierarki for skærmlæsere og SEO
 
-Derefter opretter vi en ny funktion i `app.js` for at udfylde pladsholderen:
+> ✅ **Tilgængelighedsindsigt**: Kontobeskrivelsen fungerer som en titel for dashboard-indholdet, så den er markeret semantisk som en overskrift. Lær mere om, hvordan [overskriftsstruktur](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) påvirker tilgængelighed. Kan du identificere andre elementer på din side, der kunne drage fordel af overskriftstags?
 
-```js
+#### Trin 2: Opret dashboard-opdateringsfunktionen
+
+Opret nu en funktion, der udfylder dit dashboard med reelle kontodata:
+
+```javascript
 function updateDashboard() {
   if (!account) {
     return navigate('/login');
@@ -230,40 +532,71 @@ function updateDashboard() {
 }
 ```
 
-Først tjekker vi, at vi har de nødvendige kontodata, før vi går videre. Derefter bruger vi funktionen `updateElement()`, som vi oprettede tidligere, til at opdatere HTML'en.
+**Trin for trin, her er hvad denne funktion gør:**
+- **Validerer**, at kontodata eksisterer, før den fortsætter
+- **Omdirigerer** uautentificerede brugere tilbage til login-siden
+- **Opdaterer** kontobeskrivelsen ved hjælp af den genanvendelige `updateElement`-funktion
+- **Formaterer** saldoen til altid at vise to decimaler
+- **Viser** det passende valutasymbol
 
-> For at gøre balancevisningen pænere bruger vi metoden [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) til at tvinge visning af værdien med 2 decimaler.
+> 💰 **Pengeformatering**: Metoden [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) er en livredder! Den sikrer, at din saldo altid ser ud som rigtige penge - "75.00" i stedet for bare "75". Dine brugere vil sætte pris på at se velkendt valutaformatering.
 
-Nu skal vi kalde vores `updateDashboard()`-funktion hver gang dashboardet indlæses. Hvis du allerede har afsluttet [lektion 1-opgaven](../1-template-route/assignment.md), bør dette være ligetil, ellers kan du bruge følgende implementering.
+#### Trin 3: Sørg for, at dit dashboard opdateres
 
-Tilføj denne kode til slutningen af funktionen `updateRoute()`:
+For at sikre, at dit dashboard opdateres med aktuelle data, hver gang nogen besøger det, skal vi koble det til dit navigationssystem. Hvis du har fuldført [lektion 1-opgaven](../1-template-route/assignment.md), bør dette føles bekendt. Hvis ikke, bare rolig - her er hvad du skal gøre:
 
-```js
+Tilføj dette til slutningen af din `updateRoute()`-funktion:
+
+```javascript
 if (typeof route.init === 'function') {
   route.init();
 }
 ```
 
-Og opdater rute-definitionerne med:
+Opdater derefter dine ruter til at inkludere dashboard-initialisering:
 
-```js
+```javascript
 const routes = {
   '/login': { templateId: 'login' },
   '/dashboard': { templateId: 'dashboard', init: updateDashboard }
 };
 ```
 
-Med denne ændring kaldes funktionen `updateDashboard()` hver gang dashboard-siden vises. Efter login bør du derefter kunne se kontobalancen, valutaen og beskrivelsen.
+**Hvad denne smarte opsætning gør:**
+- Tjekker, om en rute har speciel initialiseringskode
+- Kører den kode automatisk, når ruten indlæses
+- Sikrer, at dit dashboard altid viser friske, aktuelle data
+- Holder din routing-logik ren og organiseret
 
-## Opret tabelrækker dynamisk med HTML-skabeloner
+#### Test dit dashboard
 
-I [den første lektion](../1-template-route/README.md) brugte vi HTML-skabeloner sammen med metoden [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) til at implementere navigationen i vores app. Skabeloner kan også være mindre og bruges til dynamisk at udfylde gentagne dele af en side.
+Efter implementering af disse ændringer skal du teste dit dashboard:
 
-Vi vil bruge en lignende tilgang til at vise listen over transaktioner i HTML-tabellen.
+1. **Log ind** med en testkonto
+2. **Bekræft**, at du bliver omdirigeret til dashboardet
+3. **Tjek**, at kontobeskrivelsen, saldoen og valutaen vises korrekt
+4. **Prøv at logge ud og ind igen** for at sikre, at data opdateres korrekt
 
-### Opgave
+Dit dashboard bør nu vise dynamiske kontooplysninger, der opdateres baseret på den indloggede brugers data!
 
-Tilføj en ny skabelon i HTML-`<body>`:
+## Byg smarte transaktionslister med skabeloner
+
+I stedet for manuelt at oprette HTML for hver transaktion, vil vi bruge skabeloner til automatisk at generere ensartet formatering. Ligesom de standardiserede komponenter, der bruges i rumfartsproduktion, sikrer skabeloner, at hver transaktionsrække følger samme struktur og udseende.
+
+Denne teknik skalerer effektivt fra få transaktioner til tusinder, samtidig med at den opretholder ensartet ydeevne og præsentation.
+
+```mermaid
+flowchart LR
+    A[Transaction Data] --> B[HTML Template]
+    B --> C[Clone Template]
+    C --> D[Populate with Data]
+    D --> E[Add to DOM]
+    E --> F[Repeat for Each Transaction]
+```
+
+### Trin 1: Opret transaktionsskabelonen
+
+Først skal du tilføje en genanvendelig skabelon til transaktionsrækker i din HTML `<body>`:
 
 ```html
 <template id="transaction">
@@ -275,17 +608,30 @@ Tilføj en ny skabelon i HTML-`<body>`:
 </template>
 ```
 
-Denne skabelon repræsenterer en enkelt tabelrække med de 3 kolonner, vi vil udfylde: *dato*, *objekt* og *beløb* for en transaktion.
+**Forstå HTML-skabeloner:**
+- **Definerer** strukturen for en enkelt tabelrække
+- **Forbliver** usynlig, indtil den klones og udfyldes med JavaScript
+- **Indeholder** tre celler til dato, beskrivelse og beløb
+- **Tilbyder** et genanvendeligt mønster for ensartet formatering
 
-Tilføj derefter denne `id`-egenskab til `<tbody>`-elementet i tabellen inden for dashboard-skabelonen for at gøre det lettere at finde med JavaScript:
+### Trin 2: Forbered din tabel til dynamisk indhold
+
+Tilføj derefter et `id` til din tabelkrop, så JavaScript nemt kan målrette den:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-Vores HTML er klar, lad os skifte til JavaScript-kode og oprette en ny funktion `createTransactionRow`:
+**Hvad dette opnår:**
+- **Skaber** et klart mål for indsættelse af transaktionsrækker
+- **Adskiller** tabelstrukturen fra det dynamiske indhold
+- **Muliggør** nem rydning og genopfyldning af transaktionsdata
 
-```js
+### Trin 3: Byg fabriksfunktionen for transaktionsrækker
+
+Opret nu en funktion, der transformerer transaktionsdata til HTML-elementer:
+
+```javascript
 function createTransactionRow(transaction) {
   const template = document.getElementById('transaction');
   const transactionRow = template.content.cloneNode(true);
@@ -297,9 +643,19 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Denne funktion gør præcis, hvad dens navn antyder: ved hjælp af den skabelon, vi oprettede tidligere, opretter den en ny tabelrække og udfylder dens indhold med transaktionsdata. Vi vil bruge denne i vores `updateDashboard()`-funktion til at udfylde tabellen:
+**Opdeling af denne fabriksfunktion:**
+- **Henter** skabelonelementet via dets ID
+- **Kloner** skabelonindholdet for sikker manipulation
+- **Vælger** tabelrækken inden for det klonede indhold
+- **Udfylder** hver celle med transaktionsdata
+- **Formaterer** beløbet til at vise korrekte decimaler
+- **Returnerer** den færdige række klar til indsættelse
 
-```js
+### Trin 4: Generer flere transaktionsrækker effektivt
+
+Tilføj denne kode til din `updateDashboard()`-funktion for at vise alle transaktioner:
+
+```javascript
 const transactionsRows = document.createDocumentFragment();
 for (const transaction of account.transactions) {
   const transactionRow = createTransactionRow(transaction);
@@ -308,11 +664,20 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Her bruger vi metoden [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment), der opretter et nyt DOM-fragment, som vi kan arbejde på, før det endelig vedhæftes til vores HTML-tabel.
+**Forstå denne effektive tilgang:**
+- **Opretter** et dokumentfragment for at samle DOM-operationer
+- **Itererer** gennem alle transaktioner i kontodataene
+- **Genererer** en række for hver transaktion ved hjælp af fabriksfunktionen
+- **Samler** alle rækker i fragmentet, før de tilføjes til DOM'en
+- **Udfører** en enkelt DOM-opdatering i stedet for flere individuelle indsættelser
 
-Der er stadig én ting, vi skal gøre, før denne kode kan fungere, da vores `updateElement()`-funktion i øjeblikket kun understøtter tekstindhold. Lad os ændre dens kode lidt:
+> ⚡ **Ydelsesoptimering**: [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) fungerer som samlingsprocessen hos Boeing - komponenter forberedes uden for hovedlinjen og installeres derefter som en komplet enhed. Denne batch-tilgang minimerer DOM-omstruktureringer ved at udføre en enkelt indsættelse i stedet for flere individuelle operationer.
 
-```js
+### Trin 5: Forbedr opdateringsfunktionen til blandet indhold
+
+Din `updateElement()`-funktion håndterer i øjeblikket kun tekstindhold. Opdater den, så den fungerer med både tekst og DOM-noder:
+
+```javascript
 function updateElement(id, textOrNode) {
   const element = document.getElementById(id);
   element.textContent = ''; // Removes all children
@@ -320,18 +685,57 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-Vi bruger metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), da den gør det muligt at vedhæfte enten tekst eller [DOM Nodes](https://developer.mozilla.org/docs/Web/API/Node) til et overordnet element, hvilket er perfekt til alle vores anvendelser.
-Hvis du prøver at logge ind med `test`-kontoen, bør du nu se en transaktionsliste på dashboardet 🎉.
+**Vigtige forbedringer i denne opdatering:**
+- **Rydder** eksisterende indhold, før nyt indhold tilføjes
+- **Accepterer** enten tekststrenge eller DOM-noder som parametre
+- **Bruger** metoden [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) for fleksibilitet
+- **Bevarer** bagudkompatibilitet med eksisterende tekstbaseret brug
+
+### Test dit dashboard
+
+Tid til sandhedens øjeblik! Lad os se dit dynamiske dashboard i aktion:
+
+1. Log ind med testkontoen (den har eksempeldata klar til brug)
+2. Naviger til dit dashboard
+3. Tjek, at transaktionsrækker vises med korrekt formatering
+4. Sørg for, at datoer, beskrivelser og beløb ser godt ud
+
+Hvis alt fungerer, bør du se en fuldt funktionel transaktionsliste på dit dashboard! 🎉
+
+**Hvad du har opnået:**
+- Bygget et dashboard, der skalerer med enhver mængde data
+- Oprettet genanvendelige skabeloner for ensartet formatering
+- Implementeret effektive DOM-manipulationsteknikker
+- Udviklet funktionalitet, der kan sammenlignes med produktionsbankapplikationer
+
+Du har med succes forvandlet en statisk webside til en dynamisk webapplikation.
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Brug Agent-tilstand til at fuldføre følgende udfordring:
+
+**Beskrivelse:** Forbedr bankappen ved at implementere en søge- og filtreringsfunktion for transaktioner, der giver brugerne mulighed for at finde specifikke transaktioner efter datointerval, beløb eller beskrivelse.
+**Prompt:** Opret en søgefunktionalitet til bankappen, der inkluderer: 1) En søgeformular med inputfelter for datointerval (fra/til), minimum/maksimum beløb og nøgleord for transaktionsbeskrivelse, 2) En `filterTransactions()`-funktion, der filtrerer account.transactions-arrayet baseret på søgekriterierne, 3) Opdater `updateDashboard()`-funktionen til at vise filtrerede resultater, og 4) Tilføj en "Ryd filtre"-knap for at nulstille visningen. Brug moderne JavaScript-arraymetoder som `filter()` og håndter kanttilfælde for tomme søgekriterier.
+
+Lær mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
+
 ## 🚀 Udfordring
 
-Arbejd sammen om at få dashboard-siden til at ligne en rigtig bankapp. Hvis du allerede har stylet din app, så prøv at bruge [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) til at skabe et [responsivt design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), der fungerer godt både på desktop og mobile enheder.
+Klar til at tage din bankapp til det næste niveau? Lad os gøre den til noget, du faktisk har lyst til at bruge. Her er nogle idéer til at inspirere din kreativitet:
 
-Her er et eksempel på en stylet dashboard-side:
+**Gør den smuk**: Tilføj CSS-styling for at forvandle dit funktionelle dashboard til noget visuelt tiltalende. Tænk på rene linjer, god afstand og måske endda nogle subtile animationer.
 
-![Skærmbillede af et eksempel på dashboardet efter styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.da.png)
+**Gør den responsiv**: Prøv at bruge [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) til at skabe et [responsivt design](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), der fungerer godt på telefoner, tablets og desktops. Dine brugere vil takke dig!
+
+**Tilføj lidt flair**: Overvej farvekodning af transaktioner (grøn for indkomst, rød for udgifter), tilføj ikoner eller skab hover-effekter, der gør interfacet mere interaktivt.
+
+Sådan kunne et poleret dashboard se ud:
+
+![Skærmbillede af et eksempel på resultatet af dashboardet efter styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.da.png)
+
+Du behøver ikke at matche dette præcist - brug det som inspiration og skab din egen version!
 
 ## Quiz efter forelæsning
 
@@ -344,4 +748,4 @@ Her er et eksempel på en stylet dashboard-side:
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.

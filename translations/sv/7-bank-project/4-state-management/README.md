@@ -1,73 +1,118 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b46acf79da8550d76445eed00b06c878",
-  "translation_date": "2025-10-03T13:04:21+00:00",
+  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
+  "translation_date": "2025-10-23T21:40:32+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "sv"
 }
 -->
-# Bygg en Bankapp Del 4: Koncept för State Management
+# Bygg en bankapp del 4: Koncept för tillståndshantering
 
 ## Förhandsquiz
 
 [Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/47)
 
-### Introduktion
+## Introduktion
 
-När en webbapplikation växer blir det en utmaning att hålla reda på alla dataflöden. Vilken kod hämtar datan, vilken sida använder den, var och när behöver den uppdateras...det är lätt att hamna med rörig kod som är svår att underhålla. Detta är särskilt sant när du behöver dela data mellan olika sidor i din app, till exempel användardata. Konceptet *state management* har alltid funnits i alla typer av program, men eftersom webbappar fortsätter att öka i komplexitet är det nu en viktig punkt att tänka på under utvecklingen.
+Tillståndshantering är som navigationssystemet på Voyager-rymdfarkosten – när allt fungerar smidigt märker du knappt att det finns där. Men när något går fel blir det skillnaden mellan att nå interstellärt utrymme och att driva vilse i den kosmiska tomheten. Inom webbutveckling representerar tillstånd allt som din applikation behöver komma ihåg: användarens inloggningsstatus, formulärdata, navigeringshistorik och tillfälliga gränssnittstillstånd.
 
-I denna sista del kommer vi att granska appen vi byggde för att ompröva hur staten hanteras, vilket möjliggör stöd för webbläsaruppdatering när som helst och att data kvarstår över användarsessioner.
+När din bankapp har utvecklats från ett enkelt inloggningsformulär till en mer sofistikerad applikation har du förmodligen stött på några vanliga utmaningar. Uppdatera sidan och användarna loggas ut oväntat. Stäng webbläsaren och allt framsteg försvinner. Försök att felsöka ett problem och du letar genom flera funktioner som alla ändrar samma data på olika sätt.
 
-### Förutsättningar
+Detta är inte tecken på dålig kodning – det är de naturliga växtsmärtor som uppstår när applikationer når en viss komplexitet. Varje utvecklare möter dessa utmaningar när deras appar går från "proof of concept" till "produktionsklara."
 
-Du måste ha slutfört [datahämtning](../3-data/README.md)-delen av webbappen för denna lektion. Du måste också installera [Node.js](https://nodejs.org) och [köra server-API:t](../api/README.md) lokalt så att du kan hantera kontodata.
+I den här lektionen kommer vi att implementera ett centraliserat tillståndshanteringssystem som förvandlar din bankapp till en pålitlig, professionell applikation. Du kommer att lära dig att hantera dataflöden förutsägbart, bevara användarsessioner på rätt sätt och skapa den smidiga användarupplevelse som moderna webbapplikationer kräver.
 
-Du kan testa att servern körs korrekt genom att köra detta kommando i en terminal:
+## Förkunskaper
+
+Innan du dyker in i koncepten för tillståndshantering behöver du ha din utvecklingsmiljö korrekt inställd och grunden för din bankapp på plats. Den här lektionen bygger direkt på koncepten och koden från tidigare delar i den här serien.
+
+Se till att du har följande komponenter redo innan du fortsätter:
+
+**Nödvändig inställning:**
+- Slutför [lektionen om datahämtning](../3-data/README.md) - din app bör framgångsrikt ladda och visa kontodata
+- Installera [Node.js](https://nodejs.org) på ditt system för att köra backend-API:t
+- Starta [server-API:t](../api/README.md) lokalt för att hantera kontodataoperationer
+
+**Testa din miljö:**
+
+Verifiera att din API-server fungerar korrekt genom att köra detta kommando i en terminal:
 
 ```sh
 curl http://localhost:5000/api
 # -> should return "Bank API v1.0.0" as a result
 ```
 
+**Vad detta kommando gör:**
+- **Skickar** en GET-förfrågan till din lokala API-server
+- **Testar** anslutningen och verifierar att servern svarar
+- **Returnerar** API-versioninformation om allt fungerar korrekt
+
 ---
 
-## Ompröva state management
+## Diagnostisera nuvarande tillståndsproblem
 
-I [föregående lektion](../3-data/README.md) introducerade vi ett grundläggande koncept för state i vår app med den globala variabeln `account` som innehåller bankdata för den aktuella inloggade användaren. Men vår nuvarande implementation har vissa brister. Försök att uppdatera sidan när du är på instrumentpanelen. Vad händer?
+Som Sherlock Holmes som undersöker en brottsplats behöver vi förstå exakt vad som händer i vår nuvarande implementation innan vi kan lösa mysteriet med försvinnande användarsessioner.
 
-Det finns tre problem med den nuvarande koden:
+Låt oss genomföra ett enkelt experiment som avslöjar de underliggande utmaningarna med tillståndshantering:
 
-- Staten sparas inte, eftersom en webbläsaruppdatering tar dig tillbaka till inloggningssidan.
-- Det finns flera funktioner som ändrar staten. När appen växer kan det bli svårt att spåra ändringarna och det är lätt att glömma att uppdatera en.
-- Staten rensas inte, så när du klickar på *Logga ut* finns kontodata fortfarande kvar även om du är på inloggningssidan.
+**🧪 Prova detta diagnostiska test:**
+1. Logga in på din bankapp och navigera till instrumentpanelen
+2. Uppdatera webbläsarsidan
+3. Observera vad som händer med din inloggningsstatus
 
-Vi skulle kunna uppdatera vår kod för att hantera dessa problem ett i taget, men det skulle skapa mer kodduplicering och göra appen mer komplex och svår att underhålla. Eller så kan vi pausa några minuter och ompröva vår strategi.
+Om du omdirigeras tillbaka till inloggningsskärmen har du upptäckt det klassiska problemet med tillståndsbevarande. Detta beteende uppstår eftersom vår nuvarande implementation lagrar användardata i JavaScript-variabler som återställs vid varje sidladdning.
 
-> Vilka problem försöker vi egentligen lösa här?
+**Nuvarande implementeringsproblem:**
 
-[State management](https://en.wikipedia.org/wiki/State_management) handlar om att hitta en bra metod för att lösa dessa två specifika problem:
+Den enkla `account`-variabeln från vår [tidigare lektion](../3-data/README.md) skapar tre betydande problem som påverkar både användarupplevelse och kodunderhåll:
 
-- Hur håller man dataflödena i en app begripliga?
-- Hur håller man state-data alltid synkroniserad med användargränssnittet (och vice versa)?
+| Problem | Teknisk orsak | Användarpåverkan |
+|---------|---------------|------------------|
+| **Sessionförlust** | Siduppdatering rensar JavaScript-variabler | Användare måste autentisera sig ofta |
+| **Spridda uppdateringar** | Flera funktioner ändrar tillstånd direkt | Felsökning blir allt svårare |
+| **Ofullständig rensning** | Utloggning rensar inte alla tillståndsreferenser | Potentiella säkerhets- och integritetsproblem |
 
-När du har tagit hand om dessa kan eventuella andra problem du har antingen redan vara lösta eller ha blivit enklare att lösa. Det finns många möjliga metoder för att lösa dessa problem, men vi kommer att använda en vanlig lösning som består av att **centralisera data och sätt att ändra den**. Dataflödena skulle se ut så här:
+**Den arkitektoniska utmaningen:**
 
-![Schema som visar dataflöden mellan HTML, användaråtgärder och state](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.sv.png)
+Som Titanics fackindelade design som verkade robust tills flera fack fylldes med vatten samtidigt, kommer det inte att lösa de underliggande arkitektoniska problemen att fixa dessa problem individuellt. Vi behöver en omfattande lösning för tillståndshantering.
 
-> Vi kommer inte att täcka den del där data automatiskt triggar uppdatering av vyn, eftersom det är kopplat till mer avancerade koncept inom [Reaktiv Programmering](https://en.wikipedia.org/wiki/Reactive_programming). Det är ett bra ämne att fördjupa sig i om du är intresserad.
+> 💡 **Vad försöker vi egentligen åstadkomma här?**
 
-✅ Det finns många bibliotek där ute med olika metoder för state management, [Redux](https://redux.js.org) är ett populärt alternativ. Ta en titt på koncepten och mönstren som används eftersom det ofta är ett bra sätt att lära sig vilka potentiella problem du kan stöta på i stora webbappar och hur de kan lösas.
+[Tillståndshantering](https://en.wikipedia.org/wiki/State_management) handlar egentligen om att lösa två grundläggande pussel:
 
-### Uppgift
+1. **Var är mina data?**: Hålla reda på vilken information vi har och var den kommer ifrån
+2. **Är alla på samma sida?**: Säkerställa att det användarna ser stämmer överens med vad som faktiskt händer
 
-Vi börjar med lite omstrukturering. Ersätt deklarationen av `account`:
+**Vår plan:**
+
+Istället för att jaga vår egen svans ska vi skapa ett **centraliserat tillståndshanteringssystem**. Tänk på det som att ha en riktigt organiserad person som ansvarar för allt viktigt:
+
+![Schema som visar dataflöden mellan HTML, användaråtgärder och tillstånd](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.sv.png)
+
+**Förstå detta dataflöde:**
+- **Centraliserar** allt applikationstillstånd på en plats
+- **Styr** alla tillståndsförändringar genom kontrollerade funktioner
+- **Säkerställer** att användargränssnittet förblir synkroniserat med det aktuella tillståndet
+- **Tillhandahåller** ett tydligt, förutsägbart mönster för datahantering
+
+> 💡 **Professionell insikt**: Den här lektionen fokuserar på grundläggande koncept. För komplexa applikationer erbjuder bibliotek som [Redux](https://redux.js.org) mer avancerade funktioner för tillståndshantering. Att förstå dessa grundprinciper hjälper dig att bemästra vilket tillståndshanteringsbibliotek som helst.
+
+> ⚠️ **Avancerat ämne**: Vi kommer inte att täcka automatiska UI-uppdateringar som triggas av tillståndsförändringar, eftersom detta involverar koncept från [reaktiv programmering](https://en.wikipedia.org/wiki/Reactive_programming). Se detta som ett utmärkt nästa steg för din lärande resa!
+
+### Uppgift: Centralisera tillståndsstruktur
+
+Låt oss börja med att omvandla vår spridda tillståndshantering till ett centraliserat system. Detta första steg lägger grunden för alla förbättringar som följer.
+
+**Steg 1: Skapa ett centraliserat tillståndsobjekt**
+
+Byt ut den enkla `account`-deklarationen:
 
 ```js
 let account = null;
 ```
 
-Med:
+Mot ett strukturerat tillståndsobjekt:
 
 ```js
 let state = {
@@ -75,27 +120,76 @@ let state = {
 };
 ```
 
-Idén är att *centralisera* all vår appdata i ett enda state-objekt. Vi har bara `account` för tillfället i staten så det förändrar inte mycket, men det skapar en väg för framtida utveckling.
+**Varför denna förändring är viktig:**
+- **Centraliserar** all applikationsdata på en plats
+- **Förbereder** strukturen för att lägga till fler tillståndsegenskaper senare
+- **Skapar** en tydlig gräns mellan tillstånd och andra variabler
+- **Etablerar** ett mönster som skalar när din app växer
 
-Vi måste också uppdatera funktionerna som använder det. I funktionerna `register()` och `login()` ersätt `account = ...` med `state.account = ...`;
+**Steg 2: Uppdatera tillgångsmönster för tillstånd**
 
-Lägg till denna rad högst upp i funktionen `updateDashboard()`:
+Uppdatera dina funktioner för att använda den nya tillståndsstrukturen:
 
+**I funktionerna `register()` och `login()`**, ersätt:
+```js
+account = ...
+```
+
+Med:
+```js
+state.account = ...
+```
+
+**I funktionen `updateDashboard()`**, lägg till denna rad högst upp:
 ```js
 const account = state.account;
 ```
 
-Denna omstrukturering i sig gav inte mycket förbättringar, men idén var att lägga grunden för nästa förändringar.
+**Vad dessa uppdateringar åstadkommer:**
+- **Bibehåller** befintlig funktionalitet samtidigt som strukturen förbättras
+- **Förbereder** din kod för mer sofistikerad tillståndshantering
+- **Skapar** konsekventa mönster för att komma åt tillståndsdata
+- **Etablerar** grunden för centraliserade tillståndsuppdateringar
 
-## Spåra dataändringar
+> 💡 **Notera**: Denna omstrukturering löser inte omedelbart våra problem, men den skapar den nödvändiga grunden för de kraftfulla förbättringar som kommer härnäst!
 
-Nu när vi har infört `state`-objektet för att lagra vår data är nästa steg att centralisera uppdateringarna. Målet är att göra det enklare att hålla reda på alla ändringar och när de sker.
+## Implementera kontrollerade tillståndsuppdateringar
 
-För att undvika att ändringar görs direkt i `state`-objektet är det också en bra praxis att betrakta det som [*oföränderligt*](https://en.wikipedia.org/wiki/Immutable_object), vilket innebär att det inte kan ändras alls. Det innebär också att du måste skapa ett nytt state-objekt om du vill ändra något i det. Genom att göra detta bygger du ett skydd mot potentiellt oönskade [bieffekter](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) och öppnar upp möjligheter för nya funktioner i din app, som att implementera ångra/göra om, samtidigt som det blir enklare att felsöka. Till exempel kan du logga varje ändring som görs i staten och hålla en historik över ändringarna för att förstå källan till ett fel.
+Med vårt tillstånd centraliserat är nästa steg att etablera kontrollerade mekanismer för datamodifikationer. Detta tillvägagångssätt säkerställer förutsägbara tillståndsförändringar och enklare felsökning.
 
-I JavaScript kan du använda [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) för att skapa en oföränderlig version av ett objekt. Om du försöker göra ändringar i ett oföränderligt objekt kommer ett undantag att kastas.
+Den grundläggande principen liknar flygtrafikledning: istället för att tillåta flera funktioner att ändra tillstånd oberoende, kommer vi att kanalisera alla förändringar genom en enda, kontrollerad funktion. Detta mönster ger tydlig översikt över när och hur data ändras.
 
-✅ Vet du skillnaden mellan ett *ytligt* och ett *djupgående* oföränderligt objekt? Du kan läsa om det [här](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+**Oföränderlig tillståndshantering:**
+
+Vi kommer att behandla vårt `state`-objekt som [*oföränderligt*](https://en.wikipedia.org/wiki/Immutable_object), vilket innebär att vi aldrig ändrar det direkt. Istället skapar varje förändring ett nytt tillståndsobjekt med de uppdaterade data.
+
+Även om detta tillvägagångssätt initialt kan verka ineffektivt jämfört med direkta ändringar, ger det betydande fördelar för felsökning, testning och att upprätthålla applikationens förutsägbarhet.
+
+**Fördelar med oföränderlig tillståndshantering:**
+
+| Fördel | Beskrivning | Påverkan |
+|--------|-------------|----------|
+| **Förutsägbarhet** | Förändringar sker endast genom kontrollerade funktioner | Lättare att felsöka och testa |
+| **Historikspårning** | Varje tillståndsförändring skapar ett nytt objekt | Möjliggör ångra/göra om-funktionalitet |
+| **Förebyggande av sidoeffekter** | Inga oavsiktliga ändringar | Förhindrar mystiska buggar |
+| **Prestandaoptimering** | Lätt att upptäcka när tillstånd faktiskt ändrades | Möjliggör effektiva UI-uppdateringar |
+
+**JavaScript-oföränderlighet med `Object.freeze()`:**
+
+JavaScript tillhandahåller [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) för att förhindra objektmodifikationer:
+
+```js
+const immutableState = Object.freeze({ account: userData });
+// Any attempt to modify immutableState will throw an error
+```
+
+**Vad som händer här:**
+- **Förhindrar** direkta egenskapsändringar eller borttagningar
+- **Kastar** undantag vid försök till modifikation
+- **Säkerställer** att tillståndsförändringar måste gå genom kontrollerade funktioner
+- **Skapar** ett tydligt kontrakt för hur tillstånd kan uppdateras
+
+> 💡 **Fördjupning**: Läs om skillnaden mellan *ytlig* och *djup* oföränderlighet i [MDN-dokumentationen](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Att förstå denna skillnad är avgörande för komplexa tillståndsstrukturer.
 
 ### Uppgift
 
@@ -110,9 +204,9 @@ function updateState(property, newData) {
 }
 ```
 
-I denna funktion skapar vi ett nytt state-objekt och kopierar data från det tidigare state med hjälp av [*spridningsoperatorn (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Sedan skriver vi över en specifik egenskap i state-objektet med den nya datan med hjälp av [haknotationen](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` för tilldelning. Slutligen låser vi objektet för att förhindra ändringar med `Object.freeze()`. Vi har bara egenskapen `account` lagrad i staten för tillfället, men med denna metod kan du lägga till så många egenskaper som du behöver i staten.
+I denna funktion skapar vi ett nytt tillståndsobjekt och kopierar data från det tidigare tillståndet med hjälp av [*spridningsoperatorn (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Sedan skriver vi över en specifik egenskap i tillståndsobjektet med de nya data med hjälp av [haknotation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` för tilldelning. Slutligen låser vi objektet för att förhindra modifikationer med `Object.freeze()`. Vi har bara egenskapen `account` lagrad i tillståndet för tillfället, men med detta tillvägagångssätt kan du lägga till så många egenskaper som du behöver i tillståndet.
 
-Vi kommer också att uppdatera initialiseringen av `state` för att säkerställa att det initiala state är fryst också:
+Vi kommer också att uppdatera initialiseringen av `state` för att säkerställa att det initiala tillståndet också är låst:
 
 ```js
 let state = Object.freeze({
@@ -132,7 +226,7 @@ Gör samma sak med funktionen `login`, ersätt `state.account = data;` med:
 updateState('account', data);
 ```
 
-Vi tar nu tillfället i akt att lösa problemet med att kontodata inte rensas när användaren klickar på *Logga ut*.
+Vi tar nu tillfället i akt att åtgärda problemet med att kontodata inte rensas när användaren klickar på *Logga ut*.
 
 Skapa en ny funktion `logout()`:
 
@@ -143,49 +237,105 @@ function logout() {
 }
 ```
 
-I `updateDashboard()`, ersätt omdirigeringen `return navigate('/login');` med `return logout();`
+I `updateDashboard()`, ersätt omdirigeringen `return navigate('/login');` med `return logout();`;
 
-Försök att registrera ett nytt konto, logga ut och logga in igen för att kontrollera att allt fortfarande fungerar korrekt.
+Prova att registrera ett nytt konto, logga ut och in igen för att kontrollera att allt fortfarande fungerar korrekt.
 
-> Tips: du kan titta på alla state-ändringar genom att lägga till `console.log(state)` längst ner i `updateState()` och öppna konsolen i din webbläsares utvecklingsverktyg.
+> Tips: Du kan titta på alla tillståndsförändringar genom att lägga till `console.log(state)` längst ner i `updateState()` och öppna konsolen i webbläsarens utvecklingsverktyg.
 
-## Spara staten
+## Implementera databevarande
 
-De flesta webbappar behöver spara data för att kunna fungera korrekt. All kritisk data lagras vanligtvis i en databas och nås via ett server-API, som användarkontodata i vårt fall. Men ibland kan det också vara intressant att spara viss data i klientappen som körs i din webbläsare, för en bättre användarupplevelse eller för att förbättra laddningsprestandan.
+Problemet med sessionförlust som vi identifierade tidigare kräver en bevarandelösning som upprätthåller användartillstånd över webbläsarsessioner. Detta förvandlar vår applikation från en tillfällig upplevelse till ett pålitligt, professionellt verktyg.
 
-När du vill spara data i din webbläsare finns det några viktiga frågor du bör ställa dig:
+Tänk på hur atomklockor bibehåller exakt tid även vid strömavbrott genom att lagra kritiskt tillstånd i icke-flyktigt minne. På samma sätt behöver webbapplikationer persistenta lagringsmekanismer för att bevara viktig användardata över webbläsarsessioner och siduppdateringar.
 
-- *Är datan känslig?* Du bör undvika att lagra känslig data på klienten, såsom användarlösenord.
-- *Hur länge behöver du behålla denna data?* Planerar du att använda denna data endast för den aktuella sessionen eller vill du att den ska lagras för alltid?
+**Strategiska frågor för databevarande:**
 
-Det finns flera sätt att lagra information i en webbapp, beroende på vad du vill uppnå. Till exempel kan du använda URL:er för att lagra en sökfråga och göra den delbar mellan användare. Du kan också använda [HTTP-cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies) om datan behöver delas med servern, som [autentiseringsinformation](https://en.wikipedia.org/wiki/Authentication).
+Innan du implementerar bevarande, överväg dessa kritiska faktorer:
 
-Ett annat alternativ är att använda en av de många webbläsar-API:erna för att lagra data. Två av dem är särskilt intressanta:
+| Fråga | Bankappens kontext | Beslutsinverkan |
+|-------|--------------------|-----------------|
+| **Är datan känslig?** | Kontosaldo, transaktionshistorik | Välj säkra lagringsmetoder |
+| **Hur länge ska det bevaras?** | Inloggningsstatus vs. tillfälliga UI-inställningar | Välj lämplig lagringsvaraktighet |
+| **Behöver servern det?** | Autentiseringstoken vs. UI-inställningar | Bestäm delningskrav |
 
-- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): en [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) som gör det möjligt att spara data specifik för den aktuella webbplatsen över olika sessioner. Datan som sparas i den upphör aldrig.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): denna fungerar på samma sätt som `localStorage` förutom att datan som lagras i den rensas när sessionen avslutas (när webbläsaren stängs).
+**Webbläsarens lagringsalternativ:**
 
-Observera att båda dessa API:er endast tillåter att lagra [strängar](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Om du vill lagra komplexa objekt måste du serialisera dem till [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON)-formatet med [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Moderna webbläsare tillhandahåller flera lagringsmekanismer, var och en designad för olika användningsområden:
 
-✅ Om du vill skapa en webbapp som inte fungerar med en server är det också möjligt att skapa en databas på klienten med [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Detta är reserverat för avancerade användningsfall eller om du behöver lagra betydande mängder data, eftersom det är mer komplext att använda.
+**Primära lagrings-API:er:**
 
-### Uppgift
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Persistent [Nyckel/Värde-lagring](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Bevarar** data över webbläsarsessioner på obestämd tid  
+   - **Överlever** webbläsaromstarter och datoromstarter
+   - **Avgränsad** till den specifika webbplatsens domän
+   - **Perfekt** för användarinställningar och inloggningsstatus
 
-Vi vill att våra användare ska förbli inloggade tills de uttryckligen klickar på *Logga ut*-knappen, så vi kommer att använda `localStorage` för att lagra kontodata. Först, låt oss definiera en nyckel som vi kommer att använda för att lagra vår data.
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Tillfällig sessionslagring
+   - **Fungerar** identiskt med localStorage under aktiva sessioner
+   - **Rensas** automatiskt när webbläsarfliken stängs
+   - **Idealisk** för tillfälliga data som inte bör bevaras
+
+3. **[HTTP Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Serverdelad lagring
+   - **Skickas automatiskt** med varje serverförfrågan
+   - **Perfekt** för [autentisering](https://en.wikipedia.org/wiki/Authentication)stoken
+   - **Begränsad** i storlek och kan påverka prestanda
+
+**Krav på dataserialisering:**
+
+Både `localStorage` och `sessionStorage` lagrar endast [strängar](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String):
+
+```js
+// Convert objects to JSON strings for storage
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parse JSON strings back to objects when retrieving
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Förstå serialisering:**
+- **Konverterar** JavaScript-objekt till JSON-strängar med [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- **Återskapar** objekt från JSON med [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- **Hanterar** komplexa, inbäddade objekt och arrayer automatiskt
+- **Misslyckas** med funktioner, odefinierade värden och cirkulära referenser
+> 💡 **Avancerat alternativ**: För komplexa offline-applikationer med stora dataset, överväg att använda [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Det erbjuder en fullständig databas på klientsidan men kräver en mer komplex implementation.
+
+### Uppgift: Implementera localStorage-persistens
+
+Låt oss implementera en persistent lagring så att användare förblir inloggade tills de uttryckligen loggar ut. Vi kommer att använda `localStorage` för att lagra kontodata mellan webbläsarsessioner.
+
+**Steg 1: Definiera lagringskonfiguration**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Lägg sedan till denna rad i slutet av funktionen `updateState()`:
+**Vad denna konstant tillhandahåller:**
+- **Skapar** en konsekvent identifierare för vår lagrade data
+- **Förhindrar** skrivfel i referenser till lagringsnycklar
+- **Gör** det enkelt att ändra lagringsnyckeln vid behov
+- **Följer** bästa praxis för underhållbar kod
+
+**Steg 2: Lägg till automatisk persistens**
+
+Lägg till denna rad i slutet av funktionen `updateState()`:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-Med detta kommer användarkontodata att sparas och alltid vara uppdaterad eftersom vi tidigare centraliserade alla våra state-uppdateringar. Det är här vi börjar dra nytta av alla våra tidigare omstruktureringar 🙂.
+**Genomgång av vad som händer här:**
+- **Konverterar** kontoobjektet till en JSON-sträng för lagring
+- **Sparar** datan med vår konsekventa lagringsnyckel
+- **Utförs** automatiskt när tillståndsändringar sker
+- **Säkerställer** att lagrad data alltid är synkroniserad med aktuellt tillstånd
 
-Eftersom datan sparas måste vi också ta hand om att återställa den när appen laddas. Eftersom vi börjar få mer initialiseringskod kan det vara en bra idé att skapa en ny `init`-funktion, som också inkluderar vår tidigare kod längst ner i `app.js`:
+> 💡 **Arkitektonisk fördel**: Eftersom vi centraliserade alla tillståndsuppdateringar via `updateState()`, krävdes endast en rad kod för att lägga till persistens. Detta visar styrkan i goda arkitektoniska beslut!
+
+**Steg 3: Återställ tillstånd vid appstart**
+
+Skapa en initialiseringsfunktion för att återställa sparad data:
 
 ```js
 function init() {
@@ -202,17 +352,49 @@ function init() {
 init();
 ```
 
-Här hämtar vi den sparade datan, och om det finns någon uppdaterar vi staten därefter. Det är viktigt att göra detta *innan* vi uppdaterar routen, eftersom det kan finnas kod som förlitar sig på staten under siduppdateringen.
+**Förståelse för initialiseringsprocessen:**
+- **Hämtar** tidigare sparad kontodata från localStorage
+- **Parserar** JSON-strängen tillbaka till ett JavaScript-objekt
+- **Uppdaterar** tillståndet med vår kontrollerade uppdateringsfunktion
+- **Återställer** användarens session automatiskt vid sidladdning
+- **Utförs** innan ruttuppdateringar för att säkerställa att tillståndet är tillgängligt
 
-Vi kan också göra *Dashboard*-sidan till vår applikations standardsida, eftersom vi nu sparar kontodata. Om ingen data hittas tar instrumentpanelen hand om att omdirigera till *Login*-sidan ändå. I `updateRoute()`, ersätt fallbacken `return navigate('/login');` med `return navigate('/dashboard');`.
+**Steg 4: Optimera standardrutt**
 
-Logga nu in i appen och försök att uppdatera sidan. Du bör stanna kvar på instrumentpanelen. Med den uppdateringen har vi tagit hand om alla våra ursprungliga problem...
+Uppdatera standardrutten för att dra nytta av persistens:
 
-## Uppdatera datan
+I `updateRoute()`, ersätt:
+```js
+// Replace: return navigate('/login');
+return navigate('/dashboard');
+```
 
-...Men vi kan också ha skapat ett nytt problem. Oops!
+**Varför denna ändring är logisk:**
+- **Utnyttjar** vårt nya persistenssystem effektivt
+- **Tillåter** dashboarden att hantera autentiseringskontroller
+- **Omdirigerar** automatiskt till inloggning om ingen sparad session finns
+- **Skapar** en mer sömlös användarupplevelse
 
-Gå till instrumentpanelen med kontot `test`, kör sedan detta kommando i en terminal för att skapa en ny transaktion:
+**Testa din implementation:**
+
+1. Logga in på din bankapp
+2. Uppdatera webbläsarsidan
+3. Verifiera att du förblir inloggad och på dashboarden
+4. Stäng och öppna webbläsaren igen
+5. Navigera tillbaka till din app och bekräfta att du fortfarande är inloggad
+
+🎉 **Prestation uppnådd**: Du har framgångsrikt implementerat persistent tillståndshantering! Din app beter sig nu som en professionell webbapplikation.
+
+## Balans mellan persistens och dataintegritet
+
+Vårt persistenssystem upprätthåller användarsessioner framgångsrikt, men introducerar en ny utmaning: data som blir inaktuell. När flera användare eller applikationer ändrar samma serverdata blir lokal cache-information föråldrad.
+
+Denna situation liknar vikinganavigatörer som förlitade sig på både lagrade stjärnkartor och aktuella observationer av himlakroppar. Kartorna gav konsistens, men navigatörerna behövde färska observationer för att ta hänsyn till förändrade förhållanden. På samma sätt behöver vår applikation både persistent användartillstånd och aktuell serverdata.
+
+**🧪 Upptäck problemet med inaktuell data:**
+
+1. Logga in på dashboarden med kontot `test`
+2. Kör detta kommando i en terminal för att simulera en transaktion från en annan källa:
 
 ```sh
 curl --request POST \
@@ -221,15 +403,31 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Försök att uppdatera din instrumentpanelsida i webbläsaren nu. Vad händer? Ser du den nya transaktionen?
+3. Uppdatera din dashboard-sida i webbläsaren
+4. Observera om du ser den nya transaktionen
 
-Staten sparas på obestämd tid tack vare `localStorage`, men det betyder också att den aldrig uppdateras förrän du loggar ut från appen och loggar in igen!
+**Vad detta test visar:**
+- **Visar** hur localStorage kan bli "föråldrad" (inaktuell)
+- **Simulerar** verkliga scenarier där dataändringar sker utanför din app
+- **Avslöjar** spänningen mellan persistens och dataintegritet
 
-En möjlig strategi för att lösa detta är att ladda om kontodatan varje gång instrumentpanelen laddas, för att undvika föråldrad data.
+**Utmaningen med inaktuell data:**
 
-### Uppgift
+| Problem | Orsak | Användarpåverkan |
+|---------|-------|------------------|
+| **Föråldrad data** | localStorage löper aldrig ut automatiskt | Användare ser inaktuell information |
+| **Serverändringar** | Andra appar/användare ändrar samma data | Inkonsekventa vyer över plattformar |
+| **Cache vs. verklighet** | Lokal cache matchar inte serverns tillstånd | Dålig användarupplevelse och förvirring |
 
-Skapa en ny funktion `updateAccountData`:
+**Lösningsstrategi:**
+
+Vi kommer att implementera ett "uppdatera vid laddning"-mönster som balanserar fördelarna med persistens med behovet av aktuell data. Denna metod bibehåller en smidig användarupplevelse samtidigt som den säkerställer datanoggrannhet.
+
+### Uppgift: Implementera datauppdateringssystem
+
+Vi kommer att skapa ett system som automatiskt hämtar färsk data från servern samtidigt som vi behåller fördelarna med vår persistenta tillståndshantering.
+
+**Steg 1: Skapa en uppdateringsfunktion för kontodata**
 
 ```js
 async function updateAccountData() {
@@ -247,9 +445,15 @@ async function updateAccountData() {
 }
 ```
 
-Denna metod kontrollerar att vi för närvarande är inloggade och laddar sedan om kontodatan från servern.
+**Förstå logiken i denna funktion:**
+- **Kontrollerar** om en användare för närvarande är inloggad (state.account finns)
+- **Omdirigerar** till utloggning om ingen giltig session hittas
+- **Hämtar** färsk kontodata från servern med den befintliga funktionen `getAccount()`
+- **Hanterar** serverfel på ett smidigt sätt genom att logga ut ogiltiga sessioner
+- **Uppdaterar** tillståndet med färsk data via vårt kontrollerade uppdateringssystem
+- **Triggar** automatisk localStorage-persistens via funktionen `updateState()`
 
-Skapa en annan funktion som heter `refresh`:
+**Steg 2: Skapa en uppdateringshanterare för dashboarden**
 
 ```js
 async function refresh() {
@@ -258,7 +462,15 @@ async function refresh() {
 }
 ```
 
-Denna uppdaterar kontodatan och tar sedan hand om att uppdatera HTML:en på instrumentpanelsidan. Det är vad vi behöver kalla på när instrumentpanelens route laddas. Uppdatera routedefinitionen med:
+**Vad denna uppdateringsfunktion åstadkommer:**
+- **Samordnar** datauppdatering och UI-uppdateringsprocessen
+- **Väntar** på att färsk data ska laddas innan displayen uppdateras
+- **Säkerställer** att dashboarden visar den mest aktuella informationen
+- **Bibehåller** en tydlig separation mellan datahantering och UI-uppdateringar
+
+**Steg 3: Integrera med ruttsystemet**
+
+Uppdatera din ruttkonfiguration för att trigga uppdatering automatiskt:
 
 ```js
 const routes = {
@@ -267,28 +479,69 @@ const routes = {
 };
 ```
 
-Försök att ladda om instrumentpanelen nu, den bör visa den uppdaterade kontodatan.
+**Hur denna integration fungerar:**
+- **Utför** uppdateringsfunktionen varje gång dashboard-rutten laddas
+- **Säkerställer** att färsk data alltid visas när användare navigerar till dashboarden
+- **Bibehåller** den befintliga ruttstrukturen samtidigt som dataintegritet läggs till
+- **Tillhandahåller** ett konsekvent mönster för rutt-specifik initialisering
 
----
+**Testa ditt datauppdateringssystem:**
 
-## 🚀 Utmaning
+1. Logga in på din bankapp
+2. Kör curl-kommandot från tidigare för att skapa en ny transaktion
+3. Uppdatera din dashboard-sida eller navigera bort och tillbaka
+4. Verifiera att den nya transaktionen visas omedelbart
 
-Nu när vi laddar om kontodatan varje gång instrumentpanelen laddas, tror du att vi fortfarande behöver spara *hela kontodatan*?
+🎉 **Perfekt balans uppnådd**: Din app kombinerar nu den smidiga upplevelsen av persistent tillstånd med noggrannheten hos färsk serverdata!
 
-Försök att arbeta tillsammans för att ändra vad som sparas och laddas från `localStorage` till att endast inkludera det som är absolut nödvändigt för att appen ska fungera.
+## GitHub Copilot Agent-utmaning 🚀
 
-## Efterföreläsningsquiz
+Använd Agent-läget för att slutföra följande utmaning:
+
+**Beskrivning:** Implementera ett omfattande tillståndshanteringssystem med ångra/gör om-funktionalitet för bankappen. Denna utmaning hjälper dig att öva på avancerade koncept inom tillståndshantering, inklusive historikspårning, immutabla uppdateringar och synkronisering av användargränssnittet.
+
+**Prompt:** Skapa ett förbättrat tillståndshanteringssystem som inkluderar: 1) En historikarray som spårar alla tidigare tillstånd, 2) Ångra och gör om-funktioner som kan återgå till tidigare tillstånd, 3) UI-knappar för ångra/gör om-operationer på dashboarden, 4) En maximal historikgräns på 10 tillstånd för att förhindra minnesproblem, och 5) Rätt städning av historik när användaren loggar ut. Säkerställ att ångra/gör om-funktionaliteten fungerar med kontosaldoförändringar och kvarstår över webbläsaruppdateringar.
+
+Läs mer om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.
+
+## 🚀 Utmaning: Lagringsoptimering
+
+Din implementation hanterar nu användarsessioner, datauppdateringar och tillståndshantering effektivt. Men överväg om vår nuvarande metod optimalt balanserar lagringseffektivitet med funktionalitet.
+
+Precis som schackmästare som skiljer mellan viktiga pjäser och utbytbara bönder, kräver effektiv tillståndshantering att man identifierar vilken data som måste bevaras kontra vilken som alltid bör hämtas färsk från servern.
+
+**Optimeringsanalys:**
+
+Utvärdera din nuvarande localStorage-implementation och överväg dessa strategiska frågor:
+- Vilken är den minsta informationen som krävs för att upprätthålla användarautentisering?
+- Vilken data ändras tillräckligt ofta för att lokal caching ger liten nytta?
+- Hur kan lagringsoptimering förbättra prestanda utan att försämra användarupplevelsen?
+
+**Implementeringsstrategi:**
+- **Identifiera** den väsentliga data som måste bevaras (troligen bara användaridentifiering)
+- **Modifiera** din localStorage-implementation för att endast lagra kritisk sessionsdata
+- **Säkerställ** att färsk data alltid hämtas från servern vid dashboardbesök
+- **Testa** att din optimerade metod bibehåller samma användarupplevelse
+
+**Avancerad övervägning:**
+- **Jämför** avvägningarna mellan att lagra fullständig kontodata kontra endast autentiseringstokens
+- **Dokumentera** dina beslut och resonemang för framtida teammedlemmar
+
+Denna utmaning hjälper dig att tänka som en professionell utvecklare som överväger både användarupplevelse och applikationseffektivitet. Ta dig tid att experimentera med olika tillvägagångssätt!
+
+## Quiz efter föreläsningen
+
 [Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Uppgift
 
 [Implementera dialogen "Lägg till transaktion"](assignment.md)
 
-Här är ett exempel på resultat efter att ha slutfört uppgiften:
+Här är ett exempelresultat efter att ha slutfört uppgiften:
 
 ![Skärmdump som visar ett exempel på dialogen "Lägg till transaktion"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.sv.png)
 
 ---
 
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.

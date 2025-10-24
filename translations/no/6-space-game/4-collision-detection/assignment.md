@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a0a097b45e7c75a611e2795e4013f16",
-  "translation_date": "2025-08-26T22:04:32+00:00",
+  "original_hash": "124efddbb65166cddb38075ad6dae324",
+  "translation_date": "2025-10-23T22:37:43+00:00",
   "source_file": "6-space-game/4-collision-detection/assignment.md",
   "language_code": "no"
 }
@@ -11,15 +11,52 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Instruksjoner
 
-For å bedre forstå hvordan kollisjoner fungerer, lag et veldig lite spill med noen få elementer som kolliderer. Få dem til å bevege seg via tastetrykk eller museklikk, og få noe til å skje med ett av elementene når det blir truffet. Det kan være noe som en meteor som treffer jorden, eller radiobiler. Vær kreativ!
+Bruk kunnskapen din om kollisjonsdeteksjon ved å lage et tilpasset mini-spill som demonstrerer ulike typer objektinteraksjoner. Denne oppgaven vil hjelpe deg å forstå kollisjonsmekanikk gjennom kreativ implementering og eksperimentering.
+
+### Prosjektkrav
+
+**Lag et lite interaktivt spill som inneholder:**
+- **Flere bevegelige objekter** som kan kontrolleres via tastatur eller museinngang
+- **Kollisjonsdeteksjonssystem** basert på prinsippene for rektangelinterseksjon fra leksjonen
+- **Visuell tilbakemelding** når kollisjoner oppstår (objektdestruksjon, fargeendringer, effekter)
+- **Spilleregler** som gjør kollisjoner meningsfulle og engasjerende
+
+### Kreative forslag
+
+**Vurder å implementere ett av disse scenarioene:**
+- **Asteroidefelt**: Naviger et skip gjennom farlig romskrot
+- **Radiobiler**: Lag en arena med kollisjoner basert på fysikk
+- **Meteorforsvar**: Beskytt jorden mot innkommende romsteiner
+- **Samlespill**: Samle gjenstander mens du unngår hindringer
+- **Territoriekontroll**: Konkurrerende objekter som prøver å ta kontroll over områder
+
+### Teknisk implementering
+
+**Løsningen din bør demonstrere:**
+- Riktig bruk av rektangelbasert kollisjonsdeteksjon
+- Hendelsesdrevet programmering for brukerinngang
+- Objektlivssyklusadministrasjon (opprettelse og destruksjon)
+- Ren kodeorganisering med passende klassestruktur
+
+### Ekstra utfordringer
+
+**Forbedre spillet ditt med ekstra funksjoner:**
+- **Partikkeffekter** når kollisjoner oppstår
+- **Lyd effekter** for ulike kollisjonstyper
+- **Poengsystem** basert på kollisjonsresultater
+- **Flere kollisjonstyper** med forskjellige oppførsel
+- **Progressiv vanskelighetsgrad** som øker over tid
 
 ## Vurderingskriterier
 
-| Kriterier | Eksemplarisk                                                                                                           | Tilfredsstillende              | Trenger forbedring |
-| --------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------ |
-|           | Komplett fungerende kodeeksempel er produsert, med elementer tegnet på lerretet, grunnleggende kollisjoner og reaksjoner | Koden er ufullstendig på noen måte | Koden fungerer ikke |
+| Kriterier | Fremragende | Tilfredsstillende | Trenger forbedring |
+|-----------|-------------|-------------------|--------------------|
+| **Kollisjonsdeteksjon** | Implementerer nøyaktig rektangelbasert kollisjonsdeteksjon med flere objekttyper og sofistikerte interaksjonsregler | Grunnleggende kollisjonsdeteksjon fungerer korrekt med enkle objektinteraksjoner | Kollisjonsdeteksjon har problemer eller fungerer ikke konsekvent |
+| **Kodekvalitet** | Ren, godt organisert kode med riktig klassestruktur, meningsfulle variabelnavn og passende kommentarer | Koden fungerer, men kan være bedre organisert eller dokumentert | Koden er vanskelig å forstå eller dårlig strukturert |
+| **Brukerinteraksjon** | Responsive kontroller med jevn spillopplevelse, tydelig visuell tilbakemelding og engasjerende mekanikk | Grunnleggende kontroller fungerer med tilstrekkelig tilbakemelding | Kontroller er lite responsive eller forvirrende |
+| **Kreativitet** | Originalt konsept med unike funksjoner, visuell polering og innovative kollisjonsoppførsel | Standard implementering med noen kreative elementer | Grunnleggende funksjonalitet uten kreative forbedringer |
 
 ---
 
 **Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
