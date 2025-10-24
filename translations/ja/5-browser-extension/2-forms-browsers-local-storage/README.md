@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-28T17:51:13+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-24T15:18:18+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "ja"
 }
 -->
-# ブラウザ拡張プロジェクト パート2: APIの呼び出しとローカルストレージの使用
+# ブラウザー拡張プロジェクト パート2: APIを呼び出し、ローカルストレージを使用する
 
 ## 講義前クイズ
 
 [講義前クイズ](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### はじめに
+## はじめに
 
-このレッスンでは、ブラウザ拡張のフォームを送信してAPIを呼び出し、その結果をブラウザ拡張内に表示する方法を学びます。また、ブラウザのローカルストレージにデータを保存し、後で参照・使用する方法についても学びます。
+以前作り始めたブラウザー拡張を覚えていますか？現在は見た目の良いフォームができていますが、基本的には静的な状態です。今日は、実際のデータに接続し、記憶を持たせることでこれを活性化させます。
+
+アポロ計画のミッションコントロールコンピューターを考えてみてください。固定情報を表示するだけではありませんでした。宇宙船と絶えず通信し、テレメトリーデータを更新し、重要なミッションパラメーターを記憶していました。今日はそのような動的な動作を構築します。あなたの拡張機能はインターネットにアクセスし、実際の環境データを取得し、次回のために設定を記憶します。
+
+API統合は複雑に聞こえるかもしれませんが、実際にはコードに他のサービスと通信する方法を教えるだけです。天気データ、ソーシャルメディアフィード、または今日扱う炭素排出量情報を取得する場合でも、すべてこれらのデジタル接続を確立することに関するものです。また、ブラウザーが情報を保持する方法についても探ります。これは、図書館がカードカタログを使用して本の場所を記憶していた方法に似ています。
+
+このレッスンの終わりまでに、実際のデータを取得し、ユーザーの設定を保存し、スムーズな体験を提供するブラウザー拡張機能を作成できるようになります。それでは始めましょう！
 
 ✅ 適切なファイル内の番号付きセグメントに従ってコードを配置してください。
 
-### 拡張機能で操作する要素を設定する
+## 拡張機能で操作する要素を設定する
 
-ここまでで、ブラウザ拡張のフォームと結果を表示する`<div>`のHTMLを作成しました。これ以降は、`/src/index.js`ファイルで作業を進め、拡張機能を少しずつ構築していきます。プロジェクトのセットアップやビルドプロセスについては[前回のレッスン](../1-about-browsers/README.md)を参照してください。
+JavaScriptがインターフェースを操作する前に、特定のHTML要素への参照が必要です。これは、望遠鏡が特定の星に向けられる必要があるのと似ています。ガリレオが木星の衛星を研究する前に、まず木星を見つけて焦点を合わせる必要がありました。
 
-`index.js`ファイルで作業を開始し、まず各フィールドに関連付けられた値を保持するための`const`変数を作成します。
+`index.js`ファイル内で、重要なフォーム要素への参照をキャプチャする`const`変数を作成します。これは、科学者が機器にラベルを付ける方法に似ています。実験室全体を毎回検索する代わりに、必要なものに直接アクセスできます。
 
-```JavaScript
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,194 +47,267 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-これらのフィールドは、前回のレッスンでHTMLで設定したCSSクラスによって参照されます。
+**このコードが行うこと:**
+- **キャプチャ**: CSSクラスセレクターを使用して`document.querySelector()`でフォーム要素を取得
+- **作成**: 地域名とAPIキーの入力フィールドへの参照を作成
+- **接続**: 炭素使用量データの結果表示要素への接続を確立
+- **設定**: ローディングインジケーターやエラーメッセージなどのUI要素へのアクセスを設定
+- **保存**: 各要素参照を`const`変数に保存し、コード全体で簡単に再利用可能にする
 
-### リスナーを追加する
+## イベントリスナーを追加する
 
-次に、フォームとリセットボタンにイベントリスナーを追加します。これにより、ユーザーがフォームを送信したりリセットボタンをクリックしたりすると何かが起こります。また、ファイルの末尾にアプリを初期化する呼び出しを追加します。
+次に、拡張機能がユーザーの操作に応答するようにします。イベントリスナーは、ユーザーの操作を監視するコードの方法です。これは、初期の電話交換機のオペレーターのようなものです。彼らは着信を聞き、誰かが接続を希望したときに適切な回線をつなげました。
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ フォーム送信やクリックイベントをリスニングするための簡略化された記述方法に注目してください。このイベントがhandleSubmitやreset関数に渡される仕組みを確認できます。この簡略化された記述を長い形式で書き換えることはできますか？どちらの形式が好みですか？
+**これらの概念を理解する:**
+- **添付**: ユーザーがEnterキーを押すか送信ボタンをクリックしたときにトリガーされるフォームの送信リスナーを添付
+- **接続**: フォームをリセットするためのクリアボタンにクリックリスナーを接続
+- **渡す**: イベントオブジェクト`(e)`をハンドラ関数に渡して追加の制御を可能にする
+- **呼び出し**: 拡張機能の初期状態を設定するために`init()`関数を即座に呼び出す
 
-### init()関数とreset()関数を構築する
+✅ ここで使用されている簡潔なアロー関数構文に注目してください。このモダンなJavaScriptアプローチは従来の関数式よりも簡潔ですが、どちらも同様に機能します！
 
-次に、拡張機能を初期化する関数であるinit()を構築します。
+## 初期化とリセット関数を構築する
 
-```JavaScript
+拡張機能の初期化ロジックを作成しましょう。`init()`関数は、船のナビゲーションシステムが計器をチェックするようなものです。現在の状態を判断し、それに応じてインターフェースを調整します。誰かが以前に拡張機能を使用したかどうかを確認し、以前の設定をロードします。
+
+`reset()`関数は、ユーザーに新しいスタートを提供します。これは、科学者が実験間で計器をリセットしてクリーンなデータを確保する方法に似ています。
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-この関数には興味深いロジックがあります。内容を読み解いてみてください。
+**ここで何が起こっているかを分解する:**
+- **取得**: ブラウザーのローカルストレージから保存されたAPIキーと地域を取得
+- **確認**: 初めてのユーザー（保存された資格情報がない）か、リピーターかを確認
+- **表示**: 新しいユーザーにはセットアップフォームを表示し、他のインターフェース要素を非表示にする
+- **ロード**: リピーターには保存されたデータを自動的にロードし、リセットオプションを表示
+- **管理**: 利用可能なデータに基づいてユーザーインターフェースの状態を管理
 
-- 2つの`const`が設定され、ユーザーがローカルストレージにAPIKeyと地域コードを保存しているかどうかを確認します。
-- どちらかがnullの場合、フォームのスタイルを変更して表示を'block'にします。
-- 結果、ローディング、clearBtnを非表示にし、エラーテキストを空文字列に設定します。
-- キーと地域が存在する場合、以下のルーチンを開始します：
-  - APIを呼び出して炭素使用量データを取得
-  - 結果エリアを非表示
-  - フォームを非表示
-  - リセットボタンを表示
+**ローカルストレージに関する重要な概念:**
+- **保持**: ブラウザーセッション間でデータを保持（セッションストレージとは異なる）
+- **保存**: `getItem()`と`setItem()`を使用してキーと値のペアとしてデータを保存
+- **返す**: 指定されたキーにデータが存在しない場合は`null`を返す
+- **提供**: ユーザーの設定や好みを記憶する簡単な方法を提供
 
-次に進む前に、ブラウザで利用可能な非常に重要な概念について学ぶことが役立ちます：[LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)。LocalStorageは、ブラウザ内で文字列を`key-value`ペアとして保存する便利な方法です。このタイプのウェブストレージは、JavaScriptを使用してブラウザ内のデータを管理するために操作できます。LocalStorageは期限切れになりませんが、もう一つの種類であるSessionStorageはブラウザを閉じるとクリアされます。これらのストレージの種類には、それぞれ利点と欠点があります。
+> 💡 **ブラウザーストレージの理解**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)は、拡張機能に永続的な記憶を与えるようなものです。古代のアレクサンドリア図書館が巻物を保存していたように、情報は学者が去って戻ってきても利用可能なままでした。
+>
+> **主な特徴:**
+> - **保持**: ブラウザーを閉じた後もデータを保持
+> - **生き残る**: コンピューターの再起動やブラウザーのクラッシュ後もデータを保持
+> - **提供**: ユーザーの設定に十分なストレージスペース
+> - **即時アクセス**: ネットワーク遅延なしでアクセス可能
 
-> 注意 - ブラウザ拡張には独自のローカルストレージがあります。メインブラウザウィンドウは別のインスタンスであり、別々に動作します。
+> **重要な注意点**: ブラウザー拡張機能には、通常のウェブページとは別の独立したローカルストレージがあります。これによりセキュリティが向上し、他のウェブサイトとの競合を防ぎます。
 
-APIKeyを文字列値として設定すると、Edgeで「ウェブページを検査」することで確認できます（ブラウザを右クリックして検査を選択）。その後、アプリケーションタブに移動してストレージを確認します。
+保存されたデータは、ブラウザーの開発者ツール（F12）を開き、**Application**タブに移動して**Local Storage**セクションを展開することで確認できます。
 
 ![ローカルストレージペイン](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.ja.png)
 
-✅ LocalStorageにデータを保存しない方が良い状況について考えてみてください。一般的に、APIキーをLocalStorageに保存するのは良くないアイデアです！その理由がわかりますか？今回の場合、アプリは学習目的のみで使用され、アプリストアに公開されることはないため、この方法を使用します。
+> ⚠️ **セキュリティに関する考慮事項**: 実際のアプリケーションでは、LocalStorageにAPIキーを保存することはセキュリティ上のリスクを伴います。JavaScriptがこのデータにアクセスできるためです。学習目的ではこの方法で問題ありませんが、実際のアプリケーションでは、機密性の高い資格情報を安全なサーバー側ストレージに保存する必要があります。
 
-Web APIを使用してLocalStorageを操作する際には、`getItem()`、`setItem()`、または`removeItem()`を使用します。これらはほとんどのブラウザで広くサポートされています。
+## フォーム送信を処理する
 
-`displayCarbonUsage()`関数を構築する前に、初期フォーム送信を処理する機能を構築しましょう。
+次に、フォームが送信されたときに何が起こるかを処理します。デフォルトでは、ブラウザーはフォームが送信されるとページをリロードしますが、この動作をインターセプトしてスムーズな体験を作り出します。
 
-### フォーム送信を処理する
+このアプローチは、ミッションコントロールが宇宙船との通信を処理する方法に似ています。各送信のたびにシステム全体をリセットするのではなく、新しい情報を処理しながら連続的な操作を維持します。
 
-イベント引数`(e)`を受け取る`handleSubmit`という関数を作成します。このイベントが伝播するのを止め（この場合、ブラウザのリフレッシュを止めたい）、新しい関数`setUpUser`を呼び出し、`apiKey.value`と`region.value`の引数を渡します。この方法で、適切なフィールドが入力された際に初期フォームから取得された2つの値を使用します。
+フォーム送信イベントをキャプチャし、ユーザーの入力を抽出する関数を作成します:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ 復習 - 前回のレッスンで設定したHTMLには、`value`がキャプチャされる2つの入力フィールドがあり、これらはファイルの冒頭で設定した`const`によって取得されます。また、両方とも`required`属性が設定されているため、ブラウザはユーザーがnull値を入力するのを防ぎます。
+**上記で行ったこと:**
+- **防止**: ページをリフレッシュするデフォルトのフォーム送信動作を防止
+- **抽出**: APIキーと地域フィールドからユーザー入力値を抽出
+- **渡す**: フォームデータを`setUpUser()`関数に渡して処理
+- **維持**: ページリロードを避けてシングルページアプリケーションの動作を維持
 
-### ユーザーを設定する
+✅ HTMLフォームフィールドには`required`属性が含まれているため、ブラウザーはこの関数が実行される前にユーザーがAPIキーと地域の両方を提供することを自動的に検証します。
 
-次に進み、`setUpUser`関数を構築します。ここでは、apiKeyとregionNameのローカルストレージ値を設定します。新しい関数を追加します。
+## ユーザー設定をセットアップする
 
-```JavaScript
+`setUpUser`関数は、ユーザーの資格情報を保存し、最初のAPI呼び出しを開始する役割を果たします。これにより、セットアップから結果表示へのスムーズな移行が実現します。
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-この関数は、APIが呼び出される間に表示されるローディングメッセージを設定します。この時点で、このブラウザ拡張の最も重要な機能を作成する段階に到達しました！
+**ステップごとに何が起こっているか:**
+- **保存**: APIキーと地域名をローカルストレージに保存して将来使用する
+- **表示**: データが取得されていることをユーザーに知らせるローディングインジケーターを表示
+- **クリア**: 表示から以前のエラーメッセージをクリア
+- **表示**: ユーザーが後で設定をリセットできるようにクリアボタンを表示
+- **開始**: 実際の炭素使用量データを取得するためのAPI呼び出しを開始
 
-### 炭素使用量を表示する
+この関数は、データの永続性とユーザーインターフェースの更新を一貫して管理することで、シームレスなユーザー体験を提供します。
 
-いよいよAPIをクエリする時が来ました！
+## 炭素使用量データを表示する
 
-進む前に、APIについて話しましょう。API、つまり[アプリケーションプログラミングインターフェース](https://www.webopedia.com/TERM/A/API.html)は、ウェブ開発者のツールボックスにおける重要な要素です。APIは、プログラム同士が標準的な方法で相互作用し、インターフェースを提供する仕組みを提供します。例えば、データベースをクエリする必要があるウェブサイトを構築している場合、誰かが使用するためのAPIを作成しているかもしれません。APIには多くの種類がありますが、その中でも人気があるのが[REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)です。
+次に、拡張機能をAPIを通じて外部データソースに接続します。これにより、拡張機能がスタンドアロンツールから、インターネット全体のリアルタイム情報にアクセスできるものへと変わります。
 
-✅ 'REST'という用語は'Representational State Transfer'を意味し、さまざまに構成されたURLを使用してデータを取得する特徴があります。開発者が利用可能なAPIのさまざまな種類について少し調べてみてください。どの形式が魅力的に感じますか？
+**APIの理解**
 
-この関数について重要な点をいくつか挙げます。まず、[`async`キーワード](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)に注目してください。関数を非同期的に動作させることで、データが返されるなどのアクションが完了するまで待機してから処理を続行します。
+[API](https://www.webopedia.com/TERM/A/API.html)は、異なるアプリケーションが互いに通信する方法です。これは、19世紀の電報システムのようなもので、オペレーターが遠隔地の駅にリクエストを送り、要求された情報を受け取る仕組みです。ソーシャルメディアをチェックしたり、音声アシスタントに質問したり、配達アプリを使用したりするたびに、APIがこれらのデータ交換を促進しています。
 
-`async`についての簡単な動画はこちらです：
+**REST APIに関する重要な概念:**
+- **REST**は「表現状態転送」を意味する
+- **使用**: 標準的なHTTPメソッド（GET、POST、PUT、DELETE）を使用してデータとやり取り
+- **返す**: 一般的にJSON形式で予測可能なデータを返す
+- **提供**: 異なる種類のリクエストに対する一貫したURLベースのエンドポイント
+
+✅ 今回使用する[CO2 Signal API](https://www.co2signal.com/)は、世界中の電力網からリアルタイムの炭素強度データを提供します。これにより、ユーザーは自分の電力使用量が環境に与える影響を理解することができます！
+
+> 💡 **非同期JavaScriptの理解**: [`async`キーワード](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)は、コードが複数の操作を同時に処理できるようにします。サーバーからデータを要求する際に、拡張機能全体が停止するのは望ましくありません。それは、航空管制が1機の飛行機の応答を待つ間、すべての操作を停止するようなものです。
+>
+> **主な利点:**
+> - **維持**: データがロードされている間も拡張機能の応答性を維持
+> - **許可**: ネットワークリクエスト中に他のコードを実行し続ける
+> - **改善**: 従来のコールバックパターンと比較してコードの可読性を向上
+> - **エラー処理**: ネットワーク問題に対する優雅なエラー処理を可能にする
+
+以下は`async`に関する簡単な動画です:
 
 [![非同期処理とAwaitによるPromise管理](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "非同期処理とAwaitによるPromise管理")
 
-> 🎥 上の画像をクリックすると、async/awaitに関する動画が再生されます。
+> 🎥 上の画像をクリックして`async/await`に関する動画をご覧ください。
 
-C02Signal APIをクエリする新しい関数を作成します：
+炭素使用量データを取得して表示する関数を作成します:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-この関数は大きなものです。何が行われているのでしょうか？
+**ここで何が起こっているかを分解する:**
+- **使用**: 外部ライブラリではなくモダンな`fetch()`APIを使用して、依存関係のないクリーンなコードを実現
+- **実装**: `response.ok`を使用してAPIの失敗を早期にキャッチする適切なエラーチェック
+- **処理**: 非同期操作を`async/await`で処理し、コードフローをより読みやすくする
+- **認証**: CO2 Signal APIに`auth-token`ヘッダーを使用して認証
+- **解析**: JSONレスポンスデータを解析し、炭素強度情報を抽出
+- **更新**: 複数のUI要素をフォーマットされた環境データで更新
+- **提供**: API呼び出しが失敗した場合にユーザーフレンドリーなエラーメッセージを表示
 
-- ベストプラクティスに従い、`async`キーワードを使用してこの関数を非同期的に動作させます。この関数には`try/catch`ブロックが含まれており、APIがデータを返すとPromiseを返します。APIの応答速度を制御することはできないため（応答しない場合もあります）、非同期的に呼び出すことでこの不確実性を処理します。
-- co2signal APIをクエリして地域のデータを取得し、APIキーを使用します。このキーを使用するには、ヘッダーのパラメータで認証を行う必要があります。
-- APIが応答すると、その応答データのさまざまな要素を画面の対応する部分に割り当てます。
-- エラーが発生した場合や結果がない場合は、エラーメッセージを表示します。
+**モダンJavaScriptの重要な概念を示す:**
+- **テンプレートリテラル**: `${}`構文を使用してクリーンな文字列フォーマットを実現
+- **エラー処理**: try/catchブロックを使用して堅牢なアプリケーションを構築
+- **非同期処理**: ネットワークリクエストを優雅に処理する`async/await`パターン
+- **オブジェクト分割代入**: APIレスポンスから特定のデータを抽出
+- **メソッドチェーン**: 複数のDOM操作を効率的に実行
 
-✅ 非同期プログラミングパターンを使用することは、ツールボックスにおける非常に有用なツールの一つです。[さまざまな構成方法](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function)について読んでみてください。
+✅ この関数は、外部サーバーとの通信、認証の処理、データの処理、インターフェースの更新、エラーの優雅な処理など、いくつかの重要なウェブ開発の概念を示しています。これらはプロの開発者が定期的に使用する基本的なスキルです。
 
-おめでとうございます！拡張機能をビルド（`npm run build`）して拡張機能ペインでリフレッシュすると、動作する拡張機能が完成します！唯一動作していないのはアイコンで、次のレッスンで修正します。
+🎉 **達成したこと:** あなたは以下を実現するブラウザー拡張機能を作成しました:
+- **接続**: インターネットに接続し、実際の環境データを取得
+- **保持**: セッション間でユーザー設定を保持
+- **エラー処理**: クラッシュする代わりにエラーを優雅に処理
+- **提供**: スムーズでプロフェッショナルなユーザー体験
+
+`npm run build`を実行し、ブラウザーで拡張機能を更新して作業をテストしてください。これで、機能的な炭素排出量トラッカーが完成しました。次のレッスンでは、拡張機能を完成させるために動的なアイコン機能を追加します。
 
 ---
 
-## 🚀 チャレンジ
+## GitHub Copilot Agent チャレンジ 🚀
 
-これまでのレッスンでいくつかの種類のAPIについて話しました。ウェブAPIを選び、その提供内容を詳しく調べてみましょう。例えば、ブラウザ内で利用可能な[HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API)を見てみてください。優れたAPIとは何だと思いますか？
+Agentモードを使用して以下のチャレンジを完了してください:
 
-## 講義後クイズ
-
-[講義後クイズ](https://ff-quizzes.netlify.app/web/quiz/26)
-
-## 復習と自己学習
-
-このレッスンでは、LocalStorageとAPIについて学びました。どちらもプロフェッショナルなウェブ開発者にとって非常に有用です。これら2つがどのように連携するかについて考えてみてください。APIを使用するためにアイテムを保存するウェブサイトをどのように設計するかを考えてみましょう。
+**説明:** エラー処理の改善とユーザー体験機能を追加してブラウザー拡張機能を強化
+このレッスンでは、LocalStorageとAPIについて学びました。どちらもプロのウェブ開発者にとって非常に役立つものです。この2つがどのように連携するか考えてみてください。APIで使用するアイテムを保存するウェブサイトをどのように設計するか考えてみましょう。
 
 ## 課題
 
@@ -237,4 +316,4 @@ async function displayCarbonUsage(apiKey, region) {
 ---
 
 **免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてお考えください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当社は責任を負いません。
+この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書を正式な情報源としてお考えください。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当社は責任を負いません。

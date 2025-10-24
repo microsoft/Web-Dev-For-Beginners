@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-28T18:37:12+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-24T17:02:46+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "my"
 }
 -->
 # Browser Extension Project Part 2: API ကိုခေါ်ယူခြင်း၊ Local Storage ကိုအသုံးပြုခြင်း
 
-## မိန့်ခွန်းမတင်မီမေးခွန်းများ
+## မိမိကိုယ်ကိုစစ်ဆေးမေးခွန်း
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### အကျဉ်းချုပ်
+## အကျဉ်းချုပ်
 
-ဒီသင်ခန်းစာမှာတော့ သင့် browser extension ရဲ့ form ကို submit လုပ်ပြီး API ကိုခေါ်ယူကာ ရလဒ်များကို browser extension မှာ ပြသပေးမှာဖြစ်ပါတယ်။ ထို့အပြင်၊ သင် browser ရဲ့ local storage မှာ data ကို သိမ်းဆည်းပြီး နောက်တစ်ခါအသုံးပြုနိုင်ဖို့နည်းလမ်းများကိုလည်း လေ့လာရမှာဖြစ်ပါတယ်။
+သင်စတင်တည်ဆောက်ခဲ့တဲ့ browser extension ကိုသတိရပါသလား? အခုအချိန်မှာ သင်မှာ form တစ်ခုရှိပြီးတော့ အလှပလှပရှိနေပါတယ်၊ ဒါပေမယ့် အခုအချိန်မှာတော့ static ဖြစ်နေပါတယ်။ ဒီနေ့မှာတော့ အဲ့ဒီ extension ကို အစစ်အမှန် data တွေကို ချိတ်ဆက်ပြီးတော့ memory ရှိအောင်လုပ်ပေးပါမယ်။
 
-✅ သင့် code ကို ထည့်သွင်းရမယ့်နေရာကို သိရှိရန် သင့်ဖိုင်များအတွင်းရှိ အမှတ်အသားများကိုလိုက်နာပါ။
+Apollo mission control computers ကိုစဉ်းစားကြည့်ပါ - သူတို့ဟာ fixed information ကိုသာပြသတာမဟုတ်ပါဘူး။ spacecraft တွေနဲ့ အမြဲဆက်သွယ်ပြီး telemetry data တွေကို update လုပ်ပေးပြီး mission parameters အရေးကြီးတွေကို မှတ်မိထားပါတယ်။ ဒီလို dynamic behavior ကို ဒီနေ့မှာတည်ဆောက်မှာဖြစ်ပါတယ်။ သင့် extension ဟာ အင်တာနက်ကို ချိတ်ဆက်ပြီး အစစ်အမှန် environmental data တွေကို ရယူပြီး သင့် settings တွေကို နောက်တစ်ခါအတွက် မှတ်မိထားနိုင်ပါမယ်။
 
-### Extension အတွက် Manipulate လုပ်ရန် Element များကို Set Up လုပ်ပါ:
+API integration ဟာ ရှုပ်ထွေးတဲ့အရာလိုပုံရပေမယ့် အခြေခံအားဖြင့် သင့် code ကို အခြား service တွေနဲ့ ဆက်သွယ်ပေးဖို့ သင်ပေးတာပါ။ သင့်အနေနဲ့ ရာသီဥတု data, social media feeds, carbon footprint information တို့ကို ရယူချင်တာဖြစ်စေ၊ အရေးကြီးတာက ဒီ digital connections တွေကို တည်ဆောက်ပေးဖို့ပါ။ Browser တွေက သတင်းအချက်အလက်တွေကို မှတ်မိထားနိုင်တဲ့ နည်းလမ်းတွေကိုလည်း ကျွန်တော်တို့ လေ့လာပါမယ် - library တွေက book catalog တွေကို အသုံးပြုပြီး ဘယ်စာအုပ်တွေ ဘယ်နေရာမှာရှိတယ်ဆိုတာ မှတ်မိထားတဲ့နည်းလမ်းလိုမျိုးပါ။
 
-ဒီအချိန်မှာတော့ သင် browser extension အတွက် form နှင့် results `<div>` ရဲ့ HTML ကို တည်ဆောက်ပြီးဖြစ်ပါပြီ။ အခုမှစပြီးတော့ `/src/index.js` ဖိုင်မှာ အလုပ်လုပ်ရမှာဖြစ်ပြီး extension ကို အပိုင်းလိုက် တည်ဆောက်ရမှာဖြစ်ပါတယ်။ သင့် project ကို set up လုပ်နည်းနှင့် build လုပ်နည်းကို [ယခင်သင်ခန်းစာ](../1-about-browsers/README.md) မှာ ပြန်လည်ကြည့်ရှုပါ။
+ဒီသင်ခန်းစာအဆုံးမှာ သင့်မှာ အစစ်အမှန် data ကို ရယူနိုင်တဲ့ browser extension, user preferences တွေကို မှတ်မိထားနိုင်တဲ့ extension, smooth ဖြစ်တဲ့ user experience ရှိတဲ့ extension တစ်ခု ရရှိပါမယ်။ စတင်လိုက်ကြစို့!
 
-`index.js` ဖိုင်မှာ အလုပ်လုပ်ပြီးနောက်၊ `const` variable များကို ဖန်တီးကာ HTML ရဲ့ field များနှင့် ဆက်စပ်ထားသော value များကို သိမ်းဆည်းပါ:
+✅ သင့် code ကို ဘယ်နေရာမှာ ထည့်ရမလဲဆိုတာ သိရန် appropriate files တွေမှာ နံပါတ်အလိုက် segment တွေကို လိုက်နာပါ။
 
-```JavaScript
+## Extension ထဲမှာ Manipulate လုပ်ဖို့ Element တွေကို Set Up လုပ်ပါ
+
+JavaScript က interface ကို manipulate လုပ်နိုင်ဖို့အတွက် HTML element တွေကို reference လုပ်ဖို့လိုပါတယ်။ Galileo က Jupiter ရဲ့ လမင်းတွေကို လေ့လာဖို့ Jupiter ကို locate လုပ်ပြီး focus လုပ်ဖို့လိုတဲ့ telescope လိုမျိုးပါ။
+
+`index.js` ဖိုင်ထဲမှာ form element တစ်ခုချင်းစီကို reference လုပ်ဖို့ `const` variable တွေကို ဖန်တီးပါမယ်။ ဒါဟာ သိပ္ပံပညာရှင်တွေက သူတို့ရဲ့ ပစ္စည်းတွေကို label လုပ်တဲ့နည်းလမ်းနဲ့ တူပါတယ် - lab တစ်ခုလုံးကို အကြိမ်ကြိမ်ရှာဖို့မလိုဘဲ တိုက်ရိုက် access လုပ်နိုင်ပါတယ်။
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,200 +47,255 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-ဒီ field များအားလုံးကို ယခင်သင် HTML မှာ set up လုပ်ထားသော CSS class အတိုင်း reference လုပ်ထားပါတယ်။
+**ဒီ code ကဘာလုပ်သလဲဆိုရင်:**
+- **Capture** form element တွေကို `document.querySelector()` နဲ့ CSS class selector တွေကို အသုံးပြုပြီး ရယူပါမယ်။
+- **Create** region name နဲ့ API key အတွက် input field reference တွေကို ဖန်တီးပါမယ်။
+- **Establish** carbon usage data ကို ပြသဖို့ result display element တွေနဲ့ ချိတ်ဆက်ပါမယ်။
+- **Set up** loading indicator နဲ့ error message တွေလို UI element တွေကို access လုပ်နိုင်ဖို့ ပြင်ဆင်ပါမယ်။
+- **Store** element reference တစ်ခုချင်းစီကို `const` variable ထဲမှာ ထည့်ထားပြီး code တစ်ခုလုံးမှာ အလွယ်တကူ အသုံးပြုနိုင်အောင်လုပ်ပါမယ်။
 
-### Listener များထည့်ပါ
+## Event Listener တွေကို ထည့်ပါ
 
-နောက်တစ်ဆင့်မှာတော့ form နှင့် reset button အတွက် event listener များကို ထည့်သွင်းပါ။ သုံးစွဲသူက form ကို submit လုပ်သော်လည်းကောင်း၊ reset button ကို click လုပ်သော်လည်းကောင်း၊ တစ်ခုခုဖြစ်ပေါ်စေပြီး ဖိုင်ရဲ့ အောက်ဆုံးမှာ app ကို initialize လုပ်ရန် call လုပ်ပါ:
+အခုတော့ သင့် extension ကို user action တွေကို တုံ့ပြန်နိုင်အောင်လုပ်ပါမယ်။ Event listener တွေဟာ user interaction တွေကို monitor လုပ်ဖို့ သင့် code ရဲ့ နည်းလမ်းဖြစ်ပါတယ်။ အဲဒါဟာ ၁၉ ရာစု telephone exchange တွေက operator တွေလိုမျိုး - သူတို့ဟာ incoming call တွေကို နားထောင်ပြီး connection တွေကို ချိတ်ဆက်ပေးပါတယ်။
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ submit event သို့မဟုတ် click event ကို listen လုပ်ရန် shorthand ကို သတိပြုပါ။ ဒီ shorthand ကို အရှည် version အဖြစ်ရေးနိုင်မလား? သင်အကြိုက်ဆုံး version က ဘယ်ဟာလဲ?
+**ဒီ concept တွေကို နားလည်ပါ:**
+- **Attach** form submit listener ကို user တွေ Enter နှိပ်တဲ့အခါ သို့မဟုတ် submit ကို click လုပ်တဲ့အခါ trigger ဖြစ်အောင်လုပ်ပါမယ်။
+- **Connect** clear button ကို click လုပ်တဲ့အခါ form ကို reset လုပ်ဖို့ listener တစ်ခုကို ချိတ်ဆက်ပါမယ်။
+- **Pass** event object `(e)` ကို handler function တွေကို ပေးပို့ပြီး control ပိုမိုရနိုင်အောင်လုပ်ပါမယ်။
+- **Call** `init()` function ကို ချက်ချင်း run လုပ်ပြီး extension ရဲ့ initial state ကို set up လုပ်ပါမယ်။
 
-### init() function နှင့် reset() function ကို တည်ဆောက်ပါ:
+✅ ဒီမှာ shorthand arrow function syntax ကို အသုံးပြုထားတာကို သတိထားပါ။ ဒီ modern JavaScript syntax ဟာ traditional function expression တွေထက် သန့်ရှင်းပြီးတော့ အလုပ်လုပ်ပုံတူတူပါပေမယ့် ပိုမိုလွယ်ကူပါတယ်။
 
-အခုတော့ extension ကို initialize လုပ်မယ့် function ဖြစ်တဲ့ init() ကို တည်ဆောက်ရမှာဖြစ်ပါတယ်:
+## Initialization နဲ့ Reset Function တွေကို တည်ဆောက်ပါ
 
-```JavaScript
+အခုတော့ extension ရဲ့ initialization logic ကို ဖန်တီးပါမယ်။ `init()` function ဟာ သင်္ဘောရဲ့ navigation system လိုမျိုး - instruments တွေကို စစ်ဆေးပြီးတော့ အခြေအနေကို သတ်မှတ်ပြီး interface ကို ပြင်ဆင်ပေးပါတယ်။ အဲ့ဒီ function က သင့် extension ကို အရင်တစ်ခါအသုံးပြုထားတဲ့ user ဖြစ်မလား၊ ပထမဆုံးအသုံးပြုတဲ့ user ဖြစ်မလားဆိုတာကို စစ်ဆေးပြီးတော့ settings တွေကို load လုပ်ပေးပါတယ်။
+
+`reset()` function က user တွေကို အစစအဆင့်ဆင့် ပြန်စဖို့ အခွင့်အရေးပေးပါတယ် - သိပ္ပံပညာရှင်တွေက experiment တွေကြားမှာ instruments တွေကို reset လုပ်ပြီး clean data ရဖို့ ပြင်ဆင်တဲ့နည်းလမ်းလိုမျိုးပါ။
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-ဒီ function မှာ စိတ်ဝင်စားဖွယ် logic ရှိပါတယ်။ သင်ဖတ်ရှုရင်း ဘာတွေဖြစ်ပျက်နေလဲဆိုတာမြင်နိုင်ပါသလား?
+**ဒီမှာ ဘာတွေဖြစ်နေလဲဆိုရင်:**
+- **Retrieve** browser ရဲ့ local storage ထဲက stored API key နဲ့ region ကို ရယူပါမယ်။
+- **Check** user ဟာ ပထမဆုံးအသုံးပြုသူလား (stored credentials မရှိ) ဒါမှမဟုတ် ပြန်လာတဲ့ user လားဆိုတာကို စစ်ဆေးပါမယ်။
+- **Show** setup form ကို new user တွေအတွက် ပြသပြီး အခြား interface element တွေကို hide လုပ်ပါမယ်။
+- **Load** saved data ကို automatically ပြုလုပ်ပြီး ပြန်လာတဲ့ user တွေအတွက် reset option ကို ပြသပါမယ်။
+- **Manage** available data အပေါ်မူတည်ပြီး user interface state ကို ပြင်ဆင်ပါမယ်။
 
-- `const` နှစ်ခုကို local storage မှာ APIKey နှင့် region code ရှိ/မရှိ စစ်ဆေးရန် set up လုပ်ထားပါတယ်။
-- အဲဒီ value များ null ဖြစ်နေပါက form ကို display style 'block' အဖြစ်ပြောင်းပြီး ပြသပါ။
-- results, loading, နှင့် clearBtn ကို hide လုပ်ပြီး error text ကို အလွတ်ထားပါ။
-- key နှင့် region ရှိနေပါက အောက်ပါ routine ကို စတင်ပါ:
-  - API ကို call လုပ်ကာ carbon usage data ကိုရယူပါ။
-  - results area ကို hide လုပ်ပါ။
-  - form ကို hide လုပ်ပါ။
-  - reset button ကို ပြပါ။
+**Local Storage အကြောင်းအရာများ:**
+- **Persist** browser session တွေကြားမှာ data တွေကို မှတ်မိထားနိုင်ပါတယ် (session storage မဟုတ်ပါဘူး)။
+- **Store** data တွေကို key-value pair အနေနဲ့ `getItem()` နဲ့ `setItem()` ကို အသုံးပြုပြီး သိမ်းဆည်းပါမယ်။
+- **Return** `null` ကို data မရှိတဲ့ key အတွက် ပြန်ပေးပါမယ်။
+- **Provide** user preferences နဲ့ settings တွေကို မှတ်မိထားနိုင်တဲ့ လွယ်ကူတဲ့နည်းလမ်းတစ်ခုကို ပေးပါမယ်။
 
-ရှေ့ဆက်မလုပ်ခင်မှာ browser တွေမှာ ရရှိနိုင်တဲ့ အရေးကြီးသော concept တစ်ခုဖြစ်တဲ့ [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) ကိုလေ့လာပါ။ LocalStorage သည် browser မှာ string များကို `key-value` pair အနေနဲ့ သိမ်းဆည်းရန် အသုံးဝင်သော နည်းလမ်းတစ်ခုဖြစ်ပါတယ်။ ဒီ storage ကို JavaScript ဖြင့် manipulate လုပ်ကာ browser မှာ data ကို စီမံနိုင်ပါတယ်။ LocalStorage သည် မသက်တမ်းကုန်သည့် storage ဖြစ်ပြီး SessionStorage သည် browser ကို ပိတ်လိုက်သည်နှင့် ဖျက်သိမ်းသွားပါသည်။ storage အမျိုးအစားများမှာ အသုံးပြုမှုအပေါ်တွင် အားသာချက်နှင့် အားနည်းချက်များရှိပါတယ်။
+> 💡 **Browser Storage ကို နားလည်ခြင်း**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) ဟာ သင့် extension ကို memory ရှိအောင်လုပ်ပေးပါတယ်။ အတိတ်က Alexandria Library က scroll တွေကို သိမ်းဆည်းထားတဲ့နည်းလမ်းလိုမျိုးပါ။
+>
+> **အရေးကြီးသော အချက်များ:**
+> - **Persist** data ကို browser ကို ပိတ်ပြီးပြန်ဖွင့်တဲ့အခါမှာတောင် မှတ်မိထားနိုင်ပါတယ်။
+> - **Survive** computer restart နဲ့ browser crash တွေကို ရှင်သန်နိုင်ပါတယ်။
+> - **Provide** user preferences အတွက် storage space အများကြီးပေးနိုင်ပါတယ်။
+> - **Offer** network delay မရှိဘဲ instant access ကို ပေးနိုင်ပါတယ်။
 
-> Note - သင့် browser extension မှာ သီးသန့် local storage ရှိပါတယ်။ main browser window သည် အခြား instance ဖြစ်ပြီး သီးသန့်အနေဖြင့် လုပ်ဆောင်ပါသည်။
+> **အရေးကြီးသော မှတ်ချက်**: Browser extension ရဲ့ local storage ဟာ regular web page တွေက local storage နဲ့ သီးသန့်ဖြစ်ပါတယ်။ ဒါဟာ security ကို ပိုမိုကောင်းစေပြီး website တွေနဲ့ conflict ဖြစ်တာကို ကာကွယ်ပေးပါတယ်။
 
-APIKey ကို string value အနေနဲ့ set လုပ်ပြီး Edge မှာ "inspect" လုပ်ကာ storage ကို Applications tab မှာကြည့်ရှုနိုင်ပါတယ်။
+Browser Developer Tools (F12) ကိုဖွင့်ပြီး **Application** tab ကိုသွားပါ၊ **Local Storage** section ကို expand လုပ်ပြီး stored data တွေကို ကြည့်နိုင်ပါတယ်။
 
 ![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.my.png)
 
-✅ LocalStorage မှာ data ကို မသိမ်းဆည်းသင့်တဲ့ အခြေအနေများကို စဉ်းစားပါ။ အထူးသဖြင့် API Keys ကို LocalStorage မှာ သိမ်းဆည်းတာက အဆင်မပြေတဲ့အကြောင်းကို သတိထားပါ။ သင့် app သည် သင်ကြားရေးအတွက်သာဖြစ်ပြီး app store မှာ deploy မလုပ်မည်ဖြစ်သောကြောင့် ဒီနည်းလမ်းကို အသုံးပြုပါမည်။
+> ⚠️ **Security အရေးကြီးချက်**: Production application တွေမှာ LocalStorage ထဲမှာ API key တွေကို သိမ်းဆည်းထားတာဟာ security risk ဖြစ်ပါတယ်။ JavaScript က ဒီ data ကို access လုပ်နိုင်ပါတယ်။ သင်ယူရေးအတွက်တော့ ဒီနည်းလမ်းက အဆင်ပြေပါတယ်၊ ဒါပေမယ့် အစစ်အမှန် application တွေမှာ sensitive credentials တွေကို secure server-side storage ကို အသုံးပြုသင့်ပါတယ်။
 
-LocalStorage ကို manipulate လုပ်ရန် Web API ကို အသုံးပြုပါ။ `getItem()`, `setItem()`, `removeItem()` ကို အသုံးပြုနိုင်ပြီး browser များတွင် ကျယ်ကျယ်ပြန့်ပြန့် support လုပ်ထားပါတယ်။
+## Form Submission ကို Handle လုပ်ပါ
 
-`displayCarbonUsage()` function ကို build လုပ်မတိုင်မီ၊ initial form submission ကို handle လုပ်ရန် functionality ကို build လုပ်ပါ။
+အခုတော့ form ကို submit လုပ်တဲ့အခါ ဘာတွေဖြစ်မလဲဆိုတာ handle လုပ်ပါမယ်။ Default အနေဖြင့် browser တွေဟာ form ကို submit လုပ်တဲ့အခါ page ကို reload လုပ်ပါတယ်၊ ဒါပေမယ့် ဒီ behavior ကို intercept လုပ်ပြီး smooth ဖြစ်တဲ့ experience ကို ဖန်တီးပါမယ်။
 
-### Form Submission ကို Handle လုပ်ပါ
+ဒီနည်းလမ်းဟာ mission control က spacecraft communication ကို handle လုပ်တဲ့နည်းလမ်းနဲ့ တူပါတယ် - transmission တစ်ခုစီအတွက် system တစ်ခုလုံးကို reset လုပ်တာမဟုတ်ဘဲ continuous operation ကို maintain လုပ်ပြီးတော့ information အသစ်တွေကို process လုပ်ပါတယ်။
 
-`handleSubmit` ဟုခေါ်သော function တစ်ခုကို ဖန်တီးပြီး event argument `(e)` ကို လက်ခံပါ။ event ကို propagate မဖြစ်စေရန် (ဒီအခါမှာ browser refresh မဖြစ်စေရန်လိုသည်) ရပ်တန့်ပြီး `setUpUser` function ကို call လုပ်ပါ။ အဲဒီ function ကို `apiKey.value` နှင့် `region.value` arguments ဖြင့် pass လုပ်ပါ။ ဒီနည်းလမ်းဖြင့် initial form မှာ populate လုပ်ထားသော field value နှစ်ခုကို အသုံးပြုနိုင်ပါသည်။
+Form submission event ကို capture လုပ်ပြီး user input ကို extract လုပ်တဲ့ function ကို ဖန်တီးပါ:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ သင့်ရဲ့ HTML မှာ input field နှစ်ခုရှိပြီး value များကို `const` variable ဖြင့် capture လုပ်ထားသည်ကို သတိပြုပါ။ အဲဒီ field များသည် `required` ဖြစ်သောကြောင့် browser က null value များကို input လုပ်ခြင်းကို တားဆီးပါသည်။
+**အထက်မှာ ဘာတွေဖြစ်နေလဲဆိုရင်:**
+- **Prevent** default form submission behavior ကို page refresh ဖြစ်တာကို တားဆီးပါမယ်။
+- **Extract** user input value တွေကို API key နဲ့ region field တွေထဲက ရယူပါမယ်။
+- **Pass** form data ကို `setUpUser()` function ကို ပေးပို့ပြီး process လုပ်ပါမယ်။
+- **Maintain** single-page application behavior ကို page reload မဖြစ်အောင်လုပ်ပါမယ်။
 
-### User ကို Set Up လုပ်ပါ
+✅ သင့် HTML form field တွေမှာ `required` attribute ပါဝင်ပါတယ်၊ ဒါကြောင့် user တွေ API key နဲ့ region ကို provide လုပ်မှ ဒီ function run ဖြစ်ပါမယ်။
 
-`setUpUser` function ကို ဆက်လက်တည်ဆောက်ပါ။ ဒီနေရာမှာ local storage value များကို apiKey နှင့် regionName အတွက် set လုပ်ပါ။ function အသစ်တစ်ခုကို ထည့်ပါ:
+## User Preferences ကို Set Up လုပ်ပါ
 
-```JavaScript
+`setUpUser` function ဟာ user ရဲ့ credentials တွေကို save လုပ်ပြီးတော့ ပထမဆုံး API call ကို initiate လုပ်ပေးပါတယ်။ ဒါဟာ setup ကနေ result ကို display လုပ်ဖို့ smooth transition ကို ဖန်တီးပေးပါတယ်။
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-ဒီ function မှာ API ကို call လုပ်နေစဉ် loading message ကို ပြသပါမည်။ အခုတော့ browser extension ရဲ့ အရေးကြီးဆုံး function ကို ဖန်တီးရန် ရောက်ရှိပါပြီ!
+**Step by step, ဒီမှာ ဘာတွေဖြစ်နေလဲဆိုရင်:**
+- **Save** API key နဲ့ region name ကို local storage ထဲမှာ သိမ်းဆည်းပြီး နောက်တစ်ခါအသုံးပြုနိုင်အောင်လုပ်ပါမယ်။
+- **Show** loading indicator ကို data fetch လုပ်နေတယ်ဆိုတာ user တွေကို ပြသပါမယ်။
+- **Clear** အရင် error message တွေကို display ထဲက ဖယ်ရှားပါမယ်။
+- **Reveal** clear button ကို user တွေ settings ကို reset လုပ်နိုင်အောင် ပြသပါမယ်။
+- **Initiate** API call ကို run လုပ်ပြီး အစစ်အမှန် carbon usage data ကို fetch လုပ်ပါမယ်။
 
-### Carbon Usage ကို Display လုပ်ပါ
+ဒီ function ဟာ data persistence နဲ့ user interface update တွေကို တစ်ခုပေါင်းပြီး coordinate လုပ်ပေးတဲ့ seamless user experience ကို ဖန်တီးပေးပါတယ်။
 
-အခုတော့ API ကို query လုပ်ရန် အချိန်ရောက်ပါပြီ!
+## Carbon Usage Data ကို Display လုပ်ပါ
 
-API များကို ဆွေးနွေးရန်အချိန်ရောက်ပါပြီ။ API များသည် [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html) ဟုခေါ်ပြီး web developer များအတွက် အရေးကြီးသော tool တစ်ခုဖြစ်သည်။ API များသည် program များအကြား interface လုပ်ရန် standard နည်းလမ်းများကို ပေးသည်။ ဥပမာအားဖြင့် database ကို query လုပ်ရန် website တစ်ခုတည်ဆောက်နေပါက API တစ်ခုကို အသုံးပြုရန် တစ်စုံတစ်ဦးက ဖန်တီးထားနိုင်သည်။ API အမျိုးအစားများစွာရှိသော်လည်း [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/) သည် အလွန်လူကြိုက်များသည်။
+အခုတော့ extension ကို external data source တွေနဲ့ API တွေကနေ ချိတ်ဆက်ပါမယ်။ ဒါဟာ standalone tool တစ်ခုကနေ အင်တာနက်တစ်လျှောက်မှာ real-time information တွေကို access လုပ်နိုင်တဲ့အရာတစ်ခုအဖြစ် ပြောင်းလဲပေးပါတယ်။
 
-✅ 'REST' ဆိုသည်မှာ 'Representational State Transfer' ကိုဆိုလိုပြီး URL များကို configure လုပ်ကာ data ကို fetch လုပ်ရန် အသုံးပြုသည်။ Developer များအတွက် ရရှိနိုင်သော API အမျိုးအစားများကို သုတေသနလုပ်ပါ။ သင့်အကြိုက်ဆုံး format က ဘာလဲ?
+**API တွေကို နားလည်ခြင်း**
 
-ဒီ function ရဲ့ အရေးကြီးသောအချက်များကို သတိပြုပါ။ ပထမဦးဆုံး [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) ကို သတိပြုပါ။ function များကို asynchronous အဖြစ်ရေးခြင်းသည် data ရရှိရန် စောင့်ဆိုင်းပြီးမှ ဆက်လက်လုပ်ဆောင်ရန် အရေးကြီးသည်။
+[APIs](https://www.webopedia.com/TERM/A/API.html) ဟာ application တွေကြားမှာ ဆက်သွယ်ပေးတဲ့နည်းလမ်းဖြစ်ပါတယ်။ ၁၉ ရာစု telegraph system လိုမျိုး - operator တွေက request တွေကို ပို့ပြီးတော့ requested information ကို response အနေနဲ့ လက်ခံရရှိပါတယ်။ သင့်အနေနဲ့ social media ကို check လုပ်တဲ့အခါ, voice assistant ကိုမေးတဲ့အခါ, ဒါမှမဟုတ် delivery app ကို အသုံးပြုတဲ့အခါ API တွေက data exchange တွေကို facilitate လုပ်ပေးပါတယ်။
 
-`async` နှင့် `await` ကို အသုံးပြု၍ promise များကို စီမံရန် ဗီဒီယိုတစ်ခုကို ကြည့်ပါ:
+**REST API အကြောင်းအရာများ:**
+- **REST** ဟာ 'Representational State Transfer' ကိုဆိုလိုပါတယ်။
+- **Use** standard HTTP method (GET, POST, PUT, DELETE) တွေကို data တွေနဲ့ interaction လုပ်ဖို့ အသုံးပြုပါတယ်။
+- **Return** predictable format (JSON) တွေကို data အနေနဲ့ ပြန်ပေးပါတယ်။
+- **Provide** consistent URL-based endpoint တွေကို request အမျိုးမျိုးအတွက် ပေးပါတယ်။
+
+✅ [CO2 Signal API](https://www.co2signal.com/) ဟာ real-time carbon intensity data တွေကို ကမ္ဘာတစ်လွှား electrical grid တွေကနေ provide လုပ်ပါတယ်။ ဒါဟာ electricity usage ရဲ့ environmental impact ကို user တွေ နားလည်နိုင်အောင် ကူညီပေးပါတယ်!
+
+> 💡 **Asynchronous JavaScript ကို နားလည်ခြင်း**: [`async` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) ဟာ သင့် code ကို simultaneous operation တွေကို handle လုပ်နိုင်အောင်လုပ်ပေးပါတယ်။ Server က data ကို request လုပ်တဲ့အခါ extension တစ်ခုလုံးကို freeze ဖြစ်စေချင်တာမဟုတ်ပါဘူး - အဲဒါဟာ air traffic control က တစ်စင်းတည်းရဲ့ response ကိုစောင့်နေတဲ့အခါ operation အားလုံးကို ရပ်တန့်ထားတဲ့နည်းလမ်းနဲ့ တူပါတယ်။
+>
+> **အရေးကြီးသော အကျိုးကျေးဇူးများ:**
+> - **Maintain** extension responsiveness ကို data load လုပ်နေတဲ့အချိန်မှာတောင် ရှိနေပါတယ်။
+> - **Allow** အခြား code တွေကို network request တွေကြားမှာ run ဖြစ်နိုင်ပါတယ်။
+> - **Improve** traditional callback pattern တွေထက် code readability ကို ပိုမိုကောင်းစေပါတယ်။
+> - **Enable** network issue တွေကို graceful error handling လုပ်နိုင်ပါတယ်။
+
+`async` အကြောင်း video တစ်ခု:
 
 [![Async and Await for managing promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async and Await for managing promises")
 
-> 🎥 အထက်ပါပုံကို click လုပ်ကာ async/await အကြောင်း ဗီဒီယိုကို ကြည့်ပါ။
+> 🎥 အပေါ်ကပုံကို click လုပ်ပြီး async/await အကြောင်း video ကို ကြည့်ပါ။
 
-C02Signal API ကို query လုပ်ရန် function အသစ်တစ်ခုကို ဖန်တီးပါ:
+Carbon usage data ကို fetch လုပ်ပြီး display လုပ်တဲ့ function ကို ဖန်တီးပါ:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-ဒီ function သည် အကြီးမားဆုံးဖြစ်သည်။ ဒီမှာ ဘာတွေဖြစ်နေလဲ?
+**ဒီမှာ ဘာတွေဖြစ်နေလဲဆိုရင်:**
+- **Use** modern `fetch()` API ကို external library တွေလို dependency မလိုဘဲ အသုံးပြုနိုင်တဲ့ cleaner code အတွက် အသုံးပြုပါမယ်။
+- **Implement** `response.ok` ကို အသုံးပြုပြီး API failure တွေကို စောစောမီမီ catch လုပ်ပါမယ်။
+- **Handle** asynchronous operation တွေကို `async/await` နဲ့ readable code flow ကို ဖန်တီးပါမယ်။
+- **Authenticate** CO2 Signal API ကို `auth-token` header ကို အသုံးပြုပြီး ချိတ်ဆက်ပါမယ်။
+- **Parse** JSON response data ကို extract လုပ်ပြီး carbon intensity information ကို ရယူပါမယ်။
+- **Update** UI element တွေကို formatted environmental data နဲ့ ပြောင်းလဲပါမယ်။
+- **Provide** API call fail ဖြစ်တဲ့အခါ user-friendly error message တွေကို ပြသပါမယ်။
 
-- best practices ကိုလိုက်နာပြီး `async` keyword ကို အသုံးပြုကာ function ကို asynchronous အဖြစ်လုပ်ဆောင်သည်။ function မှာ `try/catch` block ပါရှိပြီး API response ရလာသောအခါ promise ကို return ပြန်ပါမည်။ API response ရရှိမည့်အမြန်နှုန်းကို သင့်အနေနဲ့ control လုပ်လို့မရသောကြောင့် asynchronous အနေနဲ့ handle လုပ်ရန်လိုအပ်သည်။
-- co2signal API ကို query လုပ်ကာ region data ကိုရယူပြီး API Key ကို အသုံးပြုသည်။ အဲဒီ key ကို အသုံးပြုရန် header parameters မှာ authentication type ကို အသုံးပြုရပါမည်။
-- API response ရလာသောအခါ response data ရဲ့ အစိတ်အပိုင်းများကို သင့် screen ရဲ့ သတ်မှတ်ထားသောနေရာများတွင် assign လုပ်ပါ။
-- error ဖြစ်ပေါ်ပါက သို့မဟုတ် result မရှိပါက error message ကို ပြသပါ။
+**Modern JavaScript Concept တွေ:**
+- **Template literals** ကို `${}` syntax နဲ့ clean string formatting အတွက် အသုံးပြုပါမယ်။
+- **Error handling** ကို try/catch block တွေကို အသုံးပြုပြီး robust application တွေကို ဖန်တီးပါမယ်။
+- **Async/await** pattern ကို network request တွေကို gracefully handle လုပ်ဖို့ အသုံးပြုပါမယ်။
+- **Object destructuring** ကို API response data ထဲက specific data တွေကို extract လုပ်ဖို့ အသုံးပြုပါမယ်။
+- **Method chaining** ကို
+ဒီသင်ခန်းစာမှာ LocalStorage နဲ့ APIs အကြောင်းကို သင်ယူခဲ့ပြီး၊ အင်တာနက်ဆိုင်ရာ ပရော်ဖက်ရှင်နယ် Developer အတွက် အလွန်အသုံးဝင်တဲ့ အရာတွေဖြစ်ပါတယ်။ ဒီအရာနှစ်ခု ဘယ်လိုပေါင်းစပ်လုပ်ဆောင်နိုင်မလဲဆိုတာ စဉ်းစားကြည့်ပါ။ API အတွက် အသုံးပြုမယ့် အရာတွေကို သိမ်းဆည်းထားမယ့် ဝက်ဘ်ဆိုဒ်ကို ဘယ်လို ဖန်တီးမလဲဆိုတာကို စဉ်းစားကြည့်ပါ။
 
-✅ asynchronous programming pattern များကို သင့် toolbox မှာ ထည့်သွင်းရန် အရေးကြီးသည်။ [ဒီ code အမျိုးအစား](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) ကို configure လုပ်နိုင်သော နည်းလမ်းများကို ဖတ်ရှုပါ။
+## အလုပ်ပေးစာ
 
-ဂုဏ်ယူပါတယ်! သင့် extension ကို build (`npm run build`) လုပ်ပြီး extension pane မှာ refresh လုပ်ပါက အလုပ်လုပ်နေသော extension ရရှိပါမည်! အလုပ်မလုပ်သေးသောအရာတစ်ခုက icon ဖြစ်ပြီး နောက်သင်ခန်းစာမှာ ပြင်ဆင်ပါမည်။
-
----
-
-## 🚀 စိန်ခေါ်မှု
-
-ဒီသင်ခန်းစာများမှာ API အမျိုးအစားများစွာကို ဆွေးနွေးခဲ့ပါသည်။ web API တစ်ခုကို ရွေးပြီး အဲဒီ API ရဲ့ အကျိုးကျေးဇူးများကို သုတေသနလုပ်ပါ။ ဥပမာအားဖြင့် browser တွေမှာ ရရှိနိုင်သော [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) ကို ကြည့်ပါ။ သင့်အမြင်မှာ API တစ်ခုက ဘယ်လိုကောင်းမြတ်သင့်သလဲ?
-
-## မိန့်ခွန်းပြီးနောက်မေးခွန်းများ
-
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/26)
-
-## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
-
-ဒီသင်ခန်းစာမှာ LocalStorage နှင့် API များကို လေ့လာခဲ့ပြီး professional web developer အတွက် အလွန်အသုံးဝင်သည်။ ဒီနှစ်ခုက ဘယ်လိုပေါင်းစပ်လုပ်ဆောင်သလဲဆိုတာ စဉ်းစားပါ။ API ကို အသုံးပြုရန် item များကို သိမ်းဆည်းမည့် website ကို ဘယ်လို architect လုပ်မလဲဆိုတာ စဉ်းစားပါ။
-
-## အိမ်စာ
-
-[Adopt an API](assignment.md)
+[API ကို လက်ခံပါ](assignment.md)
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းစာရွက်စာတမ်းကို ၎င်း၏ မူရင်းဘာသာစကားဖြင့် အာဏာတရ အရင်းအမြစ်အဖြစ် ရှုလေ့လာသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှု ဝန်ဆောင်မှုကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။

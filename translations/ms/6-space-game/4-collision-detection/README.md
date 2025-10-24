@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
-  "translation_date": "2025-08-29T09:28:55+00:00",
+  "original_hash": "4b1d441cfd31924084956000c0fee5a5",
+  "translation_date": "2025-10-24T14:40:39+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "ms"
 }
@@ -13,77 +13,107 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/35)
 
-Dalam pelajaran ini, anda akan belajar cara menembak laser menggunakan JavaScript! Kita akan menambah dua perkara ke dalam permainan kita:
+Fikirkan saat dalam Star Wars apabila torpedo proton Luke mengenai lubang ekzos Death Star. Pengesanan perlanggaran yang tepat itu mengubah nasib galaksi! Dalam permainan, pengesanan perlanggaran berfungsi dengan cara yang sama - ia menentukan bila objek berinteraksi dan apa yang berlaku seterusnya.
 
-- **Laser**: laser ini ditembak dari kapal angkasa wira anda dan bergerak secara menegak ke atas
-- **Pengesanan perlanggaran**, sebagai sebahagian daripada pelaksanaan keupayaan untuk *menembak*, kita juga akan menambah beberapa peraturan permainan yang menarik:
-   - **Laser mengenai musuh**: Musuh akan mati jika terkena laser
-   - **Laser mengenai bahagian atas skrin**: Laser akan dimusnahkan jika terkena bahagian atas skrin
-   - **Perlanggaran musuh dan wira**: Musuh dan wira akan dimusnahkan jika mereka bertembung
-   - **Musuh mengenai bahagian bawah skrin**: Musuh dan wira akan dimusnahkan jika musuh sampai ke bahagian bawah skrin
+Dalam pelajaran ini, anda akan menambah senjata laser ke permainan angkasa anda dan melaksanakan pengesanan perlanggaran. Sama seperti perancang misi NASA mengira trajektori kapal angkasa untuk mengelakkan serpihan, anda akan belajar mengesan apabila objek permainan bersilang. Kami akan memecahkannya kepada langkah-langkah yang mudah difahami.
 
-Secara ringkas, anda -- *wira* -- perlu memusnahkan semua musuh dengan laser sebelum mereka sempat sampai ke bahagian bawah skrin.
+Pada akhirnya, anda akan mempunyai sistem pertempuran yang berfungsi di mana laser memusnahkan musuh dan perlanggaran mencetuskan acara permainan. Prinsip perlanggaran yang sama digunakan dalam segala-galanya daripada simulasi fizik hingga antara muka web interaktif.
 
-✅ Lakukan sedikit penyelidikan tentang permainan komputer pertama yang pernah dicipta. Apakah fungsinya?
-
-Mari jadi wira bersama!
+✅ Lakukan sedikit penyelidikan tentang permainan komputer pertama yang pernah ditulis. Apakah fungsinya?
 
 ## Pengesanan Perlanggaran
 
-Bagaimana kita melakukan pengesanan perlanggaran? Kita perlu menganggap objek permainan kita sebagai segi empat tepat yang bergerak. Kenapa begitu, anda mungkin bertanya? Ini kerana imej yang digunakan untuk melukis objek permainan adalah segi empat tepat: ia mempunyai `x`, `y`, `width` dan `height`.
+Pengesanan perlanggaran berfungsi seperti sensor jarak pada modul lunar Apollo - ia sentiasa memeriksa jarak dan mencetuskan amaran apabila objek terlalu dekat. Dalam permainan, sistem ini menentukan bila objek berinteraksi dan apa yang perlu berlaku seterusnya.
 
-Jika dua segi empat tepat, iaitu wira dan musuh *bersilang*, maka terdapat perlanggaran. Apa yang perlu berlaku selepas itu bergantung kepada peraturan permainan. Untuk melaksanakan pengesanan perlanggaran, anda memerlukan perkara berikut:
+Pendekatan yang akan kita gunakan menganggap setiap objek permainan sebagai segi empat tepat, sama seperti sistem kawalan trafik udara menggunakan bentuk geometri yang dipermudahkan untuk menjejaki pesawat. Kaedah segi empat tepat ini mungkin kelihatan asas, tetapi ia cekap dari segi pengiraan dan berfungsi dengan baik untuk kebanyakan senario permainan.
 
-1. Cara untuk mendapatkan representasi segi empat tepat bagi objek permainan, seperti ini:
+### Representasi Segi Empat Tepat
 
-   ```javascript
-   rectFromGameObject() {
-     return {
-       top: this.y,
-       left: this.x,
-       bottom: this.y + this.height,
-       right: this.x + this.width
-     }
-   }
-   ```
-
-2. Fungsi perbandingan, fungsi ini boleh kelihatan seperti ini:
-
-   ```javascript
-   function intersectRect(r1, r2) {
-     return !(r2.left > r1.right ||
-       r2.right < r1.left ||
-       r2.top > r1.bottom ||
-       r2.bottom < r1.top);
-   }
-   ```
-
-## Bagaimana Memusnahkan Objek
-
-Untuk memusnahkan objek dalam permainan, anda perlu memberitahu permainan bahawa objek tersebut tidak lagi perlu dilukis dalam gelung permainan yang dicetuskan pada selang tertentu. Salah satu cara untuk melakukannya adalah dengan menandakan objek permainan sebagai *mati* apabila sesuatu berlaku, seperti ini:
+Setiap objek permainan memerlukan sempadan koordinat, sama seperti rover Mars Pathfinder memetakan lokasinya di permukaan Marikh. Berikut adalah cara kita menentukan koordinat sempadan ini:
 
 ```javascript
-// collision happened
-enemy.dead = true
+rectFromGameObject() {
+  return {
+    top: this.y,
+    left: this.x,
+    bottom: this.y + this.height,
+    right: this.x + this.width
+  }
+}
 ```
 
-Kemudian anda boleh mengasingkan objek *mati* sebelum melukis semula skrin, seperti ini:
+**Mari kita pecahkan:**
+- **Tepi atas**: Di mana objek anda bermula secara menegak (posisi y)
+- **Tepi kiri**: Di mana ia bermula secara mendatar (posisi x)
+- **Tepi bawah**: Tambahkan ketinggian kepada posisi y - sekarang anda tahu di mana ia berakhir!
+- **Tepi kanan**: Tambahkan lebar kepada posisi x - dan anda mempunyai sempadan lengkap
+
+### Algoritma Persilangan
+
+Mengesan persilangan segi empat tepat menggunakan logik yang serupa dengan cara Teleskop Angkasa Hubble menentukan jika objek cakerawala bertindih dalam medan pandangannya. Algoritma ini memeriksa pemisahan:
 
 ```javascript
-gameObjects = gameObject.filter(go => !go.dead);
+function intersectRect(r1, r2) {
+  return !(r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top);
+}
 ```
 
-## Bagaimana Menembak Laser
+**Ujian pemisahan berfungsi seperti sistem radar:**
+- Adakah segi empat tepat 2 sepenuhnya di sebelah kanan segi empat tepat 1?
+- Adakah segi empat tepat 2 sepenuhnya di sebelah kiri segi empat tepat 1?
+- Adakah segi empat tepat 2 sepenuhnya di bawah segi empat tepat 1?
+- Adakah segi empat tepat 2 sepenuhnya di atas segi empat tepat 1?
 
-Menembak laser bermaksud bertindak balas terhadap peristiwa kekunci dan mencipta objek yang bergerak dalam arah tertentu. Oleh itu, kita perlu melaksanakan langkah-langkah berikut:
+Jika tiada satu pun daripada syarat ini benar, segi empat tepat mesti bertindih. Pendekatan ini mencerminkan cara pengendali radar menentukan jika dua pesawat berada pada jarak yang selamat.
 
-1. **Cipta objek laser**: dari bahagian atas kapal wira anda, yang akan mula bergerak ke atas skrin sebaik sahaja dicipta.
-2. **Lampirkan kod kepada peristiwa kekunci**: kita perlu memilih kekunci pada papan kekunci yang mewakili pemain menembak laser.
-3. **Cipta objek permainan yang kelihatan seperti laser** apabila kekunci ditekan.
+## Mengurus Kitaran Hayat Objek
 
-## Penyejukan Laser
+Apabila laser mengenai musuh, kedua-dua objek perlu dikeluarkan dari permainan. Walau bagaimanapun, memadamkan objek semasa gelung boleh menyebabkan kerosakan - pelajaran yang dipelajari dengan susah payah dalam sistem komputer awal seperti Apollo Guidance Computer. Sebaliknya, kita menggunakan pendekatan "tandakan untuk penghapusan" yang selamat mengeluarkan objek antara bingkai.
 
-Laser perlu ditembak setiap kali anda menekan kekunci, seperti *space* contohnya. Untuk mengelakkan permainan menghasilkan terlalu banyak laser dalam masa yang singkat, kita perlu memperbaikinya. Penyelesaiannya adalah dengan melaksanakan apa yang dipanggil *cooldown*, iaitu pemasa, yang memastikan laser hanya boleh ditembak pada selang masa tertentu. Anda boleh melaksanakannya seperti berikut:
+Berikut adalah cara kita menandakan sesuatu untuk penghapusan:
+
+```javascript
+// Mark object for removal
+enemy.dead = true;
+```
+
+**Mengapa pendekatan ini berfungsi:**
+- Kita menandakan objek sebagai "mati" tetapi tidak memadamkannya dengan segera
+- Ini membolehkan bingkai permainan semasa selesai dengan selamat
+- Tiada kerosakan daripada cuba menggunakan sesuatu yang sudah tiada!
+
+Kemudian tapis objek yang ditandakan sebelum kitaran render seterusnya:
+
+```javascript
+gameObjects = gameObjects.filter(go => !go.dead);
+```
+
+**Apa yang penapisan ini lakukan:**
+- Membuat senarai baru dengan hanya objek "hidup"
+- Membuang apa sahaja yang ditandakan sebagai mati
+- Menjaga permainan anda berjalan lancar
+- Mengelakkan pembaziran memori daripada pengumpulan objek yang dimusnahkan
+
+## Melaksanakan Mekanik Laser
+
+Projektil laser dalam permainan berfungsi berdasarkan prinsip yang sama seperti torpedo foton dalam Star Trek - ia adalah objek diskret yang bergerak dalam garis lurus sehingga ia mengenai sesuatu. Setiap tekan bar ruang mencipta objek laser baru yang bergerak di skrin.
+
+Untuk membuat ini berfungsi, kita perlu menyelaraskan beberapa bahagian yang berbeza:
+
+**Komponen utama untuk dilaksanakan:**
+- **Cipta** objek laser yang muncul dari posisi hero
+- **Kendalikan** input papan kekunci untuk mencetuskan penciptaan laser
+- **Urus** pergerakan dan kitaran hayat laser
+- **Laksanakan** representasi visual untuk projektil laser
+
+## Melaksanakan Kawalan Kadar Tembakan
+
+Kadar tembakan tanpa had akan membebankan enjin permainan dan menjadikan permainan terlalu mudah. Sistem senjata sebenar menghadapi kekangan yang sama - bahkan phaser USS Enterprise memerlukan masa untuk mengecas semula antara tembakan.
+
+Kami akan melaksanakan sistem cooldown yang menghalang spam tembakan pantas sambil mengekalkan kawalan yang responsif:
 
 ```javascript
 class Cooldown {
@@ -91,41 +121,55 @@ class Cooldown {
     this.cool = false;
     setTimeout(() => {
       this.cool = true;
-    }, time)
+    }, time);
   }
 }
 
 class Weapon {
-  constructor {
+  constructor() {
+    this.cooldown = null;
   }
+  
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // Create laser projectile
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // Weapon is still cooling down
     }
   }
 }
 ```
 
-✅ Rujuk pelajaran 1 dalam siri permainan angkasa untuk mengingatkan diri anda tentang *cooldowns*.
+**Bagaimana cooldown berfungsi:**
+- Apabila dicipta, senjata bermula "panas" (tidak boleh menembak lagi)
+- Selepas tempoh timeout, ia menjadi "sejuk" (sedia untuk menembak)
+- Sebelum menembak, kita periksa: "Adakah senjata sejuk?"
+- Ini menghalang spam klik sambil mengekalkan kawalan yang responsif
 
-## Apa yang Akan Dibina
+✅ Rujuk pelajaran 1 dalam siri permainan angkasa untuk mengingatkan diri anda tentang cooldown.
 
-Anda akan mengambil kod sedia ada (yang sepatutnya telah anda kemas kini dan refactor) daripada pelajaran sebelumnya, dan memperluaskannya. Sama ada mulakan dengan kod dari bahagian II atau gunakan kod di [Bahagian III - permulaan](../../../../../../../../../your-work).
+## Membina Sistem Pengesanan Perlanggaran
 
-> tip: laser yang akan anda gunakan sudah ada dalam folder aset anda dan dirujuk oleh kod anda
+Anda akan melanjutkan kod permainan angkasa sedia ada anda untuk mencipta sistem pengesanan perlanggaran. Seperti sistem pengelakan perlanggaran automatik Stesen Angkasa Antarabangsa, permainan anda akan sentiasa memantau posisi objek dan bertindak balas terhadap persilangan.
 
-- **Tambah pengesanan perlanggaran**, apabila laser bertembung dengan sesuatu, peraturan berikut harus digunakan:
-   1. **Laser mengenai musuh**: musuh mati jika terkena laser
-   2. **Laser mengenai bahagian atas skrin**: Laser dimusnahkan jika terkena bahagian atas skrin
-   3. **Perlanggaran musuh dan wira**: musuh dan wira dimusnahkan jika mereka bertembung
-   4. **Musuh mengenai bahagian bawah skrin**: musuh dan wira dimusnahkan jika musuh sampai ke bahagian bawah skrin
+Bermula dari kod pelajaran sebelumnya, anda akan menambah pengesanan perlanggaran dengan peraturan khusus yang mengawal interaksi objek.
 
-## Langkah yang Disyorkan
+> 💡 **Tip Pro**: Sprite laser sudah termasuk dalam folder aset anda dan dirujuk dalam kod anda, sedia untuk dilaksanakan.
 
-Cari fail yang telah dicipta untuk anda dalam subfolder `your-work`. Ia sepatutnya mengandungi perkara berikut:
+### Peraturan Perlanggaran untuk Dilaksanakan
+
+**Mekanisme permainan untuk ditambah:**
+1. **Laser mengenai musuh**: Objek musuh dimusnahkan apabila terkena projektil laser
+2. **Laser mengenai sempadan skrin**: Laser dikeluarkan apabila mencapai tepi atas skrin
+3. **Perlanggaran musuh dan hero**: Kedua-dua objek dimusnahkan apabila mereka bersilang
+4. **Musuh mencapai bawah**: Keadaan tamat permainan apabila musuh mencapai bahagian bawah skrin
+
+## Menyediakan Persekitaran Pembangunan Anda
+
+Berita baik - kami telah menyediakan kebanyakan asas untuk anda! Semua aset permainan dan struktur asas anda menunggu dalam subfolder `your-work`, sedia untuk anda menambah ciri perlanggaran yang menarik.
+
+### Struktur Projek
 
 ```bash
 -| assets
@@ -137,169 +181,279 @@ Cari fail yang telah dicipta untuk anda dalam subfolder `your-work`. Ia sepatutn
 -| package.json
 ```
 
-Mulakan projek anda dalam folder `your_work` dengan menaip:
+**Memahami struktur fail:**
+- **Mengandungi** semua imej sprite yang diperlukan untuk objek permainan
+- **Termasuk** dokumen HTML utama dan fail aplikasi JavaScript
+- **Menyediakan** konfigurasi pakej untuk pelayan pembangunan tempatan
+
+### Memulakan Pelayan Pembangunan
+
+Navigasi ke folder projek anda dan mulakan pelayan tempatan:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Perintah di atas akan memulakan HTTP Server pada alamat `http://localhost:5000`. Buka pelayar dan masukkan alamat tersebut, buat masa ini ia sepatutnya memaparkan wira dan semua musuh, tetapi tiada apa yang bergerak - lagi :).
+**Urutan arahan ini:**
+- **Menukar** direktori ke folder projek kerja anda
+- **Memulakan** pelayan HTTP tempatan pada `http://localhost:5000`
+- **Menyajikan** fail permainan anda untuk ujian dan pembangunan
+- **Membolehkan** pembangunan langsung dengan pemuatan semula automatik
 
-### Tambah Kod
+Buka pelayar anda dan navigasi ke `http://localhost:5000` untuk melihat keadaan permainan semasa anda dengan hero dan musuh yang dirender di skrin.
 
-1. **Sediakan representasi segi empat tepat untuk objek permainan anda, untuk mengendalikan perlanggaran** Kod di bawah membolehkan anda mendapatkan representasi segi empat tepat bagi `GameObject`. Edit kelas GameObject anda untuk memperluaskannya:
+### Pelaksanaan Langkah Demi Langkah
 
-    ```javascript
-    rectFromGameObject() {
-        return {
-          top: this.y,
-          left: this.x,
-          bottom: this.y + this.height,
-          right: this.x + this.width,
-        };
-      }
-    ```
+Seperti pendekatan sistematik yang digunakan NASA untuk memprogramkan kapal angkasa Voyager, kami akan melaksanakan pengesanan perlanggaran secara metodik, membina setiap komponen langkah demi langkah.
 
-2. **Tambah kod yang memeriksa perlanggaran** Ini akan menjadi fungsi baru yang menguji sama ada dua segi empat tepat bersilang:
+#### 1. Tambah Sempadan Perlanggaran Segi Empat Tepat
 
-    ```javascript
-    function intersectRect(r1, r2) {
-      return !(
-        r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top
-      );
-    }
-    ```
+Pertama, mari ajar objek permainan kita bagaimana untuk menerangkan sempadan mereka. Tambahkan kaedah ini ke kelas `GameObject` anda:
 
-3. **Tambah keupayaan menembak laser**
-   1. **Tambah mesej peristiwa kekunci**. Kekunci *space* sepatutnya mencipta laser tepat di atas kapal wira. Tambah tiga pemalar dalam objek Messages:
+```javascript
+rectFromGameObject() {
+    return {
+      top: this.y,
+      left: this.x,
+      bottom: this.y + this.height,
+      right: this.x + this.width,
+    };
+  }
+```
 
-       ```javascript
-        KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
-        COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
-        COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
-       ```
+**Kaedah ini mencapai:**
+- **Mencipta** objek segi empat tepat dengan koordinat sempadan yang tepat
+- **Mengira** tepi bawah dan kanan menggunakan posisi ditambah dimensi
+- **Mengembalikan** objek sedia untuk algoritma pengesanan perlanggaran
+- **Menyediakan** antara muka standard untuk semua objek permainan
 
-   1. **Kendalikan kekunci space**. Edit fungsi `window.addEventListener` keyup untuk mengendalikan kekunci space:
+#### 2. Laksanakan Pengesanan Persilangan
 
-      ```javascript
-        } else if(evt.keyCode === 32) {
-          eventEmitter.emit(Messages.KEY_EVENT_SPACE);
-        }
-      ```
+Sekarang mari kita cipta detektif perlanggaran kita - fungsi yang boleh memberitahu bila dua segi empat tepat bertindih:
 
-    1. **Tambah pendengar**. Edit fungsi `initGame()` untuk memastikan wira boleh menembak apabila kekunci space ditekan:
+```javascript
+function intersectRect(r1, r2) {
+  return !(
+    r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top
+  );
+}
+```
 
-       ```javascript
-       eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
-        if (hero.canFire()) {
-          hero.fire();
-        }
-       ```
+**Algoritma ini berfungsi dengan:**
+- **Menguji** empat syarat pemisahan antara segi empat tepat
+- **Mengembalikan** `false` jika mana-mana syarat pemisahan adalah benar
+- **Menunjukkan** perlanggaran apabila tiada pemisahan wujud
+- **Menggunakan** logik penafian untuk ujian persilangan yang cekap
 
-       dan tambah fungsi `eventEmitter.on()` baru untuk memastikan tingkah laku apabila musuh bertembung dengan laser:
+#### 3. Laksanakan Sistem Tembakan Laser
 
-          ```javascript
-          eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-            first.dead = true;
-            second.dead = true;
-          })
-          ```
+Di sinilah perkara menjadi menarik! Mari kita sediakan sistem tembakan laser.
 
-   1. **Gerakkan objek**, Pastikan laser bergerak ke atas skrin secara beransur-ansur. Anda akan mencipta kelas Laser baru yang memperluaskan `GameObject`, seperti yang anda lakukan sebelum ini: 
-   
-      ```javascript
-        class Laser extends GameObject {
-        constructor(x, y) {
-          super(x,y);
-          (this.width = 9), (this.height = 33);
-          this.type = 'Laser';
-          this.img = laserImg;
-          let id = setInterval(() => {
-            if (this.y > 0) {
-              this.y -= 15;
-            } else {
-              this.dead = true;
-              clearInterval(id);
-            }
-          }, 100)
-        }
-      }
-      ```
+##### Konstanta Mesej
 
-   1. **Kendalikan perlanggaran**, Laksanakan peraturan perlanggaran untuk laser. Tambah fungsi `updateGameObjects()` yang menguji objek bertembung untuk perlanggaran:
+Pertama, mari kita tentukan beberapa jenis mesej supaya bahagian-bahagian permainan kita boleh berkomunikasi antara satu sama lain:
 
-      ```javascript
-      function updateGameObjects() {
-        const enemies = gameObjects.filter(go => go.type === 'Enemy');
-        const lasers = gameObjects.filter((go) => go.type === "Laser");
-      // laser hit something
-        lasers.forEach((l) => {
-          enemies.forEach((m) => {
-            if (intersectRect(l.rectFromGameObject(), m.rectFromGameObject())) {
-            eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
-              first: l,
-              second: m,
-            });
-          }
-         });
-      });
+```javascript
+KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
+COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
+COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
+```
 
-        gameObjects = gameObjects.filter(go => !go.dead);
-      }  
-      ```
+**Konstanta ini menyediakan:**
+- **Menstandardkan** nama acara di seluruh aplikasi
+- **Membolehkan** komunikasi konsisten antara sistem permainan
+- **Mengelakkan** kesilapan dalam pendaftaran pengendali acara
 
-      Pastikan untuk menambah `updateGameObjects()` ke dalam gelung permainan anda dalam `window.onload`.
+##### Pengendalian Input Papan Kekunci
 
-   4. **Laksanakan cooldown** pada laser, supaya ia hanya boleh ditembak pada selang tertentu.
+Tambahkan pengesanan kekunci ruang ke pendengar acara kekunci anda:
 
-      Akhir sekali, edit kelas Hero supaya ia boleh melaksanakan cooldown:
+```javascript
+} else if(evt.keyCode === 32) {
+  eventEmitter.emit(Messages.KEY_EVENT_SPACE);
+}
+```
 
-       ```javascript
-      class Hero extends GameObject {
-        constructor(x, y) {
-          super(x, y);
-          (this.width = 99), (this.height = 75);
-          this.type = "Hero";
-          this.speed = { x: 0, y: 0 };
-          this.cooldown = 0;
-        }
-        fire() {
-          gameObjects.push(new Laser(this.x + 45, this.y - 10));
-          this.cooldown = 500;
+**Pengendali input ini:**
+- **Mengesan** tekan kekunci ruang menggunakan keyCode 32
+- **Menghantar** mesej acara yang standard
+- **Membolehkan** logik tembakan yang tidak bergantung
+
+##### Persediaan Pendengar Acara
+
+Daftarkan tingkah laku tembakan dalam fungsi `initGame()` anda:
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
+ if (hero.canFire()) {
+   hero.fire();
+ }
+});
+```
+
+**Pendengar acara ini:**
+- **Bertindak balas** kepada acara kekunci ruang
+- **Memeriksa** status cooldown tembakan
+- **Mencetuskan** penciptaan laser apabila dibenarkan
+
+Tambahkan pengendalian perlanggaran untuk interaksi laser-musuh:
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+  first.dead = true;
+  second.dead = true;
+});
+```
+
+**Pengendali perlanggaran ini:**
+- **Menerima** data acara perlanggaran dengan kedua-dua objek
+- **Menandakan** kedua-dua objek untuk penghapusan
+- **Memastikan** pembersihan yang betul selepas perlanggaran
+
+#### 4. Cipta Kelas Laser
+
+Laksanakan projektil laser yang bergerak ke atas dan menguruskan kitaran hayatnya sendiri:
+
+```javascript
+class Laser extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 9;
+    this.height = 33;
+    this.type = 'Laser';
+    this.img = laserImg;
     
-          let id = setInterval(() => {
-            if (this.cooldown > 0) {
-              this.cooldown -= 100;
-            } else {
-              clearInterval(id);
-            }
-          }, 200);
-        }
-        canFire() {
-          return this.cooldown === 0;
-        }
+    let id = setInterval(() => {
+      if (this.y > 0) {
+        this.y -= 15;
+      } else {
+        this.dead = true;
+        clearInterval(id);
       }
-      ```
+    }, 100);
+  }
+}
+```
 
-Pada tahap ini, permainan anda sudah mempunyai beberapa fungsi! Anda boleh bergerak menggunakan kekunci anak panah, menembak laser dengan kekunci space, dan musuh akan hilang apabila anda mengenainya. Syabas!
+**Pelaksanaan kelas ini:**
+- **Melanjutkan** GameObject untuk mewarisi fungsi asas
+- **Menetapkan** dimensi yang sesuai untuk sprite laser
+- **Mencipta** pergerakan automatik ke atas menggunakan `setInterval()`
+- **Mengendalikan** pemusnahan diri apabila mencapai bahagian atas skrin
+- **Menguruskan** masa animasi dan pembersihan sendiri
+
+#### 5. Laksanakan Sistem Pengesanan Perlanggaran
+
+Cipta fungsi pengesanan perlanggaran yang komprehensif:
+
+```javascript
+function updateGameObjects() {
+  const enemies = gameObjects.filter(go => go.type === 'Enemy');
+  const lasers = gameObjects.filter(go => go.type === "Laser");
+  
+  // Test laser-enemy collisions
+  lasers.forEach((laser) => {
+    enemies.forEach((enemy) => {
+      if (intersectRect(laser.rectFromGameObject(), enemy.rectFromGameObject())) {
+        eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
+          first: laser,
+          second: enemy,
+        });
+      }
+    });
+  });
+
+  // Remove destroyed objects
+  gameObjects = gameObjects.filter(go => !go.dead);
+}
+```
+
+**Sistem perlanggaran ini:**
+- **Menapis** objek permainan mengikut jenis untuk ujian yang cekap
+- **Menguji** setiap laser terhadap setiap musuh untuk persilangan
+- **Menghantar** acara perlanggaran apabila persilangan dikesan
+- **Membersihkan** objek yang dimusnahkan selepas pemprosesan perlanggaran
+
+> ⚠️ **Penting**: Tambahkan `updateGameObjects()` ke gelung permainan utama anda dalam `window.onload` untuk mengaktifkan pengesanan perlanggaran.
+
+#### 6. Tambahkan Sistem Cooldown ke Kelas Hero
+
+Tingkatkan kelas Hero dengan mekanik tembakan dan had kadar tembakan:
+
+```javascript
+class Hero extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 99;
+    this.height = 75;
+    this.type = "Hero";
+    this.speed = { x: 0, y: 0 };
+    this.cooldown = 0;
+  }
+  
+  fire() {
+    gameObjects.push(new Laser(this.x + 45, this.y - 10));
+    this.cooldown = 500;
+
+    let id = setInterval(() => {
+      if (this.cooldown > 0) {
+        this.cooldown -= 100;
+      } else {
+        clearInterval(id);
+      }
+    }, 200);
+  }
+  
+  canFire() {
+    return this.cooldown === 0;
+  }
+}
+```
+
+**Memahami kelas Hero yang ditingkatkan:**
+- **Memulakan** pemasa cooldown pada sifar (sedia untuk menembak)
+- **Mencipta** objek laser yang diposisikan di atas kapal hero
+- **Menetapkan** tempoh cooldown untuk menghalang tembakan pantas
+- **Mengurangkan** pemasa cooldown menggunakan kemas kini berasaskan selang
+- **Menyediakan** pemeriksaan status tembakan melalui kaedah `canFire()`
+
+### Menguji Pelaksanaan Anda
+
+Permainan angkasa anda kini mempunyai pengesanan perlanggaran lengkap dan mekanik pertempuran. 🚀 Uji keupayaan baru ini:
+- **Navigasi** dengan kekunci anak panah untuk mengesahkan kawalan pergerakan
+- **Tembak laser** dengan bar ruang - perhatikan bagaimana cooldown menghalang spam klik
+- **Perhatikan perlanggaran** apabila laser mengenai musuh, mencetuskan penghapusan
+- **Sahkan pembersihan** apabila objek yang dimusnahkan hilang dari permainan
+
+Anda telah berjaya melaksanakan sistem pengesanan perlanggaran menggunakan prinsip matematik yang sama yang membimbing navigasi kapal angkasa dan robotik.
+
+## Cabaran Ejen GitHub Copilot 🚀
+
+Gunakan mod Ejen untuk menyelesaikan cabaran berikut:
+
+**Penerangan:** Tingkatkan sistem pengesanan perlanggaran dengan melaksanakan power-up yang muncul secara rawak dan memberikan keupayaan sementara apabila dikumpulkan oleh kapal hero.
+
+**Arahan:** Cipta kelas PowerUp yang melanjutkan GameObject dan laksanakan pengesanan perlanggaran antara hero dan power-up. Tambahkan sekurang-kurangnya dua jenis power-up: satu yang meningkatkan kadar tembakan (mengurangkan cooldown) dan satu lagi yang mencipta perisai sementara. Sertakan logik spawn yang mencipta power-up pada selang dan posisi rawak.
 
 ---
 
+
+
 ## 🚀 Cabaran
 
-Tambah letupan! Lihat aset permainan dalam [repositori Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) dan cuba tambahkan letupan apabila laser mengenai alien.
+Tambahkan letupan! Lihat aset permainan dalam [repo Seni Angkasa](../../../../6-space-game/solution/spaceArt/readme.txt) dan cuba tambahkan letupan apabila laser mengenai alien.
 
 ## Kuiz Pasca-Kuliah
 
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/36)
 
-## Ulasan & Kajian Kendiri
+## Ulasan & Kajian Sendiri
 
-Cuba ubah selang masa dalam permainan anda setakat ini. Apa yang berlaku apabila anda mengubahnya? Baca lebih lanjut tentang [peristiwa masa dalam JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
+Eksperimen dengan selang dalam permainan anda setakat ini. Apa yang berlaku apabila anda mengubahnya? Baca lebih lanjut tentang [acara masa JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
 ## Tugasan
 
@@ -308,4 +462,4 @@ Cuba ubah selang masa dalam permainan anda setakat ini. Apa yang berlaku apabila
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

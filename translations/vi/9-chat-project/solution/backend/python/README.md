@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:48:47+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-24T13:38:02+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "vi"
 }
@@ -21,16 +21,24 @@ source ./venv/bin/activate
 ## Cài đặt các phụ thuộc
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## Chạy API
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-## Chạy giao diện người dùng
+## Kiểm tra API
+
+Truy cập tài liệu API tương tác tại: `http://localhost:5000/docs`
+
+## Chạy giao diện frontend
 
 Đảm bảo bạn đang đứng trong thư mục frontend
 
@@ -42,7 +50,7 @@ Chạy nó
 npx http-server -p 8000
 ```
 
-Hãy thử nhập một tin nhắn trong khung chat, bạn sẽ thấy một phản hồi (với điều kiện bạn đang chạy điều này trong Codespace hoặc đã thiết lập mã thông báo truy cập).
+Hãy thử nhập một tin nhắn vào chat, bạn sẽ thấy phản hồi (miễn là bạn đang chạy điều này trong Codespace hoặc đã thiết lập mã thông báo truy cập).
 
 ## Thiết lập mã thông báo truy cập (nếu bạn không chạy điều này trong Codespace)
 
@@ -51,4 +59,4 @@ Xem [Thiết lập PAT](https://docs.github.com/en/authentication/keeping-your-a
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc sự không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, chúng tôi khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

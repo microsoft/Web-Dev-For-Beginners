@@ -1,13 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
-  "translation_date": "2025-08-29T09:35:25+00:00",
+  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
+  "translation_date": "2025-10-24T14:37:34+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "ms"
 }
 -->
-# Membina permainan menggunakan acara
+# Membuat permainan menggunakan acara
+
+Pernahkah anda tertanya-tanya bagaimana laman web tahu apabila anda klik butang atau menaip dalam kotak teks? Itulah keajaiban pengaturcaraan berasaskan acara! Cara terbaik untuk mempelajari kemahiran penting ini adalah dengan membina sesuatu yang berguna - permainan kelajuan menaip yang bertindak balas terhadap setiap kekunci yang anda tekan.
+
+Anda akan melihat sendiri bagaimana pelayar web "berkomunikasi" dengan kod JavaScript anda. Setiap kali anda klik, menaip, atau menggerakkan tetikus, pelayar menghantar mesej kecil (kami panggil sebagai acara) kepada kod anda, dan anda boleh menentukan bagaimana untuk bertindak balas!
+
+Apabila kita selesai, anda akan membina permainan menaip sebenar yang menjejaki kelajuan dan ketepatan anda. Lebih penting lagi, anda akan memahami konsep asas yang menggerakkan setiap laman web interaktif yang pernah anda gunakan. Jom mulakan!
 
 ## Kuiz Pra-Kuliah
 
@@ -15,42 +21,83 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pengaturcaraan berasaskan acara
 
-Apabila mencipta aplikasi berasaskan pelayar, kita menyediakan antara muka pengguna grafik (GUI) untuk digunakan oleh pengguna semasa berinteraksi dengan apa yang telah kita bina. Cara paling biasa untuk berinteraksi dengan pelayar adalah melalui klik dan menaip pada pelbagai elemen. Cabaran yang kita hadapi sebagai pembangun adalah kita tidak tahu bila mereka akan melakukan operasi ini!
+Fikirkan tentang aplikasi atau laman web kegemaran anda - apa yang membuatnya terasa hidup dan responsif? Ia semua tentang bagaimana ia bertindak balas terhadap apa yang anda lakukan! Setiap ketukan, klik, sapuan, atau kekunci mencipta apa yang kita panggil sebagai "acara," dan di situlah keajaiban sebenar pembangunan web berlaku.
 
-[Pengaturcaraan berasaskan acara](https://en.wikipedia.org/wiki/Event-driven_programming) adalah nama untuk jenis pengaturcaraan yang perlu kita lakukan untuk mencipta GUI kita. Jika kita pecahkan frasa ini sedikit, kita akan dapati perkataan utama di sini ialah **acara**. [Acara](https://www.merriam-webster.com/dictionary/event), menurut Merriam-Webster, didefinisikan sebagai "sesuatu yang berlaku". Ini menggambarkan situasi kita dengan sempurna. Kita tahu sesuatu akan berlaku yang memerlukan kita melaksanakan kod sebagai tindak balas, tetapi kita tidak tahu bila ia akan berlaku.
+Inilah yang membuat pengaturcaraan untuk web begitu menarik: kita tidak pernah tahu bila seseorang akan klik butang itu atau mula menaip dalam kotak teks. Mereka mungkin klik dengan segera, tunggu lima minit, atau mungkin tidak klik langsung! Ketidakpastian ini bermakna kita perlu berfikir secara berbeza tentang bagaimana kita menulis kod kita.
 
-Cara kita menandakan bahagian kod yang ingin kita laksanakan adalah dengan mencipta fungsi. Apabila kita memikirkan tentang [pengaturcaraan prosedural](https://en.wikipedia.org/wiki/Procedural_programming), fungsi dipanggil dalam susunan tertentu. Perkara yang sama juga berlaku dalam pengaturcaraan berasaskan acara. Perbezaannya adalah **bagaimana** fungsi tersebut akan dipanggil.
+Daripada menulis kod yang berjalan dari atas ke bawah seperti resipi, kita menulis kod yang duduk dengan sabar menunggu sesuatu berlaku. Ia serupa dengan bagaimana operator telegraf pada tahun 1800-an akan duduk di mesin mereka, bersedia untuk bertindak balas sebaik sahaja mesej datang melalui wayar.
 
-Untuk mengendalikan acara (klik butang, menaip, dan sebagainya), kita mendaftarkan **pendengar acara**. Pendengar acara adalah fungsi yang mendengar sesuatu acara berlaku dan melaksanakan kod sebagai tindak balas. Pendengar acara boleh mengemas kini UI, membuat panggilan ke pelayan, atau apa sahaja yang perlu dilakukan sebagai tindak balas kepada tindakan pengguna. Kita menambah pendengar acara dengan menggunakan [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener), dan menyediakan fungsi untuk dilaksanakan.
+Jadi apa sebenarnya "acara"? Secara ringkas, ia adalah sesuatu yang berlaku! Apabila anda klik butang - itu adalah acara. Apabila anda menaip huruf - itu adalah acara. Apabila anda menggerakkan tetikus - itu adalah acara lain.
 
-> **NOTE:** Perlu diingatkan bahawa terdapat banyak cara untuk mencipta pendengar acara. Anda boleh menggunakan fungsi tanpa nama, atau mencipta fungsi yang dinamakan. Anda boleh menggunakan pelbagai pintasan, seperti menetapkan sifat `click`, atau menggunakan `addEventListener`. Dalam latihan kita, kita akan memberi tumpuan kepada `addEventListener` dan fungsi tanpa nama, kerana ini mungkin teknik yang paling biasa digunakan oleh pembangun web. Ia juga yang paling fleksibel, kerana `addEventListener` berfungsi untuk semua acara, dan nama acara boleh disediakan sebagai parameter.
+Pengaturcaraan berasaskan acara membolehkan kita menyediakan kod kita untuk mendengar dan bertindak balas. Kita mencipta fungsi khas yang dipanggil **pendengar acara** yang menunggu dengan sabar untuk perkara tertentu berlaku, kemudian bertindak apabila ia berlaku.
+
+Fikirkan pendengar acara seperti mempunyai loceng pintu untuk kod anda. Anda menyediakan loceng pintu (`addEventListener()`), memberitahu bunyi apa yang perlu didengar (seperti 'klik' atau 'tekan kekunci'), dan kemudian menentukan apa yang perlu berlaku apabila seseorang membunyikannya (fungsi tersuai anda).
+
+**Inilah cara pendengar acara berfungsi:**
+- **Mendengar** tindakan pengguna tertentu seperti klik, kekunci, atau pergerakan tetikus
+- **Melaksanakan** kod tersuai anda apabila acara yang ditentukan berlaku
+- **Bertindak balas** dengan segera terhadap interaksi pengguna, mencipta pengalaman yang lancar
+- **Mengendalikan** pelbagai acara pada elemen yang sama menggunakan pendengar yang berbeza
+
+> **NOTE:** Perlu diingat bahawa terdapat banyak cara untuk mencipta pendengar acara. Anda boleh menggunakan fungsi tanpa nama, atau mencipta fungsi bernama. Anda boleh menggunakan pelbagai pintasan, seperti menetapkan sifat `click`, atau menggunakan `addEventListener()`. Dalam latihan kita, kita akan fokus pada `addEventListener()` dan fungsi tanpa nama, kerana ia mungkin teknik yang paling biasa digunakan oleh pembangun web. Ia juga paling fleksibel, kerana `addEventListener()` berfungsi untuk semua acara, dan nama acara boleh diberikan sebagai parameter.
 
 ### Acara biasa
 
-Terdapat [puluhan acara](https://developer.mozilla.org/docs/Web/Events) yang tersedia untuk anda dengar semasa mencipta aplikasi. Pada asasnya, apa sahaja yang pengguna lakukan pada halaman akan mencetuskan acara, yang memberikan anda banyak kuasa untuk memastikan mereka mendapat pengalaman yang anda inginkan. Nasib baik, anda biasanya hanya memerlukan sebilangan kecil acara. Berikut adalah beberapa acara biasa (termasuk dua yang akan kita gunakan semasa mencipta permainan kita):
+Walaupun pelayar web menawarkan berpuluh-puluh acara berbeza yang boleh anda dengar, kebanyakan aplikasi interaktif hanya bergantung pada beberapa acara penting. Memahami acara teras ini akan memberi anda asas untuk membina interaksi pengguna yang canggih.
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Pengguna mengklik sesuatu, biasanya butang atau pautan
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Pengguna mengklik butang kanan tetikus
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Pengguna menyorot beberapa teks
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Pengguna memasukkan beberapa teks
+Terdapat [berpuluh-puluh acara](https://developer.mozilla.org/docs/Web/Events) yang tersedia untuk anda dengar semasa mencipta aplikasi. Pada dasarnya, apa sahaja yang pengguna lakukan pada halaman akan mencetuskan acara, yang memberi anda kuasa besar untuk memastikan mereka mendapat pengalaman yang anda inginkan. Nasib baik, anda biasanya hanya memerlukan sebilangan kecil acara. Berikut adalah beberapa acara biasa (termasuk dua yang akan kita gunakan semasa mencipta permainan kita):
 
-## Membina permainan
+| Acara | Penerangan | Kegunaan Biasa |
+|-------|------------|---------------|
+| `click` | Pengguna klik sesuatu | Butang, pautan, elemen interaktif |
+| `contextmenu` | Pengguna klik butang kanan tetikus | Menu klik kanan tersuai |
+| `select` | Pengguna menyorot teks | Penyuntingan teks, operasi salin |
+| `input` | Pengguna memasukkan teks | Pengesahan borang, carian masa nyata |
 
-Kita akan mencipta permainan untuk meneroka bagaimana acara berfungsi dalam JavaScript. Permainan kita akan menguji kemahiran menaip pemain, yang merupakan salah satu kemahiran paling penting yang harus dimiliki oleh semua pembangun. Kita semua sepatutnya berlatih menaip! Aliran umum permainan akan kelihatan seperti ini:
+**Memahami jenis acara ini:**
+- **Dicetuskan** apabila pengguna berinteraksi dengan elemen tertentu pada halaman anda
+- **Memberikan** maklumat terperinci tentang tindakan pengguna melalui objek acara
+- **Membolehkan** anda mencipta aplikasi web yang responsif dan interaktif
+- **Berfungsi** secara konsisten di pelbagai pelayar dan peranti
 
-- Pemain mengklik butang mula dan diberikan petikan untuk ditaip
-- Pemain menaip petikan secepat mungkin dalam kotak teks
-  - Apabila setiap perkataan selesai, perkataan seterusnya disorot
-  - Jika pemain membuat kesalahan ejaan, kotak teks akan berubah menjadi merah
-  - Apabila pemain menyelesaikan petikan, mesej kejayaan dipaparkan bersama masa yang diambil
+## Membuat permainan
 
-Mari kita bina permainan kita, dan belajar tentang acara!
+Sekarang anda memahami bagaimana acara berfungsi, mari kita gunakan pengetahuan itu dengan membina sesuatu yang berguna. Kita akan mencipta permainan kelajuan menaip yang menunjukkan pengendalian acara sambil membantu anda membangunkan kemahiran penting sebagai pembangun.
+
+Kita akan mencipta permainan untuk meneroka bagaimana acara berfungsi dalam JavaScript. Permainan kita akan menguji kemahiran menaip pemain, yang merupakan salah satu kemahiran yang paling kurang dihargai tetapi sangat penting untuk semua pembangun. Fakta menarik: susun atur papan kekunci QWERTY yang kita gunakan hari ini sebenarnya direka pada tahun 1870-an untuk mesin taip - dan kemahiran menaip yang baik masih sama berharganya untuk pengaturcara hari ini! Aliran umum permainan akan kelihatan seperti ini:
+
+```mermaid
+flowchart TD
+    A[Player clicks Start] --> B[Random quote displays]
+    B --> C[Player types in textbox]
+    C --> D{Word complete?}
+    D -->|Yes| E[Highlight next word]
+    D -->|No| F{Correct so far?}
+    F -->|Yes| G[Keep normal styling]
+    F -->|No| H[Show error styling]
+    E --> I{Quote complete?}
+    I -->|No| C
+    I -->|Yes| J[Show success message with time]
+    G --> C
+    H --> C
+```
+
+**Inilah cara permainan kita berfungsi:**
+- **Bermula** apabila pemain klik butang mula dan memaparkan petikan rawak
+- **Menjejaki** kemajuan menaip pemain perkataan demi perkataan secara masa nyata
+- **Menyorot** perkataan semasa untuk membimbing fokus pemain
+- **Memberikan** maklum balas visual segera untuk kesalahan menaip
+- **Mengira** dan memaparkan jumlah masa apabila petikan selesai
+
+Mari kita bina permainan kita, dan pelajari tentang acara!
 
 ### Struktur fail
 
-Kita akan memerlukan tiga fail: **index.html**, **script.js** dan **style.css**. Mari kita mulakan dengan menyediakan fail-fail ini untuk memudahkan kerja kita.
+Sebelum kita mula menulis kod, mari kita susun! Mempunyai struktur fail yang bersih dari awal akan menjimatkan anda daripada sakit kepala kemudian dan menjadikan projek anda lebih profesional. 😊
 
-- Cipta folder baru untuk kerja anda dengan membuka konsol atau tetingkap terminal dan melaksanakan arahan berikut:
+Kita akan menyimpan perkara mudah dengan hanya tiga fail: `index.html` untuk struktur halaman kita, `script.js` untuk semua logik permainan kita, dan `style.css` untuk menjadikan semuanya kelihatan hebat. Ini adalah trio klasik yang menggerakkan kebanyakan web!
+
+**Cipta folder baru untuk kerja anda dengan membuka konsol atau tetingkap terminal dan mengeluarkan arahan berikut:**
 
 ```bash
 # Linux or macOS
@@ -60,29 +107,49 @@ mkdir typing-game && cd typing-game
 md typing-game && cd typing-game
 ```
 
-- Buka Visual Studio Code
+**Inilah yang dilakukan oleh arahan ini:**
+- **Mencipta** direktori baru bernama `typing-game` untuk fail projek anda
+- **Berpindah** ke direktori yang baru dicipta secara automatik
+- **Menyiapkan** ruang kerja yang bersih untuk pembangunan permainan anda
+
+**Buka Visual Studio Code:**
 
 ```bash
 code .
 ```
 
-- Tambahkan tiga fail ke dalam folder di Visual Studio Code dengan nama berikut:
-  - index.html
-  - script.js
-  - style.css
+**Arahan ini:**
+- **Melancarkan** Visual Studio Code dalam direktori semasa
+- **Membuka** folder projek anda dalam editor
+- **Memberikan** akses kepada semua alat pembangunan yang anda perlukan
+
+**Tambah tiga fail ke folder dalam Visual Studio Code dengan nama berikut:**
+- `index.html` - Mengandungi struktur dan kandungan permainan anda
+- `script.js` - Mengendalikan semua logik permainan dan pendengar acara
+- `style.css` - Menentukan penampilan visual dan gaya
 
 ## Cipta antara muka pengguna
 
-Jika kita meneliti keperluan, kita tahu kita akan memerlukan beberapa elemen pada halaman HTML kita. Ini seperti resipi, di mana kita memerlukan beberapa bahan:
+Sekarang mari kita bina pentas di mana semua aksi permainan kita akan berlaku! Fikirkan ini seperti mereka bentuk panel kawalan untuk kapal angkasa - kita perlu memastikan semua yang pemain kita perlukan berada di tempat yang mereka jangkakan.
 
-- Tempat untuk memaparkan petikan untuk ditaip oleh pengguna
-- Tempat untuk memaparkan sebarang mesej, seperti mesej kejayaan
-- Kotak teks untuk menaip
-- Butang mula
+Mari kita tentukan apa yang sebenarnya diperlukan oleh permainan kita. Jika anda bermain permainan menaip, apa yang anda ingin lihat di skrin? Inilah yang kita perlukan:
 
-Setiap elemen ini memerlukan ID supaya kita boleh bekerja dengannya dalam JavaScript kita. Kita juga akan menambah rujukan kepada fail CSS dan JavaScript yang akan kita cipta.
+| Elemen UI | Tujuan | Elemen HTML |
+|-----------|--------|-------------|
+| Paparan Petikan | Menunjukkan teks untuk ditaip | `<p>` dengan `id="quote"` |
+| Kawasan Mesej | Memaparkan status dan mesej kejayaan | `<p>` dengan `id="message"` |
+| Input Teks | Tempat pemain menaip petikan | `<input>` dengan `id="typed-value"` |
+| Butang Mula | Memulakan permainan | `<button>` dengan `id="start"` |
 
-Cipta fail baru bernama **index.html**. Tambahkan HTML berikut:
+**Memahami struktur UI:**
+- **Mengatur** kandungan secara logik dari atas ke bawah
+- **Menetapkan** ID unik kepada elemen untuk sasaran JavaScript
+- **Memberikan** hierarki visual yang jelas untuk pengalaman pengguna yang lebih baik
+- **Termasuk** elemen HTML semantik untuk kebolehaksesan
+
+Setiap elemen tersebut memerlukan ID supaya kita boleh bekerja dengannya dalam JavaScript kita. Kita juga akan menambah rujukan kepada fail CSS dan JavaScript yang akan kita cipta.
+
+Cipta fail baru bernama `index.html`. Tambahkan HTML berikut:
 
 ```html
 <!-- inside index.html -->
@@ -105,26 +172,52 @@ Cipta fail baru bernama **index.html**. Tambahkan HTML berikut:
 </html>
 ```
 
+**Memecahkan apa yang dicapai oleh struktur HTML ini:**
+- **Memautkan** fail CSS dalam `<head>` untuk gaya
+- **Mencipta** tajuk dan arahan yang jelas untuk pengguna
+- **Menetapkan** perenggan tempat letak dengan ID tertentu untuk kandungan dinamik
+- **Termasuk** medan input dengan atribut kebolehaksesan
+- **Memberikan** butang mula untuk mencetuskan permainan
+- **Memuatkan** fail JavaScript di akhir untuk prestasi optimum
+
 ### Lancarkan aplikasi
 
-Adalah lebih baik untuk membangunkan secara iteratif untuk melihat bagaimana rupa sesuatu. Mari lancarkan aplikasi kita. Terdapat sambungan hebat untuk Visual Studio Code yang dipanggil [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) yang akan menjadi hos aplikasi anda secara tempatan dan menyegarkan pelayar setiap kali anda menyimpan.
+Menguji aplikasi anda dengan kerap semasa pembangunan membantu anda menangkap isu awal dan melihat kemajuan anda secara masa nyata. Live Server adalah alat yang sangat berguna yang secara automatik menyegarkan pelayar anda setiap kali anda menyimpan perubahan, menjadikan pembangunan lebih cekap.
 
-- Pasang [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) dengan mengikuti pautan dan mengklik **Install**
-  - Anda akan diminta oleh pelayar untuk membuka Visual Studio Code, dan kemudian oleh Visual Studio Code untuk melaksanakan pemasangan
-  - Mulakan semula Visual Studio Code jika diminta
-- Setelah dipasang, dalam Visual Studio Code, klik Ctrl-Shift-P (atau Cmd-Shift-P) untuk membuka palet arahan
-- Taip **Live Server: Open with Live Server**
-  - Live Server akan mula menjadi hos aplikasi anda
-- Buka pelayar dan navigasi ke **https://localhost:5500**
-- Anda kini sepatutnya melihat halaman yang anda cipta!
+Sentiasa terbaik untuk membangunkan secara berulang untuk melihat bagaimana rupa sesuatu. Mari kita lancarkan aplikasi kita. Terdapat sambungan yang hebat untuk Visual Studio Code yang dipanggil [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) yang akan menjadi hos aplikasi anda secara tempatan dan menyegarkan pelayar setiap kali anda menyimpan.
 
-Mari tambahkan beberapa fungsi.
+**Pasang [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) dengan mengikuti pautan dan klik Install:**
+
+**Inilah yang berlaku semasa pemasangan:**
+- **Membuka** Visual Studio Code di pelayar anda
+- **Membimbing** anda melalui proses pemasangan sambungan
+- **Mungkin memerlukan** anda untuk memulakan semula Visual Studio Code untuk menyelesaikan persediaan
+
+**Setelah dipasang, dalam Visual Studio Code, klik Ctrl-Shift-P (atau Cmd-Shift-P) untuk membuka palet arahan:**
+
+**Memahami palet arahan:**
+- **Memberikan** akses cepat kepada semua arahan VS Code
+- **Mencari** arahan semasa anda menaip
+- **Menawarkan** pintasan papan kekunci untuk pembangunan yang lebih pantas
+
+**Taip "Live Server: Open with Live Server":**
+
+**Apa yang dilakukan oleh Live Server:**
+- **Memulakan** pelayan pembangunan tempatan untuk projek anda
+- **Menyegarkan** pelayar secara automatik apabila anda menyimpan fail
+- **Menyediakan** fail anda dari URL tempatan (biasanya `localhost:5500`)
+
+**Buka pelayar dan navigasi ke `https://localhost:5500`:**
+
+Anda kini sepatutnya melihat halaman yang anda cipta! Mari kita tambahkan beberapa fungsi.
 
 ## Tambah CSS
 
-Dengan HTML kita telah dicipta, mari tambahkan CSS untuk gaya asas. Kita perlu menyerlahkan perkataan yang sepatutnya ditaip oleh pemain, dan mewarnakan kotak teks jika apa yang mereka taip adalah salah. Kita akan melakukannya dengan dua kelas.
+Sekarang mari kita buat semuanya kelihatan menarik! Maklum balas visual telah menjadi penting untuk antara muka pengguna sejak zaman awal pengkomputeran. Pada tahun 1980-an, penyelidik mendapati bahawa maklum balas visual segera secara dramatik meningkatkan prestasi pengguna dan mengurangkan kesilapan. Itulah yang akan kita cipta.
 
-Cipta fail baru bernama **style.css** dan tambahkan sintaks berikut.
+Permainan kita perlu jelas tentang apa yang sedang berlaku. Pemain harus segera tahu perkataan mana yang mereka sepatutnya taip, dan jika mereka membuat kesilapan, mereka harus melihatnya dengan segera. Mari kita cipta gaya yang ringkas tetapi berkesan:
+
+Cipta fail baru bernama `style.css` dan tambahkan sintaks berikut.
 
 ```css
 /* inside style.css */
@@ -138,36 +231,57 @@ Cipta fail baru bernama **style.css** dan tambahkan sintaks berikut.
 }
 ```
 
+**Memahami kelas CSS ini:**
+- **Menyorot** perkataan semasa dengan latar belakang kuning untuk panduan visual yang jelas
+- **Menandakan** kesalahan menaip dengan warna latar belakang coral muda
+- **Memberikan** maklum balas segera tanpa mengganggu aliran menaip pengguna
+- **Menggunakan** warna kontras untuk kebolehaksesan dan komunikasi visual yang jelas
+
 ✅ Apabila berkaitan dengan CSS, anda boleh menyusun halaman anda mengikut kehendak anda. Luangkan sedikit masa dan buat halaman kelihatan lebih menarik:
 
 - Pilih fon yang berbeza
 - Warnakan tajuk
-- Ubah saiz elemen
+- Ubah saiz item
 
 ## JavaScript
 
-Dengan UI kita telah dicipta, kini tiba masanya untuk memberi tumpuan kepada JavaScript yang akan menyediakan logik. Kita akan memecahkannya kepada beberapa langkah:
+Inilah bahagian yang menarik! 🎉 Kita sudah mempunyai struktur HTML dan gaya CSS kita, tetapi sekarang permainan kita seperti kereta cantik tanpa enjin. JavaScript akan menjadi enjin itu - ia yang membuatkan semuanya berfungsi dan bertindak balas terhadap apa yang pemain lakukan.
 
-- [Cipta pemalar](../../../../4-typing-game/typing-game)
-- [Pendengar acara untuk memulakan permainan](../../../../4-typing-game/typing-game)
-- [Pendengar acara untuk menaip](../../../../4-typing-game/typing-game)
+Di sinilah anda akan melihat ciptaan anda hidup. Kita akan menangani langkah ini satu persatu supaya tidak terasa terlalu membebankan:
 
-Tetapi pertama, cipta fail baru bernama **script.js**.
+| Langkah | Tujuan | Apa yang Anda Pelajari |
+|---------|--------|-------------------------|
+| [Cipta pemalar](../../../../4-typing-game/typing-game) | Menyediakan petikan dan rujukan DOM | Pengurusan pembolehubah dan pemilihan DOM |
+| [Pendengar acara untuk memulakan permainan](../../../../4-typing-game/typing-game) | Mengendalikan permulaan permainan | Pengendalian acara dan kemas kini UI |
+| [Pendengar acara untuk menaip](../../../../4-typing-game/typing-game) | Memproses input pengguna secara masa nyata | Pengesahan input dan maklum balas dinamik |
+
+**Pendekatan berstruktur ini membantu anda:**
+- **Mengatur** kod anda ke dalam bahagian yang logik dan mudah diurus
+- **Membina** fungsi secara beransur-ansur untuk penyahpepijatan yang lebih mudah
+- **Memahami** bagaimana bahagian-bahagian aplikasi anda berfungsi bersama
+- **Mencipta** corak yang boleh digunakan semula untuk projek masa depan
+
+Tetapi pertama, cipta fail baru bernama `script.js`.
 
 ### Tambah pemalar
 
-Kita akan memerlukan beberapa item untuk memudahkan kerja pengaturcaraan kita. Sekali lagi, seperti resipi, berikut adalah apa yang kita perlukan:
+Sebelum kita terjun ke aksi, mari kita kumpulkan semua sumber kita! Sama seperti bagaimana pusat kawalan misi NASA menyediakan semua sistem pemantauan mereka sebelum pelancaran, ia lebih mudah apabila anda mempunyai semuanya disediakan dan sedia. Ini menjimatkan kita daripada mencari-cari sesuatu kemudian dan membantu mencegah kesilapan taip.
 
-- Array dengan senarai semua petikan
-- Array kosong untuk menyimpan semua perkataan untuk petikan semasa
-- Ruang untuk menyimpan indeks perkataan yang sedang ditaip oleh pemain
-- Masa pemain mengklik butang mula
+Inilah yang perlu kita sediakan terlebih dahulu:
 
-Kita juga akan memerlukan rujukan kepada elemen UI:
+| Jenis Data | Tujuan | Contoh |
+|------------|--------|--------|
+| Array of quotes | Simpan semua petikan yang mungkin untuk permainan | `['Petikan 1', 'Petikan 2', ...]` |
+| Word array | Pecahkan petikan semasa kepada perkataan individu | `['Apabila', 'anda', 'mempunyai', ...]` |
+| Word index | Jejak perkataan yang sedang ditaip oleh pemain | `0, 1, 2, 3...` |
+| Start time | Kira masa berlalu untuk penilaian | `Date.now()` |
 
-- Kotak teks (**typed-value**)
-- Paparan petikan (**quote**)
-- Mesej (**message**)
+**Kita juga memerlukan rujukan kepada elemen UI kita:**
+| Elemen | ID | Tujuan |
+|--------|----|--------|
+| Input teks | `typed-value` | Tempat pemain menaip |
+| Paparan petikan | `quote` | Menunjukkan petikan untuk ditaip |
+| Kawasan mesej | `message` | Memaparkan kemas kini status |
 
 ```javascript
 // inside script.js
@@ -192,9 +306,22 @@ const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
-✅ Sila tambahkan lebih banyak petikan ke dalam permainan anda
+**Memecahkan apa yang dicapai oleh kod persediaan ini:**
+- **Menyimpan** array petikan Sherlock Holmes menggunakan `const` kerana petikan tidak akan berubah
+- **Memulakan** pembolehubah penjejakan dengan `let` kerana nilai-nilai ini akan dikemas kini semasa permainan
+- **Menangkap** rujukan kepada elemen DOM menggunakan `document.getElementById()` untuk akses yang efisien
+- **Menyediakan** asas untuk semua fungsi permainan dengan nama pembolehubah yang jelas dan deskriptif
+- **Mengatur** data dan elemen berkaitan secara logik untuk penyelenggaraan kod yang lebih mudah
 
-> **NOTE:** Kita boleh mendapatkan elemen bila-bila masa dalam kod dengan menggunakan `document.getElementById`. Disebabkan oleh fakta bahawa kita akan merujuk kepada elemen-elemen ini secara kerap, kita akan mengelakkan kesalahan ejaan dengan literal string dengan menggunakan pemalar. Kerangka kerja seperti [Vue.js](https://vuejs.org/) atau [React](https://reactjs.org/) boleh membantu anda menguruskan kod anda dengan lebih baik.
+✅ Teruskan dan tambah lebih banyak petikan ke dalam permainan anda
+
+> 💡 **Tip Pro**: Kita boleh mendapatkan elemen bila-bila masa dalam kod dengan menggunakan `document.getElementById()`. Disebabkan kita akan merujuk kepada elemen-elemen ini secara kerap, kita akan mengelakkan kesilapan ejaan dengan literal string dengan menggunakan konstanta. Rangka kerja seperti [Vue.js](https://vuejs.org/) atau [React](https://reactjs.org/) boleh membantu anda menguruskan kod secara lebih terpusat.
+>
+**Kenapa pendekatan ini sangat berkesan:**
+- **Mengelakkan** kesilapan ejaan apabila merujuk elemen berkali-kali
+- **Meningkatkan** kebolehbacaan kod dengan nama konstanta yang deskriptif
+- **Membolehkan** sokongan IDE yang lebih baik dengan autolengkap dan pemeriksaan ralat
+- **Memudahkan** penstrukturan semula jika ID elemen berubah kemudian
 
 Luangkan masa untuk menonton video tentang penggunaan `const`, `let` dan `var`
 
@@ -202,11 +329,13 @@ Luangkan masa untuk menonton video tentang penggunaan `const`, `let` dan `var`
 
 > 🎥 Klik imej di atas untuk video tentang pembolehubah.
 
-### Tambah logik mula
+### Tambah logik permulaan
 
-Untuk memulakan permainan, pemain akan mengklik butang mula. Sudah tentu, kita tidak tahu bila mereka akan mengklik butang mula. Di sinilah [pendengar acara](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) memainkan peranan. Pendengar acara akan membolehkan kita mendengar sesuatu berlaku (acara) dan melaksanakan kod sebagai tindak balas. Dalam kes kita, kita mahu melaksanakan kod apabila pengguna mengklik butang mula.
+Di sinilah semuanya mula berfungsi! 🚀 Anda akan menulis pendengar acara pertama anda, dan ada sesuatu yang sangat memuaskan apabila melihat kod anda bertindak balas kepada klik butang.
 
-Apabila pengguna mengklik **start**, kita perlu memilih petikan, menyediakan antara muka pengguna, dan menyediakan penjejakan untuk perkataan semasa dan masa. Berikut adalah JavaScript yang perlu anda tambahkan; kita akan membincangkannya selepas blok skrip.
+Fikirkan: di suatu tempat di luar sana, seorang pemain akan klik butang "Mula", dan kod anda perlu bersedia untuk mereka. Kita tidak tahu bila mereka akan klik - mungkin segera, mungkin selepas mereka mengambil kopi - tetapi apabila mereka melakukannya, permainan anda akan hidup.
+
+Apabila pengguna klik `start`, kita perlu memilih petikan, menyediakan antara muka pengguna, dan menyediakan penjejakan untuk perkataan semasa dan masa. Di bawah adalah JavaScript yang anda perlu tambah; kita akan membincangkannya selepas blok skrip.
 
 ```javascript
 // at the end of script.js
@@ -241,27 +370,35 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-Mari kita pecahkan kod ini!
+**Mari kita pecahkan kod kepada bahagian logik:**
 
-- Menyediakan penjejakan perkataan
-  - Menggunakan [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) dan [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) membolehkan kita memilih petikan secara rawak daripada array `quotes`
-  - Kita menukar `quote` kepada array `words` supaya kita boleh menjejaki perkataan yang sedang ditaip oleh pemain
-  - `wordIndex` ditetapkan kepada 0, kerana pemain akan bermula pada perkataan pertama
-- Menyediakan UI
-  - Cipta array `spanWords`, yang mengandungi setiap perkataan dalam elemen `span`
-    - Ini akan membolehkan kita menyerlahkan perkataan pada paparan
-  - `join` array untuk mencipta string yang boleh kita gunakan untuk mengemas kini `innerHTML` pada `quoteElement`
-    - Ini akan memaparkan petikan kepada pemain
-  - Tetapkan `className` elemen `span` pertama kepada `highlight` untuk menyerlahkannya sebagai kuning
-  - Bersihkan `messageElement` dengan menetapkan `innerText` kepada `''`
-- Menyediakan kotak teks
-  - Kosongkan `value` semasa pada `typedValueElement`
-  - Tetapkan `focus` kepada `typedValueElement`
-- Mulakan pemasa dengan memanggil `getTime`
+**📊 Persediaan Penjejakan Perkataan:**
+- **Memilih** petikan secara rawak menggunakan `Math.floor()` dan `Math.random()` untuk variasi
+- **Menukar** petikan kepada array perkataan individu menggunakan `split(' ')`
+- **Menetapkan semula** `wordIndex` kepada 0 kerana pemain bermula dengan perkataan pertama
+- **Menyediakan** keadaan permainan untuk pusingan baru
+
+**🎨 Persediaan dan Paparan UI:**
+- **Mencipta** array elemen `<span>`, membungkus setiap perkataan untuk gaya individu
+- **Menggabungkan** elemen span menjadi satu string untuk kemas kini DOM yang efisien
+- **Menonjolkan** perkataan pertama dengan menambah kelas CSS `highlight`
+- **Mengosongkan** sebarang mesej permainan sebelumnya untuk memberikan permulaan yang bersih
+
+**⌨️ Persediaan Kotak Teks:**
+- **Mengosongkan** sebarang teks yang sedia ada dalam medan input
+- **Memfokuskan** kepada kotak teks supaya pemain boleh mula menaip dengan segera
+- **Menyediakan** kawasan input untuk sesi permainan baru
+
+**⏱️ Permulaan Pemasa:**
+- **Menangkap** cap masa semasa menggunakan `new Date().getTime()`
+- **Membolehkan** pengiraan kelajuan menaip dan masa penyelesaian yang tepat
+- **Memulakan** penjejakan prestasi untuk sesi permainan
 
 ### Tambah logik menaip
 
-Semasa pemain menaip, acara `input` akan dicetuskan. Pendengar acara ini akan memeriksa untuk memastikan pemain menaip perkataan dengan betul, dan mengendalikan status semasa permainan. Kembali ke **script.js**, tambahkan kod berikut di akhir. Kita akan membincangkannya selepas itu.
+Di sinilah kita menangani inti permainan kita! Jangan risau jika ini kelihatan banyak pada mulanya - kita akan melalui setiap bahagian, dan pada akhirnya, anda akan melihat betapa logiknya semuanya.
+
+Apa yang kita bina di sini agak canggih: setiap kali seseorang menaip huruf, kod kita akan memeriksa apa yang mereka taip, memberikan maklum balas, dan memutuskan apa yang perlu dilakukan seterusnya. Ia serupa dengan bagaimana pemproses kata awal seperti WordStar pada tahun 1970-an memberikan maklum balas masa nyata kepada penulis.
 
 ```javascript
 // at the end of script.js
@@ -300,53 +437,119 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Mari kita pecahkan kod ini! Kita bermula dengan mendapatkan perkataan semasa dan nilai yang telah ditaip oleh pemain setakat ini. Kemudian kita mempunyai logik bertingkat, di mana kita memeriksa sama ada petikan selesai, perkataan selesai, perkataan betul, atau (akhirnya), jika terdapat ralat.
+**Memahami aliran logik menaip:**
 
-- Petikan selesai, ditunjukkan oleh `typedValue` sama dengan `currentWord`, dan `wordIndex` sama dengan satu kurang daripada `length` `words`
-  - Kira `elapsedTime` dengan menolak `startTime` daripada masa semasa
-  - Bahagikan `elapsedTime` dengan 1,000 untuk menukar daripada milisaat kepada saat
-  - Paparkan mesej kejayaan
-- Perkataan selesai, ditunjukkan oleh `typedValue` berakhir dengan ruang (akhir perkataan) dan `typedValue` sama dengan `currentWord`
-  - Tetapkan `value` pada `typedElement` kepada `''` untuk membolehkan perkataan seterusnya ditaip
-  - Tingkatkan `wordIndex` untuk bergerak ke perkataan seterusnya
-  - Ulangi semua `childNodes` `quoteElement` untuk menetapkan `className` kepada `''` untuk kembali ke paparan lalai
-  - Tetapkan `className` perkataan semasa kepada `highlight` untuk menandakannya sebagai perkataan seterusnya untuk ditaip
-- Perkataan sedang ditaip dengan betul (tetapi belum selesai), ditunjukkan oleh `currentWord` bermula dengan `typedValue`
-  - Pastikan `typedValueElement` dipaparkan sebagai lalai dengan mengosongkan `className`
-- Jika kita sampai sejauh ini, kita mempunyai ralat
-  - Tetapkan `className` pada `typedValueElement` kepada `error`
+Fungsi ini menggunakan pendekatan air terjun, memeriksa keadaan dari yang paling spesifik kepada yang paling umum. Mari kita pecahkan setiap senario:
+
+```mermaid
+flowchart TD
+    A[Player types character] --> B[Get current word and typed value]
+    B --> C{Quote complete?}
+    C -->|Yes| D[Show completion message with time]
+    C -->|No| E{Word complete with space?}
+    E -->|Yes| F[Clear input, move to next word, update highlight]
+    E -->|No| G{Typing correctly so far?}
+    G -->|Yes| H[Remove error styling]
+    G -->|No| I[Show error styling]
+```
+
+**🏁 Petikan Selesai (Senario 1):**
+- **Memeriksa** jika nilai yang ditaip sepadan dengan perkataan semasa DAN kita berada pada perkataan terakhir
+- **Mengira** masa berlalu dengan menolak masa mula daripada masa semasa
+- **Menukar** milisaat kepada saat dengan membahagi dengan 1,000
+- **Memaparkan** mesej tahniah dengan masa penyelesaian
+
+**✅ Perkataan Selesai (Senario 2):**
+- **Mengesan** penyelesaian perkataan apabila input berakhir dengan ruang
+- **Mengesahkan** bahawa input yang dipotong sepadan dengan perkataan semasa dengan tepat
+- **Mengosongkan** medan input untuk perkataan seterusnya
+- **Bergerak** ke perkataan seterusnya dengan menambah `wordIndex`
+- **Mengemas kini** penonjolan visual dengan menghapuskan semua kelas dan menonjolkan perkataan baru
+
+**📝 Menaip Dalam Proses (Senario 3):**
+- **Memastikan** bahawa perkataan semasa bermula dengan apa yang telah ditaip setakat ini
+- **Menghapuskan** sebarang gaya ralat untuk menunjukkan input adalah betul
+- **Membenarkan** menaip diteruskan tanpa gangguan
+
+**❌ Keadaan Ralat (Senario 4):**
+- **Mencetuskan** apabila teks yang ditaip tidak sepadan dengan permulaan perkataan yang dijangka
+- **Menggunakan** kelas CSS ralat untuk memberikan maklum balas visual segera
+- **Membantu** pemain mengenal pasti dan membetulkan kesilapan dengan cepat
 
 ## Uji aplikasi anda
 
-Anda telah sampai ke penghujungnya! Langkah terakhir adalah memastikan aplikasi kita berfungsi. Cubalah! Jangan risau jika terdapat ralat; **semua pembangun** menghadapi ralat. Periksa mesej dan nyahpepijat seperti yang diperlukan.
+Lihat apa yang telah anda capai! 🎉 Anda baru sahaja membina permainan menaip yang sebenar dan berfungsi dari awal menggunakan pengaturcaraan berasaskan acara. Luangkan masa untuk menghargai itu - ini bukan perkara kecil!
 
-Klik pada **start**, dan mula menaip! Ia sepatutnya kelihatan seperti animasi yang kita lihat sebelum ini.
+Sekarang tiba fasa ujian! Adakah ia berfungsi seperti yang diharapkan? Adakah kita terlepas sesuatu? Inilah perkara: jika sesuatu tidak berfungsi dengan sempurna dengan segera, itu adalah perkara biasa. Malah pembangun berpengalaman sering menemui pepijat dalam kod mereka. Ia adalah sebahagian daripada proses pembangunan!
+
+Klik pada `start`, dan mula menaip! Ia sepatutnya kelihatan seperti animasi yang kita lihat sebelum ini.
 
 ![Animasi permainan dalam tindakan](../../../../4-typing-game/images/demo.gif)
 
+**Apa yang perlu diuji dalam aplikasi anda:**
+- **Memastikan** bahawa klik Start memaparkan petikan rawak
+- **Mengesahkan** bahawa menaip menonjolkan perkataan semasa dengan betul
+- **Memeriksa** bahawa gaya ralat muncul untuk menaip yang salah
+- **Memastikan** bahawa menyelesaikan perkataan memajukan penonjolan dengan betul
+- **Menguji** bahawa menyelesaikan petikan menunjukkan mesej penyelesaian dengan masa
+
+**Tip penyahpepijatan biasa:**
+- **Periksa** konsol pelayar (F12) untuk ralat JavaScript
+- **Sahkan** bahawa semua nama fail sepadan dengan tepat (peka huruf besar kecil)
+- **Pastikan** Live Server berjalan dan menyegarkan dengan betul
+- **Uji** petikan yang berbeza untuk memastikan pemilihan rawak berfungsi
+
 ---
+
+## Cabaran GitHub Copilot Agent 🎮
+
+Gunakan mod Agent untuk menyelesaikan cabaran berikut:
+
+**Penerangan:** Kembangkan permainan menaip dengan melaksanakan sistem kesukaran yang menyesuaikan permainan berdasarkan prestasi pemain. Cabaran ini akan membantu anda berlatih pengendalian acara lanjutan, analisis data, dan kemas kini UI dinamik.
+
+**Arahan:** Buat sistem penyesuaian kesukaran untuk permainan menaip yang:
+1. Menjejaki kelajuan menaip pemain (perkataan per minit) dan peratusan ketepatan
+2. Secara automatik menyesuaikan kepada tiga tahap kesukaran: Mudah (petikan mudah), Sederhana (petikan semasa), Sukar (petikan kompleks dengan tanda baca)
+3. Memaparkan tahap kesukaran semasa dan statistik pemain pada UI
+4. Melaksanakan kaunter rentetan yang meningkatkan kesukaran selepas 3 prestasi baik berturut-turut
+5. Menambah maklum balas visual (warna, animasi) untuk menunjukkan perubahan kesukaran
+
+Tambah elemen HTML, gaya CSS, dan fungsi JavaScript yang diperlukan untuk melaksanakan ciri ini. Sertakan pengendalian ralat yang betul dan pastikan permainan kekal boleh diakses dengan label ARIA yang sesuai.
+
+Ketahui lebih lanjut tentang [mod agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## 🚀 Cabaran
 
-Tambahkan lebih banyak fungsi
+Bersedia untuk meningkatkan permainan menaip anda ke tahap seterusnya? Cuba laksanakan ciri-ciri lanjutan ini untuk mendalami pemahaman anda tentang pengendalian acara dan manipulasi DOM:
 
-- Lumpuhkan pendengar acara `input` apabila selesai, dan aktifkan semula apabila butang diklik
-- Lumpuhkan kotak teks apabila pemain menyelesaikan petikan
-- Paparkan kotak dialog modal dengan mesej kejayaan
-- Simpan skor tertinggi menggunakan [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
+**Tambah lebih banyak fungsi:**
+
+| Ciri | Penerangan | Kemahiran yang Akan Anda Latih |
+|------|------------|-------------------------------|
+| **Kawalan Input** | Lumpuhkan pendengar acara `input` selepas selesai, dan aktifkan semula apabila butang diklik | Pengurusan acara dan kawalan keadaan |
+| **Pengurusan Keadaan UI** | Lumpuhkan kotak teks apabila pemain menyelesaikan petikan | Manipulasi sifat DOM |
+| **Kotak Dialog Modal** | Paparkan kotak dialog modal dengan mesej kejayaan | Corak UI lanjutan dan kebolehaksesan |
+| **Sistem Skor Tertinggi** | Simpan skor tertinggi menggunakan `localStorage` | API penyimpanan pelayar dan ketekalan data |
+
+**Tip pelaksanaan:**
+- **Kaji** `localStorage.setItem()` dan `localStorage.getItem()` untuk penyimpanan berterusan
+- **Berlatih** menambah dan menghapuskan pendengar acara secara dinamik
+- **Terokai** elemen dialog HTML atau corak modal CSS
+- **Pertimbangkan** kebolehaksesan apabila melumpuhkan dan mengaktifkan semula kawalan borang
+
 ## Kuiz Selepas Kuliah
 
 [Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/22)
 
-## Ulang Kaji & Kajian Kendiri
+## Ulasan & Kajian Kendiri
 
 Baca tentang [semua acara yang tersedia](https://developer.mozilla.org/docs/Web/Events) kepada pembangun melalui pelayar web, dan pertimbangkan senario di mana anda akan menggunakan setiap satu.
 
 ## Tugasan
 
-[Cipta permainan papan kekunci baharu](assignment.md)
+[Cipta permainan papan kekunci baru](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

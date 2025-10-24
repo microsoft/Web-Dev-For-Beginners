@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T09:30:26+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-24T14:21:07+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "ms"
 }
@@ -15,23 +15,29 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kuiz Pra-Kuliah
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app)
 
-Apabila kita memikirkan tentang menulis kod, kita sentiasa mahu memastikan kod kita mudah dibaca. Walaupun ini mungkin kedengaran bertentangan, kod dibaca lebih banyak kali daripada ia ditulis. Salah satu alat utama dalam kotak alat pembangun untuk memastikan kod yang boleh diselenggara ialah **fungsi**.
+Menulis kod yang sama berulang kali adalah salah satu kekecewaan yang paling biasa dalam pengaturcaraan. Fungsi menyelesaikan masalah ini dengan membolehkan anda membungkus kod ke dalam blok yang boleh digunakan semula. Fikirkan fungsi seperti bahagian standard yang menjadikan barisan pemasangan Henry Ford revolusioner – setelah anda mencipta komponen yang boleh dipercayai, anda boleh menggunakannya di mana sahaja diperlukan tanpa perlu membina semula dari awal.
+
+Fungsi membolehkan anda membungkus bahagian kod supaya anda boleh menggunakannya semula di seluruh program anda. Daripada menyalin dan menampal logik yang sama di mana-mana, anda boleh mencipta fungsi sekali dan memanggilnya apabila diperlukan. Pendekatan ini menjadikan kod anda teratur dan memudahkan kemas kini.
+
+Dalam pelajaran ini, anda akan belajar cara mencipta fungsi anda sendiri, menghantar maklumat kepadanya, dan mendapatkan hasil yang berguna kembali. Anda akan menemui perbezaan antara fungsi dan kaedah, mempelajari pendekatan sintaks moden, dan melihat bagaimana fungsi boleh berfungsi dengan fungsi lain. Kami akan membina konsep ini langkah demi langkah.
 
 [![Kaedah dan Fungsi](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Kaedah dan Fungsi")
 
 > 🎥 Klik imej di atas untuk video tentang kaedah dan fungsi.
 
-> Anda boleh mengikuti pelajaran ini di [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
+> Anda boleh mengambil pelajaran ini di [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Fungsi
 
-Secara asasnya, fungsi ialah satu blok kod yang boleh kita laksanakan apabila diperlukan. Ini sangat sesuai untuk situasi di mana kita perlu melakukan tugas yang sama beberapa kali; daripada menduplikasi logik di beberapa lokasi (yang akan menyukarkan kemas kini apabila diperlukan), kita boleh memusatkannya di satu lokasi, dan memanggilnya apabila kita memerlukan operasi tersebut - malah anda boleh memanggil fungsi dari fungsi lain!
+Fungsi ialah blok kod yang berdiri sendiri yang melaksanakan tugas tertentu. Ia merangkumi logik yang boleh anda laksanakan apabila diperlukan.
 
-Sama pentingnya ialah keupayaan untuk menamakan fungsi. Walaupun ini mungkin kelihatan remeh, nama memberikan cara pantas untuk mendokumentasikan satu bahagian kod. Anda boleh menganggapnya seperti label pada butang. Jika saya klik pada butang yang tertulis "Batalkan pemasa", saya tahu ia akan menghentikan jam daripada berjalan.
+Daripada menulis kod yang sama berulang kali di seluruh program anda, anda boleh membungkusnya dalam fungsi dan memanggil fungsi itu apabila anda memerlukannya. Pendekatan ini menjadikan kod anda bersih dan memudahkan kemas kini. Pertimbangkan cabaran penyelenggaraan jika anda perlu menukar logik yang tersebar di 20 lokasi berbeza dalam pangkalan kod anda.
 
-## Mencipta dan Memanggil Fungsi
+Menamakan fungsi anda dengan deskriptif adalah penting. Fungsi yang dinamakan dengan baik menyampaikan tujuannya dengan jelas – apabila anda melihat `cancelTimer()`, anda segera memahami apa yang dilakukannya, sama seperti butang yang dilabel dengan jelas memberitahu anda dengan tepat apa yang akan berlaku apabila anda mengkliknya.
 
-Sintaks untuk fungsi kelihatan seperti berikut:
+## Mencipta dan memanggil fungsi
+
+Mari kita lihat cara mencipta fungsi. Sintaksnya mengikut corak yang konsisten:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Jika saya ingin mencipta fungsi untuk memaparkan ucapan, ia mungkin kelihatan seperti ini:
+Mari kita pecahkan:
+- Kata kunci `function` memberitahu JavaScript "Hei, saya sedang mencipta fungsi!"
+- `nameOfFunction` ialah tempat anda memberikan nama deskriptif kepada fungsi anda
+- Kurungan `()` ialah tempat anda boleh menambah parameter (kita akan sampai ke situ sebentar lagi)
+- Kurungan keriting `{}` mengandungi kod sebenar yang berjalan apabila anda memanggil fungsi
+
+Mari kita cipta fungsi ucapan ringkas untuk melihat ini dalam tindakan:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Setiap kali kita mahu memanggil (atau melaksanakan) fungsi kita, kita gunakan nama fungsi diikuti dengan `()`. Perlu diingat bahawa fungsi kita boleh ditakrifkan sebelum atau selepas kita memutuskan untuk memanggilnya; pengkompil JavaScript akan mencarinya untuk anda.
+Fungsi ini mencetak "Hello, world!" ke konsol. Setelah anda mendefinisikannya, anda boleh menggunakannya sebanyak yang diperlukan.
+
+Untuk melaksanakan (atau "memanggil") fungsi anda, tulis namanya diikuti dengan kurungan. JavaScript membolehkan anda mentakrifkan fungsi anda sebelum atau selepas anda memanggilnya – enjin JavaScript akan mengendalikan susunan pelaksanaan.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Terdapat jenis fungsi khas yang dikenali sebagai **kaedah**, yang telah anda gunakan! Malah, kita telah melihat ini dalam demo kita di atas apabila kita menggunakan `console.log`. Apa yang membezakan kaedah daripada fungsi ialah kaedah dilampirkan pada objek (`console` dalam contoh kita), manakala fungsi adalah bebas. Anda akan mendengar ramai pembangun menggunakan istilah ini secara bergantian.
+Apabila anda menjalankan baris ini, ia melaksanakan semua kod dalam fungsi `displayGreeting` anda, memaparkan "Hello, world!" dalam konsol pelayar anda. Anda boleh memanggil fungsi ini berulang kali.
 
-### Amalan Terbaik Fungsi
+> **Nota:** Anda telah menggunakan **kaedah** sepanjang pelajaran ini. `console.log()` ialah kaedah – pada dasarnya fungsi yang tergolong dalam objek `console`. Perbezaan utama ialah kaedah dilampirkan pada objek, manakala fungsi berdiri sendiri. Ramai pembangun menggunakan istilah ini secara bergantian dalam perbualan santai.
 
-Terdapat beberapa amalan terbaik yang perlu diingat semasa mencipta fungsi:
+### Amalan terbaik fungsi
 
-- Seperti biasa, gunakan nama yang deskriptif supaya anda tahu apa yang akan dilakukan oleh fungsi tersebut.
-- Gunakan **camelCasing** untuk menggabungkan perkataan.
-- Pastikan fungsi anda memberi tumpuan kepada tugas tertentu.
+Berikut adalah beberapa petua untuk membantu anda menulis fungsi yang hebat:
 
-## Menghantar Maklumat ke Fungsi
+- Berikan nama yang jelas dan deskriptif kepada fungsi anda – diri anda di masa depan akan berterima kasih!
+- Gunakan **camelCasing** untuk nama berbilang perkataan (seperti `calculateTotal` dan bukannya `calculate_total`)
+- Pastikan setiap fungsi memberi tumpuan kepada melakukan satu perkara dengan baik
 
-Untuk menjadikan fungsi lebih boleh digunakan semula, anda sering mahu menghantar maklumat ke dalamnya. Jika kita mempertimbangkan contoh `displayGreeting` kita di atas, ia hanya akan memaparkan **Hello, world!**. Bukan fungsi yang paling berguna yang boleh dicipta. Jika kita mahu menjadikannya lebih fleksibel, seperti membenarkan seseorang menentukan nama orang yang ingin disapa, kita boleh menambah **parameter**. Parameter (kadangkala juga dipanggil **argumen**) ialah maklumat tambahan yang dihantar ke fungsi.
+## Menghantar maklumat kepada fungsi
 
-Parameter disenaraikan dalam bahagian definisi dalam tanda kurung dan dipisahkan dengan koma seperti berikut:
+Fungsi `displayGreeting` kita terhad – ia hanya boleh memaparkan "Hello, world!" untuk semua orang. Parameter membolehkan kita menjadikan fungsi lebih fleksibel dan berguna.
+
+**Parameter** bertindak seperti tempat letak di mana anda boleh memasukkan nilai yang berbeza setiap kali anda menggunakan fungsi. Dengan cara ini, fungsi yang sama boleh berfungsi dengan maklumat yang berbeza pada setiap panggilan.
+
+Anda menyenaraikan parameter di dalam kurungan apabila anda mentakrifkan fungsi anda, memisahkan parameter berbilang dengan koma:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Kita boleh mengemas kini `displayGreeting` kita untuk menerima nama dan memaparkannya.
+Setiap parameter bertindak seperti tempat letak – apabila seseorang memanggil fungsi anda, mereka akan memberikan nilai sebenar yang dimasukkan ke dalam tempat ini.
+
+Mari kita kemas kini fungsi ucapan kita untuk menerima nama seseorang:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Apabila kita mahu memanggil fungsi kita dan menghantar parameter, kita tentukan ia dalam tanda kurung.
+Perhatikan bagaimana kita menggunakan tanda belakang (`` ` ``) dan `${}` untuk memasukkan nama terus ke dalam mesej kita – ini dipanggil literal templat, dan ia adalah cara yang sangat berguna untuk membina rentetan dengan pembolehubah yang dicampur.
+
+Sekarang apabila kita memanggil fungsi kita, kita boleh menghantar sebarang nama:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
-## Nilai Lalai
+JavaScript mengambil rentetan `'Christopher'`, memberikannya kepada parameter `name`, dan mencipta mesej peribadi "Hello, Christopher!"
 
-Kita boleh menjadikan fungsi kita lebih fleksibel dengan menambah lebih banyak parameter. Tetapi bagaimana jika kita tidak mahu setiap nilai perlu ditentukan? Mengikut contoh ucapan kita, kita boleh meninggalkan nama sebagai keperluan (kita perlu tahu siapa yang kita sapa), tetapi kita mahu membenarkan ucapan itu disesuaikan seperti yang dikehendaki. Jika seseorang tidak mahu menyesuaikannya, kita menyediakan nilai lalai sebagai gantinya. Untuk menyediakan nilai lalai kepada parameter, kita menetapkannya sama seperti kita menetapkan nilai untuk pembolehubah - `parameterName = 'defaultValue'`. Untuk melihat contoh penuh:
+## Nilai lalai
+
+Bagaimana jika kita mahu menjadikan beberapa parameter pilihan? Di sinilah nilai lalai berguna!
+
+Katakan kita mahu orang ramai dapat menyesuaikan perkataan ucapan, tetapi jika mereka tidak menentukan satu, kita hanya akan menggunakan "Hello" sebagai sandaran. Anda boleh menyediakan nilai lalai dengan menggunakan tanda sama, sama seperti menetapkan pembolehubah:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Apabila kita memanggil fungsi, kita boleh memutuskan sama ada kita mahu menetapkan nilai untuk `salutation`.
+Di sini, `name` masih diperlukan, tetapi `salutation` mempunyai nilai sandaran `'Hello'` jika tiada siapa yang memberikan ucapan yang berbeza.
+
+Sekarang kita boleh memanggil fungsi ini dengan dua cara berbeza:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
-## Nilai Pulangan
+Dalam panggilan pertama, JavaScript menggunakan lalai "Hello" kerana kita tidak menentukan ucapan. Dalam panggilan kedua, ia menggunakan "Hi" tersuai kita. Fleksibiliti ini menjadikan fungsi boleh disesuaikan dengan senario yang berbeza.
 
-Sehingga kini fungsi yang kita bina akan sentiasa menghasilkan output ke [console](https://developer.mozilla.org/docs/Web/API/console). Kadangkala ini boleh menjadi apa yang kita cari, terutamanya apabila kita mencipta fungsi yang akan memanggil perkhidmatan lain. Tetapi bagaimana jika saya mahu mencipta fungsi pembantu untuk melakukan pengiraan dan memberikan nilai kembali supaya saya boleh menggunakannya di tempat lain?
+## Nilai pulangan
 
-Kita boleh melakukan ini dengan menggunakan **nilai pulangan**. Nilai pulangan dikembalikan oleh fungsi, dan boleh disimpan dalam pembolehubah sama seperti kita boleh menyimpan nilai literal seperti string atau nombor.
+Fungsi kita setakat ini hanya mencetak mesej ke konsol, tetapi bagaimana jika anda mahu fungsi mengira sesuatu dan memberikan hasilnya kembali kepada anda?
 
-Jika fungsi mengembalikan sesuatu maka kata kunci `return` digunakan. Kata kunci `return` mengharapkan nilai atau rujukan kepada apa yang dikembalikan seperti berikut:
+Di sinilah **nilai pulangan** masuk. Daripada hanya memaparkan sesuatu, fungsi boleh menyerahkan nilai kepada anda yang boleh anda simpan dalam pembolehubah atau gunakan di bahagian lain kod anda.
+
+Untuk menghantar nilai kembali, anda menggunakan kata kunci `return` diikuti dengan apa sahaja yang anda mahu kembalikan:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Kita boleh mencipta fungsi untuk mencipta mesej ucapan dan mengembalikan nilai kepada pemanggil.
+Ini sesuatu yang penting: apabila fungsi mencapai pernyataan `return`, ia serta-merta berhenti berjalan dan menghantar nilai itu kembali kepada sesiapa yang memanggilnya.
+
+Mari kita ubah suai fungsi ucapan kita untuk mengembalikan mesej dan bukannya mencetaknya:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Apabila memanggil fungsi ini, kita akan menyimpan nilai dalam pembolehubah. Ini sama seperti cara kita menetapkan pembolehubah kepada nilai statik (seperti `const name = 'Christopher'`).
+Sekarang, bukannya mencetak ucapan, fungsi ini mencipta mesej dan menyerahkannya kembali kepada kita.
+
+Untuk menggunakan nilai yang dikembalikan, kita boleh menyimpannya dalam pembolehubah seperti mana-mana nilai lain:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
-## Fungsi sebagai Parameter untuk Fungsi
+Sekarang `greetingMessage` mengandungi "Hello, Christopher" dan kita boleh menggunakannya di mana-mana dalam kod kita – untuk memaparkannya di laman web, memasukkannya ke dalam e-mel, atau menghantarnya ke fungsi lain.
 
-Apabila anda maju dalam kerjaya pengaturcaraan anda, anda akan menemui fungsi yang menerima fungsi sebagai parameter. Helah menarik ini sering digunakan apabila kita tidak tahu bila sesuatu akan berlaku atau selesai, tetapi kita tahu kita perlu melakukan operasi sebagai tindak balas.
+## Fungsi sebagai parameter untuk fungsi
 
-Sebagai contoh, pertimbangkan [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), yang memulakan pemasa dan akan melaksanakan kod apabila ia selesai. Kita perlu memberitahu apa kod yang kita mahu laksanakan. Kedengaran seperti tugas yang sempurna untuk fungsi!
+Fungsi boleh dihantar sebagai parameter kepada fungsi lain. Walaupun konsep ini mungkin kelihatan kompleks pada mulanya, ia adalah ciri yang kuat yang membolehkan corak pengaturcaraan yang fleksibel.
 
-Jika anda menjalankan kod di bawah, selepas 3 saat anda akan melihat mesej **3 saat telah berlalu**.
+Corak ini sangat biasa apabila anda ingin mengatakan "apabila sesuatu berlaku, lakukan perkara lain ini." Sebagai contoh, "apabila pemasa tamat, jalankan kod ini" atau "apabila pengguna mengklik butang, panggil fungsi ini."
+
+Mari kita lihat `setTimeout`, yang merupakan fungsi terbina dalam yang menunggu masa tertentu dan kemudian menjalankan beberapa kod. Kita perlu memberitahu apa kod yang hendak dijalankan – kes penggunaan yang sempurna untuk menghantar fungsi!
+
+Cuba kod ini – selepas 3 saat, anda akan melihat mesej:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
-### Fungsi Tanpa Nama
+Perhatikan bagaimana kita menghantar `displayDone` (tanpa kurungan) kepada `setTimeout`. Kita tidak memanggil fungsi itu sendiri – kita menyerahkannya kepada `setTimeout` dan berkata "panggil ini dalam 3 saat."
 
-Mari kita lihat semula apa yang telah kita bina. Kita mencipta fungsi dengan nama yang akan digunakan sekali sahaja. Apabila aplikasi kita menjadi lebih kompleks, kita boleh melihat diri kita mencipta banyak fungsi yang hanya akan dipanggil sekali. Ini tidak ideal. Ternyata, kita tidak selalu perlu memberikan nama!
+### Fungsi tanpa nama
 
-Apabila kita menghantar fungsi sebagai parameter, kita boleh mengelakkan daripada menciptanya terlebih dahulu dan sebaliknya membinanya sebagai sebahagian daripada parameter. Kita menggunakan kata kunci `function` yang sama, tetapi sebaliknya kita membinanya sebagai parameter.
+Kadang-kadang anda memerlukan fungsi untuk satu perkara sahaja dan tidak mahu memberikannya nama. Fikirkan – jika anda hanya menggunakan fungsi sekali, mengapa menyemakkan kod anda dengan nama tambahan?
 
-Mari kita tulis semula kod di atas untuk menggunakan fungsi tanpa nama:
+JavaScript membolehkan anda mencipta **fungsi tanpa nama** – fungsi tanpa nama yang boleh anda tentukan di mana anda memerlukannya.
+
+Berikut adalah cara kita boleh menulis semula contoh pemasa kita menggunakan fungsi tanpa nama:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Jika anda menjalankan kod baru kita, anda akan perasan kita mendapat hasil yang sama. Kita telah mencipta fungsi, tetapi tidak perlu memberikannya nama!
+Ini mencapai hasil yang sama, tetapi fungsi itu ditakrifkan terus dalam panggilan `setTimeout`, menghapuskan keperluan untuk deklarasi fungsi yang berasingan.
 
-### Fungsi Panah Lemak
+### Fungsi anak panah
 
-Satu pintasan yang biasa dalam banyak bahasa pengaturcaraan (termasuk JavaScript) ialah keupayaan untuk menggunakan apa yang dipanggil **arrow** atau **fat arrow function**. Ia menggunakan penunjuk khas `=>`, yang kelihatan seperti anak panah - oleh itu namanya! Dengan menggunakan `=>`, kita boleh melangkau kata kunci `function`.
+JavaScript moden mempunyai cara yang lebih pendek untuk menulis fungsi yang dipanggil **fungsi anak panah**. Ia menggunakan `=>` (yang kelihatan seperti anak panah – faham?) dan sangat popular dalam kalangan pembangun.
 
-Mari kita tulis semula kod kita sekali lagi untuk menggunakan fungsi panah lemak:
+Fungsi anak panah membolehkan anda melangkau kata kunci `function` dan menulis kod yang lebih ringkas.
+
+Berikut adalah contoh pemasa kita menggunakan fungsi anak panah:
 
 ```javascript
 setTimeout(() => {
@@ -183,22 +225,41 @@ setTimeout(() => {
 }, 3000);
 ```
 
-### Bila Menggunakan Setiap Strategi
+`()` ialah tempat parameter akan pergi (kosong dalam kes ini), kemudian datang anak panah `=>`, dan akhirnya badan fungsi dalam kurungan keriting. Ini memberikan fungsi yang sama dengan sintaks yang lebih ringkas.
 
-Anda kini telah melihat kita mempunyai tiga cara untuk menghantar fungsi sebagai parameter dan mungkin tertanya-tanya bila untuk menggunakan setiap satu. Jika anda tahu anda akan menggunakan fungsi lebih daripada sekali, cipta ia seperti biasa. Jika anda akan menggunakannya hanya untuk satu lokasi, secara amnya lebih baik menggunakan fungsi tanpa nama. Sama ada anda menggunakan fungsi panah lemak atau sintaks `function` yang lebih tradisional adalah terpulang kepada anda, tetapi anda akan perasan kebanyakan pembangun moden lebih suka `=>`.
+### Bila hendak menggunakan setiap strategi
+
+Bilakah anda harus menggunakan setiap pendekatan? Panduan praktikal: jika anda akan menggunakan fungsi itu beberapa kali, berikan nama dan tentukan secara berasingan. Jika ia untuk satu kegunaan tertentu, pertimbangkan fungsi tanpa nama. Kedua-dua fungsi anak panah dan sintaks tradisional adalah pilihan yang sah, walaupun fungsi anak panah adalah lazim dalam pangkalan kod JavaScript moden.
 
 ---
 
+
+
 ## 🚀 Cabaran
 
-Bolehkah anda menjelaskan dalam satu ayat perbezaan antara fungsi dan kaedah? Cuba!
+Bolehkah anda menerangkan dalam satu ayat perbezaan antara fungsi dan kaedah? Cuba!
+
+## Cabaran Ejen GitHub Copilot 🚀
+
+Gunakan mod Ejen untuk melengkapkan cabaran berikut:
+
+**Penerangan:** Cipta perpustakaan utiliti fungsi matematik yang menunjukkan pelbagai konsep fungsi yang dibincangkan dalam pelajaran ini, termasuk parameter, nilai lalai, nilai pulangan, dan fungsi anak panah.
+
+**Arahan:** Cipta fail JavaScript yang dipanggil `mathUtils.js` yang mengandungi fungsi berikut:
+1. Fungsi `add` yang mengambil dua parameter dan mengembalikan jumlahnya
+2. Fungsi `multiply` dengan nilai parameter lalai (parameter kedua lalai kepada 1)
+3. Fungsi anak panah `square` yang mengambil nombor dan mengembalikan kuadratnya
+4. Fungsi `calculate` yang menerima fungsi lain sebagai parameter dan dua nombor, kemudian menggunakan fungsi itu pada nombor tersebut
+5. Tunjukkan panggilan setiap fungsi dengan kes ujian yang sesuai
+
+Ketahui lebih lanjut tentang [mod ejen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## Kuiz Pasca-Kuliah
 [Kuiz pasca-kuliah](https://ff-quizzes.netlify.app)
 
 ## Ulasan & Kajian Kendiri
 
-Ia berbaloi untuk [membaca lebih lanjut tentang fungsi panah](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), kerana ia semakin banyak digunakan dalam pangkalan kod. Latih diri anda menulis fungsi, dan kemudian tulis semula dengan sintaks ini.
+Ia berbaloi [membaca lebih lanjut tentang fungsi anak panah](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), kerana ia semakin banyak digunakan dalam pangkalan kod. Latihlah menulis fungsi, dan kemudian tulis semula dengan sintaks ini.
 
 ## Tugasan
 
@@ -207,4 +268,4 @@ Ia berbaloi untuk [membaca lebih lanjut tentang fungsi panah](https://developer.
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

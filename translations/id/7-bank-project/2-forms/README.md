@@ -1,313 +1,780 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
-  "translation_date": "2025-08-29T09:06:16+00:00",
+  "original_hash": "b24f28fc46dd473aa9080f174182adde",
+  "translation_date": "2025-10-24T14:12:12+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Aplikasi Perbankan Bagian 2: Membuat Formulir Login dan Registrasi
 
-## Kuis Pra-Pelajaran
+## Kuis Pra-Kuliah
 
-[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/43)
+[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/43)
 
-### Pengantar
+Pernahkah Anda mengisi formulir online dan ditolak karena format email yang salah? Atau kehilangan semua informasi saat mengklik tombol kirim? Kita semua pernah mengalami situasi yang menjengkelkan seperti itu.
 
-Hampir semua aplikasi web modern memungkinkan Anda membuat akun untuk memiliki ruang pribadi. Karena banyak pengguna dapat mengakses aplikasi web secara bersamaan, Anda memerlukan mekanisme untuk menyimpan data pribadi setiap pengguna secara terpisah dan memilih informasi mana yang akan ditampilkan. Kami tidak akan membahas cara mengelola [identitas pengguna secara aman](https://en.wikipedia.org/wiki/Authentication) karena itu adalah topik yang sangat luas, tetapi kami akan memastikan setiap pengguna dapat membuat satu (atau lebih) akun bank di aplikasi kami.
+Formulir adalah jembatan antara pengguna dan fungsi aplikasi Anda. Seperti protokol yang digunakan pengendali lalu lintas udara untuk memandu pesawat dengan aman ke tujuannya, formulir yang dirancang dengan baik memberikan umpan balik yang jelas dan mencegah kesalahan yang merugikan. Sebaliknya, formulir yang buruk dapat membuat pengguna pergi lebih cepat daripada komunikasi yang salah di bandara yang sibuk.
 
-Dalam bagian ini, kita akan menggunakan formulir HTML untuk menambahkan login dan registrasi ke aplikasi web kita. Kita akan melihat cara mengirim data ke server API secara programatis, dan akhirnya mendefinisikan aturan validasi dasar untuk input pengguna.
+Dalam pelajaran ini, kita akan mengubah aplikasi perbankan statis Anda menjadi aplikasi interaktif. Anda akan belajar membuat formulir yang memvalidasi input pengguna, berkomunikasi dengan server, dan memberikan umpan balik yang bermanfaat. Anggap saja ini sebagai membangun antarmuka kontrol yang memungkinkan pengguna menavigasi fitur aplikasi Anda.
 
-### Prasyarat
+Pada akhirnya, Anda akan memiliki sistem login dan registrasi lengkap dengan validasi yang membantu pengguna menuju kesuksesan daripada frustrasi.
 
-Anda perlu menyelesaikan [template HTML dan routing](../1-template-route/README.md) dari aplikasi web untuk pelajaran ini. Anda juga perlu menginstal [Node.js](https://nodejs.org) dan [menjalankan server API](../api/README.md) secara lokal sehingga Anda dapat mengirim data untuk membuat akun.
+## Prasyarat
 
-**Catatan Penting**  
-Anda akan memiliki dua terminal yang berjalan secara bersamaan seperti yang tercantum di bawah ini:  
-1. Untuk aplikasi bank utama yang kita bangun dalam pelajaran [template HTML dan routing](../1-template-route/README.md)  
-2. Untuk [API server aplikasi bank](../api/README.md) yang baru saja kita siapkan di atas.  
+Sebelum kita mulai membuat formulir, mari kita pastikan semuanya sudah diatur dengan benar. Pelajaran ini melanjutkan dari pelajaran sebelumnya, jadi jika Anda melewatkannya, sebaiknya kembali dan pastikan dasar-dasarnya sudah berfungsi terlebih dahulu.
 
-Anda memerlukan kedua server tersebut berjalan untuk mengikuti pelajaran ini. Mereka mendengarkan di port yang berbeda (port `3000` dan port `5000`) sehingga semuanya harus berjalan dengan baik.
+### Pengaturan yang Diperlukan
 
-Anda dapat menguji apakah server berjalan dengan baik dengan menjalankan perintah ini di terminal:
+| Komponen | Status | Deskripsi |
+|-----------|--------|-------------|
+| [Template HTML](../1-template-route/README.md) | ✅ Diperlukan | Struktur dasar aplikasi perbankan Anda |
+| [Node.js](https://nodejs.org) | ✅ Diperlukan | Runtime JavaScript untuk server |
+| [Server API Bank](../api/README.md) | ✅ Diperlukan | Layanan backend untuk penyimpanan data |
 
-```sh
+> 💡 **Tip Pengembangan**: Anda akan menjalankan dua server secara bersamaan – satu untuk aplikasi perbankan front-end Anda dan satu lagi untuk API backend. Pengaturan ini mencerminkan pengembangan dunia nyata di mana layanan front-end dan backend beroperasi secara independen.
+
+### Konfigurasi Server
+
+**Lingkungan pengembangan Anda akan mencakup:**
+- **Server front-end**: Menyediakan aplikasi perbankan Anda (biasanya port `3000`)
+- **Server API backend**: Menangani penyimpanan dan pengambilan data (port `5000`)
+- **Kedua server** dapat berjalan secara bersamaan tanpa konflik
+
+**Menguji koneksi API Anda:**
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+**Jika Anda melihat respons versi API, Anda siap melanjutkan!**
 
 ---
 
-## Formulir dan Kontrol
+## Memahami Formulir HTML dan Kontrol
 
-Elemen `<form>` mencakup bagian dari dokumen HTML di mana pengguna dapat memasukkan dan mengirimkan data dengan kontrol interaktif. Ada berbagai jenis kontrol antarmuka pengguna (UI) yang dapat digunakan dalam formulir, yang paling umum adalah elemen `<input>` dan `<button>`.
+Formulir HTML adalah cara pengguna berkomunikasi dengan aplikasi web Anda. Anggaplah mereka sebagai sistem telegraf yang menghubungkan tempat-tempat yang jauh di abad ke-19 – mereka adalah protokol komunikasi antara niat pengguna dan respons aplikasi. Ketika dirancang dengan baik, mereka menangkap kesalahan, memandu format input, dan memberikan saran yang bermanfaat.
 
-Ada banyak [jenis](https://developer.mozilla.org/docs/Web/HTML/Element/input) `<input>` yang berbeda, misalnya untuk membuat bidang di mana pengguna dapat memasukkan nama pengguna, Anda dapat menggunakan:
+Formulir modern jauh lebih canggih daripada input teks dasar. HTML5 memperkenalkan jenis input khusus yang secara otomatis menangani validasi email, format angka, dan pemilihan tanggal. Peningkatan ini bermanfaat baik untuk aksesibilitas maupun pengalaman pengguna seluler.
+
+### Elemen Formulir Esensial
+
+**Komponen dasar yang dibutuhkan setiap formulir:**
 
 ```html
-<input id="username" name="username" type="text">
+<!-- Basic form structure -->
+<form id="userForm" method="POST">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" required>
+  
+  <button type="submit">Submit</button>
+</form>
 ```
 
-Atribut `name` akan digunakan sebagai nama properti saat data formulir dikirimkan. Atribut `id` digunakan untuk mengaitkan `<label>` dengan kontrol formulir.
+**Apa yang dilakukan kode ini:**
+- **Membuat** wadah formulir dengan pengidentifikasi unik
+- **Menentukan** metode HTTP untuk pengiriman data
+- **Menghubungkan** label dengan input untuk aksesibilitas
+- **Mendefinisikan** tombol kirim untuk memproses formulir
 
-> Lihat daftar lengkap [jenis `<input>`](https://developer.mozilla.org/docs/Web/HTML/Element/input) dan [kontrol formulir lainnya](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) untuk mendapatkan gambaran tentang semua elemen UI bawaan yang dapat Anda gunakan saat membangun UI Anda.
+### Jenis Input Modern dan Atribut
 
-✅ Perhatikan bahwa `<input>` adalah [elemen kosong](https://developer.mozilla.org/docs/Glossary/Empty_element) yang seharusnya *tidak* memiliki tag penutup yang cocok. Namun, Anda dapat menggunakan notasi penutup sendiri `<input/>`, tetapi itu tidak wajib.
+| Jenis Input | Tujuan | Contoh Penggunaan |
+|-------------|--------|-------------------|
+| `text` | Input teks umum | `<input type="text" name="username">` |
+| `email` | Validasi email | `<input type="email" name="email">` |
+| `password` | Entri teks tersembunyi | `<input type="password" name="password">` |
+| `number` | Input angka | `<input type="number" name="balance" min="0">` |
+| `tel` | Nomor telepon | `<input type="tel" name="phone">` |
 
-Elemen `<button>` dalam formulir sedikit spesial. Jika Anda tidak menentukan atribut `type`, secara otomatis tombol akan mengirimkan data formulir ke server saat ditekan. Berikut adalah nilai `type` yang mungkin:
+> 💡 **Keuntungan HTML5 Modern**: Menggunakan jenis input tertentu memberikan validasi otomatis, keyboard seluler yang sesuai, dan dukungan aksesibilitas yang lebih baik tanpa JavaScript tambahan!
 
-- `submit`: Default dalam `<form>`, tombol memicu tindakan pengiriman formulir.
-- `reset`: Tombol mengatur ulang semua kontrol formulir ke nilai awalnya.
-- `button`: Tidak menetapkan perilaku default saat tombol ditekan. Anda dapat menetapkan tindakan khusus menggunakan JavaScript.
+### Jenis Tombol dan Perilaku
 
-### Tugas
+```html
+<!-- Different button behaviors -->
+<button type="submit">Save Data</button>     <!-- Submits the form -->
+<button type="reset">Clear Form</button>    <!-- Resets all fields -->
+<button type="button">Custom Action</button> <!-- No default behavior -->
+```
 
-Mari kita mulai dengan menambahkan formulir ke template `login`. Kita akan membutuhkan bidang *username* dan tombol *Login*.
+**Apa yang dilakukan setiap jenis tombol:**
+- **Tombol kirim**: Memicu pengiriman formulir dan mengirim data ke endpoint yang ditentukan
+- **Tombol reset**: Mengembalikan semua bidang formulir ke keadaan awal
+- **Tombol biasa**: Tidak memiliki perilaku default, memerlukan JavaScript khusus untuk fungsionalitas
+
+> ⚠️ **Catatan Penting**: Elemen `<input>` adalah elemen yang menutup sendiri dan tidak memerlukan tag penutup. Praktik terbaik modern adalah menulis `<input>` tanpa garis miring.
+
+### Membuat Formulir Login Anda
+
+Sekarang mari kita buat formulir login praktis yang menunjukkan praktik formulir HTML modern. Kita akan mulai dengan struktur dasar dan secara bertahap meningkatkannya dengan fitur aksesibilitas dan validasi.
 
 ```html
 <template id="login">
   <h1>Bank App</h1>
   <section>
     <h2>Login</h2>
-    <form id="loginForm">
-      <label for="username">Username</label>
-      <input id="username" name="user" type="text">
-      <button>Login</button>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="user" type="text" required 
+               autocomplete="username" placeholder="Enter your username">
+      </div>
+      <button type="submit">Login</button>
     </form>
   </section>
 </template>
 ```
 
-Jika Anda melihat lebih dekat, Anda dapat melihat bahwa kami juga menambahkan elemen `<label>` di sini. Elemen `<label>` digunakan untuk menambahkan nama ke kontrol UI, seperti bidang nama pengguna kita. Label penting untuk keterbacaan formulir Anda, tetapi juga memiliki manfaat tambahan:
+**Penjelasan tentang apa yang terjadi di sini:**
+- **Menyusun** formulir dengan elemen HTML5 semantik
+- **Mengelompokkan** elemen terkait menggunakan wadah `div` dengan kelas yang bermakna
+- **Menghubungkan** label dengan input menggunakan atribut `for` dan `id`
+- **Menyertakan** atribut modern seperti `autocomplete` dan `placeholder` untuk UX yang lebih baik
+- **Menambahkan** `novalidate` untuk menangani validasi dengan JavaScript alih-alih default browser
 
-- Dengan mengaitkan label ke kontrol formulir, ini membantu pengguna yang menggunakan teknologi bantu (seperti pembaca layar) untuk memahami data apa yang diharapkan mereka berikan.
-- Anda dapat mengklik label untuk langsung memfokuskan kontrol input terkait, membuatnya lebih mudah dijangkau pada perangkat berbasis layar sentuh.
+### Pentingnya Label yang Tepat
 
-> [Aksesibilitas](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) di web adalah topik yang sangat penting yang sering diabaikan. Berkat [elemen HTML semantik](https://developer.mozilla.org/docs/Learn/Accessibility/HTML), tidak sulit untuk membuat konten yang dapat diakses jika Anda menggunakannya dengan benar. Anda dapat [membaca lebih lanjut tentang aksesibilitas](https://developer.mozilla.org/docs/Web/Accessibility) untuk menghindari kesalahan umum dan menjadi pengembang yang bertanggung jawab.
+**Mengapa label penting untuk pengembangan web modern:**
 
-Sekarang kita akan menambahkan formulir kedua untuk registrasi, tepat di bawah formulir sebelumnya:
+```mermaid
+graph TD
+    A[Label Element] --> B[Screen Reader Support]
+    A --> C[Click Target Expansion]
+    A --> D[Form Validation]
+    A --> E[SEO Benefits]
+    
+    B --> F[Accessible to all users]
+    C --> G[Better mobile experience]
+    D --> H[Clear error messaging]
+    E --> I[Better search ranking]
+```
+
+**Apa yang dicapai oleh label yang tepat:**
+- **Memungkinkan** pembaca layar mengumumkan bidang formulir dengan jelas
+- **Memperluas** area yang dapat diklik (mengklik label akan memfokuskan input)
+- **Meningkatkan** kegunaan seluler dengan target sentuh yang lebih besar
+- **Mendukung** validasi formulir dengan pesan kesalahan yang bermakna
+- **Meningkatkan** SEO dengan memberikan makna semantik pada elemen formulir
+
+> 🎯 **Tujuan Aksesibilitas**: Setiap input formulir harus memiliki label yang terkait. Praktik sederhana ini membuat formulir Anda dapat digunakan oleh semua orang, termasuk pengguna dengan disabilitas, dan meningkatkan pengalaman untuk semua pengguna.
+
+### Membuat Formulir Registrasi
+
+Formulir registrasi memerlukan informasi yang lebih rinci untuk membuat akun pengguna yang lengkap. Mari kita buat dengan fitur HTML5 modern dan aksesibilitas yang ditingkatkan.
 
 ```html
 <hr/>
 <h2>Register</h2>
-<form id="registerForm">
-  <label for="user">Username</label>
-  <input id="user" name="user" type="text">
-  <label for="currency">Currency</label>
-  <input id="currency" name="currency" type="text" value="$">
-  <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <label for="balance">Current balance</label>
-  <input id="balance" name="balance" type="number" value="0">
-  <button>Register</button>
+<form id="registerForm" novalidate>
+  <div class="form-group">
+    <label for="user">Username</label>
+    <input id="user" name="user" type="text" required 
+           autocomplete="username" placeholder="Choose a username">
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency</label>
+    <input id="currency" name="currency" type="text" value="$" 
+           required maxlength="3" placeholder="USD, EUR, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" placeholder="Personal savings, checking, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" value="0" 
+           min="0" step="0.01" placeholder="0.00">
+  </div>
+  
+  <button type="submit">Create Account</button>
 </form>
 ```
 
-Dengan menggunakan atribut `value`, kita dapat mendefinisikan nilai default untuk input tertentu.  
-Perhatikan juga bahwa input untuk `balance` memiliki tipe `number`. Apakah terlihat berbeda dari input lainnya? Coba berinteraksi dengannya.
+**Dalam kode di atas, kita telah:**
+- **Mengorganisasi** setiap bidang dalam wadah div untuk gaya dan tata letak yang lebih baik
+- **Menambahkan** atribut `autocomplete` yang sesuai untuk dukungan pengisian otomatis browser
+- **Menyertakan** teks placeholder yang membantu untuk memandu input pengguna
+- **Mengatur** nilai default yang masuk akal menggunakan atribut `value`
+- **Menerapkan** atribut validasi seperti `required`, `maxlength`, dan `min`
+- **Menggunakan** `type="number"` untuk bidang saldo dengan dukungan desimal
 
-✅ Bisakah Anda menavigasi dan berinteraksi dengan formulir hanya menggunakan keyboard? Bagaimana Anda melakukannya?
+### Menjelajahi Jenis Input dan Perilaku
 
-## Mengirimkan Data ke Server
+**Jenis input modern memberikan fungsionalitas yang ditingkatkan:**
 
-Sekarang kita memiliki UI yang fungsional, langkah berikutnya adalah mengirimkan data ke server. Mari kita lakukan tes cepat menggunakan kode kita saat ini: apa yang terjadi jika Anda mengklik tombol *Login* atau *Register*?
+| Fitur | Manfaat | Contoh |
+|-------|---------|--------|
+| `type="number"` | Keypad numerik di seluler | Mempermudah entri saldo |
+| `step="0.01"` | Kontrol presisi desimal | Memungkinkan sen dalam mata uang |
+| `autocomplete` | Pengisian otomatis browser | Penyelesaian formulir lebih cepat |
+| `placeholder` | Petunjuk kontekstual | Membimbing ekspektasi pengguna |
 
-Apakah Anda memperhatikan perubahan di bagian URL browser Anda?
+> 🎯 **Tantangan Aksesibilitas**: Cobalah menavigasi formulir hanya menggunakan keyboard Anda! Gunakan `Tab` untuk berpindah antar bidang, `Space` untuk mencentang kotak, dan `Enter` untuk mengirimkan. Pengalaman ini membantu Anda memahami bagaimana pengguna pembaca layar berinteraksi dengan formulir Anda.
+
+## Memahami Metode Pengiriman Formulir
+
+Ketika seseorang mengisi formulir Anda dan menekan kirim, data tersebut harus dikirim ke suatu tempat – biasanya ke server yang dapat menyimpannya. Ada beberapa cara berbeda untuk melakukannya, dan mengetahui mana yang harus digunakan dapat menghemat Anda dari beberapa masalah di kemudian hari.
+
+Mari kita lihat apa yang sebenarnya terjadi ketika seseorang mengklik tombol kirim tersebut.
+
+### Perilaku Default Formulir
+
+Pertama, mari kita amati apa yang terjadi dengan pengiriman formulir dasar:
+
+**Uji formulir Anda saat ini:**
+1. Klik tombol *Register* di formulir Anda
+2. Amati perubahan di bilah alamat browser Anda
+3. Perhatikan bagaimana halaman memuat ulang dan data muncul di URL
 
 ![Screenshot perubahan URL browser setelah mengklik tombol Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.id.png)
 
-Tindakan default untuk `<form>` adalah mengirimkan formulir ke URL server saat ini menggunakan [metode GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), menambahkan data formulir langsung ke URL. Namun, metode ini memiliki beberapa kekurangan:
+### Perbandingan Metode HTTP
 
-- Data yang dikirim sangat terbatas ukurannya (sekitar 2000 karakter)
-- Data terlihat langsung di URL (tidak bagus untuk kata sandi)
-- Tidak berfungsi dengan unggahan file
-
-Itulah mengapa Anda dapat mengubahnya untuk menggunakan [metode POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) yang mengirimkan data formulir ke server dalam tubuh permintaan HTTP, tanpa batasan sebelumnya.
-
-> Meskipun POST adalah metode yang paling umum digunakan untuk mengirim data, [dalam beberapa skenario tertentu](https://www.w3.org/2001/tag/doc/whenToUseGet.html) lebih baik menggunakan metode GET, misalnya saat mengimplementasikan bidang pencarian.
-
-### Tugas
-
-Tambahkan properti `action` dan `method` ke formulir registrasi:
-
-```html
-<form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
+```mermaid
+graph TD
+    A[Form Submission] --> B{HTTP Method}
+    B -->|GET| C[Data in URL]
+    B -->|POST| D[Data in Request Body]
+    
+    C --> E[Visible in address bar]
+    C --> F[Limited data size]
+    C --> G[Bookmarkable]
+    
+    D --> H[Hidden from URL]
+    D --> I[Large data capacity]
+    D --> J[More secure]
 ```
 
-Sekarang coba daftarkan akun baru dengan nama Anda. Setelah mengklik tombol *Register*, Anda seharusnya melihat sesuatu seperti ini:
+**Memahami perbedaannya:**
+
+| Metode | Kasus Penggunaan | Lokasi Data | Tingkat Keamanan | Batas Ukuran |
+|--------|------------------|-------------|------------------|--------------|
+| `GET` | Query pencarian, filter | Parameter URL | Rendah (terlihat) | ~2000 karakter |
+| `POST` | Akun pengguna, data sensitif | Body permintaan | Lebih tinggi (tersembunyi) | Tidak ada batas praktis |
+
+**Memahami perbedaan mendasar:**
+- **GET**: Menambahkan data formulir ke URL sebagai parameter query (cocok untuk operasi pencarian)
+- **POST**: Menyertakan data dalam body permintaan (penting untuk informasi sensitif)
+- **Batasan GET**: Batas ukuran, data terlihat, riwayat browser yang persisten
+- **Keuntungan POST**: Kapasitas data besar, perlindungan privasi, dukungan unggahan file
+
+> 💡 **Praktik Terbaik**: Gunakan `GET` untuk formulir pencarian dan filter (pengambilan data), gunakan `POST` untuk registrasi pengguna, login, dan pembuatan data.
+
+### Mengonfigurasi Pengiriman Formulir
+
+Mari kita konfigurasikan formulir registrasi Anda untuk berkomunikasi dengan benar dengan API backend menggunakan metode POST:
+
+```html
+<form id="registerForm" action="//localhost:5000/api/accounts" 
+      method="POST" novalidate>
+```
+
+**Apa yang dilakukan konfigurasi ini:**
+- **Mengarahkan** pengiriman formulir ke endpoint API Anda
+- **Menggunakan** metode POST untuk transmisi data yang aman
+- **Menyertakan** `novalidate` untuk menangani validasi dengan JavaScript
+
+### Menguji Pengiriman Formulir
+
+**Ikuti langkah-langkah ini untuk menguji formulir Anda:**
+1. **Isi** formulir registrasi dengan informasi Anda
+2. **Klik** tombol "Create Account"
+3. **Amati** respons server di browser Anda
 
 ![Jendela browser di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.id.png)
 
-Jika semuanya berjalan dengan baik, server akan menjawab permintaan Anda dengan respons [JSON](https://www.json.org/json-en.html) yang berisi data akun yang dibuat.
+**Apa yang harus Anda lihat:**
+- **Browser mengarahkan** ke URL endpoint API
+- **Respons JSON** berisi data akun baru Anda
+- **Konfirmasi server** bahwa akun berhasil dibuat
 
-✅ Coba daftar lagi dengan nama yang sama. Apa yang terjadi?
+> 🧪 **Waktu Eksperimen**: Cobalah mendaftar lagi dengan nama pengguna yang sama. Respons apa yang Anda dapatkan? Ini membantu Anda memahami bagaimana server menangani data duplikat dan kondisi kesalahan.
 
-## Mengirimkan Data Tanpa Memuat Ulang Halaman
+### Memahami Respons JSON
 
-Seperti yang mungkin Anda perhatikan, ada sedikit masalah dengan pendekatan yang baru saja kita gunakan: saat mengirimkan formulir, kita keluar dari aplikasi kita dan browser mengarahkan ke URL server. Kita mencoba menghindari semua pemuatan ulang halaman dengan aplikasi web kita, karena kita sedang membuat [Aplikasi Halaman Tunggal (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
-
-Untuk mengirimkan data formulir ke server tanpa memaksa pemuatan ulang halaman, kita harus menggunakan kode JavaScript. Alih-alih meletakkan URL di properti `action` elemen `<form>`, Anda dapat menggunakan kode JavaScript apa pun yang diawali dengan string `javascript:` untuk melakukan tindakan khusus. Dengan menggunakan ini, Anda juga harus mengimplementasikan beberapa tugas yang sebelumnya dilakukan secara otomatis oleh browser:
-
-- Mengambil data formulir
-- Mengonversi dan mengkodekan data formulir ke format yang sesuai
-- Membuat permintaan HTTP dan mengirimkannya ke server
-
-### Tugas
-
-Ganti `action` formulir registrasi dengan:
-
-```html
-<form id="registerForm" action="javascript:register()">
+**Ketika server memproses formulir Anda dengan sukses:**
+```json
+{
+  "user": "john_doe",
+  "currency": "$",
+  "description": "Personal savings",
+  "balance": 100,
+  "id": "unique_account_id"
+}
 ```
 
-Buka `app.js` dan tambahkan fungsi baru bernama `register`:
+**Respons ini mengonfirmasi:**
+- **Membuat** akun baru dengan data yang Anda tentukan
+- **Memberikan** pengidentifikasi unik untuk referensi di masa depan
+- **Mengembalikan** semua informasi akun untuk verifikasi
+- **Menunjukkan** penyimpanan data di database berhasil
 
-```js
+## Penanganan Formulir Modern dengan JavaScript
+
+Pengiriman formulir tradisional menyebabkan halaman memuat ulang sepenuhnya, mirip dengan bagaimana misi luar angkasa awal memerlukan reset sistem lengkap untuk koreksi jalur. Pendekatan ini mengganggu pengalaman pengguna dan kehilangan status aplikasi.
+
+Penanganan formulir dengan JavaScript bekerja seperti sistem panduan berkelanjutan yang digunakan oleh pesawat luar angkasa modern – membuat penyesuaian waktu nyata tanpa kehilangan konteks navigasi. Kita dapat mencegat pengiriman formulir, memberikan umpan balik langsung, menangani kesalahan dengan baik, dan memperbarui antarmuka berdasarkan respons server sambil mempertahankan posisi pengguna dalam aplikasi.
+
+### Mengapa Menghindari Muat Ulang Halaman?
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant SPA
+    participant Server
+    
+    User->>SPA: Submits form
+    SPA->>Server: AJAX request
+    Server-->>SPA: JSON response
+    SPA->>User: Updates interface
+    
+    Note over User,SPA: No page reload!
+```
+
+**Manfaat penanganan formulir dengan JavaScript:**
+- **Mempertahankan** status aplikasi dan konteks pengguna
+- **Memberikan** umpan balik langsung dan indikator pemuatan
+- **Memungkinkan** penanganan kesalahan dan validasi dinamis
+- **Menciptakan** pengalaman pengguna yang mulus seperti aplikasi
+- **Memungkinkan** logika kondisional berdasarkan respons server
+
+### Beralih dari Formulir Tradisional ke Modern
+
+**Tantangan pendekatan tradisional:**
+- **Mengalihkan** pengguna dari aplikasi Anda
+- **Kehilangan** status dan konteks aplikasi saat ini
+- **Memerlukan** muat ulang halaman penuh untuk operasi sederhana
+- **Memberikan** kontrol terbatas atas umpan balik pengguna
+
+**Keuntungan pendekatan JavaScript modern:**
+- **Menjaga** pengguna tetap dalam aplikasi Anda
+- **Mempertahankan** semua status dan data aplikasi
+- **Memungkinkan** validasi dan umpan balik waktu nyata
+- **Mendukung** peningkatan progresif dan aksesibilitas
+
+### Menerapkan Penanganan Formulir dengan JavaScript
+
+Mari kita mengganti pengiriman formulir tradisional dengan penanganan event JavaScript modern:
+
+```html
+<!-- Remove the action attribute and add event handling -->
+<form id="registerForm" method="POST" novalidate>
+```
+
+**Tambahkan logika registrasi ke file `app.js` Anda:**
+
+```javascript
+// Modern event-driven form handling
 function register() {
   const registerForm = document.getElementById('registerForm');
   const formData = new FormData(registerForm);
   const data = Object.fromEntries(formData);
   const jsonData = JSON.stringify(data);
+  
+  console.log('Form data prepared:', data);
 }
+
+// Attach event listener when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const registerForm = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    register();
+  });
+});
 ```
 
-Di sini kita mengambil elemen formulir menggunakan `getElementById()` dan menggunakan pembantu [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) untuk mengekstrak nilai dari kontrol formulir sebagai pasangan key/value. Kemudian kita mengonversi data ke objek reguler menggunakan [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) dan akhirnya menyerialkan data ke [JSON](https://www.json.org/json-en.html), format yang umum digunakan untuk pertukaran data di web.
+**Penjelasan tentang apa yang terjadi di sini:**
+- **Mencegah** pengiriman formulir default menggunakan `event.preventDefault()`
+- **Mengambil** elemen formulir menggunakan seleksi DOM modern
+- **Menarik** data formulir menggunakan API `FormData` yang kuat
+- **Mengonversi** FormData ke objek biasa dengan `Object.fromEntries()`
+- **Men-serialisasi** data ke format JSON untuk komunikasi server
+- **Mencatat** data yang diproses untuk debugging dan verifikasi
 
-Data sekarang siap untuk dikirim ke server. Buat fungsi baru bernama `createAccount`:
+### Memahami API FormData
 
-```js
+**API FormData menyediakan penanganan formulir yang kuat:**
+
+```javascript
+// Example of what FormData captures
+const formData = new FormData(registerForm);
+
+// FormData automatically captures:
+// {
+//   "user": "john_doe",
+//   "currency": "$", 
+//   "description": "Personal account",
+//   "balance": "100"
+// }
+```
+
+**Keuntungan API FormData:**
+- **Pengumpulan komprehensif**: Menangkap semua elemen formulir termasuk teks, file, dan input kompleks
+- **Kesadaran tipe**: Menangani berbagai jenis input secara otomatis tanpa pengkodean khusus
+- **Efisiensi**: Menghilangkan pengumpulan bidang manual dengan satu panggilan API
+- **Adaptabilitas**: Mempertahankan fungsionalitas saat struktur formulir berkembang
+
+### Membuat Fungsi Komunikasi Server
+
+Sekarang mari kita buat fungsi yang kuat untuk berkomunikasi dengan server API Anda menggunakan pola JavaScript modern:
+
+```javascript
 async function createAccount(account) {
   try {
     const response = await fetch('//localhost:5000/api/accounts', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: account
     });
+    
+    // Check if the response was successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
     return await response.json();
   } catch (error) {
-    return { error: error.message || 'Unknown error' };
+    console.error('Account creation failed:', error);
+    return { error: error.message || 'Network error occurred' };
   }
 }
 ```
 
-Apa yang dilakukan fungsi ini? Pertama, perhatikan kata kunci `async` di sini. Ini berarti bahwa fungsi tersebut berisi kode yang akan dieksekusi [**secara asinkron**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Saat digunakan bersama kata kunci `await`, ini memungkinkan menunggu kode asinkron untuk dieksekusi - seperti menunggu respons server di sini - sebelum melanjutkan.
+**Memahami JavaScript asinkron:**
 
-Berikut video singkat tentang penggunaan `async/await`:
-
-[![Async dan Await untuk mengelola janji](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async dan Await untuk mengelola janji")
-
-> 🎥 Klik gambar di atas untuk video tentang async/await.
-
-Kami menggunakan API `fetch()` untuk mengirim data JSON ke server. Metode ini membutuhkan 2 parameter:
-
-- URL server, jadi kami meletakkan kembali `//localhost:5000/api/accounts` di sini.
-- Pengaturan permintaan. Di sinilah kami menetapkan metode ke `POST` dan menyediakan `body` untuk permintaan. Karena kami mengirimkan data JSON ke server, kami juga perlu menetapkan header `Content-Type` ke `application/json` sehingga server tahu cara menafsirkan konten.
-
-Karena server akan merespons permintaan dengan JSON, kita dapat menggunakan `await response.json()` untuk mem-parsing konten JSON dan mengembalikan objek yang dihasilkan. Perhatikan bahwa metode ini bersifat asinkron, jadi kami menggunakan kata kunci `await` di sini sebelum mengembalikan untuk memastikan kesalahan selama parsing juga tertangkap.
-
-Sekarang tambahkan beberapa kode ke fungsi `register` untuk memanggil `createAccount()`:
-
-```js
-const result = await createAccount(jsonData);
+```mermaid
+sequenceDiagram
+    participant JS as JavaScript
+    participant Fetch as Fetch API
+    participant Server as Backend Server
+    
+    JS->>Fetch: fetch() request
+    Fetch->>Server: HTTP POST
+    Server-->>Fetch: JSON response
+    Fetch-->>JS: await response
+    JS->>JS: Process data
 ```
 
-Karena kita menggunakan kata kunci `await` di sini, kita perlu menambahkan kata kunci `async` sebelum fungsi register:
+**Apa yang dicapai oleh implementasi modern ini:**
+- **Menggunakan** `async/await` untuk kode asinkron yang mudah dibaca
+- **Menyertakan** penanganan kesalahan yang tepat dengan blok try/catch
+- **Memeriksa** status respons sebelum memproses data
+- **Mengatur** header yang sesuai untuk komunikasi JSON
+- **Memberikan** pesan kesalahan yang rinci untuk debugging
+- **Mengembalikan** struktur data yang konsisten untuk kasus sukses dan kesalahan
 
-```js
-async function register() {
-```
+### Kekuatan Modern Fetch API
 
-Terakhir, tambahkan beberapa log untuk memeriksa hasilnya. Fungsi akhir harus terlihat seperti ini:
+**Keunggulan Fetch API dibandingkan metode lama:**
 
-```js
+| Fitur | Manfaat | Implementasi |
+|-------|---------|--------------|
+| Berbasis Promise | Kode async yang bersih | `await fetch()` |
+| Kustomisasi permintaan | Kontrol penuh HTTP | Headers, metode, body |
+| Penanganan respons | Parsing data yang fleksibel | `.json()`, `.text()`, `.blob()` |
+| Penanganan kesalahan | Penangkapan kesalahan yang komprehensif | Blok Try/catch |
+
+> 🎥 **Pelajari Lebih Lanjut**: [Tutorial Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - Memahami pola JavaScript asinkron untuk pengembangan web modern.
+
+**Konsep utama untuk komunikasi server:**
+- **Fungsi async** memungkinkan penghentian eksekusi untuk menunggu respons server
+- **Kata kunci await** membuat kode asinkron terlihat seperti kode sinkron
+- **Fetch API** menyediakan permintaan HTTP berbasis promise yang modern
+- **Penanganan kesalahan** memastikan aplikasi Anda merespons dengan baik terhadap masalah jaringan
+
+### Menyelesaikan Fungsi Registrasi
+
+Mari kita gabungkan semuanya dengan fungsi registrasi yang lengkap dan siap produksi:
+
+```javascript
 async function register() {
   const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const jsonData = JSON.stringify(Object.fromEntries(formData));
-  const result = await createAccount(jsonData);
-
-  if (result.error) {
-    return console.log('An error occurred:', result.error);
+  const submitButton = registerForm.querySelector('button[type="submit"]');
+  
+  try {
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Creating Account...';
+    
+    // Process form data
+    const formData = new FormData(registerForm);
+    const jsonData = JSON.stringify(Object.fromEntries(formData));
+    
+    // Send to server
+    const result = await createAccount(jsonData);
+    
+    if (result.error) {
+      console.error('Registration failed:', result.error);
+      alert(`Registration failed: ${result.error}`);
+      return;
+    }
+    
+    console.log('Account created successfully!', result);
+    alert(`Welcome, ${result.user}! Your account has been created.`);
+    
+    // Reset form after successful registration
+    registerForm.reset();
+    
+  } catch (error) {
+    console.error('Unexpected error:', error);
+    alert('An unexpected error occurred. Please try again.');
+  } finally {
+    // Restore button state
+    submitButton.disabled = false;
+    submitButton.textContent = 'Create Account';
   }
-
-  console.log('Account created!', result);
 }
 ```
 
-Itu cukup panjang tetapi kita berhasil! Jika Anda membuka [alat pengembang browser](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools), dan mencoba mendaftarkan akun baru, Anda seharusnya tidak melihat perubahan apa pun pada halaman web tetapi pesan akan muncul di konsol yang mengonfirmasi bahwa semuanya berfungsi.
+**Implementasi yang ditingkatkan ini mencakup:**
+- **Memberikan** umpan balik visual selama pengiriman formulir
+- **Menonaktifkan** tombol submit untuk mencegah pengiriman duplikat
+- **Menangani** kesalahan yang diharapkan maupun tidak terduga dengan baik
+- **Menampilkan** pesan sukses dan kesalahan yang ramah pengguna
+- **Mereset** formulir setelah registrasi berhasil
+- **Mengembalikan** status UI terlepas dari hasilnya
+
+### Menguji Implementasi Anda
+
+**Buka alat pengembang browser Anda dan uji registrasi:**
+
+1. **Buka** konsol browser (F12 → tab Console)
+2. **Isi** formulir registrasi
+3. **Klik** "Buat Akun"
+4. **Amati** pesan konsol dan umpan balik pengguna
 
 ![Screenshot menunjukkan pesan log di konsol browser](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.id.png)
 
-✅ Apakah menurut Anda data dikirim ke server dengan aman? Bagaimana jika seseorang dapat mencegat permintaan tersebut? Anda dapat membaca tentang [HTTPS](https://en.wikipedia.org/wiki/HTTPS) untuk mengetahui lebih lanjut tentang komunikasi data yang aman.
+**Yang seharusnya Anda lihat:**
+- **Status loading** muncul di tombol submit
+- **Log konsol** menunjukkan informasi rinci tentang proses
+- **Pesan sukses** muncul saat pembuatan akun berhasil
+- **Formulir mereset** secara otomatis setelah pengiriman berhasil
 
-## Validasi Data
+> 🔒 **Pertimbangan Keamanan**: Saat ini, data dikirim melalui HTTP, yang tidak aman untuk produksi. Dalam aplikasi nyata, selalu gunakan HTTPS untuk mengenkripsi transmisi data. Pelajari lebih lanjut tentang [keamanan HTTPS](https://en.wikipedia.org/wiki/HTTPS) dan mengapa ini penting untuk melindungi data pengguna.
 
-Jika Anda mencoba mendaftarkan akun baru tanpa mengatur nama pengguna terlebih dahulu, Anda dapat melihat bahwa server mengembalikan kesalahan dengan kode status [400 (Permintaan Buruk)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+## Validasi Formulir yang Komprehensif
 
-Sebelum mengirimkan data ke server, adalah praktik yang baik untuk [memvalidasi data formulir](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) sebelumnya jika memungkinkan, untuk memastikan Anda mengirimkan permintaan yang valid. Kontrol formulir HTML5 menyediakan validasi bawaan menggunakan berbagai atribut:
+Validasi formulir mencegah pengalaman yang mengecewakan karena menemukan kesalahan hanya setelah pengiriman. Seperti sistem redundansi di Stasiun Luar Angkasa Internasional, validasi yang efektif menggunakan beberapa lapisan pemeriksaan keamanan.
 
-- `required`: bidang harus diisi, jika tidak formulir tidak dapat dikirimkan.
-- `minlength` dan `maxlength`: mendefinisikan jumlah karakter minimum dan maksimum dalam bidang teks.
-- `min` dan `max`: mendefinisikan nilai minimum dan maksimum dari bidang numerik.
-- `type`: mendefinisikan jenis data yang diharapkan, seperti `number`, `email`, `file`, atau [jenis bawaan lainnya](https://developer.mozilla.org/docs/Web/HTML/Element/input). Atribut ini juga dapat mengubah tampilan visual kontrol formulir.
-- `pattern`: memungkinkan untuk mendefinisikan pola [ekspresi reguler](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) untuk menguji apakah data yang dimasukkan valid atau tidak.
-> Tip: Anda dapat menyesuaikan tampilan kontrol formulir Anda tergantung apakah valid atau tidak dengan menggunakan pseudo-kelas CSS `:valid` dan `:invalid`.
-### Tugas
+Pendekatan optimal menggabungkan validasi tingkat browser untuk umpan balik langsung, validasi JavaScript untuk pengalaman pengguna yang lebih baik, dan validasi sisi server untuk keamanan dan integritas data. Redundansi ini memastikan kepuasan pengguna dan perlindungan sistem.
 
-Ada 2 kolom yang wajib diisi untuk membuat akun baru yang valid, yaitu username dan mata uang, sementara kolom lainnya bersifat opsional. Perbarui HTML formulir dengan menggunakan atribut `required` dan teks pada label kolom sehingga:
+### Memahami Lapisan Validasi
 
-```html
-<label for="user">Username (required)</label>
-<input id="user" name="user" type="text" required>
-...
-<label for="currency">Currency (required)</label>
-<input id="currency" name="currency" type="text" value="$" required>
+```mermaid
+graph TD
+    A[User Input] --> B[HTML5 Validation]
+    B --> C[Custom JavaScript Validation]
+    C --> D[Client-Side Complete]
+    D --> E[Server-Side Validation]
+    E --> F[Data Storage]
+    
+    B -->|Invalid| G[Browser Error Message]
+    C -->|Invalid| H[Custom Error Display]
+    E -->|Invalid| I[Server Error Response]
 ```
 
-Meskipun implementasi server ini tidak menerapkan batasan khusus pada panjang maksimum kolom, selalu merupakan praktik yang baik untuk menentukan batasan yang masuk akal untuk setiap entri teks pengguna.
+**Strategi validasi multi-lapisan:**
+- **Validasi HTML5**: Pemeriksaan berbasis browser langsung
+- **Validasi JavaScript**: Logika kustom dan pengalaman pengguna
+- **Validasi server**: Pemeriksaan keamanan dan integritas data akhir
+- **Peningkatan progresif**: Berfungsi bahkan jika JavaScript dinonaktifkan
 
-Tambahkan atribut `maxlength` pada kolom teks:
+### Atribut Validasi HTML5
 
-```html
-<input id="user" name="user" type="text" maxlength="20" required>
-...
-<input id="currency" name="currency" type="text" value="$" maxlength="5" required>
-...
-<input id="description" name="description" type="text" maxlength="100">
+**Alat validasi modern yang tersedia:**
+
+| Atribut | Tujuan | Contoh Penggunaan | Perilaku Browser |
+|---------|--------|-------------------|------------------|
+| `required` | Kolom wajib | `<input required>` | Mencegah pengiriman kosong |
+| `minlength`/`maxlength` | Batas panjang teks | `<input maxlength="20">` | Menegakkan batas karakter |
+| `min`/`max` | Rentang numerik | `<input min="0" max="1000">` | Memvalidasi batas angka |
+| `pattern` | Aturan regex kustom | `<input pattern="[A-Za-z]+">` | Mencocokkan format tertentu |
+| `type` | Validasi tipe data | `<input type="email">` | Validasi format spesifik |
+
+### Styling Validasi CSS
+
+**Buat umpan balik visual untuk status validasi:**
+
+```css
+/* Valid input styling */
+input:valid {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+/* Invalid input styling */
+input:invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Focus states for better accessibility */
+input:focus:valid {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
 ```
 
-Sekarang, jika Anda menekan tombol *Register* dan ada kolom yang tidak memenuhi aturan validasi yang telah kita tentukan, Anda akan melihat sesuatu seperti ini:
+**Apa yang dicapai oleh isyarat visual ini:**
+- **Batas hijau**: Menunjukkan validasi berhasil, seperti lampu hijau di pusat kendali
+- **Batas merah**: Menandakan kesalahan validasi yang membutuhkan perhatian
+- **Sorotan fokus**: Memberikan konteks visual yang jelas untuk lokasi input saat ini
+- **Gaya konsisten**: Membangun pola antarmuka yang dapat dipelajari pengguna
 
-![Tangkapan layar yang menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.id.png)
+> 💡 **Tips Profesional**: Gunakan pseudo-class CSS `:valid` dan `:invalid` untuk memberikan umpan balik visual langsung saat pengguna mengetik, menciptakan antarmuka yang responsif dan membantu.
 
-Validasi seperti ini yang dilakukan *sebelum* mengirimkan data ke server disebut validasi **client-side**. Namun, perlu dicatat bahwa tidak selalu memungkinkan untuk melakukan semua pemeriksaan tanpa mengirimkan data. Sebagai contoh, kita tidak dapat memeriksa apakah akun dengan username yang sama sudah ada tanpa mengirimkan permintaan ke server. Validasi tambahan yang dilakukan di server disebut validasi **server-side**.
+### Menerapkan Validasi yang Komprehensif
 
-Biasanya, kedua jenis validasi ini perlu diimplementasikan. Meskipun validasi client-side meningkatkan pengalaman pengguna dengan memberikan umpan balik instan, validasi server-side sangat penting untuk memastikan bahwa data pengguna yang Anda proses aman dan valid.
+Mari tingkatkan formulir registrasi Anda dengan validasi yang kuat yang memberikan pengalaman pengguna yang luar biasa dan kualitas data yang baik:
+
+```html
+<form id="registerForm" method="POST" novalidate>
+  <div class="form-group">
+    <label for="user">Username <span class="required">*</span></label>
+    <input id="user" name="user" type="text" required 
+           minlength="3" maxlength="20" 
+           pattern="[a-zA-Z0-9_]+" 
+           autocomplete="username"
+           title="Username must be 3-20 characters, letters, numbers, and underscores only">
+    <small class="form-text">Choose a unique username (3-20 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency <span class="required">*</span></label>
+    <input id="currency" name="currency" type="text" required 
+           value="$" maxlength="3" 
+           pattern="[A-Z$€£¥₹]+" 
+           title="Enter a valid currency symbol or code">
+    <small class="form-text">Currency symbol (e.g., $, €, £)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" 
+           placeholder="Personal savings, checking, etc.">
+    <small class="form-text">Optional description (up to 100 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" 
+           value="0" min="0" step="0.01" 
+           title="Enter a positive number for your starting balance">
+    <small class="form-text">Initial account balance (minimum $0.00)</small>
+  </div>
+  
+  <button type="submit">Create Account</button>
+</form>
+```
+
+**Memahami validasi yang ditingkatkan:**
+- **Menggabungkan** indikator kolom wajib dengan deskripsi yang membantu
+- **Menyertakan** atribut `pattern` untuk validasi format
+- **Memberikan** atribut `title` untuk aksesibilitas dan tooltip
+- **Menambahkan** teks bantuan untuk memandu input pengguna
+- **Menggunakan** struktur HTML semantik untuk aksesibilitas yang lebih baik
+
+### Aturan Validasi Lanjutan
+
+**Apa yang dicapai oleh setiap aturan validasi:**
+
+| Kolom | Aturan Validasi | Manfaat Pengguna |
+|-------|-----------------|------------------|
+| Nama Pengguna | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Memastikan pengidentifikasi yang valid dan unik |
+| Mata Uang | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Menerima simbol mata uang umum |
+| Saldo | `min="0"`, `step="0.01"`, `type="number"` | Mencegah saldo negatif |
+| Deskripsi | `maxlength="100"` | Batas panjang yang wajar |
+
+### Menguji Perilaku Validasi
+
+**Coba skenario validasi ini:**
+1. **Kirimkan** formulir dengan kolom wajib kosong
+2. **Masukkan** nama pengguna yang kurang dari 3 karakter
+3. **Coba** karakter khusus di kolom nama pengguna
+4. **Masukkan** jumlah saldo negatif
+
+![Screenshot menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.id.png)
+
+**Yang akan Anda amati:**
+- **Browser menampilkan** pesan validasi bawaan
+- **Perubahan gaya** berdasarkan status `:valid` dan `:invalid`
+- **Pengiriman formulir** dicegah hingga semua validasi lolos
+- **Fokus otomatis** berpindah ke kolom pertama yang tidak valid
+
+### Validasi Sisi Klien vs Sisi Server
+
+```mermaid
+graph LR
+    A[Client-Side Validation] --> B[Instant Feedback]
+    A --> C[Better UX]
+    A --> D[Reduced Server Load]
+    
+    E[Server-Side Validation] --> F[Security]
+    E --> G[Data Integrity]
+    E --> H[Business Rules]
+    
+    A -.-> I[Both Required]
+    E -.-> I
+```
+
+**Mengapa Anda membutuhkan kedua lapisan:**
+- **Validasi sisi klien**: Memberikan umpan balik langsung dan meningkatkan pengalaman pengguna
+- **Validasi sisi server**: Memastikan keamanan dan menangani aturan bisnis yang kompleks
+- **Pendekatan gabungan**: Menciptakan aplikasi yang kuat, ramah pengguna, dan aman
+- **Peningkatan progresif**: Berfungsi bahkan ketika JavaScript dinonaktifkan
+
+> 🛡️ **Pengingat Keamanan**: Jangan pernah hanya mengandalkan validasi sisi klien! Pengguna jahat dapat melewati pemeriksaan sisi klien, jadi validasi sisi server sangat penting untuk keamanan dan integritas data.
 
 ---
+
+---
+
+## Tantangan Agen GitHub Copilot 🚀
+
+Gunakan mode Agen untuk menyelesaikan tantangan berikut:
+
+**Deskripsi:** Tingkatkan formulir registrasi dengan validasi sisi klien yang komprehensif dan umpan balik pengguna. Tantangan ini akan membantu Anda berlatih validasi formulir, penanganan kesalahan, dan meningkatkan pengalaman pengguna dengan umpan balik interaktif.
+
+**Prompt:** Buat sistem validasi formulir lengkap untuk formulir registrasi yang mencakup: 1) Umpan balik validasi real-time untuk setiap kolom saat pengguna mengetik, 2) Pesan validasi kustom yang muncul di bawah setiap kolom input, 3) Kolom konfirmasi kata sandi dengan validasi pencocokan, 4) Indikator visual (seperti tanda centang hijau untuk kolom valid dan peringatan merah untuk kolom tidak valid), 5) Tombol submit yang hanya aktif ketika semua validasi lolos. Gunakan atribut validasi HTML5, CSS untuk styling status validasi, dan JavaScript untuk perilaku interaktif.
+
+Pelajari lebih lanjut tentang [mode agen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## 🚀 Tantangan
 
 Tampilkan pesan kesalahan di HTML jika pengguna sudah ada.
 
-Berikut adalah contoh tampilan halaman login akhir setelah ditambahkan sedikit gaya:
+Berikut adalah contoh tampilan halaman login akhir setelah sedikit penyesuaian gaya:
 
-![Tangkapan layar halaman login setelah menambahkan gaya CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.id.png)
+![Screenshot halaman login setelah menambahkan gaya CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.id.png)
 
-## Kuis Pasca-Pelajaran
+## Kuis Pasca-Kuliah
 
-[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/44)
+[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/44)
 
-## Tinjauan & Belajar Mandiri
+## Tinjauan & Studi Mandiri
 
-Para pengembang telah menjadi sangat kreatif dalam upaya mereka membangun formulir, terutama terkait strategi validasi. Pelajari berbagai alur formulir dengan melihat melalui [CodePen](https://codepen.com); bisakah Anda menemukan beberapa formulir yang menarik dan menginspirasi?
+Para pengembang telah menjadi sangat kreatif dalam upaya membangun formulir mereka, terutama terkait strategi validasi. Pelajari berbagai alur formulir dengan melihat [CodePen](https://codepen.com); bisakah Anda menemukan beberapa formulir yang menarik dan menginspirasi?
 
 ## Tugas
 
-[Tambahkan gaya pada aplikasi bank Anda](assignment.md)
+[Atur gaya aplikasi bank Anda](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.

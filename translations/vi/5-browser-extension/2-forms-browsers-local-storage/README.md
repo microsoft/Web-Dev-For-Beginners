@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T08:51:13+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-24T13:53:46+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "vi"
 }
 -->
-# Dự án Tiện ích Mở rộng Trình duyệt Phần 2: Gọi API, sử dụng Local Storage
+# Dự án Tiện ích Trình duyệt Phần 2: Gọi API, sử dụng Local Storage
 
-## Câu hỏi trước bài học
+## Câu hỏi trước bài giảng
 
-[Câu hỏi trước bài học](https://ff-quizzes.netlify.app/web/quiz/25)
+[Câu hỏi trước bài giảng](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Giới thiệu
+## Giới thiệu
 
-Trong bài học này, bạn sẽ gọi một API bằng cách gửi biểu mẫu của tiện ích mở rộng trình duyệt và hiển thị kết quả trong tiện ích mở rộng. Ngoài ra, bạn sẽ học cách lưu trữ dữ liệu trong bộ nhớ cục bộ của trình duyệt để tham khảo và sử dụng sau này.
+Bạn còn nhớ tiện ích trình duyệt mà bạn đã bắt đầu xây dựng không? Hiện tại bạn đã có một biểu mẫu trông đẹp mắt, nhưng nó vẫn còn khá tĩnh. Hôm nay, chúng ta sẽ làm cho nó trở nên sống động bằng cách kết nối với dữ liệu thực và cung cấp khả năng ghi nhớ.
 
-✅ Làm theo các đoạn mã được đánh số trong các tệp phù hợp để biết nơi đặt mã của bạn.
+Hãy nghĩ về các máy tính điều khiển nhiệm vụ Apollo - chúng không chỉ hiển thị thông tin cố định. Chúng liên tục giao tiếp với tàu vũ trụ, cập nhật dữ liệu từ xa và ghi nhớ các thông số quan trọng của nhiệm vụ. Đó là loại hành vi động mà chúng ta sẽ xây dựng hôm nay. Tiện ích của bạn sẽ kết nối với internet, lấy dữ liệu môi trường thực và ghi nhớ các cài đặt của bạn cho lần sử dụng tiếp theo.
 
-### Thiết lập các phần tử để thao tác trong tiện ích mở rộng:
+Tích hợp API có thể nghe có vẻ phức tạp, nhưng thực chất chỉ là dạy mã của bạn cách giao tiếp với các dịch vụ khác. Dù bạn đang lấy dữ liệu thời tiết, nguồn cấp dữ liệu mạng xã hội hay thông tin về dấu chân carbon như chúng ta sẽ làm hôm nay, tất cả đều xoay quanh việc thiết lập các kết nối kỹ thuật số này. Chúng ta cũng sẽ khám phá cách trình duyệt có thể lưu trữ thông tin - giống như cách các thư viện sử dụng danh mục thẻ để ghi nhớ vị trí của sách.
 
-Đến thời điểm này, bạn đã xây dựng HTML cho biểu mẫu và `<div>` kết quả của tiện ích mở rộng trình duyệt. Từ bây giờ, bạn sẽ cần làm việc trong tệp `/src/index.js` và xây dựng tiện ích mở rộng của mình từng bước một. Tham khảo [bài học trước](../1-about-browsers/README.md) để thiết lập dự án và quy trình xây dựng.
+Kết thúc bài học này, bạn sẽ có một tiện ích trình duyệt có thể lấy dữ liệu thực, lưu trữ tùy chọn của người dùng và cung cấp trải nghiệm mượt mà. Hãy bắt đầu nào!
 
-Làm việc trong tệp `index.js`, bắt đầu bằng cách tạo một số biến `const` để giữ các giá trị liên quan đến các trường khác nhau:
+✅ Làm theo các phân đoạn được đánh số trong các tệp tương ứng để biết nơi đặt mã của bạn.
 
-```JavaScript
+## Thiết lập các phần tử để thao tác trong tiện ích
+
+Trước khi JavaScript của bạn có thể thao tác giao diện, nó cần tham chiếu đến các phần tử HTML cụ thể. Hãy nghĩ về nó như một kính thiên văn cần được hướng vào các ngôi sao cụ thể - trước khi Galileo có thể nghiên cứu các mặt trăng của sao Mộc, ông phải xác định và tập trung vào chính sao Mộc.
+
+Trong tệp `index.js` của bạn, chúng ta sẽ tạo các biến `const` để lưu tham chiếu đến từng phần tử biểu mẫu quan trọng. Điều này giống như cách các nhà khoa học gắn nhãn thiết bị của họ - thay vì tìm kiếm toàn bộ phòng thí nghiệm mỗi lần, họ có thể truy cập trực tiếp vào những gì họ cần.
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,200 +47,301 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Tất cả các trường này được tham chiếu bằng class css của chúng, như bạn đã thiết lập trong HTML ở bài học trước.
+**Mã này làm gì:**
+- **Lấy** các phần tử biểu mẫu bằng cách sử dụng `document.querySelector()` với các bộ chọn lớp CSS
+- **Tạo** các tham chiếu đến các trường nhập liệu cho tên khu vực và khóa API
+- **Thiết lập** kết nối với các phần tử hiển thị kết quả cho dữ liệu sử dụng carbon
+- **Cài đặt** quyền truy cập vào các phần tử giao diện người dùng như chỉ báo tải và thông báo lỗi
+- **Lưu trữ** mỗi tham chiếu phần tử trong một biến `const` để dễ dàng tái sử dụng trong mã của bạn
 
-### Thêm trình lắng nghe sự kiện
+## Thêm các trình lắng nghe sự kiện
 
-Tiếp theo, thêm các trình lắng nghe sự kiện vào biểu mẫu và nút xóa để đặt lại biểu mẫu, để nếu người dùng gửi biểu mẫu hoặc nhấp vào nút đặt lại, một hành động sẽ xảy ra, và thêm lệnh gọi để khởi tạo ứng dụng ở cuối tệp:
+Bây giờ chúng ta sẽ làm cho tiện ích của bạn phản hồi các hành động của người dùng. Các trình lắng nghe sự kiện là cách mã của bạn theo dõi các tương tác của người dùng. Hãy nghĩ về chúng như các nhà điều hành trong các tổng đài điện thoại thời kỳ đầu - họ lắng nghe các cuộc gọi đến và kết nối các mạch đúng khi ai đó muốn thực hiện một kết nối.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Lưu ý cách viết tắt được sử dụng để lắng nghe sự kiện submit hoặc click, và cách sự kiện được truyền vào các hàm handleSubmit hoặc reset. Bạn có thể viết cách viết tắt này theo định dạng dài hơn không? Bạn thích cách nào hơn?
+**Hiểu các khái niệm này:**
+- **Gắn** một trình lắng nghe gửi đến biểu mẫu kích hoạt khi người dùng nhấn Enter hoặc nhấp vào gửi
+- **Kết nối** một trình lắng nghe nhấp chuột vào nút xóa để đặt lại biểu mẫu
+- **Truyền** đối tượng sự kiện `(e)` đến các hàm xử lý để kiểm soát thêm
+- **Gọi** hàm `init()` ngay lập tức để thiết lập trạng thái ban đầu của tiện ích
 
-### Xây dựng hàm init() và hàm reset():
+✅ Lưu ý cú pháp hàm mũi tên rút gọn được sử dụng ở đây. Cách tiếp cận JavaScript hiện đại này sạch hơn so với các biểu thức hàm truyền thống, nhưng cả hai đều hoạt động tốt như nhau!
 
-Bây giờ bạn sẽ xây dựng hàm khởi tạo tiện ích mở rộng, được gọi là init():
+## Xây dựng các hàm khởi tạo và đặt lại
 
-```JavaScript
+Hãy tạo logic khởi tạo cho tiện ích của bạn. Hàm `init()` giống như hệ thống điều hướng của một con tàu kiểm tra các thiết bị của nó - nó xác định trạng thái hiện tại và điều chỉnh giao diện cho phù hợp. Nó kiểm tra xem ai đó đã sử dụng tiện ích của bạn trước đây chưa và tải các cài đặt trước của họ.
+
+Hàm `reset()` cung cấp cho người dùng một khởi đầu mới - giống như cách các nhà khoa học đặt lại thiết bị của họ giữa các thí nghiệm để đảm bảo dữ liệu sạch.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-Trong hàm này, có một số logic thú vị. Đọc qua, bạn có thể thấy điều gì xảy ra không?
+**Phân tích những gì xảy ra ở đây:**
+- **Lấy** khóa API và khu vực được lưu trữ từ bộ nhớ cục bộ của trình duyệt
+- **Kiểm tra** xem đây có phải là người dùng lần đầu (không có thông tin đăng nhập được lưu trữ) hay người dùng quay lại
+- **Hiển thị** biểu mẫu thiết lập cho người dùng mới và ẩn các phần tử giao diện khác
+- **Tải** dữ liệu đã lưu tự động cho người dùng quay lại và hiển thị tùy chọn đặt lại
+- **Quản lý** trạng thái giao diện người dùng dựa trên dữ liệu có sẵn
 
-- hai `const` được thiết lập để kiểm tra xem người dùng đã lưu trữ APIKey và mã vùng trong bộ nhớ cục bộ chưa.
-- nếu một trong hai giá trị này là null, hiển thị biểu mẫu bằng cách thay đổi kiểu của nó thành 'block'
-- ẩn khu vực kết quả, loading, và clearBtn, đồng thời đặt bất kỳ văn bản lỗi nào thành chuỗi rỗng
-- nếu có key và vùng, bắt đầu một quy trình để:
-  - gọi API để lấy dữ liệu sử dụng carbon
-  - ẩn khu vực kết quả
-  - ẩn biểu mẫu
-  - hiển thị nút đặt lại
+**Các khái niệm chính về Local Storage:**
+- **Lưu trữ** dữ liệu giữa các phiên trình duyệt (khác với session storage)
+- **Lưu trữ** dữ liệu dưới dạng cặp khóa-giá trị bằng cách sử dụng `getItem()` và `setItem()`
+- **Trả về** `null` khi không có dữ liệu tồn tại cho một khóa nhất định
+- **Cung cấp** một cách đơn giản để ghi nhớ tùy chọn và cài đặt của người dùng
 
-Trước khi tiếp tục, sẽ hữu ích khi tìm hiểu về một khái niệm rất quan trọng có sẵn trong trình duyệt: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage là một cách hữu ích để lưu trữ chuỗi trong trình duyệt dưới dạng cặp `key-value`. Loại lưu trữ web này có thể được thao tác bằng JavaScript để quản lý dữ liệu trong trình duyệt. LocalStorage không hết hạn, trong khi SessionStorage, một loại lưu trữ web khác, sẽ bị xóa khi trình duyệt đóng. Các loại lưu trữ khác nhau có ưu và nhược điểm riêng.
+> 💡 **Hiểu về Bộ nhớ Trình duyệt**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) giống như việc cung cấp cho tiện ích của bạn bộ nhớ lâu dài. Hãy xem xét cách Thư viện Alexandria cổ đại lưu trữ các cuộn giấy - thông tin vẫn có sẵn ngay cả khi các học giả rời đi và quay lại.
+>
+> **Đặc điểm chính:**
+> - **Lưu trữ** dữ liệu ngay cả khi bạn đóng trình duyệt
+> - **Tồn tại** sau khi khởi động lại máy tính và trình duyệt bị treo
+> - **Cung cấp** không gian lưu trữ đáng kể cho các tùy chọn của người dùng
+> - **Truy cập** ngay lập tức mà không có độ trễ mạng
 
-> Lưu ý - tiện ích mở rộng trình duyệt của bạn có bộ nhớ cục bộ riêng; cửa sổ trình duyệt chính là một phiên bản khác và hoạt động riêng biệt.
+> **Lưu ý quan trọng**: Tiện ích trình duyệt của bạn có bộ nhớ cục bộ riêng biệt, tách biệt với các trang web thông thường. Điều này cung cấp bảo mật và ngăn chặn xung đột với các trang web khác.
 
-Bạn đặt APIKey của mình để có giá trị chuỗi, ví dụ, và bạn có thể thấy rằng nó được đặt trên Edge bằng cách "kiểm tra" một trang web (bạn có thể nhấp chuột phải vào trình duyệt để kiểm tra) và đi đến tab Applications để xem bộ nhớ.
+Bạn có thể xem dữ liệu đã lưu của mình bằng cách mở Công cụ dành cho nhà phát triển của trình duyệt (F12), điều hướng đến tab **Application**, và mở rộng phần **Local Storage**.
 
 ![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.vi.png)
 
-✅ Hãy nghĩ về các tình huống mà bạn KHÔNG muốn lưu trữ một số dữ liệu trong LocalStorage. Nói chung, việc đặt API Keys trong LocalStorage là một ý tưởng tồi! Bạn có thể thấy tại sao không? Trong trường hợp của chúng ta, vì ứng dụng chỉ để học tập và sẽ không được triển khai lên cửa hàng ứng dụng, chúng ta sẽ sử dụng phương pháp này.
+> ⚠️ **Cân nhắc về bảo mật**: Trong các ứng dụng sản xuất, việc lưu trữ khóa API trong LocalStorage có thể gây rủi ro bảo mật vì JavaScript có thể truy cập dữ liệu này. Đối với mục đích học tập, cách tiếp cận này là ổn, nhưng các ứng dụng thực tế nên sử dụng lưu trữ an toàn phía máy chủ cho các thông tin nhạy cảm.
 
-Lưu ý rằng bạn sử dụng Web API để thao tác LocalStorage, bằng cách sử dụng `getItem()`, `setItem()`, hoặc `removeItem()`. Nó được hỗ trợ rộng rãi trên các trình duyệt.
+## Xử lý gửi biểu mẫu
 
-Trước khi xây dựng hàm `displayCarbonUsage()` được gọi trong `init()`, hãy xây dựng chức năng để xử lý việc gửi biểu mẫu ban đầu.
+Bây giờ chúng ta sẽ xử lý những gì xảy ra khi ai đó gửi biểu mẫu của bạn. Theo mặc định, trình duyệt sẽ tải lại trang khi biểu mẫu được gửi, nhưng chúng ta sẽ chặn hành vi này để tạo trải nghiệm mượt mà hơn.
 
-### Xử lý việc gửi biểu mẫu
+Cách tiếp cận này giống như cách điều khiển nhiệm vụ xử lý giao tiếp với tàu vũ trụ - thay vì đặt lại toàn bộ hệ thống cho mỗi lần truyền, họ duy trì hoạt động liên tục trong khi xử lý thông tin mới.
 
-Tạo một hàm gọi là `handleSubmit` nhận một đối số sự kiện `(e)`. Dừng sự kiện lan truyền (trong trường hợp này, chúng ta muốn dừng trình duyệt làm mới) và gọi một hàm mới, `setUpUser`, truyền vào các đối số `apiKey.value` và `region.value`. Bằng cách này, bạn sử dụng hai giá trị được đưa vào thông qua biểu mẫu ban đầu khi các trường phù hợp được điền.
+Tạo một hàm để lấy sự kiện gửi biểu mẫu và trích xuất đầu vào của người dùng:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ Làm mới trí nhớ của bạn - HTML bạn đã thiết lập trong bài học trước có hai trường nhập liệu mà `values` của chúng được lấy thông qua `const` bạn đã thiết lập ở đầu tệp, và cả hai đều `required` nên trình duyệt ngăn người dùng nhập giá trị null.
+**Trong đoạn mã trên, chúng ta đã:**
+- **Ngăn chặn** hành vi gửi biểu mẫu mặc định sẽ làm mới trang
+- **Trích xuất** giá trị đầu vào của người dùng từ các trường khóa API và khu vực
+- **Truyền** dữ liệu biểu mẫu đến hàm `setUpUser()` để xử lý
+- **Duy trì** hành vi ứng dụng một trang bằng cách tránh làm mới trang
 
-### Thiết lập người dùng
+✅ Hãy nhớ rằng các trường biểu mẫu HTML của bạn bao gồm thuộc tính `required`, vì vậy trình duyệt sẽ tự động xác thực rằng người dùng cung cấp cả khóa API và khu vực trước khi hàm này chạy.
 
-Tiếp tục với hàm `setUpUser`, đây là nơi bạn thiết lập các giá trị bộ nhớ cục bộ cho apiKey và regionName. Thêm một hàm mới:
+## Thiết lập tùy chọn người dùng
 
-```JavaScript
+Hàm `setUpUser` chịu trách nhiệm lưu trữ thông tin đăng nhập của người dùng và bắt đầu cuộc gọi API đầu tiên. Điều này tạo ra một chuyển đổi mượt mà từ thiết lập sang hiển thị kết quả.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-Hàm này đặt một thông báo loading để hiển thị trong khi API được gọi. Đến thời điểm này, bạn đã đến bước tạo hàm quan trọng nhất của tiện ích mở rộng trình duyệt này!
+**Từng bước, đây là những gì xảy ra:**
+- **Lưu** khóa API và tên khu vực vào bộ nhớ cục bộ để sử dụng trong tương lai
+- **Hiển thị** chỉ báo tải để thông báo cho người dùng rằng dữ liệu đang được lấy
+- **Xóa** bất kỳ thông báo lỗi nào trước đó khỏi màn hình
+- **Hiển thị** nút xóa để người dùng đặt lại cài đặt sau này
+- **Khởi tạo** cuộc gọi API để lấy dữ liệu sử dụng carbon thực
 
-### Hiển thị Sử dụng Carbon
+Hàm này tạo ra trải nghiệm người dùng liền mạch bằng cách quản lý cả việc lưu trữ dữ liệu và cập nhật giao diện người dùng trong một hành động phối hợp.
 
-Cuối cùng, đã đến lúc truy vấn API!
+## Hiển thị dữ liệu sử dụng carbon
 
-Trước khi đi xa hơn, chúng ta nên thảo luận về API. API, hay [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), là một yếu tố quan trọng trong bộ công cụ của nhà phát triển web. Chúng cung cấp cách tiêu chuẩn để các chương trình tương tác và giao diện với nhau. Ví dụ, nếu bạn đang xây dựng một trang web cần truy vấn cơ sở dữ liệu, ai đó có thể đã tạo một API để bạn sử dụng. Mặc dù có nhiều loại API, một trong những loại phổ biến nhất là [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Bây giờ chúng ta sẽ kết nối tiện ích của bạn với các nguồn dữ liệu bên ngoài thông qua API. Điều này biến tiện ích của bạn từ một công cụ độc lập thành một thứ có thể truy cập thông tin thời gian thực từ khắp nơi trên internet.
 
-✅ Thuật ngữ 'REST' là viết tắt của 'Representational State Transfer' và sử dụng các URL được cấu hình khác nhau để lấy dữ liệu. Hãy nghiên cứu một chút về các loại API khác nhau có sẵn cho nhà phát triển. Định dạng nào hấp dẫn bạn?
+**Hiểu về API**
 
-Có những điều quan trọng cần lưu ý về hàm này. Đầu tiên, lưu ý từ khóa [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Viết các hàm của bạn để chúng chạy không đồng bộ có nghĩa là chúng chờ một hành động, chẳng hạn như dữ liệu được trả về, hoàn thành trước khi tiếp tục.
+[API](https://www.webopedia.com/TERM/A/API.html) là cách các ứng dụng khác nhau giao tiếp với nhau. Hãy nghĩ về chúng như hệ thống điện báo kết nối các thành phố xa xôi vào thế kỷ 19 - các nhà điều hành sẽ gửi yêu cầu đến các trạm xa và nhận phản hồi với thông tin được yêu cầu. Mỗi lần bạn kiểm tra mạng xã hội, hỏi trợ lý giọng nói một câu hỏi, hoặc sử dụng ứng dụng giao hàng, API đang tạo điều kiện cho các trao đổi dữ liệu này.
 
-Dưới đây là một video ngắn về `async`:
+**Các khái niệm chính về REST API:**
+- **REST** là viết tắt của 'Representational State Transfer'
+- **Sử dụng** các phương thức HTTP tiêu chuẩn (GET, POST, PUT, DELETE) để tương tác với dữ liệu
+- **Trả về** dữ liệu ở các định dạng dự đoán được, thường là JSON
+- **Cung cấp** các điểm cuối URL nhất quán cho các loại yêu cầu khác nhau
+
+✅ [API CO2 Signal](https://www.co2signal.com/) mà chúng ta sẽ sử dụng cung cấp dữ liệu cường độ carbon thời gian thực từ các lưới điện trên toàn thế giới. Điều này giúp người dùng hiểu tác động môi trường của việc sử dụng điện của họ!
+
+> 💡 **Hiểu về JavaScript không đồng bộ**: Từ khóa [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) cho phép mã của bạn xử lý nhiều hoạt động đồng thời. Khi bạn yêu cầu dữ liệu từ máy chủ, bạn không muốn toàn bộ tiện ích của mình bị đóng băng - điều đó giống như kiểm soát không lưu dừng tất cả các hoạt động trong khi chờ một máy bay phản hồi.
+>
+> **Lợi ích chính:**
+> - **Duy trì** sự phản hồi của tiện ích trong khi dữ liệu đang tải
+> - **Cho phép** mã khác tiếp tục thực thi trong khi yêu cầu mạng
+> - **Cải thiện** khả năng đọc mã so với các mẫu callback truyền thống
+> - **Cho phép** xử lý lỗi một cách mượt mà cho các vấn đề mạng
+
+Đây là một video nhanh về `async`:
 
 [![Async và Await để quản lý promises](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async và Await để quản lý promises")
 
 > 🎥 Nhấp vào hình ảnh trên để xem video về async/await.
 
-Tạo một hàm mới để truy vấn API C02Signal:
+Tạo hàm để lấy và hiển thị dữ liệu sử dụng carbon:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Đây là một hàm lớn. Điều gì đang diễn ra ở đây?
+**Phân tích những gì xảy ra ở đây:**
+- **Sử dụng** API `fetch()` hiện đại thay vì các thư viện bên ngoài như Axios để có mã sạch hơn, không phụ thuộc
+- **Thực hiện** kiểm tra lỗi đúng cách với `response.ok` để bắt lỗi API sớm
+- **Xử lý** các hoạt động không đồng bộ với `async/await` để có luồng mã dễ đọc hơn
+- **Xác thực** với API CO2 Signal bằng cách sử dụng header `auth-token`
+- **Phân tích** dữ liệu JSON phản hồi và trích xuất thông tin cường độ carbon
+- **Cập nhật** nhiều phần tử giao diện người dùng với dữ liệu môi trường được định dạng
+- **Cung cấp** thông báo lỗi thân thiện với người dùng khi các cuộc gọi API thất bại
 
-- theo các thực hành tốt nhất, bạn sử dụng từ khóa `async` để làm cho hàm này hoạt động không đồng bộ. Hàm chứa một khối `try/catch` vì nó sẽ trả về một promise khi API trả về dữ liệu. Vì bạn không kiểm soát được tốc độ API sẽ phản hồi (nó có thể không phản hồi!), bạn cần xử lý sự không chắc chắn này bằng cách gọi nó không đồng bộ.
-- bạn đang truy vấn API co2signal để lấy dữ liệu vùng của bạn, sử dụng API Key của bạn. Để sử dụng key đó, bạn phải sử dụng một loại xác thực trong các tham số header.
-- khi API phản hồi, bạn gán các phần tử khác nhau của dữ liệu phản hồi vào các phần của màn hình mà bạn đã thiết lập để hiển thị dữ liệu này.
-- nếu có lỗi, hoặc nếu không có kết quả, bạn hiển thị thông báo lỗi.
+**Các khái niệm JavaScript hiện đại được minh họa:**
+- **Template literals** với cú pháp `${}` để định dạng chuỗi sạch
+- **Xử lý lỗi** với các khối try/catch để có ứng dụng mạnh mẽ
+- **Mẫu async/await** để xử lý yêu cầu mạng một cách mượt mà
+- **Phân rã đối tượng** để trích xuất dữ liệu cụ thể từ phản hồi API
+- **Phương pháp chaining** cho nhiều thao tác DOM
 
-✅ Sử dụng các mẫu lập trình không đồng bộ là một công cụ rất hữu ích khác trong bộ công cụ của bạn. Đọc [về các cách khác nhau](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) bạn có thể cấu hình loại mã này.
+✅ Hàm này minh họa một số khái niệm quan trọng trong phát triển web - giao tiếp với máy chủ bên ngoài, xử lý xác thực, xử lý dữ liệu, cập nhật giao diện, và quản lý lỗi một cách mượt mà. Đây là những kỹ năng cơ bản mà các nhà phát triển chuyên nghiệp sử dụng thường xuyên.
 
-Chúc mừng! Nếu bạn xây dựng tiện ích mở rộng của mình (`npm run build`) và làm mới nó trong bảng tiện ích mở rộng, bạn đã có một tiện ích mở rộng hoạt động! Điều duy nhất chưa hoạt động là biểu tượng, và bạn sẽ sửa nó trong bài học tiếp theo.
+🎉 **Những gì bạn đã hoàn thành:** Bạn đã tạo một tiện ích trình duyệt:
+- **Kết nối** với internet và lấy dữ liệu môi trường thực
+- **Lưu trữ** cài đặt người dùng giữa các phiên
+- **Xử lý** lỗi một cách mượt mà thay vì bị treo
+- **Cung cấp** trải nghiệm người dùng mượt mà, chuyên nghiệp
+
+Kiểm tra công việc của bạn bằng cách chạy `npm run build` và làm mới tiện ích của bạn trong trình duyệt. Bây giờ bạn đã có một công cụ theo dõi dấu chân carbon hoạt động. Bài học tiếp theo sẽ thêm chức năng biểu tượng động để hoàn thiện tiện ích.
 
 ---
 
+## Thử thách GitHub Copilot Agent 🚀
+
+Sử dụng chế độ Agent để hoàn thành thử thách sau:
+
+**Mô tả:** Nâng cấp tiện ích trình duyệt bằng cách thêm các cải tiến xử lý lỗi và các tính năng trải nghiệm người dùng. Thử thách này sẽ giúp bạn thực hành làm việc với API, bộ nhớ cục bộ và thao tác DOM bằng các mẫu JavaScript hiện đại.
+
+**Yêu cầu:** Tạo phiên bản nâng cấp của hàm displayCarbonUsage bao gồm: 1) Cơ chế thử lại cho các cuộc gọi API thất bại với backoff theo cấp số nhân, 2) Xác thực đầu vào cho mã khu vực trước khi thực hiện cuộc gọi API, 3) Hoạt ảnh tải với các chỉ báo tiến độ, 4) Bộ nhớ đệm các phản hồi API trong localStorage với dấu thời gian hết hạn (bộ nhớ đệm trong 30 phút), và 5) Một tính năng để hiển thị dữ liệu lịch sử từ các cuộc gọi API trước đó. Cũng thêm các bình luận JSDoc kiểu TypeScript để tài liệu hóa tất cả các tham số hàm và kiểu trả về.
+
+Tìm hiểu thêm về [chế độ agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) tại đây.
+
 ## 🚀 Thử thách
 
-Chúng ta đã thảo luận về một số loại API trong các bài học này. Chọn một API web và nghiên cứu sâu về những gì nó cung cấp. Ví dụ, hãy xem các API có sẵn trong trình duyệt như [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Theo bạn, điều gì làm nên một API tuyệt vời?
+Mở rộng hiểu biết của bạn về API bằng cách khám phá sự phong phú của các API trình duyệt có sẵn cho phát triển web. Chọn một trong các API trình duyệt này và xây dựng một minh họa nhỏ:
 
-## Câu hỏi sau bài học
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Lấy vị trí hiện tại của người dùng
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Gửi thông báo trên máy tính
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Tạo giao diện kéo thả tương tác
+- [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) - Kỹ thuật lưu trữ cục bộ nâng cao
+- [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) - Thay thế hiện đại cho XMLHttpRequest
 
-[Câu hỏi sau bài học](https://ff-quizzes.netlify.app/web/quiz/26)
+**Câu hỏi nghiên cứu cần xem xét:**
+- API này giải quyết vấn đề thực tế nào?
+- API xử lý lỗi và các trường hợp ngoại lệ như thế nào?
+- Những cân nhắc về bảo mật nào tồn tại khi sử dụng API này?
+- API này được hỗ trợ rộng rãi như thế nào trên các trình duyệt khác nhau?
+
+Sau khi nghiên cứu, xác định những đặc điểm nào làm cho một API thân thiện với nhà phát triển và đáng tin cậy.
+
+## Câu hỏi sau bài giảng
+
+[Câu hỏi sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/26)
 
 ## Ôn tập & Tự học
-
-Bạn đã học về LocalStorage và API trong bài học này, cả hai đều rất hữu ích cho nhà phát triển web chuyên nghiệp. Bạn có thể nghĩ về cách hai điều này hoạt động cùng nhau không? Hãy nghĩ về cách bạn sẽ thiết kế một trang web lưu trữ các mục để được sử dụng bởi một API.
+Bạn đã học về LocalStorage và API trong bài học này, cả hai đều rất hữu ích cho nhà phát triển web chuyên nghiệp. Bạn có thể nghĩ về cách hai điều này hoạt động cùng nhau không? Hãy suy nghĩ về cách bạn sẽ thiết kế một trang web để lưu trữ các mục được sử dụng bởi một API.
 
 ## Bài tập
 
-[Adopt an API](assignment.md)
+[Chọn một API](assignment.md)
 
 ---
 
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc sự không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp từ con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.

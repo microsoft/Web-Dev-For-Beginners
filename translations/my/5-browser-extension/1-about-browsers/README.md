@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-28T18:34:11+00:00",
+  "original_hash": "33a875c522f237a2026e4653240dfc07",
+  "translation_date": "2025-10-24T17:04:29+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "my"
 }
@@ -12,171 +12,239 @@ CO_OP_TRANSLATOR_METADATA:
 ![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.my.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း
+## မိန့်ခွန်းမတိုင်မီ စမ်းမေးခွန်း
 
-[မိန့်ခွန်းမတင်မီ စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/23)
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/23)
 
-### နိဒါန်း
+### အကျဉ်းချုပ်
 
-Browser Extension များသည် Browser တွင် အပိုလုပ်ဆောင်ချက်များကို ထည့်သွင်းပေးနိုင်သည်။ သို့သော် Browser Extension တစ်ခုကို တည်ဆောက်မီ Browser များ၏ လုပ်ဆောင်ပုံကို အနည်းငယ်လေ့လာသင့်သည်။
+Browser extension များသည် သင့်ရဲ့ web browsing အတွေ့အကြုံကို တိုးတက်စေသော mini-application များဖြစ်သည်။ Tim Berners-Lee ရဲ့ interactive web အတွက် မူရင်းအမြင်လိုက်ပြီး extension များသည် browser ၏စွမ်းရည်များကို ရိုးရိုးစာရွက်ကြည့်ရှုခြင်းထက် ကျော်လွန်စေသည်။ Password manager များက သင့်အကောင့်များကို လုံခြုံစေပြီး၊ color picker များက ဒီဇိုင်နာများကို အရောင်များကို အလွယ်တကူ ရယူနိုင်စေသည်။ Extension များသည် နေ့စဉ် browsing အခက်အခဲများကို ဖြေရှင်းပေးသည်။
 
-### Browser အကြောင်း
+သင့်ရဲ့ ပထမဆုံး extension ကို တည်ဆောက်မည်မတိုင်မီ browser များအလုပ်လုပ်ပုံကို နားလည်ရမည်။ Alexander Graham Bell က တယ်လီဖုန်းကို တီထွင်မည်မတိုင်မီ အသံပျံ့နှံ့မှုကို နားလည်ရန်လိုအပ်သလိုပင် browser အခြေခံကို သိရှိထားခြင်းက သင့် extension ကို ရှိပြီးသား browser စနစ်များနှင့် သဟဇာတဖြစ်စေမည်။
 
-ဒီသင်ခန်းစာများတွဲတွင် Chrome, Firefox, Edge Browser များတွင် အလုပ်လုပ်နိုင်သော Browser Extension တစ်ခုကို ဘယ်လိုတည်ဆောက်ရမည်ကို သင်လေ့လာမည်ဖြစ်သည်။ ဒီအပိုင်းတွင် Browser များ၏ လုပ်ဆောင်ပုံနှင့် Browser Extension ၏ အခြေခံဖွဲ့စည်းမှုများကို ရှာဖွေမည်ဖြစ်သည်။
+ဒီသင်ခန်းစာအဆုံးတွင် သင်သည် browser architecture ကို နားလည်ပြီး သင့်ရဲ့ ပထမဆုံး extension ကို စတင်တည်ဆောက်ထားမည်ဖြစ်သည်။
 
-Browser ဆိုတာ တကယ်တော့ ဘာလဲ? ၎င်းသည် အသုံးပြုသူများကို Server မှ အကြောင်းအရာများကို ရယူပြီး Web Page များပေါ်တွင် ပြသပေးနိုင်သော Software Application တစ်ခုဖြစ်သည်။
+## Web Browser များကို နားလည်ခြင်း
 
-✅ သမိုင်းအနည်းငယ်: ပထမဆုံး Browser ကို 'WorldWideWeb' ဟု ခေါ်ပြီး Sir Timothy Berners-Lee က 1990 ခုနှစ်တွင် ဖန်တီးခဲ့သည်။
+Web browser ဆိုသည်မှာ အလွန်တိုးတက်သော စာရွက်အဓိပ္ပာယ်ဖော်ဆောင်သူတစ်ခုဖြစ်သည်။ သင် "google.com" ကို address bar တွင် ရိုက်ထည့်သောအခါ browser သည် ကမ္ဘာတစ်ဝှမ်းရှိ server များမှ အကြောင်းအရာများကို တောင်းဆိုပြီး၊ code ကို parsing နှင့် rendering လုပ်ကာ သင်မြင်ရသော interactive web page များအဖြစ် ပြောင်းလဲပေးသည်။
+
+ဒီလုပ်ငန်းစဉ်သည် Tim Berners-Lee က 1990 ခုနှစ်တွင် hyperlinked document များကို လူတိုင်းရောက်ရှိနိုင်စေရန် WorldWideWeb ဆိုသော ပထမဆုံး web browser ကို ဒီဇိုင်းထုတ်ခဲ့သည့်နည်းလမ်းနှင့် တူသည်။
+
+✅ **သမိုင်းအနည်းငယ်**: ပထမဆုံး browser ကို 'WorldWideWeb' ဟုခေါ်ပြီး Sir Timothy Berners-Lee က 1990 ခုနှစ်တွင် ဖန်တီးခဲ့သည်။
 
 ![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.my.jpg)
-> အစောပိုင်း Browser များ၊ [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) မှ
+> Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-အသုံးပြုသူတစ်ဦးသည် URL (Uniform Resource Locator) လိပ်စာကို အသုံးပြု၍ အင်တာနက်နှင့် ချိတ်ဆက်သောအခါ၊ အများအားဖြင့် Hypertext Transfer Protocol (`http` သို့မဟုတ် `https`) ကို အသုံးပြု၍ Browser သည် Web Server နှင့် ဆက်သွယ်ပြီး Web Page ကို ရယူသည်။
+### Browser များ Web Content ကို အလုပ်လုပ်ပုံ
 
-ဒီအချိန်တွင် Browser ၏ Rendering Engine သည် ၎င်းကို အသုံးပြုသူ၏ စက်ပေါ်တွင် ပြသပေးသည်။ ၎င်းသည် မိုဘိုင်းဖုန်း၊ Desktop သို့မဟုတ် Laptop တစ်ခုဖြစ်နိုင်သည်။
+URL ကိုရိုက်ထည့်ပြီး webpage ကို မြင်ရသည်အထိ အချိန်အနည်းငယ်အတွင်း အဆင့်များစွာကို စည်းလုံးညီညွတ်စွာ လုပ်ဆောင်သည်။
 
-Browser များတွင် Content ကို Cache လုပ်ထားနိုင်သော စွမ်းရည်လည်းရှိသည်။ ထို့ကြောင့် Server မှ အကြောင်းအရာကို အမြဲတမ်း ပြန်လည်ရယူရန် မလိုအပ်တော့ပေ။ ၎င်းတို့သည် အသုံးပြုသူ၏ Browsing Activity ကို မှတ်တမ်းတင်ထားနိုင်ပြီး 'Cookies' ဟုခေါ်သော အသေးစား Data များကို သိမ်းဆည်းထားနိုင်သည်။ ၎င်းတို့သည် အသုံးပြုသူ၏ လှုပ်ရှားမှုများကို သိမ်းဆည်းထားရန် အသုံးပြုသည်။
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-Browser များသည် အားလုံးတူညီကြောင်း မဟုတ်ကြောင်း သတိထားပါ။ Browser တစ်ခုစီတွင် အားသာချက်နှင့် အားနည်းချက်များရှိပြီး Professional Web Developer တစ်ဦးအနေဖြင့် Web Page များကို Cross-Browser တွင် ကောင်းစွာ အလုပ်လုပ်စေရန် နားလည်ထားရန် လိုအပ်သည်။ ၎င်းတွင် မိုဘိုင်းဖုန်း၏ သေးငယ်သော Viewport များနှင့် Offline အသုံးပြုသူများကို ကိုင်တွယ်ခြင်းတို့ ပါဝင်သည်။
+**ဒီလုပ်ငန်းစဉ်က ဘာတွေကို ပြုလုပ်ပေးသလဲဆိုရင်**:
+- **URL ကို** DNS lookup ဖြင့် server IP address အဖြစ် **ဘာသာပြန်ပေးသည်**
+- HTTP သို့မဟုတ် HTTPS protocol များကို အသုံးပြု၍ web server နှင့် **လုံခြုံသော ချိတ်ဆက်မှုကို တည်ဆောက်ပေးသည်**
+- server မှ web page content ကို **တောင်းဆိုသည်**
+- server မှ HTML markup, CSS styling, နှင့် JavaScript code ကို **လက်ခံသည်**
+- အကြောင်းအရာအားလုံးကို **render လုပ်ပြီး** သင်မြင်ရသော interactive web page အဖြစ် ပြောင်းလဲပေးသည်
 
-သင့်အကြိုက် Browser ကို အသုံးပြု၍ Bookmark ထားသင့်သော အလွန်အသုံးဝင်သော Website တစ်ခုမှာ [caniuse.com](https://www.caniuse.com) ဖြစ်သည်။ Web Page များကို တည်ဆောက်နေစဉ် caniuse ၏ Supported Technologies စာရင်းများကို အသုံးပြုခြင်းဖြင့် သင့်အသုံးပြုသူများကို အကောင်းဆုံးထောက်ပံ့နိုင်သည်။
+### Browser ၏ အဓိက အင်္ဂါရပ်များ
 
-✅ သင့် Website ၏ အသုံးပြုသူများအကြား ဘယ် Browser များ အများဆုံးလူကြိုက်များကြောင်း ဘယ်လိုသိနိုင်မလဲ? သင့် Analytics ကို စစ်ဆေးပါ - Web Development လုပ်ငန်းစဉ်တွင် Analytics Package များကို ထည့်သွင်းနိုင်ပြီး ၎င်းတို့သည် လူကြိုက်များသော Browser များကို ပြသပေးမည်။
+ခေတ်သစ် browser များတွင် extension developer များအတွက် အသုံးပြုနိုင်သော အင်္ဂါရပ်များစွာ ပါဝင်သည်။
 
-## Browser Extension များ
+| Feature | ရည်ရွယ်ချက် | Extension အခွင့်အလမ်းများ |
+|---------|---------|------------------------|
+| **Rendering Engine** | HTML, CSS, နှင့် JavaScript ကို ပြသသည် | Content ပြောင်းလဲခြင်း၊ styling injection |
+| **JavaScript Engine** | JavaScript code ကို အကောင်အထည်ဖော်သည် | Custom scripts, API interaction |
+| **Local Storage** | ဒေတာကို locally သိမ်းဆည်းသည် | User preferences, cached data |
+| **Network Stack** | Web request များကို ကိုင်တွယ်သည် | Request monitoring, data analysis |
+| **Security Model** | မကောင်းသော content များမှ user များကို ကာကွယ်ပေးသည် | Content filtering, security တိုးတက်မှုများ |
 
-Browser Extension တစ်ခုကို ဘာကြောင့် တည်ဆောက်ချင်ရသလဲ? ၎င်းသည် သင့် Browser တွင် ထပ်ခါထပ်ခါ လုပ်ဆောင်ရသော အလုပ်များကို အလွယ်တကူ လုပ်ဆောင်နိုင်ရန် အသုံးဝင်သည်။ ဥပမာအားဖြင့် သင့်အနေဖြင့် Web Page များတွင် အရောင်များကို စစ်ဆေးရန် လိုအပ်လျှင် Color-picker Browser Extension တစ်ခုကို ထည့်သွင်းနိုင်သည်။ သင့်အနေဖြင့် Password များကို မှတ်မိရန် အခက်အခဲရှိလျှင် Password-management Browser Extension တစ်ခုကို အသုံးပြုနိုင်သည်။
+**ဒီအင်္ဂါရပ်များကို နားလည်ခြင်းက**:
+- **သင့် extension** က ဘယ်နေရာမှာ အဖိုးတန်ဆုံးဖြစ်နိုင်မလဲဆိုတာ **သတ်မှတ်နိုင်စေသည်**
+- **သင့် extension** ရဲ့ လုပ်ဆောင်ချက်အတွက် browser API ကို **ရွေးချယ်နိုင်စေသည်**
+- **Browser စနစ်များနှင့်** သက်တောင့်သက်သာရှိသော extension များကို **ဒီဇိုင်းဆွဲနိုင်စေသည်**
+- **Browser security** အကောင်းဆုံးအလေ့အထများကို **လိုက်နာစေသည်**
 
-Browser Extension များကို တည်ဆောက်ခြင်းသည် ပျော်စရာကောင်းသည်။ ၎င်းတို့သည် သတ်မှတ်ထားသော အလုပ်အချို့ကို ကောင်းစွာ လုပ်ဆောင်နိုင်သည်။
+### Cross-Browser Development အတွက် စဉ်းစားရန်
 
-✅ သင့်အကြိုက် Browser Extension များက ဘာတွေလုပ်ဆောင်ပေးသလဲ? ၎င်းတို့၏ လုပ်ဆောင်ချက်များက ဘာတွေလဲ?
+Browser များသည် standard များကို အနည်းငယ်ကွဲပြားစွာ အကောင်အထည်ဖော်သည်။ Chrome, Firefox, နှင့် Safari တို့သည် extension development အတွင်း developer များစဉ်းစားရမည့် ထူးခြားချက်များရှိသည်။
 
-### Extension များကို ထည့်သွင်းခြင်း
+> 💡 **Pro Tip**: [caniuse.com](https://www.caniuse.com) ကို အသုံးပြု၍ web technologies များကို ဘယ် browser တွေ support လုပ်သလဲဆိုတာ စစ်ဆေးပါ။ သင့် extension ရဲ့ feature များကို စီမံခန့်ခွဲရာတွင် အလွန်အသုံးဝင်သည်။
 
-တည်ဆောက်ခြင်းမစတင်မီ Browser Extension တစ်ခုကို တည်ဆောက်ခြင်းနှင့် တင်သွင်းခြင်း လုပ်ငန်းစဉ်ကို ကြည့်ပါ။ Browser တစ်ခုစီတွင် ၎င်းတို့၏ လုပ်ငန်းစဉ်မှာ အနည်းငယ်ကွဲပြားသော်လည်း Chrome နှင့် Firefox တို့တွင် Edge ၏ ဤဥပမာနှင့် ဆင်တူသည်။
+**Extension development အတွက် အဓိကစဉ်းစားရန်များ**:
+- **Chrome, Firefox, နှင့် Edge browser များတွင်** သင့် extension ကို စမ်းသပ်ပါ
+- **Browser extension API များနှင့် manifest format များကို** အလျင်အမြန် လိုက်လျောပါ
+- **Performance characteristic များနှင့် အကန့်အသတ်များကို** ကိုင်တွယ်ပါ
+- **Browser-specific feature များ မရရှိနိုင်ပါက** fallback များပေးပါ
+
+✅ **Analytics Insight**: သင့် web development project များတွင် analytics package များကို ထည့်သွင်းခြင်းအားဖြင့် သင့် user များအကြိုက်ဆုံး browser များကို သတ်မှတ်နိုင်သည်။ ဒီဒေတာက သင့်အတွက် ပထမဆုံး support လုပ်ရမည့် browser များကို ဦးစားပေးစေရန် အထောက်အကူပြုသည်။
+
+## Browser Extension များကို နားလည်ခြင်း
+
+Browser extension များသည် web browsing အခက်အခဲများကို ဖြေရှင်းပေးပြီး browser interface တွင် feature များကို တိုက်ရိုက်ထည့်သွင်းပေးသည်။ သီးခြား application များ သို့မဟုတ် ရှုပ်ထွေးသော workflow များမလိုအပ်ဘဲ extension များက tool နှင့် feature များကို ချက်ချင်းရရှိစေသည်။
+
+ဒီအယူအဆသည် Douglas Engelbart က နည်းပညာဖြင့် လူ့စွမ်းရည်များကို တိုးတက်စေရန် ရှေးဦး computer pioneer များက ရှေးဦးတီထွင်ခဲ့သည့်နည်းလမ်းနှင့် တူသည်။
+
+**Extension အမျိုးအစားများနှင့် အကျိုးကျေးဇူးများ**:
+- **Productivity Tools**: Task manager, note-taking app, နှင့် time tracker များက သင့်ကို စီမံခန့်ခွဲမှုအတွက် အထောက်အကူပြုသည်
+- **Security Enhancements**: Password manager, ad blocker, နှင့် privacy tool များက သင့်ဒေတာကို ကာကွယ်ပေးသည်
+- **Developer Tools**: Code formatter, color picker, နှင့် debugging utility များက development ကို လွယ်ကူစေသည်
+- **Content Enhancement**: Reading mode, video downloader, နှင့် screenshot tool များက သင့် web အတွေ့အကြုံကို တိုးတက်စေသည်
+
+✅ **Reflection Question**: သင့်အကြိုက်ဆုံး browser extension များက ဘာတွေလဲ? သူတို့က ဘယ်လိုအလုပ်လုပ်ပြီး သင့် browsing အတွေ့အကြုံကို ဘယ်လိုတိုးတက်စေသလဲ?
+
+## Extension များကို ထည့်သွင်းခြင်းနှင့် စီမံခန့်ခွဲခြင်း
+
+Extension installation လုပ်ငန်းစဉ်ကို နားလည်ခြင်းက သင့် extension ကို install လုပ်သောအခါ user experience ကို ခန့်မှန်းနိုင်စေသည်။ Installation လုပ်ငန်းစဉ်သည် ခေတ်သစ် browser များတွင် interface design အနည်းငယ်ကွဲပြားမှုများနှင့် standardized ဖြစ်သည်။
 
 ![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.my.png)
 
-> Note: Developer Mode ကို ဖွင့်ထားပြီး အခြား Store များမှ Extension များကို ခွင့်ပြုထားရန် သေချာပါစေ။
+> **အရေးကြီးသည်**: Developer mode ကို toggle လုပ်ပြီး သင့်ကိုယ်တိုင်တီထွင်ထားသော extension များကို စမ်းသပ်စဉ် အခြား store များမှ extension များကို ခွင့်ပြုပါ။
 
-အဓိကအားဖြင့် လုပ်ငန်းစဉ်မှာ -
+### Development Extension Installation Process
 
-- `npm run build` ကို အသုံးပြု၍ သင့် Extension ကို တည်ဆောက်ပါ
-- Browser တွင် "Settings and more" ခလုတ် (`...` icon) ကို အသုံးပြု၍ Extension များ၏ စာမျက်နှာသို့ သွားပါ
-- အသစ်တစ်ခုကို ထည့်သွင်းလိုပါက `load unpacked` ကို ရွေးချယ်ပြီး Build Folder (ဤအခါတွင် `/dist`) မှ အသစ်တစ်ခုကို Upload လုပ်ပါ
-- သို့မဟုတ် ရှိပြီးသား Extension ကို ပြန်လည်တင်ရန် `reload` ကို နှိပ်ပါ
+သင့်ကိုယ်တိုင် extension များကို တီထွင်ပြီး စမ်းသပ်သောအခါ ဒီ workflow ကို လိုက်နာပါ:
 
-✅ ဤညွှန်ကြားချက်များသည် သင့်ကိုယ်တိုင် တည်ဆောက်သော Extension များအတွက်သာ သက်ဆိုင်သည်။ Browser Extension Store တွင် ထုတ်ဝေထားသော Extension များကို ထည့်သွင်းရန် [Store များ](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) သို့ သွားပြီး သင့်နှစ်သက်ရာ Extension ကို ထည့်သွင်းပါ။
+```bash
+# Step 1: Build your extension
+npm run build
+```
 
-### စတင်လိုက်ပါ
+**ဒီ command က ဘာတွေကို ပြုလုပ်ပေးသလဲဆိုရင်**:
+- **Source code ကို** browser-ready file များအဖြစ် compile လုပ်သည်
+- **JavaScript module များကို** optimized package များအဖြစ် bundle လုပ်သည်
+- **Final extension file များကို** `/dist` folder တွင် generate လုပ်သည်
+- **Extension ကို** installation နှင့် testing အတွက် ပြင်ဆင်ပေးသည်
 
-သင့်ဒေသ၏ Carbon Footprint ကို ပြသပေးမည့် Browser Extension တစ်ခုကို သင်တည်ဆောက်မည်ဖြစ်သည်။ ၎င်းသည် သင့်ဒေသ၏ စွမ်းအင်အသုံးပြုမှုနှင့် စွမ်းအင်ရင်းမြစ်ကို ပြသမည်ဖြစ်သည်။ Extension တွင် API Key ကို ရယူရန် Form တစ်ခုပါဝင်မည်။
+**Step 2: Browser Extension များသို့ သွားပါ**
+1. **Browser ရဲ့ extension management page ကို** ဖွင့်ပါ
+2. **Settings and more** button (the `...` icon) ကို အပေါ်ယာဘက်တွင် နှိပ်ပါ
+3. Dropdown menu မှ **Extensions** ကို ရွေးပါ
 
-**သင့်အတွက်လိုအပ်သည်များ:**
+**Step 3: သင့် Extension ကို Load လုပ်ပါ**
+- **New installation အတွက်**: `load unpacked` ကို ရွေးပြီး သင့် `/dist` folder ကို ရွေးပါ
+- **Update အတွက်**: သင့် install လုပ်ပြီးသား extension အနီးရှိ `reload` ကို နှိပ်ပါ
+- **Testing အတွက်**: "Developer mode" ကို enable လုပ်ပြီး debugging feature များကို အသုံးပြုပါ
 
-- [API Key တစ်ခု](https://www.co2signal.com/) - ဤစာမျက်နှာတွင် သင့် Email ကို ထည့်သွင်းပါ၊ API Key တစ်ခုကို ပေးပို့မည်
-- [သင့်ဒေသ၏ Code](http://api.electricitymap.org/v3/zones) - [Electricity Map](https://www.electricitymap.org/map) နှင့် ကိုက်ညီသော Code (ဥပမာအားဖြင့် Boston တွင် 'US-NEISO' ကို အသုံးပြုသည်)
-- [Starter Code](../../../../5-browser-extension/start) - `start` Folder ကို Download လုပ်ပါ၊ သင်သည် ဤ Folder တွင် Code ကို ပြည့်စုံစေမည်
-- [NPM](https://www.npmjs.com) - NPM သည် Package Management Tool တစ်ခုဖြစ်သည်၊ ၎င်းကို Local တွင် Install လုပ်ပြီး သင့် `package.json` ဖိုင်တွင် ဖော်ပြထားသော Package များကို အသုံးပြုရန် Install လုပ်ပါ
+### Production Extension Installation
 
-✅ Package Management အကြောင်းပိုမိုလေ့လာရန် ဤ [Learn Module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon) ကို ကြည့်ပါ
+> ✅ **Note**: ဒီ development instruction များသည် သင့်ကိုယ်တိုင် တည်ဆောက်ထားသော extension များအတွက်သာ ဖြစ်သည်။ Published extension များကို install လုပ်ရန် [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) ကဲ့သို့သော browser extension store များသို့ သွားပါ။
 
-Codebase ကို အချိန်ယူကြည့်ပါ:
+**ကွာခြားချက်ကို နားလည်ပါ**:
+- **Development installation** သည် unpublished extension များကို development အတွင်း စမ်းသပ်ရန် ခွင့်ပြုသည်
+- **Store installation** သည် vetted, published extension များကို automatic update များနှင့် ပေးသည်
+- **Sideloading** သည် official store များမှ အပြင်ဘက်မှ extension များကို install လုပ်ရန် ခွင့်ပြုသည် (developer mode လိုအပ်သည်)
 
-dist  
-    -|manifest.json (defaults set here)  
-    -|index.html (front-end HTML markup here)  
-    -|background.js (background JS here)  
-    -|main.js (built JS)  
-src  
-    -|index.js (your JS code goes here)  
+## Carbon Footprint Extension တည်ဆောက်ခြင်း
 
-✅ သင့် API Key နှင့် Region Code ကို အသုံးပြုရန် Note တစ်ခုတွင် သိမ်းထားပါ။
+သင့်ဒေသ၏ စွမ်းအင်အသုံးပြုမှု၏ carbon footprint ကို ပြသသော browser extension ကို တည်ဆောက်မည်။ ဒီ project သည် extension development အခြေခံအယူအဆများကို သင်ကြားပေးပြီး ပတ်ဝန်းကျင်အာရုံစိုက်မှုအတွက် အသုံးဝင်သော tool တစ်ခုကို ဖန်တီးပေးသည်။
 
-### Extension ၏ HTML ကို တည်ဆောက်ခြင်း
+ဒီနည်းလမ်းသည် John Dewey ရဲ့ပညာရေးအယူအဆများအတိုင်း "လုပ်ဆောင်ခြင်းမှ သင်ယူခြင်း" ကို လိုက်နာသည် - နည်းပညာကျွမ်းကျင်မှုများနှင့် အဓိကအရေးပါတဲ့ အပြည့်အဝအသုံးချမှုများကို ပေါင်းစပ်ထားသည်။
 
-ဤ Extension တွင် View နှစ်ခုပါဝင်သည်။ API Key နှင့် Region Code ကို ရယူရန် View တစ်ခု:
+### Project Requirements
 
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.my.png)
+Development မစတင်မီ လိုအပ်သော resource နှင့် dependency များကို စုဆောင်းပါ:
 
-နှင့် ဒုတိယ View သည် Region ၏ Carbon Usage ကို ပြသရန်:
+**လိုအပ်သော API Access**:
+- **[CO2 Signal API key](https://www.co2signal.com/)**: သင့် email address ကို ထည့်သွင်းပြီး API key ကို အခမဲ့ရယူပါ
+- **[Region code](http://api.electricitymap.org/v3/zones)**: [Electricity Map](https://www.electricitymap.org/map) ကို အသုံးပြု၍ region code ကို ရှာပါ (ဥပမာ Boston သည် 'US-NEISO' ကို အသုံးပြုသည်)
 
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.my.png)
+**Development Tools**:
+- **[Node.js and NPM](https://www.npmjs.com)**: Project dependency များကို install လုပ်ရန် package management tool
+- **[Starter code](../../../../5-browser-extension/start)**: Development စတင်ရန် `start` folder ကို download လုပ်ပါ
 
-Form နှင့် CSS ဖြင့် ၎င်းကို အလှဆင်ရန် `/dist` Folder တွင် HTML ကို တည်ဆောက်ပါ။
+✅ **Learn More**: [comprehensive Learn module](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon) ကို အသုံးပြု၍ package management ကျွမ်းကျင်မှုကို တိုးတက်စေပါ
 
-`index.html` ဖိုင်တွင် Form အပိုင်းကို ဖြည့်ပါ:
+### Project Structure ကို နားလည်ခြင်း
 
-```HTML
-<form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
-```  
-ဤ Form သည် သင့် Save လုပ်ထားသော အချက်အလက်များကို Input လုပ်ပြီး Local Storage တွင် သိမ်းဆည်းမည်။
-
-ထို့နောက် Results Area ကို ဖန်တီးပါ။ Form Tag ၏ အောက်တွင် Div များကို ထည့်ပါ:
-
-```HTML
-<div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
-</div>
-```  
-ဤအချိန်တွင် Build တစ်ခုကို စမ်းကြည့်နိုင်သည်။ Extension ၏ Package Dependencies များကို Install လုပ်ရန် သေချာပါစေ:
+Project structure ကို နားလည်ခြင်းက development အလုပ်များကို အကျိုးရှိစွာ စီမံခန့်ခွဲနိုင်စေသည်။ Alexandria Library ကို easy knowledge retrieval အတွက် စီမံထားသည့်နည်းလမ်းလိုက်ပြီး၊ ကောင်းမွန်စွာ စီမံထားသော codebase က development ကို အလွယ်တကူစေသည်။
 
 ```
-npm install
-```  
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
 
-ဤ Command သည် NPM (Node Package Manager) ကို အသုံးပြု၍ Extension ၏ Build Process အတွက် Webpack ကို Install လုပ်မည်။ ဤ Process ၏ Output ကို `/dist/main.js` တွင် ကြည့်နိုင်သည် - Code ကို Bundled လုပ်ထားသည်ကို တွေ့ရမည်။
+**File တစ်ခုချင်းစီ၏ လုပ်ဆောင်ချက်များ**:
+- **`manifest.json`**: Extension metadata, permission, နှင့် entry point များကို **သတ်မှတ်သည်**
+- **`index.html`**: User interface ကို **ဖန်တီးသည်** (user များ extension ကို click လုပ်သောအခါ ပြသမည်)
+- **`background.js`**: Background task နှင့် browser event listener များကို **ကိုင်တွယ်သည်**
+- **`main.js`**: Build process အပြီး **final bundled JavaScript** ကို **ပါဝင်သည်**
+- **`src/index.js`**: Development code အဓိကကို **ပါဝင်ပြီး** `main.js` အဖြစ် compile လုပ်သည်
 
-ယခုအချိန်တွင် Extension ကို Build လုပ်ပြီး Edge တွင် Extension အဖြစ် Deploy လုပ်ပါက Form တစ်ခုကို သေသပ်စွာ ပြသမည်။
+> 💡 **Organization Tip**: API key နှင့် region code ကို secure note တွင် သိမ်းဆည်းထားပါ။ Development အတွင်း extension ရဲ့ functionality ကို စမ်းသပ်ရာတွင် ဒီ value များလိုအပ်မည်။
 
-ဂုဏ်ယူပါတယ်၊ Browser Extension တစ်ခုကို တည်ဆောက်ရန် ပထမဆုံးအဆင့်ကို သင်ပြီးစီးခဲ့ပါပြီ။ နောက်ထပ် သင်ခန်းစာများတွင် ၎င်းကို ပိုမိုအသုံးဝင်စေရန် လုပ်ဆောင်မည်။
+✅ **Security Note**: API key သို့မဟုတ် sensitive credential များကို သင့် code repository တွင် commit မလုပ်ပါနှင့်။ ဒီအဆင့်များကို လုံခြုံစွာ handle လုပ်နည်းကို နောက်အဆင့်များတွင် ပြသပါမည်။
 
----
+## Extension Interface ကို ဖန်တီးခြင်း
+
+User interface component များကို အခုတည်ဆောက်မည်။ Extension သည် configuration screen နှင့် result screen ဆိုပြီး နှစ်မျိုး approach ကို အသုံးပြုသည်။
+
+ဒီနည်းလမ်းသည် progressive disclosure principle ကို လိုက်နာပြီး၊ computing ရဲ့ ရှေးဦးနေ့များက interface design တွင် အသုံးပြုခဲ့သည့်နည်းလမ်းဖြစ်သည်။ User များကို အချက်အလက်နှင့် option များကို logical sequence ဖြင့် ပြသကာ overload ဖြစ်ခြင်းမှ ကာကွယ်ပေးသည်။
+
+### Extension Views အကျဉ်းချုပ်
+
+**Setup View** - First-time user configuration:
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.my.png)
+
+**Results View** - Carbon footprint data display:
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.my.png)
+
+### Configuration Form ကို တည်ဆောက်ခြင်း
+
+Setup form သည် user configuration data ကို initial use အတွင်း စုဆောင်းသည်။ Configuration ပြီးဆုံးပါက ဒီအချက်အလက်သည် browser storage တွင် ရှိနေမည်။
+
+`/dist/index.html` file တွင် ဒီ form structure ကို ထည့်ပါ:
+
+@@
+**ဖော်ပြချက်:** API key နှင့် region code ထည့်သွင်းရာတွင် အသုံးပြုသူအတွေ့အကြုံကို တိုးတက်စေရန် form validation နှင့် အသုံးပြုသူ feedback အင်္ဂါရပ်များကို browser extension တွင် ထည့်သွင်းပါ။
+
+**အလုပ်အမိန့်:** API key field တွင် အနည်းဆုံး 20 အက္ခရာပါရှိမရှိ စစ်ဆေးရန်နှင့် region code သည် 'US-NEISO' ကဲ့သို့ format ကိုလိုက်နာမည်ဖြစ်ကြောင်း စစ်ဆေးရန် JavaScript validation function များကို ဖန်တီးပါ။ input border color များကို valid input များအတွက် အစိမ်းရောင်၊ invalid input များအတွက် အနီရောင်အဖြစ် ပြောင်းလဲခြင်းဖြင့် visual feedback ထည့်သွင်းပါ။ လုံခြုံရေးအတွက် API key ကို ပြ/ဖျောက် toggle အင်္ဂါရပ်ကိုလည်း ထည့်သွင်းပါ။
+
+[agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) အကြောင်းပိုမိုလေ့လာရန် ဒီမှာကြည့်ပါ။
 
 ## 🚀 စိန်ခေါ်မှု
 
-Browser Extension Store တစ်ခုကို ကြည့်ပြီး သင့် Browser တွင် Extension တစ်ခုကို ထည့်သွင်းပါ။ ၎င်း၏ ဖိုင်များကို စူးစမ်းကြည့်ပါ။ သင်ဘာတွေ ရှာဖွေတွေ့ရှိသလဲ?
+Browser extension store ကိုကြည့်ပြီး သင့် browser တွင် တစ်ခု install လုပ်ပါ။ ၎င်း၏ ဖိုင်များကို စိတ်ဝင်စားဖွယ်နည်းလမ်းများဖြင့် စမ်းသပ်ကြည့်ပါ။ သင်ဘာတွေ ရှာဖွေတွေ့ရှိရမလဲ?
 
-## မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း
+## Post-Lecture Quiz
 
-[မိန့်ခွန်းပြီးနောက် စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/quiz/24)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/24)
 
 ## ပြန်လည်သုံးသပ်ခြင်းနှင့် ကိုယ်တိုင်လေ့လာခြင်း
 
-ဤသင်ခန်းစာတွင် Web Browser ၏ သမိုင်းအကြောင်း အနည်းငယ်ကို သင်လေ့လာခဲ့သည်။ World Wide Web ၏ ဖန်တီးသူများက ၎င်းကို ဘယ်လိုအသုံးပြုရန် ရည်ရွယ်ခဲ့ကြောင်းကို ပိုမိုလေ့လာရန် အခွင့်အရေးယူပါ။ အသုံးဝင်သော Website များမှာ -
+ဒီသင်ခန်းစာတွင် web browser ၏ သမိုင်းကြောင်းအနည်းငယ်ကို သင်လေ့လာခဲ့ပါသည်။ World Wide Web ကို ဖန်တီးသူများက ၎င်းကို ဘယ်လိုအသုံးပြုရန် ရည်ရွယ်ခဲ့ကြသည်ဆိုတာကို ၎င်း၏ သမိုင်းကြောင်းအကြောင်းကို ပိုမိုလေ့လာရန် အခွင့်အရေးကို ယူပါ။ အသုံးဝင်သော ဝက်ဘ်ဆိုဒ်များမှာ:
 
-[The History of Web Browsers](https://www.mozilla.org/firefox/browsers/browser-history/)  
+[The History of Web Browsers](https://www.mozilla.org/firefox/browsers/browser-history/)
 
-[History of the Web](https://webfoundation.org/about/vision/history-of-the-web/)  
+[History of the Web](https://webfoundation.org/about/vision/history-of-the-web/)
 
-[An interview with Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)  
+[An interview with Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
 
-## လုပ်ငန်းတာဝန်
+## အလုပ်ပေးစာ
 
-[သင့် Extension ကို ပြန်လည်ဒီဇိုင်းဆွဲပါ](assignment.md)  
+[Restyle your extension](assignment.md)
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာရှိသော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအလွဲအချော်များ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူက ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
