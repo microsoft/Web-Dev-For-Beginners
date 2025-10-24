@@ -1,14 +1,14 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3fd21589b9bb0a90b9c9dd7d587f7e43",
-  "translation_date": "2025-10-23T19:52:28+00:00",
+  "original_hash": "8b9d0562ea649b6012d1a67acc630681",
+  "translation_date": "2025-10-24T08:51:36+00:00",
   "source_file": "README.md",
   "language_code": "el"
 }
 -->
 [![Άδεια GitHub](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
-[![Συνεργάτες GitHub](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
+[![Συμμετέχοντες GitHub](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
 [![Θέματα GitHub](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
 [![Αιτήματα GitHub](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # Ανάπτυξη Ιστοσελίδων για Αρχάριους - Ένα Εκπαιδευτικό Πρόγραμμα
 
-Μάθετε τα βασικά της ανάπτυξης ιστοσελίδων με το 12-εβδομάδων ολοκληρωμένο πρόγραμμα της Microsoft Cloud Advocates. Κάθε ένα από τα 24 μαθήματα εστιάζει στη JavaScript, CSS και HTML μέσω πρακτικών έργων όπως τεραριούμ, επεκτάσεις προγράμματος περιήγησης και παιχνίδια διαστήματος. Συμμετέχετε σε κουίζ, συζητήσεις και πρακτικές εργασίες. Βελτιώστε τις δεξιότητές σας και ενισχύστε την απομνημόνευση της γνώσης σας με την αποτελεσματική παιδαγωγική μας που βασίζεται σε έργα. Ξεκινήστε το ταξίδι σας στον προγραμματισμό σήμερα!
+Μάθετε τα βασικά της ανάπτυξης ιστοσελίδων με το 12-εβδομαδιαίο ολοκληρωμένο πρόγραμμα της Microsoft Cloud Advocates. Κάθε ένα από τα 24 μαθήματα εστιάζει στη JavaScript, CSS και HTML μέσω πρακτικών έργων όπως terrariums, επεκτάσεις για browsers και παιχνίδια στο διάστημα. Συμμετέχετε σε κουίζ, συζητήσεις και πρακτικές εργασίες. Βελτιώστε τις δεξιότητές σας και ενισχύστε την απομνημόνευση της γνώσης σας με την αποτελεσματική παιδαγωγική μας που βασίζεται σε έργα. Ξεκινήστε το ταξίδι σας στον προγραμματισμό σήμερα!
 
 Γίνετε μέλος της κοινότητας Azure AI Foundry στο Discord
 
@@ -30,14 +30,14 @@ CO_OP_TRANSLATOR_METADATA:
 Ακολουθήστε αυτά τα βήματα για να ξεκινήσετε να χρησιμοποιείτε αυτούς τους πόρους:
 1. **Κάντε Fork το Αποθετήριο**: Πατήστε [![Forks GitHub](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
 2. **Κλωνοποιήστε το Αποθετήριο**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Γίνετε μέλος της κοινότητας Azure AI Foundry Discord και γνωρίστε ειδικούς και άλλους προγραμματιστές**](https://discord.com/invite/ByRwuEEgH4)
+3. [**Γίνετε μέλος του Azure AI Foundry Discord και γνωρίστε ειδικούς και άλλους προγραμματιστές**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 Υποστήριξη Πολλών Γλωσσών
+### 🌐 Υποστήριξη Πολλαπλών Γλωσσών
 
 #### Υποστηρίζεται μέσω GitHub Action (Αυτοματοποιημένο & Πάντα Ενημερωμένο)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Αραβικά](../ar/README.md) | [Μπενγκάλι](../bn/README.md) | [Βουλγαρικά](../bg/README.md) | [Βιρμανικά (Μιανμάρ)](../my/README.md) | [Κινέζικα (Απλοποιημένα)](../zh/README.md) | [Κινέζικα (Παραδοσιακά, Χονγκ Κονγκ)](../hk/README.md) | [Κινέζικα (Παραδοσιακά, Μακάου)](../mo/README.md) | [Κινέζικα (Παραδοσιακά, Ταϊβάν)](../tw/README.md) | [Κροατικά](../hr/README.md) | [Τσέχικα](../cs/README.md) | [Δανικά](../da/README.md) | [Ολλανδικά](../nl/README.md) | [Εσθονικά](../et/README.md) | [Φινλανδικά](../fi/README.md) | [Γαλλικά](../fr/README.md) | [Γερμανικά](../de/README.md) | [Ελληνικά](./README.md) | [Εβραϊκά](../he/README.md) | [Χίντι](../hi/README.md) | [Ουγγρικά](../hu/README.md) | [Ινδονησιακά](../id/README.md) | [Ιταλικά](../it/README.md) | [Ιαπωνικά](../ja/README.md) | [Κορεατικά](../ko/README.md) | [Λιθουανικά](../lt/README.md) | [Μαλαισιανά](../ms/README.md) | [Μαραθικά](../mr/README.md) | [Νεπαλικά](../ne/README.md) | [Νορβηγικά](../no/README.md) | [Περσικά (Φαρσί)](../fa/README.md) | [Πολωνικά](../pl/README.md) | [Πορτογαλικά (Βραζιλία)](../br/README.md) | [Πορτογαλικά (Πορτογαλία)](../pt/README.md) | [Παντζάμπι (Γκουρμούκι)](../pa/README.md) | [Ρουμανικά](../ro/README.md) | [Ρωσικά](../ru/README.md) | [Σερβικά (Κυριλλικά)](../sr/README.md) | [Σλοβακικά](../sk/README.md) | [Σλοβενικά](../sl/README.md) | [Ισπανικά](../es/README.md) | [Σουαχίλι](../sw/README.md) | [Σουηδικά](../sv/README.md) | [Ταγκαλόγκ (Φιλιππινέζικα)](../tl/README.md) | [Ταμίλ](../ta/README.md) | [Ταϊλανδικά](../th/README.md) | [Τουρκικά](../tr/README.md) | [Ουκρανικά](../uk/README.md) | [Ουρντού](../ur/README.md) | [Βιετναμέζικα](../vi/README.md)
+[Αραβικά](../ar/README.md) | [Μπενγκάλι](../bn/README.md) | [Βουλγαρικά](../bg/README.md) | [Βιρμανικά (Μιανμάρ)](../my/README.md) | [Κινέζικα (Απλοποιημένα)](../zh/README.md) | [Κινέζικα (Παραδοσιακά, Χονγκ Κονγκ)](../hk/README.md) | [Κινέζικα (Παραδοσιακά, Μακάο)](../mo/README.md) | [Κινέζικα (Παραδοσιακά, Ταϊβάν)](../tw/README.md) | [Κροατικά](../hr/README.md) | [Τσέχικα](../cs/README.md) | [Δανικά](../da/README.md) | [Ολλανδικά](../nl/README.md) | [Εσθονικά](../et/README.md) | [Φινλανδικά](../fi/README.md) | [Γαλλικά](../fr/README.md) | [Γερμανικά](../de/README.md) | [Ελληνικά](./README.md) | [Εβραϊκά](../he/README.md) | [Χίντι](../hi/README.md) | [Ουγγρικά](../hu/README.md) | [Ινδονησιακά](../id/README.md) | [Ιταλικά](../it/README.md) | [Ιαπωνικά](../ja/README.md) | [Κορεατικά](../ko/README.md) | [Λιθουανικά](../lt/README.md) | [Μαλαισιανά](../ms/README.md) | [Μαραθικά](../mr/README.md) | [Νεπαλικά](../ne/README.md) | [Νορβηγικά](../no/README.md) | [Περσικά (Φαρσί)](../fa/README.md) | [Πολωνικά](../pl/README.md) | [Πορτογαλικά (Βραζιλία)](../br/README.md) | [Πορτογαλικά (Πορτογαλία)](../pt/README.md) | [Παντζάμπι (Γκουρμούκι)](../pa/README.md) | [Ρουμανικά](../ro/README.md) | [Ρωσικά](../ru/README.md) | [Σερβικά (Κυριλλικά)](../sr/README.md) | [Σλοβακικά](../sk/README.md) | [Σλοβενικά](../sl/README.md) | [Ισπανικά](../es/README.md) | [Σουαχίλι](../sw/README.md) | [Σουηδικά](../sv/README.md) | [Τάγκαλογκ (Φιλιππινέζικα)](../tl/README.md) | [Ταμίλ](../ta/README.md) | [Ταϊλανδικά](../th/README.md) | [Τουρκικά](../tr/README.md) | [Ουκρανικά](../uk/README.md) | [Ουρντού](../ur/README.md) | [Βιετναμέζικα](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 **Αν επιθυμείτε να υποστηριχθούν επιπλέον γλώσσες, μπορείτε να δείτε τη λίστα [εδώ](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
@@ -46,15 +46,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 #### 🧑‍🎓 _Είστε φοιτητής;_
 
-Επισκεφθείτε τη [**σελίδα Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) όπου θα βρείτε πόρους για αρχάριους, πακέτα για φοιτητές και ακόμη και τρόπους για να αποκτήσετε δωρεάν κουπόνι πιστοποίησης. Αυτή είναι η σελίδα που πρέπει να προσθέσετε στους σελιδοδείκτες σας και να την ελέγχετε από καιρό σε καιρό καθώς αλλάζουμε το περιεχόμενο μηνιαία.
+Επισκεφθείτε τη [**Σελίδα Φοιτητών**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) όπου θα βρείτε πόρους για αρχάριους, πακέτα για φοιτητές και ακόμη και τρόπους για να αποκτήσετε δωρεάν πιστοποιητικό. Αυτή είναι η σελίδα που πρέπει να προσθέσετε στους σελιδοδείκτες σας και να ελέγχετε τακτικά, καθώς το περιεχόμενο αλλάζει κάθε μήνα.
 
-### 📣 Ανακοίνωση - Νέες προκλήσεις με τη λειτουργία Agent του GitHub Copilot για ολοκλήρωση!
+### 📣 Ανακοίνωση - Νέες προκλήσεις με το GitHub Copilot Agent mode για ολοκλήρωση!
 
-Προστέθηκε νέα πρόκληση, αναζητήστε την "GitHub Copilot Agent Challenge 🚀" στα περισσότερα κεφάλαια. Αυτή είναι μια νέα πρόκληση για να ολοκληρώσετε χρησιμοποιώντας το GitHub Copilot και τη λειτουργία Agent. Αν δεν έχετε χρησιμοποιήσει τη λειτουργία Agent πριν, είναι ικανή όχι μόνο να δημιουργεί κείμενο αλλά και να δημιουργεί και να επεξεργάζεται αρχεία, να εκτελεί εντολές και πολλά άλλα.
+Προστέθηκε νέα πρόκληση, αναζητήστε την "GitHub Copilot Agent Challenge 🚀" στα περισσότερα κεφάλαια. Αυτή είναι μια νέα πρόκληση για να ολοκληρώσετε χρησιμοποιώντας το GitHub Copilot και το Agent mode. Αν δεν έχετε χρησιμοποιήσει το Agent mode πριν, είναι ικανό όχι μόνο να δημιουργεί κείμενο αλλά και να δημιουργεί και να επεξεργάζεται αρχεία, να εκτελεί εντολές και πολλά άλλα.
 
 ### 📣 Ανακοίνωση - _Νέο Έργο για δημιουργία με Γενετική Τεχνητή Νοημοσύνη_
 
-Μόλις προστέθηκε νέο έργο AI Assistant, δείτε το [project](./09-chat-project/README.md)
+Μόλις προστέθηκε νέο έργο AI Assistant, δείτε το [έργο](./09-chat-project/README.md)
 
 ### 📣 Ανακοίνωση - _Νέο Εκπαιδευτικό Πρόγραμμα_ για Γενετική Τεχνητή Νοημοσύνη με JavaScript μόλις κυκλοφόρησε
 
@@ -64,14 +64,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Φόντο](../../translated_images/background.148a8d43afde57303419a663f50daf586681bc2fabf833f66ef6954073983c66.el.png)
 
-- Μαθήματα που καλύπτουν τα πάντα από τα βασικά μέχρι το RAG.
-- Αλληλεπιδράστε με ιστορικές προσωπικότητες χρησιμοποιώντας το GenAI και την εφαρμογή μας.
+- Μαθήματα που καλύπτουν τα πάντα, από τα βασικά μέχρι το RAG.
+- Αλληλεπιδράστε με ιστορικούς χαρακτήρες χρησιμοποιώντας το GenAI και την συνοδευτική μας εφαρμογή.
 - Διασκεδαστική και ενδιαφέρουσα αφήγηση, θα ταξιδέψετε στον χρόνο!
 
 ![χαρακτήρας](../../translated_images/character.5c0dd8e067ffd693c16e2c5b7412ab075a2215ce31f998305639fa3a05e14fbe.el.png)
 
 Κάθε μάθημα περιλαμβάνει μια εργασία για ολοκλήρωση, έναν έλεγχο γνώσεων και μια πρόκληση για να σας καθοδηγήσει στην εκμάθηση θεμάτων όπως:
-- Δημιουργία προτροπών και μηχανική προτροπών
+- Δημιουργία και σχεδιασμός προτροπών
 - Δημιουργία εφαρμογών κειμένου και εικόνας
 - Εφαρμογές αναζήτησης
 
@@ -81,26 +81,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 🌱 Ξεκινώντας
 
-> **Καθηγητές**, έχουμε [συμπεριλάβει κάποιες προτάσεις](for-teachers.md) για το πώς να χρησιμοποιήσετε αυτό το εκπαιδευτικό πρόγραμμα. Θα θέλαμε πολύ να ακούσουμε τα σχόλιά σας [στο φόρουμ συζητήσεων μας](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Δάσκαλοι**, έχουμε [συμπεριλάβει κάποιες προτάσεις](for-teachers.md) για το πώς να χρησιμοποιήσετε αυτό το εκπαιδευτικό πρόγραμμα. Θα θέλαμε την ανατροφοδότησή σας [στο φόρουμ συζητήσεων μας](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Μαθητές](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, για κάθε μάθημα, ξεκινήστε με ένα κουίζ πριν από τη διάλεξη και συνεχίστε διαβάζοντας το υλικό της διάλεξης, ολοκληρώνοντας τις διάφορες δραστηριότητες και ελέγξτε την κατανόησή σας με το κουίζ μετά τη διάλεξη.
+**[Μαθητές](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, για κάθε μάθημα, ξεκινήστε με ένα κουίζ πριν το μάθημα και συνεχίστε με την ανάγνωση του υλικού του μαθήματος, την ολοκλήρωση των διάφορων δραστηριοτήτων και ελέγξτε την κατανόησή σας με το κουίζ μετά το μάθημα.
 
 Για να βελτιώσετε την εμπειρία μάθησής σας, συνδεθείτε με τους συναδέλφους σας για να εργαστείτε μαζί στα έργα! Ενθαρρύνονται οι συζητήσεις στο [φόρουμ συζητήσεων μας](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) όπου η ομάδα των συντονιστών μας θα είναι διαθέσιμη για να απαντήσει στις ερωτήσεις σας.
 
-Για να προχωρήσετε την εκπαίδευσή σας, συνιστούμε ανεπιφύλακτα να εξερευνήσετε το [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) για επιπλέον υλικό μελέτης.
+Για να προχωρήσετε την εκπαίδευσή σας, συνιστούμε έντονα να εξερευνήσετε το [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) για επιπλέον υλικό μελέτης.
 
 ### 📋 Ρύθμιση του περιβάλλοντός σας
 
-Αυτό το εκπαιδευτικό πρόγραμμα έχει έτοιμο περιβάλλον ανάπτυξης! Καθώς ξεκινάτε, μπορείτε να επιλέξετε να εκτελέσετε το εκπαιδευτικό πρόγραμμα σε ένα [Codespace](https://github.com/features/codespaces/) (_ένα περιβάλλον βασισμένο στον περιηγητή, χωρίς ανάγκη εγκατάστασης_), ή τοπικά στον υπολογιστή σας χρησιμοποιώντας έναν επεξεργαστή κειμένου όπως το [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Αυτό το εκπαιδευτικό πρόγραμμα έχει ένα έτοιμο περιβάλλον ανάπτυξης! Καθώς ξεκινάτε, μπορείτε να επιλέξετε να εκτελέσετε το εκπαιδευτικό πρόγραμμα σε ένα [Codespace](https://github.com/features/codespaces/) (_ένα περιβάλλον βασισμένο στον browser, χωρίς ανάγκη εγκαταστάσεων_), ή τοπικά στον υπολογιστή σας χρησιμοποιώντας έναν επεξεργαστή κειμένου όπως το [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
 #### Δημιουργήστε το αποθετήριό σας
 Για να αποθηκεύσετε εύκολα τη δουλειά σας, συνιστάται να δημιουργήσετε το δικό σας αντίγραφο αυτού του αποθετηρίου. Μπορείτε να το κάνετε πατώντας το κουμπί **Use this template** στην κορυφή της σελίδας. Αυτό θα δημιουργήσει ένα νέο αποθετήριο στον λογαριασμό σας στο GitHub με ένα αντίγραφο του εκπαιδευτικού προγράμματος.
 
 Ακολουθήστε αυτά τα βήματα:
-1. **Κάντε Fork το Αποθετήριο**: Πατήστε το κουμπί "Fork" στην επάνω δεξιά γωνία αυτής της σελίδας.
+1. **Κάντε Fork το Αποθετήριο**: Πατήστε το κουμπί "Fork" στην πάνω δεξιά γωνία αυτής της σελίδας.
 2. **Κλωνοποιήστε το Αποθετήριο**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Εκτέλεση του εκπαιδευτικού προγράμματος σε Codespace
+#### Εκτέλεση του εκπαιδευτικού προγράμματος σε ένα Codespace
 
 Στο αντίγραφο αυτού του αποθετηρίου που δημιουργήσατε, πατήστε το κουμπί **Code** και επιλέξτε **Open with Codespaces**. Αυτό θα δημιουργήσει ένα νέο Codespace για να εργαστείτε.
 
@@ -108,10 +108,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 #### Εκτέλεση του εκπαιδευτικού προγράμματος τοπικά στον υπολογιστή σας
 
-Για να εκτελέσετε αυτό το εκπαιδευτικό πρόγραμμα τοπικά στον υπολογιστή σας, θα χρειαστείτε έναν επεξεργαστή κειμένου, έναν περιηγητή και ένα εργαλείο γραμμής εντολών. Το πρώτο μας μάθημα, [Εισαγωγή στις Γλώσσες Προγραμματισμού και Εργαλεία του Εμπορίου](../../1-getting-started-lessons/1-intro-to-programming-languages), θα σας καθοδηγήσει στις διάφορες επιλογές για κάθε ένα από αυτά τα εργαλεία ώστε να επιλέξετε αυτό που σας ταιριάζει καλύτερα.
+Για να εκτελέσετε αυτό το εκπαιδευτικό πρόγραμμα τοπικά στον υπολογιστή σας, θα χρειαστείτε έναν επεξεργαστή κειμένου, έναν browser και ένα εργαλείο γραμμής εντολών. Το πρώτο μας μάθημα, [Εισαγωγή στις Γλώσσες Προγραμματισμού και Εργαλεία του Εμπορίου](../../1-getting-started-lessons/1-intro-to-programming-languages), θα σας καθοδηγήσει στις διάφορες επιλογές για καθένα από αυτά τα εργαλεία ώστε να επιλέξετε αυτό που σας ταιριάζει καλύτερα.
 
 Η πρότασή μας είναι να χρησιμοποιήσετε το [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ως επεξεργαστή σας, το οποίο διαθέτει επίσης ενσωματωμένο [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Μπορείτε να κατεβάσετε το Visual Studio Code [εδώ](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-
 
 1. Κλωνοποιήστε το αποθετήριο σας στον υπολογιστή σας. Μπορείτε να το κάνετε πατώντας το κουμπί **Code** και αντιγράφοντας το URL:
 
@@ -125,24 +124,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 2. Ανοίξτε τον φάκελο στο Visual Studio Code. Μπορείτε να το κάνετε πατώντας **File** > **Open Folder** και επιλέγοντας τον φάκελο που μόλις κλωνοποιήσατε.
 
-
 >  Συνιστώμενες επεκτάσεις για το Visual Studio Code:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - για προεπισκόπηση σελίδων HTML μέσα στο Visual Studio Code
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - για να σας βοηθήσει να γράφετε κώδικα πιο γρήγορα
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - για προεπισκόπηση σελίδων HTML μέσα στο Visual Studio Code  
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - για να σας βοηθήσει να γράφετε κώδικα πιο γρήγορα  
 
 ## 📂 Κάθε μάθημα περιλαμβάνει:
 
-- προαιρετικό σκίτσο
-- προαιρετικό συμπληρωματικό βίντεο
-- κουίζ προθέρμανσης πριν το μάθημα
-- γραπτό μάθημα
-- για μαθήματα βασισμένα σε έργα, οδηγίες βήμα προς βήμα για την κατασκευή του έργου
-- έλεγχοι γνώσεων
-- μια πρόκληση
-- συμπληρωματική ανάγνωση
-- εργασία
-- [κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/)
+- προαιρετικό σκίτσο  
+- προαιρετικό συμπληρωματικό βίντεο  
+- κουίζ προθέρμανσης πριν το μάθημα  
+- γραπτό μάθημα  
+- για μαθήματα βασισμένα σε έργα, οδηγίες βήμα προς βήμα για την κατασκευή του έργου  
+- έλεγχοι γνώσεων  
+- μια πρόκληση  
+- συμπληρωματική ανάγνωση  
+- εργασία  
+- [κουίζ μετά το μάθημα](https://ff-quizzes.netlify.app/web/)  
 
 > **Σημείωση για τα κουίζ**: Όλα τα κουίζ βρίσκονται στον φάκελο Quiz-app, συνολικά 48 κουίζ με τρεις ερωτήσεις το καθένα. Είναι διαθέσιμα [εδώ](https://ff-quizzes.netlify.app/web/) και η εφαρμογή κουίζ μπορεί να εκτελεστεί τοπικά ή να αναπτυχθεί στο Azure. Ακολουθήστε τις οδηγίες στον φάκελο `quiz-app`.
 
@@ -157,7 +155,7 @@ CO_OP_TRANSLATOR_METADATA:
 | 05  |                        Βασικά JS                         |                         Συναρτήσεις και Μέθοδοι                          | Μάθετε για τις συναρτήσεις και τις μεθόδους για τη διαχείριση της λογικής ροής μιας εφαρμογής                                                             |                              [Συναρτήσεις και Μέθοδοι](./2-js-basics/2-functions-methods/README.md)                               | Jasmine και Christopher |
 | 06  |                        Βασικά JS                         |                        Λήψη Αποφάσεων με JS                        | Μάθετε πώς να δημιουργείτε συνθήκες στον κώδικά σας χρησιμοποιώντας μεθόδους λήψης αποφάσεων                                                           |                                 [Λήψη Αποφάσεων](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
 | 07  |                        Βασικά JS                         |                            Πίνακες και Βρόχοι                            | Εργαστείτε με δεδομένα χρησιμοποιώντας πίνακες και βρόχους στη JavaScript                                                                                 |                                   [Πίνακες και Βρόχοι](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML στην Πράξη                            | Δημιουργήστε το HTML για να φτιάξετε ένα online terrarium, εστιάζοντας στη δημιουργία διάταξης                                                         |                                 [Εισαγωγή στο HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML στην Πράξη                            | Δημιουργήστε το HTML για να φτιάξετε ένα online terrarium, εστιάζοντας στη δημιουργία μιας διάταξης                                                         |                                 [Εισαγωγή στο HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
 | 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS στην Πράξη                             | Δημιουργήστε το CSS για να στυλιζάρετε το online terrarium, εστιάζοντας στα βασικά του CSS, συμπεριλαμβανομένου του να κάνετε τη σελίδα responsive                     |                                  [Εισαγωγή στο CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
 | 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 Κλεισίματα JavaScript, χειρισμός DOM                  | Δημιουργήστε το JavaScript για να λειτουργήσει το terrarium ως διεπαφή drag/drop, εστιάζοντας στα κλεισίματα και τον χειρισμό DOM             |                  [Κλεισίματα JavaScript, χειρισμός DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
 | 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Δημιουργία Παιχνιδιού Πληκτρολόγησης                           | Μάθετε πώς να χρησιμοποιείτε συμβάντα πληκτρολογίου για να καθοδηγήσετε τη λογική της εφαρμογής JavaScript                                                          |                                [Προγραμματισμός με Βάση Συμβάντα](./4-typing-game/typing-game/README.md)                                |       Christopher       |
@@ -165,29 +163,29 @@ CO_OP_TRANSLATOR_METADATA:
 | 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Δημιουργία φόρμας, κλήση API και αποθήκευση μεταβλητών σε τοπική αποθήκευση | Δημιουργήστε τα στοιχεία JavaScript της επέκτασης περιηγητή σας για να καλέσετε ένα API χρησιμοποιώντας μεταβλητές που αποθηκεύονται σε τοπική αποθήκευση                      |                [APIs, Φόρμες και Τοπική Αποθήκευση](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
 | 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Διεργασίες παρασκηνίου στον περιηγητή, απόδοση ιστού          | Χρησιμοποιήστε τις διεργασίες παρασκηνίου του περιηγητή για να διαχειριστείτε το εικονίδιο της επέκτασης. Μάθετε για την απόδοση ιστού και κάποιες βελτιστοποιήσεις για να την βελτιώσετε   |             [Διεργασίες Παρασκηνίου και Απόδοση](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
 | 15  |           [Space Game](./6-space-game/solution/README.md)           |             Πιο Προχωρημένη Ανάπτυξη Παιχνιδιών με JavaScript             | Μάθετε για την Κληρονομικότητα χρησιμοποιώντας τόσο Κλάσεις όσο και Σύνθεση και το μοτίβο Pub/Sub, ως προετοιμασία για τη δημιουργία ενός παιχνιδιού              |                      [Εισαγωγή στην Προχωρημένη Ανάπτυξη Παιχνιδιών](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Σχεδίαση σε καμβά                            | Μάθετε για το API του Καμβά, που χρησιμοποιείται για να σχεδιάσετε στοιχεία στην οθόνη                                                                       |                                [Σχεδίαση σε Καμβά](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Σχεδίαση σε καμβά                            | Μάθετε για το API του Καμβά, που χρησιμοποιείται για να σχεδιάσετε στοιχεία σε μια οθόνη                                                                       |                                [Σχεδίαση σε Καμβά](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
 | 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Μετακίνηση στοιχείων στην οθόνη                    | Ανακαλύψτε πώς τα στοιχεία μπορούν να αποκτήσουν κίνηση χρησιμοποιώντας τις καρτεσιανές συντεταγμένες και το API του Καμβά                                            |                           [Μετακίνηση Στοιχείων](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
 | 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Ανίχνευση σύγκρουσης                           | Κάντε τα στοιχεία να συγκρούονται και να αντιδρούν μεταξύ τους χρησιμοποιώντας πατήματα πλήκτρων και παρέχετε μια λειτουργία καθυστέρησης για να εξασφαλίσετε την απόδοση του παιχνιδιού    |                              [Ανίχνευση Σύγκρουσης](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
 | 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Καταγραφή σκορ                              | Εκτελέστε μαθηματικούς υπολογισμούς με βάση την κατάσταση και την απόδοση του παιχνιδιού                                                                |                                    [Καταγραφή Σκορ](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Τερματισμός και επανεκκίνηση του παιχνιδιού                     | Μάθετε για τον τερματισμό και την επανεκκίνηση του παιχνιδιού, συμπεριλαμβανομένου του καθαρισμού των στοιχείων και της επαναφοράς των τιμών των μεταβλητών                              |                                [Η Συνθήκη Τερματισμού](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Τερματισμός και επανεκκίνηση του παιχνιδιού                     | Μάθετε για τον τερματισμό και την επανεκκίνηση του παιχνιδιού, συμπεριλαμβανομένου του καθαρισμού των πόρων και της επαναφοράς των τιμών των μεταβλητών                              |                                [Συνθήκη Τερματισμού](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
 | 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 Πρότυπα HTML και Διαδρομές σε μια Εφαρμογή Ιστού                 | Μάθετε πώς να δημιουργείτε τη δομή της αρχιτεκτονικής μιας ιστοσελίδας πολλαπλών σελίδων χρησιμοποιώντας διαδρομές και πρότυπα HTML                             |                            [Πρότυπα HTML και Διαδρομές](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
 | 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Δημιουργία Φόρμας Εισόδου και Εγγραφής                   | Μάθετε για τη δημιουργία φορμών και τη διαχείριση διαδικασιών επικύρωσης                                                                          |                                           [Φόρμες](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
 | 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Μέθοδοι Ανάκτησης και Χρήσης Δεδομένων                   | Πώς τα δεδομένα ρέουν μέσα και έξω από την εφαρμογή σας, πώς να τα ανακτήσετε, να τα αποθηκεύσετε και να τα διαχειριστείτε                                                 |                                            [Δεδομένα](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Έννοιες Διαχείρισης Κατάστασης                      | Μάθετε πώς η εφαρμογή σας διατηρεί την κατάσταση και πώς να τη διαχειριστείτε προγραμματιστικά                                                              |                                [Διαχείριση Κατάστασης](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Έννοιες Διαχείρισης Κατάστασης                      | Μάθετε πώς η εφαρμογή σας διατηρεί κατάσταση και πώς να τη διαχειριστείτε προγραμματιστικά                                                              |                                [Διαχείριση Κατάστασης](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
 | 25 | [Περιηγητής/Κώδικας VScode](../../8-code-editor) | Εργασία με VScode | Μάθετε πώς να χρησιμοποιείτε έναν επεξεργαστή κώδικα| [Χρήση Επεξεργαστή Κώδικα VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
 | 26 | [Βοηθοί AI](./9-chat-project/README.md) | Εργασία με AI | Μάθετε πώς να δημιουργήσετε τον δικό σας βοηθό AI | [Έργο Βοηθού AI](./9-chat-project/README.md) | Chris |
 
 ## 🏫 Παιδαγωγική
 
-Το πρόγραμμα σπουδών μας έχει σχεδιαστεί με δύο βασικές παιδαγωγικές αρχές:
-* μάθηση βασισμένη σε έργα
-* συχνά κουίζ
+Το πρόγραμμα σπουδών μας έχει σχεδιαστεί με δύο βασικές παιδαγωγικές αρχές:  
+* μάθηση βασισμένη σε έργα  
+* συχνά κουίζ  
 
 Το πρόγραμμα διδάσκει τα βασικά της JavaScript, HTML και CSS, καθώς και τα πιο σύγχρονα εργαλεία και τεχνικές που χρησιμοποιούν οι σημερινοί προγραμματιστές ιστού. Οι μαθητές θα έχουν την ευκαιρία να αποκτήσουν πρακτική εμπειρία δημιουργώντας ένα παιχνίδι πληκτρολόγησης, ένα εικονικό terrarium, μια φιλική προς το περιβάλλον επέκταση περιηγητή, ένα παιχνίδι τύπου space-invader και μια εφαρμογή τραπεζικής για επιχειρήσεις. Μέχρι το τέλος της σειράς, οι μαθητές θα έχουν αποκτήσει μια σταθερή κατανόηση της ανάπτυξης ιστού.
 
 > 🎓 Μπορείτε να παρακολουθήσετε τα πρώτα μαθήματα αυτού του προγράμματος σπουδών ως [Διαδρομή Μάθησης](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) στο Microsoft Learn!
 
-Με την εξασφάλιση ότι το περιεχόμενο ευθυγραμμίζεται με τα έργα, η διαδικασία γίνεται πιο ενδιαφέρουσα για τους μαθητές και η διατήρηση των εννοιών θα ενισχυθεί. Γράψαμε επίσης αρκετά εισαγωγικά μαθήματα στα βασικά της JavaScript για να εισαγάγουμε έννοιες, συνοδευόμενα από ένα βίντεο από τη συλλογή "[Σειρά για Αρχάριους: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" με βίντεο-μαθήματα, μερικοί από τους συγγραφείς των οποίων συνέβαλαν σε αυτό το πρόγραμμα σπουδών.
+Με την εξασφάλιση ότι το περιεχόμενο ευθυγραμμίζεται με τα έργα, η διαδικασία γίνεται πιο ενδιαφέρουσα για τους μαθητές και η διατήρηση των εννοιών θα ενισχυθεί. Γράψαμε επίσης αρκετά εισαγωγικά μαθήματα στα βασικά της JavaScript για να εισαγάγουμε έννοιες, σε συνδυασμό με ένα βίντεο από τη συλλογή "[Σειρά για Αρχάριους: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" βίντεο-μαθημάτων, μερικοί από τους συγγραφείς των οποίων συνέβαλαν σε αυτό το πρόγραμμα σπουδών.
 
 Επιπλέον, ένα κουίζ χαμηλού κινδύνου πριν από το μάθημα θέτει την πρόθεση του μαθητή προς την εκμάθηση ενός θέματος, ενώ ένα δεύτερο κουίζ μετά το μάθημα εξασφαλίζει περαιτέρω διατήρηση. Αυτό το πρόγραμμα σπουδών σχεδιάστηκε για να είναι ευέλικτο και διασκεδαστικό και μπορεί να παρακολουθηθεί ολόκληρο ή εν μέρει. Τα έργα ξεκινούν μικρά και γίνονται όλο και πιο περίπλοκα μέχρι το τέλος του κύκλου των 12 εβδομάδων.
 
@@ -195,37 +193,54 @@ CO_OP_TRANSLATOR_METADATA:
 
 > Επισκεφθείτε τις [Οδηγίες Συμπεριφοράς](CODE_OF_CONDUCT.md) και τις [Οδηγίες Συνεισφοράς](CONTRIBUTING.md). Καλωσορίζουμε τα εποικοδομητικά σας σχόλια!
 
-
 ## 🧭 Πρόσβαση εκτός σύνδεσης
 
-Μπορείτε να εκτελέσετε αυτήν την τεκμηρίωση εκτός σύνδεσης χρησιμοποιώντας το [Docsify](https://docsify.js.org/#/). Κάντε fork αυτό το repo, [εγκαταστήστε το Docsify](https://docsify.js.org/#/quickstart) στον τοπικό σας υπολογιστή και στη συνέχεια στον κύριο φάκελο αυτού του repo, πληκτρολογήστε `docsify serve`. Ο ιστότοπος θα εξυπηρετηθεί στην
-- [Γενετική Τεχνητή Νοημοσύνη με Java](https://github.com/microsoft/Generative-AI-for-beginners-java)  
-- [Τεχνητή Νοημοσύνη για Αρχάριους](https://aka.ms/ai-beginners)  
-- [Επιστήμη Δεδομένων για Αρχάριους](https://aka.ms/datascience-beginners)  
-- [Μηχανική Μάθηση για Αρχάριους](https://aka.ms/ml-beginners)  
-- [Κυβερνοασφάλεια για Αρχάριους](https://github.com/microsoft/Security-101)  
-- [Ανάπτυξη Ιστού για Αρχάριους](https://aka.ms/webdev-beginners)  
-- [IoT για Αρχάριους](https://aka.ms/iot-beginners)  
-- [Ανάπτυξη XR για Αρχάριους](https://github.com/microsoft/xr-development-for-beginners)  
-- [Κατακτώντας το GitHub Copilot για Χρήση με Πρακτορικό Σκοπό](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)  
-- [Κατακτώντας το GitHub Copilot για Προγραμματιστές C#/.NET](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
-- [Διάλεξε τη Δική σου Περιπέτεια με το Copilot](https://github.com/microsoft/CopilotAdventures)  
+Μπορείτε να εκτελέσετε αυτήν την τεκμηρίωση εκτός σύνδεσης χρησιμοποιώντας το [Docsify](https://docsify.js.org/#/). Κλωνοποιήστε αυτό το αποθετήριο, [εγκαταστήστε το Docsify](https://docsify.js.org/#/quickstart) στον τοπικό σας υπολογιστή και στη συνέχεια στον κύριο φάκελο αυτού του αποθετηρίου, πληκτρολογήστε `docsify serve`. Ο ιστότοπος
+[![Edge AI για αρχάριους](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)  
+[![MCP για αρχάριους](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)  
+[![AI Agents για αρχάριους](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)  
 
-## Λήψη Βοήθειας
+---
 
-Αν κολλήσετε ή έχετε ερωτήσεις σχετικά με την ανάπτυξη εφαρμογών Τεχνητής Νοημοσύνης, συμμετάσχετε:
+### Σειρά Γενετικής Τεχνητής Νοημοσύνης  
+[![Γενετική Τεχνητή Νοημοσύνη για αρχάριους](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)  
+[![Γενετική Τεχνητή Νοημοσύνη (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)  
+[![Γενετική Τεχνητή Νοημοσύνη (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)  
+[![Γενετική Τεχνητή Νοημοσύνη (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)  
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+---
 
-Αν έχετε σχόλια για το προϊόν ή αντιμετωπίζετε σφάλματα κατά την ανάπτυξη, επισκεφθείτε:
+### Βασική Μάθηση  
+[![Μηχανική Μάθηση για αρχάριους](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)  
+[![Επιστήμη Δεδομένων για αρχάριους](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)  
+[![Τεχνητή Νοημοσύνη για αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)  
+[![Κυβερνοασφάλεια για αρχάριους](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)  
+[![Ανάπτυξη Ιστού για αρχάριους](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)  
+[![IoT για αρχάριους](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)  
+[![Ανάπτυξη XR για αρχάριους](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)  
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+---
 
-## Άδεια Χρήσης
+### Σειρά Copilot  
+[![Copilot για συνεργατικό προγραμματισμό με AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)  
+[![Copilot για C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
 
-Αυτό το αποθετήριο είναι διαθέσιμο υπό την άδεια MIT. Δείτε το αρχείο [LICENSE](../../LICENSE) για περισσότερες πληροφορίες.
+## Λήψη Βοήθειας  
+
+Αν αντιμετωπίζετε δυσκολίες ή έχετε ερωτήσεις σχετικά με την ανάπτυξη εφαρμογών AI, συμμετάσχετε:  
+
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)  
+
+Αν έχετε σχόλια για προϊόντα ή αντιμετωπίζετε σφάλματα κατά την ανάπτυξη, επισκεφθείτε:  
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)  
+
+## Άδεια Χρήσης  
+
+Αυτό το αποθετήριο είναι διαθέσιμο υπό την άδεια MIT. Δείτε το αρχείο [LICENSE](../../LICENSE) για περισσότερες πληροφορίες.  
 
 ---
 
 **Αποποίηση ευθύνης**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
