@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "957547b822c40042e07d591c4fbfde4f",
-  "translation_date": "2025-08-28T08:20:49+00:00",
+  "original_hash": "5adea7059676fcdb1b546ccd54c956c2",
+  "translation_date": "2025-10-24T22:14:54+00:00",
   "source_file": "4-typing-game/README.md",
   "language_code": "ro"
 }
@@ -11,26 +11,30 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Introducere
 
-Tastarea este una dintre cele mai subestimate abilități ale unui dezvoltator. Capacitatea de a transfera rapid gândurile din minte în editor permite creativității să curgă liber. Una dintre cele mai bune modalități de a învăța este să te joci!
+Iată ceva ce fiecare dezvoltator știe, dar rareori vorbește despre: tastarea rapidă este o superputere! 🚀 Gândește-te - cu cât poți transfera mai repede ideile din mintea ta în editorul de cod, cu atât creativitatea ta poate curge mai liber. Este ca și cum ai avea o conexiune directă între gândurile tale și ecran.
 
-> Așadar, hai să construim un joc de tastare!
+Vrei să afli unul dintre cele mai bune moduri de a îmbunătăți această abilitate? Ai ghicit - vom construi un joc!
 
-Vei folosi abilitățile de JavaScript, HTML și CSS pe care le-ai acumulat până acum pentru a crea un joc de tastare. Jocul va prezenta jucătorului un citat aleatoriu (vom folosi citate din [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes)) și va cronometra cât timp îi ia jucătorului să îl tasteze corect. Vei folosi abilitățile de JavaScript, HTML și CSS pe care le-ai acumulat până acum pentru a crea un joc de tastare.
+> Hai să creăm împreună un joc de tastare grozav!
+
+Ești pregătit să pui în practică toate abilitățile de JavaScript, HTML și CSS pe care le-ai învățat? Vom construi un joc de tastare care te va provoca cu citate ale legendarului detectiv [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes). Jocul va urmări cât de rapid și precis poți tasta - și crede-mă, este mai captivant decât ai putea crede!
 
 ![demo](../../../4-typing-game/images/demo.gif)
 
-## Cerințe preliminare
+## Ce trebuie să știi
 
-Această lecție presupune că ești familiarizat cu următoarele concepte:
+Înainte să începem, asigură-te că ești confortabil cu aceste concepte (nu te îngrijora dacă ai nevoie de o scurtă recapitulare - cu toții am fost acolo!):
 
-- Crearea de câmpuri de introducere text și controale de tip buton
-- CSS și setarea stilurilor folosind clase
-- Bazele JavaScript-ului
+- Crearea de câmpuri de introducere text și butoane
+- CSS și setarea stilurilor folosind clase  
+- Bazele JavaScript
   - Crearea unui array
   - Generarea unui număr aleatoriu
   - Obținerea timpului curent
 
-## Lecție
+Dacă vreuna dintre acestea îți pare puțin neclară, este complet în regulă! Uneori, cel mai bun mod de a-ți consolida cunoștințele este să te apuci de un proiect și să descoperi lucrurile pe parcurs.
+
+## Hai să construim acest lucru!
 
 [Crearea unui joc de tastare folosind programarea bazată pe evenimente](./typing-game/README.md)
 
@@ -40,5 +44,5 @@ Scris cu ♥️ de [Christopher Harrison](http://www.twitter.com/geektrainer)
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

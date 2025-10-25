@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T10:07:20+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-24T19:10:37+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "sw"
 }
@@ -12,10 +12,14 @@ CO_OP_TRANSLATOR_METADATA:
 ![Misingi ya JavaScript - Kazi](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.sw.png)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Jaribio la Kabla ya Somo
-[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app)
+## Maswali ya Awali ya Somo
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app)
 
-Tunapofikiria kuhusu kuandika msimbo, tunataka kuhakikisha kuwa msimbo wetu unasomeka. Ingawa hili linaweza kuonekana kinyume na matarajio, msimbo husomwa mara nyingi zaidi kuliko unavyoandikwa. Chombo kimoja muhimu katika kisanduku cha zana cha msanidi programu ili kuhakikisha msimbo unaoweza kudumishwa ni **kazi**.
+Kuandika msimbo ule ule mara kwa mara ni mojawapo ya changamoto za kawaida za programu. Kazi hutatua tatizo hili kwa kukuruhusu kufungasha msimbo katika vipande vinavyoweza kutumika tena. Fikiria kazi kama sehemu zilizo sanifu ambazo zilifanya mstari wa uzalishaji wa Henry Ford kuwa wa mapinduzi – mara tu unapounda sehemu inayotegemewa, unaweza kuitumia popote inapohitajika bila kuijenga upya.
+
+Kazi hukuruhusu kufungasha vipande vya msimbo ili uweze kuvitumia tena katika programu yako. Badala ya kunakili na kubandika mantiki ile ile kila mahali, unaweza kuunda kazi mara moja na kuziita wakati wowote zinapohitajika. Njia hii husaidia kuweka msimbo wako katika mpangilio na kufanya masasisho kuwa rahisi zaidi.
+
+Katika somo hili, utajifunza jinsi ya kuunda kazi zako mwenyewe, kupitisha taarifa kwao, na kupata matokeo muhimu. Utatambua tofauti kati ya kazi na mbinu, kujifunza mbinu za kisasa za sintaksia, na kuona jinsi kazi zinavyoweza kufanya kazi na kazi nyingine. Tutajenga dhana hizi hatua kwa hatua.
 
 [![Mbinu na Kazi](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Mbinu na Kazi")
 
@@ -25,13 +29,15 @@ Tunapofikiria kuhusu kuandika msimbo, tunataka kuhakikisha kuwa msimbo wetu unas
 
 ## Kazi
 
-Kwa msingi wake, kazi ni kipande cha msimbo ambacho tunaweza kukiendesha tunapohitaji. Hii ni bora kwa hali ambapo tunahitaji kutekeleza jukumu lile lile mara kadhaa; badala ya kurudia mantiki hiyo katika maeneo mengi (ambayo ingefanya iwe ngumu kusasisha wakati ukifika), tunaweza kuiweka katikati katika eneo moja, na kuiita tunapohitaji operesheni hiyo kufanywa - unaweza hata kuita kazi kutoka kwa kazi nyingine!
+Kazi ni kipande cha msimbo kilichojitegemea ambacho hufanya kazi maalum. Inajumuisha mantiki ambayo unaweza kuitekeleza wakati wowote inapohitajika.
 
-Jambo jingine muhimu ni uwezo wa kuipa kazi jina. Ingawa hili linaweza kuonekana kuwa dogo, jina hutoa njia ya haraka ya kuandika maelezo ya sehemu ya msimbo. Unaweza kufikiria hili kama lebo kwenye kitufe. Nikibonyeza kitufe kilichoandikwa "Sitisha kipima muda", najua kitaacha saa kuendelea.
+Badala ya kuandika msimbo ule ule mara nyingi katika programu yako, unaweza kuufungasha katika kazi na kuuita kazi hiyo wakati wowote unapoihitaji. Njia hii husaidia kuweka msimbo wako safi na kufanya masasisho kuwa rahisi zaidi. Fikiria changamoto ya matengenezo ikiwa unahitaji kubadilisha mantiki iliyotawanyika katika maeneo 20 tofauti kwenye msimbo wako.
+
+Kutoa majina ya kueleweka kwa kazi zako ni muhimu. Kazi yenye jina zuri inaeleza kusudi lake wazi – unapokutana na `cancelTimer()`, unajua mara moja inachofanya, kama vile kitufe kilichowekwa alama wazi kinakuambia kinachotokea unapokibonyeza.
 
 ## Kuunda na kuita kazi
 
-Sintaksia ya kazi inaonekana kama ifuatavyo:
+Hebu tuangalie jinsi ya kuunda kazi. Sintaksia inafuata muundo thabiti:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Ikiwa ningetaka kuunda kazi ya kuonyesha salamu, inaweza kuonekana hivi:
+Hebu tuvunje hili:
+- Neno kuu `function` linaambia JavaScript "Hey, ninaunda kazi!"
+- `nameOfFunction` ni mahali unapotoa jina la kueleweka kwa kazi yako
+- Mabano `()` ni mahali unapoweza kuongeza vigezo (tutafikia hilo hivi karibuni)
+- Mabano ya curly `{}` yanajumuisha msimbo halisi unaoendeshwa unapoiita kazi
+
+Hebu tuunde kazi rahisi ya salamu ili kuona hili likifanya kazi:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Wakati wowote tunapotaka kuita (au kuendesha) kazi yetu, tunatumia jina la kazi likifuatiwa na `()`. Ni muhimu kutambua kuwa kazi yetu inaweza kufafanuliwa kabla au baada ya kuamua kuiita; mkusanyaji wa JavaScript ataiangalia kwa ajili yako.
+Kazi hii inachapisha "Hello, world!" kwenye console. Mara tu unapoiunda, unaweza kuitumia mara nyingi unavyohitaji.
+
+Ili kutekeleza (au "kuita") kazi yako, andika jina lake likifuatiwa na mabano. JavaScript inakuruhusu kufafanua kazi yako kabla au baada ya kuuita – injini ya JavaScript itashughulikia mpangilio wa utekelezaji.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Kuna aina maalum ya kazi inayojulikana kama **mbinu**, ambayo tayari umekuwa ukitumia! Kwa kweli, tuliona hili katika onyesho letu hapo juu tulipotumia `console.log`. Kinachofanya mbinu kuwa tofauti na kazi ni kwamba mbinu imeambatanishwa na kitu (`console` katika mfano wetu), wakati kazi ni huru. Utasikia wasanidi programu wengi wakitumia maneno haya kwa kubadilishana.
+Unapotekeleza mstari huu, inatekeleza msimbo wote ndani ya kazi yako ya `displayGreeting`, ikionyesha "Hello, world!" kwenye console ya kivinjari chako. Unaweza kuita kazi hii mara kwa mara.
 
-### Miongozo bora ya kazi
+> **Note:** Umekuwa ukitumia **mbinu** katika masomo haya. `console.log()` ni mbinu – kimsingi kazi inayohusiana na kitu cha `console`. Tofauti kuu ni kwamba mbinu zimeunganishwa na vitu, wakati kazi zinasimama peke yake. Waendelezaji wengi hutumia maneno haya kwa kubadilishana katika mazungumzo ya kawaida.
 
-Kuna miongozo michache bora ya kuzingatia unapounda kazi:
+### Mazoea bora ya kazi
 
-- Kama kawaida, tumia majina yanayoelezea ili ujue kazi itafanya nini
-- Tumia **camelCasing** kuunganisha maneno
-- Hakikisha kazi zako zinalenga jukumu maalum
+Hapa kuna vidokezo kadhaa vya kukusaidia kuandika kazi nzuri:
+
+- Toa majina ya wazi, ya kueleweka kwa kazi zako – utajishukuru baadaye!
+- Tumia **camelCasing** kwa majina ya maneno mengi (kama `calculateTotal` badala ya `calculate_total`)
+- Weka kila kazi ikilenga kufanya jambo moja vizuri
 
 ## Kupitisha taarifa kwa kazi
 
-Ili kufanya kazi iweze kutumika tena mara nyingi, utataka kupitisha taarifa ndani yake. Tukizingatia mfano wetu wa `displayGreeting` hapo juu, utaonyesha tu **Hello, world!**. Sio kazi yenye manufaa sana ambayo mtu anaweza kuunda. Ikiwa tunataka kuifanya iwe rahisi zaidi, kama kuruhusu mtu kubainisha jina la mtu wa kusalimiwa, tunaweza kuongeza **kigezo**. Kigezo (ambacho wakati mwingine huitwa **hoja**), ni taarifa ya ziada inayotumwa kwa kazi.
+Kazi yetu ya `displayGreeting` ina mipaka – inaweza tu kuonyesha "Hello, world!" kwa kila mtu. Vigezo vinaturuhusu kufanya kazi kuwa rahisi na muhimu zaidi.
 
-Vigezo vinaorodheshwa katika sehemu ya ufafanuzi ndani ya mabano na hutenganishwa kwa koma kama ifuatavyo:
+**Vigezo** hufanya kama nafasi za kuweka maadili tofauti kila wakati unapotumia kazi. Kwa njia hii, kazi hiyo hiyo inaweza kufanya kazi na taarifa tofauti kila unapoiita.
+
+Unaorodhesha vigezo ndani ya mabano unapofafanua kazi yako, ukitenganisha vigezo vingi kwa koma:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Tunaweza kusasisha `displayGreeting` yetu ili kukubali jina na kulionyesha.
+Kila kigezo hufanya kama nafasi ya kuweka – mtu anapoiita kazi yako, atatoa maadili halisi ambayo yatawekwa katika sehemu hizi.
+
+Hebu tusasishe kazi yetu ya salamu ili ikubali jina la mtu:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Tunapoitaka kazi yetu na kupitisha kigezo, tunakibainisha ndani ya mabano.
+Angalia jinsi tunavyotumia alama za nyuma (`` ` ``) na `${}` kuingiza jina moja kwa moja kwenye ujumbe wetu – hii inaitwa template literal, na ni njia rahisi ya kujenga mistari ya maandishi yenye mchanganyiko wa vigezo.
+
+Sasa tunapoiita kazi yetu, tunaweza kupitisha jina lolote:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
-## Thamani za chaguo-msingi
+JavaScript inachukua maandishi `'Christopher'`, inaiweka kwa kigezo cha `name`, na kuunda ujumbe wa kibinafsi "Hello, Christopher!"
 
-Tunaweza kufanya kazi yetu iwe rahisi zaidi kwa kuongeza vigezo zaidi. Lakini vipi ikiwa hatutaki kila thamani iwe lazima kubainishwa? Tukizingatia mfano wetu wa salamu, tunaweza kuacha jina likiwa la lazima (tunapaswa kujua tunamsalimia nani), lakini tunataka kuruhusu salamu yenyewe ibadilishwe kama inavyotakiwa. Ikiwa mtu hataki kuibadilisha, tunatoa thamani ya chaguo-msingi badala yake. Ili kutoa thamani ya chaguo-msingi kwa kigezo, tunaiweka kwa njia ile ile tunavyoweka thamani kwa kigezo - `parameterName = 'defaultValue'`. Ili kuona mfano kamili:
+## Maadili ya chaguo-msingi
+
+Je, tunataka kufanya vigezo vingine kuwa vya hiari? Hapo ndipo maadili ya chaguo-msingi yanapokuwa muhimu!
+
+Hebu tuseme tunataka watu waweze kubadilisha neno la salamu, lakini ikiwa hawatafafanua moja, tutatumia tu "Hello" kama chaguo-msingi. Unaweza kuweka maadili ya chaguo-msingi kwa kutumia alama ya sawa, kama vile kuweka kigezo:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Tunapoiita kazi, tunaweza kuamua ikiwa tunataka kuweka thamani kwa `salutation`.
+Hapa, `name` bado ni lazima, lakini `salutation` ina thamani ya akiba ya `'Hello'` ikiwa hakuna mtu anayetoa salamu tofauti.
+
+Sasa tunaweza kuita kazi hii kwa njia mbili tofauti:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
-## Thamani za kurudi
+Katika wito wa kwanza, JavaScript inatumia "Hello" ya chaguo-msingi kwa kuwa hatukufafanua salamu. Katika wito wa pili, inatumia "Hi" yetu ya kibinafsi badala yake. Uwezo huu hufanya kazi kuwa rahisi kwa hali tofauti.
 
-Hadi sasa kazi tuliyojenga itaonyesha kila mara kwenye [console](https://developer.mozilla.org/docs/Web/API/console). Wakati mwingine hii inaweza kuwa kile tunachotafuta, hasa tunapounda kazi ambazo zitakuwa zikiita huduma nyingine. Lakini vipi ikiwa nataka kuunda kazi ya kusaidia kufanya hesabu na kutoa thamani hiyo ili niitumie mahali pengine?
+## Maadili ya kurudi
 
-Tunaweza kufanya hivi kwa kutumia **thamani ya kurudi**. Thamani ya kurudi inarudishwa na kazi, na inaweza kuhifadhiwa kwenye kigezo sawa na tunavyoweza kuhifadhi thamani ya moja kwa moja kama kamba au nambari.
+Kazi zetu hadi sasa zimekuwa zikichapisha tu ujumbe kwenye console, lakini vipi ikiwa unataka kazi ihesabu kitu na kukurudishia matokeo?
 
-Ikiwa kazi inarudisha kitu basi neno kuu `return` linatumika. Neno kuu `return` linatarajia thamani au rejeleo la kile kinachorudishwa kama ifuatavyo:
+Hapo ndipo **maadili ya kurudi** yanapokuja. Badala ya kuonyesha tu kitu, kazi inaweza kukurudishia thamani ambayo unaweza kuihifadhi kwenye kigezo au kuitumia katika sehemu nyingine za msimbo wako.
+
+Ili kurudisha thamani, unatumia neno kuu `return` likifuatiwa na chochote unachotaka kurudisha:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Tunaweza kuunda kazi ya kuunda ujumbe wa salamu na kurudisha thamani hiyo kwa mpigaji.
+Hapa kuna jambo muhimu: kazi inapofikia kauli ya `return`, inasimama mara moja na kurudisha thamani hiyo kwa yeyote aliyeiita.
+
+Hebu tubadilishe kazi yetu ya salamu ili irudishe ujumbe badala ya kuuchapisha:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Tunapoiita kazi hii tutahifadhi thamani hiyo kwenye kigezo. Hii ni sawa na jinsi tunavyoweka kigezo kwa thamani ya tuli (kama `const name = 'Christopher'`).
+Sasa badala ya kuchapisha salamu, kazi hii inaunda ujumbe na kuurudisha kwetu.
+
+Ili kutumia thamani iliyorejeshwa, tunaweza kuihifadhi kwenye kigezo kama thamani nyingine yoyote:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
+Sasa `greetingMessage` ina "Hello, Christopher" na tunaweza kuitumia popote kwenye msimbo wetu – kuionyesha kwenye ukurasa wa wavuti, kuijumuisha kwenye barua pepe, au kuipatia kazi nyingine.
+
 ## Kazi kama vigezo kwa kazi
 
-Unapopiga hatua katika taaluma yako ya programu, utakutana na kazi zinazokubali kazi kama vigezo. Mbinu hii ya kipekee hutumika mara nyingi tunapokuwa hatujui ni lini kitu kitatokea au kukamilika, lakini tunajua tunahitaji kutekeleza operesheni kwa kujibu.
+Kazi zinaweza kupitishwa kama vigezo kwa kazi nyingine. Ingawa dhana hii inaweza kuonekana ngumu mwanzoni, ni kipengele chenye nguvu kinachowezesha mifumo ya programu inayobadilika.
 
-Kwa mfano, fikiria [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), ambayo huanzisha kipima muda na itaendesha msimbo inapokamilika. Tunahitaji kuiambia ni msimbo gani tunataka utekelezwe. Inaonekana kama kazi kamili kwa kazi!
+Mfano huu ni wa kawaida sana unaposema "wakati kitu kinatokea, fanya jambo hili lingine." Kwa mfano, "wakati kipima muda kinamalizika, endesha msimbo huu" au "wakati mtumiaji anabonyeza kitufe, ita kazi hii."
 
-Ukikimbia msimbo hapa chini, baada ya sekunde 3 utaona ujumbe **3 seconds has elapsed**.
+Hebu tuangalie `setTimeout`, ambayo ni kazi iliyojengwa ndani inayosubiri muda fulani na kisha kuendesha msimbo fulani. Tunahitaji kuambia ni msimbo gani wa kuendesha – hali nzuri ya kutumia kazi kama kigezo!
+
+Jaribu msimbo huu – baada ya sekunde 3, utaona ujumbe:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
-### Kazi zisizo na majina
+Angalia jinsi tunavyopitisha `displayDone` (bila mabano) kwa `setTimeout`. Hatuiiti kazi sisi wenyewe – tunaipeleka kwa `setTimeout` na kusema "iite hii baada ya sekunde 3."
 
-Hebu tuangalie tena kile tulichojenga. Tunaunda kazi yenye jina ambalo litatumika mara moja tu. Kadri programu yetu inavyokuwa ngumu zaidi, tunaweza kujikuta tukitengeneza kazi nyingi ambazo zitatumika mara moja tu. Hili si bora. Kama inavyotokea, hatuhitaji kila wakati kutoa jina!
+### Kazi zisizo na jina
 
-Tunapopitisha kazi kama kigezo tunaweza kupitisha kuunda moja mapema na badala yake kuijenga kama sehemu ya kigezo. Tunatumia neno kuu `function`, lakini badala yake tunaiunda kama kigezo.
+Wakati mwingine unahitaji kazi kwa jambo moja tu na hutaki kuipa jina. Fikiria – ikiwa unatumia kazi mara moja tu, kwa nini uchafue msimbo wako na jina la ziada?
 
-Hebu tuandike tena msimbo hapo juu ili kutumia kazi isiyo na jina:
+JavaScript inakuruhusu kuunda **kazi zisizo na jina** – kazi bila majina unazoweza kufafanua pale pale unapozihitaji.
+
+Hivi ndivyo tunavyoweza kuandika upya mfano wetu wa kipima muda kwa kutumia kazi isiyo na jina:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Ukikimbia msimbo wetu mpya utagundua tunapata matokeo sawa. Tumeunda kazi, lakini hatukuhitaji kuipa jina!
+Hii inafanikisha matokeo sawa, lakini kazi inafafanuliwa moja kwa moja ndani ya wito wa `setTimeout`, ikiondoa hitaji la tamko la kazi tofauti.
 
-### Kazi za mishale minene
+### Kazi za mishale
 
-Njia moja ya mkato inayotumika sana katika lugha nyingi za programu (pamoja na JavaScript) ni uwezo wa kutumia kile kinachoitwa **arrow** au **fat arrow** function. Inatumia kiashiria maalum cha `=>`, ambacho kinaonekana kama mshale - hivyo jina! Kwa kutumia `=>`, tunaweza kuruka neno kuu `function`.
+JavaScript ya kisasa ina njia fupi zaidi ya kuandika kazi inayoitwa **kazi za mishale**. Zinatumia `=>` (ambayo inaonekana kama mshale – umeona?) na ni maarufu sana kwa waendelezaji.
 
-Hebu tuandike tena msimbo wetu mara moja zaidi ili kutumia kazi ya mshale mnene:
+Kazi za mishale hukuruhusu kuruka neno kuu `function` na kuandika msimbo wa muhtasari zaidi.
+
+Hapa kuna mfano wetu wa kipima muda ukitumia kazi ya mshale:
 
 ```javascript
 setTimeout(() => {
@@ -183,28 +225,47 @@ setTimeout(() => {
 }, 3000);
 ```
 
+`()` ni mahali ambapo vigezo vingine vinaweza kwenda (hakuna katika kesi hii), kisha mshale `=>`, na hatimaye mwili wa kazi katika mabano ya curly. Hii inatoa utendaji sawa na sintaksia ya muhtasari zaidi.
+
 ### Wakati wa kutumia kila mkakati
 
-Sasa umeona tuna njia tatu za kupitisha kazi kama kigezo na unaweza kuwa unajiuliza ni lini utumie kila moja. Ikiwa unajua utatumia kazi hiyo zaidi ya mara moja, iunde kama kawaida. Ikiwa utaitumia kwa eneo moja tu, kwa ujumla ni bora kutumia kazi isiyo na jina. Ikiwa utatumia kazi ya mshale mnene au sintaksia ya jadi ya `function` ni juu yako, lakini utagundua wasanidi programu wengi wa kisasa wanapendelea `=>`.
+Ni lini unapaswa kutumia kila mbinu? Mwongozo wa vitendo: ikiwa utatumia kazi mara nyingi, ipe jina na uifafanue tofauti. Ikiwa ni kwa matumizi maalum, fikiria kazi isiyo na jina. Kazi za mishale na sintaksia ya jadi zote ni chaguo halali, ingawa kazi za mishale ni maarufu katika misimbo ya kisasa ya JavaScript.
 
 ---
+
+
 
 ## 🚀 Changamoto
 
 Je, unaweza kueleza kwa sentensi moja tofauti kati ya kazi na mbinu? Jaribu!
 
-## Jaribio la Baada ya Somo
-[Jaribio la baada ya somo](https://ff-quizzes.netlify.app)
+## Changamoto ya Wakala wa GitHub Copilot 🚀
+
+Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+
+**Maelezo:** Unda maktaba ya zana za hesabu inayoonyesha dhana tofauti za kazi zilizofunikwa katika somo hili, ikiwa ni pamoja na vigezo, maadili ya chaguo-msingi, maadili ya kurudi, na kazi za mishale.
+
+**Maelekezo:** Unda faili ya JavaScript inayoitwa `mathUtils.js` inayojumuisha kazi zifuatazo:
+1. Kazi `add` inayochukua vigezo viwili na kurudisha jumla yao
+2. Kazi `multiply` yenye maadili ya chaguo-msingi ya kigezo (kigezo cha pili kinachukulia chaguo-msingi ya 1)
+3. Kazi ya mshale `square` inayochukua namba na kurudisha mraba wake
+4. Kazi `calculate` inayokubali kazi nyingine kama kigezo na namba mbili, kisha kuitumia kazi hiyo kwa namba hizo
+5. Onyesha wito wa kila kazi na kesi za majaribio zinazofaa
+
+Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+
+## Maswali ya Baada ya Somo
+[Maswali ya baada ya somo](https://ff-quizzes.netlify.app)
 
 ## Mapitio na Kujisomea
 
-Inafaa [kusoma zaidi kuhusu kazi za mishale](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), kwani zinatumiwa zaidi katika misimbo. Fanya mazoezi ya kuandika kazi, kisha uandike tena kwa kutumia sintaksia hii.
+Inafaa [kusoma zaidi kuhusu kazi za mishale](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), kwa kuwa zinatumika zaidi katika misimbo ya kisasa. Fanya mazoezi ya kuandika kazi, kisha uandike upya kwa sintaksia hii.
 
-## Kazi
+## Kazi ya Nyumbani
 
-[Furahia na Kazi](assignment.md)
+[Furaha na Kazi](assignment.md)
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

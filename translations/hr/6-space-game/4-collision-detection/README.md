@@ -1,89 +1,119 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
-  "translation_date": "2025-08-29T12:33:19+00:00",
+  "original_hash": "4b1d441cfd31924084956000c0fee5a5",
+  "translation_date": "2025-10-25T00:13:16+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "hr"
 }
 -->
-# Izgradnja svemirske igre, dio 4: Dodavanje lasera i detekcija sudara
+# Izgradnja svemirske igre, dio 4: Dodavanje lasera i otkrivanje sudara
 
 ## Kviz prije predavanja
 
-[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/35)
+[Pre-predavački kviz](https://ff-quizzes.netlify.app/web/quiz/35)
 
-U ovoj lekciji naučit ćete kako pucati lasere pomoću JavaScripta! Dodati ćemo dvije stvari u našu igru:
+Sjetite se trenutka u Star Warsu kada su protonski torpedi Lukea pogodili ispušni otvor Zvijezde smrti. Ta precizna detekcija sudara promijenila je sudbinu galaksije! U igrama, detekcija sudara funkcionira na isti način - određuje kada objekti međusobno djeluju i što se događa nakon toga.
 
-- **Laser**: ovaj laser se ispaljuje iz broda vašeg junaka i kreće se vertikalno prema gore
-- **Detekcija sudara**, kao dio implementacije mogućnosti *pucanja*, dodati ćemo i neka pravila igre:
-   - **Laser pogodi neprijatelja**: Neprijatelj umire ako ga pogodi laser
-   - **Laser pogodi vrh ekrana**: Laser se uništava ako pogodi gornji dio ekrana
-   - **Sudar neprijatelja i junaka**: Neprijatelj i junak se uništavaju ako se sudare
-   - **Neprijatelj pogodi dno ekrana**: Neprijatelj i junak se uništavaju ako neprijatelj pogodi dno ekrana
+U ovoj lekciji dodat ćete lasersko oružje svojoj svemirskoj igri i implementirati detekciju sudara. Baš kao što NASA-ini planeri misija izračunavaju putanje svemirskih letjelica kako bi izbjegli krhotine, naučit ćete otkriti kada se objekti u igri presijecaju. Razložit ćemo to na korake koji se mogu lako pratiti.
 
-Ukratko, vi -- *junak* -- morate pogoditi sve neprijatelje laserom prije nego što stignu do dna ekrana.
+Na kraju, imat ćete funkcionalni sustav borbe u kojem laseri uništavaju neprijatelje, a sudari pokreću događaje u igri. Isti principi detekcije sudara koriste se u svemu, od simulacija fizike do interaktivnih web sučelja.
 
-✅ Istražite malo o prvoj računalnoj igri ikada napisanoj. Koja je bila njezina funkcionalnost?
-
-Budimo heroji zajedno!
+✅ Malo istražite o prvoj računalnoj igri ikada napisanoj. Koja je bila njezina funkcionalnost?
 
 ## Detekcija sudara
 
-Kako provodimo detekciju sudara? Moramo razmišljati o našim objektima u igri kao o pravokutnicima koji se kreću. Zašto, pitate se? Pa, slika koja se koristi za crtanje objekta u igri je pravokutnik: ima `x`, `y`, `širinu` i `visinu`.
+Detekcija sudara funkcionira poput senzora blizine na lunarnom modulu Apollo - stalno provjerava udaljenosti i pokreće upozorenja kada se objekti previše približe. U igrama, ovaj sustav određuje kada objekti međusobno djeluju i što bi se trebalo dogoditi.
 
-Ako se dva pravokutnika, tj. junak i neprijatelj *presijeku*, imate sudar. Što bi se tada trebalo dogoditi ovisi o pravilima igre. Za implementaciju detekcije sudara trebate sljedeće:
+Pristup koji ćemo koristiti tretira svaki objekt igre kao pravokutnik, slično kako sustavi za kontrolu zračnog prometa koriste pojednostavljene geometrijske oblike za praćenje zrakoplova. Ova metoda pravokutnika može se činiti osnovnom, ali je računalno učinkovita i dobro funkcionira za većinu scenarija u igrama.
 
-1. Način za dobivanje pravokutne reprezentacije objekta u igri, nešto poput ovoga:
+### Predstavljanje pravokutnika
 
-   ```javascript
-   rectFromGameObject() {
-     return {
-       top: this.y,
-       left: this.x,
-       bottom: this.y + this.height,
-       right: this.x + this.width
-     }
-   }
-   ```
-
-2. Funkciju za usporedbu, koja može izgledati ovako:
-
-   ```javascript
-   function intersectRect(r1, r2) {
-     return !(r2.left > r1.right ||
-       r2.right < r1.left ||
-       r2.top > r1.bottom ||
-       r2.bottom < r1.top);
-   }
-   ```
-
-## Kako uništiti stvari
-
-Da biste uništili stvari u igri, morate obavijestiti igru da više ne treba crtati taj objekt u petlji igre koja se pokreće u određenim intervalima. Jedan način za to je označiti objekt igre kao *mrtav* kada se nešto dogodi, ovako:
+Svaki objekt igre treba granice koordinata, slično kako je rover Mars Pathfinder mapirao svoju lokaciju na površini Marsa. Evo kako definiramo te granice koordinata:
 
 ```javascript
-// collision happened
-enemy.dead = true
+rectFromGameObject() {
+  return {
+    top: this.y,
+    left: this.x,
+    bottom: this.y + this.height,
+    right: this.x + this.width
+  }
+}
 ```
 
-Zatim možete izdvojiti *mrtve* objekte prije ponovnog crtanja ekrana, ovako:
+**Razložimo ovo:**
+- **Gornji rub**: To je samo mjesto gdje vaš objekt počinje vertikalno (njegova y pozicija)
+- **Lijevi rub**: Mjesto gdje počinje horizontalno (njegova x pozicija)
+- **Donji rub**: Dodajte visinu na y poziciju - sada znate gdje završava!
+- **Desni rub**: Dodajte širinu na x poziciju - i imate kompletne granice
+
+### Algoritam presijecanja
+
+Otkrivanje presijecanja pravokutnika koristi logiku sličnu onoj kako svemirski teleskop Hubble određuje preklapanje nebeskih objekata u svom vidnom polju. Algoritam provjerava razdvojenost:
 
 ```javascript
-gameObjects = gameObject.filter(go => !go.dead);
+function intersectRect(r1, r2) {
+  return !(r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top);
+}
 ```
 
-## Kako ispaliti laser
+**Test razdvojenosti funkcionira poput radarskih sustava:**
+- Je li pravokutnik 2 potpuno desno od pravokutnika 1?
+- Je li pravokutnik 2 potpuno lijevo od pravokutnika 1?
+- Je li pravokutnik 2 potpuno ispod pravokutnika 1?
+- Je li pravokutnik 2 potpuno iznad pravokutnika 1?
 
-Ispaljivanje lasera znači reagiranje na događaj pritiska tipke i stvaranje objekta koji se kreće u određenom smjeru. Stoga trebamo provesti sljedeće korake:
+Ako nijedan od ovih uvjeta nije istinit, pravokutnici se moraju preklapati. Ovaj pristup odražava način na koji operateri radara određuju jesu li dva zrakoplova na sigurnoj udaljenosti.
 
-1. **Stvoriti objekt lasera**: s vrha broda našeg junaka, koji nakon stvaranja počinje se kretati prema gore, prema vrhu ekrana.
-2. **Povezati kod s događajem pritiska tipke**: trebamo odabrati tipku na tipkovnici koja predstavlja igrača koji ispaljuje laser.
-3. **Stvoriti objekt igre koji izgleda kao laser** kada se pritisne tipka.
+## Upravljanje životnim ciklusom objekata
 
-## Pauza između ispaljivanja lasera
+Kada laser pogodi neprijatelja, oba objekta moraju biti uklonjena iz igre. Međutim, brisanje objekata usred petlje može uzrokovati rušenje - lekcija naučena na teži način u ranim računalnim sustavima poput Apollo Guidance Computer. Umjesto toga, koristimo pristup "označavanja za brisanje" koji sigurno uklanja objekte između okvira.
 
-Laser treba ispaliti svaki put kad pritisnete tipku, na primjer *razmaknicu*. Kako bismo spriječili da igra proizvodi previše lasera u kratkom vremenu, moramo to popraviti. Rješenje je implementacija tzv. *pauze*, timera, koji osigurava da se laser može ispaliti samo u određenim intervalima. To možete implementirati na sljedeći način:
+Evo kako označavamo nešto za uklanjanje:
+
+```javascript
+// Mark object for removal
+enemy.dead = true;
+```
+
+**Zašto ovaj pristup funkcionira:**
+- Označavamo objekt kao "mrtav", ali ga ne brišemo odmah
+- To omogućuje trenutnom okviru igre da se sigurno završi
+- Nema rušenja zbog pokušaja korištenja nečega što je već uklonjeno!
+
+Zatim filtriramo označene objekte prije sljedećeg ciklusa renderiranja:
+
+```javascript
+gameObjects = gameObjects.filter(go => !go.dead);
+```
+
+**Što ovo filtriranje radi:**
+- Stvara svježi popis samo s "živim" objektima
+- Izbacuje sve što je označeno kao mrtvo
+- Održava vašu igru glatkom
+- Sprječava nakupljanje uništenih objekata u memoriji
+
+## Implementacija mehanike lasera
+
+Projektili lasera u igrama funkcioniraju na istom principu kao fotonski torpedi u Zvjezdanim stazama - to su diskretni objekti koji putuju ravno dok ne udare u nešto. Svaki pritisak na razmaknicu stvara novi laserski objekt koji se kreće preko ekrana.
+
+Da bi ovo funkcioniralo, trebamo koordinirati nekoliko različitih dijelova:
+
+**Ključne komponente za implementaciju:**
+- **Stvaranje** laserskih objekata koji se pojavljuju iz pozicije heroja
+- **Rukovanje** unosom s tipkovnice za pokretanje stvaranja lasera
+- **Upravljanje** kretanjem lasera i životnim ciklusom
+- **Implementacija** vizualnog prikaza za laserske projektile
+
+## Implementacija kontrole brzine pucanja
+
+Neograničene brzine pucanja preopteretile bi motor igre i učinile igru prelaganom. Pravi sustavi oružja suočavaju se sa sličnim ograničenjima - čak su i fazeri USS Enterprisea trebali vrijeme za ponovno punjenje između pucanja.
+
+Implementirat ćemo sustav hlađenja koji sprječava prekomjerno pucanje, a istovremeno održava responzivne kontrole:
 
 ```javascript
 class Cooldown {
@@ -91,41 +121,55 @@ class Cooldown {
     this.cool = false;
     setTimeout(() => {
       this.cool = true;
-    }, time)
+    }, time);
   }
 }
 
 class Weapon {
-  constructor {
+  constructor() {
+    this.cooldown = null;
   }
+  
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // Create laser projectile
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // Weapon is still cooling down
     }
   }
 }
 ```
 
-✅ Pogledajte lekciju 1 u seriji svemirske igre kako biste se podsjetili na *pauze*.
+**Kako sustav hlađenja funkcionira:**
+- Kada se stvori, oružje postaje "vruće" (ne može pucati još)
+- Nakon isteka vremena, postaje "hladno" (spremno za pucanje)
+- Prije pucanja provjeravamo: "Je li oružje hladno?"
+- Ovo sprječava prekomjerno klikanje, a istovremeno održava responzivne kontrole
 
-## Što izgraditi
+✅ Pogledajte lekciju 1 u seriji svemirske igre kako biste se podsjetili na sustave hlađenja.
 
-Uzet ćete postojeći kod (koji ste trebali očistiti i refaktorirati) iz prethodne lekcije i proširiti ga. Možete započeti s kodom iz dijela II ili koristiti kod iz [Dio III - početni kod](../../../../../../../../../your-work).
+## Izgradnja sustava detekcije sudara
 
-> savjet: laser s kojim ćete raditi već se nalazi u vašoj mapi s resursima i referenciran je u vašem kodu
+Proširit ćete postojeći kod svoje svemirske igre kako biste stvorili sustav detekcije sudara. Kao automatizirani sustav izbjegavanja sudara Međunarodne svemirske postaje, vaša igra će kontinuirano pratiti pozicije objekata i reagirati na presijecanja.
 
-- **Dodajte detekciju sudara**, kada laser sudari s nečim, trebaju se primijeniti sljedeća pravila:
-   1. **Laser pogodi neprijatelja**: neprijatelj umire ako ga pogodi laser
-   2. **Laser pogodi vrh ekrana**: laser se uništava ako pogodi gornji dio našeg ekrana
-   3. **Sudar neprijatelja i junaka**: neprijatelj i junak se uništavaju ako se sudare
-   4. **Neprijatelj pogodi dno ekrana**: neprijatelj i junak se uništavaju ako neprijatelj pogodi dno ekrana
+Počevši od koda iz prethodne lekcije, dodat ćete detekciju sudara s posebnim pravilima koja upravljaju interakcijama objekata.
 
-## Preporučeni koraci
+> 💡 **Pro Savjet**: Sprite za laser već je uključen u vašu mapu s resursima i referenciran u vašem kodu, spreman za implementaciju.
 
-Pronađite datoteke koje su stvorene za vas u podmapi `your-work`. Trebale bi sadržavati sljedeće:
+### Pravila sudara za implementaciju
+
+**Mehanika igre za dodavanje:**
+1. **Laser pogodi neprijatelja**: Objekt neprijatelja se uništava kada ga pogodi laserski projektil
+2. **Laser pogodi granicu ekrana**: Laser se uklanja kada dosegne gornji rub ekrana
+3. **Sudar neprijatelja i heroja**: Oba objekta se uništavaju kada se presijeku
+4. **Neprijatelj dosegne dno**: Uvjet za kraj igre kada neprijatelji dosegnu donji rub ekrana
+
+## Postavljanje vašeg razvojnog okruženja
+
+Dobre vijesti - već smo postavili većinu temelja za vas! Svi vaši resursi igre i osnovna struktura čekaju u podmapi `your-work`, spremni za dodavanje cool značajki sudara.
+
+### Struktura projekta
 
 ```bash
 -| assets
@@ -137,155 +181,263 @@ Pronađite datoteke koje su stvorene za vas u podmapi `your-work`. Trebale bi sa
 -| package.json
 ```
 
-Započnite svoj projekt u mapi `your_work` tako da upišete:
+**Razumijevanje strukture datoteka:**
+- **Sadrži** sve slike spriteova potrebne za objekte igre
+- **Uključuje** glavni HTML dokument i JavaScript aplikacijsku datoteku
+- **Pruža** konfiguraciju paketa za lokalni razvojni server
+
+### Pokretanje razvojnog servera
+
+Navigirajte do svoje mape projekta i pokrenite lokalni server:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Gornji kod će pokrenuti HTTP server na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu, trenutno bi trebao prikazati junaka i sve neprijatelje, ništa se još ne kreće :).
+**Ova sekvenca naredbi:**
+- **Mijenja** direktorij na vašu radnu mapu projekta
+- **Pokreće** lokalni HTTP server na `http://localhost:5000`
+- **Poslužuje** vaše datoteke igre za testiranje i razvoj
+- **Omogućuje** razvoj uživo s automatskim osvježavanjem
 
-### Dodajte kod
+Otvorite svoj preglednik i idite na `http://localhost:5000` kako biste vidjeli trenutno stanje svoje igre s prikazanim herojem i neprijateljima na ekranu.
 
-1. **Postavite pravokutnu reprezentaciju vašeg objekta igre za rukovanje sudarima** Sljedeći kod omogućuje vam dobivanje pravokutne reprezentacije `GameObject`. Uredite svoju klasu GameObject kako biste je proširili:
+### Implementacija korak po korak
 
-    ```javascript
-    rectFromGameObject() {
-        return {
-          top: this.y,
-          left: this.x,
-          bottom: this.y + this.height,
-          right: this.x + this.width,
-        };
-      }
-    ```
+Kao sustavni pristup koji je NASA koristila za programiranje svemirske letjelice Voyager, implementirat ćemo detekciju sudara metodično, gradeći svaki komponent korak po korak.
 
-2. **Dodajte kod koji provjerava sudar** Ovo će biti nova funkcija koja testira presijecaju li se dva pravokutnika:
+#### 1. Dodavanje granica sudara pravokutnika
 
-    ```javascript
-    function intersectRect(r1, r2) {
-      return !(
-        r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top
-      );
-    }
-    ```
+Prvo, naučimo naše objekte igre kako opisati svoje granice. Dodajte ovu metodu svojoj klasi `GameObject`:
 
-3. **Dodajte mogućnost ispaljivanja lasera**
-   1. **Dodajte poruku za događaj pritiska tipke**. Tipka *razmaknica* trebala bi stvoriti laser odmah iznad broda junaka. Dodajte tri konstante u objekt Messages:
+```javascript
+rectFromGameObject() {
+    return {
+      top: this.y,
+      left: this.x,
+      bottom: this.y + this.height,
+      right: this.x + this.width,
+    };
+  }
+```
 
-       ```javascript
-        KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
-        COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
-        COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
-       ```
+**Ova metoda omogućuje:**
+- **Stvara** objekt pravokutnika s preciznim granicama koordinata
+- **Izračunava** donje i desne rubove koristeći poziciju plus dimenzije
+- **Vraća** objekt spreman za algoritme detekcije sudara
+- **Pruža** standardizirano sučelje za sve objekte igre
 
-   1. **Rukujte tipkom razmaknica**. Uredite funkciju `window.addEventListener` za pritisak tipke kako biste rukovali razmaknicom:
+#### 2. Implementacija detekcije presijecanja
 
-      ```javascript
-        } else if(evt.keyCode === 32) {
-          eventEmitter.emit(Messages.KEY_EVENT_SPACE);
-        }
-      ```
+Sada kreirajmo našeg detektiva sudara - funkciju koja može reći kada se dva pravokutnika preklapaju:
 
-    1. **Dodajte slušatelje**. Uredite funkciju `initGame()` kako biste osigurali da junak može pucati kada se pritisne razmaknica:
+```javascript
+function intersectRect(r1, r2) {
+  return !(
+    r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top
+  );
+}
+```
 
-       ```javascript
-       eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
-        if (hero.canFire()) {
-          hero.fire();
-        }
-       ```
+**Ovaj algoritam funkcionira tako da:**
+- **Testira** četiri uvjeta razdvojenosti između pravokutnika
+- **Vraća** `false` ako je bilo koji uvjet razdvojenosti istinit
+- **Ukazuje** na sudar kada ne postoji razdvojenost
+- **Koristi** logiku negacije za učinkovito testiranje presijecanja
 
-       i dodajte novu funkciju `eventEmitter.on()` kako biste osigurali ponašanje kada neprijatelj sudari s laserom:
+#### 3. Implementacija sustava za pucanje lasera
 
-          ```javascript
-          eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-            first.dead = true;
-            second.dead = true;
-          })
-          ```
+Evo gdje postaje uzbudljivo! Postavimo sustav za pucanje lasera.
 
-   1. **Pomaknite objekt**, Osigurajte da se laser postupno pomiče prema vrhu ekrana. Stvorit ćete novu klasu Laser koja proširuje `GameObject`, kao što ste već radili:
+##### Konstantne poruke
 
-      ```javascript
-        class Laser extends GameObject {
-        constructor(x, y) {
-          super(x,y);
-          (this.width = 9), (this.height = 33);
-          this.type = 'Laser';
-          this.img = laserImg;
-          let id = setInterval(() => {
-            if (this.y > 0) {
-              this.y -= 15;
-            } else {
-              this.dead = true;
-              clearInterval(id);
-            }
-          }, 100)
-        }
-      }
-      ```
+Prvo, definirajmo neke vrste poruka kako bi različiti dijelovi naše igre mogli međusobno komunicirati:
 
-   1. **Rukujte sudarima**, Implementirajte pravila sudara za laser. Dodajte funkciju `updateGameObjects()` koja testira sudare objekata za pogotke:
+```javascript
+KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
+COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
+COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
+```
 
-      ```javascript
-      function updateGameObjects() {
-        const enemies = gameObjects.filter(go => go.type === 'Enemy');
-        const lasers = gameObjects.filter((go) => go.type === "Laser");
-      // laser hit something
-        lasers.forEach((l) => {
-          enemies.forEach((m) => {
-            if (intersectRect(l.rectFromGameObject(), m.rectFromGameObject())) {
-            eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
-              first: l,
-              second: m,
-            });
-          }
-         });
-      });
+**Ove konstante omogućuju:**
+- **Standardiziraju** nazive događaja u cijeloj aplikaciji
+- **Omogućuju** dosljednu komunikaciju između sustava igre
+- **Sprječavaju** tipografske pogreške u registraciji rukovatelja događajima
 
-        gameObjects = gameObjects.filter(go => !go.dead);
-      }  
-      ```
+##### Rukovanje unosom s tipkovnice
 
-      Pobrinite se da dodate `updateGameObjects()` u svoju petlju igre u `window.onload`.
+Dodajte detekciju pritiska razmaknice svom slušatelju događaja na tipkovnici:
 
-   4. **Implementirajte pauzu** za laser, tako da se može ispaliti samo u određenim intervalima.
+```javascript
+} else if(evt.keyCode === 32) {
+  eventEmitter.emit(Messages.KEY_EVENT_SPACE);
+}
+```
 
-      Na kraju, uredite klasu Hero kako bi mogla imati pauzu:
+**Ovaj rukovatelj unosa:**
+- **Detektira** pritiske razmaknice koristeći keyCode 32
+- **Emitira** standardiziranu poruku događaja
+- **Omogućuje** odvojenu logiku pucanja
 
-       ```javascript
-      class Hero extends GameObject {
-        constructor(x, y) {
-          super(x, y);
-          (this.width = 99), (this.height = 75);
-          this.type = "Hero";
-          this.speed = { x: 0, y: 0 };
-          this.cooldown = 0;
-        }
-        fire() {
-          gameObjects.push(new Laser(this.x + 45, this.y - 10));
-          this.cooldown = 500;
+##### Postavljanje slušatelja događaja
+
+Registrirajte ponašanje pucanja u svojoj funkciji `initGame()`:
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
+ if (hero.canFire()) {
+   hero.fire();
+ }
+});
+```
+
+**Ovaj slušatelj događaja:**
+- **Reagira** na događaje pritiska razmaknice
+- **Provjerava** status hlađenja za pucanje
+- **Pokreće** stvaranje lasera kada je dopušteno
+
+Dodajte rukovanje sudarima za interakcije između lasera i neprijatelja:
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+  first.dead = true;
+  second.dead = true;
+});
+```
+
+**Ovaj rukovatelj sudara:**
+- **Prima** podatke o događaju sudara s oba objekta
+- **Označava** oba objekta za uklanjanje
+- **Osigurava** pravilno čišćenje nakon sudara
+
+#### 4. Kreiranje klase Laser
+
+Implementirajte laserski projektil koji se kreće prema gore i upravlja vlastitim životnim ciklusom:
+
+```javascript
+class Laser extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 9;
+    this.height = 33;
+    this.type = 'Laser';
+    this.img = laserImg;
     
-          let id = setInterval(() => {
-            if (this.cooldown > 0) {
-              this.cooldown -= 100;
-            } else {
-              clearInterval(id);
-            }
-          }, 200);
-        }
-        canFire() {
-          return this.cooldown === 0;
-        }
+    let id = setInterval(() => {
+      if (this.y > 0) {
+        this.y -= 15;
+      } else {
+        this.dead = true;
+        clearInterval(id);
       }
-      ```
+    }, 100);
+  }
+}
+```
 
-U ovom trenutku, vaša igra ima neku funkcionalnost! Možete se kretati pomoću tipki sa strelicama, ispaliti laser pomoću razmaknice, a neprijatelji nestaju kada ih pogodite. Bravo!
+**Ova implementacija klase:**
+- **Proširuje** GameObject za nasljeđivanje osnovne funkcionalnosti
+- **Postavlja** odgovarajuće dimenzije za sprite lasera
+- **Stvara** automatsko kretanje prema gore koristeći `setInterval()`
+- **Rukuje** samouništenjem kada dosegne vrh ekrana
+- **Upravlja** vlastitim vremenskim animacijama i čišćenjem
+
+#### 5. Implementacija sustava detekcije sudara
+
+Kreirajte sveobuhvatnu funkciju za detekciju sudara:
+
+```javascript
+function updateGameObjects() {
+  const enemies = gameObjects.filter(go => go.type === 'Enemy');
+  const lasers = gameObjects.filter(go => go.type === "Laser");
+  
+  // Test laser-enemy collisions
+  lasers.forEach((laser) => {
+    enemies.forEach((enemy) => {
+      if (intersectRect(laser.rectFromGameObject(), enemy.rectFromGameObject())) {
+        eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
+          first: laser,
+          second: enemy,
+        });
+      }
+    });
+  });
+
+  // Remove destroyed objects
+  gameObjects = gameObjects.filter(go => !go.dead);
+}
+```
+
+**Ovaj sustav sudara:**
+- **Filtrira** objekte igre po tipu za učinkovito testiranje
+- **Testira** svaki laser protiv svakog neprijatelja za presijecanja
+- **Emitira** događaje sudara kada se otkriju presijecanja
+- **Čisti** uništene objekte nakon obrade sudara
+
+> ⚠️ **Važno**: Dodajte `updateGameObjects()` u glavnu petlju igre u `window.onload` kako biste omogućili detekciju sudara.
+
+#### 6. Dodavanje sustava hlađenja u klasu Hero
+
+Poboljšajte klasu Hero s mehanikom pucanja i ograničenjem brzine:
+
+```javascript
+class Hero extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 99;
+    this.height = 75;
+    this.type = "Hero";
+    this.speed = { x: 0, y: 0 };
+    this.cooldown = 0;
+  }
+  
+  fire() {
+    gameObjects.push(new Laser(this.x + 45, this.y - 10));
+    this.cooldown = 500;
+
+    let id = setInterval(() => {
+      if (this.cooldown > 0) {
+        this.cooldown -= 100;
+      } else {
+        clearInterval(id);
+      }
+    }, 200);
+  }
+  
+  canFire() {
+    return this.cooldown === 0;
+  }
+}
+```
+
+**Razumijevanje poboljšane klase Hero:**
+- **Inicijalizira** timer hlađenja na nulu (spremno za pucanje)
+- **Stvara** objekte lasera pozicionirane iznad herojske letjelice
+- **Postavlja** period hlađenja kako bi spriječio prekomjerno pucanje
+- **Smanjuje** timer hlađenja koristeći ažuriranja temeljena na intervalu
+- **Pruža** provjeru statusa pucanja kroz metodu `canFire()`
+
+### Testiranje vaše implementacije
+
+Vaša svemirska igra sada ima kompletan sustav detekcije sudara i mehaniku borbe. 🚀 Testirajte ove nove mogućnosti:
+- **Navigirajte** strelicama kako biste provjerili kontrole kretanja
+- **Pucajte lasere** razmaknicom - primijetite kako sustav hlađenja sprječava prekomjerno klikanje
+- **Promatrajte sudare** kada laseri pogode neprijatelje, pokrećući uklanjanje
+- **Provjerite čišćenje** kako uništeni objekti nestaju iz igre
+
+Uspješno ste implementirali sustav detekcije sudara koristeći iste matematičke principe koji vode navigaciju svemirskih letjelica i robotiku.
+
+## GitHub Copilot Agent izazov 🚀
+
+Koristite Agent način za dovršavanje sljedećeg izazova:
+
+**Opis:** Poboljšajte sustav detekcije sudara implementacijom power-upova koji se nasumično pojavljuju i pružaju privremene sposobnosti kada ih pokupi herojska letjelica.
+
+**Zadatak:** Kreirajte klasu PowerUp koja proširuje GameObject i implementirajte detekciju sudara između heroja i power-upova. Dodajte najmanje dvije vrste power-upova: jedan koji povećava brzinu pucanja (smanjuje hlađenje) i drugi koji stvara privremeni štit. Uključite logiku za stvaranje power-upova u nasumičnim intervalima i pozicijama.
 
 ---
 
@@ -295,7 +447,7 @@ Dodajte eksploziju! Pogledajte resurse igre u [repozitoriju Space Art](../../../
 
 ## Kviz nakon predavanja
 
-[Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/36)
+[Post-predavački kviz](https://ff-quizzes.netlify.app/web/quiz/36)
 
 ## Pregled i samostalno učenje
 
@@ -307,5 +459,5 @@ Eksperimentirajte s intervalima u svojoj igri do sada. Što se događa kada ih p
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakva pogrešna tumačenja ili nesporazume koji proizlaze iz korištenja ovog prijevoda.
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešne interpretacije nastale korištenjem ovog prijevoda.

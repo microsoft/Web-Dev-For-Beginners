@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T11:33:25+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-24T21:54:11+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "ro"
 }
@@ -12,26 +12,32 @@ CO_OP_TRANSLATOR_METADATA:
 ![Bazele JavaScript - Funcții](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.ro.png)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Chestionar înainte de curs
-[Chestionar înainte de curs](https://ff-quizzes.netlify.app)
+## Quiz înainte de lecție
+[Quiz înainte de lecție](https://ff-quizzes.netlify.app)
 
-Când ne gândim la scrierea codului, dorim întotdeauna să ne asigurăm că acesta este ușor de citit. Deși poate suna contraintuitiv, codul este citit de multe ori mai des decât este scris. Un instrument esențial în trusa unui dezvoltator pentru a asigura un cod ușor de întreținut este **funcția**.
+Scrierea aceluiași cod în mod repetat este una dintre cele mai frecvente frustrări ale programării. Funcțiile rezolvă această problemă, permițându-vă să împachetați codul în blocuri reutilizabile. Gândiți-vă la funcții ca la piesele standardizate care au revoluționat linia de asamblare a lui Henry Ford – odată ce creați o componentă fiabilă, o puteți folosi oriunde este nevoie, fără să o reconstruiți de la zero.
+
+Funcțiile vă permit să grupați bucăți de cod pentru a le putea reutiliza în întregul program. În loc să copiați și să lipiți aceeași logică peste tot, puteți crea o funcție o singură dată și să o apelați ori de câte ori este necesar. Această abordare vă ajută să vă organizați codul și face actualizările mult mai ușoare.
+
+În această lecție, veți învăța cum să creați propriile funcții, să transmiteți informații către ele și să obțineți rezultate utile înapoi. Veți descoperi diferența dintre funcții și metode, veți învăța abordări moderne de sintaxă și veți vedea cum funcțiile pot lucra împreună cu alte funcții. Vom construi aceste concepte pas cu pas.
 
 [![Metode și Funcții](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metode și Funcții")
 
-> 🎥 Fă clic pe imaginea de mai sus pentru un videoclip despre metode și funcții.
+> 🎥 Faceți clic pe imaginea de mai sus pentru un videoclip despre metode și funcții.
 
-> Poți parcurge această lecție pe [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
+> Puteți parcurge această lecție pe [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Funcții
 
-În esență, o funcție este un bloc de cod pe care îl putem executa la cerere. Acest lucru este perfect pentru scenariile în care trebuie să efectuăm aceeași sarcină de mai multe ori; în loc să duplicăm logica în mai multe locuri (ceea ce ar face dificilă actualizarea ulterioară), o putem centraliza într-un singur loc și o putem apela ori de câte ori avem nevoie să efectuăm operația - poți chiar să apelezi funcții din alte funcții!
+O funcție este un bloc de cod autonom care îndeplinește o sarcină specifică. Ea încorporează logica pe care o puteți executa ori de câte ori este necesar.
 
-La fel de importantă este și abilitatea de a da un nume unei funcții. Deși poate părea banal, numele oferă o modalitate rapidă de a documenta o secțiune de cod. Poți să te gândești la aceasta ca la o etichetă pe un buton. Dacă fac clic pe un buton pe care scrie „Anulează temporizatorul”, știu că va opri ceasul.
+În loc să scrieți același cod de mai multe ori în programul dvs., îl puteți împacheta într-o funcție și să o apelați ori de câte ori aveți nevoie. Această abordare menține codul curat și face actualizările mult mai ușoare. Gândiți-vă la provocarea de a modifica logica care este răspândită în 20 de locații diferite din codul dvs.
+
+Este esențial să denumiți funcțiile într-un mod descriptiv. O funcție bine denumită comunică clar scopul său – când vedeți `cancelTimer()`, înțelegeți imediat ce face, la fel cum un buton etichetat clar vă spune exact ce se va întâmpla când faceți clic pe el.
 
 ## Crearea și apelarea unei funcții
 
-Sintaxa pentru o funcție arată astfel:
+Să examinăm cum să creăm o funcție. Sintaxa urmează un model consecvent:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Dacă aș dori să creez o funcție pentru a afișa un mesaj de salut, ar putea arăta astfel:
+Să descompunem acest lucru:
+- Cuvântul cheie `function` îi spune JavaScript-ului "Hei, creez o funcție!"
+- `nameOfFunction` este locul unde îi dați funcției un nume descriptiv
+- Parantezele `()` sunt locul unde puteți adăuga parametri (vom ajunge la asta în curând)
+- Acoladele `{}` conțin codul propriu-zis care rulează atunci când apelați funcția
+
+Să creăm o funcție simplă de salut pentru a vedea acest lucru în acțiune:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Ori de câte ori dorim să apelăm (sau să invocăm) funcția noastră, folosim numele funcției urmat de `()`. Merită menționat faptul că funcția noastră poate fi definită înainte sau după ce decidem să o apelăm; compilatorul JavaScript o va găsi pentru tine.
+Această funcție afișează "Hello, world!" în consolă. Odată ce ați definit-o, o puteți folosi de câte ori este necesar.
+
+Pentru a executa (sau "apela") funcția, scrieți numele acesteia urmat de paranteze. JavaScript vă permite să definiți funcția înainte sau după ce o apelați – motorul JavaScript va gestiona ordinea execuției.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Există un tip special de funcție cunoscut sub numele de **metodă**, pe care l-ai folosit deja! De fapt, am văzut acest lucru în demonstrația noastră de mai sus când am folosit `console.log`. Ceea ce face o metodă diferită de o funcție este faptul că o metodă este atașată unui obiect (`console` în exemplul nostru), în timp ce o funcție este independentă. Vei auzi mulți dezvoltatori folosind acești termeni interschimbabil.
+Când rulați această linie, se execută tot codul din funcția `displayGreeting`, afișând "Hello, world!" în consola browserului. Puteți apela această funcție în mod repetat.
+
+> **Notă:** Ați folosit **metode** pe parcursul acestor lecții. `console.log()` este o metodă – practic o funcție care aparține obiectului `console`. Diferența cheie este că metodele sunt atașate obiectelor, în timp ce funcțiile sunt independente. Mulți dezvoltatori folosesc acești termeni interschimbabil în conversațiile informale.
 
 ### Cele mai bune practici pentru funcții
 
-Există câteva bune practici de reținut atunci când creezi funcții:
+Iată câteva sfaturi pentru a vă ajuta să scrieți funcții excelente:
 
-- Ca întotdeauna, folosește nume descriptive pentru a ști ce va face funcția.
-- Folosește **camelCasing** pentru a combina cuvintele.
-- Păstrează funcțiile concentrate pe o sarcină specifică.
+- Dați funcțiilor nume clare și descriptive – viitorul vostru vă va mulțumi!
+- Folosiți **camelCasing** pentru nume compuse din mai multe cuvinte (cum ar fi `calculateTotal` în loc de `calculate_total`)
+- Fiecare funcție să fie concentrată pe realizarea unui singur lucru bine
 
 ## Transmiterea informațiilor către o funcție
 
-Pentru a face o funcție mai reutilizabilă, vei dori adesea să îi transmiți informații. Dacă luăm în considerare exemplul nostru `displayGreeting` de mai sus, acesta va afișa doar **Hello, world!**. Nu este cea mai utilă funcție pe care ai putea să o creezi. Dacă dorim să o facem puțin mai flexibilă, cum ar fi să permitem cuiva să specifice numele persoanei pe care o salutăm, putem adăuga un **parametru**. Un parametru (uneori numit și **argument**) este o informație suplimentară trimisă unei funcții.
+Funcția noastră `displayGreeting` este limitată – poate afișa doar "Hello, world!" pentru toată lumea. Parametrii ne permit să facem funcțiile mai flexibile și mai utile.
 
-Parametrii sunt listați în partea de definiție între paranteze și sunt separați prin virgulă astfel:
+**Parametrii** acționează ca niște locuri rezervate unde puteți introduce valori diferite de fiecare dată când utilizați funcția. În acest fel, aceeași funcție poate lucra cu informații diferite la fiecare apel.
+
+Listați parametrii în interiorul parantezelor atunci când definiți funcția, separând mai mulți parametri cu virgule:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Putem actualiza funcția `displayGreeting` pentru a accepta un nume și a-l afișa.
+Fiecare parametru acționează ca un loc rezervat – când cineva apelează funcția, va furniza valori reale care vor fi introduse în aceste locuri.
+
+Să actualizăm funcția noastră de salut pentru a accepta numele cuiva:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Când dorim să apelăm funcția noastră și să transmitem parametrul, îl specificăm între paranteze.
+Observați cum folosim ghilimele inversate (`` ` ``) și `${}` pentru a introduce numele direct în mesajul nostru – aceasta se numește un literal de șablon și este o modalitate foarte utilă de a construi șiruri de caractere cu variabile amestecate.
+
+Acum, când apelăm funcția, putem transmite orice nume:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
+JavaScript ia șirul `'Christopher'`, îl atribuie parametrului `name` și creează mesajul personalizat "Hello, Christopher!"
+
 ## Valori implicite
 
-Putem face funcția noastră și mai flexibilă adăugând mai mulți parametri. Dar ce se întâmplă dacă nu dorim să fie necesar să specificăm fiecare valoare? Continuând cu exemplul nostru de salut, am putea lăsa numele ca fiind obligatoriu (trebuie să știm pe cine salutăm), dar dorim să permitem personalizarea salutului, dacă se dorește. Dacă cineva nu dorește să-l personalizeze, oferim o valoare implicită. Pentru a oferi o valoare implicită unui parametru, o setăm în același mod în care setăm o valoare pentru o variabilă - `parameterName = 'defaultValue'`. Pentru a vedea un exemplu complet:
+Ce se întâmplă dacă dorim să facem unii parametri opționali? Aici intervin valorile implicite!
+
+Să presupunem că dorim ca oamenii să poată personaliza cuvântul de salut, dar dacă nu specifică unul, vom folosi "Hello" ca opțiune implicită. Puteți seta valori implicite folosind semnul egal, la fel ca atunci când setați o variabilă:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Când apelăm funcția, putem decide dacă dorim să setăm o valoare pentru `salutation`.
+Aici, `name` este încă necesar, dar `salutation` are o valoare de rezervă `'Hello'` dacă nimeni nu oferă un alt salut.
+
+Acum putem apela această funcție în două moduri diferite:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
+În primul apel, JavaScript folosește implicit "Hello", deoarece nu am specificat un salut. În al doilea apel, folosește "Hi", personalizat de noi. Această flexibilitate face funcțiile adaptabile la diferite scenarii.
+
 ## Valori returnate
 
-Până acum, funcția pe care am construit-o va afișa întotdeauna rezultatul în [consolă](https://developer.mozilla.org/docs/Web/API/console). Uneori, acest lucru poate fi exact ceea ce căutăm, mai ales când creăm funcții care vor apela alte servicii. Dar ce se întâmplă dacă vreau să creez o funcție ajutătoare pentru a efectua un calcul și să returnez valoarea astfel încât să o pot folosi în altă parte?
+Funcțiile noastre de până acum doar au afișat mesaje în consolă, dar ce se întâmplă dacă doriți ca o funcție să calculeze ceva și să vă dea rezultatul înapoi?
 
-Putem face acest lucru folosind o **valoare returnată**. O valoare returnată este oferită de funcție și poate fi stocată într-o variabilă la fel cum am putea stoca o valoare literală, cum ar fi un șir sau un număr.
+Aici intervin **valorile returnate**. În loc să afișeze ceva, o funcție poate să vă înapoieze o valoare pe care o puteți stoca într-o variabilă sau folosi în alte părți ale codului.
 
-Dacă o funcție returnează ceva, atunci se folosește cuvântul cheie `return`. Cuvântul cheie `return` așteaptă o valoare sau o referință a ceea ce este returnat astfel:
+Pentru a trimite o valoare înapoi, folosiți cuvântul cheie `return` urmat de ceea ce doriți să returnați:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Am putea crea o funcție pentru a crea un mesaj de salut și a returna valoarea apelantului.
+Iată ceva important: când o funcție ajunge la o instrucțiune `return`, se oprește imediat din rulare și trimite acea valoare înapoi celui care a apelat-o.
+
+Să modificăm funcția noastră de salut pentru a returna mesajul în loc să-l afișeze:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Când apelăm această funcție, vom stoca valoarea într-o variabilă. Acest lucru este foarte asemănător cu modul în care am seta o variabilă la o valoare statică (cum ar fi `const name = 'Christopher'`).
+Acum, în loc să afișeze salutul, această funcție creează mesajul și ni-l înapoiază.
+
+Pentru a folosi valoarea returnată, o putem stoca într-o variabilă, la fel ca orice altă valoare:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
-## Funcții ca parametri pentru alte funcții
+Acum `greetingMessage` conține "Hello, Christopher" și îl putem folosi oriunde în codul nostru – pentru a-l afișa pe o pagină web, a-l include într-un e-mail sau a-l transmite unei alte funcții.
 
-Pe măsură ce avansezi în cariera ta de programator, vei întâlni funcții care acceptă alte funcții ca parametri. Acest truc util este folosit frecvent atunci când nu știm când ceva se va întâmpla sau se va finaliza, dar știm că trebuie să efectuăm o operație ca răspuns.
+## Funcții ca parametri pentru funcții
 
-De exemplu, consideră [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), care pornește un temporizator și va executa codul când acesta se finalizează. Trebuie să îi spunem ce cod dorim să executăm. Sună ca o sarcină perfectă pentru o funcție!
+Funcțiile pot fi transmise ca parametri altor funcții. Deși acest concept poate părea complex la început, este o caracteristică puternică ce permite modele flexibile de programare.
 
-Dacă rulezi codul de mai jos, după 3 secunde vei vedea mesajul **3 seconds has elapsed**.
+Acest model este foarte comun atunci când doriți să spuneți "când se întâmplă ceva, execută acest alt lucru". De exemplu, "când cronometrul se termină, rulează acest cod" sau "când utilizatorul face clic pe buton, apelează această funcție."
+
+Să analizăm `setTimeout`, care este o funcție încorporată ce așteaptă o anumită perioadă de timp și apoi rulează un cod. Trebuie să îi spunem ce cod să ruleze – un caz perfect pentru transmiterea unei funcții!
+
+Încercați acest cod – după 3 secunde, veți vedea un mesaj:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
+Observați cum transmitem `displayDone` (fără paranteze) către `setTimeout`. Nu apelăm funcția noi înșine – o predăm lui `setTimeout` și spunem "apelează aceasta în 3 secunde."
+
 ### Funcții anonime
 
-Să analizăm din nou ce am construit. Creăm o funcție cu un nume care va fi folosit o singură dată. Pe măsură ce aplicația noastră devine mai complexă, ne putem imagina că vom crea multe funcții care vor fi apelate doar o dată. Acest lucru nu este ideal. După cum se dovedește, nu trebuie întotdeauna să oferim un nume!
+Uneori aveți nevoie de o funcție doar pentru un singur lucru și nu doriți să îi dați un nume. Gândiți-vă – dacă folosiți o funcție doar o dată, de ce să vă aglomerați codul cu un nume suplimentar?
 
-Când transmitem o funcție ca parametru, putem evita să o creăm în avans și, în schimb, să o construim ca parte a parametrului. Folosim același cuvânt cheie `function`, dar o construim direct ca parametru.
+JavaScript vă permite să creați **funcții anonime** – funcții fără nume pe care le puteți defini exact acolo unde aveți nevoie.
 
-Să rescriem codul de mai sus pentru a folosi o funcție anonimă:
+Iată cum putem rescrie exemplul nostru cu cronometrul folosind o funcție anonimă:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Dacă rulezi noul nostru cod, vei observa că obținem aceleași rezultate. Am creat o funcție, dar nu a trebuit să îi dăm un nume!
+Acest lucru obține același rezultat, dar funcția este definită direct în apelul `setTimeout`, eliminând necesitatea unei declarații separate a funcției.
 
-### Funcții săgeată (Fat arrow functions)
+### Funcții săgeată
 
-Un scurtcircuit comun în multe limbaje de programare (inclusiv JavaScript) este abilitatea de a folosi ceea ce se numește o funcție **săgeată** sau **fat arrow**. Aceasta folosește un indicator special `=>`, care arată ca o săgeată - de aici și numele! Prin utilizarea `=>`, putem sărim peste cuvântul cheie `function`.
+JavaScript modern are o modalitate și mai scurtă de a scrie funcții, numită **funcții săgeată**. Acestea folosesc `=>` (care arată ca o săgeată – nu-i așa?) și sunt foarte populare printre dezvoltatori.
 
-Să rescriem codul nostru încă o dată pentru a folosi o funcție săgeată:
+Funcțiile săgeată vă permit să săriți peste cuvântul cheie `function` și să scrieți cod mai concis.
+
+Iată exemplul nostru cu cronometrul folosind o funcție săgeată:
 
 ```javascript
 setTimeout(() => {
@@ -183,22 +225,41 @@ setTimeout(() => {
 }, 3000);
 ```
 
-### Când să folosești fiecare strategie
+Parantezele `()` sunt locul unde ar merge parametrii (goale în acest caz), apoi urmează săgeata `=>`, și în final corpul funcției în acolade. Acest lucru oferă aceeași funcționalitate cu o sintaxă mai concisă.
 
-Acum ai văzut că avem trei moduri de a transmite o funcție ca parametru și te-ai putea întreba când să folosești fiecare. Dacă știi că vei folosi funcția de mai multe ori, creeaz-o în mod normal. Dacă o vei folosi doar într-o singură locație, în general este mai bine să folosești o funcție anonimă. Dacă folosești o funcție săgeată sau sintaxa mai tradițională `function` depinde de tine, dar vei observa că majoritatea dezvoltatorilor moderni preferă `=>`.
+### Când să folosiți fiecare strategie
+
+Când ar trebui să folosiți fiecare abordare? O regulă practică: dacă veți folosi funcția de mai multe ori, dați-i un nume și definiți-o separat. Dacă este pentru o utilizare specifică, luați în considerare o funcție anonimă. Atât funcțiile săgeată, cât și sintaxa tradițională sunt alegeri valabile, deși funcțiile săgeată sunt predominante în bazele de cod moderne.
 
 ---
 
+
+
 ## 🚀 Provocare
 
-Poți explica într-o singură propoziție diferența dintre funcții și metode? Încearcă!
+Puteți explica într-o propoziție diferența dintre funcții și metode? Încercați!
 
-## Chestionar după curs
-[Chestionar după curs](https://ff-quizzes.netlify.app)
+## Provocarea Agentului GitHub Copilot 🚀
 
-## Recapitulare și Studiu Individual
+Utilizați modul Agent pentru a finaliza următoarea provocare:
 
-Merită să [citești mai multe despre funcțiile săgeată](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), deoarece sunt din ce în ce mai utilizate în codurile existente. Exersează scrierea unei funcții, apoi rescrierea acesteia folosind această sintaxă.
+**Descriere:** Creați o bibliotecă de utilități matematice care demonstrează diferite concepte de funcții acoperite în această lecție, inclusiv parametri, valori implicite, valori returnate și funcții săgeată.
+
+**Cerere:** Creați un fișier JavaScript numit `mathUtils.js` care să conțină următoarele funcții:
+1. O funcție `add` care primește doi parametri și returnează suma lor
+2. O funcție `multiply` cu valori implicite pentru parametri (al doilea parametru are valoarea implicită 1)
+3. O funcție săgeată `square` care primește un număr și returnează pătratul acestuia
+4. O funcție `calculate` care acceptă o altă funcție ca parametru și două numere, apoi aplică funcția acestor numere
+5. Demonstrați apelarea fiecărei funcții cu cazuri de testare adecvate
+
+Aflați mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
+
+## Quiz după lecție
+[Quiz după lecție](https://ff-quizzes.netlify.app)
+
+## Recapitulare și studiu individual
+
+Merită [să citiți puțin mai mult despre funcțiile săgeată](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), deoarece sunt din ce în ce mai utilizate în bazele de cod. Exersați scrierea unei funcții, apoi rescrierea acesteia cu această sintaxă.
 
 ## Temă
 
@@ -206,5 +267,5 @@ Merită să [citești mai multe despre funcțiile săgeată](https://developer.m
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

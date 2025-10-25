@@ -1,76 +1,106 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T11:30:42+00:00",
+  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
+  "translation_date": "2025-10-24T22:15:58+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "ro"
 }
 -->
 # Construiește un Joc Spațial Partea 3: Adăugarea Mișcării
 
-## Chestionar Pre-Lecție
+Gândește-te la jocurile tale preferate – ceea ce le face captivante nu sunt doar grafica frumoasă, ci modul în care totul se mișcă și răspunde la acțiunile tale. În acest moment, jocul tău spațial este ca o pictură frumoasă, dar suntem pe cale să adăugăm mișcare care să-l aducă la viață.
 
-[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/33)
+Când inginerii NASA au programat computerul de ghidare pentru misiunile Apollo, s-au confruntat cu o provocare similară: cum faci ca o navă spațială să răspundă la comenzile pilotului, menținând în același timp corecțiile automate de curs? Principiile pe care le vom învăța astăzi reflectă aceleași concepte – gestionarea mișcării controlate de jucător alături de comportamentele automate ale sistemului.
 
-Jocurile nu sunt prea distractive până când nu ai extratereștri care se mișcă pe ecran! În acest joc, vom folosi două tipuri de mișcări:
+În această lecție, vei învăța cum să faci navele spațiale să alunece pe ecran, să răspundă la comenzile jucătorului și să creezi modele de mișcare fluide. Vom împărți totul în concepte gestionabile care se construiesc în mod natural unul pe celălalt.
 
-- **Mișcare prin tastatură/mouse**: când utilizatorul interacționează cu tastatura sau mouse-ul pentru a muta un obiect pe ecran.
-- **Mișcare indusă de joc**: când jocul mută un obiect la un anumit interval de timp.
+La final, jucătorii vor putea să-și piloteze nava erou pe ecran, în timp ce navele inamice patrulează deasupra. Mai important, vei înțelege principiile de bază care stau la baza sistemelor de mișcare din jocuri.
 
-Deci, cum mutăm lucrurile pe un ecran? Totul se bazează pe coordonatele carteziene: schimbăm locația (x, y) a obiectului și apoi redesenăm ecranul.
+## Test înainte de lecție
 
-De obicei, ai nevoie de următorii pași pentru a realiza *mișcarea* pe un ecran:
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/33)
 
-1. **Setează o locație nouă** pentru un obiect; acest lucru este necesar pentru a percepe obiectul ca fiind mutat.
-2. **Curăță ecranul**, ecranul trebuie curățat între desene. Putem face acest lucru desenând un dreptunghi pe care îl umplem cu o culoare de fundal.
-3. **Redesenează obiectul** la noua locație. Procedând astfel, reușim în cele din urmă să mutăm obiectul dintr-o locație în alta.
+## Înțelegerea mișcării în jocuri
+
+Jocurile prind viață atunci când lucrurile încep să se miște, iar în mod fundamental există două moduri prin care se întâmplă acest lucru:
+
+- **Mișcare controlată de jucător**: Când apeși o tastă sau dai clic pe mouse, ceva se mișcă. Aceasta este conexiunea directă între tine și lumea jocului.
+- **Mișcare automată**: Când jocul însuși decide să miște lucrurile – cum ar fi acele nave inamice care trebuie să patruleze pe ecran, indiferent dacă faci ceva sau nu.
+
+A face obiectele să se miște pe un ecran de computer este mai simplu decât ai putea crede. Îți amintești de coordonatele x și y de la ora de matematică? Exact cu asta lucrăm aici. Când Galileo a urmărit lunile lui Jupiter în 1610, practic făcea același lucru – trasa poziții în timp pentru a înțelege modelele de mișcare.
+
+Mișcarea obiectelor pe ecran este ca și cum ai crea o animație de tip flipbook – trebuie să urmezi acești trei pași simpli:
+
+1. **Actualizează poziția** – Schimbă locul unde ar trebui să fie obiectul (poate mută-l 5 pixeli spre dreapta)
+2. **Șterge cadrul vechi** – Curăță ecranul astfel încât să nu vezi urme fantomatice peste tot
+3. **Desenează cadrul nou** – Plasează obiectul în noua sa poziție
+
+Fă acest lucru suficient de rapid și boom! Ai o mișcare fluidă care se simte natural pentru jucători.
 
 Iată cum poate arăta acest lucru în cod:
 
 ```javascript
-//set the hero's location
+// Set the hero's location
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Clear the rectangle that hosts the hero
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Redraw the game background and hero
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Te poți gândi la un motiv pentru care redesenarea eroului de mai multe cadre pe secundă ar putea genera costuri de performanță? Citește despre [alternative la acest model](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+**Ce face acest cod:**
+- **Actualizează** coordonata x a eroului cu 5 pixeli pentru a-l mișca orizontal
+- **Șterge** întreaga zonă a canvas-ului pentru a elimina cadrul anterior
+- **Umple** canvas-ul cu o culoare de fundal neagră
+- **Redesenează** imaginea eroului în noua sa poziție
+
+✅ Poți să te gândești la un motiv pentru care redesenarea eroului de mai multe ori pe secundă ar putea genera costuri de performanță? Citește despre [alternative la acest model](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Gestionarea evenimentelor de tastatură
 
-Gestionezi evenimentele atașând evenimente specifice la cod. Evenimentele de tastatură sunt declanșate pe întreaga fereastră, în timp ce evenimentele de mouse, cum ar fi un `click`, pot fi conectate la clicul pe un element specific. Vom folosi evenimente de tastatură pe tot parcursul acestui proiect.
+Aici conectăm input-ul jucătorului la acțiunea din joc. Când cineva apasă bara de spațiu pentru a trage un laser sau apasă o săgeată pentru a evita un asteroid, jocul tău trebuie să detecteze și să răspundă la acel input.
 
-Pentru a gestiona un eveniment, trebuie să folosești metoda `addEventListener()` a ferestrei și să îi furnizezi doi parametri de intrare. Primul parametru este numele evenimentului, de exemplu `keyup`. Al doilea parametru este funcția care ar trebui să fie invocată ca rezultat al producerii evenimentului.
+Evenimentele de tastatură se întâmplă la nivelul ferestrei, ceea ce înseamnă că întreaga fereastră a browserului ascultă acele apăsări de taste. Click-urile de mouse, pe de altă parte, pot fi legate de elemente specifice (cum ar fi clicul pe un buton). Pentru jocul nostru spațial, ne vom concentra pe controalele de tastatură, deoarece acestea oferă jucătorilor acea senzație clasică de arcade.
+
+Acest lucru îmi amintește de cum operatorii de telegraf din anii 1800 trebuiau să traducă input-ul codului Morse în mesaje semnificative – facem ceva similar, traducând apăsările de taste în comenzi pentru joc.
+
+Pentru a gestiona un eveniment, trebuie să folosești metoda `addEventListener()` a ferestrei și să îi oferi doi parametri de intrare. Primul parametru este numele evenimentului, de exemplu `keyup`. Al doilea parametru este funcția care ar trebui să fie invocată ca urmare a producerii evenimentului.
 
 Iată un exemplu:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = string representation of the key
   if (evt.key === 'ArrowUp') {
     // do something
   }
-})
+});
 ```
 
-Pentru evenimentele de tastatură, există două proprietăți pe eveniment pe care le poți folosi pentru a vedea ce tastă a fost apăsată:
+**Ce se întâmplă aici:**
+- **Ascultă** evenimentele de tastatură pe întreaga fereastră
+- **Capturează** obiectul evenimentului care conține informații despre ce tastă a fost apăsată
+- **Verifică** dacă tasta apăsată corespunde unei taste specifice (în acest caz, săgeata sus)
+- **Execută** codul atunci când condiția este îndeplinită
 
-- `key`, aceasta este o reprezentare sub formă de șir a tastei apăsate, de exemplu `ArrowUp`.
-- `keyCode`, aceasta este o reprezentare numerică, de exemplu `37`, care corespunde cu `ArrowLeft`.
+Pentru evenimentele de tastatură, există două proprietăți pe obiectul evenimentului pe care le poți folosi pentru a vedea ce tastă a fost apăsată:
+
+- `key` - aceasta este o reprezentare sub formă de șir a tastei apăsate, de exemplu `'ArrowUp'`
+- `keyCode` - aceasta este o reprezentare numerică, de exemplu `37`, corespunde cu `ArrowLeft`
 
 ✅ Manipularea evenimentelor de tastatură este utilă și în afara dezvoltării de jocuri. La ce alte utilizări te poți gândi pentru această tehnică?
 
-### Taste speciale: un avertisment
+### Taste speciale: un avertisment!
 
-Există unele taste *speciale* care afectează fereastra. Asta înseamnă că, dacă asculți un eveniment `keyup` și folosești aceste taste speciale pentru a muta eroul, se va efectua și o derulare orizontală. Din acest motiv, s-ar putea să vrei să *dezactivezi* acest comportament implicit al browserului pe măsură ce îți construiești jocul. Ai nevoie de un cod ca acesta:
+Unele taste au comportamente încorporate în browser care pot interfera cu jocul tău. Tastele săgeți derulează pagina, iar bara de spațiu sare în jos – comportamente pe care nu le dorești atunci când cineva încearcă să-și piloteze nava spațială.
+
+Putem preveni aceste comportamente implicite și să lăsăm jocul nostru să gestioneze input-ul în schimb. Acest lucru este similar cu modul în care primii programatori de computere trebuiau să suprascrie întreruperile sistemului pentru a crea comportamente personalizate – doar că noi facem acest lucru la nivelul browserului. Iată cum:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
@@ -88,27 +118,43 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Codul de mai sus va asigura că tastele săgeți și tasta spațiu au comportamentul *implicit* dezactivat. Mecanismul de *dezactivare* are loc atunci când apelăm `e.preventDefault()`.
+**Înțelegerea acestui cod de prevenire:**
+- **Verifică** codurile de taste specifice care ar putea cauza comportamente nedorite ale browserului
+- **Previne** acțiunea implicită a browserului pentru tastele săgeți și bara de spațiu
+- **Permite** altor taste să funcționeze normal
+- **Folosește** `e.preventDefault()` pentru a opri comportamentul încorporat al browserului
 
-## Mișcare indusă de joc
+## Mișcarea indusă de joc
 
-Putem face lucrurile să se miște singure folosind temporizatoare, cum ar fi funcțiile `setTimeout()` sau `setInterval()`, care actualizează locația obiectului la fiecare tic sau interval de timp. Iată cum poate arăta acest lucru:
+Acum să vorbim despre obiectele care se mișcă fără input-ul jucătorului. Gândește-te la navele inamice care se deplasează pe ecran, gloanțele care zboară în linii drepte sau norii care se deplasează în fundal. Această mișcare autonomă face ca lumea jocului să pară vie, chiar și atunci când nimeni nu atinge controalele.
+
+Folosim temporizatoarele încorporate ale JavaScript pentru a actualiza pozițiile la intervale regulate. Acest concept este similar cu modul în care funcționează ceasurile cu pendul – un mecanism regulat care declanșează acțiuni consistente, temporizate. Iată cât de simplu poate fi:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Move the enemy on the y axis
   enemy.y += 10;
-})
+}, 100);
 ```
+
+**Ce face acest cod de mișcare:**
+- **Creează** un temporizator care rulează la fiecare 100 de milisecunde
+- **Actualizează** coordonata y a inamicului cu 10 pixeli de fiecare dată
+- **Stochează** ID-ul intervalului pentru a-l putea opri mai târziu, dacă este necesar
+- **Mută** inamicul în jos pe ecran automat
 
 ## Bucla jocului
 
-Bucla jocului este un concept care reprezintă, în esență, o funcție care este invocată la intervale regulate. Se numește bucla jocului deoarece tot ceea ce ar trebui să fie vizibil pentru utilizator este desenat în cadrul buclei. Bucla jocului folosește toate obiectele de joc care fac parte din joc, desenându-le pe toate, cu excepția cazului în care, dintr-un motiv anume, nu mai fac parte din joc. De exemplu, dacă un obiect este un inamic care a fost lovit de un laser și explodează, nu mai face parte din bucla curentă a jocului (vei învăța mai multe despre acest lucru în lecțiile următoare).
+Iată conceptul care leagă totul – bucla jocului. Dacă jocul tău ar fi un film, bucla jocului ar fi proiectorul de film, arătând cadru după cadru atât de rapid încât totul pare să se miște lin.
 
-Iată cum poate arăta o buclă de joc, exprimată în cod:
+Fiecare joc are una dintre aceste bucle care rulează în fundal. Este o funcție care actualizează toate obiectele din joc, redesenează ecranul și repetă acest proces continuu. Aceasta ține evidența eroului tău, a tuturor inamicilor, a oricăror lasere care zboară – întregul stadiu al jocului.
+
+Acest concept îmi amintește de modul în care primii animatori de film, precum Walt Disney, trebuiau să redeseneze personajele cadru cu cadru pentru a crea iluzia mișcării. Facem același lucru, doar că folosim cod în loc de creioane.
+
+Iată cum arată de obicei o buclă de joc, exprimată în cod:
 
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,17 +162,29 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-Bucla de mai sus este invocată la fiecare `200` de milisecunde pentru a redesena canvas-ul. Ai posibilitatea să alegi cel mai bun interval care are sens pentru jocul tău.
+**Înțelegerea structurii buclei jocului:**
+- **Șterge** întreaga zonă a canvas-ului pentru a elimina cadrul anterior
+- **Umple** fundalul cu o culoare solidă
+- **Desenează** toate obiectele jocului în pozițiile lor curente
+- **Repetă** acest proces la fiecare 200 de milisecunde pentru a crea o animație fluidă
+- **Gestionează** rata cadrelor prin controlul intervalului de timp
 
 ## Continuarea Jocului Spațial
 
-Vei lua codul existent și îl vei extinde. Poți începe fie cu codul pe care l-ai finalizat în partea I, fie cu codul din [Partea II - starter](../../../../6-space-game/3-moving-elements-around/your-work).
+Acum vom adăuga mișcare scenei statice pe care ai construit-o anterior. Vom transforma aceasta dintr-un screenshot într-o experiență interactivă. Vom parcurge acest proces pas cu pas pentru a ne asigura că fiecare piesă se construiește pe cea anterioară.
 
-- **Mutarea eroului**: vei adăuga cod pentru a te asigura că poți muta eroul folosind tastele săgeți.
-- **Mutarea inamicilor**: va trebui, de asemenea, să adaugi cod pentru a te asigura că inamicii se mișcă de sus în jos la un anumit ritm.
+Ia codul de unde am rămas în lecția anterioară (sau începe cu codul din folderul [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work) dacă ai nevoie de un început proaspăt).
+
+**Iată ce construim astăzi:**
+- **Controale pentru erou**: Tastele săgeți vor pilota nava ta spațială pe ecran
+- **Mișcarea inamicilor**: Aceste nave extraterestre vor începe să avanseze
+
+Să începem implementarea acestor funcționalități.
 
 ## Pași recomandați
 
@@ -141,25 +199,29 @@ Găsește fișierele care au fost create pentru tine în subfolderul `your-work`
 -| package.json
 ```
 
-Îți începi proiectul în folderul `your_work` tastând:
+Începe proiectul tău în folderul `your-work` tastând:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă; în acest moment ar trebui să afișeze eroul și toți inamicii; nimic nu se mișcă - încă!
+**Ce face această comandă:**
+- **Navighează** către directorul proiectului tău
+- **Pornește** un server HTTP la adresa `http://localhost:5000`
+- **Servește** fișierele jocului tău astfel încât să le poți testa într-un browser
+
+Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă, acum ar trebui să afișeze eroul și toți inamicii; nimic nu se mișcă – încă!
 
 ### Adaugă cod
 
-1. **Adaugă obiecte dedicate** pentru `hero`, `enemy` și `game object`, acestea ar trebui să aibă proprietăți `x` și `y`. (Amintește-ți secțiunea despre [Moștenire sau compoziție](../README.md)).
+1. **Adaugă obiecte dedicate** pentru `hero`, `enemy` și `game object`, acestea ar trebui să aibă proprietăți `x` și `y`. (Amintește-ți porțiunea despre [Moștenire sau compoziție](../README.md)).
 
-   *INDICIU*: `game object` ar trebui să fie cel care are `x` și `y` și abilitatea de a se desena pe un canvas.
+   *INDICAȚIE* `game object` ar trebui să fie cel care are `x` și `y` și abilitatea de a se desena pe un canvas.
 
-   >sfat: începe prin a adăuga o nouă clasă GameObject cu constructorul său definit astfel, apoi desenează-l pe canvas:
-  
+   > **Sfat**: Începe prin a adăuga o nouă clasă `GameObject` cu constructorul său definit astfel, și apoi desenează-l pe canvas:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +239,22 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
     }
     ```
 
-    Acum, extinde acest GameObject pentru a crea Hero și Enemy.
+    **Înțelegerea acestei clase de bază:**
+    - **Definește** proprietăți comune pe care toate obiectele jocului le împărtășesc (poziție, dimensiune, imagine)
+    - **Include** un indicator `dead` pentru a urmări dacă obiectul ar trebui eliminat
+    - **Oferă** o metodă `draw()` care redă obiectul pe canvas
+    - **Setează** valori implicite pentru toate proprietățile pe care clasele copil le pot suprascrie
+
+    Acum, extinde acest `GameObject` pentru a crea `Hero` și `Enemy`:
     
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,129 +263,152 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Adaugă gestionari de evenimente pentru taste** pentru a gestiona navigarea cu tastele (mută eroul sus/jos/stânga/dreapta).
+    **Concepte cheie în aceste clase:**
+    - **Moștenește** de la `GameObject` folosind cuvântul cheie `extends`
+    - **Apelează** constructorul părinte cu `super(x, y)`
+    - **Setează** dimensiuni și proprietăți specifice pentru fiecare tip de obiect
+    - **Implementează** mișcarea automată pentru inamici folosind `setInterval()`
 
-   *AMINTEȘTE-ȚI*: este un sistem cartezian, colțul din stânga sus este `0,0`. De asemenea, amintește-ți să adaugi cod pentru a opri *comportamentul implicit*.
+2. **Adaugă gestionare de evenimente pentru taste** pentru a gestiona navigarea cu tastele (mută eroul sus/jos, stânga/dreapta)
 
-   >sfat: creează funcția ta onKeyDown și atașeaz-o la fereastră:
+   *AMINTEȘTE-ȚI* că este un sistem cartezian, colțul din stânga sus este `0,0`. De asemenea, amintește-ți să adaugi cod pentru a opri *comportamentul implicit*.
+
+   > **Sfat**: Creează funcția ta `onKeyDown` și atașeaz-o la fereastră:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Add the code from the lesson above to stop default behavior
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Arrow keys
+       case 32:
+         e.preventDefault();
+         break; // Space
+       default:
+         break; // do not block other keys
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Verifică consola browserului în acest moment și urmărește tastele apăsate care sunt înregistrate.
+   **Ce face acest handler de evenimente:**
+   - **Ascultă** evenimentele de apăsare a tastelor pe întreaga fereastră
+   - **Loghează** codul tastei pentru a te ajuta să depanezi ce taste sunt apăsate
+   - **Previne** comportamentul implicit al browserului pentru tastele săgeți și bara de spațiu
+   - **Permite** altor taste să funcționeze normal
+   
+   Verifică consola browserului în acest moment și urmărește apăsările de taste care sunt logate. 
 
-3. **Implementează** [Modelul Pub-Sub](../README.md), acest lucru va menține codul tău curat pe măsură ce urmezi părțile rămase.
+3. **Implementează** [Modelul Pub-Sub](../README.md), acesta va menține codul tău curat pe măsură ce urmezi părțile rămase.
+
+   Modelul Publish-Subscribe ajută la organizarea codului tău prin separarea detectării evenimentelor de gestionarea acestora. Acest lucru face codul mai modular și mai ușor de întreținut.
 
    Pentru a face această ultimă parte, poți:
 
    1. **Adaugă un ascultător de evenimente** pe fereastră:
 
        ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
+       window.addEventListener("keyup", (evt) => {
+         if (evt.key === "ArrowUp") {
+           eventEmitter.emit(Messages.KEY_EVENT_UP);
+         } else if (evt.key === "ArrowDown") {
+           eventEmitter.emit(Messages.KEY_EVENT_DOWN);
+         } else if (evt.key === "ArrowLeft") {
+           eventEmitter.emit(Messages.KEY_EVENT_LEFT);
+         } else if (evt.key === "ArrowRight") {
+           eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
+         }
+       });
+       ```
 
-    1. **Creează o clasă EventEmitter** pentru a publica și a te abona la mesaje:
+   **Ce face acest sistem de evenimente:**
+   - **Detectează** input-ul de la tastatură și îl convertește în evenimente personalizate ale jocului
+   - **Separă** detectarea input-ului de logica jocului
+   - **Face** ușoară schimbarea controalelor mai târziu fără a afecta codul jocului
+   - **Permite** mai multor sisteme să răspundă la același input
 
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
+   2. **Creează o clasă EventEmitter** pentru a publica și a subscrie la mesaje:
 
-    1. **Adaugă constante** și configurează EventEmitter:
+       ```javascript
+       class EventEmitter {
+         constructor() {
+           this.listeners = {};
+         }
+       
+         on(message, listener) {
+           if (!this.listeners[message]) {
+             this.listeners[message] = [];
+           }
+           this.listeners[message].push(listener);
+         }
+       
+   3. **Adaugă constante** și configurează EventEmitter-ul:
 
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
+       ```javascript
+       const Messages = {
+         KEY_EVENT_UP: "KEY_EVENT_UP",
+         KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
+         KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
+         KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
+       };
+       
+       let heroImg, 
+           enemyImg, 
+           laserImg,
+           canvas, ctx, 
+           gameObjects = [], 
+           hero, 
+           eventEmitter = new EventEmitter();
+       ```
 
-    1. **Inițializează jocul**
+   **Înțelegerea configurării:**
+   - **Definește** constante de mesaje pentru a evita greșelile de scriere și pentru a face refactorizarea mai ușoară
+   - **Declară** variabile pentru imagini, contextul canvas-ului și starea jocului
+   - **Creează** un emitter global de evenimente pentru sistemul pub-sub
+   - **Inițializează** un array pentru a ține toate obiectele jocului
 
-    ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
-    
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
-    
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
-    }
-    ```
+   4. **Inițializează jocul**
 
-1. **Configurează bucla jocului**
+       ```javascript
+       function initGame() {
+         gameObjects = [];
+         createEnemies();
+         createHero();
+       
+         eventEmitter.on(Messages.KEY_EVENT_UP, () => {
+           hero.y -= 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
+           hero.y += 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
+           hero.x -= 5;
+         });
+       
+4. **Configurează bucla jocului**
 
-   Refactorizează funcția window.onload pentru a inițializa jocul și a configura o buclă de joc la un interval potrivit. Vei adăuga, de asemenea, o rază laser:
+   Refactorizează funcția `window.onload` pentru a inițializa jocul și a configura o buclă de joc la un interval bun. Vei adăuga și o rază laser:
 
     ```javascript
     window.onload = async () => {
@@ -324,38 +419,60 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
       laserImg = await loadTexture("assets/laserRed.png");
     
       initGame();
-      let gameLoopId = setInterval(() => {
+      const gameLoopId = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawGameObjects(ctx);
-      }, 100)
-      
+      }, 100);
     };
     ```
 
-5. **Adaugă cod** pentru a muta inamicii la un anumit interval.
+   **Înțelegerea configurării jocului:**
+   - **Așteaptă** ca pagina să se încarce complet înainte de a începe
+   - **Obține** elementul canvas și contextul său de redare 2D
+   - **Încarcă** toate resursele de imagine asincron folosind
+- **Creează** o grilă de inamici folosind bucle imbricate  
+- **Atribuie** imaginea inamicului fiecărui obiect inamic  
+- **Adaugă** fiecare inamic în array-ul global de obiecte ale jocului  
 
-    Refactorizează funcția `createEnemies()` pentru a crea inamicii și a-i adăuga în noua clasă gameObjects:
+și adaugă o funcție `createHero()` pentru a realiza un proces similar pentru erou.  
 
     ```javascript
-    function createEnemies() {
-      const MONSTER_TOTAL = 5;
-      const MONSTER_WIDTH = MONSTER_TOTAL * 98;
-      const START_X = (canvas.width - MONSTER_WIDTH) / 2;
-      const STOP_X = START_X + MONSTER_WIDTH;
-    
-      for (let x = START_X; x < STOP_X; x += 98) {
-        for (let y = 0; y < 50 * 5; y += 50) {
-          const enemy = new Enemy(x, y);
-          enemy.img = enemyImg;
-          gameObjects.push(enemy);
-        }
-      }
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
     }
     ```
+  
+**Ce face crearea eroului:**  
+- **Poziționează** eroul în centrul de jos al ecranului  
+- **Atribuie** imaginea eroului obiectului erou  
+- **Adaugă** eroul în array-ul de obiecte ale jocului pentru redare  
+
+și, în final, adaugă o funcție `drawGameObjects()` pentru a începe desenarea:  
+
+    ```javascript
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
+    }
+    ```
+  
+**Înțelegerea funcției de desenare:**  
+- **Iterează** prin toate obiectele jocului din array  
+- **Apelează** metoda `draw()` pentru fiecare obiect  
+- **Transmite** contextul canvas-ului astfel încât obiectele să se poată reda singure  
+
+Inamicii tăi ar trebui să înceapă să avanseze spre nava spațială a eroului tău!  
+}  
+}  
+    ```
     
-    și adaugă o funcție `createHero()` pentru a face un proces similar pentru erou.
+    and add a `createHero()` function to do a similar process for the hero.
     
     ```javascript
     function createHero() {
@@ -367,36 +484,68 @@ Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. De
       gameObjects.push(hero);
     }
     ```
-
-    și, în final, adaugă o funcție `drawGameObjects()` pentru a începe desenarea:
+  
+și, în final, adaugă o funcție `drawGameObjects()` pentru a începe desenarea:  
 
     ```javascript
     function drawGameObjects(ctx) {
       gameObjects.forEach(go => go.draw(ctx));
     }
     ```
-
-    Inamicii tăi ar trebui să înceapă să avanseze spre nava ta spațială!
-
----
-
-## 🚀 Provocare
-
-După cum poți vedea, codul tău poate deveni un „cod spaghetti” atunci când începi să adaugi funcții, variabile și clase. Cum îți poți organiza mai bine codul astfel încât să fie mai ușor de citit? Schițează un sistem pentru a-ți organiza codul, chiar dacă acesta rămâne într-un singur fișier.
-
-## Chestionar Post-Lecție
-
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/34)
-
-## Recapitulare și Studiu Individual
-
-Deși scriem jocul nostru fără a folosi framework-uri, există multe framework-uri bazate pe JavaScript pentru dezvoltarea de jocuri pe canvas. Alocă timp pentru a face [cercetări despre acestea](https://github.com/collections/javascript-game-engines).
-
-## Temă
-
-[Comentează-ți codul](assignment.md)
+  
+Inamicii tăi ar trebui să înceapă să avanseze spre nava spațială a eroului tău!  
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+## Provocarea Agentului GitHub Copilot 🚀  
+
+Iată o provocare care va îmbunătăți aspectul jocului tău: adăugarea limitelor și a controlului fluid. În prezent, eroul tău poate zbura în afara ecranului, iar mișcarea poate părea sacadată.  
+
+**Misiunea ta:** Fă ca nava spațială să se simtă mai realistă implementând limitele ecranului și o mișcare fluidă. Este similar cu modul în care sistemele de control al zborului NASA împiedică navele spațiale să depășească parametrii operaționali siguri.  
+
+**Ce trebuie să construiești:** Creează un sistem care menține nava spațială a eroului pe ecran și face ca mișcările să fie fluide. Când jucătorii țin apăsată o săgeată, nava ar trebui să alunece continuu, nu să se miște în pași discreți. Ia în considerare adăugarea unui feedback vizual atunci când nava ajunge la limitele ecranului – poate un efect subtil pentru a indica marginea zonei de joc.  
+
+Află mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.  
+
+## 🚀 Provocare  
+
+Organizarea codului devine din ce în ce mai importantă pe măsură ce proiectele cresc. Poate ai observat că fișierul tău devine aglomerat cu funcții, variabile și clase amestecate. Acest lucru îmi amintește de modul în care inginerii care organizau codul misiunii Apollo au trebuit să creeze sisteme clare și ușor de întreținut, pe care mai multe echipe să le poată folosi simultan.  
+
+**Misiunea ta:**  
+Gândește ca un arhitect software. Cum ți-ai organiza codul astfel încât, peste șase luni, tu (sau un coleg) să poată înțelege ce se întâmplă? Chiar dacă totul rămâne într-un singur fișier deocamdată, poți crea o organizare mai bună:  
+
+- **Gruparea funcțiilor similare** împreună cu anteturi clare de comentarii  
+- **Separarea responsabilităților** - păstrează logica jocului separată de redare  
+- **Utilizarea convențiilor consistente** de denumire pentru variabile și funcții  
+- **Crearea de module** sau spații de nume pentru organizarea diferitelor aspecte ale jocului  
+- **Adăugarea de documentație** care explică scopul fiecărei secțiuni majore  
+
+**Întrebări de reflecție:**  
+- Care părți ale codului tău sunt cele mai greu de înțeles când te întorci la ele?  
+- Cum ai putea să-ți organizezi codul pentru a fi mai ușor pentru altcineva să contribuie?  
+- Ce s-ar întâmpla dacă ai dori să adaugi funcționalități noi, cum ar fi power-ups sau tipuri diferite de inamici?  
+
+## Test de evaluare după lecție  
+
+[Test de evaluare după lecție](https://ff-quizzes.netlify.app/web/quiz/34)  
+
+## Recapitulare și studiu individual  
+
+Am construit totul de la zero, ceea ce este fantastic pentru învățare, dar iată un mic secret – există câteva framework-uri JavaScript uimitoare care pot face o mare parte din munca grea pentru tine. Odată ce te simți confortabil cu elementele de bază pe care le-am acoperit, merită să [explorezi ce este disponibil](https://github.com/collections/javascript-game-engines).  
+
+Gândește-te la framework-uri ca la un set de unelte bine echipat, în loc să faci fiecare unealtă manual. Ele pot rezolva multe dintre acele provocări de organizare a codului despre care am vorbit, plus oferă funcționalități care ar dura săptămâni să le construiești singur.  
+
+**Lucruri care merită explorate:**  
+- Cum organizează motoarele de joc codul – vei fi uimit de modelele ingenioase pe care le folosesc  
+- Trucuri de performanță pentru a face jocurile pe canvas să ruleze fluid  
+- Funcționalități moderne ale JavaScript care pot face codul tău mai curat și mai ușor de întreținut  
+- Diferite abordări pentru gestionarea obiectelor jocului și a relațiilor dintre ele  
+
+## Temă  
+
+[Comentează codul tău](assignment.md)  
+
+---
+
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

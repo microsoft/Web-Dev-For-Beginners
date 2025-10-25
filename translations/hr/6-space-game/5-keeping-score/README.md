@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-29T12:32:59+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-25T00:14:24+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "hr"
 }
@@ -13,11 +13,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/37)
 
-U ovoj lekciji naučit ćete kako dodati bodove u igru i izračunavati živote.
+Spremni da vaša svemirska igra postane prava igra? Dodajmo bodovanje i upravljanje životima - ključne mehanike koje su transformirale rane arkadne igre poput Space Invadersa iz jednostavnih demonstracija u zaraznu zabavu. Ovo je trenutak kada vaša igra postaje zaista igriva.
 
-## Iscrtavanje teksta na ekranu
+## Prikazivanje teksta na ekranu - Glas vaše igre
 
-Kako biste mogli prikazati rezultat igre na ekranu, trebate znati kako postaviti tekst na ekran. Odgovor je korištenje metode `fillText()` na objektu canvas. Također možete kontrolirati i druge aspekte poput fonta, boje teksta pa čak i poravnanja (lijevo, desno, centrirano). Ispod je primjer koda koji iscrtava tekst na ekranu.
+Kako bismo prikazali vaš rezultat, moramo naučiti kako prikazati tekst na platnu. Metoda `fillText()` vaš je glavni alat za to - ista tehnika koja se koristila u klasičnim arkadnim igrama za prikaz rezultata i informacija o statusu.
+
+Imate potpunu kontrolu nad izgledom teksta:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Pročitajte više o [dodavanju teksta na canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) i slobodno učinite svoj tekst vizualno privlačnijim!
+✅ Pogledajte više o [dodavanju teksta na platno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - mogli biste se iznenaditi koliko kreativni možete biti s fontovima i stilovima!
 
-## Život kao koncept u igri
+## Životi - Više od samo broja
 
-Koncept života u igri je samo broj. U kontekstu svemirske igre, uobičajeno je dodijeliti određeni broj života koji se smanjuju jedan po jedan kada vaš brod pretrpi štetu. Lijepo je ako možete prikazati grafičku reprezentaciju toga, poput malih brodova ili srca, umjesto samog broja.
+U dizajnu igara, "život" predstavlja marginu pogreške igrača. Ovaj koncept potječe još iz vremena fliper automata, gdje ste dobivali više kuglica za igru. U ranim video igrama poput Asteroids, životi su igračima omogućavali da riskiraju i uče iz svojih grešaka.
 
-## Što ćemo izgraditi
+Vizualna reprezentacija ima značajnu ulogu - prikazivanje ikona brodova umjesto samo "Životi: 3" stvara trenutnu vizualnu prepoznatljivost, slično kao što su rani arkadni automati koristili ikonografiju za komunikaciju bez obzira na jezične barijere.
 
-Dodajmo sljedeće u vašu igru:
+## Izgradnja sustava nagrađivanja u vašoj igri
 
-- **Rezultat igre**: Za svaki neprijateljski brod koji uništite, heroj bi trebao dobiti određeni broj bodova, predlažemo 100 bodova po brodu. Rezultat igre trebao bi biti prikazan u donjem lijevom kutu.
-- **Životi**: Vaš brod ima tri života. Gubite jedan život svaki put kada se neprijateljski brod sudari s vama. Broj života trebao bi biti prikazan u donjem desnom kutu i sastojati se od sljedeće grafike ![slika života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.hr.png).
+Sada ćemo implementirati osnovne sustave povratnih informacija koji drže igrače angažiranima:
 
-## Preporučeni koraci
+- **Sustav bodovanja**: Svaki uništeni neprijateljski brod donosi 100 bodova (okrugli brojevi su lakši za mentalno računanje). Rezultat se prikazuje u donjem lijevom kutu.
+- **Brojač života**: Vaš junak počinje s tri života - standard koji su postavile rane arkadne igre kako bi uravnotežile izazov i igrivost. Svaki sudar s neprijateljem košta jedan život. Preostali životi prikazat će se u donjem desnom kutu koristeći ikone brodova ![slika života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.hr.png).
 
-Pronađite datoteke koje su već kreirane za vas u podmapi `your-work`. Trebale bi sadržavati sljedeće:
+## Krenimo s izgradnjom!
+
+Prvo, postavite svoj radni prostor. Navigirajte do datoteka u mapi `your-work`. Trebali biste vidjeti ove datoteke:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Pronađite datoteke koje su već kreirane za vas u podmapi `your-work`. Trebale 
 -| package.json
 ```
 
-Pokrenite svoj projekt u mapi `your_work` upisivanjem:
+Za testiranje igre, pokrenite razvojni server iz mape `your_work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu. Trenutno bi trebala prikazivati heroja i sve neprijatelje, a pritiskom na lijevu i desnu strelicu heroj se pomiče i može pucati na neprijatelje.
+Ovo pokreće lokalni server na `http://localhost:5000`. Otvorite ovu adresu u svom pregledniku kako biste vidjeli svoju igru. Testirajte kontrole pomoću strelica i pokušajte pucati na neprijatelje kako biste provjerili radi li sve.
 
-### Dodavanje koda
+### Vrijeme za kodiranje!
 
-1. **Kopirajte potrebne resurse** iz mape `solution/assets/` u mapu `your-work`; dodajte resurs `life.png`. Dodajte `lifeImg` u funkciju `window.onload`:
+1. **Preuzmite vizualne resurse koji su vam potrebni**. Kopirajte datoteku `life.png` iz mape `solution/assets/` u svoju mapu `your-work`. Zatim dodajte `lifeImg` u svoju funkciju window.onload: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Dodajte `lifeImg` na popis resursa:
+1. Ne zaboravite dodati `lifeImg` na popis resursa:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
     eventEmitter = new EventEmitter();
     ```
   
-2. **Dodajte varijable**. Dodajte kod koji predstavlja vaš ukupni rezultat (0) i preostale živote (3), te prikažite te vrijednosti na ekranu.
+2. **Postavite varijable za igru**. Dodajte kod za praćenje ukupnog rezultata (početak od 0) i preostalih života (početak od 3). Prikazat ćemo ih na ekranu kako bi igrači uvijek znali gdje se nalaze.
 
-3. **Proširite funkciju `updateGameObjects()`**. Proširite funkciju `updateGameObjects()` kako bi obrađivala sudare s neprijateljima:
+3. **Implementirajte detekciju sudara**. Proširite svoju funkciju `updateGameObjects()` kako biste otkrili kada neprijatelji sudaraju s vašim junakom:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
       })
     ```
 
-4. **Dodajte `life` i `points`**. 
-   1. **Inicijalizirajte varijable**. Ispod `this.cooldown = 0` u klasi `Hero`, postavite život i bodove:
+4. **Dodajte praćenje života i bodova svom junaku**. 
+   1. **Inicijalizirajte brojače**. Ispod `this.cooldown = 0` u vašoj klasi `Hero`, postavite živote i bodove:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Iscrtajte varijable na ekranu**. Prikažite te vrijednosti na ekranu:
+   1. **Prikazivanje ovih vrijednosti igraču**. Kreirajte funkcije za prikaz ovih vrijednosti na ekranu:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
 
         ```
 
-   1. **Dodajte metode u petlju igre**. Pobrinite se da dodate ove funkcije u svoju funkciju `window.onload` ispod `updateGameObjects()`:
+   1. **Povežite sve s vašom petljom igre**. Dodajte ove funkcije u svoju funkciju window.onload odmah nakon `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implementirajte pravila igre**. Implementirajte sljedeća pravila igre:
+1. **Implementirajte posljedice i nagrade u igri**. Sada ćemo dodati sustave povratnih informacija koji čine radnje igrača značajnima:
 
-   1. **Za svaku koliziju heroja i neprijatelja**, oduzmite jedan život.
+   1. **Sudar košta živote**. Svaki put kad vaš junak udari u neprijatelja, gubi jedan život.
    
-      Proširite klasu `Hero` kako biste to omogućili:
+      Dodajte ovu metodu u svoju klasu `Hero`:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
         }
         ```
 
-   2. **Za svaki laser koji pogodi neprijatelja**, povećajte rezultat igre za 100 bodova.
+   2. **Pucanje na neprijatelje donosi bodove**. Svaki uspješan pogodak donosi 100 bodova, pružajući trenutnu pozitivnu povratnu informaciju za precizno pucanje.
 
-      Proširite klasu `Hero` kako biste to omogućili:
+      Proširite svoju klasu Hero ovom metodom za povećanje bodova:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
           }
         ```
 
-        Dodajte ove funkcije u svoje emitere događaja sudara:
+        Sada povežite ove funkcije s događajima sudara:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,15 +179,27 @@ Gornja naredba pokrenut će HTTP poslužitelj na adresi `http://localhost:5000`.
         });
         ```
 
-✅ Istražite druge igre koje su izrađene pomoću JavaScript/Canvas. Koje su njihove zajedničke karakteristike?
+✅ Zanimaju vas druge igre izrađene pomoću JavaScripta i Canvasa? Istražite malo - mogli biste se iznenaditi što je sve moguće!
 
-Na kraju ovog zadatka trebali biste vidjeti male brodove za živote u donjem desnom kutu, bodove u donjem lijevom kutu, te biste trebali vidjeti kako se broj života smanjuje kada se sudarite s neprijateljima, a bodovi povećavaju kada pucate na neprijatelje. Bravo! Vaša igra je gotovo gotova.
+Nakon implementacije ovih značajki, testirajte svoju igru kako biste vidjeli cijeli sustav povratnih informacija u akciji. Trebali biste vidjeti ikone života u donjem desnom kutu, rezultat u donjem lijevom kutu, te pratiti kako sudari smanjuju živote, dok uspješni pogoci povećavaju vaš rezultat.
+
+Vaša igra sada ima osnovne mehanike koje su rane arkadne igre činile tako privlačnima - jasne ciljeve, trenutne povratne informacije i značajne posljedice za radnje igrača.
 
 ---
 
+## Izazov GitHub Copilot Agent 🚀
+
+Koristite način rada Agent za dovršavanje sljedećeg izazova:
+
+**Opis:** Poboljšajte sustav bodovanja svemirske igre implementacijom značajke za visoki rezultat s trajnim pohranom i mehanikom bonus bodova.
+
+**Zadatak:** Kreirajte sustav visokih rezultata koji sprema najbolji rezultat igrača u localStorage. Dodajte bonus bodove za uzastopna uništenja neprijatelja (sustav kombinacija) i implementirajte različite vrijednosti bodova za različite vrste neprijatelja. Uključite vizualni indikator kada igrač postigne novi visoki rezultat i prikažite trenutni visoki rezultat na ekranu igre.
+
+
+
 ## 🚀 Izazov
 
-Vaš kod je gotovo dovršen. Možete li zamisliti svoje sljedeće korake?
+Sada imate funkcionalnu igru s bodovanjem i životima. Razmislite koje dodatne značajke bi mogle poboljšati iskustvo igrača.
 
 ## Kviz nakon predavanja
 
@@ -191,7 +207,7 @@ Vaš kod je gotovo dovršen. Možete li zamisliti svoje sljedeće korake?
 
 ## Pregled i samostalno učenje
 
-Istražite načine na koje možete povećavati i smanjivati bodove i živote u igri. Postoje zanimljivi alati za razvoj igara poput [PlayFab](https://playfab.com). Kako bi korištenje jednog od njih moglo unaprijediti vašu igru?
+Želite istražiti više? Istražite različite pristupe sustavima bodovanja i života u igrama. Postoje fascinantni sustavi za izradu igara poput [PlayFab](https://playfab.com) koji se bave bodovanjem, ljestvicama i napretkom igrača. Kako bi integracija nečeg takvog mogla podići vašu igru na višu razinu?
 
 ## Zadatak
 
@@ -199,5 +215,5 @@ Istražite načine na koje možete povećavati i smanjivati bodove i živote u i
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.

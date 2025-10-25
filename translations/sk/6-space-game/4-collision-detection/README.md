@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
-  "translation_date": "2025-08-29T11:11:13+00:00",
+  "original_hash": "4b1d441cfd31924084956000c0fee5a5",
+  "translation_date": "2025-10-24T21:48:13+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "sk"
 }
@@ -11,79 +11,109 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/35)
+[Prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/35)
 
-V tejto lekcii sa naučíte, ako strieľať lasery pomocou JavaScriptu! Do našej hry pridáme dve veci:
+Spomeňte si na moment v Star Wars, keď Lukeove protónové torpéda zasiahli výfukový port Hviezdnej smrti. Táto presná detekcia kolízie zmenila osud galaxie! V hrách funguje detekcia kolízií rovnako - určuje, kedy objekty interagujú a čo sa stane ďalej.
 
-- **Laser**: tento laser sa vystrelí z lode hrdinu a pohybuje sa vertikálne nahor
-- **Detekcia kolízií**, ako súčasť implementácie schopnosti *strieľať*, pridáme aj niekoľko pravidiel hry:
-   - **Laser zasiahne nepriateľa**: Nepriateľ zomrie, ak ho zasiahne laser
-   - **Laser zasiahne hornú časť obrazovky**: Laser sa zničí, ak zasiahne hornú časť obrazovky
-   - **Kolízia nepriateľa a hrdinu**: Nepriateľ aj hrdina sa zničia, ak sa zrazia
-   - **Nepriateľ zasiahne spodnú časť obrazovky**: Nepriateľ aj hrdina sa zničia, ak nepriateľ zasiahne spodnú časť obrazovky
+V tejto lekcii pridáte laserové zbrane do svojej vesmírnej hry a implementujete detekciu kolízií. Rovnako ako plánovači misií NASA vypočítavajú trajektórie kozmických lodí, aby sa vyhli troskám, naučíte sa detekovať, keď sa herné objekty pretínajú. Rozdelíme to na zvládnuteľné kroky, ktoré na seba nadväzujú.
 
-Stručne povedané, vy -- *hrdina* -- musíte zasiahnuť všetkých nepriateľov laserom skôr, než sa dostanú na spodnú časť obrazovky.
+Na konci budete mať funkčný bojový systém, kde lasery ničia nepriateľov a kolízie spúšťajú herné udalosti. Tieto princípy detekcie kolízií sa používajú vo všetkom, od simulácií fyziky až po interaktívne webové rozhrania.
 
 ✅ Urobte si malý prieskum o úplne prvej počítačovej hre, ktorá bola kedy napísaná. Aká bola jej funkčnosť?
 
-Buďme hrdinami spolu!
-
 ## Detekcia kolízií
 
-Ako vykonáme detekciu kolízií? Musíme si predstaviť naše herné objekty ako obdĺžniky, ktoré sa pohybujú. Prečo? Pretože obrázok použitý na vykreslenie herného objektu je obdĺžnik: má `x`, `y`, `šírku` a `výšku`.
+Detekcia kolízií funguje ako senzory blízkosti na lunárnom module Apollo - neustále kontroluje vzdialenosti a spúšťa upozornenia, keď sa objekty dostanú príliš blízko. V hrách tento systém určuje, kedy objekty interagujú a čo by sa malo stať ďalej.
 
-Ak sa dva obdĺžniky, napríklad hrdina a nepriateľ, *pretínajú*, máte kolíziu. Čo by sa malo stať, závisí od pravidiel hry. Na implementáciu detekcie kolízií potrebujete nasledovné:
+Prístup, ktorý použijeme, považuje každý herný objekt za obdĺžnik, podobne ako systémy riadenia leteckej dopravy používajú zjednodušené geometrické tvary na sledovanie lietadiel. Tento obdĺžnikový prístup sa môže zdať základný, ale je výpočtovo efektívny a funguje dobre vo väčšine herných scenárov.
 
-1. Spôsob, ako získať obdĺžnikovú reprezentáciu herného objektu, niečo takéto:
+### Reprezentácia obdĺžnika
 
-   ```javascript
-   rectFromGameObject() {
-     return {
-       top: this.y,
-       left: this.x,
-       bottom: this.y + this.height,
-       right: this.x + this.width
-     }
-   }
-   ```
-
-2. Porovnávaciu funkciu, ktorá môže vyzerať takto:
-
-   ```javascript
-   function intersectRect(r1, r2) {
-     return !(r2.left > r1.right ||
-       r2.right < r1.left ||
-       r2.top > r1.bottom ||
-       r2.bottom < r1.top);
-   }
-   ```
-
-## Ako ničíme objekty
-
-Na zničenie objektov v hre musíte dať hre vedieť, že tento objekt už nemá byť vykreslený v hernej slučke, ktorá sa spúšťa v určitých intervaloch. Spôsob, ako to urobiť, je označiť herný objekt ako *mŕtvy*, keď sa niečo stane, napríklad takto:
+Každý herný objekt potrebuje hranice súradníc, podobne ako rover Mars Pathfinder mapoval svoju polohu na povrchu Marsu. Tu je spôsob, ako definujeme tieto hranice súradníc:
 
 ```javascript
-// collision happened
-enemy.dead = true
+rectFromGameObject() {
+  return {
+    top: this.y,
+    left: this.x,
+    bottom: this.y + this.height,
+    right: this.x + this.width
+  }
+}
 ```
 
-Potom môžete vyradiť *mŕtve* objekty pred opätovným vykreslením obrazovky, napríklad takto:
+**Rozdelenie na časti:**
+- **Horný okraj**: To je miesto, kde váš objekt začína vertikálne (jeho y pozícia)
+- **Ľavý okraj**: Miesto, kde začína horizontálne (jeho x pozícia)
+- **Spodný okraj**: Pridajte výšku k y pozícii - teraz viete, kde končí!
+- **Pravý okraj**: Pridajte šírku k x pozícii - a máte kompletné hranice
+
+### Algoritmus prekrývania
+
+Detekcia prekrývania obdĺžnikov používa logiku podobnú tomu, ako Hubbleov vesmírny teleskop určuje, či sa nebeské objekty prekrývajú vo svojom zornom poli. Algoritmus kontroluje oddelenie:
 
 ```javascript
-gameObjects = gameObject.filter(go => !go.dead);
+function intersectRect(r1, r2) {
+  return !(r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top);
+}
 ```
 
-## Ako vystreliť laser
+**Test oddelenia funguje ako radarové systémy:**
+- Je obdĺžnik 2 úplne napravo od obdĺžnika 1?
+- Je obdĺžnik 2 úplne naľavo od obdĺžnika 1?
+- Je obdĺžnik 2 úplne pod obdĺžnikom 1?
+- Je obdĺžnik 2 úplne nad obdĺžnikom 1?
 
-Vystrelenie lasera znamená reagovať na udalosť stlačenia klávesy a vytvoriť objekt, ktorý sa pohybuje určitým smerom. Preto musíme vykonať nasledujúce kroky:
+Ak žiadna z týchto podmienok nie je pravdivá, obdĺžniky sa musia prekrývať. Tento prístup odráža spôsob, akým operátori radaru určujú, či sú dve lietadlá v bezpečnej vzdialenosti.
 
-1. **Vytvoriť objekt lasera**: z vrchnej časti lode hrdinu, ktorý sa po vytvorení začne pohybovať nahor smerom k hornej časti obrazovky.
-2. **Pripojiť kód k udalosti stlačenia klávesy**: musíme vybrať kláves na klávesnici, ktorý bude predstavovať hráča strieľajúceho laser.
-3. **Vytvoriť herný objekt, ktorý vyzerá ako laser**, keď je kláves stlačený.
+## Správa životného cyklu objektov
 
-## Časový odstup pre laser
+Keď laser zasiahne nepriateľa, oba objekty musia byť odstránené z hry. Avšak mazanie objektov počas cyklu môže spôsobiť pády - lekcia, ktorú sa ťažko naučili v skorých počítačových systémoch, ako je Apollo Guidance Computer. Namiesto toho používame prístup "označiť na odstránenie", ktorý bezpečne odstraňuje objekty medzi snímkami.
 
-Laser musí vystreliť vždy, keď stlačíte kláves, napríklad *medzerník*. Aby sme zabránili hre vytvárať príliš veľa laserov v krátkom čase, musíme to opraviť. Oprava spočíva v implementácii tzv. *časového odstupu*, časovača, ktorý zabezpečí, že laser môže byť vystrelený len v určitých intervaloch. Môžete to implementovať nasledovne:
+Tu je spôsob, ako niečo označiť na odstránenie:
+
+```javascript
+// Mark object for removal
+enemy.dead = true;
+```
+
+**Prečo tento prístup funguje:**
+- Označíme objekt ako "mŕtvy", ale neodstránime ho hneď
+- To umožňuje aktuálnemu hernému cyklu bezpečne skončiť
+- Žiadne pády z pokusu použiť niečo, čo už neexistuje!
+
+Potom pred ďalším cyklom vykreslenia odfiltrujeme označené objekty:
+
+```javascript
+gameObjects = gameObjects.filter(go => !go.dead);
+```
+
+**Čo toto filtrovanie robí:**
+- Vytvára nový zoznam iba so "živými" objektmi
+- Vyhadzuje všetko označené ako mŕtve
+- Udržuje vašu hru plynulú
+- Zabraňuje pamäťovému preťaženiu z hromadenia zničených objektov
+
+## Implementácia mechaniky lasera
+
+Laserové projektily v hrách fungujú na rovnakom princípe ako fotónové torpéda v Star Treku - sú to diskrétne objekty, ktoré sa pohybujú po priamke, kým niečo zasiahnu. Každé stlačenie medzerníka vytvorí nový laserový objekt, ktorý sa pohybuje po obrazovke.
+
+Aby to fungovalo, musíme koordinovať niekoľko rôznych častí:
+
+**Kľúčové komponenty na implementáciu:**
+- **Vytvoriť** laserové objekty, ktoré sa objavia z pozície hrdinu
+- **Spracovať** vstup z klávesnice na spustenie vytvorenia lasera
+- **Spravovať** pohyb a životný cyklus lasera
+- **Implementovať** vizuálne zobrazenie laserových projektilov
+
+## Implementácia kontroly rýchlosti streľby
+
+Neobmedzené rýchlosti streľby by preťažili herný engine a urobili hru príliš jednoduchou. Skutočné zbraňové systémy čelia podobným obmedzeniam - dokonca aj fázer USS Enterprise potreboval čas na dobitie medzi výstrelmi.
+
+Implementujeme systém ochladenia, ktorý zabráni nadmernému strieľaniu a zároveň zachová citlivé ovládanie:
 
 ```javascript
 class Cooldown {
@@ -91,41 +121,55 @@ class Cooldown {
     this.cool = false;
     setTimeout(() => {
       this.cool = true;
-    }, time)
+    }, time);
   }
 }
 
 class Weapon {
-  constructor {
+  constructor() {
+    this.cooldown = null;
   }
+  
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // Create laser projectile
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // Weapon is still cooling down
     }
   }
 }
 ```
 
-✅ Pozrite si lekciu 1 zo série vesmírnych hier, aby ste si pripomenuli *časové odstupy*.
+**Ako funguje ochladenie:**
+- Pri vytvorení je zbraň "horúca" (ešte nemôže strieľať)
+- Po uplynutí časového limitu sa stane "chladnou" (pripravená na streľbu)
+- Pred streľbou kontrolujeme: "Je zbraň chladná?"
+- To zabraňuje spamovaniu kliknutím a zároveň zachováva citlivé ovládanie
 
-## Čo vytvoriť
+✅ Pozrite si lekciu 1 zo série vesmírnych hier, aby ste si pripomenuli systém ochladenia.
 
-Vezmete existujúci kód (ktorý by ste mali vyčistiť a refaktorovať) z predchádzajúcej lekcie a rozšírite ho. Buď začnite s kódom z časti II, alebo použite kód na [Časť III - štartovací](../../../../6-space-game/4-collision-detection/your-work).
+## Budovanie systému detekcie kolízií
 
-> tip: laser, s ktorým budete pracovať, je už vo vašom priečinku s prostriedkami a je referencovaný vaším kódom
+Rozšírite existujúci kód svojej vesmírnej hry, aby ste vytvorili systém detekcie kolízií. Rovnako ako automatizovaný systém vyhýbania sa kolíziám Medzinárodnej vesmírnej stanice, vaša hra bude neustále monitorovať polohy objektov a reagovať na ich prekrývanie.
 
-- **Pridajte detekciu kolízií**, keď laser narazí na niečo, mali by platiť nasledujúce pravidlá:
-   1. **Laser zasiahne nepriateľa**: nepriateľ zomrie, ak ho zasiahne laser
-   2. **Laser zasiahne hornú časť obrazovky**: laser sa zničí, ak zasiahne hornú časť obrazovky
-   3. **Kolízia nepriateľa a hrdinu**: nepriateľ aj hrdina sa zničia, ak sa zrazia
-   4. **Nepriateľ zasiahne spodnú časť obrazovky**: nepriateľ aj hrdina sa zničia, ak nepriateľ zasiahne spodnú časť obrazovky
+Na základe kódu z predchádzajúcej lekcie pridáte detekciu kolízií s konkrétnymi pravidlami, ktoré riadia interakcie objektov.
 
-## Odporúčané kroky
+> 💡 **Tip**: Sprite lasera je už zahrnutý vo vašom priečinku s aktívami a je referencovaný vo vašom kóde, pripravený na implementáciu.
 
-Vyhľadajte súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`. Mali by obsahovať nasledovné:
+### Pravidlá kolízií na implementáciu
+
+**Herné mechaniky na pridanie:**
+1. **Laser zasiahne nepriateľa**: Objekt nepriateľa je zničený, keď ho zasiahne laserový projektil
+2. **Laser zasiahne hranicu obrazovky**: Laser je odstránený, keď dosiahne horný okraj obrazovky
+3. **Kolízia nepriateľa a hrdinu**: Oba objekty sú zničené, keď sa prekrývajú
+4. **Nepriateľ dosiahne spodok**: Stav konca hry, keď nepriatelia dosiahnu spodok obrazovky
+
+## Nastavenie vývojového prostredia
+
+Dobrá správa - väčšinu základov sme už pre vás pripravili! Všetky vaše herné aktíva a základná štruktúra čakajú v podpriečinku `your-work`, pripravené na pridanie skvelých funkcií detekcie kolízií.
+
+### Štruktúra projektu
 
 ```bash
 -| assets
@@ -137,175 +181,265 @@ Vyhľadajte súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`
 -| package.json
 ```
 
-Svoj projekt spustíte v priečinku `your_work` zadaním:
+**Porozumenie štruktúre súborov:**
+- **Obsahuje** všetky obrázky sprite potrebné pre herné objekty
+- **Zahŕňa** hlavný HTML dokument a JavaScript aplikáciu
+- **Poskytuje** konfiguráciu balíka pre lokálny vývojový server
+
+### Spustenie vývojového servera
+
+Prejdite do svojho priečinka projektu a spustite lokálny server:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, momentálne by sa mal zobraziť hrdina a všetci nepriatelia, nič sa však ešte nehýbe :).
+**Táto sekvencia príkazov:**
+- **Zmení** adresár na váš pracovný priečinok projektu
+- **Spustí** lokálny HTTP server na `http://localhost:5000`
+- **Poskytne** vaše herné súbory na testovanie a vývoj
+- **Umožní** živý vývoj s automatickým načítaním
 
-### Pridajte kód
+Otvorte svoj prehliadač a prejdite na `http://localhost:5000`, aby ste videli aktuálny stav svojej hry s vykresleným hrdinom a nepriateľmi na obrazovke.
 
-1. **Nastavte obdĺžnikovú reprezentáciu vášho herného objektu na spracovanie kolízií** Nasledujúci kód umožňuje získať obdĺžnikovú reprezentáciu `GameObject`. Upraviť triedu GameObject tak, aby ju rozšírila:
+### Implementácia krok za krokom
 
-    ```javascript
-    rectFromGameObject() {
-        return {
-          top: this.y,
-          left: this.x,
-          bottom: this.y + this.height,
-          right: this.x + this.width,
-        };
-      }
-    ```
+Rovnako ako systematický prístup, ktorý NASA použila na programovanie kozmickej lode Voyager, implementujeme detekciu kolízií metodicky, budujúc každý komponent krok za krokom.
 
-2. **Pridajte kód, ktorý kontroluje kolízie** Toto bude nová funkcia, ktorá testuje, či sa dva obdĺžniky pretínajú:
+#### 1. Pridanie hraníc kolízie obdĺžnika
 
-    ```javascript
-    function intersectRect(r1, r2) {
-      return !(
-        r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top
-      );
-    }
-    ```
+Najprv naučíme naše herné objekty, ako popísať svoje hranice. Pridajte túto metódu do svojej triedy `GameObject`:
 
-3. **Pridajte schopnosť vystreliť laser**
-   1. **Pridajte správu o udalosti stlačenia klávesy**. Kláves *medzerník* by mal vytvoriť laser tesne nad loďou hrdinu. Pridajte tri konštanty do objektu Messages:
+```javascript
+rectFromGameObject() {
+    return {
+      top: this.y,
+      left: this.x,
+      bottom: this.y + this.height,
+      right: this.x + this.width,
+    };
+  }
+```
 
-       ```javascript
-        KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
-        COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
-        COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
-       ```
+**Táto metóda dosahuje:**
+- **Vytvára** objekt obdĺžnika s presnými hranicami súradníc
+- **Vypočíta** spodné a pravé okraje pomocou pozície plus rozmery
+- **Vracia** objekt pripravený na algoritmy detekcie kolízií
+- **Poskytuje** štandardizované rozhranie pre všetky herné objekty
 
-   1. **Spracujte kláves medzerník**. Upraviť funkciu `window.addEventListener` pre stlačenie klávesy, aby spracovala medzerník:
+#### 2. Implementácia detekcie prekrývania
 
-      ```javascript
-        } else if(evt.keyCode === 32) {
-          eventEmitter.emit(Messages.KEY_EVENT_SPACE);
-        }
-      ```
+Teraz vytvoríme nášho detektíva kolízií - funkciu, ktorá dokáže povedať, kedy sa dva obdĺžniky prekrývajú:
 
-    1. **Pridajte poslucháčov**. Upraviť funkciu `initGame()`, aby hrdina mohol strieľať, keď je stlačený medzerník:
+```javascript
+function intersectRect(r1, r2) {
+  return !(
+    r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top
+  );
+}
+```
 
-       ```javascript
-       eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
-        if (hero.canFire()) {
-          hero.fire();
-        }
-       ```
+**Tento algoritmus funguje takto:**
+- **Testuje** štyri podmienky oddelenia medzi obdĺžnikmi
+- **Vracia** `false`, ak je pravdivá akákoľvek podmienka oddelenia
+- **Indikuje** kolíziu, keď neexistuje žiadne oddelenie
+- **Používa** negáciu logiky na efektívne testovanie prekrývania
 
-       a pridajte novú funkciu `eventEmitter.on()`, aby ste zabezpečili správanie, keď nepriateľ narazí na laser:
+#### 3. Implementácia systému streľby laserom
 
-          ```javascript
-          eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-            first.dead = true;
-            second.dead = true;
-          })
-          ```
+Tu sa veci stávajú vzrušujúce! Nastavíme systém streľby laserom.
 
-   1. **Pohyb objektu**, Zabezpečte, aby sa laser postupne pohyboval k hornej časti obrazovky. Vytvoríte novú triedu Laser, ktorá rozširuje `GameObject`, ako ste to už urobili predtým: 
-   
-      ```javascript
-        class Laser extends GameObject {
-        constructor(x, y) {
-          super(x,y);
-          (this.width = 9), (this.height = 33);
-          this.type = 'Laser';
-          this.img = laserImg;
-          let id = setInterval(() => {
-            if (this.y > 0) {
-              this.y -= 15;
-            } else {
-              this.dead = true;
-              clearInterval(id);
-            }
-          }, 100)
-        }
-      }
-      ```
+##### Konštanty správ
 
-   1. **Spracujte kolízie**, Implementujte pravidlá kolízií pre laser. Pridajte funkciu `updateGameObjects()`, ktorá testuje objekty na kolízie:
+Najprv definujeme niektoré typy správ, aby rôzne časti našej hry mohli spolu komunikovať:
 
-      ```javascript
-      function updateGameObjects() {
-        const enemies = gameObjects.filter(go => go.type === 'Enemy');
-        const lasers = gameObjects.filter((go) => go.type === "Laser");
-      // laser hit something
-        lasers.forEach((l) => {
-          enemies.forEach((m) => {
-            if (intersectRect(l.rectFromGameObject(), m.rectFromGameObject())) {
-            eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
-              first: l,
-              second: m,
-            });
-          }
-         });
-      });
+```javascript
+KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
+COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
+COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
+```
 
-        gameObjects = gameObjects.filter(go => !go.dead);
-      }  
-      ```
+**Tieto konštanty poskytujú:**
+- **Štandardizujú** názvy udalostí v celej aplikácii
+- **Umožňujú** konzistentnú komunikáciu medzi hernými systémami
+- **Zabraňujú** preklepom pri registrácii obsluhy udalostí
 
-      Uistite sa, že ste pridali `updateGameObjects()` do hernej slučky v `window.onload`.
+##### Spracovanie vstupu z klávesnice
 
-   4. **Implementujte časový odstup** pre laser, aby mohol byť vystrelený len v určitých intervaloch.
+Pridajte detekciu stlačenia medzerníka do svojho poslucháča udalostí klávesnice:
 
-      Nakoniec upravte triedu Hero tak, aby mala časový odstup:
+```javascript
+} else if(evt.keyCode === 32) {
+  eventEmitter.emit(Messages.KEY_EVENT_SPACE);
+}
+```
 
-       ```javascript
-      class Hero extends GameObject {
-        constructor(x, y) {
-          super(x, y);
-          (this.width = 99), (this.height = 75);
-          this.type = "Hero";
-          this.speed = { x: 0, y: 0 };
-          this.cooldown = 0;
-        }
-        fire() {
-          gameObjects.push(new Laser(this.x + 45, this.y - 10));
-          this.cooldown = 500;
+**Tento obslužný program vstupu:**
+- **Detekuje** stlačenie medzerníka pomocou keyCode 32
+- **Vysiela** štandardizovanú správu o udalosti
+- **Umožňuje** oddelenú logiku streľby
+
+##### Nastavenie poslucháča udalostí
+
+Zaregistrujte správanie streľby vo svojej funkcii `initGame()`:
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
+ if (hero.canFire()) {
+   hero.fire();
+ }
+});
+```
+
+**Tento poslucháč udalostí:**
+- **Reaguje** na udalosti stlačenia medzerníka
+- **Kontroluje** stav ochladenia streľby
+- **Spúšťa** vytvorenie lasera, keď je to povolené
+
+Pridajte spracovanie kolízií pre interakcie laser-nepriateľ:
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+  first.dead = true;
+  second.dead = true;
+});
+```
+
+**Tento obslužný program kolízií:**
+- **Prijíma** údaje o udalostiach kolízie s oboma objektmi
+- **Označuje** oba objekty na odstránenie
+- **Zabezpečuje** správne vyčistenie po kolízii
+
+#### 4. Vytvorenie triedy Laser
+
+Implementujte laserový projektil, ktorý sa pohybuje nahor a spravuje svoj vlastný životný cyklus:
+
+```javascript
+class Laser extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 9;
+    this.height = 33;
+    this.type = 'Laser';
+    this.img = laserImg;
     
-          let id = setInterval(() => {
-            if (this.cooldown > 0) {
-              this.cooldown -= 100;
-            } else {
-              clearInterval(id);
-            }
-          }, 200);
-        }
-        canFire() {
-          return this.cooldown === 0;
-        }
+    let id = setInterval(() => {
+      if (this.y > 0) {
+        this.y -= 15;
+      } else {
+        this.dead = true;
+        clearInterval(id);
       }
-      ```
+    }, 100);
+  }
+}
+```
 
-V tomto bode má vaša hra určitú funkčnosť! Môžete sa pohybovať pomocou šípok, strieľať laser pomocou medzerníka a nepriatelia zmiznú, keď ich zasiahnete. Skvelá práca!
+**Táto implementácia triedy:**
+- **Rozširuje** GameObject na zdedenie základnej funkčnosti
+- **Nastavuje** vhodné rozmery pre sprite lasera
+- **Vytvára** automatický pohyb nahor pomocou `setInterval()`
+- **Spracováva** samodeštrukciu pri dosiahnutí vrcholu obrazovky
+- **Spravuje** vlastné časovanie animácie a vyčistenie
+
+#### 5. Implementácia systému detekcie kolízií
+
+Vytvorte komplexnú funkciu detekcie kolízií:
+
+```javascript
+function updateGameObjects() {
+  const enemies = gameObjects.filter(go => go.type === 'Enemy');
+  const lasers = gameObjects.filter(go => go.type === "Laser");
+  
+  // Test laser-enemy collisions
+  lasers.forEach((laser) => {
+    enemies.forEach((enemy) => {
+      if (intersectRect(laser.rectFromGameObject(), enemy.rectFromGameObject())) {
+        eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
+          first: laser,
+          second: enemy,
+        });
+      }
+    });
+  });
+
+  // Remove destroyed objects
+  gameObjects = gameObjects.filter(go => !go.dead);
+}
+```
+
+**Tento systém kolízií:**
+- **Filtruje** herné objekty podľa typu na efektívne testovanie
+- **Testuje** každý laser proti každému nepriateľovi na prekrývanie
+- **Vysiela** udalosti kolízie, keď sa prekrývanie zistí
+- **Čistí** zničené objekty po spracovaní kolízií
+
+> ⚠️ **Dôležité**: Pridajte `updateGameObjects()` do hlavného herného cyklu v `window.onload`, aby ste umožnili detekciu kolízií.
+
+#### 6. Pridanie systému ochladenia do triedy Hero
+
+Vylepšite triedu Hero o mechaniku streľby a obmedzenie rýchlosti:
+
+```javascript
+class Hero extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 99;
+    this.height = 75;
+    this.type = "Hero";
+    this.speed = { x: 0, y: 0 };
+    this.cooldown = 0;
+  }
+  
+  fire() {
+    gameObjects.push(new Laser(this.x + 45, this.y - 10));
+    this.cooldown = 500;
+
+    let id = setInterval(() => {
+      if (this.cooldown > 0) {
+        this.cooldown -= 100;
+      } else {
+        clearInterval(id);
+      }
+    }, 200);
+  }
+  
+  canFire() {
+    return this.cooldown === 0;
+  }
+}
+```
+
+**Porozumenie vylepšenej triedy Hero:**
+- **Inicializuje** časovač ochladenia na nulu (pripravený na streľbu)
+- **Vytvára** laserové objekty umiestnené nad loďou hrdinu
+- **Nastavuje** obdobie ochladenia na zabránenie rýchlej streľby
+- **Znižuje** časovač ochladenia pomocou aktualizácií založených na intervaloch
+- **Poskytuje** kontrolu stavu streľby cez metódu `canFire()`
+
+### Testovanie vašej implementácie
+
+Vaša vesmírna hra teraz obsahuje kompletnú detekciu kolízií a mechaniku boja. 🚀 Otestujte tieto nové schopnosti:
+- **Navigujte** pomocou šípok na overenie ovládania pohybu
+- **Strieľajte lasery** medzerníkom - všimnite si, ako ochladenie zabraňuje spamovaniu kliknutím
+- **Pozorujte kolízie**, keď lasery zasiahnu nepriateľov, čo spustí ich odstránenie
+- **Overte vyčistenie**, keď zničené objekty zmiznú z hry
+
+Úspešne ste implementovali systém detekcie kolízií pomocou rovnakých matematických princípov, ktoré riadia navigáciu kozmických lodí a robotiku.
+
+## Výzva GitHub Copilot Agent 🚀
+
+Použite režim Agent na splnenie nasledujúcej výzvy:
+
+**Popis:** Vylepšite systém detekcie kolízií implementáciou power-upov, ktoré sa náhodne objavujú a poskytujú dočasné schopnosti, keď ich hrdinská loď získa.
+
+**Výzva:** Vytvorte triedu PowerUp, ktorá rozširuje GameObject, a implementujte detekciu kolízií medzi hrdinom a power-upmi. Pridajte aspoň dva typy power-upov: jeden, ktorý zvyšuje rýchlosť streľby (znižuje ochladenie), a druhý, ktorý vytvára dočasný št
 
 ---
 
-## 🚀 Výzva
-
-Pridajte explóziu! Pozrite sa na herné prostriedky v [repozitári Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) a skúste pridať explóziu, keď laser zasiahne mimozemšťana.
-
-## Kvíz po prednáške
-
-[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/36)
-
-## Prehľad a samostatné štúdium
-
-Experimentujte s intervalmi vo vašej hre doteraz. Čo sa stane, keď ich zmeníte? Prečítajte si viac o [časových udalostiach v JavaScripte](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
-
-## Zadanie
-
-[Preskúmajte kolízie](assignment.md)
-
----
-
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

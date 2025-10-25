@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b46acf79da8550d76445eed00b06c878",
-  "translation_date": "2025-10-03T13:15:19+00:00",
+  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
+  "translation_date": "2025-10-24T22:09:39+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "ro"
 }
@@ -13,61 +13,106 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/47)
 
-### Introducere
+## Introducere
 
-Pe măsură ce o aplicație web crește, devine o provocare să urmărești toate fluxurile de date. Ce cod obține datele, ce pagină le consumă, unde și când trebuie actualizate... este ușor să ajungi la un cod dezordonat, dificil de întreținut. Acest lucru este cu atât mai adevărat atunci când trebuie să partajezi date între diferite pagini ale aplicației tale, de exemplu datele utilizatorului. Conceptul de *gestionare a stării* a existat întotdeauna în toate tipurile de programe, dar pe măsură ce aplicațiile web devin din ce în ce mai complexe, acesta a devenit un punct cheie de luat în considerare în timpul dezvoltării.
+Gestionarea stării este ca un sistem de navigație pe nava spațială Voyager – când totul funcționează bine, abia observi că există. Dar când lucrurile merg prost, devine diferența dintre a ajunge în spațiul interstelar și a te pierde în vidul cosmic. În dezvoltarea web, starea reprezintă tot ceea ce aplicația ta trebuie să-și amintească: statutul de autentificare al utilizatorului, datele din formulare, istoricul navigării și stările temporare ale interfeței.
 
-În această ultimă parte, vom analiza aplicația pe care am construit-o pentru a regândi modul în care este gestionată starea, permițând suportul pentru reîmprospătarea browserului în orice moment și păstrarea datelor între sesiunile utilizatorului.
+Pe măsură ce aplicația ta bancară a evoluat de la un simplu formular de autentificare la o aplicație mai sofisticată, probabil ai întâmpinat unele provocări comune. Reîmprospătezi pagina și utilizatorii sunt deconectați neașteptat. Închizi browserul și tot progresul dispare. Încerci să depanezi o problemă și te pierzi printre funcții multiple care modifică aceleași date în moduri diferite.
 
-### Prerechizite
+Acestea nu sunt semne ale unui cod slab – sunt dureri de creștere naturale care apar atunci când aplicațiile ating un anumit prag de complexitate. Fiecare dezvoltator se confruntă cu aceste provocări pe măsură ce aplicațiile lor trec de la "dovada conceptului" la "gata de producție".
 
-Trebuie să fi finalizat partea de [preluare a datelor](../3-data/README.md) a aplicației web pentru această lecție. De asemenea, trebuie să instalați [Node.js](https://nodejs.org) și să [rulați serverul API](../api/README.md) local pentru a putea gestiona datele contului.
+În această lecție, vom implementa un sistem centralizat de gestionare a stării care va transforma aplicația ta bancară într-o aplicație fiabilă și profesională. Vei învăța să gestionezi fluxurile de date în mod previzibil, să păstrezi sesiunile utilizatorilor în mod corespunzător și să creezi o experiență fluidă pentru utilizatorii aplicațiilor web moderne.
 
-Puteți testa dacă serverul funcționează corect executând această comandă într-un terminal:
+## Cerințe preliminare
+
+Înainte de a aprofunda conceptele de gestionare a stării, trebuie să ai mediul de dezvoltare configurat corespunzător și fundația aplicației bancare pregătită. Această lecție se bazează direct pe conceptele și codul din părțile anterioare ale acestei serii.
+
+Asigură-te că ai următoarele componente pregătite înainte de a continua:
+
+**Configurare necesară:**
+- Finalizează lecția despre [preluarea datelor](../3-data/README.md) - aplicația ta ar trebui să încarce și să afișeze cu succes datele contului
+- Instalează [Node.js](https://nodejs.org) pe sistemul tău pentru a rula API-ul backend
+- Pornește [serverul API](../api/README.md) local pentru a gestiona operațiunile cu datele contului
+
+**Testarea mediului tău:**
+
+Verifică dacă serverul API funcționează corect executând această comandă într-un terminal:
 
 ```sh
 curl http://localhost:5000/api
 # -> should return "Bank API v1.0.0" as a result
 ```
 
+**Ce face această comandă:**
+- **Trimite** o cerere GET către serverul API local
+- **Testează** conexiunea și verifică dacă serverul răspunde
+- **Returnează** informațiile despre versiunea API dacă totul funcționează corect
+
 ---
 
-## Regândirea gestionării stării
+## Diagnosticarea problemelor actuale ale stării
 
-În [lecția anterioară](../3-data/README.md), am introdus un concept de bază al stării în aplicația noastră cu variabila globală `account`, care conține datele bancare ale utilizatorului conectat în prezent. Totuși, implementarea noastră actuală are câteva defecte. Încercați să reîmprospătați pagina când sunteți pe tabloul de bord. Ce se întâmplă?
+Ca Sherlock Holmes care examinează o scenă a crimei, trebuie să înțelegem exact ce se întâmplă în implementarea noastră actuală înainte de a rezolva misterul sesiunilor utilizatorilor care dispar.
 
-Există 3 probleme cu codul actual:
+Să facem un experiment simplu care dezvăluie provocările de gestionare a stării:
 
-- Starea nu este păstrată, deoarece o reîmprospătare a browserului vă duce înapoi la pagina de autentificare.
-- Există mai multe funcții care modifică starea. Pe măsură ce aplicația crește, acest lucru poate face dificilă urmărirea modificărilor și este ușor să uitați să actualizați una.
-- Starea nu este curățată, astfel încât atunci când faceți clic pe *Logout*, datele contului sunt încă acolo, deși sunteți pe pagina de autentificare.
+**🧪 Încearcă acest test de diagnosticare:**
+1. Autentifică-te în aplicația ta bancară și navighează la tabloul de bord
+2. Reîmprospătează pagina browserului
+3. Observă ce se întâmplă cu statutul tău de autentificare
 
-Am putea actualiza codul nostru pentru a aborda aceste probleme una câte una, dar acest lucru ar crea mai multă duplicare a codului și ar face aplicația mai complexă și dificil de întreținut. Sau am putea să ne oprim câteva minute și să ne regândim strategia.
+Dacă ești redirecționat înapoi la ecranul de autentificare, ai descoperit problema clasică a persistenței stării. Acest comportament apare deoarece implementarea noastră actuală stochează datele utilizatorului în variabile JavaScript care se resetează la fiecare reîncărcare a paginii.
 
-> Ce probleme încercăm cu adevărat să rezolvăm aici?
+**Probleme ale implementării actuale:**
 
-[Gestionarea stării](https://en.wikipedia.org/wiki/State_management) se referă la găsirea unei abordări bune pentru a rezolva aceste două probleme particulare:
+Simpla variabilă `account` din [lecția anterioară](../3-data/README.md) creează trei probleme semnificative care afectează atât experiența utilizatorului, cât și mentenabilitatea codului:
 
-- Cum să păstrăm fluxurile de date dintr-o aplicație ușor de înțeles?
-- Cum să păstrăm datele stării mereu sincronizate cu interfața utilizatorului (și viceversa)?
+| Problemă | Cauza tehnică | Impact asupra utilizatorului |
+|----------|---------------|------------------------------|
+| **Pierderea sesiunii** | Reîmprospătarea paginii șterge variabilele JavaScript | Utilizatorii trebuie să se autentifice frecvent |
+| **Actualizări dispersate** | Funcții multiple modifică starea direct | Depanarea devine din ce în ce mai dificilă |
+| **Curățare incompletă** | Deconectarea nu șterge toate referințele stării | Probleme potențiale de securitate și confidențialitate |
 
-Odată ce ați rezolvat aceste probleme, orice alte probleme pe care le-ați putea avea fie sunt deja rezolvate, fie au devenit mai ușor de rezolvat. Există multe abordări posibile pentru rezolvarea acestor probleme, dar vom merge cu o soluție comună care constă în **centralizarea datelor și a modurilor de a le modifica**. Fluxurile de date ar arăta astfel:
+**Provocarea arhitecturală:**
 
-![Schema care arată fluxurile de date între HTML, acțiunile utilizatorului și stare](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.ro.png)
+La fel ca designul compartimentat al Titanicului, care părea robust până când mai multe compartimente s-au umplut simultan, rezolvarea acestor probleme individual nu va aborda problema arhitecturală de bază. Avem nevoie de o soluție cuprinzătoare pentru gestionarea stării.
 
-> Nu vom acoperi aici partea în care datele declanșează automat actualizarea vizualizării, deoarece este legată de concepte mai avansate de [Programare Reactivă](https://en.wikipedia.org/wiki/Reactive_programming). Este un subiect bun de aprofundare dacă sunteți interesat.
+> 💡 **Ce încercăm de fapt să realizăm aici?**
 
-✅ Există multe biblioteci care oferă abordări diferite pentru gestionarea stării, [Redux](https://redux.js.org) fiind o opțiune populară. Aruncați o privire asupra conceptelor și modelelor utilizate, deoarece este adesea o modalitate bună de a învăța ce probleme potențiale puteți întâmpina în aplicațiile web mari și cum pot fi rezolvate.
+[Gestionarea stării](https://en.wikipedia.org/wiki/State_management) înseamnă, de fapt, rezolvarea a două puzzle-uri fundamentale:
 
-### Sarcină
+1. **Unde sunt datele mele?**: Păstrarea evidenței informațiilor pe care le avem și de unde provin
+2. **Toată lumea este pe aceeași pagină?**: Asigurarea că ceea ce văd utilizatorii corespunde cu ceea ce se întâmplă de fapt
 
-Vom începe cu puțină refactorizare. Înlocuiți declarația `account`:
+**Planul nostru:**
+
+În loc să ne învârtim în cerc, vom crea un sistem de **gestionare centralizată a stării**. Gândește-te la asta ca la a avea o persoană foarte organizată responsabilă de toate lucrurile importante:
+
+![Schema care arată fluxurile de date între HTML, acțiunile utilizatorului și starea](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.ro.png)
+
+**Înțelegerea acestui flux de date:**
+- **Centralizează** toată starea aplicației într-un singur loc
+- **Direcționează** toate modificările stării prin funcții controlate
+- **Asigură** sincronizarea interfeței cu starea curentă
+- **Oferă** un model clar și previzibil pentru gestionarea datelor
+
+> 💡 **Perspectivă profesională**: Această lecție se concentrează pe concepte fundamentale. Pentru aplicații complexe, biblioteci precum [Redux](https://redux.js.org) oferă funcții mai avansate de gestionare a stării. Înțelegerea acestor principii de bază te va ajuta să stăpânești orice bibliotecă de gestionare a stării.
+
+> ⚠️ **Subiect avansat**: Nu vom acoperi actualizările automate ale interfeței declanșate de modificările stării, deoarece acest lucru implică concepte de [programare reactivă](https://en.wikipedia.org/wiki/Reactive_programming). Consideră acest lucru ca un pas excelent pentru continuarea procesului de învățare!
+
+### Sarcină: Centralizarea structurii stării
+
+Să începem transformarea gestionării dispersate a stării într-un sistem centralizat. Acest prim pas stabilește fundația pentru toate îmbunătățirile ulterioare.
+
+**Pasul 1: Creează un obiect central de stare**
+
+Înlocuiește declarația simplă `account`:
 
 ```js
 let account = null;
 ```
 
-Cu:
+Cu un obiect structurat de stare:
 
 ```js
 let state = {
@@ -75,27 +120,76 @@ let state = {
 };
 ```
 
-Ideea este să *centralizăm* toate datele aplicației noastre într-un singur obiect de stare. Deocamdată avem doar `account` în stare, deci nu se schimbă prea mult, dar creează o cale pentru evoluții.
+**De ce contează această schimbare:**
+- **Centralizează** toate datele aplicației într-un singur loc
+- **Pregătește** structura pentru adăugarea mai multor proprietăți ale stării mai târziu
+- **Creează** o graniță clară între stare și alte variabile
+- **Stabilește** un model care se extinde pe măsură ce aplicația ta crește
 
-De asemenea, trebuie să actualizăm funcțiile care îl folosesc. În funcțiile `register()` și `login()`, înlocuiți `account = ...` cu `state.account = ...`;
+**Pasul 2: Actualizează modelele de acces la stare**
 
-La începutul funcției `updateDashboard()`, adăugați această linie:
+Actualizează funcțiile tale pentru a utiliza noua structură a stării:
 
+**În funcțiile `register()` și `login()`**, înlocuiește:
+```js
+account = ...
+```
+
+Cu:
+```js
+state.account = ...
+```
+
+**În funcția `updateDashboard()`**, adaugă această linie la început:
 ```js
 const account = state.account;
 ```
 
-Această refactorizare în sine nu a adus multe îmbunătățiri, dar ideea a fost să punem bazele pentru următoarele modificări.
+**Ce realizează aceste actualizări:**
+- **Menține** funcționalitatea existentă în timp ce îmbunătățește structura
+- **Pregătește** codul pentru o gestionare mai sofisticată a stării
+- **Creează** modele consistente pentru accesarea datelor stării
+- **Stabilește** fundația pentru actualizările centralizate ale stării
 
-## Urmărirea modificărilor datelor
+> 💡 **Notă**: Această refactorizare nu rezolvă imediat problemele noastre, dar creează fundația esențială pentru îmbunătățirile puternice care urmează!
 
-Acum că am pus în aplicare obiectul `state` pentru a stoca datele noastre, următorul pas este să centralizăm actualizările. Scopul este să fie mai ușor să urmărim orice modificări și când se întâmplă.
+## Implementarea actualizărilor controlate ale stării
 
-Pentru a evita modificările făcute obiectului `state`, este de asemenea o practică bună să îl considerăm [*imobil*](https://en.wikipedia.org/wiki/Immutable_object), ceea ce înseamnă că nu poate fi modificat deloc. De asemenea, înseamnă că trebuie să creați un nou obiect de stare dacă doriți să schimbați ceva în el. Procedând astfel, construiți o protecție împotriva [efectelor secundare](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) nedorite și deschideți posibilități pentru noi funcționalități în aplicația dvs., cum ar fi implementarea funcțiilor de anulare/refacere, în timp ce faceți mai ușor de depanat. De exemplu, ați putea înregistra fiecare modificare făcută stării și păstra un istoric al modificărilor pentru a înțelege sursa unei erori.
+Cu starea noastră centralizată, pasul următor implică stabilirea unor mecanisme controlate pentru modificarea datelor. Această abordare asigură modificări previzibile ale stării și o depanare mai ușoară.
 
-În JavaScript, puteți utiliza [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) pentru a crea o versiune imobilă a unui obiect. Dacă încercați să faceți modificări unui obiect imobil, va fi generată o excepție.
+Principiul de bază seamănă cu controlul traficului aerian: în loc să permitem funcțiilor multiple să modifice starea independent, vom canaliza toate modificările printr-o singură funcție controlată. Acest model oferă o supraveghere clară a momentului și modului în care se produc modificările datelor.
 
-✅ Știți diferența dintre un obiect imobil *superficial* și unul *profund*? Puteți citi despre asta [aici](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+**Gestionarea imutabilă a stării:**
+
+Vom trata obiectul nostru `state` ca [*imutabil*](https://en.wikipedia.org/wiki/Immutable_object), ceea ce înseamnă că nu îl vom modifica direct. În schimb, fiecare schimbare va crea un nou obiect de stare cu datele actualizate.
+
+Deși această abordare poate părea inițial ineficientă comparativ cu modificările directe, oferă avantaje semnificative pentru depanare, testare și menținerea predictibilității aplicației.
+
+**Beneficiile gestionării imutabile a stării:**
+
+| Beneficiu | Descriere | Impact |
+|-----------|-----------|--------|
+| **Predictibilitate** | Modificările au loc doar prin funcții controlate | Mai ușor de depanat și testat |
+| **Urmărirea istoricului** | Fiecare schimbare a stării creează un nou obiect | Permite funcționalitatea de anulare/refacere |
+| **Prevenirea efectelor secundare** | Fără modificări accidentale | Previne erorile misterioase |
+| **Optimizarea performanței** | Ușor de detectat când starea s-a schimbat | Permite actualizări eficiente ale interfeței |
+
+**Imutabilitate în JavaScript cu `Object.freeze()`:**
+
+JavaScript oferă [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) pentru a preveni modificările obiectelor:
+
+```js
+const immutableState = Object.freeze({ account: userData });
+// Any attempt to modify immutableState will throw an error
+```
+
+**Ce se întâmplă aici:**
+- **Previne** atribuirea directă sau ștergerea proprietăților
+- **Aruncă** excepții dacă se încearcă modificări
+- **Asigură** că modificările stării trebuie să treacă prin funcții controlate
+- **Creează** un contract clar pentru modul în care starea poate fi actualizată
+
+> 💡 **Explorare detaliată**: Află despre diferența dintre obiectele *imutabile superficiale* și *imutabile profunde* în [documentația MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Înțelegerea acestei distincții este crucială pentru structuri complexe ale stării.
 
 ### Sarcină
 
@@ -110,9 +204,9 @@ function updateState(property, newData) {
 }
 ```
 
-În această funcție, creăm un nou obiect de stare și copiem datele din starea anterioară folosind [operatorul *spread (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Apoi suprascriem o anumită proprietate a obiectului de stare cu noile date folosind [notația cu paranteze](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` pentru atribuire. În final, blocăm obiectul pentru a preveni modificările folosind `Object.freeze()`. Deocamdată avem doar proprietatea `account` stocată în stare, dar cu această abordare puteți adăuga câte proprietăți aveți nevoie în stare.
+În această funcție, creăm un nou obiect de stare și copiem datele din starea anterioară folosind [operatorul *spread (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Apoi, suprascriem o anumită proprietate a obiectului de stare cu noile date folosind [notația cu paranteze](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` pentru atribuire. În final, blocăm obiectul pentru a preveni modificările folosind `Object.freeze()`. Deocamdată, avem doar proprietatea `account` stocată în stare, dar cu această abordare poți adăuga câte proprietăți ai nevoie în stare.
 
-Vom actualiza și inițializarea `state` pentru a ne asigura că starea inițială este de asemenea blocată:
+Vom actualiza, de asemenea, inițializarea `state` pentru a ne asigura că starea inițială este și ea înghețată:
 
 ```js
 let state = Object.freeze({
@@ -120,21 +214,21 @@ let state = Object.freeze({
 });
 ```
 
-După aceea, actualizați funcția `register` înlocuind atribuirea `state.account = result;` cu:
+După aceea, actualizează funcția `register` înlocuind atribuirea `state.account = result;` cu:
 
 ```js
 updateState('account', result);
 ```
 
-Faceți același lucru cu funcția `login`, înlocuind `state.account = data;` cu:
+Fă același lucru cu funcția `login`, înlocuind `state.account = data;` cu:
 
 ```js
 updateState('account', data);
 ```
 
-Vom profita acum de ocazie pentru a rezolva problema datelor contului care nu sunt șterse atunci când utilizatorul face clic pe *Logout*.
+Acum vom profita de ocazie pentru a rezolva problema datelor contului care nu sunt șterse atunci când utilizatorul face clic pe *Logout*.
 
-Creați o nouă funcție `logout()`:
+Creează o nouă funcție `logout()`:
 
 ```js
 function logout() {
@@ -143,49 +237,102 @@ function logout() {
 }
 ```
 
-În `updateDashboard()`, înlocuiți redirecționarea `return navigate('/login');` cu `return logout()`;
+În `updateDashboard()`, înlocuiește redirecționarea `return navigate('/login');` cu `return logout();`;
 
-Încercați să înregistrați un nou cont, să vă deconectați și să vă conectați din nou pentru a verifica dacă totul funcționează corect.
+Încearcă să înregistrezi un cont nou, să te deconectezi și să te autentifici din nou pentru a verifica dacă totul funcționează corect.
 
-> Sfat: puteți analiza toate modificările stării adăugând `console.log(state)` la sfârșitul funcției `updateState()` și deschizând consola în instrumentele de dezvoltare ale browserului.
+> Sfat: poți verifica toate modificările stării adăugând `console.log(state)` la sfârșitul funcției `updateState()` și deschizând consola în instrumentele de dezvoltare ale browserului tău.
 
-## Păstrarea stării
+## Implementarea persistenței datelor
 
-Majoritatea aplicațiilor web trebuie să păstreze datele pentru a funcționa corect. Toate datele critice sunt de obicei stocate într-o bază de date și accesate printr-un API de server, cum ar fi datele contului utilizatorului în cazul nostru. Dar uneori, este de asemenea interesant să păstrăm unele date în aplicația client care rulează în browser, pentru o experiență mai bună a utilizatorului sau pentru a îmbunătăți performanța la încărcare.
+Problema pierderii sesiunii pe care am identificat-o mai devreme necesită o soluție de persistență care să mențină starea utilizatorului între sesiunile browserului. Acest lucru transformă aplicația noastră dintr-o experiență temporară într-un instrument fiabil și profesional.
 
-Când doriți să păstrați datele în browser, există câteva întrebări importante pe care ar trebui să vi le puneți:
+Gândește-te cum ceasurile atomice mențin timpul precis chiar și în timpul întreruperilor de curent, stocând starea critică în memorie nevolatilă. În mod similar, aplicațiile web au nevoie de mecanisme de stocare persistentă pentru a păstra datele esențiale ale utilizatorului între sesiunile browserului și reîmprospătările paginii.
 
-- *Sunt datele sensibile?* Ar trebui să evitați stocarea oricăror date sensibile pe client, cum ar fi parolele utilizatorului.
-- *Pentru cât timp aveți nevoie să păstrați aceste date?* Plănuiți să accesați aceste date doar pentru sesiunea curentă sau doriți să fie stocate permanent?
+**Întrebări strategice pentru persistența datelor:**
 
-Există mai multe modalități de a stoca informații într-o aplicație web, în funcție de ceea ce doriți să realizați. De exemplu, puteți utiliza URL-urile pentru a stoca o interogare de căutare și a o face partajabilă între utilizatori. De asemenea, puteți utiliza [cookie-uri HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies) dacă datele trebuie să fie partajate cu serverul, cum ar fi informațiile de [autentificare](https://en.wikipedia.org/wiki/Authentication).
+Înainte de a implementa persistența, ia în considerare acești factori critici:
 
-O altă opțiune este să utilizați una dintre numeroasele API-uri ale browserului pentru stocarea datelor. Două dintre ele sunt deosebit de interesante:
+| Întrebare | Contextul aplicației bancare | Impactul deciziei |
+|-----------|-------------------------------|-------------------|
+| **Datele sunt sensibile?** | Soldul contului, istoricul tranzacțiilor | Alegerea metodelor de stocare sigure |
+| **Cât timp ar trebui să persiste?** | Starea de autentificare vs. preferințele temporare ale interfeței | Selectarea duratei de stocare adecvate |
+| **Are nevoie serverul de ele?** | Token-uri de autentificare vs. setări ale interfeței | Determinarea cerințelor de partajare |
 
-- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): un [Key/Value store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) care permite păstrarea datelor specifice site-ului web curent între diferite sesiuni. Datele salvate în acesta nu expiră niciodată.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): acesta funcționează la fel ca `localStorage`, cu excepția faptului că datele stocate în acesta sunt șterse când sesiunea se termină (când browserul este închis).
+**Opțiuni de stocare în browser:**
 
-Rețineți că ambele API-uri permit doar stocarea [șirurilor de caractere](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Dacă doriți să stocați obiecte complexe, va trebui să le serializați în formatul [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) folosind [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Browserele moderne oferă mai multe mecanisme de stocare, fiecare conceput pentru diferite utilizări:
 
-✅ Dacă doriți să creați o aplicație web care nu funcționează cu un server, este de asemenea posibil să creați o bază de date pe client folosind API-ul [`IndexedDB`](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Acesta este rezervat pentru cazuri de utilizare avansate sau dacă aveți nevoie să stocați o cantitate semnificativă de date, deoarece este mai complex de utilizat.
+**API-uri principale de stocare:**
 
-### Sarcină
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Stocare persistentă [Key/Value](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Persistă** datele între sesiunile browserului pe termen nelimitat  
+   - **Supraviețuiește** restarturilor browserului și ale computerului
+   - **Este limitată** la domeniul specific al site-ului web
+   - **Perfectă** pentru preferințele utilizatorilor și stările de autentificare
 
-Ne dorim ca utilizatorii noștri să rămână conectați până când fac clic explicit pe butonul *Logout*, așa că vom folosi `localStorage` pentru a stoca datele contului. Mai întâi, să definim o cheie pe care o vom folosi pentru a stoca datele noastre.
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Stocare temporară a sesiunii
+   - **Funcționează** identic cu localStorage în timpul sesiunilor active
+   - **Se șterge** automat când se închide fila browserului
+   - **Ideală** pentru date temporare care nu ar trebui să persiste
+
+3. **[Cookie-uri HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Stocare partajată cu serverul
+   - **Se trimit automat** cu fiecare cerere către server
+   - **Perfecte** pentru [token-uri de autentificare](https://en.wikipedia.org/wiki/Authentication)
+   - **Limitate** ca dimensiune și pot afecta performanța
+
+**Cerința de serializare a datelor:**
+
+Atât `localStorage`, cât și `sessionStorage` stochează doar [șiruri de caractere](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String):
+
+```js
+// Convert objects to JSON strings for storage
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parse JSON strings back to objects when retrieving
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Înțelegerea serializării:**
+- **Transformă** obiectele Java
+> 💡 **Opțiune Avansată**: Pentru aplicații offline complexe cu seturi mari de date, luați în considerare utilizarea [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Acesta oferă o bază de date completă pe partea clientului, dar necesită o implementare mai complexă.
+
+### Sarcină: Implementați Persistența cu localStorage
+
+Să implementăm stocarea persistentă astfel încât utilizatorii să rămână conectați până când se deconectează explicit. Vom folosi `localStorage` pentru a stoca datele contului între sesiunile browserului.
+
+**Pasul 1: Definirea Configurației de Stocare**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Apoi adăugați această linie la sfârșitul funcției `updateState()`:
+**Ce oferă această constantă:**
+- **Creează** un identificator consistent pentru datele stocate
+- **Previne** greșelile de scriere în referințele cheilor de stocare
+- **Facilitează** schimbarea cheii de stocare, dacă este necesar
+- **Urmează** cele mai bune practici pentru un cod ușor de întreținut
+
+**Pasul 2: Adăugarea Persistenței Automate**
+
+Adăugați această linie la sfârșitul funcției `updateState()`:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-Cu aceasta, datele contului utilizatorului vor fi păstrate și mereu actualizate, deoarece am centralizat anterior toate actualizările stării. Acesta este momentul în care începem să beneficiem de toate refactorizările anterioare 🙂.
+**Analiză a ceea ce se întâmplă aici:**
+- **Convertește** obiectul contului într-un șir JSON pentru stocare
+- **Salvează** datele folosind cheia noastră de stocare consistentă
+- **Se execută** automat ori de câte ori apar modificări ale stării
+- **Asigură** că datele stocate sunt întotdeauna sincronizate cu starea curentă
 
-Deoarece datele sunt salvate, trebuie să ne ocupăm și de restaurarea lor atunci când aplicația este încărcată. Deoarece vom începe să avem mai mult cod de inițializare, ar putea fi o idee bună să creăm o nouă funcție `init`, care include și codul nostru anterior de la sfârșitul `app.js`:
+> 💡 **Beneficiu Arhitectural**: Deoarece am centralizat toate actualizările stării prin `updateState()`, adăugarea persistenței a necesitat doar o linie de cod. Acest lucru demonstrează puterea deciziilor arhitecturale bune!
+
+**Pasul 3: Restaurarea Stării la Încărcarea Aplicației**
+
+Creați o funcție de inițializare pentru a restaura datele salvate:
 
 ```js
 function init() {
@@ -202,17 +349,49 @@ function init() {
 init();
 ```
 
-Aici recuperăm datele salvate, iar dacă există, actualizăm starea în consecință. Este important să facem acest lucru *înainte* de actualizarea rutei, deoarece ar putea exista cod care se bazează pe stare în timpul actualizării paginii.
+**Înțelegerea procesului de inițializare:**
+- **Recuperează** orice date de cont salvate anterior din localStorage
+- **Parcurge** șirul JSON înapoi într-un obiect JavaScript
+- **Actualizează** starea folosind funcția noastră controlată de actualizare
+- **Restaurează** sesiunea utilizatorului automat la încărcarea paginii
+- **Se execută** înainte de actualizările de rută pentru a asigura disponibilitatea stării
 
-De asemenea, putem face pagina *Dashboard* pagina implicită a aplicației noastre, deoarece acum păstrăm datele contului. Dacă nu se găsesc date, tabloul de bord se ocupă de redirecționarea către pagina *Login*. În `updateRoute()`, înlocuiți fallback-ul `return navigate('/login');` cu `return navigate('/dashboard');`.
+**Pasul 4: Optimizarea Rutei Implicite**
 
-Acum conectați-vă în aplicație și încercați să reîmprospătați pagina. Ar trebui să rămâneți pe tabloul de bord. Cu această actualizare, am rezolvat toate problemele inițiale...
+Actualizați ruta implicită pentru a profita de persistență:
 
-## Reîmprospătarea datelor
+În `updateRoute()`, înlocuiți:
+```js
+// Replace: return navigate('/login');
+return navigate('/dashboard');
+```
 
-...Dar s-ar putea să fi creat și o nouă problemă. Ups!
+**De ce această schimbare are sens:**
+- **Valorifică** eficient noul nostru sistem de persistență
+- **Permite** tabloul de bord să gestioneze verificările de autentificare
+- **Redirecționează** automat la autentificare dacă nu există o sesiune salvată
+- **Creează** o experiență mai fluidă pentru utilizator
 
-Accesați tabloul de bord folosind contul `test`, apoi rulați această comandă într-un terminal pentru a crea o nouă tranzacție:
+**Testarea Implementării:**
+
+1. Conectați-vă la aplicația dvs. bancară
+2. Reîmprospătați pagina browserului
+3. Verificați că rămâneți conectat și pe tabloul de bord
+4. Închideți și redeschideți browserul
+5. Navigați înapoi la aplicația dvs. și confirmați că sunteți încă conectat
+
+🎉 **Realizare Desăvârșită**: Ați implementat cu succes gestionarea persistentă a stării! Aplicația dvs. acum se comportă ca o aplicație web profesională.
+
+## Echilibrarea Persistenței cu Actualitatea Datelor
+
+Sistemul nostru de persistență menține cu succes sesiunile utilizatorilor, dar introduce o nouă provocare: învechirea datelor. Când mai mulți utilizatori sau aplicații modifică aceleași date de pe server, informațiile stocate local devin depășite.
+
+Această situație seamănă cu navigatorii vikingi care se bazau atât pe hărți stelare stocate, cât și pe observații cerești curente. Hărțile ofereau consistență, dar navigatorii aveau nevoie de observații proaspete pentru a ține cont de condițiile în schimbare. În mod similar, aplicația noastră are nevoie atât de starea persistentă a utilizatorului, cât și de datele curente de pe server.
+
+**🧪 Descoperirea Problemei de Actualitate a Datelor:**
+
+1. Conectați-vă la tabloul de bord folosind contul `test`
+2. Rulați această comandă într-un terminal pentru a simula o tranzacție dintr-o altă sursă:
 
 ```sh
 curl --request POST \
@@ -221,15 +400,31 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Încercați să reîmprospătați pagina tabloului de bord în browser acum. Ce se întâmplă? Vedeți noua tranzacție?
+3. Reîmprospătați pagina tabloului de bord în browser
+4. Observați dacă vedeți noua tranzacție
 
-Starea este păstrată pe termen nelimitat datorită `localStorage`, dar asta înseamnă și că nu este niciodată actualizată până când nu vă deconectați din aplicație și vă conectați din nou!
+**Ce demonstrează acest test:**
+- **Arată** cum stocarea locală poate deveni "învechită" (depășită)
+- **Simulează** scenarii reale în care datele se schimbă în afara aplicației dvs.
+- **Evidențiază** tensiunea dintre persistență și actualitatea datelor
 
-O strategie posibilă pentru a rezolva acest lucru este să reîncărcăm datele contului de fiecare dată când tabloul de bord este încărcat, pentru a evita datele învechite.
+**Provocarea Datelor Învechite:**
 
-### Sarcină
+| Problemă | Cauză | Impact asupra utilizatorului |
+|----------|-------|-----------------------------|
+| **Date Învechite** | localStorage nu expiră automat | Utilizatorii văd informații depășite |
+| **Schimbări pe Server** | Alte aplicații/utilizatori modifică aceleași date | Vizualizări inconsistente între platforme |
+| **Cache vs. Realitate** | Cache-ul local nu se potrivește cu starea serverului | Experiență slabă a utilizatorului și confuzie |
 
-Creați o nouă funcție `updateAccountData`:
+**Strategia de Soluționare:**
+
+Vom implementa un model de "reîmprospătare la încărcare" care echilibrează beneficiile persistenței cu necesitatea datelor actuale. Această abordare menține o experiență fluidă pentru utilizator, asigurând în același timp acuratețea datelor.
+
+### Sarcină: Implementați Sistemul de Reîmprospătare a Datelor
+
+Vom crea un sistem care să preia automat date proaspete de pe server, menținând în același timp beneficiile gestionării persistente a stării.
+
+**Pasul 1: Creați un Actualizator de Date ale Contului**
 
 ```js
 async function updateAccountData() {
@@ -247,9 +442,15 @@ async function updateAccountData() {
 }
 ```
 
-Această metodă verifică dacă suntem conectați în prezent, apoi reîncarcă datele contului de pe server.
+**Înțelegerea logicii acestei funcții:**
+- **Verifică** dacă un utilizator este conectat în prezent (state.account există)
+- **Redirecționează** la deconectare dacă nu se găsește o sesiune validă
+- **Preia** date proaspete ale contului de pe server folosind funcția existentă `getAccount()`
+- **Gestionează** erorile serverului în mod grațios prin deconectarea sesiunilor invalide
+- **Actualizează** starea cu date proaspete folosind sistemul nostru controlat de actualizare
+- **Declanșează** persistența automată a localStorage prin funcția `updateState()`
 
-Creați o altă funcție numită `refresh`:
+**Pasul 2: Creați un Handler de Reîmprospătare a Tabloului de Bord**
 
 ```js
 async function refresh() {
@@ -258,7 +459,15 @@ async function refresh() {
 }
 ```
 
-Aceasta actualizează datele contului, apoi se ocupă de actualizarea HTML-ului paginii tabloului de bord. Este ceea ce trebuie să apelăm atunci când ruta tabloului de bord este încărcată. Actualizați definiția rutei cu:
+**Ce realizează această funcție de reîmprospătare:**
+- **Coordonează** procesul de reîmprospătare a datelor și actualizare a interfeței
+- **Așteaptă** încărcarea datelor proaspete înainte de a actualiza afișajul
+- **Asigură** că tabloul de bord afișează cele mai recente informații
+- **Menține** o separare clară între gestionarea datelor și actualizările interfeței
+
+**Pasul 3: Integrarea cu Sistemul de Rute**
+
+Actualizați configurația rutelor pentru a declanșa automat reîmprospătarea:
 
 ```js
 const routes = {
@@ -267,18 +476,59 @@ const routes = {
 };
 ```
 
-Încercați să reîmprospătați tabloul de bord acum, ar trebui să afișeze datele contului actualizate.
+**Cum funcționează această integrare:**
+- **Execută** funcția de reîmprospătare de fiecare dată când se încarcă ruta tabloului de bord
+- **Asigură** că datele proaspete sunt întotdeauna afișate când utilizatorii navighează la tabloul de bord
+- **Menține** structura existentă a rutelor, adăugând în același timp actualitatea datelor
+- **Oferă** un model consistent pentru inițializarea specifică rutelor
 
----
+**Testarea Sistemului de Reîmprospătare a Datelor:**
 
-## 🚀 Provocare
+1. Conectați-vă la aplicația dvs. bancară
+2. Rulați comanda curl de mai devreme pentru a crea o nouă tranzacție
+3. Reîmprospătați pagina tabloului de bord sau navigați în altă parte și reveniți
+4. Verificați că noua tranzacție apare imediat
 
-Acum că reîncărcăm datele contului de fiecare dată când tabloul de bord este încărcat, credeți că mai trebuie să păstrăm *toate datele contului*?
+🎉 **Echilibru Perfect Obținut**: Aplicația dvs. combină acum experiența fluidă a stării persistente cu acuratețea datelor proaspete de pe server!
 
-Încercați să lucrați împreună pentru a schimba ceea ce este salvat și încărcat din `localStorage` astfel încât să includă doar ceea ce este absolut necesar pentru ca aplicația să funcționeze.
+## Provocarea Agentului GitHub Copilot 🚀
 
-## Chestionar după lecție
-[Chestionar post-lectură](https://ff-quizzes.netlify.app/web/quiz/48)
+Utilizați modul Agent pentru a finaliza următoarea provocare:
+
+**Descriere:** Implementați un sistem cuprinzător de gestionare a stării cu funcționalitate de anulare/refacere pentru aplicația bancară. Această provocare vă va ajuta să exersați concepte avansate de gestionare a stării, inclusiv urmărirea istoricului stării, actualizări imutabile și sincronizarea interfeței utilizatorului.
+
+**Prompt:** Creați un sistem îmbunătățit de gestionare a stării care include: 1) Un array de istoric al stării care urmărește toate stările anterioare, 2) Funcții de anulare și refacere care pot reveni la stările anterioare, 3) Butoane UI pentru operațiunile de anulare/refacere pe tabloul de bord, 4) O limită maximă de istoric de 10 stări pentru a preveni problemele de memorie și 5) Curățarea corespunzătoare a istoricului atunci când utilizatorul se deconectează. Asigurați-vă că funcționalitatea de anulare/refacere funcționează cu modificările soldului contului și persistă între reîmprospătările browserului.
+
+Aflați mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
+
+## 🚀 Provocare: Optimizarea Stocării
+
+Implementarea dvs. gestionează acum eficient sesiunile utilizatorilor, reîmprospătarea datelor și gestionarea stării. Cu toate acestea, luați în considerare dacă abordarea noastră actuală echilibrează optim eficiența stocării cu funcționalitatea.
+
+La fel ca maeștrii de șah care disting între piesele esențiale și cele sacrificabile, o gestionare eficientă a stării necesită identificarea datelor care trebuie să persiste față de cele care ar trebui să fie întotdeauna proaspete de pe server.
+
+**Analiza Optimizării:**
+
+Evaluați implementarea actuală a localStorage și luați în considerare aceste întrebări strategice:
+- Care este informația minimă necesară pentru a menține autentificarea utilizatorului?
+- Ce date se schimbă suficient de frecvent încât stocarea locală să ofere puține beneficii?
+- Cum poate optimizarea stocării să îmbunătățească performanța fără a degrada experiența utilizatorului?
+
+**Strategia de Implementare:**
+- **Identificați** datele esențiale care trebuie să persiste (probabil doar identificarea utilizatorului)
+- **Modificați** implementarea localStorage pentru a stoca doar datele critice ale sesiunii
+- **Asigurați-vă** că datele proaspete sunt întotdeauna încărcate de pe server la vizitele pe tabloul de bord
+- **Testați** că abordarea optimizată menține aceeași experiență a utilizatorului
+
+**Considerație Avansată:**
+- **Comparați** compromisurile între stocarea completă a datelor contului și doar a token-urilor de autentificare
+- **Documentați** deciziile și raționamentul dvs. pentru viitorii membri ai echipei
+
+Această provocare vă va ajuta să gândiți ca un dezvoltator profesionist care ia în considerare atât experiența utilizatorului, cât și eficiența aplicației. Luați-vă timp pentru a experimenta diferite abordări!
+
+## Chestionar Post-Lecție
+
+[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Temă
 
@@ -290,5 +540,5 @@ Iată un exemplu de rezultat după finalizarea temei:
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru acuratețe, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autoritară. Pentru informații critice, se recomandă traducerea realizată de un profesionist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

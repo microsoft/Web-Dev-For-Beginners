@@ -1,21 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "056641280211e52fd0adb81b6058ec55",
-  "translation_date": "2025-08-29T10:51:55+00:00",
+  "original_hash": "84053695dca714e16ed064366503ebd5",
+  "translation_date": "2025-10-24T21:09:42+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "cs"
 }
 -->
 # Vytvořte vesmírnou hru, část 2: Kreslení hrdiny a monster na plátno
 
-## Kvíz před přednáškou
+Canvas API je jednou z nejmocnějších funkcí webového vývoje pro vytváření dynamické, interaktivní grafiky přímo ve vašem prohlížeči. V této lekci proměníme prázdný HTML prvek `<canvas>` na herní svět plný hrdinů a monster. Představte si plátno jako svůj digitální umělecký panel, kde se kód stává vizuálním.
 
-[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/31)
+Navazujeme na to, co jste se naučili v předchozí lekci, a nyní se ponoříme do vizuálních aspektů. Naučíte se, jak načítat a zobrazovat herní spritey, přesně umisťovat prvky a vytvořit vizuální základ pro vaši vesmírnou hru. Tím překleneme propast mezi statickými webovými stránkami a dynamickými, interaktivními zážitky.
 
-## Plátno
+Na konci této lekce budete mít kompletní herní scénu s vaší hrdinskou lodí správně umístěnou a formacemi nepřátel připravenými k boji. Pochopíte, jak moderní hry vykreslují grafiku v prohlížečích, a získáte dovednosti k vytvoření vlastních interaktivních vizuálních zážitků. Pojďme prozkoumat grafiku na plátně a oživit vaši vesmírnou hru!
 
-Plátno je HTML prvek, který nemá ve výchozím nastavení žádný obsah; je to prázdná plocha. Musíte na něj něco nakreslit.
+## Kvíz před lekcí
+
+[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/31)
+
+## Canvas
+
+Co přesně je tento prvek `<canvas>`? Je to řešení HTML5 pro vytváření dynamické grafiky a animací ve webových prohlížečích. Na rozdíl od běžných obrázků nebo videí, které jsou statické, vám plátno poskytuje kontrolu nad každým pixelem na obrazovce. Díky tomu je ideální pro hry, vizualizace dat a interaktivní umění. Představte si to jako programovatelný kreslící povrch, kde se JavaScript stává vaším štětcem.
+
+Ve výchozím nastavení vypadá prvek canvas jako prázdný, průhledný obdélník na vaší stránce. Ale právě v tom spočívá jeho potenciál! Jeho skutečná síla se projeví, když použijete JavaScript k vykreslení tvarů, načítání obrázků, vytváření animací a zajištění interakce s uživatelem. Je to podobné jako u prvních průkopníků počítačové grafiky v Bell Labs v 60. letech, kteří museli programovat každý pixel, aby vytvořili první digitální animace.
 
 ✅ Přečtěte si [více o Canvas API](https://developer.mozilla.org/docs/Web/API/Canvas_API) na MDN.
 
@@ -25,206 +33,267 @@ Takto se obvykle deklaruje jako součást těla stránky:
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
-Výše nastavujeme `id`, `width` a `height`.
-
-- `id`: nastavte, abyste mohli získat referenci, když s ním budete chtít pracovat.
-- `width`: šířka prvku.
-- `height`: výška prvku.
+**Co tento kód dělá:**
+- **Nastavuje** atribut `id`, abyste mohli tento konkrétní prvek canvas odkazovat v JavaScriptu
+- **Definuje** šířku v pixelech pro kontrolu horizontální velikosti plátna
+- **Určuje** výšku v pixelech pro stanovení vertikálních rozměrů plátna
 
 ## Kreslení jednoduché geometrie
 
-Plátno používá kartézský souřadnicový systém pro kreslení objektů. Používá tedy osu x a osu y k určení, kde se něco nachází. Pozice `0,0` je v levém horním rohu a pravý dolní roh odpovídá hodnotám WIDTH a HEIGHT plátna.
+Teď, když víte, co je prvek canvas, pojďme prozkoumat, jak na něm skutečně kreslit! Canvas používá souřadnicový systém, který vám může být povědomý z hodin matematiky, ale má jednu důležitou odlišnost specifickou pro počítačovou grafiku.
 
-![mřížka plátna](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.cs.png)
+Canvas používá kartézské souřadnice s osou x (horizontální) a osou y (vertikální) k umístění všeho, co kreslíte. Ale zde je klíčový rozdíl: na rozdíl od souřadnicového systému z matematiky začíná bod původu `(0,0)` v levém horním rohu, přičemž hodnoty x se zvyšují, když se pohybujete doprava, a hodnoty y se zvyšují, když se pohybujete dolů. Tento přístup pochází z raných počítačových displejů, kde elektronové paprsky skenovaly shora dolů, což činilo levý horní roh přirozeným výchozím bodem.
+
+![mřížka canvasu](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.cs.png)
 > Obrázek z [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Pro kreslení na prvek plátna musíte projít následujícími kroky:
+Pro kreslení na prvek canvas budete postupovat podle stejného tříkrokového procesu, který tvoří základ všech grafických prvků na plátně. Jakmile to uděláte několikrát, stane se to přirozeností:
 
-1. **Získat referenci** na prvek plátna.
-2. **Získat referenci** na kontextový prvek, který je na plátně.
-3. **Proveďte kreslící operaci** pomocí kontextového prvku.
+1. **Získejte referenci** na váš prvek canvas z DOM (stejně jako u jakéhokoli jiného HTML prvku)
+2. **Získejte 2D vykreslovací kontext** – ten poskytuje všechny metody kreslení
+3. **Začněte kreslit!** Použijte vestavěné metody kontextu k vytvoření vaší grafiky
 
-Kód pro výše uvedené kroky obvykle vypadá takto:
+Takto to vypadá v kódu:
 
 ```javascript
-// draws a red rectangle
-//1. get the canvas reference
-canvas = document.getElementById("myCanvas");
+// Step 1: Get the canvas element
+const canvas = document.getElementById("myCanvas");
 
-//2. set the context to 2D to draw basic shapes
-ctx = canvas.getContext("2d");
+// Step 2: Get the 2D rendering context
+const ctx = canvas.getContext("2d");
 
-//3. fill it with the color red
+// Step 3: Set fill color and draw a rectangle
 ctx.fillStyle = 'red';
-
-//4. and draw a rectangle with these parameters, setting location and size
-ctx.fillRect(0,0, 200, 200) // x,y,width, height
+ctx.fillRect(0, 0, 200, 200); // x, y, width, height
 ```
+
+**Rozložme si to krok za krokem:**
+- **Získáme** náš prvek canvas pomocí jeho ID a uložíme ho do proměnné
+- **Získáme** 2D vykreslovací kontext – to je naše sada nástrojů plná metod kreslení
+- **Řekneme** plátnu, že chceme vyplnit věci červenou barvou pomocí vlastnosti `fillStyle`
+- **Nakreslíme** obdélník začínající v levém horním rohu (0,0), který je široký a vysoký 200 pixelů
 
 ✅ Canvas API se většinou zaměřuje na 2D tvary, ale můžete také kreslit 3D prvky na webovou stránku; k tomu můžete použít [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
 S Canvas API můžete kreslit různé věci, například:
 
-- **Geometrické tvary**, už jsme ukázali, jak nakreslit obdélník, ale můžete kreslit mnohem více.
-- **Text**, můžete kreslit text s libovolným písmem a barvou.
-- **Obrázky**, můžete kreslit obrázky na základě obrazových souborů, jako jsou .jpg nebo .png.
+- **Geometrické tvary**, už jsme ukázali, jak nakreslit obdélník, ale je toho mnohem více, co můžete kreslit.
+- **Text**, můžete kreslit text s libovolným fontem a barvou, jakou si přejete.
+- **Obrázky**, můžete kreslit obrázek na základě obrazového souboru, například .jpg nebo .png.
 
 ✅ Vyzkoušejte to! Už víte, jak nakreslit obdélník, dokážete nakreslit kruh na stránku? Podívejte se na některé zajímavé kresby na plátně na CodePen. Zde je [zvláště působivý příklad](https://codepen.io/dissimulate/pen/KrAwx).
 
 ## Načtení a vykreslení obrazového souboru
 
-Obrazový soubor načtete vytvořením objektu `Image` a nastavením jeho vlastnosti `src`. Poté posloucháte událost `load`, abyste věděli, kdy je připraven k použití. Kód vypadá takto:
+Kreslení základních tvarů je užitečné pro začátek, ale většina her potřebuje skutečné obrázky! Spritey, pozadí a textury jsou to, co dává hrám jejich vizuální přitažlivost. Načítání a zobrazování obrázků na plátně funguje jinak než kreslení geometrických tvarů, ale je to jednoduché, jakmile pochopíte proces.
 
-### Načtení souboru
+Potřebujeme vytvořit objekt `Image`, načíst náš obrazový soubor (to se děje asynchronně, což znamená "na pozadí") a poté ho vykreslit na plátno, jakmile bude připraven. Tento přístup zajišťuje, že se vaše obrázky zobrazí správně, aniž by blokovaly vaši aplikaci během načítání.
+
+### Základní načítání obrázků
 
 ```javascript
 const img = new Image();
 img.src = 'path/to/my/image.png';
 img.onload = () => {
-  // image loaded and ready to be used
-}
+  // Image loaded and ready to be used
+  console.log('Image loaded successfully!');
+};
 ```
 
-### Vzor načítání souboru
+**Co se děje v tomto kódu:**
+- **Vytvoříme** zcela nový objekt Image pro uložení našeho spriteu nebo textury
+- **Řekneme** mu, který obrazový soubor má načíst, nastavením cesty ke zdroji
+- **Posloucháme** událost načítání, abychom přesně věděli, kdy je obrázek připraven k použití
 
-Doporučuje se zabalit výše uvedené do konstruktu, jako je tento, aby bylo snazší jej používat a abyste se pokusili s ním manipulovat pouze tehdy, když je plně načten:
+### Lepší způsob načítání obrázků
+
+Zde je robustnější způsob, jak se vypořádat s načítáním obrázků, který běžně používají profesionální vývojáři. Zabalíme logiku načítání obrázků do funkce založené na Promise – tento přístup, popularizovaný, když se JavaScriptové Promises staly standardem v ES6, činí váš kód organizovanější a elegantně řeší chyby:
 
 ```javascript
 function loadAsset(path) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = path;
     img.onload = () => {
-      // image loaded and ready to be used
       resolve(img);
-    }
-  })
+    };
+    img.onerror = () => {
+      reject(new Error(`Failed to load image: ${path}`));
+    };
+  });
 }
 
-// use like so
-
-async function run() {
-  const heroImg = await loadAsset('hero.png')
-  const monsterImg = await loadAsset('monster.png')
+// Modern usage with async/await
+async function initializeGame() {
+  try {
+    const heroImg = await loadAsset('hero.png');
+    const monsterImg = await loadAsset('monster.png');
+    // Images are now ready to use
+  } catch (error) {
+    console.error('Failed to load game assets:', error);
+  }
 }
-
 ```
 
-Pro vykreslení herních prvků na obrazovku by váš kód vypadal takto:
+**Co jsme zde udělali:**
+- **Zabalili** veškerou logiku načítání obrázků do Promise, abychom ji mohli lépe spravovat
+- **Přidali** zpracování chyb, které nám skutečně řekne, když se něco pokazí
+- **Použili** moderní syntaxi async/await, protože je mnohem přehlednější
+- **Zahrnuli** bloky try/catch pro elegantní řešení jakýchkoli problémů při načítání
+
+Jakmile jsou vaše obrázky načteny, jejich vykreslení na plátno je vlastně docela jednoduché:
 
 ```javascript
-async function run() {
-  const heroImg = await loadAsset('hero.png')
-  const monsterImg = await loadAsset('monster.png')
+async function renderGameScreen() {
+  try {
+    // Load game assets
+    const heroImg = await loadAsset('hero.png');
+    const monsterImg = await loadAsset('monster.png');
 
-  canvas = document.getElementById("myCanvas");
-  ctx = canvas.getContext("2d");
-  ctx.drawImage(heroImg, canvas.width/2,canvas.height/2);
-  ctx.drawImage(monsterImg, 0,0);
+    // Get canvas and context
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw images to specific positions
+    ctx.drawImage(heroImg, canvas.width / 2, canvas.height / 2);
+    ctx.drawImage(monsterImg, 0, 0);
+  } catch (error) {
+    console.error('Failed to render game screen:', error);
+  }
 }
 ```
 
-## Teď je čas začít stavět vaši hru
+**Projděme si to krok za krokem:**
+- **Načteme** oba naše obrázky hrdiny a monstra na pozadí pomocí await
+- **Získáme** náš prvek canvas a získáme potřebný 2D vykreslovací kontext
+- **Umístíme** obrázek hrdiny přímo do středu pomocí rychlé souřadnicové matematiky
+- **Umístíme** obrázek monstra do levého horního rohu, aby začala formace nepřátel
+- **Zachytíme** jakékoli chyby, které by mohly nastat během načítání nebo vykreslování
+
+## Nyní je čas začít budovat vaši hru
+
+Nyní vše spojíme dohromady, abychom vytvořili vizuální základ vaší vesmírné hry. Máte solidní pochopení základů canvasu a technik načítání obrázků, takže vás tato praktická část provede vytvořením kompletní herní obrazovky se správně umístěnými spritey.
 
 ### Co vytvořit
 
-Vytvoříte webovou stránku s prvkem plátna. Měla by vykreslit černou obrazovku `1024*768`. Poskytli jsme vám dva obrázky:
+Vytvoříte webovou stránku s prvkem Canvas. Měla by vykreslovat černou obrazovku `1024*768`. Poskytli jsme vám dva obrázky:
 
-- Loď hrdiny
+- Hrdinská loď
 
-   ![Loď hrdiny](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.cs.png)
+   ![Hrdinská loď](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.cs.png)
 
-- 5*5 monster
+- 5×5 formace monster
 
    ![Loď monstra](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.cs.png)
 
 ### Doporučené kroky pro zahájení vývoje
 
-Najděte soubory, které byly vytvořeny pro vás ve složce `your-work`. Měla by obsahovat následující:
+Najděte startovací soubory, které byly vytvořeny pro vás ve složce `your-work`. Struktura vašeho projektu by měla obsahovat:
 
 ```bash
--| assets
-  -| enemyShip.png
-  -| player.png
--| index.html
--| app.js
--| package.json
+your-work/
+├── assets/
+│   ├── enemyShip.png
+│   └── player.png
+├── index.html
+├── app.js
+└── package.json
 ```
 
-Otevřete kopii této složky ve Visual Studio Code. Měli byste mít nastavené lokální vývojové prostředí, nejlépe s Visual Studio Code s NPM a Node nainstalovanými. Pokud nemáte `npm` nastavený na svém počítači, [zde je návod, jak to udělat](https://www.npmjs.com/get-npm).
+**S čím pracujete:**
+- **Herní spritey** jsou ve složce `assets/`, aby vše zůstalo organizované
+- **Váš hlavní HTML soubor** nastavuje prvek canvas a vše připravuje
+- **JavaScriptový soubor**, kde napíšete veškerou magii vykreslování hry
+- **Soubor package.json**, který nastavuje vývojový server, abyste mohli testovat lokálně
 
-Spusťte svůj projekt navigací do složky `your_work`:
+Otevřete tuto složku ve Visual Studio Code a začněte s vývojem. Budete potřebovat lokální vývojové prostředí s Visual Studio Code, NPM a Node.js nainstalovanými. Pokud nemáte `npm` nastavený na svém počítači, [zde je návod, jak ho nainstalovat](https://www.npmjs.com/get-npm).
+
+Spusťte svůj vývojový server navigací do složky `your-work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Výše uvedené spustí HTTP server na adrese `http://localhost:5000`. Otevřete prohlížeč a zadejte tuto adresu. Zatím je to prázdná stránka, ale to se změní.
+**Tento příkaz dělá několik skvělých věcí:**
+- **Spustí** lokální server na `http://localhost:5000`, abyste mohli testovat svou hru
+- **Servíruje** všechny vaše soubory správně, aby je váš prohlížeč mohl načíst
+- **Sleduje** vaše soubory pro změny, abyste mohli hladce vyvíjet
+- **Poskytuje vám** profesionální vývojové prostředí pro testování všeho
 
-> Poznámka: pro zobrazení změn na obrazovce obnovte prohlížeč.
+> 💡 **Poznámka**: Váš prohlížeč zpočátku zobrazí prázdnou stránku – to je očekávané! Jakmile přidáte kód, obnovte prohlížeč, abyste viděli své změny. Tento iterativní přístup k vývoji je podobný tomu, jak NASA vytvořila počítač pro řízení Apolla – testování každé komponenty před jejím integrací do většího systému.
 
 ### Přidání kódu
 
-Přidejte potřebný kód do `your-work/app.js`, abyste vyřešili následující:
+Přidejte požadovaný kód do `your-work/app.js`, abyste dokončili následující úkoly:
 
-1. **Nakreslete** plátno s černým pozadím
-   > tip: přidejte dva řádky pod příslušný TODO v `/app.js`, nastavte prvek `ctx` na černou barvu a souřadnice nahoře/vlevo na 0,0 a výšku a šířku na hodnoty plátna.
-2. **Načtěte** textury
-   > tip: přidejte obrázky hráče a nepřítele pomocí `await loadTexture` a předáním cesty k obrázku. Zatím je na obrazovce neuvidíte!
-3. **Nakreslete** hrdinu do středu obrazovky ve spodní polovině
-   > tip: použijte API `drawImage` k vykreslení heroImg na obrazovku, nastavte `canvas.width / 2 - 45` a `canvas.height - canvas.height / 4)`;
-4. **Nakreslete** 5*5 monster
-   > tip: Nyní můžete odkomentovat kód pro vykreslení nepřátel na obrazovku. Dále přejděte do funkce `createEnemies` a doplňte ji.
+1. **Nakreslete plátno s černým pozadím**
+   > 💡 **Jak na to**: Najděte TODO v `/app.js` a přidejte jen dva řádky. Nastavte `ctx.fillStyle` na černou, poté použijte `ctx.fillRect()` začínající na (0,0) s rozměry vašeho plátna. Jednoduché!
 
-   Nejprve nastavte několik konstant:
+2. **Načtěte herní textury**
+   > 💡 **Jak na to**: Použijte `await loadAsset()` k načtení obrázků hráče a nepřítele. Uložte je do proměnných, abyste je mohli později použít. Pamatujte – neobjeví se, dokud je skutečně nenakreslíte!
 
-    ```javascript
-    const MONSTER_TOTAL = 5;
-    const MONSTER_WIDTH = MONSTER_TOTAL * 98;
-    const START_X = (canvas.width - MONSTER_WIDTH) / 2;
-    const STOP_X = START_X + MONSTER_WIDTH;
-    ```
+3. **Nakreslete hrdinskou loď na střed-dolní pozici**
+   > 💡 **Jak na to**: Použijte `ctx.drawImage()` k umístění vašeho hrdiny. Pro souřadnici x zkuste `canvas.width / 2 - 45`, aby byla loď na středu, a pro souřadnici y použijte `canvas.height - canvas.height / 4`, aby byla ve spodní části.
 
-   poté vytvořte smyčku pro vykreslení pole monster na obrazovku:
+4. **Nakreslete 5×5 formaci nepřátelských lodí**
+   > 💡 **Jak na to**: Najděte funkci `createEnemies` a nastavte vnořenou smyčku. Budete muset udělat nějaké výpočty pro rozestupy a umístění, ale nebojte se – ukážu vám přesně jak!
 
-    ```javascript
-    for (let x = START_X; x < STOP_X; x += 98) {
-        for (let y = 0; y < 50 * 5; y += 50) {
-          ctx.drawImage(enemyImg, x, y);
-        }
-      }
-    ```
+Nejprve nastavte konstanty pro správné rozložení formace nepřátel:
+
+```javascript
+const ENEMY_TOTAL = 5;
+const ENEMY_SPACING = 98;
+const FORMATION_WIDTH = ENEMY_TOTAL * ENEMY_SPACING;
+const START_X = (canvas.width - FORMATION_WIDTH) / 2;
+const STOP_X = START_X + FORMATION_WIDTH;
+```
+
+**Rozložme si, co tyto konstanty dělají:**
+- **Nastavíme** 5 nepřátel na řádek a sloupec (pěkná 5×5 mřížka)
+- **Definujeme**, kolik místa dát mezi nepřáteli, aby nevypadali stísněně
+- **Vypočítáme**, jak široká bude celá formace
+- **Zjistíme**, kde začít a skončit, aby formace vypadala vycentrovaně
+
+Poté vytvořte vnořené smyčky pro vykreslení formace nepřátel:
+
+```javascript
+for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
+  for (let y = 0; y < 50 * 5; y += 50) {
+    ctx.drawImage(enemyImg, x, y);
+  }
+}
+```
+
+**Co tato vnořená smyčka dělá:**
+- Vnější smyčka **pohybuje** zleva doprava přes naši formaci
+- Vnitřní smyčka **prochází** shora dolů, aby vytvořila úhledné řádky
+- **Nakreslíme** každý sprite nepřítele na přesné souřadnice x,y, které jsme vypočítali
+- Vše zůstává **rovnoměrně rozestavěné**, takže to vypadá profesionálně a organizovaně
 
 ## Výsledek
 
 Hotový výsledek by měl vypadat takto:
 
-![Černá obrazovka s hrdinou a 5*5 monstry](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.cs.png)
+![Černá obrazovka s hrdinou a 5×5 monstry](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.cs.png)
 
 ## Řešení
 
-Nejprve se pokuste vyřešit to sami, ale pokud se zaseknete, podívejte se na [řešení](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Nejprve se pokuste vyřešit úkol sami, ale pokud se zaseknete, podívejte se na [řešení](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
 
 ---
 
-## 🚀 Výzva
+## Výzva GitHub Copilot Agent 🚀
 
-Naučili jste se kreslit pomocí Canvas API zaměřeného na 2D; podívejte se na [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) a zkuste nakreslit 3D objekt.
+Použijte režim Agent k dokončení následující výzvy:
 
-## Kvíz po přednášce
+**Popis:** Vylepšete plátno vaší vesmírné hry přidáním vizuálních efektů a interaktivních prvků pomocí technik Canvas API, které jste se naučili.
 
-[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/32)
+**Úkol:** Vytvořte nový soubor nazvaný `enhanced-canvas.html` s plátnem, které zobrazuje animované hvězdy na pozadí, pulzující ukazatel zdraví pro hrdinskou loď a nepřátelské lodě, které se pomalu pohybují dolů. Zahrňte JavaScriptový kód, který kreslí blikající hvězdy pomocí náhodných pozic a opacity, implementuje ukazatel zdraví, který mění barvu podle úrovně zdraví (zelená > žlutá > červená), a animuje nepřátelské lodě, aby se pohybovaly dolů po obrazovce různými rychlostmi.
 
-## Recenze a samostudium
-
-Zjistěte více o Canvas API [čtením o něm](https://developer.mozilla.org/docs/Web/API/Canvas_API).
-
-## Zadání
-
-[Hrajte si s Canvas API](assignment.md)
+Zjistěte více o [režimu agent](https://code.visualstudio.com/blog
 
 ---
 
-**Upozornění**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+**Prohlášení**:  
+Tento dokument byl přeložen pomocí služby AI pro překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

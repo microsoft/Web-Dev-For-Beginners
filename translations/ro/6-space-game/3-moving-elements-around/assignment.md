@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ccfcd8c2932761359fbaff3d6b01ace4",
-  "translation_date": "2025-08-28T07:54:55+00:00",
+  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
+  "translation_date": "2025-10-24T22:16:33+00:00",
   "source_file": "6-space-game/3-moving-elements-around/assignment.md",
   "language_code": "ro"
 }
@@ -11,13 +11,24 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Instrucțiuni
 
-Parcurge fișierul tău /app.js din folderul jocului și găsește modalități de a-l comenta și organiza. Este foarte ușor ca codul să scape de sub control, iar acum este o ocazie bună să adaugi comentarii pentru a te asigura că ai un cod ușor de citit, pe care să-l poți folosi mai târziu.
+Codul curat și bine documentat este esențial pentru menținerea și partajarea proiectelor tale. În această temă, vei exersa unul dintre cele mai importante obiceiuri ale dezvoltatorilor profesioniști: scrierea de comentarii clare și utile care explică scopul și funcționalitatea codului tău.
+
+Revizuiește fișierul tău actual `app.js` din folderul jocului și găsește modalități de a-l comenta și organiza. Este foarte ușor ca un cod să devină haotic, iar acum este o ocazie bună să adaugi comentarii pentru a te asigura că ai un cod ușor de citit, pe care să-l poți folosi mai târziu.
+
+**Sarcina ta include:**
+- **Adaugă comentarii** care explică ce face fiecare secțiune principală a codului
+- **Documentează funcțiile** cu descrieri clare ale scopului și parametrilor lor
+- **Organizează codul** în blocuri logice cu anteturi de secțiuni
+- **Elimină** orice cod neutilizat sau redundant
+- **Folosește convenții** consistente pentru denumirea variabilelor și funcțiilor
 
 ## Criterii de evaluare
 
-| Criterii | Exemplare                                                          | Adecvate                              | Necesită îmbunătățiri                                          |
-| -------- | ------------------------------------------------------------------ | ------------------------------------- | -------------------------------------------------------------- |
-|          | Codul din `app.js` este complet comentat și organizat în blocuri logice | Codul din `app.js` este comentat adecvat | Codul din `app.js` este oarecum dezorganizat și lipsit de comentarii bune |
+| Criteriu | Exemplu | Adecvat | Necesită îmbunătățiri |
+| -------- | -------- | ------- | --------------------- |
+| **Documentarea codului** | Codul din `app.js` este complet comentat cu explicații clare și utile pentru toate secțiunile și funcțiile principale | Codul din `app.js` este comentat adecvat, cu explicații de bază pentru majoritatea secțiunilor | Codul din `app.js` are comentarii minime și lipsește explicații clare |
+| **Organizarea codului** | Codul este organizat în blocuri logice cu anteturi de secțiuni clare și o structură consecventă | Codul are o oarecare organizare, cu gruparea de bază a funcționalităților conexe | Codul este oarecum dezorganizat și greu de urmărit |
+| **Calitatea codului** | Toate variabilele și funcțiile folosesc denumiri descriptive, nu există cod neutilizat, urmează convenții consecvente | Majoritatea codului urmează bune practici de denumire, cu cod neutilizat minim | Denumirile variabilelor sunt neclare, conține cod neutilizat, stil inconsistent |
 
 ---
 

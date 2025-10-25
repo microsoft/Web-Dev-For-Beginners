@@ -1,32 +1,50 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "61c14b27044861e5e69db35dd52c4403",
-  "translation_date": "2025-08-29T11:36:21+00:00",
+  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
+  "translation_date": "2025-10-24T22:07:04+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "ro"
 }
 -->
-# Proiect Terrarium Partea 3: Manipularea DOM-ului și o Închidere
+# Proiect Terrarium Partea 3: Manipularea DOM-ului și Closures în JavaScript
 
-![DOM și o închidere](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.ro.png)
+![DOM și un closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.ro.png)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Chestionar Pre-Lecție
+Bine ai venit la unul dintre cele mai captivante aspecte ale dezvoltării web - interactivitatea! Document Object Model (DOM) este ca un pod între HTML-ul și JavaScript-ul tău, iar astăzi îl vom folosi pentru a da viață terrariumului tău. Când Tim Berners-Lee a creat primul browser web, el a imaginat o lume în care documentele ar putea fi dinamice și interactive - DOM-ul face posibilă această viziune.
 
-[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/19)
+Vom explora, de asemenea, closures în JavaScript, care pot părea intimidante la început. Gândește-te la closures ca la niște "buzunare de memorie" unde funcțiile tale pot păstra informații importante. Este ca și cum fiecare plantă din terrariumul tău ar avea propriul său registru de date pentru a-și urmări poziția. Până la sfârșitul acestei lecții, vei înțelege cât de naturale și utile sunt acestea.
 
-### Introducere
+Iată ce vom construi: un terrarium în care utilizatorii pot muta și plasa plantele oriunde doresc. Vei învăța tehnici de manipulare a DOM-ului care stau la baza tuturor, de la încărcarea fișierelor prin drag-and-drop până la jocurile interactive. Să dăm viață terrariumului tău.
 
-Manipularea DOM-ului, sau "Modelul Obiectului Document", este un aspect esențial al dezvoltării web. Conform [MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction), "Modelul Obiectului Document (DOM) este reprezentarea datelor obiectelor care alcătuiesc structura și conținutul unui document pe web." Provocările legate de manipularea DOM-ului pe web au fost adesea motivul utilizării framework-urilor JavaScript în locul JavaScript-ului simplu pentru gestionarea DOM-ului, dar ne vom descurca pe cont propriu!
+## Test înainte de lecție
 
-În plus, această lecție va introduce ideea unei [închideri JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures), pe care o puteți considera ca o funcție închisă de o altă funcție, astfel încât funcția interioară are acces la domeniul funcției exterioare.
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/19)
 
-> Închiderile JavaScript sunt un subiect vast și complex. Această lecție abordează cea mai simplă idee: în codul acestui terrarium, veți găsi o închidere: o funcție interioară și o funcție exterioară construite astfel încât funcția interioară să aibă acces la domeniul funcției exterioare. Pentru mult mai multe informații despre cum funcționează acest lucru, vă rugăm să vizitați [documentația extinsă](https://developer.mozilla.org/docs/Web/JavaScript/Closures).
+## Înțelegerea DOM-ului: Poarta ta către pagini web interactive
 
-Vom folosi o închidere pentru a manipula DOM-ul.
+Document Object Model (DOM) este modul prin care JavaScript comunică cu elementele HTML. Când browserul tău încarcă o pagină HTML, creează o reprezentare structurată a paginii în memorie - acesta este DOM-ul. Gândește-te la el ca la un arbore genealogic în care fiecare element HTML este un membru al familiei pe care JavaScript îl poate accesa, modifica sau rearanja.
 
-Gândiți-vă la DOM ca la un arbore, care reprezintă toate modurile în care un document de pagină web poate fi manipulat. Diverse API-uri (Interfețe de Programare a Aplicațiilor) au fost scrise astfel încât programatorii, folosind limbajul de programare preferat, să poată accesa DOM-ul și să-l editeze, schimbe, rearanjeze și să-l gestioneze în alte moduri.
+Manipularea DOM-ului transformă paginile statice în site-uri web interactive. De fiecare dată când vezi un buton care își schimbă culoarea la trecerea mouse-ului, conținut care se actualizează fără reîncărcarea paginii sau elemente pe care le poți muta, aceasta este manipularea DOM-ului în acțiune.
+
+![Reprezentarea arborelui DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.ro.png)
+
+> O reprezentare a DOM-ului și a marcajului HTML care îl referențiază. De la [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+
+**Ce face DOM-ul atât de puternic:**
+- **Oferă** o modalitate structurată de a accesa orice element de pe pagină
+- **Permite** actualizări dinamice ale conținutului fără reîncărcarea paginii
+- **Răspunde** în timp real la interacțiunile utilizatorului, cum ar fi clicuri și mișcări
+- **Creează** fundația pentru aplicațiile web interactive moderne
+
+## Closures în JavaScript: Crearea unui cod organizat și puternic
+
+Un [closure în JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures) este ca și cum ai oferi unei funcții propriul spațiu privat de lucru cu memorie persistentă. Gândește-te la cum fiecare specie de cinteză a lui Darwin de pe Insulele Galápagos și-a dezvoltat ciocuri specializate în funcție de mediul specific - closures funcționează similar, creând funcții specializate care "își amintesc" contextul specific chiar și după ce funcția părinte s-a terminat.
+
+În terrariumul nostru, closures ajută fiecare plantă să-și amintească propria poziție în mod independent. Acest model apare frecvent în dezvoltarea profesională cu JavaScript, ceea ce îl face un concept valoros de înțeles.
+
+> 💡 **Înțelegerea Closures**: Closures sunt un subiect semnificativ în JavaScript, iar mulți dezvoltatori le folosesc ani de zile înainte de a înțelege pe deplin toate aspectele teoretice. Astăzi, ne concentrăm pe aplicarea practică - vei vedea cum apar closures în mod natural pe măsură ce construim funcționalitățile interactive. Înțelegerea se va dezvolta pe măsură ce vei vedea cum rezolvă probleme reale.
 
 ![Reprezentarea arborelui DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.ro.png)
 
@@ -34,28 +52,54 @@ Gândiți-vă la DOM ca la un arbore, care reprezintă toate modurile în care u
 
 În această lecție, vom finaliza proiectul nostru interactiv de terrarium prin crearea JavaScript-ului care va permite utilizatorului să manipuleze plantele de pe pagină.
 
-### Prerechizite
+## Înainte de a începe: Pregătirea pentru succes
 
-Ar trebui să aveți HTML-ul și CSS-ul pentru terrarium-ul vostru construite. Până la sfârșitul acestei lecții, veți putea muta plantele în și din terrarium prin tragerea lor.
+Vei avea nevoie de fișierele HTML și CSS din lecțiile anterioare despre terrarium - suntem pe cale să facem acel design static interactiv. Dacă te alături pentru prima dată, completarea acelor lecții mai întâi va oferi un context important.
 
-### Sarcină
+Iată ce vom construi:
+- **Drag-and-drop fluid** pentru toate plantele din terrarium
+- **Urmărirea coordonatelor** astfel încât plantele să-și amintească pozițiile
+- **O interfață interactivă completă** folosind JavaScript simplu
+- **Cod curat și organizat** folosind modele de closures
 
-În folderul terrarium, creați un fișier nou numit `script.js`. Importați acel fișier în secțiunea `<head>`:
+## Configurarea fișierului JavaScript
+
+Să creăm fișierul JavaScript care va face terrariumul tău interactiv.
+
+**Pasul 1: Creează fișierul script**
+
+În folderul terrariumului tău, creează un fișier nou numit `script.js`.
+
+**Pasul 2: Leagă JavaScript-ul de HTML-ul tău**
+
+Adaugă acest tag script în secțiunea `<head>` a fișierului tău `index.html`:
 
 ```html
-	<script src="./script.js" defer></script>
+<script src="./script.js" defer></script>
 ```
 
-> Notă: folosiți `defer` atunci când importați un fișier JavaScript extern în fișierul HTML pentru a permite executarea JavaScript-ului doar după ce fișierul HTML a fost complet încărcat. De asemenea, puteți folosi atributul `async`, care permite scriptului să se execute în timp ce fișierul HTML este analizat, dar în cazul nostru, este important să avem elementele HTML complet disponibile pentru tragere înainte de a permite executarea scriptului de tragere.
+**De ce atributul `defer` este important:**
+- **Asigură** că JavaScript-ul așteaptă până când tot HTML-ul este încărcat
+- **Previne** erorile în care JavaScript-ul caută elemente care nu sunt încă pregătite
+- **Garantează** că toate elementele plantelor sunt disponibile pentru interacțiune
+- **Oferă** performanță mai bună decât plasarea scripturilor la baza paginii
+
+> ⚠️ **Notă importantă**: Atributul `defer` previne problemele comune de sincronizare. Fără el, JavaScript-ul poate încerca să acceseze elemente HTML înainte ca acestea să fie încărcate, cauzând erori.
+
 ---
 
-## Elementele DOM
+## Conectarea JavaScript-ului la elementele HTML
 
-Primul lucru pe care trebuie să-l faceți este să creați referințe la elementele pe care doriți să le manipulați în DOM. În cazul nostru, acestea sunt cele 14 plante care așteaptă în barele laterale.
+Înainte să putem face elementele dragabile, JavaScript-ul trebuie să le localizeze în DOM. Gândește-te la asta ca la un sistem de catalogare a bibliotecii - odată ce ai numărul de catalog, poți găsi exact cartea de care ai nevoie și accesa tot conținutul acesteia.
 
-### Sarcină
+Vom folosi metoda `document.getElementById()` pentru a face aceste conexiuni. Este ca și cum ai avea un sistem de arhivare precis - oferi un ID și localizează exact elementul de care ai nevoie în HTML-ul tău.
 
-```html
+### Activarea funcționalității de drag pentru toate plantele
+
+Adaugă acest cod în fișierul tău `script.js`:
+
+```javascript
+// Enable drag functionality for all 14 plants
 dragElement(document.getElementById('plant1'));
 dragElement(document.getElementById('plant2'));
 dragElement(document.getElementById('plant3'));
@@ -72,159 +116,356 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-Ce se întâmplă aici? Referențiați documentul și căutați în DOM-ul său pentru a găsi un element cu un anumit Id. Amintiți-vă că în prima lecție despre HTML ați dat Id-uri individuale fiecărei imagini de plantă (`id="plant1"`)? Acum veți folosi acel efort. După identificarea fiecărui element, transmiteți acel element unei funcții numite `dragElement` pe care o veți construi în curând. Astfel, elementul din HTML este acum activat pentru tragere, sau va fi în curând.
+**Ce realizează acest cod:**
+- **Localizează** fiecare element al plantei în DOM folosind ID-ul său unic
+- **Recuperează** o referință JavaScript la fiecare element HTML
+- **Transmite** fiecare element unei funcții `dragElement` (pe care o vom crea în continuare)
+- **Pregătește** fiecare plantă pentru interacțiunea drag-and-drop
+- **Conectează** structura HTML la funcționalitatea JavaScript
 
-✅ De ce referențiem elementele prin Id? De ce nu prin clasa CSS? Puteți consulta lecția anterioară despre CSS pentru a răspunde la această întrebare.
+> 🎯 **De ce să folosești ID-uri în loc de clase?** ID-urile oferă identificatori unici pentru elemente specifice, în timp ce clasele CSS sunt concepute pentru stilizarea grupurilor de elemente. Când JavaScript-ul trebuie să manipuleze elemente individuale, ID-urile oferă precizia și performanța de care avem nevoie.
+
+> 💡 **Sfat util**: Observă cum apelăm `dragElement()` pentru fiecare plantă individual. Această abordare asigură că fiecare plantă primește propriul comportament de dragare independent, ceea ce este esențial pentru o interacțiune fluidă a utilizatorului.
 
 ---
 
-## Închiderea
+## Construirea Closure-ului pentru Drag Element
 
-Acum sunteți gata să creați închiderea `dragElement`, care este o funcție exterioară ce închide o funcție sau funcții interioare (în cazul nostru, vom avea trei).
+Acum vom crea inima funcționalității de dragare: un closure care gestionează comportamentul de dragare pentru fiecare plantă. Acest closure va conține mai multe funcții interne care lucrează împreună pentru a urmări mișcările mouse-ului și pentru a actualiza pozițiile elementelor.
 
-Închiderile sunt utile atunci când una sau mai multe funcții trebuie să acceseze domeniul funcției exterioare. Iată un exemplu:
+Closures sunt perfecte pentru această sarcină deoarece ne permit să creăm variabile "private" care persistă între apelurile funcției, oferind fiecărei plante propriul sistem independent de urmărire a coordonatelor.
+
+### Înțelegerea Closures cu un exemplu simplu
+
+Permite-mi să demonstrez closures cu un exemplu simplu care ilustrează conceptul:
 
 ```javascript
-function displayCandy(){
-	let candy = ['jellybeans'];
-	function addCandy(candyType) {
-		candy.push(candyType)
-	}
-	addCandy('gumdrops');
+function createCounter() {
+    let count = 0; // This is like a private variable
+    
+    function increment() {
+        count++; // The inner function remembers the outer variable
+        return count;
+    }
+    
+    return increment; // We're giving back the inner function
 }
-displayCandy();
-console.log(candy)
+
+const myCounter = createCounter();
+console.log(myCounter()); // 1
+console.log(myCounter()); // 2
 ```
 
-În acest exemplu, funcția displayCandy înconjoară o funcție care adaugă un nou tip de bomboană într-un array care există deja în funcție. Dacă ați rula acest cod, array-ul `candy` ar fi nedefinit, deoarece este o variabilă locală (locală pentru închidere).
+**Ce se întâmplă în acest model de closure:**
+- **Creează** o variabilă privată `count` care există doar în acest closure
+- **Funcția internă** poate accesa și modifica acea variabilă externă (mecanismul closure)
+- **Când returnăm** funcția internă, aceasta își menține conexiunea la acele date private
+- **Chiar și după** ce `createCounter()` își termină execuția, `count` persistă și își amintește valoarea
 
-✅ Cum puteți face array-ul `candy` accesibil? Încercați să-l mutați în afara închiderii. În acest fel, array-ul devine global, în loc să rămână disponibil doar pentru domeniul local al închiderii.
+### De ce Closures sunt perfecte pentru funcționalitatea de dragare
 
-### Sarcină
+Pentru terrariumul nostru, fiecare plantă trebuie să-și amintească coordonatele poziției curente. Closures oferă soluția perfectă:
 
-Sub declarațiile elementelor din `script.js`, creați o funcție:
+**Beneficii cheie pentru proiectul nostru:**
+- **Menține** variabilele private de poziție pentru fiecare plantă independent
+- **Păstrează** datele coordonatelor între evenimentele de dragare
+- **Previne** conflictele de variabile între diferite elemente dragabile
+- **Creează** o structură de cod curată și organizată
+
+> 🎯 **Obiectiv de învățare**: Nu trebuie să stăpânești fiecare aspect al closures acum. Concentrează-te pe modul în care acestea ne ajută să organizăm codul și să menținem starea pentru funcționalitatea de dragare.
+
+### Crearea funcției dragElement
+
+Acum să construim funcția principală care va gestiona toată logica de dragare. Adaugă această funcție sub declarațiile elementelor plantelor:
 
 ```javascript
 function dragElement(terrariumElement) {
-	//set 4 positions for positioning on the screen
-	let pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	terrariumElement.onpointerdown = pointerDrag;
+    // Initialize position tracking variables
+    let pos1 = 0,  // Previous mouse X position
+        pos2 = 0,  // Previous mouse Y position  
+        pos3 = 0,  // Current mouse X position
+        pos4 = 0;  // Current mouse Y position
+    
+    // Set up the initial drag event listener
+    terrariumElement.onpointerdown = pointerDrag;
 }
 ```
 
-`dragElement` primește obiectul său `terrariumElement` din declarațiile de la începutul scriptului. Apoi, setați câteva poziții locale la `0` pentru obiectul transmis funcției. Acestea sunt variabilele locale care vor fi manipulate pentru fiecare element pe măsură ce adăugați funcționalitatea de tragere și plasare în închidere pentru fiecare element. Terrarium-ul va fi populat de aceste elemente trase, astfel încât aplicația trebuie să țină evidența locului unde sunt plasate.
+**Înțelegerea sistemului de urmărire a poziției:**
+- **`pos1` și `pos2`**: Stochează diferența dintre pozițiile vechi și noi ale mouse-ului
+- **`pos3` și `pos4`**: Urmăresc coordonatele curente ale mouse-ului
+- **`terrariumElement`**: Elementul specific al plantei pe care îl facem dragabil
+- **`onpointerdown`**: Evenimentul care se declanșează când utilizatorul începe să tragă
 
-În plus, elementul terrariumElement transmis acestei funcții este atribuit unui eveniment `pointerdown`, care face parte din [web APIs](https://developer.mozilla.org/docs/Web/API) concepute pentru a ajuta la gestionarea DOM-ului. `onpointerdown` se declanșează atunci când un buton este apăsat sau, în cazul nostru, un element care poate fi tras este atins. Acest handler de evenimente funcționează atât pe [navigatoare web cât și mobile](https://caniuse.com/?search=onpointerdown), cu câteva excepții.
+**Cum funcționează modelul de closure:**
+- **Creează** variabile private de poziție pentru fiecare element al plantei
+- **Menține** aceste variabile pe parcursul ciclului de viață al dragării
+- **Asigură** că fiecare plantă își urmărește coordonatele independent
+- **Oferă** o interfață curată prin funcția `dragElement`
 
-✅ [Handler-ul de evenimente `onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) are mult mai mult suport cross-browser; de ce nu l-ați folosi aici? Gândiți-vă la tipul exact de interacțiune pe ecran pe care încercați să o creați aici.
+### De ce să folosești Pointer Events?
+
+Te-ai putea întreba de ce folosim `onpointerdown` în loc de mai familiarul `onclick`. Iată raționamentul:
+
+| Tip de eveniment | Cel mai potrivit pentru | Dezavantaj |
+|------------------|--------------------------|------------|
+| `onclick`       | Clicuri simple pe butoane | Nu poate gestiona dragarea (doar clicuri și eliberări) |
+| `onpointerdown` | Mouse și touch | Mai nou, dar bine suportat în zilele noastre |
+| `onmousedown`   | Doar mouse desktop | Lasă utilizatorii de mobil pe dinafară |
+
+**De ce pointer events sunt perfecte pentru ceea ce construim:**
+- **Funcționează excelent** indiferent dacă cineva folosește un mouse, deget sau chiar un stilou
+- **Se simte la fel** pe laptop, tabletă sau telefon
+- **Gestionează** mișcarea reală de dragare (nu doar clic și eliberare)
+- **Creează** o experiență fluidă pe care utilizatorii o așteaptă de la aplicațiile web moderne
+
+> 💡 **Pregătire pentru viitor**: Pointer events sunt modalitatea modernă de a gestiona interacțiunile utilizatorilor. În loc să scrii cod separat pentru mouse și touch, obții ambele gratuit. Destul de grozav, nu-i așa?
 
 ---
 
-## Funcția Pointerdrag
+## Funcția pointerDrag: Capturarea începutului unei dragări
 
-Elementul `terrariumElement` este gata să fie tras; când evenimentul `onpointerdown` este declanșat, funcția `pointerDrag` este invocată. Adăugați acea funcție chiar sub această linie: `terrariumElement.onpointerdown = pointerDrag;`:
+Când un utilizator apasă pe o plantă (fie cu un clic de mouse, fie cu o atingere de deget), funcția `pointerDrag` intră în acțiune. Această funcție capturează coordonatele inițiale și configurează sistemul de dragare.
 
-### Sarcină 
+Adaugă această funcție în interiorul closure-ului `dragElement`, imediat după linia `terrariumElement.onpointerdown = pointerDrag;`:
 
 ```javascript
 function pointerDrag(e) {
-	e.preventDefault();
-	console.log(e);
-	pos3 = e.clientX;
-	pos4 = e.clientY;
+    // Prevent default browser behavior (like text selection)
+    e.preventDefault();
+    
+    // Capture the initial mouse/touch position
+    pos3 = e.clientX;  // X coordinate where drag started
+    pos4 = e.clientY;  // Y coordinate where drag started
+    
+    // Set up event listeners for the dragging process
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
 }
 ```
 
-Se întâmplă mai multe lucruri. În primul rând, preveniți evenimentele implicite care se întâmplă în mod normal la pointerdown să aibă loc folosind `e.preventDefault();`. În acest fel aveți mai mult control asupra comportamentului interfeței.
+**Pas cu pas, iată ce se întâmplă:**
+- **Previne** comportamentele implicite ale browserului care ar putea interfera cu dragarea
+- **Înregistrează** coordonatele exacte unde utilizatorul a început gestul de dragare
+- **Stabilește** ascultători de evenimente pentru mișcarea continuă de dragare
+- **Pregătește** sistemul pentru a urmări mișcarea mouse-ului/degetului pe întregul document
 
-> Reveniți la această linie după ce ați construit complet fișierul script și încercați fără `e.preventDefault()` - ce se întâmplă?
+### Înțelegerea prevenirii evenimentelor
 
-În al doilea rând, deschideți `index.html` într-o fereastră de browser și inspectați interfața. Când faceți clic pe o plantă, puteți vedea cum evenimentul 'e' este capturat. Explorați evenimentul pentru a vedea cât de multe informații sunt colectate de un singur eveniment pointer down!  
+Linia `e.preventDefault()` este crucială pentru o dragare fluidă:
 
-Apoi, observați cum variabilele locale `pos3` și `pos4` sunt setate la e.clientX. Puteți găsi valorile `e` în panoul de inspecție. Aceste valori capturează coordonatele x și y ale plantei în momentul în care faceți clic pe ea sau o atingeți. Veți avea nevoie de control detaliat asupra comportamentului plantelor pe măsură ce le faceți clic și le trageți, astfel încât să țineți evidența coordonatelor lor.
+**Fără prevenire, browserele ar putea:**
+- **Selecta** textul în timpul dragării pe pagină
+- **Declanșa** meniuri contextuale la clic dreapta în timpul dragării
+- **Interfera** cu comportamentul nostru personalizat de dragare
+- **Crea** artefacte vizuale în timpul operațiunii de dragare
 
-✅ Devine mai clar de ce această aplicație este construită cu o închidere mare? Dacă nu ar fi, cum ați menține domeniul pentru fiecare dintre cele 14 plante care pot fi trase?
+> 🔍 **Experiment**: După ce finalizezi această lecție, încearcă să elimini `e.preventDefault()` și vezi cum afectează experiența de dragare. Vei înțelege rapid de ce această linie este esențială!
 
-Completați funcția inițială adăugând două manipulări suplimentare ale evenimentelor pointer sub `pos4 = e.clientY`:
+### Sistemul de urmărire a coordonatelor
 
-```html
+Proprietățile `e.clientX` și `e.clientY` ne oferă coordonate precise ale mouse-ului/atingerii:
+
+| Proprietate | Ce măsoară | Caz de utilizare |
+|-------------|------------|------------------|
+| `clientX`   | Poziția orizontală relativă la fereastra de vizualizare | Urmărirea mișcării stânga-dreapta |
+| `clientY`   | Poziția verticală relativă la fereastra de vizualizare | Urmărirea mișcării sus-jos |
+
+**Înțelegerea acestor coordonate:**
+- **Oferă** informații de poziționare precise la nivel de pixel
+- **Se actualizează** în timp real pe măsură ce utilizatorul își mișcă pointerul
+- **Rămâne** consistent pe diferite dimensiuni de ecran și niveluri de zoom
+- **Permite** interacțiuni de dragare fluide și receptive
+
+### Configurarea ascultătorilor de evenimente la nivel de document
+
+Observă cum atașăm evenimentele de mișcare și oprire întregului `document`, nu doar elementului plantei:
+
+```javascript
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
-Acum indicați că doriți ca planta să fie trasă împreună cu pointerul pe măsură ce o mutați și ca gestul de tragere să se oprească atunci când deselectați planta. `onpointermove` și `onpointerup` fac parte din același API ca `onpointerdown`. Interfața va arunca erori acum, deoarece nu ați definit încă funcțiile `elementDrag` și `stopElementDrag`, așa că construiți-le în continuare.
 
-## Funcțiile elementDrag și stopElementDrag
+**De ce să atașăm la document:**
+- **Continuă** urmărirea chiar și când mouse-ul părăsește elementul plantei
+- **Previne** întreruperea dragării dacă utilizatorul se mișcă rapid
+- **Oferă** o dragare fluidă pe întregul ecran
+- **Gestionează** cazurile limită în care cursorul se mișcă în afara ferestrei browserului
 
-Veți completa închiderea adăugând două funcții interne suplimentare care vor gestiona ce se întâmplă atunci când trageți o plantă și opriți tragerea ei. Comportamentul dorit este ca să puteți trage orice plantă în orice moment și să o plasați oriunde pe ecran. Această interfață este destul de neimpusă (nu există o zonă de plasare, de exemplu) pentru a vă permite să proiectați terrarium-ul exact așa cum doriți, adăugând, eliminând și repoziționând plantele.
+> ⚡ **Notă de performanță**: Vom curăța acești ascultători la nivel de document când dragarea se oprește pentru a evita scurgerile de memorie și problemele de performanță.
 
-### Sarcină
+## Finalizarea sistemului de dragare: Mișcare și curățare
 
-Adăugați funcția `elementDrag` imediat după acolada de închidere a `pointerDrag`:
+Acum vom adăuga cele două funcții rămase care gestionează mișcarea efectivă de dragare și curățarea atunci când dragarea se oprește. Aceste funcții lucrează împreună pentru a crea o mișcare fluidă și receptivă a plantelor în terrarium.
 
-```javascript
-function elementDrag(e) {
-	pos1 = pos3 - e.clientX;
-	pos2 = pos4 - e.clientY;
-	pos3 = e.clientX;
-	pos4 = e.clientY;
-	console.log(pos1, pos2, pos3, pos4);
-	terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
-	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
-}
+### Funcția elementDrag: Urmărirea mișcării
+
+Adaugă funcția `elementDrag` imediat după acolada închisă a funcției `pointerDrag
+- **`pos3` și `pos4`**: Stochează poziția curentă a mouse-ului pentru următorul calcul
+- **`offsetTop` și `offsetLeft`**: Obține poziția curentă a elementului pe pagină
+- **Logica de scădere**: Mută elementul cu aceeași distanță pe care a parcurs-o mouse-ul
+
+**Iată o defalcare a calculului mișcării:**
+1. **Măsoară** diferența dintre pozițiile vechi și noi ale mouse-ului
+2. **Calculează** cât de mult să mute elementul pe baza mișcării mouse-ului
+3. **Actualizează** proprietățile de poziționare CSS ale elementului în timp real
+4. **Stochează** noua poziție ca punct de referință pentru următorul calcul de mișcare
+
+### Reprezentare vizuală a matematicii
+
+```mermaid
+sequenceDiagram
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    Mouse->>JavaScript: Move from (100,50) to (110,60)
+    JavaScript->>JavaScript: Calculate: moved 10px right, 10px down
+    JavaScript->>Plant: Update position by +10px right, +10px down
+    Plant->>Plant: Render at new position
 ```
-În această funcție, faceți multe modificări ale pozițiilor inițiale 1-4 pe care le-ați setat ca variabile locale în funcția exterioară. Ce se întâmplă aici?
 
-Pe măsură ce trageți, reasignați `pos1` făcându-l egal cu `pos3` (pe care l-ați setat anterior ca `e.clientX`) minus valoarea curentă `e.clientX`. Faceți o operație similară pentru `pos2`. Apoi, resetați `pos3` și `pos4` la noile coordonate X și Y ale elementului. Puteți urmări aceste modificări în consolă pe măsură ce trageți. Apoi, manipulați stilul css al plantei pentru a seta poziția sa nouă pe baza noilor poziții ale `pos1` și `pos2`, calculând coordonatele X și Y ale plantei pe baza comparării offset-ului său cu aceste poziții noi.
+### Funcția stopElementDrag: Curățare
 
-> `offsetTop` și `offsetLeft` sunt proprietăți CSS care setează poziția unui element pe baza poziției părintelui său; părintele său poate fi orice element care nu este poziționat ca `static`. 
-
-Toate aceste recalculări ale poziționării vă permit să ajustați fin comportamentul terrarium-ului și al plantelor sale.
-
-### Sarcină 
-
-Ultima sarcină pentru a finaliza interfața este să adăugați funcția `stopElementDrag` după acolada de închidere a `elementDrag`:
+Adaugă funcția de curățare după acolada de închidere a `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
-	document.onpointerup = null;
-	document.onpointermove = null;
+    // Remove the document-level event listeners
+    document.onpointerup = null;
+    document.onpointermove = null;
 }
 ```
 
-Această funcție mică resetează evenimentele `onpointerup` și `onpointermove` astfel încât să puteți relua progresul plantei voastre începând să o trageți din nou sau să începeți să trageți o plantă nouă.
+**De ce este esențială curățarea:**
+- **Previne** scurgerile de memorie cauzate de ascultătorii de evenimente rămași
+- **Oprește** comportamentul de tragere atunci când utilizatorul eliberează planta
+- **Permite** altor elemente să fie trase independent
+- **Resetează** sistemul pentru următoarea operațiune de tragere
 
-✅ Ce se întâmplă dacă nu setați aceste evenimente la null?
+**Ce se întâmplă fără curățare:**
+- Ascultătorii de evenimente continuă să ruleze chiar și după ce tragerea se oprește
+- Performanța se degradează pe măsură ce ascultătorii neutilizați se acumulează
+- Comportament neașteptat la interacțiunea cu alte elemente
+- Resursele browserului sunt irosite pe gestionarea inutilă a evenimentelor
 
-Acum ați finalizat proiectul vostru!
+### Înțelegerea proprietăților de poziționare CSS
 
-🥇Felicitări! Ați terminat terrarium-ul vostru frumos! ![terrarium finalizat](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.ro.png)
+Sistemul nostru de tragere manipulează două proprietăți CSS cheie:
+
+| Proprietate | Ce controlează | Cum o folosim |
+|-------------|----------------|---------------|
+| `top` | Distanța față de marginea de sus | Poziționarea verticală în timpul tragerii |
+| `left` | Distanța față de marginea din stânga | Poziționarea orizontală în timpul tragerii |
+
+**Informații cheie despre proprietățile offset:**
+- **`offsetTop`**: Distanța curentă față de partea de sus a elementului părinte poziționat
+- **`offsetLeft`**: Distanța curentă față de partea stângă a elementului părinte poziționat
+- **Contextul poziționării**: Aceste valori sunt relative față de cel mai apropiat strămoș poziționat
+- **Actualizări în timp real**: Se schimbă imediat când modificăm proprietățile CSS
+
+> 🎯 **Filosofia designului**: Acest sistem de tragere este intenționat flexibil – nu există "zone de plasare" sau restricții. Utilizatorii pot plasa plantele oriunde, oferindu-le control creativ complet asupra designului terariului.
+
+## Punerea tuturor cap la cap: Sistemul complet de tragere
+
+Felicitări! Tocmai ai construit un sistem sofisticat de drag-and-drop folosind JavaScript pur. Funcția ta completă `dragElement` conține acum un closure puternic care gestionează:
+
+**Ce realizează closure-ul tău:**
+- **Menține** variabile de poziție private pentru fiecare plantă în mod independent
+- **Gestionează** ciclul complet de tragere de la început până la sfârșit
+- **Oferă** mișcare lină și receptivă pe întregul ecran
+- **Curăță** resursele corespunzător pentru a preveni scurgerile de memorie
+- **Creează** o interfață intuitivă și creativă pentru designul terariului
+
+### Testarea terariului interactiv
+
+Acum testează terariul interactiv! Deschide fișierul `index.html` într-un browser web și încearcă funcționalitatea:
+
+1. **Dă clic și ține apăsat** pe orice plantă pentru a începe tragerea
+2. **Mișcă mouse-ul sau degetul** și urmărește cum planta se deplasează lin
+3. **Eliberează** pentru a plasa planta în noua poziție
+4. **Experimentează** cu diferite aranjamente pentru a explora interfața
+
+🥇 **Realizare**: Ai creat o aplicație web complet interactivă folosind concepte de bază pe care dezvoltatorii profesioniști le utilizează zilnic. Funcționalitatea de drag-and-drop folosește aceleași principii din spatele încărcării fișierelor, tablourilor kanban și multor alte interfețe interactive.
+
+![terariu finalizat](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.ro.png)
 
 ---
 
-## 🚀Provocare
+## Provocarea Agentului GitHub Copilot 🚀
 
-Adăugați un nou handler de evenimente în închiderea voastră pentru a face ceva suplimentar cu plantele; de exemplu, faceți dublu clic pe o plantă pentru a o aduce în față. Fiți creativi!
+Folosește modul Agent pentru a finaliza următoarea provocare:
 
-## Chestionar Post-Lecție
+**Descriere:** Îmbunătățește proiectul terariului adăugând o funcționalitate de resetare care să readucă toate plantele la pozițiile lor originale cu animații fluide.
 
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/20)
+**Indicație:** Creează un buton de resetare care, atunci când este apăsat, animă toate plantele înapoi la pozițiile lor originale din bara laterală folosind tranziții CSS. Funcția ar trebui să stocheze pozițiile originale la încărcarea paginii și să tranziționeze plantele înapoi la acele poziții în mod fluid, pe parcursul unei secunde, atunci când butonul de resetare este apăsat.
 
-## Recapitulare și Studiu Individual
+Află mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
 
-Deși tragerea elementelor pe ecran pare trivială, există multe moduri de a face acest lucru și multe capcane, în funcție de efectul pe care îl căutați. De fapt, există un întreg [API de tragere și plasare](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) pe care îl puteți încerca. Nu l-am folosit în acest modul deoarece efectul dorit era oarecum diferit, dar încercați acest API pe propriul proiect și vedeți ce puteți realiza.
+## 🚀 Provocare suplimentară: Extinde-ți abilitățile
 
-Găsiți mai multe informații despre evenimentele pointer pe [documentația W3C](https://www.w3.org/TR/pointerevents1/) și pe [documentația web MDN](https://developer.mozilla.org/docs/Web/API/Pointer_events).
+Ești pregătit să duci terariul la nivelul următor? Încearcă să implementezi aceste îmbunătățiri:
 
-Verificați întotdeauna capacitățile browserului folosind [CanIUse.com](https://caniuse.com/).
+**Extensii creative:**
+- **Dublu clic** pe o plantă pentru a o aduce în față (manipularea z-index)
+- **Adaugă feedback vizual** precum o strălucire subtilă când treci cu mouse-ul peste plante
+- **Implementează limite** pentru a preveni ca plantele să fie trase în afara terariului
+- **Creează o funcție de salvare** care să memoreze pozițiile plantelor folosind localStorage
+- **Adaugă efecte sonore** pentru ridicarea și plasarea plantelor
+
+> 💡 **Oportunitate de învățare**: Fiecare dintre aceste provocări te va învăța noi aspecte ale manipulării DOM, gestionării evenimentelor și designului experienței utilizatorului.
+
+## Test de evaluare după lecție
+
+[Test de evaluare după lecție](https://ff-quizzes.netlify.app/web/quiz/20)
+
+## Recapitulare și studiu individual: Aprofundarea cunoștințelor
+
+Ai stăpânit fundamentele manipulării DOM și closure-urilor, dar întotdeauna există mai multe de explorat! Iată câteva direcții pentru a-ți extinde cunoștințele și abilitățile.
+
+### Abordări alternative pentru Drag and Drop
+
+Am folosit evenimente pointer pentru flexibilitate maximă, dar dezvoltarea web oferă mai multe abordări:
+
+| Abordare | Cel mai potrivit pentru | Valoare educativă |
+|----------|--------------------------|------------------|
+| [API-ul HTML Drag and Drop](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Încărcări de fișiere, zone formale de tragere | Înțelegerea capacităților native ale browserului |
+| [Evenimente Touch](https://developer.mozilla.org/docs/Web/API/Touch_events) | Interacțiuni specifice mobile | Modele de dezvoltare orientate pe mobil |
+| Proprietăți CSS `transform` | Animații fluide | Tehnici de optimizare a performanței |
+
+### Subiecte avansate de manipulare DOM
+
+**Următorii pași în călătoria ta de învățare:**
+- **Delegarea evenimentelor**: Gestionarea eficientă a evenimentelor pentru mai multe elemente
+- **Intersection Observer**: Detectarea momentului în care elementele intră/ies din viewport
+- **Mutation Observer**: Monitorizarea modificărilor în structura DOM
+- **Componente Web**: Crearea de elemente UI reutilizabile și încapsulate
+- **Concepte de Virtual DOM**: Înțelegerea modului în care framework-urile optimizează actualizările DOM
+
+### Resurse esențiale pentru continuarea învățării
+
+**Documentație tehnică:**
+- [Ghidul MDN pentru Evenimente Pointer](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Referință completă pentru evenimente pointer
+- [Specificația W3C pentru Evenimente Pointer](https://www.w3.org/TR/pointerevents1/) - Documentație oficială a standardelor
+- [Explorare aprofundată a Closure-urilor JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Modele avansate de closure
+
+**Compatibilitate browser:**
+- [CanIUse.com](https://caniuse.com/) - Verifică suportul funcțiilor în diferite browsere
+- [Date de compatibilitate browser MDN](https://github.com/mdn/browser-compat-data) - Informații detaliate despre compatibilitate
+
+**Oportunități de practică:**
+- **Construiește** un joc de puzzle folosind mecanisme similare de tragere
+- **Creează** un tablou kanban cu gestionarea sarcinilor prin drag-and-drop
+- **Proiectează** o galerie foto cu aranjamente de fotografii dragabile
+- **Experimentează** cu gesturi tactile pentru interfețe mobile
+
+> 🎯 **Strategie de învățare**: Cel mai bun mod de a consolida aceste concepte este prin practică. Încearcă să construiești variații ale interfețelor dragabile – fiecare proiect te va învăța ceva nou despre interacțiunea utilizatorului și manipularea DOM.
 
 ## Temă
 
-[Lucrați puțin mai mult cu DOM-ul](assignment.md)
+[Lucrează puțin mai mult cu DOM-ul](assignment.md)
 
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

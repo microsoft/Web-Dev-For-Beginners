@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-29T11:27:50+00:00",
+  "original_hash": "33a875c522f237a2026e4653240dfc07",
+  "translation_date": "2025-10-24T22:20:49+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "ro"
 }
@@ -10,161 +10,292 @@ CO_OP_TRANSLATOR_METADATA:
 # Proiect de Extensie pentru Browser Partea 1: Totul despre Browsere
 
 ![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.ro.jpg)
-> Sketchnote de [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
+> Schiță realizată de [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## Chestionar Pre-Lecție
+## Test înainte de lecție
 
-[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/23)
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introducere
 
-Extensiile pentru browser adaugă funcționalități suplimentare unui browser. Dar înainte de a construi una, ar trebui să înveți puțin despre cum funcționează browserele.
+Extensiile pentru browser sunt mini-aplicații care îmbunătățesc experiența de navigare pe web. Așa cum viziunea originală a lui Tim Berners-Lee despre un web interactiv a extins capacitățile internetului dincolo de simpla vizualizare a documentelor, extensiile extind funcționalitățile browserului. De la manageri de parole care îți protejează conturile, la instrumente de selectare a culorilor care ajută designerii să găsească nuanțele perfecte, extensiile rezolvă provocările zilnice ale navigării pe internet.
 
-### Despre browser
+Înainte de a construi prima ta extensie, să înțelegem cum funcționează browserele. Așa cum Alexander Graham Bell a trebuit să înțeleagă transmisia sunetului înainte de a inventa telefonul, cunoașterea fundamentelor browserului te va ajuta să creezi extensii care se integrează perfect cu sistemele existente ale browserului.
 
-În această serie de lecții, vei învăța cum să construiești o extensie pentru browser care va funcționa pe browserele Chrome, Firefox și Edge. În această parte, vei descoperi cum funcționează browserele și vei schița elementele extensiei pentru browser.
+Până la sfârșitul acestei lecții, vei înțelege arhitectura browserului și vei începe să construiești prima ta extensie.
 
-Dar ce este exact un browser? Este o aplicație software care permite unui utilizator final să acceseze conținut de pe un server și să îl afișeze pe pagini web.
+## Înțelegerea Browserelor Web
 
-✅ Un pic de istorie: primul browser s-a numit 'WorldWideWeb' și a fost creat de Sir Timothy Berners-Lee în 1990.
+Un browser web este, în esență, un interpret sofisticat de documente. Când tastezi "google.com" în bara de adrese, browserul efectuează o serie complexă de operațiuni - solicitând conținut de la servere din întreaga lume, apoi analizând și redând acel cod în paginile web interactive pe care le vezi.
+
+Acest proces reflectă modul în care primul browser web, WorldWideWeb, a fost conceput de Tim Berners-Lee în 1990 pentru a face documentele hipertext accesibile tuturor.
+
+✅ **Un pic de istorie**: Primul browser se numea 'WorldWideWeb' și a fost creat de Sir Timothy Berners-Lee în 1990.
 
 ![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.ro.jpg)
 > Unele dintre primele browsere, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-Când un utilizator se conectează la internet folosind o adresă URL (Uniform Resource Locator), de obicei utilizând Hypertext Transfer Protocol printr-o adresă `http` sau `https`, browserul comunică cu un server web și preia o pagină web.
+### Cum procesează browserele conținutul web
 
-În acest moment, motorul de randare al browserului o afișează pe dispozitivul utilizatorului, care poate fi un telefon mobil, un desktop sau un laptop.
+Procesul dintre introducerea unui URL și vizualizarea unei pagini web implică mai mulți pași coordonați care se desfășoară în câteva secunde:
 
-Browserele au, de asemenea, capacitatea de a memora în cache conținutul, astfel încât să nu fie necesar să fie preluat de pe server de fiecare dată. Ele pot înregistra istoricul activității de navigare a utilizatorului, pot stoca 'cookies', care sunt mici fragmente de date ce conțin informații utilizate pentru a păstra activitatea utilizatorului, și multe altele.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-Un lucru foarte important de reținut despre browsere este că nu toate sunt la fel! Fiecare browser are punctele sale forte și slăbiciuni, iar un dezvoltator web profesionist trebuie să înțeleagă cum să facă paginile web să funcționeze bine pe mai multe browsere. Acest lucru include gestionarea ecranelor mici, cum ar fi cele ale telefoanelor mobile, precum și a utilizatorilor care sunt offline.
+**Iată ce realizează acest proces:**
+- **Traduce** URL-ul ușor de citit de către oameni într-o adresă IP a serverului prin căutarea DNS
+- **Stabilește** o conexiune securizată cu serverul web folosind protocoalele HTTP sau HTTPS
+- **Solicită** conținutul specific al paginii web de la server
+- **Primește** marcaj HTML, stilizare CSS și cod JavaScript de la server
+- **Redă** tot conținutul în pagina web interactivă pe care o vezi
 
-Un site web foarte util pe care probabil ar trebui să-l salvezi în browserul tău preferat este [caniuse.com](https://www.caniuse.com). Când construiești pagini web, este foarte util să folosești listele de tehnologii suportate de caniuse pentru a sprijini cât mai bine utilizatorii tăi.
+### Funcționalități de bază ale browserelor
 
-✅ Cum poți afla ce browsere sunt cele mai populare printre utilizatorii site-ului tău? Verifică analizele - poți instala diverse pachete de analiză ca parte a procesului tău de dezvoltare web, iar acestea îți vor spune ce browsere sunt cele mai utilizate.
+Browserele moderne oferă numeroase funcționalități pe care dezvoltatorii de extensii le pot valorifica:
 
-## Extensii pentru browser
+| Funcționalitate | Scop | Oportunități pentru extensii |
+|------------------|------|-----------------------------|
+| **Motor de redare** | Afișează HTML, CSS și JavaScript | Modificarea conținutului, injectarea stilurilor |
+| **Motor JavaScript** | Execută codul JavaScript | Scripturi personalizate, interacțiuni cu API-uri |
+| **Stocare locală** | Salvează date local | Preferințe ale utilizatorului, date cache |
+| **Stack de rețea** | Gestionează cererile web | Monitorizarea cererilor, analiza datelor |
+| **Model de securitate** | Protejează utilizatorii de conținut malițios | Filtrarea conținutului, îmbunătățiri de securitate |
 
-De ce ai vrea să construiești o extensie pentru browser? Este un instrument util pe care îl poți atașa browserului tău atunci când ai nevoie de acces rapid la sarcini pe care le repeți frecvent. De exemplu, dacă ai nevoie să verifici culorile pe diversele pagini web cu care interacționezi, ai putea instala o extensie pentru browser care include un selector de culori. Dacă ai dificultăți în a-ți aminti parolele, ai putea folosi o extensie pentru gestionarea parolelor.
+**Înțelegerea acestor funcționalități te ajută să:**
+- **Identifici** unde extensia ta poate adăuga cea mai mare valoare
+- **Alegi** API-urile potrivite ale browserului pentru funcționalitatea extensiei tale
+- **Proiectezi** extensii care funcționează eficient cu sistemele browserului
+- **Asiguri** că extensia ta respectă cele mai bune practici de securitate ale browserului
 
-Extensiile pentru browser sunt și distractiv de dezvoltat. Ele tind să gestioneze un număr finit de sarcini pe care le îndeplinesc bine.
+### Considerații pentru dezvoltarea extensiilor cross-browser
 
-✅ Care sunt extensiile tale preferate pentru browser? Ce sarcini îndeplinesc?
+Browserele diferite implementează standardele cu variații ușoare, similar modului în care limbajele de programare diferite pot gestiona același algoritm în mod diferit. Chrome, Firefox și Safari au fiecare caracteristici unice pe care dezvoltatorii trebuie să le ia în considerare în timpul dezvoltării extensiilor.
 
-### Instalarea extensiilor
+> 💡 **Sfat util**: Folosește [caniuse.com](https://www.caniuse.com) pentru a verifica ce tehnologii web sunt suportate de diferite browsere. Acest lucru este de neprețuit atunci când planifici funcționalitățile extensiei tale!
 
-Înainte de a începe să construiești, aruncă o privire asupra procesului de construire și implementare a unei extensii pentru browser. Deși fiecare browser diferă puțin în modul în care gestionează această sarcină, procesul este similar pe Chrome și Firefox cu acest exemplu pe Edge:
+**Considerații cheie pentru dezvoltarea extensiilor:**
+- **Testează** extensia ta pe browserele Chrome, Firefox și Edge
+- **Adaptează-te** la diferite API-uri și formate de manifest ale extensiilor browserului
+- **Gestionează** caracteristicile de performanță și limitările variate
+- **Oferă** soluții alternative pentru funcționalitățile specifice browserului care pot să nu fie disponibile
+
+✅ **Analiză Insight**: Poți determina ce browsere preferă utilizatorii tăi instalând pachete de analiză în proiectele tale de dezvoltare web. Aceste date te ajută să prioritizezi ce browsere să susții mai întâi.
+
+## Înțelegerea Extensiilor pentru Browser
+
+Extensiile pentru browser rezolvă provocările comune ale navigării pe web prin adăugarea de funcționalități direct în interfața browserului. În loc să necesite aplicații separate sau fluxuri de lucru complexe, extensiile oferă acces imediat la instrumente și funcții.
+
+Acest concept reflectă modul în care pionierii informaticii timpurii, precum Douglas Engelbart, au imaginat augmentarea capacităților umane cu ajutorul tehnologiei - extensiile îmbunătățesc funcționalitatea de bază a browserului.
+
+**Categorii populare de extensii și beneficiile lor:**
+- **Instrumente de productivitate**: Manageri de sarcini, aplicații de luat notițe și trackere de timp care te ajută să rămâi organizat
+- **Îmbunătățiri de securitate**: Manageri de parole, blocatori de reclame și instrumente de confidențialitate care îți protejează datele
+- **Instrumente pentru dezvoltatori**: Formatare de cod, selectoare de culori și utilități de depanare care simplifică dezvoltarea
+- **Îmbunătățirea conținutului**: Moduri de citire, descărcătoare de videoclipuri și instrumente de captură de ecran care îmbunătățesc experiența ta pe web
+
+✅ **Întrebare de reflecție**: Care sunt extensiile tale preferate pentru browser? Ce sarcini specifice îndeplinesc și cum îți îmbunătățesc experiența de navigare?
+
+## Instalarea și Gestionarea Extensiilor
+
+Înțelegerea procesului de instalare a extensiilor te ajută să anticipezi experiența utilizatorului atunci când oamenii îți instalează extensia. Procesul de instalare este standardizat în browserele moderne, cu variații minore în designul interfeței.
 
 ![captură de ecran a browserului Edge care arată pagina edge://extensions deschisă și meniul de setări deschis](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.ro.png)
 
-> Notă: Asigură-te că activezi modul dezvoltator și permiți extensii din alte magazine.
+> **Important**: Asigură-te că activezi modul de dezvoltator și permiți extensiile din alte magazine atunci când testezi propriile extensii.
 
-În esență, procesul va fi:
+### Procesul de instalare a extensiilor în dezvoltare
 
-- construiește extensia folosind `npm run build` 
-- navighează în browser la panoul de extensii folosind butonul "Setări și altele" (pictograma `...`) din colțul din dreapta sus
-- dacă este o instalare nouă, alege `load unpacked` pentru a încărca o extensie nouă din folderul său de build (în cazul nostru este `/dist`) 
-- sau, apasă `reload` dacă reîncarci extensia deja instalată
+Când dezvolți și testezi propriile extensii, urmează acest flux de lucru:
 
-✅ Aceste instrucțiuni se referă la extensiile pe care le construiești tu; pentru a instala extensii care au fost publicate în magazinul de extensii asociat fiecărui browser, ar trebui să navighezi la acele [magazine](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) și să instalezi extensia dorită.
+```bash
+# Step 1: Build your extension
+npm run build
+```
 
-### Începe
+**Ce realizează această comandă:**
+- **Compilează** codul sursă în fișiere pregătite pentru browser
+- **Grupuri** modulele JavaScript în pachete optimizate
+- **Generează** fișierele finale ale extensiei în folderul `/dist`
+- **Pregătește** extensia pentru instalare și testare
 
-Vei construi o extensie pentru browser care afișează amprenta de carbon a regiunii tale, arătând consumul de energie al regiunii și sursa energiei. Extensia va avea un formular care colectează o cheie API pentru a putea accesa API-ul CO2 Signal.
+**Pasul 2: Navighează la Extensiile Browserului**
+1. **Deschide** pagina de gestionare a extensiilor browserului tău
+2. **Apasă** butonul "Setări și altele" (pictograma `...`) din colțul din dreapta sus
+3. **Selectează** "Extensii" din meniul derulant
 
-**Ai nevoie de:**
+**Pasul 3: Încarcă Extensia Ta**
+- **Pentru instalări noi**: Alege `load unpacked` și selectează folderul `/dist`
+- **Pentru actualizări**: Apasă `reload` lângă extensia deja instalată
+- **Pentru testare**: Activează "Modul de dezvoltator" pentru a accesa funcții suplimentare de depanare
 
-- [o cheie API](https://www.co2signal.com/); introdu adresa ta de email în caseta de pe această pagină și vei primi una
-- [codul regiunii tale](http://api.electricitymap.org/v3/zones) corespunzător [Electricity Map](https://www.electricitymap.org/map) (de exemplu, în Boston folosesc 'US-NEISO').
-- [codul de început](../../../../5-browser-extension/start). Descarcă folderul `start`; vei completa codul în acest folder.
-- [NPM](https://www.npmjs.com) - NPM este un instrument de gestionare a pachetelor; instalează-l local și pachetele listate în fișierul tău `package.json` vor fi instalate pentru a fi utilizate de activele tale web
+### Instalarea Extensiilor în Producție
 
-✅ Află mai multe despre gestionarea pachetelor în acest [modul excelent de învățare](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+> ✅ **Notă**: Aceste instrucțiuni de dezvoltare sunt specifice extensiilor pe care le construiești singur. Pentru a instala extensii publicate, vizitează magazinele oficiale de extensii ale browserelor, cum ar fi [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
 
-Acordă-ți un minut pentru a analiza baza de cod:
+**Înțelegerea diferenței:**
+- **Instalările de dezvoltare** îți permit să testezi extensii nepublicate în timpul dezvoltării
+- **Instalările din magazin** oferă extensii publicate, verificate, cu actualizări automate
+- **Instalarea manuală** permite instalarea extensiilor din afara magazinelor oficiale (necesită modul de dezvoltator)
 
-dist
-    -|manifest.json (setările implicite sunt aici)
-    -|index.html (markup-ul HTML pentru front-end este aici)
-    -|background.js (JS-ul de fundal este aici)
-    -|main.js (JS-ul compilat)
-src
-    -|index.js (codul tău JS merge aici)
+## Construirea Extensiei pentru Amprenta de Carbon
 
-✅ Odată ce ai la îndemână cheia API și codul regiunii, salvează-le undeva într-o notă pentru utilizare ulterioară.
+Vom crea o extensie pentru browser care afișează amprenta de carbon a utilizării energiei din regiunea ta. Acest proiect demonstrează concepte esențiale de dezvoltare a extensiilor, creând în același timp un instrument practic pentru conștientizarea mediului.
 
-### Construiește HTML-ul pentru extensie
+Această abordare urmează principiul "învățării prin practică", care s-a dovedit eficient încă de la teoriile educaționale ale lui John Dewey - combinând abilități tehnice cu aplicații reale semnificative.
 
-Această extensie are două vizualizări. Una pentru a colecta cheia API și codul regiunii:
+### Cerințele Proiectului
 
+Înainte de a începe dezvoltarea, să adunăm resursele și dependențele necesare:
+
+**Acces la API necesar:**
+- **[Cheie API CO2 Signal](https://www.co2signal.com/)**: Introdu adresa ta de email pentru a primi o cheie API gratuită
+- **[Codul regiunii](http://api.electricitymap.org/v3/zones)**: Găsește codul regiunii tale folosind [Electricity Map](https://www.electricitymap.org/map) (de exemplu, Boston folosește 'US-NEISO')
+
+**Instrumente de Dezvoltare:**
+- **[Node.js și NPM](https://www.npmjs.com)**: Instrument de gestionare a pachetelor pentru instalarea dependențelor proiectului
+- **[Cod de început](../../../../5-browser-extension/start)**: Descarcă folderul `start` pentru a începe dezvoltarea
+
+✅ **Află mai multe**: Îmbunătățește-ți abilitățile de gestionare a pachetelor cu acest [modul cuprinzător de învățare](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+
+### Înțelegerea Structurii Proiectului
+
+Înțelegerea structurii proiectului ajută la organizarea eficientă a muncii de dezvoltare. Așa cum Biblioteca din Alexandria a fost organizată pentru o recuperare ușoară a cunoștințelor, o bază de cod bine structurată face dezvoltarea mai eficientă:
+
+```
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
+
+**Ce realizează fiecare fișier:**
+- **`manifest.json`**: **Definește** metadatele extensiei, permisiunile și punctele de intrare
+- **`index.html`**: **Creează** interfața utilizatorului care apare când utilizatorii fac clic pe extensia ta
+- **`background.js`**: **Gestionează** sarcinile de fundal și ascultătorii de evenimente ale browserului
+- **`main.js`**: **Conține** codul JavaScript final grupat după procesul de construire
+- **`src/index.js`**: **Conține** codul principal de dezvoltare care este compilat în `main.js`
+
+> 💡 **Sfat de organizare**: Stochează cheia API și codul regiunii într-o notă sigură pentru referință ușoară în timpul dezvoltării. Vei avea nevoie de aceste valori pentru a testa funcționalitatea extensiei tale.
+
+✅ **Notă de securitate**: Nu comite niciodată chei API sau credențiale sensibile în depozitul tău de cod. Îți vom arăta cum să le gestionezi în siguranță în pașii următori.
+
+## Crearea Interfeței Extensiei
+
+Acum vom construi componentele interfeței utilizatorului. Extensia folosește o abordare cu două ecrane: un ecran de configurare pentru configurarea inițială și un ecran de rezultate pentru afișarea datelor.
+
+Aceasta urmează principiul dezvăluirii progresive utilizat în designul interfeței încă din primele zile ale informaticii - dezvăluirea informațiilor și opțiunilor într-o secvență logică pentru a evita copleșirea utilizatorilor.
+
+### Prezentare generală a vizualizărilor extensiei
+
+**Vizualizarea de configurare** - Configurarea utilizatorului pentru prima dată:
 ![captură de ecran a extensiei finalizate deschise într-un browser, afișând un formular cu câmpuri pentru numele regiunii și cheia API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.ro.png)
 
-Și a doua pentru a afișa consumul de carbon al regiunii:
+**Vizualizarea rezultatelor** - Afișarea datelor despre amprenta de carbon:
+![captură de ecran a extensiei finalizate care afișează valorile pentru utilizarea carbonului și procentul de combustibil fosil pentru regiunea US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.ro.png)
 
-![captură de ecran a extensiei finalizate afișând valorile pentru consumul de carbon și procentajul de combustibili fosili pentru regiunea US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.ro.png)
+### Construirea Formularului de Configurare
 
-Să începem prin a construi HTML-ul pentru formular și a-l stiliza cu CSS.
+Formularul de configurare colectează datele de configurare ale utilizatorului în timpul utilizării inițiale. Odată configurate, aceste informații persistă în stocarea browserului pentru sesiunile viitoare.
 
-În folderul `/dist`, vei construi un formular și o zonă de rezultate. În fișierul `index.html`, completează zona de formular delimitată:
+În fișierul `/dist/index.html`, adaugă această structură de formular:
 
-```HTML
+```html
 <form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
+    <div>
+        <h2>New? Add your Information</h2>
+    </div>
+    <div>
+        <label for="region">Region Name</label>
+        <input type="text" id="region" required class="region-name" />
+    </div>
+    <div>
+        <label for="api">Your API Key from tmrow</label>
+        <input type="text" id="api" required class="api-key" />
+    </div>
+    <button class="search-btn">Submit</button>
+</form>
 ```
-Acesta este formularul unde informațiile salvate vor fi introduse și salvate în stocarea locală.
 
-Apoi, creează zona de rezultate; sub eticheta finală a formularului, adaugă câteva div-uri:
+**Ce realizează acest formular:**
+- **Creează** o structură semantică de formular cu etichete și asocieri de intrare corespunzătoare
+- **Activează** funcționalitatea de completare automată a browserului pentru o experiență îmbunătățită a utilizatorului
+- **Solicită** completarea ambelor câmpuri înainte de trimitere folosind atributul `required`
+- **Organizează** intrările cu nume de clase descriptive pentru o stilizare ușoară și o țintire în JavaScript
+- **Oferă** instrucțiuni clare pentru utilizatorii care configurează extensia pentru prima dată
 
-```HTML
+### Construirea Afișajului Rezultatelor
+
+În continuare, creează zona de rezultate care va afișa datele despre amprenta de carbon. Adaugă acest HTML sub formular:
+
+```html
 <div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
+    <div class="loading">loading...</div>
+    <div class="errors"></div>
+    <div class="data"></div>
+    <div class="result-container">
+        <p><strong>Region: </strong><span class="my-region"></span></p>
+        <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+        <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+    </div>
+    <button class="clear-btn">Change region</button>
 </div>
 ```
-În acest moment, poți încerca un build. Asigură-te că instalezi dependențele pachetelor acestei extensii:
 
-```
+**Ce oferă această structură:**
+- **`loading`**: **Afișează** un mesaj de încărcare în timp ce datele API sunt preluate
+- **`errors`**: **Arată** mesaje de eroare dacă apelurile API eșuează sau datele sunt invalide
+- **`data`**: **Conține** date brute pentru depanare în timpul dezvoltării
+- **`result-container`**: **Prezintă** informații formatate despre amprenta de carbon utilizatorilor
+- **`clear-btn`**: **Permite** utilizatorilor să își schimbe regiunea și să reconfigureze extensia
+
+### Configurarea Procesului de Construire
+
+Acum să instalăm dependențele proiectului și să testăm procesul de construire:
+
+```bash
 npm install
 ```
 
-Această comandă va folosi npm, Managerul de Pachete Node, pentru a instala webpack pentru procesul de construire al extensiei tale. Poți vedea rezultatul acestui proces uitându-te în `/dist/main.js` - vei vedea că codul a fost compilat.
+**Ce realizează acest proces de instalare:**
+- **Descarcă** Webpack și alte dependențe de dezvoltare specificate în `package.json`
+- **Configurează** lanțul de instrumente de construire pentru compilarea JavaScript modern
+- **Pregătește** mediul de dezvoltare pentru construirea și testarea extensiei
+- **Activează** gruparea codului, optimizarea și caracteristicile de compatibilitate cross-browser
 
-Deocamdată, extensia ar trebui să se construiască și, dacă o implementezi în Edge ca extensie, vei vedea un formular afișat frumos.
+> 💡 **Informații despre procesul de construire**: Webpack grupează codul sursă din `/src/index.js` în `/dist/main.js`. Acest proces optimizează codul pentru producție și asigură compatibilitatea
+**Descriere:** Îmbunătățiți extensia de browser prin adăugarea funcțiilor de validare a formularelor și feedback pentru utilizatori, pentru a îmbunătăți experiența utilizatorilor atunci când introduc chei API și coduri de regiune.
 
-Felicitări, ai făcut primii pași spre construirea unei extensii pentru browser. În lecțiile următoare, o vei face mai funcțională și mai utilă.
+**Sarcină:** Creați funcții de validare în JavaScript care verifică dacă câmpul pentru cheia API conține cel puțin 20 de caractere și dacă codul de regiune respectă formatul corect (cum ar fi 'US-NEISO'). Adăugați feedback vizual prin schimbarea culorii bordurii câmpurilor de input: verde pentru inputuri valide și roșu pentru cele invalide. De asemenea, adăugați o funcție de comutare pentru a afișa/ascunde cheia API din motive de securitate.
 
----
+Aflați mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
 
 ## 🚀 Provocare
 
-Aruncă o privire într-un magazin de extensii pentru browser și instalează una în browserul tău. Poți examina fișierele sale în moduri interesante. Ce descoperi?
+Aruncați o privire la un magazin de extensii pentru browser și instalați una în browserul dvs. Puteți examina fișierele acesteia în moduri interesante. Ce descoperiți?
 
-## Chestionar Post-Lecție
+## Test de evaluare după lecție
 
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/24)
+[Test de evaluare după lecție](https://ff-quizzes.netlify.app/web/quiz/24)
 
-## Recapitulare & Studiu Individual
+## Recapitulare și Studiu Individual
 
-În această lecție ai învățat puțin despre istoria browserului web; profită de această ocazie pentru a învăța despre cum au imaginat inventatorii World Wide Web utilizarea sa citind mai multe despre istoria sa. Unele site-uri utile includ:
+În această lecție ați învățat puțin despre istoria browserului web; profitați de această oportunitate pentru a afla cum au imaginat inventatorii World Wide Web utilizarea acestuia, citind mai multe despre istoria sa. Unele site-uri utile includ:
 
 [Istoria browserelor web](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -174,9 +305,9 @@ Aruncă o privire într-un magazin de extensii pentru browser și instalează un
 
 ## Temă 
 
-[Restilizează extensia ta](assignment.md)
+[Restilizați extensia dvs.](assignment.md)
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

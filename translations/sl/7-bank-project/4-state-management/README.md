@@ -1,73 +1,118 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b46acf79da8550d76445eed00b06c878",
-  "translation_date": "2025-10-03T13:18:16+00:00",
+  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
+  "translation_date": "2025-10-25T00:34:46+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "sl"
 }
 -->
-# Ustvarjanje bančne aplikacije, 4. del: Koncepti upravljanja stanja
+# Izdelava bančne aplikacije, 4. del: Koncepti upravljanja stanja
 
-## Predhodni kviz
+## Predhodni kviz pred predavanjem
 
 [Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/47)
 
-### Uvod
+## Uvod
 
-Ko spletna aplikacija raste, postane težko slediti vsem tokovom podatkov. Kateri del kode pridobi podatke, katera stran jih uporablja, kje in kdaj jih je treba posodobiti... hitro se lahko znajdemo z zmedeno kodo, ki jo je težko vzdrževati. To je še posebej res, ko je treba podatke deliti med različnimi stranmi aplikacije, na primer podatke o uporabniku. Koncept *upravljanja stanja* je vedno obstajal v vseh vrstah programov, vendar je zaradi naraščajoče kompleksnosti spletnih aplikacij zdaj ključna točka, o kateri je treba razmišljati med razvojem.
+Upravljanje stanja je kot navigacijski sistem na vesoljski ladji Voyager – ko vse deluje gladko, komaj opazite, da obstaja. Ko pa gre kaj narobe, je to razlika med dosego medzvezdnega prostora in izgubljenim plovom v kozmični praznini. V spletnem razvoju stanje predstavlja vse, kar mora vaša aplikacija zapomniti: status prijave uporabnika, podatke obrazcev, zgodovino navigacije in začasna stanja vmesnika.
 
-V tem zadnjem delu bomo pregledali aplikacijo, ki smo jo zgradili, da ponovno premislimo, kako je stanje upravljano, kar omogoča podporo osvežitvi brskalnika kadarkoli in ohranjanje podatkov med uporabniškimi sejami.
+Ko se je vaša bančna aplikacija razvila iz preprostega obrazca za prijavo v bolj sofisticirano aplikacijo, ste verjetno naleteli na nekaj pogostih izzivov. Osvežite stran in uporabniki se nepričakovano odjavijo. Zaprite brskalnik in ves napredek izgine. Odpravljate težave in iščete po več funkcijah, ki vse na različne načine spreminjajo iste podatke.
 
-### Predpogoji
+To niso znaki slabega kodiranja – to so naravne težave, ki se pojavijo, ko aplikacije dosežejo določeno stopnjo kompleksnosti. Vsak razvijalec se sooča s temi izzivi, ko njegove aplikacije preidejo iz "dokaza koncepta" v "produkcijsko pripravljenost".
 
-Za to lekcijo morate dokončati [pridobivanje podatkov](../3-data/README.md) v aplikaciji. Prav tako morate namestiti [Node.js](https://nodejs.org) in [zagnati strežniški API](../api/README.md) lokalno, da lahko upravljate podatke o računih.
+V tej lekciji bomo implementirali centraliziran sistem upravljanja stanja, ki bo vašo bančno aplikacijo spremenil v zanesljivo, profesionalno aplikacijo. Naučili se boste upravljati tokove podatkov na predvidljiv način, ustrezno ohranjati uporabniške seje in ustvariti gladko uporabniško izkušnjo, ki jo zahtevajo sodobne spletne aplikacije.
 
-Preverite, ali strežnik pravilno deluje, tako da v terminalu zaženete naslednji ukaz:
+## Predpogoji
+
+Preden se poglobite v koncepte upravljanja stanja, morate pravilno nastaviti razvojno okolje in imeti pripravljeno osnovo za vašo bančno aplikacijo. Ta lekcija se neposredno navezuje na koncepte in kodo iz prejšnjih delov te serije.
+
+Prepričajte se, da imate pripravljene naslednje komponente:
+
+**Potrebna nastavitev:**
+- Zaključite [lekcijo o pridobivanju podatkov](../3-data/README.md) - vaša aplikacija mora uspešno naložiti in prikazati podatke o računu
+- Namestite [Node.js](https://nodejs.org) na vaš sistem za zagon API-ja na strežniku
+- Lokalno zaženite [strežniški API](../api/README.md) za upravljanje operacij s podatki o računu
+
+**Preverjanje vašega okolja:**
+
+Preverite, ali vaš API strežnik pravilno deluje, tako da v terminalu izvedete naslednji ukaz:
 
 ```sh
 curl http://localhost:5000/api
 # -> should return "Bank API v1.0.0" as a result
 ```
 
+**Kaj ta ukaz naredi:**
+- **Pošlje** GET zahtevo na vaš lokalni API strežnik
+- **Preveri** povezavo in potrdi, da strežnik odgovarja
+- **Vrne** informacije o različici API-ja, če vse deluje pravilno
+
 ---
 
-## Ponovno premislimo upravljanje stanja
+## Diagnosticiranje težav trenutnega stanja
 
-V [prejšnji lekciji](../3-data/README.md) smo predstavili osnovni koncept stanja v naši aplikaciji z globalno spremenljivko `account`, ki vsebuje bančne podatke trenutno prijavljenega uporabnika. Vendar ima naša trenutna implementacija nekaj pomanjkljivosti. Poskusite osvežiti stran, ko ste na nadzorni plošči. Kaj se zgodi?
+Kot Sherlock Holmes, ki preučuje prizorišče zločina, moramo natančno razumeti, kaj se dogaja v naši trenutni implementaciji, preden lahko rešimo skrivnost izginjajočih uporabniških sej.
 
-Trenutna koda ima tri težave:
+Izvedimo preprost eksperiment, ki razkriva osnovne izzive upravljanja stanja:
 
-- Stanje ni ohranjeno, saj vas osvežitev brskalnika vrne na stran za prijavo.
-- Obstaja več funkcij, ki spreminjajo stanje. Ko aplikacija raste, to lahko oteži sledenje spremembam in zlahka pozabimo posodobiti eno od njih.
-- Stanje ni očiščeno, zato so podatki o računu še vedno prisotni, ko kliknete *Odjava*, čeprav ste na strani za prijavo.
+**🧪 Poskusite ta diagnostični test:**
+1. Prijavite se v svojo bančno aplikacijo in se pomaknite na nadzorno ploščo
+2. Osvežite stran brskalnika
+3. Opazujte, kaj se zgodi z vašim statusom prijave
 
-Lahko bi posodobili našo kodo, da bi te težave reševali eno za drugo, vendar bi to ustvarilo več podvajanja kode in naredilo aplikacijo bolj zapleteno ter težje vzdrževano. Ali pa bi si lahko vzeli nekaj minut in premislili našo strategijo.
+Če ste bili preusmerjeni nazaj na zaslon za prijavo, ste odkrili klasičen problem ohranjanja stanja. To vedenje se pojavi, ker naša trenutna implementacija shranjuje podatke uporabnika v JavaScript spremenljivke, ki se ob vsakem osveževanju strani ponastavijo.
 
-> Katere težave pravzaprav poskušamo rešiti tukaj?
+**Težave trenutne implementacije:**
 
-[Upravljanje stanja](https://en.wikipedia.org/wiki/State_management) se osredotoča na iskanje dobrega pristopa za reševanje teh dveh specifičnih težav:
+Preprosta spremenljivka `account` iz naše [prejšnje lekcije](../3-data/README.md) povzroča tri pomembne težave, ki vplivajo tako na uporabniško izkušnjo kot na vzdrževanje kode:
 
-- Kako ohraniti tokove podatkov v aplikaciji razumljive?
-- Kako ohraniti podatke o stanju vedno usklajene z uporabniškim vmesnikom (in obratno)?
+| Težava | Tehnični vzrok | Vpliv na uporabnika |
+|--------|----------------|---------------------|
+| **Izguba seje** | Osvežitev strani izbriše JavaScript spremenljivke | Uporabniki se morajo pogosto znova prijaviti |
+| **Razpršene posodobitve** | Več funkcij neposredno spreminja stanje | Odpravljanje napak postaja vse težje |
+| **Nepopolno čiščenje** | Odjava ne izbriše vseh referenc stanja | Možne varnostne in zasebnostne težave |
 
-Ko se lotite teh težav, so lahko vse druge težave, ki jih imate, že rešene ali pa jih je lažje rešiti. Obstaja veliko možnih pristopov za reševanje teh težav, vendar bomo uporabili običajno rešitev, ki vključuje **centralizacijo podatkov in načinov za njihovo spreminjanje**. Tokovi podatkov bi potekali takole:
+**Arhitekturni izziv:**
 
-![Shema, ki prikazuje tokove podatkov med HTML-jem, uporabniškimi dejanji in stanjem](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.sl.png)
+Kot zasnova predelkov Titanika, ki se je zdela robustna, dokler ni hkrati poplavilo več predelkov, reševanje teh težav posamično ne bo odpravilo osnovnega arhitekturnega problema. Potrebujemo celovito rešitev za upravljanje stanja.
 
-> Tukaj ne bomo obravnavali dela, kjer podatki samodejno sprožijo posodobitev pogleda, saj je to povezano z naprednejšimi koncepti [reaktivnega programiranja](https://en.wikipedia.org/wiki/Reactive_programming). To je dobra tema za nadaljnje poglobljeno raziskovanje.
+> 💡 **Kaj pravzaprav poskušamo doseči tukaj?**
 
-✅ Obstaja veliko knjižnic z različnimi pristopi k upravljanju stanja, [Redux](https://redux.js.org) pa je priljubljena izbira. Oglejte si koncepte in vzorce, ki jih uporablja, saj je to pogosto dober način za učenje o potencialnih težavah, s katerimi se lahko soočate v velikih spletnih aplikacijah, in kako jih je mogoče rešiti.
+[Upravljanje stanja](https://en.wikipedia.org/wiki/State_management) je v bistvu reševanje dveh temeljnih ugank:
 
-### Naloga
+1. **Kje so moji podatki?**: Sledenje, katere informacije imamo in od kod prihajajo
+2. **Ali smo vsi na isti strani?**: Zagotavljanje, da to, kar uporabniki vidijo, ustreza temu, kar se dejansko dogaja
 
-Začeli bomo z nekaj prestrukturiranja. Zamenjajte deklaracijo `account`:
+**Načrt igre:**
+
+Namesto da se vrtimo v krogu, bomo ustvarili **centraliziran sistem upravljanja stanja**. Pomislite na to kot na eno res organizirano osebo, ki je odgovorna za vse pomembne stvari:
+
+![Shema, ki prikazuje tok podatkov med HTML-jem, uporabniškimi akcijami in stanjem](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.sl.png)
+
+**Razumevanje tega toka podatkov:**
+- **Centralizira** vse stanje aplikacije na enem mestu
+- **Usmerja** vse spremembe stanja skozi nadzorovane funkcije
+- **Zagotavlja**, da je UI sinhroniziran s trenutnim stanjem
+- **Omogoča** jasen, predvidljiv vzorec za upravljanje podatkov
+
+> 💡 **Profesionalni vpogled**: Ta lekcija se osredotoča na temeljne koncepte. Za kompleksne aplikacije knjižnice, kot je [Redux](https://redux.js.org), ponujajo naprednejše funkcije upravljanja stanja. Razumevanje teh osnovnih principov vam bo pomagalo obvladati katerokoli knjižnico za upravljanje stanja.
+
+> ⚠️ **Napredna tema**: Ne bomo obravnavali samodejnih posodobitev UI, ki jih sprožijo spremembe stanja, saj to vključuje koncepte [reaktivnega programiranja](https://en.wikipedia.org/wiki/Reactive_programming). To lahko obravnavate kot odličen naslednji korak v vašem učnem procesu!
+
+### Naloga: Centralizacija strukture stanja
+
+Začnimo s preoblikovanjem našega razpršenega upravljanja stanja v centraliziran sistem. Ta prvi korak postavlja temelje za vse izboljšave, ki sledijo.
+
+**Korak 1: Ustvarite centralni objekt stanja**
+
+Zamenjajte preprosto deklaracijo `account`:
 
 ```js
 let account = null;
 ```
 
-Z:
+S strukturiranim objektom stanja:
 
 ```js
 let state = {
@@ -75,27 +120,76 @@ let state = {
 };
 ```
 
-Ideja je, da *centraliziramo* vse podatke naše aplikacije v enem samem objektu stanja. Trenutno imamo v stanju samo `account`, zato se ne spremeni veliko, vendar ustvarja pot za prihodnje nadgradnje.
+**Zakaj je ta sprememba pomembna:**
+- **Centralizira** vse podatke aplikacije na enem mestu
+- **Pripravi** strukturo za dodajanje več lastnosti stanja kasneje
+- **Ustvari** jasno mejo med stanjem in drugimi spremenljivkami
+- **Vzpostavi** vzorec, ki se širi, ko vaša aplikacija raste
 
-Prav tako moramo posodobiti funkcije, ki ga uporabljajo. V funkcijah `register()` in `login()` zamenjajte `account = ...` z `state.account = ...`;
+**Korak 2: Posodobite vzorce dostopa do stanja**
 
-Na vrhu funkcije `updateDashboard()` dodajte to vrstico:
+Posodobite svoje funkcije, da uporabljajo novo strukturo stanja:
 
+**V funkcijah `register()` in `login()`**, zamenjajte:
+```js
+account = ...
+```
+
+S:
+```js
+state.account = ...
+```
+
+**V funkciji `updateDashboard()`**, dodajte to vrstico na vrh:
 ```js
 const account = state.account;
 ```
 
-To prestrukturiranje samo po sebi ni prineslo veliko izboljšav, vendar je ideja bila postaviti temelje za naslednje spremembe.
+**Kaj te posodobitve dosežejo:**
+- **Ohranjajo** obstoječo funkcionalnost, hkrati pa izboljšujejo strukturo
+- **Pripravljajo** vašo kodo za bolj sofisticirano upravljanje stanja
+- **Ustvarjajo** dosledne vzorce za dostop do podatkov stanja
+- **Vzpostavljajo** temelje za centralizirane posodobitve stanja
 
-## Sledenje spremembam podatkov
+> 💡 **Opomba**: Ta preoblikovanja takoj ne rešijo naših težav, vendar ustvarjajo bistvene temelje za močne izboljšave, ki sledijo!
 
-Zdaj, ko smo vzpostavili objekt `state` za shranjevanje naših podatkov, je naslednji korak centralizacija posodobitev. Cilj je olajšati sledenje vsem spremembam in kdaj se zgodijo.
+## Implementacija nadzorovanih posodobitev stanja
 
-Da bi se izognili spremembam objekta `state`, je dobra praksa, da ga obravnavamo kot [*nepremičnega*](https://en.wikipedia.org/wiki/Immutable_object), kar pomeni, da ga sploh ni mogoče spreminjati. To pomeni, da morate ustvariti nov objekt stanja, če želite karkoli spremeniti v njem. S tem se zaščitite pred morebitnimi neželenimi [stranskimi učinki](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) in odprete možnosti za nove funkcije v vaši aplikaciji, kot je implementacija razveljavitve/ponovne uveljavitve, hkrati pa olajšate odpravljanje napak. Na primer, lahko beležite vsako spremembo stanja in hranite zgodovino sprememb, da razumete vir napake.
+Z našim stanjem centraliziranim je naslednji korak vzpostavitev nadzorovanih mehanizmov za spremembe podatkov. Ta pristop zagotavlja predvidljive spremembe stanja in lažje odpravljanje napak.
 
-V JavaScriptu lahko uporabite [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) za ustvarjanje nepremičnega objekta. Če poskušate narediti spremembe nepremičnemu objektu, bo sprožena izjema.
+Osnovno načelo je podobno nadzoru zračnega prometa: namesto da bi več funkcij neodvisno spreminjalo stanje, bomo vse spremembe usmerili skozi eno, nadzorovano funkcijo. Ta vzorec omogoča jasen pregled nad tem, kdaj in kako se podatki spreminjajo.
 
-✅ Ali poznate razliko med *plitkim* in *globokim* nepremičnim objektom? Preberite o tem [tukaj](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze).
+**Upravljanje nespremenljivega stanja:**
+
+Naš objekt `state` bomo obravnavali kot [*nespremenljiv*](https://en.wikipedia.org/wiki/Immutable_object), kar pomeni, da ga nikoli ne spreminjamo neposredno. Namesto tega vsaka sprememba ustvari nov objekt stanja s posodobljenimi podatki.
+
+Čeprav se ta pristop na začetku morda zdi manj učinkovit v primerjavi z neposrednimi spremembami, ponuja pomembne prednosti za odpravljanje napak, testiranje in ohranjanje predvidljivosti aplikacije.
+
+**Prednosti upravljanja nespremenljivega stanja:**
+
+| Prednost | Opis | Vpliv |
+|----------|-------|-------|
+| **Predvidljivost** | Spremembe se zgodijo le skozi nadzorovane funkcije | Lažje odpravljanje napak in testiranje |
+| **Sledenje zgodovini** | Vsaka sprememba stanja ustvari nov objekt | Omogoča funkcionalnost razveljavitve/ponovnega izvajanja |
+| **Preprečevanje stranskih učinkov** | Brez nenamernih sprememb | Preprečuje skrivnostne napake |
+| **Optimizacija zmogljivosti** | Enostavno zaznavanje, kdaj se je stanje dejansko spremenilo | Omogoča učinkovite posodobitve UI |
+
+**Nespremenljivost v JavaScriptu z `Object.freeze()`:**
+
+JavaScript omogoča uporabo [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) za preprečevanje sprememb objektov:
+
+```js
+const immutableState = Object.freeze({ account: userData });
+// Any attempt to modify immutableState will throw an error
+```
+
+**Kaj se tukaj zgodi:**
+- **Preprečuje** neposredne dodelitve ali brisanje lastnosti
+- **Vrže** izjeme, če pride do poskusov sprememb
+- **Zagotavlja**, da morajo spremembe stanja potekati skozi nadzorovane funkcije
+- **Ustvari** jasen dogovor o tem, kako se lahko stanje posodablja
+
+> 💡 **Poglobitev**: Preberite o razliki med *plitkimi* in *globokimi* nespremenljivimi objekti v [MDN dokumentaciji](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Razumevanje te razlike je ključno za kompleksne strukture stanja.
 
 ### Naloga
 
@@ -110,7 +204,7 @@ function updateState(property, newData) {
 }
 ```
 
-V tej funkciji ustvarjamo nov objekt stanja in kopiramo podatke iz prejšnjega stanja z uporabo [*operatorja razširitve (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Nato preglasimo določeno lastnost objekta stanja z novimi podatki z uporabo [notacije z oglatimi oklepaji](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` za dodelitev. Na koncu zaklenemo objekt, da preprečimo spremembe z `Object.freeze()`. Trenutno imamo v stanju shranjeno samo lastnost `account`, vendar lahko s tem pristopom dodate toliko lastnosti, kot jih potrebujete.
+V tej funkciji ustvarjamo nov objekt stanja in kopiramo podatke iz prejšnjega stanja z uporabo [*operatorja razširitve (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Nato prepišemo določeno lastnost objekta stanja z novimi podatki z uporabo [notacije z oglatimi oklepaji](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` za dodelitev. Na koncu zaklenemo objekt, da preprečimo spremembe z uporabo `Object.freeze()`. Trenutno imamo v stanju shranjeno samo lastnost `account`, vendar lahko s tem pristopom dodate toliko lastnosti, kot jih potrebujete.
 
 Prav tako bomo posodobili inicializacijo `state`, da zagotovimo, da je začetno stanje tudi zamrznjeno:
 
@@ -120,7 +214,7 @@ let state = Object.freeze({
 });
 ```
 
-Nato posodobite funkcijo `register` tako, da zamenjate dodelitev `state.account = result;` z:
+Nato posodobite funkcijo `register`, tako da zamenjate dodelitev `state.account = result;` z:
 
 ```js
 updateState('account', result);
@@ -132,7 +226,7 @@ Enako storite s funkcijo `login`, tako da zamenjate `state.account = data;` z:
 updateState('account', data);
 ```
 
-Zdaj bomo izkoristili priložnost za odpravo težave, da podatki o računu niso očiščeni, ko uporabnik klikne *Odjava*.
+Zdaj bomo izkoristili priložnost, da odpravimo težavo, da se podatki o računu ne izbrišejo, ko uporabnik klikne na *Odjava*.
 
 Ustvarite novo funkcijo `logout()`:
 
@@ -143,49 +237,102 @@ function logout() {
 }
 ```
 
-V `updateDashboard()` zamenjajte preusmeritev `return navigate('/login');` z `return logout();`;
+V funkciji `updateDashboard()` zamenjajte preusmeritev `return navigate('/login');` z `return logout();`.
 
-Poskusite registrirati nov račun, se odjaviti in se ponovno prijaviti, da preverite, ali vse še vedno deluje pravilno.
+Poskusite registrirati nov račun, se odjaviti in se znova prijaviti, da preverite, ali vse še vedno deluje pravilno.
 
-> Nasvet: lahko si ogledate vse spremembe stanja tako, da dodate `console.log(state)` na dnu `updateState()` in odprete konzolo v orodjih za razvijalce vašega brskalnika.
+> Nasvet: lahko si ogledate vse spremembe stanja tako, da dodate `console.log(state)` na dnu funkcije `updateState()` in odprete konzolo v orodjih za razvijalce vašega brskalnika.
 
-## Ohranjanje stanja
+## Implementacija ohranjanja podatkov
 
-Večina spletnih aplikacij mora ohraniti podatke, da lahko pravilno deluje. Vsi ključni podatki so običajno shranjeni v bazi podatkov in dostopni prek strežniškega API-ja, kot so podatki o uporabniških računih v našem primeru. Včasih pa je zanimivo ohraniti nekatere podatke v odjemalski aplikaciji, ki se izvaja v vašem brskalniku, za boljšo uporabniško izkušnjo ali za izboljšanje zmogljivosti nalaganja.
+Težava izgube seje, ki smo jo identificirali prej, zahteva rešitev za ohranjanje, ki ohranja uporabniško stanje med sejami brskalnika. To spremeni našo aplikacijo iz začasne izkušnje v zanesljivo, profesionalno orodje.
 
-Ko želite ohraniti podatke v brskalniku, si morate zastaviti nekaj pomembnih vprašanj:
+Pomislite, kako atomske ure ohranjajo natančen čas tudi med izpadi elektrike, tako da shranjujejo ključne podatke v trajnem pomnilniku. Podobno morajo spletne aplikacije imeti mehanizme za trajno shranjevanje, da ohranijo bistvene uporabniške podatke med sejami brskalnika in osvežitvami strani.
 
-- *Ali so podatki občutljivi?* Izogibajte se shranjevanju občutljivih podatkov na odjemalcu, kot so gesla uporabnikov.
-- *Kako dolgo potrebujete te podatke?* Ali nameravate dostopati do teh podatkov samo med trenutno sejo ali jih želite shraniti za vedno?
+**Strateška vprašanja za ohranjanje podatkov:**
 
-Obstaja več načinov za shranjevanje informacij znotraj spletne aplikacije, odvisno od tega, kaj želite doseči. Na primer, lahko uporabite URL-je za shranjevanje iskalne poizvedbe in jo naredite deljivo med uporabniki. Prav tako lahko uporabite [HTTP piškotke](https://developer.mozilla.org/docs/Web/HTTP/Cookies), če je treba podatke deliti s strežnikom, kot so informacije o [avtentikaciji](https://en.wikipedia.org/wiki/Authentication).
+Pred implementacijo ohranjanja razmislite o teh ključnih dejavnikih:
 
-Druga možnost je uporaba ene od številnih API-jev brskalnika za shranjevanje podatkov. Dva od njih sta še posebej zanimiva:
+| Vprašanje | Kontekst bančne aplikacije | Vpliv odločitve |
+|-----------|-----------------------------|----------------|
+| **Ali so podatki občutljivi?** | Stanje računa, zgodovina transakcij | Izberite varne metode shranjevanja |
+| **Kako dolgo naj trajajo?** | Stanje prijave proti začasnim nastavitvam UI | Izberite ustrezno trajanje shranjevanja |
+| **Ali jih strežnik potrebuje?** | Avtentikacijski žetoni proti nastavitvam UI | Določite zahteve za deljenje |
 
-- [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage): [Shramba ključ/vrednost](https://en.wikipedia.org/wiki/Key%E2%80%93value_database), ki omogoča ohranjanje podatkov, specifičnih za trenutno spletno mesto, med različnimi sejami. Podatki, shranjeni v njej, nikoli ne potečejo.
-- [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage): deluje enako kot `localStorage`, razen da se podatki, shranjeni v njej, izbrišejo, ko se seja konča (ko se brskalnik zapre).
+**Možnosti shranjevanja v brskalniku:**
 
-Upoštevajte, da oba API-ja omogočata shranjevanje samo [nizov](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String). Če želite shraniti kompleksne objekte, jih boste morali serializirati v format [JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON) z uporabo [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+Sodobni brskalniki ponujajo več mehanizmov shranjevanja, od katerih je vsak zasnovan za različne primere uporabe:
 
-✅ Če želite ustvariti spletno aplikacijo, ki ne deluje s strežnikom, je mogoče ustvariti bazo podatkov na odjemalcu z uporabo API-ja [`IndexedDB`](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Ta je rezerviran za napredne primere uporabe ali če morate shraniti večjo količino podatkov, saj je bolj zapleten za uporabo.
+**Primarni API-ji za shranjevanje:**
 
-### Naloga
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Trajno [shranjevanje ključ/vrednost](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Ohranja** podatke med sejami brskalnika neomejeno dolgo  
+   - **Preživi** ponovne zagon brskalnika in računalnika
+   - **Omejen** na specifično domeno spletne strani
+   - **Odličen** za uporabniške nastavitve in stanja prijave
 
-Želimo, da naši uporabniki ostanejo prijavljeni, dokler izrecno ne kliknejo na gumb *Odjava*, zato bomo uporabili `localStorage` za shranjevanje podatkov o računu. Najprej definirajmo ključ, ki ga bomo uporabili za shranjevanje naših podatkov.
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Začasno shranjevanje seje
+   - **Deluje** enako kot localStorage med aktivnimi sejami
+   - **Samodejno** se izbriše, ko se zapre zavihek brskalnika
+   - **Idealno** za začasne podatke, ki ne smejo trajati
+
+3. **[HTTP piškotki](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Shranjevanje, ki ga deli strežnik
+   - **Samodejno** se pošlje z vsako zahtevo strežniku
+   - **Odličen** za [avtentikacijske](https://en.wikipedia.org/wiki/Authentication) žetone
+   - **Omejen** po velikosti in lahko vpliva na zmogljivost
+
+**Potreba po serializaciji podatkov:**
+
+Tako `localStorage` kot `sessionStorage` shranjujeta le [nize](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String):
+
+```js
+// Convert objects to JSON strings for storage
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parse JSON strings back to objects when retrieving
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Razumevanje serializacije:**
+- **Pretvori** JavaScript objekte v JSON nize z uporabo [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/Java
+> 💡 **Napredna možnost**: Za kompleksne offline aplikacije z velikimi podatkovnimi nabori razmislite o [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Ta omogoča popolno podatkovno bazo na strani odjemalca, vendar zahteva bolj zapleteno implementacijo.
+
+### Naloga: Implementacija trajnosti z localStorage
+
+Implementirajmo trajno shranjevanje, da uporabniki ostanejo prijavljeni, dokler se izrecno ne odjavijo. Uporabili bomo `localStorage` za shranjevanje podatkov o računu med sejami brskalnika.
+
+**Korak 1: Določite konfiguracijo shranjevanja**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-Nato dodajte to vrstico na konec funkcije `updateState()`:
+**Kaj omogoča ta konstanta:**
+- **Ustvari** dosledno identifikacijo za naše shranjene podatke
+- **Preprečuje** tipkarske napake pri sklicevanju na ključe shranjevanja
+- **Olajša** spremembo ključa shranjevanja, če je potrebno
+- **Sledi** najboljšim praksam za vzdrževanje kode
+
+**Korak 2: Dodajte samodejno trajnost**
+
+Dodajte to vrstico na konec funkcije `updateState()`:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-S tem bodo podatki o uporabniškem računu ohranjeni in vedno posodobljeni, saj smo prej centralizirali vse posodobitve stanja. Tukaj začnemo izkoriščati vse naše prejšnje prestrukturiranje 🙂.
+**Razčlenitev, kaj se tukaj zgodi:**
+- **Pretvori** objekt računa v JSON niz za shranjevanje
+- **Shrani** podatke z našim doslednim ključem shranjevanja
+- **Izvede** samodejno ob vsaki spremembi stanja
+- **Zagotovi**, da so shranjeni podatki vedno sinhronizirani s trenutnim stanjem
 
-Ker so podatki shranjeni, moramo poskrbeti tudi za njihovo obnovitev, ko se aplikacija naloži. Ker bomo začeli imeti več inicializacijske kode, je morda dobra ideja ustvariti novo funkcijo `init`, ki vključuje tudi našo prejšnjo kodo na dnu `app.js`:
+> 💡 **Prednost arhitekture**: Ker smo centralizirali vse posodobitve stanja prek `updateState()`, je dodajanje trajnosti zahtevalo le eno vrstico kode. To dokazuje moč dobrih arhitekturnih odločitev!
+
+**Korak 3: Obnovite stanje ob zagonu aplikacije**
+
+Ustvarite inicializacijsko funkcijo za obnovitev shranjenih podatkov:
 
 ```js
 function init() {
@@ -202,17 +349,49 @@ function init() {
 init();
 ```
 
-Tukaj pridobimo shranjene podatke, in če obstajajo, ustrezno posodobimo stanje. Pomembno je, da to storimo *pred* posodobitvijo poti, saj lahko obstaja koda, ki se zanaša na stanje med posodobitvijo strani.
+**Razumevanje procesa inicializacije:**
+- **Pridobi** vse prej shranjene podatke o računu iz localStorage
+- **Razčleni** JSON niz nazaj v JavaScript objekt
+- **Posodobi** stanje z uporabo naše nadzorovane funkcije za posodobitev
+- **Samodejno obnovi** uporabniško sejo ob nalaganju strani
+- **Izvede** pred posodobitvami poti, da zagotovi razpoložljivost stanja
 
-Prav tako lahko naredimo stran *Nadzorna plošča* privzeto stran naše aplikacije, saj zdaj ohranjamo podatke o računu. Če podatki niso najdeni, nadzorna plošča poskrbi za preusmeritev na stran *Prijava*. V `updateRoute()` zamenjajte privzeto `return navigate('/login');` z `return navigate('/dashboard');`.
+**Korak 4: Optimizirajte privzeto pot**
 
-Zdaj se prijavite v aplikacijo in poskusite osvežiti stran. Ostati bi morali na nadzorni plošči. S to posodobitvijo smo rešili vse naše začetne težave...
+Posodobite privzeto pot, da izkoristite trajnost:
 
-## Osvežitev podatkov
+V `updateRoute()` zamenjajte:
+```js
+// Replace: return navigate('/login');
+return navigate('/dashboard');
+```
 
-...Ampak morda smo ustvarili novo težavo. Ups!
+**Zakaj je ta sprememba smiselna:**
+- **Učinkovito izkoristi** naš nov sistem trajnosti
+- **Omogoči**, da nadzorna plošča preveri avtentikacijo
+- **Samodejno preusmeri** na prijavo, če ni shranjene seje
+- **Ustvari** bolj brezhibno uporabniško izkušnjo
 
-Pojdite na nadzorno ploščo z računom `test`, nato zaženite ta ukaz v terminalu, da ustvarite novo transakcijo:
+**Testiranje vaše implementacije:**
+
+1. Prijavite se v svojo bančno aplikacijo
+2. Osvežite stran brskalnika
+3. Preverite, ali ostanete prijavljeni in na nadzorni plošči
+4. Zaprite in ponovno odprite brskalnik
+5. Ponovno obiščite aplikacijo in potrdite, da ste še vedno prijavljeni
+
+🎉 **Dosežek odklenjen**: Uspešno ste implementirali upravljanje trajnega stanja! Vaša aplikacija se zdaj obnaša kot profesionalna spletna aplikacija.
+
+## Uravnoteženje trajnosti z svežino podatkov
+
+Naš sistem trajnosti uspešno ohranja uporabniške seje, vendar uvaja nov izziv: zastarelost podatkov. Ko več uporabnikov ali aplikacij spreminja iste podatke na strežniku, lokalno predpomnjene informacije postanejo zastarele.
+
+Ta situacija je podobna vikinškim navigatorjem, ki so se zanašali na shranjene zvezdne karte in trenutna opazovanja neba. Karte so zagotavljale doslednost, vendar so navigatorji potrebovali sveža opazovanja za prilagoditev spreminjajočim se razmeram. Podobno naša aplikacija potrebuje tako trajno uporabniško stanje kot sveže podatke s strežnika.
+
+**🧪 Odkritje problema zastarelosti podatkov:**
+
+1. Prijavite se na nadzorno ploščo z računom `test`
+2. Za simulacijo transakcije iz drugega vira zaženite ta ukaz v terminalu:
 
 ```sh
 curl --request POST \
@@ -221,15 +400,31 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-Poskusite osvežiti stran nadzorne plošče v brskalniku zdaj. Kaj se zgodi? Ali vidite novo transakcijo?
+3. Osvežite stran nadzorne plošče v brskalniku
+4. Opazujte, ali vidite novo transakcijo
 
-Stanje je ohranjeno za nedoločen čas zahvaljujoč `localStorage`, vendar to pomeni, da se nikoli ne posodobi, dokler se ne odjavite iz aplikacije in se ponovno prijavite!
+**Kaj ta test pokaže:**
+- **Prikaže**, kako lahko localStorage postane "zastarel" (neposodobljen)
+- **Simulira** scenarije iz resničnega sveta, kjer se podatki spreminjajo zunaj vaše aplikacije
+- **Razkriva** napetost med trajnostjo in svežino podatkov
 
-Ena možna strategija za odpravo tega je, da ponovno naložimo podatke o računu vsakič, ko se naloži nadzorna plošča, da se izognemo zastarelim podatkom.
+**Izziv zastarelosti podatkov:**
 
-### Naloga
+| Problem | Vzrok | Vpliv na uporabnika |
+|---------|-------|---------------------|
+| **Zastareli podatki** | localStorage se nikoli samodejno ne izteče | Uporabniki vidijo zastarele informacije |
+| **Spremembe na strežniku** | Druge aplikacije/uporabniki spreminjajo iste podatke | Nekonsistentni pogledi med platformami |
+| **Predpomnilnik vs. resničnost** | Lokalni predpomnilnik ne ustreza stanju strežnika | Slaba uporabniška izkušnja in zmeda |
 
-Ustvarite novo funkcijo `updateAccountData`:
+**Strategija rešitve:**
+
+Implementirali bomo vzorec "osveži ob nalaganju", ki uravnoteži prednosti trajnosti s potrebo po svežih podatkih. Ta pristop ohranja gladko uporabniško izkušnjo, hkrati pa zagotavlja natančnost podatkov.
+
+### Naloga: Implementacija sistema za osvežitev podatkov
+
+Ustvarili bomo sistem, ki samodejno pridobi sveže podatke s strežnika, hkrati pa ohranja prednosti našega sistema trajnega stanja.
+
+**Korak 1: Ustvarite posodobitveni sistem za podatke o računu**
 
 ```js
 async function updateAccountData() {
@@ -247,9 +442,15 @@ async function updateAccountData() {
 }
 ```
 
-Ta metoda preveri, ali smo trenutno prijavljeni, nato ponovno naloži podatke o računu s strežnika.
+**Razumevanje logike te funkcije:**
+- **Preveri**, ali je uporabnik trenutno prijavljen (state.account obstaja)
+- **Preusmeri** na odjavo, če ni veljavne seje
+- **Pridobi** sveže podatke o računu s strežnika z uporabo obstoječe funkcije `getAccount()`
+- **Upravi** napake strežnika na eleganten način z odjavo neveljavnih sej
+- **Posodobi** stanje s svežimi podatki z uporabo našega nadzorovanega sistema za posodobitev
+- **Samodejno sproži** trajnost localStorage prek funkcije `updateState()`
 
-Ustvarite drugo funkcijo z imenom `refresh`:
+**Korak 2: Ustvarite upravljalnik osvežitve nadzorne plošče**
 
 ```js
 async function refresh() {
@@ -258,7 +459,15 @@ async function refresh() {
 }
 ```
 
-Ta funkcija posodobi podatke o računu, nato poskrbi za posodobitev HTML-ja na strani nadzorne plošče. To je tisto, kar moramo poklicati, ko se naloži pot nadzorne plošče. Posodobite definicijo poti z:
+**Kaj doseže ta funkcija za osvežitev:**
+- **Uskladi** proces osvežitve podatkov in posodobitve uporabniškega vmesnika
+- **Počaka**, da se naložijo sveži podatki, preden posodobi prikaz
+- **Zagotovi**, da nadzorna plošča prikazuje najbolj aktualne informacije
+- **Ohranja** jasno ločitev med upravljanjem podatkov in posodobitvami uporabniškega vmesnika
+
+**Korak 3: Integracija s sistemom poti**
+
+Posodobite konfiguracijo poti, da samodejno sproži osvežitev:
 
 ```js
 const routes = {
@@ -267,28 +476,69 @@ const routes = {
 };
 ```
 
-Poskusite ponovno naložiti nadzorno ploščo zdaj, prikazati bi morali posodobljene podatke o računu.
+**Kako deluje ta integracija:**
+- **Izvede** funkcijo osvežitve vsakič, ko se naloži pot nadzorne plošče
+- **Zagotovi**, da so sveži podatki vedno prikazani, ko uporabniki navigirajo na nadzorno ploščo
+- **Ohranja** obstoječo strukturo poti, hkrati pa dodaja svežino podatkov
+- **Omogoči** dosleden vzorec za inicializacijo specifično za pot
 
----
+**Testiranje vašega sistema za osvežitev podatkov:**
 
-## 🚀 Izziv
+1. Prijavite se v svojo bančno aplikacijo
+2. Zaženite curl ukaz iz prej za ustvarjanje nove transakcije
+3. Osvežite stran nadzorne plošče ali se premaknite stran in nazaj
+4. Preverite, ali se nova transakcija takoj prikaže
 
-Zdaj, ko ponovno nalagamo podatke o računu vsakič, ko se naloži nadzorna plošča, ali menite, da še vedno potrebujemo ohranjanje *vseh podatkov o računu*?
+🎉 **Doseženo popolno ravnovesje**: Vaša aplikacija zdaj združuje gladko izkušnjo trajnega stanja z natančnostjo svežih podatkov s strežnika!
 
-Poskusite skupaj spremeniti, kaj je shranjeno in naloženo iz `localStorage`, da vključuje samo tisto, kar je absolutno potrebno za delovanje aplikacije.
+## Izziv GitHub Copilot Agent 🚀
 
-## Zaključni kviz
-[Kvizi po predavanju](https://ff-quizzes.netlify.app/web/quiz/48)
+Uporabite način Agent za dokončanje naslednjega izziva:
+
+**Opis:** Implementirajte celovit sistem za upravljanje stanja z funkcionalnostjo razveljavitve/ponovne vzpostavitve za bančno aplikacijo. Ta izziv vam bo pomagal vaditi napredne koncepte upravljanja stanja, vključno s sledenjem zgodovini stanja, neizmenljivimi posodobitvami in sinhronizacijo uporabniškega vmesnika.
+
+**Navodilo:** Ustvarite izboljšan sistem za upravljanje stanja, ki vključuje: 1) Polje zgodovine stanja, ki sledi vsem prejšnjim stanjem, 2) Funkcije razveljavitve in ponovne vzpostavitve, ki lahko povrnejo prejšnja stanja, 3) UI gumbe za operacije razveljavitve/ponovne vzpostavitve na nadzorni plošči, 4) Največjo omejitev zgodovine 10 stanj za preprečevanje težav s pomnilnikom, in 5) Ustrezno čiščenje zgodovine ob odjavi uporabnika. Zagotovite, da funkcionalnost razveljavitve/ponovne vzpostavitve deluje s spremembami stanja računa in se ohrani med osvežitvami brskalnika.
+
+Več o [načinu Agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) si preberite tukaj.
+
+## 🚀 Izziv: Optimizacija shranjevanja
+
+Vaša implementacija zdaj učinkovito upravlja uporabniške seje, osvežitev podatkov in upravljanje stanja. Vendar razmislite, ali naš trenutni pristop optimalno uravnoteži učinkovitost shranjevanja s funkcionalnostjo.
+
+Kot mojstri šaha, ki razlikujejo med ključnimi figurami in tistimi, ki jih je mogoče žrtvovati, učinkovito upravljanje stanja zahteva prepoznavanje, kateri podatki morajo trajati in kateri naj bodo vedno sveži s strežnika.
+
+**Analiza optimizacije:**
+
+Ocenite svojo trenutno implementacijo localStorage in razmislite o teh strateških vprašanjih:
+- Kateri so minimalni podatki, potrebni za ohranjanje avtentikacije uporabnika?
+- Kateri podatki se spreminjajo dovolj pogosto, da lokalno predpomnjenje ne prinaša koristi?
+- Kako lahko optimizacija shranjevanja izboljša zmogljivost brez poslabšanja uporabniške izkušnje?
+
+**Strategija implementacije:**
+- **Identificirajte** ključne podatke, ki morajo trajati (verjetno le identifikacija uporabnika)
+- **Spremenite** svojo implementacijo localStorage, da shranjuje le kritične podatke seje
+- **Zagotovite**, da se sveži podatki vedno naložijo s strežnika ob obiskih nadzorne plošče
+- **Testirajte**, da vaš optimiziran pristop ohranja enako uporabniško izkušnjo
+
+**Napredna razmišljanja:**
+- **Primerjajte** kompromise med shranjevanjem celotnih podatkov o računu in samo avtentikacijskimi žetoni
+- **Dokumentirajte** svoje odločitve in razloge za prihodnje člane ekipe
+
+Ta izziv vam bo pomagal razmišljati kot profesionalni razvijalec, ki upošteva tako uporabniško izkušnjo kot učinkovitost aplikacije. Vzemite si čas za eksperimentiranje z različnimi pristopi!
+
+## Kviz po predavanju
+
+[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/48)
 
 ## Naloga
 
 [Implementirajte dialog "Dodaj transakcijo"](assignment.md)
 
-Tukaj je primer rezultata po zaključeni nalogi:
+Tukaj je primer rezultata po dokončanju naloge:
 
 ![Posnetek zaslona, ki prikazuje primer dialoga "Dodaj transakcijo"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.sl.png)
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.

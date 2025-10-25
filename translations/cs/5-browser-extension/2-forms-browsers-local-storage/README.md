@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T10:49:39+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-24T21:13:28+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "cs"
 }
 -->
 # Projekt rozšíření prohlížeče, část 2: Volání API, použití místního úložiště
 
-## Kvíz před lekcí
+## Kvíz před přednáškou
 
-[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/25)
+[Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Úvod
+## Úvod
 
-V této lekci budete volat API odesláním formuláře vašeho rozšíření prohlížeče a zobrazovat výsledky v rozšíření. Kromě toho se naučíte, jak ukládat data do místního úložiště prohlížeče pro budoucí použití a odkazování.
+Pamatujete si na rozšíření prohlížeče, které jste začali vytvářet? Momentálně máte pěkně vypadající formulář, ale je v podstatě statický. Dnes ho oživíme tím, že ho propojíme se skutečnými daty a přidáme mu paměť.
 
-✅ Postupujte podle očíslovaných segmentů ve vhodných souborech, abyste věděli, kam umístit svůj kód.
+Přemýšlejte o počítačích řídícího střediska mise Apollo - nezobrazovaly jen pevné informace. Neustále komunikovaly s kosmickou lodí, aktualizovaly telemetrická data a pamatovaly si kritické parametry mise. Přesně takové dynamické chování dnes budeme vytvářet. Vaše rozšíření se připojí k internetu, získá skutečná data o životním prostředí a zapamatuje si vaše nastavení pro příště.
 
-### Nastavení prvků pro manipulaci v rozšíření:
+Integrace API může znít složitě, ale ve skutečnosti jde jen o to naučit váš kód komunikovat s jinými službami. Ať už získáváte data o počasí, příspěvky ze sociálních sítí nebo informace o uhlíkové stopě, jako to dnes uděláme, jde o navázání těchto digitálních spojení. Také prozkoumáme, jak mohou prohlížeče uchovávat informace - podobně jako knihovny používaly katalogy k zapamatování, kde se nacházejí knihy.
 
-Do této chvíle jste vytvořili HTML pro formulář a `<div>` pro výsledky vašeho rozšíření prohlížeče. Od této chvíle budete pracovat v souboru `/src/index.js` a postupně budovat své rozšíření. Odkazujte na [předchozí lekci](../1-about-browsers/README.md) pro nastavení projektu a proces sestavení.
+Na konci této lekce budete mít rozšíření prohlížeče, které získává skutečná data, ukládá uživatelské preference a poskytuje plynulý uživatelský zážitek. Pojďme na to!
 
-Pracujte ve svém souboru `index.js` a začněte vytvořením několika `const` proměnných, které budou uchovávat hodnoty spojené s různými poli:
+✅ Postupujte podle očíslovaných segmentů v příslušných souborech, abyste věděli, kam umístit svůj kód.
 
-```JavaScript
+## Nastavení prvků pro manipulaci v rozšíření
+
+Než váš JavaScript může manipulovat s rozhraním, potřebuje odkazy na konkrétní HTML prvky. Je to jako dalekohled, který musí být zaměřen na konkrétní hvězdy - než mohl Galileo studovat měsíce Jupitera, musel najít a zaměřit Jupiter samotný.
+
+Ve vašem souboru `index.js` vytvoříme proměnné `const`, které zachytí odkazy na každý důležitý prvek formuláře. Je to podobné tomu, jak vědci označují své vybavení - místo toho, aby pokaždé hledali v celé laboratoři, mohou přímo přistupovat k tomu, co potřebují.
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,200 +47,275 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Všechna tato pole jsou odkazována podle jejich CSS třídy, jak jste je nastavili v HTML v předchozí lekci.
+**Co tento kód dělá:**
+- **Zachycuje** prvky formuláře pomocí `document.querySelector()` s CSS selektory
+- **Vytváří** odkazy na vstupní pole pro název regionu a API klíč
+- **Navazuje** spojení s prvky pro zobrazení výsledků dat o uhlíkové spotřebě
+- **Nastavuje** přístup k prvkům uživatelského rozhraní, jako jsou indikátory načítání a chybové zprávy
+- **Ukládá** každý odkaz na prvek do proměnné `const` pro snadné opakované použití v kódu
 
-### Přidání posluchačů událostí
+## Přidání posluchačů událostí
 
-Dále přidejte posluchače událostí pro formulář a tlačítko pro vymazání, které resetuje formulář, aby se při odeslání formuláře nebo kliknutí na tlačítko něco stalo. Na konci souboru přidejte volání pro inicializaci aplikace:
+Nyní zajistíme, aby vaše rozšíření reagovalo na akce uživatele. Posluchači událostí jsou způsobem, jak váš kód monitoruje interakce uživatele. Představte si je jako operátory v raných telefonních ústřednách - poslouchali příchozí hovory a spojovali správné obvody, když někdo chtěl uskutečnit spojení.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Všimněte si zkráceného zápisu pro poslouchání událostí odeslání nebo kliknutí a toho, jak je událost předána funkcím `handleSubmit` nebo `reset`. Dokážete napsat ekvivalent tohoto zkráceného zápisu v delším formátu? Který způsob preferujete?
+**Pochopení těchto konceptů:**
+- **Připojuje** posluchač odeslání k formuláři, který se aktivuje, když uživatelé stisknou Enter nebo kliknou na odeslání
+- **Spojuje** posluchač kliknutí s tlačítkem pro vymazání formuláře
+- **Předává** objekt události `(e)` do funkcí obsluhy pro další kontrolu
+- **Volá** funkci `init()` okamžitě, aby nastavila počáteční stav vašeho rozšíření
 
-### Vytvoření funkcí `init()` a `reset()`:
+✅ Všimněte si zkrácené syntaxe šipkové funkce použité zde. Tento moderní přístup v JavaScriptu je čistší než tradiční výrazy funkcí, ale oba fungují stejně dobře!
 
-Nyní vytvoříte funkci, která inicializuje rozšíření, nazvanou `init()`:
+## Vytvoření inicializační a resetovací funkce
 
-```JavaScript
+Vytvoříme logiku inicializace vašeho rozšíření. Funkce `init()` je jako navigační systém lodi, který kontroluje své přístroje - určuje aktuální stav a podle toho upravuje rozhraní. Zjišťuje, zda někdo vaše rozšíření již použil, a načítá jeho předchozí nastavení.
+
+Funkce `reset()` poskytuje uživatelům čistý začátek - podobně jako vědci resetují své přístroje mezi experimenty, aby zajistili čistá data.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-V této funkci je zajímavá logika. Při jejím čtení dokážete pochopit, co se děje?
+**Rozbor toho, co se zde děje:**
+- **Načítá** uložený API klíč a region z místního úložiště prohlížeče
+- **Kontroluje**, zda se jedná o nového uživatele (bez uložených údajů) nebo o vracejícího se uživatele
+- **Zobrazuje** formulář nastavení pro nové uživatele a skrývá ostatní prvky rozhraní
+- **Automaticky načítá** uložená data pro vracející se uživatele a zobrazuje možnost resetování
+- **Spravuje** stav uživatelského rozhraní na základě dostupných dat
 
-- Jsou nastaveny dvě `const`, které kontrolují, zda uživatel uložil APIKey a regionální kód do místního úložiště.
-- Pokud je některá z těchto hodnot `null`, zobrazí se formulář změnou jeho stylu na 'block'.
-- Skryjí se výsledky, načítání a tlačítko pro vymazání a jakýkoli text chyby se nastaví na prázdný řetězec.
-- Pokud existuje klíč a region, spustí se rutina:
-  - zavolá API pro získání dat o uhlíkové stopě,
-  - skryje oblast výsledků,
-  - skryje formulář,
-  - zobrazí tlačítko pro reset.
+**Klíčové koncepty o místním úložišti:**
+- **Ukládá** data mezi relacemi prohlížeče (na rozdíl od session storage)
+- **Ukládá** data jako páry klíč-hodnota pomocí `getItem()` a `setItem()`
+- **Vrací** `null`, když pro daný klíč neexistují žádná data
+- **Poskytuje** jednoduchý způsob, jak si zapamatovat uživatelské preference a nastavení
 
-Než budete pokračovat, je užitečné se seznámit s velmi důležitým konceptem dostupným v prohlížečích: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage je užitečný způsob, jak ukládat řetězce v prohlížeči jako páry `klíč-hodnota`. Tento typ webového úložiště lze manipulovat pomocí JavaScriptu pro správu dat v prohlížeči. LocalStorage nevyprší, zatímco SessionStorage, jiný typ webového úložiště, se vymaže při zavření prohlížeče. Různé typy úložiště mají své výhody a nevýhody.
+> 💡 **Pochopení úložiště prohlížeče**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) je jako dát vašemu rozšíření trvalou paměť. Zvažte, jak starověká Alexandrijská knihovna uchovávala svitky - informace zůstaly dostupné, i když učenci odešli a vrátili se.
+>
+> **Klíčové vlastnosti:**
+> - **Ukládá** data i po zavření prohlížeče
+> - **Přežívá** restartování počítače a havárie prohlížeče
+> - **Poskytuje** značný úložný prostor pro uživatelské preference
+> - **Nabízí** okamžitý přístup bez zpoždění sítě
 
-> Poznámka - vaše rozšíření prohlížeče má své vlastní místní úložiště; hlavní okno prohlížeče je jiná instance a chová se odděleně.
+> **Důležité upozornění**: Vaše rozšíření prohlížeče má své vlastní izolované místní úložiště, které je oddělené od běžných webových stránek. To poskytuje bezpečnost a zabraňuje konfliktům s jinými weby.
 
-Nastavte hodnotu APIKey jako řetězec, například, a můžete vidět, že je nastavena v Edge, když "zkoumáte" webovou stránku (můžete kliknout pravým tlačítkem na prohlížeč a zvolit "zkoumat") a přejdete na kartu Aplikace, kde uvidíte úložiště.
+Uložená data můžete zobrazit otevřením nástrojů pro vývojáře prohlížeče (F12), přechodem na záložku **Application** a rozbalením sekce **Local Storage**.
 
 ![Panel místního úložiště](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.cs.png)
 
-✅ Zamyslete se nad situacemi, kdy byste NECHTĚLI ukládat některá data do LocalStorage. Obecně je špatný nápad ukládat API klíče do LocalStorage! Vidíte proč? V našem případě, protože naše aplikace je čistě pro výuku a nebude nasazena do obchodu s aplikacemi, použijeme tuto metodu.
+> ⚠️ **Bezpečnostní upozornění**: V produkčních aplikacích ukládání API klíčů do LocalStorage představuje bezpečnostní rizika, protože JavaScript může k těmto datům přistupovat. Pro účely učení tento přístup funguje dobře, ale skutečné aplikace by měly používat bezpečné serverové úložiště pro citlivé údaje.
 
-Všimněte si, že používáte Web API pro manipulaci s LocalStorage, buď pomocí `getItem()`, `setItem()` nebo `removeItem()`. Je široce podporováno napříč prohlížeči.
+## Zpracování odeslání formuláře
 
-Než vytvoříte funkci `displayCarbonUsage()`, která je volána v `init()`, vytvořte funkčnost pro zpracování počátečního odeslání formuláře.
+Nyní se podíváme na to, co se stane, když někdo odešle váš formulář. Ve výchozím nastavení prohlížeče při odeslání formuláře znovu načtou stránku, ale my tento proces přerušíme, abychom vytvořili plynulejší zážitek.
 
-### Zpracování odeslání formuláře
+Tento přístup odráží způsob, jakým řídící středisko zpracovává komunikaci s kosmickou lodí - místo resetování celého systému pro každou přenosovou zprávu udržují nepřetržitý provoz při zpracování nových informací.
 
-Vytvořte funkci nazvanou `handleSubmit`, která přijímá argument události `(e)`. Zastavte šíření události (v tomto případě chceme zastavit obnovení prohlížeče) a zavolejte novou funkci `setUpUser`, předávající argumenty `apiKey.value` a `region.value`. Tímto způsobem použijete dvě hodnoty, které jsou přivedeny prostřednictvím počátečního formuláře, když jsou příslušná pole vyplněna.
+Vytvořte funkci, která zachytí událost odeslání formuláře a extrahuje uživatelský vstup:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ Osvěžte si paměť - HTML, které jste nastavili v poslední lekci, má dvě vstupní pole, jejichž `hodnoty` jsou zachyceny prostřednictvím `const`, které jste nastavili na začátku souboru, a obě jsou `povinné`, takže prohlížeč zabrání uživatelům zadat prázdné hodnoty.
+**V uvedeném kódu jsme:**
+- **Zabránili** výchozímu chování odeslání formuláře, které by obnovilo stránku
+- **Extrahovali** hodnoty uživatelského vstupu z polí API klíče a regionu
+- **Předali** data formuláře funkci `setUpUser()` pro zpracování
+- **Udrželi** chování aplikace na jedné stránce tím, že jsme se vyhnuli obnovování stránky
 
-### Nastavení uživatele
+✅ Pamatujte, že vaše HTML pole formuláře obsahují atribut `required`, takže prohlížeč automaticky ověřuje, že uživatelé poskytli jak API klíč, tak region, než tato funkce začne běžet.
 
-Pokračujte funkcí `setUpUser`, kde nastavíte hodnoty místního úložiště pro apiKey a regionName. Přidejte novou funkci:
+## Nastavení uživatelských preferencí
 
-```JavaScript
+Funkce `setUpUser` je zodpovědná za uložení uživatelských údajů a zahájení prvního volání API. Tím se vytvoří plynulý přechod od nastavení k zobrazení výsledků.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-Tato funkce nastaví zprávu o načítání, která se zobrazí během volání API. V tuto chvíli jste se dostali k vytvoření nejdůležitější funkce tohoto rozšíření prohlížeče!
+**Krok za krokem, co se zde děje:**
+- **Ukládá** API klíč a název regionu do místního úložiště pro budoucí použití
+- **Zobrazuje** indikátor načítání, aby informoval uživatele, že se načítají data
+- **Vymaže** všechny předchozí chybové zprávy z rozhraní
+- **Zviditelňuje** tlačítko pro vymazání, aby uživatelé mohli později resetovat své nastavení
+- **Zahajuje** volání API pro získání skutečných dat o uhlíkové spotřebě
 
-### Zobrazení uhlíkové stopy
+Tato funkce vytváří plynulý uživatelský zážitek tím, že koordinovaně spravuje jak uchování dat, tak aktualizace uživatelského rozhraní.
 
-Nakonec je čas dotázat se API!
+## Zobrazení dat o uhlíkové spotřebě
 
-Než budeme pokračovat, měli bychom si promluvit o API. API, nebo [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), jsou klíčovým prvkem nástrojů webového vývojáře. Poskytují standardní způsoby, jak programy interagují a komunikují mezi sebou. Například pokud vytváříte webovou stránku, která potřebuje dotazovat databázi, někdo mohl vytvořit API, které můžete použít. Zatímco existuje mnoho typů API, jedním z nejpopulárnějších je [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Nyní připojíme vaše rozšíření k externím zdrojům dat prostřednictvím API. Tím se vaše rozšíření změní z nezávislého nástroje na něco, co může přistupovat k informacím v reálném čase z celého internetu.
 
-✅ Termín 'REST' znamená 'Representational State Transfer' a zahrnuje použití různě nakonfigurovaných URL pro získání dat. Proveďte malý průzkum o různých typech API dostupných vývojářům. Který formát vás oslovuje?
+**Pochopení API**
 
-Existují důležité věci, na které je třeba si u této funkce dát pozor. Nejprve si všimněte klíčového slova [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Psaní funkcí tak, aby běžely asynchronně, znamená, že čekají na dokončení akce, jako je vrácení dat, než budou pokračovat.
+[API](https://www.webopedia.com/TERM/A/API.html) jsou způsobem, jakým spolu komunikují různé aplikace. Představte si je jako telegrafní systém, který v 19. století spojoval vzdálená města - operátoři posílali požadavky na vzdálené stanice a dostávali odpovědi s požadovanými informacemi. Pokaždé, když kontrolujete sociální média, ptáte se hlasového asistenta na otázku nebo používáte aplikaci pro doručování, API usnadňují tyto výměny dat.
 
-Zde je rychlé video o `async`:
+**Klíčové koncepty o REST API:**
+- **REST** znamená 'Representational State Transfer'
+- **Používá** standardní HTTP metody (GET, POST, PUT, DELETE) pro interakci s daty
+- **Vrací** data v předvídatelných formátech, obvykle JSON
+- **Poskytuje** konzistentní URL-based koncové body pro různé typy požadavků
+
+✅ [CO2 Signal API](https://www.co2signal.com/), které použijeme, poskytuje data o intenzitě uhlíku v elektrických sítích po celém světě v reálném čase. To pomáhá uživatelům pochopit dopad jejich spotřeby elektřiny na životní prostředí!
+
+> 💡 **Pochopení asynchronního JavaScriptu**: Klíčové slovo [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) umožňuje vašemu kódu zpracovávat více operací současně. Když požadujete data ze serveru, nechcete, aby celé vaše rozšíření zamrzlo - to by bylo jako kdyby řízení letového provozu zastavilo všechny operace, zatímco čeká na odpověď jednoho letadla.
+>
+> **Klíčové výhody:**
+> - **Udržuje** odezvu rozšíření během načítání dat
+> - **Umožňuje** pokračování v provádění jiného kódu během síťových požadavků
+> - **Zlepšuje** čitelnost kódu ve srovnání s tradičními způsoby zpětného volání
+> - **Umožňuje** elegantní zpracování chyb při problémech se sítí
+
+Zde je krátké video o `async`:
 
 [![Async a Await pro správu slibů](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async a Await pro správu slibů")
 
 > 🎥 Klikněte na obrázek výše pro video o async/await.
 
-Vytvořte novou funkci pro dotazování na API C02Signal:
+Vytvořte funkci pro získání a zobrazení dat o uhlíkové spotřebě:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Toto je velká funkce. Co se zde děje?
+**Rozbor toho, co se zde děje:**
+- **Používá** moderní API `fetch()` místo externích knihoven jako Axios pro čistší kód bez závislostí
+- **Implementuje** správné ověřování chyb pomocí `response.ok`, aby se chyby API zachytily včas
+- **Zpracovává** asynchronní operace pomocí `async/await` pro čitelnější tok kódu
+- **Autentizuje** pomocí CO2 Signal API pomocí hlavičky `auth-token`
+- **Analyzuje** data JSON z odpovědi a extrahuje informace o intenzitě uhlíku
+- **Aktualizuje** více prvků uživatelského rozhraní formátovanými daty o životním prostředí
+- **Poskytuje** uživatelsky přívětivé chybové zprávy, když volání API selže
 
-- Podle osvědčených postupů používáte klíčové slovo `async`, aby se tato funkce chovala asynchronně. Funkce obsahuje blok `try/catch`, protože vrátí slib, když API vrátí data. Protože nemáte kontrolu nad rychlostí, jakou API odpoví (může vůbec neodpovědět!), musíte tuto nejistotu zvládnout voláním asynchronně.
-- Dotazujete se na API co2signal, abyste získali data o vašem regionu, pomocí vašeho API klíče. Pro použití tohoto klíče musíte použít typ autentizace v parametrech hlavičky.
-- Jakmile API odpoví, přiřadíte různé prvky jeho odpovědi k částem obrazovky, které jste nastavili pro zobrazení těchto dat.
-- Pokud dojde k chybě nebo pokud neexistuje žádný výsledek, zobrazíte chybovou zprávu.
+**Klíčové moderní koncepty JavaScriptu:**
+- **Šablonové literály** se syntaxí `${}` pro čisté formátování řetězců
+- **Zpracování chyb** pomocí bloků try/catch pro robustní aplikace
+- **Async/await** vzor pro elegantní zpracování síťových požadavků
+- **Destrukturalizace objektů** pro extrakci konkrétních dat z odpovědí API
+- **Řetězení metod** pro více manipulací s DOM
 
-✅ Používání asynchronních programovacích vzorů je další velmi užitečný nástroj ve vaší sadě nástrojů. Přečtěte si [o různých způsobech](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), jak můžete tento typ kódu nakonfigurovat.
+✅ Tato funkce demonstruje několik důležitých konceptů webového vývoje - komunikaci s externími servery, zpracování autentizace, zpracování dat, aktualizaci rozhraní a elegantní zpracování chyb. To jsou základní dovednosti, které profesionální vývojáři pravidelně používají.
 
-Gratulujeme! Pokud sestavíte své rozšíření (`npm run build`) a obnovíte jej v panelu rozšíření, máte funkční rozšíření! Jediná věc, která nefunguje, je ikona, a to opravíte v další lekci.
+🎉 **Co jste dosáhli:** Vytvořili jste rozšíření prohlížeče, které:
+- **Připojuje se** k internetu a získává skutečná data o životním prostředí
+- **Ukládá** uživatelská nastavení mezi relacemi
+- **Zpracovává** chyby elegantně místo havárie
+- **Poskytuje** plynulý, profesionální uživatelský zážitek
 
----
-
-## 🚀 Výzva
-
-V těchto lekcích jsme diskutovali o několika typech API. Vyberte si webové API a podrobně prozkoumejte, co nabízí. Například se podívejte na API dostupná v prohlížečích, jako je [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Co podle vás dělá API skvělým?
-
-## Kvíz po lekci
-
-[Kvíz po lekci](https://ff-quizzes.netlify.app/web/quiz/26)
-
-## Přehled a samostudium
-
-V této lekci jste se naučili o LocalStorage a API, obojí velmi užitečné pro profesionálního webového vývojáře. Dokážete si představit, jak tyto dvě věci spolupracují? Přemýšlejte o tom, jak byste navrhli webovou stránku, která by ukládala položky pro použití API.
-
-## Zadání
-
-[Adoptujte API](assignment.md)
+Otestujte svou práci spuštěním `npm run build` a obnovením vašeho rozšíření v prohlížeči. Nyní máte funkční sledovač uhlíkové stopy. V další lekci přidáme funkci dynamických ikon, abychom rozšíření dokončili.
 
 ---
 
-**Upozornění**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+## Výzva GitHub Copilot Agent 🚀
+
+Použijte režim Agent k dokončení následující výzvy:
+
+**Popis:** Vylepšete rozšíření prohlížeče přidáním zlepšení zpracování chyb a funkcí uživatelského zážitku. Tato výzva vám pomůže procvičit práci s API, místním úložištěm a manipulací s DOM pomocí moderních vzorů JavaScriptu.
+
+**Zadání:** Vytvořte vylepšenou verzi funkce displayCarbonUsage, která zahrnuje: 1) Mechanismus opakování pro neúspěšná volání API s exponenciálním zpožděním, 2) Validaci vstupu pro kód regionu před provedením volání API, 3) Animaci načítání s indikátory průběhu, 4) Ukládání odpovědí API do localStorage s časovými razítky vypršení platnosti (cache na 30 minut), a 5) Funkci pro zobra
+V této lekci jste se naučili o LocalStorage a API, obojí je velmi užitečné pro profesionálního webového vývojáře. Dokážete si představit, jak tyto dvě věci spolupracují? Přemýšlejte o tom, jak byste navrhli webovou stránku, která by ukládala položky, které by byly použity API.
+
+## Úkol
+
+[Přijměte API](assignment.md)
+
+---
+
+**Prohlášení**:  
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

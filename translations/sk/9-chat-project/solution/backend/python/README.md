@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:49:34+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-24T21:34:32+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "sk"
 }
@@ -21,14 +21,22 @@ source ./venv/bin/activate
 ## Inštalácia závislostí
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## Spustenie API
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## Testovanie API
+
+Navštívte interaktívnu dokumentáciu API na: `http://localhost:5000/docs`
 
 ## Spustenie frontend-u
 
@@ -50,5 +58,5 @@ Pozrite si [Nastavenie PAT](https://docs.github.com/en/authentication/keeping-yo
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

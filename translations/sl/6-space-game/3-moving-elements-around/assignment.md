@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ccfcd8c2932761359fbaff3d6b01ace4",
-  "translation_date": "2025-08-27T22:27:19+00:00",
+  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
+  "translation_date": "2025-10-25T00:41:59+00:00",
   "source_file": "6-space-game/3-moving-elements-around/assignment.md",
   "language_code": "sl"
 }
@@ -11,15 +11,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Navodila
 
-Preglejte svojo trenutno datoteko /app.js v mapi igre in poiščite načine, kako jo komentirati in urediti. Koda se lahko zelo hitro zaplete, zato je zdaj dobra priložnost, da dodate komentarje in zagotovite berljivo kodo, ki jo boste lahko uporabili kasneje.
+Čista, dobro dokumentirana koda je ključna za vzdrževanje in deljenje vaših projektov. V tej nalogi boste vadili eno najpomembnejših navad profesionalnih razvijalcev: pisanje jasnih, koristnih komentarjev, ki pojasnjujejo namen in funkcionalnost vaše kode.
 
-## Merila
+Preglejte svojo trenutno datoteko `app.js` v mapi igre in poiščite načine, kako jo komentirati in urediti. Koda se lahko zelo hitro zaplete, zato je zdaj dobra priložnost, da dodate komentarje in zagotovite, da je vaša koda berljiva, da jo boste lahko uporabili kasneje.
 
-| Merila   | Odlično                                                           | Zadostno                             | Potrebno izboljšanje                                           |
-| -------- | ----------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------- |
-|          | Koda v `app.js` je popolnoma komentirana in organizirana v logične bloke | Koda v `app.js` je ustrezno komentirana | Koda v `app.js` je nekoliko neorganizirana in ji manjkajo dobri komentarji |
+**Vaša naloga vključuje:**
+- **Dodajte komentarje**, ki pojasnjujejo, kaj počne vsak večji del kode
+- **Dokumentirajte funkcije** z jasnimi opisi njihovega namena in parametrov
+- **Organizirajte kodo** v logične bloke z naslovi odsekov
+- **Odstranite** morebitno neuporabljeno ali odvečno kodo
+- **Uporabljajte dosledne** poimenovalne konvencije za spremenljivke in funkcije
+
+## Merila ocenjevanja
+
+| Merilo | Odlično | Zadostno | Potrebno izboljšanje |
+| ------ | ------- | -------- | -------------------- |
+| **Dokumentacija kode** | Koda v `app.js` je v celoti komentirana z jasnimi, koristnimi pojasnili za vse večje odseke in funkcije | Koda v `app.js` je ustrezno komentirana z osnovnimi pojasnili za večino odsekov | Koda v `app.js` ima minimalne komentarje in ji manjkajo jasna pojasnila |
+| **Organizacija kode** | Koda je organizirana v logične bloke z jasnimi naslovi odsekov in dosledno strukturo | Koda je delno organizirana z osnovnim združevanjem povezanih funkcionalnosti | Koda je nekoliko neorganizirana in težko sledljiva |
+| **Kakovost kode** | Vse spremenljivke in funkcije uporabljajo opisna imena, ni neuporabljene kode, sledi doslednim konvencijam | Večina kode sledi dobrim praksam poimenovanja z minimalno neuporabljeno kodo | Imena spremenljivk so nejasna, vsebuje neuporabljeno kodo, nedosleden slog |
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne odgovarjamo za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

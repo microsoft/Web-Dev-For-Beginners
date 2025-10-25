@@ -1,21 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "056641280211e52fd0adb81b6058ec55",
-  "translation_date": "2025-08-29T11:32:14+00:00",
+  "original_hash": "84053695dca714e16ed064366503ebd5",
+  "translation_date": "2025-10-24T22:16:40+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "ro"
 }
 -->
 # Construiește un Joc Spațial Partea 2: Desenează Eroul și Monștrii pe Canvas
 
-## Chestionar Pre-Lecție
+API-ul Canvas este una dintre cele mai puternice funcționalități ale dezvoltării web pentru crearea graficelor dinamice și interactive direct în browserul tău. În această lecție, vom transforma acel element HTML `<canvas>` gol într-o lume de joc plină de eroi și monștri. Gândește-te la canvas ca la o tablă digitală de artă unde codul devine vizual.
 
-[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/31)
+Ne bazăm pe ceea ce ai învățat în lecția anterioară, iar acum vom aprofunda aspectele vizuale. Vei învăța cum să încarci și să afișezi sprite-uri de joc, să poziționezi elementele cu precizie și să creezi fundația vizuală pentru jocul tău spațial. Acest lucru face trecerea de la paginile web statice la experiențe dinamice și interactive.
+
+Până la sfârșitul acestei lecții, vei avea o scenă completă de joc cu nava eroului poziționată corect și formațiuni de inamici pregătite pentru luptă. Vei înțelege cum jocurile moderne redau grafica în browsere și vei dobândi abilități pentru a crea propriile experiențe vizuale interactive. Hai să explorăm grafica pe canvas și să aducem jocul tău spațial la viață!
+
+## Test înainte de lecție
+
+[Test înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas-ul
 
-Canvas-ul este un element HTML care, în mod implicit, nu are conținut; este o pânză goală. Trebuie să adaugi conținut desenând pe ea.
+Deci, ce este exact acest element `<canvas>`? Este soluția HTML5 pentru crearea graficelor și animațiilor dinamice în browserele web. Spre deosebire de imaginile sau videoclipurile obișnuite care sunt statice, canvas-ul îți oferă control la nivel de pixel asupra a tot ceea ce apare pe ecran. Acest lucru îl face perfect pentru jocuri, vizualizări de date și artă interactivă. Gândește-te la el ca la o suprafață de desen programabilă, unde JavaScript devine pensula ta.
+
+În mod implicit, un element canvas arată ca un dreptunghi gol și transparent pe pagina ta. Dar aici se află potențialul! Puterea sa reală apare atunci când folosești JavaScript pentru a desena forme, a încărca imagini, a crea animații și a face lucrurile să răspundă la interacțiunile utilizatorului. Este similar cu modul în care pionierii graficii computerizate de la Bell Labs în anii 1960 trebuiau să programeze fiecare pixel pentru a crea primele animații digitale.
 
 ✅ Citește [mai multe despre API-ul Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) pe MDN.
 
@@ -25,110 +33,150 @@ Iată cum este de obicei declarat, ca parte a corpului paginii:
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
-Mai sus setăm `id`, `width` și `height`.
+**Ce face acest cod:**
+- **Setează** atributul `id` pentru a putea referi acest element canvas specific în JavaScript
+- **Definește** lățimea în pixeli pentru a controla dimensiunea orizontală a canvas-ului
+- **Stabilește** înălțimea în pixeli pentru a determina dimensiunile verticale ale canvas-ului
 
-- `id`: setează acest atribut pentru a putea obține o referință atunci când ai nevoie să interacționezi cu el.
-- `width`: aceasta este lățimea elementului.
-- `height`: aceasta este înălțimea elementului.
+## Desenarea Geometriei Simple
 
-## Desenarea geometriei simple
+Acum că știi ce este elementul canvas, să explorăm cum să desenăm efectiv pe el! Canvas-ul folosește un sistem de coordonate care s-ar putea să-ți fie familiar din orele de matematică, dar există o răsturnare importantă specifică graficii computerizate.
 
-Canvas-ul folosește un sistem de coordonate cartezian pentru a desena lucruri. Astfel, utilizează o axă x și o axă y pentru a exprima unde se află ceva. Locația `0,0` este poziția din colțul stânga sus, iar colțul dreapta jos este ceea ce ai setat ca fiind LĂȚIMEA și ÎNĂLȚIMEA canvas-ului.
+Canvas-ul folosește coordonate carteziene cu o axă x (orizontală) și o axă y (verticală) pentru a poziționa tot ceea ce desenezi. Dar iată diferența cheie: spre deosebire de sistemul de coordonate din matematică, punctul de origine `(0,0)` începe în colțul din stânga sus, valorile x crescând pe măsură ce te deplasezi spre dreapta și valorile y crescând pe măsură ce te deplasezi în jos. Această abordare datează din primele afișaje computerizate, unde fasciculele de electroni scanau de sus în jos, făcând din colțul din stânga sus punctul de pornire natural.
 
-![grila canvas-ului](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.ro.png)  
-> Imagine de pe [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+![grila canvas-ului](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.ro.png)
+> Imagine de la [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Pentru a desena pe elementul canvas, trebuie să urmezi următorii pași:
+Pentru a desena pe elementul canvas, vei urma același proces în trei pași care formează baza tuturor graficelor pe canvas. Odată ce faci acest lucru de câteva ori, devine o a doua natură:
 
-1. **Obține o referință** la elementul Canvas.
-2. **Obține o referință** la elementul Context care se află pe elementul Canvas.
-3. **Efectuează o operațiune de desenare** folosind elementul Context.
+1. **Obține o referință** la elementul Canvas din DOM (la fel ca orice alt element HTML)
+2. **Obține contextul de redare 2D** – acesta oferă toate metodele de desen
+3. **Începe să desenezi!** Folosește metodele încorporate ale contextului pentru a crea grafica
 
-Codul pentru pașii de mai sus arată de obicei astfel:
+Iată cum arată acest lucru în cod:
 
 ```javascript
-// draws a red rectangle
-//1. get the canvas reference
-canvas = document.getElementById("myCanvas");
+// Step 1: Get the canvas element
+const canvas = document.getElementById("myCanvas");
 
-//2. set the context to 2D to draw basic shapes
-ctx = canvas.getContext("2d");
+// Step 2: Get the 2D rendering context
+const ctx = canvas.getContext("2d");
 
-//3. fill it with the color red
+// Step 3: Set fill color and draw a rectangle
 ctx.fillStyle = 'red';
-
-//4. and draw a rectangle with these parameters, setting location and size
-ctx.fillRect(0,0, 200, 200) // x,y,width, height
+ctx.fillRect(0, 0, 200, 200); // x, y, width, height
 ```
+
+**Să descompunem pas cu pas:**
+- **Luăm** elementul canvas folosind ID-ul său și îl stocăm într-o variabilă
+- **Obținem** contextul de redare 2D – acesta este setul nostru de instrumente plin de metode de desen
+- **Spunem** canvas-ului că vrem să umplem lucrurile cu roșu folosind proprietatea `fillStyle`
+- **Desenăm** un dreptunghi începând din colțul din stânga sus (0,0) care are 200 de pixeli lățime și înălțime
 
 ✅ API-ul Canvas se concentrează în principal pe forme 2D, dar poți desena și elemente 3D pe un site web; pentru aceasta, ai putea folosi [API-ul WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Poți desena tot felul de lucruri cu API-ul Canvas, cum ar fi:
+Poți desena o mulțime de lucruri cu API-ul Canvas, cum ar fi:
 
-- **Forme geometrice**: am arătat deja cum să desenezi un dreptunghi, dar poți desena mult mai multe.
-- **Text**: poți desena text cu orice font și culoare dorești.
-- **Imagini**: poți desena o imagine bazată pe un fișier imagine, cum ar fi un .jpg sau .png.
+- **Forme geometrice**, am arătat deja cum să desenezi un dreptunghi, dar există mult mai multe pe care le poți desena.
+- **Text**, poți desena un text cu orice font și culoare dorești.
+- **Imagini**, poți desena o imagine bazată pe un fișier imagine, cum ar fi un .jpg sau .png, de exemplu.
 
-✅ Încearcă! Știi cum să desenezi un dreptunghi, poți desena un cerc pe o pagină? Aruncă o privire la câteva desene interesante realizate cu Canvas pe CodePen. Iată un [exemplu deosebit de impresionant](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Încearcă! Știi cum să desenezi un dreptunghi, poți desena un cerc pe pagină? Aruncă o privire la câteva desene interesante pe Canvas pe CodePen. Iată un [exemplu deosebit de impresionant](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Încarcă și desenează un asset de imagine
+## Încărcarea și Desenarea unui Fisier Imagine
 
-Poți încărca un asset de imagine creând un obiect `Image` și setând proprietatea sa `src`. Apoi, asculți evenimentul `load` pentru a ști când este gata de utilizare. Codul arată astfel:
+Desenarea formelor de bază este utilă pentru început, dar majoritatea jocurilor au nevoie de imagini reale! Sprite-uri, fundaluri și texturi sunt cele care oferă jocurilor atractivitatea vizuală. Încărcarea și afișarea imaginilor pe canvas funcționează diferit față de desenarea formelor geometrice, dar este simplu odată ce înțelegi procesul.
 
-### Încarcă asset-ul
+Trebuie să creezi un obiect `Image`, să încarci fișierul imagine (acest lucru se întâmplă asincron, adică "în fundal") și apoi să îl desenezi pe canvas odată ce este gata. Această abordare asigură că imaginile tale se afișează corect fără a bloca aplicația în timpul încărcării.
+
+### Încărcarea de Bază a Imaginilor
 
 ```javascript
 const img = new Image();
 img.src = 'path/to/my/image.png';
 img.onload = () => {
-  // image loaded and ready to be used
-}
+  // Image loaded and ready to be used
+  console.log('Image loaded successfully!');
+};
 ```
 
-### Model pentru încărcarea asset-ului
+**Ce se întâmplă în acest cod:**
+- **Creăm** un obiect nou de tip Image pentru a stoca sprite-ul sau textura
+- **Spunem** ce fișier imagine să încarce prin setarea sursei
+- **Ascultăm** evenimentul de încărcare pentru a ști exact când imaginea este gata de utilizare
 
-Se recomandă să înfășori codul de mai sus într-o construcție ca aceasta, astfel încât să fie mai ușor de utilizat și să încerci să îl manipulezi doar când este complet încărcat:
+### O Modalitate Mai Bună de a Încărca Imagini
+
+Iată o modalitate mai robustă de a gestiona încărcarea imaginilor pe care dezvoltatorii profesioniști o folosesc frecvent. Vom încorpora logica de încărcare a imaginilor într-o funcție bazată pe Promises – această abordare, popularizată odată cu standardizarea Promises în JavaScript ES6, face codul mai organizat și gestionează erorile cu grație:
 
 ```javascript
 function loadAsset(path) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = path;
     img.onload = () => {
-      // image loaded and ready to be used
       resolve(img);
-    }
-  })
+    };
+    img.onerror = () => {
+      reject(new Error(`Failed to load image: ${path}`));
+    };
+  });
 }
 
-// use like so
-
-async function run() {
-  const heroImg = await loadAsset('hero.png')
-  const monsterImg = await loadAsset('monster.png')
+// Modern usage with async/await
+async function initializeGame() {
+  try {
+    const heroImg = await loadAsset('hero.png');
+    const monsterImg = await loadAsset('monster.png');
+    // Images are now ready to use
+  } catch (error) {
+    console.error('Failed to load game assets:', error);
+  }
 }
-
 ```
 
-Pentru a desena asset-uri de joc pe ecran, codul tău ar arăta astfel:
+**Ce am făcut aici:**
+- **Am încorporat** toată logica de încărcare a imaginilor într-un Promise pentru a o gestiona mai bine
+- **Am adăugat** gestionarea erorilor care ne spune efectiv când ceva nu merge bine
+- **Am folosit** sintaxa modernă async/await pentru că este mult mai ușor de citit
+- **Am inclus** blocuri try/catch pentru a gestiona cu grație orice probleme de încărcare
+
+Odată ce imaginile tale sunt încărcate, desenarea lor pe canvas este de fapt destul de simplă:
 
 ```javascript
-async function run() {
-  const heroImg = await loadAsset('hero.png')
-  const monsterImg = await loadAsset('monster.png')
+async function renderGameScreen() {
+  try {
+    // Load game assets
+    const heroImg = await loadAsset('hero.png');
+    const monsterImg = await loadAsset('monster.png');
 
-  canvas = document.getElementById("myCanvas");
-  ctx = canvas.getContext("2d");
-  ctx.drawImage(heroImg, canvas.width/2,canvas.height/2);
-  ctx.drawImage(monsterImg, 0,0);
+    // Get canvas and context
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw images to specific positions
+    ctx.drawImage(heroImg, canvas.width / 2, canvas.height / 2);
+    ctx.drawImage(monsterImg, 0, 0);
+  } catch (error) {
+    console.error('Failed to render game screen:', error);
+  }
 }
 ```
 
-## Acum este timpul să începi să construiești jocul tău
+**Să analizăm pas cu pas:**
+- **Încărcăm** atât imaginile eroului, cât și ale monstrului în fundal folosind await
+- **Luăm** elementul canvas și obținem contextul de redare 2D de care avem nevoie
+- **Poziționăm** imaginea eroului chiar în centru folosind câteva calcule rapide de coordonate
+- **Plasăm** imaginea monstrului în colțul din stânga sus pentru a începe formațiunea inamică
+- **Prindem** orice erori care ar putea apărea în timpul încărcării sau redării
 
-### Ce să construiești
+## Acum Este Timpul să Începi Construirea Jocului Tău
 
-Vei construi o pagină web cu un element Canvas. Aceasta ar trebui să afișeze un ecran negru `1024*768`. Ți-am oferit două imagini:
+Acum vom pune totul împreună pentru a crea fundația vizuală a jocului tău spațial. Ai o înțelegere solidă a fundamentelor canvas-ului și a tehnicilor de încărcare a imaginilor, așa că această secțiune practică te va ghida prin construirea unui ecran complet de joc cu sprite-uri poziționate corect.
+
+### Ce să Construiești
+
+Vei construi o pagină web cu un element Canvas. Ar trebui să afișeze un ecran negru de `1024*768`. Ți-am oferit două imagini:
 
 - Nava eroului
 
@@ -138,63 +186,90 @@ Vei construi o pagină web cu un element Canvas. Aceasta ar trebui să afișeze 
 
    ![Nava monstrului](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.ro.png)
 
-### Pași recomandați pentru a începe dezvoltarea
+### Pași Recomandați pentru Începerea Dezvoltării
 
-Localizează fișierele care au fost create pentru tine în subfolderul `your-work`. Acesta ar trebui să conțină următoarele:
+Localizează fișierele de început care au fost create pentru tine în subfolderul `your-work`. Structura proiectului tău ar trebui să conțină:
 
 ```bash
--| assets
-  -| enemyShip.png
-  -| player.png
--| index.html
--| app.js
--| package.json
+your-work/
+├── assets/
+│   ├── enemyShip.png
+│   └── player.png
+├── index.html
+├── app.js
+└── package.json
 ```
 
-Deschide copia acestui folder în Visual Studio Code. Trebuie să ai un mediu de dezvoltare local configurat, de preferință cu Visual Studio Code, NPM și Node instalate. Dacă nu ai `npm` configurat pe computerul tău, [iată cum să faci asta](https://www.npmjs.com/get-npm).
+**Ce ai la dispoziție:**
+- **Sprite-urile jocului** se află în folderul `assets/` pentru a păstra totul organizat
+- **Fișierul principal HTML** configurează elementul canvas și pregătește totul
+- **Un fișier JavaScript** unde vei scrie toată magia de redare a jocului
+- **Un package.json** care configurează un server de dezvoltare pentru a putea testa local
 
-Începe proiectul navigând la folderul `your_work`:
+Deschide acest folder în Visual Studio Code pentru a începe dezvoltarea. Vei avea nevoie de un mediu de dezvoltare local cu Visual Studio Code, NPM și Node.js instalate. Dacă nu ai `npm` configurat pe computerul tău, [iată cum să-l instalezi](https://www.npmjs.com/get-npm).
+
+Pornește serverul de dezvoltare navigând la folderul `your-work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Comanda de mai sus va porni un server HTTP la adresa `http://localhost:5000`. Deschide un browser și introdu această adresă. Este o pagină goală acum, dar asta se va schimba.
+**Această comandă face câteva lucruri destul de interesante:**
+- **Pornește** un server local la `http://localhost:5000` pentru a putea testa jocul
+- **Servește** toate fișierele corect pentru ca browserul să le poată încărca
+- **Monitorizează** fișierele pentru modificări, astfel încât să poți dezvolta fără probleme
+- **Îți oferă** un mediu de dezvoltare profesional pentru a testa totul
 
-> Notă: pentru a vedea modificările pe ecran, reîmprospătează browserul.
+> 💡 **Notă**: Browserul tău va afișa inițial o pagină goală – este normal! Pe măsură ce adaugi cod, reîmprospătează browserul pentru a vedea modificările. Această abordare iterativă de dezvoltare este similară cu modul în care NASA a construit computerul de ghidare Apollo – testând fiecare componentă înainte de a o integra în sistemul mai mare.
 
 ### Adaugă cod
 
-Adaugă codul necesar în `your-work/app.js` pentru a rezolva următoarele:
+Adaugă codul necesar în `your-work/app.js` pentru a finaliza următoarele sarcini:
 
-1. **Desenează** un canvas cu fundal negru  
-   > sfat: adaugă două linii sub TODO-ul corespunzător în `/app.js`, setând elementul `ctx` să fie negru, iar coordonatele de sus/stânga să fie 0,0, iar înălțimea și lățimea să fie egale cu cele ale canvas-ului.
-2. **Încarcă** texturi  
-   > sfat: adaugă imaginile player și enemy folosind `await loadTexture` și trecând calea imaginii. Nu le vei vedea încă pe ecran!
-3. **Desenează** eroul în centrul ecranului, în jumătatea de jos  
-   > sfat: folosește API-ul `drawImage` pentru a desena heroImg pe ecran, setând `canvas.width / 2 - 45` și `canvas.height - canvas.height / 4)`.
-4. **Desenează** 5*5 monștri  
-   > sfat: Acum poți decomenta codul pentru a desena inamicii pe ecran. Apoi, mergi la funcția `createEnemies` și construiește-o.
+1. **Desenează un canvas cu fundal negru**
+   > 💡 **Cum să faci**: Găsește TODO în `/app.js` și adaugă doar două linii. Setează `ctx.fillStyle` pe negru, apoi folosește `ctx.fillRect()` începând de la (0,0) cu dimensiunile canvas-ului. Simplu!
 
-   Mai întâi, setează câteva constante:
+2. **Încarcă texturile jocului**
+   > 💡 **Cum să faci**: Folosește `await loadAsset()` pentru a încărca imaginile jucătorului și ale inamicilor. Stochează-le în variabile pentru a le putea folosi mai târziu. Amintește-ți – nu vor apărea până nu le desenezi efectiv!
 
-    ```javascript
-    const MONSTER_TOTAL = 5;
-    const MONSTER_WIDTH = MONSTER_TOTAL * 98;
-    const START_X = (canvas.width - MONSTER_WIDTH) / 2;
-    const STOP_X = START_X + MONSTER_WIDTH;
-    ```
+3. **Desenează nava eroului în poziția de jos-centru**
+   > 💡 **Cum să faci**: Folosește `ctx.drawImage()` pentru a poziționa eroul. Pentru coordonata x, încearcă `canvas.width / 2 - 45` pentru a-l centra, iar pentru coordonata y folosește `canvas.height - canvas.height / 4` pentru a-l plasa în zona de jos.
 
-   apoi, creează un loop pentru a desena matricea de monștri pe ecran:
+4. **Desenează o formațiune de 5×5 nave inamice**
+   > 💡 **Cum să faci**: Găsește funcția `createEnemies` și configurează un buclă imbricată. Va trebui să faci câteva calcule pentru spațiere și poziționare, dar nu-ți face griji – îți voi arăta exact cum!
 
-    ```javascript
-    for (let x = START_X; x < STOP_X; x += 98) {
-        for (let y = 0; y < 50 * 5; y += 50) {
-          ctx.drawImage(enemyImg, x, y);
-        }
-      }
-    ```
+Mai întâi, stabilește constantele pentru o dispunere corectă a formațiunii inamice:
+
+```javascript
+const ENEMY_TOTAL = 5;
+const ENEMY_SPACING = 98;
+const FORMATION_WIDTH = ENEMY_TOTAL * ENEMY_SPACING;
+const START_X = (canvas.width - FORMATION_WIDTH) / 2;
+const STOP_X = START_X + FORMATION_WIDTH;
+```
+
+**Să descompunem ce fac aceste constante:**
+- **Setăm** 5 inamici pe rând și coloană (o grilă frumoasă de 5×5)
+- **Definim** cât spațiu să punem între inamici pentru a nu părea înghesuiți
+- **Calculăm** cât de lată va fi întreaga formațiune
+- **Determinăm** unde să începem și să terminăm pentru ca formațiunea să fie centrată
+
+Apoi, creează bucle imbricate pentru a desena formațiunea inamică:
+
+```javascript
+for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
+  for (let y = 0; y < 50 * 5; y += 50) {
+    ctx.drawImage(enemyImg, x, y);
+  }
+}
+```
+
+**Ce face această buclă imbricată:**
+- Bucla exterioară **se deplasează** de la stânga la dreapta pe formațiunea noastră
+- Bucla interioară **merge** de sus în jos pentru a crea rânduri ordonate
+- **Desenăm** fiecare sprite inamic la coordonatele exacte x,y pe care le-am calculat
+- Totul rămâne **uniform spațiat** pentru a arăta profesional și organizat
 
 ## Rezultat
 
@@ -204,27 +279,37 @@ Rezultatul final ar trebui să arate astfel:
 
 ## Soluție
 
-Te rugăm să încerci să rezolvi singur mai întâi, dar dacă te blochezi, aruncă o privire la o [soluție](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Te rog să încerci să rezolvi singur mai întâi, dar dacă te blochezi, aruncă o privire la o [soluție](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)
 
 ---
+
+## Provocarea GitHub Copilot Agent 🚀
+
+Folosește modul Agent pentru a finaliza următoarea provocare:
+
+**Descriere:** Îmbunătățește canvas-ul jocului spațial adăugând efecte vizuale și elemente interactive folosind tehnicile API-ului Canvas pe care le-ai învățat.
+
+**Prompt:** Creează un fișier nou numit `enhanced-canvas.html` cu un canvas care afișează stele animate pe fundal, o bară de sănătate pulsantă pentru nava eroului și nave inamice care se mișcă încet în jos. Include cod JavaScript care desenează stele sclipitoare folosind poziții și opacități aleatorii, implementează o bară de sănătate care își schimbă culoarea în funcție de nivelul de sănătate (verde > galben > roșu) și animă navele inamice să se miște pe ecran cu viteze diferite.
+
+Află mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
 
 ## 🚀 Provocare
 
 Ai învățat despre desenarea cu API-ul Canvas axat pe 2D; aruncă o privire la [API-ul WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API) și încearcă să desenezi un obiect 3D.
 
-## Chestionar Post-Lecție
+## Test după lecție
 
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/32)
+[Test după lecție](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Recapitulare și Studiu Individual
+## Recapitulare & Studiu Individual
 
 Află mai multe despre API-ul Canvas [citind despre el](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
 ## Temă
 
-[Experimentează cu API-ul Canvas](assignment.md)
+[Joacă-te cu API-ul Canvas](assignment.md)
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

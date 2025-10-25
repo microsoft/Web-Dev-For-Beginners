@@ -1,289 +1,608 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
-  "translation_date": "2025-08-29T10:20:58+00:00",
+  "original_hash": "b24f28fc46dd473aa9080f174182adde",
+  "translation_date": "2025-10-24T20:25:07+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "hu"
 }
 -->
 # Banki Alkalmazás Készítése 2. rész: Bejelentkezési és Regisztrációs Űrlap Készítése
 
-## Előadás Előtti Kvíz
+## Előzetes Kvíz
 
-[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/43)
+[Előzetes kvíz](https://ff-quizzes.netlify.app/web/quiz/43)
 
-### Bevezetés
+Töltöttél már ki online űrlapot, amely elutasította az e-mail formátumodat? Vagy elvesztetted az összes adatodat, miután a "Küldés" gombra kattintottál? Mindannyian találkoztunk már ezekkel a bosszantó helyzetekkel.
 
-Szinte minden modern webalkalmazásban létrehozhatsz egy fiókot, hogy saját privát tered legyen. Mivel több felhasználó is hozzáférhet egy webalkalmazáshoz egyszerre, szükség van egy mechanizmusra, amely külön tárolja minden felhasználó személyes adatait, és kiválasztja, hogy mely információkat jelenítse meg. Nem foglalkozunk azzal, hogyan kezeljük [a felhasználói identitást biztonságosan](https://en.wikipedia.org/wiki/Authentication), mivel ez önmagában egy kiterjedt téma, de gondoskodunk arról, hogy minden felhasználó létrehozhasson egy (vagy több) bankszámlát az alkalmazásunkban.
+Az űrlapok jelentik a hidat a felhasználók és az alkalmazásod funkcionalitása között. Ahogyan a légi irányítók gondosan követik a protokollokat, hogy a repülőgépeket biztonságosan célba juttassák, a jól megtervezett űrlapok is egyértelmű visszajelzést adnak és megelőzik a költséges hibákat. A rosszul megtervezett űrlapok viszont gyorsan elriaszthatják a felhasználókat, mint egy félreértés egy forgalmas repülőtéren.
 
-Ebben a részben HTML űrlapokat fogunk használni, hogy bejelentkezési és regisztrációs funkciót adjunk a webalkalmazásunkhoz. Megnézzük, hogyan küldhetjük el az adatokat programozottan egy szerver API-nak, és végül hogyan határozhatunk meg alapvető érvényességi szabályokat a felhasználói bemenetekhez.
+Ebben a leckében az állóképes banki alkalmazásodat interaktív alkalmazássá alakítjuk. Megtanulod, hogyan készíts olyan űrlapokat, amelyek érvényesítik a felhasználói adatokat, kommunikálnak a szerverekkel, és hasznos visszajelzéseket adnak. Gondolj erre úgy, mint egy vezérlőfelület megépítésére, amely lehetővé teszi a felhasználók számára, hogy eligazodjanak az alkalmazás funkciói között.
 
-### Előfeltétel
+A végére egy teljes bejelentkezési és regisztrációs rendszert fogsz létrehozni, amely érvényesítéssel segíti a felhasználókat a sikeres használatban, a frusztráció helyett.
 
-El kell végezned a webalkalmazás [HTML sablonok és útvonalak](../1-template-route/README.md) részét ehhez a leckéhez. Továbbá telepítened kell a [Node.js](https://nodejs.org) programot, és [helyben futtatnod kell a szerver API-t](../api/README.md), hogy adatokat küldhess a fiókok létrehozásához.
+## Előfeltételek
 
-**Fontos megjegyzés**
-Két terminált kell futtatnod egyszerre, az alábbiak szerint:
-1. A fő banki alkalmazás, amelyet a [HTML sablonok és útvonalak](../1-template-route/README.md) leckében készítettünk.
-2. A [Banki Alkalmazás szerver API](../api/README.md), amelyet az előbb állítottunk be.
+Mielőtt elkezdenénk az űrlapok készítését, győződjünk meg róla, hogy minden megfelelően be van állítva. Ez a lecke ott folytatódik, ahol az előző véget ért, így ha előreugrottál, érdemes visszatérni és először az alapokat működésbe hozni.
 
-Mindkét szervert futtatnod kell, hogy folytathasd a lecke további részét. Ezek különböző portokon hallgatnak (port `3000` és port `5000`), így minden rendben kell működjön.
+### Szükséges beállítások
 
-Ellenőrizheted, hogy a szerver megfelelően fut-e, ha végrehajtod ezt a parancsot egy terminálban:
+| Komponens | Állapot | Leírás |
+|-----------|---------|--------|
+| [HTML sablonok](../1-template-route/README.md) | ✅ Szükséges | Az alap banki alkalmazás szerkezete |
+| [Node.js](https://nodejs.org) | ✅ Szükséges | JavaScript futtatókörnyezet a szerverhez |
+| [Bank API szerver](../api/README.md) | ✅ Szükséges | Háttérszolgáltatás az adatok tárolásához |
 
-```sh
+> 💡 **Fejlesztési tipp**: Két különálló szervert fogsz egyszerre futtatni – egyet a front-end banki alkalmazásodhoz, és egy másikat a háttér API-hoz. Ez a beállítás tükrözi a valós fejlesztési környezetet, ahol a front-end és a back-end szolgáltatások egymástól függetlenül működnek.
+
+### Szerver Konfiguráció
+
+**A fejlesztési környezeted tartalmazni fogja:**
+- **Front-end szerver**: A banki alkalmazás kiszolgálására (általában `3000` porton)
+- **Háttér API szerver**: Az adatok tárolására és lekérésére (port `5000`)
+- **Mindkét szerver** egyszerre futhat ütközés nélkül
+
+**API kapcsolat tesztelése:**
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+**Ha látod az API verzió válaszát, készen állsz a folytatásra!**
 
 ---
 
-## Űrlap és vezérlők
+## HTML Űrlapok és Vezérlők Megértése
 
-A `<form>` elem egy HTML dokumentum azon szakaszát foglalja magában, ahol a felhasználó interaktív vezérlőkkel adatokat adhat meg és küldhet el. Számos felhasználói felület (UI) vezérlő használható egy űrlapon belül, a leggyakoribbak a `<input>` és `<button>` elemek.
+A HTML űrlapok segítségével kommunikálnak a felhasználók a webalkalmazásoddal. Gondolj rájuk úgy, mint a 19. századi távíró rendszerre, amely távoli helyeket kötött össze – ezek jelentik a kommunikációs protokollt a felhasználói szándék és az alkalmazás válasza között. Ha átgondoltan tervezzük meg őket, képesek hibákat elkapni, irányítani az adatbevitel formátumát, és hasznos javaslatokat adni.
 
-Számos különböző [típus](https://developer.mozilla.org/docs/Web/HTML/Element/input) létezik a `<input>` elemekhez. Például, ha szeretnél egy mezőt létrehozni, ahol a felhasználó megadhatja a felhasználónevét, használhatod:
+A modern űrlapok sokkal kifinomultabbak, mint az alapvető szövegbeviteli mezők. A HTML5 speciális bemeneti típusokat vezetett be, amelyek automatikusan kezelik az e-mail érvényesítést, a számformázást és a dátumválasztást. Ezek a fejlesztések mind a hozzáférhetőséget, mind a mobil felhasználói élményt javítják.
+
+### Alapvető Űrlapelemek
+
+**Az űrlapok alapvető építőelemei:**
 
 ```html
-<input id="username" name="username" type="text">
+<!-- Basic form structure -->
+<form id="userForm" method="POST">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" required>
+  
+  <button type="submit">Submit</button>
+</form>
 ```
 
-A `name` attribútum lesz a tulajdonság neve, amikor az űrlap adatai elküldésre kerülnek. Az `id` attribútumot pedig arra használjuk, hogy egy `<label>` elemet társítsunk az űrlap vezérlőjéhez.
+**Ez a kód a következőket teszi:**
+- **Létrehoz** egy egyedi azonosítóval ellátott űrlaptartót
+- **Meghatározza** az adatok beküldéséhez használt HTTP metódust
+- **Hozzárendeli** a címkéket a bemenetekhez a hozzáférhetőség érdekében
+- **Meghatároz** egy küldés gombot az űrlap feldolgozásához
 
-> Nézd meg a [`<input>` típusok](https://developer.mozilla.org/docs/Web/HTML/Element/input) teljes listáját és [más űrlap vezérlőket](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls), hogy képet kapj az összes natív UI elemről, amelyet használhatsz az UI építésekor.
+### Modern Bemeneti Típusok és Attribútumok
 
-✅ Fontos megjegyezni, hogy a `<input>` egy [üres elem](https://developer.mozilla.org/docs/Glossary/Empty_element), amelyhez *nem* kell záró címkét hozzáadni. Használhatod azonban az önzáró `<input/>` jelölést, de ez nem kötelező.
+| Bemeneti típus | Cél | Példa használat |
+|----------------|-----|-----------------|
+| `text` | Általános szövegbevitel | `<input type="text" name="username">` |
+| `email` | E-mail érvényesítés | `<input type="email" name="email">` |
+| `password` | Rejtett szövegbevitel | `<input type="password" name="password">` |
+| `number` | Számbevitel | `<input type="number" name="balance" min="0">` |
+| `tel` | Telefonszámok | `<input type="tel" name="phone">` |
 
-A `<button>` elem egy űrlapon belül kicsit különleges. Ha nem adsz meg `type` attribútumot, akkor automatikusan elküldi az űrlap adatait a szervernek, amikor megnyomják. Az alábbiakban láthatók a lehetséges `type` értékek:
+> 💡 **Modern HTML5 Előny**: A specifikus bemeneti típusok használata automatikus érvényesítést, megfelelő mobil billentyűzeteket és jobb hozzáférhetőségi támogatást biztosít további JavaScript nélkül!
 
-- `submit`: Alapértelmezett egy `<form>`-on belül, a gomb elindítja az űrlap elküldési műveletét.
-- `reset`: A gomb visszaállítja az összes űrlap vezérlőt az eredeti értékére.
-- `button`: Nem rendel alapértelmezett viselkedést a gombhoz, amikor megnyomják. Egyedi műveleteket rendelhetsz hozzá JavaScript segítségével.
+### Gombtípusok és Viselkedésük
 
-### Feladat
+```html
+<!-- Different button behaviors -->
+<button type="submit">Save Data</button>     <!-- Submits the form -->
+<button type="reset">Clear Form</button>    <!-- Resets all fields -->
+<button type="button">Custom Action</button> <!-- No default behavior -->
+```
 
-Kezdjük azzal, hogy hozzáadunk egy űrlapot a `login` sablonhoz. Szükségünk lesz egy *felhasználónév* mezőre és egy *Bejelentkezés* gombra.
+**Mit csinál minden gombtípus:**
+- **Küldés gombok**: Elindítják az űrlap beküldését, és elküldik az adatokat a megadott végpontra
+- **Visszaállítás gombok**: Visszaállítják az összes űrlapmezőt az eredeti állapotukba
+- **Általános gombok**: Nem rendelkeznek alapértelmezett viselkedéssel, egyedi JavaScript szükséges a funkcionalitáshoz
+
+> ⚠️ **Fontos Megjegyzés**: Az `<input>` elem önzáró, és nem igényel záró tagot. A modern legjobb gyakorlat az, hogy `<input>`-ot írunk záró perjel nélkül.
+
+### Bejelentkezési Űrlap Készítése
+
+Most készítsünk egy gyakorlati bejelentkezési űrlapot, amely bemutatja a modern HTML űrlapgyakorlatokat. Kezdjük egy alapvető szerkezettel, és fokozatosan bővítsük ki hozzáférhetőségi funkciókkal és érvényesítéssel.
 
 ```html
 <template id="login">
   <h1>Bank App</h1>
   <section>
     <h2>Login</h2>
-    <form id="loginForm">
-      <label for="username">Username</label>
-      <input id="username" name="user" type="text">
-      <button>Login</button>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="user" type="text" required 
+               autocomplete="username" placeholder="Enter your username">
+      </div>
+      <button type="submit">Login</button>
     </form>
   </section>
 </template>
 ```
 
-Ha közelebbről megnézed, észreveheted, hogy itt egy `<label>` elemet is hozzáadtunk. A `<label>` elemeket arra használjuk, hogy nevet adjunk a UI vezérlőknek, például a felhasználónév mezőnknek. A címkék fontosak az űrlapok olvashatósága szempontjából, de további előnyökkel is járnak:
+**Ami itt történik:**
+- **Strukturálja** az űrlapot szemantikus HTML5 elemekkel
+- **Csoportosítja** a kapcsolódó elemeket jelentőségteljes osztályokkal ellátott `div` konténerekben
+- **Hozzárendeli** a címkéket a bemenetekhez a `for` és `id` attribútumok használatával
+- **Tartalmazza** a modern attribútumokat, mint az `autocomplete` és a `placeholder` a jobb felhasználói élmény érdekében
+- **Hozzáadja** a `novalidate` attribútumot, hogy az érvényesítést JavaScript kezelje a böngésző alapértelmezett helyett
 
-- Egy címke társítása egy űrlap vezérlőhöz segíti a segítő technológiákat használó felhasználókat (például képernyőolvasót), hogy megértsék, milyen adatokat várnak tőlük.
-- A címkére kattintva közvetlenül fókuszba helyezheted a társított bemenetet, ami megkönnyíti az elérést érintőképernyős eszközökön.
+### A Megfelelő Címkék Fontossága
 
-> [Hozzáférhetőség](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) a weben egy nagyon fontos téma, amelyet gyakran figyelmen kívül hagynak. A [szemantikus HTML elemek](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) használatával nem nehéz hozzáférhető tartalmat létrehozni, ha megfelelően használod őket. [Olvass többet a hozzáférhetőségről](https://developer.mozilla.org/docs/Web/Accessibility), hogy elkerüld a gyakori hibákat, és felelősségteljes fejlesztővé válj.
+**Miért fontosak a címkék a modern webfejlesztésben:**
 
-Most hozzáadunk egy második űrlapot a regisztrációhoz, közvetlenül az előző alá:
+```mermaid
+graph TD
+    A[Label Element] --> B[Screen Reader Support]
+    A --> C[Click Target Expansion]
+    A --> D[Form Validation]
+    A --> E[SEO Benefits]
+    
+    B --> F[Accessible to all users]
+    C --> G[Better mobile experience]
+    D --> H[Clear error messaging]
+    E --> I[Better search ranking]
+```
+
+**Mit érnek el a megfelelő címkék:**
+- **Lehetővé teszik**, hogy a képernyőolvasók egyértelműen bejelentsék az űrlapmezőket
+- **Kibővítik** a kattintható területet (a címkére kattintva a bemeneti mezőre fókuszál)
+- **Javítják** a mobil használhatóságot nagyobb érintési célterületekkel
+- **Támogatják** az űrlap érvényesítést értelmes hibaüzenetekkel
+- **Növelik** a SEO-t az űrlapelemek szemantikai jelentésének biztosításával
+
+> 🎯 **Hozzáférhetőségi Cél**: Minden űrlapmezőhöz tartoznia kell egy címkének. Ez az egyszerű gyakorlat mindenki számára használhatóvá teszi az űrlapokat, beleértve a fogyatékkal élő felhasználókat is, és javítja az élményt mindenki számára.
+
+### Regisztrációs Űrlap Létrehozása
+
+A regisztrációs űrlap részletesebb információkat igényel egy teljes felhasználói fiók létrehozásához. Készítsük el modern HTML5 funkciókkal és továbbfejlesztett hozzáférhetőséggel.
 
 ```html
 <hr/>
 <h2>Register</h2>
-<form id="registerForm">
-  <label for="user">Username</label>
-  <input id="user" name="user" type="text">
-  <label for="currency">Currency</label>
-  <input id="currency" name="currency" type="text" value="$">
-  <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <label for="balance">Current balance</label>
-  <input id="balance" name="balance" type="number" value="0">
-  <button>Register</button>
+<form id="registerForm" novalidate>
+  <div class="form-group">
+    <label for="user">Username</label>
+    <input id="user" name="user" type="text" required 
+           autocomplete="username" placeholder="Choose a username">
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency</label>
+    <input id="currency" name="currency" type="text" value="$" 
+           required maxlength="3" placeholder="USD, EUR, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" placeholder="Personal savings, checking, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" value="0" 
+           min="0" step="0.01" placeholder="0.00">
+  </div>
+  
+  <button type="submit">Create Account</button>
 </form>
 ```
 
-A `value` attribútum segítségével alapértelmezett értéket adhatunk meg egy adott bemenethez.
-Figyeld meg, hogy a `balance` mező `number` típusú. Másképp néz ki, mint a többi bemenet? Próbáld ki, hogyan lehet vele interakcióba lépni.
+**A fentiekben:**
+- **Rendszereztük** az egyes mezőket konténer div-ekbe a jobb stílus és elrendezés érdekében
+- **Hozzáadtuk** a megfelelő `autocomplete` attribútumokat a böngésző automatikus kitöltési támogatásához
+- **Beépítettük** a hasznos helykitöltő szöveget az adatbevitel irányításához
+- **Beállítottuk** az ésszerű alapértelmezéseket a `value` attribútum használatával
+- **Alkalmaztuk** az érvényesítési attribútumokat, mint a `required`, `maxlength` és `min`
+- **Használtuk** a `type="number"` mezőt a balance mezőhöz, amely támogatja a tizedesjegyeket
 
-✅ Tudsz navigálni és interakcióba lépni az űrlapokkal csak billentyűzet segítségével? Hogyan tennéd ezt?
+### Bemeneti Típusok és Viselkedésük Felfedezése
 
-## Adatok elküldése a szervernek
+**A modern bemeneti típusok fejlettebb funkcionalitást biztosítanak:**
 
-Most, hogy van egy működőképes UI, a következő lépés az adatok elküldése a szervernek. Tegyünk egy gyors tesztet a jelenlegi kódunkkal: mi történik, ha rákattintasz a *Bejelentkezés* vagy *Regisztráció* gombra?
+| Funkció | Előny | Példa |
+|---------|-------|-------|
+| `type="number"` | Számgombok mobilon | Egyszerűbb egyenlegbevitel |
+| `step="0.01"` | Tizedes pontosság szabályozása | Lehetővé teszi a centek megadását |
+| `autocomplete` | Böngésző automatikus kitöltés | Gyorsabb űrlapkitöltés |
+| `placeholder` | Kontextuális útmutatók | Segíti a felhasználói elvárásokat |
 
-Észrevetted a változást a böngésződ URL szakaszában?
+> 🎯 **Hozzáférhetőségi Kihívás**: Próbáld meg csak a billentyűzeted segítségével navigálni az űrlapokon! Használd a `Tab`-ot a mezők közötti mozgáshoz, a `Space`-t a jelölőnégyzetek bejelöléséhez, és az `Enter`-t az űrlap beküldéséhez. Ez az élmény segít megérteni, hogyan használják a képernyőolvasót használó felhasználók az űrlapjaidat.
 
-![Képernyőkép a böngésző URL változásáról a Regisztráció gomb megnyomása után](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.hu.png)
+## Az Űrlapbeküldési Módszerek Megértése
 
-Az alapértelmezett művelet egy `<form>` esetében az, hogy az űrlapot elküldi az aktuális szerver URL-re a [GET metódus](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) használatával, közvetlenül az URL-hez csatolva az űrlap adatokat. Ez a módszer azonban néhány korláttal rendelkezik:
+Amikor valaki kitölti az űrlapodat és a küldés gombra kattint, az adatoknak valahová el kell jutniuk – általában egy szerverre, amely elmenti azokat. Ennek többféle módja van, és ha tudod, melyiket használd, elkerülheted a későbbi fejfájást.
 
-- Az elküldött adatok mérete nagyon korlátozott (kb. 2000 karakter)
-- Az adatok közvetlenül láthatók az URL-ben (nem ideális jelszavak esetében)
-- Nem működik fájlok feltöltésével
+Nézzük meg, mi történik valójában, amikor valaki rákattint a küldés gombra.
 
-Ezért megváltoztathatod, hogy a [POST metódust](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) használja, amely az űrlap adatokat az HTTP kérés törzsében küldi el a szervernek, az előző korlátok nélkül.
+### Az Űrlap Alapértelmezett Viselkedése
 
-> Bár a POST a leggyakrabban használt módszer az adatok elküldésére, [bizonyos specifikus helyzetekben](https://www.w3.org/2001/tag/doc/whenToUseGet.html) előnyösebb lehet a GET metódus használata, például keresőmező megvalósításakor.
+Először is, figyeljük meg, mi történik az alapvető űrlapbeküldés során:
 
-### Feladat
+**Teszteld a jelenlegi űrlapjaidat:**
+1. Kattints a *Regisztráció* gombra az űrlapodon
+2. Figyeld meg a böngésződ címsorában bekövetkező változásokat
+3. Vedd észre, hogy az oldal újratöltődik, és az adatok megjelennek az URL-ben
 
-Adj hozzá `action` és `method` tulajdonságokat a regisztrációs űrlaphoz:
+![Képernyőkép a böngésző címsorának változásáról a Regisztráció gombra kattintás után](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.hu.png)
 
-```html
-<form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
+### HTTP Metódusok Összehasonlítása
+
+```mermaid
+graph TD
+    A[Form Submission] --> B{HTTP Method}
+    B -->|GET| C[Data in URL]
+    B -->|POST| D[Data in Request Body]
+    
+    C --> E[Visible in address bar]
+    C --> F[Limited data size]
+    C --> G[Bookmarkable]
+    
+    D --> H[Hidden from URL]
+    D --> I[Large data capacity]
+    D --> J[More secure]
 ```
 
-Most próbálj meg regisztrálni egy új fiókot a neveddel. A *Regisztráció* gomb megnyomása után valami ilyesmit kell látnod:
+**A különbségek megértése:**
 
-![Böngészőablak a localhost:5000/api/accounts címen, amely JSON karakterláncot mutat a felhasználói adatokkal](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.hu.png)
+| Metódus | Használati eset | Adatok helye | Biztonsági szint | Méretkorlát |
+|---------|----------------|--------------|------------------|-------------|
+| `GET` | Keresési lekérdezések, szűrők | URL paraméterek | Alacsony (látható) | ~2000 karakter |
+| `POST` | Felhasználói fiókok, érzékeny adatok | Kérés törzse | Magasabb (rejtett) | Gyakorlatilag nincs korlát |
 
-Ha minden jól megy, a szerver válaszolni fog a kérésedre egy [JSON](https://www.json.org/json-en.html) válasszal, amely tartalmazza a létrehozott fiók adatait.
+**Az alapvető különbségek megértése:**
+- **GET**: Az űrlap adatait URL paraméterként csatolja (keresési műveletekhez megfelelő)
+- **POST**: Az adatokat a kérés törzsébe helyezi (érzékeny információkhoz elengedhetetlen)
+- **GET korlátai**: Méretkorlátok, látható adatok, böngésző történetében megmarad
+- **POST előnyei**: Nagy adatmennyiség, adatvédelem, fájlfeltöltés támogatása
 
-✅ Próbálj meg újra regisztrálni ugyanazzal a névvel. Mi történik?
+> 💡 **Legjobb Gyakorlat**: Használj `GET` metódust keresési űrlapokhoz és szűrőkhöz (adatlekérés), és `POST` metódust felhasználói regisztrációhoz, bejelentkezéshez és adat létrehozásához.
 
-## Adatok elküldése az oldal újratöltése nélkül
+### Az Űrlapbeküldés Konfigurálása
 
-Ahogy valószínűleg észrevetted, van egy kis probléma az általunk használt megközelítéssel: amikor elküldjük az űrlapot, kilépünk az alkalmazásunkból, és a böngésző átirányít a szerver URL-re. Arra törekszünk, hogy elkerüljük az összes oldal újratöltést a webalkalmazásunkban, mivel [Egyoldalas alkalmazást (SPA)](https://en.wikipedia.org/wiki/Single-page_application) készítünk.
-
-Ahhoz, hogy az űrlap adatokat elküldjük a szervernek anélkül, hogy kényszerítenénk az oldal újratöltését, JavaScript kódot kell használnunk. Ahelyett, hogy egy URL-t helyeznénk el a `<form>` elem `action` tulajdonságában, bármilyen JavaScript kódot használhatunk, amelyet a `javascript:` karakterlánc előz meg, hogy egyedi műveletet hajtsunk végre. Ennek használata azt is jelenti, hogy néhány feladatot, amelyeket korábban automatikusan végzett a böngésző, neked kell megvalósítanod:
-
-- Az űrlap adatok lekérése
-- Az űrlap adatok átalakítása és kódolása megfelelő formátumba
-- Az HTTP kérés létrehozása és elküldése a szervernek
-
-### Feladat
-
-Cseréld ki a regisztrációs űrlap `action` tulajdonságát erre:
+Konfiguráljuk a regisztrációs űrlapodat, hogy megfelelően kommunikáljon a háttér API-val a POST metódus használatával:
 
 ```html
-<form id="registerForm" action="javascript:register()">
+<form id="registerForm" action="//localhost:5000/api/accounts" 
+      method="POST" novalidate>
 ```
 
-Nyisd meg az `app.js` fájlt, és adj hozzá egy új `register` nevű függvényt:
+**Ez a konfiguráció a következőket teszi:**
+- **Irányítja** az űrlap beküldését az API végpontra
+- **POST metódust használ** az adatok biztonságos továbbításához
+- **Tartalmazza** a `novalidate` attribútumot, hogy az érvényesítést JavaScript kezelje
 
-```js
-function register() {
-  const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const data = Object.fromEntries(formData);
-  const jsonData = JSON.stringify(data);
+### Az Űrlapbeküldés Tesztelése
+
+**Kövesd ezeket a lépéseket az űrlap teszteléséhez:**
+1. **Töltsd ki** a regisztrációs űrlapot az adataiddal
+2. **Kattints** a "Fiók létrehozása" gombra
+3. **Figyeld meg** a szerver válaszát a böngésződben
+
+![Egy böngészőablak a localhost:5000/api/accounts címen, amely egy JSON karakterláncot mutat a felhasználói adatokkal](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.hu.png)
+
+**Amit látnod kell:**
+- **A böngésző átirányít** az API végpont URL-jére
+- **JSON válasz**, amely tartalmazza az újonnan létrehozott fiók adatait
+- **Szerver megerősítése**, hogy a fiók sikeresen létrejött
+
+> 🧪 **Kísérleti Idő**: Próbálj meg újra regisztrálni ugyanazzal a felhasználónévvel. Milyen választ kapsz? Ez segít megérteni, hogyan kezeli a szerver a duplikált adatokat és a hibás feltételeket.
+
+### JSON Válaszok Megértése
+
+**Amikor a szerver sikeresen feldolgozza az űrlapodat:**
+```json
+{
+  "user": "john_doe",
+  "currency": "$",
+  "description": "Personal savings",
+  "balance": 100,
+  "id": "unique_account_id"
 }
 ```
 
-Itt az űrlap elemet a `getElementById()` segítségével lekérjük, és a [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) segédprogramot használjuk, hogy a vezérlőkből származó értékeket kulcs/érték párok halmazaként kinyerjük. Ezután az adatokat egy szokásos objektummá alakítjuk a [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) segítségével, végül pedig [JSON](https://www.json.org/json-en.html) formátumba sorosítjuk, amelyet gyakran használnak az adatok cseréjére a weben.
+**Ez a válasz megerősíti:**
+- **Létrehoz** egy új fiókot az általad megadott adatokkal
+-
+- **Részletes** hibaüzeneteket biztosít a hibakereséshez
+- **Egységes** adatstruktúrát ad vissza sikeres és hibás esetekben
 
-Az adatok készen állnak a szervernek való elküldésre. Hozz létre egy új `createAccount` nevű függvényt:
+### A Modern Fetch API ereje
 
-```js
-async function createAccount(account) {
+**Fetch API előnyei a régebbi módszerekkel szemben:**
+
+| Funkció | Előny | Megvalósítás |
+|---------|-------|--------------|
+| Ígéret-alapú | Tiszta aszinkron kód | `await fetch()` |
+| Kérés testreszabása | Teljes HTTP vezérlés | Fejlécek, metódusok, törzs |
+| Válaszkezelés | Rugalmas adatfeldolgozás | `.json()`, `.text()`, `.blob()` |
+| Hibakezelés | Átfogó hibakezelés | Try/catch blokkok |
+
+> 🎥 **Tudj meg többet**: [Async/Await oktatóanyag](https://youtube.com/watch?v=YwmlRkrxvkk) - Az aszinkron JavaScript minták megértése a modern webfejlesztéshez.
+
+**Kulcsfogalmak a szerverrel való kommunikációhoz:**
+- **Aszinkron függvények** lehetővé teszik a végrehajtás szüneteltetését a szerver válaszára várva
+- **Await kulcsszó** az aszinkron kódot szinkron kódhoz hasonlóvá teszi
+- **Fetch API** modern, ígéret-alapú HTTP kéréseket biztosít
+- **Hibakezelés** garantálja, hogy az alkalmazás hálózati problémák esetén is megfelelően reagáljon
+
+### A regisztrációs funkció befejezése
+
+Hozzuk össze mindent egy teljes, éles környezetre kész regisztrációs funkcióval:
+
+```javascript
+async function register() {
+  const registerForm = document.getElementById('registerForm');
+  const submitButton = registerForm.querySelector('button[type="submit"]');
+  
   try {
-    const response = await fetch('//localhost:5000/api/accounts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: account
-    });
-    return await response.json();
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Creating Account...';
+    
+    // Process form data
+    const formData = new FormData(registerForm);
+    const jsonData = JSON.stringify(Object.fromEntries(formData));
+    
+    // Send to server
+    const result = await createAccount(jsonData);
+    
+    if (result.error) {
+      console.error('Registration failed:', result.error);
+      alert(`Registration failed: ${result.error}`);
+      return;
+    }
+    
+    console.log('Account created successfully!', result);
+    alert(`Welcome, ${result.user}! Your account has been created.`);
+    
+    // Reset form after successful registration
+    registerForm.reset();
+    
   } catch (error) {
-    return { error: error.message || 'Unknown error' };
+    console.error('Unexpected error:', error);
+    alert('An unexpected error occurred. Please try again.');
+  } finally {
+    // Restore button state
+    submitButton.disabled = false;
+    submitButton.textContent = 'Create Account';
   }
 }
 ```
 
-Mit csinál ez a függvény? Először is, figyeld meg az `async` kulcsszót itt. Ez azt jelenti, hogy a függvény olyan kódot tartalmaz, amely [**aszinkron módon**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) fog végrehajtódni. Az `await` kulcsszóval együtt használva lehetővé teszi, hogy várjunk az aszinkron kód végrehajtására - például itt a szerver válaszára - mielőtt folytatnánk.
+**Ez a továbbfejlesztett megvalósítás tartalmazza:**
+- **Vizualizált** visszajelzést biztosít az űrlap beküldése közben
+- **Letiltja** a beküldés gombot a duplikált beküldések elkerülése érdekében
+- **Kezeli** az előre látható és váratlan hibákat egyaránt
+- **Felhasználóbarát** siker- és hibaüzeneteket jelenít meg
+- **Visszaállítja** az űrlapot sikeres regisztráció után
+- **Helyreállítja** a felhasználói felület állapotát az eredménytől függetlenül
 
-Itt egy gyors videó az `async/await` használatáról:
+### Az implementáció tesztelése
 
-[![Async és Await a promesek kezeléséhez](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async és Await a promesek kezeléséhez")
+**Nyisd meg a böngésző fejlesztői eszközeit és teszteld a regisztrációt:**
 
-> 🎥 Kattints a fenti képre egy videóért az async/await használatáról.
+1. **Nyisd meg** a böngésző konzolt (F12 → Console fül)
+2. **Töltsd ki** a regisztrációs űrlapot
+3. **Kattints** a "Fiók létrehozása" gombra
+4. **Figyeld meg** a konzol üzeneteket és a felhasználói visszajelzést
 
-A `fetch()` API-t használjuk, hogy JSON adatokat küldjünk a szervernek. Ez a módszer 2 paramétert vesz:
+![Képernyőkép, amely a böngésző konzolban megjelenő naplóüzenetet mutatja](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.hu.png)
 
-- A szerver URL-jét, így itt visszahelyezzük a `//localhost:5000/api/accounts` címet.
-- A kérés beállításait. Itt állítjuk be a metódust `POST`-ra, és megadjuk a kérés `body`-ját. Mivel JSON adatokat küldünk a szervernek, be kell állítanunk a `Content-Type` fejlécet `application/json` értékre, hogy a szerver tudja, hogyan értelmezze a tartalmat.
+**Amit látnod kell:**
+- **Betöltési állapot** jelenik meg a beküldés gombon
+- **Konzol naplók** részletes információt adnak a folyamatról
+- **Sikerüzenet** jelenik meg, ha a fiók létrehozása sikeres
+- **Az űrlap automatikusan** visszaáll sikeres beküldés után
 
-Mivel a szerver JSON válasszal fog válaszolni a kérésre, használhatjuk az `await response.json()`-t, hogy elemezzük a JSON tartalmat, és visszaadjuk az eredményül kapott objektumot. Figyelj arra, hogy ez a módszer aszinkron, így itt használjuk az `await` kulcsszót, mielőtt visszatérnénk, hogy megbizonyosodjunk arról, hogy az elemzés során fellépő hibák is kezelve vannak.
+> 🔒 **Biztonsági megfontolás**: Jelenleg az adatok HTTP-n keresztül utaznak, ami nem biztonságos éles környezetben. Valódi alkalmazásokban mindig használj HTTPS-t az adatátvitel titkosításához. Tudj meg többet a [HTTPS biztonságról](https://en.wikipedia.org/wiki/HTTPS) és arról, miért elengedhetetlen a felhasználói adatok védelméhez.
 
-Most adj hozzá néhány kódot a `register` függvényhez, hogy meghívja a `createAccount()`-ot:
+## Átfogó űrlapellenőrzés
 
-```js
-const result = await createAccount(jsonData);
+Az űrlapellenőrzés megakadályozza azt a frusztráló élményt, amikor a hibák csak beküldés után derülnek ki. Akárcsak a Nemzetközi Űrállomás többszörös biztonsági rendszerei, a hatékony ellenőrzés több rétegű biztonsági ellenőrzést alkalmaz.
+
+Az optimális megközelítés ötvözi a böngésző szintű ellenőrzést az azonnali visszajelzés érdekében, a JavaScript ellenőrzést a jobb felhasználói élményért, és a szerveroldali ellenőrzést a biztonság és adatintegritás érdekében. Ez a redundancia biztosítja a felhasználói elégedettséget és a rendszer védelmét.
+
+### Az ellenőrzési rétegek megértése
+
+```mermaid
+graph TD
+    A[User Input] --> B[HTML5 Validation]
+    B --> C[Custom JavaScript Validation]
+    C --> D[Client-Side Complete]
+    D --> E[Server-Side Validation]
+    E --> F[Data Storage]
+    
+    B -->|Invalid| G[Browser Error Message]
+    C -->|Invalid| H[Custom Error Display]
+    E -->|Invalid| I[Server Error Response]
 ```
 
-Mivel itt használjuk az `await` kulcsszót, hozzá kell adnunk az `async` kulcsszót a register függvény elé:
+**Többrétegű ellenőrzési stratégia:**
+- **HTML5 ellenőrzés**: Azonnali böngésző-alapú ellenőrzések
+- **JavaScript ellenőrzés**: Egyedi logika és felhasználói élmény
+- **Szerveroldali ellenőrzés**: Végső biztonsági és adatintegritási ellenőrzések
+- **Progresszív fejlesztés**: Akkor is működik, ha a JavaScript le van tiltva
 
-```js
-async function register() {
-```
+### HTML5 ellenőrzési attribútumok
 
-Végül adj hozzá néhány naplózást az eredmény ellenőrzéséhez. A végső függvénynek így kell kinéznie:
+**Modern ellenőrzési eszközök a rendelkezésedre:**
 
-```js
-async function register() {
-  const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const jsonData = JSON.stringify(Object.fromEntries(formData));
-  const result = await createAccount(jsonData);
+| Attribútum | Cél | Példa | Böngésző viselkedése |
+|------------|-----|-------|----------------------|
+| `required` | Kötelező mezők | `<input required>` | Megakadályozza az üres beküldést |
+| `minlength`/`maxlength` | Szöveghossz korlátok | `<input maxlength="20">` | Karakterkorlátokat érvényesít |
+| `min`/`max` | Számértékek határai | `<input min="0" max="1000">` | Számhatárokat ellenőriz |
+| `pattern` | Egyedi regex szabályok | `<input pattern="[A-Za-z]+">` | Meghatározott formátumokat ellenőriz |
+| `type` | Adattípus ellenőrzés | `<input type="email">` | Formátum-specifikus ellenőrzés |
 
-  if (result.error) {
-    return console.log('An error occurred:', result.error);
-  }
+### CSS ellenőrzési stílusok
 
-  console.log('Account created!', result);
+**Hozz létre vizuális visszajelzést az ellenőrzési állapotokhoz:**
+
+```css
+/* Valid input styling */
+input:valid {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+/* Invalid input styling */
+input:invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Focus states for better accessibility */
+input:focus:valid {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 ```
 
-Ez egy kicsit hosszú volt, de eljutottunk ide! Ha megnyitod a [böngésző fejlesztői eszközeit](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools), és megpróbálsz regisztrálni egy új fiókot, nem kell változást látnod a weboldalon, de egy üzenet jelenik meg a konzolon, amely megerősíti, hogy minden működik.
+**Amit ezek a vizuális jelek elérnek:**
+- **Zöld keretek**: Sikeres ellenőrzést jeleznek, mint a zöld lámpák az irányító központban
+- **Piros keretek**: Hibákat jeleznek, amelyek figyelmet igényelnek
+- **Fókusz kiemelések**: Egyértelmű vizuális kontextust biztosítanak az aktuális bemeneti helyhez
+- **Konzisztens stílus**: Megtanulható, kiszámítható felhasználói felület mintákat hoz létre
 
-![Képernyőkép, amely naplóüzenetet mutat a böngésző konzoljában](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.hu.png)
+> 💡 **Profi tipp**: Használd a `:valid` és `:invalid` CSS pszeudo-osztályokat, hogy azonnali vizuális visszajelzést adj a felhasználóknak gépelés közben, ezzel egy reszponzív és segítőkész felületet hozva létre.
 
-✅ Gondolod, hogy az adatok biztonságosan kerülnek elküldésre a szervernek? Mi történik, ha valaki képes lenne elfogni a kérést? Olvass az [HTTPS-ről](https://en.wikipedia.org/wiki/HTTPS), hogy többet tudj meg a biztonságos adatkommunikációról.
+### Átfogó ellenőrzés megvalósítása
 
-## Adatok érvényesítése
-
-Ha megpróbálsz regisztrálni egy új fiókot anélkül, hogy először megadnál egy felhasználónevet, láthatod, hogy a szerver hibát ad vissza a [400 (Hibás kérés)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).) státuszk
-Tipp: A `:valid` és `:invalid` CSS pszeudo-osztályok használatával testre szabhatod az űrlapvezérlők megjelenését attól függően, hogy érvényesek-e vagy sem.
-### Feladat
-
-Egy új fiók létrehozásához két kötelező mező van: a felhasználónév és a pénznem, a többi mező opcionális. Frissítsd a form HTML-jét úgy, hogy a `required` attribútumot és a mező címkéjében szereplő szöveget is használd:
+Fejlesszük tovább a regisztrációs űrlapot robusztus ellenőrzéssel, amely kiváló felhasználói élményt és adatminőséget biztosít:
 
 ```html
-<label for="user">Username (required)</label>
-<input id="user" name="user" type="text" required>
-...
-<label for="currency">Currency (required)</label>
-<input id="currency" name="currency" type="text" value="$" required>
+<form id="registerForm" method="POST" novalidate>
+  <div class="form-group">
+    <label for="user">Username <span class="required">*</span></label>
+    <input id="user" name="user" type="text" required 
+           minlength="3" maxlength="20" 
+           pattern="[a-zA-Z0-9_]+" 
+           autocomplete="username"
+           title="Username must be 3-20 characters, letters, numbers, and underscores only">
+    <small class="form-text">Choose a unique username (3-20 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency <span class="required">*</span></label>
+    <input id="currency" name="currency" type="text" required 
+           value="$" maxlength="3" 
+           pattern="[A-Z$€£¥₹]+" 
+           title="Enter a valid currency symbol or code">
+    <small class="form-text">Currency symbol (e.g., $, €, £)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" 
+           placeholder="Personal savings, checking, etc.">
+    <small class="form-text">Optional description (up to 100 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" 
+           value="0" min="0" step="0.01" 
+           title="Enter a positive number for your starting balance">
+    <small class="form-text">Initial account balance (minimum $0.00)</small>
+  </div>
+  
+  <button type="submit">Create Account</button>
+</form>
 ```
 
-Bár ez a konkrét szervermegvalósítás nem szab meg konkrét korlátokat a mezők maximális hosszára, mindig jó gyakorlat ésszerű korlátokat meghatározni bármilyen felhasználói szövegbevitel esetén.
+**A továbbfejlesztett ellenőrzés megértése:**
+- **Kombinálja** a kötelező mezők jelölését hasznos leírásokkal
+- **Tartalmazza** a `pattern` attribútumokat a formátum ellenőrzéséhez
+- **Biztosítja** a `title` attribútumokat az akadálymentesség és a súgók számára
+- **Segítő szöveget ad** a felhasználói bemenet irányításához
+- **Használja** a szemantikus HTML struktúrát a jobb akadálymentesség érdekében
 
-Adj hozzá egy `maxlength` attribútumot a szövegmezőkhöz:
+### Haladó ellenőrzési szabályok
 
-```html
-<input id="user" name="user" type="text" maxlength="20" required>
-...
-<input id="currency" name="currency" type="text" value="$" maxlength="5" required>
-...
-<input id="description" name="description" type="text" maxlength="100">
+**Mit érnek el az egyes ellenőrzési szabályok:**
+
+| Mező | Ellenőrzési szabályok | Felhasználói előny |
+|------|-----------------------|--------------------|
+| Felhasználónév | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Érvényes, egyedi azonosítókat biztosít |
+| Pénznem | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Elfogadja a gyakori pénznem szimbólumokat |
+| Egyenleg | `min="0"`, `step="0.01"`, `type="number"` | Megakadályozza a negatív egyenlegeket |
+| Leírás | `maxlength="100"` | Ésszerű hosszúsági korlátokat biztosít |
+
+### Az ellenőrzési viselkedés tesztelése
+
+**Próbáld ki ezeket az ellenőrzési forgatókönyveket:**
+1. **Küldd be** az űrlapot üres kötelező mezőkkel
+2. **Adj meg** egy 3 karakternél rövidebb felhasználónevet
+3. **Próbálj ki** speciális karaktereket a felhasználónév mezőben
+4. **Írj be** negatív egyenleg összeget
+
+![Képernyőkép, amely az űrlap beküldésekor megjelenő ellenőrzési hibát mutatja](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.hu.png)
+
+**Amit tapasztalni fogsz:**
+- **A böngésző megjeleníti** a natív ellenőrzési üzeneteket
+- **A stílus változik** a `:valid` és `:invalid` állapotok alapján
+- **Az űrlap beküldése** addig nem lehetséges, amíg minden ellenőrzés nem sikeres
+- **A fókusz automatikusan** az első érvénytelen mezőre ugrik
+
+### Ügyféloldali vs Szerveroldali ellenőrzés
+
+```mermaid
+graph LR
+    A[Client-Side Validation] --> B[Instant Feedback]
+    A --> C[Better UX]
+    A --> D[Reduced Server Load]
+    
+    E[Server-Side Validation] --> F[Security]
+    E --> G[Data Integrity]
+    E --> H[Business Rules]
+    
+    A -.-> I[Both Required]
+    E -.-> I
 ```
 
-Most, ha megnyomod a *Regisztráció* gombot, és valamelyik mező nem felel meg az általunk meghatározott érvényességi szabályoknak, valami ilyesmit kellene látnod:
+**Miért van szükség mindkét rétegre:**
+- **Ügyféloldali ellenőrzés**: Azonnali visszajelzést ad és javítja a felhasználói élményt
+- **Szerveroldali ellenőrzés**: Biztonságot nyújt és kezeli az összetett üzleti szabályokat
+- **Kombinált megközelítés**: Robusztus, felhasználóbarát és biztonságos alkalmazásokat hoz létre
+- **Progresszív fejlesztés**: Akkor is működik, ha a JavaScript le van tiltva
 
-![Képernyőkép, amely a validációs hibát mutatja, amikor megpróbáljuk elküldeni az űrlapot](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.hu.png)
-
-Az ilyen validáció, amely *mielőtt* bármilyen adatot elküldenénk a szervernek történik, **kliensoldali** validációnak nevezik. De vedd figyelembe, hogy nem mindig lehetséges minden ellenőrzést elvégezni az adatok elküldése nélkül. Például itt nem tudjuk ellenőrizni, hogy létezik-e már egy fiók ugyanazzal a felhasználónévvel, anélkül hogy kérés küldenénk a szervernek. A szerveren végzett további ellenőrzést **szerveroldali** validációnak nevezzük.
-
-Általában mindkettőt meg kell valósítani, és bár a kliensoldali validáció javítja a felhasználói élményt azáltal, hogy azonnali visszajelzést ad a felhasználónak, a szerveroldali validáció elengedhetetlen annak biztosításához, hogy a feldolgozott felhasználói adatok megbízhatóak és biztonságosak legyenek.
+> 🛡️ **Biztonsági emlékeztető**: Soha ne bízz kizárólag az ügyféloldali ellenőrzésben! Rosszindulatú felhasználók megkerülhetik az ügyféloldali ellenőrzéseket, ezért a szerveroldali ellenőrzés elengedhetetlen a biztonság és az adatintegritás érdekében.
 
 ---
+
+
+
+---
+
+## GitHub Copilot Agent kihívás 🚀
+
+Használd az Agent módot a következő kihívás teljesítéséhez:
+
+**Leírás:** Fejleszd tovább a regisztrációs űrlapot átfogó ügyféloldali ellenőrzéssel és felhasználói visszajelzéssel. Ez a kihívás segít gyakorolni az űrlapellenőrzést, hibakezelést és a felhasználói élmény javítását interaktív visszajelzésekkel.
+
+**Feladat:** Hozz létre egy teljes űrlapellenőrzési rendszert a regisztrációs űrlaphoz, amely tartalmazza: 1) Valós idejű ellenőrzési visszajelzést minden mezőhöz, ahogy a felhasználó gépel, 2) Egyedi ellenőrzési üzeneteket, amelyek minden bemeneti mező alatt megjelennek, 3) Egy jelszó megerősítő mezőt, amely ellenőrzi az egyezést, 4) Vizuális jelzéseket (például zöld pipák az érvényes mezőkhöz és piros figyelmeztetések az érvénytelenekhez), 5) Egy beküldés gombot, amely csak akkor válik aktívvá, ha minden ellenőrzés sikeres. Használj HTML5 ellenőrzési attribútumokat, CSS-t az ellenőrzési állapotok stílusához, és JavaScriptet az interaktív viselkedéshez.
+
+Tudj meg többet az [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) funkcióról itt.
 
 ## 🚀 Kihívás
 
 Mutass egy hibaüzenetet a HTML-ben, ha a felhasználó már létezik.
 
-Íme egy példa arra, hogyan nézhet ki a végleges bejelentkezési oldal egy kis stílus hozzáadása után:
+Íme egy példa arra, hogyan nézhet ki a végleges bejelentkezési oldal némi stílus hozzáadása után:
 
 ![Képernyőkép a bejelentkezési oldalról, miután CSS stílusokat adtunk hozzá](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.hu.png)
 
@@ -293,13 +612,13 @@ Mutass egy hibaüzenetet a HTML-ben, ha a felhasználó már létezik.
 
 ## Áttekintés és önálló tanulás
 
-A fejlesztők nagyon kreatívak lettek az űrlapkészítési erőfeszítéseik során, különösen a validációs stratégiák tekintetében. Ismerd meg a különböző űrlapfolyamatokat a [CodePen](https://codepen.com) böngészésével; találsz érdekes és inspiráló űrlapokat?
+A fejlesztők nagyon kreatívak lettek az űrlapkészítési erőfeszítéseik során, különösen az ellenőrzési stratégiák tekintetében. Ismerd meg a különböző űrlapfolyamatokat, ha átnézed a [CodePen](https://codepen.com) oldalát; találsz-e érdekes és inspiráló űrlapokat?
 
 ## Feladat
 
-[Stílusozd a banki alkalmazásodat](assignment.md)
+[Stilizáld a banki alkalmazásodat](assignment.md)
 
 ---
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

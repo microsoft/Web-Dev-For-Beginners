@@ -1,76 +1,106 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T10:04:51+00:00",
+  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
+  "translation_date": "2025-10-24T19:39:43+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "sw"
 }
 -->
 # Jenga Mchezo wa Anga Sehemu ya 3: Kuongeza Mwendo
 
-## Jaribio la Kabla ya Somo
+Fikiria kuhusu michezo unayoipenda – kinachovutia si tu picha nzuri, bali ni jinsi kila kitu kinavyosogea na kujibu vitendo vyako. Kwa sasa, mchezo wako wa anga ni kama mchoro mzuri, lakini tunakaribia kuongeza mwendo ambao utauleta uhai.
 
-[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/33)
+Wahandisi wa NASA walipokuwa wakipanga kompyuta ya mwongozo kwa misheni za Apollo, walikumbana na changamoto kama hiyo: jinsi ya kufanya chombo cha anga kujibu maelekezo ya rubani huku kikidumisha marekebisho ya mwelekeo kiotomatiki? Kanuni tutakazojifunza leo zinaakisi dhana hizo – kusimamia mwendo unaodhibitiwa na mchezaji sambamba na tabia za mfumo wa kiotomatiki.
 
-Michezo huwa si ya kufurahisha sana hadi pale unapokuwa na viumbe wa kigeni wakizunguka kwenye skrini! Katika mchezo huu, tutatumia aina mbili za mwendo:
+Katika somo hili, utajifunza jinsi ya kufanya vyombo vya anga visogee kwenye skrini, kujibu amri za mchezaji, na kuunda mifumo ya mwendo laini. Tutavunja kila kitu katika dhana zinazoweza kudhibitiwa ambazo zinajengwa kwa urahisi.
 
-- **Mwendo wa Kibodi/Panya**: pale mtumiaji anaposhirikiana na kibodi au panya kuhamisha kitu kwenye skrini.
-- **Mwendo unaosababishwa na mchezo**: pale mchezo unapohamisha kitu kwa muda fulani.
+Mwisho wa somo, wachezaji watakuwa wakiruka chombo chao cha shujaa kwenye skrini huku vyombo vya adui vikifanya doria juu. Muhimu zaidi, utaelewa kanuni za msingi zinazowezesha mifumo ya mwendo ya michezo.
 
-Kwa hiyo, tunahamasishaje vitu kwenye skrini? Yote yanahusu kuratibu za cartesian: tunabadilisha eneo (x,y) la kitu na kisha kuchora upya skrini.
+## Maswali ya Awali ya Somo
 
-Kwa kawaida unahitaji hatua zifuatazo kufanikisha *mwendo* kwenye skrini:
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/33)
 
-1. **Weka eneo jipya** kwa kitu; hii inahitajika ili mtumiaji aone kitu kimehamishwa.
-2. **Futa skrini**, skrini inahitaji kufutwa kati ya michoro. Tunaweza kuifuta kwa kuchora mstatili ambao tunaujaza na rangi ya mandharinyuma.
-3. **Chora upya kitu** kwenye eneo jipya. Kwa kufanya hivi tunafanikisha kuhamisha kitu kutoka eneo moja hadi jingine.
+## Kuelewa Mwendo wa Mchezo
+
+Michezo huja hai wakati vitu vinapoanza kusogea, na kuna njia mbili za msingi ambazo hii hutokea:
+
+- **Mwendo unaodhibitiwa na mchezaji**: Unapobonyeza kitufe au kubofya panya, kitu husogea. Hii ni uhusiano wa moja kwa moja kati yako na ulimwengu wa mchezo.
+- **Mwendo wa kiotomatiki**: Wakati mchezo wenyewe unapoamua kusogeza vitu – kama vile vyombo vya adui vinavyohitaji kufanya doria kwenye skrini bila kujali unachofanya.
+
+Kufanya vitu visogee kwenye skrini ya kompyuta ni rahisi kuliko unavyofikiria. Kumbuka zile kuratibu za x na y kutoka darasa la hesabu? Hicho ndicho tunachofanya hapa. Wakati Galileo alipokuwa akifuatilia miezi ya Jupiter mnamo 1610, kimsingi alikuwa akifanya jambo hilo hilo – kuchora nafasi kwa muda ili kuelewa mifumo ya mwendo.
+
+Kusogeza vitu kwenye skrini ni kama kuunda uhuishaji wa flipbook – unahitaji kufuata hatua hizi tatu rahisi:
+
+1. **Sasisha nafasi** – Badilisha mahali ambapo kitu chako kinapaswa kuwa (labda kisogeze pikseli 5 kulia)
+2. **Futa fremu ya zamani** – Safisha skrini ili usione mabaki ya roho kila mahali
+3. **Chora fremu mpya** – Weka kitu chako mahali pake mpya
+
+Fanya hivi haraka vya kutosha, na boom! Unapata mwendo laini unaohisi wa asili kwa wachezaji.
 
 Hivi ndivyo inavyoweza kuonekana kwenye msimbo:
 
 ```javascript
-//set the hero's location
+// Set the hero's location
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Clear the rectangle that hosts the hero
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Redraw the game background and hero
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
+**Hii ndiyo msimbo unavyofanya:**
+- **Husogeza** kuratibu ya x ya shujaa kwa pikseli 5 ili kuisogeza kwa usawa
+- **Hufuta** eneo lote la canvas ili kuondoa fremu ya awali
+- **Hujaza** eneo la canvas na rangi ya nyuma nyeusi
+- **Huchora tena** picha ya shujaa mahali pake mpya
+
 ✅ Je, unaweza kufikiria sababu kwa nini kuchora tena shujaa wako mara nyingi kwa sekunde kunaweza kusababisha gharama za utendaji? Soma kuhusu [mbadala wa muundo huu](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
-## Kushughulikia matukio ya kibodi
+## Kushughulikia Matukio ya Kibodi
 
-Unashughulikia matukio kwa kuambatanisha matukio maalum na msimbo. Matukio ya kibodi yanachochewa kwenye dirisha zima, ilhali matukio ya panya kama `click` yanaweza kuunganishwa na kubonyeza kipengele maalum. Tutatumia matukio ya kibodi katika mradi huu.
+Hapa ndipo tunapounganisha pembejeo za mchezaji na vitendo vya mchezo. Wakati mtu anapobonyeza spacebar kufyatua laser au kugusa kitufe cha mshale ili kuepuka asteroid, mchezo wako unahitaji kugundua na kujibu pembejeo hiyo.
 
-Ili kushughulikia tukio, unahitaji kutumia mbinu ya dirisha `addEventListener()` na kuipatia vigezo viwili vya pembejeo. Kigezo cha kwanza ni jina la tukio, kwa mfano `keyup`. Kigezo cha pili ni kazi ambayo inapaswa kuitwa kama matokeo ya tukio kutokea.
+Matukio ya kibodi hutokea katika kiwango cha dirisha, ikimaanisha dirisha lako lote la kivinjari linasikiliza mibofyo hiyo ya vitufe. Mibofyo ya panya, kwa upande mwingine, inaweza kuhusishwa na vipengele maalum (kama kubofya kitufe). Kwa mchezo wetu wa anga, tutazingatia udhibiti wa kibodi kwa sababu hiyo ndiyo inawapa wachezaji hisia ya arcade ya kawaida.
 
-Hii ni mfano:
+Hii inanikumbusha jinsi waendeshaji wa telegraph katika miaka ya 1800 walivyohitaji kutafsiri pembejeo za msimbo wa morse kuwa ujumbe wenye maana – tunafanya kitu kama hicho, kutafsiri mibofyo ya vitufe kuwa amri za mchezo.
+
+Ili kushughulikia tukio unahitaji kutumia njia ya `addEventListener()` ya dirisha na kuipatia vigezo viwili vya pembejeo. Kigezo cha kwanza ni jina la tukio, kwa mfano `keyup`. Kigezo cha pili ni kazi ambayo inapaswa kuitwa kama matokeo ya tukio kutokea.
+
+Hapa kuna mfano:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = string representation of the key
   if (evt.key === 'ArrowUp') {
     // do something
   }
-})
+});
 ```
 
-Kwa matukio ya funguo kuna mali mbili kwenye tukio unazoweza kutumia kuona ni funguo gani ilibonyezwa:
+**Kufafanua kinachotokea hapa:**
+- **Husikiliza** matukio ya kibodi kwenye dirisha lote
+- **Hukamata** kitu cha tukio ambacho kina taarifa kuhusu kitufe kilichobonyezwa
+- **Hukagua** kama kitufe kilichobonyezwa kinalingana na kitufe maalum (katika kesi hii, mshale wa juu)
+- **Hutekeleza** msimbo wakati hali inapotimizwa
 
-- `key`, hii ni mwakilishi wa maandishi wa funguo iliyobonyezwa, kwa mfano `ArrowUp`
-- `keyCode`, hii ni mwakilishi wa nambari, kwa mfano `37`, inahusiana na `ArrowLeft`.
+Kwa matukio ya vitufe kuna mali mbili kwenye tukio unazoweza kutumia kuona kitufe kilichobonyezwa:
 
-✅ Udhibiti wa matukio ya funguo ni muhimu nje ya ukuzaji wa michezo. Ni matumizi gani mengine unayoweza kufikiria kwa mbinu hii?
+- `key` - hii ni mwakilishi wa maandishi wa kitufe kilichobonyezwa, kwa mfano `'ArrowUp'`
+- `keyCode` - hii ni mwakilishi wa namba, kwa mfano `37`, inahusiana na `ArrowLeft`
 
-### Funguo maalum: tahadhari
+✅ Udanganyifu wa matukio ya vitufe ni muhimu nje ya ukuzaji wa michezo. Je, unaweza kufikiria matumizi mengine ya mbinu hii?
 
-Kuna funguo *maalum* ambazo huathiri dirisha. Hii inamaanisha kwamba ikiwa unasikiliza tukio la `keyup` na unatumia funguo hizi maalum kuhamisha shujaa wako, pia itafanya skrini kusogea kwa usawa. Kwa sababu hiyo, unaweza kutaka *kuzima* tabia hii ya kujengwa ya kivinjari unapojenga mchezo wako. Unahitaji msimbo kama huu:
+### Vitufe Maalum: Tahadhari!
+
+Baadhi ya vitufe vina tabia za kujengwa ndani ya kivinjari ambazo zinaweza kuingilia mchezo wako. Vitufe vya mshale husogeza ukurasa na spacebar husogeza chini – tabia ambazo hutaki wakati mtu anajaribu kuendesha chombo chake cha anga.
+
+Tunaweza kuzuia tabia hizi za msingi na kuruhusu mchezo wetu kushughulikia pembejeo badala yake. Hii ni sawa na jinsi waandaaji wa kompyuta wa mapema walivyohitaji kuzuia usumbufu wa mfumo ili kuunda tabia maalum – tunafanya tu katika kiwango cha kivinjari. Hivi ndivyo:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
@@ -88,27 +118,43 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Msimbo hapo juu utahakikisha kwamba funguo za mishale na funguo ya nafasi zimezimwa tabia yao ya *kawaida*. Utaratibu wa *kuzima* hutokea tunapopiga `e.preventDefault()`.
+**Kuelewa msimbo huu wa kuzuia:**
+- **Hukagua** namba za vitufe maalum ambazo zinaweza kusababisha tabia zisizohitajika za kivinjari
+- **Huzuia** kitendo cha msingi cha kivinjari kwa vitufe vya mshale na spacebar
+- **Huruhusu** vitufe vingine kufanya kazi kawaida
+- **Hutumia** `e.preventDefault()` kuzuia tabia ya kujengwa ndani ya kivinjari
 
-## Mwendo unaosababishwa na mchezo
+## Mwendo Unaosababishwa na Mchezo
 
-Tunaweza kufanya vitu viweze kusogea vyenyewe kwa kutumia vipima muda kama `setTimeout()` au `setInterval()` ambavyo husasisha eneo la kitu kwa kila muda uliowekwa. Hivi ndivyo inavyoweza kuonekana:
+Sasa hebu tuzungumze kuhusu vitu vinavyosogea bila pembejeo ya mchezaji. Fikiria kuhusu vyombo vya adui vinavyosogea kwenye skrini, risasi zinazopaa kwa mistari ya moja kwa moja, au mawingu yanayozunguka nyuma. Mwendo huu wa kiotomatiki hufanya ulimwengu wa mchezo wako kuhisi hai hata wakati hakuna mtu anayegusa udhibiti.
+
+Tunatumia vipima muda vilivyojengwa ndani ya JavaScript kusasisha nafasi kwa vipindi vya kawaida. Dhana hii ni sawa na jinsi saa za pendulum zinavyofanya kazi – utaratibu wa kawaida unaosababisha vitendo vya wakati thabiti. Hivi ndivyo inavyoweza kuwa rahisi:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Move the enemy on the y axis
   enemy.y += 10;
-})
+}, 100);
 ```
 
-## Mzunguko wa mchezo
+**Hii ndiyo msimbo wa mwendo unavyofanya:**
+- **Huunda** kipima muda kinachoendesha kila milisekunde 100
+- **Husogeza** kuratibu ya y ya adui kwa pikseli 10 kila wakati
+- **Huhifadhi** kitambulisho cha muda ili tuweze kukisimamisha baadaye ikiwa inahitajika
+- **Husogeza** adui chini kwenye skrini kiotomatiki
 
-Mzunguko wa mchezo ni dhana ambayo kimsingi ni kazi inayochochewa kwa vipindi vya kawaida. Inaitwa mzunguko wa mchezo kwa sababu kila kitu kinachopaswa kuonekana kwa mtumiaji kinachorwa ndani ya mzunguko. Mzunguko wa mchezo hutumia vitu vyote vya mchezo ambavyo ni sehemu ya mchezo, kuchora vyote isipokuwa kwa sababu fulani havipaswi kuwa sehemu ya mchezo tena. Kwa mfano, ikiwa kitu ni adui aliyepigwa na boriti ya laser na kulipuka, hakitakuwa tena sehemu ya mzunguko wa mchezo wa sasa (utajifunza zaidi kuhusu hili katika masomo yanayofuata).
+## Mzunguko wa Mchezo
 
-Hivi ndivyo mzunguko wa mchezo unavyoweza kuonekana, ukionyeshwa kwa msimbo:
+Hii ndiyo dhana inayounganisha kila kitu – mzunguko wa mchezo. Ikiwa mchezo wako ungekuwa filamu, mzunguko wa mchezo ungekuwa projektor ya filamu, ikionyesha fremu baada ya fremu haraka sana kiasi kwamba kila kitu kinaonekana kusogea kwa laini.
+
+Kila mchezo una moja ya mizunguko hii inayoendesha nyuma ya pazia. Ni kazi inayosasisha vitu vyote vya mchezo, kuchora tena skrini, na kurudia mchakato huu kila mara. Hii inafuatilia shujaa wako, maadui wote, risasi yoyote inayoruka – hali nzima ya mchezo.
+
+Dhana hii inanikumbusha jinsi waandaaji wa filamu wa mapema kama Walt Disney walivyohitaji kuchora tena wahusika fremu kwa fremu ili kuunda dhana ya mwendo. Tunafanya jambo hilo hilo, tu kwa msimbo badala ya penseli.
+
+Hivi ndivyo mzunguko wa mchezo unavyoweza kuonekana, ukielezwa kwa msimbo:
 
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,21 +162,33 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-Mzunguko hapo juu unachochewa kila `200` milisekunde kuchora tena canvas. Una uwezo wa kuchagua muda bora unaofaa kwa mchezo wako.
+**Kuelewa muundo wa mzunguko wa mchezo:**
+- **Hufuta** eneo lote la canvas ili kuondoa fremu ya awali
+- **Hujaza** mandharinyuma na rangi thabiti
+- **Huchora** vitu vyote vya mchezo katika nafasi zao za sasa
+- **Hurudia** mchakato huu kila milisekunde 200 ili kuunda uhuishaji laini
+- **Husimamia** kiwango cha fremu kwa kudhibiti muda wa vipindi
 
 ## Kuendelea na Mchezo wa Anga
 
-Utachukua msimbo uliopo na kuupanua. Ama anza na msimbo uliokamilisha wakati wa sehemu ya I au tumia msimbo katika [Sehemu ya II - mwanzo](../../../../6-space-game/3-moving-elements-around/your-work).
+Sasa tutaongeza mwendo kwenye eneo tuli ulilojenga hapo awali. Tunakaribia kuubadilisha kutoka picha ya skrini hadi uzoefu wa kuingiliana. Tutafanya kazi kupitia hatua kwa hatua ili kuhakikisha kila kipande kinajengwa juu ya kingine.
 
-- **Kuhamisha shujaa**: utaongeza msimbo kuhakikisha unaweza kuhamisha shujaa kwa kutumia funguo za mishale.
-- **Kuhamisha maadui**: pia utahitaji kuongeza msimbo kuhakikisha maadui wanahama kutoka juu kwenda chini kwa kasi fulani.
+Chukua msimbo kutoka mahali tulipoishia katika somo la awali (au anza na msimbo katika folda ya [Sehemu ya II- mwanzo](../../../../6-space-game/3-moving-elements-around/your-work) ikiwa unahitaji mwanzo mpya).
+
+**Hivi ndivyo tunavyounda leo:**
+- **Udhibiti wa shujaa**: Vitufe vya mshale vitaendesha chombo chako cha anga kwenye skrini
+- **Mwendo wa adui**: Vyombo hivyo vya kigeni vitaanza kusonga mbele
+
+Tuanzishe utekelezaji wa vipengele hivi.
 
 ## Hatua Zinazopendekezwa
 
-Tafuta faili ambazo zimeundwa kwa ajili yako katika folda ndogo ya `your-work`. Inapaswa kuwa na yafuatayo:
+Tafuta faili ambazo zimeundwa kwako katika folda ndogo ya `your-work`. Inapaswa kuwa na yafuatayo:
 
 ```bash
 -| assets
@@ -141,25 +199,29 @@ Tafuta faili ambazo zimeundwa kwa ajili yako katika folda ndogo ya `your-work`. 
 -| package.json
 ```
 
-Anzisha mradi wako katika folda ya `your_work` kwa kuandika:
+Unaanza mradi wako katika folda ya `your-work` kwa kuandika:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinjari na ingiza anwani hiyo, kwa sasa inapaswa kuonyesha shujaa na maadui wote; hakuna kinachosogea - bado!
+**Hii amri inavyofanya:**
+- **Inasogeza** kwenye saraka ya mradi wako
+- **Inaanzisha** HTTP Server kwenye anwani `http://localhost:5000`
+- **Inahudumia** faili zako za mchezo ili uweze kuzijaribu kwenye kivinjari
 
-### Ongeza msimbo
+Hapo juu itaanzisha HTTP Server kwenye anwani `http://localhost:5000`. Fungua kivinjari na ingiza anwani hiyo, kwa sasa inapaswa kuonyesha shujaa na maadui wote; hakuna kinachosogea - bado!
 
-1. **Ongeza vitu maalum** kwa `hero` na `enemy` na `game object`, vinapaswa kuwa na mali za `x` na `y`. (Kumbuka sehemu kuhusu [Urithi au muundo](../README.md)).
+### Ongeza Msimbo
 
-   *KIDOKEZO* `game object` kinapaswa kuwa na mali za `x` na `y` na uwezo wa kujichora kwenye canvas.
+1. **Ongeza vitu maalum** kwa `shujaa`, `adui`, na `kitu cha mchezo`, vinapaswa kuwa na mali za `x` na `y`. (Kumbuka sehemu ya [Urithi au muundo](../README.md)).
 
-   >kidokezo: anza kwa kuongeza darasa jipya la GameObject na uweke constructor kama ilivyo hapa chini, kisha ichore kwenye canvas:
-  
+   *KIDOKEZO* `kitu cha mchezo` kinapaswa kuwa na `x` na `y` na uwezo wa kujichora kwenye canvas.
+
+   > **Kidokezo**: Anza kwa kuongeza darasa jipya la `GameObject` na ueleze mjenzi wake kama ilivyo hapa chini, kisha ujichore kwenye canvas:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +239,22 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
     }
     ```
 
-    Sasa, panua GameObject hii kuunda Hero na Enemy.
+    **Kuelewa darasa hili la msingi:**
+    - **Hufafanua** mali za kawaida ambazo vitu vyote vya mchezo vinashiriki (nafasi, ukubwa, picha)
+    - **Hujumuisha** bendera ya `dead` kufuatilia kama kitu kinapaswa kuondolewa
+    - **Hutoa** njia ya `draw()` inayochora kitu kwenye canvas
+    - **Huanzisha** thamani za msingi kwa mali zote ambazo madarasa ya watoto yanaweza kubadilisha
+
+    Sasa, panua `GameObject` kuunda `Hero` na `Enemy`:
     
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,129 +263,152 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Ongeza wahandaji wa matukio ya funguo** kushughulikia urambazaji wa funguo (hamisha shujaa juu/chini kushoto/kulia)
+    **Dhana muhimu katika madarasa haya:**
+    - **Hurithi** kutoka `GameObject` kwa kutumia neno kuu `extends`
+    - **Huita** mjenzi wa mzazi kwa `super(x, y)`
+    - **Huanzisha** vipimo maalum na mali kwa kila aina ya kitu
+    - **Hutekeleza** mwendo wa kiotomatiki kwa maadui kwa kutumia `setInterval()`
 
-   *KUMBUKA* ni mfumo wa cartesian, kona ya juu-kushoto ni `0,0`. Pia kumbuka kuongeza msimbo wa kusimamisha *tabia ya kawaida*
+2. **Ongeza wahandaji wa matukio ya vitufe** kushughulikia urambazaji wa vitufe (sogeza shujaa juu/chini kushoto/kulia)
 
-   >kidokezo: unda kazi yako ya onKeyDown na uambatanishe kwenye dirisha:
+   *KUMBUKA* ni mfumo wa cartesian, juu-kushoto ni `0,0`. Pia kumbuka kuongeza msimbo wa kuzuia *tabia ya msingi*
+
+   > **Kidokezo**: Unda kazi yako ya `onKeyDown` na uambatanishe kwenye dirisha:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Add the code from the lesson above to stop default behavior
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Arrow keys
+       case 32:
+         e.preventDefault();
+         break; // Space
+       default:
+         break; // do not block other keys
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Angalia koni ya kivinjari chako kwa wakati huu, na uangalie funguo zinazobonyezwa.
+   **Hii wahandaji wa matukio unavyofanya:**
+   - **Husikiliza** matukio ya kubonyeza vitufe kwenye dirisha lote
+   - **Hurekodi** namba ya kitufe ili kukusaidia kufuatilia vitufe vinavyobonyezwa
+   - **Huzuia** tabia ya msingi ya kivinjari kwa vitufe vya mshale na spacebar
+   - **Huruhusu** vitufe vingine kufanya kazi kawaida
+   
+   Angalia console ya kivinjari chako kwa wakati huu, na uone mibofyo ya vitufe ikirekodiwa. 
 
-3. **Tekeleza** [Mfumo wa Pub sub](../README.md), hii itahakikisha msimbo wako unakuwa safi unapofuata sehemu zinazobaki.
+3. **Tekeleza** [Mfumo wa Pub sub](../README.md), hii itafanya msimbo wako kuwa safi unapofuata sehemu zinazobaki.
+
+   Mfumo wa Chapisha-Jisajili husaidia kupanga msimbo wako kwa kutenganisha ugunduzi wa tukio na usimamizi wa tukio. Hii inafanya msimbo wako kuwa wa moduli zaidi na rahisi kudumisha.
 
    Ili kufanya sehemu hii ya mwisho, unaweza:
 
    1. **Ongeza msikilizaji wa tukio** kwenye dirisha:
 
        ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
+       window.addEventListener("keyup", (evt) => {
+         if (evt.key === "ArrowUp") {
+           eventEmitter.emit(Messages.KEY_EVENT_UP);
+         } else if (evt.key === "ArrowDown") {
+           eventEmitter.emit(Messages.KEY_EVENT_DOWN);
+         } else if (evt.key === "ArrowLeft") {
+           eventEmitter.emit(Messages.KEY_EVENT_LEFT);
+         } else if (evt.key === "ArrowRight") {
+           eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
+         }
+       });
+       ```
 
-    1. **Unda darasa la EventEmitter** kuchapisha na kujiunga na ujumbe:
+   **Hii mfumo wa tukio unavyofanya:**
+   - **Hugundua** pembejeo ya kibodi na kuibadilisha kuwa matukio maalum ya mchezo
+   - **Hutenganisha** ugunduzi wa pembejeo na mantiki ya mchezo
+   - **Hufanya** iwe rahisi kubadilisha udhibiti baadaye bila kuathiri msimbo wa mchezo
+   - **Huruhusu** mifumo mingi kujibu pembejeo moja
 
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
+   2. **Unda darasa la EventEmitter** kuchapisha na kujisajili kwa ujumbe:
 
-    1. **Ongeza constants** na uweke EventEmitter:
+       ```javascript
+       class EventEmitter {
+         constructor() {
+           this.listeners = {};
+         }
+       
+         on(message, listener) {
+           if (!this.listeners[message]) {
+             this.listeners[message] = [];
+           }
+           this.listeners[message].push(listener);
+         }
+       
+   3. **Ongeza constants** na weka EventEmitter:
 
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
+       ```javascript
+       const Messages = {
+         KEY_EVENT_UP: "KEY_EVENT_UP",
+         KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
+         KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
+         KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
+       };
+       
+       let heroImg, 
+           enemyImg, 
+           laserImg,
+           canvas, ctx, 
+           gameObjects = [], 
+           hero, 
+           eventEmitter = new EventEmitter();
+       ```
 
-    1. **Anzisha mchezo**
+   **Kuelewa usanidi:**
+   - **Hufafanua** constants za ujumbe ili kuepuka makosa ya herufi na kufanya mabadiliko ya msimbo kuwa rahisi
+   - **Hutangaza** vigezo vya picha, muktadha wa canvas, na hali ya mchezo
+   - **Huunda** EventEmitter ya kimataifa kwa mfumo wa pub-sub
+   - **Huanzisha** safu ya kushikilia vitu vyote vya mchezo
 
-    ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
-    
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
-    
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
-    }
-    ```
+   4. **Anzisha mchezo**
 
-1. **Sanidi mzunguko wa mchezo**
+       ```javascript
+       function initGame() {
+         gameObjects = [];
+         createEnemies();
+         createHero();
+       
+         eventEmitter.on(Messages.KEY_EVENT_UP, () => {
+           hero.y -= 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
+           hero.y += 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
+           hero.x -= 5;
+         });
+       
+4. **Sanidi mzunguko wa mchezo**
 
-   Rekebisha kazi ya window.onload ili kuanzisha mchezo na kusanidi mzunguko wa mchezo kwa muda mzuri. Pia utaongeza boriti ya laser:
+   Rekebisha kazi ya `window.onload` ili kuanzisha mchezo na kusanidi mzunguko wa mchezo kwa muda mzuri. Pia utaongeza boriti ya laser:
 
     ```javascript
     window.onload = async () => {
@@ -324,17 +419,23 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
       laserImg = await loadTexture("assets/laserRed.png");
     
       initGame();
-      let gameLoopId = setInterval(() => {
+      const gameLoopId = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawGameObjects(ctx);
-      }, 100)
-      
+      }, 100);
     };
     ```
 
-5. **Ongeza msimbo** wa kuhamisha maadui kwa muda fulani
+   **Kuelewa usanidi wa mchezo:**
+   - **Husubiri** ukurasa kupakia kikamilifu kabla ya kuanza
+   - **Hupata** kipengele cha canvas na muktadha wake wa uchoraji wa 2D
+   - **Hupakia** mali zote za picha kwa njia isiyo ya moja kwa moja kwa kutumia `await`
+   - **Huanza** mzunguko wa mchezo unaoendesha kwa vipindi vya milisekunde 100 (10 FPS)
+   - **Hufuta** na kuchora tena skrini nzima kila fremu
+
+5. **Ongeza msimbo** kusogeza maadui kwa muda fulani
 
     Rekebisha kazi ya `createEnemies()` ili kuunda maadui na kuwasukuma kwenye darasa jipya la gameObjects:
 
@@ -354,8 +455,50 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
       }
     }
     ```
+
+    **Hii uundaji wa maadui unavyofanya:**
+    - **Huhesabu** nafasi za kuweka maadui katikati ya skrini
+- **Inaunda** gridi ya maadui kwa kutumia mikondo iliyopachikwa
+- **Inapeana** picha ya adui kwa kila kitu cha adui
+- **Inaongeza** kila adui kwenye safu ya vitu vya mchezo ya kimataifa
+
+na ongeza kazi ya `createHero()` kufanya mchakato sawa kwa shujaa.
+
+    ```javascript
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
+    }
+    ```
+
+**Kile uundaji wa shujaa unafanya:**
+- **Inaweka** shujaa katikati ya chini ya skrini
+- **Inapeana** picha ya shujaa kwa kitu cha shujaa
+- **Inaongeza** shujaa kwenye safu ya vitu vya mchezo kwa ajili ya kuonyesha
+
+na hatimaye, ongeza kazi ya `drawGameObjects()` kuanza kuchora:
+
+    ```javascript
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
+    }
+    ```
+
+**Kuelewa kazi ya kuchora:**
+- **Inapitia** vitu vyote vya mchezo kwenye safu
+- **Inaita** njia ya `draw()` kwa kila kitu
+- **Inapita** muktadha wa canvas ili vitu viweze kujionyesha
+
+Maadui wako wanapaswa kuanza kusonga mbele kuelekea chombo cha anga cha shujaa wako!
+}
+}
+    ```
     
-    na ongeza kazi ya `createHero()` kufanya mchakato sawa kwa shujaa.
+    and add a `createHero()` function to do a similar process for the hero.
     
     ```javascript
     function createHero() {
@@ -368,7 +511,7 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
     }
     ```
 
-    na hatimaye, ongeza kazi ya `drawGameObjects()` kuanza kuchora:
+na hatimaye, ongeza kazi ya `drawGameObjects()` kuanza kuchora:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -376,13 +519,37 @@ Hii itaanzisha Seva ya HTTP kwenye anwani `http://localhost:5000`. Fungua kivinj
     }
     ```
 
-    Maadui wako wanapaswa kuanza kusonga kuelekea kwenye chombo cha anga cha shujaa wako!
+Maadui wako wanapaswa kuanza kusonga mbele kuelekea chombo cha anga cha shujaa wako!
 
 ---
 
+## Changamoto ya Wakala wa GitHub Copilot 🚀
+
+Hapa kuna changamoto itakayoboresha ubora wa mchezo wako: kuongeza mipaka na udhibiti laini. Kwa sasa, shujaa wako anaweza kuruka nje ya skrini, na harakati zinaweza kuhisi kuwa na ukakasi.
+
+**Dhamira Yako:** Fanya chombo chako cha anga kihisi kuwa halisi zaidi kwa kutekeleza mipaka ya skrini na harakati laini. Hii ni sawa na jinsi mifumo ya udhibiti wa ndege ya NASA inavyopunguza chombo cha anga kisizidi vigezo salama vya operesheni.
+
+**Hapa kuna unachopaswa kujenga:** Unda mfumo unaohakikisha chombo cha anga cha shujaa wako kinabaki kwenye skrini, na fanya udhibiti uhisi laini. Wakati wachezaji wanashikilia kitufe cha mshale, chombo kinapaswa kuteleza kwa mfululizo badala ya kusonga hatua kwa hatua. Fikiria kuongeza maoni ya kuona wakati chombo kinapofikia mipaka ya skrini – labda athari ndogo kuonyesha ukingo wa eneo la kucheza.
+
+Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+
 ## 🚀 Changamoto
 
-Kama unavyoona, msimbo wako unaweza kuwa 'msimbo wa tambi' unapoongeza kazi, vigezo, na madarasa. Unawezaje kupanga msimbo wako vizuri ili uweze kusomeka zaidi? Chora mfumo wa kupanga msimbo wako, hata kama bado uko kwenye faili moja.
+Mpangilio wa msimbo unakuwa muhimu zaidi kadri miradi inavyokua. Unaweza kuwa umeona faili yako ikijaa na kazi, vigezo, na madarasa vyote vikiwa vimechanganyika. Hii inanikumbusha jinsi wahandisi walivyopanga msimbo wa misheni ya Apollo kwa kuunda mifumo wazi na inayoweza kudumishwa ambayo timu nyingi zingeweza kufanya kazi nayo kwa wakati mmoja.
+
+**Dhamira yako:**
+Fikiria kama mbunifu wa programu. Je, ungepanga msimbo wako vipi ili miezi sita kutoka sasa, wewe (au mwenzako) uweze kuelewa kinachoendelea? Hata kama kila kitu kinabaki kwenye faili moja kwa sasa, unaweza kuunda mpangilio bora:
+
+- **Kugroup kazi zinazohusiana** pamoja na vichwa vya maoni vilivyo wazi
+- **Kutenganisha majukumu** - weka mantiki ya mchezo tofauti na uonyeshaji
+- **Kutumia majina ya kawaida** kwa vigezo na kazi
+- **Kuunda moduli** au namespaces ili kupanga vipengele tofauti vya mchezo wako
+- **Kuongeza nyaraka** zinazoelezea madhumuni ya kila sehemu kuu
+
+**Maswali ya kutafakari:**
+- Ni sehemu gani za msimbo wako ni ngumu zaidi kuelewa unaporudi kuzitazama?
+- Je, ungepanga msimbo wako vipi ili iwe rahisi kwa mtu mwingine kuchangia?
+- Nini kingetokea ikiwa ungependa kuongeza vipengele vipya kama nguvu za ziada au aina tofauti za maadui?
 
 ## Jaribio la Baada ya Somo
 
@@ -390,7 +557,15 @@ Kama unavyoona, msimbo wako unaweza kuwa 'msimbo wa tambi' unapoongeza kazi, vig
 
 ## Mapitio na Kujisomea
 
-Ingawa tunaandika mchezo wetu bila kutumia fremu, kuna fremu nyingi za canvas zinazotegemea JavaScript kwa ukuzaji wa michezo. Chukua muda kufanya [usomaji kuhusu hizi](https://github.com/collections/javascript-game-engines).
+Tumekuwa tukijenga kila kitu kutoka mwanzo, ambayo ni nzuri kwa kujifunza, lakini hapa kuna siri kidogo – kuna mifumo ya ajabu ya JavaScript huko nje ambayo inaweza kushughulikia kazi nyingi za msingi kwa ajili yako. Mara tu unapohisi kuwa na ujasiri na misingi tuliyojadili, inafaa [kuchunguza kinachopatikana](https://github.com/collections/javascript-game-engines).
+
+Fikiria mifumo kama kuwa na kisanduku cha zana kilichojaa badala ya kutengeneza kila zana kwa mkono. Inaweza kutatua changamoto nyingi za mpangilio wa msimbo tulizozungumzia, pamoja na kutoa vipengele ambavyo vingechukua wiki kujenga mwenyewe.
+
+**Mambo ya kuchunguza:**
+- Jinsi injini za mchezo zinavyopanga msimbo – utashangazwa na mifumo ya busara wanayotumia
+- Mbinu za utendaji kwa kufanya michezo ya canvas iende laini kama siagi  
+- Vipengele vya kisasa vya JavaScript vinavyoweza kufanya msimbo wako kuwa safi zaidi na rahisi kudumisha
+- Njia tofauti za kusimamia vitu vya mchezo na uhusiano wao
 
 ## Kazi
 
@@ -399,4 +574,4 @@ Ingawa tunaandika mchezo wetu bila kutumia fremu, kuna fremu nyingi za canvas zi
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

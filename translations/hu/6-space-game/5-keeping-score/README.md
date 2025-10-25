@@ -1,23 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-29T10:27:59+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-24T20:35:18+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "hu"
 }
 -->
-# Űrjáték készítése 5. rész: Pontszám és életek
+# Űrjáték építése 5. rész: Pontozás és életek
 
 ## Előadás előtti kvíz
 
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/37)
 
-Ebben a leckében megtanulod, hogyan adj pontszámot egy játékhoz, és hogyan számítsd ki az életeket.
+Készen állsz arra, hogy az űrjátékod valódi játékká váljon? Adjunk hozzá pontozási rendszert és életek kezelését – ezek azok az alapvető mechanikák, amelyek az olyan korai arcade játékokat, mint a Space Invaders, egyszerű bemutatókból függőséget okozó szórakozássá alakították. Itt válik a játékod igazán játszhatóvá.
 
-## Szöveg megjelenítése a képernyőn
+## Szöveg megjelenítése a képernyőn - A játékod hangja
 
-Ahhoz, hogy a játék pontszámát megjelenítsd a képernyőn, tudnod kell, hogyan helyezz el szöveget a képernyőn. A megoldás a `fillText()` metódus használata a canvas objektumon. Szabályozhatod más aspektusokat is, például a betűtípust, a szöveg színét és az igazítást (balra, jobbra, középre). Az alábbi kód példát mutat arra, hogyan rajzolj szöveget a képernyőre.
+Ahhoz, hogy megjelenítsük a pontszámot, meg kell tanulnunk, hogyan lehet szöveget megjeleníteni a vásznon. A `fillText()` metódus az elsődleges eszközöd ehhez – ugyanaz a technika, amelyet a klasszikus arcade játékok használtak a pontszámok és állapotinformációk megjelenítésére.
+
+Teljes mértékben irányíthatod a szöveg megjelenését:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Olvass többet arról, [hogyan adj szöveget egy canvashoz](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), és nyugodtan tedd a sajátodat még látványosabbá!
+✅ Merülj el mélyebben a [szöveg hozzáadása a vászonhoz](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) témában – meglepődhetsz, milyen kreatív lehetsz a betűtípusokkal és stílusokkal!
 
-## Élet, mint játékkoncepció
+## Életek - Több mint egy szám
 
-Az élet fogalma egy játékban csupán egy szám. Egy űrjáték kontextusában gyakori, hogy egy meghatározott számú életet rendelünk hozzá, amelyeket egyenként vonunk le, amikor a hajód sérülést szenved. Jó, ha ezt grafikusan is meg tudod jeleníteni, például minihajókkal vagy szívekkel, nem csak egy számmal.
+A játéktervezésben az "élet" a játékos hibázási lehetőségét jelenti. Ez a koncepció a flippergépekig nyúlik vissza, ahol több golyót kaptál a játékhoz. Az olyan korai videojátékokban, mint az Asteroids, az életek lehetőséget adtak a játékosoknak arra, hogy kockáztassanak és tanuljanak a hibáikból.
 
-## Mit kell elkészíteni?
+A vizuális megjelenítés rendkívül fontos – ha hajó ikonokat jelenítünk meg a "Életek: 3" helyett, az azonnali vizuális felismerést eredményez, hasonlóan ahhoz, ahogy a korai arcade gépek ikonográfiát használtak a nyelvi akadályok leküzdésére.
 
-Adjuk hozzá a következőket a játékhoz:
+## A játék jutalmazási rendszerének felépítése
 
-- **Játék pontszám**: Minden ellenséges hajó megsemmisítése után a hősnek pontokat kell kapnia, javasoljuk, hogy hajónként 100 pontot. A játék pontszámát a bal alsó sarokban kell megjeleníteni.
-- **Élet**: A hajódnak három élete van. Minden alkalommal, amikor egy ellenséges hajó neked ütközik, elveszítesz egy életet. Az életek pontszámát a jobb alsó sarokban kell megjeleníteni, és a következő grafikából kell állnia: ![élet kép](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.hu.png).
+Most megvalósítjuk azokat az alapvető visszacsatolási rendszereket, amelyek a játékosokat lekötik:
 
-## Ajánlott lépések
+- **Pontozási rendszer**: Minden megsemmisített ellenséges hajó 100 pontot ér (a kerek számokat könnyebb fejben kiszámolni). A pontszám a bal alsó sarokban jelenik meg.
+- **Élet számláló**: A hősöd három élettel kezd – ez egy korai arcade játékok által meghatározott szabvány, amely egyensúlyt teremt a kihívás és a játszhatóság között. Minden ütközés egy ellenséggel egy életet vesz el. A fennmaradó életeket a jobb alsó sarokban hajó ikonokkal jelenítjük meg ![élet kép](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.hu.png).
 
-Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre számodra. Ezeknek a következőket kell tartalmazniuk:
+## Kezdjünk neki!
+
+Először állítsd be a munkaterületedet. Navigálj a `your-work` almappában található fájlokhoz. Ezeket a fájlokat kell látnod:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre
 -| package.json
 ```
 
-Indítsd el a projektedet a `your_work` mappában az alábbi parancs begépelésével:
+A játék teszteléséhez indítsd el a fejlesztői szervert a `your_work` mappából:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. Jelenleg a hős és az összes ellenség megjelenik, és amikor a bal és jobb nyilakat lenyomod, a hős mozog, és le tudja lőni az ellenségeket.
+Ez egy helyi szervert futtat a `http://localhost:5000` címen. Nyisd meg ezt a címet a böngésződben, hogy lásd a játékot. Teszteld a vezérlőket a nyílbillentyűkkel, és próbálj meg ellenségekre lőni, hogy megbizonyosodj róla, minden működik.
 
-### Kód hozzáadása
+### Ideje kódolni!
 
-1. **Másold át a szükséges eszközöket** a `solution/assets/` mappából a `your-work` mappába; hozzá kell adnod a `life.png` eszközt. Add hozzá a lifeImg-t a window.onload függvényhez:
+1. **Szerezd be a szükséges vizuális elemeket**. Másold a `life.png` elemet a `solution/assets/` mappából a `your-work` mappába. Ezután add hozzá a lifeImg-t a window.onload függvényedhez:
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Add hozzá a `lifeImg`-t az eszközök listájához:
+1. Ne felejtsd el hozzáadni a `lifeImg`-t az eszközök listájához:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
     eventEmitter = new EventEmitter();
     ```
   
-2. **Adj hozzá változókat**. Adj hozzá kódot, amely reprezentálja a teljes pontszámot (0) és a megmaradt életeket (3), és jelenítsd meg ezeket a pontszámokat a képernyőn.
+2. **Állítsd be a játék változóit**. Adj hozzá kódot, amely nyomon követi az összesített pontszámot (0-ról indul) és a fennmaradó életeket (3-ról indul). Ezeket megjelenítjük a képernyőn, hogy a játékosok mindig tudják, hol állnak.
 
-3. **Bővítsd ki az `updateGameObjects()` függvényt**. Bővítsd ki az `updateGameObjects()` függvényt, hogy kezelje az ellenséges ütközéseket:
+3. **Valósítsd meg az ütközésérzékelést**. Bővítsd ki az `updateGameObjects()` függvényedet, hogy érzékelje, amikor az ellenségek ütköznek a hősöddel:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
       })
     ```
 
-4. **Adj hozzá életeket és pontokat**. 
-   1. **Inicializáld a változókat**. A `this.cooldown = 0` alatt a `Hero` osztályban állítsd be az életeket és pontokat:
+4. **Adj élet- és pontszámkövetést a hősödhöz**. 
+   1. **Inicializáld a számlálókat**. A `this.cooldown = 0` alatt a `Hero` osztályban állítsd be az életet és a pontokat:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Rajzold ki a változókat a képernyőre**. Rajzold ki ezeket az értékeket a képernyőre:
+   1. **Mutasd meg ezeket az értékeket a játékosnak**. Hozz létre függvényeket, amelyek ezeket az értékeket megjelenítik a képernyőn:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
 
         ```
 
-   1. **Adj hozzá metódusokat a játék ciklushoz**. Győződj meg róla, hogy hozzáadtad ezeket a függvényeket a window.onload függvényhez az `updateGameObjects()` alatt:
+   1. **Kapcsold be mindent a játék ciklusába**. Add hozzá ezeket a függvényeket a window.onload függvényedhez közvetlenül az `updateGameObjects()` után:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Valósítsd meg a játékszabályokat**. Valósítsd meg a következő játékszabályokat:
+1. **Valósítsd meg a játék következményeit és jutalmait**. Most hozzáadjuk azokat a visszacsatolási rendszereket, amelyek értelmet adnak a játékos cselekedeteinek:
 
-   1. **Minden hős és ellenség ütközés esetén** vonj le egy életet.
+   1. **Ütközések életeket vesznek el**. Minden alkalommal, amikor a hősöd összeütközik egy ellenséggel, veszítened kell egy életet.
    
-      Bővítsd ki a `Hero` osztályt, hogy elvégezze ezt a levonást:
+      Add hozzá ezt a metódust a `Hero` osztályhoz:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
         }
         ```
 
-   2. **Minden lézer, amely eltalál egy ellenséget**, növelje a játék pontszámát 100 ponttal.
+   2. **Ellenségek lelövése pontokat ér**. Minden sikeres találat 100 pontot ér, azonnali pozitív visszacsatolást nyújtva a pontos lövésért.
 
-      Bővítsd ki a Hero osztályt, hogy elvégezze ezt a növelést:
+      Bővítsd ki a Hero osztályt ezzel az inkrementáló metódussal:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
           }
         ```
 
-        Add hozzá ezeket a függvényeket az ütközési eseménykibocsátókhoz:
+        Most kapcsolódj ezekhez a függvényekhez az ütközési eseményeknél:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,15 +179,25 @@ Ez elindít egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy b�
         });
         ```
 
-✅ Végezz egy kis kutatást, hogy felfedezd, milyen más játékokat készítettek JavaScript/Canvas segítségével. Mik a közös jellemzőik?
+✅ Kíváncsi vagy más, JavaScript és Canvas segítségével készült játékokra? Fedezz fel néhányat – meg fogsz lepődni, mi minden lehetséges!
 
-A munka végére látnod kell a kis "élet" hajókat a jobb alsó sarokban, a pontokat a bal alsó sarokban, és látnod kell, ahogy az életek száma csökken, amikor ütközöl az ellenségekkel, és a pontszám növekszik, amikor lelövöd az ellenségeket. Szép munka! A játékod majdnem kész.
+Miután megvalósítottad ezeket a funkciókat, teszteld a játékot, hogy lásd a teljes visszacsatolási rendszert működés közben. Látnod kell az élet ikonokat a jobb alsó sarokban, a pontszámot a bal alsó sarokban, és figyelheted, ahogy az ütközések csökkentik az életeket, míg a sikeres lövések növelik a pontszámot.
+
+A játékod most már rendelkezik azokkal az alapvető mechanikákkal, amelyek a korai arcade játékokat olyan vonzóvá tették – egyértelmű célokkal, azonnali visszacsatolással és jelentős következményekkel a játékos cselekedeteiért.
 
 ---
 
+## GitHub Copilot Agent kihívás 🚀
+
+Használd az Agent módot a következő kihívás teljesítéséhez:
+
+**Leírás:** Fejleszd az űrjáték pontozási rendszerét egy magas pontszám funkcióval, amely tartós tárolást és bónusz pontozási mechanizmusokat valósít meg.
+
+**Feladat:** Hozz létre egy magas pontszám rendszert, amely elmenti a játékos legjobb pontszámát a localStorage-ba. Adj bónusz pontokat az egymást követő ellenséges találatokért (kombó rendszer), és valósíts meg különböző pontértékeket a különböző ellenségtípusokhoz. Tartsd vizuálisan jelezve, amikor a játékos új magas pontszámot ér el, és jelenítsd meg az aktuális magas pontszámot a játék képernyőjén.
+
 ## 🚀 Kihívás
 
-A kódod majdnem kész. El tudod képzelni a következő lépéseket?
+Most már van egy működő játékod pontozással és életekkel. Gondold át, milyen további funkciók javíthatnák a játékos élményét.
 
 ## Előadás utáni kvíz
 
@@ -191,13 +205,13 @@ A kódod majdnem kész. El tudod képzelni a következő lépéseket?
 
 ## Áttekintés és önálló tanulás
 
-Kutass néhány módszert, amelyekkel növelheted vagy csökkentheted a játék pontszámát és életeit. Vannak érdekes játékmotorok, mint például a [PlayFab](https://playfab.com). Hogyan javíthatná ezek használata a játékodat?
+Szeretnél többet felfedezni? Kutass különböző megközelítéseket a játék pontozási és élet rendszereihez. Vannak lenyűgöző játék motorok, mint például a [PlayFab](https://playfab.com), amelyek kezelik a pontozást, ranglistákat és a játékosok fejlődését. Hogyan emelhetné egy ilyen integráció a játékodat a következő szintre?
 
 ## Feladat
 
-[Építs egy pontszám alapú játékot](assignment.md)
+[Építs egy pontozási játékot](assignment.md)
 
 ---
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

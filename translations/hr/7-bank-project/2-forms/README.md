@@ -1,297 +1,715 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8baca047d77a5f43fa4099c0578afa42",
-  "translation_date": "2025-08-29T12:27:29+00:00",
+  "original_hash": "b24f28fc46dd473aa9080f174182adde",
+  "translation_date": "2025-10-25T00:08:05+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "hr"
 }
 -->
-# Izrada Bankovne Aplikacije, Dio 2: Izrada Obrasca za Prijavu i Registraciju
+# Izrada aplikacije za bankarstvo, dio 2: Izrada obrasca za prijavu i registraciju
 
-## Pre-Lekcijski Kviz
+## Kviz prije predavanja
 
-[Pre-lekcijski kviz](https://ff-quizzes.netlify.app/web/quiz/43)
+[Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/43)
 
-### Uvod
+Jeste li ikada ispunili obrazac online i doživjeli odbijanje zbog pogrešnog formata e-maila? Ili izgubili sve unesene podatke nakon što ste kliknuli na "Pošalji"? Svi smo se susreli s ovim frustrirajućim situacijama.
 
-U gotovo svim modernim web aplikacijama možete kreirati račun kako biste imali svoj privatni prostor. Budući da više korisnika može istovremeno pristupiti web aplikaciji, potreban je mehanizam za odvojeno pohranjivanje osobnih podataka svakog korisnika i odabir koje informacije prikazati. Nećemo pokrivati kako [sigurno upravljati identitetom korisnika](https://en.wikipedia.org/wiki/Authentication) jer je to opsežna tema sama po sebi, ali osigurat ćemo da svaki korisnik može kreirati jedan (ili više) bankovnih računa u našoj aplikaciji.
+Obrasci su most između korisnika i funkcionalnosti vaše aplikacije. Kao što kontrolori zračnog prometa koriste pažljive protokole za sigurno vođenje aviona, dobro dizajnirani obrasci pružaju jasne povratne informacije i sprječavaju skupe pogreške. Loši obrasci, s druge strane, mogu odbiti korisnike brže nego nesporazum u prometnoj zračnoj luci.
 
-U ovom dijelu koristit ćemo HTML obrasce za dodavanje prijave i registracije u našu web aplikaciju. Vidjet ćemo kako programatski poslati podatke na server API i na kraju kako definirati osnovna pravila validacije za korisničke unose.
+U ovoj lekciji pretvorit ćemo vašu statičnu aplikaciju za bankarstvo u interaktivnu aplikaciju. Naučit ćete kako izraditi obrasce koji provjeravaju unos korisnika, komuniciraju s poslužiteljima i pružaju korisne povratne informacije. Zamislite to kao izradu kontrolnog sučelja koje omogućuje korisnicima navigaciju kroz značajke vaše aplikacije.
 
-### Preduvjeti
+Na kraju, imat ćete kompletan sustav za prijavu i registraciju s validacijom koji vodi korisnike prema uspjehu, a ne frustraciji.
 
-Potrebno je da ste završili [HTML predloške i usmjeravanje](../1-template-route/README.md) web aplikacije za ovu lekciju. Također trebate instalirati [Node.js](https://nodejs.org) i [pokrenuti server API](../api/README.md) lokalno kako biste mogli slati podatke za kreiranje računa.
+## Preduvjeti
 
-**Napomena**
-Imat ćete dva terminala koja rade istovremeno, kako je navedeno u nastavku:
-1. Za glavnu bankovnu aplikaciju koju smo izradili u lekciji [HTML predlošci i usmjeravanje](../1-template-route/README.md)
-2. Za [Bank APP server API](../api/README.md) koji smo upravo postavili.
+Prije nego što počnemo izrađivati obrasce, provjerimo imate li sve ispravno postavljeno. Ova lekcija nastavlja tamo gdje smo stali u prethodnoj, pa ako ste preskočili, možda ćete se htjeti vratiti i prvo postaviti osnovne stvari.
 
-Potrebno je da oba servera budu pokrenuta kako biste mogli pratiti ostatak lekcije. Oni slušaju na različitim portovima (port `3000` i port `5000`), tako da bi sve trebalo raditi bez problema.
+### Potrebna postavka
 
-Možete testirati da li server radi ispravno izvršavanjem ove naredbe u terminalu:
+| Komponenta | Status | Opis |
+|------------|--------|------|
+| [HTML predlošci](../1-template-route/README.md) | ✅ Obavezno | Osnovna struktura aplikacije za bankarstvo |
+| [Node.js](https://nodejs.org) | ✅ Obavezno | JavaScript okruženje za poslužitelj |
+| [Bank API poslužitelj](../api/README.md) | ✅ Obavezno | Pozadinska usluga za pohranu podataka |
 
-```sh
+> 💡 **Savjet za razvoj**: Pokretat ćete dva odvojena poslužitelja istovremeno – jedan za vašu aplikaciju za bankarstvo na klijentskoj strani i drugi za pozadinski API. Ova postavka odražava stvarni razvoj gdje klijentske i pozadinske usluge rade neovisno.
+
+### Konfiguracija poslužitelja
+
+**Vaše razvojno okruženje uključuje:**
+- **Poslužitelj klijentske strane**: Poslužuje vašu aplikaciju za bankarstvo (obično port `3000`)
+- **Pozadinski API poslužitelj**: Upravlja pohranom i dohvatom podataka (port `5000`)
+- **Oba poslužitelja** mogu raditi istovremeno bez sukoba
+
+**Testiranje veze s API-jem:**
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+**Ako vidite odgovor s verzijom API-ja, spremni ste za nastavak!**
 
 ---
 
-## Obrazac i kontrole
+## Razumijevanje HTML obrazaca i kontrola
 
-Element `<form>` obuhvaća dio HTML dokumenta gdje korisnik može unositi i slati podatke putem interaktivnih kontrola. Postoji mnogo različitih korisničkih sučelja (UI) kontrola koje se mogu koristiti unutar obrasca, a najčešće su `<input>` i `<button>` elementi.
+HTML obrasci su način na koji korisnici komuniciraju s vašom web aplikacijom. Zamislite ih kao telegrafski sustav koji je povezivao udaljena mjesta u 19. stoljeću – oni su komunikacijski protokol između namjere korisnika i odgovora aplikacije. Kada su pažljivo dizajnirani, hvataju pogreške, vode formatiranje unosa i pružaju korisne prijedloge.
 
-Postoji mnogo različitih [tipova](https://developer.mozilla.org/docs/Web/HTML/Element/input) `<input>` elemenata. Na primjer, za kreiranje polja gdje korisnik može unijeti svoje korisničko ime možete koristiti:
+Moderni obrasci su znatno sofisticiraniji od osnovnih tekstualnih unosa. HTML5 je uveo specijalizirane vrste unosa koje automatski obrađuju validaciju e-maila, formatiranje brojeva i odabir datuma. Ova poboljšanja koriste i pristupačnosti i iskustvu mobilnih korisnika.
+
+### Osnovni elementi obrazaca
+
+**Osnovni elementi koje svaki obrazac treba:**
 
 ```html
-<input id="username" name="username" type="text">
+<!-- Basic form structure -->
+<form id="userForm" method="POST">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" required>
+  
+  <button type="submit">Submit</button>
+</form>
 ```
 
-Atribut `name` koristit će se kao naziv svojstva kada se podaci obrasca šalju. Atribut `id` koristi se za povezivanje `<label>` elementa s kontrolom obrasca.
+**Što ovaj kod radi:**
+- **Stvara** spremnik za obrazac s jedinstvenim identifikatorom
+- **Određuje** HTTP metodu za slanje podataka
+- **Povezuje** oznake s unosima radi pristupačnosti
+- **Definira** gumb za slanje obrasca
 
-> Pogledajte cijeli popis [`<input>` tipova](https://developer.mozilla.org/docs/Web/HTML/Element/input) i [ostalih kontrola obrasca](https://developer.mozilla.org/docs/Learn/Forms/Other_form_controls) kako biste dobili ideju o svim nativnim UI elementima koje možete koristiti pri izradi sučelja.
+### Moderne vrste unosa i atributi
 
-✅ Napomena da je `<input>` [prazan element](https://developer.mozilla.org/docs/Glossary/Empty_element) kojem *ne biste trebali* dodavati odgovarajuću zatvarajuću oznaku. Možete koristiti samostalnu `<input/>` notaciju, ali nije obavezno.
+| Vrsta unosa | Namjena | Primjer upotrebe |
+|-------------|---------|------------------|
+| `text` | Opći unos teksta | `<input type="text" name="username">` |
+| `email` | Validacija e-maila | `<input type="email" name="email">` |
+| `password` | Skriveni unos teksta | `<input type="password" name="password">` |
+| `number` | Unos brojeva | `<input type="number" name="balance" min="0">` |
+| `tel` | Brojevi telefona | `<input type="tel" name="phone">` |
 
-Element `<button>` unutar obrasca je malo poseban. Ako ne odredite njegov atribut `type`, automatski će poslati podatke obrasca na server kada se pritisne. Evo mogućih vrijednosti za `type`:
+> 💡 **Prednost modernog HTML5**: Korištenje specifičnih vrsta unosa omogućuje automatsku validaciju, odgovarajuće tipkovnice na mobilnim uređajima i bolju podršku za pristupačnost bez dodatnog JavaScripta!
 
-- `submit`: Zadano ponašanje unutar `<form>`, gumb pokreće akciju slanja obrasca.
-- `reset`: Gumb resetira sve kontrole obrasca na njihove početne vrijednosti.
-- `button`: Ne dodjeljuje zadano ponašanje kada se gumb pritisne. Možete mu dodijeliti prilagođene akcije pomoću JavaScripta.
+### Vrste gumba i ponašanje
 
-### Zadatak
+```html
+<!-- Different button behaviors -->
+<button type="submit">Save Data</button>     <!-- Submits the form -->
+<button type="reset">Clear Form</button>    <!-- Resets all fields -->
+<button type="button">Custom Action</button> <!-- No default behavior -->
+```
 
-Započnimo dodavanjem obrasca u predložak `login`. Trebat ćemo polje za *korisničko ime* i gumb *Prijava*.
+**Što svaka vrsta gumba radi:**
+- **Gumbi za slanje**: Pokreću slanje obrasca i šalju podatke na određenu adresu
+- **Gumbi za resetiranje**: Vraćaju sva polja obrasca na početno stanje
+- **Obični gumbi**: Nemaju zadano ponašanje, zahtijevaju prilagođeni JavaScript za funkcionalnost
+
+> ⚠️ **Važna napomena**: Element `<input>` je samostalno zatvarajući i ne zahtijeva završni tag. Moderna najbolja praksa je pisanje `<input>` bez kosog crte.
+
+### Izrada obrasca za prijavu
+
+Sada ćemo izraditi praktičan obrazac za prijavu koji demonstrira moderne prakse HTML obrazaca. Počet ćemo s osnovnom strukturom i postupno ga poboljšavati značajkama za pristupačnost i validaciju.
 
 ```html
 <template id="login">
   <h1>Bank App</h1>
   <section>
     <h2>Login</h2>
-    <form id="loginForm">
-      <label for="username">Username</label>
-      <input id="username" name="user" type="text">
-      <button>Login</button>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" name="user" type="text" required 
+               autocomplete="username" placeholder="Enter your username">
+      </div>
+      <button type="submit">Login</button>
     </form>
   </section>
 </template>
 ```
 
-Ako pažljivo pogledate, primijetit ćete da smo ovdje dodali i `<label>` element. `<label>` elementi koriste se za dodavanje naziva UI kontrolama, poput našeg polja za korisničko ime. Oznake su važne za čitljivost vaših obrazaca, ali dolaze i s dodatnim prednostima:
+**Razrada onoga što se ovdje događa:**
+- **Strukturira** obrazac s semantičkim HTML5 elementima
+- **Grupira** povezane elemente pomoću `div` spremnika s smislenim klasama
+- **Povezuje** oznake s unosima pomoću atributa `for` i `id`
+- **Uključuje** moderne atribute poput `autocomplete` i `placeholder` za bolji UX
+- **Dodaje** `novalidate` za rukovanje validacijom pomoću JavaScripta umjesto zadane validacije preglednika
 
-- Povezivanjem oznake s kontrolom obrasca pomaže korisnicima koji koriste asistivne tehnologije (poput čitača ekrana) da razumiju koje podatke trebaju unijeti.
-- Možete kliknuti na oznaku kako biste izravno stavili fokus na povezani unos, što olakšava pristup na uređajima s dodirnim zaslonom.
+### Snaga pravilnih oznaka
 
-> [Pristupačnost](https://developer.mozilla.org/docs/Learn/Accessibility/What_is_accessibility) na webu vrlo je važna tema koja se često zanemaruje. Zahvaljujući [semantičkim HTML elementima](https://developer.mozilla.org/docs/Learn/Accessibility/HTML) nije teško kreirati pristupačan sadržaj ako ih pravilno koristite. Možete [pročitati više o pristupačnosti](https://developer.mozilla.org/docs/Web/Accessibility) kako biste izbjegli uobičajene pogreške i postali odgovoran programer.
+**Zašto su oznake važne za moderni web razvoj:**
 
-Sada ćemo dodati drugi obrazac za registraciju, odmah ispod prethodnog:
+```mermaid
+graph TD
+    A[Label Element] --> B[Screen Reader Support]
+    A --> C[Click Target Expansion]
+    A --> D[Form Validation]
+    A --> E[SEO Benefits]
+    
+    B --> F[Accessible to all users]
+    C --> G[Better mobile experience]
+    D --> H[Clear error messaging]
+    E --> I[Better search ranking]
+```
+
+**Što pravilne oznake postižu:**
+- **Omogućuju** čitačima ekrana da jasno najave polja obrasca
+- **Proširuju** područje za klik (klik na oznaku fokusira unos)
+- **Poboljšavaju** upotrebljivost na mobilnim uređajima s većim dodirnim ciljevima
+- **Podržavaju** validaciju obrasca s smislenim porukama o pogrešci
+- **Povećavaju** SEO pružanjem semantičkog značenja elementima obrasca
+
+> 🎯 **Cilj pristupačnosti**: Svaki unos u obrascu trebao bi imati pridruženu oznaku. Ova jednostavna praksa čini vaše obrasce dostupnima svima, uključujući korisnike s invaliditetom, i poboljšava iskustvo za sve korisnike.
+
+### Izrada obrasca za registraciju
+
+Obrazac za registraciju zahtijeva detaljnije informacije za kreiranje kompletnog korisničkog računa. Izradimo ga s modernim značajkama HTML5 i poboljšanom pristupačnošću.
 
 ```html
 <hr/>
 <h2>Register</h2>
-<form id="registerForm">
-  <label for="user">Username</label>
-  <input id="user" name="user" type="text">
-  <label for="currency">Currency</label>
-  <input id="currency" name="currency" type="text" value="$">
-  <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <label for="balance">Current balance</label>
-  <input id="balance" name="balance" type="number" value="0">
-  <button>Register</button>
+<form id="registerForm" novalidate>
+  <div class="form-group">
+    <label for="user">Username</label>
+    <input id="user" name="user" type="text" required 
+           autocomplete="username" placeholder="Choose a username">
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency</label>
+    <input id="currency" name="currency" type="text" value="$" 
+           required maxlength="3" placeholder="USD, EUR, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" placeholder="Personal savings, checking, etc.">
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" value="0" 
+           min="0" step="0.01" placeholder="0.00">
+  </div>
+  
+  <button type="submit">Create Account</button>
 </form>
 ```
 
-Koristeći atribut `value` možemo definirati zadanu vrijednost za određeni unos.
-Primijetite također da unos za `balance` ima tip `number`. Izgleda li drugačije od ostalih unosa? Pokušajte interaktivno raditi s njim.
+**U gornjem kodu smo:**
+- **Organizirali** svako polje u spremnike div za bolji stil i izgled
+- **Dodali** odgovarajuće atribute `autocomplete` za podršku automatskom popunjavanju preglednika
+- **Uključili** korisni tekst za pomoć pri unosu
+- **Postavili** razumne zadane vrijednosti pomoću atributa `value`
+- **Primijenili** atribute za validaciju poput `required`, `maxlength` i `min`
+- **Koristili** `type="number"` za polje stanja s podrškom za decimalne brojeve
 
-✅ Možete li navigirati i interaktivno raditi s obrascima koristeći samo tipkovnicu? Kako biste to učinili?
+### Istraživanje vrsta unosa i ponašanja
 
-## Slanje podataka na server
+**Moderne vrste unosa pružaju poboljšanu funkcionalnost:**
 
-Sada kada imamo funkcionalno korisničko sučelje, sljedeći korak je slanje podataka na naš server. Napravimo brzi test koristeći naš trenutni kod: što se događa ako kliknete na gumb *Prijava* ili *Registracija*?
+| Značajka | Prednost | Primjer |
+|----------|----------|---------|
+| `type="number"` | Numerička tipkovnica na mobilnim uređajima | Lakši unos stanja |
+| `step="0.01"` | Kontrola preciznosti decimala | Omogućuje unos centi u valuti |
+| `autocomplete` | Automatsko popunjavanje preglednika | Brže ispunjavanje obrasca |
+| `placeholder` | Kontekstualni savjeti | Vodi očekivanja korisnika |
 
-Primijetili ste promjenu u URL sekciji vašeg preglednika?
+> 🎯 **Izazov pristupačnosti**: Pokušajte navigirati kroz obrasce koristeći samo tipkovnicu! Koristite `Tab` za kretanje između polja, `Space` za označavanje okvira i `Enter` za slanje. Ovo iskustvo pomaže razumjeti kako korisnici čitača ekrana komuniciraju s vašim obrascima.
 
-![Snimka zaslona promjene URL-a preglednika nakon klika na gumb Registracija](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.hr.png)
+## Razumijevanje metoda slanja obrazaca
 
-Zadana akcija za `<form>` je slanje obrasca na trenutni URL servera koristeći [GET metodu](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), dodajući podatke obrasca izravno u URL. Ova metoda ima nekoliko nedostataka:
+Kada netko ispuni vaš obrazac i klikne na "Pošalji", ti podaci moraju negdje otići – obično na poslužitelj koji ih može pohraniti. Postoji nekoliko različitih načina na koje se to može dogoditi, a poznavanje pravog može vas spasiti od glavobolje kasnije.
 
-- Podaci koji se šalju su vrlo ograničeni veličinom (oko 2000 znakova)
-- Podaci su izravno vidljivi u URL-u (nije idealno za lozinke)
-- Ne radi s prijenosom datoteka
+Pogledajmo što se zapravo događa kada netko klikne na gumb za slanje.
 
-Zato možete promijeniti metodu na [POST metodu](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) koja šalje podatke obrasca na server u tijelu HTTP zahtjeva, bez prethodnih ograničenja.
+### Zadano ponašanje obrasca
 
-> Iako je POST najčešće korištena metoda za slanje podataka, [u nekim specifičnim scenarijima](https://www.w3.org/2001/tag/doc/whenToUseGet.html) je poželjno koristiti GET metodu, primjerice kod implementacije polja za pretraživanje.
+Prvo, promatrajmo što se događa s osnovnim slanjem obrasca:
 
-### Zadatak
+**Testirajte svoje trenutne obrasce:**
+1. Kliknite na gumb *Registriraj se* u svom obrascu
+2. Promatrajte promjene u adresnoj traci preglednika
+3. Primijetite kako se stranica ponovno učitava i podaci se pojavljuju u URL-u
 
-Dodajte `action` i `method` svojstva obrascu za registraciju:
+![Snimka zaslona promjene URL-a preglednika nakon klika na gumb Registriraj se](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.hr.png)
 
-```html
-<form id="registerForm" action="//localhost:5000/api/accounts" method="POST">
+### Usporedba HTTP metoda
+
+```mermaid
+graph TD
+    A[Form Submission] --> B{HTTP Method}
+    B -->|GET| C[Data in URL]
+    B -->|POST| D[Data in Request Body]
+    
+    C --> E[Visible in address bar]
+    C --> F[Limited data size]
+    C --> G[Bookmarkable]
+    
+    D --> H[Hidden from URL]
+    D --> I[Large data capacity]
+    D --> J[More secure]
 ```
 
-Sada pokušajte registrirati novi račun s vašim imenom. Nakon klika na gumb *Registracija* trebali biste vidjeti nešto poput ovoga:
+**Razumijevanje razlika:**
 
-![Prozor preglednika na adresi localhost:5000/api/accounts, prikazuje JSON string s korisničkim podacima](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.hr.png)
+| Metoda | Namjena | Lokacija podataka | Razina sigurnosti | Ograničenje veličine |
+|--------|---------|-------------------|-------------------|----------------------|
+| `GET` | Pretraživanje, filtriranje | Parametri URL-a | Niska (vidljivo) | ~2000 znakova |
+| `POST` | Korisnički računi, osjetljivi podaci | Tijelo zahtjeva | Viša (skriveno) | Nema praktičnog ograničenja |
 
-Ako sve ide kako treba, server bi trebao odgovoriti na vaš zahtjev s [JSON](https://www.json.org/json-en.html) odgovorom koji sadrži podatke o kreiranom računu.
+**Razumijevanje temeljnih razlika:**
+- **GET**: Dodaje podatke obrasca u URL kao parametre upita (prikladno za pretraživanje)
+- **POST**: Uključuje podatke u tijelo zahtjeva (neophodno za osjetljive informacije)
+- **Ograničenja GET-a**: Ograničenja veličine, vidljivi podaci, trajna povijest preglednika
+- **Prednosti POST-a**: Veliki kapacitet podataka, zaštita privatnosti, podrška za prijenos datoteka
 
-✅ Pokušajte se ponovno registrirati s istim imenom. Što se događa?
+> 💡 **Najbolja praksa**: Koristite `GET` za obrasce za pretraživanje i filtriranje (dohvat podataka), koristite `POST` za registraciju korisnika, prijavu i kreiranje podataka.
 
-## Slanje podataka bez osvježavanja stranice
+### Konfiguriranje slanja obrasca
 
-Kao što ste vjerojatno primijetili, postoji mali problem s pristupom koji smo upravo koristili: prilikom slanja obrasca izlazimo iz naše aplikacije i preglednik se preusmjerava na URL servera. Pokušavamo izbjeći sva osvježavanja stranica s našom web aplikacijom jer izrađujemo [Jednostranu aplikaciju (SPA)](https://en.wikipedia.org/wiki/Single-page_application).
-
-Kako bismo poslali podatke obrasca na server bez prisilnog osvježavanja stranice, moramo koristiti JavaScript kod. Umjesto da stavimo URL u svojstvo `action` elementa `<form>`, možete koristiti bilo koji JavaScript kod s prefiksom `javascript:` za izvođenje prilagođene akcije. Koristeći ovo također znači da ćete morati implementirati neke zadatke koji su se prethodno automatski obavljali od strane preglednika:
-
-- Dohvatiti podatke obrasca
-- Pretvoriti i kodirati podatke obrasca u odgovarajući format
-- Kreirati HTTP zahtjev i poslati ga na server
-
-### Zadatak
-
-Zamijenite `action` obrasca za registraciju s:
+Konfigurirajmo vaš obrazac za registraciju kako bi ispravno komunicirao s pozadinskim API-jem koristeći metodu POST:
 
 ```html
-<form id="registerForm" action="javascript:register()">
+<form id="registerForm" action="//localhost:5000/api/accounts" 
+      method="POST" novalidate>
 ```
 
-Otvorite `app.js` i dodajte novu funkciju nazvanu `register`:
+**Što ova konfiguracija radi:**
+- **Usmjerava** slanje obrasca na adresu vašeg API-ja
+- **Koristi** metodu POST za sigurnu transmisiju podataka
+- **Uključuje** `novalidate` za rukovanje validacijom pomoću JavaScripta
 
-```js
+### Testiranje slanja obrasca
+
+**Slijedite ove korake za testiranje obrasca:**
+1. **Ispunite** obrazac za registraciju svojim podacima
+2. **Kliknite** na gumb "Kreiraj račun"
+3. **Promatrajte** odgovor poslužitelja u svom pregledniku
+
+![Prozor preglednika na adresi localhost:5000/api/accounts, prikazuje JSON string s podacima korisnika](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.hr.png)
+
+**Što biste trebali vidjeti:**
+- **Preglednik preusmjerava** na URL API krajnje točke
+- **JSON odgovor** koji sadrži podatke o novokreiranom računu
+- **Potvrda poslužitelja** da je račun uspješno kreiran
+
+> 🧪 **Vrijeme za eksperiment**: Pokušajte se ponovno registrirati s istim korisničkim imenom. Kakav odgovor dobivate? Ovo vam pomaže razumjeti kako poslužitelj obrađuje duplicirane podatke i uvjete pogreške.
+
+### Razumijevanje JSON odgovora
+
+**Kada poslužitelj uspješno obradi vaš obrazac:**
+```json
+{
+  "user": "john_doe",
+  "currency": "$",
+  "description": "Personal savings",
+  "balance": 100,
+  "id": "unique_account_id"
+}
+```
+
+**Ovaj odgovor potvrđuje:**
+- **Kreiranje** novog računa s vašim navedenim podacima
+- **Dodjeljivanje** jedinstvenog identifikatora za buduće reference
+- **Vraćanje** svih informacija o računu za provjeru
+- **Indikaciju** uspješne pohrane u bazu podataka
+
+## Moderno rukovanje obrascima pomoću JavaScripta
+
+Tradicionalno slanje obrazaca uzrokuje potpuno ponovno učitavanje stranice, slično kao što su rane svemirske misije zahtijevale potpune sustavne resetove za korekciju kursa. Ovaj pristup narušava korisničko iskustvo i gubi stanje aplikacije.
+
+Rukovanje obrascima pomoću JavaScripta funkcionira poput sustava za kontinuirano navođenje koji koriste moderni svemirski brodovi – omogućuje prilagodbe u stvarnom vremenu bez gubitka navigacijskog konteksta. Možemo presresti slanje obrazaca, pružiti trenutne povratne informacije, elegantno rukovati pogreškama i ažurirati sučelje na temelju odgovora poslužitelja, dok zadržavamo korisnika unutar aplikacije.
+
+### Zašto izbjegavati ponovno učitavanje stranice?
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant SPA
+    participant Server
+    
+    User->>SPA: Submits form
+    SPA->>Server: AJAX request
+    Server-->>SPA: JSON response
+    SPA->>User: Updates interface
+    
+    Note over User,SPA: No page reload!
+```
+
+**Prednosti rukovanja obrascima pomoću JavaScripta:**
+- **Održava** stanje aplikacije i kontekst korisnika
+- **Pruža** trenutne povratne informacije i indikatore učitavanja
+- **Omogućuje** dinamično rukovanje pogreškama i validaciju
+- **Stvara** glatko korisničko iskustvo slično aplikaciji
+- **Omogućuje** uvjetnu logiku na temelju odgovora poslužitelja
+
+### Prijelaz s tradicionalnih na moderne obrasce
+
+**Izazovi tradicionalnog pristupa:**
+- **Preusmjerava** korisnike izvan vaše aplikacije
+- **Gubi** trenutno stanje aplikacije i kontekst
+- **Zahtijeva** potpuno ponovno učitavanje stranice za jednostavne operacije
+- **Pruža** ograničenu kontrolu nad povratnim informacijama korisnika
+
+**Prednosti modernog JavaScript pristupa:**
+- **Zadržava** korisnike unutar vaše aplikacije
+- **Održava** sve stanje i podatke aplikacije
+- **Omogućuje** validaciju i povratne informacije u stvarnom vremenu
+- **Podržava** progresivno poboljšanje i pristupačnost
+
+### Implementacija rukovanja obrascima pomoću JavaScripta
+
+Zamijenimo tradicionalno slanje obrazaca modernim rukovanjem događajima pomoću JavaScripta:
+
+```html
+<!-- Remove the action attribute and add event handling -->
+<form id="registerForm" method="POST" novalidate>
+```
+
+**Dodajte logiku registracije u svoju datoteku `app.js`:**
+
+```javascript
+// Modern event-driven form handling
 function register() {
   const registerForm = document.getElementById('registerForm');
   const formData = new FormData(registerForm);
   const data = Object.fromEntries(formData);
   const jsonData = JSON.stringify(data);
+  
+  console.log('Form data prepared:', data);
 }
+
+// Attach event listener when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const registerForm = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    register();
+  });
+});
 ```
 
-Ovdje dohvaćamo element obrasca koristeći `getElementById()` i koristimo pomoćnika [`FormData`](https://developer.mozilla.org/docs/Web/API/FormData) za izdvajanje vrijednosti iz kontrola obrasca kao skup ključ/vrijednost parova. Zatim pretvaramo podatke u običan objekt koristeći [`Object.fromEntries()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) i na kraju serijaliziramo podatke u [JSON](https://www.json.org/json-en.html), format koji se često koristi za razmjenu podataka na webu.
+**Razrada onoga što se ovdje događa:**
+- **Sprječava** zadano slanje obrasca pomoću `event.preventDefault()`
+- **Dohvaća** element obrasca pomoću modernog odabira DOM-a
+- **Izvlači** podatke obrasca pomoću moćnog API-ja `FormData`
+- **Pretvara** FormData u običan objekt pomoću `Object.fromEntries()`
+- **Serijalizira** podatke u JSON format za komunikaciju s poslužiteljem
+- **Bilježi** obrađene podatke za debugiranje i provjeru
 
-Podaci su sada spremni za slanje na server. Kreirajte novu funkciju nazvanu `createAccount`:
+### Razumijevanje API-ja FormData
 
-```js
-async function createAccount(account) {
-  try {
-    const response = await fetch('//localhost:5000/api/accounts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: account
-    });
-    return await response.json();
-  } catch (error) {
-    return { error: error.message || 'Unknown error' };
-  }
-}
+**API FormData pruža moćno rukovanje obrascima:**
+
+```javascript
+// Example of what FormData captures
+const formData = new FormData(registerForm);
+
+// FormData automatically captures:
+// {
+//   "user": "john_doe",
+//   "currency": "$", 
+//   "description": "Personal account",
+//   "balance": "100"
+// }
 ```
 
-Što ova funkcija radi? Prvo, primijetite ključnu riječ `async` ovdje. To znači da funkcija sadrži kod koji će se izvršavati [**asinkrono**](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Kada se koristi zajedno s ključnom riječi `await`, omogućuje čekanje na izvršenje asinkronog koda - poput čekanja na odgovor servera ovdje - prije nastavka.
+**Prednosti API-ja FormData:**
+- **Sveobuhvatno prikupljanje**: Hvata sve elemente obrasca, uključujući tekst, datoteke i složene unose
+- **Svjesnost tipa**: Automatski obrađuje različite vrste unosa bez prilagođenog kodiranja
+- **Učinkovitost**: Eliminira ručno prikupljanje
+- **Pruža** detaljne poruke o greškama za otklanjanje pogrešaka
+- **Vraća** dosljednu strukturu podataka za uspješne i neuspješne slučajeve
 
-Evo kratkog videa o korištenju `async/await`:
+### Snaga modernog Fetch API-ja
 
-[![Async i Await za upravljanje obećanjima](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async i Await za upravljanje obećanjima")
+**Prednosti Fetch API-ja u odnosu na starije metode:**
 
-> 🎥 Kliknite na sliku iznad za video o async/await.
+| Značajka | Prednost | Implementacija |
+|----------|----------|----------------|
+| Temeljeno na obećanjima | Čist asinhroni kod | `await fetch()` |
+| Prilagodba zahtjeva | Potpuna kontrola nad HTTP-om | Zaglavlja, metode, tijelo |
+| Obrada odgovora | Fleksibilno parsiranje podataka | `.json()`, `.text()`, `.blob()` |
+| Rukovanje greškama | Sveobuhvatno hvatanje grešaka | Blokovi try/catch |
 
-Koristimo `fetch()` API za slanje JSON podataka na server. Ova metoda uzima 2 parametra:
+> 🎥 **Saznaj više**: [Async/Await Tutorial](https://youtube.com/watch?v=YwmlRkrxvkk) - Razumijevanje asinhronih JavaScript obrazaca za moderni web razvoj.
 
-- URL servera, pa ovdje vraćamo `//localhost:5000/api/accounts`.
-- Postavke zahtjeva. Tu postavljamo metodu na `POST` i pružamo `body` za zahtjev. Budući da šaljemo JSON podatke na server, također moramo postaviti zaglavlje `Content-Type` na `application/json` kako bi server znao kako interpretirati sadržaj.
+**Ključni koncepti za komunikaciju s poslužiteljem:**
+- **Asinhrone funkcije** omogućuju pauziranje izvršavanja dok se čeka odgovor poslužitelja
+- **Ključna riječ await** čini da asinhroni kod izgleda kao sinhroni kod
+- **Fetch API** omogućuje moderne, temeljene na obećanjima HTTP zahtjeve
+- **Rukovanje greškama** osigurava da vaša aplikacija reagira na mrežne probleme na primjeren način
 
-Budući da će server odgovoriti na zahtjev s JSON-om, možemo koristiti `await response.json()` za parsiranje JSON sadržaja i vraćanje rezultirajućeg objekta. Napomena da je ova metoda asinkrona, pa ovdje koristimo ključnu riječ `await` prije vraćanja kako bismo osigurali da se eventualne greške tijekom parsiranja također uhvate.
+### Dovršavanje funkcije registracije
 
-Sada dodajte malo koda u funkciju `register` kako biste pozvali `createAccount()`:
+Spojimo sve zajedno s kompletnom, spremnom za produkciju funkcijom registracije:
 
-```js
-const result = await createAccount(jsonData);
-```
-
-Budući da koristimo ključnu riječ `await` ovdje, moramo dodati ključnu riječ `async` prije funkcije register:
-
-```js
-async function register() {
-```
-
-Na kraju, dodajmo neke logove kako bismo provjerili rezultat. Konačna funkcija trebala bi izgledati ovako:
-
-```js
+```javascript
 async function register() {
   const registerForm = document.getElementById('registerForm');
-  const formData = new FormData(registerForm);
-  const jsonData = JSON.stringify(Object.fromEntries(formData));
-  const result = await createAccount(jsonData);
-
-  if (result.error) {
-    return console.log('An error occurred:', result.error);
+  const submitButton = registerForm.querySelector('button[type="submit"]');
+  
+  try {
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Creating Account...';
+    
+    // Process form data
+    const formData = new FormData(registerForm);
+    const jsonData = JSON.stringify(Object.fromEntries(formData));
+    
+    // Send to server
+    const result = await createAccount(jsonData);
+    
+    if (result.error) {
+      console.error('Registration failed:', result.error);
+      alert(`Registration failed: ${result.error}`);
+      return;
+    }
+    
+    console.log('Account created successfully!', result);
+    alert(`Welcome, ${result.user}! Your account has been created.`);
+    
+    // Reset form after successful registration
+    registerForm.reset();
+    
+  } catch (error) {
+    console.error('Unexpected error:', error);
+    alert('An unexpected error occurred. Please try again.');
+  } finally {
+    // Restore button state
+    submitButton.disabled = false;
+    submitButton.textContent = 'Create Account';
   }
-
-  console.log('Account created!', result);
 }
 ```
 
-To je bilo malo duže, ali stigli smo! Ako otvorite [alate za razvoj preglednika](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) i pokušate registrirati novi račun, ne biste trebali vidjeti nikakvu promjenu na web stranici, ali poruka će se pojaviti u konzoli potvrđujući da sve radi.
+**Ova poboljšana implementacija uključuje:**
+- **Pruža** vizualne povratne informacije tijekom slanja obrasca
+- **Onemogućuje** gumb za slanje kako bi se spriječilo višestruko slanje
+- **Rukuje** i očekivanim i neočekivanim greškama na primjeren način
+- **Prikazuje** korisnički prihvatljive poruke o uspjehu i greškama
+- **Resetira** obrazac nakon uspješne registracije
+- **Vraća** stanje korisničkog sučelja bez obzira na ishod
+
+### Testiranje vaše implementacije
+
+**Otvorite alate za razvoj u pregledniku i testirajte registraciju:**
+
+1. **Otvorite** konzolu preglednika (F12 → kartica Console)
+2. **Ispunite** obrazac za registraciju
+3. **Kliknite** "Kreiraj račun"
+4. **Promatrajte** poruke u konzoli i povratne informacije korisnika
 
 ![Snimka zaslona koja prikazuje poruku u konzoli preglednika](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.hr.png)
 
-✅ Mislite li da se podaci šalju na server sigurno? Što ako netko uspije presresti zahtjev? Možete pročitati o [HTTPS](https://en.wikipedia.org/wiki/HTTPS) kako biste saznali više o sigurnoj komunikaciji podataka.
+**Što biste trebali vidjeti:**
+- **Stanje učitavanja** pojavljuje se na gumbu za slanje
+- **Konzolni zapisi** prikazuju detaljne informacije o procesu
+- **Poruka o uspjehu** pojavljuje se kada je kreiranje računa uspješno
+- **Obrazac se automatski resetira** nakon uspješnog slanja
 
-## Validacija podataka
+> 🔒 **Sigurnosna napomena**: Trenutno podaci putuju putem HTTP-a, što nije sigurno za produkciju. U stvarnim aplikacijama uvijek koristite HTTPS za šifriranje prijenosa podataka. Saznajte više o [HTTPS sigurnosti](https://en.wikipedia.org/wiki/HTTPS) i zašto je ključna za zaštitu korisničkih podataka.
 
-Ako pokušate registrirati novi račun bez postavljanja korisničkog imena, možete vidjeti da server vraća grešku sa statusnim kodom [400 (Loš Zahtjev)](https://developer.mozilla.org/docs/Web/HTTP/Status/400#:~:text=The%20HyperText%20Transfer%20Protocol%20(HTTP,%2C%20or%20deceptive%20request%20routing).).
+## Sveobuhvatna validacija obrazaca
 
-Prije slanja podataka na server dobra je praksa [validirati podatke obrasca](https://developer.mozilla.org/docs/Learn/Forms/Form_validation) unaprijed kad god je to moguće, kako biste bili sigurni da šaljete valjan zahtjev. HTML5 kontrole obrasca pružaju ugrađenu validaciju koristeći razne atribute:
+Validacija obrazaca sprječava frustrirajuće iskustvo otkrivanja grešaka tek nakon slanja. Kao višestruki sigurnosni sustavi na Međunarodnoj svemirskoj postaji, učinkovita validacija koristi više slojeva sigurnosnih provjera.
 
-- `required`: polje mora biti ispunjeno, inače se obrazac ne može poslati.
-- `minlength` i `maxlength`: definiraju minimalni i maksimalni broj znakova u tekstualnim poljima.
-- `min` i `max`: definiraju minimalnu i maksimalnu vrijednost numeričkog polja.
-- `type`: definira vrstu očekivanih podataka, poput `number`, `email`, `file` ili [ostalih ugrađenih tipova](https://developer.mozilla.org/docs/Web/HTML/Element/input). Ovaj atribut također može promijeniti vizualni prikaz kontrole obrasca.
-- `pattern`: omogućuje definiranje [regularnog izraza](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) za testiranje valjanosti unesenih podataka.
-> Savjet: možete prilagoditi izgled svojih kontrola obrasca ovisno o tome jesu li valjane ili ne koristeći CSS pseudo-klase `:valid` i `:invalid`.
-### Zadatak
+Optimalan pristup kombinira validaciju na razini preglednika za trenutne povratne informacije, JavaScript validaciju za poboljšano korisničko iskustvo i validaciju na strani poslužitelja za sigurnost i integritet podataka. Ova redundancija osigurava zadovoljstvo korisnika i zaštitu sustava.
 
-Postoje 2 obavezna polja za kreiranje valjanog novog računa: korisničko ime i valuta, dok su ostala polja opcionalna. Ažurirajte HTML forme koristeći atribut `required` i tekst u oznaci polja kako bi:
+### Razumijevanje slojeva validacije
 
-```html
-<label for="user">Username (required)</label>
-<input id="user" name="user" type="text" required>
-...
-<label for="currency">Currency (required)</label>
-<input id="currency" name="currency" type="text" value="$" required>
+```mermaid
+graph TD
+    A[User Input] --> B[HTML5 Validation]
+    B --> C[Custom JavaScript Validation]
+    C --> D[Client-Side Complete]
+    D --> E[Server-Side Validation]
+    E --> F[Data Storage]
+    
+    B -->|Invalid| G[Browser Error Message]
+    C -->|Invalid| H[Custom Error Display]
+    E -->|Invalid| I[Server Error Response]
 ```
 
-Iako ova konkretna implementacija servera ne nameće specifična ograničenja na maksimalnu duljinu polja, uvijek je dobra praksa definirati razumna ograničenja za unos teksta od strane korisnika.
+**Strategija višeslojne validacije:**
+- **HTML5 validacija**: Trenutne provjere na razini preglednika
+- **JavaScript validacija**: Prilagođena logika i korisničko iskustvo
+- **Validacija na poslužitelju**: Konačne provjere sigurnosti i integriteta podataka
+- **Progresivno poboljšanje**: Funkcionira čak i ako je JavaScript onemogućen
 
-Dodajte atribut `maxlength` u tekstualna polja:
+### HTML5 atributi za validaciju
 
-```html
-<input id="user" name="user" type="text" maxlength="20" required>
-...
-<input id="currency" name="currency" type="text" value="$" maxlength="5" required>
-...
-<input id="description" name="description" type="text" maxlength="100">
+**Moderni alati za validaciju:**
+
+| Atribut | Svrha | Primjer upotrebe | Ponašanje preglednika |
+|---------|-------|------------------|-----------------------|
+| `required` | Obavezna polja | `<input required>` | Sprječava slanje praznog obrasca |
+| `minlength`/`maxlength` | Ograničenja duljine teksta | `<input maxlength="20">` | Ograničava broj znakova |
+| `min`/`max` | Rasponi brojeva | `<input min="0" max="1000">` | Provjerava granice brojeva |
+| `pattern` | Pravila za prilagođene regex izraze | `<input pattern="[A-Za-z]+">` | Provjerava specifične formate |
+| `type` | Validacija tipa podataka | `<input type="email">` | Validacija specifična za format |
+
+### CSS stiliziranje validacije
+
+**Stvorite vizualne povratne informacije za stanja validacije:**
+
+```css
+/* Valid input styling */
+input:valid {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+/* Invalid input styling */
+input:invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+/* Focus states for better accessibility */
+input:focus:valid {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
 ```
 
-Sada, ako pritisnete gumb *Registriraj se* i neko polje ne poštuje pravilo validacije koje smo definirali, trebali biste vidjeti nešto poput ovoga:
+**Što postižu ovi vizualni pokazatelji:**
+- **Zeleni obrubi**: Označavaju uspješnu validaciju, poput zelenih svjetala u kontrolnom centru misije
+- **Crveni obrubi**: Signaliziraju greške u validaciji koje zahtijevaju pažnju
+- **Isticanje fokusa**: Pruža jasnu vizualnu kontekstualizaciju trenutne lokacije unosa
+- **Dosljedno stiliziranje**: Uspostavlja predvidljive obrasce sučelja koje korisnici mogu naučiti
 
-![Snimka zaslona koja prikazuje grešku validacije prilikom pokušaja slanja forme](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.hr.png)
+> 💡 **Savjet**: Koristite CSS pseudo-klase `:valid` i `:invalid` za pružanje trenutnih vizualnih povratnih informacija dok korisnici unose podatke, stvarajući responzivno i korisno sučelje.
 
-Validacija poput ove, koja se obavlja *prije* slanja podataka na server, naziva se **validacija na strani klijenta**. No, imajte na umu da nije uvijek moguće obaviti sve provjere bez slanja podataka. Na primjer, ovdje ne možemo provjeriti postoji li već račun s istim korisničkim imenom bez slanja zahtjeva serveru. Dodatna validacija koja se obavlja na serveru naziva se **validacija na strani servera**.
+### Implementacija sveobuhvatne validacije
 
-Obično je potrebno implementirati obje vrste validacije, a dok validacija na strani klijenta poboljšava korisničko iskustvo pružanjem trenutne povratne informacije korisniku, validacija na strani servera ključna je za osiguranje da su podaci korisnika koje obrađujete ispravni i sigurni.
+Poboljšajmo vaš obrazac za registraciju s robusnom validacijom koja pruža izvrsno korisničko iskustvo i kvalitetu podataka:
+
+```html
+<form id="registerForm" method="POST" novalidate>
+  <div class="form-group">
+    <label for="user">Username <span class="required">*</span></label>
+    <input id="user" name="user" type="text" required 
+           minlength="3" maxlength="20" 
+           pattern="[a-zA-Z0-9_]+" 
+           autocomplete="username"
+           title="Username must be 3-20 characters, letters, numbers, and underscores only">
+    <small class="form-text">Choose a unique username (3-20 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="currency">Currency <span class="required">*</span></label>
+    <input id="currency" name="currency" type="text" required 
+           value="$" maxlength="3" 
+           pattern="[A-Z$€£¥₹]+" 
+           title="Enter a valid currency symbol or code">
+    <small class="form-text">Currency symbol (e.g., $, €, £)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Account Description</label>
+    <input id="description" name="description" type="text" 
+           maxlength="100" 
+           placeholder="Personal savings, checking, etc.">
+    <small class="form-text">Optional description (up to 100 characters)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="balance">Starting Balance</label>
+    <input id="balance" name="balance" type="number" 
+           value="0" min="0" step="0.01" 
+           title="Enter a positive number for your starting balance">
+    <small class="form-text">Initial account balance (minimum $0.00)</small>
+  </div>
+  
+  <button type="submit">Create Account</button>
+</form>
+```
+
+**Razumijevanje poboljšane validacije:**
+- **Kombinira** indikatore obaveznih polja s korisnim opisima
+- **Uključuje** `pattern` atribute za validaciju formata
+- **Pruža** `title` atribute za pristupačnost i savjete
+- **Dodaje** pomoćni tekst za vođenje korisničkog unosa
+- **Koristi** semantičku HTML strukturu za bolju pristupačnost
+
+### Napredna pravila validacije
+
+**Što svako pravilo validacije postiže:**
+
+| Polje | Pravila validacije | Korisnička korist |
+|-------|--------------------|-------------------|
+| Korisničko ime | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Osigurava valjane, jedinstvene identifikatore |
+| Valuta | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Prihvaća uobičajene simbole valuta |
+| Stanje | `min="0"`, `step="0.01"`, `type="number"` | Sprječava negativna stanja |
+| Opis | `maxlength="100"` | Razumna ograničenja duljine |
+
+### Testiranje ponašanja validacije
+
+**Isprobajte ove scenarije validacije:**
+1. **Pošaljite** obrazac s praznim obaveznim poljima
+2. **Unesite** korisničko ime kraće od 3 znaka
+3. **Pokušajte** unijeti posebne znakove u polje za korisničko ime
+4. **Unesite** negativan iznos stanja
+
+![Snimka zaslona koja prikazuje grešku validacije pri pokušaju slanja obrasca](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.hr.png)
+
+**Što ćete primijetiti:**
+- **Preglednik prikazuje** poruke o greškama u validaciji
+- **Promjene u stiliziranju** na temelju stanja `:valid` i `:invalid`
+- **Slanje obrasca** je onemogućeno dok sve validacije ne prođu
+- **Fokus automatski** prelazi na prvo neispravno polje
+
+### Validacija na strani klijenta vs. na strani poslužitelja
+
+```mermaid
+graph LR
+    A[Client-Side Validation] --> B[Instant Feedback]
+    A --> C[Better UX]
+    A --> D[Reduced Server Load]
+    
+    E[Server-Side Validation] --> F[Security]
+    E --> G[Data Integrity]
+    E --> H[Business Rules]
+    
+    A -.-> I[Both Required]
+    E -.-> I
+```
+
+**Zašto su potrebna oba sloja:**
+- **Validacija na strani klijenta**: Pruža trenutne povratne informacije i poboljšava korisničko iskustvo
+- **Validacija na strani poslužitelja**: Osigurava sigurnost i obrađuje složena poslovna pravila
+- **Kombinirani pristup**: Stvara robusne, korisnički prihvatljive i sigurne aplikacije
+- **Progresivno poboljšanje**: Funkcionira čak i kada je JavaScript onemogućen
+
+> 🛡️ **Sigurnosna napomena**: Nikada se ne oslanjajte samo na validaciju na strani klijenta! Zlonamjerni korisnici mogu zaobići provjere na strani klijenta, stoga je validacija na strani poslužitelja ključna za sigurnost i integritet podataka.
 
 ---
+
+
+
+---
+
+## Izazov GitHub Copilot Agent 🚀
+
+Koristite Agent način rada za dovršavanje sljedećeg izazova:
+
+**Opis:** Poboljšajte obrazac za registraciju sveobuhvatnom validacijom na strani klijenta i povratnim informacijama za korisnika. Ovaj izazov pomoći će vam da vježbate validaciju obrazaca, rukovanje greškama i poboljšanje korisničkog iskustva interaktivnim povratnim informacijama.
+
+**Zadatak:** Kreirajte kompletan sustav validacije obrazaca za registraciju koji uključuje: 1) Povratne informacije o validaciji u stvarnom vremenu za svako polje dok korisnik unosi podatke, 2) Prilagođene poruke o greškama koje se pojavljuju ispod svakog polja za unos, 3) Polje za potvrdu lozinke s validacijom podudaranja, 4) Vizualne pokazatelje (poput zelenih kvačica za valjana polja i crvenih upozorenja za nevaljana), 5) Gumb za slanje koji postaje aktivan samo kada sve validacije prođu. Koristite HTML5 atribute za validaciju, CSS za stiliziranje stanja validacije i JavaScript za interaktivno ponašanje.
+
+Saznajte više o [agent načinu rada](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
 
 ## 🚀 Izazov
 
 Prikazati poruku o grešci u HTML-u ako korisnik već postoji.
 
-Evo primjera kako konačna stranica za prijavu može izgledati nakon malo stiliziranja:
+Evo primjera kako bi konačna stranica za prijavu mogla izgledati nakon malo stiliziranja:
 
 ![Snimka zaslona stranice za prijavu nakon dodavanja CSS stilova](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.hr.png)
 
@@ -301,7 +719,7 @@ Evo primjera kako konačna stranica za prijavu može izgledati nakon malo stiliz
 
 ## Pregled i samostalno učenje
 
-Razvijatelji su postali vrlo kreativni u svojim naporima za izradu formi, posebno u vezi strategija validacije. Saznajte više o različitim tokovima formi pregledavajući [CodePen](https://codepen.com); možete li pronaći neke zanimljive i inspirativne forme?
+Razvijatelji su postali vrlo kreativni u izradi obrazaca, posebno u vezi strategija validacije. Saznajte više o različitim tokovima obrazaca pregledavajući [CodePen](https://codepen.com); možete li pronaći neke zanimljive i inspirativne primjere obrazaca?
 
 ## Zadatak
 
@@ -309,5 +727,5 @@ Razvijatelji su postali vrlo kreativni u svojim naporima za izradu formi, posebn
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane stručnjaka. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije proizašle iz korištenja ovog prijevoda.
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.

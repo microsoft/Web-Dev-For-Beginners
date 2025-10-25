@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:49:40+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2025-10-24T22:06:59+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "ro"
 }
@@ -21,20 +21,28 @@ source ./venv/bin/activate
 ## Instalează dependențele
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## Rulează API-ul
 
 ```sh
+# Method 1: Direct execution
 python api.py
+
+# Method 2: Using uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-## Rulează interfața frontend
+## Testează API-ul
+
+Vizitează documentația interactivă a API-ului la: `http://localhost:5000/docs`
+
+## Rulează frontend-ul
 
 Asigură-te că te afli în folderul frontend
 
-Găsește *app.js*, schimbă `BASE_URL` cu URL-ul backend-ului tău
+Localizează *app.js*, schimbă `BASE_URL` cu URL-ul backend-ului tău
 
 Rulează-l
 
@@ -51,4 +59,4 @@ Vezi [Set up PAT](https://docs.github.com/en/authentication/keeping-your-account
 ---
 
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.

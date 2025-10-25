@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-29T11:07:42+00:00",
+  "original_hash": "33a875c522f237a2026e4653240dfc07",
+  "translation_date": "2025-10-24T21:51:48+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "sk"
 }
@@ -18,141 +18,235 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Úvod
 
-Rozšírenia prehliadača pridávajú do prehliadača ďalšiu funkcionalitu. Predtým, než začnete vytvárať vlastné rozšírenie, je dobré naučiť sa niečo o tom, ako prehliadače fungujú.
+Rozšírenia prehliadača sú malé aplikácie, ktoré zlepšujú váš zážitok z prehliadania webu. Rovnako ako pôvodná vízia Tima Berners-Leeho o interaktívnom webe, rozšírenia rozširujú schopnosti prehliadača nad rámec jednoduchého prezerania dokumentov. Od správcov hesiel, ktoré udržujú vaše účty v bezpečí, až po nástroje na výber farieb, ktoré pomáhajú dizajnérom nájsť dokonalé odtiene, rozšírenia riešia každodenné výzvy pri prehliadaní.
 
-### O prehliadači
+Skôr než začneme vytvárať vaše prvé rozšírenie, poďme pochopiť, ako prehliadače fungujú. Rovnako ako Alexander Graham Bell potreboval pochopiť prenos zvuku pred vynájdením telefónu, pochopenie základov prehliadačov vám pomôže vytvárať rozšírenia, ktoré sa bezproblémovo integrujú s existujúcimi systémami prehliadača.
 
-V tejto sérii lekcií sa naučíte, ako vytvoriť rozšírenie prehliadača, ktoré bude fungovať na prehliadačoch Chrome, Firefox a Edge. V tejto časti objavíte, ako prehliadače fungujú a pripravíte základné prvky rozšírenia prehliadača.
+Na konci tejto lekcie pochopíte architektúru prehliadačov a začnete budovať svoje prvé rozšírenie.
 
-Čo je vlastne prehliadač? Je to softvérová aplikácia, ktorá umožňuje koncovému používateľovi prístup k obsahu zo servera a jeho zobrazenie na webových stránkach.
+## Pochopenie webových prehliadačov
 
-✅ Trochu histórie: prvý prehliadač sa volal 'WorldWideWeb' a bol vytvorený Sir Timothy Berners-Lee v roku 1990.
+Webový prehliadač je v podstate sofistikovaný interpret dokumentov. Keď do adresného riadku zadáte "google.com", prehliadač vykoná komplexnú sériu operácií - požaduje obsah zo serverov po celom svete, potom analyzuje a vykresľuje tento kód do interaktívnych webových stránok, ktoré vidíte.
+
+Tento proces odráža spôsob, akým bol navrhnutý prvý webový prehliadač WorldWideWeb Timom Berners-Leem v roku 1990, aby sprístupnil hypertextové dokumenty každému.
+
+✅ **Trochu histórie**: Prvý prehliadač sa volal 'WorldWideWeb' a bol vytvorený Sir Timothy Berners-Lee v roku 1990.
 
 ![skoré prehliadače](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.sk.jpg)
-> Niektoré skoré prehliadače, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
+> Niektoré skoré prehliadače, podľa [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-Keď používateľ pripojí k internetu pomocou adresy URL (Uniform Resource Locator), zvyčajne cez Hypertext Transfer Protocol prostredníctvom adresy `http` alebo `https`, prehliadač komunikuje s webovým serverom a načíta webovú stránku.
+### Ako prehliadače spracovávajú webový obsah
 
-V tomto bode zobrazovací engine prehliadača zobrazí stránku na zariadení používateľa, čo môže byť mobilný telefón, stolný počítač alebo laptop.
+Proces medzi zadaním URL adresy a zobrazením webovej stránky zahŕňa niekoľko koordinovaných krokov, ktoré sa dejú v priebehu niekoľkých sekúnd:
 
-Prehliadače majú tiež schopnosť ukladať obsah do vyrovnávacej pamäte, aby sa nemusel načítať zo servera pri každom použití. Môžu zaznamenávať históriu prehliadania používateľa, ukladať 'cookies', čo sú malé kúsky dát obsahujúce informácie o aktivite používateľa, a mnoho ďalšieho.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-Je veľmi dôležité si uvedomiť, že prehliadače nie sú všetky rovnaké! Každý prehliadač má svoje silné a slabé stránky, a profesionálny webový vývojár musí rozumieť tomu, ako zabezpečiť, aby webové stránky fungovali dobre na rôznych prehliadačoch. To zahŕňa prispôsobenie malým obrazovkám, ako je mobilný telefón, ako aj používateľom, ktorí sú offline.
+**Čo tento proces dosahuje:**
+- **Prekladá** URL adresu čitateľnú pre človeka na IP adresu servera prostredníctvom DNS vyhľadávania
+- **Zabezpečuje** bezpečné spojenie s webovým serverom pomocou protokolov HTTP alebo HTTPS
+- **Požaduje** konkrétny obsah webovej stránky zo servera
+- **Prijíma** HTML značkovanie, CSS štýly a JavaScriptový kód zo servera
+- **Vykresľuje** všetok obsah do interaktívnej webovej stránky, ktorú vidíte
 
-Veľmi užitočná webová stránka, ktorú by ste si mali uložiť do záložiek vo vašom preferovanom prehliadači, je [caniuse.com](https://www.caniuse.com). Pri vytváraní webových stránok je veľmi užitočné používať zoznamy podporovaných technológií na caniuse, aby ste mohli čo najlepšie podporiť svojich používateľov.
+### Základné funkcie prehliadača
 
-✅ Ako zistíte, ktoré prehliadače sú najpopulárnejšie medzi používateľmi vašej webovej stránky? Skontrolujte svoje analytické údaje - môžete nainštalovať rôzne analytické balíčky ako súčasť procesu vývoja webu, ktoré vám povedia, ktoré prehliadače sú najviac používané.
+Moderné prehliadače poskytujú množstvo funkcií, ktoré môžu vývojári rozšírení využiť:
 
-## Rozšírenia prehliadača
+| Funkcia | Účel | Príležitosti pre rozšírenia |
+|---------|---------|------------------------|
+| **Vykresľovací engine** | Zobrazuje HTML, CSS a JavaScript | Úprava obsahu, injekcia štýlov |
+| **JavaScriptový engine** | Vykonáva JavaScriptový kód | Vlastné skripty, interakcie s API |
+| **Lokálne úložisko** | Ukladá dáta lokálne | Preferencie používateľa, cacheované dáta |
+| **Sieťový stack** | Spracováva webové požiadavky | Monitorovanie požiadaviek, analýza dát |
+| **Bezpečnostný model** | Chráni používateľov pred škodlivým obsahom | Filtrovanie obsahu, zlepšenie bezpečnosti |
 
-Prečo by ste chceli vytvoriť rozšírenie prehliadača? Je to praktická vec, ktorú môžete pripojiť k prehliadaču, keď potrebujete rýchly prístup k úlohám, ktoré často opakujete. Napríklad, ak často potrebujete kontrolovať farby na rôznych webových stránkach, ktoré používate, môžete si nainštalovať rozšírenie prehliadača na výber farieb. Ak máte problémy s pamätaním hesiel, môžete použiť rozšírenie na správu hesiel.
+**Pochopenie týchto funkcií vám pomôže:**
+- **Identifikovať**, kde vaše rozšírenie môže priniesť najväčšiu hodnotu
+- **Vybrať** správne API prehliadača pre funkčnosť vášho rozšírenia
+- **Navrhnúť** rozšírenia, ktoré efektívne spolupracujú so systémami prehliadača
+- **Zabezpečiť**, že vaše rozšírenie dodržiava najlepšie bezpečnostné postupy prehliadača
 
-Rozšírenia prehliadača sú tiež zábavné na vývoj. Zvyčajne spravujú obmedzený počet úloh, ktoré vykonávajú veľmi dobre.
+### Úvahy o vývoji rozšírení pre rôzne prehliadače
 
-✅ Aké sú vaše obľúbené rozšírenia prehliadača? Aké úlohy vykonávajú?
+Rôzne prehliadače implementujú štandardy s miernymi odlišnosťami, podobne ako rôzne programovacie jazyky môžu spracovávať ten istý algoritmus odlišne. Chrome, Firefox a Safari majú každý svoje jedinečné vlastnosti, ktoré musia vývojári zohľadniť pri vývoji rozšírení.
 
-### Inštalácia rozšírení
+> 💡 **Tip**: Použite [caniuse.com](https://www.caniuse.com) na kontrolu, ktoré webové technológie sú podporované v rôznych prehliadačoch. Toto je neoceniteľné pri plánovaní funkcií vášho rozšírenia!
 
-Predtým, než začnete vytvárať, pozrite sa na proces vytvárania a nasadzovania rozšírenia prehliadača. Hoci sa každý prehliadač trochu líši v tom, ako spravuje túto úlohu, proces je podobný na Chrome a Firefox ako v tomto príklade na Edge:
+**Kľúčové úvahy pri vývoji rozšírení:**
+- **Testujte** svoje rozšírenie v prehliadačoch Chrome, Firefox a Edge
+- **Prispôsobte** sa rôznym API rozšírení prehliadačov a formátom manifestov
+- **Riešte** rôzne výkonnostné charakteristiky a obmedzenia
+- **Poskytnite** alternatívy pre funkcie špecifické pre prehliadač, ktoré nemusia byť dostupné
+
+✅ **Analytický pohľad**: Môžete zistiť, ktoré prehliadače vaši používatelia preferujú, ak nainštalujete analytické balíčky do svojich projektov webového vývoja. Tieto údaje vám pomôžu určiť, ktoré prehliadače podporovať ako prvé.
+
+## Pochopenie rozšírení prehliadača
+
+Rozšírenia prehliadača riešia bežné výzvy pri prehliadaní webu tým, že pridávajú funkcie priamo do rozhrania prehliadača. Namiesto vyžadovania samostatných aplikácií alebo zložitých pracovných postupov poskytujú rozšírenia okamžitý prístup k nástrojom a funkciám.
+
+Tento koncept odráža spôsob, akým skorí počítačoví priekopníci ako Douglas Engelbart predstavovali rozšírenie ľudských schopností pomocou technológie - rozšírenia rozširujú základné funkcie vášho prehliadača.
+
+**Populárne kategórie rozšírení a ich výhody:**
+- **Nástroje produktivity**: Správcovia úloh, aplikácie na zapisovanie poznámok a sledovače času, ktoré vám pomáhajú zostať organizovaní
+- **Zlepšenie bezpečnosti**: Správcovia hesiel, blokátory reklám a nástroje na ochranu súkromia, ktoré chránia vaše údaje
+- **Nástroje pre vývojárov**: Formátovače kódu, nástroje na výber farieb a nástroje na ladenie, ktoré zjednodušujú vývoj
+- **Zlepšenie obsahu**: Režimy čítania, nástroje na sťahovanie videí a nástroje na snímanie obrazovky, ktoré zlepšujú váš zážitok z webu
+
+✅ **Otázka na zamyslenie**: Aké sú vaše obľúbené rozšírenia prehliadača? Aké konkrétne úlohy vykonávajú a ako zlepšujú váš zážitok z prehliadania?
+
+## Inštalácia a správa rozšírení
+
+Pochopenie procesu inštalácie rozšírení vám pomôže predvídať používateľský zážitok, keď ľudia inštalujú vaše rozšírenie. Proces inštalácie je štandardizovaný vo všetkých moderných prehliadačoch, s malými rozdielmi v dizajne rozhrania.
 
 ![screenshot prehliadača Edge zobrazujúci otvorenú stránku edge://extensions a otvorené nastavenia](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.sk.png)
 
-> Poznámka: Uistite sa, že ste zapli režim vývojára a povolili rozšírenia z iných obchodov.
+> **Dôležité**: Uistite sa, že ste zapli režim vývojára a povolili rozšírenia z iných obchodov pri testovaní vlastných rozšírení.
 
-V podstate bude proces nasledovný:
+### Proces inštalácie rozšírenia počas vývoja
 
-- vytvorte svoje rozšírenie pomocou `npm run build` 
-- v prehliadači prejdite na panel rozšírení pomocou tlačidla "Nastavenia a ďalšie" (ikona `...`) v pravom hornom rohu
-- ak ide o novú inštaláciu, vyberte `load unpacked`, aby ste nahrali nové rozšírenie z jeho zložky build (v našom prípade je to `/dist`) 
-- alebo kliknite na `reload`, ak znovu načítavate už nainštalované rozšírenie
+Keď vyvíjate a testujete svoje vlastné rozšírenia, postupujte podľa tohto pracovného postupu:
 
-✅ Tieto pokyny sa týkajú rozšírení, ktoré si sami vytvoríte; na inštaláciu rozšírení, ktoré boli vydané v obchode s rozšíreniami prehliadača, by ste mali prejsť na tieto [obchody](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) a nainštalovať rozšírenie podľa vášho výberu.
+```bash
+# Step 1: Build your extension
+npm run build
+```
 
-### Začnite
+**Čo tento príkaz dosahuje:**
+- **Kompiluje** váš zdrojový kód do súborov pripravených pre prehliadač
+- **Zoskupuje** JavaScriptové moduly do optimalizovaných balíkov
+- **Generuje** konečné súbory rozšírenia v priečinku `/dist`
+- **Pripravuje** vaše rozšírenie na inštaláciu a testovanie
 
-Budete vytvárať rozšírenie prehliadača, ktoré zobrazí uhlíkovú stopu vášho regiónu, ukazujúc spotrebu energie vášho regiónu a zdroj tejto energie. Rozšírenie bude obsahovať formulár, ktorý zhromažďuje API kľúč, aby ste mohli pristupovať k API CO2 Signal.
+**Krok 2: Prejdite na správu rozšírení prehliadača**
+1. **Otvorte** stránku správy rozšírení vo vašom prehliadači
+2. **Kliknite** na tlačidlo "Nastavenia a ďalšie" (ikona `...`) v pravom hornom rohu
+3. **Vyberte** "Rozšírenia" z rozbaľovacieho menu
 
-**Potrebujete:**
+**Krok 3: Načítajte svoje rozšírenie**
+- **Pre nové inštalácie**: Vyberte `load unpacked` a zvoľte svoj priečinok `/dist`
+- **Pre aktualizácie**: Kliknite na `reload` vedľa už nainštalovaného rozšírenia
+- **Pre testovanie**: Aktivujte "Režim vývojára" pre prístup k ďalším funkciám ladenia
 
-- [API kľúč](https://www.co2signal.com/); zadajte svoj e-mail do políčka na tejto stránke a kľúč vám bude zaslaný
-- [kód vášho regiónu](http://api.electricitymap.org/v3/zones) zodpovedajúci [Electricity Map](https://www.electricitymap.org/map) (napríklad v Bostone používam 'US-NEISO').
-- [štartovací kód](../../../../5-browser-extension/start). Stiahnite si zložku `start`; budete dopĺňať kód v tejto zložke.
-- [NPM](https://www.npmjs.com) - NPM je nástroj na správu balíkov; nainštalujte ho lokálne a balíky uvedené vo vašom súbore `package.json` budú nainštalované na použitie vo vašom webovom projekte
+### Inštalácia rozšírenia pre produkciu
 
-✅ Viac o správe balíkov sa dozviete v tomto [vynikajúcom module Learn](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+> ✅ **Poznámka**: Tieto pokyny na vývoj sú určené špeciálne pre rozšírenia, ktoré si sami vytvoríte. Ak chcete nainštalovať publikované rozšírenia, navštívte oficiálne obchody s rozšíreniami prehliadačov, ako napríklad [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
 
-Venujte chvíľu prehliadaniu kódu:
+**Pochopenie rozdielu:**
+- **Inštalácie počas vývoja** vám umožňujú testovať nepublikované rozšírenia počas vývoja
+- **Inštalácie z obchodu** poskytujú overené, publikované rozšírenia s automatickými aktualizáciami
+- **Sideloading** umožňuje inštaláciu rozšírení mimo oficiálnych obchodov (vyžaduje režim vývojára)
 
-dist
-    -|manifest.json (predvolené nastavenia tu)
-    -|index.html (HTML markup front-endu tu)
-    -|background.js (background JS tu)
-    -|main.js (zostavený JS)
-src
-    -|index.js (váš JS kód ide sem)
+## Vytvorenie rozšírenia na sledovanie uhlíkovej stopy
 
-✅ Keď budete mať svoj API kľúč a kód regiónu pripravený, uložte si ich niekam do poznámky na budúce použitie.
+Vytvoríme rozšírenie prehliadača, ktoré zobrazuje uhlíkovú stopu energetického využitia vo vašom regióne. Tento projekt demonštruje základné koncepty vývoja rozšírení a zároveň vytvára praktický nástroj na zvýšenie environmentálneho povedomia.
 
-### Vytvorte HTML pre rozšírenie
+Tento prístup nasleduje princíp "učenia sa praxou", ktorý sa ukázal ako efektívny už od vzdelávacích teórií Johna Deweyho - kombinácia technických zručností s významnými aplikáciami v reálnom svete.
 
-Toto rozšírenie má dva pohľady. Jeden na zhromaždenie API kľúča a kódu regiónu:
+### Požiadavky na projekt
 
-![screenshot dokončeného rozšírenia otvoreného v prehliadači, zobrazujúceho formulár s políčkami na zadanie názvu regiónu a API kľúča.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.sk.png)
+Pred začatím vývoja si zhromaždime potrebné zdroje a závislosti:
 
-A druhý na zobrazenie uhlíkovej spotreby regiónu:
+**Požadovaný prístup k API:**
+- **[CO2 Signal API key](https://www.co2signal.com/)**: Zadajte svoju e-mailovú adresu, aby ste získali bezplatný API kľúč
+- **[Kód regiónu](http://api.electricitymap.org/v3/zones)**: Nájdite kód svojho regiónu pomocou [Electricity Map](https://www.electricitymap.org/map) (napríklad Boston používa 'US-NEISO')
 
-![screenshot dokončeného rozšírenia zobrazujúceho hodnoty uhlíkovej spotreby a percento fosílnych palív pre región US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.sk.png)
+**Nástroje na vývoj:**
+- **[Node.js a NPM](https://www.npmjs.com)**: Nástroj na správu balíkov na inštaláciu závislostí projektu
+- **[Štartovací kód](../../../../5-browser-extension/start)**: Stiahnite si priečinok `start` na začatie vývoja
 
-Začnime vytvorením HTML pre formulár a jeho štýlovaním pomocou CSS.
+✅ **Dozvedieť sa viac**: Zlepšite svoje zručnosti v správe balíkov pomocou tohto [komplexného modulu Learn](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
-V zložke `/dist` vytvorte formulár a oblasť výsledkov. V súbore `index.html` vyplňte vyznačenú oblasť formulára:
+### Pochopenie štruktúry projektu
 
-```HTML
+Pochopenie štruktúry projektu pomáha efektívne organizovať prácu na vývoji. Rovnako ako bola Alexandrijská knižnica organizovaná pre jednoduché vyhľadávanie poznatkov, dobre štruktúrovaný kódový základ uľahčuje vývoj:
+
+```
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
+
+**Rozdelenie toho, čo každý súbor robí:**
+- **`manifest.json`**: **Definuje** metadáta rozšírenia, povolenia a vstupné body
+- **`index.html`**: **Vytvára** používateľské rozhranie, ktoré sa zobrazí, keď používatelia kliknú na vaše rozšírenie
+- **`background.js`**: **Spracováva** úlohy na pozadí a poslucháče udalostí prehliadača
+- **`main.js`**: **Obsahuje** konečný zoskupený JavaScript po procese zostavenia
+- **`src/index.js`**: **Obsahuje** váš hlavný vývojový kód, ktorý sa kompiluje do `main.js`
+
+> 💡 **Tip na organizáciu**: Uložte svoj API kľúč a kód regiónu do bezpečnej poznámky pre jednoduché referencie počas vývoja. Tieto hodnoty budete potrebovať na testovanie funkčnosti vášho rozšírenia.
+
+✅ **Poznámka o bezpečnosti**: Nikdy nezverejňujte API kľúče alebo citlivé údaje vo svojom kódovom repozitári. Ukážeme vám, ako s nimi bezpečne zaobchádzať v ďalších krokoch.
+
+## Vytvorenie rozhrania rozšírenia
+
+Teraz vytvoríme komponenty používateľského rozhrania. Rozšírenie používa dvoj obrazovkový prístup: konfiguračnú obrazovku na počiatočné nastavenie a obrazovku výsledkov na zobrazenie údajov.
+
+Toto nasleduje princíp postupného odhaľovania používaný v dizajne rozhraní od počiatkov výpočtovej techniky - odhaľovanie informácií a možností v logickom poradí, aby sa používatelia nepreťažili.
+
+### Prehľad zobrazení rozšírenia
+
+**Zobrazenie nastavenia** - Konfigurácia pre prvé použitie:
+![screenshot hotového rozšírenia otvoreného v prehliadači, zobrazujúceho formulár s políčkami na zadanie názvu regiónu a API kľúča.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.sk.png)
+
+**Zobrazenie výsledkov** - Zobrazenie údajov o uhlíkovej stope:
+![screenshot hotového rozšírenia zobrazujúceho hodnoty pre uhlíkovú spotrebu a percento fosílnych palív pre región US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.sk.png)
+
+### Vytvorenie konfiguračného formulára
+
+Formulár na nastavenie zhromažďuje údaje o konfigurácii používateľa počas prvého použitia. Po nastavení sa tieto informácie uchovávajú v úložisku prehliadača pre budúce relácie.
+
+Do súboru `/dist/index.html` pridajte túto štruktúru formulára:
+
+```html
 <form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
-```
-Toto je formulár, kde budú vaše uložené informácie zadané a uložené do lokálneho úložiska.
-
-Ďalej vytvorte oblasť výsledkov; pod posledným tagom formulára pridajte niekoľko divov:
-
-```HTML
-<div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
-</div>
-```
-V tomto bode môžete skúsiť zostavenie. Uistite sa, že ste nainštalovali balíkové závislosti tohto rozšírenia:
-
-```
-npm install
+    <div>
+        <h2>New? Add your Information</h2>
+    </div>
+    <div>
+        <label for="region">Region Name</label>
+        <input type="text" id="region" required class="region-name" />
+    </div>
+    <div>
+        <label for="api">Your API Key from tmrow</label>
+        <input type="text" id="api" required class="api-key" />
+    </div>
+    <button class="search-btn">Submit</button>
+</form>
 ```
 
-Tento príkaz použije npm, Node Package Manager, na inštaláciu webpacku pre proces zostavenia vášho rozšírenia. Výstup tohto procesu môžete vidieť v súbore `/dist/main.js` - uvidíte, že kód bol zbalený.
+**Čo tento formulár dosahuje:**
+- **Vytvára** sémantickú štruktúru formulára s vhodnými popismi a asociáciami vstupov
+- **Umožňuje** funkciu automatického dopĺňania prehliadača pre lepší používateľský zážitok
+- **Vyžaduje**, aby boli obe políčka vyplnené pred odoslaním pomocou atribútu `required`
+- **Organizuje** vstupy s popisnými názvami tried pre jednoduché štýlovanie a cielenie JavaScriptom
+- **Poskytuje** jasné pokyny pre používateľov, ktorí nastavujú rozšírenie po prvýkrát
 
-Zatiaľ by sa rozšírenie malo zostaviť a, ak ho nasadíte do Edge ako rozšírenie, uvidíte pekne zobrazený formulár.
+### Vytvorenie zobrazenia výsledkov
 
-Gratulujeme, urobili ste prvé kroky k vytvoreniu rozšírenia prehliadača. V ďalších lekciách ho urobíte funkčnejším a užitočnejším.
+Ďalej vytvorte oblasť výsledkov, ktorá bude zobrazovať údaje o uhlíkovej stope
+**Popis:** Vylepšite rozšírenie prehliadača pridaním validácie formulára a funkcií spätnej väzby pre používateľa, aby sa zlepšila používateľská skúsenosť pri zadávaní API kľúčov a kódov regiónov.
 
----
+**Úloha:** Vytvorte validačné funkcie v JavaScripte, ktoré skontrolujú, či pole API kľúča obsahuje aspoň 20 znakov a či kód regiónu dodržiava správny formát (napríklad 'US-NEISO'). Pridajte vizuálnu spätnú väzbu zmenou farby okrajov vstupných polí na zelenú pre platné vstupy a červenú pre neplatné. Taktiež pridajte funkciu prepínania na zobrazenie/skrytie API kľúča z dôvodu bezpečnosti.
+
+Viac o [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) sa dozviete tu.
 
 ## 🚀 Výzva
 
@@ -162,9 +256,9 @@ Pozrite sa na obchod s rozšíreniami prehliadača a nainštalujte si jedno do s
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/24)
 
-## Prehľad a samostatné štúdium
+## Prehľad & Samoštúdium
 
-V tejto lekcii ste sa naučili niečo o histórii webového prehliadača; využite túto príležitosť na to, aby ste sa dozvedeli viac o tom, ako si tvorcovia World Wide Web predstavovali jeho použitie, čítaním o jeho histórii. Niektoré užitočné stránky zahŕňajú:
+V tejto lekcii ste sa dozvedeli niečo o histórii webového prehliadača; využite túto príležitosť na to, aby ste sa dozvedeli viac o tom, ako si tvorcovia World Wide Web predstavovali jeho využitie, a prečítajte si viac o jeho histórii. Niektoré užitočné stránky zahŕňajú:
 
 [História webových prehliadačov](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -178,5 +272,5 @@ V tejto lekcii ste sa naučili niečo o histórii webového prehliadača; využi
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

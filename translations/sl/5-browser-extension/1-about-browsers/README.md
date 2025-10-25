@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2326d04e194a10aa760b51f5e5a1f61d",
-  "translation_date": "2025-08-29T12:47:11+00:00",
+  "original_hash": "33a875c522f237a2026e4653240dfc07",
+  "translation_date": "2025-10-25T00:46:41+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "sl"
 }
@@ -12,151 +12,280 @@ CO_OP_TRANSLATOR_METADATA:
 ![Skica brskalnika](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.sl.jpg)
 > Skica avtorja [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## Predhodni kviz
+## Predhodni kviz pred predavanjem
 
-[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/23)
+[Predhodni kviz pred predavanjem](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Uvod
 
-Razširitve brskalnika dodajajo dodatno funkcionalnost brskalniku. Preden začnete graditi svojo razširitev, se je dobro naučiti nekaj o tem, kako brskalniki delujejo.
+Razširitve brskalnika so mini aplikacije, ki izboljšajo vašo izkušnjo brskanja po spletu. Tako kot je bila prvotna vizija Tima Berners-Leeja interaktivni splet, razširitve razširijo zmogljivosti brskalnika onkraj preprostega ogledovanja dokumentov. Od upravljalnikov gesel, ki ohranjajo vaše račune varne, do izbirnikov barv, ki oblikovalcem pomagajo najti popolne odtenke, razširitve rešujejo vsakodnevne izzive pri brskanju.
 
-### O brskalniku
+Preden začnemo graditi vašo prvo razširitev, se moramo naučiti, kako delujejo brskalniki. Tako kot je Alexander Graham Bell moral razumeti prenos zvoka, preden je izumil telefon, vam bo poznavanje osnov brskalnikov pomagalo ustvariti razširitve, ki se brezhibno integrirajo z obstoječimi sistemi brskalnika.
 
-V tej seriji lekcij se boste naučili, kako zgraditi razširitev brskalnika, ki bo delovala v brskalnikih Chrome, Firefox in Edge. V tem delu boste odkrili, kako brskalniki delujejo, in pripravili osnovne elemente razširitve brskalnika.
+Do konca te lekcije boste razumeli arhitekturo brskalnika in začeli graditi svojo prvo razširitev.
 
-Kaj pa sploh je brskalnik? To je programska aplikacija, ki omogoča končnemu uporabniku dostop do vsebine s strežnika in njeno prikazovanje na spletnih straneh.
+## Razumevanje spletnih brskalnikov
 
-✅ Malo zgodovine: prvi brskalnik se je imenoval 'WorldWideWeb' in ga je leta 1990 ustvaril Sir Timothy Berners-Lee.
+Spletni brskalnik je v bistvu sofisticiran tolmač dokumentov. Ko v naslovno vrstico vnesete "google.com", brskalnik izvede zapleten niz operacij - zahteva vsebino s strežnikov po vsem svetu, nato pa analizira in upodobi kodo v interaktivne spletne strani, ki jih vidite.
+
+Ta proces je podoben temu, kako je bil prvi spletni brskalnik, WorldWideWeb, zasnovan leta 1990 s strani Tima Berners-Leeja, da bi hiperlinkane dokumente naredil dostopne vsem.
+
+✅ **Malo zgodovine**: Prvi brskalnik se je imenoval 'WorldWideWeb' in ga je leta 1990 ustvaril Sir Timothy Berners-Lee.
 
 ![zgodnji brskalniki](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.sl.jpg)
 > Nekateri zgodnji brskalniki, prek [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-Ko se uporabnik poveže z internetom z uporabo URL (Uniform Resource Locator) naslova, običajno prek protokola Hypertext Transfer Protocol z naslovom `http` ali `https`, brskalnik komunicira s spletnim strežnikom in pridobi spletno stran.
+### Kako brskalniki obdelujejo spletno vsebino
 
-Na tej točki brskalnikov mehanizem za upodabljanje prikaže stran na uporabnikovi napravi, ki je lahko mobilni telefon, namizni računalnik ali prenosnik.
+Proces med vnosom URL-ja in prikazom spletne strani vključuje več usklajenih korakov, ki se zgodijo v nekaj sekundah:
 
-Brskalniki imajo tudi sposobnost shranjevanja vsebine v predpomnilnik, da je ni treba vsakič znova pridobiti s strežnika. Lahko beležijo zgodovino uporabnikovega brskanja, shranjujejo 'piškotke', ki so majhni delci podatkov, ki vsebujejo informacije o uporabnikovi aktivnosti, in še več.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant DNS
+    participant Server
+    
+    User->>Browser: Types URL and presses Enter
+    Browser->>DNS: Looks up server IP address
+    DNS->>Browser: Returns IP address
+    Browser->>Server: Requests web page content
+    Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>User: Renders complete web page
+```
 
-Pomembno je vedeti, da vsi brskalniki niso enaki! Vsak brskalnik ima svoje prednosti in slabosti, profesionalni spletni razvijalec pa mora razumeti, kako narediti spletne strani, ki dobro delujejo v različnih brskalnikih. To vključuje obravnavo majhnih zaslonov, kot je mobilni telefon, pa tudi uporabnika, ki je brez povezave.
+**Kaj ta proces doseže:**
+- **Prevede** človeško berljiv URL v IP naslov strežnika prek iskanja DNS
+- **Vzpostavi** varno povezavo s spletnim strežnikom z uporabo protokolov HTTP ali HTTPS
+- **Zahteva** specifično vsebino spletne strani od strežnika
+- **Prejme** HTML oznake, CSS slogovne datoteke in JavaScript kodo od strežnika
+- **Upodobi** vso vsebino v interaktivno spletno stran, ki jo vidite
 
-Zelo uporabna spletna stran, ki jo je dobro shraniti med zaznamke v brskalniku, ki ga uporabljate, je [caniuse.com](https://www.caniuse.com). Ko gradite spletne strani, je zelo koristno uporabiti sezname podprtih tehnologij na caniuse, da najbolje podprete svoje uporabnike.
+### Osnovne funkcije brskalnika
 
-✅ Kako lahko ugotovite, kateri brskalniki so najbolj priljubljeni med uporabniki vaše spletne strani? Preverite svojo analitiko - lahko namestite različne analitične pakete kot del svojega procesa spletnega razvoja, ki vam bodo povedali, kateri brskalniki so najbolj uporabljeni.
+Sodobni brskalniki ponujajo številne funkcije, ki jih lahko razvijalci razširitev izkoristijo:
 
-## Razširitve brskalnika
+| Funkcija | Namen | Priložnosti za razširitve |
+|----------|-------|---------------------------|
+| **Upodabljalni motor** | Prikazuje HTML, CSS in JavaScript | Spreminjanje vsebine, vbrizgavanje slogov |
+| **JavaScript motor** | Izvaja JavaScript kodo | Prilagojeni skripti, interakcije z API-ji |
+| **Lokalno shranjevanje** | Shranjuje podatke lokalno | Nastavitve uporabnika, predpomnjeni podatki |
+| **Omrežni sklad** | Upravljanje spletnih zahtev | Spremljanje zahtev, analiza podatkov |
+| **Varnostni model** | Zaščita uporabnikov pred zlonamerno vsebino | Filtriranje vsebine, izboljšave varnosti |
 
-Zakaj bi želeli zgraditi razširitev brskalnika? To je priročno orodje, ki ga lahko dodate brskalniku, ko potrebujete hiter dostop do nalog, ki jih pogosto ponavljate. Na primer, če pogosto preverjate barve na različnih spletnih straneh, ki jih uporabljate, lahko namestite razširitev za izbiro barv. Če imate težave z zapomnitvijo gesel, lahko uporabite razširitev za upravljanje gesel.
+**Razumevanje teh funkcij vam pomaga:**
+- **Prepoznati**, kje lahko vaša razširitev doda največjo vrednost
+- **Izbrati** prave API-je brskalnika za funkcionalnost vaše razširitve
+- **Oblikovati** razširitve, ki učinkovito delujejo z brskalniškimi sistemi
+- **Zagotoviti**, da vaša razširitev sledi najboljšim varnostnim praksam brskalnika
 
-Razširitve brskalnika so tudi zabavne za razvoj. Običajno obvladujejo omejeno število nalog, ki jih opravljajo zelo dobro.
+### Razmisleki o razvoju za različne brskalnike
 
-✅ Katere so vaše najljubše razširitve brskalnika? Katere naloge opravljajo?
+Različni brskalniki izvajajo standarde z manjšimi razlikami, podobno kot različni programski jeziki obravnavajo isti algoritem na različne načine. Chrome, Firefox in Safari imajo vsak svoje značilnosti, ki jih morajo razvijalci upoštevati med razvojem razširitev.
 
-### Namestitev razširitev
+> 💡 **Nasvet**: Uporabite [caniuse.com](https://www.caniuse.com) za preverjanje, katere spletne tehnologije so podprte v različnih brskalnikih. To je neprecenljivo pri načrtovanju funkcij vaše razširitve!
 
-Preden začnete graditi, si oglejte postopek gradnje in uvajanja razširitve brskalnika. Čeprav se vsak brskalnik nekoliko razlikuje v tem, kako upravlja ta postopek, je postopek na Chrome in Firefox podoben temu primeru na Edge:
+**Ključni vidiki razvoja razširitev:**
+- **Testirajte** svojo razširitev v brskalnikih Chrome, Firefox in Edge
+- **Prilagodite** različnim API-jem razširitev brskalnikov in formatom manifestov
+- **Obravnavajte** različne značilnosti zmogljivosti in omejitve
+- **Zagotovite** rešitve za funkcije, specifične za brskalnik, ki morda niso na voljo
+
+✅ **Vpogled v analitiko**: Ugotovite, katere brskalnike vaši uporabniki najpogosteje uporabljajo, tako da v svoje projekte spletnega razvoja namestite analitične pakete. Ti podatki vam pomagajo določiti prioritete, katere brskalnike najprej podpreti.
+
+## Razumevanje razširitev brskalnika
+
+Razširitve brskalnika rešujejo pogoste izzive pri brskanju po spletu z dodajanjem funkcionalnosti neposredno v vmesnik brskalnika. Namesto da bi zahtevale ločene aplikacije ali zapletene delovne tokove, razširitve omogočajo takojšen dostop do orodij in funkcij.
+
+Ta koncept je podoben temu, kako so zgodnji računalniški pionirji, kot je bil Douglas Engelbart, predvideli povečanje človeških sposobnosti s tehnologijo - razširitve povečujejo osnovno funkcionalnost vašega brskalnika.
+
+**Priljubljene kategorije razširitev in njihove prednosti:**
+- **Orodja za produktivnost**: Upravljalniki nalog, aplikacije za beleženje in sledilci časa, ki vam pomagajo ostati organizirani
+- **Izboljšave varnosti**: Upravljalniki gesel, blokatorji oglasov in orodja za zasebnost, ki ščitijo vaše podatke
+- **Orodja za razvijalce**: Oblikovalci kode, izbirniki barv in orodja za odpravljanje napak, ki poenostavijo razvoj
+- **Izboljšanje vsebine**: Načini branja, prenosniki videov in orodja za zajem zaslona, ki izboljšajo vašo spletno izkušnjo
+
+✅ **Vprašanje za razmislek**: Katere so vaše najljubše razširitve brskalnika? Katere specifične naloge opravljajo in kako izboljšujejo vašo izkušnjo brskanja?
+
+## Namestitev in upravljanje razširitev
+
+Razumevanje postopka namestitve razširitev vam pomaga predvideti uporabniško izkušnjo, ko ljudje nameščajo vašo razširitev. Postopek namestitve je standardiziran v sodobnih brskalnikih, z manjšimi razlikami v oblikovanju vmesnika.
 
 ![posnetek zaslona brskalnika Edge, ki prikazuje odprto stran edge://extensions in odprt meni nastavitev](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.sl.png)
 
-> Opomba: Prepričajte se, da ste vklopili način za razvijalce in omogočili razširitve iz drugih trgovin.
+> **Pomembno**: Pri testiranju lastnih razširitev se prepričajte, da omogočite način za razvijalce in dovoljujete razširitve iz drugih trgovin.
 
-V bistvu bo postopek takšen:
+### Postopek namestitve razširitve med razvojem
 
-- zgradite svojo razširitev z uporabo `npm run build` 
-- v brskalniku se pomaknite na razdelek razširitev z uporabo gumba "Nastavitve in več" (ikona `...`) v zgornjem desnem kotu
-- če gre za novo namestitev, izberite `load unpacked`, da naložite novo razširitev iz njene mape za gradnjo (v našem primeru je to `/dist`) 
-- ali pa kliknite `reload`, če ponovno nalagate že nameščeno razširitev
+Ko razvijate in testirate svoje razširitve, sledite temu postopku:
 
-✅ Ta navodila se nanašajo na razširitve, ki jih sami zgradite; za namestitev razširitev, ki so bile objavljene v trgovini razširitev brskalnika, se pomaknite na te [trgovine](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) in namestite razširitev po svoji izbiri.
-
-### Začnite
-
-Zgradili boste razširitev brskalnika, ki prikazuje ogljični odtis vaše regije, prikazuje porabo energije vaše regije in vir energije. Razširitev bo imela obrazec, ki zbira ključ API, da lahko dostopate do API-ja CO2 Signal.
-
-**Potrebujete:**
-
-- [ključ API](https://www.co2signal.com/); vnesite svoj e-poštni naslov v polje na tej strani in poslali vam ga bodo
-- [kodo za vašo regijo](http://api.electricitymap.org/v3/zones), ki ustreza [Electricity Map](https://www.electricitymap.org/map) (v Bostonu, na primer, uporabljam 'US-NEISO').
-- [začetno kodo](../../../../5-browser-extension/start). Prenesite mapo `start`; v tej mapi boste dokončali kodo.
-- [NPM](https://www.npmjs.com) - NPM je orodje za upravljanje paketov; namestite ga lokalno in paketi, navedeni v vaši datoteki `package.json`, bodo nameščeni za uporabo pri vašem spletnem projektu
-
-✅ Več o upravljanju paketov se naučite v tem [odličnem modulu Learn](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
-
-Vzemite si trenutek in si oglejte osnovno kodo:
-
-dist
-    -|manifest.json (privzete nastavitve tukaj)
-    -|index.html (HTML označevanje sprednjega dela tukaj)
-    -|background.js (ozadje JS tukaj)
-    -|main.js (zgrajen JS)
-src
-    -|index.js (vaša JS koda gre sem)
-
-✅ Ko imate ključ API in kodo regije pripravljeno, ju shranite nekam v beležko za prihodnjo uporabo.
-
-### Zgradite HTML za razširitev
-
-Ta razširitev ima dva pogleda. Prvi za zbiranje ključa API in kode regije:
-
-![posnetek zaslona dokončane razširitve, odprte v brskalniku, ki prikazuje obrazec z vnosnimi polji za ime regije in ključ API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.sl.png)
-
-In drugi za prikaz ogljične porabe regije:
-
-![posnetek zaslona dokončane razširitve, ki prikazuje vrednosti za ogljično porabo in odstotek fosilnih goriv za regijo US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.sl.png)
-
-Začnimo z gradnjo HTML-ja za obrazec in oblikovanjem s CSS.
-
-V mapi `/dist` boste zgradili obrazec in območje za rezultate. V datoteki `index.html` zapolnite označeno območje obrazca:
-
-```HTML
-<form class="form-data" autocomplete="on">
-	<div>
-		<h2>New? Add your Information</h2>
-	</div>
-	<div>
-		<label for="region">Region Name</label>
-		<input type="text" id="region" required class="region-name" />
-	</div>
-	<div>
-		<label for="api">Your API Key from tmrow</label>
-		<input type="text" id="api" required class="api-key" />
-	</div>
-	<button class="search-btn">Submit</button>
-</form>	
+```bash
+# Step 1: Build your extension
+npm run build
 ```
-To je obrazec, kjer bodo shranjene informacije vnesene in shranjene v lokalno shrambo.
 
-Nato ustvarite območje za rezultate; pod zadnjo oznako obrazca dodajte nekaj divov:
+**Kaj ta ukaz doseže:**
+- **Prevede** vašo izvorno kodo v datoteke, pripravljene za brskalnik
+- **Združi** JavaScript module v optimizirane pakete
+- **Ustvari** končne datoteke razširitve v mapi `/dist`
+- **Pripravi** vašo razširitev za namestitev in testiranje
 
-```HTML
+**Korak 2: Odprite upravljanje razširitev v brskalniku**
+1. **Odprite** stran za upravljanje razširitev v vašem brskalniku
+2. **Kliknite** gumb "Nastavitve in več" (ikona `...`) v zgornjem desnem kotu
+3. **Izberite** "Razširitve" iz spustnega menija
+
+**Korak 3: Naložite svojo razširitev**
+- **Za nove namestitve**: Izberite `load unpacked` in izberite svojo mapo `/dist`
+- **Za posodobitve**: Kliknite `reload` poleg že nameščene razširitve
+- **Za testiranje**: Omogočite "Način za razvijalce", da dostopate do dodatnih funkcij za odpravljanje napak
+
+### Namestitev razširitve za produkcijo
+
+> ✅ **Opomba**: Ta navodila za razvoj so specifična za razširitve, ki jih sami ustvarite. Za namestitev objavljenih razširitev obiščite uradne trgovine z razširitvami brskalnikov, kot je [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
+
+**Razumevanje razlike:**
+- **Namestitve med razvojem** vam omogočajo testiranje neobjavljenih razširitev med razvojem
+- **Namestitve iz trgovine** zagotavljajo preverjene, objavljene razširitve z avtomatskimi posodobitvami
+- **Stranska namestitev** omogoča namestitev razširitev zunaj uradnih trgovin (zahteva način za razvijalce)
+
+## Gradnja razširitve za ogljični odtis
+
+Ustvarili bomo razširitev brskalnika, ki prikazuje ogljični odtis porabe energije v vaši regiji. Ta projekt prikazuje osnovne koncepte razvoja razširitev, hkrati pa ustvarja praktično orodje za ozaveščanje o okolju.
+
+Ta pristop sledi načelu "učenja skozi prakso", ki se je izkazalo za učinkovito že od izobraževalnih teorij Johna Deweyja - združuje tehnične veščine s smiselnimi aplikacijami v resničnem svetu.
+
+### Zahteve projekta
+
+Pred začetkom razvoja zberimo potrebne vire in odvisnosti:
+
+**Potrebni dostopi do API-jev:**
+- **[CO2 Signal API ključ](https://www.co2signal.com/)**: Vnesite svoj e-poštni naslov, da prejmete brezplačen API ključ
+- **[Koda regije](http://api.electricitymap.org/v3/zones)**: Poiščite kodo svoje regije z uporabo [Electricity Map](https://www.electricitymap.org/map) (na primer, Boston uporablja 'US-NEISO')
+
+**Orodja za razvoj:**
+- **[Node.js in NPM](https://www.npmjs.com)**: Orodje za upravljanje paketov za namestitev odvisnosti projekta
+- **[Začetna koda](../../../../5-browser-extension/start)**: Prenesite mapo `start` za začetek razvoja
+
+✅ **Več o tem**: Izboljšajte svoje veščine upravljanja paketov s tem [celovitim modulom za učenje](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+
+### Razumevanje strukture projekta
+
+Razumevanje strukture projekta pomaga učinkovito organizirati razvojno delo. Tako kot je bila Aleksandrijska knjižnica organizirana za enostavno iskanje znanja, dobro strukturirana koda omogoča učinkovitejši razvoj:
+
+```
+project-root/
+├── dist/                    # Built extension files
+│   ├── manifest.json        # Extension configuration
+│   ├── index.html           # User interface markup
+│   ├── background.js        # Background script functionality
+│   └── main.js              # Compiled JavaScript bundle
+└── src/                     # Source development files
+    └── index.js             # Your main JavaScript code
+```
+
+**Razčlenitev, kaj doseže posamezna datoteka:**
+- **`manifest.json`**: **Določa** metapodatke razširitve, dovoljenja in vstopne točke
+- **`index.html`**: **Ustvari** uporabniški vmesnik, ki se prikaže, ko uporabniki kliknejo na vašo razširitev
+- **`background.js`**: **Upravlja** naloge v ozadju in poslušalce dogodkov brskalnika
+- **`main.js`**: **Vsebuje** končno združeno JavaScript kodo po procesu gradnje
+- **`src/index.js`**: **Vsebuje** vašo glavno razvojno kodo, ki se prevede v `main.js`
+
+> 💡 **Nasvet za organizacijo**: Shranite svoj API ključ in kodo regije v varno beležko za enostavno referenco med razvojem. Te vrednosti boste potrebovali za testiranje funkcionalnosti vaše razširitve.
+
+✅ **Opomba o varnosti**: Nikoli ne shranjujte API ključev ali občutljivih poverilnic v svojem repozitoriju kode. V naslednjih korakih vam bomo pokazali, kako jih varno obravnavati.
+
+## Ustvarjanje vmesnika razširitve
+
+Zdaj bomo zgradili komponente uporabniškega vmesnika. Razširitev uporablja dvostranski pristop: zaslon za konfiguracijo za začetno nastavitev in zaslon z rezultati za prikaz podatkov.
+
+To sledi načelu postopnega razkrivanja, ki se uporablja pri oblikovanju vmesnikov že od zgodnjih dni računalništva - razkrivanje informacij in možnosti v logičnem zaporedju, da se uporabniki ne počutijo preobremenjene.
+
+### Pregled pogledov razširitve
+
+**Pogled za nastavitev** - Konfiguracija za prve uporabnike:
+![posnetek zaslona dokončane razširitve, odprte v brskalniku, ki prikazuje obrazec z vnosnimi polji za ime regije in API ključ.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.sl.png)
+
+**Pogled rezultatov** - Prikaz podatkov o ogljičnem odtisu:
+![posnetek zaslona dokončane razširitve, ki prikazuje vrednosti za porabo ogljika in odstotek fosilnih goriv za regijo US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.sl.png)
+
+### Gradnja obrazca za konfiguracijo
+
+Obrazec za nastavitev zbira podatke o konfiguraciji uporabnika ob prvi uporabi. Ko je konfiguriran, se te informacije shranijo v shrambo brskalnika za prihodnje seje.
+
+V datoteko `/dist/index.html` dodajte to strukturo obrazca:
+
+```html
+<form class="form-data" autocomplete="on">
+    <div>
+        <h2>New? Add your Information</h2>
+    </div>
+    <div>
+        <label for="region">Region Name</label>
+        <input type="text" id="region" required class="region-name" />
+    </div>
+    <div>
+        <label for="api">Your API Key from tmrow</label>
+        <input type="text" id="api" required class="api-key" />
+    </div>
+    <button class="search-btn">Submit</button>
+</form>
+```
+
+**Kaj ta obrazec doseže:**
+- **Ustvari** semantično strukturo obrazca z ustreznimi oznakami in povezavami vnosov
+- **Omogoča** funkcionalnost samodejnega dopolnjevanja brskalnika za izboljšano uporabniško izkušnjo
+- **Zahteva**, da sta obe polji izpolnjeni pred oddajo z uporabo atributa `required`
+- **Organizira** vnose z opisnimi imeni razredov za enostavno oblikovanje in ciljanje z JavaScriptom
+- **Ponuja** jasna navodila za uporabnike, ki prvič nastavljajo razširitev
+
+### Gradnja prikaza rezultatov
+
+Nato ustvarite območje rezultatov, ki bo prikazovalo podatke o ogljičnem odtisu. Dodajte ta HTML pod obrazec:
+
+```html
 <div class="result">
-	<div class="loading">loading...</div>
-	<div class="errors"></div>
-	<div class="data"></div>
-	<div class="result-container">
-		<p><strong>Region: </strong><span class="my-region"></span></p>
-		<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
-		<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
-	</div>
-	<button class="clear-btn">Change region</button>
+    <div class="loading">loading...</div>
+    <div class="errors"></div>
+    <div class="data"></div>
+    <div class="result-container">
+        <p><strong>Region: </strong><span class="my-region"></span></p>
+        <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+        <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+    </div>
+    <button class="clear-btn">Change region</button>
 </div>
 ```
-Na tej točki lahko poskusite zgraditi. Prepričajte se, da ste namestili odvisnosti paketa te razširitve:
 
-```
+**Razčlenitev, kaj ta struktura omogoča:**
+- **`loading`**: **Prikaže** sporočilo o nalaganju med pridobivanjem podatkov iz API-ja
+- **`errors`**: **Prikaže** sporočila o napakah, če klici API ne uspejo ali so podatki neveljavni
+- **`data`**: **Hrani** surove podatke za odpravljanje napak med razvojem
+- **`result-container`**: **Predstavi** formatirane informacije o ogljičnem odtisu uporabnikom
+- **`clear-btn`**: **Omogoča** uporabnikom, da spremenijo svojo regijo in ponovno konfigurirajo razširitev
+
+### Nastavitev procesa gradnje
+
+Zdaj namestimo odvisnosti projekta in preizkusimo proces gradnje:
+
+```bash
 npm install
 ```
 
-Ta ukaz bo uporabil npm, upravitelja paketov Node, za namestitev webpacka za proces gradnje vaše razširitve. Izid tega procesa si lahko ogledate v `/dist/main.js` - videli boste, da je koda združena.
+**Kaj doseže ta proces namestitve:**
+- **Prenese** Webpack in druge razvojne odvisnosti, določene v `package.json`
+- **Konfigurira** orodje za gradnjo za prevajanje sodobnega JavaScripta
+- **Pripravi** razvojno okolje za gradnjo in testiranje razširitve
+- **Omogoča** združevanje kode, optimizacijo
+**Opis:** Izboljšajte razširitev brskalnika z dodajanjem funkcij za validacijo obrazcev in povratne informacije uporabnikom, da izboljšate uporabniško izkušnjo pri vnosu API ključev in kod regij.
 
-Za zdaj bi se morala razširitev zgraditi, in če jo uvedete v Edge kot razširitev, boste videli lepo prikazan obrazec.
+**Navodilo:** Ustvarite funkcije za validacijo v JavaScriptu, ki preverjajo, ali polje za API ključ vsebuje vsaj 20 znakov in ali koda regije ustreza pravilni obliki (na primer 'US-NEISO'). Dodajte vizualne povratne informacije tako, da spremenite barvo obrobe vnosnih polj v zeleno za veljavne vnose in rdečo za neveljavne. Prav tako dodajte funkcijo za preklop prikaza/skritja API ključa zaradi varnosti.
 
-Čestitamo, naredili ste prve korake k gradnji razširitve brskalnika. V naslednjih lekcijah jo boste naredili bolj funkcionalno in uporabno.
-
----
+Več o [načinu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) si lahko preberete tukaj.
 
 ## 🚀 Izziv
 
-Oglejte si trgovino z razširitvami brskalnika in namestite eno v svoj brskalnik. Datoteke lahko preučite na zanimive načine. Kaj odkrijete?
+Oglejte si trgovino z razširitvami za brskalnik in namestite eno v svoj brskalnik. Datoteke razširitve lahko preučite na zanimive načine. Kaj odkrijete?
 
 ## Kviz po predavanju
 
@@ -164,7 +293,7 @@ Oglejte si trgovino z razširitvami brskalnika in namestite eno v svoj brskalnik
 
 ## Pregled in samostojno učenje
 
-V tej lekciji ste se naučili nekaj o zgodovini spletnega brskalnika; izkoristite to priložnost, da se naučite, kako so si izumitelji svetovnega spleta zamislili njegovo uporabo, tako da preberete več o njegovi zgodovini. Nekaj uporabnih strani vključuje:
+V tej lekciji ste se naučili nekaj o zgodovini spletnih brskalnikov; izkoristite to priložnost, da se naučite več o tem, kako so izumitelji svetovnega spleta zamišljali njegovo uporabo, tako da preberete več o njegovi zgodovini. Nekaj uporabnih spletnih strani vključuje:
 
 [Zgodovina spletnih brskalnikov](https://www.mozilla.org/firefox/browsers/browser-history/)
 
@@ -179,4 +308,4 @@ V tej lekciji ste se naučili nekaj o zgodovini spletnega brskalnika; izkoristit
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni prevod s strani človeka. Ne prevzemamo odgovornosti za morebitna napačna razumevanja ali napačne interpretacije, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatski prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
