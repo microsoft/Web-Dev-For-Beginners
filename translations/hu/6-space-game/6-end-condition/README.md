@@ -1,41 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "05be6c37791668e3719c4fba94566367",
-  "translation_date": "2025-08-29T10:29:31+00:00",
+  "original_hash": "46bcdd9a0174031655a49bb062aa279c",
+  "translation_date": "2025-10-24T20:32:26+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "hu"
 }
 -->
-# Űrjáték építése 6. rész: Befejezés és újrakezdés
+# Űrjáték készítése 6. rész: Befejezés és újrakezdés
+
+Minden nagyszerű játékhoz szükség van egyértelmű befejezési feltételekre és egy gördülékeny újrakezdési mechanizmusra. Már egy lenyűgöző űrjátékot építettél mozgással, harccal és pontszerzéssel - most itt az ideje, hogy hozzáadd az utolsó elemeket, amelyek teljessé teszik.
+
+A játékod jelenleg végtelenül fut, mint a NASA által 1977-ben indított Voyager szondák - amelyek évtizedek óta utaznak az űrben. Bár ez rendben van az űrkutatás szempontjából, a játékoknak meghatározott végpontokra van szükségük, hogy kielégítő élményt nyújtsanak.
+
+Ma megfelelő győzelmi/vereségi feltételeket és egy újrakezdési rendszert fogunk megvalósítani. A lecke végére egy olyan kifinomult játékot kapsz, amelyet a játékosok befejezhetnek és újra játszhatnak, akárcsak a klasszikus arcade játékok, amelyek meghatározták a médiumot.
 
 ## Előadás előtti kvíz
 
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/39)
 
-Egy játékban különböző módokon lehet kifejezni a *befejezési feltételt*. Mint a játék készítője, rajtad múlik, hogy meghatározd, miért ér véget a játék. Íme néhány ok, ha feltételezzük, hogy az eddig épített űrjátékról beszélünk:
+## A játék befejezési feltételeinek megértése
 
-- **`N` ellenséges hajó megsemmisült**: Gyakori, hogy ha egy játékot különböző szintekre osztasz, akkor egy szint teljesítéséhez `N` ellenséges hajót kell megsemmisíteni.
-- **A hajód megsemmisült**: Vannak olyan játékok, ahol elveszíted a játékot, ha a hajód megsemmisül. Egy másik gyakori megközelítés az, hogy életek fogalmát vezeted be. Minden alkalommal, amikor a hajód megsemmisül, elveszítesz egy életet. Ha minden életed elfogyott, akkor vége a játéknak.
-- **Összegyűjtöttél `N` pontot**: Egy másik gyakori befejezési feltétel, hogy pontokat gyűjts. Az, hogy hogyan szerzel pontokat, rajtad múlik, de gyakori, hogy pontokat rendelnek különböző tevékenységekhez, például egy ellenséges hajó megsemmisítéséhez vagy tárgyak gyűjtéséhez, amelyeket a tárgyak *eldobnak*, amikor megsemmisülnek.
-- **Teljesítettél egy szintet**: Ez több feltételt is magában foglalhat, például `X` ellenséges hajó megsemmisítését, `Y` pont összegyűjtését, vagy esetleg egy adott tárgy megszerzését.
+Mikor kell véget érnie a játékodnak? Ez az alapvető kérdés formálta a játéktervezést az arcade korszak óta. A Pac-Man akkor ér véget, amikor elkapnak a szellemek, vagy amikor az összes pontot begyűjtöd, míg a Space Invaders akkor ér véget, amikor az idegenek elérik az alját, vagy amikor mindet elpusztítod.
 
-## Újrakezdés
+Mint a játék készítője, te határozod meg a győzelmi és vereségi feltételeket. Az űrjátékunkhoz itt van néhány bevált megközelítés, amelyek izgalmas játékmenetet teremtenek:
 
-Ha az emberek élvezik a játékodat, valószínűleg újra szeretnék játszani. Amikor a játék bármilyen okból véget ér, biztosíts egy lehetőséget az újrakezdésre.
+- **`N` ellenséges hajó megsemmisítése**: Gyakori, hogy ha a játékot különböző szintekre osztod, akkor `N` ellenséges hajót kell megsemmisítened a szint teljesítéséhez.
+- **A hajód megsemmisült**: Vannak olyan játékok, ahol elveszíted a játékot, ha a hajód megsemmisül. Egy másik gyakori megközelítés az, hogy életek koncepcióját használod. Minden alkalommal, amikor a hajód megsemmisül, egy életet elveszítesz. Ha minden életet elveszítettél, akkor veszítesz.
+- **`N` pontot gyűjtöttél**: Egy másik gyakori befejezési feltétel az, hogy pontokat gyűjtesz. Hogy hogyan szerzel pontokat, az rajtad múlik, de gyakori, hogy különböző tevékenységekhez rendelnek pontokat, például ellenséges hajó megsemmisítéséhez vagy tárgyak gyűjtéséhez, amelyeket a tárgyak *eldobnak*, amikor megsemmisülnek.
+- **Szint teljesítése**: Ez több feltételt is magában foglalhat, például `X` ellenséges hajó megsemmisítése, `Y` pontok gyűjtése, vagy esetleg egy adott tárgy begyűjtése.
 
-✅ Gondold át, hogy milyen feltételek mellett ér véget egy játék, és hogyan ösztönöznek az újrakezdésre.
+## A játék újrakezdési funkciójának megvalósítása
 
-## Mit kell építeni
+A jó játékok újrajátszhatóságot ösztönöznek gördülékeny újrakezdési mechanizmusokkal. Amikor a játékosok befejeznek egy játékot (vagy vereséget szenvednek), gyakran azonnal újra szeretnék kezdeni - akár azért, hogy megdöntsék a pontszámukat, akár hogy javítsák a teljesítményüket.
 
-A következő szabályokat fogod hozzáadni a játékodhoz:
+A Tetris tökéletes példája ennek: amikor a blokkok elérik a tetejét, azonnal új játékot kezdhetsz anélkül, hogy bonyolult menükön kellene navigálnod. Egy hasonló újrakezdési rendszert fogunk építeni, amely tisztán visszaállítja a játék állapotát, és gyorsan visszajuttatja a játékosokat az akcióba.
 
-1. **A játék megnyerése**. Ha az összes ellenséges hajót megsemmisítetted, megnyered a játékot. Ezenkívül jeleníts meg valamilyen győzelmi üzenetet.
-2. **Újrakezdés**. Ha minden életed elfogyott, vagy megnyerted a játékot, biztosíts egy lehetőséget a játék újrakezdésére. Ne feledd! Újra kell inicializálnod a játékot, és a korábbi játékállapotot törölni kell.
+✅ **Reflexió**: Gondolj azokra a játékokra, amelyeket játszottál. Milyen feltételek mellett érnek véget, és hogyan ösztönöznek az újrakezdésre? Mi teszi az újrakezdési élményt gördülékennyé vagy frusztrálóvá?
 
-## Ajánlott lépések
+## Amit építeni fogsz
 
-Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre számodra. Ezeknek a következőket kell tartalmazniuk:
+A végső funkciókat fogod megvalósítani, amelyek átalakítják a projektedet egy teljes játékélménnyé. Ezek az elemek különböztetik meg a kifinomult játékokat az alapvető prototípusoktól.
+
+**Íme, amit ma hozzáadunk:**
+
+1. **Győzelmi feltétel**: Pusztítsd el az összes ellenséget, és kapj egy megfelelő ünneplést (megérdemelted!)
+2. **Vereségi feltétel**: Fogyjanak el az életeid, és nézz szembe a vereség képernyőjével
+3. **Újrakezdési mechanizmus**: Nyomd meg az Entert, hogy azonnal visszaugorj - mert egy játék sosem elég
+4. **Állapotkezelés**: Tiszta lap minden alkalommal - nincs maradék ellenség vagy furcsa hibák az előző játékból
+
+## Kezdjük el
+
+Készítsd elő a fejlesztési környezetedet. Minden korábbi leckéből származó űrjáték fájlodnak készen kell állnia.
+
+**A projektednek valahogy így kell kinéznie:**
 
 ```bash
 -| assets
@@ -48,189 +66,257 @@ Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre
 -| package.json
 ```
 
-A projektedet a `your_work` mappában indíthatod el az alábbi parancs beírásával:
+**Indítsd el a fejlesztési szervert:**
 
 ```bash
 cd your-work
 npm start
 ```
 
-A fenti parancs egy HTTP szervert indít a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. A játékodnak játszható állapotban kell lennie.
+**Ez a parancs:**
+- Helyi szervert futtat a `http://localhost:5000` címen
+- Megfelelően szolgáltatja a fájlokat
+- Automatikusan frissíti a változtatásokat
 
-> Tipp: hogy elkerüld a figyelmeztetéseket a Visual Studio Code-ban, szerkeszd a `window.onload` függvényt úgy, hogy a `gameLoopId`-t hívja meg (a `let` nélkül), és deklaráld a `gameLoopId`-t a fájl tetején külön: `let gameLoopId;`
+Nyisd meg a `http://localhost:5000` címet a böngésződben, és ellenőrizd, hogy a játékod fut-e. Mozognod, lőnöd és interakcióba lépned kell az ellenségekkel. Ha ez megerősítést nyert, folytathatjuk a megvalósítást.
 
-### Kód hozzáadása
+> 💡 **Profi tipp**: A Visual Studio Code figyelmeztetéseinek elkerülése érdekében deklaráld a `gameLoopId`-t a fájl tetején `let gameLoopId;` formában, ahelyett, hogy a `window.onload` függvényen belül deklarálnád. Ez követi a modern JavaScript változó deklarációs legjobb gyakorlatokat.
 
-1. **Befejezési feltétel követése**. Adj hozzá kódot, amely nyomon követi az ellenségek számát, vagy hogy a hős hajó megsemmisült-e, az alábbi két függvény hozzáadásával:
+## Megvalósítási lépések
 
-    ```javascript
-    function isHeroDead() {
-      return hero.life <= 0;
+### 1. lépés: Befejezési feltételeket nyomon követő függvények létrehozása
+
+Szükségünk van olyan függvényekre, amelyek figyelik, mikor kell véget érnie a játéknak. Mint az International Space Station szenzorai, amelyek folyamatosan figyelik a kritikus rendszereket, ezek a függvények folyamatosan ellenőrzik a játék állapotát.
+
+```javascript
+function isHeroDead() {
+  return hero.life <= 0;
+}
+
+function isEnemiesDead() {
+  const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
+  return enemies.length === 0;
+}
+```
+
+**Mi történik a háttérben:**
+- **Ellenőrzi**, hogy a hősünknek elfogytak-e az életei (au!)
+- **Számolja**, hány ellenség van még életben
+- **`true` értéket ad vissza**, amikor a csatatér tiszta az ellenségektől
+- **Egyszerű igaz/hamis logikát használ**, hogy egyértelmű legyen
+- **Szűri** az összes játékelem között, hogy megtalálja a túlélőket
+
+### 2. lépés: Eseménykezelők frissítése a befejezési feltételekhez
+
+Most összekapcsoljuk ezeket a feltétel-ellenőrzéseket a játék eseményrendszerével. Minden ütközéskor a játék értékeli, hogy kiváltja-e a befejezési feltételt. Ez azonnali visszajelzést ad a kritikus játékeseményekről.
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+    first.dead = true;
+    second.dead = true;
+    hero.incrementPoints();
+
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
     }
+});
 
-    function isEnemiesDead() {
-      const enemies = gameObjects.filter((go) => go.type === "Enemy" && !go.dead);
-      return enemies.length === 0;
+eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
+    enemy.dead = true;
+    hero.decrementLife();
+    if (isHeroDead())  {
+      eventEmitter.emit(Messages.GAME_END_LOSS);
+      return; // loss before victory
     }
-    ```
+    if (isEnemiesDead()) {
+      eventEmitter.emit(Messages.GAME_END_WIN);
+    }
+});
 
-1. **Logika hozzáadása az üzenetkezelőkhöz**. Szerkeszd az `eventEmitter`-t, hogy kezelje ezeket a feltételeket:
+eventEmitter.on(Messages.GAME_END_WIN, () => {
+    endGame(true);
+});
+  
+eventEmitter.on(Messages.GAME_END_LOSS, () => {
+  endGame(false);
+});
+```
 
-    ```javascript
-    eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-        first.dead = true;
-        second.dead = true;
-        hero.incrementPoints();
+**Mi történik itt:**
+- **Lézer eltalálja az ellenséget**: Mindkettő eltűnik, pontokat kapsz, és ellenőrizzük, hogy nyertél-e
+- **Ellenség eltalál téged**: Elveszítesz egy életet, és ellenőrizzük, hogy még életben vagy-e
+- **Okos sorrend**: Először a vereséget ellenőrizzük (senki sem akar egyszerre nyerni és veszíteni!)
+- **Azonnali reakciók**: Amint valami fontos történik, a játék tud róla
 
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
+### 3. lépés: Új üzenetkonstansok hozzáadása
 
-    eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
-        enemy.dead = true;
-        hero.decrementLife();
-        if (isHeroDead())  {
-          eventEmitter.emit(Messages.GAME_END_LOSS);
-          return; // loss before victory
-        }
-        if (isEnemiesDead()) {
-          eventEmitter.emit(Messages.GAME_END_WIN);
-        }
-    });
-    
-    eventEmitter.on(Messages.GAME_END_WIN, () => {
-        endGame(true);
-    });
-      
-    eventEmitter.on(Messages.GAME_END_LOSS, () => {
-      endGame(false);
-    });
-    ```
+Új üzenettípusokat kell hozzáadnod a `Messages` konstans objektumhoz. Ezek a konstansok segítenek fenntartani a konzisztenciát és megelőzni a gépelési hibákat az eseményrendszerben.
 
-1. **Új üzenettípusok hozzáadása**. Add hozzá ezeket az Üzeneteket a constants objektumhoz:
+```javascript
+GAME_END_LOSS: "GAME_END_LOSS",
+GAME_END_WIN: "GAME_END_WIN",
+```
 
-    ```javascript
-    GAME_END_LOSS: "GAME_END_LOSS",
-    GAME_END_WIN: "GAME_END_WIN",
-    ```
+**A fentiekben:**
+- **Hozzáadtunk** konstansokat a játék végi eseményekhez a konzisztencia fenntartása érdekében
+- **Leíró neveket használtunk**, amelyek egyértelműen jelzik az esemény célját
+- **Követtük** az üzenettípusok meglévő elnevezési konvencióját
 
-2. **Újrakezdési kód hozzáadása**. Adj hozzá kódot, amely újraindítja a játékot egy kiválasztott gomb megnyomásakor.
+### 4. lépés: Újrakezdési vezérlők megvalósítása
 
-   1. **Figyelj az `Enter` billentyű lenyomására**. Szerkeszd az ablakod eventListener-jét, hogy figyeljen erre a billentyűre:
+Most hozzáadod a billentyűzetvezérlést, amely lehetővé teszi a játékosok számára a játék újrakezdését. Az Enter billentyű természetes választás, mivel általában a műveletek megerősítéséhez és az új játékok indításához kapcsolódik.
 
-    ```javascript
-     else if(evt.key === "Enter") {
-        eventEmitter.emit(Messages.KEY_EVENT_ENTER);
-      }
-    ```
+**Add hozzá az Enter billentyű érzékelését a meglévő keydown eseményfigyelődhöz:**
 
-   1. **Újrakezdési üzenet hozzáadása**. Add hozzá ezt az Üzenetet az Üzenetek konstanshoz:
+```javascript
+else if(evt.key === "Enter") {
+   eventEmitter.emit(Messages.KEY_EVENT_ENTER);
+}
+```
 
-        ```javascript
-        KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
-        ```
+**Add hozzá az új üzenetkonstanst:**
 
-1. **Játékszabályok megvalósítása**. Valósítsd meg a következő játékszabályokat:
+```javascript
+KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
+```
 
-   1. **Játékos győzelmi feltétele**. Ha az összes ellenséges hajót megsemmisítetted, jeleníts meg egy győzelmi üzenetet.
+**Amit tudnod kell:**
+- **Kiterjeszti** a meglévő billentyűzet eseménykezelő rendszeredet
+- **Az Enter billentyűt használja** az újrakezdés indítójaként az intuitív felhasználói élmény érdekében
+- **Egyedi eseményt bocsát ki**, amelyet a játék más részei figyelhetnek
+- **Fenntartja** ugyanazt a mintát, mint a többi billentyűzetvezérlés
 
-      1. Először hozz létre egy `displayMessage()` függvényt:
+### 5. lépés: Üzenetmegjelenítő rendszer létrehozása
 
-        ```javascript
-        function displayMessage(message, color = "red") {
-          ctx.font = "30px Arial";
-          ctx.fillStyle = color;
-          ctx.textAlign = "center";
-          ctx.fillText(message, canvas.width / 2, canvas.height / 2);
-        }
-        ```
+A játékodnak egyértelműen kommunikálnia kell az eredményeket a játékosokkal. Létrehozunk egy üzenetrendszert, amely színkódolt szöveggel jeleníti meg a győzelmi és vereségi állapotokat, hasonlóan a korai számítógépes rendszerek terminál interfészeihez, ahol a zöld a sikert, a piros pedig a hibákat jelezte.
 
-      1. Hozz létre egy `endGame()` függvényt:
+**Hozd létre a `displayMessage()` függvényt:**
 
-        ```javascript
-        function endGame(win) {
-          clearInterval(gameLoopId);
-        
-          // set a delay so we are sure any paints have finished
-          setTimeout(() => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "black";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            if (win) {
-              displayMessage(
-                "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
-                "green"
-              );
-            } else {
-              displayMessage(
-                "You died !!! Press [Enter] to start a new game Captain Pew Pew"
-              );
-            }
-          }, 200)  
-        }
-        ```
+```javascript
+function displayMessage(message, color = "red") {
+  ctx.font = "30px Arial";
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  ctx.fillText(message, canvas.width / 2, canvas.height / 2);
+}
+```
 
-   1. **Újrakezdési logika**. Ha minden életed elfogyott, vagy megnyerted a játékot, jelenítsd meg, hogy a játék újraindítható. Ezenkívül indítsd újra a játékot, amikor az *újrakezdés* gombot megnyomják (te döntöd el, melyik billentyű legyen az újrakezdéshez rendelve).
+**Lépésről lépésre, mi történik:**
+- **Beállítja** a betűméretet és a betűtípust az egyértelmű, olvasható szöveghez
+- **Alkalmazza** az alapértelmezett színparamétert, amely "piros" a figyelmeztetésekhez
+- **Középre helyezi** a szöveget vízszintesen és függőlegesen a vásznon
+- **Modern JavaScript alapértelmezett paramétereket használ** a rugalmas színopciókhoz
+- **A vászon 2D kontextusát használja** közvetlen szövegmegjelenítéshez
 
-      1. Hozd létre a `resetGame()` függvényt:
+**Hozd létre az `endGame()` függvényt:**
 
-        ```javascript
-        function resetGame() {
-          if (gameLoopId) {
-            clearInterval(gameLoopId);
-            eventEmitter.clear();
-            initGame();
-            gameLoopId = setInterval(() => {
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              ctx.fillStyle = "black";
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-              drawPoints();
-              drawLife();
-              updateGameObjects();
-              drawGameObjects(ctx);
-            }, 100);
-          }
-        }
-        ```
+```javascript
+function endGame(win) {
+  clearInterval(gameLoopId);
 
-     1. Adj hozzá egy hívást az `eventEmitter`-hez, hogy újraindítsa a játékot az `initGame()`-ben:
+  // Set a delay to ensure any pending renders complete
+  setTimeout(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (win) {
+      displayMessage(
+        "Victory!!! Pew Pew... - Press [Enter] to start a new game Captain Pew Pew",
+        "green"
+      );
+    } else {
+      displayMessage(
+        "You died !!! Press [Enter] to start a new game Captain Pew Pew"
+      );
+    }
+  }, 200)  
+}
+```
 
-        ```javascript
-        eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
-          resetGame();
-        });
-        ```
+**Mit csinál ez a függvény:**
+- **Megállít** mindent - nincs több mozgó hajó vagy lézer
+- **Kis szünetet tart** (200ms), hogy az utolsó képkocka befejezhesse a rajzolást
+- **Tisztára törli** a képernyőt, és drámai hatásként feketére festi
+- **Különböző üzeneteket jelenít meg** a győzteseknek és veszteseknek
+- **Színkódolja** a híreket - zöld a jó, piros a... nos, nem annyira jó
+- **Pontosan megmondja** a játékosoknak, hogyan ugorjanak vissza
 
-     1. Adj hozzá egy `clear()` függvényt az EventEmitter-hez:
+### 6. lépés: Játék visszaállítási funkció megvalósítása
 
-        ```javascript
-        clear() {
-          this.listeners = {};
-        }
-        ```
+A visszaállítási rendszernek teljesen tisztítania kell az aktuális játékállapotot, és új játékülést kell indítania. Ez biztosítja, hogy a játékosok tiszta kezdést kapjanak, anélkül, hogy bármilyen maradék adat maradna az előző játékból.
 
-👽 💥 🚀 Gratulálok, Kapitány! A játékod elkészült! Szép munka! 🚀 💥 👽
+**Hozd létre a `resetGame()` függvényt:**
+
+```javascript
+function resetGame() {
+  if (gameLoopId) {
+    clearInterval(gameLoopId);
+    eventEmitter.clear();
+    initGame();
+    gameLoopId = setInterval(() => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      drawPoints();
+      drawLife();
+      updateGameObjects();
+      drawGameObjects(ctx);
+    }, 100);
+  }
+}
+```
+
+**Értsük meg az egyes részeket:**
+- **Ellenőrzi**, hogy jelenleg fut-e egy játékkör, mielőtt visszaállítaná
+- **Törli** a meglévő játékkört, hogy leállítsa az aktuális játék tevékenységeit
+- **Eltávolítja** az összes eseményfigyelőt, hogy elkerülje a memória szivárgását
+- **Újra inicializálja** a játék állapotát friss objektumokkal és változókkal
+- **Új játékkört indít** az összes alapvető játékműködéssel
+- **Fenntartja** ugyanazt a 100ms-os intervallumot a következetes játék teljesítmény érdekében
+
+**Add hozzá az Enter billentyű eseményfigyelőt az `initGame()` függvényedhez:**
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
+  resetGame();
+});
+```
+
+**Add hozzá a `clear()` metódust az EventEmitter osztályodhoz:**
+
+```javascript
+clear() {
+  this.listeners = {};
+}
+```
+
+**Fontos pontok, amelyeket meg kell jegyezni:**
+- **Összekapcsolja** az Enter billentyű lenyomását a játék visszaállítási funkciójával
+- **Regisztrálja** ezt az eseményfigyelőt a játék inicializálása során
+- **Tiszta módot biztosít** az összes eseményfigyelő eltávolítására a játékok között
+- **Megakadályozza** a memória szivárgást az eseménykezelők törlésével a játékok között
+- **Visszaállítja** a figyelők objektumot üres állapotba a friss inicializáláshoz
+
+## Gratulálok! 🎉
+
+👽 💥 🚀 Sikeresen felépítettél egy teljes játékot az alapoktól kezdve. Akárcsak az 1970-es évek első videojátékainak programozói, te is átalakítottad a kódsorokat egy interaktív élménnyé, megfelelő játékmenettel és felhasználói visszajelzéssel. 🚀 💥 👽
+
+**Ezt érted el:**
+- **Megvalósítottad** a teljes győzelmi és vereségi feltételeket felhasználói visszajelzéssel
+- **Létrehoztál** egy zökkenőmentes újrakezdési rendszert a folyamatos játékmenethez
+- **Megtervezted** a játékállapotok egyértelmű vizuális kommunikációját
+- **Kezelted** az összetett játékállapot-váltásokat és tisztítást
+- **Összeállítottad** az összes komponenst egy összefüggő, játszható játékká
+
+## GitHub Copilot Agent kihívás 🚀
+
+Használd az Agent módot a következő kihívás teljesítéséhez:
+
+**Leírás:** Fejleszd az űrjátékot egy szintlépési rendszer megvalósításával, növekvő nehézségi szintekkel és bónusz funkciókkal.
+
+**Feladat:** Hozz létre egy többszintű űrjáték rendszert, ahol minden szinten több ellenséges hajó van, nagyobb sebességgel és életerővel. Adj hozzá egy pontszám szorzót, amely minden szinttel növekszik, és valósíts meg erősítőket (
 
 ---
 
-## 🚀 Kihívás
-
-Adj hozzá hangot! Tudsz hangot hozzáadni, hogy fokozd a játékélményt? Például, amikor egy lézer talál, vagy a hős meghal, vagy győz? Nézd meg ezt a [sandboxot](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play), hogy megtanuld, hogyan lehet hangot lejátszani JavaScript segítségével.
-
-## Előadás utáni kvíz
-
-[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/40)
-
-## Áttekintés és önálló tanulás
-
-A feladatod egy új minta játék létrehozása, ezért fedezz fel néhány érdekes játékot, hogy inspirációt kapj, milyen típusú játékot építhetnél.
-
-## Feladat
-
-[Minta játék építése](assignment.md)
-
----
-
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

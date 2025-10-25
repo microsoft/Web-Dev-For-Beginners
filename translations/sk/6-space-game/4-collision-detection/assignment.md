@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8a0a097b45e7c75a611e2795e4013f16",
-  "translation_date": "2025-08-27T22:30:34+00:00",
+  "original_hash": "124efddbb65166cddb38075ad6dae324",
+  "translation_date": "2025-10-24T21:48:41+00:00",
   "source_file": "6-space-game/4-collision-detection/assignment.md",
   "language_code": "sk"
 }
@@ -11,15 +11,52 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Pokyny
 
-Aby ste lepšie pochopili, ako fungujú kolízie, vytvorte veľmi malú hru s niekoľkými objektmi, ktoré sa zrážajú. Umožnite im pohyb prostredníctvom stlačenia klávesov alebo kliknutí myšou a zabezpečte, aby sa niečo stalo jednému z objektov pri zrážke. Môže to byť napríklad meteorit, ktorý zasiahne Zem, alebo autíčka na nárazníkoch. Buďte kreatívni!
+Uplatnite svoje znalosti detekcie kolízií vytvorením vlastnej mini-hry, ktorá demonštruje rôzne typy interakcií objektov. Táto úloha vám pomôže pochopiť mechaniku kolízií prostredníctvom kreatívnej implementácie a experimentovania.
+
+### Požiadavky na projekt
+
+**Vytvorte malú interaktívnu hru, ktorá obsahuje:**
+- **Viacero pohyblivých objektov**, ktoré je možné ovládať pomocou klávesnice alebo myši
+- **Systém detekcie kolízií** využívajúci princípy prieniku obdĺžnikov z lekcie
+- **Vizualnú spätnú väzbu** pri kolíziách (zničenie objektov, zmeny farieb, efekty)
+- **Pravidlá hry**, ktoré robia kolízie zmysluplnými a zábavnými
+
+### Kreatívne návrhy
+
+**Zvážte implementáciu jedného z týchto scenárov:**
+- **Pole asteroidov**: Navigujte loď cez nebezpečné vesmírne trosky
+- **Autíčka na nárazníkoch**: Vytvorte arénu založenú na fyzike kolízií
+- **Obrana pred meteormi**: Chráňte Zem pred prichádzajúcimi vesmírnymi kameňmi
+- **Zberateľská hra**: Zbierajte predmety a vyhýbajte sa prekážkam
+- **Ovládanie územia**: Súťažiace objekty sa snažia zabrať priestor
+
+### Technická implementácia
+
+**Vaše riešenie by malo demonštrovať:**
+- Správne použitie detekcie kolízií založenej na obdĺžnikoch
+- Programovanie založené na udalostiach pre vstupy od používateľa
+- Správu životného cyklu objektov (vytváranie a ničenie)
+- Čistú organizáciu kódu s vhodnou štruktúrou tried
+
+### Bonusové výzvy
+
+**Vylepšite svoju hru o ďalšie funkcie:**
+- **Časticové efekty** pri kolíziách
+- **Zvukové efekty** pre rôzne typy kolízií
+- **Systém skórovania** založený na výsledkoch kolízií
+- **Viacero typov kolízií** s rôznym správaním
+- **Postupne sa zvyšujúca obtiažnosť**, ktorá sa časom zvyšuje
 
 ## Hodnotiace kritériá
 
-| Kritérium | Vynikajúce                                                                                                              | Dostatočné                     | Potrebuje zlepšenie |
-| --------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------- |
-|           | Vytvorený je kompletný funkčný kód, objekty sú nakreslené na plátno, dochádza k základným kolíziám a reakciám            | Kód je v niektorých ohľadoch neúplný | Kód nefunguje správne |
+| Kritérium | Vynikajúce | Dostatočné | Potrebuje zlepšenie |
+|-----------|------------|------------|---------------------|
+| **Detekcia kolízií** | Implementuje presnú detekciu kolízií založenú na obdĺžnikoch s viacerými typmi objektov a sofistikovanými pravidlami interakcie | Základná detekcia kolízií funguje správne s jednoduchými interakciami objektov | Detekcia kolízií má problémy alebo nefunguje konzistentne |
+| **Kvalita kódu** | Čistý, dobre organizovaný kód s vhodnou štruktúrou tried, zmysluplnými názvami premenných a primeranými komentármi | Kód funguje, ale mohol by byť lepšie organizovaný alebo zdokumentovaný | Kód je ťažko pochopiteľný alebo zle štruktúrovaný |
+| **Interakcia používateľa** | Reaktívne ovládanie s plynulou hrateľnosťou, jasnou vizuálnou spätnou väzbou a pútavou mechanikou | Základné ovládanie funguje s primeranou spätnou väzbou | Ovládanie je nereaktívne alebo mätúce |
+| **Kreativita** | Originálny koncept s jedinečnými funkciami, vizuálnym leskom a inovatívnym správaním pri kolíziách | Štandardná implementácia s niektorými kreatívnymi prvkami | Základná funkcionalita bez kreatívnych vylepšení |
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

@@ -1,56 +1,103 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
-  "translation_date": "2025-08-29T10:12:59+00:00",
+  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
+  "translation_date": "2025-10-24T19:38:20+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "sw"
 }
 -->
-# Kuunda Mchezo kwa Kutumia Matukio
+# Kuunda mchezo kwa kutumia matukio
 
-## Jaribio Kabla ya Somo
+Je, umewahi kujiuliza jinsi tovuti zinavyotambua unapobofya kitufe au kuandika kwenye kisanduku cha maandishi? Hiyo ni uchawi wa programu inayotegemea matukio! Njia bora ya kujifunza ujuzi huu muhimu ni kwa kujenga kitu cha manufaa - mchezo wa kasi ya kuandika ambao unaitikia kila unapoandika.
 
-[Jaribio kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/21)
+Utaona moja kwa moja jinsi vivinjari vya wavuti vinavyowasiliana na msimbo wako wa JavaScript. Kila unapobofya, kuandika, au kusogeza kipanya chako, kivinjari kinatuma ujumbe mdogo (tunaviita matukio) kwa msimbo wako, na unapata kuamua jinsi ya kujibu!
 
-## Uprogramishaji Unaotegemea Matukio
+Tunapomaliza hapa, utakuwa umeunda mchezo halisi wa kuandika ambao unafuatilia kasi na usahihi wako. Muhimu zaidi, utaelewa dhana za msingi zinazowezesha kila tovuti ya maingiliano ambayo umewahi kutumia. Twende kazi!
 
-Unapounda programu inayotumia kivinjari, tunatoa kiolesura cha mtumiaji (GUI) ili mtumiaji aweze kuingiliana na kile tulichounda. Njia ya kawaida ya kuingiliana na kivinjari ni kupitia kubofya na kuandika kwenye vipengele mbalimbali. Changamoto tunayokutana nayo kama watengenezaji ni kwamba hatujui ni lini mtumiaji atafanya shughuli hizi!
+## Maswali ya awali ya somo
 
-[Uprogramishaji unaotegemea matukio](https://en.wikipedia.org/wiki/Event-driven_programming) ni jina la aina ya uprogramishaji tunaohitaji kufanya ili kuunda GUI yetu. Tukichambua kidogo, tunaona neno kuu hapa ni **tukio**. [Tukio](https://www.merriam-webster.com/dictionary/event), kulingana na Merriam-Webster, linafafanuliwa kama "kitu kinachotokea". Hii inaelezea hali yetu kikamilifu. Tunajua kitu kitatokea ambacho tunataka kutekeleza msimbo fulani kama jibu, lakini hatujui ni lini kitatokea.
+[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/21)
 
-Njia tunayotumia kuashiria sehemu ya msimbo tunayotaka kutekeleza ni kwa kuunda kazi (function). Tunapofikiria kuhusu [uprogramishaji wa utaratibu](https://en.wikipedia.org/wiki/Procedural_programming), kazi hufanywa kwa mpangilio maalum. Hili pia litakuwa kweli katika uprogramishaji unaotegemea matukio. Tofauti ni **jinsi** kazi zitakavyoitwa.
+## Programu inayotegemea matukio
 
-Ili kushughulikia matukio (kubofya kitufe, kuandika, n.k.), tunasajili **wasikilizaji wa matukio**. Msikilizaji wa tukio ni kazi inayosikiliza tukio litokee na kutekeleza kama jibu. Wasikilizaji wa matukio wanaweza kusasisha UI, kupiga simu kwa seva, au kufanya chochote kinachohitajika kama jibu kwa hatua ya mtumiaji. Tunaongeza msikilizaji wa tukio kwa kutumia [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener), na kutoa kazi ya kutekeleza.
+Fikiria programu au tovuti unayoipenda - ni nini kinachofanya ionekane hai na itikivu? Yote inahusu jinsi inavyoitikia unachofanya! Kila kubofya, kugusa, kusogeza, au kuandika huunda kile tunachokiita "tukio," na hapo ndipo uchawi halisi wa maendeleo ya wavuti hutokea.
 
-> **NOTE:** Ni muhimu kuangazia kwamba kuna njia nyingi za kuunda wasikilizaji wa matukio. Unaweza kutumia kazi zisizo na majina, au kuunda zile zenye majina. Unaweza kutumia njia za mkato mbalimbali, kama kuweka mali ya `click`, au kutumia `addEventListener`. Katika zoezi letu, tutazingatia `addEventListener` na kazi zisizo na majina, kwani hii ndiyo mbinu inayotumika zaidi na watengenezaji wa wavuti. Pia ni njia inayobadilika zaidi, kwani `addEventListener` inafanya kazi kwa matukio yote, na jina la tukio linaweza kutolewa kama parameter.
+Hii ndiyo inafanya programu kwa wavuti kuwa ya kuvutia: hatujui ni lini mtu atabofya kitufe hicho au kuanza kuandika kwenye kisanduku cha maandishi. Wanaweza kubofya mara moja, kusubiri dakika tano, au labda wasibofye kabisa! Kutotabirika huku kunamaanisha tunahitaji kufikiria tofauti kuhusu jinsi tunavyoandika msimbo wetu.
 
-### Matukio ya Kawaida
+Badala ya kuandika msimbo unaoendeshwa kutoka juu hadi chini kama mapishi, tunaandika msimbo unaosubiri kwa subira kitu kitokee. Ni sawa na jinsi waendeshaji wa telegrafi katika miaka ya 1800 walivyokaa karibu na mashine zao, tayari kujibu mara tu ujumbe ulipokuja kupitia waya.
 
-Kuna [matukio mengi](https://developer.mozilla.org/docs/Web/Events) yanayopatikana kwa kusikiliza unapounda programu. Kimsingi, chochote mtumiaji anachofanya kwenye ukurasa huchochea tukio, ambalo linakupa nguvu nyingi kuhakikisha wanapata uzoefu unaotaka. Kwa bahati nzuri, kwa kawaida utahitaji tu matukio machache. Hapa kuna baadhi ya matukio ya kawaida (pamoja na mawili tutakayotumia tunapounda mchezo wetu):
+Kwa hivyo tukio ni nini hasa? Kwa urahisi, ni kitu kinachotokea! Unapobofya kitufe - hicho ni tukio. Unapoandika herufi - hicho ni tukio. Unaposogeza kipanya chako - hicho ni tukio kingine.
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Mtumiaji alibofya kitu, kwa kawaida kitufe au kiungo
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Mtumiaji alibofya kitufe cha kulia cha panya
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Mtumiaji alichagua maandishi fulani
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Mtumiaji aliingiza maandishi fulani
+Programu inayotegemea matukio inatuwezesha kuandaa msimbo wetu kusikiliza na kujibu. Tunaunda kazi maalum zinazoitwa **wasikilizaji wa matukio** ambazo husubiri kwa subira vitu maalum kutokea, kisha huanza kufanya kazi wakati vinapotokea.
 
-## Kuunda Mchezo
+Fikiria wasikilizaji wa matukio kama kuwa na kengele ya mlango kwa msimbo wako. Unaweka kengele ya mlango (`addEventListener()`), unaiambia sauti gani isikilize (kama 'click' au 'keypress'), na kisha unataja nini kitokee mtu anapobonyeza kengele hiyo (kazi yako maalum).
 
-Tutaunda mchezo ili kuchunguza jinsi matukio yanavyofanya kazi katika JavaScript. Mchezo wetu utapima ujuzi wa kuandika wa mchezaji, ambao ni mojawapo ya ujuzi unaodharauliwa zaidi ambao watengenezaji wote wanapaswa kuwa nao. Sote tunapaswa kufanya mazoezi ya kuandika! Mtiririko wa jumla wa mchezo utaonekana hivi:
+**Hivi ndivyo wasikilizaji wa matukio hufanya kazi:**
+- **Husikiliza** vitendo maalum vya mtumiaji kama kubofya, kuandika, au kusogeza kipanya
+- **Hutekeleza** msimbo wako maalum tukio lililotajwa linapotokea
+- **Huitikia** mara moja kwa maingiliano ya mtumiaji, kuunda uzoefu wa bila mshono
+- **Hushughulikia** matukio mengi kwenye kipengele kimoja kwa kutumia wasikilizaji tofauti
 
-- Mchezaji anabofya kitufe cha kuanza na kupewa nukuu ya kuandika
-- Mchezaji anaandika nukuu haraka iwezekanavyo kwenye kisanduku cha maandishi
-  - Kila neno linapokamilika, linalofuata linaangaziwa
-  - Ikiwa mchezaji ana kosa la tahajia, kisanduku cha maandishi kinakuwa chekundu
-  - Mchezaji anapokamilisha nukuu, ujumbe wa mafanikio unaonyeshwa pamoja na muda uliotumika
+> **NOTE:** Inafaa kuangazia kuna njia nyingi za kuunda wasikilizaji wa matukio. Unaweza kutumia kazi zisizo na majina, au kuunda zile zenye majina. Unaweza kutumia njia za mkato mbalimbali, kama kuweka mali ya `click`, au kutumia `addEventListener()`. Katika zoezi letu tutazingatia `addEventListener()` na kazi zisizo na majina, kwani ni mbinu inayotumiwa sana na watengenezaji wa wavuti. Pia ni rahisi zaidi, kwani `addEventListener()` inafanya kazi kwa matukio yote, na jina la tukio linaweza kutolewa kama parameter.
+
+### Matukio ya kawaida
+
+Wakati vivinjari vya wavuti vinatoa matukio kadhaa tofauti unayoweza kusikiliza, programu nyingi za maingiliano hutegemea tu matukio machache muhimu. Kuelewa matukio haya ya msingi kutakupa msingi wa kujenga maingiliano ya mtumiaji ya hali ya juu.
+
+Kuna [matukio kadhaa](https://developer.mozilla.org/docs/Web/Events) yanayopatikana kwako kusikiliza unapounda programu. Kimsingi chochote mtumiaji anachofanya kwenye ukurasa huinua tukio, ambalo linakupa nguvu nyingi kuhakikisha wanapata uzoefu unaotaka. Kwa bahati nzuri, kwa kawaida utahitaji matukio machache tu. Hapa kuna machache ya kawaida (pamoja na mawili tutakayoyatumia tunapounda mchezo wetu):
+
+| Tukio | Maelezo | Matumizi ya Kawaida |
+|-------|-------------|------------------|
+| `click` | Mtumiaji alibofya kitu | Vitufe, viungo, vipengele vya maingiliano |
+| `contextmenu` | Mtumiaji alibofya kipanya cha kulia | Menyu maalum za kubofya kulia |
+| `select` | Mtumiaji alichagua maandishi fulani | Uhariri wa maandishi, operesheni za kunakili |
+| `input` | Mtumiaji aliingiza maandishi fulani | Uthibitishaji wa fomu, utafutaji wa papo hapo |
+
+**Kuelewa aina hizi za matukio:**
+- **Husababisha** wakati watumiaji wanapofanya maingiliano maalum kwenye ukurasa wako
+- **Hutoa** taarifa za kina kuhusu kitendo cha mtumiaji kupitia vitu vya tukio
+- **Huwezesha** kuunda programu za wavuti zinazotikia na za maingiliano
+- **Hufanya kazi** kwa uthabiti kwenye vivinjari na vifaa tofauti
+
+## Kuunda mchezo
+
+Sasa kwa kuwa unaelewa jinsi matukio yanavyofanya kazi, hebu tuweke maarifa hayo katika vitendo kwa kujenga kitu cha manufaa. Tutaunda mchezo wa kasi ya kuandika unaoonyesha utunzaji wa matukio huku ukikusaidia kukuza ujuzi muhimu wa mtengenezaji.
+
+Tunaenda kuunda mchezo ili kuchunguza jinsi matukio yanavyofanya kazi katika JavaScript. Mchezo wetu utajaribu ujuzi wa kuandika wa mchezaji, ambao ni mojawapo ya ujuzi unaopuuzwa sana ambao watengenezaji wote wanapaswa kuwa nao. Ukweli wa kufurahisha: mpangilio wa kibodi ya QWERTY tunayotumia leo ulitengenezwa katika miaka ya 1870 kwa mashine za kuandika - na ujuzi mzuri wa kuandika bado ni muhimu kwa watengenezaji leo! Mtiririko wa jumla wa mchezo utaonekana hivi:
+
+```mermaid
+flowchart TD
+    A[Player clicks Start] --> B[Random quote displays]
+    B --> C[Player types in textbox]
+    C --> D{Word complete?}
+    D -->|Yes| E[Highlight next word]
+    D -->|No| F{Correct so far?}
+    F -->|Yes| G[Keep normal styling]
+    F -->|No| H[Show error styling]
+    E --> I{Quote complete?}
+    I -->|No| C
+    I -->|Yes| J[Show success message with time]
+    G --> C
+    H --> C
+```
+
+**Hivi ndivyo mchezo wetu utakavyofanya kazi:**
+- **Unaanza** wakati mchezaji anapobofya kitufe cha kuanza na kuonyesha nukuu ya nasibu
+- **Unafuatilia** maendeleo ya kuandika ya mchezaji neno kwa neno papo hapo
+- **Unasisitiza** neno la sasa ili kuelekeza umakini wa mchezaji
+- **Unatoa** maoni ya kuona mara moja kwa makosa ya kuandika
+- **Unahesabu** na kuonyesha muda wa jumla nukuu inapokamilika
 
 Hebu tujenge mchezo wetu, na tujifunze kuhusu matukio!
 
-### Muundo wa Faili
+### Muundo wa faili
 
-Tutahitaji faili tatu kwa jumla: **index.html**, **script.js** na **style.css**. Hebu tuanze kwa kuziandaa ili kufanya maisha yetu yawe rahisi kidogo.
+Kabla ya kuanza kuandika msimbo, hebu tuwe na mpangilio mzuri! Kuwa na muundo safi wa faili tangu mwanzo kutakuokoa kutoka kwa maumivu ya kichwa baadaye na kufanya mradi wako uwe wa kitaalamu zaidi. 😊
 
-- Unda folda mpya kwa kazi yako kwa kufungua dirisha la terminal na kutoa amri ifuatayo:
+Tutaweka mambo rahisi na faili tatu tu: `index.html` kwa muundo wa ukurasa wetu, `script.js` kwa mantiki yote ya mchezo wetu, na `style.css` ili kufanya kila kitu kionekane vizuri. Hii ni trio ya kawaida inayowezesha wavuti nyingi!
+
+**Unda folda mpya kwa kazi yako kwa kufungua console au dirisha la terminal na kutoa amri ifuatayo:**
 
 ```bash
 # Linux or macOS
@@ -60,29 +107,49 @@ mkdir typing-game && cd typing-game
 md typing-game && cd typing-game
 ```
 
-- Fungua Visual Studio Code
+**Hivi ndivyo amri hizi zinavyofanya:**
+- **Inaunda** saraka mpya inayoitwa `typing-game` kwa faili za mradi wako
+- **Inasogeza** moja kwa moja kwenye saraka mpya iliyoundwa
+- **Inaandaa** nafasi safi ya kazi kwa maendeleo ya mchezo wako
+
+**Fungua Visual Studio Code:**
 
 ```bash
 code .
 ```
 
-- Ongeza faili tatu kwenye folda katika Visual Studio Code zenye majina yafuatayo:
-  - index.html
-  - script.js
-  - style.css
+**Amri hii:**
+- **Inazindua** Visual Studio Code katika saraka ya sasa
+- **Inafungua** folda ya mradi wako kwenye mhariri
+- **Inatoa** ufikiaji wa zana zote za maendeleo unazohitaji
 
-## Unda Kiolesura cha Mtumiaji
+**Ongeza faili tatu kwenye folda katika Visual Studio Code kwa majina yafuatayo:**
+- `index.html` - Inayo muundo na maudhui ya mchezo wako
+- `script.js` - Inashughulikia mantiki yote ya mchezo na wasikilizaji wa matukio
+- `style.css` - Inafafanua mwonekano wa kuona na mtindo
 
-Tukichunguza mahitaji, tunajua tutahitaji vipengele vichache kwenye ukurasa wetu wa HTML. Hii ni kama mapishi, ambapo tunahitaji viungo:
+## Unda kiolesura cha mtumiaji
 
-- Mahali pa kuonyesha nukuu kwa mtumiaji kuandika
-- Mahali pa kuonyesha ujumbe wowote, kama ujumbe wa mafanikio
-- Kisanduku cha maandishi kwa kuandika
-- Kitufe cha kuanza
+Sasa hebu tujenge jukwaa ambapo hatua zote za mchezo wetu zitatokea! Fikiria hili kama kubuni jopo la kudhibiti kwa chombo cha anga - tunahitaji kuhakikisha kila kitu ambacho wachezaji wetu wanahitaji kiko mahali wanapotarajia kiwe.
 
-Kila moja ya hivi vitahitaji vitambulisho (IDs) ili tuweze kufanya kazi navyo katika JavaScript yetu. Pia tutaongeza marejeleo ya faili za CSS na JavaScript tutakazounda.
+Hebu tuangalie ni nini mchezo wetu unahitaji. Ikiwa ungekuwa unacheza mchezo wa kuandika, ungependa kuona nini kwenye skrini? Hivi ndivyo tutakavyohitaji:
 
-Unda faili mpya inayoitwa **index.html**. Ongeza HTML ifuatayo:
+| Kipengele cha UI | Kusudi | Kipengele cha HTML |
+|------------------|--------|--------------------|
+| Onyesho la Nukuu | Linaonyesha maandishi ya kuandika | `<p>` na `id="quote"` |
+| Eneo la Ujumbe | Linaonyesha hali na ujumbe wa mafanikio | `<p>` na `id="message"` |
+| Ingizo la Maandishi | Ambapo wachezaji wanaandika nukuu | `<input>` na `id="typed-value"` |
+| Kitufe cha Kuanza | Kinaanzisha mchezo | `<button>` na `id="start"` |
+
+**Kuelewa muundo wa UI:**
+- **Inaandaa** maudhui kwa mantiki kutoka juu hadi chini
+- **Inatoa** vitambulisho vya kipekee kwa vipengele kwa kulenga JavaScript
+- **Inatoa** mpangilio wa kuona ulio wazi kwa uzoefu bora wa mtumiaji
+- **Inajumuisha** vipengele vya HTML vya kimantiki kwa ufikivu
+
+Kila moja ya hivi itahitaji vitambulisho ili tuweze kufanya kazi navyo katika JavaScript yetu. Pia tutaongeza marejeleo ya faili za CSS na JavaScript tunazotaka kuunda.
+
+Unda faili mpya inayoitwa `index.html`. Ongeza HTML ifuatayo:
 
 ```html
 <!-- inside index.html -->
@@ -105,26 +172,52 @@ Unda faili mpya inayoitwa **index.html**. Ongeza HTML ifuatayo:
 </html>
 ```
 
-### Zindua Programu
+**Kufafanua kile muundo huu wa HTML unachokamilisha:**
+- **Inaunganisha** stylesheet ya CSS kwenye `<head>` kwa mtindo
+- **Inaunda** kichwa wazi na maelekezo kwa watumiaji
+- **Inaanzisha** aya za nafasi na vitambulisho maalum kwa maudhui ya nguvu
+- **Inajumuisha** uwanja wa ingizo na sifa za ufikivu
+- **Inatoa** kitufe cha kuanza kuanzisha mchezo
+- **Inapakia** faili ya JavaScript mwishoni kwa utendaji bora
 
-Ni bora kila wakati kuendeleza hatua kwa hatua ili kuona jinsi mambo yanavyoonekana. Hebu tuzindue programu yetu. Kuna kiendelezi kizuri cha Visual Studio Code kinachoitwa [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) ambacho kitaendesha programu yako ndani ya kompyuta yako na kusasisha kivinjari kila unapohifadhi.
+### Zindua programu
 
-- Sakinisha [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) kwa kufuata kiungo na kubofya **Install**
-  - Utaombwa na kivinjari kufungua Visual Studio Code, kisha na Visual Studio Code kufanya usakinishaji
-  - Anzisha upya Visual Studio Code ikiwa utaombwa
-- Mara baada ya kusakinishwa, katika Visual Studio Code, bofya Ctrl-Shift-P (au Cmd-Shift-P) kufungua paleti ya amri
-- Andika **Live Server: Open with Live Server**
-  - Live Server itaanza kuendesha programu yako
-- Fungua kivinjari na tembelea **https://localhost:5500**
-- Sasa unapaswa kuona ukurasa uliouunda!
+Kuijaribu programu yako mara kwa mara wakati wa maendeleo hukusaidia kugundua masuala mapema na kuona maendeleo yako papo hapo. Live Server ni zana ya thamani sana ambayo huonyesha upya kivinjari chako kila unapohifadhi mabadiliko, na kufanya maendeleo kuwa bora zaidi.
 
-Hebu tuongeze utendaji.
+Ni bora kila wakati kuendeleza hatua kwa hatua ili kuona jinsi mambo yanavyoonekana. Hebu tuzindue programu yetu. Kuna kiendelezi kizuri cha Visual Studio Code kinachoitwa [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) ambacho kitaendesha programu yako kwa ndani na kuonyesha upya kivinjari kila unapohifadhi.
+
+**Sakinisha [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) kwa kufuata kiungo na kubofya Sakinisha:**
+
+**Hivi ndivyo kinachotokea wakati wa usakinishaji:**
+- **Inachochea** kivinjari chako kufungua Visual Studio Code
+- **Inaelekeza** kupitia mchakato wa usakinishaji wa kiendelezi
+- **Inaweza kuhitaji** kuwasha upya Visual Studio Code ili kukamilisha usanidi
+
+**Mara baada ya kusakinishwa, katika Visual Studio Code, bofya Ctrl-Shift-P (au Cmd-Shift-P) kufungua paleti ya amri:**
+
+**Kuelewa paleti ya amri:**
+- **Inatoa** ufikiaji wa haraka kwa amri zote za VS Code
+- **Inatafuta** amri unapoandika
+- **Inatoa** njia za mkato za kibodi kwa maendeleo ya haraka
+
+**Andika "Live Server: Open with Live Server":**
+
+**Kile Live Server inachofanya:**
+- **Inaanzisha** seva ya maendeleo ya ndani kwa mradi wako
+- **Inaonyesha upya** kivinjari kiotomatiki unapohifadhi faili
+- **Inahudumia** faili zako kutoka URL ya ndani (kawaida `localhost:5500`)
+
+**Fungua kivinjari na nenda kwenye `https://localhost:5500`:**
+
+Sasa unapaswa kuona ukurasa uliouunda! Hebu tuongeze utendaji fulani.
 
 ## Ongeza CSS
 
-Kwa HTML yetu kuundwa, hebu tuongeze CSS kwa mtindo wa msingi. Tunahitaji kuangazia neno ambalo mchezaji anapaswa kuandika, na kuweka rangi kwenye kisanduku cha maandishi ikiwa kile walichoandika si sahihi. Tutafanya hivi kwa madarasa mawili.
+Sasa hebu tufanye mambo yaonekane vizuri! Maoni ya kuona yamekuwa muhimu kwa kiolesura cha mtumiaji tangu siku za mwanzo za kompyuta. Katika miaka ya 1980, watafiti waligundua kuwa maoni ya kuona ya papo hapo yanaboresha sana utendaji wa mtumiaji na kupunguza makosa. Hiyo ndiyo hasa tunayotaka kuunda.
 
-Unda faili mpya inayoitwa **style.css** na ongeza sintaksia ifuatayo.
+Mchezo wetu unahitaji kuwa wazi kabisa kuhusu kinachotokea. Wachezaji wanapaswa kujua mara moja ni neno gani wanapaswa kuandika, na wakifanya kosa, wanapaswa kuliona mara moja. Hebu tuunde mtindo rahisi lakini mzuri:
+
+Unda faili mpya inayoitwa `style.css` na ongeza sintaksia ifuatayo.
 
 ```css
 /* inside style.css */
@@ -138,36 +231,56 @@ Unda faili mpya inayoitwa **style.css** na ongeza sintaksia ifuatayo.
 }
 ```
 
-✅ Kuhusu CSS, unaweza kupanga ukurasa wako jinsi unavyopenda. Chukua muda kidogo na ufanye ukurasa uonekane wa kuvutia zaidi:
+**Kuelewa madarasa haya ya CSS:**
+- **Inasisitiza** neno la sasa kwa mandharinyuma ya rangi ya manjano kwa mwongozo wa kuona wazi
+- **Inaashiria** makosa ya kuandika kwa rangi ya mandharinyuma ya coral nyepesi
+- **Inatoa** maoni ya papo hapo bila kuvuruga mtiririko wa kuandika wa mtumiaji
+- **Inatumia** rangi zinazotofautiana kwa ufikivu na mawasiliano ya kuona wazi
+
+✅ Kuhusu CSS unaweza kupanga ukurasa wako jinsi unavyopenda. Chukua muda kidogo na ufanye ukurasa uonekane wa kuvutia:
 
 - Chagua fonti tofauti
-- Weka rangi kwenye vichwa vya habari
-- Badilisha ukubwa wa vipengele
+- Paka rangi vichwa
+- Badilisha ukubwa wa vitu
 
 ## JavaScript
 
-Kwa UI yetu kuundwa, ni wakati wa kuzingatia JavaScript ambayo itatoa mantiki. Tutagawanya hili katika hatua chache:
+Hapa ndipo mambo yanapokuwa ya kuvutia! 🎉 Tuna muundo wetu wa HTML na mtindo wa CSS, lakini kwa sasa mchezo wetu ni kama gari zuri bila injini. JavaScript itakuwa injini hiyo - ndiyo inafanya kila kitu kifanye kazi na kuitikia kile wachezaji wanachofanya.
 
-- [Unda constants](../../../../4-typing-game/typing-game)
-- [Msikilizaji wa tukio la kuanza mchezo](../../../../4-typing-game/typing-game)
-- [Msikilizaji wa tukio la kuandika](../../../../4-typing-game/typing-game)
+Hapa ndipo utaona uumbaji wako ukija hai. Tutaangazia hatua kwa hatua ili usihisi kuzidiwa:
 
-Lakini kwanza, unda faili mpya inayoitwa **script.js**.
+| Hatua | Kusudi | Unachojifunza |
+|------|---------|------------------|
+| [Unda constants](../../../../4-typing-game/typing-game) | Sanidi nukuu na marejeleo ya DOM | Usimamizi wa vigezo na uteuzi wa DOM |
+| [Wasikilizaji wa matukio kuanza mchezo](../../../../4-typing-game/typing-game) | Shughulikia uanzishaji wa mchezo | Utunzaji wa matukio na masasisho ya UI |
+| [Wasikilizaji wa matukio ya kuandika](../../../../4-typing-game/typing-game) | Shughulikia ingizo la mtumiaji papo hapo | Uthibitishaji wa ingizo na maoni ya nguvu |
 
-### Ongeza Constants
+**Mbinu hii iliyopangwa inakusaidia:**
+- **Kupanga** msimbo wako katika sehemu za kimantiki na zinazoweza kudhibitiwa
+- **Kujenga** utendaji hatua kwa hatua kwa urahisi wa kurekebisha makosa
+- **Kuelewa** jinsi sehemu tofauti za programu yako zinavyofanya kazi pamoja
+- **Kuunda** mifumo inayoweza kutumika tena kwa miradi ya baadaye
 
-Tutahitaji vitu vichache ili kufanya maisha yetu yawe rahisi kwa uprogramishaji. Tena, kama mapishi, hapa kuna tunachohitaji:
+Lakini kwanza, unda faili mpya inayoitwa `script.js`.
 
-- Kundi lenye orodha ya nukuu zote
-- Kundi tupu la kuhifadhi maneno yote ya nukuu ya sasa
-- Nafasi ya kuhifadhi faharasa ya neno ambalo mchezaji anaandika kwa sasa
-- Muda ambao mchezaji alibofya kuanza
+### Ongeza constants
 
-Pia tutahitaji marejeleo ya vipengele vya UI:
+Kabla ya kuingia kwenye hatua, hebu tukusanye rasilimali zetu zote! Kama vile jinsi kituo cha udhibiti wa misheni cha NASA kinavyoseti mifumo yao yote ya ufuatiliaji kabla ya uzinduzi, ni rahisi zaidi unapokuwa na kila kitu kimeandaliwa na tayari. Hii inatuokoa kutoka kwa kutafuta vitu baadaye na husaidia kuzuia makosa ya maandishi.
 
-- Kisanduku cha maandishi (**typed-value**)
-- Onyesho la nukuu (**quote**)
-- Ujumbe (**message**)
+Hivi ndivyo tunavyohitaji kuandaa kwanza:
+
+| Aina ya Data | Kusudi | Mf
+| Array ya nukuu | Hifadhi nukuu zote zinazowezekana kwa mchezo | `['Nukuu 1', 'Nukuu 2', ...]` |
+| Kundi la maneno | Gawanya nukuu ya sasa katika maneno ya pekee | `['Wakati', 'wewe', 'una', ...]` |
+| Kielezo cha maneno | Fuatilia neno ambalo mchezaji anaandika | `0, 1, 2, 3...` |
+| Muda wa kuanza | Hesabu muda uliopita kwa ajili ya alama | `Date.now()` |
+
+**Tutahitaji pia marejeleo ya vipengele vya UI vyetu:**
+| Kipengele | ID | Kusudi |
+|-----------|----|--------|
+| Ingizo la maandishi | `typed-value` | Ambapo wachezaji wanaandika |
+| Onyesho la nukuu | `quote` | Inaonyesha nukuu ya kuandika |
+| Eneo la ujumbe | `message` | Inaonyesha masasisho ya hali |
 
 ```javascript
 // inside script.js
@@ -192,9 +305,22 @@ const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
+**Kufafanua kile ambacho msimbo huu wa kuanzisha unakamilisha:**
+- **Huhifadhi** kundi la nukuu za Sherlock Holmes kwa kutumia `const` kwa sababu nukuu hazitabadilika
+- **Huanza** kufuatilia vigezo kwa kutumia `let` kwa sababu thamani hizi zitabadilika wakati wa mchezo
+- **Huchukua** marejeleo ya vipengele vya DOM kwa kutumia `document.getElementById()` kwa ufikiaji wa haraka
+- **Huandaa** msingi wa utendaji wa mchezo wote kwa majina ya vigezo yaliyo wazi na ya kuelezea
+- **Hupanga** data na vipengele vinavyohusiana kwa mantiki kwa urahisi wa matengenezo ya msimbo
+
 ✅ Endelea na ongeza nukuu zaidi kwenye mchezo wako
 
-> **NOTE:** Tunaweza kupata vipengele wakati wowote tunapotaka katika msimbo kwa kutumia `document.getElementById`. Kwa sababu tutarejelea vipengele hivi mara kwa mara, tutaepuka makosa ya tahajia kwa kutumia constants. Mifumo kama [Vue.js](https://vuejs.org/) au [React](https://reactjs.org/) inaweza kukusaidia kudhibiti msimbo wako kwa urahisi zaidi.
+> 💡 **Kidokezo cha Kitaalamu**: Tunaweza kupata vipengele wakati wowote tunapotaka kwenye msimbo kwa kutumia `document.getElementById()`. Kwa sababu tutarejelea vipengele hivi mara kwa mara, tutakwepa makosa ya herufi kwa kutumia vigezo vya kudumu. Mfumo kama [Vue.js](https://vuejs.org/) au [React](https://reactjs.org/) unaweza kukusaidia kusimamia msimbo wako kwa urahisi zaidi.
+>
+**Kwa nini mbinu hii inafanya kazi vizuri:**
+- **Huzuia** makosa ya herufi wakati wa kurejelea vipengele mara nyingi
+- **Huboresha** usomaji wa msimbo kwa majina ya vigezo yaliyoelezea
+- **Huwezesha** msaada bora wa IDE kwa kukamilisha kiotomatiki na ukaguzi wa makosa
+- **Hufanya** mabadiliko ya msimbo kuwa rahisi ikiwa ID za vipengele zitabadilika baadaye
 
 Chukua dakika moja kutazama video kuhusu kutumia `const`, `let` na `var`
 
@@ -202,11 +328,13 @@ Chukua dakika moja kutazama video kuhusu kutumia `const`, `let` na `var`
 
 > 🎥 Bofya picha hapo juu kwa video kuhusu vigezo.
 
-### Ongeza Mantiki ya Kuanza
+### Ongeza mantiki ya kuanza
 
-Ili kuanza mchezo, mchezaji atabofya kuanza. Bila shaka, hatujui ni lini watabofya kuanza. Hapa ndipo [msikilizaji wa tukio](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) anapokuja. Msikilizaji wa tukio ataturuhusu kusikiliza kitu kitokee (tukio) na kutekeleza msimbo kama jibu. Katika kesi yetu, tunataka kutekeleza msimbo wakati mtumiaji anapobofya kuanza.
+Hapa ndipo kila kitu kinapokamilika! 🚀 Unakaribia kuandika msikilizaji wa tukio halisi, na kuna kitu kinachoridhisha sana kuhusu kuona msimbo wako ukijibu kubofya kwa kitufe.
 
-Mtumiaji anapobofya **kuanza**, tunahitaji kuchagua nukuu, kuandaa kiolesura cha mtumiaji, na kuandaa ufuatiliaji wa neno la sasa na muda. Hapa chini kuna JavaScript unayohitaji kuongeza; tutajadili baada ya kizuizi cha msimbo.
+Fikiria: mahali fulani, mchezaji atabofya kitufe cha "Anza", na msimbo wako unahitaji kuwa tayari kwao. Hatuna wazo watakapobofya - inaweza kuwa mara moja, inaweza kuwa baada ya kuchukua kahawa - lakini watakapofanya hivyo, mchezo wako utaanza.
+
+Wakati mtumiaji anapobofya `start`, tunahitaji kuchagua nukuu, kuandaa kiolesura cha mtumiaji, na kuandaa ufuatiliaji wa neno la sasa na muda. Hapo chini kuna JavaScript unayohitaji kuongeza; tunajadili baada ya kizuizi cha msimbo.
 
 ```javascript
 // at the end of script.js
@@ -241,27 +369,35 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-Hebu tuchambue msimbo!
+**Hebu tufafanue msimbo katika sehemu za kimantiki:**
 
-- Kuandaa ufuatiliaji wa maneno
-  - Kutumia [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) na [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) kunaturuhusu kuchagua nukuu kwa nasibu kutoka kwenye kundi la `quotes`
-  - Tunabadilisha `quote` kuwa kundi la `words` ili tuweze kufuatilia neno ambalo mchezaji anaandika kwa sasa
-  - `wordIndex` inakuwa 0, kwani mchezaji ataanza na neno la kwanza
-- Kuandaa UI
-  - Unda kundi la `spanWords`, ambalo lina kila neno ndani ya kipengele cha `span`
-    - Hii itaturuhusu kuangazia neno kwenye onyesho
-  - `join` kundi ili kuunda kamba ambayo tunaweza kutumia kusasisha `innerHTML` kwenye `quoteElement`
-    - Hii itaonyesha nukuu kwa mchezaji
-  - Weka `className` ya kipengele cha kwanza cha `span` kuwa `highlight` ili kuangazia kama njano
-  - Safisha `messageElement` kwa kuweka `innerText` kuwa `''`
-- Kuandaa kisanduku cha maandishi
-  - Futa `value` ya sasa kwenye `typedValueElement`
-  - Weka `focus` kwenye `typedValueElement`
-- Anzisha kipima muda kwa kuita `getTime`
+**📊 Ufuatiliaji wa Maneno:**
+- **Huchagua** nukuu ya nasibu kwa kutumia `Math.floor()` na `Math.random()` kwa utofauti
+- **Hubadilisha** nukuu kuwa kundi la maneno ya pekee kwa kutumia `split(' ')`
+- **Huanza upya** `wordIndex` hadi 0 kwa kuwa wachezaji huanza na neno la kwanza
+- **Huandaa** hali ya mchezo kwa raundi mpya
 
-### Ongeza Mantiki ya Kuandika
+**🎨 Muundo wa UI na Onyesho:**
+- **Huunda** kundi la vipengele vya `<span>`, likifunika kila neno kwa muundo wa pekee
+- **Huunganisha** vipengele vya span kuwa mnyororo mmoja kwa ajili ya kusasisha DOM kwa ufanisi
+- **Huangazia** neno la kwanza kwa kuongeza darasa la CSS `highlight`
+- **Husafisha** ujumbe wowote wa mchezo uliopita ili kutoa mwanzo safi
 
-Mchezaji anapoandika, tukio la `input` litainuliwa. Msikilizaji wa tukio hili atahakikisha mchezaji anaandika neno kwa usahihi, na kushughulikia hali ya sasa ya mchezo. Kurudi kwenye **script.js**, ongeza msimbo ufuatao mwishoni. Tutauchambua baadaye.
+**⌨️ Maandalizi ya Kisanduku cha Maandishi:**
+- **Husafisha** maandishi yoyote yaliyopo kwenye kisanduku cha ingizo
+- **Huweka umakini** kwenye kisanduku cha maandishi ili wachezaji waanze kuandika mara moja
+- **Huandaa** eneo la ingizo kwa kikao kipya cha mchezo
+
+**⏱️ Uanzishaji wa Kipima Muda:**
+- **Huchukua** alama ya muda ya sasa kwa kutumia `new Date().getTime()`
+- **Huwezesha** hesabu sahihi ya kasi ya kuandika na muda wa kukamilisha
+- **Huanza** ufuatiliaji wa utendaji kwa kikao cha mchezo
+
+### Ongeza mantiki ya kuandika
+
+Hapa ndipo tunashughulikia moyo wa mchezo wetu! Usijali ikiwa hii inaonekana kuwa nyingi mwanzoni - tutapitia kila kipande, na mwishowe, utaona jinsi ilivyo mantiki.
+
+Tunachojenga hapa ni cha kisasa kabisa: kila wakati mtu anapoandika herufi, msimbo wetu utachunguza kile walichoandika, kuwapa maoni, na kuamua nini kinapaswa kutokea baadaye. Ni sawa na jinsi programu za maneno za mapema kama WordStar katika miaka ya 1970 zilivyotoa maoni ya wakati halisi kwa waandishi.
 
 ```javascript
 // at the end of script.js
@@ -300,53 +436,119 @@ typedValueElement.addEventListener('input', () => {
 });
 ```
 
-Hebu tuchambue msimbo! Tunaanza kwa kuchukua neno la sasa na thamani ambayo mchezaji ameandika hadi sasa. Kisha tunaangalia hali mbalimbali, ambapo tunakagua kama nukuu imekamilika, neno limekamilika, neno ni sahihi, au (hatimaye), kama kuna kosa.
+**Kuelewa mtiririko wa mantiki ya kuandika:**
 
-- Nukuu imekamilika, inayoonyeshwa na `typedValue` kuwa sawa na `currentWord`, na `wordIndex` kuwa sawa na moja pungufu ya `length` ya `words`
-  - Hesabu `elapsedTime` kwa kutoa `startTime` kutoka kwa muda wa sasa
-  - Gawanya `elapsedTime` kwa 1,000 kubadilisha kutoka milisekunde hadi sekunde
-  - Onyesha ujumbe wa mafanikio
-- Neno limekamilika, inayoonyeshwa na `typedValue` kuishia na nafasi (mwisho wa neno) na `typedValue` kuwa sawa na `currentWord`
-  - Weka `value` kwenye `typedElement` kuwa `''` kuruhusu neno linalofuata kuandikwa
-  - Ongeza `wordIndex` ili kuhamia kwenye neno linalofuata
-  - Pitia `childNodes` zote za `quoteElement` kuweka `className` kuwa `''` kurudisha onyesho la kawaida
-  - Weka `className` ya neno la sasa kuwa `highlight` kuashiria kama neno linalofuata la kuandika
-- Neno linaandikwa kwa usahihi (lakini halijakamilika), inayoonyeshwa na `currentWord` kuanza na `typedValue`
-  - Hakikisha `typedValueElement` linaonyeshwa kama kawaida kwa kufuta `className`
-- Ikiwa tumefika hapa, tuna kosa
-  - Weka `className` kwenye `typedValueElement` kuwa `error`
+Kazi hii hutumia mbinu ya mfululizo, ikichunguza hali kutoka maalum zaidi hadi ya jumla zaidi. Hebu tufafanue kila hali:
 
-## Jaribu Programu Yako
+```mermaid
+flowchart TD
+    A[Player types character] --> B[Get current word and typed value]
+    B --> C{Quote complete?}
+    C -->|Yes| D[Show completion message with time]
+    C -->|No| E{Word complete with space?}
+    E -->|Yes| F[Clear input, move to next word, update highlight]
+    E -->|No| G{Typing correctly so far?}
+    G -->|Yes| H[Remove error styling]
+    G -->|No| I[Show error styling]
+```
 
-Umefika mwisho! Hatua ya mwisho ni kuhakikisha programu yetu inafanya kazi. Jaribu! Usijali ikiwa kuna makosa; **watengenezaji wote** hukutana na makosa. Chunguza ujumbe na urekebishe kama inavyohitajika.
+**🏁 Nukuu Imekamilika (Hali ya 1):**
+- **Huchunguza** ikiwa thamani iliyoandikwa inalingana na neno la sasa NA tuko kwenye neno la mwisho
+- **Huhesabu** muda uliopita kwa kutoa muda wa kuanza kutoka muda wa sasa
+- **Hubadilisha** milisekunde kuwa sekunde kwa kugawa kwa 1,000
+- **Huonyesha** ujumbe wa pongezi na muda wa kukamilisha
 
-Bofya **kuanza**, na anza kuandika! Inapaswa kuonekana kama uhuishaji tulioona awali.
+**✅ Neno Limekamilika (Hali ya 2):**
+- **Hugundua** kukamilika kwa neno wakati ingizo linaishia na nafasi
+- **Huhakiki** kwamba ingizo lililokatwa linalingana na neno la sasa kabisa
+- **Husafisha** kisanduku cha ingizo kwa neno linalofuata
+- **Husonga mbele** hadi neno linalofuata kwa kuongeza `wordIndex`
+- **Husasisha** muonekano wa kuangazia kwa kuondoa madarasa yote na kuangazia neno jipya
+
+**📝 Kuandika Kwa Mchakato (Hali ya 3):**
+- **Huhakikisha** kwamba neno la sasa linaanza na kile kilichoandikwa hadi sasa
+- **Huondoa** muundo wowote wa makosa ili kuonyesha ingizo ni sahihi
+- **Huruhusu** kuendelea kuandika bila usumbufu
+
+**❌ Hali ya Makosa (Hali ya 4):**
+- **Husababisha** wakati maandishi yaliyoandikwa hayalingani na mwanzo wa neno linalotarajiwa
+- **Hutumia** darasa la CSS la makosa ili kutoa maoni ya haraka ya kuona
+- **Husaidia** wachezaji kutambua na kurekebisha makosa haraka
+
+## Jaribu programu yako
+
+Tazama ulichofanikiwa! 🎉 Umejenga mchezo halisi wa kuandika kutoka mwanzo kwa kutumia programu inayotegemea matukio. Chukua muda kuthamini hilo - hili si jambo dogo!
+
+Sasa ni awamu ya majaribio! Je, itafanya kazi kama inavyotarajiwa? Je, tulikosa kitu? Hili ndilo jambo: ikiwa kitu hakifanyi kazi kikamilifu mara moja, hilo ni jambo la kawaida kabisa. Hata watengenezaji wenye uzoefu hupata hitilafu katika msimbo wao mara kwa mara. Ni sehemu ya mchakato wa maendeleo!
+
+Bofya `start`, na anza kuandika! Inapaswa kuonekana kama uhuishaji tuliouona hapo awali.
 
 ![Uhuishaji wa mchezo ukiwa kazini](../../../../4-typing-game/images/demo.gif)
 
+**Nini cha kujaribu katika programu yako:**
+- **Huhakikisha** kwamba kubofya Anza kunaonyesha nukuu ya nasibu
+- **Huthibitisha** kwamba kuandika kunaangazia neno la sasa kwa usahihi
+- **Huchunguza** kwamba muundo wa makosa unaonekana kwa kuandika vibaya
+- **Huhakikisha** kwamba kukamilisha maneno kunasonga mbele kwa kuangazia kwa usahihi
+- **Hujaribu** kwamba kumaliza nukuu kunaonyesha ujumbe wa kukamilisha na muda
+
+**Vidokezo vya kawaida vya kutatua matatizo:**
+- **Angalia** koni ya kivinjari (F12) kwa makosa ya JavaScript
+- **Hakikisha** kwamba majina yote ya faili yanalingana kabisa (yanahusiana na herufi kubwa na ndogo)
+- **Hakikisha** Live Server inaendesha na inasasisha ipasavyo
+- **Jaribu** nukuu tofauti ili kuthibitisha uteuzi wa nasibu unafanya kazi
+
 ---
+
+## Changamoto ya Wakala wa GitHub Copilot 🎮
+
+Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+
+**Maelezo:** Panua mchezo wa kuandika kwa kutekeleza mfumo wa ugumu unaobadilika kulingana na utendaji wa mchezaji. Changamoto hii itakusaidia kufanya mazoezi ya kushughulikia matukio ya hali ya juu, uchambuzi wa data, na masasisho ya UI ya nguvu.
+
+**Maelekezo:** Unda mfumo wa kurekebisha ugumu wa mchezo wa kuandika ambao:
+1. Unafuatilia kasi ya kuandika ya mchezaji (maneno kwa dakika) na asilimia ya usahihi
+2. Unabadilika kiotomatiki hadi viwango vitatu vya ugumu: Rahisi (nukuu rahisi), Kati (nukuu za sasa), Ngumu (nukuu ngumu na alama za uakifishi)
+3. Unaonyesha kiwango cha ugumu wa sasa na takwimu za mchezaji kwenye UI
+4. Unatekeleza kaunta ya mfululizo inayoongeza ugumu baada ya maonyesho mazuri matatu mfululizo
+5. Unaongeza maoni ya kuona (rangi, uhuishaji) kuonyesha mabadiliko ya ugumu
+
+Ongeza vipengele vya HTML vinavyohitajika, mitindo ya CSS, na kazi za JavaScript ili kutekeleza kipengele hiki. Jumuisha utunzaji sahihi wa makosa na hakikisha mchezo unabaki kupatikana na lebo za ARIA zinazofaa.
+
+Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
 ## 🚀 Changamoto
 
-Ongeza utendaji zaidi
+Uko tayari kuboresha mchezo wako wa kuandika? Jaribu kutekeleza vipengele hivi vya hali ya juu ili kuongeza uelewa wako wa kushughulikia matukio na uendeshaji wa DOM:
 
-- Lemaza msikilizaji wa tukio la `input` baada ya kukamilika, na uuwezeshe tena wakati kitufe kinapobofya
-- Lemaza kisanduku cha maandishi wakati mchezaji anakamilisha nukuu
-- Onyesha kisanduku cha mazungumzo cha modal na ujumbe wa mafanikio
-- Hifadhi alama za juu kwa kutumia [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
-## Jaribio Baada ya Muhadhara
+**Ongeza utendaji zaidi:**
 
-[Jaribio baada ya muhadhara](https://ff-quizzes.netlify.app/web/quiz/22)
+| Kipengele | Maelezo | Ujuzi Utakaofanya Mazoezi |
+|-----------|---------|--------------------------|
+| **Udhibiti wa Ingizo** | Zima msikilizaji wa tukio la `input` baada ya kukamilika, na uwashe tena wakati kitufe kinabofya | Usimamizi wa matukio na udhibiti wa hali |
+| **Usimamizi wa Hali ya UI** | Zima kisanduku cha maandishi wakati mchezaji anamaliza nukuu | Udhibiti wa mali za DOM |
+| **Kisanduku cha Mazungumzo** | Onyesha kisanduku cha mazungumzo na ujumbe wa mafanikio | Mifumo ya UI ya hali ya juu na upatikanaji |
+| **Mfumo wa Alama za Juu** | Hifadhi alama za juu kwa kutumia `localStorage` | API za hifadhi ya kivinjari na uhifadhi wa data |
+
+**Vidokezo vya utekelezaji:**
+- **Tafiti** `localStorage.setItem()` na `localStorage.getItem()` kwa uhifadhi wa kudumu
+- **Fanya mazoezi** ya kuongeza na kuondoa wasikilizaji wa matukio kwa nguvu
+- **Chunguza** vipengele vya HTML vya mazungumzo au mifumo ya modal ya CSS
+- **Fikiria** upatikanaji wakati wa kuzima na kuwasha vidhibiti vya fomu
+
+## Jaribio la Baada ya Somo
+
+[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ## Mapitio na Kujisomea
 
-Soma kuhusu [matukio yote yanayopatikana](https://developer.mozilla.org/docs/Web/Events) kwa msanidi kupitia kivinjari cha wavuti, na fikiria hali ambazo ungeweza kutumia kila moja.
+Soma kuhusu [matukio yote yanayopatikana](https://developer.mozilla.org/docs/Web/Events) kwa msanidi programu kupitia kivinjari cha wavuti, na fikiria hali ambazo ungetumia kila moja.
 
 ## Kazi ya Nyumbani
 
-[Tengeneza mchezo mpya wa kibodi](assignment.md)
+[Unda mchezo mpya wa kibodi](assignment.md)
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

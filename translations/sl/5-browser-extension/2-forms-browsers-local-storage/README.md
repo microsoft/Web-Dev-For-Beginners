@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T12:49:20+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-25T00:45:53+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sl"
 }
 -->
 # Projekt razširitve brskalnika, 2. del: Klic API-ja, uporaba lokalnega shranjevanja
 
-## Kviz pred predavanjem
+## Predhodni kviz
 
-[Kviz pred predavanjem](https://ff-quizzes.netlify.app/web/quiz/25)
+[Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Uvod
+## Uvod
 
-V tej lekciji boste klicali API tako, da boste oddali obrazec svoje razširitve brskalnika in prikazali rezultate v razširitvi. Poleg tega se boste naučili, kako lahko shranite podatke v lokalno shrambo brskalnika za prihodnjo uporabo.
+Se spomnite razširitve brskalnika, ki ste jo začeli graditi? Trenutno imate lepo oblikovan obrazec, vendar je v bistvu statičen. Danes ga bomo oživili tako, da ga povežemo z resničnimi podatki in mu dodamo spomin.
+
+Pomislite na računalnike za nadzor misije Apollo - niso prikazovali le fiksnih informacij. Nenehno so komunicirali z vesoljskimi plovili, posodabljali telemetrijske podatke in si zapomnili ključne parametre misije. Takšno dinamično vedenje bomo gradili danes. Vaša razširitev bo dostopala do interneta, pridobivala resnične okoljske podatke in si zapomnila vaše nastavitve za naslednjič.
+
+Integracija API-ja se morda sliši zapleteno, vendar gre v bistvu za to, da naučite svojo kodo, kako komunicirati z drugimi storitvami. Ne glede na to, ali pridobivate podatke o vremenu, družbenih omrežjih ali informacijah o ogljičnem odtisu, kot bomo storili danes, gre za vzpostavljanje teh digitalnih povezav. Raziskali bomo tudi, kako brskalniki lahko ohranijo informacije - podobno kot knjižnice uporabljajo kartoteke za shranjevanje lokacij knjig.
+
+Do konca te lekcije boste imeli razširitev brskalnika, ki pridobiva resnične podatke, shranjuje uporabniške nastavitve in zagotavlja gladko izkušnjo. Začnimo!
 
 ✅ Sledite oštevilčenim segmentom v ustreznih datotekah, da boste vedeli, kam postaviti svojo kodo.
 
-### Priprava elementov za manipulacijo v razširitvi:
+## Priprava elementov za manipulacijo v razširitvi
 
-Do zdaj ste že ustvarili HTML za obrazec in `<div>` za rezultate v svoji razširitvi brskalnika. Od zdaj naprej boste delali v datoteki `/src/index.js` in postopoma gradili svojo razširitev. Oglejte si [prejšnjo lekcijo](../1-about-browsers/README.md) za navodila o nastavitvi projekta in procesu gradnje.
+Preden lahko vaš JavaScript manipulira z vmesnikom, potrebuje reference na specifične HTML elemente. Pomislite na to kot na teleskop, ki ga je treba usmeriti na določene zvezde - preden je Galileo lahko preučeval Jupitrove lune, je moral najti in se osredotočiti na Jupiter.
 
-V datoteki `index.js` začnite z ustvarjanjem nekaj `const` spremenljivk za shranjevanje vrednosti, povezanih z različnimi polji:
+V datoteki `index.js` bomo ustvarili `const` spremenljivke, ki zajamejo reference na vsak pomemben element obrazca. To je podobno, kot da bi znanstveniki označili svojo opremo - namesto da bi vsakič iskali po celotnem laboratoriju, lahko neposredno dostopajo do tistega, kar potrebujejo.
 
-```JavaScript
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,194 +47,275 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Vsa ta polja so referencirana prek njihovih CSS razredov, kot ste jih nastavili v HTML-ju v prejšnji lekciji.
+**Kaj ta koda počne:**
+- **Zajame** elemente obrazca z uporabo `document.querySelector()` in CSS razrednih selektorjev
+- **Ustvari** reference na vnosna polja za ime regije in API ključ
+- **Vzpostavi** povezave z elementi za prikaz rezultatov podatkov o porabi ogljika
+- **Pripravi** dostop do UI elementov, kot so indikatorji nalaganja in sporočila o napakah
+- **Shrani** vsako referenco elementa v `const` spremenljivko za enostavno ponovno uporabo v kodi
 
-### Dodajanje poslušalcev dogodkov
+## Dodajanje poslušalcev dogodkov
 
-Nato dodajte poslušalce dogodkov za obrazec in gumb za ponastavitev, ki ponastavi obrazec, tako da se ob oddaji obrazca ali kliku na gumb za ponastavitev nekaj zgodi. Na dnu datoteke dodajte klic za inicializacijo aplikacije:
+Zdaj bomo poskrbeli, da vaša razširitev reagira na uporabniške akcije. Poslušalci dogodkov so način, kako vaša koda spremlja interakcije uporabnikov. Pomislite nanje kot na operaterje v zgodnjih telefonskih centralah - poslušali so dohodne klice in povezali prave kroge, ko je nekdo želel vzpostaviti povezavo.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Opazite skrajšano obliko za poslušanje dogodkov oddaje ali klika in kako se dogodek posreduje funkcijama `handleSubmit` ali `reset`. Ali lahko napišete ekvivalent te skrajšane oblike v daljši obliki? Katero obliko raje uporabljate?
+**Razumevanje teh konceptov:**
+- **Pripne** poslušalca za oddajo obrazca, ki se sproži, ko uporabniki pritisnejo Enter ali kliknejo oddaj
+- **Poveže** poslušalca za klik na gumb za čiščenje, da ponastavi obrazec
+- **Posreduje** objekt dogodka `(e)` funkcijam za obdelavo za dodatni nadzor
+- **Pokliče** funkcijo `init()` takoj, da nastavi začetno stanje vaše razširitve
 
-### Izdelava funkcij `init()` in `reset()`:
+✅ Opazite skrajšano sintakso puščice, ki se tukaj uporablja. Ta sodoben pristop JavaScripta je bolj čist kot tradicionalni izrazi funkcij, vendar oba delujeta enako dobro!
 
-Zdaj boste ustvarili funkcijo, ki inicializira razširitev, imenovano `init()`:
+## Izdelava funkcij za inicializacijo in ponastavitev
 
-```JavaScript
+Ustvarimo logiko inicializacije za vašo razširitev. Funkcija `init()` je kot navigacijski sistem ladje, ki preverja svoje instrumente - določa trenutno stanje in ustrezno prilagaja vmesnik. Preveri, ali je nekdo že uporabljal vašo razširitev in naloži njihove prejšnje nastavitve.
+
+Funkcija `reset()` uporabnikom omogoča svež začetek - podobno kot znanstveniki ponastavijo svoje instrumente med eksperimenti, da zagotovijo čiste podatke.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-V tej funkciji je nekaj zanimive logike. Če jo preberete, lahko ugotovite, kaj se dogaja?
+**Razčlenitev dogajanja:**
+- **Pridobi** shranjen API ključ in regijo iz lokalnega shranjevanja brskalnika
+- **Preveri**, ali gre za novega uporabnika (brez shranjenih poverilnic) ali za uporabnika, ki se vrača
+- **Prikaže** obrazec za nastavitev za nove uporabnike in skrije druge elemente vmesnika
+- **Samodejno naloži** shranjene podatke za uporabnike, ki se vračajo, in prikaže možnost ponastavitve
+- **Upravlja** stanje uporabniškega vmesnika glede na razpoložljive podatke
 
-- Dva `const` preverjata, ali ima uporabnik shranjen APIKey in kodo regije v lokalni shrambi.
-- Če je katera od teh vrednosti `null`, prikažite obrazec tako, da spremenite njegov slog na 'block'.
-- Skrijte rezultate, nalaganje in gumb za ponastavitev ter nastavite besedilo napake na prazno vrednost.
-- Če obstajata ključ in regija, začnite rutino za:
-  - klic API-ja za pridobitev podatkov o ogljični porabi,
-  - skrijte območje rezultatov,
-  - skrijte obrazec,
-  - prikažite gumb za ponastavitev.
+**Ključni koncepti o lokalnem shranjevanju:**
+- **Ohranja** podatke med sejami brskalnika (za razliko od shranjevanja sej)
+- **Shranjuje** podatke kot ključ-vrednost pare z uporabo `getItem()` in `setItem()`
+- **Vrne** `null`, ko za določen ključ ni podatkov
+- **Ponuja** preprost način za zapomnitev uporabniških nastavitev in preferenc
 
-Preden nadaljujete, je koristno spoznati zelo pomemben koncept, ki je na voljo v brskalnikih: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage je uporaben način za shranjevanje nizov v brskalniku kot par `ključ-vrednost`. Ta vrsta spletnega shranjevanja se lahko manipulira z JavaScriptom za upravljanje podatkov v brskalniku. LocalStorage ne poteče, medtem ko se SessionStorage, druga vrsta spletnega shranjevanja, izbriše, ko se brskalnik zapre. Različne vrste shranjevanja imajo prednosti in slabosti.
+> 💡 **Razumevanje shranjevanja v brskalniku**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) je kot dajanje trajnega spomina vaši razširitvi. Pomislite, kako je starodavna Aleksandrijska knjižnica shranjevala zvitke - informacije so ostale na voljo, tudi ko so učenjaki odšli in se vrnili.
+>
+> **Ključne značilnosti:**
+> - **Ohranja** podatke tudi po zaprtju brskalnika
+> - **Preživi** ponovne zagone računalnika in zrušitve brskalnika
+> - **Ponuja** veliko prostora za shranjevanje uporabniških preferenc
+> - **Omogoča** takojšen dostop brez zamud omrežja
 
-> Opomba - vaša razširitev brskalnika ima svojo lokalno shrambo; glavno okno brskalnika je ločen primerek in se obnaša ločeno.
+> **Pomembna opomba**: Vaša razširitev brskalnika ima svoje izolirano lokalno shranjevanje, ki je ločeno od običajnih spletnih strani. To zagotavlja varnost in preprečuje konflikte z drugimi spletnimi mesti.
 
-Svoj APIKey nastavite na vrednost niza, na primer, in lahko vidite, da je nastavljen v Edgeu, če "pregledate" spletno stran (z desnim klikom na brskalnik lahko pregledate) in odprete zavihek Aplikacije, da vidite shrambo.
+Shranjene podatke si lahko ogledate tako, da odprete orodja za razvijalce brskalnika (F12), se pomaknete na zavihek **Application** in razširite razdelek **Local Storage**.
 
-![Podokno lokalne shrambe](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sl.png)
+![Pano lokalnega shranjevanja](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sl.png)
 
-✅ Razmislite o situacijah, kjer NE bi želeli shranjevati določenih podatkov v LocalStorage. Na splošno je shranjevanje API ključev v LocalStorage slaba ideja! Vidite zakaj? V našem primeru, ker je naša aplikacija namenjena zgolj učenju in ne bo objavljena v trgovini z aplikacijami, bomo uporabili to metodo.
+> ⚠️ **Varnostni vidik**: V produkcijskih aplikacijah shranjevanje API ključev v LocalStorage predstavlja varnostna tveganja, saj JavaScript lahko dostopa do teh podatkov. Za namene učenja ta pristop deluje, vendar bi morale prave aplikacije za občutljive poverilnice uporabljati varno shranjevanje na strežniški strani.
 
-Opazite, da uporabljate spletni API za manipulacijo LocalStorage, bodisi z uporabo `getItem()`, `setItem()` ali `removeItem()`. Ta funkcionalnost je široko podprta v brskalnikih.
+## Obdelava oddaje obrazca
 
-Preden zgradite funkcijo `displayCarbonUsage()`, ki se kliče v `init()`, ustvarite funkcionalnost za obdelavo začetne oddaje obrazca.
+Zdaj bomo obdelali, kaj se zgodi, ko nekdo odda vaš obrazec. Privzeto brskalniki ob oddaji obrazcev ponovno naložijo stran, vendar bomo prestregli to vedenje, da ustvarimo bolj gladko izkušnjo.
 
-### Obdelava oddaje obrazca
+Ta pristop je podoben temu, kako nadzor misije obravnava komunikacijo z vesoljskimi plovili - namesto da bi za vsako sporočilo ponastavili celoten sistem, ohranjajo neprekinjeno delovanje med obdelavo novih informacij.
 
-Ustvarite funkcijo `handleSubmit`, ki sprejme argument dogodka `(e)`. Ustavite propagacijo dogodka (v tem primeru želimo ustaviti osvežitev brskalnika) in pokličite novo funkcijo `setUpUser`, pri čemer posredujete argumenta `apiKey.value` in `region.value`. Na ta način uporabite dve vrednosti, ki sta pridobljeni prek začetnega obrazca, ko sta ustrezni polji izpolnjeni.
+Ustvarite funkcijo, ki zajame dogodek oddaje obrazca in izlušči uporabnikov vnos:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ Osvežite spomin - HTML, ki ste ga nastavili v prejšnji lekciji, ima dve vnosni polji, katerih `vrednosti` so zajete prek `const`, ki ste jih nastavili na vrhu datoteke, in obe polji sta `obvezni`, zato brskalnik prepreči uporabnikom vnos praznih vrednosti.
+**V zgornjem primeru smo:**
+- **Preprečili** privzeto vedenje oddaje obrazca, ki bi osvežilo stran
+- **Izluščili** vrednosti uporabniškega vnosa iz polj za API ključ in regijo
+- **Posredovali** podatke obrazca funkciji `setUpUser()` za obdelavo
+- **Ohranili** vedenje enostranske aplikacije z izogibanjem osvežitvi strani
 
-### Nastavitev uporabnika
+✅ Ne pozabite, da vaša polja obrazca HTML vključujejo atribut `required`, zato brskalnik samodejno preveri, da uporabniki pred zagonom te funkcije zagotovijo tako API ključ kot regijo.
 
-Nadaljujte s funkcijo `setUpUser`, kjer nastavite vrednosti lokalne shrambe za `apiKey` in `regionName`. Dodajte novo funkcijo:
+## Nastavitev uporabniških preferenc
 
-```JavaScript
+Funkcija `setUpUser` je odgovorna za shranjevanje uporabniških poverilnic in začetek prvega klica API-ja. To ustvari gladek prehod od nastavitve do prikaza rezultatov.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-Ta funkcija prikaže sporočilo o nalaganju, medtem ko se kliče API. Na tej točki ste prišli do ustvarjanja najpomembnejše funkcije te razširitve brskalnika!
+**Korak za korakom, kaj se dogaja:**
+- **Shrani** API ključ in ime regije v lokalno shranjevanje za prihodnjo uporabo
+- **Prikaže** indikator nalaganja, da obvesti uporabnike, da se podatki pridobivajo
+- **Počisti** morebitna prejšnja sporočila o napakah z zaslona
+- **Razkrije** gumb za čiščenje, da lahko uporabniki pozneje ponastavijo svoje nastavitve
+- **Začne** klic API-ja za pridobivanje resničnih podatkov o porabi ogljika
 
-### Prikaz ogljične porabe
+Ta funkcija ustvarja brezhibno uporabniško izkušnjo z upravljanjem tako trajanja podatkov kot posodobitev uporabniškega vmesnika v eni usklajeni akciji.
 
-Končno je čas za poizvedbo API-ja!
+## Prikaz podatkov o porabi ogljika
 
-Preden nadaljujete, se pogovorimo o API-jih. API-ji ali [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html) so ključni element v orodjarni spletnega razvijalca. Zagotavljajo standardne načine za programe, da komunicirajo in sodelujejo med seboj. Na primer, če gradite spletno mesto, ki mora poizvedovati bazo podatkov, je morda nekdo ustvaril API, ki ga lahko uporabite. Medtem ko obstaja veliko vrst API-jev, je eden najbolj priljubljenih [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Zdaj bomo povezali vašo razširitev z zunanjimi viri podatkov prek API-jev. To vašo razširitev spremeni iz samostojnega orodja v nekaj, kar lahko dostopa do informacij v realnem času z interneta.
 
-✅ Izraz 'REST' pomeni 'Representational State Transfer' in vključuje uporabo različno konfiguriranih URL-jev za pridobivanje podatkov. Raziščite različne vrste API-jev, ki so na voljo razvijalcem. Katera oblika vam je najbolj všeč?
+**Razumevanje API-jev**
 
-V tej funkciji je nekaj pomembnih stvari. Najprej opazite ključno besedo [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Pisanje funkcij tako, da delujejo asinhrono, pomeni, da čakajo na dokončanje dejanja, kot je vračanje podatkov, preden nadaljujejo.
+[API-ji](https://www.webopedia.com/TERM/A/API.html) so način, kako različne aplikacije komunicirajo med seboj. Pomislite nanje kot na telegrafski sistem, ki je povezoval oddaljena mesta v 19. stoletju - operaterji so pošiljali zahteve oddaljenim postajam in prejemali odgovore z zahtevanimi informacijami. Vsakič, ko preverite družbena omrežja, vprašate glasovnega asistenta ali uporabite aplikacijo za dostavo, API-ji omogočajo te izmenjave podatkov.
+
+**Ključni koncepti o REST API-jih:**
+- **REST** pomeni 'Representational State Transfer'
+- **Uporablja** standardne metode HTTP (GET, POST, PUT, DELETE) za interakcijo s podatki
+- **Vrača** podatke v predvidljivih formatih, običajno JSON
+- **Ponuja** dosledne URL-je za različne vrste zahtev
+
+✅ [CO2 Signal API](https://www.co2signal.com/), ki ga bomo uporabili, ponuja podatke o ogljični intenzivnosti električnih omrežij po vsem svetu v realnem času. To pomaga uporabnikom razumeti okoljski vpliv njihove porabe električne energije!
+
+> 💡 **Razumevanje asinhronega JavaScripta**: Ključna beseda [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) omogoča vaši kodi, da hkrati obravnava več operacij. Ko zahtevate podatke s strežnika, ne želite, da se vaša celotna razširitev zamrzne - to bi bilo, kot da bi letalski nadzor ustavil vse operacije, medtem ko čaka na odgovor enega letala.
+>
+> **Ključne prednosti:**
+> - **Ohranja** odzivnost razširitve med nalaganjem podatkov
+> - **Omogoča**, da druga koda nadaljuje izvajanje med omrežnimi zahtevami
+> - **Izboljša** berljivost kode v primerjavi s tradicionalnimi vzorci povratnih klicev
+> - **Omogoča** elegantno obravnavo napak pri težavah z omrežjem
 
 Tukaj je kratek video o `async`:
 
 [![Async in Await za upravljanje obljub](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async in Await za upravljanje obljub")
 
-> 🎥 Kliknite zgornjo sliko za video o async/await.
+> 🎥 Kliknite na sliko zgoraj za video o async/await.
 
-Ustvarite novo funkcijo za poizvedbo API-ja C02Signal:
+Ustvarite funkcijo za pridobivanje in prikaz podatkov o porabi ogljika:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-To je velika funkcija. Kaj se tukaj dogaja?
+**Razčlenitev dogajanja:**
+- **Uporablja** sodobni `fetch()` API namesto zunanjih knjižnic, kot je Axios, za čistejšo kodo brez odvisnosti
+- **Izvede** ustrezno preverjanje napak z `response.ok`, da zgodaj ujame neuspehe API-ja
+- **Obravnava** asinhrone operacije z `async/await` za bolj berljiv potek kode
+- **Avtenticira** z CO2 Signal API-jem z uporabo glave `auth-token`
+- **Razčleni** podatke odgovora JSON in izlušči informacije o ogljični intenzivnosti
+- **Posodobi** več UI elementov s formatiranimi okoljskimi podatki
+- **Ponuja** uporabniku prijazna sporočila o napakah, ko klici API-ja ne uspejo
 
-- Po najboljših praksah uporabite ključno besedo `async`, da se funkcija obnaša asinhrono. Funkcija vsebuje blok `try/catch`, saj bo vrnila obljubo, ko API vrne podatke. Ker nimate nadzora nad hitrostjo, s katero bo API odgovoril (morda sploh ne bo odgovoril!), morate to negotovost obravnavati z asinhronim klicem.
-- Poizvedujete API co2signal za pridobitev podatkov o vaši regiji, pri čemer uporabljate svoj API ključ. Za uporabo tega ključa morate uporabiti vrsto avtentikacije v parametrih glave.
-- Ko API odgovori, dodelite različne elemente njegovih podatkov o odgovoru delom zaslona, ki ste jih nastavili za prikaz teh podatkov.
-- Če pride do napake ali če ni rezultata, prikažete sporočilo o napaki.
+**Ključni sodobni koncepti JavaScripta, ki so prikazani:**
+- **Predloge nizov** s sintakso `${}` za čisto oblikovanje nizov
+- **Obravnava napak** z bloki try/catch za robustne aplikacije
+- **Vzorec async/await** za elegantno obravnavo omrežnih zahtev
+- **Razčlenjevanje objektov** za izluščenje specifičnih podatkov iz odgovorov API-ja
+- **Verižna metoda** za več manipulacij DOM-a
 
-✅ Uporaba asinhronih programskih vzorcev je še eno zelo uporabno orodje v vaši orodjarni. Preberite [o različnih načinih](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), kako lahko konfigurirate to vrsto kode.
+✅ Ta funkcija prikazuje več pomembnih konceptov spletnega razvoja - komunikacijo z zunanjimi strežniki, obravnavo avtentikacije, obdelavo podatkov, posodabljanje vmesnikov in elegantno obravnavo napak. To so temeljne veščine, ki jih profesionalni razvijalci redno uporabljajo.
 
-Čestitamo! Če zgradite svojo razširitev (`npm run build`) in jo osvežite v podoknu razširitev, imate delujočo razširitev! Edina stvar, ki še ne deluje, je ikona, kar boste popravili v naslednji lekciji.
+🎉 **Kaj ste dosegli:** Ustvarili ste razširitev brskalnika, ki:
+- **Povezuje** z internetom in pridobiva resnične okoljske podatke
+- **Ohranja** uporabniške nastavitve med sejami
+- **Obravnava** napake elegantno, namesto da bi se zrušila
+- **Ponuja** gladko, profesionalno uporabniško izkušnjo
+
+Preizkusite svoje delo tako, da zaženete `npm run build` in osvežite svojo razširitev v brskalniku. Zdaj imate funkcionalen sledilnik ogljičnega odtisa. Naslednja lekcija bo dodala funkcionalnost dinamičnih ikon za dokončanje razširitve.
 
 ---
 
+## Izziv z GitHub Copilot Agent 🚀
+
+Uporabite način Agent za dokončanje naslednjega izziva:
+
+**Opis:** Izboljšajte razširitev brskalnika z dodajanjem izboljšav pri obravnavi napak in funkcij za uporabniško izkušnjo. Ta izziv vam bo pomagal pri vadbi dela z API-ji, lokalnim shranjevanjem in manipulacijo DOM-a z uporabo sodobnih vzorcev JavaScripta.
+
+**Navodilo:** Ustvarite izboljšano različico funkcije displayCarbonUsage, ki vključuje: 1) Mehanizem za ponovni poskus pri neuspelih klicih API-ja z eksponentnim povratnim časom, 2) Validacijo vnosa za kodo regije pred izvedbo klica API-ja, 3) Animacijo nalaganja z indikatorji napredka, 4) Predpomnjenje odgovorov API-ja v lokalnem shranjevanju z časovnimi žigi poteka (predpomnjenje za 30 minut) in 5) Funkcijo za prikaz zgodovinskih podatkov iz prejšnjih klicev API-ja. Prav tako dodajte ustrezne komentarje v slogu TypeScript JSDoc za dokumentiranje vseh parametrov funkcij in vrst vrnjenih vrednosti.
+
+Več o [načinu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) si preberite tukaj.
+
 ## 🚀 Izziv
 
-V teh lekcijah smo razpravljali o več vrstah API-jev. Izberite spletni API in podrobno raziščite, kaj ponuja. Na primer, si oglejte API-je, ki so na voljo v brskalnikih, kot je [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Kaj po vašem mnenju naredi API odličen?
-
-## Kviz po predavanju
-
-[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/26)
-
-## Pregled in samostojno učenje
-
-V tej lekciji ste spoznali LocalStorage in API-je, oba zelo uporabna za profesionalnega spletnega razvijalca. Ali lahko razmislite, kako ti dve stvari delujeta skupaj? Razmislite, kako bi zasnovali spletno mesto, ki bi shranjevalo elemente za uporabo z API-jem.
+Razširite svoje razumevanje API-jev z raziskovanjem bogastva API-jev, ki temeljijo na brskalniku in so na voljo za spletni razvoj. Izberite enega od
+V tej lekciji ste se naučili o LocalStorage in API-jih, oboje zelo uporabno za profesionalnega spletnega razvijalca. Ali lahko razmislite, kako ti dve stvari delujeta skupaj? Razmislite, kako bi zasnovali spletno stran, ki bi shranjevala elemente za uporabo z API-jem.
 
 ## Naloga
 
@@ -237,4 +324,4 @@ V tej lekciji ste spoznali LocalStorage in API-je, oba zelo uporabna za profesio
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

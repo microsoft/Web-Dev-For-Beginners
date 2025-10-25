@@ -1,50 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "979cfcce2413a87d9e4c67eb79234bc3",
-  "translation_date": "2025-08-29T10:52:42+00:00",
+  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
+  "translation_date": "2025-10-24T21:11:49+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "cs"
 }
 -->
 # Vytvořte vesmírnou hru, část 1: Úvod
 
-![video](../../../../6-space-game/images/pewpew.gif)
+![Animace vesmírné hry ukazující hratelnost](../../../../6-space-game/images/pewpew.gif)
+
+Stejně jako řídící středisko NASA koordinuje různé systémy během vesmírného startu, vytvoříme vesmírnou hru, která ukáže, jak různé části programu mohou spolupracovat bez problémů. Při tvorbě něčeho, co si skutečně můžete zahrát, se naučíte základní programovací koncepty, které se uplatní v každém softwarovém projektu.
+
+Prozkoumáme dva základní přístupy k organizaci kódu: dědičnost a kompozici. Nejde jen o akademické koncepty – jsou to stejné vzory, které pohánějí vše od videoher po bankovní systémy. Také implementujeme komunikační systém nazvaný pub/sub, který funguje jako komunikační sítě používané ve vesmírných lodích, umožňující různým komponentám sdílet informace bez vytváření závislostí.
+
+Na konci této série pochopíte, jak vytvářet aplikace, které mohou růst a vyvíjet se – ať už vyvíjíte hry, webové aplikace nebo jakýkoli jiný softwarový systém.
 
 ## Kvíz před přednáškou
 
 [Kvíz před přednáškou](https://ff-quizzes.netlify.app/web/quiz/29)
 
-### Dědičnost a kompozice ve vývoji her
+## Dědičnost a kompozice ve vývoji her
 
-V předchozích lekcích nebylo potřeba příliš řešit architekturu aplikací, které jste vytvářeli, protože projekty byly velmi malé. Jakmile však vaše aplikace rostou co do velikosti a rozsahu, stávají se architektonická rozhodnutí důležitějšími. Existují dva hlavní přístupy k vytváření větších aplikací v JavaScriptu: *kompozice* nebo *dědičnost*. Oba mají své výhody a nevýhody, ale pojďme si je vysvětlit v kontextu hry.
+Jak projekty rostou na složitosti, organizace kódu se stává klíčovou. Co začíná jako jednoduchý skript, se může stát obtížně udržovatelným bez správné struktury – podobně jako mise Apollo vyžadovaly pečlivou koordinaci mezi tisíci komponentami.
 
-✅ Jedna z nejslavnějších knih o programování se zabývá [designovými vzory](https://en.wikipedia.org/wiki/Design_Patterns).
+Prozkoumáme dva základní přístupy k organizaci kódu: dědičnost a kompozici. Každý má své specifické výhody a pochopení obou vám pomůže vybrat správný přístup pro různé situace. Tyto koncepty ukážeme prostřednictvím naší vesmírné hry, kde hrdinové, nepřátelé, power-upy a další objekty musí efektivně spolupracovat.
 
-Ve hře máte `herní objekty`, což jsou objekty, které existují na obrazovce. To znamená, že mají umístění v kartézském souřadnicovém systému, charakterizované souřadnicemi `x` a `y`. Jakmile začnete vyvíjet hru, všimnete si, že všechny vaše herní objekty mají standardní vlastnosti, které jsou společné pro každou hru, kterou vytvoříte. Tyto prvky jsou:
+✅ Jedna z nejslavnějších programovacích knih vůbec se týká [designových vzorů](https://en.wikipedia.org/wiki/Design_Patterns).
 
-- **založené na umístění** Většina, ne-li všechny herní prvky, jsou založené na umístění. To znamená, že mají umístění, `x` a `y`.
-- **pohyblivé** Jsou to objekty, které se mohou přesunout na nové místo. Typicky jde o hrdinu, monstrum nebo NPC (nehráčskou postavu), ale ne například o statický objekt, jako je strom.
-- **samodestrukční** Tyto objekty existují pouze po určitou dobu, než se připraví na odstranění. Obvykle je to reprezentováno booleanem `dead` nebo `destroyed`, který signalizuje hernímu enginu, že tento objekt by již neměl být vykreslován.
-- **cool-down** 'Cool-down' je typická vlastnost krátkodobých objektů. Typickým příkladem je kus textu nebo grafický efekt, jako je exploze, který by měl být viditelný jen několik milisekund.
+V každé hře máte `herní objekty` – interaktivní prvky, které obývají váš herní svět. Hrdinové, nepřátelé, power-upy a vizuální efekty jsou všechny herní objekty. Každý z nich existuje na konkrétních souřadnicích obrazovky pomocí hodnot `x` a `y`, podobně jako při vykreslování bodů na souřadnicové rovině.
+
+Navzdory jejich vizuálním rozdílům tyto objekty často sdílejí základní chování:
+
+- **Existují někde** – Každý objekt má souřadnice x a y, aby hra věděla, kde ho vykreslit
+- **Mnohé se mohou pohybovat** – Hrdinové běhají, nepřátelé pronásledují, střely létají po obrazovce
+- **Mají životnost** – Některé zůstávají navždy, jiné (jako exploze) se objeví krátce a zmizí
+- **Reagují na věci** – Když se věci srazí, power-upy se sbírají, ukazatele zdraví se aktualizují
 
 ✅ Zamyslete se nad hrou jako Pac-Man. Dokážete identifikovat čtyři typy objektů uvedené výše v této hře?
 
-### Vyjádření chování
+### Vyjádření chování prostřednictvím kódu
 
-Vše, co jsme popsali výše, jsou chování, která mohou mít herní objekty. Jak je tedy zakódujeme? Toto chování můžeme vyjádřit jako metody spojené buď s třídami, nebo objekty.
+Nyní, když rozumíte běžnému chování, které herní objekty sdílejí, pojďme prozkoumat, jak toto chování implementovat v JavaScriptu. Chování objektů můžete vyjádřit prostřednictvím metod připojených buď ke třídám, nebo jednotlivým objektům, a existuje několik přístupů, ze kterých si můžete vybrat.
 
-**Třídy**
+**Přístup založený na třídách**
 
-Myšlenka je použít `třídy` ve spojení s `dědičností`, abychom přidali určité chování do třídy.
+Třídy a dědičnost poskytují strukturovaný přístup k organizaci herních objektů. Podobně jako taxonomický klasifikační systém vyvinutý Carlem Linnéem začínáte základní třídou obsahující běžné vlastnosti, poté vytváříte specializované třídy, které tyto základy dědí a přidávají specifické schopnosti.
 
 ✅ Dědičnost je důležitý koncept, který je třeba pochopit. Více se dozvíte v [článku MDN o dědičnosti](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Vyjádřeno pomocí kódu, herní objekt může typicky vypadat takto:
+Takto můžete implementovat herní objekty pomocí tříd a dědičnosti:
 
 ```javascript
-
-//set up the class GameObject
+// Step 1: Create the base GameObject class
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -52,187 +61,309 @@ class GameObject {
     this.type = type;
   }
 }
+```
 
-//this class will extend the GameObject's inherent class properties
+**Rozložme si to krok za krokem:**
+- Vytváříme základní šablonu, kterou může použít každý herní objekt
+- Konstruktor ukládá, kde se objekt nachází (`x`, `y`) a jaký typ věci to je
+- Toto se stává základem, na kterém budou stavět všechny vaše herní objekty
+
+```javascript
+// Step 2: Add movement capability through inheritance
 class Movable extends GameObject {
-  constructor(x,y, type) {
-    super(x,y, type)
+  constructor(x, y, type) {
+    super(x, y, type); // Call parent constructor
   }
 
-//this movable object can be moved on the screen
+  // Add the ability to move to a new position
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
-//this is a specific class that extends the Movable class, so it can take advantage of all the properties that it inherits
-class Hero extends Movable {
-  constructor(x,y) {
-    super(x,y, 'Hero')
-  }
-}
-
-//this class, on the other hand, only inherits the GameObject properties
-class Tree extends GameObject {
-  constructor(x,y) {
-    super(x,y, 'Tree')
-  }
-}
-
-//a hero can move...
-const hero = new Hero();
-hero.moveTo(5,5);
-
-//but a tree cannot
-const tree = new Tree();
 ```
 
-✅ Věnujte pár minut tomu, abyste si představili hrdinu z Pac-Mana (například Inky, Pinky nebo Blinky) a jak by byl napsán v JavaScriptu.
-
-**Kompozice**
-
-Jiný způsob, jak řešit dědičnost objektů, je použití *kompozice*. Poté objekty vyjadřují své chování takto:
+**V uvedeném jsme:**
+- **Rozšířili** třídu GameObject, abychom přidali funkci pohybu
+- **Zavolali** rodičovský konstruktor pomocí `super()`, abychom inicializovali zděděné vlastnosti
+- **Přidali** metodu `moveTo()`, která aktualizuje pozici objektu
 
 ```javascript
-//create a constant gameObject
+// Step 3: Create specific game object types
+class Hero extends Movable {
+  constructor(x, y) {
+    super(x, y, 'Hero'); // Set type automatically
+  }
+}
+
+class Tree extends GameObject {
+  constructor(x, y) {
+    super(x, y, 'Tree'); // Trees don't need movement
+  }
+}
+
+// Step 4: Use your game objects
+const hero = new Hero(0, 0);
+hero.moveTo(5, 5); // Hero can move!
+
+const tree = new Tree(10, 15);
+// tree.moveTo() would cause an error - trees can't move
+```
+
+**Pochopení těchto konceptů:**
+- **Vytváří** specializované typy objektů, které dědí vhodné chování
+- **Ukazuje**, jak dědičnost umožňuje selektivní zahrnutí funkcí
+- **Ukazuje**, že hrdinové se mohou pohybovat, zatímco stromy zůstávají nehybné
+- **Ilustruje**, jak hierarchie tříd zabraňuje nevhodným akcím
+
+✅ Věnujte pár minut přemýšlení o hrdinovi z Pac-Mana (například Inky, Pinky nebo Blinky) a o tom, jak by byl napsán v JavaScriptu.
+
+**Přístup založený na kompozici**
+
+Kompozice následuje modulární designovou filozofii, podobně jako inženýři navrhují vesmírné lodě s vyměnitelnými komponenty. Místo dědění z rodičovské třídy kombinujete specifická chování, abyste vytvořili objekty s přesně tou funkcionalitou, kterou potřebují. Tento přístup nabízí flexibilitu bez rigidních hierarchických omezení.
+
+```javascript
+// Step 1: Create base behavior objects
 const gameObject = {
   x: 0,
   y: 0,
   type: ''
 };
 
-//...and a constant movable
 const movable = {
   moveTo(x, y) {
     this.x = x;
     this.y = y;
   }
-}
-//then the constant movableObject is composed of the gameObject and movable constants
-const movableObject = {...gameObject, ...movable};
+};
+```
 
-//then create a function to create a new Hero who inherits the movableObject properties
+**Co tento kód dělá:**
+- **Definuje** základní `gameObject` s vlastnostmi pozice a typu
+- **Vytváří** samostatný objekt chování `movable` s funkcí pohybu
+- **Odděluje** záležitosti tím, že udržuje data o pozici a logiku pohybu nezávislé
+
+```javascript
+// Step 2: Compose objects by combining behaviors
+const movableObject = { ...gameObject, ...movable };
+
+// Step 3: Create factory functions for different object types
 function createHero(x, y) {
   return {
     ...movableObject,
     x,
     y,
     type: 'Hero'
-  }
+  };
 }
-//...and a static object that inherits only the gameObject properties
+
 function createStatic(x, y, type) {
   return {
-    ...gameObject
+    ...gameObject,
     x,
     y,
     type
-  }
+  };
 }
-//create the hero and move it
-const hero = createHero(10,10);
-hero.moveTo(5,5);
-//and create a static tree which only stands around
-const tree = createStatic(0,0, 'Tree'); 
 ```
 
-**Který vzor bych měl použít?**
-
-Je na vás, který vzor si vyberete. JavaScript podporuje oba tyto paradigmy.
-
---
-
-Další vzor běžný ve vývoji her řeší problém správy uživatelského zážitku a výkonu hry.
-
-## Vzor Pub/Sub
-
-✅ Pub/Sub znamená 'publish-subscribe' (publikovat-odebírat)
-
-Tento vzor se zabývá myšlenkou, že různé části vaší aplikace by o sobě neměly vědět. Proč? Usnadňuje to obecný přehled o tom, co se děje, pokud jsou různé části oddělené. Také to usnadňuje náhlou změnu chování, pokud je to potřeba. Jak toho dosáhneme? Zavedením několika konceptů:
-
-- **zpráva**: Zpráva je obvykle textový řetězec doplněný volitelným obsahem (daty, která objasňují, o čem zpráva je). Typická zpráva ve hře může být `KEY_PRESSED_ENTER`.
-- **vydavatel**: Tento prvek *publikuje* zprávu a posílá ji všem odběratelům.
-- **odběratel**: Tento prvek *poslouchá* konkrétní zprávy a provádí nějaký úkol jako výsledek přijetí této zprávy, například vystřelení laseru.
-
-Implementace je poměrně malá, ale je to velmi silný vzor. Zde je, jak může být implementován:
+**V uvedeném jsme:**
+- **Kombinovali** základní vlastnosti objektu s chováním pohybu pomocí syntaxe spread
+- **Vytvořili** tovární funkce, které vracejí přizpůsobené objekty
+- **Umožnili** flexibilní tvorbu objektů bez rigidních hierarchií tříd
+- **Umožnili**, aby objekty měly přesně ta chování, která potřebují
 
 ```javascript
-//set up an EventEmitter class that contains listeners
+// Step 4: Create and use your composed objects
+const hero = createHero(10, 10);
+hero.moveTo(5, 5); // Works perfectly!
+
+const tree = createStatic(0, 0, 'Tree');
+// tree.moveTo() is undefined - no movement behavior was composed
+```
+
+**Klíčové body k zapamatování:**
+- **Kombinuje** objekty mícháním chování místo jejich dědění
+- **Poskytuje** větší flexibilitu než rigidní hierarchie dědičnosti
+- **Umožňuje**, aby objekty měly přesně ty funkce, které potřebují
+- **Používá** moderní syntaxi spread v JavaScriptu pro čistou kombinaci objektů 
+```
+
+**Which Pattern Should You Choose?**
+
+> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+> 
+**Here's when to use each approach:**
+- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
+- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
+- **Consider** your team's preferences and project requirements
+- **Remember** that you can mix both approaches in the same application
+
+## Communication Patterns: The Pub/Sub System
+
+As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+
+Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+
+✅ **Pub/Sub** stands for 'publish-subscribe'
+
+### Understanding the Pub/Sub Architecture
+
+The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+
+**The key players in pub/sub:**
+- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
+- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
+- **Subscribers** – The objects that say "I care about that event" and react when it happens
+- **Event System** – The middleman that makes sure messages get to the right listeners
+
+### Building an Event System
+
+Let's create a simple but powerful event system that demonstrates these concepts:
+
+```javascript
+// Step 1: Create the EventEmitter class
 class EventEmitter {
   constructor() {
-    this.listeners = {};
+    this.listeners = {}; // Store all event listeners
   }
-//when a message is received, let the listener to handle its payload
+  
+  // Register a listener for a specific message type
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
     }
     this.listeners[message].push(listener);
   }
-//when a message is sent, send it to a listener with some payload
+  
+  // Send a message to all registered listeners
   emit(message, payload = null) {
     if (this.listeners[message]) {
-      this.listeners[message].forEach(l => l(message, payload))
+      this.listeners[message].forEach(listener => {
+        listener(message, payload);
+      });
     }
   }
 }
-
 ```
 
-Pro použití výše uvedeného kódu můžeme vytvořit velmi malou implementaci:
+**Rozložení toho, co se zde děje:**
+- **Vytváří** centrální systém správy událostí pomocí jednoduché třídy
+- **Ukládá** posluchače do objektu organizovaného podle typu zprávy
+- **Registruje** nové posluchače pomocí metody `on()`
+- **Vysílá** zprávy všem zainteresovaným posluchačům pomocí `emit()`
+- **Podporuje** volitelné datové balíčky pro předávání relevantních informací
+
+### Spojení všeho dohromady: Praktický příklad
+
+Dobře, podívejme se na to v praxi! Vytvoříme jednoduchý systém pohybu, který ukáže, jak čistý a flexibilní může být pub/sub:
 
 ```javascript
-//set up a message structure
+// Step 1: Define your message types
 const Messages = {
-  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT'
+  HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
+  HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
+  ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
-//invoke the eventEmitter you set up above
+
+// Step 2: Create your event system and game objects
 const eventEmitter = new EventEmitter();
-//set up a hero
-const hero = createHero(0,0);
-//let the eventEmitter know to watch for messages pertaining to the hero moving left, and act on it
+const hero = createHero(0, 0);
+```
+
+**Co tento kód dělá:**
+- **Definuje** objekt konstant, aby se zabránilo překlepům v názvech zpráv
+- **Vytváří** instanci emitera událostí pro zpracování veškeré komunikace
+- **Inicializuje** objekt hrdiny na výchozí pozici
+
+```javascript
+// Step 3: Set up event listeners (subscribers)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
+  hero.moveTo(hero.x - 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
 });
 
-//set up the window to listen for the keyup event, specifically if the left arrow is hit, emit a message to move the hero left
-window.addEventListener('keyup', (evt) => {
-  if (evt.key === 'ArrowLeft') {
-    eventEmitter.emit(Messages.HERO_MOVE_LEFT)
+eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
+  hero.moveTo(hero.x + 5, hero.y);
+  console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
+});
+```
+
+**V uvedeném jsme:**
+- **Registrovali** posluchače událostí, kteří reagují na zprávy o pohybu
+- **Aktualizovali** pozici hrdiny na základě směru pohybu
+- **Přidali** logování do konzole pro sledování změn pozice hrdiny
+- **Oddělili** logiku pohybu od zpracování vstupu
+
+```javascript
+// Step 4: Connect keyboard input to events (publishers)
+window.addEventListener('keydown', (event) => {
+  switch(event.key) {
+    case 'ArrowLeft':
+      eventEmitter.emit(Messages.HERO_MOVE_LEFT);
+      break;
+    case 'ArrowRight':
+      eventEmitter.emit(Messages.HERO_MOVE_RIGHT);
+      break;
   }
 });
 ```
 
-Výše propojujeme událost klávesnice, `ArrowLeft`, a posíláme zprávu `HERO_MOVE_LEFT`. Posloucháme tuto zprávu a jako výsledek pohybujeme `hrdinou`. Síla tohoto vzoru spočívá v tom, že posluchač událostí a hrdina o sobě navzájem nevědí. Můžete přemapovat `ArrowLeft` na klávesu `A`. Navíc by bylo možné udělat něco úplně jiného na `ArrowLeft` provedením několika úprav funkce `on` v eventEmitteru:
+**Pochopení těchto konceptů:**
+- **Spojuje** vstup z klávesnice s herními událostmi bez těsného propojení
+- **Umožňuje**, aby systém vstupu komunikoval s herními objekty nepřímo
+- **Umožňuje**, aby více systémů reagovalo na stejné události z klávesnice
+- **Usnadňuje** změnu klávesových vazeb nebo přidání nových metod vstupu
 
-```javascript
-eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
-  hero.move(5,0);
-});
-```
+> 💡 **Tip**: Krása tohoto vzoru spočívá ve flexibilitě! Můžete snadno přidat zvukové efekty, otřesy obrazovky nebo částicové efekty jednoduše přidáním dalších posluchačů událostí – není třeba upravovat stávající kód pro klávesnici nebo pohyb.
+> 
+**Proč si tento přístup zamilujete:**
+- Přidávání nových funkcí je velmi snadné – stačí poslouchat události, které vás zajímají
+- Více věcí může reagovat na stejnou událost, aniž by si navzájem překážely
+- Testování je mnohem jednodušší, protože každá část funguje nezávisle
+- Když se něco pokazí, přesně víte, kde hledat problém
 
-Jakmile se věci stanou složitějšími, když vaše hra roste, tento vzor zůstává stejně složitý a váš kód zůstává čistý. Je opravdu doporučeno tento vzor přijmout.
+### Proč je pub/sub efektivní při škálování
+
+Vzor pub/sub udržuje jednoduchost, i když aplikace rostou na složitosti. Ať už spravujete desítky nepřátel, dynamické aktualizace uživatelského rozhraní nebo zvukové systémy, tento vzor zvládá zvýšené nároky bez nutnosti změn v architektuře. Nové funkce se integrují do stávajícího systému událostí, aniž by ovlivnily již zavedenou funkcionalitu.
+
+> ⚠️ **Častá chyba**: Nevytvářejte příliš mnoho specifických typů zpráv hned na začátku. Začněte se širokými kategoriemi a upravujte je podle potřeb vaší hry.
+> 
+**Doporučené postupy:**
+- **Skupiny** souvisejících zpráv do logických kategorií
+- **Používání** popisných názvů, které jasně naznačují, co se stalo
+- **Udržování** datových balíčků jednoduchých a zaměřených
+- **Dokumentování** typů zpráv pro spolupráci v týmu
 
 ---
 
+## Výzva GitHub Copilot Agent 🚀
+
+Použijte režim Agent k dokončení následující výzvy:
+
+**Popis:** Vytvořte jednoduchý systém herních objektů pomocí dědičnosti a vzoru pub/sub. Implementujte základní hru, kde různé objekty mohou komunikovat prostřednictvím událostí, aniž by o sobě přímo věděly.
+
+**Zadání:** Vytvořte systém herních objektů v JavaScriptu s následujícími požadavky: 1) Vytvořte základní třídu GameObject s souřadnicemi x, y a vlastností typu. 2) Vytvořte třídu Hero, která rozšiřuje GameObject a může se pohybovat. 3) Vytvořte třídu Enemy, která rozšiřuje GameObject a může pronásledovat hrdinu. 4) Implementujte třídu EventEmitter pro vzor pub/sub. 5) Nastavte posluchače událostí tak, aby při pohybu hrdiny blízcí nepřátelé obdrželi událost 'HERO_MOVED' a aktualizovali svou pozici, aby se přiblížili k hrdinovi. Zahrňte příkazy console.log, které ukazují komunikaci mezi objekty.
+
+Více o [režimu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) se dozvíte zde.
+
 ## 🚀 Výzva
 
-Zamyslete se nad tím, jak může vzor pub-sub vylepšit hru. Které části by měly emitovat události a jak by na ně měla hra reagovat? Teď máte šanci být kreativní, přemýšlet o nové hře a o tom, jak by se její části mohly chovat.
+Zvažte, jak může vzor pub-sub zlepšit architekturu hry. Identifikujte, které komponenty by měly vysílat události a jak by měl systém reagovat. Navrhněte koncept hry a zmapujte komunikační vzory mezi jejími komponentami.
 
 ## Kvíz po přednášce
 
 [Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/30)
 
-## Přehled a samostudium
+## Přehled & Samostudium
 
 Zjistěte více o Pub/Sub [čtením o něm](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
-## Úkol
+## Zadání
 
 [Navrhněte hru](assignment.md)
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

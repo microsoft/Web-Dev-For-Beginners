@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T12:35:10+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-24T23:48:21+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "hr"
 }
@@ -15,7 +15,11 @@ CO_OP_TRANSLATOR_METADATA:
 ## Kviz prije predavanja
 [Kviz prije predavanja](https://ff-quizzes.netlify.app)
 
-Kada razmišljamo o pisanju koda, uvijek želimo osigurati da je naš kod čitljiv. Iako to zvuči kontraintuitivno, kod se čita mnogo više puta nego što se piše. Jedan od osnovnih alata u arsenalu programera za osiguranje održivog koda je **funkcija**.
+Pisanje istog koda iznova i iznova jedna je od najčešćih frustracija u programiranju. Funkcije rješavaju ovaj problem omogućujući vam da pakirate kod u blokove koji se mogu ponovno koristiti. Zamislite funkcije kao standardizirane dijelove koji su učinili revolucionarnom proizvodnu liniju Henryja Forda – jednom kada stvorite pouzdan komponent, možete ga koristiti gdje god je potrebno bez ponovnog stvaranja od nule.
+
+Funkcije omogućuju grupiranje dijelova koda kako biste ih mogli ponovno koristiti u cijelom programu. Umjesto kopiranja i lijepljenja iste logike svugdje, možete jednom stvoriti funkciju i pozvati je kad god je potrebno. Ovaj pristup održava vaš kod organiziranim i olakšava ažuriranja.
+
+U ovoj lekciji naučit ćete kako stvoriti vlastite funkcije, proslijediti im informacije i dobiti korisne rezultate. Otkrit ćete razliku između funkcija i metoda, naučiti moderne sintakse i vidjeti kako funkcije mogu surađivati s drugim funkcijama. Ove koncepte ćemo graditi korak po korak.
 
 [![Metode i Funkcije](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metode i Funkcije")
 
@@ -25,13 +29,15 @@ Kada razmišljamo o pisanju koda, uvijek želimo osigurati da je naš kod čitlj
 
 ## Funkcije
 
-U svojoj srži, funkcija je blok koda koji možemo izvršiti na zahtjev. Ovo je savršeno za scenarije u kojima trebamo obaviti isti zadatak više puta; umjesto da dupliciramo logiku na više mjesta (što bi otežalo ažuriranje kada za to dođe vrijeme), možemo je centralizirati na jednom mjestu i pozvati kad god trebamo izvršiti operaciju - čak možete pozivati funkcije iz drugih funkcija!
+Funkcija je samostalni blok koda koji obavlja određeni zadatak. Ona obuhvaća logiku koju možete izvršiti kad god je to potrebno.
 
-Jednako je važna i mogućnost imenovanja funkcije. Iako se to može činiti trivijalnim, ime pruža brz način dokumentiranja dijela koda. Možete to zamisliti kao naljepnicu na gumbu. Ako kliknem na gumb na kojem piše "Zaustavi tajmer", znam da će zaustaviti odbrojavanje.
+Umjesto da pišete isti kod više puta u svom programu, možete ga pakirati u funkciju i pozvati tu funkciju kad god vam zatreba. Ovaj pristup održava vaš kod čistim i olakšava ažuriranja. Zamislite izazov održavanja ako biste morali mijenjati logiku koja je raspršena na 20 različitih mjesta u vašem kodu.
 
-## Kreiranje i pozivanje funkcije
+Važno je davati funkcijama opisna imena. Dobro imenovana funkcija jasno komunicira svoju svrhu – kada vidite `cancelTimer()`, odmah razumijete što ona radi, baš kao što jasno označena tipka govori što će se dogoditi kada je pritisnete.
 
-Sintaksa za funkciju izgleda ovako:
+## Stvaranje i pozivanje funkcije
+
+Pogledajmo kako stvoriti funkciju. Sintaksa slijedi dosljedan obrazac:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Ako želim kreirati funkciju za prikaz pozdrava, mogla bi izgledati ovako:
+Razložimo ovo:
+- Ključna riječ `function` govori JavaScriptu "Hej, stvaram funkciju!"
+- `nameOfFunction` je mjesto gdje dajete svojoj funkciji opisno ime
+- Zagrade `()` su mjesto gdje možete dodati parametre (o tome ćemo uskoro)
+- Vitičaste zagrade `{}` sadrže stvarni kod koji se izvršava kada pozovete funkciju
+
+Stvorimo jednostavnu funkciju za pozdrav kako bismo to vidjeli u praksi:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Kad god želimo pozvati (ili aktivirati) našu funkciju, koristimo ime funkcije praćeno `()`. Vrijedi napomenuti da naša funkcija može biti definirana prije ili nakon što je odlučimo pozvati; JavaScript kompajler će je pronaći za vas.
+Ova funkcija ispisuje "Hello, world!" u konzolu. Kada je jednom definirate, možete je koristiti koliko god puta želite.
+
+Da biste izvršili (ili "pozvali") svoju funkciju, napišite njezino ime nakon kojeg slijede zagrade. JavaScript vam omogućuje da definirate funkciju prije ili nakon što je pozovete – JavaScript engine će se pobrinuti za redoslijed izvršavanja.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Postoji posebna vrsta funkcije poznata kao **metoda**, koju ste već koristili! Zapravo, vidjeli smo to u našem primjeru iznad kada smo koristili `console.log`. Ono što metodu razlikuje od funkcije je to što je metoda vezana za objekt (`console` u našem primjeru), dok je funkcija slobodna. Mnogi programeri koriste ove termine naizmjenično.
+Kada pokrenete ovu liniju, ona izvršava sav kod unutar vaše funkcije `displayGreeting`, prikazujući "Hello, world!" u konzoli vašeg preglednika. Ovu funkciju možete pozvati više puta.
+
+> **Napomena:** Tijekom ovih lekcija koristili ste **metode**. `console.log()` je metoda – u osnovi funkcija koja pripada objektu `console`. Ključna razlika je u tome što su metode vezane uz objekte, dok funkcije stoje samostalno. Mnogi programeri koriste ove izraze naizmjenično u svakodnevnom razgovoru.
 
 ### Najbolje prakse za funkcije
 
-Postoji nekoliko najboljih praksi koje treba imati na umu prilikom kreiranja funkcija:
+Evo nekoliko savjeta koji će vam pomoći da pišete kvalitetne funkcije:
 
-- Kao i uvijek, koristite opisna imena kako biste znali što funkcija radi
-- Koristite **camelCase** za spajanje riječi
-- Držite funkcije fokusirane na specifičan zadatak
+- Dajte svojim funkcijama jasna, opisna imena – vaša buduća verzija će vam biti zahvalna!
+- Koristite **camelCase** za imena koja se sastoje od više riječi (npr. `calculateTotal` umjesto `calculate_total`)
+- Neka svaka funkcija bude usmjerena na obavljanje jednog zadatka
 
 ## Prosljeđivanje informacija funkciji
 
-Kako bi funkcija bila korisnija, često ćete joj htjeti proslijediti informacije. Ako uzmemo naš primjer `displayGreeting`, on će prikazati samo **Hello, world!**. Nije baš najkorisnija funkcija koju bismo mogli kreirati. Ako želimo da bude malo fleksibilnija, poput omogućavanja nekome da specificira ime osobe koju pozdravljamo, možemo dodati **parametar**. Parametar (ponekad nazvan i **argument**) je dodatna informacija koja se šalje funkciji.
+Naša funkcija `displayGreeting` je ograničena – može prikazati samo "Hello, world!" za sve. Parametri nam omogućuju da funkcije učinimo fleksibilnijima i korisnijima.
 
-Parametri se navode u dijelu definicije unutar zagrada i odvajaju zarezima, ovako:
+**Parametri** djeluju kao rezervirana mjesta gdje možete umetnuti različite vrijednosti svaki put kada koristite funkciju. Na taj način, ista funkcija može raditi s različitim informacijama pri svakom pozivu.
+
+Parametre navodite unutar zagrada kada definirate funkciju, odvajajući više parametara zarezima:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Možemo ažurirati naš `displayGreeting` da prihvati ime i prikaže ga.
+Svaki parametar djeluje kao rezervirano mjesto – kada netko pozove vašu funkciju, pružit će stvarne vrijednosti koje se ubacuju na ta mjesta.
+
+Ažurirajmo našu funkciju pozdrava kako bismo prihvatili ime osobe:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Kada želimo pozvati našu funkciju i proslijediti parametar, specificiramo ga unutar zagrada.
+Primijetite kako koristimo obrnute navodnike (`` ` ``) i `${}` za umetanje imena izravno u našu poruku – to se zove predložak literal, i to je zaista koristan način za izgradnju stringova s pomiješanim varijablama.
+
+Sada, kada pozovemo našu funkciju, možemo proslijediti bilo koje ime:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
+JavaScript uzima string `'Christopher'`, dodjeljuje ga parametru `name` i stvara personaliziranu poruku "Hello, Christopher!"
+
 ## Zadane vrijednosti
 
-Možemo učiniti našu funkciju još fleksibilnijom dodavanjem više parametara. Ali što ako ne želimo zahtijevati da svaka vrijednost bude specificirana? U skladu s našim primjerom pozdrava, mogli bismo ostaviti ime kao obavezno (trebamo znati koga pozdravljamo), ali želimo omogućiti prilagodbu samog pozdrava. Ako netko ne želi prilagoditi pozdrav, pružamo zadanu vrijednost. Da bismo postavili zadanu vrijednost za parametar, radimo to na isti način kao što postavljamo vrijednost za varijablu - `parameterName = 'defaultValue'`. Pogledajmo cijeli primjer:
+Što ako želimo učiniti neke parametre opcionalnima? Tu dolaze u igru zadane vrijednosti!
+
+Recimo da želimo omogućiti ljudima da prilagode riječ za pozdrav, ali ako je ne navedu, jednostavno ćemo koristiti "Hello" kao rezervnu opciju. Zadane vrijednosti možete postaviti pomoću znaka jednakosti, baš kao kod postavljanja varijable:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Kada pozivamo funkciju, tada možemo odlučiti želimo li postaviti vrijednost za `salutation`.
+Ovdje je `name` još uvijek obavezan, ali `salutation` ima rezervnu vrijednost `'Hello'` ako nitko ne navede drugačiji pozdrav.
+
+Sada ovu funkciju možemo pozvati na dva različita načina:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
+U prvom pozivu JavaScript koristi zadani "Hello" jer nismo naveli pozdrav. U drugom pozivu koristi naš prilagođeni "Hi". Ova fleksibilnost čini funkcije prilagodljivima različitim scenarijima.
+
 ## Povratne vrijednosti
 
-Do sada će funkcija koju smo izgradili uvijek ispisivati na [konzolu](https://developer.mozilla.org/docs/Web/API/console). Ponekad je to upravo ono što tražimo, posebno kada kreiramo funkcije koje će pozivati druge servise. Ali što ako želim kreirati pomoćnu funkciju za izvođenje izračuna i pružiti vrijednost natrag kako bih je mogao koristiti negdje drugdje?
+Naše funkcije do sada su samo ispisivale poruke u konzolu, ali što ako želite da funkcija nešto izračuna i vrati vam rezultat?
 
-To možemo učiniti korištenjem **povratne vrijednosti**. Povratna vrijednost vraća se iz funkcije i može se pohraniti u varijablu na isti način kao što bismo pohranili literalnu vrijednost poput stringa ili broja.
+Tu dolaze **povratne vrijednosti**. Umjesto da samo nešto prikazuje, funkcija vam može vratiti vrijednost koju možete pohraniti u varijablu ili koristiti u drugim dijelovima koda.
 
-Ako funkcija vraća nešto, koristi se ključna riječ `return`. Ključna riječ `return` očekuje vrijednost ili referencu onoga što se vraća, ovako:
+Da biste vratili vrijednost, koristite ključnu riječ `return` nakon koje slijedi ono što želite vratiti:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Možemo kreirati funkciju za kreiranje poruke pozdrava i vratiti vrijednost pozivatelju.
+Evo nečega važnog: kada funkcija naiđe na `return` naredbu, odmah prestaje s izvršavanjem i vraća tu vrijednost onome tko ju je pozvao.
+
+Modificirajmo našu funkciju pozdrava kako bi vraćala poruku umjesto da je ispisuje:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Kada pozivamo ovu funkciju, pohranit ćemo vrijednost u varijablu. Ovo je vrlo slično načinu na koji bismo postavili varijablu na statičnu vrijednost (poput `const name = 'Christopher'`).
+Sada, umjesto da ispisuje pozdrav, ova funkcija stvara poruku i vraća je nama.
+
+Da bismo koristili vraćenu vrijednost, možemo je pohraniti u varijablu kao i svaku drugu vrijednost:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
+Sada `greetingMessage` sadrži "Hello, Christopher" i možemo ga koristiti bilo gdje u našem kodu – za prikaz na web stranici, uključivanje u e-mail ili prosljeđivanje drugoj funkciji.
+
 ## Funkcije kao parametri za funkcije
 
-Kako napredujete u svojoj programerskoj karijeri, naići ćete na funkcije koje prihvaćaju funkcije kao parametre. Ovaj zgodan trik često se koristi kada ne znamo kada će se nešto dogoditi ili završiti, ali znamo da trebamo izvršiti operaciju kao odgovor.
+Funkcije se mogu prosljeđivati kao parametri drugim funkcijama. Iako se ovaj koncept u početku može činiti složenim, to je moćna značajka koja omogućuje fleksibilne obrasce programiranja.
 
-Na primjer, razmotrimo [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), koji započinje tajmer i izvršava kod kada završi. Moramo mu reći koji kod želimo izvršiti. Zvuči kao savršen posao za funkciju!
+Ovaj obrazac je vrlo uobičajen kada želite reći "kada se nešto dogodi, učini nešto drugo." Na primjer, "kada tajmer završi, pokreni ovaj kod" ili "kada korisnik klikne gumb, pozovi ovu funkciju."
 
-Ako pokrenete kod ispod, nakon 3 sekunde vidjet ćete poruku **3 sekunde su prošle**.
+Pogledajmo `setTimeout`, koja je ugrađena funkcija koja čeka određeno vrijeme, a zatim pokreće neki kod. Moramo joj reći koji kod da pokrene – savršen slučaj za prosljeđivanje funkcije!
+
+Isprobajte ovaj kod – nakon 3 sekunde vidjet ćete poruku:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
+Primijetite kako prosljeđujemo `displayDone` (bez zagrada) funkciji `setTimeout`. Ne pozivamo funkciju sami – predajemo je `setTimeout` i kažemo "pozovi ovo za 3 sekunde."
+
 ### Anonimne funkcije
 
-Pogledajmo još jednom što smo izgradili. Kreiramo funkciju s imenom koja će se koristiti samo jednom. Kako naša aplikacija postaje složenija, možemo se naći u situaciji da kreiramo puno funkcija koje će se pozivati samo jednom. To nije idealno. Ispostavilo se da ne moramo uvijek davati ime!
+Ponekad vam je potrebna funkcija samo za jednu stvar i ne želite joj dati ime. Razmislite – ako funkciju koristite samo jednom, zašto zatrpavati kod dodatnim imenom?
 
-Kada prosljeđujemo funkciju kao parametar, možemo zaobići njeno prethodno kreiranje i umjesto toga je izgraditi kao dio parametra. Koristimo istu ključnu riječ `function`, ali je gradimo kao parametar.
+JavaScript vam omogućuje stvaranje **anonimnih funkcija** – funkcija bez imena koje možete definirati točno tamo gdje su vam potrebne.
 
-Prepišimo kod iznad kako bismo koristili anonimnu funkciju:
+Evo kako možemo prepisati naš primjer s tajmerom koristeći anonimnu funkciju:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Ako pokrenete naš novi kod, primijetit ćete da dobivamo iste rezultate. Kreirali smo funkciju, ali joj nismo morali dati ime!
+Ovo postiže isti rezultat, ali funkcija je definirana izravno unutar poziva `setTimeout`, eliminirajući potrebu za zasebnom deklaracijom funkcije.
 
-### Fat arrow funkcije
+### Funkcije sa strelicom
 
-Jedan od prečaca uobičajenih u mnogim programskim jezicima (uključujući JavaScript) je mogućnost korištenja tzv. **arrow** ili **fat arrow** funkcija. Koristi poseban indikator `=>`, koji izgleda kao strelica - otuda i naziv! Korištenjem `=>`, možemo preskočiti ključnu riječ `function`.
+Moderni JavaScript ima još kraći način pisanja funkcija, nazvan **funkcije sa strelicom**. Koriste `=>` (što izgleda kao strelica – zar ne?) i vrlo su popularne među programerima.
 
-Prepišimo naš kod još jednom kako bismo koristili fat arrow funkciju:
+Funkcije sa strelicom omogućuju vam da preskočite ključnu riječ `function` i napišete sažetiji kod.
+
+Evo našeg primjera s tajmerom koristeći funkciju sa strelicom:
 
 ```javascript
 setTimeout(() => {
@@ -183,28 +225,47 @@ setTimeout(() => {
 }, 3000);
 ```
 
+`()` je mjesto gdje bi išli parametri (prazno u ovom slučaju), zatim dolazi strelica `=>`, a na kraju tijelo funkcije u vitičastim zagradama. Ovo pruža istu funkcionalnost s sažetijom sintaksom.
+
 ### Kada koristiti koju strategiju
 
-Sada ste vidjeli da imamo tri načina za prosljeđivanje funkcije kao parametra i možda se pitate kada koristiti koji. Ako znate da ćete funkciju koristiti više puta, kreirajte je na uobičajen način. Ako ćete je koristiti samo na jednom mjestu, općenito je najbolje koristiti anonimnu funkciju. Hoćete li koristiti fat arrow funkciju ili tradicionalniju sintaksu `function` ovisi o vama, ali primijetit ćete da većina modernih programera preferira `=>`.
+Kada biste trebali koristiti koji pristup? Praktična smjernica: ako ćete funkciju koristiti više puta, dajte joj ime i definirajte je zasebno. Ako je za jednu specifičnu upotrebu, razmislite o anonimnoj funkciji. I funkcije sa strelicom i tradicionalna sintaksa su valjani izbori, iako su funkcije sa strelicom sve prisutnije u modernim JavaScript kodnim bazama.
 
 ---
+
+
 
 ## 🚀 Izazov
 
 Možete li u jednoj rečenici objasniti razliku između funkcija i metoda? Pokušajte!
+
+## GitHub Copilot Agent Izazov 🚀
+
+Koristite Agent način rada za dovršavanje sljedećeg izazova:
+
+**Opis:** Kreirajte biblioteku korisnih matematičkih funkcija koja demonstrira različite koncepte funkcija obrađene u ovoj lekciji, uključujući parametre, zadane vrijednosti, povratne vrijednosti i funkcije sa strelicom.
+
+**Zadatak:** Kreirajte JavaScript datoteku pod nazivom `mathUtils.js` koja sadrži sljedeće funkcije:
+1. Funkciju `add` koja prima dva parametra i vraća njihov zbroj
+2. Funkciju `multiply` s zadanim vrijednostima parametara (drugi parametar ima zadanu vrijednost 1)
+3. Funkciju sa strelicom `square` koja prima broj i vraća njegov kvadrat
+4. Funkciju `calculate` koja prihvaća drugu funkciju kao parametar i dva broja, a zatim primjenjuje tu funkciju na te brojeve
+5. Demonstrirajte pozivanje svake funkcije s odgovarajućim testnim slučajevima
+
+Saznajte više o [agent načinu rada](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
 
 ## Kviz nakon predavanja
 [Kviz nakon predavanja](https://ff-quizzes.netlify.app)
 
 ## Pregled i samostalno učenje
 
-Vrijedi [pročitati malo više o arrow funkcijama](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), jer se sve više koriste u kodnim bazama. Vježbajte pisanje funkcije, a zatim je prepišite koristeći ovu sintaksu.
+Vrijedi [pročitati malo više o funkcijama sa strelicom](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), jer se sve više koriste u kodnim bazama. Vježbajte pisanje funkcije, a zatim je prepišite koristeći ovu sintaksu.
 
-## Zadaci
+## Zadatak
 
 [Zabava s funkcijama](assignment.md)
 
 ---
 
 **Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.

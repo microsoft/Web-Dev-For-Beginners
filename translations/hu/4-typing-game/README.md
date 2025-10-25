@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "957547b822c40042e07d591c4fbfde4f",
-  "translation_date": "2025-08-28T04:25:33+00:00",
+  "original_hash": "5adea7059676fcdb1b546ccd54c956c2",
+  "translation_date": "2025-10-24T20:26:44+00:00",
   "source_file": "4-typing-game/README.md",
   "language_code": "hu"
 }
@@ -11,28 +11,32 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Bevezetés
 
-A gépelés az egyik leginkább alábecsült készség a fejlesztők körében. Az a képesség, hogy gyorsan át tudd vinni a gondolataidat a fejedből a szerkesztődbe, lehetővé teszi, hogy a kreativitás szabadon áramoljon. Az egyik legjobb módja a tanulásnak, ha játszol!
+Van valami, amit minden fejlesztő tud, de ritkán beszél róla: gyorsan gépelni igazi szupererő! 🚀 Gondolj bele - minél gyorsabban tudod az ötleteidet az agyadból a kódszerkesztőbe juttatni, annál jobban áramlik a kreativitásod. Olyan, mintha közvetlen csatornád lenne a gondolataid és a képernyő között.
 
-> Szóval, építsünk egy gépelős játékot!
+Szeretnéd tudni, mi az egyik legjobb módja ennek a képességnek a fejlesztésére? Talált! Építsünk egy játékot!
 
-A JavaScript, HTML és CSS ismereteidet fogod felhasználni, amelyeket eddig megszereztél, hogy létrehozz egy gépelős játékot. A játék egy véletlenszerű idézetet fog megjeleníteni a játékosnak (mi [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) idézeteket használunk), és mérni fogja, mennyi idő alatt tudja azt pontosan begépelni. A JavaScript, HTML és CSS ismereteidet fogod felhasználni, amelyeket eddig megszereztél, hogy létrehozz egy gépelős játékot.
+> Készítsünk együtt egy szuper gépelős játékot!
+
+Készen állsz arra, hogy bevesd az összes JavaScript, HTML és CSS tudásodat, amit eddig tanultál? Egy olyan gépelős játékot fogunk építeni, amely kihívást jelent számodra a legendás detektív, [Sherlock Holmes](https://en.wikipedia.org/wiki/Sherlock_Holmes) véletlenszerű idézeteivel. A játék nyomon követi, milyen gyorsan és pontosan tudsz gépelni - és hidd el, sokkal addiktívabb, mint gondolnád!
 
 ![demo](../../../4-typing-game/images/demo.gif)
 
-## Előfeltételek
+## Amit tudnod kell
 
-Ez a lecke feltételezi, hogy ismered a következő fogalmakat:
+Mielőtt belevágunk, győződj meg róla, hogy kényelmesen mozogsz ezekben a témákban (ne aggódj, ha szükséged van egy gyors ismétlésre - mindannyian voltunk már így!):
 
-- Szövegbevitel és gombvezérlők létrehozása
-- CSS és stílusok beállítása osztályok használatával
+- Szövegbeviteli mezők és gombok létrehozása
+- CSS és stílusok beállítása osztályok használatával  
 - JavaScript alapok
   - Tömb létrehozása
   - Véletlenszám generálása
   - Az aktuális idő lekérése
 
-## Lecke
+Ha ezek közül valamelyik kicsit rozsdásnak tűnik, az teljesen rendben van! Néha a legjobb módja annak, hogy megszilárdítsd a tudásodat, az, ha belevágsz egy projektbe, és menet közben tanulsz.
 
-[Hogyan készítsünk gépelős játékot eseményvezérelt programozással](./typing-game/README.md)
+## Vágjunk bele!
+
+[Gépelős játék létrehozása eseményvezérelt programozás segítségével](./typing-game/README.md)
 
 ## Köszönetnyilvánítás
 
@@ -41,4 +45,4 @@ Ez a lecke feltételezi, hogy ismered a következő fogalmakat:
 ---
 
 **Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

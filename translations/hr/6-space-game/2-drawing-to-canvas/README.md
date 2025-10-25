@@ -1,21 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "056641280211e52fd0adb81b6058ec55",
-  "translation_date": "2025-08-29T12:33:52+00:00",
+  "original_hash": "84053695dca714e16ed064366503ebd5",
+  "translation_date": "2025-10-25T00:11:52+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "hr"
 }
 -->
 # Izgradnja svemirske igre, dio 2: Crtanje heroja i čudovišta na platno
 
+Canvas API jedna je od najmoćnijih značajki web razvoja za stvaranje dinamičnih, interaktivnih grafika direktno u vašem pregledniku. U ovoj lekciji pretvorit ćemo taj prazan HTML `<canvas>` element u svijet igre ispunjen herojima i čudovištima. Zamislite platno kao svoju digitalnu umjetničku ploču gdje kod postaje vizualan.
+
+Nadovezujemo se na ono što ste naučili u prethodnoj lekciji, a sada ćemo se posvetiti vizualnim aspektima. Naučit ćete kako učitati i prikazati spriteove igre, precizno pozicionirati elemente i stvoriti vizualne temelje za svoju svemirsku igru. Ovo je most između statičnih web stranica i dinamičnih, interaktivnih iskustava.
+
+Na kraju ove lekcije imat ćete kompletan prizor igre s vašim herojskim brodom pravilno pozicioniranim i formacijama neprijatelja spremnim za bitku. Razumjet ćete kako moderne igre renderiraju grafiku u preglednicima i steći vještine za stvaranje vlastitih interaktivnih vizualnih iskustava. Istražimo grafiku na platnu i oživimo vašu svemirsku igru!
+
 ## Kviz prije predavanja
 
 [Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/31)
 
-## Platno
+## Canvas
 
-Platno je HTML element koji po defaultu nema sadržaj; to je prazna površina. Morate ga popuniti crtanjem.
+Što je točno `<canvas>` element? To je HTML5 rješenje za stvaranje dinamičnih grafika i animacija u web preglednicima. Za razliku od običnih slika ili videa koji su statični, canvas vam daje kontrolu nad svakim pikselom na ekranu. To ga čini savršenim za igre, vizualizaciju podataka i interaktivnu umjetnost. Zamislite ga kao programabilnu površinu za crtanje gdje JavaScript postaje vaš kist.
+
+Po defaultu, canvas element izgleda kao prazan, transparentan pravokutnik na vašoj stranici. Ali tu leži njegov potencijal! Njegova prava moć dolazi do izražaja kada koristite JavaScript za crtanje oblika, učitavanje slika, stvaranje animacija i omogućavanje interakcije s korisnicima. Slično je tome kako su pioniri računalne grafike u Bell Labsu 1960-ih morali programirati svaki piksel kako bi stvorili prve digitalne animacije.
 
 ✅ Pročitajte [više o Canvas API-ju](https://developer.mozilla.org/docs/Web/API/Canvas_API) na MDN-u.
 
@@ -25,176 +33,243 @@ Evo kako se obično deklarira, kao dio tijela stranice:
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
-Gore postavljamo `id`, `width` i `height`.
-
-- `id`: postavite ovo kako biste mogli dobiti referencu kada trebate raditi s njim.
-- `width`: ovo je širina elementa.
-- `height`: ovo je visina elementa.
+**Što ovaj kod radi:**
+- **Postavlja** atribut `id` kako biste mogli referencirati ovaj specifični canvas element u JavaScriptu
+- **Definira** širinu u pikselima za kontrolu horizontalne veličine platna
+- **Postavlja** visinu u pikselima za određivanje vertikalnih dimenzija platna
 
 ## Crtanje jednostavne geometrije
 
-Platno koristi kartezijanski koordinatni sustav za crtanje. Dakle, koristi x-os i y-os za izražavanje gdje se nešto nalazi. Lokacija `0,0` je gornji lijevi kut, a donji desni kut je ono što ste postavili kao ŠIRINU i VISINU platna.
+Sada kada znate što je canvas element, istražimo kako zapravo crtati na njemu! Canvas koristi koordinatni sustav koji vam može biti poznat iz matematike, ali postoji jedna važna razlika specifična za računalnu grafiku.
+
+Canvas koristi kartezijanski koordinatni sustav s x-osom (horizontalno) i y-osom (vertikalno) za pozicioniranje svega što crtate. Ali evo ključne razlike: za razliku od koordinatnog sustava iz matematike, početna točka `(0,0)` počinje u gornjem lijevom kutu, pri čemu se vrijednosti x povećavaju kako se pomičete desno, a vrijednosti y povećavaju kako se pomičete dolje. Ovaj pristup datira iz ranih računalnih zaslona gdje su elektronske zrake skenirale od vrha prema dolje, čineći gornji lijevi kut prirodnom početnom točkom.
 
 ![mreža platna](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.hr.png)
-> Slika s [MDN-a](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+> Slika s [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Da biste crtali na elementu platna, trebate proći kroz sljedeće korake:
+Za crtanje na canvas elementu slijedit ćete isti trostupanjski proces koji čini temelj svih grafika na platnu. Nakon što to učinite nekoliko puta, postaje prirodno:
 
-1. **Dobiti referencu** na element platna.
-1. **Dobiti referencu** na element konteksta koji se nalazi na elementu platna.
-1. **Izvršiti operaciju crtanja** koristeći element konteksta.
+1. **Dobijte referencu** na svoj Canvas element iz DOM-a (kao i za bilo koji drugi HTML element)
+2. **Dobijte 2D kontekst za renderiranje** – on pruža sve metode za crtanje
+3. **Počnite crtati!** Koristite ugrađene metode konteksta za stvaranje grafike
 
-Kod za gore navedene korake obično izgleda ovako:
+Evo kako to izgleda u kodu:
 
 ```javascript
-// draws a red rectangle
-//1. get the canvas reference
-canvas = document.getElementById("myCanvas");
+// Step 1: Get the canvas element
+const canvas = document.getElementById("myCanvas");
 
-//2. set the context to 2D to draw basic shapes
-ctx = canvas.getContext("2d");
+// Step 2: Get the 2D rendering context
+const ctx = canvas.getContext("2d");
 
-//3. fill it with the color red
+// Step 3: Set fill color and draw a rectangle
 ctx.fillStyle = 'red';
-
-//4. and draw a rectangle with these parameters, setting location and size
-ctx.fillRect(0,0, 200, 200) // x,y,width, height
+ctx.fillRect(0, 0, 200, 200); // x, y, width, height
 ```
 
-✅ Canvas API uglavnom se fokusira na 2D oblike, ali možete crtati i 3D elemente na web stranici; za to možete koristiti [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
+**Razložimo ovo korak po korak:**
+- **Uzimamo** naš canvas element koristeći njegov ID i spremamo ga u varijablu
+- **Dobivamo** 2D kontekst za renderiranje – to je naš alat pun metoda za crtanje
+- **Kažemo** canvasu da želimo ispuniti stvari crvenom bojom koristeći svojstvo `fillStyle`
+- **Crtamo** pravokutnik koji počinje u gornjem lijevom kutu (0,0) i širok je 200 piksela i visok 200 piksela
 
-Možete crtati razne stvari pomoću Canvas API-ja, kao što su:
+✅ Canvas API uglavnom se fokusira na 2D oblike, ali možete crtati i 3D elemente na web stranici; za to biste mogli koristiti [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
+
+Možete crtati razne stvari s Canvas API-jem, kao što su:
 
 - **Geometrijski oblici**, već smo pokazali kako nacrtati pravokutnik, ali postoji mnogo više što možete nacrtati.
 - **Tekst**, možete nacrtati tekst s bilo kojim fontom i bojom koju želite.
-- **Slike**, možete nacrtati sliku na temelju slikovne datoteke, poput .jpg ili .png.
+- **Slike**, možete nacrtati sliku na temelju slike kao što je .jpg ili .png, na primjer.
 
-✅ Isprobajte! Znate kako nacrtati pravokutnik, možete li nacrtati krug na stranici? Pogledajte neke zanimljive crteže na platnu na CodePenu. Evo [posebno impresivnog primjera](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Isprobajte! Znate kako nacrtati pravokutnik, možete li nacrtati krug na stranici? Pogledajte neke zanimljive crteže na Canvasu na CodePenu. Evo [posebno impresivnog primjera](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Učitavanje i crtanje slikovnog resursa
+## Učitavanje i crtanje slike
 
-Slikovni resurs učitavate stvaranjem objekta `Image` i postavljanjem njegove `src` svojstva. Zatim slušate događaj `load` kako biste znali kada je spreman za korištenje. Kod izgleda ovako:
+Crtanje osnovnih oblika korisno je za početak, ali većina igara treba stvarne slike! Spriteovi, pozadine i teksture ono su što daje igrama vizualnu privlačnost. Učitavanje i prikazivanje slika na platnu funkcionira drugačije od crtanja geometrijskih oblika, ali je jednostavno kad shvatite proces.
 
-### Učitavanje resursa
+Moramo stvoriti objekt `Image`, učitati našu datoteku slike (to se događa asinkrono, što znači "u pozadini") i zatim je nacrtati na platno kad bude spremna. Ovaj pristup osigurava da se vaše slike pravilno prikazuju bez blokiranja aplikacije dok se učitavaju.
+
+### Osnovno učitavanje slike
 
 ```javascript
 const img = new Image();
 img.src = 'path/to/my/image.png';
 img.onload = () => {
-  // image loaded and ready to be used
-}
+  // Image loaded and ready to be used
+  console.log('Image loaded successfully!');
+};
 ```
 
-### Uzorak učitavanja resursa
+**Što se događa u ovom kodu:**
+- **Stvaramo** potpuno novi objekt slike za pohranu našeg spritea ili teksture
+- **Kažemo** mu koju datoteku slike treba učitati postavljanjem putanje izvora
+- **Slušamo** događaj učitavanja kako bismo točno znali kada je slika spremna za upotrebu
 
-Preporučuje se da gore navedeno omotate u konstrukciju poput ove, kako bi bilo lakše koristiti i kako biste ga manipulirali tek kad je potpuno učitan:
+### Bolji način za učitavanje slika
+
+Evo robusnijeg načina za rukovanje učitavanjem slika koji profesionalni programeri često koriste. Učitavanje slika ćemo omotati u funkciju temeljenu na Promisima – ovaj pristup, populariziran kada su JavaScript Promises postali standard u ES6, čini vaš kod organiziranijim i elegantno rješava greške:
 
 ```javascript
 function loadAsset(path) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = path;
     img.onload = () => {
-      // image loaded and ready to be used
       resolve(img);
-    }
-  })
+    };
+    img.onerror = () => {
+      reject(new Error(`Failed to load image: ${path}`));
+    };
+  });
 }
 
-// use like so
-
-async function run() {
-  const heroImg = await loadAsset('hero.png')
-  const monsterImg = await loadAsset('monster.png')
+// Modern usage with async/await
+async function initializeGame() {
+  try {
+    const heroImg = await loadAsset('hero.png');
+    const monsterImg = await loadAsset('monster.png');
+    // Images are now ready to use
+  } catch (error) {
+    console.error('Failed to load game assets:', error);
+  }
 }
-
 ```
 
-Da biste nacrtali resurse igre na ekranu, vaš kod bi izgledao ovako:
+**Što smo ovdje učinili:**
+- **Omotali** svu logiku učitavanja slika u Promise kako bismo njime bolje upravljali
+- **Dodali** rukovanje greškama koje nam zapravo govori kada nešto pođe po zlu
+- **Koristili** modernu async/await sintaksu jer je puno čišća za čitanje
+- **Uključili** try/catch blokove za elegantno rukovanje bilo kakvim problemima pri učitavanju
+
+Kad su vaše slike učitane, njihovo crtanje na platno zapravo je prilično jednostavno:
 
 ```javascript
-async function run() {
-  const heroImg = await loadAsset('hero.png')
-  const monsterImg = await loadAsset('monster.png')
+async function renderGameScreen() {
+  try {
+    // Load game assets
+    const heroImg = await loadAsset('hero.png');
+    const monsterImg = await loadAsset('monster.png');
 
-  canvas = document.getElementById("myCanvas");
-  ctx = canvas.getContext("2d");
-  ctx.drawImage(heroImg, canvas.width/2,canvas.height/2);
-  ctx.drawImage(monsterImg, 0,0);
+    // Get canvas and context
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw images to specific positions
+    ctx.drawImage(heroImg, canvas.width / 2, canvas.height / 2);
+    ctx.drawImage(monsterImg, 0, 0);
+  } catch (error) {
+    console.error('Failed to render game screen:', error);
+  }
 }
 ```
+
+**Razložimo ovo korak po korak:**
+- **Učitavamo** slike heroja i čudovišta u pozadini koristeći await
+- **Uzimamo** naš canvas element i dobivamo taj 2D kontekst za renderiranje koji nam treba
+- **Pozicioniramo** sliku heroja točno u sredinu koristeći malo brze matematike za koordinate
+- **Postavljamo** sliku čudovišta u gornji lijevi kut kako bismo započeli formaciju neprijatelja
+- **Hvatamo** sve greške koje se mogu dogoditi tijekom učitavanja ili renderiranja
 
 ## Vrijeme je da počnete graditi svoju igru
 
+Sada ćemo sve spojiti kako bismo stvorili vizualne temelje vaše svemirske igre. Imate solidno razumijevanje osnova platna i tehnika učitavanja slika, pa će vas ovaj praktični dio voditi kroz izradu kompletnog ekrana igre s pravilno pozicioniranim spriteovima.
+
 ### Što izgraditi
 
-Izgradit ćete web stranicu s elementom platna. Trebala bi prikazivati crni ekran `1024*768`. Osigurali smo vam dvije slike:
+Izradit ćete web stranicu s Canvas elementom. Trebala bi prikazivati crni ekran `1024*768`. Dostavili smo vam dvije slike:
 
 - Herojski brod
 
    ![Herojski brod](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.hr.png)
 
-- 5*5 čudovište
+- 5*5 čudovišta
 
    ![Brod čudovišta](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.hr.png)
 
 ### Preporučeni koraci za početak razvoja
 
-Pronađite datoteke koje su kreirane za vas u podmapi `your-work`. Trebala bi sadržavati sljedeće:
+Pronađite početne datoteke koje su stvorene za vas u podmapi `your-work`. Struktura vašeg projekta trebala bi sadržavati:
 
 ```bash
--| assets
-  -| enemyShip.png
-  -| player.png
--| index.html
--| app.js
--| package.json
+your-work/
+├── assets/
+│   ├── enemyShip.png
+│   └── player.png
+├── index.html
+├── app.js
+└── package.json
 ```
 
-Otvorite kopiju ove mape u Visual Studio Codeu. Trebate imati postavljeno lokalno razvojno okruženje, po mogućnosti s Visual Studio Codeom, NPM-om i Nodeom instaliranim. Ako nemate postavljen `npm` na svom računalu, [evo kako to učiniti](https://www.npmjs.com/get-npm).
+**Što imate na raspolaganju:**
+- **Spriteovi igre** nalaze se u mapi `assets/` kako bi sve ostalo organizirano
+- **Vaša glavna HTML datoteka** postavlja canvas element i priprema sve
+- **JavaScript datoteka** u kojoj ćete napisati svu magiju za renderiranje igre
+- **package.json** koji postavlja razvojni server kako biste mogli testirati lokalno
 
-Pokrenite svoj projekt navigacijom do mape `your_work`:
+Otvorite ovu mapu u Visual Studio Codeu kako biste započeli razvoj. Trebat će vam lokalno razvojno okruženje s instaliranim Visual Studio Codeom, NPM-om i Node.js-om. Ako nemate postavljen `npm` na svom računalu, [evo kako ga instalirati](https://www.npmjs.com/get-npm).
+
+Pokrenite svoj razvojni server tako da odete u mapu `your-work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Gore navedeno će pokrenuti HTTP server na adresi `http://localhost:5000`. Otvorite preglednik i unesite tu adresu. Trenutno je prazna stranica, ali to će se promijeniti.
+**Ova naredba radi nekoliko prilično zanimljivih stvari:**
+- **Pokreće** lokalni server na `http://localhost:5000` kako biste mogli testirati svoju igru
+- **Poslužuje** sve vaše datoteke kako bi ih vaš preglednik mogao ispravno učitati
+- **Prati** promjene u vašim datotekama kako biste mogli glatko razvijati
+- **Pruža vam** profesionalno razvojno okruženje za testiranje svega
 
-> Napomena: da biste vidjeli promjene na ekranu, osvježite preglednik.
+> 💡 **Napomena**: Vaš preglednik će isprva prikazivati praznu stranicu – to je očekivano! Kako dodajete kod, osvježite preglednik da biste vidjeli promjene. Ovaj iterativni pristup razvoju sličan je načinu na koji je NASA izgradila Apollo računalni sustav za navođenje – testirajući svaki komponent prije integracije u veći sustav.
 
-### Dodavanje koda
+### Dodajte kod
 
-Dodajte potreban kod u `your-work/app.js` kako biste riješili sljedeće:
+Dodajte potrebni kod u `your-work/app.js` kako biste dovršili sljedeće zadatke:
 
-1. **Nacrtajte** platno s crnom pozadinom
-   > savjet: dodajte dvije linije ispod odgovarajućeg TODO-a u `/app.js`, postavljajući element `ctx` da bude crn, a gornje/lijeve koordinate na 0,0, dok visina i širina trebaju odgovarati platnu.
-2. **Učitajte** teksture
-   > savjet: dodajte slike igrača i neprijatelja koristeći `await loadTexture` i prosljeđujući put slike. Još ih nećete vidjeti na ekranu!
-3. **Nacrtajte** heroja u sredini ekrana u donjoj polovici
-   > savjet: koristite API `drawImage` za crtanje heroImg na ekranu, postavljajući `canvas.width / 2 - 45` i `canvas.height - canvas.height / 4)`;
-4. **Nacrtajte** 5*5 čudovišta
-   > savjet: Sada možete otkomentirati kod za crtanje neprijatelja na ekranu. Zatim idite na funkciju `createEnemies` i izradite je.
+1. **Nacrtajte platno s crnom pozadinom**
+   > 💡 **Kako**: Pronađite TODO u `/app.js` i dodajte samo dvije linije. Postavite `ctx.fillStyle` na crno, zatim koristite `ctx.fillRect()` počevši od (0,0) s dimenzijama vašeg platna. Jednostavno!
 
-   Prvo, postavite neke konstante:
+2. **Učitajte teksture igre**
+   > 💡 **Kako**: Koristite `await loadAsset()` za učitavanje slika igrača i neprijatelja. Spremite ih u varijable kako biste ih kasnije mogli koristiti. Zapamtite – neće se prikazati dok ih zapravo ne nacrtate!
 
-    ```javascript
-    const MONSTER_TOTAL = 5;
-    const MONSTER_WIDTH = MONSTER_TOTAL * 98;
-    const START_X = (canvas.width - MONSTER_WIDTH) / 2;
-    const STOP_X = START_X + MONSTER_WIDTH;
-    ```
+3. **Nacrtajte herojski brod u sredini-donjoj poziciji**
+   > 💡 **Kako**: Koristite `ctx.drawImage()` za pozicioniranje heroja. Za x-koordinatu pokušajte `canvas.width / 2 - 45` za centriranje, a za y-koordinatu koristite `canvas.height - canvas.height / 4` za postavljanje u donji dio.
 
-    zatim, kreirajte petlju za crtanje niza čudovišta na ekranu:
+4. **Nacrtajte formaciju neprijateljskih brodova 5×5**
+   > 💡 **Kako**: Pronađite funkciju `createEnemies` i postavite ugniježđenu petlju. Trebat ćete malo matematike za razmak i pozicioniranje, ali ne brinite – pokazat ću vam točno kako!
 
-    ```javascript
-    for (let x = START_X; x < STOP_X; x += 98) {
-        for (let y = 0; y < 50 * 5; y += 50) {
-          ctx.drawImage(enemyImg, x, y);
-        }
-      }
-    ```
+Prvo, postavite konstante za pravilni raspored formacije neprijatelja:
+
+```javascript
+const ENEMY_TOTAL = 5;
+const ENEMY_SPACING = 98;
+const FORMATION_WIDTH = ENEMY_TOTAL * ENEMY_SPACING;
+const START_X = (canvas.width - FORMATION_WIDTH) / 2;
+const STOP_X = START_X + FORMATION_WIDTH;
+```
+
+**Razložimo što ove konstante rade:**
+- **Postavljamo** 5 neprijatelja po redu i stupcu (lijepa mreža 5×5)
+- **Definiramo** koliko prostora treba biti između neprijatelja kako ne bi izgledali zbijeno
+- **Izračunavamo** koliko će široka biti cijela formacija
+- **Određujemo** gdje početi i završiti kako bi formacija izgledala centrirano
+
+Zatim, stvorite ugniježđene petlje za crtanje formacije neprijatelja:
+
+```javascript
+for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
+  for (let y = 0; y < 50 * 5; y += 50) {
+    ctx.drawImage(enemyImg, x, y);
+  }
+}
+```
+
+**Što ova ugniježđena petlja radi:**
+- Vanjska petlja **pomjera se** s lijeva na desno kroz našu formaciju
+- Unutarnja petlja **ide** od vrha prema dolje kako bi stvorila uredne redove
+- **Crtamo** svaki sprite neprijatelja na točno izračunatim x,y koordinatama
+- Sve ostaje **ravnomjerno raspoređeno** kako bi izgledalo profesionalno i organizirano
 
 ## Rezultat
 
@@ -204,13 +279,23 @@ Završni rezultat trebao bi izgledati ovako:
 
 ## Rješenje
 
-Pokušajte prvo sami riješiti, ali ako zapnete, pogledajte [rješenje](../../../../6-space-game/2-drawing-to-canvas/solution/app.js).
+Pokušajte prvo sami riješiti, ali ako zapnete, pogledajte [rješenje](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)
 
 ---
 
+## Izazov GitHub Copilot Agent 🚀
+
+Koristite Agent način rada za dovršavanje sljedećeg izazova:
+
+**Opis:** Poboljšajte svoje platno svemirske igre dodavanjem vizualnih efekata i interaktivnih elemenata koristeći tehnike Canvas API-ja koje ste naučili.
+
+**Zadatak:** Napravite novu datoteku pod nazivom `enhanced-canvas.html` s platnom koje prikazuje animirane zvijezde u pozadini, pulsirajuću traku zdravlja za herojski brod i neprijateljske brodove koji se polako spuštaju. Uključite JavaScript kod koji crta treperave zvijezde koristeći nasumične pozicije i prozirnost, implementira traku zdravlja koja mijenja boju ovisno o razini zdravlja (zelena > žuta > crvena) i animira neprijateljske brodove da se spuštaju niz ekran različitim brzinama.
+
+Saznajte više o [agent načinu rada](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
+
 ## 🚀 Izazov
 
-Naučili ste o crtanju s Canvas API-jem fokusiranim na 2D; pogledajte [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) i pokušajte nacrtati 3D objekt.
+Naučili ste o crtanju s 2D-fokusiranim Canvas API-jem; pogledajte [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) i pokušajte nacrtati 3D objekt.
 
 ## Kviz nakon predavanja
 
@@ -226,5 +311,5 @@ Saznajte više o Canvas API-ju [čitajući o njemu](https://developer.mozilla.or
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja mogu proizaći iz korištenja ovog prijevoda.

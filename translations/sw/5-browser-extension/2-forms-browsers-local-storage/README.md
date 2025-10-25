@@ -1,31 +1,37 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T10:03:59+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-24T19:45:28+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sw"
 }
 -->
-# Mradi wa Kiendelezi cha Kivinjari Sehemu ya 2: Kuita API, kutumia Hifadhi ya Ndani
+# Mradi wa Kiendelezi cha Kivinjari Sehemu ya 2: Unganisha API, tumia Hifadhi ya Ndani
 
-## Jaribio Kabla ya Somo
+## Jaribio la Kabla ya Somo
 
-[Jaribio kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/25)
+[Jaribio la kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Utangulizi
+## Utangulizi
 
-Katika somo hili, utaita API kwa kuwasilisha fomu ya kiendelezi cha kivinjari chako na kuonyesha matokeo ndani ya kiendelezi chako. Zaidi ya hayo, utajifunza jinsi ya kuhifadhi data katika hifadhi ya ndani ya kivinjari chako kwa marejeleo na matumizi ya baadaye.
+Unakumbuka kiendelezi cha kivinjari ulichokuwa ukijenga? Kwa sasa una fomu inayovutia, lakini ni ya static tu. Leo tutaihuisha kwa kuunganisha na data halisi na kuipa uwezo wa kukumbuka.
 
-✅ Fuata sehemu zilizoorodheshwa kwa namba katika faili husika ili kujua wapi pa kuweka msimbo wako.
+Fikiria kompyuta za kudhibiti misheni ya Apollo - hazikuonyesha tu taarifa za kudumu. Zilikuwa zikiwasiliana mara kwa mara na chombo cha anga, zikiweka data ya telemetry, na kukumbuka vigezo muhimu vya misheni. Hiyo ndiyo aina ya tabia ya nguvu tunayoijenga leo. Kiendelezi chako kitafikia mtandao, kuchukua data halisi ya mazingira, na kukumbuka mipangilio yako kwa mara nyingine.
 
-### Sanidi vipengele vya kudhibiti katika kiendelezi:
+Kuunganisha API kunaweza kuonekana kuwa ngumu, lakini ni kama kufundisha msimbo wako jinsi ya kuwasiliana na huduma nyingine. Ikiwa unachukua data ya hali ya hewa, mlisho wa mitandao ya kijamii, au taarifa za alama ya kaboni kama tutakavyofanya leo, yote ni kuhusu kuanzisha miunganisho hii ya kidijitali. Pia tutachunguza jinsi vivinjari vinavyoweza kuhifadhi taarifa - sawa na jinsi maktaba zilivyotumia katalogi za kadi kukumbuka mahali vitabu vinapohifadhiwa.
 
-Hadi kufikia sasa, umeshajenga HTML ya fomu na `<div>` ya matokeo kwa kiendelezi chako cha kivinjari. Kuanzia sasa, utahitaji kufanya kazi katika faili ya `/src/index.js` na kujenga kiendelezi chako hatua kwa hatua. Rejelea [somo la awali](../1-about-browsers/README.md) kuhusu jinsi ya kusanidi mradi wako na mchakato wa ujenzi.
+Mwisho wa somo hili, utakuwa na kiendelezi cha kivinjari kinachochukua data halisi, kuhifadhi mapendeleo ya mtumiaji, na kutoa uzoefu laini. Hebu tuanze!
 
-Ukifanya kazi katika faili yako ya `index.js`, anza kwa kuunda baadhi ya `const` za kushikilia thamani zinazohusiana na sehemu mbalimbali:
+✅ Fuata sehemu zilizoorodheshwa kwa namba kwenye faili husika ili kujua wapi pa kuweka msimbo wako.
 
-```JavaScript
+## Sanidi vipengele vya kudhibiti katika kiendelezi
+
+Kabla ya JavaScript yako kudhibiti kiolesura, inahitaji marejeleo ya vipengele maalum vya HTML. Fikiria kama darubini inavyohitaji kuelekezwa kwenye nyota fulani - kabla ya Galileo kusoma miezi ya Jupiter, alihitaji kuipata na kuielekeza Jupiter yenyewe.
+
+Katika faili yako ya `index.js`, tutaunda `const` zinazokamata marejeleo ya kila kipengele muhimu cha fomu. Hii ni sawa na jinsi wanasayansi wanavyoweka lebo kwenye vifaa vyao - badala ya kutafuta maabara nzima kila wakati, wanaweza kufikia moja kwa moja wanachohitaji.
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,123 +47,175 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Sehemu zote hizi zinarejelewa kwa darasa la css, kama ulivyoiweka katika HTML kwenye somo la awali.
+**Hii ndiyo msimbo unavyofanya:**
+- **Inakamata** vipengele vya fomu kwa kutumia `document.querySelector()` na vichagua vya darasa la CSS
+- **Inaunda** marejeleo ya sehemu za kuingiza jina la eneo na API key
+- **Inaanzisha** miunganisho na vipengele vya kuonyesha matokeo ya data ya matumizi ya kaboni
+- **Inasanidi** ufikiaji wa vipengele vya UI kama viashiria vya kupakia na ujumbe wa makosa
+- **Inahifadhi** kila marejeleo ya kipengele katika `const` kwa matumizi rahisi katika msimbo wako
 
-### Ongeza wasikilizaji wa matukio
+## Ongeza wasikilizaji wa matukio
 
-Kisha, ongeza wasikilizaji wa matukio kwenye fomu na kitufe cha kufuta ambacho kinaseti upya fomu, ili kwamba mtumiaji akiwakilisha fomu au kubonyeza kitufe hicho cha kufuta, kitu fulani kitokee, na ongeza mwito wa kuanzisha programu mwishoni mwa faili:
+Sasa tutafanya kiendelezi chako kijibu vitendo vya mtumiaji. Wasikilizaji wa matukio ni njia ya msimbo wako ya kufuatilia mwingiliano wa mtumiaji. Fikiria kama waendeshaji wa simu za mapema - walikuwa wakisikiliza simu zinazoingia na kuunganisha nyaya sahihi wakati mtu alitaka kufanya mawasiliano.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Angalia njia fupi inayotumika kusikiliza tukio la kuwasilisha au kubonyeza, na jinsi tukio linavyopitishwa kwa kazi ya `handleSubmit` au `reset`. Je, unaweza kuandika sawa na njia hii fupi kwa muundo mrefu? Unapendelea ipi?
+**Kuelewa dhana hizi:**
+- **Inaambatisha** msikilizaji wa kuwasilisha kwenye fomu inayochochea wakati watumiaji wanapobonyeza Enter au kuwasilisha
+- **Inaunganisha** msikilizaji wa kubonyeza kwenye kitufe cha kufuta ili kuweka upya fomu
+- **Inapitisha** kitu cha tukio `(e)` kwa kazi za kushughulikia kwa udhibiti wa ziada
+- **Inaita** kazi ya `init()` mara moja ili kusanidi hali ya awali ya kiendelezi chako
 
-### Jenga kazi ya `init()` na `reset()`:
+✅ Angalia sintaksia fupi ya kazi ya mshale inayotumika hapa. Njia hii ya kisasa ya JavaScript ni safi zaidi kuliko maelezo ya kazi za jadi, lakini zote zinafanya kazi sawa!
 
-Sasa utaenda kujenga kazi inayozindua kiendelezi, ambayo inaitwa `init()`:
+## Jenga kazi za uanzishaji na kuweka upya
 
-```JavaScript
+Hebu tuunde mantiki ya uanzishaji kwa kiendelezi chako. Kazi ya `init()` ni kama mfumo wa urambazaji wa meli unaokagua vyombo vyake - inatambua hali ya sasa na kurekebisha kiolesura ipasavyo. Inakagua ikiwa mtu amewahi kutumia kiendelezi chako kabla na kupakia mipangilio yao ya awali.
+
+Kazi ya `reset()` inawapa watumiaji mwanzo mpya - sawa na jinsi wanasayansi wanavyoweka upya vyombo vyao kati ya majaribio ili kuhakikisha data safi.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
 
-Katika kazi hii, kuna mantiki ya kuvutia. Ukiisoma, unaweza kuona kinachotokea?
+**Kufafanua kinachotokea hapa:**
+- **Inachukua** API key iliyohifadhiwa na eneo kutoka hifadhi ya ndani ya kivinjari
+- **Inakagua** ikiwa huyu ni mtumiaji wa mara ya kwanza (hakuna hati zilizohifadhiwa) au mtumiaji anayerejea
+- **Inaonyesha** fomu ya usanidi kwa watumiaji wapya na kuficha vipengele vingine vya kiolesura
+- **Inapakia** data iliyohifadhiwa moja kwa moja kwa watumiaji wanaorejea na kuonyesha chaguo la kuweka upya
+- **Inasimamia** hali ya kiolesura cha mtumiaji kulingana na data inayopatikana
 
-- `const` mbili zinatengenezwa ili kuangalia kama mtumiaji ameweka APIKey na msimbo wa eneo katika hifadhi ya ndani.
-- Ikiwa mojawapo ya hizo ni `null`, onyesha fomu kwa kubadilisha mtindo wake kuwa 'block'.
-- Ficha matokeo, kipakiaji, na `clearBtn` na weka maandishi ya kosa kuwa tupu.
-- Ikiwa kuna ufunguo na eneo, anza utaratibu wa:
-  - kuita API ili kupata data ya matumizi ya kaboni.
-  - ficha eneo la matokeo.
-  - ficha fomu.
-  - onyesha kitufe cha kuweka upya.
+**Dhana muhimu kuhusu Hifadhi ya Ndani:**
+- **Inahifadhi** data kati ya vikao vya kivinjari (tofauti na hifadhi ya kikao)
+- **Inahifadhi** data kama jozi za funguo-thamani kwa kutumia `getItem()` na `setItem()`
+- **Inarudisha** `null` wakati hakuna data inayopatikana kwa funguo fulani
+- **Inatoa** njia rahisi ya kukumbuka mapendeleo na mipangilio ya mtumiaji
 
-Kabla ya kuendelea, ni muhimu kujifunza kuhusu dhana muhimu sana inayopatikana katika vivinjari: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). LocalStorage ni njia muhimu ya kuhifadhi maandishi katika kivinjari kama jozi ya `key-value`. Aina hii ya hifadhi ya wavuti inaweza kudhibitiwa na JavaScript ili kusimamia data katika kivinjari. LocalStorage haimaliziki muda wake, wakati SessionStorage, aina nyingine ya hifadhi ya wavuti, inafutwa kivinjari kinapofungwa. Aina mbalimbali za hifadhi zina faida na hasara katika matumizi yao.
+> 💡 **Kuelewa Hifadhi ya Kivinjari**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) ni kama kutoa kiendelezi chako kumbukumbu ya kudumu. Fikiria jinsi Maktaba ya kale ya Alexandria ilivyohifadhi maandiko - taarifa zilikuwa zinapatikana hata wakati wasomi waliondoka na kurudi.
+>
+> **Tabia muhimu:**
+> - **Inahifadhi** data hata baada ya kufunga kivinjari chako
+> - **Inadumu** hata baada ya kuwasha upya kompyuta na kivinjari kuanguka
+> - **Inatoa** nafasi kubwa ya kuhifadhi mapendeleo ya mtumiaji
+> - **Inatoa** ufikiaji wa haraka bila ucheleweshaji wa mtandao
 
-> Kumbuka - kiendelezi chako cha kivinjari kina hifadhi yake ya ndani; dirisha kuu la kivinjari ni mfano tofauti na linafanya kazi kando.
+> **Kumbuka Muhimu**: Kiendelezi chako cha kivinjari kina hifadhi yake ya ndani iliyotengwa ambayo ni tofauti na kurasa za kawaida za wavuti. Hii inatoa usalama na kuzuia migongano na tovuti nyingine.
 
-Unaweka APIKey yako kuwa na thamani ya maandishi, kwa mfano, na unaweza kuona kuwa imewekwa kwenye Edge kwa "kukagua" ukurasa wa wavuti (unaweza kubonyeza kulia kivinjari kukagua) na kwenda kwenye kichupo cha Programu ili kuona hifadhi.
+Unaweza kuona data yako iliyohifadhiwa kwa kufungua Zana za Wasanidi wa Kivinjari (F12), kwenda kwenye kichupo cha **Application**, na kupanua sehemu ya **Local Storage**.
 
-![Eneo la hifadhi ya ndani](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sw.png)
+![Sehemu ya hifadhi ya ndani](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sw.png)
 
-✅ Fikiria hali ambapo usingependa kuhifadhi data fulani katika LocalStorage. Kwa ujumla, kuweka API Keys katika LocalStorage ni wazo mbaya! Unaweza kuona kwa nini? Katika kesi yetu, kwa kuwa programu yetu ni ya kujifunza tu na haitachapishwa kwenye duka la programu, tutatumia njia hii.
+> ⚠️ **Tahadhari ya Usalama**: Katika programu za uzalishaji, kuhifadhi API keys katika LocalStorage kuna hatari za usalama kwa kuwa JavaScript inaweza kufikia data hii. Kwa madhumuni ya kujifunza, njia hii inafanya kazi vizuri, lakini programu halisi zinapaswa kutumia hifadhi salama ya upande wa seva kwa hati nyeti.
 
-Angalia kuwa unatumia Web API kudhibiti LocalStorage, ama kwa kutumia `getItem()`, `setItem()`, au `removeItem()`. Inasaidiwa sana katika vivinjari vyote.
+## Shughulikia kuwasilisha fomu
 
-Kabla ya kujenga kazi ya `displayCarbonUsage()` ambayo inaitwa katika `init()`, hebu tujenge utendaji wa kushughulikia kuwasilisha fomu ya awali.
+Sasa tutashughulikia kinachotokea wakati mtu anawasilisha fomu yako. Kwa kawaida, vivinjari hurejesha ukurasa wakati fomu zinawasilishwa, lakini tutazuia tabia hii ili kuunda uzoefu laini zaidi.
 
-### Shughulikia kuwasilisha fomu
+Njia hii inafanana na jinsi udhibiti wa misheni unavyoshughulikia mawasiliano ya chombo cha anga - badala ya kuweka upya mfumo mzima kwa kila mawasiliano, wanadumisha operesheni inayoendelea wakati wa kuchakata taarifa mpya.
 
-Unda kazi inayoitwa `handleSubmit` inayokubali hoja ya tukio `(e)`. Zuia tukio kuenea (katika kesi hii, tunataka kuzuia kivinjari kisifanye upya) na uite kazi mpya, `setUpUser`, ukipitisha hoja `apiKey.value` na `region.value`. Kwa njia hii, unatumia thamani mbili zinazotolewa kupitia fomu ya awali wakati sehemu husika zimejazwa.
+Unda kazi inayokamata tukio la kuwasilisha fomu na kuchukua maingizo ya mtumiaji:
 
-```JavaScript
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
 
-✅ Kumbuka - HTML uliyoiweka katika somo la mwisho ina sehemu mbili za ingizo ambazo `values` zake zinakamatwa kupitia `const` ulizozitengeneza mwanzoni mwa faili, na zote ni `required` hivyo kivinjari kinazuia watumiaji kuingiza thamani tupu.
+**Katika hapo juu, tumefanya:**
+- **Inazuia** tabia ya kawaida ya kuwasilisha fomu ambayo ingeweza kuonyesha upya ukurasa
+- **Inachukua** maadili ya maingizo ya mtumiaji kutoka sehemu za API key na eneo
+- **Inapitisha** data ya fomu kwa kazi ya `setUpUser()` kwa uchakataji
+- **Inadumisha** tabia ya programu ya ukurasa mmoja kwa kuepuka kuonyesha upya ukurasa
 
-### Sanidi mtumiaji
+✅ Kumbuka kuwa sehemu za fomu yako ya HTML zinajumuisha sifa ya `required`, kwa hivyo kivinjari kinathibitisha moja kwa moja kwamba watumiaji wanatoa API key na eneo kabla ya kazi hii kuendeshwa.
 
-Ukisonga mbele kwenye kazi ya `setUpUser`, hapa ndipo unapoweka thamani za hifadhi ya ndani kwa apiKey na regionName. Ongeza kazi mpya:
+## Sanidi mapendeleo ya mtumiaji
 
-```JavaScript
+Kazi ya `setUpUser` inawajibika kwa kuhifadhi hati za mtumiaji na kuanzisha simu ya kwanza ya API. Hii inaunda mpito laini kutoka usanidi hadi kuonyesha matokeo.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-Kazi hii inaonyesha ujumbe wa kupakia ili kuonyesha wakati API inaitwa. Kufikia hatua hii, umefika kwenye uundaji wa kazi muhimu zaidi ya kiendelezi hiki cha kivinjari!
+**Hatua kwa hatua, kinachotokea hapa:**
+- **Inahifadhi** API key na jina la eneo katika hifadhi ya ndani kwa matumizi ya baadaye
+- **Inaonyesha** kiashiria cha kupakia ili kuwajulisha watumiaji kwamba data inachukuliwa
+- **Inafuta** ujumbe wowote wa makosa uliopita kutoka kwa kiolesura
+- **Inafichua** kitufe cha kufuta kwa watumiaji kuweka upya mipangilio yao baadaye
+- **Inaanzisha** simu ya API kuchukua data halisi ya matumizi ya kaboni
 
-### Onyesha Matumizi ya Kaboni
+Kazi hii inaunda uzoefu laini wa mtumiaji kwa kusimamia uhifadhi wa data na masasisho ya kiolesura cha mtumiaji kwa hatua moja iliyoratibiwa.
 
-Hatimaye, ni wakati wa kuuliza API!
+## Onyesha data ya matumizi ya kaboni
 
-Kabla ya kuendelea zaidi, tunapaswa kujadili API. API, au [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), ni kipengele muhimu katika zana ya msanidi wa wavuti. Zinatoa njia za kawaida kwa programu kuingiliana na kuwasiliana. Kwa mfano, ikiwa unajenga tovuti inayohitaji kuuliza hifadhidata, mtu anaweza kuwa ameunda API kwa ajili yako kutumia. Ingawa kuna aina nyingi za API, moja ya maarufu ni [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+Sasa tutaiunganisha kiendelezi chako na vyanzo vya data vya nje kupitia API. Hii inabadilisha kiendelezi chako kutoka zana ya pekee kuwa kitu kinachoweza kufikia taarifa za wakati halisi kutoka mtandao mzima.
 
-✅ Neno 'REST' linamaanisha 'Representational State Transfer' na linahusisha kutumia URL zilizosanidiwa kwa njia mbalimbali ili kupata data. Fanya utafiti kidogo kuhusu aina mbalimbali za API zinazopatikana kwa wasanidi. Ni muundo gani unakuvutia?
+**Kuelewa API**
 
-Kuna mambo muhimu ya kuzingatia kuhusu kazi hii. Kwanza, angalia neno [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Kuandika kazi zako ili zifanye kazi kwa njia isiyo ya moja kwa moja inamaanisha kuwa zinangoja hatua fulani, kama vile data kurudishwa, kukamilika kabla ya kuendelea.
+[API](https://www.webopedia.com/TERM/A/API.html) ni jinsi programu tofauti zinavyowasiliana. Fikiria kama mfumo wa telegraph uliounganisha miji ya mbali katika karne ya 19 - waendeshaji walikuwa wakituma maombi kwa vituo vya mbali na kupokea majibu na taarifa iliyotakiwa. Kila wakati unapotazama mitandao ya kijamii, kuuliza msaidizi wa sauti swali, au kutumia programu ya usafirishaji, API zinawezesha ubadilishanaji huu wa data.
+
+**Dhana muhimu kuhusu REST API:**
+- **REST** inasimama kwa 'Representational State Transfer'
+- **Inatumia** mbinu za kawaida za HTTP (GET, POST, PUT, DELETE) kuingiliana na data
+- **Inarudisha** data katika miundo inayotabirika, kawaida JSON
+- **Inatoa** sehemu za mwisho za URL zinazojulikana kwa aina tofauti za maombi
+
+✅ [CO2 Signal API](https://www.co2signal.com/) tutakayotumia inatoa data ya wakati halisi ya nguvu ya kaboni kutoka kwa gridi za umeme duniani kote. Hii inasaidia watumiaji kuelewa athari za mazingira za matumizi yao ya umeme!
+
+> 💡 **Kuelewa JavaScript Asynchronous**: Neno [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) linawezesha msimbo wako kushughulikia operesheni nyingi kwa wakati mmoja. Unapochukua data kutoka kwa seva, hutaki kiendelezi chako kizime kabisa - hiyo ingekuwa kama udhibiti wa trafiki ya anga kusimamisha operesheni zote wakati wa kusubiri ndege moja kujibu.
+>
+> **Faida muhimu:**
+> - **Inadumisha** usikivu wa kiendelezi wakati data inapakia
+> - **Inaruhusu** msimbo mwingine kuendelea kutekelezwa wakati wa maombi ya mtandao
+> - **Inaboresha** usomaji wa msimbo ikilinganishwa na mifumo ya callback ya jadi
+> - **Inaruhusu** kushughulikia makosa kwa neema kwa masuala ya mtandao
 
 Hapa kuna video fupi kuhusu `async`:
 
@@ -165,76 +223,109 @@ Hapa kuna video fupi kuhusu `async`:
 
 > 🎥 Bonyeza picha hapo juu kwa video kuhusu async/await.
 
-Unda kazi mpya ya kuuliza API ya C02Signal:
+Unda kazi ya kuchukua na kuonyesha data ya matumizi ya kaboni:
 
-```JavaScript
-import axios from '../node_modules/axios';
-
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Hii ni kazi kubwa. Nini kinaendelea hapa?
+**Kufafanua kinachotokea hapa:**
+- **Inatumia** API ya kisasa ya `fetch()` badala ya maktaba za nje kama Axios kwa msimbo safi, usio na utegemezi
+- **Inatekeleza** ukaguzi sahihi wa makosa kwa `response.ok` ili kugundua kushindwa kwa API mapema
+- **Inashughulikia** operesheni za asynchronous kwa `async/await` kwa mtiririko wa msimbo unaosomeka zaidi
+- **Inathibitisha** na CO2 Signal API kwa kutumia kichwa cha `auth-token`
+- **Inachambua** data ya majibu ya JSON na kuchukua taarifa ya nguvu ya kaboni
+- **Inasasisha** vipengele vingi vya UI na data ya mazingira iliyopangwa
+- **Inatoa** ujumbe wa makosa unaofaa kwa watumiaji wakati simu za API zinashindwa
 
-- Kwa kufuata mbinu bora, unatumia neno `async` kufanya kazi hii ifanye kazi kwa njia isiyo ya moja kwa moja. Kazi hiyo ina kizuizi cha `try/catch` kwa kuwa itarudisha ahadi wakati API inarudisha data. Kwa sababu huna udhibiti wa kasi ambayo API itajibu (inaweza isijibu kabisa!), unahitaji kushughulikia hali hii kwa kuiita kwa njia isiyo ya moja kwa moja.
-- Unauliza API ya co2signal kupata data ya eneo lako, ukitumia API Key yako. Ili kutumia ufunguo huo, unahitaji kutumia aina ya uthibitisho katika vigezo vya kichwa.
-- Mara API inapojibu, unapeleka vipengele mbalimbali vya data yake ya majibu kwenye sehemu za skrini yako ulizozitengeneza kuonyesha data hii.
-- Ikiwa kuna kosa, au ikiwa hakuna matokeo, unaonyesha ujumbe wa kosa.
+**Dhana muhimu za kisasa za JavaScript zilizodhihirishwa:**
+- **Template literals** na sintaksia ya `${}` kwa muundo safi wa maandishi
+- **Kushughulikia makosa** na vizuizi vya try/catch kwa programu thabiti
+- **Mfumo wa async/await** kwa kushughulikia maombi ya mtandao kwa neema
+- **Object destructuring** kuchukua data maalum kutoka kwa majibu ya API
+- **Method chaining** kwa manipulations nyingi za DOM
 
-✅ Kutumia mifumo ya programu isiyo ya moja kwa moja ni zana nyingine muhimu sana katika zana yako. Soma [mbinu mbalimbali](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) unazoweza kutumia kusanidi aina hii ya msimbo.
+✅ Kazi hii inaonyesha dhana kadhaa muhimu za maendeleo ya wavuti - kuwasiliana na seva za nje, kushughulikia uthibitisho, kuchakata data, kusasisha kiolesura, na kushughulikia makosa kwa neema. Hizi ni ujuzi wa msingi ambao watengenezaji wa kitaalamu hutumia mara kwa mara.
 
-Hongera! Ukijenga kiendelezi chako (`npm run build`) na kukifanyia upya katika paneli ya viendelezi vyako, una kiendelezi kinachofanya kazi! Kitu pekee ambacho hakifanyi kazi ni ikoni, na utarekebisha hilo katika somo lijalo.
+🎉 **Ulichofanikiwa:** Umeunda kiendelezi cha kivinjari kinachofanya:
+- **Kinaunganisha** na mtandao na kuchukua data halisi ya mazingira
+- **Kinahifadhi** mipangilio ya mtumiaji kati ya vikao
+- **Kinashughulikia** makosa kwa neema badala ya kuanguka
+- **Kinatoa** uzoefu laini, wa kitaalamu wa mtumiaji
+
+Jaribu kazi yako kwa kuendesha `npm run build` na kuonyesha upya kiendelezi chako kwenye kivinjari. Sasa una kifuatiliaji cha alama ya kaboni kinachofanya kazi. Somo linalofuata litaongeza utendaji wa ikoni ya nguvu ili kukamilisha kiendelezi.
 
 ---
 
+## Changamoto ya Wakala wa GitHub Copilot 🚀
+
+Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+
+**Maelezo:** Boresha kiendelezi cha kivinjari kwa kuongeza maboresho ya kushughulikia makosa na vipengele vya uzoefu wa mtumiaji. Changamoto hii itakusaidia kufanya mazoezi ya kufanya kazi na API, hifadhi ya ndani, na manipulations za DOM kwa kutumia mifumo ya kisasa ya JavaScript.
+
+**Kichocheo:** Unda toleo lililoboreshwa la kazi ya displayCarbonUsage inayojumuisha: 1) Utaratibu wa kurudia kwa simu za API zilizoshindwa na kurudi nyuma kwa kasi, 2) Uthibitishaji wa maingizo kwa msimbo wa eneo kabla ya kufanya simu ya API, 3) Uhuishaji wa kupakia na viashiria vya maendeleo, 4) Kuhifadhi majibu ya API katika LocalStorage na timestamps za kumalizika muda (hifadhi kwa dakika 30), na 5) Kipengele cha kuonyesha data ya kihistoria kutoka kwa simu za API za awali. Pia ongeza maoni sahihi ya JSDoc ya mtindo wa TypeScript ili kuandika vigezo vyote vya kazi na aina za kurudi.
+
+Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+
 ## 🚀 Changamoto
 
-Tumeelezea aina kadhaa za API hadi sasa katika masomo haya. Chagua API ya wavuti na fanya utafiti wa kina kuhusu kile inachotoa. Kwa mfano, angalia API zinazopatikana ndani ya vivinjari kama [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Kwa maoni yako, ni nini kinachofanya API kuwa bora?
+Panua uelewa wako wa API kwa kuchunguza wingi wa API za kivinjari zinazopatikana kwa maendeleo ya wavuti. Chagua moja ya API hizi za kivinjari na jenga onyesho dogo:
 
-## Jaribio Baada ya Somo
-
-[Jaribio baada ya somo](https://ff-quizzes.netlify.app/web/quiz/26)
-
-## Mapitio na Kujisomea
-
-Umejifunza kuhusu LocalStorage na API katika somo hili, vyote ni muhimu sana kwa msanidi wa wavuti wa kitaalamu. Je, unaweza kufikiria jinsi vitu hivi viwili vinavyofanya kazi pamoja? Fikiria jinsi unavyoweza kubuni tovuti inayohifadhi vitu vya kutumiwa na API.
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Pata eneo la sasa la mtumiaji
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Tuma arifa za desktop
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Unda kiolesura cha
+Umejifunza kuhusu LocalStorage na API katika somo hili, vyote ni muhimu sana kwa msanifu wa wavuti wa kitaalamu. Je, unaweza kufikiria jinsi vitu hivi viwili vinavyofanya kazi pamoja? Fikiria jinsi unavyoweza kubuni tovuti ambayo ingeweka vitu vitakavyotumiwa na API.
 
 ## Kazi
 
-[Adopt an API](assignment.md)
+[Chukua API](assignment.md)
 
 ---
 
 **Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.

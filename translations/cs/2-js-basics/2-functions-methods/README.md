@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T10:53:04+00:00",
+  "original_hash": "ec43b53e8e015cdabfd3ad877b3c28e5",
+  "translation_date": "2025-10-24T20:41:34+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "cs"
 }
@@ -12,10 +12,14 @@ CO_OP_TRANSLATOR_METADATA:
 ![Základy JavaScriptu - Funkce](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.cs.png)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kvíz před přednáškou
-[Kvíz před přednáškou](https://ff-quizzes.netlify.app)
+## Kvíz před lekcí
+[Kvíz před lekcí](https://ff-quizzes.netlify.app)
 
-Když přemýšlíme o psaní kódu, vždy chceme zajistit, aby byl náš kód čitelný. I když to může znít paradoxně, kód se čte mnohem častěji, než se píše. Jedním z klíčových nástrojů v arzenálu vývojáře pro zajištění udržitelného kódu je **funkce**.
+Opakované psaní stejného kódu je jedním z nejčastějších zdrojů frustrace při programování. Funkce tento problém řeší tím, že umožňují balit kód do znovupoužitelných bloků. Představte si funkce jako standardizované součástky, které učinily montážní linku Henryho Forda revoluční – jakmile vytvoříte spolehlivou komponentu, můžete ji použít kdekoli, aniž byste ji museli znovu vytvářet od začátku.
+
+Funkce umožňují seskupit části kódu, které můžete znovu použít v celém programu. Místo kopírování a vkládání stejné logiky všude můžete funkci vytvořit jednou a volat ji, kdykoli je potřeba. Tento přístup udržuje váš kód organizovaný a usnadňuje jeho aktualizace.
+
+V této lekci se naučíte, jak vytvořit vlastní funkce, předávat jim informace a získávat užitečné výsledky zpět. Objevíte rozdíl mezi funkcemi a metodami, naučíte se moderní syntaxi a uvidíte, jak mohou funkce spolupracovat s jinými funkcemi. Tyto koncepty budeme budovat krok za krokem.
 
 [![Metody a funkce](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metody a funkce")
 
@@ -25,13 +29,15 @@ Když přemýšlíme o psaní kódu, vždy chceme zajistit, aby byl náš kód �
 
 ## Funkce
 
-Funkce je v podstatě blok kódu, který můžeme spustit na vyžádání. To je ideální pro situace, kdy potřebujeme provést stejný úkol vícekrát; místo toho, abychom logiku duplikovali na více místech (což by bylo obtížné aktualizovat, až nastane čas), ji můžeme centralizovat na jednom místě a volat ji, kdykoli potřebujeme operaci provést – funkce můžete dokonce volat z jiných funkcí!
+Funkce je samostatný blok kódu, který provádí konkrétní úkol. Obsahuje logiku, kterou můžete spustit, kdykoli je to potřeba.
 
-Neméně důležitá je schopnost pojmenovat funkci. I když se to může zdát triviální, název poskytuje rychlý způsob dokumentace části kódu. Můžete si to představit jako štítek na tlačítku. Pokud kliknu na tlačítko s nápisem „Zrušit časovač“, vím, že zastaví běžící hodiny.
+Místo psaní stejného kódu několikrát v celém programu ho můžete zabalit do funkce a volat ji, kdykoli ji potřebujete. Tento přístup udržuje váš kód čistý a usnadňuje jeho aktualizaci. Představte si, jak náročné by bylo provést změny v logice, která je rozptýlená na 20 různých místech vašeho kódu.
+
+Je důležité pojmenovávat své funkce popisně. Dobře pojmenovaná funkce jasně sděluje svůj účel – když vidíte `cancelTimer()`, okamžitě pochopíte, co dělá, stejně jako jasně označené tlačítko vám řekne, co se stane, když na něj kliknete.
 
 ## Vytvoření a volání funkce
 
-Syntaxe funkce vypadá následovně:
+Podívejme se, jak vytvořit funkci. Syntaxe následuje konzistentní vzor:
 
 ```javascript
 function nameOfFunction() { // function definition
@@ -39,7 +45,13 @@ function nameOfFunction() { // function definition
 }
 ```
 
-Pokud bych chtěl vytvořit funkci pro zobrazení pozdravu, mohla by vypadat takto:
+Rozložme si to:
+- Klíčové slovo `function` říká JavaScriptu "Hej, vytvářím funkci!"
+- `nameOfFunction` je místo, kde dáte své funkci popisné jméno
+- Závorky `()` jsou místo, kam můžete přidat parametry (k tomu se brzy dostaneme)
+- Složené závorky `{}` obsahují skutečný kód, který se spustí, když funkci zavoláte
+
+Vytvořme jednoduchou funkci pro pozdrav, abychom to viděli v praxi:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +59,34 @@ function displayGreeting() {
 }
 ```
 
-Kdykoli chceme funkci volat (nebo ji vyvolat), použijeme název funkce následovaný `()`. Stojí za zmínku, že naše funkce může být definována před nebo po jejím volání; JavaScriptový kompilátor ji pro vás najde.
+Tato funkce vypíše "Hello, world!" do konzole. Jakmile ji definujete, můžete ji použít tolikrát, kolikrát je potřeba.
+
+Pro spuštění (nebo "volání") vaší funkce napište její jméno následované závorkami. JavaScript vám umožňuje definovat funkci před nebo po jejím volání – JavaScriptový engine se postará o pořadí provádění.
 
 ```javascript
 // calling our function
 displayGreeting();
 ```
 
-> **NOTE:** Existuje speciální typ funkce známý jako **metoda**, kterou už používáte! Ve skutečnosti jsme to viděli v našem demo výše, když jsme použili `console.log`. Rozdíl mezi metodou a funkcí je v tom, že metoda je připojena k objektu (v našem příkladu `console`), zatímco funkce je volně plovoucí. Mnoho vývojářů tyto termíny používá zaměnitelně.
+Když spustíte tento řádek, provede se veškerý kód uvnitř vaší funkce `displayGreeting`, který zobrazí "Hello, world!" v konzoli vašeho prohlížeče. Tuto funkci můžete volat opakovaně.
 
-### Nejlepší postupy pro funkce
+> **Poznámka:** V průběhu těchto lekcí jste používali **metody**. `console.log()` je metoda – v podstatě funkce, která patří k objektu `console`. Klíčový rozdíl je v tom, že metody jsou připojeny k objektům, zatímco funkce stojí samostatně. Mnoho vývojářů tyto termíny používá zaměnitelně v neformální konverzaci.
 
-Existuje několik osvědčených postupů, které je třeba mít na paměti při vytváření funkcí:
+### Nejlepší postupy při psaní funkcí
 
-- Vždy používejte popisné názvy, abyste věděli, co funkce dělá
-- Používejte **camelCasing** pro spojování slov
-- Udržujte své funkce zaměřené na konkrétní úkol
+Zde je několik tipů, které vám pomohou psát skvělé funkce:
 
-## Předávání informací do funkce
+- Dávejte svým funkcím jasná, popisná jména – vaše budoucí já vám poděkuje!
+- Používejte **camelCasing** pro víceslovná jména (například `calculateTotal` místo `calculate_total`)
+- Každou funkci zaměřte na to, aby dobře vykonávala jednu věc
 
-Aby byla funkce více použitelná, často do ní budete chtít předat informace. Pokud vezmeme náš příklad `displayGreeting` výše, zobrazí pouze **Hello, world!**. Není to zrovna nejpraktičtější funkce, kterou by někdo mohl vytvořit. Pokud ji chceme udělat trochu flexibilnější, například umožnit někomu specifikovat jméno osoby, kterou chceme pozdravit, můžeme přidat **parametr**. Parametr (někdy také nazývaný **argument**) je dodatečná informace zaslaná funkci.
+## Předávání informací funkci
 
-Parametry jsou uvedeny v části definice v závorkách a jsou odděleny čárkami, například takto:
+Naše funkce `displayGreeting` je omezená – může zobrazit pouze "Hello, world!" pro všechny. Parametry nám umožňují učinit funkce flexibilnějšími a užitečnějšími.
+
+**Parametry** fungují jako zástupné symboly, kam můžete při každém použití funkce vložit různé hodnoty. Tímto způsobem může stejná funkce pracovat s různými informacemi při každém volání.
+
+Parametry uvádíte do závorek při definování funkce, přičemž více parametrů oddělujete čárkami:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +94,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Můžeme aktualizovat naši funkci `displayGreeting`, aby přijímala jméno a zobrazila ho.
+Každý parametr funguje jako zástupný symbol – když někdo zavolá vaši funkci, poskytne skutečné hodnoty, které se vloží na tato místa.
+
+Aktualizujme naši funkci pro pozdrav tak, aby přijímala jméno osoby:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +105,22 @@ function displayGreeting(name) {
 }
 ```
 
-Když chceme funkci volat a předat jí parametr, specifikujeme ho v závorkách.
+Všimněte si, jak používáme zpětné uvozovky (`` ` ``) a `${}` k vložení jména přímo do naší zprávy – tomu se říká šablonová literálka a je to opravdu užitečný způsob, jak sestavit řetězce s proměnnými.
+
+Nyní, když zavoláme naši funkci, můžeme předat jakékoli jméno:
 
 ```javascript
 displayGreeting('Christopher');
 // displays "Hello, Christopher!" when run
 ```
 
+JavaScript vezme řetězec `'Christopher'`, přiřadí ho k parametru `name` a vytvoří personalizovanou zprávu "Hello, Christopher!"
+
 ## Výchozí hodnoty
 
-Naši funkci můžeme udělat ještě flexibilnější přidáním více parametrů. Ale co když nechceme, aby bylo nutné zadávat každou hodnotu? Pokud zůstaneme u našeho příkladu pozdravu, můžeme ponechat jméno jako povinné (potřebujeme vědět, koho zdravíme), ale chceme umožnit, aby byl samotný pozdrav přizpůsoben podle potřeby. Pokud někdo nechce pozdrav přizpůsobit, poskytneme místo toho výchozí hodnotu. Výchozí hodnotu parametru nastavíme podobně jako hodnotu proměnné - `parameterName = 'defaultValue'`. Celý příklad:
+Co když chceme, aby některé parametry byly volitelné? Zde přicházejí na řadu výchozí hodnoty!
+
+Řekněme, že chceme, aby si lidé mohli přizpůsobit slovo pozdravu, ale pokud žádné nezadají, použijeme jako záložní možnost "Hello". Výchozí hodnoty můžete nastavit pomocí znaménka rovná se, stejně jako při nastavování proměnné:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,7 +128,9 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Když voláme funkci, můžeme se rozhodnout, zda chceme nastavit hodnotu pro `salutation`.
+Zde je `name` stále povinné, ale `salutation` má záložní hodnotu `'Hello'`, pokud nikdo neposkytne jiný pozdrav.
+
+Nyní můžeme tuto funkci volat dvěma různými způsoby:
 
 ```javascript
 displayGreeting('Christopher');
@@ -112,19 +140,23 @@ displayGreeting('Christopher', 'Hi');
 // displays "Hi, Christopher"
 ```
 
+Při prvním volání JavaScript použije výchozí "Hello", protože jsme nespecifikovali pozdrav. Při druhém volání použije náš vlastní "Hi". Tato flexibilita činí funkce přizpůsobivými různým scénářům.
+
 ## Návratové hodnoty
 
-Až dosud funkce, kterou jsme vytvořili, vždy vypisovala výstup do [konzole](https://developer.mozilla.org/docs/Web/API/console). Někdy to může být přesně to, co hledáme, zejména když vytváříme funkce, které budou volat jiné služby. Ale co když chci vytvořit pomocnou funkci pro provedení výpočtu a vrátit hodnotu zpět, abych ji mohl použít jinde?
+Naše funkce dosud pouze vypisovaly zprávy do konzole, ale co když chcete, aby funkce něco vypočítala a vrátila vám výsledek?
 
-Toho můžeme dosáhnout pomocí **návratové hodnoty**. Návratová hodnota je vrácena funkcí a může být uložena do proměnné stejně jako bychom mohli uložit literální hodnotu, například řetězec nebo číslo.
+Zde přicházejí na řadu **návratové hodnoty**. Místo pouhého zobrazení něčeho může funkce vrátit hodnotu, kterou můžete uložit do proměnné nebo použít v jiných částech svého kódu.
 
-Pokud funkce něco vrací, použije se klíčové slovo `return`. Klíčové slovo `return` očekává hodnotu nebo referenci toho, co se vrací, například takto:
+K odeslání hodnoty zpět použijete klíčové slovo `return` následované tím, co chcete vrátit:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Můžeme vytvořit funkci pro vytvoření pozdravné zprávy a vrátit hodnotu zpět volajícímu.
+Zde je důležité: když funkce narazí na příkaz `return`, okamžitě přestane běžet a vrátí tuto hodnotu tomu, kdo ji zavolal.
+
+Upravme naši funkci pro pozdrav tak, aby místo vypisování zprávy ji vracela:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,19 +165,25 @@ function createGreetingMessage(name) {
 }
 ```
 
-Když tuto funkci voláme, uložíme hodnotu do proměnné. Je to velmi podobné tomu, jak bychom nastavili proměnnou na statickou hodnotu (například `const name = 'Christopher'`).
+Nyní místo vypisování pozdravu tato funkce vytvoří zprávu a předá ji zpět.
+
+K použití vrácené hodnoty ji můžeme uložit do proměnné stejně jako jakoukoli jinou hodnotu:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
+Nyní `greetingMessage` obsahuje "Hello, Christopher" a můžeme ji použít kdekoli v našem kódu – k zobrazení na webové stránce, zahrnutí do e-mailu nebo předání jiné funkci.
+
 ## Funkce jako parametry pro funkce
 
-Jak budete postupovat ve své programátorské kariéře, narazíte na funkce, které přijímají funkce jako parametry. Tento šikovný trik se běžně používá, když nevíme, kdy něco nastane nebo skončí, ale víme, že potřebujeme provést operaci v reakci na to.
+Funkce mohou být předány jako parametry jiným funkcím. I když se tento koncept může zpočátku zdát složitý, je to mocná funkce, která umožňuje flexibilní programovací vzory.
 
-Například [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), který zahájí časovač a po jeho dokončení provede kód. Musíme mu říct, jaký kód chceme provést. Zní to jako ideální úkol pro funkci!
+Tento vzor je velmi běžný, když chcete říct "když se něco stane, udělej tuto jinou věc." Například "když časovač skončí, spusť tento kód" nebo "když uživatel klikne na tlačítko, zavolej tuto funkci."
 
-Pokud spustíte níže uvedený kód, po 3 sekundách uvidíte zprávu **3 sekundy uplynuly**.
+Podívejme se na `setTimeout`, což je vestavěná funkce, která čeká určitou dobu a poté spustí nějaký kód. Musíme jí říct, jaký kód má spustit – ideální případ pro předání funkce!
+
+Vyzkoušejte tento kód – po 3 sekundách uvidíte zprávu:
 
 ```javascript
 function displayDone() {
@@ -155,13 +193,15 @@ function displayDone() {
 setTimeout(displayDone, 3000);
 ```
 
+Všimněte si, jak předáváme `displayDone` (bez závorek) do `setTimeout`. Funkci nevoláme sami – předáváme ji `setTimeout` a říkáme "zavolej ji za 3 sekundy."
+
 ### Anonymní funkce
 
-Podívejme se znovu na to, co jsme vytvořili. Vytváříme funkci s názvem, která bude použita pouze jednou. Jak se naše aplikace stává složitější, můžeme si představit, že budeme vytvářet spoustu funkcí, které budou volány pouze jednou. To není ideální. Jak se ukazuje, ne vždy musíme poskytovat název!
+Někdy potřebujete funkci jen pro jednu věc a nechcete jí dávat jméno. Přemýšlejte o tom – pokud používáte funkci pouze jednou, proč zbytečně přidávat další jméno do svého kódu?
 
-Když předáváme funkci jako parametr, můžeme se vyhnout jejímu předchozímu vytvoření a místo toho ji vytvořit jako součást parametru. Používáme stejné klíčové slovo `function`, ale místo toho ji vytvoříme jako parametr.
+JavaScript vám umožňuje vytvářet **anonymní funkce** – funkce bez jmen, které můžete definovat přímo tam, kde je potřebujete.
 
-Přepišme výše uvedený kód tak, aby používal anonymní funkci:
+Zde je, jak můžeme přepsat náš příklad s časovačem pomocí anonymní funkce:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +209,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Pokud spustíte náš nový kód, všimnete si, že dostaneme stejné výsledky. Vytvořili jsme funkci, ale nemuseli jsme jí dát název!
+Toto dosahuje stejného výsledku, ale funkce je definována přímo v rámci volání `setTimeout`, což eliminuje potřebu samostatné deklarace funkce.
 
 ### Funkce s tučnou šipkou
 
-Jednou z běžných zkratek v mnoha programovacích jazycích (včetně JavaScriptu) je schopnost používat tzv. **arrow** nebo **fat arrow** funkce. Používá speciální indikátor `=>`, který vypadá jako šipka – odtud název! Použitím `=>` můžeme přeskočit klíčové slovo `function`.
+Moderní JavaScript má ještě kratší způsob psaní funkcí, který se nazývá **arrow functions**. Používají `=>` (které vypadá jako šipka – chápete?) a jsou mezi vývojáři velmi populární.
 
-Přepišme náš kód ještě jednou, tentokrát s použitím funkce s tučnou šipkou:
+Arrow functions vám umožňují vynechat klíčové slovo `function` a psát stručnější kód.
+
+Zde je náš příklad s časovačem pomocí arrow functions:
 
 ```javascript
 setTimeout(() => {
@@ -183,22 +225,41 @@ setTimeout(() => {
 }, 3000);
 ```
 
+`()` je místo, kam by šly parametry (v tomto případě prázdné), pak následuje šipka `=>` a nakonec tělo funkce ve složených závorkách. Toto poskytuje stejnou funkčnost s stručnější syntaxí.
+
 ### Kdy použít kterou strategii
 
-Nyní jste viděli, že máme tři způsoby, jak předat funkci jako parametr, a možná vás zajímá, kdy použít který. Pokud víte, že funkci budete používat více než jednou, vytvořte ji normálně. Pokud ji budete používat pouze na jednom místě, je obecně nejlepší použít anonymní funkci. Zda použijete funkci s tučnou šipkou nebo tradiční syntaxi `function`, je na vás, ale všimnete si, že většina moderních vývojářů preferuje `=>`.
+Kdy byste měli použít který přístup? Praktická směrnice: pokud budete funkci používat vícekrát, dejte jí jméno a definujte ji samostatně. Pokud je to pro jeden konkrétní účel, zvažte anonymní funkci. Oba přístupy – arrow functions i tradiční syntaxe – jsou platné, i když arrow functions jsou běžné v moderních JavaScriptových kódech.
 
 ---
+
+
 
 ## 🚀 Výzva
 
 Dokážete jednou větou vysvětlit rozdíl mezi funkcemi a metodami? Zkuste to!
 
-## Kvíz po přednášce
-[Kvíz po přednášce](https://ff-quizzes.netlify.app)
+## Výzva GitHub Copilot Agent 🚀
 
-## Přehled a samostudium
+Použijte režim Agent k dokončení následující výzvy:
 
-Stojí za to [přečíst si něco více o funkcích s tučnou šipkou](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), protože jsou stále častěji používány v kódových základnách. Procvičte si psaní funkce a poté ji přepište pomocí této syntaxe.
+**Popis:** Vytvořte knihovnu užitečných matematických funkcí, která demonstruje různé koncepty funkcí pokryté v této lekci, včetně parametrů, výchozích hodnot, návratových hodnot a arrow functions.
+
+**Zadání:** Vytvořte JavaScriptový soubor s názvem `mathUtils.js`, který obsahuje následující funkce:
+1. Funkci `add`, která přijímá dva parametry a vrací jejich součet
+2. Funkci `multiply` s výchozími hodnotami parametrů (druhý parametr má výchozí hodnotu 1)
+3. Arrow function `square`, která přijímá číslo a vrací jeho druhou mocninu
+4. Funkci `calculate`, která přijímá jinou funkci jako parametr a dvě čísla, poté aplikuje tuto funkci na tato čísla
+5. Demonstrujte volání každé funkce s vhodnými testovacími případy
+
+Více o [režimu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) se dozvíte zde.
+
+## Kvíz po lekci
+[Kvíz po lekci](https://ff-quizzes.netlify.app)
+
+## Přehled & Samostudium
+
+Stojí za to [přečíst si něco více o arrow functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), protože jsou stále více používány v kódech. Procvičte si psaní funkce a poté její přepis pomocí této syntaxe.
 
 ## Úkol
 
@@ -207,4 +268,4 @@ Stojí za to [přečíst si něco více o funkcích s tučnou šipkou](https://d
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o co největší přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
