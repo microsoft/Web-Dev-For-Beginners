@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a7587943d38d095de8613e1b508609f5",
-  "translation_date": "2025-08-29T10:26:41+00:00",
+  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
+  "translation_date": "2025-10-24T20:37:40+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "hu"
 }
@@ -13,19 +13,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/25)
 
-### Bevezetés
+## Bevezetés
 
-Ebben a leckében megtanulod, hogyan hívj meg egy API-t a böngészőbővítményed űrlapjának beküldésével, és hogyan jelenítsd meg az eredményeket a bővítményben. Emellett megismered, hogyan tárolhatsz adatokat a böngésződ helyi tárolójában későbbi felhasználásra.
+Emlékszel arra a böngészőbővítményre, amit elkezdtél építeni? Jelenleg van egy szép megjelenésű űrlapod, de lényegében statikus. Ma életre keltjük, valódi adatokkal kapcsoljuk össze, és memóriát adunk neki.
 
-✅ Kövesd a megfelelő fájlokban található számozott szegmenseket, hogy tudd, hova kell elhelyezni a kódot.
+Gondolj az Apollo küldetésirányító számítógépeire - nem csak rögzített információkat jelenítettek meg. Folyamatosan kommunikáltak az űrhajóval, frissítették a telemetriai adatokat, és megjegyezték a kritikus küldetésparamétereket. Ilyen dinamikus viselkedést építünk ma. A bővítményed eléri az internetet, valódi környezeti adatokat szerez, és megjegyzi a beállításaidat legközelebbre.
 
-### Az elemek beállítása a bővítmény manipulálásához:
+Az API integráció bonyolultnak tűnhet, de valójában csak arról szól, hogy megtanítjuk a kódot más szolgáltatásokkal kommunikálni. Legyen szó időjárási adatok lekéréséről, közösségi média hírcsatornákról vagy szénlábnyom információkról, mint amit ma fogunk csinálni, mindez a digitális kapcsolatok létrehozásáról szól. Emellett megvizsgáljuk, hogyan tudnak a böngészők információkat megőrizni - hasonlóan ahhoz, ahogy a könyvtárak kártyakatalógusokat használnak a könyvek helyének megjegyzésére.
 
-Eddig elkészítetted az űrlap és az eredményeket megjelenítő `<div>` HTML-jét a böngészőbővítményedhez. Mostantól a `/src/index.js` fájlban kell dolgoznod, és lépésről lépésre felépítened a bővítményt. Nézd meg az [előző leckét](../1-about-browsers/README.md), hogy megtudd, hogyan állítsd be a projektet és hogyan működik a build folyamat.
+Az óra végére lesz egy böngészőbővítményed, amely valódi adatokat kér le, tárolja a felhasználói preferenciákat, és zökkenőmentes élményt nyújt. Kezdjük!
 
-Az `index.js` fájlban kezdj azzal, hogy létrehozol néhány `const` változót, amelyek az egyes mezőkhöz kapcsolódó értékeket tárolják:
+✅ Kövesd a számozott szegmenseket a megfelelő fájlokban, hogy tudd, hova kell elhelyezni a kódot.
 
-```JavaScript
+## Állítsd be a manipulálni kívánt elemeket a bővítményben
+
+Mielőtt a JavaScript manipulálni tudná a felületet, szüksége van hivatkozásokra konkrét HTML elemekre. Gondolj rá úgy, mint egy teleszkóp, amelyet bizonyos csillagokra kell irányítani - mielőtt Galileo tanulmányozhatta volna Jupiter holdjait, először meg kellett találnia és fókuszálnia Jupiterre.
+
+Az `index.js` fájlban létrehozunk `const` változókat, amelyek rögzítik a hivatkozásokat minden fontos űrlapelemre. Ez hasonló ahhoz, ahogy a tudósok címkézik a felszerelésüket - ahelyett, hogy minden alkalommal átkutatnák az egész laboratóriumot, közvetlenül hozzáférhetnek ahhoz, amire szükségük van.
+
+```javascript
 // form fields
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
@@ -41,197 +47,247 @@ const myregion = document.querySelector('.my-region');
 const clearBtn = document.querySelector('.clear-btn');
 ```
 
-Ezeket a mezőket a CSS osztályuk alapján hivatkozod meg, ahogyan azt az előző leckében a HTML-ben beállítottad.
+**Ez a kód a következőket teszi:**
+- **Rögzíti** az űrlapelemeket a `document.querySelector()` segítségével CSS osztályszelektorokkal
+- **Létrehozza** a régió nevének és az API kulcsnak az input mezőire vonatkozó hivatkozásokat
+- **Kapcsolatot létesít** a szénfelhasználási adatok eredménymegjelenítő elemeivel
+- **Hozzáférést biztosít** a felhasználói felület elemeihez, mint például a betöltési jelzők és hibaüzenetek
+- **Tárolja** az egyes elemhivatkozásokat egy `const` változóban, hogy könnyen újra felhasználható legyen a kódodban
 
-### Eseményfigyelők hozzáadása
+## Eseményfigyelők hozzáadása
 
-Ezután adj eseményfigyelőket az űrlaphoz és a törlés gombhoz, amely visszaállítja az űrlapot, hogy ha a felhasználó beküldi az űrlapot vagy rákattint a törlés gombra, történjen valami. Add hozzá az alkalmazás inicializálására szolgáló hívást a fájl aljára:
+Most elérjük, hogy a bővítményed reagáljon a felhasználói műveletekre. Az eseményfigyelők a kódod módja arra, hogy figyelje a felhasználói interakciókat. Gondolj rájuk úgy, mint a korai telefonközpontok kezelőire - hallgatták a bejövő hívásokat, és összekapcsolták a megfelelő áramköröket, amikor valaki kapcsolatot akart létesíteni.
 
-```JavaScript
+```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
 init();
 ```
 
-✅ Figyeld meg a rövidített szintaxist, amelyet az űrlap beküldésére vagy kattintási eseményre való figyeléshez használnak, és hogy az eseményt hogyan adják át a handleSubmit vagy reset függvényeknek. Meg tudod írni ennek a rövidített szintaxisnak a hosszabb változatát? Melyiket preferálod?
+**Ezeknek a fogalmaknak a megértése:**
+- **Hozzáad** egy beküldési figyelőt az űrlaphoz, amely akkor aktiválódik, amikor a felhasználók Entert nyomnak vagy a beküldés gombra kattintanak
+- **Kapcsolatot létesít** egy kattintási figyelőt a törlés gombhoz az űrlap visszaállításához
+- **Átadja** az eseményobjektumot `(e)` a kezelőfüggvényeknek további vezérlés érdekében
+- **Azonnal meghívja** az `init()` függvényt, hogy beállítsa a bővítmény kezdeti állapotát
 
-### Az init() és reset() függvények felépítése:
+✅ Figyeld meg a rövidített nyílfüggvény szintaxist, amelyet itt használnak. Ez a modern JavaScript megközelítés tisztább, mint a hagyományos függvénykifejezések, de mindkettő egyformán jól működik!
 
-Most létrehozod a bővítmény inicializálására szolgáló függvényt, amelyet init()-nek hívnak:
+## Az inicializálási és visszaállítási függvények létrehozása
 
-```JavaScript
+Hozzuk létre a bővítményed inicializálási logikáját. Az `init()` függvény olyan, mint egy hajó navigációs rendszere, amely ellenőrzi a műszereit - meghatározza az aktuális állapotot, és ennek megfelelően állítja be a felületet. Ellenőrzi, hogy valaki használta-e már a bővítményedet, és betölti a korábbi beállításait.
+
+A `reset()` függvény lehetőséget ad a felhasználóknak egy tiszta kezdésre - hasonlóan ahhoz, ahogy a tudósok visszaállítják a műszereiket a kísérletek között, hogy biztosítsák a tiszta adatokat.
+
+```javascript
 function init() {
-	//if anything is in localStorage, pick it up
+	// Check if user has previously saved API credentials
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	//set icon to be generic green
-	//todo
+	// Set extension icon to generic green (placeholder for future lesson)
+	// TODO: Implement icon update in next lesson
 
 	if (storedApiKey === null || storedRegion === null) {
-		//if we don't have the keys, show the form
+		// First-time user: show the setup form
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-        //if we have saved keys/regions in localStorage, show results when they load
-        displayCarbonUsage(storedApiKey, storedRegion);
+		// Returning user: load their saved data automatically
+		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
 		clearBtn.style.display = 'block';
 	}
-};
+}
 
 function reset(e) {
 	e.preventDefault();
-	//clear local storage for region only
+	// Clear stored region to allow user to choose a new location
 	localStorage.removeItem('regionName');
+	// Restart the initialization process
 	init();
 }
-
 ```
-Ebben a függvényben érdekes logika található. Átolvasva látod, mi történik?
 
-- két `const` változót állítasz be, hogy ellenőrizd, tárolt-e a felhasználó APIKey-t és régiókódot a helyi tárolóban.
-- ha bármelyik érték null, az űrlapot megjeleníted úgy, hogy a stílusát 'block'-ra állítod.
-- elrejted az eredményeket, a betöltést és a clearBtn-t, valamint az esetleges hibaüzenetet üres szövegre állítod.
-- ha létezik kulcs és régió, elindítasz egy rutint:
-  - API hívás a szén-dioxid használati adatok lekérésére
-  - az eredmények területének elrejtése
-  - az űrlap elrejtése
-  - a visszaállítás gomb megjelenítése
+**Ami itt történik:**
+- **Lekéri** a böngésző helyi tárolójából az elmentett API kulcsot és régiót
+- **Ellenőrzi**, hogy ez egy első alkalommal használó felhasználó-e (nincsenek elmentett hitelesítő adatok) vagy visszatérő felhasználó
+- **Megjeleníti** a beállítási űrlapot új felhasználók számára, és elrejti a többi felületelemet
+- **Automatikusan betölti** az elmentett adatokat visszatérő felhasználók számára, és megjeleníti a visszaállítási opciót
+- **Kezeli** a felhasználói felület állapotát az elérhető adatok alapján
 
-Mielőtt továbbmennél, hasznos megismerni egy nagyon fontos böngészőben elérhető koncepciót: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage). A LocalStorage hasznos módja annak, hogy sztringeket tárolj a böngészőben `kulcs-érték` párok formájában. Ez a fajta webes tárolás JavaScript segítségével manipulálható, hogy adatokat kezelj a böngészőben. A LocalStorage nem jár le, míg a SessionStorage, egy másik fajta webes tárolás, törlődik, amikor a böngészőt bezárják. A különböző tárolási típusoknak vannak előnyei és hátrányai.
+**Fontos fogalmak a helyi tárolásról:**
+- **Megőrzi** az adatokat a böngésző munkamenetei között (ellentétben a munkamenet tárolással)
+- **Tárolja** az adatokat kulcs-érték párok formájában a `getItem()` és `setItem()` segítségével
+- **`null` értéket ad vissza**, ha egy adott kulcshoz nem létezik adat
+- **Egyszerű módot biztosít** a felhasználói preferenciák és beállítások megjegyzésére
 
-> Megjegyzés - a böngészőbővítményednek saját helyi tárolója van; a fő böngészőablak egy különálló példány, és külön viselkedik.
+> 💡 **A böngésző tárolásának megértése**: A [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) olyan, mintha a bővítményednek tartós memóriát adnál. Gondolj arra, hogyan tárolta az ókori Alexandriai Könyvtár a tekercseket - az információ elérhető maradt, még akkor is, amikor a tudósok elmentek és visszatértek.
+>
+> **Fő jellemzők:**
+> - **Megőrzi** az adatokat még akkor is, ha bezárod a böngészőt
+> - **Túléli** a számítógép újraindítását és a böngésző összeomlását
+> - **Jelentős tárolóhelyet biztosít** a felhasználói preferenciák számára
+> - **Azonnali hozzáférést biztosít** hálózati késések nélkül
 
-Az APIKey-t például sztring értékre állítod, és láthatod, hogy az Edge böngészőben hogyan van beállítva, ha "megtekinted" egy weboldalt (jobb kattintás a böngészőben, majd megtekintés), és az Alkalmazások fülre mész, hogy lásd a tárolást.
+> **Fontos megjegyzés**: A böngészőbővítményednek saját, elkülönített helyi tárolása van, amely különáll a szokásos weboldalaktól. Ez biztonságot nyújt, és megakadályozza az ütközéseket más weboldalakkal.
 
-![Helyi tároló panel](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.hu.png)
+A tárolt adataidat megtekintheted, ha megnyitod a böngésző Fejlesztői Eszközeit (F12), navigálsz az **Application** fülre, és kibővíted a **Local Storage** szekciót.
 
-✅ Gondolj olyan helyzetekre, amikor NEM lenne jó ötlet adatokat tárolni a LocalStorage-ban. Általánosságban véve, API kulcsokat helyi tárolóban elhelyezni rossz ötlet! Látod, miért? A mi esetünkben, mivel az alkalmazásunk kizárólag tanulási célokat szolgál, és nem kerül alkalmazásboltba, ezt a módszert fogjuk használni.
+![Helyi tárolás panel](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.hu.png)
 
-Figyeld meg, hogy a Web API-t használod a LocalStorage manipulálására, akár `getItem()`, `setItem()`, vagy `removeItem()` segítségével. Ez széles körben támogatott a böngészőkben.
+> ⚠️ **Biztonsági megfontolás**: Éles alkalmazásokban az API kulcsok helyi tárolásban történő tárolása biztonsági kockázatokat jelent, mivel a JavaScript hozzáférhet ezekhez az adatokhoz. Tanulási célokra ez a megközelítés megfelelő, de valódi alkalmazásoknak biztonságos szerveroldali tárolást kell használniuk az érzékeny hitelesítő adatokhoz.
 
-Mielőtt felépítenéd a `displayCarbonUsage()` függvényt, amelyet az `init()` hív meg, építsd fel az űrlap kezdeti beküldésének kezelésére szolgáló funkciót.
+## Az űrlap beküldésének kezelése
 
-### Az űrlap beküldésének kezelése
+Most kezeljük, mi történik, amikor valaki beküldi az űrlapodat. Alapértelmezés szerint a böngészők újratöltik az oldalt, amikor az űrlapokat beküldik, de ezt a viselkedést megakadályozzuk, hogy zökkenőmentes élményt hozzunk létre.
 
-Hozz létre egy `handleSubmit` nevű függvényt, amely elfogad egy esemény argumentumot `(e)`. Állítsd meg az esemény propagálását (ebben az esetben meg akarod akadályozni, hogy a böngésző frissüljön), és hívd meg egy új függvényt, `setUpUser`, amelynek átadod az `apiKey.value` és `region.value` argumentumokat. Így használod azokat az értékeket, amelyeket az űrlap megfelelő mezőinek kitöltésekor hozol be.
+Ez a megközelítés tükrözi, hogyan kezeli a küldetésirányítás az űrhajó kommunikációját - ahelyett, hogy minden egyes átvitelhez újraindítanák az egész rendszert, folyamatos működést tartanak fenn, miközben feldolgozzák az új információkat.
 
-```JavaScript
+Hozz létre egy függvényt, amely rögzíti az űrlap beküldési eseményét, és kinyeri a felhasználó bemeneti adatait:
+
+```javascript
 function handleSubmit(e) {
 	e.preventDefault();
 	setUpUser(apiKey.value, region.value);
 }
 ```
-✅ Frissítsd az emlékezeted - az előző leckében beállított HTML-ben két bemeneti mező van, amelyek `értékeit` az elején beállított `const` változók rögzítik, és mindkettő `kötelező`, így a böngésző megakadályozza, hogy a felhasználók null értékeket adjanak meg.
 
-### A felhasználó beállítása
+**A fentiekben:**
+- **Megakadályozza** az alapértelmezett űrlap beküldési viselkedést, amely frissítené az oldalt
+- **Kinyeri** a felhasználói bemeneti értékeket az API kulcs és régió mezőkből
+- **Átadja** az űrlap adatokat a `setUpUser()` függvénynek feldolgozásra
+- **Fenntartja** az egyoldalas alkalmazás viselkedést az oldal újratöltése nélkül
 
-Haladj tovább a `setUpUser` függvényhez, itt állítod be a helyi tároló értékeit az apiKey és regionName számára. Adj hozzá egy új függvényt:
+✅ Ne feledd, hogy az HTML űrlap mezőid tartalmazzák a `required` attribútumot, így a böngésző automatikusan ellenőrzi, hogy a felhasználók megadják-e az API kulcsot és a régiót, mielőtt ez a függvény futna.
 
-```JavaScript
+## Felhasználói preferenciák beállítása
+
+A `setUpUser` függvény felelős a felhasználó hitelesítő adatainak mentéséért és az első API hívás kezdeményezéséért. Ez zökkenőmentes átmenetet teremt a beállítás és az eredmények megjelenítése között.
+
+```javascript
 function setUpUser(apiKey, regionName) {
+	// Save user credentials for future sessions
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
+	
+	// Update UI to show loading state
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
-	//make initial call
+	
+	// Fetch carbon usage data with user's credentials
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
-Ez a függvény betöltési üzenetet állít be, amely megjelenik, amíg az API hívás folyamatban van. Ezen a ponton elérkeztél a böngészőbővítmény legfontosabb funkciójának létrehozásához!
 
-### Szén-dioxid használat megjelenítése
+**Lépésről lépésre, itt mi történik:**
+- **Elmenti** az API kulcsot és a régió nevét a helyi tárolásba későbbi használatra
+- **Megjelenít** egy betöltési jelzőt, hogy tájékoztassa a felhasználókat, hogy az adatok lekérése folyamatban van
+- **Törli** az előző hibaüzeneteket a kijelzőről
+- **Láthatóvá teszi** a törlés gombot, hogy a felhasználók később visszaállíthassák a beállításaikat
+- **Kezdeményezi** az API hívást, hogy valódi szénfelhasználási adatokat kérjen le
 
-Végül eljött az idő, hogy lekérdezd az API-t!
+Ez a függvény zökkenőmentes felhasználói élményt teremt azáltal, hogy egyszerre kezeli az adatok megőrzését és a felhasználói felület frissítését.
 
-Mielőtt továbbmennénk, beszéljünk az API-król. Az API-k, vagyis [Application Programming Interfaces](https://www.webopedia.com/TERM/A/API.html), a webfejlesztők eszköztárának kritikus elemei. Szabványos módokat biztosítanak a programok közötti interakcióhoz és interfészhez. Például, ha egy weboldalt építesz, amelynek adatbázist kell lekérdeznie, valaki létrehozhatott egy API-t, amelyet használhatsz. Bár sokféle API létezik, az egyik legnépszerűbb a [REST API](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+## Szénfelhasználási adatok megjelenítése
 
-✅ A 'REST' kifejezés a 'Representational State Transfer' rövidítése, és különböző URL-ek konfigurálásával történő adatlekérést jelent. Nézz utána a fejlesztők számára elérhető különböző API típusoknak. Melyik formátum tetszik neked?
+Most összekapcsoljuk a bővítményedet külső adatforrásokkal az API-kon keresztül. Ez átalakítja a bővítményedet egy önálló eszközből valami olyanná, amely valós idejű információkhoz fér hozzá az interneten keresztül.
 
-Fontos dolgokat kell megjegyezni erről a függvényről. Először is, figyeld meg az [`async` kulcsszót](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function). Ha úgy írod meg a függvényeidet, hogy aszinkron módon működjenek, akkor várnak egy művelet, például adat visszaküldése befejezésére, mielőtt folytatnák.
+**Az API-k megértése**
 
-Itt egy rövid videó az `async`-ról:
+Az [API-k](https://www.webopedia.com/TERM/A/API.html) lehetővé teszik, hogy különböző alkalmazások kommunikáljanak egymással. Gondolj rájuk úgy, mint a távíró rendszerre, amely a 19. században összekötötte a távoli városokat - a kezelők kéréseket küldtek távoli állomásokra, és válaszokat kaptak a kért információkkal. Minden alkalommal, amikor közösségi médiát nézel, kérdést teszel fel egy hangasszisztensnek, vagy egy szállítási alkalmazást használsz, az API-k segítik ezeket az adatcseréket.
 
-[![Async és Await ígéretek kezelésére](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async és Await ígéretek kezelésére")
+**Fontos fogalmak a REST API-król:**
+- **REST** jelentése: 'Representational State Transfer'
+- **Használja** a szabványos HTTP metódusokat (GET, POST, PUT, DELETE) az adatokkal való interakcióhoz
+- **Adatokat ad vissza** előre meghatározott formátumokban, általában JSON-ban
+- **Konzisztens, URL-alapú végpontokat biztosít** különböző típusú kérésekhez
 
-> 🎥 Kattints a fenti képre egy videóért az async/await-ról.
+✅ A [CO2 Signal API](https://www.co2signal.com/), amelyet használni fogunk, valós idejű szénintenzitási adatokat biztosít a világ elektromos hálózataiból. Ez segít a felhasználóknak megérteni az elektromos energiafogyasztásuk környezeti hatását!
 
-Hozz létre egy új függvényt a C02Signal API lekérdezésére:
+> 💡 **Az aszinkron JavaScript megértése**: Az [`async` kulcsszó](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) lehetővé teszi, hogy a kódod egyszerre több műveletet kezeljen. Amikor adatokat kérsz egy szervertől, nem szeretnéd, hogy az egész bővítmény lefagyjon - ez olyan lenne, mintha a légi irányítás leállítaná az összes műveletet, miközben egy repülő válaszára vár.
+>
+> **Fő előnyök:**
+> - **Fenntartja** a bővítmény válaszkészségét, miközben az adatok betöltődnek
+> - **Lehetővé teszi**, hogy más kód tovább fusson a hálózati kérések közben
+> - **Javítja** a kód olvashatóságát a hagyományos visszahívási mintákhoz képest
+> - **Lehetővé teszi** a hálózati problémák elegáns hibakezelését
 
-```JavaScript
-import axios from '../node_modules/axios';
+Itt egy gyors videó az `async`-ról:
 
+[![Async és Await a promisek kezeléséhez](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async és Await a promisek kezeléséhez")
+
+> 🎥 Kattints a fenti képre az async/await-ról szóló videóért.
+
+Hozd létre a függvényt a szénfelhasználási adatok lekéréséhez és megjelenítéséhez:
+
+```javascript
+// Modern fetch API approach (no external dependencies needed)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		await axios
-			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					'auth-token': apiKey,
-				},
-			})
-			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+		// Fetch carbon intensity data from CO2 Signal API
+		const response = await fetch('https://api.co2signal.com/v1/latest', {
+			method: 'GET',
+			headers: {
+				'auth-token': apiKey,
+				'Content-Type': 'application/json'
+			},
+			// Add query parameters for the specific region
+			...new URLSearchParams({ countryCode: region }) && {
+				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
+			}
+		});
 
-				//calculateColor(CO2);
+		// Check if the API request was successful
+		if (!response.ok) {
+			throw new Error(`API request failed: ${response.status}`);
+		}
 
-				loading.style.display = 'none';
-				form.style.display = 'none';
-				myregion.textContent = region;
-				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
-				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
-					'% (percentage of fossil fuels used to generate electricity)';
-				results.style.display = 'block';
-			});
+		const data = await response.json();
+		const carbonData = data.data;
+
+		// Calculate rounded carbon intensity value
+		const carbonIntensity = Math.round(carbonData.carbonIntensity);
+
+		// Update the user interface with fetched data
+		loading.style.display = 'none';
+		form.style.display = 'none';
+		myregion.textContent = region.toUpperCase();
+		usage.textContent = `${carbonIntensity} grams (grams CO₂ emitted per kilowatt hour)`;
+		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
+		results.style.display = 'block';
+
+		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+
 	} catch (error) {
-		console.log(error);
+		console.error('Error fetching carbon data:', error);
+		
+		// Show user-friendly error message
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
 	}
 }
 ```
 
-Ez egy nagy függvény. Mi történik itt?
-
-- a legjobb gyakorlatokat követve az `async` kulcsszót használod, hogy ez a függvény aszinkron módon működjön. A függvény tartalmaz egy `try/catch` blokkot, mivel ígéretet ad vissza, amikor az API adatokat küld. Mivel nincs kontrollod az API válaszának sebessége felett (lehet, hogy egyáltalán nem válaszol!), ezt a bizonytalanságot aszinkron módon kell kezelni.
-- lekérdezed a co2signal API-t, hogy megszerezd a régiód adatait az API kulcsod használatával. Ahhoz, hogy ezt a kulcsot használd, egyfajta hitelesítést kell alkalmaznod a fejléc paramétereiben.
-- amikor az API válaszol, az általa küldött adat különböző elemeit hozzárendeled a képernyő azon részeihez, amelyeket az adatok megjelenítésére állítottál be.
-- ha hiba van, vagy nincs eredmény, hibaüzenetet jelenítesz meg.
-
-✅ Az aszinkron programozási minták használata egy másik nagyon hasznos eszköz a fejlesztői eszköztáradban. Olvass [a különböző módokról](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), ahogyan ezt a fajta kódot konfigurálhatod.
-
-Gratulálok! Ha felépíted a bővítményedet (`npm run build`) és frissíted az extensions panelen, működő bővítményed van! Az egyetlen dolog, ami nem működik, az ikon, és ezt a következő leckében fogod javítani.
-
----
-
-## 🚀 Kihívás
-
-Eddig többféle API-t tárgyaltunk ezekben a leckékben. Válassz egy webes API-t, és kutasd fel alaposan, mit kínál. Például nézd meg a böngészőkben elérhető API-kat, mint például a [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API). Mi tesz egy API-t nagyszerűvé szerinted?
-
-## Előadás utáni kvíz
-
-[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/26)
-
-## Áttekintés és önálló tanulás
-
-Ebben a leckében megismerkedtél a LocalStorage és az API-k fogalmával, amelyek mindkettő nagyon hasznos a profi webfejlesztő számára. Gondold át, hogyan működnek ezek együtt! Gondolj arra, hogyan építenél fel egy weboldalt, amely elemeket tárolna, hogy egy API használhassa őket.
+**Ami itt történik:**
+- **Használja** a modern `fetch()` API-t külső könyvtárak, például Axios helyett, tisztább, függőségmentes kód érdekében
+- **Megvalósítja** a megfelelő hibakezelést a `response.ok` segítségével, hogy korán észlelje az API hibáit
+- **Kezeli** az aszinkron műveleteket az `async/await` segítségével az olvashatóbb kódfolyam érdekében
+- **Hitelesíti** a CO2 Signal API-t az `auth-token` fejléc használatával
+- **Elemzi** a JSON válaszadatokat, és kinyeri a szénintenzitási információkat
+- **Frissíti** a felhasználói felület több elemét formázott kör
+Ebben a leckében megismerkedtél a LocalStorage és az API-k használatával, amelyek mindkettő nagyon hasznosak a professzionális webfejlesztők számára. El tudod képzelni, hogyan működhet ez a két dolog együtt? Gondolj arra, hogyan terveznél meg egy weboldalt, amely elemeket tárolna, hogy azokat egy API használhassa.
 
 ## Feladat
 
-[Adoptálj egy API-t](assignment.md)
+[Használj egy API-t](assignment.md)
 
 ---
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális, emberi fordítást igénybe venni. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.

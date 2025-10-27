@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f7009631b73556168ca435120a231c98",
-  "translation_date": "2025-08-29T12:52:39+00:00",
+  "original_hash": "90a3c32c3377f83ab750c2447c77ab98",
+  "translation_date": "2025-10-25T00:19:42+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "sl"
 }
@@ -13,11 +13,17 @@ CO_OP_TRANSLATOR_METADATA:
 
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
+Ste se kdaj spraševali, kako aplikacije sprejemajo pametne odločitve? Na primer, kako navigacijski sistem izbere najhitrejšo pot ali kako termostat odloči, kdaj vklopiti ogrevanje? To je temeljni koncept sprejemanja odločitev v programiranju.
+
+Tako kot je Babbageov analitični stroj zasnovan za izvajanje različnih zaporedij operacij glede na pogoje, morajo sodobni programi v JavaScriptu sprejemati odločitve glede na različne okoliščine. Ta sposobnost razvejanja in sprejemanja odločitev je tisto, kar statično kodo spremeni v odzivne, inteligentne aplikacije.
+
+V tej lekciji se boste naučili, kako v svoje programe vključiti pogojno logiko. Raziskali bomo pogojne stavke, operaterje primerjave in logične izraze, ki omogočajo vaši kodi, da oceni situacije in ustrezno reagira.
+
 ## Predhodni kviz
 
 [Predhodni kviz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Sprejemanje odločitev in nadzor nad tem, v kakšnem vrstnem redu se izvaja vaša koda, naredi kodo ponovno uporabno in robustno. Ta razdelek zajema sintakso za nadzor pretoka podatkov v JavaScriptu in njen pomen pri uporabi z Boolean podatkovnimi tipi.
+Sposobnost sprejemanja odločitev in nadzorovanja toka programa je temeljni vidik programiranja. Ta razdelek pokriva, kako nadzorovati potek izvajanja vaših JavaScript programov z uporabo logičnih vrednosti in pogojne logike.
 
 [![Sprejemanje odločitev](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Sprejemanje odločitev")
 
@@ -25,76 +31,96 @@ Sprejemanje odločitev in nadzor nad tem, v kakšnem vrstnem redu se izvaja vaš
 
 > To lekcijo lahko opravite na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
-## Kratek povzetek o Booleanih
+## Kratek povzetek o logičnih vrednostih
 
-Booleani imajo lahko le dve vrednosti: `true` ali `false`. Booleani pomagajo pri sprejemanju odločitev, katere vrstice kode naj se izvedejo, ko so izpolnjeni določeni pogoji.
+Preden raziščemo sprejemanje odločitev, se vrnimo k logičnim vrednostim iz naše prejšnje lekcije. Poimenovane po matematiku Georgeu Booleu, te vrednosti predstavljajo binarna stanja – bodisi `true` ali `false`. Ni dvoumnosti, ni srednje poti.
 
-Boolean nastavite na true ali false takole:
+Te binarne vrednosti so osnova vse računalniške logike. Vsaka odločitev, ki jo sprejme vaš program, se na koncu zmanjša na logično oceno.
 
-`let myTrueBool = true`  
-`let myFalseBool = false`
+Ustvarjanje logičnih spremenljivk je preprosto:
 
-✅ Booleani so poimenovani po angleškem matematiku, filozofu in logiku Georgeu Booleu (1815–1864).
+```javascript
+let myTrueBool = true;
+let myFalseBool = false;
+```
 
-## Primerjalni operatorji in Booleani
+To ustvari dve spremenljivki z eksplicitnimi logičnimi vrednostmi.
 
-Operatorji se uporabljajo za ocenjevanje pogojev z primerjanjem, ki ustvarijo Boolean vrednost. Spodaj je seznam pogosto uporabljenih operatorjev.
+✅ Logične vrednosti so poimenovane po angleškem matematiku, filozofu in logiku Georgeu Booleu (1815–1864).
 
-| Simbol | Opis                                                                                                                                                   | Primer             |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Manj kot**: Primerja dve vrednosti in vrne Boolean vrednost `true`, če je vrednost na levi strani manjša od vrednosti na desni                        | `5 < 6 // true`    |
-| `<=`   | **Manj kot ali enako**: Primerja dve vrednosti in vrne Boolean vrednost `true`, če je vrednost na levi strani manjša ali enaka vrednosti na desni       | `5 <= 6 // true`   |
-| `>`    | **Več kot**: Primerja dve vrednosti in vrne Boolean vrednost `true`, če je vrednost na levi strani večja od vrednosti na desni                          | `5 > 6 // false`   |
-| `>=`   | **Več kot ali enako**: Primerja dve vrednosti in vrne Boolean vrednost `true`, če je vrednost na levi strani večja ali enaka vrednosti na desni         | `5 >= 6 // false`  |
-| `===`  | **Stroga enakost**: Primerja dve vrednosti in vrne Boolean vrednost `true`, če sta vrednosti na desni in levi strani enaki IN sta istega podatkovnega tipa | `5 === 6 // false` |
-| `!==`  | **Neenakost**: Primerja dve vrednosti in vrne nasprotno Boolean vrednost od tiste, ki bi jo vrnil operator stroge enakosti                              | `5 !== 6 // true`  |
+## Operaterji primerjave in logične vrednosti
 
-✅ Preverite svoje znanje tako, da napišete nekaj primerjav v konzoli brskalnika. Vas kakšni vrnjeni podatki presenetijo?
+V praksi redko ročno nastavljate logične vrednosti. Namesto tega jih ustvarite z ocenjevanjem pogojev: "Ali je to število večje od tistega?" ali "Ali sta ti vrednosti enaki?"
+
+Operaterji primerjave omogočajo te ocene. Primerjajo vrednosti in vrnejo logične rezultate glede na razmerje med operandi.
+
+| Simbol | Opis                                                                                                                                                   | Primer              |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `<`    | **Manj kot**: Primerja dve vrednosti in vrne logično vrednost `true`, če je vrednost na levi strani manjša od vrednosti na desni                        | `5 < 6 // true`     |
+| `<=`   | **Manj kot ali enako**: Primerja dve vrednosti in vrne logično vrednost `true`, če je vrednost na levi strani manjša ali enaka vrednosti na desni       | `5 <= 6 // true`    |
+| `>`    | **Več kot**: Primerja dve vrednosti in vrne logično vrednost `true`, če je vrednost na levi strani večja od vrednosti na desni                          | `5 > 6 // false`    |
+| `>=`   | **Več kot ali enako**: Primerja dve vrednosti in vrne logično vrednost `true`, če je vrednost na levi strani večja ali enaka vrednosti na desni         | `5 >= 6 // false`   |
+| `===`  | **Stroga enakost**: Primerja dve vrednosti in vrne logično vrednost `true`, če sta vrednosti na desni in levi enaki IN sta istega podatkovnega tipa.    | `5 === 6 // false`  |
+| `!==`  | **Neenakost**: Primerja dve vrednosti in vrne nasprotno logično vrednost, kot bi jo vrnil operater stroge enakosti                                      | `5 !== 6 // true`   |
+
+✅ Preverite svoje znanje tako, da napišete nekaj primerjav v konzoli brskalnika. Vas je kateri od vrnjenih podatkov presenetil?
 
 ## If stavek
 
-If stavek bo izvedel kodo med svojimi bloki, če je pogoj resničen.
+Stavek `if` je kot vprašanje v vaši kodi. "Če je ta pogoj resničen, potem naredi to stvar." Verjetno je to najpomembnejše orodje, ki ga boste uporabljali za sprejemanje odločitev v JavaScriptu.
+
+Tukaj je, kako deluje:
 
 ```javascript
 if (condition) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
 }
 ```
 
-Logični operatorji se pogosto uporabljajo za oblikovanje pogoja.
+Pogoj gre znotraj oklepajev, in če je `true`, JavaScript zažene kodo znotraj zavitih oklepajev. Če je `false`, JavaScript preprosto preskoči celoten blok.
+
+Pogosto boste uporabili operaterje primerjave za ustvarjanje teh pogojev. Poglejmo praktičen primer:
 
 ```javascript
-let currentMoney;
-let laptopPrice;
+let currentMoney = 1000;
+let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 }
 ```
+
+Ker `1000 >= 800` oceni kot `true`, se koda znotraj bloka izvede in v konzoli prikaže "Kupujem nov prenosnik!".
 
 ## If..Else stavek
 
-Else stavek bo izvedel kodo med svojimi bloki, ko je pogoj neresničen. Je opcijski pri if stavku.
+Kaj pa, če želite, da vaš program naredi nekaj drugega, ko je pogoj napačen? Tukaj pride v poštev `else` – to je kot rezervni načrt.
+
+Stavek `else` vam omogoča, da rečete "če ta pogoj ni resničen, naredi nekaj drugega."
 
 ```javascript
-let currentMoney;
-let laptopPrice;
+let currentMoney = 500;
+let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 } else {
-  //Condition is false. Code in this block will run.
+  // Condition is false. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
+
+Zdaj, ker je `500 >= 800` `false`, JavaScript preskoči prvi blok in namesto tega zažene `else` blok. V konzoli boste videli "Še ne morem si privoščiti novega prenosnika!"
 
 ✅ Preizkusite svoje razumevanje te kode in naslednje kode tako, da jo zaženete v konzoli brskalnika. Spremenite vrednosti spremenljivk currentMoney in laptopPrice, da spremenite vrnjeni `console.log()`.
 
 ## Switch stavek
 
-Switch stavek se uporablja za izvajanje različnih dejanj na podlagi različnih pogojev. Uporabite switch stavek za izbiro enega od mnogih blokov kode, ki naj se izvedejo.
+Včasih morate primerjati eno vrednost z več možnostmi. Čeprav bi lahko povezali več stavkov `if..else`, ta pristop postane neroden. Stavek `switch` ponuja bolj čisto strukturo za obravnavo več diskretnih vrednosti.
+
+Koncept je podoben mehanskim preklopnim sistemom, ki so se uporabljali v zgodnjih telefonskih centralah – ena vhodna vrednost določa, katero specifično pot bo sledilo izvajanje.
 
 ```javascript
 switch (expression) {
@@ -105,61 +131,83 @@ switch (expression) {
     // code block
     break;
   default:
-  // code block
+    // code block
 }
 ```
+
+Tukaj je, kako je strukturiran:
+- JavaScript oceni izraz enkrat
+- Pregleda vsak `case`, da najde ujemanje
+- Ko najde ujemanje, zažene ta blok kode
+- `break` pove JavaScriptu, naj se ustavi in zapusti switch
+- Če noben case ne ustreza, zažene `default` blok (če ga imate)
 
 ```javascript
-// program using switch statement
-let a = 2;
+// Program using switch statement for day of week
+let dayNumber = 2;
+let dayName;
 
-switch (a) {
+switch (dayNumber) {
   case 1:
-    a = "one";
+    dayName = "Monday";
     break;
   case 2:
-    a = "two";
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
     break;
   default:
-    a = "not found";
+    dayName = "Unknown day";
     break;
 }
-console.log(`The value is ${a}`);
+console.log(`Today is ${dayName}`);
 ```
+
+V tem primeru JavaScript vidi, da je `dayNumber` `2`, najde ustrezni `case 2`, nastavi `dayName` na "Torek" in nato izstopi iz switch. Rezultat? "Danes je torek" se prikaže v konzoli.
 
 ✅ Preizkusite svoje razumevanje te kode in naslednje kode tako, da jo zaženete v konzoli brskalnika. Spremenite vrednosti spremenljivke a, da spremenite vrnjeni `console.log()`.
 
-## Logični operatorji in Booleani
+## Logični operaterji in logične vrednosti
 
-Odločitve lahko zahtevajo več kot eno primerjavo, ki jih je mogoče povezati z logičnimi operatorji za ustvarjanje Boolean vrednosti.
+Kompleksne odločitve pogosto zahtevajo ocenjevanje več pogojev hkrati. Tako kot logična algebra omogoča matematikom združevanje logičnih izrazov, programiranje ponuja logične operaterje za povezovanje več logičnih pogojev.
 
-| Simbol | Opis                                                                                     | Primer                                                                  |
-| ------ | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logični AND**: Primerja dva Boolean izraza. Vrne true **samo**, če sta obe strani resnični | `(5 > 6) && (5 < 6 ) //Ena stran je neresnična, druga resnična. Vrne false` |
-| `\|\|` | **Logični OR**: Primerja dva Boolean izraza. Vrne true, če je vsaj ena stran resnična     | `(5 > 6) \|\| (5 < 6) //Ena stran je neresnična, druga resnična. Vrne true` |
-| `!`    | **Logični NOT**: Vrne nasprotno vrednost Boolean izraza                                   | `!(5 > 6) // 5 ni večji od 6, ampak "!" bo vrnil true`                  |
+Ti operaterji omogočajo sofisticirano pogojno logiko z združevanjem preprostih ocen true/false.
 
-## Pogoji in odločitve z logičnimi operatorji
+| Simbol | Opis                                                                                     | Primer                                                                 |
+| ------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `&&`   | **Logični IN**: Primerja dva logična izraza. Vrne true **samo**, če sta obe strani resnični | `(5 > 3) && (5 < 10) // Obe strani sta resnični. Vrne true` |
+| `\|\|` | **Logični ALI**: Primerja dva logična izraza. Vrne true, če je vsaj ena stran resnična     | `(5 > 10) \|\| (5 < 10) // Ena stran je napačna, druga resnična. Vrne true` |
+| `!`    | **Logični NE**: Vrne nasprotno vrednost logičnega izraza                                  | `!(5 > 10) // 5 ni večje od 10, zato "!" naredi true`         |
 
-Logične operatorje lahko uporabite za oblikovanje pogojev v if..else stavkih.
+Ti operaterji vam omogočajo združevanje pogojev na koristen način:
+- IN (`&&`) pomeni, da morata biti oba pogoja resnična
+- ALI (`||`) pomeni, da mora biti vsaj en pogoj resničen  
+- NE (`!`) obrne true v false (in obratno)
+
+## Pogoji in odločitve z logičnimi operaterji
+
+Poglejmo te logične operaterje v akciji z bolj realističnim primerom:
 
 ```javascript
-let currentMoney;
-let laptopPrice;
-let laptopDiscountPrice = laptopPrice - laptopPrice * 0.2; //Laptop price at 20 percent off
+let currentMoney = 600;
+let laptopPrice = 800;
+let laptopDiscountPrice = laptopPrice - (laptopPrice * 0.2); // Laptop price at 20 percent off
 
 if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
-  //Condition is true. Code in this block will run.
+  // Condition is true. Code in this block will run.
   console.log("Getting a new laptop!");
 } else {
-  //Condition is true. Code in this block will run.
+  // Condition is false. Code in this block will run.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
-### Operator negacije
+V tem primeru: izračunamo 20% popust (640), nato ocenimo, ali naša razpoložljiva sredstva pokrivajo bodisi polno ceno ALI ceno s popustom. Ker 600 ustreza pragu cene s popustom 640, se pogoj oceni kot true.
 
-Do sedaj ste videli, kako lahko uporabite if...else stavek za ustvarjanje pogojne logike. Vse, kar gre v if, mora biti ocenjeno kot true/false. Z uporabo operatorja `!` lahko _negirate_ izraz. Videti bi bilo takole:
+### Operater negacije
+
+Včasih je lažje razmišljati o tem, kdaj nekaj NI resnično. Na primer, namesto da vprašate "Ali je uporabnik prijavljen?", bi morda želeli vprašati "Ali uporabnik NI prijavljen?" Operater klicaja (`!`) obrne logiko za vas.
 
 ```javascript
 if (!condition) {
@@ -169,15 +217,19 @@ if (!condition) {
 }
 ```
 
+Operater `!` je kot da bi rekli "nasprotno od..." – če je nekaj `true`, `!` naredi `false`, in obratno.
+
 ### Ternarni izrazi
 
-If...else ni edini način za izražanje logike odločanja. Uporabite lahko tudi nekaj, kar se imenuje ternarni operator. Sintaksa za to je videti takole:
+Za preproste pogojne dodelitve JavaScript ponuja **ternarni operater**. Ta jedrnata sintaksa vam omogoča, da napišete pogojni izraz v eni vrstici, kar je uporabno, ko morate dodeliti eno od dveh vrednosti glede na pogoj.
 
 ```javascript
-let variable = condition ? <return this if true> : <return this if false>
+let variable = condition ? returnThisIfTrue : returnThisIfFalse;
 ```
 
-Spodaj je bolj konkreten primer:
+Beri kot vprašanje: "Ali je ta pogoj resničen? Če da, uporabi to vrednost. Če ne, uporabi tisto vrednost."
+
+Spodaj je bolj otipljiv primer:
 
 ```javascript
 let firstNumber = 20;
@@ -185,15 +237,11 @@ let secondNumber = 10;
 let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
-✅ Vzemite si minuto, da večkrat preberete to kodo. Ali razumete, kako ti operatorji delujejo?
+✅ Vzemite si minuto, da to kodo preberete večkrat. Ali razumete, kako ti operaterji delujejo?
 
-Zgornje pravi:
+Tukaj ta vrstica pravi: "Ali je `firstNumber` večji od `secondNumber`? Če da, postavi `firstNumber` v `biggestNumber`. Če ne, postavi `secondNumber` v `biggestNumber`."
 
-- če je `firstNumber` večji od `secondNumber`
-- potem dodeli `firstNumber` spremenljivki `biggestNumber`
-- sicer dodeli `secondNumber`.
-
-Ternarni izraz je le kompaktni način pisanja spodnje kode:
+Ternarni operater je le krajši način za zapis tradicionalnega stavka `if..else`:
 
 ```javascript
 let biggestNumber;
@@ -204,29 +252,55 @@ if (firstNumber > secondNumber) {
 }
 ```
 
+Oba pristopa proizvedeta enake rezultate. Ternarni operater ponuja jedrnatost, medtem ko je tradicionalna struktura if-else morda bolj berljiva za kompleksne pogoje.
+
 ---
 
 ## 🚀 Izziv
 
-Ustvarite program, ki je najprej napisan z logičnimi operatorji, nato pa ga prepišite z uporabo ternarnega izraza. Katera sintaksa vam je ljubša?
+Ustvarite program, ki je najprej napisan z logičnimi operaterji, nato pa ga prepišite z uporabo ternarnega izraza. Katera sintaksa vam je ljubša?
 
 ---
 
-## Kviz po predavanju
+## Izziv GitHub Copilot Agent 🚀
 
-[Kviz po predavanju](https://ff-quizzes.netlify.app/web/quiz/12)
+Uporabite način Agent za dokončanje naslednjega izziva:
 
-## Pregled in samostojno učenje
+**Opis:** Ustvarite obsežen kalkulator ocen, ki prikazuje več konceptov sprejemanja odločitev iz te lekcije, vključno z if-else stavki, switch stavki, logičnimi operaterji in ternarnimi izrazi.
 
-Preberite več o številnih operatorjih, ki so na voljo uporabniku, [na MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+**Navodilo:** Napišite JavaScript program, ki sprejme študentovo numerično oceno (0-100) in določi njegovo črkovno oceno z uporabo naslednjih kriterijev:
+- A: 90-100
+- B: 80-89  
+- C: 70-79
+- D: 60-69
+- F: Pod 60
 
-Prebrskajte čudovit [pregled operatorjev](https://joshwcomeau.com/operator-lookup/) Josha Comeaua!
+Zahteve:
+1. Uporabite if-else stavek za določitev črkovne ocene
+2. Uporabite logične operaterje za preverjanje, ali študent opravi (ocena >= 60) IN ima odliko (ocena >= 90)
+3. Uporabite switch stavek za podajanje specifičnih povratnih informacij za vsako črkovno oceno
+4. Uporabite ternarni operater za določitev, ali je študent upravičen do naslednjega tečaja (ocena >= 70)
+5. Vključite preverjanje vnosa, da zagotovite, da je ocena med 0 in 100
+
+Preizkusite svoj program z različnimi ocenami, vključno z mejami, kot so 59, 60, 89, 90, in neveljavnimi vnosi.
+
+Več o [načinu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) si preberite tukaj.
+
+## Po-lecturni kviz
+
+[Po-lecturni kviz](https://ff-quizzes.netlify.app/web/quiz/12)
+
+## Pregled & Samostojno učenje
+
+Preberite več o številnih operaterjih, ki so na voljo uporabniku [na MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
+
+Prebrskajte čudovit [pregled operaterjev Josha Comeaua](https://joshwcomeau.com/operator-lookup/)!
 
 ## Naloga
 
-[Operatorji](assignment.md)
+[Operaterji](assignment.md)
 
 ---
 
 **Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za strojno prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da se zavedate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokovno človeško prevajanje. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.

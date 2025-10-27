@@ -1,23 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "adda95e02afa3fbee67b6e385b1109e1",
-  "translation_date": "2025-08-29T11:10:50+00:00",
+  "original_hash": "d642759cf1542f554871f74956a59af9",
+  "translation_date": "2025-10-24T21:49:25+00:00",
   "source_file": "6-space-game/5-keeping-score/README.md",
   "language_code": "sk"
 }
 -->
-# Vytvorenie vesmírnej hry, časť 5: Skóre a životy
+# Vytvor vesmírnu hru, časť 5: Skóre a životy
 
 ## Kvíz pred prednáškou
 
 [Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/37)
 
-V tejto lekcii sa naučíte, ako pridať skóre do hry a vypočítať životy.
+Pripravený urobiť z tvojej vesmírnej hry skutočnú hru? Poďme pridať bodovanie a spravovanie životov - základné mechaniky, ktoré premenili skoré arkádové hry ako Space Invaders z jednoduchých ukážok na návykovú zábavu. Tu sa tvoja hra stáva naozaj hrateľnou.
 
-## Zobrazenie textu na obrazovke
+## Zobrazenie textu na obrazovke - hlas tvojej hry
 
-Aby ste mohli zobraziť skóre hry na obrazovke, musíte vedieť, ako umiestniť text na obrazovku. Odpoveďou je použitie metódy `fillText()` na objekte canvas. Môžete tiež ovládať ďalšie aspekty, ako napríklad aké písmo použiť, farbu textu a dokonca aj jeho zarovnanie (vľavo, vpravo, na stred). Nižšie je uvedený kód, ktorý zobrazuje text na obrazovke.
+Aby sme zobrazili tvoje skóre, musíme sa naučiť, ako vykresliť text na plátno. Metóda `fillText()` je tvojím hlavným nástrojom - je to rovnaká technika, aká sa používala v klasických arkádových hrách na zobrazenie skóre a informácií o stave.
+
+Máš úplnú kontrolu nad vzhľadom textu:
 
 ```javascript
 ctx.font = "30px Arial";
@@ -26,22 +28,24 @@ ctx.textAlign = "right";
 ctx.fillText("show this on the screen", 0, 0);
 ```
 
-✅ Prečítajte si viac o [tom, ako pridať text na plátno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text), a pokojne si ho upravte podľa svojho vkusu!
+✅ Ponor sa hlbšie do [pridávania textu na plátno](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_text) - možno ťa prekvapí, aký kreatívny môžeš byť s fontami a štýlovaním!
 
-## Život ako herný koncept
+## Životy - viac než len číslo
 
-Koncept života v hre je len číslo. V kontexte vesmírnej hry je bežné priradiť určitý počet životov, ktoré sa odpočítavajú jeden po druhom, keď vaša loď utrpí poškodenie. Je pekné, ak môžete namiesto čísla zobraziť grafickú reprezentáciu, ako sú malé lodičky alebo srdcia.
+V hernom dizajne "život" predstavuje hráčovu rezervu na chyby. Tento koncept pochádza z pinballových automatov, kde si dostal viacero guličiek na hranie. V skorých videohrách ako Asteroids životy umožnili hráčom riskovať a učiť sa z chýb.
 
-## Čo vytvoriť
+Vizualizácia je veľmi dôležitá - zobrazenie ikon lodí namiesto jednoduchého "Životy: 3" vytvára okamžité vizuálne rozpoznanie, podobne ako skoré arkádové automaty používali ikonografiu na komunikáciu naprieč jazykovými bariérami.
 
-Pridajme do vašej hry nasledujúce:
+## Budovanie odmeňovacieho systému tvojej hry
 
-- **Herné skóre**: Za každú zničenú nepriateľskú loď by mal hrdina získať body, odporúčame 100 bodov za loď. Herné skóre by sa malo zobrazovať v ľavom dolnom rohu.
-- **Životy**: Vaša loď má tri životy. O život prídete zakaždým, keď do vás narazí nepriateľská loď. Počet životov by sa mal zobrazovať v pravom dolnom rohu a mal by byť vytvorený z nasledujúcej grafiky ![obrázok života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.sk.png).
+Teraz implementujeme základné systémy spätnej väzby, ktoré udržujú hráčov zapojených:
 
-## Odporúčané kroky
+- **Systém bodovania**: Každá zničená nepriateľská loď prináša 100 bodov (okrúhle čísla sa hráčom ľahšie počítajú v hlave). Skóre sa zobrazuje v ľavom dolnom rohu.
+- **Počítadlo životov**: Tvoj hrdina začína s tromi životmi - štandard, ktorý zaviedli skoré arkádové hry na vyváženie výzvy a hrateľnosti. Každá zrážka s nepriateľom stojí jeden život. Zostávajúce životy zobrazíme v pravom dolnom rohu pomocou ikon lodí ![ikona života](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.sk.png).
 
-Nájdite súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`. Mali by obsahovať nasledujúce:
+## Poďme na to!
+
+Najprv si nastav pracovné prostredie. Prejdi do súborov v podpriečinku `your-work`. Mal by si vidieť tieto súbory:
 
 ```bash
 -| assets
@@ -53,24 +57,24 @@ Nájdite súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`. M
 -| package.json
 ```
 
-Svoj projekt spustíte v priečinku `your_work` zadaním:
+Na otestovanie hry spusti vývojový server z priečinka `your_work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu. Momentálne by sa mal zobraziť hrdina a všetci nepriatelia, a keď stlačíte šípky doľava a doprava, hrdina sa pohybuje a môže zostreľovať nepriateľov.
+Toto spustí lokálny server na adrese `http://localhost:5000`. Otvor túto adresu vo svojom prehliadači, aby si videl svoju hru. Otestuj ovládanie pomocou šípok a vyskúšaj strieľať na nepriateľov, aby si overil, že všetko funguje.
 
-### Pridanie kódu
+### Čas na kódovanie!
 
-1. **Skopírujte potrebné zdroje** z priečinka `solution/assets/` do priečinka `your-work`; pridáte súbor `life.png`. Pridajte `lifeImg` do funkcie `window.onload`: 
+1. **Získaj vizuálne prvky, ktoré budeš potrebovať**. Skopíruj súbor `life.png` z priečinka `solution/assets/` do svojho priečinka `your-work`. Potom pridaj `lifeImg` do funkcie window.onload: 
 
     ```javascript
     lifeImg = await loadTexture("assets/life.png");
     ```
 
-1. Pridajte `lifeImg` do zoznamu zdrojov:
+1. Nezabudni pridať `lifeImg` do zoznamu svojich aktív:
 
     ```javascript
     let heroImg,
@@ -80,9 +84,9 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
     eventEmitter = new EventEmitter();
     ```
   
-2. **Pridajte premenné**. Pridajte kód, ktorý reprezentuje vaše celkové skóre (0) a zostávajúce životy (3), a zobrazte tieto hodnoty na obrazovke.
+2. **Nastav premenné hry**. Pridaj kód na sledovanie celkového skóre (začína na 0) a zostávajúcich životov (začína na 3). Tieto hodnoty zobrazíme na obrazovke, aby hráči vždy vedeli, kde sa nachádzajú.
 
-3. **Rozšírte funkciu `updateGameObjects()`**. Rozšírte funkciu `updateGameObjects()` tak, aby spracovávala kolízie s nepriateľmi:
+3. **Implementuj detekciu zrážok**. Rozšír svoju funkciu `updateGameObjects()` tak, aby detekovala, keď sa nepriatelia zrazia s tvojím hrdinom:
 
     ```javascript
     enemies.forEach(enemy => {
@@ -93,15 +97,15 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
       })
     ```
 
-4. **Pridajte `life` a `points`**. 
-   1. **Inicializujte premenné**. Pod `this.cooldown = 0` v triede `Hero` nastavte životy a body:
+4. **Pridaj sledovanie životov a bodov k svojmu hrdinovi**. 
+   1. **Inicializuj počítadlá**. Pod `this.cooldown = 0` vo svojej triede `Hero` nastav životy a body:
 
         ```javascript
         this.life = 3;
         this.points = 0;
         ```
 
-   1. **Zobrazte premenné na obrazovke**. Zobrazte tieto hodnoty na obrazovke:
+   1. **Zobraz tieto hodnoty hráčovi**. Vytvor funkcie na vykreslenie týchto hodnôt na obrazovke:
 
         ```javascript
         function drawLife() {
@@ -128,18 +132,18 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
 
         ```
 
-   1. **Pridajte metódy do hernej slučky**. Uistite sa, že ste tieto funkcie pridali do funkcie `window.onload` pod `updateGameObjects()`:
+   1. **Prepoj všetko do herného cyklu**. Pridaj tieto funkcie do svojej funkcie window.onload hneď po `updateGameObjects()`:
 
         ```javascript
         drawPoints();
         drawLife();
         ```
 
-1. **Implementujte herné pravidlá**. Implementujte nasledujúce herné pravidlá:
+1. **Implementuj dôsledky a odmeny hry**. Teraz pridáme systémy spätnej väzby, ktoré dávajú hráčskym akciám zmysel:
 
-   1. **Za každú kolíziu hrdinu s nepriateľom** odpočítajte jeden život.
+   1. **Zrážky stoja životy**. Zakaždým, keď sa tvoj hrdina zrazí s nepriateľom, stratíš jeden život.
    
-      Rozšírte triedu `Hero`, aby vykonávala toto odpočítanie:
+      Pridaj túto metódu do svojej triedy `Hero`:
 
         ```javascript
         decrementLife() {
@@ -150,9 +154,9 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
         }
         ```
 
-   2. **Za každý laser, ktorý zasiahne nepriateľa**, zvýšte herné skóre o 100 bodov.
+   2. **Strieľanie nepriateľov prináša body**. Každý úspešný zásah prináša 100 bodov, čo poskytuje okamžitú pozitívnu spätnú väzbu za presné strieľanie.
 
-      Rozšírte triedu `Hero`, aby vykonávala toto zvýšenie:
+      Rozšír svoju triedu Hero o túto metódu na zvýšenie bodov:
     
         ```javascript
           incrementPoints() {
@@ -160,7 +164,7 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
           }
         ```
 
-        Pridajte tieto funkcie do vašich emitorov udalostí kolízie:
+        Teraz prepoj tieto funkcie s udalosťami zrážok:
 
         ```javascript
         eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
@@ -175,29 +179,41 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
         });
         ```
 
-✅ Urobte si malý prieskum a objavte ďalšie hry, ktoré sú vytvorené pomocou JavaScriptu/Canvasu. Aké majú spoločné črty?
+✅ Zvedavý na ďalšie hry vytvorené pomocou JavaScriptu a Canvasu? Preskúmaj ich - možno budeš prekvapený, čo všetko je možné!
 
-Na konci tejto práce by ste mali vidieť malé lodičky života v pravom dolnom rohu, body v ľavom dolnom rohu a mali by ste vidieť, ako sa počet životov znižuje pri kolíziách s nepriateľmi a body sa zvyšujú, keď zostreľujete nepriateľov. Skvelá práca! Vaša hra je takmer hotová.
+Po implementácii týchto funkcií otestuj svoju hru, aby si videl kompletný systém spätnej väzby v akcii. Mal by si vidieť ikony životov v pravom dolnom rohu, svoje skóre v ľavom dolnom rohu a sledovať, ako zrážky znižujú životy, zatiaľ čo úspešné zásahy zvyšujú skóre.
+
+Tvoja hra teraz obsahuje základné mechaniky, ktoré robili skoré arkádové hry takými pútavými - jasné ciele, okamžitú spätnú väzbu a zmysluplné dôsledky hráčskych akcií.
 
 ---
 
+## Výzva GitHub Copilot Agent 🚀
+
+Použi režim Agent na splnenie nasledujúcej výzvy:
+
+**Popis:** Vylepši bodovací systém vesmírnej hry implementáciou funkcie najvyššieho skóre s trvalým uložením a mechanikou bonusového bodovania.
+
+**Úloha:** Vytvor systém najvyššieho skóre, ktorý uloží najlepší hráčov skóre do localStorage. Pridaj bonusové body za po sebe idúce zničenie nepriateľov (systém komba) a implementuj rôzne hodnoty bodov pre rôzne typy nepriateľov. Zahrň vizuálny indikátor, keď hráč dosiahne nové najvyššie skóre, a zobraz aktuálne najvyššie skóre na obrazovke hry.
+
+
+
 ## 🚀 Výzva
 
-Váš kód je takmer hotový. Dokážete si predstaviť svoje ďalšie kroky?
+Teraz máš funkčnú hru s bodovaním a životmi. Zamysli sa nad tým, aké ďalšie funkcie by mohli zlepšiť zážitok hráča.
 
 ## Kvíz po prednáške
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/38)
 
-## Prehľad a samoštúdium
+## Prehľad a samostatné štúdium
 
-Preskúmajte spôsoby, ako môžete zvyšovať a znižovať herné skóre a životy. Existujú zaujímavé herné enginy, ako napríklad [PlayFab](https://playfab.com). Ako by použitie jedného z nich mohlo vylepšiť vašu hru?
+Chceš preskúmať viac? Preskúmaj rôzne prístupy k bodovacím a životným systémom v hrách. Existujú fascinujúce herné enginy ako [PlayFab](https://playfab.com), ktoré sa zaoberajú bodovaním, rebríčkami a hráčským pokrokom. Ako by integrácia niečoho takého mohla posunúť tvoju hru na vyššiu úroveň?
 
 ## Zadanie
 
-[Vytvorte hru so skórovaním](assignment.md)
+[Postav hru s bodovaním](assignment.md)
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

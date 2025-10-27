@@ -1,284 +1,484 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "acb5ae00cde004304296bb97da8ff4c3",
-  "translation_date": "2025-08-29T12:37:30+00:00",
+  "original_hash": "92c4431eac70670b0450b02c1d11279a",
+  "translation_date": "2025-10-25T00:02:12+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "hr"
 }
 -->
-# Projekt Terarij, 2. dio: Uvod u CSS
+# Projekt terarija, 2. dio: Uvod u CSS
 
 ![Uvod u CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.hr.png)
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
+
+Sjećate li se kako je vaš HTML terarij izgledao prilično osnovno? CSS je ono što tu jednostavnu strukturu pretvara u nešto vizualno privlačno.
+
+Ako je HTML poput izgradnje okvira kuće, onda je CSS sve ono što kuću čini domom - boje zidova, raspored namještaja, osvjetljenje i kako se prostorije međusobno povezuju. Zamislite kako je palača Versailles započela kao jednostavna lovačka kuća, ali pažljivim uređenjem i rasporedom postala jedno od najveličanstvenijih građevina na svijetu.
+
+Danas ćemo vaš terarij transformirati iz funkcionalnog u dotjeran. Naučit ćete kako precizno pozicionirati elemente, prilagoditi raspored različitim veličinama ekrana i stvoriti vizualnu privlačnost koja čini web stranice zanimljivima.
+
+Do kraja ovog predavanja vidjet ćete kako strateško stiliziranje pomoću CSS-a može dramatično poboljšati vaš projekt. Dodajmo malo stila vašem terariju.
 
 ## Kviz prije predavanja
 
 [Kviz prije predavanja](https://ff-quizzes.netlify.app/web/quiz/17)
 
-### Uvod
+## Početak rada s CSS-om
 
-CSS, ili kaskadni stilovi (Cascading Style Sheets), rješava važan problem web razvoja: kako učiniti da vaša web stranica izgleda lijepo. Stiliziranje vaših aplikacija čini ih upotrebljivijima i vizualno privlačnijima; također možete koristiti CSS za stvaranje responzivnog web dizajna (RWD) - omogućujući vašim aplikacijama da izgledaju dobro bez obzira na veličinu zaslona na kojem se prikazuju. CSS nije samo za uljepšavanje aplikacija; njegova specifikacija uključuje animacije i transformacije koje omogućuju sofisticirane interakcije u vašim aplikacijama. CSS radna grupa održava trenutne CSS specifikacije; njihov rad možete pratiti na [web stranici World Wide Web konzorcija](https://www.w3.org/Style/CSS/members).
+CSS se često smatra samo načinom "uljepšavanja stvari", ali njegova svrha je mnogo šira. CSS je poput redatelja filma - kontrolirate ne samo kako sve izgleda, već i kako se kreće, reagira na interakciju i prilagođava različitim situacijama.
 
-> Napomena: CSS je jezik koji se razvija, kao i sve na webu, i nisu svi preglednici podržali novije dijelove specifikacije. Uvijek provjerite svoje implementacije konzultirajući [CanIUse.com](https://caniuse.com).
+Moderni CSS je izuzetno sposoban. Možete pisati kod koji automatski prilagođava raspored za telefone, tablete i stolna računala. Možete stvoriti glatke animacije koje usmjeravaju pažnju korisnika gdje je potrebno. Rezultati mogu biti prilično impresivni kada sve funkcionira zajedno.
 
-U ovoj lekciji dodat ćemo stilove našem online terariju i naučiti više o nekoliko CSS koncepata: kaskadi, nasljeđivanju, korištenju selektora, pozicioniranju i korištenju CSS-a za izradu izgleda stranice. Tijekom procesa postavit ćemo izgled terarija i stvoriti sam terarij.
+> 💡 **Savjet profesionalca**: CSS se stalno razvija s novim značajkama i mogućnostima. Uvijek provjerite [CanIUse.com](https://caniuse.com) kako biste provjerili podršku preglednika za novije CSS značajke prije nego ih upotrijebite u produkcijskim projektima.
+
+**Evo što ćemo postići u ovom predavanju:**
+- **Stvoriti** kompletan vizualni dizajn za vaš terarij koristeći moderne CSS tehnike
+- **Istražiti** osnovne koncepte poput kaskade, nasljeđivanja i CSS selektora
+- **Implementirati** strategije za responzivno pozicioniranje i raspored
+- **Izgraditi** spremnik terarija koristeći CSS oblike i stiliziranje
 
 ### Preduvjet
 
-Trebali biste imati HTML za svoj terarij izrađen i spreman za stiliziranje.
+Trebali biste završiti HTML strukturu za vaš terarij iz prethodnog predavanja i imati je spremnu za stiliziranje.
 
-> Pogledajte video
+> 📺 **Video resurs**: Pogledajte ovaj koristan video vodič
+>
+> [![CSS Osnove Tutorial](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
-> 
-> [![Osnove Gita i GitHuba video](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+### Postavljanje vaše CSS datoteke
 
-### Zadatak
+Prije nego što počnemo sa stiliziranjem, moramo povezati CSS s našim HTML-om. Ova poveznica govori pregledniku gdje pronaći upute za stiliziranje našeg terarija.
 
-U svojoj mapi terarija, stvorite novu datoteku pod nazivom `style.css`. Uvezite tu datoteku u odjeljak `<head>`:
+U mapi vašeg terarija, stvorite novu datoteku pod nazivom `style.css`, a zatim je povežite u odjeljku `<head>` vašeg HTML dokumenta:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
 ```
 
----
+**Evo što ovaj kod radi:**
+- **Stvara** vezu između vaših HTML i CSS datoteka
+- **Govori** pregledniku da učita i primijeni stilove iz `style.css`
+- **Koristi** atribut `rel="stylesheet"` kako bi naznačio da je ovo CSS datoteka
+- **Referencira** putanju datoteke s `href="./style.css"`
 
-## Kaskada
+## Razumijevanje CSS kaskade
 
-Kaskadni stilovi uključuju ideju da se stilovi 'kaskadno' primjenjuju prema prioritetu. Stilovi koje postavi autor web stranice imaju prednost nad onima koje postavi preglednik. Stilovi postavljeni 'inline' imaju prednost nad onima postavljenima u vanjskoj datoteci sa stilovima.
+Jeste li se ikada pitali zašto se CSS naziva "kaskadni" stilovi? Stilovi se spuštaju poput vodopada, a ponekad dolazi do sukoba među njima.
 
-### Zadatak
+Razmislite o tome kako funkcioniraju vojne zapovjedne strukture - opća naredba može reći "svi vojnici nose zelenu uniformu", ali specifična naredba za vašu jedinicu može reći "nosite plave svečane uniforme za ceremoniju". Specifičnija uputa ima prednost. CSS slijedi sličnu logiku, a razumijevanje ove hijerarhije čini otklanjanje grešaka mnogo lakšim.
 
-Dodajte inline stil "color: red" u svoj `<h1>` tag:
+### Eksperimentiranje s prioritetom kaskade
 
-```HTML
+Pogledajmo kaskadu u praksi stvaranjem sukoba u stilovima. Prvo dodajte inline stil svom `<h1>` tagu:
+
+```html
 <h1 style="color: red">My Terrarium</h1>
 ```
 
-Zatim dodajte sljedeći kod u svoju datoteku `style.css`:
+**Što ovaj kod radi:**
+- **Primjenjuje** crvenu boju izravno na `<h1>` element koristeći inline stiliziranje
+- **Koristi** atribut `style` za ugrađivanje CSS-a izravno u HTML
+- **Stvara** pravilo stila najvišeg prioriteta za ovaj specifični element
 
-```CSS
+Zatim dodajte ovo pravilo u svoju `style.css` datoteku:
+
+```css
 h1 {
- color: blue;
+  color: blue;
 }
 ```
 
-✅ Koja se boja prikazuje u vašoj web aplikaciji? Zašto? Možete li pronaći način da nadjačate stilove? Kada biste to željeli učiniti, a kada ne?
+**U gore navedenom, mi smo:**
+- **Definirali** CSS pravilo koje cilja sve `<h1>` elemente
+- **Postavili** boju teksta na plavu koristeći vanjsku stilsku datoteku
+- **Stvorili** pravilo nižeg prioriteta u usporedbi s inline stilovima
 
----
+✅ **Provjera znanja**: Koja boja se prikazuje u vašoj web aplikaciji? Zašto ta boja pobjeđuje? Možete li zamisliti scenarije u kojima biste željeli nadjačati stilove?
 
-## Nasljeđivanje
+> 💡 **Redoslijed prioriteta CSS-a (od najvišeg do najnižeg):**
+> 1. **Inline stilovi** (atribut style)
+> 2. **ID-ovi** (#myId)
+> 3. **Klase** (.myClass) i atributi
+> 4. **Selektori elemenata** (h1, div, p)
+> 5. **Zadane postavke preglednika**
 
-Stilovi se nasljeđuju od roditeljskog stila prema potomcima, tako da ugniježđeni elementi nasljeđuju stilove svojih roditelja.
+## CSS nasljeđivanje u praksi
 
-### Zadatak
+CSS nasljeđivanje funkcionira poput genetike - elementi nasljeđuju određena svojstva od svojih roditeljskih elemenata. Ako postavite obitelj fontova na elementu body, sav tekst unutar njega automatski koristi isti font. To je slično tome kako se prepoznatljiva čeljust obitelji Habsburg pojavila kroz generacije bez da je bila specificirana za svakog pojedinca.
 
-Postavite font tijela na određeni font i provjerite font ugniježđenog elementa:
+Međutim, ne nasljeđuje se sve. Tekstualni stilovi poput fontova i boja se nasljeđuju, ali svojstva rasporeda poput margina i obruba ne. Kao što djeca mogu naslijediti fizičke osobine, ali ne i modni ukus svojih roditelja.
 
-```CSS
+### Promatranje nasljeđivanja fonta
+
+Pogledajmo nasljeđivanje u praksi postavljanjem obitelji fontova na elementu `<body>`:
+
+```css
 body {
-	font-family: helvetica, arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ```
 
-Otvorite konzolu preglednika na kartici 'Elements' i promatrajte font H1 elementa. Nasljeđuje svoj font od tijela, kako je navedeno u pregledniku:
+**Razlaganje onoga što se ovdje događa:**
+- **Postavlja** obitelj fontova za cijelu stranicu ciljanjem elementa `<body>`
+- **Koristi** font stack s rezervnim opcijama za bolju kompatibilnost preglednika
+- **Primjenjuje** moderne sistemske fontove koji izgledaju odlično na različitim operativnim sustavima
+- **Osigurava** da svi podređeni elementi nasljeđuju ovaj font osim ako nije posebno nadjačan
+
+Otvorite alate za razvoj preglednika (F12), idite na karticu Elements i pregledajte svoj `<h1>` element. Vidjet ćete da nasljeđuje obitelj fontova od body elementa:
 
 ![naslijeđeni font](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.hr.png)
 
-✅ Možete li učiniti da ugniježđeni stil naslijedi neko drugo svojstvo?
+✅ **Vrijeme za eksperimentiranje**: Pokušajte postaviti druga nasljedna svojstva na `<body>` poput `color`, `line-height` ili `text-align`. Što se događa s vašim naslovom i ostalim elementima?
 
----
+> 📝 **Nasljedna svojstva uključuju**: `color`, `font-family`, `font-size`, `line-height`, `text-align`, `visibility`
+>
+> **Svojstva koja se ne nasljeđuju uključuju**: `margin`, `padding`, `border`, `width`, `height`, `position`
 
-## CSS Selektori
+## Ovladavanje CSS selektorima
 
-### Tagovi
+CSS selektori su vaš način ciljanog stiliziranja specifičnih elemenata. Oni funkcioniraju poput davanja preciznih uputa - umjesto da kažete "kuća", možete reći "plava kuća s crvenim vratima na ulici Maple".
 
-Do sada vaša datoteka `style.css` ima stilizirano samo nekoliko tagova, a aplikacija izgleda prilično čudno:
+CSS pruža različite načine za precizno ciljanje, a odabir pravog selektora je poput odabira odgovarajućeg alata za zadatak. Ponekad trebate stilizirati svaka vrata u susjedstvu, a ponekad samo jedna specifična vrata.
 
-```CSS
+### Selektori elemenata (tagovi)
+
+Selektori elemenata ciljaju HTML elemente prema njihovom nazivu taga. Savršeni su za postavljanje osnovnih stilova koji se široko primjenjuju na vašoj stranici:
+
+```css
 body {
-	font-family: helvetica, arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-	color: #3a241d;
-	text-align: center;
+  color: #3a241d;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 ```
 
-Ovaj način stiliziranja taga daje vam kontrolu nad jedinstvenim elementima, ali trebate kontrolirati stilove mnogih biljaka u svom terariju. Da biste to učinili, trebate koristiti CSS selektore.
+**Razumijevanje ovih stilova:**
+- **Postavlja** dosljednu tipografiju na cijeloj stranici pomoću selektora `body`
+- **Uklanja** zadane margine i padding preglednika za bolju kontrolu
+- **Stilizira** sve elemente naslova bojom, poravnanjem i razmakom
+- **Koristi** `rem` jedinice za skalabilno, pristupačno određivanje veličine fonta
 
-### Id-ovi
+Iako selektori elemenata dobro funkcioniraju za opće stiliziranje, trebat će vam specifičniji selektori za stiliziranje pojedinačnih komponenti poput biljaka u vašem terariju.
 
-Dodajte malo stila za postavljanje lijevih i desnih spremnika. Budući da postoji samo jedan lijevi i jedan desni spremnik, u oznaci su im dodijeljeni id-ovi. Za njihovo stiliziranje koristite `#`:
+### ID selektori za jedinstvene elemente
 
-```CSS
+ID selektori koriste simbol `#` i ciljaju elemente s određenim atributima `id`. Budući da ID-ovi moraju biti jedinstveni na stranici, savršeni su za stiliziranje pojedinačnih, posebnih elemenata poput naših lijevih i desnih spremnika za biljke.
+
+Napravimo stilizaciju za bočne spremnike našeg terarija gdje će biljke biti smještene:
+
+```css
 #left-container {
-	background-color: #eee;
-	width: 15%;
-	left: 0px;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+  background-color: #f5f5f5;
+  width: 15%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 #right-container {
-	background-color: #eee;
-	width: 15%;
-	right: 0px;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+  background-color: #f5f5f5;
+  width: 15%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 ```
 
-Ovdje ste postavili ove spremnike s apsolutnim pozicioniranjem na krajnju lijevu i desnu stranu zaslona te koristili postotke za njihovu širinu kako bi se mogli prilagoditi malim mobilnim zaslonima.
+**Evo što ovaj kod postiže:**
+- **Pozicionira** spremnike na krajnje lijeve i desne rubove koristeći `absolute` pozicioniranje
+- **Koristi** jedinice `vh` (visina prikaznog prozora) za responzivnu visinu koja se prilagođava veličini ekrana
+- **Primjenjuje** `box-sizing: border-box` kako bi padding bio uključen u ukupnu širinu
+- **Uklanja** nepotrebne `px` jedinice iz vrijednosti nula za čišći kod
+- **Postavlja** suptilnu boju pozadine koja je ugodnija za oči od oštro sive
 
-✅ Ovaj je kod prilično ponovljen, što nije "DRY" (Don't Repeat Yourself); možete li pronaći bolji način za stiliziranje ovih id-ova, možda kombinacijom id-a i klase? Trebali biste promijeniti oznaku i refaktorirati CSS:
+✅ **Izazov kvalitete koda**: Primijetite kako ovaj CSS krši princip DRY (Don't Repeat Yourself). Možete li ga preoblikovati koristeći i ID i klasu?
 
+**Poboljšani pristup:**
 ```html
 <div id="left-container" class="container"></div>
+<div id="right-container" class="container"></div>
 ```
 
-### Klase
+```css
+.container {
+  background-color: #f5f5f5;
+  width: 15%;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 
-U gornjem primjeru stilizirali ste dva jedinstvena elementa na zaslonu. Ako želite da se stilovi primjenjuju na mnoge elemente na zaslonu, možete koristiti CSS klase. Učinite to za postavljanje biljaka u lijeve i desne spremnike.
+#left-container {
+  left: 0;
+}
 
-Primijetite da svaka biljka u HTML oznaci ima kombinaciju id-ova i klasa. Id-ovi se ovdje koriste za JavaScript koji ćete kasnije dodati kako biste manipulirali postavljanjem biljaka u terariju. Klase, međutim, daju svim biljkama određeni stil.
+#right-container {
+  right: 0;
+}
+```
 
+### Selektori klasa za višekratne stilove
+
+Selektori klasa koriste simbol `.` i savršeni su kada želite primijeniti iste stilove na više elemenata. Za razliku od ID-ova, klase se mogu ponovno koristiti u cijelom vašem HTML-u, što ih čini idealnim za dosljedne stilizacijske uzorke.
+
+U našem terariju, svaka biljka treba sličnu stilizaciju, ali i individualno pozicioniranje. Koristit ćemo kombinaciju klasa za zajedničke stilove i ID-ova za jedinstveno pozicioniranje.
+
+**Evo strukture HTML-a za svaku biljku:**
 ```html
 <div class="plant-holder">
-	<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.hr.png" />
 </div>
 ```
 
-Dodajte sljedeće u svoju datoteku `style.css`:
+**Ključni elementi objašnjeni:**
+- **Koristi** `class="plant-holder"` za dosljednu stilizaciju spremnika za sve biljke
+- **Primjenjuje** `class="plant"` za zajedničko stiliziranje i ponašanje slike
+- **Uključuje** jedinstveni `id="plant1"` za individualno pozicioniranje i interakciju putem JavaScripta
+- **Pruža** opisni alt tekst za pristupačnost čitačima ekrana
 
-```CSS
+Sada dodajte ove stilove u svoju `style.css` datoteku:
+
+```css
 .plant-holder {
-	position: relative;
-	height: 13%;
-	left: -10px;
+  position: relative;
+  height: 13%;
+  left: -0.6rem;
 }
 
 .plant {
-	position: absolute;
-	max-width: 150%;
-	max-height: 150%;
-	z-index: 2;
+  position: absolute;
+  max-width: 150%;
+  max-height: 150%;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.plant:hover {
+  transform: scale(1.05);
 }
 ```
 
-Značajno u ovom isječku je miješanje relativnog i apsolutnog pozicioniranja, što ćemo obraditi u sljedećem odjeljku. Pogledajte kako su visine obrađene pomoću postotaka:
+**Razlaganje ovih stilova:**
+- **Stvara** relativno pozicioniranje za spremnik biljke kako bi se uspostavio kontekst pozicioniranja
+- **Postavlja** svaki spremnik biljke na visinu od 13%, osiguravajući da sve biljke stanu vertikalno bez pomicanja
+- **Pomjera** spremnike malo ulijevo kako bi bolje centrirali biljke unutar njihovih spremnika
+- **Omogućuje** biljkama da se responzivno skaliraju pomoću svojstava `max-width` i `max-height`
+- **Koristi** `z-index` za slojevitost biljaka iznad drugih elemenata u terariju
+- **Dodaje** suptilan efekt prelaska mišem s CSS prijelazima za bolju interakciju korisnika
 
-Postavili ste visinu držača biljaka na 13%, što je dobar broj kako bi se sve biljke prikazale u svakom vertikalnom spremniku bez potrebe za pomicanjem.
+✅ **Kritičko razmišljanje**: Zašto su nam potrebni i `.plant-holder` i `.plant` selektori? Što bi se dogodilo da pokušamo koristiti samo jedan?
 
-Držač biljaka pomaknut je ulijevo kako bi biljke bile više centrirane unutar spremnika. Slike imaju veliku količinu prozirne pozadine kako bi bile lakše za povlačenje, pa ih je potrebno pomaknuti ulijevo kako bi bolje pristajale na zaslon.
+> 💡 **Dizajnerski obrazac**: Spremnik (`.plant-holder`) kontrolira raspored i pozicioniranje, dok sadržaj (`.plant`) kontrolira izgled i skaliranje. Ova podjela čini kod lakšim za održavanje i fleksibilnijim.
 
-Zatim, sama biljka dobiva maksimalnu širinu od 150%. To joj omogućuje da se smanji kako se preglednik smanjuje. Pokušajte promijeniti veličinu preglednika; biljke ostaju u svojim spremnicima, ali se smanjuju kako bi stale.
+## Razumijevanje CSS pozicioniranja
 
-Također je značajna upotreba z-indexa, koji kontrolira relativnu visinu elementa (tako da biljke sjede na vrhu spremnika i izgledaju kao da su unutar terarija).
+CSS pozicioniranje je poput režiranja predstave - vi određujete gdje svaki glumac stoji i kako se kreće po pozornici. Neki glumci slijede standardni raspored, dok drugi trebaju specifično pozicioniranje za dramatičan učinak.
 
-✅ Zašto su vam potrebni i selektor za držač biljaka i selektor za biljke?
+Jednom kada razumijete pozicioniranje, mnogi izazovi u rasporedu postaju upravljivi. Trebate navigacijsku traku koja ostaje na vrhu dok korisnici skrolaju? Pozicioniranje to omogućuje. Želite skočni prozor koji se pojavljuje na određenom mjestu? To je također pozicioniranje.
 
-## CSS Pozicioniranje
+### Pet vrijednosti pozicioniranja
 
-Miješanje svojstava pozicioniranja (postoje statična, relativna, fiksna, apsolutna i ljepljiva pozicioniranja) može biti malo nezgodno, ali kada se pravilno koristi, daje vam dobru kontrolu nad elementima na vašim stranicama.
+| Vrijednost pozicioniranja | Ponašanje | Primjena |
+|---------------------------|-----------|----------|
+| `static` | Zadani tok, ignorira top/left/right/bottom | Normalni raspored dokumenta |
+| `relative` | Pozicionirano u odnosu na svoju normalnu poziciju | Male prilagodbe, stvaranje konteksta pozicioniranja |
+| `absolute` | Pozicionirano u odnosu na najbližeg pozicioniranog pretka | Precizno postavljanje, preklapanja |
+| `fixed` | Pozicionirano u odnosu na prikazni prozor | Navigacijske trake, plutajući elementi |
+| `sticky` | Prebacuje se između relativnog i fiksnog ovisno o skrolanju | Zaglavlja koja se lijepe pri skrolanju |
 
-Apsolutno pozicionirani elementi pozicionirani su u odnosu na svoje najbliže pozicionirane pretke, a ako ih nema, pozicionirani su prema tijelu dokumenta.
+### Pozicioniranje u našem terariju
 
-Relativno pozicionirani elementi pozicionirani su na temelju CSS-ovih uputa za prilagodbu njihovog položaja u odnosu na početni položaj.
+Naš terarij koristi stratešku kombinaciju tipova pozicioniranja za stvaranje željenog rasporeda:
 
-U našem primjeru, `plant-holder` je relativno pozicionirani element koji je pozicioniran unutar apsolutno pozicioniranog spremnika. Rezultirajuće ponašanje je da su bočni spremnici pričvršćeni lijevo i desno, a `plant-holder` je ugniježđen, prilagođavajući se unutar bočnih spremnika, ostavljajući prostor za biljke koje će biti postavljene u vertikalni red.
+```css
+/* Container positioning */
+.container {
+  position: absolute; /* Removes from normal flow */
+  /* ... other styles ... */
+}
 
-> Sama `plant` također ima apsolutno pozicioniranje, što je potrebno kako bi bila povlačiva, što ćete otkriti u sljedećoj lekciji.
+/* Plant holder positioning */
+.plant-holder {
+  position: relative; /* Creates positioning context */
+  /* ... other styles ... */
+}
 
-✅ Eksperimentirajte s promjenom vrsta pozicioniranja bočnih spremnika i držača biljaka. Što se događa?
+/* Plant positioning */
+.plant {
+  position: absolute; /* Allows precise placement within holder */
+  /* ... other styles ... */
+}
+```
 
-## CSS Izgledi
+**Razumijevanje strategije pozicioniranja:**
+- **Apsolutni spremnici** su uklonjeni iz normalnog toka dokumenta i pričvršćeni na rubove ekrana
+- **Relativni spremnici biljaka** stvaraju kontekst pozicioniranja dok ostaju u toku dokumenta
+- **Apsolutne biljke** mogu se precizno pozicionirati unutar svojih relativnih spremnika
+- **Ova kombinacija** omogućuje biljkama da se vertikalno slažu dok su pojedinačno pozicionirane
 
-Sada ćete koristiti ono što ste naučili kako biste izradili sam terarij, sve koristeći CSS!
+> 🎯 **Zašto je ovo važno**: Elementi `plant` trebaju apsolutno pozicioniranje kako bi postali povlačivi u sljedećem predavanju. Apsolutno pozicioniranje ih uklanja iz normalnog toka rasporeda, čineći interakcije povlačenja i ispuštanja mogućima.
 
-Prvo, stilizirajte `.terrarium` div djecu kao zaobljeni pravokutnik koristeći CSS:
+✅ **Vrijeme za eksperimentiranje**: Pokušajte promijeniti vrijednosti pozicioniranja i promatrajte rezultate:
+- Što se događa ako promijenite `.container` iz `absolute` u `relative`?
+- Kako se mijenja raspored ako `.plant-holder` koristi `absolute` umjesto `relative`?
+- Što se događa kada promijenite `.plant` u `relative` pozicioniranje?
 
-```CSS
+## Izgradnja terarija pomoću CSS-a
+
+Sada ćemo izgraditi staklenu posudu koristeći samo CSS - bez slika ili grafičkog softvera.
+
+Stvaranje realističnog izgleda stakla, sjena i efekata dubine pomoću pozicioniranja i transparentnosti pokazuje vizualne mogućnosti CSS-a. Ova tehnika odražava kako su arhitekti pokreta Bauhaus koristili jednostavne geometrijske oblike za stvaranje složenih, lijepih struktura. Jednom kada razumijete ove principe, prepoznat ćete CSS tehnike iza
+Idemo izgraditi terarij staklenku dio po dio. Svaki dio koristi apsolutno pozicioniranje i dimenzioniranje temeljeno na postotcima za responzivni dizajn:
+
+```css
 .jar-walls {
-	height: 80%;
-	width: 60%;
-	background: #d1e1df;
-	border-radius: 1rem;
-	position: absolute;
-	bottom: 0.5%;
-	left: 20%;
-	opacity: 0.5;
-	z-index: 1;
+  height: 80%;
+  width: 60%;
+  background: #d1e1df;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0.5%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: 1;
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.1);
 }
 
 .jar-top {
-	width: 50%;
-	height: 5%;
-	background: #d1e1df;
-	position: absolute;
-	bottom: 80.5%;
-	left: 25%;
-	opacity: 0.7;
-	z-index: 1;
+  width: 50%;
+  height: 5%;
+  background: #d1e1df;
+  position: absolute;
+  bottom: 80.5%;
+  left: 25%;
+  opacity: 0.7;
+  z-index: 1;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .jar-bottom {
-	width: 50%;
-	height: 1%;
-	background: #d1e1df;
-	position: absolute;
-	bottom: 0%;
-	left: 25%;
-	opacity: 0.7;
+  width: 50%;
+  height: 1%;
+  background: #d1e1df;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  opacity: 0.7;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .dirt {
-	width: 60%;
-	height: 5%;
-	background: #3a241d;
-	position: absolute;
-	border-radius: 0 0 1rem 1rem;
-	bottom: 1%;
-	left: 20%;
-	opacity: 0.7;
-	z-index: -1;
+  width: 60%;
+  height: 5%;
+  background: #3a241d;
+  position: absolute;
+  border-radius: 0 0 1rem 1rem;
+  bottom: 1%;
+  left: 20%;
+  opacity: 0.7;
+  z-index: -1;
 }
 ```
 
-Primijetite upotrebu postotaka ovdje. Ako smanjite preglednik, možete vidjeti kako se staklenka također smanjuje. Također primijetite širine i visine postotaka za elemente staklenke i kako je svaki element apsolutno pozicioniran u središtu, pričvršćen na dno prikaza.
+**Razumijevanje konstrukcije terarija:**
+- **Koristi** dimenzije temeljene na postotcima za responzivno skaliranje na svim veličinama ekrana
+- **Pozicionira** elemente apsolutno kako bi ih precizno složio i poravnao
+- **Primjenjuje** različite vrijednosti opaciteta za stvaranje efekta prozirnosti stakla
+- **Implementira** slojeve pomoću `z-index` kako bi biljke izgledale kao da su unutar staklenke
+- **Dodaje** suptilne sjene i profinjeni zaobljeni rub za realističniji izgled
 
-Također koristimo `rem` za border-radius, duljinu relativnu na font. Pročitajte više o ovoj vrsti relativnog mjerenja u [CSS specifikaciji](https://www.w3.org/TR/css-values-3/#font-relative-lengths).
+### Responzivni dizajn s postotcima
 
-✅ Pokušajte promijeniti boje i prozirnost staklenke u odnosu na zemlju. Što se događa? Zašto?
+Primijetite kako sve dimenzije koriste postotke umjesto fiksnih vrijednosti u pikselima:
+
+**Zašto je to važno:**
+- **Osigurava** da se terarij proporcionalno skalira na bilo kojoj veličini ekrana
+- **Održava** vizualne odnose između komponenti staklenke
+- **Pruža** dosljedno iskustvo od mobilnih telefona do velikih monitora
+- **Omogućuje** dizajnu da se prilagodi bez narušavanja vizualnog izgleda
+
+### CSS jedinice u praksi
+
+Koristimo `rem` jedinice za zaobljene rubove, koje se skaliraju u odnosu na osnovnu veličinu fonta. Ovo omogućuje pristupačniji dizajn koji poštuje korisničke preferencije za veličinu fonta. Saznajte više o [relativnim CSS jedinicama](https://www.w3.org/TR/css-values-3/#font-relative-lengths) u službenoj specifikaciji.
+
+✅ **Vizualni eksperiment**: Pokušajte promijeniti ove vrijednosti i promatrajte učinke:
+- Promijenite opacitet staklenke s 0.5 na 0.8 – kako to utječe na izgled stakla?
+- Prilagodite boju zemlje s `#3a241d` na `#8B4513` – kakav vizualni utjecaj to ima?
+- Promijenite `z-index` zemlje na 2 – što se događa sa slojevima?
 
 ---
 
-## 🚀Izazov
+## Izazov GitHub Copilot Agent 🚀
 
-Dodajte 'mjehurićasti' sjaj na donji lijevi dio staklenke kako bi izgledala više poput stakla. Stilizirat ćete `.jar-glossy-long` i `.jar-glossy-short` kako bi izgledali kao odsjaj. Evo kako bi to izgledalo:
+Koristite Agent način rada za dovršavanje sljedećeg izazova:
+
+**Opis:** Napravite CSS animaciju koja će učiniti da biljke u terariju nježno lelujaju, simulirajući efekt prirodnog povjetarca. Ovo će vam pomoći da vježbate CSS animacije, transformacije i ključne okvire, dok istovremeno poboljšavate vizualni izgled vašeg terarija.
+
+**Zadatak:** Dodajte CSS animacije ključnih okvira kako bi biljke u terariju nježno lelujale s jedne strane na drugu. Napravite animaciju ljuljanja koja lagano rotira svaku biljku (2-3 stupnja) lijevo i desno s trajanjem od 3-4 sekunde, i primijenite je na `.plant` klasu. Pobrinite se da animacija bude beskonačna i da ima funkciju ublažavanja za prirodnije kretanje.
+
+Saznajte više o [agent načinu rada](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
+
+## 🚀 Izazov: Dodavanje refleksija na staklu
+
+Spremni za poboljšanje vašeg terarija s realističnim refleksijama na staklu? Ova tehnika će dodati dubinu i realizam dizajnu.
+
+Stvorit ćete suptilne naglaske koji simuliraju kako svjetlost reflektira na staklenim površinama. Ovaj pristup je sličan načinu na koji su renesansni slikari poput Jana van Eycka koristili svjetlost i refleksiju kako bi naslikano staklo izgledalo trodimenzionalno. Evo što trebate postići:
 
 ![završeni terarij](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.hr.png)
 
-Za dovršetak kviza nakon predavanja, prođite kroz ovaj modul učenja: [Stilizirajte svoju HTML aplikaciju pomoću CSS-a](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+**Vaš zadatak:**
+- **Stvorite** suptilne bijele ili svijetle ovalne oblike za refleksije na staklu
+- **Pozicionirajte** ih strateški na lijevoj strani staklenke
+- **Primijenite** odgovarajuće opacitete i efekte zamućenja za realističan odsjaj svjetlosti
+- **Koristite** `border-radius` za stvaranje organskih, mjehurićastih oblika
+- **Eksperimentirajte** s gradijentima ili sjenama za poboljšani realizam
 
 ## Kviz nakon predavanja
 
 [Kviz nakon predavanja](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Pregled i samostalno učenje
+## Proširite svoje znanje o CSS-u
 
-CSS se čini obmanjujuće jednostavnim, ali postoje mnogi izazovi kada pokušavate savršeno stilizirati aplikaciju za sve preglednike i sve veličine zaslona. CSS-Grid i Flexbox alati su razvijeni kako bi posao učinili malo strukturiranijim i pouzdanijim. Naučite o tim alatima igrajući [Flexbox Froggy](https://flexboxfroggy.com/) i [Grid Garden](https://codepip.com/games/grid-garden/).
+CSS može u početku djelovati složeno, ali razumijevanje ovih osnovnih koncepata pruža čvrstu osnovu za naprednije tehnike.
+
+**Vaša sljedeća područja učenja CSS-a:**
+- **Flexbox** - pojednostavljuje poravnanje i raspodjelu elemenata
+- **CSS Grid** - pruža moćne alate za stvaranje složenih rasporeda
+- **CSS varijable** - smanjuju ponavljanje i poboljšavaju održivost
+- **Responzivni dizajn** - osigurava da stranice dobro funkcioniraju na različitim veličinama ekrana
+
+### Interaktivni resursi za učenje
+
+Vježbajte ove koncepte uz ove zanimljive, praktične igre:
+- 🐸 [Flexbox Froggy](https://flexboxfroggy.com/) - Savladajte Flexbox kroz zabavne izazove
+- 🌱 [Grid Garden](https://codepip.com/games/grid-garden/) - Naučite CSS Grid uz uzgoj virtualne mrkve
+- 🎯 [CSS Battle](https://cssbattle.dev/) - Testirajte svoje CSS vještine kroz izazove kodiranja
+
+### Dodatno učenje
+
+Za sveobuhvatne osnove CSS-a, dovršite ovaj modul na Microsoft Learn platformi: [Stilizirajte svoju HTML aplikaciju pomoću CSS-a](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
 ## Zadatak
 
-[CSS Refaktoriranje](assignment.md)
+[Refaktoriranje CSS-a](assignment.md)
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešne interpretacije nastale korištenjem ovog prijevoda.

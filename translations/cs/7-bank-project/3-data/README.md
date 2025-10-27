@@ -1,67 +1,150 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "89d0df9854ed020f155e94882ae88d4c",
-  "translation_date": "2025-08-29T10:43:35+00:00",
+  "original_hash": "2c1164912414820c8efd699b43f64954",
+  "translation_date": "2025-10-24T21:03:25+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "cs"
 }
 -->
 # Vytvoření bankovní aplikace, část 3: Metody získávání a používání dat
 
-## Kvíz před lekcí
+Představte si počítač Enterprise ze Star Treku – když kapitán Picard požádá o stav lodi, informace se okamžitě zobrazí, aniž by se celé rozhraní muselo vypnout a znovu načíst. Přesně takový plynulý tok informací se snažíme vytvořit pomocí dynamického získávání dat.
 
-[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/45)
+Vaše bankovní aplikace je momentálně jako tištěné noviny – informativní, ale statická. Proměníme ji v něco podobného řídícímu centru NASA, kde data proudí nepřetržitě a aktualizují se v reálném čase, aniž by narušovala uživatelský zážitek.
 
-### Úvod
+Naučíte se komunikovat se servery asynchronně, pracovat s daty, která přicházejí v různých časech, a transformovat surové informace na něco smysluplného pro vaše uživatele. To je rozdíl mezi ukázkovým a produkčně připraveným softwarem.
 
-Jádrem každé webové aplikace jsou *data*. Data mohou mít různé podoby, ale jejich hlavním účelem je vždy zobrazit uživateli informace. S tím, jak se webové aplikace stávají stále interaktivnějšími a složitějšími, je způsob, jakým uživatel přistupuje k informacím a jak s nimi pracuje, klíčovou součástí vývoje webu.
+## Kvíz před přednáškou
 
-V této lekci se naučíme, jak asynchronně získávat data ze serveru a používat je k zobrazení informací na webové stránce bez nutnosti znovu načítat HTML.
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Předpoklady
 
-Pro tuto lekci musíte mít vytvořenou část webové aplikace [Přihlašovací a registrační formulář](../2-forms/README.md). Také je potřeba nainstalovat [Node.js](https://nodejs.org) a [spustit serverovou API](../api/README.md) lokálně, abyste získali data o účtech.
+Než se pustíte do získávání dat, ujistěte se, že máte připraveny tyto komponenty:
 
-Můžete ověřit, zda server běží správně, spuštěním tohoto příkazu v terminálu:
+- **Předchozí lekce**: Dokončete [Přihlašovací a registrační formulář](../2-forms/README.md) – budeme na tomto základě stavět
+- **Lokální server**: Nainstalujte [Node.js](https://nodejs.org) a [spusťte server API](../api/README.md), který poskytne data o účtu
+- **Připojení k API**: Otestujte připojení k serveru tímto příkazem:
 
-```sh
+```bash
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# Expected response: "Bank API v1.0.0"
 ```
+
+Tento rychlý test zajistí, že všechny komponenty správně komunikují:
+- Ověří, že Node.js na vašem systému běží správně
+- Potvrdí, že váš API server je aktivní a reaguje
+- Ověří, že vaše aplikace může dosáhnout na server (jako kontrola rádiového spojení před misí)
 
 ---
 
-## AJAX a získávání dat
+## Porozumění získávání dat v moderních webových aplikacích
 
-Tradiční webové stránky aktualizují zobrazovaný obsah, když uživatel vybere odkaz nebo odešle data pomocí formuláře, tím, že znovu načtou celou HTML stránku. Pokaždé, když je potřeba načíst nová data, webový server vrátí zcela novou HTML stránku, kterou musí prohlížeč zpracovat, což přeruší aktuální akci uživatele a omezuje interakce během načítání. Tento postup se také nazývá *vícestránková aplikace* nebo *MPA*.
+Způsob, jakým webové aplikace pracují s daty, se za poslední dvě desetiletí dramaticky vyvinul. Pochopení tohoto vývoje vám pomůže ocenit, proč jsou moderní techniky jako AJAX a Fetch API tak silné a proč se staly nezbytnými nástroji pro webové vývojáře.
 
-![Pracovní postup aktualizace ve vícestránkové aplikaci](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.cs.png)
+Pojďme prozkoumat, jak fungovaly tradiční webové stránky ve srovnání s dynamickými, responzivními aplikacemi, které dnes vytváříme.
 
-S rostoucí složitostí a interaktivitou webových aplikací se objevila nová technika nazvaná [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)). Tato technika umožňuje webovým aplikacím asynchronně odesílat a získávat data ze serveru pomocí JavaScriptu, aniž by bylo nutné znovu načítat HTML stránku, což vede k rychlejším aktualizacím a plynulejším interakcím uživatele. Když server vrátí nová data, aktuální HTML stránka může být aktualizována pomocí JavaScriptu a API [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model). Tento přístup se postupem času vyvinul v to, co dnes nazýváme [*jednostránková aplikace* nebo *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
+### Tradiční více stránkové aplikace (MPA)
+
+V počátcích webu byl každý klik jako přepínání kanálů na staré televizi – obrazovka zčernala a poté se pomalu naladil nový obsah. Taková byla realita raných webových aplikací, kde každá interakce znamenala kompletní přestavbu celé stránky od začátku.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    
+    User->>Browser: Clicks link or submits form
+    Browser->>Server: Requests new HTML page
+    Note over Browser: Page goes blank
+    Server->>Browser: Returns complete HTML page
+    Browser->>User: Displays new page (flash/reload)
+```
+
+![Pracovní postup aktualizace v více stránkové aplikaci](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.cs.png)
+
+**Proč tento přístup působil neohrabaně:**
+- Každý klik znamenal kompletní přestavbu celé stránky od začátku
+- Uživatelé byli přerušováni nepříjemnými záblesky stránky
+- Vaše internetové připojení pracovalo přesčas při stahování stejných záhlaví a zápatí opakovaně
+- Aplikace působily spíše jako procházení kartotéky než jako používání softwaru
+
+### Moderní jednostránkové aplikace (SPA)
+
+AJAX (Asynchronous JavaScript and XML) zcela změnil tento přístup. Stejně jako modulární design Mezinárodní vesmírné stanice, kde astronauti mohou vyměnit jednotlivé komponenty bez přestavby celé struktury, AJAX nám umožňuje aktualizovat konkrétní části webové stránky bez jejího kompletního znovunačtení. I když název zmiňuje XML, dnes většinou používáme JSON, ale základní princip zůstává: aktualizovat pouze to, co se musí změnit.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant JavaScript
+    participant Server
+    
+    User->>Browser: Interacts with page
+    Browser->>JavaScript: Triggers event handler
+    JavaScript->>Server: Fetches only needed data
+    Server->>JavaScript: Returns JSON data
+    JavaScript->>Browser: Updates specific page elements
+    Browser->>User: Shows updated content (no reload)
+```
 
 ![Pracovní postup aktualizace v jednostránkové aplikaci](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.cs.png)
 
-Když byl AJAX poprvé představen, jediným dostupným API pro asynchronní získávání dat bylo [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Moderní prohlížeče však nyní implementují pohodlnější a výkonnější [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), které využívá promises a je lépe přizpůsobené pro manipulaci s JSON daty.
+**Proč jsou SPA tak příjemné:**
+- Aktualizují se pouze části, které se skutečně změnily (chytré, že?)
+- Žádné rušivé přerušení – uživatelé zůstávají ve svém pracovním toku
+- Méně dat putuje po síti, což znamená rychlejší načítání
+- Všechno působí svižně a responzivně, jako aplikace na vašem telefonu
 
-> Ačkoli všechny moderní prohlížeče podporují `Fetch API`, pokud chcete, aby vaše webová aplikace fungovala i na starších prohlížečích, je vždy dobré zkontrolovat [tabulku kompatibility na caniuse.com](https://caniuse.com/fetch).
+### Vývoj k modernímu Fetch API
 
-### Úkol
+Moderní prohlížeče poskytují [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), které nahrazuje starší [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Stejně jako rozdíl mezi ovládáním telegrafu a používáním e-mailu, Fetch API používá promises pro čistší asynchronní kód a přirozeně pracuje s JSON.
 
-V [předchozí lekci](../2-forms/README.md) jsme implementovali registrační formulář pro vytvoření účtu. Nyní přidáme kód pro přihlášení pomocí existujícího účtu a získání jeho dat. Otevřete soubor `app.js` a přidejte novou funkci `login`:
+| Funkce | XMLHttpRequest | Fetch API |
+|--------|----------------|-----------|
+| **Syntaxe** | Složitá, založená na zpětných voláních | Čistá, založená na promises |
+| **Práce s JSON** | Nutné ruční parsování | Vestavěná metoda `.json()` |
+| **Zpracování chyb** | Omezené informace o chybách | Komplexní detaily o chybách |
+| **Podpora moderních prohlížečů** | Kompatibilita se staršími verzemi | ES6+ promises a async/await |
 
-```js
+> 💡 **Kompatibilita prohlížečů**: Dobrá zpráva – Fetch API funguje ve všech moderních prohlížečích! Pokud vás zajímají konkrétní verze, [caniuse.com](https://caniuse.com/fetch) má kompletní příběh o kompatibilitě.
+> 
+**Shrnutí:**
+- Funguje skvěle v Chrome, Firefoxu, Safari a Edge (prakticky všude, kde jsou vaši uživatelé)
+- Pouze Internet Explorer potřebuje dodatečnou pomoc (a upřímně, je čas se s IE rozloučit)
+- Perfektně se hodí pro elegantní vzory async/await, které budeme používat později
+
+### Implementace přihlášení uživatele a získávání dat
+
+Nyní implementujeme přihlašovací systém, který promění vaši bankovní aplikaci ze statického zobrazení na funkční aplikaci. Stejně jako autentizační protokoly používané v zabezpečených vojenských zařízeních ověříme přihlašovací údaje uživatele a poté mu poskytneme přístup k jeho konkrétním datům.
+
+Budeme postupovat krok za krokem, začneme základní autentizací a poté přidáme schopnosti získávání dat.
+
+#### Krok 1: Vytvoření základní funkce pro přihlášení
+
+Otevřete soubor `app.js` a přidejte novou funkci `login`. Ta bude zajišťovat proces autentizace uživatele:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
 }
 ```
 
-Začínáme získáním prvku formuláře pomocí `getElementById()` a poté získáme uživatelské jméno z inputu pomocí `loginForm.user.value`. Každý ovládací prvek formuláře lze přistupovat podle jeho názvu (nastaveného v HTML pomocí atributu `name`) jako vlastnosti formuláře.
+**Rozbor kódu:**
+- Klíčové slovo `async` říká JavaScriptu „hej, tato funkce možná bude muset na něco počkat“
+- Najdeme formulář na stránce (nic složitého, prostě ho najdeme podle jeho ID)
+- Poté získáme, co uživatel zadal jako své uživatelské jméno
+- Malý trik: k jakémukoli vstupu formuláře můžete přistupovat pomocí atributu `name` – není potřeba dalších volání getElementById!
 
-Podobně jako u registrace vytvoříme další funkci pro provedení požadavku na server, tentokrát pro získání dat o účtu:
+> 💡 **Vzor přístupu k formuláři**: Ke každému ovládacímu prvku formuláře lze přistupovat podle jeho názvu (nastaveného v HTML pomocí atributu `name`) jako k vlastnosti elementu formuláře. To poskytuje čistý a čitelný způsob získávání dat z formuláře.
 
-```js
+#### Krok 2: Vytvoření funkce pro získávání dat o účtu
+
+Dále vytvoříme dedikovanou funkci pro získávání dat o účtu ze serveru. Ta bude následovat stejný vzor jako vaše registrační funkce, ale zaměří se na získávání dat:
+
+```javascript
 async function getAccount(user) {
   try {
     const response = await fetch('//localhost:5000/api/accounts/' + encodeURIComponent(user));
@@ -72,15 +155,41 @@ async function getAccount(user) {
 }
 ```
 
-Používáme `fetch` API pro asynchronní požadavek na server, ale tentokrát nepotřebujeme žádné další parametry kromě URL, protože pouze dotazujeme data. Ve výchozím nastavení `fetch` vytváří HTTP požadavek typu [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET), což je přesně to, co zde potřebujeme.
+**Co tento kód zajišťuje:**
+- **Používá** moderní `fetch` API pro asynchronní požadavky na data
+- **Sestavuje** URL GET požadavku s parametrem uživatelského jména
+- **Aplikuje** `encodeURIComponent()` pro bezpečné zpracování speciálních znaků v URL
+- **Převádí** odpověď na formát JSON pro snadnou manipulaci s daty
+- **Zpracovává** chyby elegantně tím, že vrací objekt chyby místo pádu aplikace
 
-✅ `encodeURIComponent()` je funkce, která escapuje speciální znaky pro URL. Jaké problémy by mohly nastat, pokud bychom tuto funkci nevolali a použili přímo hodnotu `user` v URL?
+> ⚠️ **Bezpečnostní poznámka**: Funkce `encodeURIComponent()` zpracovává speciální znaky v URL. Stejně jako kódovací systémy používané v námořní komunikaci zajišťuje, že vaše zpráva dorazí přesně tak, jak byla zamýšlena, a zabrání tomu, aby byly znaky jako "#" nebo "&" špatně interpretovány.
+> 
+**Proč na tom záleží:**
+- Zabraňuje speciálním znakům v narušení URL
+- Chrání před útoky manipulací s URL
+- Zajišťuje, že server obdrží zamýšlená data
+- Dodržuje bezpečné postupy při programování
 
-Nyní aktualizujeme naši funkci `login`, aby používala `getAccount`:
+#### Porozumění HTTP GET požadavkům
 
-```js
+Možná vás překvapí: když použijete `fetch` bez dalších možností, automaticky vytvoří [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) požadavek. To je ideální pro to, co děláme – ptáme se serveru „hej, můžu vidět data tohoto uživatele?“
+
+Představte si GET požadavky jako zdvořilé žádosti o půjčení knihy z knihovny – žádáte o něco, co už existuje. POST požadavky (které jsme použili pro registraci) jsou spíše jako odevzdání nové knihy, která má být přidána do sbírky.
+
+| GET požadavek | POST požadavek |
+|---------------|----------------|
+| **Účel** | Získání existujících dat | Odeslání nových dat na server |
+| **Parametry** | V cestě URL/řetězci dotazu | V těle požadavku |
+| **Caching** | Může být cachováno prohlížeči | Obvykle není cachováno |
+| **Bezpečnost** | Viditelné v URL/logech | Skryté v těle požadavku |
+
+#### Krok 3: Spojení všeho dohromady
+
+Nyní přichází uspokojivá část – spojíme vaši funkci pro získávání dat o účtu s procesem přihlášení. Tady vše zapadne na své místo:
+
+```javascript
 async function login() {
-  const loginForm = document.getElementById('loginForm')
+  const loginForm = document.getElementById('loginForm');
   const user = loginForm.user.value;
   const data = await getAccount(user);
 
@@ -93,94 +202,241 @@ async function login() {
 }
 ```
 
-Protože je `getAccount` asynchronní funkce, musíme ji spárovat s klíčovým slovem `await`, abychom počkali na výsledek serveru. Jako u každého požadavku na server musíme také řešit chybové případy. Prozatím přidáme pouze zprávu do logu, která zobrazí chybu, a vrátíme se k tomu později.
+Tato funkce následuje jasnou sekvenci:
+- Získá uživatelské jméno z vstupu formuláře
+- Požádá server o data uživatelského účtu
+- Zpracuje jakékoli chyby, které se během procesu vyskytnou
+- Uloží data o účtu a po úspěšném přihlášení přejde na dashboard
 
-Poté musíme data uložit někam, abychom je mohli později použít k zobrazení informací na dashboardu. Protože proměnná `account` zatím neexistuje, vytvoříme globální proměnnou na začátku našeho souboru:
+> 🎯 **Vzor async/await**: Protože `getAccount` je asynchronní funkce, používáme klíčové slovo `await`, abychom pozastavili provádění, dokud server neodpoví. To zabrání pokračování kódu s nedefinovanými daty.
 
-```js
+#### Krok 4: Vytvoření místa pro vaše data
+
+Vaše aplikace potřebuje místo, kde si zapamatuje informace o účtu, jakmile budou načteny. Představte si to jako krátkodobou paměť vaší aplikace – místo, kde si uchová aktuální data uživatele. Přidejte tento řádek na začátek vašeho souboru `app.js`:
+
+```javascript
+// This holds the current user's account data
 let account = null;
 ```
 
-Po uložení uživatelských dat do proměnné můžeme přejít ze stránky *login* na *dashboard* pomocí funkce `navigate()`, kterou již máme.
+**Proč to potřebujeme:**
+- Udržuje data o účtu dostupná odkudkoli v aplikaci
+- Začíná s hodnotou `null`, což znamená „zatím nikdo není přihlášen“
+- Aktualizuje se, když se někdo úspěšně přihlásí nebo zaregistruje
+- Funguje jako jediný zdroj pravdy – žádné zmatky o tom, kdo je přihlášen
 
-Nakonec musíme zavolat naši funkci `login`, když je odeslán přihlašovací formulář, úpravou HTML:
+#### Krok 5: Propojení vašeho formuláře
+
+Nyní připojíme vaši novou funkci přihlášení k HTML formuláři. Aktualizujte tag formuláře takto:
 
 ```html
 <form id="loginForm" action="javascript:login()">
+  <!-- Your existing form inputs -->
+</form>
 ```
 
-Otestujte, zda vše funguje správně, registrací nového účtu a pokusem o přihlášení pomocí stejného účtu.
+**Co tato malá změna dělá:**
+- Zastaví formulář, aby nedělal své výchozí „znovunačtení celé stránky“
+- Místo toho zavolá vaši vlastní JavaScriptovou funkci
+- Udržuje vše hladké a ve stylu jednostránkové aplikace
+- Dává vám úplnou kontrolu nad tím, co se stane, když uživatelé kliknou na „Přihlásit se“
 
-Než přejdeme k další části, můžeme také dokončit funkci `register` přidáním tohoto na konec funkce:
+#### Krok 6: Vylepšení registrační funkce
 
-```js
+Pro konzistenci aktualizujte svou funkci `register`, aby také ukládala data o účtu a přecházela na dashboard:
+
+```javascript
+// Add these lines at the end of your register function
 account = result;
 navigate('/dashboard');
 ```
 
-✅ Věděli jste, že ve výchozím nastavení můžete volat serverové API pouze z *téže domény a portu*, na kterém si prohlížíte webovou stránku? Toto je bezpečnostní mechanismus vynucený prohlížeči. Ale počkat, naše webová aplikace běží na `localhost:3000`, zatímco serverová API běží na `localhost:5000`, proč to funguje? Pomocí techniky nazvané [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS) je možné provádět cross-origin HTTP požadavky, pokud server přidá do odpovědi speciální hlavičky, které povolují výjimky pro specifické domény.
+**Toto vylepšení poskytuje:**
+- **Plynulý** přechod z registrace na dashboard
+- **Konzistentní** uživatelský zážitek mezi přihlašovacími a registračními procesy
+- **Okamžitý** přístup k datům o účtu po úspěšné registraci
 
-> Více o API se dozvíte v této [lekci](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon)
+#### Testování vaší implementace
 
-## Aktualizace HTML pro zobrazení dat
-
-Nyní, když máme uživatelská data, musíme aktualizovat existující HTML, aby je zobrazovalo. Již víme, jak získat prvek z DOM pomocí například `document.getElementById()`. Po získání základního prvku můžete použít následující API pro jeho úpravu nebo přidání podřízených prvků:
-
-- Pomocí vlastnosti [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) můžete změnit text prvku. Všimněte si, že změna této hodnoty odstraní všechny podřízené prvky (pokud nějaké existují) a nahradí je poskytnutým textem. Proto je to také efektivní metoda pro odstranění všech podřízených prvků daného prvku přiřazením prázdného řetězce `''`.
-
-- Pomocí [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) spolu s metodou [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) můžete vytvořit a připojit jeden nebo více nových podřízených prvků.
-
-✅ Pomocí vlastnosti [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) prvku je také možné změnit jeho HTML obsah, ale tato metoda by měla být vyhnuta, protože je zranitelná vůči [útokům typu cross-site scripting (XSS)](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting).
-
-### Úkol
-
-Než přejdeme na obrazovku dashboardu, je tu ještě jedna věc, kterou bychom měli udělat na stránce *login*. Aktuálně, pokud se pokusíte přihlásit s uživatelským jménem, které neexistuje, zobrazí se zpráva v konzoli, ale pro běžného uživatele se nic nezmění a neví, co se děje.
-
-Přidáme prvek placeholderu do přihlašovacího formuláře, kde můžeme v případě potřeby zobrazit chybovou zprávu. Dobré místo by bylo těsně před přihlašovacím `<button>`:
-
-```html
-...
-<div id="loginError"></div>
-<button>Login</button>
-...
+```mermaid
+flowchart TD
+    A[User enters credentials] --> B[Login function called]
+    B --> C[Fetch account data from server]
+    C --> D{Data received successfully?}
+    D -->|Yes| E[Store account data globally]
+    D -->|No| F[Display error message]
+    E --> G[Navigate to dashboard]
+    F --> H[User stays on login page]
 ```
 
-Tento `<div>` prvek je prázdný, což znamená, že na obrazovce se nic nezobrazí, dokud do něj nepřidáme nějaký obsah. Také mu dáme `id`, abychom jej mohli snadno získat pomocí JavaScriptu.
+**Čas to vyzkoušet:**
+1. Vytvořte nový účet, abyste se ujistili, že vše funguje
+2. Zkuste se přihlásit pomocí stejných přihlašovacích údajů
+3. Podívejte se do konzole prohlížeče (F12), pokud se něco zdá být špatně
+4. Ujistěte se, že po úspěšném přihlášení přistáváte na dashboardu
 
-Vraťte se do souboru `app.js` a vytvořte novou pomocnou funkci `updateElement`:
+Pokud něco nefunguje, nepanikařte! Většina problémů jsou jednoduché opravy, jako překlepy nebo zapomenutí spustit API server.
 
-```js
+#### Rychlé slovo o magii mezi doménami
+
+Možná vás zajímá: „Jak moje webová aplikace komunikuje s tímto API serverem, když běží na různých portech?“ Skvělá otázka! To se dotýká něčeho, na co každý webový vývojář dříve či později narazí.
+
+> 🔒 **Bezpečnost mezi doménami**: Prohlížeče prosazují „politiku stejného původu“, aby zabránily neoprávněné komunikaci mezi různými doménami. Stejně jako kontrolní systém v Pentagonu ověřují, že komunikace je autorizovaná, než umožní přenos dat.
+> 
+**V našem nastavení:**
+- Vaše webová aplikace běží na `localhost:3000` (vývojový server)
+- Váš API server běží na `localhost:5000` (backend server)
+- API server zahrnuje [CORS hlavičky](https://developer.mozilla.org/docs/Web/HTTP/CORS), které explicitně autorizují komunikaci z vaší webové aplikace
+
+Toto nastavení odráží reálný vývoj, kde frontendové a backendové aplikace obvykle běží na samostatných serverech.
+
+> 📚 **Další informace**: Prozkoumejte hlouběji API a získávání dat s tímto komplexním [Microsoft Learn modulem o API](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
+
+## Oživení vašich dat v HTML
+
+Nyní uděláme získaná data viditelná pro uživatele prostřednictvím manipulace s DOM. Stejně jako proces vyvolávání fotografií v temné komoře, vezmeme neviditelná data a zobrazíme je tak, aby je uživatelé mohli vidět a interagovat s nimi.
+
+Manipulace s DOM je technika, která transformuje statické webové stránky na dynamické aplikace, které aktualizují svůj obsah na základě interakcí uživatelů a odpovědí serveru.
+
+### Výběr správného nástroje pro práci
+
+Pokud jde o aktualizaci vašeho HTML pomocí JavaScriptu, máte několik možností. Představte si je jako různé nástroje v sadě nářadí – každý z nich je ideální pro konkrétní úkoly:
+
+| Metoda | Na co je skvělá | Kdy ji použít | Úroveň bezpečnosti |
+|--------|-----------------|---------------|--------------------|
+| `textContent` | Bezpečné zobrazování uživatelských dat | Kdykoli zobrazujete text | ✅ Spolehlivé |
+
+Pro složitější obsah zkombinujte [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) s metodou [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append):
+
+```javascript
+// Safe way to create new elements
+const transactionItem = document.createElement('div');
+transactionItem.className = 'transaction-item';
+transactionItem.textContent = `${transaction.date}: ${transaction.description}`;
+container.append(transactionItem);
+```
+
+**Porozumění tomuto přístupu:**
+- **Vytváří** nové DOM prvky programově
+- **Umožňuje** plnou kontrolu nad atributy a obsahem prvků
+- **Podporuje** složité, vnořené struktury prvků
+- **Zajišťuje** bezpečnost oddělením struktury od obsahu
+
+> ⚠️ **Bezpečnostní úvaha**: I když [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) často figuruje v tutoriálech, může spouštět vložené skripty. Stejně jako bezpečnostní protokoly v CERNu zabraňují neoprávněnému spuštění kódu, použití `textContent` a `createElement` poskytuje bezpečnější alternativy.
+> 
+**Rizika innerHTML:**
+- Spouští jakékoli `<script>` tagy v uživatelských datech
+- Zranitelné vůči útokům injekcí kódu
+- Vytváří potenciální bezpečnostní slabiny
+- Bezpečnější alternativy, které používáme, poskytují ekvivalentní funkčnost
+
+### Zpřístupnění chyb uživatelům
+
+V současnosti se chyby při přihlášení zobrazují pouze v konzoli prohlížeče, což je pro uživatele neviditelné. Stejně jako rozdíl mezi interní diagnostikou pilota a informačním systémem pro cestující, je třeba komunikovat důležité informace prostřednictvím vhodného kanálu.
+
+Implementace viditelných chybových zpráv poskytuje uživatelům okamžitou zpětnou vazbu o tom, co se pokazilo a jak postupovat dál.
+
+#### Krok 1: Přidejte místo pro chybové zprávy
+
+Nejprve vytvořte prostor pro chybové zprávy ve vašem HTML. Přidejte ho těsně před tlačítko pro přihlášení, aby ho uživatelé přirozeně viděli:
+
+```html
+<!-- This is where error messages will appear -->
+<div id="loginError" role="alert"></div>
+<button>Login</button>
+```
+
+**Co se zde děje:**
+- Vytváříme prázdný kontejner, který zůstane neviditelný, dokud nebude potřeba
+- Je umístěn tam, kde uživatelé přirozeně hledají po kliknutí na "Přihlásit se"
+- `role="alert"` je skvělý doplněk pro čtečky obrazovky - říká asistivní technologii "hej, tohle je důležité!"
+- Unikátní `id` poskytuje našemu JavaScriptu snadný cíl
+
+#### Krok 2: Vytvořte praktickou pomocnou funkci
+
+Vytvořme malou pomocnou funkci, která dokáže aktualizovat text libovolného prvku. Je to jedna z těch funkcí "napiš jednou, použij všude", která vám ušetří čas:
+
+```javascript
 function updateElement(id, text) {
   const element = document.getElementById(id);
   element.textContent = text;
 }
 ```
 
-Tato funkce je poměrně jednoduchá: na základě *id* prvku a *textu* aktualizuje textový obsah DOM prvku s odpovídajícím `id`. Použijme tuto metodu místo předchozí chybové zprávy ve funkci `login`:
+**Výhody funkce:**
+- Jednoduché rozhraní vyžadující pouze ID prvku a textový obsah
+- Bezpečně vyhledává a aktualizuje DOM prvky
+- Opakovaně použitelný vzor, který snižuje duplicitu kódu
+- Zajišťuje konzistentní chování aktualizace v celé aplikaci
 
-```js
+#### Krok 3: Zobrazte chyby tam, kde je uživatelé uvidí
+
+Nyní nahraďte skrytou zprávu v konzoli něčím, co uživatelé skutečně uvidí. Aktualizujte svou funkci přihlášení:
+
+```javascript
+// Instead of just logging to console, show the user what's wrong
 if (data.error) {
   return updateElement('loginError', data.error);
 }
 ```
 
-Nyní, pokud se pokusíte přihlásit s neplatným účtem, měli byste vidět něco takového:
+**Tato malá změna má velký dopad:**
+- Chybové zprávy se zobrazují přímo tam, kde uživatelé hledají
+- Žádné tajemné tiché selhání
+- Uživatelé dostávají okamžitou, praktickou zpětnou vazbu
+- Vaše aplikace začne působit profesionálně a promyšleně
 
-![Snímek obrazovky zobrazující chybovou zprávu během přihlášení](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.cs.png)
+Nyní, když otestujete neplatný účet, uvidíte užitečnou chybovou zprávu přímo na stránce!
 
-Nyní máme chybový text, který se zobrazuje vizuálně, ale pokud to zkusíte s čtečkou obrazovky, všimnete si, že nic není oznámeno. Aby byl text, který je dynamicky přidán na stránku, oznámen čtečkami obrazovky, bude potřeba použít něco, co se nazývá [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Zde použijeme specifický typ live regionu nazývaný alert:
+![Screenshot zobrazující chybovou zprávu při přihlášení](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.cs.png)
+
+#### Krok 4: Buďte inkluzivní s přístupností
+
+To je něco skvělého na tom `role="alert"`, které jsme přidali dříve - není to jen dekorace! Tento malý atribut vytváří tzv. [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), který okamžitě oznamuje změny čtečkám obrazovky:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
-Implementujte stejnou funkčnost pro chyby ve funkci `register` (nezapomeňte aktualizovat HTML).
+**Proč na tom záleží:**
+- Uživatelé čteček obrazovky slyší chybovou zprávu, jakmile se objeví
+- Všichni dostávají stejné důležité informace, bez ohledu na to, jak navigují
+- Je to jednoduchý způsob, jak udělat vaši aplikaci přístupnou pro více lidí
+- Ukazuje, že vám záleží na vytváření inkluzivních zážitků
 
-## Zobrazení informací na dashboardu
+Takové drobné detaily odlišují dobré vývojáře od skvělých!
 
-Pomocí stejných technik, které jsme právě viděli, se také postaráme o zobrazení informací o účtu na stránce dashboardu.
+#### Krok 5: Použijte stejný vzor pro registraci
 
-Takto vypadá objekt účtu přijatý ze serveru:
+Pro konzistenci implementujte identické zpracování chyb ve vašem registračním formuláři:
+
+1. **Přidejte** prvek pro zobrazení chyb do vašeho registračního HTML:
+```html
+<div id="registerError" role="alert"></div>
+```
+
+2. **Aktualizujte** svou registrační funkci, aby používala stejný vzor zobrazení chyb:
+```javascript
+if (data.error) {
+  return updateElement('registerError', data.error);
+}
+```
+
+**Výhody konzistentního zpracování chyb:**
+- **Poskytuje** jednotný uživatelský zážitek napříč všemi formuláři
+- **Snižuje** kognitivní zátěž díky známým vzorům
+- **Zjednodušuje** údržbu díky opakovaně použitelnému kódu
+- **Zajišťuje** dodržování standardů přístupnosti v celé aplikaci
+
+## Vytvoření dynamického dashboardu
+
+Nyní proměníme váš statický dashboard na dynamické rozhraní, které zobrazuje skutečná data účtu. Stejně jako rozdíl mezi tištěným letovým řádem a živými odletovými tabulemi na letištích, přecházíme od statických informací k aktuálním, responzivním zobrazením.
+
+Pomocí technik manipulace s DOM, které jste se naučili, vytvoříme dashboard, který se automaticky aktualizuje s aktuálními informacemi o účtu.
+
+### Seznámení s vašimi daty
+
+Než začneme stavět, podívejme se, jaká data váš server posílá zpět. Když se někdo úspěšně přihlásí, zde je poklad informací, se kterými můžete pracovat:
 
 ```json
 {
@@ -192,15 +448,34 @@ Takto vypadá objekt účtu přijatý ze serveru:
     { "id": "1", "date": "2020-10-01", "object": "Pocket money", "amount": 50 },
     { "id": "2", "date": "2020-10-03", "object": "Book", "amount": -10 },
     { "id": "3", "date": "2020-10-04", "object": "Sandwich", "amount": -5 }
-  ],
+  ]
 }
 ```
 
-> Poznámka: pro usnadnění můžete použít předem existující účet `test`, který je již naplněn daty.
+**Tato datová struktura poskytuje:**
+- **`user`**: Ideální pro personalizaci zážitku ("Vítejte zpět, Sarah!")
+- **`currency`**: Zajišťuje správné zobrazení peněžních částek
+- **`description`**: Přátelský název účtu
+- **`balance`**: Důležitý aktuální zůstatek
+- **`transactions`**: Kompletní historie transakcí se všemi detaily
 
-### Úkol
+Vše, co potřebujete k vytvoření profesionálně vypadajícího bankovního dashboardu!
 
-Začněme nahrazením sekce "Balance" v HTML přidáním placeholder prvků:
+> 💡 **Tip**: Chcete vidět svůj dashboard v akci hned? Použijte uživatelské jméno `test` při přihlášení - je předem naplněno ukázkovými daty, takže můžete vidět vše fungovat, aniž byste museli nejprve vytvářet transakce.
+> 
+**Proč je testovací účet užitečný:**
+- Obsahuje realistická ukázková data již nahraná
+- Perfektní pro zobrazení, jak se transakce zobrazují
+- Skvělé pro testování funkcí vašeho dashboardu
+- Ušetří vás od nutnosti ručně vytvářet testovací data
+
+### Vytvoření prvků zobrazení dashboardu
+
+Postupně vytvoříme rozhraní dashboardu, počínaje informacemi o souhrnu účtu a poté přejdeme k složitějším funkcím, jako jsou seznamy transakcí.
+
+#### Krok 1: Aktualizujte strukturu HTML
+
+Nejprve nahraďte statickou sekci "Zůstatek" dynamickými zástupnými prvky, které může váš JavaScript naplnit:
 
 ```html
 <section>
@@ -208,17 +483,25 @@ Začněme nahrazením sekce "Balance" v HTML přidáním placeholder prvků:
 </section>
 ```
 
-Také přidáme novou sekci těsně pod ní pro zobrazení popisu účtu:
+Dále přidejte sekci pro popis účtu. Protože funguje jako nadpis obsahu dashboardu, použijte sémantické HTML:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-✅ Protože popis účtu funguje jako nadpis pro obsah pod ním, je označen sémanticky jako nadpis. Zjistěte více o tom, jak je [struktura nadpisů](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) důležitá pro přístupnost, a kriticky se podívejte na stránku, abyste určili, co dalšího by mohlo být nadpisem.
+**Porozumění struktuře HTML:**
+- **Používá** samostatné prvky `<span>` pro zůstatek a měnu pro individuální kontrolu
+- **Aplikuje** unikátní ID na každý prvek pro cílení JavaScriptu
+- **Dodržuje** sémantické HTML použitím `<h2>` pro popis účtu
+- **Vytváří** logickou hierarchii pro čtečky obrazovky a SEO
 
-Dále vytvoříme novou funkci v `app.js` pro vyplnění placeholderu:
+> ✅ **Pohled na přístupnost**: Popis účtu funguje jako nadpis obsahu dashboardu, takže je označen sémanticky jako nadpis. Zjistěte více o tom, jak [struktura nadpisů](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) ovlivňuje přístupnost. Dokážete identifikovat další prvky na vaší stránce, které by mohly těžit z nadpisových tagů?
 
-```js
+#### Krok 2: Vytvořte funkci pro aktualizaci dashboardu
+
+Nyní vytvořte funkci, která naplní váš dashboard skutečnými daty účtu:
+
+```javascript
 function updateDashboard() {
   if (!account) {
     return navigate('/login');
@@ -230,40 +513,71 @@ function updateDashboard() {
 }
 ```
 
-Nejprve ověříme, že máme potřebná data o účtu, než budeme pokračovat. Poté použijeme funkci `updateElement()`, kterou jsme vytvořili dříve, k aktualizaci HTML.
+**Krok za krokem, co tato funkce dělá:**
+- **Ověřuje**, že data účtu existují, než pokračuje
+- **Přesměrovává** neautentizované uživatele zpět na přihlašovací stránku
+- **Aktualizuje** popis účtu pomocí opakovaně použitelné funkce `updateElement`
+- **Formátuje** zůstatek tak, aby vždy zobrazoval dvě desetinná místa
+- **Zobrazuje** odpovídající symbol měny
 
-> Aby byl zůstatek zobrazen hezčí, používáme metodu [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), která vynutí zobrazení hodnoty se dvěma desetinnými místy.
+> 💰 **Formátování peněz**: Metoda [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) je záchrana! Zajišťuje, že váš zůstatek vždy vypadá jako skutečné peníze - "75.00" místo jen "75". Vaši uživatelé ocení vidět známé formátování měny.
 
-Nyní musíme zavolat naši funkci `updateDashboard()` pokaždé, když je načtena stránka dashboardu. Pokud jste již dokončili [úkol z lekce 1](../1-template-route/assignment.md), mělo by to být jednoduché, jinak můžete použít následující implementaci.
+#### Krok 3: Zajistěte, že se váš dashboard aktualizuje
 
-Přidejte tento kód na konec funkce `updateRoute()`:
+Aby se zajistilo, že se váš dashboard aktualizuje s aktuálními daty pokaždé, když ho někdo navštíví, musíme se napojit na váš navigační systém. Pokud jste dokončili [úkol z lekce 1](../1-template-route/assignment.md), mělo by vám to být povědomé. Pokud ne, nebojte se - zde je, co potřebujete:
 
-```js
+Přidejte toto na konec vaší funkce `updateRoute()`:
+
+```javascript
 if (typeof route.init === 'function') {
   route.init();
 }
 ```
 
-A aktualizujte definici tras s:
+Poté aktualizujte své trasy, aby zahrnovaly inicializaci dashboardu:
 
-```js
+```javascript
 const routes = {
   '/login': { templateId: 'login' },
   '/dashboard': { templateId: 'dashboard', init: updateDashboard }
 };
 ```
 
-S touto změnou se při každém zobrazení stránky dashboardu zavolá funkce `updateDashboard()`. Po přihlášení byste pak měli být schopni vidět zůstatek účtu, měnu a popis.
+**Co tento chytrý přístup dělá:**
+- Kontroluje, zda má trasa speciální inicializační kód
+- Automaticky spouští tento kód, když se trasa načte
+- Zajišťuje, že váš dashboard vždy zobrazuje čerstvá, aktuální data
+- Udržuje logiku směrování čistou a organizovanou
 
-## Dynamické vytváření řádků tabulky pomocí HTML šablon
+#### Testování vašeho dashboardu
 
-V [první lekci](../1-template-route/README.md) jsme použili HTML šablony spolu s metodou [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) k implementaci navigace v naší aplikaci. Šablony mohou být také menší a použity k dynamickému naplnění opakujících se částí stránky.
+Po implementaci těchto změn otestujte svůj dashboard:
 
-Použijeme podobný přístup k zobrazení seznamu transakcí v HTML tabulce.
+1. **Přihlaste se** pomocí testovacího účtu
+2. **Ověřte**, že jste přesměrováni na dashboard
+3. **Zkontrolujte**, že se popis účtu, zůstatek a měna zobrazují správně
+4. **Zkuste se odhlásit a znovu přihlásit**, abyste se ujistili, že se data správně aktualizují
 
-### Úkol
+Váš dashboard by nyní měl zobrazovat dynamické informace o účtu, které se aktualizují na základě dat přihlášeného uživatele!
 
-Přidejte novou šablonu do `<body>` HTML:
+## Vytvoření chytrých seznamů transakcí pomocí šablon
+
+Místo ručního vytváření HTML pro každou transakci použijeme šablony k automatickému generování konzistentního formátování. Stejně jako standardizované komponenty používané při výrobě kosmických lodí, šablony zajišťují, že každý řádek transakce dodržuje stejnou strukturu a vzhled.
+
+Tato technika efektivně škáluje od několika transakcí až po tisíce, přičemž zachovává konzistentní výkon a prezentaci.
+
+```mermaid
+flowchart LR
+    A[Transaction Data] --> B[HTML Template]
+    B --> C[Clone Template]
+    C --> D[Populate with Data]
+    D --> E[Add to DOM]
+    E --> F[Repeat for Each Transaction]
+```
+
+### Krok 1: Vytvořte šablonu transakce
+
+Nejprve přidejte opakovaně použitelnou šablonu pro řádky transakcí do vašeho HTML `<body>`:
 
 ```html
 <template id="transaction">
@@ -275,17 +589,30 @@ Přidejte novou šablonu do `<body>` HTML:
 </template>
 ```
 
-Tato šablona představuje jeden řádek tabulky se třemi sloupci, které chceme naplnit: *datum*, *objekt* a *částka* transakce.
+**Porozumění HTML šablonám:**
+- **Definuje** strukturu pro jeden řádek tabulky
+- **Zůstává** neviditelná, dokud není klonována a naplněna pomocí JavaScriptu
+- **Obsahuje** tři buňky pro datum, popis a částku
+- **Poskytuje** opakovaně použitelný vzor pro konzistentní formátování
 
-Poté přidejte tuto vlastnost `id` k `<tbody>` elementu tabulky v šabloně dashboardu, aby bylo snazší jej najít pomocí JavaScriptu:
+### Krok 2: Připravte svou tabulku pro dynamický obsah
+
+Dále přidejte `id` do těla tabulky, aby na něj mohl JavaScript snadno cílit:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-Naše HTML je připraveno, přepněme na JavaScriptový kód a vytvořme novou funkci `createTransactionRow`:
+**Co to umožňuje:**
+- **Vytváří** jasný cíl pro vkládání řádků transakcí
+- **Odděluje** strukturu tabulky od dynamického obsahu
+- **Umožňuje** snadné mazání a opětovné naplnění dat transakcí
 
-```js
+### Krok 3: Vytvořte tovární funkci pro řádky transakcí
+
+Nyní vytvořte funkci, která transformuje data transakcí na HTML prvky:
+
+```javascript
 function createTransactionRow(transaction) {
   const template = document.getElementById('transaction');
   const transactionRow = template.content.cloneNode(true);
@@ -297,9 +624,19 @@ function createTransactionRow(transaction) {
 }
 ```
 
-Tato funkce dělá přesně to, co její název napovídá: pomocí šablony, kterou jsme vytvořili dříve, vytvoří nový řádek tabulky a naplní jeho obsah pomocí dat transakce. Použijeme ji v naší funkci `updateDashboard()` k naplnění tabulky:
+**Rozbor této tovární funkce:**
+- **Získává** šablonu prvku podle jejího ID
+- **Klonuje** obsah šablony pro bezpečnou manipulaci
+- **Vybere** řádek tabulky v klonovaném obsahu
+- **Naplní** každou buňku daty transakce
+- **Formátuje** částku tak, aby zobrazovala správná desetinná místa
+- **Vrací** dokončený řádek připravený k vložení
 
-```js
+### Krok 4: Efektivně generujte více řádků transakcí
+
+Přidejte tento kód do vaší funkce `updateDashboard()`, aby zobrazoval všechny transakce:
+
+```javascript
 const transactionsRows = document.createDocumentFragment();
 for (const transaction of account.transactions) {
   const transactionRow = createTransactionRow(transaction);
@@ -308,11 +645,20 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-Zde používáme metodu [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment), která vytvoří nový DOM fragment, na kterém můžeme pracovat, než jej nakonec připojíme k naší HTML tabulce.
+**Porozumění tomuto efektivnímu přístupu:**
+- **Vytváří** dokumentový fragment pro dávkové operace s DOM
+- **Iteruje** přes všechny transakce v datech účtu
+- **Generuje** řádek pro každou transakci pomocí tovární funkce
+- **Sbírá** všechny řádky do fragmentu před přidáním do DOM
+- **Provádí** jednu aktualizaci DOM místo více jednotlivých vložení
 
-Ještě musíme udělat jednu věc, než tento kód bude fungovat, protože naše funkce `updateElement()` aktuálně podporuje pouze textový obsah. Trochu upravíme její kód:
+> ⚡ **Optimalizace výkonu**: [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) funguje jako montážní proces v Boeingu - komponenty jsou připraveny mimo hlavní linku, poté instalovány jako kompletní jednotka. Tento dávkový přístup minimalizuje přetížení DOM provedením jedné vložení místo více jednotlivých operací.
 
-```js
+### Krok 5: Vylepšete funkci aktualizace pro smíšený obsah
+
+Vaše funkce `updateElement()` aktuálně zpracovává pouze textový obsah. Aktualizujte ji, aby fungovala jak s textem, tak s DOM uzly:
+
+```javascript
 function updateElement(id, textOrNode) {
   const element = document.getElementById(id);
   element.textContent = ''; // Removes all children
@@ -320,28 +666,46 @@ function updateElement(id, textOrNode) {
 }
 ```
 
-Používáme metodu [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append), protože umožňuje připojit buď text, nebo [DOM uzly](https://developer.mozilla.org/docs/Web/API/Node) k nadřazenému prvku, což je ideální pro všechny naše případy použití.
-Pokud se pokusíte přihlásit pomocí účtu `test`, měli byste nyní na hlavní stránce vidět seznam transakcí 🎉.
+**Klíčová vylepšení této aktualizace:**
+- **Vymaže** existující obsah před přidáním nového obsahu
+- **Přijímá** buď textové řetězce, nebo DOM uzly jako parametry
+- **Používá** metodu [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) pro flexibilitu
+- **Zachovává** zpětnou kompatibilitu s existujícím textovým použitím
 
----
+### Vyzkoušejte svůj dashboard
+
+Nastal čas na zkoušku! Podívejme se, jak váš dynamický dashboard funguje:
+
+1. Přihlaste se pomocí úč
+**Výzva:** Vytvořte vyhledávací funkci pro bankovní aplikaci, která zahrnuje: 1) Vyhledávací formulář s poli pro zadání časového rozmezí (od/do), minimálního/maximálního množství a klíčových slov popisu transakce, 2) Funkci `filterTransactions()`, která filtruje pole account.transactions na základě kritérií vyhledávání, 3) Aktualizujte funkci `updateDashboard()`, aby zobrazovala filtrované výsledky, a 4) Přidejte tlačítko „Vymazat filtry“ pro resetování zobrazení. Použijte moderní metody JavaScriptu jako `filter()` a zpracujte okrajové případy prázdných kritérií vyhledávání.
+
+Více informací o [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) najdete zde.
 
 ## 🚀 Výzva
 
-Spolupracujte na tom, aby stránka dashboardu vypadala jako skutečná bankovní aplikace. Pokud jste již svou aplikaci upravili, zkuste použít [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) k vytvoření [responzivního designu](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), který bude dobře fungovat jak na stolních počítačích, tak na mobilních zařízeních.
+Připraveni posunout svou bankovní aplikaci na další úroveň? Udělejme ji takovou, že ji budete chtít skutečně používat. Zde je několik nápadů, které vás mohou inspirovat:
 
-Zde je příklad upravené stránky dashboardu:
+**Udělejte ji krásnou**: Přidejte CSS stylování, aby se váš funkční dashboard proměnil v něco vizuálně přitažlivého. Myslete na čisté linie, dobré rozestupy a možná i jemné animace.
 
-![Screenshot příkladu výsledku dashboardu po úpravě](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.cs.png)
+**Udělejte ji responzivní**: Zkuste použít [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) k vytvoření [responzivního designu](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks), který bude skvěle fungovat na telefonech, tabletech i počítačích. Vaši uživatelé vám poděkují!
+
+**Přidejte trochu šmrncu**: Zvažte barevné označení transakcí (zelená pro příjmy, červená pro výdaje), přidání ikon nebo vytvoření efektů při najetí myší, které rozhraní učiní interaktivním.
+
+Takto by mohl vypadat vyleštěný dashboard:
+
+![Screenshot příkladu výsledného dashboardu po stylování](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.cs.png)
+
+Nemusíte se snažit přesně napodobit tento vzhled – použijte ho jako inspiraci a vytvořte něco vlastního!
 
 ## Kvíz po přednášce
 
 [Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/46)
 
-## Úkol
+## Zadání
 
 [Refaktorujte a okomentujte svůj kód](assignment.md)
 
 ---
 
 **Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.

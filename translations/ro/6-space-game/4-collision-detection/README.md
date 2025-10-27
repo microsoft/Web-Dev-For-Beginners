@@ -1,89 +1,119 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a6ce295ff03bb49df7a3e17e6e7100a0",
-  "translation_date": "2025-08-29T11:31:45+00:00",
+  "original_hash": "4b1d441cfd31924084956000c0fee5a5",
+  "translation_date": "2025-10-24T22:18:02+00:00",
   "source_file": "6-space-game/4-collision-detection/README.md",
   "language_code": "ro"
 }
 -->
 # Construiește un Joc Spațial Partea 4: Adăugarea unui Laser și Detectarea Coliziunilor
 
-## Chestionar Pre-Lecție
+## Quiz înainte de lecție
 
-[Chestionar pre-lecție](https://ff-quizzes.netlify.app/web/quiz/35)
+[Quiz înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/35)
 
-În această lecție vei învăța cum să tragi cu lasere folosind JavaScript! Vom adăuga două lucruri în jocul nostru:
+Gândește-te la momentul din Star Wars când torpilele protonice ale lui Luke au lovit portul de evacuare al Death Star. Acea detectare precisă a coliziunii a schimbat soarta galaxiei! În jocuri, detectarea coliziunilor funcționează la fel - determină când obiectele interacționează și ce se întâmplă în continuare.
 
-- **Un laser**: acest laser este tras din nava eroului tău și se deplasează vertical în sus
-- **Detectarea coliziunilor**, ca parte a implementării funcției de *tragere*, vom adăuga și câteva reguli interesante de joc:
-   - **Laserul lovește un inamic**: Inamicul moare dacă este lovit de un laser
-   - **Laserul lovește partea de sus a ecranului**: Laserul este distrus dacă atinge partea de sus a ecranului
-   - **Coliziunea dintre inamic și erou**: Un inamic și eroul sunt distruși dacă se lovesc unul de altul
-   - **Inamicul atinge partea de jos a ecranului**: Un inamic și eroul sunt distruși dacă inamicul ajunge la partea de jos a ecranului
+În această lecție, vei adăuga arme laser jocului tău spațial și vei implementa detectarea coliziunilor. La fel cum planificatorii de misiuni NASA calculează traiectoriile navelor spațiale pentru a evita resturile, vei învăța să detectezi când obiectele din joc se intersectează. Vom împărți acest proces în pași ușor de gestionat care se construiesc unul pe celălalt.
 
-Pe scurt, tu -- *eroul* -- trebuie să lovești toți inamicii cu un laser înainte ca aceștia să ajungă la partea de jos a ecranului.
+La final, vei avea un sistem de luptă funcțional în care laserele distrug inamicii, iar coliziunile declanșează evenimente în joc. Aceste principii de coliziune sunt utilizate în tot, de la simulări fizice la interfețe web interactive.
 
-✅ Fă puțină cercetare despre primul joc pe calculator scris vreodată. Ce funcționalitate avea?
-
-Să fim eroici împreună!
+✅ Fă puțină cercetare despre primul joc pe calculator scris vreodată. Care era funcționalitatea sa?
 
 ## Detectarea coliziunilor
 
-Cum realizăm detectarea coliziunilor? Trebuie să ne gândim la obiectele din joc ca la niște dreptunghiuri care se mișcă. De ce, te-ai putea întreba? Ei bine, imaginea folosită pentru a desena un obiect de joc este un dreptunghi: are un `x`, `y`, `lățime` și `înălțime`.
+Detectarea coliziunilor funcționează ca senzorii de proximitate de pe modulul lunar Apollo - verifică constant distanțele și declanșează alerte când obiectele se apropie prea mult. În jocuri, acest sistem determină când obiectele interacționează și ce ar trebui să se întâmple în continuare.
 
-Dacă două dreptunghiuri, adică un erou și un inamic, *se intersectează*, ai o coliziune. Ce ar trebui să se întâmple atunci depinde de regulile jocului. Pentru a implementa detectarea coliziunilor, ai nevoie de următoarele:
+Abordarea pe care o vom folosi tratează fiecare obiect din joc ca un dreptunghi, similar modului în care sistemele de control al traficului aerian folosesc forme geometrice simplificate pentru a urmări aeronavele. Această metodă dreptunghiulară poate părea simplistă, dar este eficientă din punct de vedere computațional și funcționează bine pentru majoritatea scenariilor de joc.
 
-1. O metodă de a obține o reprezentare dreptunghiulară a unui obiect de joc, ceva de genul:
+### Reprezentarea dreptunghiului
 
-   ```javascript
-   rectFromGameObject() {
-     return {
-       top: this.y,
-       left: this.x,
-       bottom: this.y + this.height,
-       right: this.x + this.width
-     }
-   }
-   ```
-
-2. O funcție de comparație, care poate arăta astfel:
-
-   ```javascript
-   function intersectRect(r1, r2) {
-     return !(r2.left > r1.right ||
-       r2.right < r1.left ||
-       r2.top > r1.bottom ||
-       r2.bottom < r1.top);
-   }
-   ```
-
-## Cum distrugem lucruri
-
-Pentru a distruge lucruri într-un joc, trebuie să informezi jocul că nu ar mai trebui să deseneze acel obiect în bucla de joc care se declanșează la un anumit interval. O modalitate de a face acest lucru este să marchezi un obiect de joc ca fiind *mort* atunci când se întâmplă ceva, astfel:
+Fiecare obiect din joc are nevoie de limite de coordonate, similar modului în care roverul Mars Pathfinder și-a cartografiat locația pe suprafața marțiană. Iată cum definim aceste limite:
 
 ```javascript
-// collision happened
-enemy.dead = true
+rectFromGameObject() {
+  return {
+    top: this.y,
+    left: this.x,
+    bottom: this.y + this.height,
+    right: this.x + this.width
+  }
+}
 ```
 
-Apoi poți elimina obiectele *moarte* înainte de a redesena ecranul, astfel:
+**Să descompunem acest lucru:**
+- **Marginea de sus**: Este locul unde începe obiectul pe verticală (poziția sa y)
+- **Marginea din stânga**: Locul unde începe pe orizontală (poziția sa x)
+- **Marginea de jos**: Adaugă înălțimea la poziția y - acum știi unde se termină!
+- **Marginea din dreapta**: Adaugă lățimea la poziția x - și ai limitele complete
+
+### Algoritmul de intersecție
+
+Detectarea intersecțiilor dreptunghiurilor folosește o logică similară modului în care telescopul spațial Hubble determină dacă obiectele cerești se suprapun în câmpul său vizual. Algoritmul verifică separarea:
 
 ```javascript
-gameObjects = gameObject.filter(go => !go.dead);
+function intersectRect(r1, r2) {
+  return !(r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top);
+}
 ```
 
-## Cum tragem cu un laser
+**Testul de separare funcționează ca sistemele radar:**
+- Este dreptunghiul 2 complet la dreapta dreptunghiului 1?
+- Este dreptunghiul 2 complet la stânga dreptunghiului 1?
+- Este dreptunghiul 2 complet sub dreptunghiul 1?
+- Este dreptunghiul 2 complet deasupra dreptunghiului 1?
 
-Tragerea cu un laser înseamnă să răspunzi la un eveniment de tastă și să creezi un obiect care se mișcă într-o anumită direcție. Prin urmare, trebuie să parcurgi următorii pași:
+Dacă niciuna dintre aceste condiții nu este adevărată, dreptunghiurile trebuie să se suprapună. Această abordare reflectă modul în care operatorii radar determină dacă două aeronave sunt la distanțe sigure.
 
-1. **Creează un obiect laser**: din partea de sus a navei eroului, care, odată creat, începe să se deplaseze în sus spre partea de sus a ecranului.
-2. **Atașează cod la un eveniment de tastă**: trebuie să alegem o tastă de pe tastatură care să reprezinte acțiunea de tragere a laserului de către jucător.
-3. **Creează un obiect de joc care arată ca un laser** atunci când tasta este apăsată.
+## Gestionarea ciclurilor de viață ale obiectelor
 
-## Cooldown pentru laser
+Când un laser lovește un inamic, ambele obiecte trebuie eliminate din joc. Totuși, ștergerea obiectelor în mijlocul unui ciclu poate cauza erori - o lecție învățată cu greu în sistemele informatice timpurii, cum ar fi Computerul de Ghidare Apollo. În schimb, folosim o abordare de "marcare pentru ștergere" care elimină în siguranță obiectele între cadre.
 
-Laserul trebuie să fie tras de fiecare dată când apeși o tastă, cum ar fi *space*, de exemplu. Pentru a preveni ca jocul să producă prea multe lasere într-un timp scurt, trebuie să rezolvăm acest lucru. Soluția este implementarea unui așa-numit *cooldown*, un cronometru, care asigură că un laser poate fi tras doar la anumite intervale. Poți implementa acest lucru astfel:
+Iată cum marcăm ceva pentru eliminare:
+
+```javascript
+// Mark object for removal
+enemy.dead = true;
+```
+
+**De ce funcționează această abordare:**
+- Marcăm obiectul ca "mort", dar nu îl ștergem imediat
+- Acest lucru permite finalizarea în siguranță a cadrului curent al jocului
+- Fără erori cauzate de încercarea de a folosi ceva ce a fost deja eliminat!
+
+Apoi filtrăm obiectele marcate înainte de următorul ciclu de redare:
+
+```javascript
+gameObjects = gameObjects.filter(go => !go.dead);
+```
+
+**Ce face acest filtru:**
+- Creează o listă nouă doar cu obiectele "vii"
+- Elimină tot ce este marcat ca mort
+- Menține jocul funcțional fără probleme
+- Previne acumularea de obiecte distruse în memorie
+
+## Implementarea mecanicii laserului
+
+Proiectilele laser din jocuri funcționează pe același principiu ca torpilele fotonice din Star Trek - sunt obiecte discrete care se deplasează în linie dreaptă până când lovesc ceva. Fiecare apăsare a tastei spațiu creează un nou obiect laser care se mișcă pe ecran.
+
+Pentru ca acest lucru să funcționeze, trebuie să coordonăm câteva piese diferite:
+
+**Componente cheie de implementat:**
+- **Crearea** obiectelor laser care apar din poziția eroului
+- **Gestionarea** intrării de la tastatură pentru a declanșa crearea laserului
+- **Administrarea** mișcării și ciclului de viață al laserului
+- **Implementarea** reprezentării vizuale pentru proiectilele laser
+
+## Implementarea controlului ratei de tragere
+
+Ratele de tragere nelimitate ar suprasolicita motorul jocului și ar face jocul prea ușor. Sistemele reale de arme se confruntă cu constrângeri similare - chiar și fazerele navei USS Enterprise aveau nevoie de timp pentru a se reîncărca între focuri.
+
+Vom implementa un sistem de răcire care previne spam-ul de focuri rapide, menținând în același timp controalele receptive:
 
 ```javascript
 class Cooldown {
@@ -91,41 +121,55 @@ class Cooldown {
     this.cool = false;
     setTimeout(() => {
       this.cool = true;
-    }, time)
+    }, time);
   }
 }
 
 class Weapon {
-  constructor {
+  constructor() {
+    this.cooldown = null;
   }
+  
   fire() {
     if (!this.cooldown || this.cooldown.cool) {
-      // produce a laser
+      // Create laser projectile
       this.cooldown = new Cooldown(500);
     } else {
-      // do nothing - it hasn't cooled down yet.
+      // Weapon is still cooling down
     }
   }
 }
 ```
 
-✅ Consultă lecția 1 din seria jocului spațial pentru a-ți reaminti despre *cooldowns*.
+**Cum funcționează sistemul de răcire:**
+- Când este creată, arma începe "fierbinte" (nu poate trage încă)
+- După perioada de așteptare, devine "rece" (gata de tragere)
+- Înainte de a trage, verificăm: "Este arma rece?"
+- Acest lucru previne spam-ul de clicuri, menținând în același timp controalele receptive
 
-## Ce să construiești
+✅ Consultă lecția 1 din seria de jocuri spațiale pentru a-ți aminti despre sistemele de răcire.
 
-Vei lua codul existent (pe care ar fi trebuit să-l cureți și să-l refactorizezi) din lecția anterioară și îl vei extinde. Poți începe fie cu codul din partea a II-a, fie cu codul de la [Partea III - starter](../../../../../../../../../your-work).
+## Construirea sistemului de detectare a coliziunilor
 
-> sfat: laserul cu care vei lucra este deja în folderul tău de resurse și este referit de codul tău
+Vei extinde codul existent al jocului spațial pentru a crea un sistem de detectare a coliziunilor. La fel ca sistemul automat de evitare a coliziunilor al Stației Spațiale Internaționale, jocul tău va monitoriza continuu pozițiile obiectelor și va răspunde la intersecții.
 
-- **Adaugă detectarea coliziunilor**, când un laser se ciocnește cu ceva, ar trebui să se aplice următoarele reguli:
-   1. **Laserul lovește un inamic**: inamicul moare dacă este lovit de un laser
-   2. **Laserul lovește partea de sus a ecranului**: Laserul este distrus dacă atinge partea de sus a ecranului
-   3. **Coliziunea dintre inamic și erou**: un inamic și eroul sunt distruși dacă se lovesc unul de altul
-   4. **Inamicul atinge partea de jos a ecranului**: Un inamic și eroul sunt distruși dacă inamicul ajunge la partea de jos a ecranului
+Pornind de la codul lecției anterioare, vei adăuga detectarea coliziunilor cu reguli specifice care guvernează interacțiunile obiectelor.
 
-## Pași recomandați
+> 💡 **Sfat util**: Sprite-ul laser este deja inclus în folderul de resurse și referit în codul tău, gata de implementare.
 
-Localizează fișierele care au fost create pentru tine în subfolderul `your-work`. Acesta ar trebui să conțină următoarele:
+### Reguli de coliziune de implementat
+
+**Mecanici de joc de adăugat:**
+1. **Laserul lovește inamicul**: Obiectul inamic este distrus când este lovit de un proiectil laser
+2. **Laserul lovește marginea ecranului**: Laserul este eliminat când ajunge la marginea de sus a ecranului
+3. **Coliziunea între inamic și erou**: Ambele obiecte sunt distruse când se intersectează
+4. **Inamicul ajunge jos**: Condiție de sfârșit de joc când inamicii ajung la marginea de jos a ecranului
+
+## Configurarea mediului de dezvoltare
+
+Vești bune - am pregătit deja cea mai mare parte a bazei pentru tine! Toate resursele jocului și structura de bază sunt gata în subfolderul `your-work`, pregătite pentru a adăuga funcțiile interesante de coliziune.
+
+### Structura proiectului
 
 ```bash
 -| assets
@@ -137,167 +181,275 @@ Localizează fișierele care au fost create pentru tine în subfolderul `your-wo
 -| package.json
 ```
 
-Pornește proiectul din folderul `your_work` tastând:
+**Înțelegerea structurii fișierelor:**
+- **Conține** toate imaginile sprite necesare pentru obiectele jocului
+- **Include** documentul principal HTML și fișierul aplicației JavaScript
+- **Oferă** configurația pachetului pentru serverul local de dezvoltare
+
+### Pornirea serverului de dezvoltare
+
+Navighează la folderul proiectului și pornește serverul local:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Comanda de mai sus va porni un server HTTP pe adresa `http://localhost:5000`. Deschide un browser și introdu acea adresă, iar în acest moment ar trebui să afișeze eroul și toți inamicii, dar nimic nu se mișcă - încă :).
+**Această secvență de comenzi:**
+- **Schimbă** directorul către folderul proiectului tău de lucru
+- **Pornește** un server HTTP local pe `http://localhost:5000`
+- **Servește** fișierele jocului pentru testare și dezvoltare
+- **Permite** dezvoltarea live cu reîncărcare automată
 
-### Adaugă cod
+Deschide browserul și navighează la `http://localhost:5000` pentru a vedea starea actuală a jocului tău cu eroul și inamicii redați pe ecran.
 
-1. **Configurează o reprezentare dreptunghiulară a obiectului de joc pentru a gestiona coliziunile** Codul de mai jos îți permite să obții o reprezentare dreptunghiulară a unui `GameObject`. Editează clasa GameObject pentru a o extinde:
+### Implementare pas cu pas
 
-    ```javascript
-    rectFromGameObject() {
-        return {
-          top: this.y,
-          left: this.x,
-          bottom: this.y + this.height,
-          right: this.x + this.width,
-        };
-      }
-    ```
+La fel ca abordarea sistematică folosită de NASA pentru a programa nava spațială Voyager, vom implementa detectarea coliziunilor metodic, construind fiecare componentă pas cu pas.
 
-2. **Adaugă cod care verifică coliziunile** Aceasta va fi o funcție nouă care testează dacă două dreptunghiuri se intersectează:
+#### 1. Adaugă limitele de coliziune ale dreptunghiului
 
-    ```javascript
-    function intersectRect(r1, r2) {
-      return !(
-        r2.left > r1.right ||
-        r2.right < r1.left ||
-        r2.top > r1.bottom ||
-        r2.bottom < r1.top
-      );
-    }
-    ```
+Mai întâi, să învățăm obiectele din joc cum să-și descrie limitele. Adaugă această metodă la clasa `GameObject`:
 
-3. **Adaugă capacitatea de a trage cu laserul**
-   1. **Adaugă mesaj pentru evenimentul de tastă**. Tasta *space* ar trebui să creeze un laser chiar deasupra navei eroului. Adaugă trei constante în obiectul Messages:
+```javascript
+rectFromGameObject() {
+    return {
+      top: this.y,
+      left: this.x,
+      bottom: this.y + this.height,
+      right: this.x + this.width,
+    };
+  }
+```
 
-       ```javascript
-        KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
-        COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
-        COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
-       ```
+**Această metodă realizează:**
+- **Creează** un obiect dreptunghiular cu coordonate precise ale limitelor
+- **Calculează** marginile de jos și de dreapta folosind poziția plus dimensiunile
+- **Returnează** un obiect gata pentru algoritmii de detectare a coliziunilor
+- **Oferă** o interfață standardizată pentru toate obiectele din joc
 
-   1. **Gestionează tasta space**. Editează funcția `window.addEventListener` pentru evenimentul `keyup` astfel încât să gestioneze tasta space:
+#### 2. Implementarea detectării intersecțiilor
 
-      ```javascript
-        } else if(evt.keyCode === 32) {
-          eventEmitter.emit(Messages.KEY_EVENT_SPACE);
-        }
-      ```
+Acum să creăm detectivul nostru de coliziuni - o funcție care poate spune când două dreptunghiuri se suprapun:
 
-    1. **Adaugă ascultători**. Editează funcția `initGame()` pentru a te asigura că eroul poate trage când tasta space este apăsată:
+```javascript
+function intersectRect(r1, r2) {
+  return !(
+    r2.left > r1.right ||
+    r2.right < r1.left ||
+    r2.top > r1.bottom ||
+    r2.bottom < r1.top
+  );
+}
+```
 
-       ```javascript
-       eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
-        if (hero.canFire()) {
-          hero.fire();
-        }
-       ```
+**Acest algoritm funcționează prin:**
+- **Testează** patru condiții de separare între dreptunghiuri
+- **Returnează** `false` dacă orice condiție de separare este adevărată
+- **Indică** coliziunea când nu există separare
+- **Folosește** logica de negație pentru testarea eficientă a intersecțiilor
 
-       și adaugă o nouă funcție `eventEmitter.on()` pentru a asigura comportamentul atunci când un inamic se ciocnește cu un laser:
+#### 3. Implementarea sistemului de tragere cu laser
 
-          ```javascript
-          eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
-            first.dead = true;
-            second.dead = true;
-          })
-          ```
+Acum lucrurile devin interesante! Să configurăm sistemul de tragere cu laser.
 
-   1. **Mișcă obiectul**, Asigură-te că laserul se deplasează treptat spre partea de sus a ecranului. Vei crea o nouă clasă Laser care extinde `GameObject`, așa cum ai făcut înainte: 
-   
-      ```javascript
-        class Laser extends GameObject {
-        constructor(x, y) {
-          super(x,y);
-          (this.width = 9), (this.height = 33);
-          this.type = 'Laser';
-          this.img = laserImg;
-          let id = setInterval(() => {
-            if (this.y > 0) {
-              this.y -= 15;
-            } else {
-              this.dead = true;
-              clearInterval(id);
-            }
-          }, 100)
-        }
-      }
-      ```
+##### Constante de mesaje
 
-   1. **Gestionează coliziunile**, Implementează regulile de coliziune pentru laser. Adaugă o funcție `updateGameObjects()` care testează obiectele care se ciocnesc:
+Mai întâi, să definim câteva tipuri de mesaje pentru ca diferite părți ale jocului să comunice între ele:
 
-      ```javascript
-      function updateGameObjects() {
-        const enemies = gameObjects.filter(go => go.type === 'Enemy');
-        const lasers = gameObjects.filter((go) => go.type === "Laser");
-      // laser hit something
-        lasers.forEach((l) => {
-          enemies.forEach((m) => {
-            if (intersectRect(l.rectFromGameObject(), m.rectFromGameObject())) {
-            eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
-              first: l,
-              second: m,
-            });
-          }
-         });
-      });
+```javascript
+KEY_EVENT_SPACE: "KEY_EVENT_SPACE",
+COLLISION_ENEMY_LASER: "COLLISION_ENEMY_LASER",
+COLLISION_ENEMY_HERO: "COLLISION_ENEMY_HERO",
+```
 
-        gameObjects = gameObjects.filter(go => !go.dead);
-      }  
-      ```
+**Aceste constante oferă:**
+- **Standardizează** numele evenimentelor în întreaga aplicație
+- **Permite** comunicarea consistentă între sistemele jocului
+- **Previne** greșelile de tipar în înregistrarea handlerelor de evenimente
 
-      Asigură-te că adaugi `updateGameObjects()` în bucla jocului din `window.onload`.
+##### Gestionarea intrării de la tastatură
 
-   4. **Implementează cooldown** pentru laser, astfel încât să poată fi tras doar la anumite intervale.
+Adaugă detectarea tastei spațiu la listener-ul de evenimente pentru taste:
 
-      În cele din urmă, editează clasa Hero astfel încât să poată gestiona cooldown-ul:
+```javascript
+} else if(evt.keyCode === 32) {
+  eventEmitter.emit(Messages.KEY_EVENT_SPACE);
+}
+```
 
-       ```javascript
-      class Hero extends GameObject {
-        constructor(x, y) {
-          super(x, y);
-          (this.width = 99), (this.height = 75);
-          this.type = "Hero";
-          this.speed = { x: 0, y: 0 };
-          this.cooldown = 0;
-        }
-        fire() {
-          gameObjects.push(new Laser(this.x + 45, this.y - 10));
-          this.cooldown = 500;
+**Acest handler de intrare:**
+- **Detectează** apăsările tastei spațiu folosind keyCode 32
+- **Emite** un mesaj de eveniment standardizat
+- **Permite** logica de tragere decuplată
+
+##### Configurarea listener-ului de evenimente
+
+Înregistrează comportamentul de tragere în funcția `initGame()`:
+
+```javascript
+eventEmitter.on(Messages.KEY_EVENT_SPACE, () => {
+ if (hero.canFire()) {
+   hero.fire();
+ }
+});
+```
+
+**Acest listener de evenimente:**
+- **Răspunde** la evenimentele tastei spațiu
+- **Verifică** starea de răcire a tragerii
+- **Declanșează** crearea laserului când este permis
+
+Adaugă gestionarea coliziunilor pentru interacțiunile laser-inamic:
+
+```javascript
+eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
+  first.dead = true;
+  second.dead = true;
+});
+```
+
+**Acest handler de coliziuni:**
+- **Primește** datele evenimentului de coliziune cu ambele obiecte
+- **Marchează** ambele obiecte pentru eliminare
+- **Asigură** curățarea corespunzătoare după coliziune
+
+#### 4. Creează clasa Laser
+
+Implementează un proiectil laser care se mișcă în sus și își gestionează propriul ciclu de viață:
+
+```javascript
+class Laser extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 9;
+    this.height = 33;
+    this.type = 'Laser';
+    this.img = laserImg;
     
-          let id = setInterval(() => {
-            if (this.cooldown > 0) {
-              this.cooldown -= 100;
-            } else {
-              clearInterval(id);
-            }
-          }, 200);
-        }
-        canFire() {
-          return this.cooldown === 0;
-        }
+    let id = setInterval(() => {
+      if (this.y > 0) {
+        this.y -= 15;
+      } else {
+        this.dead = true;
+        clearInterval(id);
       }
-      ```
+    }, 100);
+  }
+}
+```
 
-În acest moment, jocul tău are ceva funcționalitate! Poți naviga cu tastele săgeți, trage cu laserul folosind tasta space, iar inamicii dispar când îi lovești. Bravo!
+**Această implementare a clasei:**
+- **Extinde** GameObject pentru a moșteni funcționalitatea de bază
+- **Setează** dimensiuni adecvate pentru sprite-ul laserului
+- **Creează** mișcare automată în sus folosind `setInterval()`
+- **Gestionează** autodistrugerea când ajunge la marginea de sus a ecranului
+- **Administrează** propriul timp de animație și curățare
+
+#### 5. Implementarea sistemului de detectare a coliziunilor
+
+Creează o funcție cuprinzătoare de detectare a coliziunilor:
+
+```javascript
+function updateGameObjects() {
+  const enemies = gameObjects.filter(go => go.type === 'Enemy');
+  const lasers = gameObjects.filter(go => go.type === "Laser");
+  
+  // Test laser-enemy collisions
+  lasers.forEach((laser) => {
+    enemies.forEach((enemy) => {
+      if (intersectRect(laser.rectFromGameObject(), enemy.rectFromGameObject())) {
+        eventEmitter.emit(Messages.COLLISION_ENEMY_LASER, {
+          first: laser,
+          second: enemy,
+        });
+      }
+    });
+  });
+
+  // Remove destroyed objects
+  gameObjects = gameObjects.filter(go => !go.dead);
+}
+```
+
+**Acest sistem de coliziuni:**
+- **Filtrează** obiectele din joc după tip pentru testare eficientă
+- **Testează** fiecare laser împotriva fiecărui inamic pentru intersecții
+- **Emite** evenimente de coliziune când sunt detectate intersecții
+- **Curăță** obiectele distruse după procesarea coliziunilor
+
+> ⚠️ **Important**: Adaugă `updateGameObjects()` la bucla principală a jocului în `window.onload` pentru a activa detectarea coliziunilor.
+
+#### 6. Adaugă sistemul de răcire la clasa Hero
+
+Îmbunătățește clasa Hero cu mecanici de tragere și limitarea ratei de tragere:
+
+```javascript
+class Hero extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.width = 99;
+    this.height = 75;
+    this.type = "Hero";
+    this.speed = { x: 0, y: 0 };
+    this.cooldown = 0;
+  }
+  
+  fire() {
+    gameObjects.push(new Laser(this.x + 45, this.y - 10));
+    this.cooldown = 500;
+
+    let id = setInterval(() => {
+      if (this.cooldown > 0) {
+        this.cooldown -= 100;
+      } else {
+        clearInterval(id);
+      }
+    }, 200);
+  }
+  
+  canFire() {
+    return this.cooldown === 0;
+  }
+}
+```
+
+**Înțelegerea clasei Hero îmbunătățite:**
+- **Inițializează** temporizatorul de răcire la zero (gata de tragere)
+- **Creează** obiecte laser poziționate deasupra navei eroului
+- **Setează** perioada de răcire pentru a preveni tragerea rapidă
+- **Scade** temporizatorul de răcire folosind actualizări bazate pe intervale
+- **Oferă** verificarea stării de tragere prin metoda `canFire()`
+
+### Testarea implementării
+
+Jocul tău spațial are acum un sistem complet de detectare a coliziunilor și mecanici de luptă. 🚀 Testează aceste noi funcționalități:
+- **Navighează** cu tastele săgeți pentru a verifica controalele de mișcare
+- **Trage lasere** cu tasta spațiu - observă cum sistemul de răcire previne spam-ul de clicuri
+- **Observă coliziunile** când laserele lovesc inamicii, declanșând eliminarea
+- **Verifică curățarea** pe măsură ce obiectele distruse dispar din joc
+
+Ai implementat cu succes un sistem de detectare a coliziunilor folosind aceleași principii matematice care ghidează navigația navelor spațiale și robotica.
+
+## Provocarea Agentului GitHub Copilot 🚀
+
+Folosește modul Agent pentru a finaliza următoarea provocare:
+
+**Descriere:** Îmbunătățește sistemul de detectare a coliziunilor prin implementarea unor power-up-uri care apar aleator și oferă abilități temporare atunci când sunt colectate de nava eroului.
+
+**Prompt:** Creează o clasă PowerUp care extinde GameObject și implementează detectarea coliziunilor între erou și power-up-uri. Adaugă cel puțin două tipuri de power-up-uri: unul care crește rata de tragere (reduce perioada de răcire) și altul care creează un scut temporar. Include logica de apariție care creează power-up-uri la intervale și poziții aleatorii.
 
 ---
 
 ## 🚀 Provocare
 
-Adaugă o explozie! Aruncă o privire la resursele jocului din [repo-ul Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) și încearcă să adaugi o explozie atunci când laserul lovește un inamic.
+Adaugă o explozie! Aruncă o privire la resursele jocului din [repo-ul Space Art](../../../../6-space-game/solution/spaceArt/readme.txt) și încearcă să adaugi o explozie când laserul lovește un extraterestru.
 
-## Chestionar Post-Lecție
+## Quiz după lecție
 
-[Chestionar post-lecție](https://ff-quizzes.netlify.app/web/quiz/36)
+[Quiz după lecție](https://ff-quizzes.netlify.app/web/quiz/36)
 
-## Recapitulare și Studiu Individual
+## Recapitulare & Studiu individual
 
 Experimentează cu intervalele din jocul tău de până acum. Ce se întâmplă când le modifici? Citește mai multe despre [evenimentele de temporizare în JavaScript](https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/).
 
@@ -307,5 +459,5 @@ Experimentează cu intervalele din jocul tău de până acum. Ce se întâmplă 
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus utilizând serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru neînțelegerile sau interpretările greșite care pot apărea din utilizarea acestei traduceri.

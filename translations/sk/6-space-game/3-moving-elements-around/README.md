@@ -1,76 +1,106 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T11:10:14+00:00",
+  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
+  "translation_date": "2025-10-24T21:45:57+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "sk"
 }
 -->
 # Vytvorenie vesmírnej hry, časť 3: Pridanie pohybu
 
+Premýšľajte o svojich obľúbených hrách – to, čo ich robí pútavými, nie sú len pekné grafiky, ale aj spôsob, akým sa všetko pohybuje a reaguje na vaše akcie. Momentálne je vaša vesmírna hra ako krásny obraz, ale chystáme sa pridať pohyb, ktorý ju oživí.
+
+Keď inžinieri NASA programovali navigačný počítač pre misie Apollo, čelili podobnej výzve: ako prinútiť kozmickú loď reagovať na vstupy pilota a zároveň automaticky udržiavať korekcie kurzu? Princípy, ktoré sa dnes naučíme, odrážajú tie isté koncepty – riadenie pohybu ovládaného hráčom spolu s automatickým správaním systému.
+
+V tejto lekcii sa naučíte, ako prinútiť vesmírne lode kĺzať po obrazovke, reagovať na príkazy hráča a vytvárať plynulé pohybové vzory. Všetko rozdelíme na zvládnuteľné koncepty, ktoré na seba prirodzene nadväzujú.
+
+Na konci budú hráči lietať so svojou hrdinskou loďou po obrazovke, zatiaľ čo nepriateľské lode budú hliadkovať nad nimi. Dôležitejšie však je, že pochopíte základné princípy, ktoré poháňajú systémy pohybu v hrách.
+
 ## Kvíz pred prednáškou
 
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/33)
+[Prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Hry nie sú veľmi zábavné, kým sa na obrazovke nezačnú pohybovať mimozemšťania! V tejto hre využijeme dva typy pohybov:
+## Pochopenie pohybu v hrách
 
-- **Pohyb klávesnicou/myšou**: keď používateľ interaguje s klávesnicou alebo myšou na pohyb objektu na obrazovke.
-- **Pohyb vyvolaný hrou**: keď hra pohybuje objektom v určitých časových intervaloch.
+Hry ožívajú, keď sa veci začnú pohybovať, a existujú v zásade dva spôsoby, ako sa to deje:
 
-Ako teda pohybujeme vecami na obrazovke? Všetko je to o karteziánskych súradniciach: zmeníme polohu (x, y) objektu a potom prekreslíme obrazovku.
+- **Pohyb ovládaný hráčom**: Keď stlačíte klávesu alebo kliknete myšou, niečo sa pohne. Toto je priamy spoj medzi vami a herným svetom.
+- **Automatický pohyb**: Keď hra sama rozhodne o pohybe vecí – napríklad nepriateľské lode, ktoré musia hliadkovať po obrazovke, či už niečo robíte alebo nie.
 
-Typicky potrebujete nasledujúce kroky na dosiahnutie *pohybu* na obrazovke:
+Pohyb objektov na obrazovke počítača je jednoduchší, než si myslíte. Pamätáte si na súradnice x a y z hodín matematiky? Presne s tým tu pracujeme. Keď Galileo sledoval Jupiterove mesiace v roku 1610, v podstate robil to isté – zaznamenával polohy v čase, aby pochopil vzory pohybu.
 
-1. **Nastaviť novú polohu** objektu; to je potrebné na to, aby sa objekt javil, že sa pohybuje.
-2. **Vyčistiť obrazovku**, obrazovka musí byť vyčistená medzi jednotlivými prekresleniami. Môžeme ju vyčistiť nakreslením obdĺžnika, ktorý vyplníme farbou pozadia.
-3. **Prekresliť objekt** na novej polohe. Týmto konečne dosiahneme pohyb objektu z jednej polohy na druhú.
+Pohyb vecí na obrazovke je ako vytváranie animácie v zošite – musíte dodržiavať tieto tri jednoduché kroky:
 
-Takto to môže vyzerať v kóde:
+1. **Aktualizovať polohu** – Zmeniť, kde by sa mal objekt nachádzať (možno ho posunúť o 5 pixelov doprava)
+2. **Vymazať starý rám** – Vyčistiť obrazovku, aby ste nevideli duchovné stopy všade
+3. **Nakresliť nový rám** – Umiestniť objekt na jeho nové miesto
+
+Robte to dostatočne rýchlo a bum! Máte plynulý pohyb, ktorý sa hráčom zdá prirodzený.
+
+Tu je ukážka, ako to môže vyzerať v kóde:
 
 ```javascript
-//set the hero's location
+// Set the hero's location
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Clear the rectangle that hosts the hero
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Redraw the game background and hero
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Dokážete si predstaviť dôvod, prečo by prekresľovanie vášho hrdinu mnohokrát za sekundu mohlo spôsobiť výkonové náklady? Prečítajte si o [alternatívach k tomuto vzoru](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+**Čo tento kód robí:**
+- **Aktualizuje** x-súradnicu hrdinu o 5 pixelov, aby sa pohyboval horizontálne
+- **Vymaže** celú oblasť plátna, aby odstránil predchádzajúci rám
+- **Vyplní** plátno čiernou farbou pozadia
+- **Znovu nakreslí** obrázok hrdinu na jeho novú pozíciu
+
+✅ Dokážete si predstaviť dôvod, prečo by opakované prekresľovanie vášho hrdinu mnohokrát za sekundu mohlo spôsobiť výkonové náklady? Prečítajte si o [alternatívach k tomuto vzoru](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Spracovanie udalostí klávesnice
 
-Udalosti spracovávate pripojením konkrétnych udalostí ku kódu. Udalosti klávesnice sa spúšťajú na celom okne, zatiaľ čo udalosti myši, ako napríklad `click`, môžu byť pripojené ku kliknutiu na konkrétny prvok. Počas tohto projektu budeme používať udalosti klávesnice.
+Tu prepojíme vstupy hráča s hernou akciou. Keď niekto stlačí medzerník na vystrelenie lasera alebo šípku na vyhnutie sa asteroidu, vaša hra musí tento vstup detekovať a naň reagovať.
 
-Na spracovanie udalosti musíte použiť metódu `addEventListener()` okna a poskytnúť jej dva vstupné parametre. Prvým parametrom je názov udalosti, napríklad `keyup`. Druhým parametrom je funkcia, ktorá by sa mala spustiť ako výsledok udalosti.
+Udalosti klávesnice sa dejú na úrovni okna, čo znamená, že celé okno prehliadača počúva tieto stlačenia kláves. Kliknutia myšou, na druhej strane, môžu byť viazané na konkrétne prvky (napríklad kliknutie na tlačidlo). Pre našu vesmírnu hru sa zameriame na ovládanie klávesnice, pretože to dáva hráčom ten klasický arkádový pocit.
+
+Toto mi pripomína, ako telegrafisti v 19. storočí museli prekladať vstupy morzeovky do zmysluplných správ – robíme niečo podobné, prekladáme stlačenia kláves do herných príkazov.
+
+Na spracovanie udalosti musíte použiť metódu `addEventListener()` okna a poskytnúť jej dva vstupné parametre. Prvým parametrom je názov udalosti, napríklad `keyup`. Druhým parametrom je funkcia, ktorá by sa mala vykonať v dôsledku udalosti.
 
 Tu je príklad:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = string representation of the key
   if (evt.key === 'ArrowUp') {
     // do something
   }
-})
+});
 ```
 
-Pre udalosti klávesnice existujú dve vlastnosti na udalosti, ktoré môžete použiť na zistenie, ktorá klávesa bola stlačená:
+**Rozdelenie toho, čo sa tu deje:**
+- **Počúva** udalosti klávesnice na celom okne
+- **Zachytáva** objekt udalosti, ktorý obsahuje informácie o tom, ktorá klávesa bola stlačená
+- **Kontroluje**, či stlačená klávesa zodpovedá konkrétnej klávese (v tomto prípade šípke hore)
+- **Vykonáva** kód, keď je podmienka splnená
 
-- `key`, toto je reťazcová reprezentácia stlačenej klávesy, napríklad `ArrowUp`.
-- `keyCode`, toto je číselná reprezentácia, napríklad `37`, čo zodpovedá `ArrowLeft`.
+Pre udalosti klávesnice existujú dve vlastnosti na objekte udalosti, ktoré môžete použiť na zistenie, ktorá klávesa bola stlačená:
 
-✅ Manipulácia s udalosťami klávesnice je užitočná aj mimo vývoja hier. Na aké iné použitia tejto techniky dokážete myslieť?
+- `key` - toto je reťazcová reprezentácia stlačenej klávesy, napríklad `'ArrowUp'`
+- `keyCode` - toto je číselná reprezentácia, napríklad `37`, zodpovedá `ArrowLeft`
 
-### Špeciálne klávesy: upozornenie
+✅ Manipulácia s udalosťami klávesnice je užitočná aj mimo vývoja hier. Aké ďalšie využitie tejto techniky si dokážete predstaviť?
 
-Existujú niektoré *špeciálne* klávesy, ktoré ovplyvňujú okno. To znamená, že ak počúvate udalosť `keyup` a použijete tieto špeciálne klávesy na pohyb vášho hrdinu, vykoná sa aj horizontálne posúvanie. Z tohto dôvodu možno budete chcieť *vypnúť* toto vstavané správanie prehliadača, keď budete budovať svoju hru. Potrebujete kód ako tento:
+### Špeciálne klávesy: upozornenie!
+
+Niektoré klávesy majú zabudované správanie prehliadača, ktoré môže narušiť vašu hru. Šípky posúvajú stránku a medzerník posúva stránku nadol – správanie, ktoré nechcete, keď sa niekto snaží pilotovať svoju vesmírnu loď.
+
+Môžeme zabrániť týmto predvoleným správaním a nechať našu hru spracovať vstup namiesto toho. Je to podobné tomu, ako museli skorí počítačoví programátori prepisovať systémové prerušenia, aby vytvorili vlastné správanie – my to robíme na úrovni prehliadača. Tu je postup:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
@@ -88,27 +118,43 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Vyššie uvedený kód zabezpečí, že šípky a medzerník budú mať svoje *predvolené* správanie vypnuté. Mechanizmus *vypnutia* sa spustí, keď zavoláme `e.preventDefault()`.
+**Pochopenie tohto kódu na zabránenie:**
+- **Kontroluje** konkrétne kódy kláves, ktoré by mohli spôsobiť nežiaduce správanie prehliadača
+- **Zabraňuje** predvolenému správaniu prehliadača pre šípky a medzerník
+- **Umožňuje** ostatným klávesám fungovať normálne
+- **Používa** `e.preventDefault()`, aby zastavil zabudované správanie prehliadača
 
 ## Pohyb vyvolaný hrou
 
-Veci môžeme nechať pohybovať sa samé pomocou časovačov, ako sú funkcie `setTimeout()` alebo `setInterval()`, ktoré aktualizujú polohu objektu pri každom tiknutí alebo časovom intervale. Takto to môže vyzerať:
+Teraz sa porozprávajme o objektoch, ktoré sa pohybujú bez vstupu hráča. Premýšľajte o nepriateľských lodiach plaviacich sa po obrazovke, guľkách letiacich v priamych líniách alebo oblakoch plávajúcich na pozadí. Tento autonómny pohyb robí váš herný svet živým, aj keď sa nikto nedotýka ovládacích prvkov.
+
+Používame zabudované časovače JavaScriptu na aktualizáciu polôh v pravidelných intervaloch. Tento koncept je podobný tomu, ako fungujú kyvadlové hodiny – pravidelný mechanizmus, ktorý spúšťa konzistentné, časované akcie. Tu je, ako to môže byť jednoduché:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Move the enemy on the y axis
   enemy.y += 10;
-})
+}, 100);
 ```
+
+**Čo tento kód pohybu robí:**
+- **Vytvára** časovač, ktorý beží každých 100 milisekúnd
+- **Aktualizuje** y-súradnicu nepriateľa o 10 pixelov pri každom spustení
+- **Ukladá** ID intervalu, aby sme ho mohli neskôr zastaviť, ak to bude potrebné
+- **Pohybuje** nepriateľa automaticky smerom nadol na obrazovke
 
 ## Herná slučka
 
-Herná slučka je koncept, ktorý v podstate predstavuje funkciu, ktorá sa spúšťa v pravidelných intervaloch. Nazýva sa herná slučka, pretože všetko, čo by malo byť viditeľné pre používateľa, sa kreslí v rámci tejto slučky. Herná slučka využíva všetky herné objekty, ktoré sú súčasťou hry, a kreslí ich, pokiaľ z nejakého dôvodu už nie sú súčasťou hry. Napríklad, ak je objekt nepriateľ, ktorý bol zasiahnutý laserom a exploduje, už nie je súčasťou aktuálnej hernej slučky (o tom sa dozviete viac v nasledujúcich lekciách).
+Tu je koncept, ktorý všetko spája – herná slučka. Ak by vaša hra bola filmom, herná slučka by bola filmovým projektorom, ktorý premieta rám za rámom tak rýchlo, že všetko sa zdá byť plynulé.
 
-Takto môže typická herná slučka vyzerať, vyjadrená v kóde:
+Každá hra má jednu z týchto slučiek bežiacu na pozadí. Je to funkcia, ktorá aktualizuje všetky herné objekty, prekresľuje obrazovku a tento proces neustále opakuje. Sleduje vášho hrdinu, všetkých nepriateľov, akékoľvek lasery lietajúce okolo – celý stav hry.
+
+Tento koncept mi pripomína, ako skorí filmoví animátori ako Walt Disney museli pre kreslenie postáv rám po ráme vytvárať ilúziu pohybu. Robíme to isté, len s kódom namiesto ceruziek.
+
+Tu je, ako herná slučka môže typicky vyzerať, vyjadrená v kóde:
 
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,17 +162,29 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-Vyššie uvedená slučka sa spúšťa každých `200` milisekúnd na prekreslenie plátna. Máte možnosť zvoliť si najlepší interval, ktorý dáva zmysel pre vašu hru.
+**Pochopenie štruktúry hernej slučky:**
+- **Vymaže** celé plátno, aby odstránilo predchádzajúci rám
+- **Vyplní** pozadie pevnou farbou
+- **Nakreslí** všetky herné objekty na ich aktuálnych pozíciách
+- **Opakuje** tento proces každých 200 milisekúnd, aby vytvorilo plynulú animáciu
+- **Riadi** snímkovú frekvenciu kontrolou časovania intervalu
 
-## Pokračovanie vo vesmírnej hre
+## Pokračovanie vesmírnej hry
 
-Vezmete existujúci kód a rozšírite ho. Buď začnite s kódom, ktorý ste dokončili počas časti I, alebo použite kód v [časti II - štartér](../../../../6-space-game/3-moving-elements-around/your-work).
+Teraz pridáme pohyb do statickej scény, ktorú ste predtým vytvorili. Transformujeme ju zo snímky na interaktívny zážitok. Budeme postupovať krok za krokom, aby sme zabezpečili, že každá časť nadväzuje na predchádzajúcu.
 
-- **Pohyb hrdinu**: pridáte kód na zabezpečenie pohybu hrdinu pomocou šípok.
-- **Pohyb nepriateľov**: budete tiež musieť pridať kód na zabezpečenie pohybu nepriateľov zhora nadol v danom tempe.
+Získajte kód z miesta, kde sme skončili v predchádzajúcej lekcii (alebo začnite s kódom v priečinku [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work), ak potrebujete nový začiatok).
+
+**Tu je, čo dnes budujeme:**
+- **Ovládanie hrdinu**: Šípky budú pilotovať vašu vesmírnu loď po obrazovke
+- **Pohyb nepriateľov**: Tie mimozemské lode začnú svoj postup
+
+Začnime implementovať tieto funkcie.
 
 ## Odporúčané kroky
 
@@ -141,25 +199,29 @@ Nájdite súbory, ktoré boli pre vás vytvorené v podpriečinku `your-work`. M
 -| package.json
 ```
 
-Svoj projekt spustíte v priečinku `your_work` zadaním:
+Svoj projekt spustíte v priečinku `your-work` zadaním:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, momentálne by sa mal zobraziť hrdina a všetci nepriatelia; zatiaľ sa nič nehýbe!
+**Čo tento príkaz robí:**
+- **Naviguje** do vášho projektového adresára
+- **Spustí** HTTP server na adrese `http://localhost:5000`
+- **Poskytuje** vaše herné súbory, aby ste ich mohli testovať v prehliadači
+
+Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte prehliadač a zadajte túto adresu, práve teraz by mal zobraziť hrdinu a všetkých nepriateľov; nič sa zatiaľ nehýbe!
 
 ### Pridajte kód
 
-1. **Pridajte špecifické objekty** pre `hero`, `enemy` a `game object`, mali by mať vlastnosti `x` a `y`. (Pamätajte na časť o [Dedičnosti alebo kompozícii](../README.md)).
+1. **Pridajte dedikované objekty** pre `hero`, `enemy` a `game object`, mali by mať vlastnosti `x` a `y`. (Pamätajte na časť o [Dedičstve alebo kompozícii](../README.md)).
 
-   *TIP*: `game object` by mal byť ten, ktorý má `x` a `y` a schopnosť kresliť sa na plátno.
+   *TIP* `game object` by mal byť ten, ktorý má `x` a `y` a schopnosť nakresliť sa na plátno.
 
-   >tip: začnite pridaním novej triedy GameObject s jej konštruktorom, ako je uvedené nižšie, a potom ju nakreslite na plátno:
-  
+   > **Tip**: Začnite pridaním novej triedy `GameObject` s jej konštruktorom definovaným nasledovne a potom ju nakreslite na plátno:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +239,22 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
     }
     ```
 
-    Teraz rozšírte tento GameObject na vytvorenie Hero a Enemy.
+    **Pochopenie tejto základnej triedy:**
+    - **Definuje** spoločné vlastnosti, ktoré zdieľajú všetky herné objekty (poloha, veľkosť, obrázok)
+    - **Zahŕňa** príznak `dead`, ktorý sleduje, či by mal byť objekt odstránený
+    - **Poskytuje** metódu `draw()`, ktorá vykresľuje objekt na plátno
+    - **Nastavuje** predvolené hodnoty pre všetky vlastnosti, ktoré môžu podtriedy prepísať
+
+    Teraz rozšírte tento `GameObject`, aby ste vytvorili `Hero` a `Enemy`:
     
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,171 +263,169 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Pridajte spracovanie udalostí klávesnice** na spracovanie navigácie klávesami (pohyb hrdinu hore/dole, vľavo/vpravo).
+    **Kľúčové koncepty v týchto triedach:**
+    - **Dedičí** z `GameObject` pomocou kľúčového slova `extends`
+    - **Volá** konštruktor rodiča pomocou `super(x, y)`
+    - **Nastavuje** konkrétne rozmery a vlastnosti pre každý typ objektu
+    - **Implementuje** automatický pohyb pre nepriateľov pomocou `setInterval()`
 
-   *PAMÄTAJTE*: ide o karteziánsky systém, ľavý horný roh je `0,0`. Tiež nezabudnite pridať kód na zastavenie *predvoleného správania*.
+2. **Pridajte spracovanie udalostí klávesnice** na ovládanie pohybu hrdinu hore/dole, vľavo/vpravo
 
-   >tip: vytvorte svoju funkciu onKeyDown a pripojte ju k oknu:
+   *PAMÄTAJTE* je to kartézsky systém, ľavý horný roh je `0,0`. Tiež nezabudnite pridať kód na zastavenie *predvoleného správania*.
+
+   > **Tip**: Vytvorte svoju funkciu `onKeyDown` a pripojte ju k oknu:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Add the code from the lesson above to stop default behavior
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Arrow keys
+       case 32:
+         e.preventDefault();
+         break; // Space
+       default:
+         break; // do not block other keys
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Skontrolujte konzolu prehliadača v tomto bode a sledujte, ako sa zaznamenávajú stlačenia kláves.
+   **Čo tento spracovateľ udalostí robí:**
+   - **Počúva** udalosti stlačenia kláves na celom okne
+   - **Zaznamenáva** kód klávesy, aby vám pomohol diagnostikovať, ktoré klávesy sú stlačené
+   - **Zabraňuje** predvolenému správaniu prehliadača pre šípky a medzerník
+   - **Umožňuje** ostatným klávesám fungovať normálne
+   
+   Skontrolujte konzolu prehliadača v tomto bode a sledujte zaznamenané stlačenia kláves.
 
-3. **Implementujte** [Pub sub vzor](../README.md), ktorý udrží váš kód čistý, keď budete pokračovať v ďalších častiach.
+3. **Implementujte** [Pub sub pattern](../README.md), ktorý udrží váš kód čistý, keď budete pokračovať v ďalších častiach.
+
+   Vzor Publish-Subscribe pomáha organizovať váš kód oddelením detekcie udalostí od ich spracovania. To robí váš kód modulárnejším a ľahšie udržiavateľným.
 
    Na vykonanie tejto poslednej časti môžete:
 
    1. **Pridať poslucháča udalostí** na okno:
 
        ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
+       window.addEventListener("keyup", (evt) => {
+         if (evt.key === "ArrowUp") {
+           eventEmitter.emit(Messages.KEY_EVENT_UP);
+         } else if (evt.key === "ArrowDown") {
+           eventEmitter.emit(Messages.KEY_EVENT_DOWN);
+         } else if (evt.key === "ArrowLeft") {
+           eventEmitter.emit(Messages.KEY_EVENT_LEFT);
+         } else if (evt.key === "ArrowRight") {
+           eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
+         }
+       });
+       ```
 
-    1. **Vytvoriť triedu EventEmitter** na publikovanie a odoberanie správ:
+   **Čo tento systém udalostí robí:**
+   - **Detekuje** vstupy klávesnice a konvertuje ich na vlastné herné udalosti
+   - **Oddelí** detekciu vstupov od hernej logiky
+   - **Umožňuje** ľahko zmeniť ovládanie neskôr bez ovplyvnenia herného kódu
+   - **Dovoľuje** viacerým systémom reagovať na ten istý vstup
 
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
+   2. **Vytvorte triedu EventEmitter** na publikovanie a odoberanie správ:
 
-    1. **Pridať konštanty** a nastaviť EventEmitter:
+       ```javascript
+       class EventEmitter {
+         constructor() {
+           this.listeners = {};
+         }
+       
+         on(message, listener) {
+           if (!this.listeners[message]) {
+             this.listeners[message] = [];
+           }
+           this.listeners[message].push(listener);
+         }
+       
+   3. **Pridajte konštanty** a nastavte EventEmitter:
 
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
+       ```javascript
+       const Messages = {
+         KEY_EVENT_UP: "KEY_EVENT_UP",
+         KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
+         KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
+         KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
+       };
+       
+       let heroImg, 
+           enemyImg, 
+           laserImg,
+           canvas, ctx, 
+           gameObjects = [], 
+           hero, 
+           eventEmitter = new EventEmitter();
+       ```
 
-    1. **Inicializovať hru**
+   **Pochopenie nastavenia:**
+   - **Definuje** konštanty správ, aby sa predišlo preklepom a uľahčilo sa refaktoring
+   - **Deklaruje** premenné pre obrázky, kontext plátna a stav hry
+   - **Vytvára** globálny EventEmitter pre systém pub-sub
+   - **Inicializuje**
+- **Vytvára** mriežku nepriateľov pomocou vnorených cyklov  
+- **Priraďuje** obrázok nepriateľa ku každému objektu nepriateľa  
+- **Pridáva** každého nepriateľa do globálneho poľa herných objektov  
+
+a pridajte funkciu `createHero()`, ktorá vykoná podobný proces pre hrdinu.
 
     ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
-    
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
-    
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
     }
     ```
+  
+**Čo robí vytvorenie hrdinu:**  
+- **Umiestni** hrdinu na spodný stred obrazovky  
+- **Priraďuje** obrázok hrdinu k objektu hrdinu  
+- **Pridáva** hrdinu do poľa herných objektov na vykreslenie  
 
-1. **Nastaviť hernú slučku**
-
-   Refaktorujte funkciu window.onload na inicializáciu hry a nastavenie hernej slučky v dobrom intervale. Tiež pridáte laserový lúč:
-
-    ```javascript
-    window.onload = async () => {
-      canvas = document.getElementById("canvas");
-      ctx = canvas.getContext("2d");
-      heroImg = await loadTexture("assets/player.png");
-      enemyImg = await loadTexture("assets/enemyShip.png");
-      laserImg = await loadTexture("assets/laserRed.png");
-    
-      initGame();
-      let gameLoopId = setInterval(() => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        drawGameObjects(ctx);
-      }, 100)
-      
-    };
-    ```
-
-5. **Pridajte kód** na pohyb nepriateľov v určitých intervaloch.
-
-    Refaktorujte funkciu `createEnemies()` na vytvorenie nepriateľov a ich pridanie do novej triedy gameObjects:
+a nakoniec pridajte funkciu `drawGameObjects()`, aby ste mohli začať vykresľovať:
 
     ```javascript
-    function createEnemies() {
-      const MONSTER_TOTAL = 5;
-      const MONSTER_WIDTH = MONSTER_TOTAL * 98;
-      const START_X = (canvas.width - MONSTER_WIDTH) / 2;
-      const STOP_X = START_X + MONSTER_WIDTH;
-    
-      for (let x = START_X; x < STOP_X; x += 98) {
-        for (let y = 0; y < 50 * 5; y += 50) {
-          const enemy = new Enemy(x, y);
-          enemy.img = enemyImg;
-          gameObjects.push(enemy);
-        }
-      }
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
     }
     ```
+  
+**Pochopenie funkcie vykresľovania:**  
+- **Iteruje** cez všetky herné objekty v poli  
+- **Volá** metódu `draw()` na každom objekte  
+- **Prenáša** kontext plátna, aby sa objekty mohli samy vykresliť  
+
+Vaši nepriatelia by mali začať postupovať smerom k vašej vesmírnej lodi hrdinu!  
+}  
+}  
+    ```
     
-    a pridajte funkciu `createHero()` na vykonanie podobného procesu pre hrdinu.
+    and add a `createHero()` function to do a similar process for the hero.
     
     ```javascript
     function createHero() {
@@ -367,36 +437,68 @@ Vyššie uvedené spustí HTTP server na adrese `http://localhost:5000`. Otvorte
       gameObjects.push(hero);
     }
     ```
-
-    a nakoniec pridajte funkciu `drawGameObjects()` na spustenie kreslenia:
+  
+a nakoniec pridajte funkciu `drawGameObjects()`, aby ste mohli začať vykresľovať:
 
     ```javascript
     function drawGameObjects(ctx) {
       gameObjects.forEach(go => go.draw(ctx));
     }
     ```
-
-    Vaši nepriatelia by mali začať postupovať na vašu vesmírnu loď!
+  
+Vaši nepriatelia by mali začať postupovať smerom k vašej vesmírnej lodi hrdinu!
 
 ---
 
-## 🚀 Výzva
+## Výzva GitHub Copilot Agent 🚀  
 
-Ako vidíte, váš kód sa môže zmeniť na "špagetový kód", keď začnete pridávať funkcie, premenné a triedy. Ako môžete lepšie organizovať svoj kód, aby bol čitateľnejší? Návrhnite systém na organizáciu vášho kódu, aj keď stále zostáva v jednom súbore.
+Tu je výzva, ktorá zlepší vzhľad vašej hry: pridanie hraníc a plynulého ovládania. Momentálne môže váš hrdina vyletieť mimo obrazovku a pohyb môže pôsobiť trhane.
 
-## Kvíz po prednáške
+**Vaša misia:** Urobte pohyb vašej vesmírnej lode realistickejším implementáciou hraníc obrazovky a plynulého pohybu. Je to podobné ako systémy riadenia letu NASA, ktoré zabraňujú kozmickým lodiam prekročiť bezpečné prevádzkové parametre.
+
+**Čo treba vytvoriť:** Vytvorte systém, ktorý udrží vašu vesmírnu loď hrdinu na obrazovke a zabezpečí plynulé ovládanie. Keď hráči podržia šípku, loď by sa mala plynulo pohybovať namiesto pohybu v diskrétnych krokoch. Zvážte pridanie vizuálnej spätnej väzby, keď loď dosiahne hranice obrazovky – možno jemný efekt na označenie okraja hernej oblasti.
+
+Viac sa dozviete na [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
+
+## 🚀 Výzva  
+
+Organizácia kódu sa stáva čoraz dôležitejšou, keď projekty rastú. Možno ste si všimli, že váš súbor je preplnený funkciami, premennými a triedami všetko zmiešané dohromady. To mi pripomína, ako inžinieri organizujúci kód misie Apollo museli vytvoriť jasné, udržiavateľné systémy, na ktorých mohli súčasne pracovať viaceré tímy.
+
+**Vaša misia:**  
+Premýšľajte ako softvérový architekt. Ako by ste zorganizovali svoj kód tak, aby ste o šesť mesiacov (alebo váš kolega) mohli pochopiť, čo sa deje? Aj keď všetko zostane zatiaľ v jednom súbore, môžete vytvoriť lepšiu organizáciu:
+
+- **Zoskupenie súvisiacich funkcií** s jasnými komentármi  
+- **Oddelenie zodpovedností** - oddelenie hernej logiky od vykresľovania  
+- **Používanie konzistentných názvov** pre premenné a funkcie  
+- **Vytváranie modulov** alebo menných priestorov na organizáciu rôznych aspektov vašej hry  
+- **Pridanie dokumentácie**, ktorá vysvetľuje účel každej hlavnej časti  
+
+**Otázky na zamyslenie:**  
+- Ktoré časti vášho kódu sú najťažšie pochopiteľné, keď sa k nim vrátite?  
+- Ako by ste mohli zorganizovať svoj kód, aby bolo jednoduchšie, aby niekto iný prispel?  
+- Čo by sa stalo, keby ste chceli pridať nové funkcie, ako sú power-upy alebo rôzne typy nepriateľov?
+
+## Kvíz po prednáške  
 
 [Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Recenzia a samoštúdium
+## Prehľad a samoštúdium  
 
-Aj keď píšeme našu hru bez použitia frameworkov, existuje mnoho JavaScriptových frameworkov pre vývoj hier na báze plátna. Nájdite si čas na [čítanie o nich](https://github.com/collections/javascript-game-engines).
+Všetko sme budovali od základov, čo je skvelé na učenie, ale tu je malé tajomstvo – existujú úžasné JavaScriptové frameworky, ktoré môžu zvládnuť veľkú časť práce za vás. Keď sa budete cítiť pohodlne so základmi, ktoré sme pokryli, stojí za to [preskúmať, čo je k dispozícii](https://github.com/collections/javascript-game-engines).
 
-## Zadanie
+Predstavte si frameworky ako dobre vybavenú sadu nástrojov namiesto toho, aby ste si každý nástroj vyrábali sami. Môžu vyriešiť mnohé z tých výziev organizácie kódu, o ktorých sme hovorili, a navyše ponúkajú funkcie, ktorých vytvorenie by vám trvalo týždne.
 
-[Okomentujte svoj kód](assignment.md)
+**Veci, ktoré stoja za preskúmanie:**  
+- Ako herné enginy organizujú kód – budete ohromení šikovnými vzormi, ktoré používajú  
+- Triky na zvýšenie výkonu, aby hry na plátne bežali plynulo  
+- Moderné funkcie JavaScriptu, ktoré môžu váš kód urobiť čistejším a ľahšie udržiavateľným  
+- Rôzne prístupy k správe herných objektov a ich vzťahov  
+
+## Zadanie  
+
+[Okomentujte svoj kód](assignment.md)  
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby na automatický preklad [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.

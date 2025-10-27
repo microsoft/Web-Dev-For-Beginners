@@ -1,76 +1,106 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T10:27:17+00:00",
+  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
+  "translation_date": "2025-10-24T20:29:40+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "hu"
 }
 -->
-# Űrjáték készítése 3. rész: Mozgás hozzáadása
+# Űrjáték építése 3. rész: Mozgás hozzáadása
+
+Gondolj a kedvenc játékaidra – ami igazán magával ragadóvá teszi őket, az nem csak a szép grafika, hanem az, ahogyan minden mozog és reagál a cselekedeteidre. Jelenleg az űrjátékod olyan, mint egy gyönyörű festmény, de most mozgást adunk hozzá, hogy életre keljen.
+
+Amikor a NASA mérnökei programozták az Apollo-missziók irányítógépét, hasonló kihívással szembesültek: hogyan lehet egy űrhajót úgy irányítani, hogy reagáljon a pilóta parancsaira, miközben automatikusan fenntartja a pályakorrekciókat? Az elvek, amelyeket ma megtanulunk, ezekhez a koncepciókhoz hasonlóak – a játékos által vezérelt mozgás és az automatikus rendszer viselkedésének kezelése.
+
+Ebben a leckében megtanulod, hogyan lehet űrhajókat siklani a képernyőn, reagálni a játékos parancsaira, és sima mozgásmintákat létrehozni. Minden fogalmat érthető részekre bontunk, amelyek természetesen épülnek egymásra.
+
+A végére a játékosok már irányíthatják a hős hajójukat a képernyőn, miközben az ellenséges hajók járőröznek felettük. Ennél is fontosabb, hogy megérted azokat az alapelveket, amelyek a játék mozgási rendszereit működtetik.
 
 ## Előadás előtti kvíz
 
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/33)
 
-A játékok nem igazán szórakoztatóak, amíg nem látunk ide-oda mozgó idegeneket a képernyőn! Ebben a játékban kétféle mozgást fogunk használni:
+## A játékmozgás megértése
 
-- **Billentyűzet/egér mozgás**: amikor a felhasználó a billentyűzettel vagy egérrel mozgat egy objektumot a képernyőn.
-- **Játék által generált mozgás**: amikor a játék bizonyos időközönként mozgat egy objektumot.
+A játékok akkor kelnek életre, amikor a dolgok elkezdenek mozogni, és alapvetően két módon történhet ez:
 
-De hogyan mozgatunk dolgokat a képernyőn? Az egész a derékszögű koordinátákról szól: megváltoztatjuk az objektum helyét (x, y), majd újrarajzoljuk a képernyőt.
+- **Játékos által vezérelt mozgás**: Amikor megnyomsz egy gombot vagy kattintasz az egérrel, valami mozog. Ez a közvetlen kapcsolat közted és a játékvilág között.
+- **Automatikus mozgás**: Amikor maga a játék dönt úgy, hogy mozgat dolgokat – például az ellenséges hajók, amelyeknek járőrözniük kell a képernyőn, függetlenül attól, hogy te csinálsz-e valamit.
 
-Általában a következő lépések szükségesek a *mozgás* megvalósításához a képernyőn:
+A tárgyak mozgatása a számítógép képernyőjén egyszerűbb, mint gondolnád. Emlékszel az x és y koordinátákra a matekóráról? Pontosan ezekkel dolgozunk itt. Amikor Galileo 1610-ben megfigyelte Jupiter holdjait, lényegében ugyanezt csinálta – pozíciókat ábrázolt az idő függvényében, hogy megértse a mozgásmintákat.
 
-1. **Új hely meghatározása** egy objektum számára; ez szükséges ahhoz, hogy az objektum mozgását érzékeljük.
-2. **Képernyő törlése**, a képernyőt minden rajzolás között törölni kell. Ezt úgy tehetjük meg, hogy egy téglalapot rajzolunk, amelyet kitöltünk egy háttérszínnel.
-3. **Objektum újrarajzolása** az új helyen. Ezzel végül elérjük, hogy az objektum egyik helyről a másikra mozogjon.
+A képernyőn való mozgás olyan, mint egy flipbook animáció létrehozása – három egyszerű lépést kell követned:
 
-Így nézhet ki ez a kódban:
+1. **Frissítsd a pozíciót** – Változtasd meg, hol legyen az objektum (például mozdítsd el 5 pixellel jobbra)
+2. **Töröld a régi képkockát** – Tisztítsd meg a képernyőt, hogy ne láss szellemképeket mindenhol
+3. **Rajzold meg az új képkockát** – Helyezd az objektumot az új helyére
+
+Ha ezt elég gyorsan csinálod, bumm! Máris van egy sima mozgás, ami természetesnek tűnik a játékosok számára.
+
+Így nézhet ki kódban:
 
 ```javascript
-//set the hero's location
+// Set the hero's location
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Clear the rectangle that hosts the hero
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Redraw the game background and hero
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Gondolkozz el azon, hogy miért okozhat teljesítményproblémákat, ha a hősödet másodpercenként sokszor újrarajzolod? Olvass utána az [alternatív megoldásoknak](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+**Ez a kód ezt csinálja:**
+- **Frissíti** a hős x-koordinátáját 5 pixellel, hogy vízszintesen mozgassa
+- **Törli** az egész vászon területét, hogy eltávolítsa az előző képkockát
+- **Kitölti** a vásznat fekete háttérszínnel
+- **Újrarajzolja** a hős képét az új pozícióban
+
+✅ Tudsz olyan okot mondani, amiért a hős sok képkockánkénti újrarajzolása teljesítményköltségeket okozhat? Olvass utána [alternatívák ennek a mintának](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Billentyűesemények kezelése
 
-Az eseményeket úgy kezeljük, hogy specifikus eseményeket kapcsolunk kódhoz. A billentyűesemények az egész ablakra vonatkoznak, míg az egér események, például a `click`, egy adott elemhez kapcsolhatók. Ebben a projektben billentyűeseményeket fogunk használni.
+Itt kötjük össze a játékos bemenetét a játék akcióival. Amikor valaki megnyomja a szóközt, hogy lézert lőjön, vagy megnyom egy nyílgombot, hogy kikerüljön egy aszteroidát, a játéknak érzékelnie és reagálnia kell erre a bemenetre.
 
-Egy esemény kezeléséhez az ablak `addEventListener()` metódusát kell használnod, és két bemeneti paramétert kell megadnod. Az első paraméter az esemény neve, például `keyup`. A második paraméter az a függvény, amelyet az esemény bekövetkezésekor meg kell hívni.
+A billentyűesemények az ablak szintjén történnek, ami azt jelenti, hogy az egész böngészőablak figyeli ezeket a billentyűleütéseket. Az egérkattintások viszont konkrét elemekhez köthetők (például egy gomb megnyomásához). Az űrjátékunkhoz a billentyűzetvezérlésre fogunk összpontosítani, mivel ez adja meg a játékosoknak azt a klasszikus arcade érzést.
+
+Ez arra emlékeztet, ahogyan a 1800-as évek távírókezelői a morze kód bemenetet értelmes üzenetekké kellett fordítaniuk – valami hasonlót csinálunk, a billentyűleütéseket játékparancsokká alakítjuk.
+
+Egy esemény kezeléséhez az ablak `addEventListener()` metódusát kell használnod, és két bemeneti paramétert kell megadnod neki. Az első paraméter az esemény neve, például `keyup`. A második paraméter az a függvény, amelyet az esemény bekövetkezésekor meg kell hívni.
 
 Íme egy példa:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = string representation of the key
   if (evt.key === 'ArrowUp') {
     // do something
   }
-})
+});
 ```
 
-A billentyűeseményekhez két tulajdonságot használhatsz az eseményen belül, hogy megtudd, melyik billentyűt nyomták meg:
+**Ami itt történik:**
+- **Figyeli** a billentyűeseményeket az egész ablakban
+- **Rögzíti** az esemény objektumot, amely információkat tartalmaz arról, hogy melyik billentyűt nyomták meg
+- **Ellenőrzi**, hogy a megnyomott billentyű megfelel-e egy konkrét billentyűnek (ebben az esetben a fel nyílnak)
+- **Végrehajtja** a kódot, amikor a feltétel teljesül
 
-- `key`: ez a megnyomott billentyű szöveges ábrázolása, például `ArrowUp`.
-- `keyCode`: ez a számérték, például `37`, amely az `ArrowLeft`-nek felel meg.
+A billentyűeseményekhez két tulajdonságot használhatsz az eseményben, hogy megtudd, melyik billentyűt nyomták meg:
 
-✅ A billentyűesemények kezelése a játékfejlesztésen kívül is hasznos lehet. Milyen más felhasználási módokat tudsz elképzelni ehhez a technikához?
+- `key` - ez a megnyomott billentyű szöveges ábrázolása, például `'ArrowUp'`
+- `keyCode` - ez egy szám ábrázolás, például `37`, ami az `ArrowLeft`-nek felel meg
 
-### Speciális billentyűk: egy figyelmeztetés
+✅ A billentyűesemények manipulálása a játékfejlesztésen kívül is hasznos lehet. Milyen más felhasználási módokat tudsz elképzelni ehhez a technikához?
 
-Vannak bizonyos *speciális* billentyűk, amelyek hatással vannak az ablakra. Ez azt jelenti, hogy ha például egy `keyup` eseményt figyelsz, és ezeket a speciális billentyűket használod a hős mozgatására, akkor vízszintes görgetés is történhet. Emiatt érdemes lehet *kikapcsolni* ezt a beépített böngészői viselkedést, miközben a játékodat építed. Ehhez ilyen kódra van szükséged:
+### Speciális billentyűk: figyelmeztetés!
+
+Néhány billentyűnek beépített böngészői viselkedése van, amely zavarhatja a játékodat. A nyílgombok görgetik az oldalt, a szóköz pedig lefelé ugrik – ezek olyan viselkedések, amelyeket nem szeretnél, amikor valaki éppen az űrhajóját irányítja.
+
+Megakadályozhatjuk ezeket az alapértelmezett viselkedéseket, és hagyhatjuk, hogy a játék kezelje a bemenetet. Ez hasonló ahhoz, ahogyan a korai számítógépes programozóknak felül kellett írniuk a rendszermegszakításokat, hogy egyedi viselkedéseket hozzanak létre – mi ezt a böngésző szintjén tesszük. Így néz ki:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
@@ -88,27 +118,43 @@ let onKeyDown = function (e) {
 window.addEventListener('keydown', onKeyDown);
 ```
 
-A fenti kód biztosítja, hogy a nyílbillentyűk és a szóköz billentyű *alapértelmezett* viselkedése ki legyen kapcsolva. A *kikapcsolás* a `e.preventDefault()` hívásával történik.
+**Ennek a megelőző kódnak a megértése:**
+- **Ellenőrzi** azokat a konkrét billentyűkódokat, amelyek nem kívánt böngészői viselkedést okozhatnak
+- **Megakadályozza** az alapértelmezett böngészői műveletet a nyílgombok és a szóköz esetében
+- **Engedélyezi** más billentyűk normál működését
+- **Használja** az `e.preventDefault()`-ot, hogy megállítsa a böngésző beépített viselkedését
 
-## Játék által generált mozgás
+## Játék által indukált mozgás
 
-Az objektumokat maguktól is mozgathatjuk időzítők, például a `setTimeout()` vagy `setInterval()` függvények segítségével, amelyek minden időintervallumban frissítik az objektum helyét. Így nézhet ki ez:
+Most beszéljünk azokról az objektumokról, amelyek játékos bemenet nélkül mozognak. Gondolj az ellenséges hajókra, amelyek átsiklanak a képernyőn, a golyókra, amelyek egyenes vonalban repülnek, vagy a háttérben sodródó felhőkre. Ez az önálló mozgás életet ad a játékvilágnak, még akkor is, ha senki sem érinti az irányítást.
+
+A JavaScript beépített időzítőit használjuk a pozíciók rendszeres időközönkénti frissítésére. Ez a koncepció hasonló ahhoz, ahogyan az ingaórák működnek – egy rendszeres mechanizmus, amely következetes, időzített műveleteket indít. Így néz ki egyszerűen:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Move the enemy on the y axis
   enemy.y += 10;
-})
+}, 100);
 ```
 
-## A játékciklus
+**Ez a mozgáskód ezt csinálja:**
+- **Létrehoz** egy időzítőt, amely 100 milliszekundumonként fut
+- **Frissíti** az ellenség y-koordinátáját minden alkalommal 10 pixellel
+- **Tárolja** az időzítő azonosítóját, hogy később le lehessen állítani
+- **Mozgatja** az ellenséget automatikusan lefelé a képernyőn
 
-A játékciklus egy olyan koncepció, amely lényegében egy rendszeresen meghívott függvény. Azért hívják játékciklusnak, mert minden, amit a felhasználónak látnia kell, ebben a ciklusban kerül kirajzolásra. A játékciklus az összes játékobjektumot használja, amelyek a játék részét képezik, és mindet kirajzolja, kivéve, ha valamilyen okból már nem részei a játéknak. Például, ha egy objektum egy ellenség, amelyet egy lézer eltalált és felrobbant, akkor az már nem része az aktuális játékciklusnak (erről többet tanulsz a következő leckékben).
+## A játék ciklusa
+
+Itt van az a koncepció, amely mindent összeköt – a játék ciklusa. Ha a játékod egy film lenne, a játék ciklusa lenne a filmvetítő, amely képkockáról képkockára mutatja a filmet olyan gyorsan, hogy minden simán mozogni látszik.
+
+Minden játék mögött fut egy ilyen ciklus. Ez egy olyan függvény, amely frissíti az összes játékobjektumot, újrarajzolja a képernyőt, és folyamatosan ismétli ezt a folyamatot. Ez tartja nyilván a hősödet, az összes ellenséget, a repülő lézereket – az egész játék állapotát.
+
+Ez a koncepció arra emlékeztet, ahogyan a korai filmanimátorok, mint például Walt Disney, képkockáról képkockára újrarajzolták a karaktereket, hogy a mozgás illúzióját keltsék. Mi ugyanezt tesszük, csak ceruza helyett kóddal.
 
 Így nézhet ki egy játékciklus kódban kifejezve:
 
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,21 +162,33 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-A fenti ciklus minden `200` milliszekundumban meghívódik, hogy újrarajzolja a vásznat. Te döntheted el, hogy mi a legjobb időköz a játékod számára.
+**A játékciklus szerkezetének megértése:**
+- **Törli** az egész vásznat, hogy eltávolítsa az előző képkockát
+- **Kitölti** a hátteret egy egyszínű színnel
+- **Rajzolja** az összes játékobjektumot az aktuális pozíciójukban
+- **Ismétli** ezt a folyamatot minden 200 milliszekundumban, hogy sima animációt hozzon létre
+- **Kezeli** a képkockasebességet az időközök szabályozásával
 
-## Az Űrjáték folytatása
+## Az űrjáték folytatása
 
-A meglévő kódot fogod bővíteni. Vagy az első részben elkészült kóddal kezdj, vagy használd a [II. rész - kezdő](../../../../6-space-game/3-moving-elements-around/your-work) kódját.
+Most mozgást adunk a korábban létrehozott statikus jelenethez. Átalakítjuk egy képernyőképből interaktív élménnyé. Lépésről lépésre haladunk, hogy minden részlet természetesen épüljön a másikra.
 
-- **Hős mozgatása**: kódot fogsz hozzáadni, hogy a hőst a nyílbillentyűkkel lehessen mozgatni.
-- **Ellenségek mozgatása**: kódot kell hozzáadnod, hogy az ellenségek fentről lefelé mozogjanak egy adott sebességgel.
+Szerezd meg a kódot, ahol az előző leckében abbahagytuk (vagy kezdj a [II. rész kezdő](../../../../6-space-game/3-moving-elements-around/your-work) mappában található kóddal, ha friss kezdésre van szükséged).
+
+**Ezt építjük ma:**
+- **Hős vezérlése**: A nyílgombokkal irányíthatod az űrhajódat a képernyőn
+- **Ellenség mozgása**: Az idegen hajók megkezdik az előrenyomulást
+
+Kezdjük el ezeknek a funkcióknak a megvalósítását.
 
 ## Ajánlott lépések
 
-Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre számodra. Ezeknek a következőket kell tartalmazniuk:
+Keressétek meg azokat a fájlokat, amelyeket a `your-work` almappában hoztunk létre. Tartalmaznia kell a következőket:
 
 ```bash
 -| assets
@@ -141,25 +199,29 @@ Keresd meg azokat a fájlokat, amelyeket a `your-work` almappában hoztak létre
 -| package.json
 ```
 
-A projektedet a `your_work` mappában indíthatod el az alábbi parancs beírásával:
+A projektet a `your-work` mappában kezdheted el az alábbi parancs begépelésével:
 
 ```bash
 cd your-work
 npm start
 ```
 
-A fenti parancs egy HTTP szervert indít a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet. Jelenleg a hős és az összes ellenség megjelenik; még semmi sem mozog!
+**Ez a parancs ezt csinálja:**
+- **Navigál** a projekt könyvtárába
+- **Elindít** egy HTTP szervert a `http://localhost:5000` címen
+- **Kiszolgálja** a játékfájlokat, hogy tesztelhesd őket egy böngészőben
+
+A fentiek elindítanak egy HTTP szervert a `http://localhost:5000` címen. Nyiss meg egy böngészőt, és írd be ezt a címet, jelenleg a hős és az összes ellenség megjelenik; semmi sem mozog – még!
 
 ### Kód hozzáadása
 
-1. **Hozz létre dedikált objektumokat** a `hero`, `enemy` és `game object` számára, ezeknek legyen `x` és `y` tulajdonságuk. (Emlékezz az [Öröklődés vagy kompozíció](../README.md) részre).
+1. **Adj hozzá dedikált objektumokat** a `hero`, `enemy` és `game object` számára, amelyeknek `x` és `y` tulajdonságaik vannak. (Emlékezz az [Öröklődés vagy kompozíció](../README.md) részre).
 
-   *TIPP*: A `game object` legyen az, amelyik rendelkezik `x` és `y` tulajdonságokkal, és képes önmagát kirajzolni a vászonra.
+   *TIPP* A `game object` legyen az, amelyiknek `x` és `y` tulajdonságai vannak, és képes magát a vászonra rajzolni.
 
-   >tipp: hozz létre egy új GameObject osztályt az alábbi konstruktorral, majd rajzold ki a vászonra:
-  
+   > **Tipp**: Kezdj egy új `GameObject` osztály hozzáadásával, amelynek konstruktora az alábbiak szerint van meghatározva, majd rajzold ki a vászonra:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +239,22 @@ A fenti parancs egy HTTP szervert indít a `http://localhost:5000` címen. Nyiss
     }
     ```
 
-    Most bővítsd ki ezt a GameObject-et, hogy létrehozd a Hero-t és az Enemy-t.
+    **Ennek az alaposztálynak a megértése:**
+    - **Meghatározza** azokat a közös tulajdonságokat, amelyeket minden játékobjektum megoszt (pozíció, méret, kép)
+    - **Tartalmaz** egy `dead` jelzőt, hogy nyomon kövesse, az objektumot el kell-e távolítani
+    - **Biztosít** egy `draw()` metódust, amely az objektumot a vászonra rajzolja
+    - **Beállít** alapértelmezett értékeket minden tulajdonságra, amelyeket a gyermekosztályok felülírhatnak
+
+    Most bővítsd ki ezt a `GameObject`-et, hogy létrehozd a `Hero`-t és az `Enemy`-t:
     
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,171 +263,101 @@ A fenti parancs egy HTTP szervert indít a `http://localhost:5000` címen. Nyiss
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Adj hozzá billentyűesemény-kezelőket**, hogy kezeld a hős navigációját (mozgatás fel/le, balra/jobbra).
+    **Ezekben az osztályokban kulcsfontosságú fogalmak:**
+    - **Örököl** a `GameObject`-ből az `extends` kulcsszóval
+    - **Hívja** a szülő konstruktort a `super(x, y)` segítségével
+    - **Beállítja** az egyes objektumtípusok konkrét méreteit és tulajdonságait
+    - **Megvalósítja** az automatikus mozgást az ellenségek számára a `setInterval()` használatával
 
-   *EMLÉKEZZ*: Ez egy derékszögű rendszer, a bal felső sarok a `0,0`. Ne felejts el kódot hozzáadni az *alapértelmezett viselkedés* leállításához.
+2. **Adj hozzá billentyűesemény-kezelőket**, hogy kezeljék a hős navigációját (mozgás fel/le, balra/jobbra)
 
-   >tipp: hozd létre az onKeyDown függvényedet, és csatold az ablakhoz:
+   *EMLÉKEZZ* ez egy derékszögű koordináta-rendszer, a bal felső sarok a `0,0`. Ne felejtsd el hozzáadni a kódot az *alapértelmezett viselkedés* leállításához.
+
+   > **Tipp**: Hozd létre az `onKeyDown` függvényedet, és csatold az ablakhoz:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Add the code from the lesson above to stop default behavior
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Arrow keys
+       case 32:
+         e.preventDefault();
+         break; // Space
+       default:
+         break; // do not block other keys
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Nézd meg a böngésződ konzolját, és figyeld, ahogy a billentyűleütések naplózásra kerülnek.
+   **Ez az eseménykezelő ezt csinálja:**
+   - **Figyeli** a billentyűleütési eseményeket az egész ablakban
+   - **Naplózza** a billentyűkódot, hogy segítsen hibakeresni, melyik billentyűket nyomják meg
+   - **Megakadályozza** az alapértelmezett böngészői viselkedést a nyílgombok és a szóköz esetében
+   - **Engedélyezi** más billentyűk normál működését
+   
 
-3. **Valósítsd meg** a [Pub-sub mintát](../README.md), hogy a kódod tiszta maradjon a további részek során.
+- **Létrehoz** egy ellenségek rácsát beágyazott ciklusokkal  
+- **Hozzárendeli** az ellenség képét minden ellenség objektumhoz  
+- **Hozzáadja** az egyes ellenségeket a globális játékelemek tömbhöz  
 
-   Ehhez az utolsó részhez:
-
-   1. **Adj hozzá egy eseményfigyelőt** az ablakhoz:
-
-       ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
-
-    1. **Hozz létre egy EventEmitter osztályt**, hogy üzeneteket publikálj és iratkozz fel rájuk:
-
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
-
-    1. **Adj hozzá konstansokat**, és állítsd be az EventEmitter-t:
-
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
-
-    1. **Inicializáld a játékot**
+és adj hozzá egy `createHero()` függvényt, amely hasonló folyamatot végez a hős számára.  
 
     ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
-    
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
-    
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
     }
     ```
+  
+**Mit csinál a hős létrehozása:**  
+- **Pozícionálja** a hőst a képernyő alján, középen  
+- **Hozzárendeli** a hős képét a hős objektumhoz  
+- **Hozzáadja** a hőst a játékelemek tömbhöz a megjelenítéshez  
 
-1. **Állítsd be a játékciklust**
-
-   Refaktoráld az `window.onload` függvényt, hogy inicializálja a játékot, és állíts be egy játékciklust megfelelő időközönként. Adj hozzá egy lézersugarat is:
-
-    ```javascript
-    window.onload = async () => {
-      canvas = document.getElementById("canvas");
-      ctx = canvas.getContext("2d");
-      heroImg = await loadTexture("assets/player.png");
-      enemyImg = await loadTexture("assets/enemyShip.png");
-      laserImg = await loadTexture("assets/laserRed.png");
-    
-      initGame();
-      let gameLoopId = setInterval(() => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        drawGameObjects(ctx);
-      }, 100)
-      
-    };
-    ```
-
-5. **Adj hozzá kódot**, hogy az ellenségek bizonyos időközönként mozogjanak.
-
-    Refaktoráld a `createEnemies()` függvényt, hogy létrehozza az ellenségeket, és hozzáadja őket az új gameObjects osztályhoz:
+végül adj hozzá egy `drawGameObjects()` függvényt a rajzolás megkezdéséhez:  
 
     ```javascript
-    function createEnemies() {
-      const MONSTER_TOTAL = 5;
-      const MONSTER_WIDTH = MONSTER_TOTAL * 98;
-      const START_X = (canvas.width - MONSTER_WIDTH) / 2;
-      const STOP_X = START_X + MONSTER_WIDTH;
-    
-      for (let x = START_X; x < STOP_X; x += 98) {
-        for (let y = 0; y < 50 * 5; y += 50) {
-          const enemy = new Enemy(x, y);
-          enemy.img = enemyImg;
-          gameObjects.push(enemy);
-        }
-      }
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
     }
     ```
+  
+**A rajzoló függvény megértése:**  
+- **Iterál** a tömbben lévő összes játékelem között  
+- **Meghívja** a `draw()` metódust minden objektumon  
+- **Átadja** a vászon kontextust, hogy az objektumok megjeleníthessék magukat  
+
+Az ellenségeid elkezdenek előrenyomulni a hős űrhajód felé!  
+}  
+}  
+    ```
     
-    és adj hozzá egy `createHero()` függvényt, hogy hasonló folyamatot végezzen a hős számára.
+    and add a `createHero()` function to do a similar process for the hero.
     
     ```javascript
     function createHero() {
@@ -367,36 +369,68 @@ A fenti parancs egy HTTP szervert indít a `http://localhost:5000` címen. Nyiss
       gameObjects.push(hero);
     }
     ```
-
-    végül adj hozzá egy `drawGameObjects()` függvényt, hogy elindítsd a rajzolást:
+  
+végül adj hozzá egy `drawGameObjects()` függvényt a rajzolás megkezdéséhez:  
 
     ```javascript
     function drawGameObjects(ctx) {
       gameObjects.forEach(go => go.draw(ctx));
     }
     ```
-
-    Az ellenségeid elindulnak a hős űrhajód felé!
-
----
-
-## 🚀 Kihívás
-
-Ahogy láthatod, a kódod könnyen "spagetti kóddá" válhat, amikor elkezdesz funkciókat, változókat és osztályokat hozzáadni. Hogyan tudnád jobban megszervezni a kódodat, hogy olvashatóbb legyen? Vázolj fel egy rendszert a kódod megszervezésére, még akkor is, ha az egy fájlban marad.
-
-## Előadás utáni kvíz
-
-[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/34)
-
-## Áttekintés és önálló tanulás
-
-Bár a játékunkat keretrendszerek használata nélkül írjuk, számos JavaScript-alapú vászon keretrendszer létezik játékfejlesztéshez. Szánj időt arra, hogy [olvass ezekről](https://github.com/collections/javascript-game-engines).
-
-## Feladat
-
-[Kommentáld a kódodat](assignment.md)
+  
+Az ellenségeid elkezdenek előrenyomulni a hős űrhajód felé!  
 
 ---
 
-**Felelősségkizárás**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt a professzionális, emberi fordítás igénybevétele. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+## GitHub Copilot Agent Kihívás 🚀  
+
+Itt egy kihívás, amely javítja a játékod kidolgozottságát: határok és sima irányítás hozzáadása. Jelenleg a hősöd le tud repülni a képernyőről, és a mozgás kissé darabos lehet.  
+
+**A küldetésed:** Tedd az űrhajódat valósághűbbé azáltal, hogy képernyőhatárokat és folyékony mozgást valósítasz meg. Ez hasonló ahhoz, ahogy a NASA repülésirányító rendszerei megakadályozzák, hogy az űrhajók túllépjék a biztonságos működési paramétereket.  
+
+**Amit létre kell hoznod:** Hozz létre egy rendszert, amely az űrhajódat a képernyőn tartja, és az irányítást simává teszi. Amikor a játékosok lenyomva tartanak egy nyílgombot, a hajónak folyamatosan kell siklania, nem pedig lépésenként mozognia. Fontold meg, hogy vizuális visszajelzést adj, amikor a hajó eléri a képernyő határait – például egy finom effektet, amely jelzi a játékterület szélét.  
+
+További információ az [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) funkcióról itt található.  
+
+## 🚀 Kihívás  
+
+A kód szervezése egyre fontosabbá válik, ahogy a projektek növekednek. Lehet, hogy észrevetted, hogy a fájlod kezd zsúfolttá válni, tele függvényekkel, változókkal és osztályokkal, amelyek mind összekeverednek. Ez emlékeztet arra, hogy az Apollo-misszió kódját szervező mérnököknek világos, fenntartható rendszereket kellett létrehozniuk, amelyeken több csapat egyszerre tudott dolgozni.  
+
+**A küldetésed:**  
+Gondolkodj úgy, mint egy szoftverarchitekt. Hogyan szerveznéd a kódodat úgy, hogy hat hónap múlva te (vagy egy csapattársad) megértsd, mi történik? Még ha minden egy fájlban marad is most, jobb szervezést hozhatsz létre:  
+
+- **Kapcsolódó függvények csoportosítása** egyértelmű kommentfejlécekkel  
+- **Feladatok szétválasztása** - tartsd külön a játékmenetet a megjelenítéstől  
+- **Következetes elnevezési** konvenciók használata változókhoz és függvényekhez  
+- **Modulok vagy névtér létrehozása** a játék különböző aspektusainak szervezéséhez  
+- **Dokumentáció hozzáadása**, amely magyarázza az egyes főbb szakaszok célját  
+
+**Reflexiós kérdések:**  
+- A kódod mely részei a legnehezebben érthetők, amikor visszatérsz hozzájuk?  
+- Hogyan szervezhetnéd a kódodat, hogy mások könnyebben hozzájárulhassanak?  
+- Mi történne, ha új funkciókat, például erősítéseket vagy különböző ellenségtípusokat szeretnél hozzáadni?  
+
+## Utóelőadás Kvíz  
+
+[Utóelőadás kvíz](https://ff-quizzes.netlify.app/web/quiz/34)  
+
+## Áttekintés és Önálló Tanulás  
+
+Mindent a nulláról építettünk, ami fantasztikus a tanuláshoz, de itt egy kis titok – vannak csodálatos JavaScript keretrendszerek, amelyek rengeteg munkát elvégeznek helyetted. Miután kényelmesen érzed magad az általunk tárgyalt alapokkal, érdemes [felfedezni, mi érhető el](https://github.com/collections/javascript-game-engines).  
+
+Gondolj a keretrendszerekre úgy, mint egy jól felszerelt szerszámosládára, ahelyett, hogy minden szerszámot saját kezűleg készítenél. Megoldhatják sok olyan kód szervezési kihívást, amelyről beszéltünk, plusz olyan funkciókat kínálnak, amelyek megvalósítása hetekig tartana.  
+
+**Érdemes felfedezni:**  
+- Hogyan szervezik a játékmotorok a kódot – lenyűgöző mintákat fogsz látni  
+- Teljesítménytrükkök, amelyekkel a vászonjátékok zökkenőmentesen futnak  
+- Modern JavaScript funkciók, amelyek tisztábbá és fenntarthatóbbá teszik a kódodat  
+- Különböző megközelítések a játékelemek és azok kapcsolatai kezelésére  
+
+## Feladat  
+
+[Kommentáld a kódodat](assignment.md)  
+
+---
+
+**Felelősség kizárása**:  
+Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
