@@ -61,8 +61,8 @@ jobs:
           # 1b
           # translate -l "vi id ms ja uk my" -y
           # translate -l "sw hu cs sk ro bg sr hr sl" -y
-          translate -l "sk ro bg" -y
-          # translate -l "sr hr sl" -y
+          # translate -l "sk ro bg" -y
+          translate -l "sr hr sl" -y
           # translate -l "ja uk my" -y
 
       - name: Authenticate GitHub App
