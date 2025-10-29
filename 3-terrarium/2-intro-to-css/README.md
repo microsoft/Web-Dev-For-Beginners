@@ -1,5 +1,26 @@
 # Terrarium Project Part 2: Introduction to CSS
 
+```mermaid
+journey
+    title Your CSS Styling Journey
+    section Foundation
+      Link CSS file: 3: Student
+      Understand cascade: 4: Student
+      Learn inheritance: 4: Student
+    section Selectors
+      Element targeting: 4: Student
+      Class patterns: 5: Student
+      ID specificity: 5: Student
+    section Layout
+      Position elements: 4: Student
+      Create containers: 5: Student
+      Build terrarium: 5: Student
+    section Polish
+      Add visual effects: 5: Student
+      Responsive design: 5: Student
+      Glass reflections: 5: Student
+```
+
 ![Introduction to CSS](../../sketchnotes/webdev101-css.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -10,6 +31,41 @@ If HTML is like building the frame of a house, then CSS is everything that makes
 Today, we'll transform your terrarium from functional to polished. You'll learn how to position elements precisely, make layouts respond to different screen sizes, and create the visual appeal that makes websites engaging.
 
 By the end of this lesson, you'll see how strategic CSS styling can dramatically improve your project. Let's add some style to your terrarium.
+
+```mermaid
+mindmap
+  root((CSS Fundamentals))
+    Cascade
+      Specificity Rules
+      Inheritance
+      Priority Order
+      Conflict Resolution
+    Selectors
+      Element Tags
+      Classes (.class)
+      IDs (#id)
+      Combinators
+    Box Model
+      Margin
+      Border
+      Padding
+      Content
+    Layout
+      Positioning
+      Display Types
+      Flexbox
+      Grid
+    Visual Effects
+      Colors
+      Shadows
+      Transitions
+      Animations
+    Responsive Design
+      Media Queries
+      Flexible Units
+      Viewport Meta
+      Mobile First
+```
 
 ## Pre-Lecture Quiz
 
@@ -87,6 +143,28 @@ h1 {
 
 ✅ **Knowledge Check**: Which color displays in your web app? Why does that color win? Can you think of scenarios where you might want to override styles?
 
+```mermaid
+flowchart TD
+    A["Browser encounters h1 element"] --> B{"Check for inline styles"}
+    B -->|Found| C["style='color: red'"] 
+    B -->|None| D{"Check for ID rules"}
+    C --> E["Apply red color (1000 points)"]
+    D -->|Found| F["#heading { color: green }"]
+    D -->|None| G{"Check for class rules"}
+    F --> H["Apply green color (100 points)"]
+    G -->|Found| I[".title { color: blue }"]
+    G -->|None| J{"Check element rules"}
+    I --> K["Apply blue color (10 points)"]
+    J -->|Found| L["h1 { color: purple }"]
+    J -->|None| M["Use browser default"]
+    L --> N["Apply purple color (1 point)"]
+    
+    style C fill:#ff6b6b
+    style F fill:#51cf66
+    style I fill:#339af0
+    style L fill:#9775fa
+```
+
 > 💡 **CSS Priority Order (highest to lowest):**
 > 1. **Inline styles** (style attribute)
 > 2. **IDs** (#myId)
@@ -125,6 +203,21 @@ Open your browser's developer tools (F12), navigate to the Elements tab, and ins
 > 📝 **Inheritable Properties Include**: `color`, `font-family`, `font-size`, `line-height`, `text-align`, `visibility`
 >
 > **Non-Inheritable Properties Include**: `margin`, `padding`, `border`, `width`, `height`, `position`
+
+### 🔄 **Pedagogical Check-in**
+**CSS Foundation Understanding**: Before moving to selectors, ensure you can:
+- ✅ Explain the difference between cascade and inheritance
+- ✅ Predict which style will win in a specificity conflict
+- ✅ Identify which properties inherit from parent elements
+- ✅ Connect CSS files to HTML properly
+
+**Quick Test**: If you have these styles, what color will an `<h1>` inside a `<div class="special">` be?
+```css
+div { color: blue; }
+.special { color: green; }
+h1 { color: red; }
+```
+*Answer: Red (element selector directly targets h1)*
 
 ## Mastering CSS Selectors
 
@@ -285,6 +378,23 @@ Once you understand positioning, many layout challenges become manageable. Need 
 
 ### The Five Position Values
 
+```mermaid
+quadrantChart
+    title CSS Positioning Strategy
+    x-axis Document Flow --> Removed from Flow
+    y-axis Static Position --> Precise Control
+    quadrant-1 Absolute
+    quadrant-2 Fixed
+    quadrant-3 Static
+    quadrant-4 Sticky
+    
+    Static: [0.2, 0.2]
+    Relative: [0.3, 0.6]
+    Absolute: [0.8, 0.8]
+    Fixed: [0.9, 0.7]
+    Sticky: [0.5, 0.9]
+```
+
 | Position Value | Behavior | Use Case |
 |----------------|----------|----------|
 | `static` | Default flow, ignores top/left/right/bottom | Normal document layout |
@@ -330,11 +440,45 @@ Our terrarium uses a strategic combination of positioning types to create the de
 - How does the layout change if `.plant-holder` uses `absolute` instead of `relative`?
 - What occurs when you switch `.plant` to `relative` positioning?
 
+### 🔄 **Pedagogical Check-in**
+**CSS Positioning Mastery**: Pause to verify your understanding:
+- ✅ Can you explain why plants need absolute positioning for drag-and-drop?
+- ✅ Do you understand how relative containers create positioning context?
+- ✅ Why do the side containers use absolute positioning?
+- ✅ What would happen if you removed position declarations entirely?
+
+**Real-World Connection**: Think about how CSS positioning mirrors real-world layout:
+- **Static**: Books on a shelf (natural order)
+- **Relative**: Moving a book slightly but keeping its spot
+- **Absolute**: Placing a bookmark at an exact page number
+- **Fixed**: A sticky note that stays visible as you flip pages
+
 ## Building the Terrarium with CSS
 
 Now we'll build a glass jar using only CSS - no images or graphics software required.
 
 Creating realistic-looking glass, shadows, and depth effects using positioning and transparency demonstrates CSS's visual capabilities. This technique mirrors how architects in the Bauhaus movement used simple geometric forms to create complex, beautiful structures. Once you understand these principles, you'll recognize the CSS techniques behind many web designs.
+
+```mermaid
+flowchart LR
+    A[Jar Top] --> E[Complete Terrarium]
+    B[Jar Walls] --> E
+    C[Dirt Layer] --> E
+    D[Jar Bottom] --> E
+    F[Glass Effects] --> E
+    
+    A1["50% width<br/>5% height<br/>Top position"] --> A
+    B1["60% width<br/>80% height<br/>Rounded corners<br/>0.5 opacity"] --> B
+    C1["60% width<br/>5% height<br/>Dark brown<br/>Bottom layer"] --> C
+    D1["50% width<br/>1% height<br/>Bottom position"] --> D
+    F1["Subtle shadows<br/>Transparency<br/>Z-index layering"] --> F
+    
+    style E fill:#d1e1df,stroke:#3a241d
+    style A fill:#e8f5e8
+    style B fill:#e8f5e8
+    style C fill:#8B4513
+    style D fill:#e8f5e8
+```
 
 ### Creating the Glass Jar Components
 
@@ -416,6 +560,18 @@ We're using `rem` units for border-radius, which scale relative to the root font
 - Adjust the dirt color from `#3a241d` to `#8B4513` – what visual impact does this have?
 - Modify the `z-index` of the dirt to 2 – what happens to the layering?
 
+### 🔄 **Pedagogical Check-in**
+**CSS Visual Design Understanding**: Confirm your grasp of visual CSS:
+- ✅ How do percentage-based dimensions create responsive design?
+- ✅ Why does opacity create the glass transparency effect?
+- ✅ What role does z-index play in layering elements?
+- ✅ How do border-radius values create the jar shape?
+
+**Design Principle**: Notice how we're building complex visuals from simple shapes:
+1. **Rectangles** → **Rounded rectangles** → **Jar components**
+2. **Flat colors** → **Opacity** → **Glass effect**
+3. **Individual elements** → **Layered composition** → **3D appearance**
+
 ---
 
 ## GitHub Copilot Agent Challenge 🚀
@@ -467,6 +623,73 @@ Practice these concepts with these engaging, hands-on games:
 ### Additional Learning
 
 For comprehensive CSS fundamentals, complete this Microsoft Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+
+## 🎯 Your CSS Mastery Timeline
+
+```mermaid
+timeline
+    title CSS Learning Progression
+    
+    section Foundation (10 minutes)
+        File Connection: Link CSS to HTML
+                       : Understand cascade rules
+                       : Learn inheritance basics
+        
+    section Selectors (15 minutes)
+        Targeting Elements: Element selectors
+                          : Class patterns
+                          : ID specificity
+                          : Combinators
+        
+    section Box Model (20 minutes)
+        Layout Fundamentals: Margin and padding
+                           : Border properties
+                           : Content sizing
+                           : Box-sizing behavior
+        
+    section Positioning (25 minutes)
+        Element Placement: Static vs relative
+                         : Absolute positioning
+                         : Z-index layering
+                         : Responsive units
+        
+    section Visual Design (30 minutes)
+        Styling Mastery: Colors and opacity
+                       : Shadows and effects
+                       : Transitions
+                       : Transform properties
+        
+    section Responsive Design (45 minutes)
+        Multi-Device Support: Media queries
+                            : Flexible layouts
+                            : Mobile-first approach
+                            : Viewport optimization
+        
+    section Advanced Techniques (1 week)
+        Modern CSS: Flexbox layouts
+                  : CSS Grid systems
+                  : Custom properties
+                  : Animation keyframes
+        
+    section Professional Skills (1 month)
+        CSS Architecture: Component patterns
+                        : Maintainable code
+                        : Performance optimization
+                        : Cross-browser compatibility
+```
+
+### 🛠️ Your CSS Toolkit Summary
+
+After completing this lesson, you now have:
+- **Cascade Understanding**: How styles inherit and override each other
+- **Selector Mastery**: Precise targeting with elements, classes, and IDs
+- **Positioning Skills**: Strategic element placement and layering
+- **Visual Design**: Creating glass effects, shadows, and transparency
+- **Responsive Techniques**: Percentage-based layouts that adapt to any screen
+- **Code Organization**: Clean, maintainable CSS structure
+- **Modern Practices**: Using relative units and accessible design patterns
+
+**Next Steps**: Your terrarium now has both structure (HTML) and style (CSS). The final lesson will add interactivity with JavaScript!
 
 ## Assignment
 

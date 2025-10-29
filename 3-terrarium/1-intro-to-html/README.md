@@ -1,5 +1,22 @@
 # Terrarium Project Part 1: Introduction to HTML
 
+```mermaid
+journey
+    title Your HTML Learning Journey
+    section Foundation
+      Create HTML file: 3: Student
+      Add DOCTYPE: 4: Student
+      Structure document: 5: Student
+    section Content
+      Add metadata: 4: Student
+      Include images: 5: Student
+      Organize layout: 5: Student
+    section Semantics
+      Use proper tags: 4: Student
+      Enhance accessibility: 5: Student
+      Build terrarium: 5: Student
+```
+
 ![Introduction to HTML](../../sketchnotes/webdev101-html.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
@@ -8,6 +25,36 @@ HTML, or HyperText Markup Language, is the foundation of every website you've ev
 In this lesson, you'll create the HTML structure for a virtual terrarium interface. This hands-on project will teach you fundamental HTML concepts while building something visually engaging. You'll learn how to organize content using semantic elements, work with images, and create the foundation for an interactive web application.
 
 By the end of this lesson, you'll have a working HTML page displaying plant images in organized columns, ready for styling in the next lesson. Don't worry if it looks basic at first – that's exactly what HTML should do before CSS adds the visual polish.
+
+```mermaid
+mindmap
+  root((HTML Fundamentals))
+    Structure
+      DOCTYPE Declaration
+      HTML Element
+      Head Section
+      Body Content
+    Elements
+      Tags & Attributes
+      Self-closing Tags
+      Nested Elements
+      Block vs Inline
+    Content
+      Text Elements
+      Images
+      Containers (div)
+      Lists
+    Semantics
+      Meaningful Tags
+      Accessibility
+      Screen Readers
+      SEO Benefits
+    Best Practices
+      Proper Nesting
+      Valid Markup
+      Descriptive Alt Text
+      Organized Structure
+```
 
 ## Pre-Lecture Quiz
 
@@ -54,6 +101,24 @@ code index.html
 
 Every HTML document follows a specific structure that browsers need to understand and display correctly. Think of this structure like a formal letter – it has required elements in a particular order that help the recipient (in this case, the browser) process the content properly.
 
+```mermaid
+flowchart TD
+    A["<!DOCTYPE html>"] --> B["<html>"]
+    B --> C["<head>"]
+    C --> D["<title>"]
+    C --> E["<meta charset>"]
+    C --> F["<meta viewport>"]
+    B --> G["<body>"]
+    G --> H["<h1> Heading"]
+    G --> I["<div> Containers"]
+    G --> J["<img> Images"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style G fill:#e8f5e8
+```
+
 Let's start by adding the essential foundation that every HTML document needs.
 
 ### The DOCTYPE Declaration and Root Element
@@ -74,6 +139,14 @@ The first two lines of any HTML file serve as the document's "introduction" to t
 > 💡 **VS Code Tip**: Hover over any HTML tag in VS Code to see helpful information from MDN Web Docs, including usage examples and browser compatibility details.
 
 > 📚 **Learn More**: The DOCTYPE declaration prevents browsers from entering "quirks mode," which was used to support very old websites. Modern web development uses the simple `<!DOCTYPE html>` declaration to ensure [standards-compliant rendering](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
+
+### 🔄 **Pedagogical Check-in**
+**Pause and Reflect**: Before continuing, make sure you understand:
+- ✅ Why every HTML document needs a DOCTYPE declaration
+- ✅ What the `<html>` root element contains
+- ✅ How this structure helps browsers render pages correctly
+
+**Quick Self-Test**: Can you explain in your own words what "standards-compliant rendering" means?
 
 ## Adding Essential Document Metadata
 
@@ -217,11 +290,55 @@ Now add the plant images organized in two columns between your `<body></body>` t
 
 > 📝 **HTML Element Types**: `<div>` elements are "block-level" and take up full width, while `<span>` elements are "inline" and only take up necessary width. What do you think would happen if you changed all these `<div>` tags to `<span>` tags?
 
+### 🔄 **Pedagogical Check-in**
+**Structure Understanding**: Take a moment to review your HTML structure:
+- ✅ Can you identify the main containers in your layout?
+- ✅ Do you understand why each image has a unique ID?
+- ✅ How would you describe the purpose of the `plant-holder` divs?
+
+**Visual Inspection**: Open your HTML file in a browser. You should see:
+- A basic list of plant images
+- Images organized in two columns
+- Simple, unstyled layout
+
+**Remember**: This plain appearance is exactly what HTML should look like before CSS styling!
+
 With this markup added, the plants will appear on screen, though they won't look polished yet – that's what CSS is for in the next lesson! For now, you have a solid HTML foundation that properly organizes your content and follows accessibility best practices.
 
 ## Using Semantic HTML for Accessibility
 
 Semantic HTML means choosing HTML elements based on their meaning and purpose, not just their appearance. When you use semantic markup, you're communicating the structure and meaning of your content to browsers, search engines, and assistive technologies like screen readers.
+
+```mermaid
+flowchart TD
+    A[Need to add content?] --> B{What type?}
+    B -->|Main heading| C["<h1>"]
+    B -->|Subheading| D["<h2>, <h3>, etc."]
+    B -->|Paragraph| E["<p>"]
+    B -->|List| F["<ul>, <ol>"]
+    B -->|Navigation| G["<nav>"]
+    B -->|Article| H["<article>"]
+    B -->|Section| I["<section>"]
+    B -->|Generic container| J["<div>"]
+    
+    C --> K[Screen readers announce as main title]
+    D --> L[Creates proper heading hierarchy]
+    E --> M[Provides proper text spacing]
+    F --> N[Enables list navigation shortcuts]
+    G --> O[Identifies navigation landmarks]
+    H --> P[Marks standalone content]
+    I --> Q[Groups related content]
+    J --> R[Use only when no semantic tag fits]
+    
+    style C fill:#4caf50
+    style D fill:#4caf50
+    style E fill:#4caf50
+    style F fill:#4caf50
+    style G fill:#2196f3
+    style H fill:#2196f3
+    style I fill:#2196f3
+    style J fill:#ff9800
+```
 
 This approach makes your websites more accessible to users with disabilities and helps search engines better understand your content. It's a fundamental principle of modern web development that creates better experiences for everyone.
 
@@ -281,6 +398,41 @@ Insert this markup above the last `</div>` tag (before the closing tag of the pa
 - **Prepares** the structure for CSS styling that will create the glass terrarium appearance
 
 > 🤔 **Notice Something?**: Even though you added this markup, you don't see anything new on the page! This perfectly illustrates how HTML provides structure while CSS provides appearance. These `<div>` elements exist but have no visual styling yet – that's coming in the next lesson!
+
+```mermaid
+gitgraph
+    commit id: "HTML Document"
+    branch head
+    checkout head
+    commit id: "<title>"
+    commit id: "<meta charset>"
+    commit id: "<meta viewport>"
+    checkout main
+    branch body
+    checkout body
+    commit id: "<h1>My Terrarium</h1>"
+    branch containers
+    checkout containers
+    commit id: "<div id='page'>"
+    commit id: "Left Container (7 plants)"
+    commit id: "Right Container (7 plants)"
+    commit id: "Terrarium Structure"
+    checkout body
+    merge containers
+    checkout main
+    merge head
+    merge body
+    commit id: "Complete HTML Page"
+```
+
+### 🔄 **Pedagogical Check-in**
+**HTML Structure Mastery**: Before moving forward, ensure you can:
+- ✅ Explain the difference between HTML structure and visual appearance
+- ✅ Identify semantic vs. non-semantic HTML elements
+- ✅ Describe how proper markup benefits accessibility
+- ✅ Recognize the complete document tree structure
+
+**Testing Your Understanding**: Try opening your HTML file in a browser with JavaScript disabled and CSS removed. This shows you the pure semantic structure you've created!
 
 ---
 
@@ -345,6 +497,66 @@ HTML has been the foundation of the web for over 30 years, evolving from a simpl
 - Which deprecated HTML tags did you discover, and why were they removed?
 - What new HTML features are being proposed for future versions?
 - How does semantic HTML contribute to web accessibility and SEO?
+
+## 🎯 Your HTML Mastery Timeline
+
+```mermaid
+timeline
+    title HTML Learning Progression
+    
+    section Foundation (5 minutes)
+        Document Structure: DOCTYPE declaration
+                         : HTML root element
+                         : Head vs Body understanding
+        
+    section Metadata (10 minutes)
+        Essential Meta Tags: Character encoding
+                           : Viewport configuration
+                           : Browser compatibility
+        
+    section Content Creation (15 minutes)
+        Image Integration: Proper file paths
+                         : Alt text importance
+                         : Self-closing tags
+        
+    section Layout Organization (20 minutes)
+        Container Strategy: Div elements for structure
+                          : Class and ID naming
+                          : Nested element hierarchy
+        
+    section Semantic Mastery (30 minutes)
+        Meaningful Markup: Heading hierarchy
+                         : Screen reader navigation
+                         : Accessibility best practices
+        
+    section Advanced Concepts (1 hour)
+        HTML5 Features: Modern semantic elements
+                      : ARIA attributes
+                      : Performance considerations
+        
+    section Professional Skills (1 week)
+        Code Organization: File structure patterns
+                         : Maintainable markup
+                         : Team collaboration
+        
+    section Expert Level (1 month)
+        Modern Web Standards: Progressive enhancement
+                            : Cross-browser compatibility
+                            : HTML specification updates
+```
+
+### 🛠️ Your HTML Toolkit Summary
+
+After completing this lesson, you now have:
+- **Document Structure**: Complete HTML5 foundation with proper DOCTYPE
+- **Semantic Markup**: Meaningful tags that enhance accessibility and SEO
+- **Image Integration**: Proper file organization and alt text practices
+- **Layout Containers**: Strategic use of divs with descriptive class names
+- **Accessibility Awareness**: Understanding of screen reader navigation
+- **Modern Standards**: Current HTML5 practices and deprecated tag knowledge
+- **Project Foundation**: Solid base for CSS styling and JavaScript interactivity
+
+**Next Steps**: Your HTML structure is ready for CSS styling! The semantic foundation you've built will make the next lesson much easier to understand.
 
 
 ## Assignment

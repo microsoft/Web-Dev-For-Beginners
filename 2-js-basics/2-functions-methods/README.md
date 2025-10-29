@@ -3,6 +3,23 @@
 ![JavaScript Basics - Functions](../../sketchnotes/webdev101-js-functions.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
+```mermaid
+journey
+    title Your JavaScript Functions Adventure
+    section Foundation
+      Function Syntax: 5: You
+      Calling Functions: 4: You
+      Parameters & Arguments: 5: You
+    section Advanced Concepts
+      Return Values: 4: You
+      Default Parameters: 5: You
+      Function Composition: 4: You
+    section Modern JavaScript
+      Arrow Functions: 5: You
+      Anonymous Functions: 4: You
+      Higher-Order Functions: 5: You
+```
+
 ## Pre-Lecture Quiz
 [Pre-lecture quiz](https://ff-quizzes.netlify.app)
 
@@ -17,6 +34,39 @@ In this lesson, you'll learn how to create your own functions, pass information 
 > 🎥 Click the image above for a video about methods and functions.
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
+
+```mermaid
+mindmap
+  root((JavaScript Functions))
+    Basic Concepts
+      Declaration
+        function name() {}
+        const name = () => {}
+      Calling
+        functionName()
+        Parentheses required
+    Parameters
+      Input Values
+        function(param1, param2)
+        Default values
+      Arguments
+        Values passed in
+        Can be any type
+    Return Values
+      Output Data
+        return statement
+        Exit function
+      Use Results
+        Store in variables
+        Chain functions
+    Advanced Patterns
+      Higher-Order
+        Functions as parameters
+        Callbacks
+      Anonymous
+        No name needed
+        Inline definition
+```
 
 ## Functions
 
@@ -60,6 +110,30 @@ displayGreeting();
 ```
 
 When you run this line, it executes all the code inside your `displayGreeting` function, displaying "Hello, world!" in your browser's console. You can call this function repeatedly.
+
+### 🧠 **Function Fundamentals Check: Building Your First Functions**
+
+**Let's see how you're feeling about basic functions:**
+- Can you explain why we use curly braces `{}` in function definitions?
+- What happens if you write `displayGreeting` without the parentheses?
+- Why might you want to call the same function multiple times?
+
+```mermaid
+flowchart TD
+    A["✏️ Define Function"] --> B["📦 Package Code"]
+    B --> C["🏷️ Give it a Name"]
+    C --> D["📞 Call When Needed"]
+    D --> E["🔄 Reuse Anywhere"]
+    
+    F["💡 Benefits"] --> F1["No code repetition"]
+    F --> F2["Easy to maintain"]
+    F --> F3["Clear organization"]
+    F --> F4["Easier testing"]
+    
+    style A fill:#e3f2fd
+    style E fill:#e8f5e8
+    style F fill:#fff3e0
+```
 
 > **Note:** You've been using **methods** throughout these lessons. `console.log()` is a method – essentially a function that belongs to the `console` object. The key difference is that methods are attached to objects, while functions stand independently. Many developers use these terms interchangeably in casual conversation.
 
@@ -107,6 +181,29 @@ displayGreeting('Christopher');
 
 JavaScript takes the string `'Christopher'`, assigns it to the `name` parameter, and creates the personalized message "Hello, Christopher!"
 
+```mermaid
+flowchart LR
+    A["🎯 Function Call"] --> B["📥 Parameters"]
+    B --> C["⚙️ Function Body"]
+    C --> D["📤 Result"]
+    
+    A1["displayGreeting('Alice')"] --> A
+    B1["name = 'Alice'"] --> B
+    C1["Template literal\n\`Hello, \${name}!\`"] --> C
+    D1["'Hello, Alice!'"] --> D
+    
+    E["🔄 Parameter Types"] --> E1["Strings"]
+    E --> E2["Numbers"]
+    E --> E3["Booleans"]
+    E --> E4["Objects"]
+    E --> E5["Functions"]
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+```
+
 ## Default values
 
 What if we want to make some parameters optional? That's where default values come in handy!
@@ -132,6 +229,35 @@ displayGreeting('Christopher', 'Hi');
 ```
 
 In the first call, JavaScript uses the default "Hello" since we didn't specify a salutation. In the second call, it uses our custom "Hi" instead. This flexibility makes functions adaptable to different scenarios.
+
+### 🎛️ **Parameters Mastery Check: Making Functions Flexible**
+
+**Test your parameter understanding:**
+- What's the difference between a parameter and an argument?
+- Why are default values useful in real-world programming?
+- Can you predict what happens if you pass more arguments than parameters?
+
+```mermaid
+stateDiagram-v2
+    [*] --> NoParams: function greet() {}
+    [*] --> WithParams: function greet(name) {}
+    [*] --> WithDefaults: function greet(name, greeting='Hi') {}
+    
+    NoParams --> Static: Same output always
+    WithParams --> Dynamic: Changes with input
+    WithDefaults --> Flexible: Optional customization
+    
+    Static --> [*]
+    Dynamic --> [*]
+    Flexible --> [*]
+    
+    note right of WithDefaults
+        Most flexible approach
+        Backwards compatible
+    end note
+```
+
+> **Pro tip**: Default parameters make your functions more user-friendly. Users can get started quickly with sensible defaults, but still customize when needed!
 
 ## Return values
 
@@ -165,6 +291,46 @@ const greetingMessage = createGreetingMessage('Christopher');
 ```
 
 Now `greetingMessage` contains "Hello, Christopher" and we can use it anywhere in our code – to display it on a webpage, include it in an email, or pass it to another function.
+
+```mermaid
+flowchart TD
+    A["🔧 Function Processing"] --> B{"return statement?"}
+    B -->|Yes| C["📤 Return Value"]
+    B -->|No| D["📭 Return undefined"]
+    
+    C --> E["💾 Store in Variable"]
+    C --> F["🔗 Use in Expression"]
+    C --> G["📞 Pass to Function"]
+    
+    D --> H["⚠️ Usually not useful"]
+    
+    I["📋 Return Value Uses"] --> I1["Calculate results"]
+    I --> I2["Validate input"]
+    I --> I3["Transform data"]
+    I --> I4["Create objects"]
+    
+    style C fill:#e8f5e8
+    style D fill:#ffebee
+    style I fill:#e3f2fd
+```
+
+### 🔄 **Return Values Check: Getting Results Back**
+
+**Evaluate your return value understanding:**
+- What happens to code after a `return` statement in a function?
+- Why is returning values often better than just printing to console?
+- Can a function return different types of values (string, number, boolean)?
+
+```mermaid
+pie title "Common Return Value Types"
+    "Strings" : 30
+    "Numbers" : 25
+    "Objects" : 20
+    "Booleans" : 15
+    "Arrays" : 10
+```
+
+> **Key insight**: Functions that return values are more versatile because the caller decides what to do with the result. This makes your code more modular and reusable!
 
 ## Functions as parameters for functions
 
@@ -218,9 +384,64 @@ setTimeout(() => {
 
 The `()` is where parameters would go (empty in this case), then comes the arrow `=>`, and finally the function body in curly braces. This provides the same functionality with more concise syntax.
 
+```mermaid
+flowchart LR
+    A["📝 Function Styles"] --> B["Traditional"]
+    A --> C["Arrow"]
+    A --> D["Anonymous"]
+    
+    B --> B1["function name() {}"]
+    B --> B2["Hoisted"]
+    B --> B3["Named"]
+    
+    C --> C1["const name = () => {}"]
+    C --> C2["Concise syntax"]
+    C --> C3["Modern style"]
+    
+    D --> D1["function() {}"]
+    D --> D2["No name"]
+    D --> D3["One-time use"]
+    
+    E["⏰ When to Use"] --> E1["Traditional: Reusable functions"]
+    E --> E2["Arrow: Short callbacks"]
+    E --> E3["Anonymous: Event handlers"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+
 ### When to use each strategy
 
 When should you use each approach? A practical guideline: if you'll use the function multiple times, give it a name and define it separately. If it's for one specific use, consider an anonymous function. Both arrow functions and traditional syntax are valid choices, though arrow functions are prevalent in modern JavaScript codebases.
+
+### 🎨 **Function Styles Mastery Check: Choosing the Right Syntax**
+
+**Test your syntax understanding:**
+- When might you prefer arrow functions over traditional function syntax?
+- What's the main advantage of anonymous functions?
+- Can you think of a situation where a named function is better than an anonymous one?
+
+```mermaid
+quadrantChart
+    title Function Choice Decision Matrix
+    x-axis Simple --> Complex
+    y-axis One-time use --> Reusable
+    quadrant-1 Arrow Functions
+    quadrant-2 Named Functions
+    quadrant-3 Anonymous Functions
+    quadrant-4 Traditional Functions
+    
+    Event Handlers: [0.3, 0.2]
+    Utility Functions: [0.7, 0.8]
+    Callbacks: [0.2, 0.3]
+    Class Methods: [0.8, 0.7]
+    Mathematical Operations: [0.4, 0.6]
+```
+
+> **Modern trend**: Arrow functions are becoming the default choice for many developers because of their concise syntax, but traditional functions still have their place!
 
 ---
 
@@ -255,3 +476,103 @@ It's worth [reading up a little more on arrow functions](https://developer.mozil
 ## Assignment
 
 [Fun with Functions](assignment.md)
+
+---
+
+## 🧰 **Your JavaScript Functions Toolkit Summary**
+
+```mermaid
+graph TD
+    A["🎯 JavaScript Functions"] --> B["📋 Function Declaration"]
+    A --> C["📥 Parameters"]
+    A --> D["📤 Return Values"]
+    A --> E["🎨 Modern Syntax"]
+    
+    B --> B1["function name() {}"]
+    B --> B2["Descriptive naming"]
+    B --> B3["Reusable code blocks"]
+    
+    C --> C1["Input data"]
+    C --> C2["Default values"]
+    C --> C3["Multiple parameters"]
+    
+    D --> D1["return statement"]
+    D --> D2["Exit function"]
+    D --> D3["Pass data back"]
+    
+    E --> E1["Arrow functions: () =>"]
+    E --> E2["Anonymous functions"]
+    E --> E3["Higher-order functions"]
+    
+    F["⚡ Key Benefits"] --> F1["Code reusability"]
+    F --> F2["Better organization"]
+    F --> F3["Easier testing"]
+    F --> F4["Modular design"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+    style F fill:#fce4ec
+```
+
+---
+
+## 🚀 Your JavaScript Functions Mastery Timeline
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Write a simple function that returns your favorite number
+- [ ] Create a function with two parameters that adds them together
+- [ ] Try converting a traditional function to arrow function syntax
+- [ ] Practice the challenge: explain the difference between functions and methods
+
+### 🎯 **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and review any confusing concepts
+- [ ] Build the math utilities library from the GitHub Copilot challenge
+- [ ] Create a function that uses another function as a parameter
+- [ ] Practice writing functions with default parameters
+- [ ] Experiment with template literals in function return values
+
+### 📅 **Your Week-Long Function Mastery**
+- [ ] Complete the "Fun with Functions" assignment with creativity
+- [ ] Refactor some repetitive code you've written into reusable functions
+- [ ] Build a small calculator using only functions (no global variables)
+- [ ] Practice arrow functions with array methods like `map()` and `filter()`
+- [ ] Create a collection of utility functions for common tasks
+- [ ] Study higher-order functions and functional programming concepts
+
+### 🌟 **Your Month-Long Transformation**
+- [ ] Master advanced function concepts like closures and scope
+- [ ] Build a project that heavily uses function composition
+- [ ] Contribute to open source by improving function documentation
+- [ ] Teach someone else about functions and different syntax styles
+- [ ] Explore functional programming paradigms in JavaScript
+- [ ] Create a personal library of reusable functions for future projects
+
+### 🏆 **Final Functions Champion Check-in**
+
+**Celebrate your function mastery:**
+- What's the most useful function you've created so far?
+- How has learning about functions changed the way you think about code organization?
+- Which function syntax do you prefer and why?
+- What real-world problem would you solve by writing a function?
+
+```mermaid
+journey
+    title Your Function Confidence Evolution
+    section Today
+      Confused by Syntax: 3: You
+      Understanding Basics: 4: You
+      Writing Simple Functions: 5: You
+    section This Week
+      Using Parameters: 4: You
+      Returning Values: 5: You
+      Modern Syntax: 5: You
+    section Next Month
+      Function Composition: 5: You
+      Advanced Patterns: 5: You
+      Teaching Others: 5: You
+```
+
+> 🎉 **You've mastered one of programming's most powerful concepts!** Functions are the building blocks of larger programs. Every application you'll ever build will use functions to organize, reuse, and structure code. You now understand how to package logic into reusable components, making you a more efficient and effective programmer. Welcome to the world of modular programming! 🚀
