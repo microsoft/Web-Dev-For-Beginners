@@ -1,6 +1,6 @@
 
 # Introduction to Programming Languages and Modern Developer Tools
-
+ 
 Hey there, future developer! 👋 Can I tell you something that still gives me chills every single day? You're about to discover that programming isn't just about computers – it's about having actual superpowers to bring your wildest ideas to life!
 
 You know that moment when you're using your favorite app and everything just clicks perfectly? When you tap a button and something absolutely magical happens that makes you go "wow, how did they DO that?" Well, someone just like you – probably sitting in their favorite coffee shop at 2 AM with their third espresso – wrote the code that created that magic. And here's what's going to blow your mind: by the end of this lesson, you'll not only understand how they did it, but you'll be itching to try it yourself!
