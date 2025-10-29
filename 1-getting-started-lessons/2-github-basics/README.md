@@ -11,6 +11,23 @@ We're going to take this journey together, one step at a time. No rushing, no pr
 ![Intro to GitHub](../../sketchnotes/webdev101-github.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
+```mermaid
+journey
+    title Your GitHub Adventure Today
+    section Setup
+      Install Git: 4: You
+      Create Account: 5: You
+      First Repository: 5: You
+    section Master Git
+      Local Changes: 4: You
+      Commits & Pushes: 5: You
+      Branching: 4: You
+    section Collaborate
+      Fork Projects: 4: You
+      Pull Requests: 5: You
+      Open Source: 5: You
+```
+
 ## Pre-Lecture Quiz
 [Pre-lecture quiz](https://ff-quizzes.netlify.app)
 
@@ -103,6 +120,30 @@ Picture this: you're writing an amazing story, and you want to keep track of eve
 I'll be honest – this might feel overwhelming at first. When I started, I thought "Why can't I just save my files like normal?" But trust me on this: once Git clicks for you (and it will!), you'll have one of those lightbulb moments where you think "How did I EVER code without this?" It's like discovering you can fly when you've been walking everywhere your whole life!
 
 Let's say you have a folder locally with some code project and you want to start tracking your progress using git - the version control system. Some people compare using git to writing a love letter to your future self. Reading your commit messages days or weeks or months later you'll be able to recall why you made a decision, or "rollback" a change - that is, when you write good "commit messages".
+
+```mermaid
+flowchart TD
+    A[📁 Your Project Files] --> B{Is it a Git Repository?}
+    B -->|No| C[git init]
+    B -->|Yes| D[Make Changes]
+    C --> D
+    D --> E[git add .]
+    E --> F[git commit -m "message"]
+    F --> G[git push]
+    G --> H[🌟 Code on GitHub!]
+    
+    H --> I{Want to collaborate?}
+    I -->|Yes| J[Fork & Clone]
+    I -->|No| D
+    J --> K[Create Branch]
+    K --> L[Make Changes]
+    L --> M[Pull Request]
+    M --> N[🎉 Contributing!]
+    
+    style A fill:#fff59d
+    style H fill:#c8e6c9
+    style N fill:#ff4081,color:#fff
+```
 
 ### Task: Create Your First Repository!
 
@@ -282,6 +323,32 @@ Let's walk through this adventure together, step by step. Take your time with ea
 
    > 💡 **Tip**: You might also want to adopt a `.gitignore` file to prevent files you don't want to track from showing up on GitHub - like that notes file you store in the same folder but has no place on a public repository. You can find templates for `.gitignore` files at [.gitignore templates](https://github.com/github/gitignore) or create one using [gitignore.io](https://www.toptal.com/developers/gitignore).
 
+### 🧠 **First Repository Check-in: How Did That Feel?**
+
+**Take a moment to celebrate and reflect:**
+- How did it feel to see your code appear on GitHub for the first time?
+- Which step felt the most confusing, and which felt surprisingly easy?
+- Can you explain the difference between `git add`, `git commit`, and `git push` in your own words?
+
+```mermaid
+stateDiagram-v2
+    [*] --> LocalFiles: Create project
+    LocalFiles --> Staged: git add .
+    Staged --> Committed: git commit
+    Committed --> GitHub: git push
+    GitHub --> [*]: Success! 🎉
+    
+    note right of Staged
+        Files ready to save
+    end note
+    
+    note right of Committed
+        Snapshot created
+    end note
+```
+
+> **Remember**: Even experienced developers sometimes forget the exact commands. Having this workflow become muscle memory takes practice - you're doing great!
+
 #### Modern Git workflows
 
 Consider adopting these modern practices:
@@ -315,6 +382,26 @@ Seriously, once you experience the rush of having someone merge your first pull 
 > [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 The main reason for putting things on GitHub was to make it possible to collaborate with other developers.
+
+```mermaid
+flowchart LR
+    A[🔍 Find Project] --> B[🍴 Fork Repository]
+    B --> C[📥 Clone to Local]
+    C --> D[🌿 Create Branch]
+    D --> E[✏️ Make Changes]
+    E --> F[💾 Commit Changes]
+    F --> G[📤 Push Branch]
+    G --> H[🔄 Create Pull Request]
+    H --> I{Maintainer Review}
+    I -->|✅ Approved| J[🎉 Merge!]
+    I -->|❓ Changes Requested| K[📝 Make Updates]
+    K --> F
+    J --> L[🧹 Clean Up Branches]
+    
+    style A fill:#e3f2fd
+    style J fill:#e8f5e8
+    style L fill:#fff3e0
+```
 
 In your repository, navigate to `Insights > Community` to see how your project compares to recommended community standards.
 
@@ -425,6 +512,32 @@ Let's go through a contributor workflow. Assume the contributor has already _for
 
    The above command creates the branch on your forked repo.
 
+### 🤝 **Collaboration Skills Check: Ready to Work with Others?**
+
+**Let's see how you're feeling about collaboration:**
+- Does the idea of forking and pull requests make sense to you now?
+- What's one thing about working with branches that you want to practice more?
+- How comfortable do you feel about contributing to someone else's project?
+
+```mermaid
+mindmap
+  root((Git Collaboration))
+    Branching
+      Feature branches
+      Bug fix branches
+      Experimental work
+    Pull Requests
+      Code review
+      Discussion
+      Testing
+    Best Practices
+      Clear commit messages
+      Small focused changes
+      Good documentation
+```
+
+> **Confidence booster**: Every single developer you admire was once nervous about their first pull request. The GitHub community is incredibly welcoming to newcomers!
+
 1. **Open a PR**. Next, you want to open up a PR. You do that by navigating to the forked repo on GitHub. You will see an indication on GitHub where it asks whether you want to create a new PR, you click that and you are taken to an interface where you can change commit message title, give it a more suitable description. Now the maintainer of the repo you forked will see this PR and _fingers crossed_ they will appreciate and _merge_ your PR. You are now a contributor, yay :)
 
    💡 **Modern tip**: You can also create PRs using GitHub CLI:
@@ -466,6 +579,26 @@ This is your chance to become part of something truly extraordinary. Imagine imp
 Here's what gives me chills every time I think about it: every single tool you've been learning with – your code editor, the frameworks we'll explore, even the browser you're reading this in – started with someone exactly like you making their very first contribution. That brilliant developer who built your favorite VS Code extension? They were once a beginner clicking "create pull request" with shaky hands, just like you're about to do.
 
 And here's the most beautiful part: the open source community is like the internet's biggest group hug. Most projects actively look for newcomers and have issues tagged "good first issue" specifically for people like you! Maintainers genuinely get excited when they see new contributors because they remember their own first steps.
+
+```mermaid
+flowchart TD
+    A[🔍 Explore GitHub] --> B[🏷️ Find "good first issue"]
+    B --> C[📖 Read Contributing Guidelines]
+    C --> D[🍴 Fork Repository]
+    D --> E[💻 Set Up Local Environment]
+    E --> F[🌿 Create Feature Branch]
+    F --> G[✨ Make Your Contribution]
+    G --> H[🧪 Test Your Changes]
+    H --> I[📝 Write Clear Commit]
+    I --> J[📤 Push & Create PR]
+    J --> K[💬 Engage with Feedback]
+    K --> L[🎉 Merged! You're a Contributor!]
+    L --> M[🌟 Find Next Issue]
+    
+    style A fill:#e1f5fe
+    style L fill:#c8e6c9
+    style M fill:#fff59d
+```
 
 You're not just learning to code here – you're preparing to join a global family of builders who wake up every day thinking "How can we make the digital world a little bit better?" Welcome to the club! 🌟
 
@@ -574,5 +707,65 @@ Your mission, should you choose to accept it: Complete the [Introduction to GitH
 - Try using GitHub CLI for your daily Git operations
 - Create a repository with a GitHub Actions workflow
 - Explore GitHub Codespaces by opening this very repository in a cloud-based editor
+
+---
+
+## 🚀 Your GitHub Mastery Timeline
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Star this repository and 3 other projects that interest you
+- [ ] Set up two-factor authentication on your GitHub account
+- [ ] Create a simple README for your first repository
+- [ ] Follow 5 developers whose work inspires you
+
+### 🎯 **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and reflect on your GitHub journey
+- [ ] Set up SSH keys for password-free GitHub authentication
+- [ ] Create your first meaningful commit with a great commit message
+- [ ] Explore GitHub's "Explore" tab to discover trending projects
+- [ ] Practice forking a repository and making a small change
+
+### 📅 **Your Week-Long GitHub Adventure**
+- [ ] Complete the GitHub Skills courses (Introduction to GitHub, Markdown)
+- [ ] Make your first pull request to an open source project
+- [ ] Set up a GitHub Pages site to showcase your work
+- [ ] Join GitHub Discussions on projects you're interested in
+- [ ] Create a repository with proper community standards (README, License, etc.)
+- [ ] Try GitHub Codespaces for cloud-based development
+
+### 🌟 **Your Month-Long Transformation**
+- [ ] Contribute to 3 different open source projects
+- [ ] Mentor someone new to GitHub (pay it forward!)
+- [ ] Set up automated workflows with GitHub Actions
+- [ ] Build a portfolio showcasing your GitHub contributions
+- [ ] Participate in Hacktoberfest or similar community events
+- [ ] Become a maintainer of your own project that others contribute to
+
+### 🎓 **Final GitHub Mastery Check-in**
+
+**Celebrate how far you've come:**
+- What's your favorite thing about using GitHub?
+- Which collaboration feature excites you most?
+- How confident do you feel about contributing to open source now?
+- What's the first project you want to contribute to?
+
+```mermaid
+journey
+    title Your GitHub Confidence Journey
+    section Today
+      Nervous: 3: You
+      Curious: 4: You
+      Excited: 5: You
+    section This Week
+      Practicing: 4: You
+      Contributing: 5: You
+      Connecting: 5: You
+    section Next Month
+      Collaborating: 5: You
+      Leading: 5: You
+      Inspiring Others: 5: You
+```
+
+> 🌍 **Welcome to the global developer community!** You now have the tools to collaborate with millions of developers worldwide. Your first contribution might seem small, but remember - every major open source project started with someone making their very first commit. The question isn't if you'll make an impact, but what amazing project will benefit from your unique perspective first! 🚀
 
 Remember: every expert was once a beginner. You've got this! 💪
