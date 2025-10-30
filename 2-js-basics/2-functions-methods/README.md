@@ -40,14 +40,14 @@ mindmap
   root((JavaScript Functions))
     Basic Concepts
       Declaration
-        function name() {}
-        const name = () => {}
+        Traditional syntax
+        Arrow function syntax
       Calling
-        functionName()
+        Using parentheses
         Parentheses required
     Parameters
       Input Values
-        function(param1, param2)
+        Multiple parameters
         Default values
       Arguments
         Values passed in

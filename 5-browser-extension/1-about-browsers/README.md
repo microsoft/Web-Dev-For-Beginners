@@ -271,20 +271,6 @@ Before beginning development, let's gather the required resources and dependenci
 
 Understanding the project structure helps organize development work efficiently. Like how the Library of Alexandria was organized for easy knowledge retrieval, a well-structured codebase makes development more efficient:
 
-```mermaid
-fileStructure
-    project-root
-        dist
-            manifest.json
-            index.html
-            background.js
-            main.js
-        src
-            index.js
-        package.json
-        webpack.config.js
-```
-
 ```
 project-root/
 ├── dist/                    # Built extension files
@@ -292,8 +278,10 @@ project-root/
 │   ├── index.html           # User interface markup
 │   ├── background.js        # Background script functionality
 │   └── main.js              # Compiled JavaScript bundle
-└── src/                     # Source development files
-    └── index.js             # Your main JavaScript code
+├── src/                     # Source development files
+│   └── index.js             # Your main JavaScript code
+├── package.json             # Project dependencies and scripts
+└── webpack.config.js        # Build configuration
 ```
 
 **Breaking down what each file accomplishes:**

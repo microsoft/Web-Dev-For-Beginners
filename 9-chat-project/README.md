@@ -220,7 +220,6 @@ client = OpenAI(
     api_key=os.environ["GITHUB_TOKEN"],
 )
 
-```python
 response = client.chat.completions.create(
     messages=[
         {
@@ -378,8 +377,8 @@ quadrantChart
     Documentation Bot: [0.2, 0.3]
     Customer Service: [0.4, 0.4]
     General Assistant: [0.7, 0.5]
-    Creative Writer: [1.1, 0.9]
-    Brainstorming Tool: [1.3, 0.8]
+    Creative Writer: [0.9, 0.9]
+    Brainstorming Tool: [0.8, 0.8]
 ```
 
 **Understanding why these parameters matter**: Different applications need different types of responses. A customer service bot should be consistent and factual (low temperature), while a creative writing assistant should be imaginative and varied (high temperature). Understanding these parameters gives you control over your AI's personality and response style.
