@@ -802,7 +802,7 @@ You've covered a lot of ground today, and that's something to be proud of! Now c
 
 ## 🚀 Your Programming Journey Timeline
 
-### 🕐 **What You Can Do in the Next 5 Minutes**
+### ⚡ **What You Can Do in the Next 5 Minutes**
 - [ ] Bookmark 2-3 programming language websites that caught your attention
 - [ ] Download Visual Studio Code if you haven't already
 - [ ] Open your browser's DevTools (F12) and click around any website

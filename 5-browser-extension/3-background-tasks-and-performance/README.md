@@ -1,5 +1,22 @@
 # Browser Extension Project Part 3: Learn about Background Tasks and Performance
 
+```mermaid
+journey
+    title Your Performance Optimization Journey
+    section Foundation
+      Learn browser tools: 3: Student
+      Understand profiling: 4: Student
+      Identify bottlenecks: 4: Student
+    section Extension Features
+      Build color system: 4: Student
+      Create background tasks: 5: Student
+      Update icons dynamically: 5: Student
+    section Optimization
+      Monitor performance: 5: Student
+      Debug issues: 4: Student
+      Polish experience: 5: Student
+```
+
 Ever wonder what makes some browser extensions feel snappy and responsive while others seem sluggish? The secret lies in what's happening behind the scenes. While users click around your extension's interface, there's a whole world of background processes quietly managing data fetching, icon updates, and system resources.
 
 This is our final lesson in the browser extension series, and we're going to make your carbon footprint tracker work smoothly. You'll add dynamic icon updates and learn how to spot performance issues before they become problems. It's like tuning a race car - small optimizations can make a huge difference in how everything runs.
@@ -16,6 +33,36 @@ In our previous lessons, you built a form, connected it to an API, and tackled a
 
 Now we need to add the finishing touches - like making that extension icon change colors based on the carbon data. This reminds me of how NASA had to optimize every system on the Apollo spacecraft. They couldn't afford any wasted cycles or memory because lives depended on performance. While our browser extension isn't quite that critical, the same principles apply - efficient code creates better user experiences.
 
+```mermaid
+mindmap
+  root((Performance & Background Tasks))
+    Browser Performance
+      Rendering Pipeline
+      Asset Optimization
+      DOM Manipulation
+      JavaScript Execution
+    Profiling Tools
+      Developer Tools
+      Performance Tab
+      Timeline Analysis
+      Bottleneck Detection
+    Extension Architecture
+      Background Scripts
+      Content Scripts
+      Message Passing
+      Icon Management
+    Optimization Strategies
+      Code Splitting
+      Lazy Loading
+      Caching
+      Resource Compression
+    Visual Feedback
+      Dynamic Icons
+      Color Coding
+      Real-time Updates
+      User Experience
+```
+
 ## Web Performance Basics
 
 When your code runs efficiently, people can actually *feel* the difference. You know that moment when a page loads instantly or an animation flows smoothly? That's good performance at work.
@@ -27,6 +74,38 @@ Performance isn't just about speed - it's about making web experiences that feel
 The topic of how to make your websites blazingly fast on all kinds of devices, for all kinds of users, in all kinds of situations, is unsurprisingly vast. Here are some points to keep in mind as you build either a standard web project or a browser extension.
 
 The first step in optimizing your site is understanding what's actually happening under the hood. Fortunately, your browser comes with powerful detective tools built right in.
+
+```mermaid
+flowchart LR
+    A[HTML] --> B[Parse]
+    B --> C[DOM Tree]
+    D[CSS] --> E[Parse]
+    E --> F[CSSOM]
+    G[JavaScript] --> H[Execute]
+    
+    C --> I[Render Tree]
+    F --> I
+    H --> I
+    
+    I --> J[Layout]
+    J --> K[Paint]
+    K --> L[Composite]
+    L --> M[Display]
+    
+    subgraph "Critical Rendering Path"
+        N["1. Parse HTML"]
+        O["2. Parse CSS"]
+        P["3. Execute JS"]
+        Q["4. Build Render Tree"]
+        R["5. Layout Elements"]
+        S["6. Paint Pixels"]
+        T["7. Composite Layers"]
+    end
+    
+    style M fill:#e8f5e8
+    style I fill:#fff3e0
+    style H fill:#ffebee
+```
 
 To open Developer Tools in Edge, click those three dots in the top right corner, then go to More Tools > Developer Tools. Or use the keyboard shortcut: `Ctrl` + `Shift` + `I` on Windows or `Option` + `Command` + `I` on Mac. Once you're there, click on the Performance tab - this is where you'll do your investigation.
 
@@ -55,6 +134,39 @@ Check the Event Log pane to see if any event took longer than 15 ms:
 ![Edge event log](./images/log.png)
 
 ✅ Get to know your profiler! Open the developer tools on this site and see if there are any bottlenecks. What's the slowest-loading asset? The fastest?
+
+```mermaid
+flowchart TD
+    A[Open DevTools] --> B[Navigate to Performance Tab]
+    B --> C[Click Record Button]
+    C --> D[Perform Actions]
+    D --> E[Stop Recording]
+    E --> F{Analyze Results}
+    
+    F --> G[Check Timeline]
+    F --> H[Review Network]
+    F --> I[Examine Scripts]
+    F --> J[Identify Paint Events]
+    
+    G --> K{Long Tasks?}
+    H --> L{Large Assets?}
+    I --> M{Render Blocking?}
+    J --> N{Expensive Paints?}
+    
+    K -->|Yes| O[Optimize JavaScript]
+    L -->|Yes| P[Compress Assets]
+    M -->|Yes| Q[Add Async/Defer]
+    N -->|Yes| R[Simplify Styles]
+    
+    O --> S[Test Again]
+    P --> S
+    Q --> S
+    R --> S
+    
+    style A fill:#e1f5fe
+    style F fill:#fff3e0
+    style S fill:#e8f5e8
+```
 
 ## What to Look For When Profiling
 
@@ -90,6 +202,22 @@ Let's talk about the usual suspects - the performance troublemakers that tend to
 
 ✅ Try some sites on a [Site Speed Test website](https://www.webpagetest.org/) to learn more about the common checks that are done to determine site performance.
 
+### 🔄 **Pedagogical Check-in**
+**Performance Understanding**: Before building extension features, ensure you can:
+- ✅ Explain the critical rendering path from HTML to pixels
+- ✅ Identify common performance bottlenecks in web applications
+- ✅ Use browser developer tools to profile page performance
+- ✅ Understand how asset size and DOM complexity affect speed
+
+**Quick Self-Test**: What happens when you have render-blocking JavaScript?
+*Answer: The browser must download and execute the script before it can continue parsing HTML and rendering the page*
+
+**Real-World Performance Impact**:
+- **100ms delay**: Users notice the slowdown
+- **1 second delay**: Users start losing focus
+- **3+ seconds**: 40% of users abandon the page
+- **Mobile networks**: Performance matters even more
+
 Now that you have an idea of how the browser renders the assets you send to it, let's look at the last few things you need to do to complete your extension:
 
 ### Create a function to calculate color
@@ -97,6 +225,32 @@ Now that you have an idea of how the browser renders the assets you send to it, 
 Now we'll create a function that turns numerical data into meaningful colors. Think of it like a traffic light system - green for clean energy, red for high carbon intensity.
 
 This function will take the CO2 data from our API and determine what color best represents the environmental impact. It's similar to how scientists use color-coding in heat maps to visualize complex data patterns - from ocean temperatures to star formation. Let's add this to `/src/index.js`, right after those `const` variables we set up earlier:
+
+```mermaid
+flowchart LR
+    A[CO2 Value] --> B[Find Closest Scale Point]
+    B --> C[Get Scale Index]
+    C --> D[Map to Color]
+    D --> E[Send to Background]
+    
+    subgraph "Color Scale"
+        F["0-150: Green (Clean)"]
+        G["150-600: Yellow (Moderate)"]
+        H["600-750: Orange (High)"]
+        I["750+: Brown (Very High)"]
+    end
+    
+    subgraph "Message Passing"
+        J[Content Script]
+        K[chrome.runtime.sendMessage]
+        L[Background Script]
+        M[Icon Update]
+    end
+    
+    style A fill:#e1f5fe
+    style D fill:#e8f5e8
+    style E fill:#fff3e0
+```
 
 ```javascript
 function calculateColor(value) {
@@ -143,6 +297,25 @@ The `chrome.runtime` [API](https://developer.chrome.com/extensions/runtime) is l
 - **Makes** message passing between scripts super easy
 
 ✅ If you're developing this browser extension for Edge, it might surprise you that you're using a chrome API. The newer Edge browser versions run on the Chromium browser engine, so you can leverage these tools.
+
+```mermaid
+architecture-beta
+    group browser(logos:chrome)[Browser]
+    
+    service popup(logos:html5)[Popup UI] in browser
+    service content(logos:javascript)[Content Script] in browser
+    service background(database)[Background Script] in browser
+    service api(logos:api)[External API] in browser
+    
+    popup:R -- L:content
+    content:R -- L:background
+    background:T -- B:api
+    content:T -- B:api
+    
+    junction junctionCenter in browser
+    popup:R -- L:junctionCenter
+    junctionCenter:R -- L:background
+```
 
 > **Pro Tip**: If you want to profile a browser extension, launch the dev tools from within the extension itself, as it is its own separate browser instance. This gives you access to extension-specific performance metrics.
 
@@ -222,6 +395,36 @@ function drawIcon(value) {
 
 ✅ You'll learn more about the Canvas API in the [Space Game lessons](../../6-space-game/2-drawing-to-canvas/README.md).
 
+```mermaid
+sequenceDiagram
+    participant CS as Content Script
+    participant BG as Background Script
+    participant Canvas as OffscreenCanvas
+    participant Browser as Browser Icon
+    
+    CS->>BG: sendMessage({action: 'updateIcon', color})
+    BG->>Canvas: new OffscreenCanvas(200, 200)
+    Canvas->>Canvas: getContext('2d')
+    Canvas->>Canvas: beginPath() + fillStyle + arc()
+    Canvas->>Canvas: fill() + getImageData()
+    Canvas->>BG: Return image data
+    BG->>Browser: chrome.action.setIcon(imageData)
+    Browser->>Browser: Update toolbar icon
+```
+
+### 🔄 **Pedagogical Check-in**
+**Complete Extension Understanding**: Verify your mastery of the entire system:
+- ✅ How does message passing work between different extension scripts?
+- ✅ Why do we use OffscreenCanvas instead of regular Canvas for performance?
+- ✅ What role does the Chrome Runtime API play in extension architecture?
+- ✅ How does the color calculation algorithm map data to visual feedback?
+
+**Performance Considerations**: Your extension now demonstrates:
+- **Efficient messaging**: Clean communication between script contexts
+- **Optimized rendering**: OffscreenCanvas prevents UI blocking
+- **Real-time updates**: Dynamic icon changes based on live data
+- **Memory management**: Proper cleanup and resource handling
+
 **Time to test your extension:**
 - **Build** everything with `npm run build`
 - **Reload** your extension in the browser (don't forget this step)
@@ -259,6 +462,126 @@ Here's an interesting detective mission: pick a few open source websites that ha
 Consider signing up for a [performance newsletter](https://perf.email/)
 
 Investigate some of the ways that browsers gauge web performance by looking through the performance tabs in their web tools. Do you find any major differences?
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Open browser Task Manager (Shift+Esc in Chrome) to see extension resource usage
+- [ ] Use DevTools Performance tab to record and analyze webpage performance
+- [ ] Check the browser's Extensions page to see which extensions impact startup time
+- [ ] Try disabling extensions temporarily to see performance differences
+
+### 🎯 **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and understand performance concepts
+- [ ] Implement a background script for your browser extension
+- [ ] Learn to use browser.alarms for efficient background tasks
+- [ ] Practice message passing between content scripts and background scripts
+- [ ] Measure and optimize your extension's resource usage
+
+### 📅 **Your Week-Long Performance Journey**
+- [ ] Complete a high-performance browser extension with background functionality
+- [ ] Master service workers and modern extension architecture
+- [ ] Implement efficient data synchronization and caching strategies
+- [ ] Learn advanced debugging techniques for extension performance
+- [ ] Optimize your extension for both functionality and resource efficiency
+- [ ] Create comprehensive tests for extension performance scenarios
+
+### 🌟 **Your Month-Long Optimization Mastery**
+- [ ] Build enterprise-grade browser extensions with optimal performance
+- [ ] Learn about Web Workers, Service Workers, and modern web performance
+- [ ] Contribute to open source projects focused on performance optimization
+- [ ] Master browser internals and advanced debugging techniques
+- [ ] Create performance monitoring tools and best practices guides
+- [ ] Become a performance expert who helps optimize web applications
+
+## 🎯 Your Browser Extension Mastery Timeline
+
+```mermaid
+timeline
+    title Complete Extension Development Progression
+    
+    section Performance Fundamentals (20 minutes)
+        Browser Profiling: DevTools mastery
+                         : Timeline analysis
+                         : Bottleneck identification
+                         : Critical rendering path
+        
+    section Background Tasks (25 minutes)
+        Extension Architecture: Message passing
+                              : Background scripts
+                              : Runtime API usage
+                              : Cross-context communication
+        
+    section Visual Feedback (30 minutes)
+        Dynamic UI: Color calculation algorithms
+                  : Canvas API integration
+                  : Icon generation
+                  : Real-time updates
+        
+    section Performance Optimization (35 minutes)
+        Efficient Code: Async operations
+                      : Memory management
+                      : Resource cleanup
+                      : Performance monitoring
+        
+    section Production Ready (45 minutes)
+        Polish & Testing: Cross-browser compatibility
+                        : Error handling
+                        : User experience
+                        : Performance validation
+        
+    section Advanced Features (1 week)
+        Extension Ecosystem: Chrome Web Store
+                           : User feedback
+                           : Analytics integration
+                           : Update management
+        
+    section Professional Development (2 weeks)
+        Enterprise Extensions: Team collaboration
+                             : Code reviews
+                             : CI/CD pipelines
+                             : Security audits
+        
+    section Expert Mastery (1 month)
+        Platform Expertise: Advanced Chrome APIs
+                          : Performance optimization
+                          : Architecture patterns
+                          : Open source contribution
+```
+
+### 🛠️ Your Complete Extension Development Toolkit
+
+After completing this trilogy, you now have mastered:
+- **Browser Architecture**: Deep understanding of how extensions integrate with browser systems
+- **Performance Profiling**: Ability to identify and fix bottlenecks using developer tools
+- **Async Programming**: Modern JavaScript patterns for responsive, non-blocking operations
+- **API Integration**: External data fetching with authentication and error handling
+- **Visual Design**: Dynamic UI updates and Canvas-based graphics generation
+- **Message Passing**: Inter-script communication in extension architectures
+- **User Experience**: Loading states, error handling, and intuitive interactions
+- **Production Skills**: Testing, debugging, and optimization for real-world deployment
+
+**Real-World Applications**: Your extension development skills apply directly to:
+- **Progressive Web Apps**: Similar architecture and performance patterns
+- **Electron Desktop Apps**: Cross-platform applications using web technologies
+- **Mobile Hybrid Apps**: Cordova/PhoneGap development using web APIs
+- **Enterprise Web Applications**: Complex dashboard and productivity tools
+- **Chrome DevTools Extensions**: Advanced developer tooling and debugging
+- **Web API Integration**: Any application that communicates with external services
+
+**Professional Impact**: You can now:
+- **Build** production-ready browser extensions from concept to deployment
+- **Optimize** web application performance using industry-standard profiling tools
+- **Architect** scalable systems with proper separation of concerns
+- **Debug** complex async operations and cross-context communication
+- **Contribute** to open source extension projects and browser standards
+
+**Next Level Opportunities**:
+- **Chrome Web Store Developer**: Publish extensions for millions of users
+- **Web Performance Engineer**: Specialize in optimization and user experience
+- **Browser Platform Developer**: Contribute to browser engine development
+- **Extension Framework Creator**: Build tools that help other developers
+- **Developer Relations**: Share knowledge through teaching and content creation
+
+🌟 **Achievement Unlocked**: You've built a complete, functional browser extension that demonstrates professional development practices and modern web standards!
 
 ## Assignment
 
