@@ -85,8 +85,8 @@ The canvas uses Cartesian coordinates with an x-axis (horizontal) and y-axis (ve
 ```mermaid
 quadrantChart
     title Canvas Coordinate System
-    x-axis Left --> Right (X increases)
-    y-axis Top --> Bottom (Y increases)
+    x-axis Left --> Right
+    y-axis Top --> Bottom
     quadrant-1 Quadrant 1
     quadrant-2 Quadrant 2  
     quadrant-3 Quadrant 3

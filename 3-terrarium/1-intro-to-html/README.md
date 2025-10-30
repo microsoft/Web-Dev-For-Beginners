@@ -400,29 +400,22 @@ Insert this markup above the last `</div>` tag (before the closing tag of the pa
 > 🤔 **Notice Something?**: Even though you added this markup, you don't see anything new on the page! This perfectly illustrates how HTML provides structure while CSS provides appearance. These `<div>` elements exist but have no visual styling yet – that's coming in the next lesson!
 
 ```mermaid
-gitgraph
-    commit id: "HTML Document"
-    branch head
-    checkout head
-    commit id: "<title>"
-    commit id: "<meta charset>"
-    commit id: "<meta viewport>"
-    checkout main
-    branch body
-    checkout body
-    commit id: "<h1>My Terrarium</h1>"
-    branch containers
-    checkout containers
-    commit id: "<div id='page'>"
-    commit id: "Left Container (7 plants)"
-    commit id: "Right Container (7 plants)"
-    commit id: "Terrarium Structure"
-    checkout body
-    merge containers
-    checkout main
-    merge head
-    merge body
-    commit id: "Complete HTML Page"
+flowchart TD
+    A[HTML Document] --> B[Document Head]
+    A --> C[Document Body]
+    B --> D[Title Element]
+    B --> E[Meta Charset]
+    B --> F[Meta Viewport]
+    C --> G[Main Heading]
+    C --> H[Page Container]
+    H --> I[Left Container with 7 plants]
+    H --> J[Right Container with 7 plants]
+    H --> K[Terrarium Structure]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style H fill:#f3e5f5
 ```
 
 ### 🔄 **Pedagogical Check-in**

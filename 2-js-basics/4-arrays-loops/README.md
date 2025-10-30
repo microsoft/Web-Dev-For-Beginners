@@ -42,7 +42,7 @@ mindmap
   root((Data Processing))
     Arrays
       Structure
-        [ ] square brackets
+        Square brackets syntax
         Zero-based indexing
         Dynamic sizing
       Operations
@@ -50,9 +50,9 @@ mindmap
         shift/unshift
         indexOf/includes
       Types
-        Numbers [1,2,3]
-        Strings ["a","b"]
-        Mixed [1,"a",true]
+        Numbers array
+        Strings array
+        Mixed types
     Loops
       For Loops
         Counting iterations

@@ -40,8 +40,8 @@ mindmap
   root((JavaScript Functions))
     Basic Concepts
       Declaration
-        function name() {}
-        const name = () => {}
+        function name()
+        const name = arrow function
       Calling
         functionName()
         Parentheses required

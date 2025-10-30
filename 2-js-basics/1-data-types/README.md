@@ -338,7 +338,7 @@ flowchart TD
     A --> D["Template Literals"]
     
     B --> B1["'Hello World'"]
-    C --> C1['"Hello World"']
+    C --> C1["\"Hello World\""]
     D --> D1["`Hello \${name}`"]
     
     E["String Operations"] --> F["Concatenation"]
@@ -509,7 +509,7 @@ graph TD
     C --> C1["42, 3.14, -5"]
     C --> C2["+ - * / %"]
     
-    D --> D1["'quotes' or \"quotes\""]
+    D --> D1["'quotes' or \\\"quotes\\\""]
     D --> D2["`template literals`"]
     
     E --> E1["true or false"]
