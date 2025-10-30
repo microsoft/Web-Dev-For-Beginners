@@ -92,7 +92,7 @@ quadrantChart
     quadrant-3 Quadrant 3
     quadrant-4 Quadrant 4
     
-    Origin (0,0): [0.1, 0.1]
+    Origin Point: [0.1, 0.1]
     Hero Center: [0.5, 0.8]
     Enemy Formation: [0.3, 0.2]
     Power-up: [0.7, 0.6]
