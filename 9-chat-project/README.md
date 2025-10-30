@@ -220,7 +220,6 @@ client = OpenAI(
     api_key=os.environ["GITHUB_TOKEN"],
 )
 
-```python
 response = client.chat.completions.create(
     messages=[
         {
