@@ -41,7 +41,7 @@ mindmap
     Basic Concepts
       Declaration
         function name()
-        const name = arrow function
+        const name equals arrow function
       Calling
         functionName()
         Parentheses required
