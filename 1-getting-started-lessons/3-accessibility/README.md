@@ -3,6 +3,23 @@
 ![All About Accessibility](../../sketchnotes/webdev101-a11y.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
+```mermaid
+journey
+    title Your Accessibility Learning Adventure
+    section Foundation
+      Understanding Users: 5: You
+      Testing Tools: 4: You
+      POUR Principles: 5: You
+    section Build Skills
+      Semantic HTML: 4: You
+      Visual Design: 5: You
+      ARIA Techniques: 4: You
+    section Master Practice
+      Keyboard Navigation: 5: You
+      Form Accessibility: 4: You
+      Real-world Testing: 5: You
+```
+
 ## Pre-Lecture Quiz
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/)
 
@@ -16,7 +33,32 @@ Ever notice those curb cuts at street corners? They were originally designed for
 
 In this lesson, we're going to explore how to create websites that truly work for everyone, no matter how they browse the web. You'll discover practical techniques that are already built into web standards, get hands-on with testing tools, and see how accessibility makes your sites more usable for all users.
 
-By the end of this lesson, you'll have the confidence to make accessibility a natural part of your development workflow. Ready to explore how thoughtful design choices can open up the web to billions of users? Let's dive in! 
+By the end of this lesson, you'll have the confidence to make accessibility a natural part of your development workflow. Ready to explore how thoughtful design choices can open up the web to billions of users? Let's dive in!
+
+```mermaid
+mindmap
+  root((Web Accessibility))
+    Users
+      Screen readers
+      Keyboard navigation
+      Voice control
+      Magnification
+    Technologies
+      HTML semantics
+      ARIA attributes
+      CSS focus indicators
+      Keyboard events
+    Benefits
+      Wider audience
+      Better SEO
+      Legal compliance
+      Universal design
+    Testing
+      Automated tools
+      Manual testing
+      User feedback
+      Real assistive tech
+```
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
@@ -56,18 +98,26 @@ Here's some good news—effective accessibility testing doesn't have to be overw
 **Essential manual testing workflow:**
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
+flowchart TD
+    A[🚀 Start Testing] --> B{⌨️ Keyboard Navigation}
     B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
+    C --> D{🎧 Screen Reader Testing}
     D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
+    E --> F{🔍 Zoom Testing}
     F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
+    G --> H{🎨 Color/Contrast Check}
     H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
+    I --> J{👁️ Focus Management}
     J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+    K --> L[✅ Testing Complete]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
 ```
 
 **Step-by-step testing checklist:**
@@ -146,6 +196,22 @@ The most effective accessibility testing combines multiple approaches. No single
 
 > 🎯 **Testing Goal**: Aim for a Lighthouse accessibility score of 95+ as your baseline. Remember, automated tools only catch about 30-40% of accessibility issues—manual testing is still essential!
 
+### 🧠 **Testing Skills Check: Ready to Find Issues?**
+
+**Let's see how you're feeling about accessibility testing:**
+- Which testing method seems most approachable to you right now?
+- Can you imagine using keyboard-only navigation for a full day?
+- What's one accessibility barrier you've personally experienced online?
+
+```mermaid
+pie title "Accessibility Issues Caught by Different Methods"
+    "Automated Tools" : 35
+    "Manual Testing" : 40
+    "User Feedback" : 25
+```
+
+> **Confidence booster**: Professional accessibility testers use this exact combination of methods. You're learning industry-standard practices!
+
 ## Building Accessibility from the Ground Up
 
 The key to accessibility success is building it into your foundation from day one. I know it's tempting to think "I'll add accessibility later," but that's like trying to add a ramp to a house after it's already built. Possible? Yes. Easy? Not really.
@@ -157,6 +223,23 @@ Think of accessibility like planning a house—it's much easier to include wheel
 The Web Content Accessibility Guidelines (WCAG) are built around four fundamental principles that spell out POUR. Don't worry—these aren't stuffy academic concepts! They're actually practical guidelines for making content that works for everyone.
 
 Once you get the hang of POUR, making accessibility decisions becomes way more intuitive. It's like having a mental checklist that guides your design choices. Let's break it down:
+
+```mermaid
+flowchart LR
+    A[🔍 PERCEIVABLE<br/>Can users sense it?] --> B[🎮 OPERABLE<br/>Can users use it?]
+    B --> C[📖 UNDERSTANDABLE<br/>Can users get it?]
+    C --> D[💪 ROBUST<br/>Does it work everywhere?]
+    
+    A1[Alt text<br/>Captions<br/>Contrast] --> A
+    B1[Keyboard access<br/>No seizures<br/>Time limits] --> B
+    C1[Clear language<br/>Predictable<br/>Error help] --> C
+    D1[Valid code<br/>Compatible<br/>Future-proof] --> D
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+```
 
 **🔍 Perceivable**: Information must be presentable in ways users can perceive through their available senses
 
@@ -184,11 +267,38 @@ Once you get the hang of POUR, making accessibility decisions becomes way more i
 
 **💪 Robust**: Content must work reliably across different technologies and assistive devices
 
-- Use valid, semantic HTML as your foundation
-- Ensure compatibility with current and future assistive technologies
-- Follow web standards and best practices for markup
-- Test across different browsers, devices, and assistive tools
-- Structure content so it degrades gracefully when advanced features aren't supported
+- **Use valid, semantic HTML as your foundation**
+- **Ensure compatibility with current and future assistive technologies**
+- **Follow web standards and best practices for markup**
+- **Test across different browsers, devices, and assistive tools**
+- **Structure content so it degrades gracefully when advanced features aren't supported**
+
+### 🎯 **POUR Principles Check: Making It Stick**
+
+**Quick reflection on the foundations:**
+- Can you think of a website feature that fails each POUR principle?
+- Which principle feels most natural to you as a developer?
+- How might these principles improve design for everyone, not just disabled users?
+
+```mermaid
+quadrantChart
+    title POUR Principles Impact Matrix
+    x-axis Low Effort --> High Effort
+    y-axis Low Impact --> High Impact
+    quadrant-1 Quick Wins
+    quadrant-2 Major Projects
+    quadrant-3 Consider Later
+    quadrant-4 Strategic Focus
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
+
+> **Remember**: Start with high-impact, low-effort improvements. Semantic HTML and alt text give you the biggest accessibility boost for the least effort!
 
 ## Creating Accessible Visual Design
 
@@ -291,6 +401,28 @@ Semantic HTML is like giving assistive technologies a GPS system for your websit
 
 Here's an analogy that really clicked for me: semantic HTML is the difference between a well-organized library with clear categories and helpful signs versus a warehouse where books are scattered randomly. Both places have the same books, but which one would you rather try to find something in? Exactly!
 
+```mermaid
+flowchart TD
+    A[🏠 HTML Document] --> B[📰 header]
+    A --> C[🧭 nav]
+    A --> D[📄 main]
+    A --> E[📋 footer]
+    
+    B --> B1[h1: Site Name<br/>Logo & branding]
+    C --> C1[ul: Navigation<br/>Primary links]
+    D --> D1[article: Content<br/>section: Subsections]
+    D --> D2[aside: Sidebar<br/>Related content]
+    E --> E1[nav: Footer links<br/>Copyright info]
+    
+    D1 --> D1a[h1: Page title<br/>h2: Major sections<br/>h3: Subsections]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+
 **Building blocks of accessible page structure:**
 
 ```html
@@ -365,6 +497,33 @@ Here's an analogy that really clicked for me: semantic HTML is the difference be
 - **Context awareness**: Understand relationships between content sections
 
 > 🎯 **Quick Test**: Try navigating your site with a screen reader using landmark shortcuts (D for landmark, H for heading, K for link in NVDA/JAWS). Does the navigation make sense?
+
+### 🏗️ **Semantic HTML Mastery Check: Building Strong Foundations**
+
+**Let's evaluate your semantic understanding:**
+- Can you identify the landmarks on a webpage just by looking at the HTML?
+- How would you explain the difference between `<section>` and `<div>` to a friend?
+- What's the first thing you'd check if a screen reader user reported navigation problems?
+
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: div soup
+    UnsementicHTML --> SemanticHTML: Add landmarks
+    SemanticHTML --> AccessibleHTML: Test with AT
+    AccessibleHTML --> [*]: User success!
+    
+    note right of UnsementicHTML
+        Screen readers lost
+        Keyboard nav broken
+    end note
+    
+    note right of AccessibleHTML
+        Clear navigation
+        Efficient browsing
+    end note
+```
+
+> **Pro insight**: Good semantic HTML solves about 70% of accessibility issues automatically. Master this foundation and you're well on your way!
 
 ✅ **Audit your semantic structure**: Use the Accessibility panel in your browser's DevTools to view the accessibility tree and ensure your markup creates a logical structure.
 
@@ -808,6 +967,28 @@ ARIA is powerful but requires careful implementation. Following these guidelines
 
 **🛡️ Core principles:**
 
+```mermaid
+flowchart TD
+    A[🚀 Start with semantic HTML] --> B{Does HTML provide needed semantics?}
+    B -->|Yes| C[✅ Use HTML only]
+    B -->|No| D[Consider ARIA enhancement]
+    D --> E{Can you achieve it with simpler means?}
+    E -->|Yes| F[🔄 Simplify approach]
+    E -->|No| G[📝 Implement ARIA carefully]
+    G --> H[🧪 Test with real AT]
+    H --> I{Works as expected?}
+    I -->|No| J[🔧 Debug and fix]
+    I -->|Yes| K[✅ Success!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+
 1. **Semantic HTML first**: Always prefer `<button>` over `<div role="button">`
 2. **Don't break semantics**: Never override existing HTML meaning (avoid `<h1 role="button">`)
 3. **Maintain keyboard accessibility**: All interactive ARIA elements must be fully keyboard accessible
@@ -837,6 +1018,23 @@ graph TD
 - **Missing keyboard support**: ARIA roles without corresponding keyboard interactions
 
 > 💡 **Testing Resources**: Use tools like [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) for automated ARIA validation, but always test with real screen readers for the complete experience.
+
+### 🎭 **ARIA Skills Check: Ready for Complex Interactions?**
+
+**Gauge your ARIA confidence:**
+- When would you choose ARIA over semantic HTML? (Hint: almost never!)
+- Can you explain why `<div role="button">` is usually worse than `<button>`?
+- What's the most important thing to remember about ARIA testing?
+
+```mermaid
+pie title "Common ARIA Usage Patterns"
+    "Labels & Descriptions" : 40
+    "Live Regions" : 25
+    "Widget States" : 20
+    "Complex Controls" : 15
+```
+
+> **Key insight**: Most ARIA usage is for labeling and describing elements. Complex widget patterns are much less common than you might think!
 
 ✅ **Learn from experts**: Study the [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) for battle-tested patterns and implementations of complex interactive widgets.
 
@@ -920,6 +1118,25 @@ Every image on your website serves a purpose. Understanding that purpose helps y
 ## Keyboard navigation and focus management
 
 Many users navigate the web entirely with their keyboards. This includes people with motor disabilities, power users who find keyboards faster than mice, and anyone whose mouse has stopped working. Making sure your site works well with keyboard input is essential and often makes your site more efficient for everyone.
+
+```mermaid
+flowchart LR
+    A[⌨️ Keyboard Navigation] --> B[Tab Order]
+    A --> C[Focus Indicators]
+    A --> D[Skip Links]
+    A --> E[Keyboard Shortcuts]
+    
+    B --> B1[Logical sequence<br/>All interactive elements<br/>No tab traps]
+    C --> C1[Visible outlines<br/>High contrast<br/>Clear boundaries]
+    D --> D1[Skip to main<br/>Skip to nav<br/>Bypass repetitive]
+    E --> E1[Escape to close<br/>Enter to activate<br/>Arrows in groups]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 
 ### Essential keyboard navigation patterns
 
@@ -1220,3 +1437,63 @@ Many governments have laws regarding accessibility requirements. Read up on your
 [Analyze a non-accessible web site](assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
+
+---
+
+## 🚀 Your Accessibility Mastery Timeline
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Install axe DevTools extension in your browser
+- [ ] Run a Lighthouse accessibility audit on your favorite website
+- [ ] Try navigating any website using only the Tab key
+- [ ] Test your browser's built-in screen reader (Narrator/VoiceOver)
+
+### 🎯 **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and reflect on accessibility insights
+- [ ] Practice writing meaningful alt text for 10 different images
+- [ ] Audit a website's heading structure using HeadingsMap extension
+- [ ] Fix accessibility issues found in the challenge HTML
+- [ ] Test color contrast on your current project with WebAIM's tool
+
+### 📅 **Your Week-Long Accessibility Journey**
+- [ ] Complete the assignment analyzing a non-accessible website
+- [ ] Set up your development environment with accessibility testing tools
+- [ ] Practice keyboard navigation on 5 different complex websites
+- [ ] Build a simple form with proper labels, error handling, and ARIA
+- [ ] Join an accessibility community (A11y Slack, WebAIM forum)
+- [ ] Watch real users with disabilities navigate websites (YouTube has great examples)
+
+### 🌟 **Your Month-Long Transformation**
+- [ ] Integrate accessibility testing into your development workflow
+- [ ] Contribute to an open source project by fixing accessibility issues
+- [ ] Conduct usability testing with someone who uses assistive technology
+- [ ] Build an accessible component library for your team
+- [ ] Advocate for accessibility in your workplace or community
+- [ ] Mentor someone new to accessibility concepts
+
+### 🏆 **Final Accessibility Champion Check-in**
+
+**Celebrate your accessibility journey:**
+- What's the most surprising thing you learned about how people use the web?
+- Which accessibility principle resonates most with your development style?
+- How has learning about accessibility changed your perspective on design?
+- What's the first accessibility improvement you want to make on a real project?
+
+```mermaid
+journey
+    title Your Accessibility Confidence Evolution
+    section Today
+      Overwhelmed: 3: You
+      Curious: 4: You
+      Motivated: 5: You
+    section This Week
+      Practicing: 4: You
+      Testing: 5: You
+      Understanding: 5: You
+    section Next Month
+      Advocating: 5: You
+      Leading: 5: You
+      Inclusive by Default: 5: You
+```
+
+> 🌍 **You're now an accessibility champion!** You understand that great web experiences work for everyone, regardless of how they access the web. Every accessible feature you build makes the internet more inclusive. The web needs developers like you who see accessibility not as a constraint, but as an opportunity to create better experiences for all users. Welcome to the movement! 🎉

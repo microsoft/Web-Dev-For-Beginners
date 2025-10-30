@@ -1,5 +1,22 @@
 # Build a Space Game Part 3: Adding Motion
 
+```mermaid
+journey
+    title Your Game Animation Journey
+    section Movement Basics
+      Understand motion principles: 3: Student
+      Learn coordinate updates: 4: Student
+      Implement basic movement: 4: Student
+    section Player Controls
+      Handle keyboard events: 4: Student
+      Prevent default behaviors: 5: Student
+      Create responsive controls: 5: Student
+    section Game Systems
+      Build game loop: 5: Student
+      Manage object lifecycle: 5: Student
+      Implement pub/sub pattern: 5: Student
+```
+
 Think about your favorite games – what makes them captivating isn't just pretty graphics, it's the way everything moves and responds to your actions. Right now, your space game is like a beautiful painting, but we're about to add movement that brings it to life.
 
 When NASA's engineers programmed the guidance computer for the Apollo missions, they faced a similar challenge: how do you make a spacecraft respond to pilot input while automatically maintaining course corrections? The principles we'll learn today echo those same concepts – managing player-controlled movement alongside automatic system behaviors.
@@ -7,6 +24,36 @@ When NASA's engineers programmed the guidance computer for the Apollo missions, 
 In this lesson, you'll learn how to make spaceships glide across the screen, respond to player commands, and create smooth movement patterns. We'll break everything down into manageable concepts that build on each other naturally.
 
 By the end, you'll have players flying their hero ship around the screen while enemy vessels patrol overhead. More importantly, you'll understand the core principles that power game movement systems.
+
+```mermaid
+mindmap
+  root((Game Animation))
+    Movement Types
+      Player Controlled
+      Automatic Motion
+      Physics Based
+      Scripted Paths
+    Event Handling
+      Keyboard Input
+      Mouse Events
+      Touch Controls
+      Default Prevention
+    Game Loop
+      Update Logic
+      Render Frame
+      Clear Canvas
+      Frame Rate Control
+    Object Management
+      Position Updates
+      Collision Detection
+      Lifecycle Management
+      State Tracking
+    Communication
+      Pub/Sub Pattern
+      Event Emitters
+      Message Passing
+      Loose Coupling
+```
 
 ## Pre-Lecture Quiz
 
@@ -22,6 +69,27 @@ Games come alive when things start moving around, and there are fundamentally tw
 Making objects move on a computer screen is simpler than you might think. Remember those x and y coordinates from math class? That's exactly what we're working with here. When Galileo tracked Jupiter's moons in 1610, he was essentially doing the same thing – plotting positions over time to understand motion patterns.
 
 Moving things on screen is like creating a flipbook animation – you need to follow these three simple steps:
+
+```mermaid
+flowchart LR
+    A["Frame N"] --> B["Update Positions"]
+    B --> C["Clear Canvas"]
+    C --> D["Draw Objects"]
+    D --> E["Frame N+1"]
+    E --> F{Continue?}
+    F -->|Yes| B
+    F -->|No| G["Game Over"]
+    
+    subgraph "Animation Cycle"
+        H["1. Calculate new positions"]
+        I["2. Erase previous frame"]
+        J["3. Render new frame"]
+    end
+    
+    style B fill:#e1f5fe
+    style C fill:#ffebee
+    style D fill:#e8f5e8
+```
 
 1. **Update the position** – Change where your object should be (maybe move it 5 pixels to the right)
 2. **Erase the old frame** – Clear the screen so you don't see ghostly trails everywhere
@@ -84,6 +152,25 @@ For key events there are two properties on the event you can use to see what key
 
 ✅ Key event manipulation is useful outside of game development. What other uses can you think of for this technique?
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant EventSystem
+    participant GameLogic
+    participant Hero
+    
+    User->>Browser: Presses ArrowUp key
+    Browser->>EventSystem: keydown event
+    EventSystem->>EventSystem: preventDefault()
+    EventSystem->>GameLogic: emit('KEY_EVENT_UP')
+    GameLogic->>Hero: hero.y -= 5
+    Hero->>Hero: Update position
+    
+    Note over Browser,GameLogic: Event flow prevents browser defaults
+    Note over GameLogic,Hero: Pub/sub pattern enables clean communication
+```
+
 ### Special keys: a heads up!
 
 Some keys have built-in browser behaviors that can interfere with your game. Arrow keys scroll the page and spacebar jumps down – behaviors you don't want when someone is trying to pilot their spaceship.
@@ -115,6 +202,22 @@ window.addEventListener('keydown', onKeyDown);
 - **Allows** other keys to function normally
 - **Uses** `e.preventDefault()` to stop the browser's built-in behavior
 
+### 🔄 **Pedagogical Check-in**
+**Event Handling Understanding**: Before moving to automatic movement, ensure you can:
+- ✅ Explain the difference between `keydown` and `keyup` events
+- ✅ Understand why we prevent default browser behaviors
+- ✅ Describe how event listeners connect user input to game logic
+- ✅ Identify which keys might interfere with game controls
+
+**Quick Self-Test**: What would happen if you didn't prevent default behavior for arrow keys?
+*Answer: The browser would scroll the page, interfering with game movement*
+
+**Event System Architecture**: You now understand:
+- **Window-level listening**: Capturing events at the browser level
+- **Event object properties**: `key` strings vs `keyCode` numbers
+- **Default prevention**: Stopping unwanted browser behaviors
+- **Conditional logic**: Responding to specific key combinations
+
 ## Game induced movement
 
 Now let's talk about objects that move without player input. Think about enemy ships cruising across the screen, bullets flying in straight lines, or clouds drifting in the background. This autonomous movement makes your game world feel alive even when nobody's touching the controls.
@@ -143,6 +246,31 @@ Every game has one of these loops running behind the scenes. It's a function tha
 This concept reminds me of how early film animators like Walt Disney had to redraw characters frame by frame to create the illusion of movement. We're doing the same thing, just with code instead of pencils.
 
 Here's what a game loop can typically look like, expressed in code:
+
+```mermaid
+flowchart TD
+    A["Start Game Loop"] --> B["Clear Canvas"]
+    B --> C["Fill Background"]
+    C --> D["Update Game Objects"]
+    D --> E["Draw Hero"]
+    E --> F["Draw Enemies"]
+    F --> G["Draw UI Elements"]
+    G --> H["Wait for Next Frame"]
+    H --> I{Game Running?}
+    I -->|Yes| B
+    I -->|No| J["End Game"]
+    
+    subgraph "Frame Rate Control"
+        K["60 FPS = 16.67ms"]
+        L["30 FPS = 33.33ms"]
+        M["10 FPS = 100ms"]
+    end
+    
+    style B fill:#ffebee
+    style D fill:#e1f5fe
+    style E fill:#e8f5e8
+    style F fill:#e8f5e8
+```
 
 ```javascript
 const gameLoopId = setInterval(() => {
@@ -235,6 +363,43 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     - **Includes** a `dead` flag to track whether the object should be removed
     - **Provides** a `draw()` method that renders the object on the canvas
     - **Sets** default values for all properties that child classes can override
+
+    ```mermaid
+    classDiagram
+        class GameObject {
+            +x: number
+            +y: number
+            +dead: boolean
+            +type: string
+            +width: number
+            +height: number
+            +img: Image
+            +draw(ctx)
+        }
+        
+        class Hero {
+            +speed: number
+            +type: "Hero"
+            +width: 98
+            +height: 75
+        }
+        
+        class Enemy {
+            +type: "Enemy"
+            +width: 98
+            +height: 50
+            +setInterval()
+        }
+        
+        GameObject <|-- Hero
+        GameObject <|-- Enemy
+        
+        class EventEmitter {
+            +listeners: object
+            +on(message, listener)
+            +emit(message, payload)
+        }
+    ```
 
     Now, extend this `GameObject` to create the `Hero` and `Enemy`:
     
@@ -336,6 +501,28 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
    - **Separates** input detection from game logic
    - **Makes** it easy to change controls later without affecting game code
    - **Allows** multiple systems to respond to the same input
+
+   ```mermaid
+   flowchart TD
+       A["Keyboard Input"] --> B["Window Event Listener"]
+       B --> C["Event Emitter"]
+       C --> D["KEY_EVENT_UP"]
+       C --> E["KEY_EVENT_DOWN"]
+       C --> F["KEY_EVENT_LEFT"]
+       C --> G["KEY_EVENT_RIGHT"]
+       
+       D --> H["Hero Movement"]
+       D --> I["Sound System"]
+       D --> J["Visual Effects"]
+       
+       E --> H
+       F --> H
+       G --> H
+       
+       style A fill:#e1f5fe
+       style C fill:#e8f5e8
+       style H fill:#fff3e0
+   ```
 
    2. **Create an EventEmitter class** to publish and subscribe to messages:
 
@@ -484,6 +671,26 @@ The above will start a HTTP Server on address `http://localhost:5000`. Open up a
     - **Calls** the `draw()` method on each object
     - **Passes** the canvas context so objects can render themselves
 
+    ### 🔄 **Pedagogical Check-in**
+    **Complete Game System Understanding**: Verify your mastery of the entire architecture:
+    - ✅ How does inheritance allow Hero and Enemy to share common GameObject properties?
+    - ✅ Why does the pub/sub pattern make your code more maintainable?
+    - ✅ What role does the game loop play in creating smooth animation?
+    - ✅ How do event listeners connect user input to game object behavior?
+
+    **System Integration**: Your game now demonstrates:
+    - **Object-Oriented Design**: Base classes with specialized inheritance
+    - **Event-Driven Architecture**: Pub/sub pattern for loose coupling
+    - **Animation Framework**: Game loop with consistent frame updates
+    - **Input Handling**: Keyboard events with default prevention
+    - **Asset Management**: Image loading and sprite rendering
+
+    **Professional Patterns**: You've implemented:
+    - **Separation of Concerns**: Input, logic, and rendering separated
+    - **Polymorphism**: All game objects share common drawing interface
+    - **Message Passing**: Clean communication between components
+    - **Resource Management**: Efficient sprite and animation handling
+
     Your enemies should start advancing on your hero spaceship!
       }
     }
@@ -557,6 +764,127 @@ Think of frameworks like having a well-stocked toolbox instead of making every t
 - Performance tricks for making canvas games run butter-smooth  
 - Modern JavaScript features that can make your code cleaner and more maintainable
 - Different approaches to managing game objects and their relationships
+
+## 🎯 Your Game Animation Mastery Timeline
+
+```mermaid
+timeline
+    title Game Animation & Interaction Learning Progression
+    
+    section Movement Fundamentals (20 minutes)
+        Animation Principles: Frame-based animation
+                            : Position updates
+                            : Coordinate systems
+                            : Smooth movement
+        
+    section Event Systems (25 minutes)
+        User Input: Keyboard event handling
+                  : Default behavior prevention
+                  : Event object properties
+                  : Window-level listening
+        
+    section Game Architecture (30 minutes)
+        Object Design: Inheritance patterns
+                     : Base class creation
+                     : Specialized behaviors
+                     : Polymorphic interfaces
+        
+    section Communication Patterns (35 minutes)
+        Pub/Sub Implementation: Event emitters
+                              : Message constants
+                              : Loose coupling
+                              : System integration
+        
+    section Game Loop Mastery (40 minutes)
+        Real-time Systems: Frame rate control
+                         : Update/render cycle
+                         : State management
+                         : Performance optimization
+        
+    section Advanced Techniques (45 minutes)
+        Professional Features: Collision detection
+                             : Physics simulation
+                             : State machines
+                             : Component systems
+        
+    section Game Engine Concepts (1 week)
+        Framework Understanding: Entity-component systems
+                               : Scene graphs
+                               : Asset pipelines
+                               : Performance profiling
+        
+    section Production Skills (1 month)
+        Professional Development: Code organization
+                                : Team collaboration
+                                : Testing strategies
+                                : Deployment optimization
+```
+
+### 🛠️ Your Game Development Toolkit Summary
+
+After completing this lesson, you now have mastered:
+- **Animation Principles**: Frame-based movement and smooth transitions
+- **Event-Driven Programming**: Keyboard input handling with proper event management
+- **Object-Oriented Design**: Inheritance hierarchies and polymorphic interfaces
+- **Communication Patterns**: Pub/sub architecture for maintainable code
+- **Game Loop Architecture**: Real-time update and rendering cycles
+- **Input Systems**: User control mapping with default behavior prevention
+- **Asset Management**: Sprite loading and efficient rendering techniques
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Open the browser console and try `addEventListener('keydown', console.log)` to see keyboard events
+- [ ] Create a simple div element and move it around using arrow keys
+- [ ] Experiment with `setInterval` to create continuous movement
+- [ ] Try preventing default behavior with `event.preventDefault()`
+
+### 🎯 **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and understand event-driven programming
+- [ ] Build the moving hero spaceship with full keyboard controls
+- [ ] Implement smooth enemy movement patterns
+- [ ] Add boundaries to prevent game objects from leaving the screen
+- [ ] Create basic collision detection between game objects
+
+### 📅 **Your Week-Long Animation Journey**
+- [ ] Complete the full space game with polished movement and interactions
+- [ ] Add advanced movement patterns like curves, acceleration, and physics
+- [ ] Implement smooth transitions and easing functions
+- [ ] Create particle effects and visual feedback systems
+- [ ] Optimize game performance for smooth 60fps gameplay
+- [ ] Add mobile touch controls and responsive design
+
+### 🌟 **Your Month-Long Interactive Development**
+- [ ] Build complex interactive applications with advanced animation systems
+- [ ] Learn animation libraries like GSAP or create your own animation engine
+- [ ] Contribute to open source game development and animation projects
+- [ ] Master performance optimization for graphics-intensive applications
+- [ ] Create educational content about game development and animation
+- [ ] Build a portfolio showcasing advanced interactive programming skills
+
+**Real-World Applications**: Your game animation skills apply directly to:
+- **Interactive Web Applications**: Dynamic dashboards and real-time interfaces
+- **Data Visualization**: Animated charts and interactive graphics
+- **Educational Software**: Interactive simulations and learning tools
+- **Mobile Development**: Touch-based games and gesture handling
+- **Desktop Applications**: Electron apps with smooth animations
+- **Web Animations**: CSS and JavaScript animation libraries
+
+**Professional Skills Gained**: You can now:
+- **Architect** event-driven systems that scale with complexity
+- **Implement** smooth animations using mathematical principles
+- **Debug** complex interaction systems using browser developer tools
+- **Optimize** game performance for different devices and browsers
+- **Design** maintainable code structures using proven patterns
+
+**Game Development Concepts Mastered**:
+- **Frame Rate Management**: Understanding FPS and timing controls
+- **Input Handling**: Cross-platform keyboard and event systems
+- **Object Lifecycle**: Creation, update, and destruction patterns
+- **State Synchronization**: Keeping game state consistent across frames
+- **Event Architecture**: Decoupled communication between game systems
+
+**Next Level**: You're ready to add collision detection, scoring systems, sound effects, or explore modern game frameworks like Phaser or Three.js!
+
+🌟 **Achievement Unlocked**: You've built a complete interactive game system with professional architecture patterns!
 
 ## Assignment
 

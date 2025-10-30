@@ -3,6 +3,23 @@
 ![JavaScript Basics - Data types](../../sketchnotes/webdev101-js-datatypes.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
+```mermaid
+journey
+    title Your JavaScript Data Types Adventure
+    section Foundation
+      Variables & Constants: 5: You
+      Declaration Syntax: 4: You
+      Assignment Concepts: 5: You
+    section Core Types
+      Numbers & Math: 4: You
+      Strings & Text: 5: You
+      Booleans & Logic: 4: You
+    section Apply Knowledge
+      Type Conversion: 4: You
+      Real-world Examples: 5: You
+      Best Practices: 5: You
+```
+
 Data types are one of the fundamental concepts in JavaScript that you'll encounter in every program you write. Think of data types like the filing system used by ancient librarians in Alexandria – they had specific places for scrolls containing poetry, mathematics, and historical records. JavaScript organizes information in a similar way with different categories for different kinds of data.
 
 In this lesson, we'll explore the core data types that make JavaScript work. You'll learn how to handle numbers, text, true/false values, and understand why choosing the correct type is essential for your programs. These concepts might seem abstract at first, but with practice, they'll become second nature.
@@ -23,6 +40,38 @@ This lesson covers the basics of JavaScript, the language that provides interact
 > 🎥 Click the images above for videos about variables and data types
 
 Let's start with variables and the data types that populate them!
+
+```mermaid
+mindmap
+  root((JavaScript Data))
+    Variables
+      let myVar
+      const PI = 3.14
+      var oldStyle
+    Primitive Types
+      number
+        42
+        3.14
+        -5
+      string
+        "Hello"
+        'World'
+        `Template`
+      boolean
+        true
+        false
+      undefined
+      null
+    Operations
+      Arithmetic
+        + - * / %
+      String Methods
+        concatenation
+        template literals
+      Type Conversion
+        implicit
+        explicit
+```
 
 ## Variables
 
@@ -86,6 +135,34 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
    - This mutability is the key characteristic of variables declared with `let`
 
    ✅ Try it! You can write JavaScript right in your browser. Open a browser window and navigate to Developer Tools. In the console, you will find a prompt; type `let myVariable = 123`, press return, then type `myVariable`. What happens? Note, you'll learn more about these concepts in subsequent lessons.
+
+### 🧠 **Variables Mastery Check: Getting Comfortable**
+
+**Let's see how you're feeling about variables:**
+- Can you explain the difference between declaring and assigning a variable?
+- What happens if you try to use a variable before you declare it?
+- When would you choose `let` over `const` for a variable?
+
+```mermaid
+stateDiagram-v2
+    [*] --> Declared: let myVar
+    Declared --> Assigned: myVar = 123
+    Assigned --> Reassigned: myVar = 456
+    Assigned --> [*]: Variable ready!
+    Reassigned --> [*]: Updated value
+    
+    note right of Declared
+        Variable exists but
+        has no value (undefined)
+    end note
+    
+    note right of Assigned
+        Variable contains
+        the value 123
+    end note
+```
+
+> **Quick tip**: Think of variables as labeled storage boxes. You create the box (`let`), put something in it (`=`), and can later replace the contents if needed!
 
 ## Constants
 
@@ -174,6 +251,28 @@ let myVariable = 123;
 
 Variables can store all types of numbers, including decimals or negative numbers. Numbers also can be used with arithmetic operators, covered in the [next section](#arithmetic-operators).
 
+```mermaid
+flowchart LR
+    A["🔢 Numbers"] --> B["➕ Addition"]
+    A --> C["➖ Subtraction"]
+    A --> D["✖️ Multiplication"]
+    A --> E["➗ Division"]
+    A --> F["📊 Remainder %"]
+    
+    B --> B1["1 + 2 = 3"]
+    C --> C1["5 - 3 = 2"]
+    D --> D1["4 * 3 = 12"]
+    E --> E1["10 / 2 = 5"]
+    F --> F1["7 % 3 = 1"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+    style F fill:#fce4ec
+```
+
 ### Arithmetic Operators
 
 Arithmetic operators allow you to perform mathematical calculations in JavaScript. These operators follow the same principles mathematicians have used for centuries – the same symbols that appeared in the works of scholars like Al-Khwarizmi, who developed algebraic notation.
@@ -191,6 +290,24 @@ There are several types of operators to use when performing arithmetic functions
 | `%`    | **Remainder**: Calculates the remainder from the division of two numbers | `1 % 2 //expected answer is 1`   |
 
 ✅ Try it! Try an arithmetic operation in your browser's console. Do the results surprise you?
+
+### 🧮 **Math Skills Check: Calculating with Confidence**
+
+**Test your arithmetic understanding:**
+- What's the difference between `/` (division) and `%` (remainder)?
+- Can you predict what `10 % 3` equals? (Hint: it's not 3.33...)
+- Why might the remainder operator be useful in programming?
+
+```mermaid
+pie title "JavaScript Number Operations Usage"
+    "Addition (+)" : 35
+    "Subtraction (-)" : 20
+    "Multiplication (*)" : 20
+    "Division (/)" : 15
+    "Remainder (%)" : 10
+```
+
+> **Real-world insight**: The remainder operator (%) is super useful for checking if numbers are even/odd, creating patterns, or cycling through arrays!
 
 ### Strings
 
@@ -213,6 +330,30 @@ let myString = 'This is a string value stored in a variable';
 - **Requires** quotes to distinguish text from variable names
 
 Remember to use quotes when writing a string, or else JavaScript will assume it's a variable name.
+
+```mermaid
+flowchart TD
+    A["📝 Strings"] --> B["Single Quotes"]
+    A --> C["Double Quotes"]
+    A --> D["Template Literals"]
+    
+    B --> B1["'Hello World'"]
+    C --> C1['"Hello World"']
+    D --> D1["`Hello \${name}`"]
+    
+    E["String Operations"] --> F["Concatenation"]
+    E --> G["Template Insertion"]
+    E --> H["Length & Methods"]
+    
+    F --> F1["'Hello' + ' ' + 'World'"]
+    G --> G1["`Hello \${firstName} \${lastName}`"]
+    H --> H1["myString.length"]
+    
+    style A fill:#e3f2fd
+    style E fill:#fff3e0
+    style D fill:#e8f5e8
+    style G fill:#e8f5e8
+```
 
 ### Formatting Strings
 
@@ -259,6 +400,37 @@ You can achieve your formatting goals with either method, but template literals 
 
 ✅ When would you use a template literal vs. a plain string?
 
+### 🔤 **String Mastery Check: Text Manipulation Confidence**
+
+**Evaluate your string skills:**
+- Can you explain why `'1' + '1'` equals `'11'` instead of `2`?
+- Which string method do you find more readable: concatenation or template literals?
+- What happens if you forget the quotes around a string?
+
+```mermaid
+stateDiagram-v2
+    [*] --> PlainText: "Hello"
+    [*] --> Variable: name = "Alice"
+    PlainText --> Concatenated: + " " + name
+    Variable --> Concatenated
+    PlainText --> Template: `Hello ${name}`
+    Variable --> Template
+    Concatenated --> Result: "Hello Alice"
+    Template --> Result
+    
+    note right of Concatenated
+        Traditional method
+        More verbose
+    end note
+    
+    note right of Template
+        Modern ES6 syntax
+        Cleaner & more readable
+    end note
+```
+
+> **Pro tip**: Template literals are generally preferred for complex string building because they're more readable and handle multi-line strings beautifully!
+
 ### Booleans
 
 Booleans represent the simplest form of data: they can only hold one of two values – `true` or `false`. This binary logic system traces back to the work of George Boole, a 19th-century mathematician who developed Boolean algebra.
@@ -280,7 +452,81 @@ let myFalseBool = false;
 
 ✅ A variable can be considered 'truthy' if it evaluates to a boolean `true`. Interestingly, in JavaScript, [all values are truthy unless defined as falsy](https://developer.mozilla.org/docs/Glossary/Truthy).
 
+```mermaid
+flowchart LR
+    A["🔘 Boolean Values"] --> B["true"]
+    A --> C["false"]
+    
+    D["Truthy Values"] --> D1["'hello'"]
+    D --> D2["42"]
+    D --> D3["[]"]
+    D --> D4["{}"]
+    
+    E["Falsy Values"] --> E1["false"]
+    E --> E2["0"]
+    E --> E3["''"]
+    E --> E4["null"]
+    E --> E5["undefined"]
+    E --> E6["NaN"]
+    
+    style B fill:#e8f5e8
+    style C fill:#ffebee
+    style D fill:#e3f2fd
+    style E fill:#fff3e0
+```
+
+### 🎯 **Boolean Logic Check: Decision Making Skills**
+
+**Test your boolean understanding:**
+- Why do you think JavaScript has "truthy" and "falsy" values beyond just `true` and `false`?
+- Can you predict which of these is falsy: `0`, `"0"`, `[]`, `"false"`?
+- How might booleans be useful in controlling program flow?
+
+```mermaid
+pie title "Common Boolean Use Cases"
+    "Conditional Logic" : 40
+    "User State" : 25
+    "Feature Toggles" : 20
+    "Validation" : 15
+```
+
+> **Remember**: In JavaScript, only 6 values are falsy: `false`, `0`, `""`, `null`, `undefined`, and `NaN`. Everything else is truthy!
+
 ---
+
+## 📊 **Your Data Types Toolkit Summary**
+
+```mermaid
+graph TD
+    A["🎯 JavaScript Data Types"] --> B["📦 Variables"]
+    A --> C["🔢 Numbers"]
+    A --> D["📝 Strings"]
+    A --> E["🔘 Booleans"]
+    
+    B --> B1["let mutable"]
+    B --> B2["const immutable"]
+    
+    C --> C1["42, 3.14, -5"]
+    C --> C2["+ - * / %"]
+    
+    D --> D1["'quotes' or \"quotes\""]
+    D --> D2["`template literals`"]
+    
+    E --> E1["true or false"]
+    E --> E2["truthy vs falsy"]
+    
+    F["⚡ Key Concepts"] --> F1["Type matters for operations"]
+    F --> F2["JavaScript is dynamically typed"]
+    F --> F3["Variables can change types"]
+    F --> F4["Naming is case-sensitive"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+    style F fill:#fce4ec
+```
 
 ## GitHub Copilot Agent Challenge 🚀
 
@@ -308,3 +554,61 @@ Take a look at [this list of JavaScript exercises](https://css-tricks.com/snippe
 ## Assignment
 
 [Data Types Practice](assignment.md)
+
+## 🚀 Your JavaScript Data Types Mastery Timeline
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Open your browser console and create 3 variables with different data types
+- [ ] Try the challenge: `let age = 1; let Age = 2; age == Age` and figure out why it's false
+- [ ] Practice string concatenation with your name and favorite number
+- [ ] Test what happens when you add a number to a string
+
+### 🎯 **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and review any confusing concepts
+- [ ] Create a mini calculator that adds, subtracts, multiplies, and divides two numbers
+- [ ] Build a simple name formatter using template literals
+- [ ] Explore the differences between `==` and `===` comparison operators
+- [ ] Practice converting between different data types
+
+### 📅 **Your Week-Long JavaScript Foundation**
+- [ ] Complete the assignment with confidence and creativity
+- [ ] Create a personal profile object using all data types learned
+- [ ] Practice with [JavaScript exercises from CSS-Tricks](https://css-tricks.com/snippets/javascript/)
+- [ ] Build a simple form validator using boolean logic
+- [ ] Experiment with array and object data types (preview of coming lessons)
+- [ ] Join a JavaScript community and ask questions about data types
+
+### 🌟 **Your Month-Long Transformation**
+- [ ] Integrate data type knowledge into larger programming projects
+- [ ] Understand when and why to use each data type in real applications
+- [ ] Help other beginners understand JavaScript fundamentals
+- [ ] Build a small application that manages different types of user data
+- [ ] Explore advanced data type concepts like type coercion and strict equality
+- [ ] Contribute to open source JavaScript projects with documentation improvements
+
+### 🧠 **Final Data Types Mastery Check-in**
+
+**Celebrate your JavaScript foundation:**
+- Which data type surprised you the most in terms of its behavior?
+- How comfortable do you feel explaining variables vs. constants to a friend?
+- What's the most interesting thing you discovered about JavaScript's type system?
+- Which real-world application can you imagine building with these fundamentals?
+
+```mermaid
+journey
+    title Your JavaScript Confidence Journey
+    section Today
+      Confused: 3: You
+      Curious: 4: You
+      Excited: 5: You
+    section This Week
+      Practicing: 4: You
+      Understanding: 5: You
+      Building: 5: You
+    section Next Month
+      Problem Solving: 5: You
+      Teaching Others: 5: You
+      Real Projects: 5: You
+```
+
+> 💡 **You've built the foundation!** Understanding data types is like learning the alphabet before writing stories. Every JavaScript program you'll ever write will use these fundamental concepts. You now have the building blocks to create interactive websites, dynamic applications, and solve real-world problems with code. Welcome to the wonderful world of JavaScript! 🎉

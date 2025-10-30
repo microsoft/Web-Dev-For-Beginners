@@ -1,6 +1,6 @@
 
 # Introduction to Programming Languages and Modern Developer Tools
-
+ 
 Hey there, future developer! 👋 Can I tell you something that still gives me chills every single day? You're about to discover that programming isn't just about computers – it's about having actual superpowers to bring your wildest ideas to life!
 
 You know that moment when you're using your favorite app and everything just clicks perfectly? When you tap a button and something absolutely magical happens that makes you go "wow, how did they DO that?" Well, someone just like you – probably sitting in their favorite coffee shop at 2 AM with their third espresso – wrote the code that created that magic. And here's what's going to blow your mind: by the end of this lesson, you'll not only understand how they did it, but you'll be itching to try it yourself!
@@ -11,6 +11,23 @@ Today, we're going to explore the incredible tools that make modern web developm
 
 ![Intro Programming](../../sketchnotes/webdev101-programming.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+
+```mermaid
+journey
+    title Your Programming Journey Today
+    section Discover
+      What is Programming: 5: You
+      Programming Languages: 4: You
+      Tools Overview: 5: You
+    section Explore
+      Code Editors: 4: You
+      Browsers & DevTools: 5: You
+      Command Line: 3: You
+    section Practice
+      Language Detective: 4: You
+      Tool Exploration: 5: You
+      Community Connection: 5: You
+```
 
 ## Let's See What You Already Know!
 
@@ -48,6 +65,15 @@ When you learn to program, you're not just picking up a new skill – you're bec
 
 ✅ **Fun Fact Hunt**: Here's something super cool to look up when you have a spare moment – who do you think was the world's first computer programmer? I'll give you a hint: it might not be who you're expecting! The story behind this person is absolutely fascinating and shows that programming has always been about creative problem-solving and thinking outside the box.
 
+### 🧠 **Check-in Time: How Are You Feeling?**
+
+**Take a moment to reflect:**
+- Does the idea of "giving instructions to computers" make sense to you now?
+- Can you think of a daily task you'd like to automate with programming?
+- What questions are bubbling up in your mind about this whole programming thing?
+
+> **Remember**: It's totally normal if some concepts feel fuzzy right now. Learning programming is like learning a new language – it takes time for your brain to build those neural pathways. You're doing great!
+
 ## Programming Languages Are Like Different Flavors of Magic
 
 Okay, this is going to sound weird, but stick with me – programming languages are a lot like different types of music. Think about it: you've got jazz, which is smooth and improvisational, rock that's powerful and straightforward, classical that's elegant and structured, and hip-hop that's creative and expressive. Each style has its own vibe, its own community of passionate fans, and each one is perfect for different moods and occasions.
@@ -57,6 +83,46 @@ Programming languages work exactly the same way! You wouldn't use the same langu
 But here's what absolutely blows my mind every time I think about it: these languages are like having the most patient, brilliant interpreter in the world sitting right next to you. You can express your ideas in a way that feels natural to your human brain, and they handle all the incredibly complex work of translating that into the 1s and 0s that computers actually speak. It's like having a friend who's perfectly fluent in both "human creativity" and "computer logic" – and they never get tired, never need coffee breaks, and never judge you for asking the same question twice!
 
 ### Popular Programming Languages and Their Uses
+
+```mermaid
+mindmap
+  root((Programming Languages))
+    Web Development
+      JavaScript
+        Frontend Magic
+        Interactive Websites
+      TypeScript
+        JavaScript + Types
+        Enterprise Apps
+    Data & AI
+      Python
+        Data Science
+        Machine Learning
+        Automation
+      R
+        Statistics
+        Research
+    Mobile Apps
+      Java
+        Android
+        Enterprise
+      Swift
+        iOS
+        Apple Ecosystem
+      Kotlin
+        Modern Android
+        Cross-platform
+    Systems & Performance
+      C++
+        Games
+        Performance Critical
+      Rust
+        Memory Safety
+        System Programming
+      Go
+        Cloud Services
+        Scalable Backend
+```
 
 | Language | Best For | Why It's Popular |
 |----------|----------|------------------|
@@ -82,6 +148,25 @@ In programming terms:
 
 Guess which ones I'm going to suggest you start with? 😉 High-level languages are like having training wheels that you never actually want to take off because they make the whole experience so much more enjoyable!
 
+```mermaid
+flowchart TB
+    A["👤 Human Thought:<br/>'I want to calculate Fibonacci numbers'"] --> B{Choose Language Level}
+    
+    B -->|High-Level| C["🌟 JavaScript/Python<br/>Easy to read and write"]
+    B -->|Low-Level| D["⚙️ Assembly/C<br/>Direct hardware control"]
+    
+    C --> E["📝 Write: fibonacci(10)"]
+    D --> F["📝 Write: mov r0,#00<br/>sub r0,r0,#01"]
+    
+    E --> G["🤖 Computer Understanding:<br/>Translator handles complexity"]
+    F --> G
+    
+    G --> H["💻 Same Result:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
+    
+    style C fill:#e1f5fe
+    style D fill:#fff3e0
+    style H fill:#e8f5e8
+```
 
 ### Let Me Show You Why High-Level Languages Are So Much Friendlier
 
@@ -375,8 +460,25 @@ switch (dayOfWeek) {
 
 > 💡 **Real-world analogy**: Think of control flow like having the world's most patient GPS giving you directions. It might say "If there's traffic on Main Street, take the highway instead. If construction is blocking the highway, try the scenic route." Programs use exactly the same type of conditional logic to respond intelligently to different situations and always give users the best possible experience.
 
-✅ **What's coming up next**: We're going to have an absolute blast diving deeper into these concepts as we continue this incredible journey together! Right now, just focus on feeling that excitement about all the amazing possibilities ahead of you. The specific skills and techniques will stick naturally as we practice together – I promise this is going to be so much more fun than you might expect!
+### 🎯 **Concept Check: Building Blocks Mastery**
 
+**Let's see how you're doing with the fundamentals:**
+- Can you explain the difference between a variable and a statement in your own words?
+- Think of a real-world scenario where you'd use an if-then decision (like our voting example)
+- What's one thing about programming logic that surprised you?
+
+**Quick confidence booster:**
+```mermaid
+flowchart LR
+    A["📝 Statements<br/>(Instructions)"] --> B["📦 Variables<br/>(Storage)"] --> C["🔀 Control Flow<br/>(Decisions)"] --> D["🎉 Working Program!"]
+    
+    style A fill:#ffeb3b
+    style B fill:#4caf50
+    style C fill:#2196f3
+    style D fill:#ff4081
+```
+
+✅ **What's coming up next**: We're going to have an absolute blast diving deeper into these concepts as we continue this incredible journey together! Right now, just focus on feeling that excitement about all the amazing possibilities ahead of you. The specific skills and techniques will stick naturally as we practice together – I promise this is going to be so much more fun than you might expect!
 
 ## Tools of the Trade
 
@@ -388,6 +490,26 @@ I'm practically bouncing in my chair thinking about sharing these with you becau
 
 And here's the part that still gives me chills: these aren't "beginner tools" that you'll outgrow. These are the exact same professional-grade tools that developers at Google, Netflix, and that indie app studio you love are using right this very moment. You're going to feel like such a pro using them!
 
+```mermaid
+graph TD
+    A["💡 Your Idea"] --> B["⌨️ Code Editor<br/>(VS Code)"] 
+    B --> C["🌐 Browser DevTools<br/>(Testing & Debugging)"]
+    C --> D["⚡ Command Line<br/>(Automation & Tools)"]
+    D --> E["📚 Documentation<br/>(Learning & Reference)"]
+    E --> F["🚀 Amazing Web App!"]
+    
+    B -.-> G["🤖 AI Assistant<br/>(GitHub Copilot)"]
+    C -.-> H["📱 Device Testing<br/>(Responsive Design)"]
+    D -.-> I["📦 Package Managers<br/>(npm, yarn)"]
+    E -.-> J["👥 Community<br/>(Stack Overflow)"]
+    
+    style A fill:#fff59d
+    style F fill:#c8e6c9
+    style G fill:#e1f5fe
+    style H fill:#f3e5f5
+    style I fill:#ffccbc
+    style J fill:#e8eaf6
+```
 
 ### Code Editors and IDEs: Your New Digital Best Friends
 
@@ -588,8 +710,25 @@ Professional developers spend a significant portion of their time reading docume
 
 > 📚 **Study Strategy**: Don't try to memorize documentation – instead, learn how to navigate it efficiently. Bookmark frequently-used references and practice using the search functions to find specific information quickly.
 
-✅ **Food for thought**: Here's something interesting to ponder – how do you think the tools for building websites (development) might be different from tools for designing how they look (design)? It's like the difference between being an architect who designs a beautiful house and the contractor who actually builds it. Both are crucial, but they need different toolboxes! This kind of thinking will really help you see the bigger picture of how websites come to life.
+### 🔧 **Tool Mastery Check: What Resonates With You?**
 
+**Take a moment to consider:**
+- Which tool are you most excited to try first? (There's no wrong answer!)
+- Does the command line still feel intimidating, or are you curious about it?
+- Can you imagine using browser DevTools to peek behind the curtain of your favorite websites?
+
+```mermaid
+pie title "Developer Time Spent With Tools"
+    "Code Editor" : 40
+    "Browser Testing" : 25
+    "Command Line" : 15
+    "Reading Docs" : 15
+    "Debugging" : 5
+```
+
+> **Fun insight**: Most developers spend about 40% of their time in their code editor, but notice how much time goes to testing, learning, and problem-solving. Programming isn't just about writing code – it's about crafting experiences!
+
+✅ **Food for thought**: Here's something interesting to ponder – how do you think the tools for building websites (development) might be different from tools for designing how they look (design)? It's like the difference between being an architect who designs a beautiful house and the contractor who actually builds it. Both are crucial, but they need different toolboxes! This kind of thinking will really help you see the bigger picture of how websites come to life.
 
 ## GitHub Copilot Agent Challenge 🚀
 
@@ -658,3 +797,63 @@ You've covered a lot of ground today, and that's something to be proud of! Now c
 [Reading the Docs](assignment.md)
 
 > 💡 **A little nudge for your assignment**: I'd absolutely love to see you explore some tools we haven't covered yet! Skip the editors, browsers, and command line tools we've already talked about – there's this whole incredible universe of amazing development tools out there just waiting to be discovered. Look for ones that are actively maintained and have vibrant, helpful communities (these tend to have the best tutorials and the most supportive people when you inevitably get stuck and need a friendly hand).
+
+---
+
+## 🚀 Your Programming Journey Timeline
+
+### ⚡ **What You Can Do in the Next 5 Minutes**
+- [ ] Bookmark 2-3 programming language websites that caught your attention
+- [ ] Download Visual Studio Code if you haven't already
+- [ ] Open your browser's DevTools (F12) and click around any website
+- [ ] Join one programming community (Dev.to, Reddit r/webdev, or Stack Overflow)
+
+### ⏰ **What You Can Accomplish This Hour**
+- [ ] Complete the post-lesson quiz and reflect on your answers
+- [ ] Set up VS Code with the GitHub Copilot extension
+- [ ] Try a "Hello World" example in 2 different programming languages online
+- [ ] Watch a "Day in the Life of a Developer" video on YouTube
+- [ ] Start your programming language detective work (from the challenge)
+
+### 📅 **Your Week-Long Adventure**
+- [ ] Complete the assignment and explore 3 new development tools
+- [ ] Follow 5 developers or programming accounts on social media
+- [ ] Try building something tiny in CodePen or Replit (even just "Hello, [Your Name]!")
+- [ ] Read one developer blog post about someone's coding journey
+- [ ] Join a virtual meetup or watch a programming talk
+- [ ] Start learning your chosen language with online tutorials
+
+### 🗓️ **Your Month-Long Transformation**
+- [ ] Build your first small project (even a simple webpage counts!)
+- [ ] Contribute to an open-source project (start with documentation fixes)
+- [ ] Mentor someone who's just starting their programming journey
+- [ ] Create your developer portfolio website
+- [ ] Connect with local developer communities or study groups
+- [ ] Start planning your next learning milestone
+
+### 🎯 **Final Reflection Check-in**
+
+**Before you move on, take a moment to celebrate:**
+- What's one thing about programming that excited you today?
+- Which tool or concept do you want to explore first?
+- How do you feel about starting this programming journey?
+- What's one question you'd like to ask a developer right now?
+
+```mermaid
+journey
+    title Your Confidence Building Journey
+    section Today
+      Curious: 3: You
+      Overwhelmed: 4: You
+      Excited: 5: You
+    section This Week
+      Exploring: 4: You
+      Learning: 5: You
+      Connecting: 4: You
+    section Next Month
+      Building: 5: You
+      Confident: 5: You
+      Helping Others: 5: You
+```
+
+> 🌟 **Remember**: Every expert was once a beginner. Every senior developer once felt exactly like you do right now – excited, maybe a little overwhelmed, and definitely curious about what's possible. You're in amazing company, and this journey is going to be incredible. Welcome to the wonderful world of programming! 🎉
