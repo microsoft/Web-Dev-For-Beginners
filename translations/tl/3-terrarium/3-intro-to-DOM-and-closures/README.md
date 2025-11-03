@@ -1,22 +1,69 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
-  "translation_date": "2025-10-22T15:30:14+00:00",
+  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
+  "translation_date": "2025-11-03T13:55:32+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "tl"
 }
 -->
 # Terrarium Project Part 3: Manipulasyon ng DOM at JavaScript Closures
 
+```mermaid
+journey
+    title Your JavaScript DOM Journey
+    section Foundation
+      Understand DOM: 3: Student
+      Learn closures: 4: Student
+      Connect elements: 4: Student
+    section Interaction
+      Setup drag events: 4: Student
+      Track coordinates: 5: Student
+      Handle movement: 5: Student
+    section Polish
+      Add cleanup: 4: Student
+      Test functionality: 5: Student
+      Complete terrarium: 5: Student
+```
+
 ![DOM at isang closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.tl.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Maligayang pagdating sa isa sa mga pinaka-kapanapanabik na aspeto ng web development - ang paggawa ng mga bagay na interactive! Ang Document Object Model (DOM) ay parang tulay sa pagitan ng iyong HTML at JavaScript, at ngayon gagamitin natin ito upang buhayin ang iyong terrarium. Nang likhain ni Tim Berners-Lee ang unang web browser, inisip niya ang isang web kung saan ang mga dokumento ay maaaring maging dynamic at interactive - ang DOM ang gumagawa ng pangitain na iyon.
+Maligayang pagdating sa isa sa mga pinaka-kapanapanabik na aspeto ng web development - ang paggawa ng mga bagay na interactive! Ang Document Object Model (DOM) ay parang tulay sa pagitan ng iyong HTML at JavaScript, at ngayon gagamitin natin ito upang buhayin ang iyong terrarium. Nang likhain ni Tim Berners-Lee ang unang web browser, inisip niya ang isang web kung saan ang mga dokumento ay maaaring maging dynamic at interactive - ang DOM ang nagpapaganap ng pangitain na iyon.
 
 Pag-aaralan din natin ang JavaScript closures, na maaaring mukhang nakakatakot sa simula. Isipin ang closures bilang paglikha ng "memory pockets" kung saan ang iyong mga function ay maaaring magtanda ng mahalagang impormasyon. Parang bawat halaman sa iyong terrarium ay may sariling talaan ng data upang subaybayan ang posisyon nito. Sa pagtatapos ng araling ito, maiintindihan mo kung gaano sila ka-natural at kapaki-pakinabang.
 
-Narito ang ating gagawin: isang terrarium kung saan maaaring i-drag at i-drop ng mga user ang mga halaman kahit saan nila gusto. Matutunan mo ang mga teknik sa manipulasyon ng DOM na nagpapagana sa lahat mula sa drag-and-drop file uploads hanggang sa mga interactive na laro. Gawin nating buhay ang iyong terrarium.
+Narito ang ating gagawin: isang terrarium kung saan maaaring i-drag at i-drop ng mga user ang mga halaman kahit saan nila gusto. Matutunan mo ang mga teknik sa manipulasyon ng DOM na ginagamit sa lahat mula sa drag-and-drop file uploads hanggang sa mga interactive na laro. Gawin nating buhay ang iyong terrarium.
+
+```mermaid
+mindmap
+  root((DOM & JavaScript))
+    DOM Tree
+      Element Selection
+      Property Access
+      Event Handling
+      Dynamic Updates
+    Events
+      Pointer Events
+      Mouse Events
+      Touch Events
+      Event Listeners
+    Closures
+      Private Variables
+      Function Scope
+      Memory Persistence
+      State Management
+    Drag & Drop
+      Position Tracking
+      Coordinate Math
+      Event Lifecycle
+      User Interaction
+    Modern Patterns
+      Event Delegation
+      Performance
+      Cross-Device
+      Accessibility
+```
 
 ## Pre-Lecture Quiz
 
@@ -24,9 +71,39 @@ Narito ang ating gagawin: isang terrarium kung saan maaaring i-drag at i-drop ng
 
 ## Pag-unawa sa DOM: Ang Iyong Gateway sa Interactive na Mga Web Page
 
-Ang Document Object Model (DOM) ang paraan ng JavaScript upang makipag-usap sa iyong mga elemento ng HTML. Kapag nag-load ang iyong browser ng isang HTML page, lumilikha ito ng isang structured na representasyon ng page na iyon sa memorya - iyon ang DOM. Isipin ito bilang isang family tree kung saan ang bawat elemento ng HTML ay isang miyembro ng pamilya na maaaring ma-access, mabago, o maayos ng JavaScript.
+Ang Document Object Model (DOM) ang paraan ng JavaScript upang makipag-usap sa iyong mga elemento ng HTML. Kapag nag-load ang iyong browser ng isang HTML page, gumagawa ito ng isang structured na representasyon ng page na iyon sa memorya - iyon ang DOM. Isipin ito bilang isang family tree kung saan ang bawat elemento ng HTML ay isang miyembro ng pamilya na maaaring ma-access, mabago, o maayos ng JavaScript.
 
-Ang manipulasyon ng DOM ang nagbabago sa mga static na page upang maging interactive na mga website. Tuwing makikita mo ang isang button na nagbabago ng kulay kapag hinover, content na nag-a-update nang hindi nagre-refresh ang page, o mga elementong maaaring i-drag, iyon ang manipulasyon ng DOM na gumagana.
+Ang manipulasyon ng DOM ang nagbabago ng mga static na page sa mga interactive na website. Sa tuwing makikita mo ang isang button na nagbabago ng kulay kapag hinover, content na nag-a-update nang hindi nagre-refresh ang page, o mga elementong maaaring i-drag, iyon ang manipulasyon ng DOM na gumagana.
+
+```mermaid
+flowchart TD
+    A["Document"] --> B["HTML"]
+    B --> C["Head"]
+    B --> D["Body"]
+    C --> E["Title"]
+    C --> F["Meta Tags"]
+    D --> G["H1: My Terrarium"]
+    D --> H["Div: Page Container"]
+    H --> I["Div: Left Container"]
+    H --> J["Div: Right Container"]
+    H --> K["Div: Terrarium"]
+    I --> L["Plant Elements 1-7"]
+    J --> M["Plant Elements 8-14"]
+    
+    L --> N["img#plant1"]
+    L --> O["img#plant2"]
+    M --> P["img#plant8"]
+    M --> Q["img#plant9"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style D fill:#e8f5e8
+    style H fill:#fff3e0
+    style N fill:#ffebee
+    style O fill:#ffebee
+    style P fill:#ffebee
+    style Q fill:#ffebee
+```
 
 ![Representasyon ng DOM tree](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.tl.png)
 
@@ -40,29 +117,56 @@ Ang manipulasyon ng DOM ang nagbabago sa mga static na page upang maging interac
 
 ## JavaScript Closures: Paglikha ng Organisado at Makapangyarihang Code
 
-Ang [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) ay parang pagbibigay sa isang function ng sarili nitong pribadong workspace na may persistent memory. Isipin ang mga finch ni Darwin sa Galápagos Islands na bawat isa ay nagkaroon ng specialized na tuka batay sa kanilang partikular na kapaligiran - ang closures ay gumagana nang katulad, lumilikha ng mga specialized na function na "natatandaan" ang kanilang partikular na konteksto kahit matapos ang parent function.
+Ang [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) ay parang pagbibigay sa isang function ng sarili nitong pribadong workspace na may persistent memory. Isipin kung paano ang mga finch ni Darwin sa Galápagos Islands ay nagkaroon ng specialized na mga tuka batay sa kanilang partikular na kapaligiran - ang closures ay gumagana nang katulad, lumilikha ng mga specialized na function na "nagtatanda" ng kanilang partikular na konteksto kahit na matapos ang kanilang parent function.
 
-Sa ating terrarium, ang closures ang tumutulong sa bawat halaman na matandaan ang sarili nitong posisyon nang independiyente. Ang pattern na ito ay makikita sa buong propesyonal na JavaScript development, kaya mahalagang maunawaan ito.
+Sa ating terrarium, ang closures ay tumutulong sa bawat halaman na matandaan ang sarili nitong posisyon nang independyente. Ang pattern na ito ay makikita sa buong propesyonal na pag-develop ng JavaScript, kaya't mahalagang maunawaan ito.
 
-> 💡 **Pag-unawa sa Closures**: Ang closures ay isang mahalagang paksa sa JavaScript, at maraming developer ang gumagamit nito sa loob ng maraming taon bago lubos na maunawaan ang lahat ng teoretikal na aspeto. Ngayon, magpo-focus tayo sa praktikal na aplikasyon - makikita mo ang closures na natural na lumilitaw habang binubuo natin ang mga interactive na feature. Ang pag-unawa ay lalalim habang nakikita mo kung paano nila nilulutas ang mga totoong problema.
+```mermaid
+flowchart LR
+    A["dragElement(plant1)"] --> B["Creates Closure"]
+    A2["dragElement(plant2)"] --> B2["Creates Closure"]
+    
+    B --> C["Private Variables"]
+    B2 --> C2["Private Variables"]
+    
+    C --> D["pos1, pos2, pos3, pos4"]
+    C --> E["pointerDrag function"]
+    C --> F["elementDrag function"]
+    C --> G["stopElementDrag function"]
+    
+    C2 --> D2["pos1, pos2, pos3, pos4"]
+    C2 --> E2["pointerDrag function"]
+    C2 --> F2["elementDrag function"]
+    C2 --> G2["stopElementDrag function"]
+    
+    H["Plant 1 remembers its position"] --> B
+    H2["Plant 2 remembers its position"] --> B2
+    
+    style B fill:#e8f5e8
+    style B2 fill:#e8f5e8
+    style C fill:#fff3e0
+    style C2 fill:#fff3e0
+```
+
+> 💡 **Pag-unawa sa Closures**: Ang closures ay isang mahalagang paksa sa JavaScript, at maraming developer ang gumagamit nito sa loob ng maraming taon bago lubos na maunawaan ang lahat ng teoretikal na aspeto. Ngayon, magpo-focus tayo sa praktikal na aplikasyon - makikita mo ang closures na natural na lumilitaw habang binubuo natin ang ating mga interactive na feature. Ang pag-unawa ay lalago habang nakikita mo kung paano nila nilulutas ang mga totoong problema.
 
 ![Representasyon ng DOM tree](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.tl.png)
 
 > Isang representasyon ng DOM at ang HTML markup na tumutukoy dito. Mula kay [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-Sa araling ito, tatapusin natin ang ating interactive na terrarium project sa pamamagitan ng paglikha ng JavaScript na magpapahintulot sa user na manipulahin ang mga halaman sa page.
+Sa araling ito, tatapusin natin ang ating interactive na terrarium project sa pamamagitan ng paglikha ng JavaScript na magpapahintulot sa isang user na manipulahin ang mga halaman sa page.
 
 ## Bago Tayo Magsimula: Paghahanda para sa Tagumpay
 
-Kakailanganin mo ang iyong HTML at CSS files mula sa mga nakaraang aralin sa terrarium - gagawin nating interactive ang static na disenyo na iyon. Kung ngayon ka lang sasali, ang pagkompleto sa mga araling iyon muna ay magbibigay ng mahalagang konteksto.
+Kakailanganin mo ang iyong mga HTML at CSS file mula sa mga nakaraang aralin sa terrarium - gagawin nating interactive ang static na disenyo na iyon. Kung ngayon ka lang sumali, ang pagkompleto sa mga araling iyon muna ay magbibigay ng mahalagang konteksto.
 
 Narito ang ating gagawin:
 - **Smooth drag-and-drop** para sa lahat ng halaman sa terrarium
 - **Coordinate tracking** upang matandaan ng mga halaman ang kanilang mga posisyon
 - **Isang kumpletong interactive na interface** gamit ang vanilla JavaScript
-- **Malinis at organisadong code** gamit ang closure patterns
+- **Malinis, organisadong code** gamit ang closure patterns
 
-## Pagsisimula ng Iyong JavaScript File
+## Pag-set Up ng Iyong JavaScript File
 
 Gumawa tayo ng JavaScript file na magpapainteractive sa iyong terrarium.
 
@@ -72,7 +176,7 @@ Sa iyong terrarium folder, gumawa ng bagong file na tinatawag na `script.js`.
 
 **Hakbang 2: I-link ang JavaScript sa iyong HTML**
 
-Idagdag ang script tag na ito sa `<head>` section ng iyong `index.html` file:
+Idagdag ang script tag na ito sa seksyon ng `<head>` ng iyong `index.html` file:
 
 ```html
 <script src="./script.js" defer></script>
@@ -80,11 +184,11 @@ Idagdag ang script tag na ito sa `<head>` section ng iyong `index.html` file:
 
 **Bakit mahalaga ang `defer` attribute:**
 - **Tinitiyak** na ang iyong JavaScript ay maghihintay hanggang sa ma-load ang lahat ng HTML
-- **Pinipigilan** ang mga error kung saan ang JavaScript ay naghahanap ng mga elementong hindi pa handa
+- **Iniiwasan** ang mga error kung saan hinahanap ng JavaScript ang mga elementong hindi pa handa
 - **Tinitiyak** na ang lahat ng iyong mga elemento ng halaman ay available para sa interaksyon
-- **Nagbibigay** ng mas mahusay na performance kaysa sa paglalagay ng mga script sa ilalim ng page
+- **Nagbibigay** ng mas mahusay na performance kaysa sa paglalagay ng mga script sa ibaba ng page
 
-> ⚠️ **Mahalagang Paalala**: Ang `defer` attribute ay pumipigil sa mga karaniwang timing issues. Kung wala ito, maaaring subukan ng JavaScript na ma-access ang mga elemento ng HTML bago sila ma-load, na nagdudulot ng mga error.
+> ⚠️ **Mahalagang Paalala**: Ang `defer` attribute ay pumipigil sa mga karaniwang timing issues. Kung wala ito, maaaring subukan ng JavaScript na i-access ang mga elemento ng HTML bago sila ma-load, na nagdudulot ng mga error.
 
 ---
 
@@ -123,21 +227,31 @@ dragElement(document.getElementById('plant14'));
 - **Ipinaghahanda** ang bawat halaman para sa drag-and-drop interaction
 - **Kinokonekta** ang iyong HTML structure sa JavaScript functionality
 
-> 🎯 **Bakit Gamitin ang IDs sa Halip na Classes?** Ang IDs ay nagbibigay ng natatanging identifier para sa mga partikular na elemento, habang ang CSS classes ay idinisenyo para sa pag-style ng mga grupo ng elemento. Kapag kailangang manipulahin ng JavaScript ang mga indibidwal na elemento, ang IDs ang nagbibigay ng precision at performance na kailangan natin.
+> 🎯 **Bakit Gamitin ang IDs Imbes na Classes?** Ang IDs ay nagbibigay ng natatanging identifier para sa mga partikular na elemento, habang ang CSS classes ay idinisenyo para sa pag-style ng mga grupo ng elemento. Kapag kailangang manipulahin ng JavaScript ang mga indibidwal na elemento, ang IDs ang nagbibigay ng precision at performance na kailangan natin.
 
-> 💡 **Pro Tip**: Pansinin kung paano natin tinatawag ang `dragElement()` para sa bawat halaman nang paisa-isa. Ang approach na ito ay tinitiyak na ang bawat halaman ay magkakaroon ng sarili nitong independiyenteng dragging behavior, na mahalaga para sa smooth na interaksyon ng user.
+> 💡 **Pro Tip**: Pansinin kung paano natin tinatawag ang `dragElement()` para sa bawat halaman nang paisa-isa. Ang approach na ito ay tinitiyak na ang bawat halaman ay magkakaroon ng sarili nitong independent na dragging behavior, na mahalaga para sa smooth na interaksyon ng user.
+
+### 🔄 **Pedagogical Check-in**
+**Pag-unawa sa Koneksyon ng DOM**: Bago lumipat sa drag functionality, tiyaking kaya mong:
+- ✅ Ipaliwanag kung paano hinahanap ng `document.getElementById()` ang mga elemento ng HTML
+- ✅ Unawain kung bakit gumagamit tayo ng natatanging IDs para sa bawat halaman
+- ✅ Ilarawan ang layunin ng `defer` attribute sa script tags
+- ✅ Kilalanin kung paano kumokonekta ang JavaScript at HTML sa pamamagitan ng DOM
+
+**Quick Self-Test**: Ano ang mangyayari kung dalawang elemento ay may parehong ID? Bakit ang `getElementById()` ay nagbabalik lamang ng isang elemento?
+*Sagot: Ang IDs ay dapat natatangi; kung may duplicate, ang unang elemento lamang ang ibinabalik*
 
 ---
 
 ## Pagbuo ng Drag Element Closure
 
-Ngayon gagawin natin ang puso ng ating dragging functionality: isang closure na mag-aasikaso sa dragging behavior para sa bawat halaman. Ang closure na ito ay maglalaman ng maraming inner functions na magtutulungan upang subaybayan ang mga galaw ng mouse at i-update ang mga posisyon ng elemento.
+Ngayon gagawin natin ang puso ng ating dragging functionality: isang closure na magpapatakbo ng dragging behavior para sa bawat halaman. Ang closure na ito ay maglalaman ng maraming inner functions na magtutulungan upang subaybayan ang mga galaw ng mouse at i-update ang mga posisyon ng elemento.
 
-Ang closures ay perpekto para sa task na ito dahil pinapayagan nila tayong lumikha ng "pribadong" mga variable na nagpapatuloy sa pagitan ng mga tawag sa function, na nagbibigay sa bawat halaman ng sarili nitong independiyenteng sistema ng coordinate tracking.
+Ang closures ay perpekto para sa gawaing ito dahil pinapayagan nila tayong lumikha ng "pribadong" mga variable na nagpapatuloy sa pagitan ng mga tawag sa function, na nagbibigay sa bawat halaman ng sarili nitong independent na sistema ng pagsubaybay sa coordinate.
 
 ### Pag-unawa sa Closures gamit ang Simpleng Halimbawa
 
-Hayaan akong ipakita ang closures gamit ang simpleng halimbawa na naglalarawan ng konsepto:
+Hayaan akong ipakita ang closures gamit ang isang simpleng halimbawa na naglalarawan ng konsepto:
 
 ```javascript
 function createCounter() {
@@ -160,23 +274,51 @@ console.log(myCounter()); // 2
 - **Lumilikha** ng pribadong `count` variable na umiiral lamang sa loob ng closure na ito
 - **Ang inner function** ay maaaring ma-access at mabago ang outer variable (ang mekanismo ng closure)
 - **Kapag ibinalik natin** ang inner function, pinapanatili nito ang koneksyon sa pribadong data na iyon
-- **Kahit matapos** ang `createCounter()` na tapusin ang execution, nananatili ang `count` at natatandaan ang halaga nito
+- **Kahit matapos** ang `createCounter()` na tapusin ang execution, ang `count` ay nagpapatuloy at natatandaan ang halaga nito
 
 ### Bakit Perpekto ang Closures para sa Drag Functionality
 
-Para sa ating terrarium, kailangang matandaan ng bawat halaman ang kasalukuyang coordinate nito. Ang closures ang nagbibigay ng perpektong solusyon:
+Para sa ating terrarium, kailangang matandaan ng bawat halaman ang kasalukuyang posisyon ng mga coordinate nito. Ang closures ang nagbibigay ng perpektong solusyon:
 
 **Mga pangunahing benepisyo para sa ating proyekto:**
-- **Pinapanatili** ang pribadong position variables para sa bawat halaman nang independiyente
+- **Pinapanatili** ang pribadong position variables para sa bawat halaman nang independyente
 - **Pinapanatili** ang coordinate data sa pagitan ng mga drag events
-- **Pinipigilan** ang variable conflicts sa pagitan ng iba't ibang draggable elements
-- **Lumilikha** ng malinis at organisadong code structure
+- **Pinipigilan** ang mga conflict ng variable sa pagitan ng iba't ibang draggable elements
+- **Lumilikha** ng malinis, organisadong code structure
 
 > 🎯 **Layunin sa Pag-aaral**: Hindi mo kailangang ma-master ang bawat aspeto ng closures ngayon. Mag-focus sa kung paano nila tinutulungan tayong mag-organisa ng code at magpanatili ng state para sa ating dragging functionality.
 
+```mermaid
+stateDiagram-v2
+    [*] --> Ready: Page loads
+    Ready --> DragStart: User presses down (pointerdown)
+    DragStart --> Dragging: Mouse/finger moves (pointermove)
+    Dragging --> Dragging: Continue moving
+    Dragging --> DragEnd: User releases (pointerup)
+    DragEnd --> Ready: Reset for next drag
+    
+    state DragStart {
+        [*] --> CapturePosition
+        CapturePosition --> SetupListeners
+        SetupListeners --> [*]
+    }
+    
+    state Dragging {
+        [*] --> CalculateMovement
+        CalculateMovement --> UpdatePosition
+        UpdatePosition --> [*]
+    }
+    
+    state DragEnd {
+        [*] --> RemoveListeners
+        RemoveListeners --> CleanupState
+        CleanupState --> [*]
+    }
+```
+
 ### Paglikha ng dragElement Function
 
-Ngayon buuin natin ang pangunahing function na mag-aasikaso sa lahat ng dragging logic. Idagdag ang function na ito sa ibaba ng iyong plant element declarations:
+Ngayon, buuin natin ang pangunahing function na magpapatakbo ng lahat ng logic sa dragging. Idagdag ang function na ito sa ibaba ng iyong mga deklarasyon ng elemento ng halaman:
 
 ```javascript
 function dragElement(terrariumElement) {
@@ -191,8 +333,8 @@ function dragElement(terrariumElement) {
 }
 ```
 
-**Pag-unawa sa sistema ng position tracking:**
-- **`pos1` at `pos2`**: Nag-iimbak ng pagkakaiba sa pagitan ng lumang at bagong mouse positions
+**Pag-unawa sa sistema ng pagsubaybay sa posisyon:**
+- **`pos1` at `pos2`**: Nag-iimbak ng pagkakaiba sa pagitan ng lumang at bagong posisyon ng mouse
 - **`pos3` at `pos4`**: Nagta-track ng kasalukuyang mouse coordinates
 - **`terrariumElement`**: Ang partikular na elemento ng halaman na ginagawa nating draggable
 - **`onpointerdown`**: Ang event na nagti-trigger kapag sinimulan ng user ang pag-drag
@@ -200,32 +342,45 @@ function dragElement(terrariumElement) {
 **Narito kung paano gumagana ang pattern ng closure:**
 - **Lumilikha** ng pribadong position variables para sa bawat elemento ng halaman
 - **Pinapanatili** ang mga variable na ito sa buong lifecycle ng dragging
-- **Tinitiyak** na ang bawat halaman ay nagta-track ng sarili nitong coordinates nang independiyente
+- **Tinitiyak** na ang bawat halaman ay nagta-track ng sarili nitong mga coordinate nang independyente
 - **Nagbibigay** ng malinis na interface sa pamamagitan ng `dragElement` function
 
-### Bakit Gamitin ang Pointer Events?
+### Bakit Gumamit ng Pointer Events?
 
-Maaaring magtaka ka kung bakit natin ginagamit ang `onpointerdown` sa halip na ang mas pamilyar na `onclick`. Narito ang paliwanag:
+Maaaring magtanong ka kung bakit natin ginagamit ang `onpointerdown` imbes na ang mas pamilyar na `onclick`. Narito ang paliwanag:
 
 | Uri ng Event | Pinakamahusay Para sa | Ang Catch |
 |--------------|-----------------------|-----------|
-| `onclick` | Simpleng pag-click ng button | Hindi kayang mag-handle ng dragging (click lang at release) |
+| `onclick` | Simpleng pag-click ng button | Hindi kayang hawakan ang dragging (click lang at release) |
 | `onpointerdown` | Parehong mouse at touch | Mas bago, pero suportado na ngayon |
 | `onmousedown` | Desktop mouse lang | Hindi kasama ang mga mobile user |
 
 **Bakit perpekto ang pointer events para sa ating ginagawa:**
-- **Maganda ang performance** kahit gumamit ng mouse, daliri, o stylus
+- **Gumagana nang mahusay** kahit gumagamit ng mouse, daliri, o stylus
 - **Pareho ang pakiramdam** sa laptop, tablet, o phone
-- **Nagha-handle** ng aktwal na galaw ng dragging (hindi lang click-and-done)
+- **Hinahawakan** ang aktwal na galaw ng dragging (hindi lang click-and-done)
 - **Lumilikha** ng smooth na karanasan na inaasahan ng mga user mula sa modernong web apps
 
-> 💡 **Pag-iwas sa Problema sa Hinaharap**: Ang pointer events ang modernong paraan upang mag-handle ng user interactions. Sa halip na magsulat ng hiwalay na code para sa mouse at touch, makukuha mo ang pareho nang libre. Ang galing, di ba?
+> 💡 **Pagpapahusay sa Hinaharap**: Ang pointer events ang modernong paraan upang hawakan ang mga interaksyon ng user. Imbes na magsulat ng hiwalay na code para sa mouse at touch, makukuha mo ang pareho nang libre. Ang galing, di ba?
+
+### 🔄 **Pedagogical Check-in**
+**Pag-unawa sa Event Handling**: Mag-pause upang kumpirmahin ang iyong pagkaunawa sa mga events:
+- ✅ Bakit natin ginagamit ang pointer events imbes na mouse events?
+- ✅ Paano nagpapatuloy ang mga closure variables sa pagitan ng mga tawag sa function?
+- ✅ Anong papel ang ginagampanan ng `preventDefault()` sa smooth na dragging?
+- ✅ Bakit natin ikinakabit ang mga listener sa dokumento imbes na sa mga indibidwal na elemento?
+
+**Real-World Connection**: Isipin ang mga drag-and-drop interface na ginagamit mo araw-araw:
+- **File uploads**: Pag-drag ng mga file sa isang browser window
+- **Kanban boards**: Paglipat ng mga task sa pagitan ng mga column
+- **Image galleries**: Pag-aayos ng pagkakasunod-sunod ng mga larawan
+- **Mobile interfaces**: Pag-swipe at pag-drag sa mga touchscreen
 
 ---
 
-## Ang pointerDrag Function: Pagkuha ng Simula ng Drag
+## Ang pointerDrag Function: Pagkuha ng Simula ng Isang Drag
 
-Kapag pinindot ng user ang isang halaman (gamit ang mouse click o finger touch), ang `pointerDrag` function ang gumagana. Ang function na ito ang kumukuha ng initial coordinates at nagse-set up ng dragging system.
+Kapag pinindot ng user ang isang halaman (gamit ang mouse click o finger touch), ang `pointerDrag` function ay agad na gumagana. Ang function na ito ay kumukuha ng initial coordinates at nagse-set up ng dragging system.
 
 Idagdag ang function na ito sa loob ng iyong `dragElement` closure, pagkatapos ng linya na `terrariumElement.onpointerdown = pointerDrag;`:
 
@@ -247,8 +402,8 @@ function pointerDrag(e) {
 **Hakbang-hakbang, narito ang nangyayari:**
 - **Pinipigilan** ang default na browser behaviors na maaaring makasagabal sa dragging
 - **Nire-record** ang eksaktong coordinates kung saan sinimulan ng user ang drag gesture
-- **Nag-eestablish** ng event listeners para sa patuloy na galaw ng drag
-- **Ipinaghahanda** ang sistema upang mag-track ng galaw ng mouse/finger sa buong dokumento
+- **Nagse-set up** ng event listeners para sa patuloy na galaw ng drag
+- **Ipinaghahanda** ang sistema upang mag-track ng galaw ng mouse/daliri sa buong dokumento
 
 ### Pag-unawa sa Event Prevention
 
@@ -257,48 +412,47 @@ Ang linya na `e.preventDefault()` ay mahalaga para sa smooth na dragging:
 **Kung walang prevention, maaaring:**
 - **Mag-select** ng text kapag nag-drag sa page
 - **Mag-trigger** ng context menus sa right-click drag
-- **Makialam** sa custom na dragging behavior natin
+- **Makialam** sa ating custom na dragging behavior
 - **Lumikha** ng visual artifacts sa panahon ng drag operation
 
-> 🔍 **Eksperimento**: Pagkatapos tapusin ang araling ito, subukang tanggalin ang `e.preventDefault()` at tingnan kung paano nito naaapektuhan ang dragging experience. Mabilis mong mauunawaan kung bakit mahalaga ang linyang ito!
+> 🔍 **Eksperimento**: Pagkatapos ng araling ito, subukang tanggalin ang `e.preventDefault()` at tingnan kung paano nito naaapektuhan ang dragging experience. Mabilis mong mauunawaan kung bakit mahalaga ang linyang ito!
 
-### Sistema ng Coordinate Tracking
+### Sistema ng Pagsubaybay sa Coordinate
 
-Ang `e.clientX` at `e.clientY` properties ang nagbibigay sa atin ng eksaktong mouse/touch coordinates:
+Ang mga property na `e.clientX` at `e.clientY` ay nagbibigay sa atin ng eksaktong mouse/touch coordinates:
 
 | Property | Ano ang Sinusukat | Gamit |
 |----------|-------------------|-------|
-| `clientX` | Horizontal na posisyon kaugnay ng viewport | Pag-track ng galaw pakaliwa-pakanan |
-| `clientY` | Vertical na posisyon kaugnay ng viewport | Pag-track ng galaw pataas-pababa |
-
-**Pag-unawa sa mga coordinates na ito:**
+| `clientX` | Posisyon sa horizontal na may kaugnayan sa viewport | Pagsubaybay sa galaw pakaliwa-pakanan |
+| `clientY` | Posisyon sa vertical na may kaugnayan sa viewport | Pagsubaybay sa galaw pataas-pababa |
+**Pag-unawa sa mga koordinato:**
 - **Nagbibigay** ng pixel-perfect na impormasyon sa posisyon
 - **Nag-a-update** nang real-time habang gumagalaw ang pointer ng user
-- **Nanatili** na pare-pareho sa iba't ibang screen sizes at zoom levels
-- **Nagpapahintulot** ng smooth, responsive na drag interactions
+- **Nanatiling** pare-pareho sa iba't ibang laki ng screen at antas ng zoom
+- **Nagpapagana** ng makinis at tumutugong drag interactions
 
 ### Pag-set Up ng Document-Level Event Listeners
 
-Pansinin kung paano natin ina-attach ang move at stop events sa buong `document`, hindi lang sa elemento ng halaman:
+Pansinin kung paano natin ikinakabit ang move at stop events sa buong `document`, hindi lamang sa plant element:
 
 ```javascript
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
 
-**Bakit i-attach sa document:**
-- **Nagpapatuloy** sa pag-track kahit lumabas ang mouse sa elemento ng halaman
-- **Pinipigilan** ang pagputol ng drag kung mabilis gumalaw ang user
-- **Nagbibigay** ng smooth na dragging sa buong screen
-- **Nagha-handle** ng edge cases kung saan lumalabas ang cursor sa browser window
+**Bakit ikabit sa document:**
+- **Patuloy** na sinusubaybayan kahit lumabas ang mouse sa plant element
+- **Pinipigilan** ang pagkaantala ng drag kung mabilis gumalaw ang user
+- **Nagbibigay** ng makinis na pag-drag sa buong screen
+- **Hinahawakan** ang mga edge case kung saan lumalabas ang cursor sa window ng browser
 
-> ⚡ **Tandaan sa Performance**: Lilinisin natin ang mga document-level listeners kapag natapos ang dragging upang maiwasan ang memory leaks at performance issues.
+> ⚡ **Tandaan sa Performance**: Lilinisin natin ang mga document-level listeners kapag tumigil ang pag-drag upang maiwasan ang memory leaks at mga isyu sa performance.
 
-## Pagtatapos ng Drag System: Galaw at Cleanup
+## Pagkumpleto sa Drag System: Movement at Cleanup
 
-Ngayon idadagdag natin ang dalawang natitirang functions na humahawak sa aktwal na galaw ng dragging at ang cleanup kapag natapos ang dragging. Ang mga functions na ito ay nagtutulungan upang lumikha ng smooth, responsive na galaw ng halaman sa iyong terrarium.
+Ngayon, idadagdag natin ang dalawang natitirang function na humahawak sa aktwal na paggalaw ng drag at ang cleanup kapag tumigil ang pag-drag. Ang mga function na ito ay nagtutulungan upang lumikha ng makinis at tumutugong paggalaw ng halaman sa iyong terrarium.
 
-### Ang elementDrag Function: Pag-track ng Galaw
+### Ang elementDrag Function: Pagsubaybay sa Paggalaw
 
 Idagdag ang `elementDrag` function pagkatapos ng closing curly bracket ng `pointerDrag`:
 
@@ -319,18 +473,42 @@ function elementDrag(e) {
 ```
 
 **Pag-unawa sa coordinate mathematics:**
-- **`pos1` at `pos2`**: Kinakalkula kung gaano kalayo ang galaw ng mouse mula sa huling update
-- **`pos3` at `pos4`**: Iniimbak ang kasalukuyang posisyon ng mouse para sa susunod na kalkulasyon  
-- **`offsetTop` at `offsetLeft`**: Kinukuha ang kasalukuyang posisyon ng elemento sa pahina  
-- **Lohikang pagbabawas**: Inililipat ang elemento sa parehong distansya na nilakbay ng mouse  
+- **`pos1` at `pos2`**: Kinakalkula kung gaano kalayo ang mouse mula sa huling update
+- **`pos3` at `pos4`**: Iniimbak ang kasalukuyang posisyon ng mouse para sa susunod na kalkulasyon
+- **`offsetTop` at `offsetLeft`**: Kinukuha ang kasalukuyang posisyon ng elemento sa pahina
+- **Subtraction logic**: Inililipat ang elemento sa parehong dami ng paggalaw ng mouse
 
-**Narito ang breakdown ng kalkulasyon ng paggalaw:**  
-1. **Sinusukat** ang pagkakaiba sa pagitan ng lumang at bagong posisyon ng mouse  
-2. **Kinakalkula** kung gaano kalayo ang ililipat ng elemento base sa galaw ng mouse  
-3. **Ina-update** ang mga CSS position properties ng elemento nang real-time  
-4. **Iniimbak** ang bagong posisyon bilang baseline para sa susunod na kalkulasyon ng paggalaw  
+```mermaid
+sequenceDiagram
+    participant User
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    User->>Mouse: Start drag at (100, 50)
+    Mouse->>JavaScript: pointerdown event
+    JavaScript->>JavaScript: Store initial position (pos3=100, pos4=50)
+    JavaScript->>JavaScript: Setup move/up listeners
+    
+    User->>Mouse: Move to (110, 60)
+    Mouse->>JavaScript: pointermove event
+    JavaScript->>JavaScript: Calculate: pos1=10, pos2=10
+    JavaScript->>Plant: Update: left += 10px, top += 10px
+    Plant->>Plant: Render at new position
+    
+    User->>Mouse: Release at (120, 65)
+    Mouse->>JavaScript: pointerup event
+    JavaScript->>JavaScript: Remove listeners
+    JavaScript->>JavaScript: Reset for next drag
+```
 
-### Visual na Representasyon ng Matematika  
+**Narito ang breakdown ng kalkulasyon ng paggalaw:**
+1. **Sinusukat** ang pagkakaiba sa pagitan ng lumang at bagong posisyon ng mouse
+2. **Kinakalkula** kung gaano kalayo ang ililipat ang elemento batay sa paggalaw ng mouse
+3. **Ina-update** ang CSS position properties ng elemento nang real-time
+4. **Iniimbak** ang bagong posisyon bilang baseline para sa susunod na kalkulasyon ng paggalaw
+
+### Visual na Representasyon ng Math
 
 ```mermaid
 sequenceDiagram
@@ -343,10 +521,10 @@ sequenceDiagram
     JavaScript->>Plant: Update position by +10px right, +10px down
     Plant->>Plant: Render at new position
 ```
-  
-### Ang stopElementDrag Function: Paglilinis  
 
-Idagdag ang cleanup function pagkatapos ng closing curly bracket ng `elementDrag`:  
+### Ang stopElementDrag Function: Paglilinis
+
+Idagdag ang cleanup function pagkatapos ng closing curly bracket ng `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
@@ -355,136 +533,245 @@ function stopElementDrag() {
     document.onpointermove = null;
 }
 ```
-  
-**Bakit mahalaga ang cleanup:**  
-- **Pinipigilan** ang memory leaks mula sa mga event listener na naiwan  
-- **Itinitigil** ang dragging behavior kapag binitiwan ng user ang halaman  
-- **Pinapayagan** ang ibang elemento na ma-drag nang hiwalay  
-- **Ire-reset** ang sistema para sa susunod na drag operation  
 
-**Ano ang mangyayari kung walang cleanup:**  
-- Patuloy na tumatakbo ang mga event listener kahit natapos na ang pag-drag  
-- Bumabagal ang performance dahil sa mga hindi nagagamit na listener  
-- Nagkakaroon ng hindi inaasahang behavior kapag nakikipag-ugnayan sa ibang elemento  
-- Nasasayang ang resources ng browser sa hindi kinakailangang event handling  
+**Bakit mahalaga ang cleanup:**
+- **Pinipigilan** ang memory leaks mula sa mga natitirang event listeners
+- **Pinatitigil** ang dragging behavior kapag binitiwan ng user ang halaman
+- **Pinapayagan** ang ibang elemento na ma-drag nang independyente
+- **Ire-reset** ang sistema para sa susunod na drag operation
 
-### Pag-unawa sa CSS Position Properties  
+**Ano ang mangyayari kung walang cleanup:**
+- Patuloy na tumatakbo ang event listeners kahit tumigil na ang pag-drag
+- Bumababa ang performance habang dumarami ang hindi nagagamit na listeners
+- Hindi inaasahang behavior kapag nakikipag-ugnayan sa ibang elemento
+- Nasasayang ang resources ng browser sa hindi kinakailangang event handling
 
-Ang ating dragging system ay nagma-manipula ng dalawang pangunahing CSS properties:  
+### Pag-unawa sa CSS Position Properties
+
+Ang ating drag system ay nagma-manipula ng dalawang pangunahing CSS properties:
 
 | Property | Ano ang Kinokontrol | Paano Natin Ginagamit |
 |----------|---------------------|-----------------------|
-| `top` | Distansya mula sa itaas na gilid | Vertical na posisyon habang nagda-drag |
-| `left` | Distansya mula sa kaliwang gilid | Horizontal na posisyon habang nagda-drag |
+| `top` | Distansya mula sa itaas na gilid | Vertical positioning habang nagda-drag |
+| `left` | Distansya mula sa kaliwang gilid | Horizontal positioning habang nagda-drag |
 
-**Mga mahalagang kaalaman tungkol sa offset properties:**  
-- **`offsetTop`**: Kasalukuyang distansya mula sa itaas ng positioned parent element  
-- **`offsetLeft`**: Kasalukuyang distansya mula sa kaliwa ng positioned parent element  
-- **Positioning context**: Ang mga value na ito ay relative sa pinakamalapit na positioned ancestor  
-- **Real-time updates**: Agad na nagbabago kapag binago natin ang mga CSS properties  
+**Mga mahalagang insight tungkol sa offset properties:**
+- **`offsetTop`**: Kasalukuyang distansya mula sa itaas ng positioned parent element
+- **`offsetLeft`**: Kasalukuyang distansya mula sa kaliwa ng positioned parent element
+- **Positioning context**: Ang mga value na ito ay relative sa pinakamalapit na positioned ancestor
+- **Real-time updates**: Agad na nagbabago kapag binago natin ang CSS properties
 
-> 🎯 **Disenyo ng Pilosopiya**: Ang drag system na ito ay sadyang flexible – walang "drop zones" o limitasyon. Maaaring ilagay ng mga user ang mga halaman kahit saan, binibigyan sila ng ganap na kontrol sa disenyo ng kanilang terrarium.  
+> 🎯 **Disenyo ng Filosopiya**: Ang drag system na ito ay sadyang flexible – walang "drop zones" o mga limitasyon. Maaaring ilagay ng mga user ang mga halaman kahit saan, binibigyan sila ng ganap na creative control sa disenyo ng kanilang terrarium.
 
-## Pagsasama-sama: Ang Iyong Kumpletong Drag System  
+## Pagsasama-sama: Ang Iyong Kumpletong Drag System
 
-Binabati kita! Nakagawa ka ng isang sopistikadong drag-and-drop system gamit ang vanilla JavaScript. Ang iyong kumpletong `dragElement` function ay naglalaman na ngayon ng isang makapangyarihang closure na namamahala sa:  
+Binabati kita! Nakagawa ka ng isang sopistikadong drag-and-drop system gamit ang vanilla JavaScript. Ang iyong kumpletong `dragElement` function ay naglalaman na ngayon ng isang makapangyarihang closure na namamahala sa:
 
-**Ano ang nagagawa ng iyong closure:**  
-- **Nagpapanatili** ng mga pribadong position variable para sa bawat halaman nang hiwalay  
-- **Humahawak** sa buong drag lifecycle mula simula hanggang matapos  
-- **Nagbibigay** ng smooth, responsive na paggalaw sa buong screen  
-- **Naglilinis** ng mga resources nang maayos upang maiwasan ang memory leaks  
-- **Lumilikha** ng intuitive, creative na interface para sa disenyo ng terrarium  
+**Ano ang nagagawa ng iyong closure:**
+- **Nagpapanatili** ng pribadong position variables para sa bawat halaman nang independyente
+- **Humahawak** sa buong drag lifecycle mula simula hanggang matapos
+- **Nagbibigay** ng makinis at tumutugong paggalaw sa buong screen
+- **Naglilinis** ng resources nang maayos upang maiwasan ang memory leaks
+- **Lumilikha** ng intuitive at creative na interface para sa disenyo ng terrarium
 
-### Pagsubok sa Iyong Interactive Terrarium  
+### Pagsubok sa Iyong Interactive Terrarium
 
-Ngayon subukan ang iyong interactive terrarium! Buksan ang iyong `index.html` file sa isang web browser at subukan ang functionality:  
+Ngayon, subukan ang iyong interactive terrarium! Buksan ang iyong `index.html` file sa isang web browser at subukan ang functionality:
 
-1. **I-click at hawakan** ang anumang halaman upang simulan ang pag-drag  
-2. **Igalaw ang iyong mouse o daliri** at panoorin ang halaman na sumusunod nang maayos  
-3. **Bitawan** upang ilagay ang halaman sa bagong posisyon  
-4. **Mag-eksperimento** sa iba't ibang ayos upang tuklasin ang interface  
+1. **I-click at hawakan** ang anumang halaman upang simulan ang pag-drag
+2. **Igalaw ang iyong mouse o daliri** at panoorin ang halaman na maayos na sumusunod
+3. **Bitawan** upang ilagay ang halaman sa bagong posisyon
+4. **Mag-eksperimento** sa iba't ibang ayos upang tuklasin ang interface
 
-🥇 **Tagumpay**: Nakagawa ka ng isang ganap na interactive na web application gamit ang mga pangunahing konsepto na ginagamit ng mga propesyonal na developer araw-araw. Ang drag-and-drop functionality na ito ay gumagamit ng parehong prinsipyo sa likod ng file uploads, kanban boards, at marami pang ibang interactive na interface.  
+🥇 **Tagumpay**: Nakagawa ka ng isang ganap na interactive na web application gamit ang mga pangunahing konsepto na ginagamit ng mga propesyonal na developer araw-araw. Ang drag-and-drop functionality na ito ay gumagamit ng parehong prinsipyo sa likod ng file uploads, kanban boards, at marami pang ibang interactive interfaces.
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.tl.png)  
+### 🔄 **Pedagogical Check-in**
+**Pag-unawa sa Kumpletong Sistema**: Suriin ang iyong mastery sa buong drag system:
+- ✅ Paano pinapanatili ng closures ang independiyenteng estado para sa bawat halaman?
+- ✅ Bakit mahalaga ang coordinate calculation math para sa makinis na paggalaw?
+- ✅ Ano ang mangyayari kung nakalimutan nating linisin ang event listeners?
+- ✅ Paano nasusukat ang pattern na ito sa mas kumplikadong interactions?
+
+**Pagmuni-muni sa Kalidad ng Code**: Suriin ang iyong kumpletong solusyon:
+- **Modular na disenyo**: Ang bawat halaman ay may sariling closure instance
+- **Event efficiency**: Tamang setup at cleanup ng listeners
+- **Suporta sa iba't ibang device**: Gumagana sa desktop at mobile
+- **Performance conscious**: Walang memory leaks o redundant calculations
+
+![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.tl.png)
 
 ---
 
-## Hamon ng GitHub Copilot Agent 🚀  
+## Hamon ng GitHub Copilot Agent 🚀
 
-Gamitin ang Agent mode upang tapusin ang sumusunod na hamon:  
+Gamitin ang Agent mode upang kumpletuhin ang sumusunod na hamon:
 
-**Deskripsyon:** Pagandahin ang terrarium project sa pamamagitan ng pagdaragdag ng reset functionality na ibabalik ang lahat ng halaman sa kanilang orihinal na posisyon gamit ang smooth animations.  
+**Deskripsyon:** Pagandahin ang terrarium project sa pamamagitan ng pagdaragdag ng reset functionality na ibabalik ang lahat ng halaman sa kanilang orihinal na posisyon gamit ang smooth animations.
 
-**Prompt:** Gumawa ng reset button na, kapag na-click, ay mag-a-animate ng lahat ng halaman pabalik sa kanilang orihinal na posisyon sa sidebar gamit ang CSS transitions. Ang function ay dapat mag-imbak ng orihinal na posisyon kapag nag-load ang pahina at maayos na i-transition ang mga halaman pabalik sa mga posisyon na iyon sa loob ng 1 segundo kapag na-click ang reset button.  
+**Prompt:** Gumawa ng reset button na, kapag na-click, ay mag-a-animate ng lahat ng halaman pabalik sa kanilang orihinal na sidebar positions gamit ang CSS transitions. Ang function ay dapat mag-imbak ng orihinal na posisyon kapag nag-load ang pahina at maayos na i-transition ang mga halaman pabalik sa mga posisyong iyon sa loob ng 1 segundo kapag na-click ang reset button.
 
-Alamin pa ang tungkol sa [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) dito.  
+Alamin pa ang tungkol sa [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) dito.
 
-## 🚀 Karagdagang Hamon: Palawakin ang Iyong Kakayahan  
+## 🚀 Karagdagang Hamon: Palawakin ang Iyong Kasanayan
 
-Handa ka na bang dalhin ang iyong terrarium sa susunod na antas? Subukang ipatupad ang mga pagpapahusay na ito:  
+Handa ka na bang dalhin ang iyong terrarium sa susunod na antas? Subukan ang pagpapatupad ng mga pagpapahusay na ito:
 
-**Mga Creative Extensions:**  
-- **Double-click** ang isang halaman upang ilagay ito sa harapan (z-index manipulation)  
-- **Magdagdag ng visual feedback** tulad ng banayad na glow kapag hover sa mga halaman  
-- **Magpatupad ng boundaries** upang pigilan ang mga halaman na ma-drag sa labas ng terrarium  
-- **Gumawa ng save function** na nagtatanda ng mga posisyon ng halaman gamit ang localStorage  
-- **Magdagdag ng sound effects** para sa pag-pick up at paglagay ng mga halaman  
+**Mga Creative Extensions:**
+- **Double-click** ang halaman upang ilagay ito sa harapan (z-index manipulation)
+- **Magdagdag ng visual feedback** tulad ng banayad na glow kapag nag-hover sa mga halaman
+- **Magpatupad ng boundaries** upang pigilan ang mga halaman na ma-drag sa labas ng terrarium
+- **Gumawa ng save function** na nagtatanda ng posisyon ng halaman gamit ang localStorage
+- **Magdagdag ng sound effects** para sa pag-pick up at paglagay ng mga halaman
 
-> 💡 **Pagkakataon sa Pag-aaral**: Ang bawat isa sa mga hamon na ito ay magtuturo sa iyo ng mga bagong aspeto ng DOM manipulation, event handling, at disenyo ng user experience.  
+> 💡 **Pagkakataon sa Pag-aaral**: Ang bawat isa sa mga hamon na ito ay magtuturo sa iyo ng mga bagong aspeto ng DOM manipulation, event handling, at disenyo ng user experience.
 
-## Post-Lecture Quiz  
+## Post-Lecture Quiz
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)  
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)
 
-## Review & Self Study: Palalimin ang Iyong Pag-unawa  
+## Review & Self Study: Pagpapalalim ng Iyong Pag-unawa
 
-Na-master mo na ang mga pangunahing kaalaman ng DOM manipulation at closures, ngunit palaging may mas marami pang matutunan! Narito ang ilang mga landas upang palawakin ang iyong kaalaman at kakayahan.  
+Na-master mo na ang mga pangunahing kaalaman ng DOM manipulation at closures, ngunit palaging may mas marami pang matutunan! Narito ang ilang mga landas upang palawakin ang iyong kaalaman at kasanayan.
 
-### Alternatibong Paraan ng Drag and Drop  
+### Mga Alternatibong Paraan ng Drag and Drop
 
-Ginamit natin ang pointer events para sa maximum na flexibility, ngunit maraming paraan ang web development:  
+Ginamit natin ang pointer events para sa maximum na flexibility, ngunit nag-aalok ang web development ng maraming paraan:
 
 | Paraan | Pinakamahusay Para sa | Halaga ng Pag-aaral |
-|--------|-----------------------|---------------------|
-| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | File uploads, pormal na drag zones | Pag-unawa sa native browser capabilities |
+|-------|------------------------|---------------------|
+| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | File uploads, formal drag zones | Pag-unawa sa native browser capabilities |
 | [Touch Events](https://developer.mozilla.org/docs/Web/API/Touch_events) | Mobile-specific interactions | Mga pattern ng mobile-first development |
-| CSS `transform` properties | Smooth animations | Mga teknik sa performance optimization |
+| CSS `transform` properties | Smooth animations | Mga teknik sa pag-optimize ng performance |
 
-### Mga Advanced na Paksa sa DOM Manipulation  
+### Mga Advanced na Paksa sa DOM Manipulation
 
-**Mga susunod na hakbang sa iyong pag-aaral:**  
-- **Event delegation**: Mahusay na paghawak ng events para sa maraming elemento  
-- **Intersection Observer**: Pag-detect kapag ang mga elemento ay pumasok/lumabas sa viewport  
-- **Mutation Observer**: Pagbabantay sa mga pagbabago sa istruktura ng DOM  
-- **Web Components**: Paglikha ng reusable, encapsulated na UI elements  
-- **Virtual DOM concepts**: Pag-unawa kung paano ino-optimize ng mga framework ang DOM updates  
+**Mga susunod na hakbang sa iyong paglalakbay sa pag-aaral:**
+- **Event delegation**: Mahusay na paghawak ng events para sa maraming elemento
+- **Intersection Observer**: Pagtukoy kung kailan pumapasok/lumalabas ang mga elemento sa viewport
+- **Mutation Observer**: Pagsubaybay sa mga pagbabago sa istruktura ng DOM
+- **Web Components**: Paglikha ng reusable, encapsulated UI elements
+- **Virtual DOM concepts**: Pag-unawa kung paano ino-optimize ng mga framework ang DOM updates
 
-### Mahahalagang Resources para sa Patuloy na Pag-aaral  
+### Mahahalagang Resources para sa Patuloy na Pag-aaral
 
-**Teknikal na Dokumentasyon:**  
-- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Komprehensibong pointer event reference  
-- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Opisyal na dokumentasyon ng standards  
-- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Mga advanced na closure patterns  
+**Teknikal na Dokumentasyon:**
+- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Komprehensibong pointer event reference
+- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Opisyal na dokumentasyon ng standards
+- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Advanced closure patterns
 
-**Browser Compatibility:**  
-- [CanIUse.com](https://caniuse.com/) - Tingnan ang suporta ng feature sa iba't ibang browser  
-- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Detalyadong impormasyon sa compatibility  
+**Browser Compatibility:**
+- [CanIUse.com](https://caniuse.com/) - Suriin ang suporta ng feature sa iba't ibang browser
+- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Detalyadong impormasyon sa compatibility
 
-**Mga Pagkakataon sa Practice:**  
-- **Gumawa** ng puzzle game gamit ang katulad na drag mechanics  
-- **Lumikha** ng kanban board na may drag-and-drop task management  
-- **Magdisenyo** ng image gallery na may draggable photo arrangements  
-- **Mag-eksperimento** sa touch gestures para sa mobile interfaces  
+**Mga Pagkakataon sa Practice:**
+- **Gumawa** ng puzzle game gamit ang katulad na drag mechanics
+- **Lumikha** ng kanban board na may drag-and-drop task management
+- **Magdisenyo** ng image gallery na may draggable photo arrangements
+- **Mag-eksperimento** sa touch gestures para sa mobile interfaces
 
-> 🎯 **Strategiya sa Pag-aaral**: Ang pinakamahusay na paraan upang ma-solidify ang mga konseptong ito ay sa pamamagitan ng practice. Subukang gumawa ng mga variation ng draggable interfaces – bawat proyekto ay magtuturo sa iyo ng bago tungkol sa user interaction at DOM manipulation.  
+> 🎯 **Estratehiya sa Pag-aaral**: Ang pinakamahusay na paraan upang ma-solidify ang mga konseptong ito ay sa pamamagitan ng practice. Subukang gumawa ng mga variation ng draggable interfaces – bawat proyekto ay magtuturo sa iyo ng bago tungkol sa user interaction at DOM manipulation.
 
-## Assignment  
+### ⚡ **Ano ang Magagawa Mo sa Susunod na 5 Minuto**
+- [ ] Buksan ang browser DevTools at i-type ang `document.querySelector('body')` sa console
+- [ ] Subukang baguhin ang text ng isang webpage gamit ang `innerHTML` o `textContent`
+- [ ] Magdagdag ng click event listener sa anumang button o link sa isang webpage
+- [ ] I-inspect ang istruktura ng DOM tree gamit ang Elements panel
 
-[Work a bit more with the DOM](assignment.md)  
+### 🎯 **Ano ang Magagawa Mo sa Loob ng Isang Oras**
+- [ ] Kumpletuhin ang post-lesson quiz at repasuhin ang mga konsepto ng DOM manipulation
+- [ ] Gumawa ng interactive na webpage na tumutugon sa mga pag-click ng user
+- [ ] Mag-practice ng event handling gamit ang iba't ibang uri ng event (click, mouseover, keypress)
+- [ ] Bumuo ng simpleng to-do list o counter gamit ang DOM manipulation
+- [ ] Tuklasin ang relasyon sa pagitan ng mga HTML element at JavaScript objects
+
+### 📅 **Ang Iyong JavaScript Journey sa Loob ng Isang Linggo**
+- [ ] Kumpletuhin ang interactive terrarium project na may drag-and-drop functionality
+- [ ] Masterin ang event delegation para sa mahusay na paghawak ng events
+- [ ] Alamin ang tungkol sa event loop at asynchronous JavaScript
+- [ ] Mag-practice ng closures sa pamamagitan ng paggawa ng modules na may private state
+- [ ] Tuklasin ang mga modernong DOM APIs tulad ng Intersection Observer
+- [ ] Bumuo ng interactive components nang hindi gumagamit ng frameworks
+
+### 🌟 **Ang Iyong JavaScript Mastery sa Loob ng Isang Buwan**
+- [ ] Gumawa ng kumplikadong single-page application gamit ang vanilla JavaScript
+- [ ] Matutunan ang isang modernong framework (React, Vue, o Angular) at ikumpara ito sa vanilla DOM
+- [ ] Mag-ambag sa mga open source JavaScript projects
+- [ ] Masterin ang mga advanced na konsepto tulad ng web components at custom elements
+- [ ] Bumuo ng mga performant web applications gamit ang optimal DOM patterns
+- [ ] Magturo sa iba tungkol sa DOM manipulation at mga pangunahing kaalaman sa JavaScript
+
+## 🎯 Ang Iyong JavaScript DOM Mastery Timeline
+
+```mermaid
+timeline
+    title DOM & JavaScript Learning Progression
+    
+    section Foundation (15 minutes)
+        DOM Understanding: Element selection methods
+                         : Tree structure navigation
+                         : Property access patterns
+        
+    section Event Handling (20 minutes)
+        User Interaction: Pointer event basics
+                        : Event listener setup
+                        : Cross-device compatibility
+                        : Event prevention techniques
+        
+    section Closures (25 minutes)
+        Scope Management: Private variable creation
+                        : Function persistence
+                        : State management patterns
+                        : Memory efficiency
+        
+    section Drag System (30 minutes)
+        Interactive Features: Coordinate tracking
+                            : Position calculation
+                            : Movement mathematics
+                            : Cleanup procedures
+        
+    section Advanced Patterns (45 minutes)
+        Professional Skills: Event delegation
+                           : Performance optimization
+                           : Error handling
+                           : Accessibility considerations
+        
+    section Framework Understanding (1 week)
+        Modern Development: Virtual DOM concepts
+                          : State management libraries
+                          : Component architectures
+                          : Build tool integration
+        
+    section Expert Level (1 month)
+        Advanced DOM APIs: Intersection Observer
+                         : Mutation Observer
+                         : Custom Elements
+                         : Web Components
+```
+
+### 🛠️ Buod ng Iyong JavaScript Toolkit
+
+Pagkatapos ng lesson na ito, mayroon ka na:
+- **DOM Mastery**: Element selection, property manipulation, at tree navigation
+- **Event Expertise**: Cross-device interaction handling gamit ang pointer events
+- **Closure Understanding**: Private state management at function persistence
+- **Interactive Systems**: Kumpletong drag-and-drop implementation mula sa simula
+- **Performance Awareness**: Tamang event cleanup at memory management
+- **Modern Patterns**: Mga teknik sa pag-organisa ng code na ginagamit sa propesyonal na development
+- **User Experience**: Paglikha ng intuitive at tumutugong interfaces
+
+**Mga Propesyonal na Kasanayan na Nakuha**: Nakagawa ka ng mga features gamit ang parehong teknik tulad ng:
+- **Trello/Kanban boards**: Pag-drag ng card sa pagitan ng mga column
+- **File upload systems**: Drag-and-drop file handling
+- **Image galleries**: Mga interface sa pag-aayos ng larawan
+- **Mobile apps**: Mga pattern ng touch-based interaction
+
+**Susunod na Antas**: Handa ka nang tuklasin ang mga modernong frameworks tulad ng React, Vue, o Angular na nakabatay sa mga pangunahing konsepto ng DOM manipulation!
+
+## Assignment
+
+[Magtrabaho pa sa DOM](assignment.md)
 
 ---
 
 **Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+Ang dokumentong ito ay isinalin gamit ang AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
