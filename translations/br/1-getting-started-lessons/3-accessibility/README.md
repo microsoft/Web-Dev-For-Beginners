@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
-  "translation_date": "2025-10-22T23:02:48+00:00",
+  "original_hash": "7f2c48e04754724123ea100a822765e5",
+  "translation_date": "2025-11-04T00:02:18+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "br"
 }
@@ -11,6 +11,23 @@ CO_OP_TRANSLATOR_METADATA:
 
 ![Tudo Sobre Acessibilidade](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.br.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
+
+```mermaid
+journey
+    title Your Accessibility Learning Adventure
+    section Foundation
+      Understanding Users: 5: You
+      Testing Tools: 4: You
+      POUR Principles: 5: You
+    section Build Skills
+      Semantic HTML: 4: You
+      Visual Design: 5: You
+      ARIA Techniques: 4: You
+    section Master Practice
+      Keyboard Navigation: 5: You
+      Form Accessibility: 4: You
+      Real-world Testing: 5: You
+```
 
 ## Quiz Pré-Aula
 [Quiz pré-aula](https://ff-quizzes.netlify.app/web/)
@@ -23,15 +40,40 @@ Aqui está algo que pode te surpreender: quando você cria sites acessíveis, n�
 
 Já reparou nas rampas nas esquinas das ruas? Elas foram originalmente projetadas para cadeiras de rodas, mas agora ajudam pessoas com carrinhos de bebê, entregadores com carrinhos, viajantes com malas de rodinhas e ciclistas também. É exatamente assim que o design acessível na web funciona—soluções que ajudam um grupo frequentemente acabam beneficiando todos. Bem legal, né?
 
-Nesta lição, vamos explorar como criar sites que realmente funcionem para todos, independentemente de como navegam na web. Você descobrirá técnicas práticas que já estão incorporadas nos padrões da web, experimentará ferramentas de teste e verá como a acessibilidade torna seus sites mais utilizáveis para todos os usuários.
+Nesta lição, vamos explorar como criar sites que realmente funcionem para todos, não importa como naveguem na web. Você descobrirá técnicas práticas que já estão incorporadas nos padrões da web, terá a oportunidade de testar ferramentas e verá como a acessibilidade torna seus sites mais utilizáveis para todos os usuários.
 
-Ao final desta lição, você terá confiança para tornar a acessibilidade uma parte natural do seu fluxo de trabalho de desenvolvimento. Pronto para explorar como escolhas de design cuidadosas podem abrir a web para bilhões de usuários? Vamos lá!
+Ao final desta lição, você terá confiança para fazer da acessibilidade uma parte natural do seu fluxo de trabalho de desenvolvimento. Pronto para explorar como escolhas de design cuidadosas podem abrir a web para bilhões de usuários? Vamos começar!
 
-> Você pode fazer esta lição no [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
+```mermaid
+mindmap
+  root((Web Accessibility))
+    Users
+      Screen readers
+      Keyboard navigation
+      Voice control
+      Magnification
+    Technologies
+      HTML semantics
+      ARIA attributes
+      CSS focus indicators
+      Keyboard events
+    Benefits
+      Wider audience
+      Better SEO
+      Legal compliance
+      Universal design
+    Testing
+      Automated tools
+      Manual testing
+      User feedback
+      Real assistive tech
+```
+
+> Você pode acessar esta lição no [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
 ## Entendendo Tecnologias Assistivas
 
-Antes de começarmos a codificar, vamos dedicar um momento para entender como pessoas com diferentes habilidades realmente experimentam a web. Isso não é apenas teoria—entender esses padrões de navegação no mundo real fará de você um desenvolvedor muito melhor!
+Antes de começarmos a codificar, vamos dedicar um momento para entender como pessoas com diferentes habilidades realmente experimentam a web. Isso não é apenas teoria—compreender esses padrões de navegação no mundo real fará de você um desenvolvedor muito melhor!
 
 As tecnologias assistivas são ferramentas incríveis que ajudam pessoas com deficiências a interagir com sites de maneiras que podem te surpreender. Quando você entende como essas tecnologias funcionam, criar experiências acessíveis na web se torna muito mais intuitivo. É como aprender a ver seu código pelos olhos de outra pessoa.
 
@@ -39,11 +81,11 @@ As tecnologias assistivas são ferramentas incríveis que ajudam pessoas com def
 
 [Leitores de tela](https://en.wikipedia.org/wiki/Screen_reader) são tecnologias bastante sofisticadas que convertem texto digital em saída de voz ou braille. Embora sejam usados principalmente por pessoas com deficiência visual, também são muito úteis para usuários com dificuldades de aprendizagem, como dislexia.
 
-Eu gosto de pensar em um leitor de tela como um narrador muito inteligente lendo um livro para você. Ele lê o conteúdo em voz alta em uma ordem lógica, anuncia elementos interativos como "botão" ou "link" e fornece atalhos de teclado para navegar por uma página. Mas aqui está o ponto—os leitores de tela só podem fazer sua mágica se construirmos sites com estrutura adequada e conteúdo significativo. É aí que você entra como desenvolvedor!
+Eu gosto de pensar em um leitor de tela como um narrador inteligente lendo um livro para você. Ele lê o conteúdo em voz alta em uma ordem lógica, anuncia elementos interativos como "botão" ou "link" e fornece atalhos de teclado para navegar pela página. Mas aqui está o ponto—os leitores de tela só funcionam bem se construirmos sites com estrutura adequada e conteúdo significativo. É aí que você entra como desenvolvedor!
 
 **Leitores de tela populares em diferentes plataformas:**
 - **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (gratuito e mais popular), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (embutido)
-- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (embutido e muito eficiente)
+- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (embutido e muito capaz)
 - **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (embutido)
 - **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (gratuito e de código aberto)
 
@@ -52,53 +94,61 @@ Eu gosto de pensar em um leitor de tela como um narrador muito inteligente lendo
 Os leitores de tela oferecem vários métodos de navegação que tornam a navegação eficiente para usuários experientes:
 - **Leitura sequencial**: Lê o conteúdo de cima para baixo, como seguir um livro
 - **Navegação por marcos**: Pula entre seções da página (cabeçalho, navegação, principal, rodapé)
-- **Navegação por cabeçalhos**: Salta entre cabeçalhos para entender a estrutura da página
+- **Navegação por cabeçalhos**: Pula entre cabeçalhos para entender a estrutura da página
 - **Listas de links**: Gera uma lista de todos os links para acesso rápido
 - **Controles de formulário**: Navega diretamente entre campos de entrada e botões
 
-> 💡 **Aqui está algo que me surpreendeu**: 68% dos usuários de leitores de tela navegam principalmente por cabeçalhos ([Pesquisa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding)). Isso significa que sua estrutura de cabeçalhos é como um mapa para os usuários—quando você acerta, está literalmente ajudando as pessoas a encontrar seu caminho pelo conteúdo mais rápido!
+> 💡 **Algo que me surpreendeu**: 68% dos usuários de leitores de tela navegam principalmente por cabeçalhos ([Pesquisa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding)). Isso significa que a estrutura dos seus cabeçalhos é como um mapa para os usuários—quando você acerta, está literalmente ajudando as pessoas a encontrar o caminho pelo seu conteúdo mais rapidamente!
 
-### Construindo seu fluxo de trabalho de teste
+### Construindo seu fluxo de trabalho de testes
 
-Aqui está uma boa notícia—testar acessibilidade de forma eficaz não precisa ser complicado! Você vai querer combinar ferramentas automatizadas (elas são fantásticas para identificar problemas óbvios) com alguns testes práticos. Aqui está uma abordagem sistemática que, na minha experiência, identifica a maioria dos problemas sem consumir o dia inteiro:
+Aqui está uma boa notícia—testar acessibilidade de forma eficaz não precisa ser complicado! Você vai querer combinar ferramentas automatizadas (ótimas para identificar problemas óbvios) com alguns testes práticos. Aqui está uma abordagem sistemática que, na minha experiência, detecta a maioria dos problemas sem consumir o dia inteiro:
 
-**Fluxo de trabalho essencial de teste manual:**
+**Fluxo de trabalho essencial para testes manuais:**
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
+flowchart TD
+    A[🚀 Start Testing] --> B{⌨️ Keyboard Navigation}
     B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
+    C --> D{🎧 Screen Reader Testing}
     D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
+    E --> F{🔍 Zoom Testing}
     F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
+    G --> H{🎨 Color/Contrast Check}
     H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
+    I --> J{👁️ Focus Management}
     J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+    K --> L[✅ Testing Complete]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
 ```
 
 **Lista de verificação passo a passo para testes:**
 1. **Navegação por teclado**: Use apenas Tab, Shift+Tab, Enter, Espaço e teclas de seta
-2. **Teste com leitor de tela**: Ative NVDA, VoiceOver ou Narrator e navegue de olhos fechados
-3. **Teste de zoom**: Teste com níveis de zoom de 200% e 400%
+2. **Teste com leitor de tela**: Ative NVDA, VoiceOver ou Narrator e navegue com os olhos fechados
+3. **Teste de zoom**: Teste em níveis de zoom de 200% e 400%
 4. **Verificação de contraste de cores**: Verifique todo o texto e componentes da interface
 5. **Teste de indicador de foco**: Certifique-se de que todos os elementos interativos tenham estados de foco visíveis
 
-✅ **Comece com o Lighthouse**: Abra as Ferramentas de Desenvolvedor do seu navegador, execute uma auditoria de acessibilidade do Lighthouse e use os resultados para guiar as áreas de foco dos seus testes manuais.
+✅ **Comece com o Lighthouse**: Abra as DevTools do seu navegador, execute uma auditoria de acessibilidade do Lighthouse e use os resultados para orientar as áreas de foco dos testes manuais.
 
 ### Ferramentas de zoom e ampliação
 
-Sabe quando você dá zoom no seu celular porque o texto está muito pequeno ou força a vista na tela do laptop em plena luz do dia? Muitos usuários dependem de ferramentas de ampliação para tornar o conteúdo legível todos os dias. Isso inclui pessoas com baixa visão, idosos e qualquer pessoa que já tentou ler um site ao ar livre.
+Sabe quando você dá um zoom no celular porque o texto está muito pequeno ou força a vista na tela do laptop em plena luz do dia? Muitos usuários dependem de ferramentas de ampliação para tornar o conteúdo legível todos os dias. Isso inclui pessoas com baixa visão, idosos e qualquer pessoa que já tentou ler um site ao ar livre.
 
 As tecnologias modernas de zoom evoluíram além de apenas aumentar as coisas. Entender como essas ferramentas funcionam ajudará você a criar designs responsivos que permanecem funcionais e atraentes em qualquer nível de ampliação.
 
 **Capacidades modernas de zoom em navegadores:**
-- **Zoom da página**: Amplia todo o conteúdo proporcionalmente (texto, imagens, layout) - este é o método preferido
-- **Zoom apenas do texto**: Aumenta o tamanho da fonte enquanto mantém o layout original
+- **Zoom da página**: Escala todo o conteúdo proporcionalmente (texto, imagens, layout) - este é o método preferido
+- **Zoom apenas no texto**: Aumenta o tamanho da fonte enquanto mantém o layout original
 - **Pinch-to-zoom**: Suporte a gestos móveis para ampliação temporária
-- **Suporte de navegadores**: Todos os navegadores modernos suportam zoom de até 500% sem quebrar a funcionalidade
+- **Suporte do navegador**: Todos os navegadores modernos suportam zoom de até 500% sem quebrar a funcionalidade
 
 **Software especializado de ampliação:**
 - **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (embutido), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
@@ -120,30 +170,30 @@ Aqui está uma boa notícia: contraste de cores é um dos problemas de acessibil
 
 **Requisitos de contraste do WCAG:**
 
-| Tipo de Texto | WCAG AA (Mínimo) | WCAG AAA (Avançado) |
-|---------------|------------------|---------------------|
-| **Texto normal** (menor que 18pt) | Razão de contraste 4.5:1 | Razão de contraste 7:1 |
+| Tipo de Texto | WCAG AA (Mínimo) | WCAG AAA (Aprimorado) |
+|---------------|------------------|-----------------------|
+| **Texto normal** (menos de 18pt) | Razão de contraste 4.5:1 | Razão de contraste 7:1 |
 | **Texto grande** (18pt+ ou 14pt+ em negrito) | Razão de contraste 3:1 | Razão de contraste 4.5:1 |
 | **Componentes da interface** (botões, bordas de formulário) | Razão de contraste 3:1 | Razão de contraste 3:1 |
 
 **Ferramentas essenciais de teste:**
 - [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Aplicativo de desktop com seletor de cores
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Baseado na web com feedback instantâneo
-- [Stark](https://www.getstark.co/) - Plugin de ferramenta de design para Figma, Sketch, Adobe XD
+- [Stark](https://www.getstark.co/) - Plugin para ferramentas de design como Figma, Sketch, Adobe XD
 - [Accessible Colors](https://accessible-colors.com/) - Encontre paletas de cores acessíveis
 
 ✅ **Crie melhores paletas de cores**: Comece com as cores da sua marca e use verificadores de contraste para criar variações acessíveis. Documente essas variações como os tokens de cores acessíveis do seu sistema de design.
 
 ### Auditoria abrangente de acessibilidade
 
-O teste de acessibilidade mais eficaz combina várias abordagens. Nenhuma ferramenta única detecta tudo, então construir uma rotina de teste com métodos variados garante uma cobertura completa.
+O teste de acessibilidade mais eficaz combina várias abordagens. Nenhuma ferramenta única detecta tudo, então construir uma rotina de testes com métodos variados garante uma cobertura completa.
 
-**Testes baseados em navegador (embutidos nas Ferramentas de Desenvolvedor):**
+**Testes baseados em navegador (embutidos nas DevTools):**
 - **Chrome/Edge**: Auditoria de acessibilidade do Lighthouse + painel de acessibilidade
-- **Firefox**: Inspetor de Acessibilidade com visualização detalhada em árvore
+- **Firefox**: Inspetor de acessibilidade com visualização detalhada em árvore
 - **Safari**: Aba de auditoria no Web Inspector com simulação do VoiceOver
 
-**Extensões de teste profissionais:**
+**Extensões profissionais de teste:**
 - [axe DevTools](https://www.deque.com/axe/devtools/) - Teste automatizado padrão da indústria
 - [WAVE](https://wave.webaim.org/extension/) - Feedback visual com destaque de erros
 - [Accessibility Insights](https://accessibilityinsights.io/) - Suite de testes abrangente da Microsoft
@@ -153,39 +203,72 @@ O teste de acessibilidade mais eficaz combina várias abordagens. Nenhuma ferram
 - [Pa11y](https://pa11y.org/) - Ferramenta de teste de acessibilidade na linha de comando
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Pontuação automatizada de acessibilidade
 
-> 🎯 **Objetivo do Teste**: Almeje uma pontuação de acessibilidade no Lighthouse de 95+ como base. Lembre-se, ferramentas automatizadas capturam apenas cerca de 30-40% dos problemas de acessibilidade—testes manuais ainda são essenciais!
+> 🎯 **Meta de Teste**: Mire em uma pontuação de acessibilidade do Lighthouse de 95+ como base. Lembre-se, ferramentas automatizadas detectam apenas cerca de 30-40% dos problemas de acessibilidade—testes manuais ainda são essenciais!
+
+### 🧠 **Verificação de Habilidades de Teste: Pronto para Encontrar Problemas?**
+
+**Vamos ver como você está se sentindo sobre testes de acessibilidade:**
+- Qual método de teste parece mais acessível para você agora?
+- Você consegue imaginar usar navegação apenas por teclado por um dia inteiro?
+- Qual é uma barreira de acessibilidade que você já experimentou online?
+
+```mermaid
+pie title "Accessibility Issues Caught by Different Methods"
+    "Automated Tools" : 35
+    "Manual Testing" : 40
+    "User Feedback" : 25
+```
+
+> **Impulso de confiança**: Testadores profissionais de acessibilidade usam exatamente essa combinação de métodos. Você está aprendendo práticas padrão da indústria!
 
 ## Construindo Acessibilidade Desde o Início
 
-A chave para o sucesso na acessibilidade é incorporá-la desde o início. Sei que é tentador pensar "vou adicionar acessibilidade depois", mas isso é como tentar adicionar uma rampa a uma casa depois que ela já foi construída. Possível? Sim. Fácil? Nem tanto.
+A chave para o sucesso em acessibilidade é incorporá-la desde o início. Eu sei que é tentador pensar "vou adicionar acessibilidade depois", mas isso é como tentar adicionar uma rampa a uma casa depois que ela já foi construída. É possível? Sim. Fácil? Nem tanto.
 
 Pense na acessibilidade como planejar uma casa—é muito mais fácil incluir acessibilidade para cadeiras de rodas nos planos arquitetônicos iniciais do que adaptar tudo depois.
 
 ### Os princípios POUR: Sua base para acessibilidade
 
-As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) são baseadas em quatro princípios fundamentais que formam o acrônimo POUR. Não se preocupe—esses não são conceitos acadêmicos enfadonhos! Eles são, na verdade, diretrizes práticas para criar conteúdo que funcione para todos.
+As Diretrizes de Acessibilidade de Conteúdo da Web (WCAG) são baseadas em quatro princípios fundamentais que formam o acrônimo POUR. Não se preocupe—esses não são conceitos acadêmicos complicados! Eles são, na verdade, diretrizes práticas para criar conteúdo que funcione para todos.
 
-Quando você entende o POUR, tomar decisões de acessibilidade se torna muito mais intuitivo. É como ter uma lista mental que guia suas escolhas de design. Vamos detalhar:
+Depois que você entende o POUR, tomar decisões de acessibilidade se torna muito mais intuitivo. É como ter uma lista mental que orienta suas escolhas de design. Vamos detalhar:
 
-**🔍 Perceptível**: A informação deve ser apresentada de formas que os usuários possam perceber com seus sentidos disponíveis
+```mermaid
+flowchart LR
+    A[🔍 PERCEIVABLE<br/>Can users sense it?] --> B[🎮 OPERABLE<br/>Can users use it?]
+    B --> C[📖 UNDERSTANDABLE<br/>Can users get it?]
+    C --> D[💪 ROBUST<br/>Does it work everywhere?]
+    
+    A1[Alt text<br/>Captions<br/>Contrast] --> A
+    B1[Keyboard access<br/>No seizures<br/>Time limits] --> B
+    C1[Clear language<br/>Predictable<br/>Error help] --> C
+    D1[Valid code<br/>Compatible<br/>Future-proof] --> D
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+```
+
+**🔍 Perceptível**: A informação deve ser apresentada de forma que os usuários possam percebê-la com seus sentidos disponíveis
 
 - Forneça alternativas em texto para conteúdo não textual (imagens, vídeos, áudio)
 - Garanta contraste de cores suficiente para todo o texto e componentes da interface
 - Ofereça legendas e transcrições para conteúdo multimídia
 - Projete conteúdo que permaneça funcional quando redimensionado em até 200%
-- Use características sensoriais múltiplas (não apenas cor) para transmitir informações
+- Use múltiplas características sensoriais (não apenas cor) para transmitir informações
 
-**🎮 Operável**: Todos os componentes da interface devem ser operáveis por métodos de entrada disponíveis
+**🎮 Operável**: Todos os componentes da interface devem ser operáveis pelos métodos de entrada disponíveis
 
 - Torne toda a funcionalidade acessível via navegação por teclado
 - Dê aos usuários tempo suficiente para ler e interagir com o conteúdo
 - Evite conteúdo que cause convulsões ou distúrbios vestibulares
 - Ajude os usuários a navegar eficientemente com estrutura clara e marcos
-- Garanta que os elementos interativos tenham tamanhos adequados (mínimo de 44px)
+- Certifique-se de que os elementos interativos tenham tamanhos adequados (mínimo de 44px)
 
 **📖 Compreensível**: A informação e a operação da interface devem ser claras e compreensíveis
 
-- Use linguagem clara e simples, adequada ao seu público
+- Use linguagem clara e simples apropriada para seu público
 - Garanta que o conteúdo apareça e opere de forma previsível e consistente
 - Forneça instruções claras e mensagens de erro para entrada do usuário
 - Ajude os usuários a entender e corrigir erros em formulários
@@ -193,20 +276,48 @@ Quando você entende o POUR, tomar decisões de acessibilidade se torna muito ma
 
 **💪 Robusto**: O conteúdo deve funcionar de forma confiável em diferentes tecnologias e dispositivos assistivos
 
-- Use HTML válido e semântico como base
-- Garanta compatibilidade com tecnologias assistivas atuais e futuras
-- Siga padrões da web e melhores práticas de marcação
-- Teste em diferentes navegadores, dispositivos e ferramentas assistivas
-- Estruture o conteúdo para que ele se degrade de forma elegante quando recursos avançados não forem suportados
+- **Use HTML válido e semântico como base**
+- **Garanta compatibilidade com tecnologias assistivas atuais e futuras**
+- **Siga padrões da web e melhores práticas de marcação**
+- **Teste em diferentes navegadores, dispositivos e ferramentas assistivas**
+- **Estruture o conteúdo para que ele funcione bem mesmo quando recursos avançados não forem suportados**
+
+### 🎯 **Verificação dos Princípios POUR: Fixando o Conceito**
+
+**Reflexão rápida sobre os fundamentos:**
+- Consegue pensar em uma funcionalidade de site que falha em cada princípio POUR?
+- Qual princípio parece mais natural para você como desenvolvedor?
+- Como esses princípios podem melhorar o design para todos, não apenas para usuários com deficiência?
+
+```mermaid
+quadrantChart
+    title POUR Principles Impact Matrix
+    x-axis Low Effort --> High Effort
+    y-axis Low Impact --> High Impact
+    quadrant-1 Quick Wins
+    quadrant-2 Major Projects
+    quadrant-3 Consider Later
+    quadrant-4 Strategic Focus
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
+
+> **Lembre-se**: Comece com melhorias de alto impacto e baixo esforço. HTML semântico e texto alternativo oferecem o maior ganho em acessibilidade com o menor esforço!
 
 ## Criando Design Visual Acessível
 
-Um bom design visual e acessibilidade andam de mãos dadas. Quando você projeta com acessibilidade em mente, frequentemente descobre que essas restrições levam a soluções mais limpas e elegantes que beneficiam todos os usuários.
+Um bom design visual e acessibilidade andam de mãos dadas. Quando você projeta com acessibilidade em mente, muitas vezes descobre que essas restrições levam a soluções mais limpas e elegantes que beneficiam todos os usuários.
 
 Vamos explorar como criar designs visualmente atraentes que funcionem para todos, independentemente de suas habilidades visuais ou das condições em que estão visualizando seu conteúdo.
 
-### Estratégias de cor e acessibilidade visual
-A cor é uma ferramenta poderosa para comunicação, mas nunca deve ser a única forma de transmitir informações importantes. Projetar além da cor cria experiências mais robustas e inclusivas que funcionam em diversas situações.
+### Estratégias de acessibilidade visual e de cores
+
+A cor é poderosa para comunicação, mas nunca deve ser a única forma de transmitir informações importantes. Projetar além da cor cria experiências mais robustas e inclusivas que funcionam em mais situações.
 
 **Projete para diferenças na visão de cores:**
 
@@ -215,7 +326,7 @@ Aproximadamente 8% dos homens e 0,5% das mulheres têm algum tipo de diferença 
 - **Protanopia**: Vermelho parece mais escuro
 - **Tritanopia**: Dificuldade com azul e amarelo (raro)
 
-**Estratégias inclusivas de uso de cores:**
+**Estratégias inclusivas de cores:**
 
 ```css
 /* ❌ Bad: Using only color to indicate status */
@@ -244,17 +355,17 @@ Aproximadamente 8% dos homens e 0,5% das mulheres têm algum tipo de diferença 
 
 **Além dos requisitos básicos de contraste:**
 - Teste suas escolhas de cores com simuladores de daltonismo
-- Use padrões, texturas ou formas junto com a codificação por cores
-- Certifique-se de que os estados interativos sejam distinguíveis sem depender de cores
+- Use padrões, texturas ou formas junto com codificação por cores
+- Certifique-se de que os estados interativos sejam distinguíveis sem cor
 - Considere como seu design aparece no modo de alto contraste
 
 ✅ **Teste a acessibilidade das suas cores**: Use ferramentas como [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) para ver como seu site aparece para usuários com diferentes tipos de visão de cores.
 
 ### Indicadores de foco e design de interação
 
-Indicadores de foco são o equivalente digital de um cursor—eles mostram aos usuários de teclado onde estão na página. Indicadores de foco bem projetados melhoram a experiência para todos, tornando as interações claras e previsíveis.
+Os indicadores de foco são o equivalente digital de um cursor—eles mostram aos usuários de teclado onde estão na página. Indicadores de foco bem projetados melhoram a experiência para todos, tornando as interações claras e previsíveis.
 
-**Melhores práticas para indicadores de foco modernos:**
+**Melhores práticas modernas para indicadores de foco:**
 
 ```css
 /* Enhanced focus styles that work across browsers */
@@ -284,20 +395,42 @@ button:focus:not(:focus-visible) {
 ```
 
 **Requisitos para indicadores de foco:**
-- **Visibilidade**: Deve ter uma proporção de contraste de pelo menos 3:1 com os elementos ao redor
+- **Visibilidade**: Deve ter pelo menos uma proporção de contraste de 3:1 com os elementos ao redor
 - **Largura**: Espessura mínima de 2px ao redor de todo o elemento
 - **Persistência**: Deve permanecer visível até que o foco se mova para outro lugar
 - **Distinção**: Deve ser visualmente diferente de outros estados da interface
 
-> 💡 **Dica de Design**: Ótimos indicadores de foco frequentemente usam uma combinação de contorno, sombra de caixa e mudanças de cor para garantir visibilidade em diferentes fundos e contextos.
+> 💡 **Dica de Design**: Ótimos indicadores de foco frequentemente usam uma combinação de contorno, sombra e mudanças de cor para garantir visibilidade em diferentes fundos e contextos.
 
-✅ **Audite os indicadores de foco**: Navegue pelo seu site usando a tecla Tab e observe quais elementos possuem indicadores de foco claros. Algum deles é difícil de ver ou está ausente?
+✅ **Audite os indicadores de foco**: Navegue pelo seu site usando a tecla Tab e observe quais elementos têm indicadores de foco claros. Algum deles é difícil de ver ou está ausente?
 
 ### HTML semântico: A base da acessibilidade
 
-HTML semântico é como dar às tecnologias assistivas um sistema de GPS para o seu site. Quando você usa os elementos HTML corretos para o propósito pretendido, está basicamente fornecendo aos leitores de tela, teclados e outras ferramentas um mapa detalhado para ajudar os usuários a navegar de forma eficaz.
+HTML semântico é como dar às tecnologias assistivas um sistema de GPS para o seu site. Quando você usa os elementos HTML certos para o propósito pretendido, está basicamente fornecendo leitores de tela, teclados e outras ferramentas com um mapa detalhado para ajudar os usuários a navegar de forma eficaz.
 
-Aqui está uma analogia que realmente faz sentido: HTML semântico é a diferença entre uma biblioteca bem organizada com categorias claras e sinais úteis versus um depósito onde os livros estão espalhados aleatoriamente. Ambos os lugares têm os mesmos livros, mas em qual você preferiria tentar encontrar algo? Exatamente!
+Aqui está uma analogia que realmente fez sentido para mim: HTML semântico é a diferença entre uma biblioteca bem organizada com categorias claras e sinais úteis versus um depósito onde os livros estão espalhados aleatoriamente. Ambos os lugares têm os mesmos livros, mas em qual você preferiria tentar encontrar algo? Exatamente!
+
+```mermaid
+flowchart TD
+    A[🏠 HTML Document] --> B[📰 header]
+    A --> C[🧭 nav]
+    A --> D[📄 main]
+    A --> E[📋 footer]
+    
+    B --> B1[h1: Site Name<br/>Logo & branding]
+    C --> C1[ul: Navigation<br/>Primary links]
+    D --> D1[article: Content<br/>section: Subsections]
+    D --> D2[aside: Sidebar<br/>Related content]
+    E --> E1[nav: Footer links<br/>Copyright info]
+    
+    D1 --> D1a[h1: Page title<br/>h2: Major sections<br/>h3: Subsections]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 
 **Blocos de construção de uma estrutura de página acessível:**
 
@@ -354,7 +487,7 @@ Aqui está uma analogia que realmente faz sentido: HTML semântico é a diferen�
 </footer>
 ```
 
-**Por que o HTML semântico transforma a acessibilidade:**
+**Por que HTML semântico transforma a acessibilidade:**
 
 | Elemento Semântico | Propósito | Benefício para Leitores de Tela |
 |--------------------|-----------|---------------------------------|
@@ -374,14 +507,41 @@ Aqui está uma analogia que realmente faz sentido: HTML semântico é a diferen�
 
 > 🎯 **Teste Rápido**: Tente navegar pelo seu site com um leitor de tela usando atalhos de marcos (D para marcos, H para cabeçalhos, K para links no NVDA/JAWS). A navegação faz sentido?
 
+### 🏗️ **Verificação de Domínio de HTML Semântico: Construindo Bases Sólidas**
+
+**Vamos avaliar sua compreensão semântica:**
+- Consegue identificar os marcos em uma página apenas olhando o HTML?
+- Como explicaria a diferença entre `<section>` e `<div>` para um amigo?
+- Qual seria a primeira coisa que verificaria se um usuário de leitor de tela relatasse problemas de navegação?
+
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: div soup
+    UnsementicHTML --> SemanticHTML: Add landmarks
+    SemanticHTML --> AccessibleHTML: Test with AT
+    AccessibleHTML --> [*]: User success!
+    
+    note right of UnsementicHTML
+        Screen readers lost
+        Keyboard nav broken
+    end note
+    
+    note right of AccessibleHTML
+        Clear navigation
+        Efficient browsing
+    end note
+```
+
+> **Insight profissional**: Um bom HTML semântico resolve cerca de 70% dos problemas de acessibilidade automaticamente. Domine essa base e você estará no caminho certo!
+
 ✅ **Audite sua estrutura semântica**: Use o painel de Acessibilidade nas DevTools do seu navegador para visualizar a árvore de acessibilidade e garantir que sua marcação cria uma estrutura lógica.
 
-### Hierarquia de cabeçalhos: Criando um esquema lógico de conteúdo
+### Hierarquia de cabeçalhos: Criando um esqueleto lógico de conteúdo
 
-Os cabeçalhos são absolutamente cruciais para conteúdo acessível—eles são como a espinha dorsal que mantém tudo junto. Usuários de leitores de tela dependem muito dos cabeçalhos para entender e navegar pelo conteúdo. Pense nisso como fornecer um índice para sua página.
+Os cabeçalhos são absolutamente cruciais para conteúdo acessível—são como a espinha dorsal que mantém tudo unido. Usuários de leitores de tela dependem muito dos cabeçalhos para entender e navegar pelo conteúdo. Pense nisso como fornecer um índice para sua página.
 
 **Aqui está a regra de ouro para cabeçalhos:**
-Nunca pule níveis. Sempre progrida logicamente de `<h1>` para `<h2>` para `<h3>`, e assim por diante. Lembra-se de fazer esquemas na escola? É exatamente o mesmo princípio—você não pularia de "I. Ponto Principal" diretamente para "C. Sub-sub-ponto" sem um "A. Sub-ponto" no meio, certo?
+Nunca pule níveis. Sempre progrida logicamente de `<h1>` para `<h2>` para `<h3>`, e assim por diante. Lembra de fazer esquemas na escola? É exatamente o mesmo princípio—você não pularia de "I. Ponto Principal" direto para "C. Sub-sub-ponto" sem um "A. Sub-ponto" no meio, certo?
 
 **Exemplo de estrutura perfeita de cabeçalhos:**
 
@@ -423,30 +583,30 @@ Nunca pule níveis. Sempre progrida logicamente de `<h1>` para `<h2>` para `<h3>
 ```
 
 **Melhores práticas para cabeçalhos:**
-- **Um `<h1>` por página**: Normalmente o título principal da página ou do conteúdo principal
+- **Um `<h1>` por página**: Normalmente o título principal da página ou o cabeçalho do conteúdo principal
 - **Progressão lógica**: Nunca pule níveis (h1 → h2 → h3, não h1 → h3)
 - **Conteúdo descritivo**: Torne os cabeçalhos significativos quando lidos fora de contexto
 - **Estilização visual com CSS**: Use CSS para aparência, níveis de HTML para estrutura
 
 **Estatísticas de navegação por leitores de tela:**
 - 68% dos usuários de leitores de tela navegam por cabeçalhos ([Pesquisa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding))
-- Os usuários esperam encontrar um esquema lógico de cabeçalhos
+- Os usuários esperam encontrar uma estrutura lógica de cabeçalhos
 - Os cabeçalhos fornecem a maneira mais rápida de entender a estrutura da página
 
-> 💡 **Dica Pro**: Use extensões de navegador como "HeadingsMap" para visualizar sua estrutura de cabeçalhos. Ela deve ser lida como um índice bem organizado.
+> 💡 **Dica Profissional**: Use extensões de navegador como "HeadingsMap" para visualizar sua estrutura de cabeçalhos. Deve parecer um índice bem organizado.
 
 ✅ **Teste sua estrutura de cabeçalhos**: Use a navegação por cabeçalhos de um leitor de tela (tecla H no NVDA) para pular pelos seus cabeçalhos. A progressão conta a história do seu conteúdo de forma lógica?
 
 ### Técnicas avançadas de acessibilidade visual
 
-Além dos conceitos básicos de contraste e cor, existem técnicas sofisticadas que ajudam a criar experiências visuais verdadeiramente inclusivas. Esses métodos garantem que seu conteúdo funcione em diferentes condições de visualização e tecnologias assistivas.
+Além do básico de contraste e cor, existem técnicas sofisticadas que ajudam a criar experiências visuais verdadeiramente inclusivas. Esses métodos garantem que seu conteúdo funcione em diferentes condições de visualização e tecnologias assistivas.
 
 **Estratégias essenciais de comunicação visual:**
 
 - **Feedback multimodal**: Combine pistas visuais, textuais e, às vezes, sonoras
 - **Divulgação progressiva**: Apresente informações em partes digestíveis
 - **Padrões de interação consistentes**: Use convenções familiares de interface
-- **Tipografia responsiva**: Ajuste o tamanho do texto adequadamente em diferentes dispositivos
+- **Tipografia responsiva**: Escale o texto adequadamente em diferentes dispositivos
 - **Estados de carregamento e erro**: Forneça feedback claro para todas as ações do usuário
 
 **Utilitários CSS para acessibilidade aprimorada:**
@@ -505,17 +665,17 @@ Além dos conceitos básicos de contraste e cor, existem técnicas sofisticadas 
 }
 ```
 
-> 🎯 **Padrão de Acessibilidade**: O "link de pular" é essencial para usuários de teclado. Ele deve ser o primeiro elemento focável na sua página e levar diretamente à área de conteúdo principal.
+> 🎯 **Padrão de Acessibilidade**: O "link de pular" é essencial para usuários de teclado. Deve ser o primeiro elemento focável na sua página e pular diretamente para a área de conteúdo principal.
 
 ✅ **Implemente navegação de pular**: Adicione links de pular às suas páginas e teste-os pressionando Tab assim que a página carregar. Eles devem aparecer e permitir que você pule para o conteúdo principal.
 
-## Criando textos de link significativos
+## Criando Texto de Link Significativo
 
-Links são basicamente as rodovias da web, mas textos de link mal escritos são como placas de estrada que dizem apenas "Lugar" em vez de "Centro de Chicago". Não muito útil, certo?
+Links são basicamente as rodovias da web, mas textos de link mal escritos são como ter placas de estrada que dizem apenas "Lugar" em vez de "Centro de Chicago". Não muito útil, certo?
 
-Aqui está algo que me surpreendeu quando descobri: leitores de tela podem extrair todos os links de uma página e exibi-los como uma grande lista. Imagine se alguém lhe entregasse um diretório de todos os links da sua página. Cada um faria sentido por si só? Esse é o teste que o texto do seu link precisa passar!
+Aqui está algo que me surpreendeu quando aprendi: leitores de tela podem extrair todos os links de uma página e exibi-los como uma grande lista. Imagine se alguém lhe entregasse um diretório de todos os links da sua página. Cada um faria sentido por si só? Esse é o teste que seu texto de link precisa passar!
 
-### Entendendo os padrões de navegação por links
+### Entendendo padrões de navegação por links
 
 Leitores de tela oferecem recursos poderosos de navegação por links que dependem de textos de link bem escritos:
 
@@ -526,7 +686,7 @@ Leitores de tela oferecem recursos poderosos de navegação por links que depend
 - **Funcionalidade de busca**: Encontrar links específicos digitando texto parcial
 
 **Por que o contexto importa:**
-Quando usuários de leitores de tela geram uma lista de links, eles veem algo assim:
+Quando usuários de leitores de tela geram uma lista de links, eles veem algo como:
 - "Baixar relatório"
 - "Saiba mais"
 - "Clique aqui"
@@ -535,13 +695,13 @@ Quando usuários de leitores de tela geram uma lista de links, eles veem algo as
 
 Apenas dois desses links fornecem informações úteis quando lidos fora de contexto!
 
-> 📊 **Impacto no Usuário**: Usuários de leitores de tela escaneiam listas de links para entender rapidamente o conteúdo da página. Textos genéricos de link os forçam a navegar de volta ao contexto de cada link, desacelerando significativamente sua experiência de navegação.
+> 📊 **Impacto no Usuário**: Usuários de leitores de tela escaneiam listas de links para entender rapidamente o conteúdo da página. Textos genéricos forçam-nos a navegar de volta ao contexto de cada link, desacelerando significativamente sua experiência de navegação.
 
 ### Erros comuns em textos de link a evitar
 
 Entender o que não funciona ajuda a reconhecer e corrigir problemas de acessibilidade em conteúdo existente.
 
-**❌ Textos genéricos de link que não fornecem contexto:**
+**❌ Texto de link genérico que não fornece contexto:**
 
 ```html
 <!-- Meaningless when read from a link list -->
@@ -609,11 +769,11 @@ Textos de link descritivos beneficiam todos—usuários com visão podem escanea
 - **Inclua tipo de arquivo e tamanho**: "(PDF, 1.2MB)" para arquivos para download
 - **Mencione se links abrem externamente**: "(abre em nova janela)" quando apropriado
 - **Use linguagem ativa**: "Entre em contato conosco" vs. "Página de contato"
-- **Mantenha conciso**: Tente usar de 2 a 8 palavras, quando possível
+- **Mantenha conciso**: Almeje de 2 a 8 palavras quando possível
 
 ### Padrões avançados de acessibilidade para links
 
-Às vezes, restrições de design visual ou requisitos técnicos exigem soluções especiais. Aqui estão técnicas sofisticadas para cenários desafiadores comuns:
+Às vezes, restrições de design visual ou requisitos técnicos precisam de soluções especiais. Aqui estão técnicas sofisticadas para cenários desafiadores comuns:
 
 **Usando ARIA para contexto aprimorado:**
 
@@ -684,21 +844,21 @@ Textos de link descritivos beneficiam todos—usuários com visão podem escanea
 }
 ```
 
-> ⚠️ **Importante**: Ao usar `target="_blank"`, sempre informe os usuários que o link será aberto em uma nova janela ou aba. Mudanças inesperadas de navegação podem ser desorientadoras.
+> ⚠️ **Importante**: Ao usar `target="_blank"`, sempre informe os usuários que o link abre em uma nova janela ou aba. Mudanças inesperadas de navegação podem ser desorientadoras.
 
-✅ **Teste o contexto dos seus links**: Use as ferramentas de desenvolvedor do seu navegador para gerar uma lista de todos os links da sua página. Você consegue entender o propósito de cada link sem nenhum contexto ao redor?
+✅ **Teste o contexto dos seus links**: Use as ferramentas de desenvolvedor do seu navegador para gerar uma lista de todos os links da sua página. Consegue entender o propósito de cada link sem nenhum contexto ao redor?
 
-## ARIA: Potencializando a acessibilidade do HTML
+## ARIA: Supercarregando a Acessibilidade do HTML
 
-[Aplicações Ricas em Internet Acessíveis (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) é como ter um tradutor universal entre suas aplicações web complexas e tecnologias assistivas. Quando o HTML sozinho não consegue expressar tudo o que seus componentes interativos estão fazendo, o ARIA entra em cena para preencher essas lacunas.
+[Aplicações Ricas em Internet Acessíveis (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) é como ter um tradutor universal entre suas aplicações web complexas e tecnologias assistivas. Quando o HTML sozinho não consegue expressar tudo o que seus componentes interativos estão fazendo, o ARIA entra para preencher essas lacunas.
 
 Gosto de pensar no ARIA como adicionar anotações úteis ao seu HTML—como direções de palco em um roteiro de peça que ajudam os atores a entender seus papéis e relações.
 
-**Aqui está a regra mais importante sobre ARIA**: Sempre use HTML semântico primeiro, depois adicione ARIA para aprimorá-lo. Pense no ARIA como tempero, não o prato principal. Ele deve esclarecer e melhorar sua estrutura HTML, nunca substituí-la. Primeiro acerte essa base!
+**Aqui está a regra mais importante sobre ARIA**: Sempre use HTML semântico primeiro, depois adicione ARIA para aprimorá-lo. Pense no ARIA como tempero, não o prato principal. Ele deve esclarecer e melhorar sua estrutura HTML, nunca substituí-la. Acertar essa base primeiro!
 
 ### Implementação estratégica de ARIA
 
-ARIA é poderoso, mas com grande poder vem grande responsabilidade. ARIA incorreto pode tornar a acessibilidade pior do que nenhuma ARIA. Veja quando e como usá-lo de forma eficaz:
+ARIA é poderoso, mas com poder vem responsabilidade. ARIA incorreto pode tornar a acessibilidade pior do que nenhuma ARIA. Aqui está quando e como usá-lo de forma eficaz:
 
 **✅ Use ARIA quando:**
 - Criar widgets interativos personalizados (acordes, abas, carrosséis)
@@ -711,11 +871,10 @@ ARIA é poderoso, mas com grande poder vem grande responsabilidade. ARIA incorre
 - Elementos HTML padrão já fornecem a semântica necessária
 - Você não tem certeza de como implementá-lo corretamente
 - Ele duplica informações já fornecidas pelo HTML semântico
-- Você não testou com tecnologias assistivas reais
+- Você não testou com tecnologia assistiva real
 
-> 🎯 **Regra de Ouro do ARIA**: "Não altere semânticas a menos que seja absolutamente necessário, garanta sempre a acessibilidade por teclado e teste com tecnologias assistivas reais."
-
-**As cinco categorias do ARIA:**
+> 🎯 **Regra de Ouro do ARIA**: "Não altere a semântica a menos que seja absolutamente necessário, garanta sempre a acessibilidade por teclado e teste com tecnologia assistiva real."
+**As cinco categorias de ARIA:**
 
 1. **Funções**: O que é este elemento? (`button`, `tab`, `dialog`)
 2. **Propriedades**: Quais são suas características? (`aria-required`, `aria-haspopup`)
@@ -725,7 +884,7 @@ ARIA é poderoso, mas com grande poder vem grande responsabilidade. ARIA incorre
 
 ### Padrões essenciais de ARIA para aplicativos web modernos
 
-Esses padrões resolvem os desafios de acessibilidade mais comuns em aplicativos web interativos:
+Esses padrões resolvem os desafios mais comuns de acessibilidade em aplicativos web interativos:
 
 **Nomeando e descrevendo elementos:**
 
@@ -751,7 +910,7 @@ Esses padrões resolvem os desafios de acessibilidade mais comuns em aplicativos
 </div>
 ```
 
-**Regiões dinâmicas para conteúdo atualizado:**
+**Regiões dinâmicas para conteúdo dinâmico:**
 
 ```html
 <!-- Polite announcements (don't interrupt current speech) -->
@@ -812,15 +971,37 @@ function toggleAccordion(trigger) {
 
 ### Melhores práticas de implementação de ARIA
 
-ARIA é poderoso, mas requer implementação cuidadosa. Seguir essas diretrizes ajuda a garantir que seu ARIA melhore, em vez de prejudicar, a acessibilidade:
+ARIA é uma ferramenta poderosa, mas requer implementação cuidadosa. Seguir estas diretrizes ajuda a garantir que o uso de ARIA melhore, em vez de prejudicar, a acessibilidade:
 
-**🛡️ Princípios fundamentais:**
+**🛡️ Princípios básicos:**
 
-1. **HTML semântico primeiro**: Sempre prefira `<button>` em vez de `<div role="button">`
-2. **Não quebre semânticas**: Nunca substitua o significado existente do HTML (evite `<h1 role="button">`)
+```mermaid
+flowchart TD
+    A[🚀 Start with semantic HTML] --> B{Does HTML provide needed semantics?}
+    B -->|Yes| C[✅ Use HTML only]
+    B -->|No| D[Consider ARIA enhancement]
+    D --> E{Can you achieve it with simpler means?}
+    E -->|Yes| F[🔄 Simplify approach]
+    E -->|No| G[📝 Implement ARIA carefully]
+    G --> H[🧪 Test with real AT]
+    H --> I{Works as expected?}
+    I -->|No| J[🔧 Debug and fix]
+    I -->|Yes| K[✅ Success!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+
+1. **HTML semântico em primeiro lugar**: Sempre prefira `<button>` em vez de `<div role="button">`
+2. **Não quebre a semântica**: Nunca substitua o significado existente do HTML (evite `<h1 role="button">`)
 3. **Mantenha a acessibilidade por teclado**: Todos os elementos interativos com ARIA devem ser totalmente acessíveis por teclado
-4. **Teste com usuários reais**: O suporte ao ARIA varia significativamente entre tecnologias assistivas
-5. **Comece simples**: Implementações complexas de ARIA têm maior probabilidade de conter erros
+4. **Teste com usuários reais**: O suporte ao ARIA varia significativamente entre as tecnologias assistivas
+5. **Comece simples**: Implementações complexas de ARIA têm maior probabilidade de erros
 
 **🔍 Fluxo de teste:**
 
@@ -839,22 +1020,39 @@ graph TD
 **🚫 Erros comuns de ARIA a evitar:**
 
 - **Informações conflitantes**: Não contradiga a semântica do HTML
-- **Excesso de rotulagem**: Informações excessivas de ARIA podem confundir os usuários
-- **ARIA estática**: Esquecer de atualizar os estados ARIA quando o conteúdo muda
+- **Excesso de rotulagem**: Informações excessivas de ARIA podem sobrecarregar os usuários
+- **ARIA estática**: Esquecer de atualizar os estados de ARIA quando o conteúdo muda
 - **Implementações não testadas**: ARIA que funciona na teoria, mas falha na prática
-- **Falta de suporte ao teclado**: Funções ARIA sem interações correspondentes com o teclado
+- **Falta de suporte ao teclado**: Funções de ARIA sem interações correspondentes por teclado
 
 > 💡 **Recursos de teste**: Use ferramentas como [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) para validação automatizada de ARIA, mas sempre teste com leitores de tela reais para uma experiência completa.
 
-✅ **Aprenda com especialistas**: Estude o [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) para padrões testados e implementações de widgets interativos complexos.
+### 🎭 **Teste de habilidades em ARIA: Pronto para interações complexas?**
+
+**Avalie sua confiança em ARIA:**
+- Quando você escolheria ARIA em vez de HTML semântico? (Dica: quase nunca!)
+- Você consegue explicar por que `<div role="button">` geralmente é pior do que `<button>`?
+- Qual é a coisa mais importante a lembrar sobre testes de ARIA?
+
+```mermaid
+pie title "Common ARIA Usage Patterns"
+    "Labels & Descriptions" : 40
+    "Live Regions" : 25
+    "Widget States" : 20
+    "Complex Controls" : 15
+```
+
+> **Insight chave**: A maior parte do uso de ARIA é para rotular e descrever elementos. Padrões de widgets complexos são muito menos comuns do que você imagina!
+
+✅ **Aprenda com especialistas**: Estude o [Guia de Práticas de Autoria ARIA](https://w3c.github.io/aria-practices/) para padrões testados e implementações de widgets interativos complexos.
 
 ## Tornando imagens e mídias acessíveis
 
-Conteúdo visual e de áudio são partes essenciais das experiências modernas na web, mas podem criar barreiras se não forem implementados de forma cuidadosa. O objetivo é garantir que a informação e o impacto emocional da sua mídia alcancem todos os usuários. Depois que você pega o jeito, isso se torna algo natural.
+Conteúdo visual e de áudio são partes essenciais das experiências web modernas, mas podem criar barreiras se não forem implementados de forma cuidadosa. O objetivo é garantir que a informação e o impacto emocional de sua mídia alcancem todos os usuários. Depois que você pega o jeito, isso se torna algo natural.
 
-Diferentes tipos de mídia exigem abordagens distintas de acessibilidade. É como cozinhar—você não trataria um peixe delicado da mesma forma que trataria um bife robusto. Compreender essas diferenças ajuda a escolher a solução certa para cada situação.
+Diferentes tipos de mídia precisam de abordagens de acessibilidade diferentes. É como cozinhar—você não trataria um peixe delicado da mesma forma que trataria um bife robusto. Entender essas diferenças ajuda a escolher a solução certa para cada situação.
 
-### Estratégias de acessibilidade para imagens
+### Estratégia de acessibilidade para imagens
 
 Cada imagem no seu site tem um propósito. Entender esse propósito ajuda você a escrever textos alternativos melhores e criar experiências mais inclusivas.
 
@@ -927,17 +1125,36 @@ Cada imagem no seu site tem um propósito. Entender esse propósito ajuda você 
 
 ## Navegação por teclado e gerenciamento de foco
 
-Muitos usuários navegam na web exclusivamente com seus teclados. Isso inclui pessoas com deficiências motoras, usuários avançados que acham o teclado mais rápido que o mouse e qualquer pessoa cujo mouse tenha parado de funcionar. Garantir que seu site funcione bem com entrada de teclado é essencial e frequentemente torna seu site mais eficiente para todos.
+Muitos usuários navegam na web apenas com seus teclados. Isso inclui pessoas com deficiências motoras, usuários avançados que acham o teclado mais rápido que o mouse e qualquer pessoa cujo mouse tenha parado de funcionar. Garantir que seu site funcione bem com entrada por teclado é essencial e muitas vezes torna seu site mais eficiente para todos.
+
+```mermaid
+flowchart LR
+    A[⌨️ Keyboard Navigation] --> B[Tab Order]
+    A --> C[Focus Indicators]
+    A --> D[Skip Links]
+    A --> E[Keyboard Shortcuts]
+    
+    B --> B1[Logical sequence<br/>All interactive elements<br/>No tab traps]
+    C --> C1[Visible outlines<br/>High contrast<br/>Clear boundaries]
+    D --> D1[Skip to main<br/>Skip to nav<br/>Bypass repetitive]
+    E --> E1[Escape to close<br/>Enter to activate<br/>Arrows in groups]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 
 ### Padrões essenciais de navegação por teclado
 
-**Interações padrão com teclado:**
+**Interações padrão por teclado:**
 - **Tab**: Move o foco para frente entre os elementos interativos
 - **Shift + Tab**: Move o foco para trás
 - **Enter**: Ativa botões e links
 - **Espaço**: Ativa botões, marca caixas de seleção
 - **Setas**: Navega dentro de grupos de componentes (botões de rádio, menus)
-- **Escape**: Fecha modais, menus suspensos ou cancela operações
+- **Esc**: Fecha modais, menus suspensos ou cancela operações
 
 ### Melhores práticas de gerenciamento de foco
 
@@ -955,7 +1172,7 @@ button:focus-visible {
 }
 ```
 
-**Links de salto para navegação eficiente:**
+**Links de pular para navegação eficiente:**
 ```html
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -968,7 +1185,7 @@ button:focus-visible {
 </main>
 ```
 
-**Ordem de tabulação adequada:**
+**Ordem correta de tabulação:**
 ```html
 <!-- Use semantic HTML for natural tab order -->
 <form>
@@ -982,9 +1199,9 @@ button:focus-visible {
 </form>
 ```
 
-### Foco preso em modais
+### Trava de foco em modais
 
-Ao abrir diálogos modais, o foco deve ser preso dentro do modal:
+Ao abrir diálogos modais, o foco deve ser mantido dentro do modal:
 
 ```javascript
 // Modern focus trap implementation
@@ -1017,9 +1234,9 @@ function trapFocus(element) {
 }
 ```
 
-✅ **Teste a navegação por teclado**: Tente navegar no seu site usando apenas a tecla Tab. Você consegue alcançar todos os elementos interativos? A ordem de foco é lógica? Os indicadores de foco estão claramente visíveis?
+✅ **Teste a navegação por teclado**: Tente navegar no seu site usando apenas a tecla Tab. Você consegue alcançar todos os elementos interativos? A ordem de foco é lógica? Os indicadores de foco são claramente visíveis?
 
-## Acessibilidade de formulários
+## Acessibilidade em formulários
 
 Formulários são fundamentais para a interação do usuário e exigem atenção especial à acessibilidade.
 
@@ -1058,9 +1275,9 @@ Formulários são fundamentais para a interação do usuário e exigem atenção
 - Use `aria-invalid` para indicar campos inválidos
 - Forneça mensagens de erro claras e específicas
 - Use `role="alert"` para anúncios importantes de erro
-- Mostre erros tanto imediatamente quanto na submissão do formulário
+- Mostre erros tanto imediatamente quanto no envio do formulário
 
-### Fieldsets e agrupamento
+### Conjuntos de campos e agrupamento
 
 **Agrupe controles de formulário relacionados:**
 ```html
@@ -1083,35 +1300,35 @@ Formulários são fundamentais para a interação do usuário e exigem atenção
 </fieldset>
 ```
 
-## Sua jornada de acessibilidade: principais aprendizados
+## Sua Jornada de Acessibilidade: Principais Lições
 
-Parabéns! Você acabou de adquirir o conhecimento básico para criar experiências web verdadeiramente inclusivas. Isso é muito empolgante! A acessibilidade na web não é apenas sobre cumprir requisitos de conformidade—é sobre reconhecer as diversas formas como as pessoas interagem com o conteúdo digital e projetar para essa incrível complexidade.
+Parabéns! Você acabou de adquirir o conhecimento básico para criar experiências web verdadeiramente inclusivas. Isso é algo muito empolgante! A acessibilidade na web não se trata apenas de cumprir requisitos legais—é sobre reconhecer as diversas formas como as pessoas interagem com o conteúdo digital e projetar para essa incrível complexidade.
 
 Agora você faz parte de uma comunidade crescente de desenvolvedores que entendem que um bom design funciona para todos. Bem-vindo ao clube!
 
-**🎯 Sua caixa de ferramentas de acessibilidade agora inclui:**
+**🎯 Seu kit de ferramentas de acessibilidade agora inclui:**
 
-| Princípio Fundamental | Implementação | Impacto |
-|------------------------|---------------|---------|
-| **Fundação de HTML Semântico** | Use elementos HTML adequados para seus propósitos | Leitores de tela podem navegar eficientemente, teclados funcionam automaticamente |
+| Princípio Básico | Implementação | Impacto |
+|------------------|---------------|---------|
+| **Fundação de HTML Semântico** | Use os elementos HTML adequados para seu propósito | Leitores de tela podem navegar eficientemente, teclados funcionam automaticamente |
 | **Design Visual Inclusivo** | Contraste suficiente, uso significativo de cores, indicadores visíveis de foco | Claro para todos em qualquer condição de iluminação |
 | **Conteúdo Descritivo** | Texto de link significativo, texto alternativo, cabeçalhos | Usuários entendem o conteúdo sem contexto visual |
 | **Acessibilidade por Teclado** | Ordem de tabulação, atalhos de teclado, gerenciamento de foco | Acessibilidade motora e eficiência para usuários avançados |
-| **Melhoria com ARIA** | Uso estratégico para preencher lacunas semânticas | Aplicações complexas funcionam com tecnologias assistivas |
+| **Aprimoramento com ARIA** | Uso estratégico para preencher lacunas semânticas | Aplicativos complexos funcionam com tecnologias assistivas |
 | **Testes Abrangentes** | Ferramentas automatizadas + verificação manual + testes com usuários reais | Identifique problemas antes que impactem os usuários |
 
-**🚀 Próximos passos:**
+**🚀 Seus próximos passos:**
 
-1. **Incorpore acessibilidade ao seu fluxo de trabalho**: Faça dos testes uma parte natural do seu processo de desenvolvimento
+1. **Incorpore a acessibilidade ao seu fluxo de trabalho**: Faça dos testes uma parte natural do seu processo de desenvolvimento
 2. **Aprenda com usuários reais**: Busque feedback de pessoas que utilizam tecnologias assistivas
-3. **Mantenha-se atualizado**: As técnicas de acessibilidade evoluem com novas tecnologias e padrões
-4. **Defenda a inclusão**: Compartilhe seu conhecimento e torne a acessibilidade uma prioridade da equipe
+3. **Mantenha-se atualizado**: Técnicas de acessibilidade evoluem com novas tecnologias e padrões
+4. **Defenda a inclusão**: Compartilhe seu conhecimento e faça da acessibilidade uma prioridade da equipe
 
-> 💡 **Lembre-se**: Restrições de acessibilidade frequentemente levam a soluções inovadoras e elegantes que beneficiam a todos. Rampas de acesso, legendas e controles de voz começaram como recursos de acessibilidade e se tornaram melhorias amplamente aceitas.
+> 💡 **Lembre-se**: Restrições de acessibilidade frequentemente levam a soluções inovadoras e elegantes que beneficiam a todos. Rampas, legendas e controles de voz começaram como recursos de acessibilidade e se tornaram melhorias amplamente aceitas.
 
-**O caso de negócios é claro como água**: Sites acessíveis alcançam mais usuários, têm melhor classificação nos mecanismos de busca, possuem custos de manutenção mais baixos e evitam riscos legais. Mas, sinceramente? A verdadeira razão para se importar com acessibilidade vai muito além disso. Sites acessíveis incorporam os melhores valores da web—abertura, inclusão e a ideia de que todos merecem acesso igual à informação.
+**O caso de negócio é claro**: Sites acessíveis alcançam mais usuários, têm melhor classificação nos mecanismos de busca, custos de manutenção mais baixos e evitam riscos legais. Mas, honestamente? A verdadeira razão para se importar com acessibilidade vai muito além disso. Sites acessíveis incorporam os melhores valores da web—abertura, inclusão e a ideia de que todos merecem acesso igual à informação.
 
-Agora você está equipado para construir a web inclusiva do futuro. Cada site acessível que você cria torna a internet um lugar mais acolhedor para todos. Isso é incrível quando você pensa a respeito!
+Agora você está preparado para construir a web inclusiva do futuro. Cada site acessível que você cria torna a internet um lugar mais acolhedor para todos. Isso é realmente incrível quando você pensa sobre isso!
 
 ## Recursos Adicionais
 
@@ -1119,37 +1336,37 @@ Continue sua jornada de aprendizado sobre acessibilidade com esses recursos esse
 
 **📚 Padrões e Diretrizes Oficiais:**
 - [Diretrizes WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) - O padrão oficial de acessibilidade com referência rápida
-- [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - Padrões abrangentes para widgets interativos
-- [Diretrizes WebAIM](https://webaim.org/) - Orientação prática e amigável para iniciantes sobre acessibilidade
+- [Guia de Práticas de Autoria ARIA](https://w3c.github.io/aria-practices/) - Padrões abrangentes para widgets interativos
+- [Diretrizes WebAIM](https://webaim.org/) - Orientação prática e acessível para iniciantes
 
 **🛠️ Ferramentas e Recursos de Teste:**
 - [axe DevTools](https://www.deque.com/axe/devtools/) - Teste de acessibilidade padrão da indústria
-- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Verificação de acessibilidade passo a passo
+- [Lista de Verificação do Projeto A11y](https://www.a11yproject.com/checklist/) - Verificação de acessibilidade passo a passo
 - [Accessibility Insights](https://accessibilityinsights.io/) - Suite de testes abrangente da Microsoft
 - [Color Oracle](https://colororacle.org/) - Simulador de daltonismo para testes de design
 
 **🎓 Aprendizado e Comunidade:**
 - [Pesquisa de Leitores de Tela WebAIM](https://webaim.org/projects/screenreadersurvey9/) - Preferências e comportamentos de usuários reais
 - [Componentes Inclusivos](https://inclusive-components.design/) - Padrões modernos de componentes acessíveis
-- [A11y Coffee](https://a11y.coffee/) - Dicas rápidas e insights sobre acessibilidade
+- [A11y Coffee](https://a11y.coffee/) - Dicas e insights rápidos sobre acessibilidade
 - [Iniciativa de Acessibilidade na Web (WAI)](https://www.w3.org/WAI/) - Recursos abrangentes de acessibilidade do W3C
 
 **🎥 Aprendizado Prático:**
-- [Guia do Desenvolvedor de Acessibilidade](https://www.accessibility-developer-guide.com/) - Orientação prática para implementação
+- [Guia do Desenvolvedor de Acessibilidade](https://www.accessibility-developer-guide.com/) - Orientação prática de implementação
 - [Deque University](https://dequeuniversity.com/) - Cursos profissionais de treinamento em acessibilidade
 
-## Desafio do Agente GitHub Copilot 🚀
+## Desafio do GitHub Copilot Agent 🚀
 
 Use o modo Agent para completar o seguinte desafio:
 
 **Descrição:** Crie um componente de diálogo modal acessível que demonstre gerenciamento adequado de foco, atributos ARIA e padrões de navegação por teclado.
 
-**Prompt:** Construa um componente completo de diálogo modal com HTML, CSS e JavaScript que inclua: foco preso adequado, tecla ESC para fechar, clique fora para fechar, atributos ARIA para leitores de tela e indicadores visíveis de foco. O modal deve conter um formulário com rótulos adequados e tratamento de erros. Certifique-se de que o componente atenda aos padrões WCAG 2.1 AA.
+**Prompt:** Construa um componente completo de diálogo modal com HTML, CSS e JavaScript que inclua: trava de foco adequada, tecla ESC para fechar, clique fora para fechar, atributos ARIA para leitores de tela e indicadores visíveis de foco. O modal deve conter um formulário com rótulos adequados e tratamento de erros. Certifique-se de que o componente atenda aos padrões WCAG 2.1 AA.
 
 
 ## 🚀 Desafio
 
-Pegue este HTML e reescreva-o para torná-lo o mais acessível possível, usando as estratégias que você aprendeu.
+Pegue este HTML e reescreva-o para torná-lo o mais acessível possível, dadas as estratégias que você aprendeu.
 
 ```html
 <!DOCTYPE html>
@@ -1207,21 +1424,21 @@ Pegue este HTML e reescreva-o para torná-lo o mais acessível possível, usando
 </html>
 ```
 
-**Principais melhorias realizadas:**
-- Adicionado estrutura semântica adequada de HTML
-- Corrigida hierarquia de cabeçalhos (único h1, progressão lógica)
+**Melhorias feitas:**
+- Adicionada estrutura semântica adequada em HTML
+- Corrigida hierarquia de cabeçalhos (um único h1, progressão lógica)
 - Substituído texto de link genérico por texto significativo
 - Incluídos rótulos ARIA adequados para navegação
-- Adicionado atributo lang e meta tags apropriadas
-- Usado elemento button para elementos interativos
+- Adicionado atributo lang e metatags apropriadas
+- Utilizado elemento button para elementos interativos
 - Estruturado conteúdo do rodapé com marcos adequados
 
 ## Quiz Pós-Aula
 [Quiz pós-aula](https://ff-quizzes.netlify.app/web/en/)
 
-## Revisão e Autoestudo
+## Revisão e Estudo Individual
 
-Muitos governos têm leis sobre requisitos de acessibilidade. Pesquise sobre as leis de acessibilidade do seu país. O que é coberto e o que não é? Um exemplo é [este site governamental](https://accessibility.blog.gov.uk/).
+Muitos governos têm leis sobre requisitos de acessibilidade. Pesquise sobre as leis de acessibilidade do seu país de origem. O que é coberto e o que não é? Um exemplo é [este site do governo](https://accessibility.blog.gov.uk/).
 
 ## Tarefa
  
@@ -1231,5 +1448,65 @@ Créditos: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) po
 
 ---
 
+## 🚀 Sua Linha do Tempo de Domínio da Acessibilidade
+
+### ⚡ **O que você pode fazer nos próximos 5 minutos**
+- [ ] Instale a extensão axe DevTools no seu navegador
+- [ ] Execute uma auditoria de acessibilidade do Lighthouse em seu site favorito
+- [ ] Tente navegar em qualquer site usando apenas a tecla Tab
+- [ ] Teste o leitor de tela embutido do seu navegador (Narrator/VoiceOver)
+
+### 🎯 **O que você pode realizar nesta hora**
+- [ ] Complete o quiz pós-aula e reflita sobre os insights de acessibilidade
+- [ ] Pratique escrever textos alternativos significativos para 10 imagens diferentes
+- [ ] Audite a estrutura de cabeçalhos de um site usando a extensão HeadingsMap
+- [ ] Corrija problemas de acessibilidade encontrados no HTML do desafio
+- [ ] Teste o contraste de cores no seu projeto atual com a ferramenta do WebAIM
+
+### 📅 **Sua Jornada de Acessibilidade de Uma Semana**
+- [ ] Complete a tarefa analisando um site não acessível
+- [ ] Configure seu ambiente de desenvolvimento com ferramentas de teste de acessibilidade
+- [ ] Praticar navegação por teclado em 5 sites complexos diferentes  
+- [ ] Construir um formulário simples com rótulos adequados, tratamento de erros e ARIA  
+- [ ] Participar de uma comunidade de acessibilidade (A11y Slack, fórum WebAIM)  
+- [ ] Assistir usuários reais com deficiência navegando em sites (o YouTube tem ótimos exemplos)  
+
+### 🌟 **Sua Transformação de Um Mês**  
+- [ ] Integrar testes de acessibilidade ao seu fluxo de trabalho de desenvolvimento  
+- [ ] Contribuir para um projeto de código aberto corrigindo problemas de acessibilidade  
+- [ ] Realizar testes de usabilidade com alguém que utiliza tecnologia assistiva  
+- [ ] Construir uma biblioteca de componentes acessíveis para sua equipe  
+- [ ] Defender a acessibilidade no seu local de trabalho ou comunidade  
+- [ ] Mentorar alguém novo nos conceitos de acessibilidade  
+
+### 🏆 **Check-in Final do Campeão de Acessibilidade**  
+
+**Celebre sua jornada de acessibilidade:**  
+- Qual foi a coisa mais surpreendente que você aprendeu sobre como as pessoas usam a web?  
+- Qual princípio de acessibilidade mais combina com seu estilo de desenvolvimento?  
+- Como aprender sobre acessibilidade mudou sua perspectiva sobre design?  
+- Qual é a primeira melhoria de acessibilidade que você quer implementar em um projeto real?  
+
+```mermaid
+journey
+    title Your Accessibility Confidence Evolution
+    section Today
+      Overwhelmed: 3: You
+      Curious: 4: You
+      Motivated: 5: You
+    section This Week
+      Practicing: 4: You
+      Testing: 5: You
+      Understanding: 5: You
+    section Next Month
+      Advocating: 5: You
+      Leading: 5: You
+      Inclusive by Default: 5: You
+```
+  
+> 🌍 **Agora você é um campeão de acessibilidade!** Você entende que ótimas experiências na web funcionam para todos, independentemente de como acessam a internet. Cada recurso acessível que você constrói torna a internet mais inclusiva. A web precisa de desenvolvedores como você, que veem a acessibilidade não como uma limitação, mas como uma oportunidade de criar experiências melhores para todos os usuários. Bem-vindo ao movimento! 🎉  
+
+---
+
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

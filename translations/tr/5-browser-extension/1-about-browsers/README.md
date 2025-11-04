@@ -1,64 +1,117 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "33a875c522f237a2026e4653240dfc07",
-  "translation_date": "2025-10-23T00:10:52+00:00",
+  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
+  "translation_date": "2025-11-04T01:08:12+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "tr"
 }
 -->
 # Tarayıcı Uzantısı Projesi Bölüm 1: Tarayıcılar Hakkında Her Şey
 
-![Tarayıcı çizim notu](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.tr.jpg)
-> Çizim notu: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
+```mermaid
+journey
+    title Your Browser Extension Development Journey
+    section Foundation
+      Understand browsers: 3: Student
+      Learn extension types: 4: Student
+      Setup development: 4: Student
+    section Development
+      Build interface: 4: Student
+      Add functionality: 5: Student
+      Handle data: 5: Student
+    section Integration
+      Test in browser: 5: Student
+      Debug issues: 4: Student
+      Polish experience: 5: Student
+```
+
+![Tarayıcı sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.tr.jpg)
+> Sketchnote: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/23)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Giriş
 
-Tarayıcı uzantıları, web tarama deneyiminizi geliştiren mini uygulamalardır. Tim Berners-Lee'nin etkileşimli bir web vizyonu gibi, uzantılar tarayıcının basit belge görüntüleme yeteneklerinin ötesine geçmesini sağlar. Hesaplarınızı güvenli tutan şifre yöneticilerinden, tasarımcıların mükemmel renk tonlarını yakalamasına yardımcı olan renk seçicilere kadar, uzantılar günlük tarama zorluklarını çözer.
+Tarayıcı uzantıları, web tarama deneyiminizi geliştiren mini uygulamalardır. Tim Berners-Lee'nin etkileşimli bir web vizyonu gibi, uzantılar tarayıcının yeteneklerini basit belge görüntülemenin ötesine taşır. Hesaplarınızı güvende tutan şifre yöneticilerinden, tasarımcıların mükemmel renk tonlarını yakalamasına yardımcı olan renk seçicilere kadar uzantılar günlük tarama zorluklarını çözer.
 
 İlk uzantınızı oluşturmadan önce, tarayıcıların nasıl çalıştığını anlamamız gerekiyor. Alexander Graham Bell'in telefonu icat etmeden önce ses iletimini anlaması gerektiği gibi, tarayıcı temellerini bilmek, mevcut tarayıcı sistemleriyle sorunsuz bir şekilde entegre olan uzantılar oluşturmanıza yardımcı olacaktır.
 
 Bu dersin sonunda, tarayıcı mimarisini anlayacak ve ilk uzantınızı oluşturmaya başlamış olacaksınız.
 
+```mermaid
+mindmap
+  root((Browser Architecture))
+    Core Components
+      Rendering Engine
+      JavaScript Engine
+      Network Stack
+      Storage APIs
+    User Interface
+      Address Bar
+      Tab Management
+      Bookmarks
+      Extension Icons
+    Extension System
+      Manifest Files
+      Content Scripts
+      Background Pages
+      Popup Windows
+    Security Model
+      Same-Origin Policy
+      Permissions API
+      Content Security
+      Isolated Worlds
+    Development Tools
+      DevTools Integration
+      Debug Console
+      Performance Monitor
+      Extension Inspector
+```
+
 ## Web Tarayıcılarını Anlamak
 
-Bir web tarayıcı, esasen sofistike bir belge yorumlayıcıdır. Adres çubuğuna "google.com" yazdığınızda, tarayıcı dünya çapındaki sunuculardan içerik talep etmek, ardından bu kodu gördüğünüz etkileşimli web sayfalarına ayrıştırmak ve işlemek gibi karmaşık bir dizi işlem gerçekleştirir.
+Bir web tarayıcı, esasen sofistike bir belge yorumlayıcıdır. Adres çubuğuna "google.com" yazdığınızda, tarayıcı dünya çapındaki sunuculardan içerik talep etmek, ardından bu kodu gördüğünüz etkileşimli web sayfalarına dönüştürmek için karmaşık bir dizi işlem gerçekleştirir.
 
-Bu süreç, Tim Berners-Lee'nin 1990 yılında herkesin hiper bağlantılı belgelere erişebilmesi için tasarladığı ilk web tarayıcısı WorldWideWeb'in nasıl tasarlandığını yansıtır.
+Bu süreç, Tim Berners-Lee'nin 1990 yılında herkesin hiper bağlantılı belgelere erişebilmesi için tasarladığı ilk web tarayıcısı WorldWideWeb'in tasarımını yansıtır.
 
 ✅ **Biraz tarih**: İlk tarayıcı 'WorldWideWeb' olarak adlandırıldı ve 1990 yılında Sir Timothy Berners-Lee tarafından oluşturuldu.
 
 ![erken tarayıcılar](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.tr.jpg)
-> Bazı erken dönem tarayıcılar, [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) tarafından
+> Bazı erken tarayıcılar, [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) aracılığıyla
 
 ### Tarayıcılar Web İçeriğini Nasıl İşler?
 
-Bir URL girip bir web sayfası görmeniz arasında geçen süreç, saniyeler içinde gerçekleşen bir dizi koordineli adımı içerir:
+Bir URL girip bir web sayfası görmeniz arasındaki süreç, saniyeler içinde gerçekleşen birkaç koordineli adımı içerir:
 
 ```mermaid
 sequenceDiagram
     participant User
     participant Browser
+    participant Extension
     participant DNS
     participant Server
     
     User->>Browser: Types URL and presses Enter
+    Browser->>Extension: Trigger beforeRequest event
+    Extension->>Extension: Check if URL needs modification
     Browser->>DNS: Looks up server IP address
     DNS->>Browser: Returns IP address
     Browser->>Server: Requests web page content
     Server->>Browser: Sends HTML, CSS, and JavaScript
+    Browser->>Extension: Trigger beforeResponse event
+    Extension->>Extension: Modify content if needed
     Browser->>User: Renders complete web page
+    Extension->>User: Show extension UI updates
 ```
 
-**Bu süreçte neler gerçekleşir:**
+**Bu süreç şunları başarır:**
 - **Çevirir**: İnsan tarafından okunabilir URL'yi DNS araması yoluyla bir sunucu IP adresine
-- **Kurulur**: HTTP veya HTTPS protokollerini kullanarak web sunucusuyla güvenli bir bağlantı
+- **Kurulur**: HTTP veya HTTPS protokolleri kullanarak web sunucusuyla güvenli bir bağlantı
 - **Talep eder**: Sunucudan belirli web sayfası içeriğini
-- **Alır**: Sunucudan HTML işaretleme, CSS stilleri ve JavaScript kodu
+- **Alır**: Sunucudan HTML işaretlemesi, CSS stilleri ve JavaScript kodu
 - **İşler**: Tüm içeriği gördüğünüz etkileşimli web sayfasına dönüştürür
 
 ### Tarayıcı Temel Özellikleri
@@ -67,73 +120,127 @@ Modern tarayıcılar, uzantı geliştiricilerinin kullanabileceği birçok özel
 
 | Özellik | Amaç | Uzantı Fırsatları |
 |---------|---------|------------------------|
-| **İşleme Motoru** | HTML, CSS ve JavaScript'i görüntüler | İçerik değişikliği, stil ekleme |
+| **İşleme Motoru** | HTML, CSS ve JavaScript'i görüntüler | İçerik değişikliği, stil enjeksiyonu |
 | **JavaScript Motoru** | JavaScript kodunu çalıştırır | Özel scriptler, API etkileşimleri |
-| **Yerel Depolama** | Veriyi yerel olarak kaydeder | Kullanıcı tercihleri, önbellek verileri |
+| **Yerel Depolama** | Verileri yerel olarak kaydeder | Kullanıcı tercihleri, önbellek verileri |
 | **Ağ Yığını** | Web isteklerini işler | İstek izleme, veri analizi |
-| **Güvenlik Modeli** | Kullanıcıları zararlı içerikten korur | İçerik filtreleme, güvenlik geliştirmeleri |
+| **Güvenlik Modeli** | Kullanıcıları kötü niyetli içerikten korur | İçerik filtreleme, güvenlik geliştirmeleri |
 
 **Bu özellikleri anlamak size şunları sağlar:**
-- **Belirleme**: Uzantınızın en fazla değer katabileceği yerleri
+- **Belirleme**: Uzantınızın en fazla değer katabileceği yerleri bulma
 - **Seçim**: Uzantınızın işlevselliği için doğru tarayıcı API'lerini seçme
-- **Tasarım**: Tarayıcı sistemleriyle verimli çalışan uzantılar tasarlama
+- **Tasarım**: Tarayıcı sistemleriyle verimli çalışan uzantılar oluşturma
 - **Güvence**: Uzantınızın tarayıcı güvenlik en iyi uygulamalarına uygun olmasını sağlama
 
 ### Tarayıcılar Arası Geliştirme Düşünceleri
 
-Farklı tarayıcılar, standartları küçük farklılıklarla uygular, tıpkı farklı programlama dillerinin aynı algoritmayı farklı şekilde ele alması gibi. Chrome, Firefox ve Safari'nin her biri, uzantı geliştirme sırasında geliştiricilerin dikkate alması gereken benzersiz özelliklere sahiptir.
+Farklı tarayıcılar standartları hafif farklılıklarla uygular, tıpkı farklı programlama dillerinin aynı algoritmayı farklı şekilde ele alması gibi. Chrome, Firefox ve Safari'nin her biri, uzantı geliştirme sırasında geliştiricilerin dikkate alması gereken benzersiz özelliklere sahiptir.
 
-> 💡 **İpucu**: Uzantınızın özelliklerini planlarken farklı tarayıcılarda hangi web teknolojilerinin desteklendiğini kontrol etmek için [caniuse.com](https://www.caniuse.com) kullanın!
+> 💡 **İpucu**: [caniuse.com](https://www.caniuse.com) kullanarak farklı tarayıcılarda hangi web teknolojilerinin desteklendiğini kontrol edin. Bu, uzantınızın özelliklerini planlarken çok değerlidir!
 
-**Uzantı geliştirme için önemli hususlar:**
-- Uzantınızı Chrome, Firefox ve Edge tarayıcılarında **test edin**
-- Farklı tarayıcı uzantı API'lerine ve manifest formatlarına **uyum sağlayın**
-- Farklı performans özelliklerini ve sınırlamaları **ele alın**
-- Tarayıcıya özgü özellikler için **yedek çözümler sağlayın**
+**Uzantı geliştirme için önemli düşünceler:**
+- **Test edin**: Uzantınızı Chrome, Firefox ve Edge tarayıcılarında test edin
+- **Uyarlayın**: Farklı tarayıcı uzantı API'lerine ve manifest formatlarına uyum sağlayın
+- **Ele alın**: Farklı performans özelliklerini ve sınırlamaları yönetin
+- **Sağlayın**: Tarayıcıya özgü özellikler için alternatifler sunun
 
-✅ **Analitik İçgörü**: Web geliştirme projelerinize analitik paketler kurarak kullanıcılarınızın hangi tarayıcıları tercih ettiğini belirleyebilirsiniz. Bu veri, hangi tarayıcıları öncelikli olarak desteklemeniz gerektiğini belirlemenize yardımcı olur.
+✅ **Analitik İçgörü**: Web geliştirme projelerinize analitik paketler kurarak kullanıcılarınızın hangi tarayıcıları tercih ettiğini belirleyebilirsiniz. Bu veriler, öncelikli olarak hangi tarayıcıları desteklemeniz gerektiğini belirlemenize yardımcı olur.
 
 ## Tarayıcı Uzantılarını Anlamak
 
 Tarayıcı uzantıları, doğrudan tarayıcı arayüzüne işlevsellik ekleyerek yaygın web tarama zorluklarını çözer. Ayrı uygulamalar veya karmaşık iş akışları gerektirmek yerine, uzantılar araçlara ve özelliklere anında erişim sağlar.
 
-Bu konsept, erken dönem bilgisayar öncüleri gibi Douglas Engelbart'ın teknolojiyi kullanarak insan yeteneklerini artırmayı hayal ettiği şekilde, tarayıcının temel işlevselliğini artırır.
+Bu konsept, erken bilgisayar öncüleri gibi Douglas Engelbart'ın teknolojiyi kullanarak insan yeteneklerini artırmayı hayal ettiği şekilde, tarayıcınızın temel işlevselliğini artırır.
+
+```mermaid
+quadrantChart
+    title Browser Extension Categories
+    x-axis Simple --> Complex
+    y-axis Personal Use --> Professional Tools
+    quadrant-1 Developer Tools
+    quadrant-2 Enterprise Solutions
+    quadrant-3 Personal Utilities
+    quadrant-4 Productivity Apps
+    
+    Ad Blockers: [0.3, 0.2]
+    Password Managers: [0.7, 0.3]
+    Color Pickers: [0.4, 0.8]
+    Code Formatters: [0.8, 0.9]
+    Note Taking: [0.6, 0.5]
+    Video Downloaders: [0.5, 0.2]
+    Time Trackers: [0.7, 0.6]
+    Screenshot Tools: [0.4, 0.4]
+```
 
 **Popüler uzantı kategorileri ve faydaları:**
 - **Verimlilik Araçları**: Görev yöneticileri, not alma uygulamaları ve zaman takipçileri, düzenli kalmanıza yardımcı olur
 - **Güvenlik Geliştirmeleri**: Şifre yöneticileri, reklam engelleyiciler ve gizlilik araçları, verilerinizi korur
-- **Geliştirici Araçları**: Kod düzenleyiciler, renk seçiciler ve hata ayıklama araçları, geliştirmeyi kolaylaştırır
+- **Geliştirici Araçları**: Kod biçimlendiriciler, renk seçiciler ve hata ayıklama araçları, geliştirmeyi kolaylaştırır
 - **İçerik Geliştirme**: Okuma modları, video indiriciler ve ekran görüntüsü araçları, web deneyiminizi iyileştirir
 
 ✅ **Düşünme Sorusu**: En sevdiğiniz tarayıcı uzantıları nelerdir? Hangi özel görevleri yerine getiriyorlar ve tarama deneyiminizi nasıl iyileştiriyorlar?
 
+### 🔄 **Pedagojik Kontrol Noktası**
+**Tarayıcı Mimarisini Anlama**: Uzantı geliştirmeye geçmeden önce şunları yapabildiğinizden emin olun:
+- ✅ Tarayıcıların web isteklerini nasıl işlediğini ve içerik oluşturduğunu açıklayın
+- ✅ Tarayıcı mimarisinin ana bileşenlerini belirleyin
+- ✅ Uzantıların tarayıcı işlevselliğiyle nasıl entegre olduğunu anlayın
+- ✅ Kullanıcıları koruyan güvenlik modelini tanıyın
+
+**Hızlı Kendini Test Etme**: Bir URL yazmaktan bir web sayfası görmeye kadar olan yolu izleyebilir misiniz?
+1. **DNS araması** URL'yi IP adresine çevirir
+2. **HTTP isteği** sunucudan içerik alır
+3. **Ayrıştırma** HTML, CSS ve JavaScript'i işler
+4. **İşleme** nihai web sayfasını görüntüler
+5. **Uzantılar** içeriği birden fazla adımda değiştirebilir
+
 ## Uzantıları Yükleme ve Yönetme
 
-Uzantı yükleme sürecini anlamak, insanların uzantınızı yüklerken yaşayacakları kullanıcı deneyimini tahmin etmenize yardımcı olur. Yükleme süreci, modern tarayıcılar arasında standartlaştırılmıştır, ancak arayüz tasarımında küçük farklılıklar vardır.
+Uzantı yükleme sürecini anlamak, insanların uzantınızı yüklediğinde yaşayacakları kullanıcı deneyimini tahmin etmenize yardımcı olur. Yükleme süreci modern tarayıcılar arasında standartlaştırılmıştır, arayüz tasarımında küçük farklılıklar vardır.
 
-![Edge tarayıcısının açık edge://extensions sayfasını ve açık ayarlar menüsünü gösteren ekran görüntüsü](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.tr.png)
+![Edge tarayıcısının edge://extensions sayfasını ve açık ayarlar menüsünü gösteren ekran görüntüsü](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.tr.png)
 
-> **Önemli**: Kendi uzantılarınızı test ederken geliştirici modunu açtığınızdan ve diğer mağazalardan uzantılara izin verdiğinizden emin olun.
+> **Önemli**: Kendi uzantılarınızı test ederken geliştirici modunu açmayı ve diğer mağazalardan uzantılara izin vermeyi unutmayın.
 
 ### Geliştirme Uzantısı Yükleme Süreci
 
 Kendi uzantılarınızı geliştirirken ve test ederken şu iş akışını izleyin:
+
+```mermaid
+flowchart TD
+    A[Write Code] --> B[Build Extension]
+    B --> C{First Install?}
+    C -->|Yes| D[Load Unpacked]
+    C -->|No| E[Reload Extension]
+    D --> F[Test Functionality]
+    E --> F
+    F --> G{Working Correctly?}
+    G -->|No| H[Debug Issues]
+    G -->|Yes| I[Ready for Users]
+    H --> A
+    I --> J[Publish to Store]
+    
+    style A fill:#e1f5fe
+    style F fill:#e8f5e8
+    style I fill:#f3e5f5
+    style J fill:#fff3e0
+```
 
 ```bash
 # Step 1: Build your extension
 npm run build
 ```
 
-**Bu komutun gerçekleştirdikleri:**
-- Kaynak kodunuzu tarayıcıya hazır dosyalara **derler**
-- JavaScript modüllerini optimize edilmiş paketlere **toplar**
-- Nihai uzantı dosyalarını `/dist` klasöründe **oluşturur**
-- Uzantınızı yükleme ve test için **hazırlar**
+**Bu komutun başardıkları:**
+- **Kaynak kodunuzu** tarayıcıya hazır dosyalara derler
+- **JavaScript modüllerini** optimize edilmiş paketlere dönüştürür
+- **Son uzantı dosyalarını** `/dist` klasöründe oluşturur
+- **Uzantınızı** yükleme ve test için hazırlar
 
 **Adım 2: Tarayıcı Uzantılarına Git**
-1. Tarayıcınızın uzantı yönetim sayfasını **açın**
-2. Sağ üstteki "Ayarlar ve daha fazlası" düğmesine (`...` simgesi) **tıklayın**
-3. Açılır menüden "Uzantılar"ı **seçin**
+1. **Tarayıcınızın** uzantı yönetim sayfasını açın
+2. **Sağ üstteki** "Ayarlar ve daha fazlası" düğmesine (`...` simgesi) tıklayın
+3. **Açılır menüden** "Uzantılar" seçeneğini seçin
 
 **Adım 3: Uzantınızı Yükleyin**
 - **Yeni yüklemeler için**: `load unpacked` seçeneğini seçin ve `/dist` klasörünüzü seçin
@@ -142,16 +249,16 @@ npm run build
 
 ### Üretim Uzantısı Yükleme
 
-> ✅ **Not**: Bu geliştirme talimatları, yalnızca kendi oluşturduğunuz uzantılar için geçerlidir. Yayınlanmış uzantıları yüklemek için [Microsoft Edge Eklentileri mağazası](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) gibi resmi tarayıcı uzantı mağazalarını ziyaret edin.
+> ✅ **Not**: Bu geliştirme talimatları, yalnızca kendiniz oluşturduğunuz uzantılar içindir. Yayınlanmış uzantıları yüklemek için [Microsoft Edge Eklentiler mağazası](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) gibi resmi tarayıcı uzantı mağazalarını ziyaret edin.
 
 **Farkı anlamak:**
-- **Geliştirme yüklemeleri**, geliştirme sırasında yayınlanmamış uzantıları test etmenize olanak tanır
-- **Mağaza yüklemeleri**, otomatik güncellemelerle birlikte doğrulanmış, yayınlanmış uzantılar sağlar
-- **Sideloading**, resmi mağazalar dışındaki uzantıların yüklenmesine olanak tanır (geliştirici modu gerektirir)
+- **Geliştirme yüklemeleri**, geliştirme sırasında yayınlanmamış uzantıları test etmenizi sağlar
+- **Mağaza yüklemeleri**, otomatik güncellemelerle birlikte onaylanmış, yayınlanmış uzantılar sağlar
+- **Sideloading**, resmi mağazaların dışından uzantı yüklemesine izin verir (geliştirici modu gerektirir)
 
 ## Karbon Ayak İzi Uzantınızı Oluşturma
 
-Bölgenizin enerji kullanımının karbon ayak izini gösteren bir tarayıcı uzantısı oluşturacağız. Bu proje, çevresel farkındalık için pratik bir araç oluştururken temel uzantı geliştirme kavramlarını gösterir.
+Bölgenizin enerji kullanımının karbon ayak izini gösteren bir tarayıcı uzantısı oluşturacağız. Bu proje, temel uzantı geliştirme kavramlarını gösterirken çevresel farkındalık için pratik bir araç oluşturur.
 
 Bu yaklaşım, John Dewey'nin eğitim teorilerinden bu yana etkili olduğu kanıtlanmış "yaparak öğrenme" ilkesini takip eder - teknik becerileri anlamlı gerçek dünya uygulamalarıyla birleştirir.
 
@@ -171,7 +278,7 @@ Geliştirmeye başlamadan önce, gerekli kaynakları ve bağımlılıkları topl
 
 ### Proje Yapısını Anlamak
 
-Proje yapısını anlamak, geliştirme çalışmalarını verimli bir şekilde organize etmeye yardımcı olur. İskenderiye Kütüphanesi'nin kolay bilgi erişimi için organize edildiği gibi, iyi yapılandırılmış bir kod tabanı geliştirmeyi daha verimli hale getirir:
+Proje yapısını anlamak, geliştirme çalışmalarını verimli bir şekilde organize etmeye yardımcı olur. İskenderiye Kütüphanesi'nin kolay bilgi erişimi için organize edilmesi gibi, iyi yapılandırılmış bir kod tabanı geliştirmeyi daha verimli hale getirir:
 
 ```
 project-root/
@@ -180,38 +287,40 @@ project-root/
 │   ├── index.html           # User interface markup
 │   ├── background.js        # Background script functionality
 │   └── main.js              # Compiled JavaScript bundle
-└── src/                     # Source development files
-    └── index.js             # Your main JavaScript code
+├── src/                     # Source development files
+│   └── index.js             # Your main JavaScript code
+├── package.json             # Project dependencies and scripts
+└── webpack.config.js        # Build configuration
 ```
 
-**Her dosyanın gerçekleştirdiklerini açıklamak:**
+**Her dosyanın başardıklarını açıklamak:**
 - **`manifest.json`**: Uzantı meta verilerini, izinleri ve giriş noktalarını **tanımlar**
 - **`index.html`**: Kullanıcıların uzantınıza tıkladığında gördüğü kullanıcı arayüzünü **oluşturur**
 - **`background.js`**: Arka plan görevlerini ve tarayıcı olay dinleyicilerini **yönetir**
-- **`main.js`**: Derleme işleminden sonra nihai JavaScript'i **içerir**
-- **`src/index.js`**: Geliştirme kodunuzu barındırır ve `main.js` dosyasına **derlenir**
+- **`main.js`**: Derleme işleminden sonra son paketlenmiş JavaScript'i **içerir**
+- **`src/index.js`**: Derlenip `main.js` haline gelen ana geliştirme kodunuzu **barındırır**
 
-> 💡 **Organizasyon İpucu**: API anahtarınızı ve bölge kodunuzu geliştirme sırasında kolay referans için güvenli bir notta saklayın. Uzantınızın işlevselliğini test etmek için bu değerlere ihtiyacınız olacak.
+> 💡 **Organizasyon İpucu**: API anahtarınızı ve bölge kodunuzu güvenli bir notta saklayın, böylece geliştirme sırasında kolayca erişebilirsiniz. Bu değerleri uzantınızın işlevselliğini test etmek için kullanmanız gerekecek.
 
-✅ **Güvenlik Notu**: API anahtarlarını veya hassas kimlik bilgilerini kod deposunuza asla yüklemeyin. Bunları güvenli bir şekilde nasıl yöneteceğinizi sonraki adımlarda göstereceğiz.
+✅ **Güvenlik Notu**: API anahtarlarını veya hassas kimlik bilgilerini kod deposuna asla yüklemeyin. Bunları güvenli bir şekilde nasıl yöneteceğinizi sonraki adımlarda göstereceğiz.
 
 ## Uzantı Arayüzünü Oluşturma
 
 Şimdi kullanıcı arayüzü bileşenlerini oluşturacağız. Uzantı, ilk kurulum için bir yapılandırma ekranı ve veri görüntüleme için bir sonuç ekranı olmak üzere iki ekranlı bir yaklaşım kullanır.
 
-Bu, bilgi ve seçenekleri mantıklı bir sırayla ortaya çıkararak kullanıcıları bunaltmaktan kaçınmak için bilgisayar arayüz tasarımında kullanılan aşamalı açıklama ilkesini takip eder.
+Bu, bilgi ve seçenekleri mantıklı bir sırayla ortaya çıkararak kullanıcıları bunaltmaktan kaçınmak için bilgisayarın ilk günlerinden beri kullanılan ilerleyici açıklama ilkesini takip eder.
 
 ### Uzantı Görünümleri Genel Bakış
 
 **Kurulum Görünümü** - İlk kez kullanıcı yapılandırması:
-![tamamlanmış uzantının bir tarayıcıda açık olduğu, bölge adı ve API anahtarı için girişler içeren bir form görüntüleyen ekran görüntüsü.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.tr.png)
+![Tamamlanmış uzantının bir tarayıcıda açık olduğu, bölge adı ve API anahtarı için girişler içeren bir formun görüntülendiği ekran görüntüsü.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.tr.png)
 
-**Sonuçlar Görünümü** - Karbon ayak izi veri görüntüleme:
-![tamamlanmış uzantının US-NEISO bölgesi için karbon kullanımı ve fosil yakıt yüzdesi değerlerini görüntüleyen ekran görüntüsü.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.tr.png)
+**Sonuç Görünümü** - Karbon ayak izi veri görüntüleme:
+![Tamamlanmış uzantının US-NEISO bölgesi için karbon kullanımı ve fosil yakıt yüzdesi değerlerini görüntülediği ekran görüntüsü.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.tr.png)
 
 ### Yapılandırma Formunu Oluşturma
 
-Kurulum formu, ilk kullanım sırasında kullanıcı yapılandırma verilerini toplar. Bir kez yapılandırıldığında, bu bilgi tarayıcı depolamasında gelecekteki oturumlar için kalıcı hale gelir.
+Kurulum formu, ilk kullanım sırasında kullanıcı yapılandırma verilerini toplar. Bir kez yapılandırıldığında, bu bilgi gelecekteki oturumlar için tarayıcı depolamasında kalır.
 
 `/dist/index.html` dosyasına şu form yapısını ekleyin:
 
@@ -232,14 +341,14 @@ Kurulum formu, ilk kullanım sırasında kullanıcı yapılandırma verilerini t
 </form>
 ```
 
-**Bu formun gerçekleştirdikleri:**
-- **Semantik** bir form yapısı oluşturur ve doğru etiketler ve giriş ilişkileri sağlar
+**Bu formun başardıkları:**
+- **Anlamlı** bir form yapısı oluşturur, doğru etiketler ve giriş ilişkileri sağlar
 - **Tarayıcı otomatik tamamlama** işlevselliğini kullanıcı deneyimini iyileştirmek için etkinleştirir
 - **Her iki alanın** doldurulmasını `required` özelliği ile zorunlu kılar
 - **Girdileri** kolay stil ve JavaScript hedefleme için açıklayıcı sınıf adlarıyla düzenler
-- **İlk kez** uzantıyı kuran kullanıcılar için net talimatlar sağlar
+- **İlk kez uzantıyı kuran kullanıcılar için** net talimatlar sağlar
 
-### Sonuçları Görüntüleme Alanını Oluşturma
+### Sonuç Görüntüsünü Oluşturma
 
 Son olarak, karbon ayak izi verilerini gösterecek sonuç alanını oluşturun. Bu HTML'yi formun altına ekleyin:
 
@@ -259,10 +368,10 @@ Son olarak, karbon ayak izi verilerini gösterecek sonuç alanını oluşturun. 
 
 **Bu yapının sağladıkları:**
 - **`loading`**: API verileri alınırken bir yükleme mesajı **gösterir**
-- **`errors`**: API çağrıları başarısız olduğunda veya veriler geçersiz olduğunda hata mesajları **gösterir**
+- **`errors`**: API çağrıları başarısız olduğunda veya veriler geçersiz olduğunda hata mesajlarını **gösterir**
 - **`data`**: Geliştirme sırasında hata ayıklama için ham verileri **tutar**
-- **`result-container`**: Kullanıcılara biçimlendirilmiş karbon ayak izi bilgilerini **sunuyor**
-- **`clear-btn`**: Kullanıcıların bölgelerini değiştirmelerine ve uzantıyı yeniden yapılandırmalarına **izin verir**
+- **`result-container`**: Kullanıcılara biçimlendirilmiş karbon ayak izi bilgilerini **sunar**
+- **`clear-btn`**: Kullanıcıların bölgelerini değiştirmesine ve uzantıyı yeniden yapılandırmasına **izin verir**
 
 ### Derleme Sürecini Ayarlama
 
@@ -272,59 +381,173 @@ Son olarak, karbon ayak izi verilerini gösterecek sonuç alanını oluşturun. 
 npm install
 ```
 
-**Bu yükleme sürecinin gerçekleştirdikleri:**
-- `package.json`'da belirtilen Webpack ve diğer geliştirme bağımlılıklarını **indirir**
-- Modern JavaScript'i derlemek için derleme araç zincirini **yapılandırır**
-- Uzantı oluşturma ve test için geliştirme ortamını **hazırlar**
-- Kod paketleme, optimizasyon ve tarayıcı uyumluluğu özelliklerini **etkinleştirir**
+**Bu yükleme sürecinin başardıkları:**
+- **Webpack ve diğer geliştirme bağımlılıklarını** `package.json` dosyasında belirtilen şekilde indirir
+- **Modern JavaScript'i derlemek için** yapı araç zincirini yapılandırır
+- **Uzantı oluşturma ve test için** geliştirme ortamını hazırlar
 
-> 💡 **Derleme Süreci Bilgisi**: Webpack, `/src/index.js` kaynak kodunuzu `/dist/main.js` içine paketler. Bu süreç, kodunuzu üretim için optimize eder ve tarayıcı uyumluluğunu sağlar.
+1. **Çalıştır** kodunuzu derlemek için derleme komutunu çalıştırın  
+2. **Yükle** uzantıyı geliştirici modunu kullanarak tarayıcınıza yükleyin  
+3. **Doğrula** formun doğru şekilde görüntülendiğini ve profesyonel göründüğünü  
+4. **Kontrol et** tüm form öğelerinin düzgün hizalandığını ve işlevsel olduğunu  
 
-### İlerlemenizi Test Etme
+**Başardıklarınız:**  
+- Uzantınız için temel HTML yapısını **oluşturdunuz**  
+- Hem yapılandırma hem de sonuç arayüzlerini doğru semantik işaretlemeyle **oluşturdunuz**  
+- Endüstri standart araçları kullanarak modern bir geliştirme iş akışı **kurdunuz**  
+- Etkileşimli JavaScript işlevselliği eklemek için temel **hazırladınız**  
 
-Bu noktada uzantınızı test edebilirsiniz:
+### 🔄 **Pedagojik Kontrol Noktası**  
+**Uzantı Geliştirme İlerlemesi**: Devam etmeden önce anlayışınızı doğrulayın:  
+- ✅ Proje yapısındaki her dosyanın amacını açıklayabilir misiniz?  
+- ✅ Derleme sürecinin kaynak kodunuzu nasıl dönüştürdüğünü anlıyor musunuz?  
+- ✅ Neden yapılandırma ve sonuçları farklı arayüz bölümlerine ayırıyoruz?  
+- ✅ Form yapısı hem kullanılabilirlik hem de erişilebilirlik açısından nasıl destek sağlıyor?  
 
-1. Kodunuzu derlemek için **derleme komutunu çalıştırın**
-2. Geliştirici modunu kullanarak uzantıyı tarayıcınıza **yükleyin**
-3. Formun doğru şekilde görüntülendiğini ve profesyonel göründüğünü **doğrulayın**
-4. Tüm form öğelerinin düzgün hizalandığını ve işlevsel olduğunu **kontrol edin**
+**Geliştirme İş Akışı Anlayışı**: Artık şunları yapabiliyor olmalısınız:  
+1. Uzantı arayüzünüz için HTML ve CSS'yi **değiştirin**  
+2. Değişikliklerinizi derlemek için derleme komutunu **çalıştırın**  
+3. Güncellemeleri test etmek için uzantıyı tarayıcınızda **yeniden yükleyin**  
+4. Tarayıcı geliştirici araçlarını kullanarak sorunları **hata ayıklayın**  
 
-**Başardıklarınız:**
-- Uzantınız için temel HTML yapısını **oluşturdunuz**
-- Hem yapılandırma hem de sonuç arayüzlerini doğru semantik işaretlemeyle **oluşturdunuz**
-- Endüstri standart araçları kullanarak modern bir geliştirme iş akışı **kurdunuz**
-- Etkileşimli JavaScript işlevselliği eklemek için temel hazırlık yaptınız
+Tarayıcı uzantısı geliştirme sürecinin ilk aşamasını tamamladınız. Wright kardeşlerin uçuşu başarmadan önce aerodinamiği anlamaları gerektiği gibi, bu temel kavramları anlamak, bir sonraki derste daha karmaşık etkileşimli özellikler oluşturmanıza hazırlık sağlar.  
 
-Tarayıcı uzantısı geliştirme sürecinin ilk aş
-**Açıklama:** Tarayıcı uzantısını geliştirmek için API anahtarları ve bölge kodları girildiğinde kullanıcı deneyimini iyileştirmek amacıyla form doğrulama ve kullanıcı geri bildirim özellikleri ekleyin.
+## GitHub Copilot Agent Challenge 🚀  
 
-**Görev:** API anahtarı alanının en az 20 karakter içerip içermediğini ve bölge kodunun doğru formatta olup olmadığını (örneğin 'US-NEISO') kontrol eden JavaScript doğrulama fonksiyonları oluşturun. Geçerli girişler için giriş kenarlık renklerini yeşil, geçersiz girişler için kırmızı olarak değiştirerek görsel geri bildirim sağlayın. Ayrıca güvenlik amacıyla API anahtarını göster/gizle özelliği ekleyin.
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:  
 
-[agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında daha fazla bilgi edinin.
+**Açıklama:** Tarayıcı uzantısını, API anahtarları ve bölge kodları girerken kullanıcı deneyimini iyileştirmek için form doğrulama ve kullanıcı geri bildirimi özellikleri ekleyerek geliştirin.  
 
-## 🚀 Zorluk
+**İstek:** API anahtarı alanının en az 20 karakter içerip içermediğini ve bölge kodunun doğru formatı (örneğin 'US-NEISO') takip edip etmediğini kontrol eden JavaScript doğrulama işlevleri oluşturun. Geçerli girişler için giriş kenar renklerini yeşil, geçersiz olanlar için kırmızıya değiştirerek görsel geri bildirim ekleyin. Ayrıca güvenlik amacıyla API anahtarını göster/gizle özelliği ekleyin.  
 
-Bir tarayıcı uzantı mağazasına göz atın ve tarayıcınıza bir uzantı yükleyin. Dosyalarını ilginç şekillerde inceleyebilirsiniz. Neler keşfediyorsunuz?
+[Agent modunu](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) burada daha fazla öğrenin.  
 
-## Ders Sonrası Test
+## 🚀 Meydan Okuma  
 
-[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/24)
+Bir tarayıcı uzantısı mağazasına göz atın ve tarayıcınıza bir uzantı yükleyin. Dosyalarını ilginç şekillerde inceleyebilirsiniz. Neler keşfediyorsunuz?  
 
-## İnceleme ve Kendi Kendine Çalışma
+## Ders Sonrası Quiz  
 
-Bu derste web tarayıcısının tarihi hakkında biraz bilgi edindiniz; bu fırsatı değerlendirerek Dünya Çapında Ağ'ın mucitlerinin kullanımını nasıl hayal ettiklerini öğrenmek için tarihini daha fazla okuyabilirsiniz. Faydalı siteler şunları içerir:
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/24)  
 
-[Web Tarayıcılarının Tarihi](https://www.mozilla.org/firefox/browsers/browser-history/)
+## Gözden Geçirme ve Kendi Kendine Çalışma  
 
-[Web'in Tarihi](https://webfoundation.org/about/vision/history-of-the-web/)
+Bu derste web tarayıcısının tarihi hakkında biraz bilgi edindiniz; bu fırsatı değerlendirerek Dünya Çapında Ağ'ın mucitlerinin kullanımını nasıl hayal ettiklerini öğrenmek için tarihini daha fazla okuyun. Faydalı siteler:  
 
-[Tim Berners-Lee ile Röportaj](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
+[Web Tarayıcılarının Tarihi](https://www.mozilla.org/firefox/browsers/browser-history/)  
 
-## Ödev 
+[Web'in Tarihi](https://webfoundation.org/about/vision/history-of-the-web/)  
 
-[Uzantınızı Yeniden Tasarlayın](assignment.md)
+[Tim Berners-Lee ile bir röportaj](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)  
+
+### ⚡ **Sonraki 5 Dakikada Yapabilecekleriniz**  
+- [ ] Chrome/Edge uzantıları sayfasını açın (chrome://extensions) ve yüklediğiniz uzantıları keşfedin  
+- [ ] Bir web sayfası yüklerken tarayıcınızın Geliştirici Araçları Ağ sekmesine bakın  
+- [ ] Sayfa kaynağını görüntülemeyi deneyin (Ctrl+U) ve HTML yapısını inceleyin  
+- [ ] Herhangi bir web sayfası öğesini inceleyin ve CSS'sini Geliştirici Araçları'nda değiştirin  
+
+### 🎯 **Bu Saatte Başarabilecekleriniz**  
+- [ ] Ders sonrası quiz'i tamamlayın ve tarayıcı temellerini anlayın  
+- [ ] Bir tarayıcı uzantısı için temel bir manifest.json dosyası oluşturun  
+- [ ] Bir açılır pencere gösteren basit bir "Merhaba Dünya" uzantısı oluşturun  
+- [ ] Uzantınızı geliştirici modunda yüklemeyi test edin  
+- [ ] Hedef tarayıcınızın uzantı belgelerini keşfedin  
+
+### 📅 **Haftalık Uzantı Geliştirme Yolculuğunuz**  
+- [ ] Gerçek bir fayda sağlayan işlevsel bir tarayıcı uzantısı tamamlayın  
+- [ ] İçerik betikleri, arka plan betikleri ve açılır pencere etkileşimleri hakkında bilgi edinin  
+- [ ] Depolama, sekmeler ve mesajlaşma gibi tarayıcı API'lerini öğrenin  
+- [ ] Uzantınız için kullanıcı dostu arayüzler tasarlayın  
+- [ ] Uzantınızı farklı web siteleri ve senaryolar üzerinde test edin  
+- [ ] Uzantınızı tarayıcının uzantı mağazasına yayınlayın  
+
+### 🌟 **Aylık Tarayıcı Geliştirme**  
+- [ ] Farklı kullanıcı sorunlarını çözen birden fazla uzantı oluşturun  
+- [ ] Gelişmiş tarayıcı API'leri ve güvenlik en iyi uygulamalarını öğrenin  
+- [ ] Açık kaynak tarayıcı uzantısı projelerine katkıda bulunun  
+- [ ] Tarayıcılar arası uyumluluk ve aşamalı geliştirme konusunda uzmanlaşın  
+- [ ] Başkaları için uzantı geliştirme araçları ve şablonlar oluşturun  
+- [ ] Diğer geliştiricilere yardımcı olan bir tarayıcı uzantısı uzmanı olun  
+
+## 🎯 Tarayıcı Uzantısı Uzmanlık Zaman Çizelgeniz  
+
+```mermaid
+timeline
+    title Browser Extension Development Progression
+    
+    section Foundation (15 minutes)
+        Browser Understanding: Core architecture
+                              : Rendering process
+                              : Extension integration points
+        
+    section Setup (20 minutes)
+        Development Environment: Project structure
+                               : Build tools configuration
+                               : Browser developer mode
+                               : Extension loading process
+        
+    section Interface Design (25 minutes)
+        User Experience: HTML structure
+                       : CSS styling
+                       : Form validation
+                       : Responsive design
+        
+    section Core Functionality (35 minutes)
+        JavaScript Integration: Event handling
+                              : API interactions
+                              : Data storage
+                              : Error handling
+        
+    section Browser APIs (45 minutes)
+        Platform Integration: Permissions system
+                            : Storage APIs
+                            : Tab management
+                            : Context menus
+        
+    section Advanced Features (1 week)
+        Professional Extensions: Background scripts
+                               : Content scripts
+                               : Cross-browser compatibility
+                               : Performance optimization
+        
+    section Publishing (2 weeks)
+        Distribution: Store submission
+                   : Review process
+                   : User feedback
+                   : Update management
+        
+    section Expert Level (1 month)
+        Extension Ecosystem: Advanced APIs
+                           : Security best practices
+                           : Enterprise features
+                           : Framework integration
+```
+  
+### 🛠️ Uzantı Geliştirme Araç Seti Özeti  
+
+Bu dersi tamamladıktan sonra artık şunlara sahipsiniz:  
+- **Tarayıcı Mimarisi Bilgisi**: İşleme motorları, güvenlik modelleri ve uzantı entegrasyonu hakkında bilgi  
+- **Geliştirme Ortamı**: Webpack, NPM ve hata ayıklama yetenekleriyle modern araç zinciri  
+- **UI/UX Temeli**: Aşamalı açıklama desenleriyle semantik HTML yapısı  
+- **Güvenlik Bilinci**: Tarayıcı izinleri ve güvenli geliştirme uygulamaları hakkında bilgi  
+- **Tarayıcılar Arası Kavramlar**: Uyumluluk hususları ve test yaklaşımları bilgisi  
+- **API Entegrasyonu**: Harici veri kaynaklarıyla çalışma temeli  
+- **Profesyonel İş Akışı**: Endüstri standartlarında geliştirme ve test prosedürleri  
+
+**Gerçek Dünya Uygulamaları**: Bu beceriler doğrudan şunlara uygulanabilir:  
+- **Web Geliştirme**: Tek sayfa uygulamaları ve aşamalı web uygulamaları  
+- **Masaüstü Uygulamaları**: Electron ve web tabanlı masaüstü yazılımları  
+- **Mobil Geliştirme**: Hibrit uygulamalar ve web tabanlı mobil çözümler  
+- **Kurumsal Araçlar**: İç verimlilik uygulamaları ve iş akışı otomasyonu  
+- **Açık Kaynak**: Tarayıcı uzantısı projelerine ve web standartlarına katkıda bulunma  
+
+**Bir Sonraki Seviye**: Artık etkileşimli işlevsellik eklemeye, tarayıcı API'leriyle çalışmaya ve gerçek kullanıcı sorunlarını çözen uzantılar oluşturmaya hazırsınız!  
+
+## Ödev  
+
+[Uzantınızı yeniden tasarlayın](assignment.md)  
 
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.

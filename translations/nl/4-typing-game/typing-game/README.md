@@ -1,42 +1,42 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
-  "translation_date": "2025-10-23T01:03:00+00:00",
+  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
+  "translation_date": "2025-11-04T02:03:14+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "nl"
 }
 -->
 # Een spel maken met behulp van events
 
-Heb je je ooit afgevraagd hoe websites weten wanneer je op een knop klikt of tekst invoert in een tekstvak? Dat is de magie van event-driven programmeren! Wat is een betere manier om deze essentiële vaardigheid te leren dan door iets nuttigs te bouwen - een typ-snelheidsspel dat reageert op elke toetsaanslag die je maakt.
+Heb je je ooit afgevraagd hoe websites weten wanneer je op een knop klikt of tekst typt in een tekstvak? Dat is de magie van event-driven programmeren! Wat is een betere manier om deze essentiële vaardigheid te leren dan door iets nuttigs te bouwen - een typ-snelheidsspel dat reageert op elke toetsaanslag die je maakt.
 
-Je zult uit de eerste hand zien hoe webbrowsers "praten" met je JavaScript-code. Elke keer dat je klikt, typt of je muis beweegt, stuurt de browser kleine berichten (we noemen ze events) naar je code, en jij bepaalt hoe je daarop reageert!
+Je zult uit eerste hand zien hoe webbrowsers "praten" met je JavaScript-code. Elke keer dat je klikt, typt of je muis beweegt, stuurt de browser kleine berichten (we noemen ze events) naar je code, en jij bepaalt hoe je daarop reageert!
 
-Tegen de tijd dat we hier klaar zijn, heb je een echt typ-spel gebouwd dat je snelheid en nauwkeurigheid bijhoudt. Nog belangrijker, je zult de fundamentele concepten begrijpen die elke interactieve website aandrijven die je ooit hebt gebruikt. Laten we beginnen!
+Tegen de tijd dat we klaar zijn, heb je een echt typ-spel gebouwd dat je snelheid en nauwkeurigheid bijhoudt. Nog belangrijker is dat je de fundamentele concepten begrijpt die elke interactieve website aandrijven die je ooit hebt gebruikt. Laten we beginnen!
 
-## Pre-Lecture Quiz
+## Quiz voorafgaand aan de les
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/21)
+[Quiz voorafgaand aan de les](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Event-driven programmeren
 
 Denk eens aan je favoriete app of website - wat zorgt ervoor dat het levendig en responsief aanvoelt? Het draait allemaal om hoe het reageert op wat jij doet! Elke tik, klik, veeg of toetsaanslag creëert wat we een "event" noemen, en daar gebeurt de echte magie van webontwikkeling.
 
-Wat programmeren voor het web zo interessant maakt, is dat we nooit weten wanneer iemand op die knop zal klikken of begint te typen in een tekstvak. Ze kunnen meteen klikken, vijf minuten wachten, of misschien helemaal niet klikken! Deze onvoorspelbaarheid betekent dat we anders moeten denken over hoe we onze code schrijven.
+Wat programmeren voor het web zo interessant maakt, is dat we nooit weten wanneer iemand op die knop zal klikken of begint te typen in een tekstvak. Misschien klikken ze meteen, wachten ze vijf minuten, of klikken ze helemaal niet! Door deze onvoorspelbaarheid moeten we anders nadenken over hoe we onze code schrijven.
 
 In plaats van code te schrijven die van boven naar beneden loopt zoals een recept, schrijven we code die geduldig wacht tot er iets gebeurt. Het is vergelijkbaar met hoe telegraafoperators in de 19e eeuw bij hun machines zaten, klaar om te reageren zodra er een bericht binnenkwam.
 
 Dus wat is precies een "event"? Simpel gezegd, het is iets dat gebeurt! Wanneer je op een knop klikt - dat is een event. Wanneer je een letter typt - dat is een event. Wanneer je je muis beweegt - dat is weer een event.
 
-Event-driven programmeren stelt ons in staat om onze code in te stellen om te luisteren en te reageren. We maken speciale functies, genaamd **event listeners**, die geduldig wachten op specifieke gebeurtenissen en dan in actie komen wanneer ze plaatsvinden.
+Event-driven programmeren stelt ons in staat om onze code in te stellen om te luisteren en te reageren. We maken speciale functies, genaamd **event listeners**, die geduldig wachten op specifieke gebeurtenissen en in actie komen wanneer ze plaatsvinden.
 
 Denk aan event listeners als een deurbel voor je code. Je stelt de deurbel in (`addEventListener()`), vertelt wat voor geluid hij moet horen (zoals een 'klik' of 'toetsaanslag'), en specificeert wat er moet gebeuren wanneer iemand aanbelt (jouw aangepaste functie).
 
 **Zo werken event listeners:**
 - **Luisteren** naar specifieke gebruikersacties zoals klikken, toetsaanslagen of muisbewegingen
-- **Voeren** jouw aangepaste code uit wanneer het gespecificeerde event plaatsvindt
-- **Reageren** direct op gebruikersinteracties, wat zorgt voor een naadloze ervaring
+- **Voeren uit** jouw aangepaste code wanneer het gespecificeerde event plaatsvindt
+- **Reageren** onmiddellijk op gebruikersinteracties, wat zorgt voor een naadloze ervaring
 - **Behandelen** meerdere events op hetzelfde element met verschillende listeners
 
 > **NOTE:** Het is de moeite waard om te benadrukken dat er verschillende manieren zijn om event listeners te maken. Je kunt anonieme functies gebruiken of benoemde functies maken. Je kunt verschillende snelkoppelingen gebruiken, zoals het instellen van de `click`-eigenschap, of `addEventListener()` gebruiken. In onze oefening gaan we ons richten op `addEventListener()` en anonieme functies, omdat dit waarschijnlijk de meest gebruikte techniek is onder webontwikkelaars. Het is ook de meest flexibele, omdat `addEventListener()` werkt voor alle events en de eventnaam als parameter kan worden opgegeven.
@@ -45,26 +45,26 @@ Denk aan event listeners als een deurbel voor je code. Je stelt de deurbel in (`
 
 Hoewel webbrowsers tientallen verschillende events bieden waar je naar kunt luisteren, vertrouwen de meeste interactieve applicaties op slechts een handvol essentiële events. Het begrijpen van deze kern-events geeft je de basis om geavanceerde gebruikersinteracties te bouwen.
 
-Er zijn [tientallen events](https://developer.mozilla.org/docs/Web/Events) beschikbaar waar je naar kunt luisteren bij het maken van een applicatie. Eigenlijk roept alles wat een gebruiker op een pagina doet een event op, wat je veel mogelijkheden geeft om ervoor te zorgen dat ze de ervaring krijgen die je wenst. Gelukkig heb je meestal maar een klein aantal events nodig. Hier zijn een paar veelvoorkomende (inclusief de twee die we zullen gebruiken bij het maken van ons spel):
+Er zijn [tientallen events](https://developer.mozilla.org/docs/Web/Events) beschikbaar waar je naar kunt luisteren bij het maken van een applicatie. In principe roept alles wat een gebruiker op een pagina doet een event op, wat je veel mogelijkheden geeft om ervoor te zorgen dat ze de ervaring krijgen die je wenst. Gelukkig heb je meestal maar een klein aantal events nodig. Hier zijn een paar veelvoorkomende (inclusief de twee die we zullen gebruiken bij het maken van ons spel):
 
 | Event | Beschrijving | Veelvoorkomende toepassingen |
 |-------|--------------|------------------------------|
-| `click` | De gebruiker klikt ergens op | Knoppen, links, interactieve elementen |
-| `contextmenu` | De gebruiker klikt met de rechtermuisknop | Aangepaste rechtermuisklikmenu's |
-| `select` | De gebruiker markeert tekst | Tekstbewerking, kopieeracties |
-| `input` | De gebruiker voert tekst in | Formuliercontrole, realtime zoeken |
+| `click` | De gebruiker heeft ergens op geklikt | Knoppen, links, interactieve elementen |
+| `contextmenu` | De gebruiker heeft met de rechtermuisknop geklikt | Aangepaste rechtermuisklikmenu's |
+| `select` | De gebruiker heeft tekst gemarkeerd | Tekstbewerking, kopieeracties |
+| `input` | De gebruiker heeft tekst ingevoerd | Formuliervalidatie, realtime zoeken |
 
-**Begrijpen van deze eventtypes:**
+**Begrip van deze eventtypes:**
 - **Wordt geactiveerd** wanneer gebruikers interactie hebben met specifieke elementen op je pagina
 - **Biedt** gedetailleerde informatie over de actie van de gebruiker via event-objecten
-- **Maakt** het mogelijk om responsieve, interactieve webapplicaties te creëren
+- **Maakt** het mogelijk om responsieve, interactieve webapplicaties te maken
 - **Werkt** consistent op verschillende browsers en apparaten
 
 ## Het spel maken
 
-Nu je begrijpt hoe events werken, gaan we die kennis in de praktijk brengen door iets nuttigs te bouwen. We gaan een typ-snelheidsspel maken dat eventverwerking demonstreert en je helpt een belangrijke vaardigheid als ontwikkelaar te ontwikkelen.
+Nu je begrijpt hoe events werken, laten we die kennis in de praktijk brengen door iets nuttigs te bouwen. We gaan een typ-snelheidsspel maken dat event handling demonstreert en je helpt een belangrijke ontwikkelaarsvaardigheid te ontwikkelen.
 
-We gaan een spel maken om te ontdekken hoe events werken in JavaScript. Ons spel zal de typvaardigheid van een speler testen, wat een van de meest onderschatte vaardigheden is die alle ontwikkelaars zouden moeten hebben. Leuk weetje: het QWERTY-toetsenbord dat we vandaag de dag gebruiken, is eigenlijk ontworpen in de jaren 1870 voor typemachines - en goede typvaardigheden zijn nog steeds net zo waardevol voor programmeurs! De algemene flow van het spel ziet er als volgt uit:
+We gaan een spel maken om te ontdekken hoe events werken in JavaScript. Ons spel zal de typvaardigheid van een speler testen, wat een van de meest onderschatte vaardigheden is die alle ontwikkelaars zouden moeten hebben. Leuk feitje: het QWERTY-toetsenbord dat we vandaag gebruiken, werd eigenlijk ontworpen in de jaren 1870 voor typemachines - en goede typvaardigheden zijn nog steeds net zo waardevol voor programmeurs vandaag de dag! De algemene flow van het spel ziet er als volgt uit:
 
 ```mermaid
 flowchart TD
@@ -95,9 +95,9 @@ Laten we ons spel bouwen en meer leren over events!
 
 Voordat we beginnen met coderen, laten we ons organiseren! Een schone bestandsstructuur vanaf het begin bespaart je later hoofdpijn en maakt je project professioneler. 😊
 
-We houden het simpel met slechts drie bestanden: `index.html` voor de structuur van onze pagina, `script.js` voor alle logica van ons spel, en `style.css` om alles er goed uit te laten zien. Dit is de klassieke trio die de meeste websites aandrijft!
+We houden het simpel met slechts drie bestanden: `index.html` voor de structuur van onze pagina, `script.js` voor alle logica van ons spel, en `style.css` om alles er geweldig uit te laten zien. Dit is de klassieke trio die de meeste websites aandrijft!
 
-**Maak een nieuwe map voor je werk door een console of terminalvenster te openen en het volgende commando in te voeren:**
+**Maak een nieuwe map voor je werk door een console- of terminalvenster te openen en het volgende commando in te voeren:**
 
 ```bash
 # Linux or macOS
@@ -121,11 +121,11 @@ code .
 **Dit commando:**
 - **Start** Visual Studio Code in de huidige map
 - **Opent** je projectmap in de editor
-- **Geeft** toegang tot alle ontwikkeltools die je nodig hebt
+- **Biedt** toegang tot alle ontwikkeltools die je nodig hebt
 
 **Voeg drie bestanden toe aan de map in Visual Studio Code met de volgende namen:**
 - `index.html` - Bevat de structuur en inhoud van je spel
-- `script.js` - Behandelt alle logica van het spel en de event listeners
+- `script.js` - Behandelt alle spel-logica en event listeners
 - `style.css` - Definieert het visuele uiterlijk en de styling
 
 ## Maak de gebruikersinterface
@@ -137,17 +137,17 @@ Laten we uitzoeken wat ons spel eigenlijk nodig heeft. Als je een typ-spel zou s
 | UI-element | Doel | HTML-element |
 |------------|------|-------------|
 | Quote-weergave | Toont de tekst om te typen | `<p>` met `id="quote"` |
-| Berichtgebied | Toont status- en succesberichten | `<p>` met `id="message"` |
+| Berichtgebied | Geeft status- en succesberichten weer | `<p>` met `id="message"` |
 | Tekstinvoer | Waar spelers de quote typen | `<input>` met `id="typed-value"` |
 | Startknop | Start het spel | `<button>` met `id="start"` |
 
-**Begrijpen van de UI-structuur:**
+**Begrip van de UI-structuur:**
 - **Organiseert** inhoud logisch van boven naar beneden
-- **Kent** unieke ID's toe aan elementen voor JavaScript-doelen
+- **Kent** unieke ID's toe aan elementen voor JavaScript-targeting
 - **Biedt** een duidelijke visuele hiërarchie voor een betere gebruikerservaring
 - **Bevat** semantische HTML-elementen voor toegankelijkheid
 
-Elk van deze elementen heeft ID's nodig zodat we ermee kunnen werken in onze JavaScript. We voegen ook verwijzingen toe naar de CSS- en JavaScript-bestanden die we gaan maken.
+Elk van deze elementen heeft ID's nodig zodat we ermee kunnen werken in onze JavaScript. We zullen ook verwijzingen toevoegen naar de CSS- en JavaScript-bestanden die we gaan maken.
 
 Maak een nieuw bestand genaamd `index.html`. Voeg de volgende HTML toe:
 
@@ -190,12 +190,12 @@ Het is altijd het beste om iteratief te ontwikkelen om te zien hoe dingen eruitz
 
 **Wat er gebeurt tijdens de installatie:**
 - **Opent** je browser om Visual Studio Code te starten
-- **Begeleidt** je door het installatieproces van de extensie
+- **Leidt** je door het installatieproces van de extensie
 - **Kan vereisen** dat je Visual Studio Code opnieuw start om de installatie te voltooien
 
-**Eenmaal geïnstalleerd, klik in Visual Studio Code op Ctrl-Shift-P (of Cmd-Shift-P) om het commandopalet te openen:**
+**Eenmaal geïnstalleerd, klik in Visual Studio Code op Ctrl-Shift-P (of Cmd-Shift-P) om de commandopalet te openen:**
 
-**Begrijpen van het commandopalet:**
+**Begrip van de commandopalet:**
 - **Biedt** snelle toegang tot alle VS Code-commando's
 - **Zoekt** commando's terwijl je typt
 - **Biedt** sneltoetsen voor snellere ontwikkeling
@@ -213,9 +213,9 @@ Je zou nu de pagina moeten zien die je hebt gemaakt! Laten we wat functionalitei
 
 ## Voeg de CSS toe
 
-Laten we nu zorgen dat alles er goed uitziet! Visuele feedback is cruciaal geweest voor gebruikersinterfaces sinds de vroege dagen van de computer. In de jaren '80 ontdekten onderzoekers dat directe visuele feedback de prestaties van gebruikers aanzienlijk verbetert en fouten vermindert. Dat is precies wat we gaan creëren.
+Laten we nu zorgen dat alles er goed uitziet! Visuele feedback is cruciaal geweest voor gebruikersinterfaces sinds de vroege dagen van computers. In de jaren 80 ontdekten onderzoekers dat directe visuele feedback de prestaties van gebruikers aanzienlijk verbetert en fouten vermindert. Dat is precies wat we gaan creëren.
 
-Ons spel moet glashelder zijn over wat er gebeurt. Spelers moeten meteen weten welk woord ze moeten typen, en als ze een fout maken, moeten ze dat direct zien. Laten we een eenvoudige maar effectieve styling maken:
+Ons spel moet glashelder zijn over wat er gebeurt. Spelers moeten onmiddellijk weten welk woord ze moeten typen, en als ze een fout maken, moeten ze dat meteen zien. Laten we wat eenvoudige maar effectieve styling maken:
 
 Maak een nieuw bestand genaamd `style.css` en voeg de volgende syntax toe.
 
@@ -231,41 +231,41 @@ Maak een nieuw bestand genaamd `style.css` en voeg de volgende syntax toe.
 }
 ```
 
-**Begrijpen van deze CSS-classes:**
+**Begrip van deze CSS-klassen:**
 - **Markeert** het huidige woord met een gele achtergrond voor duidelijke visuele begeleiding
-- **Geeft aan** typfouten met een licht koraalkleurige achtergrond
+- **Signaleert** typfouten met een licht koraalkleurige achtergrond
 - **Biedt** directe feedback zonder de typflow van de gebruiker te verstoren
 - **Gebruikt** contrasterende kleuren voor toegankelijkheid en duidelijke visuele communicatie
 
-✅ Als het gaat om CSS kun je de pagina opmaken zoals je wilt. Neem wat tijd en maak de pagina aantrekkelijker:
+✅ Als het gaat om CSS kun je je pagina indelen zoals je wilt. Neem wat tijd en maak de pagina aantrekkelijker:
 
 - Kies een ander lettertype
 - Geef de koppen kleur
-- Pas de grootte van elementen aan
+- Pas de grootte van items aan
 
 ## JavaScript
 
-Nu wordt het interessant! 🎉 We hebben onze HTML-structuur en onze CSS-styling, maar op dit moment is ons spel als een mooie auto zonder motor. JavaScript wordt die motor - het is wat alles daadwerkelijk laat werken en reageert op wat spelers doen.
+Hier wordt het interessant! 🎉 We hebben onze HTML-structuur en onze CSS-styling, maar op dit moment is ons spel als een mooie auto zonder motor. JavaScript wordt die motor - het is wat alles daadwerkelijk laat werken en reageert op wat spelers doen.
 
 Hier zie je je creatie tot leven komen. We gaan dit stap voor stap aanpakken zodat niets overweldigend aanvoelt:
 
 | Stap | Doel | Wat je leert |
 |------|------|-------------|
-| [Maak de constanten](../../../../4-typing-game/typing-game) | Quotes en DOM-referenties instellen | Variabelenbeheer en DOM-selectie |
-| [Event listener om het spel te starten](../../../../4-typing-game/typing-game) | Spelinitialisatie afhandelen | Eventverwerking en UI-updates |
-| [Event listener voor typen](../../../../4-typing-game/typing-game) | Gebruikersinvoer in realtime verwerken | Invoervalidatie en dynamische feedback |
+| [Maak de constanten](../../../../4-typing-game/typing-game) | Stel quotes en DOM-referenties in | Variabelbeheer en DOM-selectie |
+| [Event listener om het spel te starten](../../../../4-typing-game/typing-game) | Behandel spelinitialisatie | Event handling en UI-updates |
+| [Event listener voor typen](../../../../4-typing-game/typing-game) | Verwerk gebruikersinvoer in realtime | Invoervalidatie en dynamische feedback |
 
 **Deze gestructureerde aanpak helpt je:**
-- **Organiseren** van je code in logische, beheersbare secties
-- **Functionaliteit** stapsgewijs opbouwen voor eenvoudiger foutopsporing
-- **Begrijpen** hoe verschillende delen van je applicatie samenwerken
-- **Creëren** van herbruikbare patronen voor toekomstige projecten
+- **Organiseer** je code in logische, beheersbare secties
+- **Bouw** functionaliteit stapsgewijs voor eenvoudiger debugging
+- **Begrijp** hoe verschillende delen van je applicatie samenwerken
+- **Creëer** herbruikbare patronen voor toekomstige projecten
 
 Maar eerst, maak een nieuw bestand genaamd `script.js`.
 
-### Maak de constanten
+### Voeg de constanten toe
 
-Voordat we aan de slag gaan, laten we al onze bronnen verzamelen! Net zoals hoe NASA-missiecontrole al hun monitoringsystemen instelt vóór de lancering, is het veel gemakkelijker als je alles van tevoren voorbereidt en klaar hebt staan. Dit bespaart ons tijd en helpt typfouten te voorkomen.
+Voordat we in actie komen, laten we al onze bronnen verzamelen! Net zoals NASA-missiecontrole al hun monitoringsystemen instelt vóór de lancering, is het veel gemakkelijker als je alles voorbereid en klaar hebt. Dit bespaart ons van later dingen zoeken en helpt typfouten te voorkomen.
 
 Hier is wat we eerst moeten instellen:
 
@@ -273,10 +273,10 @@ Hier is wat we eerst moeten instellen:
 |--------------|------|----------|
 | Array van citaten | Bewaar alle mogelijke citaten voor het spel | `['Citaat 1', 'Citaat 2', ...]` |
 | Woordenarray | Breek het huidige citaat op in afzonderlijke woorden | `['Wanneer', 'je', 'hebt', ...]` |
-| Woordindex | Houd bij welk woord de speler aan het typen is | `0, 1, 2, 3...` |
+| Woordenindex | Houd bij welk woord de speler aan het typen is | `0, 1, 2, 3...` |
 | Starttijd | Bereken de verstreken tijd voor de score | `Date.now()` |
 
-**We hebben ook referenties nodig naar onze UI-elementen:**
+**We hebben ook referenties naar onze UI-elementen nodig:**
 | Element | ID | Doel |
 |---------|----|------|
 | Tekstinvoer | `typed-value` | Waar spelers typen |
@@ -306,24 +306,24 @@ const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
-**Wat deze setup-code doet:**
+**Wat deze setup-code bereikt:**
 - **Slaat** een array van Sherlock Holmes-citaten op met `const`, omdat de citaten niet veranderen
 - **Initialiseert** trackingvariabelen met `let`, omdat deze waarden tijdens het spel worden bijgewerkt
-- **Vangt** referenties naar DOM-elementen met `document.getElementById()` voor efficiënte toegang
-- **Legt de basis** voor alle spelfunctionaliteit met duidelijke, beschrijvende variabelenamen
+- **Vastleggen** van referenties naar DOM-elementen met `document.getElementById()` voor efficiënte toegang
+- **Legt** de basis voor alle spelfunctionaliteit met duidelijke, beschrijvende variabelnamen
 - **Organiseert** gerelateerde gegevens en elementen logisch voor eenvoudigere codeonderhoud
 
 ✅ Voeg meer citaten toe aan je spel
 
-> 💡 **Pro Tip**: We kunnen de elementen op elk moment in de code ophalen met `document.getElementById()`. Omdat we deze elementen regelmatig gaan gebruiken, vermijden we typfouten met string literals door constanten te gebruiken. Frameworks zoals [Vue.js](https://vuejs.org/) of [React](https://reactjs.org/) kunnen je helpen om je code beter te centraliseren.
+> 💡 **Pro Tip**: We kunnen de elementen op elk gewenst moment in de code ophalen met `document.getElementById()`. Omdat we deze elementen regelmatig gaan gebruiken, vermijden we typfouten met stringliteralen door constanten te gebruiken. Frameworks zoals [Vue.js](https://vuejs.org/) of [React](https://reactjs.org/) kunnen je helpen om je code beter te centraliseren.
 >
 **Waarom deze aanpak zo goed werkt:**
 - **Voorkomt** spelfouten bij het meerdere keren verwijzen naar elementen
 - **Verbetert** de leesbaarheid van de code met beschrijvende constante namen
-- **Maakt** betere IDE-ondersteuning mogelijk met autocomplete en foutcontrole
-- **Vergemakkelijkt** het refactoren als element-ID's later veranderen
+- **Maakt** betere ondersteuning door IDE mogelijk met autocomplete en foutcontrole
+- **Vergemakkelijkt** refactoring als element-ID's later veranderen
 
-Neem een minuut om een video te bekijken over het gebruik van `const`, `let` en `var`.
+Neem een minuut de tijd om een video te bekijken over het gebruik van `const`, `let` en `var`.
 
 [![Soorten variabelen](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Soorten variabelen")
 
@@ -335,7 +335,7 @@ Hier komt alles samen! 🚀 Je staat op het punt je eerste echte event listener 
 
 Denk er eens over na: ergens zal een speler op die "Start"-knop klikken, en jouw code moet er klaar voor zijn. We hebben geen idee wanneer ze zullen klikken - misschien meteen, misschien na een kop koffie - maar wanneer ze dat doen, komt jouw spel tot leven.
 
-Wanneer de gebruiker op `start` klikt, moeten we een citaat selecteren, de gebruikersinterface instellen en de tracking voor het huidige woord en de timing instellen. Hieronder staat de JavaScript die je moet toevoegen; we bespreken het direct na het scriptblok.
+Wanneer de gebruiker op `start` klikt, moeten we een citaat selecteren, de gebruikersinterface instellen en de tracking voor het huidige woord en de tijd instellen. Hieronder staat de JavaScript die je moet toevoegen; we bespreken het direct na het scriptblok.
 
 ```javascript
 // at the end of script.js
@@ -370,7 +370,7 @@ document.getElementById('start').addEventListener('click', () => {
 });
 ```
 
-**Laten we de code opsplitsen in logische secties:**
+**Laten we de code in logische secties opsplitsen:**
 
 **📊 Woordtracking Setup:**
 - **Selecteert** een willekeurig citaat met behulp van `Math.floor()` en `Math.random()` voor variatie
@@ -380,25 +380,25 @@ document.getElementById('start').addEventListener('click', () => {
 
 **🎨 UI Setup en Weergave:**
 - **Creëert** een array van `<span>`-elementen, waarbij elk woord wordt omhuld voor individuele opmaak
-- **Voegt** de span-elementen samen tot een enkele string voor efficiënte DOM-updates
+- **Voegt** de span-elementen samen tot een enkele string voor efficiënte DOM-updating
 - **Markeert** het eerste woord door de CSS-klasse `highlight` toe te voegen
 - **Leegt** eventuele eerdere spelberichten om een schone lei te bieden
 
-**⌨️ Voorbereiding van tekstinvoer:**
+**⌨️ Voorbereiding tekstvak:**
 - **Leegt** eventuele bestaande tekst in het invoerveld
 - **Zet de focus** op het tekstvak zodat spelers meteen kunnen beginnen met typen
 - **Bereidt** het invoergebied voor op de nieuwe spelsessie
 
 **⏱️ Timer Initialisatie:**
 - **Legt** de huidige tijdstempel vast met behulp van `new Date().getTime()`
-- **Maakt** een nauwkeurige berekening van typsnelheid en voltooiingstijd mogelijk
-- **Start** de prestatie-tracking voor de spelsessie
+- **Maakt** nauwkeurige berekening van typsnelheid en voltooiingstijd mogelijk
+- **Start** de prestatietracking voor de spelsessie
 
 ### Typelogica toevoegen
 
 Hier gaan we het hart van ons spel aanpakken! Maak je geen zorgen als dit in het begin veel lijkt - we lopen door elk onderdeel heen, en aan het einde zul je zien hoe logisch het allemaal is.
 
-Wat we hier bouwen is behoorlijk geavanceerd: elke keer dat iemand een letter typt, controleert onze code wat ze hebben getypt, geeft feedback en beslist wat er vervolgens moet gebeuren. Het lijkt op hoe vroege tekstverwerkers zoals WordStar in de jaren '70 typisten realtime feedback gaven.
+Wat we hier bouwen is behoorlijk geavanceerd: elke keer dat iemand een letter typt, controleert onze code wat ze hebben getypt, geeft feedback en beslist wat er vervolgens moet gebeuren. Het lijkt op hoe vroege tekstverwerkers zoals WordStar in de jaren '70 realtime feedback gaven aan typisten.
 
 ```javascript
 // at the end of script.js
@@ -439,7 +439,7 @@ typedValueElement.addEventListener('input', () => {
 
 **Begrijpen van de typelogica:**
 
-Deze functie gebruikt een watervalaanpak, waarbij voorwaarden worden gecontroleerd van meest specifiek tot meest algemeen. Laten we elk scenario bekijken:
+Deze functie gebruikt een watervalaanpak, waarbij voorwaarden worden gecontroleerd van meest specifiek naar meest algemeen. Laten we elk scenario opsplitsen:
 
 ```mermaid
 flowchart TD
@@ -453,47 +453,47 @@ flowchart TD
     G -->|No| I[Show error styling]
 ```
 
-**🏁 Citaat voltooid (Scenario 1):**
-- **Controleert** of de getypte waarde overeenkomt met het huidige woord EN of we bij het laatste woord zijn
+**🏁 Citaat Voltooid (Scenario 1):**
+- **Controleert** of de getypte waarde overeenkomt met het huidige woord EN we bij het laatste woord zijn
 - **Bereken** de verstreken tijd door de starttijd af te trekken van de huidige tijd
 - **Converteert** milliseconden naar seconden door te delen door 1.000
 - **Geeft** een felicitatiebericht weer met de voltooiingstijd
 
-**✅ Woord voltooid (Scenario 2):**
-- **Detecteert** voltooiing van een woord wanneer de invoer eindigt met een spatie
+**✅ Woord Voltooid (Scenario 2):**
+- **Detecteert** woordvoltooiing wanneer invoer eindigt met een spatie
 - **Valideert** dat de bijgesneden invoer exact overeenkomt met het huidige woord
 - **Leegt** het invoerveld voor het volgende woord
 - **Gaat verder** naar het volgende woord door `wordIndex` te verhogen
-- **Werk** de visuele markering bij door alle klassen te verwijderen en het nieuwe woord te markeren
+- **Werk** visuele markering bij door alle klassen te verwijderen en het nieuwe woord te markeren
 
-**📝 Typen in voortgang (Scenario 3):**
-- **Controleert** of het huidige woord begint met wat tot nu toe is getypt
-- **Verwijdert** eventuele foutopmaak om aan te geven dat de invoer correct is
+**📝 Typen in Voortgang (Scenario 3):**
+- **Verifieert** dat het huidige woord begint met wat tot nu toe is getypt
+- **Verwijdert** eventuele foutopmaak om te laten zien dat de invoer correct is
 - **Laat** doorgaan met typen zonder onderbreking
 
 **❌ Foutstatus (Scenario 4):**
-- **Activeert** wanneer getypte tekst niet overeenkomt met het begin van het verwachte woord
+- **Activeert** wanneer getypte tekst niet overeenkomt met het verwachte woordbegin
 - **Past** fout-CSS-klasse toe om onmiddellijke visuele feedback te geven
 - **Helpt** spelers snel fouten te identificeren en te corrigeren
 
 ## Test je applicatie
 
-Kijk wat je hebt bereikt! 🎉 Je hebt zojuist een echt werkend typenspel vanaf nul gebouwd met event-driven programmering. Neem een moment om dat te waarderen - dit is geen kleinigheid!
+Kijk wat je hebt bereikt! 🎉 Je hebt zojuist een echt werkend typenspel vanaf nul gebouwd met event-driven programmering. Neem even de tijd om dat te waarderen - dit is geen kleinigheid!
 
 Nu komt de testfase! Werkt het zoals verwacht? Hebben we iets gemist? Hier is het ding: als iets niet meteen perfect werkt, is dat helemaal normaal. Zelfs ervaren ontwikkelaars vinden regelmatig bugs in hun code. Het hoort allemaal bij het ontwikkelproces!
 
-Klik op `start` en begin met typen! Het zou er ongeveer zo uit moeten zien als de animatie die we eerder zagen.
+Klik op `start` en begin met typen! Het zou een beetje moeten lijken op de animatie die we eerder zagen.
 
 ![Animatie van het spel in actie](../../../../4-typing-game/images/demo.gif)
 
 **Wat te testen in je applicatie:**
-- **Controleert** of klikken op Start een willekeurig citaat weergeeft
+- **Controleert** dat klikken op Start een willekeurig citaat weergeeft
 - **Bevestigt** dat typen het huidige woord correct markeert
-- **Controleert** of foutopmaak verschijnt bij verkeerd typen
-- **Zorgt ervoor** dat het voltooien van woorden de markering correct laat verschuiven
-- **Test** of het voltooien van het citaat het voltooiingsbericht met tijd weergeeft
+- **Controleert** dat foutopmaak verschijnt bij verkeerd typen
+- **Zorgt ervoor** dat het voltooien van woorden de markering correct laat doorgaan
+- **Test** dat het voltooien van het citaat het voltooiingsbericht met tijd weergeeft
 
-**Veelvoorkomende tips voor foutopsporing:**
+**Veelvoorkomende tips voor het debuggen:**
 - **Controleer** de browserconsole (F12) op JavaScript-fouten
 - **Verifieer** dat alle bestandsnamen exact overeenkomen (hoofdlettergevoelig)
 - **Zorg ervoor** dat Live Server correct werkt en ververst
@@ -501,13 +501,13 @@ Klik op `start` en begin met typen! Het zou er ongeveer zo uit moeten zien als d
 
 ---
 
-## GitHub Copilot Agent Challenge 🎮
+## GitHub Copilot Agent Uitdaging 🎮
 
 Gebruik de Agent-modus om de volgende uitdaging te voltooien:
 
 **Beschrijving:** Breid het typenspel uit door een moeilijkheidssysteem te implementeren dat het spel aanpast op basis van de prestaties van de speler. Deze uitdaging helpt je om geavanceerde event handling, data-analyse en dynamische UI-updates te oefenen.
 
-**Opdracht:** Maak een moeilijkheidsaanpassingssysteem voor het typenspel dat:
+**Prompt:** Maak een moeilijkheidsaanpassingssysteem voor het typenspel dat:
 1. De typsnelheid (woorden per minuut) en nauwkeurigheidspercentage van de speler bijhoudt
 2. Automatisch aanpast naar drie moeilijkheidsniveaus: Makkelijk (eenvoudige citaten), Gemiddeld (huidige citaten), Moeilijk (complexe citaten met interpunctie)
 3. Het huidige moeilijkheidsniveau en de statistieken van de speler weergeeft in de UI
@@ -516,7 +516,7 @@ Gebruik de Agent-modus om de volgende uitdaging te voltooien:
 
 Voeg de benodigde HTML-elementen, CSS-stijlen en JavaScript-functies toe om deze functie te implementeren. Zorg voor een goede foutafhandeling en zorg ervoor dat het spel toegankelijk blijft met geschikte ARIA-labels.
 
-Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
+Lees meer over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hier.
 
 ## 🚀 Uitdaging
 
@@ -525,21 +525,80 @@ Klaar om je typenspel naar een hoger niveau te tillen? Probeer deze geavanceerde
 **Voeg meer functionaliteit toe:**
 
 | Functie | Beschrijving | Vaardigheden die je oefent |
-|---------|-------------|----------------------------|
+|---------|-------------|---------------------------|
 | **Invoercontrole** | Schakel de `input` event listener uit na voltooiing en schakel deze weer in wanneer op de knop wordt geklikt | Eventbeheer en statuscontrole |
-| **UI-statusbeheer** | Schakel het tekstvak uit wanneer de speler het citaat voltooit | DOM-eigenschap manipulatie |
-| **Modale dialoog** | Toon een modale dialoog met het succesbericht | Geavanceerde UI-patronen en toegankelijkheid |
-| **Highscore-systeem** | Sla highscores op met `localStorage` | Browseropslag-API's en gegevenspersistentie |
+| **UI-statusbeheer** | Schakel het tekstvak uit wanneer de speler het citaat voltooit | Manipulatie van DOM-eigenschappen |
+| **Modale Dialoog** | Toon een modale dialoog met het succesbericht | Geavanceerde UI-patronen en toegankelijkheid |
+| **High Score Systeem** | Bewaar highscores met behulp van `localStorage` | Browseropslag-API's en gegevenspersistentie |
 
 **Implementatietips:**
-- **Onderzoek** `localStorage.setItem()` en `localStorage.getItem()` voor persistente opslag
-- **Oefen** met het dynamisch toevoegen en verwijderen van event listeners
+- **Onderzoek** `localStorage.setItem()` en `localStorage.getItem()` voor permanente opslag
+- **Oefen** het dynamisch toevoegen en verwijderen van event listeners
 - **Verken** HTML-dialogelementen of CSS-modellen
-- **Houd rekening** met toegankelijkheid bij het uitschakelen en inschakelen van formulierbesturingselementen
+- **Overweeg** toegankelijkheid bij het uitschakelen en inschakelen van formulierbesturingselementen
 
-## Post-Lecture Quiz
+## Quiz na de les
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/22)
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/22)
+
+---
+
+## 🚀 Jouw Typenspel Meesterschap Tijdlijn
+
+### ⚡ **Wat je in de komende 5 minuten kunt doen**
+- [ ] Test je typenspel met verschillende citaten om ervoor te zorgen dat het soepel werkt
+- [ ] Experimenteer met de CSS-styling - probeer de markering en foutkleuren te wijzigen
+- [ ] Open de DevTools van je browser (F12) en bekijk de Console tijdens het spelen
+- [ ] Daag jezelf uit om een citaat zo snel mogelijk te voltooien
+
+### ⏰ **Wat je in dit uur kunt bereiken**
+- [ ] Voeg meer citaten toe aan de array (misschien uit je favoriete boeken of films)
+- [ ] Implementeer het high score-systeem met localStorage uit de uitdagingsectie
+- [ ] Maak een woorden-per-minuut calculator die na elk spel wordt weergegeven
+- [ ] Voeg geluidseffecten toe voor correct typen, fouten en voltooiing
+
+### 📅 **Jouw Avontuur van een Week**
+- [ ] Bouw een multiplayer-versie waarin vrienden zij aan zij kunnen concurreren
+- [ ] Maak verschillende moeilijkheidsniveaus met verschillende citaatcomplexiteit
+- [ ] Voeg een voortgangsbalk toe die laat zien hoeveel van het citaat is voltooid
+- [ ] Implementeer gebruikersaccounts met persoonlijke statistiektracking
+- [ ] Ontwerp aangepaste thema's en laat gebruikers hun voorkeurstyling kiezen
+
+### 🗓️ **Jouw Transformatie van een Maand**
+- [ ] Maak een typecursus met lessen die geleidelijk de juiste vingerplaatsing leren
+- [ ] Bouw analytics die laten zien welke letters of woorden de meeste fouten veroorzaken
+- [ ] Voeg ondersteuning toe voor verschillende talen en toetsenbordindelingen
+- [ ] Integreer met educatieve API's om citaten uit literatuurdatabases te halen
+- [ ] Publiceer je verbeterde typenspel zodat anderen het kunnen gebruiken en ervan kunnen genieten
+
+### 🎯 **Eindreflectie Check-in**
+
+**Voordat je verder gaat, neem een moment om te vieren:**
+- Wat was het meest bevredigende moment tijdens het bouwen van dit spel?
+- Hoe voel je je over event-driven programmering nu vergeleken met toen je begon?
+- Wat is één functie die je enthousiast maakt om toe te voegen om dit spel uniek te maken?
+- Hoe zou je de concepten van event handling kunnen toepassen op andere projecten?
+
+```mermaid
+journey
+    title Your Event Programming Confidence Journey
+    section Today
+      Understanding Events: 3: You
+      Building UI: 4: You
+      Writing Event Listeners: 5: You
+    section This Week
+      Adding Features: 4: You
+      Debugging Issues: 5: You
+      Enhancing UX: 4: You
+    section Next Month
+      Building Complex Apps: 5: You
+      Teaching Others: 5: You
+      Creating Frameworks: 5: You
+```
+
+> 🌟 **Onthoud**: Je hebt zojuist een van de kernconcepten onder de knie gekregen die elke interactieve website en applicatie aandrijft. Event-driven programmering is wat het web levendig en responsief maakt. Elke keer dat je een dropdownmenu ziet, een formulier dat valideert terwijl je typt, of een spel dat reageert op je klikken, begrijp je nu de magie erachter. Je leert niet alleen coderen - je leert ervaringen creëren die intuïtief en boeiend aanvoelen! 🎉
+
+---
 
 ## Review & Zelfstudie
 
@@ -547,9 +606,9 @@ Lees meer over [alle beschikbare events](https://developer.mozilla.org/docs/Web/
 
 ## Opdracht
 
-[Maak een nieuw toetsenbordspel](assignment.md)
+[Maak een nieuw typenspel](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

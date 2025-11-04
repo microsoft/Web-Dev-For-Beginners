@@ -1,51 +1,51 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
-  "translation_date": "2025-10-23T00:04:27+00:00",
+  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
+  "translation_date": "2025-11-04T01:01:15+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "tr"
 }
 -->
 # Oyun Oluşturma: Etkinlikler Kullanarak
 
-Hiç web sitelerinin bir düğmeye tıkladığınızda veya bir metin kutusuna yazı yazdığınızda bunu nasıl bildiğini merak ettiniz mi? İşte bu, etkinlik odaklı programlamanın büyüsü! Bu önemli beceriyi öğrenmenin en iyi yolu, her tuş vuruşunuza tepki veren bir yazma hızı oyunu oluşturarak bir şeyler inşa etmektir.
+Hiç web sitelerinin bir düğmeye tıkladığınızda veya bir metin kutusuna yazdığınızda bunu nasıl bildiğini merak ettiniz mi? İşte bu, etkinlik odaklı programlamanın büyüsü! Bu önemli beceriyi öğrenmenin en iyi yolu, her tuş vuruşunuza tepki veren bir yazma hızı oyunu oluşturarak işe koyulmak.
 
 Web tarayıcılarının JavaScript kodunuzla nasıl "konuştuğunu" ilk elden göreceksiniz. Her tıkladığınızda, yazdığınızda veya farenizi hareket ettirdiğinizde, tarayıcı kodunuza küçük mesajlar (bunlara etkinlik diyoruz) gönderiyor ve nasıl tepki vereceğinize siz karar veriyorsunuz!
 
-Burada işimiz bittiğinde, hızınızı ve doğruluğunuzu takip eden gerçek bir yazma oyunu oluşturmuş olacaksınız. Daha da önemlisi, şimdiye kadar kullandığınız her etkileşimli web sitesini güçlendiren temel kavramları anlayacaksınız. Haydi başlayalım!
+Burada işimiz bittiğinde, hızınızı ve doğruluğunuzu takip eden gerçek bir yazma oyunu oluşturmuş olacaksınız. Daha da önemlisi, şimdiye kadar kullandığınız her etkileşimli web sitesini çalıştıran temel kavramları anlayacaksınız. Haydi başlayalım!
 
 ## Ders Öncesi Test
 
-[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/21)
+[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Etkinlik Odaklı Programlama
 
 En sevdiğiniz uygulama veya web sitesi hakkında düşünün - onu canlı ve duyarlı hissettiren nedir? Bu tamamen sizin yaptıklarınıza nasıl tepki verdiğiyle ilgilidir! Her dokunuş, tıklama, kaydırma veya tuş vuruşu "etkinlik" dediğimiz şeyi oluşturur ve işte web geliştirme büyüsü burada gerçekleşir.
 
-Web için programlama yapmayı bu kadar ilginç kılan şey şudur: birinin o düğmeye ne zaman tıklayacağını veya bir metin kutusuna yazmaya başlayacağını asla bilemeyiz! Hemen tıklayabilirler, beş dakika bekleyebilirler veya belki hiç tıklamazlar! Bu belirsizlik, kodumuzu yazma şeklimiz hakkında farklı düşünmemiz gerektiği anlamına gelir.
+Web için programlama yapmayı ilginç kılan şey şu: birinin o düğmeye ne zaman tıklayacağını veya bir metin kutusuna yazmaya başlayacağını asla bilemeyiz! Hemen tıklayabilir, beş dakika bekleyebilir veya belki hiç tıklamayabilir! Bu öngörülemezlik, kodumuzu yazma şeklimiz hakkında farklı düşünmemiz gerektiği anlamına gelir.
 
-Bir tarif gibi yukarıdan aşağıya doğru çalışan kod yazmak yerine, bir şeyin olmasını sabırla bekleyen kod yazarız. Bu, 1800'lerde telgraf operatörlerinin makinelerinin yanında oturup, telden bir mesaj geldiği anda yanıt vermeye hazır olmalarına benzer.
+Bir tarif gibi yukarıdan aşağıya çalışan kod yazmak yerine, bir şeyin olmasını bekleyen kod yazarız. Bu, 1800'lerde telgraf operatörlerinin makinelerinin yanında oturup, bir mesaj telden geldiği anda yanıt vermeye hazır olmalarına benzer.
 
 Peki tam olarak "etkinlik" nedir? Basitçe söylemek gerekirse, bir şeyin olmasıdır! Bir düğmeye tıkladığınızda - bu bir etkinliktir. Bir harf yazdığınızda - bu bir etkinliktir. Farenizi hareket ettirdiğinizde - bu başka bir etkinliktir.
 
-Etkinlik odaklı programlama, kodumuzu dinlemek ve yanıt vermek için ayarlamamıza olanak tanır. Belirli şeylerin olmasını sabırla bekleyen ve gerçekleştiğinde harekete geçen **etkinlik dinleyicileri** adı verilen özel işlevler oluştururuz.
+Etkinlik odaklı programlama, kodumuzu dinlemek ve yanıt vermek için ayarlamamıza olanak tanır. Belirli şeylerin olmasını bekleyen ve gerçekleştiğinde harekete geçen özel işlevler olan **etkinlik dinleyicileri** oluştururuz.
 
-Etkinlik dinleyicilerini kodunuz için bir kapı zili gibi düşünün. Kapı zilini kurarsınız (`addEventListener()`), hangi sesi dinleyeceğini söylersiniz (örneğin 'click' veya 'keypress') ve biri zili çaldığında ne olması gerektiğini belirtirsiniz (özel işleviniz).
+Etkinlik dinleyicilerini kodunuz için bir kapı zili gibi düşünün. Kapı zilini ayarlarsınız (`addEventListener()`), hangi sesi dinlemesi gerektiğini söylersiniz (örneğin 'click' veya 'keypress') ve biri zili çaldığında ne olması gerektiğini belirtirsiniz (özel işleviniz).
 
 **Etkinlik dinleyicileri nasıl çalışır:**
-- Kullanıcı eylemlerini (tıklamalar, tuş vuruşları, fare hareketleri gibi) dinler
-- Belirtilen etkinlik gerçekleştiğinde özel kodunuzu çalıştırır
-- Kullanıcı etkileşimlerine anında yanıt verir, sorunsuz bir deneyim yaratır
-- Farklı dinleyiciler kullanarak aynı öğede birden fazla etkinliği işler
+- Kullanıcı eylemleri (tıklamalar, tuş vuruşları veya fare hareketleri gibi) için **dinler**
+- Belirtilen etkinlik gerçekleştiğinde özel kodunuzu **çalıştırır**
+- Kullanıcı etkileşimlerine anında **yanıt verir**, sorunsuz bir deneyim yaratır
+- Farklı dinleyiciler kullanarak aynı öğedeki birden fazla etkinliği **yönetir**
 
-> **NOT:** Etkinlik dinleyicileri oluşturmanın birçok yolu olduğunu vurgulamakta fayda var. Anonim işlevler kullanabilir veya adlandırılmış olanlar oluşturabilirsiniz. `click` özelliğini ayarlamak gibi çeşitli kısayollar kullanabilir veya `addEventListener()` kullanabilirsiniz. Egzersizimizde `addEventListener()` ve anonim işlevlere odaklanacağız çünkü bu, web geliştiricilerinin en sık kullandığı tekniktir. Ayrıca en esnek olanıdır çünkü `addEventListener()` tüm etkinlikler için çalışır ve etkinlik adı bir parametre olarak sağlanabilir.
+> **NOT:** Etkinlik dinleyicileri oluşturmanın birçok yolu olduğunu vurgulamakta fayda var. Anonim işlevler kullanabilir veya adlandırılmış olanlar oluşturabilirsiniz. `click` özelliğini ayarlamak gibi çeşitli kısayollar kullanabilir veya `addEventListener()` kullanabilirsiniz. Egzersizimizde `addEventListener()` ve anonim işlevlere odaklanacağız çünkü web geliştiricilerinin en sık kullandığı teknik budur. Ayrıca en esnek olanıdır, çünkü `addEventListener()` tüm etkinlikler için çalışır ve etkinlik adı bir parametre olarak sağlanabilir.
 
 ### Yaygın Etkinlikler
 
 Web tarayıcıları, dinleyebileceğiniz düzinelerce farklı etkinlik sunar, ancak çoğu etkileşimli uygulama yalnızca bir avuç temel etkinliğe dayanır. Bu temel etkinlikleri anlamak, karmaşık kullanıcı etkileşimleri oluşturmanız için size temel sağlayacaktır.
 
-Bir uygulama oluştururken dinleyebileceğiniz [düzinelerce etkinlik](https://developer.mozilla.org/docs/Web/Events) vardır. Temelde bir kullanıcının bir sayfada yaptığı her şey bir etkinlik oluşturur, bu da onlara istediğiniz deneyimi sunmak için size büyük bir güç verir. Neyse ki, genellikle yalnızca birkaç temel etkinliğe ihtiyacınız olur. İşte birkaç yaygın olanı (oyunumuzu oluştururken kullanacağımız iki tanesi dahil):
+Bir uygulama oluştururken dinleyebileceğiniz [düzinelerce etkinlik](https://developer.mozilla.org/docs/Web/Events) vardır. Temelde bir kullanıcının bir sayfada yaptığı her şey bir etkinlik oluşturur ve bu, onların istediğiniz deneyimi yaşamasını sağlamak için size büyük bir güç verir. Neyse ki, genellikle yalnızca birkaç temel etkinliğe ihtiyacınız olur. İşte yaygın olanlardan bazıları (oyunumuzu oluştururken kullanacağımız iki tanesi dahil):
 
 | Etkinlik | Açıklama | Yaygın Kullanım Alanları |
 |----------|----------|--------------------------|
@@ -55,16 +55,16 @@ Bir uygulama oluştururken dinleyebileceğiniz [düzinelerce etkinlik](https://d
 | `input` | Kullanıcı bir metin girdi | Form doğrulama, gerçek zamanlı arama |
 
 **Bu etkinlik türlerini anlamak:**
-- Kullanıcıların sayfanızdaki belirli öğelerle etkileşimde bulunması durumunda tetiklenir
-- Etkinlik nesneleri aracılığıyla kullanıcının eylemi hakkında ayrıntılı bilgi sağlar
-- Duyarlı, etkileşimli web uygulamaları oluşturmanıza olanak tanır
-- Farklı tarayıcılar ve cihazlar arasında tutarlı bir şekilde çalışır
+- Kullanıcıların sayfanızdaki belirli öğelerle etkileşimde bulunduğunda **tetiklenir**
+- Kullanıcının eylemi hakkında ayrıntılı bilgileri etkinlik nesneleri aracılığıyla **sağlar**
+- Duyarlı, etkileşimli web uygulamaları oluşturmanıza olanak **tanır**
+- Farklı tarayıcılar ve cihazlar arasında tutarlı bir şekilde **çalışır**
 
 ## Oyunu Oluşturma
 
 Artık etkinliklerin nasıl çalıştığını anladığınıza göre, bu bilgiyi pratikte kullanarak faydalı bir şeyler yapalım. Etkinlik işleme işlemini gösteren ve önemli bir geliştirici becerisi geliştirmenize yardımcı olan bir yazma hızı oyunu oluşturacağız.
 
-JavaScript'te etkinliklerin nasıl çalıştığını keşfetmek için bir oyun oluşturacağız. Oyunumuz, bir oyuncunun yazma becerisini test edecek ve bu, tüm geliştiricilerin sahip olması gereken en az değer verilen becerilerden biridir. İlginç bir bilgi: Bugün kullandığımız QWERTY klavye düzeni aslında 1870'lerde daktilolar için tasarlandı - ve iyi yazma becerileri bugün programcılar için hala çok değerli! Oyunun genel akışı şu şekilde görünecek:
+JavaScript'te etkinliklerin nasıl çalıştığını keşfetmek için bir oyun oluşturacağız. Oyunumuz bir oyuncunun yazma becerisini test edecek, bu da tüm geliştiricilerin sahip olması gereken en az değer verilen becerilerden biridir. İlginç bir bilgi: Bugün kullandığımız QWERTY klavye düzeni aslında 1870'lerde daktilolar için tasarlandı - ve iyi yazma becerileri bugün programcılar için hala çok değerli! Oyunun genel akışı şöyle görünecek:
 
 ```mermaid
 flowchart TD
@@ -82,10 +82,10 @@ flowchart TD
     H --> C
 ```
 
-**Oyunumuz şu şekilde çalışacak:**
+**Oyunumuz şöyle çalışacak:**
 - Oyuncu başlat düğmesine tıkladığında başlar ve rastgele bir alıntı görüntüler
 - Oyuncunun yazma ilerlemesini kelime kelime gerçek zamanlı olarak takip eder
-- Oyuncunun odaklanmasını sağlamak için mevcut kelimeyi vurgular
+- Oyuncunun odaklanmasını yönlendirmek için mevcut kelimeyi vurgular
 - Yazım hataları için anında görsel geri bildirim sağlar
 - Alıntı tamamlandığında toplam süreyi hesaplar ve görüntüler
 
@@ -95,9 +95,9 @@ Haydi oyunumuzu oluşturalım ve etkinlikler hakkında bilgi edinelim!
 
 Kodlamaya başlamadan önce, organize olalım! Başlangıçtan itibaren temiz bir dosya yapısına sahip olmak, ileride baş ağrılarından kurtulmanızı sağlar ve projenizi daha profesyonel hale getirir. 😊
 
-Sadece üç dosya ile işleri basit tutacağız: `index.html` sayfa yapımız için, `script.js` tüm oyun mantığımız için ve `style.css` her şeyi harika göstermek için. Bu, webin çoğunu güçlendiren klasik üçlüdür!
+Sadece üç dosyayla işleri basit tutacağız: `index.html` sayfa yapımız için, `script.js` tüm oyun mantığımız için ve `style.css` her şeyi harika göstermek için. Bu, webin çoğunu çalıştıran klasik üçlüdür!
 
-**Bir konsol veya terminal penceresi açarak ve aşağıdaki komutu girerek çalışmanız için yeni bir klasör oluşturun:**
+**Bir konsol veya terminal penceresi açarak aşağıdaki komutu girerek yeni bir klasör oluşturun:**
 
 ```bash
 # Linux or macOS
@@ -108,9 +108,9 @@ md typing-game && cd typing-game
 ```
 
 **Bu komutlar şunları yapar:**
-- Proje dosyalarınız için `typing-game` adlı yeni bir dizin oluşturur
-- Otomatik olarak yeni oluşturulan dizine geçiş yapar
-- Oyun geliştirme için temiz bir çalışma alanı oluşturur
+- Proje dosyalarınız için `typing-game` adlı yeni bir dizin **oluşturur**
+- Yeni oluşturulan dizine otomatik olarak **geçiş yapar**
+- Oyun geliştirme için temiz bir çalışma alanı **ayarlar**
 
 **Visual Studio Code'u açın:**
 
@@ -119,9 +119,9 @@ code .
 ```
 
 **Bu komut:**
-- Visual Studio Code'u mevcut dizinde başlatır
-- Proje klasörünüzü editörde açar
-- Geliştirme için ihtiyacınız olan tüm araçlara erişim sağlar
+- Visual Studio Code'u mevcut dizinde **başlatır**
+- Proje klasörünüzü editörde **açar**
+- İhtiyacınız olan tüm geliştirme araçlarına erişim **sağlar**
 
 **Visual Studio Code'da klasöre şu adlarla üç dosya ekleyin:**
 - `index.html` - Oyununuzun yapısını ve içeriğini içerir
@@ -130,24 +130,24 @@ code .
 
 ## Kullanıcı Arayüzünü Oluşturma
 
-Şimdi tüm oyun aksiyonunun gerçekleşeceği sahneyi oluşturalım! Bunu bir uzay gemisinin kontrol panelini tasarlamak gibi düşünün - oyuncularımızın ihtiyaç duyduğu her şeyin bekledikleri yerde olduğundan emin olmalıyız.
+Şimdi tüm oyun aksiyonunun gerçekleşeceği sahneyi oluşturalım! Bunu bir uzay gemisi kontrol panelini tasarlamak gibi düşünün - oyuncularımızın ihtiyaç duyduğu her şeyin tam olarak bekledikleri yerde olduğundan emin olmalıyız.
 
-Oyunumuzun gerçekten neye ihtiyacı olduğunu anlayalım. Bir yazma oyunu oynuyor olsaydınız, ekranda ne görmek isterdiniz? İşte ihtiyacımız olanlar:
+Oyunumuzun aslında neye ihtiyacı olduğunu anlayalım. Bir yazma oyunu oynuyor olsaydınız, ekranda ne görmek isterdiniz? İşte ihtiyacımız olanlar:
 
 | UI Öğesi | Amacı | HTML Öğesi |
 |----------|-------|-----------|
 | Alıntı Gösterimi | Yazılacak metni gösterir | `<p>` ile `id="quote"` |
-| Mesaj Alanı | Durum ve başarı mesajlarını gösterir | `<p>` ile `id="message"` |
+| Mesaj Alanı | Durum ve başarı mesajlarını görüntüler | `<p>` ile `id="message"` |
 | Metin Girişi | Oyuncuların alıntıyı yazdığı yer | `<input>` ile `id="typed-value"` |
 | Başlat Düğmesi | Oyunu başlatır | `<button>` ile `id="start"` |
 
 **UI yapısını anlamak:**
-- İçeriği yukarıdan aşağıya doğru mantıklı bir şekilde düzenler
-- JavaScript hedeflemesi için öğelere benzersiz kimlikler atar
-- Daha iyi kullanıcı deneyimi için net bir görsel hiyerarşi sağlar
-- Erişilebilirlik için semantik HTML öğeleri içerir
+- İçeriği yukarıdan aşağıya mantıksal olarak **düzenler**
+- JavaScript hedeflemesi için öğelere benzersiz kimlikler **atanır**
+- Daha iyi kullanıcı deneyimi için net görsel hiyerarşi **sağlar**
+- Erişilebilirlik için semantik HTML öğeleri **içerir**
 
-Bu öğelerin her biri, JavaScript'te çalışabilmemiz için kimliklere ihtiyaç duyacaktır. Ayrıca oluşturacağımız CSS ve JavaScript dosyalarına referanslar ekleyeceğiz.
+Her biri JavaScript'te çalışabilmemiz için kimliklere ihtiyaç duyacak. Ayrıca oluşturacağımız CSS ve JavaScript dosyalarına referanslar ekleyeceğiz.
 
 `index.html` adlı yeni bir dosya oluşturun. Aşağıdaki HTML'yi ekleyin:
 
@@ -172,13 +172,13 @@ Bu öğelerin her biri, JavaScript'te çalışabilmemiz için kimliklere ihtiya�
 </html>
 ```
 
-**Bu HTML yapısının başardıklarını açıklamak:**
-- Stil için `<head>` bölümünde CSS stil dosyasını bağlar
-- Kullanıcılar için net bir başlık ve talimatlar oluşturur
-- Dinamik içerik için belirli kimliklere sahip yer tutucu paragraflar oluşturur
-- Erişilebilirlik özelliklerine sahip bir giriş alanı içerir
-- Oyunu başlatmak için bir başlat düğmesi sağlar
-- Optimum performans için JavaScript dosyasını en sona yükler
+**Bu HTML yapısının ne sağladığını açıklamak:**
+- Stil için `<head>` içinde CSS stil dosyasını **bağlar**
+- Kullanıcılar için net bir başlık ve talimatlar **oluşturur**
+- Dinamik içerik için belirli kimliklere sahip yer tutucu paragraflar **oluşturur**
+- Erişilebilirlik özelliklerine sahip bir giriş alanı **içerir**
+- Oyunu başlatmak için bir başlat düğmesi **sağlar**
+- Optimum performans için JavaScript dosyasını sonunda **yükler**
 
 ### Uygulamayı Başlatma
 
@@ -188,24 +188,24 @@ Her zaman iteratif olarak geliştirmek en iyisidir, böylece her şeyin nasıl g
 
 **[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) uzantısını yüklemek için bağlantıyı takip edin ve Yükle'ye tıklayın:**
 
-**Yükleme sırasında olanlar:**
-- Tarayıcınızı Visual Studio Code'u açmaya yönlendirir
-- Uzantı yükleme sürecinde size rehberlik eder
-- Kurulumu tamamlamak için Visual Studio Code'u yeniden başlatmanız gerekebilir
+**Yükleme sırasında neler olur:**
+- Tarayıcınız Visual Studio Code'u açmaya **yönlendirilir**
+- Uzantı yükleme sürecinde size rehberlik **eder**
+- Kurulumu tamamlamak için Visual Studio Code'u yeniden başlatmanız **gerekebilir**
 
-**Yükleme tamamlandıktan sonra, Visual Studio Code'da Ctrl-Shift-P (veya Cmd-Shift-P) tuşlarına basarak komut paletini açın:**
+**Yüklendikten sonra, Visual Studio Code'da Ctrl-Shift-P (veya Cmd-Shift-P) tuşlarına basarak komut paletini açın:**
 
 **Komut paletini anlamak:**
-- Tüm VS Code komutlarına hızlı erişim sağlar
-- Yazdıkça komutları arar
-- Daha hızlı geliştirme için klavye kısayolları sunar
+- Tüm VS Code komutlarına hızlı erişim **sağlar**
+- Yazarken komutları **arama** yapar
+- Daha hızlı geliştirme için klavye kısayolları **sunuyor**
 
 **"Live Server: Open with Live Server" yazın:**
 
 **Live Server'ın yaptığı şey:**
-- Projeniz için yerel bir geliştirme sunucusu başlatır
-- Dosyaları kaydettiğinizde tarayıcıyı otomatik olarak yeniler
-- Dosyalarınızı yerel bir URL'den (genellikle `localhost:5500`) sunar
+- Projeniz için yerel bir geliştirme sunucusu **başlatır**
+- Dosyaları kaydettiğinizde tarayıcıyı otomatik olarak **yeniler**
+- Dosyalarınızı yerel bir URL'den (genellikle `localhost:5500`) **sunuyor**
 
 **Bir tarayıcı açın ve `https://localhost:5500` adresine gidin:**
 
@@ -213,9 +213,9 @@ Artık oluşturduğunuz sayfayı görmelisiniz! Haydi biraz işlevsellik ekleyel
 
 ## CSS Ekleme
 
-Şimdi her şeyi güzel hale getirelim! Görsel geri bildirim, bilgisayar arayüzleri için ilk günlerden beri çok önemlidir. 1980'lerde araştırmacılar, anında görsel geri bildirimin kullanıcı performansını önemli ölçüde artırdığını ve hataları azalttığını keşfettiler. İşte tam olarak bunu yaratacağız.
+Şimdi her şeyi güzel hale getirelim! Görsel geri bildirim, bilgisayar arayüzleri için ilk günlerden beri çok önemli olmuştur. 1980'lerde araştırmacılar, anında görsel geri bildirimin kullanıcı performansını önemli ölçüde artırdığını ve hataları azalttığını keşfettiler. İşte tam olarak bunu oluşturacağız.
 
-Oyunumuzda olan biten her şeyin net olması gerekiyor. Oyuncular hangi kelimeyi yazmaları gerektiğini hemen anlamalı ve bir hata yaptıklarında bunu hemen görmeliler. Basit ama etkili bir stil oluşturacağız:
+Oyunumuzda olan biten her şeyin net olması gerekiyor. Oyuncular hangi kelimeyi yazmaları gerektiğini hemen anlamalı ve hata yaptıklarında bunu hemen görmeliler. Basit ama etkili bir stil oluşturalım:
 
 `style.css` adlı yeni bir dosya oluşturun ve aşağıdaki söz dizimini ekleyin.
 
@@ -232,12 +232,12 @@ Oyunumuzda olan biten her şeyin net olması gerekiyor. Oyuncular hangi kelimeyi
 ```
 
 **Bu CSS sınıflarını anlamak:**
-- Mevcut kelimeyi net görsel rehberlik için sarı bir arka planla vurgular
-- Yazım hatalarını açık mercan rengi bir arka plan rengiyle işaretler
-- Kullanıcının yazma akışını kesmeden anında geri bildirim sağlar
-- Erişilebilirlik ve net görsel iletişim için zıt renkler kullanır
+- Mevcut kelimeyi sarı bir arka planla vurgulayarak net görsel rehberlik **sağlar**
+- Yazım hatalarını açık mercan rengi bir arka planla **işaretler**
+- Kullanıcının yazma akışını bozmadan anında geri bildirim **sağlar**
+- Erişilebilirlik ve net görsel iletişim için kontrast renkler **kullanır**
 
-✅ CSS ile sayfanızı istediğiniz gibi düzenleyebilirsiniz. Sayfayı daha çekici hale getirmek için biraz zaman ayırın:
+✅ CSS ile sayfanızı istediğiniz gibi düzenleyebilirsiniz. Biraz zaman ayırın ve sayfayı daha çekici hale getirin:
 
 - Farklı bir yazı tipi seçin
 - Başlıkları renklendirin
@@ -245,36 +245,36 @@ Oyunumuzda olan biten her şeyin net olması gerekiyor. Oyuncular hangi kelimeyi
 
 ## JavaScript
 
-İşte işler ilginçleşiyor! 🎉 HTML yapımız ve CSS stilimiz var, ancak şu anda oyunumuz güzel bir motoru olmayan bir araba gibi. JavaScript, o motor olacak - her şeyin gerçekten çalışmasını ve oyuncuların yaptıklarına tepki vermesini sağlayacak.
+İşte işler ilginçleşiyor! 🎉 HTML yapımız ve CSS stilimiz var, ancak şu anda oyunumuz motoru olmayan güzel bir araba gibi. JavaScript, o motor olacak - her şeyin gerçekten çalışmasını ve oyuncuların yaptıklarına tepki vermesini sağlayacak.
 
-Burada yarattığınız şeyin hayata geçtiğini göreceksiniz. Bunu adım adım ele alacağız, böylece hiçbir şey bunaltıcı hissettirmeyecek:
+Burada yarattığınız şeyin hayata geçtiğini göreceksiniz. Bunu adım adım ele alacağız, böylece hiçbir şey bunaltıcı hissettirmez:
 
-| Adım | Amaç | Öğreneceğiniz Şeyler |
-|------|------|-----------------------|
-| [Sabitleri oluşturma](../../../../4-typing-game/typing-game) | Alıntıları ve DOM referanslarını ayarlama | Değişken yönetimi ve DOM seçimi |
+| Adım | Amaç | Öğreneceğiniz Şey |
+|------|------|-------------------|
+| [Sabitleri oluşturma](../../../../4-typing-game/typing-game) | Alıntılar ve DOM referanslarını ayarlama | Değişken yönetimi ve DOM seçimi |
 | [Oyunu başlatmak için etkinlik dinleyici](../../../../4-typing-game/typing-game) | Oyun başlatma işlemini yönetme | Etkinlik işleme ve UI güncellemeleri |
-| [Yazma için etkinlik dinleyici](../../../../4-typing-game/typing-game) | Kullanıcı girdisini gerçek zamanlı işleme | Girdi doğrulama ve dinamik geri bildirim |
+| [Yazma için etkinlik dinleyici](../../../../4-typing-game/typing-game) | Kullanıcı girişini gerçek zamanlı olarak işleme | Giriş doğrulama ve dinamik geri bildirim |
 
 **Bu yapılandırılmış yaklaşım size şunları sağlar:**
-- Kodunuzu mantıklı, yönetilebilir bölümlere organize etme
-- Daha kolay hata ayıklama için işlevselliği kademeli olarak oluşturma
-- Uygulamanızın farklı bölümlerinin nasıl birlikte çalıştığını anlama
-- Gelecekteki projeler için yeniden kullanılabilir desenler oluşturma
+- Kodunuzu mantıksal, yönetilebilir bölümlere **organize eder**
+- Daha kolay hata ayıklama için işlevselliği kademeli olarak **oluşturur**
+- Uygulamanızın farklı bölümlerinin nasıl birlikte çalıştığını **anlama**
+- Gelecekteki projeler için yeniden kullanılabilir desenler **oluşturma**
 
 Ama önce, `script.js` adlı yeni bir dosya oluşturun.
 
 ### Sabitleri Ekleme
 
-Aksiyona dalmadan önce, tüm kaynaklarımızı toplayalım! NASA'nın görev kontrolü, fırlatma öncesinde tüm izleme sistemlerini nasıl kuruyorsa, her şeyin hazır ve düzenli olması çok daha kolaydır. Bu, daha sonra bir şeyler aramaktan kurtarır ve yazım hatalarını önlemeye yardımcı olur.
+Harekete geçmeden önce, tüm kaynaklarımızı toplayalım! NASA görev kontrolünün fırlatma öncesi tüm izleme sistemlerini kurması gibi, her şeyin hazırlanmış ve hazır olması çok daha kolaydır. Bu, daha sonra bir şeyler aramaktan bizi kurtarır ve yazım hatalarını önlemeye yardımcı olur.
 
-İlk olarak ayarlamamız gerekenler şunlar: 
+İlk olarak şunları ayarlamamız gerekiyor:
 
 | Veri Türü | Amaç | Örnek |
 |-----------|------|-------|
-| Alıntılar Dizisi | Oyundaki tüm olası alıntıları depola | `['Alıntı 1', 'Alıntı 2', ...]` |
-| Kelime Dizisi | Mevcut alıntıyı tek tek kelimelere ayır | `['Ne zaman', 'sen', 'sahip', ...]` |
-| Kelime İndeksi | Oyuncunun hangi kelimeyi yazdığını takip et | `0, 1, 2, 3...` |
-| Başlangıç Zamanı | Puanlama için geçen süreyi hesapla | `Date.now()` |
+| Alıntılar Dizisi | Oyundaki tüm olası alıntıları saklar | `['Alıntı 1', 'Alıntı 2', ...]` |
+| Kelime Dizisi | Mevcut alıntıyı tek tek kelimelere ayırır | `['Ne', 'zaman', 'sen', ...]` |
+| Kelime İndeksi | Oyuncunun hangi kelimeyi yazdığını takip eder | `0, 1, 2, 3...` |
+| Başlangıç Zamanı | Puanlama için geçen süreyi hesaplar | `Date.now()` |
 
 **Ayrıca, kullanıcı arayüzü öğelerine referanslara ihtiyacımız olacak:**
 | Öğeler | ID | Amaç |
@@ -307,35 +307,35 @@ const typedValueElement = document.getElementById('typed-value');
 ```
 
 **Bu kurulum kodunun ne yaptığını açıklayalım:**
-- Alıntılar değişmeyeceği için `const` kullanarak Sherlock Holmes alıntılarından oluşan bir dizi **depolar**
-- Oyun sırasında bu değerler güncelleneceği için `let` ile izleme değişkenlerini **başlatır**
-- DOM öğelerine verimli erişim için `document.getElementById()` kullanarak referansları **yakalar**
-- Açık ve açıklayıcı değişken adlarıyla tüm oyun işlevselliği için temel **oluşturur**
-- İlgili veri ve öğeleri daha kolay kod bakımı için mantıklı bir şekilde **organize eder**
+- **Saklar** Sherlock Holmes alıntılarından oluşan bir diziyi, alıntılar değişmeyeceği için `const` kullanarak
+- **Başlatır** izleme değişkenlerini, oyun sırasında güncellenecekleri için `let` kullanarak
+- **Yakalar** DOM öğelerine referansları, `document.getElementById()` ile verimli erişim için
+- **Kurulum yapar** tüm oyun işlevselliği için açık ve açıklayıcı değişken adlarıyla temel oluşturur
+- **Organize eder** ilgili veri ve öğeleri, kod bakımını kolaylaştırmak için mantıklı bir şekilde
 
 ✅ Oyununuz için daha fazla alıntı eklemeye devam edin
 
-> 💡 **Profesyonel İpucu**: Kodda istediğimiz zaman öğeleri `document.getElementById()` kullanarak alabiliriz. Bu öğelere düzenli olarak başvuracağımız için, sabitler kullanarak string ifadelerde yazım hatalarından kaçınacağız. [Vue.js](https://vuejs.org/) veya [React](https://reactjs.org/) gibi frameworkler kodunuzu merkezileştirmeyi daha iyi yönetmenize yardımcı olabilir.
+> 💡 **İpucu**: Kodda istediğimiz zaman öğeleri `document.getElementById()` kullanarak alabiliriz. Bu öğelere sık sık başvuracağımız için, sabitler kullanarak string literal hatalarından kaçınacağız. [Vue.js](https://vuejs.org/) veya [React](https://reactjs.org/) gibi frameworkler, kodunuzu merkezileştirmeyi daha iyi yönetmenize yardımcı olabilir.
 >
-**Bu yaklaşımın neden bu kadar iyi çalıştığını açıklayalım:**
-- Öğeleri birden fazla kez referans alırken yazım hatalarını **önler**
-- Açıklayıcı sabit adlarıyla kod okunabilirliğini **artırır**
-- Otomatik tamamlama ve hata kontrolü ile daha iyi IDE desteği **sağlar**
-- Öğelerin ID'leri daha sonra değişirse yeniden düzenlemeyi **kolaylaştırır**
+**Bu yaklaşım neden bu kadar iyi çalışıyor:**
+- **Önler** öğelere birden fazla kez başvururken yazım hatalarını
+- **Geliştirir** kod okunabilirliğini açıklayıcı sabit adlarıyla
+- **Sağlar** daha iyi IDE desteği, otomatik tamamlama ve hata kontrolü ile
+- **Kolaylaştırır** öğe ID'leri daha sonra değişirse yeniden düzenlemeyi
 
-`const`, `let` ve `var` kullanımı hakkında bir video izlemek için bir dakikanızı ayırın.
+`const`, `let` ve `var` kullanımı hakkında bir video izlemek için bir dakikanızı ayırın
 
 [![Değişken türleri](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Değişken türleri")
 
-> 🎥 Değişkenler hakkında bir video için yukarıdaki görsele tıklayın.
+> 🎥 Yukarıdaki resme tıklayarak değişkenler hakkında bir video izleyin.
 
 ### Başlangıç mantığını ekleyin
 
-Her şeyin yerine oturduğu yer burası! 🚀 İlk gerçek olay dinleyicinizi yazmak üzeresiniz ve kodunuzun bir düğmeye tıklamaya yanıt verdiğini görmek oldukça tatmin edici.
+Her şeyin yerine oturduğu yer burası! 🚀 İlk gerçek olay dinleyicinizi yazmak üzeresiniz ve bir düğmeye tıklamaya yanıt veren kodunuzu görmek oldukça tatmin edici bir şey.
 
-Şöyle düşünün: bir yerlerde bir oyuncu "Başlat" düğmesine tıklayacak ve kodunuz buna hazır olmalı. Ne zaman tıklayacaklarını bilmiyoruz - hemen olabilir, kahve almaya gittikten sonra olabilir - ama tıkladıklarında oyununuz harekete geçecek.
+Bir düşünün: bir yerlerde bir oyuncu "Başlat" düğmesine tıklayacak ve kodunuz buna hazır olmalı. Ne zaman tıklayacaklarını bilmiyoruz - hemen olabilir, kahve almaya gittikten sonra olabilir - ama tıkladıklarında oyununuz harekete geçecek.
 
-Kullanıcı `start`a tıkladığında, bir alıntı seçmemiz, kullanıcı arayüzünü ayarlamamız ve mevcut kelime ve zamanlama için izleme ayarlarını yapmamız gerekiyor. Aşağıda eklemeniz gereken JavaScript kodu var; kod bloğunun hemen ardından tartışıyoruz.
+Kullanıcı `start` düğmesine tıkladığında, bir alıntı seçmemiz, kullanıcı arayüzünü ayarlamamız ve mevcut kelime ve zamanlama için izleme ayarlarını yapmamız gerekiyor. Aşağıda eklemeniz gereken JavaScript kodu var; kod bloğunun hemen ardından bunu tartışıyoruz.
 
 ```javascript
 // at the end of script.js
@@ -372,33 +372,33 @@ document.getElementById('start').addEventListener('click', () => {
 
 **Kodun mantıksal bölümlere ayrılması:**
 
-**📊 Kelime Takibi Ayarı:**
-- Çeşitlilik için `Math.floor()` ve `Math.random()` kullanarak rastgele bir alıntı **seçer**
-- Alıntıyı `split(' ')` kullanarak tek tek kelimelerden oluşan bir diziye **dönüştürür**
-- Oyuncular ilk kelimeyle başladığı için `wordIndex`i 0'a **sıfırlar**
-- Yeni bir oyun turu için oyun durumunu **hazırlar**
+**📊 Kelime İzleme Ayarı:**
+- **Seçer** çeşitlilik için `Math.floor()` ve `Math.random()` kullanarak rastgele bir alıntı
+- **Dönüştürür** alıntıyı `split(' ')` kullanarak tek tek kelimelerden oluşan bir diziye
+- **Sıfırlar** `wordIndex` değerini, oyuncular ilk kelimeyle başladığı için
+- **Hazırlar** oyun durumunu yeni bir tur için
 
 **🎨 Kullanıcı Arayüzü Ayarı ve Gösterimi:**
-- Her kelimeyi bireysel stil için saran `<span>` öğelerinden oluşan bir dizi **oluşturur**
-- DOM güncellemesi için verimli bir şekilde span öğelerini tek bir string olarak **birleştirir**
-- İlk kelimeyi `highlight` CSS sınıfını ekleyerek **vurgular**
-- Temiz bir başlangıç sağlamak için önceki oyun mesajlarını **temizler**
+- **Oluşturur** her kelimeyi bireysel stil için saran `<span>` öğelerinden oluşan bir dizi
+- **Birleştirir** span öğelerini verimli DOM güncellemesi için tek bir string haline
+- **Vurgular** ilk kelimeyi `highlight` CSS sınıfını ekleyerek
+- **Temizler** önceki oyun mesajlarını, temiz bir başlangıç sağlamak için
 
 **⌨️ Metin Kutusu Hazırlığı:**
-- Giriş alanındaki mevcut metni **temizler**
-- Oyuncuların hemen yazmaya başlaması için metin kutusuna **odaklanır**
-- Yeni oyun oturumu için giriş alanını **hazırlar**
+- **Temizler** giriş alanındaki mevcut metni
+- **Odaklar** metin kutusunu, oyuncuların hemen yazmaya başlaması için
+- **Hazırlar** giriş alanını yeni oyun oturumu için
 
 **⏱️ Zamanlayıcı Başlatma:**
-- `new Date().getTime()` kullanarak mevcut zaman damgasını **yakalar**
-- Yazma hızı ve tamamlama süresinin doğru hesaplanmasını **sağlar**
-- Oyun oturumu için performans takibini **başlatır**
+- **Yakalar** mevcut zaman damgasını `new Date().getTime()` kullanarak
+- **Sağlar** yazma hızı ve tamamlama süresinin doğru hesaplanmasını
+- **Başlatır** oyun oturumu için performans takibini
 
 ### Yazma mantığını ekleyin
 
-İşte oyunumuzun kalbine geliyoruz! İlk başta biraz fazla gibi görünse de endişelenmeyin - her parçayı adım adım inceleyeceğiz ve sonunda her şeyin ne kadar mantıklı olduğunu göreceksiniz.
+İşte oyunumuzun kalbine ulaşıyoruz! İlk başta çok gibi görünse de endişelenmeyin - her parçayı adım adım inceleyeceğiz ve sonunda ne kadar mantıklı olduğunu göreceksiniz.
 
-Burada inşa ettiğimiz şey oldukça sofistike: biri her harf yazdığında, kodumuz ne yazdığını kontrol edecek, ona geri bildirim verecek ve bir sonraki adımda ne olması gerektiğine karar verecek. Bu, 1970'lerdeki WordStar gibi erken dönem kelime işlemcilerin daktiloculara gerçek zamanlı geri bildirim sağlamasına benzer.
+Burada oldukça sofistike bir şey inşa ediyoruz: biri her harf yazdığında, kodumuz ne yazıldığını kontrol edecek, geri bildirim verecek ve bir sonraki adımda ne yapılması gerektiğine karar verecek. Bu, 1970'lerdeki WordStar gibi erken dönem kelime işlemcilerin daktilolara gerçek zamanlı geri bildirim sağlama şekline benziyor.
 
 ```javascript
 // at the end of script.js
@@ -439,7 +439,7 @@ typedValueElement.addEventListener('input', () => {
 
 **Yazma mantığı akışını anlamak:**
 
-Bu işlev, en spesifikten en geneline kadar koşulları kontrol eden bir şelale yaklaşımı kullanır. Her senaryoyu inceleyelim:
+Bu fonksiyon, en spesifikten en genel duruma kadar koşulları kontrol eden bir şelale yaklaşımı kullanır. Her senaryoyu inceleyelim:
 
 ```mermaid
 flowchart TD
@@ -454,50 +454,50 @@ flowchart TD
 ```
 
 **🏁 Alıntı Tamamlandı (Senaryo 1):**
-- Yazılan değerin mevcut kelimeyle eşleşip eşleşmediğini VE son kelimede olup olmadığımızı **kontrol eder**
-- Geçen süreyi başlangıç zamanından mevcut zamanı çıkararak **hesaplar**
-- Milisaniyeleri saniyeye dönüştürmek için 1.000'e **böler**
-- Tamamlama süresiyle birlikte tebrik mesajı **gösterir**
+- **Kontrol eder** yazılan değer mevcut kelimeyle eşleşiyor mu ve son kelimede miyiz
+- **Hesaplar** geçen süreyi, başlangıç zamanından mevcut zamanı çıkararak
+- **Dönüştürür** milisaniyeleri saniyeye, 1.000'e bölerek
+- **Gösterir** tamamlanma süresiyle tebrik mesajı
 
 **✅ Kelime Tamamlandı (Senaryo 2):**
-- Girişin bir boşlukla bittiğini **tespit eder**
-- Kırpılmış girişin mevcut kelimeyle tam olarak eşleştiğini **doğrular**
-- Bir sonraki kelime için giriş alanını **temizler**
-- `wordIndex`i artırarak bir sonraki kelimeye **geçer**
-- Tüm sınıfları kaldırarak ve yeni kelimeyi vurgulayarak görsel vurgulamayı **günceller**
+- **Tespit eder** kelime tamamlandığında girişin boşlukla bitmesini
+- **Doğrular** kırpılmış girişin mevcut kelimeyle tam olarak eşleştiğini
+- **Temizler** giriş alanını bir sonraki kelime için
+- **İlerler** bir sonraki kelimeye, `wordIndex` değerini artırarak
+- **Günceller** görsel vurgulamayı, tüm sınıfları kaldırarak ve yeni kelimeyi vurgulayarak
 
 **📝 Yazma Devam Ediyor (Senaryo 3):**
-- Mevcut kelimenin şimdiye kadar yazılanlarla başladığını **doğrular**
-- Girişin doğru olduğunu göstermek için herhangi bir hata stilini **kaldırır**
-- Kesintisiz yazmaya devam etmeye **izin verir**
+- **Doğrular** mevcut kelimenin şimdiye kadar yazılanlarla başladığını
+- **Kaldırır** hata stilini, girişin doğru olduğunu göstermek için
+- **İzin verir** kesintisiz yazmaya devam edilmesine
 
 **❌ Hata Durumu (Senaryo 4):**
-- Yazılan metin beklenen kelime başlangıcıyla eşleşmediğinde **tetiklenir**
-- Hata CSS sınıfını uygulayarak anında görsel geri bildirim **sağlar**
-- Oyuncuların hataları hızlı bir şekilde tanımlayıp düzeltmesine **yardımcı olur**
+- **Tetikler** yazılan metin beklenen kelime başlangıcıyla eşleşmediğinde
+- **Uygular** hata CSS sınıfını, anında görsel geri bildirim sağlamak için
+- **Yardımcı olur** oyuncuların hataları hızlıca tanımlayıp düzeltmesine
 
 ## Uygulamanızı Test Edin
 
-Başardıklarınıza bir bakın! 🎉 Sıfırdan gerçek bir çalışan yazma oyunu oluşturdunuz. Olay odaklı programlama kullanarak bunu başardınız. Bir an durup bunu takdir edin - bu küçük bir başarı değil!
+Başardıklarınıza bir bakın! 🎉 Etkinlik odaklı programlama kullanarak sıfırdan gerçek bir yazma oyunu oluşturdunuz. Bunun küçük bir başarı olmadığını kabul edin!
 
-Şimdi test aşamasına geldik! Beklendiği gibi çalışacak mı? Bir şey kaçırdık mı? Şunu unutmayın: bir şey hemen mükemmel çalışmazsa, bu tamamen normaldir. Deneyimli geliştiriciler bile düzenli olarak kodlarında hatalar bulur. Bu, geliştirme sürecinin bir parçasıdır!
+Şimdi test aşamasına geldik! Beklendiği gibi çalışacak mı? Bir şeyleri kaçırdık mı? Şunu unutmayın: Bir şey hemen mükemmel çalışmazsa, bu tamamen normaldir. Deneyimli geliştiriciler bile düzenli olarak kodlarında hatalar bulurlar. Bu, geliştirme sürecinin bir parçasıdır!
 
-`start`a tıklayın ve yazmaya başlayın! Önceki animasyona benzer bir şey gibi görünmeli.
+`start` düğmesine tıklayın ve yazmaya başlayın! Daha önce gördüğümüz animasyona benzer bir şey gibi görünmeli.
 
 ![Oyunun çalışırken animasyonu](../../../../4-typing-game/images/demo.gif)
 
 **Uygulamanızda test edilecekler:**
-- `Start`a tıklamanın rastgele bir alıntı gösterdiğini **doğrular**
-- Yazmanın mevcut kelimeyi doğru şekilde vurguladığını **onaylar**
-- Yanlış yazım için hata stilinin göründüğünü **kontrol eder**
-- Kelimeleri tamamlamanın vurguyu doğru şekilde ilerlettiğini **sağlar**
-- Alıntıyı bitirmenin zamanlama ile birlikte tamamlama mesajını gösterdiğini **test eder**
+- **Doğrular** Başlat'a tıklamanın rastgele bir alıntı gösterdiğini
+- **Onaylar** yazmanın mevcut kelimeyi doğru şekilde vurguladığını
+- **Kontrol eder** yanlış yazım için hata stilinin göründüğünü
+- **Emin olur** kelimeleri tamamlamanın vurguyu doğru şekilde ilerlettiğini
+- **Test eder** alıntıyı bitirmenin tamamlanma mesajını zamanla birlikte gösterdiğini
 
 **Yaygın hata ayıklama ipuçları:**
-- JavaScript hataları için tarayıcı konsolunu (F12) **kontrol edin**
-- Tüm dosya adlarının tam olarak eşleştiğinden emin olun (büyük/küçük harf duyarlı)
-- Live Server'ın düzgün çalıştığından ve yenilendiğinden emin olun
-- Rastgele seçim çalışmasını doğrulamak için farklı alıntıları **test edin**
+- **Kontrol edin** tarayıcı konsolunu (F12) JavaScript hataları için
+- **Doğrulayın** tüm dosya adlarının tam olarak eşleştiğini (büyük/küçük harf duyarlı)
+- **Emin olun** Live Server'ın çalıştığından ve düzgün şekilde yenilendiğinden
+- **Farklı alıntıları test edin** rastgele seçim işlevinin çalıştığını doğrulamak için
 
 ---
 
@@ -505,41 +505,100 @@ Başardıklarınıza bir bakın! 🎉 Sıfırdan gerçek bir çalışan yazma oy
 
 Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
 
-**Açıklama:** Oyunun zorluk sistemini oyuncu performansına göre ayarlayarak yazma oyununu genişletin. Bu meydan okuma, gelişmiş olay işleme, veri analizi ve dinamik UI güncellemeleri pratiği yapmanıza yardımcı olacak.
+**Açıklama:** Oyunu, oyuncu performansına göre ayarlanan bir zorluk sistemi ekleyerek genişletin. Bu meydan okuma, gelişmiş olay işleme, veri analizi ve dinamik UI güncellemeleri pratiği yapmanıza yardımcı olacak.
 
-**İstek:** Yazma oyunu için bir zorluk ayarlama sistemi oluşturun:
+**İstek:** Yazma oyununa bir zorluk ayarlama sistemi ekleyin:
 1. Oyuncunun yazma hızını (dakikadaki kelime) ve doğruluk yüzdesini takip edin
 2. Otomatik olarak üç zorluk seviyesine ayarlayın: Kolay (basit alıntılar), Orta (mevcut alıntılar), Zor (noktalama işaretleri içeren karmaşık alıntılar)
-3. Mevcut zorluk seviyesini ve oyuncu istatistiklerini kullanıcı arayüzünde gösterin
-4. 3 ardışık iyi performanstan sonra zorluğu artıran bir seri sayacı uygulayın
+3. Mevcut zorluk seviyesini ve oyuncu istatistiklerini UI'da gösterin
+4. 3 ardışık iyi performanstan sonra zorluğu artıran bir seri sayacı ekleyin
 5. Zorluk değişikliklerini göstermek için görsel geri bildirim (renkler, animasyonlar) ekleyin
 
-Bu özelliği uygulamak için gerekli HTML öğelerini, CSS stillerini ve JavaScript işlevlerini ekleyin. Uygun hata işleme ekleyin ve oyun erişilebilirliğini ARIA etiketleriyle sağlayın.
+Bu özelliği uygulamak için gerekli HTML öğelerini, CSS stillerini ve JavaScript fonksiyonlarını ekleyin. Uygun hata işleme ekleyin ve oyun erişilebilirliğini koruyun.
 
-[Agent modu](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında daha fazla bilgi edinin.
+[Agent modu hakkında daha fazla bilgi edinin](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
 
 ## 🚀 Meydan Okuma
 
-Yazma oyununuzu bir üst seviyeye taşımaya hazır mısınız? Olay işleme ve DOM manipülasyonu anlayışınızı derinleştirmek için bu gelişmiş özellikleri uygulamayı deneyin:
+Yazma oyununuzu bir üst seviyeye taşımaya hazır mısınız? Olay işleme ve DOM manipülasyonu konusundaki anlayışınızı derinleştirmek için bu gelişmiş özellikleri uygulamayı deneyin:
 
 **Daha fazla işlevsellik ekleyin:**
 
 | Özellik | Açıklama | Pratik Yapacağınız Beceriler |
 |---------|----------|-----------------------------|
-| **Giriş Kontrolü** | Tamamlandığında `input` olay dinleyicisini devre dışı bırakın ve düğme tıklandığında yeniden etkinleştirin | Olay yönetimi ve durum kontrolü |
+| **Giriş Kontrolü** | Tamamlandığında `input` olay dinleyicisini devre dışı bırakın ve düğmeye tıklandığında yeniden etkinleştirin | Olay yönetimi ve durum kontrolü |
 | **UI Durum Yönetimi** | Oyuncu alıntıyı tamamladığında metin kutusunu devre dışı bırakın | DOM özelliği manipülasyonu |
-| **Modal Dialog** | Başarı mesajıyla bir modal diyalog kutusu görüntüleyin | Gelişmiş UI desenleri ve erişilebilirlik |
-| **Yüksek Skor Sistemi** | `localStorage` kullanarak yüksek skorları saklayın | Tarayıcı depolama API'leri ve veri kalıcılığı |
+| **Modal Dialog** | Başarı mesajını içeren bir modal dialog kutusu gösterin | Gelişmiş UI desenleri ve erişilebilirlik |
+| **Yüksek Skor Sistemi** | Yüksek skorları `localStorage` kullanarak saklayın | Tarayıcı depolama API'leri ve veri kalıcılığı |
 
 **Uygulama ipuçları:**
-- Kalıcı depolama için `localStorage.setItem()` ve `localStorage.getItem()` araştırın
-- Dinamik olarak olay dinleyicileri ekleme ve kaldırma pratiği yapın
-- HTML dialog öğelerini veya CSS modal desenlerini keşfedin
-- Form kontrollerini devre dışı bırakıp etkinleştirirken erişilebilirliği göz önünde bulundurun
+- **Araştırın** `localStorage.setItem()` ve `localStorage.getItem()` kalıcı depolama için
+- **Pratik yapın** olay dinleyicilerini dinamik olarak ekleyip kaldırmayı
+- **Keşfedin** HTML dialog öğelerini veya CSS modal desenlerini
+- **Düşünün** form kontrollerini devre dışı bırakıp etkinleştirirken erişilebilirliği
 
-## Ders Sonrası Test
+## Ders Sonrası Quiz
 
-[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/22)
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/22)
+
+---
+
+## 🚀 Yazma Oyunu Ustalık Zaman Çizelgeniz
+
+### ⚡ **Sonraki 5 Dakikada Yapabilecekleriniz**
+- [ ] Yazma oyununuzu farklı alıntılarla test edin, sorunsuz çalıştığından emin olun
+- [ ] CSS stilini deneyin - vurgulama ve hata renklerini değiştirmeyi deneyin
+- [ ] Tarayıcınızın Geliştirici Araçlarını (F12) açın ve oynarken Konsolu izleyin
+- [ ] Kendinize meydan okuyarak bir alıntıyı olabildiğince hızlı tamamlamayı deneyin
+
+### ⏰ **Bu Saatte Başarabilecekleriniz**
+- [ ] Diziye daha fazla alıntı ekleyin (belki en sevdiğiniz kitaplardan veya filmlerden)
+- [ ] Meydan okuma bölümünden localStorage yüksek skor sistemini uygulayın
+- [ ] Her oyundan sonra gösterilecek bir dakikadaki kelime hesaplayıcı oluşturun
+- [ ] Doğru yazma, hatalar ve tamamlama için ses efektleri ekleyin
+
+### 📅 **Bir Haftalık Maceranız**
+- [ ] Arkadaşların yan yana rekabet edebileceği çok oyunculu bir versiyon oluşturun
+- [ ] Farklı alıntı karmaşıklıklarıyla zorluk seviyeleri oluşturun
+- [ ] Alıntının ne kadarının tamamlandığını gösteren bir ilerleme çubuğu ekleyin
+- [ ] Kişisel istatistik takibi ile kullanıcı hesapları oluşturun
+- [ ] Özel temalar tasarlayın ve kullanıcıların tercih ettikleri stili seçmelerine izin verin
+
+### 🗓️ **Bir Aylık Dönüşümünüz**
+- [ ] Doğru parmak yerleşimini aşamalı olarak öğreten bir yazma kursu oluşturun
+- [ ] Hangi harflerin veya kelimelerin en fazla hataya neden olduğunu gösteren analizler oluşturun
+- [ ] Farklı diller ve klavye düzenleri için destek ekleyin
+- [ ] Edebiyat veritabanlarından alıntılar çekmek için eğitim API'leriyle entegre edin
+- [ ] Geliştirilmiş yazma oyununuzu başkalarının kullanması ve keyif alması için yayınlayın
+
+### 🎯 **Son Düşünce Kontrolü**
+
+**Devam etmeden önce kutlama yapın:**
+- Bu oyunu oluştururken en tatmin edici an neydi?
+- Etkinlik odaklı programlama hakkında başlangıçta hissettiğinizle şimdi hissettiğiniz arasında nasıl bir fark var?
+- Bu oyunu benzersiz kılmak için eklemek istediğiniz bir özellik nedir?
+- Olay işleme kavramlarını diğer projelere nasıl uygulayabilirsiniz?
+
+```mermaid
+journey
+    title Your Event Programming Confidence Journey
+    section Today
+      Understanding Events: 3: You
+      Building UI: 4: You
+      Writing Event Listeners: 5: You
+    section This Week
+      Adding Features: 4: You
+      Debugging Issues: 5: You
+      Enhancing UX: 4: You
+    section Next Month
+      Building Complex Apps: 5: You
+      Teaching Others: 5: You
+      Creating Frameworks: 5: You
+```
+
+> 🌟 **Unutmayın**: Etkileşimli her web sitesi ve uygulamayı çalıştıran temel kavramlardan birini yeni öğrendiniz. Etkinlik odaklı programlama, web'i canlı ve duyarlı hissettiren şeydir. Her açılır menü, yazarken doğrulama yapan bir form veya tıklamalarınıza yanıt veren bir oyun gördüğünüzde, artık bunun arkasındaki sihri anlıyorsunuz. Sadece kod yazmayı öğrenmiyorsunuz - sezgisel ve ilgi çekici deneyimler yaratmayı öğreniyorsunuz! 🎉
+
+---
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
@@ -552,4 +611,4 @@ Web tarayıcısı aracılığıyla geliştiriciye sunulan [tüm olaylar](https:/
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlamadan sorumlu değiliz.

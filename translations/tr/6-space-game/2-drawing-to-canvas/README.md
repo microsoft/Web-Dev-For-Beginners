@@ -1,19 +1,66 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "84053695dca714e16ed064366503ebd5",
-  "translation_date": "2025-10-23T00:06:20+00:00",
+  "original_hash": "7994743c5b21fdcceb36307916ef249a",
+  "translation_date": "2025-11-04T01:03:10+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "tr"
 }
 -->
 # Uzay Oyunu Yapımı Bölüm 2: Kahraman ve Canavarları Tuvale Çizmek
 
-Canvas API, tarayıcınızda dinamik ve etkileşimli grafikler oluşturmak için web geliştirme dünyasının en güçlü özelliklerinden biridir. Bu derste, boş HTML `<canvas>` öğesini kahramanlar ve canavarlarla dolu bir oyun dünyasına dönüştüreceğiz. Tuvali, kodun görselleştiği dijital bir sanat tahtası olarak düşünebilirsiniz.
+```mermaid
+journey
+    title Your Canvas Graphics Journey
+    section Foundation
+      Understand Canvas API: 3: Student
+      Learn coordinate system: 4: Student
+      Draw basic shapes: 4: Student
+    section Image Handling
+      Load game assets: 4: Student
+      Handle async loading: 5: Student
+      Position sprites: 5: Student
+    section Game Rendering
+      Create game screen: 5: Student
+      Build formations: 5: Student
+      Optimize performance: 4: Student
+```
 
-Önceki derste öğrendiklerinizin üzerine inşa ediyoruz ve şimdi görsel yönlere dalıyoruz. Oyun sprite'larını nasıl yükleyeceğinizi ve görüntüleyeceğinizi, öğeleri tam olarak nasıl konumlandıracağınızı ve uzay oyununuz için görsel temeli nasıl oluşturacağınızı öğreneceksiniz. Bu, statik web sayfaları ile dinamik, etkileşimli deneyimler arasındaki boşluğu doldurur.
+Canvas API, tarayıcınızda dinamik ve etkileşimli grafikler oluşturmak için web geliştirme dünyasının en güçlü özelliklerinden biridir. Bu derste, boş HTML `<canvas>` öğesini kahramanlar ve canavarlarla dolu bir oyun dünyasına dönüştüreceğiz. Tuvali, kodun görselleştiği dijital sanat tahtanız olarak düşünün.
 
-Bu dersin sonunda, kahraman geminizin doğru bir şekilde konumlandırıldığı ve düşman oluşumlarının savaşa hazır olduğu eksiksiz bir oyun sahnesine sahip olacaksınız. Modern oyunların tarayıcılarda grafiklerini nasıl oluşturduğunu anlayacak ve kendi etkileşimli görsel deneyimlerinizi oluşturma becerisi kazanacaksınız. Haydi, canvas grafiklerini keşfedelim ve uzay oyununuza hayat verelim!
+Önceki derste öğrendiklerinizin üzerine inşa ediyoruz ve şimdi görsel yönlere dalacağız. Oyun sprite'larını nasıl yükleyeceğinizi ve görüntüleyeceğinizi, öğeleri hassas bir şekilde nasıl konumlandıracağınızı ve uzay oyununuz için görsel temeli nasıl oluşturacağınızı öğreneceksiniz. Bu, statik web sayfaları ile dinamik, etkileşimli deneyimler arasındaki boşluğu doldurur.
+
+Bu dersin sonunda, kahraman geminizin doğru bir şekilde konumlandırıldığı ve düşman oluşumlarının savaşa hazır olduğu eksiksiz bir oyun sahnesine sahip olacaksınız. Modern oyunların tarayıcılarda grafiklerini nasıl işlediğini anlayacak ve kendi etkileşimli görsel deneyimlerinizi oluşturma becerileri kazanacaksınız. Haydi, tuval grafiklerini keşfedelim ve uzay oyununuzu hayata geçirelim!
+
+```mermaid
+mindmap
+  root((Canvas Graphics))
+    Canvas Element
+      HTML5 Feature
+      2D Context
+      Coordinate System
+      Pixel Control
+    Drawing Operations
+      Basic Shapes
+      Text Rendering
+      Image Display
+      Path Drawing
+    Asset Management
+      Image Loading
+      Async Operations
+      Error Handling
+      Performance
+    Game Rendering
+      Sprite Positioning
+      Formation Layout
+      Scene Composition
+      Frame Updates
+    Visual Effects
+      Colors & Styles
+      Transformations
+      Animations
+      Layering
+```
 
 ## Ders Öncesi Test
 
@@ -21,39 +68,77 @@ Bu dersin sonunda, kahraman geminizin doğru bir şekilde konumlandırıldığı
 
 ## Canvas Nedir?
 
-Peki, `<canvas>` öğesi tam olarak nedir? Bu, HTML5'in web tarayıcılarında dinamik grafikler ve animasyonlar oluşturmak için sunduğu bir çözümdür. Statik olan normal resimler veya videoların aksine, canvas ekranda görünen her şey üzerinde piksel düzeyinde kontrol sağlar. Bu, oyunlar, veri görselleştirmeleri ve etkileşimli sanat için mükemmel bir araçtır. JavaScript'in fırçanız olduğu programlanabilir bir çizim yüzeyi olarak düşünebilirsiniz.
+Peki, bu `<canvas>` öğesi tam olarak nedir? HTML5'in web tarayıcılarında dinamik grafikler ve animasyonlar oluşturmak için sunduğu çözüm. Statik olan normal resimler veya videoların aksine, canvas ekranda görünen her şey üzerinde piksel seviyesinde kontrol sağlar. Bu, oyunlar, veri görselleştirmeleri ve etkileşimli sanat için mükemmel bir araçtır. JavaScript'in fırçanız olduğu programlanabilir bir çizim yüzeyi olarak düşünün.
 
-Varsayılan olarak, bir canvas öğesi sayfanızda boş, şeffaf bir dikdörtgen gibi görünür. Ancak işte potansiyel burada yatıyor! Gerçek gücü, JavaScript kullanarak şekiller çizdiğinizde, görüntüleri yüklediğinizde, animasyonlar oluşturduğunuzda ve kullanıcı etkileşimlerine yanıt verdiğinizde ortaya çıkar. Bu, 1960'larda Bell Labs'taki erken dönem bilgisayar grafikleri öncülerinin ilk dijital animasyonları oluşturmak için her pikseli programlamak zorunda kalmasına benzer.
+Varsayılan olarak, bir canvas öğesi sayfanızda boş, şeffaf bir dikdörtgen gibi görünür. Ancak potansiyel burada yatıyor! Gerçek gücü, JavaScript kullanarak şekiller çizmeye, görüntüleri yüklemeye, animasyonlar oluşturmaya ve kullanıcı etkileşimlerine yanıt vermeye başladığınızda ortaya çıkar. Bu, 1960'larda Bell Labs'taki erken bilgisayar grafikleri öncülerinin ilk dijital animasyonları oluşturmak için her pikseli programlamak zorunda olduğu zamana benzer.
 
 ✅ MDN'de [Canvas API hakkında daha fazla bilgi edinin](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
-Genellikle, sayfanın gövdesinde şu şekilde tanımlanır:
+Genellikle, sayfanın gövdesinin bir parçası olarak şu şekilde tanımlanır:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
-**Bu kodun yaptığı şeyler:**
-- **`id` özelliğini ayarlar**, böylece bu belirli canvas öğesine JavaScript'te referans verebilirsiniz
-- **Genişliği piksel cinsinden tanımlar**, canvas'ın yatay boyutunu kontrol eder
-- **Yüksekliği piksel cinsinden belirler**, canvas'ın dikey boyutlarını belirler
+**Bu kodun yaptığı şey:**
+- **`id` özelliğini ayarlar**, böylece bu belirli canvas öğesine JavaScript'te başvurabilirsiniz
+- **Genişliği** piksel cinsinden tanımlar, canvas'ın yatay boyutunu kontrol eder
+- **Yüksekliği** piksel cinsinden belirler, canvas'ın dikey boyutlarını kontrol eder
 
 ## Basit Geometri Çizimi
 
 Artık canvas öğesinin ne olduğunu bildiğinize göre, üzerinde gerçekten çizim yapmayı keşfedelim! Canvas, matematik dersinden tanıdık gelebilecek bir koordinat sistemi kullanır, ancak bilgisayar grafikleriyle ilgili önemli bir fark vardır.
 
-Canvas, x ekseni (yatay) ve y ekseni (dikey) ile her şeyi konumlandırmak için Kartezyen koordinatlar kullanır. Ancak önemli bir fark var: Matematik dersindeki koordinat sisteminden farklı olarak, başlangıç noktası `(0,0)` sol üst köşede başlar, x değerleri sağa doğru hareket ettikçe artar ve y değerleri aşağıya doğru hareket ettikçe artar. Bu yaklaşım, elektron ışınlarının yukarıdan aşağıya tarandığı erken dönem bilgisayar ekranlarından kaynaklanır ve sol üst köşeyi doğal başlangıç noktası yapar.
+Canvas, çizdiğiniz her şeyi konumlandırmak için bir x ekseni (yatay) ve y ekseni (dikey) ile Kartezyen koordinatlar kullanır. Ancak işte önemli fark: Matematik dersindeki koordinat sisteminden farklı olarak, başlangıç noktası `(0,0)` sol üst köşede başlar, x değerleri sağa doğru hareket ettikçe artar ve y değerleri aşağıya doğru hareket ettikçe artar. Bu yaklaşım, elektron ışınlarının yukarıdan aşağıya tarandığı erken bilgisayar ekranlarından kaynaklanır ve sol üst doğal başlangıç noktası haline gelir.
+
+```mermaid
+quadrantChart
+    title Canvas Coordinate System
+    x-axis Left --> Right
+    y-axis Top --> Bottom
+    quadrant-1 Quadrant 1
+    quadrant-2 Quadrant 2  
+    quadrant-3 Quadrant 3
+    quadrant-4 Quadrant 4
+    
+    Origin Point: [0.1, 0.1]
+    Hero Center: [0.5, 0.8]
+    Enemy Formation: [0.3, 0.2]
+    Power-up: [0.7, 0.6]
+    UI Elements: [0.9, 0.1]
+```
 
 ![canvas'ın ızgarası](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.tr.png)
-> Görsel [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) üzerinden alınmıştır.
+> Görsel [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) üzerinden alınmıştır
 
-Canvas öğesi üzerinde çizim yapmak için aşağıdaki üç adımlı süreci takip edeceksiniz. Bunu birkaç kez yaptığınızda, alışkanlık haline gelir:
+Canvas öğesi üzerinde çizim yapmak için, tüm canvas grafiklerinin temelini oluşturan aynı üç adımlı süreci takip edeceksiniz. Bunu birkaç kez yaptığınızda, doğal bir hale gelir:
 
-1. **Canvas öğesine referans alın** – DOM'dan diğer HTML öğeleri gibi
+```mermaid
+flowchart LR
+    A[HTML Canvas Element] --> B[Get Canvas Reference]
+    B --> C[Get 2D Context]
+    C --> D[Drawing Operations]
+    
+    D --> E[Draw Shapes]
+    D --> F[Draw Text]
+    D --> G[Draw Images]
+    D --> H[Apply Styles]
+    
+    E --> I[Render to Screen]
+    F --> I
+    G --> I
+    H --> I
+    
+    style A fill:#e1f5fe
+    style C fill:#e8f5e8
+    style I fill:#fff3e0
+```
+
+1. **Canvas öğesine referans alın** (diğer HTML öğeleri gibi DOM'dan)
 2. **2D render bağlamını alın** – bu, tüm çizim yöntemlerini sağlar
 3. **Çizmeye başlayın!** Bağlamın yerleşik yöntemlerini kullanarak grafiklerinizi oluşturun
 
-Kodda nasıl göründüğüne bakalım:
+Kodda bu şu şekilde görünür:
 
 ```javascript
 // Step 1: Get the canvas element
@@ -68,28 +153,67 @@ ctx.fillRect(0, 0, 200, 200); // x, y, width, height
 ```
 
 **Adım adım açıklayalım:**
-- Canvas öğemizi **alıyoruz** ve bir değişkende saklıyoruz
-- 2D render bağlamını **alıyoruz** – bu, çizim yöntemleriyle dolu araç setimiz
-- Canvas'a kırmızıyla doldurmak istediğimizi `fillStyle` özelliği ile **söylüyoruz**
-- Sol üst köşeden (0,0) başlayarak 200 piksel genişliğinde ve yüksekliğinde bir dikdörtgen **çiziyoruz**
+- Canvas öğemizi **ID'siyle alırız** ve bir değişkende saklarız
+- 2D render bağlamını **alırız** – bu, çizim yöntemleriyle dolu araç kutumuzdur
+- Canvas'a **kırmızıyla doldurmak istediğimizi** `fillStyle` özelliğiyle söyleriz
+- Sol üst köşeden (0,0) başlayarak 200 piksel genişliğinde ve yüksekliğinde bir dikdörtgen **çizeriz**
 
 ✅ Canvas API çoğunlukla 2D şekillere odaklanır, ancak bir web sitesine 3D öğeler de çizebilirsiniz; bunun için [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API) kullanabilirsiniz.
 
 Canvas API ile şunları çizebilirsiniz:
 
-- **Geometrik şekiller**, dikdörtgen çizmenin nasıl yapıldığını gösterdik, ancak çizebileceğiniz daha birçok şey var.
-- **Metin**, istediğiniz yazı tipi ve renkte metin çizebilirsiniz.
-- **Görseller**, .jpg veya .png gibi bir görsel varlığından bir görsel çizebilirsiniz.
+- **Geometrik şekiller**, dikdörtgen çizmeyi zaten gösterdik, ancak çizebileceğiniz daha birçok şey var.
+- **Metin**, istediğiniz herhangi bir yazı tipi ve renkle metin çizebilirsiniz.
+- **Görüntüler**, bir .jpg veya .png gibi bir görüntü varlığından bir görüntü çizebilirsiniz.
 
-✅ Deneyin! Dikdörtgen çizmeyi öğrendiniz, bir sayfaya bir daire çizebilir misiniz? CodePen'deki bazı ilginç Canvas çizimlerine göz atın. İşte [özellikle etkileyici bir örnek](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Deneyin! Dikdörtgen çizmeyi biliyorsunuz, bir sayfaya bir daire çizebilir misiniz? CodePen'deki bazı ilginç Canvas çizimlerine göz atın. İşte [özellikle etkileyici bir örnek](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Görsel Varlık Yükleme ve Çizme
+### 🔄 **Pedagojik Kontrol Noktası**
+**Canvas Temellerini Anlama**: Görüntü yüklemeye geçmeden önce şunları yapabildiğinizden emin olun:
+- ✅ Canvas koordinat sisteminin matematiksel koordinatlardan nasıl farklı olduğunu açıklayın
+- ✅ Canvas çizim işlemleri için üç adımlı süreci anlayın
+- ✅ 2D render bağlamının ne sağladığını belirleyin
+- ✅ `fillStyle` ve `fillRect`'in birlikte nasıl çalıştığını açıklayın
 
-Temel şekiller çizmek başlangıç için faydalıdır, ancak çoğu oyun gerçek görsellere ihtiyaç duyar! Sprite'lar, arka planlar ve dokular, oyunlara görsel çekicilik kazandırır. Görselleri canvas üzerine yüklemek ve görüntülemek, geometrik şekiller çizmekten farklı çalışır, ancak süreci anladığınızda oldukça basittir.
+**Hızlı Kendini Test Et**: (100, 50) konumunda yarıçapı 25 olan mavi bir daireyi nasıl çizersiniz?
+```javascript
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(100, 50, 25, 0, 2 * Math.PI);
+ctx.fill();
+```
 
-Bir `Image` nesnesi oluşturmalı, görsel dosyamızı yüklemeli (bu işlem "arka planda" yani asenkron olarak gerçekleşir) ve ardından hazır olduğunda canvas üzerine çizmeliyiz. Bu yaklaşım, uygulamanızın yükleme sırasında engellenmeden görsellerin düzgün bir şekilde görüntülenmesini sağlar.
+**Artık Bildiğiniz Canvas Çizim Yöntemleri**:
+- **fillRect()**: Dolu dikdörtgenler çizer
+- **fillStyle**: Renkleri ve desenleri ayarlar
+- **beginPath()**: Yeni çizim yolları başlatır
+- **arc()**: Daireler ve eğriler oluşturur
 
-### Temel Görsel Yükleme
+## Görüntü Varlığını Yükleme ve Çizme
+
+Temel şekiller çizmek başlangıç için faydalıdır, ancak çoğu oyun gerçek görüntülere ihtiyaç duyar! Sprite'lar, arka planlar ve dokular oyunlara görsel çekicilik kazandırır. Canvas üzerinde görüntüleri yüklemek ve görüntülemek, geometrik şekiller çizmeye göre farklı çalışır, ancak süreci anladığınızda oldukça basittir.
+
+Bir `Image` nesnesi oluşturmalı, görüntü dosyamızı yüklemeliyiz (bu arka planda, yani "asenkron" olarak gerçekleşir) ve ardından hazır olduğunda canvas'a çizmeliyiz. Bu yaklaşım, görüntülerinizin düzgün bir şekilde görüntülenmesini sağlar ve yüklenirken uygulamanızın engellenmesini önler.
+
+```mermaid
+sequenceDiagram
+    participant JS as JavaScript
+    participant Img as Image Object
+    participant Server as File Server
+    participant Canvas as Canvas Context
+    
+    JS->>Img: new Image()
+    JS->>Img: Set src property
+    Img->>Server: Request image file
+    Server->>Img: Return image data
+    Img->>JS: Trigger onload event
+    JS->>Canvas: drawImage(img, x, y)
+    Canvas->>Canvas: Render to screen
+    
+    Note over JS,Canvas: Async loading prevents UI blocking
+```
+
+### Temel Görüntü Yükleme
 
 ```javascript
 const img = new Image();
@@ -102,12 +226,12 @@ img.onload = () => {
 
 **Bu kodda neler oluyor:**
 - Sprite veya dokumuzu tutmak için yepyeni bir Image nesnesi **oluşturuyoruz**
-- Hangi görsel dosyasını yükleyeceğimizi kaynak yolunu ayarlayarak **söylüyoruz**
-- Görselin ne zaman kullanılmaya hazır olduğunu bilmek için yükleme olayını **dinliyoruz**
+- Hangi görüntü dosyasını yükleyeceğini **söylüyoruz** (kaynak yolunu ayarlayarak)
+- Görüntünün tam olarak ne zaman kullanıma hazır olduğunu bilmek için yükleme olayını **dinliyoruz**
 
-### Görselleri Daha İyi Yükleme Yöntemi
+### Görüntüleri Yüklemek İçin Daha İyi Bir Yöntem
 
-Profesyonel geliştiricilerin sıkça kullandığı daha sağlam bir görsel yükleme yöntemi işte burada. Görsel yüklemeyi Promise tabanlı bir fonksiyon içinde saracağız – bu yaklaşım, ES6 ile JavaScript Promises standart hale geldiğinde popülerleşti, kodunuzu daha düzenli hale getirir ve hataları zarif bir şekilde ele alır:
+Profesyonel geliştiricilerin sıklıkla kullandığı daha sağlam bir görüntü yükleme yöntemi işte burada. Görüntü yüklemeyi Promise tabanlı bir fonksiyon içinde saracağız – bu yaklaşım, JavaScript Promises ES6'da standart hale geldiğinde popülerleşti, kodunuzu daha düzenli hale getirir ve hataları zarif bir şekilde yönetir:
 
 ```javascript
 function loadAsset(path) {
@@ -135,13 +259,13 @@ async function initializeGame() {
 }
 ```
 
-**Burada yaptıklarımız:**
-- Tüm görsel yükleme mantığını bir Promise içinde **sardık**, böylece daha iyi yönetebiliriz
-- Bir şeyler ters gittiğinde bize gerçekten haber veren hata işleme **ekledik**
+**Burada yaptığımız şey:**
+- Tüm o görüntü yükleme mantığını bir Promise içinde **sardık**, böylece daha iyi yönetebiliriz
+- Bir şeyler ters gittiğinde bize gerçekten söyleyen hata yönetimi **ekledik**
 - Modern async/await sözdizimini **kullandık**, çünkü okunması çok daha temiz
-- Yükleme aksaklıklarını zarif bir şekilde ele almak için try/catch blokları **ekledik**
+- Herhangi bir yükleme aksaklığını zarif bir şekilde yönetmek için try/catch blokları **ekledik**
 
-Görselleriniz yüklendikten sonra, onları canvas üzerine çizmek aslında oldukça basittir:
+Görüntüleriniz yüklendikten sonra, onları canvas'a çizmek aslında oldukça basittir:
 
 ```javascript
 async function renderGameScreen() {
@@ -163,20 +287,45 @@ async function renderGameScreen() {
 }
 ```
 
-**Adım adım açıklayalım:**
-- Kahraman ve canavar görsellerimizi arka planda await kullanarak **yüklüyoruz**
+**Adım adım inceleyelim:**
+- Kahraman ve canavar görüntülerimizi arka planda await kullanarak **yüklüyoruz**
 - Canvas öğemizi **alıyoruz** ve ihtiyacımız olan 2D render bağlamını alıyoruz
-- Kahraman görselini hızlı bir koordinat matematiği kullanarak tam ortasına **konumlandırıyoruz**
-- Canavar görselini sol üst köşeye **yerleştiriyoruz** ve düşman oluşumumuzu başlatıyoruz
-- Yükleme veya render sırasında meydana gelebilecek hataları **yakalamak** için önlem alıyoruz
+- Kahraman görüntüsünü hızlı bir koordinat matematiği kullanarak tam ortasına **yerleştiriyoruz**
+- Canavar görüntüsünü sol üst köşeye **yerleştiriyoruz** ve düşman oluşumumuzu başlatıyoruz
+- Yükleme veya render sırasında meydana gelebilecek hataları **yakalarız**
 
-## Şimdi Oyununuzu İnşa Etme Zamanı
+```mermaid
+flowchart TD
+    A[Load Assets] --> B{All Images Loaded?}
+    B -->|No| C[Show Loading]
+    B -->|Yes| D[Get Canvas Context]
+    C --> B
+    D --> E[Clear Screen]
+    E --> F[Draw Background]
+    F --> G[Draw Enemy Formation]
+    G --> H[Draw Hero Ship]
+    H --> I[Apply Visual Effects]
+    I --> J[Render Frame]
+    
+    subgraph "Rendering Pipeline"
+        K[Asset Management]
+        L[Scene Composition]
+        M[Drawing Operations]
+        N[Frame Output]
+    end
+    
+    style A fill:#e1f5fe
+    style J fill:#e8f5e8
+    style I fill:#fff3e0
+```
 
-Şimdi her şeyi bir araya getirerek uzay oyununuzun görsel temelini oluşturacağız. Canvas temelleri ve görsel yükleme teknikleri hakkında sağlam bir anlayışa sahipsiniz, bu uygulamalı bölüm size doğru konumlandırılmış sprite'larla eksiksiz bir oyun ekranı oluşturma konusunda rehberlik edecek.
+## Şimdi Oyununuzu Yapmaya Başlama Zamanı
+
+Şimdi her şeyi bir araya getirerek uzay oyununuzun görsel temelini oluşturacağız. Canvas temelleri ve görüntü yükleme teknikleri hakkında sağlam bir anlayışa sahipsiniz, bu nedenle bu uygulamalı bölüm, doğru bir şekilde konumlandırılmış sprite'larla eksiksiz bir oyun ekranı oluşturmanız için size rehberlik edecek.
 
 ### Ne Yapılacak?
 
-Bir Canvas öğesi içeren bir web sayfası oluşturacaksınız. `1024*768` boyutlarında siyah bir ekran çizmelisiniz. Size iki görsel sağladık:
+Bir Canvas öğesi içeren bir web sayfası oluşturacaksınız. `1024*768` boyutlarında siyah bir ekran oluşturmalıdır. Size iki görüntü sağladık:
 
 - Kahraman gemisi
 
@@ -188,7 +337,7 @@ Bir Canvas öğesi içeren bir web sayfası oluşturacaksınız. `1024*768` boyu
 
 ### Geliştirmeye Başlamak İçin Önerilen Adımlar
 
-Sizin için `your-work` alt klasöründe oluşturulmuş başlangıç dosyalarını bulun. Proje yapınız şu şekilde olmalıdır:
+`your-work` alt klasöründe sizin için oluşturulmuş başlangıç dosyalarını bulun. Proje yapınız şunları içermelidir:
 
 ```bash
 your-work/
@@ -201,12 +350,12 @@ your-work/
 ```
 
 **Elinizde olanlar:**
-- **Oyun sprite'ları** `assets/` klasöründe bulunur, böylece her şey düzenli kalır
+- **Oyun sprite'ları** her şey düzenli kalsın diye `assets/` klasöründe bulunuyor
 - **Ana HTML dosyanız** canvas öğesini ayarlar ve her şeyi hazırlar
-- **Bir JavaScript dosyası**, tüm oyun renderleme sihrinizi yazacağınız yer
+- **Bir JavaScript dosyası**, tüm oyun render sihrinizi yazacağınız yer
 - **Bir package.json**, yerel bir geliştirme sunucusu kurar, böylece yerel olarak test yapabilirsiniz
 
-Bu klasörü Visual Studio Code'da açarak geliştirmeye başlayın. Visual Studio Code, NPM ve Node.js yüklü bir yerel geliştirme ortamına ihtiyacınız olacak. Bilgisayarınızda `npm` kurulumu yoksa, [nasıl kuracağınızı buradan öğrenebilirsiniz](https://www.npmjs.com/get-npm).
+Bu klasörü Visual Studio Code'da açarak geliştirmeye başlayın. Visual Studio Code, NPM ve Node.js yüklü bir yerel geliştirme ortamına ihtiyacınız olacak. Bilgisayarınızda `npm` kurulu değilse, [nasıl kuracağınızı buradan öğrenebilirsiniz](https://www.npmjs.com/get-npm).
 
 Geliştirme sunucunuzu `your-work` klasörüne giderek başlatın:
 
@@ -216,30 +365,30 @@ npm start
 ```
 
 **Bu komut oldukça havalı şeyler yapar:**
-- **Yerel bir sunucu başlatır** `http://localhost:5000` adresinde, böylece oyununuzu test edebilirsiniz
-- **Tüm dosyalarınızı düzgün bir şekilde sunar**, böylece tarayıcınız onları doğru şekilde yükleyebilir
-- **Dosyalarınızı izler**, böylece sorunsuz bir şekilde geliştirme yapabilirsiniz
+- **Yerel bir sunucu başlatır**: `http://localhost:5000` adresinde oyununuzu test edebilirsiniz
+- **Tüm dosyalarınızı düzgün bir şekilde sunar**, böylece tarayıcınız bunları doğru bir şekilde yükleyebilir
+- **Dosyalarınızı değişiklikler için izler**, böylece sorunsuz bir şekilde geliştirme yapabilirsiniz
 - **Size** her şeyi test etmek için profesyonel bir geliştirme ortamı sağlar
 
-> 💡 **Not**: Tarayıcınız başlangıçta boş bir sayfa gösterecek – bu beklenen bir durum! Kod ekledikçe, değişikliklerinizi görmek için tarayıcınızı yenileyin. Bu yinelemeli geliştirme yaklaşımı, NASA'nın Apollo yönlendirme bilgisayarını inşa etme şekline benzer – her bir bileşeni daha büyük sisteme entegre etmeden önce test etmek.
+> 💡 **Not**: Tarayıcınız başlangıçta boş bir sayfa gösterecek – bu beklenen bir durum! Kod ekledikçe, değişikliklerinizi görmek için tarayıcınızı yenileyin. Bu yinelemeli geliştirme yaklaşımı, NASA'nın Apollo yönlendirme bilgisayarını inşa ettiği yönteme benzer – her bir bileşeni daha büyük sisteme entegre etmeden önce test etmek.
 
 ### Kod Ekleme
 
 `your-work/app.js` dosyasına aşağıdaki görevleri tamamlamak için gerekli kodu ekleyin:
 
 1. **Siyah arka planlı bir canvas çizin**
-   > 💡 **Nasıl yapılır**: `/app.js` içinde bir TODO bulun ve sadece iki satır ekleyin. `ctx.fillStyle`'ı siyah olarak ayarlayın, ardından canvas boyutlarınızla (0,0) başlayarak `ctx.fillRect()` kullanın. Kolay!
+   > 💡 **Nasıl yapılır**: `/app.js` içinde TODO'yu bulun ve sadece iki satır ekleyin. `ctx.fillStyle`'i siyah olarak ayarlayın, ardından canvas boyutlarınızla (0,0)'dan başlayarak `ctx.fillRect()` kullanın. Kolay!
 
 2. **Oyun dokularını yükleyin**
-   > 💡 **Nasıl yapılır**: Kahraman ve düşman görsellerinizi yüklemek için `await loadAsset()` kullanın. Daha sonra kullanabilmek için bunları değişkenlerde saklayın. Unutmayın – aslında onları çizene kadar görünmeyecekler!
+   > 💡 **Nasıl yapılır**: Oyuncu ve düşman görüntülerinizi yüklemek için `await loadAsset()` kullanın. Daha sonra kullanabilmek için bunları değişkenlerde saklayın. Unutmayın – aslında onları çizene kadar görünmeyecekler!
 
 3. **Kahraman gemisini merkez-alt konumuna çizin**
-   > 💡 **Nasıl yapılır**: Kahramanınızı konumlandırmak için `ctx.drawImage()` kullanın. X koordinatı için `canvas.width / 2 - 45` deneyin ve Y koordinatı için `canvas.height - canvas.height / 4` kullanarak alt bölgeye yerleştirin.
+   > 💡 **Nasıl yapılır**: Kahramanınızı konumlandırmak için `ctx.drawImage()` kullanın. x koordinatı için, `canvas.width / 2 - 45` kullanarak ortalayın ve y koordinatı için `canvas.height - canvas.height / 4` kullanarak alt bölgeye yerleştirin.
 
-4. **5×5 düşman gemisi oluşumu çizin**
+4. **5×5 düşman gemisi formasyonu çizin**
    > 💡 **Nasıl yapılır**: `createEnemies` fonksiyonunu bulun ve iç içe bir döngü kurun. Aralık ve konumlandırma için biraz matematik yapmanız gerekecek, ancak endişelenmeyin – size tam olarak nasıl yapılacağını göstereceğim!
 
-Öncelikle, uygun düşman oluşum düzeni için sabitler belirleyin:
+Öncelikle, doğru düşman formasyonu düzeni için sabitler belirleyin:
 
 ```javascript
 const ENEMY_TOTAL = 5;
@@ -249,13 +398,40 @@ const START_X = (canvas.width - FORMATION_WIDTH) / 2;
 const STOP_X = START_X + FORMATION_WIDTH;
 ```
 
-**Bu sabitlerin yaptığı şeyler:**
+**Bu sabitlerin yaptığı şey:**
 - Satır ve sütun başına 5 düşman **ayarlar** (güzel bir 5×5 ızgara)
 - Düşmanlar arasında ne kadar boşluk bırakılacağını **tanımlar**, böylece sıkışık görünmezler
-- Tüm oluşumun ne kadar geniş olacağını **hesaplar**
-- Oluşumun merkezlenmiş görünmesi için nereden başlayıp nerede duracağını **belirler**
+- Tüm formasyonumuzun ne kadar geniş olacağını **hesaplar**
+- Formasyonun merkezlenmiş görünmesi için nereden başlayıp nerede duracağımızı **bulur**
 
-Sonra, düşman oluşumunu çizmek için iç içe döngüler oluşturun:
+```mermaid
+flowchart LR
+    A["Canvas Width: 1024px"] --> B["Formation Width: 490px"]
+    B --> C["Start X: 267px"]
+    C --> D["Enemy Spacing: 98px"]
+    
+    subgraph "5x5 Enemy Formation"
+        E["Row 1: Y=0"]
+        F["Row 2: Y=50"]
+        G["Row 3: Y=100"]
+        H["Row 4: Y=150"]
+        I["Row 5: Y=200"]
+    end
+    
+    subgraph "Column Spacing"
+        J["Col 1: X=267"]
+        K["Col 2: X=365"]
+        L["Col 3: X=463"]
+        M["Col 4: X=561"]
+        N["Col 5: X=659"]
+    end
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+```
+
+Daha sonra, düşman formasyonunu çizmek için iç içe döngüler oluşturun:
 
 ```javascript
 for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
@@ -265,51 +441,190 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 }
 ```
 
-**Bu iç içe döngünün yaptığı şeyler:**
-- Dış döngü, oluşum boyunca soldan sağa **hareket eder**
+**Bu iç içe döngünün yaptığı şey:**
+- Dış döngü, formasyon boyunca soldan sağa **hareket eder**
 - İç döngü, düzenli satırlar oluşturmak için yukarıdan aşağıya **gider**
 - Her bir düşman sprite'ını hesapladığımız tam x,y koordinatlarında **çizeriz**
 - Her şey **eşit aralıklı** kalır, böylece profesyonel ve düzenli görünür
 
-## Sonuç
+### 🔄 **Pedagojik Kontrol Noktası**
+**Oyun Render Sistemi Ustası**: Tam render sistemini anladığınızdan emin olun:
+- ✅ Asenkron görüntü yükleme, oyun başlangıcında UI engellenmesini nasıl önler?
+- ✅ Düşman formasyon pozisyonlarını sabitler kullanarak hesaplamamızın nedeni nedir?
+- ✅ 2D render bağlamı çizim işlemlerinde ne rol oynar?
+- ✅ İç içe döngüler organize sprite formasyonlarını nasıl oluşturur?
 
-Tamamlanmış sonuç şu şekilde görünmelidir:
+**Performans Düşünceleri**: Oyununuz artık şunları gösteriyor:
+- **Verimli varlık yükleme**: Promise tabanlı görüntü yönetimi
+- **Düzenli render**: Yapılandırılmış çizim işlemleri
+- **Matematiksel konumlandırma**: Hesaplanmış sprite yerleştirme
+- **Hata yönetimi**: Zarif hata yönetimi
 
-![Siyah ekran, kahraman ve 5*5 canavarlar](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.tr.png)
+**Görsel Programlama Kavramları**: Şunları öğrendiniz:
+- **Koordinat sistemleri**: Matematiği ekran pozisyonlarına dönüştürmek  
+- **Sprite yönetimi**: Oyun grafiklerini yüklemek ve görüntülemek  
+- **Formasyon algoritmaları**: Düzenli yerleşimler için matematiksel desenler  
+- **Asenkron işlemler**: Modern JavaScript ile akıcı kullanıcı deneyimi  
 
-## Çözüm
+## Sonuç  
 
-Önce kendiniz çözmeyi deneyin, ancak takılırsanız bir [çözüm](../../../../6-space-game/2-drawing-to-canvas/solution/app.js) inceleyebilirsiniz.
+Sonuç aşağıdaki gibi görünmelidir:  
+
+![Siyah ekran, bir kahraman ve 5*5 canavarlar](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.tr.png)  
+
+## Çözüm  
+
+Önce kendiniz çözmeyi deneyin, ancak takılırsanız bir [çözüm](../../../../6-space-game/2-drawing-to-canvas/solution/app.js) inceleyebilirsiniz.  
 
 ---
 
-## GitHub Copilot Agent Challenge 🚀
+## GitHub Copilot Agent Challenge 🚀  
 
-Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:  
 
-**Açıklama:** Canvas API tekniklerini kullanarak uzay oyununuzun tuvalini görsel efektler ve etkileşimli öğeler ekleyerek geliştirin.
+**Açıklama:** Canvas API tekniklerini kullanarak uzay oyununuzun görsel efektlerini ve etkileşimli öğelerini geliştirin.  
 
-**İstek:** `enhanced-canvas.html` adlı yeni bir dosya oluşturun ve arka planda animasyonlu yıldızlar, kahraman gemisi için nabız atan bir sağlık çubuğu ve yavaşça aşağıya doğru hareket eden düşman gemileri içeren bir tuval oluşturun. Rastgele pozisyonlar ve opaklık kullanarak yanıp sönen yıldızlar çizen, sağlık seviyesine göre renk değiştiren (yeşil > sarı > kırmızı) bir sağlık çubuğu uygulayan ve düşman gemilerini farklı hızlarda ekranın aşağısına doğru hareket ettiren JavaScript kodu ekleyin.
+**İstek:** `enhanced-canvas.html` adlı yeni bir dosya oluşturun ve arka planda animasyonlu yıldızlar, kahraman gemisi için nabız atan bir sağlık çubuğu ve yavaşça aşağıya doğru hareket eden düşman gemileri içeren bir canvas ekleyin. Rastgele pozisyonlar ve opaklık kullanarak parlayan yıldızlar çizen, sağlık seviyesine göre renk değiştiren (yeşil > sarı > kırmızı) bir sağlık çubuğu uygulayan ve düşman gemilerini farklı hızlarda ekranın aşağısına doğru hareket ettiren JavaScript kodu ekleyin.  
 
-[Agent modu](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında daha fazla bilgi edinin.
+Agent modu hakkında daha fazla bilgi edinin [buradan](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).  
 
-## 🚀 Meydan Okuma
+## 🚀 Meydan Okuma  
 
-2D odaklı Canvas API ile çizim yapmayı öğrendiniz; [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)'ye bir göz atın ve bir 3D nesne çizmeyi deneyin.
+2D odaklı Canvas API ile çizim yapmayı öğrendiniz; [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API)'ye bir göz atın ve 3D bir nesne çizmeyi deneyin.  
 
-## Ders Sonrası Test
+## Ders Sonrası Test  
 
-[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/32)
+[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/32)  
 
-## Gözden Geçirme ve Kendi Kendine Çalışma
+## İnceleme ve Kendi Kendine Çalışma  
 
-Canvas API hakkında daha fazla bilgi edinmek için [buradan okuyabilirsiniz](https://developer.mozilla.org/docs/Web/API/Canvas_API).
+Canvas API hakkında daha fazla bilgi edinin [buradan](https://developer.mozilla.org/docs/Web/API/Canvas_API).  
 
-## Ödev
+### ⚡ **Sonraki 5 Dakikada Yapabilecekleriniz**  
+- [ ] Tarayıcı konsolunu açın ve `document.createElement('canvas')` ile bir canvas öğesi oluşturun  
+- [ ] Bir canvas bağlamında `fillRect()` kullanarak bir dikdörtgen çizmeyi deneyin  
+- [ ] `fillStyle` özelliğini kullanarak farklı renklerle deney yapın  
+- [ ] `arc()` yöntemiyle basit bir daire çizin  
 
-[Canvas API ile oynayın](assignment.md)
+### 🎯 **Bu Saatte Başarabilecekleriniz**  
+- [ ] Ders sonrası testi tamamlayın ve canvas temel bilgilerini anlayın  
+- [ ] Birden fazla şekil ve renk içeren bir canvas çizim uygulaması oluşturun  
+- [ ] Oyun için görüntü yükleme ve sprite işleme uygulayın  
+- [ ] Canvas üzerinde nesneleri hareket ettiren basit bir animasyon oluşturun  
+- [ ] Ölçekleme, döndürme ve çeviri gibi canvas dönüşümleri uygulayın  
+
+### 📅 **Haftalık Canvas Yolculuğunuz**  
+- [ ] Uzay oyununu cilalı grafikler ve sprite animasyonları ile tamamlayın  
+- [ ] Gradyanlar, desenler ve birleştirme gibi gelişmiş canvas tekniklerini öğrenin  
+- [ ] Canvas kullanarak veri temsili için etkileşimli görselleştirmeler oluşturun  
+- [ ] Akıcı performans için canvas optimizasyon tekniklerini öğrenin  
+- [ ] Çeşitli araçlarla bir çizim veya boyama uygulaması oluşturun  
+- [ ] Canvas ile yaratıcı kodlama desenlerini ve üretken sanatı keşfedin  
+
+### 🌟 **Aylık Grafik Ustalığı**  
+- [ ] Canvas 2D ve WebGL kullanarak karmaşık görsel uygulamalar oluşturun  
+- [ ] Grafik programlama kavramlarını ve gölgelendirici temellerini öğrenin  
+- [ ] Açık kaynak grafik kütüphanelerine ve görselleştirme araçlarına katkıda bulunun  
+- [ ] Grafik yoğun uygulamalar için performans optimizasyonunda ustalaşın  
+- [ ] Canvas programlama ve bilgisayar grafikleri hakkında eğitim içerikleri oluşturun  
+- [ ] Görsel deneyimler yaratmak için başkalarına yardımcı olan bir grafik programlama uzmanı olun  
+
+## 🎯 Canvas Grafik Ustalığı Zaman Çizelgeniz  
+
+```mermaid
+timeline
+    title Canvas API Learning Progression
+    
+    section Canvas Fundamentals (15 minutes)
+        Basic Operations: Element reference
+                        : 2D context access
+                        : Coordinate system
+                        : Simple shape drawing
+        
+    section Drawing Techniques (20 minutes)
+        Graphics Primitives: Rectangles and circles
+                           : Colors and styles
+                           : Text rendering
+                           : Path operations
+        
+    section Image Handling (25 minutes)
+        Asset Management: Image object creation
+                        : Async loading patterns
+                        : Error handling
+                        : Performance optimization
+        
+    section Game Graphics (30 minutes)
+        Sprite Rendering: Positioning algorithms
+                        : Formation calculations
+                        : Scene composition
+                        : Frame rendering
+        
+    section Advanced Techniques (40 minutes)
+        Visual Effects: Transformations
+                      : Animations
+                      : Layering
+                      : State management
+        
+    section Performance (35 minutes)
+        Optimization: Efficient drawing
+                    : Memory management
+                    : Frame rate control
+                    : Asset caching
+        
+    section Professional Skills (1 week)
+        Production Graphics: WebGL integration
+                           : Canvas libraries
+                           : Game engines
+                           : Cross-platform considerations
+        
+    section Advanced Graphics (1 month)
+        Specialized Applications: Data visualization
+                                : Interactive art
+                                : Real-time effects
+                                : 3D graphics
+```
+  
+### 🛠️ Canvas Grafik Araç Seti Özeti  
+
+Bu dersi tamamladıktan sonra artık:  
+- **Canvas API Ustalığı**: 2D grafik programlama konusunda tam bilgi  
+- **Koordinat Matematiği**: Hassas konumlandırma ve yerleşim algoritmaları  
+- **Varlık Yönetimi**: Profesyonel görüntü yükleme ve hata ayıklama  
+- **Renderleme Süreci**: Sahne kompozisyonu için yapılandırılmış yaklaşım  
+- **Oyun Grafikleri**: Sprite konumlandırma ve formasyon hesaplamaları  
+- **Asenkron Programlama**: Akıcı performans için modern JavaScript desenleri  
+- **Görsel Programlama**: Matematiksel kavramları ekran grafiklerine dönüştürme  
+
+**Gerçek Dünya Uygulamaları**: Canvas becerileriniz doğrudan şunlara uygulanabilir:  
+- **Veri Görselleştirme**: Grafikler, tablolar ve etkileşimli panolar  
+- **Oyun Geliştirme**: 2D oyunlar, simülasyonlar ve etkileşimli deneyimler  
+- **Dijital Sanat**: Yaratıcı kodlama ve üretken sanat projeleri  
+- **UI/UX Tasarımı**: Özel grafikler ve etkileşimli öğeler  
+- **Eğitim Yazılımı**: Görsel öğrenme araçları ve simülasyonlar  
+- **Web Uygulamaları**: Dinamik grafikler ve gerçek zamanlı görselleştirmeler  
+
+**Kazanılan Profesyonel Beceriler**: Artık şunları yapabilirsiniz:  
+- **Oluştur**: Harici kütüphaneler olmadan özel grafik çözümleri  
+- **Optimize Et**: Akıcı kullanıcı deneyimleri için renderleme performansını  
+- **Hata Ayıkla**: Tarayıcı geliştirici araçlarını kullanarak karmaşık görsel sorunları  
+- **Tasarla**: Matematiksel prensipler kullanarak ölçeklenebilir grafik sistemleri  
+- **Entegre Et**: Canvas grafiklerini modern web uygulama çerçeveleriyle  
+
+**Canvas API Yöntemlerinde Ustalık**:  
+- **Element Yönetimi**: getElementById, getContext  
+- **Çizim İşlemleri**: fillRect, drawImage, fillStyle  
+- **Varlık Yükleme**: Görüntü nesneleri, Promise desenleri  
+- **Matematiksel Konumlandırma**: Koordinat hesaplamaları, formasyon algoritmaları  
+
+**Bir Sonraki Seviye**: Animasyon, kullanıcı etkileşimi, çarpışma algılama eklemeye veya 3D grafikler için WebGL'yi keşfetmeye hazırsınız!  
+
+🌟 **Başarı Kilidi Açıldı**: Temel Canvas API tekniklerini kullanarak eksiksiz bir oyun renderleme sistemi oluşturdunuz!  
+
+## Ödev  
+
+[Canvas API ile oynayın](assignment.md)  
 
 ---
 
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlamadan sorumlu değiliz.
