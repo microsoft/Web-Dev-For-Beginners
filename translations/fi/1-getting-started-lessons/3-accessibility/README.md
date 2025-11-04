@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
-  "translation_date": "2025-10-23T00:19:44+00:00",
+  "original_hash": "7f2c48e04754724123ea100a822765e5",
+  "translation_date": "2025-11-04T01:17:54+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "fi"
 }
@@ -12,6 +12,23 @@ CO_OP_TRANSLATOR_METADATA:
 ![Kaikki saavutettavuudesta](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
+```mermaid
+journey
+    title Your Accessibility Learning Adventure
+    section Foundation
+      Understanding Users: 5: You
+      Testing Tools: 4: You
+      POUR Principles: 5: You
+    section Build Skills
+      Semantic HTML: 4: You
+      Visual Design: 5: You
+      ARIA Techniques: 4: You
+    section Master Practice
+      Keyboard Navigation: 5: You
+      Form Accessibility: 4: You
+      Real-world Testing: 5: You
+```
+
 ## Ennakkokysely
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/)
 
@@ -19,104 +36,137 @@ CO_OP_TRANSLATOR_METADATA:
 >
 > \- Sir Timothy Berners-Lee, W3C:n johtaja ja World Wide Webin keksijä
 
-Tässä on jotain, mikä saattaa yllättää sinut: kun rakennat saavutettavia verkkosivustoja, et ainoastaan auta vammaisia ihmisiä—olet itse asiassa tekemässä verkosta paremman kaikille!
+Tässä on jotain, mikä saattaa yllättää sinut: kun rakennat saavutettavia verkkosivustoja, et ainoastaan auta vammaisia ihmisiä—teet itse asiassa verkosta paremman kaikille!
 
-Oletko koskaan huomannut jalkakäytävien kulmissa olevia ramppeja? Ne suunniteltiin alun perin pyörätuoleille, mutta nyt ne auttavat myös lastenvaunujen kanssa liikkuvia, tavarantoimittajia, matkustajia matkalaukkujen kanssa ja pyöräilijöitä. Juuri näin saavutettava verkkosuunnittelu toimii—ratkaisut, jotka auttavat yhtä ryhmää, hyödyttävät usein kaikkia. Aika siistiä, eikö?
+Oletko koskaan huomannut jalkakäytävien kulmissa olevia ramppeja? Ne suunniteltiin alun perin pyörätuoleille, mutta nyt ne auttavat myös lastenvaunujen kanssa liikkuvia, tavarankuljettajia, matkalaukkujen kanssa matkustavia ja pyöräilijöitä. Juuri näin saavutettava verkkosuunnittelu toimii—ratkaisut, jotka auttavat yhtä ryhmää, hyödyttävät usein kaikkia. Aika siistiä, eikö?
 
-Tässä oppitunnissa tutkimme, kuinka luoda verkkosivustoja, jotka toimivat kaikille, riippumatta siitä, miten he selaavat verkkoa. Opit käytännön tekniikoita, jotka ovat jo sisäänrakennettu verkkostandardeihin, pääset kokeilemaan testityökaluja ja näet, kuinka saavutettavuus tekee sivustoistasi käyttäjäystävällisempiä kaikille.
+Tässä oppitunnissa tutkimme, kuinka luoda verkkosivustoja, jotka toimivat aidosti kaikille, riippumatta siitä, miten he selaavat verkkoa. Opit käytännön tekniikoita, jotka ovat jo sisäänrakennettu verkkostandardeihin, pääset kokeilemaan testityökaluja ja näet, kuinka saavutettavuus tekee sivustoistasi käyttäjäystävällisempiä kaikille.
 
-Oppitunnin lopussa sinulla on varmuus tehdä saavutettavuudesta luonnollinen osa kehitysprosessiasi. Valmis tutkimaan, kuinka harkitut suunnitteluratkaisut voivat avata verkon miljardeille käyttäjille? Sukelletaanpa!
+Oppitunnin lopussa sinulla on itsevarmuutta tehdä saavutettavuudesta luonnollinen osa kehitysprosessiasi. Valmis tutkimaan, kuinka harkitut suunnitteluratkaisut voivat avata verkon miljardeille käyttäjille? Sukelletaanpa!
+
+```mermaid
+mindmap
+  root((Web Accessibility))
+    Users
+      Screen readers
+      Keyboard navigation
+      Voice control
+      Magnification
+    Technologies
+      HTML semantics
+      ARIA attributes
+      CSS focus indicators
+      Keyboard events
+    Benefits
+      Wider audience
+      Better SEO
+      Legal compliance
+      Universal design
+    Testing
+      Automated tools
+      Manual testing
+      User feedback
+      Real assistive tech
+```
 
 > Voit käydä tämän oppitunnin [Microsoft Learnissa](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
-## Apuvälineiden ymmärtäminen
+## Ymmärtäminen avustavista teknologioista
 
 Ennen kuin siirrymme koodaukseen, otetaan hetki ymmärtääksemme, miten eri kykyiset ihmiset todella kokevat verkon. Tämä ei ole pelkkää teoriaa—näiden todellisten navigointitapojen ymmärtäminen tekee sinusta paljon paremman kehittäjän!
 
-Apuvälineet ovat hämmästyttäviä työkaluja, jotka auttavat vammaisia ihmisiä vuorovaikuttamaan verkkosivustojen kanssa tavoilla, jotka saattavat yllättää sinut. Kun opit, miten nämä teknologiat toimivat, saavutettavien verkkokokemusten luominen muuttuu paljon intuitiivisemmaksi. Se on kuin oppisi näkemään koodisi jonkun toisen silmin.
+Avustavat teknologiat ovat hämmästyttäviä työkaluja, jotka auttavat vammaisia ihmisiä vuorovaikuttamaan verkkosivustojen kanssa tavoilla, jotka saattavat yllättää sinut. Kun opit, miten nämä teknologiat toimivat, saavutettavien verkkokokemusten luominen muuttuu paljon intuitiivisemmaksi. Se on kuin oppisi näkemään koodisi jonkun toisen silmin.
 
 ### Ruudunlukijat
 
-[Ruudunlukijat](https://en.wikipedia.org/wiki/Screen_reader) ovat melko kehittyneitä teknologioita, jotka muuntavat digitaalisen tekstin puheeksi tai pistekirjoitukseksi. Vaikka niitä käytetään pääasiassa näkövammaisten ihmisten toimesta, ne ovat myös erittäin hyödyllisiä oppimisvaikeuksista, kuten lukihäiriöstä, kärsiville käyttäjille.
+[Ruudunlukijat](https://en.wikipedia.org/wiki/Screen_reader) ovat melko kehittyneitä teknologioita, jotka muuntavat digitaalisen tekstin puheeksi tai pistekirjoitukseksi. Vaikka niitä käytetään pääasiassa näkövammaisten ihmisten toimesta, ne ovat myös erittäin hyödyllisiä oppimisvaikeuksista, kuten dysleksiasta, kärsiville käyttäjille.
 
-Ajattelen ruudunlukijaa kuin todella älykästä kertojaa, joka lukee kirjaa sinulle. Se lukee sisällön ääneen loogisessa järjestyksessä, ilmoittaa interaktiiviset elementit kuten "painike" tai "linkki" ja tarjoaa pikanäppäimiä sivulla liikkumiseen. Mutta tässä on juttu—ruudunlukijat voivat tehdä taikojaan vain, jos rakennamme verkkosivustoja asianmukaisella rakenteella ja merkityksellisellä sisällöllä. Tässä sinä astut kuvaan kehittäjänä!
+Ajattelen ruudunlukijaa kuin todella älykästä kertojan ääntä, joka lukee kirjaa sinulle. Se lukee sisällön ääneen loogisessa järjestyksessä, ilmoittaa interaktiiviset elementit kuten "painike" tai "linkki" ja tarjoaa näppäinoikoteitä sivulla liikkumiseen. Mutta tässä on juttu—ruudunlukijat voivat tehdä taikojaan vain, jos rakennamme verkkosivustoja asianmukaisella rakenteella ja merkityksellisellä sisällöllä. Tässä sinä astut kuvaan kehittäjänä!
 
 **Suosittuja ruudunlukijoita eri alustoilla:**
 - **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (ilmainen ja suosituin), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (sisäänrakennettu)
-- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (sisäänrakennettu ja erittäin kyvykäs)
+- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (sisäänrakennettu ja erittäin tehokas)
 - **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (sisäänrakennettu)
 - **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (ilmainen ja avoimen lähdekoodin)
 
 **Kuinka ruudunlukijat navigoivat verkkosisältöä:**
 
 Ruudunlukijat tarjoavat useita navigointimenetelmiä, jotka tekevät selaamisesta tehokasta kokeneille käyttäjille:
-- **Järjestelmällinen lukeminen**: Lukee sisällön ylhäältä alas, kuten kirjaa seuraten
-- **Maamerkkien navigointi**: Hyppää sivun osioiden välillä (otsikko, navigointi, pääsisältö, alatunniste)
-- **Otsikon navigointi**: Siirtyy otsikoiden välillä ymmärtääkseen sivun rakenteen
+- **Järjestyksessä lukeminen**: Lukee sisällön ylhäältä alas, kuten kirjaa seuraten
+- **Maamerkkien navigointi**: Siirtyminen sivun osien välillä (otsikko, navigointi, pääsisältö, alatunniste)
+- **Otsikon navigointi**: Hyppää otsikoiden välillä ymmärtääksesi sivun rakenteen
 - **Linkkilistat**: Luo lista kaikista linkeistä nopeaa pääsyä varten
-- **Lomakekentät**: Navigoi suoraan syöttökenttien ja painikkeiden välillä
+- **Lomakekentät**: Siirtyminen suoraan syöttökenttien ja painikkeiden välillä
 
 > 💡 **Tämä yllätti minut**: 68 % ruudunlukijoiden käyttäjistä navigoi ensisijaisesti otsikoiden avulla ([WebAIM-kysely](https://webaim.org/projects/screenreadersurvey9/#finding)). Tämä tarkoittaa, että otsikkorakenteesi on kuin kartta käyttäjille—kun teet sen oikein, autat ihmisiä löytämään sisältösi nopeammin!
 
 ### Testausprosessin rakentaminen
 
-Hyviä uutisia—tehokas saavutettavuustestaus ei tarvitse olla ylivoimaista! Kannattaa yhdistää automaattiset työkalut (ne ovat loistavia ilmeisten ongelmien havaitsemisessa) ja käytännön testaus. Tässä on järjestelmällinen lähestymistapa, joka auttaa havaitsemaan suurimman osan ongelmista ilman, että koko päivä menee hukkaan:
+Hyviä uutisia—tehokas saavutettavuustestaus ei ole ylivoimaista! Kannattaa yhdistää automaattiset työkalut (ne ovat loistavia ilmeisten ongelmien havaitsemisessa) ja käytännön testaus. Tässä on järjestelmällinen lähestymistapa, joka auttaa havaitsemaan eniten ongelmia ilman, että koko päivä kuluu siihen:
 
 **Välttämätön manuaalinen testausprosessi:**
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
+flowchart TD
+    A[🚀 Start Testing] --> B{⌨️ Keyboard Navigation}
     B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
+    C --> D{🎧 Screen Reader Testing}
     D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
+    E --> F{🔍 Zoom Testing}
     F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
+    G --> H{🎨 Color/Contrast Check}
     H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
+    I --> J{👁️ Focus Management}
     J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+    K --> L[✅ Testing Complete]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
 ```
 
 **Vaiheittainen testauslista:**
-1. **Näppäimistön navigointi**: Käytä vain Tab, Shift+Tab, Enter, Space ja nuolinäppäimiä
-2. **Ruudunlukijatestaus**: Ota NVDA, VoiceOver tai Narrator käyttöön ja navigoi silmät kiinni
+1. **Näppäimistön navigointi**: Käytä vain Tab-, Shift+Tab-, Enter-, Space- ja nuolinäppäimiä
+2. **Ruudunlukijatestaus**: Ota käyttöön NVDA, VoiceOver tai Narrator ja navigoi silmät suljettuina
 3. **Zoomaustestaus**: Testaa 200 % ja 400 % zoomaustasoilla
 4. **Värikontrastin tarkistus**: Tarkista kaikki tekstit ja käyttöliittymäkomponentit
-5. **Fokusindikaattorin testaus**: Varmista, että kaikki interaktiiviset elementit ovat näkyvissä
+5. **Fokusindikaattorin testaus**: Varmista, että kaikki interaktiiviset elementit näkyvät selkeästi
 
-✅ **Aloita Lighthousella**: Avaa selaimesi kehitystyökalut, suorita Lighthouse-saavutettavuusauditointi ja käytä tuloksia manuaalisen testauksen painopistealueiden ohjaamiseen.
+✅ **Aloita Lighthouse-työkalulla**: Avaa selaimesi kehittäjätyökalut, suorita Lighthouse-saavutettavuusauditointi ja käytä tuloksia manuaalisen testauksen painopistealueiden ohjaamiseen.
 
 ### Zoomaus- ja suurennustyökalut
 
-Tiedätkö, kuinka joskus zoomaat puhelimellasi, kun teksti on liian pientä, tai siristät silmiäsi kannettavan näytön edessä kirkkaassa auringonvalossa? Monet käyttäjät luottavat suurennustyökaluihin tehdäkseen sisällöstä luettavaa joka päivä. Tämä koskee heikkonäköisiä, vanhuksia ja kaikkia, jotka ovat joskus yrittäneet lukea verkkosivua ulkona.
+Tiedätkö, kuinka joskus zoomaat puhelimellasi, kun teksti on liian pientä, tai siristät silmiäsi kirkkaassa auringonvalossa? Monet käyttäjät luottavat suurennustyökaluihin tehdäkseen sisällöstä luettavaa joka päivä. Tämä koskee heikkonäköisiä, vanhempia aikuisia ja kaikkia, jotka ovat joskus yrittäneet lukea verkkosivua ulkona.
 
-Modernit zoomausteknologiat ovat kehittyneet pelkästä suurentamisesta. Ymmärtämällä, miten nämä työkalut toimivat, voit luoda responsiivisia suunnitelmia, jotka pysyvät toimivina ja houkuttelevina kaikilla suurennustasoilla.
+Modernit zoomausteknologiat ovat kehittyneet pelkästä suurentamisesta. Ymmärtämällä, miten nämä työkalut toimivat, voit luoda responsiivisia suunnitelmia, jotka pysyvät toimivina ja houkuttelevina millä tahansa suurennustasolla.
 
 **Modernit selainten zoomausominaisuudet:**
-- **Sivun zoomaus**: Skaalaa kaikki sisältö suhteellisesti (teksti, kuvat, asettelu) - tämä on suositeltu menetelmä
+- **Sivun zoomaus**: Skaalaa kaikki sisältö suhteellisesti (teksti, kuvat, asettelu)—tämä on suositeltu menetelmä
 - **Vain tekstin zoomaus**: Suurentaa fonttikokoa säilyttäen alkuperäisen asettelun
-- **Pinch-to-zoom**: Mobiilieleiden tuki tilapäiseen suurennukseen
+- **Pinch-to-zoom**: Mobiilieleen tuki tilapäiseen suurennukseen
 - **Selaintuki**: Kaikki modernit selaimet tukevat zoomausta jopa 500 % ilman toiminnallisuuden rikkoutumista
 
 **Erikoistuneet suurennusohjelmistot:**
 - **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (sisäänrakennettu), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
 - **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (sisäänrakennettu edistyneillä ominaisuuksilla)
 
-> ⚠️ **Suunnitteluharkinta**: WCAG vaatii, että sisältö pysyy toimivana, kun sitä zoomataan 200 %. Tällä tasolla vaakasuuntainen vieritys tulisi olla minimaalista, ja kaikki interaktiiviset elementit tulisi olla saavutettavissa.
+> ⚠️ **Suunnittelun huomioiminen**: WCAG vaatii, että sisältö pysyy toimivana, kun sitä zoomataan 200 %. Tällä tasolla vaakasuuntainen vieritys tulisi minimoida, ja kaikkien interaktiivisten elementtien tulisi pysyä saavutettavina.
 
-✅ **Testaa responsiivinen suunnittelusi**: Zoomaa selaimesi 200 % ja 400 %. Mukautuuko asettelusi sulavasti? Voitko edelleen käyttää kaikkia toimintoja ilman liiallista vieritystä?
+✅ **Testaa responsiivinen suunnittelusi**: Zoomaa selaimesi 200 % ja 400 %. Mukautuuko asettelu sulavasti? Voitko silti käyttää kaikkia toimintoja ilman liiallista vierittämistä?
 
 ## Modernit saavutettavuustestityökalut
 
-Nyt kun ymmärrät, miten ihmiset navigoivat verkossa apuvälineiden avulla, tutkitaan työkaluja, jotka auttavat sinua rakentamaan ja testaamaan saavutettavia verkkosivustoja.
+Nyt kun ymmärrät, miten ihmiset navigoivat verkossa avustavien teknologioiden avulla, tutkitaan työkaluja, jotka auttavat sinua rakentamaan ja testaamaan saavutettavia verkkosivustoja.
 
-Ajattele asiaa näin: automaattiset työkalut ovat loistavia ilmeisten ongelmien havaitsemisessa (kuten puuttuva alt-teksti), kun taas käytännön testaus auttaa varmistamaan, että sivustosi tuntuu hyvältä käyttää todellisessa maailmassa. Yhdessä ne antavat sinulle varmuuden siitä, että sivustosi toimivat kaikille.
+Ajattele asiaa näin: automaattiset työkalut ovat hyviä ilmeisten ongelmien havaitsemisessa (kuten puuttuva alt-teksti), kun taas käytännön testaus auttaa varmistamaan, että sivustosi tuntuu hyvältä käyttää todellisessa maailmassa. Yhdessä ne antavat sinulle varmuuden siitä, että sivustosi toimivat kaikille.
 
 ### Värikontrastin testaus
 
-Hyviä uutisia: värikontrasti on yksi yleisimmistä saavutettavuusongelmista, mutta se on myös yksi helpoimmista korjata. Hyvä kontrasti hyödyttää kaikkia—näkövammaisista käyttäjistä ihmisiin, jotka yrittävät lukea puhelimiaan rannalla.
+Hyviä uutisia: värikontrasti on yksi yleisimmistä saavutettavuusongelmista, mutta se on myös yksi helpoimmista korjata. Hyvä kontrasti hyödyttää kaikkia—näkövammaisista ihmisistä niihin, jotka yrittävät lukea puhelimiaan rannalla.
 
 **WCAG-kontrastivaatimukset:**
 
@@ -124,7 +174,7 @@ Hyviä uutisia: värikontrasti on yksi yleisimmistä saavutettavuusongelmista, m
 |--------------|------------------|-----------------------|
 | **Normaali teksti** (alle 18pt) | 4.5:1 kontrastisuhde | 7:1 kontrastisuhde |
 | **Suuri teksti** (18pt+ tai 14pt+ lihavoitu) | 3:1 kontrastisuhde | 4.5:1 kontrastisuhde |
-| **UI-komponentit** (painikkeet, lomakerajat) | 3:1 kontrastisuhde | 3:1 kontrastisuhde |
+| **UI-komponentit** (painikkeet, lomakekentät) | 3:1 kontrastisuhde | 3:1 kontrastisuhde |
 
 **Välttämättömät testityökalut:**
 - [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Työpöytäsovellus värinvalitsimella
@@ -132,15 +182,15 @@ Hyviä uutisia: värikontrasti on yksi yleisimmistä saavutettavuusongelmista, m
 - [Stark](https://www.getstark.co/) - Suunnittelutyökalun lisäosa Figmaan, Sketchiin, Adobe XD:hen
 - [Accessible Colors](https://accessible-colors.com/) - Löydä saavutettavia väripaletteja
 
-✅ **Luo parempia väripaletteja**: Aloita brändiväreistäsi ja käytä kontrastitarkistimia luodaksesi saavutettavia variaatioita. Dokumentoi nämä suunnittelujärjestelmäsi saavutettavina värikoodeina.
+✅ **Luo parempia väripaletteja**: Aloita brändiväreistäsi ja käytä kontrastitarkistimia luodaksesi saavutettavia variaatioita. Dokumentoi nämä suunnittelujärjestelmäsi saavutettavina värikooditunnisteina.
 
 ### Kattava saavutettavuusauditointi
 
 Tehokkain saavutettavuustestaus yhdistää useita lähestymistapoja. Mikään yksittäinen työkalu ei havaitse kaikkea, joten testirutiinin rakentaminen eri menetelmillä varmistaa kattavan tarkastuksen.
 
-**Selaimeen perustuva testaus (sisäänrakennettu kehitystyökaluihin):**
+**Selaimeen perustuva testaus (sisäänrakennettu kehittäjätyökaluihin):**
 - **Chrome/Edge**: Lighthouse-saavutettavuusauditointi + Saavutettavuuspaneeli
-- **Firefox**: Saavutettavuusinspektori yksityiskohtaisella puunäkymällä
+- **Firefox**: Saavutettavuustarkastaja yksityiskohtaisella puunäkymällä
 - **Safari**: Auditointivälilehti Web Inspectorissa VoiceOver-simulaatiolla
 
 **Ammattilaistason testauslaajennukset:**
@@ -153,52 +203,113 @@ Tehokkain saavutettavuustestaus yhdistää useita lähestymistapoja. Mikään yk
 - [Pa11y](https://pa11y.org/) - Komentorivipohjainen saavutettavuustestityökalu
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Automatisoitu saavutettavuuspisteytys
 
-> 🎯 **Testaustavoite**: Pyri Lighthouse-saavutettavuuspisteisiin 95+ lähtötasona. Muista, että automaattiset työkalut havaitsevat vain noin 30-40 % saavutettavuusongelmista—manuaalinen testaus on edelleen välttämätöntä!
+> 🎯 **Testaustavoite**: Tavoittele Lighthouse-saavutettavuuspisteitä 95+ lähtötasona. Muista, että automaattiset työkalut havaitsevat vain noin 30-40 % saavutettavuusongelmista—manuaalinen testaus on edelleen välttämätöntä!
+
+### 🧠 **Testaustaitojen tarkistus: Valmis löytämään ongelmia?**
+
+**Katsotaan, miltä sinusta tuntuu saavutettavuustestauksesta:**
+- Mikä testausmenetelmä tuntuu sinulle tällä hetkellä lähestyttävimmältä?
+- Voitko kuvitella käyttäväsi vain näppäimistön navigointia koko päivän ajan?
+- Mikä on yksi saavutettavuuseste, jonka olet itse kokenut verkossa?
+
+```mermaid
+pie title "Accessibility Issues Caught by Different Methods"
+    "Automated Tools" : 35
+    "Manual Testing" : 40
+    "User Feedback" : 25
+```
+
+> **Itseluottamuksen vahvistaja**: Ammattimaiset saavutettavuustestaajat käyttävät juuri tätä yhdistelmää menetelmiä. Olet oppimassa alan standardikäytäntöjä!
 
 ## Saavutettavuuden rakentaminen alusta alkaen
 
-Saavutettavuuden avain menestykseen on sen sisällyttäminen perustaan alusta alkaen. Tiedän, että voi olla houkuttelevaa ajatella "lisään saavutettavuuden myöhemmin", mutta se on kuin yrittäisi lisätä ramppia taloon sen rakentamisen jälkeen. Mahdollista? Kyllä. Helppoa? Ei todellakaan.
+Avain saavutettavuuden onnistumiseen on sen sisällyttäminen perustaan alusta alkaen. Tiedän, että on houkuttelevaa ajatella "lisään saavutettavuuden myöhemmin", mutta se on kuin yrittäisi lisätä ramppia taloon sen rakentamisen jälkeen. Mahdollista? Kyllä. Helppoa? Ei todellakaan.
 
-Ajattele saavutettavuutta kuin talon suunnittelua—on paljon helpompaa sisällyttää pyörätuolisaavutettavuus alkuperäisiin arkkitehtisuunnitelmiin kuin muokata kaikkea myöhemmin.
+Ajattele saavutettavuutta kuin talon suunnittelua—on paljon helpompaa sisällyttää pyörätuolisaavutettavuus alkuperäisiin arkkitehtuurisuunnitelmiin kuin muokata kaikkea myöhemmin.
 
 ### POUR-periaatteet: Saavutettavuuden perusta
 
-Web Content Accessibility Guidelines (WCAG) perustuvat neljään keskeiseen periaatteeseen, jotka muodostavat POUR. Älä huoli—nämä eivät ole kuivaa akateemista teoriaa! Ne ovat käytännöllisiä ohjeita sisällön luomiseen, joka toimii kaikille.
+Web Content Accessibility Guidelines (WCAG) perustuvat neljään keskeiseen periaatteeseen, jotka muodostavat sanan POUR. Älä huoli—nämä eivät ole kuivaa akateemista teoriaa! Ne ovat käytännöllisiä ohjeita sisällön luomiseen, joka toimii kaikille.
 
-Kun opit POUR-periaatteet, saavutettavuuspäätösten tekeminen muuttuu paljon intuitiivisemmaksi. Se on kuin henkinen tarkistuslista, joka ohjaa suunnittelupäätöksiäsi. Puretaanpa ne:
+Kun opit POUR-periaatteet, saavutettavuuspäätösten tekeminen muuttuu paljon intuitiivisemmaksi. Se on kuin mielessäsi oleva tarkistuslista, joka ohjaa suunnittelupäätöksiäsi. Puretaanpa se osiin:
 
-**🔍 Havainnollinen**: Tiedon tulee olla esitettävissä tavoilla, jotka käyttäjät voivat havaita käytettävissä olevilla aisteillaan
+```mermaid
+flowchart LR
+    A[🔍 PERCEIVABLE<br/>Can users sense it?] --> B[🎮 OPERABLE<br/>Can users use it?]
+    B --> C[📖 UNDERSTANDABLE<br/>Can users get it?]
+    C --> D[💪 ROBUST<br/>Does it work everywhere?]
+    
+    A1[Alt text<br/>Captions<br/>Contrast] --> A
+    B1[Keyboard access<br/>No seizures<br/>Time limits] --> B
+    C1[Clear language<br/>Predictable<br/>Error help] --> C
+    D1[Valid code<br/>Compatible<br/>Future-proof] --> D
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+```
+
+**🔍 Havainnollinen**: Tiedon on oltava esitettävissä tavoilla, jotka käyttäjät voivat havaita käytettävissä olevilla aisteillaan
 
 - Tarjoa tekstivaihtoehtoja ei-tekstisisällölle (kuvat, videot, äänet)
 - Varmista riittävä värikontrasti kaikelle tekstille ja käyttöliittymäkomponenteille
 - Tarjoa tekstitykset ja transkriptiot multimedia-sisällölle
-- Suunnittele sisältö, joka pysyy toimivana, kun sitä suurennetaan jopa 200 %
+- Suunnittele sisältö, joka pysyy toimivana, kun sitä suurennetaan 200 %
 - Käytä useita aistillisia ominaisuuksia (ei vain väriä) tiedon välittämiseen
 
-**🎮 Käytettävä**: Kaikkien käyttöliittymäkomponenttien tulee olla käytettävissä saatavilla olevilla syöttötavoilla
+**🎮 Käytettävä**: Kaikkien käyttöliittymäkomponenttien on oltava käytettävissä saatavilla olevilla syöttötavoilla
 
-- Tee kaikki toiminnot saavutettaviksi näppäimistön navigoinnin avulla
-- Anna käyttäjille riittävästi aikaa lukea ja olla vuorovaikutuksessa sisällön kanssa
-- Vältä sisältöä, joka aiheuttaa kohtauksia tai tasapainohäiriöitä
-- Auta käyttäjiä navigoimaan tehokkaasti selkeällä rakenteella ja maamerkeillä
-- Varmista, että interaktiivisilla elementeillä on riittävät kohdekoot (vähintään 44px)
+- Tee kaikki toiminnot saavutettaviksi näppäimistön navigoinnin kautta
 
-**📖 Ymmärrettävä**: Tiedon ja käyttöliittymän toiminnan tulee olla selkeää ja ymmärrettävää
+- **Testaa eri selaimilla, laitteilla ja apuvälineillä**
+- **Rakenna sisältö niin, että se toimii myös ilman kehittyneitä ominaisuuksia**
 
-- Käytä selkeää, yksinkertaista kieltä, joka sopii kohdeyleisöllesi
-- Varmista, että sisältö näkyy ja toimii ennakoitavalla, johdonmukaisella tavalla
-- Tarjoa selkeät ohjeet ja virheilmoitukset käyttäjän syötteille
-- Auta käyttä
-Väri on tehokas viestinnän väline, mutta sen ei koskaan pitäisi olla ainoa tapa välittää tärkeää tietoa. Suunnittelu, joka menee värin tuolle puolen, luo kestävämpiä ja inklusiivisempia kokemuksia, jotka toimivat monenlaisissa tilanteissa.
+### 🎯 **POUR-periaatteiden tarkistus: Tee siitä toimiva**
 
-**Suunnittele värinäköeroja huomioiden:**
+**Pikainen pohdinta perusteista:**
+- Voitko keksiä verkkosivuston ominaisuuden, joka ei täytä jokaista POUR-periaatetta?
+- Mikä periaate tuntuu sinulle kehittäjänä luonnollisimmalta?
+- Miten nämä periaatteet voivat parantaa suunnittelua kaikille, ei vain vammaisille käyttäjille?
+
+```mermaid
+quadrantChart
+    title POUR Principles Impact Matrix
+    x-axis Low Effort --> High Effort
+    y-axis Low Impact --> High Impact
+    quadrant-1 Quick Wins
+    quadrant-2 Major Projects
+    quadrant-3 Consider Later
+    quadrant-4 Strategic Focus
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
+
+> **Muista**: Aloita suurivaikutteisista, vähävaivaisista parannuksista. Semanttinen HTML ja alt-teksti antavat suurimman saavutettavuusparannuksen pienimmällä vaivalla!
+
+## Esteettömän visuaalisen suunnittelun luominen
+
+Hyvä visuaalinen suunnittelu ja saavutettavuus kulkevat käsi kädessä. Kun suunnittelet saavutettavuus mielessä, huomaat usein, että nämä rajoitukset johtavat siistimpiin ja elegantimpiin ratkaisuihin, jotka hyödyttävät kaikkia käyttäjiä.
+
+Tutkitaan, miten luoda visuaalisesti houkuttelevia suunnitelmia, jotka toimivat kaikille, riippumatta heidän näkökyvystään tai olosuhteista, joissa he tarkastelevat sisältöäsi.
+
+### Väri ja visuaalisen saavutettavuuden strategiat
+
+Väri on voimakas viestintäväline, mutta sen ei pitäisi koskaan olla ainoa tapa välittää tärkeää tietoa. Suunnittelu, joka ei perustu pelkästään väreihin, luo kestävämpiä ja osallistavampia kokemuksia, jotka toimivat useammissa tilanteissa.
+
+**Suunnittelu värinäköeroja ajatellen:**
 
 Noin 8 % miehistä ja 0,5 % naisista kärsii jonkinlaisesta värinäköerosta (usein kutsutaan värisokeudeksi). Yleisimmät tyypit ovat:
 - **Deuteranopia**: Vaikeus erottaa punaista ja vihreää
 - **Protanopia**: Punainen näyttää himmeämmältä
-- **Tritanopia**: Vaikeus sinisen ja keltaisen erottamisessa (harvinainen)
+- **Tritanopia**: Vaikeus erottaa sinistä ja keltaista (harvinainen)
 
-**Inklusiiviset väristrategiat:**
+**Osallistavat väristrategiat:**
 
 ```css
 /* ❌ Bad: Using only color to indicate status */
@@ -225,10 +336,10 @@ Noin 8 % miehistä ja 0,5 % naisista kärsii jonkinlaisesta värinäköerosta (u
 }
 ```
 
-**Peruskontrastivaatimusten yli:**
+**Peruskontrastivaatimusten ylittäminen:**
 - Testaa värivalintasi värisokeussimulaattoreilla
 - Käytä kuvioita, tekstuureja tai muotoja värikoodauksen rinnalla
-- Varmista, että interaktiiviset tilat ovat erottuvia ilman väriä
+- Varmista, että interaktiiviset tilat erottuvat ilman väriä
 - Mieti, miltä suunnittelusi näyttää korkean kontrastin tilassa
 
 ✅ **Testaa värien saavutettavuus**: Käytä työkaluja, kuten [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/), nähdäksesi, miltä sivustosi näyttää käyttäjille, joilla on erilaisia värinäköeroja.
@@ -269,20 +380,42 @@ button:focus:not(:focus-visible) {
 **Kohdistusindikaattorien vaatimukset:**
 - **Näkyvyys**: Vähintään 3:1 kontrastisuhde ympäröiviin elementteihin
 - **Leveys**: Vähintään 2px paksuus koko elementin ympärillä
-- **Pysyvyys**: Pitäisi pysyä näkyvissä, kunnes kohdistus siirtyy muualle
-- **Erottuvuus**: Pitäisi visuaalisesti erottua muista käyttöliittymän tiloista
+- **Pysyvyys**: Pysyvät näkyvissä, kunnes kohdistus siirtyy muualle
+- **Erottuvuus**: Eroaa visuaalisesti muista käyttöliittymän tiloista
 
-> 💡 **Suunnitteluvinkki**: Hyvät kohdistusindikaattorit käyttävät usein yhdistelmää reunaviivaa, varjostusta ja värimuutoksia varmistaakseen näkyvyyden eri taustoilla ja konteksteissa.
+> 💡 **Suunnitteluvinkki**: Hyvät kohdistusindikaattorit käyttävät usein yhdistelmää reunaviivoja, varjostuksia ja värimuutoksia näkyvyyden varmistamiseksi eri taustoilla ja konteksteissa.
 
-✅ **Tarkista kohdistusindikaattorit**: Käy läpi verkkosivustosi välilehtien avulla ja tarkista, mitkä elementit sisältävät selkeät kohdistusindikaattorit. Ovatko jotkin vaikeasti havaittavissa tai puuttuvat kokonaan?
+✅ **Tarkista kohdistusindikaattorit**: Käy läpi verkkosivustosi välilehtien avulla ja tarkista, mitkä elementit sisältävät selkeät kohdistusindikaattorit. Ovatko jotkin vaikeasti nähtävissä tai kokonaan puuttuvat?
 
 ### Semanttinen HTML: Saavutettavuuden perusta
 
-Semanttinen HTML on kuin avustavien teknologioiden GPS-järjestelmä verkkosivustollesi. Kun käytät oikeita HTML-elementtejä niiden tarkoituksenmukaisella tavalla, tarjoat näytönlukijoille, näppäimistöille ja muille työkaluille yksityiskohtaisen kartan, joka auttaa käyttäjiä navigoimaan tehokkaasti.
+Semanttinen HTML on kuin apuvälineiden GPS-järjestelmä verkkosivustollesi. Kun käytät oikeita HTML-elementtejä niiden tarkoituksenmukaisella tavalla, tarjoat näytönlukijoille, näppäimistöille ja muille työkaluille yksityiskohtaisen kartan, joka auttaa käyttäjiä navigoimaan tehokkaasti.
 
-Tässä on vertaus, joka todella avasi silmäni: semanttinen HTML on kuin hyvin järjestetty kirjasto, jossa on selkeät kategoriat ja hyödylliset opasteet, verrattuna varastoon, jossa kirjat ovat satunnaisesti levällään. Molemmissa paikoissa on samat kirjat, mutta kummasta haluaisit etsiä jotain? Juuri niin!
+Tämä vertauskuva todella avasi silmäni: semanttinen HTML on kuin hyvin järjestetty kirjasto, jossa on selkeät kategoriat ja hyödylliset opasteet, verrattuna varastoon, jossa kirjat ovat satunnaisesti levällään. Molemmissa paikoissa on samat kirjat, mutta kummassa haluaisit etsiä jotain? Juuri niin!
 
-**Saavutettavan sivurakenteen rakennuspalikat:**
+```mermaid
+flowchart TD
+    A[🏠 HTML Document] --> B[📰 header]
+    A --> C[🧭 nav]
+    A --> D[📄 main]
+    A --> E[📋 footer]
+    
+    B --> B1[h1: Site Name<br/>Logo & branding]
+    C --> C1[ul: Navigation<br/>Primary links]
+    D --> D1[article: Content<br/>section: Subsections]
+    D --> D2[aside: Sidebar<br/>Related content]
+    E --> E1[nav: Footer links<br/>Copyright info]
+    
+    D1 --> D1a[h1: Page title<br/>h2: Major sections<br/>h3: Subsections]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+
+**Esteettömän sivurakenteen rakennuspalikat:**
 
 ```html
 <!-- Landmark elements provide page navigation structure -->
@@ -342,29 +475,56 @@ Tässä on vertaus, joka todella avasi silmäni: semanttinen HTML on kuin hyvin 
 | Semanttinen elementti | Tarkoitus | Näytönlukijan hyöty |
 |-----------------------|-----------|---------------------|
 | `<header>` | Sivun tai osion otsikko | "Banneri-maamerkki" - nopea navigointi yläosaan |
-| `<nav>` | Navigointilinkit | "Navigointimaamerkki" - navigointiosioiden lista |
-| `<main>` | Sivun pääsisältö | "Päämaamerkki" - siirtyminen suoraan sisältöön |
+| `<nav>` | Navigointilinkit | "Navigointi-maamerkki" - navigointiosioiden lista |
+| `<main>` | Sivun pääsisältö | "Päämaamerkki" - siirry suoraan sisältöön |
 | `<article>` | Itsenäinen sisältö | Ilmoittaa artikkelin rajat |
 | `<section>` | Teemalliset sisältöryhmät | Tarjoaa sisällön rakenteen |
 | `<aside>` | Liittyvä sivupalkin sisältö | "Täydentävä maamerkki" |
 | `<footer>` | Sivun tai osion alatunniste | "Sisältötieto-maamerkki" |
 
 **Näytönlukijan supervoimat semanttisen HTML:n avulla:**
-- **Maamerkkien navigointi**: Siirtyminen nopeasti sivun pääosioiden välillä
-- **Otsikkoluettelot**: Sisällysluettelon luominen otsikkorakenteesta
-- **Elementtilistat**: Kaikkien linkkien, painikkeiden tai lomakekontrollien listaaminen
-- **Kontekstin ymmärtäminen**: Sisältöosioiden välisten suhteiden hahmottaminen
+- **Maamerkkien navigointi**: Siirry nopeasti suurten sivuosioiden välillä
+- **Otsikkorakenteet**: Luo sisällysluettelo otsikkorakenteesta
+- **Elementtilistat**: Luo listoja kaikista linkeistä, painikkeista tai lomakekentistä
+- **Kontekstin ymmärtäminen**: Ymmärrä sisältöosioiden väliset suhteet
 
-> 🎯 **Nopea testi**: Kokeile navigoida sivustollasi näytönlukijalla käyttämällä maamerkkien pikavalintoja (D maamerkille, H otsikolle, K linkille NVDA:ssa/JAWS:ssa). Onko navigointi loogista?
+> 🎯 **Pikainen testi**: Kokeile navigoida sivustollasi näytönlukijalla käyttämällä maamerkkien pikavalintoja (D maamerkille, H otsikolle, K linkille NVDA/JAWS:ssa). Onko navigointi loogista?
 
-✅ **Tarkista semanttinen rakenne**: Käytä selaimesi DevToolsin saavutettavuuspaneelia nähdäksesi saavutettavuuspuun ja varmistaaksesi, että merkintäsi luo loogisen rakenteen.
+### 🏗️ **Semanttisen HTML:n hallinnan tarkistus: Vahvojen perustusten rakentaminen**
+
+**Arvioidaan semanttista ymmärrystäsi:**
+- Voitko tunnistaa maamerkit verkkosivulta pelkästään HTML:ää katsomalla?
+- Miten selittäisit eron `<section>` ja `<div>` välillä ystävälle?
+- Mikä olisi ensimmäinen asia, jonka tarkistaisit, jos näytönlukijan käyttäjä ilmoittaisi navigointiongelmista?
+
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: div soup
+    UnsementicHTML --> SemanticHTML: Add landmarks
+    SemanticHTML --> AccessibleHTML: Test with AT
+    AccessibleHTML --> [*]: User success!
+    
+    note right of UnsementicHTML
+        Screen readers lost
+        Keyboard nav broken
+    end note
+    
+    note right of AccessibleHTML
+        Clear navigation
+        Efficient browsing
+    end note
+```
+
+> **Ammattilaisen vinkki**: Hyvä semanttinen HTML ratkaisee automaattisesti noin 70 % saavutettavuusongelmista. Hallitse tämä perusta, ja olet jo pitkällä!
+
+✅ **Tarkista semanttinen rakenteesi**: Käytä selaimesi DevToolsin saavutettavuuspaneelia nähdäksesi saavutettavuuspuun ja varmistaaksesi, että merkintäsi luo loogisen rakenteen.
 
 ### Otsikkohierarkia: Loogisen sisällysluettelon luominen
 
-Otsikot ovat ehdottoman tärkeitä saavutettavan sisällön kannalta—ne ovat kuin selkäranka, joka pitää kaiken koossa. Näytönlukijoiden käyttäjät tukeutuvat vahvasti otsikoihin ymmärtääkseen ja navigoidakseen sisällössäsi. Ajattele sitä kuin tarjoaisit sisällysluettelon sivullesi.
+Otsikot ovat ehdottoman tärkeitä saavutettavalle sisällölle—ne ovat kuin selkäranka, joka pitää kaiken kasassa. Näytönlukijan käyttäjät tukeutuvat vahvasti otsikoihin ymmärtääkseen ja navigoidakseen sisältöäsi. Ajattele sitä kuin tarjoaisit sivustosi sisällysluettelon.
 
 **Tässä on otsikoiden kultainen sääntö:**
-Älä koskaan ohita tasoja. Etene aina loogisesti `<h1>`:stä `<h2>`:een, sitten `<h3>`:een ja niin edelleen. Muistatko, kun teit sisällysluetteloita koulussa? Se on täsmälleen sama periaate—et hyppäisi "I. Pääkohta" suoraan "C. Alakohta" ilman "A. Alakohtaa" välissä, eikö?
+Älä koskaan ohita tasoja. Etene aina loogisesti `<h1>`:stä `<h2>`:een ja siitä `<h3>`:een jne. Muistatko, kun teit koulussa sisällysluetteloita? Sama periaate pätee—et hyppäisi suoraan "I. Pääkohta" -kohdasta "C. Alakohta" ilman "A. Alakohtaa" välissä, eikö?
 
 **Täydellinen otsikkorakenne-esimerkki:**
 
@@ -408,31 +568,31 @@ Otsikot ovat ehdottoman tärkeitä saavutettavan sisällön kannalta—ne ovat k
 **Otsikoiden parhaat käytännöt:**
 - **Yksi `<h1>` per sivu**: Yleensä pääsivun otsikko tai ensisijainen sisältöotsikko
 - **Looginen eteneminen**: Älä koskaan ohita tasoja (h1 → h2 → h3, ei h1 → h3)
-- **Kuvaileva sisältö**: Tee otsikoista merkityksellisiä, vaikka ne luettaisiin kontekstista irrallaan
+- **Kuvaileva sisältö**: Tee otsikoista merkityksellisiä, kun ne luetaan kontekstista irrallaan
 - **Visuaalinen muotoilu CSS:llä**: Käytä CSS:ää ulkoasuun, HTML-tasoja rakenteeseen
 
 **Näytönlukijan navigointitilastot:**
-- 68 % näytönlukijoiden käyttäjistä navigoi otsikoiden avulla ([WebAIM-kysely](https://webaim.org/projects/screenreadersurvey9/#finding))
+- 68 % näytönlukijan käyttäjistä navigoi otsikoiden avulla ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))
 - Käyttäjät odottavat loogista otsikkorakennetta
 - Otsikot tarjoavat nopeimman tavan ymmärtää sivun rakennetta
 
-> 💡 **Pro-vinkki**: Käytä selaimen laajennuksia, kuten "HeadingsMap", visualisoidaksesi otsikkorakenteesi. Sen pitäisi näyttää hyvin järjestetyltä sisällysluettelolta.
+> 💡 **Ammattilaisen vinkki**: Käytä selaimen laajennuksia, kuten "HeadingsMap", visualisoidaksesi otsikkorakenteesi. Sen pitäisi näyttää hyvin järjestetyltä sisällysluettelolta.
 
-✅ **Testaa otsikkorakenteesi**: Käytä näytönlukijan otsikkonavigointia (H-näppäin NVDA:ssa) hypätäksesi otsikoiden välillä. Kertooko eteneminen loogisesti sisällön tarinan?
+✅ **Testaa otsikkorakenteesi**: Käytä näytönlukijan otsikkonavigointia (H-näppäin NVDA:ssa) hypätäksesi otsikoiden välillä. Kertooko eteneminen loogisesti sisältösi tarinan?
 
 ### Kehittyneet visuaalisen saavutettavuuden tekniikat
 
-Peruskontrastin ja värin lisäksi on olemassa kehittyneitä tekniikoita, jotka auttavat luomaan todella inklusiivisia visuaalisia kokemuksia. Nämä menetelmät varmistavat, että sisältösi toimii eri katseluolosuhteissa ja avustavien teknologioiden kanssa.
+Peruskontrastin ja värin lisäksi on olemassa kehittyneitä tekniikoita, jotka auttavat luomaan todella osallistavia visuaalisia kokemuksia. Nämä menetelmät varmistavat, että sisältösi toimii eri katseluolosuhteissa ja apuvälineiden kanssa.
 
 **Keskeiset visuaalisen viestinnän strategiat:**
 
 - **Monimuotoinen palaute**: Yhdistä visuaaliset, tekstuaaliset ja joskus äänivihjeet
-- **Progressiivinen paljastaminen**: Esitä tietoa helposti sulavina osina
+- **Progressiivinen paljastaminen**: Esitä tietoa helposti omaksuttavina osina
 - **Johdonmukaiset vuorovaikutusmallit**: Käytä tuttuja käyttöliittymäkonventioita
-- **Responsiivinen typografia**: Skaalaa teksti sopivasti eri laitteilla
+- **Responsiivinen typografia**: Skaalaa tekstiä sopivasti eri laitteilla
 - **Lataus- ja virhetilat**: Tarjoa selkeää palautetta kaikista käyttäjän toimista
 
-**CSS-apuvälineet saavutettavuuden parantamiseksi:**
+**CSS-työkalut saavutettavuuden parantamiseksi:**
 
 ```css
 /* Screen reader only text - visually hidden but accessible */
@@ -488,27 +648,27 @@ Peruskontrastin ja värin lisäksi on olemassa kehittyneitä tekniikoita, jotka 
 }
 ```
 
-> 🎯 **Saavutettavuuskuvio**: "Ohita linkki" on välttämätön näppäimistön käyttäjille. Sen pitäisi olla sivun ensimmäinen kohdistettava elementti ja hypätä suoraan pääsisältöön.
+> 🎯 **Saavutettavuusmalli**: "Ohita linkki" on välttämätön näppäimistön käyttäjille. Sen pitäisi olla sivusi ensimmäinen kohdistettava elementti ja siirtää suoraan pääsisältöön.
 
-✅ **Toteuta ohitusnavigointi**: Lisää ohituslinkit sivuillesi ja testaa niitä painamalla Tab heti sivun latauduttua. Niiden pitäisi näkyä ja antaa sinun siirtyä pääsisältöön.
+✅ **Toteuta ohitusnavigointi**: Lisää ohituslinkit sivuillesi ja testaa niitä painamalla Tab heti sivun latauduttua. Niiden pitäisi näkyä ja antaa sinun siirtyä suoraan pääsisältöön.
 
 ## Merkityksellisen linkkitekstin luominen
 
-Linkit ovat käytännössä verkkosivujen moottoriteitä, mutta huonosti kirjoitettu linkkiteksti on kuin tienviitta, jossa lukee vain "Paikka" sen sijaan, että siinä lukisi "Chicago Downtown". Ei kovin hyödyllistä, eikö?
+Linkit ovat käytännössä verkkosivujen moottoriteitä, mutta huonosti kirjoitettu linkkiteksti on kuin tienviitta, jossa lukee vain "Paikka" sen sijaan, että siinä lukisi "Keskusta Helsinki". Ei kovin hyödyllistä, eikö?
 
-Tässä on jotain, mikä hämmästytti minua, kun opin sen ensimmäistä kertaa: näytönlukijat voivat kerätä kaikki sivun linkit ja näyttää ne yhtenä suurena listana. Kuvittele, että joku antaisi sinulle hakemiston kaikista sivusi linkeistä. Olisiko jokainen niistä järkevä yksinään? Tätä testiä linkkitekstisi täytyy läpäistä!
+Tässä on jotain, mikä hämmästytti minua, kun kuulin siitä ensimmäistä kertaa: näytönlukijat voivat kerätä kaikki sivun linkit ja näyttää ne yhtenä suurena listana. Kuvittele, että joku antaisi sinulle hakemiston kaikista sivusi linkeistä. Olisiko jokainen niistä ymmärrettävä yksinään? Tätä testiä linkkitekstisi täytyy läpäistä!
 
-### Linkkinavigointimallien ymmärtäminen
+### Linkkinavigointimallit
 
 Näytönlukijat tarjoavat tehokkaita linkkinavigointiominaisuuksia, jotka perustuvat hyvin kirjoitettuun linkkitekstiin:
 
 **Linkkinavigointimenetelmät:**
-- **Järjestyksessä lukeminen**: Linkit luetaan osana sisällön virtausta
-- **Linkkilistan luominen**: Kaikki sivun linkit kootaan hakukelpoiseksi hakemistoksi
-- **Pikasiirtyminen**: Hyppää linkkien välillä näppäimistön pikavalinnoilla (K NVDA:ssa)
+- **Jatkuva lukeminen**: Linkit luetaan osana sisällön virtausta
+- **Linkkilistojen luominen**: Kaikki sivun linkit kootaan yhdeksi hakukelpoiseksi hakemistoksi
+- **Pikavalinnat**: Siirry linkkien välillä näppäimistön pikavalinnoilla (K NVDA:ssa)
 - **Hakutoiminto**: Etsi tiettyjä linkkejä kirjoittamalla osittainen teksti
 
-**Miksi konteksti on tärkeää:**
+**Miksi konteksti on tärkeä:**
 Kun näytönlukijan käyttäjät luovat linkkilistan, he näkevät jotain tällaista:
 - "Lataa raportti"
 - "Lue lisää"
@@ -516,15 +676,15 @@ Kun näytönlukijan käyttäjät luovat linkkilistan, he näkevät jotain tälla
 - "Tietosuojakäytäntö"
 - "Klikkaa tästä"
 
-Vain kaksi näistä linkeistä tarjoaa hyödyllistä tietoa, kun ne luetaan kontekstista irrallaan!
+Vain kaksi näistä linkeistä antaa hyödyllistä tietoa, kun ne luetaan kontekstista irrallaan!
 
-> 📊 **Käyttäjävaikutus**: Näytönlukijan käyttäjät skannaavat linkkilistoja ymmärtääkseen sivun sisällön nopeasti. Geneerinen linkkiteksti pakottaa heidät palaamaan jokaisen linkin kontekstiin, mikä hidastaa merkittävästi selauskokemusta.
+> 📊 **Käyttäjävaikutus**: Näytönlukijan käyttäjät selaavat linkkilistoja ymmärtääkseen sivun sisällön nopeasti. Yleiset linkkitekstit pakottavat heidät palaamaan takaisin kunkin linkin kontekstiin, mikä hidastaa selauskokemusta merkittävästi.
 
-### Yleiset linkkitekstin virheet, joita tulee välttää
+### Yleiset linkkitekstivirheet, joita tulee välttää
 
-Ymmärtämällä, mikä ei toimi, voit tunnistaa ja korjata saavutettavuusongelmia olemassa olevassa sisällössä.
+Sen ymmärtäminen, mikä ei toimi, auttaa tunnistamaan ja korjaamaan saavutettavuusongelmia olemassa olevassa sisällössä.
 
-**❌ Geneerinen linkkiteksti, joka ei tarjoa kontekstia:**
+**❌ Yleiset linkkitekstit, jotka eivät anna kontekstia:**
 
 ```html
 <!-- Meaningless when read from a link list -->
@@ -552,13 +712,13 @@ Ymmärtämällä, mikä ei toimi, voit tunnistaa ja korjata saavutettavuusongelm
 
 **Miksi nämä mallit epäonnistuvat:**
 - **"Klikkaa tästä"** ei kerro käyttäjille mitään kohteesta
-- **"Lue lisää"** toistettuna useita kertoja aiheuttaa hämmennystä
+- **"Lue lisää"** toistettuna useita kertoja aiheuttaa sekaannusta
 - **Raakatunnukset** ovat vaikeita näytönlukijoille lausua selkeästi
-- **Yksittäiset sanat** kuten "Mene" tai "Katso" puuttuvat kuvailevasta kontekstista
+- **Yksittäiset sanat** kuten "Mene" tai "Katso" eivät ole kuvailevia
 
 ### Erinomaisten linkkitekstien kirjoittaminen
 
-Kuvaileva linkkiteksti hyödyttää kaikkia—näkevät käyttäjät voivat nopeasti skannata linkkejä, ja näytönlukijan käyttäjät ymmärtävät kohteet välittömästi.
+Kuvaileva linkkiteksti hyödyttää kaikkia—näkökykyiset käyttäjät voivat nopeasti skannata linkkejä, ja näytönlukijan käyttäjät ymmärtävät kohteet välittömästi.
 
 **✅ Selkeät, kuvailevat linkkitekstiesimerkit:**
 
@@ -591,14 +751,14 @@ Kuvaileva linkkiteksti hyödyttää kaikkia—näkevät käyttäjät voivat nope
 - **Ole tarkka**: "Lataa neljännesvuosittainen talousraportti" vs. "Lataa"
 - **Sisällytä tiedostotyyppi ja koko**: "(PDF, 1.2MB)" ladattaville tiedostoille
 - **Mainitse, jos linkit avautuvat ulkoisesti**: "(avautuu uuteen ikkunaan)" tarvittaessa
-- **Käytä aktiivista kieltä**: "Ota yhteyttä" vs. "Yhteystiedot"
-- **Pidä lyhyenä**: Pyri 2–8 sanaan, jos mahdollista
+- **Käytä aktiivista kieltä**: "Ota yhteyttä" vs. "Yhteyssivu"
+- **Pidä se lyhyenä**: Pyri 2-8 sanaan, kun mahdollista
 
-### Kehittyneet linkkisaavutettavuuskuviot
+### Kehittyneet linkkien saavutettavuusmallit
 
-Joskus visuaaliset suunnittelurajoitukset tai tekniset vaatimukset vaativat erityisiä ratkaisuja. Tässä on kehittyneitä tekniikoita yleisiin haastaviin tilanteisiin:
+Joskus visuaalisen suunnittelun rajoitukset tai tekniset vaatimukset vaativat erityisiä ratkaisuja. Tässä on kehittyneitä tekniikoita yleisiin haastaviin tilanteisiin:
 
-**ARIA:n käyttö lisäkontekstin tarjoamiseksi:**
+**ARIA:n käyttö lisäkontekstin tarjoamiseen:**
 
 ```html
 <!-- When button text must be short but needs more context -->
@@ -671,33 +831,137 @@ Joskus visuaaliset suunnittelurajoitukset tai tekniset vaatimukset vaativat erit
 
 ✅ **Testaa linkkikontekstisi**: Käytä selaimesi kehittäjätyökaluja luodaksesi listan kaikista sivusi linkeistä. Voitko ymmärtää jokaisen linkin tarkoituksen ilman ympäröivää kontekstia?
 
-## ARIA: HTML-saavutettavuuden tehostaminen
+## ARIA: HTML:n saavutettavuuden tehostaminen
 
-[Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) on kuin universaali kääntäjä monimutkaisten verkkosovellustesi ja avustavien teknologioiden välillä. Kun pelkkä HTML ei riitä ilmaisemaan kaikkea, mitä interaktiiviset komponenttisi tekevät, ARIA astuu kuvaan täyttämään nämä aukot.
+[Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA
+**ARIA:n viisi kategoriaa:**
 
-Ajattelen ARIA:a kuin hyödyllisten merkintöjen lisäämistä HTML:ään—vähän kuin näyttämöohjeita näytelmäkäsikirjoituksessa, jotka auttavat näyttelijöitä ymmärtämään roolinsa ja suhteensa.
+1. **Roolit**: Mikä elementti tämä on? (`button`, `tab`, `dialog`)
+2. **Ominaisuudet**: Mitkä ovat sen ominaisuudet? (`aria-required`, `aria-haspopup`)
+3. **Tilat**: Mikä on sen nykyinen tila? (`aria-expanded`, `aria-checked`)
+4. **Maamerkit**: Missä se sijaitsee sivurakenteessa? (`banner`, `navigation`, `main`)
+5. **Live-alueet**: Kuinka muutokset tulisi ilmoittaa? (`aria-live`, `aria-atomic`)
 
-**Tärkein sääntö ARIA:sta**: Käytä aina ensin semanttista HTML:ää ja lisää sitten ARIA parantaaksesi sitä. Ajattele ARIA:a mausteena, ei pääruokana. Sen pitäisi selventää ja parantaa HTML-rakennetta, ei koskaan korvata sitä. Perusta kuntoon ensin!
+### Tärkeimmät ARIA-mallit moderneille verkkosovelluksille
 
-### Strateginen ARIA:n käyttö
+Nämä mallit ratkaisevat yleisimmät saavutettavuushaasteet interaktiivisissa verkkosovelluksissa:
 
-ARIA on tehokas, mutta sen mukana tulee vastuu. Väärin käytettynä ARIA voi heikentää saavutettavuutta enemmän kuin sen puuttuminen. Tässä tilanteet, joissa sitä kannattaa käyttää ja miten se tehdään oikein:
+**Elementtien nimeäminen ja kuvaaminen:**
 
-**✅ Käytä ARIA:a, kun:**
-- Luot mukautettuja interaktiivisia widgettejä (haitarit, välilehdet, karusellit)
-- Rakennat dynaamista sisältöä, joka muuttuu ilman sivun uudelleenlatausta
-- Tarjoat lisäkontekstia monimutkaisille käyttöliittymäsuhteille
-- Ilmoitat lataustiloista tai reaaliaikaisista sisällön päivityksistä
-- Luot sovellusmaisia käyttöliittymiä mukautetuilla kontrolleilla
+```html
+<!-- aria-label: Provides accessible name when visible text isn't sufficient -->
+<button aria-label="Close newsletter subscription dialog">×</button>
 
-**❌ Vältä ARIA:a, kun:**
-- Tavalliset HTML-elementit tarjoavat jo tarvittavat semantiikat
-- Et ole varma, miten toteuttaa se oikein
-- Se toistaa tietoa, joka on jo annettu semanttisella HTML:llä
-- Et ole testannut sitä todellisilla avustavilla teknologioilla
+<!-- aria-labelledby: References existing text as the accessible name -->
+<section aria-labelledby="news-heading">
+  <h2 id="news-heading">Latest News</h2>
+  <!-- news content -->
+</section>
 
-> 🎯 **ARIA:n kultainen sääntö**: "Älä muuta semantiikkaa, ellei se ole ehdottoman välttämätöntä, varmista aina näppäimistön saavut
-5. **Aloita yksinkertaisesti**: Monimutkaisissa ARIA-toteutuksissa on suurempi virheiden riski
+<!-- aria-describedby: Links to additional descriptive text -->
+<input type="password" 
+       aria-describedby="pwd-requirements pwd-strength"
+       required>
+<div id="pwd-requirements">
+  Password must contain at least 8 characters, including uppercase, lowercase, and numbers.
+</div>
+<div id="pwd-strength" aria-live="polite">
+  <!-- Dynamic password strength indicator -->
+</div>
+```
+
+**Live-alueet dynaamiselle sisällölle:**
+
+```html
+<!-- Polite announcements (don't interrupt current speech) -->
+<div aria-live="polite" id="status-updates">
+  <!-- Status messages appear here -->
+</div>
+
+<!-- Assertive announcements (interrupt and announce immediately) -->
+<div aria-live="assertive" id="urgent-alerts">
+  <!-- Error messages and critical alerts -->
+</div>
+
+<!-- Loading states with live regions -->
+<button id="submit-btn" aria-describedby="loading-status">
+  Submit Application
+</button>
+<div id="loading-status" aria-live="polite" aria-atomic="true">
+  <!-- "Processing your application..." appears here -->
+</div>
+```
+
+**Interaktiivisen widgetin esimerkki (haitari):**
+
+```html
+<div class="accordion">
+  <h3>
+    <button aria-expanded="false" 
+            aria-controls="panel-1" 
+            id="accordion-trigger-1"
+            class="accordion-trigger">
+      Accessibility Guidelines
+    </button>
+  </h3>
+  <div id="panel-1" 
+       role="region"
+       aria-labelledby="accordion-trigger-1" 
+       hidden>
+    <p>WCAG 2.1 provides comprehensive guidelines...</p>
+  </div>
+</div>
+```
+
+```javascript
+// JavaScript to manage accordion state
+function toggleAccordion(trigger) {
+  const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+  const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  
+  // Toggle states
+  trigger.setAttribute('aria-expanded', !isExpanded);
+  panel.hidden = isExpanded;
+  
+  // Announce change to screen readers
+  const status = document.getElementById('status-updates');
+  status.textContent = isExpanded ? 'Section collapsed' : 'Section expanded';
+}
+```
+
+### ARIA:n toteutuksen parhaat käytännöt
+
+ARIA on tehokas työkalu, mutta sen käyttö vaatii huolellista toteutusta. Näiden ohjeiden noudattaminen auttaa varmistamaan, että ARIA parantaa saavutettavuutta eikä heikennä sitä:
+
+**🛡️ Keskeiset periaatteet:**
+
+```mermaid
+flowchart TD
+    A[🚀 Start with semantic HTML] --> B{Does HTML provide needed semantics?}
+    B -->|Yes| C[✅ Use HTML only]
+    B -->|No| D[Consider ARIA enhancement]
+    D --> E{Can you achieve it with simpler means?}
+    E -->|Yes| F[🔄 Simplify approach]
+    E -->|No| G[📝 Implement ARIA carefully]
+    G --> H[🧪 Test with real AT]
+    H --> I{Works as expected?}
+    I -->|No| J[🔧 Debug and fix]
+    I -->|Yes| K[✅ Success!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+
+1. **Ensisijaisesti semanttinen HTML**: Käytä aina `<button>`-elementtiä mieluummin kuin `<div role="button">`
+2. **Älä riko semantiikkaa**: Älä koskaan ohita olemassa olevaa HTML-merkitystä (vältä `<h1 role="button">`)
+3. **Säilytä näppäimistön käytettävyys**: Kaikkien interaktiivisten ARIA-elementtien tulee olla täysin näppäimistöllä käytettäviä
+4. **Testaa oikeilla käyttäjillä**: ARIA-tuki vaihtelee merkittävästi eri apuvälineiden välillä
+5. **Aloita yksinkertaisesti**: Monimutkaiset ARIA-toteutukset ovat alttiimpia virheille
 
 **🔍 Testausprosessi:**
 
@@ -713,29 +977,46 @@ graph TD
     G --> B
 ```
 
-**🚫 Yleisiä ARIA-virheitä, joita kannattaa välttää:**
+**🚫 Yleisiä ARIA-virheitä, joita tulee välttää:**
 
 - **Ristiriitainen tieto**: Älä kumoa HTML:n semantiikkaa
-- **Liiallinen merkintä**: Liian paljon ARIA-tietoa voi hämmentää käyttäjiä
+- **Liiallinen merkintä**: Liiallinen ARIA-tieto voi hämmentää käyttäjiä
 - **Staattinen ARIA**: ARIA-tilojen päivittämisen unohtaminen sisällön muuttuessa
 - **Testaamattomat toteutukset**: ARIA, joka toimii teoriassa mutta epäonnistuu käytännössä
 - **Puuttuva näppäimistötuki**: ARIA-roolit ilman vastaavia näppäimistötoimintoja
 
-> 💡 **Testausresurssit**: Käytä työkaluja, kuten [accessibility-checker](https://www.npmjs.com/package/accessibility-checker), ARIA:n automaattiseen validointiin, mutta testaa aina myös oikeilla ruudunlukijoilla saadaksesi täydellisen kokemuksen.
+> 💡 **Testausresurssit**: Käytä työkaluja kuten [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) ARIA:n automaattiseen validointiin, mutta testaa aina oikeilla ruudunlukijoilla täydellisen kokemuksen varmistamiseksi.
 
-✅ **Opi asiantuntijoilta**: Tutustu [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) -oppaaseen, joka sisältää testattuja malleja ja monimutkaisten interaktiivisten widgettien toteutuksia.
+### 🎭 **ARIA-taitojen tarkistus: Valmiina monimutkaisiin vuorovaikutuksiin?**
 
-## Kuvien ja median saavutettavuus
+**Arvioi ARIA-osaamisesi:**
+- Milloin valitsisit ARIA:n semanttisen HTML:n sijaan? (Vihje: melkein koskaan!)
+- Osaatko selittää, miksi `<div role="button">` on yleensä huonompi kuin `<button>`?
+- Mikä on tärkein asia, joka tulee muistaa ARIA-testauksesta?
 
-Visuaalinen ja audiosisältö ovat olennainen osa nykyaikaisia verkkokokemuksia, mutta ne voivat luoda esteitä, jos niitä ei toteuteta huolellisesti. Tavoitteena on varmistaa, että median tarjoama tieto ja tunnevaikutus tavoittavat jokaisen käyttäjän. Kun tämän oppii, siitä tulee luonnollista.
+```mermaid
+pie title "Common ARIA Usage Patterns"
+    "Labels & Descriptions" : 40
+    "Live Regions" : 25
+    "Widget States" : 20
+    "Complex Controls" : 15
+```
 
-Erilaiset mediat vaativat erilaisia saavutettavuusratkaisuja. Se on kuin ruoanlaittoa—et käsittelisi herkkää kalaa samalla tavalla kuin tuhtia pihviä. Näiden erojen ymmärtäminen auttaa valitsemaan oikean ratkaisun kuhunkin tilanteeseen.
+> **Keskeinen oivallus**: Suurin osa ARIA:n käytöstä liittyy elementtien nimeämiseen ja kuvaamiseen. Monimutkaiset widget-mallit ovat paljon harvinaisempia kuin voisi kuvitella!
+
+✅ **Opi asiantuntijoilta**: Tutustu [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) -oppaaseen, joka sisältää testattuja malleja ja toteutuksia monimutkaisille interaktiivisille widgeteille.
+
+## Kuvien ja median saavutettavuuden parantaminen
+
+Visuaalinen ja audiosisältö ovat olennainen osa moderneja verkkokokemuksia, mutta ne voivat luoda esteitä, jos niitä ei toteuteta huolellisesti. Tavoitteena on varmistaa, että median tarjoama tieto ja tunnevaikutus tavoittavat jokaisen käyttäjän. Kun tämän oppii, siitä tulee luonnollista.
+
+Eri mediatyypit vaativat erilaisia saavutettavuusratkaisuja. Se on kuin ruoanlaittoa—et käsittelisi herkkää kalaa samalla tavalla kuin tuhtia pihviä. Näiden erojen ymmärtäminen auttaa valitsemaan oikean ratkaisun kuhunkin tilanteeseen.
 
 ### Strateginen kuvien saavutettavuus
 
 Jokaisella verkkosivustosi kuvalla on tarkoitus. Tämän tarkoituksen ymmärtäminen auttaa sinua kirjoittamaan parempaa vaihtoehtoista tekstiä ja luomaan osallistavampia kokemuksia.
 
-**Neljä kuva-tyyppiä ja niiden alt-tekstistrategiat:**
+**Kuvien neljä tyyppiä ja niiden alt-tekstistrategiat:**
 
 **Informatiiviset kuvat** - välittävät tärkeää tietoa:
 ```html
@@ -779,11 +1060,11 @@ Jokaisella verkkosivustosi kuvalla on tarkoitus. Tämän tarkoituksen ymmärtäm
 
 **Audiovaatimukset:**
 - **Transkriptiot**: Kaiken puhutun sisällön tekstiversio
-- **Visuaaliset indikaattorit**: Pelkästään audiosisällön osalta tarjoa visuaalisia vihjeitä
+- **Visuaaliset indikaattorit**: Tarjoa visuaalisia vihjeitä pelkästään audiosisällölle
 
 ### Modernit kuvatekniikat
 
-**Koristeellisten kuvien käyttö CSS:n avulla:**
+**Koristeellisten kuvien käyttö CSS:llä:**
 ```css
 .hero-section {
   background-image: url('decorative-hero.jpg');
@@ -804,17 +1085,36 @@ Jokaisella verkkosivustosi kuvalla on tarkoitus. Tämän tarkoituksen ymmärtäm
 
 ## Näppäimistönavigointi ja fokuksen hallinta
 
-Monet käyttäjät navigoivat verkossa pelkästään näppäimistön avulla. Tähän kuuluvat motorisia vammoja omaavat henkilöt, tehokäyttäjät, jotka pitävät näppäimistöä nopeampana kuin hiirtä, sekä kaikki, joiden hiiri on lakannut toimimasta. Varmistamalla, että sivustosi toimii hyvin näppäimistön syötteellä, teet siitä tehokkaamman kaikille.
+Monet käyttäjät navigoivat verkossa pelkästään näppäimistöä käyttäen. Tämä koskee motorisia rajoitteita omaavia henkilöitä, tehokäyttäjiä, jotka pitävät näppäimistöä nopeampana kuin hiirtä, ja kaikkia, joiden hiiri on lakannut toimimasta. Varmistamalla, että sivustosi toimii hyvin näppäimistösyötteellä, teet siitä tehokkaamman kaikille.
 
-### Välttämättömät näppäimistönavigointimallit
+```mermaid
+flowchart LR
+    A[⌨️ Keyboard Navigation] --> B[Tab Order]
+    A --> C[Focus Indicators]
+    A --> D[Skip Links]
+    A --> E[Keyboard Shortcuts]
+    
+    B --> B1[Logical sequence<br/>All interactive elements<br/>No tab traps]
+    C --> C1[Visible outlines<br/>High contrast<br/>Clear boundaries]
+    D --> D1[Skip to main<br/>Skip to nav<br/>Bypass repetitive]
+    E --> E1[Escape to close<br/>Enter to activate<br/>Arrows in groups]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+
+### Keskeiset näppäimistönavigointimallit
 
 **Standardit näppäimistötoiminnot:**
-- **Tab**: Siirtää fokuksen eteenpäin interaktiivisten elementtien läpi
-- **Shift + Tab**: Siirtää fokuksen taaksepäin
+- **Tab**: Siirtää fokusta eteenpäin interaktiivisten elementtien välillä
+- **Shift + Tab**: Siirtää fokusta taaksepäin
 - **Enter**: Aktivoi painikkeet ja linkit
 - **Space**: Aktivoi painikkeet, valitsee valintaruudut
 - **Nuolinäppäimet**: Navigoi komponenttiryhmien sisällä (radiopainikkeet, valikot)
-- **Escape**: Sulkee modaalit, pudotusvalikot tai peruuttaa toiminnot
+- **Escape**: Sulkee modaalit, pudotusvalikot tai peruuttaa toimintoja
 
 ### Fokuksen hallinnan parhaat käytännöt
 
@@ -859,9 +1159,9 @@ button:focus-visible {
 </form>
 ```
 
-### Fokuksen lukitseminen modaalissa
+### Fokuksen lukitseminen modaaleissa
 
-Kun modaalidialogi avataan, fokus tulisi lukita modaalin sisälle:
+Kun modaalidialogi avataan, fokuksen tulisi olla lukittuna modaalin sisälle:
 
 ```javascript
 // Modern focus trap implementation
@@ -894,15 +1194,15 @@ function trapFocus(element) {
 }
 ```
 
-✅ **Testaa näppäimistönavigointi**: Kokeile navigoida verkkosivustollasi pelkästään Tab-näppäimen avulla. Pääsetkö kaikkiin interaktiivisiin elementteihin? Onko fokusjärjestys looginen? Ovatko fokusindikaattorit selvästi näkyvissä?
+✅ **Testaa näppäimistönavigointi**: Kokeile navigoida verkkosivustollasi pelkästään Tab-näppäintä käyttäen. Pääsetkö kaikkiin interaktiivisiin elementteihin? Onko fokusjärjestys looginen? Ovatko fokusindikaattorit selvästi näkyvissä?
 
 ## Lomakkeiden saavutettavuus
 
-Lomakkeet ovat kriittisiä käyttäjän vuorovaikutukselle ja vaativat erityistä huomiota saavutettavuuden suhteen.
+Lomakkeet ovat keskeisiä käyttäjän vuorovaikutuksessa ja vaativat erityistä huomiota saavutettavuuteen.
 
-### Tunnisteiden ja lomakekontrollien yhdistäminen
+### Etikettien ja lomakekontrollien yhdistäminen
 
-**Jokaisella lomakekontrollilla tulee olla tunniste:**
+**Jokaisella lomakekontrollilla tulee olla etiketti:**
 ```html
 <!-- Explicit labeling (preferred) -->
 <label for="username">Username:</label>
@@ -932,7 +1232,7 @@ Lomakkeet ovat kriittisiä käyttäjän vuorovaikutukselle ja vaativat erityist�
 ```
 
 **Lomakevalidoinnin parhaat käytännöt:**
-- Käytä `aria-invalid` osoittamaan virheelliset kentät
+- Käytä `aria-invalid`-attribuuttia osoittamaan virheelliset kentät
 - Tarjoa selkeät ja tarkat virheilmoitukset
 - Käytä `role="alert"` tärkeiden virheilmoitusten ilmoittamiseen
 - Näytä virheet sekä välittömästi että lomakkeen lähetyksen yhteydessä
@@ -960,21 +1260,21 @@ Lomakkeet ovat kriittisiä käyttäjän vuorovaikutukselle ja vaativat erityist�
 </fieldset>
 ```
 
-## Saavutettavuusmatkasi: Tärkeimmät opit
+## Saavutettavuusmatkasi: Keskeiset opit
 
-Onnittelut! Olet juuri saanut perustiedot todella osallistavien verkkokokemusten luomiseksi. Tämä on todella innostavaa! Verkkosaavutettavuus ei ole vain vaatimusten täyttämistä—se on erilaisten tapojen tunnistamista, joilla ihmiset ovat vuorovaikutuksessa digitaalisen sisällön kanssa, ja suunnittelua tämän monimuotoisuuden huomioimiseksi.
+Onnittelut! Olet juuri saanut perustiedot todella osallistavien verkkokokemusten luomiseksi. Tämä on aika jännittävää! Verkkosaavutettavuus ei ole pelkästään vaatimusten täyttämistä—se on monimuotoisuuden tunnistamista ja sen suunnittelua varten.
 
 Olet nyt osa kasvavaa kehittäjäyhteisöä, joka ymmärtää, että hyvä suunnittelu toimii kaikille. Tervetuloa joukkoon!
 
 **🎯 Saavutettavuustyökalupakkisi sisältää nyt:**
 
-| Periaate | Toteutus | Vaikutus |
-|----------|----------|----------|
-| **Semanttinen HTML-perusta** | Käytä oikeita HTML-elementtejä niiden tarkoituksen mukaisesti | Ruudunlukijat voivat navigoida tehokkaasti, näppäimistöt toimivat automaattisesti |
+| Keskeinen periaate | Toteutus | Vaikutus |
+|--------------------|----------|----------|
+| **Semanttinen HTML-pohja** | Käytä oikeita HTML-elementtejä niiden tarkoituksen mukaisesti | Ruudunlukijat voivat navigoida tehokkaasti, näppäimistöt toimivat automaattisesti |
 | **Osallistava visuaalinen suunnittelu** | Riittävä kontrasti, merkityksellinen värien käyttö, näkyvät fokusindikaattorit | Selkeä kaikille missä tahansa valaistusolosuhteissa |
-| **Kuvaileva sisältö** | Merkityksellinen linkkiteksti, alt-teksti, otsikot | Käyttäjät ymmärtävät sisällön ilman visuaalista kontekstia |
-| **Näppäimistön saavutettavuus** | Tab-järjestys, näppäimistökomennot, fokuksen hallinta | Motorinen saavutettavuus ja tehokäyttäjien tehokkuus |
-| **ARIA-parannukset** | Strateginen käyttö semanttisten aukkojen täyttämiseksi | Monimutkaiset sovellukset toimivat apuvälineiden kanssa |
+| **Kuvaileva sisältö** | Merkitykselliset linkkitekstit, alt-tekstit, otsikot | Käyttäjät ymmärtävät sisällön ilman visuaalista kontekstia |
+| **Näppäimistön saavutettavuus** | Tab-järjestys, näppäimistöoikotiet, fokuksen hallinta | Motorinen saavutettavuus ja tehokäyttäjien tehokkuus |
+| **ARIA:n parannukset** | Strateginen käyttö semanttisten aukkojen täyttämiseksi | Monimutkaiset sovellukset toimivat apuvälineiden kanssa |
 | **Kattava testaus** | Automatisoidut työkalut + manuaalinen tarkistus + oikeiden käyttäjien testaus | Havaitse ongelmat ennen kuin ne vaikuttavat käyttäjiin |
 
 **🚀 Seuraavat askeleesi:**
@@ -982,13 +1282,13 @@ Olet nyt osa kasvavaa kehittäjäyhteisöä, joka ymmärtää, että hyvä suunn
 1. **Sisällytä saavutettavuus työnkulkuusi**: Tee testauksesta luonnollinen osa kehitysprosessiasi
 2. **Opi oikeilta käyttäjiltä**: Pyydä palautetta apuvälineitä käyttäviltä ihmisiltä
 3. **Pysy ajan tasalla**: Saavutettavuustekniikat kehittyvät uusien teknologioiden ja standardien myötä
-4. **Puolusta osallistamista**: Jaa tietosi ja tee saavutettavuudesta tiimisi prioriteetti
+4. **Puolusta osallistavuutta**: Jaa tietosi ja tee saavutettavuudesta tiimisi prioriteetti
 
 > 💡 **Muista**: Saavutettavuusrajoitukset johtavat usein innovatiivisiin, elegantteihin ratkaisuihin, jotka hyödyttävät kaikkia. Jalkakäytävien rampit, tekstitykset ja ääniohjaus alkoivat saavutettavuusominaisuuksina ja muuttuivat valtavirran parannuksiksi.
 
-**Liiketoiminnan näkökulmasta se on täysin järkevää**: Saavutettavat verkkosivustot tavoittavat enemmän käyttäjiä, sijoittuvat paremmin hakukoneissa, aiheuttavat vähemmän ylläpitokustannuksia ja välttävät oikeudelliset riskit. Mutta rehellisesti sanottuna? Todellinen syy välittää saavutettavuudesta on paljon syvällisempi. Saavutettavat verkkosivustot ilmentävät verkon parhaita arvoja—avoimuutta, osallistavuutta ja ajatusta siitä, että kaikilla on oikeus tietoon.
+**Liiketoimintaperuste on kristallinkirkas**: Saavutettavat verkkosivustot tavoittavat enemmän käyttäjiä, sijoittuvat paremmin hakukoneissa, ovat edullisempia ylläpitää ja välttävät oikeudelliset riskit. Mutta rehellisesti? Todellinen syy välittää saavutettavuudesta menee paljon syvemmälle. Saavutettavat verkkosivustot ilmentävät verkon parhaita arvoja—avoimuutta, osallistavuutta ja ajatusta siitä, että kaikilla on oikeus tietoon.
 
-Olet nyt valmis rakentamaan tulevaisuuden osallistavaa verkkoa. Jokainen luomasi saavutettava sivusto tekee internetistä vieraanvaraisemman paikan kaikille. Se on aika mahtavaa, kun sitä ajattelee!
+Olet nyt valmis rakentamaan tulevaisuuden osallistavaa verkkoa. Jokainen luomasi saavutettava sivusto tekee internetistä kutsuvamman paikan kaikille. Se on aika mahtavaa, kun sitä ajattelee!
 
 ## Lisäresurssit
 
@@ -1000,29 +1300,28 @@ Jatka saavutettavuuden oppimismatkaasi näiden olennaisten resurssien avulla:
 - [WebAIM Guidelines](https://webaim.org/) - Käytännönläheistä ja aloittelijaystävällistä saavutettavuusohjeistusta
 
 **🛠️ Työkalut ja testausresurssit:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - Teollisuusstandardin mukainen saavutettavuustestaus
-- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Vaiheittainen saavutettavuuden tarkistus
+- [axe DevTools](https://www.deque.com/axe/devtools/) - Alan standardi saavutettavuustestaukseen
+- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Askeltarkistus saavutettavuuden varmistamiseen
 - [Accessibility Insights](https://accessibilityinsights.io/) - Microsoftin kattava testauspaketti
 - [Color Oracle](https://colororacle.org/) - Värisokeussimulaattori suunnittelutestaukseen
 
 **🎓 Oppiminen ja yhteisö:**
 - [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey9/) - Oikeiden käyttäjien mieltymykset ja käyttäytyminen
 - [Inclusive Components](https://inclusive-components.design/) - Modernit saavutettavat komponenttimallit
-- [A11y Coffee](https://a11y.coffee/) - Nopeat saavutettavuusvinkit ja näkemykset
+- [A11y Coffee](https://a11y.coffee/) - Nopeat saavutettavuusvinkit ja oivallukset
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) - W3C:n kattavat saavutettavuusresurssit
 
 **🎥 Käytännön oppiminen:**
 - [Accessibility Developer Guide](https://www.accessibility-developer-guide.com/) - Käytännön toteutusohjeet
-- [Deque University](https://dequeuniversity.com/) - Ammattimaiset saavutettavuuskoulutukset
+- [Deque University](https://dequeuniversity.com/) - Ammattimaiset saavutettavuuskoulutuskurssit
 
 ## GitHub Copilot Agent -haaste 🚀
 
 Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
 
-**Kuvaus:** Luo saavutettava modaalidialogikomponentti, joka demonstroi oikeaa fokuksen hallintaa, ARIA-attribuutteja ja näppäimistönavigointimalleja.
+**Kuvaus:** Luo saavutettava modaalidialogikomponentti, joka osoittaa oikean fokuksen hallinnan, ARIA-attribuutit ja näppäimistönavigointimallit.
 
-**Ohje:** Rakenna täydellinen modaalidialogikomponentti HTML:llä, CSS:llä ja JavaScriptillä, joka sisältää: oikean fokuksen lukituksen, ESC-näppäimen sulkemiseen, klikkauksen ulkopuolelle sulkemiseen, ARIA-attribuutit ruudunlukijoille ja näkyvät fokusindikaattorit. Modaalin tulisi sisältää lomake, jossa on asianmukaiset tunnisteet ja virheiden käsittely. Varmista, että komponentti täyttää WCAG 2.1 AA -standardit.
-
+**Tehtävä:** Rakenna täydellinen modaalidialogikomponentti HTML:llä, CSS:llä ja JavaScriptillä, joka sisältää: oikean fokuksen lukitsemisen, ESC-näppäimen sulkemiseen, klikkauksen ulkopuolelle sulkemiseen, ARIA-attribuutit ruudunlukijoille ja näkyvät fokusindikaattorit. Modaalin tulisi sisältää lomake, jossa on asianmukaiset etiketit ja virheiden käsittely. Varmista, että komponentti täyttää WCAG 2.1 AA -standardit.
 
 ## 🚀 Haaste
 
@@ -1087,8 +1386,8 @@ Ota tämä HTML ja kirjoita se mahdollisimman saavutettavaksi käyttäen oppimia
 **Tehdyt parannukset:**
 - Lisätty asianmukainen semanttinen HTML-rakenne
 - Korjattu otsikkohierarkia (yksi h1, looginen eteneminen)
-- Lisätty merkityksellinen linkkiteksti "klikkaa tästä" sijaan
-- Sisällytetty asianmukaiset ARIA-tunnisteet navigointiin
+- Lisätty merkitykselliset linkkitekstit "klikkaa tästä" sijaan
+- Sisällytetty asianmukaiset ARIA-merkinnät navigointiin
 - Lisätty lang-attribuutti ja asianmukaiset meta-tunnisteet
 - Käytetty button-elementtiä interaktiivisille elementeille
 - Jäsennelty alatunnisteen sisältö asianmukaisilla maamerkeillä
@@ -1098,13 +1397,46 @@ Ota tämä HTML ja kirjoita se mahdollisimman saavutettavaksi käyttäen oppimia
 
 ## Kertaus ja itseopiskelu
 
-Monilla valtioilla on lakeja saavutettavuusvaatimuksista. Tutustu kotimaasi saavutettavuuslakeihin. Mitä katetaan ja mitä ei? Esimerkkinä [tämä valtion verkkosivusto](https://accessibility.blog.gov.uk/).
+Monilla valtioilla on lakeja saavutettavuusvaatimuksista. Tutustu kotimaasi saavutettavuuslakeihin. Mitä ne kattavat ja mitä eivät? Es
+- [ ] Harjoittele näppäimistön käyttöä viidellä eri monimutkaisella verkkosivustolla  
+- [ ] Rakenna yksinkertainen lomake, jossa on asianmukaiset tunnisteet, virheenkäsittely ja ARIA  
+- [ ] Liity saavutettavuusyhteisöön (A11y Slack, WebAIM-foorumi)  
+- [ ] Katso, kuinka oikeat käyttäjät, joilla on toimintarajoitteita, navigoivat verkkosivustoilla (YouTubesta löytyy hyviä esimerkkejä)  
 
-## Tehtävä
- 
-[Analysoi ei-saavutettava verkkosivusto](assignment.md)
+### 🌟 **Kuukauden mittainen muutosmatkasi**  
+- [ ] Ota saavutettavuustestaus osaksi kehitysprosessiasi  
+- [ ] Osallistu avoimen lähdekoodin projektiin korjaamalla saavutettavuusongelmia  
+- [ ] Tee käytettävyystestausta henkilön kanssa, joka käyttää apuvälineitä  
+- [ ] Rakenna tiimillesi saavutettava komponenttikirjasto  
+- [ ] Edistä saavutettavuutta työpaikallasi tai yhteisössäsi  
+- [ ] Mentoroi henkilöä, joka on uusi saavutettavuuden parissa  
 
-Lähde: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
+### 🏆 **Lopullinen saavutettavuusmestarin tarkistus**
+
+**Juhlista saavutettavuusmatkaasi:**  
+- Mikä oli yllättävin asia, jonka opit siitä, miten ihmiset käyttävät verkkosivustoja?  
+- Mikä saavutettavuusperiaate resonoi eniten kehitystyylisi kanssa?  
+- Miten saavutettavuuden oppiminen on muuttanut näkökulmaasi suunnitteluun?  
+- Mikä on ensimmäinen saavutettavuusparannus, jonka haluat tehdä oikeassa projektissa?  
+
+```mermaid
+journey
+    title Your Accessibility Confidence Evolution
+    section Today
+      Overwhelmed: 3: You
+      Curious: 4: You
+      Motivated: 5: You
+    section This Week
+      Practicing: 4: You
+      Testing: 5: You
+      Understanding: 5: You
+    section Next Month
+      Advocating: 5: You
+      Leading: 5: You
+      Inclusive by Default: 5: You
+```
+  
+> 🌍 **Olet nyt saavutettavuusmestari!** Ymmärrät, että loistavat verkkokokemukset toimivat kaikille, riippumatta siitä, miten he käyttävät verkkoa. Jokainen rakentamasi saavutettava ominaisuus tekee internetistä inklusiivisemman. Verkko tarvitsee kaltaisiasi kehittäjiä, jotka näkevät saavutettavuuden mahdollisuutena luoda parempia kokemuksia kaikille käyttäjille, ei rajoitteena. Tervetuloa mukaan liikkeeseen! 🎉  
 
 ---
 

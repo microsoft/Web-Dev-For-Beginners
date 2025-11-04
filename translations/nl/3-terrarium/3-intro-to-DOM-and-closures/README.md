@@ -1,58 +1,162 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
-  "translation_date": "2025-10-23T00:56:49+00:00",
+  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
+  "translation_date": "2025-11-04T01:57:31+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "nl"
 }
 -->
 # Terrarium Project Deel 3: DOM-manipulatie en JavaScript Closures
 
+```mermaid
+journey
+    title Your JavaScript DOM Journey
+    section Foundation
+      Understand DOM: 3: Student
+      Learn closures: 4: Student
+      Connect elements: 4: Student
+    section Interaction
+      Setup drag events: 4: Student
+      Track coordinates: 5: Student
+      Handle movement: 5: Student
+    section Polish
+      Add cleanup: 4: Student
+      Test functionality: 5: Student
+      Complete terrarium: 5: Student
+```
+
 ![DOM en een closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.nl.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Welkom bij een van de meest boeiende aspecten van webontwikkeling - interactief maken! Het Document Object Model (DOM) is als een brug tussen je HTML en JavaScript, en vandaag gaan we het gebruiken om je terrarium tot leven te brengen. Toen Tim Berners-Lee de eerste webbrowser creëerde, stelde hij zich een web voor waar documenten dynamisch en interactief konden zijn - het DOM maakt die visie mogelijk.
+Welkom bij een van de meest boeiende aspecten van webontwikkeling - interactief maken! Het Document Object Model (DOM) is als een brug tussen je HTML en JavaScript, en vandaag gaan we het gebruiken om je terrarium tot leven te brengen. Toen Tim Berners-Lee de eerste webbrowser creëerde, stelde hij zich een web voor waar documenten dynamisch en interactief konden zijn - de DOM maakt die visie mogelijk.
 
-We gaan ook JavaScript closures verkennen, wat in het begin misschien intimiderend klinkt. Zie closures als het creëren van "geheugenpockets" waarin je functies belangrijke informatie kunnen onthouden. Het is alsof elke plant in je terrarium zijn eigen gegevensrecord heeft om zijn positie bij te houden. Aan het einde van deze les begrijp je hoe natuurlijk en nuttig ze zijn.
+We gaan ook JavaScript closures verkennen, wat in het begin misschien intimiderend klinkt. Zie closures als het creëren van "geheugenruimtes" waarin je functies belangrijke informatie kunnen onthouden. Het is alsof elke plant in je terrarium zijn eigen gegevensrecord heeft om zijn positie bij te houden. Aan het einde van deze les begrijp je hoe natuurlijk en nuttig ze zijn.
 
-Dit is wat we gaan bouwen: een terrarium waarin gebruikers planten overal kunnen slepen en neerzetten waar ze willen. Je leert de technieken voor DOM-manipulatie die alles aandrijven, van drag-and-drop bestandsuploads tot interactieve games. Laten we je terrarium tot leven brengen.
+Dit is wat we gaan bouwen: een terrarium waarin gebruikers planten overal kunnen slepen en neerzetten. Je leert de technieken voor DOM-manipulatie die alles aandrijven, van drag-and-drop bestandsuploads tot interactieve games. Laten we je terrarium tot leven brengen.
 
-## Quiz voor de les
+```mermaid
+mindmap
+  root((DOM & JavaScript))
+    DOM Tree
+      Element Selection
+      Property Access
+      Event Handling
+      Dynamic Updates
+    Events
+      Pointer Events
+      Mouse Events
+      Touch Events
+      Event Listeners
+    Closures
+      Private Variables
+      Function Scope
+      Memory Persistence
+      State Management
+    Drag & Drop
+      Position Tracking
+      Coordinate Math
+      Event Lifecycle
+      User Interaction
+    Modern Patterns
+      Event Delegation
+      Performance
+      Cross-Device
+      Accessibility
+```
 
-[Quiz voor de les](https://ff-quizzes.netlify.app/web/quiz/19)
+## Pre-Lecture Quiz
 
-## Het DOM begrijpen: Jouw toegangspoort tot interactieve webpagina's
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/19)
 
-Het Document Object Model (DOM) is hoe JavaScript communiceert met je HTML-elementen. Wanneer je browser een HTML-pagina laadt, creëert het een gestructureerde representatie van die pagina in het geheugen - dat is het DOM. Zie het als een stamboom waarin elk HTML-element een familielid is dat JavaScript kan benaderen, wijzigen of herschikken.
+## Begrijpen van de DOM: Jouw toegangspoort tot interactieve webpagina's
 
-DOM-manipulatie transformeert statische pagina's in interactieve websites. Elke keer dat je een knop van kleur ziet veranderen bij het hoveren, inhoud ziet bijwerken zonder de pagina te verversen, of elementen kunt verslepen, is dat het werk van DOM-manipulatie.
+Het Document Object Model (DOM) is hoe JavaScript communiceert met je HTML-elementen. Wanneer je browser een HTML-pagina laadt, creëert het een gestructureerde representatie van die pagina in het geheugen - dat is de DOM. Zie het als een stamboom waarin elk HTML-element een familielid is dat JavaScript kan benaderen, wijzigen of herschikken.
 
-![DOM boomweergave](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.nl.png)
+DOM-manipulatie transformeert statische pagina's in interactieve websites. Elke keer dat je een knop van kleur ziet veranderen bij hover, inhoud ziet bijwerken zonder de pagina te verversen, of elementen kunt verslepen, is dat DOM-manipulatie in actie.
 
-> Een weergave van het DOM en de HTML-markup die ernaar verwijst. Van [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+```mermaid
+flowchart TD
+    A["Document"] --> B["HTML"]
+    B --> C["Head"]
+    B --> D["Body"]
+    C --> E["Title"]
+    C --> F["Meta Tags"]
+    D --> G["H1: My Terrarium"]
+    D --> H["Div: Page Container"]
+    H --> I["Div: Left Container"]
+    H --> J["Div: Right Container"]
+    H --> K["Div: Terrarium"]
+    I --> L["Plant Elements 1-7"]
+    J --> M["Plant Elements 8-14"]
+    
+    L --> N["img#plant1"]
+    L --> O["img#plant2"]
+    M --> P["img#plant8"]
+    M --> Q["img#plant9"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style D fill:#e8f5e8
+    style H fill:#fff3e0
+    style N fill:#ffebee
+    style O fill:#ffebee
+    style P fill:#ffebee
+    style Q fill:#ffebee
+```
 
-**Wat maakt het DOM krachtig:**
+![DOM boomrepresentatie](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.nl.png)
+
+> Een representatie van de DOM en de HTML-markup die ernaar verwijst. Van [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+
+**Dit maakt de DOM krachtig:**
 - **Biedt** een gestructureerde manier om elk element op je pagina te benaderen
-- **Maakt** dynamische inhoudsupdates mogelijk zonder pagina-verversingen
+- **Maakt** dynamische inhoudupdates mogelijk zonder pagina-verversingen
 - **Reageert** in real-time op gebruikersinteracties zoals klikken en slepen
 - **Creëert** de basis voor moderne interactieve webapplicaties
 
 ## JavaScript Closures: Georganiseerde, krachtige code creëren
 
-Een [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) is als het geven van een functie zijn eigen privéwerkruimte met blijvend geheugen. Denk aan hoe de vinken van Darwin op de Galápagos-eilanden elk gespecialiseerde snavels ontwikkelden op basis van hun specifieke omgeving - closures werken op een vergelijkbare manier, door gespecialiseerde functies te creëren die hun specifieke context "onthouden", zelfs nadat hun ouderfunctie is voltooid.
+Een [JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) is als het geven van een functie zijn eigen privéwerkruimte met blijvend geheugen. Denk aan hoe Darwin's vinken op de Galápagos-eilanden elk gespecialiseerde snavels ontwikkelden op basis van hun specifieke omgeving - closures werken op een vergelijkbare manier, door gespecialiseerde functies te creëren die hun specifieke context "onthouden", zelfs nadat hun ouderfunctie is voltooid.
 
-In ons terrarium helpen closures elke plant om onafhankelijk zijn eigen positie te onthouden. Dit patroon komt veel voor in professionele JavaScript-ontwikkeling en is een waardevol concept om te begrijpen.
+In ons terrarium helpen closures elke plant zijn eigen positie onafhankelijk te onthouden. Dit patroon komt veel voor in professionele JavaScript-ontwikkeling, waardoor het een waardevol concept is om te begrijpen.
 
-> 💡 **Closures begrijpen**: Closures zijn een belangrijk onderwerp in JavaScript, en veel ontwikkelaars gebruiken ze jarenlang voordat ze alle theoretische aspecten volledig begrijpen. Vandaag richten we ons op praktische toepassing - je zult zien dat closures vanzelf ontstaan terwijl we onze interactieve functies bouwen. Het begrip zal zich ontwikkelen naarmate je ziet hoe ze echte problemen oplossen.
+```mermaid
+flowchart LR
+    A["dragElement(plant1)"] --> B["Creates Closure"]
+    A2["dragElement(plant2)"] --> B2["Creates Closure"]
+    
+    B --> C["Private Variables"]
+    B2 --> C2["Private Variables"]
+    
+    C --> D["pos1, pos2, pos3, pos4"]
+    C --> E["pointerDrag function"]
+    C --> F["elementDrag function"]
+    C --> G["stopElementDrag function"]
+    
+    C2 --> D2["pos1, pos2, pos3, pos4"]
+    C2 --> E2["pointerDrag function"]
+    C2 --> F2["elementDrag function"]
+    C2 --> G2["stopElementDrag function"]
+    
+    H["Plant 1 remembers its position"] --> B
+    H2["Plant 2 remembers its position"] --> B2
+    
+    style B fill:#e8f5e8
+    style B2 fill:#e8f5e8
+    style C fill:#fff3e0
+    style C2 fill:#fff3e0
+```
 
-![DOM boomweergave](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.nl.png)
+> 💡 **Closures begrijpen**: Closures zijn een belangrijk onderwerp in JavaScript, en veel ontwikkelaars gebruiken ze jarenlang voordat ze alle theoretische aspecten volledig begrijpen. Vandaag richten we ons op praktische toepassing - je zult zien dat closures natuurlijk ontstaan terwijl we onze interactieve functies bouwen. Begrip zal zich ontwikkelen naarmate je ziet hoe ze echte problemen oplossen.
 
-> Een weergave van het DOM en de HTML-markup die ernaar verwijst. Van [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+![DOM boomrepresentatie](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.nl.png)
 
-In deze les zullen we ons interactieve terrariumproject voltooien door de JavaScript te maken waarmee een gebruiker de planten op de pagina kan manipuleren.
+> Een representatie van de DOM en de HTML-markup die ernaar verwijst. Van [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-## Voordat we beginnen: Voorbereiden op succes
+In deze les voltooien we ons interactieve terrariumproject door de JavaScript te maken waarmee een gebruiker de planten op de pagina kan manipuleren.
+
+## Voordat We Beginnen: Klaar voor Succes
 
 Je hebt je HTML- en CSS-bestanden nodig van de vorige terrariumlessen - we gaan dat statische ontwerp interactief maken. Als je voor het eerst meedoet, biedt het voltooien van die lessen eerst belangrijke context.
 
@@ -72,7 +176,7 @@ Maak in je terrariummap een nieuw bestand genaamd `script.js`.
 
 **Stap 2: Koppel de JavaScript aan je HTML**
 
-Voeg deze script-tag toe aan de `<head>`-sectie van je `index.html`-bestand:
+Voeg dit script-tag toe aan de `<head>`-sectie van je `index.html`-bestand:
 
 ```html
 <script src="./script.js" defer></script>
@@ -84,13 +188,13 @@ Voeg deze script-tag toe aan de `<head>`-sectie van je `index.html`-bestand:
 - **Garandeert** dat al je plantelementen beschikbaar zijn voor interactie
 - **Biedt** betere prestaties dan scripts onderaan de pagina plaatsen
 
-> ⚠️ **Belangrijke opmerking**: Het `defer`-attribuut voorkomt veelvoorkomende timingproblemen. Zonder dit kan JavaScript proberen toegang te krijgen tot HTML-elementen voordat ze geladen zijn, wat fouten veroorzaakt.
+> ⚠️ **Belangrijke Opmerking**: Het `defer`-attribuut voorkomt veelvoorkomende timingproblemen. Zonder dit kan JavaScript proberen HTML-elementen te benaderen voordat ze geladen zijn, wat fouten veroorzaakt.
 
 ---
 
 ## JavaScript verbinden met je HTML-elementen
 
-Voordat we elementen sleepbaar kunnen maken, moet JavaScript ze in het DOM lokaliseren. Zie dit als een bibliotheekcatalogussysteem - zodra je het catalogusnummer hebt, kun je precies het boek vinden dat je nodig hebt en toegang krijgen tot alle inhoud.
+Voordat we elementen sleepbaar kunnen maken, moet JavaScript ze in de DOM lokaliseren. Zie dit als een bibliotheekcatalogussysteem - zodra je het catalogusnummer hebt, kun je precies het boek vinden dat je nodig hebt en toegang krijgen tot alle inhoud.
 
 We gebruiken de methode `document.getElementById()` om deze verbindingen te maken. Het is als een nauwkeurig archiveringssysteem - je geeft een ID op en het lokaliseert precies het element dat je nodig hebt in je HTML.
 
@@ -116,8 +220,8 @@ dragElement(document.getElementById('plant13'));
 dragElement(document.getElementById('plant14'));
 ```
 
-**Wat deze code doet:**
-- **Lokaliseert** elk plantelement in het DOM met behulp van zijn unieke ID
+**Dit is wat deze code doet:**
+- **Lokaliseert** elk plantelement in de DOM met behulp van zijn unieke ID
 - **Haalt** een JavaScript-referentie op naar elk HTML-element
 - **Geeft** elk element door aan een `dragElement`-functie (die we hierna maken)
 - **Bereidt** elke plant voor op drag-and-drop interactie
@@ -127,13 +231,23 @@ dragElement(document.getElementById('plant14'));
 
 > 💡 **Pro Tip**: Merk op hoe we `dragElement()` voor elke plant afzonderlijk aanroepen. Deze aanpak zorgt ervoor dat elke plant zijn eigen onafhankelijke sleepgedrag krijgt, wat essentieel is voor een soepele gebruikersinteractie.
 
+### 🔄 **Pedagogische Check-in**
+**Begrip van DOM-verbinding**: Voordat je verder gaat met sleepfunctionaliteit, controleer of je kunt:
+- ✅ Uitleggen hoe `document.getElementById()` HTML-elementen lokaliseert
+- ✅ Begrijpen waarom we unieke IDs gebruiken voor elke plant
+- ✅ De functie van het `defer`-attribuut in script-tags beschrijven
+- ✅ Herkennen hoe JavaScript en HTML via de DOM verbonden zijn
+
+**Snelle Zelftest**: Wat zou er gebeuren als twee elementen dezelfde ID hadden? Waarom retourneert `getElementById()` slechts één element?
+*Antwoord: IDs moeten uniek zijn; bij duplicatie wordt alleen het eerste element geretourneerd*
+
 ---
 
-## De Drag Element Closure bouwen
+## De dragElement Closure bouwen
 
 Nu gaan we het hart van onze sleepfunctionaliteit creëren: een closure die het sleepgedrag voor elke plant beheert. Deze closure bevat meerdere interne functies die samenwerken om muisbewegingen bij te houden en elementposities bij te werken.
 
-Closures zijn perfect voor deze taak omdat ze ons in staat stellen "privé"-variabelen te creëren die blijven bestaan tussen functieaanroepen, waardoor elke plant zijn eigen onafhankelijke coördinatenvolgsysteem krijgt.
+Closures zijn perfect voor deze taak omdat ze ons in staat stellen "privé"-variabelen te creëren die blijven bestaan tussen functieaanroepen, waardoor elke plant zijn eigen onafhankelijke coördinatensysteem krijgt.
 
 ### Closures begrijpen met een eenvoudig voorbeeld
 
@@ -156,25 +270,53 @@ console.log(myCounter()); // 1
 console.log(myCounter()); // 2
 ```
 
-**Wat er gebeurt in dit closure-patroon:**
+**Dit gebeurt er in dit closure-patroon:**
 - **Creëert** een privé `count`-variabele die alleen binnen deze closure bestaat
 - **De interne functie** kan die externe variabele benaderen en wijzigen (het closure-mechanisme)
-- **Wanneer we de interne functie retourneren**, behoudt deze zijn verbinding met die privégegevens
+- **Wanneer we terugkeren** naar de interne functie, behoudt deze zijn verbinding met die privégegevens
 - **Zelfs nadat** `createCounter()` is voltooid, blijft `count` bestaan en onthoudt zijn waarde
 
-### Waarom closures perfect zijn voor sleepfunctionaliteit
+### Waarom Closures Perfect Zijn voor Sleepfunctionaliteit
 
 Voor ons terrarium moet elke plant zijn huidige positiecoördinaten onthouden. Closures bieden de perfecte oplossing:
 
 **Belangrijke voordelen voor ons project:**
-- **Behoudt** privépositievariabelen voor elke plant afzonderlijk
-- **Bewaart** coördinatengegevens tussen sleepgebeurtenissen
-- **Voorkomt** variabele conflicten tussen verschillende sleepbare elementen
+- **Behoudt** privépositievariabelen voor elke plant onafhankelijk
+- **Bewaart** coördinatendata tussen sleepgebeurtenissen
+- **Voorkomt** variabeleconflicten tussen verschillende sleepbare elementen
 - **Creëert** een schone, georganiseerde code-structuur
 
-> 🎯 **Leerdoel**: Je hoeft niet meteen elk aspect van closures te beheersen. Richt je op hoe ze ons helpen om code te organiseren en de status te behouden voor onze sleepfunctionaliteit.
+> 🎯 **Leerdoel**: Je hoeft niet meteen elk aspect van closures te beheersen. Focus op hoe ze ons helpen code te organiseren en de status te behouden voor onze sleepfunctionaliteit.
 
-### De dragElement-functie maken
+```mermaid
+stateDiagram-v2
+    [*] --> Ready: Page loads
+    Ready --> DragStart: User presses down (pointerdown)
+    DragStart --> Dragging: Mouse/finger moves (pointermove)
+    Dragging --> Dragging: Continue moving
+    Dragging --> DragEnd: User releases (pointerup)
+    DragEnd --> Ready: Reset for next drag
+    
+    state DragStart {
+        [*] --> CapturePosition
+        CapturePosition --> SetupListeners
+        SetupListeners --> [*]
+    }
+    
+    state Dragging {
+        [*] --> CalculateMovement
+        CalculateMovement --> UpdatePosition
+        UpdatePosition --> [*]
+    }
+    
+    state DragEnd {
+        [*] --> RemoveListeners
+        RemoveListeners --> CleanupState
+        CleanupState --> [*]
+    }
+```
+
+### De dragElement Functie maken
 
 Laten we nu de hoofdfunctie bouwen die alle sleep-logica zal afhandelen. Voeg deze functie toe onder je plantelementdeclaraties:
 
@@ -191,43 +333,56 @@ function dragElement(terrariumElement) {
 }
 ```
 
-**Begrijpen van het positievolgsysteem:**
+**Begrip van het positievolgsysteem:**
 - **`pos1` en `pos2`**: Bewaren het verschil tussen oude en nieuwe muisposities
 - **`pos3` en `pos4`**: Volgen de huidige muiscoördinaten
 - **`terrariumElement`**: Het specifieke plantelement dat we sleepbaar maken
-- **`onpointerdown`**: De gebeurtenis die wordt geactiveerd wanneer de gebruiker begint te slepen
+- **`onpointerdown`**: Het evenement dat wordt geactiveerd wanneer de gebruiker begint te slepen
 
-**Hoe het closure-patroon werkt:**
+**Zo werkt het closure-patroon:**
 - **Creëert** privépositievariabelen voor elk plantelement
 - **Behoudt** deze variabelen gedurende de sleepcyclus
 - **Zorgt ervoor** dat elke plant zijn eigen coördinaten onafhankelijk bijhoudt
 - **Biedt** een schone interface via de `dragElement`-functie
 
-### Waarom pointer-events gebruiken?
+### Waarom Pointer Events Gebruiken?
 
 Je vraagt je misschien af waarom we `onpointerdown` gebruiken in plaats van het meer bekende `onclick`. Hier is de reden:
 
-| Type gebeurtenis | Beste voor | Het nadeel |
-|------------------|------------|------------|
+| Type Event | Beste Voor | Het nadeel |
+|------------|------------|------------|
 | `onclick` | Eenvoudige knopklikken | Kan geen slepen afhandelen (alleen klikken en loslaten) |
-| `onpointerdown` | Zowel muis als aanraking | Moderner, maar tegenwoordig goed ondersteund |
-| `onmousedown` | Alleen desktopmuis | Laat mobiele gebruikers in de kou staan |
+| `onpointerdown` | Zowel muis als aanraking | Nieuwere methode, maar tegenwoordig goed ondersteund |
+| `onmousedown` | Alleen desktopmuis | Laat mobiele gebruikers buiten beschouwing |
 
-**Waarom pointer-events perfect zijn voor wat we bouwen:**
+**Waarom pointer events perfect zijn voor wat we bouwen:**
 - **Werkt uitstekend** of iemand nu een muis, vinger of zelfs een stylus gebruikt
 - **Voelt hetzelfde** op een laptop, tablet of telefoon
 - **Handelt** de daadwerkelijke sleepbeweging af (niet alleen klikken en klaar)
 - **Creëert** een soepele ervaring die gebruikers verwachten van moderne webapps
 
-> 💡 **Toekomstbestendig**: Pointer-events zijn de moderne manier om gebruikersinteracties af te handelen. In plaats van aparte code te schrijven voor muis en aanraking, krijg je beide gratis. Best handig, toch?
+> 💡 **Toekomstbestendig**: Pointer events zijn de moderne manier om gebruikersinteracties af te handelen. In plaats van aparte code te schrijven voor muis en aanraking, krijg je beide gratis. Best handig, toch?
+
+### 🔄 **Pedagogische Check-in**
+**Begrip van Event Handling**: Pauzeer om je begrip van events te bevestigen:
+- ✅ Waarom gebruiken we pointer events in plaats van muisevents?
+- ✅ Hoe blijven closure-variabelen bestaan tussen functieaanroepen?
+- ✅ Welke rol speelt `preventDefault()` in soepel slepen?
+- ✅ Waarom koppelen we luisteraars aan het document in plaats van aan individuele elementen?
+
+**Echte Wereld Connectie**: Denk aan drag-and-drop interfaces die je dagelijks gebruikt:
+- **Bestandsuploads**: Bestanden naar een browservenster slepen
+- **Kanban-borden**: Taken tussen kolommen verplaatsen
+- **Fotogalerijen**: Foto's herschikken
+- **Mobiele interfaces**: Swipen en slepen op touchscreens
 
 ---
 
-## De pointerDrag-functie: Het begin van een sleepbeweging vastleggen
+## De pointerDrag Functie: Het Begin van een Sleepbeweging Vastleggen
 
 Wanneer een gebruiker op een plant drukt (met een muisklik of aanraking), komt de `pointerDrag`-functie in actie. Deze functie legt de initiële coördinaten vast en stelt het sleepsysteem in.
 
-Voeg deze functie toe binnen je `dragElement`-closure, direct na de regel `terrariumElement.onpointerdown = pointerDrag;`:
+Voeg deze functie toe binnen je `dragElement` closure, direct na de regel `terrariumElement.onpointerdown = pointerDrag;`:
 
 ```javascript
 function pointerDrag(e) {
@@ -244,42 +399,41 @@ function pointerDrag(e) {
 }
 ```
 
-**Stap voor stap, wat er gebeurt:**
+**Stap voor stap, dit gebeurt er:**
 - **Voorkomt** standaard browsergedrag dat het slepen kan verstoren
 - **Registreert** de exacte coördinaten waar de gebruiker het sleepgebaar begon
-- **Stelt** gebeurtenislisteners in voor de voortgaande sleepbeweging
-- **Bereidt** het systeem voor om muis/vingerbewegingen over het hele document bij te houden
+- **Stelt** event listeners in voor de voortgang van de sleepbeweging
+- **Bereidt** het systeem voor om muis-/vingerbewegingen over het hele document bij te houden
 
-### Begrijpen van gebeurtenispreventie
+### Begrip van Event Preventie
 
 De regel `e.preventDefault()` is cruciaal voor soepel slepen:
 
 **Zonder preventie kunnen browsers:**
-- **Tekst selecteren** bij het slepen over de pagina
+- **Tekst selecteren** tijdens het slepen over de pagina
 - **Contextmenu's activeren** bij rechtsklik-slepen
 - **Interfereren** met ons aangepaste sleepgedrag
 - **Visuele artefacten creëren** tijdens de sleepbewerking
 
-> 🔍 **Experiment**: Probeer na het voltooien van deze les de regel `e.preventDefault()` te verwijderen en kijk hoe dit de sleepervaring beïnvloedt. Je zult snel begrijpen waarom deze regel essentieel is!
+> 🔍 **Experiment**: Probeer na het voltooien van deze les `e.preventDefault()` te verwijderen en zie hoe dit de sleepervaring beïnvloedt. Je zult snel begrijpen waarom deze regel essentieel is!
 
 ### Coördinatenvolgsysteem
 
-De eigenschappen `e.clientX` en `e.clientY` geven ons nauwkeurige muis/aanraakcoördinaten:
+De eigenschappen `e.clientX` en `e.clientY` geven ons nauwkeurige muis-/aanraakcoördinaten:
 
-| Eigenschap | Wat het meet | Gebruik |
-|------------|--------------|---------|
-| `clientX` | Horizontale positie ten opzichte van het viewport | Volgen van links-rechts beweging |
-| `clientY` | Verticale positie ten opzichte van het viewport | Volgen van boven-onder beweging |
-
+| Eigenschap | Wat het meet | Toepassing |
+|------------|--------------|------------|
+| `clientX` | Horizontale positie ten opzichte van de viewport | Volgen van links-rechts beweging |
+| `clientY` | Verticale positie ten opzichte van de viewport | Volgen van op-en-neer beweging |
 **Begrijpen van deze coördinaten:**
 - **Biedt** pixel-perfecte positioneringsinformatie
-- **Update** in real-time terwijl de gebruiker zijn pointer beweegt
+- **Update** in real-time terwijl de gebruiker zijn cursor beweegt
 - **Blijft** consistent op verschillende schermgroottes en zoomniveaus
-- **Maakt** soepele, responsieve sleepinteracties mogelijk
+- **Maakt** vloeiende, responsieve sleepinteracties mogelijk
 
-### Document-niveau gebeurtenislisteners instellen
+### Documentniveau Event Listeners instellen
 
-Let op hoe we de verplaats- en stopgebeurtenissen aan het hele `document` koppelen, niet alleen aan het plantelement:
+Let op hoe we de verplaats- en stopgebeurtenissen koppelen aan het hele `document`, niet alleen aan het plant-element:
 
 ```javascript
 document.onpointermove = elementDrag;
@@ -287,16 +441,16 @@ document.onpointerup = stopElementDrag;
 ```
 
 **Waarom koppelen aan het document:**
-- **Blijft** beweging volgen, zelfs wanneer de muis het plantelement verlaat
+- **Blijft** volgen, zelfs wanneer de muis het plant-element verlaat
 - **Voorkomt** onderbreking van het slepen als de gebruiker snel beweegt
-- **Biedt** soepel slepen over het hele scherm
-- **Handelt** randgevallen af waarbij de cursor buiten het browservenster beweegt
+- **Biedt** vloeiend slepen over het hele scherm
+- **Behandelt** randgevallen waarbij de cursor buiten het browservenster beweegt
 
-> ⚡ **Prestatie-opmerking**: We zullen deze document-niveau listeners opruimen wanneer het slepen stopt om geheugenlekken en prestatieproblemen te voorkomen.
+> ⚡ **Prestatie-opmerking**: We ruimen deze documentniveau listeners op zodra het slepen stopt om geheugenlekken en prestatieproblemen te voorkomen.
 
-## Het sleepsysteem voltooien: Beweging en opruiming
+## Het sleepsysteem voltooien: Beweging en opruimen
 
-Nu voegen we de twee resterende functies toe die de daadwerkelijke sleepbeweging afhandelen en de opruiming wanneer het slepen stopt. Deze functies werken samen om een soepele, responsieve plantbeweging in je terrarium te creëren.
+Nu voegen we de twee resterende functies toe die de daadwerkelijke sleepbeweging en het opruimen bij het stoppen van het slepen afhandelen. Deze functies werken samen om een vloeiende, responsieve beweging van planten in je terrarium te creëren.
 
 ### De elementDrag-functie: Beweging volgen
 
@@ -319,18 +473,42 @@ function elementDrag(e) {
 ```
 
 **Begrijpen van de coördinatenwiskunde:**
-- **`pos1` en `pos2`**: Berekenen hoeveel de muis is verplaatst sinds de laatste update
-- **`pos3` en `pos4`**: Bewaren de huidige muispositie voor de volgende berekening  
-- **`offsetTop` en `offsetLeft`**: Ophalen van de huidige positie van het element op de pagina  
-- **Aftreklogica**: Verplaatst het element met dezelfde afstand als de muis heeft bewogen  
+- **`pos1` en `pos2`**: Berekenen hoe ver de muis is bewogen sinds de laatste update
+- **`pos3` en `pos4`**: Slaan de huidige muispositie op voor de volgende berekening
+- **`offsetTop` en `offsetLeft`**: Verkrijgen de huidige positie van het element op de pagina
+- **Aftreklogica**: Verplaatst het element met dezelfde hoeveelheid als de muis is bewogen
 
-**Hier is de berekening van de beweging uitgelegd:**  
-1. **Meet** het verschil tussen de oude en nieuwe muisposities  
-2. **Bereken** hoeveel het element moet bewegen op basis van de muisbeweging  
-3. **Update** de CSS-positie-eigenschappen van het element in real-time  
-4. **Bewaar** de nieuwe positie als basis voor de volgende bewegingsberekening  
+```mermaid
+sequenceDiagram
+    participant User
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    User->>Mouse: Start drag at (100, 50)
+    Mouse->>JavaScript: pointerdown event
+    JavaScript->>JavaScript: Store initial position (pos3=100, pos4=50)
+    JavaScript->>JavaScript: Setup move/up listeners
+    
+    User->>Mouse: Move to (110, 60)
+    Mouse->>JavaScript: pointermove event
+    JavaScript->>JavaScript: Calculate: pos1=10, pos2=10
+    JavaScript->>Plant: Update: left += 10px, top += 10px
+    Plant->>Plant: Render at new position
+    
+    User->>Mouse: Release at (120, 65)
+    Mouse->>JavaScript: pointerup event
+    JavaScript->>JavaScript: Remove listeners
+    JavaScript->>JavaScript: Reset for next drag
+```
 
-### Visuele weergave van de wiskunde  
+**Hier is de berekening van de beweging:**
+1. **Meet** het verschil tussen oude en nieuwe muisposities
+2. **Bereken** hoeveel het element moet worden verplaatst op basis van de muisbeweging
+3. **Update** de CSS-positie-eigenschappen van het element in real-time
+4. **Sla** de nieuwe positie op als basislijn voor de volgende bewegingsberekening
+
+### Visuele weergave van de wiskunde
 
 ```mermaid
 sequenceDiagram
@@ -343,11 +521,10 @@ sequenceDiagram
     JavaScript->>Plant: Update position by +10px right, +10px down
     Plant->>Plant: Render at new position
 ```
-  
 
-### De stopElementDrag-functie: Opruimen  
+### De stopElementDrag-functie: Opruimen
 
-Voeg de opruimfunctie toe na de sluitende accolade van `elementDrag`:  
+Voeg de opruimfunctie toe na de sluitende accolade van `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
@@ -356,137 +533,245 @@ function stopElementDrag() {
     document.onpointermove = null;
 }
 ```
-  
 
-**Waarom opruimen belangrijk is:**  
-- **Voorkomt** geheugenlekken door achterblijvende event listeners  
-- **Stopt** het sleepgedrag wanneer de gebruiker de plant loslaat  
-- **Maakt het mogelijk** om andere elementen onafhankelijk te slepen  
-- **Reset** het systeem voor de volgende sleepactie  
+**Waarom opruimen essentieel is:**
+- **Voorkomt** geheugenlekken door achterblijvende event listeners
+- **Stopt** het sleepgedrag wanneer de gebruiker de plant loslaat
+- **Maakt** het mogelijk om andere elementen onafhankelijk te slepen
+- **Reset** het systeem voor de volgende sleepoperatie
 
-**Wat er gebeurt zonder opruimen:**  
-- Event listeners blijven actief, zelfs nadat het slepen is gestopt  
-- Prestaties verslechteren doordat ongebruikte listeners zich opstapelen  
-- Onverwacht gedrag bij interactie met andere elementen  
-- Browserbronnen worden verspild aan onnodige eventverwerking  
+**Wat er gebeurt zonder opruimen:**
+- Event listeners blijven actief, zelfs nadat het slepen stopt
+- Prestaties verslechteren naarmate ongebruikte listeners zich opstapelen
+- Onverwacht gedrag bij interactie met andere elementen
+- Browserbronnen worden verspild aan onnodige event handling
 
-### Begrip van CSS-positie-eigenschappen  
+### Begrijpen van CSS-positie-eigenschappen
 
-Ons sleepmechanisme manipuleert twee belangrijke CSS-eigenschappen:  
+Ons sleepsysteem manipuleert twee belangrijke CSS-eigenschappen:
 
-| Eigenschap | Wat het regelt | Hoe we het gebruiken |  
-|------------|----------------|-----------------------|  
-| `top`      | Afstand vanaf de bovenrand | Verticale positionering tijdens het slepen |  
-| `left`     | Afstand vanaf de linker rand | Horizontale positionering tijdens het slepen |  
+| Eigenschap | Wat het regelt | Hoe we het gebruiken |
+|------------|----------------|-----------------------|
+| `top` | Afstand vanaf de bovenrand | Verticale positionering tijdens het slepen |
+| `left` | Afstand vanaf de linker rand | Horizontale positionering tijdens het slepen |
 
-**Belangrijke inzichten over offset-eigenschappen:**  
-- **`offsetTop`**: Huidige afstand vanaf de bovenkant van het gepositioneerde bovenliggende element  
-- **`offsetLeft`**: Huidige afstand vanaf de linkerkant van het gepositioneerde bovenliggende element  
-- **Positioneringscontext**: Deze waarden zijn relatief ten opzichte van de dichtstbijzijnde gepositioneerde voorouder  
-- **Real-time updates**: Wijzigingen worden onmiddellijk doorgevoerd wanneer we de CSS-eigenschappen aanpassen  
+**Belangrijke inzichten over offset-eigenschappen:**
+- **`offsetTop`**: Huidige afstand vanaf de bovenkant van het gepositioneerde bovenliggende element
+- **`offsetLeft`**: Huidige afstand vanaf de linkerkant van het gepositioneerde bovenliggende element
+- **Positioneringscontext**: Deze waarden zijn relatief ten opzichte van de dichtstbijzijnde gepositioneerde voorouder
+- **Real-time updates**: Wijzigingen worden onmiddellijk doorgevoerd wanneer we de CSS-eigenschappen aanpassen
 
-> 🎯 **Ontwerpfilosofie**: Dit sleepmechanisme is bewust flexibel – er zijn geen "drop zones" of beperkingen. Gebruikers kunnen planten overal plaatsen, waardoor ze volledige creatieve controle hebben over hun terrariumontwerp.  
+> 🎯 **Ontwerpfilosofie**: Dit sleepsysteem is opzettelijk flexibel – er zijn geen "drop zones" of beperkingen. Gebruikers kunnen planten overal plaatsen, waardoor ze volledige creatieve controle hebben over hun terrariumontwerp.
 
-## Alles samenbrengen: Jouw complete sleepmechanisme  
+## Alles samenbrengen: Jouw complete sleepsysteem
 
-Gefeliciteerd! Je hebt zojuist een geavanceerd sleep-en-neerzet-systeem gebouwd met vanilla JavaScript. Jouw complete `dragElement`-functie bevat nu een krachtige closure die het volgende beheert:  
+Gefeliciteerd! Je hebt zojuist een geavanceerd sleep-en-neerzet systeem gebouwd met vanilla JavaScript. Jouw complete `dragElement`-functie bevat nu een krachtige closure die het volgende beheert:
 
-**Wat jouw closure bereikt:**  
-- **Beheert** privépositievariabelen voor elke plant onafhankelijk  
-- **Behandelt** de volledige sleepcyclus van begin tot eind  
-- **Biedt** vloeiende, responsieve beweging over het hele scherm  
-- **Ruimt** bronnen correct op om geheugenlekken te voorkomen  
-- **Creëert** een intuïtieve, creatieve interface voor terrariumontwerp  
+**Wat jouw closure bereikt:**
+- **Beheert** privépositievariabelen voor elke plant onafhankelijk
+- **Handelt** de volledige sleepcyclus van begin tot eind af
+- **Biedt** vloeiende, responsieve beweging over het hele scherm
+- **Ruimt** bronnen correct op om geheugenlekken te voorkomen
+- **Creëert** een intuïtieve, creatieve interface voor terrariumontwerp
 
-### Test jouw interactieve terrarium  
+### Testen van jouw interactieve terrarium
 
-Test nu jouw interactieve terrarium! Open je `index.html`-bestand in een webbrowser en probeer de functionaliteit:  
+Test nu jouw interactieve terrarium! Open je `index.html`-bestand in een webbrowser en probeer de functionaliteit:
 
-1. **Klik en houd vast** op een plant om te beginnen met slepen  
-2. **Beweeg je muis of vinger** en zie hoe de plant soepel meebeweegt  
-3. **Laat los** om de plant op zijn nieuwe positie neer te zetten  
-4. **Experimenteer** met verschillende arrangementen om de interface te verkennen  
+1. **Klik en houd vast** op een plant om te beginnen met slepen
+2. **Beweeg je muis of vinger** en zie hoe de plant soepel volgt
+3. **Laat los** om de plant op zijn nieuwe positie neer te zetten
+4. **Experimenteer** met verschillende arrangementen om de interface te verkennen
 
-🥇 **Prestatie**: Je hebt een volledig interactieve webapplicatie gemaakt met kernconcepten die professionele ontwikkelaars dagelijks gebruiken. Die sleep-en-neerzet-functionaliteit maakt gebruik van dezelfde principes als achter bestanduploads, kanbanborden en vele andere interactieve interfaces.  
+🥇 **Prestatie**: Je hebt een volledig interactieve webapplicatie gemaakt met kernconcepten die professionele ontwikkelaars dagelijks gebruiken. Die sleep-en-neerzet functionaliteit gebruikt dezelfde principes als achter bestanduploads, kanbanborden en vele andere interactieve interfaces.
 
-![afgewerkt terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.nl.png)  
+### 🔄 **Pedagogische Check-in**
+**Volledig systeembegrip**: Controleer je beheersing van het volledige sleepsysteem:
+- ✅ Hoe behouden closures onafhankelijke status voor elke plant?
+- ✅ Waarom is de coördinatenberekening noodzakelijk voor vloeiende beweging?
+- ✅ Wat zou er gebeuren als we vergeten event listeners op te ruimen?
+- ✅ Hoe schaalt dit patroon naar complexere interacties?
 
----  
+**Reflectie op codekwaliteit**: Beoordeel je complete oplossing:
+- **Modulair ontwerp**: Elke plant krijgt zijn eigen closure-instantie
+- **Efficiëntie van events**: Correct instellen en opruimen van listeners
+- **Ondersteuning voor meerdere apparaten**: Werkt op desktop en mobiel
+- **Prestatiebewust**: Geen geheugenlekken of overbodige berekeningen
 
-## GitHub Copilot Agent Challenge 🚀  
+![afgewerkt terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.nl.png)
 
-Gebruik de Agent-modus om de volgende uitdaging te voltooien:  
+---
 
-**Beschrijving:** Breid het terrariumproject uit door een resetfunctionaliteit toe te voegen die alle planten terugbrengt naar hun oorspronkelijke posities met vloeiende animaties.  
+## GitHub Copilot Agent Challenge 🚀
 
-**Prompt:** Maak een resetknop die, wanneer erop wordt geklikt, alle planten terug naar hun oorspronkelijke zijbalkposities animeert met behulp van CSS-transities. De functie moet de oorspronkelijke posities opslaan wanneer de pagina wordt geladen en de planten soepel terug naar die posities laten bewegen binnen 1 seconde wanneer de resetknop wordt ingedrukt.  
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
 
-Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.  
+**Beschrijving:** Breid het terrariumproject uit door een resetfunctionaliteit toe te voegen die alle planten terugbrengt naar hun oorspronkelijke posities met vloeiende animaties.
 
-## 🚀 Extra uitdaging: Breid je vaardigheden uit  
+**Prompt:** Maak een resetknop die, wanneer erop wordt geklikt, alle planten terug naar hun oorspronkelijke zijbalkposities animeert met behulp van CSS-overgangen. De functie moet de oorspronkelijke posities opslaan wanneer de pagina wordt geladen en planten soepel terug naar die posities laten bewegen over 1 seconde wanneer op de resetknop wordt gedrukt.
 
-Klaar om je terrarium naar een hoger niveau te tillen? Probeer deze verbeteringen te implementeren:  
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
 
-**Creatieve uitbreidingen:**  
-- **Dubbelklik** op een plant om deze naar voren te brengen (z-index manipulatie)  
-- **Voeg visuele feedback toe**, zoals een subtiele gloed bij het zweven over planten  
-- **Implementeer grenzen** om te voorkomen dat planten buiten het terrarium worden gesleept  
-- **Maak een opsla-functie** die plantposities onthoudt met behulp van localStorage  
-- **Voeg geluidseffecten toe** voor het oppakken en plaatsen van planten  
+## 🚀 Extra uitdaging: Breid je vaardigheden uit
 
-> 💡 **Leermogelijkheid**: Elk van deze uitdagingen leert je nieuwe aspecten van DOM-manipulatie, event handling en gebruikerservaringontwerp.  
+Klaar om je terrarium naar een hoger niveau te tillen? Probeer deze uitbreidingen te implementeren:
 
-## Post-Lecture Quiz  
+**Creatieve uitbreidingen:**
+- **Dubbelklik** op een plant om deze naar voren te brengen (z-index manipulatie)
+- **Voeg visuele feedback toe** zoals een subtiele gloed bij het zweven over planten
+- **Implementeer grenzen** om te voorkomen dat planten buiten het terrarium worden gesleept
+- **Maak een opsla-functie** die plantposities onthoudt met behulp van localStorage
+- **Voeg geluidseffecten toe** voor het oppakken en plaatsen van planten
 
-[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)  
+> 💡 **Leermogelijkheid**: Elk van deze uitdagingen leert je nieuwe aspecten van DOM-manipulatie, event handling en gebruikerservaringontwerp.
 
-## Review & Zelfstudie: Verdiep je begrip  
+## Quiz na de les
 
-Je hebt de basisprincipes van DOM-manipulatie en closures onder de knie, maar er is altijd meer te ontdekken! Hier zijn enkele paden om je kennis en vaardigheden uit te breiden.  
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/20)
 
-### Alternatieve benaderingen voor sleep-en-neerzet  
+## Review & Zelfstudie: Verdiep je begrip
 
-We hebben pointer events gebruikt voor maximale flexibiliteit, maar webontwikkeling biedt meerdere benaderingen:  
+Je hebt de basisprincipes van DOM-manipulatie en closures onder de knie, maar er is altijd meer te ontdekken! Hier zijn enkele paden om je kennis en vaardigheden uit te breiden.
 
-| Benadering | Beste voor | Leerwaarde |  
-|------------|------------|-------------|  
-| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Bestanduploads, formele sleepzones | Begrip van native browsermogelijkheden |  
-| [Touch Events](https://developer.mozilla.org/docs/Web/API/Touch_events) | Mobiele specifieke interacties | Mobielgerichte ontwikkelingspatronen |  
-| CSS `transform`-eigenschappen | Vloeiende animaties | Technieken voor prestatieoptimalisatie |  
+### Alternatieve benaderingen voor slepen en neerzetten
 
-### Geavanceerde onderwerpen over DOM-manipulatie  
+We hebben pointer events gebruikt voor maximale flexibiliteit, maar webontwikkeling biedt meerdere benaderingen:
 
-**Volgende stappen in je leertraject:**  
-- **Event delegation**: Efficiënt omgaan met events voor meerdere elementen  
-- **Intersection Observer**: Detecteren wanneer elementen het viewport binnenkomen of verlaten  
-- **Mutation Observer**: Observeren van wijzigingen in de DOM-structuur  
-- **Web Components**: Herbruikbare, ingekapselde UI-elementen maken  
-- **Virtual DOM-concepten**: Begrijpen hoe frameworks DOM-updates optimaliseren  
+| Benadering | Beste voor | Leerwaarde |
+|------------|------------|------------|
+| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Bestanduploads, formele sleepzones | Begrip van native browsermogelijkheden |
+| [Touch Events](https://developer.mozilla.org/docs/Web/API/Touch_events) | Mobiel-specifieke interacties | Mobiel-eerst ontwikkelingspatronen |
+| CSS `transform` eigenschappen | Vloeiende animaties | Technieken voor prestatieoptimalisatie |
 
-### Essentiële bronnen voor verdere studie  
+### Geavanceerde DOM-manipulatiethema's
 
-**Technische documentatie:**  
-- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Uitgebreide pointer event referentie  
-- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Officiële standaarden documentatie  
-- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Geavanceerde closure patronen  
+**Volgende stappen in je leertraject:**
+- **Event delegatie**: Efficiënt omgaan met events voor meerdere elementen
+- **Intersection Observer**: Detecteren wanneer elementen het viewport binnenkomen/verlaten
+- **Mutation Observer**: Wijzigingen in de DOM-structuur volgen
+- **Web Components**: Herbruikbare, ingekapselde UI-elementen maken
+- **Virtual DOM-concepten**: Begrijpen hoe frameworks DOM-updates optimaliseren
 
-**Browsercompatibiliteit:**  
-- [CanIUse.com](https://caniuse.com/) - Controleer functieondersteuning in verschillende browsers  
-- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Gedetailleerde compatibiliteitsinformatie  
+### Essentiële bronnen voor verdere studie
 
-**Oefenmogelijkheden:**  
-- **Bouw** een puzzelspel met vergelijkbare sleepmechanismen  
-- **Creëer** een kanbanbord met sleep-en-neerzet taakbeheer  
-- **Ontwerp** een fotogalerij met versleepbare foto-indelingen  
-- **Experimenteer** met aanraakgebaren voor mobiele interfaces  
+**Technische documentatie:**
+- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Uitgebreide pointer event referentie
+- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Officiële standaarden documentatie
+- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Geavanceerde closure patronen
 
-> 🎯 **Leerstrategie**: De beste manier om deze concepten te versterken is door te oefenen. Probeer variaties van versleepbare interfaces te bouwen – elk project leert je iets nieuws over gebruikersinteractie en DOM-manipulatie.  
+**Browsercompatibiliteit:**
+- [CanIUse.com](https://caniuse.com/) - Controleer functieondersteuning in verschillende browsers
+- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Gedetailleerde compatibiliteitsinformatie
 
-## Opdracht  
+**Oefenmogelijkheden:**
+- **Bouw** een puzzelspel met vergelijkbare sleepmechanismen
+- **Creëer** een kanbanbord met sleep-en-neerzet taakbeheer
+- **Ontwerp** een fotogalerij met versleepbare foto-indelingen
+- **Experimenteer** met touchgebaren voor mobiele interfaces
 
-[Werk nog wat meer met de DOM](assignment.md)  
+> 🎯 **Leerstrategie**: De beste manier om deze concepten te versterken is door te oefenen. Probeer variaties van versleepbare interfaces te bouwen – elk project leert je iets nieuws over gebruikersinteractie en DOM-manipulatie.
+
+### ⚡ **Wat je in de komende 5 minuten kunt doen**
+- [ ] Open browser DevTools en typ `document.querySelector('body')` in de console
+- [ ] Probeer de tekst van een webpagina te wijzigen met `innerHTML` of `textContent`
+- [ ] Voeg een klik-event listener toe aan een knop of link op een webpagina
+- [ ] Inspecteer de DOM-boomstructuur met het Elementenpaneel
+
+### 🎯 **Wat je in dit uur kunt bereiken**
+- [ ] Maak de quiz na de les en herzie DOM-manipulatieconcepten
+- [ ] Maak een interactieve webpagina die reageert op gebruikersklikken
+- [ ] Oefen event handling met verschillende eventtypes (klik, mouseover, toetsdruk)
+- [ ] Bouw een eenvoudige takenlijst of teller met DOM-manipulatie
+- [ ] Verken de relatie tussen HTML-elementen en JavaScript-objecten
+
+### 📅 **Jouw weeklange JavaScript-reis**
+- [ ] Voltooi het interactieve terrariumproject met sleep-en-neerzet functionaliteit
+- [ ] Beheers event delegatie voor efficiënte event handling
+- [ ] Leer over de event loop en asynchrone JavaScript
+- [ ] Oefen closures door modules te bouwen met privéstatus
+- [ ] Verken moderne DOM-API's zoals Intersection Observer
+- [ ] Bouw interactieve componenten zonder gebruik te maken van frameworks
+
+### 🌟 **Jouw maandlange JavaScript-meesterschap**
+- [ ] Maak een complexe single-page applicatie met vanilla JavaScript
+- [ ] Leer een modern framework (React, Vue of Angular) en vergelijk het met vanilla DOM
+- [ ] Draag bij aan open source JavaScript-projecten
+- [ ] Beheers geavanceerde concepten zoals webcomponenten en aangepaste elementen
+- [ ] Bouw performante webapplicaties met optimale DOM-patronen
+- [ ] Leer anderen over DOM-manipulatie en JavaScript-grondbeginselen
+
+## 🎯 Jouw JavaScript DOM-meesterschap tijdlijn
+
+```mermaid
+timeline
+    title DOM & JavaScript Learning Progression
+    
+    section Foundation (15 minutes)
+        DOM Understanding: Element selection methods
+                         : Tree structure navigation
+                         : Property access patterns
+        
+    section Event Handling (20 minutes)
+        User Interaction: Pointer event basics
+                        : Event listener setup
+                        : Cross-device compatibility
+                        : Event prevention techniques
+        
+    section Closures (25 minutes)
+        Scope Management: Private variable creation
+                        : Function persistence
+                        : State management patterns
+                        : Memory efficiency
+        
+    section Drag System (30 minutes)
+        Interactive Features: Coordinate tracking
+                            : Position calculation
+                            : Movement mathematics
+                            : Cleanup procedures
+        
+    section Advanced Patterns (45 minutes)
+        Professional Skills: Event delegation
+                           : Performance optimization
+                           : Error handling
+                           : Accessibility considerations
+        
+    section Framework Understanding (1 week)
+        Modern Development: Virtual DOM concepts
+                          : State management libraries
+                          : Component architectures
+                          : Build tool integration
+        
+    section Expert Level (1 month)
+        Advanced DOM APIs: Intersection Observer
+                         : Mutation Observer
+                         : Custom Elements
+                         : Web Components
+```
+
+### 🛠️ Samenvatting van jouw JavaScript Toolkit
+
+Na het voltooien van deze les heb je nu:
+- **DOM-meesterschap**: Elementselectie, eigenschapsmanipulatie en boomnavigatie
+- **Event-expertise**: Cross-device interactiehandling met pointer events
+- **Begrip van closures**: Beheer van privéstatus en functiepersistentie
+- **Interactieve systemen**: Compleet sleep-en-neerzet implementatie vanaf nul
+- **Prestatiebewustzijn**: Correct opruimen van events en geheugenbeheer
+- **Moderne patronen**: Codeorganisatie technieken gebruikt in professionele ontwikkeling
+- **Gebruikerservaring**: Intuïtieve, responsieve interfaces creëren
+
+**Verworven professionele vaardigheden**: Je hebt functies gebouwd met dezelfde technieken als:
+- **Trello/Kanban borden**: Kaarten slepen tussen kolommen
+- **Bestanduploadsysteem**: Sleep-en-neerzet bestandshandeling
+- **Fotogalerijen**: Foto-indeling interfaces
+- **Mobiele apps**: Touch-gebaseerde interactiepatronen
+
+**Volgende stap**: Je bent klaar om moderne frameworks zoals React, Vue of Angular te verkennen die voortbouwen op deze fundamentele DOM-manipulatieconcepten!
+
+## Opdracht
+
+[Werk nog wat meer met de DOM](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.

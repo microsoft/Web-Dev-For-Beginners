@@ -1,56 +1,142 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
-  "translation_date": "2025-10-23T00:42:20+00:00",
+  "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
+  "translation_date": "2025-11-04T01:42:27+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "fi"
 }
 -->
 # Rakenna avaruuspeli Osa 1: Johdanto
 
+```mermaid
+journey
+    title Your Game Development Journey
+    section Foundation
+      Learn game architecture: 3: Student
+      Understand inheritance: 4: Student
+      Explore composition: 4: Student
+    section Communication
+      Build pub/sub system: 4: Student
+      Design event flow: 5: Student
+      Connect components: 5: Student
+    section Application
+      Create game objects: 5: Student
+      Implement patterns: 5: Student
+      Plan game structure: 5: Student
+```
+
 ![Avaruuspeli-animaatio, joka näyttää pelin kulkua](../../../../6-space-game/images/pewpew.gif)
 
-Aivan kuten NASAn lennonjohto koordinoi useita järjestelmiä avaruuslennon aikana, aiomme rakentaa avaruuspelin, joka havainnollistaa, kuinka ohjelman eri osat voivat toimia saumattomasti yhdessä. Luodessasi jotain, mitä voit oikeasti pelata, opit keskeisiä ohjelmointikonsepteja, jotka pätevät mihin tahansa ohjelmistoprojektiin.
+Aivan kuten NASAn lennonjohto koordinoi useita järjestelmiä avaruuslähdön aikana, aiomme rakentaa avaruuspelin, joka havainnollistaa, kuinka ohjelman eri osat voivat toimia saumattomasti yhdessä. Luodessasi jotain, mitä voit oikeasti pelata, opit keskeisiä ohjelmointikonsepteja, jotka pätevät mihin tahansa ohjelmistoprojektiin.
 
-Tutustumme kahteen perustavanlaatuiseen tapaan järjestää koodia: perintä ja koostaminen. Nämä eivät ole vain akateemisia käsitteitä – ne ovat samoja malleja, jotka ohjaavat kaikkea videopeleistä pankkijärjestelmiin. Toteutamme myös viestintäjärjestelmän nimeltä pub/sub, joka toimii kuten avaruusalusten viestintäverkostot, mahdollistaen eri komponenttien tiedon jakamisen ilman riippuvuuksia.
+Tutkimme kahta perustavanlaatuista lähestymistapaa koodin järjestämiseen: perintä ja koostaminen. Nämä eivät ole vain akateemisia käsitteitä – ne ovat samoja malleja, jotka pyörittävät kaikkea videopeleistä pankkijärjestelmiin. Toteutamme myös viestintäjärjestelmän nimeltä pub/sub, joka toimii kuten avaruusalusten viestintäverkot, mahdollistaen eri komponenttien tiedon jakamisen ilman riippuvuuksia.
 
 Tämän sarjan lopussa ymmärrät, kuinka rakentaa sovelluksia, jotka voivat laajentua ja kehittyä – olipa kyseessä pelien, verkkosovellusten tai minkä tahansa muun ohjelmistojärjestelmän kehittäminen.
 
-## Ennen luentoa -kysely
+```mermaid
+mindmap
+  root((Game Architecture))
+    Object Organization
+      Inheritance
+      Composition
+      Class Hierarchies
+      Behavior Mixing
+    Communication Patterns
+      Pub/Sub System
+      Event Emitters
+      Message Passing
+      Loose Coupling
+    Game Objects
+      Properties (x, y)
+      Behaviors (move, collide)
+      Lifecycle Management
+      State Management
+    Design Patterns
+      Factory Functions
+      Observer Pattern
+      Component System
+      Event-Driven Architecture
+    Scalability
+      Modular Design
+      Maintainable Code
+      Testing Strategies
+      Performance Optimization
+```
 
-[Ennen luentoa -kysely](https://ff-quizzes.netlify.app/web/quiz/29)
+## Ennakkokysely
+
+[Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/29)
 
 ## Perintä ja koostaminen pelikehityksessä
 
-Kun projektit kasvavat monimutkaisemmiksi, koodin järjestäminen muuttuu kriittiseksi. Se, mikä alkaa yksinkertaisena skriptinä, voi muuttua vaikeasti ylläpidettäväksi ilman asianmukaista rakennetta – aivan kuten Apollo-lennot vaativat huolellista koordinointia tuhansien komponenttien välillä.
+Kun projektit kasvavat monimutkaisemmiksi, koodin järjestäminen tulee kriittiseksi. Se, mikä alkaa yksinkertaisena skriptinä, voi muuttua vaikeasti ylläpidettäväksi ilman asianmukaista rakennetta – aivan kuten Apollo-lennot vaativat huolellista koordinointia tuhansien komponenttien välillä.
 
-Tutustumme kahteen perustavanlaatuiseen tapaan järjestää koodia: perintä ja koostaminen. Molemmilla on omat etunsa, ja molempien ymmärtäminen auttaa valitsemaan oikean lähestymistavan eri tilanteisiin. Havainnollistamme näitä käsitteitä avaruuspelimme kautta, jossa sankarien, vihollisten, tehosteiden ja muiden objektien on toimittava tehokkaasti yhdessä.
+Tutkimme kahta perustavanlaatuista lähestymistapaa koodin järjestämiseen: perintä ja koostaminen. Molemmilla on omat etunsa, ja molempien ymmärtäminen auttaa valitsemaan oikean lähestymistavan eri tilanteisiin. Havainnollistamme näitä käsitteitä avaruuspelimme kautta, jossa sankarien, vihollisten, lisävoimien ja muiden objektien on toimittava tehokkaasti yhdessä.
 
 ✅ Yksi kuuluisimmista ohjelmointikirjoista käsittelee [suunnittelumalleja](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Missä tahansa pelissä on `pelin objekteja` – vuorovaikutteisia elementtejä, jotka täyttävät pelimaailman. Sankarit, viholliset, tehosteet ja visuaaliset efektit ovat kaikki pelin objekteja. Jokainen sijaitsee tietyissä näytön koordinaateissa käyttäen `x`- ja `y`-arvoja, aivan kuten pisteiden sijoittaminen koordinaatistoon.
+Missä tahansa pelissä on `pelin objekteja` – vuorovaikutteisia elementtejä, jotka täyttävät pelimaailman. Sankarit, viholliset, lisävoimat ja visuaaliset efektit ovat kaikki pelin objekteja. Jokainen niistä sijaitsee tietyissä näytön koordinaateissa käyttäen `x`- ja `y`-arvoja, aivan kuten pisteiden sijoittaminen koordinaatistoon.
 
 Huolimatta visuaalisista eroista, näillä objekteilla on usein yhteisiä peruskäyttäytymisiä:
 
 - **Ne sijaitsevat jossain** – Jokaisella objektilla on x- ja y-koordinaatit, jotta peli tietää, mihin se piirretään
 - **Monet voivat liikkua** – Sankarit juoksevat, viholliset jahtaavat, luodit lentävät ruudun poikki
 - **Niillä on elinkaari** – Jotkut pysyvät ikuisesti, toiset (kuten räjähdykset) ilmestyvät hetkeksi ja katoavat
-- **Ne reagoivat asioihin** – Kun objektit törmäävät, tehosteet kerätään, elämänpalkit päivittyvät
+- **Ne reagoivat asioihin** – Kun objektit törmäävät, lisävoimat kerätään, elämänpalkit päivittyvät
 
 ✅ Mieti peliä kuten Pac-Man. Voitko tunnistaa neljä yllä mainittua objektityyppiä tässä pelissä?
 
+```mermaid
+classDiagram
+    class GameObject {
+        +x: number
+        +y: number
+        +type: string
+        +exists_somewhere()
+    }
+    
+    class MovableObject {
+        +moveTo(x, y)
+        +can_move_around()
+    }
+    
+    class TemporaryObject {
+        +lifespan: number
+        +has_lifespan()
+    }
+    
+    class InteractiveObject {
+        +onCollision()
+        +reacts_to_stuff()
+    }
+    
+    GameObject <|-- MovableObject
+    GameObject <|-- TemporaryObject
+    GameObject <|-- InteractiveObject
+    
+    MovableObject <|-- Hero
+    MovableObject <|-- Enemy
+    MovableObject <|-- Bullet
+    
+    TemporaryObject <|-- PowerUp
+    TemporaryObject <|-- Explosion
+    
+    InteractiveObject <|-- Collectible
+    InteractiveObject <|-- Obstacle
+```
+
 ### Käyttäytymisen ilmaiseminen koodin kautta
 
-Nyt kun ymmärrät pelin objektien jakamat yhteiset käyttäytymiset, tutkitaan, kuinka nämä käyttäytymiset voidaan toteuttaa JavaScriptissä. Objektin käyttäytymistä voidaan ilmaista metodeilla, jotka liitetään joko luokkiin tai yksittäisiin objekteihin, ja valittavana on useita lähestymistapoja.
+Nyt kun ymmärrät pelin objektien yhteiset käyttäytymiset, tutkitaan, kuinka nämä käyttäytymiset voidaan toteuttaa JavaScriptissä. Voit ilmaista objektin käyttäytymistä menetelmien avulla, jotka liitetään joko luokkiin tai yksittäisiin objekteihin, ja valittavana on useita lähestymistapoja.
 
 **Luokkapohjainen lähestymistapa**
 
-Luokat ja perintä tarjoavat jäsennellyn tavan järjestää pelin objekteja. Kuten Carl Linnaeuksen kehittämä taksonominen luokittelujärjestelmä, aloitat perusluokalla, joka sisältää yhteiset ominaisuudet, ja luot sitten erikoistuneita luokkia, jotka perivät nämä perusominaisuudet ja lisäävät erityisiä kykyjä.
+Luokat ja perintä tarjoavat jäsennellyn lähestymistavan pelin objektien järjestämiseen. Kuten Carl Linnaeuksen kehittämä taksonominen luokittelujärjestelmä, aloitat perusluokalla, joka sisältää yhteiset ominaisuudet, ja luot sitten erikoistuneita luokkia, jotka perivät nämä perusominaisuudet ja lisäävät erityisiä kykyjä.
 
 ✅ Perintä on tärkeä käsite ymmärtää. Lue lisää [MDN:n artikkelista perinnästä](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Näin voit toteuttaa pelin objektit luokkien ja perinnän avulla:
+Näin voit toteuttaa pelin objektit käyttämällä luokkia ja perintää:
 
 ```javascript
 // Step 1: Create the base GameObject class
@@ -83,8 +169,8 @@ class Movable extends GameObject {
 }
 ```
 
-**Yllä olevassa olemme:**
-- **Laajentaneet** GameObject-luokkaa lisätäksemme liikkumistoiminnallisuuden
+**Yllä olemme:**
+- **Laajentaneet** GameObject-luokkaa lisätäksemme liikkumistoiminnallisuutta
 - **Kutsuneet** vanhemman konstruktorin käyttämällä `super()`-metodia perittyjen ominaisuuksien alustamiseen
 - **Lisänneet** `moveTo()`-metodin, joka päivittää objektin sijainnin
 
@@ -116,11 +202,11 @@ const tree = new Tree(10, 15);
 - **Näyttää**, että sankarit voivat liikkua, kun taas puut pysyvät paikallaan
 - **Kuvastaa**, kuinka luokkahierarkia estää sopimattomat toiminnot
 
-✅ Käytä muutama minuutti miettiäksesi uudelleen Pac-Manin sankaria (esimerkiksi Inky, Pinky tai Blinky) ja kuinka se kirjoitettaisiin JavaScriptissä.
+✅ Käytä muutama minuutti uudelleenkuvitellaksesi Pac-Man-sankarin (esim. Inky, Pinky tai Blinky) ja kuinka se kirjoitettaisiin JavaScriptissä.
 
 **Koostamislähestymistapa**
 
-Koostaminen noudattaa modulaarista suunnittelufilosofiaa, aivan kuten insinöörit suunnittelevat avaruusaluksia vaihdettavilla komponenteilla. Sen sijaan, että perittäisiin vanhemmalta luokalta, yhdistetään tiettyjä käyttäytymisiä luodakseen objekteja, joilla on juuri ne ominaisuudet, joita ne tarvitsevat. Tämä lähestymistapa tarjoaa joustavuutta ilman jäykkiä hierarkkisia rajoitteita.
+Koostaminen noudattaa modulaarista suunnittelufilosofiaa, aivan kuten insinöörit suunnittelevat avaruusaluksia vaihdettavilla komponenteilla. Sen sijaan, että perittäisiin vanhemmalta luokalta, yhdistät tiettyjä käyttäytymisiä luodaksesi objekteja, joilla on juuri tarvittava toiminnallisuus. Tämä lähestymistapa tarjoaa joustavuutta ilman jäykkiä hierarkkisia rajoitteita.
 
 ```javascript
 // Step 1: Create base behavior objects
@@ -139,8 +225,8 @@ const movable = {
 ```
 
 **Tämä koodi tekee seuraavaa:**
-- **Määrittelee** perus `gameObject`-objektin, jossa on sijainti- ja tyyppiominaisuudet
-- **Luo** erillisen `movable`-käyttäytymisobjektin, jossa on liikkumistoiminnallisuus
+- **Määrittää** perus `gameObject`-objektin sijainti- ja tyyppiominaisuuksilla
+- **Luo** erillisen `movable`-käyttäytymisobjektin liikkumistoiminnallisuudella
 - **Erottaa** vastuut pitämällä sijaintitiedot ja liikkumislogiikan erillään
 
 ```javascript
@@ -167,7 +253,7 @@ function createStatic(x, y, type) {
 }
 ```
 
-**Yllä olevassa olemme:**
+**Yllä olemme:**
 - **Yhdistäneet** perusobjektin ominaisuudet ja liikkumiskäyttäytymisen spread-syntaksilla
 - **Luoneet** tehdasfunktioita, jotka palauttavat räätälöityjä objekteja
 - **Mahdollistaneet** joustavan objektien luomisen ilman jäykkiä luokkahierarkioita
@@ -185,41 +271,101 @@ const tree = createStatic(0, 0, 'Tree');
 **Tärkeät asiat muistaa:**
 - **Koostaa** objekteja sekoittamalla käyttäytymisiä perimisen sijaan
 - **Tarjoaa** enemmän joustavuutta kuin jäykät perintähierarkiat
-- **Mahdollistaa** objekteille juuri niiden tarvitsemat ominaisuudet
-- **Käyttää** modernia JavaScriptin spread-syntaksia siistiin objektien yhdistämiseen 
+- **Mahdollistaa** objekteille juuri tarvittavat ominaisuudet
+- **Käyttää** modernia JavaScriptin spread-syntaksia siistiin objektien yhdistämiseen
 ```
 
 **Which Pattern Should You Choose?**
 
-> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+**Which Pattern Should You Choose?**
+
+```mermaid
+quadrantChart
+    title Code Organization Patterns
+    x-axis Simple --> Complex
+    y-axis Rigid --> Flexible
+    quadrant-1 Advanced Composition
+    quadrant-2 Hybrid Approaches
+    quadrant-3 Basic Inheritance
+    quadrant-4 Modern Composition
+    
+    Class Inheritance: [0.3, 0.2]
+    Interface Implementation: [0.6, 0.4]
+    Mixin Patterns: [0.7, 0.7]
+    Pure Composition: [0.8, 0.9]
+    Factory Functions: [0.5, 0.8]
+    Prototype Chain: [0.4, 0.3]
+```
+
+> 💡 **Vinkki**: Molemmilla malleilla on paikkansa modernissa JavaScript-kehityksessä. Luokat toimivat hyvin selkeästi määritellyissä hierarkioissa, kun taas koostaminen loistaa, kun tarvitaan maksimaalista joustavuutta.
 > 
-**Here's when to use each approach:**
-- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
-- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
-- **Consider** your team's preferences and project requirements
-- **Remember** that you can mix both approaches in the same application
+**Milloin käyttää kumpaakin lähestymistapaa:**
+- **Valitse** perintä, kun sinulla on selkeitä "on-a" suhteita (sankari *on* liikkuva objekti)
+- **Valitse** koostaminen, kun tarvitset "has-a" suhteita (sankari *omistaa* liikkumiskyvyn)
+- **Harkitse** tiimisi mieltymyksiä ja projektin vaatimuksia
+- **Muista**, että voit yhdistää molemmat lähestymistavat samassa sovelluksessa
 
-## Communication Patterns: The Pub/Sub System
+### 🔄 **Pedagoginen tarkistus**
+**Objektien järjestämisen ymmärtäminen**: Ennen siirtymistä viestintämalleihin, varmista, että osaat:
+- ✅ Selittää perinnän ja koostamisen eron
+- ✅ Tunnistaa, milloin käyttää luokkia vs tehdasfunktioita
+- ✅ Ymmärtää, kuinka `super()`-avainsana toimii perinnässä
+- ✅ Tunnistaa molempien lähestymistapojen edut pelikehityksessä
 
-As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+**Nopea itsekoe**: Kuinka loisit lentävän vihollisen, joka voi sekä liikkua että lentää?
+- **Perintälähestymistapa**: `class FlyingEnemy extends Movable`
+- **Koostamislähestymistapa**: `{ ...movable, ...flyable, ...gameObject }`
 
-Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+**Yhteys tosielämään**: Nämä mallit näkyvät kaikkialla:
+- **React-komponentit**: Props (koostaminen) vs luokkaperintä
+- **Pelimoottorit**: Entiteetti-komponenttijärjestelmät käyttävät koostamista
+- **Mobiilisovellukset**: UI-kehykset käyttävät usein perintähierarkioita
 
-✅ **Pub/Sub** stands for 'publish-subscribe'
+## Viestintämallit: Pub/Sub-järjestelmä
 
-### Understanding the Pub/Sub Architecture
+Kun sovellukset kasvavat monimutkaisiksi, komponenttien välisen viestinnän hallinta muuttuu haastavaksi. Julkaisu-tilausmalli (pub/sub) ratkaisee tämän ongelman käyttämällä periaatteita, jotka muistuttavat radiolähetystä – yksi lähettäjä voi tavoittaa useita vastaanottajia tietämättä, kuka kuuntelee.
 
-The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+Ajattele, mitä tapahtuu, kun sankari ottaa vahinkoa: elämänpalkki päivittyy, äänitehosteet soivat, visuaalinen palaute ilmestyy. Sen sijaan, että sankariobjekti olisi suoraan kytketty näihin järjestelmiin, pub/sub mahdollistaa sankarin lähettämään "vahinkoa otettu" -viestin. Kaikki järjestelmät, jotka tarvitsevat reagoida, voivat tilata tämän viestityypin ja reagoida sen mukaisesti.
 
-**The key players in pub/sub:**
-- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
-- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
-- **Subscribers** – The objects that say "I care about that event" and react when it happens
-- **Event System** – The middleman that makes sure messages get to the right listeners
+✅ **Pub/Sub** tarkoittaa 'julkaisu-tilaus'
 
-### Building an Event System
+```mermaid
+flowchart TD
+    A[Hero Takes Damage] --> B[Publish: HERO_DAMAGED]
+    B --> C[Event System]
+    
+    C --> D[Health Bar Subscriber]
+    C --> E[Sound System Subscriber]
+    C --> F[Visual Effects Subscriber]
+    C --> G[Achievement System Subscriber]
+    
+    D --> H[Update Health Display]
+    E --> I[Play Damage Sound]
+    F --> J[Show Red Flash]
+    G --> K[Check Survival Achievements]
+    
+    style A fill:#ffebee
+    style B fill:#e1f5fe
+    style C fill:#e8f5e8
+    style H fill:#fff3e0
+    style I fill:#fff3e0
+    style J fill:#fff3e0
+    style K fill:#fff3e0
+```
 
-Let's create a simple but powerful event system that demonstrates these concepts:
+### Pub/Sub-arkkitehtuurin ymmärtäminen
+
+Pub/sub-malli pitää sovelluksen eri osat löyhästi kytkettyinä, mikä tarkoittaa, että ne voivat toimia yhdessä olematta suoraan riippuvaisia toisistaan. Tämä erottelu tekee koodistasi helpommin ylläpidettävää, testattavaa ja muutoksiin mukautuvaa.
+
+**Pub/sub-mallin keskeiset osat:**
+- **Viestit** – Yksinkertaisia tekstilappuja, kuten `'PLAYER_SCORED'`, jotka kuvaavat tapahtunutta (plus mahdolliset lisätiedot)
+- **Julkaisijat** – Objektit, jotka huutavat "Jotain tapahtui!" kaikille kuuntelijoille
+- **Tilaajat** – Objektit, jotka sanovat "Minua kiinnostaa tuo tapahtuma" ja reagoivat siihen
+- **Tapahtumajärjestelmä** – Välikäsi, joka varmistaa, että viestit päätyvät oikeille kuuntelijoille
+
+### Tapahtumajärjestelmän rakentaminen
+
+Luodaan yksinkertainen mutta tehokas tapahtumajärjestelmä, joka havainnollistaa näitä käsitteitä:
 
 ```javascript
 // Step 1: Create the EventEmitter class
@@ -250,7 +396,7 @@ class EventEmitter {
 **Puretaan, mitä tässä tapahtuu:**
 - **Luo** keskeisen tapahtumien hallintajärjestelmän yksinkertaisella luokalla
 - **Tallentaa** kuuntelijat objektiin, joka on järjestetty viestityypin mukaan
-- **Rekisteröi** uusia kuuntelijoita `on()`-metodilla
+- **Rekisteröi** uusia kuuntelijoita `on()`-metodin avulla
 - **Lähettää** viestejä kaikille kiinnostuneille kuuntelijoille `emit()`-metodilla
 - **Tukee** valinnaisia tietopaketteja olennaisen tiedon välittämiseksi
 
@@ -272,7 +418,7 @@ const hero = createHero(0, 0);
 ```
 
 **Tämä koodi tekee seuraavaa:**
-- **Määrittelee** vakio-objektin estääkseen kirjoitusvirheet viestin nimissä
+- **Määrittää** vakio-objektin estääkseen kirjoitusvirheet viestinimissä
 - **Luo** tapahtumaemitterin käsittelemään kaikkea viestintää
 - **Alustaa** sankariobjektin aloitussijainnissa
 
@@ -289,8 +435,8 @@ eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
 });
 ```
 
-**Yllä olevassa olemme:**
-- **Rekisteröineet** tapahtumakuuntelijoita, jotka reagoivat liikkumisviesteihin
+**Yllä olemme:**
+- **Rekisteröineet** tapahtumakuuntelijat, jotka reagoivat liikkumisviesteihin
 - **Päivittäneet** sankarin sijainnin liikkumissuunnan perusteella
 - **Lisänneet** konsolilokituksen sankarin sijainnin muutosten seuraamiseksi
 - **Erottaneet** liikkumislogiikan syötteen käsittelystä
@@ -311,45 +457,59 @@ window.addEventListener('keydown', (event) => {
 
 **Näiden käsitteiden ymmärtäminen:**
 - **Yhdistää** näppäimistön syötteen pelitapahtumiin ilman tiukkaa kytkentää
-- **Mahdollistaa** syöttöjärjestelmän viestimisen pelin objektien kanssa epäsuorasti
+- **Mahdollistaa** syöttöjärjestelmän viestimisen pelin objekteille epäsuorasti
 - **Sallii** useiden järjestelmien reagoida samoihin näppäimistötapahtumiin
-- **Helpottaa** näppäinten sitomisen muuttamista tai uusien syöttömenetelmien lisäämistä
+- **Helpottaa** näppäinkomentojen muuttamista tai uusien syöttömenetelmien lisäämistä
 
-> 💡 **Vinkki**: Tämän mallin kauneus on sen joustavuus! Voit helposti lisätä uusia ominaisuuksia, kuten ääniefektejä, ruudun tärinää tai hiukkasefektejä, yksinkertaisesti lisäämällä lisää tapahtumakuuntelijoita – sinun ei tarvitse muokata olemassa olevaa näppäimistö- tai liikkumiskoodia.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Keyboard
+    participant EventEmitter
+    participant Hero
+    participant SoundSystem
+    participant Camera
+    
+    User->>Keyboard: Presses ArrowLeft
+    Keyboard->>EventEmitter: emit('HERO_MOVE_LEFT')
+    EventEmitter->>Hero: Move left 5 pixels
+    EventEmitter->>SoundSystem: Play footstep sound
+    EventEmitter->>Camera: Follow hero
+    
+    Hero->>Hero: Update position
+    SoundSystem->>SoundSystem: Play audio
+    Camera->>Camera: Adjust viewport
+```
+
+> 💡 **Vinkki**: Tämän mallin kauneus on sen joustavuus! Voit helposti lisätä äänitehosteita, ruudun tärinää tai hiukkasefektejä yksinkertaisesti lisäämällä lisää tapahtumakuuntelijoita – ei tarvitse muokata olemassa olevaa näppäimistö- tai liikkumiskoodia.
 > 
-**Miksi tulet rakastamaan tätä lähestymistapaa:**
-- Uusien ominaisuuksien lisääminen on todella helppoa – kuuntele vain niitä tapahtumia, joista olet kiinnostunut
+**Miksi rakastat tätä lähestymistapaa:**
+- Uusien ominaisuuksien lisääminen on todella helppoa – kuuntele vain tapahtumia, jotka kiinnostavat sinua
 - Useat asiat voivat reagoida samaan tapahtumaan ilman, että ne häiritsevät toisiaan
-- Testaaminen helpottuu huomattavasti, koska jokainen osa toimii itsenäisesti
+- Testaaminen on paljon yksinkertaisempaa, koska jokainen osa toimii itsenäisesti
 - Kun jokin menee pieleen, tiedät tarkalleen, mistä etsiä
 
 ### Miksi Pub/Sub skaalautuu tehokkaasti
 
-Pub/sub-malli säilyttää yksinkertaisuuden, kun sovellukset kasvavat monimutkaisemmiksi. Olipa kyseessä kymmenien vihollisten hallinta, dynaamiset käyttöliittymäpäivitykset tai äänijärjestelmät, malli käsittelee kasvavaa mittakaavaa ilman arkkitehtuurimuutoksia. Uudet ominaisuudet integroituvat olemassa olevaan tapahtumajärjestelmään vaikuttamatta vakiintuneeseen toiminnallisuuteen.
+Pub/sub-malli säilyttää yksinkertaisuuden, kun sovellukset kasvavat monimutkaisiksi. Olipa kyseessä kymmenet viholliset, dynaamiset käyttöliittymäpäivitykset tai äänijärjestelmät, malli käsittelee kasvavaa skaalaa ilman arkkitehtuurimuutoksia. Uudet ominaisuudet integroituvat olemassa olevaan tapahtumajärjestelmään vaikuttamatta vakiintuneeseen toiminnallisuuteen.
 
-> ⚠️ **Yleinen virhe**: Älä luo liian monia erityisiä viestityyppejä alussa. Aloita laajoilla kategorioilla ja tarkenna niitä pelin tarpeiden mukaan.
+> ⚠️ **Yleinen virhe**: Älä luo liian monta spesifistä viestityyppiä alussa. Aloita laajoilla kategorioilla ja tarkenna niitä pelin tarpeiden mukaan.
 > 
 **Parhaat käytännöt:**
 - **Ryhmittele** liittyvät viestit loogisiin kategorioihin
-- **Käytä** kuvailevia nimiä, jotka selkeästi ilmaisevat tapahtuman
+- **Käytä** kuvaavia nimiä, jotka selkeästi ilmaisevat, mitä tapahtui
 - **Pidä** viestien tietopaketit yksinkertaisina ja keskittyneinä
-- **Dokumentoi** viestityypit tiimityötä varten
+- **Dokumentoi** viestityypit tiimiyhteistyötä varten
 
----
+### 🔄 **Pedagoginen tarkistus**
+**Tapahtumapohjaisen arkkitehtuurin ymmärtäminen**: Varmista, että ymmärrät koko järjestelmän:
+- ✅ Kuinka pub/sub-malli estää tiukan kytkennän komponenttien välillä?
+- ✅ Miksi uusien ominaisuuksien lisääminen on helpompaa tapahtumapohjaisessa arkkitehtuurissa?
+- ✅ Mikä rooli EventEmitterillä on viestintävirrassa?
+- ✅ Kuinka viestivakiot estävät virheitä ja parantavat ylläpidettävyyttä?
 
-## GitHub Copilot Agent -haaste 🚀
-
-Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
-
-**Kuvaus:** Luo yksinkertainen pelin objektijärjestelmä käyttäen sekä perintää että pub/sub-mallia. Toteutat peruspelin, jossa eri objektit voivat kommunikoida tapahtumien kautta tietämättä suoraan toisistaan.
-
-**Tehtävä:** Luo JavaScript-pelijärjestelmä seuraavilla vaatimuksilla: 1) Luo perus GameObject-luokka, jossa on x- ja y-koordinaatit sekä tyyppiominaisuus. 2) Luo Hero-luokka, joka laajentaa GameObjectia ja voi liikkua. 3) Luo Enemy-luokka, joka laajentaa GameObjectia ja voi jahdata sankaria. 4) Toteuta EventEmitter-luokka pub/sub-mallia varten. 5) Aseta tapahtumakuuntelijat niin, että kun sankari liikkuu, lähistöllä olevat viholliset saavat 'HERO_MOVED'-tapahtuman ja päivittävät sijaintinsa liikkuakseen sankaria kohti. Sisällytä console.log-lauseet näyttämään objektien välinen viestintä.
-
-Lue lisää [agent-tilasta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) täältä.
-
-## 🚀 Haaste
-
-Mieti, kuinka pub-sub-malli voi parantaa pelin arkkitehtuuria. Tunnista, mitkä komponentit pitäisi lähettää tapahtumia ja miten järjestelmän pitäisi reagoida. Suunnittele pelikonsepti ja hahmottele sen komponenttien väliset viestintämallit.
+**Suunnittelutehtävä**: Kuinka käsittelisit nä
+Harkitse, kuinka pub-sub-malli voi parantaa pelin arkkitehtuuria. Tunnista, mitkä komponentit lähettävät tapahtumia ja miten järjestelmän tulisi reagoida. Suunnittele pelikonsepti ja kartoita viestintäkuviot sen komponenttien välillä.
 
 ## Luentojälkeinen kysely
 
@@ -357,13 +517,127 @@ Mieti, kuinka pub-sub-malli voi parantaa pelin arkkitehtuuria. Tunnista, mitkä 
 
 ## Kertaus ja itseopiskelu
 
-Lue lisää Pub/Sub-mallista [täältä](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+Opi lisää Pub/Sub-mallista [lukemalla siitä](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+
+### ⚡ **Mitä voit tehdä seuraavan 5 minuutin aikana**
+- [ ] Avaa mikä tahansa HTML5-peli verkossa ja tarkastele sen koodia DevToolsilla
+- [ ] Luo yksinkertainen HTML5 Canvas -elementti ja piirrä perusmuoto
+- [ ] Kokeile käyttää `setInterval`-metodia yksinkertaisen animaatiosilmukan luomiseen
+- [ ] Tutustu Canvas API -dokumentaatioon ja kokeile jotain piirrostapaa
+
+### 🎯 **Mitä voit saavuttaa tunnin aikana**
+- [ ] Suorita luentojälkeinen kysely ja ymmärrä pelinkehityksen peruskäsitteet
+- [ ] Rakenna peliprojektin perusrakenne HTML-, CSS- ja JavaScript-tiedostoilla
+- [ ] Luo yksinkertainen pelisilmukka, joka päivittää ja renderöi jatkuvasti
+- [ ] Piirrä ensimmäiset pelispritet canvasille
+- [ ] Toteuta perusresurssien lataus kuville ja äänille
+
+### 📅 **Viikon mittainen pelin luominen**
+- [ ] Viimeistele koko avaruuspeli kaikilla suunnitelluilla ominaisuuksilla
+- [ ] Lisää viimeisteltyjä grafiikoita, äänitehosteita ja sulavia animaatioita
+- [ ] Toteuta pelitilat (aloitusnäyttö, pelitila, pelin loppu)
+- [ ] Luo pistelaskujärjestelmä ja pelaajan edistymisen seuranta
+- [ ] Tee pelistä responsiivinen ja saavutettava eri laitteilla
+- [ ] Jaa pelisi verkossa ja kerää palautetta pelaajilta
+
+### 🌟 **Kuukauden mittainen pelinkehitys**
+- [ ] Rakenna useita pelejä, joissa tutkitaan eri genrejä ja mekaniikkoja
+- [ ] Opettele pelinkehityskehys, kuten Phaser tai Three.js
+- [ ] Osallistu avoimen lähdekoodin pelinkehitysprojekteihin
+- [ ] Hallitse edistyneitä peliohjelmointimalleja ja optimointia
+- [ ] Luo portfolio, joka esittelee pelinkehitystaitojasi
+- [ ] Mentoroi muita, jotka ovat kiinnostuneita pelinkehityksestä ja interaktiivisesta mediasta
+
+## 🎯 Pelinkehityksen hallinnan aikajana
+
+```mermaid
+timeline
+    title Game Architecture Learning Progression
+    
+    section Object Patterns (20 minutes)
+        Code Organization: Class inheritance
+                         : Composition patterns
+                         : Factory functions
+                         : Behavior mixing
+        
+    section Communication Systems (25 minutes)
+        Event Architecture: Pub/Sub implementation
+                          : Message design
+                          : Event emitters
+                          : Loose coupling
+        
+    section Game Object Design (30 minutes)
+        Entity Systems: Property management
+                      : Behavior composition
+                      : State handling
+                      : Lifecycle management
+        
+    section Architecture Patterns (35 minutes)
+        System Design: Component systems
+                     : Observer pattern
+                     : Command pattern
+                     : State machines
+        
+    section Advanced Concepts (45 minutes)
+        Scalable Architecture: Performance optimization
+                             : Memory management
+                             : Modular design
+                             : Testing strategies
+        
+    section Game Engine Concepts (1 week)
+        Professional Development: Scene graphs
+                                 : Asset management
+                                 : Rendering pipelines
+                                 : Physics integration
+        
+    section Framework Mastery (2 weeks)
+        Modern Game Development: React game patterns
+                               : Canvas optimization
+                               : WebGL basics
+                               : PWA games
+        
+    section Industry Practices (1 month)
+        Professional Skills: Team collaboration
+                           : Code reviews
+                           : Game design patterns
+                           : Performance profiling
+```
+
+### 🛠️ Pelin arkkitehtuurityökalupakin yhteenveto
+
+Tämän oppitunnin jälkeen sinulla on:
+- **Suunnittelumallien hallinta**: Ymmärrys periytymisen ja koostamisen välisistä kompromisseista
+- **Tapahtumapohjainen arkkitehtuuri**: Pub/sub-toteutus skaalautuvaan viestintään
+- **Olio-ohjelmoinnin suunnittelu**: Luokkahierarkiat ja käyttäytymisen koostaminen
+- **Moderni JavaScript**: Tehdasfunktiot, spread-syntaksi ja ES6+ -mallit
+- **Skaalautuva arkkitehtuuri**: Löyhästi kytketyt ja modulaariset suunnitteluperiaatteet
+- **Pelinkehityksen perusta**: Entiteettijärjestelmät ja komponenttimallit
+- **Ammatilliset mallit**: Teollisuusstandardit koodin organisointiin
+
+**Käytännön sovellukset**: Nämä mallit soveltuvat suoraan:
+- **Frontend-kehykset**: React/Vue-komponenttiarkkitehtuuri ja tilanhallinta
+- **Backend-palvelut**: Mikroservice-viestintä ja tapahtumapohjaiset järjestelmät
+- **Mobiilikehitys**: iOS/Android-sovellusarkkitehtuuri ja ilmoitusjärjestelmät
+- **Pelimoottorit**: Unity, Unreal ja verkkopohjainen pelinkehitys
+- **Yritysohjelmistot**: Tapahtumalähteet ja hajautettujen järjestelmien suunnittelu
+- **API-suunnittelu**: RESTful-palvelut ja reaaliaikainen viestintä
+
+**Ammatilliset taidot**: Nyt osaat:
+- **Suunnitella** skaalautuvia ohjelmistoarkkitehtuureja käyttäen todistettuja malleja
+- **Toteuttaa** tapahtumapohjaisia järjestelmiä, jotka käsittelevät monimutkaisia vuorovaikutuksia
+- **Valita** sopivia koodin organisointistrategioita eri tilanteisiin
+- **Debugata** ja ylläpitää löyhästi kytkettyjä järjestelmiä tehokkaasti
+- **Kommunikoida** teknisiä päätöksiä käyttäen teollisuusstandardin terminologiaa
+
+**Seuraava taso**: Olet valmis toteuttamaan nämä mallit oikeassa pelissä, tutkimaan edistyneitä pelinkehityksen aiheita tai soveltamaan näitä arkkitehtuurikäsitteitä verkkosovelluksiin!
+
+🌟 **Saavutus avattu**: Olet hallinnut ohjelmistoarkkitehtuurin perusmallit, jotka tukevat kaikkea yksinkertaisista peleistä monimutkaisiin yritysjärjestelmiin!
 
 ## Tehtävä
 
-[Suunnittele peli](assignment.md)
+[Luonnostele peli](assignment.md)
 
 ---
 
 **Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.

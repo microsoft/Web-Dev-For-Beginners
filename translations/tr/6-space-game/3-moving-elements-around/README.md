@@ -1,21 +1,68 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "022bbb5c869091b98f19e408e0c51d5d",
-  "translation_date": "2025-10-23T00:05:28+00:00",
+  "original_hash": "8c55a2bd4bc0ebe4c88198fd563a9e09",
+  "translation_date": "2025-11-04T01:02:18+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "tr"
 }
 -->
-# Uzay Oyunu Yapımı Bölüm 3: Hareket Eklemek
+# Uzay Oyunu Yapımı Bölüm 3: Hareket Ekleme
 
-Favori oyunlarınızı düşünün – onları etkileyici kılan şey sadece güzel grafikler değil, aynı zamanda her şeyin nasıl hareket ettiği ve eylemlerinize nasıl tepki verdiğidir. Şu anda uzay oyununuz güzel bir tablo gibi, ancak ona hayat verecek hareketi eklemek üzereyiz.
+```mermaid
+journey
+    title Your Game Animation Journey
+    section Movement Basics
+      Understand motion principles: 3: Student
+      Learn coordinate updates: 4: Student
+      Implement basic movement: 4: Student
+    section Player Controls
+      Handle keyboard events: 4: Student
+      Prevent default behaviors: 5: Student
+      Create responsive controls: 5: Student
+    section Game Systems
+      Build game loop: 5: Student
+      Manage object lifecycle: 5: Student
+      Implement pub/sub pattern: 5: Student
+```
+
+Favori oyunlarınızı düşünün – onları etkileyici kılan şey sadece güzel grafikler değil, her şeyin hareket etmesi ve eylemlerinize tepki vermesidir. Şu anda uzay oyununuz güzel bir tablo gibi, ancak ona hayat verecek hareketi eklemek üzereyiz.
 
 NASA mühendisleri Apollo görevleri için rehberlik bilgisayarını programladıklarında benzer bir zorlukla karşılaştılar: Bir uzay aracını pilotun girdilerine nasıl tepki verecek şekilde programlarsınız ve aynı zamanda otomatik olarak rota düzeltmelerini nasıl sağlarsınız? Bugün öğreneceğimiz prensipler, oyuncu kontrollü hareketi otomatik sistem davranışlarıyla yönetme konusunda aynı kavramları yansıtıyor.
 
 Bu derste, uzay gemilerinin ekran boyunca kaymasını, oyuncu komutlarına tepki vermesini ve pürüzsüz hareket desenleri oluşturmayı öğreneceksiniz. Her şeyi doğal bir şekilde birbirine bağlanan yönetilebilir kavramlara ayıracağız.
 
-Dersin sonunda, oyuncular kahraman gemilerini ekranın etrafında uçururken düşman gemileri yukarıda devriye gezecek. Daha da önemlisi, oyun hareket sistemlerini güçlendiren temel prensipleri anlayacaksınız.
+Sonunda, oyuncular kahraman gemilerini ekranın etrafında uçururken düşman gemileri yukarıda devriye gezecek. Daha da önemlisi, oyun hareket sistemlerini çalıştıran temel prensipleri anlayacaksınız.
+
+```mermaid
+mindmap
+  root((Game Animation))
+    Movement Types
+      Player Controlled
+      Automatic Motion
+      Physics Based
+      Scripted Paths
+    Event Handling
+      Keyboard Input
+      Mouse Events
+      Touch Controls
+      Default Prevention
+    Game Loop
+      Update Logic
+      Render Frame
+      Clear Canvas
+      Frame Rate Control
+    Object Management
+      Position Updates
+      Collision Detection
+      Lifecycle Management
+      State Tracking
+    Communication
+      Pub/Sub Pattern
+      Event Emitters
+      Message Passing
+      Loose Coupling
+```
 
 ## Ders Öncesi Test
 
@@ -23,22 +70,43 @@ Dersin sonunda, oyuncular kahraman gemilerini ekranın etrafında uçururken dü
 
 ## Oyun Hareketini Anlamak
 
-Oyunlar, bir şeyler hareket etmeye başladığında canlanır ve temelde iki şekilde bu gerçekleşir:
+Oyunlar, nesneler hareket etmeye başladığında canlanır ve bu genelde iki şekilde olur:
 
 - **Oyuncu kontrollü hareket**: Bir tuşa bastığınızda veya farenizi tıkladığınızda bir şey hareket eder. Bu, sizinle oyun dünyanız arasındaki doğrudan bağlantıdır.
 - **Otomatik hareket**: Oyun kendi kendine bir şeyleri hareket ettirmeye karar verdiğinde – örneğin, düşman gemilerinin ekran boyunca devriye gezmesi gibi, siz bir şey yapmasanız bile.
 
-Bilgisayar ekranında nesneleri hareket ettirmek düşündüğünüzden daha basittir. Matematik dersinden hatırladığınız x ve y koordinatlarını hatırlıyor musunuz? İşte tam olarak burada çalıştığımız şey bu. Galileo, 1610 yılında Jüpiter'in uydularını izlerken aslında aynı şeyi yapıyordu – hareket desenlerini anlamak için zaman içinde konumları çiziyordu.
+Bilgisayar ekranında nesneleri hareket ettirmek düşündüğünüzden daha basittir. Matematik dersinden hatırladığınız x ve y koordinatlarını hatırlıyor musunuz? İşte tam olarak bununla çalışıyoruz. Galileo, 1610 yılında Jüpiter'in uydularını izlerken aslında aynı şeyi yapıyordu – hareket desenlerini anlamak için zaman içinde konumları çiziyordu.
 
 Ekranda bir şeyleri hareket ettirmek, bir flipbook animasyonu oluşturmak gibidir – şu üç basit adımı takip etmeniz gerekir:
+
+```mermaid
+flowchart LR
+    A["Frame N"] --> B["Update Positions"]
+    B --> C["Clear Canvas"]
+    C --> D["Draw Objects"]
+    D --> E["Frame N+1"]
+    E --> F{Continue?}
+    F -->|Yes| B
+    F -->|No| G["Game Over"]
+    
+    subgraph "Animation Cycle"
+        H["1. Calculate new positions"]
+        I["2. Erase previous frame"]
+        J["3. Render new frame"]
+    end
+    
+    style B fill:#e1f5fe
+    style C fill:#ffebee
+    style D fill:#e8f5e8
+```
 
 1. **Konumu güncelle** – Nesnenizin nerede olması gerektiğini değiştirin (belki 5 piksel sağa hareket ettirin)
 2. **Eski kareyi sil** – Ekranı temizleyin, böylece her yerde hayalet izler görmezsiniz
 3. **Yeni kareyi çizin** – Nesnenizi yeni yerine yerleştirin
 
-Bunu yeterince hızlı yaparsanız, işte! Oyunculara doğal gelen pürüzsüz bir hareket elde edersiniz.
+Bunu yeterince hızlı yaparsanız, işte! Oyunculara doğal gelen pürüzsüz bir hareket elde ettiniz.
 
-Kodda nasıl görünebileceği:
+Kodda nasıl görünebileceğine bir örnek:
 
 ```javascript
 // Set the hero's location
@@ -55,19 +123,19 @@ ctx.drawImage(heroImg, hero.x, hero.y);
 - Kahramanın x-koordinatını 5 piksel güncelleyerek yatay olarak hareket ettirir
 - Önceki kareyi kaldırmak için tüm tuvali temizler
 - Tuvali siyah bir arka plan rengiyle doldurur
-- Kahraman görüntüsünü yeni konumunda yeniden çizer
+- Kahraman resmini yeni konumunda yeniden çizer
 
-✅ Kahramanınızı saniyede birçok kare yeniden çizerken performans maliyetlerinin birikmesine neden olabilecek bir sebep düşünebilir misiniz? [Bu desene alternatifler](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas) hakkında okuyun.
+✅ Kahramanınızı saniyede birçok karede yeniden çizmenin performans maliyetlerini artırabileceği bir neden düşünebilir misiniz? [Bu desene alternatifler hakkında](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas) okuyun.
 
-## Klavye olaylarını yönetmek
+## Klavye olaylarını işleme
 
-Burada oyuncu girdisini oyun eylemine bağlarız. Birisi lazer ateşlemek için boşluk tuşuna bastığında veya bir asteroitten kaçmak için ok tuşuna dokunduğunda, oyununuz bu girdiyi algılamalı ve buna tepki vermelidir.
+Burada oyuncu girdisini oyun eylemine bağlayacağız. Birisi lazer ateşlemek için boşluk tuşuna bastığında veya bir asteroitten kaçmak için ok tuşuna dokunduğunda, oyununuz bu girdiyi algılamalı ve buna tepki vermelidir.
 
-Klavye olayları pencere düzeyinde gerçekleşir, yani tüm tarayıcı pencereniz bu tuş vuruşlarını dinler. Fare tıklamaları ise belirli öğelere bağlanabilir (örneğin bir düğmeye tıklamak). Uzay oyunumuz için klavye kontrollerine odaklanacağız çünkü bu, oyunculara klasik arcade hissi verir.
+Klavye olayları pencere seviyesinde gerçekleşir, yani tüm tarayıcı pencereniz bu tuş vuruşlarını dinler. Öte yandan fare tıklamaları belirli öğelere bağlanabilir (örneğin bir düğmeye tıklamak gibi). Uzay oyunumuz için klavye kontrollerine odaklanacağız çünkü bu, oyunculara klasik arcade hissi verir.
 
 Bu, 1800'lerde telgraf operatörlerinin mors kodu girdisini anlamlı mesajlara çevirmesi gerektiği zamana benziyor – biz de benzer bir şey yapıyoruz, tuş vuruşlarını oyun komutlarına çeviriyoruz.
 
-Bir olayı yönetmek için pencerenin `addEventListener()` metodunu kullanmanız ve ona iki giriş parametresi sağlamanız gerekir. İlk parametre olayın adı, örneğin `keyup`. İkinci parametre ise olay gerçekleştiğinde çağrılması gereken fonksiyondur.
+Bir olayı işlemek için pencerenin `addEventListener()` metodunu kullanmanız ve ona iki giriş parametresi sağlamanız gerekir. İlk parametre olayın adıdır, örneğin `keyup`. İkinci parametre ise olay gerçekleştiğinde çağrılması gereken fonksiyondur.
 
 İşte bir örnek:
 
@@ -91,13 +159,32 @@ Tuş olayları için hangi tuşun basıldığını görmek için olay üzerinde 
 - `key` - basılan tuşun string temsili, örneğin `'ArrowUp'`
 - `keyCode` - bu bir sayı temsili, örneğin `37`, `ArrowLeft` ile eşleşir
 
-✅ Tuş olayları manipülasyonu oyun geliştirme dışında da kullanışlıdır. Bu tekniğin başka hangi kullanımlarını düşünebilirsiniz?
+✅ Tuş olayı manipülasyonu oyun geliştirme dışında da faydalıdır. Bu tekniğin başka hangi kullanımlarını düşünebilirsiniz?
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant EventSystem
+    participant GameLogic
+    participant Hero
+    
+    User->>Browser: Presses ArrowUp key
+    Browser->>EventSystem: keydown event
+    EventSystem->>EventSystem: preventDefault()
+    EventSystem->>GameLogic: emit('KEY_EVENT_UP')
+    GameLogic->>Hero: hero.y -= 5
+    Hero->>Hero: Update position
+    
+    Note over Browser,GameLogic: Event flow prevents browser defaults
+    Note over GameLogic,Hero: Pub/sub pattern enables clean communication
+```
 
 ### Özel tuşlar: dikkat!
 
 Bazı tuşların yerleşik tarayıcı davranışları vardır ve bunlar oyununuzu etkileyebilir. Ok tuşları sayfayı kaydırır ve boşluk tuşu aşağıya atlar – birisi uzay gemisini kullanmaya çalışırken istemediğiniz davranışlar.
 
-Bu varsayılan davranışları önleyebilir ve girdiyi oyununuzun işlemesine izin verebilirsiniz. Bu, erken dönem bilgisayar programcılarının özel davranışlar oluşturmak için sistem kesintilerini geçersiz kılmak zorunda olduğu zamana benzer – biz bunu tarayıcı düzeyinde yapıyoruz. İşte nasıl:
+Bu varsayılan davranışları önleyebilir ve girdiyi oyununuzun işlemesine izin verebilirsiniz. Bu, erken dönem bilgisayar programcılarının özel davranışlar oluşturmak için sistem kesintilerini geçersiz kılmak zorunda olduğu zamana benzer – biz bunu tarayıcı seviyesinde yapıyoruz. İşte nasıl:
 
 ```javascript
 const onKeyDown = function (e) {
@@ -124,11 +211,27 @@ window.addEventListener('keydown', onKeyDown);
 - Diğer tuşların normal şekilde çalışmasına izin verir
 - Tarayıcının yerleşik davranışını durdurmak için `e.preventDefault()` kullanır
 
+### 🔄 **Pedagojik Kontrol**
+**Olay İşleme Anlayışı**: Otomatik harekete geçmeden önce şunları yapabildiğinizden emin olun:
+- ✅ `keydown` ve `keyup` olayları arasındaki farkı açıklayın
+- ✅ Varsayılan tarayıcı davranışlarını neden engellediğimizi anlayın
+- ✅ Olay dinleyicilerinin kullanıcı girdisini oyun mantığına nasıl bağladığını açıklayın
+- ✅ Hangi tuşların oyun kontrollerine müdahale edebileceğini belirleyin
+
+**Hızlı Kendini Test Et**: Ok tuşları için varsayılan davranışı engellemeseydiniz ne olurdu?
+*Cevap: Tarayıcı sayfayı kaydırır, oyun hareketine müdahale eder*
+
+**Olay Sistemi Mimarisi**: Şimdi şunları anlıyorsunuz:
+- **Pencere seviyesinde dinleme**: Olayları tarayıcı seviyesinde yakalama
+- **Olay nesnesi özellikleri**: `key` stringleri ve `keyCode` numaraları
+- **Varsayılan önleme**: İstenmeyen tarayıcı davranışlarını durdurma
+- **Koşullu mantık**: Belirli tuş kombinasyonlarına tepki verme
+
 ## Oyun kaynaklı hareket
 
-Şimdi oyuncu girdisi olmadan hareket eden nesnelerden bahsedelim. Ekranda dolaşan düşman gemilerini, düz çizgiler halinde uçan mermileri veya arka planda sürüklenen bulutları düşünün. Bu otonom hareket, kimse kontrolleri dokunmasa bile oyun dünyanızı canlı hissettirir.
+Şimdi oyuncu girdisi olmadan hareket eden nesnelerden bahsedelim. Ekranda dolaşan düşman gemilerini, düz çizgilerde uçan mermileri veya arka planda sürüklenen bulutları düşünün. Bu otonom hareket, kimse kontrolleri dokunmasa bile oyun dünyanızı canlı hissettirir.
 
-JavaScript'in yerleşik zamanlayıcılarını kullanarak pozisyonları düzenli aralıklarla güncelleriz. Bu konsept, sarkaçlı saatlerin nasıl çalıştığına benzer – düzenli bir mekanizma, tutarlı ve zamanlanmış eylemleri tetikler. İşte ne kadar basit olabileceği:
+JavaScript'in yerleşik zamanlayıcılarını kullanarak konumları düzenli aralıklarla güncelleriz. Bu konsept, sarkaçlı saatlerin nasıl çalıştığına benzer – düzenli bir mekanizma, tutarlı ve zamanlanmış eylemleri tetikler. İşte ne kadar basit olabileceği:
 
 ```javascript
 const id = setInterval(() => {
@@ -140,18 +243,43 @@ const id = setInterval(() => {
 **Bu hareket kodunun yaptığı şey:**
 - Her 100 milisaniyede bir çalışan bir zamanlayıcı oluşturur
 - Her seferinde düşmanın y-koordinatını 10 piksel günceller
-- Daha sonra durdurabilmek için aralık kimliğini saklar
+- Daha sonra durdurabilmek için interval kimliğini saklar
 - Düşmanı ekranda otomatik olarak aşağıya doğru hareket ettirir
 
 ## Oyun döngüsü
 
-İşte her şeyi bir araya getiren konsept – oyun döngüsü. Oyununuz bir film olsaydı, oyun döngüsü bir film projektörü olurdu, kareyi kareye göstererek her şeyin pürüzsüz bir şekilde hareket ediyormuş gibi görünmesini sağlar.
+İşte her şeyi bir araya getiren konsept – oyun döngüsü. Oyununuz bir film olsaydı, oyun döngüsü film projektörü olurdu, kare kare göstererek her şeyin pürüzsüz bir şekilde hareket etmesini sağlar.
 
-Her oyunun arka planda çalışan bir döngüsü vardır. Bu, tüm oyun nesnelerini güncelleyen, ekranı yeniden çizen ve bu süreci sürekli olarak tekrarlayan bir fonksiyondur. Bu, kahramanınızı, tüm düşmanları, etrafta uçan lazerleri – tüm oyun durumunu takip eder.
+Her oyunun sahne arkasında çalışan bir döngüsü vardır. Bu, tüm oyun nesnelerini güncelleyen, ekranı yeniden çizen ve bu süreci sürekli olarak tekrarlayan bir fonksiyondur. Bu, kahramanınızı, tüm düşmanları, uçan lazerleri – tüm oyun durumunu takip eder.
 
 Bu konsept, Walt Disney gibi erken dönem film animatörlerinin hareket illüzyonu yaratmak için karakterleri kare kare yeniden çizmek zorunda olduğu zamana benziyor. Biz aynı şeyi yapıyoruz, sadece kalem yerine kod kullanıyoruz.
 
-Bir oyun döngüsünün genellikle kodda nasıl göründüğü:
+Bir oyun döngüsünün genelde kodda nasıl görünebileceğine bir örnek:
+
+```mermaid
+flowchart TD
+    A["Start Game Loop"] --> B["Clear Canvas"]
+    B --> C["Fill Background"]
+    C --> D["Update Game Objects"]
+    D --> E["Draw Hero"]
+    E --> F["Draw Enemies"]
+    F --> G["Draw UI Elements"]
+    G --> H["Wait for Next Frame"]
+    H --> I{Game Running?}
+    I -->|Yes| B
+    I -->|No| J["End Game"]
+    
+    subgraph "Frame Rate Control"
+        K["60 FPS = 16.67ms"]
+        L["30 FPS = 33.33ms"]
+        M["10 FPS = 100ms"]
+    end
+    
+    style B fill:#ffebee
+    style D fill:#e1f5fe
+    style E fill:#e8f5e8
+    style F fill:#e8f5e8
+```
 
 ```javascript
 const gameLoopId = setInterval(() => {
@@ -171,24 +299,24 @@ const gameLoopId = setInterval(() => {
 - Önceki kareyi kaldırmak için tüm tuvali temizler
 - Arka planı düz bir renkle doldurur
 - Tüm oyun nesnelerini mevcut konumlarında çizer
-- Pürüzsüz animasyon oluşturmak için bu işlemi her 200 milisaniyede bir tekrarlar
-- Kare hızını kontrol ederek aralık zamanlamasını yönetir
+- Pürüzsüz animasyon oluşturmak için bu süreci her 200 milisaniyede bir tekrarlar
+- Kare hızını kontrol ederek interval zamanlamasını yönetir
 
-## Uzay Oyunu Devam Ediyor
+## Uzay Oyununa Devam Etmek
 
 Şimdi, daha önce oluşturduğunuz statik sahneye hareket ekleyeceğiz. Onu bir ekran görüntüsünden interaktif bir deneyime dönüştüreceğiz. Her parçanın bir sonrakini doğal bir şekilde oluşturmasını sağlamak için adım adım ilerleyeceğiz.
 
-Önceki derste kaldığımız yerden kodu alın (veya yeni bir başlangıç yapmanız gerekiyorsa [Bölüm II - başlangıç](../../../../6-space-game/3-moving-elements-around/your-work) klasöründeki kodla başlayın).
+Önceki derste kaldığınız kodu alın (veya yeni bir başlangıç yapmanız gerekiyorsa [Bölüm II- başlangıç](../../../../6-space-game/3-moving-elements-around/your-work) klasöründeki kodla başlayın).
 
 **Bugün oluşturacağımız şey:**
 - **Kahraman kontrolleri**: Ok tuşları uzay geminizi ekranın etrafında yönlendirecek
 - **Düşman hareketi**: O uzaylı gemileri ilerlemeye başlayacak
 
-Bu özellikleri uygulamaya başlayalım.
+Haydi bu özellikleri uygulamaya başlayalım.
 
 ## Önerilen adımlar
 
-Sizin için oluşturulmuş dosyaları `your-work` alt klasöründe bulun. Şunları içermelidir:
+`your-work` alt klasöründe sizin için oluşturulmuş dosyaları bulun. Şunları içermelidir:
 
 ```bash
 -| assets
@@ -207,19 +335,19 @@ npm start
 ```
 
 **Bu komutun yaptığı şey:**
-- Proje dizinine gider
-- `http://localhost:5000` adresinde bir HTTP Sunucusu başlatır
-- Oyun dosyalarınızı bir tarayıcıda test etmeniz için sunar
+- Proje dizinine **geçer**
+- Adres `http://localhost:5000` üzerinde bir HTTP Sunucusu **başlatır**
+- Oyun dosyalarınızı tarayıcıda test etmeniz için **sunmaya başlar**
 
-Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatacaktır. Bir tarayıcı açın ve bu adresi girin, şu anda kahramanı ve tüm düşmanları görüntülemelidir; henüz hiçbir şey hareket etmiyor!
+Yukarıdaki işlem adres `http://localhost:5000` üzerinde bir HTTP Sunucusu başlatacaktır. Bir tarayıcı açın ve o adresi girin, şu anda kahramanı ve tüm düşmanları görüntülemelidir; henüz hiçbir şey hareket etmiyor!
 
 ### Kod ekleme
 
-1. **Özel nesneler ekleyin**: `hero`, `enemy` ve `game object` için `x` ve `y` özellikleri ekleyin. ([Kalıtım veya kompozisyon](../README.md) bölümünü hatırlayın).
+1. **Kahraman**, **düşman** ve **oyun nesnesi** için özel nesneler ekleyin, bunlar `x` ve `y` özelliklerine sahip olmalıdır. ([Kalıtım veya kompozisyon](../README.md) bölümünü hatırlayın).
 
-   *İPUCU* `game object`, `x` ve `y` özelliklerine ve kendini bir tuvale çizebilme yeteneğine sahip olan nesne olmalıdır.
+   *İPUCU* `oyun nesnesi`, `x` ve `y` özelliklerine sahip olan ve kendisini bir tuvale çizebilme yeteneğine sahip olan nesne olmalıdır.
 
-   > **İpucu**: Yeni bir `GameObject` sınıfı ekleyerek aşağıdaki gibi bir yapıcı tanımlayın ve ardından tuvale çizin:
+   > **İpucu**: Aşağıda belirtilen yapıcı ile yeni bir `GameObject` sınıfı ekleyerek başlayın ve ardından tuvale çizin:
 
     ```javascript
     class GameObject {
@@ -240,12 +368,49 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     ```
 
     **Bu temel sınıfı anlamak:**
-    - Tüm oyun nesnelerinin paylaştığı ortak özellikleri tanımlar (konum, boyut, görüntü)
-    - Nesnenin kaldırılıp kaldırılmadığını izlemek için bir `dead` bayrağı içerir
-    - Tuval üzerine nesneyi çizen bir `draw()` yöntemi sağlar
-    - Çocuk sınıfların geçersiz kılabileceği tüm özellikler için varsayılan değerler belirler
+    - Tüm oyun nesnelerinin paylaştığı ortak özellikleri **tanımlar** (konum, boyut, resim)
+    - Nesnenin kaldırılıp kaldırılmadığını takip etmek için bir `dead` bayrağı **içerir**
+    - Tuvalde nesneyi çizen bir `draw()` metodu **sağlar**
+    - Alt sınıfların geçersiz kılabileceği tüm özellikler için varsayılan değerler **ayarlar**
 
-    Şimdi, bu `GameObject` sınıfını genişleterek `Hero` ve `Enemy` oluşturun:
+    ```mermaid
+    classDiagram
+        class GameObject {
+            +x: number
+            +y: number
+            +dead: boolean
+            +type: string
+            +width: number
+            +height: number
+            +img: Image
+            +draw(ctx)
+        }
+        
+        class Hero {
+            +speed: number
+            +type: "Hero"
+            +width: 98
+            +height: 75
+        }
+        
+        class Enemy {
+            +type: "Enemy"
+            +width: 98
+            +height: 50
+            +setInterval()
+        }
+        
+        GameObject <|-- Hero
+        GameObject <|-- Enemy
+        
+        class EventEmitter {
+            +listeners: object
+            +on(message, listener)
+            +emit(message, payload)
+        }
+    ```
+
+    Şimdi bu `GameObject` sınıfını genişleterek `Hero` ve `Enemy` oluşturun:
     
     ```javascript
     class Hero extends GameObject {
@@ -279,14 +444,14 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     ```
 
     **Bu sınıflardaki anahtar kavramlar:**
-    - `GameObject` sınıfından `extends` anahtar kelimesiyle kalıtım alır
-    - `super(x, y)` ile ebeveyn yapıcıyı çağırır
-    - Her nesne türü için belirli boyutlar ve özellikler ayarlar
-    - `setInterval()` kullanarak düşmanlar için otomatik hareket uygular
+    - `extends` anahtar kelimesini kullanarak `GameObject`'ten **miras alır**
+    - `super(x, y)` ile üst yapıcıyı **çağırır**
+    - Her nesne türü için belirli boyutlar ve özellikler **ayarlar**
+    - `setInterval()` kullanarak düşmanlar için otomatik hareket **uygular**
 
-2. **Tuş olay işleyicileri ekleyin**: Kahramanı yukarı/aşağı, sola/sağa hareket ettirmek için tuş navigasyonunu yönetin.
+2. **Tuş olay işleyicileri ekleyin** ve kahramanı yukarı/aşağı, sola/sağa hareket ettirmek için tuş navigasyonunu yönetin.
 
-   *UNUTMAYIN* Bu bir Kartezyen sistemdir, sol üst köşe `0,0`'dır. Ayrıca *varsayılan davranışı* durdurmak için kod eklemeyi unutmayın.
+   *UNUTMAYIN* bu bir Kartezyen sistemdir, sol üst köşe `0,0`'dır. Ayrıca *varsayılan davranışı* durdurmak için kod eklemeyi unutmayın.
 
    > **İpucu**: `onKeyDown` fonksiyonunuzu oluşturun ve pencereye bağlayın:
 
@@ -312,15 +477,15 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     
    **Bu olay işleyicinin yaptığı şey:**
    - Tüm pencere üzerinde tuş aşağı olaylarını dinler
-   - Hangi tuşların basıldığını görmek için tuş kodunu kaydeder
-   - Ok tuşları ve boşluk tuşu için varsayılan tarayıcı davranışını engeller
-   - Diğer tuşların normal şekilde çalışmasına izin verir
+   - Hangi tuşların basıldığını görmek için tuş kodunu **kaydeder**
+   - Ok tuşları ve boşluk tuşu için varsayılan tarayıcı davranışını **engeller**
+   - Diğer tuşların normal şekilde çalışmasına **izin verir**
    
-   Bu noktada tarayıcı konsolunuzu kontrol edin ve tuş vuruşlarının kaydedildiğini izleyin.
+   Bu noktada tarayıcı konsolunuzu kontrol edin ve basılan tuşların kaydedildiğini izleyin. 
 
-3. **[Pub sub pattern](../README.md) uygulayın**, bu kodunuzu temiz tutmanıza yardımcı olur ve kalan bölümleri takip etmenizi kolaylaştırır.
+3. **Uygula** [Pub sub pattern](../README.md), bu kodunuzu temiz tutmanıza yardımcı olur ve geri kalan bölümleri takip etmenizi sağlar.
 
-   Publish-Subscribe deseni, olay algılamayı olay işleme sürecinden ayırarak kodunuzu düzenler. Bu, kodunuzu daha modüler ve bakımı daha kolay hale getirir.
+   Yayın-Abone olma deseni, olay algılamayı olay işleme sürecinden ayırarak kodunuzu düzenli tutmaya yardımcı olur. Bu, kodunuzu daha modüler ve bakımını kolay hale getirir.
 
    Bu son kısmı yapmak için şunları yapabilirsiniz:
 
@@ -341,12 +506,34 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
        ```
 
    **Bu olay sistemi ne yapar:**
-   - Klavye girişini algılar ve bunu özel oyun olaylarına dönüştürür
-   - Giriş algılamayı oyun mantığından ayırır
-   - Kontrolleri daha sonra değiştirmeyi kolaylaştırır
-   - Aynı girdiye birden fazla sistemin tepki vermesine olanak tanır
+   - Klavye girdisini algılar ve bunu özel oyun olaylarına dönüştürür
+   - Girdi algılamayı oyun mantığından **ayırır**
+   - Kontrolleri daha sonra değiştirmeyi kolaylaştırır, oyun kodunu etkilemeden
+   - Aynı girdiye birden fazla sistemin tepki vermesine **izin verir**
 
-   2. **Bir EventEmitter sınıfı oluşturun**: Mesajları yayınlamak ve abone olmak için:
+   ```mermaid
+   flowchart TD
+       A["Keyboard Input"] --> B["Window Event Listener"]
+       B --> C["Event Emitter"]
+       C --> D["KEY_EVENT_UP"]
+       C --> E["KEY_EVENT_DOWN"]
+       C --> F["KEY_EVENT_LEFT"]
+       C --> G["KEY_EVENT_RIGHT"]
+       
+       D --> H["Hero Movement"]
+       D --> I["Sound System"]
+       D --> J["Visual Effects"]
+       
+       E --> H
+       F --> H
+       G --> H
+       
+       style A fill:#e1f5fe
+       style C fill:#e8f5e8
+       style H fill:#fff3e0
+   ```
+
+   2. **Bir EventEmitter sınıfı oluşturun** ve mesajları yayınlayıp abone olun:
 
        ```javascript
        class EventEmitter {
@@ -381,12 +568,12 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
        ```
 
    **Kurulumu anlamak:**
-   - Yazım hatalarını önlemek ve yeniden düzenlemeyi kolaylaştırmak için mesaj sabitlerini tanımlar
-   - Görüntüler, tuval bağlamı ve oyun durumu için değişkenler tanımlar
-   - Pub-sub sistemi için global bir olay yayıcı oluşturur
-   - Tüm oyun nesnelerini tutmak için bir dizi başlatır
+   - Yazım hatalarını önlemek ve yeniden düzenlemeyi kolaylaştırmak için mesaj sabitlerini **tanımlar**
+   - Resimler, tuval bağlamı ve oyun durumu için değişkenler **tanımlar**
+   - Yayın-abone sistemi için global bir olay yayıcı **oluşturur**
+   - **Bir dizi başlatır** ve tüm oyun nesnelerini tutar
 
-   4. **Oyunu başlatın**
+   4. **Oyunu Başlat**
 
        ```javascript
        function initGame() {
@@ -406,9 +593,9 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
            hero.x -= 5;
          });
        
-4. **Oyun döngüsünü ayarlayın**
+4. **Oyun döngüsünü ayarla**
 
-   `window.onload` fonksiyonunu yeniden düzenleyerek oyunu başlatın ve iyi bir aralıkta bir oyun döngüsü ayarlayın. Ayrıca bir lazer ışını ekleyeceksiniz:
+   `window.onload` fonksiyonunu yeniden düzenleyerek oyunu başlatın ve iyi bir aralıkta bir oyun döngüsü kurun. Ayrıca bir lazer ışını ekleyeceksiniz:
 
     ```javascript
     window.onload = async () => {
@@ -428,16 +615,16 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     };
     ```
 
-   **Oyun kurulumunu anlamak:**
-   - Sayfanın tamamen yüklenmesini bekler
-   - Tuval öğesini ve 2D render bağlamını alır
-   - Tüm görüntü varlıklarını `await` kullanarak eşzamanlı olarak yükler
-   - Oyun döngüsünü 100ms aralıklarla (10 FPS) çalıştırmaya başlar
-   - Her karede tüm ekranı temizler ve yeniden çizer
+   **Oyun kurulumunu anlama:**
+   - **Sayfanın** tamamen yüklenmesini bekler
+   - **Canvas** öğesini ve 2D çizim bağlamını alır
+   - **Tüm resim varlıklarını** `await` kullanarak eşzamanlı olarak yükler
+   - **Oyun döngüsünü** 100ms aralıklarla (10 FPS) başlatır
+   - **Ekranı temizler** ve her karede yeniden çizer
 
-5. **Kod ekleyin**: Düşmanları belirli bir aralıkta hareket ettirin
+5. **Kod ekle** ve düşmanları belirli bir aralıkta hareket ettir
 
-    Düşmanları oluşturmak ve yeni gameObjects sınıfına eklemek için `createEnemies()` fonksiyonunu yeniden düzenleyin:
+    `createEnemies()` fonksiyonunu yeniden düzenleyerek düşmanları oluşturun ve yeni gameObjects sınıfına ekleyin:
 
     ```javascript
     function createEnemies() {
@@ -456,13 +643,13 @@ Yukarıdaki komut, `http://localhost:5000` adresinde bir HTTP Sunucusu başlatac
     }
     ```
 
-    **Düşman oluşturmanın yaptığı şey:**
-    - Düşmanları ekranın ortasına yerleştirmek için pozisyonları hesaplar
-- **Düşmanlardan oluşan** bir ızgara oluşturur, iç içe döngüler kullanarak
-- **Her bir düşman nesnesine** düşman görselini atar
-- **Her bir düşmanı** global oyun nesneleri dizisine ekler
-
-ve benzer bir işlem yapmak için bir `createHero()` fonksiyonu ekleyin.
+    **Düşman oluşturma işlemi:**
+    - **Düşmanları** ekranın ortasına yerleştirmek için pozisyonları hesaplar
+    - **İç içe döngülerle** bir düşman ızgarası oluşturur
+    - **Her düşman nesnesine** düşman resmini atar
+    - **Her düşmanı** global oyun nesneleri dizisine ekler
+    
+    ve benzer bir işlem için bir `createHero()` fonksiyonu ekleyin.
 
     ```javascript
     function createHero() {
@@ -475,12 +662,12 @@ ve benzer bir işlem yapmak için bir `createHero()` fonksiyonu ekleyin.
     }
     ```
 
-**Kahraman oluşturma işlemi:**
-- **Kahramanı** ekranın alt ortasına konumlandırır
-- **Kahraman nesnesine** kahraman görselini atar
-- **Kahramanı** oyun nesneleri dizisine ekler, böylece render edilebilir
+    **Kahraman oluşturma işlemi:**
+    - **Kahramanı** ekranın alt ortasına yerleştirir
+    - **Kahraman nesnesine** kahraman resmini atar
+    - **Kahramanı** çizim için oyun nesneleri dizisine ekler
 
-Son olarak, çizimi başlatmak için bir `drawGameObjects()` fonksiyonu ekleyin:
+    ve son olarak, çizimi başlatmak için bir `drawGameObjects()` fonksiyonu ekleyin:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -488,14 +675,34 @@ Son olarak, çizimi başlatmak için bir `drawGameObjects()` fonksiyonu ekleyin:
     }
     ```
 
-**Çizim fonksiyonunu anlama:**
-- **Dizideki tüm oyun nesnelerini** döngüyle gezer
-- **Her bir nesne üzerinde** `draw()` metodunu çağırır
-- **Canvas bağlamını** nesnelerin kendilerini çizebilmesi için iletir
+    **Çizim fonksiyonunu anlama:**
+    - **Dizideki tüm oyun nesnelerini** iterasyonla dolaşır
+    - **Her nesne üzerinde** `draw()` metodunu çağırır
+    - **Canvas bağlamını** nesnelerin kendilerini çizebilmesi için iletir
 
-Düşmanlarınız kahraman uzay geminize doğru ilerlemeye başlamalı!
-}
-}
+    ### 🔄 **Eğitimsel Kontrol Noktası**
+    **Tam Oyun Sistemi Anlayışı**: Tüm mimariyi kavradığınızı doğrulayın:
+    - ✅ Hero ve Enemy'nin ortak GameObject özelliklerini paylaşmasını sağlayan miras nasıl çalışıyor?
+    - ✅ Pub/sub deseni kodunuzu neden daha sürdürülebilir hale getiriyor?
+    - ✅ Oyun döngüsü, akıcı animasyon oluşturmakta nasıl bir rol oynuyor?
+    - ✅ Olay dinleyicileri kullanıcı girdisini oyun nesnesi davranışına nasıl bağlar?
+
+    **Sistem Entegrasyonu**: Oyununuz artık şunları gösteriyor:
+    - **Nesneye Yönelik Tasarım**: Temel sınıflar ve özel miras
+    - **Olay Tabanlı Mimari**: Gevşek bağlılık için pub/sub deseni
+    - **Animasyon Çerçevesi**: Tutarlı kare güncellemeleriyle oyun döngüsü
+    - **Girdi İşleme**: Varsayılan önleme ile klavye olayları
+    - **Varlık Yönetimi**: Resim yükleme ve sprite çizimi
+
+    **Profesyonel Desenler**: Şunları uyguladınız:
+    - **Sorumlulukların Ayrılması**: Girdi, mantık ve çizim ayrı tutuldu
+    - **Polimorfizm**: Tüm oyun nesneleri ortak bir çizim arayüzünü paylaşıyor
+    - **Mesajlaşma**: Bileşenler arasında temiz iletişim
+    - **Kaynak Yönetimi**: Verimli sprite ve animasyon işleme
+
+    Düşmanlarınız kahraman uzay geminize doğru ilerlemeye başlamalı!
+      }
+    }
     ```
     
     and add a `createHero()` function to do a similar process for the hero.
@@ -511,7 +718,7 @@ Düşmanlarınız kahraman uzay geminize doğru ilerlemeye başlamalı!
     }
     ```
 
-Son olarak, çizimi başlatmak için bir `drawGameObjects()` fonksiyonu ekleyin:
+    ve son olarak, çizimi başlatmak için bir `drawGameObjects()` fonksiyonu ekleyin:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -519,53 +726,172 @@ Son olarak, çizimi başlatmak için bir `drawGameObjects()` fonksiyonu ekleyin:
     }
     ```
 
-Düşmanlarınız kahraman uzay geminize doğru ilerlemeye başlamalı!
+    Düşmanlarınız kahraman uzay geminize doğru ilerlemeye başlamalı!
 
 ---
 
 ## GitHub Copilot Agent Challenge 🚀
 
-İşte oyununuzu daha da geliştirecek bir meydan okuma: sınırlar ve akıcı kontroller eklemek. Şu anda kahramanınız ekranın dışına uçabiliyor ve hareket biraz kesik kesik hissediliyor.
+İşte oyununuzun cilasını artıracak bir meydan okuma: sınırlar ve akıcı kontroller eklemek. Şu anda kahramanınız ekranın dışına uçabiliyor ve hareket biraz kesik kesik hissedebilir.
 
-**Göreviniz:** Uzay geminizi daha gerçekçi hissettirmek için ekran sınırlarını ve akıcı hareketi uygulayın. Bu, NASA'nın uçuş kontrol sistemlerinin uzay araçlarının güvenli operasyonel parametreleri aşmasını önlemesine benzer.
+**Göreviniz:** Uzay geminizi daha gerçekçi hissettirmek için ekran sınırlarını ve akıcı hareketi uygulayın. Oyuncular bir ok tuşuna bastığında, gemi kesikli adımlar yerine sürekli olarak kaymalı. Geminin ekran sınırlarına ulaştığında görsel bir geri bildirim eklemeyi düşünün – oyun alanının kenarını göstermek için hafif bir efekt olabilir.
 
-**Yapmanız gerekenler:** Kahraman uzay geminizi ekranın içinde tutacak bir sistem oluşturun ve kontrolleri daha akıcı hale getirin. Oyuncular bir ok tuşuna bastığında, gemi kesik adımlarla değil, sürekli bir şekilde kaymalı. Geminin ekran sınırlarına ulaştığında görsel bir geri bildirim eklemeyi düşünün – oyun alanının kenarını göstermek için hafif bir efekt olabilir.
-
-[agent mode hakkında daha fazla bilgi edinin](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
+[agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında daha fazla bilgi edinin.
 
 ## 🚀 Meydan Okuma
 
-Projeler büyüdükçe kod organizasyonu giderek daha önemli hale gelir. Dosyanızın işlevler, değişkenler ve sınıflarla dolup taşmaya başladığını fark etmiş olabilirsiniz. Bu, Apollo görev kodunu organize eden mühendislerin, birden fazla ekibin aynı anda çalışabileceği açık ve sürdürülebilir sistemler oluşturmak zorunda olduğu durumu hatırlatıyor.
+Projeler büyüdükçe kod organizasyonu giderek daha önemli hale gelir. Fonksiyonlar, değişkenler ve sınıfların hepsinin bir arada karıştığını fark etmiş olabilirsiniz. Bu, Apollo görev kodunu organize eden mühendislerin birden fazla ekibin aynı anda çalışabileceği açık ve sürdürülebilir sistemler oluşturması gerektiği durumu hatırlatıyor.
 
 **Göreviniz:**
-Bir yazılım mimarı gibi düşünün. Altı ay sonra siz (veya bir ekip arkadaşınız) kodun ne yaptığını anlayabilmesi için kodunuzu nasıl organize ederdiniz? Şimdilik her şey tek bir dosyada kalsa bile, daha iyi bir organizasyon oluşturabilirsiniz:
+Bir yazılım mimarı gibi düşünün. Kodunuzu nasıl organize ederdiniz ki altı ay sonra siz (veya bir ekip arkadaşınız) ne olduğunu anlayabilsin? Şimdilik her şey tek bir dosyada kalsa bile, daha iyi bir organizasyon oluşturabilirsiniz:
 
-- **İlgili işlevleri gruplandırmak** ve net yorum başlıkları eklemek
-- **Sorumlulukları ayırmak** - oyun mantığını render işlemlerinden ayrı tutmak
-- **Tutarlı adlandırma** kuralları kullanmak, değişkenler ve işlevler için
-- **Modüller veya ad alanları oluşturmak**, oyunun farklı yönlerini organize etmek için
-- **Belgelendirme eklemek**, her bir ana bölümün amacını açıklamak için
+- **İlgili fonksiyonları gruplandırmak** ve net yorum başlıkları eklemek
+- **Sorumlulukları ayırmak** - oyun mantığını çizimden ayrı tutmak
+- **Tutarlı adlandırma** kuralları kullanmak
+- **Modüller veya ad alanları oluşturmak** ve oyununuzun farklı yönlerini organize etmek
+- **Dokümantasyon eklemek** ve her ana bölümün amacını açıklamak
 
 **Düşünme soruları:**
 - Kodunuzun hangi bölümleri geri döndüğünüzde anlaması en zor olanlar?
 - Kodunuzu başkalarının katkıda bulunmasını kolaylaştıracak şekilde nasıl organize edebilirsiniz?
 - Güçlendirmeler veya farklı düşman türleri gibi yeni özellikler eklemek isteseydiniz ne olurdu?
 
-## Ders Sonrası Test
+## Ders Sonrası Quiz
 
-[Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/34)
+[Ders sonrası quiz](https://ff-quizzes.netlify.app/web/quiz/34)
 
 ## Gözden Geçirme ve Kendi Kendine Çalışma
 
-Her şeyi sıfırdan inşa ediyoruz, bu öğrenmek için harika, ancak size küçük bir sır vereyim – JavaScript ile oyun yapımında işinizi kolaylaştıracak harika framework'ler var. Şimdiye kadar ele aldığımız temellerde kendinizi rahat hissettiğinizde, [mevcut olanları keşfetmeye](https://github.com/collections/javascript-game-engines) değer.
+Her şeyi sıfırdan inşa ediyoruz, bu öğrenmek için harika, ama işte küçük bir sır – JavaScript'te harika oyun çerçeveleri var ve bunlar sizin için birçok ağır işi halledebilir. Kapsadığımız temellerde kendinizi rahat hissettiğinizde, [mevcut olanları keşfetmeye](https://github.com/collections/javascript-game-engines) değer.
 
-Framework'leri, her aracı el yapımı yapmak yerine, iyi donanımlı bir alet çantası olarak düşünün. Kod organizasyonu ile ilgili birçok zorluğu çözebilirler ve haftalarca sürecek özellikleri size sunabilirler.
+Çerçeveleri, her aracı el yapımı yapmak yerine iyi donanımlı bir alet çantası olarak düşünün. Kod organizasyonu ile ilgili konuştuğumuz birçok sorunu çözebilirler ve haftalarca sürecek özellikler sunabilirler.
 
 **Keşfetmeye değer şeyler:**
-- Oyun motorlarının kodu nasıl organize ettiği – kullandıkları akıllı yöntemlere hayran kalacaksınız
-- Canvas oyunlarının daha akıcı çalışmasını sağlamak için performans ipuçları  
+- Oyun motorlarının kodu nasıl organize ettiği – kullandıkları akıllı desenlere hayran kalacaksınız
+- Canvas oyunlarının sorunsuz çalışmasını sağlamak için performans ipuçları  
 - Kodunuzu daha temiz ve sürdürülebilir hale getirebilecek modern JavaScript özellikleri
 - Oyun nesnelerini ve ilişkilerini yönetmek için farklı yaklaşımlar
+
+## 🎯 Oyun Animasyonu Ustalık Zaman Çizelgeniz
+
+```mermaid
+timeline
+    title Game Animation & Interaction Learning Progression
+    
+    section Movement Fundamentals (20 minutes)
+        Animation Principles: Frame-based animation
+                            : Position updates
+                            : Coordinate systems
+                            : Smooth movement
+        
+    section Event Systems (25 minutes)
+        User Input: Keyboard event handling
+                  : Default behavior prevention
+                  : Event object properties
+                  : Window-level listening
+        
+    section Game Architecture (30 minutes)
+        Object Design: Inheritance patterns
+                     : Base class creation
+                     : Specialized behaviors
+                     : Polymorphic interfaces
+        
+    section Communication Patterns (35 minutes)
+        Pub/Sub Implementation: Event emitters
+                              : Message constants
+                              : Loose coupling
+                              : System integration
+        
+    section Game Loop Mastery (40 minutes)
+        Real-time Systems: Frame rate control
+                         : Update/render cycle
+                         : State management
+                         : Performance optimization
+        
+    section Advanced Techniques (45 minutes)
+        Professional Features: Collision detection
+                             : Physics simulation
+                             : State machines
+                             : Component systems
+        
+    section Game Engine Concepts (1 week)
+        Framework Understanding: Entity-component systems
+                               : Scene graphs
+                               : Asset pipelines
+                               : Performance profiling
+        
+    section Production Skills (1 month)
+        Professional Development: Code organization
+                                : Team collaboration
+                                : Testing strategies
+                                : Deployment optimization
+```
+
+### 🛠️ Oyun Geliştirme Araç Seti Özeti
+
+Bu dersi tamamladıktan sonra artık şunları ustalıkla yapabiliyorsunuz:
+- **Animasyon İlkeleri**: Kare tabanlı hareket ve akıcı geçişler
+- **Olay Tabanlı Programlama**: Klavye girdi işleme ve doğru olay yönetimi
+- **Nesneye Yönelik Tasarım**: Miras hiyerarşileri ve polimorfik arayüzler
+- **İletişim Desenleri**: Sürdürülebilir kod için pub/sub mimarisi
+- **Oyun Döngüsü Mimarisi**: Gerçek zamanlı güncelleme ve çizim döngüleri
+- **Girdi Sistemleri**: Varsayılan davranış önleme ile kullanıcı kontrol eşlemesi
+- **Varlık Yönetimi**: Sprite yükleme ve verimli çizim teknikleri
+
+### ⚡ **Sonraki 5 Dakikada Yapabilecekleriniz**
+- [ ] Tarayıcı konsolunu açın ve `addEventListener('keydown', console.log)` ile klavye olaylarını görün
+- [ ] Basit bir div öğesi oluşturun ve ok tuşlarıyla hareket ettirin
+- [ ] Sürekli hareket oluşturmak için `setInterval` ile deney yapın
+- [ ] `event.preventDefault()` ile varsayılan davranışı önlemeyi deneyin
+
+### 🎯 **Bu Saatte Başarabilecekleriniz**
+- [ ] Ders sonrası quiz'i tamamlayın ve olay tabanlı programlamayı anlayın
+- [ ] Tam klavye kontrolleriyle hareket eden kahraman uzay gemisini oluşturun
+- [ ] Akıcı düşman hareket desenlerini uygulayın
+- [ ] Oyun nesnelerinin ekran dışına çıkmasını önlemek için sınırlar ekleyin
+- [ ] Oyun nesneleri arasında temel çarpışma algılama oluşturun
+
+### 📅 **Haftalık Animasyon Yolculuğunuz**
+- [ ] Cilalı hareket ve etkileşimlerle tam uzay oyununu tamamlayın
+- [ ] Eğriler, hızlanma ve fizik gibi gelişmiş hareket desenleri ekleyin
+- [ ] Akıcı geçişler ve yumuşatma fonksiyonları uygulayın
+- [ ] Parçacık efektleri ve görsel geri bildirim sistemleri oluşturun
+- [ ] Oyun performansını optimize ederek akıcı 60fps oynanış sağlayın
+- [ ] Mobil dokunmatik kontroller ve duyarlı tasarım ekleyin
+
+### 🌟 **Aylık Etkileşimli Gelişim**
+- [ ] Gelişmiş animasyon sistemleriyle karmaşık etkileşimli uygulamalar oluşturun
+- [ ] GSAP gibi animasyon kütüphanelerini öğrenin veya kendi animasyon motorunuzu oluşturun
+- [ ] Açık kaynak oyun geliştirme ve animasyon projelerine katkıda bulunun
+- [ ] Grafik yoğun uygulamalar için performans optimizasyonunda ustalaşın
+- [ ] Oyun geliştirme ve animasyon hakkında eğitim içerikleri oluşturun
+- [ ] Gelişmiş etkileşimli programlama becerilerini sergileyen bir portföy oluşturun
+
+**Gerçek Dünya Uygulamaları**: Oyun animasyon becerileriniz doğrudan şunlara uygulanabilir:
+- **Etkileşimli Web Uygulamaları**: Dinamik panolar ve gerçek zamanlı arayüzler
+- **Veri Görselleştirme**: Animasyonlu grafikler ve etkileşimli görseller
+- **Eğitim Yazılımı**: Etkileşimli simülasyonlar ve öğrenme araçları
+- **Mobil Geliştirme**: Dokunmatik tabanlı oyunlar ve hareket algılama
+- **Masaüstü Uygulamaları**: Akıcı animasyonlarla Electron uygulamaları
+- **Web Animasyonları**: CSS ve JavaScript animasyon kütüphaneleri
+
+**Kazanılan Profesyonel Beceriler**: Artık şunları yapabilirsiniz:
+- **Olay Tabanlı Sistemler** tasarlayarak karmaşıklıkla ölçeklenebilir
+- **Matematiksel İlkeler** kullanarak akıcı animasyonlar uygulayın
+- **Karmaşık Etkileşim Sistemlerini** tarayıcı geliştirici araçlarıyla hata ayıklayın
+- **Oyun Performansını** farklı cihazlar ve tarayıcılar için optimize edin
+- **Sürdürülebilir Kod Yapıları** tasarlayarak kanıtlanmış desenler kullanın
+
+**Oyun Geliştirme Kavramlarında Ustalık**:
+- **Kare Hızı Yönetimi**: FPS ve zamanlama kontrollerini anlama
+- **Girdi İşleme**: Platformlar arası klavye ve olay sistemleri
+- **Nesne Yaşam Döngüsü**: Oluşturma, güncelleme ve yok etme desenleri
+- **Durum Senkronizasyonu**: Oyun durumunu kareler arasında tutarlı tutma
+- **Olay Mimarisi**: Oyun sistemleri arasında ayrık iletişim
+
+**Bir Sonraki Seviye**: Çarpışma algılama, puanlama sistemleri, ses efektleri eklemeye veya Phaser ya da Three.js gibi modern oyun çerçevelerini keşfetmeye hazırsınız!
+
+🌟 **Başarı Kilidi Açıldı**: Profesyonel mimari desenlerle tam bir etkileşimli oyun sistemi oluşturdunuz!
 
 ## Ödev
 

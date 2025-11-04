@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e6b75e5b8caae906473a8a09d77b7121",
-  "translation_date": "2025-10-22T23:37:00+00:00",
+  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
+  "translation_date": "2025-11-04T00:34:04+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "it"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ti sei mai chiesto come fanno i siti web a sapere quando clicchi un pulsante o digiti in una casella di testo? È la magia della programmazione basata sugli eventi! Quale modo migliore per imparare questa abilità essenziale se non costruendo qualcosa di utile: un gioco di velocità di digitazione che reagisce a ogni tasto che premi.
 
-Vedrai in prima persona come i browser web "comunicano" con il tuo codice JavaScript. Ogni volta che clicchi, digiti o muovi il mouse, il browser invia piccoli messaggi (li chiamiamo eventi) al tuo codice, e tu decidi come rispondere!
+Vedrai direttamente come i browser web "comunicano" con il tuo codice JavaScript. Ogni volta che clicchi, digiti o muovi il mouse, il browser invia piccoli messaggi (li chiamiamo eventi) al tuo codice, e tu decidi come rispondere!
 
 Alla fine di questa lezione, avrai creato un vero gioco di digitazione che traccia la tua velocità e precisione. Ancora più importante, comprenderai i concetti fondamentali che alimentano ogni sito web interattivo che hai mai usato. Iniziamo!
 
@@ -23,29 +23,29 @@ Alla fine di questa lezione, avrai creato un vero gioco di digitazione che tracc
 
 Pensa alla tua app o sito web preferito: cosa lo rende vivo e reattivo? Tutto dipende da come reagisce a ciò che fai! Ogni tocco, clic, scorrimento o pressione di tasto crea quello che chiamiamo un "evento", ed è lì che avviene la vera magia dello sviluppo web.
 
-Ecco cosa rende interessante la programmazione per il web: non sappiamo mai quando qualcuno cliccherà quel pulsante o inizierà a digitare in una casella di testo. Potrebbero cliccare immediatamente, aspettare cinque minuti o magari non cliccare mai! Questa imprevedibilità ci obbliga a pensare in modo diverso a come scriviamo il nostro codice.
+Ecco cosa rende interessante la programmazione per il web: non sappiamo mai quando qualcuno cliccherà quel pulsante o inizierà a digitare in una casella di testo. Potrebbero cliccare immediatamente, aspettare cinque minuti o magari non cliccare mai! Questa imprevedibilità ci obbliga a pensare in modo diverso su come scriviamo il nostro codice.
 
-Invece di scrivere codice che viene eseguito dall'alto verso il basso come una ricetta, scriviamo codice che aspetta pazientemente che accada qualcosa. È simile a come gli operatori del telegrafo nel 1800 aspettavano accanto alle loro macchine, pronti a rispondere nel momento in cui arrivava un messaggio.
+Invece di scrivere codice che si esegue dall'alto verso il basso come una ricetta, scriviamo codice che aspetta pazientemente che accada qualcosa. È simile a come gli operatori del telegrafo nel 1800 aspettavano accanto alle loro macchine, pronti a rispondere nel momento in cui arrivava un messaggio.
 
-Quindi, cos'è esattamente un "evento"? In poche parole, è qualcosa che accade! Quando clicchi un pulsante - quello è un evento. Quando digiti una lettera - quello è un evento. Quando muovi il mouse - quello è un altro evento.
+Quindi, cos'è esattamente un "evento"? In parole semplici, è qualcosa che accade! Quando clicchi un pulsante - quello è un evento. Quando digiti una lettera - quello è un evento. Quando muovi il mouse - quello è un altro evento.
 
 La programmazione basata sugli eventi ci permette di configurare il nostro codice per ascoltare e rispondere. Creiamo funzioni speciali chiamate **event listeners** che aspettano pazientemente che accada qualcosa di specifico, per poi entrare in azione quando succede.
 
-Pensa agli event listeners come a un campanello per il tuo codice. Configuri il campanello (`addEventListener()`), gli dici quale suono ascoltare (come un 'click' o una 'pressione di tasto') e poi specifichi cosa dovrebbe accadere quando qualcuno lo suona (la tua funzione personalizzata).
+Pensa agli event listeners come a un campanello per il tuo codice. Configuri il campanello (`addEventListener()`), gli dici quale suono ascoltare (come un 'click' o 'keypress') e poi specifichi cosa dovrebbe accadere quando qualcuno lo suona (la tua funzione personalizzata).
 
 **Ecco come funzionano gli event listeners:**
-- **Ascoltano** azioni specifiche dell'utente come clic, pressioni di tasto o movimenti del mouse
+- **Ascoltano** azioni specifiche dell'utente come clic, pressioni di tasti o movimenti del mouse
 - **Eseguono** il tuo codice personalizzato quando si verifica l'evento specificato
 - **Rispondono** immediatamente alle interazioni dell'utente, creando un'esperienza fluida
-- **Gestiscono** più eventi sullo stesso elemento utilizzando listener diversi
+- **Gestiscono** più eventi sullo stesso elemento usando listener diversi
 
-> **NOTE:** Vale la pena sottolineare che ci sono numerosi modi per creare event listeners. Puoi usare funzioni anonime o crearne di nominate. Puoi utilizzare vari metodi abbreviati, come impostare la proprietà `click` o utilizzare `addEventListener()`. Nel nostro esercizio ci concentreremo su `addEventListener()` e sulle funzioni anonime, poiché è probabilmente la tecnica più comune utilizzata dagli sviluppatori web. È anche la più flessibile, poiché `addEventListener()` funziona per tutti gli eventi e il nome dell'evento può essere fornito come parametro.
+> **NOTE:** Vale la pena sottolineare che ci sono molti modi per creare event listeners. Puoi usare funzioni anonime o crearne di nominate. Puoi usare vari scorciatoie, come impostare la proprietà `click` o utilizzare `addEventListener()`. Nel nostro esercizio ci concentreremo su `addEventListener()` e funzioni anonime, poiché è probabilmente la tecnica più comune utilizzata dagli sviluppatori web. È anche la più flessibile, dato che `addEventListener()` funziona per tutti gli eventi e il nome dell'evento può essere fornito come parametro.
 
 ### Eventi comuni
 
-Sebbene i browser web offrano decine di eventi diversi a cui puoi ascoltare, la maggior parte delle applicazioni interattive si basa solo su una manciata di eventi essenziali. Comprendere questi eventi fondamentali ti darà le basi per costruire interazioni utente sofisticate.
+Mentre i browser web offrono decine di eventi diversi che puoi ascoltare, la maggior parte delle applicazioni interattive si basa solo su una manciata di eventi essenziali. Comprendere questi eventi fondamentali ti darà le basi per costruire interazioni utente sofisticate.
 
-Ci sono [decine di eventi](https://developer.mozilla.org/docs/Web/Events) disponibili per te quando crei un'applicazione. Fondamentalmente, qualsiasi cosa faccia un utente su una pagina genera un evento, il che ti dà un grande potere per garantire che ottengano l'esperienza che desideri. Fortunatamente, di solito avrai bisogno solo di una piccola manciata di eventi. Ecco alcuni comuni (inclusi i due che utilizzeremo per creare il nostro gioco):
+Ci sono [dozzine di eventi](https://developer.mozilla.org/docs/Web/Events) disponibili da ascoltare quando si crea un'applicazione. Fondamentalmente, qualsiasi cosa faccia un utente su una pagina genera un evento, il che ti dà un grande potere per garantire che ottengano l'esperienza che desideri. Fortunatamente, normalmente avrai bisogno solo di una piccola manciata di eventi. Ecco alcuni comuni (inclusi i due che useremo per creare il nostro gioco):
 
 | Evento | Descrizione | Casi d'uso comuni |
 |--------|-------------|-------------------|
@@ -62,9 +62,9 @@ Ci sono [decine di eventi](https://developer.mozilla.org/docs/Web/Events) dispon
 
 ## Creare il gioco
 
-Ora che hai capito come funzionano gli eventi, mettiamo in pratica questa conoscenza costruendo qualcosa di utile. Creeremo un gioco di velocità di digitazione che dimostra la gestione degli eventi e ti aiuta a sviluppare un'importante abilità da sviluppatore.
+Ora che hai capito come funzionano gli eventi, mettiamo in pratica questa conoscenza costruendo qualcosa di utile. Creeremo un gioco di velocità di digitazione che dimostra la gestione degli eventi mentre ti aiuta a sviluppare un'importante abilità da sviluppatore.
 
-Creeremo un gioco per esplorare come funzionano gli eventi in JavaScript. Il nostro gioco testerà l'abilità di digitazione di un giocatore, che è una delle abilità più sottovalutate che tutti gli sviluppatori dovrebbero avere. Curiosità: il layout della tastiera QWERTY che usiamo oggi è stato progettato negli anni '70 dell'Ottocento per le macchine da scrivere - e buone abilità di digitazione sono ancora preziose per i programmatori oggi! Il flusso generale del gioco sarà il seguente:
+Creeremo un gioco per esplorare come funzionano gli eventi in JavaScript. Il nostro gioco testerà l'abilità di digitazione di un giocatore, che è una delle abilità più sottovalutate che tutti gli sviluppatori dovrebbero avere. Curiosità: la tastiera QWERTY che usiamo oggi è stata progettata negli anni '70 dell'Ottocento per le macchine da scrivere - e buone abilità di digitazione sono ancora preziose per i programmatori oggi! Il flusso generale del gioco sarà simile a questo:
 
 ```mermaid
 flowchart TD
@@ -93,9 +93,9 @@ Costruiamo il nostro gioco e impariamo sugli eventi!
 
 ### Struttura dei file
 
-Prima di iniziare a programmare, organizziamoci! Avere una struttura di file pulita fin dall'inizio ti risparmierà mal di testa in seguito e renderà il tuo progetto più professionale. 😊
+Prima di iniziare a scrivere codice, organizziamoci! Avere una struttura di file pulita fin dall'inizio ti risparmierà mal di testa in seguito e renderà il tuo progetto più professionale. 😊
 
-Terremo le cose semplici con solo tre file: `index.html` per la struttura della pagina, `script.js` per tutta la logica del gioco e `style.css` per rendere tutto esteticamente gradevole. Questo è il trio classico che alimenta la maggior parte del web!
+Terremo le cose semplici con solo tre file: `index.html` per la struttura della pagina, `script.js` per tutta la logica del gioco e `style.css` per rendere tutto bello. Questo è il trio classico che alimenta la maggior parte del web!
 
 **Crea una nuova cartella per il tuo lavoro aprendo una console o una finestra del terminale ed eseguendo il seguente comando:**
 
@@ -110,7 +110,7 @@ md typing-game && cd typing-game
 **Ecco cosa fanno questi comandi:**
 - **Crea** una nuova directory chiamata `typing-game` per i file del tuo progetto
 - **Naviga** automaticamente nella directory appena creata
-- **Configura** un ambiente di lavoro pulito per lo sviluppo del tuo gioco
+- **Configura** uno spazio di lavoro pulito per lo sviluppo del tuo gioco
 
 **Apri Visual Studio Code:**
 
@@ -130,24 +130,24 @@ code .
 
 ## Creare l'interfaccia utente
 
-Ora costruiamo il palcoscenico dove avverrà tutta l'azione del nostro gioco! Pensalo come progettare il pannello di controllo di un'astronave: dobbiamo assicurarci che tutto ciò di cui i nostri giocatori hanno bisogno sia esattamente dove si aspettano che sia.
+Ora costruiamo il palco dove avverrà tutta l'azione del nostro gioco! Pensa a questo come progettare il pannello di controllo di un'astronave: dobbiamo assicurarci che tutto ciò di cui i giocatori hanno bisogno sia esattamente dove si aspettano che sia.
 
-Cerchiamo di capire di cosa ha bisogno il nostro gioco. Se stessi giocando a un gioco di digitazione, cosa vorresti vedere sullo schermo? Ecco cosa ci serve:
+Cerchiamo di capire cosa serve effettivamente al nostro gioco. Se stessi giocando a un gioco di digitazione, cosa vorresti vedere sullo schermo? Ecco cosa ci servirà:
 
 | Elemento UI | Scopo | Elemento HTML |
 |-------------|-------|---------------|
-| Display della citazione | Mostra il testo da digitare | `<p>` con `id="quote"` |
-| Area messaggi | Mostra messaggi di stato e di successo | `<p>` con `id="message"` |
+| Visualizzazione della citazione | Mostra il testo da digitare | `<p>` con `id="quote"` |
+| Area messaggi | Mostra messaggi di stato e successo | `<p>` con `id="message"` |
 | Input di testo | Dove i giocatori digitano la citazione | `<input>` con `id="typed-value"` |
 | Pulsante di avvio | Avvia il gioco | `<button>` con `id="start"` |
 
 **Comprendere la struttura dell'interfaccia utente:**
 - **Organizza** il contenuto in modo logico dall'alto verso il basso
-- **Assegna** ID univoci agli elementi per il targeting con JavaScript
-- **Fornisce** una chiara gerarchia visiva per una migliore esperienza utente
+- **Assegna** ID univoci agli elementi per il targeting in JavaScript
+- **Fornisce** una gerarchia visiva chiara per una migliore esperienza utente
 - **Include** elementi HTML semantici per l'accessibilità
 
-Ognuno di questi avrà bisogno di ID in modo che possiamo lavorare con loro nel nostro JavaScript. Aggiungeremo anche riferimenti ai file CSS e JavaScript che stiamo per creare.
+Ognuno di questi avrà bisogno di ID in modo che possiamo lavorarci nel nostro JavaScript. Aggiungeremo anche riferimenti ai file CSS e JavaScript che stiamo per creare.
 
 Crea un nuovo file chiamato `index.html`. Aggiungi il seguente HTML:
 
@@ -172,25 +172,25 @@ Crea un nuovo file chiamato `index.html`. Aggiungi il seguente HTML:
 </html>
 ```
 
-**Analisi di ciò che realizza questa struttura HTML:**
-- **Collega** il foglio di stile CSS nell'`<head>` per lo stile
+**Analisi di ciò che questa struttura HTML realizza:**
+- **Collega** il foglio di stile CSS nel `<head>` per lo stile
 - **Crea** un'intestazione chiara e istruzioni per gli utenti
 - **Stabilisce** paragrafi segnaposto con ID specifici per contenuti dinamici
 - **Include** un campo di input con attributi di accessibilità
-- **Fornisce** un pulsante di avvio per avviare il gioco
+- **Fornisce** un pulsante di avvio per attivare il gioco
 - **Carica** il file JavaScript alla fine per prestazioni ottimali
 
 ### Avviare l'applicazione
 
-Testare frequentemente la tua applicazione durante lo sviluppo ti aiuta a individuare i problemi in anticipo e a vedere i tuoi progressi in tempo reale. Live Server è uno strumento prezioso che aggiorna automaticamente il browser ogni volta che salvi le modifiche, rendendo lo sviluppo molto più efficiente.
+Testare frequentemente la tua applicazione durante lo sviluppo ti aiuta a individuare problemi in anticipo e a vedere i tuoi progressi in tempo reale. Live Server è uno strumento prezioso che aggiorna automaticamente il browser ogni volta che salvi le modifiche, rendendo lo sviluppo molto più efficiente.
 
-È sempre meglio sviluppare iterativamente per vedere come appaiono le cose. Avviamo la nostra applicazione. C'è una fantastica estensione per Visual Studio Code chiamata [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) che ospiterà la tua applicazione localmente e aggiornerà il browser ogni volta che salvi.
+È sempre meglio sviluppare in modo iterativo per vedere come appaiono le cose. Avviamo la nostra applicazione. C'è un'ottima estensione per Visual Studio Code chiamata [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) che ospiterà la tua applicazione localmente e aggiornerà il browser ogni volta che salvi.
 
 **Installa [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) seguendo il link e cliccando su Installa:**
 
 **Ecco cosa succede durante l'installazione:**
 - **Apre** il browser per avviare Visual Studio Code
-- **Ti guida** attraverso il processo di installazione dell'estensione
+- **Guida** attraverso il processo di installazione dell'estensione
 - **Potrebbe richiedere** il riavvio di Visual Studio Code per completare la configurazione
 
 **Una volta installato, in Visual Studio Code, premi Ctrl-Shift-P (o Cmd-Shift-P) per aprire il pannello dei comandi:**
@@ -213,9 +213,9 @@ Ora dovresti vedere la pagina che hai creato! Aggiungiamo un po' di funzionalit�
 
 ## Aggiungere il CSS
 
-Ora rendiamo tutto più bello! Il feedback visivo è stato cruciale per le interfacce utente fin dai primi giorni dell'informatica. Negli anni '80, i ricercatori hanno scoperto che il feedback visivo immediato migliora notevolmente le prestazioni degli utenti e riduce gli errori. Ed è proprio quello che andremo a creare.
+Ora rendiamo tutto più bello! Il feedback visivo è stato cruciale per le interfacce utente fin dai primi giorni dell'informatica. Negli anni '80, i ricercatori hanno scoperto che il feedback visivo immediato migliora notevolmente le prestazioni degli utenti e riduce gli errori. È esattamente ciò che creeremo.
 
-Il nostro gioco deve essere chiarissimo su ciò che sta accadendo. I giocatori devono sapere immediatamente quale parola devono digitare e, se commettono un errore, devono vederlo subito. Creiamo uno stile semplice ma efficace:
+Il nostro gioco deve essere chiarissimo su ciò che sta accadendo. I giocatori dovrebbero sapere immediatamente quale parola devono digitare e, se commettono un errore, dovrebbero vederlo subito. Creiamo uno stile semplice ma efficace:
 
 Crea un nuovo file chiamato `style.css` e aggiungi la seguente sintassi.
 
@@ -233,11 +233,11 @@ Crea un nuovo file chiamato `style.css` e aggiungi la seguente sintassi.
 
 **Comprendere queste classi CSS:**
 - **Evidenzia** la parola corrente con uno sfondo giallo per una guida visiva chiara
-- **Segnala** gli errori di digitazione con un colore di sfondo corallo chiaro
+- **Segnala** errori di digitazione con un colore di sfondo corallo chiaro
 - **Fornisce** un feedback immediato senza interrompere il flusso di digitazione dell'utente
 - **Utilizza** colori contrastanti per accessibilità e comunicazione visiva chiara
 
-✅ Per quanto riguarda il CSS, puoi disporre la tua pagina come preferisci. Prenditi un po' di tempo per rendere la pagina più accattivante:
+✅ Quando si tratta di CSS, puoi disporre la tua pagina come preferisci. Prenditi un po' di tempo e rendi la pagina più accattivante:
 
 - Scegli un font diverso
 - Colora le intestazioni
@@ -245,12 +245,12 @@ Crea un nuovo file chiamato `style.css` e aggiungi la seguente sintassi.
 
 ## JavaScript
 
-Ecco dove le cose si fanno interessanti! 🎉 Abbiamo la struttura HTML e lo stile CSS, ma al momento il nostro gioco è come una bella macchina senza motore. JavaScript sarà quel motore: è ciò che fa funzionare tutto e rispondere alle azioni dei giocatori.
+Ecco dove le cose si fanno interessanti! 🎉 Abbiamo la struttura HTML e lo stile CSS, ma al momento il nostro gioco è come una bella macchina senza motore. JavaScript sarà quel motore: è ciò che fa funzionare tutto e risponde a ciò che fanno i giocatori.
 
 Qui vedrai la tua creazione prendere vita. Affronteremo questo passo dopo passo, così nulla sembrerà troppo complicato:
 
-| Passaggio | Scopo | Cosa imparerai |
-|-----------|-------|----------------|
+| Passo | Scopo | Cosa imparerai |
+|-------|-------|----------------|
 | [Creare le costanti](../../../../4-typing-game/typing-game) | Configurare citazioni e riferimenti DOM | Gestione delle variabili e selezione DOM |
 | [Event listener per avviare il gioco](../../../../4-typing-game/typing-game) | Gestire l'inizializzazione del gioco | Gestione degli eventi e aggiornamenti UI |
 | [Event listener per la digitazione](../../../../4-typing-game/typing-game) | Elaborare l'input dell'utente in tempo reale | Validazione dell'input e feedback dinamico |
@@ -265,21 +265,21 @@ Ma prima, crea un nuovo file chiamato `script.js`.
 
 ### Aggiungere le costanti
 
-Prima di immergerci nell'azione, raccogliamo tutte le nostre risorse! Proprio come il controllo missione della NASA prepara tutti i suoi sistemi di monitoraggio prima del lancio, è molto più facile quando hai tutto pronto e organizzato. Questo ci risparmia la fatica di cercare le cose in seguito e aiuta a prevenire errori di battitura.
+Prima di immergerci nell'azione, raccogliamo tutte le nostre risorse! Proprio come il controllo missione della NASA prepara tutti i sistemi di monitoraggio prima del lancio, è molto più facile quando hai tutto pronto e organizzato. Questo ci risparmia la fatica di cercare le cose in seguito e aiuta a prevenire errori di battitura.
 
 Ecco cosa dobbiamo configurare prima:
 
 | Tipo di dato | Scopo | Esempio |
 |--------------|-------|---------|
 | Array di citazioni | Memorizza tutte le possibili citazioni per il gioco | `['Citazione 1', 'Citazione 2', ...]` |
-| Array di parole | Suddivide la citazione corrente in parole singole | `['Quando', 'tu', 'hai', ...]` |
-| Indice delle parole | Tiene traccia della parola che il giocatore sta digitando | `0, 1, 2, 3...` |
+| Array di parole | Suddivide la citazione corrente in singole parole | `['Quando', 'tu', 'hai', ...]` |
+| Indice parola | Tiene traccia della parola che il giocatore sta digitando | `0, 1, 2, 3...` |
 | Ora di inizio | Calcola il tempo trascorso per il punteggio | `Date.now()` |
 
 **Avremo anche bisogno di riferimenti ai nostri elementi dell'interfaccia utente:**
 | Elemento | ID | Scopo |
-|----------|----|-------|
-| Campo di testo | `typed-value` | Dove i giocatori digitano |
+|---------|----|-------|
+| Input di testo | `typed-value` | Dove i giocatori digitano |
 | Visualizzazione citazione | `quote` | Mostra la citazione da digitare |
 | Area messaggi | `message` | Mostra aggiornamenti di stato |
 
@@ -308,20 +308,20 @@ const typedValueElement = document.getElementById('typed-value');
 
 **Analisi di ciò che realizza questo codice di configurazione:**
 - **Memorizza** un array di citazioni di Sherlock Holmes usando `const` poiché le citazioni non cambieranno
-- **Inizializza** variabili di tracciamento con `let` poiché questi valori verranno aggiornati durante il gioco
+- **Inizializza** variabili di tracciamento con `let` poiché questi valori si aggiorneranno durante il gioco
 - **Cattura** riferimenti agli elementi DOM usando `document.getElementById()` per un accesso efficiente
 - **Imposta** le basi per tutte le funzionalità del gioco con nomi di variabili chiari e descrittivi
-- **Organizza** dati ed elementi correlati in modo logico per una manutenzione del codice più semplice
+- **Organizza** dati e elementi correlati in modo logico per una manutenzione del codice più semplice
 
 ✅ Vai avanti e aggiungi altre citazioni al tuo gioco
 
-> 💡 **Suggerimento Pro**: Possiamo recuperare gli elementi ogni volta che vogliamo nel codice usando `document.getElementById()`. Poiché faremo riferimento a questi elementi regolarmente, eviteremo errori di battitura con le stringhe letterali utilizzando costanti. Framework come [Vue.js](https://vuejs.org/) o [React](https://reactjs.org/) possono aiutarti a gestire meglio la centralizzazione del tuo codice.
+> 💡 **Suggerimento Pro**: Possiamo recuperare gli elementi ogni volta che vogliamo nel codice usando `document.getElementById()`. Poiché faremo riferimento a questi elementi regolarmente, eviteremo errori di battitura con stringhe letterali utilizzando costanti. Framework come [Vue.js](https://vuejs.org/) o [React](https://reactjs.org/) possono aiutarti a gestire meglio la centralizzazione del tuo codice.
 >
 **Ecco perché questo approccio funziona così bene:**
 - **Previene** errori di ortografia quando si fa riferimento agli elementi più volte
 - **Migliora** la leggibilità del codice con nomi di costanti descrittivi
 - **Abilita** un migliore supporto IDE con completamento automatico e controllo degli errori
-- **Facilita** la ristrutturazione del codice se gli ID degli elementi cambiano in seguito
+- **Rende** più facile la ristrutturazione se gli ID degli elementi cambiano in seguito
 
 Prenditi un minuto per guardare un video sull'uso di `const`, `let` e `var`
 
@@ -331,11 +331,11 @@ Prenditi un minuto per guardare un video sull'uso di `const`, `let` e `var`
 
 ### Aggiungi la logica di avvio
 
-Ecco dove tutto prende forma! 🚀 Stai per scrivere il tuo primo vero event listener, e c'è qualcosa di davvero soddisfacente nel vedere il tuo codice rispondere a un clic su un pulsante.
+È qui che tutto prende forma! 🚀 Stai per scrivere il tuo primo vero event listener, e c'è qualcosa di davvero soddisfacente nel vedere il tuo codice rispondere a un clic su un pulsante.
 
 Pensaci: da qualche parte, un giocatore cliccherà sul pulsante "Start", e il tuo codice deve essere pronto per lui. Non sappiamo quando lo farà - potrebbe essere subito, potrebbe essere dopo aver preso un caffè - ma quando lo farà, il tuo gioco prenderà vita.
 
-Quando l'utente clicca su `start`, dobbiamo selezionare una citazione, configurare l'interfaccia utente e impostare il tracciamento per la parola corrente e il tempo. Di seguito trovi il codice JavaScript che devi aggiungere; lo analizziamo subito dopo il blocco di script.
+Quando l'utente clicca su `start`, dobbiamo selezionare una citazione, configurare l'interfaccia utente e impostare il tracciamento per la parola corrente e il tempo. Di seguito trovi il JavaScript che devi aggiungere; lo analizziamo subito dopo il blocco script.
 
 ```javascript
 // at the end of script.js
@@ -375,7 +375,7 @@ document.getElementById('start').addEventListener('click', () => {
 **📊 Configurazione del tracciamento delle parole:**
 - **Seleziona** una citazione casuale usando `Math.floor()` e `Math.random()` per varietà
 - **Converte** la citazione in un array di parole singole usando `split(' ')`
-- **Reimposta** il `wordIndex` a 0 poiché i giocatori iniziano con la prima parola
+- **Reimposta** l'`wordIndex` a 0 poiché i giocatori iniziano con la prima parola
 - **Prepara** lo stato del gioco per un nuovo round
 
 **🎨 Configurazione e visualizzazione dell'interfaccia utente:**
@@ -384,9 +384,9 @@ document.getElementById('start').addEventListener('click', () => {
 - **Evidenzia** la prima parola aggiungendo la classe CSS `highlight`
 - **Cancella** eventuali messaggi di gioco precedenti per fornire una schermata pulita
 
-**⌨️ Preparazione del campo di testo:**
+**⌨️ Preparazione della casella di testo:**
 - **Cancella** qualsiasi testo esistente nel campo di input
-- **Imposta il focus** sul campo di testo in modo che i giocatori possano iniziare a digitare immediatamente
+- **Imposta il focus** sulla casella di testo in modo che i giocatori possano iniziare a digitare immediatamente
 - **Prepara** l'area di input per la nuova sessione di gioco
 
 **⏱️ Inizializzazione del timer:**
@@ -396,9 +396,9 @@ document.getElementById('start').addEventListener('click', () => {
 
 ### Aggiungi la logica di digitazione
 
-Ecco dove affrontiamo il cuore del nostro gioco! Non preoccuparti se all'inizio sembra tanto - analizzeremo ogni parte e alla fine vedrai quanto è logico tutto questo.
+Ecco dove affrontiamo il cuore del nostro gioco! Non preoccuparti se all'inizio sembra tanto - analizzeremo ogni pezzo, e alla fine vedrai quanto è logico tutto questo.
 
-Quello che stiamo costruendo qui è piuttosto sofisticato: ogni volta che qualcuno digita una lettera, il nostro codice controllerà ciò che ha digitato, gli darà un feedback e deciderà cosa fare dopo. È simile a come i primi word processor come WordStar negli anni '70 fornivano feedback in tempo reale ai dattilografi.
+Quello che stiamo costruendo qui è piuttosto sofisticato: ogni volta che qualcuno digita una lettera, il nostro codice controllerà ciò che ha digitato, gli darà un feedback e deciderà cosa dovrebbe accadere dopo. È simile a come i primi word processor come WordStar negli anni '70 fornivano feedback in tempo reale ai dattilografi.
 
 ```javascript
 // at the end of script.js
@@ -439,7 +439,7 @@ typedValueElement.addEventListener('input', () => {
 
 **Comprendere il flusso logico della digitazione:**
 
-Questa funzione utilizza un approccio a cascata, controllando le condizioni da quelle più specifiche a quelle più generali. Analizziamo ogni scenario:
+Questa funzione utilizza un approccio a cascata, controllando le condizioni dalla più specifica alla più generale. Analizziamo ogni scenario:
 
 ```mermaid
 flowchart TD
@@ -454,7 +454,7 @@ flowchart TD
 ```
 
 **🏁 Citazione completata (Scenario 1):**
-- **Controlla** se il valore digitato corrisponde alla parola corrente E siamo all'ultima parola
+- **Controlla** se il valore digitato corrisponde alla parola corrente E siamo sull'ultima parola
 - **Calcola** il tempo trascorso sottraendo l'ora di inizio dall'ora corrente
 - **Converte** i millisecondi in secondi dividendo per 1.000
 - **Mostra** un messaggio di congratulazioni con il tempo di completamento
@@ -490,8 +490,8 @@ Clicca su `start` e inizia a digitare! Dovrebbe assomigliare un po' all'animazio
 - **Verifica** che cliccando su Start venga visualizzata una citazione casuale
 - **Conferma** che la digitazione evidenzi correttamente la parola corrente
 - **Controlla** che lo stile di errore appaia per la digitazione errata
-- **Assicurati** che il completamento delle parole avanzi correttamente l'evidenziazione
-- **Testa** che il completamento della citazione mostri il messaggio di completamento con il tempo
+- **Assicura** che completare le parole avanzi correttamente l'evidenziazione
+- **Testa** che completare la citazione mostri il messaggio di completamento con il tempo
 
 **Suggerimenti comuni per il debug:**
 - **Controlla** la console del browser (F12) per errori JavaScript
@@ -505,16 +505,16 @@ Clicca su `start` e inizia a digitare! Dovrebbe assomigliare un po' all'animazio
 
 Usa la modalità Agent per completare la seguente sfida:
 
-**Descrizione:** Estendi il gioco di digitazione implementando un sistema di difficoltà che si adatta al rendimento del giocatore. Questa sfida ti aiuterà a praticare la gestione avanzata degli eventi, l'analisi dei dati e gli aggiornamenti dinamici dell'interfaccia utente.
+**Descrizione:** Estendi il gioco di digitazione implementando un sistema di difficoltà che si adatta alle prestazioni del giocatore. Questa sfida ti aiuterà a praticare la gestione avanzata degli eventi, l'analisi dei dati e gli aggiornamenti dinamici dell'interfaccia utente.
 
 **Prompt:** Crea un sistema di regolazione della difficoltà per il gioco di digitazione che:
 1. Tracci la velocità di digitazione del giocatore (parole al minuto) e la percentuale di precisione
 2. Si adatti automaticamente a tre livelli di difficoltà: Facile (citazioni semplici), Medio (citazioni attuali), Difficile (citazioni complesse con punteggiatura)
 3. Mostri il livello di difficoltà corrente e le statistiche del giocatore nell'interfaccia utente
-4. Implementi un contatore di serie che aumenti la difficoltà dopo 3 prestazioni consecutive buone
-5. Aggiunga un feedback visivo (colori, animazioni) per indicare i cambiamenti di difficoltà
+4. Implementi un contatore di serie che aumenta la difficoltà dopo 3 prestazioni consecutive buone
+5. Aggiunga feedback visivi (colori, animazioni) per indicare i cambiamenti di difficoltà
 
-Aggiungi gli elementi HTML necessari, gli stili CSS e le funzioni JavaScript per implementare questa funzionalità. Includi una gestione adeguata degli errori e assicurati che il gioco rimanga accessibile con etichette ARIA appropriate.
+Aggiungi gli elementi HTML necessari, gli stili CSS e le funzioni JavaScript per implementare questa funzionalità. Includi una gestione degli errori adeguata e assicurati che il gioco rimanga accessibile con etichette ARIA appropriate.
 
 Scopri di più sulla [modalità agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) qui.
 
@@ -525,31 +525,90 @@ Pronto a portare il tuo gioco di digitazione al livello successivo? Prova a impl
 **Aggiungi più funzionalità:**
 
 | Funzionalità | Descrizione | Competenze che praticherai |
-|--------------|-------------|----------------------------|
-| **Controllo input** | Disabilita il listener dell'evento `input` al completamento e riattivalo quando viene cliccato il pulsante | Gestione degli eventi e controllo dello stato |
-| **Gestione dello stato UI** | Disabilita il campo di testo quando il giocatore completa la citazione | Manipolazione delle proprietà del DOM |
-| **Finestra modale** | Mostra una finestra di dialogo modale con il messaggio di successo | Pattern avanzati di UI e accessibilità |
-| **Sistema di punteggio alto** | Memorizza i punteggi migliori usando `localStorage` | API di archiviazione del browser e persistenza dei dati |
+|--------------|-------------|---------------------------|
+| **Controllo Input** | Disabilita il listener dell'evento `input` al completamento e riabilitalo quando viene cliccato il pulsante | Gestione degli eventi e controllo dello stato |
+| **Gestione dello stato UI** | Disabilita la casella di testo quando il giocatore completa la citazione | Manipolazione delle proprietà DOM |
+| **Dialog Modal** | Mostra una finestra di dialogo modale con il messaggio di successo | Pattern UI avanzati e accessibilità |
+| **Sistema di punteggio alto** | Memorizza i punteggi alti usando `localStorage` | API di archiviazione del browser e persistenza dei dati |
 
 **Suggerimenti per l'implementazione:**
-- **Ricerca** su `localStorage.setItem()` e `localStorage.getItem()` per l'archiviazione persistente
+- **Ricerca** `localStorage.setItem()` e `localStorage.getItem()` per l'archiviazione persistente
 - **Pratica** l'aggiunta e la rimozione dinamica dei listener di eventi
-- **Esplora** gli elementi di dialogo HTML o i pattern modali CSS
+- **Esplora** gli elementi di dialog HTML o i pattern modali CSS
 - **Considera** l'accessibilità quando disabiliti e abiliti i controlli del modulo
 
 ## Quiz post-lezione
 
 [Quiz post-lezione](https://ff-quizzes.netlify.app/web/quiz/22)
 
+---
+
+## 🚀 La tua timeline di padronanza del gioco di digitazione
+
+### ⚡ **Cosa puoi fare nei prossimi 5 minuti**
+- [ ] Testa il tuo gioco di digitazione con citazioni diverse per assicurarti che funzioni senza problemi
+- [ ] Sperimenta con lo stile CSS - prova a cambiare i colori di evidenziazione e errore
+- [ ] Apri gli strumenti di sviluppo del browser (F12) e osserva la Console mentre giochi
+- [ ] Sfida te stesso a completare una citazione il più velocemente possibile
+
+### ⏰ **Cosa puoi realizzare in quest'ora**
+- [ ] Aggiungi più citazioni all'array (magari dai tuoi libri o film preferiti)
+- [ ] Implementa il sistema di punteggio alto con localStorage dalla sezione sfida
+- [ ] Crea un calcolatore di parole al minuto che si visualizza dopo ogni partita
+- [ ] Aggiungi effetti sonori per digitazioni corrette, errori e completamento
+
+### 📅 **La tua avventura di una settimana**
+- [ ] Costruisci una versione multiplayer dove gli amici possono competere fianco a fianco
+- [ ] Crea livelli di difficoltà diversi con complessità variabile delle citazioni
+- [ ] Aggiungi una barra di progresso che mostra quanto della citazione è completato
+- [ ] Implementa account utente con tracciamento delle statistiche personali
+- [ ] Progetta temi personalizzati e lascia che gli utenti scelgano il loro stile preferito
+
+### 🗓️ **La tua trasformazione di un mese**
+- [ ] Crea un corso di digitazione con lezioni che insegnano progressivamente il posizionamento corretto delle dita
+- [ ] Costruisci analisi che mostrano quali lettere o parole causano più errori
+- [ ] Aggiungi supporto per lingue e layout di tastiera diversi
+- [ ] Integra con API educative per estrarre citazioni da database di letteratura
+- [ ] Pubblica il tuo gioco di digitazione migliorato per altri da usare e divertirsi
+
+### 🎯 **Riflessione finale**
+
+**Prima di andare avanti, prenditi un momento per festeggiare:**
+- Qual è stato il momento più soddisfacente durante la creazione di questo gioco?
+- Come ti senti riguardo alla programmazione basata sugli eventi rispetto a quando hai iniziato?
+- Qual è una funzionalità che sei entusiasta di aggiungere per rendere questo gioco unico?
+- Come potresti applicare i concetti di gestione degli eventi ad altri progetti?
+
+```mermaid
+journey
+    title Your Event Programming Confidence Journey
+    section Today
+      Understanding Events: 3: You
+      Building UI: 4: You
+      Writing Event Listeners: 5: You
+    section This Week
+      Adding Features: 4: You
+      Debugging Issues: 5: You
+      Enhancing UX: 4: You
+    section Next Month
+      Building Complex Apps: 5: You
+      Teaching Others: 5: You
+      Creating Frameworks: 5: You
+```
+
+> 🌟 **Ricorda**: Hai appena padroneggiato uno dei concetti fondamentali che alimentano ogni sito web e applicazione interattiva. La programmazione basata sugli eventi è ciò che rende il web vivo e reattivo. Ogni volta che vedi un menu a tendina, un modulo che si convalida mentre digiti o un gioco che risponde ai tuoi clic, ora capisci la magia dietro di esso. Non stai solo imparando a programmare - stai imparando a creare esperienze che sembrano intuitive e coinvolgenti! 🎉
+
+---
+
 ## Revisione e studio autonomo
 
-Approfondisci [tutti gli eventi disponibili](https://developer.mozilla.org/docs/Web/Events) per gli sviluppatori tramite il browser web e considera gli scenari in cui utilizzeresti ciascuno di essi.
+Leggi [tutti gli eventi disponibili](https://developer.mozilla.org/docs/Web/Events) per lo sviluppatore tramite il browser web e considera gli scenari in cui utilizzeresti ciascuno di essi.
 
 ## Compito
 
-[Crea un nuovo gioco di digitazione](assignment.md)
+[Crea un nuovo gioco di tastiera](assignment.md)
 
 ---
 
 **Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche potrebbero contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si consiglia una traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.

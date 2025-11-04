@@ -1,34 +1,81 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-23T01:01:47+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2025-11-04T02:02:10+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "nl"
 }
 -->
-# Bouw een Bankapp Deel 2: Maak een Login- en Registratieformulier
+# Bouw een bankapp deel 2: Maak een inlog- en registratieformulier
 
-## Pre-Lecture Quiz
+```mermaid
+journey
+    title Your Form Development Journey
+    section HTML Foundation
+      Understand form elements: 3: Student
+      Learn input types: 4: Student
+      Master accessibility: 4: Student
+    section JavaScript Integration
+      Handle form submission: 4: Student
+      Implement AJAX communication: 5: Student
+      Process server responses: 5: Student
+    section Validation Systems
+      Create multi-layer validation: 5: Student
+      Enhance user experience: 5: Student
+      Ensure data integrity: 5: Student
+```
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/43)
+## Pre-lezing Quiz
 
-Heb je ooit een online formulier ingevuld dat je e-mailformaat afwees? Of al je informatie verloren toen je op verzenden klikte? We hebben allemaal wel eens zulke frustrerende ervaringen gehad.
+[Pre-lezing quiz](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Formulieren vormen de brug tussen je gebruikers en de functionaliteit van je applicatie. Net zoals luchtverkeersleiders zorgvuldig protocollen gebruiken om vliegtuigen veilig naar hun bestemming te begeleiden, bieden goed ontworpen formulieren duidelijke feedback en voorkomen ze kostbare fouten. Slechte formulieren daarentegen kunnen gebruikers sneller wegjagen dan een miscommunicatie op een druk vliegveld.
+Heb je ooit een online formulier ingevuld en werd je e-mailadres afgewezen? Of ben je al je gegevens kwijtgeraakt toen je op verzenden klikte? We hebben allemaal wel eens zulke frustrerende ervaringen gehad.
 
-In deze les transformeren we je statische bankapp naar een interactieve applicatie. Je leert formulieren bouwen die gebruikersinvoer valideren, communiceren met servers en nuttige feedback geven. Zie het als het bouwen van een bedieningsinterface waarmee gebruikers door de functies van je applicatie kunnen navigeren.
+Formulieren zijn de brug tussen je gebruikers en de functionaliteit van je applicatie. Net zoals luchtverkeersleiders zorgvuldig protocollen gebruiken om vliegtuigen veilig naar hun bestemming te begeleiden, bieden goed ontworpen formulieren duidelijke feedback en voorkomen ze kostbare fouten. Slechte formulieren daarentegen kunnen gebruikers sneller wegjagen dan een miscommunicatie op een druk vliegveld.
 
-Aan het einde heb je een compleet login- en registratiesysteem met validatie dat gebruikers begeleidt naar succes in plaats van frustratie.
+In deze les transformeren we je statische bankapp naar een interactieve applicatie. Je leert hoe je formulieren bouwt die gebruikersinvoer valideren, communiceren met servers en nuttige feedback geven. Zie het als het bouwen van een bedieningsinterface waarmee gebruikers door de functies van je applicatie kunnen navigeren.
+
+Aan het einde heb je een compleet inlog- en registratiesysteem met validatie dat gebruikers begeleidt naar succes in plaats van frustratie.
+
+```mermaid
+mindmap
+  root((Form Development))
+    HTML Foundation
+      Semantic Elements
+      Input Types
+      Accessibility
+      Label Association
+    User Experience
+      Validation Feedback
+      Error Prevention
+      Loading States
+      Success Messaging
+    JavaScript Integration
+      Event Handling
+      AJAX Communication
+      Data Processing
+      Error Management
+    Validation Layers
+      HTML5 Validation
+      Client-side Logic
+      Server-side Security
+      Progressive Enhancement
+    Modern Patterns
+      Fetch API
+      Async/Await
+      Form Data API
+      Promise Handling
+```
 
 ## Vereisten
 
-Voordat we beginnen met het bouwen van formulieren, zorgen we ervoor dat alles correct is ingesteld. Deze les gaat verder waar we de vorige hebben achtergelaten, dus als je vooruit hebt gespoeld, wil je misschien teruggaan en eerst de basis in orde maken.
+Voordat we beginnen met het bouwen van formulieren, laten we ervoor zorgen dat alles correct is ingesteld. Deze les gaat verder waar we de vorige hebben achtergelaten, dus als je vooruit bent gesprongen, wil je misschien teruggaan en eerst de basis in orde maken.
 
 ### Vereiste Setup
 
 | Component | Status | Beschrijving |
-|-----------|--------|-------------|
+|-----------|--------|--------------|
 | [HTML Templates](../1-template-route/README.md) | ✅ Vereist | De basisstructuur van je bankapp |
 | [Node.js](https://nodejs.org) | ✅ Vereist | JavaScript runtime voor de server |
 | [Bank API Server](../api/README.md) | ✅ Vereist | Backend service voor gegevensopslag |
@@ -48,15 +95,15 @@ curl http://localhost:5000/api
 # Expected response: "Bank API v1.0.0"
 ```
 
-**Als je de API-versie ziet, kun je verder gaan!**
+**Als je de API-versierespons ziet, ben je klaar om verder te gaan!**
 
 ---
 
-## Begrip van HTML-formulieren en -besturingselementen
+## Begrijpen van HTML-formulieren en -besturingselementen
 
-HTML-formulieren zijn hoe gebruikers communiceren met je webapplicatie. Zie ze als het telegraafsysteem dat in de 19e eeuw verre plaatsen met elkaar verbond – ze vormen het communicatieprotocol tussen gebruikersintentie en applicatierespons. Wanneer ze zorgvuldig zijn ontworpen, vangen ze fouten op, begeleiden ze invoerformaten en bieden ze nuttige suggesties.
+HTML-formulieren zijn hoe gebruikers communiceren met je webapplicatie. Zie ze als het telegraafsysteem dat in de 19e eeuw verre plaatsen met elkaar verbond – ze vormen het communicatieprotocol tussen gebruikersintentie en applicatierespons. Wanneer ze zorgvuldig zijn ontworpen, vangen ze fouten op, begeleiden ze invoerformattering en bieden ze nuttige suggesties.
 
-Moderne formulieren zijn aanzienlijk geavanceerder dan eenvoudige tekstinvoervelden. HTML5 introduceerde gespecialiseerde invoertypes die automatisch e-mailvalidatie, nummerformattering en datumselectie afhandelen. Deze verbeteringen komen zowel de toegankelijkheid als de mobiele gebruikerservaring ten goede.
+Moderne formulieren zijn aanzienlijk geavanceerder dan eenvoudige tekstinvoervelden. HTML5 introduceerde gespecialiseerde invoertypen die automatisch e-mailvalidatie, nummerformattering en datumselectie afhandelen. Deze verbeteringen komen zowel toegankelijkheid als mobiele gebruikerservaringen ten goede.
 
 ### Essentiële Formulierelementen
 
@@ -78,7 +125,7 @@ Moderne formulieren zijn aanzienlijk geavanceerder dan eenvoudige tekstinvoervel
 - **Associeert** labels met invoervelden voor toegankelijkheid
 - **Definieert** een verzendknop om het formulier te verwerken
 
-### Moderne Invoertypes en Attributen
+### Moderne Invoertypen en Attributen
 
 | Invoertype | Doel | Voorbeeldgebruik |
 |------------|------|------------------|
@@ -88,9 +135,9 @@ Moderne formulieren zijn aanzienlijk geavanceerder dan eenvoudige tekstinvoervel
 | `number` | Numerieke invoer | `<input type="number" name="balance" min="0">` |
 | `tel` | Telefoonnummers | `<input type="tel" name="phone">` |
 
-> 💡 **Voordeel van moderne HTML5**: Het gebruik van specifieke invoertypes biedt automatische validatie, geschikte mobiele toetsenborden en betere ondersteuning voor toegankelijkheid zonder extra JavaScript!
+> 💡 **Voordeel van moderne HTML5**: Het gebruik van specifieke invoertypen biedt automatische validatie, geschikte mobiele toetsenborden en betere ondersteuning voor toegankelijkheid zonder extra JavaScript!
 
-### Knoptypes en Gedrag
+### Knoptypen en Gedrag
 
 ```html
 <!-- Different button behaviors -->
@@ -100,15 +147,15 @@ Moderne formulieren zijn aanzienlijk geavanceerder dan eenvoudige tekstinvoervel
 ```
 
 **Wat elk knoptype doet:**
-- **Verzendknoppen**: Activeren formulierverzending en sturen gegevens naar het opgegeven eindpunt
+- **Verzendknoppen**: Activeren het verzenden van het formulier en sturen gegevens naar het opgegeven eindpunt
 - **Resetknoppen**: Herstellen alle formuliervelden naar hun oorspronkelijke staat
 - **Normale knoppen**: Hebben geen standaardgedrag en vereisen aangepaste JavaScript voor functionaliteit
 
-> ⚠️ **Belangrijke Opmerking**: Het `<input>`-element is zelfsluitend en heeft geen sluitingstag nodig. Moderne best practice is om `<input>` zonder schuine streep te schrijven.
+> ⚠️ **Belangrijke opmerking**: Het `<input>`-element is zelfsluitend en heeft geen sluitingstag nodig. Moderne best practice is om `<input>` te schrijven zonder de schuine streep.
 
-### Je Loginformulier Bouwen
+### Je Inlogformulier Bouwen
 
-Laten we nu een praktisch loginformulier maken dat moderne HTML-formulierpraktijken demonstreert. We beginnen met een basisstructuur en verbeteren deze geleidelijk met toegankelijkheidsfuncties en validatie.
+Laten we nu een praktisch inlogformulier maken dat moderne HTML-formulierpraktijken demonstreert. We beginnen met een basisstructuur en verbeteren deze geleidelijk met toegankelijkheidsfuncties en validatie.
 
 ```html
 <template id="login">
@@ -130,9 +177,9 @@ Laten we nu een praktisch loginformulier maken dat moderne HTML-formulierpraktij
 **Wat hier gebeurt:**
 - **Structureert** het formulier met semantische HTML5-elementen
 - **Groepeert** gerelateerde elementen met `div`-containers en betekenisvolle klassen
-- **Associeert** labels met invoervelden via de attributen `for` en `id`
+- **Associeert** labels met invoervelden via de `for`- en `id`-attributen
 - **Voegt** moderne attributen toe zoals `autocomplete` en `placeholder` voor betere gebruikerservaring
-- **Voegt** `novalidate` toe om validatie met JavaScript te verwerken in plaats van standaard browserinstellingen
+- **Voegt** `novalidate` toe om validatie met JavaScript af te handelen in plaats van standaard browservalidatie
 
 ### Het Belang van Goede Labels
 
@@ -154,15 +201,15 @@ graph TD
 **Wat goede labels bereiken:**
 - **Maakt** het mogelijk voor schermlezers om formuliervelden duidelijk aan te kondigen
 - **Vergroot** het klikbare gebied (door op het label te klikken wordt het invoerveld gefocust)
-- **Verbetert** de mobiele bruikbaarheid met grotere aanraakdoelen
+- **Verbetert** mobiele bruikbaarheid met grotere aanraakdoelen
 - **Ondersteunt** formuliervalidatie met betekenisvolle foutmeldingen
-- **Verbetert** SEO door semantische betekenis aan formulierelementen te geven
+- **Verhoogt** SEO door semantische betekenis aan formulierelementen te geven
 
-> 🎯 **Toegankelijkheidsdoel**: Elk formulierinvoerveld moet een bijbehorend label hebben. Deze eenvoudige praktijk maakt je formulieren bruikbaar voor iedereen, inclusief gebruikers met een beperking, en verbetert de ervaring voor alle gebruikers.
+> 🎯 **Doel voor toegankelijkheid**: Elk formulierinvoerveld moet een bijbehorend label hebben. Deze eenvoudige praktijk maakt je formulieren bruikbaar voor iedereen, inclusief gebruikers met een beperking, en verbetert de ervaring voor alle gebruikers.
 
 ### Het Registratieformulier Maken
 
-Het registratieformulier vereist meer gedetailleerde informatie om een volledig gebruikersaccount te maken. Laten we het bouwen met moderne HTML5-functies en verbeterde toegankelijkheid.
+Het registratieformulier vereist meer gedetailleerde informatie om een compleet gebruikersaccount te maken. Laten we het bouwen met moderne HTML5-functies en verbeterde toegankelijkheid.
 
 ```html
 <hr/>
@@ -200,35 +247,51 @@ Het registratieformulier vereist meer gedetailleerde informatie om een volledig 
 - **Georganiseerd** elk veld in container-divs voor betere styling en lay-out
 - **Toegevoegd** geschikte `autocomplete`-attributen voor browser-autovulondersteuning
 - **Inbegrepen** nuttige placeholder-tekst om gebruikersinvoer te begeleiden
-- **Ingesteld** verstandige standaardwaarden met het `value`-attribuut
+- **Ingesteld** verstandige standaardwaarden met behulp van het `value`-attribuut
 - **Toegepast** validatieattributen zoals `required`, `maxlength` en `min`
-- **Gebruikt** `type="number"` voor het veld saldo met ondersteuning voor decimalen
+- **Gebruikt** `type="number"` voor het balansveld met decimale ondersteuning
 
-### Verkenning van Invoertypes en Gedrag
+### Verkennen van Invoertypen en Gedrag
 
-**Moderne invoertypes bieden verbeterde functionaliteit:**
+**Moderne invoertypen bieden verbeterde functionaliteit:**
 
 | Functie | Voordeel | Voorbeeld |
 |---------|----------|-----------|
-| `type="number"` | Numeriek toetsenbord op mobiel | Makkelijker saldo invoeren |
+| `type="number"` | Numeriek toetsenbord op mobiel | Gemakkelijker balansinvoer |
 | `step="0.01"` | Controle over decimale precisie | Staat centen toe in valuta |
 | `autocomplete` | Browser-autovul | Snellere formulierinvulling |
 | `placeholder` | Contextuele hints | Begeleidt gebruikersverwachtingen |
 
-> 🎯 **Toegankelijkheidsuitdaging**: Probeer de formulieren alleen met je toetsenbord te navigeren! Gebruik `Tab` om tussen velden te bewegen, `Spatie` om vakjes aan te vinken en `Enter` om te verzenden. Deze ervaring helpt je begrijpen hoe gebruikers van schermlezers met je formulieren omgaan.
+> 🎯 **Toegankelijkheidsuitdaging**: Probeer de formulieren te navigeren met alleen je toetsenbord! Gebruik `Tab` om tussen velden te bewegen, `Spatie` om vakjes aan te vinken en `Enter` om te verzenden. Deze ervaring helpt je begrijpen hoe schermlezergebruikers met je formulieren omgaan.
 
-## Begrip van Formulierverzendmethoden
+### 🔄 **Pedagogische Check-in**
+**Begrip van Formulierbasis**: Voordat je JavaScript implementeert, zorg ervoor dat je begrijpt:
+- ✅ Hoe semantische HTML toegankelijke formulierstructuren creëert
+- ✅ Waarom invoertypen belangrijk zijn voor mobiele toetsenborden en validatie
+- ✅ De relatie tussen labels en formulierelementen
+- ✅ Hoe formulierattributen standaard browsergedrag beïnvloeden
 
-Wanneer iemand je formulier invult en op verzenden klikt, moet die gegevens ergens naartoe – meestal naar een server die ze kan opslaan. Er zijn een paar verschillende manieren waarop dit kan gebeuren, en weten welke je moet gebruiken kan je later veel hoofdpijn besparen.
+**Snelle Zelftest**: Wat gebeurt er als je een formulier indient zonder JavaScript-afhandeling?
+*Antwoord: De browser voert standaardverzending uit, meestal door te verwijzen naar de actie-URL*
 
-Laten we eens kijken wat er precies gebeurt wanneer iemand op die verzendknop klikt.
+**Voordelen van HTML5-formulieren**: Moderne formulieren bieden:
+- **Ingebouwde Validatie**: Automatische controle van e-mail- en nummerformaten
+- **Mobiele Optimalisatie**: Geschikte toetsenborden voor verschillende invoertypen
+- **Toegankelijkheid**: Ondersteuning voor schermlezers en toetsenbordnavigatie
+- **Progressieve Verbetering**: Werkt zelfs wanneer JavaScript is uitgeschakeld
+
+## Begrijpen van Formulierverzendmethoden
+
+Wanneer iemand je formulier invult en op verzenden klikt, moeten die gegevens ergens naartoe – meestal naar een server die ze kan opslaan. Er zijn een paar verschillende manieren waarop dit kan gebeuren, en weten welke je moet gebruiken kan je later wat hoofdpijn besparen.
+
+Laten we eens kijken wat er eigenlijk gebeurt wanneer iemand op die verzendknop klikt.
 
 ### Standaard Formuliergedrag
 
 Laten we eerst observeren wat er gebeurt bij een basisformulierverzending:
 
 **Test je huidige formulieren:**
-1. Klik op de *Registreren*-knop in je formulier
+1. Klik op de *Registreren* knop in je formulier
 2. Observeer de veranderingen in de adresbalk van je browser
 3. Merk op hoe de pagina opnieuw laadt en gegevens in de URL verschijnen
 
@@ -251,20 +314,20 @@ graph TD
     D --> J[More secure]
 ```
 
-**Begrip van de verschillen:**
+**Begrijp de verschillen:**
 
-| Methode | Gebruikssituatie | Locatie gegevens | Beveiligingsniveau | Groottebeperking |
-|---------|------------------|------------------|--------------------|------------------|
+| Methode | Gebruikssituatie | Locatie van gegevens | Beveiligingsniveau | Groottebeperking |
+|---------|------------------|----------------------|--------------------|------------------|
 | `GET` | Zoekopdrachten, filters | URL-parameters | Laag (zichtbaar) | ~2000 tekens |
 | `POST` | Gebruikersaccounts, gevoelige gegevens | Verzoekbody | Hoger (verborgen) | Geen praktische limiet |
 
-**Begrip van de fundamentele verschillen:**
-- **GET**: Voegt formuliergegevens toe aan de URL als queryparameters (geschikt voor zoekopdrachten)
+**Begrijp de fundamentele verschillen:**
+- **GET**: Voegt formuliergegevens toe aan de URL als queryparameters (geschikt voor zoekoperaties)
 - **POST**: Bevat gegevens in de verzoekbody (essentieel voor gevoelige informatie)
 - **GET-beperkingen**: Groottebeperkingen, zichtbare gegevens, blijvende browsergeschiedenis
 - **POST-voordelen**: Grote gegevenscapaciteit, privacybescherming, ondersteuning voor bestanduploads
 
-> 💡 **Best Practice**: Gebruik `GET` voor zoekformulieren en filters (gegevensopvraging), gebruik `POST` voor gebruikersregistratie, login en gegevenscreatie.
+> 💡 **Best Practice**: Gebruik `GET` voor zoekformulieren en filters (gegevensopvraging), gebruik `POST` voor gebruikersregistratie, inloggen en gegevenscreatie.
 
 ### Configureren van Formulierverzending
 
@@ -278,7 +341,7 @@ Laten we je registratieformulier configureren om correct te communiceren met de 
 **Wat deze configuratie doet:**
 - **Stuurt** formulierverzending naar je API-eindpunt
 - **Gebruikt** de POST-methode voor veilige gegevensoverdracht
-- **Voegt** `novalidate` toe om validatie met JavaScript te verwerken
+- **Voegt** `novalidate` toe om validatie met JavaScript af te handelen
 
 ### Testen van Formulierverzending
 
@@ -290,13 +353,13 @@ Laten we je registratieformulier configureren om correct te communiceren met de 
 ![Een browservenster op het adres localhost:5000/api/accounts, met een JSON-string met gebruikersgegevens](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.nl.png)
 
 **Wat je zou moeten zien:**
-- **Browser wordt omgeleid** naar de URL van het API-eindpunt
+- **Browser verwijst** naar de API-eindpunt-URL
 - **JSON-respons** met je nieuw aangemaakte accountgegevens
 - **Serverbevestiging** dat het account succesvol is aangemaakt
 
-> 🧪 **Probeer het uit**: Probeer opnieuw te registreren met dezelfde gebruikersnaam. Welke respons krijg je? Dit helpt je te begrijpen hoe de server omgaat met dubbele gegevens en foutomstandigheden.
+> 🧪 **Experimenteertijd**: Probeer opnieuw te registreren met dezelfde gebruikersnaam. Welke respons krijg je? Dit helpt je begrijpen hoe de server dubbele gegevens en foutomstandigheden afhandelt.
 
-### Begrip van JSON-responsen
+### Begrijpen van JSON-responsen
 
 **Wanneer de server je formulier succesvol verwerkt:**
 ```json
@@ -310,18 +373,18 @@ Laten we je registratieformulier configureren om correct te communiceren met de 
 ```
 
 **Deze respons bevestigt:**
-- **Maakt** een nieuw account aan met je opgegeven gegevens
-- **Kent** een unieke identificatie toe voor toekomstige referentie
-- **Geeft** alle accountinformatie terug ter verificatie
-- **Geeft aan** dat de gegevens succesvol zijn opgeslagen in de database
+- **Creëert** een nieuw account met je opgegeven gegevens
+- **Kent** een unieke identificator toe voor toekomstige referentie
+- **Retourneert** alle accountinformatie ter verificatie
+- **Geeft** aan dat opslag in de database succesvol is
 
-## Moderne Formulierverwerking met JavaScript
+## Moderne Formulierafhandeling met JavaScript
 
-Traditionele formulierverzendingen veroorzaken volledige paginareloads, vergelijkbaar met hoe vroege ruimtemissies volledige systeemresets vereisten voor koerscorrecties. Deze aanpak verstoort de gebruikerservaring en verliest de applicatiestatus.
+Traditionele formulierverzendingen veroorzaken volledige paginaherlaadbeurten, vergelijkbaar met hoe vroege ruimtemissies volledige systeemresets vereisten voor koerscorrecties. Deze aanpak verstoort de gebruikerservaring en verliest de applicatiestatus.
 
-Formulierverwerking met JavaScript werkt als de continue geleidingssystemen die door moderne ruimtevaartuigen worden gebruikt – realtime aanpassingen maken zonder de navigatiecontext te verliezen. We kunnen formulierverzendingen onderscheppen, directe feedback geven, fouten soepel afhandelen en de interface bijwerken op basis van serverresponsen terwijl de gebruiker binnen de applicatie blijft.
+JavaScript-formulierafhandeling werkt zoals de continue geleidingssystemen die door moderne ruimtevaartuigen worden gebruikt – realtime aanpassingen maken zonder de navigatiecontext te verliezen. We kunnen formulierverzendingen onderscheppen, directe feedback geven, fouten soepel afhandelen en de interface bijwerken op basis van serverresponsen terwijl we de positie van de gebruiker in de applicatie behouden.
 
-### Waarom Paginareloads Vermijden?
+### Waarom Paginaherlaadbeurten Vermijden?
 
 ```mermaid
 sequenceDiagram
@@ -337,19 +400,19 @@ sequenceDiagram
     Note over User,SPA: No page reload!
 ```
 
-**Voordelen van formulierverwerking met JavaScript:**
+**Voordelen van JavaScript-formulierafhandeling:**
 - **Behoudt** applicatiestatus en gebruikerscontext
 - **Biedt** directe feedback en laadindicatoren
 - **Maakt** dynamische foutafhandeling en validatie mogelijk
 - **Creëert** vloeiende, app-achtige gebruikerservaringen
-- **Maakt** voorwaardelijke logica op basis van serverresponsen mogelijk
+- **Staat** voorwaardelijke logica toe op basis van serverresponsen
 
 ### Overgang van Traditionele naar Moderne Formulieren
 
 **Uitdagingen van de traditionele aanpak:**
-- **Leidt** gebruikers weg van je applicatie
+- **Verwijst** gebruikers weg van je applicatie
 - **Verliest** huidige applicatiestatus en context
-- **Vereist** volledige paginareloads voor eenvoudige bewerkingen
+- **Vereist** volledige paginaherlaadbeurten voor eenvoudige operaties
 - **Biedt** beperkte controle over gebruikersfeedback
 
 **Voordelen van de moderne JavaScript-aanpak:**
@@ -358,9 +421,9 @@ sequenceDiagram
 - **Maakt** realtime validatie en feedback mogelijk
 - **Ondersteunt** progressieve verbetering en toegankelijkheid
 
-### Implementeren van JavaScript Formulierverwerking
+### Implementeren van JavaScript Formulierafhandeling
 
-Laten we de traditionele formulierverzending vervangen door moderne JavaScript-eventverwerking:
+Laten we de traditionele formulierverzending vervangen door moderne JavaScript-eventafhandeling:
 
 ```html
 <!-- Remove the action attribute and add event handling -->
@@ -392,16 +455,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 **Wat hier gebeurt:**
 - **Voorkomt** standaard formulierverzending met `event.preventDefault()`
-- **Haalt** het formulier op met moderne DOM-selectie
-- **Extraheert** formuliergegevens met de krachtige `FormData` API
+- **Haalt** het formulierelement op met moderne DOM-selectie
+- **Haalt** formuliergegevens op met de krachtige `FormData` API
 - **Converteert** FormData naar een eenvoudig object met `Object.fromEntries()`
 - **Serialiseert** de gegevens naar JSON-formaat voor servercommunicatie
 - **Logt** de verwerkte gegevens voor debugging en verificatie
 
-### Begrip van de FormData API
+### Begrijpen van de FormData API
 
-**De FormData API biedt krachtige formulierverwerking:**
-
+**De FormData API biedt krachtige formulierafhandeling:**
 ```javascript
 // Example of what FormData captures
 const formData = new FormData(registerForm);
@@ -416,12 +478,12 @@ const formData = new FormData(registerForm);
 ```
 
 **Voordelen van de FormData API:**
-- **Uitgebreide verzameling**: Vangt alle formulierelementen, inclusief tekst, bestanden en complexe invoer
-- **Typebewustzijn**: Behandelt automatisch verschillende invoertypes zonder aangepaste codering
-- **Efficiëntie**: Elimineert handmatige veldverzameling met één API-aanroep
-- **Aanpasbaarheid**: Behoudt functionaliteit terwijl de formulierstructuur evolueert
+- **Uitgebreide verzameling**: Verzamelt alle formulier-elementen, inclusief tekst, bestanden en complexe invoer
+- **Typebewustzijn**: Behandelt automatisch verschillende invoertypen zonder aangepaste codering
+- **Efficiëntie**: Vermijdt handmatige veldverzameling met één API-aanroep
+- **Aanpasbaarheid**: Blijft functioneren terwijl de structuur van het formulier evolueert
 
-### De Servercommunicatiefunctie Maken
+### De functie voor servercommunicatie maken
 
 Laten we nu een robuuste functie bouwen om te communiceren met je API-server met moderne JavaScript-patronen:
 
@@ -450,7 +512,7 @@ async function createAccount(account) {
 }
 ```
 
-**Begrip van asynchrone JavaScript:**
+**Begrip van asynchroon JavaScript:**
 
 ```mermaid
 sequenceDiagram
@@ -466,35 +528,35 @@ sequenceDiagram
 ```
 
 **Wat deze moderne implementatie bereikt:**
-- **Gebruikt** `async/await` voor leesbare asynchrone code
+- **Maakt gebruik van** `async/await` voor leesbare asynchrone code
 - **Bevat** correcte foutafhandeling met try/catch-blokken
 - **Controleert** de responsstatus voordat gegevens worden verwerkt
 - **Stelt** geschikte headers in voor JSON-communicatie
-- **Biedt** gedetailleerde foutmeldingen voor debugging  
-- **Geeft** consistente datastructuren terug voor succes- en foutgevallen  
+- **Biedt** gedetailleerde foutmeldingen voor debugging
+- **Retourneert** consistente datastructuren voor succes- en foutgevallen
 
-### De kracht van de moderne Fetch API  
+### De kracht van de moderne Fetch API
 
-**Voordelen van de Fetch API ten opzichte van oudere methoden:**  
+**Voordelen van Fetch API ten opzichte van oudere methoden:**
 
-| Functie | Voordeel | Implementatie |  
-|---------|----------|---------------|  
-| Promise-gebaseerd | Schone asynchrone code | `await fetch()` |  
-| Aanpassing van verzoeken | Volledige HTTP-controle | Headers, methoden, body |  
-| Responsverwerking | Flexibele gegevensparsing | `.json()`, `.text()`, `.blob()` |  
-| Foutafhandeling | Uitgebreide foutdetectie | Try/catch-blokken |  
+| Kenmerk | Voordeel | Implementatie |
+|---------|----------|---------------|
+| Op belofte gebaseerd | Schone asynchrone code | `await fetch()` |
+| Aanpasbare verzoeken | Volledige HTTP-controle | Headers, methoden, body |
+| Responsverwerking | Flexibele gegevensanalyse | `.json()`, `.text()`, `.blob()` |
+| Foutafhandeling | Uitgebreide foutdetectie | Try/catch-blokken |
 
-> 🎥 **Meer leren**: [Async/Await Tutorial](https://youtube.com/watch?v=YwmlRkrxvkk) - Begrijp asynchrone JavaScript-patronen voor moderne webontwikkeling.  
+> 🎥 **Meer leren**: [Async/Await Tutorial](https://youtube.com/watch?v=YwmlRkrxvkk) - Begrip van asynchrone JavaScript-patronen voor moderne webontwikkeling.
 
-**Belangrijke concepten voor servercommunicatie:**  
-- **Asynchrone functies** maken het mogelijk om de uitvoering te pauzeren en te wachten op serverreacties  
-- **Await keyword** zorgt ervoor dat asynchrone code leest als synchrone code  
-- **Fetch API** biedt moderne, promise-gebaseerde HTTP-verzoeken  
-- **Foutafhandeling** zorgt ervoor dat je app gracieus reageert op netwerkproblemen  
+**Belangrijke concepten voor servercommunicatie:**
+- **Async-functies** laten de uitvoering pauzeren om op serverresponsen te wachten
+- **Await-sleutelwoord** maakt asynchrone code leesbaar als synchrone code
+- **Fetch API** biedt moderne, op belofte gebaseerde HTTP-verzoeken
+- **Foutafhandeling** zorgt ervoor dat je app gracieus reageert op netwerkproblemen
 
-### De registratiefunctie voltooien  
+### De registratiefunctie voltooien
 
-Laten we alles samenbrengen met een complete, productieklare registratiefunctie:  
+Laten we alles samenbrengen met een complete, productieklare registratiefunctie:
 
 ```javascript
 async function register() {
@@ -535,41 +597,61 @@ async function register() {
   }
 }
 ```
-  
-**Deze verbeterde implementatie bevat:**  
-- **Biedt** visuele feedback tijdens het indienen van het formulier  
-- **Schakelt uit** de verzendknop om dubbele inzendingen te voorkomen  
-- **Behandelt** zowel verwachte als onverwachte fouten op een elegante manier  
-- **Toont** gebruiksvriendelijke succes- en foutmeldingen  
-- **Reset** het formulier na succesvolle registratie  
-- **Herstelt** de UI-status ongeacht de uitkomst  
 
-### Testen van je implementatie  
+**Deze verbeterde implementatie bevat:**
+- **Biedt** visuele feedback tijdens het indienen van het formulier
+- **Schakelt** de verzendknop uit om dubbele inzendingen te voorkomen
+- **Behandelt** zowel verwachte als onverwachte fouten op een nette manier
+- **Toont** gebruiksvriendelijke succes- en foutmeldingen
+- **Reset** het formulier na succesvolle registratie
+- **Herstelt** de UI-status ongeacht de uitkomst
 
-**Open de ontwikkelaarstools van je browser en test de registratie:**  
+### Je implementatie testen
 
-1. **Open** de browserconsole (F12 → tabblad Console)  
-2. **Vul** het registratieformulier in  
-3. **Klik** op "Account aanmaken"  
-4. **Observeer** de consoleberichten en gebruikersfeedback  
+**Open de ontwikkelaarstools van je browser en test de registratie:**
 
-![Screenshot met logbericht in de browserconsole](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.nl.png)  
+1. **Open** de browserconsole (F12 → Console-tabblad)
+2. **Vul** het registratieformulier in
+3. **Klik** op "Account aanmaken"
+4. **Observeer** de consoleberichten en gebruikersfeedback
 
-**Wat je zou moeten zien:**  
-- **Laadstatus** verschijnt op de verzendknop  
-- **Console logs** tonen gedetailleerde informatie over het proces  
-- **Succesbericht** verschijnt wanneer het aanmaken van een account slaagt  
-- **Formulier wordt automatisch gereset** na succesvolle inzending  
+![Screenshot met logbericht in de browserconsole](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.nl.png)
 
-> 🔒 **Beveiligingsoverweging**: Momenteel worden gegevens verzonden via HTTP, wat niet veilig is voor productie. Gebruik in echte applicaties altijd HTTPS om gegevensoverdracht te versleutelen. Lees meer over [HTTPS-beveiliging](https://en.wikipedia.org/wiki/HTTPS) en waarom het essentieel is voor het beschermen van gebruikersgegevens.  
+**Wat je zou moeten zien:**
+- **Laadstatus** verschijnt op de verzendknop
+- **Consolelogs** tonen gedetailleerde informatie over het proces
+- **Succesbericht** verschijnt wanneer het aanmaken van een account slaagt
+- **Formulier reset** automatisch na succesvolle inzending
 
-## Uitgebreide formuliervalidatie  
+> 🔒 **Beveiligingsoverweging**: Momenteel worden gegevens via HTTP verzonden, wat niet veilig is voor productie. Gebruik in echte applicaties altijd HTTPS om gegevensoverdracht te versleutelen. Lees meer over [HTTPS-beveiliging](https://en.wikipedia.org/wiki/HTTPS) en waarom het essentieel is voor het beschermen van gebruikersgegevens.
 
-Formuliervalidatie voorkomt de frustrerende ervaring van het ontdekken van fouten pas na het indienen. Net zoals de meerdere redundante systemen op het internationale ruimtestation, maakt effectieve validatie gebruik van meerdere lagen van veiligheidscontroles.  
+### 🔄 **Pedagogische check-in**
+**Moderne JavaScript-integratie**: Controleer je begrip van asynchrone formulierverwerking:
+- ✅ Hoe verandert `event.preventDefault()` het standaardgedrag van een formulier?
+- ✅ Waarom is de FormData API efficiënter dan handmatige veldverzameling?
+- ✅ Hoe verbeteren async/await-patronen de leesbaarheid van code?
+- ✅ Welke rol speelt foutafhandeling in de gebruikerservaring?
 
-De optimale aanpak combineert validatie op browserniveau voor directe feedback, JavaScript-validatie voor een verbeterde gebruikerservaring en server-side validatie voor beveiliging en gegevensintegriteit. Deze redundantie zorgt voor zowel gebruikerstevredenheid als systeembeveiliging.  
+**Systeemarchitectuur**: Je formulierverwerking demonstreert:
+- **Event-Driven Programming**: Formulieren reageren op gebruikersacties zonder pagina-herlaad
+- **Asynchrone communicatie**: Serververzoeken blokkeren de gebruikersinterface niet
+- **Foutafhandeling**: Gracieus omgaan met netwerkverzoeken die mislukken
+- **Statusbeheer**: UI-updates weerspiegelen serverresponsen correct
+- **Progressieve verbetering**: Basisfunctionaliteit werkt, JavaScript verbetert het
 
-### Begrip van validatielagen  
+**Professionele patronen**: Je hebt geïmplementeerd:
+- **Single Responsibility**: Functies hebben duidelijke, gerichte doelen
+- **Error Boundaries**: Try/catch-blokken voorkomen applicatiecrashes
+- **Gebruikersfeedback**: Laadstatussen en succes-/foutmeldingen
+- **Gegevensomzetting**: FormData naar JSON voor servercommunicatie
+
+## Uitgebreide formuliervalidatie
+
+Formuliervalidatie voorkomt de frustrerende ervaring van het ontdekken van fouten pas na het indienen. Net als de meerdere redundante systemen op het internationale ruimtestation, maakt effectieve validatie gebruik van meerdere lagen veiligheidscontroles.
+
+De optimale aanpak combineert browservalidatie voor directe feedback, JavaScript-validatie voor verbeterde gebruikerservaring en servervalidatie voor beveiliging en gegevensintegriteit. Deze redundantie zorgt voor zowel gebruikerstevredenheid als systeembeveiliging.
+
+### Begrip van validatielagen
 
 ```mermaid
 graph TD
@@ -583,28 +665,28 @@ graph TD
     C -->|Invalid| H[Custom Error Display]
     E -->|Invalid| I[Server Error Response]
 ```
-  
-**Strategie voor validatie met meerdere lagen:**  
-- **HTML5-validatie**: Directe controles door de browser  
-- **JavaScript-validatie**: Aangepaste logica en gebruikerservaring  
-- **Servervalidatie**: Definitieve beveiligings- en gegevensintegriteitscontroles  
-- **Progressieve verbetering**: Werkt zelfs als JavaScript is uitgeschakeld  
 
-### HTML5-validatieattributen  
+**Strategie voor validatie met meerdere lagen:**
+- **HTML5-validatie**: Directe browsergebaseerde controles
+- **JavaScript-validatie**: Aangepaste logica en gebruikerservaring
+- **Servervalidatie**: Definitieve beveiligings- en gegevensintegriteitscontroles
+- **Progressieve verbetering**: Werkt zelfs als JavaScript is uitgeschakeld
 
-**Moderne validatietools tot je beschikking:**  
+### HTML5-validatie-attributen
 
-| Attribuut | Doel | Voorbeeldgebruik | Browsergedrag |  
-|-----------|------|------------------|---------------|  
-| `required` | Verplichte velden | `<input required>` | Voorkomt lege inzending |  
-| `minlength`/`maxlength` | Tekstlengte limieten | `<input maxlength="20">` | Handhaaft tekenlimieten |  
-| `min`/`max` | Numerieke bereiken | `<input min="0" max="1000">` | Valideert numerieke grenzen |  
-| `pattern` | Aangepaste regex-regels | `<input pattern="[A-Za-z]+">` | Komt overeen met specifieke formaten |  
-| `type` | Validatie van gegevenstype | `<input type="email">` | Validatie op basis van formaat |  
+**Moderne validatietools tot je beschikking:**
 
-### CSS-validatiestijlen  
+| Attribuut | Doel | Voorbeeldgebruik | Browsergedrag |
+|-----------|------|------------------|---------------|
+| `required` | Verplichte velden | `<input required>` | Voorkomt lege inzending |
+| `minlength`/`maxlength` | Tekstlengtebeperkingen | `<input maxlength="20">` | Handhaaft tekenlimieten |
+| `min`/`max` | Numerieke bereiken | `<input min="0" max="1000">` | Valideert numerieke grenzen |
+| `pattern` | Aangepaste regex-regels | `<input pattern="[A-Za-z]+">` | Komt overeen met specifieke formaten |
+| `type` | Gegevenstypevalidatie | `<input type="email">` | Formaat-specifieke validatie |
 
-**Creëer visuele feedback voor validatiestatussen:**  
+### CSS-validatiestijling
+
+**Creëer visuele feedback voor validatiestatussen:**
 
 ```css
 /* Valid input styling */
@@ -628,18 +710,18 @@ input:focus:invalid {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 ```
-  
-**Wat deze visuele aanwijzingen bereiken:**  
-- **Groene randen**: Geven succesvolle validatie aan, zoals groene lichten in de controlekamer  
-- **Rode randen**: Signaleren validatiefouten die aandacht vereisen  
-- **Focus highlights**: Bieden duidelijke visuele context voor de huidige invoerlocatie  
-- **Consistente styling**: Creëert voorspelbare interfacepatronen die gebruikers kunnen leren  
 
-> 💡 **Handige tip**: Gebruik de CSS-pseudoklassen `:valid` en `:invalid` om directe visuele feedback te geven terwijl gebruikers typen, en zo een responsieve en behulpzame interface te creëren.  
+**Wat deze visuele aanwijzingen bereiken:**
+- **Groene randen**: Geven succesvolle validatie aan, zoals groene lichten in de controlekamer
+- **Rode randen**: Signaleren validatiefouten die aandacht vereisen
+- **Focus-highlights**: Bieden duidelijke visuele context voor de huidige invoerlocatie
+- **Consistente styling**: Creëert voorspelbare interfacepatronen die gebruikers kunnen leren
 
-### Implementeren van uitgebreide validatie  
+> 💡 **Pro Tip**: Gebruik de `:valid` en `:invalid` CSS-pseudoklassen om directe visuele feedback te geven terwijl gebruikers typen, wat een responsieve en behulpzame interface creëert.
 
-Laten we je registratieformulier verbeteren met robuuste validatie die een uitstekende gebruikerservaring en gegevenskwaliteit biedt:  
+### Uitgebreide validatie implementeren
+
+Laten we je registratieformulier verbeteren met robuuste validatie die een uitstekende gebruikerservaring en gegevenskwaliteit biedt:
 
 ```html
 <form id="registerForm" method="POST" novalidate>
@@ -681,42 +763,42 @@ Laten we je registratieformulier verbeteren met robuuste validatie die een uitst
   <button type="submit">Create Account</button>
 </form>
 ```
-  
-**Begrip van de verbeterde validatie:**  
-- **Combineert** verplichte veldindicatoren met behulpzame beschrijvingen  
-- **Bevat** `pattern`-attributen voor formaatvalidatie  
-- **Biedt** `title`-attributen voor toegankelijkheid en tooltips  
-- **Voegt** hulptekst toe om gebruikersinvoer te begeleiden  
-- **Gebruikt** semantische HTML-structuur voor betere toegankelijkheid  
 
-### Geavanceerde validatieregels  
+**Begrip van de verbeterde validatie:**
+- **Combineert** verplichte veldindicatoren met behulpzame beschrijvingen
+- **Bevat** `pattern`-attributen voor formaatvalidatie
+- **Biedt** `title`-attributen voor toegankelijkheid en tooltips
+- **Voegt** hulptekst toe om gebruikersinvoer te begeleiden
+- **Gebruikt** semantische HTML-structuur voor betere toegankelijkheid
 
-**Wat elke validatieregel bereikt:**  
+### Geavanceerde validatieregels
 
-| Veld | Validatieregels | Voordeel voor gebruiker |  
-|------|-----------------|-------------------------|  
-| Gebruikersnaam | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Zorgt voor geldige, unieke identificatoren |  
-| Valuta | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Accepteert gangbare valutatekens |  
-| Saldo | `min="0"`, `step="0.01"`, `type="number"` | Voorkomt negatieve saldi |  
-| Beschrijving | `maxlength="100"` | Redelijke lengtebeperkingen |  
+**Wat elke validatieregel bereikt:**
 
-### Testen van validatiegedrag  
+| Veld | Validatieregels | Gebruikersvoordeel |
+|------|-----------------|--------------------|
+| Gebruikersnaam | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Zorgt voor geldige, unieke identificatoren |
+| Valuta | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Accepteert gangbare valutatekens |
+| Saldo | `min="0"`, `step="0.01"`, `type="number"` | Voorkomt negatieve saldi |
+| Beschrijving | `maxlength="100"` | Redelijke lengtebeperkingen |
 
-**Probeer deze validatiescenario's:**  
-1. **Dien** het formulier in met lege verplichte velden  
-2. **Voer** een gebruikersnaam in die korter is dan 3 tekens  
-3. **Probeer** speciale tekens in het gebruikersnaamveld  
-4. **Voer** een negatief saldo in  
+### Validatiegedrag testen
 
-![Screenshot met validatiefout bij het proberen het formulier in te dienen](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.nl.png)  
+**Probeer deze validatiescenario's:**
+1. **Dien** het formulier in met lege verplichte velden
+2. **Voer** een gebruikersnaam in die korter is dan 3 tekens
+3. **Probeer** speciale tekens in het gebruikersnaamveld
+4. **Voer** een negatief saldo in
 
-**Wat je zult zien:**  
-- **Browser toont** native validatiemeldingen  
-- **Stijlwijzigingen** op basis van `:valid` en `:invalid` statussen  
-- **Formulierinzending** wordt voorkomen totdat alle validaties slagen  
-- **Focus verplaatst automatisch** naar het eerste ongeldige veld  
+![Screenshot met validatiefout bij het proberen het formulier in te dienen](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.nl.png)
 
-### Client-side versus server-side validatie  
+**Wat je zult zien:**
+- **Browser toont** native validatiemeldingen
+- **Styling verandert** op basis van `:valid` en `:invalid` statussen
+- **Formulierinzending** wordt voorkomen totdat alle validaties slagen
+- **Focus verplaatst** automatisch naar het eerste ongeldige veld
+
+### Client-side versus server-side validatie
 
 ```mermaid
 graph LR
@@ -731,48 +813,158 @@ graph LR
     A -.-> I[Both Required]
     E -.-> I
 ```
-  
-**Waarom je beide lagen nodig hebt:**  
-- **Client-side validatie**: Biedt directe feedback en verbetert de gebruikerservaring  
-- **Server-side validatie**: Zorgt voor beveiliging en behandelt complexe bedrijfsregels  
-- **Gecombineerde aanpak**: Creëert robuuste, gebruiksvriendelijke en veilige applicaties  
-- **Progressieve verbetering**: Werkt zelfs als JavaScript is uitgeschakeld  
 
-> 🛡️ **Beveiligingsherinnering**: Vertrouw nooit alleen op client-side validatie! Kwaadwillende gebruikers kunnen client-side controles omzeilen, dus server-side validatie is essentieel voor beveiliging en gegevensintegriteit.  
+**Waarom je beide lagen nodig hebt:**
+- **Client-side validatie**: Biedt directe feedback en verbetert de gebruikerservaring
+- **Server-side validatie**: Zorgt voor beveiliging en behandelt complexe bedrijfsregels
+- **Gecombineerde aanpak**: Creëert robuuste, gebruiksvriendelijke en veilige applicaties
+- **Progressieve verbetering**: Werkt zelfs wanneer JavaScript is uitgeschakeld
+
+> 🛡️ **Beveiligingsherinnering**: Vertrouw nooit alleen op client-side validatie! Kwaadwillende gebruikers kunnen client-side controles omzeilen, dus server-side validatie is essentieel voor beveiliging en gegevensintegriteit.
+
+### ⚡ **Wat je in de komende 5 minuten kunt doen**
+- [ ] Test je formulier met ongeldige gegevens om validatiemeldingen te zien
+- [ ] Probeer het formulier in te dienen met JavaScript uitgeschakeld om HTML5-validatie te zien
+- [ ] Open browser DevTools en inspecteer de formuliergegevens die naar de server worden verzonden
+- [ ] Experimenteer met verschillende invoertypen om veranderingen in mobiele toetsenborden te zien
+
+### 🎯 **Wat je in dit uur kunt bereiken**
+- [ ] Voltooi de quiz na de les en begrijp concepten voor formulierverwerking
+- [ ] Implementeer de uitgebreide validatie-uitdaging met realtime feedback
+- [ ] Voeg CSS-styling toe om professionele formulieren te maken
+- [ ] Maak foutafhandeling voor dubbele gebruikersnamen en serverfouten
+- [ ] Voeg velden voor wachtwoordbevestiging toe met overeenkomende validatie
+
+### 📅 **Je weeklange reis naar meesterschap in formulieren**
+- [ ] Voltooi de volledige bankapp met geavanceerde formulierfuncties
+- [ ] Implementeer bestandsuploadmogelijkheden voor profielfoto's of documenten
+- [ ] Voeg meerstapsformulieren toe met voortgangsindicatoren en statusbeheer
+- [ ] Maak dynamische formulieren die zich aanpassen op basis van gebruikersselecties
+- [ ] Implementeer formulierautosave en herstel voor een betere gebruikerservaring
+- [ ] Voeg geavanceerde validatie toe zoals e-mailverificatie en telefoonnummerformattering
+
+### 🌟 **Je maandlange meesterschap in frontend-ontwikkeling**
+- [ ] Bouw complexe formulierapplicaties met voorwaardelijke logica en workflows
+- [ ] Leer formulierbibliotheken en frameworks voor snelle ontwikkeling
+- [ ] Beheers toegankelijkheidsrichtlijnen en inclusieve ontwerpprincipes
+- [ ] Implementeer internationalisatie en lokalisatie voor wereldwijde formulieren
+- [ ] Maak herbruikbare formuliercomponentbibliotheken en ontwerpsystemen
+- [ ] Draag bij aan open source-formulierprojecten en deel best practices
+
+## 🎯 Je tijdlijn voor meesterschap in formulierontwikkeling
+
+```mermaid
+timeline
+    title Form Development & User Experience Learning Progression
+    
+    section HTML Foundation (15 minutes)
+        Semantic Forms: Form elements
+                      : Input types
+                      : Labels and accessibility
+                      : Progressive enhancement
+        
+    section JavaScript Integration (25 minutes)
+        Event Handling: Form submission
+                      : Data collection
+                      : AJAX communication
+                      : Async/await patterns
+        
+    section Validation Systems (35 minutes)
+        Multi-layer Security: HTML5 validation
+                            : Client-side logic
+                            : Server-side verification
+                            : Error handling
+        
+    section User Experience (45 minutes)
+        Interface Polish: Loading states
+                        : Success messaging
+                        : Error recovery
+                        : Accessibility features
+        
+    section Advanced Patterns (1 week)
+        Professional Forms: Dynamic validation
+                          : Multi-step workflows
+                          : File uploads
+                          : Real-time feedback
+        
+    section Enterprise Skills (1 month)
+        Production Applications: Form libraries
+                               : Testing strategies
+                               : Performance optimization
+                               : Security best practices
+```
+
+### 🛠️ Samenvatting van je toolkit voor formulierontwikkeling
+
+Na het voltooien van deze les heb je nu beheerst:
+- **HTML5-formulieren**: Semantische structuur, invoertypen en toegankelijkheidsfuncties
+- **JavaScript-formulierverwerking**: Eventbeheer, gegevensverzameling en AJAX-communicatie
+- **Validatiearchitectuur**: Validatie met meerdere lagen voor beveiliging en gebruikerservaring
+- **Asynchrone programmering**: Moderne Fetch API en async/await-patronen
+- **Foutbeheer**: Uitgebreide foutafhandeling en gebruikersfeedbacksystemen
+- **Gebruikerservaringontwerp**: Laadstatussen, succesmeldingen en foutherstel
+- **Progressieve verbetering**: Formulieren die werken op alle browsers en mogelijkheden
+
+**Toepassingen in de echte wereld**: Je vaardigheden in formulierontwikkeling zijn direct toepasbaar op:
+- **E-commerce applicaties**: Afrekenprocessen, accountregistratie en betalingsformulieren
+- **Enterprise software**: Gegevensinvoersystemen, rapportageinterfaces en workflowapplicaties
+- **Contentbeheer**: Publicatieplatforms, door gebruikers gegenereerde inhoud en administratieve interfaces
+- **Financiële applicaties**: Bankinterfaces, investeringsplatforms en transactiesystemen
+- **Gezondheidszorgsystemen**: Patiëntenportalen, afsprakenplanning en medische dossierformulieren
+- **Educatieve platforms**: Cursusregistratie, beoordelingsinstrumenten en leerbeheer
+
+**Verworven professionele vaardigheden**: Je kunt nu:
+- **Ontwerpen** van toegankelijke formulieren die werken voor alle gebruikers, inclusief mensen met een beperking
+- **Implementeren** van veilige formuliervalidatie die gegevenscorruptie en beveiligingsproblemen voorkomt
+- **Creëren** van responsieve gebruikersinterfaces die duidelijke feedback en begeleiding bieden
+- **Debuggen** van complexe formulierinteracties met behulp van browserontwikkelaarstools en netwerkanalyse
+- **Optimaliseren** van formulierprestaties door efficiënte gegevensverwerking en validatiestrategieën
+
+**Beheerde frontend-ontwikkelingsconcepten**:
+- **Event-Driven Architectuur**: Gebruikersinteractiebeheer en reactiesystemen
+- **Asynchrone programmering**: Niet-blokkerende servercommunicatie en foutafhandeling
+- **Gegevensvalidatie**: Client-side en server-side beveiligings- en integriteitscontroles
+- **Gebruikerservaringontwerp**: Intuïtieve interfaces die gebruikers naar succes leiden
+- **Toegankelijkheidsengineering**: Inclusief ontwerp dat werkt voor diverse gebruikersbehoeften
+
+**Volgende niveau**: Je bent klaar om geavanceerde formulierbibliotheken te verkennen, complexe validatieregels te implementeren of enterprise-grade gegevensverzamelsystemen te bouwen!
+
+🌟 **Prestatie ontgrendeld**: Je hebt een compleet systeem voor formulierverwerking gebouwd met professionele validatie, foutafhandeling en gebruikerservaringspatronen!
 
 ---
 
+
+
 ---
 
-## GitHub Copilot Agent Challenge 🚀  
+## GitHub Copilot Agent Challenge 🚀
 
-Gebruik de Agent-modus om de volgende uitdaging te voltooien:  
+Gebruik de Agent-modus om de volgende uitdaging te voltooien:
 
-**Beschrijving:** Verbeter het registratieformulier met uitgebreide client-side validatie en gebruikersfeedback. Deze uitdaging helpt je om formuliervalidatie, foutafhandeling en het verbeteren van de gebruikerservaring met interactieve feedback te oefenen.  
+**Beschrijving:** Verbeter het registratieformulier met uitgebreide client-side validatie en gebruikersfeedback. Deze uitdaging helpt je om formuliervalidatie, foutafhandeling en het verbeteren van de gebruikerservaring met interactieve feedback te oefenen.
+**Prompt:** Maak een compleet systeem voor formuliervalidatie voor het registratieformulier dat het volgende bevat: 1) Real-time validatiefeedback voor elk veld terwijl de gebruiker typt, 2) Aangepaste validatieberichten die onder elk invoerveld verschijnen, 3) Een wachtwoordbevestigingsveld met validatie voor overeenkomende wachtwoorden, 4) Visuele indicatoren (zoals groene vinkjes voor geldige velden en rode waarschuwingen voor ongeldige velden), 5) Een verzendknop die alleen wordt ingeschakeld wanneer alle validaties slagen. Gebruik HTML5-validatieattributen, CSS voor het stylen van de validatiestatussen en JavaScript voor het interactieve gedrag.
 
-**Opdracht:** Maak een compleet formuliervalidatiesysteem voor het registratieformulier dat het volgende bevat: 1) Real-time validatiefeedback voor elk veld terwijl de gebruiker typt, 2) Aangepaste validatiemeldingen die onder elk invoerveld verschijnen, 3) Een wachtwoordbevestigingsveld met overeenkomende validatie, 4) Visuele indicatoren (zoals groene vinkjes voor geldige velden en rode waarschuwingen voor ongeldige velden), 5) Een verzendknop die alleen wordt ingeschakeld wanneer alle validaties slagen. Gebruik HTML5-validatieattributen, CSS voor het stylen van de validatiestatussen en JavaScript voor het interactieve gedrag.  
+Meer informatie over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) vind je hier.
 
-Lees meer over [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hier.  
+## 🚀 Uitdaging
 
-## 🚀 Uitdaging  
+Toon een foutmelding in de HTML als de gebruiker al bestaat.
 
-Toon een foutmelding in de HTML als de gebruiker al bestaat.  
+Hier is een voorbeeld van hoe de uiteindelijke inlogpagina eruit kan zien na wat styling:
 
-Hier is een voorbeeld van hoe de uiteindelijke inlogpagina eruit kan zien na wat styling:  
+![Screenshot van de inlogpagina na het toevoegen van CSS-stijlen](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.nl.png)
 
-![Screenshot van de inlogpagina na het toevoegen van CSS-stijlen](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.nl.png)  
+## Quiz na de les
 
-## Quiz na de les  
+[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/44)
 
-[Quiz na de les](https://ff-quizzes.netlify.app/web/quiz/44)  
+## Review & Zelfstudie
 
-## Review & Zelfstudie  
+Ontwikkelaars zijn erg creatief geworden met hun inspanningen voor het bouwen van formulieren, vooral wat betreft validatiestrategieën. Leer meer over verschillende formulierstromen door te kijken op [CodePen](https://codepen.com); kun je interessante en inspirerende formulieren vinden?
 
-Ontwikkelaars zijn erg creatief geworden in hun inspanningen om formulieren te bouwen, vooral wat betreft validatiestrategieën. Leer over verschillende formulierstromen door te kijken op [CodePen](https://codepen.com); kun je enkele interessante en inspirerende formulieren vinden?  
+## Opdracht
 
-## Opdracht  
-
-[Style je bankapp](assignment.md)  
+[Style je bankapp](assignment.md)
 
 ---
 

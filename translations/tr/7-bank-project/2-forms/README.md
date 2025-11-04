@@ -1,29 +1,76 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-23T00:03:20+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2025-11-04T00:59:56+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "tr"
 }
 -->
-# Bankacılık Uygulaması Yapımı Bölüm 2: Giriş ve Kayıt Formu Oluşturma
+# Bankacılık Uygulaması Geliştirme Bölüm 2: Giriş ve Kayıt Formu Oluşturma
+
+```mermaid
+journey
+    title Your Form Development Journey
+    section HTML Foundation
+      Understand form elements: 3: Student
+      Learn input types: 4: Student
+      Master accessibility: 4: Student
+    section JavaScript Integration
+      Handle form submission: 4: Student
+      Implement AJAX communication: 5: Student
+      Process server responses: 5: Student
+    section Validation Systems
+      Create multi-layer validation: 5: Student
+      Enhance user experience: 5: Student
+      Ensure data integrity: 5: Student
+```
 
 ## Ders Öncesi Test
 
-[Ders öncesi testi](https://ff-quizzes.netlify.app/web/quiz/43)
+[Ders öncesi test](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Hiç çevrimiçi bir form doldurup e-posta formatınızın reddedildiğini gördünüz mü? Ya da gönder düğmesine tıkladığınızda tüm bilgilerinizin kaybolduğunu? Hepimiz bu tür sinir bozucu deneyimlerle karşılaştık.
+Hiç çevrimiçi bir form doldurup e-posta formatınızın reddedildiğini gördünüz mü? Ya da gönder düğmesine bastığınızda tüm bilgilerinizin kaybolduğunu? Hepimiz bu tür sinir bozucu deneyimlerle karşılaştık.
 
-Formlar, kullanıcılarınız ile uygulamanızın işlevselliği arasındaki köprüdür. Hava trafik kontrolörlerinin uçakları güvenli bir şekilde yönlendirmek için kullandıkları dikkatli protokoller gibi, iyi tasarlanmış formlar net geri bildirim sağlar ve pahalı hataları önler. Kötü formlar ise kullanıcıları yoğun bir havaalanındaki yanlış iletişimden daha hızlı uzaklaştırabilir.
+Formlar, kullanıcılarınız ile uygulamanızın işlevselliği arasındaki köprüdür. Hava trafik kontrolörlerinin uçakları güvenli bir şekilde yönlendirmek için kullandıkları dikkatli protokoller gibi, iyi tasarlanmış formlar net geri bildirim sağlar ve maliyetli hataları önler. Öte yandan, kötü tasarlanmış formlar, kullanıcıları yoğun bir havaalanındaki yanlış iletişimden daha hızlı bir şekilde uzaklaştırabilir.
 
-Bu derste, statik bankacılık uygulamanızı interaktif bir uygulamaya dönüştüreceğiz. Kullanıcı girdisini doğrulayan, sunucularla iletişim kuran ve yardımcı geri bildirim sağlayan formlar oluşturmayı öğreneceksiniz. Bunu, kullanıcıların uygulamanızın özelliklerini gezinmesine olanak tanıyan bir kontrol arayüzü oluşturmak olarak düşünebilirsiniz.
+Bu derste, statik bankacılık uygulamanızı interaktif bir uygulamaya dönüştüreceğiz. Kullanıcı girdilerini doğrulayan, sunucularla iletişim kuran ve yardımcı geri bildirim sağlayan formlar oluşturmayı öğreneceksiniz. Bunu, kullanıcıların uygulamanızın özelliklerini gezinmesine olanak tanıyan kontrol arayüzünü oluşturmak olarak düşünebilirsiniz.
 
-Sonunda, kullanıcıları hayal kırıklığına değil başarıya yönlendiren doğrulama ile eksiksiz bir giriş ve kayıt sistemine sahip olacaksınız.
+Sonunda, kullanıcıları hayal kırıklığına uğratmak yerine başarıya yönlendiren doğrulama ile tam bir giriş ve kayıt sistemine sahip olacaksınız.
+
+```mermaid
+mindmap
+  root((Form Development))
+    HTML Foundation
+      Semantic Elements
+      Input Types
+      Accessibility
+      Label Association
+    User Experience
+      Validation Feedback
+      Error Prevention
+      Loading States
+      Success Messaging
+    JavaScript Integration
+      Event Handling
+      AJAX Communication
+      Data Processing
+      Error Management
+    Validation Layers
+      HTML5 Validation
+      Client-side Logic
+      Server-side Security
+      Progressive Enhancement
+    Modern Patterns
+      Fetch API
+      Async/Await
+      Form Data API
+      Promise Handling
+```
 
 ## Ön Koşullar
 
-Formlar oluşturmaya başlamadan önce her şeyin doğru bir şekilde ayarlandığından emin olalım. Bu ders, bir önceki derste bıraktığımız yerden devam ediyor, bu yüzden ileriye atladıysanız, önce temel bilgileri çalışmak isteyebilirsiniz.
+Formlar oluşturmaya başlamadan önce, her şeyin doğru bir şekilde ayarlandığından emin olalım. Bu ders, bir önceki derste bıraktığımız yerden devam ediyor, bu yüzden eğer atladıysanız, önce temel bilgileri çalışmak isteyebilirsiniz.
 
 ### Gerekli Kurulum
 
@@ -40,7 +87,7 @@ Formlar oluşturmaya başlamadan önce her şeyin doğru bir şekilde ayarlandı
 **Geliştirme ortamınız şunları içerecek:**
 - **Ön uç sunucusu**: Bankacılık uygulamanızı sunar (genellikle `3000` portu)
 - **Arka uç API sunucusu**: Veri depolama ve alma işlemlerini yönetir (`5000` portu)
-- **Her iki sunucu** çakışma olmadan aynı anda çalışabilir
+- **Her iki sunucu** aynı anda çakışma olmadan çalışabilir
 
 **API bağlantınızı test etme:**
 ```bash
@@ -54,9 +101,9 @@ curl http://localhost:5000/api
 
 ## HTML Formlarını ve Kontrollerini Anlama
 
-HTML formları, kullanıcıların web uygulamanızla iletişim kurma yoludur. Bunları, 19. yüzyılda uzak yerleri birbirine bağlayan telgraf sistemi gibi düşünebilirsiniz – kullanıcı niyeti ile uygulama yanıtı arasında bir iletişim protokolüdür. Düşünceli bir şekilde tasarlandıklarında, hataları yakalar, giriş formatlamasını yönlendirir ve yardımcı öneriler sunarlar.
+HTML formları, kullanıcıların web uygulamanızla iletişim kurma yoludur. Bunları, 19. yüzyılda uzak yerleri birbirine bağlayan telgraf sistemi gibi düşünebilirsiniz – kullanıcı niyeti ile uygulama yanıtı arasındaki iletişim protokolüdür. Düşünceli bir şekilde tasarlandığında, hataları yakalar, giriş formatını yönlendirir ve yardımcı öneriler sağlar.
 
-Modern formlar, temel metin girişlerinden çok daha sofistike. HTML5, e-posta doğrulama, sayı formatlama ve tarih seçimi gibi işlemleri otomatik olarak gerçekleştiren özel giriş türlerini tanıttı. Bu iyileştirmeler hem erişilebilirlik hem de mobil kullanıcı deneyiminden fayda sağlar.
+Modern formlar, temel metin girişlerinden çok daha sofistike hale geldi. HTML5, e-posta doğrulama, sayı formatlama ve tarih seçimi gibi işlemleri otomatik olarak gerçekleştiren özel giriş türleri tanıttı. Bu iyileştirmeler hem erişilebilirlik hem de mobil kullanıcı deneyimlerine fayda sağlar.
 
 ### Temel Form Elemanları
 
@@ -72,11 +119,11 @@ Modern formlar, temel metin girişlerinden çok daha sofistike. HTML5, e-posta d
 </form>
 ```
 
-**Bu kodun yaptığı şeyler:**
-- **Bir form konteyneri oluşturur** ve benzersiz bir kimlik atar
-- **Veri gönderimi için HTTP yöntemini belirtir**
-- **Erişilebilirlik için etiketleri girişlerle ilişkilendirir**
-- **Formu işlemek için bir gönder düğmesi tanımlar**
+**Bu kodun yaptığı şey:**
+- **Bir form konteyneri** oluşturur ve benzersiz bir kimlik atar
+- **Veri gönderimi için** HTTP yöntemini belirtir
+- **Etiketleri** erişilebilirlik için girişlerle ilişkilendirir
+- **Formu işlemek için** bir gönder düğmesi tanımlar
 
 ### Modern Giriş Türleri ve Özellikleri
 
@@ -99,16 +146,16 @@ Modern formlar, temel metin girişlerinden çok daha sofistike. HTML5, e-posta d
 <button type="button">Custom Action</button> <!-- No default behavior -->
 ```
 
-**Her düğme türünün yaptığı şeyler:**
+**Her düğme türünün yaptığı şey:**
 - **Gönder düğmeleri**: Form gönderimini tetikler ve verileri belirtilen uç noktaya gönderir
 - **Sıfırla düğmeleri**: Tüm form alanlarını başlangıç durumuna geri döndürür
 - **Normal düğmeler**: Varsayılan bir davranış sağlamaz, işlevsellik için özel JavaScript gerektirir
 
-> ⚠️ **Önemli Not**: `<input>` öğesi kendini kapatan bir etikettir ve kapanış etiketi gerektirmez. Modern en iyi uygulama, `<input>` etiketini eğik çizgi olmadan yazmaktır.
+> ⚠️ **Önemli Not**: `<input>` öğesi kendini kapatır ve kapanış etiketi gerektirmez. Modern en iyi uygulama, `<input>` yazmaktır.
 
 ### Giriş Formunuzu Oluşturma
 
-Şimdi modern HTML form uygulamalarını gösteren pratik bir giriş formu oluşturalım. Temel bir yapı ile başlayacağız ve bunu erişilebilirlik özellikleri ve doğrulama ile geliştireceğiz.
+Şimdi modern HTML form uygulamalarını gösteren pratik bir giriş formu oluşturalım. Temel bir yapı ile başlayacağız ve erişilebilirlik özellikleri ve doğrulama ile kademeli olarak geliştireceğiz.
 
 ```html
 <template id="login">
@@ -153,16 +200,16 @@ graph TD
 
 **Doğru etiketlerin sağladıkları:**
 - **Ekran okuyucuların** form alanlarını net bir şekilde duyurmasını sağlar
-- **Tıklanabilir alanı genişletir** (etikete tıklamak girişi odaklar)
+- **Tıklanabilir alanı** genişletir (etiketi tıklamak girişi odaklar)
 - **Mobil kullanılabilirliği** daha büyük dokunmatik hedeflerle iyileştirir
-- **Anlamlı hata mesajlarıyla** form doğrulamasını destekler
-- **SEO'yu iyileştirir** form öğelerine semantik anlam kazandırır
+- **Form doğrulamasını** anlamlı hata mesajlarıyla destekler
+- **SEO'yu** form öğelerine semantik anlam sağlayarak geliştirir
 
-> 🎯 **Erişilebilirlik Hedefi**: Her form girişiyle ilişkili bir etikete sahip olmalıdır. Bu basit uygulama, formlarınızı engelli kullanıcılar dahil herkes için kullanılabilir hale getirir ve tüm kullanıcılar için deneyimi iyileştirir.
+> 🎯 **Erişilebilirlik Hedefi**: Her form girişi bir etiketle ilişkilendirilmelidir. Bu basit uygulama, formlarınızı engelli kullanıcılar dahil herkes için kullanılabilir hale getirir ve tüm kullanıcılar için deneyimi iyileştirir.
 
 ### Kayıt Formu Oluşturma
 
-Kayıt formu, eksiksiz bir kullanıcı hesabı oluşturmak için daha ayrıntılı bilgi gerektirir. Bunu modern HTML5 özellikleri ve geliştirilmiş erişilebilirlik ile oluşturalım.
+Kayıt formu, eksiksiz bir kullanıcı hesabı oluşturmak için daha ayrıntılı bilgi gerektirir. Modern HTML5 özellikleri ve geliştirilmiş erişilebilirlik ile bunu oluşturalım.
 
 ```html
 <hr/>
@@ -198,34 +245,50 @@ Kayıt formu, eksiksiz bir kullanıcı hesabı oluşturmak için daha ayrıntıl
 
 **Yukarıda şunları yaptık:**
 - **Her alanı** daha iyi stil ve düzen için konteyner div'lerde organize ettik
-- **Tarayıcı otomatik doldurma desteği için** uygun `autocomplete` özelliklerini ekledik
+- **Tarayıcı otomatik doldurma desteği için** uygun `autocomplete` özellikleri ekledik
 - **Kullanıcı girişini yönlendirmek için** yardımcı placeholder metni ekledik
-- **Mantıklı varsayılanlar ayarladık** `value` özelliğini kullanarak
-- **Doğrulama özellikleri ekledik** `required`, `maxlength` ve `min` gibi
-- **Bakiye alanı için** ondalık desteğiyle `type="number"` kullandık
+- **Mantıklı varsayılanlar** ayarlamak için `value` özelliğini kullandık
+- **Doğrulama özellikleri** ekledik (`required`, `maxlength`, `min` gibi)
+- **Balance alanı için** ondalık destekle `type="number"` kullandık
 
 ### Giriş Türlerini ve Davranışlarını Keşfetme
 
 **Modern giriş türleri geliştirilmiş işlevsellik sağlar:**
 
 | Özellik | Faydası | Örnek |
-|---------|---------|-------|
-| `type="number"` | Mobilde sayısal tuş takımı | Daha kolay bakiye girişi |
+|---------|--------|-------|
+| `type="number"` | Mobilde sayısal klavye | Daha kolay bakiye girişi |
 | `step="0.01"` | Ondalık hassasiyet kontrolü | Para biriminde kuruşlara izin verir |
 | `autocomplete` | Tarayıcı otomatik doldurma | Daha hızlı form doldurma |
 | `placeholder` | Bağlamsal ipuçları | Kullanıcı beklentilerini yönlendirir |
 
-> 🎯 **Erişilebilirlik Mücadelesi**: Formları yalnızca klavyenizi kullanarak gezinmeyi deneyin! Alanlar arasında geçiş yapmak için `Tab` tuşunu, kutuları işaretlemek için `Space` tuşunu ve göndermek için `Enter` tuşunu kullanın. Bu deneyim, ekran okuyucu kullanıcılarının formlarınızla nasıl etkileşimde bulunduğunu anlamanıza yardımcı olur.
+> 🎯 **Erişilebilirlik Mücadelesi**: Formları yalnızca klavyenizi kullanarak gezmeyi deneyin! Alanlar arasında geçiş yapmak için `Tab`, kutuları işaretlemek için `Space` ve göndermek için `Enter` kullanın. Bu deneyim, ekran okuyucu kullanıcılarının formlarınızla nasıl etkileşimde bulunduğunu anlamanıza yardımcı olur.
+
+### 🔄 **Pedagojik Kontrol**
+**Form Temeli Anlayışı**: JavaScript uygulamadan önce şunları anladığınızdan emin olun:
+- ✅ Semantik HTML'nin erişilebilir form yapıları oluşturduğu
+- ✅ Giriş türlerinin mobil klavyeler ve doğrulama için neden önemli olduğu
+- ✅ Etiketler ile form kontrolleri arasındaki ilişki
+- ✅ Form özelliklerinin tarayıcı varsayılan davranışını nasıl etkilediği
+
+**Hızlı Kendini Test Etme**: JavaScript olmadan bir form gönderirseniz ne olur?
+*Cevap: Tarayıcı varsayılan gönderimi gerçekleştirir, genellikle action URL'sine yönlendirir*
+
+**HTML5 Form Faydaları**: Modern formlar şunları sağlar:
+- **Yerleşik Doğrulama**: Otomatik e-posta ve sayı format kontrolü
+- **Mobil Optimizasyon**: Farklı giriş türleri için uygun klavyeler
+- **Erişilebilirlik**: Ekran okuyucu desteği ve klavye navigasyonu
+- **Kademeli Geliştirme**: JavaScript devre dışı olduğunda bile çalışır
 
 ## Form Gönderim Yöntemlerini Anlama
 
-Birisi formunuzu doldurup gönder düğmesine bastığında, bu veriler bir yere gitmelidir – genellikle bunu kaydedebilecek bir sunucuya. Bunun gerçekleşmesi için birkaç farklı yol vardır ve hangisini kullanacağınızı bilmek, ileride bazı baş ağrılarından kurtulmanızı sağlayabilir.
+Birisi formunuzu doldurup gönder düğmesine bastığında, bu verilerin bir yere gitmesi gerekir – genellikle bunu kaydedebilecek bir sunucuya. Bunun gerçekleşmesi için birkaç farklı yol vardır ve hangisini kullanacağınızı bilmek, ileride bazı baş ağrılarından kurtulmanızı sağlayabilir.
 
-Hadi birisi gönder düğmesine tıkladığında gerçekte ne olduğunu inceleyelim.
+Birisi gönder düğmesine tıkladığında gerçekte ne olduğunu inceleyelim.
 
 ### Varsayılan Form Davranışı
 
-Öncelikle, temel form gönderimiyle neler olduğunu gözlemleyelim:
+Öncelikle, temel form gönderimiyle ne olduğunu gözlemleyelim:
 
 **Mevcut formlarınızı test edin:**
 1. Formunuzdaki *Kayıt Ol* düğmesine tıklayın
@@ -254,13 +317,13 @@ graph TD
 **Farklılıkları anlamak:**
 
 | Yöntem | Kullanım Durumu | Veri Konumu | Güvenlik Seviyesi | Boyut Sınırı |
-|--------|-----------------|-------------|-------------------|--------------|
+|--------|----------------|-------------|-------------------|-------------|
 | `GET` | Arama sorguları, filtreler | URL parametreleri | Düşük (görünür) | ~2000 karakter |
 | `POST` | Kullanıcı hesapları, hassas veriler | İstek gövdesi | Daha yüksek (gizli) | Pratikte sınır yok |
 
 **Temel farklılıkları anlamak:**
-- **GET**: Form verilerini URL'ye sorgu parametreleri olarak ekler (arama işlemleri için uygun)
-- **POST**: Verileri istek gövdesine dahil eder (hassas bilgiler için gerekli)
+- **GET**: Form verilerini URL'ye sorgu parametreleri olarak ekler (arama işlemleri için uygundur)
+- **POST**: Verileri istek gövdesine dahil eder (hassas bilgiler için gereklidir)
 - **GET sınırlamaları**: Boyut kısıtlamaları, görünür veriler, kalıcı tarayıcı geçmişi
 - **POST avantajları**: Büyük veri kapasitesi, gizlilik koruması, dosya yükleme desteği
 
@@ -268,14 +331,14 @@ graph TD
 
 ### Form Gönderimini Yapılandırma
 
-Kayıt formunuzu, POST yöntemi kullanarak arka uç API ile doğru şekilde iletişim kuracak şekilde yapılandıralım:
+Kayıt formunuzu POST yöntemi kullanarak arka uç API ile doğru şekilde iletişim kuracak şekilde yapılandıralım:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" 
       method="POST" novalidate>
 ```
 
-**Bu yapılandırmanın yaptığı şeyler:**
+**Bu yapılandırmanın yaptığı şey:**
 - **Form gönderimini** API uç noktasına yönlendirir
 - **Güvenli veri iletimi için** POST yöntemini kullanır
 - **Doğrulamayı** tarayıcı varsayılanları yerine JavaScript ile yönetmek için `novalidate` ekler
@@ -283,18 +346,18 @@ Kayıt formunuzu, POST yöntemi kullanarak arka uç API ile doğru şekilde ilet
 ### Form Gönderimini Test Etme
 
 **Formunuzu test etmek için şu adımları izleyin:**
-1. **Kayıt formunu** bilgilerinizle doldurun
+1. **Kayıt formunu** kendi bilgilerinizle doldurun
 2. **"Hesap Oluştur"** düğmesine tıklayın
 3. **Sunucu yanıtını** tarayıcınızda gözlemleyin
 
 ![localhost:5000/api/accounts adresinde bir tarayıcı penceresi, kullanıcı verileri içeren bir JSON dizesini gösteriyor](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.tr.png)
 
 **Görmeniz gerekenler:**
-- **Tarayıcı** API uç nokta URL'sine yönlendirilir
-- **JSON yanıtı** yeni oluşturulan hesap verilerinizi içerir
-- **Sunucu onayı**, hesabın başarıyla oluşturulduğunu gösterir
+- **Tarayıcı** API uç noktasının URL'sine yönlendirme yapar
+- **JSON yanıtı**, yeni oluşturulan hesap verilerinizi içerir
+- **Sunucu onayı**, hesabın başarıyla oluşturulduğunu belirtir
 
-> 🧪 **Deney Zamanı**: Aynı kullanıcı adıyla tekrar kayıt olmayı deneyin. Ne tür bir yanıt alıyorsunuz? Bu, sunucunun yinelenen verileri ve hata koşullarını nasıl ele aldığını anlamanıza yardımcı olur.
+> 🧪 **Deney Zamanı**: Aynı kullanıcı adıyla tekrar kayıt olmayı deneyin. Hangi yanıtı alıyorsunuz? Bu, sunucunun yinelenen verileri ve hata koşullarını nasıl ele aldığını anlamanıza yardımcı olur.
 
 ### JSON Yanıtlarını Anlama
 
@@ -313,15 +376,15 @@ Kayıt formunuzu, POST yöntemi kullanarak arka uç API ile doğru şekilde ilet
 - **Belirttiğiniz verilerle** yeni bir hesap oluşturur
 - **Gelecekteki referans için** benzersiz bir kimlik atar
 - **Tüm hesap bilgilerini** doğrulama için geri döndürür
-- **Başarılı** veritabanı depolamasını belirtir
+- **Veritabanı depolamasının** başarılı olduğunu belirtir
 
-## Modern Form İşleme ve JavaScript
+## Modern Form İşleme ile JavaScript
 
-Geleneksel form gönderimleri, erken uzay görevlerinin yönlendirme düzeltmeleri için tam sistem sıfırlamaları gerektirdiği gibi, tam sayfa yenilemelere neden olur. Bu yaklaşım kullanıcı deneyimini kesintiye uğratır ve uygulama durumunu kaybeder.
+Geleneksel form gönderimleri, erken uzay görevlerinin yön düzeltmeleri için tam sistem sıfırlamaları gerektirdiği gibi, tam sayfa yenilemelerine neden olur. Bu yaklaşım kullanıcı deneyimini kesintiye uğratır ve uygulama durumunu kaybeder.
 
-JavaScript form işleme, modern uzay araçlarının kullandığı sürekli yönlendirme sistemleri gibi çalışır – kullanıcı konumunu korurken gerçek zamanlı ayarlamalar yapar. Form gönderimlerini durdurabilir, anında geri bildirim sağlayabilir, hataları zarif bir şekilde ele alabilir ve kullanıcı uygulama içinde kalırken arayüzü sunucu yanıtlarına göre güncelleyebiliriz.
+JavaScript form işleme, modern uzay araçlarının sürekli rehberlik sistemleri gibi çalışır – kullanıcı konumunu korurken gerçek zamanlı ayarlamalar yapar. Form gönderimlerini durdurabilir, anında geri bildirim sağlayabilir, hataları zarif bir şekilde ele alabilir ve kullanıcıyı uygulama içinde tutarak sunucu yanıtlarına göre arayüzü güncelleyebiliriz.
 
-### Sayfa Yenilemelerinden Neden Kaçınılmalı?
+### Sayfa Yenilemelerinden Kaçınmanın Önemi
 
 ```mermaid
 sequenceDiagram
@@ -342,19 +405,19 @@ sequenceDiagram
 - **Anında geri bildirim ve yükleme göstergeleri sağlar**
 - **Dinamik hata işleme ve doğrulama sağlar**
 - **Sorunsuz, uygulama benzeri kullanıcı deneyimleri oluşturur**
-- **Sunucu yanıtlarına dayalı koşullu mantığa izin verir**
+- **Sunucu yanıtlarına dayalı koşullu mantık sağlar**
 
-### Gelenekselden Moderne Geçiş
+### Gelenekselden Moderne Formlara Geçiş
 
 **Geleneksel yaklaşımın zorlukları:**
 - **Kullanıcıları** uygulamanızdan uzaklaştırır
 - **Mevcut uygulama durumunu ve bağlamını kaybeder**
-- **Basit işlemler için tam sayfa yenileme gerektirir**
+- **Basit işlemler için tam sayfa yenilemeler gerektirir**
 - **Kullanıcı geri bildirimi üzerinde sınırlı kontrol sağlar**
 
 **Modern JavaScript yaklaşımının avantajları:**
-- **Kullanıcıları** uygulamanız içinde tutar
-- **Tüm uygulama durumunu ve verileri korur**
+- **Kullanıcıları** uygulamanızda tutar
+- **Tüm uygulama durumunu ve verilerini korur**
 - **Gerçek zamanlı doğrulama ve geri bildirim sağlar**
 - **Kademeli geliştirme ve erişilebilirliği destekler**
 
@@ -391,17 +454,16 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 
 **Burada olanları açıklamak:**
-- **Varsayılan form gönderimini** `event.preventDefault()` kullanarak durdurur
-- **Form öğesini** modern DOM seçimiyle alır
+- **Varsayılan form gönderimini** `event.preventDefault()` ile durdurur
+- **Form öğesini** modern DOM seçimi ile alır
 - **Form verilerini** güçlü `FormData` API'si ile çıkarır
 - **FormData'yı** `Object.fromEntries()` ile düz bir nesneye dönüştürür
 - **Verileri** sunucu iletişimi için JSON formatına dönüştürür
 - **İşlenmiş verileri** hata ayıklama ve doğrulama için kaydeder
 
-### FormData API'yi Anlama
+### FormData API'sini Anlama
 
-**FormData API güçlü form işleme sağlar:**
-
+**FormData API
 ```javascript
 // Example of what FormData captures
 const formData = new FormData(registerForm);
@@ -416,10 +478,10 @@ const formData = new FormData(registerForm);
 ```
 
 **FormData API avantajları:**
-- **Kapsamlı toplama**: Tüm form öğelerini, metin, dosyalar ve karmaşık girişler dahil olmak üzere yakalar
-- **Tür farkındalığı**: Farklı giriş türlerini ek kodlama olmadan otomatik olarak işler
+- **Kapsamlı koleksiyon**: Metin, dosyalar ve karmaşık girdiler dahil tüm form öğelerini yakalar
+- **Tür farkındalığı**: Farklı giriş türlerini otomatik olarak özel kodlama gerektirmeden işler
 - **Verimlilik**: Tek bir API çağrısıyla manuel alan toplama işlemini ortadan kaldırır
-- **Uyarlanabilirlik**: Form yapısı geliştikçe işlevselliği korur
+- **Uyarlanabilirlik**: Form yapısı değiştikçe işlevselliği korur
 
 ### Sunucu İletişim Fonksiyonunu Oluşturma
 
@@ -450,7 +512,7 @@ async function createAccount(account) {
 }
 ```
 
-**Asenkron JavaScript'i anlama:**
+**Asenkron JavaScript'i Anlamak:**
 
 ```mermaid
 sequenceDiagram
@@ -466,11 +528,12 @@ sequenceDiagram
 ```
 
 **Bu modern uygulamanın sağladıkları:**
-- **Okunabilir asenkron kod için** `async/await` kullanır
-- **Hataları düzgün bir şekilde ele almak için** try/catch blokları içerir
-- **Verileri işlemeye başlamadan
-- **Sağlar** hata ayıklama için ayrıntılı hata mesajları
-- **Döndürür** başarı ve hata durumları için tutarlı veri yapısı
+- **Kullanır** `async/await` ile okunabilir asenkron kod
+- **Doğru hata yönetimi** için try/catch bloklarını içerir
+- **Yanıt durumunu kontrol eder** veriyi işlemeye başlamadan önce
+- **JSON iletişimi için uygun başlıklar ayarlar**
+- **Hata ayıklama için ayrıntılı hata mesajları sağlar**
+- **Başarı ve hata durumları için tutarlı veri yapısı döndürür**
 
 ### Modern Fetch API'nin Gücü
 
@@ -483,17 +546,17 @@ sequenceDiagram
 | Yanıt işleme | Esnek veri ayrıştırma | `.json()`, `.text()`, `.blob()` |
 | Hata yönetimi | Kapsamlı hata yakalama | Try/catch blokları |
 
-> 🎥 **Daha Fazla Öğrenin**: [Async/Await Eğitimi](https://youtube.com/watch?v=YwmlRkrxvkk) - Modern web geliştirme için asenkron JavaScript desenlerini anlama.
+> 🎥 **Daha Fazla Öğrenin**: [Async/Await Eğitimi](https://youtube.com/watch?v=YwmlRkrxvkk) - Modern web geliştirme için asenkron JavaScript desenlerini anlamak.
 
 **Sunucu iletişimi için temel kavramlar:**
-- **Asenkron fonksiyonlar**, sunucu yanıtlarını beklemek için yürütmeyi durdurmanıza olanak tanır
-- **Await anahtar kelimesi**, asenkron kodun senkron kod gibi okunmasını sağlar
-- **Fetch API**, modern, promise tabanlı HTTP istekleri sunar
-- **Hata yönetimi**, uygulamanızın ağ sorunlarına karşı zarif bir şekilde yanıt vermesini sağlar
+- **Asenkron fonksiyonlar** sunucu yanıtlarını beklemek için yürütmeyi durdurmanıza olanak tanır
+- **Await anahtar kelimesi** asenkron kodun senkron kod gibi okunmasını sağlar
+- **Fetch API** modern, promise tabanlı HTTP istekleri sağlar
+- **Hata yönetimi** uygulamanızın ağ sorunlarına karşı zarif bir şekilde yanıt vermesini sağlar
 
 ### Kayıt Fonksiyonunu Tamamlama
 
-Her şeyi bir araya getirerek tam, üretime hazır bir kayıt fonksiyonu oluşturalım:
+Her şeyi bir araya getirerek eksiksiz, üretime hazır bir kayıt fonksiyonu oluşturalım:
 
 ```javascript
 async function register() {
@@ -536,39 +599,59 @@ async function register() {
 ```
 
 **Bu geliştirilmiş uygulama şunları içerir:**
-- **Sağlar** form gönderimi sırasında görsel geri bildirim
-- **Devre dışı bırakır** gönder düğmesini, yinelenen gönderimleri önlemek için
-- **Yönetir** hem beklenen hem de beklenmeyen hataları zarif bir şekilde
-- **Gösterir** kullanıcı dostu başarı ve hata mesajları
-- **Sıfırlar** formu başarılı bir kayıt işleminden sonra
-- **Eski haline getirir** sonuç ne olursa olsun kullanıcı arayüzü durumunu
+- **Form gönderimi sırasında görsel geri bildirim sağlar**
+- **Tekrarlayan gönderimleri önlemek için gönder düğmesini devre dışı bırakır**
+- **Beklenen ve beklenmeyen hataları zarif bir şekilde yönetir**
+- **Kullanıcı dostu başarı ve hata mesajları gösterir**
+- **Başarılı kayıt işleminden sonra formu sıfırlar**
+- **Sonuç ne olursa olsun kullanıcı arayüzü durumunu geri yükler**
 
 ### Uygulamanızı Test Etme
 
 **Tarayıcı geliştirici araçlarını açın ve kayıt işlemini test edin:**
 
-1. **Açın** tarayıcı konsolunu (F12 → Konsol sekmesi)
+1. **Tarayıcı konsolunu açın** (F12 → Konsol sekmesi)
 2. **Kayıt formunu doldurun**
-3. **"Hesap Oluştur" butonuna tıklayın**
+3. **"Hesap Oluştur" düğmesine tıklayın**
 4. **Konsol mesajlarını ve kullanıcı geri bildirimlerini gözlemleyin**
 
 ![Tarayıcı konsolunda günlük mesajını gösteren ekran görüntüsü](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.tr.png)
 
 **Görmeniz gerekenler:**
-- **Yükleme durumu** gönder düğmesinde görünür
-- **Konsol günlükleri**, işlemle ilgili ayrıntılı bilgileri gösterir
-- **Başarı mesajı**, hesap oluşturma başarılı olduğunda görünür
-- **Form otomatik olarak sıfırlanır** başarılı bir gönderimden sonra
+- **Gönder düğmesinde** yükleme durumu görünür
+- **Konsol günlükleri** işlemle ilgili ayrıntılı bilgiler gösterir
+- **Başarı mesajı** hesap oluşturma başarılı olduğunda görünür
+- **Form** başarılı gönderimden sonra otomatik olarak sıfırlanır
 
-> 🔒 **Güvenlik Düşüncesi**: Şu anda, veriler HTTP üzerinden iletiliyor, bu da üretim için güvenli değil. Gerçek uygulamalarda, veri iletimini şifrelemek için her zaman HTTPS kullanın. [HTTPS güvenliği](https://en.wikipedia.org/wiki/HTTPS) hakkında daha fazla bilgi edinin ve kullanıcı verilerini korumanın neden önemli olduğunu öğrenin.
+> 🔒 **Güvenlik Düşüncesi**: Şu anda veriler üretim için güvenli olmayan HTTP üzerinden iletiliyor. Gerçek uygulamalarda, veri iletimini şifrelemek için her zaman HTTPS kullanın. [HTTPS güvenliği](https://en.wikipedia.org/wiki/HTTPS) hakkında daha fazla bilgi edinin ve kullanıcı verilerini korumanın neden önemli olduğunu öğrenin.
+
+### 🔄 **Pedagojik Kontrol**
+**Modern JavaScript Entegrasyonu**: Asenkron form işleme anlayışınızı doğrulayın:
+- ✅ `event.preventDefault()` varsayılan form davranışını nasıl değiştirir?
+- ✅ FormData API manuel alan toplamaya göre neden daha verimlidir?
+- ✅ Async/await desenleri kod okunabilirliğini nasıl artırır?
+- ✅ Hata yönetimi kullanıcı deneyiminde nasıl bir rol oynar?
+
+**Sistem Mimarisi**: Form işleme şunları gösterir:
+- **Olay Tabanlı Programlama**: Formlar, sayfa yenileme olmadan kullanıcı eylemlerine yanıt verir
+- **Asenkron İletişim**: Sunucu istekleri kullanıcı arayüzünü engellemez
+- **Hata Yönetimi**: Ağ istekleri başarısız olduğunda zarif bir şekilde bozulma
+- **Durum Yönetimi**: Kullanıcı arayüzü güncellemeleri sunucu yanıtlarını uygun şekilde yansıtır
+- **Aşamalı Geliştirme**: Temel işlevsellik çalışır, JavaScript bunu geliştirir
+
+**Profesyonel Desenler**: Şunları uyguladınız:
+- **Tek Sorumluluk**: Fonksiyonlar net ve odaklanmış amaçlara sahiptir
+- **Hata Sınırları**: Try/catch blokları uygulama çökmesini önler
+- **Kullanıcı Geri Bildirimi**: Yükleme durumları ve başarı/hata mesajları
+- **Veri Dönüşümü**: FormData'dan JSON'a sunucu iletişimi için
 
 ## Kapsamlı Form Doğrulama
 
-Form doğrulama, hataları yalnızca gönderimden sonra keşfetmenin sinir bozucu deneyimini önler. Uluslararası Uzay İstasyonu'ndaki birden fazla yedek sistem gibi, etkili doğrulama birden fazla güvenlik kontrol katmanı kullanır.
+Form doğrulama, yalnızca gönderimden sonra hataları keşfetmenin sinir bozucu deneyimini önler. Uluslararası Uzay İstasyonu'ndaki birden fazla yedek sistem gibi, etkili doğrulama birden fazla güvenlik kontrol katmanı kullanır.
 
-En iyi yaklaşım, anında geri bildirim için tarayıcı düzeyinde doğrulamayı, geliştirilmiş kullanıcı deneyimi için JavaScript doğrulamasını ve güvenlik ve veri bütünlüğü için sunucu tarafı doğrulamayı birleştirir. Bu yedeklilik, hem kullanıcı memnuniyetini hem de sistem korumasını sağlar.
+En iyi yaklaşım, anında geri bildirim için tarayıcı düzeyinde doğrulama, geliştirilmiş kullanıcı deneyimi için JavaScript doğrulaması ve güvenlik ve veri bütünlüğü için sunucu tarafı doğrulama kombinasyonunu içerir. Bu yedeklilik hem kullanıcı memnuniyetini hem de sistem korumasını sağlar.
 
-### Doğrulama Katmanlarını Anlama
+### Doğrulama Katmanlarını Anlamak
 
 ```mermaid
 graph TD
@@ -587,11 +670,11 @@ graph TD
 - **HTML5 doğrulama**: Anında tarayıcı tabanlı kontroller
 - **JavaScript doğrulama**: Özel mantık ve kullanıcı deneyimi
 - **Sunucu doğrulama**: Nihai güvenlik ve veri bütünlüğü kontrolleri
-- **Kademeli geliştirme**: JavaScript devre dışı olsa bile çalışır
+- **Aşamalı geliştirme**: JavaScript devre dışı olsa bile çalışır
 
 ### HTML5 Doğrulama Özellikleri
 
-**Kullanabileceğiniz modern doğrulama araçları:**
+**Kullanımınıza sunulan modern doğrulama araçları:**
 
 | Özellik | Amacı | Örnek Kullanım | Tarayıcı Davranışı |
 |---------|-------|----------------|--------------------|
@@ -634,11 +717,11 @@ input:focus:invalid {
 - **Odak vurguları**: Mevcut giriş konumu için net görsel bağlam sağlar
 - **Tutarlı stil**: Kullanıcıların öğrenebileceği öngörülebilir arayüz desenleri oluşturur
 
-> 💡 **İpucu**: Kullanıcılar yazarken anında görsel geri bildirim sağlamak için `:valid` ve `:invalid` CSS pseudo-class'larını kullanın, böylece duyarlı ve yardımcı bir arayüz oluşturun.
+> 💡 **Profesyonel İpucu**: Kullanıcılar yazarken anında görsel geri bildirim sağlamak için `:valid` ve `:invalid` CSS pseudo-class'larını kullanın, böylece duyarlı ve yardımcı bir arayüz oluşturun.
 
-### Kapsamlı Doğrulama Uygulama
+### Kapsamlı Doğrulama Uygulaması
 
-Kayıt formunuzu mükemmel kullanıcı deneyimi ve veri kalitesi sağlayan sağlam bir doğrulama ile geliştirelim:
+Kayıt formunuzu mükemmel bir kullanıcı deneyimi ve veri kalitesi sağlayan sağlam doğrulama ile geliştirelim:
 
 ```html
 <form id="registerForm" method="POST" novalidate>
@@ -681,12 +764,12 @@ Kayıt formunuzu mükemmel kullanıcı deneyimi ve veri kalitesi sağlayan sağl
 </form>
 ```
 
-**Geliştirilmiş doğrulamayı anlama:**
-- **Birleştirir** gerekli alan göstergelerini yardımcı açıklamalarla
-- **İçerir** format doğrulama için `pattern` özelliklerini
-- **Sağlar** erişilebilirlik ve ipuçları için `title` özelliklerini
-- **Ekler** kullanıcı girişini yönlendiren yardımcı metin
-- **Kullanır** daha iyi erişilebilirlik için semantik HTML yapısı
+**Geliştirilmiş doğrulamayı anlamak:**
+- **Zorunlu alan göstergelerini** yardımcı açıklamalarla birleştirir
+- **Format doğrulama için** `pattern` özelliklerini içerir
+- **Erişilebilirlik ve ipuçları için** `title` özellikleri sağlar
+- **Kullanıcı girişini yönlendirmek için** yardımcı metin ekler
+- **Daha iyi erişilebilirlik için** semantik HTML yapısı kullanır
 
 ### Gelişmiş Doğrulama Kuralları
 
@@ -702,18 +785,18 @@ Kayıt formunuzu mükemmel kullanıcı deneyimi ve veri kalitesi sağlayan sağl
 ### Doğrulama Davranışını Test Etme
 
 **Bu doğrulama senaryolarını deneyin:**
-1. **Formu gönderin** boş gerekli alanlarla
+1. **Boş zorunlu alanlarla** formu gönderin
 2. **3 karakterden kısa bir kullanıcı adı girin**
-3. **Kullanıcı adı alanında özel karakterler deneyin**
+3. **Kullanıcı adı alanına özel karakterler deneyin**
 4. **Negatif bir bakiye miktarı girin**
 
 ![Formu göndermeye çalışırken doğrulama hatasını gösteren ekran görüntüsü](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.tr.png)
 
 **Gözlemleyecekleriniz:**
-- **Tarayıcı**, yerel doğrulama mesajlarını gösterir
-- **Stil değişiklikleri**, `:valid` ve `:invalid` durumlarına göre gerçekleşir
-- **Form gönderimi**, tüm doğrulamalar geçene kadar engellenir
-- **Odak otomatik olarak**, ilk geçersiz alana taşınır
+- **Tarayıcı** yerel doğrulama mesajlarını gösterir
+- **Stil değişiklikleri** `:valid` ve `:invalid` durumlarına göre değişir
+- **Form gönderimi** tüm doğrulamalar geçene kadar engellenir
+- **Odak otomatik olarak** ilk geçersiz alana taşınır
 
 ### İstemci Tarafı ve Sunucu Tarafı Doğrulama
 
@@ -734,30 +817,126 @@ graph LR
 **Neden her iki katmana ihtiyacınız var:**
 - **İstemci tarafı doğrulama**: Anında geri bildirim sağlar ve kullanıcı deneyimini iyileştirir
 - **Sunucu tarafı doğrulama**: Güvenliği sağlar ve karmaşık iş kurallarını işler
-- **Birleşik yaklaşım**: Sağlam, kullanıcı dostu ve güvenli uygulamalar oluşturur
-- **Kademeli geliştirme**: JavaScript devre dışı olsa bile çalışır
+- **Kombine yaklaşım**: Sağlam, kullanıcı dostu ve güvenli uygulamalar oluşturur
+- **Aşamalı geliştirme**: JavaScript devre dışı olsa bile çalışır
 
-> 🛡️ **Güvenlik Hatırlatması**: Sadece istemci tarafı doğrulamaya güvenmeyin! Kötü niyetli kullanıcılar istemci tarafı kontrolleri atlayabilir, bu yüzden sunucu tarafı doğrulama güvenlik ve veri bütünlüğü için gereklidir.
+> 🛡️ **Güvenlik Hatırlatması**: Yalnızca istemci tarafı doğrulamaya güvenmeyin! Kötü niyetli kullanıcılar istemci tarafı kontrollerini atlayabilir, bu nedenle sunucu tarafı doğrulama güvenlik ve veri bütünlüğü için gereklidir.
 
----
+### ⚡ **Sonraki 5 Dakikada Yapabilecekleriniz**
+- [ ] Geçersiz verilerle formunuzu test edin ve doğrulama mesajlarını görün
+- [ ] HTML5 doğrulamayı görmek için formu JavaScript devre dışı bırakılmış şekilde gönderin
+- [ ] Tarayıcı geliştirici araçlarını açın ve sunucuya gönderilen form verilerini inceleyin
+- [ ] Mobil klavye değişikliklerini görmek için farklı giriş türlerini deneyin
 
----
+### 🎯 **Bu Saatte Başarabilecekleriniz**
+- [ ] Ders sonrası testi tamamlayın ve form işleme kavramlarını anlayın
+- [ ] Gerçek zamanlı geri bildirimle kapsamlı doğrulama zorluğunu uygulayın
+- [ ] Profesyonel görünümlü formlar oluşturmak için CSS stilini ekleyin
+- [ ] Çift kullanıcı adları ve sunucu hataları için hata yönetimi ekleyin
+- [ ] Eşleşen doğrulama ile şifre onay alanları ekleyin
 
-## GitHub Copilot Agent Challenge 🚀
+### 📅 **Bir Haftalık Form Ustalığı Yolculuğunuz**
+- [ ] Gelişmiş form özellikleriyle tam bir bankacılık uygulaması tamamlayın
+- [ ] Profil resimleri veya belgeler için dosya yükleme yetenekleri ekleyin
+- [ ] İlerleme göstergeleri ve durum yönetimi ile çok adımlı formlar ekleyin
+- [ ] Kullanıcı seçimlerine göre uyarlanan dinamik formlar oluşturun
+- [ ] Daha iyi kullanıcı deneyimi için form otomatik kaydetme ve kurtarma ekleyin
+- [ ] E-posta doğrulama ve telefon numarası formatlama gibi gelişmiş doğrulama ekleyin
 
-Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+### 🌟 **Bir Aylık Frontend Geliştirme Ustalığı**
+- [ ] Koşullu mantık ve iş akışları ile karmaşık form uygulamaları oluşturun
+- [ ] Hızlı geliştirme için form kütüphanelerini ve çerçevelerini öğrenin
+- [ ] Erişilebilirlik yönergeleri ve kapsayıcı tasarım ilkelerini öğrenin
+- [ ] Küresel formlar için uluslararasılaştırma ve yerelleştirme uygulayın
+- [ ] Yeniden kullanılabilir form bileşen kütüphaneleri ve tasarım sistemleri oluşturun
+- [ ] Açık kaynak form projelerine katkıda bulunun ve en iyi uygulamaları paylaşın
 
-**Açıklama:** Kayıt formunu kapsamlı istemci tarafı doğrulama ve kullanıcı geri bildirimi ile geliştirin. Bu meydan okuma, form doğrulama, hata yönetimi ve etkileşimli geri bildirimle kullanıcı deneyimini iyileştirme pratiği yapmanıza yardımcı olacaktır.
+## 🎯 Form Geliştirme Ustalığı Zaman Çizelgeniz
 
-**İpucu:** Kayıt formu için eksiksiz bir form doğrulama sistemi oluşturun. Bu sistem şunları içermelidir: 1) Kullanıcı yazarken her alan için gerçek zamanlı doğrulama geri bildirimi, 2) Her giriş alanının altında görünen özel doğrulama mesajları, 3) Eşleşme doğrulaması olan bir şifre onay alanı, 4) Geçerli alanlar için yeşil onay işaretleri ve geçersiz olanlar için kırmızı uyarılar gibi görsel göstergeler, 5) Tüm doğrulamalar geçtiğinde etkinleşen bir gönder düğmesi. HTML5 doğrulama özelliklerini, doğrulama durumlarını stilize etmek için CSS'yi ve etkileşimli davranış için JavaScript'i kullanın.
+```mermaid
+timeline
+    title Form Development & User Experience Learning Progression
+    
+    section HTML Foundation (15 minutes)
+        Semantic Forms: Form elements
+                      : Input types
+                      : Labels and accessibility
+                      : Progressive enhancement
+        
+    section JavaScript Integration (25 minutes)
+        Event Handling: Form submission
+                      : Data collection
+                      : AJAX communication
+                      : Async/await patterns
+        
+    section Validation Systems (35 minutes)
+        Multi-layer Security: HTML5 validation
+                            : Client-side logic
+                            : Server-side verification
+                            : Error handling
+        
+    section User Experience (45 minutes)
+        Interface Polish: Loading states
+                        : Success messaging
+                        : Error recovery
+                        : Accessibility features
+        
+    section Advanced Patterns (1 week)
+        Professional Forms: Dynamic validation
+                          : Multi-step workflows
+                          : File uploads
+                          : Real-time feedback
+        
+    section Enterprise Skills (1 month)
+        Production Applications: Form libraries
+                               : Testing strategies
+                               : Performance optimization
+                               : Security best practices
+```
 
-Daha fazla bilgi edinin: [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
+### 🛠️ Form Geliştirme Araç Seti Özeti
 
-## 🚀 Meydan Okuma
+Bu dersi tamamladıktan sonra şunları ustalıkla yapabilirsiniz:
+- **HTML5 Formlar**: Anlamsal yapı, giriş türleri ve erişilebilirlik özellikleri
+- **JavaScript Form İşleme**: Olay yönetimi, veri toplama ve AJAX iletişimi
+- **Doğrulama Mimarisi**: Güvenlik ve kullanıcı deneyimi için çok katmanlı doğrulama
+- **Asenkron Programlama**: Modern fetch API ve async/await desenleri
+- **Hata Yönetimi**: Kapsamlı hata yönetimi ve kullanıcı geri bildirim sistemleri
+- **Kullanıcı Deneyimi Tasarımı**: Yükleme durumları, başarı mesajları ve hata kurtarma
+- **Aşamalı Geliştirme**: Tüm tarayıcılar ve yetenekler için çalışan formlar
 
-HTML'de kullanıcı zaten varsa bir hata mesajı gösterin.
+**Gerçek Dünya Uygulamaları**: Form geliştirme becerileriniz doğrudan şunlara uygulanabilir:
+- **E-ticaret Uygulamaları**: Ödeme süreçleri, hesap kaydı ve ödeme formları
+- **Kurumsal Yazılım**: Veri giriş sistemleri, raporlama arayüzleri ve iş akışı uygulamaları
+- **İçerik Yönetimi**: Yayın platformları, kullanıcı tarafından oluşturulan içerik ve yönetim arayüzleri
+- **Finansal Uygulamalar**: Bankacılık arayüzleri, yatırım platformları ve işlem sistemleri
+- **Sağlık Sistemleri**: Hasta portalları, randevu planlama ve tıbbi kayıt formları
+- **Eğitim Platformları**: Kurs kaydı, değerlendirme araçları ve öğrenme yönetimi
 
-Son giriş sayfasının biraz stil ekledikten sonra nasıl görünebileceğine dair bir örnek:
+**Kazanılan Profesyonel Beceriler**: Artık şunları yapabilirsiniz:
+- **Erişilebilir formlar tasarlayın**: Engelli kullanıcılar dahil tüm kullanıcılar için çalışan formlar
+- **Güvenli form doğrulama uygulayın**: Veri bozulmasını ve güvenlik açıklarını önler
+- **Duyarlı kullanıcı arayüzleri oluşturun**: Net geri bildirim ve rehberlik sağlar
+- **Karmaşık form etkileşimlerini hata ayıklayın**: Tarayıcı geliştirici araçları ve ağ analizi kullanarak
+- **Form performansını optimize edin**: Verimli veri işleme ve doğrulama stratejileri ile
+
+**Frontend Geliştirme Kavramlarında Ustalık**:
+- **Olay Tabanlı Mimari**: Kullanıcı etkileşim yönetimi ve yanıt sistemleri
+- **Asenkron Programlama**: Bloklamayan sunucu iletişimi ve hata yönetimi
+- **Veri Doğrulama**: İstemci tarafı ve sunucu tarafı güvenlik ve bütünlük kontrolleri
+- **Kullanıcı Deneyimi Tasarımı**: Kullanıcıları başarıya yönlendiren sezgisel arayüzler
+- **Erişilebilirlik Mühendisliği**: Çeşitli kullanıcı ihtiyaçları için kapsayıcı tasarım
+
+**Bir Sonraki Seviye**: Gelişmiş form kütü
+**İstek:** Kayıt formu için eksiksiz bir form doğrulama sistemi oluşturun. Bu sistem şunları içermelidir: 1) Kullanıcı yazarken her alan için gerçek zamanlı doğrulama geri bildirimi, 2) Her giriş alanının altında görünen özel doğrulama mesajları, 3) Şifre doğrulama alanı ve eşleşme doğrulaması, 4) Geçerli alanlar için yeşil onay işaretleri ve geçersiz alanlar için kırmızı uyarılar gibi görsel göstergeler, 5) Tüm doğrulamalar geçtiğinde etkinleşen bir gönderme düğmesi. HTML5 doğrulama özelliklerini, doğrulama durumlarını stilize etmek için CSS'yi ve etkileşimli davranış için JavaScript'i kullanın.
+
+[agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hakkında daha fazla bilgi edinin.
+
+## 🚀 Zorluk
+
+Kullanıcı zaten varsa HTML'de bir hata mesajı gösterin.
+
+İşte biraz stil ekledikten sonra son giriş sayfasının nasıl görünebileceğine dair bir örnek:
 
 ![CSS stilleri eklendikten sonra giriş sayfasının ekran görüntüsü](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.tr.png)
 
@@ -765,9 +944,9 @@ Son giriş sayfasının biraz stil ekledikten sonra nasıl görünebileceğine d
 
 [Ders sonrası test](https://ff-quizzes.netlify.app/web/quiz/44)
 
-## Gözden Geçirme ve Kendi Kendine Çalışma
+## İnceleme ve Kendi Kendine Çalışma
 
-Geliştiriciler, özellikle doğrulama stratejileri konusunda form oluşturma çabalarında oldukça yaratıcı oldular. [CodePen](https://codepen.com) üzerinden farklı form akışlarını inceleyerek ilginç ve ilham verici formlar bulabilir misiniz?
+Geliştiriciler, özellikle doğrulama stratejileri konusunda form oluşturma çabalarında oldukça yaratıcı hale geldiler. [CodePen](https://codepen.com) üzerinden farklı form akışlarını inceleyerek bilgi edinin; ilginç ve ilham verici formlar bulabilir misiniz?
 
 ## Ödev
 

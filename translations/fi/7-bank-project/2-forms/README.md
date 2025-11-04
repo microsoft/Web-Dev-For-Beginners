@@ -1,45 +1,92 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-23T00:36:48+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2025-11-04T01:36:11+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "fi"
 }
 -->
-# Rakenna pankkisovellus, osa 2: Kirjautumis- ja rekisteröintilomakkeen luominen
+# Rakenna pankkisovellus, osa 2: Luo kirjautumis- ja rekisteröintilomake
+
+```mermaid
+journey
+    title Your Form Development Journey
+    section HTML Foundation
+      Understand form elements: 3: Student
+      Learn input types: 4: Student
+      Master accessibility: 4: Student
+    section JavaScript Integration
+      Handle form submission: 4: Student
+      Implement AJAX communication: 5: Student
+      Process server responses: 5: Student
+    section Validation Systems
+      Create multi-layer validation: 5: Student
+      Enhance user experience: 5: Student
+      Ensure data integrity: 5: Student
+```
 
 ## Ennakkokysely
 
 [Ennakkokysely](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Oletko koskaan täyttänyt verkkolomaketta, joka hylkää sähköpostiosoitteesi muodon? Tai menettänyt kaikki tiedot painettuasi "lähetä"-painiketta? Me kaikki olemme kohdanneet näitä turhauttavia tilanteita.
+Oletko koskaan täyttänyt lomaketta verkossa ja saanut virheilmoituksen sähköpostiosoitteen muodosta? Tai menettänyt kaikki tiedot, kun klikkasit "lähetä"? Me kaikki olemme kokeneet näitä turhauttavia tilanteita.
 
-Lomakkeet ovat silta käyttäjien ja sovelluksesi toiminnallisuuden välillä. Kuten lennonjohtajien tarkat protokollat, jotka ohjaavat lentokoneet turvallisesti määränpäähänsä, hyvin suunnitellut lomakkeet antavat selkeää palautetta ja estävät kalliita virheitä. Huonosti suunnitellut lomakkeet taas voivat karkottaa käyttäjät yhtä nopeasti kuin väärinkäsitys vilkkaalla lentokentällä.
+Lomakkeet ovat silta käyttäjien ja sovelluksesi toiminnallisuuden välillä. Kuten lennonjohtajien tarkat protokollat, jotka ohjaavat lentokoneet turvallisesti määränpäähänsä, hyvin suunnitellut lomakkeet antavat selkeää palautetta ja estävät kalliita virheitä. Huonot lomakkeet taas voivat karkottaa käyttäjät nopeammin kuin väärinkäsitys vilkkaassa lentokentässä.
 
 Tässä oppitunnissa muutamme staattisen pankkisovelluksesi interaktiiviseksi sovellukseksi. Opit rakentamaan lomakkeita, jotka validoivat käyttäjän syötteet, kommunikoivat palvelimien kanssa ja antavat hyödyllistä palautetta. Ajattele tätä ohjausliittymän rakentamisena, joka antaa käyttäjille mahdollisuuden navigoida sovelluksesi ominaisuuksissa.
 
-Lopuksi sinulla on täydellinen kirjautumis- ja rekisteröintijärjestelmä, joka ohjaa käyttäjiä onnistumiseen turhautumisen sijaan.
+Lopuksi sinulla on täydellinen kirjautumis- ja rekisteröintijärjestelmä, jossa on validointi, joka ohjaa käyttäjiä kohti onnistumista eikä turhautumista.
+
+```mermaid
+mindmap
+  root((Form Development))
+    HTML Foundation
+      Semantic Elements
+      Input Types
+      Accessibility
+      Label Association
+    User Experience
+      Validation Feedback
+      Error Prevention
+      Loading States
+      Success Messaging
+    JavaScript Integration
+      Event Handling
+      AJAX Communication
+      Data Processing
+      Error Management
+    Validation Layers
+      HTML5 Validation
+      Client-side Logic
+      Server-side Security
+      Progressive Enhancement
+    Modern Patterns
+      Fetch API
+      Async/Await
+      Form Data API
+      Promise Handling
+```
 
 ## Esivaatimukset
 
-Ennen kuin aloitamme lomakkeiden rakentamisen, varmistetaan, että kaikki on asetettu oikein. Tämä oppitunti jatkuu suoraan siitä, mihin edellinen jäi, joten jos olet hypännyt eteenpäin, kannattaa palata takaisin ja varmistaa perusasioiden toimivuus ensin.
+Ennen kuin aloitamme lomakkeiden rakentamisen, varmistetaan, että kaikki on asetettu oikein. Tämä oppitunti jatkuu suoraan siitä, mihin edellinen jäi, joten jos olet hypännyt eteenpäin, kannattaa palata ja varmistaa perusasiat ensin.
 
 ### Vaadittavat asetukset
 
 | Komponentti | Tila | Kuvaus |
 |-------------|------|--------|
 | [HTML-mallit](../1-template-route/README.md) | ✅ Vaadittu | Pankkisovelluksesi perusrakenne |
-| [Node.js](https://nodejs.org) | ✅ Vaadittu | JavaScript-ajonaika palvelimelle |
+| [Node.js](https://nodejs.org) | ✅ Vaadittu | JavaScript-ajoympäristö palvelimelle |
 | [Pankin API-palvelin](../api/README.md) | ✅ Vaadittu | Tietojen tallennuksen taustapalvelu |
 
-> 💡 **Kehitysvinkki**: Sinulla tulee olla kaksi erillistä palvelinta käynnissä samanaikaisesti – yksi pankkisovelluksen käyttöliittymälle ja toinen taustapalvelulle. Tämä asettelu jäljittelee todellista kehitysympäristöä, jossa käyttöliittymä ja taustapalvelut toimivat itsenäisesti.
+> 💡 **Kehitysvinkki**: Sinulla tulee olla kaksi erillistä palvelinta käynnissä samanaikaisesti – yksi pankkisovelluksen käyttöliittymälle ja toinen taustapalvelun API:lle. Tämä asetus jäljittelee todellista kehitysympäristöä, jossa käyttöliittymä ja taustapalvelut toimivat itsenäisesti.
 
 ### Palvelimen konfigurointi
 
 **Kehitysympäristösi sisältää:**
 - **Käyttöliittymäpalvelin**: Palvelee pankkisovellustasi (tyypillisesti portti `3000`)
-- **Taustapalvelin**: Käsittelee tietojen tallennuksen ja haun (portti `5000`)
+- **Taustapalvelimen API**: Käsittelee tietojen tallennusta ja hakua (portti `5000`)
 - **Molemmat palvelimet** voivat toimia samanaikaisesti ilman konflikteja
 
 **API-yhteyden testaaminen:**
@@ -54,11 +101,11 @@ curl http://localhost:5000/api
 
 ## HTML-lomakkeiden ja kontrollien ymmärtäminen
 
-HTML-lomakkeet ovat tapa, jolla käyttäjät kommunikoivat verkkosovelluksesi kanssa. Ajattele niitä kuin 1800-luvun lennätinjärjestelmää, joka yhdisti kaukaiset paikat – ne ovat viestintäprotokolla käyttäjän tarkoituksen ja sovelluksen vastauksen välillä. Huolellisesti suunnitellut lomakkeet havaitsevat virheet, ohjaavat syötteen muotoilua ja antavat hyödyllisiä ehdotuksia.
+HTML-lomakkeet ovat tapa, jolla käyttäjät kommunikoivat verkkosovelluksesi kanssa. Ajattele niitä kuin 1800-luvun lennätinjärjestelmää – ne ovat viestintäprotokolla käyttäjän tarkoituksen ja sovelluksen vastauksen välillä. Huolellisesti suunniteltuina ne havaitsevat virheet, ohjaavat syötteen muotoilua ja antavat hyödyllisiä ehdotuksia.
 
-Modernit lomakkeet ovat huomattavasti kehittyneempiä kuin perinteiset tekstikentät. HTML5 esitteli erikoistuneita syötetyyppejä, jotka käsittelevät sähköpostin validointia, numeromuotoilua ja päivämäärän valintaa automaattisesti. Nämä parannukset hyödyttävät sekä saavutettavuutta että mobiilikäyttäjäkokemuksia.
+Modernit lomakkeet ovat huomattavasti kehittyneempiä kuin pelkät tekstikentät. HTML5 esitteli erikoistuneita syötetyyppejä, jotka käsittelevät sähköpostin validointia, numeromuotoilua ja päivämäärän valintaa automaattisesti. Nämä parannukset hyödyttävät sekä saavutettavuutta että mobiilikäyttäjäkokemusta.
 
-### Keskeiset lomake-elementit
+### Välttämättömät lomake-elementit
 
 **Rakennuspalikat, joita jokainen lomake tarvitsee:**
 
@@ -72,7 +119,7 @@ Modernit lomakkeet ovat huomattavasti kehittyneempiä kuin perinteiset tekstiken
 </form>
 ```
 
-**Mitä tämä koodi tekee:**
+**Tämä koodi tekee seuraavaa:**
 - **Luo** lomakekontainerin, jolla on yksilöllinen tunniste
 - **Määrittää** HTTP-menetelmän tietojen lähettämiseen
 - **Yhdistää** etiketit syötteisiin saavutettavuuden parantamiseksi
@@ -81,14 +128,14 @@ Modernit lomakkeet ovat huomattavasti kehittyneempiä kuin perinteiset tekstiken
 ### Modernit syötetyypit ja attribuutit
 
 | Syötetyyppi | Tarkoitus | Esimerkki |
-|-------------|-----------|-----------|
+|-------------|----------|-----------|
 | `text` | Yleinen tekstisyöte | `<input type="text" name="username">` |
 | `email` | Sähköpostin validointi | `<input type="email" name="email">` |
 | `password` | Piilotettu tekstisyöte | `<input type="password" name="password">` |
-| `number` | Numeraalinen syöte | `<input type="number" name="balance" min="0">` |
+| `number` | Numeerinen syöte | `<input type="number" name="balance" min="0">` |
 | `tel` | Puhelinnumerot | `<input type="tel" name="phone">` |
 
-> 💡 **Modernin HTML5:n etu**: Erityisten syötetyyppien käyttö tarjoaa automaattisen validoinnin, sopivat mobiilinäppäimistöt ja paremman saavutettavuuden ilman lisättyä JavaScriptiä!
+> 💡 **Modernin HTML5:n etu**: Käyttämällä tiettyjä syötetyyppejä saat automaattisen validoinnin, sopivat mobiilinäppäimistöt ja paremman saavutettavuuden ilman lisättyä JavaScriptiä!
 
 ### Painiketyypit ja niiden toiminta
 
@@ -99,16 +146,16 @@ Modernit lomakkeet ovat huomattavasti kehittyneempiä kuin perinteiset tekstiken
 <button type="button">Custom Action</button> <!-- No default behavior -->
 ```
 
-**Mitä kukin painiketyyppi tekee:**
-- **Lähetyspainikkeet**: Käynnistävät lomakkeen lähetyksen ja lähettävät tiedot määritettyyn osoitteeseen
-- **Palautuspainikkeet**: Palauttavat kaikki lomakekentät alkuperäiseen tilaan
-- **Tavalliset painikkeet**: Eivät tarjoa oletustoimintoa, vaativat mukautettua JavaScriptiä toimiakseen
+**Tässä mitä kukin painiketyyppi tekee:**
+- **Lähetyspainikkeet**: Käynnistävät lomakkeen lähetyksen ja lähettävät tiedot määritettyyn päätepisteeseen
+- **Palautuspainikkeet**: Palauttavat kaikki lomakekentät alkuperäiseen tilaansa
+- **Tavalliset painikkeet**: Eivät tarjoa oletustoimintoa, vaativat mukautettua JavaScriptiä toiminnallisuuteen
 
-> ⚠️ **Tärkeä huomio**: `<input>`-elementti on itsestään sulkeutuva eikä vaadi sulkevaa tagia. Moderni käytäntö on kirjoittaa `<input>` ilman vinoviivaa.
+> ⚠️ **Tärkeä huomio**: `<input>`-elementti on itsestään sulkeutuva eikä vaadi sulkevaa tagia. Moderni paras käytäntö on kirjoittaa `<input>` ilman vinoviivaa.
 
 ### Kirjautumislomakkeen rakentaminen
 
-Rakennetaan käytännöllinen kirjautumislomake, joka demonstroi moderneja HTML-lomakekäytäntöjä. Aloitamme perusrakenteesta ja parannamme sitä vähitellen saavutettavuusominaisuuksilla ja validoinnilla.
+Rakennetaan nyt käytännöllinen kirjautumislomake, joka havainnollistaa moderneja HTML-lomakekäytäntöjä. Aloitamme perusrakenteesta ja parannamme sitä asteittain saavutettavuusominaisuuksilla ja validoinnilla.
 
 ```html
 <template id="login">
@@ -127,12 +174,12 @@ Rakennetaan käytännöllinen kirjautumislomake, joka demonstroi moderneja HTML-
 </template>
 ```
 
-**Mitä tässä tapahtuu:**
+**Tässä mitä tapahtuu:**
 - **Rakentaa** lomakkeen semanttisilla HTML5-elementeillä
 - **Ryhmittelee** liittyvät elementit `div`-kontainereihin merkityksellisillä luokilla
 - **Yhdistää** etiketit syötteisiin `for`- ja `id`-attribuuttien avulla
-- **Sisältää** moderneja attribuutteja, kuten `autocomplete` ja `placeholder`, paremman käyttökokemuksen takaamiseksi
-- **Lisää** `novalidate`-attribuutin, jotta validointi voidaan hoitaa JavaScriptillä selaimen oletusten sijaan
+- **Sisältää** moderneja attribuutteja kuten `autocomplete` ja `placeholder` paremman käyttökokemuksen vuoksi
+- **Lisää** `novalidate` käsittelemään validointia JavaScriptillä selaimen oletusten sijaan
 
 ### Oikeiden etikettien voima
 
@@ -156,9 +203,9 @@ graph TD
 - **Laajentavat** klikkausaluetta (etiketin klikkaaminen kohdistaa syötteen)
 - **Parantavat** mobiilikäytettävyyttä suuremmilla kosketuskohteilla
 - **Tukevat** lomakevalidointia merkityksellisillä virheilmoituksilla
-- **Parantavat** hakukoneoptimointia antamalla semanttista merkitystä lomake-elementeille
+- **Parantavat** SEO:ta antamalla semanttista merkitystä lomake-elementeille
 
-> 🎯 **Saavutettavuustavoite**: Jokaisella lomakekentällä tulisi olla siihen liittyvä etiketti. Tämä yksinkertainen käytäntö tekee lomakkeistasi käytettäviä kaikille, mukaan lukien vammaiset käyttäjät, ja parantaa kaikkien käyttäjien kokemusta.
+> 🎯 **Saavutettavuustavoite**: Jokaisella lomakesyötteellä tulisi olla siihen liittyvä etiketti. Tämä yksinkertainen käytäntö tekee lomakkeistasi kaikkien, myös vammaisten käyttäjien, käytettävissä ja parantaa kaikkien käyttäjien kokemusta.
 
 ### Rekisteröintilomakkeen luominen
 
@@ -198,38 +245,54 @@ Rekisteröintilomake vaatii yksityiskohtaisempia tietoja täydellisen käyttäj�
 
 **Yllä olevassa olemme:**
 - **Järjestäneet** jokaisen kentän kontainer-diveihin paremman tyylin ja asettelun vuoksi
-- **Lisänneet** sopivat `autocomplete`-attribuutit selaimen automaattisen täytön tukemiseksi
+- **Lisänneet** sopivat `autocomplete`-attribuutit selaimen automaattisen täytön tueksi
 - **Sisällyttäneet** hyödyllistä placeholder-tekstiä ohjaamaan käyttäjän syötettä
 - **Asettaneet** järkevät oletusarvot `value`-attribuutin avulla
-- **Soveltaneet** validointiattribuutteja, kuten `required`, `maxlength` ja `min`
-- **Käyttäneet** `type="number"`-syötettä saldo-kentässä desimaalitarkkuuden tukemiseksi
+- **Soveltaneet** validointiattribuutteja kuten `required`, `maxlength` ja `min`
+- **Käyttäneet** `type="number"` saldo-kentässä desimaalitarkkuuden tukemiseksi
 
 ### Syötetyyppien ja toiminnan tutkiminen
 
 **Modernit syötetyypit tarjoavat parannettua toiminnallisuutta:**
 
 | Ominaisuus | Hyöty | Esimerkki |
-|------------|-------|-----------|
-| `type="number"` | Numeronäppäimistö mobiilissa | Helpompi saldon syöttö |
+|------------|-------|----------|
+| `type="number"` | Numeerinen näppäimistö mobiilissa | Helpompi saldon syöttö |
 | `step="0.01"` | Desimaalitarkkuuden hallinta | Mahdollistaa senttien käytön valuutassa |
 | `autocomplete` | Selaimen automaattinen täyttö | Nopeampi lomakkeen täyttö |
 | `placeholder` | Kontekstuaaliset vihjeet | Ohjaa käyttäjän odotuksia |
 
-> 🎯 **Saavutettavuushaaste**: Kokeile navigoida lomakkeissa pelkästään näppäimistön avulla! Käytä `Tab`-näppäintä siirtyäksesi kenttien välillä, `Space`-näppäintä valintaruutujen valitsemiseen ja `Enter`-näppäintä lomakkeen lähettämiseen. Tämä kokemus auttaa ymmärtämään, miten ruudunlukijan käyttäjät vuorovaikuttavat lomakkeidesi kanssa.
+> 🎯 **Saavutettavuushaaste**: Kokeile navigoida lomakkeissa vain näppäimistön avulla! Käytä `Tab` siirtyäksesi kenttien välillä, `Space` valintaruutujen valintaan ja `Enter` lomakkeen lähettämiseen. Tämä kokemus auttaa ymmärtämään, miten ruudunlukijakäyttäjät vuorovaikuttavat lomakkeidesi kanssa.
+
+### 🔄 **Pedagoginen tarkistus**
+**Lomakeperustan ymmärtäminen**: Ennen JavaScriptin käyttöönottoa varmista, että ymmärrät:
+- ✅ Kuinka semanttinen HTML luo saavutettavia lomakerakenteita
+- ✅ Miksi syötetyypit ovat tärkeitä mobiilinäppäimistöille ja validoinnille
+- ✅ Etikettien ja lomakekontrollien välinen suhde
+- ✅ Kuinka lomakeattribuutit vaikuttavat selaimen oletuskäyttäytymiseen
+
+**Nopea itsearviointi**: Mitä tapahtuu, jos lähetät lomakkeen ilman JavaScript-käsittelyä?
+*Vastaus: Selaimen oletuslähetys tapahtuu, yleensä uudelleenohjaus action-URL:ään*
+
+**HTML5-lomakkeiden edut**: Modernit lomakkeet tarjoavat:
+- **Sisäänrakennettu validointi**: Automaattinen sähköpostin ja numeron muodon tarkistus
+- **Mobiilioptimointi**: Sopivat näppäimistöt eri syötetyypeille
+- **Saavutettavuus**: Ruudunlukijatuki ja näppäimistönavigointi
+- **Progressiivinen parannus**: Toimii myös, kun JavaScript on pois päältä
 
 ## Lomakkeen lähetysmenetelmien ymmärtäminen
 
-Kun joku täyttää lomakkeesi ja painaa "lähetä", tiedot täytyy lähettää jonnekin – yleensä palvelimelle, joka voi tallentaa ne. Tämä voi tapahtua eri tavoilla, ja oikean menetelmän valitseminen voi säästää sinut myöhemmiltä ongelmilta.
+Kun joku täyttää lomakkeesi ja painaa "lähetä", tiedot täytyy lähettää jonnekin – yleensä palvelimelle, joka voi tallentaa ne. On olemassa muutamia eri tapoja, joilla tämä voi tapahtua, ja oikean valitseminen voi säästää sinut myöhemmiltä päänsäryiltä.
 
 Katsotaanpa, mitä oikeastaan tapahtuu, kun joku klikkaa lähetyspainiketta.
 
 ### Lomakkeen oletuskäyttäytyminen
 
-Ensin tarkastellaan, mitä tapahtuu peruslomakkeen lähetyksessä:
+Ensiksi tarkastellaan, mitä tapahtuu peruslomakkeen lähetyksessä:
 
 **Testaa nykyiset lomakkeesi:**
 1. Klikkaa lomakkeesi *Rekisteröidy*-painiketta
-2. Tarkkaile muutoksia selaimen osoiterivillä
+2. Tarkkaile muutoksia selaimesi osoiterivillä
 3. Huomaa, kuinka sivu latautuu uudelleen ja tiedot näkyvät URL-osoitteessa
 
 ![Kuvakaappaus selaimen URL-osoitteen muutoksesta Rekisteröidy-painikkeen klikkauksen jälkeen](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.fi.png)
@@ -256,34 +319,34 @@ graph TD
 | Menetelmä | Käyttötapaus | Tietojen sijainti | Turvallisuustaso | Kokorajoitus |
 |-----------|--------------|-------------------|------------------|--------------|
 | `GET` | Hakukyselyt, suodattimet | URL-parametrit | Matala (näkyvä) | ~2000 merkkiä |
-| `POST` | Käyttäjätilit, arkaluontoiset tiedot | Pyynnön runko | Korkea (piilotettu) | Ei käytännön rajoitusta |
+| `POST` | Käyttäjätilit, arkaluontoiset tiedot | Pyynnön runko | Korkeampi (piilotettu) | Ei käytännön rajoitusta |
 
 **Peruserojen ymmärtäminen:**
-- **GET**: Liittää lomaketiedot URL-osoitteeseen kyselyparametreina (sopii hakutoimintoihin)
+- **GET**: Lisää lomaketiedot URL-osoitteeseen kyselyparametreina (sopii hakutoimintoihin)
 - **POST**: Sisältää tiedot pyynnön rungossa (välttämätön arkaluontoisille tiedoille)
-- **GET-rajoitukset**: Koon rajoitukset, näkyvät tiedot, pysyvä selaushistoria
+- **GET-rajoitukset**: Kokorajoitukset, näkyvät tiedot, pysyvä selaushistoria
 - **POST-edut**: Suuri tietokapasiteetti, yksityisyyden suoja, tiedostojen lataustuki
 
-> 💡 **Paras käytäntö**: Käytä `GET`-menetelmää hakulomakkeisiin ja suodattimiin (tietojen haku), käytä `POST`-menetelmää käyttäjätilien luomiseen, kirjautumiseen ja tietojen luomiseen.
+> 💡 **Paras käytäntö**: Käytä `GET` hakulomakkeisiin ja suodattimiin (tietojen haku), käytä `POST` käyttäjätilien luomiseen, kirjautumiseen ja tietojen luomiseen.
 
 ### Lomakkeen lähetyksen konfigurointi
 
-Konfiguroidaan rekisteröintilomake kommunikoimaan oikein taustapalvelimen API:n kanssa POST-menetelmää käyttäen:
+Konfiguroidaan rekisteröintilomakkeesi kommunikoimaan oikein taustapalvelimen API:n kanssa POST-menetelmää käyttäen:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" 
       method="POST" novalidate>
 ```
 
-**Mitä tämä konfiguraatio tekee:**
+**Tämä konfiguraatio tekee seuraavaa:**
 - **Ohjaa** lomakkeen lähetyksen API-päätepisteeseen
 - **Käyttää** POST-menetelmää turvalliseen tiedonsiirtoon
-- **Sisältää** `novalidate`-attribuutin, jotta validointi voidaan hoitaa JavaScriptillä
+- **Sisältää** `novalidate` käsittelemään validointia JavaScriptillä
 
 ### Lomakkeen lähetyksen testaaminen
 
 **Seuraa näitä vaiheita testataksesi lomakettasi:**
-1. **Täytä** rekisteröintilomake omilla tiedoillasi
+1. **Täytä** rekisteröintilomake tiedoillasi
 2. **Klikkaa** "Luo tili" -painiketta
 3. **Tarkkaile** palvelimen vastausta selaimessasi
 
@@ -291,8 +354,8 @@ Konfiguroidaan rekisteröintilomake kommunikoimaan oikein taustapalvelimen API:n
 
 **Mitä sinun pitäisi nähdä:**
 - **Selaimen uudelleenohjaus** API-päätepisteen URL-osoitteeseen
-- **JSON-vastaus**, joka sisältää juuri luodut tilitiedot
-- **Palvelimen vahvistus** siitä, että tili on luotu onnistuneesti
+- **JSON-vastaus**, joka sisältää juuri luodun tilin tiedot
+- **Palvelimen vahvistus**, että tili luotiin onnistuneesti
 
 > 🧪 **Kokeiluaika**: Kokeile rekisteröityä uudelleen samalla käyttäjänimellä. Minkälaisen vastauksen saat? Tämä auttaa sinua ymmärtämään, miten palvelin käsittelee päällekkäisiä tietoja ja virhetilanteita.
 
@@ -319,7 +382,7 @@ Konfiguroidaan rekisteröintilomake kommunikoimaan oikein taustapalvelimen API:n
 
 Perinteiset lomakelähetykset aiheuttavat koko sivun uudelleenlatauksia, kuten varhaiset avaruuslennot vaativat täydellisiä järjestelmän nollauksia kurssikorjauksia varten. Tämä lähestymistapa häiritsee käyttäjäkokemusta ja menettää sovelluksen tilan.
 
-JavaScript-lomakkeiden käsittely toimii kuin modernien avaruusalusten jatkuvat ohjausjärjestelmät – tehden reaaliaikaisia säätöjä menettämättä navigointikontekstia. Voimme siepata lomakelähetykset, antaa välitöntä palautetta, käsitellä virheitä sujuvasti ja päivittää käyttöliittymää palvelimen vastausten perusteella samalla, kun säilytämme käyttäjän sijainnin sovelluksessa.
+JavaScript-lomakkeiden käsittely toimii kuten modernien avaruusalusten jatkuvat ohjausjärjestelmät – tehden reaaliaikaisia säätöjä menettämättä navigointikontekstia. Voimme estää lomakelähetykset, antaa välitöntä palautetta, käsitellä virheitä sujuvasti ja päivittää käyttöliittymää palvelimen vastausten perusteella samalla, kun säilytämme käyttäjän sijainnin sovelluksessa.
 
 ### Miksi välttää sivun uudelleenlatauksia?
 
@@ -339,26 +402,75 @@ sequenceDiagram
 
 **JavaScript-lomakkeiden käsittelyn edut:**
 - **Säilyttää** sovelluksen tilan ja käyttäjän kontekstin
-- **Tarjoaa** välitöntä palautetta ja latausindikaattoreita
-- **Mahdollistaa** dynaamisen virheenkäsittelyn ja validoinnin
-- **Luo** sujuvia, sovellusmaisia käyttäjäkokemuksia
-- **Mahdollistaa** ehdollisen logiikan palvelimen vastausten perusteella
+- **Tarjoaa** välit
+```javascript
+// Example of what FormData captures
+const formData = new FormData(registerForm);
 
-### Siirtyminen perinteisistä moderneihin lomakkeisiin
+// FormData automatically captures:
+// {
+//   "user": "john_doe",
+//   "currency": "$", 
+//   "description": "Personal account",
+//   "balance": "100"
+// }
+```
 
-**Perinteisen lähestymistavan haasteet:**
-- **Uudelleenohjaa** käyttäjät pois sovelluksestasi
-- **Menettää** nykyisen sovelluksen tilan ja kontekstin
-- **Vaatii** koko sivun uudelleenlatauksia yksinkertaisille toiminnoille
-- **Tarjoaa** rajallisen hallinnan käyttäjäpalautteesta
+**FormData API:n edut:**
+- **Kattava kokoelma**: Tallentaa kaikki lomakeelementit, kuten teksti, tiedostot ja monimutkaiset syötteet
+- **Tyyppitietoisuus**: Käsittelee automaattisesti eri syöttötyypit ilman räätälöityä koodausta
+- **Tehokkuus**: Poistaa tarpeen kerätä kenttiä manuaalisesti yhdellä API-kutsulla
+- **Mukautuvuus**: Säilyttää toiminnallisuuden lomakerakenteen muuttuessa
 
-**Modernin JavaScript-lähestymistavan edut:**
-- **Pitää** käyttäjät sovelluksesi sisällä
-- **Säilyttää** kaikki sovelluksen tilan ja tiedot
-- **Mahdollistaa** reaaliaikaisen validoinnin ja palautteen
-- **Tukee** progressiivista parannusta ja saavutettavuutta
+### Palvelinviestintäfunktion luominen
 
-### JavaScript-lomakke
+Rakennetaan nyt vankka funktio, joka kommunikoi API-palvelimesi kanssa käyttäen moderneja JavaScript-malleja:
+
+```javascript
+async function createAccount(account) {
+  try {
+    const response = await fetch('//localhost:5000/api/accounts', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: account
+    });
+    
+    // Check if the response was successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('Account creation failed:', error);
+    return { error: error.message || 'Network error occurred' };
+  }
+}
+```
+
+**Asynkronisen JavaScriptin ymmärtäminen:**
+
+```mermaid
+sequenceDiagram
+    participant JS as JavaScript
+    participant Fetch as Fetch API
+    participant Server as Backend Server
+    
+    JS->>Fetch: fetch() request
+    Fetch->>Server: HTTP POST
+    Server-->>Fetch: JSON response
+    Fetch-->>JS: await response
+    JS->>JS: Process data
+```
+
+**Mitä tämä moderni toteutus saavuttaa:**
+- **Käyttää** `async/await`-rakenteita luettavan asynkronisen koodin luomiseen
+- **Sisältää** asianmukaisen virheenkäsittelyn try/catch-lohkoilla
+- **Tarkistaa** vastauksen tilan ennen datan käsittelyä
+- **Asettaa** oikeat otsikot JSON-kommunikaatiota varten
 - **Tarjoaa** yksityiskohtaisia virheilmoituksia virheenkorjaukseen
 - **Palauttaa** johdonmukaisen tietorakenteen onnistumis- ja virhetapauksissa
 
@@ -369,21 +481,21 @@ sequenceDiagram
 | Ominaisuus | Etu | Toteutus |
 |------------|-----|----------|
 | Lupauspohjainen | Selkeä asynkroninen koodi | `await fetch()` |
-| Pyynnön räätälöinti | Täysi HTTP-kontrolli | Otsikot, metodit, sisältö |
-| Vastauksen käsittely | Joustava datan jäsentely | `.json()`, `.text()`, `.blob()` |
+| Pyynnön räätälöinti | Täysi HTTP-ohjaus | Otsikot, metodit, runko |
+| Vastauksen käsittely | Joustava datan jäsentäminen | `.json()`, `.text()`, `.blob()` |
 | Virheenkäsittely | Kattava virheiden hallinta | Try/catch-lohkot |
 
 > 🎥 **Lisätietoja**: [Async/Await-opas](https://youtube.com/watch?v=YwmlRkrxvkk) - Ymmärrä asynkronisen JavaScriptin mallit modernia web-kehitystä varten.
 
-**Keskeiset käsitteet palvelimen kanssa kommunikointiin:**
-- **Asynkroniset funktiot** mahdollistavat suorituksen keskeyttämisen palvelimen vastauksia odotettaessa
-- **Await-avainsana** tekee asynkronisesta koodista helpommin luettavaa
-- **Fetch API** tarjoaa modernin, lupauspohjaisen HTTP-pyyntöjen käsittelyn
-- **Virheenkäsittely** varmistaa, että sovellus reagoi verkko-ongelmiin sujuvasti
+**Keskeiset käsitteet palvelinviestinnässä:**
+- **Asynkroniset funktiot** mahdollistavat suorittamisen keskeyttämisen palvelinvastausten odottamiseksi
+- **Await-avainsana** tekee asynkronisesta koodista synkronisen näköistä
+- **Fetch API** tarjoaa modernin, lupauspohjaisen HTTP-pyynnön
+- **Virheenkäsittely** varmistaa, että sovelluksesi reagoi verkko-ongelmiin sulavasti
 
 ### Rekisteröintifunktion viimeistely
 
-Kootaan kaikki yhteen ja luodaan valmis, tuotantokäyttöön sopiva rekisteröintifunktio:
+Tuodaan kaikki yhteen täydellisen, tuotantovalmiin rekisteröintifunktion avulla:
 
 ```javascript
 async function register() {
@@ -427,8 +539,8 @@ async function register() {
 
 **Tämä parannettu toteutus sisältää:**
 - **Tarjoaa** visuaalista palautetta lomakkeen lähetyksen aikana
-- **Poistaa käytöstä** lähetyspainikkeen kaksoislähetysten estämiseksi
-- **Käsittelee** sekä odotetut että odottamattomat virheet sujuvasti
+- **Poistaa käytöstä** lähetyspainikkeen estääkseen kaksoislähetykset
+- **Käsittelee** sekä odotettuja että odottamattomia virheitä sulavasti
 - **Näyttää** käyttäjäystävälliset onnistumis- ja virheilmoitukset
 - **Nollaa** lomakkeen onnistuneen rekisteröinnin jälkeen
 - **Palauttaa** käyttöliittymän tilan riippumatta lopputuloksesta
@@ -442,21 +554,41 @@ async function register() {
 3. **Klikkaa** "Luo tili"
 4. **Tarkkaile** konsoliviestejä ja käyttäjäpalautetta
 
-![Näyttökuva selaimen konsoliviestistä](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.fi.png)
+![Näyttökuva, jossa näkyy lokiviesti selaimen konsolissa](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.fi.png)
 
 **Mitä sinun pitäisi nähdä:**
 - **Lataustila** näkyy lähetyspainikkeessa
-- **Konsolilokit** näyttävät yksityiskohtaista tietoa prosessista
+- **Konsolilokit** näyttävät yksityiskohtaisia tietoja prosessista
 - **Onnistumisviesti** ilmestyy, kun tilin luominen onnistuu
 - **Lomake nollautuu** automaattisesti onnistuneen lähetyksen jälkeen
 
-> 🔒 **Tietoturva huomio**: Tällä hetkellä data kulkee HTTP:n kautta, mikä ei ole turvallista tuotantokäyttöön. Oikeissa sovelluksissa käytä aina HTTPS:ää datan salaukseen. Lue lisää [HTTPS-turvallisuudesta](https://en.wikipedia.org/wiki/HTTPS) ja miksi se on tärkeää käyttäjätietojen suojaamiseksi.
+> 🔒 **Tietoturva huomio**: Tällä hetkellä data kulkee HTTP:n kautta, mikä ei ole turvallista tuotantokäyttöön. Todellisissa sovelluksissa käytä aina HTTPS:ää datan salaukseen. Lue lisää [HTTPS-turvallisuudesta](https://en.wikipedia.org/wiki/HTTPS) ja miksi se on tärkeää käyttäjädatan suojaamiseksi.
 
-## Kattava lomakkeen validointi
+### 🔄 **Pedagoginen tarkistus**
+**Moderni JavaScript-integraatio**: Varmista ymmärryksesi asynkronisesta lomakekäsittelystä:
+- ✅ Miten `event.preventDefault()` muuttaa lomakkeen oletuskäyttäytymistä?
+- ✅ Miksi FormData API on tehokkaampi kuin manuaalinen kenttien keräys?
+- ✅ Miten async/await-mallit parantavat koodin luettavuutta?
+- ✅ Mikä rooli virheenkäsittelyllä on käyttäjäkokemuksessa?
 
-Lomakkeen validointi estää turhauttavan kokemuksen, jossa virheet havaitaan vasta lähetyksen jälkeen. Kuten Kansainvälisen avaruusaseman moninkertaiset varajärjestelmät, tehokas validointi käyttää useita turvakerroksia.
+**Järjestelmäarkkitehtuuri**: Lomakekäsittelysi osoittaa:
+- **Tapahtumapohjainen ohjelmointi**: Lomakkeet reagoivat käyttäjän toimintoihin ilman sivun uudelleenlatausta
+- **Asynkroninen viestintä**: Palvelinpyynnöt eivät estä käyttöliittymää
+- **Virheenkäsittely**: Sulava toiminta verkko-ongelmien sattuessa
+- **Tilanhallinta**: Käyttöliittymä päivittyy palvelimen vastausten mukaisesti
+- **Progressiivinen parannus**: Perustoiminnallisuus toimii, JavaScript parantaa sitä
 
-Optimaalinen lähestymistapa yhdistää selaintason validoinnin välittömän palautteen antamiseksi, JavaScript-validoinnin käyttäjäkokemuksen parantamiseksi ja palvelinpuolen validoinnin turvallisuuden ja tietojen eheyden varmistamiseksi. Tämä redundanssi takaa sekä käyttäjätyytyväisyyden että järjestelmän suojan.
+**Ammatilliset mallit**: Olet toteuttanut:
+- **Yhden vastuun periaate**: Funktiot ovat selkeitä ja keskittyvät yhteen tarkoitukseen
+- **Virherajat**: Try/catch-lohkot estävät sovelluksen kaatumisen
+- **Käyttäjäpalaute**: Lataustilat ja onnistumis-/virheilmoitukset
+- **Datan muuntaminen**: FormData JSON-muotoon palvelinkommunikaatiota varten
+
+## Kattava lomakevalidointi
+
+Lomakevalidointi estää turhauttavan kokemuksen, jossa virheet havaitaan vasta lähetyksen jälkeen. Kuten Kansainvälisen avaruusaseman moninkertaiset varajärjestelmät, tehokas validointi käyttää useita kerroksia turvallisuustarkistuksia.
+
+Paras lähestymistapa yhdistää selaintason validoinnin välittömän palautteen saamiseksi, JavaScript-validoinnin käyttäjäkokemuksen parantamiseksi ja palvelinpuolen validoinnin turvallisuuden ja datan eheyden varmistamiseksi. Tämä redundanssi takaa sekä käyttäjätyytyväisyyden että järjestelmän suojauksen.
 
 ### Validointikerrosten ymmärtäminen
 
@@ -475,19 +607,19 @@ graph TD
 
 **Monikerroksinen validointistrategia:**
 - **HTML5-validointi**: Välittömät selaimen suorittamat tarkistukset
-- **JavaScript-validointi**: Räätälöity logiikka ja parempi käyttäjäkokemus
-- **Palvelinvalidointi**: Lopulliset turvallisuus- ja tietojen eheyden tarkistukset
-- **Progressiivinen parannus**: Toimii myös ilman JavaScriptiä
+- **JavaScript-validointi**: Räätälöity logiikka ja käyttäjäkokemuksen parantaminen
+- **Palvelinvalidointi**: Lopulliset turvallisuus- ja datan eheystarkistukset
+- **Progressiivinen parannus**: Toimii myös, jos JavaScript on pois päältä
 
 ### HTML5-validointiominaisuudet
 
 **Modernit validointityökalut käytettävissäsi:**
 
-| Ominaisuus | Tarkoitus | Käyttöesimerkki | Selaimen toiminta |
-|------------|-----------|-----------------|-------------------|
+| Ominaisuus | Tarkoitus | Esimerkki | Selaimen käyttäytyminen |
+|------------|-----------|-----------|-------------------------|
 | `required` | Pakolliset kentät | `<input required>` | Estää tyhjän lähetyksen |
 | `minlength`/`maxlength` | Tekstin pituusrajat | `<input maxlength="20">` | Varmistaa merkkirajat |
-| `min`/`max` | Numeraaliset rajat | `<input min="0" max="1000">` | Tarkistaa numerorajat |
+| `min`/`max` | Numeraaliset rajat | `<input min="0" max="1000">` | Tarkistaa lukurajat |
 | `pattern` | Mukautetut regex-säännöt | `<input pattern="[A-Za-z]+">` | Varmistaa tietyn muodon |
 | `type` | Datatyypin validointi | `<input type="email">` | Muotokohtainen validointi |
 
@@ -519,12 +651,12 @@ input:focus:invalid {
 ```
 
 **Mitä nämä visuaaliset vihjeet saavuttavat:**
-- **Vihreät reunat**: Ilmaisevat onnistunutta validointia, kuten vihreät valot ohjauskeskuksessa
-- **Punaiset reunat**: Osoittavat validointivirheitä, jotka vaativat huomiota
-- **Kohdistuksen korostukset**: Antavat selkeän visuaalisen kontekstin nykyiselle syöttökohdalle
-- **Johdonmukainen tyyli**: Luo ennakoitavia käyttöliittymämalleja, joita käyttäjät voivat oppia
+- **Vihreät reunat**: Osoittavat onnistunutta validointia, kuten vihreät valot ohjauskeskuksessa
+- **Punaiset reunat**: Ilmaisevat validointivirheitä, jotka vaativat huomiota
+- **Fokuskorostukset**: Antavat selkeän visuaalisen kontekstin nykyiselle syöttökohdalle
+- **Johdonmukainen tyyli**: Luo ennustettavia käyttöliittymämalleja, joita käyttäjät voivat oppia
 
-> 💡 **Vinkki**: Käytä `:valid` ja `:invalid` CSS-pseudoluokkia antaaksesi välitöntä visuaalista palautetta käyttäjille heidän kirjoittaessaan, luoden reagoivan ja hyödyllisen käyttöliittymän.
+> 💡 **Vinkki**: Käytä `:valid` ja `:invalid` CSS-pseudoluokkia tarjotaksesi välitöntä visuaalista palautetta käyttäjille heidän kirjoittaessaan, luoden reagoivan ja hyödyllisen käyttöliittymän.
 
 ### Kattavan validoinnin toteuttaminen
 
@@ -572,13 +704,13 @@ Parannetaan rekisteröintilomakettasi vankalla validoinnilla, joka tarjoaa erino
 ```
 
 **Parannetun validoinnin ymmärtäminen:**
-- **Yhdistää** pakollisten kenttien merkinnät hyödyllisiin kuvauksiin
-- **Sisältää** `pattern`-ominaisuudet muotovalidointiin
-- **Tarjoaa** `title`-ominaisuudet saavutettavuuden ja työkaluvihjeiden vuoksi
-- **Lisää** aputekstiä ohjaamaan käyttäjän syöttöä
+- **Yhdistää** pakollisten kenttien indikaattorit hyödyllisiin kuvauksiin
+- **Sisältää** `pattern`-attribuutit muotovalidointia varten
+- **Tarjoaa** `title`-attribuutit saavutettavuuden ja työkaluvihjeiden vuoksi
+- **Lisää** aputekstiä ohjaamaan käyttäjän syötettä
 - **Käyttää** semanttista HTML-rakennetta paremman saavutettavuuden vuoksi
 
-### Kehittyneet validointisäännöt
+### Edistyneet validointisäännöt
 
 **Mitä kukin validointisääntö saavuttaa:**
 
@@ -591,21 +723,21 @@ Parannetaan rekisteröintilomakettasi vankalla validoinnilla, joka tarjoaa erino
 
 ### Validointikäyttäytymisen testaaminen
 
-**Kokeile näitä validointitilanteita:**
+**Kokeile näitä validointiskenaarioita:**
 1. **Lähetä** lomake tyhjillä pakollisilla kentillä
 2. **Syötä** käyttäjänimi, joka on alle 3 merkkiä pitkä
 3. **Kokeile** erikoismerkkejä käyttäjänimi-kentässä
-4. **Syötä** negatiivinen saldo
+4. **Anna** negatiivinen saldo
 
-![Näyttökuva validointivirheestä lomaketta lähetettäessä](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.fi.png)
+![Näyttökuva, jossa näkyy validointivirhe lomakkeen lähettämisen yhteydessä](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.fi.png)
 
 **Mitä huomaat:**
 - **Selaimen näyttämät** natiivivalidointiviestit
 - **Tyylimuutokset** perustuvat `:valid` ja `:invalid`-tiloihin
 - **Lomakkeen lähetys** estetään, kunnes kaikki validoinnit läpäistään
-- **Kohdistus siirtyy automaattisesti** ensimmäiseen virheelliseen kenttään
+- **Fokus siirtyy automaattisesti** ensimmäiseen virheelliseen kenttään
 
-### Asiakas- vs palvelinpuolen validointi
+### Asiakaspuolen vs palvelinpuolen validointi
 
 ```mermaid
 graph LR
@@ -623,33 +755,109 @@ graph LR
 
 **Miksi tarvitset molemmat kerrokset:**
 - **Asiakaspuolen validointi**: Tarjoaa välitöntä palautetta ja parantaa käyttäjäkokemusta
-- **Palvelinpuolen validointi**: Varmistaa turvallisuuden ja käsittelee monimutkaiset liiketoimintasäännöt
-- **Yhdistetty lähestymistapa**: Luo vankan, käyttäjäystävällisen ja turvallisen sovelluksen
+- **Palvelinpuolen validointi**: Varmistaa turvallisuuden ja käsittelee monimutkaisia liiketoimintasääntöjä
+- **Yhdistetty lähestymistapa**: Luo vankkoja, käyttäjäystävällisiä ja turvallisia sovelluksia
 - **Progressiivinen parannus**: Toimii myös, kun JavaScript on pois päältä
 
-> 🛡️ **Tietoturvamuistutus**: Älä koskaan luota pelkkään asiakaspuolen validointiin! Haitalliset käyttäjät voivat ohittaa asiakaspuolen tarkistukset, joten palvelinpuolen validointi on välttämätöntä turvallisuuden ja tietojen eheyden varmistamiseksi.
+> 🛡️ **Tietoturvamuistutus**: Älä koskaan luota pelkkään asiakaspuolen validointiin! Haitalliset käyttäjät voivat ohittaa asiakaspuolen tarkistukset, joten palvelinpuolen validointi on välttämätöntä turvallisuuden ja datan eheyden varmistamiseksi.
 
----
+### ⚡ **Mitä voit tehdä seuraavan 5 minuutin aikana**
+- [ ] Testaa lomakettasi virheellisillä tiedoilla nähdäksesi validointiviestit
+- [ ] Kokeile lomakkeen lähettämistä ilman JavaScriptiä nähdäksesi HTML5-validoinnin
+- [ ] Avaa selaimen kehittäjätyökalut ja tarkista palvelimelle lähetettävä lomakedata
+- [ ] Kokeile erilaisia syöttötyyppejä nähdäksesi mobiilin näppäimistön muutokset
 
+### 🎯 **Mitä voit saavuttaa tämän tunnin aikana**
+- [ ] Suorita oppitunnin jälkeinen kysely ja ymmärrä lomakekäsittelyn käsitteet
+- [ ] Toteuta kattava validointihaaste reaaliaikaisella palautteella
+- [ ] Lisää CSS-tyylit ammattimaisen näköisten lomakkeiden luomiseksi
+- [ ] Luo virheenkäsittelyä kaksoiskäyttäjänimille ja palvelinvirheille
+- [ ] Lisää salasanan vahvistuskentät vastaavuusvalidoinnilla
 
+### 📅 **Viikon mittainen lomakemestaruusmatkasi**
+- [ ] Viimeistele koko pankkisovellus edistyneillä lomaketoiminnoilla
+- [ ] Toteuta tiedostojen latausominaisuudet profiilikuville tai asiakirjoille
+- [ ] Lisää monivaiheiset lomakkeet etenemisen ilmaisimilla ja tilanhallinnalla
+- [ ] Luo dynaamisia lomakkeita, jotka mukautuvat käyttäjän valintojen mukaan
+- [ ] Toteuta lomakkeen automaattinen tallennus ja palautus paremman käyttäjäkokemuksen vuoksi
+- [ ] Lisää edistynyttä validointia, kuten sähköpostin vahvistus ja puhelinnumeron muotoilu
 
----
+### 🌟 **Kuukauden mittainen frontend-kehityksen mestaruus**
+- [ ] Rakenna monimutkaisia lomakesovelluksia ehdollisella logiikalla ja työnkuluilla
+- [ ] Opi lomakekirjastoja ja -kehyksiä nopeaan kehitykseen
+- [ ] Hallitse saavutettavuusohjeet ja inklusiivisen suunnittelun periaatteet
+- [ ] Toteuta kansainvälistäminen ja lokalisaatio globaalien lomakkeiden luomiseksi
+- [ ] Luo uudelleenkäytettäviä lomakekomponenttikirjastoja ja suunnittelujärjestelmiä
+- [ ] Osallistu avoimen lähdekoodin lomakeprojekteihin ja jaa parhaita käytäntöjä
 
-## GitHub Copilot Agent -haaste 🚀
+## 🎯 Lomakekehityksen mestaruusaikataulusi
 
-Käytä Agent-tilaa suorittaaksesi seuraavan haasteen:
+```mermaid
+timeline
+    title Form Development & User Experience Learning Progression
+    
+    section HTML Foundation (15 minutes)
+        Semantic Forms: Form elements
+                      : Input types
+                      : Labels and accessibility
+                      : Progressive enhancement
+        
+    section JavaScript Integration (25 minutes)
+        Event Handling: Form submission
+                      : Data collection
+                      : AJAX communication
+                      : Async/await patterns
+        
+    section Validation Systems (35 minutes)
+        Multi-layer Security: HTML5 validation
+                            : Client-side logic
+                            : Server-side verification
+                            : Error handling
+        
+    section User Experience (45 minutes)
+        Interface Polish: Loading states
+                        : Success messaging
+                        : Error recovery
+                        : Accessibility features
+        
+    section Advanced Patterns (1 week)
+        Professional Forms: Dynamic validation
+                          : Multi-step workflows
+                          : File uploads
+                          : Real-time feedback
+        
+    section Enterprise Skills (1 month)
+        Production Applications: Form libraries
+                               : Testing strategies
+                               : Performance optimization
+                               : Security best practices
+```
 
-**Kuvaus:** Paranna rekisteröintilomaketta kattavalla asiakaspuolen validoinnilla ja käyttäjäpalautteella. Tämä haaste auttaa sinua harjoittelemaan lomakkeen validointia, virheenkäsittelyä ja käyttäjäkokemuksen parantamista interaktiivisella palautteella.
+### 🛠️ Lomakekehityksen työkalupakin yhteenveto
 
-**Tehtävä:** Luo täydellinen lomakkeen validointijärjestelmä rekisteröintilomakkeelle, joka sisältää: 1) Reaaliaikaisen validointipalautteen jokaiselle kentälle käyttäjän kirjoittaessa, 2) Mukautetut validointiviestit, jotka näkyvät kunkin syöttökentän alla, 3) Salasanan vahvistuskentän, jossa on vastaavuusvalidointi, 4) Visuaaliset indikaattorit (kuten vihreät valintamerkit kelvollisille kentille ja punaiset varoitukset virheellisille), 5) Lähetyspainikkeen, joka aktivoituu vasta, kun kaikki validoinnit läpäistään. Käytä HTML5-validointiominaisuuksia, CSS:ää validointitilojen tyylittelyyn ja JavaScriptiä interaktiiviseen käyttäytymiseen.
+Tämän oppitunnin jälkeen olet hallinnut:
+- **HTML5-lomakkeet**: Semanttinen rakenne, syöttötyypit ja saavutettavuusominaisuudet
+- **JavaScript-lomakekäsittely**: Tapahtumien hallinta, datan keräys ja AJAX-kommunikaatio
+- **Validointiarkkitehtuuri**: Monikerroksinen validointi turvallisuutta ja käyttäjäkokemusta varten
+- **Asynkroninen ohjelmointi**: Moderni Fetch API ja async/await-mallit
+- **Virheiden hallinta**: Kattava virheenkäsittely ja käyttäjäpalautesysteemit
+- **Käyttäjäkokemuksen suunnittelu**: Lataustilat, onnistumisviestit ja virheiden palautus
+- **Progressiivinen parannus**: Lomakkeet, jotka toimivat kaikilla selaimilla ja ominaisuuksilla
 
-Lue lisää [agent-tilasta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) täältä.
+**Todelliset sovellukset**: Lomakekehitystaitosi soveltuvat suoraan:
+- **Verkkokauppasovelluksiin**: Kassaprosessit, tilin rekisteröinti ja maksulomakkeet
+- **Yritysohjelmistoihin**: Tietojen syöttöjärjestelmät, raportointikäyttöliittymät ja työnkulut
+- **Sisällönhallintaan**: Julkaisualustat, käyttäjien tuottama sisältö ja hallinnolliset käyttöliittymät
+
+**Prompt:** Luo täydellinen lomakkeen validointijärjestelmä rekisteröintilomakkeelle, joka sisältää: 1) Reaaliaikaisen validointipalautteen jokaiselle kentälle käyttäjän kirjoittaessa, 2) Mukautetut validointiviestit, jotka näkyvät jokaisen syöttökentän alla, 3) Salasanan vahvistuskentän, jossa on vastaavuusvalidointi, 4) Visuaaliset indikaattorit (kuten vihreät valintamerkit kelvollisille kentille ja punaiset varoitukset virheellisille), 5) Lähetä-painikkeen, joka aktivoituu vasta, kun kaikki validoinnit ovat kunnossa. Käytä HTML5-validointiominaisuuksia, CSS:ää validointitilojen tyylittelyyn ja JavaScriptiä interaktiiviseen toimintaan.
+
+Lisätietoja [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) -tilasta löytyy täältä.
 
 ## 🚀 Haaste
 
 Näytä virheilmoitus HTML:ssä, jos käyttäjä on jo olemassa.
 
-Tässä esimerkki siitä, miltä lopullinen kirjautumissivu voi näyttää pienen tyylittelyn jälkeen:
+Tässä on esimerkki siitä, miltä lopullinen kirjautumissivu voi näyttää pienen tyylittelyn jälkeen:
 
 ![Näyttökuva kirjautumissivusta CSS-tyylien lisäämisen jälkeen](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.fi.png)
 
@@ -663,7 +871,7 @@ Kehittäjät ovat olleet erittäin luovia lomakkeiden rakentamisessa, erityisest
 
 ## Tehtävä
 
-[Tyylittele pankkisovelluksesi](assignment.md)
+[Muotoile pankkisovelluksesi](assignment.md)
 
 ---
 

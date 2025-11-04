@@ -1,13 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "20c72cf2e5b0050d38ca3cb14a75a9df",
-  "translation_date": "2025-10-22T23:08:37+00:00",
+  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
+  "translation_date": "2025-11-04T00:08:08+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "br"
 }
 -->
 # Projeto Terrário Parte 1: Introdução ao HTML
+
+```mermaid
+journey
+    title Your HTML Learning Journey
+    section Foundation
+      Create HTML file: 3: Student
+      Add DOCTYPE: 4: Student
+      Structure document: 5: Student
+    section Content
+      Add metadata: 4: Student
+      Include images: 5: Student
+      Organize layout: 5: Student
+    section Semantics
+      Use proper tags: 4: Student
+      Enhance accessibility: 5: Student
+      Build terrarium: 5: Student
+```
 
 ![Introdução ao HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.br.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
@@ -16,7 +33,37 @@ HTML, ou Linguagem de Marcação de Hipertexto, é a base de todos os sites que 
 
 Nesta lição, você criará a estrutura HTML para uma interface de terrário virtual. Este projeto prático ensinará conceitos fundamentais de HTML enquanto você constrói algo visualmente envolvente. Você aprenderá a organizar conteúdo usando elementos semânticos, trabalhar com imagens e criar a base para um aplicativo web interativo.
 
-Ao final desta lição, você terá uma página HTML funcional exibindo imagens de plantas organizadas em colunas, pronta para ser estilizada na próxima lição. Não se preocupe se parecer básico no início – é exatamente isso que o HTML deve fazer antes que o CSS adicione o toque visual.
+Ao final desta lição, você terá uma página HTML funcional exibindo imagens de plantas em colunas organizadas, pronta para ser estilizada na próxima lição. Não se preocupe se parecer básico no início – é exatamente assim que o HTML deve ser antes que o CSS adicione o toque visual.
+
+```mermaid
+mindmap
+  root((HTML Fundamentals))
+    Structure
+      DOCTYPE Declaration
+      HTML Element
+      Head Section
+      Body Content
+    Elements
+      Tags & Attributes
+      Self-closing Tags
+      Nested Elements
+      Block vs Inline
+    Content
+      Text Elements
+      Images
+      Containers (div)
+      Lists
+    Semantics
+      Meaningful Tags
+      Accessibility
+      Screen Readers
+      SEO Benefits
+    Best Practices
+      Proper Nesting
+      Valid Markup
+      Descriptive Alt Text
+      Organized Structure
+```
 
 ## Quiz Pré-Aula
 
@@ -28,20 +75,20 @@ Ao final desta lição, você terá uma página HTML funcional exibindo imagens 
 
 ## Configurando Seu Projeto
 
-Antes de mergulharmos no código HTML, vamos configurar um espaço de trabalho adequado para o seu projeto de terrário. Criar uma estrutura de arquivos organizada desde o início é um hábito crucial que será útil ao longo de sua jornada de desenvolvimento web.
+Antes de mergulharmos no código HTML, vamos configurar um espaço de trabalho adequado para seu projeto de terrário. Criar uma estrutura de arquivos organizada desde o início é um hábito crucial que será útil ao longo de sua jornada de desenvolvimento web.
 
-### Tarefa: Crie a Estrutura do Seu Projeto
+### Tarefa: Crie a Estrutura do Projeto
 
-Você criará uma pasta dedicada ao seu projeto de terrário e adicionará seu primeiro arquivo HTML. Aqui estão duas abordagens que você pode usar:
+Você criará uma pasta dedicada para seu projeto de terrário e adicionará seu primeiro arquivo HTML. Aqui estão duas abordagens que você pode usar:
 
 **Opção 1: Usando o Visual Studio Code**
 1. Abra o Visual Studio Code
-2. Clique em "File" → "Open Folder" ou use `Ctrl+K, Ctrl+O` (Windows/Linux) ou `Cmd+K, Cmd+O` (Mac)
+2. Clique em "Arquivo" → "Abrir Pasta" ou use `Ctrl+K, Ctrl+O` (Windows/Linux) ou `Cmd+K, Cmd+O` (Mac)
 3. Crie uma nova pasta chamada `terrarium` e selecione-a
-4. No painel Explorer, clique no ícone "New File"
+4. No painel Explorer, clique no ícone "Novo Arquivo"
 5. Nomeie seu arquivo como `index.html`
 
-![Explorador do VS Code mostrando a criação de um novo arquivo](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.br.png)
+![Explorador do VS Code mostrando a criação de novo arquivo](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.br.png)
 
 **Opção 2: Usando Comandos no Terminal**
 ```bash
@@ -51,17 +98,35 @@ touch index.html
 code index.html
 ```
 
-**O que esses comandos realizam:**
+**O que esses comandos fazem:**
 - **Cria** um novo diretório chamado `terrarium` para seu projeto
-- **Navega** até o diretório do terrário
-- **Cria** um arquivo vazio chamado `index.html`
+- **Navega** até o diretório terrarium
+- **Cria** um arquivo vazio `index.html`
 - **Abre** o arquivo no Visual Studio Code para edição
 
 > 💡 **Dica Pro**: O nome do arquivo `index.html` é especial no desenvolvimento web. Quando alguém visita um site, os navegadores automaticamente procuram por `index.html` como a página padrão para exibir. Isso significa que uma URL como `https://mysite.com/projects/` automaticamente servirá o arquivo `index.html` da pasta `projects` sem precisar especificar o nome do arquivo na URL.
 
-## Entendendo a Estrutura de um Documento HTML
+## Entendendo a Estrutura do Documento HTML
 
 Todo documento HTML segue uma estrutura específica que os navegadores precisam entender e exibir corretamente. Pense nessa estrutura como uma carta formal – ela tem elementos obrigatórios em uma ordem específica que ajudam o destinatário (neste caso, o navegador) a processar o conteúdo corretamente.
+
+```mermaid
+flowchart TD
+    A["<!DOCTYPE html>"] --> B["<html>"]
+    B --> C["<head>"]
+    C --> D["<title>"]
+    C --> E["<meta charset>"]
+    C --> F["<meta viewport>"]
+    B --> G["<body>"]
+    G --> H["<h1> Heading"]
+    G --> I["<div> Containers"]
+    G --> J["<img> Images"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style G fill:#e8f5e8
+```
 
 Vamos começar adicionando a base essencial que todo documento HTML precisa.
 
@@ -74,7 +139,7 @@ As duas primeiras linhas de qualquer arquivo HTML servem como a "introdução" d
 <html></html>
 ```
 
-**Entendendo o que este código faz:**
+**Entendendo o que esse código faz:**
 - **Declara** o tipo de documento como HTML5 usando `<!DOCTYPE html>`
 - **Cria** o elemento raiz `<html>` que conterá todo o conteúdo da página
 - **Estabelece** padrões modernos da web para renderização adequada no navegador
@@ -82,11 +147,19 @@ As duas primeiras linhas de qualquer arquivo HTML servem como a "introdução" d
 
 > 💡 **Dica do VS Code**: Passe o mouse sobre qualquer tag HTML no VS Code para ver informações úteis dos MDN Web Docs, incluindo exemplos de uso e detalhes de compatibilidade com navegadores.
 
-> 📚 **Saiba Mais**: A declaração DOCTYPE impede que os navegadores entrem no "modo quirks", que era usado para suportar sites muito antigos. O desenvolvimento web moderno usa a simples declaração `<!DOCTYPE html>` para garantir [renderização compatível com os padrões](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
+> 📚 **Saiba Mais**: A declaração DOCTYPE impede que os navegadores entrem no "modo quirks", que era usado para suportar sites muito antigos. O desenvolvimento web moderno usa a simples declaração `<!DOCTYPE html>` para garantir [renderização compatível com padrões](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
+
+### 🔄 **Checagem Pedagógica**
+**Pausa e Reflexão**: Antes de continuar, certifique-se de que você entende:
+- ✅ Por que todo documento HTML precisa de uma declaração DOCTYPE
+- ✅ O que o elemento raiz `<html>` contém
+- ✅ Como essa estrutura ajuda os navegadores a renderizar páginas corretamente
+
+**Teste Rápido**: Você consegue explicar com suas próprias palavras o que significa "renderização compatível com padrões"?
 
 ## Adicionando Metadados Essenciais ao Documento
 
-A seção `<head>` de um documento HTML contém informações cruciais que os navegadores e mecanismos de busca precisam, mas que os visitantes não veem diretamente na página. Pense nela como as informações "nos bastidores" que ajudam sua página a funcionar corretamente e aparecer de forma adequada em diferentes dispositivos e plataformas.
+A seção `<head>` de um documento HTML contém informações cruciais que os navegadores e mecanismos de busca precisam, mas que os visitantes não veem diretamente na página. Pense nisso como as informações "nos bastidores" que ajudam sua página a funcionar corretamente e aparecer corretamente em diferentes dispositivos e plataformas.
 
 Esses metadados dizem aos navegadores como exibir sua página, qual codificação de caracteres usar e como lidar com diferentes tamanhos de tela – tudo essencial para criar páginas web profissionais e acessíveis.
 
@@ -103,7 +176,7 @@ Insira esta seção `<head>` entre suas tags de abertura e fechamento `<html>`:
 </head>
 ```
 
-**Desmembrando o que cada elemento realiza:**
+**Desmembrando o que cada elemento faz:**
 - **Define** o título da página que aparece nas abas do navegador e nos resultados de busca
 - **Especifica** a codificação de caracteres UTF-8 para exibição correta de texto em todo o mundo
 - **Garante** compatibilidade com versões modernas do Internet Explorer
@@ -143,7 +216,7 @@ Atualize seu arquivo HTML para incluir o elemento `<body>`:
 - **Estabelece** a estrutura básica do documento HTML5
 - **Inclui** metadados essenciais para renderização adequada no navegador
 - **Cria** um corpo vazio pronto para seu conteúdo visível
-- **Segue** as melhores práticas do desenvolvimento web moderno
+- **Segue** as melhores práticas modernas de desenvolvimento web
 
 Agora você está pronto para adicionar os elementos visíveis do seu terrário. Usaremos elementos `<div>` como contêineres para organizar diferentes seções de conteúdo e elementos `<img>` para exibir as imagens das plantas.
 
@@ -213,24 +286,68 @@ Agora adicione as imagens das plantas organizadas em duas colunas entre suas tag
 </div>
 ```
 
-**Passo a passo, aqui está o que está acontecendo neste código:**
+**Passo a passo, aqui está o que está acontecendo nesse código:**
 - **Cria** um contêiner principal da página com `id="page"` para conter todo o conteúdo
 - **Estabelece** dois contêineres de coluna: `left-container` e `right-container`
 - **Organiza** 7 plantas na coluna esquerda e 7 plantas na coluna direita
 - **Envolve** cada imagem de planta em um div `plant-holder` para posicionamento individual
 - **Aplica** nomes de classe consistentes para estilização com CSS na próxima lição
-- **Atribui** IDs únicos a cada imagem de planta para interação com JavaScript mais tarde
+- **Atribui** IDs únicos a cada imagem de planta para interação com JavaScript posteriormente
 - **Inclui** caminhos de arquivo corretos apontando para a pasta de imagens
 
-> 🤔 **Considere Isso**: Note que todas as imagens atualmente têm o mesmo texto alternativo "plant". Isso não é ideal para acessibilidade. Usuários de leitores de tela ouviriam "plant" repetido 14 vezes sem saber qual planta específica cada imagem mostra. Você consegue pensar em textos alternativos melhores e mais descritivos para cada imagem?
+> 🤔 **Considere Isso**: Note que todas as imagens atualmente têm o mesmo texto alternativo "plant". Isso não é ideal para acessibilidade. Usuários de leitores de tela ouviriam "plant" repetidamente 14 vezes sem saber qual planta cada imagem mostra. Você consegue pensar em textos alternativos melhores e mais descritivos para cada imagem?
 
-> 📝 **Tipos de Elementos HTML**: Elementos `<div>` são "em bloco" e ocupam toda a largura, enquanto elementos `<span>` são "em linha" e ocupam apenas a largura necessária. O que você acha que aconteceria se você mudasse todas essas tags `<div>` para tags `<span>`?
+> 📝 **Tipos de Elementos HTML**: Elementos `<div>` são "em nível de bloco" e ocupam toda a largura, enquanto elementos `<span>` são "em linha" e ocupam apenas a largura necessária. O que você acha que aconteceria se você mudasse todas essas tags `<div>` para tags `<span>`?
 
-Com essa marcação adicionada, as plantas aparecerão na tela, embora ainda não pareçam polidas – é para isso que serve o CSS na próxima lição! Por enquanto, você tem uma base sólida de HTML que organiza seu conteúdo corretamente e segue as melhores práticas de acessibilidade.
+### 🔄 **Checagem Pedagógica**
+**Entendimento da Estrutura**: Reserve um momento para revisar sua estrutura HTML:
+- ✅ Você consegue identificar os contêineres principais no seu layout?
+- ✅ Você entende por que cada imagem tem um ID único?
+- ✅ Como você descreveria o propósito dos divs `plant-holder`?
+
+**Inspeção Visual**: Abra seu arquivo HTML em um navegador. Você deve ver:
+- Uma lista básica de imagens de plantas
+- Imagens organizadas em duas colunas
+- Layout simples e sem estilo
+
+**Lembre-se**: Essa aparência simples é exatamente como o HTML deve ser antes da estilização com CSS!
+
+Com essa marcação adicionada, as plantas aparecerão na tela, embora ainda não pareçam polidas – isso é o que o CSS fará na próxima lição! Por enquanto, você tem uma base sólida de HTML que organiza seu conteúdo corretamente e segue as melhores práticas de acessibilidade.
 
 ## Usando HTML Semântico para Acessibilidade
 
 HTML semântico significa escolher elementos HTML com base em seu significado e propósito, não apenas em sua aparência. Quando você usa marcação semântica, está comunicando a estrutura e o significado do seu conteúdo para navegadores, mecanismos de busca e tecnologias assistivas como leitores de tela.
+
+```mermaid
+flowchart TD
+    A[Need to add content?] --> B{What type?}
+    B -->|Main heading| C["<h1>"]
+    B -->|Subheading| D["<h2>, <h3>, etc."]
+    B -->|Paragraph| E["<p>"]
+    B -->|List| F["<ul>, <ol>"]
+    B -->|Navigation| G["<nav>"]
+    B -->|Article| H["<article>"]
+    B -->|Section| I["<section>"]
+    B -->|Generic container| J["<div>"]
+    
+    C --> K[Screen readers announce as main title]
+    D --> L[Creates proper heading hierarchy]
+    E --> M[Provides proper text spacing]
+    F --> N[Enables list navigation shortcuts]
+    G --> O[Identifies navigation landmarks]
+    H --> P[Marks standalone content]
+    I --> Q[Groups related content]
+    J --> R[Use only when no semantic tag fits]
+    
+    style C fill:#4caf50
+    style D fill:#4caf50
+    style E fill:#4caf50
+    style F fill:#4caf50
+    style G fill:#2196f3
+    style H fill:#2196f3
+    style I fill:#2196f3
+    style J fill:#ff9800
+```
 
 Essa abordagem torna seus sites mais acessíveis para usuários com deficiências e ajuda os mecanismos de busca a entender melhor seu conteúdo. É um princípio fundamental do desenvolvimento web moderno que cria experiências melhores para todos.
 
@@ -251,18 +368,18 @@ Vamos adicionar um título adequado à sua página de terrário. Insira esta lin
 
 **Exemplos de escolhas semânticas vs. não semânticas:**
 
-| Propósito         | ✅ Escolha Semântica         | ❌ Escolha Não Semântica         |
-|-------------------|-----------------------------|----------------------------------|
-| Título principal  | `<h1>Título</h1>`           | `<div class="big-text">Título</div>` |
-| Navegação         | `<nav><ul><li></li></ul></nav>` | `<div class="menu"><div></div></div>` |
-| Botão             | `<button>Clique aqui</button>` | `<span onclick="...">Clique aqui</span>` |
-| Conteúdo do artigo| `<article><p></p></article>` | `<div class="content"><div></div></div>` |
+| Propósito | ✅ Escolha Semântica | ❌ Escolha Não Semântica |
+|-----------|----------------------|--------------------------|
+| Título principal | `<h1>Título</h1>` | `<div class="big-text">Título</div>` |
+| Navegação | `<nav><ul><li></li></ul></nav>` | `<div class="menu"><div></div></div>` |
+| Botão | `<button>Clique aqui</button>` | `<span onclick="...">Clique aqui</span>` |
+| Conteúdo do artigo | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
 > 🎥 **Veja em Ação**: Assista [como leitores de tela interagem com páginas web](https://www.youtube.com/watch?v=OUDV1gqs9GA) para entender por que a marcação semântica é crucial para acessibilidade. Note como a estrutura adequada do HTML ajuda os usuários a navegar eficientemente.
 
 ## Criando o Contêiner do Terrário
 
-Agora vamos adicionar a estrutura HTML para o próprio terrário – o recipiente de vidro onde as plantas serão colocadas. Esta seção demonstra um conceito importante: o HTML fornece estrutura, mas sem a estilização do CSS, esses elementos ainda não serão visíveis.
+Agora vamos adicionar a estrutura HTML para o próprio terrário – o recipiente de vidro onde as plantas serão colocadas eventualmente. Esta seção demonstra um conceito importante: o HTML fornece estrutura, mas sem estilização CSS, esses elementos ainda não serão visíveis.
 
 A marcação do terrário usa nomes de classe descritivos que tornarão a estilização com CSS intuitiva e fácil de manter na próxima lição.
 
@@ -282,45 +399,73 @@ Insira esta marcação acima da última tag `</div>` (antes da tag de fechamento
 </div>
 ```
 
-**Entendendo esta estrutura do terrário:**
+**Entendendo essa estrutura do terrário:**
 - **Cria** um contêiner principal do terrário com um ID único para estilização
 - **Define** elementos separados para cada componente visual (topo, paredes, terra, fundo)
-- **Inclui** elementos aninhados para efeitos de reflexão no vidro (elementos glossy)
-- **Usa** nomes de classe descritivos que indicam claramente o propósito de cada elemento
-- **Prepara** a estrutura para estilização com CSS que criará a aparência do terrário de vidro
+- **Inclui** elementos aninhados para efeitos de reflexão em vidro (elementos brilhantes)
+- **Utiliza** nomes de classes descritivos que indicam claramente o propósito de cada elemento
+- **Prepara** a estrutura para estilização em CSS que criará a aparência de um terrário de vidro
 
-> 🤔 **Percebeu Algo?**: Mesmo que você tenha adicionado essa marcação, nada novo aparece na página! Isso ilustra perfeitamente como o HTML fornece estrutura enquanto o CSS fornece aparência. Esses elementos `<div>` existem, mas ainda não têm estilização visual – isso será abordado na próxima lição!
+> 🤔 **Percebeu Algo?**: Mesmo que você tenha adicionado essa marcação, nada novo aparece na página! Isso ilustra perfeitamente como o HTML fornece estrutura enquanto o CSS fornece aparência. Esses elementos `<div>` existem, mas ainda não têm estilo visual – isso será abordado na próxima lição!
+
+```mermaid
+flowchart TD
+    A[HTML Document] --> B[Document Head]
+    A --> C[Document Body]
+    B --> D[Title Element]
+    B --> E[Meta Charset]
+    B --> F[Meta Viewport]
+    C --> G[Main Heading]
+    C --> H[Page Container]
+    H --> I[Left Container with 7 plants]
+    H --> J[Right Container with 7 plants]
+    H --> K[Terrarium Structure]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style H fill:#f3e5f5
+```
+
+### 🔄 **Verificação Pedagógica**
+**Domínio da Estrutura HTML**: Antes de avançar, certifique-se de que você consegue:
+- ✅ Explicar a diferença entre estrutura HTML e aparência visual
+- ✅ Identificar elementos HTML semânticos e não semânticos
+- ✅ Descrever como uma marcação adequada beneficia a acessibilidade
+- ✅ Reconhecer a estrutura completa da árvore do documento
+
+**Testando Sua Compreensão**: Tente abrir seu arquivo HTML em um navegador com o JavaScript desativado e o CSS removido. Isso mostrará a estrutura semântica pura que você criou!
 
 ---
 
 ## Desafio do Agente GitHub Copilot
 
-Use o modo Agent para completar o seguinte desafio:
+Use o modo Agente para completar o seguinte desafio:
 
-**Descrição:** Crie uma estrutura HTML semântica para uma seção de guia de cuidados com plantas que pode ser adicionada ao projeto do terrário.
-**Prompt:** Crie uma seção HTML semântica que inclua um título principal "Guia de Cuidados com Plantas", três subseções com os títulos "Rega", "Requisitos de Luz" e "Cuidados com o Solo", cada uma contendo um parágrafo com informações sobre cuidados com plantas. Use tags HTML semânticas adequadas como `<section>`, `<h2>`, `<h3>` e `<p>` para estruturar o conteúdo corretamente.
+**Descrição:** Crie uma estrutura HTML semântica para uma seção de guia de cuidados com plantas que pode ser adicionada ao projeto de terrário.
 
-Saiba mais sobre [modo agente](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aqui.
+**Prompt:** Crie uma seção HTML semântica que inclua um título principal "Guia de Cuidados com Plantas", três subseções com os títulos "Rega", "Requisitos de Luz" e "Cuidados com o Solo", cada uma contendo um parágrafo com informações sobre cuidados com plantas. Use tags HTML semânticas apropriadas como `<section>`, `<h2>`, `<h3>` e `<p>` para estruturar o conteúdo corretamente.
 
-## Desafio de História do HTML
+Saiba mais sobre o [modo agente](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aqui.
 
-**Aprendendo sobre a evolução da web**
+## Desafio de Exploração da História do HTML
 
-O HTML evoluiu significativamente desde que Tim Berners-Lee criou o primeiro navegador da web no CERN em 1990. Algumas tags mais antigas, como `<marquee>`, agora estão obsoletas porque não funcionam bem com os padrões modernos de acessibilidade e princípios de design responsivo.
+**Aprendendo Sobre a Evolução da Web**
 
-**Experimente:**
-1. Envolva temporariamente o título `<h1>` em uma tag `<marquee>`: `<marquee><h1>Meu Terrário</h1></marquee>`
+O HTML evoluiu significativamente desde que Tim Berners-Lee criou o primeiro navegador web no CERN em 1990. Algumas tags mais antigas, como `<marquee>`, agora estão obsoletas porque não funcionam bem com os padrões modernos de acessibilidade e design responsivo.
+
+**Experimente Isso:**
+1. Envolva temporariamente seu título `<h1>` em uma tag `<marquee>`: `<marquee><h1>Meu Terrário</h1></marquee>`
 2. Abra sua página em um navegador e observe o efeito de rolagem
 3. Considere por que essa tag foi descontinuada (dica: pense na experiência do usuário e na acessibilidade)
-4. Remova a tag `<marquee>` e volte à marcação semântica
+4. Remova a tag `<marquee>` e retorne à marcação semântica
 
-**Perguntas para reflexão:**
+**Perguntas para Reflexão:**
 - Como um título rolando pode afetar usuários com deficiências visuais ou sensibilidade ao movimento?
 - Quais técnicas modernas de CSS poderiam alcançar efeitos visuais semelhantes de forma mais acessível?
 - Por que é importante usar padrões web atuais em vez de elementos obsoletos?
 
 Explore mais sobre [elementos HTML obsoletos e descontinuados](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) para entender como os padrões da web evoluem para melhorar a experiência do usuário.
-
 
 ## Quiz Pós-Aula
 
@@ -328,11 +473,11 @@ Explore mais sobre [elementos HTML obsoletos e descontinuados](https://developer
 
 ## Revisão e Autoestudo
 
-**Aprofunde seu conhecimento em HTML**
+**Aprofunde Seu Conhecimento em HTML**
 
 O HTML tem sido a base da web por mais de 30 anos, evoluindo de uma linguagem simples de marcação de documentos para uma plataforma sofisticada para construir aplicações interativas. Compreender essa evolução ajuda você a valorizar os padrões modernos da web e tomar melhores decisões de desenvolvimento.
 
-**Caminhos de aprendizado recomendados:**
+**Caminhos de Aprendizado Recomendados:**
 
 1. **História e Evolução do HTML**
    - Pesquise a linha do tempo do HTML 1.0 ao HTML5
@@ -345,21 +490,109 @@ O HTML tem sido a base da web por mais de 30 anos, evoluindo de uma linguagem si
    - Aprenda sobre atributos ARIA para melhorar a acessibilidade
 
 3. **Desenvolvimento Web Moderno**
-   - Explore [como construir sites responsivos](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon) no Microsoft Learn
+   - Explore [como criar sites responsivos](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon) no Microsoft Learn
    - Entenda como o HTML se integra com CSS e JavaScript
-   - Aprenda sobre desempenho na web e melhores práticas de SEO
+   - Aprenda sobre desempenho web e melhores práticas de SEO
 
-**Perguntas para reflexão:**
+**Perguntas para Reflexão:**
 - Quais tags HTML obsoletas você descobriu e por que foram removidas?
-- Quais novos recursos do HTML estão sendo propostos para versões futuras?
-- Como o HTML semântico contribui para a acessibilidade na web e para o SEO?
+- Quais novos recursos HTML estão sendo propostos para versões futuras?
+- Como o HTML semântico contribui para acessibilidade e SEO?
 
+### ⚡ **O Que Você Pode Fazer nos Próximos 5 Minutos**
+- [ ] Abra o DevTools (F12) e inspecione a estrutura HTML do seu site favorito
+- [ ] Crie um arquivo HTML simples com tags básicas: `<h1>`, `<p>` e `<img>`
+- [ ] Valide seu HTML usando o Validador HTML do W3C online
+- [ ] Tente adicionar um comentário ao seu HTML usando `<!-- comentário -->`
+
+### 🎯 **O Que Você Pode Realizar Nesta Hora**
+- [ ] Complete o quiz pós-aula e revise os conceitos de HTML semântico
+- [ ] Construa uma página simples sobre você usando uma estrutura HTML adequada
+- [ ] Experimente diferentes níveis de cabeçalhos e tags de formatação de texto
+- [ ] Adicione imagens e links para praticar integração multimídia
+- [ ] Pesquise recursos do HTML5 que você ainda não experimentou
+
+### 📅 **Sua Jornada de HTML Durante a Semana**
+- [ ] Complete a tarefa do projeto de terrário com marcação semântica
+- [ ] Crie uma página acessível usando rótulos e funções ARIA
+- [ ] Pratique a criação de formulários com vários tipos de entrada
+- [ ] Explore APIs do HTML5 como localStorage ou geolocalização
+- [ ] Estude padrões HTML responsivos e design mobile-first
+- [ ] Revise o código HTML de outros desenvolvedores para melhores práticas
+
+### 🌟 **Seu Mês de Fundamentos da Web**
+- [ ] Construa um site de portfólio mostrando sua maestria em HTML
+- [ ] Aprenda modelagem HTML com um framework como Handlebars
+- [ ] Contribua para projetos de código aberto melhorando a documentação HTML
+- [ ] Domine conceitos avançados de HTML como elementos personalizados
+- [ ] Integre HTML com frameworks CSS e bibliotecas JavaScript
+- [ ] Oriente outros que estão aprendendo os fundamentos do HTML
+
+## 🎯 Sua Linha do Tempo de Maestria em HTML
+
+```mermaid
+timeline
+    title HTML Learning Progression
+    
+    section Foundation (5 minutes)
+        Document Structure: DOCTYPE declaration
+                         : HTML root element
+                         : Head vs Body understanding
+        
+    section Metadata (10 minutes)
+        Essential Meta Tags: Character encoding
+                           : Viewport configuration
+                           : Browser compatibility
+        
+    section Content Creation (15 minutes)
+        Image Integration: Proper file paths
+                         : Alt text importance
+                         : Self-closing tags
+        
+    section Layout Organization (20 minutes)
+        Container Strategy: Div elements for structure
+                          : Class and ID naming
+                          : Nested element hierarchy
+        
+    section Semantic Mastery (30 minutes)
+        Meaningful Markup: Heading hierarchy
+                         : Screen reader navigation
+                         : Accessibility best practices
+        
+    section Advanced Concepts (1 hour)
+        HTML5 Features: Modern semantic elements
+                      : ARIA attributes
+                      : Performance considerations
+        
+    section Professional Skills (1 week)
+        Code Organization: File structure patterns
+                         : Maintainable markup
+                         : Team collaboration
+        
+    section Expert Level (1 month)
+        Modern Web Standards: Progressive enhancement
+                            : Cross-browser compatibility
+                            : HTML specification updates
+```
+
+### 🛠️ Resumo do Seu Kit de Ferramentas HTML
+
+Após concluir esta lição, você agora tem:
+- **Estrutura do Documento**: Fundamento completo do HTML5 com DOCTYPE adequado
+- **Marcação Semântica**: Tags significativas que melhoram acessibilidade e SEO
+- **Integração de Imagens**: Organização de arquivos e práticas de texto alternativo
+- **Contêineres de Layout**: Uso estratégico de divs com nomes de classes descritivos
+- **Consciência de Acessibilidade**: Compreensão da navegação por leitores de tela
+- **Padrões Modernos**: Práticas atuais do HTML5 e conhecimento de tags obsoletas
+- **Base para Projetos**: Base sólida para estilização em CSS e interatividade com JavaScript
+
+**Próximos Passos**: Sua estrutura HTML está pronta para estilização em CSS! A base semântica que você construiu tornará a próxima lição muito mais fácil de entender.
 
 ## Tarefa
 
-[Pratique seu HTML: Crie um modelo de blog](assignment.md)
+[Pratique seu HTML: Construa um mockup de blog](assignment.md)
 
 ---
 
 **Aviso Legal**:  
-Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se a tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
