@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 - 文本及圖像應用程式生成
 - 搜索應用程式
 
-造訪 [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) 開始學習！
+造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
 
 ## 🌱 開始使用
 
