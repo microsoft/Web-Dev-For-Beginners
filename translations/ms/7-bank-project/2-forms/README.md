@@ -1,25 +1,72 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-24T14:36:26+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2025-11-06T12:16:22+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "ms"
 }
 -->
-# Membina Aplikasi Perbankan Bahagian 2: Membina Borang Log Masuk dan Pendaftaran
+# Bina Aplikasi Perbankan Bahagian 2: Bina Borang Log Masuk dan Pendaftaran
+
+```mermaid
+journey
+    title Your Form Development Journey
+    section HTML Foundation
+      Understand form elements: 3: Student
+      Learn input types: 4: Student
+      Master accessibility: 4: Student
+    section JavaScript Integration
+      Handle form submission: 4: Student
+      Implement AJAX communication: 5: Student
+      Process server responses: 5: Student
+    section Validation Systems
+      Create multi-layer validation: 5: Student
+      Enhance user experience: 5: Student
+      Ensure data integrity: 5: Student
+```
 
 ## Kuiz Pra-Kuliah
 
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Pernahkah anda mengisi borang dalam talian dan ia menolak format e-mel anda? Atau kehilangan semua maklumat apabila anda klik hantar? Kita semua pernah mengalami situasi yang menjengkelkan ini.
+Pernahkah anda mengisi borang dalam talian dan ia menolak format e-mel anda? Atau kehilangan semua maklumat apabila anda klik hantar? Kita semua pernah mengalami situasi yang mengecewakan ini.
 
-Borang adalah jambatan antara pengguna anda dan fungsi aplikasi anda. Seperti protokol berhati-hati yang digunakan oleh pengawal trafik udara untuk membimbing pesawat dengan selamat ke destinasi mereka, borang yang direka dengan baik memberikan maklum balas yang jelas dan mencegah kesilapan yang mahal. Borang yang buruk, sebaliknya, boleh membuat pengguna menjauh lebih cepat daripada komunikasi yang salah di lapangan terbang yang sibuk.
+Borang adalah jambatan antara pengguna anda dan fungsi aplikasi anda. Seperti protokol berhati-hati yang digunakan oleh pengawal trafik udara untuk membimbing pesawat dengan selamat ke destinasi mereka, borang yang direka dengan baik memberikan maklum balas yang jelas dan mencegah kesilapan yang mahal. Borang yang buruk, sebaliknya, boleh membuat pengguna meninggalkan aplikasi anda lebih cepat daripada salah komunikasi di lapangan terbang yang sibuk.
 
 Dalam pelajaran ini, kita akan mengubah aplikasi perbankan statik anda menjadi aplikasi interaktif. Anda akan belajar membina borang yang memvalidasi input pengguna, berkomunikasi dengan pelayan, dan memberikan maklum balas yang berguna. Anggaplah ia sebagai membina antara muka kawalan yang membolehkan pengguna menavigasi ciri aplikasi anda.
 
 Pada akhirnya, anda akan mempunyai sistem log masuk dan pendaftaran lengkap dengan validasi yang membimbing pengguna ke arah kejayaan dan bukannya kekecewaan.
+
+```mermaid
+mindmap
+  root((Form Development))
+    HTML Foundation
+      Semantic Elements
+      Input Types
+      Accessibility
+      Label Association
+    User Experience
+      Validation Feedback
+      Error Prevention
+      Loading States
+      Success Messaging
+    JavaScript Integration
+      Event Handling
+      AJAX Communication
+      Data Processing
+      Error Management
+    Validation Layers
+      HTML5 Validation
+      Client-side Logic
+      Server-side Security
+      Progressive Enhancement
+    Modern Patterns
+      Fetch API
+      Async/Await
+      Form Data API
+      Promise Handling
+```
 
 ## Prasyarat
 
@@ -33,11 +80,11 @@ Sebelum kita mula membina borang, mari pastikan anda telah menyediakan semuanya 
 | [Node.js](https://nodejs.org) | ✅ Diperlukan | Runtime JavaScript untuk pelayan |
 | [Pelayan API Bank](../api/README.md) | ✅ Diperlukan | Perkhidmatan backend untuk penyimpanan data |
 
-> 💡 **Tip Pembangunan**: Anda akan menjalankan dua pelayan berasingan secara serentak – satu untuk aplikasi perbankan front-end anda dan satu lagi untuk API backend. Persediaan ini mencerminkan pembangunan dunia sebenar di mana perkhidmatan front-end dan backend beroperasi secara bebas.
+> 💡 **Tip Pembangunan**: Anda akan menjalankan dua pelayan berasingan secara serentak – satu untuk aplikasi perbankan front-end anda dan satu lagi untuk API backend. Persediaan ini mencerminkan pembangunan dunia nyata di mana perkhidmatan front-end dan backend beroperasi secara bebas.
 
 ### Konfigurasi Pelayan
 
-**Persekitaran pembangunan anda akan termasuk:**
+**Persekitaran pembangunan anda akan merangkumi:**
 - **Pelayan front-end**: Menyediakan aplikasi perbankan anda (biasanya port `3000`)
 - **Pelayan API backend**: Mengendalikan penyimpanan dan pengambilan data (port `5000`)
 - **Kedua-dua pelayan** boleh berjalan serentak tanpa konflik
@@ -76,7 +123,7 @@ Borang moden jauh lebih canggih daripada input teks asas. HTML5 memperkenalkan j
 - **Mencipta** bekas borang dengan pengenal unik
 - **Menentukan** kaedah HTTP untuk penghantaran data
 - **Mengaitkan** label dengan input untuk kebolehaksesan
-- **Menentukan** butang hantar untuk memproses borang
+- **Mendefinisikan** butang hantar untuk memproses borang
 
 ### Jenis Input Moden dan Atribut
 
@@ -101,14 +148,14 @@ Borang moden jauh lebih canggih daripada input teks asas. HTML5 memperkenalkan j
 
 **Apa yang dilakukan oleh setiap jenis butang:**
 - **Butang hantar**: Mencetuskan penghantaran borang dan menghantar data ke endpoint yang ditentukan
-- **Butang reset**: Memulihkan semua medan borang ke keadaan awal mereka
+- **Butang reset**: Memulihkan semua medan borang ke keadaan awalnya
 - **Butang biasa**: Tidak memberikan kelakuan lalai, memerlukan JavaScript khusus untuk fungsi
 
 > ⚠️ **Nota Penting**: Elemen `<input>` adalah penutup sendiri dan tidak memerlukan tag penutup. Amalan terbaik moden adalah menulis `<input>` tanpa garis miring.
 
 ### Membina Borang Log Masuk Anda
 
-Sekarang mari kita cipta borang log masuk praktikal yang menunjukkan amalan borang HTML moden. Kita akan bermula dengan struktur asas dan secara beransur-ansur meningkatkannya dengan ciri kebolehaksesan dan validasi.
+Sekarang mari kita buat borang log masuk praktikal yang menunjukkan amalan borang HTML moden. Kita akan bermula dengan struktur asas dan secara beransur-ansur meningkatkannya dengan ciri kebolehaksesan dan validasi.
 
 ```html
 <template id="login">
@@ -160,7 +207,7 @@ graph TD
 
 > 🎯 **Matlamat Kebolehaksesan**: Setiap input borang harus mempunyai label yang berkaitan. Amalan mudah ini menjadikan borang anda boleh digunakan oleh semua orang, termasuk pengguna kurang upaya, dan meningkatkan pengalaman untuk semua pengguna.
 
-### Membina Borang Pendaftaran
+### Membuat Borang Pendaftaran
 
 Borang pendaftaran memerlukan maklumat yang lebih terperinci untuk mencipta akaun pengguna lengkap. Mari kita bina dengan ciri HTML5 moden dan kebolehaksesan yang dipertingkatkan.
 
@@ -210,16 +257,32 @@ Borang pendaftaran memerlukan maklumat yang lebih terperinci untuk mencipta akau
 
 | Ciri | Kelebihan | Contoh |
 |------|----------|--------|
-| `type="number"` | Papan kekunci angka pada mudah alih | Memudahkan kemasukan baki |
+| `type="number"` | Papan kekunci angka pada mudah alih | Memudahkan input baki |
 | `step="0.01"` | Kawalan ketepatan perpuluhan | Membolehkan sen dalam mata wang |
 | `autocomplete` | Autofill pelayar | Penyelesaian borang lebih cepat |
 | `placeholder` | Petunjuk kontekstual | Membimbing jangkaan pengguna |
 
-> 🎯 **Cabaran Kebolehaksesan**: Cuba navigasi borang menggunakan hanya papan kekunci anda! Gunakan `Tab` untuk bergerak antara medan, `Space` untuk menandakan kotak, dan `Enter` untuk menghantar. Pengalaman ini membantu anda memahami bagaimana pengguna pembaca skrin berinteraksi dengan borang anda.
+> 🎯 **Cabaran Kebolehaksesan**: Cuba navigasi borang menggunakan hanya papan kekunci anda! Gunakan `Tab` untuk bergerak antara medan, `Space` untuk memilih kotak, dan `Enter` untuk menghantar. Pengalaman ini membantu anda memahami bagaimana pengguna pembaca skrin berinteraksi dengan borang anda.
+
+### 🔄 **Pemeriksaan Pedagogi**
+**Pemahaman Asas Borang**: Sebelum melaksanakan JavaScript, pastikan anda memahami:
+- ✅ Bagaimana HTML semantik mencipta struktur borang yang boleh diakses
+- ✅ Mengapa jenis input penting untuk papan kekunci mudah alih dan validasi
+- ✅ Hubungan antara label dan kawalan borang
+- ✅ Bagaimana atribut borang mempengaruhi kelakuan lalai pelayar
+
+**Ujian Kendiri Cepat**: Apa yang berlaku jika anda menghantar borang tanpa pengendalian JavaScript?
+*Jawapan: Pelayar melakukan penghantaran lalai, biasanya mengarahkan ke URL tindakan*
+
+**Kelebihan Borang HTML5**: Borang moden menyediakan:
+- **Validasi Terbina Dalam**: Pemeriksaan format e-mel dan nombor automatik
+- **Pengoptimuman Mudah Alih**: Papan kekunci yang sesuai untuk jenis input yang berbeza
+- **Kebolehaksesan**: Sokongan pembaca skrin dan navigasi papan kekunci
+- **Peningkatan Progresif**: Berfungsi walaupun JavaScript dilumpuhkan
 
 ## Memahami Kaedah Penghantaran Borang
 
-Apabila seseorang mengisi borang anda dan klik hantar, data itu perlu pergi ke suatu tempat – biasanya ke pelayan yang boleh menyimpannya. Terdapat beberapa cara berbeza ini boleh berlaku, dan mengetahui yang mana satu untuk digunakan boleh menyelamatkan anda daripada beberapa sakit kepala kemudian.
+Apabila seseorang mengisi borang anda dan menekan hantar, data itu perlu pergi ke suatu tempat – biasanya ke pelayan yang boleh menyimpannya. Terdapat beberapa cara berbeza ini boleh berlaku, dan mengetahui yang mana satu untuk digunakan boleh menyelamatkan anda daripada beberapa sakit kepala kemudian.
 
 Mari kita lihat apa yang sebenarnya berlaku apabila seseorang klik butang hantar itu.
 
@@ -251,7 +314,7 @@ graph TD
     D --> J[More secure]
 ```
 
-**Memahami perbezaan:**
+**Memahami perbezaannya:**
 
 | Kaedah | Kes Penggunaan | Lokasi Data | Tahap Keselamatan | Had Saiz |
 |--------|---------------|-------------|-------------------|----------|
@@ -262,7 +325,7 @@ graph TD
 - **GET**: Menambahkan data borang ke URL sebagai parameter pertanyaan (sesuai untuk operasi carian)
 - **POST**: Termasuk data dalam badan permintaan (penting untuk maklumat sensitif)
 - **Had GET**: Kekangan saiz, data kelihatan, sejarah pelayar yang berterusan
-- **Kelebihan POST**: Kapasiti data yang besar, perlindungan privasi, sokongan muat naik fail
+- **Kelebihan POST**: Kapasiti data besar, perlindungan privasi, sokongan muat naik fail
 
 > 💡 **Amalan Terbaik**: Gunakan `GET` untuk borang carian dan penapis (pengambilan data), gunakan `POST` untuk pendaftaran pengguna, log masuk, dan penciptaan data.
 
@@ -289,12 +352,12 @@ Mari kita konfigurasikan borang pendaftaran anda untuk berkomunikasi dengan betu
 
 ![Tetingkap pelayar di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.ms.png)
 
-**Apa yang anda patut lihat:**
-- **Pelayar mengalihkan** ke URL endpoint API
+**Apa yang anda harus lihat:**
+- **Pelayar mengarahkan** ke URL endpoint API
 - **Respons JSON** yang mengandungi data akaun baru anda
 - **Pengesahan pelayan** bahawa akaun berjaya dibuat
 
-> 🧪 **Masa Eksperimen**: Cuba daftar lagi dengan nama pengguna yang sama. Apa respons yang anda dapat? Ini membantu anda memahami bagaimana pelayan mengendalikan data pendua dan keadaan ralat.
+> 🧪 **Masa Eksperimen**: Cuba daftar lagi dengan nama pengguna yang sama. Apa respons yang anda dapat? Ini membantu anda memahami bagaimana pelayan mengendalikan data duplikat dan keadaan ralat.
 
 ### Memahami Respons JSON
 
@@ -311,15 +374,15 @@ Mari kita konfigurasikan borang pendaftaran anda untuk berkomunikasi dengan betu
 
 **Respons ini mengesahkan:**
 - **Mencipta** akaun baru dengan data yang anda tentukan
-- **Memberikan** pengenal unik untuk rujukan masa depan
+- **Menetapkan** pengenal unik untuk rujukan masa depan
 - **Mengembalikan** semua maklumat akaun untuk pengesahan
 - **Menunjukkan** penyimpanan pangkalan data yang berjaya
 
 ## Pengendalian Borang Moden dengan JavaScript
 
-Penghantaran borang tradisional menyebabkan halaman dimuat semula sepenuhnya, sama seperti misi angkasa awal yang memerlukan tetapan semula sistem sepenuhnya untuk pembetulan kursus. Pendekatan ini mengganggu pengalaman pengguna dan kehilangan keadaan aplikasi.
+Penghantaran borang tradisional menyebabkan muat semula halaman penuh, sama seperti bagaimana misi angkasa awal memerlukan tetapan semula sistem lengkap untuk pembetulan kursus. Pendekatan ini mengganggu pengalaman pengguna dan kehilangan keadaan aplikasi.
 
-Pengendalian borang JavaScript berfungsi seperti sistem panduan berterusan yang digunakan oleh kapal angkasa moden – membuat penyesuaian masa nyata tanpa kehilangan konteks navigasi. Kita boleh memintas penghantaran borang, memberikan maklum balas segera, mengendalikan kesilapan dengan baik, dan mengemas kini antara muka berdasarkan respons pelayan sambil mengekalkan kedudukan pengguna dalam aplikasi.
+Pengendalian borang JavaScript berfungsi seperti sistem panduan berterusan yang digunakan oleh kapal angkasa moden – membuat penyesuaian masa nyata tanpa kehilangan konteks navigasi. Kita boleh memintas penghantaran borang, memberikan maklum balas segera, mengendalikan ralat dengan anggun, dan mengemas kini antara muka berdasarkan respons pelayan sambil mengekalkan kedudukan pengguna dalam aplikasi.
 
 ### Mengapa Mengelakkan Muat Semula Halaman?
 
@@ -339,8 +402,8 @@ sequenceDiagram
 
 **Kelebihan pengendalian borang JavaScript:**
 - **Menjaga** keadaan aplikasi dan konteks pengguna
-- **Memberikan** maklum balas segera dan penunjuk pemuatan
-- **Membolehkan** pengendalian kesilapan dan validasi dinamik
+- **Memberikan** maklum balas segera dan indikator pemuatan
+- **Membolehkan** pengendalian ralat dan validasi dinamik
 - **Mencipta** pengalaman pengguna yang lancar seperti aplikasi
 - **Membolehkan** logik bersyarat berdasarkan respons pelayan
 
@@ -393,15 +456,14 @@ document.addEventListener('DOMContentLoaded', () => {
 **Memecahkan apa yang berlaku di sini:**
 - **Menghalang** penghantaran borang lalai menggunakan `event.preventDefault()`
 - **Mengambil** elemen borang menggunakan pemilihan DOM moden
-- **Mengeluarkan** data borang menggunakan API `FormData` yang berkuasa
+- **Mengeluarkan** data borang menggunakan API `FormData` yang kuat
 - **Menukar** FormData kepada objek biasa dengan `Object.fromEntries()`
 - **Menyerikan** data ke format JSON untuk komunikasi pelayan
 - **Mencatat** data yang diproses untuk debugging dan pengesahan
 
 ### Memahami API FormData
 
-**API FormData menyediakan pengendalian borang yang berkuasa:**
-
+**API FormData menyediakan pengendalian borang yang kuat:**
 ```javascript
 // Example of what FormData captures
 const formData = new FormData(registerForm);
@@ -417,9 +479,9 @@ const formData = new FormData(registerForm);
 
 **Kelebihan API FormData:**
 - **Pengumpulan menyeluruh**: Menangkap semua elemen borang termasuk teks, fail, dan input kompleks
-- **Kesedaran jenis**: Mengendalikan jenis input yang berbeza secara automatik tanpa pengekodan khusus
-- **Kecekapan**: Menghapuskan pengumpulan medan manual dengan satu panggilan API
-- **Kebolehsuaian**: Menjaga fungsi semasa struktur borang berkembang
+- **Kesedaran jenis**: Mengendalikan pelbagai jenis input secara automatik tanpa pengekodan khas
+- **Kecekapan**: Menghapuskan pengumpulan medan secara manual dengan satu panggilan API
+- **Kebolehsuaian**: Mengekalkan fungsi walaupun struktur borang berubah
 
 ### Membina Fungsi Komunikasi Pelayan
 
@@ -466,35 +528,35 @@ sequenceDiagram
 ```
 
 **Apa yang dicapai oleh pelaksanaan moden ini:**
-- **Menggunakan** `async/await` untuk kod asinkron yang boleh dibaca
-- **Termasuk** pengendalian kesilapan yang betul dengan blok try/catch
+- **Menggunakan** `async/await` untuk kod asinkron yang mudah dibaca
+- **Termasuk** pengendalian ralat yang betul dengan blok try/catch
 - **Memeriksa** status respons sebelum memproses data
-- **Menetapkan** header yang sesuai untuk komunikasi JSON
-- **Memberikan** mesej ralat terperinci untuk debugging  
-- **Mengembalikan** struktur data yang konsisten untuk kes kejayaan dan ralat  
+- **Menetapkan** tajuk yang sesuai untuk komunikasi JSON
+- **Memberikan** mesej ralat terperinci untuk penyahpepijatan
+- **Mengembalikan** struktur data yang konsisten untuk kes kejayaan dan ralat
 
-### Kelebihan Fetch API Moden  
+### Kuasa Fetch API Moden
 
-**Kelebihan Fetch API berbanding kaedah lama:**  
+**Kelebihan Fetch API berbanding kaedah lama:**
 
-| Ciri | Kelebihan | Pelaksanaan |  
-|------|-----------|-------------|  
-| Berasaskan Janji | Kod async yang bersih | `await fetch()` |  
-| Penyesuaian Permintaan | Kawalan penuh HTTP | Headers, methods, body |  
-| Pengendalian Respons | Parsing data yang fleksibel | `.json()`, `.text()`, `.blob()` |  
-| Pengendalian Ralat | Penangkapan ralat yang menyeluruh | Blok Try/catch |  
+| Ciri | Manfaat | Pelaksanaan |
+|------|---------|-------------|
+| Berasaskan Janji | Kod asinkron yang bersih | `await fetch()` |
+| Penyesuaian Permintaan | Kawalan HTTP penuh | Tajuk, kaedah, badan |
+| Pengendalian Respons | Penguraian data yang fleksibel | `.json()`, `.text()`, `.blob()` |
+| Pengendalian Ralat | Penangkapan ralat yang menyeluruh | Blok Try/catch |
 
-> 🎥 **Ketahui Lebih Lanjut**: [Tutorial Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - Memahami corak JavaScript asinkron untuk pembangunan web moden.  
+> 🎥 **Ketahui Lebih Lanjut**: [Tutorial Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - Memahami corak JavaScript asinkron untuk pembangunan web moden.
 
-**Konsep utama untuk komunikasi pelayan:**  
-- **Fungsi async** membolehkan penangguhan pelaksanaan untuk menunggu respons pelayan  
-- **Kata kunci await** menjadikan kod asinkron kelihatan seperti kod sinkron  
-- **Fetch API** menyediakan permintaan HTTP moden berasaskan janji  
-- **Pengendalian ralat** memastikan aplikasi anda bertindak balas dengan baik terhadap isu rangkaian  
+**Konsep utama untuk komunikasi pelayan:**
+- **Fungsi asinkron** membolehkan penangguhan pelaksanaan untuk menunggu respons pelayan
+- **Kata kunci Await** menjadikan kod asinkron kelihatan seperti kod sinkron
+- **Fetch API** menyediakan permintaan HTTP moden berasaskan janji
+- **Pengendalian ralat** memastikan aplikasi anda bertindak balas dengan baik terhadap isu rangkaian
 
-### Melengkapkan Fungsi Pendaftaran  
+### Menyelesaikan Fungsi Pendaftaran
 
-Mari gabungkan semuanya dengan fungsi pendaftaran yang lengkap dan sedia untuk pengeluaran:  
+Mari kita gabungkan semuanya dengan fungsi pendaftaran yang lengkap dan sedia untuk pengeluaran:
 
 ```javascript
 async function register() {
@@ -535,41 +597,61 @@ async function register() {
   }
 }
 ```
-  
-**Pelaksanaan yang dipertingkatkan ini termasuk:**  
-- **Memberikan** maklum balas visual semasa penghantaran borang  
-- **Melumpuhkan** butang hantar untuk mengelakkan penghantaran berganda  
-- **Mengendalikan** kedua-dua ralat yang dijangka dan tidak dijangka dengan baik  
-- **Menunjukkan** mesej kejayaan dan ralat yang mesra pengguna  
-- **Menetapkan semula** borang selepas pendaftaran berjaya  
-- **Memulihkan** keadaan UI tanpa mengira hasil  
 
-### Menguji Pelaksanaan Anda  
+**Pelaksanaan yang dipertingkatkan ini termasuk:**
+- **Memberikan** maklum balas visual semasa penghantaran borang
+- **Melumpuhkan** butang hantar untuk mengelakkan penghantaran berganda
+- **Mengendalikan** kedua-dua ralat yang dijangka dan tidak dijangka dengan baik
+- **Menunjukkan** mesej kejayaan dan ralat yang mesra pengguna
+- **Menetapkan semula** borang selepas pendaftaran berjaya
+- **Memulihkan** keadaan UI tanpa mengira hasilnya
 
-**Buka alat pembangun pelayar anda dan uji pendaftaran:**  
+### Menguji Pelaksanaan Anda
 
-1. **Buka** konsol pelayar (F12 → tab Console)  
-2. **Isi** borang pendaftaran  
-3. **Klik** "Buat Akaun"  
-4. **Perhatikan** mesej konsol dan maklum balas pengguna  
+**Buka alat pembangun pelayar anda dan uji pendaftaran:**
 
-![Tangkap layar menunjukkan mesej log dalam konsol pelayar](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.ms.png)  
+1. **Buka** konsol pelayar (F12 → tab Konsol)
+2. **Isi** borang pendaftaran
+3. **Klik** "Buat Akaun"
+4. **Perhatikan** mesej konsol dan maklum balas pengguna
 
-**Apa yang anda akan lihat:**  
-- **Keadaan pemuatan** muncul pada butang hantar  
-- **Log konsol** menunjukkan maklumat terperinci tentang proses  
-- **Mesej kejayaan** muncul apabila penciptaan akaun berjaya  
-- **Borang menetapkan semula** secara automatik selepas penghantaran berjaya  
+![Tangkapan skrin menunjukkan mesej log dalam konsol pelayar](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.ms.png)
 
-> 🔒 **Pertimbangan Keselamatan**: Pada masa ini, data dihantar melalui HTTP, yang tidak selamat untuk pengeluaran. Dalam aplikasi sebenar, sentiasa gunakan HTTPS untuk menyulitkan penghantaran data. Ketahui lebih lanjut tentang [keselamatan HTTPS](https://en.wikipedia.org/wiki/HTTPS) dan mengapa ia penting untuk melindungi data pengguna.  
+**Apa yang anda patut lihat:**
+- **Keadaan pemuatan** muncul pada butang hantar
+- **Log konsol** menunjukkan maklumat terperinci tentang proses
+- **Mesej kejayaan** muncul apabila penciptaan akaun berjaya
+- **Borang ditetapkan semula** secara automatik selepas penghantaran berjaya
 
-## Pengesahan Borang Komprehensif  
+> 🔒 **Pertimbangan Keselamatan**: Pada masa ini, data dihantar melalui HTTP, yang tidak selamat untuk pengeluaran. Dalam aplikasi sebenar, sentiasa gunakan HTTPS untuk menyulitkan penghantaran data. Ketahui lebih lanjut tentang [keselamatan HTTPS](https://en.wikipedia.org/wiki/HTTPS) dan mengapa ia penting untuk melindungi data pengguna.
 
-Pengesahan borang mengelakkan pengalaman yang mengecewakan apabila menemui ralat hanya selepas penghantaran. Seperti sistem redundan berganda di Stesen Angkasa Antarabangsa, pengesahan yang berkesan menggunakan pelbagai lapisan pemeriksaan keselamatan.  
+### 🔄 **Pemeriksaan Pedagogi**
+**Integrasi JavaScript Moden**: Sahkan pemahaman anda tentang pengendalian borang asinkron:
+- ✅ Bagaimana `event.preventDefault()` mengubah tingkah laku lalai borang?
+- ✅ Mengapa API FormData lebih cekap daripada pengumpulan medan secara manual?
+- ✅ Bagaimana corak async/await meningkatkan kebolehbacaan kod?
+- ✅ Apakah peranan pengendalian ralat dalam pengalaman pengguna?
 
-Pendekatan yang optimum menggabungkan pengesahan peringkat pelayar untuk maklum balas segera, pengesahan JavaScript untuk pengalaman pengguna yang dipertingkatkan, dan pengesahan pelayan untuk keselamatan dan integriti data. Redundansi ini memastikan kepuasan pengguna dan perlindungan sistem.  
+**Seni Bina Sistem**: Pengendalian borang anda menunjukkan:
+- **Pengaturcaraan Berasaskan Peristiwa**: Borang bertindak balas terhadap tindakan pengguna tanpa memuat semula halaman
+- **Komunikasi Asinkron**: Permintaan pelayan tidak menyekat antara muka pengguna
+- **Pengendalian Ralat**: Kemerosotan yang baik apabila permintaan rangkaian gagal
+- **Pengurusan Keadaan**: Kemas kini UI mencerminkan respons pelayan dengan sewajarnya
+- **Peningkatan Progresif**: Fungsi asas berfungsi, JavaScript meningkatkannya
 
-### Memahami Lapisan Pengesahan  
+**Corak Profesional**: Anda telah melaksanakan:
+- **Tanggungjawab Tunggal**: Fungsi mempunyai tujuan yang jelas dan fokus
+- **Sempadan Ralat**: Blok try/catch menghalang kerosakan aplikasi
+- **Maklum Balas Pengguna**: Keadaan pemuatan dan mesej kejayaan/ralat
+- **Transformasi Data**: FormData kepada JSON untuk komunikasi pelayan
+
+## Pengesahan Borang Komprehensif
+
+Pengesahan borang mengelakkan pengalaman yang mengecewakan apabila menemui ralat hanya selepas penghantaran. Seperti sistem redundan berganda di Stesen Angkasa Antarabangsa, pengesahan yang berkesan menggunakan pelbagai lapisan pemeriksaan keselamatan.
+
+Pendekatan yang optimum menggabungkan pengesahan peringkat pelayar untuk maklum balas segera, pengesahan JavaScript untuk pengalaman pengguna yang dipertingkatkan, dan pengesahan pelayan untuk keselamatan dan integriti data. Redundansi ini memastikan kepuasan pengguna dan perlindungan sistem.
+
+### Memahami Lapisan Pengesahan
 
 ```mermaid
 graph TD
@@ -583,28 +665,28 @@ graph TD
     C -->|Invalid| H[Custom Error Display]
     E -->|Invalid| I[Server Error Response]
 ```
-  
-**Strategi pengesahan berlapis:**  
-- **Pengesahan HTML5**: Pemeriksaan berasaskan pelayar segera  
-- **Pengesahan JavaScript**: Logik tersuai dan pengalaman pengguna  
-- **Pengesahan pelayan**: Pemeriksaan keselamatan dan integriti data terakhir  
-- **Peningkatan progresif**: Berfungsi walaupun JavaScript dilumpuhkan  
 
-### Atribut Pengesahan HTML5  
+**Strategi pengesahan berbilang lapisan:**
+- **Pengesahan HTML5**: Pemeriksaan berasaskan pelayar segera
+- **Pengesahan JavaScript**: Logik tersuai dan pengalaman pengguna
+- **Pengesahan Pelayan**: Pemeriksaan keselamatan dan integriti data akhir
+- **Peningkatan progresif**: Berfungsi walaupun JavaScript dilumpuhkan
 
-**Alat pengesahan moden yang tersedia:**  
+### Atribut Pengesahan HTML5
 
-| Atribut | Tujuan | Contoh Penggunaan | Tingkah Laku Pelayar |  
-|---------|--------|-------------------|----------------------|  
-| `required` | Medan wajib | `<input required>` | Menghalang penghantaran kosong |  
-| `minlength`/`maxlength` | Had panjang teks | `<input maxlength="20">` | Menguatkuasakan had aksara |  
-| `min`/`max` | Julat angka | `<input min="0" max="1000">` | Mengesahkan sempadan nombor |  
-| `pattern` | Peraturan regex tersuai | `<input pattern="[A-Za-z]+">` | Memadankan format tertentu |  
-| `type` | Pengesahan jenis data | `<input type="email">` | Pengesahan khusus format |  
+**Alat pengesahan moden yang tersedia untuk anda:**
 
-### Gaya Pengesahan CSS  
+| Atribut | Tujuan | Contoh Penggunaan | Tingkah Laku Pelayar |
+|---------|--------|-------------------|----------------------|
+| `required` | Medan wajib | `<input required>` | Menghalang penghantaran kosong |
+| `minlength`/`maxlength` | Had panjang teks | `<input maxlength="20">` | Menguatkuasakan had aksara |
+| `min`/`max` | Julat angka | `<input min="0" max="1000">` | Mengesahkan sempadan nombor |
+| `pattern` | Peraturan regex tersuai | `<input pattern="[A-Za-z]+">` | Memadankan format tertentu |
+| `type` | Pengesahan jenis data | `<input type="email">` | Pengesahan khusus format |
 
-**Cipta maklum balas visual untuk keadaan pengesahan:**  
+### Gaya Pengesahan CSS
+
+**Cipta maklum balas visual untuk keadaan pengesahan:**
 
 ```css
 /* Valid input styling */
@@ -628,18 +710,18 @@ input:focus:invalid {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 ```
-  
-**Apa yang dicapai oleh petunjuk visual ini:**  
-- **Sempadan hijau**: Menunjukkan pengesahan berjaya, seperti lampu hijau di pusat kawalan  
-- **Sempadan merah**: Menandakan ralat pengesahan yang memerlukan perhatian  
-- **Sorotan fokus**: Memberikan konteks visual yang jelas untuk lokasi input semasa  
-- **Gaya konsisten**: Menetapkan corak antara muka yang boleh dipelajari pengguna  
 
-> 💡 **Tip Pro**: Gunakan pseudo-class CSS `:valid` dan `:invalid` untuk memberikan maklum balas visual segera semasa pengguna menaip, mencipta antara muka yang responsif dan membantu.  
+**Apa yang dicapai oleh petunjuk visual ini:**
+- **Sempadan hijau**: Menunjukkan pengesahan berjaya, seperti lampu hijau di pusat kawalan
+- **Sempadan merah**: Menandakan ralat pengesahan yang memerlukan perhatian
+- **Sorotan fokus**: Memberikan konteks visual yang jelas untuk lokasi input semasa
+- **Gaya konsisten**: Menetapkan corak antara muka yang boleh dipelajari oleh pengguna
 
-### Melaksanakan Pengesahan Komprehensif  
+> 💡 **Petua Pro**: Gunakan pseudo-kelas CSS `:valid` dan `:invalid` untuk memberikan maklum balas visual segera semasa pengguna menaip, mencipta antara muka yang responsif dan membantu.
 
-Mari tingkatkan borang pendaftaran anda dengan pengesahan yang kukuh yang memberikan pengalaman pengguna yang hebat dan kualiti data:  
+### Melaksanakan Pengesahan Komprehensif
+
+Mari tingkatkan borang pendaftaran anda dengan pengesahan yang kukuh yang memberikan pengalaman pengguna yang sangat baik dan kualiti data:
 
 ```html
 <form id="registerForm" method="POST" novalidate>
@@ -681,42 +763,42 @@ Mari tingkatkan borang pendaftaran anda dengan pengesahan yang kukuh yang member
   <button type="submit">Create Account</button>
 </form>
 ```
-  
-**Memahami pengesahan yang dipertingkatkan:**  
-- **Menggabungkan** penunjuk medan wajib dengan penerangan yang membantu  
-- **Termasuk** atribut `pattern` untuk pengesahan format  
-- **Menyediakan** atribut `title` untuk kebolehaksesan dan tooltip  
-- **Menambah** teks pembantu untuk membimbing input pengguna  
-- **Menggunakan** struktur HTML semantik untuk kebolehaksesan yang lebih baik  
 
-### Peraturan Pengesahan Lanjutan  
+**Memahami pengesahan yang dipertingkatkan:**
+- **Menggabungkan** penunjuk medan wajib dengan penerangan yang membantu
+- **Termasuk** atribut `pattern` untuk pengesahan format
+- **Memberikan** atribut `title` untuk kebolehaksesan dan petua alat
+- **Menambah** teks pembantu untuk membimbing input pengguna
+- **Menggunakan** struktur HTML semantik untuk kebolehaksesan yang lebih baik
 
-**Apa yang dicapai oleh setiap peraturan pengesahan:**  
+### Peraturan Pengesahan Lanjutan
 
-| Medan | Peraturan Pengesahan | Kelebihan Pengguna |  
-|-------|-----------------------|--------------------|  
-| Nama Pengguna | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Memastikan pengenal pasti yang sah dan unik |  
-| Mata Wang | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Menerima simbol mata wang biasa |  
-| Baki | `min="0"`, `step="0.01"`, `type="number"` | Menghalang baki negatif |  
-| Penerangan | `maxlength="100"` | Had panjang yang munasabah |  
+**Apa yang dicapai oleh setiap peraturan pengesahan:**
 
-### Menguji Tingkah Laku Pengesahan  
+| Medan | Peraturan Pengesahan | Manfaat Pengguna |
+|-------|-----------------------|------------------|
+| Nama Pengguna | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Memastikan pengenal pasti yang sah dan unik |
+| Mata Wang | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Menerima simbol mata wang biasa |
+| Baki | `min="0"`, `step="0.01"`, `type="number"` | Menghalang baki negatif |
+| Penerangan | `maxlength="100"` | Had panjang yang munasabah |
 
-**Cuba senario pengesahan ini:**  
-1. **Hantar** borang dengan medan wajib kosong  
-2. **Masukkan** nama pengguna yang lebih pendek daripada 3 aksara  
-3. **Cuba** aksara khas dalam medan nama pengguna  
-4. **Masukkan** jumlah baki negatif  
+### Menguji Tingkah Laku Pengesahan
 
-![Tangkap layar menunjukkan ralat pengesahan apabila cuba menghantar borang](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.ms.png)  
+**Cuba senario pengesahan ini:**
+1. **Hantar** borang dengan medan wajib kosong
+2. **Masukkan** nama pengguna yang lebih pendek daripada 3 aksara
+3. **Cuba** aksara khas dalam medan nama pengguna
+4. **Masukkan** jumlah baki negatif
 
-**Apa yang anda akan perhatikan:**  
-- **Pelayar memaparkan** mesej pengesahan asli  
-- **Perubahan gaya** berdasarkan keadaan `:valid` dan `:invalid`  
-- **Penghantaran borang** dihalang sehingga semua pengesahan lulus  
-- **Fokus secara automatik** bergerak ke medan pertama yang tidak sah  
+![Tangkapan skrin menunjukkan ralat pengesahan apabila cuba menghantar borang](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.ms.png)
 
-### Pengesahan Pelanggan vs Pelayan  
+**Apa yang anda akan perhatikan:**
+- **Pelayar memaparkan** mesej pengesahan asli
+- **Perubahan gaya** berdasarkan keadaan `:valid` dan `:invalid`
+- **Penghantaran borang** dihalang sehingga semua pengesahan lulus
+- **Fokus secara automatik** bergerak ke medan pertama yang tidak sah
+
+### Pengesahan Pelanggan vs Pelayan
 
 ```mermaid
 graph LR
@@ -731,50 +813,160 @@ graph LR
     A -.-> I[Both Required]
     E -.-> I
 ```
-  
-**Mengapa anda memerlukan kedua-dua lapisan:**  
-- **Pengesahan pelanggan**: Memberikan maklum balas segera dan meningkatkan pengalaman pengguna  
-- **Pengesahan pelayan**: Memastikan keselamatan dan mengendalikan peraturan perniagaan yang kompleks  
-- **Pendekatan gabungan**: Mencipta aplikasi yang kukuh, mesra pengguna, dan selamat  
-- **Peningkatan progresif**: Berfungsi walaupun JavaScript dilumpuhkan  
 
-> 🛡️ **Peringatan Keselamatan**: Jangan sekali-kali mempercayai pengesahan pelanggan sahaja! Pengguna berniat jahat boleh memintas pemeriksaan pelanggan, jadi pengesahan pelayan adalah penting untuk keselamatan dan integriti data.  
+**Mengapa anda memerlukan kedua-dua lapisan:**
+- **Pengesahan pelanggan**: Memberikan maklum balas segera dan meningkatkan pengalaman pengguna
+- **Pengesahan pelayan**: Memastikan keselamatan dan mengendalikan peraturan perniagaan yang kompleks
+- **Pendekatan gabungan**: Mencipta aplikasi yang kukuh, mesra pengguna, dan selamat
+- **Peningkatan progresif**: Berfungsi walaupun JavaScript dilumpuhkan
 
----  
+> 🛡️ **Peringatan Keselamatan**: Jangan sekali-kali mempercayai pengesahan pelanggan sahaja! Pengguna berniat jahat boleh memintas pemeriksaan pelanggan, jadi pengesahan pelayan adalah penting untuk keselamatan dan integriti data.
+
+### ⚡ **Apa Yang Anda Boleh Lakukan Dalam 5 Minit Seterusnya**
+- [ ] Uji borang anda dengan data tidak sah untuk melihat mesej pengesahan
+- [ ] Cuba hantar borang dengan JavaScript dilumpuhkan untuk melihat pengesahan HTML5
+- [ ] Buka DevTools pelayar dan periksa data borang yang dihantar ke pelayan
+- [ ] Bereksperimen dengan pelbagai jenis input untuk melihat perubahan papan kekunci mudah alih
+
+### 🎯 **Apa Yang Anda Boleh Capai Dalam Jam Ini**
+- [ ] Lengkapkan kuiz selepas pelajaran dan fahami konsep pengendalian borang
+- [ ] Laksanakan cabaran pengesahan komprehensif dengan maklum balas masa nyata
+- [ ] Tambahkan gaya CSS untuk mencipta borang yang kelihatan profesional
+- [ ] Cipta pengendalian ralat untuk nama pengguna yang sama dan ralat pelayan
+- [ ] Tambahkan medan pengesahan kata laluan dengan pengesahan padanan
+
+### 📅 **Perjalanan Penguasaan Borang Anda Sepanjang Minggu**
+- [ ] Lengkapkan aplikasi perbankan penuh dengan ciri borang lanjutan
+- [ ] Laksanakan keupayaan muat naik fail untuk gambar profil atau dokumen
+- [ ] Tambahkan borang berbilang langkah dengan penunjuk kemajuan dan pengurusan keadaan
+- [ ] Cipta borang dinamik yang menyesuaikan berdasarkan pilihan pengguna
+- [ ] Laksanakan autosimpan borang dan pemulihan untuk pengalaman pengguna yang lebih baik
+- [ ] Tambahkan pengesahan lanjutan seperti pengesahan e-mel dan format nombor telefon
+
+### 🌟 **Penguasaan Pembangunan Frontend Anda Sepanjang Bulan**
+- [ ] Bina aplikasi borang kompleks dengan logik bersyarat dan aliran kerja
+- [ ] Pelajari perpustakaan dan rangka kerja borang untuk pembangunan pantas
+- [ ] Kuasai garis panduan kebolehaksesan dan prinsip reka bentuk inklusif
+- [ ] Laksanakan pengantarabangsaan dan penyetempatan untuk borang global
+- [ ] Cipta perpustakaan komponen borang yang boleh digunakan semula dan sistem reka bentuk
+- [ ] Sumbang kepada projek borang sumber terbuka dan kongsi amalan terbaik
+
+## 🎯 Garis Masa Penguasaan Pembangunan Borang Anda
+
+```mermaid
+timeline
+    title Form Development & User Experience Learning Progression
+    
+    section HTML Foundation (15 minutes)
+        Semantic Forms: Form elements
+                      : Input types
+                      : Labels and accessibility
+                      : Progressive enhancement
+        
+    section JavaScript Integration (25 minutes)
+        Event Handling: Form submission
+                      : Data collection
+                      : AJAX communication
+                      : Async/await patterns
+        
+    section Validation Systems (35 minutes)
+        Multi-layer Security: HTML5 validation
+                            : Client-side logic
+                            : Server-side verification
+                            : Error handling
+        
+    section User Experience (45 minutes)
+        Interface Polish: Loading states
+                        : Success messaging
+                        : Error recovery
+                        : Accessibility features
+        
+    section Advanced Patterns (1 week)
+        Professional Forms: Dynamic validation
+                          : Multi-step workflows
+                          : File uploads
+                          : Real-time feedback
+        
+    section Enterprise Skills (1 month)
+        Production Applications: Form libraries
+                               : Testing strategies
+                               : Performance optimization
+                               : Security best practices
+```
+
+### 🛠️ Ringkasan Alat Pembangunan Borang Anda
+
+Selepas melengkapkan pelajaran ini, anda kini telah menguasai:
+- **Borang HTML5**: Struktur semantik, jenis input, dan ciri kebolehaksesan
+- **Pengendalian Borang JavaScript**: Pengurusan acara, pengumpulan data, dan komunikasi AJAX
+- **Seni Bina Pengesahan**: Pengesahan berbilang lapisan untuk keselamatan dan pengalaman pengguna
+- **Pengaturcaraan Asinkron**: Fetch API moden dan corak async/await
+- **Pengurusan Ralat**: Pengendalian ralat yang menyeluruh dan sistem maklum balas pengguna
+- **Reka Bentuk Pengalaman Pengguna**: Keadaan pemuatan, mesej kejayaan, dan pemulihan ralat
+- **Peningkatan Progresif**: Borang yang berfungsi di semua pelayar dan keupayaan
+
+**Aplikasi Dunia Sebenar**: Kemahiran pembangunan borang anda digunakan secara langsung untuk:
+- **Aplikasi E-dagang**: Proses pembayaran, pendaftaran akaun, dan borang pembayaran
+- **Perisian Perusahaan**: Sistem kemasukan data, antara muka pelaporan, dan aplikasi aliran kerja
+- **Pengurusan Kandungan**: Platform penerbitan, kandungan yang dijana pengguna, dan antara muka pentadbiran
+- **Aplikasi Kewangan**: Antara muka perbankan, platform pelaburan, dan sistem transaksi
+- **Sistem Penjagaan Kesihatan**: Portal pesakit, penjadualan temu janji, dan borang rekod perubatan
+- **Platform Pendidikan**: Pendaftaran kursus, alat penilaian, dan pengurusan pembelajaran
+
+**Kemahiran Profesional Diperoleh**: Anda kini boleh:
+- **Reka bentuk** borang yang boleh diakses yang berfungsi untuk semua pengguna termasuk mereka yang mempunyai kecacatan
+- **Laksanakan** pengesahan borang yang selamat yang menghalang kerosakan data dan kelemahan keselamatan
+- **Cipta** antara muka pengguna responsif yang memberikan maklum balas dan panduan yang jelas
+- **Nyahpepijat** interaksi borang kompleks menggunakan alat pembangun pelayar dan analisis rangkaian
+- **Optimumkan** prestasi borang melalui pengendalian data dan strategi pengesahan yang cekap
+
+**Konsep Pembangunan Frontend Dikuasai**:
+- **Seni Bina Berasaskan Peristiwa**: Pengendalian interaksi pengguna dan sistem respons
+- **Pengaturcaraan Asinkron**: Komunikasi pelayan tidak menyekat dan pengendalian ralat
+- **Pengesahan Data**: Pemeriksaan keselamatan dan integriti pelanggan dan pelayan
+- **Reka Bentuk Pengalaman Pengguna**: Antara muka intuitif yang membimbing pengguna ke arah kejayaan
+- **Kejuruteraan Kebolehaksesan**: Reka bentuk inklusif yang berfungsi untuk keperluan pengguna yang pelbagai
+
+**Tahap Seterusnya**: Anda bersedia untuk meneroka perpustakaan borang lanjutan, melaksanakan peraturan pengesahan kompleks, atau membina sistem pengumpulan data gred perusahaan!
+
+🌟 **Pencapaian Terkunci**: Anda telah membina sistem pengendalian borang lengkap dengan pengesahan profesional, pengendalian ralat, dan corak pengalaman pengguna!
 
 ---
 
-## Cabaran Ejen GitHub Copilot 🚀  
 
-Gunakan mod Ejen untuk melengkapkan cabaran berikut:  
 
-**Penerangan:** Tingkatkan borang pendaftaran dengan pengesahan pelanggan yang komprehensif dan maklum balas pengguna. Cabaran ini akan membantu anda berlatih pengesahan borang, pengendalian ralat, dan meningkatkan pengalaman pengguna dengan maklum balas interaktif.  
+---
 
-**Arahan:** Cipta sistem pengesahan borang lengkap untuk borang pendaftaran yang merangkumi: 1) Maklum balas pengesahan masa nyata untuk setiap medan semasa pengguna menaip, 2) Mesej pengesahan tersuai yang muncul di bawah setiap medan input, 3) Medan pengesahan kata laluan dengan pengesahan padanan, 4) Petunjuk visual (seperti tanda semak hijau untuk medan yang sah dan amaran merah untuk medan yang tidak sah), 5) Butang hantar yang hanya diaktifkan apabila semua pengesahan lulus. Gunakan atribut pengesahan HTML5, CSS untuk gaya keadaan pengesahan, dan JavaScript untuk tingkah laku interaktif.  
+## Cabaran Ejen GitHub Copilot 🚀
 
-Ketahui lebih lanjut tentang [mod ejen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.  
+Gunakan mod Ejen untuk melengkapkan cabaran berikut:
 
-## 🚀 Cabaran  
+**Penerangan:** Tingkatkan borang pendaftaran dengan pengesahan pelanggan yang komprehensif dan maklum balas pengguna. Cabaran ini akan membantu anda berlatih pengesahan borang, pengendalian ralat, dan meningkatkan pengalaman pengguna dengan maklum balas interaktif.
+**Prompt:** Buat sistem pengesahan borang lengkap untuk borang pendaftaran yang merangkumi: 1) Maklum balas pengesahan masa nyata untuk setiap medan semasa pengguna menaip, 2) Mesej pengesahan tersuai yang muncul di bawah setiap medan input, 3) Medan pengesahan kata laluan dengan pengesahan padanan, 4) Petunjuk visual (seperti tanda semak hijau untuk medan yang sah dan amaran merah untuk medan yang tidak sah), 5) Butang hantar yang hanya diaktifkan apabila semua pengesahan lulus. Gunakan atribut pengesahan HTML5, CSS untuk gaya keadaan pengesahan, dan JavaScript untuk tingkah laku interaktif.
 
-Paparkan mesej ralat dalam HTML jika pengguna sudah wujud.  
+Ketahui lebih lanjut tentang [mod ejen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
-Berikut adalah contoh bagaimana halaman log masuk akhir boleh kelihatan selepas sedikit gaya:  
+## 🚀 Cabaran
 
-![Tangkap layar halaman log masuk selepas menambah gaya CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.ms.png)  
+Tunjukkan mesej ralat dalam HTML jika pengguna sudah wujud.
 
-## Kuiz Selepas Kuliah  
+Berikut adalah contoh bagaimana halaman log masuk akhir boleh kelihatan selepas sedikit gaya:
 
-[Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/44)  
+![Tangkapan skrin halaman log masuk selepas menambah gaya CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.ms.png)
 
-## Ulasan & Kajian Sendiri  
+## Kuiz Selepas Kuliah
 
-Pembangun telah menjadi sangat kreatif tentang usaha membina borang mereka, terutamanya berkaitan strategi pengesahan. Ketahui tentang aliran borang yang berbeza dengan melihat melalui [CodePen](https://codepen.com); bolehkah anda menemui beberapa borang yang menarik dan memberi inspirasi?  
+[Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/44)
 
-## Tugasan  
+## Ulasan & Kajian Kendiri
 
-[Gayakan aplikasi bank anda](assignment.md)  
+Pembangun telah menjadi sangat kreatif dalam usaha membina borang mereka, terutamanya berkaitan strategi pengesahan. Ketahui tentang aliran borang yang berbeza dengan melihat melalui [CodePen](https://codepen.com); bolehkah anda menemui beberapa borang yang menarik dan memberi inspirasi?
+
+## Tugasan
+
+[Gaya aplikasi bank anda](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

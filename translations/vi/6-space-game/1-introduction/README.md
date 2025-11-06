@@ -1,21 +1,68 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
-  "translation_date": "2025-10-24T13:52:06+00:00",
+  "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
+  "translation_date": "2025-11-06T11:34:23+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "vi"
 }
 -->
 # Xây dựng trò chơi không gian Phần 1: Giới thiệu
 
+```mermaid
+journey
+    title Your Game Development Journey
+    section Foundation
+      Learn game architecture: 3: Student
+      Understand inheritance: 4: Student
+      Explore composition: 4: Student
+    section Communication
+      Build pub/sub system: 4: Student
+      Design event flow: 5: Student
+      Connect components: 5: Student
+    section Application
+      Create game objects: 5: Student
+      Implement patterns: 5: Student
+      Plan game structure: 5: Student
+```
+
 ![Hoạt ảnh trò chơi không gian hiển thị gameplay](../../../../6-space-game/images/pewpew.gif)
 
-Giống như trung tâm điều khiển của NASA phối hợp nhiều hệ thống trong một lần phóng tàu vũ trụ, chúng ta sẽ xây dựng một trò chơi không gian để minh họa cách các phần khác nhau của một chương trình có thể hoạt động cùng nhau một cách mượt mà. Trong khi tạo ra một thứ mà bạn thực sự có thể chơi, bạn sẽ học được các khái niệm lập trình cơ bản áp dụng cho bất kỳ dự án phần mềm nào.
+Giống như trung tâm điều khiển của NASA phối hợp nhiều hệ thống trong một lần phóng tàu vũ trụ, chúng ta sẽ xây dựng một trò chơi không gian để minh họa cách các phần khác nhau của một chương trình có thể hoạt động cùng nhau một cách mượt mà. Trong khi tạo ra một trò chơi mà bạn thực sự có thể chơi, bạn sẽ học được các khái niệm lập trình cơ bản áp dụng cho bất kỳ dự án phần mềm nào.
 
-Chúng ta sẽ khám phá hai cách tiếp cận cơ bản để tổ chức mã: kế thừa và thành phần. Đây không chỉ là các khái niệm học thuật – chúng là các mẫu thiết kế được sử dụng trong mọi thứ từ trò chơi điện tử đến hệ thống ngân hàng. Chúng ta cũng sẽ triển khai một hệ thống giao tiếp gọi là pub/sub, hoạt động giống như các mạng lưới giao tiếp được sử dụng trong tàu vũ trụ, cho phép các thành phần khác nhau chia sẻ thông tin mà không tạo ra sự phụ thuộc.
+Chúng ta sẽ khám phá hai cách tiếp cận cơ bản để tổ chức mã: kế thừa và thành phần. Đây không chỉ là các khái niệm học thuật – chúng là các mẫu thiết kế được sử dụng trong mọi thứ từ trò chơi điện tử đến hệ thống ngân hàng. Chúng ta cũng sẽ triển khai một hệ thống giao tiếp gọi là pub/sub hoạt động giống như mạng lưới giao tiếp được sử dụng trong tàu vũ trụ, cho phép các thành phần khác nhau chia sẻ thông tin mà không tạo ra sự phụ thuộc.
 
 Kết thúc loạt bài này, bạn sẽ hiểu cách xây dựng các ứng dụng có thể mở rộng và phát triển – dù bạn đang phát triển trò chơi, ứng dụng web hay bất kỳ hệ thống phần mềm nào khác.
+
+```mermaid
+mindmap
+  root((Game Architecture))
+    Object Organization
+      Inheritance
+      Composition
+      Class Hierarchies
+      Behavior Mixing
+    Communication Patterns
+      Pub/Sub System
+      Event Emitters
+      Message Passing
+      Loose Coupling
+    Game Objects
+      Properties (x, y)
+      Behaviors (move, collide)
+      Lifecycle Management
+      State Management
+    Design Patterns
+      Factory Functions
+      Observer Pattern
+      Component System
+      Event-Driven Architecture
+    Scalability
+      Modular Design
+      Maintainable Code
+      Testing Strategies
+      Performance Optimization
+```
 
 ## Quiz trước bài giảng
 
@@ -23,13 +70,13 @@ Kết thúc loạt bài này, bạn sẽ hiểu cách xây dựng các ứng d�
 
 ## Kế thừa và Thành phần trong Phát triển Trò chơi
 
-Khi các dự án trở nên phức tạp hơn, việc tổ chức mã trở nên rất quan trọng. Những gì bắt đầu là một script đơn giản có thể trở nên khó duy trì nếu không có cấu trúc phù hợp – giống như cách các nhiệm vụ Apollo yêu cầu sự phối hợp cẩn thận giữa hàng ngàn thành phần.
+Khi các dự án trở nên phức tạp hơn, việc tổ chức mã trở nên rất quan trọng. Những gì bắt đầu là một đoạn mã đơn giản có thể trở nên khó duy trì nếu không có cấu trúc phù hợp – giống như cách các nhiệm vụ Apollo yêu cầu sự phối hợp cẩn thận giữa hàng ngàn thành phần.
 
-Chúng ta sẽ khám phá hai cách tiếp cận cơ bản để tổ chức mã: kế thừa và thành phần. Mỗi cách có những lợi ích riêng, và việc hiểu cả hai giúp bạn chọn cách tiếp cận phù hợp cho từng tình huống. Chúng ta sẽ minh họa các khái niệm này thông qua trò chơi không gian của mình, nơi các anh hùng, kẻ thù, vật phẩm tăng cường sức mạnh và các đối tượng khác phải tương tác hiệu quả.
+Chúng ta sẽ khám phá hai cách tiếp cận cơ bản để tổ chức mã: kế thừa và thành phần. Mỗi cách có những lợi ích riêng biệt, và việc hiểu cả hai giúp bạn chọn cách tiếp cận phù hợp cho từng tình huống. Chúng ta sẽ minh họa các khái niệm này thông qua trò chơi không gian, nơi các anh hùng, kẻ thù, vật phẩm tăng cường sức mạnh và các đối tượng khác phải tương tác hiệu quả.
 
 ✅ Một trong những cuốn sách lập trình nổi tiếng nhất từng được viết liên quan đến [mẫu thiết kế](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Trong bất kỳ trò chơi nào, bạn có các `đối tượng trò chơi` – các yếu tố tương tác tạo nên thế giới trò chơi của bạn. Anh hùng, kẻ thù, vật phẩm tăng cường sức mạnh và hiệu ứng hình ảnh đều là các đối tượng trò chơi. Mỗi đối tượng tồn tại tại các tọa độ màn hình cụ thể sử dụng giá trị `x` và `y`, tương tự như việc vẽ điểm trên một mặt phẳng tọa độ.
+Trong bất kỳ trò chơi nào, bạn có các `đối tượng trò chơi` – các yếu tố tương tác tạo nên thế giới trò chơi của bạn. Anh hùng, kẻ thù, vật phẩm tăng cường sức mạnh và hiệu ứng hình ảnh đều là các đối tượng trò chơi. Mỗi đối tượng tồn tại tại các tọa độ màn hình cụ thể sử dụng các giá trị `x` và `y`, tương tự như việc vẽ các điểm trên mặt phẳng tọa độ.
 
 Mặc dù có sự khác biệt về hình ảnh, các đối tượng này thường chia sẻ các hành vi cơ bản:
 
@@ -40,13 +87,52 @@ Mặc dù có sự khác biệt về hình ảnh, các đối tượng này thư
 
 ✅ Hãy nghĩ về một trò chơi như Pac-Man. Bạn có thể xác định bốn loại đối tượng được liệt kê ở trên trong trò chơi này không?
 
+```mermaid
+classDiagram
+    class GameObject {
+        +x: number
+        +y: number
+        +type: string
+        +exists_somewhere()
+    }
+    
+    class MovableObject {
+        +moveTo(x, y)
+        +can_move_around()
+    }
+    
+    class TemporaryObject {
+        +lifespan: number
+        +has_lifespan()
+    }
+    
+    class InteractiveObject {
+        +onCollision()
+        +reacts_to_stuff()
+    }
+    
+    GameObject <|-- MovableObject
+    GameObject <|-- TemporaryObject
+    GameObject <|-- InteractiveObject
+    
+    MovableObject <|-- Hero
+    MovableObject <|-- Enemy
+    MovableObject <|-- Bullet
+    
+    TemporaryObject <|-- PowerUp
+    TemporaryObject <|-- Explosion
+    
+    InteractiveObject <|-- Collectible
+    InteractiveObject <|-- Obstacle
+```
+
 ### Thể hiện Hành vi Qua Mã
 
-Bây giờ bạn đã hiểu các hành vi chung mà các đối tượng trò chơi chia sẻ, hãy khám phá cách triển khai các hành vi này trong JavaScript. Bạn có thể thể hiện hành vi của đối tượng thông qua các phương thức gắn với các lớp hoặc các đối tượng riêng lẻ, và có nhiều cách tiếp cận để lựa chọn.
+Bây giờ bạn đã hiểu các hành vi chung mà các đối tượng trò chơi chia sẻ, hãy khám phá cách triển khai các hành vi này trong JavaScript. Bạn có thể thể hiện hành vi của đối tượng thông qua các phương thức gắn với các lớp hoặc các đối tượng riêng lẻ, và có một số cách tiếp cận để lựa chọn.
 
-**Cách Tiếp Cận Dựa Trên Lớp**
+**Cách Tiếp cận Dựa trên Lớp**
 
-Các lớp và kế thừa cung cấp một cách tiếp cận có cấu trúc để tổ chức các đối tượng trò chơi. Giống như hệ thống phân loại sinh học được phát triển bởi Carl Linnaeus, bạn bắt đầu với một lớp cơ sở chứa các thuộc tính chung, sau đó tạo các lớp chuyên biệt kế thừa các yếu tố cơ bản này trong khi thêm các khả năng cụ thể.
+Các lớp và kế thừa cung cấp một cách tiếp cận có cấu trúc để tổ chức các đối tượng trò chơi. Giống như hệ thống phân loại sinh học được phát triển bởi Carl Linnaeus, bạn bắt đầu với một lớp cơ bản chứa các thuộc tính chung, sau đó tạo các lớp chuyên biệt kế thừa các yếu tố cơ bản này trong khi thêm các khả năng cụ thể.
 
 ✅ Kế thừa là một khái niệm quan trọng cần hiểu. Tìm hiểu thêm trong [bài viết của MDN về kế thừa](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
@@ -65,7 +151,7 @@ class GameObject {
 
 **Hãy phân tích từng bước:**
 - Chúng ta đang tạo một mẫu cơ bản mà mọi đối tượng trò chơi có thể sử dụng
-- Constructor lưu vị trí của đối tượng (`x`, `y`) và loại của nó
+- Constructor lưu vị trí của đối tượng (`x`, `y`) và loại đối tượng
 - Đây trở thành nền tảng mà tất cả các đối tượng trò chơi của bạn sẽ xây dựng trên đó
 
 ```javascript
@@ -85,7 +171,7 @@ class Movable extends GameObject {
 
 **Trong đoạn mã trên, chúng ta đã:**
 - **Mở rộng** lớp GameObject để thêm chức năng di chuyển
-- **Gọi** constructor của lớp cha bằng `super()` để khởi tạo các thuộc tính được kế thừa
+- **Gọi** constructor của lớp cha bằng `super()` để khởi tạo các thuộc tính kế thừa
 - **Thêm** phương thức `moveTo()` để cập nhật vị trí của đối tượng
 
 ```javascript
@@ -116,9 +202,9 @@ const tree = new Tree(10, 15);
 - **Cho thấy** rằng anh hùng có thể di chuyển trong khi cây cối vẫn đứng yên
 - **Minh họa** cách hệ thống phân cấp lớp ngăn chặn các hành động không phù hợp
 
-✅ Dành vài phút để hình dung lại một anh hùng Pac-Man (ví dụ như Inky, Pinky hoặc Blinky) và cách nó sẽ được viết trong JavaScript.
+✅ Dành vài phút để hình dung lại một anh hùng Pac-Man (Inky, Pinky hoặc Blinky, chẳng hạn) và cách nó sẽ được viết trong JavaScript.
 
-**Cách Tiếp Cận Thành Phần**
+**Cách Tiếp cận Thành phần**
 
 Thành phần tuân theo triết lý thiết kế mô-đun, tương tự như cách các kỹ sư thiết kế tàu vũ trụ với các thành phần có thể thay thế. Thay vì kế thừa từ một lớp cha, bạn kết hợp các hành vi cụ thể để tạo ra các đối tượng với chính xác các chức năng mà chúng cần. Cách tiếp cận này mang lại sự linh hoạt mà không bị ràng buộc bởi các hệ thống phân cấp cứng nhắc.
 
@@ -191,35 +277,95 @@ const tree = createStatic(0, 0, 'Tree');
 
 **Which Pattern Should You Choose?**
 
-> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+**Which Pattern Should You Choose?**
+
+```mermaid
+quadrantChart
+    title Code Organization Patterns
+    x-axis Simple --> Complex
+    y-axis Rigid --> Flexible
+    quadrant-1 Advanced Composition
+    quadrant-2 Hybrid Approaches
+    quadrant-3 Basic Inheritance
+    quadrant-4 Modern Composition
+    
+    Class Inheritance: [0.3, 0.2]
+    Interface Implementation: [0.6, 0.4]
+    Mixin Patterns: [0.7, 0.7]
+    Pure Composition: [0.8, 0.9]
+    Factory Functions: [0.5, 0.8]
+    Prototype Chain: [0.4, 0.3]
+```
+
+> 💡 **Mẹo chuyên nghiệp**: Cả hai mẫu đều có vị trí của chúng trong phát triển JavaScript hiện đại. Các lớp hoạt động tốt cho các hệ thống phân cấp rõ ràng, trong khi thành phần tỏa sáng khi bạn cần sự linh hoạt tối đa.
 > 
-**Here's when to use each approach:**
-- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
-- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
-- **Consider** your team's preferences and project requirements
-- **Remember** that you can mix both approaches in the same application
+**Khi nào sử dụng mỗi cách tiếp cận:**
+- **Chọn** kế thừa khi bạn có các mối quan hệ "là một" rõ ràng (một Anh hùng *là một* đối tượng có thể di chuyển)
+- **Chọn** thành phần khi bạn cần các mối quan hệ "có một" (một Anh hùng *có* khả năng di chuyển)
+- **Xem xét** sở thích của nhóm và yêu cầu dự án
+- **Nhớ rằng** bạn có thể kết hợp cả hai cách tiếp cận trong cùng một ứng dụng
 
-## Communication Patterns: The Pub/Sub System
+### 🔄 **Kiểm tra Sư phạm**
+**Hiểu Tổ chức Đối tượng**: Trước khi chuyển sang các mẫu giao tiếp, hãy đảm bảo bạn có thể:
+- ✅ Giải thích sự khác biệt giữa kế thừa và thành phần
+- ✅ Xác định khi nào sử dụng các lớp so với các hàm nhà máy
+- ✅ Hiểu cách từ khóa `super()` hoạt động trong kế thừa
+- ✅ Nhận ra lợi ích của mỗi cách tiếp cận đối với phát triển trò chơi
 
-As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+**Tự kiểm tra nhanh**: Làm thế nào bạn sẽ tạo một Kẻ thù Bay có thể vừa di chuyển vừa bay?
+- **Cách tiếp cận kế thừa**: `class FlyingEnemy extends Movable`
+- **Cách tiếp cận thành phần**: `{ ...movable, ...flyable, ...gameObject }`
 
-Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+**Kết nối Thực tế**: Các mẫu này xuất hiện ở khắp mọi nơi:
+- **React Components**: Props (thành phần) so với kế thừa lớp
+- **Game Engines**: Hệ thống thành phần thực thể sử dụng thành phần
+- **Ứng dụng Di động**: Các framework UI thường sử dụng hệ thống phân cấp kế thừa
 
-✅ **Pub/Sub** stands for 'publish-subscribe'
+## Mẫu Giao tiếp: Hệ thống Pub/Sub
 
-### Understanding the Pub/Sub Architecture
+Khi các ứng dụng trở nên phức tạp, việc quản lý giao tiếp giữa các thành phần trở nên khó khăn. Mẫu publish-subscribe (pub/sub) giải quyết vấn đề này bằng cách sử dụng các nguyên tắc tương tự như phát sóng radio – một máy phát có thể tiếp cận nhiều máy thu mà không cần biết ai đang lắng nghe.
 
-The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+Hãy xem điều gì xảy ra khi một anh hùng bị thương: thanh máu được cập nhật, hiệu ứng âm thanh phát ra, phản hồi hình ảnh xuất hiện. Thay vì kết nối trực tiếp đối tượng anh hùng với các hệ thống này, pub/sub cho phép anh hùng phát đi một thông báo "đã bị thương". Bất kỳ hệ thống nào cần phản ứng đều có thể đăng ký loại thông báo này và phản ứng tương ứng.
 
-**The key players in pub/sub:**
-- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
-- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
-- **Subscribers** – The objects that say "I care about that event" and react when it happens
-- **Event System** – The middleman that makes sure messages get to the right listeners
+✅ **Pub/Sub** là viết tắt của 'publish-subscribe'
 
-### Building an Event System
+```mermaid
+flowchart TD
+    A[Hero Takes Damage] --> B[Publish: HERO_DAMAGED]
+    B --> C[Event System]
+    
+    C --> D[Health Bar Subscriber]
+    C --> E[Sound System Subscriber]
+    C --> F[Visual Effects Subscriber]
+    C --> G[Achievement System Subscriber]
+    
+    D --> H[Update Health Display]
+    E --> I[Play Damage Sound]
+    F --> J[Show Red Flash]
+    G --> K[Check Survival Achievements]
+    
+    style A fill:#ffebee
+    style B fill:#e1f5fe
+    style C fill:#e8f5e8
+    style H fill:#fff3e0
+    style I fill:#fff3e0
+    style J fill:#fff3e0
+    style K fill:#fff3e0
+```
 
-Let's create a simple but powerful event system that demonstrates these concepts:
+### Hiểu Kiến trúc Pub/Sub
+
+Mẫu pub/sub giữ cho các phần khác nhau của ứng dụng của bạn không bị ràng buộc chặt chẽ, nghĩa là chúng có thể hoạt động cùng nhau mà không phụ thuộc trực tiếp vào nhau. Sự tách biệt này làm cho mã của bạn dễ bảo trì, kiểm tra và linh hoạt hơn với các thay đổi.
+
+**Các thành phần chính trong pub/sub:**
+- **Thông điệp** – Các nhãn văn bản đơn giản như `'PLAYER_SCORED'` mô tả điều gì đã xảy ra (cộng với bất kỳ thông tin bổ sung nào)
+- **Nhà xuất bản** – Các đối tượng thông báo "Có điều gì đó đã xảy ra!" cho bất kỳ ai đang lắng nghe
+- **Người đăng ký** – Các đối tượng nói "Tôi quan tâm đến sự kiện đó" và phản ứng khi nó xảy ra
+- **Hệ thống sự kiện** – Người trung gian đảm bảo thông điệp đến đúng người nghe
+
+### Xây dựng Hệ thống Sự kiện
+
+Hãy tạo một hệ thống sự kiện đơn giản nhưng mạnh mẽ để minh họa các khái niệm này:
 
 ```javascript
 // Step 1: Create the EventEmitter class
@@ -249,14 +395,14 @@ class EventEmitter {
 
 **Phân tích những gì xảy ra ở đây:**
 - **Tạo** một hệ thống quản lý sự kiện trung tâm bằng cách sử dụng một lớp đơn giản
-- **Lưu trữ** các listener trong một đối tượng được tổ chức theo loại thông báo
-- **Đăng ký** các listener mới bằng phương thức `on()`
-- **Phát** thông báo đến tất cả các listener quan tâm bằng phương thức `emit()`
+- **Lưu trữ** các người nghe trong một đối tượng được tổ chức theo loại thông điệp
+- **Đăng ký** các người nghe mới bằng phương thức `on()`
+- **Phát đi** thông điệp đến tất cả các người nghe quan tâm bằng phương thức `emit()`
 - **Hỗ trợ** các payload dữ liệu tùy chọn để truyền thông tin liên quan
 
-### Kết hợp Tất Cả: Một Ví Dụ Thực Tế
+### Kết hợp Tất cả: Một Ví dụ Thực tế
 
-Được rồi, hãy xem điều này hoạt động như thế nào! Chúng ta sẽ xây dựng một hệ thống di chuyển đơn giản để minh họa cách pub/sub có thể sạch sẽ và linh hoạt:
+Được rồi, hãy xem điều này hoạt động như thế nào! Chúng ta sẽ xây dựng một hệ thống di chuyển đơn giản để cho thấy pub/sub có thể sạch sẽ và linh hoạt như thế nào:
 
 ```javascript
 // Step 1: Define your message types
@@ -272,7 +418,7 @@ const hero = createHero(0, 0);
 ```
 
 **Đoạn mã này làm gì:**
-- **Định nghĩa** một đối tượng constants để tránh lỗi chính tả trong tên thông báo
+- **Định nghĩa** một đối tượng hằng số để tránh lỗi chính tả trong tên thông điệp
 - **Tạo** một instance của event emitter để xử lý tất cả giao tiếp
 - **Khởi tạo** một đối tượng anh hùng tại vị trí bắt đầu
 
@@ -290,9 +436,9 @@ eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
 ```
 
 **Trong đoạn mã trên, chúng ta đã:**
-- **Đăng ký** các listener sự kiện phản hồi các thông báo di chuyển
+- **Đăng ký** các người nghe sự kiện phản ứng với các thông điệp di chuyển
 - **Cập nhật** vị trí của anh hùng dựa trên hướng di chuyển
-- **Thêm** console logging để theo dõi các thay đổi vị trí của anh hùng
+- **Thêm** ghi nhật ký console để theo dõi các thay đổi vị trí của anh hùng
 - **Tách biệt** logic di chuyển khỏi xử lý đầu vào
 
 ```javascript
@@ -312,28 +458,66 @@ window.addEventListener('keydown', (event) => {
 **Hiểu các khái niệm này:**
 - **Kết nối** đầu vào từ bàn phím với các sự kiện trò chơi mà không bị ràng buộc chặt chẽ
 - **Cho phép** hệ thống đầu vào giao tiếp với các đối tượng trò chơi một cách gián tiếp
-- **Cho phép** nhiều hệ thống phản hồi cùng một sự kiện bàn phím
-- **Dễ dàng** thay đổi các phím hoặc thêm các phương pháp đầu vào mới
+- **Cho phép** nhiều hệ thống phản ứng với cùng một sự kiện bàn phím
+- **Làm cho** việc thay đổi các phím hoặc thêm các phương pháp đầu vào mới trở nên dễ dàng
 
-> 💡 **Mẹo chuyên nghiệp**: Vẻ đẹp của mẫu thiết kế này là sự linh hoạt! Bạn có thể dễ dàng thêm hiệu ứng âm thanh, rung màn hình hoặc hiệu ứng hạt chỉ bằng cách thêm nhiều listener sự kiện – không cần phải sửa đổi mã bàn phím hoặc di chuyển hiện có.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Keyboard
+    participant EventEmitter
+    participant Hero
+    participant SoundSystem
+    participant Camera
+    
+    User->>Keyboard: Presses ArrowLeft
+    Keyboard->>EventEmitter: emit('HERO_MOVE_LEFT')
+    EventEmitter->>Hero: Move left 5 pixels
+    EventEmitter->>SoundSystem: Play footstep sound
+    EventEmitter->>Camera: Follow hero
+    
+    Hero->>Hero: Update position
+    SoundSystem->>SoundSystem: Play audio
+    Camera->>Camera: Adjust viewport
+```
+
+> 💡 **Mẹo chuyên nghiệp**: Vẻ đẹp của mẫu này là sự linh hoạt! Bạn có thể dễ dàng thêm hiệu ứng âm thanh, rung màn hình hoặc hiệu ứng hạt bằng cách chỉ cần thêm nhiều người nghe sự kiện – không cần sửa đổi mã đầu vào hoặc di chuyển hiện có.
 > 
 **Tại sao bạn sẽ yêu thích cách tiếp cận này:**
-- Việc thêm tính năng mới trở nên cực kỳ dễ dàng – chỉ cần lắng nghe các sự kiện bạn quan tâm
+- Việc thêm các tính năng mới trở nên cực kỳ dễ dàng – chỉ cần lắng nghe các sự kiện bạn quan tâm
 - Nhiều thứ có thể phản ứng với cùng một sự kiện mà không gây xung đột
-- Việc kiểm tra trở nên đơn giản hơn vì mỗi phần hoạt động độc lập
-- Khi có lỗi xảy ra, bạn biết chính xác nơi cần kiểm tra
+- Việc kiểm tra trở nên đơn giản hơn nhiều vì mỗi phần hoạt động độc lập
+- Khi có sự cố, bạn biết chính xác nơi cần kiểm tra
 
-### Tại sao Pub/Sub Mở Rộng Hiệu Quả
+### Tại sao Pub/Sub mở rộng hiệu quả
 
-Mẫu thiết kế pub/sub duy trì sự đơn giản khi các ứng dụng trở nên phức tạp hơn. Dù quản lý hàng chục kẻ thù, cập nhật giao diện người dùng động hay hệ thống âm thanh, mẫu thiết kế này xử lý quy mô tăng lên mà không cần thay đổi kiến trúc. Các tính năng mới tích hợp vào hệ thống sự kiện hiện có mà không ảnh hưởng đến chức năng đã được thiết lập.
+Mẫu pub/sub duy trì sự đơn giản khi các ứng dụng trở nên phức tạp hơn. Dù là quản lý hàng chục kẻ thù, cập nhật UI động hay hệ thống âm thanh, mẫu này xử lý quy mô tăng lên mà không cần thay đổi kiến trúc. Các tính năng mới tích hợp vào hệ thống sự kiện hiện có mà không ảnh hưởng đến chức năng đã được thiết lập.
 
-> ⚠️ **Lỗi thường gặp**: Đừng tạo quá nhiều loại thông báo cụ thể ngay từ đầu. Bắt đầu với các danh mục rộng và tinh chỉnh chúng khi nhu cầu của trò chơi trở nên rõ ràng.
+> ⚠️ **Lỗi thường gặp**: Đừng tạo quá nhiều loại thông điệp cụ thể ngay từ đầu. Bắt đầu với các danh mục rộng và tinh chỉnh chúng khi nhu cầu của trò chơi trở nên rõ ràng hơn.
 > 
 **Các thực hành tốt nhất cần tuân theo:**
-- **Nhóm** các thông báo liên quan vào các danh mục logic
+- **Nhóm** các thông điệp liên quan thành các danh mục logic
 - **Sử dụng** tên mô tả rõ ràng điều gì đã xảy ra
-- **Giữ** các payload thông báo đơn giản và tập trung
-- **Tài liệu hóa** các loại thông báo của bạn để hợp tác nhóm
+- **Giữ** payload thông điệp đơn giản và tập trung
+- **Tài liệu hóa** các loại thông điệp của bạn để hợp tác nhóm
+
+### 🔄 **Kiểm tra Sư phạm**
+**Hiểu Kiến trúc Dựa trên Sự kiện**: Xác minh sự hiểu biết của bạn về hệ thống hoàn chỉnh:
+- ✅ Làm thế nào mẫu pub/sub ngăn chặn sự ràng buộc chặt chẽ giữa các thành phần?
+- ✅ Tại sao việc thêm các tính năng mới dễ dàng hơn với kiến trúc dựa trên sự kiện?
+- ✅ Vai trò của EventEmitter trong luồng giao tiếp là gì?
+- ✅ Làm thế nào các hằng số thông điệp ngăn chặn lỗi và cải thiện khả năng bảo trì?
+
+**Thử thách Thiết kế**: Làm thế nào bạn sẽ xử lý các kịch bản trò chơi này với pub/sub?
+1. **Kẻ thù chết**: Cập nhật điểm số, phát âm thanh, sinh vật phẩm tăng cường sức mạnh, xóa khỏi màn hình
+2. **Hoàn thành cấp độ**: Dừng nhạc, hiển thị UI, lưu tiến trình, tải cấp độ tiếp theo
+3. **Thu thập vật phẩm tăng cường sức mạnh**: Tăng cường khả năng, cập nhật UI, phát hiệu ứng, bắt đầu bộ đếm thời gian
+
+**Kết nối Chuyên nghiệp**: Mẫu này xuất hiện trong:
+- **Frontend Frameworks**: Hệ thống sự kiện React/Vue
+- **Backend Services**: Giao tiếp microservice
+- **Game Engines**: Hệ thống sự kiện của Unity
+- **Phát triển Di động**: Hệ thống thông báo iOS/Android
 
 ---
 
@@ -341,23 +525,132 @@ Mẫu thiết kế pub/sub duy trì sự đơn giản khi các ứng dụng tr�
 
 Sử dụng chế độ Agent để hoàn thành thử thách sau:
 
-**Mô tả:** Tạo một hệ thống đối tượng trò chơi đơn giản sử dụng cả kế thừa và mẫu thiết kế pub/sub. Bạn sẽ triển khai một trò chơi cơ bản nơi các đối tượng khác nhau có thể giao tiếp thông qua các sự kiện mà không biết trực tiếp về nhau.
+**Mô tả:** Tạo một hệ thống đối tượng trò chơi đơn giản sử dụng cả kế thừa và mẫu pub/sub. Bạn sẽ triển khai một trò chơi cơ bản nơi các đối tượng khác nhau có thể giao tiếp thông qua các sự kiện mà không biết trực tiếp về nhau.
 
-**Yêu cầu:** Tạo một hệ thống trò chơi JavaScript với các yêu cầu sau: 1) Tạo một lớp GameObject cơ sở với tọa độ x, y và thuộc tính loại. 2) Tạo một lớp Hero mở rộng GameObject và có thể di chuyển. 3) Tạo một lớp Enemy mở rộng GameObject và có thể đuổi theo anh hùng. 4) Triển khai một lớp EventEmitter cho mẫu thiết kế pub/sub. 5) Thiết lập các listener sự kiện để khi anh hùng di chuyển, các kẻ thù gần đó nhận được sự kiện 'HERO_MOVED' và cập nhật vị trí của chúng để đuổi theo anh hùng. Bao gồm các câu lệnh console.log để hiển thị giao tiếp giữa các đối tượng.
+**Yêu cầu:** Tạo một hệ thống trò chơi JavaScript với các
+Hãy xem xét cách mô hình pub-sub có thể cải thiện kiến trúc trò chơi. Xác định những thành phần nào nên phát ra sự kiện và cách hệ thống nên phản hồi. Thiết kế một ý tưởng trò chơi và lập bản đồ các mô hình giao tiếp giữa các thành phần của nó.
 
-Tìm hiểu thêm về [chế độ agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) tại đây.
+## Câu hỏi kiểm tra sau bài giảng
 
-## 🚀 Thử thách
-
-Hãy xem xét cách mẫu thiết kế pub-sub có thể cải thiện kiến trúc trò chơi. Xác định các thành phần nào nên phát ra sự kiện và cách hệ thống nên phản hồi. Thiết kế một ý tưởng trò chơi và lập bản đồ các mẫu giao tiếp giữa các thành phần của nó.
-
-## Quiz sau bài giảng
-
-[Quiz sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/30)
+[Bài kiểm tra sau bài giảng](https://ff-quizzes.netlify.app/web/quiz/30)
 
 ## Ôn tập & Tự học
 
 Tìm hiểu thêm về Pub/Sub bằng cách [đọc về nó](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
+
+### ⚡ **Những gì bạn có thể làm trong 5 phút tới**
+- [ ] Mở bất kỳ trò chơi HTML5 nào trực tuyến và kiểm tra mã của nó bằng DevTools
+- [ ] Tạo một phần tử Canvas HTML5 đơn giản và vẽ một hình cơ bản
+- [ ] Thử sử dụng `setInterval` để tạo một vòng lặp hoạt hình đơn giản
+- [ ] Khám phá tài liệu API Canvas và thử một phương pháp vẽ
+
+### 🎯 **Những gì bạn có thể hoàn thành trong giờ này**
+- [ ] Hoàn thành bài kiểm tra sau bài học và hiểu các khái niệm phát triển trò chơi
+- [ ] Thiết lập cấu trúc dự án trò chơi của bạn với các tệp HTML, CSS và JavaScript
+- [ ] Tạo một vòng lặp trò chơi cơ bản cập nhật và hiển thị liên tục
+- [ ] Vẽ các sprite trò chơi đầu tiên của bạn trên canvas
+- [ ] Triển khai tải tài nguyên cơ bản cho hình ảnh và âm thanh
+
+### 📅 **Tạo trò chơi trong một tuần**
+- [ ] Hoàn thành trò chơi không gian đầy đủ với tất cả các tính năng đã lên kế hoạch
+- [ ] Thêm đồ họa mượt mà, hiệu ứng âm thanh và hoạt hình trơn tru
+- [ ] Triển khai các trạng thái trò chơi (màn hình bắt đầu, chơi game, kết thúc trò chơi)
+- [ ] Tạo hệ thống tính điểm và theo dõi tiến trình của người chơi
+- [ ] Làm cho trò chơi của bạn tương thích và dễ sử dụng trên nhiều thiết bị
+- [ ] Chia sẻ trò chơi của bạn trực tuyến và thu thập phản hồi từ người chơi
+
+### 🌟 **Phát triển trò chơi trong một tháng**
+- [ ] Xây dựng nhiều trò chơi khám phá các thể loại và cơ chế khác nhau
+- [ ] Học một framework phát triển trò chơi như Phaser hoặc Three.js
+- [ ] Đóng góp vào các dự án phát triển trò chơi mã nguồn mở
+- [ ] Thành thạo các mô hình lập trình trò chơi nâng cao và tối ưu hóa
+- [ ] Tạo một danh mục đầu tư thể hiện kỹ năng phát triển trò chơi của bạn
+- [ ] Hướng dẫn những người khác quan tâm đến phát triển trò chơi và truyền thông tương tác
+
+## 🎯 Lộ trình thành thạo phát triển trò chơi của bạn
+
+```mermaid
+timeline
+    title Game Architecture Learning Progression
+    
+    section Object Patterns (20 minutes)
+        Code Organization: Class inheritance
+                         : Composition patterns
+                         : Factory functions
+                         : Behavior mixing
+        
+    section Communication Systems (25 minutes)
+        Event Architecture: Pub/Sub implementation
+                          : Message design
+                          : Event emitters
+                          : Loose coupling
+        
+    section Game Object Design (30 minutes)
+        Entity Systems: Property management
+                      : Behavior composition
+                      : State handling
+                      : Lifecycle management
+        
+    section Architecture Patterns (35 minutes)
+        System Design: Component systems
+                     : Observer pattern
+                     : Command pattern
+                     : State machines
+        
+    section Advanced Concepts (45 minutes)
+        Scalable Architecture: Performance optimization
+                             : Memory management
+                             : Modular design
+                             : Testing strategies
+        
+    section Game Engine Concepts (1 week)
+        Professional Development: Scene graphs
+                                 : Asset management
+                                 : Rendering pipelines
+                                 : Physics integration
+        
+    section Framework Mastery (2 weeks)
+        Modern Game Development: React game patterns
+                               : Canvas optimization
+                               : WebGL basics
+                               : PWA games
+        
+    section Industry Practices (1 month)
+        Professional Skills: Team collaboration
+                           : Code reviews
+                           : Game design patterns
+                           : Performance profiling
+```
+
+### 🛠️ Tóm tắt bộ công cụ kiến trúc trò chơi của bạn
+
+Sau khi hoàn thành bài học này, bạn đã có:
+- **Thành thạo mô hình thiết kế**: Hiểu được sự đánh đổi giữa kế thừa và thành phần
+- **Kiến trúc hướng sự kiện**: Triển khai pub/sub để giao tiếp mở rộng
+- **Thiết kế hướng đối tượng**: Hệ thống phân cấp lớp và thành phần hành vi
+- **JavaScript hiện đại**: Hàm factory, cú pháp spread và các mô hình ES6+
+- **Kiến trúc mở rộng**: Nguyên tắc thiết kế module và giảm sự phụ thuộc
+- **Nền tảng phát triển trò chơi**: Hệ thống thực thể và mô hình thành phần
+- **Mô hình chuyên nghiệp**: Các phương pháp tổ chức mã theo tiêu chuẩn ngành
+
+**Ứng dụng thực tế**: Các mô hình này áp dụng trực tiếp vào:
+- **Framework Frontend**: Kiến trúc thành phần và quản lý trạng thái của React/Vue
+- **Dịch vụ Backend**: Giao tiếp microservice và hệ thống hướng sự kiện
+- **Phát triển di động**: Kiến trúc ứng dụng iOS/Android và hệ thống thông báo
+- **Công cụ trò chơi**: Unity, Unreal và phát triển trò chơi trên web
+- **Phần mềm doanh nghiệp**: Ghi nhận sự kiện và thiết kế hệ thống phân tán
+- **Thiết kế API**: Dịch vụ RESTful và giao tiếp thời gian thực
+
+**Kỹ năng chuyên nghiệp đạt được**: Bạn có thể:
+- **Thiết kế** kiến trúc phần mềm mở rộng bằng các mô hình đã được chứng minh
+- **Triển khai** hệ thống hướng sự kiện xử lý các tương tác phức tạp
+- **Lựa chọn** chiến lược tổ chức mã phù hợp cho các tình huống khác nhau
+- **Gỡ lỗi** và duy trì các hệ thống giảm sự phụ thuộc một cách hiệu quả
+- **Truyền đạt** các quyết định kỹ thuật bằng thuật ngữ tiêu chuẩn ngành
+
+**Cấp độ tiếp theo**: Bạn đã sẵn sàng triển khai các mô hình này vào một trò chơi thực tế, khám phá các chủ đề phát triển trò chơi nâng cao, hoặc áp dụng các khái niệm kiến trúc này vào ứng dụng web!
+
+🌟 **Thành tựu mở khóa**: Bạn đã thành thạo các mô hình kiến trúc phần mềm cơ bản, cung cấp sức mạnh từ các trò chơi đơn giản đến các hệ thống doanh nghiệp phức tạp!
 
 ## Bài tập
 

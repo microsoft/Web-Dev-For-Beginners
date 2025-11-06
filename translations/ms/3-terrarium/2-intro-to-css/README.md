@@ -1,48 +1,104 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92c4431eac70670b0450b02c1d11279a",
-  "translation_date": "2025-10-24T14:31:43+00:00",
+  "original_hash": "e39f3a4e3bcccf94639e3af1248f8a4d",
+  "translation_date": "2025-11-06T12:11:44+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "ms"
 }
 -->
 # Projek Terrarium Bahagian 2: Pengenalan kepada CSS
 
+```mermaid
+journey
+    title Your CSS Styling Journey
+    section Foundation
+      Link CSS file: 3: Student
+      Understand cascade: 4: Student
+      Learn inheritance: 4: Student
+    section Selectors
+      Element targeting: 4: Student
+      Class patterns: 5: Student
+      ID specificity: 5: Student
+    section Layout
+      Position elements: 4: Student
+      Create containers: 5: Student
+      Build terrarium: 5: Student
+    section Polish
+      Add visual effects: 5: Student
+      Responsive design: 5: Student
+      Glass reflections: 5: Student
+```
+
 ![Pengenalan kepada CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.ms.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Masih ingat bagaimana HTML terrarium anda kelihatan agak asas? CSS adalah tempat kita mengubah struktur biasa itu menjadi sesuatu yang menarik secara visual.
+Ingat bagaimana HTML terrarium anda kelihatan agak asas? CSS adalah tempat kita mengubah struktur biasa itu menjadi sesuatu yang menarik secara visual.
 
-Jika HTML seperti membina rangka rumah, maka CSS adalah segala-galanya yang membuatkan ia terasa seperti rumah - warna cat, susunan perabot, pencahayaan, dan bagaimana bilik-bilik saling berhubung. Fikirkan bagaimana Istana Versailles bermula sebagai pondok memburu yang sederhana, tetapi perhatian yang teliti terhadap hiasan dan susun atur mengubahnya menjadi salah satu bangunan paling megah di dunia.
+Jika HTML seperti membina rangka rumah, maka CSS adalah segala-galanya yang membuatkan ia terasa seperti rumah - warna cat, susunan perabot, pencahayaan, dan bagaimana bilik-bilik disusun. Fikirkan bagaimana Istana Versailles bermula sebagai pondok memburu yang sederhana, tetapi perhatian yang teliti terhadap hiasan dan susun atur mengubahnya menjadi salah satu bangunan paling megah di dunia.
 
-Hari ini, kita akan mengubah terrarium anda daripada berfungsi kepada kemas. Anda akan belajar bagaimana meletakkan elemen dengan tepat, membuat susun atur yang responsif kepada pelbagai saiz skrin, dan mencipta daya tarikan visual yang menjadikan laman web menarik.
+Hari ini, kita akan mengubah terrarium anda daripada berfungsi kepada yang lebih kemas. Anda akan belajar bagaimana meletakkan elemen dengan tepat, membuat susun atur yang responsif kepada pelbagai saiz skrin, dan mencipta daya tarikan visual yang menjadikan laman web menarik.
 
-Pada akhir pelajaran ini, anda akan melihat bagaimana gaya CSS yang strategik dapat meningkatkan projek anda dengan ketara. Mari tambahkan gaya pada terrarium anda.
+Menjelang akhir pelajaran ini, anda akan melihat bagaimana gaya CSS yang strategik boleh meningkatkan projek anda dengan ketara. Mari tambahkan gaya pada terrarium anda.
+
+```mermaid
+mindmap
+  root((CSS Fundamentals))
+    Cascade
+      Specificity Rules
+      Inheritance
+      Priority Order
+      Conflict Resolution
+    Selectors
+      Element Tags
+      Classes (.class)
+      IDs (#id)
+      Combinators
+    Box Model
+      Margin
+      Border
+      Padding
+      Content
+    Layout
+      Positioning
+      Display Types
+      Flexbox
+      Grid
+    Visual Effects
+      Colors
+      Shadows
+      Transitions
+      Animations
+    Responsive Design
+      Media Queries
+      Flexible Units
+      Viewport Meta
+      Mobile First
+```
 
 ## Kuiz Pra-Kuliah
 
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/17)
 
-## Memulakan dengan CSS
+## Bermula dengan CSS
 
-CSS sering dianggap hanya sebagai "membuat sesuatu kelihatan cantik," tetapi ia berfungsi lebih luas daripada itu. CSS seperti menjadi pengarah filem - anda mengawal bukan sahaja bagaimana semuanya kelihatan, tetapi bagaimana ia bergerak, bertindak balas terhadap interaksi, dan menyesuaikan diri dengan situasi yang berbeza.
+CSS sering dianggap hanya untuk "mencantikkan sesuatu," tetapi ia mempunyai tujuan yang lebih luas. CSS seperti menjadi pengarah filem - anda mengawal bukan sahaja bagaimana semuanya kelihatan, tetapi bagaimana ia bergerak, bertindak balas terhadap interaksi, dan menyesuaikan diri dengan situasi yang berbeza.
 
-CSS moden sangat berkemampuan. Anda boleh menulis kod yang secara automatik menyesuaikan susun atur untuk telefon, tablet, dan komputer desktop. Anda boleh mencipta animasi yang lancar untuk mengarahkan perhatian pengguna ke tempat yang diperlukan. Hasilnya boleh menjadi sangat mengagumkan apabila semuanya berfungsi bersama.
+CSS moden sangat berkemampuan. Anda boleh menulis kod yang secara automatik menyesuaikan susun atur untuk telefon, tablet, dan komputer meja. Anda boleh mencipta animasi yang lancar untuk memandu perhatian pengguna ke tempat yang diperlukan. Hasilnya boleh menjadi sangat mengagumkan apabila semuanya berfungsi bersama.
 
-> 💡 **Tip Profesional**: CSS sentiasa berkembang dengan ciri dan keupayaan baharu. Sentiasa semak [CanIUse.com](https://caniuse.com) untuk mengesahkan sokongan pelayar bagi ciri CSS yang lebih baharu sebelum menggunakannya dalam projek pengeluaran.
+> 💡 **Petua Pro**: CSS sentiasa berkembang dengan ciri dan keupayaan baharu. Sentiasa semak [CanIUse.com](https://caniuse.com) untuk mengesahkan sokongan pelayar untuk ciri CSS baharu sebelum menggunakannya dalam projek pengeluaran.
 
 **Apa yang akan kita capai dalam pelajaran ini:**
 - **Mencipta** reka bentuk visual lengkap untuk terrarium anda menggunakan teknik CSS moden
-- **Meneroka** konsep asas seperti kaskad, pewarisan, dan pemilih CSS
+- **Meneroka** konsep asas seperti cascade, inheritance, dan selector CSS
 - **Melaksanakan** strategi kedudukan dan susun atur yang responsif
 - **Membina** bekas terrarium menggunakan bentuk dan gaya CSS
 
 ### Prasyarat
 
-Anda sepatutnya telah melengkapkan struktur HTML untuk terrarium anda daripada pelajaran sebelumnya dan bersedia untuk digayakan.
+Anda sepatutnya telah menyiapkan struktur HTML untuk terrarium anda dari pelajaran sebelumnya dan bersedia untuk digayakan.
 
-> 📺 **Sumber Video**: Lihat video panduan yang berguna ini
+> 📺 **Sumber Video**: Tonton video panduan ini
 >
 > [![Tutorial Asas CSS](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
@@ -50,34 +106,34 @@ Anda sepatutnya telah melengkapkan struktur HTML untuk terrarium anda daripada p
 
 Sebelum kita mula menggaya, kita perlu menghubungkan CSS ke HTML kita. Sambungan ini memberitahu pelayar di mana untuk mencari arahan gaya untuk terrarium kita.
 
-Dalam folder terrarium anda, buat fail baharu bernama `style.css`, kemudian pautkan ia dalam bahagian `<head>` dokumen HTML anda:
+Dalam folder terrarium anda, buat fail baru bernama `style.css`, kemudian pautkannya dalam bahagian `<head>` dokumen HTML anda:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
 ```
 
 **Apa yang dilakukan oleh kod ini:**
-- **Mencipta** sambungan antara fail HTML dan CSS anda
-- **Memberitahu** pelayar untuk memuatkan dan menggunakan gaya daripada `style.css`
+- **Mewujudkan** sambungan antara fail HTML dan CSS anda
+- **Memberitahu** pelayar untuk memuatkan dan menggunakan gaya dari `style.css`
 - **Menggunakan** atribut `rel="stylesheet"` untuk menentukan ini adalah fail CSS
 - **Merujuk** laluan fail dengan `href="./style.css"`
 
-## Memahami Kaskad CSS
+## Memahami CSS Cascade
 
-Pernah tertanya-tanya mengapa CSS dipanggil "Cascading" Style Sheets? Gaya mengalir turun seperti air terjun, dan kadang-kadang mereka bertentangan antara satu sama lain.
+Pernah tertanya-tanya mengapa CSS dipanggil "Cascading" Style Sheets? Gaya mengalir seperti air terjun, dan kadang-kadang mereka bertentangan antara satu sama lain.
 
-Fikirkan bagaimana struktur perintah tentera berfungsi - perintah umum mungkin mengatakan "semua tentera memakai hijau," tetapi perintah khusus kepada unit anda mungkin mengatakan "pakai pakaian biru untuk upacara." Arahan yang lebih spesifik mengambil keutamaan. CSS mengikuti logik yang sama, dan memahami hierarki ini menjadikan penyelesaian masalah lebih mudah.
+Fikirkan bagaimana struktur perintah tentera berfungsi - perintah umum mungkin mengatakan "semua tentera memakai hijau," tetapi perintah khusus kepada unit anda mungkin mengatakan "pakai pakaian biru untuk upacara." Arahan yang lebih spesifik akan diutamakan. CSS mengikuti logik yang serupa, dan memahami hierarki ini menjadikan penyahpepijatan lebih mudah diurus.
 
-### Bereksperimen dengan Keutamaan Kaskad
+### Mencuba Keutamaan Cascade
 
-Mari lihat kaskad beraksi dengan mencipta konflik gaya. Pertama, tambahkan gaya inline pada tag `<h1>` anda:
+Mari kita lihat cascade dalam tindakan dengan mencipta konflik gaya. Pertama, tambahkan gaya inline pada tag `<h1>` anda:
 
 ```html
 <h1 style="color: red">My Terrarium</h1>
 ```
 
 **Apa yang dilakukan oleh kod ini:**
-- **Mengaplikasikan** warna merah secara langsung pada elemen `<h1>` menggunakan gaya inline
+- **Menerapkan** warna merah secara langsung pada elemen `<h1>` menggunakan gaya inline
 - **Menggunakan** atribut `style` untuk menyematkan CSS secara langsung dalam HTML
 - **Mencipta** peraturan gaya keutamaan tertinggi untuk elemen tertentu ini
 
@@ -91,27 +147,49 @@ h1 {
 
 **Dalam kod di atas, kita telah:**
 - **Menentukan** peraturan CSS yang menyasarkan semua elemen `<h1>`
-- **Menetapkan** warna teks kepada biru menggunakan lembaran gaya luaran
+- **Menetapkan** warna teks kepada biru menggunakan stylesheet luaran
 - **Mencipta** peraturan keutamaan yang lebih rendah berbanding gaya inline
 
-✅ **Semakan Pengetahuan**: Warna mana yang dipaparkan dalam aplikasi web anda? Mengapa warna itu menang? Bolehkah anda memikirkan senario di mana anda mungkin mahu mengatasi gaya?
+✅ **Semak Pengetahuan**: Warna apa yang dipaparkan dalam aplikasi web anda? Mengapa warna itu menang? Bolehkah anda memikirkan senario di mana anda mungkin mahu mengatasi gaya?
+
+```mermaid
+flowchart TD
+    A["Browser encounters h1 element"] --> B{"Check for inline styles"}
+    B -->|Found| C["style='color: red'"] 
+    B -->|None| D{"Check for ID rules"}
+    C --> E["Apply red color (1000 points)"]
+    D -->|Found| F["#heading { color: green }"]
+    D -->|None| G{"Check for class rules"}
+    F --> H["Apply green color (100 points)"]
+    G -->|Found| I[".title { color: blue }"]
+    G -->|None| J{"Check element rules"}
+    I --> K["Apply blue color (10 points)"]
+    J -->|Found| L["h1 { color: purple }"]
+    J -->|None| M["Use browser default"]
+    L --> N["Apply purple color (1 point)"]
+    
+    style C fill:#ff6b6b
+    style F fill:#51cf66
+    style I fill:#339af0
+    style L fill:#9775fa
+```
 
 > 💡 **Susunan Keutamaan CSS (tertinggi ke terendah):**
 > 1. **Gaya inline** (atribut style)
 > 2. **ID** (#myId)
 > 3. **Kelas** (.myClass) dan atribut
-> 4. **Pemilih elemen** (h1, div, p)
+> 4. **Selector elemen** (h1, div, p)
 > 5. **Tetapan lalai pelayar**
 
-## Pewarisan CSS dalam Tindakan
+## Tindakan Pewarisan CSS
 
-Pewarisan CSS berfungsi seperti genetik - elemen mewarisi sifat tertentu daripada elemen induk mereka. Jika anda menetapkan keluarga fon pada elemen badan, semua teks di dalamnya secara automatik menggunakan fon yang sama. Ia serupa dengan bagaimana rahang khas keluarga Habsburg muncul di seluruh generasi tanpa ditentukan untuk setiap individu.
+Pewarisan CSS berfungsi seperti genetik - elemen mewarisi sifat tertentu daripada elemen induknya. Jika anda menetapkan keluarga fon pada elemen body, semua teks di dalamnya secara automatik menggunakan fon yang sama. Ia serupa dengan bagaimana ciri-ciri fizikal keluarga diwarisi dari generasi ke generasi tanpa perlu ditentukan untuk setiap individu.
 
-Namun, tidak semua perkara diwarisi. Gaya teks seperti fon dan warna memang diwarisi, tetapi sifat susun atur seperti margin dan sempadan tidak. Sama seperti anak-anak mungkin mewarisi ciri fizikal tetapi tidak pilihan fesyen ibu bapa mereka.
+Namun, tidak semua perkara diwarisi. Gaya teks seperti fon dan warna diwarisi, tetapi sifat susun atur seperti margin dan sempadan tidak. Sama seperti anak-anak mungkin mewarisi ciri fizikal tetapi tidak pilihan fesyen ibu bapa mereka.
 
-### Memerhatikan Pewarisan Fon
+### Memerhati Pewarisan Fon
 
-Mari lihat pewarisan beraksi dengan menetapkan keluarga fon pada elemen `<body>`:
+Mari lihat pewarisan dalam tindakan dengan menetapkan keluarga fon pada elemen `<body>`:
 
 ```css
 body {
@@ -122,10 +200,10 @@ body {
 **Memecahkan apa yang berlaku di sini:**
 - **Menetapkan** keluarga fon untuk seluruh halaman dengan menyasarkan elemen `<body>`
 - **Menggunakan** susunan fon dengan pilihan sandaran untuk keserasian pelayar yang lebih baik
-- **Mengaplikasikan** fon sistem moden yang kelihatan hebat di pelbagai sistem operasi
+- **Menerapkan** fon sistem moden yang kelihatan hebat di pelbagai sistem operasi
 - **Memastikan** semua elemen anak mewarisi fon ini kecuali secara khusus diatasi
 
-Buka alat pembangun pelayar anda (F12), navigasi ke tab Elemen, dan periksa elemen `<h1>` anda. Anda akan melihat bahawa ia mewarisi keluarga fon daripada badan:
+Buka alat pembangun pelayar anda (F12), navigasi ke tab Elemen, dan periksa elemen `<h1>` anda. Anda akan melihat bahawa ia mewarisi keluarga fon dari body:
 
 ![fon diwarisi](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.ms.png)
 
@@ -135,15 +213,30 @@ Buka alat pembangun pelayar anda (F12), navigasi ke tab Elemen, dan periksa elem
 >
 > **Sifat yang Tidak Boleh Diwarisi Termasuk**: `margin`, `padding`, `border`, `width`, `height`, `position`
 
-## Menguasai Pemilih CSS
+### 🔄 **Semakan Pedagogi**
+**Pemahaman Asas CSS**: Sebelum bergerak ke selector, pastikan anda boleh:
+- ✅ Jelaskan perbezaan antara cascade dan pewarisan
+- ✅ Ramalkan gaya mana yang akan menang dalam konflik kekhususan
+- ✅ Kenal pasti sifat mana yang diwarisi daripada elemen induk
+- ✅ Sambungkan fail CSS ke HTML dengan betul
 
-Pemilih CSS adalah cara anda menyasarkan elemen tertentu untuk digayakan. Ia berfungsi seperti memberikan arahan yang tepat - bukannya mengatakan "rumah," anda mungkin mengatakan "rumah biru dengan pintu merah di Jalan Maple."
+**Ujian Pantas**: Jika anda mempunyai gaya ini, warna apa yang akan dipaparkan pada `<h1>` di dalam `<div class="special">`?
+```css
+div { color: blue; }
+.special { color: green; }
+h1 { color: red; }
+```
+*Jawapan: Merah (selector elemen secara langsung menyasarkan h1)*
 
-CSS menyediakan pelbagai cara untuk menjadi spesifik, dan memilih pemilih yang tepat adalah seperti memilih alat yang sesuai untuk tugas. Kadang-kadang anda perlu menggaya setiap pintu di kawasan kejiranan, dan kadang-kadang hanya satu pintu tertentu.
+## Menguasai Selector CSS
 
-### Pemilih Elemen (Tag)
+Selector CSS adalah cara anda menyasarkan elemen tertentu untuk digayakan. Ia berfungsi seperti memberikan arahan yang tepat - bukannya mengatakan "rumah itu," anda mungkin mengatakan "rumah biru dengan pintu merah di Jalan Maple."
 
-Pemilih elemen menyasarkan elemen HTML berdasarkan nama tag mereka. Mereka sesuai untuk menetapkan gaya asas yang digunakan secara meluas di seluruh halaman anda:
+CSS menyediakan pelbagai cara untuk menjadi spesifik, dan memilih selector yang betul adalah seperti memilih alat yang sesuai untuk tugas tersebut. Kadang-kadang anda perlu menggaya setiap pintu di kawasan kejiranan, dan kadang-kadang hanya satu pintu tertentu.
+
+### Selector Elemen (Tag)
+
+Selector elemen menyasarkan elemen HTML berdasarkan nama tag mereka. Ia sesuai untuk menetapkan gaya asas yang digunakan secara meluas di seluruh halaman anda:
 
 ```css
 body {
@@ -161,18 +254,18 @@ h1 {
 ```
 
 **Memahami gaya ini:**
-- **Menetapkan** tipografi yang konsisten di seluruh halaman dengan pemilih `body`
+- **Menetapkan** tipografi yang konsisten di seluruh halaman dengan selector `body`
 - **Menghapuskan** margin dan padding lalai pelayar untuk kawalan yang lebih baik
 - **Menggayakan** semua elemen tajuk dengan warna, penjajaran, dan jarak
 - **Menggunakan** unit `rem` untuk saiz fon yang boleh diskalakan dan boleh diakses
 
-Walaupun pemilih elemen berfungsi dengan baik untuk gaya umum, anda memerlukan pemilih yang lebih spesifik untuk menggaya komponen individu seperti tumbuhan dalam terrarium anda.
+Walaupun selector elemen berfungsi dengan baik untuk gaya umum, anda memerlukan selector yang lebih spesifik untuk menggaya komponen individu seperti tumbuhan dalam terrarium anda.
 
-### Pemilih ID untuk Elemen Unik
+### Selector ID untuk Elemen Unik
 
-Pemilih ID menggunakan simbol `#` dan menyasarkan elemen dengan atribut `id` tertentu. Oleh kerana ID mesti unik pada halaman, mereka sesuai untuk menggaya elemen individu yang istimewa seperti bekas tumbuhan kiri dan kanan kita.
+Selector ID menggunakan simbol `#` dan menyasarkan elemen dengan atribut `id` tertentu. Oleh kerana ID mesti unik pada satu halaman, ia sesuai untuk menggaya elemen individu yang istimewa seperti bekas tumbuhan kiri dan kanan kita.
 
-Mari buat gaya untuk bekas sisi terrarium kita di mana tumbuhan akan diletakkan:
+Mari kita cipta gaya untuk bekas sisi terrarium kita di mana tumbuhan akan diletakkan:
 
 ```css
 #left-container {
@@ -201,11 +294,11 @@ Mari buat gaya untuk bekas sisi terrarium kita di mana tumbuhan akan diletakkan:
 **Apa yang dicapai oleh kod ini:**
 - **Meletakkan** bekas di tepi kiri dan kanan menggunakan kedudukan `absolute`
 - **Menggunakan** unit `vh` (ketinggian viewport) untuk ketinggian responsif yang menyesuaikan diri dengan saiz skrin
-- **Mengaplikasikan** `box-sizing: border-box` supaya padding termasuk dalam jumlah lebar
-- **Menghapuskan** unit `px` yang tidak diperlukan daripada nilai sifar untuk kod yang lebih bersih
-- **Menetapkan** warna latar belakang yang lembut yang lebih mudah pada mata berbanding kelabu terang
+- **Menerapkan** `box-sizing: border-box` supaya padding termasuk dalam jumlah lebar
+- **Menghapuskan** unit `px` yang tidak diperlukan dari nilai sifar untuk kod yang lebih bersih
+- **Menetapkan** warna latar belakang yang lembut yang lebih mudah pada mata daripada kelabu terang
 
-✅ **Cabaran Kualiti Kod**: Perhatikan bagaimana CSS ini melanggar prinsip DRY (Don't Repeat Yourself). Bolehkah anda memperbaikinya menggunakan ID dan kelas?
+✅ **Cabaran Kualiti Kod**: Perhatikan bagaimana CSS ini melanggar prinsip DRY (Don't Repeat Yourself). Bolehkah anda merombaknya menggunakan ID dan kelas?
 
 **Pendekatan yang Diperbaiki:**
 ```html
@@ -233,11 +326,11 @@ Mari buat gaya untuk bekas sisi terrarium kita di mana tumbuhan akan diletakkan:
 }
 ```
 
-### Pemilih Kelas untuk Gaya yang Boleh Digunakan Semula
+### Selector Kelas untuk Gaya Boleh Digunakan Semula
 
-Pemilih kelas menggunakan simbol `.` dan sesuai apabila anda ingin menerapkan gaya yang sama pada beberapa elemen. Tidak seperti ID, kelas boleh digunakan semula di seluruh HTML anda, menjadikannya ideal untuk corak gaya yang konsisten.
+Selector kelas menggunakan simbol `.` dan sesuai apabila anda ingin menerapkan gaya yang sama pada pelbagai elemen. Tidak seperti ID, kelas boleh digunakan semula di seluruh HTML anda, menjadikannya ideal untuk corak gaya yang konsisten.
 
-Dalam terrarium kita, setiap tumbuhan memerlukan gaya yang serupa tetapi juga memerlukan kedudukan individu. Kita akan menggunakan gabungan kelas untuk gaya yang dikongsi dan ID untuk kedudukan unik.
+Dalam terrarium kita, setiap tumbuhan memerlukan gaya yang serupa tetapi juga memerlukan kedudukan individu. Kita akan menggunakan gabungan kelas untuk gaya bersama dan ID untuk kedudukan unik.
 
 **Berikut adalah struktur HTML untuk setiap tumbuhan:**
 ```html
@@ -248,8 +341,8 @@ Dalam terrarium kita, setiap tumbuhan memerlukan gaya yang serupa tetapi juga me
 
 **Elemen utama dijelaskan:**
 - **Menggunakan** `class="plant-holder"` untuk gaya bekas yang konsisten di semua tumbuhan
-- **Mengaplikasikan** `class="plant"` untuk gaya dan tingkah laku imej yang dikongsi
-- **Termasuk** `id="plant1"` yang unik untuk kedudukan individu dan interaksi JavaScript
+- **Menerapkan** `class="plant"` untuk gaya dan tingkah laku imej bersama
+- **Termasuk** `id="plant1"` unik untuk kedudukan individu dan interaksi JavaScript
 - **Menyediakan** teks alt deskriptif untuk kebolehaksesan pembaca skrin
 
 Sekarang tambahkan gaya ini ke fail `style.css` anda:
@@ -280,31 +373,48 @@ Sekarang tambahkan gaya ini ke fail `style.css` anda:
 - **Mengalihkan** pemegang sedikit ke kiri untuk lebih memusatkan tumbuhan dalam bekas mereka
 - **Membolehkan** tumbuhan berskala responsif dengan sifat `max-width` dan `max-height`
 - **Menggunakan** `z-index` untuk melapisi tumbuhan di atas elemen lain dalam terrarium
-- **Menambah** kesan hover yang halus dengan peralihan CSS untuk interaksi pengguna yang lebih baik
+- **Menambah** kesan hover halus dengan peralihan CSS untuk interaksi pengguna yang lebih baik
 
-✅ **Pemikiran Kritikal**: Mengapa kita memerlukan kedua-dua pemilih `.plant-holder` dan `.plant`? Apa yang akan berlaku jika kita cuba menggunakan hanya satu?
+✅ **Pemikiran Kritikal**: Mengapa kita memerlukan kedua-dua selector `.plant-holder` dan `.plant`? Apa yang akan berlaku jika kita cuba menggunakan hanya satu?
 
 > 💡 **Corak Reka Bentuk**: Bekas (`.plant-holder`) mengawal susun atur dan kedudukan, manakala kandungan (`.plant`) mengawal penampilan dan penskalaan. Pemisahan ini menjadikan kod lebih mudah diselenggara dan fleksibel.
 
 ## Memahami Kedudukan CSS
 
-Kedudukan CSS seperti menjadi pengarah pentas untuk persembahan - anda mengarahkan di mana setiap pelakon berdiri dan bagaimana mereka bergerak di sekitar pentas. Sesetengah pelakon mengikuti formasi standard, manakala yang lain memerlukan kedudukan tertentu untuk kesan dramatik.
+Kedudukan CSS seperti menjadi pengarah pentas untuk sebuah drama - anda mengarahkan di mana setiap pelakon berdiri dan bagaimana mereka bergerak di sekitar pentas. Sesetengah pelakon mengikuti formasi standard, manakala yang lain memerlukan kedudukan tertentu untuk kesan dramatik.
 
-Setelah anda memahami kedudukan, banyak cabaran susun atur menjadi lebih mudah diurus. Perlukan bar navigasi yang kekal di bahagian atas semasa pengguna menatal? Kedudukan mengendalikan itu. Mahu tooltip yang muncul di lokasi tertentu? Itu juga kedudukan.
+Setelah anda memahami kedudukan, banyak cabaran susun atur menjadi lebih mudah diurus. Perlu bar navigasi yang kekal di bahagian atas semasa pengguna menatal? Kedudukan mengendalikan itu. Mahu tooltip yang muncul di lokasi tertentu? Itu juga kedudukan.
 
 ### Lima Nilai Kedudukan
+
+```mermaid
+quadrantChart
+    title CSS Positioning Strategy
+    x-axis Document Flow --> Removed from Flow
+    y-axis Static Position --> Precise Control
+    quadrant-1 Absolute
+    quadrant-2 Fixed
+    quadrant-3 Static
+    quadrant-4 Sticky
+    
+    Static: [0.2, 0.2]
+    Relative: [0.3, 0.6]
+    Absolute: [0.8, 0.8]
+    Fixed: [0.9, 0.7]
+    Sticky: [0.5, 0.9]
+```
 
 | Nilai Kedudukan | Tingkah Laku | Kes Penggunaan |
 |------------------|-------------|----------------|
 | `static` | Aliran lalai, mengabaikan top/left/right/bottom | Susun atur dokumen biasa |
-| `relative` | Diletakkan relatif kepada kedudukan normalnya | Penyesuaian kecil, mewujudkan konteks kedudukan |
-| `absolute` | Diletakkan relatif kepada nenek moyang yang diletakkan | Penempatan tepat, overlay |
+| `relative` | Diletakkan relatif kepada kedudukan normalnya | Pelarasan kecil, mewujudkan konteks kedudukan |
+| `absolute` | Diletakkan relatif kepada nenek moyang yang diposisikan terdekat | Penempatan tepat, overlay |
 | `fixed` | Diletakkan relatif kepada viewport | Bar navigasi, elemen terapung |
-| `sticky` | Beralih antara relatif dan tetap berdasarkan tatalan | Tajuk yang melekat semasa menatal |
+| `sticky` | Beralih antara relative dan fixed berdasarkan tatalan | Header yang melekat semasa menatal |
 
 ### Kedudukan dalam Terrarium Kita
 
-Terrarium kita menggunakan gabungan strategik jenis kedudukan untuk mencipta susun atur yang diinginkan:
+Terrarium kita menggunakan gabungan strategik jenis kedudukan untuk mencipta susun atur yang diingini:
 
 ```css
 /* Container positioning */
@@ -327,26 +437,61 @@ Terrarium kita menggunakan gabungan strategik jenis kedudukan untuk mencipta sus
 ```
 
 **Memahami strategi kedudukan:**
-- **Bekas mutlak** dikeluarkan daripada aliran dokumen biasa dan dipasangkan ke tepi skrin
+- **Bekas absolute** dikeluarkan dari aliran dokumen biasa dan dipasangkan ke tepi skrin
 - **Pemegang tumbuhan relatif** mencipta konteks kedudukan sambil kekal dalam aliran dokumen
-- **Tumbuhan mutlak** boleh diletakkan dengan tepat dalam bekas relatif mereka
-- **Gabungan ini** membolehkan tumbuhan disusun secara menegak sambil boleh diletakkan secara individu
+- **Tumbuhan absolute** boleh diletakkan dengan tepat dalam bekas relatif mereka
+- **Gabungan ini** membolehkan tumbuhan disusun secara menegak sambil boleh diposisikan secara individu
 
-> 🎯 **Mengapa Ini Penting**: Elemen `plant` memerlukan kedudukan mutlak untuk menjadi boleh diseret dalam pelajaran seterusnya. Kedudukan mutlak mengeluarkan mereka daripada aliran susun atur biasa, menjadikan interaksi seret dan lepas mungkin.
+> 🎯 **Mengapa Ini Penting**: Elemen `plant` memerlukan kedudukan absolute untuk menjadi boleh diseret dalam pelajaran seterusnya. Kedudukan absolute mengeluarkan mereka dari aliran susun atur biasa, menjadikan interaksi seret dan lepas boleh dilakukan.
 
 ✅ **Masa Eksperimen**: Cuba ubah nilai kedudukan dan perhatikan hasilnya:
 - Apa yang berlaku jika anda menukar `.container` daripada `absolute` kepada `relative`?
 - Bagaimana susun atur berubah jika `.plant-holder` menggunakan `absolute` dan bukannya `relative`?
 - Apa yang berlaku apabila anda menukar `.plant` kepada kedudukan `relative`?
 
+### 🔄 **Semakan Pedagogi**
+**Penguasaan Kedudukan CSS**: Berhenti sejenak untuk mengesahkan pemahaman anda:
+- ✅ Bolehkah anda menerangkan mengapa tumbuhan memerlukan kedudukan absolute untuk seret dan lepas?
+- ✅ Adakah anda memahami bagaimana bekas relative mencipta konteks kedudukan?
+- ✅ Mengapa bekas sisi menggunakan kedudukan absolute?
+- ✅ Apa yang akan berlaku jika anda menghapuskan deklarasi kedudukan sepenuhnya?
+
+**Hubungan Dunia Sebenar**: Fikirkan bagaimana kedudukan CSS mencerminkan susun atur dunia sebenar:
+- **Static**: Buku di rak (susunan semula jadi)
+- **Relative**: Menggerakkan buku sedikit tetapi mengekalkan tempatnya
+- **Absolute**: Meletakkan penanda buku pada nombor halaman tertentu
+- **Fixed**: Nota lekat yang kekal kelihatan semasa anda membalik halaman
+
 ## Membina Terrarium dengan CSS
 
-Sekarang kita akan membina balang kaca menggunakan hanya CSS - tanpa imej atau perisian grafik diperlukan.
+Sekarang kita akan membina balang kaca menggunakan CSS sahaja - tanpa imej atau perisian grafik.
 
-Mencipta kaca yang kelihatan realistik, bayang-bayang, dan kesan kedalaman menggunakan kedudukan dan ketelusan menunjukkan keupayaan visual CSS. Teknik ini mencerminkan bagaimana arkitek dalam gerakan Bauhaus menggunakan bentuk geometri sederhana untuk mencipta struktur yang kompleks dan indah. Setelah anda memahami prinsip-prinsip ini, anda akan mengenali teknik CSS di sebalik banyak reka bentuk web.
+Mencipta kaca yang kelihatan realistik, bayang-bayang, dan kesan kedalaman menggunakan kedudukan dan ketelusan menunjukkan keupayaan visual CSS. Teknik ini mencerminkan bagaimana arkitek dalam gerakan Bauhaus menggunakan bentuk geometri mudah untuk mencipta struktur yang kompleks dan indah. Setelah anda memahami prinsip ini, anda akan mengenali teknik CSS di sebalik banyak reka bentuk web.
 
-### Mencipta Komponen Balang Kaca
-Mari kita bina balang terrarium secara berperingkat. Setiap bahagian menggunakan kedudukan mutlak dan saiz berdasarkan peratusan untuk reka bentuk responsif:
+```mermaid
+flowchart LR
+    A[Jar Top] --> E[Complete Terrarium]
+    B[Jar Walls] --> E
+    C[Dirt Layer] --> E
+    D[Jar Bottom] --> E
+    F[Glass Effects] --> E
+    
+    A1["50% width<br/>5% height<br/>Top position"] --> A
+    B1["60% width<br/>80% height<br/>Rounded corners<br/>0.5 opacity"] --> B
+    C1["60% width<br/>5% height<br/>Dark brown<br/>Bottom layer"] --> C
+    D1["50% width<br/>1% height<br/>Bottom position"] --> D
+    F1["Subtle shadows<br/>Transparency<br/>Z-index layering"] --> F
+    
+    style E fill:#d1e1df,stroke:#3a241d
+    style A fill:#e8f5e8
+    style B fill:#e8f5e8
+    style C fill:#8B4513
+    style D fill:#e8f5e8
+```
+
+### Membina Komponen Balang Kaca
+
+Mari kita bina balang terrarium secara berperingkat. Setiap bahagian menggunakan kedudukan absolute dan saiz berdasarkan peratusan untuk reka bentuk responsif:
 
 ```css
 .jar-walls {
@@ -399,11 +544,11 @@ Mari kita bina balang terrarium secara berperingkat. Setiap bahagian menggunakan
 ```
 
 **Memahami pembinaan terrarium:**
-- **Menggunakan** dimensi berdasarkan peratusan untuk skala responsif di semua saiz skrin
-- **Meletakkan** elemen secara mutlak untuk menyusun dan menyelaraskannya dengan tepat
-- **Menerapkan** nilai kelegapan yang berbeza untuk mencipta kesan ketelusan kaca
-- **Menggunakan** lapisan `z-index` supaya tumbuhan kelihatan di dalam balang
-- **Menambah** bayang-bayang kotak yang halus dan sudut sempadan yang diperhalusi untuk penampilan yang lebih realistik
+- **Menggunakan** dimensi berdasarkan peratusan untuk penskalaan responsif di semua saiz skrin
+- **Meletakkan** elemen secara absolute untuk menyusun dan menyelaraskannya dengan tepat
+- **Mengaplikasikan** nilai ketelusan yang berbeza untuk mencipta kesan ketelusan kaca
+- **Melaksanakan** lapisan `z-index` supaya tumbuhan kelihatan di dalam balang
+- **Menambah** bayang-bayang kotak halus dan `border-radius` yang diperhalusi untuk penampilan yang lebih realistik
 
 ### Reka Bentuk Responsif dengan Peratusan
 
@@ -412,42 +557,54 @@ Perhatikan bagaimana semua dimensi menggunakan peratusan dan bukannya nilai piks
 **Mengapa ini penting:**
 - **Memastikan** terrarium berskala secara berkadar pada mana-mana saiz skrin
 - **Menjaga** hubungan visual antara komponen balang
-- **Memberikan** pengalaman yang konsisten dari telefon bimbit hingga monitor desktop besar
+- **Memberikan** pengalaman yang konsisten dari telefon bimbit ke monitor desktop besar
 - **Membolehkan** reka bentuk menyesuaikan tanpa merosakkan susun atur visual
 
 ### Unit CSS dalam Tindakan
 
-Kami menggunakan unit `rem` untuk sudut sempadan, yang berskala relatif kepada saiz fon akar. Ini mencipta reka bentuk yang lebih mudah diakses dan menghormati keutamaan fon pengguna. Ketahui lebih lanjut tentang [unit relatif CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths) dalam spesifikasi rasmi.
+Kami menggunakan unit `rem` untuk `border-radius`, yang berskala relatif kepada saiz fon akar. Ini mencipta reka bentuk yang lebih mudah diakses yang menghormati keutamaan fon pengguna. Ketahui lebih lanjut tentang [unit relatif CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths) dalam spesifikasi rasmi.
 
-✅ **Eksperimen Visual**: Cuba ubah nilai-nilai ini dan perhatikan kesannya:
-- Tukar kelegapan balang dari 0.5 ke 0.8 – bagaimana ini mempengaruhi penampilan kaca?
+✅ **Eksperimen Visual**: Cuba ubah nilai ini dan perhatikan kesannya:
+- Tukar ketelusan balang dari 0.5 ke 0.8 – bagaimana ini mempengaruhi penampilan kaca?
 - Laraskan warna tanah dari `#3a241d` ke `#8B4513` – apakah kesan visualnya?
-- Ubah `z-index` tanah ke 2 – apa yang berlaku kepada lapisan?
+- Ubah `z-index` tanah kepada 2 – apa yang berlaku pada lapisan?
+
+### 🔄 **Semakan Pedagogi**
+**Pemahaman Reka Bentuk Visual CSS**: Sahkan pemahaman anda tentang visual CSS:
+- ✅ Bagaimana dimensi berdasarkan peratusan mencipta reka bentuk responsif?
+- ✅ Mengapa ketelusan mencipta kesan ketelusan kaca?
+- ✅ Apakah peranan z-index dalam melapisi elemen?
+- ✅ Bagaimana nilai `border-radius` mencipta bentuk balang?
+
+**Prinsip Reka Bentuk**: Perhatikan bagaimana kita membina visual kompleks daripada bentuk mudah:
+1. **Segi empat** → **Segi empat bulat** → **Komponen balang**
+2. **Warna rata** → **Ketelusan** → **Kesan kaca**
+3. **Elemen individu** → **Komposisi berlapis** → **Penampilan 3D**
 
 ---
 
-## Cabaran GitHub Copilot Agent 🚀
+## Cabaran Ejen GitHub Copilot 🚀
 
-Gunakan mod Agent untuk menyelesaikan cabaran berikut:
+Gunakan mod Ejen untuk melengkapkan cabaran berikut:
 
-**Deskripsi:** Cipta animasi CSS yang membuat tumbuhan dalam terrarium bergoyang perlahan-lahan, mensimulasikan kesan angin semula jadi. Ini akan membantu anda berlatih animasi CSS, transformasi, dan keyframes sambil meningkatkan daya tarikan visual terrarium anda.
+**Penerangan:** Cipta animasi CSS yang membuatkan tumbuhan terrarium bergoyang perlahan-lahan, mensimulasikan kesan angin semula jadi. Ini akan membantu anda berlatih animasi CSS, transformasi, dan keyframe sambil meningkatkan daya tarikan visual terrarium anda.
 
-**Arahan:** Tambahkan animasi keyframe CSS untuk membuat tumbuhan dalam terrarium bergoyang perlahan dari sisi ke sisi. Cipta animasi bergoyang yang memutar setiap tumbuhan sedikit (2-3 darjah) ke kiri dan kanan dengan tempoh 3-4 saat, dan terapkan pada kelas `.plant`. Pastikan animasi berulang tanpa henti dan mempunyai fungsi easing untuk pergerakan semula jadi.
+**Arahan:** Tambahkan animasi keyframe CSS untuk membuat tumbuhan dalam terrarium bergoyang perlahan dari sisi ke sisi. Cipta animasi bergoyang yang memutar setiap tumbuhan sedikit (2-3 darjah) ke kiri dan kanan dengan durasi 3-4 saat, dan aplikasikan pada kelas `.plant`. Pastikan animasi berulang tanpa henti dan mempunyai fungsi easing untuk pergerakan semula jadi.
 
-Ketahui lebih lanjut tentang [mod agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
+Ketahui lebih lanjut tentang [mod ejen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## 🚀 Cabaran: Menambah Refleksi Kaca
 
 Bersedia untuk meningkatkan terrarium anda dengan refleksi kaca yang realistik? Teknik ini akan menambah kedalaman dan realisme pada reka bentuk.
 
-Anda akan mencipta sorotan halus yang mensimulasikan bagaimana cahaya memantul pada permukaan kaca. Pendekatan ini serupa dengan bagaimana pelukis Renaissance seperti Jan van Eyck menggunakan cahaya dan pantulan untuk membuat kaca yang dilukis kelihatan tiga dimensi. Inilah yang anda sasarkan:
+Anda akan mencipta sorotan halus yang mensimulasikan bagaimana cahaya memantul dari permukaan kaca. Pendekatan ini serupa dengan bagaimana pelukis Renaissance seperti Jan van Eyck menggunakan cahaya dan pantulan untuk membuat kaca yang dilukis kelihatan tiga dimensi. Berikut adalah apa yang anda sasarkan:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.ms.png)
+![terrarium siap](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.ms.png)
 
 **Cabaran anda:**
 - **Cipta** bentuk bujur putih atau warna terang untuk refleksi kaca
 - **Letakkan** mereka secara strategik di sebelah kiri balang
-- **Terapkan** kesan kelegapan dan kabur yang sesuai untuk pantulan cahaya yang realistik
+- **Aplikasikan** kesan ketelusan dan kabur yang sesuai untuk pantulan cahaya yang realistik
 - **Gunakan** `border-radius` untuk mencipta bentuk organik seperti gelembung
 - **Eksperimen** dengan gradien atau bayang-bayang kotak untuk realisme yang lebih baik
 
@@ -461,26 +618,122 @@ CSS mungkin terasa kompleks pada awalnya, tetapi memahami konsep asas ini member
 
 **Bidang pembelajaran CSS seterusnya:**
 - **Flexbox** - memudahkan penjajaran dan pengagihan elemen
-- **CSS Grid** - menyediakan alat yang kuat untuk mencipta susun atur yang kompleks
+- **CSS Grid** - menyediakan alat yang kuat untuk mencipta susun atur kompleks
 - **CSS Variables** - mengurangkan pengulangan dan meningkatkan kebolehselenggaraan
 - **Reka bentuk responsif** - memastikan laman web berfungsi dengan baik di pelbagai saiz skrin
 
 ### Sumber Pembelajaran Interaktif
 
-Latih konsep-konsep ini dengan permainan interaktif yang menyeronokkan:
+Amalkan konsep ini dengan permainan interaktif yang menyeronokkan:
 - 🐸 [Flexbox Froggy](https://flexboxfroggy.com/) - Kuasai Flexbox melalui cabaran yang menyeronokkan
 - 🌱 [Grid Garden](https://codepip.com/games/grid-garden/) - Belajar CSS Grid dengan menanam lobak maya
-- 🎯 [CSS Battle](https://cssbattle.dev/) - Uji kemahiran CSS anda dengan cabaran pengekodan
+- 🎯 [CSS Battle](https://cssbattle.dev/) - Uji kemahiran CSS anda dengan cabaran pengkodan
 
 ### Pembelajaran Tambahan
 
-Untuk asas CSS yang komprehensif, lengkapkan modul Microsoft Learn ini: [Gaya aplikasi HTML anda dengan CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Untuk asas CSS yang komprehensif, lengkapkan modul Microsoft Learn ini: [Gayakan aplikasi HTML anda dengan CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+
+### ⚡ **Apa yang Anda Boleh Lakukan dalam 5 Minit Seterusnya**
+- [ ] Buka DevTools dan periksa gaya CSS di mana-mana laman web menggunakan panel Elemen
+- [ ] Cipta fail CSS ringkas dan pautkan ke halaman HTML
+- [ ] Cuba tukar warna menggunakan kaedah yang berbeza: hex, RGB, dan warna bernama
+- [ ] Amalkan model kotak dengan menambah padding dan margin pada div
+
+### 🎯 **Apa yang Anda Boleh Capai Dalam Satu Jam**
+- [ ] Lengkapkan kuiz selepas pelajaran dan semak asas CSS
+- [ ] Gayakan halaman HTML anda dengan fon, warna, dan jarak
+- [ ] Cipta susun atur ringkas menggunakan flexbox atau grid
+- [ ] Eksperimen dengan peralihan CSS untuk kesan yang lancar
+- [ ] Amalkan reka bentuk responsif dengan media queries
+
+### 📅 **Pengembaraan CSS Anda Selama Seminggu**
+- [ ] Lengkapkan tugasan gaya terrarium dengan kreativiti
+- [ ] Kuasai CSS Grid dengan membina susun atur galeri foto
+- [ ] Belajar animasi CSS untuk menghidupkan reka bentuk anda
+- [ ] Terokai preprocessor CSS seperti Sass atau Less
+- [ ] Kajian prinsip reka bentuk dan aplikasikan pada CSS anda
+- [ ] Analisis dan cipta semula reka bentuk menarik yang anda temui dalam talian
+
+### 🌟 **Penguasaan Reka Bentuk Anda Selama Sebulan**
+- [ ] Bina sistem reka bentuk laman web responsif yang lengkap
+- [ ] Belajar CSS-in-JS atau rangka kerja utiliti seperti Tailwind
+- [ ] Sumbang kepada projek sumber terbuka dengan penambahbaikan CSS
+- [ ] Kuasai konsep CSS lanjutan seperti sifat tersuai CSS dan containment
+- [ ] Cipta perpustakaan komponen boleh guna semula dengan CSS modular
+- [ ] Bimbing orang lain yang belajar CSS dan kongsi pengetahuan reka bentuk
+
+## 🎯 Garis Masa Penguasaan CSS Anda
+
+```mermaid
+timeline
+    title CSS Learning Progression
+    
+    section Foundation (10 minutes)
+        File Connection: Link CSS to HTML
+                       : Understand cascade rules
+                       : Learn inheritance basics
+        
+    section Selectors (15 minutes)
+        Targeting Elements: Element selectors
+                          : Class patterns
+                          : ID specificity
+                          : Combinators
+        
+    section Box Model (20 minutes)
+        Layout Fundamentals: Margin and padding
+                           : Border properties
+                           : Content sizing
+                           : Box-sizing behavior
+        
+    section Positioning (25 minutes)
+        Element Placement: Static vs relative
+                         : Absolute positioning
+                         : Z-index layering
+                         : Responsive units
+        
+    section Visual Design (30 minutes)
+        Styling Mastery: Colors and opacity
+                       : Shadows and effects
+                       : Transitions
+                       : Transform properties
+        
+    section Responsive Design (45 minutes)
+        Multi-Device Support: Media queries
+                            : Flexible layouts
+                            : Mobile-first approach
+                            : Viewport optimization
+        
+    section Advanced Techniques (1 week)
+        Modern CSS: Flexbox layouts
+                  : CSS Grid systems
+                  : Custom properties
+                  : Animation keyframes
+        
+    section Professional Skills (1 month)
+        CSS Architecture: Component patterns
+                        : Maintainable code
+                        : Performance optimization
+                        : Cross-browser compatibility
+```
+
+### 🛠️ Ringkasan Alat CSS Anda
+
+Selepas melengkapkan pelajaran ini, anda kini mempunyai:
+- **Pemahaman Cascade**: Bagaimana gaya diwarisi dan menimpa satu sama lain
+- **Penguasaan Pemilih**: Penargetan tepat dengan elemen, kelas, dan ID
+- **Kemahiran Kedudukan**: Penempatan dan pelapisan elemen yang strategik
+- **Reka Bentuk Visual**: Mencipta kesan kaca, bayang-bayang, dan ketelusan
+- **Teknik Responsif**: Susun atur berdasarkan peratusan yang menyesuaikan dengan mana-mana skrin
+- **Organisasi Kod**: Struktur CSS yang bersih dan boleh diselenggara
+- **Amalan Moden**: Menggunakan unit relatif dan corak reka bentuk yang boleh diakses
+
+**Langkah Seterusnya**: Terrarium anda kini mempunyai struktur (HTML) dan gaya (CSS). Pelajaran terakhir akan menambah interaktiviti dengan JavaScript!
 
 ## Tugasan
 
-[Refaktor CSS](assignment.md)
+[Refaktoring CSS](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

@@ -1,22 +1,69 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "20c72cf2e5b0050d38ca3cb14a75a9df",
-  "translation_date": "2025-10-24T14:32:36+00:00",
+  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
+  "translation_date": "2025-11-06T12:12:38+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "ms"
 }
 -->
 # Projek Terrarium Bahagian 1: Pengenalan kepada HTML
 
+```mermaid
+journey
+    title Your HTML Learning Journey
+    section Foundation
+      Create HTML file: 3: Student
+      Add DOCTYPE: 4: Student
+      Structure document: 5: Student
+    section Content
+      Add metadata: 4: Student
+      Include images: 5: Student
+      Organize layout: 5: Student
+    section Semantics
+      Use proper tags: 4: Student
+      Enhance accessibility: 5: Student
+      Build terrarium: 5: Student
+```
+
 ![Pengenalan kepada HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.ms.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
-HTML, atau HyperText Markup Language, adalah asas kepada setiap laman web yang pernah anda lawati. Anggaplah HTML sebagai rangka yang memberikan struktur kepada laman web – ia menentukan di mana kandungan diletakkan, bagaimana ia diatur, dan apa yang setiap bahagian wakili. Walaupun CSS nanti akan "menghias" HTML anda dengan warna dan susun atur, dan JavaScript akan menghidupkannya dengan interaktiviti, HTML menyediakan struktur asas yang menjadikan segalanya mungkin.
+HTML, atau HyperText Markup Language, adalah asas kepada setiap laman web yang pernah anda lawati. Fikirkan HTML sebagai rangka yang memberikan struktur kepada halaman web – ia menentukan di mana kandungan diletakkan, bagaimana ia diatur, dan apa yang setiap bahagian wakili. Walaupun CSS nanti akan "menghias" HTML anda dengan warna dan susunan, dan JavaScript akan menghidupkannya dengan interaktiviti, HTML menyediakan struktur penting yang menjadikan segalanya mungkin.
 
 Dalam pelajaran ini, anda akan mencipta struktur HTML untuk antara muka terrarium maya. Projek praktikal ini akan mengajar anda konsep asas HTML sambil membina sesuatu yang menarik secara visual. Anda akan belajar bagaimana mengatur kandungan menggunakan elemen semantik, bekerja dengan imej, dan mencipta asas untuk aplikasi web interaktif.
 
-Menjelang akhir pelajaran ini, anda akan mempunyai halaman HTML yang berfungsi memaparkan imej tumbuhan dalam susunan kolum, sedia untuk dihias dalam pelajaran seterusnya. Jangan risau jika ia kelihatan asas pada mulanya – itulah yang HTML sepatutnya lakukan sebelum CSS menambah sentuhan visual.
+Pada akhir pelajaran ini, anda akan mempunyai halaman HTML yang berfungsi memaparkan imej tumbuhan dalam lajur yang teratur, sedia untuk dihias dalam pelajaran seterusnya. Jangan risau jika ia kelihatan asas pada mulanya – itulah yang sepatutnya dilakukan oleh HTML sebelum CSS menambah sentuhan visual.
+
+```mermaid
+mindmap
+  root((HTML Fundamentals))
+    Structure
+      DOCTYPE Declaration
+      HTML Element
+      Head Section
+      Body Content
+    Elements
+      Tags & Attributes
+      Self-closing Tags
+      Nested Elements
+      Block vs Inline
+    Content
+      Text Elements
+      Images
+      Containers (div)
+      Lists
+    Semantics
+      Meaningful Tags
+      Accessibility
+      Screen Readers
+      SEO Benefits
+    Best Practices
+      Proper Nesting
+      Valid Markup
+      Descriptive Alt Text
+      Organized Structure
+```
 
 ## Kuiz Pra-Pelajaran
 
@@ -28,7 +75,7 @@ Menjelang akhir pelajaran ini, anda akan mempunyai halaman HTML yang berfungsi m
 
 ## Menyediakan Projek Anda
 
-Sebelum kita mula dengan kod HTML, mari kita sediakan ruang kerja yang sesuai untuk projek terrarium anda. Mewujudkan struktur fail yang teratur dari awal adalah tabiat penting yang akan membantu anda sepanjang perjalanan pembangunan web anda.
+Sebelum kita mula dengan kod HTML, mari kita sediakan ruang kerja yang sesuai untuk projek terrarium anda. Membuat struktur fail yang teratur dari awal adalah tabiat penting yang akan membantu anda sepanjang perjalanan pembangunan web anda.
 
 ### Tugasan: Cipta Struktur Projek Anda
 
@@ -41,7 +88,7 @@ Anda akan mencipta folder khusus untuk projek terrarium anda dan menambah fail H
 4. Dalam panel Explorer, klik ikon "New File"
 5. Namakan fail anda `index.html`
 
-![VS Code Explorer menunjukkan penciptaan fail baru](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.ms.png)
+![Explorer VS Code menunjukkan penciptaan fail baru](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.ms.png)
 
 **Pilihan 2: Menggunakan Perintah Terminal**
 ```bash
@@ -51,19 +98,37 @@ touch index.html
 code index.html
 ```
 
-**Inilah yang dicapai oleh perintah ini:**
+**Apa yang dicapai oleh perintah ini:**
 - **Mencipta** direktori baru bernama `terrarium` untuk projek anda
 - **Navigasi** ke dalam direktori terrarium 
 - **Mencipta** fail kosong `index.html`
 - **Membuka** fail dalam Visual Studio Code untuk penyuntingan
 
-> 💡 **Tip Pro**: Nama fail `index.html` adalah istimewa dalam pembangunan web. Apabila seseorang melawat laman web, pelayar secara automatik mencari `index.html` sebagai halaman lalai untuk dipaparkan. Ini bermakna URL seperti `https://mysite.com/projects/` akan secara automatik menyajikan fail `index.html` dari folder `projects` tanpa perlu menentukan nama fail dalam URL.
+> 💡 **Tip Pro**: Nama fail `index.html` adalah istimewa dalam pembangunan web. Apabila seseorang melawat laman web, pelayar secara automatik mencari `index.html` sebagai halaman lalai untuk dipaparkan. Ini bermakna URL seperti `https://mysite.com/projects/` akan secara automatik memaparkan fail `index.html` dari folder `projects` tanpa perlu menentukan nama fail dalam URL.
 
 ## Memahami Struktur Dokumen HTML
 
-Setiap dokumen HTML mengikuti struktur tertentu yang diperlukan oleh pelayar untuk memahami dan memaparkan dengan betul. Anggaplah struktur ini seperti surat rasmi – ia mempunyai elemen yang diperlukan dalam susunan tertentu yang membantu penerima (dalam kes ini, pelayar) memproses kandungan dengan betul.
+Setiap dokumen HTML mengikuti struktur tertentu yang diperlukan oleh pelayar untuk memahami dan memaparkan dengan betul. Fikirkan struktur ini seperti surat rasmi – ia mempunyai elemen yang diperlukan dalam susunan tertentu yang membantu penerima (dalam kes ini, pelayar) memproses kandungan dengan betul.
 
-Mari kita mulakan dengan menambah asas yang diperlukan oleh setiap dokumen HTML.
+```mermaid
+flowchart TD
+    A["<!DOCTYPE html>"] --> B["<html>"]
+    B --> C["<head>"]
+    C --> D["<title>"]
+    C --> E["<meta charset>"]
+    C --> F["<meta viewport>"]
+    B --> G["<body>"]
+    G --> H["<h1> Heading"]
+    G --> I["<div> Containers"]
+    G --> J["<img> Images"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style G fill:#e8f5e8
+```
+
+Mari kita mulakan dengan menambah asas penting yang diperlukan oleh setiap dokumen HTML.
 
 ### Deklarasi DOCTYPE dan Elemen Root
 
@@ -84,11 +149,19 @@ Dua baris pertama mana-mana fail HTML berfungsi sebagai "pengenalan" dokumen kep
 
 > 📚 **Ketahui Lebih Lanjut**: Deklarasi DOCTYPE menghalang pelayar daripada memasuki "quirks mode," yang digunakan untuk menyokong laman web yang sangat lama. Pembangunan web moden menggunakan deklarasi `<!DOCTYPE html>` yang mudah untuk memastikan [paparan yang mematuhi piawaian](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
 
+### 🔄 **Pemeriksaan Pedagogi**
+**Berhenti dan Renungkan**: Sebelum meneruskan, pastikan anda memahami:
+- ✅ Mengapa setiap dokumen HTML memerlukan deklarasi DOCTYPE
+- ✅ Apa yang terkandung dalam elemen root `<html>`
+- ✅ Bagaimana struktur ini membantu pelayar memaparkan halaman dengan betul
+
+**Ujian Kendiri Cepat**: Bolehkah anda menerangkan dengan kata-kata anda sendiri apa maksud "paparan yang mematuhi piawaian"?
+
 ## Menambah Metadata Dokumen Penting
 
-Bahagian `<head>` dalam dokumen HTML mengandungi maklumat penting yang diperlukan oleh pelayar dan enjin carian, tetapi tidak dilihat secara langsung oleh pelawat di halaman. Anggaplah ia sebagai maklumat "di belakang tabir" yang membantu laman web anda berfungsi dengan betul dan muncul dengan betul di pelbagai peranti dan platform.
+Bahagian `<head>` dalam dokumen HTML mengandungi maklumat penting yang diperlukan oleh pelayar dan enjin carian, tetapi yang tidak dilihat secara langsung oleh pelawat di halaman. Fikirkan ia sebagai maklumat "di belakang tabir" yang membantu laman web anda berfungsi dengan betul dan muncul dengan betul di pelbagai peranti dan platform.
 
-Metadata ini memberitahu pelayar bagaimana untuk memaparkan halaman anda, pengekodan watak yang hendak digunakan, dan bagaimana untuk mengendalikan saiz skrin yang berbeza – semua ini penting untuk mencipta laman web yang profesional dan boleh diakses.
+Metadata ini memberitahu pelayar bagaimana untuk memaparkan halaman anda, kod pengekodan watak yang hendak digunakan, dan bagaimana untuk mengendalikan saiz skrin yang berbeza – semua ini penting untuk mencipta laman web yang profesional dan boleh diakses.
 
 ### Tugasan: Tambah Bahagian Kepala Dokumen
 
@@ -110,11 +183,11 @@ Masukkan bahagian `<head>` ini di antara tag pembuka dan penutup `<html>` anda:
 - **Mengkonfigurasi** reka bentuk responsif dengan menetapkan viewport untuk sepadan dengan lebar peranti
 - **Mengawal** tahap zum awal untuk memaparkan kandungan pada saiz semula jadi
 
-> 🤔 **Fikirkan Ini**: Apa yang akan berlaku jika anda menetapkan tag meta viewport seperti ini: `<meta name="viewport" content="width=600">`? Ini akan memaksa halaman sentiasa menjadi lebar 600 piksel, memecahkan reka bentuk responsif! Ketahui lebih lanjut tentang [konfigurasi viewport yang betul](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
+> 🤔 **Fikirkan Ini**: Apa yang akan berlaku jika anda menetapkan tag meta viewport seperti ini: `<meta name="viewport" content="width=600">`? Ini akan memaksa halaman sentiasa menjadi 600 piksel lebar, memecahkan reka bentuk responsif! Ketahui lebih lanjut tentang [konfigurasi viewport yang betul](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
 ## Membina Badan Dokumen
 
-Elemen `<body>` mengandungi semua kandungan yang boleh dilihat pada laman web anda – segala-galanya yang pengguna akan lihat dan berinteraksi. Walaupun bahagian `<head>` memberikan arahan kepada pelayar, bahagian `<body>` mengandungi kandungan sebenar: teks, imej, butang, dan elemen lain yang mencipta antara muka pengguna anda.
+Elemen `<body>` mengandungi semua kandungan yang boleh dilihat di laman web anda – segala-galanya yang pengguna akan lihat dan berinteraksi. Walaupun bahagian `<head>` memberikan arahan kepada pelayar, bahagian `<body>` mengandungi kandungan sebenar: teks, imej, butang, dan elemen lain yang mencipta antara muka pengguna anda.
 
 Mari kita tambah struktur badan dan fahami bagaimana tag HTML bekerjasama untuk mencipta kandungan yang bermakna.
 
@@ -145,11 +218,11 @@ Kemas kini fail HTML anda untuk memasukkan elemen `<body>`:
 - **Mencipta** badan kosong yang sedia untuk kandungan yang boleh dilihat
 - **Mengikuti** amalan terbaik pembangunan web moden
 
-Sekarang anda bersedia untuk menambah elemen yang boleh dilihat pada terrarium anda. Kami akan menggunakan elemen `<div>` sebagai bekas untuk mengatur bahagian kandungan yang berbeza, dan elemen `<img>` untuk memaparkan imej tumbuhan.
+Sekarang anda sudah bersedia untuk menambah elemen yang boleh dilihat pada terrarium anda. Kita akan menggunakan elemen `<div>` sebagai bekas untuk mengatur bahagian kandungan yang berbeza, dan elemen `<img>` untuk memaparkan imej tumbuhan.
 
 ### Bekerja dengan Imej dan Bekas Susun Atur
 
-Imej adalah istimewa dalam HTML kerana ia menggunakan tag "self-closing". Tidak seperti elemen seperti `<p></p>` yang membungkus kandungan, tag `<img>` mengandungi semua maklumat yang diperlukan dalam tag itu sendiri menggunakan atribut seperti `src` untuk laluan fail imej dan `alt` untuk kebolehaksesan.
+Imej adalah istimewa dalam HTML kerana ia menggunakan tag "penutup sendiri". Tidak seperti elemen seperti `<p></p>` yang membungkus kandungan, tag `<img>` mengandungi semua maklumat yang diperlukan dalam tag itu sendiri menggunakan atribut seperti `src` untuk laluan fail imej dan `alt` untuk kebolehaksesan.
 
 Sebelum menambah imej ke HTML anda, anda perlu mengatur fail projek anda dengan betul dengan mencipta folder imej dan menambah grafik tumbuhan.
 
@@ -160,7 +233,7 @@ Sebelum menambah imej ke HTML anda, anda perlu mengatur fail projek anda dengan 
 
 ### Tugasan: Cipta Susun Atur Paparan Tumbuhan
 
-Sekarang tambahkan imej tumbuhan yang diatur dalam dua kolum di antara tag `<body></body>` anda:
+Sekarang tambahkan imej tumbuhan yang diatur dalam dua lajur di antara tag `<body></body>` anda:
 
 ```html
 <div id="page">
@@ -215,8 +288,8 @@ Sekarang tambahkan imej tumbuhan yang diatur dalam dua kolum di antara tag `<bod
 
 **Langkah demi langkah, inilah yang berlaku dalam kod ini:**
 - **Mencipta** bekas halaman utama dengan `id="page"` untuk memegang semua kandungan
-- **Menetapkan** dua bekas kolum: `left-container` dan `right-container`
-- **Mengatur** 7 tumbuhan dalam kolum kiri dan 7 tumbuhan dalam kolum kanan
+- **Menetapkan** dua bekas lajur: `left-container` dan `right-container`
+- **Mengatur** 7 tumbuhan dalam lajur kiri dan 7 tumbuhan dalam lajur kanan
 - **Membungkus** setiap imej tumbuhan dalam div `plant-holder` untuk kedudukan individu
 - **Menggunakan** nama kelas yang konsisten untuk penggayaan CSS dalam pelajaran seterusnya
 - **Menetapkan** ID unik kepada setiap imej tumbuhan untuk interaksi JavaScript kemudian
@@ -226,17 +299,61 @@ Sekarang tambahkan imej tumbuhan yang diatur dalam dua kolum di antara tag `<bod
 
 > 📝 **Jenis Elemen HTML**: Elemen `<div>` adalah "block-level" dan mengambil lebar penuh, manakala elemen `<span>` adalah "inline" dan hanya mengambil lebar yang diperlukan. Apa yang anda fikir akan berlaku jika anda menukar semua tag `<div>` ini kepada tag `<span>`?
 
+### 🔄 **Pemeriksaan Pedagogi**
+**Memahami Struktur**: Luangkan masa untuk menyemak struktur HTML anda:
+- ✅ Bolehkah anda mengenal pasti bekas utama dalam susun atur anda?
+- ✅ Adakah anda memahami mengapa setiap imej mempunyai ID unik?
+- ✅ Bagaimana anda akan menerangkan tujuan div `plant-holder`?
+
+**Pemeriksaan Visual**: Buka fail HTML anda dalam pelayar. Anda sepatutnya melihat:
+- Senarai asas imej tumbuhan
+- Imej yang diatur dalam dua lajur
+- Susun atur yang mudah dan tidak bergaya
+
+**Ingat**: Penampilan asas ini adalah apa yang sepatutnya kelihatan sebelum penggayaan CSS!
+
 Dengan markup ini ditambah, tumbuhan akan muncul di skrin, walaupun ia belum kelihatan menarik – itulah tujuan CSS dalam pelajaran seterusnya! Buat masa ini, anda mempunyai asas HTML yang kukuh yang mengatur kandungan anda dengan betul dan mengikuti amalan terbaik kebolehaksesan.
 
 ## Menggunakan HTML Semantik untuk Kebolehaksesan
 
 HTML semantik bermaksud memilih elemen HTML berdasarkan makna dan tujuannya, bukan hanya penampilannya. Apabila anda menggunakan markup semantik, anda menyampaikan struktur dan makna kandungan anda kepada pelayar, enjin carian, dan teknologi bantuan seperti pembaca skrin.
 
-Pendekatan ini menjadikan laman web anda lebih mudah diakses oleh pengguna kurang upaya dan membantu enjin carian memahami kandungan anda dengan lebih baik. Ia adalah prinsip asas pembangunan web moden yang mencipta pengalaman yang lebih baik untuk semua orang.
+```mermaid
+flowchart TD
+    A[Need to add content?] --> B{What type?}
+    B -->|Main heading| C["<h1>"]
+    B -->|Subheading| D["<h2>, <h3>, etc."]
+    B -->|Paragraph| E["<p>"]
+    B -->|List| F["<ul>, <ol>"]
+    B -->|Navigation| G["<nav>"]
+    B -->|Article| H["<article>"]
+    B -->|Section| I["<section>"]
+    B -->|Generic container| J["<div>"]
+    
+    C --> K[Screen readers announce as main title]
+    D --> L[Creates proper heading hierarchy]
+    E --> M[Provides proper text spacing]
+    F --> N[Enables list navigation shortcuts]
+    G --> O[Identifies navigation landmarks]
+    H --> P[Marks standalone content]
+    I --> Q[Groups related content]
+    J --> R[Use only when no semantic tag fits]
+    
+    style C fill:#4caf50
+    style D fill:#4caf50
+    style E fill:#4caf50
+    style F fill:#4caf50
+    style G fill:#2196f3
+    style H fill:#2196f3
+    style I fill:#2196f3
+    style J fill:#ff9800
+```
+
+Pendekatan ini menjadikan laman web anda lebih mudah diakses oleh pengguna dengan kecacatan dan membantu enjin carian memahami kandungan anda dengan lebih baik. Ia adalah prinsip asas pembangunan web moden yang mencipta pengalaman yang lebih baik untuk semua orang.
 
 ### Menambah Tajuk Halaman Semantik
 
-Mari kita tambahkan tajuk yang sesuai untuk halaman terrarium anda. Masukkan baris ini betul-betul selepas tag pembuka `<body>` anda:
+Mari kita tambahkan tajuk yang sesuai untuk halaman terrarium anda. Masukkan baris ini tepat selepas tag pembuka `<body>`:
 
 ```html
 <h1>My Terrarium</h1>
@@ -258,11 +375,11 @@ Mari kita tambahkan tajuk yang sesuai untuk halaman terrarium anda. Masukkan bar
 | Butang | `<button>Click me</button>` | `<span onclick="...">Click me</span>` |
 | Kandungan artikel | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
-> 🎥 **Lihat Ia Beraksi**: Tonton [bagaimana pembaca skrin berinteraksi dengan laman web](https://www.youtube.com/watch?v=OUDV1gqs9GA) untuk memahami mengapa markup semantik penting untuk kebolehaksesan. Perhatikan bagaimana struktur HTML yang betul membantu pengguna menavigasi dengan cekap.
+> 🎥 **Lihat Dalam Tindakan**: Tonton [bagaimana pembaca skrin berinteraksi dengan laman web](https://www.youtube.com/watch?v=OUDV1gqs9GA) untuk memahami mengapa markup semantik penting untuk kebolehaksesan. Perhatikan bagaimana struktur HTML yang betul membantu pengguna menavigasi dengan cekap.
 
 ## Mencipta Bekas Terrarium
 
-Sekarang mari kita tambahkan struktur HTML untuk terrarium itu sendiri – bekas kaca di mana tumbuhan akhirnya akan diletakkan. Bahagian ini menunjukkan konsep penting: HTML menyediakan struktur, tetapi tanpa penggayaan CSS, elemen-elemen ini belum kelihatan.
+Sekarang mari kita tambahkan struktur HTML untuk terrarium itu sendiri – bekas kaca di mana tumbuhan akhirnya akan diletakkan. Bahagian ini menunjukkan konsep penting: HTML menyediakan struktur, tetapi tanpa penggayaan CSS, elemen ini belum kelihatan.
 
 Markup terrarium menggunakan nama kelas deskriptif yang akan menjadikan penggayaan CSS intuitif dan mudah diselenggara dalam pelajaran seterusnya.
 
@@ -285,11 +402,39 @@ Masukkan markup ini di atas tag `</div>` terakhir (sebelum tag penutup bekas hal
 **Memahami struktur terrarium ini:**
 - **Mencipta** bekas terrarium utama dengan ID unik untuk penggayaan
 - **Menentukan** elemen berasingan untuk setiap komponen visual (atas, dinding, tanah, bawah)
-- **Termasuk** elemen bersarang untuk kesan pantulan kaca (elemen glossy)
+- **Termasuk** elemen bersarang untuk kesan pantulan kaca (elemen berkilat)
 - **Menggunakan** nama kelas deskriptif yang jelas menunjukkan tujuan setiap elemen
-- **Menyediakan** struktur untuk penggayaan CSS yang akan mencipta penampilan terrarium kaca
+- **Menyediakan** struktur untuk gaya CSS yang akan mencipta rupa terrarium kaca
 
-> 🤔 **Perhatikan Sesuatu?**: Walaupun anda menambah markup ini, anda tidak melihat apa-apa yang baru di halaman! Ini dengan sempurna menggambarkan bagaimana HTML menyediakan struktur sementara CSS menyediakan penampilan. Elemen `<div>` ini wujud tetapi belum mempunyai penggayaan visual – itu akan datang dalam pelajaran seterusnya!
+> 🤔 **Perasan Sesuatu?**: Walaupun anda telah menambah markup ini, anda tidak melihat apa-apa yang baru di halaman! Ini menunjukkan dengan jelas bagaimana HTML menyediakan struktur sementara CSS memberikan penampilan. Elemen `<div>` ini wujud tetapi belum mempunyai gaya visual – itu akan dibincangkan dalam pelajaran seterusnya!
+
+```mermaid
+flowchart TD
+    A[HTML Document] --> B[Document Head]
+    A --> C[Document Body]
+    B --> D[Title Element]
+    B --> E[Meta Charset]
+    B --> F[Meta Viewport]
+    C --> G[Main Heading]
+    C --> H[Page Container]
+    H --> I[Left Container with 7 plants]
+    H --> J[Right Container with 7 plants]
+    H --> K[Terrarium Structure]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style H fill:#f3e5f5
+```
+
+### 🔄 **Pemeriksaan Pedagogi**
+**Penguasaan Struktur HTML**: Sebelum meneruskan, pastikan anda boleh:
+- ✅ Jelaskan perbezaan antara struktur HTML dan penampilan visual
+- ✅ Kenal pasti elemen HTML semantik vs. tidak semantik
+- ✅ Terangkan bagaimana markup yang betul memberi manfaat kepada kebolehaksesan
+- ✅ Kenali struktur pokok dokumen lengkap
+
+**Uji Pemahaman Anda**: Cuba buka fail HTML anda dalam pelayar dengan JavaScript dimatikan dan CSS dikeluarkan. Ini menunjukkan struktur semantik tulen yang telah anda cipta!
 
 ---
 
@@ -298,29 +443,29 @@ Masukkan markup ini di atas tag `</div>` terakhir (sebelum tag penutup bekas hal
 Gunakan mod Ejen untuk menyelesaikan cabaran berikut:
 
 **Penerangan:** Cipta struktur HTML semantik untuk bahagian panduan penjagaan tumbuhan yang boleh ditambah kepada projek terrarium.
-**Prompt:** Buat bahagian HTML semantik yang merangkumi tajuk utama "Panduan Penjagaan Tumbuhan", tiga subseksyen dengan tajuk "Penyiraman", "Keperluan Cahaya", dan "Penjagaan Tanah", setiap satu mengandungi perenggan maklumat penjagaan tumbuhan. Gunakan tag HTML semantik yang sesuai seperti `<section>`, `<h2>`, `<h3>`, dan `<p>` untuk menyusun kandungan dengan betul.
+
+**Arahan:** Cipta bahagian HTML semantik yang termasuk tajuk utama "Panduan Penjagaan Tumbuhan", tiga subseksyen dengan tajuk "Penyiraman", "Keperluan Cahaya", dan "Penjagaan Tanah", setiap satu mengandungi perenggan maklumat penjagaan tumbuhan. Gunakan tag HTML semantik yang sesuai seperti `<section>`, `<h2>`, `<h3>`, dan `<p>` untuk menyusun kandungan dengan betul.
 
 Ketahui lebih lanjut tentang [mod ejen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## Cabaran Sejarah HTML
 
-**Mempelajari Evolusi Web**
+**Belajar Tentang Evolusi Web**
 
-HTML telah berkembang dengan ketara sejak Tim Berners-Lee mencipta pelayar web pertama di CERN pada tahun 1990. Beberapa tag lama seperti `<marquee>` kini telah ditamatkan kerana ia tidak sesuai dengan piawaian kebolehaksesan moden dan prinsip reka bentuk responsif.
+HTML telah berkembang dengan ketara sejak Tim Berners-Lee mencipta pelayar web pertama di CERN pada tahun 1990. Beberapa tag lama seperti `<marquee>` kini telah ditamatkan kerana ia tidak sesuai dengan standard kebolehaksesan moden dan prinsip reka bentuk responsif.
 
 **Cuba Eksperimen Ini:**
 1. Balut sementara tajuk `<h1>` anda dalam tag `<marquee>`: `<marquee><h1>Terrarium Saya</h1></marquee>`
-2. Buka halaman anda dalam pelayar dan perhatikan kesan skrol
+2. Buka halaman anda dalam pelayar dan perhatikan kesan tatal
 3. Pertimbangkan mengapa tag ini telah ditamatkan (petunjuk: fikirkan tentang pengalaman pengguna dan kebolehaksesan)
 4. Keluarkan tag `<marquee>` dan kembali kepada markup semantik
 
 **Soalan Refleksi:**
-- Bagaimana tajuk yang bergulung boleh memberi kesan kepada pengguna dengan gangguan penglihatan atau sensitiviti pergerakan?
-- Apakah teknik CSS moden yang boleh mencapai kesan visual serupa dengan lebih mesra kebolehaksesan?
-- Mengapa penting untuk menggunakan piawaian web semasa dan bukannya elemen yang telah ditamatkan?
+- Bagaimana tajuk yang menatal boleh memberi kesan kepada pengguna dengan gangguan penglihatan atau sensitiviti pergerakan?
+- Teknik CSS moden apa yang boleh mencapai kesan visual serupa dengan lebih kebolehaksesan?
+- Mengapa penting untuk menggunakan standard web semasa dan bukannya elemen yang telah ditamatkan?
 
-Terokai lebih lanjut tentang [elemen HTML yang usang dan ditamatkan](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) untuk memahami bagaimana piawaian web berkembang untuk meningkatkan pengalaman pengguna.
-
+Terokai lebih lanjut tentang [elemen HTML yang usang dan ditamatkan](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) untuk memahami bagaimana standard web berkembang untuk meningkatkan pengalaman pengguna.
 
 ## Kuiz Selepas Kuliah
 
@@ -330,30 +475,118 @@ Terokai lebih lanjut tentang [elemen HTML yang usang dan ditamatkan](https://dev
 
 **Mendalami Pengetahuan HTML Anda**
 
-HTML telah menjadi asas web selama lebih 30 tahun, berkembang daripada bahasa markup dokumen yang ringkas kepada platform canggih untuk membina aplikasi interaktif. Memahami evolusi ini membantu anda menghargai piawaian web moden dan membuat keputusan pembangunan yang lebih baik.
+HTML telah menjadi asas web selama lebih 30 tahun, berkembang daripada bahasa markup dokumen yang ringkas kepada platform canggih untuk membina aplikasi interaktif. Memahami evolusi ini membantu anda menghargai standard web moden dan membuat keputusan pembangunan yang lebih baik.
 
 **Laluan Pembelajaran yang Disyorkan:**
 
 1. **Sejarah dan Evolusi HTML**
    - Selidik garis masa dari HTML 1.0 hingga HTML5
    - Terokai mengapa tag tertentu telah ditamatkan (kebolehaksesan, mesra mudah alih, penyelenggaraan)
-   - Selidik ciri dan cadangan HTML yang sedang muncul
+   - Selidik ciri HTML yang muncul dan cadangan
 
-2. **Penyelaman Mendalam HTML Semantik**
+2. **Mendalami HTML Semantik**
    - Kajian senarai lengkap [elemen semantik HTML5](https://developer.mozilla.org/docs/Web/HTML/Element)
-   - Latih diri mengenal pasti bila untuk menggunakan `<article>`, `<section>`, `<aside>`, dan `<main>`
-   - Ketahui tentang atribut ARIA untuk meningkatkan kebolehaksesan
+   - Latih mengenal pasti bila menggunakan `<article>`, `<section>`, `<aside>`, dan `<main>`
+   - Belajar tentang atribut ARIA untuk kebolehaksesan yang dipertingkatkan
 
 3. **Pembangunan Web Moden**
    - Terokai [membina laman web responsif](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon) di Microsoft Learn
    - Fahami bagaimana HTML berintegrasi dengan CSS dan JavaScript
-   - Ketahui tentang prestasi web dan amalan terbaik SEO
+   - Belajar tentang prestasi web dan amalan terbaik SEO
 
 **Soalan Refleksi:**
-- Tag HTML yang telah ditamatkan manakah yang anda temui, dan mengapa ia telah dikeluarkan?
-- Apakah ciri HTML baharu yang sedang dicadangkan untuk versi akan datang?
+- Tag HTML yang telah ditamatkan mana yang anda temui, dan mengapa ia telah dikeluarkan?
+- Ciri HTML baru apa yang dicadangkan untuk versi masa depan?
 - Bagaimana HTML semantik menyumbang kepada kebolehaksesan web dan SEO?
 
+### ⚡ **Apa Yang Boleh Anda Lakukan Dalam 5 Minit Seterusnya**
+- [ ] Buka DevTools (F12) dan periksa struktur HTML laman web kegemaran anda
+- [ ] Cipta fail HTML ringkas dengan tag asas: `<h1>`, `<p>`, dan `<img>`
+- [ ] Sahkan HTML anda menggunakan Validator HTML W3C dalam talian
+- [ ] Cuba tambah komen pada HTML anda menggunakan `<!-- komen -->`
+
+### 🎯 **Apa Yang Boleh Anda Capai Dalam Satu Jam**
+- [ ] Lengkapkan kuiz selepas pelajaran dan ulas konsep HTML semantik
+- [ ] Bina laman web ringkas tentang diri anda menggunakan struktur HTML yang betul
+- [ ] Bereksperimen dengan tahap tajuk yang berbeza dan tag pemformatan teks
+- [ ] Tambah imej dan pautan untuk berlatih integrasi multimedia
+- [ ] Selidik ciri HTML5 yang belum anda cuba
+
+### 📅 **Perjalanan HTML Anda Selama Seminggu**
+- [ ] Lengkapkan tugasan projek terrarium dengan markup semantik
+- [ ] Cipta laman web yang boleh diakses menggunakan label dan peranan ARIA
+- [ ] Latih penciptaan borang dengan pelbagai jenis input
+- [ ] Terokai API HTML5 seperti localStorage atau geolocation
+- [ ] Kajian corak HTML responsif dan reka bentuk berorientasikan mudah alih
+- [ ] Ulas kod HTML pemaju lain untuk amalan terbaik
+
+### 🌟 **Asas Web Anda Selama Sebulan**
+- [ ] Bina laman web portfolio yang mempamerkan penguasaan HTML anda
+- [ ] Belajar templat HTML dengan rangka kerja seperti Handlebars
+- [ ] Menyumbang kepada projek sumber terbuka dengan meningkatkan dokumentasi HTML
+- [ ] Kuasai konsep HTML lanjutan seperti elemen tersuai
+- [ ] Integrasi HTML dengan rangka kerja CSS dan pustaka JavaScript
+- [ ] Mentor orang lain yang belajar asas HTML
+
+## 🎯 Garis Masa Penguasaan HTML Anda
+
+```mermaid
+timeline
+    title HTML Learning Progression
+    
+    section Foundation (5 minutes)
+        Document Structure: DOCTYPE declaration
+                         : HTML root element
+                         : Head vs Body understanding
+        
+    section Metadata (10 minutes)
+        Essential Meta Tags: Character encoding
+                           : Viewport configuration
+                           : Browser compatibility
+        
+    section Content Creation (15 minutes)
+        Image Integration: Proper file paths
+                         : Alt text importance
+                         : Self-closing tags
+        
+    section Layout Organization (20 minutes)
+        Container Strategy: Div elements for structure
+                          : Class and ID naming
+                          : Nested element hierarchy
+        
+    section Semantic Mastery (30 minutes)
+        Meaningful Markup: Heading hierarchy
+                         : Screen reader navigation
+                         : Accessibility best practices
+        
+    section Advanced Concepts (1 hour)
+        HTML5 Features: Modern semantic elements
+                      : ARIA attributes
+                      : Performance considerations
+        
+    section Professional Skills (1 week)
+        Code Organization: File structure patterns
+                         : Maintainable markup
+                         : Team collaboration
+        
+    section Expert Level (1 month)
+        Modern Web Standards: Progressive enhancement
+                            : Cross-browser compatibility
+                            : HTML specification updates
+```
+
+### 🛠️ Ringkasan Alat HTML Anda
+
+Selepas menyelesaikan pelajaran ini, anda kini mempunyai:
+- **Struktur Dokumen**: Asas HTML5 lengkap dengan DOCTYPE yang betul
+- **Markup Semantik**: Tag bermakna yang meningkatkan kebolehaksesan dan SEO
+- **Integrasi Imej**: Amalan organisasi fail dan teks alt yang betul
+- **Bekas Susun Atur**: Penggunaan div strategik dengan nama kelas deskriptif
+- **Kesedaran Kebolehaksesan**: Pemahaman navigasi pembaca skrin
+- **Standard Moden**: Amalan HTML5 semasa dan pengetahuan tag yang telah ditamatkan
+- **Asas Projek**: Asas kukuh untuk gaya CSS dan interaktiviti JavaScript
+
+**Langkah Seterusnya**: Struktur HTML anda sudah bersedia untuk gaya CSS! Asas semantik yang telah anda bina akan memudahkan pelajaran seterusnya untuk difahami.
 
 ## Tugasan
 
