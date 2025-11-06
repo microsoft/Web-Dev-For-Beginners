@@ -50,7 +50,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 📣 公告 - _使用生成式 AI 建立新專案_ 
 
-新增了 AI 助理專案，快來看看 [專案](./09-chat-project/README.md)
+新增了 AI 助理專案，快來看看 [專案](./9-chat-project/README.md)
 
 ### 📣 公告 - _新課程_ 關於 JavaScript 的生成式 AI 已正式推出
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 - 文本及圖像應用程式生成
 - 搜索應用程式
 
-造訪 [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) 開始學習！
+造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
 
 ## 🌱 開始使用
 
