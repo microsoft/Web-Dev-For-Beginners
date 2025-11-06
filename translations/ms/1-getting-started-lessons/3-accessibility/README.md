@@ -1,16 +1,33 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
-  "translation_date": "2025-10-24T14:25:38+00:00",
+  "original_hash": "7f2c48e04754724123ea100a822765e5",
+  "translation_date": "2025-11-06T12:05:02+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "ms"
 }
 -->
-# Membuat Laman Web yang Mudah Diakses
+# Membuat Laman Web yang Mesra Akses
 
 ![Semua Tentang Kebolehcapaian](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.ms.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
+
+```mermaid
+journey
+    title Your Accessibility Learning Adventure
+    section Foundation
+      Understanding Users: 5: You
+      Testing Tools: 4: You
+      POUR Principles: 5: You
+    section Build Skills
+      Semantic HTML: 4: You
+      Visual Design: 5: You
+      ARIA Techniques: 4: You
+    section Master Practice
+      Keyboard Navigation: 5: You
+      Form Accessibility: 4: You
+      Real-world Testing: 5: You
+```
 
 ## Kuiz Pra-Kuliah
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/)
@@ -19,13 +36,38 @@ CO_OP_TRANSLATOR_METADATA:
 >
 > \- Sir Timothy Berners-Lee, Pengarah W3C dan pencipta World Wide Web
 
-Ada sesuatu yang mungkin mengejutkan anda: apabila anda membina laman web yang mudah diakses, anda bukan sahaja membantu orang kurang upaya—anda sebenarnya menjadikan web lebih baik untuk semua orang!
+Ada sesuatu yang mungkin mengejutkan anda: apabila anda membina laman web yang mesra akses, anda bukan sahaja membantu orang kurang upaya—anda sebenarnya menjadikan web lebih baik untuk semua orang!
 
-Pernah perasan potongan tepi jalan di sudut jalan? Ia pada asalnya direka untuk kerusi roda, tetapi kini ia membantu orang dengan stroller, pekerja penghantaran dengan troli, pelancong dengan beg beroda, dan penunggang basikal juga. Begitulah cara reka bentuk web yang mudah diakses berfungsi—penyelesaian yang membantu satu kumpulan sering kali memberi manfaat kepada semua orang. Menarik, bukan?
+Pernah perasan potongan tepi jalan di sudut jalan? Ia pada asalnya direka untuk kerusi roda, tetapi kini ia membantu orang dengan stroller, pekerja penghantaran dengan troli, pelancong dengan beg beroda, dan penunggang basikal juga. Begitulah cara reka bentuk web mesra akses berfungsi—penyelesaian yang membantu satu kumpulan sering kali memberi manfaat kepada semua orang. Menarik, kan?
 
-Dalam pelajaran ini, kita akan meneroka cara mencipta laman web yang benar-benar berfungsi untuk semua orang, tidak kira bagaimana mereka melayari web. Anda akan menemui teknik praktikal yang sudah tertanam dalam piawaian web, mencuba alat ujian, dan melihat bagaimana kebolehcapaian menjadikan laman web anda lebih mesra pengguna untuk semua.
+Dalam pelajaran ini, kita akan meneroka cara mencipta laman web yang benar-benar berfungsi untuk semua orang, tidak kira bagaimana mereka melayari web. Anda akan menemui teknik praktikal yang sudah terbina dalam piawaian web, mencuba alat ujian, dan melihat bagaimana kebolehcapaian menjadikan laman web anda lebih mesra pengguna untuk semua.
 
-Menjelang akhir pelajaran ini, anda akan yakin untuk menjadikan kebolehcapaian sebagai sebahagian semula jadi daripada aliran kerja pembangunan anda. Bersedia untuk meneroka bagaimana pilihan reka bentuk yang bijak boleh membuka web kepada berbilion pengguna? Jom kita mulakan!
+Menjelang akhir pelajaran ini, anda akan yakin untuk menjadikan kebolehcapaian sebagai sebahagian semula jadi dalam aliran kerja pembangunan anda. Bersedia untuk meneroka bagaimana pilihan reka bentuk yang bijak boleh membuka web kepada berbilion pengguna? Jom kita mulakan!
+
+```mermaid
+mindmap
+  root((Web Accessibility))
+    Users
+      Screen readers
+      Keyboard navigation
+      Voice control
+      Magnification
+    Technologies
+      HTML semantics
+      ARIA attributes
+      CSS focus indicators
+      Keyboard events
+    Benefits
+      Wider audience
+      Better SEO
+      Legal compliance
+      Universal design
+    Testing
+      Automated tools
+      Manual testing
+      User feedback
+      Real assistive tech
+```
 
 > Anda boleh mengikuti pelajaran ini di [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
@@ -33,13 +75,13 @@ Menjelang akhir pelajaran ini, anda akan yakin untuk menjadikan kebolehcapaian s
 
 Sebelum kita mula menulis kod, mari luangkan masa untuk memahami bagaimana orang dengan keupayaan berbeza sebenarnya mengalami web. Ini bukan sekadar teori—memahami corak navigasi dunia sebenar ini akan menjadikan anda seorang pembangun yang jauh lebih baik!
 
-Teknologi bantuan adalah alat yang sangat menakjubkan yang membantu orang kurang upaya berinteraksi dengan laman web dengan cara yang mungkin mengejutkan anda. Setelah anda memahami cara teknologi ini berfungsi, mencipta pengalaman web yang mudah diakses menjadi lebih intuitif. Ia seperti belajar melihat kod anda melalui mata orang lain.
+Teknologi bantuan adalah alat yang sangat menakjubkan yang membantu orang kurang upaya berinteraksi dengan laman web dengan cara yang mungkin mengejutkan anda. Setelah anda memahami cara teknologi ini berfungsi, mencipta pengalaman web mesra akses menjadi lebih intuitif. Ia seperti belajar melihat kod anda melalui mata orang lain.
 
 ### Pembaca skrin
 
-[Pembaca skrin](https://en.wikipedia.org/wiki/Screen_reader) adalah teknologi yang cukup canggih yang menukar teks digital kepada output suara atau braille. Walaupun ia digunakan terutamanya oleh orang yang mengalami masalah penglihatan, ia juga sangat membantu pengguna dengan masalah pembelajaran seperti disleksia.
+[Pembaca skrin](https://en.wikipedia.org/wiki/Screen_reader) adalah teknologi yang cukup canggih yang menukar teks digital kepada output suara atau braille. Walaupun ia digunakan terutamanya oleh orang yang mempunyai masalah penglihatan, ia juga sangat berguna untuk pengguna dengan masalah pembelajaran seperti disleksia.
 
-Saya suka menganggap pembaca skrin seperti mempunyai seorang narator pintar yang membaca buku kepada anda. Ia membaca kandungan dengan kuat mengikut susunan logik, mengumumkan elemen interaktif seperti "butang" atau "pautan," dan menyediakan pintasan papan kekunci untuk melompat ke seluruh halaman. Tetapi inilah perkara penting—pembaca skrin hanya boleh berfungsi dengan baik jika kita membina laman web dengan struktur yang betul dan kandungan yang bermakna. Di sinilah peranan anda sebagai pembangun!
+Saya suka menganggap pembaca skrin seperti mempunyai seorang pencerita pintar yang membaca buku kepada anda. Ia membaca kandungan dengan kuat dalam susunan logik, mengumumkan elemen interaktif seperti "butang" atau "pautan," dan menyediakan pintasan papan kekunci untuk melompat di sekitar halaman. Tetapi inilah perkara penting—pembaca skrin hanya boleh berfungsi dengan baik jika kita membina laman web dengan struktur yang betul dan kandungan yang bermakna. Di sinilah peranan anda sebagai pembangun!
 
 **Pembaca skrin popular di pelbagai platform:**
 - **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (percuma dan paling popular), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (terbina dalam)
@@ -50,13 +92,13 @@ Saya suka menganggap pembaca skrin seperti mempunyai seorang narator pintar yang
 **Cara pembaca skrin menavigasi kandungan web:**
 
 Pembaca skrin menyediakan pelbagai kaedah navigasi yang menjadikan pelayaran lebih efisien untuk pengguna berpengalaman:
-- **Pembacaan berurutan**: Membaca kandungan dari atas ke bawah, seperti membaca buku
+- **Pembacaan berurutan**: Membaca kandungan dari atas ke bawah, seperti mengikuti buku
 - **Navigasi penanda**: Melompat antara bahagian halaman (header, nav, main, footer)
 - **Navigasi tajuk**: Melompat antara tajuk untuk memahami struktur halaman
 - **Senarai pautan**: Menjana senarai semua pautan untuk akses cepat
 - **Kawalan borang**: Menavigasi secara langsung antara medan input dan butang
 
-> 💡 **Ini sesuatu yang mengejutkan saya**: 68% pengguna pembaca skrin menavigasi terutamanya melalui tajuk ([Kajian WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding)). Ini bermakna struktur tajuk anda seperti peta jalan untuk pengguna—apabila anda melakukannya dengan betul, anda secara literal membantu orang mencari jalan di sekitar kandungan anda dengan lebih cepat!
+> 💡 **Inilah sesuatu yang mengejutkan saya**: 68% pengguna pembaca skrin menavigasi terutamanya melalui tajuk ([Kajian WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding)). Ini bermakna struktur tajuk anda seperti peta jalan untuk pengguna—apabila anda melakukannya dengan betul, anda secara literal membantu orang mencari jalan di sekitar kandungan anda dengan lebih cepat!
 
 ### Membina aliran kerja ujian anda
 
@@ -65,18 +107,26 @@ Berita baik—ujian kebolehcapaian yang berkesan tidak perlu membebankan! Anda p
 **Aliran kerja ujian manual penting:**
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
+flowchart TD
+    A[🚀 Start Testing] --> B{⌨️ Keyboard Navigation}
     B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
+    C --> D{🎧 Screen Reader Testing}
     D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
+    E --> F{🔍 Zoom Testing}
     F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
+    G --> H{🎨 Color/Contrast Check}
     H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
+    I --> J{👁️ Focus Management}
     J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+    K --> L[✅ Testing Complete]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
 ```
 
 **Senarai semak ujian langkah demi langkah:**
@@ -86,13 +136,13 @@ graph TD
 4. **Pengesahan kontras warna**: Periksa semua teks dan komponen UI
 5. **Ujian penunjuk fokus**: Pastikan semua elemen interaktif mempunyai keadaan fokus yang kelihatan
 
-✅ **Mulakan dengan Lighthouse**: Buka DevTools pelayar anda, jalankan audit kebolehcapaian Lighthouse, kemudian gunakan hasilnya untuk memfokuskan kawasan ujian manual anda.
+✅ **Mulakan dengan Lighthouse**: Buka DevTools pelayar anda, jalankan audit kebolehcapaian Lighthouse, kemudian gunakan hasilnya untuk memandu kawasan fokus ujian manual anda.
 
 ### Alat zum dan pembesaran
 
-Anda tahu bagaimana kadang-kadang anda mencubit untuk zum pada telefon anda apabila teks terlalu kecil, atau memicingkan mata pada skrin komputer riba anda dalam cahaya matahari yang terang? Ramai pengguna bergantung pada alat pembesaran untuk menjadikan kandungan dapat dibaca setiap hari. Ini termasuk orang yang mengalami masalah penglihatan, warga emas, dan sesiapa sahaja yang pernah cuba membaca laman web di luar rumah.
+Anda tahu bagaimana kadang-kadang anda mencubit untuk zum pada telefon anda apabila teks terlalu kecil, atau mengecilkan mata anda pada skrin komputer riba dalam cahaya matahari terang? Ramai pengguna bergantung pada alat pembesaran untuk menjadikan kandungan boleh dibaca setiap hari. Ini termasuk orang dengan penglihatan rendah, warga emas, dan sesiapa sahaja yang pernah cuba membaca laman web di luar rumah.
 
-Teknologi zum moden telah berkembang melampaui sekadar membesarkan sesuatu. Memahami cara alat ini berfungsi akan membantu anda mencipta reka bentuk responsif yang kekal berfungsi dan menarik pada setiap tahap pembesaran.
+Teknologi zum moden telah berkembang lebih daripada sekadar membesarkan sesuatu. Memahami cara alat ini berfungsi akan membantu anda mencipta reka bentuk responsif yang kekal berfungsi dan menarik pada setiap tahap pembesaran.
 
 **Keupayaan zum pelayar moden:**
 - **Zum halaman**: Menskalakan semua kandungan secara berkadar (teks, imej, susun atur) - ini adalah kaedah yang disukai
@@ -104,19 +154,19 @@ Teknologi zum moden telah berkembang melampaui sekadar membesarkan sesuatu. Mema
 - **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (terbina dalam), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
 - **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (terbina dalam dengan ciri lanjutan)
 
-> ⚠️ **Pertimbangan Reka Bentuk**: WCAG memerlukan kandungan kekal berfungsi apabila dizum sehingga 200%. Pada tahap ini, penggulungan mendatar harus minimum, dan semua elemen interaktif harus kekal mudah diakses.
+> ⚠️ **Pertimbangan Reka Bentuk**: WCAG memerlukan kandungan kekal berfungsi apabila dizum sehingga 200%. Pada tahap ini, penggulungan mendatar harus minimum, dan semua elemen interaktif harus kekal boleh diakses.
 
-✅ **Uji reka bentuk responsif anda**: Zum pelayar anda kepada 200% dan 400%. Adakah susun atur anda menyesuaikan dengan baik? Adakah anda masih boleh mengakses semua fungsi tanpa penggulungan yang berlebihan?
+✅ **Uji reka bentuk responsif anda**: Zum pelayar anda kepada 200% dan 400%. Adakah susun atur anda menyesuaikan dengan baik? Adakah anda masih boleh mengakses semua fungsi tanpa penggulungan berlebihan?
 
 ## Alat Ujian Kebolehcapaian Moden
 
-Sekarang anda memahami bagaimana orang menavigasi web dengan teknologi bantuan, mari kita terokai alat yang membantu anda membina dan menguji laman web yang mudah diakses.
+Sekarang anda memahami bagaimana orang menavigasi web dengan teknologi bantuan, mari kita terokai alat yang membantu anda membina dan menguji laman web mesra akses.
 
-Anggaplah begini: alat automatik sangat bagus untuk menangkap isu yang jelas (seperti teks alt yang hilang), manakala ujian manual membantu anda memastikan laman web anda selesa digunakan dalam dunia sebenar. Gabungan kedua-duanya memberikan keyakinan bahawa laman web anda berfungsi untuk semua orang.
+Anggaplah begini: alat automatik sangat bagus untuk menangkap isu yang jelas (seperti teks alt yang hilang), manakala ujian manual membantu anda memastikan laman web anda selesa digunakan dalam dunia sebenar. Bersama-sama, mereka memberi anda keyakinan bahawa laman web anda berfungsi untuk semua orang.
 
 ### Ujian kontras warna
 
-Berita baik: kontras warna adalah salah satu isu kebolehcapaian yang paling biasa, tetapi ia juga salah satu yang paling mudah untuk diperbaiki. Kontras yang baik memberi manfaat kepada semua orang—daripada pengguna yang mengalami masalah penglihatan hingga mereka yang cuba membaca telefon mereka di pantai.
+Berita baik: kontras warna adalah salah satu isu kebolehcapaian yang paling biasa, tetapi ia juga salah satu yang paling mudah untuk diperbaiki. Kontras yang baik memberi manfaat kepada semua orang—daripada pengguna dengan masalah penglihatan kepada orang yang cuba membaca telefon mereka di pantai.
 
 **Keperluan kontras WCAG:**
 
@@ -130,13 +180,13 @@ Berita baik: kontras warna adalah salah satu isu kebolehcapaian yang paling bias
 - [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Aplikasi desktop dengan pemilih warna
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Berasaskan web dengan maklum balas segera
 - [Stark](https://www.getstark.co/) - Plugin alat reka bentuk untuk Figma, Sketch, Adobe XD
-- [Accessible Colors](https://accessible-colors.com/) - Cari palet warna yang mudah diakses
+- [Accessible Colors](https://accessible-colors.com/) - Cari palet warna yang mesra akses
 
-✅ **Bina palet warna yang lebih baik**: Mulakan dengan warna jenama anda dan gunakan pemeriksa kontras untuk mencipta variasi yang mudah diakses. Dokumentasikan ini sebagai token warna yang mudah diakses dalam sistem reka bentuk anda.
+✅ **Bina palet warna yang lebih baik**: Mulakan dengan warna jenama anda dan gunakan pemeriksa kontras untuk mencipta variasi yang mesra akses. Dokumentasikan ini sebagai token warna mesra akses sistem reka bentuk anda.
 
-### Audit kebolehcapaian yang menyeluruh
+### Audit kebolehcapaian menyeluruh
 
-Ujian kebolehcapaian yang paling berkesan menggabungkan pelbagai pendekatan. Tiada satu alat pun yang dapat menangkap segalanya, jadi membina rutin ujian dengan pelbagai kaedah memastikan liputan yang menyeluruh.
+Ujian kebolehcapaian yang paling berkesan menggabungkan pelbagai pendekatan. Tiada satu alat pun yang menangkap segalanya, jadi membina rutin ujian dengan pelbagai kaedah memastikan liputan yang menyeluruh.
 
 **Ujian berasaskan pelayar (terbina dalam DevTools):**
 - **Chrome/Edge**: Audit kebolehcapaian Lighthouse + panel Kebolehcapaian
@@ -155,19 +205,52 @@ Ujian kebolehcapaian yang paling berkesan menggabungkan pelbagai pendekatan. Tia
 
 > 🎯 **Matlamat Ujian**: Sasarkan skor kebolehcapaian Lighthouse 95+ sebagai asas anda. Ingat, alat automatik hanya menangkap kira-kira 30-40% isu kebolehcapaian—ujian manual masih penting!
 
+### 🧠 **Semakan Kemahiran Ujian: Bersedia Mencari Isu?**
+
+**Mari lihat bagaimana perasaan anda tentang ujian kebolehcapaian:**
+- Kaedah ujian mana yang kelihatan paling mudah untuk anda sekarang?
+- Bolehkah anda bayangkan menggunakan navigasi papan kekunci sahaja selama sehari penuh?
+- Apakah satu halangan kebolehcapaian yang pernah anda alami secara peribadi dalam talian?
+
+```mermaid
+pie title "Accessibility Issues Caught by Different Methods"
+    "Automated Tools" : 35
+    "Manual Testing" : 40
+    "User Feedback" : 25
+```
+
+> **Peningkat keyakinan**: Penguji kebolehcapaian profesional menggunakan gabungan kaedah yang sama. Anda sedang mempelajari amalan standard industri!
+
 ## Membina Kebolehcapaian dari Awal
 
-Kunci kejayaan kebolehcapaian adalah membinanya ke dalam asas anda sejak hari pertama. Saya tahu ia menggoda untuk berfikir "Saya akan tambah kebolehcapaian kemudian," tetapi itu seperti cuba menambah tanjakan ke rumah selepas ia dibina. Boleh? Ya. Mudah? Tidak begitu.
+Kunci kejayaan kebolehcapaian adalah membinanya ke dalam asas anda dari hari pertama. Saya tahu ia menggoda untuk berfikir "Saya akan tambah kebolehcapaian kemudian," tetapi itu seperti cuba menambah tanjakan ke rumah selepas ia sudah dibina. Boleh? Ya. Mudah? Tidak begitu.
 
-Anggaplah kebolehcapaian seperti merancang rumah—jauh lebih mudah untuk memasukkan kebolehcapaian kerusi roda dalam rancangan seni bina awal anda daripada menyesuaikan semuanya kemudian.
+Anggaplah kebolehcapaian seperti merancang rumah—ia jauh lebih mudah untuk memasukkan kebolehcapaian kerusi roda dalam rancangan seni bina awal anda daripada menyesuaikan semuanya kemudian.
 
 ### Prinsip POUR: Asas kebolehcapaian anda
 
-Garis Panduan Kebolehcapaian Kandungan Web (WCAG) dibina berdasarkan empat prinsip asas yang disebut sebagai POUR. Jangan risau—ini bukan konsep akademik yang membosankan! Ia sebenarnya garis panduan praktikal untuk mencipta kandungan yang berfungsi untuk semua orang.
+Garis Panduan Kebolehcapaian Kandungan Web (WCAG) dibina di sekitar empat prinsip asas yang membentuk POUR. Jangan risau—ini bukan konsep akademik yang membosankan! Mereka sebenarnya garis panduan praktikal untuk menjadikan kandungan yang berfungsi untuk semua orang.
 
-Setelah anda memahami POUR, membuat keputusan kebolehcapaian menjadi lebih intuitif. Ia seperti mempunyai senarai semak mental yang membimbing pilihan reka bentuk anda. Mari kita pecahkan:
+Setelah anda memahami POUR, membuat keputusan kebolehcapaian menjadi jauh lebih intuitif. Ia seperti mempunyai senarai semak mental yang membimbing pilihan reka bentuk anda. Mari kita pecahkan:
 
-**🔍 Boleh Dipercepatkan**: Maklumat mesti dapat disampaikan dengan cara yang dapat dirasakan oleh pengguna melalui deria yang tersedia
+```mermaid
+flowchart LR
+    A[🔍 PERCEIVABLE<br/>Can users sense it?] --> B[🎮 OPERABLE<br/>Can users use it?]
+    B --> C[📖 UNDERSTANDABLE<br/>Can users get it?]
+    C --> D[💪 ROBUST<br/>Does it work everywhere?]
+    
+    A1[Alt text<br/>Captions<br/>Contrast] --> A
+    B1[Keyboard access<br/>No seizures<br/>Time limits] --> B
+    C1[Clear language<br/>Predictable<br/>Error help] --> C
+    D1[Valid code<br/>Compatible<br/>Future-proof] --> D
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+```
+
+**🔍 Boleh Dipercepatkan**: Maklumat mesti dapat disampaikan dengan cara yang dapat dirasakan oleh pengguna melalui deria mereka yang tersedia
 
 - Sediakan alternatif teks untuk kandungan bukan teks (imej, video, audio)
 - Pastikan kontras warna mencukupi untuk semua teks dan komponen UI
@@ -180,7 +263,7 @@ Setelah anda memahami POUR, membuat keputusan kebolehcapaian menjadi lebih intui
 - Pastikan semua fungsi boleh diakses melalui navigasi papan kekunci
 - Berikan pengguna masa yang mencukupi untuk membaca dan berinteraksi dengan kandungan
 - Elakkan kandungan yang menyebabkan sawan atau gangguan vestibular
-- Bantu pengguna menavigasi dengan struktur dan penanda yang jelas
+- Bantu pengguna menavigasi dengan cekap dengan struktur dan penanda yang jelas
 - Pastikan elemen interaktif mempunyai saiz sasaran yang mencukupi (minimum 44px)
 
 **📖 Boleh Difahami**: Maklumat dan operasi UI mesti jelas dan mudah difahami
@@ -193,27 +276,55 @@ Setelah anda memahami POUR, membuat keputusan kebolehcapaian menjadi lebih intui
 
 **💪 Kukuh**: Kandungan mesti berfungsi dengan boleh dipercayai di pelbagai teknologi dan peranti bantuan
 
-- Gunakan HTML yang sah dan semantik sebagai asas anda
-- Pastikan keserasian dengan teknologi bantuan semasa dan masa depan
-- Ikuti piawaian web dan amalan terbaik untuk markup
-- Uji di pelbagai pelayar, peranti, dan alat bantuan
-- Struktur kandungan supaya ia merosot dengan baik apabila ciri lanjutan tidak disokong
+- **Gunakan HTML semantik yang sah sebagai asas anda**
+- **Pastikan keserasian dengan teknologi bantuan semasa dan masa depan**
+- **Ikuti piawaian web dan amalan terbaik untuk markup**
+- **Uji pada pelbagai pelayar, peranti, dan alat bantuan**
+- **Strukturkan kandungan supaya ia tetap berfungsi dengan baik walaupun ciri-ciri canggih tidak disokong**
 
-## Mencipta Reka Bentuk Visual yang Mudah Diakses
+### 🎯 **Semak Prinsip POUR: Memastikan Ia Melekat**
 
-Reka bentuk visual yang baik dan kebolehcapaian berjalan seiring. Apabila anda mereka bentuk dengan kebolehcapaian dalam fikiran, anda sering mendapati bahawa kekangan ini membawa kepada penyelesaian yang lebih bersih dan elegan yang memberi manfaat kepada semua pengguna.
+**Refleksi pantas tentang asas:**
+- Bolehkah anda memikirkan satu ciri laman web yang gagal memenuhi setiap prinsip POUR?
+- Prinsip mana yang paling semula jadi bagi anda sebagai pembangun?
+- Bagaimana prinsip-prinsip ini boleh meningkatkan reka bentuk untuk semua orang, bukan hanya pengguna kurang upaya?
+
+```mermaid
+quadrantChart
+    title POUR Principles Impact Matrix
+    x-axis Low Effort --> High Effort
+    y-axis Low Impact --> High Impact
+    quadrant-1 Quick Wins
+    quadrant-2 Major Projects
+    quadrant-3 Consider Later
+    quadrant-4 Strategic Focus
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
+
+> **Ingat**: Mulakan dengan penambahbaikan yang memberi impak tinggi tetapi memerlukan usaha rendah. HTML semantik dan teks alt memberikan peningkatan kebolehaksesan terbesar dengan usaha paling sedikit!
+
+## Mencipta Reka Bentuk Visual yang Boleh Diakses
+
+Reka bentuk visual yang baik dan kebolehaksesan berjalan seiring. Apabila anda mereka bentuk dengan mengambil kira kebolehaksesan, anda sering mendapati bahawa kekangan ini membawa kepada penyelesaian yang lebih bersih dan elegan yang memberi manfaat kepada semua pengguna.
 
 Mari kita terokai cara mencipta reka bentuk yang menarik secara visual yang berfungsi untuk semua orang, tanpa mengira keupayaan visual mereka atau keadaan di mana mereka melihat kandungan anda.
 
-### Strategi warna dan kebolehcapaian visual
-Warna adalah alat komunikasi yang kuat, tetapi ia tidak seharusnya menjadi satu-satunya cara untuk menyampaikan maklumat penting. Reka bentuk yang melangkaui warna mencipta pengalaman yang lebih kukuh dan inklusif yang berfungsi dalam pelbagai situasi.
+### Strategi warna dan kebolehaksesan visual
+
+Warna sangat berkuasa untuk komunikasi, tetapi ia tidak seharusnya menjadi satu-satunya cara anda menyampaikan maklumat penting. Reka bentuk yang melangkaui warna mencipta pengalaman yang lebih kukuh dan inklusif yang berfungsi dalam lebih banyak situasi.
 
 **Reka bentuk untuk perbezaan penglihatan warna:**
 
-Kira-kira 8% lelaki dan 0.5% wanita mempunyai beberapa bentuk perbezaan penglihatan warna (sering disebut "buta warna"). Jenis yang paling biasa adalah:
-- **Deuteranopia**: Sukar membezakan warna merah dan hijau
-- **Protanopia**: Warna merah kelihatan lebih malap
-- **Tritanopia**: Sukar membezakan warna biru dan kuning (jarang berlaku)
+Kira-kira 8% lelaki dan 0.5% wanita mempunyai beberapa bentuk perbezaan penglihatan warna (sering dipanggil "buta warna"). Jenis yang paling biasa ialah:
+- **Deuteranopia**: Kesukaran membezakan merah dan hijau
+- **Protanopia**: Merah kelihatan lebih malap
+- **Tritanopia**: Kesukaran dengan biru dan kuning (jarang berlaku)
 
 **Strategi warna inklusif:**
 
@@ -245,10 +356,10 @@ Kira-kira 8% lelaki dan 0.5% wanita mempunyai beberapa bentuk perbezaan pengliha
 **Melangkaui keperluan kontras asas:**
 - Uji pilihan warna anda dengan simulator buta warna
 - Gunakan corak, tekstur, atau bentuk bersama kod warna
-- Pastikan keadaan interaktif tetap dapat dibezakan tanpa warna
+- Pastikan keadaan interaktif kekal dapat dibezakan tanpa warna
 - Pertimbangkan bagaimana reka bentuk anda kelihatan dalam mod kontras tinggi
 
-✅ **Uji kebolehcapaian warna anda**: Gunakan alat seperti [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) untuk melihat bagaimana laman web anda muncul kepada pengguna dengan jenis penglihatan warna yang berbeza.
+✅ **Uji kebolehaksesan warna anda**: Gunakan alat seperti [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) untuk melihat bagaimana laman web anda muncul kepada pengguna dengan jenis penglihatan warna yang berbeza.
 
 ### Penunjuk fokus dan reka bentuk interaksi
 
@@ -285,19 +396,41 @@ button:focus:not(:focus-visible) {
 
 **Keperluan penunjuk fokus:**
 - **Keterlihatan**: Mesti mempunyai nisbah kontras sekurang-kurangnya 3:1 dengan elemen sekeliling
-- **Lebar**: Ketebalan minimum 2px di sekeliling elemen
-- **Kekal**: Harus tetap kelihatan sehingga fokus beralih ke tempat lain
+- **Lebar**: Ketebalan minimum 2px di sekeliling keseluruhan elemen
+- **Kekekalan**: Harus kekal kelihatan sehingga fokus beralih ke tempat lain
 - **Perbezaan**: Mesti berbeza secara visual daripada keadaan UI lain
 
-> 💡 **Tip Reka Bentuk**: Penunjuk fokus yang hebat sering menggunakan gabungan garis luar, bayang kotak, dan perubahan warna untuk memastikan keterlihatan di pelbagai latar belakang dan konteks.
+> 💡 **Tip Reka Bentuk**: Penunjuk fokus yang hebat sering menggunakan gabungan garis luar, bayang kotak, dan perubahan warna untuk memastikan keterlihatan merentasi latar belakang dan konteks yang berbeza.
 
 ✅ **Audit penunjuk fokus**: Tab melalui laman web anda dan perhatikan elemen mana yang mempunyai penunjuk fokus yang jelas. Adakah ada yang sukar dilihat atau hilang sepenuhnya?
 
-### HTML Semantik: Asas kebolehcapaian
+### HTML Semantik: Asas Kebolehaksesan
 
 HTML semantik adalah seperti memberikan teknologi bantuan sistem GPS untuk laman web anda. Apabila anda menggunakan elemen HTML yang betul untuk tujuan yang dimaksudkan, anda pada dasarnya menyediakan pembaca skrin, papan kekunci, dan alat lain dengan peta terperinci untuk membantu pengguna menavigasi dengan berkesan.
 
-Berikut adalah analogi yang benar-benar membuat saya faham: HTML semantik adalah perbezaan antara perpustakaan yang teratur dengan kategori yang jelas dan tanda yang berguna berbanding gudang di mana buku-buku berselerak secara rawak. Kedua-dua tempat mempunyai buku yang sama, tetapi yang mana satu yang anda lebih suka untuk mencari sesuatu? Tepat sekali!
+Berikut adalah analogi yang benar-benar menarik bagi saya: HTML semantik adalah perbezaan antara perpustakaan yang teratur dengan kategori yang jelas dan tanda yang berguna berbanding gudang di mana buku-buku berselerak secara rawak. Kedua-dua tempat mempunyai buku yang sama, tetapi yang mana satu yang anda lebih suka cuba mencari sesuatu? Tepat sekali!
+
+```mermaid
+flowchart TD
+    A[🏠 HTML Document] --> B[📰 header]
+    A --> C[🧭 nav]
+    A --> D[📄 main]
+    A --> E[📋 footer]
+    
+    B --> B1[h1: Site Name<br/>Logo & branding]
+    C --> C1[ul: Navigation<br/>Primary links]
+    D --> D1[article: Content<br/>section: Subsections]
+    D --> D2[aside: Sidebar<br/>Related content]
+    E --> E1[nav: Footer links<br/>Copyright info]
+    
+    D1 --> D1a[h1: Page title<br/>h2: Major sections<br/>h3: Subsections]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 
 **Blok binaan struktur halaman yang boleh diakses:**
 
@@ -354,7 +487,7 @@ Berikut adalah analogi yang benar-benar membuat saya faham: HTML semantik adalah
 </footer>
 ```
 
-**Mengapa HTML semantik mengubah kebolehcapaian:**
+**Mengapa HTML semantik mengubah kebolehaksesan:**
 
 | Elemen Semantik | Tujuan | Manfaat Pembaca Skrin |
 |------------------|---------|----------------------|
@@ -364,24 +497,51 @@ Berikut adalah analogi yang benar-benar membuat saya faham: HTML semantik adalah
 | `<article>` | Kandungan yang berdiri sendiri | Mengumumkan sempadan artikel |
 | `<section>` | Kumpulan kandungan bertema | Memberikan struktur kandungan |
 | `<aside>` | Kandungan sidebar berkaitan | "Landmark pelengkap" |
-| `<footer>` | Footer halaman atau bahagian | "Landmark maklumat kandungan" |
+| `<footer>` | Footer halaman atau bahagian | "Landmark info kandungan" |
 
-**Kuasa super pembaca skrin dengan HTML semantik:**
+**Kuasa pembaca skrin dengan HTML semantik:**
 - **Navigasi landmark**: Lompat antara bahagian utama halaman dengan segera
 - **Garis besar tajuk**: Hasilkan jadual kandungan daripada struktur tajuk anda
 - **Senarai elemen**: Buat senarai semua pautan, butang, atau kawalan borang
 - **Kesedaran konteks**: Memahami hubungan antara bahagian kandungan
 
-> 🎯 **Ujian Cepat**: Cuba navigasi laman web anda dengan pembaca skrin menggunakan pintasan landmark (D untuk landmark, H untuk tajuk, K untuk pautan dalam NVDA/JAWS). Adakah navigasi masuk akal?
+> 🎯 **Ujian Pantas**: Cuba navigasi laman web anda dengan pembaca skrin menggunakan pintasan landmark (D untuk landmark, H untuk tajuk, K untuk pautan dalam NVDA/JAWS). Adakah navigasi masuk akal?
 
-✅ **Audit struktur semantik anda**: Gunakan panel Kebolehcapaian dalam DevTools pelayar anda untuk melihat pokok kebolehcapaian dan pastikan markup anda mencipta struktur yang logik.
+### 🏗️ **Semakan Penguasaan HTML Semantik: Membina Asas Kukuh**
+
+**Mari kita nilai pemahaman semantik anda:**
+- Bolehkah anda mengenal pasti landmark pada halaman web hanya dengan melihat HTML?
+- Bagaimana anda akan menerangkan perbezaan antara `<section>` dan `<div>` kepada rakan?
+- Apa perkara pertama yang anda akan periksa jika pengguna pembaca skrin melaporkan masalah navigasi?
+
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: div soup
+    UnsementicHTML --> SemanticHTML: Add landmarks
+    SemanticHTML --> AccessibleHTML: Test with AT
+    AccessibleHTML --> [*]: User success!
+    
+    note right of UnsementicHTML
+        Screen readers lost
+        Keyboard nav broken
+    end note
+    
+    note right of AccessibleHTML
+        Clear navigation
+        Efficient browsing
+    end note
+```
+
+> **Pandangan profesional**: HTML semantik yang baik menyelesaikan kira-kira 70% masalah kebolehaksesan secara automatik. Kuasai asas ini dan anda berada di landasan yang betul!
+
+✅ **Audit struktur semantik anda**: Gunakan panel Kebolehaksesan dalam DevTools pelayar anda untuk melihat pokok kebolehaksesan dan pastikan markup anda mencipta struktur yang logik.
 
 ### Hierarki tajuk: Mencipta garis besar kandungan yang logik
 
 Tajuk sangat penting untuk kandungan yang boleh diakses—ia seperti tulang belakang yang menyatukan semuanya. Pengguna pembaca skrin sangat bergantung pada tajuk untuk memahami dan menavigasi kandungan anda. Anggaplah ia sebagai menyediakan jadual kandungan untuk halaman anda.
 
 **Inilah peraturan emas untuk tajuk:**
-Jangan melangkau tahap. Sentiasa maju secara logik dari `<h1>` ke `<h2>` ke `<h3>`, dan seterusnya. Ingat membuat garis besar di sekolah? Prinsipnya sama—anda tidak akan melompat dari "I. Poin Utama" terus ke "C. Sub-sub-poin" tanpa "A. Sub-poin" di antara, betul?
+Jangan melangkau tahap. Sentiasa maju secara logik dari `<h1>` ke `<h2>` ke `<h3>`, dan seterusnya. Ingat membuat garis besar di sekolah? Ia adalah prinsip yang sama—anda tidak akan melompat dari "I. Titik Utama" terus ke "C. Sub-sub-titik" tanpa "A. Sub-titik" di antara, bukan?
 
 **Contoh struktur tajuk yang sempurna:**
 
@@ -423,33 +583,33 @@ Jangan melangkau tahap. Sentiasa maju secara logik dari `<h1>` ke `<h2>` ke `<h3
 ```
 
 **Amalan terbaik tajuk:**
-- **Satu `<h1>` setiap halaman**: Biasanya tajuk utama halaman atau tajuk kandungan utama
+- **Satu `<h1>` setiap halaman**: Biasanya tajuk utama halaman atau tajuk kandungan utama anda
 - **Kemajuan logik**: Jangan melangkau tahap (h1 → h2 → h3, bukan h1 → h3)
 - **Kandungan deskriptif**: Jadikan tajuk bermakna apabila dibaca di luar konteks
 - **Gaya visual dengan CSS**: Gunakan CSS untuk penampilan, tahap HTML untuk struktur
 
 **Statistik navigasi pembaca skrin:**
-- 68% pengguna pembaca skrin menavigasi dengan tajuk ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))
-- Pengguna mengharapkan untuk menemukan garis besar tajuk yang logik
+- 68% pengguna pembaca skrin menavigasi melalui tajuk ([Kajian WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding))
+- Pengguna mengharapkan untuk mencari garis besar tajuk yang logik
 - Tajuk menyediakan cara terpantas untuk memahami struktur halaman
 
-> 💡 **Tip Pro**: Gunakan sambungan pelayar seperti "HeadingsMap" untuk memvisualisasikan struktur tajuk anda. Ia seharusnya dibaca seperti jadual kandungan yang teratur.
+> 💡 **Tip Profesional**: Gunakan sambungan pelayar seperti "HeadingsMap" untuk memvisualisasikan struktur tajuk anda. Ia sepatutnya dibaca seperti jadual kandungan yang teratur.
 
-✅ **Uji struktur tajuk anda**: Gunakan navigasi tajuk pembaca skrin (kunci H dalam NVDA) untuk melompat melalui tajuk anda. Adakah kemajuan menceritakan kisah kandungan anda secara logik?
+✅ **Uji struktur tajuk anda**: Gunakan navigasi tajuk pembaca skrin (kekunci H dalam NVDA) untuk melompat melalui tajuk anda. Adakah kemajuan menceritakan kisah kandungan anda secara logik?
 
-### Teknik kebolehcapaian visual lanjutan
+### Teknik kebolehaksesan visual lanjutan
 
-Melangkaui asas kontras dan warna, terdapat teknik canggih yang membantu mencipta pengalaman visual yang benar-benar inklusif. Kaedah ini memastikan kandungan anda berfungsi dalam pelbagai keadaan tontonan dan teknologi bantuan.
+Melangkaui asas kontras dan warna, terdapat teknik canggih yang membantu mencipta pengalaman visual yang benar-benar inklusif. Kaedah ini memastikan kandungan anda berfungsi merentasi keadaan tontonan yang berbeza dan teknologi bantuan.
 
 **Strategi komunikasi visual penting:**
 
-- **Maklum balas multi-modal**: Gabungkan isyarat visual, teks, dan kadang-kadang audio
-- **Pendedahan progresif**: Sampaikan maklumat dalam bahagian yang mudah dihadam
+- **Maklum balas pelbagai modal**: Gabungkan isyarat visual, teks, dan kadangkala audio
+- **Pendedahan progresif**: Sampaikan maklumat dalam bahagian yang boleh dihadam
 - **Pola interaksi yang konsisten**: Gunakan konvensyen UI yang biasa
-- **Tipografi responsif**: Skala teks dengan sesuai di pelbagai peranti
+- **Tipografi responsif**: Skala teks dengan sewajarnya merentasi peranti
 - **Keadaan pemuatan dan ralat**: Berikan maklum balas yang jelas untuk semua tindakan pengguna
 
-**Utiliti CSS untuk kebolehcapaian yang dipertingkatkan:**
+**Utiliti CSS untuk kebolehaksesan yang dipertingkatkan:**
 
 ```css
 /* Screen reader only text - visually hidden but accessible */
@@ -505,23 +665,23 @@ Melangkaui asas kontras dan warna, terdapat teknik canggih yang membantu mencipt
 }
 ```
 
-> 🎯 **Pola Kebolehcapaian**: "Pautan lompat" adalah penting untuk pengguna papan kekunci. Ia seharusnya menjadi elemen pertama yang boleh difokuskan di halaman anda dan melompat terus ke kawasan kandungan utama.
+> 🎯 **Pola Kebolehaksesan**: "Pautan lompat" adalah penting untuk pengguna papan kekunci. Ia sepatutnya menjadi elemen pertama yang boleh difokuskan pada halaman anda dan melompat terus ke kawasan kandungan utama.
 
-✅ **Laksanakan navigasi lompat**: Tambahkan pautan lompat ke halaman anda dan uji dengan menekan Tab sebaik sahaja halaman dimuatkan. Ia seharusnya muncul dan membolehkan anda melompat ke kandungan utama.
+✅ **Laksanakan navigasi lompat**: Tambahkan pautan lompat ke halaman anda dan uji dengan menekan Tab sebaik sahaja halaman dimuatkan. Ia sepatutnya muncul dan membolehkan anda melompat ke kandungan utama.
 
 ## Menulis Teks Pautan yang Bermakna
 
-Pautan adalah seperti lebuh raya di web, tetapi teks pautan yang ditulis dengan buruk adalah seperti tanda jalan yang hanya mengatakan "Tempat" dan bukannya "Pusat Bandar Chicago." Tidak sangat membantu, bukan?
+Pautan pada dasarnya adalah lebuh raya web, tetapi teks pautan yang ditulis dengan buruk adalah seperti mempunyai papan tanda jalan yang hanya mengatakan "Tempat" dan bukannya "Pusat Bandar Chicago." Tidak begitu membantu, bukan?
 
-Berikut adalah sesuatu yang mengejutkan saya apabila pertama kali mengetahuinya: pembaca skrin boleh mengekstrak semua pautan dari halaman dan menunjukkannya sebagai satu senarai besar. Bayangkan jika seseorang memberikan anda direktori setiap pautan di halaman anda. Adakah setiap satu masuk akal dengan sendirinya? Itulah ujian yang perlu dilalui oleh teks pautan anda!
+Berikut adalah sesuatu yang mengejutkan saya apabila saya mula-mula mengetahuinya: pembaca skrin boleh mengekstrak semua pautan dari halaman dan menunjukkannya sebagai satu senarai besar. Bayangkan jika seseorang menyerahkan direktori setiap pautan di halaman anda. Adakah setiap satu masuk akal dengan sendirinya? Itulah ujian yang perlu dilalui oleh teks pautan anda!
 
 ### Memahami pola navigasi pautan
 
-Pembaca skrin menawarkan ciri navigasi pautan yang kuat yang bergantung pada teks pautan yang ditulis dengan baik:
+Pembaca skrin menawarkan ciri navigasi pautan yang berkuasa yang bergantung pada teks pautan yang ditulis dengan baik:
 
 **Kaedah navigasi pautan:**
 - **Pembacaan berurutan**: Pautan dibaca dalam konteks sebagai sebahagian daripada aliran kandungan
-- **Penjanaan senarai pautan**: Semua pautan halaman dikumpulkan ke dalam direktori yang boleh dicari
+- **Penjanaan senarai pautan**: Semua pautan halaman disusun menjadi direktori yang boleh dicari
 - **Navigasi cepat**: Lompat antara pautan menggunakan pintasan papan kekunci (K dalam NVDA)
 - **Fungsi carian**: Cari pautan tertentu dengan menaip teks separa
 
@@ -537,9 +697,9 @@ Hanya dua daripada pautan ini memberikan maklumat berguna apabila dibaca di luar
 
 > 📊 **Kesan Pengguna**: Pengguna pembaca skrin mengimbas senarai pautan untuk memahami kandungan halaman dengan cepat. Teks pautan generik memaksa mereka untuk kembali ke konteks setiap pautan, memperlahankan pengalaman melayari mereka dengan ketara.
 
-### Kesalahan teks pautan biasa untuk dielakkan
+### Kesilapan teks pautan biasa untuk dielakkan
 
-Memahami apa yang tidak berfungsi membantu anda mengenal pasti dan memperbaiki isu kebolehcapaian dalam kandungan sedia ada.
+Memahami apa yang tidak berfungsi membantu anda mengenal pasti dan membetulkan isu kebolehaksesan dalam kandungan sedia ada.
 
 **❌ Teks pautan generik yang tidak memberikan konteks:**
 
@@ -605,15 +765,15 @@ Teks pautan deskriptif memberi manfaat kepada semua orang—pengguna yang dapat 
 ```
 
 **Amalan terbaik teks pautan:**
-- **Jadi spesifik**: "Muat turun laporan kewangan suku tahunan" vs. "Muat turun"
+- **Jadi spesifik**: "Muat turun laporan kewangan suku tahunan" berbanding "Muat turun"
 - **Sertakan jenis fail dan saiz**: "(PDF, 1.2MB)" untuk fail yang boleh dimuat turun
-- **Nyatakan jika pautan dibuka secara luaran**: "(dibuka di tetingkap baru)" apabila sesuai
-- **Gunakan bahasa aktif**: "Hubungi kami" vs. "Halaman hubungan"
+- **Sebutkan jika pautan dibuka secara luaran**: "(dibuka dalam tetingkap baru)" apabila sesuai
+- **Gunakan bahasa aktif**: "Hubungi kami" berbanding "Halaman hubungan"
 - **Pastikan ringkas**: Sasarkan 2-8 perkataan jika boleh
 
-### Pola kebolehcapaian pautan lanjutan
+### Pola kebolehaksesan pautan lanjutan
 
-Kadang-kadang kekangan reka bentuk visual atau keperluan teknikal memerlukan penyelesaian khas. Berikut adalah teknik canggih untuk senario mencabar yang biasa:
+Kadangkala kekangan reka bentuk visual atau keperluan teknikal memerlukan penyelesaian khas. Berikut adalah teknik canggih untuk senario mencabar yang biasa:
 
 **Menggunakan ARIA untuk konteks yang dipertingkatkan:**
 
@@ -684,21 +844,21 @@ Kadang-kadang kekangan reka bentuk visual atau keperluan teknikal memerlukan pen
 }
 ```
 
-> ⚠️ **Penting**: Apabila menggunakan `target="_blank"`, sentiasa maklumkan pengguna bahawa pautan dibuka di tetingkap atau tab baru. Perubahan navigasi yang tidak dijangka boleh mengelirukan.
+> ⚠️ **Penting**: Apabila menggunakan `target="_blank"`, sentiasa maklumkan pengguna bahawa pautan dibuka dalam tetingkap atau tab baru. Perubahan navigasi yang tidak dijangka boleh mengelirukan.
 
-✅ **Uji konteks pautan anda**: Gunakan alat pembangun pelayar anda untuk menjana senarai semua pautan di halaman anda. Adakah anda memahami tujuan setiap pautan tanpa sebarang konteks sekeliling?
+✅ **Uji konteks pautan anda**: Gunakan alat pembangun pelayar anda untuk menjana senarai semua pautan di halaman anda. Bolehkah anda memahami tujuan setiap pautan tanpa sebarang konteks sekeliling?
 
-## ARIA: Memperkuatkan Kebolehcapaian HTML
+## ARIA: Memperkasakan Kebolehaksesan HTML
 
 [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) adalah seperti mempunyai penterjemah sejagat antara aplikasi web kompleks anda dan teknologi bantuan. Apabila HTML sahaja tidak dapat menyatakan semua yang dilakukan oleh komponen interaktif anda, ARIA masuk untuk mengisi jurang tersebut.
 
 Saya suka menganggap ARIA sebagai menambah anotasi berguna pada HTML anda—seperti arahan pentas dalam skrip drama yang membantu pelakon memahami peranan dan hubungan mereka.
 
-**Inilah peraturan paling penting tentang ARIA**: Sentiasa gunakan HTML semantik terlebih dahulu, kemudian tambahkan ARIA untuk memperbaikinya. Anggaplah ARIA sebagai perasa, bukan hidangan utama. Ia seharusnya menjelaskan dan memperbaiki struktur HTML anda, bukan menggantikannya. Pastikan asas itu betul dahulu!
+**Inilah peraturan paling penting tentang ARIA**: Sentiasa gunakan HTML semantik terlebih dahulu, kemudian tambahkan ARIA untuk meningkatkannya. Anggap ARIA sebagai perasa, bukan hidangan utama. Ia sepatutnya menjelaskan dan meningkatkan struktur HTML anda, bukan menggantikannya. Dapatkan asas itu dengan betul terlebih dahulu!
 
-### Pelaksanaan ARIA secara strategik
+### Pelaksanaan ARIA yang strategik
 
-ARIA adalah kuat, tetapi dengan kuasa datang tanggungjawab. ARIA yang salah boleh menjadikan kebolehcapaian lebih teruk daripada tiada ARIA sama sekali. Berikut adalah bila dan bagaimana menggunakannya dengan berkesan:
+ARIA adalah berkuasa, tetapi dengan kuasa datang tanggungjawab. ARIA yang salah boleh menjadikan kebolehaksesan lebih teruk daripada tiada ARIA sama sekali. Berikut adalah bila dan bagaimana untuk menggunakannya dengan berkesan:
 
 **✅ Gunakan ARIA apabila:**
 - Mencipta widget interaktif tersuai (akordion, tab, karusel)
@@ -713,19 +873,18 @@ ARIA adalah kuat, tetapi dengan kuasa datang tanggungjawab. ARIA yang salah bole
 - Ia menduplikasi maklumat yang sudah disediakan oleh HTML semantik
 - Anda belum menguji dengan teknologi bantuan sebenar
 
-> 🎯 **Peraturan Emas ARIA**: "Jangan ubah semantik kecuali anda benar-benar perlu, pastikan kebolehcapaian papan kekunci sentiasa, dan uji dengan teknologi bantuan sebenar."
-
+> 🎯 **Peraturan Emas ARIA**: "Jangan ubah semantik melainkan anda benar-benar perlu, pastikan kebolehaksesan papan kekunci sentiasa, dan uji dengan teknologi bantuan sebenar."
 **Lima kategori ARIA:**
 
 1. **Peranan**: Apakah elemen ini? (`button`, `tab`, `dialog`)
-2. **Sifat**: Apakah cirinya? (`aria-required`, `aria-haspopup`)
+2. **Sifat**: Apakah ciri-cirinya? (`aria-required`, `aria-haspopup`)
 3. **Keadaan**: Apakah keadaan semasanya? (`aria-expanded`, `aria-checked`)
 4. **Landmark**: Di mana ia dalam struktur halaman? (`banner`, `navigation`, `main`)
-5. **Wilayah langsung**: Bagaimana perubahan harus diumumkan? (`aria-live`, `aria-atomic`)
+5. **Kawasan langsung**: Bagaimana perubahan harus diumumkan? (`aria-live`, `aria-atomic`)
 
-### Pola ARIA penting untuk aplikasi web moden
+### Corak ARIA penting untuk aplikasi web moden
 
-Pola-pola ini menyelesaikan cabaran kebolehcapaian yang paling biasa dalam aplikasi web interaktif:
+Corak ini menyelesaikan cabaran kebolehaksesan yang paling biasa dalam aplikasi web interaktif:
 
 **Menamakan dan menerangkan elemen:**
 
@@ -751,7 +910,7 @@ Pola-pola ini menyelesaikan cabaran kebolehcapaian yang paling biasa dalam aplik
 </div>
 ```
 
-**Wilayah langsung untuk kandungan dinamik:**
+**Kawasan langsung untuk kandungan dinamik:**
 
 ```html
 <!-- Polite announcements (don't interrupt current speech) -->
@@ -812,15 +971,37 @@ function toggleAccordion(trigger) {
 
 ### Amalan terbaik pelaksanaan ARIA
 
-ARIA adalah kuat tetapi memerlukan pelaksanaan yang teliti. Mengikuti garis panduan ini membantu memastikan ARIA anda memperbaiki dan tidak menghalang kebolehcapaian:
+ARIA sangat berkuasa tetapi memerlukan pelaksanaan yang teliti. Mengikuti garis panduan ini membantu memastikan ARIA anda meningkatkan kebolehaksesan dan bukannya menghalangnya:
 
-**🛡️ Prinsip teras:**
+**🛡️ Prinsip utama:**
 
-1. **HTML semantik terlebih dahulu**: Sentiasa pilih `<button>` berbanding `<div role="button">`
+```mermaid
+flowchart TD
+    A[🚀 Start with semantic HTML] --> B{Does HTML provide needed semantics?}
+    B -->|Yes| C[✅ Use HTML only]
+    B -->|No| D[Consider ARIA enhancement]
+    D --> E{Can you achieve it with simpler means?}
+    E -->|Yes| F[🔄 Simplify approach]
+    E -->|No| G[📝 Implement ARIA carefully]
+    G --> H[🧪 Test with real AT]
+    H --> I{Works as expected?}
+    I -->|No| J[🔧 Debug and fix]
+    I -->|Yes| K[✅ Success!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+
+1. **HTML semantik dahulu**: Sentiasa pilih `<button>` berbanding `<div role="button">`
 2. **Jangan rosakkan semantik**: Jangan sekali-kali menimpa makna HTML sedia ada (elakkan `<h1 role="button">`)
-3. **Kekalkan kebolehcapaian papan kekunci**: Semua elemen ARIA interaktif mesti boleh diakses sepenuhnya dengan papan kekunci
+3. **Kekalkan kebolehaksesan papan kekunci**: Semua elemen ARIA interaktif mesti boleh diakses sepenuhnya dengan papan kekunci
 4. **Uji dengan pengguna sebenar**: Sokongan ARIA berbeza dengan ketara antara teknologi bantuan
-5. **Mulakan dengan mudah**: Implementasi ARIA yang kompleks lebih cenderung mempunyai kesilapan
+5. **Mulakan dengan mudah**: Pelaksanaan ARIA yang kompleks lebih cenderung mempunyai kesilapan
 
 **🔍 Aliran kerja ujian:**
 
@@ -836,25 +1017,42 @@ graph TD
     G --> B
 ```
 
-**🚫 Kesilapan ARIA yang biasa untuk dielakkan:**
+**🚫 Kesilapan ARIA biasa yang perlu dielakkan:**
 
-- **Maklumat bercanggah**: Jangan bertentangan dengan semantik HTML
-- **Label berlebihan**: Terlalu banyak maklumat ARIA boleh membebankan pengguna
-- **ARIA statik**: Lupa untuk mengemas kini keadaan ARIA apabila kandungan berubah
-- **Implementasi tidak diuji**: ARIA yang berfungsi secara teori tetapi gagal dalam amalan
+- **Maklumat bercanggah**: Jangan bercanggah dengan semantik HTML
+- **Label berlebihan**: Terlalu banyak maklumat ARIA boleh mengelirukan pengguna
+- **ARIA statik**: Lupa mengemas kini keadaan ARIA apabila kandungan berubah
+- **Pelaksanaan tidak diuji**: ARIA yang berfungsi secara teori tetapi gagal dalam amalan
 - **Sokongan papan kekunci yang hilang**: Peranan ARIA tanpa interaksi papan kekunci yang sepadan
 
-> 💡 **Sumber Ujian**: Gunakan alat seperti [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) untuk pengesahan ARIA automatik, tetapi sentiasa uji dengan pembaca skrin sebenar untuk pengalaman yang lengkap.
+> 💡 **Sumber Ujian**: Gunakan alat seperti [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) untuk pengesahan ARIA automatik, tetapi sentiasa uji dengan pembaca skrin sebenar untuk pengalaman lengkap.
 
-✅ **Belajar daripada pakar**: Kajilah [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) untuk corak dan implementasi yang telah diuji dalam aplikasi interaktif yang kompleks.
+### 🎭 **Semakan Kemahiran ARIA: Bersedia untuk Interaksi Kompleks?**
 
-## Menjadikan Imej dan Media Lebih Mudah Diakses
+**Ukur keyakinan ARIA anda:**
+- Bilakah anda akan memilih ARIA berbanding HTML semantik? (Petunjuk: hampir tidak pernah!)
+- Bolehkah anda menerangkan mengapa `<div role="button">` biasanya lebih buruk daripada `<button>`?
+- Apakah perkara paling penting untuk diingat tentang ujian ARIA?
 
-Kandungan visual dan audio adalah bahagian penting dalam pengalaman web moden, tetapi ia boleh mencipta halangan jika tidak dilaksanakan dengan teliti. Matlamatnya adalah memastikan maklumat dan impak emosi media anda sampai kepada setiap pengguna. Setelah anda memahami asasnya, ia akan menjadi kebiasaan.
+```mermaid
+pie title "Common ARIA Usage Patterns"
+    "Labels & Descriptions" : 40
+    "Live Regions" : 25
+    "Widget States" : 20
+    "Complex Controls" : 15
+```
 
-Jenis media yang berbeza memerlukan pendekatan kebolehaksesan yang berbeza. Ia seperti memasak—anda tidak akan merawat ikan yang halus dengan cara yang sama seperti anda merawat stik yang berat. Memahami perbezaan ini membantu anda memilih penyelesaian yang tepat untuk setiap situasi.
+> **Wawasan utama**: Kebanyakan penggunaan ARIA adalah untuk melabel dan menerangkan elemen. Corak widget kompleks jauh lebih jarang daripada yang anda sangka!
 
-### Kebolehaksesan imej yang strategik
+✅ **Belajar daripada pakar**: Kajilah [Panduan Amalan Penulisan ARIA](https://w3c.github.io/aria-practices/) untuk corak dan pelaksanaan yang telah diuji untuk widget interaktif yang kompleks.
+
+## Menjadikan Imej dan Media Boleh Diakses
+
+Kandungan visual dan audio adalah bahagian penting dalam pengalaman web moden, tetapi ia boleh mencipta halangan jika tidak dilaksanakan dengan teliti. Matlamatnya adalah memastikan maklumat dan kesan emosi media anda sampai kepada setiap pengguna. Apabila anda sudah biasa, ia menjadi kebiasaan.
+
+Jenis media yang berbeza memerlukan pendekatan kebolehaksesan yang berbeza. Ia seperti memasak—anda tidak akan merawat ikan yang halus dengan cara yang sama seperti anda merawat stik yang berat. Memahami perbezaan ini membantu anda memilih penyelesaian yang betul untuk setiap situasi.
+
+### Kebolehaksesan imej strategik
 
 Setiap imej di laman web anda mempunyai tujuan. Memahami tujuan itu membantu anda menulis teks alternatif yang lebih baik dan mencipta pengalaman yang lebih inklusif.
 
@@ -877,7 +1075,7 @@ Setiap imej di laman web anda mempunyai tujuan. Memahami tujuan itu membantu and
 </button>
 ```
 
-**Imej kompleks** - carta, diagram, infografik:
+**Imej kompleks** - carta, rajah, infografik:
 ```html
 <img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.ms.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
@@ -889,7 +1087,7 @@ Setiap imej di laman web anda mempunyai tujuan. Memahami tujuan itu membantu and
 
 **Keperluan video:**
 - **Sarikata**: Versi teks kandungan yang diucapkan dan kesan bunyi
-- **Deskripsi audio**: Narasi elemen visual untuk pengguna buta
+- **Penerangan audio**: Narasi elemen visual untuk pengguna buta
 - **Transkrip**: Versi teks penuh semua kandungan audio dan visual
 
 ```html
@@ -927,13 +1125,32 @@ Setiap imej di laman web anda mempunyai tujuan. Memahami tujuan itu membantu and
 
 ## Navigasi papan kekunci dan pengurusan fokus
 
-Ramai pengguna menavigasi web sepenuhnya dengan papan kekunci mereka. Ini termasuk orang dengan kecacatan motor, pengguna kuasa yang mendapati papan kekunci lebih pantas daripada tetikus, dan sesiapa sahaja yang tetikusnya tidak berfungsi. Memastikan laman web anda berfungsi dengan baik dengan input papan kekunci adalah penting dan sering menjadikan laman web anda lebih efisien untuk semua orang.
+Ramai pengguna menavigasi web sepenuhnya dengan papan kekunci mereka. Ini termasuk orang kurang upaya motor, pengguna kuasa yang mendapati papan kekunci lebih pantas daripada tetikus, dan sesiapa sahaja yang tetikusnya tidak berfungsi. Memastikan laman web anda berfungsi dengan baik dengan input papan kekunci adalah penting dan sering menjadikan laman web anda lebih cekap untuk semua orang.
 
-### Corak navigasi papan kekunci yang penting
+```mermaid
+flowchart LR
+    A[⌨️ Keyboard Navigation] --> B[Tab Order]
+    A --> C[Focus Indicators]
+    A --> D[Skip Links]
+    A --> E[Keyboard Shortcuts]
+    
+    B --> B1[Logical sequence<br/>All interactive elements<br/>No tab traps]
+    C --> C1[Visible outlines<br/>High contrast<br/>Clear boundaries]
+    D --> D1[Skip to main<br/>Skip to nav<br/>Bypass repetitive]
+    E --> E1[Escape to close<br/>Enter to activate<br/>Arrows in groups]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+
+### Corak navigasi papan kekunci penting
 
 **Interaksi papan kekunci standard:**
-- **Tab**: Gerakkan fokus ke hadapan melalui elemen interaktif
-- **Shift + Tab**: Gerakkan fokus ke belakang
+- **Tab**: Alihkan fokus ke hadapan melalui elemen interaktif
+- **Shift + Tab**: Alihkan fokus ke belakang
 - **Enter**: Aktifkan butang dan pautan
 - **Space**: Aktifkan butang, tandakan kotak semak
 - **Kekunci anak panah**: Navigasi dalam kumpulan komponen (butang radio, menu)
@@ -955,7 +1172,7 @@ button:focus-visible {
 }
 ```
 
-**Pautan lompat untuk navigasi yang efisien:**
+**Pautan lompat untuk navigasi yang cekap:**
 ```html
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -1023,7 +1240,7 @@ function trapFocus(element) {
 
 Borang adalah kritikal untuk interaksi pengguna dan memerlukan perhatian khusus terhadap kebolehaksesan.
 
-### Hubungan label dan kawalan borang
+### Label dan kaitan kawalan borang
 
 **Setiap kawalan borang memerlukan label:**
 ```html
@@ -1041,7 +1258,7 @@ Borang adalah kritikal untuk interaksi pengguna dan memerlukan perhatian khusus 
 <input type="search" aria-label="Search products" placeholder="Search...">
 ```
 
-### Pengendalian dan pengesahan ralat
+### Pengendalian ralat dan pengesahan
 
 **Mesej ralat yang boleh diakses:**
 ```html
@@ -1058,7 +1275,7 @@ Borang adalah kritikal untuk interaksi pengguna dan memerlukan perhatian khusus 
 - Gunakan `aria-invalid` untuk menunjukkan medan yang tidak sah
 - Sediakan mesej ralat yang jelas dan spesifik
 - Gunakan `role="alert"` untuk pengumuman ralat penting
-- Tunjukkan ralat secara langsung dan semasa penghantaran borang
+- Tunjukkan ralat serta-merta dan semasa penyerahan borang
 
 ### Fieldsets dan pengelompokan
 
@@ -1083,33 +1300,33 @@ Borang adalah kritikal untuk interaksi pengguna dan memerlukan perhatian khusus 
 </fieldset>
 ```
 
-## Perjalanan Kebolehaksesan Anda: Pengambilan Utama
+## Perjalanan Kebolehaksesan Anda: Perkara Penting
 
-Tahniah! Anda baru sahaja memperoleh pengetahuan asas untuk mencipta pengalaman web yang benar-benar inklusif. Ini adalah perkara yang sangat menarik! Kebolehaksesan web bukan hanya tentang memenuhi kotak pematuhan—ia tentang mengenali cara pelbagai orang berinteraksi dengan kandungan digital dan mereka bentuk untuk kerumitan yang luar biasa itu.
+Tahniah! Anda baru sahaja memperoleh pengetahuan asas untuk mencipta pengalaman web yang benar-benar inklusif. Ini adalah perkara yang sangat menarik! Kebolehaksesan web bukan hanya tentang memenuhi keperluan pematuhan—ia tentang mengenali cara pelbagai orang berinteraksi dengan kandungan digital dan mereka bentuk untuk kerumitan yang menakjubkan itu.
 
 Anda kini sebahagian daripada komuniti pembangun yang semakin berkembang yang memahami bahawa reka bentuk yang hebat berfungsi untuk semua orang. Selamat datang ke kelab!
 
 **🎯 Alat kebolehaksesan anda kini termasuk:**
 
-| Prinsip Asas | Implementasi | Impak |
-|--------------|--------------|-------|
-| **Asas HTML Semantik** | Gunakan elemen HTML yang sesuai untuk tujuan mereka | Pembaca skrin boleh menavigasi dengan efisien, papan kekunci berfungsi secara automatik |
-| **Reka Bentuk Visual Inklusif** | Kontras mencukupi, penggunaan warna yang bermakna, petunjuk fokus yang kelihatan | Jelas untuk semua orang dalam apa jua keadaan pencahayaan |
+| Prinsip Utama | Pelaksanaan | Kesan |
+|---------------|-------------|-------|
+| **Asas HTML Semantik** | Gunakan elemen HTML yang betul untuk tujuan yang dimaksudkan | Pembaca skrin boleh menavigasi dengan cekap, papan kekunci berfungsi secara automatik |
+| **Reka Bentuk Visual Inklusif** | Kontras yang mencukupi, penggunaan warna yang bermakna, petunjuk fokus yang kelihatan | Jelas untuk semua orang dalam sebarang keadaan pencahayaan |
 | **Kandungan Deskriptif** | Teks pautan yang bermakna, teks alt, tajuk | Pengguna memahami kandungan tanpa konteks visual |
 | **Kebolehaksesan Papan Kekunci** | Susunan tab, pintasan papan kekunci, pengurusan fokus | Kebolehaksesan motor dan kecekapan pengguna kuasa |
 | **Peningkatan ARIA** | Penggunaan strategik untuk mengisi jurang semantik | Aplikasi kompleks berfungsi dengan teknologi bantuan |
 | **Ujian Komprehensif** | Alat automatik + pengesahan manual + ujian pengguna sebenar | Menangkap isu sebelum ia memberi kesan kepada pengguna |
 
-**🚀 Langkah seterusnya:**
+**🚀 Langkah seterusnya anda:**
 
-1. **Masukkan kebolehaksesan ke dalam aliran kerja anda**: Jadikan ujian sebagai sebahagian semula jadi dalam proses pembangunan anda
+1. **Bina kebolehaksesan dalam aliran kerja anda**: Jadikan ujian sebagai sebahagian semula jadi daripada proses pembangunan anda
 2. **Belajar daripada pengguna sebenar**: Dapatkan maklum balas daripada orang yang menggunakan teknologi bantuan
-3. **Sentiasa terkini**: Teknik kebolehaksesan berkembang dengan teknologi dan standard baru
-4. **Berjuang untuk inklusi**: Kongsi pengetahuan anda dan jadikan kebolehaksesan sebagai keutamaan pasukan
+3. **Kekal terkini**: Teknik kebolehaksesan berkembang dengan teknologi dan piawaian baharu
+4. **Advokasi untuk inklusi**: Kongsi pengetahuan anda dan jadikan kebolehaksesan sebagai keutamaan pasukan
 
-> 💡 **Ingat**: Kekangan kebolehaksesan sering membawa kepada penyelesaian inovatif dan elegan yang memberi manfaat kepada semua orang. Jalan cerun, sarikata, dan kawalan suara semuanya bermula sebagai ciri kebolehaksesan dan menjadi penambahbaikan arus perdana.
+> 💡 **Ingat**: Kekangan kebolehaksesan sering membawa kepada penyelesaian inovatif dan elegan yang memberi manfaat kepada semua orang. Curb cuts, sarikata, dan kawalan suara semuanya bermula sebagai ciri kebolehaksesan dan menjadi penambahbaikan arus perdana.
 
-**Kes perniagaan sangat jelas**: Laman web yang boleh diakses mencapai lebih ramai pengguna, mendapat kedudukan lebih baik di enjin carian, mempunyai kos penyelenggaraan yang lebih rendah, dan mengelakkan risiko undang-undang. Tetapi sejujurnya? Sebab sebenar untuk peduli tentang kebolehaksesan jauh lebih mendalam. Laman web yang boleh diakses mencerminkan nilai terbaik web—keterbukaan, inklusiviti, dan idea bahawa semua orang berhak mendapat akses yang sama kepada maklumat.
+**Kes perniagaan sangat jelas**: Laman web yang boleh diakses mencapai lebih ramai pengguna, mendapat kedudukan lebih baik dalam enjin carian, mempunyai kos penyelenggaraan yang lebih rendah, dan mengelakkan risiko undang-undang. Tetapi sejujurnya? Sebab sebenar untuk mengambil berat tentang kebolehaksesan jauh lebih mendalam. Laman web yang boleh diakses mencerminkan nilai terbaik web—keterbukaan, inklusiviti, dan idea bahawa semua orang berhak mendapat akses yang sama kepada maklumat.
 
 Anda kini dilengkapi untuk membina web inklusif masa depan. Setiap laman web yang boleh diakses yang anda cipta menjadikan internet tempat yang lebih mesra untuk semua orang. Itu sangat menakjubkan apabila anda memikirkannya!
 
@@ -1117,39 +1334,39 @@ Anda kini dilengkapi untuk membina web inklusif masa depan. Setiap laman web yan
 
 Teruskan perjalanan pembelajaran kebolehaksesan anda dengan sumber penting ini:
 
-**📚 Standard dan Garis Panduan Rasmi:**
-- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Standard kebolehaksesan rasmi dengan rujukan pantas
-- [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - Corak komprehensif untuk widget interaktif
-- [WebAIM Guidelines](https://webaim.org/) - Panduan kebolehaksesan yang praktikal dan mesra pemula
+**📚 Piawaian dan Garis Panduan Rasmi:**
+- [Garis Panduan WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) - Piawaian kebolehaksesan rasmi dengan rujukan pantas
+- [Panduan Amalan Penulisan ARIA](https://w3c.github.io/aria-practices/) - Corak komprehensif untuk widget interaktif
+- [Garis Panduan WebAIM](https://webaim.org/) - Panduan kebolehaksesan yang praktikal dan mesra pemula
 
 **🛠️ Alat dan Sumber Ujian:**
 - [axe DevTools](https://www.deque.com/axe/devtools/) - Ujian kebolehaksesan standard industri
-- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Pengesahan kebolehaksesan langkah demi langkah
-- [Accessibility Insights](https://accessibilityinsights.io/) - Suite ujian komprehensif oleh Microsoft
+- [Senarai Semak Projek A11y](https://www.a11yproject.com/checklist/) - Pengesahan kebolehaksesan langkah demi langkah
+- [Accessibility Insights](https://accessibilityinsights.io/) - Suite ujian komprehensif Microsoft
 - [Color Oracle](https://colororacle.org/) - Simulator buta warna untuk ujian reka bentuk
 
 **🎓 Pembelajaran dan Komuniti:**
-- [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey9/) - Keutamaan dan tingkah laku pengguna sebenar
-- [Inclusive Components](https://inclusive-components.design/) - Corak komponen yang boleh diakses secara moden
-- [A11y Coffee](https://a11y.coffee/) - Petua dan pandangan kebolehaksesan yang ringkas
-- [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) - Sumber kebolehaksesan komprehensif W3C
+- [Kajian Pembaca Skrin WebAIM](https://webaim.org/projects/screenreadersurvey9/) - Keutamaan dan tingkah laku pengguna sebenar
+- [Komponen Inklusif](https://inclusive-components.design/) - Corak komponen kebolehaksesan moden
+- [A11y Coffee](https://a11y.coffee/) - Petua dan wawasan kebolehaksesan pantas
+- [Inisiatif Kebolehaksesan Web (WAI)](https://www.w3.org/WAI/) - Sumber kebolehaksesan komprehensif W3C
 
 **🎥 Pembelajaran Praktikal:**
-- [Accessibility Developer Guide](https://www.accessibility-developer-guide.com/) - Panduan implementasi praktikal
+- [Panduan Pembangun Kebolehaksesan](https://www.accessibility-developer-guide.com/) - Panduan pelaksanaan praktikal
 - [Deque University](https://dequeuniversity.com/) - Kursus latihan kebolehaksesan profesional
 
 ## Cabaran Ejen GitHub Copilot 🚀
 
 Gunakan mod Ejen untuk menyelesaikan cabaran berikut:
 
-**Deskripsi:** Cipta komponen dialog modal yang boleh diakses yang menunjukkan pengurusan fokus yang betul, atribut ARIA, dan corak navigasi papan kekunci.
+**Penerangan:** Cipta komponen dialog modal yang boleh diakses sepenuhnya yang menunjukkan pengurusan fokus yang betul, atribut ARIA, dan corak navigasi papan kekunci.
 
-**Arahan:** Bina komponen dialog modal lengkap dengan HTML, CSS, dan JavaScript yang termasuk: perangkap fokus yang betul, kekunci ESC untuk menutup, klik di luar untuk menutup, atribut ARIA untuk pembaca skrin, dan petunjuk fokus yang kelihatan. Modal harus mengandungi borang dengan label yang betul dan pengendalian ralat. Pastikan komponen memenuhi standard WCAG 2.1 AA.
+**Arahan:** Bina komponen dialog modal lengkap dengan HTML, CSS, dan JavaScript yang termasuk: perangkap fokus yang betul, kekunci ESC untuk menutup, klik di luar untuk menutup, atribut ARIA untuk pembaca skrin, dan petunjuk fokus yang kelihatan. Modal harus mengandungi borang dengan label yang betul dan pengendalian ralat. Pastikan komponen memenuhi piawaian WCAG 2.1 AA.
 
 
 ## 🚀 Cabaran
 
-Ambil HTML ini dan tulis semula supaya ia menjadi seakses mungkin, berdasarkan strategi yang telah anda pelajari.
+Ambil HTML ini dan tulis semula supaya ia boleh diakses sepenuhnya, berdasarkan strategi yang anda pelajari.
 
 ```html
 <!DOCTYPE html>
@@ -1209,19 +1426,19 @@ Ambil HTML ini dan tulis semula supaya ia menjadi seakses mungkin, berdasarkan s
 
 **Penambahbaikan utama yang dibuat:**
 - Menambah struktur HTML semantik yang betul
-- Memperbaiki hierarki tajuk (satu h1, perkembangan logik)
+- Membetulkan hierarki tajuk (satu h1, perkembangan logik)
 - Menambah teks pautan yang bermakna dan bukannya "klik di sini"
-- Menyertakan label ARIA yang betul untuk navigasi
+- Termasuk label ARIA yang betul untuk navigasi
 - Menambah atribut lang dan meta tag yang betul
 - Menggunakan elemen butang untuk elemen interaktif
-- Menyusun kandungan footer dengan tanda yang betul
+- Menstrukturkan kandungan footer dengan landmark yang betul
 
 ## Kuiz Selepas Kuliah
 [Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/en/)
 
-## Kajian Semula & Kajian Kendiri
+## Kajian & Pembelajaran Kendiri
 
-Banyak kerajaan mempunyai undang-undang mengenai keperluan kebolehaksesan. Bacalah tentang undang-undang kebolehaksesan di negara asal anda. Apa yang dilindungi, dan apa yang tidak? Contohnya ialah [laman web kerajaan ini](https://accessibility.blog.gov.uk/).
+Banyak kerajaan mempunyai undang-undang mengenai keperluan kebolehaksesan. Bacalah undang-undang kebolehaksesan negara asal anda. Apa yang diliputi, dan apa yang tidak? Contohnya ialah [laman web kerajaan ini](https://accessibility.blog.gov.uk/).
 
 ## Tugasan
  
@@ -1231,5 +1448,65 @@ Kredit: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) oleh 
 
 ---
 
+## 🚀 Garis Masa Penguasaan Kebolehaksesan Anda
+
+### ⚡ **Apa yang Anda Boleh Lakukan dalam 5 Minit Seterusnya**
+- [ ] Pasang sambungan axe DevTools dalam pelayar anda
+- [ ] Jalankan audit kebolehaksesan Lighthouse pada laman web kegemaran anda
+- [ ] Cuba navigasi mana-mana laman web menggunakan hanya kekunci Tab
+- [ ] Uji pembaca skrin terbina dalam pelayar anda (Narrator/VoiceOver)
+
+### 🎯 **Apa yang Anda Boleh Capai Dalam Jam Ini**
+- [ ] Lengkapkan kuiz selepas pelajaran dan renungkan wawasan kebolehaksesan
+- [ ] Berlatih menulis teks alt yang bermakna untuk 10 imej yang berbeza
+- [ ] Audit struktur tajuk laman web menggunakan sambungan HeadingsMap
+- [ ] Betulkan isu kebolehaksesan yang ditemui dalam HTML cabaran
+- [ ] Uji kontras warna pada projek semasa anda dengan alat WebAIM
+
+### 📅 **Perjalanan Kebolehaksesan Anda Sepanjang Minggu**
+- [ ] Lengkapkan tugasan menganalisis laman web yang tidak boleh diakses
+- [ ] Sediakan persekitaran pembangunan anda dengan alat ujian kebolehaksesan
+- [ ] Berlatih navigasi papan kekunci di 5 laman web kompleks yang berbeza  
+- [ ] Bina borang ringkas dengan label yang betul, pengendalian ralat, dan ARIA  
+- [ ] Sertai komuniti kebolehcapaian (A11y Slack, forum WebAIM)  
+- [ ] Tonton pengguna sebenar dengan ketidakupayaan melayari laman web (YouTube mempunyai contoh hebat)  
+
+### 🌟 **Transformasi Sebulan Anda**  
+- [ ] Integrasikan ujian kebolehcapaian ke dalam aliran kerja pembangunan anda  
+- [ ] Sumbang kepada projek sumber terbuka dengan membaiki isu kebolehcapaian  
+- [ ] Lakukan ujian kebolehgunaan dengan seseorang yang menggunakan teknologi bantuan  
+- [ ] Bina perpustakaan komponen yang boleh diakses untuk pasukan anda  
+- [ ] Sokong kebolehcapaian di tempat kerja atau komuniti anda  
+- [ ] Bimbing seseorang yang baru dalam konsep kebolehcapaian  
+
+### 🏆 **Pemeriksaan Akhir Juara Kebolehcapaian**  
+
+**Raikan perjalanan kebolehcapaian anda:**  
+- Apa perkara paling mengejutkan yang anda pelajari tentang cara orang menggunakan web?  
+- Prinsip kebolehcapaian mana yang paling selaras dengan gaya pembangunan anda?  
+- Bagaimana pembelajaran tentang kebolehcapaian mengubah perspektif anda terhadap reka bentuk?  
+- Apakah peningkatan kebolehcapaian pertama yang ingin anda lakukan pada projek sebenar?  
+
+```mermaid
+journey
+    title Your Accessibility Confidence Evolution
+    section Today
+      Overwhelmed: 3: You
+      Curious: 4: You
+      Motivated: 5: You
+    section This Week
+      Practicing: 4: You
+      Testing: 5: You
+      Understanding: 5: You
+    section Next Month
+      Advocating: 5: You
+      Leading: 5: You
+      Inclusive by Default: 5: You
+```
+  
+> 🌍 **Anda kini seorang juara kebolehcapaian!** Anda memahami bahawa pengalaman web yang hebat berfungsi untuk semua orang, tanpa mengira cara mereka mengakses web. Setiap ciri kebolehcapaian yang anda bina menjadikan internet lebih inklusif. Web memerlukan pembangun seperti anda yang melihat kebolehcapaian bukan sebagai batasan, tetapi sebagai peluang untuk mencipta pengalaman yang lebih baik untuk semua pengguna. Selamat datang ke gerakan ini! 🎉  
+
+---
+
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat penting, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.

@@ -1,31 +1,69 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e2c4ae5688e34b4b8b09d52aec56c79e",
-  "translation_date": "2025-10-24T13:35:25+00:00",
+  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
+  "translation_date": "2025-11-06T11:19:34+00:00",
   "source_file": "10-ai-framework-project/README.md",
   "language_code": "vi"
 }
 -->
 # Khung AI
 
-Bạn đã bao giờ cảm thấy choáng ngợp khi cố gắng xây dựng ứng dụng AI từ đầu chưa? Bạn không cô đơn đâu! Các khung AI giống như một con dao đa năng dành cho phát triển AI - chúng là những công cụ mạnh mẽ có thể giúp bạn tiết kiệm thời gian và công sức khi xây dựng các ứng dụng thông minh. Hãy nghĩ về một khung AI như một thư viện được tổ chức tốt: nó cung cấp các thành phần được xây dựng sẵn, API tiêu chuẩn hóa và các trừu tượng thông minh để bạn có thể tập trung vào việc giải quyết vấn đề thay vì vật lộn với các chi tiết triển khai.
+Bạn đã bao giờ cảm thấy choáng ngợp khi cố gắng xây dựng ứng dụng AI từ đầu chưa? Bạn không cô đơn đâu! Các khung AI giống như một con dao đa năng Thụy Sĩ dành cho phát triển AI - chúng là những công cụ mạnh mẽ có thể tiết kiệm thời gian và giảm đau đầu khi xây dựng ứng dụng thông minh. Hãy nghĩ về một khung AI như một thư viện được tổ chức tốt: nó cung cấp các thành phần được xây dựng sẵn, API tiêu chuẩn hóa và các trừu tượng thông minh để bạn có thể tập trung vào việc giải quyết vấn đề thay vì vật lộn với các chi tiết triển khai.
 
-Trong bài học này, chúng ta sẽ khám phá cách các khung như LangChain có thể biến những nhiệm vụ tích hợp AI phức tạp trước đây thành mã sạch và dễ đọc. Bạn sẽ tìm hiểu cách giải quyết các thách thức thực tế như theo dõi các cuộc trò chuyện, triển khai gọi công cụ và xử lý nhiều mô hình AI thông qua một giao diện thống nhất.
+Trong bài học này, chúng ta sẽ khám phá cách các khung như LangChain có thể biến những nhiệm vụ tích hợp AI phức tạp trước đây thành mã sạch và dễ đọc. Bạn sẽ tìm hiểu cách giải quyết các thách thức thực tế như theo dõi cuộc trò chuyện, triển khai gọi công cụ và xử lý các mô hình AI khác nhau thông qua một giao diện thống nhất.
 
-Khi hoàn thành, bạn sẽ biết khi nào nên sử dụng khung thay vì gọi API trực tiếp, cách sử dụng các trừu tượng của chúng một cách hiệu quả và cách xây dựng các ứng dụng AI sẵn sàng cho thực tế. Hãy cùng khám phá những gì khung AI có thể làm cho dự án của bạn.
+Khi kết thúc bài học, bạn sẽ biết khi nào nên sử dụng khung thay vì gọi API trực tiếp, cách sử dụng các trừu tượng của chúng một cách hiệu quả và cách xây dựng ứng dụng AI sẵn sàng cho thực tế. Hãy cùng khám phá những gì khung AI có thể làm cho dự án của bạn.
+
+## ⚡ Những gì bạn có thể làm trong 5 phút tới
+
+**Lộ trình bắt đầu nhanh dành cho nhà phát triển bận rộn**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minutes] --> B[Install LangChain]
+    B --> C[Create ChatOpenAI client]
+    C --> D[Send first prompt]
+    D --> E[See framework power]
+```
+
+- **Phút 1**: Cài đặt LangChain: `pip install langchain langchain-openai`
+- **Phút 2**: Thiết lập token GitHub của bạn và nhập client ChatOpenAI
+- **Phút 3**: Tạo một cuộc trò chuyện đơn giản với các tin nhắn hệ thống và người dùng
+- **Phút 4**: Thêm một công cụ cơ bản (như hàm cộng) và xem AI gọi công cụ
+- **Phút 5**: Trải nghiệm sự khác biệt giữa gọi API trực tiếp và trừu tượng khung
+
+**Mã kiểm tra nhanh**:
+```python
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
+
+llm = ChatOpenAI(
+    api_key=os.environ["GITHUB_TOKEN"],
+    base_url="https://models.github.ai/inference",
+    model="openai/gpt-4o-mini"
+)
+
+response = llm.invoke([
+    SystemMessage(content="You are a helpful coding assistant"),
+    HumanMessage(content="Explain Python functions briefly")
+])
+print(response.content)
+```
+
+**Tại sao điều này quan trọng**: Trong 5 phút, bạn sẽ trải nghiệm cách các khung AI biến việc tích hợp AI phức tạp thành các lệnh gọi phương thức đơn giản. Đây là nền tảng thúc đẩy các ứng dụng AI sản xuất.
 
 ## Tại sao chọn khung?
 
-Bạn đã sẵn sàng xây dựng một ứng dụng AI - tuyệt vời! Nhưng đây là vấn đề: bạn có nhiều con đường khác nhau để đi, và mỗi con đường đều có ưu và nhược điểm riêng. Nó giống như việc chọn giữa đi bộ, đi xe đạp hoặc lái xe để đến một nơi nào đó - tất cả đều đưa bạn đến đích, nhưng trải nghiệm (và nỗ lực) sẽ hoàn toàn khác nhau.
+Vậy là bạn đã sẵn sàng xây dựng một ứng dụng AI - tuyệt vời! Nhưng đây là vấn đề: bạn có nhiều con đường khác nhau để lựa chọn, và mỗi con đường đều có ưu và nhược điểm riêng. Nó giống như việc chọn giữa đi bộ, đi xe đạp hoặc lái xe để đến một nơi nào đó - tất cả đều đưa bạn đến đích, nhưng trải nghiệm (và nỗ lực) sẽ hoàn toàn khác.
 
 Hãy phân tích ba cách chính mà bạn có thể tích hợp AI vào dự án của mình:
 
-| Phương pháp | Ưu điểm | Phù hợp nhất cho | Cân nhắc |
-|-------------|---------|------------------|----------|
-| **Yêu cầu HTTP trực tiếp** | Kiểm soát hoàn toàn, không phụ thuộc | Các truy vấn đơn giản, học các nguyên tắc cơ bản | Mã dài dòng hơn, xử lý lỗi thủ công |
-| **Tích hợp SDK** | Ít mã mẫu hơn, tối ưu hóa theo mô hình cụ thể | Ứng dụng một mô hình | Giới hạn ở các nhà cung cấp cụ thể |
-| **Khung AI** | API thống nhất, trừu tượng tích hợp sẵn | Ứng dụng đa mô hình, quy trình phức tạp | Đường cong học tập, khả năng trừu tượng hóa quá mức |
+| Cách tiếp cận | Ưu điểm | Phù hợp nhất cho | Cân nhắc |
+|---------------|---------|------------------|----------|
+| **Yêu cầu HTTP trực tiếp** | Kiểm soát hoàn toàn, không phụ thuộc | Truy vấn đơn giản, học các nguyên tắc cơ bản | Mã dài dòng hơn, xử lý lỗi thủ công |
+| **Tích hợp SDK** | Ít mã lặp lại, tối ưu hóa theo mô hình | Ứng dụng một mô hình | Giới hạn ở các nhà cung cấp cụ thể |
+| **Khung AI** | API thống nhất, trừu tượng tích hợp sẵn | Ứng dụng đa mô hình, quy trình phức tạp | Đường cong học tập, có thể trừu tượng hóa quá mức |
 
 ### Lợi ích của khung trong thực tế
 
@@ -44,16 +82,41 @@ graph TD
     G --> K[Error Handling]
 ```
 
-**Tại sao khung lại quan trọng:**
+**Tại sao khung quan trọng:**
 - **Thống nhất** nhiều nhà cung cấp AI dưới một giao diện
 - **Xử lý** bộ nhớ cuộc trò chuyện tự động
-- **Cung cấp** các công cụ sẵn sàng cho các nhiệm vụ phổ biến như embeddings và gọi hàm
+- **Cung cấp** các công cụ sẵn sàng cho các nhiệm vụ phổ biến như nhúng và gọi hàm
 - **Quản lý** xử lý lỗi và logic thử lại
 - **Biến** quy trình phức tạp thành các lệnh gọi phương thức dễ đọc
 
-> 💡 **Mẹo chuyên nghiệp**: Sử dụng khung khi chuyển đổi giữa các mô hình AI khác nhau hoặc xây dựng các tính năng phức tạp như agent, bộ nhớ hoặc gọi công cụ. Sử dụng API trực tiếp khi học các nguyên tắc cơ bản hoặc xây dựng các ứng dụng đơn giản, tập trung.
+> 💡 **Mẹo chuyên nghiệp**: Sử dụng khung khi chuyển đổi giữa các mô hình AI khác nhau hoặc xây dựng các tính năng phức tạp như tác nhân, bộ nhớ hoặc gọi công cụ. Gắn bó với API trực tiếp khi học các nguyên tắc cơ bản hoặc xây dựng các ứng dụng đơn giản, tập trung.
 
-**Kết luận**: Giống như việc chọn giữa các công cụ chuyên dụng của một người thợ thủ công và một xưởng làm việc hoàn chỉnh, đó là việc chọn công cụ phù hợp với nhiệm vụ. Các khung vượt trội trong các ứng dụng phức tạp, giàu tính năng, trong khi API trực tiếp hoạt động tốt cho các trường hợp sử dụng đơn giản.
+**Kết luận**: Giống như việc chọn giữa các công cụ chuyên dụng của một người thợ thủ công và một xưởng hoàn chỉnh, đó là việc phù hợp công cụ với nhiệm vụ. Các khung vượt trội cho các ứng dụng phức tạp, giàu tính năng, trong khi API trực tiếp hoạt động tốt cho các trường hợp sử dụng đơn giản.
+
+## 🗺️ Hành trình học tập của bạn qua việc làm chủ khung AI
+
+```mermaid
+journey
+    title From Raw APIs to Production AI Applications
+    section Framework Foundations
+      Understand abstraction benefits: 4: You
+      Master LangChain basics: 6: You
+      Compare approaches: 7: You
+    section Conversation Systems
+      Build chat interfaces: 5: You
+      Implement memory patterns: 7: You
+      Handle streaming responses: 8: You
+    section Advanced Features
+      Create custom tools: 6: You
+      Master structured output: 8: You
+      Build document systems: 8: You
+    section Production Applications
+      Combine all features: 7: You
+      Handle error scenarios: 8: You
+      Deploy complete systems: 9: You
+```
+
+**Điểm đến hành trình của bạn**: Đến cuối bài học này, bạn sẽ làm chủ phát triển khung AI và có thể xây dựng các ứng dụng AI tinh vi, sẵn sàng sản xuất, cạnh tranh với các trợ lý AI thương mại.
 
 ## Giới thiệu
 
@@ -63,13 +126,66 @@ Trong bài học này, chúng ta sẽ học cách:
 - Giải quyết các vấn đề phổ biến như cuộc trò chuyện, sử dụng công cụ, bộ nhớ và ngữ cảnh.
 - Tận dụng điều này để xây dựng ứng dụng AI.
 
+## 🧠 Hệ sinh thái phát triển khung AI
+
+```mermaid
+mindmap
+  root((AI Frameworks))
+    Abstraction Benefits
+      Code Simplification
+        Unified APIs
+        Built-in Error Handling
+        Consistent Patterns
+        Reduced Boilerplate
+      Multi-Model Support
+        Provider Agnostic
+        Easy Switching
+        Fallback Options
+        Cost Optimization
+    Core Components
+      Conversation Management
+        Message Types
+        Memory Systems
+        Context Tracking
+        History Persistence
+      Tool Integration
+        Function Calling
+        API Connections
+        Custom Tools
+        Workflow Automation
+    Advanced Features
+      Structured Output
+        Pydantic Models
+        JSON Schemas
+        Type Safety
+        Validation Rules
+      Document Processing
+        Embeddings
+        Vector Stores
+        Similarity Search
+        RAG Systems
+    Production Patterns
+      Application Architecture
+        Modular Design
+        Error Boundaries
+        Async Operations
+        State Management
+      Deployment Strategies
+        Scalability
+        Monitoring
+        Performance
+        Security
+```
+
+**Nguyên tắc cốt lõi**: Các khung AI trừu tượng hóa sự phức tạp trong khi cung cấp các trừu tượng mạnh mẽ cho quản lý cuộc trò chuyện, tích hợp công cụ và xử lý tài liệu, cho phép các nhà phát triển xây dựng các ứng dụng AI tinh vi với mã sạch, dễ bảo trì.
+
 ## Lời nhắc AI đầu tiên của bạn
 
-Hãy bắt đầu với những điều cơ bản bằng cách tạo ứng dụng AI đầu tiên của bạn gửi một câu hỏi và nhận lại câu trả lời. Giống như Archimedes phát hiện ra nguyên lý dịch chuyển trong bồn tắm của mình, đôi khi những quan sát đơn giản nhất lại dẫn đến những hiểu biết mạnh mẽ nhất - và các khung giúp những hiểu biết này trở nên dễ tiếp cận.
+Hãy bắt đầu với những điều cơ bản bằng cách tạo ứng dụng AI đầu tiên của bạn gửi một câu hỏi và nhận lại câu trả lời. Giống như Archimedes phát hiện ra nguyên lý dịch chuyển trong bồn tắm của mình, đôi khi những quan sát đơn giản nhất dẫn đến những hiểu biết mạnh mẽ nhất - và các khung làm cho những hiểu biết này trở nên dễ tiếp cận.
 
-### Cài đặt LangChain với GitHub Models
+### Thiết lập LangChain với các mô hình GitHub
 
-Chúng ta sẽ sử dụng LangChain để kết nối với GitHub Models, điều này khá tuyệt vì nó cung cấp cho bạn quyền truy cập miễn phí vào nhiều mô hình AI. Phần hay nhất? Bạn chỉ cần một vài tham số cấu hình đơn giản để bắt đầu:
+Chúng ta sẽ sử dụng LangChain để kết nối với các mô hình GitHub, điều này khá tuyệt vì nó cung cấp cho bạn quyền truy cập miễn phí vào nhiều mô hình AI. Phần hay nhất? Bạn chỉ cần một vài tham số cấu hình đơn giản để bắt đầu:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -88,12 +204,12 @@ print(response.content)
 
 **Hãy phân tích những gì đang diễn ra ở đây:**
 - **Tạo** một client LangChain bằng cách sử dụng lớp `ChatOpenAI` - đây là cổng kết nối của bạn với AI!
-- **Cấu hình** kết nối với GitHub Models bằng token xác thực của bạn
+- **Cấu hình** kết nối với các mô hình GitHub bằng token xác thực của bạn
 - **Chỉ định** mô hình AI nào sẽ sử dụng (`gpt-4o-mini`) - hãy nghĩ về điều này như việc chọn trợ lý AI của bạn
 - **Gửi** câu hỏi của bạn bằng phương thức `invoke()` - đây là nơi phép thuật xảy ra
 - **Trích xuất** và hiển thị phản hồi - và voilà, bạn đang trò chuyện với AI!
 
-> 🔧 **Lưu ý cài đặt**: Nếu bạn đang sử dụng GitHub Codespaces, bạn thật may mắn - `GITHUB_TOKEN` đã được thiết lập sẵn cho bạn! Làm việc cục bộ? Không sao, bạn chỉ cần tạo một token truy cập cá nhân với các quyền phù hợp.
+> 🔧 **Lưu ý thiết lập**: Nếu bạn đang sử dụng GitHub Codespaces, bạn thật may mắn - `GITHUB_TOKEN` đã được thiết lập sẵn cho bạn! Làm việc cục bộ? Không sao, bạn chỉ cần tạo một token truy cập cá nhân với các quyền phù hợp.
 
 **Kết quả mong đợi:**
 ```text
@@ -117,19 +233,19 @@ sequenceDiagram
 
 ## Xây dựng AI hội thoại
 
-Ví dụ đầu tiên này minh họa những điều cơ bản, nhưng nó chỉ là một trao đổi đơn lẻ - bạn hỏi một câu hỏi, nhận được câu trả lời, và hết. Trong các ứng dụng thực tế, bạn muốn AI của mình nhớ những gì bạn đã thảo luận, giống như cách Watson và Holmes xây dựng các cuộc trò chuyện điều tra của họ theo thời gian.
+Ví dụ đầu tiên này minh họa những điều cơ bản, nhưng nó chỉ là một trao đổi đơn lẻ - bạn hỏi một câu hỏi, nhận được câu trả lời, và thế là xong. Trong các ứng dụng thực tế, bạn muốn AI của mình nhớ những gì bạn đã thảo luận, giống như cách Watson và Holmes xây dựng các cuộc trò chuyện điều tra của họ theo thời gian.
 
-Đây là nơi LangChain trở nên đặc biệt hữu ích. Nó cung cấp các loại tin nhắn khác nhau giúp cấu trúc các cuộc trò chuyện và cho phép bạn tạo tính cách cho AI của mình. Bạn sẽ xây dựng các trải nghiệm trò chuyện duy trì ngữ cảnh và tính cách.
+Đây là nơi LangChain trở nên đặc biệt hữu ích. Nó cung cấp các loại tin nhắn khác nhau giúp cấu trúc cuộc trò chuyện và cho phép bạn tạo cho AI của mình một tính cách. Bạn sẽ xây dựng các trải nghiệm trò chuyện duy trì ngữ cảnh và tính cách.
 
 ### Hiểu các loại tin nhắn
 
-Hãy nghĩ về các loại tin nhắn này như những "vai trò" khác nhau mà các bên tham gia đảm nhận trong một cuộc trò chuyện. LangChain sử dụng các lớp tin nhắn khác nhau để theo dõi ai đang nói gì:
+Hãy nghĩ về các loại tin nhắn này như những "chiếc mũ" khác nhau mà người tham gia đội trong một cuộc trò chuyện. LangChain sử dụng các lớp tin nhắn khác nhau để theo dõi ai đang nói gì:
 
-| Loại tin nhắn | Mục đích | Trường hợp sử dụng ví dụ |
-|---------------|----------|-------------------------|
-| `SystemMessage` | Định nghĩa tính cách và hành vi của AI | "Bạn là một trợ lý lập trình hữu ích" |
+| Loại tin nhắn | Mục đích | Ví dụ sử dụng |
+|---------------|----------|---------------|
+| `SystemMessage` | Xác định tính cách và hành vi của AI | "Bạn là một trợ lý lập trình hữu ích" |
 | `HumanMessage` | Đại diện cho đầu vào của người dùng | "Giải thích cách hoạt động của hàm" |
-| `AIMessage` | Lưu trữ phản hồi của AI | Các phản hồi trước đó của AI trong cuộc trò chuyện |
+| `AIMessage` | Lưu trữ phản hồi của AI | Các phản hồi AI trước đó trong cuộc trò chuyện |
 
 ### Tạo cuộc trò chuyện đầu tiên của bạn
 
@@ -226,11 +342,35 @@ Welcome aboard, Chris! It's always a pleasure to meet those who share a passion 
 If you are interested in space exploration, consider education and training in the sciences, engineering, or diplomacy. The values of curiosity, resilience, and teamwork are crucial in Starfleet. Should you ever find yourself on a starship, remember to uphold the principles of the Federation: peace, understanding, and respect for all beings. Your journey can lead you to remarkable adventures, whether in the stars or on the ground. Engage!
 ```
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant App
+    participant LangChain
+    participant AI
+    
+    User->>App: "Tell me about you"
+    App->>LangChain: [SystemMessage, HumanMessage]
+    LangChain->>AI: Formatted conversation
+    AI->>LangChain: Captain Picard response
+    LangChain->>App: AIMessage object
+    App->>User: Display response
+    
+    Note over App: Add AIMessage to conversation
+    
+    User->>App: "Can I join your crew?"
+    App->>LangChain: [SystemMessage, HumanMessage, AIMessage, HumanMessage]
+    LangChain->>AI: Full conversation context
+    AI->>LangChain: Contextual response
+    LangChain->>App: New AIMessage
+    App->>User: Display contextual response
+```
+
 Tôi sẽ coi đó là một câu trả lời có thể ;)
 
 ## Phản hồi theo luồng
 
-Bạn có bao giờ để ý rằng ChatGPT dường như "gõ" các phản hồi của nó theo thời gian thực không? Đó là luồng đang hoạt động. Giống như việc xem một người viết thư pháp lành nghề làm việc - nhìn các ký tự xuất hiện từng nét thay vì hiện ra ngay lập tức - luồng làm cho tương tác trở nên tự nhiên hơn và cung cấp phản hồi ngay lập tức.
+Bạn có bao giờ để ý rằng ChatGPT dường như "gõ" các phản hồi của nó theo thời gian thực không? Đó là luồng đang hoạt động. Giống như việc xem một người viết thư pháp điêu luyện làm việc - thấy các ký tự xuất hiện từng nét thay vì hiện ra ngay lập tức - luồng làm cho tương tác trở nên tự nhiên hơn và cung cấp phản hồi ngay lập tức.
 
 ### Triển khai luồng với LangChain
 
@@ -250,17 +390,30 @@ for chunk in llm.stream("Write a short story about a robot learning to code"):
     print(chunk.content, end="", flush=True)
 ```
 
-**Tại sao luồng lại tuyệt vời:**
+**Tại sao luồng tuyệt vời:**
 - **Hiển thị** nội dung khi nó đang được tạo - không còn chờ đợi khó xử!
 - **Làm cho** người dùng cảm thấy như có điều gì đó đang diễn ra
 - **Cảm giác** nhanh hơn, ngay cả khi thực tế không phải vậy
 - **Cho phép** người dùng bắt đầu đọc trong khi AI vẫn đang "suy nghĩ"
 
-> 💡 **Mẹo trải nghiệm người dùng**: Luồng thực sự tỏa sáng khi bạn xử lý các phản hồi dài như giải thích mã, viết sáng tạo hoặc hướng dẫn chi tiết. Người dùng của bạn sẽ thích việc thấy tiến trình thay vì nhìn chằm chằm vào màn hình trống!
+> 💡 **Mẹo trải nghiệm người dùng**: Luồng thực sự tỏa sáng khi bạn xử lý các phản hồi dài như giải thích mã, viết sáng tạo hoặc hướng dẫn chi tiết. Người dùng của bạn sẽ thích thấy tiến trình thay vì nhìn chằm chằm vào màn hình trống!
+
+### 🎯 Kiểm tra sư phạm: Lợi ích của trừu tượng khung
+
+**Tạm dừng và suy ngẫm**: Bạn vừa trải nghiệm sức mạnh của các trừu tượng khung AI. So sánh những gì bạn đã học với các lệnh gọi API trực tiếp từ các bài học trước.
+
+**Đánh giá nhanh bản thân**:
+- Bạn có thể giải thích cách LangChain đơn giản hóa quản lý cuộc trò chuyện so với việc theo dõi tin nhắn thủ công không?
+- Sự khác biệt giữa các phương thức `invoke()` và `stream()` là gì, và bạn sẽ sử dụng mỗi phương thức khi nào?
+- Hệ thống loại tin nhắn của khung cải thiện tổ chức mã như thế nào?
+
+**Kết nối thực tế**: Các mẫu trừu tượng mà bạn đã học (loại tin nhắn, giao diện luồng, bộ nhớ cuộc trò chuyện) được sử dụng trong mọi ứng dụng AI lớn - từ giao diện của ChatGPT đến hỗ trợ mã của GitHub Copilot. Bạn đang làm chủ các mẫu kiến trúc giống như các nhóm phát triển AI chuyên nghiệp sử dụng.
+
+**Câu hỏi thách thức**: Bạn sẽ thiết kế một trừu tượng khung để xử lý các nhà cung cấp mô hình AI khác nhau (OpenAI, Anthropic, Google) với một giao diện duy nhất như thế nào? Hãy cân nhắc các lợi ích và đánh đổi.
 
 ## Mẫu lời nhắc
 
-Mẫu lời nhắc hoạt động giống như các cấu trúc tu từ được sử dụng trong diễn thuyết cổ điển - hãy nghĩ về cách Cicero điều chỉnh các mẫu lời nói của mình cho các khán giả khác nhau trong khi vẫn duy trì khung thuyết phục giống nhau. Chúng cho phép bạn tạo các lời nhắc có thể tái sử dụng, nơi bạn có thể thay thế các phần thông tin khác nhau mà không cần viết lại mọi thứ từ đầu. Khi bạn thiết lập mẫu, bạn chỉ cần điền các biến với bất kỳ giá trị nào bạn cần.
+Mẫu lời nhắc hoạt động giống như các cấu trúc hùng biện được sử dụng trong diễn thuyết cổ điển - hãy nghĩ về cách Cicero điều chỉnh các mẫu lời nói của mình cho các đối tượng khác nhau trong khi vẫn duy trì cùng một khung thuyết phục. Chúng cho phép bạn tạo các lời nhắc có thể tái sử dụng, nơi bạn có thể thay đổi các phần thông tin khác nhau mà không cần viết lại mọi thứ từ đầu. Một khi bạn thiết lập mẫu, bạn chỉ cần điền các biến với các giá trị cần thiết.
 
 ### Tạo mẫu lời nhắc có thể tái sử dụng
 
@@ -294,9 +447,9 @@ for question in questions:
 
 ## Đầu ra có cấu trúc
 
-Bạn đã bao giờ cảm thấy khó chịu khi cố gắng phân tích các phản hồi AI trả về dưới dạng văn bản không có cấu trúc chưa? Đầu ra có cấu trúc giống như việc dạy AI tuân theo cách tiếp cận hệ thống mà Linnaeus đã sử dụng để phân loại sinh học - có tổ chức, dễ dự đoán và dễ làm việc. Bạn có thể yêu cầu JSON, các cấu trúc dữ liệu cụ thể hoặc bất kỳ định dạng nào bạn cần.
+Bạn có bao giờ cảm thấy khó chịu khi cố gắng phân tích các phản hồi AI trả về dưới dạng văn bản không có cấu trúc không? Đầu ra có cấu trúc giống như việc dạy AI của bạn tuân theo cách tiếp cận hệ thống mà Linnaeus đã sử dụng để phân loại sinh học - có tổ chức, dự đoán được và dễ làm việc. Bạn có thể yêu cầu JSON, các cấu trúc dữ liệu cụ thể hoặc bất kỳ định dạng nào bạn cần.
 
-### Định nghĩa các sơ đồ đầu ra
+### Định nghĩa các schema đầu ra
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
@@ -337,14 +490,14 @@ print(f"Strengths: {', '.join(result['strengths'])}")
 ```
 
 **Tại sao đầu ra có cấu trúc là một bước ngoặt:**
-- **Không còn** đoán định định dạng bạn sẽ nhận được - nó luôn nhất quán
+- **Không còn** đoán định định dạng bạn sẽ nhận được - nó nhất quán mọi lúc
 - **Kết nối** trực tiếp vào cơ sở dữ liệu và API của bạn mà không cần làm thêm việc
 - **Phát hiện** các phản hồi AI kỳ lạ trước khi chúng làm hỏng ứng dụng của bạn
 - **Làm cho** mã của bạn sạch hơn vì bạn biết chính xác những gì bạn đang làm việc
 
 ## Gọi công cụ
 
-Bây giờ chúng ta đến một trong những tính năng mạnh mẽ nhất: công cụ. Đây là cách bạn cung cấp cho AI của mình các khả năng thực tế ngoài cuộc trò chuyện. Giống như cách các hội nghề thời trung cổ phát triển các công cụ chuyên dụng cho các nghề cụ thể, bạn có thể trang bị cho AI của mình các công cụ tập trung. Bạn mô tả các công cụ có sẵn, và khi ai đó yêu cầu điều gì đó phù hợp, AI của bạn có thể thực hiện hành động.
+Bây giờ chúng ta đến một trong những tính năng mạnh mẽ nhất: công cụ. Đây là cách bạn cung cấp cho AI của mình các khả năng thực tế ngoài cuộc trò chuyện. Giống như cách các hội nghề thời trung cổ phát triển các công cụ chuyên dụng cho các nghề cụ thể, bạn có thể trang bị cho AI của mình các công cụ tập trung. Bạn mô tả các công cụ có sẵn, và khi ai đó yêu cầu điều gì đó phù hợp, AI của bạn có thể hành động.
 
 ### Sử dụng Python
 
@@ -381,7 +534,7 @@ llm = ChatOpenAI(
 llm_with_tools = llm.bind_tools(tools)
 ```
 
-Ở đây chúng ta gọi `bind_tools` với mảng `tools` của mình và do đó LLM `llm_with_tools` giờ đây đã biết về công cụ này.
+Ở đây chúng ta gọi `bind_tools` với mảng `tools` của mình và do đó LLM `llm_with_tools` giờ đã biết về công cụ này.
 
 Để sử dụng LLM mới này, chúng ta có thể gõ mã sau:
 
@@ -395,7 +548,7 @@ if(res.tool_calls):
 print("CONTENT: ",res.content)
 ```
 
-Bây giờ khi chúng ta gọi `invoke` trên LLM mới này, có công cụ, chúng ta có thể thấy thuộc tính `tool_calls` được điền. Nếu có, bất kỳ công cụ nào được xác định đều có thuộc tính `name` và `args` xác định công cụ nào nên được gọi và với các tham số. Mã đầy đủ trông như sau:
+Bây giờ khi chúng ta gọi `invoke` trên LLM mới này, có công cụ, có thể thuộc tính `tool_calls` được điền. Nếu vậy, bất kỳ công cụ nào được xác định đều có thuộc tính `name` và `args` xác định công cụ nào nên được gọi và với các tham số nào. Mã đầy đủ trông như sau:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -440,15 +593,14 @@ TOOL CALL:  15
 CONTENT: 
 ```
 
-AI đã kiểm tra "What is 3 + 12" và nhận ra đây là một nhiệm vụ cho công cụ `add`. Giống như cách một thủ thư lành nghề biết tham khảo nào cần sử dụng dựa trên loại câu hỏi được hỏi, nó đã đưa ra quyết định này từ tên công cụ, mô tả và các thông số trường. Kết quả 15 đến từ từ điển `functions` của chúng ta thực hiện công cụ:
+AI đã kiểm tra "What is 3 + 12" và nhận ra đây là một nhiệm vụ cho công cụ `add`. Giống như cách một thủ thư lành nghề biết tham khảo nào cần tra cứu dựa trên loại câu hỏi được hỏi, nó đã đưa ra quyết định này từ tên công cụ, mô tả và các thông số trường. Kết quả 15 đến từ từ điển `functions` của chúng ta thực thi công cụ:
 
 ```python
 print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 ```
 
 ### Một công cụ thú vị hơn gọi API web
-
-Việc cộng số minh họa khái niệm, nhưng các công cụ thực tế thường thực hiện các hoạt động phức tạp hơn, như gọi API web. Hãy mở rộng ví dụ của chúng ta để AI lấy nội dung từ internet - giống như cách các nhà điều hành điện báo từng kết nối các địa điểm xa xôi:
+Thêm số vào ví dụ minh họa khái niệm, nhưng các công cụ thực tế thường thực hiện các thao tác phức tạp hơn, như gọi API web. Hãy mở rộng ví dụ của chúng ta để AI lấy nội dung từ internet - tương tự như cách các nhân viên điện báo từng kết nối các địa điểm xa xôi:
 
 ```python
 class joke(TypedDict):
@@ -473,14 +625,41 @@ query = "Tell me a joke about animals"
 # the rest of the code is the same
 ```
 
-Bây giờ nếu bạn chạy mã này, bạn sẽ nhận được phản hồi nói điều gì đó như:
+Bây giờ nếu bạn chạy đoạn mã này, bạn sẽ nhận được phản hồi như sau:
 
 ```text
 TOOL CALL:  Chuck Norris once rode a nine foot grizzly bear through an automatic car wash, instead of taking a shower.
 CONTENT:  
 ```
 
-Đây là mã đầy đủ:
+```mermaid
+flowchart TD
+    A[User Query: "Tell me a joke about animals"] --> B[LangChain Analysis]
+    B --> C{Tool Available?}
+    C -->|Yes| D[Select joke tool]
+    C -->|No| E[Generate direct response]
+    
+    D --> F[Extract Parameters]
+    F --> G[Call joke(category="animals")]
+    G --> H[API Request to chucknorris.io]
+    H --> I[Return joke content]
+    I --> J[Display to user]
+    
+    E --> K[AI-generated response]
+    K --> J
+    
+    subgraph "Tool Definition Layer"
+        L[TypedDict Schema]
+        M[Function Implementation]
+        N[Parameter Validation]
+    end
+    
+    D --> L
+    F --> N
+    G --> M
+```
+
+Đây là toàn bộ đoạn mã:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -534,7 +713,7 @@ print("CONTENT: ",res.content)
 
 ## Embeddings và xử lý tài liệu
 
-Embeddings là một trong những giải pháp tinh tế nhất trong AI hiện đại. Hãy tưởng tượng nếu bạn có thể lấy bất kỳ đoạn văn bản nào và chuyển đổi nó thành các tọa độ số nắm bắt ý nghĩa của nó. Đó chính xác là những gì embeddings làm - chúng biến văn bản thành các điểm trong không gian đa chiều, nơi các khái niệm tương tự tập trung lại với nhau. Nó giống như có một hệ tọa độ cho các ý tưởng, gợi nhớ đến cách Mendeleev tổ chức bảng tuần hoàn theo các thuộc tính nguyên tử.
+Embeddings là một trong những giải pháp tinh tế nhất trong AI hiện đại. Hãy tưởng tượng bạn có thể biến bất kỳ đoạn văn bản nào thành tọa độ số để nắm bắt ý nghĩa của nó. Đó chính là điều mà embeddings làm - chúng chuyển đổi văn bản thành các điểm trong không gian đa chiều, nơi các khái niệm tương tự tập trung lại với nhau. Nó giống như có một hệ tọa độ cho ý tưởng, gợi nhớ cách Mendeleev tổ chức bảng tuần hoàn dựa trên các thuộc tính nguyên tử.
 
 ### Tạo và sử dụng embeddings
 
@@ -593,14 +772,39 @@ for loader in [pdf_loader, csv_loader, json_loader, web_loader]:
 ```
 
 **Những gì bạn có thể làm với embeddings:**
-- **Xây dựng** tìm kiếm thực sự hiểu bạn muốn gì, không chỉ khớp từ khóa
+- **Xây dựng** tìm kiếm thực sự hiểu ý nghĩa của bạn, không chỉ là khớp từ khóa
 - **Tạo** AI có thể trả lời câu hỏi về tài liệu của bạn
-- **Làm** hệ thống gợi ý đề xuất nội dung thực sự phù hợp
+- **Làm** hệ thống gợi ý nội dung thực sự phù hợp
 - **Tự động** tổ chức và phân loại nội dung của bạn
+
+```mermaid
+flowchart LR
+    A[Documents] --> B[Text Splitter]
+    B --> C[Create Embeddings]
+    C --> D[Vector Store]
+    
+    E[User Query] --> F[Query Embedding]
+    F --> G[Similarity Search]
+    G --> D
+    D --> H[Relevant Documents]
+    H --> I[AI Response]
+    
+    subgraph "Vector Space"
+        J[Document A: [0.1, 0.8, 0.3...]]
+        K[Document B: [0.2, 0.7, 0.4...]]
+        L[Query: [0.15, 0.75, 0.35...]]
+    end
+    
+    C --> J
+    C --> K
+    F --> L
+    G --> J
+    G --> K
+```
 
 ## Xây dựng ứng dụng AI hoàn chỉnh
 
-Bây giờ chúng ta sẽ tích hợp tất cả những gì bạn đã học vào một ứng dụng toàn diện - một trợ lý lập trình có thể trả lời câu hỏi, sử dụng công cụ và duy trì bộ nhớ cuộc trò chuyện. Giống như cách máy in kết hợp các công nghệ hiện có (chữ in di động, mực, giấy và áp lực) thành một thứ gì đó mang tính cách mạng, chúng ta sẽ kết hợp các thành phần AI của mình thành một thứ gì đó thực tế và hữu ích.
+Bây giờ chúng ta sẽ tích hợp mọi thứ bạn đã học vào một ứng dụng toàn diện - một trợ lý lập trình có thể trả lời câu hỏi, sử dụng công cụ, và duy trì bộ nhớ hội thoại. Giống như cách máy in kết hợp các công nghệ hiện có (chữ in di động, mực, giấy và áp lực) thành một thứ mang tính cách mạng, chúng ta sẽ kết hợp các thành phần AI của mình thành một thứ thực tế và hữu ích.
 
 ### Ví dụ ứng dụng hoàn chỉnh
 
@@ -708,57 +912,71 @@ graph TD
 ```
 
 **Các tính năng chính chúng ta đã triển khai:**
-- **Nhớ** toàn bộ cuộc trò chuyện của bạn để duy trì ngữ cảnh
-- **Thực hiện hành động** thông qua gọi công cụ, không chỉ trò chuyện
+- **Ghi nhớ** toàn bộ cuộc hội thoại của bạn để duy trì ngữ cảnh
+- **Thực hiện hành động** thông qua việc gọi công cụ, không chỉ hội thoại
 - **Tuân theo** các mẫu tương tác có thể dự đoán
-- **Quản lý** xử lý lỗi và quy trình phức tạp tự động
+- **Quản lý** xử lý lỗi và quy trình phức tạp một cách tự động
+
+### 🎯 Kiểm tra sư phạm: Kiến trúc AI sản xuất
+
+**Hiểu kiến trúc**: Bạn đã xây dựng một ứng dụng AI hoàn chỉnh kết hợp quản lý hội thoại, gọi công cụ, và quy trình làm việc có cấu trúc. Điều này đại diện cho sự phát triển ứng dụng AI ở cấp độ sản xuất.
+
+**Các khái niệm chính đã nắm vững**:
+- **Kiến trúc dựa trên lớp**: Cấu trúc ứng dụng AI có tổ chức, dễ bảo trì
+- **Tích hợp công cụ**: Chức năng tùy chỉnh vượt ra ngoài hội thoại
+- **Quản lý bộ nhớ**: Ngữ cảnh hội thoại liên tục
+- **Xử lý lỗi**: Hành vi ứng dụng mạnh mẽ
+
+**Kết nối ngành**: Các mẫu kiến trúc bạn đã triển khai (lớp hội thoại, hệ thống công cụ, quản lý bộ nhớ) là những mẫu được sử dụng trong các ứng dụng AI doanh nghiệp như trợ lý AI của Slack, GitHub Copilot, và Microsoft Copilot. Bạn đang xây dựng với tư duy kiến trúc chuyên nghiệp.
+
+**Câu hỏi phản ánh**: Làm thế nào bạn sẽ mở rộng ứng dụng này để xử lý nhiều người dùng, lưu trữ liên tục, hoặc tích hợp với cơ sở dữ liệu bên ngoài? Hãy cân nhắc các thách thức về khả năng mở rộng và quản lý trạng thái.
 
 ## Bài tập: Xây dựng trợ lý học tập AI của riêng bạn
 
-**Mục tiêu**: Tạo một ứng dụng AI giúp sinh viên học các khái niệm lập trình bằng cách cung cấp giải thích, ví dụ mã và câu hỏi trắc nghiệm tương tác.
+**Mục tiêu**: Tạo một ứng dụng AI giúp sinh viên học các khái niệm lập trình bằng cách cung cấp giải thích, ví dụ mã, và câu hỏi trắc nghiệm tương tác.
 
 ### Yêu cầu
 
 **Các tính năng cốt lõi (Bắt buộc):**
-1. **Giao diện hội thoại**: Triển khai hệ thống trò chuyện duy trì ngữ cảnh qua nhiều câu hỏi
+1. **Giao diện hội thoại**: Triển khai hệ thống chat duy trì ngữ cảnh qua nhiều câu hỏi
 2. **Công cụ giáo dục**: Tạo ít nhất hai công cụ hỗ trợ học tập:
    - Công cụ giải thích mã
-   - Công cụ tạo câu hỏi trắc nghiệm về khái niệm
-3. **Học tập cá nhân hóa**: Sử dụng tin nhắn hệ thống để điều chỉnh phản hồi theo các cấp độ kỹ năng khác nhau  
-4. **Định dạng phản hồi**: Triển khai đầu ra có cấu trúc cho các câu hỏi trắc nghiệm  
+   - Công cụ tạo câu hỏi trắc nghiệm
+3. **Học tập cá nhân hóa**: Sử dụng tin nhắn hệ thống để điều chỉnh phản hồi theo các cấp độ kỹ năng khác nhau
+4. **Định dạng phản hồi**: Triển khai đầu ra có cấu trúc cho câu hỏi trắc nghiệm
 
-### Các bước triển khai  
+### Các bước triển khai
 
-**Bước 1: Thiết lập môi trường của bạn**  
+**Bước 1: Thiết lập môi trường của bạn**
 ```bash
 pip install langchain langchain-openai
 ```
-  
-**Bước 2: Chức năng trò chuyện cơ bản**  
-- Tạo một lớp `StudyAssistant`  
-- Triển khai bộ nhớ hội thoại  
-- Thêm cấu hình tính cách để hỗ trợ giáo dục  
 
-**Bước 3: Thêm công cụ giáo dục**  
-- **Giải thích mã**: Phân tích mã thành các phần dễ hiểu  
-- **Tạo câu hỏi trắc nghiệm**: Tạo câu hỏi về các khái niệm lập trình  
-- **Theo dõi tiến độ**: Theo dõi các chủ đề đã học  
+**Bước 2: Chức năng chat cơ bản**
+- Tạo lớp `StudyAssistant`
+- Triển khai bộ nhớ hội thoại
+- Thêm cấu hình cá nhân hóa để hỗ trợ giáo dục
 
-**Bước 4: Tính năng nâng cao (Tùy chọn)**  
-- Triển khai phản hồi theo luồng để cải thiện trải nghiệm người dùng  
-- Thêm chức năng tải tài liệu để tích hợp tài liệu khóa học  
-- Tạo embeddings để truy xuất nội dung dựa trên độ tương đồng  
+**Bước 3: Thêm công cụ giáo dục**
+- **Giải thích mã**: Phân tích mã thành các phần dễ hiểu
+- **Tạo câu hỏi trắc nghiệm**: Tạo câu hỏi về các khái niệm lập trình
+- **Theo dõi tiến độ**: Theo dõi các chủ đề đã học
 
-### Tiêu chí đánh giá  
+**Bước 4: Các tính năng nâng cao (Tùy chọn)**
+- Triển khai phản hồi theo luồng để cải thiện trải nghiệm người dùng
+- Thêm tải tài liệu để tích hợp tài liệu khóa học
+- Tạo embeddings để truy xuất nội dung dựa trên sự tương đồng
 
-| Tính năng | Xuất sắc (4) | Tốt (3) | Đạt yêu cầu (2) | Cần cải thiện (1) |  
-|-----------|--------------|---------|-----------------|-------------------|  
-| **Luồng hội thoại** | Phản hồi tự nhiên, nhận biết ngữ cảnh | Giữ ngữ cảnh tốt | Hội thoại cơ bản | Không có bộ nhớ giữa các lần trao đổi |  
-| **Tích hợp công cụ** | Nhiều công cụ hữu ích hoạt động mượt mà | Triển khai đúng 2+ công cụ | 1-2 công cụ cơ bản | Công cụ không hoạt động |  
-| **Chất lượng mã** | Sạch sẽ, tài liệu tốt, xử lý lỗi | Cấu trúc tốt, một số tài liệu | Chức năng cơ bản hoạt động | Cấu trúc kém, không xử lý lỗi |  
-| **Giá trị giáo dục** | Thực sự hữu ích cho việc học, thích ứng | Hỗ trợ học tập tốt | Giải thích cơ bản | Lợi ích giáo dục hạn chế |  
+### Tiêu chí đánh giá
 
-### Cấu trúc mã mẫu  
+| Tính năng | Xuất sắc (4) | Tốt (3) | Đạt yêu cầu (2) | Cần cải thiện (1) |
+|-----------|--------------|---------|-----------------|-------------------|
+| **Luồng hội thoại** | Phản hồi tự nhiên, nhận thức ngữ cảnh | Giữ ngữ cảnh tốt | Hội thoại cơ bản | Không có bộ nhớ giữa các lần trao đổi |
+| **Tích hợp công cụ** | Nhiều công cụ hữu ích hoạt động mượt mà | 2+ công cụ triển khai đúng cách | 1-2 công cụ cơ bản | Công cụ không hoạt động |
+| **Chất lượng mã** | Sạch, tài liệu tốt, xử lý lỗi | Cấu trúc tốt, một số tài liệu | Chức năng cơ bản hoạt động | Cấu trúc kém, không xử lý lỗi |
+| **Giá trị giáo dục** | Thực sự hữu ích cho việc học, thích ứng | Hỗ trợ học tập tốt | Giải thích cơ bản | Ít lợi ích giáo dục |
+
+### Cấu trúc mã mẫu
 
 ```python
 class StudyAssistant:
@@ -782,42 +1000,101 @@ class StudyAssistant:
 assistant = StudyAssistant(skill_level="intermediate")
 response = assistant.chat("Explain how Python functions work")
 ```
-  
-**Thử thách bổ sung:**  
-- Thêm khả năng nhập/xuất giọng nói  
-- Triển khai giao diện web bằng Streamlit hoặc Flask  
-- Tạo cơ sở tri thức từ tài liệu khóa học bằng embeddings  
-- Thêm theo dõi tiến độ và lộ trình học tập cá nhân hóa  
 
-## Tóm tắt  
+**Thử thách bổ sung:**
+- Thêm khả năng nhập/xuất giọng nói
+- Triển khai giao diện web bằng Streamlit hoặc Flask
+- Tạo cơ sở kiến thức từ tài liệu khóa học bằng embeddings
+- Thêm theo dõi tiến độ và lộ trình học tập cá nhân hóa
 
-🎉 Bạn đã nắm vững các nguyên tắc cơ bản về phát triển khung AI và học cách xây dựng các ứng dụng AI phức tạp bằng LangChain. Giống như hoàn thành một chương trình học nghề toàn diện, bạn đã sở hữu một bộ công cụ kỹ năng đáng kể. Hãy cùng xem lại những gì bạn đã đạt được.  
+## 📈 Dòng thời gian làm chủ phát triển khung AI của bạn
 
-### Những gì bạn đã học  
+```mermaid
+timeline
+    title Production AI Framework Development Journey
+    
+    section Framework Foundations
+        Understanding Abstractions
+            : Master framework vs API decisions
+            : Learn LangChain core concepts
+            : Implement message type systems
+        
+        Basic Integration
+            : Connect to AI providers
+            : Handle authentication
+            : Manage configuration
+    
+    section Conversation Systems
+        Memory Management
+            : Build conversation history
+            : Implement context tracking
+            : Handle session persistence
+        
+        Advanced Interactions
+            : Master streaming responses
+            : Create prompt templates
+            : Implement structured output
+    
+    section Tool Integration
+        Custom Tool Development
+            : Design tool schemas
+            : Implement function calling
+            : Handle external APIs
+        
+        Workflow Automation
+            : Chain multiple tools
+            : Create decision trees
+            : Build agent behaviors
+    
+    section Production Applications
+        Complete System Architecture
+            : Combine all framework features
+            : Implement error boundaries
+            : Create maintainable code
+        
+        Enterprise Readiness
+            : Handle scalability concerns
+            : Implement monitoring
+            : Build deployment strategies
+```
 
-**Khái niệm cơ bản về khung:**  
-- **Lợi ích của khung**: Hiểu khi nào nên chọn khung thay vì gọi API trực tiếp  
-- **LangChain cơ bản**: Thiết lập và cấu hình kết nối mô hình AI  
-- **Các loại tin nhắn**: Sử dụng `SystemMessage`, `HumanMessage`, và `AIMessage` cho hội thoại có cấu trúc  
+**🎓 Cột mốc tốt nghiệp**: Bạn đã thành công làm chủ phát triển khung AI bằng cách sử dụng các công cụ và mẫu giống như những ứng dụng AI hiện đại. Những kỹ năng này đại diện cho sự tiên tiến trong phát triển ứng dụng AI và chuẩn bị cho bạn xây dựng các hệ thống thông minh cấp doanh nghiệp.
 
-**Tính năng nâng cao:**  
-- **Gọi công cụ**: Tạo và tích hợp các công cụ tùy chỉnh để tăng cường khả năng AI  
-- **Bộ nhớ hội thoại**: Duy trì ngữ cảnh qua nhiều lượt hội thoại  
-- **Phản hồi theo luồng**: Triển khai phản hồi theo thời gian thực  
-- **Mẫu nhắc**: Xây dựng các mẫu nhắc động, có thể tái sử dụng  
-- **Đầu ra có cấu trúc**: Đảm bảo phản hồi AI nhất quán, có thể phân tích được  
-- **Embeddings**: Tạo tìm kiếm ngữ nghĩa và khả năng xử lý tài liệu  
+**🔄 Khả năng cấp độ tiếp theo**:
+- Sẵn sàng khám phá các kiến trúc AI nâng cao (agents, hệ thống đa agent)
+- Chuẩn bị xây dựng hệ thống RAG với cơ sở dữ liệu vector
+- Được trang bị để tạo ứng dụng AI đa phương thức
+- Đặt nền tảng cho việc mở rộng và tối ưu hóa ứng dụng AI
 
-**Ứng dụng thực tế:**  
-- **Xây dựng ứng dụng hoàn chỉnh**: Kết hợp nhiều tính năng thành các ứng dụng sẵn sàng sản xuất  
-- **Xử lý lỗi**: Triển khai quản lý lỗi và xác thực mạnh mẽ  
-- **Tích hợp công cụ**: Tạo các công cụ tùy chỉnh mở rộng khả năng AI  
+## Tóm tắt
 
-### Những điểm chính  
+🎉 Bạn đã làm chủ các nguyên tắc cơ bản của phát triển khung AI và học cách xây dựng các ứng dụng AI tinh vi bằng LangChain. Giống như hoàn thành một chương trình học nghề toàn diện, bạn đã sở hữu một bộ công cụ kỹ năng đáng kể. Hãy cùng điểm lại những gì bạn đã đạt được.
 
-> 🎯 **Nhớ rằng**: Các khung AI như LangChain về cơ bản là người bạn đồng hành giấu đi sự phức tạp, đầy đủ tính năng. Chúng rất phù hợp khi bạn cần bộ nhớ hội thoại, gọi công cụ, hoặc muốn làm việc với nhiều mô hình AI mà không bị quá tải.  
+### Những gì bạn đã học
 
-**Khung quyết định cho tích hợp AI:**  
+**Khái niệm khung cốt lõi:**
+- **Lợi ích của khung**: Hiểu khi nào nên chọn khung thay vì gọi API trực tiếp
+- **Cơ bản về LangChain**: Thiết lập và cấu hình kết nối mô hình AI
+- **Các loại tin nhắn**: Sử dụng `SystemMessage`, `HumanMessage`, và `AIMessage` cho hội thoại có cấu trúc
+
+**Tính năng nâng cao:**
+- **Gọi công cụ**: Tạo và tích hợp các công cụ tùy chỉnh để tăng cường khả năng của AI
+- **Bộ nhớ hội thoại**: Duy trì ngữ cảnh qua nhiều lượt hội thoại
+- **Phản hồi theo luồng**: Triển khai phản hồi theo thời gian thực
+- **Mẫu nhắc**: Xây dựng các mẫu nhắc tái sử dụng, động
+- **Đầu ra có cấu trúc**: Đảm bảo phản hồi AI nhất quán, có thể phân tích
+- **Embeddings**: Tạo khả năng tìm kiếm ngữ nghĩa và xử lý tài liệu
+
+**Ứng dụng thực tế:**
+- **Xây dựng ứng dụng hoàn chỉnh**: Kết hợp nhiều tính năng thành các ứng dụng sẵn sàng sản xuất
+- **Xử lý lỗi**: Triển khai quản lý lỗi và xác thực mạnh mẽ
+- **Tích hợp công cụ**: Tạo các công cụ tùy chỉnh mở rộng khả năng của AI
+
+### Những điểm chính cần nhớ
+
+> 🎯 **Hãy nhớ**: Các khung AI như LangChain về cơ bản là người bạn tốt nhất giúp bạn che giấu sự phức tạp và đầy đủ tính năng. Chúng hoàn hảo khi bạn cần bộ nhớ hội thoại, gọi công cụ, hoặc muốn làm việc với nhiều mô hình AI mà không bị rối.
+
+**Khung quyết định cho tích hợp AI:**
 
 ```mermaid
 flowchart TD
@@ -834,43 +1111,43 @@ flowchart TD
     G --> K[LangChain basic chat]
     H --> L[LangChain with tools, memory, agents]
 ```
-  
-### Bạn sẽ đi đâu từ đây?  
 
-**Bắt đầu xây dựng ngay:**  
-- Áp dụng các khái niệm này để tạo ra thứ gì đó khiến bạn hào hứng!  
-- Thử nghiệm với các mô hình AI khác nhau thông qua LangChain - giống như có một sân chơi của các mô hình AI  
-- Tạo các công cụ giải quyết các vấn đề thực tế bạn gặp phải trong công việc hoặc dự án  
+### Bạn sẽ đi đâu từ đây?
 
-**Sẵn sàng cho cấp độ tiếp theo?**  
-- **AI Agents**: Xây dựng hệ thống AI có thể thực sự lập kế hoạch và thực hiện các nhiệm vụ phức tạp một cách độc lập  
-- **RAG (Tạo nội dung tăng cường truy xuất)**: Kết hợp AI với cơ sở tri thức của bạn để tạo ứng dụng siêu mạnh  
-- **AI đa phương tiện**: Làm việc với văn bản, hình ảnh, và âm thanh cùng lúc - khả năng là vô tận!  
-- **Triển khai sản xuất**: Học cách mở rộng ứng dụng AI của bạn và giám sát chúng trong thế giới thực  
+**Bắt đầu xây dựng ngay bây giờ:**
+- Lấy những khái niệm này và xây dựng thứ gì đó khiến bạn hào hứng!
+- Thử nghiệm với các mô hình AI khác nhau thông qua LangChain - giống như có một sân chơi của các mô hình AI
+- Tạo các công cụ giải quyết các vấn đề thực tế bạn gặp phải trong công việc hoặc dự án
 
-**Tham gia cộng đồng:**  
-- Cộng đồng LangChain rất tuyệt vời để cập nhật và học hỏi các thực hành tốt nhất  
-- GitHub Models cung cấp cho bạn quyền truy cập vào các khả năng AI tiên tiến - hoàn hảo để thử nghiệm  
-- Tiếp tục thực hành với các trường hợp sử dụng khác nhau - mỗi dự án sẽ dạy bạn điều gì đó mới  
+**Sẵn sàng cho cấp độ tiếp theo?**
+- **AI Agents**: Xây dựng hệ thống AI có thể thực sự lập kế hoạch và thực hiện các nhiệm vụ phức tạp một cách độc lập
+- **RAG (Retrieval-Augmented Generation)**: Kết hợp AI với cơ sở kiến thức của bạn để tạo ứng dụng siêu mạnh
+- **AI đa phương thức**: Làm việc với văn bản, hình ảnh, và âm thanh cùng nhau - khả năng là vô tận!
+- **Triển khai sản xuất**: Học cách mở rộng ứng dụng AI của bạn và giám sát chúng trong thế giới thực
 
-Giờ đây bạn đã có kiến thức để xây dựng các ứng dụng hội thoại thông minh giúp mọi người giải quyết các vấn đề thực tế. Giống như những nghệ nhân thời Phục hưng kết hợp tầm nhìn nghệ thuật với kỹ năng kỹ thuật, bạn giờ đây có thể kết hợp khả năng AI với ứng dụng thực tế. Câu hỏi là: bạn sẽ tạo ra điều gì? 🚀  
+**Tham gia cộng đồng:**
+- Cộng đồng LangChain rất tuyệt vời để cập nhật và học các thực hành tốt nhất
+- GitHub Models cung cấp cho bạn quyền truy cập vào các khả năng AI tiên tiến - hoàn hảo để thử nghiệm
+- Tiếp tục thực hành với các trường hợp sử dụng khác nhau - mỗi dự án sẽ dạy bạn điều gì đó mới
 
-## Thử thách GitHub Copilot Agent 🚀  
+Bây giờ bạn đã có kiến thức để xây dựng các ứng dụng hội thoại thông minh giúp mọi người giải quyết các vấn đề thực tế. Giống như các nghệ nhân thời Phục hưng kết hợp tầm nhìn nghệ thuật với kỹ năng kỹ thuật, bạn giờ đây có thể kết hợp khả năng AI với ứng dụng thực tế. Câu hỏi là: bạn sẽ tạo ra điều gì? 🚀
 
-Sử dụng chế độ Agent để hoàn thành thử thách sau:  
+## Thử thách GitHub Copilot Agent 🚀
 
-**Mô tả:** Xây dựng một trợ lý đánh giá mã AI tiên tiến kết hợp nhiều tính năng của LangChain bao gồm gọi công cụ, đầu ra có cấu trúc, và bộ nhớ hội thoại để cung cấp phản hồi toàn diện về các bài nộp mã.  
+Sử dụng chế độ Agent để hoàn thành thử thách sau:
 
-**Yêu cầu:** Tạo một lớp CodeReviewAssistant triển khai:  
-1. Một công cụ phân tích độ phức tạp của mã và đề xuất cải tiến  
-2. Một công cụ kiểm tra mã theo các thực hành tốt nhất  
-3. Đầu ra có cấu trúc sử dụng mô hình Pydantic để định dạng đánh giá nhất quán  
-4. Bộ nhớ hội thoại để theo dõi các phiên đánh giá  
-5. Giao diện trò chuyện chính có thể xử lý các bài nộp mã và cung cấp phản hồi chi tiết, có thể hành động  
+**Mô tả:** Xây dựng một trợ lý đánh giá mã AI tiên tiến kết hợp nhiều tính năng của LangChain bao gồm gọi công cụ, đầu ra có cấu trúc, và bộ nhớ hội thoại để cung cấp phản hồi toàn diện về các bài nộp mã.
 
-Trợ lý cần có khả năng đánh giá mã trong nhiều ngôn ngữ lập trình, duy trì ngữ cảnh qua nhiều bài nộp mã trong một phiên, và cung cấp cả điểm tổng quan lẫn các đề xuất cải tiến chi tiết.  
+**Nhắc nhở:** Tạo lớp CodeReviewAssistant triển khai:
+1. Một công cụ phân tích độ phức tạp của mã và đề xuất cải tiến
+2. Một công cụ kiểm tra mã theo các thực hành tốt nhất
+3. Đầu ra có cấu trúc sử dụng mô hình Pydantic để định dạng đánh giá nhất quán
+4. Bộ nhớ hội thoại để theo dõi các phiên đánh giá
+5. Giao diện chat chính có thể xử lý các bài nộp mã và cung cấp phản hồi chi tiết, có thể hành động
 
-Tìm hiểu thêm về [chế độ agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) tại đây.  
+Trợ lý nên có khả năng đánh giá mã trong nhiều ngôn ngữ lập trình, duy trì ngữ cảnh qua nhiều bài nộp mã trong một phiên, và cung cấp cả điểm tổng quan lẫn các đề xuất cải tiến chi tiết.
+
+Tìm hiểu thêm về [chế độ agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) tại đây.
 
 ---
 

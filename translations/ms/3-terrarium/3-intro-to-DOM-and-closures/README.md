@@ -1,65 +1,169 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
-  "translation_date": "2025-10-24T14:30:46+00:00",
+  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
+  "translation_date": "2025-11-06T12:10:48+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "ms"
 }
 -->
 # Projek Terrarium Bahagian 3: Manipulasi DOM dan Penutupan JavaScript
 
+```mermaid
+journey
+    title Your JavaScript DOM Journey
+    section Foundation
+      Understand DOM: 3: Student
+      Learn closures: 4: Student
+      Connect elements: 4: Student
+    section Interaction
+      Setup drag events: 4: Student
+      Track coordinates: 5: Student
+      Handle movement: 5: Student
+    section Polish
+      Add cleanup: 4: Student
+      Test functionality: 5: Student
+      Complete terrarium: 5: Student
+```
+
 ![DOM dan penutupan](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.ms.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Selamat datang ke salah satu aspek paling menarik dalam pembangunan web - menjadikan sesuatu interaktif! Document Object Model (DOM) adalah seperti jambatan antara HTML dan JavaScript anda, dan hari ini kita akan menggunakannya untuk menghidupkan terrarium anda. Ketika Tim Berners-Lee mencipta pelayar web pertama, beliau membayangkan web di mana dokumen boleh menjadi dinamik dan interaktif - DOM menjadikan visi itu satu kenyataan.
+Selamat datang ke salah satu aspek paling menarik dalam pembangunan web - menjadikan sesuatu interaktif! Document Object Model (DOM) adalah seperti jambatan antara HTML dan JavaScript anda, dan hari ini kita akan menggunakannya untuk menghidupkan terrarium anda. Apabila Tim Berners-Lee mencipta pelayar web pertama, beliau membayangkan web di mana dokumen boleh menjadi dinamik dan interaktif - DOM menjadikan visi itu mungkin.
 
-Kami juga akan meneroka penutupan JavaScript, yang mungkin kedengaran menakutkan pada mulanya. Anggaplah penutupan sebagai mencipta "poket memori" di mana fungsi anda boleh mengingati maklumat penting. Ia seperti setiap tumbuhan dalam terrarium anda mempunyai rekod data sendiri untuk menjejaki kedudukannya. Menjelang akhir pelajaran ini, anda akan memahami betapa semula jadi dan bergunanya mereka.
+Kita juga akan meneroka penutupan JavaScript, yang mungkin kedengaran menakutkan pada mulanya. Fikirkan penutupan sebagai mencipta "poket memori" di mana fungsi anda boleh mengingati maklumat penting. Ia seperti setiap tumbuhan dalam terrarium anda mempunyai rekod data sendiri untuk menjejaki kedudukannya. Menjelang akhir pelajaran ini, anda akan memahami betapa semula jadi dan bergunanya mereka.
 
 Inilah yang akan kita bina: sebuah terrarium di mana pengguna boleh menyeret dan meletakkan tumbuhan di mana sahaja mereka mahu. Anda akan mempelajari teknik manipulasi DOM yang menggerakkan segala-galanya daripada muat naik fail seret dan lepas kepada permainan interaktif. Mari kita hidupkan terrarium anda.
+
+```mermaid
+mindmap
+  root((DOM & JavaScript))
+    DOM Tree
+      Element Selection
+      Property Access
+      Event Handling
+      Dynamic Updates
+    Events
+      Pointer Events
+      Mouse Events
+      Touch Events
+      Event Listeners
+    Closures
+      Private Variables
+      Function Scope
+      Memory Persistence
+      State Management
+    Drag & Drop
+      Position Tracking
+      Coordinate Math
+      Event Lifecycle
+      User Interaction
+    Modern Patterns
+      Event Delegation
+      Performance
+      Cross-Device
+      Accessibility
+```
 
 ## Kuiz Pra-Kuliah
 
 [Kuiz pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/19)
 
-## Memahami DOM: Pintu Masuk Anda ke Halaman Web Interaktif
+## Memahami DOM: Pintu Anda ke Halaman Web Interaktif
 
-Document Object Model (DOM) adalah cara JavaScript berkomunikasi dengan elemen HTML anda. Apabila pelayar anda memuatkan halaman HTML, ia mencipta representasi berstruktur halaman itu dalam memori - itulah DOM. Anggaplah ia sebagai pokok keluarga di mana setiap elemen HTML adalah ahli keluarga yang boleh diakses, diubah, atau disusun semula oleh JavaScript.
+Document Object Model (DOM) adalah cara JavaScript berkomunikasi dengan elemen HTML anda. Apabila pelayar anda memuatkan halaman HTML, ia mencipta representasi berstruktur halaman itu dalam memori - itulah DOM. Fikirkan ia sebagai pokok keluarga di mana setiap elemen HTML adalah ahli keluarga yang boleh diakses, diubah, atau disusun semula oleh JavaScript.
 
-Manipulasi DOM mengubah halaman statik menjadi laman web interaktif. Setiap kali anda melihat butang berubah warna apabila dihover, kandungan dikemas kini tanpa penyegaran halaman, atau elemen yang boleh diseret, itu adalah hasil kerja manipulasi DOM.
+Manipulasi DOM mengubah halaman statik menjadi laman web interaktif. Setiap kali anda melihat butang berubah warna apabila dihover, kandungan dikemas kini tanpa penyegaran halaman, atau elemen yang boleh anda seret, itu adalah manipulasi DOM yang berfungsi.
+
+```mermaid
+flowchart TD
+    A["Document"] --> B["HTML"]
+    B --> C["Head"]
+    B --> D["Body"]
+    C --> E["Title"]
+    C --> F["Meta Tags"]
+    D --> G["H1: My Terrarium"]
+    D --> H["Div: Page Container"]
+    H --> I["Div: Left Container"]
+    H --> J["Div: Right Container"]
+    H --> K["Div: Terrarium"]
+    I --> L["Plant Elements 1-7"]
+    J --> M["Plant Elements 8-14"]
+    
+    L --> N["img#plant1"]
+    L --> O["img#plant2"]
+    M --> P["img#plant8"]
+    M --> Q["img#plant9"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style D fill:#e8f5e8
+    style H fill:#fff3e0
+    style N fill:#ffebee
+    style O fill:#ffebee
+    style P fill:#ffebee
+    style Q fill:#ffebee
+```
 
 ![Representasi pokok DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.ms.png)
 
 > Representasi DOM dan markup HTML yang merujuknya. Daripada [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
 **Inilah yang menjadikan DOM berkuasa:**
-- **Menyediakan** cara berstruktur untuk mengakses mana-mana elemen di halaman anda
+- **Menyediakan** cara berstruktur untuk mengakses mana-mana elemen pada halaman anda
 - **Membolehkan** kemas kini kandungan dinamik tanpa penyegaran halaman
-- **Membolehkan** tindak balas masa nyata kepada interaksi pengguna seperti klik dan seretan
+- **Membenarkan** tindak balas masa nyata kepada interaksi pengguna seperti klik dan seretan
 - **Mencipta** asas untuk aplikasi web interaktif moden
 
 ## Penutupan JavaScript: Mencipta Kod yang Teratur dan Berkuasa
 
-[Penutupan JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures) adalah seperti memberikan fungsi ruang kerja peribadi dengan memori yang berterusan. Pertimbangkan bagaimana burung finch Darwin di Kepulauan Galápagos masing-masing membangunkan paruh khusus berdasarkan persekitaran mereka - penutupan berfungsi dengan cara yang sama, mencipta fungsi khusus yang "mengingati" konteks spesifik mereka walaupun selepas fungsi induk selesai.
+[Penutupan JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures) adalah seperti memberikan fungsi ruang kerja peribadi dengan memori yang berterusan. Pertimbangkan bagaimana burung finch Darwin di Kepulauan Galápagos masing-masing membangunkan paruh khusus berdasarkan persekitaran mereka - penutupan berfungsi dengan cara yang sama, mencipta fungsi khusus yang "mengingati" konteks khusus mereka walaupun selepas fungsi induk selesai.
 
 Dalam terrarium kita, penutupan membantu setiap tumbuhan mengingati kedudukannya sendiri secara bebas. Corak ini muncul di seluruh pembangunan JavaScript profesional, menjadikannya konsep yang bernilai untuk difahami.
 
-> 💡 **Memahami Penutupan**: Penutupan adalah topik penting dalam JavaScript, dan ramai pembangun menggunakannya selama bertahun-tahun sebelum memahami sepenuhnya semua aspek teori. Hari ini, kita akan fokus pada aplikasi praktikal - anda akan melihat penutupan muncul secara semula jadi semasa kita membina ciri interaktif. Pemahaman akan berkembang apabila anda melihat bagaimana ia menyelesaikan masalah sebenar.
+```mermaid
+flowchart LR
+    A["dragElement(plant1)"] --> B["Creates Closure"]
+    A2["dragElement(plant2)"] --> B2["Creates Closure"]
+    
+    B --> C["Private Variables"]
+    B2 --> C2["Private Variables"]
+    
+    C --> D["pos1, pos2, pos3, pos4"]
+    C --> E["pointerDrag function"]
+    C --> F["elementDrag function"]
+    C --> G["stopElementDrag function"]
+    
+    C2 --> D2["pos1, pos2, pos3, pos4"]
+    C2 --> E2["pointerDrag function"]
+    C2 --> F2["elementDrag function"]
+    C2 --> G2["stopElementDrag function"]
+    
+    H["Plant 1 remembers its position"] --> B
+    H2["Plant 2 remembers its position"] --> B2
+    
+    style B fill:#e8f5e8
+    style B2 fill:#e8f5e8
+    style C fill:#fff3e0
+    style C2 fill:#fff3e0
+```
+
+> 💡 **Memahami Penutupan**: Penutupan adalah topik penting dalam JavaScript, dan ramai pembangun menggunakannya selama bertahun-tahun sebelum memahami sepenuhnya semua aspek teori. Hari ini, kita fokus pada aplikasi praktikal - anda akan melihat penutupan muncul secara semula jadi semasa kita membina ciri interaktif kita. Pemahaman akan berkembang apabila anda melihat bagaimana ia menyelesaikan masalah sebenar.
 
 ![Representasi pokok DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.ms.png)
 
 > Representasi DOM dan markup HTML yang merujuknya. Daripada [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-Dalam pelajaran ini, kita akan melengkapkan projek terrarium interaktif kita dengan mencipta JavaScript yang akan membolehkan pengguna memanipulasi tumbuhan di halaman.
+Dalam pelajaran ini, kita akan melengkapkan projek terrarium interaktif kita dengan mencipta JavaScript yang akan membolehkan pengguna memanipulasi tumbuhan pada halaman.
 
 ## Sebelum Kita Bermula: Persediaan untuk Kejayaan
 
-Anda akan memerlukan fail HTML dan CSS anda daripada pelajaran terrarium sebelumnya - kita akan menjadikan reka bentuk statik itu interaktif. Jika anda baru menyertai, melengkapkan pelajaran tersebut terlebih dahulu akan memberikan konteks penting.
+Anda memerlukan fail HTML dan CSS anda daripada pelajaran terrarium sebelumnya - kita akan menjadikan reka bentuk statik itu interaktif. Jika anda baru menyertai, melengkapkan pelajaran tersebut terlebih dahulu akan memberikan konteks penting.
 
 Inilah yang akan kita bina:
 - **Seret dan lepas yang lancar** untuk semua tumbuhan terrarium
 - **Penjejakan koordinat** supaya tumbuhan mengingati kedudukan mereka
-- **Antara muka interaktif lengkap** menggunakan JavaScript vanilla
+- **Antara muka interaktif lengkap** menggunakan JavaScript biasa
 - **Kod yang bersih dan teratur** menggunakan corak penutupan
 
 ## Menyediakan Fail JavaScript Anda
@@ -78,7 +182,7 @@ Tambahkan tag skrip ini ke bahagian `<head>` fail `index.html` anda:
 <script src="./script.js" defer></script>
 ```
 
-**Mengapa atribut `defer` penting:**
+**Kenapa atribut `defer` penting:**
 - **Memastikan** JavaScript anda menunggu sehingga semua HTML dimuatkan
 - **Mengelakkan** ralat di mana JavaScript mencari elemen yang belum siap
 - **Menjamin** semua elemen tumbuhan anda tersedia untuk interaksi
@@ -90,7 +194,7 @@ Tambahkan tag skrip ini ke bahagian `<head>` fail `index.html` anda:
 
 ## Menyambungkan JavaScript ke Elemen HTML Anda
 
-Sebelum kita boleh menjadikan elemen boleh diseret, JavaScript perlu mencari mereka dalam DOM. Anggaplah ini seperti sistem katalog perpustakaan - sebaik sahaja anda mempunyai nombor katalog, anda boleh mencari buku yang anda perlukan dan mengakses semua kandungannya.
+Sebelum kita boleh menjadikan elemen boleh diseret, JavaScript perlu mencari mereka dalam DOM. Fikirkan ini seperti sistem katalog perpustakaan - sebaik sahaja anda mempunyai nombor katalog, anda boleh mencari buku yang anda perlukan dan mengakses semua kandungannya.
 
 Kita akan menggunakan kaedah `document.getElementById()` untuk membuat sambungan ini. Ia seperti mempunyai sistem pemfailan yang tepat - anda memberikan ID, dan ia mencari elemen yang anda perlukan dalam HTML anda.
 
@@ -121,19 +225,29 @@ dragElement(document.getElementById('plant14'));
 - **Mengambil** rujukan JavaScript kepada setiap elemen HTML
 - **Menghantar** setiap elemen ke fungsi `dragElement` (yang akan kita cipta seterusnya)
 - **Menyediakan** setiap tumbuhan untuk interaksi seret dan lepas
-- **Menyambungkan** struktur HTML anda ke fungsi JavaScript
+- **Menyambungkan** struktur HTML anda kepada fungsi JavaScript
 
-> 🎯 **Mengapa Menggunakan ID dan Bukan Kelas?** ID memberikan pengenal unik untuk elemen tertentu, manakala kelas CSS direka untuk penggayaan kumpulan elemen. Apabila JavaScript perlu memanipulasi elemen individu, ID menawarkan ketepatan dan prestasi yang kita perlukan.
+> 🎯 **Kenapa Gunakan ID dan Bukan Kelas?** ID memberikan pengenal unik untuk elemen tertentu, manakala kelas CSS direka untuk penggayaan kumpulan elemen. Apabila JavaScript perlu memanipulasi elemen individu, ID menawarkan ketepatan dan prestasi yang kita perlukan.
 
 > 💡 **Tip Pro**: Perhatikan bagaimana kita memanggil `dragElement()` untuk setiap tumbuhan secara individu. Pendekatan ini memastikan setiap tumbuhan mendapat tingkah laku seret yang bebas, yang penting untuk interaksi pengguna yang lancar.
 
+### 🔄 **Pemeriksaan Pedagogi**
+**Pemahaman Sambungan DOM**: Sebelum bergerak ke fungsi seret, pastikan anda boleh:
+- ✅ Jelaskan bagaimana `document.getElementById()` mencari elemen HTML
+- ✅ Fahami kenapa kita menggunakan ID unik untuk setiap tumbuhan
+- ✅ Terangkan tujuan atribut `defer` dalam tag skrip
+- ✅ Kenali bagaimana JavaScript dan HTML bersambung melalui DOM
+
+**Ujian Kendiri Cepat**: Apa yang akan berlaku jika dua elemen mempunyai ID yang sama? Kenapa `getElementById()` hanya mengembalikan satu elemen?
+*Jawapan: ID harus unik; jika diduplikasi, hanya elemen pertama yang dikembalikan*
+
 ---
 
-## Membangunkan Penutupan Fungsi dragElement
+## Membina Penutupan Fungsi Drag Element
 
 Sekarang kita akan mencipta inti fungsi seret kita: penutupan yang menguruskan tingkah laku seret untuk setiap tumbuhan. Penutupan ini akan mengandungi beberapa fungsi dalaman yang bekerjasama untuk menjejaki pergerakan tetikus dan mengemas kini kedudukan elemen.
 
-Penutupan adalah sempurna untuk tugas ini kerana ia membolehkan kita mencipta pembolehubah "peribadi" yang kekal antara panggilan fungsi, memberikan setiap tumbuhan sistem penjejakan koordinat bebas.
+Penutupan sangat sesuai untuk tugas ini kerana ia membolehkan kita mencipta pembolehubah "peribadi" yang berterusan antara panggilan fungsi, memberikan setiap tumbuhan sistem penjejakan koordinat bebas.
 
 ### Memahami Penutupan dengan Contoh Mudah
 
@@ -160,11 +274,11 @@ console.log(myCounter()); // 2
 - **Mencipta** pembolehubah `count` peribadi yang hanya wujud dalam penutupan ini
 - **Fungsi dalaman** boleh mengakses dan mengubah pembolehubah luar itu (mekanisme penutupan)
 - **Apabila kita mengembalikan** fungsi dalaman, ia mengekalkan sambungannya kepada data peribadi itu
-- **Walaupun selepas** `createCounter()` selesai dilaksanakan, `count` kekal dan mengingati nilainya
+- **Walaupun selepas** `createCounter()` selesai pelaksanaan, `count` kekal dan mengingati nilainya
 
-### Mengapa Penutupan Sempurna untuk Fungsi Seret
+### Kenapa Penutupan Sangat Sesuai untuk Fungsi Seret
 
-Untuk terrarium kita, setiap tumbuhan perlu mengingati koordinat kedudukan semasanya. Penutupan menyediakan penyelesaian yang sempurna:
+Untuk terrarium kita, setiap tumbuhan perlu mengingati koordinat kedudukan semasanya. Penutupan memberikan penyelesaian yang sempurna:
 
 **Manfaat utama untuk projek kita:**
 - **Menjaga** pembolehubah kedudukan peribadi untuk setiap tumbuhan secara bebas
@@ -173,6 +287,34 @@ Untuk terrarium kita, setiap tumbuhan perlu mengingati koordinat kedudukan semas
 - **Mencipta** struktur kod yang bersih dan teratur
 
 > 🎯 **Matlamat Pembelajaran**: Anda tidak perlu menguasai setiap aspek penutupan sekarang. Fokus pada melihat bagaimana ia membantu kita mengatur kod dan mengekalkan keadaan untuk fungsi seret kita.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Ready: Page loads
+    Ready --> DragStart: User presses down (pointerdown)
+    DragStart --> Dragging: Mouse/finger moves (pointermove)
+    Dragging --> Dragging: Continue moving
+    Dragging --> DragEnd: User releases (pointerup)
+    DragEnd --> Ready: Reset for next drag
+    
+    state DragStart {
+        [*] --> CapturePosition
+        CapturePosition --> SetupListeners
+        SetupListeners --> [*]
+    }
+    
+    state Dragging {
+        [*] --> CalculateMovement
+        CalculateMovement --> UpdatePosition
+        UpdatePosition --> [*]
+    }
+    
+    state DragEnd {
+        [*] --> RemoveListeners
+        RemoveListeners --> CleanupState
+        CleanupState --> [*]
+    }
+```
 
 ### Mencipta Fungsi dragElement
 
@@ -195,37 +337,50 @@ function dragElement(terrariumElement) {
 - **`pos1` dan `pos2`**: Menyimpan perbezaan antara kedudukan tetikus lama dan baru
 - **`pos3` dan `pos4`**: Menjejaki koordinat tetikus semasa
 - **`terrariumElement`**: Elemen tumbuhan tertentu yang kita jadikan boleh diseret
-- **`onpointerdown`**: Acara yang mencetuskan apabila pengguna mula menyeret
+- **`onpointerdown`**: Acara yang dicetuskan apabila pengguna mula menyeret
 
 **Inilah cara corak penutupan berfungsi:**
 - **Mencipta** pembolehubah kedudukan peribadi untuk setiap elemen tumbuhan
-- **Menjaga** pembolehubah ini sepanjang kitaran hidup seretan
+- **Memelihara** pembolehubah ini sepanjang kitaran hidup seret
 - **Memastikan** setiap tumbuhan menjejaki koordinatnya sendiri secara bebas
 - **Memberikan** antara muka yang bersih melalui fungsi `dragElement`
 
-### Mengapa Menggunakan Acara Pointer?
+### Kenapa Gunakan Acara Pointer?
 
-Anda mungkin tertanya-tanya mengapa kita menggunakan `onpointerdown` dan bukannya `onclick` yang lebih biasa. Inilah alasannya:
+Anda mungkin tertanya-tanya kenapa kita menggunakan `onpointerdown` dan bukannya `onclick` yang lebih biasa. Inilah alasannya:
 
-| Jenis Acara | Terbaik Untuk | Kekurangan |
-|-------------|---------------|------------|
+| Jenis Acara | Terbaik Untuk | Kekurangannya |
+|-------------|---------------|---------------|
 | `onclick` | Klik butang mudah | Tidak boleh mengendalikan seretan (hanya klik dan lepaskan) |
 | `onpointerdown` | Tetikus dan sentuhan | Lebih baru, tetapi kini disokong dengan baik |
 | `onmousedown` | Tetikus desktop sahaja | Tidak menyokong pengguna mudah alih |
 
-**Mengapa acara pointer sesuai untuk apa yang kita bina:**
+**Kenapa acara pointer sangat sesuai untuk apa yang kita bina:**
 - **Berfungsi dengan baik** sama ada seseorang menggunakan tetikus, jari, atau stylus
 - **Rasa yang sama** pada komputer riba, tablet, atau telefon
 - **Mengendalikan** gerakan seretan sebenar (bukan hanya klik dan selesai)
-- **Mencipta** pengalaman lancar yang diharapkan oleh pengguna dari aplikasi web moden
+- **Mencipta** pengalaman lancar yang pengguna harapkan daripada aplikasi web moden
 
-> 💡 **Persediaan Masa Depan**: Acara pointer adalah cara moden untuk mengendalikan interaksi pengguna. Daripada menulis kod berasingan untuk tetikus dan sentuhan, anda mendapat kedua-duanya secara percuma. Cukup menarik, bukan?
+> 💡 **Masa Depan**: Acara pointer adalah cara moden untuk mengendalikan interaksi pengguna. Daripada menulis kod berasingan untuk tetikus dan sentuhan, anda mendapat kedua-duanya secara percuma. Cukup hebat, bukan?
+
+### 🔄 **Pemeriksaan Pedagogi**
+**Pemahaman Pengendalian Acara**: Berhenti untuk mengesahkan pemahaman anda tentang acara:
+- ✅ Kenapa kita menggunakan acara pointer dan bukannya acara tetikus?
+- ✅ Bagaimana pembolehubah penutupan berterusan antara panggilan fungsi?
+- ✅ Apa peranan `preventDefault()` dalam seretan yang lancar?
+- ✅ Kenapa kita melampirkan pendengar kepada dokumen dan bukannya elemen individu?
+
+**Sambungan Dunia Nyata**: Fikirkan tentang antara muka seret dan lepas yang anda gunakan setiap hari:
+- **Muat naik fail**: Menyeret fail ke dalam tetingkap pelayar
+- **Papan Kanban**: Memindahkan tugas antara lajur
+- **Galeri imej**: Menyusun semula susunan foto
+- **Antara muka mudah alih**: Meleret dan menyeret pada skrin sentuh
 
 ---
 
 ## Fungsi pointerDrag: Menangkap Permulaan Seretan
 
-Apabila pengguna menekan tumbuhan (sama ada dengan klik tetikus atau sentuhan jari), fungsi `pointerDrag` akan berfungsi. Fungsi ini menangkap koordinat awal dan menyediakan sistem seretan.
+Apabila pengguna menekan tumbuhan (sama ada dengan klik tetikus atau sentuhan jari), fungsi `pointerDrag` mula berfungsi. Fungsi ini menangkap koordinat awal dan menyediakan sistem seretan.
 
 Tambahkan fungsi ini di dalam penutupan `dragElement`, tepat selepas baris `terrariumElement.onpointerdown = pointerDrag;`:
 
@@ -260,7 +415,7 @@ Baris `e.preventDefault()` adalah penting untuk seretan yang lancar:
 - **Mengganggu** tingkah laku seretan tersuai kita
 - **Mencipta** artifak visual semasa operasi seretan
 
-> 🔍 **Eksperimen**: Selepas melengkapkan pelajaran ini, cuba keluarkan `e.preventDefault()` dan lihat bagaimana ia mempengaruhi pengalaman seretan. Anda akan cepat memahami mengapa baris ini penting!
+> 🔍 **Eksperimen**: Selepas melengkapkan pelajaran ini, cuba keluarkan `e.preventDefault()` dan lihat bagaimana ia mempengaruhi pengalaman seretan. Anda akan cepat memahami kenapa baris ini penting!
 
 ### Sistem Penjejakan Koordinat
 
@@ -270,27 +425,26 @@ Sifat `e.clientX` dan `e.clientY` memberikan kita koordinat tetikus/sentuhan yan
 |-------|-----------------|----------|
 | `clientX` | Kedudukan mendatar relatif kepada viewport | Menjejaki pergerakan kiri-kanan |
 | `clientY` | Kedudukan menegak relatif kepada viewport | Menjejaki pergerakan atas-bawah |
-
 **Memahami koordinat ini:**
-- **Memberikan** maklumat kedudukan yang tepat piksel
-- **Mengemas kini** secara masa nyata semasa pengguna menggerakkan penunjuk mereka
-- **Kekal** konsisten di seluruh saiz skrin dan tahap zum yang berbeza
-- **Membolehkan** interaksi seretan yang lancar dan responsif
+- **Memberikan** maklumat kedudukan piksel yang tepat
+- **Mengemas kini** secara masa nyata apabila pengguna menggerakkan penunjuk mereka
+- **Konsisten** merentasi saiz skrin dan tahap zum yang berbeza
+- **Memungkinkan** interaksi seretan yang lancar dan responsif
 
-### Menetapkan Pendengar Acara Tahap Dokumen
+### Menyediakan Pendengar Acara Tahap Dokumen
 
-Perhatikan bagaimana kita melampirkan acara gerakan dan berhenti ke seluruh `document`, bukan hanya elemen tumbuhan:
+Perhatikan bagaimana kita melampirkan acara gerak dan berhenti kepada keseluruhan `document`, bukan hanya elemen tumbuhan:
 
 ```javascript
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
 
-**Mengapa melampirkan ke dokumen:**
-- **Meneruskan** penjejakan walaupun tetikus meninggalkan elemen tumbuhan
+**Mengapa melampirkan kepada dokumen:**
+- **Terus** menjejaki walaupun tetikus meninggalkan elemen tumbuhan
 - **Mengelakkan** gangguan seretan jika pengguna bergerak dengan cepat
 - **Memberikan** seretan yang lancar di seluruh skrin
-- **Mengendalikan** kes tepi di mana penunjuk bergerak di luar tetingkap pelayar
+- **Mengendalikan** kes tepi di mana kursor bergerak keluar dari tetingkap pelayar
 
 > ⚡ **Nota Prestasi**: Kita akan membersihkan pendengar tahap dokumen ini apabila seretan berhenti untuk mengelakkan kebocoran memori dan isu prestasi.
 
@@ -300,7 +454,7 @@ Sekarang kita akan menambah dua fungsi yang tinggal untuk mengendalikan pergerak
 
 ### Fungsi elementDrag: Menjejaki Pergerakan
 
-Tambahkan fungsi `elementDrag` tepat selepas kurungan penutup `pointerDrag`:
+Tambahkan fungsi `elementDrag` selepas kurungan penutup `pointerDrag`:
 
 ```javascript
 function elementDrag(e) {
@@ -320,15 +474,39 @@ function elementDrag(e) {
 
 **Memahami matematik koordinat:**
 - **`pos1` dan `pos2`**: Mengira sejauh mana tetikus telah bergerak sejak kemas kini terakhir
-- **`pos3` dan `pos4`**: Menyimpan posisi tetikus semasa untuk pengiraan seterusnya
-- **`offsetTop` dan `offsetLeft`**: Mendapatkan posisi semasa elemen di halaman
+- **`pos3` dan `pos4`**: Menyimpan kedudukan tetikus semasa untuk pengiraan seterusnya
+- **`offsetTop` dan `offsetLeft`**: Mendapatkan kedudukan semasa elemen di halaman
 - **Logik penolakan**: Menggerakkan elemen dengan jumlah yang sama seperti pergerakan tetikus
 
-**Berikut adalah pecahan pengiraan pergerakan:**
-1. **Mengukur** perbezaan antara posisi tetikus lama dan baru
-2. **Mengira** sejauh mana elemen perlu digerakkan berdasarkan pergerakan tetikus
-3. **Mengemas kini** sifat posisi CSS elemen secara masa nyata
-4. **Menyimpan** posisi baru sebagai asas untuk pengiraan pergerakan seterusnya
+```mermaid
+sequenceDiagram
+    participant User
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    User->>Mouse: Start drag at (100, 50)
+    Mouse->>JavaScript: pointerdown event
+    JavaScript->>JavaScript: Store initial position (pos3=100, pos4=50)
+    JavaScript->>JavaScript: Setup move/up listeners
+    
+    User->>Mouse: Move to (110, 60)
+    Mouse->>JavaScript: pointermove event
+    JavaScript->>JavaScript: Calculate: pos1=10, pos2=10
+    JavaScript->>Plant: Update: left += 10px, top += 10px
+    Plant->>Plant: Render at new position
+    
+    User->>Mouse: Release at (120, 65)
+    Mouse->>JavaScript: pointerup event
+    JavaScript->>JavaScript: Remove listeners
+    JavaScript->>JavaScript: Reset for next drag
+```
+
+**Inilah pecahan pengiraan pergerakan:**
+1. **Mengukur** perbezaan antara kedudukan tetikus lama dan baru
+2. **Mengira** sejauh mana elemen perlu bergerak berdasarkan pergerakan tetikus
+3. **Mengemas kini** sifat kedudukan CSS elemen secara masa nyata
+4. **Menyimpan** kedudukan baru sebagai asas untuk pengiraan pergerakan seterusnya
 
 ### Representasi Visual Matematik
 
@@ -356,7 +534,7 @@ function stopElementDrag() {
 }
 ```
 
-**Kenapa pembersihan penting:**
+**Mengapa pembersihan penting:**
 - **Mengelakkan** kebocoran memori daripada pendengar acara yang tertinggal
 - **Menghentikan** tingkah laku seretan apabila pengguna melepaskan tumbuhan
 - **Membolehkan** elemen lain diseret secara bebas
@@ -368,29 +546,29 @@ function stopElementDrag() {
 - Tingkah laku yang tidak dijangka apabila berinteraksi dengan elemen lain
 - Sumber pelayar terbuang pada pengendalian acara yang tidak perlu
 
-### Memahami Sifat Posisi CSS
+### Memahami Sifat Kedudukan CSS
 
 Sistem seretan kita memanipulasi dua sifat CSS utama:
 
 | Sifat | Apa yang Dikawal | Bagaimana Kita Menggunakannya |
 |-------|------------------|------------------------------|
-| `top` | Jarak dari tepi atas | Posisi menegak semasa seretan |
-| `left` | Jarak dari tepi kiri | Posisi mendatar semasa seretan |
+| `top` | Jarak dari tepi atas | Kedudukan menegak semasa seretan |
+| `left` | Jarak dari tepi kiri | Kedudukan mendatar semasa seretan |
 
 **Wawasan utama tentang sifat offset:**
-- **`offsetTop`**: Jarak semasa dari elemen induk yang diposisikan
-- **`offsetLeft`**: Jarak semasa dari elemen induk yang diposisikan
-- **Konteks posisi**: Nilai ini relatif kepada nenek moyang yang diposisikan terdekat
+- **`offsetTop`**: Jarak semasa dari tepi atas elemen induk yang diposisikan
+- **`offsetLeft`**: Jarak semasa dari tepi kiri elemen induk yang diposisikan
+- **Konteks kedudukan**: Nilai-nilai ini adalah relatif kepada nenek moyang yang diposisikan terdekat
 - **Kemas kini masa nyata**: Berubah serta-merta apabila kita mengubah sifat CSS
 
 > 🎯 **Falsafah Reka Bentuk**: Sistem seretan ini sengaja fleksibel – tiada "zon jatuh" atau sekatan. Pengguna boleh meletakkan tumbuhan di mana-mana sahaja, memberikan mereka kawalan kreatif sepenuhnya terhadap reka bentuk terrarium mereka.
 
 ## Menggabungkan Semua: Sistem Seretan Lengkap Anda
 
-Tahniah! Anda baru sahaja membina sistem seretan dan lepas yang canggih menggunakan JavaScript vanilla. Fungsi `dragElement` lengkap anda kini mengandungi penutupan yang kuat yang menguruskan:
+Tahniah! Anda baru sahaja membina sistem seretan dan lepaskan yang canggih menggunakan JavaScript vanilla. Fungsi `dragElement` lengkap anda kini mengandungi penutupan yang kuat yang menguruskan:
 
 **Apa yang dicapai oleh penutupan anda:**
-- **Mengekalkan** pembolehubah posisi peribadi untuk setiap tumbuhan secara bebas
+- **Mengekalkan** pembolehubah kedudukan peribadi untuk setiap tumbuhan secara bebas
 - **Mengendalikan** kitaran hayat seretan lengkap dari awal hingga akhir
 - **Memberikan** pergerakan yang lancar dan responsif di seluruh skrin
 - **Membersihkan** sumber dengan betul untuk mengelakkan kebocoran memori
@@ -401,55 +579,68 @@ Tahniah! Anda baru sahaja membina sistem seretan dan lepas yang canggih mengguna
 Sekarang uji terrarium interaktif anda! Buka fail `index.html` anda dalam pelayar web dan cuba fungsinya:
 
 1. **Klik dan tahan** mana-mana tumbuhan untuk mula menyeret
-2. **Gerakkan tetikus atau jari anda** dan lihat tumbuhan mengikuti dengan lancar
-3. **Lepaskan** untuk meletakkan tumbuhan di posisi barunya
+2. **Gerakkan tetikus atau jari anda** dan lihat tumbuhan mengikut dengan lancar
+3. **Lepaskan** untuk meletakkan tumbuhan di kedudukan barunya
 4. **Bereksperimen** dengan susunan yang berbeza untuk meneroka antara muka
 
-🥇 **Pencapaian**: Anda telah mencipta aplikasi web interaktif sepenuhnya menggunakan konsep teras yang digunakan oleh pembangun profesional setiap hari. Fungsi seretan dan lepas itu menggunakan prinsip yang sama di sebalik muat naik fail, papan kanban, dan banyak antara muka interaktif lain.
+🥇 **Pencapaian**: Anda telah mencipta aplikasi web interaktif sepenuhnya menggunakan konsep teras yang digunakan oleh pembangun profesional setiap hari. Fungsi seretan dan lepaskan itu menggunakan prinsip yang sama di belakang muat naik fail, papan kanban, dan banyak antara muka interaktif lain.
+
+### 🔄 **Pemeriksaan Pedagogi**
+**Pemahaman Sistem Lengkap**: Sahkan penguasaan anda terhadap sistem seretan penuh:
+- ✅ Bagaimana penutupan mengekalkan keadaan bebas untuk setiap tumbuhan?
+- ✅ Mengapa matematik pengiraan koordinat diperlukan untuk pergerakan yang lancar?
+- ✅ Apa yang akan berlaku jika kita lupa membersihkan pendengar acara?
+- ✅ Bagaimana corak ini boleh berkembang kepada interaksi yang lebih kompleks?
+
+**Refleksi Kualiti Kod**: Semak penyelesaian lengkap anda:
+- **Reka bentuk modular**: Setiap tumbuhan mendapat contoh penutupan sendiri
+- **Kecekapan acara**: Persediaan dan pembersihan pendengar yang betul
+- **Sokongan merentas peranti**: Berfungsi pada desktop dan mudah alih
+- **Sedarkan prestasi**: Tiada kebocoran memori atau pengiraan berlebihan
 
 ![terrarium siap](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.ms.png)
 
 ---
 
-## Cabaran GitHub Copilot Agent 🚀
+## Cabaran Ejen GitHub Copilot 🚀
 
-Gunakan mod Agent untuk menyelesaikan cabaran berikut:
+Gunakan mod Ejen untuk menyelesaikan cabaran berikut:
 
-**Deskripsi:** Tingkatkan projek terrarium dengan menambah fungsi tetapan semula yang mengembalikan semua tumbuhan ke posisi asal mereka dengan animasi yang lancar.
+**Penerangan:** Tingkatkan projek terrarium dengan menambah fungsi tetapan semula yang mengembalikan semua tumbuhan ke kedudukan asal mereka dengan animasi yang lancar.
 
-**Arahan:** Cipta butang tetapan semula yang, apabila diklik, menganimasikan semua tumbuhan kembali ke posisi asal sidebar mereka menggunakan peralihan CSS. Fungsi ini harus menyimpan posisi asal apabila halaman dimuatkan dan secara lancar memindahkan tumbuhan kembali ke posisi tersebut dalam masa 1 saat apabila butang tetapan semula ditekan.
+**Arahan:** Cipta butang tetapan semula yang, apabila diklik, menganimasikan semua tumbuhan kembali ke kedudukan asal sidebar mereka menggunakan peralihan CSS. Fungsi ini harus menyimpan kedudukan asal apabila halaman dimuatkan dan dengan lancar mengalihkan tumbuhan kembali ke kedudukan tersebut dalam masa 1 saat apabila butang tetapan semula ditekan.
 
-Ketahui lebih lanjut tentang [mod agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
+Ketahui lebih lanjut tentang [mod ejen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## 🚀 Cabaran Tambahan: Kembangkan Kemahiran Anda
 
-Bersedia untuk membawa terrarium anda ke tahap seterusnya? Cuba laksanakan penambahbaikan ini:
+Bersedia untuk membawa terrarium anda ke tahap seterusnya? Cuba melaksanakan penambahbaikan ini:
 
 **Pengembangan Kreatif:**
 - **Klik dua kali** pada tumbuhan untuk membawanya ke depan (manipulasi z-index)
-- **Tambah maklum balas visual** seperti cahaya lembut apabila melayang di atas tumbuhan
+- **Tambah maklum balas visual** seperti cahaya halus apabila melayang di atas tumbuhan
 - **Laksanakan sempadan** untuk mengelakkan tumbuhan daripada diseret keluar dari terrarium
-- **Cipta fungsi simpan** yang mengingati posisi tumbuhan menggunakan localStorage
+- **Cipta fungsi simpan** yang mengingati kedudukan tumbuhan menggunakan localStorage
 - **Tambah kesan bunyi** untuk mengambil dan meletakkan tumbuhan
 
-> 💡 **Peluang Pembelajaran**: Setiap cabaran ini akan mengajar anda aspek baru tentang manipulasi DOM, pengendalian acara, dan reka bentuk pengalaman pengguna.
+> 💡 **Peluang Pembelajaran**: Setiap cabaran ini akan mengajar anda aspek baru manipulasi DOM, pengendalian acara, dan reka bentuk pengalaman pengguna.
 
 ## Kuiz Selepas Kuliah
 
 [Kuiz selepas kuliah](https://ff-quizzes.netlify.app/web/quiz/20)
 
-## Kajian & Pembelajaran Sendiri: Mendalami Pemahaman Anda
+## Ulasan & Kajian Sendiri: Mendalami Pemahaman Anda
 
-Anda telah menguasai asas manipulasi DOM dan penutupan, tetapi masih banyak lagi untuk diterokai! Berikut adalah beberapa laluan untuk mengembangkan pengetahuan dan kemahiran anda.
+Anda telah menguasai asas manipulasi DOM dan penutupan, tetapi sentiasa ada lebih banyak untuk diterokai! Berikut adalah beberapa laluan untuk mengembangkan pengetahuan dan kemahiran anda.
 
-### Pendekatan Seretan dan Lepas Alternatif
+### Pendekatan Seretan dan Lepaskan Alternatif
 
 Kami menggunakan acara penunjuk untuk fleksibiliti maksimum, tetapi pembangunan web menawarkan pelbagai pendekatan:
 
 | Pendekatan | Terbaik Untuk | Nilai Pembelajaran |
 |------------|---------------|--------------------|
-| [API Seretan dan Lepas HTML](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Muat naik fail, zon seretan formal | Memahami keupayaan asli pelayar |
-| [Acara Sentuhan](https://developer.mozilla.org/docs/Web/API/Touch_events) | Interaksi khusus mudah alih | Corak pembangunan berorientasi mudah alih |
+| [API Seretan dan Lepaskan HTML](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Muat naik fail, zon seretan formal | Memahami keupayaan pelayar asli |
+| [Acara Sentuhan](https://developer.mozilla.org/docs/Web/API/Touch_events) | Interaksi khusus mudah alih | Corak pembangunan mudah alih |
 | Sifat `transform` CSS | Animasi lancar | Teknik pengoptimuman prestasi |
 
 ### Topik Manipulasi DOM Lanjutan
@@ -469,20 +660,116 @@ Kami menggunakan acara penunjuk untuk fleksibiliti maksimum, tetapi pembangunan 
 - [Penyelaman Mendalam Penutupan JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Corak penutupan lanjutan
 
 **Keserasian Pelayar:**
-- [CanIUse.com](https://caniuse.com/) - Semak sokongan ciri di pelbagai pelayar
+- [CanIUse.com](https://caniuse.com/) - Semak sokongan ciri merentas pelayar
 - [Data Keserasian Pelayar MDN](https://github.com/mdn/browser-compat-data) - Maklumat keserasian terperinci
 
 **Peluang Latihan:**
 - **Bina** permainan teka-teki menggunakan mekanik seretan yang serupa
-- **Cipta** papan kanban dengan pengurusan tugas seretan dan lepas
+- **Cipta** papan kanban dengan pengurusan tugas seretan dan lepaskan
 - **Reka** galeri imej dengan susunan foto yang boleh diseret
-- **Bereksperimen** dengan gerakan sentuhan untuk antara muka mudah alih
+- **Bereksperimen** dengan gerak isyarat sentuhan untuk antara muka mudah alih
 
 > 🎯 **Strategi Pembelajaran**: Cara terbaik untuk mengukuhkan konsep ini adalah melalui latihan. Cuba bina variasi antara muka yang boleh diseret – setiap projek akan mengajar anda sesuatu yang baru tentang interaksi pengguna dan manipulasi DOM.
 
+### ⚡ **Apa yang Anda Boleh Lakukan dalam 5 Minit Seterusnya**
+- [ ] Buka DevTools pelayar dan taip `document.querySelector('body')` dalam konsol
+- [ ] Cuba ubah teks laman web menggunakan `innerHTML` atau `textContent`
+- [ ] Tambahkan pendengar acara klik pada mana-mana butang atau pautan di laman web
+- [ ] Periksa struktur pokok DOM menggunakan panel Elemen
+
+### 🎯 **Apa yang Anda Boleh Capai Dalam Jam Ini**
+- [ ] Lengkapkan kuiz selepas pelajaran dan semak konsep manipulasi DOM
+- [ ] Cipta laman web interaktif yang bertindak balas terhadap klik pengguna
+- [ ] Latih pengendalian acara dengan pelbagai jenis acara (klik, mouseover, keypress)
+- [ ] Bina senarai tugasan atau kaunter mudah menggunakan manipulasi DOM
+- [ ] Terokai hubungan antara elemen HTML dan objek JavaScript
+
+### 📅 **Perjalanan JavaScript Anda Sepanjang Minggu**
+- [ ] Lengkapkan projek terrarium interaktif dengan fungsi seretan dan lepaskan
+- [ ] Kuasai delegasi acara untuk pengendalian acara yang cekap
+- [ ] Pelajari tentang gelung acara dan JavaScript asinkron
+- [ ] Latih penutupan dengan membina modul dengan keadaan peribadi
+- [ ] Terokai API DOM moden seperti Pemerhati Persilangan
+- [ ] Bina komponen interaktif tanpa menggunakan rangka kerja
+
+### 🌟 **Penguasaan JavaScript Anda Sepanjang Bulan**
+- [ ] Cipta aplikasi halaman tunggal yang kompleks menggunakan JavaScript vanilla
+- [ ] Pelajari rangka kerja moden (React, Vue, atau Angular) dan bandingkan dengan DOM vanilla
+- [ ] Sumbang kepada projek JavaScript sumber terbuka
+- [ ] Kuasai konsep lanjutan seperti komponen web dan elemen tersuai
+- [ ] Bina aplikasi web yang berprestasi dengan corak DOM yang optimum
+- [ ] Ajar orang lain tentang manipulasi DOM dan asas JavaScript
+
+## 🎯 Garis Masa Penguasaan DOM JavaScript Anda
+
+```mermaid
+timeline
+    title DOM & JavaScript Learning Progression
+    
+    section Foundation (15 minutes)
+        DOM Understanding: Element selection methods
+                         : Tree structure navigation
+                         : Property access patterns
+        
+    section Event Handling (20 minutes)
+        User Interaction: Pointer event basics
+                        : Event listener setup
+                        : Cross-device compatibility
+                        : Event prevention techniques
+        
+    section Closures (25 minutes)
+        Scope Management: Private variable creation
+                        : Function persistence
+                        : State management patterns
+                        : Memory efficiency
+        
+    section Drag System (30 minutes)
+        Interactive Features: Coordinate tracking
+                            : Position calculation
+                            : Movement mathematics
+                            : Cleanup procedures
+        
+    section Advanced Patterns (45 minutes)
+        Professional Skills: Event delegation
+                           : Performance optimization
+                           : Error handling
+                           : Accessibility considerations
+        
+    section Framework Understanding (1 week)
+        Modern Development: Virtual DOM concepts
+                          : State management libraries
+                          : Component architectures
+                          : Build tool integration
+        
+    section Expert Level (1 month)
+        Advanced DOM APIs: Intersection Observer
+                         : Mutation Observer
+                         : Custom Elements
+                         : Web Components
+```
+
+### 🛠️ Ringkasan Alat JavaScript Anda
+
+Selepas menyelesaikan pelajaran ini, anda kini mempunyai:
+- **Penguasaan DOM**: Pemilihan elemen, manipulasi sifat, dan navigasi pokok
+- **Kepakaran Acara**: Pengendalian interaksi merentas peranti dengan acara penunjuk
+- **Pemahaman Penutupan**: Pengurusan keadaan peribadi dan ketekalan fungsi
+- **Sistem Interaktif**: Pelaksanaan seretan dan lepaskan lengkap dari awal
+- **Kesedaran Prestasi**: Pembersihan acara yang betul dan pengurusan memori
+- **Corak Moden**: Teknik organisasi kod yang digunakan dalam pembangunan profesional
+- **Pengalaman Pengguna**: Mencipta antara muka yang intuitif dan responsif
+
+**Kemahiran Profesional Diperoleh**: Anda telah membina ciri-ciri menggunakan teknik yang sama seperti:
+- **Papan Kanban/Trello**: Seretan kad antara lajur
+- **Sistem muat naik fail**: Pengendalian fail seretan dan lepaskan
+- **Galeri imej**: Antara muka susunan foto
+- **Aplikasi mudah alih**: Corak interaksi berasaskan sentuhan
+
+**Tahap Seterusnya**: Anda bersedia untuk meneroka rangka kerja moden seperti React, Vue, atau Angular yang membina konsep manipulasi DOM asas ini!
+
 ## Tugasan
 
-[Teruskan bekerja dengan DOM](assignment.md)
+[Kerja sedikit lagi dengan DOM](assignment.md)
 
 ---
 

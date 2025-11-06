@@ -1,29 +1,76 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-24T14:12:12+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2025-11-06T11:52:48+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "id"
 }
 -->
 # Membangun Aplikasi Perbankan Bagian 2: Membuat Formulir Login dan Registrasi
 
-## Kuis Pra-Kuliah
+```mermaid
+journey
+    title Your Form Development Journey
+    section HTML Foundation
+      Understand form elements: 3: Student
+      Learn input types: 4: Student
+      Master accessibility: 4: Student
+    section JavaScript Integration
+      Handle form submission: 4: Student
+      Implement AJAX communication: 5: Student
+      Process server responses: 5: Student
+    section Validation Systems
+      Create multi-layer validation: 5: Student
+      Enhance user experience: 5: Student
+      Ensure data integrity: 5: Student
+```
 
-[Kuis pra-kuliah](https://ff-quizzes.netlify.app/web/quiz/43)
+## Kuis Pra-Pelajaran
 
-Pernahkah Anda mengisi formulir online dan ditolak karena format email yang salah? Atau kehilangan semua informasi saat mengklik tombol kirim? Kita semua pernah mengalami situasi yang menjengkelkan seperti itu.
+[Kuis pra-pelajaran](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Formulir adalah jembatan antara pengguna dan fungsi aplikasi Anda. Seperti protokol yang digunakan pengendali lalu lintas udara untuk memandu pesawat dengan aman ke tujuannya, formulir yang dirancang dengan baik memberikan umpan balik yang jelas dan mencegah kesalahan yang merugikan. Sebaliknya, formulir yang buruk dapat membuat pengguna pergi lebih cepat daripada komunikasi yang salah di bandara yang sibuk.
+Pernah mengisi formulir online dan email Anda ditolak karena formatnya salah? Atau kehilangan semua informasi saat Anda mengklik tombol kirim? Kita semua pernah mengalami pengalaman yang menjengkelkan ini.
+
+Formulir adalah jembatan antara pengguna dan fungsi aplikasi Anda. Seperti protokol hati-hati yang digunakan pengendali lalu lintas udara untuk memandu pesawat dengan aman ke tujuannya, formulir yang dirancang dengan baik memberikan umpan balik yang jelas dan mencegah kesalahan yang mahal. Formulir yang buruk, di sisi lain, dapat membuat pengguna pergi lebih cepat daripada kesalahan komunikasi di bandara yang sibuk.
 
 Dalam pelajaran ini, kita akan mengubah aplikasi perbankan statis Anda menjadi aplikasi interaktif. Anda akan belajar membuat formulir yang memvalidasi input pengguna, berkomunikasi dengan server, dan memberikan umpan balik yang bermanfaat. Anggap saja ini sebagai membangun antarmuka kontrol yang memungkinkan pengguna menavigasi fitur aplikasi Anda.
 
-Pada akhirnya, Anda akan memiliki sistem login dan registrasi lengkap dengan validasi yang membantu pengguna menuju kesuksesan daripada frustrasi.
+Pada akhirnya, Anda akan memiliki sistem login dan registrasi lengkap dengan validasi yang memandu pengguna menuju kesuksesan daripada frustrasi.
+
+```mermaid
+mindmap
+  root((Form Development))
+    HTML Foundation
+      Semantic Elements
+      Input Types
+      Accessibility
+      Label Association
+    User Experience
+      Validation Feedback
+      Error Prevention
+      Loading States
+      Success Messaging
+    JavaScript Integration
+      Event Handling
+      AJAX Communication
+      Data Processing
+      Error Management
+    Validation Layers
+      HTML5 Validation
+      Client-side Logic
+      Server-side Security
+      Progressive Enhancement
+    Modern Patterns
+      Fetch API
+      Async/Await
+      Form Data API
+      Promise Handling
+```
 
 ## Prasyarat
 
-Sebelum kita mulai membuat formulir, mari kita pastikan semuanya sudah diatur dengan benar. Pelajaran ini melanjutkan dari pelajaran sebelumnya, jadi jika Anda melewatkannya, sebaiknya kembali dan pastikan dasar-dasarnya sudah berfungsi terlebih dahulu.
+Sebelum kita mulai membuat formulir, mari kita pastikan semuanya sudah diatur dengan benar. Pelajaran ini melanjutkan dari pelajaran sebelumnya, jadi jika Anda melewatkannya, Anda mungkin ingin kembali dan menyelesaikan dasar-dasarnya terlebih dahulu.
 
 ### Pengaturan yang Diperlukan
 
@@ -33,7 +80,7 @@ Sebelum kita mulai membuat formulir, mari kita pastikan semuanya sudah diatur de
 | [Node.js](https://nodejs.org) | ✅ Diperlukan | Runtime JavaScript untuk server |
 | [Server API Bank](../api/README.md) | ✅ Diperlukan | Layanan backend untuk penyimpanan data |
 
-> 💡 **Tip Pengembangan**: Anda akan menjalankan dua server secara bersamaan – satu untuk aplikasi perbankan front-end Anda dan satu lagi untuk API backend. Pengaturan ini mencerminkan pengembangan dunia nyata di mana layanan front-end dan backend beroperasi secara independen.
+> 💡 **Tips Pengembangan**: Anda akan menjalankan dua server terpisah secara bersamaan – satu untuk aplikasi perbankan front-end Anda dan satu lagi untuk API backend. Pengaturan ini mencerminkan pengembangan dunia nyata di mana layanan front-end dan back-end beroperasi secara independen.
 
 ### Konfigurasi Server
 
@@ -54,13 +101,13 @@ curl http://localhost:5000/api
 
 ## Memahami Formulir HTML dan Kontrol
 
-Formulir HTML adalah cara pengguna berkomunikasi dengan aplikasi web Anda. Anggaplah mereka sebagai sistem telegraf yang menghubungkan tempat-tempat yang jauh di abad ke-19 – mereka adalah protokol komunikasi antara niat pengguna dan respons aplikasi. Ketika dirancang dengan baik, mereka menangkap kesalahan, memandu format input, dan memberikan saran yang bermanfaat.
+Formulir HTML adalah cara pengguna berkomunikasi dengan aplikasi web Anda. Anggap mereka sebagai sistem telegraf yang menghubungkan tempat-tempat jauh di abad ke-19 – mereka adalah protokol komunikasi antara niat pengguna dan respons aplikasi. Ketika dirancang dengan hati-hati, mereka menangkap kesalahan, memandu format input, dan memberikan saran yang bermanfaat.
 
-Formulir modern jauh lebih canggih daripada input teks dasar. HTML5 memperkenalkan jenis input khusus yang secara otomatis menangani validasi email, format angka, dan pemilihan tanggal. Peningkatan ini bermanfaat baik untuk aksesibilitas maupun pengalaman pengguna seluler.
+Formulir modern jauh lebih canggih daripada input teks dasar. HTML5 memperkenalkan jenis input khusus yang secara otomatis menangani validasi email, format angka, dan pemilihan tanggal. Peningkatan ini menguntungkan baik aksesibilitas maupun pengalaman pengguna seluler.
 
 ### Elemen Formulir Esensial
 
-**Komponen dasar yang dibutuhkan setiap formulir:**
+**Blok bangunan yang dibutuhkan setiap formulir:**
 
 ```html
 <!-- Basic form structure -->
@@ -75,13 +122,13 @@ Formulir modern jauh lebih canggih daripada input teks dasar. HTML5 memperkenalk
 **Apa yang dilakukan kode ini:**
 - **Membuat** wadah formulir dengan pengidentifikasi unik
 - **Menentukan** metode HTTP untuk pengiriman data
-- **Menghubungkan** label dengan input untuk aksesibilitas
+- **Mengasosiasikan** label dengan input untuk aksesibilitas
 - **Mendefinisikan** tombol kirim untuk memproses formulir
 
 ### Jenis Input Modern dan Atribut
 
 | Jenis Input | Tujuan | Contoh Penggunaan |
-|-------------|--------|-------------------|
+|------------|---------|---------------|
 | `text` | Input teks umum | `<input type="text" name="username">` |
 | `email` | Validasi email | `<input type="email" name="email">` |
 | `password` | Entri teks tersembunyi | `<input type="password" name="password">` |
@@ -101,12 +148,12 @@ Formulir modern jauh lebih canggih daripada input teks dasar. HTML5 memperkenalk
 
 **Apa yang dilakukan setiap jenis tombol:**
 - **Tombol kirim**: Memicu pengiriman formulir dan mengirim data ke endpoint yang ditentukan
-- **Tombol reset**: Mengembalikan semua bidang formulir ke keadaan awal
-- **Tombol biasa**: Tidak memiliki perilaku default, memerlukan JavaScript khusus untuk fungsionalitas
+- **Tombol reset**: Mengembalikan semua bidang formulir ke keadaan awalnya
+- **Tombol biasa**: Tidak memberikan perilaku default, membutuhkan JavaScript khusus untuk fungsionalitas
 
-> ⚠️ **Catatan Penting**: Elemen `<input>` adalah elemen yang menutup sendiri dan tidak memerlukan tag penutup. Praktik terbaik modern adalah menulis `<input>` tanpa garis miring.
+> ⚠️ **Catatan Penting**: Elemen `<input>` bersifat self-closing dan tidak memerlukan tag penutup. Praktik terbaik modern adalah menulis `<input>` tanpa garis miring.
 
-### Membuat Formulir Login Anda
+### Membangun Formulir Login Anda
 
 Sekarang mari kita buat formulir login praktis yang menunjukkan praktik formulir HTML modern. Kita akan mulai dengan struktur dasar dan secara bertahap meningkatkannya dengan fitur aksesibilitas dan validasi.
 
@@ -127,14 +174,14 @@ Sekarang mari kita buat formulir login praktis yang menunjukkan praktik formulir
 </template>
 ```
 
-**Penjelasan tentang apa yang terjadi di sini:**
+**Penjelasan apa yang terjadi di sini:**
 - **Menyusun** formulir dengan elemen HTML5 semantik
 - **Mengelompokkan** elemen terkait menggunakan wadah `div` dengan kelas yang bermakna
-- **Menghubungkan** label dengan input menggunakan atribut `for` dan `id`
+- **Mengasosiasikan** label dengan input menggunakan atribut `for` dan `id`
 - **Menyertakan** atribut modern seperti `autocomplete` dan `placeholder` untuk UX yang lebih baik
-- **Menambahkan** `novalidate` untuk menangani validasi dengan JavaScript alih-alih default browser
+- **Menambahkan** `novalidate` untuk menangani validasi dengan JavaScript daripada default browser
 
-### Pentingnya Label yang Tepat
+### Kekuatan Label yang Tepat
 
 **Mengapa label penting untuk pengembangan web modern:**
 
@@ -153,7 +200,7 @@ graph TD
 
 **Apa yang dicapai oleh label yang tepat:**
 - **Memungkinkan** pembaca layar mengumumkan bidang formulir dengan jelas
-- **Memperluas** area yang dapat diklik (mengklik label akan memfokuskan input)
+- **Memperluas** area yang dapat diklik (mengklik label memfokuskan input)
 - **Meningkatkan** kegunaan seluler dengan target sentuh yang lebih besar
 - **Mendukung** validasi formulir dengan pesan kesalahan yang bermakna
 - **Meningkatkan** SEO dengan memberikan makna semantik pada elemen formulir
@@ -162,7 +209,7 @@ graph TD
 
 ### Membuat Formulir Registrasi
 
-Formulir registrasi memerlukan informasi yang lebih rinci untuk membuat akun pengguna yang lengkap. Mari kita buat dengan fitur HTML5 modern dan aksesibilitas yang ditingkatkan.
+Formulir registrasi membutuhkan informasi yang lebih rinci untuk membuat akun pengguna yang lengkap. Mari kita bangun dengan fitur HTML5 modern dan aksesibilitas yang ditingkatkan.
 
 ```html
 <hr/>
@@ -199,8 +246,8 @@ Formulir registrasi memerlukan informasi yang lebih rinci untuk membuat akun pen
 **Dalam kode di atas, kita telah:**
 - **Mengorganisasi** setiap bidang dalam wadah div untuk gaya dan tata letak yang lebih baik
 - **Menambahkan** atribut `autocomplete` yang sesuai untuk dukungan pengisian otomatis browser
-- **Menyertakan** teks placeholder yang membantu untuk memandu input pengguna
-- **Mengatur** nilai default yang masuk akal menggunakan atribut `value`
+- **Menyertakan** teks placeholder yang bermanfaat untuk memandu input pengguna
+- **Mengatur** default yang masuk akal menggunakan atribut `value`
 - **Menerapkan** atribut validasi seperti `required`, `maxlength`, dan `min`
 - **Menggunakan** `type="number"` untuk bidang saldo dengan dukungan desimal
 
@@ -209,21 +256,37 @@ Formulir registrasi memerlukan informasi yang lebih rinci untuk membuat akun pen
 **Jenis input modern memberikan fungsionalitas yang ditingkatkan:**
 
 | Fitur | Manfaat | Contoh |
-|-------|---------|--------|
-| `type="number"` | Keypad numerik di seluler | Mempermudah entri saldo |
+|---------|---------|----------|
+| `type="number"` | Keyboard angka di seluler | Entri saldo lebih mudah |
 | `step="0.01"` | Kontrol presisi desimal | Memungkinkan sen dalam mata uang |
 | `autocomplete` | Pengisian otomatis browser | Penyelesaian formulir lebih cepat |
 | `placeholder` | Petunjuk kontekstual | Membimbing ekspektasi pengguna |
 
 > 🎯 **Tantangan Aksesibilitas**: Cobalah menavigasi formulir hanya menggunakan keyboard Anda! Gunakan `Tab` untuk berpindah antar bidang, `Space` untuk mencentang kotak, dan `Enter` untuk mengirimkan. Pengalaman ini membantu Anda memahami bagaimana pengguna pembaca layar berinteraksi dengan formulir Anda.
 
+### 🔄 **Pemeriksaan Pedagogis**
+**Pemahaman Dasar Formulir**: Sebelum menerapkan JavaScript, pastikan Anda memahami:
+- ✅ Bagaimana HTML semantik menciptakan struktur formulir yang dapat diakses
+- ✅ Mengapa jenis input penting untuk keyboard seluler dan validasi
+- ✅ Hubungan antara label dan kontrol formulir
+- ✅ Bagaimana atribut formulir memengaruhi perilaku default browser
+
+**Tes Diri Cepat**: Apa yang terjadi jika Anda mengirimkan formulir tanpa JavaScript?
+*Jawaban: Browser melakukan pengiriman default, biasanya mengarahkan ke URL aksi*
+
+**Keuntungan Formulir HTML5**: Formulir modern menyediakan:
+- **Validasi Bawaan**: Pemeriksaan format email dan angka otomatis
+- **Optimasi Seluler**: Keyboard yang sesuai untuk berbagai jenis input
+- **Aksesibilitas**: Dukungan pembaca layar dan navigasi keyboard
+- **Peningkatan Progresif**: Berfungsi bahkan saat JavaScript dinonaktifkan
+
 ## Memahami Metode Pengiriman Formulir
 
-Ketika seseorang mengisi formulir Anda dan menekan kirim, data tersebut harus dikirim ke suatu tempat – biasanya ke server yang dapat menyimpannya. Ada beberapa cara berbeda untuk melakukannya, dan mengetahui mana yang harus digunakan dapat menghemat Anda dari beberapa masalah di kemudian hari.
+Ketika seseorang mengisi formulir Anda dan menekan kirim, data tersebut perlu dikirim ke suatu tempat – biasanya ke server yang dapat menyimpannya. Ada beberapa cara berbeda untuk melakukannya, dan mengetahui mana yang harus digunakan dapat menghemat waktu Anda dari beberapa masalah di kemudian hari.
 
-Mari kita lihat apa yang sebenarnya terjadi ketika seseorang mengklik tombol kirim tersebut.
+Mari kita lihat apa yang sebenarnya terjadi ketika seseorang mengklik tombol kirim itu.
 
-### Perilaku Default Formulir
+### Perilaku Formulir Default
 
 Pertama, mari kita amati apa yang terjadi dengan pengiriman formulir dasar:
 
@@ -254,7 +317,7 @@ graph TD
 **Memahami perbedaannya:**
 
 | Metode | Kasus Penggunaan | Lokasi Data | Tingkat Keamanan | Batas Ukuran |
-|--------|------------------|-------------|------------------|--------------|
+|--------|----------|---------------|----------------|-------------|
 | `GET` | Query pencarian, filter | Parameter URL | Rendah (terlihat) | ~2000 karakter |
 | `POST` | Akun pengguna, data sensitif | Body permintaan | Lebih tinggi (tersembunyi) | Tidak ada batas praktis |
 
@@ -268,7 +331,7 @@ graph TD
 
 ### Mengonfigurasi Pengiriman Formulir
 
-Mari kita konfigurasikan formulir registrasi Anda untuk berkomunikasi dengan benar dengan API backend menggunakan metode POST:
+Mari kita konfigurasi formulir registrasi Anda untuk berkomunikasi dengan benar dengan API backend menggunakan metode POST:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" 
@@ -317,11 +380,11 @@ Mari kita konfigurasikan formulir registrasi Anda untuk berkomunikasi dengan ben
 
 ## Penanganan Formulir Modern dengan JavaScript
 
-Pengiriman formulir tradisional menyebabkan halaman memuat ulang sepenuhnya, mirip dengan bagaimana misi luar angkasa awal memerlukan reset sistem lengkap untuk koreksi jalur. Pendekatan ini mengganggu pengalaman pengguna dan kehilangan status aplikasi.
+Pengiriman formulir tradisional menyebabkan pemuatan ulang halaman penuh, mirip dengan bagaimana misi luar angkasa awal membutuhkan reset sistem lengkap untuk koreksi jalur. Pendekatan ini mengganggu pengalaman pengguna dan kehilangan status aplikasi.
 
 Penanganan formulir dengan JavaScript bekerja seperti sistem panduan berkelanjutan yang digunakan oleh pesawat luar angkasa modern – membuat penyesuaian waktu nyata tanpa kehilangan konteks navigasi. Kita dapat mencegat pengiriman formulir, memberikan umpan balik langsung, menangani kesalahan dengan baik, dan memperbarui antarmuka berdasarkan respons server sambil mempertahankan posisi pengguna dalam aplikasi.
 
-### Mengapa Menghindari Muat Ulang Halaman?
+### Mengapa Menghindari Pemuatan Ulang Halaman?
 
 ```mermaid
 sequenceDiagram
@@ -348,19 +411,19 @@ sequenceDiagram
 
 **Tantangan pendekatan tradisional:**
 - **Mengalihkan** pengguna dari aplikasi Anda
-- **Kehilangan** status dan konteks aplikasi saat ini
-- **Memerlukan** muat ulang halaman penuh untuk operasi sederhana
+- **Kehilangan** status aplikasi dan konteks saat ini
+- **Memerlukan** pemuatan ulang halaman penuh untuk operasi sederhana
 - **Memberikan** kontrol terbatas atas umpan balik pengguna
 
 **Keuntungan pendekatan JavaScript modern:**
 - **Menjaga** pengguna tetap dalam aplikasi Anda
-- **Mempertahankan** semua status dan data aplikasi
+- **Mempertahankan** semua status aplikasi dan data
 - **Memungkinkan** validasi dan umpan balik waktu nyata
 - **Mendukung** peningkatan progresif dan aksesibilitas
 
 ### Menerapkan Penanganan Formulir dengan JavaScript
 
-Mari kita mengganti pengiriman formulir tradisional dengan penanganan event JavaScript modern:
+Mari kita ganti pengiriman formulir tradisional dengan penanganan event JavaScript modern:
 
 ```html
 <!-- Remove the action attribute and add event handling -->
@@ -390,18 +453,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-**Penjelasan tentang apa yang terjadi di sini:**
+**Penjelasan apa yang terjadi di sini:**
 - **Mencegah** pengiriman formulir default menggunakan `event.preventDefault()`
 - **Mengambil** elemen formulir menggunakan seleksi DOM modern
 - **Menarik** data formulir menggunakan API `FormData` yang kuat
-- **Mengonversi** FormData ke objek biasa dengan `Object.fromEntries()`
-- **Men-serialisasi** data ke format JSON untuk komunikasi server
+- **Mengonversi** FormData menjadi objek biasa dengan `Object.fromEntries()`
+- **Menyerialkan** data ke format JSON untuk komunikasi server
 - **Mencatat** data yang diproses untuk debugging dan verifikasi
 
 ### Memahami API FormData
 
 **API FormData menyediakan penanganan formulir yang kuat:**
-
 ```javascript
 // Example of what FormData captures
 const formData = new FormData(registerForm);
@@ -415,15 +477,15 @@ const formData = new FormData(registerForm);
 // }
 ```
 
-**Keuntungan API FormData:**
-- **Pengumpulan komprehensif**: Menangkap semua elemen formulir termasuk teks, file, dan input kompleks
-- **Kesadaran tipe**: Menangani berbagai jenis input secara otomatis tanpa pengkodean khusus
-- **Efisiensi**: Menghilangkan pengumpulan bidang manual dengan satu panggilan API
+**Keunggulan FormData API:**
+- **Pengumpulan lengkap**: Menangkap semua elemen formulir termasuk teks, file, dan input kompleks
+- **Kesadaran tipe**: Menangani berbagai jenis input secara otomatis tanpa perlu pengkodean khusus
+- **Efisiensi**: Menghilangkan pengumpulan bidang secara manual dengan satu panggilan API
 - **Adaptabilitas**: Mempertahankan fungsionalitas saat struktur formulir berkembang
 
 ### Membuat Fungsi Komunikasi Server
 
-Sekarang mari kita buat fungsi yang kuat untuk berkomunikasi dengan server API Anda menggunakan pola JavaScript modern:
+Sekarang mari kita bangun fungsi yang tangguh untuk berkomunikasi dengan server API Anda menggunakan pola JavaScript modern:
 
 ```javascript
 async function createAccount(account) {
@@ -473,21 +535,21 @@ sequenceDiagram
 - **Memberikan** pesan kesalahan yang rinci untuk debugging
 - **Mengembalikan** struktur data yang konsisten untuk kasus sukses dan kesalahan
 
-### Kekuatan Modern Fetch API
+### Kekuatan Fetch API Modern
 
 **Keunggulan Fetch API dibandingkan metode lama:**
 
 | Fitur | Manfaat | Implementasi |
 |-------|---------|--------------|
-| Berbasis Promise | Kode async yang bersih | `await fetch()` |
-| Kustomisasi permintaan | Kontrol penuh HTTP | Headers, metode, body |
+| Berbasis Promise | Kode asinkron yang bersih | `await fetch()` |
+| Kustomisasi permintaan | Kontrol HTTP penuh | Header, metode, body |
 | Penanganan respons | Parsing data yang fleksibel | `.json()`, `.text()`, `.blob()` |
-| Penanganan kesalahan | Penangkapan kesalahan yang komprehensif | Blok Try/catch |
+| Penanganan kesalahan | Penangkapan kesalahan yang komprehensif | Blok try/catch |
 
 > 🎥 **Pelajari Lebih Lanjut**: [Tutorial Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - Memahami pola JavaScript asinkron untuk pengembangan web modern.
 
 **Konsep utama untuk komunikasi server:**
-- **Fungsi async** memungkinkan penghentian eksekusi untuk menunggu respons server
+- **Fungsi asinkron** memungkinkan penghentian eksekusi untuk menunggu respons server
 - **Kata kunci await** membuat kode asinkron terlihat seperti kode sinkron
 - **Fetch API** menyediakan permintaan HTTP berbasis promise yang modern
 - **Penanganan kesalahan** memastikan aplikasi Anda merespons dengan baik terhadap masalah jaringan
@@ -538,8 +600,8 @@ async function register() {
 
 **Implementasi yang ditingkatkan ini mencakup:**
 - **Memberikan** umpan balik visual selama pengiriman formulir
-- **Menonaktifkan** tombol submit untuk mencegah pengiriman duplikat
-- **Menangani** kesalahan yang diharapkan maupun tidak terduga dengan baik
+- **Menonaktifkan** tombol kirim untuk mencegah pengiriman duplikat
+- **Menangani** kesalahan yang diharapkan dan tidak terduga dengan baik
 - **Menampilkan** pesan sukses dan kesalahan yang ramah pengguna
 - **Mereset** formulir setelah registrasi berhasil
 - **Mengembalikan** status UI terlepas dari hasilnya
@@ -555,17 +617,37 @@ async function register() {
 
 ![Screenshot menunjukkan pesan log di konsol browser](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.id.png)
 
-**Yang seharusnya Anda lihat:**
-- **Status loading** muncul di tombol submit
+**Apa yang harus Anda lihat:**
+- **Status pemuatan** muncul di tombol kirim
 - **Log konsol** menunjukkan informasi rinci tentang proses
 - **Pesan sukses** muncul saat pembuatan akun berhasil
 - **Formulir mereset** secara otomatis setelah pengiriman berhasil
 
 > 🔒 **Pertimbangan Keamanan**: Saat ini, data dikirim melalui HTTP, yang tidak aman untuk produksi. Dalam aplikasi nyata, selalu gunakan HTTPS untuk mengenkripsi transmisi data. Pelajari lebih lanjut tentang [keamanan HTTPS](https://en.wikipedia.org/wiki/HTTPS) dan mengapa ini penting untuk melindungi data pengguna.
 
+### 🔄 **Pengecekan Pedagogis**
+**Integrasi JavaScript Modern**: Verifikasi pemahaman Anda tentang penanganan formulir asinkron:
+- ✅ Bagaimana `event.preventDefault()` mengubah perilaku default formulir?
+- ✅ Mengapa FormData API lebih efisien daripada pengumpulan bidang manual?
+- ✅ Bagaimana pola async/await meningkatkan keterbacaan kode?
+- ✅ Apa peran penanganan kesalahan dalam pengalaman pengguna?
+
+**Arsitektur Sistem**: Penanganan formulir Anda menunjukkan:
+- **Pemrograman Berbasis Peristiwa**: Formulir merespons tindakan pengguna tanpa memuat ulang halaman
+- **Komunikasi Asinkron**: Permintaan server tidak memblokir antarmuka pengguna
+- **Penanganan Kesalahan**: Degradasi yang baik saat permintaan jaringan gagal
+- **Manajemen Status**: Pembaruan UI mencerminkan respons server dengan tepat
+- **Peningkatan Progresif**: Fungsionalitas dasar bekerja, JavaScript meningkatkannya
+
+**Pola Profesional**: Anda telah mengimplementasikan:
+- **Tanggung Jawab Tunggal**: Fungsi memiliki tujuan yang jelas dan terfokus
+- **Batas Kesalahan**: Blok try/catch mencegah aplikasi crash
+- **Umpan Balik Pengguna**: Status pemuatan dan pesan sukses/kesalahan
+- **Transformasi Data**: FormData ke JSON untuk komunikasi server
+
 ## Validasi Formulir yang Komprehensif
 
-Validasi formulir mencegah pengalaman yang mengecewakan karena menemukan kesalahan hanya setelah pengiriman. Seperti sistem redundansi di Stasiun Luar Angkasa Internasional, validasi yang efektif menggunakan beberapa lapisan pemeriksaan keamanan.
+Validasi formulir mencegah pengalaman yang membuat frustrasi karena menemukan kesalahan hanya setelah pengiriman. Seperti sistem redundansi ganda di Stasiun Luar Angkasa Internasional, validasi yang efektif menggunakan beberapa lapisan pemeriksaan keamanan.
 
 Pendekatan optimal menggabungkan validasi tingkat browser untuk umpan balik langsung, validasi JavaScript untuk pengalaman pengguna yang lebih baik, dan validasi sisi server untuk keamanan dan integritas data. Redundansi ini memastikan kepuasan pengguna dan perlindungan sistem.
 
@@ -586,7 +668,7 @@ graph TD
 
 **Strategi validasi multi-lapisan:**
 - **Validasi HTML5**: Pemeriksaan berbasis browser langsung
-- **Validasi JavaScript**: Logika kustom dan pengalaman pengguna
+- **Validasi JavaScript**: Logika khusus dan pengalaman pengguna
 - **Validasi server**: Pemeriksaan keamanan dan integritas data akhir
 - **Peningkatan progresif**: Berfungsi bahkan jika JavaScript dinonaktifkan
 
@@ -596,10 +678,10 @@ graph TD
 
 | Atribut | Tujuan | Contoh Penggunaan | Perilaku Browser |
 |---------|--------|-------------------|------------------|
-| `required` | Kolom wajib | `<input required>` | Mencegah pengiriman kosong |
+| `required` | Bidang wajib | `<input required>` | Mencegah pengiriman kosong |
 | `minlength`/`maxlength` | Batas panjang teks | `<input maxlength="20">` | Menegakkan batas karakter |
 | `min`/`max` | Rentang numerik | `<input min="0" max="1000">` | Memvalidasi batas angka |
-| `pattern` | Aturan regex kustom | `<input pattern="[A-Za-z]+">` | Mencocokkan format tertentu |
+| `pattern` | Aturan regex khusus | `<input pattern="[A-Za-z]+">` | Mencocokkan format tertentu |
 | `type` | Validasi tipe data | `<input type="email">` | Validasi format spesifik |
 
 ### Styling Validasi CSS
@@ -635,9 +717,9 @@ input:focus:invalid {
 - **Sorotan fokus**: Memberikan konteks visual yang jelas untuk lokasi input saat ini
 - **Gaya konsisten**: Membangun pola antarmuka yang dapat dipelajari pengguna
 
-> 💡 **Tips Profesional**: Gunakan pseudo-class CSS `:valid` dan `:invalid` untuk memberikan umpan balik visual langsung saat pengguna mengetik, menciptakan antarmuka yang responsif dan membantu.
+> 💡 **Tip Profesional**: Gunakan pseudo-class CSS `:valid` dan `:invalid` untuk memberikan umpan balik visual langsung saat pengguna mengetik, menciptakan antarmuka yang responsif dan membantu.
 
-### Menerapkan Validasi yang Komprehensif
+### Mengimplementasikan Validasi yang Komprehensif
 
 Mari tingkatkan formulir registrasi Anda dengan validasi yang kuat yang memberikan pengalaman pengguna yang luar biasa dan kualitas data yang baik:
 
@@ -683,18 +765,18 @@ Mari tingkatkan formulir registrasi Anda dengan validasi yang kuat yang memberik
 ```
 
 **Memahami validasi yang ditingkatkan:**
-- **Menggabungkan** indikator kolom wajib dengan deskripsi yang membantu
+- **Menggabungkan** indikator bidang wajib dengan deskripsi yang membantu
 - **Menyertakan** atribut `pattern` untuk validasi format
 - **Memberikan** atribut `title` untuk aksesibilitas dan tooltip
-- **Menambahkan** teks bantuan untuk memandu input pengguna
+- **Menambahkan** teks pembantu untuk membimbing input pengguna
 - **Menggunakan** struktur HTML semantik untuk aksesibilitas yang lebih baik
 
 ### Aturan Validasi Lanjutan
 
 **Apa yang dicapai oleh setiap aturan validasi:**
 
-| Kolom | Aturan Validasi | Manfaat Pengguna |
-|-------|-----------------|------------------|
+| Bidang | Aturan Validasi | Manfaat Pengguna |
+|-------|------------------|------------------|
 | Nama Pengguna | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Memastikan pengidentifikasi yang valid dan unik |
 | Mata Uang | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Menerima simbol mata uang umum |
 | Saldo | `min="0"`, `step="0.01"`, `type="number"` | Mencegah saldo negatif |
@@ -703,18 +785,18 @@ Mari tingkatkan formulir registrasi Anda dengan validasi yang kuat yang memberik
 ### Menguji Perilaku Validasi
 
 **Coba skenario validasi ini:**
-1. **Kirimkan** formulir dengan kolom wajib kosong
-2. **Masukkan** nama pengguna yang kurang dari 3 karakter
-3. **Coba** karakter khusus di kolom nama pengguna
+1. **Kirim** formulir dengan bidang wajib kosong
+2. **Masukkan** nama pengguna yang lebih pendek dari 3 karakter
+3. **Coba** karakter khusus di bidang nama pengguna
 4. **Masukkan** jumlah saldo negatif
 
 ![Screenshot menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.id.png)
 
-**Yang akan Anda amati:**
+**Apa yang akan Anda amati:**
 - **Browser menampilkan** pesan validasi bawaan
 - **Perubahan gaya** berdasarkan status `:valid` dan `:invalid`
 - **Pengiriman formulir** dicegah hingga semua validasi lolos
-- **Fokus otomatis** berpindah ke kolom pertama yang tidak valid
+- **Fokus otomatis** berpindah ke bidang pertama yang tidak valid
 
 ### Validasi Sisi Klien vs Sisi Server
 
@@ -735,12 +817,123 @@ graph LR
 **Mengapa Anda membutuhkan kedua lapisan:**
 - **Validasi sisi klien**: Memberikan umpan balik langsung dan meningkatkan pengalaman pengguna
 - **Validasi sisi server**: Memastikan keamanan dan menangani aturan bisnis yang kompleks
-- **Pendekatan gabungan**: Menciptakan aplikasi yang kuat, ramah pengguna, dan aman
-- **Peningkatan progresif**: Berfungsi bahkan ketika JavaScript dinonaktifkan
+- **Pendekatan gabungan**: Menciptakan aplikasi yang tangguh, ramah pengguna, dan aman
+- **Peningkatan progresif**: Berfungsi bahkan saat JavaScript dinonaktifkan
 
 > 🛡️ **Pengingat Keamanan**: Jangan pernah hanya mengandalkan validasi sisi klien! Pengguna jahat dapat melewati pemeriksaan sisi klien, jadi validasi sisi server sangat penting untuk keamanan dan integritas data.
 
+### ⚡ **Apa yang Bisa Anda Lakukan dalam 5 Menit Berikutnya**
+- [ ] Uji formulir Anda dengan data tidak valid untuk melihat pesan validasi
+- [ ] Coba kirimkan formulir dengan JavaScript dinonaktifkan untuk melihat validasi HTML5
+- [ ] Buka DevTools browser dan inspeksi data formulir yang dikirim ke server
+- [ ] Eksperimen dengan berbagai tipe input untuk melihat perubahan keyboard di perangkat seluler
+
+### 🎯 **Apa yang Bisa Anda Capai dalam Satu Jam**
+- [ ] Selesaikan kuis pasca-pelajaran dan pahami konsep penanganan formulir
+- [ ] Implementasikan tantangan validasi komprehensif dengan umpan balik waktu nyata
+- [ ] Tambahkan gaya CSS untuk membuat formulir terlihat profesional
+- [ ] Buat penanganan kesalahan untuk nama pengguna duplikat dan kesalahan server
+- [ ] Tambahkan bidang konfirmasi kata sandi dengan validasi pencocokan
+
+### 📅 **Perjalanan Penguasaan Formulir Anda Selama Seminggu**
+- [ ] Selesaikan aplikasi perbankan lengkap dengan fitur formulir lanjutan
+- [ ] Implementasikan kemampuan unggah file untuk foto profil atau dokumen
+- [ ] Tambahkan formulir multi-langkah dengan indikator kemajuan dan manajemen status
+- [ ] Buat formulir dinamis yang beradaptasi berdasarkan pilihan pengguna
+- [ ] Implementasikan penyimpanan otomatis formulir dan pemulihan untuk pengalaman pengguna yang lebih baik
+- [ ] Tambahkan validasi lanjutan seperti verifikasi email dan format nomor telepon
+
+### 🌟 **Penguasaan Pengembangan Frontend Anda Selama Sebulan**
+- [ ] Bangun aplikasi formulir kompleks dengan logika kondisional dan alur kerja
+- [ ] Pelajari pustaka dan kerangka kerja formulir untuk pengembangan cepat
+- [ ] Kuasai pedoman aksesibilitas dan prinsip desain inklusif
+- [ ] Implementasikan internasionalisasi dan lokalisasi untuk formulir global
+- [ ] Buat pustaka komponen formulir yang dapat digunakan kembali dan sistem desain
+- [ ] Berkontribusi pada proyek formulir open source dan bagikan praktik terbaik
+
+## 🎯 Garis Waktu Penguasaan Pengembangan Formulir Anda
+
+```mermaid
+timeline
+    title Form Development & User Experience Learning Progression
+    
+    section HTML Foundation (15 minutes)
+        Semantic Forms: Form elements
+                      : Input types
+                      : Labels and accessibility
+                      : Progressive enhancement
+        
+    section JavaScript Integration (25 minutes)
+        Event Handling: Form submission
+                      : Data collection
+                      : AJAX communication
+                      : Async/await patterns
+        
+    section Validation Systems (35 minutes)
+        Multi-layer Security: HTML5 validation
+                            : Client-side logic
+                            : Server-side verification
+                            : Error handling
+        
+    section User Experience (45 minutes)
+        Interface Polish: Loading states
+                        : Success messaging
+                        : Error recovery
+                        : Accessibility features
+        
+    section Advanced Patterns (1 week)
+        Professional Forms: Dynamic validation
+                          : Multi-step workflows
+                          : File uploads
+                          : Real-time feedback
+        
+    section Enterprise Skills (1 month)
+        Production Applications: Form libraries
+                               : Testing strategies
+                               : Performance optimization
+                               : Security best practices
+```
+
+### 🛠️ Ringkasan Toolkit Pengembangan Formulir Anda
+
+Setelah menyelesaikan pelajaran ini, Anda sekarang telah menguasai:
+- **Formulir HTML5**: Struktur semantik, tipe input, dan fitur aksesibilitas
+- **Penanganan Formulir JavaScript**: Manajemen peristiwa, pengumpulan data, dan komunikasi AJAX
+- **Arsitektur Validasi**: Validasi multi-lapisan untuk keamanan dan pengalaman pengguna
+- **Pemrograman Asinkron**: Fetch API modern dan pola async/await
+- **Manajemen Kesalahan**: Penanganan kesalahan yang komprehensif dan sistem umpan balik pengguna
+- **Desain Pengalaman Pengguna**: Status pemuatan, pesan sukses, dan pemulihan kesalahan
+- **Peningkatan Progresif**: Formulir yang berfungsi di semua browser dan kemampuan
+
+**Aplikasi Dunia Nyata**: Keterampilan pengembangan formulir Anda langsung berlaku untuk:
+- **Aplikasi E-commerce**: Proses checkout, registrasi akun, dan formulir pembayaran
+- **Perangkat Lunak Perusahaan**: Sistem entri data, antarmuka pelaporan, dan aplikasi alur kerja
+- **Manajemen Konten**: Platform penerbitan, konten yang dibuat pengguna, dan antarmuka administratif
+- **Aplikasi Keuangan**: Antarmuka perbankan, platform investasi, dan sistem transaksi
+- **Sistem Kesehatan**: Portal pasien, penjadwalan janji temu, dan formulir catatan medis
+- **Platform Pendidikan**: Registrasi kursus, alat penilaian, dan manajemen pembelajaran
+
+**Keterampilan Profesional yang Diperoleh**: Anda sekarang dapat:
+- **Merancang** formulir yang dapat diakses yang berfungsi untuk semua pengguna termasuk penyandang disabilitas
+- **Mengimplementasikan** validasi formulir yang aman yang mencegah korupsi data dan kerentanan keamanan
+- **Membuat** antarmuka pengguna yang responsif yang memberikan umpan balik dan panduan yang jelas
+- **Mendebug** interaksi formulir yang kompleks menggunakan alat pengembang browser dan analisis jaringan
+- **Mengoptimalkan** kinerja formulir melalui penanganan data dan strategi validasi yang efisien
+
+**Konsep Pengembangan Frontend yang Dikuasai**:
+- **Arsitektur Berbasis Peristiwa**: Penanganan interaksi pengguna dan sistem respons
+- **Pemrograman Asinkron**: Komunikasi server non-blok dan penanganan kesalahan
+- **Validasi Data**: Pemeriksaan keamanan dan integritas sisi klien dan server
+- **Desain Pengalaman Pengguna**: Antarmuka intuitif yang membimbing pengguna menuju keberhasilan
+- **Rekayasa Aksesibilitas**: Desain inklusif yang berfungsi untuk kebutuhan pengguna yang beragam
+
+**Tingkat Berikutnya**: Anda siap untuk menjelajahi pustaka formulir lanjutan, mengimplementasikan aturan validasi yang kompleks, atau membangun sistem pengumpulan data tingkat perusahaan!
+
+🌟 **Pencapaian Terkunci**: Anda telah membangun sistem penanganan formulir lengkap dengan validasi profesional, penanganan kesalahan, dan pola pengalaman pengguna!
+
 ---
+
+
 
 ---
 
@@ -749,32 +942,31 @@ graph LR
 Gunakan mode Agen untuk menyelesaikan tantangan berikut:
 
 **Deskripsi:** Tingkatkan formulir registrasi dengan validasi sisi klien yang komprehensif dan umpan balik pengguna. Tantangan ini akan membantu Anda berlatih validasi formulir, penanganan kesalahan, dan meningkatkan pengalaman pengguna dengan umpan balik interaktif.
+**Prompt:** Buat sistem validasi formulir lengkap untuk formulir pendaftaran yang mencakup: 1) Umpan balik validasi secara real-time untuk setiap kolom saat pengguna mengetik, 2) Pesan validasi khusus yang muncul di bawah setiap kolom input, 3) Kolom konfirmasi kata sandi dengan validasi kecocokan, 4) Indikator visual (seperti tanda centang hijau untuk kolom yang valid dan peringatan merah untuk kolom yang tidak valid), 5) Tombol kirim yang hanya aktif ketika semua validasi berhasil. Gunakan atribut validasi HTML5, CSS untuk menata status validasi, dan JavaScript untuk perilaku interaktif.
 
-**Prompt:** Buat sistem validasi formulir lengkap untuk formulir registrasi yang mencakup: 1) Umpan balik validasi real-time untuk setiap kolom saat pengguna mengetik, 2) Pesan validasi kustom yang muncul di bawah setiap kolom input, 3) Kolom konfirmasi kata sandi dengan validasi pencocokan, 4) Indikator visual (seperti tanda centang hijau untuk kolom valid dan peringatan merah untuk kolom tidak valid), 5) Tombol submit yang hanya aktif ketika semua validasi lolos. Gunakan atribut validasi HTML5, CSS untuk styling status validasi, dan JavaScript untuk perilaku interaktif.
-
-Pelajari lebih lanjut tentang [mode agen](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
+Pelajari lebih lanjut tentang [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) di sini.
 
 ## 🚀 Tantangan
 
 Tampilkan pesan kesalahan di HTML jika pengguna sudah ada.
 
-Berikut adalah contoh tampilan halaman login akhir setelah sedikit penyesuaian gaya:
+Berikut adalah contoh tampilan halaman login setelah ditambahkan beberapa gaya CSS:
 
 ![Screenshot halaman login setelah menambahkan gaya CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.id.png)
 
-## Kuis Pasca-Kuliah
+## Kuis Pasca-Pelajaran
 
-[Kuis pasca-kuliah](https://ff-quizzes.netlify.app/web/quiz/44)
+[Kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/quiz/44)
 
-## Tinjauan & Studi Mandiri
+## Tinjauan & Belajar Mandiri
 
-Para pengembang telah menjadi sangat kreatif dalam upaya membangun formulir mereka, terutama terkait strategi validasi. Pelajari berbagai alur formulir dengan melihat [CodePen](https://codepen.com); bisakah Anda menemukan beberapa formulir yang menarik dan menginspirasi?
+Para pengembang telah menjadi sangat kreatif dalam upaya mereka membangun formulir, terutama terkait strategi validasi. Pelajari berbagai alur formulir dengan melihat melalui [CodePen](https://codepen.com); bisakah Anda menemukan beberapa formulir yang menarik dan menginspirasi?
 
 ## Tugas
 
-[Atur gaya aplikasi bank Anda](assignment.md)
+[Tambahkan gaya pada aplikasi bank Anda](assignment.md)
 
 ---
 
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
