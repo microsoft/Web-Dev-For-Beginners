@@ -1,4 +1,4 @@
-# Build a Chat Assistant with AI
+# Build a Chat Assistant with AI 
 
 Remember in Star Trek when the crew would casually chat with the ship's computer, asking it complex questions and getting thoughtful responses? What seemed like pure science fiction in the 1960s is now something you can build using web technologies you already know.
 
