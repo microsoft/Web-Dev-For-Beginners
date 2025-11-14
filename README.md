@@ -87,17 +87,20 @@ git checkout -b rama2_nombreApellido1Estudiante
 ```
 
 ### 📄 Ediciones solicitadas del README
+
 En **rama 1**, añade:
 ```md
+
 ## Información técnica añadida desde rama 1
 En esta sección se describen los principales comandos de Git utilizados durante la práctica:
-- git init: (COMPLETAR)
-- git add: (COMPLETAR)
-- git commit: (COMPLETAR)
-- git branch: (COMPLETAR)
-- git merge: (COMPLETAR)
-- git push: (COMPLETAR)
+- git init: (Inicializa un repositorio Git en el directorio actual, creando la carpeta oculta `.git`.)
+- git add: (Añade archivos al área de staging. Ej: `git add archivo.txt` o `git add .` para todos los cambios.)
+- git commit: (Crea un commit con los cambios en el área de staging. Ej: `git commit -m "mensaje"`.)
+- git branch: (Lista o maneja ramas. Ej: `git branch` (listar), `git branch nombre` (crear).)
+- git merge: (Fusiona otra rama dentro de la rama actual. Ej: `git merge rama-feature`.)
+- git push: (Envía commits locales al repositorio remoto. Ej: `git push origin main`.)
 ```
+
 Luego:
 ```bash
 git add README.md
