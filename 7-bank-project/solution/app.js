@@ -2,89 +2,107 @@
 // Constants
 // ---------------------------------------------------------------------------
 
-const serverUrl = 'http://localhost:5000/api'; // reserved for future server swap
+const serverUrl = 'http://localhost:5000/api';
 const storageKey = 'savedAccount';
-const accountsKey = 'accounts';
-const schemaKey = 'schemaVersion';
-const schemaVersion = 1;
+const accountsKey = 'accounts'; // New key for all accounts
+const themeKey = 'appTheme'; // <--- NEW: Constant for theme storage
 
 // ---------------------------------------------------------------------------
-// Intl helpers
+// Theme Toggle Logic <--- NEW SECTION
 // ---------------------------------------------------------------------------
 
-const userLocale = navigator.language || 'en-IN';
-
-function isIsoCurrency(code) {
-  if (!code) return false;
-  const c = String(code).trim().toUpperCase();
-  if (!/^[A-Z]{3}$/.test(c)) return false;
-  // Verify against supported values when available
-  try {
-    if (typeof Intl.supportedValuesOf === 'function') {
-      return Intl.supportedValuesOf('currency').includes(c);
-    }
-  } catch {}
-  return true; // fallback accept 3-letter code
-}
-
-function toCurrency(amount, currency) {
-  const n = Number(amount);
-  if (!Number.isFinite(n)) return String(amount);
-  const c = String(currency || '').trim();
-  if (isIsoCurrency(c)) {
-    // Accounting style shows negatives in parentheses if supported
-    const fmt = new Intl.NumberFormat(userLocale, {
-      style: 'currency',
-      currency: c.toUpperCase(),
-      currencySign: 'accounting',
-      maximumFractionDigits: 2
-    });
-    return fmt.format(n);
+window.toggleTheme = function() {
+  const html = document.documentElement;
+  const isDark = html.classList.toggle('dark-mode');
+  
+  // Toggle visibility of sun/moon icons based on the active class
+  const sun = document.getElementById('sun-icon');
+  const moon = document.getElementById('moon-icon');
+  if (sun && moon) {
+      // If dark mode is active (isDark is true), hide the moon and show the sun
+      moon.classList.toggle('hidden', isDark);
+      sun.classList.toggle('hidden', !isDark);
   }
-  // Fallback: symbol + localized number
-  const num = new Intl.NumberFormat(userLocale, {
-    maximumFractionDigits: 2
-  }).format(n);
-  return c ? `${c} ${num}` : num;
+
+  // Save preference to local storage
+  localStorage.setItem(themeKey, isDark ? 'dark' : 'light');
 }
 
-function toDate(dateStr) {
-  // Expect yyyy-mm-dd; fallback to today if invalid
-  const d = dateStr ? new Date(dateStr) : new Date();
-  if (Number.isNaN(d.getTime())) return new Date();
-  return d;
+function applyThemeOnLoad() {
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem(themeKey);
+
+  // Default to system preference if no saved theme is found
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  let activateDark;
+  if (savedTheme) {
+    activateDark = savedTheme === 'dark';
+  } else {
+    activateDark = prefersDark;
+  }
+
+  if (activateDark) {
+    html.classList.add('dark-mode');
+  } else {
+    html.classList.remove('dark-mode');
+  }
+
+  // Ensure correct icon is visible on load (needs to wait for DOM elements)
+  // This logic runs again in updateRoute or dashboard refresh to ensure icons are set.
 }
 
-function formatDate(dateStr) {
-  const d = toDate(dateStr);
-  const fmt = new Intl.DateTimeFormat(userLocale, { dateStyle: 'medium' });
-  return fmt.format(d);
+// Attach the function to run after the DOM content is loaded
+document.addEventListener('DOMContentLoaded', applyThemeOnLoad);
+
+// ---------------------------------------------------------------------------
+// Router
+// ---------------------------------------------------------------------------
+
+const routes = {
+  '/dashboard': { title: 'My Account', templateId: 'dashboard', init: refresh },
+  '/login': { title: 'Login', templateId: 'login' }
+};
+
+function navigate(path) {
+  window.history.pushState({}, path, window.location.origin + path);
+  updateRoute();
+}
+
+function updateRoute() {
+  const path = window.location.pathname;
+  const route = routes[path];
+
+  if (!route) {
+    return navigate('/dashboard');
+  }
+
+  const template = document.getElementById(route.templateId);
+  const view = template.content.cloneNode(true);
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  app.appendChild(view);
+
+  if (typeof route.init === 'function') {
+    route.init();
+  }
+
+  // Re-run icon setup after template is rendered
+  applyThemeOnLoad(); // <--- UPDATED: Call applyThemeOnLoad here too, to set icon state
+
+  document.title = route.title;
 }
 
 // ---------------------------------------------------------------------------
-// Storage and state
+// API interactions (replaced with localStorage logic)
 // ---------------------------------------------------------------------------
-
-function safeParse(json, fallback) {
-  try { return JSON.parse(json); } catch { return fallback; }
-}
 
 function getAccounts() {
-  return safeParse(localStorage.getItem(accountsKey), []);
+  return JSON.parse(localStorage.getItem(accountsKey) || '[]');
 }
 
 function saveAccounts(accounts) {
   localStorage.setItem(accountsKey, JSON.stringify(accounts));
-}
-
-function migrateSchema() {
-  const v = Number(localStorage.getItem(schemaKey) || 0);
-  if (v >= schemaVersion) return;
-  let accounts = getAccounts();
-  // Example migration scaffolding:
-  // if (v < 1) { /* future migrations */ }
-  saveAccounts(accounts);
-  localStorage.setItem(schemaKey, String(schemaVersion));
 }
 
 function findAccount(user) {
@@ -93,209 +111,106 @@ function findAccount(user) {
 }
 
 async function getAccount(user) {
+  // Simulate async
   return new Promise(resolve => {
     setTimeout(() => {
       const acc = findAccount(user);
-      resolve(acc || { error: 'Account not found' });
-    }, 60);
+      if (!acc) resolve({ error: 'Account not found' });
+      else resolve(acc);
+    }, 100);
   });
-}
-
-function uuid() {
-  // Works on HTTPS and localhost; fallback otherwise
-  if (globalThis.crypto && typeof crypto.randomUUID === 'function') {
-    return crypto.randomUUID();
-  }
-  return 'tx-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
 }
 
 async function createAccount(accountJson) {
   return new Promise(resolve => {
     setTimeout(() => {
-      const data = safeParse(accountJson, null);
-      if (!data) return resolve({ error: 'Malformed account data' });
-      const user = String(data.user || '').trim();
-      if (!user) return resolve({ error: 'Username required' });
-      if (findAccount(user)) return resolve({ error: 'User already exists' });
-
-      const currency = String(data.currency || 'INR').trim();
+      let data;
+      try {
+        data = JSON.parse(accountJson);
+      } catch (e) {
+        return resolve({ error: 'Malformed account data' });
+      }
+      if (!data.user) return resolve({ error: 'Username required' });
+      if (findAccount(data.user)) return resolve({ error: 'User already exists' });
+      // Set up initial account structure
       const newAcc = {
-        user,
-        description: String(data.description || ''),
-        balance: Number(data.balance || 0) || 0,
-        currency: isIsoCurrency(currency) ? currency.toUpperCase() : currency,
+        user: data.user,
+        description: data.description || '',
+        balance: 0,
+        currency: data.currency || 'USD',
         transactions: []
       };
       const accounts = getAccounts();
       accounts.push(newAcc);
       saveAccounts(accounts);
       resolve(newAcc);
-    }, 80);
+    }, 100);
   });
 }
 
 async function createTransaction(user, transactionJson) {
   return new Promise(resolve => {
     setTimeout(() => {
-      const tx = safeParse(transactionJson, null);
-      if (!tx) return resolve({ error: 'Malformed transaction data' });
-
-      const amount = Number(tx.amount);
-      const object = String(tx.object || '').trim();
-      const dateStr = tx.date || new Date().toISOString().slice(0, 10);
-
-      if (!Number.isFinite(amount)) return resolve({ error: 'Amount must be a valid number' });
-      if (!object) return resolve({ error: 'Object is required' });
-
       const accounts = getAccounts();
       const idx = accounts.findIndex(acc => acc.user === user);
       if (idx === -1) return resolve({ error: 'Account not found' });
-
-      const newTx = {
-        id: uuid(),
-        date: dateStr,
-        object,
-        amount
-      };
-
-      // Update balance and push transaction
-      accounts[idx].balance = (Number(accounts[idx].balance) || 0) + amount;
-      accounts[idx].transactions = (accounts[idx].transactions || []);
-      accounts[idx].transactions.push(newTx);
-
+      const tx = JSON.parse(transactionJson);
+      tx.amount = parseFloat(tx.amount);
+      tx.date = tx.date || new Date().toISOString().slice(0, 10);
+      accounts[idx].balance += tx.amount;
+      accounts[idx].transactions.push(tx);
       saveAccounts(accounts);
-      resolve(newTx);
-    }, 80);
+      resolve(tx);
+    }, 100);
   });
 }
 
-// Keep a frozen state object to avoid accidental mutations
+// ---------------------------------------------------------------------------
+// Global state
+// ---------------------------------------------------------------------------
+
 let state = Object.freeze({
   account: null
 });
 
 function updateState(property, newData) {
-  state = Object.freeze({ ...state, [property]: newData });
-  // Persist active account only
+  state = Object.freeze({
+    ...state,
+    [property]: newData
+  });
   localStorage.setItem(storageKey, JSON.stringify(state.account));
 }
 
-// Cross-tab sync: refresh when accounts or active account change in another tab
-window.addEventListener('storage', (e) => {
-  if (e.key === accountsKey || e.key === storageKey) {
-    if (state.account?.user) {
-      refresh().catch(() => {});
-    }
-  }
-});
-
 // ---------------------------------------------------------------------------
-// DOM helpers
-// ---------------------------------------------------------------------------
-
-function qs(id) {
-  return document.getElementById(id);
-}
-
-function updateElement(id, textOrNode) {
-  const el = qs(id);
-  if (!el) return;
-  while (el.firstChild) el.removeChild(el.firstChild);
-  el.append(textOrNode);
-}
-
-// Resolve multiple possible IDs used by older markup
-function setTextByAnyId(ids, text) {
-  for (const id of ids) {
-    const el = qs(id);
-    if (el) { el.textContent = text; return true; }
-  }
-  return false;
-}
-
-// ---------------------------------------------------------------------------
-// Router
-// ---------------------------------------------------------------------------
-
-const routes = {
-  '/dashboard': { title: 'My Account', templateId: 'dashboard', init: refresh },
-  '/login': { title: 'Login', templateId: 'login', init: attachAuthHandlers }
-};
-
-function navigate(path) {
-  // Store path in history state and URL
-  history.pushState({ path }, '', path);
-  updateRoute();
-}
-
-function updateRoute() {
-  const path = history.state?.path || window.location.pathname;
-  const route = routes[path] || routes['/dashboard'];
-
-  const template = document.getElementById(route.templateId);
-  const view = template.content.cloneNode(true);
-  const app = document.getElementById('app');
-  app.innerHTML = '';
-  app.appendChild(view);
-
-  // Attach handlers after DOM is rendered
-  attachGlobalHandlers();
-
-  if (typeof route.init === 'function') {
-    Promise.resolve(route.init()).catch(err => console.error(err));
-  }
-  document.title = route.title;
-}
-
-// Browser back/forward
-window.addEventListener('popstate', () => updateRoute());
-
-// ---------------------------------------------------------------------------
-// Auth
+// Login/register
 // ---------------------------------------------------------------------------
 
 async function login() {
-  const form = qs('loginForm');
-  if (!form) return;
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-
-  const user = String(form.user.value || '').trim();
+  const loginForm = document.getElementById('loginForm')
+  const user = loginForm.user.value;
   const data = await getAccount(user);
-  if (data.error) return updateElement('loginError', data.error);
+
+  if (data.error) {
+    return updateElement('loginError', data.error);
+  }
 
   updateState('account', data);
   navigate('/dashboard');
 }
 
 async function register() {
-  const form = qs('registerForm');
-  if (!form) return;
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-
-  const data = Object.fromEntries(new FormData(form));
-  data.user = String(data.user || '').trim();
-  data.currency = String(data.currency || '').trim();
-  data.description = String(data.description || '').trim();
-  data.balance = Number(data.balance || 0) || 0;
-
+  const registerForm = document.getElementById('registerForm');
+  const formData = new FormData(registerForm);
+  const data = Object.fromEntries(formData);
   const jsonData = JSON.stringify(data);
   const result = await createAccount(jsonData);
 
-  if (result.error) return updateElement('registerError', result.error);
+  if (result.error) {
+    return updateElement('registerError', result.error);
+  }
 
   updateState('account', result);
   navigate('/dashboard');
-}
-
-function attachAuthHandlers() {
-  const loginForm = qs('loginForm');
-  if (loginForm) {
-    loginForm.addEventListener('submit', (e) => { e.preventDefault(); login(); });
-  }
-  const registerForm = qs('registerForm');
-  if (registerForm) {
-    registerForm.addEventListener('submit', (e) => { e.preventDefault(); register(); });
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -304,10 +219,14 @@ function attachAuthHandlers() {
 
 async function updateAccountData() {
   const account = state.account;
-  if (!account) return logout();
+  if (!account) {
+    return logout();
+  }
 
   const data = await getAccount(account.user);
-  if (data.error) return logout();
+  if (data.error) {
+    return logout();
+  }
 
   updateState('account', data);
 }
@@ -319,133 +238,89 @@ async function refresh() {
 
 function updateDashboard() {
   const account = state.account;
-  if (!account) return logout();
-
-  // Description (support both #description and #transactions-description subtitles)
-  setTextByAnyId(['description', 'transactions-description'], account.description || 'Transactions');
-
-  // Balance and currency
-  const balanceText = toCurrency(account.balance, account.currency);
-  setTextByAnyId(['balance', 'balance-value'], balanceText);
-
-  // Some markups use a separate currency span; keep it empty when using formatted output
-  setTextByAnyId(['balance-currency', 'currency'], '');
-
-  // Transactions (sorted by date desc, then by insertion order)
-  const tbody = qs('transactions');
-  if (!tbody) return;
-
-  const frag = document.createDocumentFragment();
-  const template = document.getElementById('transaction');
-
-  const sorted = [...(account.transactions || [])]
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
-
-  for (const tx of sorted) {
-    const row = template.content.cloneNode(true);
-    const tr = row.querySelector('tr');
-    const tds = tr.children;
-    tds[0].textContent = formatDate(tx.date);
-    tds[1].textContent = tx.object;
-    tds[2].textContent = toCurrency(tx.amount, account.currency);
-    if (tx.amount < 0) tr.classList.add('debit');
-    if (tx.amount > 0) tr.classList.add('credit');
-    frag.appendChild(row);
+  if (!account) {
+    return logout();
   }
 
-  tbody.innerHTML = '';
-  tbody.appendChild(frag);
+  updateElement('description', account.description);
+  updateElement('balance', account.balance.toFixed(2));
+  updateElement('currency', account.currency);
+
+  // Update transactions
+  const transactionsRows = document.createDocumentFragment();
+  for (const transaction of account.transactions) {
+    const transactionRow = createTransactionRow(transaction);
+    transactionsRows.appendChild(transactionRow);
+  }
+  updateElement('transactions', transactionsRows);
+}
+
+function createTransactionRow(transaction) {
+  const template = document.getElementById('transaction');
+  const transactionRow = template.content.cloneNode(true);
+  const tr = transactionRow.querySelector('tr');
+ 
+  // START: FIX - FORMAT DATE
+  // The date is typically stored as 'YYYY-MM-DD'. We convert it to 'MM/DD/YYYY' for display.
+  const dateParts = transaction.date.split('-');
+  const displayDate = dateParts[1] + '/' + dateParts[2] + '/' + dateParts[0]; 
+  // END: FIX
+
+  tr.children[0].textContent = displayDate; // Use displayDate
+  tr.children[1].textContent = transaction.object;
+  tr.children[2].textContent = transaction.amount.toFixed(2);
+  
+  // Optionally highlight positive/negative transactions
+  if (transaction.amount < 0) {
+    tr.classList.add('negative');
+  } else if (transaction.amount > 0) {
+    tr.classList.add('positive');
+  }
+
+  return transactionRow;
 }
 
 function addTransaction() {
-  const dialog = qs('transactionDialog');
-  if (!dialog) return;
+  const dialog = document.getElementById('transactionDialog');
   dialog.classList.add('show');
 
-  // Reset form and set today
-  const form = qs('transactionForm');
-  if (form) {
-    form.reset();
-    form.date.valueAsDate = new Date();
-    // Move focus to first field
-    form.date.focus();
-  }
+  // Reset form
+  const transactionForm = document.getElementById('transactionForm');
+  transactionForm.reset();
 
-  // Close handlers
-  const backdrop = dialog.querySelector('[data-dismiss]') || dialog;
-  backdrop.addEventListener('click', onDialogDismissClick);
-  dialog.addEventListener('keydown', onDialogKeydown);
-}
-
-function onDialogDismissClick(e) {
-  if (e.target?.hasAttribute?.('data-dismiss')) {
-    cancelTransaction();
-  }
-}
-
-function onDialogKeydown(e) {
-  if (e.key === 'Escape') {
-    cancelTransaction();
-  }
+  // Set date to today
+  transactionForm.date.valueAsDate = new Date();
 }
 
 async function confirmTransaction() {
-  const form = qs('transactionForm');
-  if (!form) return;
+  const dialog = document.getElementById('transactionDialog');
+  dialog.classList.remove('show');
 
-  // Inline validation
-  const amountVal = Number(form.amount.value);
-  const objectVal = String(form.object.value || '').trim();
-  if (!Number.isFinite(amountVal)) {
-    setFormError('transactionError', 'Amount must be a valid number');
-    return;
-  }
-  if (!objectVal) {
-    setFormError('transactionError', 'Object is required');
-    return;
-  }
+  const transactionForm = document.getElementById('transactionForm');
 
-  clearFormError('transactionError');
-
-  const jsonData = JSON.stringify(Object.fromEntries(new FormData(form)));
+  const formData = new FormData(transactionForm);
+  const jsonData = JSON.stringify(Object.fromEntries(formData));
   const data = await createTransaction(state.account.user, jsonData);
 
   if (data.error) {
-    setFormError('transactionError', data.error);
-    return;
+    return updateElement('transactionError', data.error);
   }
 
-  // Update local state
+  // Update local state with new transaction
   const newAccount = {
     ...state.account,
-    balance: (Number(state.account.balance) || 0) + data.amount,
-    transactions: [...(state.account.transactions || []), data]
-  };
+    balance: state.account.balance + data.amount,
+    transactions: [...state.account.transactions, data]
+  }
   updateState('account', newAccount);
 
-  // Close dialog and update view
-  cancelTransaction();
+  // Update display
   updateDashboard();
 }
 
-function setFormError(id, message) {
-  updateElement(id, message);
-  const el = qs(id);
-  if (el) el.focus();
-}
-
-function clearFormError(id) {
-  const el = qs(id);
-  if (el) el.textContent = '';
-}
-
-function cancelTransaction() {
-  const dialog = qs('transactionDialog');
-  if (!dialog) return;
+async function cancelTransaction() {
+  const dialog = document.getElementById('transactionDialog');
   dialog.classList.remove('show');
-  dialog.removeEventListener('keydown', onDialogKeydown);
-  const opener = document.querySelector('button[onclick="addTransaction()"]');
-  if (opener) opener.focus();
 }
 
 function logout() {
@@ -454,31 +329,22 @@ function logout() {
 }
 
 // ---------------------------------------------------------------------------
-// Global listeners
+// Utils
 // ---------------------------------------------------------------------------
 
-function attachGlobalHandlers() {
-  // Intercept form submissions for inline handlers in markup
-  const loginForm = qs('loginForm');
-  if (loginForm && !loginForm.__wired) {
-    loginForm.__wired = true;
-    loginForm.addEventListener('submit', (e) => { e.preventDefault(); login(); });
+function updateElement(id, textOrNode) {
+  const element = document.getElementById(id);
+  element.textContent = ''; // Removes all children
+
+  // START: FIX - Handle Text vs. Node/Fragment Appending Robustly
+  // When dealing with complex DOM nodes (like the DocumentFragment holding transactions),
+  // we must use appendChild. For simple text (like balance/error), textContent is fine.
+  if (textOrNode instanceof Node) {
+    element.appendChild(textOrNode);
+  } else {
+    element.textContent = textOrNode;
   }
-  const registerForm = qs('registerForm');
-  if (registerForm && !registerForm.__wired) {
-    registerForm.__wired = true;
-    registerForm.addEventListener('submit', (e) => { e.preventDefault(); register(); });
-  }
-  const txForm = qs('transactionForm');
-  if (txForm && !txForm.__wired) {
-    txForm.__wired = true;
-    txForm.addEventListener('submit', (e) => { e.preventDefault(); confirmTransaction(); });
-  }
-  const cancelBtn = document.querySelector('#transactionDialog [data-dismiss]');
-  if (cancelBtn && !cancelBtn.__wired) {
-    cancelBtn.__wired = true;
-    cancelBtn.addEventListener('click', cancelTransaction);
-  }
+  // END: FIX
 }
 
 // ---------------------------------------------------------------------------
@@ -486,20 +352,16 @@ function attachGlobalHandlers() {
 // ---------------------------------------------------------------------------
 
 function init() {
-  // Schema migration
-  migrateSchema();
-
-  // Restore active account
-  const saved = safeParse(localStorage.getItem(storageKey), null);
-  if (saved) updateState('account', saved);
-
-  // Seed history state if missing
-  if (!history.state || !history.state.path) {
-    const initialPath = state.account ? '/dashboard' : '/login';
-    history.replaceState({ path: initialPath }, '', initialPath);
+  // Restore state
+  const savedState = localStorage.getItem(storageKey);
+  if (savedState) {
+    updateState('account', JSON.parse(savedState));
   }
-
-  // Initial route render
+  
+  // applyThemeOnLoad() is now called via DOMContentLoaded and updateRoute
+  
+  // Update route for browser back/next buttons
+  window.onpopstate = () => updateRoute();
   updateRoute();
 }
 
