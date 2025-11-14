@@ -74,7 +74,7 @@ function getAccounts() {
 }
 
 function saveAccounts(accounts) {
-  localStorage.setItem(accountsKey, JSON.stringify(accounts));
+  localStorage.setItem(accountsKey, JSON.stringify(accounts));
 }
 
 function migrateSchema() {
@@ -88,8 +88,8 @@ function migrateSchema() {
 }
 
 function findAccount(user) {
-  const accounts = getAccounts();
-  return accounts.find(acc => acc.user === user) || null;
+  const accounts = getAccounts();
+  return accounts.find(acc => acc.user === user) || null;
 }
 
 async function getAccount(user) {
@@ -171,7 +171,7 @@ async function createTransaction(user, transactionJson) {
 
 // Keep a frozen state object to avoid accidental mutations
 let state = Object.freeze({
-  account: null
+  account: null
 });
 
 function updateState(property, newData) {
@@ -263,8 +263,8 @@ async function login() {
   const data = await getAccount(user);
   if (data.error) return updateElement('loginError', data.error);
 
-  updateState('account', data);
-  navigate('/dashboard');
+  updateState('account', data);
+  navigate('/dashboard');
 }
 
 async function register() {
@@ -283,8 +283,17 @@ async function register() {
 
   if (result.error) return updateElement('registerError', result.error);
 
-  updateState('account', result);
-  navigate('/dashboard');
+  const formData = new FormData(registerForm);
+  const data = Object.fromEntries(formData);
+  const jsonData = JSON.stringify(data);
+  const result = await createAccount(jsonData);
+
+  if (result.error) {
+    return updateElement('registerError', result.error);
+  }
+
+  updateState('account', result);
+  navigate('/dashboard');
 }
 
 function attachAuthHandlers() {
@@ -309,12 +318,12 @@ async function updateAccountData() {
   const data = await getAccount(account.user);
   if (data.error) return logout();
 
-  updateState('account', data);
+  updateState('account', data);
 }
 
 async function refresh() {
-  await updateAccountData();
-  updateDashboard();
+  await updateAccountData();
+  updateDashboard();
 }
 
 function updateDashboard() {
@@ -449,8 +458,8 @@ function cancelTransaction() {
 }
 
 function logout() {
-  updateState('account', null);
-  navigate('/login');
+  updateState('account', null);
+  navigate('/login');
 }
 
 // ---------------------------------------------------------------------------
