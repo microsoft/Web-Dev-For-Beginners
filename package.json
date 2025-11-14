@@ -1,0 +1,18 @@
+{
+  "name": "sdaw_6464",
+  "version": "1.0.0",
+  "description": "Proyecto base sdaw_6464 para práctica de Git y Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "Josué Daniel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+
+
