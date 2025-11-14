@@ -112,7 +112,8 @@ git log --oneline > log_oneline.txt
 Copia el contenido en el README bajo:
 ```md
 ## Información técnica añadida desde rama 2
-(COPIAR AQUÍ LA RESPUESTA POR EL COMANDO INDICADO EN EL PÁRRAFO ANTERIOR)
+(1370e7a docs(rama1): a├▒adir descripciones de comandos de Git
+eaab78a chore: inicializar proyecto SDAW_6464 (estructura base))
 ```
 Y sube los cambios:
 ```bash
