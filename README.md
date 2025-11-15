@@ -10,7 +10,7 @@
 
 [![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://discord.gg/zxKYvhSnVp?WT.mc_id=academic-000002-leestott)
 
-# Web Development for Beginners - A Curriculum
+# TITULO CAMBIADO
 
 ge retention with our effective project-based pedagogy. Start your coding journey today!
 
@@ -248,3 +248,5 @@ If you have product feedback or errors while building visit:
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+
+<!-- COMENTARIO DE PRUEBA -->
