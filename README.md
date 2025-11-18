@@ -145,8 +145,6 @@ git log --oneline --decorate --graph --all
 - Archivo `.gitignore` incluye `node_modules/` y otros temporales.
 - Puedes usar https://readme.so/ para pulir este README (sube su contenido y agrega secciones).
 
----
-
 
 ## Información técnica añadida desde rama 3
 
@@ -160,5 +158,50 @@ En la tarea anterior he aprendido a trabajar con Git y GitHub usando ramas, comm
 ```text
 1370e7a docs(rama1): a├▒adir descripciones de comandos de Git
 eaab78a chore: inicializar proyecto SDAW_6464 (estructura base)
+
+---
+
+```
+## Información técnica añadida desde rama 4
+
+Se incluye información para conectar un repositorio local con GitLab.
+
+Pasos realizados:
+
+1. Crear un proyecto vacío y público en GitLab con el nombre `SDAW_XXXX` (sin README).
+2. Copiar la URL del repositorio remoto (HTTPS o SSH).
+3. En el proyecto local ya inicializado con Git:
+   - Comprobar remotos existentes con:
+     ```bash
+     git remote -v
+     ```
+   - Añadir el nuevo remoto para GitLab sin borrar el de GitHub:
+     ```bash
+     git remote add gitlab https://gitlab.com/Josue09/sdaw_6464.git
+     ```
+4. Verificar que ahora existen dos remotos (origin = GitHub, gitlab = GitLab):
+   ```bash
+   git remote -v
+
+
+
+
+
+
+---
+
+
+## Información técnica añadida desde rama 3
+
+En esta rama incluyo una breve reflexión personal sobre lo aprendido en la tarea previa y el historial del repositorio.
+
+**Reflexión personal**  
+En la tarea anterior he aprendido a trabajar con Git y GitHub usando ramas, commits y pull requests. También he entendido mejor cómo resolver conflictos y mantener el repositorio actualizado sin perder información.
+
+**Salida del comando `git log --oneline --graph --all`**
+```text
+1370e7a docs(rama1): añadir descripciones de comandos de Git
+eaab78a chore: inicializar proyecto SDAW_6464 (estructura base)
+
 
 © STUDENT_NAME
