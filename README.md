@@ -191,4 +191,17 @@ Pasos realizados:
 ---
 
 
+## Información técnica añadida desde rama 3
+
+En esta rama incluyo una breve reflexión personal sobre lo aprendido en la tarea previa y el historial del repositorio.
+
+**Reflexión personal**  
+En la tarea anterior he aprendido a trabajar con Git y GitHub usando ramas, commits y pull requests. También he entendido mejor cómo resolver conflictos y mantener el repositorio actualizado sin perder información.
+
+**Salida del comando `git log --oneline --graph --all`**
+```text
+1370e7a docs(rama1): añadir descripciones de comandos de Git
+eaab78a chore: inicializar proyecto SDAW_6464 (estructura base)
+
+
 © STUDENT_NAME
