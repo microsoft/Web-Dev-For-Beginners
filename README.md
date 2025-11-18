@@ -1,7 +1,5 @@
 # SDAW_6464
 
-> Sustituye **XXXX** por las 4 últimas cifras de tu NRE y **STUDENT_NAME** por tu nombre real en los ficheros.
-
 Repositorio de práctica de control de versiones (Git + GitHub) y servidor Node.js mínimo.
 
 ## ✨ Objetivos
@@ -30,7 +28,6 @@ npm install
 npm start
 # Abre http://localhost:3000
 ```
-> El botón en `index.html` mostrará: **Hola STUDENT_NAME** (edita `script.js` para poner tu nombre real).
 
 ## 🧩 Comandos Git y Node.js utilizados
 ### Node.js
@@ -149,5 +146,19 @@ git log --oneline --decorate --graph --all
 - Puedes usar https://readme.so/ para pulir este README (sube su contenido y agrega secciones).
 
 ---
+
+
+## Información técnica añadida desde rama 3
+
+En esta rama incluyo una breve reflexión personal sobre lo aprendido en la tarea previa y el historial del repositorio.
+
+**Reflexión personal**  
+En la tarea anterior he aprendido a trabajar con Git y GitHub usando ramas, commits y pull requests. También he entendido mejor cómo resolver conflictos en el README y mantener el repositorio actualizado tanto en local como en remoto.
+
+**Salida del comando `git log --oneline --graph --all`**
+
+```text
+1370e7a docs(rama1): a├▒adir descripciones de comandos de Git
+eaab78a chore: inicializar proyecto SDAW_6464 (estructura base)
 
 © STUDENT_NAME
