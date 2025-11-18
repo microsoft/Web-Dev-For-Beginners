@@ -86,8 +86,6 @@ We'll show you the modern, secure ways to work with GitHub right from the start.
 
 When working with GitHub, it's important to follow security best practices:
 
-When working with GitHub, it's important to follow security best practices:
-
 | Security Area | Best Practice | Why It Matters |
 |---------------|---------------|----------------|
 | **Authentication** | Use SSH keys or Personal Access Tokens | Passwords are less secure and being phased out |
