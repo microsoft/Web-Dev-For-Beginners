@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
-  "translation_date": "2025-10-24T16:19:03+00:00",
+  "original_hash": "7f2c48e04754724123ea100a822765e5",
+  "translation_date": "2025-11-06T14:17:39+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "my"
 }
@@ -12,111 +12,161 @@ CO_OP_TRANSLATOR_METADATA:
 ![Accessibility အကြောင်းအားလုံး](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.my.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## မိန့်ခွန်းမတိုင်မီ စမ်းမေးခွန်း
-[မိန့်ခွန်းမတိုင်မီ စမ်းမေးခွန်း](https://ff-quizzes.netlify.app/web/)
+```mermaid
+journey
+    title Your Accessibility Learning Adventure
+    section Foundation
+      Understanding Users: 5: You
+      Testing Tools: 4: You
+      POUR Principles: 5: You
+    section Build Skills
+      Semantic HTML: 4: You
+      Visual Design: 5: You
+      ARIA Techniques: 4: You
+    section Master Practice
+      Keyboard Navigation: 5: You
+      Form Accessibility: 4: You
+      Real-world Testing: 5: You
+```
 
-> ဝဘ်၏ အင်အားသည် ၎င်း၏ အားလုံးအတွက် တူညီမှုတွင် ရှိသည်။ မသန်စွမ်းမှုမရှိမရှိ အားလုံးရောက်ရှိနိုင်မှုသည် အရေးပါသော အချက်တစ်ခုဖြစ်သည်။
+## မိမိကိုယ်တိုင် စစ်ဆေးမေးခွန်း
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/)
+
+> ဝဘ်၏ အားသာချက်မှာ ၎င်း၏ အထွေထွေသုံးနိုင်မှု ဖြစ်သည်။ မသန်စွမ်းမှုရှိသူများပါဝင်နိုင်မှုသည် အရေးပါသော အချက်တစ်ခုဖြစ်သည်။
 >
 > \- Sir Timothy Berners-Lee, W3C Director နှင့် World Wide Web တီထွင်သူ
 
-သင်ကို အံ့ဩစေမည့်အရာတစ်ခုရှိသည်—သင် ဝင်ရောက်နိုင်သော ဝဘ်ဆိုဒ်များ ဖန်တီးသောအခါ သင်သည် မသန်စွမ်းသူများကိုသာ မကူညီဘဲ ဝဘ်ကို အားလုံးအတွက် ပိုမိုကောင်းမွန်စေပါသည်။
+သင်ကို အံ့ဩစေမည့်အရာတစ်ခုရှိသည်—သင် ဝင်ရောက်နိုင်သော ဝဘ်ဆိုဒ်များ ဖန်တီးသောအခါ၊ သင် မသန်စွမ်းမှုရှိသူများကိုသာ မကူညီပေးဘဲ၊ ဝဘ်ကို အားလုံးအတွက် ပိုမိုကောင်းမွန်စေပါသည်။
 
-လမ်းထောင့်များတွင် curb cuts တွေကို သတိထားမိပါသလား။ ၎င်းတို့ကို စတင်စီမံကိန်းဆွဲခဲ့သည်မှာ လှေကားလှေကားများအတွက်ဖြစ်ပြီး ယခုအခါတွင် ကလေးလှေကားများ၊ ပို့ဆောင်ရေးလုပ်သားများ၊ ခရီးသွားများနှင့် စက်ဘီးစီးသူများအတွက်လည်း အကျိုးရှိစေပါသည်။ ဝင်ရောက်နိုင်သော ဝဘ်ဒီဇိုင်းသည် အတိအကျ ဒီလိုပဲဖြစ်သည်—အုပ်စုတစ်ခုအတွက် အကျိုးရှိသော ဖြေရှင်းနည်းများသည် အားလုံးအတွက် အကျိုးရှိလာသည်။ အရမ်းအေးလွန်းတယ်မဟုတ်လား။
+လမ်းထောင့်များတွင် ရှိသော ကားလမ်းကြမ်းများကို သတိထားမိပါသလား။ ၎င်းတို့ကို စတင်စီမံကိန်းချမှတ်ခဲ့သောအခါ၊ စက်လှည်းများအတွက် ရည်ရွယ်ခဲ့သည်။ ယခုအခါ၊ ၎င်းတို့သည် ကလေးလှည်းများ၊ ပစ္စည်းပို့သူများ၊ ခရီးသွားများနှင့် စက်ဘီးစီးသူများအတွက်ပါ အကျိုးရှိစေသည်။ ဝင်ရောက်နိုင်သော ဝဘ်ဒီဇိုင်းသည် အတိအကျ ဒီလိုပဲ—အုပ်စုတစ်ခုအတွက် အကျိုးရှိသော ဖြေရှင်းနည်းများသည် အားလုံးအတွက် အကျိုးရှိလာသည်။ အရမ်းအေးချမ်းတယ်၊ ဟုတ်လား?
 
-ဒီသင်ခန်းစာမှာ ဝဘ်ကို ဘယ်လို browse လုပ်ပုံမဆို အားလုံးအတွက် အလုပ်လုပ်နိုင်သော ဝဘ်ဆိုဒ်များ ဖန်တီးပုံကို လေ့လာသွားမည်။ ဝဘ်စံနှုန်းများတွင် ရှိပြီးသား အကျိုးရှိသောနည်းလမ်းများကို ရှာဖွေတွေ့ရှိပြီး စမ်းသပ်မှုကိရိယာများနှင့် လက်တွေ့လုပ်ဆောင်ခြင်းများကို လေ့လာပြီး သင်၏ ဝဘ်ဆိုဒ်များကို အားလုံးအတွက် ပိုမိုအသုံးပြုနိုင်စေမည့် accessibility ၏ အကျိုးကျေးဇူးကို မြင်တွေ့ရမည်။
+ဒီသင်ခန်းစာမှာ၊ ဝဘ်ကို ဘယ်လိုကြည့်ရှုသုံးစွဲနေပါစေ၊ အားလုံးအတွက် အလုပ်လုပ်နိုင်သော ဝဘ်ဆိုဒ်များ ဖန်တီးပုံကို လေ့လာသွားမည်။ ဝဘ်စံနှုန်းများတွင် ရှိပြီးသားသော လက်တွေ့နည်းလမ်းများကို ရှာဖွေတွေ့ရှိပြီး၊ စမ်းသပ်မှုကိရိယာများနှင့် လက်တွေ့ကျကျ လုပ်ဆောင်ပြီး၊ ဝင်ရောက်နိုင်မှုသည် သင့်ဝဘ်ဆိုဒ်များကို အားလုံးအတွက် ပိုမိုအသုံးပြုနိုင်စေသည့်ပုံကို မြင်တွေ့ရမည်။
 
-ဒီသင်ခန်းစာအဆုံးတွင် accessibility ကို သင်၏ ဖွံ့ဖြိုးတိုးတက်မှု workflow ၏ သဘာဝတစ်ခုအဖြစ် ဖန်တီးနိုင်မည့် ယုံကြည်မှုကို ရရှိမည်။ ဝဘ်ကို ဘီလျံချီသော အသုံးပြုသူများအတွက် ဖွင့်လှစ်နိုင်စေရန် စဉ်းစားထားသော ဒီဇိုင်းရွေးချယ်မှုများကို ရှာဖွေလိုက်ရအောင်!
+ဒီသင်ခန်းစာအဆုံးတွင်၊ ဝင်ရောက်နိုင်မှုကို သင့်ဖွံ့ဖြိုးတိုးတက်မှုလုပ်ငန်းစဉ်၏ သဘာဝတရားတစ်ခုအဖြစ် ဖန်တီးနိုင်မည့် ယုံကြည်မှုကို ရရှိမည်။ သန်းပေါင်းများစွာသော အသုံးပြုသူများအတွက် ဝဘ်ကို ဖွင့်လှစ်ပေးနိုင်မည့် ဒီဇိုင်းရွေးချယ်မှုများကို ရှာဖွေဖို့ အသင့်ဖြစ်ပြီလား? စတင်လိုက်ကြစို့!
 
-> ဒီသင်ခန်းစာကို [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon) တွင် လေ့လာနိုင်ပါသည်။
+```mermaid
+mindmap
+  root((Web Accessibility))
+    Users
+      Screen readers
+      Keyboard navigation
+      Voice control
+      Magnification
+    Technologies
+      HTML semantics
+      ARIA attributes
+      CSS focus indicators
+      Keyboard events
+    Benefits
+      Wider audience
+      Better SEO
+      Legal compliance
+      Universal design
+    Testing
+      Automated tools
+      Manual testing
+      User feedback
+      Real assistive tech
+```
 
-## Assistive Technologies ကို နားလည်ခြင်း
+> သင်ဤသင်ခန်းစာကို [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon) တွင် လေ့လာနိုင်သည်!
 
-Coding ကို စတင်မလုပ်မီ မတူကွဲပြားသော စွမ်းရည်များရှိသော လူများသည် ဝဘ်ကို ဘယ်လို အတွေ့အကြုံရှိကြသည်ကို နားလည်ရန် အချိန်ယူလိုက်ပါ။ ၎င်းသည် သီအိုရီသာမက အမှန်တကယ် navigation patterns များကို နားလည်ခြင်းသည် သင်ကို ပိုမိုကောင်းမွန်သော developer ဖြစ်စေမည်။
+## အကူအညီပေးသော နည်းပညာများကို နားလည်ခြင်း
 
-Assistive technologies သည် မသန်စွမ်းသူများကို ဝဘ်ဆိုဒ်များနှင့် အပြန်အလှန်ဆက်သွယ်နိုင်စေရန် အံ့ဩစရာကောင်းသော ကိရိယာများဖြစ်သည်။ ဒီ technologies များ ဘယ်လိုအလုပ်လုပ်သည်ကို နားလည်ပြီးရင် ဝင်ရောက်နိုင်သော ဝဘ်အတွေ့အကြုံများ ဖန်တီးခြင်းသည် ပိုမိုလွယ်ကူလာမည်။ ၎င်းသည် တစ်စုံတစ်ဦး၏ မျက်လုံးမှ သင်၏ code ကို မြင်နိုင်ရန် လေ့လာခြင်းနှင့် တူသည်။
+ကုဒ်ရေးသားခြင်းကို စတင်မတိုင်မီ၊ မတူကွဲပြားသော စွမ်းရည်များရှိသော လူများသည် ဝဘ်ကို အကယ်၍ ဘယ်လိုတွေ့ကြုံရလဲဆိုတာကို နားလည်ရန် အချိန်ယူကြည့်ပါ။ ၎င်းသည် သီအိုရီသာမက၊ အမှန်တကယ်ရှိသော လမ်းကြောင်းများကို နားလည်ခြင်းသည် သင့်ကို ပိုမိုကောင်းမွန်သော Developer ဖြစ်စေမည်။
+
+အကူအညီပေးသော နည်းပညာများသည် မသန်စွမ်းမှုရှိသော လူများကို ဝဘ်ဆိုဒ်များနှင့် အပြန်အလှန်ဆက်သွယ်နိုင်စေရန် အကူအညီပေးသော အံ့ဩဖွယ်ကိရိယာများဖြစ်သည်။ ၎င်းတို့၏ လုပ်ဆောင်ပုံကို နားလည်ပြီးနောက်၊ ဝင်ရောက်နိုင်သော ဝဘ်အတွေ့အကြုံများ ဖန်တီးခြင်းသည် ပိုမိုလွယ်ကူလာသည်။ ၎င်းသည် တစ်စုံတစ်ဦး၏ မျက်လုံးများမှ သင့်ကုဒ်ကို မြင်နိုင်ရန် သင်ယူခြင်းနှင့် တူသည်။
 
 ### Screen readers
 
-[Screen readers](https://en.wikipedia.org/wiki/Screen_reader) သည် ဒစ်ဂျစ်တယ်စာသားများကို အသံသို့မဟုတ် braille output အဖြစ် ပြောင်းလဲပေးသော နည်းပညာများဖြစ်သည်။ ၎င်းတို့ကို အဓိကအားဖြင့် မျက်စိမမြင်သူများ အသုံးပြုသော်လည်း dyslexia ကဲ့သို့သော သင်ယူမှုမသန်စွမ်းမှုများရှိသော အသုံးပြုသူများအတွက်လည်း အကျိုးရှိစေသည်။
+[Screen readers](https://en.wikipedia.org/wiki/Screen_reader) သည် ဒစ်ဂျစ်တယ်စာသားကို အသံသို့မဟုတ် braille output အဖြစ် ပြောင်းလဲပေးသော နည်းပညာများဖြစ်သည်။ ၎င်းတို့ကို အဓိကအားဖြင့် မျက်စိမမြင်သူများ အသုံးပြုသော်လည်း၊ dyslexia ကဲ့သို့သော သင်ယူမှုမသန်စွမ်းမှုရှိသူများအတွက်လည်း အထောက်အကူဖြစ်စေသည်။
 
-Screen reader ကို စာအုပ်ကို ဖတ်ပေးနေသော narrator တစ်ဦးအဖြစ် စဉ်းစားနိုင်သည်။ ၎င်းသည် အကြောင်းအရာများကို အဆင့်ဆင့် ဖတ်ပေးပြီး "button" သို့မဟုတ် "link" ကဲ့သို့သော interactive elements များကို ကြေညာပေးပြီး စာမျက်နှာတစ်ခုလုံးကို လွယ်ကူစွာ သွားလာနိုင်ရန် keyboard shortcuts များကို ပေးသည်။ သို့သော် screen readers များသည် သင် developer အဖြစ် ဝဘ်ဆိုဒ်များကို သင့်တော်သော structure နှင့် အဓိပ္ပာယ်ရှိသော အကြောင်းအရာများဖြင့် ဖန်တီးပါကသာ ၎င်းတို့၏ magic ကို အလုပ်လုပ်နိုင်မည်။ 
+Screen reader ကို စာအုပ်ကို အရမ်းတော်သော storyteller တစ်ဦးက ဖတ်ပေးနေသလို ထင်ရသည်။ ၎င်းသည် အကြောင်းအရာကို အစဉ်အတိုင်း အသံထွက်ဖတ်ပေးပြီး၊ "button" သို့မဟုတ် "link" ကဲ့သို့သော အပြန်အလှန်ဆက်သွယ်မှုအရာများကို ကြေညာပေးပြီး၊ စာမျက်နှာတစ်ခုကို လွယ်ကူစွာ သွားလာနိုင်ရန် ကီးဘုတ် shortcut များကို ပေးသည်။ ဒါပေမယ့် Screen reader များသည် သင့် Developer အနေနဲ့ သင့်ဝဘ်ဆိုဒ်ကို သင့်တော်သော ဖွဲ့စည်းမှုနှင့် အဓိပ္ပါယ်ရှိသော အကြောင်းအရာများဖြင့် ဖန်တီးမှသာ ၎င်းတို့၏ အံ့ဩဖွယ်အလုပ်များကို လုပ်ဆောင်နိုင်သည်။
 
-**Platform များအတွက် လူကြိုက်များသော screen readers:**
+**Platform များအတွက် လူကြိုက်များသော Screen readers:**
 - **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (အခမဲ့နှင့် လူကြိုက်များဆုံး), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (built-in)
-- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (built-in နှင့် အရမ်းတန်ဖိုးရှိ)
+- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (built-in နှင့် အရမ်းတော်)
 - **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (built-in)
 - **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (အခမဲ့နှင့် open-source)
 
-**Screen readers များသည် ဝဘ်အကြောင်းအရာကို ဘယ်လို navigate လုပ်သလဲ:**
+**Screen readers များသည် ဝဘ်အကြောင်းအရာကို ဘယ်လိုသွားလာကြည့်ရှုသလဲ:**
 
-Screen readers များသည် အတွေ့အကြုံရှိသော အသုံးပြုသူများအတွက် browsing ကို ထိရောက်စွာလုပ်ဆောင်နိုင်ရန် navigation နည်းလမ်းများစွာကို ပေးသည်။
-- **Sequential reading**: စာအုပ်တစ်အုပ်ကို ဖတ်သလို အကြောင်းအရာကို အပေါ်မှ အောက်သို့ ဖတ်သည်။
-- **Landmark navigation**: စာမျက်နှာအပိုင်းများ (header, nav, main, footer) အကြား jump လုပ်သည်။
-- **Heading navigation**: Headings အကြား skip လုပ်ပြီး စာမျက်နှာ structure ကို နားလည်သည်။
-- **Link lists**: အားလုံး link များကို စာရင်းပြုလုပ်ပြီး လွယ်ကူစွာ access လုပ်သည်။
-- **Form controls**: Input fields နှင့် buttons အကြား တိုက်ရိုက် navigate လုပ်သည်။
+Screen readers များသည် အတွေ့အကြုံရှိသော အသုံးပြုသူများအတွက် browsing ကို ထိရောက်စွာလုပ်ဆောင်နိုင်ရန် လမ်းကြောင်းများစွာကို ပေးသည်။
+- **Sequential reading**: စာအုပ်လိုမျိုး အပေါ်မှ အောက်သို့ အကြောင်းအရာကို ဖတ်သည်
+- **Landmark navigation**: စာမျက်နှာအပိုင်းများ (header, nav, main, footer) အကြား သွားလာသည်
+- **Heading navigation**: Heading များအကြား သွားလာပြီး စာမျက်နှာဖွဲ့စည်းမှုကို နားလည်သည်
+- **Link lists**: လွယ်ကူစွာ ဝင်ရောက်နိုင်ရန် link အားလုံးကို စာရင်းပြုလုပ်သည်
+- **Form controls**: input field နှင့် button များအကြား တိုက်ရိုက်သွားလာသည်
 
-> 💡 **ဤအရာသည် ကျွန်ုပ်ကို အံ့ဩစေခဲ့သည်**: Screen reader အသုံးပြုသူ 68% သည် headings အားဖြင့် အဓိက navigate လုပ်ကြသည် ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))။ ၎င်းသည် သင်၏ heading structure သည် အသုံးပြုသူများအတွက် roadmap တစ်ခုဖြစ်သည်—သင်မှန်ကန်စွာလုပ်ဆောင်ပါက သင်၏ အကြောင်းအရာကို ပိုမိုလျင်မြန်စွာ ရှာဖွေဖော်ထုတ်နိုင်ရန် ကူညီပေးနေသည်။
+> 💡 **အံ့ဩစရာကောင်းသောအချက်**: Screen reader အသုံးပြုသူ 68% သည် heading များဖြင့် အဓိကအားဖြင့် သွားလာကြသည် ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))။ ၎င်းသည် သင့် heading ဖွဲ့စည်းမှုသည် အသုံးပြုသူများအတွက် လမ်းပြမြေပုံတစ်ခုလိုဖြစ်သည်—သင့်ဖွဲ့စည်းမှုမှန်ကန်သောအခါ၊ လူများကို သင့်အကြောင်းအရာကို ပိုမိုလျင်မြန်စွာ ရှာဖွေသွားနိုင်ရန် ကူညီပေးနေသည်။
 
-### သင်၏ စမ်းသပ်မှု workflow ကို တည်ဆောက်ခြင်း
+### Testing workflow ကို တည်ဆောက်ခြင်း
 
-သတင်းကောင်းတစ်ခုရှိသည်—ထိရောက်သော accessibility စမ်းသပ်မှုသည် အလွန်ခက်ခဲသောအရာမဟုတ်ပါ! သင်သည် automated tools များ (၎င်းတို့သည် ထင်ရှားသော အခက်အခဲများကို ဖမ်းဆီးရန် အလွန်ကောင်းမွန်သည်) နှင့် လက်တွေ့စမ်းသပ်မှုများကို ပေါင်းစပ်လိုက်ရမည်။ ဒီမှာ ကျွန်ုပ်တွေ့ရှိခဲ့တဲ့ စနစ်တကျ approach တစ်ခုရှိပါတယ်၊ ၎င်းသည် သင်၏ တစ်နေ့လုံးကို မကုန်ဆုံးစေဘဲ အခက်အခဲများကို အများဆုံးဖမ်းဆီးနိုင်စေပါသည်။
+သတင်းကောင်းတစ်ခုရှိသည်—ထိရောက်သော ဝင်ရောက်နိုင်မှု စမ်းသပ်ခြင်းသည် အလွန်ခက်ခဲစရာမလိုပါ! သင်သည် အလွယ်တကူ အမှားများကို ဖမ်းဆီးနိုင်သော automated tools များနှင့် လက်တွေ့စမ်းသပ်မှုကို ပေါင်းစပ်လိုက်ရမည်။ အချိန်ကုန်သက်သာစွာ အများဆုံးအမှားများကို ဖမ်းဆီးနိုင်သော စနစ်တကျ လုပ်ဆောင်မှုကို အောက်တွင် ဖော်ပြထားသည်။
 
-**အရေးကြီးသော လက်တွေ့စမ်းသပ်မှု workflow:**
+**အရေးပါသော လက်တွေ့စမ်းသပ်မှုလုပ်ငန်းစဉ်:**
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
+flowchart TD
+    A[🚀 Start Testing] --> B{⌨️ Keyboard Navigation}
     B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
+    C --> D{🎧 Screen Reader Testing}
     D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
+    E --> F{🔍 Zoom Testing}
     F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
+    G --> H{🎨 Color/Contrast Check}
     H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
+    I --> J{👁️ Focus Management}
     J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+    K --> L[✅ Testing Complete]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
 ```
 
-**အဆင့်ဆင့် စမ်းသပ်မှု စစ်ဆေးစာရင်း:**
-1. **Keyboard navigation**: Tab, Shift+Tab, Enter, Space, နှင့် Arrow keys ကိုသာ အသုံးပြုပါ။
-2. **Screen reader စမ်းသပ်မှု**: NVDA, VoiceOver, သို့မဟုတ် Narrator ကို enable လုပ်ပြီး မျက်လုံးပိတ်ထားပြီး navigate လုပ်ပါ။
-3. **Zoom စမ်းသပ်မှု**: 200% နှင့် 400% zoom အဆင့်များတွင် စမ်းသပ်ပါ။
-4. **Color contrast verification**: အားလုံး text နှင့် UI components များကို စစ်ဆေးပါ။
-5. **Focus indicator စမ်းသပ်မှု**: Interactive elements အားလုံးတွင် focus states တွေကို မြင်နိုင်စေရန် သေချာပါစေ။
+**အဆင့်လိုက် စမ်းသပ်မှု စစ်ဆေးစာရင်း:**
+1. **Keyboard navigation**: Tab, Shift+Tab, Enter, Space, နှင့် Arrow key များကိုသာ အသုံးပြုပါ
+2. **Screen reader စမ်းသပ်မှု**: NVDA, VoiceOver, သို့မဟုတ် Narrator ကို ဖွင့်ပြီး မျက်လုံးပိတ်ထား၍ သွားလာပါ
+3. **Zoom စမ်းသပ်မှု**: 200% နှင့် 400% zoom အဆင့်များတွင် စမ်းသပ်ပါ
+4. **Color contrast verification**: စာသားများနှင့် UI components အားလုံးကို စစ်ဆေးပါ
+5. **Focus indicator စမ်းသပ်မှု**: အပြန်အလှန်ဆက်သွယ်မှုအရာအားလုံးတွင် မြင်သာသော focus states ရှိကြောင်း သေချာပါ
 
-✅ **Lighthouse ဖြင့် စတင်ပါ**: သင်၏ browser ၏ DevTools ကို ဖွင့်ပြီး Lighthouse accessibility audit ကို run လုပ်ပါ၊ ထို့နောက် သင်၏ လက်တွေ့စမ်းသပ်မှု အာရုံစိုက်မှုဧရိယာများကို လမ်းညွှန်ရန် ရလဒ်များကို အသုံးပြုပါ။
+✅ **Lighthouse ဖြင့် စတင်ပါ**: သင့် browser ၏ DevTools ကို ဖွင့်ပြီး Lighthouse accessibility audit ကို run လုပ်ပါ၊ ထို့နောက် သင့် manual testing focus areas ကို လမ်းညွှန်ရန် ရလဒ်များကို အသုံးပြုပါ။
 
 ### Zoom နှင့် magnification tools
 
-တစ်ခါတစ်ရံ သင်၏ဖုန်းတွင် စာသားများ သေးလွန်းသောအခါ pinch-to-zoom လုပ်ပြီး၊ သို့မဟုတ် အလင်းရောင်ပြင်းထန်သောနေရာတွင် laptop screen ကို squint လုပ်ကြည့်ရသလို၊ အချို့သော အသုံးပြုသူများသည် အကြောင်းအရာကို ဖတ်နိုင်ရန် အမြဲတမ်း magnification tools များကို အားထားရသည်။ ၎င်းသည် မျက်စိမကောင်းသူများ၊ အသက်ကြီးသူများနှင့် အပြင်မှာ ဝဘ်ဆိုဒ်ကို ဖတ်ဖို့ ကြိုးစားသူများအတွက်ပါ အကျိုးရှိစေသည်။
+တစ်ခါတစ်ရံ သင့်ဖုန်းတွင် စာသားများ သေးလွန်းသောအခါ pinch-to-zoom လုပ်ပြီး၊ သို့မဟုတ် laptop screen ကို အလင်းရောင်ပြင်းထန်သောနေရာတွင် မျက်လုံးဖြင့် ကြည့်ရသောအခါကို သတိထားမိပါသလား? မျက်စိမကောင်းသူများ၊ အသက်ကြီးသူများ၊ သို့မဟုတ် အပြင်မှာ ဝဘ်ဆိုဒ်ကို ဖတ်ဖို့ ကြိုးစားသူများအတွက် အကြောင်းအရာကို ဖတ်နိုင်စေရန် magnification tools များကို နေ့စဉ်အသုံးပြုနေသည်။
 
-ခေတ်သစ် zoom နည်းပညာများသည် အကြောင်းအရာများကို ကြီးမားစေခြင်းသာမက ပိုမိုတိုးတက်လာသည်။ ဒီ tools များ ဘယ်လိုအလုပ်လုပ်သည်ကို နားလည်ခြင်းသည် magnification အဆင့်မည်သည့်အဆင့်တွင်မဆို functional နှင့် attractive ဖြစ်နေသော responsive designs များ ဖန်တီးနိုင်ရန် ကူညီပေးမည်။
+ခေတ်မီ zoom နည်းပညာများသည် အကြောင်းအရာများကို ရိုးရိုးကြီးစေခြင်းထက် ပိုမိုတိုးတက်လာသည်။ ၎င်းတို့၏ လုပ်ဆောင်ပုံကို နားလည်ခြင်းသည် မည်သည့် magnification အဆင့်တွင်မဆို အလုပ်လုပ်နိုင်သော responsive designs များ ဖန်တီးရန် ကူညီပေးမည်။
 
-**ခေတ်သစ် browser zoom capabilities:**
-- **Page zoom**: အကြောင်းအရာအားလုံးကို proportionally scale လုပ်သည် (text, images, layout) - ၎င်းသည် preferred method ဖြစ်သည်။
-- **Text-only zoom**: Font size ကို original layout ကို ထိန်းသိမ်းထားပြီး တိုးမြှင့်သည်။
-- **Pinch-to-zoom**: Mobile gesture support သို့မဟုတ် temporary magnification
-- **Browser support**: ခေတ်သစ် browser အားလုံးသည် 500% zoom အထိ functionality မပျက်စီးဘဲ support လုပ်သည်။
+**ခေတ်မီ browser zoom စွမ်းရည်များ:**
+- **Page zoom**: အကြောင်းအရာအားလုံးကို အချိုးကျစွာ ပိုမိုကြီးစေသည် (စာသား, ပုံများ, layout) - ၎င်းသည် အကြံပြုထားသော နည်းလမ်းဖြစ်သည်
+- **Text-only zoom**: font size ကို တိုးမြှင့်ပြီး မူရင်း layout ကို ထိန်းသိမ်းထားသည်
+- **Pinch-to-zoom**: အချိန်ပိုင်း magnification အတွက် mobile gesture support
+- **Browser support**: ခေတ်မီ browser အားလုံးသည် 500% zoom အထိ functionality မပျက်စီးဘဲ ပံ့ပိုးပေးသည်
 
-**Specialized magnification software:**
+**အထူး magnification software:**
 - **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (built-in), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
-- **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (built-in နှင့် advanced features ပါရှိသည်)
+- **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (built-in with advanced features)
 
-> ⚠️ **Design Consideration**: WCAG သည် content ကို 200% zoom လုပ်သောအခါ functional ဖြစ်နေစေရန် လိုအပ်သည်။ ဒီအဆင့်တွင် horizontal scrolling သင့်လျှော်မှုရှိရမည်၊ interactive elements အားလုံးသည် accessible ဖြစ်နေရမည်။
+> ⚠️ **ဒီဇိုင်းစဉ်းစားမှု**: WCAG သတ်မှတ်ချက်အရ အကြောင်းအရာသည် 200% zoom လုပ်သောအခါတွင် အလုပ်လုပ်နိုင်ရမည်။ ဤအဆင့်တွင် horizontal scrolling သက်သာပြီး၊ အပြန်အလှန်ဆက်သွယ်မှုအရာအားလုံးသည် ဝင်ရောက်နိုင်ရမည်။
 
-✅ **Responsive design ကို စမ်းသပ်ပါ**: သင်၏ browser ကို 200% နှင့် 400% zoom လုပ်ပါ။ သင်၏ layout သည် gracefully adapt လုပ်ပါသလား။ သင် excessive scrolling မရှိဘဲ functionality အားလုံးကို access လုပ်နိုင်ပါသလား။
+✅ **Responsive design ကို စမ်းသပ်ပါ**: သင့် browser ကို 200% နှင့် 400% zoom လုပ်ပါ။ သင့် layout သည် လွယ်ကူစွာ အလျော်အစားလုပ်ပါသလား? အလွန် scrolling မရှိဘဲ functionality အားလုံးကို သုံးနိုင်ပါသလား?
 
-## ခေတ်သစ် Accessibility စမ်းသပ်မှု Tools
+## ခေတ်မီ ဝင်ရောက်နိုင်မှု စမ်းသပ်မှုကိရိယာများ
 
-Assistive technologies များဖြင့် ဝဘ်ကို ဘယ်လို navigate လုပ်ကြသည်ကို နားလည်ပြီးရင် ဝင်ရောက်နိုင်သော ဝဘ်ဆိုဒ်များကို တည်ဆောက်ခြင်းနှင့် စမ်းသပ်ခြင်းအတွက် ကူညီပေးသော tools များကို လေ့လာလိုက်ပါ။
+အခု သင်သည် ဝဘ်ကို assistive technologies ဖြင့် သွားလာပုံကို နားလည်ပြီးနောက်၊ ဝင်ရောက်နိုင်သော ဝဘ်ဆိုဒ်များ ဖန်တီးရန်နှင့် စမ်းသပ်ရန် ကူညီပေးသော ကိရိယာများကို လေ့လာကြည့်ပါ။
 
-ဒီလိုစဉ်းစားပါ—automated tools များသည် ထင်ရှားသော အခက်အခဲများ (missing alt text ကဲ့သို့သော) ကို ဖမ်းဆီးရန် အလွန်ကောင်းမွန်သည်၊ လက်တွေ့စမ်းသပ်မှုများသည် သင်၏ site ကို အမှန်တကယ် အသုံးပြုရသည့် အတွေ့အကြုံကို သေချာစေသည်။ ၎င်းတို့ကို ပေါင်းစပ်ပြီး သင်၏ sites များသည် အားလုံးအတွက် အလုပ်လုပ်နိုင်မည်ဆိုသော ယုံကြည်မှုကို ပေးသည်။
+ဤအရာကို ဒီလိုထင်ပါ—automated tools များသည် အလွယ်တကူ အမှားများ (ဥပမာ alt text မရှိခြင်း) ကို ဖမ်းဆီးနိုင်ပြီး၊ လက်တွေ့စမ်းသပ်မှုသည် သင့် site ကို အမှန်တကယ် အသုံးပြုရသည့်အခါ သက်တောင့်သက်သာဖြစ်စေရန် ကူညီပေးသည်။ ၎င်းတို့ကို ပေါင်းစပ်ပြီး သင့် site များသည် အားလုံးအတွက် အလုပ်လုပ်နိုင်ကြောင်း ယုံကြည်မှုရရှိစေသည်။
 
 ### Color contrast စမ်းသပ်ခြင်း
 
-သတင်းကောင်းတစ်ခုရှိသည်—color contrast သည် အများဆုံးတွေ့ရသော accessibility အခက်အခဲတစ်ခုဖြစ်သော်လည်း ၎င်းကို ပြုပြင်ရန် အလွန်လွယ်ကူသည်။ ကောင်းမွန်သော contrast သည် အားလုံးအတွက် အကျိုးရှိစေသည်—မျက်စိမကောင်းသူများမှ စ၍ ပင်လယ်ကမ်းခြေတွင် ဖုန်းကို ဖတ်ရန် ကြိုးစားသူများအထိ။
+သတင်းကောင်းတစ်ခုရှိသည်—color contrast သည် အများဆုံးတွေ့ရသော ဝင်ရောက်နိုင်မှုပြဿနာတစ်ခုဖြစ်သော်လည်း၊ ၎င်းကို ဖြေရှင်းရန် အလွယ်ဆုံးဖြစ်သည်။ ကောင်းမွန်သော contrast သည် အားလုံးအတွက် အကျိုးရှိစေသည်—မျက်စိမကောင်းသူများမှ စ၍ ပင်လယ်ကမ်းခြေတွင် ဖုန်းဖတ်နေသူများအထိ။
 
 **WCAG contrast လိုအပ်ချက်များ:**
 
@@ -126,35 +176,65 @@ Assistive technologies များဖြင့် ဝဘ်ကို ဘယ်�
 | **Large text** (18pt+ သို့မဟုတ် 14pt+ bold) | 3:1 contrast ratio | 4.5:1 contrast ratio |
 | **UI components** (buttons, form borders) | 3:1 contrast ratio | 3:1 contrast ratio |
 
-**အရေးကြီးသော စမ်းသပ်မှု tools:**
-- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Desktop app with color picker
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Web-based with instant feedback
-- [Stark](https://www.getstark.co/) - Design tool plugin for Figma, Sketch, Adobe XD
-- [Accessible Colors](https://accessible-colors.com/) - Accessible color palettes ရှာဖွေပါ
+**အရေးပါသော စမ်းသပ်မှုကိရိယာများ:**
+- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - color picker ပါသော desktop app
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - web-based နှင့် ချက်ချင်း feedback
+- [Stark](https://www.getstark.co/) - Figma, Sketch, Adobe XD အတွက် design tool plugin
+- [Accessible Colors](https://accessible-colors.com/) - ဝင်ရောက်နိုင်သော color palettes ရှာဖွေပါ
 
-✅ **Color palettes များကို ပိုမိုကောင်းမွန်စေပါ**: သင်၏ brand colors ဖြင့် စတင်ပြီး contrast checkers များကို အသုံးပြု၍ accessible variations များ ဖန်တီးပါ။ ၎င်းတို့ကို သင်၏ design system ၏ accessible color tokens အဖြစ် documentation ပြုလုပ်ပါ။
+✅ **Color palettes ပိုမိုကောင်းမွန်စေပါ**: သင့် brand colors ဖြင့် စတင်ပြီး contrast checkers ကို အသုံးပြု၍ ဝင်ရောက်နိုင်သော အမျိုးအစားများ ဖန်တီးပါ။ ၎င်းတို့ကို သင့် design system ၏ accessible color tokens အဖြစ် documentation ပြုလုပ်ပါ။
 
 ### Comprehensive accessibility auditing
 
-အထိရောက်ဆုံး accessibility စမ်းသပ်မှုသည် နည်းလမ်းများစွာကို ပေါင်းစပ်ထားသည်။ Tool တစ်ခုတည်းသည် အားလုံးကို ဖမ်းဆီးနိုင်မည်မဟုတ်သဖြင့် စမ်းသပ်မှု routine ကို အမျိုးမျိုးသော နည်းလမ်းများဖြင့် တည်ဆောက်ခြင်းသည် thorough coverage ကို သေချာစေသည်။
+အထိရောက်ဆုံး
+- **အမျိုးမျိုးသော browser, device, နှင့် အထောက်အကူပြု tools များတွင် စမ်းသပ်ပါ**
+- **အဆင့်မြင့် feature များကို မထောက်ပံ့နိုင်သောအခါ content ကို သက်တောင့်သက်သာ ဖွဲ့စည်းပါ**
 
-**Browser-based စမ်းသပ်မှု (DevTools တွင် built-in):**
-- **Chrome/Edge**: Lighthouse accessibility audit + Accessibility panel
-- **Firefox**: Accessibility Inspector with detailed tree view
-- **Safari**: Audit tab in Web Inspector with VoiceOver simulation
+### 🎯 **POUR Principles Check: အခြေခံအချက်များကို မှတ်သားခြင်း**
 
-**Professional စမ်းသပ်မှု extensions:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - Industry-standard automated
-အရောင်သည် ဆက်သွယ်မှုအတွက် အရေးပါသောအရာတစ်ခုဖြစ်သော်လည်း အရေးကြီးသော အချက်အလက်များကို ပေးပို့ရာတွင် အရောင်တစ်ခုတည်းကို မသုံးသင့်ပါ။ အရောင်အပြင် အခြားနည်းလမ်းများကို ဒီဇိုင်းဆွဲခြင်းက ပိုမိုခိုင်မာပြီး အားလုံးပါဝင်နိုင်သော အတွေ့အကြုံများကို ဖန်တီးပေးပြီး အခြေအနေများစွာတွင် အလုပ်လုပ်နိုင်စေပါသည်။
+**အခြေခံအချက်များအပေါ် အမြန်ပြန်လည်စဉ်းစားခြင်း:**
+- POUR principle တစ်ခုချင်းစီကို မဖြည့်ဆည်းနိုင်သော website feature ကို စဉ်းစားနိုင်ပါသလား။
+- Developer အနေနဲ့ ဘယ် principle က သဘာဝကျဆုံးလဲ။
+- ဒီ principle တွေက မသန်စွမ်းသူများအတွက်သာမက အားလုံးအတွက် ဒီဇိုင်းကို ဘယ်လိုတိုးတက်စေမလဲ။
 
-**အရောင်မြင်ခြင်းကွဲပြားမှုများအတွက် ဒီဇိုင်းဆွဲခြင်း:**
+```mermaid
+quadrantChart
+    title POUR Principles Impact Matrix
+    x-axis Low Effort --> High Effort
+    y-axis Low Impact --> High Impact
+    quadrant-1 Quick Wins
+    quadrant-2 Major Projects
+    quadrant-3 Consider Later
+    quadrant-4 Strategic Focus
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
 
-အမျိုးသားများ၏ ၈% နှင့် အမျိုးသမီးများ၏ ၀.၅% ခန့်မှာ အရောင်မြင်ခြင်းကွဲပြားမှုတစ်ခုခုရှိကြသည် (အများအားဖြင့် "အရောင်မျက်မမြင်ခြင်း" ဟုခေါ်သည်။) အများဆုံးတွေ့ရသော အမျိုးအစားများမှာ:
+> **သတိပြုပါ**: အလွယ်တကူ ပြုပြင်နိုင်ပြီး အကျိုးသက်ရောက်မှု မြင့်မားသော အချက်များကို စတင်ပါ။ Semantic HTML နှင့် alt text က accessibility အတွက် အနည်းဆုံး အလွယ်ဆုံးနည်းလမ်းဖြစ်ပါတယ်။
+
+## အထောက်အကူပြု Visual Design ဖန်တီးခြင်း
+
+အကောင်းဆုံး visual design နှင့် accessibility သည် အတူတူ လက်တွဲသွားပါသည်။ Accessibility ကို စဉ်းစားပြီး ဒီဇိုင်းဆွဲရာတွင် အားလုံးအတွက် အကျိုးရှိသော သန့်ရှင်းပြီး လှပသော ဖြေရှင်းချက်များကို ရှာဖွေတွေ့ရှိနိုင်ပါသည်။
+
+အားလုံးအတွက် အဆင်ပြေသော visual design များကို ဖန်တီးပုံကို လေ့လာကြည့်ရအောင်။
+
+### အရောင်နှင့် visual accessibility နည်းလမ်းများ
+
+အရောင်သည် ဆက်သွယ်မှုအတွက် အရေးကြီးသော အခန်းကဏ္ဍတစ်ခုဖြစ်သော်လည်း အရေးကြီးသော အချက်များကို ဖော်ပြရာတွင် အရောင်တစ်ခုတည်းကို မသုံးသင့်ပါ။ အရောင်အပြင် အခြားနည်းလမ်းများကို အသုံးပြုခြင်းသည် ပိုမိုခိုင်မာပြီး အားလုံးအတွက် အကျိုးရှိသော အတွေ့အကြုံများကို ဖန်တီးပေးနိုင်ပါသည်။
+
+**အရောင်မြင်ခြင်းကွဲလွဲမှုများအတွက် ဒီဇိုင်းဆွဲခြင်း:**
+
+အမျိုးသား ၈% နှင့် အမျိုးသမီး ၀.၅% ခန့်မှာ အရောင်မြင်ခြင်းကွဲလွဲမှု (color blindness) ရှိကြသည်။ အများဆုံးတွေ့ရသော အမျိုးအစားများမှာ:
 - **Deuteranopia**: အနီနှင့် အစိမ်းကို ခွဲခြားရန် အခက်အခဲရှိခြင်း
-- **Protanopia**: အနီသည် ပိုမှိန်သောအတိုင်း မြင်ရခြင်း
-- **Tritanopia**: အပြာနှင့် အဝါကို ခွဲခြားရန် အခက်အခဲရှိခြင်း (ရှားပါး)
+- **Protanopia**: အနီရောင်သည် ပိုမှိန်သွားခြင်း
+- **Tritanopia**: အပြာနှင့် အဝါရောင်ကို ခွဲခြားရန် အခက်အခဲရှိခြင်း (ရှားပါး)
 
-**အားလုံးပါဝင်နိုင်သော အရောင်နည်းလမ်းများ:**
+**အထောက်အကူပြု အရောင်နည်းလမ်းများ:**
 
 ```css
 /* ❌ Bad: Using only color to indicate status */
@@ -181,19 +261,19 @@ Assistive technologies များဖြင့် ဝဘ်ကို ဘယ်�
 }
 ```
 
-**အခြေခံအဆင့် အရောင်ကွဲပြားမှုလိုအပ်ချက်များအပြင်:**
-- အရောင်ရွေးချယ်မှုများကို အရောင်မျက်မမြင်မှု စမ်းသပ်စက်များဖြင့် စမ်းသပ်ပါ
-- အရောင်ကုဒ်များနှင့်အတူ ပုံစံများ၊ အထည်အလိပ်များ သို့မဟုတ် ပုံသဏ္ဌာန်များကို အသုံးပြုပါ
-- အပြန်အလှန်အခြေအနေများကို အရောင်မပါဘဲ ခွဲခြားနိုင်စေရန် သေချာပါစေ
-- သင့်ဒီဇိုင်းကို အမြင့်အContrast Modeတွင် မည်သို့ပုံပေါ်မည်ကို စဉ်းစားပါ
+**အခြေခံ contrast လိုအပ်ချက်များအပြင်:**
+- အရောင်ရွေးချယ်မှုများကို color blind simulators ဖြင့် စမ်းသပ်ပါ
+- အရောင် coding အပြင် pattern, texture, သို့မဟုတ် shape များကို အသုံးပြုပါ
+- Interactive state များကို အရောင်မပါဘဲ ခွဲခြားနိုင်စေရန် သေချာပါစေ
+- High contrast mode တွင် ဒီဇိုင်းကို ဘယ်လိုပုံပေါ်မည်ကို စဉ်းစားပါ
 
-✅ **သင့်အရောင်ရောက်ရှိနိုင်မှုကို စမ်းသပ်ပါ**: [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) ကဲ့သို့သော ကိရိယာများကို အသုံးပြု၍ သင့်ဆိုဒ်ကို အရောင်မြင်ခြင်းကွဲပြားမှုရှိသော အသုံးပြုသူများအတွက် မည်သို့ပုံပေါ်မည်ကို ကြည့်ပါ။
+✅ **အရောင် accessibility ကို စမ်းသပ်ပါ**: [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) ကဲ့သို့သော tools များကို အသုံးပြု၍ သင့် site ကို အရောင်မြင်ခြင်းကွဲလွဲမှုရှိသူများအတွက် ဘယ်လိုပုံပေါ်မည်ကို ကြည့်ပါ။
 
-### အာရုံစိုက်မှုပြသမှုများနှင့် အပြန်အလှန်ဒီဇိုင်း
+### Focus indicators နှင့် interaction design
 
-အာရုံစိုက်မှုပြသမှုများသည် cursor၏ ဒစ်ဂျစ်တယ်အတုတစ်ခုဖြစ်ပြီး - ၎င်းသည် ကီးဘုတ်အသုံးပြုသူများကို စာမျက်နှာပေါ်တွင် မည်သို့ရှိနေသည်ကို ပြသပေးသည်။ အကောင်းဆုံးဒီဇိုင်းဆွဲထားသော အာရုံစိုက်မှုပြသမှုများသည် အပြန်အလှန်များကို ရှင်းလင်းပြီး ခန့်မှန်းနိုင်သောအတိုင်း ဖန်တီးပေးခြင်းအားဖြင့် အားလုံးအတွက် အတွေ့အကြုံကို မြှင့်တင်ပေးသည်။
+Focus indicators သည် cursor ရဲ့ digital version ဖြစ်ပြီး keyboard အသုံးပြုသူများအတွက် page ပေါ်မှာ ရှိနေသောနေရာကို ပြသပေးသည်။ အကောင်းဆုံး focus indicators များသည် အားလုံးအတွက် အတွေ့အကြုံကို ပိုမိုရှင်းလင်းပြီး ခန့်မှန်းနိုင်စေသည်။
 
-**ခေတ်မီအာရုံစိုက်မှုပြသမှုအကောင်းဆုံးအလေ့အကျင့်များ:**
+**ခေတ်မီ focus indicator အကောင်းဆုံးနည်းလမ်းများ:**
 
 ```css
 /* Enhanced focus styles that work across browsers */
@@ -222,23 +302,43 @@ button:focus:not(:focus-visible) {
 }
 ```
 
-**အာရုံစိုက်မှုပြသမှုလိုအပ်ချက်များ:**
-- **မြင်နိုင်မှု**: ပတ်ပတ်လည်ရှိသော အရာများနှင့် အနည်းဆုံး 3:1 contrast ratio ရှိရမည်
-- **အကျယ်**: အရာတစ်ခုလုံးပတ်လည်တွင် အနည်းဆုံး 2px အထူရှိရမည်
-- **တည်ငြိမ်မှု**: အာရုံစိုက်မှုသည် အခြားနေရာသို့ ရွှေ့သည်အထိ မြင်နိုင်နေသင့်သည်
-- **ခွဲခြားမှု**: အခြား UI အခြေအနေများနှင့် သက်သက်သာသာ ခွဲခြားနိုင်ရမည်
+**Focus indicator လိုအပ်ချက်များ:**
+- **မြင်နိုင်မှု**: ပတ်ပတ်လည် element များနှင့် အနည်းဆုံး 3:1 contrast ratio ရှိရမည်
+- **အကျယ်**: Element အပေါ်တွင် အနည်းဆုံး 2px ထူထဲရှိရမည်
+- **တည်ရှိမှု**: Focus အခြားနေရာသို့ မရွှေ့မီအထိ မြင်နိုင်ရမည်
+- **ခွဲခြားမှု**: အခြား UI state များနှင့် visually ကွဲပြားရမည်
 
-> 💡 **ဒီဇိုင်းအကြံပေးချက်**: အကောင်းဆုံးအာရုံစိုက်မှုပြသမှုများသည် outline၊ box-shadow နှင့် အရောင်ပြောင်းလဲမှုတို့ကို ပေါင်းစပ်အသုံးပြု၍ အခြားနောက်ခံများနှင့် အခြေအနေများတွင် မြင်နိုင်မှုကို သေချာစေပါသည်။
+> 💡 **ဒီဇိုင်းအကြံပေးချက်**: အကောင်းဆုံး focus indicators များသည် outline, box-shadow, နှင့် အရောင်ပြောင်းလဲမှုတို့ကို ပေါင်းစပ်အသုံးပြု၍ အမျိုးမျိုးသောနောက်ခံနှင့် အခြေအနေများတွင် မြင်နိုင်စေရန် သေချာစေသည်။
 
-✅ **အာရုံစိုက်မှုပြသမှုများကို စစ်ဆေးပါ**: သင့်ဝက်ဘ်ဆိုဒ်ကို Tab ဖြင့် လှည့်ကြည့်ပြီး အာရုံစိုက်မှုပြသမှုများရှိသော အရာများကို မှတ်သားပါ။ မည်သည့်အရာများသည် မြင်ရခက်ခဲနေသို့မဟုတ် လုံးဝမရှိပါသလဲ?
+✅ **Focus indicators ကို စစ်ဆေးပါ**: သင့် website ကို Tab ဖြင့် ဖြတ်သန်းကြည့်ပြီး element များတွင် ရှင်းလင်းသော focus indicators ရှိမရှိ စစ်ဆေးပါ။ မမြင်နိုင်သော သို့မဟုတ် လုံးဝမရှိသော အချက်များ ရှိပါသလား။
 
-### Semantic HTML: အရောက်ရှိနိုင်မှု၏ အခြေခံအုတ်မြစ်
+### Semantic HTML: Accessibility ရဲ့ အခြေခံ
 
-Semantic HTML သည် သင့်ဝက်ဘ်ဆိုဒ်အတွက် assistive technologies များကို GPS စနစ်ပေးခြင်းနှင့်တူသည်။ HTML element များကို ၎င်းတို့ရည်ရွယ်ချက်အတွက် သင့်တော်သောအတိုင်း အသုံးပြုသောအခါ screen readers၊ ကီးဘုတ်များနှင့် အခြားကိရိယာများကို အသုံးပြုသူများအတွက် ထိရောက်စွာ လမ်းညွှန်ပေးနိုင်သော အကြောင်းအရာများကို ပေးစွမ်းနိုင်သည်။
+Semantic HTML သည် assistive technologies အတွက် သင့် website ကို GPS system တစ်ခုလို ဖြစ်စေသည်။ HTML element များကို သင့်တော်သော ရည်ရွယ်ချက်အတွက် အသုံးပြုခြင်းသည် screen readers, keyboards, နှင့် အခြား tools များကို အသုံးပြုသူများအတွက် navigation ကို ပိုမိုအဆင်ပြေစေသည်။
 
-Semantic HTML ကို library တစ်ခုနှင့် warehouse တစ်ခုကို နှိုင်းယှဉ်၍ နားလည်နိုင်သည်။ Library တစ်ခုတွင် စီစဉ်ထားသော အမျိုးအစားများနှင့် အထောက်အကူပြုသော အမှတ်အသားများရှိပြီး warehouse တွင် စာအုပ်များကို မတူညီသောနေရာများတွင် ပျံ့ပျံ့နှံ့နှံ့ထားသည်။ စာအုပ်များသည် နှစ်ခုစလုံးတွင် တူညီပေမယ့် သင်ဘာကိုရှာဖွေချင်သလဲဆိုတာ အဘယ်မှာ ရှာဖွေချင်မည်ဟု သင်ထင်ပါသလဲ? အတိအကျ!
+```mermaid
+flowchart TD
+    A[🏠 HTML Document] --> B[📰 header]
+    A --> C[🧭 nav]
+    A --> D[📄 main]
+    A --> E[📋 footer]
+    
+    B --> B1[h1: Site Name<br/>Logo & branding]
+    C --> C1[ul: Navigation<br/>Primary links]
+    D --> D1[article: Content<br/>section: Subsections]
+    D --> D2[aside: Sidebar<br/>Related content]
+    E --> E1[nav: Footer links<br/>Copyright info]
+    
+    D1 --> D1a[h1: Page title<br/>h2: Major sections<br/>h3: Subsections]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 
-**အရောက်ရှိနိုင်သော စာမျက်နှာဖွဲ့စည်းမှု၏ အခြေခံအုတ်အမြစ်များ:**
+**Accessible page structure ရဲ့ အခြေခံအချက်များ:**
 
 ```html
 <!-- Landmark elements provide page navigation structure -->
@@ -293,36 +393,63 @@ Semantic HTML ကို library တစ်ခုနှင့် warehouse တစ�
 </footer>
 ```
 
-**ဘာကြောင့် Semantic HTML သည် အရောက်ရှိနိုင်မှုကို ပြောင်းလဲစေသနည်း:**
+**Semantic HTML က accessibility ကို ဘယ်လိုပြောင်းလဲစေသလဲ:**
 
 | Semantic Element | ရည်ရွယ်ချက် | Screen Reader အကျိုးကျေးဇူး |
-|------------------|---------|----------------------|
-| `<header>` | စာမျက်နှာ သို့မဟုတ် အပိုင်းခေါင်းစဉ် | "Banner landmark" - အပေါ်သို့ အလွယ်တကူသွားနိုင်ခြင်း |
-| `<nav>` | Navigation link များ | "Navigation landmark" - navigation အပိုင်းများစာရင်း |
-| `<main>` | အဓိကစာမျက်နှာအကြောင်းအရာ | "Main landmark" - အကြောင်းအရာသို့ တိုက်ရိုက်သွားနိုင်ခြင်း |
-| `<article>` | ကိုယ်ပိုင်အကြောင်းအရာ | article အစွန်းအထွန်းများကို ကြေညာခြင်း |
-| `<section>` | အကြောင်းအရာအုပ်စုများ | အကြောင်းအရာဖွဲ့စည်းမှုကို ပေးခြင်း |
-| `<aside>` | ဆက်စပ်သော sidebar အကြောင်းအရာ | "Complementary landmark" |
-| `<footer>` | စာမျက်နှာ သို့မဟုတ် အပိုင်း footer | "Contentinfo landmark" |
+|------------------|-------------|-----------------------------|
+| `<header>` | Page သို့မဟုတ် section header | "Banner landmark" - အပေါ်ဆုံးသို့ အလွယ်တကူ navigation |
+| `<nav>` | Navigation links | "Navigation landmark" - nav section များစာရင်း |
+| `<main>` | Page content အဓိက | "Main landmark" - content သို့ တိုက်ရိုက်သွားရန် |
+| `<article>` | Self-contained content | article အကန့်အသတ်များကို ကြေညာသည် |
+| `<section>` | Themed content groups | content structure ကို ပေးသည် |
+| `<aside>` | Related sidebar content | "Complementary landmark" |
+| `<footer>` | Page သို့မဟုတ် section footer | "Contentinfo landmark" |
 
-**Semantic HTML နှင့် Screen Reader အထူးစွမ်းရည်များ:**
-- **Landmark navigation**: စာမျက်နှာ၏ အဓိကအပိုင်းများအကြား ချက်ချင်းခုန်နိုင်ခြင်း
-- **Heading outlines**: heading ဖွဲ့စည်းမှုမှ အကြောင်းအရာစာရင်းတစ်ခု ဖန်တီးခြင်း
-- **Element lists**: link၊ button သို့မဟုတ် form control အားလုံး၏ စာရင်းများ ဖန်တီးခြင်း
-- **Context awareness**: အကြောင်းအရာအပိုင်းများအကြား ဆက်နွယ်မှုများကို နားလည်ခြင်း
+**Semantic HTML ရဲ့ screen reader superpowers:**
+- **Landmark navigation**: Page section အဓိကများကို အလွယ်တကူ ဖြတ်သန်းနိုင်သည်
+- **Heading outlines**: Heading structure မှ table of contents တစ်ခုကို ဖန်တီးနိုင်သည်
+- **Element lists**: Link, button, သို့မဟုတ် form control များစာရင်းကို ဖန်တီးနိုင်သည်
+- **Context awareness**: Content section များအကြား ဆက်နွယ်မှုကို နားလည်နိုင်သည်
 
-> 🎯 **အမြန်စမ်းသပ်မှု**: landmark shortcut (NVDA/JAWS တွင် D key၊ heading အတွက် H key၊ link အတွက် K key) အသုံးပြု၍ သင့်ဆိုဒ်ကို screen reader ဖြင့် လှည့်လည်ကြည့်ပါ။ navigation သည် make sense လား?
+> 🎯 **Quick Test**: Screen reader ကို landmark shortcut (NVDA/JAWS တွင် D, H, K) အသုံးပြု၍ သင့် site ကို navigation လုပ်ကြည့်ပါ။ Navigation သည် make sense လား။
 
-✅ **သင့် semantic ဖွဲ့စည်းမှုကို စစ်ဆေးပါ**: သင့် browser၏ DevTools တွင် Accessibility panel ကို အသုံးပြု၍ accessibility tree ကို ကြည့်ပြီး သင့် markup သည် သင်္ကေတဖွဲ့စည်းမှုကို ဖန်တီးပေးနိုင်မည်ကို သေချာပါစေ။
+### 🏗️ **Semantic HTML Mastery Check: အခြေခံအချက်များကို ခိုင်မာစွာ တည်ဆောက်ခြင်း**
 
-### Heading hierarchy: အကြောင်းအရာစာရင်းတစ်ခု ဖန်တီးခြင်း
+**Semantic HTML ကို သင်နားလည်မှုကို အကဲဖြတ်ကြည့်ရအောင်:**
+- HTML ကိုကြည့်ရုံဖြင့် webpage ရဲ့ landmarks များကို သတ်မှတ်နိုင်ပါသလား။
+- `<section>` နှင့် `<div>` ရဲ့ ကွာခြားချက်ကို သူငယ်ချင်းတစ်ဦးကို ဘယ်လိုရှင်းပြမလဲ။
+- Screen reader အသုံးပြုသူက navigation ပြဿနာများကို တိုင်ကြားခဲ့လျှင် သင်စစ်ဆေးမည့် ပထမဆုံးအရာက ဘာလဲ။
 
-Heading များသည် အရောက်ရှိနိုင်သော အကြောင်းအရာအတွက် အလွန်အရေးပါသည် - ၎င်းသည် အားလုံးကို ပေါင်းစည်းထားသော spine တစ်ခုလိုပါပဲ။ Screen reader အသုံးပြုသူများသည် heading များကို အကြောင်းအရာကို နားလည်ရန်နှင့် navigation ပြုလုပ်ရန် အလွန်အမင်း မှီခိုကြသည်။ ၎င်းသည် သင့်စာမျက်နှာအတွက် အကြောင်းအရာစာရင်းတစ်ခု ပေးခြင်းနှင့် တူသည်။
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: div soup
+    UnsementicHTML --> SemanticHTML: Add landmarks
+    SemanticHTML --> AccessibleHTML: Test with AT
+    AccessibleHTML --> [*]: User success!
+    
+    note right of UnsementicHTML
+        Screen readers lost
+        Keyboard nav broken
+    end note
+    
+    note right of AccessibleHTML
+        Clear navigation
+        Efficient browsing
+    end note
+```
 
-**Heading များအတွက် ရွှေ့လမ်းစည်းကမ်း:**
-Level များကို မကျော်ပါနှင့်။ အမြဲတမ်း `<h1>` မှ `<h2>` သို့ `<h3>` သို့ စဉ်ဆက်မပြတ် ရှေ့ဆက်ပါ။ ကျောင်းတွင် outline များ ဖန်တီးခဲ့ဖူးလား? ၎င်းသည် အတိအကျတူညီသော စည်းမျဉ်းဖြစ်သည် - "I. Main Point" မှ "C. Sub-sub-point" သို့ "A. Sub-point" မပါဘဲ ခုန်မသွားပါနှင့်။
+> **Pro insight**: Semantic HTML က accessibility ပြဿနာများ၏ ၇၀% ခန့်ကို အလိုအလျောက် ဖြေရှင်းပေးနိုင်သည်။ ဒီအခြေခံကို ကျွမ်းကျင်ပါက သင်သည် accessibility ရဲ့ အရေးကြီးသော အဆင့်ကို ရောက်ရှိနေပါပြီ!
 
-**Heading ဖွဲ့စည်းမှုအကောင်းဆုံးနမူနာ:**
+✅ **Semantic structure ကို စစ်ဆေးပါ**: Browser ရဲ့ DevTools မှ Accessibility panel ကို အသုံးပြု၍ accessibility tree ကို ကြည့်ပြီး သင့် markup က logical structure ဖန်တီးထားမထား စစ်ဆေးပါ။
+
+### Heading hierarchy: Logical content outline ဖန်တီးခြင်း
+
+Headings သည် accessible content အတွက် အလွန်အရေးကြီးသည်—ဒါဟာ content အားလုံးကို ဆွဲထားတဲ့ အကြောတစ်ခုလိုပါပဲ။ Screen reader အသုံးပြုသူများသည် သင့် content ကို နားလည်ရန်နှင့် navigation လုပ်ရန် headings ကို အလွန်အားထားကြသည်။
+
+**Headings ရဲ့ golden rule:**
+Level များကို မကျော်ပါနှင့်။ အမြဲ `<h1>` → `<h2>` → `<h3>` အတိုင်း logical progression ဖြင့် ဆက်သွားပါ။ ကျောင်းမှာ outline ရေးခဲ့ဖူးတာကို သတိရပါ။ အတိအကျတူတူပဲ—"I. Main Point" ကနေ "C. Sub-sub-point" ကို "A. Sub-point" မရှိဘဲ မသွားပါဘူး၊ ဟုတ်လား။
+
+**Heading structure အကောင်းဆုံးနမူနာ:**
 
 ```html
 <!-- ✅ Excellent: Logical, hierarchical progression -->
@@ -361,32 +488,32 @@ Level များကို မကျော်ပါနှင့်။ အမြ
 <h1>Another main heading?</h1> <!-- Multiple h1s -->
 ```
 
-**Heading အကောင်းဆုံးအလေ့အကျင့်များ:**
-- **စာမျက်နှာတစ်ခုလုံးတွင် `<h1>` တစ်ခုသာ**: သင့်စာမျက်နှာ၏ အဓိကခေါင်းစဉ် သို့မဟုတ် အဓိကအကြောင်းအရာ heading ဖြစ်သည်
+**Heading best practices:**
+- **Page တစ်ခုလုံးမှာ `<h1>` တစ်ခုသာ**: အများအားဖြင့် main page title သို့မဟုတ် primary content heading
 - **Logical progression**: Level များကို မကျော်ပါ (h1 → h2 → h3, h1 → h3 မဟုတ်)
-- **Descriptive content**: Heading များကို အကြောင်းအရာမပါဘဲ ဖတ်သောအခါ အဓိကအကျိုးရှိစေရန် ဖန်တီးပါ
-- **CSS ဖြင့် Visual styling**: CSS ကို ပုံစံအတွက် အသုံးပြုပါ၊ HTML level များကို ဖွဲ့စည်းမှုအတွက် အသုံးပြုပါ
+- **Descriptive content**: Headings ကို context မပါဘဲ ဖတ်ရင်လည်း အဓိပ္ပါယ်ရှိအောင်ရေးပါ
+- **Visual styling with CSS**: Appearance အတွက် CSS ကို အသုံးပြုပါ၊ Structure အတွက် HTML levels ကို အသုံးပြုပါ
 
 **Screen reader navigation အချက်အလက်များ:**
-- Screen reader အသုံးပြုသူများ၏ ၆၈% သည် heading များဖြင့် navigation ပြုလုပ်ကြသည် ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))
-- အသုံးပြုသူများသည် logical heading outline ကို ရှာဖွေမည်ဟု မျှော်လင့်ကြသည်
-- Heading များသည် စာမျက်နှာဖွဲ့စည်းမှုကို အမြန်ဆုံး နားလည်ရန် နည်းလမ်းပေးသည်
+- Screen reader အသုံးပြုသူ ၆၈% သည် headings ဖြင့် navigation လုပ်ကြသည် ([WebAIM Survey](https://webaim.org/projects/screenreadersurvey9/#finding))
+- Logical heading outline ကို ရှာဖွေမည်ဟု မျှော်လင့်ကြသည်
+- Headings သည် page structure ကို နားလည်ရန် အမြန်ဆုံးနည်းလမ်းပေးသည်
 
-> 💡 **Pro Tip**: "HeadingsMap" ကဲ့သို့သော browser extension များကို အသုံးပြု၍ သင့် heading ဖွဲ့စည်းမှုကို visualization ပြုလုပ်ပါ။ ၎င်းသည် အကောင်းဆုံးဖွဲ့စည်းထားသော အကြောင်းအရာစာရင်းတစ်ခုလို ဖတ်ရမည်။
+> 💡 **Pro Tip**: "HeadingsMap" ကဲ့သို့သော browser extensions ကို အသုံးပြု၍ heading structure ကို visualization လုပ်ပါ။ Table of contents ကောင်းကောင်းတစ်ခုလို ဖတ်နိုင်ရမည်။
 
-✅ **သင့် heading ဖွဲ့စည်းမှုကို စမ်းသပ်ပါ**: Screen reader၏ heading navigation (NVDA တွင် H key) ကို အသုံးပြု၍ heading များကို ခုန်သွားပါ။ progression သည် သင့်အကြောင်းအရာ၏ story ကို logical အတိုင်း ပြောပြပါသလား?
+✅ **Heading structure ကို စမ်းသပ်ပါ**: Screen reader ရဲ့ heading navigation (NVDA တွင် H key) ကို အသုံးပြု၍ headings တွေကို ဖြတ်သန်းကြည့်ပါ။ Content ရဲ့ progression က logical ဖြစ်ပါသလား။
 
-### အဆင့်မြင့် Visual Accessibility နည်းလမ်းများ
+### အဆင့်မြင့် visual accessibility နည်းလမ်းများ
 
-Contrast နှင့် အရောင်၏ အခြေခံအချက်များအပြင် အားလုံးပါဝင်နိုင်သော visual အတွေ့အကြုံများကို ဖန်တီးရန် sophisticated နည်းလမ်းများရှိသည်။ ၎င်းနည်းလမ်းများသည် viewing conditions များနှင့် assistive technologies များအကြား သင့်အကြောင်းအရာကို အလုပ်လုပ်စေရန် သေချာစေသည်။
+Contrast နှင့် color ရဲ့ အခြေခံအချက်များအပြင်၊ viewing conditions များနှင့် assistive technologies များအတွက် အမှန်တကယ် inclusive visual experiences ဖန်တီးရန် sophisticated techniques များရှိသည်။
 
-**အရေးပါသော Visual ဆက်သွယ်မှုနည်းလမ်းများ:**
+**အရေးကြီး visual communication နည်းလမ်းများ:**
 
-- **Multi-modal feedback**: Visual၊ Textual၊ Audio cues များကို ပေါင်းစပ်အသုံးပြုပါ
+- **Multi-modal feedback**: Visual, textual, နှင့် audio cues များကို ပေါင်းစပ်ပါ
 - **Progressive disclosure**: အချက်အလက်များကို စိတ်ချရသော အပိုင်းများဖြင့် ဖော်ပြပါ
 - **Consistent interaction patterns**: ရင်းနှီးသော UI conventions များကို အသုံးပြုပါ
-- **Responsive typography**: စက်ပစ္စည်းများအတိုင်း text ကို သင့်တော်စွာ အတိုင်းအတာချိန်ညှိပါ
-- **Loading နှင့် error states**: အသုံးပြုသူ၏ လုပ်ဆောင်မှုများအတွက် ရှင်းလင်းသော feedback ပေးပါ
+- **Responsive typography**: Device များအတိုင်း text ကို scale လုပ်ပါ
+- **Loading နှင့် error states**: User action များအတွက် ရှင်းလင်းသော feedback ပေးပါ
 
 **Enhanced accessibility အတွက် CSS utilities:**
 
@@ -444,38 +571,207 @@ Contrast နှင့် အရောင်၏ အခြေခံအချက်
 }
 ```
 
-> 🎯 **Accessibility Pattern**: "skip link" သည် keyboard အသုံးပြုသူများအတွက် အရေးပါသည်။ ၎င်းသည် သင့်စာမျက်နှာပေါ်တွင် ပထမဆုံး focusable element ဖြစ်ပြီး အဓိကအကြောင်းအရာဧရိယာသို့ ခုန်သွားရန် အခွင့်ပြုသင့်သည်။
+> 🎯 **Accessibility Pattern**: "Skip link" သည် keyboard အသုံးပြုသူများအတွက် အရေးကြီးသည်။ Page ပေါ်တွင် ပထမဆုံး focusable element ဖြစ်ပြီး main content area သို့ တိုက်ရိုက်သွားနိုင်ရမည်။
 
-✅ **Skip navigation ကို အကောင်အထည်ဖော်ပါ**: Skip link များကို သင့်စာမျက်နှာများတွင် ထည့်သွင်းပြီး စမ်းသပ်ပါ။ စာမျက်နှာ load ပြီးချိန်တွင် Tab ကို နှိပ်ပြီး ၎င်းတို့ကို မြင်နိုင်ပြီး အဓိကအကြောင်းအရာသို့ ခုန်သွားနိုင်ရမည်။
+✅ **Skip navigation ကို အကောင်အထည်ဖော်ပါ**: Skip links များကို သင့် page များတွင် ထည့်သွင်းပြီး page load ပြီးချိန်မှာ Tab key ကို နှိပ်၍ စမ်းသပ်ပါ။ Skip links များသည် ပေါ်လာပြီး main content သို့ jump လုပ်နိုင်ရမည်။
 
 ## အဓိပ္ပါယ်ရှိသော Link Text ဖန်တီးခြင်း
 
-Link များသည် ဝက်ဘ်၏ လမ်းမကြီးများဖြစ်သော်လည်း အဓိပ္ပါယ်မရှိသော link text သည် "Place" ဟုသာ ရေးထားသော လမ်းညွှန်အမှတ်အသားများနှင့် တူသည်။ "Downtown Chicago" ဟု ရေးထားခြင်းက ပိုမိုအကျိုးရှိမည်မဟုတ်ပါလား?
+Links သည် web ရဲ့ highway များဖြစ်သော်လည်း အဓိပ္ပါယ်မရှိသော link text သည် "Place" ဆိုပြီး road sign တွေရှိတဲ့ လမ်းမကြီးလိုပါပဲ။ အတော်လေး မအဆင်ပြေဘူး၊ ဟုတ်လား။
 
-Screen reader များသည် စာမျက်နှာတစ်ခု၏ link အားလုံးကို စုစည်းထားသော စာရင်းတစ်ခုအဖြစ် ဖော်ပြနိုင်သည်ဟု သင်သိပါသလား? သင့်စာမျက်နှာပေါ်ရှိ link အားလုံး၏ directory ကို တစ်ခုတည်းအဖြစ် ပေးလိုက်မည်ဆိုပါက link တစ်ခုချင်းစီသည် ကိုယ်တိုင်အနေနှင့် make sense လား? ၎င်းသည် သင့် link text သွားရောက်ရမည့် စမ်းသပ်မှုဖြစ်သည်!
+Screen reader များသည် page ရဲ့ link အားလုံးကို စုစည်းပြီး list တစ်ခုအဖြစ် ပြသနိုင်သည်ဆိုတာကို ပထမဆုံး သိလိုက်တဲ့အခါ အတော်လေး အံ့ဩခဲ့ရပါတယ်။ Page ရဲ့ link အားလုံးကို directory တစ်ခုအဖြစ် ရရှိခဲ့တယ်ဆိုရင် link တစ်ခုချင်းစီက အဓိပ္ပါယ်ရှိမရှိ စစ်ဆေးနိုင်မယ်။ Link text သည် ဒီစစ်ဆေးမှုကို ဖြတ်သန်းနိုင်ရမည်။
 
-### Link navigation pattern များကို နားလည်ခြင်း
+### Link navigation patterns ကို နားလည်ခြင်း
 
-Screen reader များသည် အကောင်းဆုံးရေးသားထားသော link text ကို မှီခို၍ အထူး link navigation အင်္ဂါရပ်များကို ပေးသည်:
+Screen reader များသည် အကောင်းဆုံး link navigation feature များကို အဓိပ္ပါယ်ရှိသော link text အပေါ် အားထားသည်:
 
 **Link navigation နည်းလမ်းများ:**
-- **Sequential reading**: Link များကို အကြောင်းအရာ flow အတွင်း context အတိုင်း ဖတ်သည်
-- **Link list generation**: စာမျက်နှာ link အားလုံးကို ရှာဖွေနိုင်သော directory အဖြစ် စုစည်းသည်
-- **Quick navigation**: Keyboard shortcut (NVDA တွင် K) ဖြင့် link များအကြား ခုန်သွားသည်
-- **Search functionality**: Partial text ရိုက်၍ သတ်မှတ် link များကို ရှာဖွေသည်
+- **Sequential reading**: Links များကို content flow ရဲ့ အစိတ်အပိုင်းအဖြစ် context အတွင်း ဖတ်သည်
+- **Link list generation**: Page ရဲ့ link အားလုံးကို searchable directory အဖြစ် စုစည်းသည်
+- **Quick navigation**: Keyboard shortcuts (NVDA တွင် K) အသုံးပြု၍ links အကြား jump လုပ်သည်
+- **Search functionality**: Partial text ဖြင့် link များကို ရှာဖွေသည်
 
-**Context အရေးပါမှု:**
-Screen reader အသုံးပြုသူများသည် link list ကို ဖန်တီးသောအခါ ၎င်းသည် အောက်ပါအတိုင်း မြင်ရမည်:
+**Context ရဲ့ အရေးကြီးမှု:**
+Screen reader အသုံးပြုသူများသည် link list ကို ဖန်တီးသောအခါ အောက်ပါအတိုင်း ဖြစ်နိုင်သည်:
 - "Download report"
 - "Learn more"
 - "Click here"
 - "Privacy policy"
 - "Click here"
 
-၎င်း link များအနက် နှစ်ခုသာ context မပါဘဲ အကျိုးရှိသောအချက်အလက်ကို ပေးသည်!
+ဒီ link များထဲမှာ context မပါဘဲ ဖတ်တဲ့အခါ အသုံးဝင်တဲ့အချက်ကို ပေးနိုင်တဲ့ link နှစ်ခုပဲ ရှိပါတယ်!
 
-> 📊 **User Impact**: Screen reader အသုံးပြုသူများသည် link list များကို scan ပြုလုပ်၍ စာမျက်နှာ
-5. **ရိုးရှင်းစွာ စတင်ပါ**: ARIA ကို ရှုပ်ထွေးစွာ အသုံးပြုခြင်းသည် အမှားများဖြစ်ပေါ်နိုင်ခြင်းကို ပိုမိုဖြစ်စေသည်
+> 📊 **User Impact**: Screen reader အသုံးပြုသူများသည် link list ကို scan လုပ်ပြီး page content ကို အမြန်နားလည်ရန် ကြိုးစားကြသည်။ Generic link text သည် link ရဲ့ context ကို ပြန်သွားရှာရန် အားထုတ်စေပြီး browsing အတွေ့အကြုံကို အလွန်နှေးကွေးစေသည်။
+
+### Link text ရဲ့ အမှားများကို ရှောင်ရှားခြင်း
+
+မကောင်းသောအချက်များကို နားလည်ခြင်းသည် ရှိပြီးသား content တွင် accessibility ပြဿနာများကို သတိပြုပြီး ပြုပြင်နိုင်စေသည်။
+
+**❌ Context မပေးသော generic link text:**
+
+```html
+<!-- Meaningless when read from a link list -->
+<p>Our sustainability efforts are detailed in our recent report. 
+   <a href="/sustainability-2024.pdf">Click here</a> to view it.</p>
+
+<!-- Repeated generic text throughout the page -->
+<div class="article-card">
+  <h3>Web Accessibility Guide</h3>
+  <p>Learn the fundamentals...</p>
+  <a href="/accessibility-guide">Read more</a>
+</div>
+<div class="article-card">
+  <h3>Color Contrast Tips</h3>
+  <p>Improve your design...</p>
+  <a href="/color-contrast">Read more</a>
+</div>
+
+<!-- URLs as link text (difficult for screen readers to announce) -->
+<p>Visit https://www.w3.org/WAI/WCAG21/quickref/ for WCAG guidelines.</p>
+
+<!-- Vague action words -->
+<a href="/contact">Go</a> | <a href="/about">See</a> | <a href="/help">View</a>
+```
+
+**ဒီ pattern များက ဘာကြောင့် မအောင်မြင်သလဲ:**
+- **"Click here"** သည် destination အကြောင်း ဘာမှ မပြောသည်
+- **"Read more"** ကို မကြိမ်ကြိမ် ထပ်သုံးခြင်းသည် ရှုပ်ထွေးမှု ဖြစ်စေသည်
+- **Raw URLs** သည် screen readers အတွက် ပြောရန် အခက်အခဲဖြစ်စေသည်
+- **Single words** ကဲ့သို့သော "Go" သို့မဟုတ် "See" သည် descriptive context မပါဘဲ ဖြစ်သည်
+
+### အကောင်းဆုံး link text ရေးသားခြင်း
+
+Descriptive link text သည် အားလုံးအတွက် အကျိုးရှိသည်—မျက်စိရှိသူများသည် links ကို အလွယ်တကူ scan လုပ်နိုင်ပြီး screen reader အသုံးပြုသူများသည် destinations ကို ချက်ချင်းနားလည်နိုင်သည်။
+
+**✅ ရှင်းလင်းပြီး descriptive link
+**ARIA ၏ အမျိုးအစား ၅ မျိုး**
+
+1. **Roles**: ဒီ element ကဘာလဲ? (`button`, `tab`, `dialog`)
+2. **Properties**: ဒီ element ရဲ့ အင်္ဂါရပ်တွေကဘာလဲ? (`aria-required`, `aria-haspopup`)
+3. **States**: အခုအခြေအနေကဘာလဲ? (`aria-expanded`, `aria-checked`)
+4. **Landmarks**: ဒီ element က page structure မှာဘယ်နေရာမှာရှိလဲ? (`banner`, `navigation`, `main`)
+5. **Live regions**: ပြောင်းလဲမှုတွေကို ဘယ်လိုကြေညာပေးရမလဲ? (`aria-live`, `aria-atomic`)
+
+### ခေတ်သစ် Web Apps အတွက် အရေးကြီး ARIA ပုံစံများ
+
+ဒီပုံစံတွေက interactive web applications တွေမှာ အများဆုံးဖြစ်ပေါ်တဲ့ accessibility စိန်ခေါ်မှုတွေကို ဖြေရှင်းပေးနိုင်ပါတယ်။
+
+**Element တွေကို အမည်ပေးခြင်းနှင့် ဖော်ပြခြင်း:**
+
+```html
+<!-- aria-label: Provides accessible name when visible text isn't sufficient -->
+<button aria-label="Close newsletter subscription dialog">×</button>
+
+<!-- aria-labelledby: References existing text as the accessible name -->
+<section aria-labelledby="news-heading">
+  <h2 id="news-heading">Latest News</h2>
+  <!-- news content -->
+</section>
+
+<!-- aria-describedby: Links to additional descriptive text -->
+<input type="password" 
+       aria-describedby="pwd-requirements pwd-strength"
+       required>
+<div id="pwd-requirements">
+  Password must contain at least 8 characters, including uppercase, lowercase, and numbers.
+</div>
+<div id="pwd-strength" aria-live="polite">
+  <!-- Dynamic password strength indicator -->
+</div>
+```
+
+**Dynamic content အတွက် Live regions:**
+
+```html
+<!-- Polite announcements (don't interrupt current speech) -->
+<div aria-live="polite" id="status-updates">
+  <!-- Status messages appear here -->
+</div>
+
+<!-- Assertive announcements (interrupt and announce immediately) -->
+<div aria-live="assertive" id="urgent-alerts">
+  <!-- Error messages and critical alerts -->
+</div>
+
+<!-- Loading states with live regions -->
+<button id="submit-btn" aria-describedby="loading-status">
+  Submit Application
+</button>
+<div id="loading-status" aria-live="polite" aria-atomic="true">
+  <!-- "Processing your application..." appears here -->
+</div>
+```
+
+**Interactive widget နမူနာ (accordion):**
+
+```html
+<div class="accordion">
+  <h3>
+    <button aria-expanded="false" 
+            aria-controls="panel-1" 
+            id="accordion-trigger-1"
+            class="accordion-trigger">
+      Accessibility Guidelines
+    </button>
+  </h3>
+  <div id="panel-1" 
+       role="region"
+       aria-labelledby="accordion-trigger-1" 
+       hidden>
+    <p>WCAG 2.1 provides comprehensive guidelines...</p>
+  </div>
+</div>
+```
+
+```javascript
+// JavaScript to manage accordion state
+function toggleAccordion(trigger) {
+  const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+  const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  
+  // Toggle states
+  trigger.setAttribute('aria-expanded', !isExpanded);
+  panel.hidden = isExpanded;
+  
+  // Announce change to screen readers
+  const status = document.getElementById('status-updates');
+  status.textContent = isExpanded ? 'Section collapsed' : 'Section expanded';
+}
+```
+
+### ARIA ကို အကောင်းဆုံး အသုံးပြုနည်းများ
+
+ARIA က အလွန်အစွမ်းထက်ပေမယ့် သေချာစွာ အသုံးပြုဖို့လိုအပ်ပါတယ်။ ဒီလမ်းညွှန်ချက်တွေကို လိုက်နာခြင်းက ARIA ရဲ့ accessibility ကို တိုးတက်စေပြီး အတားအဆီးမဖြစ်စေပါဘူး။
+
+**🛡️ အဓိကအချက်များ:**
+
+```mermaid
+flowchart TD
+    A[🚀 Start with semantic HTML] --> B{Does HTML provide needed semantics?}
+    B -->|Yes| C[✅ Use HTML only]
+    B -->|No| D[Consider ARIA enhancement]
+    D --> E{Can you achieve it with simpler means?}
+    E -->|Yes| F[🔄 Simplify approach]
+    E -->|No| G[📝 Implement ARIA carefully]
+    G --> H[🧪 Test with real AT]
+    H --> I{Works as expected?}
+    I -->|No| J[🔧 Debug and fix]
+    I -->|Yes| K[✅ Success!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+
+1. **Semantic HTML ကို ဦးစားပေးပါ**: `<button>` ကို `<div role="button">` ထက် အမြဲဦးစားပေးပါ
+2. **Semantics ကို မဖျက်ဆီးပါနဲ့**: HTML ရဲ့ အဓိပ္ပါယ်ကို မဖျက်ဆီးပါနဲ့ (ဥပမာ `<h1 role="button">` ကို ရှောင်ပါ)
+3. **Keyboard accessibility ကို ထိန်းသိမ်းပါ**: ARIA element တွေကို keyboard နဲ့ အပြည့်အဝ အသုံးပြုနိုင်ရမယ်
+4. **အသုံးပြုသူတွေနဲ့ စမ်းသပ်ပါ**: ARIA support က assistive technologies တွေမှာ အလွန်ကွဲပြားပါတယ်
+5. **ရိုးရှင်းစွာ စတင်ပါ**: ARIA implementation တွေ ရှုပ်ထွေးလာရင် အမှားဖြစ်နိုင်မှုများလာပါတယ်
 
 **🔍 စမ်းသပ်မှုလုပ်ငန်းစဉ်:**
 
@@ -491,48 +787,65 @@ graph TD
     G --> B
 ```
 
-**🚫 ရှောင်ရှားသင့်သော ARIA အမှားများ:**
+**🚫 ARIA အသုံးပြုမှုအမှားများကို ရှောင်ရှားပါ:**
 
-- **အချက်အလက်များမညီညွတ်မှု**: HTML semantics နှင့် ဆန့်ကျင်မှုမရှိစေရန်
-- **အလွန်များသော label ထည့်ခြင်း**: ARIA အချက်အလက်များ အလွန်များလွန်းခြင်းသည် အသုံးပြုသူများကို အခက်အခဲဖြစ်စေသည်
-- **Static ARIA**: ARIA states များကို အကြောင်းအရာပြောင်းလဲမှုအချိန်တွင် မပြောင်းလဲခြင်း
-- **မစမ်းသပ်ထားသော အကောင်အထည်ဖော်မှုများ**: သီအိုရီအရ အလုပ်လုပ်သော်လည်း လက်တွေ့မှာ မအောင်မြင်သော ARIA
-- **Keyboard ပံ့ပိုးမှုမရှိခြင်း**: ARIA roles များတွင် keyboard interaction မပါရှိခြင်း
+- **အချက်အလက်များ မညီညွတ်မှု**: HTML semantics ကို မဆန့်ကျင်ပါနဲ့
+- **အလွန်များသော labeling**: ARIA အချက်အလက်များ အလွန်များလွန်းရင် အသုံးပြုသူတွေကို အလွှမ်းမီစေပါဘူး
+- **Static ARIA**: Content ပြောင်းလဲတဲ့အခါ ARIA states ကို မအပ်ဒိတ်ခြင်း
+- **မစမ်းသပ်ထားသော implementation**: သီအိုရီအရ အလုပ်လုပ်ပေမယ့် အကောင်အထည်မဖော်နိုင်သော ARIA
+- **Keyboard support မပါသော ARIA roles**: Keyboard interaction မပါသော ARIA roles
 
-> 💡 **စမ်းသပ်မှုအရင်းအမြစ်များ**: [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) ကဲ့သို့သော tools များကို အသုံးပြု၍ ARIA ကို အလိုအလျောက် စစ်ဆေးနိုင်သော်လည်း အပြည့်အစုံသော အတွေ့အကြုံရရှိရန် အမှန်တကယ် screen readers ဖြင့် စမ်းသပ်ပါ။
+> 💡 **Testing Resources**: [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) ကဲ့သို့သော tools တွေကို ARIA validation အတွက် အသုံးပြုပါ၊ ဒါပေမယ့် real screen readers နဲ့ အပြည့်အစုံ စမ်းသပ်ပါ။
 
-✅ **ကျွမ်းကျင်သူများထံမှ သင်ယူပါ**: [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) ကို လေ့လာပြီး ရှုပ်ထွေးသော interactive widgets များအတွက် စမ်းသပ်ပြီးသော ပုံစံများနှင့် အကောင်အထည်ဖော်မှုများကို ရယူပါ။
+### 🎭 **ARIA Skills Check: ရှုပ်ထွေးသော Interaction များအတွက် အသင့်ဖြစ်ပါသလား?**
 
-## ပုံများနှင့် မီဒီယာများကို အားလုံးအတွက် အသုံးပြုနိုင်အောင် ပြုလုပ်ခြင်း
+**ARIA ကို နားလည်မှုကို တိုင်းတာပါ:**
+- Semantic HTML ထက် ARIA ကို ဘယ်အချိန်မှာ ရွေးချယ်မလဲ? (အကြံပြုချက်: အလွန်ရှားပါး!)
+- `<div role="button">` က `<button>` ထက် အဆိုးဖြစ်တဲ့အကြောင်းကို ရှင်းပြနိုင်ပါသလား?
+- ARIA testing အတွက် အရေးကြီးဆုံးအချက်ကဘာလဲ?
 
-မြင်သာသောအရာများနှင့် အသံအကြောင်းအရာများသည် ခေတ်မီဝဘ်အတွေ့အကြုံများ၏ အရေးပါသော အစိတ်အပိုင်းများဖြစ်သော်လည်း သေချာစွာ အကောင်အထည်ဖော်မထားပါက အခက်အခဲများကို ဖြစ်စေနိုင်သည်။ ရည်ရွယ်ချက်မှာ သတင်းအချက်အလက်များနှင့် မီဒီယာ၏ စိတ်ခံစားမှုကို အသုံးပြုသူအားလုံးထိရောက်စေရန် ဖြစ်သည်။ တစ်ခါတစ်ရံမှာ အလွယ်တကူ အကျင့်အကျင့်ဖြစ်လာနိုင်သည်။
+```mermaid
+pie title "Common ARIA Usage Patterns"
+    "Labels & Descriptions" : 40
+    "Live Regions" : 25
+    "Widget States" : 20
+    "Complex Controls" : 15
+```
 
-မီဒီယာအမျိုးအစားများသည် အဆင့်ဆင့် accessibility လုပ်နည်းများကို လိုအပ်သည်။ ဥပမာအားဖြင့် ချက်ပြုတ်နည်းကဲ့သို့ပင် ဖြစ်သည်—ပေါ့ပါးသောငါးကို ခိုင်မာသောအသားကဲ့သို့ မဆက်ဆက်ပါ။ အဆင့်ဆင့်ကွဲပြားမှုများကို နားလည်ခြင်းသည် အခြေအနေတစ်ခုစီအတွက် သင့်လျော်သော ဖြေရှင်းနည်းကို ရွေးချယ်နိုင်စေသည်။
+> **အဓိကအချက်**: ARIA ကို အများဆုံး အသုံးပြုတာက element တွေကို labeling နှင့် describing အတွက်ပါ။ ရှုပ်ထွေးတဲ့ widget patterns တွေက အလွန်ရှားပါးပါတယ်။
 
-### ပုံများကို သုံးသပ်ပြီး accessibility ရှိအောင်လုပ်ခြင်း
+✅ **ကျွမ်းကျင်သူများထံမှ သင်ယူပါ**: [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) ကို လေ့လာပြီး ရှုပ်ထွေးတဲ့ interactive widgets တွေကို အကောင်းဆုံး အကောင်အထည်ဖော်နည်းများကို ရယူပါ။
 
-ဝဘ်ဆိုဒ်ပေါ်ရှိ ပုံတစ်ခုစီသည် ရည်ရွယ်ချက်တစ်ခုရှိသည်။ အဲဒီရည်ရွယ်ချက်ကို နားလည်ခြင်းသည် ပိုမိုကောင်းမွန်သော alternative text ရေးသားနိုင်စေပြီး အားလုံးအတွက် ပိုမိုပါဝင်သော အတွေ့အကြုံများကို ဖန်တီးနိုင်စေသည်။
+## ပုံများနှင့် မီဒီယာများကို Accessible ဖြစ်စေရန်
 
-**ပုံအမျိုးအစား ၄ မျိုးနှင့် ၎င်းတို့၏ alt text ရေးသားနည်းများ:**
+မြင်သာသောနှင့် အသံအကြောင်းအရာများသည် ခေတ်သစ် web experience တွေမှာ အရေးကြီးသော အစိတ်အပိုင်းများဖြစ်ပေမယ့် သေချာစွာ အကောင်အထည်မဖော်ရင် အတားအဆီးများ ဖြစ်စေနိုင်ပါတယ်။ ရည်ရွယ်ချက်ကတော့ သတင်းအချက်အလက်နှင့် မီဒီယာရဲ့ စိတ်ခံစားမှုကို အသုံးပြုသူတိုင်းရောက်ရှိစေရန်ဖြစ်ပါတယ်။ အကောင်းဆုံးနည်းလမ်းတွေကို နားလည်ပြီးရင် အလွယ်တကူ အကျင့်အဖြစ် ရောက်လာနိုင်ပါတယ်။
 
-**အချက်အလက်ပေးသောပုံများ** - အရေးပါသော အချက်အလက်များကို ပေးသည်:
+မီဒီယာအမျိုးအစားတစ်ခုချင်းစီမှာ accessibility approach များကွဲပြားပါတယ်။ ဥပမာအားဖြင့် ငါးနုနုကို ချက်တဲ့နည်းနဲ့ အမဲသားကို ချက်တဲ့နည်းက မတူသလိုပါပဲ။ ဒီကွဲပြားမှုတွေကို နားလည်ခြင်းက သင့်အနေဖြင့် အခြေအနေတစ်ခုချင်းစီအတွက် အကောင်းဆုံးဖြေရှင်းနည်းကို ရွေးချယ်နိုင်စေပါတယ်။
+
+### ပုံများကို Accessible ဖြစ်စေရန် မဟာဗျူဟာ
+
+Website ရဲ့ ပုံတစ်ပုံချင်းစီမှာ ရည်ရွယ်ချက်ရှိပါတယ်။ ဒီရည်ရွယ်ချက်ကို နားလည်ခြင်းက alternative text ကို ပိုမိုကောင်းမွန်စွာ ရေးသားနိုင်စေပြီး ပိုမိုပါဝင်မှုရှိတဲ့ အတွေ့အကြုံတွေကို ဖန်တီးနိုင်စေပါတယ်။
+
+**ပုံအမျိုးအစား ၄ မျိုးနှင့် alt text strategy များ:**
+
+**Informative images** - အရေးကြီးသော အချက်အလက်ကို ဖော်ပြခြင်း:
 ```html
 <img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.my.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
-**အလှဆင်ပုံများ** - သတင်းအချက်အလက်မပါရှိသော ရှုခင်းအလှပုံများ:
+**Decorative images** - သာမန် visual ဖြစ်ပြီး အချက်အလက်မပါဝင်ခြင်း:
 ```html
 <img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.my.png" alt="" role="presentation">
 ```
 
-**လုပ်ဆောင်မှုပုံများ** - button သို့မဟုတ် control အဖြစ် အသုံးပြုသောပုံများ:
+**Functional images** - button သို့မဟုတ် control အဖြစ် အသုံးပြုခြင်း:
 ```html
 <button>
   <img src="search-icon.svg" alt="Search">
 </button>
 ```
 
-**ရှုပ်ထွေးသောပုံများ** - charts, diagrams, infographics:
+**Complex images** - charts, diagrams, infographics:
 ```html
 <img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.my.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
@@ -540,12 +853,12 @@ graph TD
 </div>
 ```
 
-### ဗီဒီယိုနှင့် အသံအကြောင်းအရာများကို accessibility ရှိအောင်လုပ်ခြင်း
+### ဗီဒီယိုနှင့် အသံအကြောင်းအရာများကို Accessible ဖြစ်စေရန်
 
-**ဗီဒီယိုလိုအပ်ချက်များ:**
-- **Captions**: ပြောဆိုသောအကြောင်းအရာနှင့် အသံအကျိုးသက်ရောက်မှုများ၏ စာသားပုံစံ
-- **Audio descriptions**: မျက်မမြင်သူများအတွက် မြင်သာသောအရာများကို ရှင်းလင်းပြောဆိုခြင်း
-- **Transcripts**: အသံနှင့် မြင်သာသောအကြောင်းအရာများ၏ စာသားပုံစံ
+**ဗီဒီယိုအတွက် လိုအပ်ချက်များ:**
+- **Captions**: ပြောဆိုသောအကြောင်းအရာနှင့် အသံအကျိုးသက်ရောက်မှုများ၏ စာသားဗားရှင်း
+- **Audio descriptions**: မျက်မမြင်သူများအတွက် visual elements ကို ရှင်းပြသော narration
+- **Transcripts**: Audio နှင့် visual content အားလုံး၏ စာသားဗားရှင်း
 
 ```html
 <video controls>
@@ -555,13 +868,13 @@ graph TD
 </video>
 ```
 
-**အသံလိုအပ်ချက်များ:**
-- **Transcripts**: ပြောဆိုသောအကြောင်းအရာများ၏ စာသားပုံစံ
-- **မြင်သာသောအချက်ပြများ**: အသံသာရှိသောအကြောင်းအရာများအတွက် မြင်သာသောအချက်ပြများပေးပါ
+**အသံအကြောင်းအရာအတွက် လိုအပ်ချက်များ:**
+- **Transcripts**: ပြောဆိုသောအကြောင်းအရာအားလုံး၏ စာသားဗားရှင်း
+- **Visual indicators**: Audio-only content အတွက် visual cues ပေးပါ
 
-### ခေတ်မီပုံနည်းလမ်းများ
+### ခေတ်သစ်ပုံနည်းလမ်းများ
 
-**အလှဆင်ပုံများအတွက် CSS ကို အသုံးပြုခြင်း:**
+**Decorative images အတွက် CSS အသုံးပြုခြင်း:**
 ```css
 .hero-section {
   background-image: url('decorative-hero.jpg');
@@ -569,7 +882,7 @@ graph TD
 }
 ```
 
-**Responsive ပုံများကို accessibility ဖြင့် အသုံးပြုခြင်း:**
+**Responsive images ကို accessibility ဖြင့် အသုံးပြုခြင်း:**
 ```html
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
@@ -578,25 +891,44 @@ graph TD
 </picture>
 ```
 
-✅ **ပုံများ၏ accessibility ကို စမ်းသပ်ပါ**: Screen reader ကို အသုံးပြု၍ ပုံများပါရှိသော စာမျက်နှာကို လှည့်လည်ကြည့်ပါ။ အကြောင်းအရာကို နားလည်ရန် လုံလောက်သော အချက်အလက်များ ရရှိပါသလား?
+✅ **ပုံများကို Accessible ဖြစ်စေရန် စမ်းသပ်ပါ**: Screen reader ကို အသုံးပြုပြီး ပုံများပါဝင်သော page ကို navigation လုပ်ပါ။ Content ကို နားလည်ဖို့ လုံလောက်တဲ့အချက်အလက်ရရှိပါသလား?
 
 ## Keyboard navigation နှင့် focus management
 
-အသုံးပြုသူများစွာသည် ဝဘ်ကို keyboard ဖြင့်သာ လှည့်လည်ကြည့်ရှုကြသည်။ ဤအတွင်းတွင် မော်တာအတားအဆီးရှိသူများ၊ mouse ထက် keyboard ကို မြန်ဆန်သည်ဟု ယုံကြည်သူများ၊ သို့မဟုတ် mouse မအလုပ်လုပ်တော့သောသူများ ပါဝင်သည်။ သင့်ဆိုဒ်သည် keyboard input ဖြင့် ကောင်းစွာ အလုပ်လုပ်စေရန် သေချာစေရန် မဖြစ်မနေလိုအပ်သည်။ ၎င်းသည် လူတိုင်းအတွက် သင့်ဆိုဒ်ကို ပိုမိုထိရောက်စေသည်။
+အသုံးပြုသူများအနက် တစ်ချို့က keyboard ကိုသာ အသုံးပြုပြီး web ကို navigation လုပ်ကြပါတယ်။ ဒီအထဲမှာ motor disabilities ရှိသူများ၊ mouse ထက် keyboard ကို ပိုမြန်တယ်လို့ ယုံကြည်သူများ၊ သို့မဟုတ် mouse ပျက်သွားသူများ ပါဝင်ပါတယ်။ သင့် site က keyboard input နဲ့ အလုပ်လုပ်နိုင်ဖို့ သေချာစေခြင်းက အရေးကြီးပြီး အားလုံးအတွက် ပိုမိုထိရောက်တဲ့ site ဖြစ်စေပါတယ်။
 
-### အရေးပါသော keyboard navigation ပုံစံများ
+```mermaid
+flowchart LR
+    A[⌨️ Keyboard Navigation] --> B[Tab Order]
+    A --> C[Focus Indicators]
+    A --> D[Skip Links]
+    A --> E[Keyboard Shortcuts]
+    
+    B --> B1[Logical sequence<br/>All interactive elements<br/>No tab traps]
+    C --> C1[Visible outlines<br/>High contrast<br/>Clear boundaries]
+    D --> D1[Skip to main<br/>Skip to nav<br/>Bypass repetitive]
+    E --> E1[Escape to close<br/>Enter to activate<br/>Arrows in groups]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 
-**ပုံမှန် keyboard interaction များ:**
-- **Tab**: interactive elements များကို ရှေ့သို့ focus ပြောင်းရန်
-- **Shift + Tab**: နောက်သို့ focus ပြောင်းရန်
-- **Enter**: button နှင့် link များကို အလုပ်လုပ်စေရန်
-- **Space**: button များကို အလုပ်လုပ်စေရန်၊ checkbox များကို အမှန်ခြစ်ရန်
-- **Arrow keys**: component group များတွင် လှည့်လည်ကြည့်ရှုရန် (radio buttons, menus)
-- **Escape**: modals, dropdowns ကို ပိတ်ရန် သို့မဟုတ် လုပ်ဆောင်မှုများကို ပယ်ဖျက်ရန်
+### Keyboard navigation patterns အရေးကြီးများ
 
-### Focus management အကောင်းဆုံးအလေ့အကျင့်များ
+**Standard keyboard interactions:**
+- **Tab**: Interactive elements တွေကို အရှေ့သို့ focus ပြောင်းပါ
+- **Shift + Tab**: အနောက်သို့ focus ပြောင်းပါ
+- **Enter**: Button နှင့် link တွေကို activate လုပ်ပါ
+- **Space**: Button တွေကို activate လုပ်ပါ၊ checkbox တွေကို check လုပ်ပါ
+- **Arrow keys**: Component group တွေ (radio buttons, menus) အတွင်းမှာ navigation လုပ်ပါ
+- **Escape**: Modal, dropdowns ကို ပိတ်ပါ သို့မဟုတ် operation ကို cancel လုပ်ပါ
 
-**မြင်သာသော focus indicators:**
+### Focus management အကောင်းဆုံးနည်းလမ်းများ
+
+**Visible focus indicators:**
 ```css
 /* Ensure focus is always visible */
 button:focus-visible {
@@ -610,7 +942,7 @@ button:focus-visible {
 }
 ```
 
-**Skip links ဖြင့် ထိရောက်သော navigation:**
+**Efficient navigation အတွက် Skip links:**
 ```html
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -623,7 +955,7 @@ button:focus-visible {
 </main>
 ```
 
-**Tab order ကို သင့်လျော်စွာ ပြုလုပ်ခြင်း:**
+**Proper tab order:**
 ```html
 <!-- Use semantic HTML for natural tab order -->
 <form>
@@ -637,9 +969,9 @@ button:focus-visible {
 </form>
 ```
 
-### Modals တွင် focus trapping
+### Modal တွေမှာ focus trapping
 
-Modal dialogs ကို ဖွင့်သောအခါ focus ကို modal အတွင်းတွင်သာ ထိန်းထားသင့်သည်:
+Modal dialogs ကို ဖွင့်တဲ့အခါ focus ကို modal အတွင်းမှာပဲ ထိန်းသိမ်းထားရမယ်:
 
 ```javascript
 // Modern focus trap implementation
@@ -672,15 +1004,15 @@ function trapFocus(element) {
 }
 ```
 
-✅ **Keyboard navigation ကို စမ်းသပ်ပါ**: Tab key ကိုသာ အသုံးပြု၍ သင့်ဝဘ်ဆိုဒ်ကို လှည့်လည်ကြည့်ရှုပါ။ interactive elements အားလုံးကို ရောက်နိုင်ပါသလား? Focus order သည် သင့်လျော်ပါသလား? Focus indicators သည် အလင်းလင်းရောင်ရောင် မြင်နိုင်ပါသလား?
+✅ **Keyboard navigation ကို စမ်းသပ်ပါ**: Tab key ကိုသာ အသုံးပြုပြီး သင့် website ကို navigation လုပ်ကြည့်ပါ။ Interactive elements အားလုံးကို ရောက်ရှိနိုင်ပါသလား? Focus order က logical ဖြစ်ပါသလား? Focus indicators တွေ ရှင်းလင်းမြင်သာပါသလား?
 
 ## Form accessibility
 
-Form များသည် အသုံးပြုသူများနှင့် အပြန်အလှန်ဆက်သွယ်မှုအတွက် အရေးပါသော အခန်းကဏ္ဍဖြစ်ပြီး accessibility အတွက် အထူးဂရုစိုက်ရန် လိုအပ်သည်။
+Form တွေက အသုံးပြုသူ interaction အတွက် အရေးကြီးပြီး accessibility အတွက် အထူးဂရုစိုက်ဖို့ လိုအပ်ပါတယ်။
 
 ### Label နှင့် form control အချိတ်အဆက်
 
-**Form control တစ်ခုစီတွင် label တစ်ခုလိုအပ်သည်:**
+**Form control တစ်ခုချင်းစီမှာ label လိုအပ်ပါတယ်:**
 ```html
 <!-- Explicit labeling (preferred) -->
 <label for="username">Username:</label>
@@ -709,15 +1041,15 @@ Form များသည် အသုံးပြုသူများနှင�
 </div>
 ```
 
-**Form validation အကောင်းဆုံးအလေ့အကျင့်များ:**
-- `aria-invalid` ကို အသုံးပြု၍ မမှန်သော field များကို ဖော်ပြရန်
-- ရှင်းလင်းပြီး သတ်မှတ်ချက်ရှိသော error messages ပေးရန်
-- အရေးပါသော error အကြောင်းကြားမှုများအတွက် `role="alert"` ကို အသုံးပြုရန်
-- Error များကို ချက်ချင်းနှင့် form ကို submit လုပ်သောအခါတွင် ဖော်ပြရန်
+**Form validation အကောင်းဆုံးနည်းလမ်းများ:**
+- `aria-invalid` ကို အသုံးပြုပြီး invalid fields ကို ဖော်ပြပါ
+- ရှင်းလင်းပြီး သေချာတဲ့ error messages ပေးပါ
+- အရေးကြီးတဲ့ error ကြေညာချက်များအတွက် `role="alert"` ကို အသုံးပြုပါ
+- Error တွေကို form submit လုပ်တဲ့အခါမှာပဲမဟုတ်ပဲ ချက်ချင်းပြပါ
 
 ### Fieldsets နှင့် grouping
 
-**ဆက်စပ်သော form control များကို အုပ်စုဖွဲ့ရန်:**
+**Form control တွေကို အုပ်စုဖွဲ့ပါ:**
 ```html
 <fieldset>
   <legend>Shipping Address</legend>
@@ -740,56 +1072,88 @@ Form များသည် အသုံးပြုသူများနှင�
 
 ## သင့် Accessibility ခရီး: အဓိကအချက်များ
 
-ဂုဏ်ယူပါတယ်! သင့်အနေနှင့် အားလုံးအတွက် ဝဘ်အတွေ့အကြုံများကို ဖန်တီးနိုင်ရန် အခြေခံအသိပညာများ ရရှိခဲ့ပါပြီ။ ဤသည်သည် စိတ်လှုပ်ရှားဖွယ်ရာ အရာများဖြစ်သည်! Web accessibility သည် compliance box များကို အမှတ်အသားပြုခြင်းအကြောင်းသာမဟုတ်ပါ—လူများသည် digital content ကို အမျိုးမျိုးသောနည်းလမ်းများဖြင့် အပြန်အလှန်ဆက်သွယ်မှုကို အသိအမှတ်ပြုခြင်းနှင့် အဲဒီအံ့မခန်းသော အဆင့်ဆင့်မှုအတွက် ဒီဇိုင်းဆွဲခြင်းအကြောင်းဖြစ်သည်။
+ဂုဏ်ယူပါတယ်! သင့်အနေနဲ့ အားလုံးပါဝင်နိုင်တဲ့ web experience တွေကို ဖန်တီးနိုင်ဖို့ အခြေခံအသိပညာတွေ ရရှိပြီးပါပြီ။ ဒါက အလွန်စိတ်လှုပ်ရှားစရာကောင်းတဲ့အရာပါ! Web accessibility က compliance box တွေကို check လုပ်ဖို့အတွက်သာမဟုတ်ပါဘူး—လူတွေက digital content ကို interact လုပ်တဲ့ နည်းလမ်းတွေကွဲပြားမှုကို အသိအမှတ်ပြုပြီး ဒီအံ့ဖွယ်ကောင်းတဲ့ diversity အတွက် design လုပ်ဖို့အရေးပါပါတယ်။
 
-သင့်အနေနှင့် digital content ကို အားလုံးအတွက် သင့်လျော်စေရန် နားလည်သော developer များ၏ တိုးတက်လာသော အသိုင်းအဝိုင်း၏ အစိတ်အပိုင်းတစ်ခုဖြစ်လာပါပြီ။ အဖွဲ့ထဲကို ကြိုဆိုပါတယ်!
+အခု သင့်အနေနဲ့ digital content ကို interact လုပ်တဲ့ လူတွေကို နားလည်ပြီး design လုပ်တတ်တဲ့ developer တွေရဲ့ growing community မှာ ပါဝင်နေပါပြီ။ Club မှာ ကြိုဆိုပါတယ်!
 
-**🎯 သင့် accessibility toolkit တွင် အခုပါဝင်သောအရာများ:**
+**🎯 သင့် accessibility toolkit မှာ အခုပါဝင်ပြီးသားတွေ:**
 
 | Core Principle | Implementation | Impact |
 |----------------|----------------|---------|
-| **Semantic HTML Foundation** | HTML elements များကို ရည်ရွယ်ချက်အတိုင်း အသုံးပြုပါ | Screen readers သည် ထိရောက်စွာ လှည့်လည်ကြည့်ရှုနိုင်ပြီး keyboard များသည် အလိုအလျောက် အလုပ်လုပ်သည် |
-| **Inclusive Visual Design** | Contrast လုံလောက်မှု၊ အဓိကရှိသော အရောင်အသုံးပြုမှု၊ မြင်သာသော focus indicators | အလင်းအရောင်အခြေအနေမည်သည့်အချိန်တွင်မဆို လူတိုင်းအတွက် ရှင်းလင်းမှုရှိသည် |
-| **Descriptive Content** | အဓိကရှိသော link text, alt text, headings | Visual context မပါဘဲ content ကို အသုံးပြုသူများ နားလည်နိုင်သည် |
-| **Keyboard Accessibility** | Tab order, keyboard shortcuts, focus management | မော်တာအတားအဆီးရှိသူများနှင့် power user efficiency |
-| **ARIA Enhancement** | Semantic gaps များကို ဖြည့်ရန် အကောင်းဆုံးအသုံးပြုမှု | ရှုပ်ထွေးသော application များသည် assistive technologies များနှင့် အလုပ်လုပ်သည် |
-| **Comprehensive Testing** | Automated tools + manual verification + real user testing | အသုံးပြုသူများကို ထိခိုက်မီ အခက်အခဲများကို ဖမ်းဆီးနိုင်သည် |
+| **Semantic HTML Foundation** | HTML elements တွေကို ရည်ရွယ်ချက်အတိုင်း အသုံးပြုပါ | Screen readers တွေက အလွယ်တကူ navigation လုပ်နိုင်ပြီး keyboard တွေ အလိုအလျောက် အလုပ်လုပ်နိုင်ပါတယ် |
+| **Inclusive Visual Design** | Contrast လုံလောက်မှု၊ အဓိပ္ပါယ်ရှိတဲ့ အရောင်အသုံးပြုမှု၊ မြင်သာတဲ့ focus indicators | အလင်းအခြေအနေမည်သည့်အချိန်တွင်မဆို အားလုံးအတွက် ရှင်းလင်းမြင်သာမှုရှိပါတယ် |
+| **Descriptive Content** | အဓိပ္ပါယ်ရှိတဲ့ link text, alt text, headings | Visual context မပါဘဲ content ကို အသုံးပြုသူတွေ နားလည်နိုင်ပါတယ် |
+| **Keyboard Accessibility** | Tab order, keyboard shortcuts, focus management | Motor accessibility နှင့် power user efficiency |
+| **ARIA Enhancement** | Semantic gaps တွေကို ဖြည့်ဖို့ အကောင်းဆုံးအသုံးပြုပါ | Complex applications တွေ assistive technologies နဲ့ အလုပ်လုပ်နိုင်ပါတယ် |
+| **Comprehensive Testing** | Automated tools + manual verification + real user testing | အသုံးပြုသူတွေကို အကျိုးသက်ရောက်မယ့် အခါမှာ အမှားတွေကို ဖမ်းဆီးနိုင်ပါတယ် |
 
-**🚀 သင့်အနာဂတ်အတွက် အဆင့်များ:**
+**🚀 သင့်အနာဂတ်အတွက် နောက်ထပ်အဆင့်များ:**
 
-1. **Accessibility ကို သင့် workflow ထဲတွင် ထည့်သွင်းပါ**: စမ်းသပ်မှုကို သင့် development လုပ်ငန်းစဉ်၏ သဘာဝအပိုင်းတစ်ခုအဖြစ် ပြုလုပ်ပါ
-2. **အမှန်တကယ်သော အသုံးပြုသူများထံမှ သင်ယူပါ**: Assistive technologies ကို အသုံးပြုသူများထံမှ အကြံဉာဏ် ရှာဖွေပါ
-3. **လက်ရှိနည်းလမ်းများကို လေ့လာပါ**: Accessibility နည်းလမ်းများသည် နည်းပညာအသစ်များနှင့် စံသတ်မှတ်ချက်များနှင့်အတူ တိုးတက်လာသည်
-4. **Inclusivity ကို အားပေးပါ**: သင့်အသိပညာကို မျှဝေပြီး accessibility ကို အဖွဲ့၏ ဦးစားပေးမှုအဖြစ် ပြုလုပ်ပါ
+1. **Accessibility ကို workflow အတွင်းထည့်ပါ**: Testing ကို development process ရဲ့ အစိတ်အပိုင်းတစ်ခုအဖြစ် သဘာဝကျစွာလုပ်ပါ
+2. **Real users ထံမှ သင်ယူပါ**: Assistive technologies အသုံးပြုသူများထံမှ feedback ရယူပါ
+3. **လက်ရှိနည်းလမ်းများကို လိုက်နာပါ**: Accessibility techniques တွေက နည်းပညာအသစ်တွေနဲ့ standards အသစ်တွေနဲ့အတူ တိုးတက်နေပါတယ်
+4. **Inclusion အတွက် advocate လုပ်ပါ**: သင့်အသိပညာကို မျှဝေပြီး accessibility ကို အဖွဲ့အစည်းရဲ့ priority ဖြစ်စေပါ
 
-> 💡 **သတိပြုပါ**: Accessibility အကန့်အသတ်များသည် လူတိုင်းအတွက် အကျိုးရှိသော innovative, elegant ဖြေရှင်းနည်းများကို often ဖန်တီးစေသည်။ Curb cuts, captions, voice controls များသည် accessibility features အဖြစ် စတင်ခဲ့ပြီး mainstream အဆင့်မြှင့်တင်မှုများဖြစ်လာခဲ့သည်။
+> 💡 **သတိပြုပါ**: Accessibility constraints တွေက အားလုံးအတွက် အကျိုးရှိတဲ့ innovative, elegant solutions တွေကို ဖန်တီးစေပါတယ်။ Curb cuts, captions, voice controls တွေက accessibility features အဖြစ် စတင်ခဲ့ပြီး mainstream improvements ဖြစ်လာခဲ့ပါတယ်။
 
-**စီးပွားရေးအရ အကျိုးကျေးဇူးသည် ရှင်းလင်းစွာ မြင်သာသည်**: Accessible ဝဘ်ဆိုဒ်များသည် အသုံးပြုသူများပိုမိုရောက်ရှိစေပြီး၊ search engines တွင် ပိုမိုကောင်းမွန်စွာ ရှာဖွေမှုရရှိစေပြီး၊ ပြုပြင်ထိန်းသိမ်းမှုကုန်ကျစရိတ်ကို လျှော့ချပြီး၊ တရားဥပဒေဆိုင်ရာ အန္တရာယ်များကို ရှောင်ရှားနိုင်သည်။ သို့သော် အမှန်တကယ် accessibility ကို ဂရုစိုက်ရန် အကြောင်းရင်းသည် ပိုမိုနက်ရှိုင်းသည်။ Accessible ဝဘ်ဆိုဒ်များသည် ဝဘ်၏ အကောင်းဆုံးတန်ဖိုးများကို ကိုယ်စားပြုသည်—ဖွင့်လှစ်မှု၊ ပါဝင်မှုနှင့် လူတိုင်းသည် သတင်းအချက်အလက်များကို တန်းတူရရှိရန် အယူအဆ။
+**စီးပွားရေးအတွက် အကျိုးကျေးဇူးက ရှင်းလင်းပါတယ်**: Accessible websites တွေက အသုံးပြုသူများပိုရောက်ရှိပြီး၊ search engines မှာ ပိုမိုကောင်းမွန်စွာ rank ရရှိပြီး၊ ထိန်းသိမ်းမှုကုန်ကျစရိတ်နည်းပြီး၊ တရားဥပဒေဆိုင်ရာအန္တရာယ်များကို ရှောင်ရှားနိုင်ပါတယ်။ ဒါပေမယ့် အမှန်တကယ် အရေးကြီးတဲ့အကြောင်းက ပိုမိုနက်ရှိုင်းပါတယ်။ Accessible websites တွေက web ရဲ့ အကောင်းဆုံးတန်ဖိုးတွေ—openness, inclusivity, နှင့် လူတိုင်းအတွက် သတင်းအချက်အလက်ရရှိခွင့်ကို အတိအကျဖော်ပြပါတယ်။
 
-သင့်အနေနှင့် အနာဂတ်တွင် အားလုံးအတွက် ဝဘ်ကို ဖန်တီးနိုင်ရန် အသုံးပြုနိုင်သော အရင်းအမြစ်များနှင့် အတူ အဆင်သင့်ဖြစ်နေပါပြီ။ သင့်အနေနှင့် ဖန်တီးသော accessible site တစ်ခုစီသည် လူတိုင်းအတွက် ဝဘ်ကို ပိုမိုကြိုဆိုဖွယ်ရာနေရာဖြစ်စေသည်။ အဲဒါကို စဉ်းစားကြည့်ပါက အံ့မခန်းပါပဲ!
+သင့်အနေနဲ့ အနာဂတ်ရဲ့ inclusive web ကို ဖန်တီးနိုင်ဖို့ အသင့်ဖြစ်နေပါပြီ။ သင့်အနေနဲ့ ဖန်တီးတဲ့ accessible site တစ်ခုချင်းစီက internet ကို လူတိုင်းအတွက် ပိုမိုကြိုဆိုဖွယ်ကောင်းတဲ့နေရာဖြစ်စေပါတယ်။ ဒီအကြောင်းကို စဉ်းစားကြည့်ရင် အလွန်အံ့ဩစရာကောင်းပါတယ်!
 
-## အပိုဆောင်းအရင်းအမြစ်များ
+## အပိုဆောင်းရင်းမြစ်များ
 
-သင့် accessibility ကို လေ့လာမှုခရီးကို အောက်ပါ အရေးပါသော အရင်းအမြစ်များဖြင့် ဆက်လက်လုပ်ဆောင်ပါ:
+သင့် accessibility သင်ယူမှုခရီးကို ဒီအရေးကြီးသော resources များနှင့် ဆက်လက်တိုးတက်စေပါ:
 
-**📚 တရားဝင်စံနှင့် လမ်းညွှန်ချက်များ:**
-- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - အတိအကျကို ရှာဖွေနိုင်သော တရားဝင် accessibility စံ
-- [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - ရှုပ်ထွေးသော interactive widgets များအတွက် အပြည့်အစုံသော ပုံစံများ
-- [WebAIM Guidelines](https://webaim.org/) - အခြေခံအဆင့်အတွက် အကျိုးရှိသော accessibility လမ်းညွှန်ချက်များ
+**📚 တရားဝင် Standards နှင့် Guidelines:**
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - အတိအကျ reference ပါဝင်သော တရားဝင် accessibility standard
+- [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - Interactive widgets အတွက် အပြည့်အစုံ patterns
+- [WebAIM Guidelines](https://webaim.org/) - Practical, beginner-friendly accessibility guidance
 
-**🛠️ Tools နှင့် စမ်းသပ်မှုအရင်းအမြစ်များ:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - စက်မှုလုပ်ငန်းစံ accessibility စမ်းသပ်မှု
-- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - accessibility စစ်ဆေးမှုအဆင့်ဆင့်
-- [Accessibility Insights](https://accessibilityinsights.io/) - Microsoft ၏ အပြည့်အစုံသော စမ်းသပ်မှုစနစ်
-- [Color Oracle](https://colororacle.org/) - ဒီဇိုင်းစမ်းသပ်မှုအတွက် အရောင်မမြင်နိုင်မှု simulator
+**🛠️ Tools နှင့် Testing Resources:**
+- [axe DevTools](https://www.deque.com/axe/devtools/) - စက်မှုလုပ်ငန်း-standard accessibility testing
+- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Accessibility verification အဆင့်ဆင့်
+- [Accessibility Insights](https://accessibility
+- [ ] ၅ ခုသော ရှုပ်ထွေးသော ဝက်ဘ်ဆိုဒ်များတွင် ကီးဘုတ်ဖြင့် လှုပ်ရှားမှုကို လေ့ကျင့်ပါ။
+- [ ] သင့်တော်သော label များ၊ error ကိုင်တွယ်မှုနှင့် ARIA ပါဝင်သော ရိုးရှင်းသော form တစ်ခု တည်ဆောက်ပါ။
+- [ ] အနားလွှာမရှိသူများအတွက် community တစ်ခု (A11y Slack, WebAIM forum) တွင် ပါဝင်ပါ။
+- [ ] မသန်စွမ်းသူများသည် ဝက်ဘ်ဆိုဒ်များကို လှုပ်ရှားသုံးစွဲပုံကို ကြည့်ရှုပါ (YouTube တွင် အလွန်ကောင်းသော ဥပမာများ ရှိသည်)။
 
-**🎓 လေ့လာမှုနှင့် အသိုင်းအဝိုင်း:**
-- [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey9/) - အမှန်တကယ်သော အသုံးပြုသူများ၏ အကြိုက်နှင့် အပြုအမူများ
-- [Inclusive Components](https://inclusive-components.design/) - ခေတ်မီ accessible component ပုံစံများ
-- [A11y Coffee](https://a11y.coffee/) - accessibility အကြံဉာဏ်များနှင့် အမြင်များ
-- [Web Accessibility Initiative
+### 🌟 **သင့်လစဉ် ပြောင်းလဲမှု**
+- [ ] သင့်တိုးတက်မှုလုပ်ငန်းစဉ်တွင် accessibility စမ်းသပ်မှုကို ပေါင်းစပ်ပါ။
+- [ ] accessibility ပြဿနာများကို ဖြေရှင်းခြင်းဖြင့် open source project တစ်ခုတွင် ပါဝင်ပါ။
+- [ ] assistive technology ကို အသုံးပြုသူတစ်ဦးနှင့် usability စမ်းသပ်မှု ပြုလုပ်ပါ။
+- [ ] သင့်အဖွဲ့အတွက် accessible component library တစ်ခု တည်ဆောက်ပါ။
+- [ ] သင့်အလုပ်နေရာ သို့မဟုတ် community တွင် accessibility အတွက် လှုပ်ရှားမှု ပြုလုပ်ပါ။
+- [ ] accessibility အယူအဆများကို အသစ်တစ်ခုကို သင်ကြားပေးပါ။
+
+### 🏆 **နောက်ဆုံး Accessibility Champion စစ်ဆေးမှု**
+
+**သင့် accessibility ခရီးကို ကျေးဇူးတင်ပါ:**
+- လူများသည် ဝက်ဘ်ကို အသုံးပြုပုံအကြောင်း အံ့ဩစရာအရာတစ်ခုက ဘာလဲ?
+- သင့်တိုးတက်မှုစတိုင်နှင့် အတူတူသော accessibility အခြေခံအချက်က ဘာလဲ?
+- accessibility အကြောင်းကို သင်ယူခြင်းက ဒီဇိုင်းအပေါ် သင့်အမြင်ကို ဘယ်လိုပြောင်းလဲစေခဲ့သလဲ?
+- အမှန်တကယ် project တစ်ခုတွင် accessibility တိုးတက်မှုကို ပထမဆုံး ဘာလုပ်ချင်သလဲ?
+
+```mermaid
+journey
+    title Your Accessibility Confidence Evolution
+    section Today
+      Overwhelmed: 3: You
+      Curious: 4: You
+      Motivated: 5: You
+    section This Week
+      Practicing: 4: You
+      Testing: 5: You
+      Understanding: 5: You
+    section Next Month
+      Advocating: 5: You
+      Leading: 5: You
+      Inclusive by Default: 5: You
+```
+
+> 🌍 **သင်သည် အခု accessibility champion ဖြစ်ပါပြီ!** လူတိုင်းသည် ဝက်ဘ်ကို ဘယ်လိုအသုံးပြုမည်ဆိုသည်ကို မထီမှီဘဲ အကောင်းဆုံး ဝက်ဘ်အတွေ့အကြုံများကို ဖန်တီးနိုင်သည်။ သင်တည်ဆောက်သော accessible feature တစ်ခုစီသည် အင်တာနက်ကို ပိုမိုပါဝင်မှုရှိစေသည်။ accessibility ကို အကန့်အသတ်မဟုတ်ဘဲ အားလုံးအတွက် ပိုမိုကောင်းမွန်သော အတွေ့အကြုံများ ဖန်တီးရန် အခွင့်အရေးအဖြစ် မြင်နိုင်သော developer များကို ဝက်ဘ်က လိုအပ်နေသည်။ လှုပ်ရှားမှုတွင် ကြိုဆိုပါသည်! 🎉
 
 ---
 
 **အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရားရှိသော အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားယူမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားနေသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတရ အရင်းအမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲအမှားများ သို့မဟုတ် အနားလွဲမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
