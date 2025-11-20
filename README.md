@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![GitHub license](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
 [![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
@@ -253,3 +254,4 @@ This repository is licensed under the MIT license. See the [LICENSE](LICENSE) fi
 <!-- Comentario añadido por JosueD09 para la práctica -->
 
 He forkeado y clonado este repositorio.
+=======
