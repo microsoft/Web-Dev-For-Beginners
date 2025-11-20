@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"name": "web-dev-for-beginners",
 	"version": "1.0.0",
 	"description": "Web Dev for Beginners - A Curriculum",
@@ -26,3 +27,4 @@
 		"docsify-to-pdf": "0.0.5"
 	}
 }
+=======
