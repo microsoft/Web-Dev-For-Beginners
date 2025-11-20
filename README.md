@@ -249,3 +249,8 @@ If you have product feedback or errors while building visit:
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+
+---
+## 📝Comentario Personal
+
+Este repositorio ha sido forkeado y modificado por Paola Stefani Berrios Condori como parte de la práctica de trabajo individual y gestión de forks en GitHub.
