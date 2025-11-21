@@ -251,4 +251,4 @@ This repository is licensed under the MIT license. See the [LICENSE](LICENSE) fi
 
 ## Comentario final
 
-Este repositorio sirve como guia para nuevos programadores que se quieren adentrar al mundo de la programación web
+Este repositorio sirve como guia para nuevos programadores que se quieren adentrar al mundo de la programacion web
