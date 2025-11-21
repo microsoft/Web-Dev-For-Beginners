@@ -10,7 +10,8 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# Web Development for Beginners - A Curriculum
+# 🔊[Paola Stefani's Fork]Web Development for Beginners - A Curriculum.📰
+
 
 Learn the fundamentals of web development with our 12-week comprehensive course by Microsoft Cloud Advocates. Each of the 24 lessons dives into JavaScript, CSS, and HTML through hands-on projects like terrariums, browser extensions, and space games. Engage with quizzes, discussions, and practical assignments. Enhance your skills and optimize your knowledge retention with our effective project-based pedagogy. Start your coding journey today!
 
@@ -248,3 +249,8 @@ If you have product feedback or errors while building visit:
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+
+---
+## 📝Comentario Personal
+
+Este repositorio ha sido forkeado y modificado por Paola Stefani Berrios Condori como parte de la práctica de trabajo individual y gestión de forks en GitHub.
