@@ -1,3 +1,5 @@
+# Curso Web para Principiantes – Versión Pablo García
+
 [![GitHub license](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
 [![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
@@ -248,3 +250,8 @@ If you have product feedback or errors while building visit:
 ## License
 
 This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for more information.
+
+---
+Comentario añadido por Pablo García (@95pzzm) para la actividad de Fork, grupos y organizaciones.
+
+
