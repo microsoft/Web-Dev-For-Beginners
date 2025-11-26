@@ -57,9 +57,9 @@ jobs:
           # translate -l "ar ur tl mr ne pa" -y 
           # translate -l "bn ru mo br it tr fi nl he" -y
           # 1a
-          translate -l "el th sv da no " -y
+          # translate -l "el th sv da no " -y
           # 1b
-          # translate -l "vi id ms ja uk my" -y
+          translate -l "vi id ms ja uk my" -y
           # translate -l "sw hu cs sk ro bg sr hr sl" -y
           # translate -l "sk ro bg" -y
           # translate -l "sr hr sl" -y
