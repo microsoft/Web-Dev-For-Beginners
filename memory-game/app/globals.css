@@ -1,26 +1,247 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #F8FAFC; /* light pastel background */
+  --foreground: #071122; /* darker text for contrast */
+  --modal-bg: #ffffff;
+  --modal-text: #071122;
+  --panel: rgba(15,23,36,0.02);
+  --muted: #475569; /* stronger muted */
+  --card-front: #60A5FA; /* soft blue (primary) */
+  --card-front-text: #062030;
+  --card-matched: #34D399; /* mint (match) */
+  --card-matched-contrast: #059669; /* darker mint for contrast */
+  --card-back: #E6EEF6; /* very light back */
+  --accent: #60A5FA; /* primary accent */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --modal-bg: #0f1724;
+    --modal-text: #edf2f7;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Game UI styles */
+.game-panel {
+  width: 100%;
+  max-width: 64rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.controls {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.controls-left {
+  display:flex;
+  gap:0.4rem;
+  align-items:center;
+}
+
+.controls-right {
+  display:flex;
+  gap:0.4rem;
+  align-items:center;
+}
+
+/* spacing for the players row (added class in component) */
+.players-row {
+  margin-bottom: 1rem;
+}
+
+/* Ensure player labels, inputs and stats are readable in both themes */
+.game-panel input,
+.game-panel .player-label,
+.game-panel .stat,
+.game-panel .small-muted {
+  color: var(--foreground);
+}
+
+.game-panel input {
+  background: transparent;
+  border: none;
+}
+
+.card-wrap {
+  perspective: 1000px;
+}
+
+/* make cards square and a bit larger */
+.card {
+  /* ensure card buttons are square */
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 400ms cubic-bezier(.2,.8,.2,1);
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  color: var(--foreground);
+}
+
+/* Card hover / focus styles */
+.card {
+  box-shadow: 0 4px 8px rgba(15,23,42,0.05);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.card:hover:not(.flipped) {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 18px rgba(15,23,42,0.08);
+}
+.card:focus {
+  outline: 2px solid rgba(6,182,212,0.18);
+}
+
+/* Match pulse */
+.card.matched .card-inner {
+  animation: match-pulse 520ms ease;
+}
+@keyframes match-pulse {
+  0% { transform: scale(1) rotateY(0deg); }
+  50% { transform: scale(1.05) rotateY(0deg); }
+  100% { transform: scale(1) rotateY(0deg); }
+}
+
+/* Winner modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 60;
+}
+.modal {
+  background: var(--modal-bg);
+  color: var(--modal-text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 16px 40px rgba(2,6,23,0.28);
+  max-width: 26rem;
+  width: 100%;
+  text-align: center;
+}
+.modal h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.modal p { color: var(--modal-text); margin-bottom: 1rem; }
+.modal button { margin: 0 0.25rem; }
+
+/* Ensure secondary button in modal is readable in both themes */
+.modal .btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: var(--modal-text);
+  border: none;
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.45rem;
+  opacity: 1;
+}
+.modal .btn-secondary:hover { filter: brightness(0.92); }
+
+.winner-text { color: var(--card-matched-contrast); }
+
+/* Color tokens for card faces */
+.card-face.card-front {
+  background: var(--card-front);
+  color: white;
+}
+.card.matched .card-face.card-front {
+  background: var(--card-matched);
+  color: white;
+}
+.card-face.card-back {
+  background: var(--card-back);
+  color: var(--foreground);
+}
+
+/* Button classes used in JSX */
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff; /* ensure readable on accent */
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.45rem;
+  border: none;
+}
+.btn-secondary {
+  background: var(--card-back);
+  color: var(--foreground);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+.player-active {
+  box-shadow: 0 6px 18px rgba(96,165,250,0.10);
+  border-radius: 0.45rem;
+  background: rgba(96,165,250,0.06);
+}
+
+/* small responsive tweaks */
+@media (max-width: 640px) {
+  .card { border-radius: 0.4rem; }
+  .card-face { border-radius: 0.4rem; }
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+}
+
+.small-muted {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.stat {
+  background: rgba(15,23,42,0.03);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+@media (max-width: 640px) {
+  .game-panel { padding: 0.75rem; }
 }
