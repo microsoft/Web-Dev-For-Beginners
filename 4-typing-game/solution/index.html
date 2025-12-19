@@ -42,13 +42,23 @@
         <h1>
             <i class="fas fa-keyboard"></i> Practice your typing
         </h1>
+
+		<div id="datetime">
+			<i class="fas fa-calendar-day"></i>
+			<span id="current-date"></span>
+			&nbsp;|&nbsp;
+			<i class="fas fa-clock"></i>
+			<span id="current-time"></span>
+		</div>
+
+
         <div>
             <i class="fas fa-info-circle"></i>
             Click start to have a quote displayed. Type the quote as fast as you can!
         </div>
 
         <p id="quote"></p>
-        <p id="message"></p>
+        <p id="message" aria-live="polite"></p>
         <div>
             <label for="typed-value" class="hidden-label">Current word</label>
             <input type="text" aria-label="current word" id="typed-value" placeholder="Type here..." />
@@ -59,21 +69,14 @@
                 <i class="fas fa-play"></i> Start
             </button>
         </div>
+		<div>
+			<button id="reset" type="button" style="display: none;" aria-label="Reset the typing game">
+				<i class="fas fa-sync"></i> Reset
+			</button>
+		</div>
+
         <script src="./index.js"></script>
 				<!-- ...existing code... -->
-		<body>
-			<h1>
-				<i class="fas fa-keyboard"></i> Practice your typing
-			</h1>
-			<div id="datetime">
-				<i class="fas fa-calendar-day"></i>
-				<span id="current-date"></span>
-				&nbsp;|&nbsp;
-				<i class="fas fa-clock"></i>
-				<span id="current-time"></span>
-			</div>
-			<!-- ...existing code... -->
-		</body>
 		<!-- ...existing code... -->
 		 <script>	
 						// ...existing code...
