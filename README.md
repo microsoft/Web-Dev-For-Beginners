@@ -45,7 +45,7 @@ New Challenge added, look for "GitHub Copilot Agent Challenge 🚀" in most chap
 
 ### 📣 Announcement - _New Project to build using Generative AI_ 
 
-New AI Assistant project just added, check it out [project](./09-chat-project/README.md)
+New AI Assistant project just added, check it out [project](./9-chat-project/README.md)
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
 
