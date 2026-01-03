@@ -73,13 +73,16 @@ Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get s
 
 ## 🌱 Getting Started
 
-> **Teachers**, we have [included some suggestions](for-teachers.md) on how to use this curriculum. We'd love your feedback [in our discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> Teachers, we have included some suggestions...
 
-**[Learners](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, for each lesson, start with a pre-lecture quiz and follow through with reading the lecture material, completing the various activities and check your understanding with the post-lecture quiz.
+## 👋 First-Time Contributors
 
-To enhance your learning experience, connect with your peers to work on the projects together! Discussions are encouraged in our [discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) where our team of moderators will be available to answer your questions.
+If this is your first open-source contribution:
+- Look for issues labeled `good first issue`
+- Keep your PR small and focused
+- Follow the contributing guidelines
+- Don’t hesitate to ask questions in Discussions
 
-To further your education, we highly recommend exploring [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) for additional study materials.
 
 ### 📋 Setting up your environment
 
