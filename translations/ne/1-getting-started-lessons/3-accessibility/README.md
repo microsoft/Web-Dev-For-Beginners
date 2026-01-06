@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # पहुँचयोग्य वेबपेजहरू बनाउने
 
-![पहुंचयोग्यता सम्बन्धी सबै कुरा](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.ne.png)
+![पहुंचयोग्यता सम्बन्धी सबै कुरा](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ne.png)
 > स्केच नोट [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid

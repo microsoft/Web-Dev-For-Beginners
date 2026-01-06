@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![क्यानभासको ग्रिड](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.ne.png)
+![क्यानभासको ग्रिड](../../../../translated_images/canvas_grid.5f209da785ded492.ne.png)
 > छवि [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) बाट
 
 क्यानभास तत्वमा चित्रण गर्न, तपाईंले क्यानभास ग्राफिक्सको आधार बनाउने तीन-चरण प्रक्रिया पछ्याउनुहुनेछ। तपाईंले यो केही पटक गरेपछि, यो स्वाभाविक बन्छ:
@@ -329,11 +329,11 @@ flowchart TD
 
 - हिरो जहाज
 
-   ![हिरो जहाज](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.ne.png)
+   ![हिरो जहाज](../../../../translated_images/player.dd24c1afa8c71e9b.ne.png)
 
 - 5*5 राक्षस
 
-   ![राक्षस जहाज](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.ne.png)
+   ![राक्षस जहाज](../../../../translated_images/enemyShip.5df2a822c16650c2.ne.png)
 
 ### विकास सुरु गर्न सिफारिस गरिएका चरणहरू
 
@@ -414,7 +414,7 @@ const STOP_X = START_X + FORMATION_WIDTH;
 
 तयार परिणाम यसरी देखिनुपर्छ:
 
-![कालो स्क्रिनमा एक नायक र ५*५ राक्षसहरू](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.ne.png)
+![कालो स्क्रिनमा एक नायक र ५*५ राक्षसहरू](../../../../translated_images/partI-solution.36c53b48c9ffae2a.ne.png)
 
 ## समाधान
 

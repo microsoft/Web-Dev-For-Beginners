@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जाभास्क्रिप्ट आधारभूत: मेथड्स र फङ्सन्स
 
-![जाभास्क्रिप्ट आधारभूत - फङ्सन्स](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.ne.png)
+![जाभास्क्रिप्ट आधारभूत - फङ्सन्स](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ne.png)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid

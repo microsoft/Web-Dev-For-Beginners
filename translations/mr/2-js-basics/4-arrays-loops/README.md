@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript मूलभूत गोष्टी: Arrays आणि Loops
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.mr.png)
+![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.mr.png)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांनी तयार केले
 
 ```mermaid
