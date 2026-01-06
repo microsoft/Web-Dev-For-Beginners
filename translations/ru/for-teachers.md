@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud имеет ограниченную поддержку Common Cartridge. Предпочтительно использовать файл Moodle, который также можно загрузить в Canvas.
   - После импорта проверьте модули, сроки выполнения и настройки викторин, чтобы они соответствовали вашему расписанию.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.ru.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ru.png)
 > Учебная программа в классе Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.ru.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ru.png)
 > Учебная программа в Canvas
 
 ### Использование репозитория напрямую (без Classroom)
