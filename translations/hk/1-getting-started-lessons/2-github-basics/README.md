@@ -1,343 +1,777 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ea65b75e488aa33a3cc5cb1c6c3f047a",
-  "translation_date": "2025-10-03T13:42:49+00:00",
+  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
+  "translation_date": "2026-01-06T13:14:50+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "hk"
 }
 -->
 # GitHub 簡介
 
-本課程涵蓋 GitHub 的基礎知識，這是一個用於托管和管理代碼變更的平台。
+嗨，未來的開發者！👋 準備好加入全球數百萬程式員的行列了嗎？我非常興奮地向你介紹 GitHub——把它想像成程式員的社交媒體平台，不同的是，我們分享的不是午餐照，而是程式碼，一起打造令人驚嘆的作品！
 
-![GitHub 簡介](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.hk.png)
-> [Tomomi Imura](https://twitter.com/girlie_mac) 的手繪筆記
+這點真的讓我震撼不已：你手機上的每個應用程式、你瀏覽的每個網站，以及你將學習使用的大多數工具，都是由團隊開發者在像 GitHub 這樣的平台上共同協作完成的。你喜愛的音樂應用程式？可能就有人跟你一樣貢獻了程式碼。那款玩不膩的遊戲？沒錯，可能就是用 GitHub 協作建造出來的。現在，你也將學會如何成為這個精彩社群的一員！
 
-## 課前測驗
-[課前測驗](https://ff-quizzes.netlify.app)
+我知道剛開始可能會覺得很多——說真的，我還記得第一次看到 GitHub 頁面時想：「這到底是什麼意思？」但事實是：每個開發者都是從你現在的狀態開始的。結束這堂課時，你會有自己的 GitHub 倉庫（把它想像成你個人在雲端的專案展示台），你會知道如何儲存工作、與他人分享，甚至參與數百萬人使用的專案。 
 
-## 簡介
+我們會一步步一起走這趟旅程，沒有急躁，沒有壓力——只有你我和一些超酷的工具，它們將成為你新的好朋友！
 
-在本課程中，我們將學習：
+![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.hk.png)
+> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
-- 如何追蹤你在本地機器上的工作
-- 與他人合作完成項目
-- 如何為開源軟件做出貢獻
+```mermaid
+journey
+    title 你今日的 GitHub 冒險
+    section 設置
+      Install Git: 4: You
+      Create Account: 5: You
+      First Repository: 5: You
+    section 精通 Git
+      Local Changes: 4: You
+      Commits & Pushes: 5: You
+      Branching: 4: You
+    section 合作
+      Fork Projects: 4: You
+      Pull Requests: 5: You
+      Open Source: 5: You
+```
+## 課前小測驗
+[Pre-lecture quiz](https://ff-quizzes.netlify.app)
+
+## 介紹
+
+在我們深入真正令人興奮的內容之前，先讓你的電腦準備好 GitHub 的魔法吧！想像這就像在創作傑作之前整理藝術工具——有了合適的工具，一切都會變得更順暢、更有趣。
+
+我會親自引導你完成每個設定步驟，我保證並沒有看起來那麼可怕。如果一開始有些地方不太懂，那完全正常！我還記得設定第一個開發環境時，感覺像在解讀古埃及象形文字。每個開發者都曾經跟你現在一樣，不知道自己有沒有做對。劇透一下：你正在學習，已經做對了！🌟
+
+本課將涵蓋：
+
+- 追蹤你在電腦上的工作
+- 與他人合作專案
+- 如何貢獻開源軟體
 
 ### 先決條件
 
-在開始之前，你需要檢查是否已安裝 Git。在終端中輸入：  
+先讓你的電腦準備好 GitHub 的魔法吧！別擔心－－這個設定只需做一次，之後你的程式之旅都將順利進行。
+
+好了，讓我們從基礎開始！首先，我們需要確認你的電腦上是否已經安裝了 Git。Git 基本上就像一個超聰明的助手，記錄你對程式碼的每個變更，比起每兩秒猛按 Ctrl+S（我們都做過）好太多了！
+
+在終端機輸入這行魔法指令，看看你的電腦是否有安裝 Git：
 `git --version`
 
-如果尚未安裝 Git，請[下載 Git](https://git-scm.com/downloads)。然後在終端中設置你的本地 Git 配置檔案：
-* `git config --global user.name "your-name"`
-* `git config --global user.email "your-email"`
+如果還沒安裝，別擔心！到 [download Git](https://git-scm.com/downloads) 下載安裝就好。裝好之後，我們要正式介紹你和 Git 認識一下：
 
-要檢查 Git 是否已配置，可以輸入：  
-`git config --list`
+> 💡 **初次設定**：這些指令會告訴 Git 你是誰。這資訊會附加在你每次提交（commit）中，所以請選擇你願意公開分享的名字和郵件。
 
-你還需要一個 GitHub 帳戶、一個代碼編輯器（例如 Visual Studio Code），並打開你的終端（或命令提示符）。
+```bash
+git config --global user.name "your-name"
+git config --global user.email "your-email"
+```
 
-前往 [github.com](https://github.com/) 創建帳戶（如果尚未創建），或登錄並完善你的個人資料。
+要檢查 Git 是否已設好，可以輸入：
+```bash
+git config --list
+```
 
-✅ GitHub 不是世界上唯一的代碼倉庫；還有其他選擇，但 GitHub 是最知名的。
+你還需要有 GitHub 帳號、程式碼編輯器（如 Visual Studio Code），還有打開終端機（或命令提示字元）。
+
+造訪 [github.com](https://github.com/)，還沒帳號就註冊，或登入並完善個人資料。
+
+💡 **現代提示**：考慮設定 [SSH 金鑰](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 或使用 [GitHub CLI](https://cli.github.com/) 來無密碼更輕鬆認證。
+
+✅ GitHub 並非唯一的程式碼倉庫，市場上還有其他選擇，但 GitHub 最出名。
 
 ### 準備工作
 
-你需要在本地機器（筆記本或 PC）上準備一個包含代碼項目的文件夾，以及 GitHub 上的一個公共倉庫，這將作為如何為他人的項目做出貢獻的示例。
+你需要在本機（筆電或電腦）準備一個有程式碼的資料夾，還有 GitHub 上一個公開倉庫，作為示範如何貢獻他人專案的例子。
+
+### 保護你的程式碼安全
+
+說點安全性的事情——別擔心，不會嚇到你！把安全習慣想成鎖車或鎖房門。這些簡單習慣會成為你的第二天性，保護你辛苦的作品。
+
+我們會從一開始就展示如何用現代且安全的方式與 GitHub 合作。這樣你能培養好習慣，伴隨你整個程式人生。
+
+使用 GitHub 時，重要的是遵守安全最佳實務：
+
+| 安全範疇 | 最佳實務 | 重要原因 |
+|---------------|---------------|----------------|
+| **身份驗證** | 使用 SSH 金鑰或個人存取權杖 | 密碼安全性較差並逐漸淘汰 |
+| **雙重認證** | 啟用 GitHub 帳號 2FA | 增加帳號安全防護層 |
+| **倉庫安全** | 永遠不提交敏感資訊 | API 金鑰與密碼不該放公開倉庫 |
+| **相依管理** | 啟用 Dependabot 更新 | 保持依賴套件安全與最新 |
+
+> ⚠️ **重要安全提醒**：切勿將 API 金鑰、密碼或其他敏感資訊提交到任何倉庫。使用環境變數與 `.gitignore` 檔案來保護敏感資料。
+
+**現代認證設定：**
+
+```bash
+# 產生 SSH 金鑰（現代 ed25519 演算法）
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# 設定 Git 使用 SSH
+git remote set-url origin git@github.com:username/repository.git
+```
+
+> 💡 **專業提示**：SSH 金鑰讓你不必重複輸入密碼，比傳統認證更安全。
 
 ---
 
-## 代碼管理
+## 像專業人士般管理你的程式碼
 
-假設你在本地有一個代碼項目文件夾，並希望使用 Git（版本控制系統）開始追蹤你的進度。有些人將使用 Git 比作寫給未來自己的情書。幾天、幾周或幾個月後閱讀你的提交信息，你將能回憶起為什麼做出某個決定，或者“回滾”某個更改——前提是你寫了好的“提交信息”。
+好了，這裡開始真正有趣了！🎉 我們將學習如何像專家一樣追蹤與管理程式碼，坦白說，這是我最喜歡教的主題之一，因為它會改變你的開發方式。
 
-### 任務：創建倉庫並提交代碼  
+想像你正在寫一個精彩故事，想要記錄每個稿本、每個絕妙修訂，還有每個「等等，這主意太棒了！」的瞬間。Git 就是為你的程式碼做到這件事！它就像一個不可思議的時光筆記本，記錄所有細節——每一次敲擊鍵盤、每個修正、每個「哎呀，壞了！」的時刻，你都能立刻回到過去。
 
-> 查看視頻  
+說實話——剛開始可能會有點難懂。我當年也想：「為什麼不能像平常一樣直接存檔呢？」但相信我，一旦你「察覺」了 Git 的妙用（一定會的！），你會有「以前怎麼沒用過它？」的靈光一閃。就像一輩子走路，忽然發現自己會飛一樣！
+
+假設你本機有一個資料夾，裡面放著程式碼專案，你想開始用 git（版本控制系統）追蹤進度。有人說用 git 有點像寫給未來自己的情書。數天、數週、數月後，再回頭看你的 commit 訊息，你能回憶為何改動，或「還原」變更－－前提是你有寫好 commit 訊息。
+
+```mermaid
+flowchart TD
+    A[📁 你的專案檔案] --> B{是否為 Git 倉庫？}
+    B -->|否| C[git init]
+    B -->|是| D[進行更改]
+    C --> D
+    D --> E[git add .]
+    E --> F["git commit -m '訊息'"]
+    F --> G[git push]
+    G --> H[🌟 GitHub 上的代碼！]
+    
+    H --> I{想要協作嗎？}
+    I -->|是| J[分叉並克隆]
+    I -->|否| D
+    J --> K[建立分支]
+    K --> L[進行更改]
+    L --> M[提取請求]
+    M --> N[🎉 貢獻中！]
+    
+    style A fill:#fff59d
+    style H fill:#c8e6c9
+    style N fill:#ff4081,color:#fff
+```
+### 任務：建立你的第一個倉庫！
+
+> 🎯 **你的任務（我超級期待！）**：我們要一起建立你的第一個 GitHub 倉庫！完成後，你會有屬於自己的網路小天地存放程式碼，並完成第一次「commit」（開發者專用語：用聰明方式保存工作成果）。
+>
+> 這真的是特別的時刻——你即將正式加入全球開發者社群！我依然記得第一次創建倉庫時的興奮，心想「哇，我真的做到了！」
+
+咱們一步步共赴這場冒險。每個步驟都慢慢來，不用急，保證你絕對懂。記得，每位你認識的程式達人都曾跟你一樣，正準備創建他們的第一個倉庫。多酷啊！
+
+> 觀看影片
 > 
-> [![Git 和 GitHub 基礎視頻](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+> [![Git and GitHub basics video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
-1. **在 GitHub 上創建倉庫**。在 GitHub.com 的倉庫標籤中，或在右上角的導航欄中，找到 **新建倉庫** 按鈕。
-   1. 為你的倉庫（文件夾）命名。
-   1. 選擇 **創建倉庫**。
+**一起動手做：**
 
-1. **導航到你的工作文件夾**。在終端中，切換到你希望開始追蹤的文件夾（也稱為目錄）。輸入：
+1. **在 GitHub 建立你的倉庫**。前往 GitHub.com，找那個明亮的綠色 **New** 按鈕（或右上角的 **+** 號），點擊並選擇 **New repository**。
+
+   以下是操作步驟：
+   1. 幫你的倉庫取個名字──取一個對你有意義的！
+   1. 可以加個描述（讓別人知道專案是什麼）
+   1. 決定是公開（大家都能看到）還是私密（只限你）
+   1. 建議勾選新增 README 檔案——這是你專案的封面頁
+   1. 點擊 **Create repository**，慶祝一下－你剛創建了第一個倉庫！🎉
+
+2. **進入你的專案資料夾**。打開終端機（別怕，真的沒那麼可怕！）。我們要指示電腦專案檔案位置。輸入以下指令：
 
    ```bash
    cd [name of your folder]
    ```
 
-1. **初始化 Git 倉庫**。在你的項目中輸入：
+   **我們這樣做是因為：**
+   - 其實是在告訴電腦「嘿，帶我到專案資料夾」
+   - 這就像在桌面打開指定資料夾，但用文字指令執行
+   - 把 `[name of your folder]` 換成你專案資料夾的真實名稱
+
+3. **將資料夾變成 Git 倉庫**。魔法就在此發生！打：
 
    ```bash
    git init
    ```
 
-1. **檢查狀態**。要檢查倉庫的狀態，輸入：
+   **這步驟的意義（很酷吧！）：**
+   - Git 在你的專案中建立一個隱藏的 `.git` 資料夾，你看不到它，但它存在著！
+   - 你的資料夾現在成為可追蹤所有變更的「倉庫」
+   - 就像賦予資料夾超能力，能記住一切
+
+4. **查看目前狀態**。看看 Git 對你的專案「怎麼看」：
 
    ```bash
    git status
    ```
 
-   輸出的內容可能如下所示：
+   **讀懂 Git 講了什麼：**
+   
+   你可能會看到像這樣的東西：
 
    ```output
    Changes not staged for commit:
    (use "git add <file>..." to update what will be committed)
-   (use "git checkout -- <file>..." to discard changes in working directory)
+   (use "git restore <file>..." to discard changes in working directory)
 
         modified:   file.txt
         modified:   file2.txt
    ```
 
-   通常，`git status` 命令會告訴你哪些文件已準備好保存到倉庫，或者哪些文件有更改需要持久化。
+   **別慌！這是什麼意思：**
+   - 紅色的檔案代表有變更但還沒準備好要儲存
+   - 綠色的檔案（如果有看到）代表已準備好儲存
+   - Git 很貼心，告訴你下一步該怎麼做
 
-1. **添加所有文件進行追蹤**  
-   這也稱為暫存文件/將文件添加到暫存區。
+   > 💡 **專業提示**：`git status` 是你最好的朋友！任何時候搞不懂狀況就用它。它就像問 Git 「嘿，情況怎樣？」
+
+5. **準備好要儲存的檔案**（稱為「暫存」）：
 
    ```bash
    git add .
    ```
 
-   `git add` 加上 `.` 參數表示追蹤所有文件和更改。
+   **我們剛做了什麼：**
+   - 告訴 Git 「我想把這資料夾裡的所有檔案都加入下一次儲存」
+   - `.` 就像說「資料夾裡所有的東西」
+   - 現在檔案都「暫存」了，準備下一步
 
-1. **選擇性添加文件進行追蹤**
+   **想挑選性加入？** 你也可以只加入特定檔案：
 
    ```bash
    git add [file or folder name]
    ```
 
-   當你不希望一次提交所有文件時，這可以幫助我們僅添加選定的文件到暫存區。
+   **為什麼會想這樣做？**
+   - 有時候你想一併保存相關修改
+   - 幫助你把工作化整為零
+   - 更容易理解什麼時候改了什麼
 
-1. **取消暫存所有文件**
+   **改主意了？** 沒問題！可以這樣取消暫存：
 
    ```bash
+   # 取消暫存所有項目
    git reset
+   
+   # 只取消暫存一個檔案
+   git reset [file name]
    ```
 
-   此命令幫助我們一次取消暫存所有文件。
+   別擔心－這不會刪除你的檔案，只是把檔案從「準備儲存」的列表移除。
 
-1. **取消暫存特定文件**
-
-   ```bash
-   git reset [file or folder name]
-   ```
-
-   此命令幫助我們一次僅取消暫存特定文件，這些文件我們不希望包含在下一次提交中。
-
-1. **持久化你的工作**。此時你已將文件添加到所謂的暫存區，Git 正在追蹤你的文件。要使更改永久化，你需要提交文件。提交代表倉庫歷史中的保存點。輸入以下命令創建提交：
+6. **正式永久保存你的工作**（做出第一個 commit！）：
 
    ```bash
    git commit -m "first commit"
    ```
 
-   此命令提交所有文件，並添加信息“首次提交”。未來的提交信息應更具描述性，以傳達你所做更改的類型。
+   **🎉 恭喜你！完成你的第一次 commit！**
+   
+   **剛發生了什麼：**
+   - Git 在這一刻幫你把所有暫存檔案「拍了一張快照」
+   - commit 訊息「first commit」說明這次保存的意義
+   - Git 給予這張快照一個獨特 ID，讓你能隨時找到它
+   - 你正式開始追蹤專案歷史！
 
-1. **將本地 Git 倉庫與 GitHub 連接**。本地 Git 倉庫在你的機器上很好，但最終你可能希望將文件備份到某個地方，並邀請其他人與你一起工作。一個很好的地方就是 GitHub。記住，我們已經在 GitHub 上創建了一個倉庫，所以唯一需要做的就是將本地 Git 倉庫與 GitHub 連接。`git remote add` 命令可以完成這項工作。輸入以下命令：
+   > 💡 **未來 commit 訊息**：下次提交時，訊息要更具描述性！不要只寫「updated stuff」，試試「Add contact form to homepage」或「Fix navigation menu bug」。未來的你會感謝現在用心的你！
 
-   > 注意，在輸入命令之前，前往你的 GitHub 倉庫頁面找到倉庫 URL。你將在以下命令中使用它。將 ```https://github.com/username/repository_name.git``` 替換為你的 GitHub URL。
+7. **連接本機專案到 GitHub**。目前專案只在你電腦裡，我們要連到 GitHub 倉庫，才能分享給全世界！
+
+   先去你的 GitHub 倉庫頁面，複製 URL 回來，然後打：
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
    ```
+   
+   （把這個 URL 換成你實際的倉庫網址！）
 
-   此命令創建了一個名為“origin”的遠程連接，指向你之前創建的 GitHub 倉庫。
+   **我們做了什麼：**
+   - 我們已建立你本地專案和你的 GitHub 倉庫之間的連接
+   - 「origin」只是你 GitHub 倉庫的暱稱——就像把聯絡人加到你的電話裡一樣
+   - 現在本地的 Git 知道該把你的程式碼傳送到哪裡，當你準備好分享時
 
-1. **將本地文件推送到 GitHub**。到目前為止，你已經在本地倉庫和 GitHub 倉庫之間建立了連接。現在使用以下命令 `git push` 將這些文件推送到 GitHub：
+   💡 **更簡易的方法**：如果你已安裝 GitHub CLI，可以用一條指令完成這些動作：
+   ```bash
+   gh repo create my-repo --public --push --source=.
+   ```
 
-   > 注意，你的分支名稱可能默認不同於 ```main```。
+8. **將你的程式碼傳送到 GitHub**（重要時刻！）：
 
    ```bash
    git push -u origin main
    ```
 
-   此命令將你的“main”分支中的提交推送到 GitHub。在命令中包含 `-u` 設置 `upstream` 分支，建立本地分支與遠程分支之間的鏈接，這樣以後你可以簡單地使用 git push 或 git pull，而無需指定分支名稱。Git 將自動使用 upstream 分支，你以後不需要在命令中明確指定分支名稱。
+   **🚀 就是現在！你要將程式碼上傳到 GitHub 了！**
+   
+   **發生了什麼：**
+   - 你的提交從電腦傳到 GitHub
+   - `-u` 旗標建立永久連接，未來推送更方便
+   - 「main」是你的主要分支名稱（就像主資料夾）
+   - 之後你只要打 `git push` 就能上傳！
 
-2. **添加更多更改**。如果你希望繼續進行更改並將其推送到 GitHub，你只需使用以下三個命令：
+   💡 **小提示**：如果你的分支叫別的名字（例如「master」），請用那個名稱。可用 `git branch --show-current` 確認。
+
+9. **你的全新日常編程節奏**（這會讓你上癮！）：
+
+   從此以後，當你對專案作出改動時，有一個簡單的三步舞：
 
    ```bash
    git add .
-   git commit -m "type your commit message here"
+   git commit -m "describe what you changed"
    git push
    ```
 
-   > 提示，你可能還希望採用 `.gitignore` 文件，以防止你不希望追蹤的文件出現在 GitHub 上——例如存儲在同一文件夾中的筆記文件，但不適合放在公共倉庫中。你可以在 [.gitignore 模板](https://github.com/github/gitignore) 中找到 `.gitignore` 文件的模板。
+   **這會成為你的編程節奏：**
+   - 作出很棒的程式碼改動 ✨
+   - 用 `git add` 登記改動（「Git，請注意這些改動！」）
+   - 用 `git commit` 並附上描述訊息儲存改動（未來的你會感謝現在的你！）
+   - 用 `git push` 和世界分享你的改動 🚀
+   - 不斷重複——認真說，這會像呼吸一樣自然！
 
-#### 提交信息
+   我喜歡這個工作流程，因為它就像遊戲裡有多個儲存點。喜歡剛才的改動？就 commit！想試些冒險的東西？沒問題——如果出錯，隨時可以回到最後的提交狀態！
 
-一個好的 Git 提交主題行應完成以下句子：  
-如果應用，此提交將 <你的主題行>
+   > 💡 **小貼士**：你也可能想用 `.gitignore` 檔，避免不想追蹤的檔案出現在 GitHub 上——像存在同資料夾裡但不適合放公開倉庫的筆記檔。能從 [.gitignore templates](https://github.com/github/gitignore) 找到範本，或用 [gitignore.io](https://www.toptal.com/developers/gitignore) 自製。
 
-主題行使用命令式現在時：“更改”而不是“已更改”或“更改中”。  
-在主題行中使用命令式現在時，在正文（可選）中也使用命令式現在時。正文應包括更改的動機，並與之前的行為形成對比。你是在解釋“為什麼”，而不是“如何”。
+### 🧠 **第一次倉庫提交：感覺如何？**
 
-✅ 花幾分鐘瀏覽 GitHub。你能找到一個非常好的提交信息嗎？你能找到一個非常簡短的提交信息嗎？你認為在提交信息中傳達哪些信息最重要和最有用？
+**花點時間慶祝並反思：**
+- 第一次看到程式碼出現在 GitHub 時是什麼感覺？
+- 哪一步最令你困惑，哪一步出乎意料地簡單？
+- 你能用自己的話解釋 `git add`、`git commit` 和 `git push` 的差別嗎？
 
-### 任務：協作
+```mermaid
+stateDiagram-v2
+    [*] --> LocalFiles: 建立專案
+    LocalFiles --> Staged: git add .
+    Staged --> Committed: git commit
+    Committed --> GitHub: git push
+    GitHub --> [*]: 成功！🎉
+    
+    note right of Staged
+        檔案準備好儲存
+    end note
+    
+    note right of Committed
+        快照已建立
+    end note
+```
+> **記住**：即使是有經驗的開發者，有時也會忘記正確指令。讓這流程變成肌肉記憶需要練習——你做得很棒！
 
-將項目放到 GitHub 上的主要原因是使得能夠與其他開發者協作。
+#### 現代 Git 工作流程
 
-## 與他人合作完成項目
+考慮採用以下現代規範：
 
-> 查看視頻  
+- **Conventional Commits**：用標準化的提交訊息格式，如 `feat:`、`fix:`、`docs:` 等。了解更多：[conventionalcommits.org](https://www.conventionalcommits.org/)
+- **Atomic commits**：每個 commit 只代表一個邏輯修改
+- **Frequent commits**：經常、用描述性訊息提交，避免一次大量、少次提交
+
+#### Commit 訊息
+
+一個優秀的 Git commit 主旨句應完成以下句子：
+If applied, this commit will <你的主旨句>
+
+主旨用命令式、現在時：用「change」非「changed」或「changes」。
+正文（可選）也用命令式、現在時，應說明為何改動並和之前行為對比。是解釋「為什麼」不是「怎麼做」。
+
+✅ 花幾分鐘逛逛 GitHub。能找到非常好的 commit 訊息嗎？或非常簡短的訊息？你覺得 commit 訊息中最重要且有用的資訊是什麼？
+
+## 與他人合作（有趣的部分！）
+
+戴好帽子，因為這正是 GitHub 魔法開始的地方！🪄 你已掌握管理自己程式碼，但現在我們要進入我最愛的部分——與來自世界各地的優秀開發者合作。
+
+想像一下：明天醒來時，你發現有人在東京幫你改進了程式碼；有人在柏林修復你卡住的 bug；下午時，聖保羅的一位開發者加入了你從未想過的功能。這不是科幻——在 GitHub 世界裡，這就是日常!
+
+讓我最興奮的是，你即將學到的協作技能，就是 Google、微軟以及你喜歡的初創公司每天使用的 EXACT 工作流程。你不只是在學一個酷工具——你在學讓全球軟體世界協同運作的祕密語言。
+
+說真的，一旦你體驗到有人合併你的第一個 Pull Request 的快感，就會懂為什麼開發者對開源充滿熱情。就像參與全球最大、最具創意的團隊專案！
+
+> 參考影片
 >
-> [![Git 和 GitHub 基礎視頻](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
-在你的倉庫中，導航到 `Insights > Community`，查看你的項目如何符合推薦的社區標準。
+放到 GitHub 的主要原因是為了方便與其他開發者合作。
 
-以下是一些可以改善你的 GitHub 倉庫的事項：
-- **描述**。你是否為項目添加了描述？
-- **README**。你是否添加了 README？GitHub 提供了撰寫 [README](https://docs.github.com/articles/about-readmes/?WT.mc_id=academic-77807-sagibbon) 的指導。
-- **貢獻指南**。你的項目是否有 [貢獻指南](https://docs.github.com/articles/setting-guidelines-for-repository-contributors/?WT.mc_id=academic-77807-sagibbon)？
-- **行為準則**。是否有 [行為準則](https://docs.github.com/articles/adding-a-code-of-conduct-to-your-project/)？
-- **許可證**。或許最重要的是，是否有 [許可證](https://docs.github.com/articles/adding-a-license-to-a-repository/)？
+```mermaid
+flowchart LR
+    A[🔍 尋找專案] --> B[🍴 分叉儲存庫]
+    B --> C[📥 複製到本地]
+    C --> D[🌿 建立分支]
+    D --> E[✏️ 進行更改]
+    E --> F[💾 提交更改]
+    F --> G[📤 推送分支]
+    G --> H[🔄 建立拉取請求]
+    H --> I{維護者審核}
+    I -->|✅ 核准| J[🎉 合併！]
+    I -->|❓ 要求修改| K[📝 更新內容]
+    K --> F
+    J --> L[🧹 清理分支]
+    
+    style A fill:#e3f2fd
+    style J fill:#e8f5e8
+    style L fill:#fff3e0
+```
+在你的倉庫中，前往 `Insights > Community` 查看你的專案如何符合社區建議標準。
 
-所有這些資源都將有助於新團隊成員的入門。而這些通常是新貢獻者在查看你的代碼之前會先查看的內容，以了解你的項目是否值得他們投入時間。
+想讓你的倉庫看起來專業且讓人感到歡迎嗎？到你的倉庫點擊 `Insights > Community`。這個很棒的功能會告訴你專案在 GitHub 社區認為「良好倉庫實踐」方面的表現。
 
-✅ README 文件雖然需要花時間準備，但經常被忙碌的維護者忽視。你能找到一個特別詳細的 README 示例嗎？注意：有一些[工具可以幫助創建好的 README](https://www.makeareadme.com/)，你可能會想嘗試一下。
+> 🎯 **讓你的專案閃耀**：一個組織良好且文件齊全的倉庫就像乾淨、招人的店面。它告訴大家你很在乎作品，也讓其他人想投入貢獻！
 
-### 任務：合併代碼
+**以下讓倉庫變優秀：**
 
-貢獻文檔幫助人們為項目做出貢獻。它解釋了你希望的貢獻類型以及流程如何運作。貢獻者需要完成一系列步驟才能為你的 GitHub 倉庫做出貢獻：
+| 應加入什麼 | 為何重要 | 帶給你的效果 |
+|-------------|-----------|---------------|
+| **描述** | 第一印象很重要！ | 讓人第一時間知道你的專案做什麼 |
+| **README** | 專案的門面 | 就像迎新導覽給新訪客 |
+| **貢獻指南** | 表示歡迎協助 | 讓人明白如何協助你 |
+| **行為守則** | 創造友善環境 | 讓每個人都感覺被歡迎參與 |
+| **授權條款** | 法務清楚 | 讓他人知道如何使用你的程式碼 |
+| **安全政策** | 展現負責任 | 表現專業作風 |
 
-1. **Fork 你的倉庫**。你可能希望人們 _fork_ 你的項目。Fork 意味著在他們的 GitHub 個人資料中創建你的倉庫的副本。
-1. **克隆**。之後，他們會將項目克隆到本地機器。
-1. **創建分支**。你會希望他們為自己的工作創建一個 _分支_。
-1. **專注於一個區域的更改**。要求貢獻者一次專注於一件事——這樣你合併他們工作的可能性更高。想像一下，他們修復了一個 bug，添加了一個新功能，並更新了幾個測試——如果你只希望或只能實施其中的 2 個或 1 個更改呢？
+> 💡 **專家秘訣**：GitHub 提供這些檔案的範本。建立新倉庫時勾選即可自動生成。
 
-✅ 想像一個分支在編寫和交付良好代碼中特別重要的情況。你能想到哪些使用場景？
+**探索現代 GitHub 功能：**
 
-> 注意，成為你希望看到的改變，為自己的工作創建分支。你所做的任何提交都將在你當前“檢出”的分支上進行。使用 `git status` 查看當前分支。
+🤖 **自動化與 CI/CD：**
+- **GitHub Actions** 自動化測試與部署
+- **Dependabot** 依賴自動更新
 
-讓我們來看看貢獻者的工作流程。假設貢獻者已經 _fork_ 並 _克隆_ 了倉庫，因此他們在本地機器上有一個準備好工作的 Git 倉庫：
+💬 **社群與專案管理：**
+- **GitHub Discussions** 問題之外的社群討論空間
+- **GitHub Projects** 看板式專案管理
+- **分支保護規則** 強制程式碼品質標準
 
-1. **創建分支**。使用命令 `git branch` 創建一個分支，該分支將包含他們打算貢獻的更改：
+
+這些資源能幫助新團隊成員加入時更快上手。通常新貢獻者在看程式碼前會先看這些，判斷專案是否值得他們花時間。
+
+✅ README 檔雖然準備起來花時間，但常被忙碌的維護者忽略。能找到特別有描述性的範例嗎？備註：有一些[工具幫助創建優質 README](https://www.makeareadme.com/)值得嘗試。
+
+### 任務：合併一些程式碼
+
+貢獻文件幫助他人參與專案。說明你找什麼樣的貢獻及流程如何。貢獻者需經過一系列步驟，才能在 GitHub 貢獻給你的倉庫：
+
+
+1. **Fork 你的倉庫** 大概你會希望大家先對你的專案 _fork_。Fork 是建立你倉庫的複製品在他們的 GitHub 帳號上。
+1. **Clone**。接著他們會 clone 專案到本地機器。
+1. **建立分支**。你會想請他們為他們的工作建立一個 _branch_。
+1. **專注於一件事**。請貢獻者一次專注於一個改動內容——這樣你合併他們工作的機率比較高。想像他們修 bug、新增功能、更新多項測試——如果你只能接受其中兩項或一項怎麼辦？
+
+✅ 想像在寫和交付優質程式碼時，分支扮演關鍵角色。你能想到哪些應用場景？
+
+> 註：成為你想看到的改變，也建立分支管理自己的工作吧。你所做的 commit 預設是在你當前「checkout」的分支上。用 `git status` 查看你在哪個分支。
+
+讓我們來看一下貢獻者的工作流程。假設貢獻者已經 _fork_ 並 _clone_ 好 repo，且本地已有 Git 環境：
+
+1. **建立分支**。用命令 `git branch` 建立一個準備提交改動的分支：
 
    ```bash
    git branch [branch-name]
    ```
 
-1. **切換到工作分支**。使用 `git switch` 切換到指定分支並更新工作目錄：
+   > 💡 **現代做法**：你也可以用一條命令同時建立並切換分支：
+   ```bash
+   git switch -c [branch-name]
+   ```
+
+1. **切換到工作分支**。用 `git switch` 切換到剛建立的分支並更新工作目錄：
 
    ```bash
    git switch [branch-name]
    ```
 
-1. **進行工作**。此時你可以添加更改。不要忘記使用以下命令告訴 Git：
+   > 💡 **現代提示**：`git switch` 是改用於切分支的更清晰替代 `git checkout`，對初學者更安全。
+
+1. **開始工作**。此時你要新增改動。別忘告訴 Git，命令如下：
 
    ```bash
    git add .
    git commit -m "my changes"
    ```
 
-   確保你為提交取一個好的名字，這對你自己以及你幫助的倉庫維護者都很重要。
+   > ⚠️ **提交訊息品質**：務必為 commit 取個好名字，無論是為自己還是你協助的 repo 維護者。具體說明你改了什麼！
 
-1. **將你的工作與 `main` 分支合併**。某個時候你完成了工作，並希望將你的工作與 `main` 分支的工作合併。`main` 分支可能在此期間發生了更改，因此請確保首先使用以下命令更新到最新版本：
+1. **合併你的工作到 `main` 分支**。完成工作後，想結合你的工作和 `main` 分支的內容。`main` 可能已有更新，先用以下命令拉最新版本：
 
    ```bash
    git switch main
    git pull
    ```
 
-   此時你需要確保任何 _衝突_（Git 無法輕易合併更改的情況）發生在你的工作分支中。因此，運行以下命令：
+   現在你要確保任何 _衝突_，即 Git 不知如何 _合併_ 的情況，都處理在你的工作分支。執行：
 
    ```bash
    git switch [branch_name]
    git merge main
    ```
 
-   `git merge main` 命令將把 `main` 中的所有更改帶入你的分支。希望你可以直接繼續。如果不行，VS Code 會告訴你 Git 在哪些地方“困惑”，你只需修改受影響的文件以確定哪個內容最準確。
+   `git merge main` 會把 `main` 最新變更帶入你的分支。希望能直接繼續。如果不行，VS Code 會告訴你 Git 混淆在哪裡，並讓你修改檔案指定正確版本。
 
-   要切換到不同的分支，使用現代的 `git switch` 命令：
+   💡 **現代替代法**：考慮用 `git rebase` 取得更乾淨的歷史：
    ```bash
-   git switch [branch_name]
+   git rebase main
+   ```
+   這會把你的提交依序放到最新的 main 上，形成線性歷史。
 
-
-1. **將你的工作推送到 GitHub**。將你的工作推送到 GitHub 意味著兩件事：將你的分支推送到你的倉庫，然後打開一個 PR（Pull Request）。
+1. **推送你的工作到 GitHub**。推送工作到 GitHub 具包含兩件事。先把分支推送到你的遠端 fork，然後開 Pull Request。
 
    ```bash
    git push --set-upstream origin [branch-name]
    ```
 
-   上述命令會在你的 fork 倉庫中創建分支。
-1. **開啟 PR**。接下來，你需要開啟一個 PR（Pull Request）。你可以通過進入 GitHub 上的 fork 倉庫來完成這一步。在 GitHub 上，你會看到一個提示，詢問你是否要創建一個新的 PR，點擊它後，你會進入一個介面，在那裡你可以修改提交訊息的標題，並添加更合適的描述。現在，你 fork 的倉庫的維護者會看到這個 PR，_希望_ 他們會欣賞並 _合併_ 你的 PR。恭喜你，現在你是一名貢獻者了，太棒了！:)
+   上述指令會在你的 forked repo 建立分支。
 
-1. **清理**。在成功合併 PR 後，_清理_ 是一個良好的習慣。你需要清理本地分支以及你推送到 GitHub 的分支。首先，使用以下命令在本地刪除分支：
+### 🤝 **協作技能檢測：準備好與別人合作了嗎？**
+
+**來看看你對協作的感覺：**
+- 對 fork 與 pull request 的概念是否明白？
+- 有關使用分支工作，你還想練習什麼？
+- 對貢獻別人專案感到多大信心？
+
+```mermaid
+mindmap
+  root((Git 協作))
+    Branching
+      Feature branches
+      Bug fix branches
+      Experimental work
+    Pull Requests
+      Code review
+      Discussion
+      Testing
+    Best Practices
+      Clear commit messages
+      Small focused changes
+      Good documentation
+```
+> **信心加油站**：你敬佩的每位開發者，在提出第一個 PR 時都曾緊張。GitHub 社區對新手非常友好！
+
+1. **開 PR**。接著要開 pull request。到你 fork 的 repo 頁面上，GitHub 會提示你是否建立新 PR，點擊即可進入介面修改 commit 標題和敘述。原專案維護者會看到，並 _希望_ 會合併你的 PR。從此你成為一名貢獻者，耶 :)
+
+   💡 **現代提示**：也可使用 GitHub CLI 建立 PR：
+   ```bash
+   gh pr create --title "Your PR title" --body "Description of changes"
+   ```
+
+   🔧 **PR 最佳實踐**：
+   - 用關鍵字連結相關 issue，如 "Fixes #123"
+   - UI 改動補充截圖
+   - 指定特定審查者
+   - 進行中可用草稿 PR
+   - 發出審查請求前確保所有 CI 通過
+1. **清理**。成功合併 PR 後，進行 _清理_ 是良好做法。你需要清理本地分支和推送到 GitHub 的分支。首先，使用以下命令在本地刪除它：
 
    ```bash
    git branch -d [branch-name]
    ```
-  
-   接著，進入 GitHub 上的 fork 倉庫頁面，刪除你剛剛推送的遠端分支。
 
-`Pull request`（拉取請求）這個詞聽起來有點奇怪，因為實際上你是想將你的更改推送到項目中。但維護者（項目擁有者）或核心團隊需要在合併到項目的 "main" 分支之前審核你的更改，因此實際上你是在向維護者請求一個更改的決定。
+   接著請到該 fork 的 GitHub 頁面，刪除你剛剛推送過去的遠端分支。
 
-Pull request 是一個用於比較和討論分支中引入的差異的地方，這裡可以進行審核、評論、集成測試等操作。一個好的 pull request 大致遵循與提交訊息相同的規則。例如，當你的工作解決了一個問題時，你可以在 issue tracker 中引用該問題。這可以通過使用 `#` 後跟問題號來完成，例如 `#97`。
+`Pull request`（拉取請求）聽起來怪怪的，因為你真正想做的是把變更推送到專案裡。但維護者（專案擁有者）或核心團隊需要先審核你的變更，才會將它合併進專案的「main」分支，所以你其實是在請求維護者做變更決定。
 
-🤞希望所有檢查都通過，並且項目擁有者合併你的更改到項目中🤞
+拉取請求是用來比較和討論分支所引入差異的地方，可以包含審核、評論、整合測試等等。一個好的拉取請求大致遵循和提交說明相同的規則。如果你的工作是修復某個問題，可以加上 issue 的參考，格式是 `#` 後面接問題號碼。例如 `#97`。
 
-更新你當前本地工作分支，使其包含 GitHub 上對應遠端分支的所有新提交：
+🤞希望所有檢查通過，且專案擁有者能將你的變更合併進專案🤞
+
+用以下指令更新你當前的本地工作分支，將 GitHub 上對應遠端分支的所有新提交拉下來：
 
 `git pull`
 
-## 如何為開源項目做貢獻
+## 貢獻開源專案（你改變世界的機會！）
 
-首先，讓我們在 GitHub 上找到一個你感興趣並希望對其進行更改的倉庫（或 **repo**）。你需要將其內容複製到你的電腦上。
+準備好迎接讓你驚嘆的新世界了嗎？🤯 來談談如何參與開源貢獻吧 —— 光是想著能和你分享這些內容我就起雞皮疙瘩了！
 
-✅ 尋找 "適合初學者" 的倉庫的一個好方法是 [通過標籤 'good-first-issue' 進行搜索](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)。
+這是你成為真正偉大事物一部分的機會。想像一下，改善數百萬開發者每天使用的工具，或者修正你朋友們都愛用的應用程式的錯誤。這不只是一場夢想 —— 這就是開源貢獻的精髓！
 
-![將倉庫複製到本地](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.hk.png)
+讓我每次想到都感到顫慄的是：你所學的每個工具 —— 你的程式碼編輯器、我們將探索的框架，甚至你正在閱讀本文的瀏覽器 —— 都是由像你一樣的人首次貢獻開始。那位打造你最愛 VS Code 擴充功能的優秀開發者？他們曾經也是充滿忐忑地按下「建立拉取請求」按鈕的初學者，就像你現在一樣。
 
-有幾種方法可以複製代碼。一種方法是使用 HTTPS、SSH 或 GitHub CLI（命令行界面）來 "克隆" 倉庫的內容。
+最美好的部分是：開源社群就像網路上最大的群體擁抱。大多數專案都積極尋找新手，並且有標示為「good first issue」的議題，就是專門為你這樣的初學者準備！維護者看到新貢獻者時會非常興奮，因為他們記得自己也從第一次踏出第一步開始。
 
-打開終端，像這樣克隆倉庫：  
-`git clone https://github.com/ProjectURL`
+```mermaid
+flowchart TD
+    A[🔍 探索 GitHub] --> B[🏷️ 尋找 "good first issue"]
+    B --> C[📖 閱讀貢獻指南]
+    C --> D[🍴 分叉倉庫]
+    D --> E[💻 設置本地環境]
+    E --> F[🌿 建立功能分支]
+    F --> G[✨ 做出你的貢獻]
+    G --> H[🧪 測試你的更改]
+    H --> I[📝 撰寫清晰提交訊息]
+    I --> J[📤 推送並建立 PR]
+    J --> K[💬 參與反饋交流]
+    K --> L[🎉 合併成功！你成為了貢獻者！]
+    L --> M[🌟 尋找下一個議題]
+    
+    style A fill:#e1f5fe
+    style L fill:#c8e6c9
+    style M fill:#fff59d
+```
+你不只是學寫程式，更是在準備加入一個每天早上醒來就思考「我們怎麼讓數位世界變得更好一點？」的全球創作者大家庭。歡迎加入！🌟
 
-要開始處理該項目，切換到正確的文件夾：  
+首先，我們來找一個你感興趣並想貢獻變更的 GitHub 儲存庫（repo）。你需要將它的內容複製到你的電腦。
+
+✅ 找到「新手友好」的 repo 一個好方法是[使用 'good-first-issue' 標籤搜尋](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)。
+
+![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57.hk.png)
+
+複製代碼有好幾種方式。最常見的是使用 HTTPS、SSH 或 GitHub CLI（命令列工具）「克隆」該儲存庫內容。
+
+打開你的終端機並這樣克隆儲存庫：
+```bash
+# 使用 HTTPS
+git clone https://github.com/ProjectURL
+
+# 使用 SSH（需要設定 SSH 金鑰）
+git clone git@github.com:username/repository.git
+
+# 使用 GitHub CLI
+gh repo clone username/repository
+```
+
+要在專案內工作，切換到正確資料夾：
 `cd ProjectURL`
 
-你還可以使用 [Codespaces](https://github.com/features/codespaces)（GitHub 的嵌入式代碼編輯器/雲開發環境）或 [GitHub Desktop](https://desktop.github.com/) 打開整個項目。
+你也可以開啟整個專案：
+- **[GitHub Codespaces](https://github.com/features/codespaces)** - GitHub 的雲端開發環境，可在瀏覽器中使用 VS Code
+- **[GitHub Desktop](https://desktop.github.com/)** - 用於 Git 操作的圖形使用者介面應用程式
+- **[GitHub.dev](https://github.dev)** - 任何 GitHub repo 按下 `.` 鍵即可在瀏覽器開啟 VS Code
+- 搭配 GitHub 拉取請求擴充功能的 VS Code
 
-最後，你也可以下載一個壓縮文件夾來獲取代碼。
+最後，你可以下載壓縮檔形式的代碼。
 
-### 關於 GitHub 的一些有趣事實
+### 關於 GitHub 的更多有趣事
 
-你可以為 GitHub 上的任何公共倉庫加星標、關注或 "fork"。你可以在右上角的下拉菜單中找到你加星標的倉庫。這就像為代碼添加書籤一樣。
+你可以對任何公開 repo 加星標、訂閱觀察和/或「fork」它們。加星的 repo 可以在右上角的下拉選單找到，這就像書籤，但用於程式碼。
 
-項目通常有一個問題追蹤器，大多數情況下在 GitHub 的 "Issues" 標籤中，除非另有說明。在這裡，人們討論與項目相關的問題。而 Pull Requests 標籤則是人們討論和審核正在進行的更改的地方。
+專案有譯題追蹤器，通常是在 GitHub 的「Issues」標籤頁（除非另有說明），用來討論專案相關問題。拉取請求標籤是用來討論和審查正在進行的改動。
 
-項目可能還會有論壇、郵件列表或聊天頻道（如 Slack、Discord 或 IRC）進行討論。
+有些專案還會在論壇、郵件列表或聊天頻道（像 Slack、Discord 或 IRC）進行討論。
 
-✅ 瀏覽一下你的新 GitHub 倉庫，嘗試一些操作，比如編輯設置、為倉庫添加信息，或者創建一個項目（比如看板）。你可以做很多事情！
+🔧 **現代 GitHub 功能**：
+- **GitHub Discussions** - 內建的社群討論區
+- **GitHub Sponsors** - 財務支持維護者
+- **Security tab** - 漏洞報告與安全公告
+- **Actions tab** - 查看自動化工作流程及 CI/CD 管線
+- **Insights tab** - 關於貢獻者、提交和專案健康度的分析
+- **Projects tab** - GitHub 內建的專案管理工具
+
+✅ 四處逛逛你的新 GitHub repo，試試修改設定、添加資訊、建立專案（如看板）、設定 GitHub Actions 來自動化。你能做的事非常多！
 
 ---
 
 ## 🚀 挑戰
 
-與朋友合作，處理彼此的代碼。共同創建一個項目，fork 代碼，創建分支，並合併更改。
+好了，現在是測試你閃亮新 GitHub 超能力的時刻了！🚀 這項挑戰會讓一切以最令人滿足的方式連結起來：
 
-## 課後測驗  
-[課後測驗](https://ff-quizzes.netlify.app/web/en/)
+找一個朋友（或那位一直問你在做什麼「電腦東西」的家人）一起展開協同編程冒險吧！這就是魔法所在 —— 建立一個專案，讓他們 fork，建立一些分支，像專業人士一樣合併變更。
 
-## 回顧與自學
+說實話 —— 你們絕對會笑翻（尤其是當你們試圖同時更改同一行），可能還會被搞得抓頭困惑，但你一定會體驗到那些令人驚豔的「啊哈！」時刻，讓所有學習都變得值得。此外，與人分享第一次成功合併有著特別的意義 —— 它像是在慶祝你已走多遠！
 
-閱讀更多關於 [如何為開源軟件做貢獻](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution) 的內容。
+還沒有編程夥伴？完全沒問題！GitHub 社群熱情友善，他們都記得當初自己也是新手。找標記「good first issue」的儲存庫 —— 這基本上是在說「嘿，新手，來和我們一起學吧！」多棒啊！
 
-[Git 速查表](https://training.github.com/downloads/github-git-cheat-sheet/)。
+## 課後小測
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/en/)
 
-多練習，多實踐。GitHub 提供了很棒的學習路徑：[skills.github.com](https://skills.github.com)：
+## 複習並持續學習
 
-- [GitHub 的第一周](https://skills.github.com/#first-week-on-github)
+呼！🎉 看你多棒 —— 你剛剛像冠軍一樣征服了 GitHub 基礎！如果你現在覺得腦子有點爆炸，那是很正常，說實話這也是好事。你剛剛學到的工具，是我當初花了好幾週才習慣的。
 
-你還可以找到更多進階課程。
+Git 和 GitHub 非常強大（真的很強），我認識的每位開發者 —— 包括現在看起來像魔法師的那些 —— 都必須練習和摸索一段時間才有突破。你能順利完成這堂課，代表你已經踏上掌握開發者工具箱中最重要工具的旅程。
+
+以下是一些超棒的資源，幫助你練習並變得更棒：
+
+- [貢獻開源軟體指南](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution) —— 你改變世界的路線圖
+- [Git 速查表](https://training.github.com/downloads/github-git-cheat-sheet/) —— 方便快速查詢！
+
+別忘了：練習促成進步，而非完美！你使用 Git 和 GitHub 越多，就越自然。GitHub 創建了很多有趣的互動課程，讓你在安全環境中練習：
+
+- [GitHub 入門](https://github.com/skills/introduction-to-github)
+- [使用 Markdown 交流](https://github.com/skills/communicate-using-markdown)
+- [GitHub Pages](https://github.com/skills/github-pages)
+- [管理合併衝突](https://github.com/skills/resolve-merge-conflicts)
+
+**想更冒險一點？試試這些現代工具：**
+- [GitHub CLI 文件](https://cli.github.com/manual/) —— 讓你感覺像指令列大師
+- [GitHub Codespaces 文件](https://docs.github.com/en/codespaces) —— 雲端程式編輯體驗！
+- [GitHub Actions 文件](https://docs.github.com/en/actions) —— 自動化一切
+- [Git 最佳實踐](https://www.atlassian.com/git/tutorials/comparing-workflows) —— 升級你的工作流程
+
+## GitHub Copilot Agent 挑戰 🚀
+
+使用 Agent 模式完成以下挑戰：
+
+**說明：** 建立一個合作式網頁開發專案，展示你在本課程學到的完整 GitHub 工作流程。這個挑戰幫助你練習儲存庫建立、協作特性，以及現代 Git 工作流程，在實際場景中操練。
+
+**提示：** 建立一個新的公開 GitHub 儲存庫，名為「Web Development Resources（網頁開發資源）」。儲存庫應包含結構良好的 README.md，列出有用的網頁開發工具和資源，依照不同類別（HTML、CSS、JavaScript 等）組織。按社群標準設定儲存庫，包括授權、貢獻指南和行為準則。至少建立兩個功能分支：一個新增 CSS 資源、另一個新增 JavaScript 資源。分別在各分支做有描述的提交，然後發出拉取請求合併回 main。啟用 GitHub 功能，例如 Issues、Discussions，並建立基本的 GitHub Actions 工作流程做自動化檢查。
 
 ## 作業
 
-完成 [GitHub 的第一周課程](https://skills.github.com/#first-week-on-github)
+你的任務（如果你願意接受）：完成 GitHub Skills 的 [GitHub 入門](https://github.com/skills/introduction-to-github) 課程。這個互動課程讓你在安全且有指導的環境中練習所學。完成後還能獲得酷炫徽章！🏅
+
+**想挑戰更多？**
+- 為 GitHub 帳號設定 SSH 認證（不用再輸入密碼！）
+- 嘗試使用 GitHub CLI 執行日常 Git 操作
+- 建立一個有 GitHub Actions 工作流程的儲存庫
+- 嘗試用雲端編輯器 GitHub Codespaces 開啟本儲存庫
 
 ---
 
+## 🚀 你的 GitHub 精通時間表
+
+### ⚡ **接下來 5 分鐘你可以做的事**
+- [ ] 給這個儲存庫和另外三個你感興趣的專案加星標
+- [ ] 為你的 GitHub 帳戶設定雙重身份驗證
+- [ ] 為你第一個儲存庫創建簡單的 README
+- [ ] 追蹤 5 位令你受啟發的開發者
+
+### 🎯 **接下來一小時你可以完成的目標**
+- [ ] 完成課後小測並反思你的 GitHub 旅程
+- [ ] 設定 SSH 金鑰，實現免密碼登入 GitHub
+- [ ] 做出你的第一個有意義的提交並寫好提交訊息
+- [ ] 探索 GitHub「Explore」分頁，發掘熱門專案
+- [ ] 練習 fork 一個儲存庫並做小改動
+
+### 📅 **你的一週 GitHub 冒險**
+- [ ] 完成 GitHub Skills 課程（GitHub 入門、Markdown）
+- [ ] 對開源專案提出第一個拉取請求
+- [ ] 設置 GitHub Pages 網站展示你的作品
+- [ ] 參與你感興趣專案的 GitHub Discussions
+- [ ] 建立具社群標準（README、授權等）的儲存庫
+- [ ] 嘗試使用 GitHub Codespaces 進行雲端開發
+
+### 🌟 **你的一月蛻變**
+- [ ] 對 3 個不同開源項目做出貢獻
+- [ ] 輔導一位 GitHub 新手（回饋社群！）
+- [ ] 設定 GitHub Actions 自動化工作流程
+- [ ] 建立展示 GitHub 貢獻的作品集
+- [ ] 參加 Hacktoberfest 或類似社群活動
+- [ ] 成為自己開源專案的維護者，讓他人貢獻
+
+### 🎓 **最終 GitHub 精通回顧**
+
+**慶祝你走過的路：**
+- 你最喜歡使用 GitHub 的哪個部分？
+- 哪個協作功能最讓你興奮？
+- 你現在對參與開源貢獻有多大信心？
+- 你想要貢獻的第一個專案是什麼？
+
+```mermaid
+journey
+    title 你的 GitHub 信心之旅
+    section 今日
+      緊張: 3: 你
+      好奇: 4: 你
+      興奮: 5: 你
+    section 本週
+      練習中: 4: 你
+      貢獻中: 5: 你
+      聯繫中: 5: 你
+    section 下個月
+      合作中: 5: 你
+      領導中: 5: 你
+      啟發他人: 5: 你
+```
+> 🌍 **歡迎加入全球開發者社群！** 你現在擁有和全球數百萬開發者合作的工具。你的第一次貢獻看似微小，但別忘了 —— 每個重大開源專案都是從某個人首次提交開始的。問題不是你是否能產生影響，而是什麼令人驚嘆的專案將率先受益於你獨特的視角！🚀
+
+記住：每位專家都曾是新手。你可以的！💪
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們雖力求準確，但請注意自動翻譯可能存在錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。因使用本翻譯所產生之任何誤解或誤讀，我們概不負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
