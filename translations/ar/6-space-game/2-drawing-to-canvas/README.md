@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![شبكة اللوحة](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.ar.png)
+![شبكة اللوحة](../../../../translated_images/canvas_grid.5f209da785ded492.ar.png)
 > الصورة من [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 لترسم على عنصر اللوحة، ستتبع نفس العملية المكونة من ثلاث خطوات التي تشكل أساس جميع رسومات اللوحة. بمجرد القيام بذلك عدة مرات، يصبح الأمر طبيعيًا:
@@ -329,11 +329,11 @@ flowchart TD
 
 - سفينة البطل
 
-   ![سفينة البطل](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.ar.png)
+   ![سفينة البطل](../../../../translated_images/player.dd24c1afa8c71e9b.ar.png)
 
 - 5*5 وحش
 
-   ![سفينة الوحش](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.ar.png)
+   ![سفينة الوحش](../../../../translated_images/enemyShip.5df2a822c16650c2.ar.png)
 
 ### الخطوات الموصى بها لبدء التطوير
 
@@ -460,7 +460,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 يجب أن تبدو النتيجة النهائية كما يلي:  
 
-![شاشة سوداء مع بطل و5*5 وحوش](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.ar.png)  
+![شاشة سوداء مع بطل و5*5 وحوش](../../../../translated_images/partI-solution.36c53b48c9ffae2a.ar.png)  
 
 ## الحل  
 

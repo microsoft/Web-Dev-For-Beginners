@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 في هذا المشروع، ستتعلم كيفية بناء بنك خيالي. تتضمن هذه الدروس تعليمات حول كيفية تصميم تطبيق ويب وتوفير المسارات، بناء النماذج، إدارة الحالة، وجلب البيانات من واجهة برمجية (API) يمكنك من خلالها الحصول على بيانات البنك.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.ar.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.ar.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.ar.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.ar.png) |
 |--------------------------------|--------------------------------|
 
 ## الدروس

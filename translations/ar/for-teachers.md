@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - لدى Moodle Cloud دعم محدود لـ Common Cartridge. يُفضل استخدام ملف Moodle أعلاه، والذي يمكن أيضًا تحميله في Canvas.
   - بعد الاستيراد، راجع الوحدات، المواعيد النهائية، وإعدادات الامتحانات لتتناسب مع جدول الفصل الدراسي الخاص بك.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.ar.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ar.png)
 > المنهج الدراسي في فصل Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.ar.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ar.png)
 > المنهج الدراسي في Canvas
 
 ### استخدام المستودع مباشرة (بدون Classroom)
