@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # قابل رسائی ویب صفحات بنانا
 
-![سب کچھ قابل رسائی کے بارے میں](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.ur.png)
+![سب کچھ قابل رسائی کے بارے میں](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ur.png)
 > اسکیچ نوٹ از [ٹومومی ایمورا](https://twitter.com/girlie_mac)
 
 ```mermaid

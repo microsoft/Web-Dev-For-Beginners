@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![HTML کا تعارف](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.ur.png)
+![HTML کا تعارف](../../../../translated_images/webdev101-html.4389c2067af68e98.ur.png)
 > اسکیچ نوٹ [Tomomi Imura](https://twitter.com/girlie_mac) کی طرف سے
 
 HTML، یا HyperText Markup Language، ہر ویب سائٹ کی بنیاد ہے جو آپ نے کبھی دیکھی ہے۔ HTML کو ویب صفحات کا ڈھانچہ سمجھیں – یہ بتاتا ہے کہ مواد کہاں جائے گا، کیسے منظم ہوگا، اور ہر حصہ کیا ظاہر کرتا ہے۔ جبکہ CSS بعد میں آپ کے HTML کو رنگوں اور لے آؤٹ کے ساتھ "سجائے گا"، اور JavaScript اسے انٹرایکٹیویٹی کے ساتھ زندہ کرے گا، HTML وہ بنیادی ڈھانچہ فراہم کرتا ہے جو باقی سب کچھ ممکن بناتا ہے۔
@@ -88,7 +88,7 @@ HTML کوڈ میں جانے سے پہلے، آئیے آپ کے ٹیریریم پ
 4. Explorer پین میں، "New File" آئیکن پر کلک کریں
 5. اپنی فائل کا نام `index.html` رکھیں
 
-![VS Code Explorer میں نئی فائل بنانے کا عمل](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.ur.png)
+![VS Code Explorer میں نئی فائل بنانے کا عمل](../../../../translated_images/vs-code-index.e2986cf919471eb9.ur.png)
 
 **آپشن 2: ٹرمینل کمانڈز کا استعمال**
 ```bash
