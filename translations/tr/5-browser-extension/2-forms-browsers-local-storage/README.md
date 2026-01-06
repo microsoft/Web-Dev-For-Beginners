@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Yerel depolama paneli](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.tr.png)
+![Yerel depolama paneli](../../../../translated_images/localstorage.472f8147b6a3f8d1.tr.png)
 
 > ⚠️ **Güvenlik Düşüncesi**: Üretim uygulamalarında, API anahtarlarını Yerel Depolama'da saklamak güvenlik riskleri taşır çünkü JavaScript bu verilere erişebilir. Öğrenme amacıyla bu yaklaşım uygundur, ancak gerçek uygulamalar hassas kimlik bilgileri için güvenli sunucu tarafı depolama kullanmalıdır.
 

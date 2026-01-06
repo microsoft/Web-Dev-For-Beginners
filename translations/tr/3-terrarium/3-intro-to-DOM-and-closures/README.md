@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM ve bir kapanış](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.tr.png)
+![DOM ve bir kapanış](../../../../translated_images/webdev101-js.10280393044d7eaa.tr.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Web geliştirme dünyasının en eğlenceli yönlerinden birine hoş geldiniz - şeyleri interaktif hale getirmek! Belge Nesne Modeli (DOM), HTML ve JavaScript arasında bir köprü gibidir ve bugün teraryumunuzu hayata geçirmek için onu kullanacağız. Tim Berners-Lee ilk web tarayıcısını oluşturduğunda, belgelerin dinamik ve etkileşimli olabileceği bir web hayal etmişti - DOM bu vizyonu mümkün kılıyor.
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![DOM ağacı temsili](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.tr.png)
+![DOM ağacı temsili](../../../../translated_images/dom-tree.7daf0e763cbbba92.tr.png)
 
 > DOM'un ve onu referans alan HTML işaretlemesinin bir temsili. Kaynak: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **Kapanışları Anlamak**: Kapanışlar JavaScript'te önemli bir konudur ve birçok geliştirici yıllarca teorik yönlerini tam olarak kavramadan kullanır. Bugün pratik uygulamaya odaklanıyoruz - interaktif özelliklerimizi oluştururken kapanışların doğal olarak nasıl ortaya çıktığını göreceksiniz. Anlayışınız, onların gerçek sorunları nasıl çözdüğünü gördükçe gelişecektir.
 
-![DOM ağacı temsili](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.tr.png)
+![DOM ağacı temsili](../../../../translated_images/dom-tree.7daf0e763cbbba92.tr.png)
 
 > DOM'un ve onu referans alan HTML işaretlemesinin bir temsili. Kaynak: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ Tebrikler! Vanilla JavaScript kullanarak sofistike bir sürükle-bırak sistemi 
 - **Cihazlar arası destek**: Masaüstü ve mobilde çalışır
 - **Performans bilinci**: Bellek sızıntısı veya gereksiz hesaplama yok
 
-![bitmiş teraryum](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.tr.png)
+![bitmiş teraryum](../../../../translated_images/terrarium-final.0920f16e87c13a84.tr.png)
 
 ---
 
