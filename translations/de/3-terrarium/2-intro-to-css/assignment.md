@@ -1,41 +1,136 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a212cc22a18eddf9046b7a16dfbafd8b",
-  "translation_date": "2025-10-03T08:31:45+00:00",
+  "original_hash": "bee6762d4092a13fc7c338814963f980",
+  "translation_date": "2026-01-06T09:19:48+00:00",
   "source_file": "3-terrarium/2-intro-to-css/assignment.md",
   "language_code": "de"
 }
 -->
-# CSS-Refactoring-Aufgabe
+# CSS Refactoring Aufgabe
 
-## Ziel
+## Zielsetzung
 
-Überarbeiten Sie das Terrarium-Projekt, um **Flexbox** oder **CSS Grid** für das Layout zu verwenden. Aktualisieren Sie HTML und CSS nach Bedarf, um ein modernes, responsives Design zu erreichen. Sie müssen keine verschiebbaren Elemente implementieren – konzentrieren Sie sich nur auf Layout und Styling.
+Verwandle dein Terrarium-Projekt, um moderne CSS-Layout-Techniken zu verwenden! Refaktoriere den aktuellen Ansatz mit absoluter Positionierung und implementiere **Flexbox** oder **CSS Grid** für ein besser wartbares, responsives Design. Diese Aufgabe fordert dich heraus, moderne CSS-Standards anzuwenden und dabei die visuelle Attraktivität deines Terrariums zu erhalten.
 
-## Anweisungen
+Zu wissen, wann und wie man unterschiedliche Layout-Methoden verwendet, ist eine entscheidende Fähigkeit für moderne Webentwicklung. Diese Übung verbindet traditionelle Positionierungstechniken mit zeitgemäßen CSS-Layout-Systemen.
 
-1. **Erstellen Sie eine neue Version** der Terrarium-App. Aktualisieren Sie das Markup und CSS, um Flexbox oder CSS Grid für das Layout zu verwenden.
-2. **Stellen Sie sicher, dass die Kunst und die Elemente** wie in der Originalversion vorhanden sind.
-3. **Testen Sie Ihr Design** in mindestens zwei verschiedenen Browsern (z. B. Chrome, Firefox, Edge).
-4. **Machen Sie Screenshots** Ihres Terrariums in jedem Browser, um die Kompatibilität zwischen den Browsern zu demonstrieren.
-5. **Reichen Sie** Ihren aktualisierten Code und die Screenshots ein.
+## Anweisungen zur Aufgabe
+
+### Phase 1: Analyse und Planung
+1. **Überprüfe deinen aktuellen Terrarium-Code** – Identifiziere, welche Elemente derzeit absolute Positionierung verwenden
+2. **Wähle deine Layout-Methode** – Entscheide, ob Flexbox oder CSS Grid besser zu deinen Designzielen passt
+3. **Skizziere deine neue Layout-Struktur** – Plane, wie Container und Pflanzenelemente organisiert werden sollen
+
+### Phase 2: Umsetzung
+1. **Erstelle eine neue Version** deines Terrarium-Projekts in einem separaten Ordner
+2. **Aktualisiere bei Bedarf die HTML-Struktur**, um deine gewählte Layout-Methode zu unterstützen
+3. **Refaktoriere das CSS**, um Flexbox oder CSS Grid anstelle der absoluten Positionierung zu verwenden
+4. **Erhalte die visuelle Konsistenz** – Stelle sicher, dass die Pflanzen und das Terrarium-Glas an den gleichen Positionen erscheinen
+5. **Implementiere responsives Verhalten** – Dein Layout sollte sich elegant an verschiedene Bildschirmgrößen anpassen
+
+### Phase 3: Testen und Dokumentation
+1. **Cross-Browser-Tests** – Überprüfe, ob dein Design in Chrome, Firefox, Edge und Safari funktioniert
+2. **Responsives Testen** – Prüfe dein Layout auf Mobil-, Tablet- und Desktop-Bildschirmgrößen
+3. **Dokumentation** – Füge deinem CSS Kommentare hinzu, die deine Layout-Entscheidungen erklären
+4. **Screenshots** – Erfasse dein Terrarium in verschiedenen Browsern und Bildschirmgrößen
+
+## Technische Anforderungen
+
+### Layout-Umsetzung
+- **Wähle EINE Methode**: Implementiere entweder Flexbox ODER CSS Grid (nicht beides für dieselben Elemente)
+- **Responsives Design**: Verwende relative Einheiten (`rem`, `em`, `%`, `vw`, `vh`) statt fester Pixel
+- **Barrierefreiheit**: Bewahre eine korrekte semantische HTML-Struktur und Alt-Texte
+- **Codequalität**: Nutze konsistente Benennungskonventionen und organisiere CSS logisch
+
+### Moderne CSS-Features, die enthalten sein sollen
+```css
+/* Example Flexbox approach */
+.terrarium-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.plant-containers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Example Grid approach */
+.terrarium-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  gap: 1rem;
+}
+```
+
+### Browser-Support Anforderungen
+- **Chrome/Edge**: Die neuesten 2 Versionen
+- **Firefox**: Die neuesten 2 Versionen  
+- **Safari**: Die neuesten 2 Versionen
+- **Mobile Browser**: iOS Safari, Chrome Mobile
+
+## Abzugebende Ergebnisse
+
+1. **Aktualisierte HTML-Datei** mit verbesserter semantischer Struktur
+2. **Refaktorierte CSS-Datei** mit modernen Layout-Techniken
+3. **Screenshot-Sammlung** zur Demonstration der Browser-Kompatibilität:
+   - Desktop-Ansicht (1920x1080)
+   - Tablet-Ansicht (768x1024) 
+   - Mobile-Ansicht (375x667)
+   - Mindestens 2 verschiedene Browser
+4. **README.md Datei** mit Dokumentation:
+   - Deine Layout-Wahl (Flexbox vs Grid) und Begründung
+   - Herausforderungen während der Refaktorierung
+   - Hinweise zur Browser-Kompatibilität
+   - Anweisungen zum Ausführen deines Codes
 
 ## Bewertungskriterien
 
-| Kriterien   | Vorbildlich                                                              | Angemessen                            | Verbesserungswürdig                    |
-|-------------|--------------------------------------------------------------------------|---------------------------------------|----------------------------------------|
-| Layout      | Vollständig überarbeitet mit Flexbox oder CSS Grid; visuell ansprechend und responsiv | Einige Elemente überarbeitet; teilweise Verwendung von Flexbox oder Grid | Wenig oder keine Verwendung von Flexbox oder Grid; Layout unverändert |
-| Kompatibilität | Screenshots für mehrere Browser bereitgestellt; konsistentes Erscheinungsbild | Screenshots für einen Browser; kleinere Inkonsistenzen | Keine Screenshots oder größere Inkonsistenzen |
-| Codequalität | Sauberer, gut organisierter HTML/CSS; klare Kommentare                  | Teilweise organisiert; wenige Kommentare | Unorganisierter Code; keine Kommentare |
+| Kriterium | Hervorragend (4) | Gut (3) | In Arbeit (2) | Anfang (1) |
+|----------|------------------|---------|--------------|------------|
+| **Layout-Implementierung** | Meisterhafte Nutzung von Flexbox/Grid mit erweiterten Funktionen; vollständig responsiv | Korrekte Umsetzung mit gutem responsive Verhalten | Grundlagen umgesetzt, kleinere responsive Probleme | Unvollständige oder fehlerhafte Umsetzung |
+| **Codequalität** | Sauberes, gut organisiertes CSS mit sinnvollen Kommentaren und konsistenter Benennung | Gute Organisation mit einigen Kommentaren | Ausreichende Organisation mit minimalen Kommentaren | Schlechte Organisation; schwer verständlich |
+| **Cross-Browser-Kompatibilität** | Perfekte Konsistenz in allen geforderten Browsern mit Screenshots | Gute Kompatibilität mit dokumentierten kleinen Unterschieden | Einige Kompatibilitätsprobleme, die Funktionalität nicht beeinträchtigen | Große Kompatibilitätsprobleme oder fehlende Tests |
+| **Responsives Design** | Hervorragender Mobile-First-Ansatz mit fließenden Breakpoints | Gutes responsives Verhalten mit angemessenen Breakpoints | Grundlegende responsive Features mit einigen Layout-Problemen | Eingeschränktes oder fehlerhaftes responsive Verhalten |
+| **Dokumentation** | Umfassendes README mit detaillierten Erklärungen und Einblicken | Gute Dokumentation, die alle wichtigen Punkte abdeckt | Basisdokumentation mit wenigen Erklärungen | Unvollständige oder fehlende Dokumentation |
 
-## Tipps
+## Hilfreiche Ressourcen
 
-- Überprüfen Sie die [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) und [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) Anleitungen.
-- Verwenden Sie die Entwickler-Tools des Browsers, um die Responsivität zu testen.
-- Kommentieren Sie Ihren Code für mehr Klarheit.
+### Leitfäden zu Layout-Methoden
+- 📖 [Ein vollständiger Leitfaden zu Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- 📖 [Ein vollständiger Leitfaden zu CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- 📖 [Flexbox vs Grid – Wähle das richtige Werkzeug](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+
+### Tools für Browser-Tests
+- 🛠️ [Browser DevTools Responsive Mode](https://developer.chrome.com/docs/devtools/device-mode/)
+- 🛠️ [Can I Use – Feature Support](https://caniuse.com/)
+- 🛠️ [BrowserStack – Cross-Browser Testing](https://www.browserstack.com/)
+
+### Tools zur Codequalität
+- ✅ [CSS Validator](https://jigsaw.w3.org/css-validator/)
+- ✅ [HTML Validator](https://validator.w3.org/)
+- ✅ [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
+## Bonus-Herausforderungen
+
+🌟 **Fortgeschrittene Layouts**: Implementiere sowohl Flexbox ALS AUCH Grid in verschiedenen Teilen deines Designs  
+🌟 **Animationsintegration**: Füge CSS-Übergänge oder Animationen hinzu, die mit deinem neuen Layout funktionieren  
+🌟 **Dark Mode**: Implementiere einen auf CSS-Custom-Properties basierenden Theme-Switcher  
+🌟 **Container Queries**: Nutze moderne Container Query Techniken für komponentenbasiertes responsives Design
+
+> 💡 **Denke daran**: Das Ziel ist nicht nur, es zum Laufen zu bringen, sondern zu verstehen, WARUM deine gewählte Layout-Methode die beste Lösung für diese spezielle Design-Herausforderung ist!
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle anzusehen. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die durch die Nutzung dieser Übersetzung entstehen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
