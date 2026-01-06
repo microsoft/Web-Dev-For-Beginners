@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 我們會一起踏上這段旅程，一步一步來。沒有匆忙，沒有壓力——只有你、我，以及一些即將成為你新好朋友的超酷工具！
 
-![GitHub 簡介](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.mo.png)
+![GitHub 簡介](../../../../translated_images/webdev101-github.8846d7971abef6f9.mo.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ flowchart TD
 
 ✅ 找到 "適合初學者" 的儲存庫的一個好方法是 [透過標籤 'good-first-issue' 進行搜尋](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)。
 
-![本地複製儲存庫](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.mo.png)
+![本地複製儲存庫](../../../../translated_images/clone_repo.5085c48d666ead57.mo.png)
 
 有幾種複製程式碼的方法。一種方法是使用 HTTPS、SSH 或 GitHub CLI（命令列介面）來 "克隆" 儲存庫的內容。
 

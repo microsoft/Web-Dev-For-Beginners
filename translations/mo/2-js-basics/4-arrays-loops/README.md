@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 基礎：陣列與迴圈
 
-![JavaScript 基礎 - 陣列](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.mo.png)
+![JavaScript 基礎 - 陣列](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.mo.png)
 > Sketchnote 作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -1,88 +1,154 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
-  "translation_date": "2025-08-29T15:28:22+00:00",
+  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
+  "translation_date": "2026-01-06T14:09:38+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "tw"
 }
 -->
 # 使用事件創建遊戲
 
-## 課前測驗
+你是否曾經想過網站如何知道你何時點擊按鈕或在文字框中輸入？這就是事件驅動程式設計的魔力！還有什麼比透過建構一個有用的東西——一個會對你的每個按鍵反應的打字速度遊戲——更好的學習方式呢。
 
-[課前測驗](https://ff-quizzes.netlify.app/web/quiz/21)
+你將親眼看到網頁瀏覽器如何「與」你的JavaScript程式碼「對話」。每次你點擊、輸入或移動滑鼠時，瀏覽器會傳送小訊息（我們稱它們為事件）到你的程式碼，你就會決定如何回應！
 
-## 事件驅動編程
+當我們結束時，你將創建一款真正的打字遊戲，可以追蹤你的速度和準確度。更重要的是，你會理解支撐每個互動式網站的基本概念。讓我們開始吧！
 
-在創建基於瀏覽器的應用程式時，我們會提供一個圖形使用者介面（GUI），讓使用者能夠與我們構建的內容進行互動。與瀏覽器互動最常見的方式是通過點擊和在各種元素中輸入文字。作為開發者，我們面臨的挑戰是無法預測使用者何時會執行這些操作！
+## 講座前小測驗
 
-[事件驅動編程](https://en.wikipedia.org/wiki/Event-driven_programming) 是我們需要用來創建 GUI 的編程方式。如果我們稍微拆解這個詞語，會發現核心詞是 **事件**。根據 Merriam-Webster 的定義，[事件](https://www.merriam-webster.com/dictionary/event) 是指「某件事情發生」。這完美地描述了我們的情況。我們知道某件事情會發生，並希望在其發生時執行一些程式碼，但我們不知道它會在什麼時候發生。
+[講座前小測驗](https://ff-quizzes.netlify.app/web/quiz/21)
 
-我們標記希望執行的程式碼區段的方法是創建一個函數。當我們考慮[程序式編程](https://en.wikipedia.org/wiki/Procedural_programming)時，函數會按照特定的順序被調用。在事件驅動編程中也是如此，不同之處在於函數的調用方式。
+## 事件驅動程式設計
 
-為了處理事件（例如按鈕點擊、輸入文字等），我們需要註冊 **事件監聽器**。事件監聽器是一個函數，用於監聽事件的發生並在事件發生時執行相應的操作。事件監聽器可以更新 UI、向伺服器發送請求，或者執行其他需要根據使用者操作完成的任務。我們可以使用 [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) 並提供一個函數來添加事件監聽器。
+想想你最喜歡的應用程式或網站——是什麼讓它感覺充滿活力且反應迅速？全在於它如何回應你的操作！每次點擊、點按、滑動或按鍵都會產生所謂的「事件」，這才是網頁開發真正的魔法所在。
 
-> **NOTE:** 值得注意的是，創建事件監聽器有多種方式。你可以使用匿名函數，也可以創建命名函數。你可以使用各種快捷方式，例如設置 `click` 屬性，或者使用 `addEventListener`。在我們的練習中，我們將專注於使用 `addEventListener` 和匿名函數，因為這是網頁開發者最常用的技術之一。它也是最靈活的，因為 `addEventListener` 適用於所有事件，並且事件名稱可以作為參數提供。
+讓網頁程式設計如此有趣的原因是：我們永遠不知道有人什麼時候會點擊按鈕或開始在文本框輸入。他們可能立刻點擊，可能等五分鐘，甚至可能永遠不點擊！這種不可預測性讓我們必須用不同的思維來撰寫程式碼。
+
+我們不會寫那種像食譜一樣從上到下執行的程式碼，而是寫那種耐心等待某件事發生的程式碼。就像19世紀的電報操作員坐在機器旁，隨時準備一有訊息即刻回應。
+
+那麼，什麼是「事件」？簡單說，就是發生的事情！當你點擊按鈕，那是一個事件。當你輸入一個字母，那也是事件。當你移動滑鼠，那又是另一個事件。
+
+事件驅動程式設計讓我們能夠設定程式碼聆聽並回應。我們創建特殊的函數，稱為**事件監聽器（event listeners）**，它們耐心等待特定事件發生，然後立即採取行動。
+
+你可以把事件監聽器想像成程式碼的門鈴。你設定門鈴（`addEventListener()`），告訴它要傾聽哪種聲音（例如 ‘click’ 或 ‘keypress’），然後指定有人按鈴時該怎麼做（你的自訂函數）。
+
+**事件監聽器的工作原理如下：**
+- **監聽**用戶特定的行為，如點擊、按鍵或滑鼠移動
+- **執行**當指定的事件發生時你的自訂程式碼
+- **立即回應**用戶互動，創造無縫的體驗
+- **處理**同一元素上的多重事件，使用不同的監聽器
+
+> **注意：** 值得強調的是，有很多方法可以建立事件監聽器。你可以使用匿名函數，或創建具名函數。你也可以用許多捷徑，比如設置 `click` 屬性，或使用 `addEventListener()`。在我們的練習中，我們將專注於 `addEventListener()`和匿名函數，因為這可能是網頁開發者最常用的技術。它也最靈活，因為 `addEventListener()` 可用於所有事件，且事件名稱可以作為參數傳入。
 
 ### 常見事件
 
-在創建應用程式時，有[數十種事件](https://developer.mozilla.org/docs/Web/Events)可供監聽。基本上，使用者在頁面上執行的任何操作都會觸發事件，這讓你擁有很大的權力來確保使用者獲得你期望的體驗。幸運的是，你通常只需要使用少數幾個事件。以下是一些常見的事件（包括我們在創建遊戲時會使用的兩個事件）：
+雖然網頁瀏覽器提供數十種不同的事件可以監聽，但大多數互動應用通常只依賴幾個基本事件。理解這些核心事件將為你建立複雜的使用者互動打下基礎。
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event)：使用者點擊某個元素，通常是按鈕或超連結
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event)：使用者點擊右鍵
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event)：使用者選取了一些文字
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event)：使用者輸入了一些文字
+當你建立應用程式時，基本上用戶在頁面上的任何操作都會觸發一個事件，這給了你很大的能力，確保他們獲得你想要的體驗。幸運的是，通常你只需要少量事件。以下是一些常見事件（包括我們製作遊戲時會用到的兩個）：
 
-## 創建遊戲
+| 事件 | 描述 | 常見用途 |
+|-------|-------------|------------------|
+| `click` | 使用者點擊了某物 | 按鈕、連結、互動元素 |
+| `contextmenu` | 使用者按了右鍵 | 自訂右鍵選單 |
+| `select` | 使用者標記了部分文字 | 文字編輯、複製操作 |
+| `input` | 使用者輸入了文字 | 表單驗證、即時搜尋 |
 
-我們將創建一個遊戲來探索 JavaScript 中事件的工作原理。我們的遊戲將測試玩家的打字技能，這是所有開發者應該具備的一項非常重要的技能。我們都應該練習打字！遊戲的基本流程如下：
+**了解這些事件類型：**
+- **在用戶與特定頁面元素互動時觸發**
+- **透過事件物件提供用戶操作的詳細資訊**
+- **讓你創建反應快速且互動性強的網頁應用**
+- **在不同瀏覽器和裝置間一致運作**
 
-- 玩家點擊開始按鈕，並看到需要輸入的一段文字
-- 玩家在文本框中盡可能快速地輸入文字
-  - 每完成一個單詞，下一個單詞會被高亮顯示
-  - 如果玩家輸入錯誤，文本框會變成紅色
-  - 當玩家完成整段文字時，會顯示成功訊息以及所用時間
+## 建立遊戲
 
-讓我們開始構建遊戲，並學習事件的相關知識！
+現在你已理解事件的運作方式，我們來實際應用：創建一個打字速度遊戲，展示事件處理，同時幫助你培養重要的開發者技能。
 
-### 文件結構
+我們將創建一個遊戲，探索 JavaScript 裡的事件運作。遊戲會測試玩家的打字技巧，這是所有開發人員都常被低估的重要技能。趣事：我們現在使用的 QWERTY 鍵盤配置實際上是在1870年代為打字機設計的——打字技巧對程式設計師如今仍然相當重要！遊戲大致流程如下：
 
-我們需要三個文件：**index.html**、**script.js** 和 **style.css**。讓我們先設置好這些文件，讓後續工作更輕鬆。
+```mermaid
+flowchart TD
+    A[玩家點擊開始] --> B[顯示隨機引言]
+    B --> C[玩家在文字框中輸入]
+    C --> D{單詞完成了嗎？}
+    D -->|是| E[標記下一個單詞]
+    D -->|否| F{目前正確嗎？}
+    F -->|是| G[保持正常樣式]
+    F -->|否| H[顯示錯誤樣式]
+    E --> I{引言完成了嗎？}
+    I -->|否| C
+    I -->|是| J[顯示成功訊息與時間]
+    G --> C
+    H --> C
+```
+**以下是遊戲的運作方式：**
+- **開始**當玩家點擊開始按鈕並顯示隨機引言
+- **追蹤**玩家的打字進度，逐字即時更新
+- **突出顯示**當前單字，指引玩家專注焦點
+- **提供**打字錯誤的即時視覺反饋
+- **計算**並顯示當引言全部完成的總用時
 
-- 打開控制台或終端窗口，創建一個新文件夾，並執行以下命令：
+我們來一起創建這款遊戲，並學習事件吧！
+
+### 檔案結構
+
+在開始寫程式前，先整理好檔案結構！一開始就有乾淨的檔案結構會減少你日後的困擾，並讓你的專案更專業。😊
+
+我們將保持簡單，僅使用三個檔案：用於頁面結構的 `index.html`、用於遊戲邏輯的 `script.js`，以及用於視覺效果的 `style.css`。這組組合是大多數網頁的經典配置！
+
+**透過打開命令視窗或終端機執行以下指令，為你的作品創建新資料夾：**
 
 ```bash
-# Linux or macOS
+# Linux 或 macOS
 mkdir typing-game && cd typing-game
 
 # Windows
 md typing-game && cd typing-game
 ```
 
-- 打開 Visual Studio Code
+**這些指令的功能：**
+- **建立**一個名為 `typing-game` 的新目錄，供你放置專案檔案
+- **自動切換**到剛建立的資料夾內
+- **打造**一個乾淨的工作區，方便你開發遊戲
+
+**打開 Visual Studio Code：**
 
 ```bash
 code .
 ```
 
-- 在 Visual Studio Code 中向文件夾添加以下三個文件：
-  - index.html
-  - script.js
-  - style.css
+**此指令的效果：**
+- **啟動** Visual Studio Code 並定位到目前目錄
+- **在編輯器中開啟**你的專案資料夾
+- **提供**所有你需要的開發工具
 
-## 創建使用者介面
+**在 Visual Studio Code 裡新增三個檔案，命名如下：**
+- `index.html` - 遊戲的結構和內容
+- `script.js` - 遊戲邏輯和事件監聽器
+- `style.css` - 視覺外觀和樣式設定
 
-根據需求，我們知道在 HTML 頁面上需要一些元素。這有點像食譜，我們需要一些材料：
+## 建立使用者介面
 
-- 顯示玩家需要輸入的文字的地方
-- 顯示訊息（例如成功訊息）的地方
-- 用於輸入文字的文本框
-- 開始按鈕
+現在讓我們建構遊戲進行時的舞台！想像這是設計太空船的控制面板——我們必須確保所有玩家需要的東西都放在他們期望的位置。
 
-每個元素都需要有 ID，以便我們能夠在 JavaScript 中操作它們。我們還需要添加對 CSS 和 JavaScript 文件的引用。
+想想我們的遊戲到底需要什麼。如果你正在玩一個打字遊戲，你希望螢幕上出現什麼？這是必須的介面元素：
 
-創建一個名為 **index.html** 的新文件，並添加以下 HTML：
+| UI 元件 | 目的 | HTML 元素 |
+|------------|---------|-------------|
+| 引言顯示區 | 顯示要輸入的文字 | `<p>` 並帶有 `id="quote"` |
+| 訊息區 | 顯示狀態及成功訊息 | `<p>` 並帶有 `id="message"` |
+| 文字輸入框 | 玩家輸入引言的地方 | `<input>` 並帶有 `id="typed-value"` |
+| 開始按鈕 | 開始遊戲 | `<button>` 並帶有 `id="start"` |
+
+**介面結構說明：**
+- **合乎邏輯**地從上到下組織內容
+- **給予**元素獨特的 ID，方便 JavaScript 操作
+- **建立**清晰視覺層級，提升用戶體驗
+- **使用**語意化的 HTML 元素，增進無障礙性
+
+每個元素都需要 ID，才能在 JavaScript 中操作。我們也會新增對 CSS 和 JavaScript 檔案的引用。
+
+建立一個名為 `index.html` 的新檔案。加入以下 HTML：
 
 ```html
 <!-- inside index.html -->
@@ -105,26 +171,52 @@ code .
 </html>
 ```
 
+**這個 HTML 結構實現了以下功能：**
+- **在 `<head>` 頁面標頭載入 CSS 樣式表
+- **創建**明確的標題和使用者說明
+- **設置**帶有特定 ID 的占位段落，用於動態內容
+- **包含**帶有無障礙屬性的輸入欄位
+- **提供**一個開始遊戲的按鈕
+- **在檔案尾端**載入 JavaScript，提升效能
+
 ### 啟動應用程式
 
-最好以迭代方式開發，隨時查看效果。讓我們啟動應用程式。Visual Studio Code 有一個很棒的擴展名叫 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon)，它可以在本地托管你的應用程式，並在每次保存時刷新瀏覽器。
+在開發過程中經常測試應用程式有助於及早捕捉問題，並即時查看進度。Live Server 是一款非常實用的工具，每當你儲存變更時，它會自動刷新瀏覽器，讓開發更加高效。
 
-- 按照連結安裝 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon)，然後點擊 **Install**
-  - 瀏覽器會提示你打開 Visual Studio Code，然後 Visual Studio Code 會提示你進行安裝
-  - 如果有提示，請重新啟動 Visual Studio Code
-- 安裝完成後，在 Visual Studio Code 中按 Ctrl-Shift-P（或 Cmd-Shift-P）打開命令面板
-- 輸入 **Live Server: Open with Live Server**
-  - Live Server 會開始托管你的應用程式
-- 打開瀏覽器，並導航到 **https://localhost:5500**
-- 你現在應該能看到你創建的頁面！
+最好採用逐步開發的方法查看效果。讓我們啟動應用程式。有個相當棒的 Visual Studio Code 擴充套件叫做 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon)，它可以在本機架設伺服器，並在你儲存時刷新瀏覽器。
 
-讓我們添加一些功能。
+**按照連結安裝 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon)，點擊安裝：**
 
-## 添加 CSS
+**安裝過程會有以下動作：**
+- **提示**你的瀏覽器打開 Visual Studio Code
+- **引導你**完成擴充功能安裝流程
+- **可能需要**重啟 Visual Studio Code 以完成設定
 
-在創建 HTML 後，讓我們添加核心樣式的 CSS。我們需要高亮玩家應該輸入的單詞，並在輸入錯誤時將文本框顯示為紅色。我們將使用兩個類來完成這些操作。
+**安裝完成後，在 Visual Studio Code 按 Ctrl-Shift-P（或 Cmd-Shift-P）開啟命令面板：**
 
-創建一個名為 **style.css** 的新文件，並添加以下語法。
+**命令面板說明：**
+- **快速存取**所有 VS Code 指令
+- **輸入時即時搜尋**指令
+- **提供**鍵盤快捷鍵加快開發效率
+
+**輸入「Live Server: Open with Live Server」：**
+
+**Live Server 功能包括：**
+- **啟動**你的專案的本機開發伺服器
+- **在你儲存檔案時**自動刷新瀏覽器
+- **從本機 URL（通常是 `localhost:5500`）提供服務**
+
+**打開瀏覽器並前往 `https://localhost:5500`：**
+
+現在你應該看到剛建立的頁面了！讓我們加入一些功能。
+
+## 加入 CSS
+
+現在讓我們讓畫面好看一點！視覺反饋自電腦早期時代就對使用者介面至關重要。1980年代的研究發現，立即的視覺反饋能顯著提升使用者表現並減少錯誤。這正是我們要創造的效果。
+
+我們的遊戲需要讓玩家一目了然地知道目前狀況。玩家應該立刻知道該輸入哪個單字，如果犯錯，應該立即看到它。我們來創建一些簡單但有效的樣式：
+
+建立一個名為 `style.css` 的新檔案，加入以下語法。
 
 ```css
 /* inside style.css */
@@ -138,40 +230,61 @@ code .
 }
 ```
 
-✅ 關於 CSS，你可以按照自己的喜好佈局頁面。花點時間讓頁面看起來更吸引人：
+**這些 CSS 類別的意義：**
+- **以黃色背景突出顯示**當前單字，幫助視覺聚焦
+- **以淺珊瑚色背景標示**打字錯誤
+- **提供**即時回饋而不干擾使用者輸入流程
+- **使用**對比明顯的色彩，提升無障礙性與視覺溝通效果
 
-- 選擇不同的字體
-- 為標題添加顏色
-- 調整元素大小
+✅ CSS 部分，你可以自由安排頁面版面配置，多花點時間讓頁面更吸引人：
+
+- 選擇不同的字型
+- 讓標題更有色彩
+- 調整元件大小
 
 ## JavaScript
 
-在創建 UI 後，現在是時候專注於提供邏輯的 JavaScript 了。我們將分成幾個步驟：
+現在事情變有趣了！🎉 我們已經有 HTML 結構和 CSS 樣式，但目前遊戲就像一輛漂亮卻沒有引擎的車子。JavaScript 就是那台引擎——它使一切都實際運作並對玩家操作做出回應。
 
-- [創建常量](../../../../4-typing-game/typing-game)
-- [開始遊戲的事件監聽器](../../../../4-typing-game/typing-game)
-- [輸入文字的事件監聽器](../../../../4-typing-game/typing-game)
+你將看到你的作品活起來。我們會一步步接觸這些內容，避免讓你感到壓力過大：
 
-首先，創建一個名為 **script.js** 的新文件。
+| 步驟 | 目的 | 你將學到的内容 |
+|------|---------|------------------|
+| [建立常數](../../../../4-typing-game/typing-game) | 設定引言和 DOM 參考 | 變數管理與 DOM 選取 |
+| [開始遊戲的事件監聽器](../../../../4-typing-game/typing-game) | 處理遊戲初始化 | 事件處理和 UI 更新 |
+| [鍵入的事件監聽器](../../../../4-typing-game/typing-game) | 即時處理用戶輸入 | 輸入驗證與動態反饋 |
 
-### 創建常量
+**此結構化方式幫助你：**
+- **整合**程式碼成邏輯且易管理的部分
+- **逐步建立**功能以便輕鬆除錯
+- **理解**應用程式中不同部分如何協同工作
+- **創造**可重複使用的設計模式，便於未來專案
 
-我們需要一些項目來讓編程更輕鬆。類似於食譜，以下是我們需要的內容：
+不過先建立一個新檔案，名為 `script.js`。
 
-- 包含所有文字的陣列
-- 用於存儲當前文字的所有單詞的空陣列
-- 用於存儲玩家當前輸入的單詞索引的空間
-- 玩家點擊開始的時間
+### 建立常數
 
-我們還需要引用 UI 元素：
+在深入實作前，讓我們先整合所有資源！就像 NASA 的任務控制中心啟動前會先架設監控系統，有備而來能讓整個過程順利許多，也能減少打錯字的機率。
 
-- 文本框（**typed-value**）
-- 顯示文字的元素（**quote**）
-- 顯示訊息的元素（**message**）
+我們首先需要設定：
+
+| 資料類型 | 目的 | 範例 |
+|-----------|---------|--------|
+| Array of quotes | 儲存遊戲中所有可能的引言 | `['Quote 1', 'Quote 2', ...]` |
+| Word array | 將當前引言拆解成單字陣列 | `['When', 'you', 'have', ...]` |
+| Word index | 追蹤玩家正在輸入的單字索引 | `0, 1, 2, 3...` |
+| Start time | 計算計分所需的經過時間 | `Date.now()` |
+
+**我們也需要參考 UI 元素：**
+| Element | ID | 用途 |
+|---------|----|---------|
+| 文字輸入框 | `typed-value` | 玩家輸入文字的位置 |
+| 引言顯示區 | `quote` | 顯示需輸入的引言 |
+| 訊息區 | `message` | 顯示狀態更新訊息 |
 
 ```javascript
-// inside script.js
-// all of our quotes
+// 在 script.js 內部
+// 我們所有的引言
 const quotes = [
     'When you have eliminated the impossible, whatever remains, however improbable, must be the truth.',
     'There is nothing more deceptive than an obvious fact.',
@@ -181,172 +294,320 @@ const quotes = [
     'Nothing clears up a case so much as stating it to another person.',
     'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
 ];
-// store the list of words and the index of the word the player is currently typing
+// 存放單詞清單和玩家當前輸入的單詞索引
 let words = [];
 let wordIndex = 0;
-// the starting time
+// 起始時間
 let startTime = Date.now();
-// page elements
+// 頁面元素
 const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
+  
+**解析這段設定程式碼的成果：**
+- 使用 `const` **儲存**一組夏洛克·福爾摩斯的引言，因為引言不會變動  
+- 使用 `let` **初始化**追蹤變數，因為遊戲中這些值會變化  
+- 利用 `document.getElementById()` **擷取** DOM 元素的參照以提高效率  
+- 建立所有遊戲功能的基礎，並且使用清晰、具描述性的變數名稱  
+- 將相關資料和元素邏輯性地組織起來，方便日後維護程式碼  
 
-✅ 為你的遊戲添加更多文字
+✅ 請繼續為你的遊戲新增更多引言
 
-> **NOTE:** 我們可以在程式碼中隨時使用 `document.getElementById` 獲取元素。由於我們會經常引用這些元素，因此使用常量可以避免字符串字面值的拼寫錯誤。像 [Vue.js](https://vuejs.org/) 或 [React](https://reactjs.org/) 這樣的框架可以幫助你更好地集中管理程式碼。
+> 💡 **專家提示**：你可以在程式碼中任何時候使用 `document.getElementById()` 取得元素。由於我們會常常用到這些元素，透過常數避免字串拼寫錯誤是很好的做法。像是 [Vue.js](https://vuejs.org/) 或 [React](https://reactjs.org/) 這類框架可以幫助你更好地集中管理程式碼。
+>
+**這個作法效果好有以下原因：**
+- **避免**多次引用元素時的拼寫錯誤  
+- **提升**程式碼可讀性，使用具描述性的常數名稱  
+- **增強** IDE 的自動完成與錯誤檢查支援  
+- **使得**以後如果元素 ID 改變，重構程式碼更加容易  
 
-花點時間觀看一段關於使用 `const`、`let` 和 `var` 的影片
+花一點時間觀看關於 `const`、`let` 和 `var` 的影片
 
-[![變數類型](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "變數類型")
+[![Types of variables](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Types of variables")
 
-> 🎥 點擊上方圖片觀看有關變數的影片。
+> 🎥 點擊上方圖片觀看變數相關教學影片。
 
-### 添加開始邏輯
+### 新增開始邏輯
 
-為了開始遊戲，玩家需要點擊開始按鈕。當然，我們不知道他們什麼時候會點擊開始。這就是[事件監聽器](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener)的作用。事件監聽器允許我們監聽某件事情的發生（事件），並在事件發生時執行程式碼。在我們的情況下，我們希望在使用者點擊開始時執行程式碼。
+這裡一切就緒！🚀 你即將寫下第一個真正的事件監聽器，看到程式碼對按鈕點擊有反應，那感覺超滿足。
 
-當使用者點擊 **開始** 時，我們需要選擇一段文字，設置使用者介面，並設置當前單詞和計時的追蹤。以下是需要添加的 JavaScript；我們在程式碼塊後進行討論。
+想想看：某個地方，一名玩家正準備點擊「開始」按鈕，你的程式需要準備好。完全不知道他什麼時候會按下去——可能是馬上，也可能喝完咖啡後——但當那刻來臨，你的遊戲便啟動。
+
+當用戶點擊 `start` 時，我們需要選擇一段引言、設定用戶介面，以及初始化當前輸入單字和時間的追蹤。以下是你要加入的 JavaScript 程式碼；我們會在程式碼區塊後面詳細說明。
 
 ```javascript
-// at the end of script.js
+// 在 script.js 的結尾
 document.getElementById('start').addEventListener('click', () => {
-  // get a quote
+  // 取得一個引言
   const quoteIndex = Math.floor(Math.random() * quotes.length);
   const quote = quotes[quoteIndex];
-  // Put the quote into an array of words
+  // 將引言放入一個字詞陣列中
   words = quote.split(' ');
-  // reset the word index for tracking
+  // 重設字詞索引以追蹤
   wordIndex = 0;
 
-  // UI updates
-  // Create an array of span elements so we can set a class
+  // 使用者介面更新
+  // 建立一個 span 元素陣列，以便我們可以設置類別
   const spanWords = words.map(function(word) { return `<span>${word} </span>`});
-  // Convert into string and set as innerHTML on quote display
+  // 轉成字串並設定為引言顯示區的 innerHTML
   quoteElement.innerHTML = spanWords.join('');
-  // Highlight the first word
+  // 強調第一個字詞
   quoteElement.childNodes[0].className = 'highlight';
-  // Clear any prior messages
+  // 清除任何先前的訊息
   messageElement.innerText = '';
 
-  // Setup the textbox
-  // Clear the textbox
+  // 設置文字框
+  // 清空文字框
   typedValueElement.value = '';
-  // set focus
+  // 設定焦點
   typedValueElement.focus();
-  // set the event handler
+  // 設定事件處理器
 
-  // Start the timer
+  // 啟動計時器
   startTime = new Date().getTime();
 });
 ```
+  
+**將程式碼分成邏輯區塊說明：**
 
-讓我們分解程式碼！
+**📊 單字追蹤設定：**  
+- 使用 `Math.floor()` 和 `Math.random()` **隨機選擇**一段引言，增加多樣性  
+- 使用 `split(' ')` 將引言 **切割成單字陣列**  
+- 將 `wordIndex` **重置為 0**，因為玩家從第一個單字開始  
+- **準備**遊戲狀態以開始新的回合  
 
-- 設置單詞追蹤
-  - 使用 [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) 和 [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 隨機選擇 `quotes` 陣列中的一段文字
-  - 將 `quote` 轉換為 `words` 陣列，以便追蹤玩家當前輸入的單詞
-  - 將 `wordIndex` 設置為 0，因為玩家將從第一個單詞開始
-- 設置 UI
-  - 創建 `spanWords` 陣列，其中包含每個單詞的 `span` 元素
-    - 這將允許我們高亮顯示文字
-  - 使用 `join` 將陣列轉換為字符串，並更新 `quoteElement` 的 `innerHTML`
-    - 這將向玩家顯示文字
-  - 將第一個 `span` 元素的 `className` 設置為 `highlight`，以高亮顯示為黃色
-  - 通過設置 `messageElement` 的 `innerText` 為 `''` 清空訊息
-- 設置文本框
-  - 清空 `typedValueElement` 的當前 `value`
-  - 將焦點設置到 `typedValueElement`
-- 通過調用 `getTime` 開始計時
+**🎨 UI 佈局與顯示：**  
+- 透過包裹 `<span>` 元素，分別設定單字以便個別樣式調整  
+- 將所有 span 元素合併成一個字串，**有效率地更新 DOM**  
+- 透過加入 `highlight` CSS 類別，**標記第一個單字為高亮**  
+- 清除先前遊戲訊息，讓畫面保持乾淨  
 
-### 添加輸入邏輯
+**⌨️ 文字框準備：**  
+- 清空輸入欄現有文字  
+- 將輸入框設定 **focus**，讓玩家能立刻開始輸入  
+- 為新遊戲回合做好輸入區準備  
 
-當玩家輸入時，會觸發 `input` 事件。此事件監聽器將檢查玩家是否正確輸入單詞，並處理遊戲的當前狀態。回到 **script.js**，在末尾添加以下程式碼。我們稍後會進行分解。
+**⏱️ 計時器初始化：**  
+- 使用 `new Date().getTime()` **擷取當前時間戳**  
+- 方便後續準確計算打字速度與完成時間  
+- 開始遊戲計時與效能追蹤  
+
+### 新增打字邏輯
+
+這裡開始處理遊戲核心了！別擔心剛開始看起來複雜，我們會逐一說明每段程式碼，最後你會看到它多麼合邏輯。
+
+我們正在打造的是一套複雜的邏輯：每當玩家輸入一個字母，我們都會查看輸入內容、給予回饋，並決定下一步該怎麼做。它類似 1970 年代早期的文字處理器 WordStar，會即時回饋輸入狀況。
 
 ```javascript
-// at the end of script.js
+// 在 script.js 的結尾
 typedValueElement.addEventListener('input', () => {
-  // Get the current word
+  // 取得當前的單字
   const currentWord = words[wordIndex];
-  // get the current value
+  // 取得當前的值
   const typedValue = typedValueElement.value;
 
   if (typedValue === currentWord && wordIndex === words.length - 1) {
-    // end of sentence
-    // Display success
+    // 句子結尾
+    // 顯示成功
     const elapsedTime = new Date().getTime() - startTime;
     const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
     messageElement.innerText = message;
   } else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
-    // end of word
-    // clear the typedValueElement for the new word
+    // 單字結尾
+    // 清除 typedValueElement 以便輸入新單字
     typedValueElement.value = '';
-    // move to the next word
+    // 移動到下一個單字
     wordIndex++;
-    // reset the class name for all elements in quote
+    // 重設 quote 中所有元素的類別名稱
     for (const wordElement of quoteElement.childNodes) {
       wordElement.className = '';
     }
-    // highlight the new word
+    // 突顯新單字
     quoteElement.childNodes[wordIndex].className = 'highlight';
   } else if (currentWord.startsWith(typedValue)) {
-    // currently correct
-    // highlight the next word
+    // 目前正確
+    // 突顯下一個單字
     typedValueElement.className = '';
   } else {
-    // error state
+    // 錯誤狀態
     typedValueElement.className = 'error';
   }
 });
 ```
+  
+**理解除錯邏輯流程：**
 
-讓我們分解程式碼！我們首先獲取當前單詞和玩家目前輸入的值。接著，我們使用瀑布邏輯檢查文字是否完成、單詞是否完成、單詞是否正確，或者（最後）是否有錯誤。
+此函式採用瀑布式檢查邏輯，從最特定的狀況往較普遍的判斷依序過濾。以下逐步拆解各情境：
 
-- 文字完成，條件是 `typedValue` 等於 `currentWord`，且 `wordIndex` 等於 `words` 的 `length` 減一
-  - 通過將當前時間減去 `startTime` 計算 `elapsedTime`
-  - 將 `elapsedTime` 除以 1,000，將毫秒轉換為秒
-  - 顯示成功訊息
-- 單詞完成，條件是 `typedValue` 以空格結尾（單詞結束），且 `typedValue` 等於 `currentWord`
-  - 將 `typedElement` 的 `value` 設置為 `''`，以便輸入下一個單詞
-  - 增加 `wordIndex`，移動到下一個單詞
-  - 遍歷 `quoteElement` 的所有 `childNodes`，將 `className` 設置為 `''`，恢復默認顯示
-  - 將當前單詞的 `className` 設置為 `highlight`，以標記為下一個需要輸入的單詞
-- 單詞目前輸入正確（但未完成），條件是 `currentWord` 以 `typedValue` 開頭
-  - 通過清空 `className` 確保 `typedValueElement` 顯示為默認狀態
-- 如果到這裡，則表示有錯誤
-  - 將 `typedValueElement` 的 `className` 設置為 `error`
+```mermaid
+flowchart TD
+    A[玩家輸入字元] --> B[取得目前字詞與輸入值]
+    B --> C{引用完成？}
+    C -->|Yes| D[顯示完成訊息及時間]
+    C -->|No| E{字詞以空白結束？}
+    E -->|Yes| F[清除輸入、移至下一字詞、更新標示]
+    E -->|No| G{目前輸入正確嗎？}
+    G -->|Yes| H[移除錯誤樣式]
+    G -->|No| I[顯示錯誤樣式]
+```  
+**🏁 引言輸入完成（情境 1）：**  
+- 檢查輸入值是否與目前單字相符，且為最後一個單字  
+- 計算經過時間，即用現在時間減去開始時間  
+- 將毫秒轉換成秒，除以 1,000  
+- 顯示恭喜訊息並包含完成時間  
+
+**✅ 單字完成（情境 2）：**  
+- 當輸入字串以空白結尾時，判斷字完成  
+- 確認修剪後的輸入與目前單字精確相符  
+- 清空輸入框以準備輸入下一個  
+- 將 `wordIndex` 增加，前進下一個單字  
+- 移除所有單字的類別，並高亮新單字  
+
+**📝 正在輸入中（情境 3）：**  
+- 確認目前單字以已輸入字串開頭  
+- 移除錯誤樣式，表示目前輸入正確  
+- 允許持續輸入，不中斷  
+
+**❌ 錯誤輸入狀態（情境 4）：**  
+- 輸入字串不符合目前單字開頭時觸發  
+- 加入錯誤 CSS 類別，立刻給予視覺回饋  
+- 幫助玩家迅速辨識並修正錯誤  
 
 ## 測試你的應用程式
 
-你已經完成了！最後一步是確保應用程式正常運行。試試看吧！如果有錯誤，不要擔心；**所有開發者**都會遇到錯誤。檢查訊息並根據需要進行調試。
+看看你都完成了什麼！🎉 你剛剛用事件驅動程式設計從零打造出一個真實可玩的打字遊戲。花點時間好好欣賞這成就——這絕非易事！
 
-點擊 **開始**，然後開始輸入！它應該看起來像我們之前看到的動畫。
+接下來是測試階段！它會不會如預期運作？有沒有漏掉什麼？其實如果一開始沒完美運作很正常，即使是資深開發者也常在程式中找到錯誤。這都是開發流程的一部分！
 
-![遊戲運行中的動畫](../../../../4-typing-game/images/demo.gif)
+點擊 `start`，開始打字吧！應該會像之前看到的動畫一樣。
+
+![Animation of the game in action](../../../../4-typing-game/images/demo.gif)
+
+**你應該測試的重點：**  
+- 點擊 Start 後是否顯示隨機引言  
+- 輸入時當前單字是否正確高亮  
+- 錯誤輸入時是否出現錯誤樣式提示  
+- 完成單字後高亮是否正確往前推進  
+- 完成整段引言後是否顯示完成訊息與計時  
+
+**常見除錯建議：**  
+- 檢查瀏覽器主控台 (F12) 是否有 JavaScript 錯誤  
+- 驗證所有檔案名稱是否完全匹配（含大小寫）  
+- 確認 Live Server 是否正常執行與刷新  
+- 嘗試多段引言以測試隨機選取功能  
 
 ---
+
+## GitHub Copilot Agent 挑戰 🎮
+
+使用 Agent 模式完成以下挑戰：
+
+**描述：** 擴充打字遊戲，實作一個能根據玩家表現調整遊戲難度的系統。這挑戰讓你練習進階事件處理、資料分析與動態 UI 更新。
+
+**提示：** 為打字遊戲創建難度調整系統，要求包括：  
+1. 追蹤玩家的打字速度（每分鐘字數）及準確度百分比  
+2. 自動調整為三種難度：簡單（簡單引言）、中等（現有引言）、困難（包含標點符號的複雜引言）  
+3. 在 UI 顯示當前難度與玩家統計數據  
+4. 實作連勝計數器，連續三次表現良好時提升難度  
+5. 新增視覺回饋（顏色、動畫）指出難度變化  
+
+加入必要的 HTML 元素、CSS 樣式與 JavaScript 函式來實現此功能。包含適當的錯誤處理，並確保遊戲具備適當的 ARIA 標籤以保持無障礙。
+
+更多 agent 模式資訊，參考 [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode)。
 
 ## 🚀 挑戰
 
-添加更多功能
+準備將你的打字遊戲推向新高度？試著實作這些進階功能，深化你對事件處理與 DOM 操控的了解：
 
-- 在完成後禁用 `input` 事件監聽器，並在按鈕被點擊時重新啟用
-- 在玩家完成文字後禁用文本框
-- 顯示一個模態對話框，包含成功訊息
-- 使用 [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) 存儲最高分
-## 課後測驗
+**新增功能：**
 
-[課後測驗](https://ff-quizzes.netlify.app/web/quiz/22)
+| 功能 | 描述 | 你將練習的技能 |
+|---------|-------------|------------------------|
+| **輸入控管** | 完成後禁用 `input` 事件監聽器，按鈕點擊時恢復 | 事件管理與狀態控制 |
+| **UI 狀態管理** | 玩家完成引言後停用輸入框 | DOM 屬性操作 |
+| **彈跳視窗** | 使用模態視窗顯示成功訊息 | 進階 UI 模式與無障礙 |
+| **最高分系統** | 使用 `localStorage` 儲存最高分 | 瀏覽器儲存 API 與資料持久性 |
 
-## 回顧與自學
+**實作提示：**  
+- 查閱 `localStorage.setItem()` 和 `localStorage.getItem()` 以持久儲存資料  
+- 練習動態添加與移除事件監聽器  
+- 探索 HTML dialog 元素或 CSS 模態視窗樣式  
+- 停用與啟用表單控件時考慮無障礙設計  
 
-閱讀 [所有可用的事件](https://developer.mozilla.org/docs/Web/Events)，了解網頁瀏覽器提供給開發者的選項，並思考每個事件適合使用的情境。
+## 課後小考
 
-## 作業
-
-[創建一個新的鍵盤遊戲](assignment.md)
+[課後小考](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ---
 
+## 🚀 你的打字遊戲精通路徑
+
+### ⚡ **接下來 5 分鐘能做的事**  
+- [ ] 以不同引言測試打字遊戲，確保運行流暢  
+- [ ] 嘗試修改 CSS 樣式，改變高亮與錯誤顏色  
+- [ ] 打開瀏覽器開發工具（F12），在遊玩時觀察 Console  
+- [ ] 挑戰自己盡快完成一段引言  
+
+### ⏰ **本小時能達成的目標**  
+- [ ] 為陣列新增更多引言（可挑選喜愛的書籍或電影）  
+- [ ] 實作挑戰區中的 localStorage 最高分系統  
+- [ ] 建置每分鐘字數計算器並在遊戲後顯示  
+- [ ] 增加正確輸入、錯誤與完成的音效  
+
+### 📅 **本週冒險任務**  
+- [ ] 製作多人遊戲版本，讓好友並肩競賽  
+- [ ] 創造不同難度層級且引言複雜度不同  
+- [ ] 新增進度條顯示引言輸入進度  
+- [ ] 實作用戶帳號與個人統計追蹤  
+- [ ] 設計自訂主題，讓使用者選擇喜愛的樣式  
+
+### 🗓️ **本月轉變進度**  
+- [ ] 建立漸進式打字課程，教導正確指法  
+- [ ] 製作分析報告，找出最易出錯的字母或單字  
+- [ ] 支援不同語言與鍵盤配置  
+- [ ] 串接教育 API，從文學資料庫取得引言  
+- [ ] 發佈強化版打字遊戲，讓更多人使用和喜愛  
+
+### 🎯 **最終反思檢核**
+
+**在繼續前，花些時間慶祝：**  
+- 製作這款遊戲時，最令人滿意的時刻是什麼？  
+- 相較起初，現在對事件驅動程式設計有什麼感想？  
+- 有什麼功能讓你迫不及待想加進遊戲變得獨一無二？  
+- 你會如何將事件處理概念應用到其他專案？  
+
+```mermaid
+journey
+    title 你的事件程式設計自信之旅
+    section 今天
+      了解事件: 3: 你
+      建立使用者介面: 4: 你
+      編寫事件監聽器: 5: 你
+    section 本週
+      新增功能: 4: 你
+      除錯問題: 5: 你
+      強化使用者體驗: 4: 你
+    section 下個月
+      建立複雜應用程式: 5: 你
+      教導他人: 5: 你
+      創建框架: 5: 你
+```  
+> 🌟 **記得**：你剛掌握了支撐每個互動網站與應用的核心概念。事件驅動程式設計讓網路充滿活力且反應即時。每當你看到下拉選單、即時驗證表單、或是會回應你點擊的遊戲，你現在都會明白背後的魔法。你不只是在學寫程式，你是在學創造直覺且吸引人的體驗！🎉
+
+---
+
+## 複習與自學
+
+閱讀關於瀏覽器可監聽的[所有事件](https://developer.mozilla.org/docs/Web/Events)，並思考何時會用到它們。
+
+## 作業
+
+[製作新鍵盤遊戲](assignment.md)
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或錯誤解讀概不負責。
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保翻譯的準確性，但請注意自動翻譯可能包含錯誤或不精確之處。原文文件的母語版本應被視為權威來源。對於關鍵資訊，建議使用專業人工翻譯。我們不對因使用本翻譯內容而產生的任何誤解或誤釋負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

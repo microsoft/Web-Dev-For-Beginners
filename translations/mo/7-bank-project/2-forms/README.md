@@ -295,7 +295,7 @@ graph TD
 2. 觀察瀏覽器地址欄的變化
 3. 注意頁面如何重新加載以及數據如何出現在URL中
 
-![點擊註冊按鈕後瀏覽器URL變化的截圖](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.mo.png)
+![點擊註冊按鈕後瀏覽器URL變化的截圖](../../../../translated_images/click-register.e89a30bf0d4bc9ca.mo.png)
 
 ### HTTP方法比較
 
@@ -350,7 +350,7 @@ graph TD
 2. **點擊**"創建帳戶"按鈕
 3. **觀察**瀏覽器中的伺服器響應
 
-![瀏覽器窗口顯示地址localhost:5000/api/accounts，並顯示包含用戶數據的JSON字符串](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.mo.png)
+![瀏覽器窗口顯示地址localhost:5000/api/accounts，並顯示包含用戶數據的JSON字符串](../../../../translated_images/form-post.61de4ca1b964d91a.mo.png)
 
 **你應該看到：**
 - **瀏覽器重定向**到API端點URL
@@ -615,7 +615,7 @@ async function register() {
 3. **點擊**「建立帳戶」
 4. **觀察**主控台訊息和使用者回饋
 
-![顯示瀏覽器主控台中日誌訊息的截圖](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.mo.png)
+![顯示瀏覽器主控台中日誌訊息的截圖](../../../../translated_images/browser-console.efaf0b51aaaf6778.mo.png)
 
 **您應該看到：**
 - **加載狀態**出現在提交按鈕上
@@ -790,7 +790,7 @@ input:focus:invalid {
 3. **嘗試**在使用者名稱欄位中輸入特殊字元
 4. **輸入**負餘額金額
 
-![顯示嘗試提交表單時的驗證錯誤截圖](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.mo.png)
+![顯示嘗試提交表單時的驗證錯誤截圖](../../../../translated_images/validation-error.8bd23e98d416c22f.mo.png)
 
 **您將觀察到：**
 - **瀏覽器顯示**原生驗證訊息
@@ -950,7 +950,7 @@ timeline
 
 以下是添加一些 CSS 樣式後，最終登入頁面的範例：
 
-![添加 CSS 樣式後的登入頁面截圖](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.mo.png)
+![添加 CSS 樣式後的登入頁面截圖](../../../../translated_images/result.96ef01f607bf856a.mo.png)
 
 ## 課後測驗
 

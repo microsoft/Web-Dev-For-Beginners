@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM 和閉包](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.mo.png)
+![DOM 和閉包](../../../../translated_images/webdev101-js.10280393044d7eaa.mo.png)
 > 手繪筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 歡迎來到網頁開發中最有趣的部分之一——讓網頁變得互動！文檔物件模型（DOM）就像是 HTML 和 JavaScript 之間的橋樑，今天我們將利用它讓你的微型生態瓶活起來。當 Tim Berners-Lee 創建第一個網頁瀏覽器時，他設想了一個可以動態和互動的網頁世界，而 DOM 使這一願景成為可能。
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![DOM 樹表示](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.mo.png)
+![DOM 樹表示](../../../../translated_images/dom-tree.7daf0e763cbbba92.mo.png)
 
 > DOM 的表示及其引用的 HTML 標記。來源：[Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **理解閉包**：閉包是 JavaScript 中的重要主題，許多開發者在使用多年後才完全掌握其理論方面。今天，我們專注於實際應用——你將看到閉包在構建我們的互動功能時自然地出現。隨著你了解它如何解決實際問題，理解也會逐漸加深。
 
-![DOM 樹表示](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.mo.png)
+![DOM 樹表示](../../../../translated_images/dom-tree.7daf0e763cbbba92.mo.png)
 
 > DOM 的表示及其引用的 HTML 標記。來源：[Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ function stopElementDrag() {
 - **跨設備支援**：適用於桌面和移動設備
 - **效能意識**：無記憶體洩漏或冗餘計算
 
-![完成的微型花園](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.mo.png)
+![完成的微型花園](../../../../translated_images/terrarium-final.0920f16e87c13a84.mo.png)
 
 ---
 

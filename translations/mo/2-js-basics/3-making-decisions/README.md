@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 基礎：做出決策
 
-![JavaScript 基礎 - 做出決策](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.mo.png)
+![JavaScript 基礎 - 做出決策](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.mo.png)
 
 > Sketchnote 作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 

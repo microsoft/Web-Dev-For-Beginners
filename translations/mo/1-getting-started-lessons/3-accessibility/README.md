@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 建立無障礙網頁
 
-![關於無障礙設計](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.mo.png)
+![關於無障礙設計](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.mo.png)
 > Sketchnote 作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

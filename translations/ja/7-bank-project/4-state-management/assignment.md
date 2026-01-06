@@ -112,7 +112,7 @@ CO_OP_TRANSLATOR_METADATA:
 **期待される結果:**
 この課題を完了すると、銀行アプリには完全に機能する「取引追加」機能が備わり、プロフェッショナルな外観と動作を持つようになります：
 
-![「取引追加」ダイアログの例を示すスクリーンショット](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.ja.png)
+![「取引追加」ダイアログの例を示すスクリーンショット](../../../../translated_images/dialog.93bba104afeb79f1.ja.png)
 
 ## 実装のテスト
 

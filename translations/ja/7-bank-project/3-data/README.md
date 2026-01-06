@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![マルチページアプリケーションの更新ワークフロー](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.ja.png)
+![マルチページアプリケーションの更新ワークフロー](../../../../translated_images/mpa.7f7375a1a2d4aa77.ja.png)
 
 **このアプローチがぎこちなく感じられた理由:**
 - クリックするたびにページ全体を再構築する必要があった
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![シングルページアプリケーションの更新ワークフロー](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.ja.png)
+![シングルページアプリケーションの更新ワークフロー](../../../../translated_images/spa.268ec73b41f992c2.ja.png)
 
 **SPAがより快適に感じられる理由:**
 - 実際に変更された部分だけが更新される（賢いですよね？）
@@ -510,7 +510,7 @@ if (data.error) {
 
 無効なアカウントでテストすると、ページ上に役立つエラーメッセージが表示されるようになります！
 
-![ログイン時に表示されるエラーメッセージのスクリーンショット](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.ja.png)
+![ログイン時に表示されるエラーメッセージのスクリーンショット](../../../../translated_images/login-error.416fe019b36a6327.ja.png)
 
 #### ステップ4: アクセシビリティを考慮する
 
@@ -904,7 +904,7 @@ Agentモードを使用して以下のチャレンジを完了してください
 
 以下は、スタイリング後のダッシュボードの例のスクリーンショットです:
 
-![スタイリング後のダッシュボードの例のスクリーンショット](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.ja.png)
+![スタイリング後のダッシュボードの例のスクリーンショット](../../../../translated_images/screen2.123c82a831a1d14a.ja.png)
 
 これを完全に再現する必要はありません。インスピレーションとして使用し、自分のスタイルで仕上げてください！
 

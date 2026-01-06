@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![本地存儲面板](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.mo.png)
+![本地存儲面板](../../../../translated_images/localstorage.472f8147b6a3f8d1.mo.png)
 
 > ⚠️ **安全考量**：在生產應用中，將 API 密鑰存儲在 LocalStorage 中存在安全風險，因為 JavaScript 可以訪問這些數據。作為學習用途，這種方法是可以的，但真正的應用應該使用安全的伺服器端存儲來保存敏感憑據。
 
