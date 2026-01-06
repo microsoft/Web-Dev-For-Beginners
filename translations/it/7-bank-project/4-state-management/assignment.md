@@ -112,7 +112,7 @@ Consulta la [documentazione dell'API del server](../api/README.md) per:
 **Risultato previsto:**
 Dopo aver completato questo compito, la tua app bancaria dovrebbe avere una funzionalità "Aggiungi Transazione" completamente operativa che appare e si comporta in modo professionale:
 
-![Screenshot che mostra un esempio di finestra di dialogo "Aggiungi transazione"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.it.png)
+![Screenshot che mostra un esempio di finestra di dialogo "Aggiungi transazione"](../../../../translated_images/dialog.93bba104afeb79f1.it.png)
 
 ## Test della tua implementazione
 

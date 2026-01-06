@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Pannello di local storage](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.it.png)
+![Pannello di local storage](../../../../translated_images/localstorage.472f8147b6a3f8d1.it.png)
 
 > ⚠️ **Considerazione sulla Sicurezza**: Nelle applicazioni di produzione, memorizzare le chiavi API nella LocalStorage comporta rischi di sicurezza poiché JavaScript può accedere a questi dati. Per scopi didattici, questo approccio va bene, ma le applicazioni reali dovrebbero utilizzare archiviazione sicura lato server per credenziali sensibili.
 

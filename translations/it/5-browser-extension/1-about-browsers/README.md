@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Schizzo del browser](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.it.jpg)
+![Schizzo del browser](../../../../translated_images/browser.60317c9be8b7f84a.it.jpg)
 > Schizzo di [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz Pre-Lezione
@@ -79,7 +79,7 @@ Questo processo rispecchia il modo in cui il primo browser web, WorldWideWeb, è
 
 ✅ **Un po' di storia**: Il primo browser si chiamava 'WorldWideWeb' ed è stato creato da Sir Timothy Berners-Lee nel 1990.
 
-![primi browser](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.it.jpg)
+![primi browser](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.it.jpg)
 > Alcuni dei primi browser, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Come i Browser Elaborano i Contenuti Web
@@ -198,7 +198,7 @@ quadrantChart
 
 Comprendere il processo di installazione delle estensioni ti aiuta a prevedere l'esperienza utente quando le persone installano la tua estensione. Il processo di installazione è standardizzato nei browser moderni, con lievi variazioni nel design dell'interfaccia.
 
-![screenshot del browser Edge che mostra la pagina edge://extensions aperta e il menu delle impostazioni aperto](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.it.png)
+![screenshot del browser Edge che mostra la pagina edge://extensions aperta e il menu delle impostazioni aperto](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.it.png)
 
 > **Importante**: Assicurati di attivare la modalità sviluppatore e consentire estensioni da altri store quando testi le tue estensioni.
 
@@ -313,10 +313,10 @@ Questo segue il principio della divulgazione progressiva utilizzato nel design d
 ### Panoramica delle Visualizzazioni dell'Estensione
 
 **Vista di Configurazione** - Configurazione iniziale dell'utente:
-![screenshot dell'estensione completata aperta in un browser, che mostra un modulo con campi di input per nome della regione e chiave API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.it.png)
+![screenshot dell'estensione completata aperta in un browser, che mostra un modulo con campi di input per nome della regione e chiave API.](../../../../translated_images/1.b6da8c1394b07491.it.png)
 
 **Vista dei Risultati** - Visualizzazione dei dati sull'impronta di carbonio:
-![screenshot dell'estensione completata che mostra valori per l'uso di carbonio e la percentuale di combustibili fossili per la regione US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.it.png)
+![screenshot dell'estensione completata che mostra valori per l'uso di carbonio e la percentuale di combustibili fossili per la regione US-NEISO.](../../../../translated_images/2.1dae52ff08042246.it.png)
 
 ### Creare il Modulo di Configurazione
 

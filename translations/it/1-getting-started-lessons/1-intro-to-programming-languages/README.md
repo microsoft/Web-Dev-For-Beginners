@@ -17,7 +17,7 @@ Ascolta, capisco perfettamente se la programmazione ti sembra intimidatoria in q
 
 Oggi esploreremo gli incredibili strumenti che rendono possibile, e seriamente coinvolgente, lo sviluppo web moderno. Sto parlando degli stessi editor, browser e flussi di lavoro che gli sviluppatori di Netflix, Spotify e del tuo studio di app indie preferito usano ogni giorno. Ecco la parte che ti farà ballare dalla gioia: la maggior parte di questi strumenti professionali e standard del settore sono completamente gratuiti!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.it.png)
+![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.it.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

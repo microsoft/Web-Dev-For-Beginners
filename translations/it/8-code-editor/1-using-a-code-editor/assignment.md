@@ -78,7 +78,7 @@ Poiché VSCode.dev richiede almeno un file per aprire un repository, creeremo il
 4. **Scrivi** un messaggio di commit: "Aggiungi struttura HTML iniziale"
 5. **Clicca** su "Commit new file" per salvare le modifiche
 
-![Creazione del file iniziale su GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.it.png)
+![Creazione del file iniziale su GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.it.png)
 
 **Ecco cosa realizza questa configurazione iniziale:**
 - **Stabilisce** una corretta struttura del documento HTML5 con elementi semantici
@@ -104,7 +104,7 @@ Ora che le basi del tuo repository sono state stabilite, passiamo a VSCode.dev p
 
 ✅ **Indicatore di successo**: Dovresti vedere i file del tuo progetto nella barra laterale Explorer e `index.html` disponibile per la modifica nell'area principale dell'editor.
 
-![Progetto caricato su VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.it.png)
+![Progetto caricato su VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.it.png)
 
 **Cosa vedrai nell'interfaccia:**
 - **Barra laterale Explorer**: **Mostra** i file e la struttura delle cartelle del tuo repository
@@ -448,7 +448,7 @@ Le estensioni migliorano la tua esperienza di sviluppo fornendo funzionalità di
 **Risultati immediati dopo l'installazione:**
 Una volta installato CodeSwing, vedrai un'anteprima live del tuo sito web per il curriculum apparire nell'editor. Questo ti permette di vedere esattamente come appare il tuo sito mentre apporti modifiche.
 
-![Estensione CodeSwing che mostra l'anteprima live](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.it.png)
+![Estensione CodeSwing che mostra l'anteprima live](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.it.png)
 
 **Comprensione dell'interfaccia migliorata:**
 - **Vista divisa**: **Mostra** il tuo codice da un lato e l'anteprima live dall'altro
