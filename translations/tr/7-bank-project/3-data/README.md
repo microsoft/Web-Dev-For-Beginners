@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Çoklu sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.tr.png)
+![Çoklu sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/mpa.7f7375a1a2d4aa77.tr.png)
 
 **Bu yaklaşım neden hantal hissettiriyordu:**
 - Her tıklama tüm sayfanın baştan sona yeniden inşa edilmesi anlamına geliyordu
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Tek sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.tr.png)
+![Tek sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/spa.268ec73b41f992c2.tr.png)
 
 **SPA'lar neden daha iyi hissettiriyor:**
 - Sadece gerçekten değişen bölümler güncellenir (akıllıca, değil mi?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Şimdi geçersiz bir hesapla test ettiğinizde, sayfada yardımcı bir hata mesajı göreceksiniz!
 
-![Giriş sırasında hata mesajını gösteren ekran görüntüsü](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.tr.png)
+![Giriş sırasında hata mesajını gösteren ekran görüntüsü](../../../../translated_images/login-error.416fe019b36a6327.tr.png)
 
 #### Adım 4: Erişilebilirlik ile Kapsayıcı Olmak
 
@@ -961,7 +961,7 @@ Bankacılık uygulamanızı bir üst seviyeye taşımaya hazır mısınız? İş
 
 İşte cilalanmış bir pano böyle görünebilir:
 
-![Panonun stil eklenmiş örnek sonucu ekran görüntüsü](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.tr.png)
+![Panonun stil eklenmiş örnek sonucu ekran görüntüsü](../../../../translated_images/screen2.123c82a831a1d14a.tr.png)
 
 Bunu tam olarak eşleştirmek zorunda hissetmeyin - ilham kaynağı olarak kullanın ve kendi tarzınızı yaratın!
 

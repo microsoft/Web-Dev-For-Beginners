@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![canvas'ın ızgarası](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.tr.png)
+![canvas'ın ızgarası](../../../../translated_images/canvas_grid.5f209da785ded492.tr.png)
 > Görsel [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) üzerinden alınmıştır
 
 Canvas öğesi üzerinde çizim yapmak için, tüm canvas grafiklerinin temelini oluşturan aynı üç adımlı süreci takip edeceksiniz. Bunu birkaç kez yaptığınızda, doğal bir hale gelir:
@@ -329,11 +329,11 @@ Bir Canvas öğesi içeren bir web sayfası oluşturacaksınız. `1024*768` boyu
 
 - Kahraman gemisi
 
-   ![Kahraman gemisi](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.tr.png)
+   ![Kahraman gemisi](../../../../translated_images/player.dd24c1afa8c71e9b.tr.png)
 
 - 5*5 canavar
 
-   ![Canavar gemisi](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.tr.png)
+   ![Canavar gemisi](../../../../translated_images/enemyShip.5df2a822c16650c2.tr.png)
 
 ### Geliştirmeye Başlamak İçin Önerilen Adımlar
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Sonuç aşağıdaki gibi görünmelidir:  
 
-![Siyah ekran, bir kahraman ve 5*5 canavarlar](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.tr.png)  
+![Siyah ekran, bir kahraman ve 5*5 canavarlar](../../../../translated_images/partI-solution.36c53b48c9ffae2a.tr.png)  
 
 ## Çözüm  
 

@@ -652,7 +652,7 @@ sequenceDiagram
 
 `history.pushState` kullanımı, tarayıcının navigasyon geçmişinde yeni girişler oluşturur. Tarayıcınızın *geri düğmesini* basılı tutarak bunu kontrol edebilirsiniz, şöyle bir şey göstermesi gerekir:
 
-![Navigasyon geçmişi ekran görüntüsü](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.tr.png)
+![Navigasyon geçmişi ekran görüntüsü](../../../../translated_images/history.7fdabbafa521e064.tr.png)
 
 Geri düğmesine birkaç kez tıklamayı deneyin, URL'nin değiştiğini ve geçmişin güncellendiğini göreceksiniz, ancak aynı şablon görüntülenmeye devam eder.
 

@@ -185,7 +185,7 @@ Alexander Graham Bell'in telefonu uzak yerleri nasıl birbirine bağladıysa, Gi
 
 Her şey yüklendikten sonra, odaklanmanızı sağlayacak şekilde tasarlanmış, güzel ve temiz bir çalışma alanı göreceksiniz – kodunuza!
 
-![Varsayılan VSCode.dev arayüzü](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.tr.png)
+![Varsayılan VSCode.dev arayüzü](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.tr.png)
 
 **İşte mahallenizin turu:**
 - **Etkinlik Çubuğu** (soldaki şerit): Gezgini 📁, Aramayı 🔍, Kaynak Kontrolünü 🌿, Uzantıları 🧩 ve Ayarları ⚙️ içeren ana gezinme alanınız
@@ -233,7 +233,7 @@ Bu yöntem, VSCode.dev'de yeni başlıyorsanız ve belirli bir depoyu açmak ist
 1. [vscode.dev](https://vscode.dev) adresine gidin (henüz orada değilseniz)
 2. Karşılama ekranında "Open Remote Repository" (Uzak Depo Aç) düğmesini arayın ve tıklayın
 
-   ![Uzak depo aç](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.tr.png)
+   ![Uzak depo aç](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.tr.png)
 
 3. Herhangi bir GitHub depo URL'sini yapıştırın (bunu deneyin: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Enter tuşuna basın ve sihri izleyin!
@@ -242,7 +242,7 @@ Bu yöntem, VSCode.dev'de yeni başlıyorsanız ve belirli bir depoyu açmak ist
 
 Kendinizi bir kodlama sihirbazı gibi hissetmek ister misiniz? Şu klavye kısayolunu deneyin: Ctrl+Shift+P (veya Mac'te Cmd+Shift+P) ile Komut Paletini açın:
 
-![Komut Paleti](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.tr.png)
+![Komut Paleti](../../../../translated_images/palette-menu.4946174e07f42622.tr.png)
 
 **Komut Paleti, yapabileceğiniz her şey için bir arama motoru gibidir:**
 - "open remote" yazın ve sizin için depo açıcıyı bulacaktır
@@ -304,7 +304,7 @@ Bir mimarın ofisinde planları düzenlemesi gibi, VSCode.dev'de dosya oluşturm
 3. Uygun uzantıyı içeren dosya adını girin (`style.css`, `script.js`, `index.html`)
 4. Dosyayı oluşturmak için Enter tuşuna basın
 
-![Yeni bir dosya oluşturma](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.tr.png)
+![Yeni bir dosya oluşturma](../../../../translated_images/create-new-file.2814e609c2af9aeb.tr.png)
 
 **Adlandırma kuralları:**
 - Dosyanın amacını belirten açıklayıcı adlar kullanın
@@ -322,7 +322,7 @@ Asıl eğlence burada başlıyor! VSCode.dev'in editörü, kod yazmayı pürüzs
 2. Yazmaya başlayın ve VSCode.dev'in renkler, öneriler ve hata tespiti ile size nasıl yardımcı olduğunu izleyin
 3. Çalışmanızı Ctrl+S (Windows/Linux) veya Cmd+S (Mac) ile kaydedin – ancak otomatik kaydetme de mevcut!
 
-![VSCode.dev'de dosyaları düzenleme](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.tr.png)
+![VSCode.dev'de dosyaları düzenleme](../../../../translated_images/edit-a-file.52c0ee665ef19f08.tr.png)
 
 **Kod yazarken olan harika şeyler:**
 - Kodunuz güzelce renklendirilir, böylece okunması kolaylaşır
@@ -343,7 +343,7 @@ Arkeologların kazı katmanlarının ayrıntılı kayıtlarını oluşturması g
 2. Değiştirilen dosyalar "Değişiklikler" bölümünde görünür
 3. Renk kodlaması değişiklik türlerini belirtir: eklemeler için yeşil, silmeler için kırmızı
 
-![Kaynak Kontrolde değişiklikleri görüntüleme](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.tr.png)
+![Kaynak Kontrolde değişiklikleri görüntüleme](../../../../translated_images/working-tree.c58eec08e6335c79.tr.png)
 
 **Çalışmanızı kaydetme (commit iş akışı):**
 
@@ -437,7 +437,7 @@ Uzantı pazarı gerçekten iyi organize edilmiştir, bu yüzden ihtiyacınız ol
 2. Etrafı dolaşın veya belirli bir şey arayın  
 3. İlginç görünen bir şeye tıklayın ve daha fazla bilgi edinin  
 
-![Uzantı pazarı arayüzü](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.tr.png)  
+![Uzantı pazarı arayüzü](../../../../translated_images/extensions.eca0e0c7f59a10b5.tr.png)  
 
 **Orada görecekleriniz:**  
 
@@ -490,7 +490,7 @@ Editörünüze yeni özellikler eklemek bir düğmeye tıklamak kadar basittir. 
 3. Açılır menüden "Uzantı Ayarları"nı seçin  
 4. İş akışınıza tam uyacak şekilde ayarları düzenleyin  
 
-![Uzantı ayarlarını özelleştirme](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.tr.png)  
+![Uzantı ayarlarını özelleştirme](../../../../translated_images/extension-settings.21c752ae4f4cdb78.tr.png)  
 
 **Düzenlemek isteyebileceğiniz yaygın şeyler:**  
 - Kodunuzun nasıl biçimlendirileceği (sekme mi boşluk mu, satır uzunluğu vb.)  
