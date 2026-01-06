@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud-এ Common Cartridge সমর্থন সীমিত। উপরের Moodle ফাইলটি পছন্দ করুন, যা Canvas-এও আপলোড করা যেতে পারে।
   - আমদানির পরে, আপনার টার্ম শিডিউলের সাথে মডিউল, ডিউ তারিখ এবং কুইজ সেটিংস পর্যালোচনা করুন।
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.bn.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.bn.png)
 > Moodle ক্লাসরুমে পাঠ্যক্রম
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.bn.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.bn.png)
 > Canvas-এ পাঠ্যক্রম
 
 ### সরাসরি রিপোজিটরি ব্যবহার করুন (ক্লাসরুম ছাড়া)
