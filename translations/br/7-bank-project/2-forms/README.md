@@ -295,7 +295,7 @@ Primeiro, vamos observar o que acontece com o envio básico de formulários:
 2. Observe as mudanças na barra de endereço do navegador
 3. Note como a página recarrega e os dados aparecem na URL
 
-![Captura de tela da mudança de URL do navegador após clicar no botão Registrar](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.br.png)
+![Captura de tela da mudança de URL do navegador após clicar no botão Registrar](../../../../translated_images/click-register.e89a30bf0d4bc9ca.br.png)
 
 ### Comparação de Métodos HTTP
 
@@ -350,7 +350,7 @@ Vamos configurar seu formulário de registro para se comunicar corretamente com 
 2. **Clique** no botão "Criar Conta"
 3. **Observe** a resposta do servidor no seu navegador
 
-![Uma janela do navegador no endereço localhost:5000/api/accounts, mostrando uma string JSON com dados do usuário](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.br.png)
+![Uma janela do navegador no endereço localhost:5000/api/accounts, mostrando uma string JSON com dados do usuário](../../../../translated_images/form-post.61de4ca1b964d91a.br.png)
 
 **O que você deve ver:**
 - **Redirecionamento do navegador** para a URL do endpoint da API
@@ -615,7 +615,7 @@ async function register() {
 3. **Clique** em "Criar Conta"
 4. **Observe** as mensagens do console e o feedback ao usuário
 
-![Captura de tela mostrando mensagem de log no console do navegador](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.br.png)
+![Captura de tela mostrando mensagem de log no console do navegador](../../../../translated_images/browser-console.efaf0b51aaaf6778.br.png)
 
 **O que você deve ver:**
 - **Estado de carregamento** aparece no botão de envio
@@ -790,7 +790,7 @@ Vamos aprimorar seu formulário de registro com validação robusta que oferece 
 3. **Tente** caracteres especiais no campo de nome de usuário
 4. **Insira** um valor de saldo negativo
 
-![Captura de tela mostrando o erro de validação ao tentar enviar o formulário](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.br.png)
+![Captura de tela mostrando o erro de validação ao tentar enviar o formulário](../../../../translated_images/validation-error.8bd23e98d416c22f.br.png)
 
 **O que você observará:**
 - **O navegador exibe** mensagens de validação nativas
@@ -952,7 +952,7 @@ Mostre uma mensagem de erro no HTML se o usuário já existir.
 
 Aqui está um exemplo de como a página de login final pode ficar após um pouco de estilização:
 
-![Captura de tela da página de login após adicionar estilos CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.br.png)
+![Captura de tela da página de login após adicionar estilos CSS](../../../../translated_images/result.96ef01f607bf856a.br.png)
 
 ## Quiz Pós-Aula
 

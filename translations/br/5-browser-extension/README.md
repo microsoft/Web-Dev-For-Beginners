@@ -23,7 +23,7 @@ Essa extensão pode ser chamada sob demanda por um usuário, uma vez que uma cha
 
 ### Créditos
 
-![uma extensão de navegador verde](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.br.png)
+![uma extensão de navegador verde](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.br.png)
 
 ## Créditos
 

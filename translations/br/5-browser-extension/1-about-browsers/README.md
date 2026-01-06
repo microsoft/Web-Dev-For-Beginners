@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Esboço de navegador](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.br.jpg)
+![Esboço de navegador](../../../../translated_images/browser.60317c9be8b7f84a.br.jpg)
 > Esboço por [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz Pré-Aula
@@ -79,7 +79,7 @@ Esse processo reflete como o primeiro navegador web, WorldWideWeb, foi projetado
 
 ✅ **Um pouco de história**: O primeiro navegador foi chamado 'WorldWideWeb' e foi criado por Sir Timothy Berners-Lee em 1990.
 
-![navegadores antigos](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.br.jpg)
+![navegadores antigos](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.br.jpg)
 > Alguns navegadores antigos, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Como os Navegadores Processam Conteúdo Web
@@ -198,7 +198,7 @@ quadrantChart
 
 Entender o processo de instalação de extensões ajuda você a antecipar a experiência do usuário ao instalar sua extensão. O processo de instalação é padronizado nos navegadores modernos, com pequenas variações no design da interface.
 
-![captura de tela do navegador Edge mostrando a página edge://extensions aberta e o menu de configurações aberto](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.br.png)
+![captura de tela do navegador Edge mostrando a página edge://extensions aberta e o menu de configurações aberto](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.br.png)
 
 > **Importante**: Certifique-se de ativar o modo desenvolvedor e permitir extensões de outras lojas ao testar suas próprias extensões.
 
@@ -313,10 +313,10 @@ Isso segue o princípio de divulgação progressiva usado no design de interface
 ### Visão Geral das Telas da Extensão
 
 **Tela de Configuração** - Configuração inicial do usuário:
-![captura de tela da extensão concluída aberta em um navegador, exibindo um formulário com campos para nome da região e chave de API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.br.png)
+![captura de tela da extensão concluída aberta em um navegador, exibindo um formulário com campos para nome da região e chave de API.](../../../../translated_images/1.b6da8c1394b07491.br.png)
 
 **Tela de Resultados** - Exibição de dados de pegada de carbono:
-![captura de tela da extensão concluída exibindo valores de uso de carbono e porcentagem de combustíveis fósseis para a região US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.br.png)
+![captura de tela da extensão concluída exibindo valores de uso de carbono e porcentagem de combustíveis fósseis para a região US-NEISO.](../../../../translated_images/2.1dae52ff08042246.br.png)
 
 ### Construindo o Formulário de Configuração
 

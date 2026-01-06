@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Introdução ao HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.br.png)
+![Introdução ao HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.br.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, ou Linguagem de Marcação de Hipertexto, é a base de todos os sites que você já visitou. Pense no HTML como o esqueleto que dá estrutura às páginas da web – ele define onde o conteúdo vai, como está organizado e o que cada parte representa. Enquanto o CSS mais tarde "vestirá" seu HTML com cores e layouts, e o JavaScript dará vida com interatividade, o HTML fornece a estrutura essencial que torna tudo isso possível.
@@ -88,7 +88,7 @@ Você criará uma pasta dedicada para seu projeto de terrário e adicionará seu
 4. No painel Explorer, clique no ícone "Novo Arquivo"
 5. Nomeie seu arquivo como `index.html`
 
-![Explorador do VS Code mostrando a criação de novo arquivo](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.br.png)
+![Explorador do VS Code mostrando a criação de novo arquivo](../../../../translated_images/vs-code-index.e2986cf919471eb9.br.png)
 
 **Opção 2: Usando Comandos no Terminal**
 ```bash
