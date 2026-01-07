@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud има ограничену подршку за Common Cartridge. Преферирајте горњу Moodle датотеку, која се такође може учитати у Canvas.
   - Након увоза, прегледајте модуле, датуме предаје и подешавања квизова како би одговарали вашем распореду термина.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.sr.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.sr.png)
 > Наставни план у Moodle учионици
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.sr.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.sr.png)
 > Наставни план у Canvas-у
 
 ### Коришћење репозиторијума директно (без Classroom-а)
