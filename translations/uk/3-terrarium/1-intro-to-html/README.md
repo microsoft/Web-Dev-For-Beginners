@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Вступ до HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.uk.png)
+![Вступ до HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.uk.png)
 > Скетчноут від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, або HyperText Markup Language, є основою кожного вебсайту, який ви коли-небудь відвідували. Уявіть HTML як скелет, який надає структуру вебсторінкам – він визначає, де розміщується контент, як він організований і що кожен елемент представляє. Хоча CSS пізніше "одягне" ваш HTML кольорами та макетами, а JavaScript оживить його інтерактивністю, HTML забезпечує основну структуру, яка робить усе інше можливим.
@@ -88,7 +88,7 @@ mindmap
 4. У панелі Explorer натисніть на іконку "New File"
 5. Назвіть ваш файл `index.html`
 
-![Explorer VS Code, що показує створення нового файлу](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.uk.png)
+![Explorer VS Code, що показує створення нового файлу](../../../../translated_images/vs-code-index.e2986cf919471eb9.uk.png)
 
 **Варіант 2: Використання команд терміналу**
 ```bash
