@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Ghi chú hình ảnh về trình duyệt](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.vi.jpg)
+![Ghi chú hình ảnh về trình duyệt](../../../../translated_images/browser.60317c9be8b7f84a.vi.jpg)
 > Ghi chú hình ảnh bởi [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Câu hỏi trước bài giảng
@@ -79,7 +79,7 @@ Quá trình này giống như cách trình duyệt web đầu tiên, WorldWideWe
 
 ✅ **Một chút lịch sử**: Trình duyệt đầu tiên được gọi là 'WorldWideWeb' và được tạo ra bởi Sir Timothy Berners-Lee vào năm 1990.
 
-![trình duyệt đầu tiên](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.vi.jpg)
+![trình duyệt đầu tiên](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.vi.jpg)
 > Một số trình duyệt đầu tiên, qua [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Cách Trình duyệt Xử lý Nội dung Web
@@ -198,7 +198,7 @@ quadrantChart
 
 Hiểu quy trình cài đặt tiện ích mở rộng giúp bạn dự đoán trải nghiệm người dùng khi họ cài đặt tiện ích mở rộng của bạn. Quy trình cài đặt được chuẩn hóa trên các trình duyệt hiện đại, với những biến thể nhỏ trong thiết kế giao diện.
 
-![ảnh chụp màn hình trình duyệt Edge hiển thị trang edge://extensions mở và menu cài đặt mở](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.vi.png)
+![ảnh chụp màn hình trình duyệt Edge hiển thị trang edge://extensions mở và menu cài đặt mở](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.vi.png)
 
 > **Quan trọng**: Đảm bảo bật chế độ nhà phát triển và cho phép tiện ích mở rộng từ các cửa hàng khác khi thử nghiệm tiện ích mở rộng của riêng bạn.
 
@@ -313,10 +313,10 @@ Bây giờ chúng ta sẽ xây dựng các thành phần giao diện người d�
 ### Tổng quan về Giao diện Tiện ích Mở rộng
 
 **Màn hình Cấu hình** - Cấu hình người dùng lần đầu:
-![ảnh chụp màn hình tiện ích mở rộng hoàn chỉnh mở trong trình duyệt, hiển thị một biểu mẫu với các trường nhập cho tên vùng và khóa API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.vi.png)
+![ảnh chụp màn hình tiện ích mở rộng hoàn chỉnh mở trong trình duyệt, hiển thị một biểu mẫu với các trường nhập cho tên vùng và khóa API.](../../../../translated_images/1.b6da8c1394b07491.vi.png)
 
 **Màn hình Kết quả** - Hiển thị dữ liệu dấu chân carbon:
-![ảnh chụp màn hình tiện ích mở rộng hoàn chỉnh hiển thị các giá trị về sử dụng carbon và tỷ lệ nhiên liệu hóa thạch cho vùng US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.vi.png)
+![ảnh chụp màn hình tiện ích mở rộng hoàn chỉnh hiển thị các giá trị về sử dụng carbon và tỷ lệ nhiên liệu hóa thạch cho vùng US-NEISO.](../../../../translated_images/2.1dae52ff08042246.vi.png)
 
 ### Xây dựng Biểu mẫu Cấu hình
 

@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM và một closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.vi.png)
+![DOM và một closure](../../../../translated_images/webdev101-js.10280393044d7eaa.vi.png)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Chào mừng bạn đến với một trong những khía cạnh thú vị nhất của phát triển web - làm cho mọi thứ trở nên tương tác! Mô hình Đối tượng Tài liệu (DOM) giống như một cây cầu giữa HTML và JavaScript của bạn, và hôm nay chúng ta sẽ sử dụng nó để làm cho terrarium của bạn sống động. Khi Tim Berners-Lee tạo ra trình duyệt web đầu tiên, ông đã hình dung một web nơi các tài liệu có thể động và tương tác - DOM làm cho tầm nhìn đó trở thành hiện thực.
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![Biểu diễn cây DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.vi.png)
+![Biểu diễn cây DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.vi.png)
 
 > Một biểu diễn của DOM và mã HTML tham chiếu nó. Từ [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **Hiểu về Closures**: Closures là một chủ đề quan trọng trong JavaScript, và nhiều nhà phát triển sử dụng chúng trong nhiều năm trước khi hiểu đầy đủ tất cả các khía cạnh lý thuyết. Hôm nay, chúng ta tập trung vào ứng dụng thực tế - bạn sẽ thấy closures xuất hiện tự nhiên khi chúng ta xây dựng các tính năng tương tác. Hiểu biết sẽ phát triển khi bạn thấy cách chúng giải quyết các vấn đề thực tế.
 
-![Biểu diễn cây DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.vi.png)
+![Biểu diễn cây DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.vi.png)
 
 > Một biểu diễn của DOM và mã HTML tham chiếu nó. Từ [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ Bây giờ hãy kiểm tra terrarium tương tác của bạn! Mở tệp `index
 - **Hỗ trợ đa thiết bị**: Hoạt động trên máy tính và di động
 - **Ý thức về hiệu suất**: Không có rò rỉ bộ nhớ hay tính toán dư thừa
 
-![terrarium hoàn chỉnh](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.vi.png)
+![terrarium hoàn chỉnh](../../../../translated_images/terrarium-final.0920f16e87c13a84.vi.png)
 
 ---
 

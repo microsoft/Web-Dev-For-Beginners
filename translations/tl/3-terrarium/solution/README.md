@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Isang maliit na drag and drop na code-meditation. Sa kaunting HTML, JS, at CSS, maaari kang gumawa ng web interface, i-style ito, at magdagdag ng interaksyon.
 
-![ang aking terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.tl.png)
+![ang aking terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.tl.png)
 
 ## Mga Kredito
 

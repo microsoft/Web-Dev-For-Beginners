@@ -112,7 +112,7 @@ Tingnan ang [server API documentation](../api/README.md) para sa:
 **Inaasahang Resulta:**
 Pagkatapos makumpleto ang assignment na ito, ang iyong banking app ay dapat magkaroon ng ganap na functional na "Magdagdag ng Transaksyon" na tampok na mukhang propesyonal at maayos ang pagganap:
 
-![Screenshot na nagpapakita ng halimbawa ng "Magdagdag ng Transaksyon" na dialog](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.tl.png)
+![Screenshot na nagpapakita ng halimbawa ng "Magdagdag ng Transaksyon" na dialog](../../../../translated_images/dialog.93bba104afeb79f1.tl.png)
 
 ## Pagsubok ng Iyong Pagpapatupad
 

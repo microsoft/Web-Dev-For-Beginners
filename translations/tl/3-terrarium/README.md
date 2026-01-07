@@ -1,45 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7965cd2bc5dc92ad888dc4c6ab2ab70a",
-  "translation_date": "2025-08-27T22:56:05+00:00",
+  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
+  "translation_date": "2026-01-07T01:13:58+00:00",
   "source_file": "3-terrarium/README.md",
   "language_code": "tl"
 }
 -->
-# Ang Aking Terrarium: Isang proyekto para matutunan ang HTML, CSS, at DOM manipulation gamit ang JavaScript 🌵🌱
+## I-deploy ang iyong Terrarium
 
-Isang maliit na drag and drop code-meditation. Sa kaunting HTML, JS, at CSS, magagawa mong bumuo ng web interface, i-style ito, at magdagdag ng iba't ibang interaksyon ayon sa iyong kagustuhan.
-
-![ang aking terrarium](../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.tl.png)
-
-# Mga Aralin
-
-1. [Panimula sa HTML](./1-intro-to-html/README.md)
-2. [Panimula sa CSS](./2-intro-to-css/README.md)
-3. [Panimula sa DOM at JS Closures](./3-intro-to-DOM-and-closures/README.md)
-
-## Mga Kredito
-
-Isinulat nang may ♥️ ni [Jen Looper](https://www.twitter.com/jenlooper)
-
-Ang terrarium na ginawa gamit ang CSS ay inspirasyon mula sa glass jar ni Jakub Mandra sa [codepen](https://codepen.io/Rotarepmi/pen/rjpNZY).
-
-Ang mga likhang sining ay mano-manong iginuhit ni [Jen Looper](http://jenlooper.com) gamit ang tulong ng Procreate.
-
-## I-deploy ang Iyong Terrarium
-
-Maaari mong i-deploy, o i-publish ang iyong terrarium sa web gamit ang Azure Static Web Apps.
+Maaari mong i-deploy, o i-publish ang iyong Terrarium sa web gamit ang **Azure Static Web Apps**.
 
 1. I-fork ang repo na ito
 
-2. Pindutin ang button na ito
+2. Pindutin ang button na ito 👇  
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp)
 
-3. Sundan ang wizard para sa paglikha ng iyong app. Siguraduhing itakda ang app root sa `/solution` o sa root ng iyong codebase. Walang API sa app na ito, kaya huwag mag-alala tungkol sa pagdaragdag nito. Isang github folder ang malilikha sa iyong forked repository na makakatulong sa Azure Static Web Apps' build services upang i-build at i-publish ang iyong app sa isang bagong URL.
+3. Sundin ang setup wizard upang likhain ang iyong app.  
+   - Itakda ang **App root** sa alinman sa `/solution` o ang root ng iyong codebase.  
+   - Walang API sa app na ito, kaya maaari mong laktawan ang API configuration.  
+   - Isang `.github` folder ang awtomatikong lilikhain upang tulungan ang Azure Static Web Apps na itayo at i-publish ang iyong app.
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pahayag ng Pagsuway**:
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat aming nilalayon ang pagiging tumpak, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o kamalian. Ang orihinal na dokumento sa kanyang sariling wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

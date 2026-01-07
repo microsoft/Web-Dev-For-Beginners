@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mga Pangunahing Kaalaman sa JavaScript: Mga Uri ng Data
 
-![Mga Pangunahing Kaalaman sa JavaScript - Mga Uri ng Data](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.tl.png)
+![Mga Pangunahing Kaalaman sa JavaScript - Mga Uri ng Data](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.tl.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

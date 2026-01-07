@@ -34,7 +34,7 @@ Việc hiển thị trực quan rất quan trọng - hiển thị biểu tượn
 Bây giờ chúng ta sẽ triển khai các hệ thống phản hồi cốt lõi để giữ người chơi tham gia:
 
 - **Hệ thống điểm số**: Mỗi tàu địch bị tiêu diệt sẽ thưởng 100 điểm (số tròn dễ tính toán hơn cho người chơi). Điểm số sẽ hiển thị ở góc dưới bên trái.
-- **Bộ đếm mạng sống**: Nhân vật chính của bạn bắt đầu với ba mạng sống - một tiêu chuẩn được thiết lập bởi các trò chơi arcade đầu tiên để cân bằng giữa thử thách và khả năng chơi. Mỗi lần va chạm với kẻ địch sẽ mất một mạng sống. Chúng ta sẽ hiển thị số mạng sống còn lại ở góc dưới bên phải bằng biểu tượng tàu ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.vi.png).
+- **Bộ đếm mạng sống**: Nhân vật chính của bạn bắt đầu với ba mạng sống - một tiêu chuẩn được thiết lập bởi các trò chơi arcade đầu tiên để cân bằng giữa thử thách và khả năng chơi. Mỗi lần va chạm với kẻ địch sẽ mất một mạng sống. Chúng ta sẽ hiển thị số mạng sống còn lại ở góc dưới bên phải bằng biểu tượng tàu ![life image](../../../../translated_images/life.6fb9f50d53ee0413.vi.png).
 
 ## Bắt đầu xây dựng!
 

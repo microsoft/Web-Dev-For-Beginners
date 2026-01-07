@@ -190,7 +190,7 @@ Giống như thiết kế ngăn cách của Titanic tưởng chừng như mạnh
 
 Thay vì chạy vòng quanh, chúng ta sẽ tạo một hệ thống **quản lý trạng thái tập trung**. Hãy nghĩ về nó như có một người thực sự tổ chức chịu trách nhiệm về tất cả những thứ quan trọng:
 
-![Sơ đồ hiển thị luồng dữ liệu giữa HTML, hành động người dùng và trạng thái](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.vi.png)
+![Sơ đồ hiển thị luồng dữ liệu giữa HTML, hành động người dùng và trạng thái](../../../../translated_images/data-flow.fa2354e0908fecc8.vi.png)
 
 ```mermaid
 flowchart TD
@@ -803,7 +803,7 @@ Thử thách này sẽ giúp bạn suy nghĩ như một nhà phát triển chuy�
 
 Dưới đây là kết quả ví dụ sau khi hoàn thành bài tập:
 
-![Ảnh chụp màn hình hiển thị hộp thoại "Thêm giao dịch" ví dụ](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.vi.png)
+![Ảnh chụp màn hình hiển thị hộp thoại "Thêm giao dịch" ví dụ](../../../../translated_images/dialog.93bba104afeb79f1.vi.png)
 
 ---
 

@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.tl.jpg)
+![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.tl.jpg)
 > Sketchnote ni [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
@@ -79,7 +79,7 @@ Ang prosesong ito ay sumasalamin sa disenyo ng unang web browser, ang WorldWideW
 
 ✅ **Kaunting Kasaysayan**: Ang unang browser ay tinawag na 'WorldWideWeb' at nilikha ni Sir Timothy Berners-Lee noong 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.tl.jpg)
+![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.tl.jpg)
 > Ilang maagang browser, mula kay [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Paano Pinoproseso ng Mga Browser ang Web Content
@@ -198,7 +198,7 @@ quadrantChart
 
 Ang pag-unawa sa proseso ng pag-install ng extension ay tumutulong sa iyo na ma-anticipate ang karanasan ng user kapag ini-install nila ang iyong extension. Ang proseso ng pag-install ay standardized sa mga modernong browser, na may kaunting pagkakaiba sa disenyo ng interface.
 
-![screenshot ng Edge browser na nagpapakita ng bukas na edge://extensions page at bukas na settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.tl.png)
+![screenshot ng Edge browser na nagpapakita ng bukas na edge://extensions page at bukas na settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.tl.png)
 
 > **Mahalaga**: Siguraduhing i-toggle ang developer mode at payagan ang mga extension mula sa ibang mga tindahan kapag sinusubukan ang iyong sariling mga extension.
 
@@ -313,10 +313,10 @@ Ito ay sumusunod sa prinsipyo ng progressive disclosure na ginagamit sa disenyo 
 ### Overview ng Extension Views
 
 **Setup View** - Paunang configuration ng user:
-![screenshot ng tapos na extension na bukas sa browser, nagpapakita ng form na may mga input para sa pangalan ng rehiyon at API key.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.tl.png)
+![screenshot ng tapos na extension na bukas sa browser, nagpapakita ng form na may mga input para sa pangalan ng rehiyon at API key.](../../../../translated_images/1.b6da8c1394b07491.tl.png)
 
 **Results View** - Pagpapakita ng data ng carbon footprint:
-![screenshot ng tapos na extension na nagpapakita ng mga halaga para sa carbon usage at fossil fuel percentage para sa rehiyong US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.tl.png)
+![screenshot ng tapos na extension na nagpapakita ng mga halaga para sa carbon usage at fossil fuel percentage para sa rehiyong US-NEISO.](../../../../translated_images/2.1dae52ff08042246.tl.png)
 
 ### Pagbuo ng Configuration Form
 

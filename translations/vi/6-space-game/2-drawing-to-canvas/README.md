@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![lưới của canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.vi.png)
+![lưới của canvas](../../../../translated_images/canvas_grid.5f209da785ded492.vi.png)
 > Hình ảnh từ [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Để vẽ trên phần tử canvas, bạn sẽ làm theo quy trình ba bước giống nhau, tạo nền tảng cho tất cả đồ họa canvas. Một khi bạn làm điều này vài lần, nó sẽ trở thành bản năng:
@@ -329,11 +329,11 @@ Bạn sẽ xây dựng một trang web với một phần tử Canvas. Nó sẽ 
 
 - Tàu nhân vật chính
 
-   ![Tàu nhân vật chính](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.vi.png)
+   ![Tàu nhân vật chính](../../../../translated_images/player.dd24c1afa8c71e9b.vi.png)
 
 - 5*5 quái vật
 
-   ![Tàu quái vật](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.vi.png)
+   ![Tàu quái vật](../../../../translated_images/enemyShip.5df2a822c16650c2.vi.png)
 
 ### Các bước được khuyến nghị để bắt đầu phát triển
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Kết quả hoàn chỉnh sẽ trông như sau:  
 
-![Màn hình đen với một nhân vật chính và 5*5 quái vật](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.vi.png)  
+![Màn hình đen với một nhân vật chính và 5*5 quái vật](../../../../translated_images/partI-solution.36c53b48c9ffae2a.vi.png)  
 
 ## Giải pháp  
 

@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Bảng bộ nhớ cục bộ](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.vi.png)
+![Bảng bộ nhớ cục bộ](../../../../translated_images/localstorage.472f8147b6a3f8d1.vi.png)
 
 > ⚠️ **Cân nhắc về bảo mật**: Trong các ứng dụng sản xuất, việc lưu trữ khóa API trong LocalStorage gây rủi ro bảo mật vì JavaScript có thể truy cập dữ liệu này. Đối với mục đích học tập, cách tiếp cận này hoạt động tốt, nhưng các ứng dụng thực tế nên sử dụng lưu trữ phía máy chủ an toàn cho thông tin đăng nhập nhạy cảm.
 
