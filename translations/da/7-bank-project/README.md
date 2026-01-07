@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 I dette projekt lærer du, hvordan du bygger en fiktiv bank. Disse lektioner inkluderer instruktioner om, hvordan du opbygger en webapp med layout og ruter, bygger formularer, håndterer tilstand og henter data fra en API, hvorfra du kan hente bankens data.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.da.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.da.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.da.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.da.png) |
 |--------------------------------|--------------------------------|
 
 ## Lektioner

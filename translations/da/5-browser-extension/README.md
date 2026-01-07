@@ -23,7 +23,7 @@ Denne udvidelse kan bruges ad hoc af en bruger, når en API-nøgle og regionskod
 
 ### Krediteringer
 
-![en grøn browserudvidelse](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.da.png)
+![en grøn browserudvidelse](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.da.png)
 
 ## Krediteringer
 

@@ -1,66 +1,111 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-23T22:07:43+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2026-01-06T23:48:27+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "da"
 }
 -->
-# Byg en bankapp del 2: Opret en login- og registreringsformular
+# Byg en Bank-app Del 2: Byg en Login- og Registreringsformular
 
-## Quiz før lektionen
+```mermaid
+journey
+    title Din Formularudviklingsrejse
+    section HTML Grundlag
+      Forstå formelementer: 3: Student
+      Lær inputtyper: 4: Student
+      Mestring af tilgængelighed: 4: Student
+    section JavaScript Integration
+      Håndter formularindsendelse: 4: Student
+      Implementer AJAX-kommunikation: 5: Student
+      Behandle serverresponser: 5: Student
+    section Valideringssystemer
+      Opret flerlaget validering: 5: Student
+      Forbedr brugeroplevelsen: 5: Student
+      Sikr dataintegritet: 5: Student
+```
+## For-forelæsning Quiz
 
-[Quiz før lektionen](https://ff-quizzes.netlify.app/web/quiz/43)
+[For-forelæsning quiz](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Har du nogensinde udfyldt en formular online og fået afvist din e-mailadresse? Eller mistet alle dine oplysninger, da du trykkede på "send"? Vi har alle oplevet disse frustrerende situationer.
+Har du nogensinde udfyldt en formular online, og fået den til at afvise dit e-mailformat? Eller mistet alle dine oplysninger, da du trykkede på send? Vi har alle oplevet disse frustrerende situationer.
 
-Formularer er broen mellem dine brugere og din applikations funktionalitet. Ligesom de omhyggelige protokoller, som flyveledere bruger til at guide fly sikkert til deres destinationer, giver veludformede formularer klar feedback og forhindrer dyre fejl. Dårlige formularer kan derimod skræmme brugere væk hurtigere end en misforståelse i en travl lufthavn.
+Formularer er broen mellem dine brugere og din applikations funktionalitet. Ligesom de omhyggelige protokoller, som flyvekontrollører bruger til sikkert at styre fly til deres destinationer, giver veldesignede formularer klar feedback og forhindrer dyre fejl. Dårlige formularer kan derimod drive brugere væk hurtigere end en misforståelse i en travl lufthavn.
 
-I denne lektion vil vi forvandle din statiske bankapp til en interaktiv applikation. Du vil lære at oprette formularer, der validerer brugerinput, kommunikerer med servere og giver nyttig feedback. Tænk på det som at bygge kontrolgrænsefladen, der lader brugerne navigere i din applikations funktioner.
+I denne lektion vil vi transformere din statiske bank-app til en interaktiv applikation. Du vil lære at bygge formularer, der validerer brugerinput, kommunikerer med servere og giver nyttig feedback. Tænk på det som at bygge kontrolgrænsefladen, der lader brugerne navigere i din applikations funktioner.
 
-Når vi er færdige, vil du have et komplet login- og registreringssystem med validering, der guider brugerne mod succes frem for frustration.
+Ved slutningen vil du have et komplet login- og registreringssystem med validering, der guider brugere mod succes i stedet for frustration.
 
+```mermaid
+mindmap
+  root((Formudvikling))
+    HTML Fundament
+      Semantiske Elementer
+      Inputtyper
+      Tilgængelighed
+      Label-association
+    Brugeroplevelse
+      Valideringsfeedback
+      Fejlforebyggelse
+      Indlæsningsstatus
+      Succesmeddelelser
+    JavaScript Integration
+      Eventhåndtering
+      AJAX Kommunikation
+      Databehandling
+      Fejlhåndtering
+    Valideringslag
+      HTML5 Validering
+      Klientside-logik
+      Serverside-sikkerhed
+      Progressiv Forbedring
+    Moderne Mønstre
+      Fetch API
+      Async/Await
+      Form Data API
+      Promise-håndtering
+```
 ## Forudsætninger
 
-Før vi begynder at bygge formularer, skal vi sikre os, at du har alt sat korrekt op. Denne lektion fortsætter lige der, hvor vi slap i den forrige, så hvis du sprang frem, vil du måske gå tilbage og få det grundlæggende på plads først.
+Før vi starter med at bygge formularer, lad os sikre os, at du har alt sat op korrekt. Denne lektion tager fat præcis hvor vi slap i den foregående, så hvis du er sprunget frem, vil du måske gå tilbage og få det grundlæggende til at fungere først.
 
-### Nødvendig opsætning
+### Nødvendig Opsætning
 
 | Komponent | Status | Beskrivelse |
 |-----------|--------|-------------|
-| [HTML-skabeloner](../1-template-route/README.md) | ✅ Påkrævet | Din grundlæggende bankapp-struktur |
-| [Node.js](https://nodejs.org) | ✅ Påkrævet | JavaScript runtime til serveren |
-| [Bank API-server](../api/README.md) | ✅ Påkrævet | Backend-tjeneste til datalagring |
+| [HTML Skabeloner](../1-template-route/README.md) | ✅ Nødvendig | Din grundlæggende bank-app struktur |
+| [Node.js](https://nodejs.org) | ✅ Nødvendig | JavaScript runtime til serveren |
+| [Bank API Server](../api/README.md) | ✅ Nødvendig | Backend service til datalagring |
 
-> 💡 **Udviklingstip**: Du vil køre to separate servere samtidig – en til din front-end bankapp og en anden til backend-API'en. Denne opsætning afspejler den virkelige verden, hvor frontend- og backend-tjenester fungerer uafhængigt.
+> 💡 **Udviklingstip**: Du vil køre to separate servere samtidigt – en til din frontend bank-app og en anden til backend API’en. Denne opsætning afspejler den virkelige udvikling, hvor frontend- og backend-tjenester opererer uafhængigt.
 
 ### Serverkonfiguration
 
 **Dit udviklingsmiljø vil inkludere:**
-- **Frontend-server**: Serverer din bankapp (typisk port `3000`)
-- **Backend API-server**: Håndterer datalagring og -hentning (port `5000`)
+- **Frontend server**: Leverer din bank-app (typisk port `3000`)
+- **Backend API server**: Håndterer datalagring og hentning (port `5000`)
 - **Begge servere** kan køre samtidig uden konflikter
 
 **Test din API-forbindelse:**
 ```bash
 curl http://localhost:5000/api
-# Expected response: "Bank API v1.0.0"
+# Forventet svar: "Bank API v1.0.0"
 ```
 
-**Hvis du ser API-versionens svar, er du klar til at fortsætte!**
+**Hvis du ser API versions svaret, er du klar til at fortsætte!**
 
 ---
 
-## Forstå HTML-formularer og kontroller
+## Forståelse af HTML Formularer og Kontroller
 
-HTML-formularer er måden, hvorpå brugere kommunikerer med din webapplikation. Tænk på dem som telegrafsystemet, der forbandt fjerne steder i det 19. århundrede – de er kommunikationsprotokollen mellem brugerens intention og applikationens respons. Når de er designet med omtanke, fanger de fejl, guider inputformatet og giver nyttige forslag.
+HTML-formularer er, hvordan brugere kommunikerer med din webapplikation. Tænk på dem som telegrafsystemet, der forbinder fjerne steder i 1800-tallet – de er kommunikationsprotokollen mellem brugerens hensigt og applikationens svar. Når de designes med omhu, fanger de fejl, guider inputformatering og giver nyttige forslag.
 
-Moderne formularer er betydeligt mere sofistikerede end grundlæggende tekstinput. HTML5 introducerede specialiserede inputtyper, der automatisk håndterer e-mailvalidering, nummerformattering og datovalg. Disse forbedringer gavner både tilgængelighed og mobilbrugeroplevelser.
+Moderne formularer er betydeligt mere sofistikerede end basale tekstfelter. HTML5 introducerede specialiserede inputtyper, der automatisk håndterer e-mailvalidering, talformat og datovalg. Disse forbedringer gavner både tilgængelighed og mobilbrugers oplevelse.
 
-### Vigtige form-elementer
+### Væsentlige Formelementer
 
-**Byggesten, som enhver formular har brug for:**
+**Byggeklodser, som alle formularer behøver:**
 
 ```html
 <!-- Basic form structure -->
@@ -72,25 +117,25 @@ Moderne formularer er betydeligt mere sofistikerede end grundlæggende tekstinpu
 </form>
 ```
 
-**Dette kode gør følgende:**
-- **Opretter** en formularcontainer med en unik identifikator
-- **Angiver** HTTP-metoden til datasendelse
-- **Associerer** labels med input for tilgængelighed
+**Dette er, hvad koden gør:**
+- **Opretter** en formular-beholder med en unik identifikator
+- **Angiver** HTTP-metoden til datainput
+- **Associerer** labels med inputs for tilgængelighed
 - **Definerer** en send-knap til at behandle formularen
 
-### Moderne inputtyper og attributter
+### Moderne Inputtyper og Attributter
 
-| Inputtype | Formål | Eksempel på brug |
-|-----------|--------|------------------|
+| Inputtype | Formål | Eksempel |
+|------------|---------|---------------|
 | `text` | Generelt tekstinput | `<input type="text" name="username">` |
-| `email` | E-mailvalidering | `<input type="email" name="email">` |
+| `email` | E-mail validering | `<input type="email" name="email">` |
 | `password` | Skjult tekstindtastning | `<input type="password" name="password">` |
 | `number` | Numerisk input | `<input type="number" name="balance" min="0">` |
 | `tel` | Telefonnummer | `<input type="tel" name="phone">` |
 
-> 💡 **Fordel ved moderne HTML5**: Brug af specifikke inputtyper giver automatisk validering, passende mobil-tastaturer og bedre tilgængelighed uden ekstra JavaScript!
+> 💡 **Moderne HTML5 Fordel**: Ved at bruge specifikke inputtyper får du automatisk validering, passende mobiltastaturer og bedre tilgængelighed uden ekstra JavaScript!
 
-### Knaptyper og adfærd
+### Knap-typer og Adfærd
 
 ```html
 <!-- Different button behaviors -->
@@ -99,16 +144,16 @@ Moderne formularer er betydeligt mere sofistikerede end grundlæggende tekstinpu
 <button type="button">Custom Action</button> <!-- No default behavior -->
 ```
 
-**Dette gør hver knaptype:**
-- **Send-knapper**: Udløser formularsendelse og sender data til det angivne endpoint
-- **Nulstil-knapper**: Gendanner alle formularfelter til deres oprindelige tilstand
-- **Almindelige knapper**: Giver ingen standardadfærd og kræver brugerdefineret JavaScript for funktionalitet
+**Dette er, hvad hver knap-type gør:**
+- **Send-knapper**: Udløser formularafsendelse og sender data til den angivne endpoint
+- **Nulstil-knapper**: Gendanner alle felter til deres oprindelige tilstand
+- **Almindelige knapper**: Har ingen standardadfærd, kræver tilpasset JavaScript for funktionalitet
 
-> ⚠️ **Vigtig bemærkning**: `<input>`-elementet er selv-lukkende og kræver ikke en afsluttende tag. Moderne bedste praksis er at skrive `<input>` uden skråstreg.
+> ⚠️ **Vigtig Note**: `<input>`-elementet er selv-lukkende og behøver ikke en lukketag. Moderne bedste praksis er at skrive `<input>` uden skråstreg.
 
-### Oprettelse af din loginformular
+### Byg din Loginformular
 
-Lad os nu oprette en praktisk loginformular, der demonstrerer moderne HTML-formularpraksis. Vi starter med en grundlæggende struktur og forbedrer den gradvist med tilgængelighedsfunktioner og validering.
+Lad os nu skabe en praktisk loginformular, der demonstrerer moderne HTML form praksisser. Vi starter med en basal struktur og forbedrer den gradvist med tilgængelighedsfunktioner og validering.
 
 ```html
 <template id="login">
@@ -128,41 +173,40 @@ Lad os nu oprette en praktisk loginformular, der demonstrerer moderne HTML-formu
 ```
 
 **Hvad der sker her:**
-- **Strukturerer** formularen med semantiske HTML5-elementer
-- **Grupperer** relaterede elementer ved hjælp af `div`-containere med meningsfulde klasser
-- **Associerer** labels med input ved hjælp af `for`- og `id`-attributter
+- **Strukturerer** formen med semantiske HTML5 elementer
+- **Grupperer** relaterede elementer i `div` containere med meningsfulde klasser
+- **Associerer** labels med inputs ved hjælp af `for` og `id` attributter
 - **Inkluderer** moderne attributter som `autocomplete` og `placeholder` for bedre brugeroplevelse
-- **Tilføjer** `novalidate` for at håndtere validering med JavaScript i stedet for browserens standardindstillinger
+- **Tilføjer** `novalidate` for at håndtere validering med JavaScript i stedet for browserens standard
 
-### Vigtigheden af korrekte labels
+### Kraften af Korrekte Labels
 
 **Hvorfor labels er vigtige for moderne webudvikling:**
 
 ```mermaid
 graph TD
-    A[Label Element] --> B[Screen Reader Support]
-    A --> C[Click Target Expansion]
-    A --> D[Form Validation]
-    A --> E[SEO Benefits]
+    A[Mærkat Element] --> B[Skærmlæser Support]
+    A --> C[Klikmål Udvidelse]
+    A --> D[Formular Validering]
+    A --> E[SEO Fordele]
     
-    B --> F[Accessible to all users]
-    C --> G[Better mobile experience]
-    D --> H[Clear error messaging]
-    E --> I[Better search ranking]
+    B --> F[Tilgængelig for alle brugere]
+    C --> G[Bedre mobiloplevelse]
+    D --> H[Klare fejlmeddelelser]
+    E --> I[Bedre søgerangering]
 ```
-
 **Hvad korrekte labels opnår:**
-- **Muliggør** tydelig annoncering af formularfelter med skærmlæsere
-- **Udvider** det klikbare område (klik på label fokuserer input)
-- **Forbedrer** mobilbrugervenlighed med større berøringsmål
+- **Muliggør** at skærmlæsere kan annoncere formularfelter klart
+- **Udvider** det klikbare område (klik på label fokuserer inputfeltet)
+- **Forbedrer** mobilbrugbarhed med større touch-mål
 - **Understøtter** formularvalidering med meningsfulde fejlmeddelelser
-- **Forbedrer** SEO ved at give semantisk betydning til formelementer
+- **Forbedrer** SEO ved at give semantisk mening til formelementer
 
-> 🎯 **Tilgængelighedsmål**: Hvert formularinput bør have en tilknyttet label. Denne enkle praksis gør dine formularer brugbare for alle, inklusive brugere med handicap, og forbedrer oplevelsen for alle brugere.
+> 🎯 **Tilgængelighedsmål**: Hvert formularinput bør have en tilknyttet label. Denne simple praksis gør dine formularer brugbare for alle, inklusive brugere med handicap, og forbedrer oplevelsen for alle brugere.
 
-### Oprettelse af registreringsformularen
+### Opret Registreringsformularen
 
-Registreringsformularen kræver mere detaljerede oplysninger for at oprette en komplet brugerkonto. Lad os bygge den med moderne HTML5-funktioner og forbedret tilgængelighed.
+Registreringsformularen kræver mere detaljerede oplysninger for at oprette en komplet brugerprofil. Lad os bygge den med moderne HTML5-funktioner og forbedret tilgængelighed.
 
 ```html
 <hr/>
@@ -198,77 +242,92 @@ Registreringsformularen kræver mere detaljerede oplysninger for at oprette en k
 
 **I ovenstående har vi:**
 - **Organiseret** hvert felt i container-divs for bedre styling og layout
-- **Tilføjet** passende `autocomplete`-attributter for browserens autofyldningssupport
-- **Inkluderet** nyttig placeholder-tekst for at guide brugerinput
-- **Sat** fornuftige standardværdier ved hjælp af `value`-attributten
-- **Anvendt** valideringsattributter som `required`, `maxlength` og `min`
-- **Brugt** `type="number"` til balancefeltet med decimalstøtte
+- **Tilføjet** passende `autocomplete` attributter til browser autofyld støtte
+- **Indsat** hjælpsom pladsholdertekst til at guide brugerinput
+- **Sat** fornuftige standardværdier med `value` attributten
+- **Anvendt** valideringsattributter som `required`, `maxlength`, og `min`
+- **Brugt** `type="number"` for balance-feltet med decimalunderstøttelse
 
-### Udforskning af inputtyper og adfærd
+### Udforskning af Inputtyper og Adfærd
 
-**Moderne inputtyper giver forbedret funktionalitet:**
+**Moderne inputtyper tilbyder forbedret funktionalitet:**
 
 | Funktion | Fordel | Eksempel |
-|----------|--------|----------|
-| `type="number"` | Numerisk tastatur på mobil | Nem balanceindtastning |
-| `step="0.01"` | Kontrol af decimalpræcision | Tillader cent i valuta |
-| `autocomplete` | Browserens autofyldning | Hurtigere formularudfyldning |
-| `placeholder` | Kontekstuelle hints | Vejleder brugerens forventninger |
+|---------|---------|----------|
+| `type="number"` | Numerisk tastatur på mobil | Nemmer balanceindtastning |
+| `step="0.01"` | Decimalpræcisionskontrol | Tillader cent i valuta |
+| `autocomplete` | Browser autofyld | Hurtigere formularudfyldning |
+| `placeholder` | Kontekstuelle hints | Guidede brugerforventninger |
 
-> 🎯 **Tilgængelighedsudfordring**: Prøv at navigere i formularerne ved kun at bruge dit tastatur! Brug `Tab` til at flytte mellem felter, `Space` til at markere afkrydsningsfelter og `Enter` til at sende. Denne oplevelse hjælper dig med at forstå, hvordan skærmlæserbrugere interagerer med dine formularer.
+> 🎯 **Tilgængelighedsudfordring**: Prøv at navigere i formularerne kun med dit tastatur! Brug `Tab` til at bevæge dig mellem felter, `Space` til at sætte kryds i bokse, og `Enter` til at sende. Denne oplevelse hjælper dig med at forstå, hvordan skærmlæserbrugere interagerer med dine formularer.
 
-## Forståelse af metoder til formularsendelse
+### 🔄 **Pædagogisk Check-in**
+**Forståelse af Formular fundamenter**: Før du implementerer JavaScript, skal du sikre dig, at du forstår:
+- ✅ Hvordan semantisk HTML skaber tilgængelige formstrukturer
+- ✅ Hvorfor inputtyper betyder noget for mobilkeyboard og validering
+- ✅ Forholdet mellem labels og formkontroller
+- ✅ Hvordan formattributter påvirker browserens standardadfærd
 
-Når nogen udfylder din formular og trykker på send, skal disse data sendes et sted hen – normalt til en server, der kan gemme dem. Der er et par forskellige måder, dette kan ske på, og at vide, hvilken man skal bruge, kan spare dig for nogle hovedpiner senere.
+**Kort Selvtest**: Hvad sker der, hvis du sender en formular uden JavaScript håndtering?
+*Svar: Browseren udfører den standardiserede afsendelse, typisk ved at omdirigere til action-URL’en*
+
+**HTML5 Formularfordele**: Moderne formularer tilbyder:
+- **Indbygget Validering**: Automatisk tjek af e-mail- og talformater
+- **Mobiloptimering**: Passende tastaturer for forskellige inputtyper
+- **Tilgængelighed**: Skærmlæsersupport og tastaturnavigation
+- **Progressiv Forbedring**: Fungerer også når JavaScript er deaktiveret
+
+## Forståelse af Formularers Afsendelsesmetoder
+
+Når nogen udfylder din formular og trykker på send, skal disse data sendes et sted hen – normalt til en server, der kan gemme dem. Der findes et par forskellige måder at gøre det på, og at vide, hvilken man skal bruge, kan spare dig for en del hovedpine senere.
 
 Lad os se på, hvad der faktisk sker, når nogen klikker på send-knappen.
 
-### Standardadfærd for formularer
+### Standardformular-adfærd
 
-Lad os først observere, hvad der sker med grundlæggende formularsendelse:
+Først, lad os observere hvad der sker ved basal formularafsendelse:
 
 **Test dine nuværende formularer:**
-1. Klik på *Registrer*-knappen i din formular
-2. Observer ændringerne i din browsers adressefelt
-3. Bemærk, hvordan siden genindlæses, og dataene vises i URL'en
+1. Klik på *Registrer* knappen i din formular
+2. Observer ændringerne i din browsers adressebjælke
+3. Læg mærke til, hvordan siden genindlæses og data vises i URL’en
 
-![Skærmbillede af browserens URL-ændring efter klik på Registrer-knappen](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.da.png)
+![Skærmbillede af browserens URL-ændring efter klik på Registrer-knappen](../../../../translated_images/click-register.e89a30bf0d4bc9ca.da.png)
 
-### Sammenligning af HTTP-metoder
+### HTTP Metoder Sammenligning
 
 ```mermaid
 graph TD
-    A[Form Submission] --> B{HTTP Method}
-    B -->|GET| C[Data in URL]
-    B -->|POST| D[Data in Request Body]
+    A[Formularindsendelse] --> B{HTTP-metode}
+    B -->|GET| C[Data i URL]
+    B -->|POST| D[Data i forespørgselskrop]
     
-    C --> E[Visible in address bar]
-    C --> F[Limited data size]
-    C --> G[Bookmarkable]
+    C --> E[Synlig i adresselinjen]
+    C --> F[Begrænset datastørrelse]
+    C --> G[Bogmærkevenlig]
     
-    D --> H[Hidden from URL]
-    D --> I[Large data capacity]
-    D --> J[More secure]
+    D --> H[Skjult fra URL]
+    D --> I[Stor datakapacitet]
+    D --> J[Mere sikker]
 ```
-
 **Forstå forskellene:**
 
-| Metode | Anvendelse | Data placering | Sikkerhedsniveau | Størrelsesbegrænsning |
-|--------|------------|----------------|------------------|-----------------------|
-| `GET` | Søgeforespørgsler, filtre | URL-parametre | Lav (synlig) | ~2000 tegn |
-| `POST` | Brugerkonti, følsomme data | Anmodningskrop | Højere (skjult) | Ingen praktisk grænse |
+| Metode | Anvendelse | Data Placering | Sikkerhedsniveau | Størrelsesgrænse |
+|--------|------------|---------------|------------------|------------------|
+| `GET`  | Søgeforespørgsler, filtre | URL-parametre | Lav (synlig) | ~2000 tegn |
+| `POST` | Bruger-konti, sensitive data | Request body | Højere (skjult) | Ingen praktisk grænse |
 
-**Forstå de grundlæggende forskelle:**
-- **GET**: Tilføjer formulardata til URL'en som forespørgselsparametre (passende til søgeoperationer)
-- **POST**: Inkluderer data i anmodningskroppen (essentielt for følsomme oplysninger)
-- **GET-begrænsninger**: Størrelsesbegrænsninger, synlige data, vedvarende browserhistorik
-- **POST-fordele**: Stor datakapacitet, beskyttelse af privatliv, understøttelse af filupload
+**Fundamentale forskelle forklaret:**
+- **GET**: Tilføjer formularens data til URL’en som query-parametre (passende til søgninger)
+- **POST**: Inkluderer data i request-body (nødvendigt for følsomme oplysninger)
+- **GET begrænsninger**: Størrelsesgrænser, synlige data, gemmes i browserhistorik
+- **POST fordele**: Stor datakapacitet, privatlivsbeskyttelse, understøtter filupload
 
-> 💡 **Bedste praksis**: Brug `GET` til søgeformularer og filtre (datahentning), brug `POST` til brugerregistrering, login og dataskabelse.
+> 💡 **Bedste praksis**: Brug `GET` til søgeformularer og filtre (datahentning), brug `POST` til brugerregistrering, login og dataoprettelse.
 
-### Konfiguration af formularsendelse
+### Konfigurering af Formularafsendelse
 
-Lad os konfigurere din registreringsformular til korrekt at kommunikere med backend-API'en ved hjælp af POST-metoden:
+Lad os sætte din registreringsformular til at kommunikere korrekt med backend API’en ved brug af POST metoden:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" 
@@ -276,29 +335,29 @@ Lad os konfigurere din registreringsformular til korrekt at kommunikere med back
 ```
 
 **Dette gør konfigurationen:**
-- **Dirigerer** formularsendelse til dit API-endpoint
-- **Bruger** POST-metoden til sikker dataoverførsel
-- **Inkluderer** `novalidate` for at håndtere validering med JavaScript
+- **Sender** formularafsendelsen til din API endpoint
+- **Bruger** POST metode til sikker dataoverførsel
+- **Indeholder** `novalidate` for at håndtere validering via JavaScript
 
-### Test af formularsendelse
+### Test af Formularafsendelse
 
 **Følg disse trin for at teste din formular:**
 1. **Udfyld** registreringsformularen med dine oplysninger
-2. **Klik** på "Opret konto"-knappen
+2. **Klik** på "Opret Konto" knappen
 3. **Observer** serverens svar i din browser
 
-![En browser med adressen localhost:5000/api/accounts, der viser en JSON-streng med brugerdata](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.da.png)
+![Et browservindue på adressen localhost:5000/api/accounts, der viser en JSON streng med brugerdata](../../../../translated_images/form-post.61de4ca1b964d91a.da.png)
 
-**Hvad du bør se:**
-- **Browseren omdirigerer** til API-endpointets URL
-- **JSON-svar** indeholder dine nyoprettede kontodata
-- **Serverbekræftelse** på, at kontoen blev oprettet med succes
+**Det du bør se:**
+- **Browseren omdirigerer** til API endpoint URL’en
+- **JSON svar** indeholdende dine nyoprettede kontooplysninger
+- **Serverbekræftelse** på at kontoen blev oprettet succesfuldt
 
-> 🧪 **Eksperimenttid**: Prøv at registrere igen med samme brugernavn. Hvilket svar får du? Dette hjælper dig med at forstå, hvordan serveren håndterer duplikerede data og fejltilstande.
+> 🧪 **Eksperiment tid**: Prøv at registrere igen med samme brugernavn. Hvilket svar får du? Det hjælper dig med at forstå, hvordan serveren håndterer dublerede data og fejltilstande.
 
 ### Forståelse af JSON-svar
 
-**Når serveren behandler din formular med succes:**
+**Når serveren behandler din formular succesfuldt:**
 ```json
 {
   "user": "john_doe",
@@ -310,18 +369,18 @@ Lad os konfigurere din registreringsformular til korrekt at kommunikere med back
 ```
 
 **Dette svar bekræfter:**
-- **Opretter** en ny konto med dine angivne data
-- **Tildeler** en unik identifikator til fremtidig reference
+- **Opretter** en ny konto med de angivne data
+- **Tildeler** et unikt ID til fremtidig reference
 - **Returnerer** alle kontooplysninger til verifikation
-- **Angiver** vellykket databaselagring
+- **Indikerer** vellykket databasegemning
 
-## Moderne formularhåndtering med JavaScript
+## Moderne Formularhåndtering med JavaScript
 
-Traditionel formularsendelse forårsager fuldstændige sideopdateringer, ligesom tidlige rumfartsmissioner krævede fuldstændige systemnulstillinger for kurskorrektioner. Denne tilgang forstyrrer brugeroplevelsen og mister applikationstilstand.
+Traditionelle formularafsendelser medfører fuld side-genindlæsning, ligesom tidlige rumfartsmissioner krævede komplette systemresets for kurskorrektioner. Denne tilgang forstyrrer brugeroplevelsen og mister applikationens tilstand.
 
-JavaScript-formularhåndtering fungerer som de kontinuerlige vejledningssystemer, der bruges af moderne rumfartøjer – foretager justeringer i realtid uden at miste navigationskonteksten. Vi kan opfange formularsendelser, give øjeblikkelig feedback, håndtere fejl elegant og opdatere grænsefladen baseret på serverens svar, mens vi bevarer brugerens position i applikationen.
+JavaScript formularhåndtering fungerer som de kontinuerlige guidance-systemer brugt af moderne rumfartøjer – foretager realtidsjusteringer uden at miste navigationskontekst. Vi kan afbryde formularafsendelser, give øjeblikkelig feedback, håndtere fejl elegant og opdatere brugergrænsefladen baseret på serverresponser, samtidig med at brugerens placering i applikationen bevares.
 
-### Hvorfor undgå sideopdateringer?
+### Hvorfor undgå side-genindlæsninger?
 
 ```mermaid
 sequenceDiagram
@@ -329,48 +388,47 @@ sequenceDiagram
     participant SPA
     participant Server
     
-    User->>SPA: Submits form
-    SPA->>Server: AJAX request
-    Server-->>SPA: JSON response
-    SPA->>User: Updates interface
+    User->>SPA: Sender formular
+    SPA->>Server: AJAX forespørgsel
+    Server-->>SPA: JSON svar
+    SPA->>User: Opdaterer brugerflade
     
-    Note over User,SPA: No page reload!
+    Note over User,SPA: Ingen sideskift!
 ```
-
-**Fordele ved JavaScript-formularhåndtering:**
-- **Bevarer** applikationstilstand og brugerkontekst
-- **Giver** øjeblikkelig feedback og indlæsningsindikatorer
-- **Muliggør** dynamisk fejlhåndtering og validering
+**Fordele ved JavaScript formularhåndtering:**
+- **Bevarer** applikationens tilstand og brugerens kontekst
+- **Giver** hurtig feedback og loaderindikatorer
+- **Muliggør** dynamisk fejlbehandling og validering
 - **Skaber** glatte, app-lignende brugeroplevelser
-- **Tillader** betinget logik baseret på serverens svar
+- **Tillader** betinget logik baseret på serverresponser
 
-### Overgang fra traditionelle til moderne formularer
+### Overgang fra Traditionelle til Moderne Formularer
 
 **Udfordringer ved traditionel tilgang:**
-- **Omdirigerer** brugere væk fra din applikation
-- **Mister** den aktuelle applikationstilstand og kontekst
-- **Kræver** fuldstændige sideopdateringer for simple operationer
+- **Sender** brugere væk fra din applikation
+- **Mister** nuværende applikationsstatus og kontekst
+- **Kræver** fuld sidegenindlæsning for simple operationer
 - **Giver** begrænset kontrol over brugerfeedback
 
-**Fordele ved moderne JavaScript-tilgang:**
-- **Holder** brugere inden for din applikation
-- **Bevarer** al applikationstilstand og data
+**Fordele ved moderne JavaScript tilgang:**
+- **Holder** brugere indenfor din applikation
+- **Bevarer** al applikationsstatus og data
 - **Muliggør** realtidsvalidering og feedback
 - **Understøtter** progressiv forbedring og tilgængelighed
 
-### Implementering af JavaScript-formularhåndtering
+### Implementering af JavaScript Formularhåndtering
 
-Lad os erstatte den traditionelle formularsendelse med moderne JavaScript-hændelseshåndtering:
+Lad os erstatte den traditionelle formularafsendelse med moderne JavaScript event-håndtering:
 
 ```html
 <!-- Remove the action attribute and add event handling -->
 <form id="registerForm" method="POST" novalidate>
 ```
 
-**Tilføj registreringslogikken til din `app.js`-fil:**
+**Tilføj registreringslogikken til din `app.js` fil:**
 
 ```javascript
-// Modern event-driven form handling
+// Moderne hændelsesdrevet formularhåndtering
 function register() {
   const registerForm = document.getElementById('registerForm');
   const formData = new FormData(registerForm);
@@ -380,50 +438,49 @@ function register() {
   console.log('Form data prepared:', data);
 }
 
-// Attach event listener when the page loads
+// Tilføj hændelseslytter når siden indlæses
 document.addEventListener('DOMContentLoaded', () => {
   const registerForm = document.getElementById('registerForm');
   registerForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Forhindre standard formularindsendelse
     register();
   });
 });
 ```
 
-**Hvad der sker her:**
-- **Forhindrer** standardformularsendelse ved hjælp af `event.preventDefault()`
-- **Henter** form-elementet ved hjælp af moderne DOM-selektion
-- **Ekstraherer** formulardata ved hjælp af den kraftfulde `FormData`-API
+**Dette sker her:**
+- **Forhindrer** standard formularafsendelse med `event.preventDefault()`
+- **Henter** formular-elementet vha. moderne DOM-selektion
+- **Udtrækker** formdata med den kraftfulde `FormData` API
 - **Konverterer** FormData til et almindeligt objekt med `Object.fromEntries()`
-- **Serialiserer** dataene til JSON-format for serverkommunikation
-- **Logger** de behandlede data til fejlfinding og verifikation
+- **Serialiserer** data til JSON-format for serverkommunikation
+- **Logger** de behandlede data til debugging og verifikation
 
 ### Forståelse af FormData API
 
-**FormData API giver kraftfuld formularhåndtering:**
-
+**FormData API'en tilbyder kraftfuld formularhåndtering:**
 ```javascript
-// Example of what FormData captures
+// Eksempel på hvad FormData indsamler
 const formData = new FormData(registerForm);
 
-// FormData automatically captures:
+// FormData indsamler automatisk:
 // {
 //   "user": "john_doe",
-//   "currency": "$", 
-//   "description": "Personal account",
+//   "currency": "$",
+//   "description": "Personlig konto",
 //   "balance": "100"
 // }
 ```
 
 **Fordele ved FormData API:**
 - **Omfattende indsamling**: Fanger alle formelementer inklusive tekst, filer og komplekse input
-- **Typebevidsthed**: Håndterer forskellige inputtyper automatisk uden brugerdefineret kodning
-- **Effektivitet**: Eliminerer manuel feltindsamling med en enkelt API-kald
-- **Tilpasningsevne**: Bevarer funktionalitet, når formularstrukturen udvikler sig
+- **Typebevidsthed**: Håndterer automatisk forskellige inputtyper uden specialkodning
+- **Effektivitet**: Eliminierer manuel feltindsamling med ét API-kald
+- **Tilpasningsevne**: Opretholder funktionalitet, mens formstrukturen udvikler sig
 
 ### Oprettelse af serverkommunikationsfunktionen
 
-Lad os nu bygge en robust funktion til at kommunikere med din API-server ved hjælp af moderne JavaScript-mønstre:
+Lad os nu bygge en robust funktion til kommunikation med din API-server ved at bruge moderne JavaScript-mønstre:
 
 ```javascript
 async function createAccount(account) {
@@ -437,7 +494,7 @@ async function createAccount(account) {
       body: account
     });
     
-    // Check if the response was successful
+    // Kontroller, om svaret var vellykket
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -458,43 +515,42 @@ sequenceDiagram
     participant Fetch as Fetch API
     participant Server as Backend Server
     
-    JS->>Fetch: fetch() request
+    JS->>Fetch: fetch() forespørgsel
     Fetch->>Server: HTTP POST
-    Server-->>Fetch: JSON response
-    Fetch-->>JS: await response
-    JS->>JS: Process data
+    Server-->>Fetch: JSON svar
+    Fetch-->>JS: vent på svar
+    JS->>JS: Behandl data
 ```
-
 **Hvad denne moderne implementering opnår:**
 - **Bruger** `async/await` for læsbar asynkron kode
 - **Inkluderer** korrekt fejlhåndtering med try/catch-blokke
-- **Kontrollerer** svarstatus før databehandling
-- **Indstiller** passende headers til JSON-kommunikation
-- **Giver** detaljerede fejlmeddelelser til fejlfinding  
-- **Returnerer** konsistente datastrukturer for succes- og fejlsituationer  
+- **Tjekker** responstatus før behandling af data
+- **Sætter** passende headers for JSON-kommunikation
+- **Giver** detaljerede fejlmeddelelser til fejlfinding
+- **Returnerer** konsekvent datastruktur for succes- og fejlsituationer
 
-### Kraften i den moderne Fetch API  
+### Kraften i moderne Fetch API
 
-**Fordele ved Fetch API i forhold til ældre metoder:**  
+**Fordele ved Fetch API i forhold til ældre metoder:**
 
-| Funktion | Fordel | Implementering |  
-|----------|--------|----------------|  
-| Promise-baseret | Ren asynkron kode | `await fetch()` |  
-| Tilpasning af forespørgsel | Fuld kontrol over HTTP | Headers, metoder, body |  
-| Håndtering af svar | Fleksibel databehandling | `.json()`, `.text()`, `.blob()` |  
-| Fejlhåndtering | Omfattende fejlopsamling | Try/catch blokke |  
+| Funktion | Fordel | Implementering |
+|---------|---------|----------------|
+| Promise-baseret | Ren asynkron kode | `await fetch()` |
+| Tilpasning af forespørgsler | Fuld HTTP-kontrol | Headers, metoder, body |
+| Håndtering af svar | Fleksibel dataparsering | `.json()`, `.text()`, `.blob()` |
+| Fejlhåndtering | Omfattende fejlfangst | Try/catch-blokke |
 
-> 🎥 **Lær mere**: [Async/Await Tutorial](https://youtube.com/watch?v=YwmlRkrxvkk) - Forstå asynkrone JavaScript-mønstre til moderne webudvikling.  
+> 🎥 **Lær mere**: [Async/Await Tutorial](https://youtube.com/watch?v=YwmlRkrxvkk) - Forstå asynkrone JavaScript-mønstre til moderne webudvikling.
 
-**Vigtige begreber for serverkommunikation:**  
-- **Asynkrone funktioner** giver mulighed for at pause eksekvering for at vente på serverrespons  
-- **Await nøgleordet** gør asynkron kode mere læsbar som synkron kode  
-- **Fetch API** tilbyder moderne, promise-baserede HTTP-forespørgsler  
-- **Fejlhåndtering** sikrer, at din app reagerer elegant på netværksproblemer  
+**Nøglekoncepter til serverkommunikation:**
+- **Async-funktioner** tillader at pause kørsel for at vente på serversvar
+- **Await-nøgleordet** får asynkron kode til at læse som synkron kode
+- **Fetch API** leverer moderne, promise-baserede HTTP-forespørgsler
+- **Fejlhåndtering** sikrer, at din app reagerer elegant på netværksproblemer
 
-### Færdiggørelse af registreringsfunktionen  
+### Afslutning af registreringsfunktionen
 
-Lad os samle det hele med en komplet, produktionsklar registreringsfunktion:  
+Lad os samle det hele med en komplet, produktionsklar registreringsfunktion:
 
 ```javascript
 async function register() {
@@ -502,15 +558,15 @@ async function register() {
   const submitButton = registerForm.querySelector('button[type="submit"]');
   
   try {
-    // Show loading state
+    // Vis indlæsningsstatus
     submitButton.disabled = true;
     submitButton.textContent = 'Creating Account...';
     
-    // Process form data
+    // Behandl formular data
     const formData = new FormData(registerForm);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-    // Send to server
+    // Send til server
     const result = await createAccount(jsonData);
     
     if (result.error) {
@@ -522,89 +578,108 @@ async function register() {
     console.log('Account created successfully!', result);
     alert(`Welcome, ${result.user}! Your account has been created.`);
     
-    // Reset form after successful registration
+    // Nulstil formular efter vellykket registrering
     registerForm.reset();
     
   } catch (error) {
     console.error('Unexpected error:', error);
     alert('An unexpected error occurred. Please try again.');
   } finally {
-    // Restore button state
+    // Gendan knapstatus
     submitButton.disabled = false;
     submitButton.textContent = 'Create Account';
   }
 }
 ```
-  
-**Denne forbedrede implementering inkluderer:**  
-- **Giver** visuel feedback under formularindsendelse  
-- **Deaktiverer** send-knappen for at forhindre dobbeltindsendelser  
-- **Håndterer** både forventede og uventede fejl elegant  
-- **Viser** brugervenlige succes- og fejlmeddelelser  
-- **Nulstiller** formularen efter vellykket registrering  
-- **Gendanner** UI-tilstanden uanset resultat  
 
-### Test din implementering  
+**Denne forbedrede implementering inkluderer:**
+- **Giver** visuel feedback under formularindsendelse
+- **Deaktiverer** submit-knappen for at forhindre dobbelte indsendelser
+- **Håndterer** både forventede og uventede fejl på en pæn måde
+- **Viser** brugervenlige succes- og fejlmeddelelser
+- **Nulstiller** formularen efter succesfuld registrering
+- **Genskaber** UI-tilstand uanset resultat
 
-**Åbn din browsers udviklerværktøjer og test registreringen:**  
+### Test af din implementering
 
-1. **Åbn** browserkonsollen (F12 → Console-fanen)  
-2. **Udfyld** registreringsformularen  
-3. **Klik** på "Opret konto"  
-4. **Observer** konsolmeddelelserne og brugerfeedback  
+**Åbn browserens udviklerværktøjer og test registreringen:**
 
-![Skærmbillede, der viser logmeddelelse i browserkonsollen](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.da.png)  
+1. **Åbn** browserkonsollen (F12 → Konsol-fanen)
+2. **Udfyld** registreringsformularen
+3. **Klik** på "Opret konto"
+4. **Observer** konsolmeddelelser og brugerfeedback
 
-**Hvad du bør se:**  
-- **Indlæsningsstatus** vises på send-knappen  
-- **Konsollogs** viser detaljeret information om processen  
-- **Succesmeddelelse** vises, når kontooprettelsen lykkes  
-- **Formularen nulstilles** automatisk efter vellykket indsendelse  
+![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.da.png)
 
-> 🔒 **Sikkerhedsovervejelse**: I øjeblikket sendes data via HTTP, hvilket ikke er sikkert til produktion. I virkelige applikationer skal du altid bruge HTTPS til at kryptere datatransmission. Læs mere om [HTTPS-sikkerhed](https://en.wikipedia.org/wiki/HTTPS) og hvorfor det er vigtigt for at beskytte brugerdata.  
+**Det du bør se:**
+- **Indlæsningsstatus** vises på submit-knappen
+- **Konsollogs** viser detaljerede oplysninger om processen
+- **Succesmeddelelse** vises, når kontooprettelse lykkes
+- **Formularen nulstilles** automatisk efter vellykket indsendelse
 
-## Omfattende formularvalidering  
+> 🔒 **Sikkerhedsovervejelse**: Data sendes i øjeblikket over HTTP, hvilket ikke er sikkert i produktion. I virkelige applikationer skal du altid bruge HTTPS for at kryptere datatransmission. Læs mere om [HTTPS-sikkerhed](https://en.wikipedia.org/wiki/HTTPS) og hvorfor det er essentielt for at beskytte brugerdata.
 
-Formularvalidering forhindrer den frustrerende oplevelse af at opdage fejl først efter indsendelse. Ligesom de mange redundante systemer på den internationale rumstation anvender effektiv validering flere lag af sikkerhedskontroller.  
+### 🔄 **Pædagogisk check-in**
+**Moderne JavaScript-integration**: Bekræft din forståelse af asynkron formularhåndtering:
+- ✅ Hvordan ændrer `event.preventDefault()` standardformularadfærd?
+- ✅ Hvorfor er FormData API mere effektiv end manuel feltindsamling?
+- ✅ Hvordan forbedrer async/await-mønstre kode-læsbarheden?
+- ✅ Hvilken rolle spiller fejlhåndtering i brugeroplevelsen?
 
-Den optimale tilgang kombinerer browserbaseret validering for øjeblikkelig feedback, JavaScript-validering for forbedret brugeroplevelse og server-side validering for sikkerhed og dataintegritet. Denne redundans sikrer både brugerens tilfredshed og systemets beskyttelse.  
+**Systemarkitektur**: Din formularhåndtering demonstrerer:
+- **Event-Driven Programming**: Formularer reagerer på brugerhandlinger uden sideopdatering
+- **Asynkron kommunikation**: Serverforespørgsler blokerer ikke brugergrænsefladen
+- **Fejlhåndtering**: Pæn nedtrapning når netværksforespørgsler fejler
+- **State Management**: UI-opdateringer afspejler serversvar korrekt
+- **Progressive Enhancement**: Basisfunktionalitet virker, JavaScript forbedrer den
 
-### Forståelse af valideringslag  
+**Professionelle mønstre**: Du har implementeret:
+- **Single Responsibility**: Funktioner har klare, fokuserede formål
+- **Error Boundaries**: Try/catch-blokke forhindrer applikationsnedbrud
+- **Brugerfeedback**: Indlæsningsstatus og succes-/fejlmeddelelser
+- **Data Transformation**: FormData til JSON for serverkommunikation
+
+## Omfattende formvalidering
+
+Formvalidering forhindrer den frustrerende oplevelse at opdage fejl først efter indsendelse. Ligesom de mange redundante systemer på den internationale rumstation anvender effektiv validering flere lag af sikkerhedstjek.
+
+Den optimale tilgang kombinerer browserbaseret validering for øjeblikkelig feedback, JavaScript-validering for forbedret brugeroplevelse og servervalidering for sikkerhed og dataintegritet. Denne redundans sikrer både brugerens tilfredshed og systemets beskyttelse.
+
+### Forstå valideringslag
 
 ```mermaid
 graph TD
-    A[User Input] --> B[HTML5 Validation]
-    B --> C[Custom JavaScript Validation]
-    C --> D[Client-Side Complete]
-    D --> E[Server-Side Validation]
-    E --> F[Data Storage]
+    A[Brugerinput] --> B[HTML5 Validering]
+    B --> C[Brugerdefineret JavaScript-validering]
+    C --> D[Klientside Fuldført]
+    D --> E[Serverside Validering]
+    E --> F[Dataklager]
     
-    B -->|Invalid| G[Browser Error Message]
-    C -->|Invalid| H[Custom Error Display]
-    E -->|Invalid| I[Server Error Response]
+    B -->|Ugyldig| G[Browser Fejlmeddelelse]
+    C -->|Ugyldig| H[Brugerdefineret Fejlvisning]
+    E -->|Ugyldig| I[Server Fejlsvar]
 ```
-  
-**Strategi for multilagsvalidering:**  
-- **HTML5 validering**: Øjeblikkelige browserbaserede kontroller  
-- **JavaScript validering**: Tilpasset logik og brugeroplevelse  
-- **Servervalidering**: Endelige sikkerheds- og dataintegritetskontroller  
-- **Progressiv forbedring**: Fungerer selv hvis JavaScript er deaktiveret  
+**Strategi med flere lag validering:**
+- **HTML5-validering**: Øjeblikkelige browserbaserede tjek
+- **JavaScript-validering**: Egen logik og brugeroplevelse
+- **Servervalidering**: Endelig sikkerheds- og dataintegritetskontrol
+- **Progressiv forbedring**: Fungerer selv hvis JavaScript er deaktiveret
 
-### HTML5 valideringsattributter  
+### HTML5 valideringsattributter
 
-**Moderne valideringsværktøjer til rådighed:**  
+**Moderne valideringsværktøjer til rådighed:**
 
-| Attribut | Formål | Eksempel på brug | Browseradfærd |  
-|----------|--------|------------------|---------------|  
-| `required` | Obligatoriske felter | `<input required>` | Forhindrer tom indsendelse |  
-| `minlength`/`maxlength` | Tekstlængdebegrænsninger | `<input maxlength="20">` | Håndhæver tegnbegrænsninger |  
-| `min`/`max` | Numeriske grænser | `<input min="0" max="1000">` | Validerer talgrænser |  
-| `pattern` | Tilpassede regex-regler | `<input pattern="[A-Za-z]+">` | Matcher specifikke formater |  
-| `type` | Datatypevalidering | `<input type="email">` | Format-specifik validering |  
+| Attribut | Formål | Eksempelbrug | Browseradfærd |
+|-----------|---------|---------------|------------------|
+| `required` | Obligatoriske felter | `<input required>` | Forhindrer tom indsendelse |
+| `minlength`/`maxlength` | Tekstlængdebegrænsninger | `<input maxlength="20">` | Håndhæver tegnbegrænsninger |
+| `min`/`max` | Numeriske intervaller | `<input min="0" max="1000">` | Validerer talgrænser |
+| `pattern` | Egen regex-regler | `<input pattern="[A-Za-z]+">` | Matcher specifikke formater |
+| `type` | Datatypevalidering | `<input type="email">` | Format-specifik validering |
 
-### CSS-valideringsstil  
+### CSS valideringsstyling
 
-**Skab visuel feedback for valideringstilstande:**  
+**Skab visuel feedback for valideringsstatus:**
 
 ```css
 /* Valid input styling */
@@ -628,18 +703,18 @@ input:focus:invalid {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 ```
-  
-**Hvad disse visuelle signaler opnår:**  
-- **Grønne kanter**: Indikerer vellykket validering, som grønne lys i kontrolcenteret  
-- **Røde kanter**: Signaliserer valideringsfejl, der kræver opmærksomhed  
-- **Fokusmarkeringer**: Giver klar visuel kontekst for den aktuelle inputplacering  
-- **Konsistent styling**: Etablerer forudsigelige grænseflademønstre, som brugerne kan lære  
 
-> 💡 **Pro Tip**: Brug `:valid` og `:invalid` CSS pseudo-klasser til at give øjeblikkelig visuel feedback, mens brugerne skriver, og skab en responsiv og hjælpsom grænseflade.  
+**Hvad disse visuelle signaler opnår:**
+- **Grønne kanter**: Angiver vellykket validering, som grønne lys i mission control
+- **Røde kanter**: Indikerer valideringsfejl der kræver opmærksomhed
+- **Fokusfremhævninger**: Giver klar visuel kontekst for nuværende inputsted
+- **Konsistent styling**: Etablerer forudsigelige interface-mønstre brugere kan lære
 
-### Implementering af omfattende validering  
+> 💡 **Pro Tip**: Brug CSS pseudo-klasserne `:valid` og `:invalid` for at give øjeblikkelig visuel feedback under indtastning og skabe en responsiv og hjælpsom brugerflade.
 
-Lad os forbedre din registreringsformular med robust validering, der giver en fremragende brugeroplevelse og datakvalitet:  
+### Implementering af omfattende validering
+
+Lad os forbedre din registreringsformular med robust validering, der giver fremragende brugeroplevelse og datakvalitet:
 
 ```html
 <form id="registerForm" method="POST" novalidate>
@@ -681,98 +756,210 @@ Lad os forbedre din registreringsformular med robust validering, der giver en fr
   <button type="submit">Create Account</button>
 </form>
 ```
-  
-**Forståelse af den forbedrede validering:**  
-- **Kombinerer** indikatorer for obligatoriske felter med hjælpsomme beskrivelser  
-- **Inkluderer** `pattern` attributter for formatvalidering  
-- **Giver** `title` attributter for tilgængelighed og værktøjstip  
-- **Tilføjer** hjælpetekst for at vejlede brugerinput  
-- **Bruger** semantisk HTML-struktur for bedre tilgængelighed  
 
-### Avancerede valideringsregler  
+**Forstå den udvidede validering:**
+- **Kombinerer** obligatoriske felter med hjælpetekster
+- **Inkluderer** `pattern`-attributter til formatvalidering
+- **Giver** `title`-attributter til tilgængelighed og tooltips
+- **Tilføjer** hjælpetekst til at guide brugerinput
+- **Bruger** semantisk HTML-struktur for bedre tilgængelighed
 
-**Hvad hver valideringsregel opnår:**  
+### Avancerede valideringsregler
 
-| Felt | Valideringsregler | Brugerfordel |  
-|------|-------------------|--------------|  
-| Brugernavn | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Sikrer gyldige, unikke identifikatorer |  
-| Valuta | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Accepterer almindelige valutasymboler |  
-| Saldo | `min="0"`, `step="0.01"`, `type="number"` | Forhindrer negative saldi |  
-| Beskrivelse | `maxlength="100"` | Rimelige længdebegrænsninger |  
+**Hvad hver valideringsregel opnår:**
 
-### Test af valideringsadfærd  
+| Felt | Valideringsregler | Brugerfordel |
+|-------|------------------|--------------|
+| Brugernavn | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Sikrer gyldige, unikke identifikatorer |
+| Valuta | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Accepterer almindelige valutasymboler |
+| Saldo | `min="0"`, `step="0.01"`, `type="number"` | Forhindrer negative saldi |
+| Beskrivelse | `maxlength="100"` | Rimelige længdebegrænsninger |
 
-**Prøv disse valideringsscenarier:**  
-1. **Indsend** formularen med tomme obligatoriske felter  
-2. **Indtast** et brugernavn kortere end 3 tegn  
-3. **Prøv** specialtegn i brugernavnsfeltet  
-4. **Indtast** et negativt saldo beløb  
+### Test valideringsadfærd
 
-![Skærmbillede, der viser valideringsfejl ved forsøg på at indsende formularen](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.da.png)  
+**Prøv disse valideringsscenarier:**
+1. **Indsend** formularen med tomme obligatoriske felter
+2. **Indtast** et brugernavn kortere end 3 tegn
+3. **Prøv** specialtegn i brugernavnfeltet
+4. **Indtast** et negativt beløb i saldo-feltet
 
-**Hvad du vil observere:**  
-- **Browseren viser** native valideringsmeddelelser  
-- **Styling ændres** baseret på `:valid` og `:invalid` tilstande  
-- **Formularindsendelse** forhindres, indtil alle valideringer er opfyldt  
-- **Fokus flyttes automatisk** til det første ugyldige felt  
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.da.png)
 
-### Klient-side vs Server-side validering  
+**Det du vil observere:**
+- **Browseren viser** native valideringsmeddelelser
+- **Stylingen ændres** baseret på `:valid` og `:invalid` tilstande
+- **Formularindsendelse** blokeres, indtil alle valideringer er bestået
+- **Fokus flyttes automatisk** til det første ugyldige felt
+
+### Klientside vs serverside validering
 
 ```mermaid
 graph LR
-    A[Client-Side Validation] --> B[Instant Feedback]
-    A --> C[Better UX]
-    A --> D[Reduced Server Load]
+    A[Kliendvalidering] --> B[Øjeblikkelig feedback]
+    A --> C[Bedre brugeroplevelse]
+    A --> D[Reduceret serverbelastning]
     
-    E[Server-Side Validation] --> F[Security]
-    E --> G[Data Integrity]
-    E --> H[Business Rules]
+    E[Servervalidering] --> F[Sikkerhed]
+    E --> G[Dataintegritet]
+    E --> H[Forretningsregler]
     
-    A -.-> I[Both Required]
+    A -.-> I[Begge kræves]
     E -.-> I
 ```
-  
-**Hvorfor du har brug for begge lag:**  
-- **Klient-side validering**: Giver øjeblikkelig feedback og forbedrer brugeroplevelsen  
-- **Server-side validering**: Sikrer sikkerhed og håndterer komplekse forretningsregler  
-- **Kombineret tilgang**: Skaber robuste, brugervenlige og sikre applikationer  
-- **Progressiv forbedring**: Fungerer selv når JavaScript er deaktiveret  
+**Hvorfor du har brug for begge lag:**
+- **Klientsidevalidering**: Giver øjeblikkelig feedback og forbedrer brugeroplevelsen
+- **Serversidevalidering**: Sikrer sikkerhed og håndterer komplekse forretningsregler
+- **Kombineret tilgang**: Skaber robuste, brugervenlige og sikre applikationer
+- **Progressiv forbedring**: Fungerer også når JavaScript er deaktiveret
 
-> 🛡️ **Sikkerhedspåmindelse**: Stol aldrig kun på klient-side validering! Ondsindede brugere kan omgå klient-side kontroller, så server-side validering er afgørende for sikkerhed og dataintegritet.  
+> 🛡️ **Sikkerhedspåmindelse**: Stol aldrig kun på klientsidevalidering! Ondsindede brugere kan omgå disse tjek, så serversidevalidering er essentiel for sikkerhed og dataintegritet.
 
----  
+### ⚡ **Hvad du kan gøre på de næste 5 minutter**
+- [ ] Test din formular med ugyldige data for at se valideringsmeddelelser
+- [ ] Prøv at indsende formularen med deaktiveret JavaScript for at se HTML5-validering
+- [ ] Åbn browserens DevTools og undersøg formdata sendt til serveren
+- [ ] Eksperimenter med forskellige inputtyper og se tastaturændringer på mobil
 
-## GitHub Copilot Agent Challenge 🚀  
+### 🎯 **Hvad du kan opnå denne time**
+- [ ] Gennemfør quizzen efter lektionen og forstå formhåndteringskoncepter
+- [ ] Implementer omfattende valideringsudfordring med realtidsfeedback
+- [ ] Tilføj CSS-styling for professionelt udseende formularer
+- [ ] Opret fejlhåndtering for dublerede brugernavne og serverfejl
+- [ ] Tilføj felter til bekræftelse af adgangskode med matchede valideringer
 
-Brug Agent-tilstand til at fuldføre følgende udfordring:  
+### 📅 **Din ugelange form-mestre rejse**
+- [ ] Færdiggør hele bankappen med avancerede formfunktioner
+- [ ] Implementer funktion til filupload til profilbilleder eller dokumenter
+- [ ] Tilføj flertrinsformularer med fremdriftsindikatorer og tilstandsstyring
+- [ ] Opret dynamiske formularer, der tilpasser sig brugerens valg
+- [ ] Implementer autosave og genopretning af formularer for bedre brugeroplevelse
+- [ ] Tilføj avanceret validering som e-mailverifikation og telefonnummerformatering
 
-**Beskrivelse:** Forbedr registreringsformularen med omfattende klient-side validering og brugerfeedback. Denne udfordring vil hjælpe dig med at øve formularvalidering, fejlhåndtering og forbedring af brugeroplevelsen med interaktiv feedback.  
+### 🌟 **Din månedslange frontend-udviklingsmester**
+- [ ] Byg komplekse formapplikationer med betinget logik og workflows
+- [ ] Lær formbiblioteker og frameworks til hurtig udvikling
+- [ ] Mestre tilgængelighedsrutiner og inklusiv designprincipper
+- [ ] Implementer internationalisering og lokalisering til globale formularer
+- [ ] Opret genanvendelige formkomponentbiblioteker og designsystemer
+- [ ] Bidrag til open source formprojekter og del bedste praksis
 
-**Opgave:** Opret et komplet system til formularvalidering for registreringsformularen, der inkluderer: 1) Real-time valideringsfeedback for hvert felt, mens brugeren skriver, 2) Tilpassede valideringsmeddelelser, der vises under hvert inputfelt, 3) Et felt til bekræftelse af adgangskode med matchende validering, 4) Visuelle indikatorer (som grønne flueben for gyldige felter og røde advarsler for ugyldige), 5) En send-knap, der kun bliver aktiveret, når alle valideringer er opfyldt. Brug HTML5 valideringsattributter, CSS til styling af valideringstilstande og JavaScript til den interaktive adfærd.  
+## 🎯 Din tidslinje for formudviklingsekspertise
 
-Lær mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.  
+```mermaid
+timeline
+    title Formularudvikling & Brugererfaring Læringsforløb
+    
+    section HTML Grundlag (15 minutter)
+        Semantiske Formularer: Formelementer
+                          : Inputtyper
+                          : Labels og tilgængelighed
+                          : Progressiv forbedring
+        
+    section JavaScript Integration (25 minutter)
+        Hændelseshåndtering: Formularindsendelse
+                          : Datainnsamling
+                          : AJAX kommunikation
+                          : Async/await mønstre
+        
+    section Valideringssystemer (35 minutter)
+        Multi-lags Sikkerhed: HTML5 validering
+                          : Klientside logik
+                          : Serverside verifikation
+                          : Fejlhåndtering
+        
+    section Brugererfaring (45 minutter)
+        Interfacepolering: Indlæsningsstatus
+                        : Succeshåndtering
+                        : Fejlgendannelse
+                        : Tilgængelighedsfunktioner
+        
+    section Avancerede Mønstre (1 uge)
+        Professionelle Formularer: Dynamisk validering
+                              : Multi-trins arbejdsgange
+                              : Filuploads
+                              : Real-time feedback
+        
+    section Virksomhedskompetencer (1 måned)
+        Produktionsapplikationer: Formbiblioteker
+                              : Teststrategier
+                              : Ydelsesoptimering
+                              : Sikkerhed bedste praksis
+```
+### 🛠️ Dit resumé af værktøjskassen til formudvikling
 
-## 🚀 Udfordring  
+Efter at have gennemført denne lektion har du nu mestret:
+- **HTML5-forms**: Semantisk struktur, inputtyper og tilgængelighedsfunktioner
+- **JavaScript formhåndtering**: Eventhåndtering, dataindsamling og AJAX-kommunikation
+- **Valideringsarkitektur**: Flersidet validering for sikkerhed og brugeroplevelse
+- **Asynkron programmering**: Moderne fetch API og async/await-mønstre
+- **Fejlhåndtering**: Omfattende håndtering af fejl og brugerfeedbacksystemer
+- **Brugeroplevelsesdesign**: Indlæsningsstatus, succesbeskeder og fejlgenskabelse
+- **Progressiv forbedring**: Formularer der virker på tværs af browsere og kapabiliteter
 
-Vis en fejlmeddelelse i HTML, hvis brugeren allerede eksisterer.  
+**Anvendelser i virkeligheden**: Dine formudviklingsfærdigheder gælder direkte for:
+- **E-handel**: Checkout-processer, kontoregistrering og betalingsformularer
+- **Virksomhedssoftware**: Dataindtastningssystemer, rapporteringsinterfaces og workflow-applikationer
+- **Content Management**: Publiceringsplatforme, brugergenereret indhold og administrationsinterfaces
+- **Finansielle applikationer**: Bankgrænseflader, investeringsplatforme og transaktionssystemer
+- **Sundhedssystemer**: Patientportaler, aftalebooking og medicinske formularer
+- **Uddannelsesplatforme**: Kursustilmelding, vurderingsværktøjer og læringsstyring
 
-Her er et eksempel på, hvordan den endelige login-side kan se ud efter lidt styling:  
+**Professionelle færdigheder opnået**: Du kan nu:
+- **Designe** tilgængelige formularer der virker for alle brugere inklusive handicappede
+- **Implementere** sikker formvalidering der hindrer datakorruption og sikkerhedsbrud
+- **Skabe** responsive brugergrænseflader med klar feedback og vejledning
+- **Fejlsøge** komplekse forminteraktioner med browserdevtools og netværksanalyse
+- **Optimere** formperformance via effektiv datahåndtering og valideringsstrategier
 
-![Skærmbillede af login-siden efter tilføjelse af CSS-stilarter](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.da.png)  
+**Frontend-udviklingskoncepter mestret**:
+- **Event-drevet arkitektur**: Håndtering af brugerinteraktion og responssystemer
+- **Asynkron programmering**: Ikke-blokerende serverkommunikation og fejlhåndtering
+- **Datavalidering**: Klientside- og serversidesikkerhed og integritetskontrol
+- **Brugeroplevelsesdesign**: Intuitive interfaces der guider brugerne til succes
+- **Tilgængelighedsteknik**: Inklusivt design der fungerer for forskellige brugerbehov
 
-## Quiz efter forelæsning  
+**Næste niveau**: Du er klar til at udforske avancerede formbiblioteker, implementere komplekse valideringsregler eller bygge datainnsamlingssystemer i virksomhedsstandard!
 
-[Quiz efter forelæsning](https://ff-quizzes.netlify.app/web/quiz/44)  
-
-## Gennemgang & Selvstudie  
-
-Udviklere har været meget kreative med deres formularopbygning, især hvad angår valideringsstrategier. Lær om forskellige formularflows ved at kigge gennem [CodePen](https://codepen.com); kan du finde nogle interessante og inspirerende formularer?  
-
-## Opgave  
-
-[Style din bankapp](assignment.md)  
+🌟 **Bedrift opnået**: Du har bygget et komplet formhåndteringssystem med professionel validering, fejlhåndtering og brugeroplevelsesmønstre!
 
 ---
 
-**Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+
+
+---
+
+## GitHub Copilot Agent Challenge 🚀
+
+Brug agent-tilstand til at fuldføre følgende udfordring:
+
+**Beskrivelse:** Forbedr registreringsformularen med omfattende klientsidevalidering og brugerfeedback. Denne udfordring hjælper dig med at øve formvalidering, fejlhåndtering og forbedring af brugeroplevelsen med interaktiv feedback.
+**Prompt:** Opret et komplet valideringssystem for registreringsformularen, der inkluderer: 1) Realtidsvalideringsfeedback for hvert felt, mens brugeren skriver, 2) Egne valideringsbeskeder, som vises under hvert inputfelt, 3) Et bekræftelsesfelt for kodeord med validering af match, 4) Visuelle indikatorer (som grønne flueben for gyldige felter og røde advarsler for ugyldige), 5) En knap til indsendelse, som kun aktiveres, når alle valideringer passer. Brug HTML5-valideringsattributter, CSS til styling af valideringstilstande og JavaScript til den interaktive funktionalitet.
+
+Lær mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
+
+## 🚀 Udfordring
+
+Vis en fejlmeddelelse i HTML, hvis brugeren allerede eksisterer.
+
+Her er et eksempel på, hvordan den endelige login-side kan se ud efter lidt styling:
+
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.da.png)
+
+## Post-Lecture Quiz
+
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/44)
+
+## Gennemgang & Selvstudie
+
+Udviklere er blevet meget kreative med deres formbygning, især med hensyn til valideringsstrategier. Lær om forskellige formflows ved at kigge gennem [CodePen](https://codepen.com); kan du finde nogle interessante og inspirerende formularer?
+
+## Opgave
+
+[Style din bankapp](assignment.md)
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfraskrivelse**:
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For vigtig information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for eventuelle misforståelser eller fejltolkninger, der opstår ved brug af denne oversættelse.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
