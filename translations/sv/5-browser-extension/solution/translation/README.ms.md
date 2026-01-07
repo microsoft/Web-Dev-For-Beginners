@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Använd API:n för CO2-signal från tmrow för att övervaka elförbrukning och skapa ett webbläsartillägg som varnar dig om hur tung elförbrukningen är i din region. Genom att använda detta tillägg kan du fatta mer informerade beslut om dina aktiviteter baserat på denna information.
 
-![skärmdump av webbläsartillägg](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.sv.png)
+![skärmdump av webbläsartillägg](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sv.png)
 
 ## Kom igång här
 
@@ -31,7 +31,7 @@ npm run build
 
 För att installera i Edge, använd menyn med 'tre punkter' i det övre högra hörnet av webbläsaren för att hitta panelen Tillägg. Därifrån väljer du 'Ladda uppackat' för att ladda det nya tillägget. Öppna mappen 'dist' när du blir ombedd, och tillägget kommer att laddas. För att använda det behöver du en API-nyckel för CO2-signalens API ([skaffa en här via e-post](https://www.co2signal.com/) - ange din e-post i rutan på den här sidan) och [koden för din region](http://api.electricitymap.org/v3/zones) som motsvarar [Electricity Map](https://www.electricitymap.org/map) (i Boston, till exempel, använder jag 'US-NEISO').
 
-![laddar ner](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.sv.png)
+![laddar ner](../../../../../translated_images/install-on-edge.78634f02842c4828.sv.png)
 
 När API-nyckeln och regionen har angetts i tilläggets gränssnitt, kommer en färgad punkt i webbläsarens tilläggsfält att ändras för att återspegla din regions energiförbrukning och ge dig vägledning om vilka energikrävande aktiviteter som är lämpliga att utföra. Konceptet bakom detta 'punkt'-system inspirerades av [Energy Lollipop-webbläsartillägget](https://energylollipop.com/) för Kaliforniens utsläpp.
 

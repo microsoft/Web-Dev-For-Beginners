@@ -112,7 +112,7 @@ Se [serverns API-dokumentation](../api/README.md) för:
 **Förväntat resultat:**
 Efter att ha slutfört denna uppgift ska din bankapp ha en fullt fungerande funktion för "Lägg till transaktion" som ser professionell ut och fungerar smidigt:
 
-![Skärmdump som visar ett exempel på dialogen "Lägg till transaktion"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.sv.png)
+![Skärmdump som visar ett exempel på dialogen "Lägg till transaktion"](../../../../translated_images/dialog.93bba104afeb79f1.sv.png)
 
 ## Testa din implementering
 
