@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ved å bruke tmrow sin CO2 Signal API for å spore strømforbruk, bygger vi en nettleserutvidelse som gir deg en påminnelse om hvor belastet strømforbruket i ditt område er. Ved å bruke denne utvidelsen kan du ta beslutninger om aktivitetene dine basert på denne informasjonen.
 
-![Utvidelse skjermbilde](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.no.png)
+![Utvidelse skjermbilde](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.no.png)
 
 ## Kom i gang
 
@@ -31,7 +31,7 @@ npm run build
 
 For å installere på Edge, bruk 'tre prikker'-menyen øverst til høyre i nettleseren for å finne utvidelsespanelet. Derfra velger du 'Last inn upakket' for å laste inn en ny utvidelse. Åpne 'dist'-mappen ved prompten, og utvidelsen vil bli lastet inn. For å bruke den trenger du en API-nøkkel fra CO2 Signal ([få den via e-post her](https://www.co2snal.com/) - skriv inn e-posten din i boksen på denne siden) og [kode for ditt område](http://api.electricitymap.org/v3/zones) fra [Electricity Map](https://www.electricitymap.org/map) (for eksempel, i Boston bruker jeg 'US-NEISO').
 
-![installering](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.no.png)
+![installering](../../../../../translated_images/install-on-edge.78634f02842c4828.no.png)
 
 Når API-nøkkelen og området er lagt inn i utvidelsesgrensesnittet, bør den fargede prikken i nettleserutvidelseslinjen endre seg for å reflektere energiforbruket i ditt område og gi deg en indikator på hvilke energiintensive aktiviteter som passer for deg. Konseptet bak dette 'prikk'-systemet ble inspirert av [Energy Lollipop Extension](https://energylollipop.com/) for utslipp i California.
 

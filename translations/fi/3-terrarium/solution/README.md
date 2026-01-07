@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Pieni vedä ja pudota -koodimeditaatio. Vähän HTML:ää, JS:ää ja CSS:ää käyttäen voit rakentaa verkkokäyttöliittymän, tyylitellä sen ja lisätä siihen vuorovaikutteisuutta.
 
-![minun terraarioni](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.fi.png)
+![minun terraarioni](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.fi.png)
 
 ## Tekijät
 

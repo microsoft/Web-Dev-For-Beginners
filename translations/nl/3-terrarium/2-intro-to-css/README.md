@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Introductie tot CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.nl.png)
+![Introductie tot CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.nl.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Weet je nog hoe je HTML-terrarium er vrij basic uitzag? Met CSS transformeren we die eenvoudige structuur tot iets visueel aantrekkelijks.
@@ -205,7 +205,7 @@ body {
 
 Open de ontwikkelaarstools van je browser (F12), ga naar het tabblad Elements en inspecteer je `<h1>`-element. Je zult zien dat het de lettertypefamilie van het body-element erft:
 
-![geërfd lettertype](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.nl.png)
+![geërfd lettertype](../../../../translated_images/1.cc07a5cbe114ad1d.nl.png)
 
 ✅ **Experimenteren**: Probeer andere overerfbare eigenschappen in te stellen op `<body>` zoals `color`, `line-height` of `text-align`. Wat gebeurt er met je koptekst en andere elementen?
 
@@ -599,7 +599,7 @@ Klaar om je terrarium te verbeteren met realistische glans op glas? Deze technie
 
 Je gaat subtiele highlights creëren die simuleren hoe licht reflecteert op glasoppervlakken. Deze aanpak is vergelijkbaar met hoe Renaissance-schilders zoals Jan van Eyck licht en reflectie gebruikten om geschilderd glas driedimensionaal te laten lijken. Dit is wat je wilt bereiken:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.nl.png)
+![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.nl.png)
 
 **Jouw uitdaging:**
 - **Creëer** subtiele witte of lichtgekleurde ovale vormen voor de glans op het glas

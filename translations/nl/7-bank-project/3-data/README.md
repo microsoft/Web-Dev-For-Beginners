@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Update workflow in een multi-page applicatie](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.nl.png)
+![Update workflow in een multi-page applicatie](../../../../translated_images/mpa.7f7375a1a2d4aa77.nl.png)
 
 **Waarom deze aanpak onhandig aanvoelde:**
 - Elke klik betekende dat de hele pagina opnieuw moest worden opgebouwd
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Update workflow in een single-page applicatie](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.nl.png)
+![Update workflow in een single-page applicatie](../../../../translated_images/spa.268ec73b41f992c2.nl.png)
 
 **Waarom SPA's zoveel beter aanvoelen:**
 - Alleen de delen die daadwerkelijk zijn veranderd worden bijgewerkt (slim, toch?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Nu, wanneer je test met een ongeldig account, zie je een nuttige foutmelding direct op de pagina!
 
-![Screenshot van de foutmelding die wordt weergegeven tijdens het inloggen](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.nl.png)
+![Screenshot van de foutmelding die wordt weergegeven tijdens het inloggen](../../../../translated_images/login-error.416fe019b36a6327.nl.png)
 
 #### Stap 4: Inclusief zijn met toegankelijkheid
 
@@ -961,7 +961,7 @@ Klaar om je bankingapp naar een hoger niveau te tillen? Laten we ervoor zorgen d
 
 Hier is hoe een gepolijst dashboard eruit zou kunnen zien:
 
-![Screenshot van een voorbeeldresultaat van het dashboard na styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.nl.png)
+![Screenshot van een voorbeeldresultaat van het dashboard na styling](../../../../translated_images/screen2.123c82a831a1d14a.nl.png)
 
 Voel je niet verplicht om dit precies na te maken - gebruik het als inspiratie en maak er je eigen versie van!
 

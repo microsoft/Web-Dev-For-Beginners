@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Johdatus HTML:ään](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.fi.png)
+![Johdatus HTML:ään](../../../../translated_images/webdev101-html.4389c2067af68e98.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML eli HyperText Markup Language on jokaisen verkkosivun perusta, jonka olet koskaan vieraillut. Ajattele HTML:ää verkkosivujen "luurankona" – se määrittää, mihin sisältö sijoitetaan, miten se järjestetään ja mitä kukin osa edustaa. Vaikka CSS myöhemmin "pukee" HTML:n väreillä ja asetteluilla ja JavaScript tuo siihen interaktiivisuutta, HTML tarjoaa olennaisen rakenteen, joka tekee kaiken muun mahdolliseksi.
@@ -88,7 +88,7 @@ Luo oma kansio terraario-projektillesi ja lisää ensimmäinen HTML-tiedostosi. 
 4. Explorer-paneelissa klikkaa "New File" -ikonia
 5. Nimeä tiedostosi `index.html`
 
-![VS Code Explorer näyttää uuden tiedoston luomisen](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.fi.png)
+![VS Code Explorer näyttää uuden tiedoston luomisen](../../../../translated_images/vs-code-index.e2986cf919471eb9.fi.png)
 
 **Vaihtoehto 2: Käytä terminaalikomentoja**
 ```bash

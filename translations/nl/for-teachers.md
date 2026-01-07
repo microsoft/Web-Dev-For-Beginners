@@ -42,10 +42,10 @@ Dit lesprogramma bevat importeerbare pakketten voor gangbare LMS-workflows.
   - Moodle Cloud heeft beperkte ondersteuning voor Common Cartridge. Geef de voorkeur aan het bovenstaande Moodle-bestand, dat ook in Canvas kan worden geüpload.
   - Controleer na import de modules, deadlines en quizinstellingen om aan te sluiten bij uw semesterschema.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.nl.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.nl.png)
 > Het lesprogramma in een Moodle-klas
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.nl.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.nl.png)
 > Het lesprogramma in Canvas
 
 ### Gebruik de repository direct (zonder Classroom)

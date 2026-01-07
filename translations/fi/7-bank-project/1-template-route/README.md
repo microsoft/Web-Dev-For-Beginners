@@ -639,7 +639,7 @@ sequenceDiagram
 
 `history.pushState` luo uusia merkintöjä selaimen navigointihistoriaan. Voit tarkistaa tämän pitämällä *takaisin-painiketta* painettuna selaimessasi, sen pitäisi näyttää jotain tällaista:
 
-![Navigointihistorian kuvakaappaus](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.fi.png)
+![Navigointihistorian kuvakaappaus](../../../../translated_images/history.7fdabbafa521e064.fi.png)
 
 Jos yrität klikata takaisin-painiketta muutaman kerran, huomaat, että nykyinen URL-osoite muuttuu ja historia päivittyy, mutta sama template pysyy näytettynä.
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Tässä projektissa opit rakentamaan kuvitteellisen pankin. Näissä oppitunneissa annetaan ohjeita siitä, miten verkkosovellus suunnitellaan ja reitit määritetään, miten lomakkeita rakennetaan, tilaa hallitaan ja tietoja haetaan API:sta, josta voit hakea pankin tiedot.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.fi.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.fi.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.fi.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.fi.png) |
 |--------------------------------|--------------------------------|
 
 ## Oppitunnit

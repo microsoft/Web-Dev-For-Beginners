@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.nl.jpg)
+![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.nl.jpg)
 > Sketchnote door [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Les Quiz
@@ -79,7 +79,7 @@ Dit proces weerspiegelt hoe de eerste webbrowser, WorldWideWeb, werd ontworpen d
 
 ✅ **Een beetje geschiedenis**: De eerste browser heette 'WorldWideWeb' en werd in 1990 gemaakt door Sir Timothy Berners-Lee.
 
-![vroegtijdige browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.nl.jpg)
+![vroegtijdige browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.nl.jpg)
 > Enkele vroegtijdige browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Hoe Browsers Webinhoud Verwerken
@@ -198,7 +198,7 @@ quadrantChart
 
 Het begrijpen van het installatieproces van extensies helpt je de gebruikerservaring te anticiperen wanneer mensen je extensie installeren. Het installatieproces is gestandaardiseerd in moderne browsers, met kleine variaties in interfaceontwerp.
 
-![screenshot van de Edge-browser die de open edge://extensions-pagina en het open instellingenmenu toont](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.nl.png)
+![screenshot van de Edge-browser die de open edge://extensions-pagina en het open instellingenmenu toont](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.nl.png)
 
 > **Belangrijk**: Zorg ervoor dat je ontwikkelaarsmodus inschakelt en extensies van andere winkels toestaat bij het testen van je eigen extensies.
 
@@ -313,10 +313,10 @@ Dit volgt het principe van progressieve onthulling dat sinds de vroege dagen van
 ### Overzicht van Extensie Weergaven
 
 **Setup Weergave** - Configuratie voor eerste gebruik:
-![screenshot van de voltooide extensie geopend in een browser, met een formulier met invoervelden voor regio en API-sleutel.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.nl.png)
+![screenshot van de voltooide extensie geopend in een browser, met een formulier met invoervelden voor regio en API-sleutel.](../../../../translated_images/1.b6da8c1394b07491.nl.png)
 
 **Resultaten Weergave** - Weergave van CO2-voetafdrukgegevens:
-![screenshot van de voltooide extensie die waarden toont voor CO2-gebruik en percentage fossiele brandstoffen voor de regio US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.nl.png)
+![screenshot van de voltooide extensie die waarden toont voor CO2-gebruik en percentage fossiele brandstoffen voor de regio US-NEISO.](../../../../translated_images/2.1dae52ff08042246.nl.png)
 
 ### Het Configuratieformulier Bouwen
 

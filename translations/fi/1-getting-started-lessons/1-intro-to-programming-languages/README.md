@@ -17,7 +17,7 @@ Kuule, ymmärrän täysin, jos ohjelmointi tuntuu juuri nyt pelottavalta. Kun al
 
 Tänään tutustumme uskomattomiin työkaluihin, jotka tekevät modernista web-kehityksestä paitsi mahdollisen, myös todella koukuttavan. Puhun samoista editoreista, selaimista ja työnkuluista, joita Netflixin, Spotifyn ja suosikkisi indie-sovellusstudion kehittäjät käyttävät joka päivä. Ja tässä tulee se osuus, joka saa sinut tanssimaan ilosta: suurin osa näistä ammattitason, teollisuusstandardin työkaluista on täysin ilmaisia!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.fi.png)
+![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.fi.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
