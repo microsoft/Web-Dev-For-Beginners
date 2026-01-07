@@ -1,106 +1,190 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "3e0da5eb9b275fe3cb431033c1413ec2",
-  "translation_date": "2025-10-25T00:21:33+00:00",
+  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
+  "translation_date": "2026-01-07T10:41:52+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
   "language_code": "sl"
 }
 -->
-# Uvod v programske jezike in sodobna orodja za razvijalce
+# Uvod v programske jezike in sodobna razvojna orodja
 
-Hej, bodoči razvijalec! 👋 Lahko povem nekaj, kar mi še vedno vsak dan vzbudi mravljince? Odkril boš, da programiranje ni samo za računalnike – gre za pridobivanje pravih supermoči, s katerimi lahko uresničiš svoje najbolj divje ideje!
+Živjo, bodoči razvijalec! 👋 Lahko ti povem nekaj, kar mi še vsak dan povzroči mravljince? Pravkar boš odkril, da programiranje ni samo za računalnike – gre za resnične supermoč, da svoje najbolj divje ideje oživiš!
 
-Poznaš tisti trenutek, ko uporabljaš svojo najljubšo aplikacijo in vse deluje popolno? Ko pritisneš gumb in se zgodi nekaj čarobnega, kar te prisili, da rečeš: "Vau, kako so TO naredili?" No, nekdo, kot si ti – verjetno sedi v svoji najljubši kavarni ob 2. uri zjutraj s tretjo skodelico espressa – je napisal kodo, ki je ustvarila to čarovnijo. In tukaj je nekaj, kar te bo osupnilo: do konca te lekcije ne boš le razumel, kako so to naredili, ampak boš komaj čakal, da poskusiš sam!
+Poznaš tisti trenutek, ko uporabljaš svojo najljubšo aplikacijo in vse preprosto popolno steče? Ko pritisneš gumb in se zgodi nekaj prav magičnega, da rečeš "vau, kako so TO naredili?" No, nekdo prav tak kot ti – verjetno sedi v svoji najljubši kavarni ob 2. zjutraj s tretjo espressom – je napisal kodo, ki je ustvarila to magijo. In tukaj boš ostal brez besed: do konca te lekcije ne boš le razumel, kako so to naredili, ampak boš komaj čakal, da to tudi sam preizkusiš!
 
-Poslušaj, popolnoma razumem, če se ti programiranje trenutno zdi zastrašujoče. Ko sem začel, sem iskreno mislil, da moraš biti nekakšen matematični genij ali pa programirati že od petega leta starosti. Ampak nekaj je popolnoma spremenilo moje razmišljanje: programiranje je pravzaprav kot učenje pogovora v novem jeziku. Začneš z "živjo" in "hvala", nato pa preideš na naročanje kave, in preden se zaveš, vodiš globoke filozofske razprave! Razlika je le v tem, da se pogovarjaš z računalniki, ki so, če smo iskreni, najbolj potrpežljivi sogovorniki, kar jih boš kdaj imel – nikoli ne obsojajo tvojih napak in vedno so pripravljeni poskusiti znova!
+Poglej, popolnoma razumem, če se ti programiranje zdaj zdi strašljivo. Ko sem začel, sem iskreno mislil, da moraš biti nekakšen matematični genij ali programirati od petega leta starosti. Toda to, kar je popolnoma spremenilo moj pogled: programiranje je pravzaprav kot učenje pogovorov v novem jeziku. Začneš z "zdravo" in "hvala", nato naročaš kavo, in preden se zavedaš, vodiš globoke filozofske pogovore! Le da v tem primeru vodiš pogovore z računalniki, in iskreno? So najnežnejši sogovorniki, kar jih boš kadarkoli imel – nikoli ne obsojajo tvojih napak in vedno so navdušeni, da poskusiš znova!
 
-Danes bomo raziskovali neverjetna orodja, ki omogočajo sodobni spletni razvoj, da ni le mogoč, ampak resnično zasvojljiv. Govorim o istih urejevalnikih, brskalnikih in delovnih procesih, ki jih razvijalci pri Netflixu, Spotifyju in tvojem najljubšem indie studiu aplikacij uporabljajo vsak dan. In tukaj je del, ki te bo spravil v ples od veselja: večina teh profesionalnih, industrijsko standardnih orodij je popolnoma brezplačnih!
+Danes bomo raziskali neverjetna orodja, zaradi katerih sodobni spletni razvoj ni le mogoč, ampak tudi resnično zasvojen. Govorim o točno teh urejevalnikih, brskalnikih in potekih dela, ki jih razvijalci pri Netflixu, Spotifyju in tvoji najljubši indie aplikacijski študiii uporabljajo vsak dan. In tukaj je del, ki te bo spravil v veselo plesanje: večina teh profesionalnih, industrijsko standardnih orodij je popolnoma brezplačnih!
 
-![Uvod v programiranje](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.sl.png)
+![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.sl.png)
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Poglejmo, kaj že znaš!
+```mermaid
+journey
+    title Vaša programerska pot danes
+    section Odkrij
+      Kaj je programiranje: 5: You
+      Programska jezika: 4: You
+      Pregled orodij: 5: You
+    section Razišči
+      Urejevalniki kode: 4: You
+      Brskalniki in orodja za razvijalce: 5: You
+      Ukazna vrstica: 3: You
+    section Vadba
+      Jezikovni detektiv: 4: You
+      Raziščite orodja: 5: You
+      Povezovanje z skupnostjo: 5: You
+```
+## Poglejmo, kaj že veš!
 
-Preden se lotimo zabavnih stvari, me zanima – kaj že veš o tem svetu programiranja? In poslušaj, če gledaš ta vprašanja in razmišljaš "Nimam pojma o ničemer od tega," je to ne le v redu, ampak popolno! To pomeni, da si na pravem mestu. Pomisli na ta kviz kot na raztezanje pred vadbo – samo ogrevamo možganske mišice!
+Preden skočimo v zabavne stvari, me zanima – kaj že veš o tem programerskem svetu? In poslušaj, če gledaš ta vprašanja in misliš "nimam prav nič pojma o tem," ni samo v redu, je popolno! To pomeni, da si prišel točno tja, kamor moraš. Ta kviz si predstavljaj kot raztezanje pred vadbo – pravkar ogrevamo možganske mišice!
 
 [Reši kviz pred lekcijo](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
 
-## Pustolovščina, ki jo bomo skupaj doživeli
 
-Prav zares sem navdušen nad tem, kar bomo danes raziskovali! Resnično, želim si, da bi lahko videl tvoj obraz, ko ti bodo nekatere od teh konceptov kliknile. Tukaj je neverjetno potovanje, ki ga bomo skupaj opravili:
+## Pustolovščina, na katero se bomo skupaj podali
 
-- **Kaj programiranje pravzaprav je (in zakaj je najbolj kul stvar na svetu!)** – Odkrijemo, kako je koda dobesedno nevidna magija, ki poganja vse okoli nas, od alarma, ki nekako ve, da je ponedeljek zjutraj, do algoritma, ki popolno izbere tvoje Netflix priporočilo.
-- **Programski jeziki in njihove neverjetne osebnosti** – Predstavljaj si, da vstopiš na zabavo, kjer ima vsak človek popolnoma različne supermoči in načine reševanja problemov. Tako je v svetu programskih jezikov, in užival boš v spoznavanju!
-- **Temeljni gradniki, ki ustvarjajo digitalno magijo** – Pomisli na to kot na ultimativni kreativni LEGO set. Ko boš razumel, kako se ti kosi sestavljajo, boš ugotovil, da lahko dobesedno zgradiš karkoli, kar si zamisliš.
-- **Profesionalna orodja, zaradi katerih se boš počutil, kot da si dobil čarobno palico** – Ne pretiravam – ta orodja ti bodo resnično dala občutek, da imaš supermoči, najboljši del pa? Uporabljajo jih isti profesionalci!
+V redu, resnično komaj čakam, da raziskujemo danes! Iskreno, rad bi videl tvoj obraz, ko ti bodo nekateri koncepti kliknili. Tukaj je neverjetno potovanje, na katerega se podajamo skupaj:
 
-> 💡 **Tukaj je stvar**: Ne poskušaj si zapomniti vsega danes! Trenutno želim le, da začutiš tisti iskrič navdušenja nad tem, kaj je mogoče. Podrobnosti se bodo naravno usedle, ko bomo skupaj vadili – tako se resnično uči!
+- **Kaj programiranje pravzaprav je (in zakaj je najbolj kul stvar ever!)** – Odkrijemo, kako je koda dobesedno nevidna magija, ki poganja vse okoli tebe, od tistega alarma, ki nekako ve, da je ponedeljek zjutraj, do algoritma, ki popolnoma izbere tvoje Netflix priporočila
+- **Programski jeziki in njihove osupljive osebnosti** – Predstavljaj si, da prideš na zabavo, kjer ima vsak povsem različne supermoči in načine reševanja problemov. Tako je s svetom programskih jezikov in zaljubil se boš v njihovo spoznavanje!
+- **Temeljni gradniki, ki ustvarjajo digitalno magijo** – Predstavljaj si jih kot ultimativni ustvarjalni LEGO komplet. Ko razumeš, kako se ti kosi povezujejo, boš spoznal, da lahko dobesedno zgradiš karkoli, kar tvoja domišljija sanja
+- **Profesionalna orodja, zaradi katerih se boš počutil, kot da si pravkar dobil čarobno paličico** – Ne dramatiziram – ta orodja te bodo zares naredila, da se počutiš kot, da imaš supermoči, in najboljši del? To so ista orodja, ki jih uporabljajo profesionalci!
+
+> 💡 **Tukaj je stvar**: Danes sploh ne razmišljaj o memoriziranju vsega! Trenutno želim samo, da začutiš tisto iskrico navdušenja glede vsega možnega. Podrobnosti se bodo naravno sprijele, ko bomo vadi skupaj – tako se zgodi pravo učenje!
 
 > To lekcijo lahko opraviš na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
-## Kaj točno *je* programiranje?
+## Kaj pravzaprav *je* programiranje?
 
-Dobro, lotimo se vprašanja za milijon dolarjev: kaj je programiranje, resnično?
+V redu, lotimo se milijonskega vprašanja: kaj je programiranje, resnično?
 
-Povedal ti bom zgodbo, ki je popolnoma spremenila moj pogled na to. Prejšnji teden sem poskušal razložiti mami, kako uporabljati naš novi daljinski upravljalnik za pametni televizor. Ujel sem se, da govorim stvari, kot so: "Pritisni rdeči gumb, ampak ne veliki rdeči gumb, majhen rdeči gumb na levi... ne, na tvoji drugi levi... okej, zdaj ga drži dve sekundi, ne eno, ne tri..." Zveni znano? 😅
+Povedal ti bom zgodbo, ki je popolnoma spremenila, kako razmišljam o tem. Prejšnji teden sem poskušal mami razložiti, kako uporabiti naš nov daljinski upravljalnik za pametni TV. Ujel sem se, da govorim stvari kot "Pritisni rdeči gumb, ampak ne velikega rdečega gumba, majhnega rdečega gumba na levi... ne, tvoje drugi levi... v redu, zdaj drži dve sekundi, ne eno, ne tri..." Zveni znano? 😅
 
-To je programiranje! To je umetnost podajanja izjemno podrobnih, korak za korakom navodil nečemu, kar je zelo zmogljivo, a potrebuje vse natančno razloženo. Razlika je le v tem, da namesto da razlagaš mami (ki lahko vpraša "kateri rdeči gumb?!"), razlagaš računalniku (ki naredi točno to, kar rečeš, tudi če to ni ravno tisto, kar si mislil).
+To je programiranje! Je umetnost dajanja neverjetno podrobnih navodil po korakih nečemu, kar je zelo močno, a mora imeti vse natančno povedano. Razlika je, da ne razlagaš mami (ki lahko vpraša "kateri rdeči gumb?!"), ampak razlagaš računalniku (ki počne natanko to, kar rečeš, tudi če to, kar si rekel, ni čisto to, kar si mislil).
 
-Tukaj je nekaj, kar me je osupnilo, ko sem se prvič naučil tega: računalniki so v bistvu precej preprosti. Razumejo samo dve stvari – 1 in 0, kar je v bistvu samo "da" in "ne" ali "vklopljeno" in "izklopljeno." To je vse! Ampak tukaj postane čarobno – ni nam treba govoriti v 1 in 0, kot da smo v Matrici. Tukaj pridejo na pomoč **programski jeziki**. So kot najboljši prevajalec na svetu, ki vzame tvoje popolnoma normalne človeške misli in jih pretvori v jezik računalnika.
+Tukaj je nekaj, kar me je osupnilo, ko sem to prvič izvedel: računalniki so v bistvu precej preprosti v svoji srži. Razumejo le dve stvari – 1 in 0, kar je v bistvu samo "da" in "ne" oz. "vklopljeno" in "izklopljeno". To je vse! A tukaj postane magično – ne moramo govoriti v 1 in 0, kot da smo v Matrici. Tu pridejo na pomoč **programski jeziki**. So kot najboljši prevajalec na svetu, ki vzame tvoje povsem običajne človeške misli in jih pretvori v računalniški jezik.
 
-In tukaj je nekaj, kar mi še vedno vzbuja mravljince vsako jutro, ko se zbudim: dobesedno *vse* digitalno v tvojem življenju se je začelo z nekom, kot si ti, ki je verjetno sedel v pižami s skodelico kave in tipkal kodo na svojem prenosniku. Tisti Instagram filter, ki te naredi popolnega? Nekdo je to zakodiral. Priporočilo, ki te je pripeljalo do tvoje nove najljubše pesmi? Razvijalec je ustvaril ta algoritem. Aplikacija, ki ti pomaga razdeliti račun za večerjo s prijatelji? Ja, nekdo je pomislil: "To je nadležno, stavim, da lahko to rešim," in potem... so to storili!
+In tukaj je nekaj, kar mi še vedno povzroči mravljince vsako jutro, ko se zbudim: dobesedno *vse* digitalno v tvojem življenju se je začelo z nekom, prav takšnim kot ti, verjetno v pižami s skodelico kave, ki je tipkal kodo na prenosniku. Ta Instagram filter, ki te naredi brezhibnega? Nekdo ga je skriptal. Priporočilo, ki te je pripeljalo do nove najljubše pesmi? Razvijalec je zgradil ta algoritem. Aplikacija, ki ti pomaga deliti račune za večerjo s prijatelji? Ja, nekdo si je rekel "to je nadležno, prepričan sem, da lahko popravim to" in potem... je to naredil!
 
-Ko se naučiš programirati, ne pridobiš le nove veščine – postaneš del te neverjetne skupnosti reševalcev problemov, ki preživijo svoje dni z razmišljanjem: "Kaj če bi lahko zgradil nekaj, kar bi nekomu polepšalo dan?" Iskreno, ali je kaj bolj kul kot to?
+Ko se naučiš programirati, ne pridobivaš samo nove veščine – postaneš del te neverjetne skupnosti reševalcev problemov, ki preživijo dneve razmišljajoč: "Kaj če bi lahko zgradil nekaj, kar nekomu malo izboljša dan?" Resno, ali je kaj bolj kul od tega?
 
-✅ **Zanimivost za raziskovanje**: Tukaj je nekaj res kul, kar lahko raziščeš, ko imaš prost trenutek – kdo misliš, da je bil prvi računalniški programer na svetu? Namig: morda ni tisti, ki ga pričakuješ! Zgodba te osebe je izjemno fascinantna in kaže, da je programiranje vedno temeljilo na kreativnem reševanju problemov in razmišljanju izven okvirjev.
+✅ **Zabavno dejstvo:** Tukaj je nekaj super kul, kar lahko pogledaš, ko boš imel trenutek – kdo misliš, da je bil prvi računalniški programer na svetu? Daj ti namig: morda ni to, kar pričakuješ! Zgodba o tej osebi je izjemno fascinantna in pokaže, da je programiranje vedno bilo o ustvarjalnem reševanju problemov in razmišljanju zunaj okvirjev.
 
-## Programski jeziki so kot različni okusi magije
+### 🧠 **Čas za preverjanje: Kako se počutiš?**
 
-Dobro, to bo zvenelo čudno, ampak zaupaj mi – programski jeziki so zelo podobni različnim vrstam glasbe. Pomisli: imaš jazz, ki je gladek in improvizacijski, rock, ki je močan in neposreden, klasiko, ki je elegantna in strukturirana, ter hip-hop, ki je kreativen in izrazit. Vsak slog ima svoj značaj, svojo skupnost strastnih oboževalcev, in vsak je popoln za različna razpoloženja in priložnosti.
+**Vzemi trenutek za razmislek:**
+- Ali ti zdaj ideja "dati navodila računalnikom" omogoča smisel?
+- Se lahko spomniš vsakodnevne naloge, ki bi jo rad avtomatiziral s programiranjem?
+- Katere vprašanja se ti vrtijo po glavi glede celotne te stvari s programiranjem?
 
-Programski jeziki delujejo popolnoma enako! Ne bi uporabil istega jezika za izdelavo zabavne mobilne igre, kot bi ga za obdelavo ogromnih količin podatkov o podnebju, tako kot ne bi igral death metala na tečaju joge (no, na večini tečajev joge! 😄).
+> **Zapomni si**: popolnoma normalno je, če so nekateri koncepti zdaj zamegljeni. Učenje programiranja je kot učenje novega jezika – potrebuje čas, da tvoj možgani vzpostavijo te nevronske povezave. Odlično delaš!
 
-Ampak tukaj je nekaj, kar me vedno znova osupne: ti jeziki so kot najbolj potrpežljiv, briljanten tolmač na svetu, ki sedi tik ob tebi. Svoje ideje lahko izraziš na način, ki se zdi naraven tvojemu človeškemu umu, oni pa opravijo vso neverjetno zapleteno delo prevajanja tega v 1 in 0, ki jih računalniki dejansko razumejo. To je kot imeti prijatelja, ki je popolnoma tekoče vešč tako "človeške kreativnosti" kot "računalniške logike" – in nikoli se ne utrudi, nikoli ne potrebuje odmora za kavo in te nikoli ne obsoja, če dvakrat vprašaš isto vprašanje!
+## Programske jezike lahko primerjamo z različnimi okusi magije
 
-### Priljubljeni programski jeziki in njihova uporaba
+V redu, to bo zvenelo čudno, a vztrajaj – programski jeziki so zelo podobni različnim zvrstem glasbe. Pomisli: imaš jazz, ki je gladek in improvizacijski, rock, ki je močan in neposreden, klasiko, ki je eleganten in strukturiran, in hip-hop, ki je ustvarjalen in izrazen. Vsak slog ima svoj vibe, svojo skupnost strastnih oboževalcev in vsak je popoln za različna razpoloženja in priložnosti.
 
-| Jezik | Najboljše za | Zakaj je priljubljen |
-|-------|--------------|-----------------------|
-| **JavaScript** | Spletni razvoj, uporabniški vmesniki | Deluje v brskalnikih in omogoča interaktivne spletne strani |
-| **Python** | Podatkovna znanost, avtomatizacija, AI | Enostaven za branje in učenje, močne knjižnice |
+Programski jeziki delujejo povsem enako! Ne bi uporabil istega jezika za izdelavo zabavne mobilne igre, kot bi ga za obdelavo ogromnih količin klimatskih podatkov, tako kot ne bi igral death metal na jogo (no, vsaj v večini joga urnikov ne! 😄).
+
+Ampak to, kar me vedno preseneča: ti jeziki so kot najbolj potrpežljiv, briljanten tolmač na svetu, ki sedi poleg tebe. Izraziš svoje ideje na način, ki je tvojemu človeškemu umu povsem naraven, oni pa opravijo vso izjemno kompleksno delo pretvorbe tega v 1 in 0, ki jih računalnik dejansko govori. Je kot prijatelj, ki je popolnoma tekoč v obeh: "človeška ustvarjalnost" in "računalniška logika" – pa se nikoli ne utrudi, ne potrebuje kavnih odmorov in te nikoli ne obsoja, če vprašaš isto vprašanje dvakrat!
+
+### Priljubljeni programski jeziki in njihove uporabe
+
+```mermaid
+mindmap
+  root((Programski Jeziki))
+    Spletni Razvoj
+      JavaScript
+        Čarovnija Vmesnika
+        Interaktivne Spletne Strani
+      TypeScript
+        JavaScript + Tipi
+        Poslovne Aplikacije
+    Podatki & AI
+      Python
+        Podatkovna Znanost
+        Strojno Učenje
+        Avtomatizacija
+      R
+        Statistika
+        Raziskave
+    Mobilne Aplikacije
+      Java
+        Android
+        Poslovno
+      Swift
+        iOS
+        Apple Ekosistem
+      Kotlin
+        Moderni Android
+        Večplatformno
+    Sistemi & Zmogljivost
+      C++
+        Igre
+        Kritično Za Zmogljivost
+      Rust
+        Varnost Pomnilnika
+        Sistemsko Programiranje
+      Go
+        Oblačne Storitev
+        Razširljiv Backend
+```
+| Jezik | Najbolj za | Zakaj je priljubljen |
+|----------|----------|------------------|
+| **JavaScript** | Spletni razvoj, uporabniški vmesniki | Teče v brskalnikih in poganja interaktivne spletne strani |
+| **Python** | Znanost podatkov, avtomatizacija, AI | Enostaven za branje in učenje, zmogljive knjižnice |
 | **Java** | Poslovne aplikacije, Android aplikacije | Neodvisen od platforme, robusten za velike sisteme |
-| **C#** | Windows aplikacije, razvoj iger | Močna podpora ekosistema Microsoft |
-| **Go** | Oblak storitve, zaledni sistemi | Hiter, preprost, zasnovan za sodobno računalništvo |
+| **C#** | Windows aplikacije, razvoj iger | Močna Microsoftova ekosistem podpora |
+| **Go** | Oblak storitve, backend sistemi | Hiter, preprost, zasnovan za sodobno računalništvo |
 
-### Visokonivojski vs. nizkonivojski jeziki
+### Jeziki višje ravni proti nižji ravni
 
-Dobro, to je bil koncept, ki mi je resnično zmešal glavo, ko sem začel učiti, zato bom delil analogijo, ki mi je končno pomagala razumeti – in resnično upam, da bo pomagala tudi tebi!
+V redu, to je bil iskreno koncept, ki mi je prvič zmešal možgane, zato bom delil analogijo, ki mi je končno odprla oči – in res upam, da pomaga tudi tebi!
 
-Predstavljaj si, da obiščeš državo, kjer ne govoriš jezika, in nujno moraš najti najbližjo stranišče (vsi smo že bili tam, kajne? 😅):
+Predstavljaj si, da si obiskoval država, kjer ne znaš jezika in obupno potrebuješ najbližjo stranišče (vsi smo že bili tam, kajne? 😅):
 
-- **Nizkonivojsko programiranje** je kot da se naučiš lokalnega narečja tako dobro, da se lahko pogovarjaš z babico, ki prodaja sadje na vogalu, z uporabo kulturnih referenc, lokalnega slenga in notranjih šal, ki jih razumejo le domačini. Zelo impresivno in neverjetno učinkovito... če si slučajno tekoč! Ampak precej preobremenjujoče, ko samo poskušaš najti stranišče.
+- **Programiranje na nizki ravni** je kot učenje lokalnega narečja tako dobro, da lahko klepetaš s staro mamo, ki na vogalu prodaja sadje, uporabiš kulturne reference, domače besede in notranje šale, ki jih razume samo nekdo, ki je tam odraščal. Super impresivno in zelo učinkovito... če si slučajno tekoč! A precej zmedeno, če le iščeš stranišče.
 
-- **Visokonivojsko programiranje** je kot da imaš tistega neverjetnega lokalnega prijatelja, ki te preprosto razume. Lahko rečeš "Res moram najti stranišče" v navadni slovenščini, in on poskrbi za vse kulturne prevode ter ti da navodila na način, ki ti popolnoma ustreza.
+- **Programiranje na visoki ravni** je kot imeti odličnega lokalnega prijatelja, ki te povsem razume. Lahko rečeš "Res nujno rabim stranišče" v običajni angleščini, on pa poskrbi za vso kulturno prevajanje in ti da napotke, ki popolnoma ustrezajo tvojemu nemestnemu umu.
 
-V programskih izrazih:
-- **Nizkonivojski jeziki** (kot sta Assembly ali C) ti omogočajo izjemno podrobne pogovore z dejansko strojno opremo računalnika, vendar moraš razmišljati kot stroj, kar je... no, recimo, da je to precej velik miselni preskok!
-- **Visokonivojski jeziki** (kot so JavaScript, Python ali C#) ti omogočajo razmišljanje kot človek, medtem ko oni poskrbijo za vse strojne izraze v ozadju. Poleg tega imajo neverjetno prijazne skupnosti, polne ljudi, ki se spomnijo, kako je bilo, ko so bili novi, in resnično želijo pomagati!
+V programerskih izrazih:
+- **Jeziki nizke ravni** (kot Assembly ali C) ti dovoljujejo izjemno podrobne pogovore z dejansko strojno opremo računalnika, vendar moraš razmišljati kot stroj, kar je... no, rekel bom, da je prava velika sprememba načina razmišljanja!
+- **Jeziki visoke ravni** (kot JavaScript, Python ali C#) ti dovoljujejo razmišljati kot človek, medtem ko oni skrbijo za ves računalniški žargon v ozadju. Poleg tega imajo zelo prijazne skupnosti, polne ljudi, ki si zapomnijo, kako je bilo biti nov, in resnično želijo pomagati!
 
-Ugani, katere ti bom predlagal za začetek? 😉 Visokonivojski jeziki so kot pomožna kolesa, ki jih nikoli ne želiš odstraniti, ker naredijo celotno izkušnjo toliko bolj prijetno!
+Uganil boš, katere ti bom predlagal za začetek? 😉 Jeziki visoke ravni so kot pomožne kolesce, ki jih nikoli ne želiš sneti, ker naredijo celotno izkušnjo tako veliko bolj prijetno!
 
-### Naj ti pokažem, zakaj so visokonivojski jeziki toliko prijaznejši
+```mermaid
+flowchart TB
+    A["👤 Človeška misel:<br/>'Želim izračunati Fibonačijeva števila'"] --> B{Izberi raven jezika}
+    
+    B -->|Visoka raven| C["🌟 JavaScript/Python<br/>Enostavno za branje in pisanje"]
+    B -->|Nizka raven| D["⚙️ Assemberski/C<br/>Neposredni nadzor strojne opreme"]
+    
+    C --> E["📝 Piši: fibonacci(10)"]
+    D --> F["📝 Piši: mov r0,#00<br/>sub r0,r0,#01"]
+    
+    E --> G["🤖 Razumevanje računalnika:<br/>Prevajalnik obvladuje kompleksnost"]
+    F --> G
+    
+    G --> H["💻 Enak rezultat:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
+    
+    style C fill:#e1f5fe
+    style D fill:#fff3e0
+    style H fill:#e8f5e8
+```
+### Naj ti pokažem, zakaj so jeziki visoke ravni toliko bolj prijazni
 
-Dobro, pokazal ti bom nekaj, kar popolnoma demonstrira, zakaj sem se zaljubil v visokonivojske jezike, ampak najprej – obljubi mi nekaj. Ko vidiš prvi primer kode, ne paničari! Namenoma je videti zastrašujoče. Točno to je poanta, ki jo želim poudariti!
+V redu, pokazal ti bom nekaj, kar popolnoma razloži, zakaj sem se zaljubil v jezike visoke ravni, a najprej – obljubi mi nekaj. Ko boš videl prvi primer kode, ne paničari! Namenjeno je, da izgleda zastrašujoče. Točno to hočem povedati!
 
-Pogledali bomo popolnoma isto nalogo, napisano v dveh popolnoma različnih slogih. Obe ustvarita tisto, kar se imenuje Fibonacci zaporedje – to je čudovit matematični vzorec, kjer je vsako število vsota dveh predhodnih: 0, 1, 1, 2, 3, 5, 8, 13... (Zanimivost: ta vzorec najdeš dobesedno povsod v naravi – spirale sončničnih semen, vzorci storžev, celo način, kako se oblikujejo galaksije!)
+Pogledali bomo isto nalogo, napisano v dveh popolnoma različnih stilih. Oba ustvarjata t.i. Fibonacci zaporedje – to je ta čudoviti matematični vzorec, kjer je vsak naslednji člen vsota dveh prejšnjih: 0, 1, 1, 2, 3, 5, 8, 13 ... (zabavno dejstvo: ta vzorec najdeš povsod v naravi – spirale sončničnih semen, vzorce storžev, celo oblikovanje galaksij!)
 
-Pripravljen, da vidiš razliko? Gremo!
+Pripravljen za razliko? Gremo!
 
-**Visokonivojski jezik (JavaScript) – Prijazen za ljudi:**
+**Jezik visoke ravni (JavaScript) – Prijazen do ljudi:**
 
 ```javascript
-// Step 1: Basic Fibonacci setup
+// 1. korak: Osnovna nastavitev Fibonaccija
 const fibonacciCount = 10;
 let current = 0;
 let next = 1;
@@ -108,32 +192,32 @@ let next = 1;
 console.log('Fibonacci sequence:');
 ```
 
-**Kaj ta koda počne:**
-- **Deklarira** konstanto za določitev, koliko Fibonacci števil želimo ustvariti
-- **Inicializira** dve spremenljivki za sledenje trenutnemu in naslednjemu številu v zaporedju
-- **Nastavi** začetne vrednosti (0 in 1), ki določajo Fibonacci vzorec
-- **Prikaže** sporočilo glave za identifikacijo našega izhoda
+**To koda naredi:**
+- **Definira** konstanto za določitev, koliko Fibonacci števil želimo generirati
+- **Inicializira** dve spremenljivki za sledenje trenutnim in naslednjim številom v zaporedju
+- **Nastavi** začetne vrednosti (0 in 1), ki določata Fibonacci vzorec
+- **Prikaže** glavno sporočilo za identifikacijo izhoda
 
 ```javascript
-// Step 2: Generate the sequence with a loop
+// Korak 2: Ustvari zaporedje s pomočjo zanke
 for (let i = 0; i < fibonacciCount; i++) {
   console.log(`Position ${i + 1}: ${current}`);
   
-  // Calculate next number in sequence
+  // Izračunaj naslednjo številko v zaporedju
   const sum = current + next;
   current = next;
   next = sum;
 }
 ```
 
-**Razčlenitev dogajanja:**
-- **Zanka** skozi vsako pozicijo v našem zaporedju z uporabo `for` zanke
-- **Prikaže** vsako število z njegovo pozicijo z uporabo predloge za formatiranje
-- **Izračuna** naslednje Fibonacci število z dodajanjem trenutnih in naslednjih vrednosti
-- **Posodobi** naše sledilne spremenljivke za prehod na naslednjo iteracijo
+**Razčlenitev dogajanja tukaj:**
+- **Zanka** za vsak položaj v zaporedju s pomočjo `for` zanke
+- **Prikaže** vsak člen z njegovo pozicijo z uporabo oblikovanja predloge niza
+- **Izračuna** naslednje Fibonacci število z dodajanjem trenutne in naslednje vrednosti
+- **Posodobi** spremenljivke za sledenje, da se premaknemo na naslednji korak
 
 ```javascript
-// Step 3: Modern functional approach
+// Korak 3: Sodobni funkcionalni pristop
 const generateFibonacci = (count) => {
   const sequence = [0, 1];
   
@@ -144,18 +228,18 @@ const generateFibonacci = (count) => {
   return sequence;
 };
 
-// Usage example
+// Primer uporabe
 const fibSequence = generateFibonacci(10);
 console.log(fibSequence);
 ```
 
-**V zgornjem primeru smo:**
-- **Ustvarili** ponovno uporabno funkcijo z uporabo sodobne sintakse puščičnih funkcij
-- **Zgradili** array za shranjevanje celotnega zaporedja namesto prikazovanja enega po enega
-- **Uporabili** indeksiranje arraya za izračun vsakega novega števila iz prejšnjih vrednosti
-- **Vrnil** celotno zaporedje za prilagodljivo uporabo v drugih delih našega programa
+**V zgornjem smo:**
+- **Ustvarili** ponovno uporabno funkcijo z uporabo moderne sintakse puščice
+- **Zgradili** polje za shranjevanje celotnega zaporedja namesto prikazovanja po posameznih členih
+- **Uporabili** indeksiranje polja za izračunavanje vsakega novega člena iz prejšnjih vrednosti
+- **Vrnil** celotno zaporedje za prilagodljivo uporabo v drugih delih programa
 
-**Nizkonivojski jezik (ARM Assembly) – Prijazen za računalnik:**
+**Jezik nizke ravni (ARM Assembly) – Prijazen do računalnika:**
 
 ```assembly
  area ascen,code,readonly
@@ -182,62 +266,63 @@ back add r0,r1
  end
 ```
 
-Opazi, kako JavaScript verzija bere skoraj kot angleška navodila, medtem ko Assembly verzija uporablja skrivnostne ukaze, ki neposredno nadzorujejo procesor računalnika. Obe dosežeta popolnoma isto nalogo, vendar je visokonivojski jezik veliko lažje razumeti, napisati in vzdrževati.
+Opazi, kako verzija JavaScript bere skoraj kot angleška navodila, medtem ko verzija Assembly uporablja skrivnostne ukaze, ki neposredno nadzorujejo procesor računalnika. Oba opravita enako nalogo, a je jezik visoke ravni veliko lažji za ljudi za razumevanje, pisanje in vzdrževanje.
 
 **Ključne razlike, ki jih boš opazil:**
-- **Berljivost**: JavaScript uporablja opisna imena, kot je `fibonacciCount`, medtem ko Assembly uporablja skrivnostne oznake, kot sta `r0`, `r1`
-- **Komentarji**: Visokonivojski jeziki spodbujajo pojasnjevalne komentarje, ki naredijo kodo samodokumentacijsko
-- **Struktura**: Logični tok JavaScripta ustreza načinu, kako ljudje razmišljajo o problemih korak za korakom
-- **Vzdrževanje**: Posodabljanje JavaScript verzije za različne zahteve je enostavno in jasno
-✅ **O Fibonacci zaporedju**: Ta čudoviti vzorec števil (kjer je vsako število enako vsoti prejšnjih dveh: 0, 1, 1, 2, 3, 5, 8...) se pojavlja dobesedno *povsod* v naravi! Najdete ga v spiralah sončnic, vzorcih storžev, krivuljah školjk nautilusa in celo v načinu, kako rastejo veje dreves. Resnično osupljivo je, kako nam matematika in programiranje pomagata razumeti in poustvariti vzorce, ki jih narava uporablja za ustvarjanje lepote!
+- **Berljivost**: JavaScript uporablja opisna imena kot `fibonacciCount`, medtem ko Assembly uporablja skrivnostne oznake kot `r0`, `r1`
+- **Komentarji**: Visokonivojski jeziki spodbujajo pojasnjevalne komentarje, ki naredijo kodo samodokumentirajočo
+- **Struktura**: Logični tok JavaScripta sovpada s tem, kako ljudje razmišljajo o problemih korak za korakom
+- **Vzdrževanje**: Posodabljanje JavaScript različice za različne zahteve je preprosto in jasno
+
+✅ **O zaporedju Fibonaccijevih števil**: Ta popolnoma čudovit vzorec števil (kjer je vsako število vsota dveh predhodnih: 0, 1, 1, 2, 3, 5, 8...) se doslovno pojavlja *povsod* v naravi! Najdete ga v spiralah sončnic, vzorcih storžev, načinu zvijanja školjk nautilus in celo v rasti vej dreves. Res je osupljivo, kako nam matematika in koda pomagata razumeti in ustvarjati vzorce, ki jih narava uporablja za ustvarjanje lepote!
 
 
 ## Gradniki, ki ustvarjajo čarovnijo
 
-Dobro, zdaj ko ste videli, kako izgledajo programski jeziki v praksi, razčlenimo osnovne dele, ki sestavljajo dobesedno vsak program, ki je bil kdaj napisan. Pomislite na te dele kot na bistvene sestavine vašega najljubšega recepta – ko boste razumeli, kaj vsak od njih počne, boste lahko brali in pisali kodo v skoraj katerem koli jeziku!
+Prav, zdaj ko ste videli, kako programski jeziki izgledajo v akciji, razčlenimo temeljne dele, ki sestavljajo doslovno vsak program, kar je bil kdaj napisan. Predstavljajte si jih kot bistvene sestavine v vaši najljubši jedi – ko boste razumeli, kaj vsaka po vrsti počne, boste znali brati in pisati kodo v skoraj vsakem jeziku!
 
-To je nekako podobno učenju slovnice programiranja. Se spomnite, ko ste v šoli učili o samostalnikih, glagolih in kako sestaviti stavke? Programiranje ima svojo različico slovnice, ki je iskreno veliko bolj logična in prizanesljiva kot angleška slovnica! 😄
+To je nekako kot učenje slovnice programiranja. Se spomnite šolskih dni, ko ste se učili o samostalnikih, glagolih in kako sestaviti stavke? Programiranje ima svojo različico slovnice, in iskreno, je veliko bolj logična in odpuščajoča kot kdajkoli angleška slovnica! 😄
 
-### Stavki: Navodila korak za korakom
+### Ukazi: Navodila korak za korakom
 
-Začnimo z **stavki** – ti so kot posamezni stavki v pogovoru z vašim računalnikom. Vsak stavek računalniku pove, naj naredi nekaj specifičnega, podobno kot dajete navodila: "Tu zavij levo," "Ustavi se pri rdeči luči," "Parkiraj na tistem mestu."
+Začnimo z **ukazi** – ti so kot posamezni stavki v pogovoru z vašim računalnikom. Vsak ukaz računalniku sporoči, naj naredi eno specifično stvar, podobno kot da bi dajali navodila: "Zavij levo tukaj," "Ustavi na rdeči luči," "Parkiraj na tistem mestu."
 
-Kar mi je všeč pri stavkih, je, kako berljivi so običajno. Poglejte to:
+Kar obožujem pri ukazih je, kako običajno berljivi so. Poglejte tole:
 
 ```javascript
-// Basic statements that perform single actions
+// Osnovne izjave, ki izvajajo posamezna dejanja
 const userName = "Alex";                    
 console.log("Hello, world!");              
 const sum = 5 + 3;                         
 ```
 
-**Kaj ta koda počne:**
-- **Deklarira** konstantno spremenljivko za shranjevanje uporabnikovega imena
+**To koda naredi:**
+- **Deklairira** konstanto za shranjevanje uporabnikovega imena
 - **Prikaže** pozdravno sporočilo na konzoli
 - **Izračuna** in shrani rezultat matematične operacije
 
 ```javascript
-// Statements that interact with web pages
+// Izjave, ki sodelujejo z spletnimi stranmi
 document.title = "My Awesome Website";      
 document.body.style.backgroundColor = "lightblue";
 ```
 
-**Korak za korakom, kaj se dogaja:**
-- **Spremeni** naslov spletne strani, ki se pojavi na zavihku brskalnika
-- **Spremeni** barvo ozadja celotnega telesa strani
+**Korak za korakom, kar se dogaja:**
+- **Spremeni** naslov spletne strani, ki se prikaže v zavihku brskalnika
+- **Zamenja** barvo ozadja celotnega telesa strani
 
-### Spremenljivke: Spominski sistem vašega programa
+### Spremenljivke: Sistem pomnjenja vašega programa
 
-Dobro, **spremenljivke** so iskreno eden mojih najljubših konceptov za poučevanje, ker so tako podobne stvarem, ki jih že vsak dan uporabljate!
+Prav, **spremenljivke** so iskreno ena mojih najljubših konceptov za poučevati, ker so tako podobne stvarem, ki jih vsak dan že uporabljate!
 
-Pomislite na seznam stikov na vašem telefonu. Ne pomnite telefonskih številk vseh – namesto tega shranite "Mama," "Najboljši prijatelj" ali "Picerija, ki dostavlja do 2. ure zjutraj" in pustite telefonu, da si zapomni dejanske številke. Spremenljivke delujejo popolnoma enako! So kot označene posode, kjer vaš program lahko shrani informacije in jih kasneje pridobi z uporabo imena, ki dejansko ima smisel.
+Pomislite za trenutek na seznam stikov v telefonu. Ne pomnite vseh telefonskih številk na pamet – raje shranite "Mami," "Najboljši prijatelj" ali "Picerija, ki dostavlja do 2. ure zjutraj" in vaš telefon si zapomni prave številke. Spremenljivke delujejo na povsem enak način! So kot označene posode, kamor vaš program lahko shrani informacije in jih pozneje pridobi z imenom, ki ima smisel.
 
-Tukaj je nekaj res kul: spremenljivke se lahko spreminjajo, medtem ko vaš program teče (od tod ime "spremenljivka" – vidite, kaj so naredili?). Tako kot bi posodobili kontakt za picerijo, ko odkrijete še boljšo, se lahko spremenljivke posodabljajo, ko vaš program pridobi nove informacije ali ko se situacije spremenijo!
+Tukaj je res kul: spremenljivke se lahko spreminjajo med tekom programa (od tod tudi ime "spremenljivka" – vidite, kaj so naredili?). Tako kot lahko posodobite kontakt pizzerije, ko odkrijete še boljšo možnost, se spremenljivke lahko posodabljajo, ko vaš program pridobiva nove podatke ali ko se situacije spreminjajo!
 
-Naj vam pokažem, kako čudovito preprosto je to lahko:
+Poglejmo, kako lepo preprosto je to lahko:
 
 ```javascript
-// Step 1: Creating basic variables
+// Korak 1: Ustvarjanje osnovnih spremenljivk
 const siteName = "Weather Dashboard";        
 let currentWeather = "sunny";               
 let temperature = 75;                       
@@ -245,13 +330,13 @@ let isRaining = false;
 ```
 
 **Razumevanje teh konceptov:**
-- **Shranjevanje** nespremenljivih vrednosti v `const` spremenljivke (kot ime strani)
-- **Uporaba** `let` za vrednosti, ki se lahko spreminjajo skozi program
-- **Dodeljevanje** različnih tipov podatkov: nizov (besedilo), številk in logičnih vrednosti (true/false)
-- **Izbira** opisnih imen, ki pojasnjujejo, kaj vsaka spremenljivka vsebuje
+- **Shranjuje** nespremenljive vrednosti v `const` spremenljivkah (kot je ime strani)
+- **Uporablja** `let` za vrednosti, ki se lahko spreminjajo skozi program
+- **Dodeli** različne podatkovne tipe: nize (besedilo), številke in boolean (true/false)
+- **Izbere** opisna imena, ki pojasnijo, kaj posamezna spremenljivka vsebuje
 
 ```javascript
-// Step 2: Working with objects to group related data
+// Korak 2: Delo z objekti za združevanje sorodnih podatkov
 const weatherData = {                       
   location: "San Francisco",
   humidity: 65,
@@ -260,49 +345,49 @@ const weatherData = {
 ```
 
 **V zgornjem primeru smo:**
-- **Ustvarili** objekt za združevanje povezanih informacij o vremenu
-- **Organizirali** več kosov podatkov pod eno ime spremenljivke
-- **Uporabili** pare ključ-vrednost za jasno označevanje vsakega kosa informacij
+- **Ustvarili** objekt za skupno upravljanje povezanih vremenskih podatkov
+- **Organizirali** več podatkov pod enim imenom spremenljivke
+- **Uporabili** pare ključ-vrednost za jasno označevanje posameznih informacij
 
 ```javascript
-// Step 3: Using and updating variables
+// Korak 3: Uporaba in posodabljanje spremenljivk
 console.log(`${siteName}: Today is ${currentWeather} and ${temperature}°F`);
 console.log(`Wind speed: ${weatherData.windSpeed} mph`);
 
-// Updating changeable variables
+// Posodabljanje spremenljivk, ki se lahko spreminjajo
 currentWeather = "cloudy";                  
 temperature = 68;                          
 ```
 
-**Razumimo vsak del:**
-- **Prikaz** informacij z uporabo predlognih literarnih izrazov s sintakso `${}`
-- **Dostop** do lastnosti objekta z uporabo točkovne notacije (`weatherData.windSpeed`)
-- **Posodobitev** spremenljivk, deklariranih z `let`, da odražajo spreminjajoče se pogoje
-- **Kombiniranje** več spremenljivk za ustvarjanje smiselnih sporočil
+**Razumimo posamezen del:**
+- **Prikazali** informacije s predlogami nizov z `${}` sintakso
+- **Dostopali** do lastnosti objekta z notacijo s piko (`weatherData.windSpeed`)
+- **Posodobili** spremenljivke deklarirane z `let`, da odražajo spreminjajoče se pogoje
+- **Združili** več spremenljivk za ustvarjanje smiselnim sporočil
 
 ```javascript
-// Step 4: Modern destructuring for cleaner code
+// Korak 4: Moderna destrukturacija za čistejšo kodo
 const { location, humidity } = weatherData; 
 console.log(`${location} humidity: ${humidity}%`);
 ```
 
-**Kaj morate vedeti:**
-- **Izvlečenje** specifičnih lastnosti iz objektov z uporabo destrukturirajoče dodelitve
-- **Ustvarjanje** novih spremenljivk samodejno z istimi imeni kot ključi objektov
-- **Poenostavitev** kode z izogibanjem ponavljajoči se točkovni notaciji
+**Kar morate vedeti:**
+- **Izluščite** specifične lastnosti iz objektov z razstavljanjem (destructuring assignment)
+- **Ustvarite** nove spremenljivke samodejno z enakimi imeni kot ključi objekta
+- **Poenostavite** kodo z izogibanjem ponavljajoči se notaciji s piko
 
-### Tok nadzora: Naučite svoj program razmišljati
+### Krmilni tok: Učite svoj program razmišljati
 
-Dobro, tukaj programiranje postane resnično osupljivo! **Tok nadzora** je v bistvu učenje vašega programa, kako sprejemati pametne odločitve, točno tako kot vi vsak dan, ne da bi o tem sploh razmišljali.
+Prav, tukaj programiranje postane resnično osupljivo! **Krmilni tok** je osnovno učenje programa, kako sprejemati pametne odločitve, enako kot jih vi vsak dan sprejemate, ne da bi sploh razmišljali.
 
-Predstavljajte si to: danes zjutraj ste verjetno razmišljali nekaj takega: "Če dežuje, bom vzel dežnik. Če je hladno, bom oblekel jakno. Če zamujam, bom preskočil zajtrk in vzel kavo na poti." Vaši možgani naravno sledijo tej logiki "če-potem" več desetkrat na dan!
+Predstavljajte si: danes zjutraj ste verjetno razmišljali nekaj v stilu "Če dežuje, vzamem dežnik. Če je hladno, oblečem jakno. Če se mudi, preskočim zajtrk in vzamem kavo na poti." Vaš možgani avtomatično sledijo tej logiki če-potem desetinekrat na dan!
 
-To je tisto, kar naredi programe inteligentne in žive, namesto da bi samo sledili nekemu dolgočasnemu, predvidljivemu scenariju. Dejansko lahko pogledajo situacijo, ocenijo, kaj se dogaja, in ustrezno reagirajo. To je kot da bi vašemu programu dali možgane, ki se lahko prilagajajo in sprejemajo odločitve!
+To je tisto, kar programe naredi inteligentne in žive, namesto da bi zgolj sledili dolgočasnemu, predvidljivemu skriptu. Lahko zares pogledajo situacijo, ocenijo, kaj se dogaja, in ustrezno reagirajo. Kot da programu podarite možgane, ki se lahko prilagajajo in sprejemajo odločitve!
 
-Želite videti, kako čudovito to deluje? Naj vam pokažem:
+Želite videti, kako lepo to deluje? Poglejte:
 
 ```javascript
-// Step 1: Basic conditional logic
+// Korak 1: Osnovna pogojna logika
 const userAge = 17;
 
 if (userAge >= 18) {
@@ -313,14 +398,14 @@ if (userAge >= 18) {
 }
 ```
 
-**Kaj ta koda počne:**
-- **Preveri**, ali uporabnikova starost ustreza zahtevi za glasovanje
+**Ta koda naredi:**
+- **Preveri**, ali uporabnikova starost izpolnjuje zahtevo za glasovanje
 - **Izvede** različne bloke kode glede na rezultat pogoja
-- **Izračuna** in prikaže, koliko časa do upravičenosti za glasovanje, če je mlajši od 18 let
-- **Ponuja** specifične, koristne povratne informacije za vsak scenarij
+- **Izračuna** in prikaže čas do upravičenosti glasovanja, če je pod 18 let
+- **Nudi** specifične, koristne povratne informacije za vsak primer
 
 ```javascript
-// Step 2: Multiple conditions with logical operators
+// Korak 2: Več pogojev z logičnimi operatorji
 const userAge = 17;
 const hasPermission = true;
 
@@ -334,24 +419,24 @@ if (userAge >= 18 && hasPermission) {
 ```
 
 **Razčlenitev dogajanja:**
-- **Kombinira** več pogojev z uporabo operatorja `&&` (in)
-- **Ustvari** hierarhijo pogojev z uporabo `else if` za več scenarijev
-- **Obravnava** vse možne primere z zadnjo izjavo `else`
-- **Ponuja** jasne, uporabne povratne informacije za vsak različni scenarij
+- **Združi** več pogojev z operatorjem `&&` (in)
+- **Ustvari** hierarhijo pogojev z `else if` za več scenarijev
+- **Obravnava** vse možne primere z zadnjim `else` stavkom
+- **Nudi** jasne in uporabne povratne informacije za vsako situacijo
 
 ```javascript
-// Step 3: Concise conditional with ternary operator
+// Korak 3: Jedrnat pogoj z ternarnim operatorjem
 const votingStatus = userAge >= 18 ? "Can vote" : "Cannot vote yet";
 console.log(`Status: ${votingStatus}`);
 ```
 
-**Kaj si morate zapomniti:**
-- **Uporaba** ternarnega operatorja (`? :`) za preproste pogoje z dvema možnostma
-- **Pisanje** pogoja najprej, sledi `?`, nato rezultat za true, nato `:`, nato rezultat za false
-- **Uporaba** tega vzorca, ko morate dodeliti vrednosti na podlagi pogojev
+**Kar si morate zapomniti:**
+- **Uporabite** ternarni operator (`? :`) za preproste dve možnosti
+- **Najprej napišete** pogoj, nato `?`, sledita resnični vrednosti in `:`, ki ji sledi vrednost za napačen pogoj
+- **Uporabite** ta vzorec za dodeljevanje vrednosti glede na pogoje
 
 ```javascript
-// Step 4: Handling multiple specific cases
+// Korak 4: Obdelava več specifičnih primerov
 const dayOfWeek = "Tuesday";
 
 switch (dayOfWeek) {
@@ -373,89 +458,131 @@ switch (dayOfWeek) {
 
 **Ta koda doseže naslednje:**
 - **Primerja** vrednost spremenljivke z več specifičnimi primeri
-- **Združuje** podobne primere skupaj (delovni dnevi proti vikendom)
-- **Izvede** ustrezen blok kode, ko je najdena ujemajoča se vrednost
-- **Vključuje** primer `default` za obravnavo nepričakovanih vrednosti
-- **Uporablja** izjave `break`, da prepreči nadaljevanje kode na naslednji primer
+- **Skupini** podobne primere (delovni dnevi proti vikendom)
+- **Izvede** ustrezen blok kode, ko najde ujemanje
+- **Vključi** `default` primer za nepričakovane vrednosti
+- **Uporabi** `break` stavke, da prepreči nadaljevanje kode v naslednjem primeru
 
-> 💡 **Resnična analogija**: Pomislite na tok nadzora kot na najbolj potrpežljiv GPS na svetu, ki vam daje navodila. Lahko reče: "Če je promet na Glavni ulici, pojdite po avtocesti. Če je gradnja na avtocesti, poskusite slikovito pot." Programi uporabljajo točno takšno vrsto pogojne logike, da inteligentno reagirajo na različne situacije in vedno uporabnikom ponudijo najboljšo možno izkušnjo.
+> 💡 **Resnični primer**: Razmislite o krmilnem toku kot o najbolj potrpežljivem GPS-u na svetu, ki vam daje navodila. Lahko bi rekli: "Če je promet na Glavni ulici, pojdi po avtocesti. Če gradbeni posegi zapirajo avtocesto, poskusi po panoramski poti." Programi uporabljajo isto vrsto pogojne logike, da inteligentno odzovejo na različne situacije in vedno uporabnikom zagotovijo najboljšo možno izkušnjo.
 
-✅ **Kaj sledi**: Imeli bomo absolutno zabavo, ko bomo še bolj poglobili te koncepte in nadaljevali to neverjetno potovanje skupaj! Trenutno se osredotočite na občutek navdušenja nad vsemi neverjetnimi možnostmi, ki so pred vami. Specifične veščine in tehnike se bodo naravno utrdile, ko bomo skupaj vadili – obljubim, da bo to veliko bolj zabavno, kot si morda mislite!
+### 🎯 **Preverjanje koncepta: Mojstrstvo gradnikov**
 
+**Poglejmo, kako dobro razumeš osnove:**
+- Ali znaš v svojih besedah pojasniti razliko med spremenljivko in ukazom?
+- Pomisli na realen primer, kjer bi uporabil odločitev če-potem (kot naš primer z glasovanjem)
+- Kaj te je eno o programerski logiki najbolj presenetilo?
 
-## Orodja za delo
+**Hitro povečanje samozavesti:**
+```mermaid
+flowchart LR
+    A["📝 Stavki<br/>(Navodila)"] --> B["📦 Spremenljivke<br/>(Shramba)"] --> C["🔀 Potek nadzora<br/>(Odločitve)"] --> D["🎉 Delujoč program!"]
+    
+    style A fill:#ffeb3b
+    style B fill:#4caf50
+    style C fill:#2196f3
+    style D fill:#ff4081
+```
+✅ **Kaj sledi:** Kmalu se bomo skupaj poglobili v te koncepte in imel boš pravo veselje! Za zdaj se osredotoči samo na tisti občutek navdušenja nad vsemi čudovitimi možnostmi, ki te čakajo. Specifične veščine in tehnike se bodo naravno razvijale, ko bomo skupaj vadili – obljubim, da bo to veliko bolj zabavno, kot si morda predstavljaš!
 
-Dobro, to je iskreno trenutek, ko sem tako navdušen, da se komaj zadržujem! 🚀 Govorili bomo o neverjetnih orodjih, ki vam bodo dala občutek, kot da ste pravkar dobili ključe digitalne vesoljske ladje.
+## Orodja stroke
 
-Veste, kako ima kuhar tiste popolno uravnotežene nože, ki se zdijo kot podaljšek njegovih rok? Ali kako ima glasbenik tisto eno kitaro, ki se zdi, da poje, ko se je dotakne? No, razvijalci imamo svojo različico teh čarobnih orodij, in tukaj je tisto, kar vas bo popolnoma osupnilo – večina jih je popolnoma brezplačnih!
+Prav, tukaj resnično poželim, da ne bi mogel zadržati navdušenja! 🚀 Slovarili bomo o neverjetnih orodjih, ki ti bodo dala občutek, kot da so ti pravkar izročili ključe do digitalnega vesoljskega plovila.
 
-Skoraj poskakujem na stolu, ko razmišljam o tem, da jih delim z vami, ker so popolnoma revolucionirali način, kako gradimo programsko opremo. Govorimo o asistentih za kodiranje, ki jih poganja umetna inteligenca in lahko pomagajo pisati vašo kodo (ne šalim se!), oblačnih okoljih, kjer lahko gradite celotne aplikacije dobesedno kjerkoli z Wi-Fi povezavo, in orodjih za odpravljanje napak, ki so tako sofisticirana, da so kot rentgenski vid za vaše programe.
+Veš, kako ima kuhar svoje popolno uravnotežene nože, ki so kot podaljški njegovih rok? Ali kako ima glasbenik tisto posebno kitaro, ki začne peti takoj, ko jo prime? No, razvijalci imamo svoje različice teh čarobnih orodij, in tukaj je nekaj, kar ti bo popolnoma odpihnilo pamet – večina je povsem brezplačnih!
 
-In tukaj je del, ki mi še vedno daje mravljince: to niso "začetniška orodja," ki jih boste prerasli. To so točno ista profesionalna orodja, ki jih razvijalci pri Googlu, Netflixu in tisti indie aplikacijski studiji, ki ga obožujete, uporabljajo prav ta trenutek. Počutili se boste kot pravi profesionalec, ko jih boste uporabljali!
+Skoraj ne morem sedeti pri miru, ko razmišljam o tem, da jih delim s tabo, ker so popolnoma spremenila način, kako gradimo programsko opremo. Govorimo o AI-podprtih pomočnikih za pisanje kode (resno!), oblačnih okoljih, kjer lahko razvijaš celotne aplikacije pravzaprav od kjerkoli, kjer je Wi-Fi, in orodjih za odpravljanje napak, ki so tako sofisticirana, da so kot rentgenski pogled v tvoje programe.
 
+In tukaj pride del, ki mi še vedno požene mravljince: to niso orodja samo za začetnike, ki jih boš kmalu prerastel. To so ista profesionalna orodja, ki jih trenutno uporabljajo razvijalci v Googlu, Netflixu in tudi v mali neodvisni studio aplikacije, ki jo obožuješ. Uporaba teh orodij te bo naredila za pravega profesionalca!
 
-### Urejevalniki kode in IDE-ji: Vaši novi digitalni najboljši prijatelji
+```mermaid
+graph TD
+    A["💡 Vaša ideja"] --> B["⌨️ Urejevalnik kode<br/>(VS Code)"] 
+    B --> C["🌐 Brskalniški DevTools<br/>(Testiranje in odpravljanje napak)"]
+    C --> D["⚡ Ukazna vrstica<br/>(Avtomatizacija in orodja)"]
+    D --> E["📚 Dokumentacija<br/>(Učenje in referenca)"]
+    E --> F["🚀 Osupljiva spletna aplikacija!"]
+    
+    B -.-> G["🤖 AI pomočnik<br/>(GitHub Copilot)"]
+    C -.-> H["📱 Preizkušanje naprav<br/>(Prilagodljiva zasnova)"]
+    D -.-> I["📦 Upravljalci paketov<br/>(npm, yarn)"]
+    E -.-> J["👥 Skupnost<br/>(Stack Overflow)"]
+    
+    style A fill:#fff59d
+    style F fill:#c8e6c9
+    style G fill:#e1f5fe
+    style H fill:#f3e5f5
+    style I fill:#ffccbc
+    style J fill:#e8eaf6
+```
+### Urejevalniki kode in IDE: tvoji novi digitalni najboljši prijatelji
 
-Pogovorimo se o urejevalnikih kode – ti bodo resnično postali vaši novi najljubši kraji za druženje! Pomislite nanje kot na vaše osebno svetišče za kodiranje, kjer boste preživeli večino svojega časa pri ustvarjanju in izpopolnjevanju svojih digitalnih stvaritev.
+Govorimo o urejevalnikih kode – ti bodo kmalu postali tvoja najljubša mesta za druženje! Predstavi si jih kot svoj osebni kotiček za kodiranje, kjer boš preživel največ časa ustvarjanja in izpopolnjevanja svojih digitalnih stvaritev.
 
-Ampak tukaj je tisto, kar je pri sodobnih urejevalnikih resnično čarobno: niso samo fancy urejevalniki besedila. So kot da bi imeli najbolj briljantnega, podpornega mentorja za kodiranje, ki sedi poleg vas 24/7. Ujamejo vaše tipkarske napake, preden jih sploh opazite, predlagajo izboljšave, zaradi katerih izgledate kot genij, pomagajo razumeti, kaj vsak kos kode počne, in nekateri celo predvidijo, kaj boste napisali, ter ponudijo, da dokončajo vaše misli!
+Pa poglej, kaj je pri sodobnih urejevalnikih najbolj čarobno: niso le navadni urejevalniki besedila. So kot najbolj briljantni, podpirajoči mentor kode, ki sedi poleg tebe 24/7. Ujameta tipkarske napake še preden jih opaziš, predlagata izboljšave, zaradi katerih zgledaš kot genij, pomagata razumeti, kaj vsak del kode počne, nekateri pa celo predvidijo, kaj boš napisal, in ponudijo, da dokončajo tvoje misli!
 
-Spomnim se, ko sem prvič odkril samodokončanje – dobesedno sem se počutil, kot da živim v prihodnosti. Začnete tipkati nekaj, in vaš urejevalnik reče: "Hej, ste morda mislili na to funkcijo, ki počne točno tisto, kar potrebujete?" To je kot imeti bralca misli kot svojega kodirnega prijatelja!
+Spomnim se, ko sem prvič odkril samodejno dopolnjevanje – imel sem občutek, da živim v prihodnosti. Začneš s pisanjem, pa ti urejevalnik reče: "Hej, si morda mislil to funkcijo, ki počne točno to, kar rabiš?" Kot da imaš bralca misli kot svojega kodiranja prijatelja!
 
-**Kaj naredi te urejevalnike tako neverjetne?**
+**Zakaj so ti urejevalniki tako neverjetni?**
 
-Sodobni urejevalniki kode ponujajo impresiven nabor funkcij, zasnovanih za povečanje vaše produktivnosti:
+Sodobni urejevalniki kode ponujajo impresiven nabor funkcij, ki povečajo tvojo produktivnost:
 
 | Funkcija | Kaj počne | Zakaj pomaga |
-|----------|-----------|--------------|
-| **Označevanje sintakse** | Barva različne dele vaše kode | Olajša branje kode in iskanje napak |
-| **Samodokončanje** | Predlaga kodo med tipkanjem | Pospeši kodiranje in zmanjša tipkarske napake |
-| **Orodja za odpravljanje napak** | Pomagajo najti in popraviti napake | Prihrani ure časa za odpravljanje težav |
-| **Razširitve** | Dodajo specializirane funkcije | Prilagodite svoj urejevalnik za katero koli tehnologijo |
-| **AI asistenti** | Predlagajo kodo in razlage | Pospešijo učenje in produktivnost |
+|---------|--------------|--------------|
+| **Poudarjanje sintakse** | Barva različne dele kode | Olajša branje kode in odkrivanje napak |
+| **Samodejno dopolnjevanje** | Predlaga kodo med pisanjem | Pospeši kodiranje in zmanjša tipkarske napake |
+| **Orodja za odpravljanje napak** | Pomaga najti in popraviti napake | Prihrani ure odpravljanja težav |
+| **Razširitve** | Dodajajo specializirane funkcije | Prilagodi urejevalnik za katerokoli tehnologijo |
+| **AI pomočniki** | Predlagajo kodo in pojasnila | Pospešujejo učenje in produktivnost |
 
-> 🎥 **Video vir**: Želite videti ta orodja v akciji? Oglejte si ta [video o orodjih za delo](https://youtube.com/watch?v=69WJeXGBdxg) za celovit pregled.
+> 🎥 **Video vir**: Želiš videti ta orodja v akciji? Oglej si [Video Orodja stroke](https://youtube.com/watch?v=69WJeXGBdxg) za celovit pregled.
 
 #### Priporočeni urejevalniki za spletni razvoj
 
-**[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (Brezplačno)
+**[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (brezplačen)
 - Najbolj priljubljen med spletnimi razvijalci
-- Odlična ekosistem razširitev
-- Vgrajen terminal in Git integracija
-- **Obvezne razširitve**:
-  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - Predlogi kode, ki jih poganja AI
+- Odličen ekosistem razširitev
+- Vgrajen terminal in integracija z Gitom
+- **Nepogrešljive razširitve**:
+  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI-podprti predlogi kode
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Sodelovanje v realnem času
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Samodejno oblikovanje kode
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Ujame tipkarske napake v vaši kodi
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Preprečevanje tipkarskih napak v kodi
 
-**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (Plačljivo, brezplačno za študente)
+**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (plačljivo, brezplačno za študente)
 - Napredna orodja za odpravljanje napak in testiranje
-- Inteligentno samodokončanje kode
+- Inteligentno dopolnjevanje kode
 - Vgrajen nadzor različic
 
-**IDE-ji v oblaku** (Različne cene)
-- [GitHub Codespaces](https://github.com/features/codespaces) - Celoten VS Code v vašem brskalniku
+**Oblačni IDE-ji** (različne cene)
+- [GitHub Codespaces](https://github.com/features/codespaces) - Celoten VS Code v brskalniku
 - [Replit](https://replit.com/) - Odlično za učenje in deljenje kode
-- [StackBlitz](https://stackblitz.com/) - Takojšnji, celovit spletni razvoj
+- [StackBlitz](https://stackblitz.com/) - Trenutni, poln spletni razvoj
 
-> 💡 **Nasvet za začetek**: Začnite z Visual Studio Code – je brezplačen, široko uporabljen v industriji in ima ogromno skupnost, ki ustvarja koristne vadnice in razširitve.
+> 💡 **Nasvet za začetek**: Začni z Visual Studio Code – je brezplačen, široko uporablja industrija in ima ogromno skupnost, ki ustvarja koristne vodiče in razširitve.
 
 
-### Spletni brskalniki: Vaš skrivni laboratorij za razvoj
+### Spletni brskalniki: tvoja skrivna razvojna laboratorija
 
-Dobro, pripravite se, da boste popolnoma osupnili! Veste, kako ste uporabljali brskalnike za brskanje po družbenih omrežjih in gledanje videov? No, izkaže se, da so ves ta čas skrivali neverjeten skrivni laboratorij za razvijalce, ki samo čaka, da ga odkrijete!
+Pripravi se, da ti bo misel povsem odpihnila! Veš, kako si brskalnike uporabljal za brskanje po družbenih omrežjih in gledanje videov? Izkaže se, da so ves ta čas skrivali neizmerno skrivno razvojno laboratorijo, ki samo čaka, da jo odkriješ!
 
-Vsakič, ko z desno tipko miške kliknete na spletno stran in izberete "Preglej element," odpirate skriti svet orodij za razvijalce, ki so iskreno bolj zmogljiva od nekaterih dragih programov, za katere sem včasih plačeval stotine evrov. To je kot odkritje, da vaša običajna kuhinja skriva profesionalni laboratorij za kuharje za skrivnim panelom!
+Vsakič, ko z desnim klikom klikneš na spletno stran in izbereš "Inspect Element" (Preveri element), odpreš skriti svet razvojnih orodij, ki so iskreno močnejša kot neka draga programska oprema, za katero sem nekdaj plačeval stotine evrov. To je kot odkriti, da je tvoja običajna kuhinja skrivala profesionalni kuharski laboratorij za skrivnim panelom!
+Prvič, ko mi je nekdo pokazal brskalniška DevTools orodja, sem preživel kar tri ure, ko sem samo klikoval naokoli in govoril: "POČAKAJ, TO LAHKO TUDI?!" Lahko namreč v realnem času urejaš katerokoli spletno stran, vidiš točno, kako hitro se vse nalaga, preizkusiš, kako tvoja stran izgleda na različnih napravah, in celo odpraviš napake v JavaScriptu kot pravi strokovnjak. To je naravnost osupljivo!
 
-Ko mi je nekdo prvič pokazal DevTools v brskalniku, sem porabil približno tri ure samo za klikanje in govorjenje "ČAKAJ, TO LAHKO NAREDI TUDI?!" Lahko dobesedno urejate katero koli spletno stran v realnem času, vidite, kako hitro se vse nalaga, testirate, kako vaša stran izgleda na različnih napravah, in celo odpravljate napake v JavaScriptu kot pravi profesionalec. To je resnično osupljivo!
+**Zakaj so brskalniki tvoja skrivna orožja:**
 
-**Zakaj so brskalniki vaše skrivno orožje:**
+Ko ustvarjaš spletno stran ali spletno aplikacijo, moraš videti, kako izgleda in deluje v resničnem svetu. Brskalniki ne prikazujejo samo tvojega dela, ampak nudijo tudi podrobne povratne informacije o zmogljivosti, dostopnosti in morebitnih težavah.
 
-Ko ustvarite spletno stran ali spletno aplikacijo, morate videti, kako izgleda in se obnaša v resničnem svetu. Brskalniki ne samo da prikazujejo vaše delo, ampak tudi zagotavljajo podrobne povratne informacije o zmogljivosti, dostopnosti in morebitnih tež
-| **Konzola** | Oglejte si sporočila o napakah in preizkusite JavaScript | Odpravljajte težave in eksperimentirajte s kodo |
-| **Monitor omrežja** | Spremljajte, kako se nalagajo viri | Optimizirajte zmogljivost in čas nalaganja |
-| **Preverjanje dostopnosti** | Testirajte vključujočo zasnovo | Poskrbite, da bo vaša stran delovala za vse uporabnike |
-| **Simulator naprav** | Predogled na različnih velikostih zaslonov | Testirajte odzivno zasnovo brez več naprav |
+#### Brskalniška orodja za razvijalce (DevTools)
+
+Sodobni brskalniki vključujejo celovite razvojne pakete:
+
+| Kategorija orodja | Kaj počne | Primer uporabe |
+|-------------------|-----------|----------------|
+| **Pregledovalnik elementov** | Ogled in urejanje HTML/CSS v realnem času | Prilagajanje slogov za takojšen rezultat |
+| **Konzola** | Ogled sporočil o napakah in testiranje JavaScripta | Odpravljanje napak in eksperimentiranje s kodo |
+| **Nadzornik omrežja** | Sledenje nalaganju virov | Optimizacija zmogljivosti in časov nalaganja |
+| **Preverjevalnik dostopnosti** | Testiranje vključujočega oblikovanja | Zagotavljanje delovanja strani za vse uporabnike |
+| **Simulator naprav** | Predogled na različnih velikostih zaslona | Preizkušanje odzivnega oblikovanja brez več naprav |
 
 #### Priporočeni brskalniki za razvoj
 
@@ -463,97 +590,101 @@ Ko ustvarite spletno stran ali spletno aplikacijo, morate videti, kako izgleda i
 - **[Firefox](https://developer.mozilla.org/docs/Tools)** - Odlična orodja za CSS Grid in dostopnost
 - **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** - Zgrajen na Chromiumu z Microsoftovimi razvojnimi viri
 
-> ⚠️ **Pomemben nasvet za testiranje**: Svoje spletne strani vedno testirajte v več brskalnikih! Kar deluje popolno v Chromu, je lahko videti drugače v Safariju ali Firefoxu. Profesionalni razvijalci testirajo v vseh večjih brskalnikih, da zagotovijo dosledno uporabniško izkušnjo.
+> ⚠️ **Pomemben nasvet za testiranje**: Vedno svoje spletne strani preizkusi v več brskalnikih! Kar popolno deluje v Chrome, lahko v Safariju ali Firefoxu izgleda drugače. Profesionalni razvijalci testirajo v vseh glavnih brskalnikih, da zagotovijo dosledno uporabniško izkušnjo.
 
-### Orodja ukazne vrstice: Vaša vrata do razvijalskih supermoči
 
-Priznajmo si, ko sem prvič videl ukazno vrstico – tisti strašljivi črni zaslon z utripajočim besedilom – sem si mislil: "Ne, absolutno ne! To izgleda kot nekaj iz hekerskega filma iz 80-ih, in jaz zagotovo nisem dovolj pameten za to!" 😅
+### Orodja ukazne vrstice: tvoja pot do razvijalskih supermoč
 
-Ampak tukaj je tisto, kar bi si želel, da bi mi takrat nekdo povedal, in kar vam zdaj povem: ukazna vrstica ni strašljiva – pravzaprav je kot neposreden pogovor z vašim računalnikom. Pomislite na to kot na razliko med naročanjem hrane prek elegantne aplikacije s slikami in meniji (kar je lepo in enostavno) ter obiskom vaše najljubše lokalne restavracije, kjer kuhar točno ve, kaj imate radi, in lahko pripravi nekaj popolnega, če mu rečete: "Preseneti me z nečim odličnim."
+Prav, pojdimo do popolnoma iskrenega trenutka o ukazni vrstici, ker želim, da to slišiš od nekoga, ki res razume. Ko sem jo prvič videl – samo ta strašni črni zaslon z utripajočim besedilom – sem si dejal: "Ne, nikakor ne! To izgleda kot nekaj iz hekerskega filma iz 80-ih in zagotovo nisem dovolj pameten za to!" 😅
 
-Ukazna vrstica je kraj, kamor se razvijalci zatečejo, da se počutijo kot pravi čarovniki. Vtipkate nekaj na videz čarobnih besed (v redu, to so samo ukazi, ampak vseeno se zdijo čarobni!), pritisnete enter in BUM – ustvarili ste celotne strukture projektov, namestili zmogljiva orodja z vsega sveta ali objavili svojo aplikacijo na internetu, da jo lahko vidi na milijone ljudi. Ko enkrat okusite to moč, je to resnično precej zasvojljivo!
+Ampak tukaj je, kar bi si želel, da bi mi takrat nekdo rekel in ti govorim zdaj: ukazna vrstica ni strašljiva – pravzaprav je kot neposreden pogovor s tvojim računalnikom. Pomisli nanjo kot na razliko med naročanjem hrane preko elegantne aplikacije s slikami in meniji (kar je lepo in enostavno) ter vstopom v tvojo najljubšo lokalno restavracijo, kjer kuhar natanko ve, kaj imaš rad, in ti pripravi nekaj popolnega, samo če rečeš "preseneti me z nečim neverjetnim."
 
-**Zakaj bo ukazna vrstica postala vaše najljubše orodje:**
+Ukazna vrstica je mesto, kjer razvijalci dobijo občutek, da so pravi čarovniki. Vpišeš nekaj na videz magičnih besed (okej, to so samo ukazi, ampak se zdijo magični!), pritisneš enter in BOOM – ustvariš celotno strukturo projekta, namestiš močna orodja z vsega sveta ali zaženeš svojo aplikacijo na internetu za milijone ljudi. Ko poskusiš prvič to moč, postaneš pošteno zasvojen!
 
-Čeprav so grafični vmesniki odlični za številne naloge, ukazna vrstica blesti pri avtomatizaciji, natančnosti in hitrosti. Mnoga razvojna orodja delujejo predvsem prek vmesnikov ukazne vrstice, in učenje njihove učinkovite uporabe lahko dramatično izboljša vašo produktivnost.
+**Zakaj bo ukazna vrstica tvoj najljubši pripomoček:**
+
+Medtem ko so grafični vmesniki odlični za veliko nalog, ukazna vrstica blesti pri avtomatizaciji, natančnosti in hitrosti. Mnogi razvojni pripomočki delujejo predvsem prek ukaznih vmesnikov, in učenje njihove učinkovite uporabe lahko močno izboljša tvojo produktivnost.
 
 ```bash
-# Step 1: Create and navigate to project directory
+# Korak 1: Ustvarite in se premaknite v imenik projekta
 mkdir my-awesome-website
 cd my-awesome-website
 ```
 
-**Kaj ta koda naredi:**
-- **Ustvari** novo mapo z imenom "my-awesome-website" za vaš projekt
-- **Premakne** se v novo ustvarjeno mapo, da začnete z delom
+**Tukaj je, kaj ta koda počne:**
+- **Ustvari** novo mapo z imenom "my-awesome-website" za tvoj projekt
+- **Vstopi** v pravkar ustvarjeno mapo, da začneš delati
 
 ```bash
-# Step 2: Initialize project with package.json
+# Korak 2: Inicializirajte projekt z datoteko package.json
 npm init -y
 
-# Install modern development tools
+# Namestite sodobna razvojna orodja
 npm install --save-dev vite prettier eslint
 npm install --save-dev @eslint/js
 ```
 
 **Korak za korakom, kaj se dogaja:**
-- **Inicializira** nov projekt Node.js z privzetimi nastavitvami z uporabo `npm init -y`
-- **Namesti** Vite kot sodobno orodje za gradnjo za hitro razvijanje in produkcijske gradnje
+- **Inicializira** nov Node.js projekt z privzetimi nastavitvami z `npm init -y`
+- **Namesti** Vite kot sodobno orodje za gradnjo za hiter razvoj in produktivne gradnje
 - **Doda** Prettier za samodejno oblikovanje kode in ESLint za preverjanje kakovosti kode
-- **Uporabi** zastavico `--save-dev`, da označi te odvisnosti kot samo za razvoj
+- **Uporabi** zastavico `--save-dev` za označitev teh kot razvojnih odvisnosti
 
 ```bash
-# Step 3: Create project structure and files
+# Korak 3: Ustvarite strukturo projekta in datoteke
 mkdir src assets
 echo '<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello World</h1></body></html>' > index.html
 
-# Start development server
+# Zaženite razvojni strežnik
 npx vite
 ```
 
-**V zgornjem primeru smo:**
-- **Organizirali** naš projekt z ustvarjanjem ločenih map za izvorno kodo in vire
+**Zgoraj smo:**
+- **Organizirali** svoj projekt z ustvarjanjem ločenih map za izvorno kodo in sredstva
 - **Generirali** osnovno HTML datoteko z ustrezno strukturo dokumenta
-- **Začeli** Vite strežnik za razvoj za samodejno osveževanje in zamenjavo modulov v živo
+- **Zagnali** razvojni strežnik Vite za živo osveževanje in zamenjavo modulov v živo
 
 #### Ključna orodja ukazne vrstice za spletni razvoj
 
-| Orodje | Namen | Zakaj ga potrebujete |
-|-------|-------|-----------------------|
-| **[Git](https://git-scm.com/)** | Nadzor različic | Sledite spremembam, sodelujte z drugimi, varnostno kopirajte svoje delo |
-| **[Node.js & npm](https://nodejs.org/)** | JavaScript runtime & upravljanje paketov | Poganjajte JavaScript zunaj brskalnikov, namestite sodobna razvojna orodja |
-| **[Vite](https://vitejs.dev/)** | Orodje za gradnjo & strežnik za razvoj | Izjemno hitro razvijanje z zamenjavo modulov v živo |
-| **[ESLint](https://eslint.org/)** | Kakovost kode | Samodejno poiščite in popravite težave v vašem JavaScriptu |
-| **[Prettier](https://prettier.io/)** | Oblikovanje kode | Ohranite svojo kodo dosledno oblikovano in berljivo |
+| Orodje | Namen | Zakaj ga potrebuješ |
+|--------|-------|--------------------|
+| **[Git](https://git-scm.com/)** | Upravljanje različic | Sledi spremembam, sodeluj z drugimi, varnostno kopiraj delo |
+| **[Node.js & npm](https://nodejs.org/)** | JavaScript okolje izvajanja & upravljanje paketov | Zaženi JavaScript zunaj brskalnikov, namesti sodobna razvojna orodja |
+| **[Vite](https://vitejs.dev/)** | Orodje za gradnjo & razvojni strežnik | Izjemno hiter razvoj z zamenjavo modulov v živo |
+| **[ESLint](https://eslint.org/)** | Kakovost kode | Samodejno najdi in odpravi težave v tvojem JavaScriptu |
+| **[Prettier](https://prettier.io/)** | Oblikovanje kode | Ohrani svojo kodo dosledno oblikovano in berljivo |
 
-#### Možnosti glede na platformo
+#### Platformno specifične možnosti
 
 **Windows:**
-- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Sodobna, funkcionalna terminalska aplikacija
-- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Zmogljivo okolje za skriptiranje
-- **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 - Tradicionalna ukazna vrstica za Windows
+- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Sodobni, z mnogimi funkcijami bogat terminal
+- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Močno skriptno okolje
+- **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 - Tradicionalna ukazna vrstica Windows
 
 **macOS:**
 - **[Terminal](https://support.apple.com/guide/terminal/)** 💻 - Vgrajena terminalska aplikacija
 - **[iTerm2](https://iterm2.com/)** - Izboljšan terminal z naprednimi funkcijami
 
 **Linux:**
-- **[Bash](https://www.gnu.org/software/bash/)** 💻 - Standardna Linux lupina
+- **[Bash](https://www.gnu.org/software/bash/)** 💻 - Standardni Linux lupina
 - **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** - Napreden terminalski emulator
 
 > 💻 = Prednameščeno v operacijskem sistemu
 
-> 🎯 **Učna pot**: Začnite z osnovnimi ukazi, kot so `cd` (sprememba mape), `ls` ali `dir` (seznam datotek) in `mkdir` (ustvarjanje mape). Vadite sodobne delovne ukaze, kot so `npm install`, `git status` in `code .` (odpre trenutno mapo v VS Code). Ko se boste počutili bolj samozavestni, boste naravno osvojili bolj napredne ukaze in tehnike avtomatizacije.
+> 🎯 **Pot učenja**: Začni z osnovnimi ukazi kot so `cd` (sprememba mape), `ls` ali `dir` (seznam datotek) in `mkdir` (ustvari mapo). Vadite z modernimi ukazi za delo kot `npm install`, `git status` in `code .` (odpre trenutno mapo v VS Code). Ko boš bolj vešč, boš naravno osvojil naprednejše ukaze in tehnike avtomatizacije.
 
-### Dokumentacija: Vaš mentor za učenje, ki je vedno na voljo
 
-Naj vam zaupam majhno skrivnost, ki vas bo pomirila glede začetniških korakov: tudi najbolj izkušeni razvijalci velik del svojega časa preživijo ob branju dokumentacije. In to ni zato, ker ne vedo, kaj počnejo – to je pravzaprav znak modrosti!
+### Dokumentacija: tvoj vedno dostopen učni mentor
 
-Pomislite na dokumentacijo kot na dostop do najbolj potrpežljivih, izkušenih učiteljev na svetu, ki so na voljo 24/7. Imate težavo ob 2. uri zjutraj? Dokumentacija je tam z virtualnim objemom in točno tistim odgovorom, ki ga potrebujete. Želite izvedeti več o kakšni novi funkciji, o kateri vsi govorijo? Dokumentacija vam bo pomagala s korak za korakom primeri. Poskušate razumeti, zakaj nekaj deluje tako, kot deluje? Uganili ste – dokumentacija je pripravljena, da vam to razloži na način, ki ga boste končno razumeli!
+Naj ti zaupam eno skrivnost, ki ti bo resnično olajšala občutek začetnika: tudi najbolj izkušeni razvijalci preživijo ogromno časa z branjem dokumentacije. In to ni zato, ker ne vedo, kaj delajo – pravzaprav je to znak modrosti!
+
+Dokumentacijo si predstavljaj kot dostop do najbolj potrpežljivih, izkušenih učiteljev na svetu, ki so ti na voljo 24/7. Zaglaviš pri problemu ob 2. uri zjutraj? Dokumentacija je tam z virtualnim toplim objemom in točno pravim odgovorom, ki ga potrebuješ. Želiš izvedeti nekaj o novi zanimivi funkciji, o kateri vsi govorijo? Dokumentacija te podpira z jasnimi primeri korak za korakom. Poskušaš razumeti, zakaj nekaj deluje tako, kot deluje? Uganil si – dokumentacija je pripravljena, da ti razloži na način, ki ti bo končno odprl oči!
+
+Nekaj, kar mi je popolnoma spremenilo pogled: spletni razvoj se odvija neverjetno hitro in nihče (mislim, nihče!) si ne zapomni vsega. Videl sem starejše razvijalce z več kot 15 leti izkušenj, kako iščejo osnovno sintakso in veš kaj? To ni sramotno – to je pametno! Ni stvar popolnega spomina, temveč vedeti, kje čim hitreje najti zanesljive odgovore in kako jih uporabiti.
 
 **Tu se zgodi prava čarovnija:**
 
-Profesionalni razvijalci velik del svojega časa posvetijo branju dokumentacije – ne zato, ker ne vedo, kaj počnejo, ampak ker se svet spletnega razvoja tako hitro spreminja, da je za ohranjanje aktualnosti potrebno nenehno učenje. Kakovostna dokumentacija vam pomaga razumeti ne le *kako* nekaj uporabiti, ampak tudi *zakaj* in *kdaj* to uporabiti.
+Profesionalni razvijalci veliko časa preživijo z branjem dokumentacije – ne zato, ker ne vedo, kaj delajo, ampak zato, ker se področje spletnega razvoja tako hitro razvija, da je potrebno stalno učenje, da ostanejo na tekočem. Izvrstna dokumentacija ti pomaga razumeti ne samo *kako* uporabiti nekaj, ampak tudi *zakaj* in *kdaj* to uporabiti.
 
 #### Ključni viri dokumentacije
 
@@ -566,92 +697,167 @@ Profesionalni razvijalci velik del svojega časa posvetijo branju dokumentacije 
 **[Web.dev](https://web.dev)** (Google)
 - Najboljše prakse sodobnega spletnega razvoja
 - Vodiči za optimizacijo zmogljivosti
-- Načela dostopnosti in vključujoče zasnove
-- Študije primerov iz resničnih projektov
+- Načela dostopnosti in vključujočega oblikovanja
+- Primeri iz resničnih projektov
 
 **[Microsoft Developer Documentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)**
-- Viri za razvoj brskalnika Edge
+- Razvojni viri za brskalnik Edge
 - Vodiči za progresivne spletne aplikacije
-- Vpogledi v razvoj na več platformah
+- Vpogledi v razvoj prek platform
 
 **[Frontend Masters Learning Paths](https://frontendmasters.com/learn/)**
-- Strukturirani učni načrti
-- Video tečaji od strokovnjakov iz industrije
-- Praktične vaje kodiranja
+- Strukture učnih poti
+- Video tečaji strokovnjakov iz industrije
+- Praktične vaje s kodo
 
-> 📚 **Strategija učenja**: Ne poskušajte si zapomniti dokumentacije – namesto tega se naučite, kako jo učinkovito uporabljati. Označite pogosto uporabljene reference in vadite uporabo funkcij iskanja za hitro iskanje specifičnih informacij.
+> 📚 **Strategija učenja**: Ne poskušaj na pamet naučiti dokumentacije – raje se nauči, kako jo učinkovito uporabljati. Dodaj si zaznamke pogosto uporabljenih referenc in vadite iskanje specifičnih informacij po ključnih besedah.
 
-✅ **Hrana za razmislek**: Tukaj je nekaj zanimivega za razmislek – kako mislite, da se orodja za izdelavo spletnih strani (razvoj) razlikujejo od orodij za oblikovanje njihovega videza (oblikovanje)? To je kot razlika med arhitektom, ki oblikuje čudovito hišo, in izvajalcem, ki jo dejansko zgradi. Oboje je ključnega pomena, vendar potrebujeta različne sklope orodij! Takšno razmišljanje vam bo resnično pomagalo videti širšo sliko, kako spletne strani zaživijo.
+### 🔧 **Preverjanje obvladovanja orodij: Kaj te najbolj nagovarja?**
 
-## Izziv GitHub Copilot Agent 🚀
+**Vzemimo trenutek za razmislek:**
+- Katero orodje te najbolj vznemirja, da ga preizkusiš najprej? (Ni napačnih odgovorov!)
+- Ali ti ukazna vrstica še vedno deluje zastrašujoče ali si radoveden zanjo?
+- Se lahko predstaviš, da uporabljaš brskalniška DevTools orodja za pogled za kulise svojih najljubših spletnih strani?
 
-Uporabite način Agent za dokončanje naslednjega izziva:
+```mermaid
+pie title "Čas razvijalca preživet z orodji"
+    "Urejevalnik kode" : 40
+    "Preizkušanje v brskalniku" : 25
+    "Ukazna vrstica" : 15
+    "Branje dokumentacije" : 15
+    "Razhroščevanje" : 5
+```
+> **Zabavna ugotovitev**: Večina razvijalcev približno 40 % časa preživi v urejevalniku kode, a opazi, koliko časa gre za testiranje, učenje in reševanje težav. Programiranje ni samo pisanje kode – gre za ustvarjanje izkušenj!
 
-**Opis:** Raziščite funkcije sodobnega urejevalnika kode ali IDE in pokažite, kako lahko izboljša vaš delovni proces kot spletni razvijalec.
+✅ **Misli za povrh**: Tukaj je nekaj za razmislek – kako misliš, da so orodja za izdelavo spletnih strani (razvoj) lahko drugačna od orodij za oblikovanje njihovega videza (dizajn)? To je kot razlika med arhitektom, ki načrtuje čudovito hišo, in izvajalcem, ki jo dejansko zgradi. Oba sta ključna, a potrebujeta različne nabore orodij! Takšen način razmišljanja ti bo res pomagal videti širšo sliko, kako spletne strani zaživijo.
 
-**Navodilo:** Izberite urejevalnik kode ali IDE (kot so Visual Studio Code, WebStorm ali IDE v oblaku). Naštejte tri funkcije ali razširitve, ki vam pomagajo pri pisanju, odpravljanju napak ali vzdrževanju kode. Za vsako podajte kratko razlago, kako koristi vašemu delovnemu procesu.
+## Izziv GitHub Copilot agenta 🚀
+
+Uporabi način Agent, da dokončaš naslednji izziv:
+
+**Opis:** Razišči funkcije sodobnega urejevalnika kode ali IDE in pokaži, kako lahko izboljša tvoj potek dela kot spletni razvijalec.
+
+**Nalaganje:** Izberi urejevalnik kode ali IDE (npr. Visual Studio Code, WebStorm ali IDE v oblaku). Naštej tri funkcije ali razširitve, ki ti pomagajo pisati, odpravljati napake ali vzdrževati kodo bolj učinkovito. Za vsako podaj kratek opis, kako izboljša tvoj potek dela.
 
 ---
 
 ## 🚀 Izziv
 
-**Pripravljeni na svojo prvo nalogo, detektiv?**
+**Prav, detektiv, pripravljen na svoj prvi primer?**
 
-Zdaj, ko imate to čudovito osnovo, imam za vas pustolovščino, ki vam bo pomagala videti, kako neverjetno raznolik in fascinanten je svet programiranja. In poslušajte – to ni o tem, da bi že pisali kodo, zato brez pritiska! Pomislite na sebe kot na detektiva programskih jezikov na svojem prvem vznemirljivem primeru!
+Zdaj, ko imaš odlično osnovo, imam za tebe pustolovščino, ki ti bo pomagala razumeti, kako neverjetno raznolik in fascinanten je svet programiranja. In poslušaj – to še ni pisanje kode, tako da brez pritiska! Predstavljaj si, da si detektiv programskih jezikov na svojem prvem vznemirljivem primeru!
 
-**Vaša misija, če jo sprejmete:**
-1. **Postanite raziskovalec jezikov**: Izberite tri programske jezike iz popolnoma različnih svetov – morda enega, ki gradi spletne strani, enega, ki ustvarja mobilne aplikacije, in enega, ki obdeluje podatke za znanstvenike. Poiščite primere iste preproste naloge, napisane v vsakem jeziku. Obljubim, da boste popolnoma presenečeni, kako različno lahko izgledajo, medtem ko opravljajo popolnoma isto stvar!
+**Tvoja naloga, če se je odločiš sprejeti:**
+1. **Postani raziskovalec jezikov**: Izberi tri programske jezike iz povsem različnih svetov – morda enega za izdelavo spletnih strani, enega za ustvarjanje mobilnih aplikacij in enega za znanstveno obdelavo podatkov. Poišči primere enake preproste naloge zapisane v vsakem jeziku. Obljubim, da boš navdušen, kako različni so lahko, medtem ko delajo točno isto stvar!
 
-2. **Razkrijte njihove izvorne zgodbe**: Kaj naredi vsak jezik poseben? Tukaj je zanimivo dejstvo – vsak posamezen programski jezik je bil ustvarjen, ker je nekdo pomislil: "Veste kaj? Mora obstajati boljši način za reševanje tega specifičnega problema." Ali lahko ugotovite, kaj so bili ti problemi? Nekatere od teh zgodb so resnično fascinantne!
+2. **Razkrij njihove zgodbe izvora**: Kaj naredi vsak jezik poseben? Tukaj je zanimiv podatek – vsak programski jezik je nastal, ker je nekdo pomislil: "Veš kaj? Moral bi obstajati boljši način za rešitev te specifične težave." Ali lahko ugotoviš, katere težave so bile to? Nekatere od teh zgodb so res fascinantne!
 
-3. **Spoznajte skupnosti**: Oglejte si, kako prijazne in strastne so skupnosti vsakega jezika. Nekatere imajo milijone razvijalcev, ki delijo znanje in si pomagajo, druge so manjše, a izjemno povezane in podporne. Z veseljem boste videli različne osebnosti teh skupnosti!
+3. **Spoznaj skupnosti**: Oglej si, kako odprta in strastna so skupnost posameznih jezikov. Nekatere imajo milijone razvijalcev, ki delijo znanje in si pomagajo, druge so manjše, a neverjetno povezane in podporne. Rada boš videla različne osebnosti teh skupnosti!
 
-4. **Sledite svojemu občutku**: Kateri jezik se vam trenutno zdi najbolj dostopen? Ne obremenjujte se z iskanjem "popolne" izbire – samo poslušajte svoje instinkte! Tukaj ni napačnega odgovora, in kasneje lahko vedno raziščete druge.
+4. **Sledi svojemu občutku**: Kateri jezik ti zdaj najbolj ustreza? Ne obremenjuj se z izbiro "pravega" – samo zaupaš svojim instinktom! Res ni napačnega odgovora in vedno lahko kasneje raziščeš druge.
 
-**Bonus detektivsko delo**: Poskusite odkriti, katere velike spletne strani ali aplikacije so zgrajene s posameznim jezikom. Zagotavljam vam, da boste presenečeni, ko boste izvedeli, kaj poganja Instagram, Netflix ali tisto mobilno igro, ki je ne morete nehati igrati!
+**Bonus detektivska naloga**: Poskusi izvedeti, s katerimi večjimi spletnimi mesti ali aplikacijami so zgrajeni ti jeziki. Zagotavljam ti, da boš presenečen, kaj poganja Instagram, Netflix ali tisto mobilno igro, ki je ne moreš nehati igrati!
 
-> 💡 **Zapomnite si**: Ne poskušate postati strokovnjak v katerem koli od teh jezikov danes. Samo spoznavate okolje, preden se odločite, kje želite začeti. Vzemite si čas, uživajte v tem in pustite, da vas vodi radovednost!
+> 💡 **Zapomni si**: Ne poskušaš danes postati strokovnjak za katerega koli izmed teh jezikov. Raje spoznavaš sosesko, preden se odločiš, kje želiš "postaviti šotor". Vzemi si čas, zabavaj se in dovoli svoji radovednosti, da te vodi!
 
-## Praznujmo, kaj ste odkrili!
+## Praznujmo tisto, kar si odkril!
 
-O moj bog, danes ste absorbirali toliko neverjetnih informacij! Resnično sem navdušen, da vidim, koliko tega čudovitega potovanja se je prijelo. In zapomnite si – to ni test, kjer morate vse narediti popolno. To je bolj kot praznovanje vseh kul stvari, ki ste se jih naučili o tem fascinantnem svetu, v katerega se boste podali!
+O, moj bog, danes si absorbil tako veliko neverjetnih informacij! Resnično sem navdušen, da vidim, koliko tega neverjetnega popotovanja ti je ostalo v spominu. In ne pozabi – to ni test, kjer moraš biti popoln. To je bolj praznovanje vseh kul stvari, ki si jih izvedel o tem fascinantnem svetu, v katerega se boš poglobil!
 
-[Rešite kviz po lekciji](https://ff-quizzes.netlify.app/web/)
+[Reši kviz po lekciji](https://ff-quizzes.netlify.app/web/)
+## Pregled in samostojno učenje
 
-## Pregled & Samostojno učenje
+**Vzemite si čas za raziskovanje in zabavo!**
 
-**Vzemite si čas za raziskovanje in uživajte v tem!**
+Danes ste prehodili veliko poti, in na to ste lahko ponosni! Zdaj sledi zabavni del – raziskovanje tem, ki so vzbudile vašo radovednost. Ne pozabite, to ni domača naloga – to je pustolovščina!
 
-Danes ste prehodili dolgo pot, in to je nekaj, na kar ste lahko ponosni! Zdaj prihaja zabavni del – raziskovanje tem, ki so vzbudile vašo radovednost. Zapomnite si, to ni domača naloga – to je pustolovščina!
+**Poglobite se v to, kar vas navdušuje:**
 
-**Poglobite se v tisto, kar vas navdušuje:**
-
-**Praktično spoznajte programske jezike:**
+**Preizkusite se v programskih jezikih:**
 - Obiščite uradne spletne strani 2-3 jezikov, ki so pritegnili vašo pozornost. Vsak ima svojo osebnost in zgodbo!
-- Preizkusite nekaj spletnih igrišč za kodiranje, kot so [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ali [Replit](https://replit.com/). Ne bojte se eksperimentirati – ničesar ne morete pokvariti!
-- Preberite, kako je nastal vaš najljubši jezik. Resno, nekatere od teh izvornih zgodb so fascinantne in vam bodo pomagale razumeti, zakaj jeziki delujejo tako, kot delujejo.
+- Preizkusite spletne kode za igranje, kot so [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ali [Replit](https://replit.com/). Ne bojte se eksperimentirati – nič ne morete pokvariti!
+- Preberite, kako je nastal vaš najljubši jezik. Resno, nekatere izvorne zgodbe so fascinantne in vam bodo pomagale razumeti, zakaj jeziki delujejo tako, kot delujejo.
 
-**Postanite domači z novimi orodji:**
-- Prenesite Visual Studio Code, če ga še niste – brezplačen je in zagotovo vam bo všeč!
-- Preživite nekaj minut z brskanjem po tržnici razširitev. To je kot trgovina z aplikacijami za vaš urejevalnik kode!
-- Odprite orodja za razvijalce v vašem brskalniku in samo klikajte naokoli. Ne skrbite, če ne razumete vsega – samo spoznajte, kaj je tam.
+**Spoznajte nove orodje:**
+- Prenesite Visual Studio Code, če ga še niste – je brezplačen in ga boste oboževali!
+- Preživet nekaj minut z brskanjem po Trgovini razširitev. Je kot trgovina z aplikacijami za vaš urejevalnik kode!
+- Odprite Orodja za razvijalce v vašem brskalniku in klikajte okrog. Ne skrbite, če ne razumete vsega – samo spoznajte, kaj je tam.
 
 **Pridružite se skupnosti:**
-- Sledite nekaterim razvijalskim skupnostim na [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) ali [GitHub](https://github.com/). Razvijalska skupnost je izjemno prijazna do začetnikov!
-- Oglejte si nekaj videoposnetkov o programiranju za začetnike na YouTubu. Obstaja toliko odličnih ustvarjalcev, ki se spomnijo, kako je, ko šele začenjaš.
+- Sledite nekaterim razvijalskim skupnostim na [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) ali [GitHub](https://github.com/). Programerska skupnost je izjemno prijazna do novincev!
+- Poglejte nekaj videov za začetnike na YouTube-u. Obstaja veliko odličnih ustvarjalcev, ki se spomnijo, kako je bilo začeti.
 - Razmislite o pridružitvi lokalnim srečanjem ali spletnim skupnostim. Verjemite mi, razvijalci radi pomagajo novincem!
 
-> 🎯 **Poslušajte, tukaj je, kar želim, da si zapomnite**: Od vas se ne pričakuje, da boste čez noč postali mojster programiranja! Trenutno šele spoznavate ta neverjetni novi svet, katerega del boste kmalu postali. Vzemite si čas, uživajte v poti in ne pozabite – vsak razvijalec, ki ga občudujete, je bil nekoč točno tam, kjer ste zdaj vi, poln navdušenja in morda malo zmeden. To je povsem normalno in pomeni, da ste na pravi poti!
-
-
+> 🎯 **Poslušajte, tukaj je, kar želite zapomniti**: Od vas ne pričakujemo, da boste preko noči čarovnik v kodiranju! Trenutno se samo spoznavate s tem neverjetnim novim svetom, ki vam je na voljo. Vzemite si čas, uživajte na poti in ne pozabite – vsak razvijalec, ki ga občudujete, je nekoč sedel natanko tam, kjer ste vi zdaj, začuden in morda malo preobremenjen. To je povsem normalno, in to pomeni, da delate prav!
 
 ## Naloga
 
-[Branje dokumentacije](assignment.md)
+[Reading the Docs](assignment.md)
 
-> 💡 **Majhen namig za vašo nalogo**: Resnično bi si želel, da raziščete nekaj orodij, ki jih še nismo obravnavali! Preskočite urejevalnike, brskalnike in orodja za ukazno vrstico, o katerih smo že govorili – obstaja cel neverjeten svet čudovitih razvojnih orodij, ki samo čakajo, da jih odkrijete. Poiščite tista, ki so aktivno vzdrževana in imajo živahne, podporne skupnosti (ta običajno ponujajo najboljše vadnice in najbolj prijazne ljudi, ko se neizogibno zataknete in potrebujete pomoč).
+> 💡 **Mali namig za vašo nalogo**: Zelo bi rad videl, da raziščete nekaj orodij, ki jih še nismo obravnavali! Izpustite urejevalnike, brskalnike in orodja ukazne vrstice, o katerih smo že govorili – tam je cel čudovit svet neverjetnih razvojnih orodij, ki čakajo, da jih odkrijete. Iščite tiste, ki so aktivno vzdrževani in imajo živahne, prijazne skupnosti (ti imajo ponavadi najboljše vodiče in najbolj podporne ljudi, ko boste neizogibno naleteli na težave in potrebovali prijazno pomoč).
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+## 🚀 Časovnica vaše programerske poti
+
+### ⚡ **Kaj lahko naredite v naslednjih 5 minutah**
+- [ ] Dodajte med zaznamke spletne strani 2-3 programskih jezikov, ki so pritegnili vašo pozornost
+- [ ] Prenesite Visual Studio Code, če ga še niste
+- [ ] Odprite DevTools v brskalniku (F12) in klikajte po katerikoli spletni strani
+- [ ] Pridružite se eni programerski skupnosti (Dev.to, Reddit r/webdev ali Stack Overflow)
+
+### ⏰ **Kaj lahko dosežete v eni uri**
+- [ ] Dokončajte kviz po lekciji in premislite o svojih odgovorih
+- [ ] Nastavite VS Code z razširitvijo GitHub Copilot
+- [ ] Preizkusite primer "Hello World" v dveh različnih programskih jezikih na spletu
+- [ ] Oglejte si video "Dan v življenju razvijalca" na YouTube-u
+- [ ] Začnite raziskovati svojo programsko jezikovno detektivko (iz izziva)
+
+### 📅 **Vaša tedenska pustolovščina**
+- [ ] Dokončajte nalogo in raziščite 3 nova razvojna orodja
+- [ ] Sledite 5 razvijalcem ali programerskim računom na družbenih omrežjih
+- [ ] Poskusite ustvariti nekaj majhnega v CodePen ali Replit (tudi samo "Hello, [Vaše ime]!")
+- [ ] Preberite en blog zapis razvijalca o njegovi programerski poti
+- [ ] Pridružite se virtualnemu srečanju ali si oglejte programerski govor
+- [ ] Začnite se učiti izbran jezik z spletnimi učnimi gradivi
+
+### 🗓️ **Vaša mesečna preobrazba**
+- [ ] Izdelajte svoj prvi majhen projekt (tudi preprosta spletna stran šteje!)
+- [ ] Prispevajte k odprtokodnemu projektu (začnite z izboljšavami dokumentacije)
+- [ ] Mentorirajte nekoga, ki šele začenja s programersko potjo
+- [ ] Ustvarite svojo spletno stran s portfeljem razvijalca
+- [ ] Povežite se z lokalnimi razvijalskimi skupinami ali učnimi skupinami
+- [ ] Začnite načrtovati svoj naslednji učni mejnik
+
+### 🎯 **Zaključna refleksija**
+
+**Preden nadaljujete, vzemite trenutek za praznovanje:**
+- Kaj vas je danes pri programiranju najbolj navdušilo?
+- Katero orodje ali koncept želite raziskati najprej?
+- Kako se počutite ob začetku te programerske poti?
+- Kakšno vprašanje bi zdaj želeli zastaviti razvijalcu?
+
+```mermaid
+journey
+    title Vaša pot do gradnje samozavesti
+    section Danes
+      Curious: 3: Vi
+      Overwhelmed: 4: Vi
+      Excited: 5: Vi
+    section Ta Teden
+      Exploring: 4: Vi
+      Learning: 5: Vi
+      Connecting: 4: Vi
+    section Naslednji Mesec
+      Building: 5: Vi
+      Confident: 5: Vi
+      Helping Others: 5: Vi
+```
+> 🌟 **Zapomnite si**: Vsak strokovnjak je bil nekoč začetnik. Vsak izkušen razvijalec se je nekoč počutil natanko tako kot vi zdaj – navdušen, morda malo preobremenjen in zagotovo radoveden, kaj je mogoče. Ste v odlični družbi in ta pot bo neverjetna. Dobrodošli v čudovitem svetu programiranja! 🎉
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo storitve za avtomatski prevod AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, upoštevajte, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za pomembne informacije priporočamo strokovni človeški prevod. Za morebitne nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

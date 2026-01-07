@@ -1,102 +1,213 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46d665af66e51524598af34a42b9b663",
-  "translation_date": "2025-10-25T00:30:06+00:00",
+  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
+  "translation_date": "2026-01-07T09:47:15+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sl"
 }
 -->
-# Ustvarjanje klepetalnega asistenta z umetno inteligenco
+# Ustvarite Chat asistenta z AI
 
-Se spomnite v Zvezdnih stezah, ko je posadka sproščeno klepetala z računalnikom ladje, ga spraševala zapletena vprašanja in prejemala premišljene odgovore? Kar je v šestdesetih letih prejšnjega stoletja delovalo kot čista znanstvena fantastika, je zdaj nekaj, kar lahko ustvarite z uporabo spletnih tehnologij, ki jih že poznate.
+Se spomnite v Star Treku, ko je posadka brezskrbno klepetala z računalnikom ladje, ga spraševala zahtevna vprašanja in dobivala premišljene odgovore? Kar se je v šestdesetih zdelo kot znanstvena fantastika, lahko zdaj zgradite z uporabo spletnih tehnologij, ki jih že poznate.
 
-V tej lekciji bomo ustvarili AI klepetalnega asistenta z uporabo HTML, CSS, JavaScripta in nekaj integracije z backendom. Odkrijte, kako lahko iste veščine, ki jih že obvladate, povežete z zmogljivimi storitvami umetne inteligence, ki razumejo kontekst in generirajo smiselne odgovore.
+V tej lekciji bomo ustvarili AI chat asistenta z uporabo HTML, CSS, JavaScript in nekaj integracije s strežnikom. Odkrijete boste, kako se lahko iste veščine, ki ste jih že spoznavali, povežejo z zmogljivimi AI storitvami, ki razumejo kontekst in ustvarjajo smiselne odgovore.
 
-Pomislite na AI kot na dostop do ogromne knjižnice, ki ne le najde informacije, ampak jih tudi sintetizira v koherentne odgovore, prilagojene vašim specifičnim vprašanjem. Namesto da bi iskali med tisočimi stranmi, dobite neposredne, kontekstualne odgovore.
+Premislite o AI kot dostopu do ogromne knjižnice, ki ne samo najde informacije, ampak jih tudi sintetizira v koherentne odgovore, prilagojene vašim specifičnim vprašanjem. Namesto iskanja skozi tisoče strani prejmete neposredne, kontekstualne odgovore.
 
-Integracija poteka prek znanih spletnih tehnologij, ki delujejo skupaj. HTML ustvari vmesnik za klepet, CSS poskrbi za vizualno oblikovanje, JavaScript upravlja interakcije z uporabnikom, medtem ko backend API poveže vse z AI storitvami. To je podobno kot različni deli orkestra, ki skupaj ustvarijo simfonijo.
+Integracija poteka s sodelovanjem znanih spletnih tehnologij. HTML ustvari vmesnik za klepet, CSS skrbi za vizualno zasnovo, JavaScript upravlja uporabniške interakcije, strežniški API pa poveže vse to z AI storitvami. To je podobno kot različni deli orkestra, ki skupaj ustvarjajo simfonijo.
 
-Pravzaprav gradimo most med naravno človeško komunikacijo in strojno obdelavo. Naučili se boste tako tehnične implementacije integracije AI storitev kot tudi oblikovalskih vzorcev, ki naredijo interakcije intuitivne.
+Pravzaprav gradimo most med naravnim človeškim komuniciranjem in obdelavo s strojem. Naučili se boste tako tehnične izvedbe integracije AI storitev kot oblikovalskih vzorcev, ki naredijo interakcije intuitivne.
 
-Do konca te lekcije bo integracija AI manj skrivnosten proces in bolj kot še en API, s katerim lahko delate. Razumeli boste osnovne vzorce, ki poganjajo aplikacije, kot sta ChatGPT in Claude, z uporabo istih načel spletnega razvoja, ki jih že poznate.
+Na koncu te lekcije bo integracija AI manj kot skrivnosten proces in bolj kot še en API, s katerim lahko delate. Razumeli boste temeljne vzorce, ki poganjajo aplikacije, kot so ChatGPT in Claude, z uporabo istih načel spletnega razvoja, ki ste jih že obvladali.
+
+## ⚡ Kaj lahko naredite v naslednjih 5 minutah
+
+**Hitri začetek za zaposlene razvijalce**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minut] --> B[Pridobi GitHub žeton]
+    B --> C[Preizkusi AI igrišče]
+    C --> D[Kopiraj Python kodo]
+    D --> E[Oglej si AI odgovore]
+```
+- **1. minuta**: Obiščite [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) in ustvarite osebni dostopni žeton
+- **2. minuta**: Testirajte AI interakcije neposredno v playground vmesniku
+- **3. minuta**: Kliknite na zavihek "Code" in kopirajte Python izsek
+- **4. minuta**: Zaženite kodo lokalno z vašim žetonom: `GITHUB_TOKEN=your_token python test.py`
+- **5. minuta**: Oglejte si svoj prvi AI odgovor, ki ga ustvari vaša koda
+
+**Hitri testni koda**:
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://models.github.ai/inference",
+    api_key="your_token_here"
+)
+
+response = client.chat.completions.create(
+    messages=[{"role": "user", "content": "Hello AI!"}],
+    model="openai/gpt-4o-mini"
+)
+
+print(response.choices[0].message.content)
+```
+
+**Zakaj je to pomembno**: V 5 minutah boste doživeli čar programskih AI interakcij. To predstavlja osnovni gradnik, ki poganja vsako AI aplikacijo, ki jo uporabljate.
 
 Tako bo videti vaš končni projekt:
 
-![Vmesnik aplikacije za klepet, ki prikazuje pogovor med uporabnikom in AI asistentom](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.sl.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.sl.png)
 
-## Razumevanje AI: Od skrivnosti do obvladanja
+## 🗺️ Vaša pot učenja razvoja AI aplikacij
 
-Preden se lotimo kode, razumimo, s čim delamo. Če ste že uporabljali API-je, poznate osnovni vzorec: pošljite zahtevo, prejmite odgovor.
+```mermaid
+journey
+    title Od spletnega razvoja do integracije AI
+    section Razumevanje temeljev AI
+      Odkrijte koncepte generativne AI: 4: You
+      Raziščite platformo GitHub Models: 6: You
+      Obvladujte AI parametre in pozive: 8: You
+    section Integracija na backendu
+      Zgradite Python API strežnik: 5: You
+      Izvedite AI klice funkcij: 7: You
+      Upravite asinhrone operacije: 8: You
+    section Razvoj frontenda
+      Ustvarite sodoben klepetalni vmesnik: 6: You
+      Obvladujte interakcije v realnem času: 8: You
+      Zgradite odzivno uporabniško izkušnjo: 9: You
+    section Profesionalna uporaba
+      Namestite celoten AI sistem: 7: You
+      Optimizirajte vzorce zmogljivosti: 8: You
+      Ustvarite aplikacijo pripravljeno za produkcijo: 9: You
+```
+**Cilj vaše poti**: Na koncu te lekcije boste zgradili popolno AI-podprto aplikacijo z uporabo istih tehnologij in vzorcev, ki poganjajo sodobne AI asistente, kot so ChatGPT, Claude in Google Bard.
 
-AI API-ji sledijo podobni strukturi, vendar namesto da bi pridobili vnaprej shranjene podatke iz baze, generirajo nove odgovore na podlagi vzorcev, naučenih iz ogromnih količin besedila. Pomislite na razliko med knjižničnim katalogom in izkušenim knjižničarjem, ki lahko sintetizira informacije iz več virov.
+## Razumevanje AI: od skrivnosti do obvladovanja
 
-### Kaj pravzaprav pomeni "generativna umetna inteligenca"?
+Preden se potopimo v kodo, razumimo, s čim delamo. Če ste že uporabljali API-je, poznate osnovni vzorec: pošljete zahtevo, prejmete odgovor.
 
-Pomislite, kako je Rosetta Stone omogočila učenjakom razumevanje egipčanskih hieroglifov z iskanjem vzorcev med znanimi in neznanimi jeziki. AI modeli delujejo podobno – iščejo vzorce v ogromnih količinah besedila, da razumejo, kako deluje jezik, nato pa te vzorce uporabijo za generiranje ustreznih odgovorov na nova vprašanja.
+AI API-ji sledijo podobni strukturi, vendar namesto pridobivanja vnaprej shranjenih podatkov iz baze, generirajo nove odgovore na podlagi vzorcev, naučenih iz ogromnih količin besedila. To je kot razlika med knjižničnim katalogom in pametnim knjižničarjem, ki zna sintetizirati informacije iz več virov.
 
-**Naj razložim s preprosto primerjavo:**
-- **Tradicionalna baza podatkov**: Kot zahteva za rojstni list – vedno dobite isti dokument
-- **Iskalnik**: Kot vprašanje knjižničarju, da poišče knjige o mačkah – pokaže vam, kaj je na voljo
-- **Generativna AI**: Kot vprašanje izkušenemu prijatelju o mačkah – pove vam zanimive stvari s svojimi besedami, prilagojene temu, kar želite vedeti
+### Kaj je pravzaprav "Generativna AI"?
+
+Pomislite, kako je Rosettinski kamen omogočil učenjakom razumevanje egipčanskih hieroglifov tako, da so našli vzorce med poznanimi in neznanimi jeziki. AI modeli delujejo podobno – najdejo vzorce v ogromnih količinah besedila, da razumemo, kako jezik deluje, nato uporabijo te vzorce za ustvarjanje ustreznih odgovorov na nova vprašanja.
+
+**To razložim s preprosto primerjavo:**
+- **Tradicionalna baza podatkov**: Kot da bi zaprosili za rojstni list – vedno dobite isto točno kopijo
+- **Iskalnik**: Kot da vprašate knjižničarja, naj poišče knjige o mačkah – pokaže, kaj je na voljo
+- **Generativna AI**: Kot da vprašate pametnega prijatelja o mačkah – pove zanimive stvari s svojimi besedami, prilagojeno temu, kar želite vedeti
 
 ```mermaid
 graph LR
-    A[Your Question] --> B[AI Model]
-    B --> C[Pattern Recognition]
-    C --> D[Content Generation]
-    D --> E[Contextual Response]
+    A[Vaše vprašanje] --> B[AI model]
+    B --> C[Prepoznavanje vzorcev]
+    C --> D[Generiranje vsebine]
+    D --> E[Odgovor v kontekstu]
     
-    F[Training Data<br/>Books, Articles, Web] --> B
+    F[Podatki za učenje<br/>Knjige, članki, splet] --> B
 ```
+### Kako se AI modeli učijo (poenostavljena različica)
 
-### Kako se AI modeli učijo (preprosta razlaga)
+AI modeli se učijo skozi izpostavljenost ogromnim podatkovnim nizom, ki vsebujejo besedila iz knjig, člankov in pogovorov. S tem procesom prepoznavajo vzorce pri:
+- Kako so misli strukturirane v pisnem komuniciranju
+- Katere besede se pogosto pojavljajo skupaj
+- Kako običajno tečejo pogovori
+- Kontekstualne razlike med formalno in neformalno komunikacijo
 
-AI modeli se učijo z izpostavljenostjo ogromnim podatkovnim zbirkam, ki vsebujejo besedila iz knjig, člankov in pogovorov. S tem procesom prepoznajo vzorce v:
-- Strukturi misli v pisni komunikaciji
-- Besedah, ki se pogosto pojavljajo skupaj
-- Tipičnem poteku pogovorov
-- Kontekstualnih razlikah med formalno in neformalno komunikacijo
-
-**To je podobno kot arheologi, ki dekodirajo starodavne jezike**: analizirajo tisoče primerov, da razumejo slovnico, besedišče in kulturni kontekst, nato pa lahko interpretirajo nova besedila z uporabo naučenih vzorcev.
+**Podobno kot arheologi razbirajo starodavne jezike**: analizirajo tisoče primerov za razumevanje slovnice, besedišča in kulturnega konteksta, da na koncu lahko razumejo nove tekste z uporabo teh naučenih vzorcev.
 
 ### Zakaj GitHub Models?
 
-Uporabljamo GitHub Models iz praktičnega razloga – omogoča dostop do AI na ravni podjetja, ne da bi morali postaviti lastno infrastrukturo AI (kar, verjemite mi, trenutno ne želite početi!). To je kot uporaba vremenskega API-ja namesto poskusa napovedovanja vremena z vzpostavitvijo vremenskih postaj povsod.
+Uporabljamo GitHub Models iz praktičnega razloga – omogoča nam dostop do AI na ravni podjetij, brez vzpostavitve lastne AI infrastrukture (verjemite, tega zdaj ne želite!). Predstavljajte si, da uporabljate vremenski API, namesto da bi sami postavljali vremenske postaje po vsej regiji in napovedovali vreme.
 
-To je v bistvu "AI-kot-storitev", najboljši del pa? Za začetek je brezplačno, tako da lahko eksperimentirate, ne da bi vas skrbelo za visoke stroške.
+Gre za "AI kot storitev", najboljše pri tem pa je, da se lahko začnete brezplačno, zato lahko eksperimentirate brez skrbi zaradi visokih stroškov.
 
 ```mermaid
 graph LR
-    A[Frontend Chat UI] --> B[Your Backend API]
-    B --> C[GitHub Models API]
-    C --> D[AI Model Processing]
+    A[Frontend klepet UI] --> B[Vaš Backend API]
+    B --> C[GitHub modeli API]
+    C --> D[Procesiranje AI modela]
     D --> C
     C --> B
     B --> A
 ```
+Za integracijo s strežnikom bomo uporabili GitHub Models, ki omogoča dostop do profesionalnih AI zmogljivosti preko razvijalcem prijaznega vmesnika. [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) služi kot testno okolje, kjer lahko preizkušate različne AI modele in razumete njihove zmogljivosti, preden jih implementirate v kodo.
 
-Uporabili bomo GitHub Models za našo backend integracijo, ki omogoča dostop do profesionalnih AI zmogljivosti prek uporabniku prijaznega vmesnika. [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) služi kot testno okolje, kjer lahko eksperimentirate z različnimi AI modeli in razumete njihove zmogljivosti, preden jih implementirate v kodo.
+## 🧠 Ekosistem razvoja AI aplikacij
 
-![Vmesnik GitHub Models AI Playground z izbiro modela in testnim območjem](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.sl.png)
+```mermaid
+mindmap
+  root((Razvoj AI))
+    Razumevanje AI
+      Generativni modeli
+        Prepoznavanje vzorcev
+        Generiranje vsebine
+        Razumevanje konteksta
+        Sestavljanje odgovorov
+      AI parametri
+        Nadzor temperature
+        Omejitve na število tokenov
+        Filtriranje top-p
+        Sistematični pozivi
+    Arhitektura zaledja
+      Integracija API
+        GitHub modeli
+        Avtentikacija
+        Obdelava zahtevkov
+        Upravljanje napak
+      Python infrastruktura
+        Okvir FastAPI
+        Asinhrone operacije
+        Varnost okolja
+        Nastavitve CORS
+    Izkušnja vmesnika
+      Pogovorni vmesnik
+        Posodobitve v realnem času
+        Zgodovina sporočil
+        Povratne informacije uporabnikov
+        Stanja nalaganja
+      Sodobna spletna tehnologija
+        ES6 razredi
+        Async/Await
+        Manipulacija DOM
+        Upravljanje dogodkov
+    Profesionalni vzorci
+      Najboljše varnostne prakse
+        Upravljanje tokenov
+        Validacija vhodov
+        Preprečevanje XSS
+        Robovi napak
+      Pripravljenost za produkcijo
+        Optimizacija zmogljivosti
+        Prilagodljiv dizajn
+        Dostopnost
+        Strategije testiranja
+```
+**Osnovno načelo**: Razvoj AI aplikacij združuje tradicionalne spletne razvojne veščine s integracijo AI storitev, ustvarjajoč inteligentne aplikacije, ki se uporabnikom zdijo naravne in odzivne.
+
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.sl.png)
 
 **Zakaj je playground tako uporaben:**
-- **Preizkusite** različne AI modele, kot so GPT-4o-mini, Claude in drugi (vse brezplačno!)
-- **Testirajte** svoje ideje in pozive, preden napišete kodo
-- **Pridobite** pripravljene kode v vašem najljubšem programskem jeziku
-- **Prilagodite** nastavitve, kot so raven ustvarjalnosti in dolžina odgovora, da vidite, kako vplivajo na rezultat
+- **Preizkusite** različne AI modele, kot so GPT-4o-mini, Claude in drugi (vsi brezplačni!)
+- **Testirajte** ideje in pozive pred pisanjem kode
+- **Pridobite** vnaprej pripravljene kode v želenem programskem jeziku
+- **Nastavite** parametre, kot so stopnja ustvarjalnosti in dolžina odgovora, da vidite, kako vplivajo na izhod
 
-Ko se malo poigrate, preprosto kliknite zavihek "Code" in izberite svoj programski jezik, da dobite implementacijsko kodo, ki jo potrebujete.
+Ko se poigrate, kliknite zavihek "Code" in izberite programski jezik za pridobitev potrebne implementacijske kode.
 
-![Izbira v playgroundu, ki prikazuje možnosti generiranja kode za različne programske jezike](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.sl.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.sl.png)
 
 ## Nastavitev Python backend integracije
 
-Zdaj implementirajmo AI integracijo z uporabo Pythona. Python je odličen za AI aplikacije zaradi svoje preproste sintakse in zmogljivih knjižnic. Začeli bomo s kodo iz GitHub Models playgrounda in jo nato preoblikovali v ponovno uporabno funkcijo, pripravljeno za produkcijo.
+Zdaj pa uvedimo AI integracijo z uporabo Pythona. Python je odličen za AI aplikacije zaradi preproste sintakse in močnih knjižnic. Začeli bomo s kodo iz GitHub Models playground-a in jo nato preoblikovali v ponovno uporabno, produkcijsko funkcijo.
 
 ### Razumevanje osnovne implementacije
 
-Ko prenesete Python kodo iz playgrounda, bo videti nekako takole. Ne skrbite, če se vam na začetku zdi veliko – poglejmo jo korak za korakom:
+Ko vzamete Python kodo iz playgrounda, boste dobili nekaj takšnega. Ne skrbite, če sprva izgleda veliko – poglejmo si korak za korakom:
 
 ```python
 """Run this model in Python
@@ -106,14 +217,13 @@ Ko prenesete Python kodo iz playgrounda, bo videti nekako takole. Ne skrbite, č
 import os
 from openai import OpenAI
 
-# To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings. 
-# Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+# Za overjanje z modelom boste morali ustvariti osebni dostopni žeton (PAT) v svojih nastavitvah GitHub.
+# Ustvarite svoj PAT žeton tako, da sledite navodilom tukaj: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 client = OpenAI(
     base_url="https://models.github.ai/inference",
     api_key=os.environ["GITHUB_TOKEN"],
 )
 
-```python
 response = client.chat.completions.create(
     messages=[
         {
@@ -134,15 +244,15 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-**Kaj se dogaja v tej kodi:**
+**Tukaj se v tej kodi dogaja:**
 - **Uvozimo** orodja, ki jih potrebujemo: `os` za branje okoljskih spremenljivk in `OpenAI` za komunikacijo z AI
-- **Nastavimo** odjemalca OpenAI, da kaže na GitHubove AI strežnike namesto neposredno na OpenAI
-- **Avtenticiramo** z uporabo posebnega GitHub žetona (več o tem kasneje!)
-- **Strukturiramo** naš pogovor z različnimi "vlogami" – pomislite na to kot na postavitev scene za igro
-- **Pošljemo** zahtevo AI-ju z nekaj parametri za fino nastavitev
-- **Izvlečemo** dejansko besedilo odgovora iz vseh podatkov, ki se vrnejo
+- **Nastavimo** OpenAI klienta, da kaže na GitHubove AI strežnike, ne na OpenAI neposredno
+- **Avtentificiramo** se z GitHub žetonom (več o tem kmalu!)
+- **Strukturiramo** naš pogovor z različnimi "vlogami" – pomislite, da postavljamo sceno za igro
+- **Pošljemo** zahtevo AI z nekaj parametri za fino nastavitev
+- **Izločimo** dejansko besedilo odgovora iz vseh podatkov, ki jih dobimo nazaj
 
-### Razumevanje vlog sporočil: Okvir za AI pogovor
+### Razumevanje vlog sporočil: Okvir AI pogovora
 
 AI pogovori uporabljajo specifično strukturo z različnimi "vlogami", ki služijo različnim namenom:
 
@@ -159,97 +269,97 @@ messages=[
 ]
 ```
 
-**Pomislite na to kot na režijo igre:**
-- **Vloga sistema**: Kot režijske smernice za igralca – pove AI-ju, kako se obnašati, kakšno osebnost imeti in kako odgovarjati
-- **Vloga uporabnika**: Dejanska vprašanja ali sporočila osebe, ki uporablja vašo aplikacijo
-- **Vloga asistenta**: Odgovor AI-ja (tega ne pošljete, ampak se pojavi v zgodovini pogovora)
+**Pomislite na to kot režijo predstave:**
+- **Vloga sistema**: Kot usmeritve za igralca – pove AI, kako naj se obnaša, kakšno osebnost naj ima in kako naj odgovarja
+- **Vloga uporabnika**: Dejanski vprašanje ali sporočilo osebe, ki uporablja vašo aplikacijo
+- **Vloga asistenta**: AI odgovor (tega ne pošljete sami, ampak se pojavi v zgodovini pogovora)
 
-**Primer iz resničnega življenja**: Predstavljajte si, da na zabavi predstavite prijatelja nekomu:
-- **Sistemsko sporočilo**: "To je moja prijateljica Sara, zdravnica, ki odlično razlaga medicinske koncepte na preprost način"
-- **Uporabniško sporočilo**: "Ali mi lahko razložiš, kako delujejo cepiva?"
-- **Odgovor asistenta**: Sara odgovori kot prijazna zdravnica, ne kot odvetnica ali kuharica
+**Primer iz resničnega sveta**: Predstavljajte si, da prijatelja predstavljate nekomu na zabavi:
+- **Sporočilo sistema**: "To je moja prijateljica Sarah, zdravnica, ki odlično razloži medicinske koncepte na preprost način"
+- **Sporočilo uporabnika**: "Lahko razložiš, kako delujejo cepiva?"
+- **Odgovor asistenta**: Sarah odgovarja kot prijazna zdravnica, ne kot odvetnik ali kuhar
 
-### Razumevanje AI parametrov: Fino nastavljanje vedenja odgovora
+### Razumevanje AI parametrov: Fino nastavitev vedenja odgovorov
 
-Številčni parametri v klicih AI API nadzorujejo, kako model generira odgovore. Te nastavitve vam omogočajo prilagoditev vedenja AI za različne primere uporabe:
+Numerični parametri v API klicih AI nadzirajo, kako model ustvarja odgovore. Te nastavitve omogočajo prilagoditev obnašanja AI za različne primere uporabe:
 
-#### Temperatura (0,0 do 2,0): Nadzor ustvarjalnosti
+#### Temperatura (0.0 do 2.0): Nastavitev ustvarjalnosti
 
-**Kaj počne**: Nadzoruje, kako ustvarjalni ali predvidljivi bodo odgovori AI.
+**Kaj naredi**: Nadzoruje, kako ustvarjalni ali predvidljivi bodo odgovori AI.
 
-**Pomislite na to kot na raven improvizacije jazz glasbenika:**
-- **Temperatura = 0,1**: Vedno igra isto melodijo (zelo predvidljivo)
-- **Temperatura = 0,7**: Dodaja nekaj okusnih variacij, a ostaja prepoznavna (uravnotežena ustvarjalnost)
-- **Temperatura = 1,5**: Popolnoma eksperimentalni jazz z nepričakovanimi obrati (zelo nepredvidljivo)
+**Pomislite nanjo kot na jazz improvizacijo glasbenika:**
+- **Temperatura = 0.1**: Igra ves čas isto melodijo (zelo predvidljivo)
+- **Temperatura = 0.7**: Doda nekaj okusnih variacij, ostane prepoznaven (uravnotežena ustvarjalnost)
+- **Temperatura = 1.5**: Polni eksperimentalni jazz z nepričakovanimi obrati (zelo nepredvidljivo)
 
 ```python
-# Very predictable responses (good for factual questions)
+# Zelo predvidljivi odgovori (dobro za faktografska vprašanja)
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "What is 2+2?"}],
-    temperature=0.1  # Will almost always say "4"
+    temperature=0.1  # Skoraj vedno bo rekel "4"
 )
 
-# Creative responses (good for brainstorming)
+# Kreativni odgovori (dobro za možgansko nevihto)
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Write a creative story opening"}],
-    temperature=1.2  # Will generate unique, unexpected stories
+    temperature=1.2  # Ustvaril bo edinstvene, nepričakovane zgodbe
 )
 ```
 
 #### Max Tokens (1 do 4096+): Nadzor dolžine odgovora
 
-**Kaj počne**: Določa omejitev dolžine odgovora AI.
+**Kaj naredi**: Nastavi omejitev, kako dolg je lahko odgovor AI.
 
-**Pomislite na tokene kot približno enakovredne besedam** (približno 1 token = 0,75 besede v angleščini):
-- **max_tokens=50**: Kratko in jedrnato (kot SMS sporočilo)
+**Premislite o tokenih kot približno enakovrednih besedam** (približno 1 token = 0,75 besede v angleščini):
+- **max_tokens=50**: Kratek in jedrnat (kot SMS sporočilo)
 - **max_tokens=500**: Lep odstavek ali dva
-- **max_tokens=2000**: Podrobna razlaga z zgledi
+- **max_tokens=2000**: Podroben razlaga z primeri
 
 ```python
-# Short, concise answers
+# Kratki, jedrnati odgovori
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Explain JavaScript"}],
-    max_tokens=100  # Forces a brief explanation
+    max_tokens=100  # Zahteva kratek odgovor
 )
 
-# Detailed, comprehensive answers  
+# Podrobni, obsežni odgovori
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Explain JavaScript"}],
-    max_tokens=1500  # Allows for detailed explanations with examples
+    max_tokens=1500  # Omogoča podrobne razlage z primeri
 )
 ```
 
-#### Top_p (0,0 do 1,0): Parameter osredotočenosti
+#### Top_p (0.0 do 1.0): Nadzor fokusa
 
-**Kaj počne**: Nadzoruje, kako osredotočen ostane AI na najbolj verjetne odgovore.
+**Kaj naredi**: Nadzoruje, kako osredotočen AI ostane na najbolj verjetnih odgovorih.
 
-**Predstavljajte si AI z ogromnim besednjakom, razvrščenim po verjetnosti vsake besede:**
-- **top_p=0,1**: Upošteva le najbolj verjetnih 10 % besed (zelo osredotočeno)
-- **top_p=0,9**: Upošteva 90 % možnih besed (bolj ustvarjalno)
-- **top_p=1,0**: Upošteva vse (največja raznolikost)
+**Predstavljajte si, da AI ima ogromno besedišče, razvrščeno po verjetnosti posamezne besede:**
+- **top_p=0.1**: Upošteva samo 10 % najbolj verjetnih besed (zelo osredotočeno)
+- **top_p=0.9**: Upošteva 90 % možnih besed (bolj ustvarjalno)
+- **top_p=1.0**: Upošteva vse (maksimalna raznolikost)
 
-**Na primer**: Če vprašate "Nebo je običajno..."
-- **Nizek top_p**: Skoraj zagotovo odgovori "modro"
-- **Visok top_p**: Morda odgovori "modro", "oblačno", "prostrano", "spremenljivo", "čudovito" itd.
+**Na primer**: Če vprašate "Nebo je običajno ..."
+- **Nizka top_p**: Zelo verjetno bo rekel "modro"
+- **Visoka top_p**: Lahko reče "modro", "oblačno", "prostrano", "spremenljivo", "lepo" itd.
 
-### Združevanje vsega: Kombinacije parametrov za različne primere uporabe
+### Vse skupaj: Kombinacije parametrov za različne primere uporabe
 
 ```python
-# For factual, consistent answers (like a documentation bot)
+# Za dejanske, dosledne odgovore (kot dokumentacijski robot)
 factual_params = {
     "temperature": 0.2,
     "max_tokens": 300,
     "top_p": 0.3
 }
 
-# For creative writing assistance
+# Za pomoč pri ustvarjalnem pisanju
 creative_params = {
     "temperature": 1.1,
     "max_tokens": 1000,
     "top_p": 0.9
 }
 
-# For conversational, helpful responses (balanced)
+# Za pogovorne, koristne odgovore (uravnoteženo)
 conversational_params = {
     "temperature": 0.7,
     "max_tokens": 500,
@@ -257,7 +367,25 @@ conversational_params = {
 }
 ```
 
-**Razumevanje, zakaj so ti parametri pomembni**: Različne aplikacije potrebujejo različne vrste odgovorov. Bot za podporo strankam mora biti dosleden in dejanski (nizka temperatura), medtem ko mora biti asistent za kreativno pisanje domiseln in raznolik (visoka temperatura). Razumevanje teh parametrov vam omogoča nadzor nad osebnostjo in slogom odgovora vašega AI-ja.
+```mermaid
+quadrantChart
+    title Matrika optimizacije parametrov umetne inteligence
+    x-axis Nizka ustvarjalnost --> Visoka ustvarjalnost
+    y-axis Kratek odgovor --> Dolg odgovor
+    
+    quadrant-1 Ustvarjalna vsebina
+    quadrant-2 Podrobna analiza
+    quadrant-3 Hitri podatki
+    quadrant-4 Pogovorna umetna inteligenca
+    
+    Documentation Bot: [0.2, 0.3]
+    Customer Service: [0.4, 0.4]
+    General Assistant: [0.7, 0.5]
+    Creative Writer: [0.9, 0.9]
+    Brainstorming Tool: [0.8, 0.8]
+```
+**Zakaj so ti parametri pomembni**: Različne aplikacije potrebujejo različne tipe odgovorov. Bot za podporo strankam naj bo dosleden in faktualen (nizka temperatura), medtem ko naj bo pomočnik za ustvarjalno pisanje domiseln in raznolik (visoka temperatura). Razumevanje teh parametrov vam da nadzor nad osebnostjo in slogom odgovora AI.
+
 ```
 
 **Here's what's happening in this code:**
@@ -323,47 +451,48 @@ def call_llm(prompt: str, system_message: str = "You are a helpful assistant."):
     return asyncio.run(call_llm_async(prompt, system_message))
 ```
 
-**Razumevanje te izboljšane funkcije:**
-- **Sprejema** dva parametra: uporabnikov poziv in neobvezno sistemsko sporočilo
-- **Nudi** privzeto sistemsko sporočilo za splošno vedenje asistenta
-- **Uporablja** ustrezne tipe v Pythonu za boljšo dokumentacijo kode
-- **Vrne** le vsebino odgovora, kar olajša uporabo v našem spletnem API-ju
-- **Ohranja** iste parametre modela za dosledno vedenje AI-ja
+**Razumevanje izboljšane funkcije:**
+- **Sprejema** dva parametra: uporabnikov poziv in izbirno sistemsko sporočilo
+- **Nudi** privzeto sistemsko sporočilo za splošno obnašanje asistenta
+- **Uporablja** pravilne Python tipne namige za boljšo dokumentacijo kode
+- **Vključuje** podrobno dokumentacijo, ki pove namen in parametre funkcije
+- **Vrača** samo vsebino odgovora, kar poenostavi uporabo v našem spletno API-ju
+- **Ohranja** iste model parametre za konsistentno AI vedenje
 
-### Magija sistemskih pozivov: Programiranje osebnosti AI
+### Čarobnost sistemskih pozivov: programiranje osebnosti AI
 
-Če parametri nadzorujejo, kako AI razmišlja, sistemski pozivi nadzorujejo, kdo AI misli, da je. To je resnično ena najbolj kul stvari pri delu z AI – v bistvu dajete AI-ju celotno osebnost, raven strokovnosti in slog komunikacije.
+Če parametri nadzorujejo, kako AI razmišlja, sistemski pozivi nadzorujejo, kdo AI misli, da je. To je iskreno ena izmed najbolj kul stvari pri delu z AI – dajete AI celotno osebnost, strokovno znanje in način komuniciranja.
 
-**Pomislite na sistemske pozive kot na izbiro različnih igralcev za različne vloge**: Namesto da bi imeli enega generičnega asistenta, lahko ustvarite specializirane strokovnjake za različne situacije. Potrebujete potrpežljivega učitelja? Kreativnega partnerja za brainstorming? Resnega poslovnega svetovalca? Preprosto spremenite sistemski poziv!
+**Pomislite na sistemske pozive kot na izbiro različni igralcev za različne vloge**: Namesto enega generičnega asistenta lahko ustvarite specializirane strokovnjake za različne situacije. Potrebujete potrpežljivega učitelja? Kreativnega partnerja za brainstorming? Resnega poslovnega svetovalca? Samo spremenite sistemski poziv!
 
 #### Zakaj so sistemski pozivi tako močni
 
-Tukaj je fascinanten del: AI modeli so bili usposobljeni na neštetih pogovorih, kjer ljudje prevzemajo različne vloge in ravni strokovnosti. Ko AI-ju dodelite določeno vlogo, je to kot preklop stikala, ki aktivira vse te naučene vzorce.
+Tukaj je fascinantni del: AI modeli so bili usposobljeni na neštetih pogovorih, kjer so ljudje prevzemali različne vloge in ravni strokovnosti. Ko AI daste specifično vlogo, je to kot da vklopite stikalo, ki aktivira vse te naučene vzorce.
 
-**To je kot metoda igranja za AI**: Povejte igralcu "ti si modri stari profesor" in opazujte, kako samodejno prilagodi svojo držo, besedišče in manire. AI naredi nekaj izjemno podobnega z jezikovnimi vzorci.
+**To je kot igralska metoda za AI**: Povejte igralcu "si moder star profesor" in opazujte kako samodejno prilagodi držo, besedišče in manire. AI naredi nekaj podobnega z jezikovnimi vzorci.
 
-#### Oblikovanje učinkovitih sistemskih pozivov: Umetnost in znanost
+#### Oblikovanje učinkovitih sistemskih pozivov: umetnost in znanost
 
 **Anatomija odličnega sistemskega poziva:**
-1. **Vloga/identiteta**: Kdo je AI?
-2. **Strokovnost**: Kaj zna?
+1. **Vloga/Osebnost**: Kdo je AI?
+2. **Strokovnost**: Kaj ve?
 3. **Slog komunikacije**: Kako govori?
-4. **Specifična navodila**: Na kaj naj se osredotoči?
+4. **Specifična navodila**: Na kaj se naj osredotoči?
 
 ```python
-# ❌ Vague system prompt
+# ❌ Nejasen sistemski poziv
 "You are helpful."
 
-# ✅ Detailed, effective system prompt
+# ✅ Podroben, učinkovit sistemski poziv
 "You are Dr. Sarah Chen, a senior software engineer with 15 years of experience at major tech companies. You explain programming concepts using real-world analogies and always provide practical examples. You're patient with beginners and enthusiastic about helping them understand complex topics."
 ```
 
 #### Primeri sistemskih pozivov s kontekstom
 
-Poglejmo, kako različni sistemski pozivi ustvarijo popolnoma različne osebnosti AI:
+Oglejmo si, kako različni sistemski pozivi ustvarjajo popolnoma različne AI osebnosti:
 
 ```python
-# Example 1: The Patient Teacher
+# Primer 1: Potrpežljivi učitelj
 teacher_prompt = """
 You are an experienced programming instructor who has taught thousands of students. 
 You break down complex concepts into simple steps, use analogies from everyday life, 
@@ -371,7 +500,7 @@ and always check if the student understands before moving on. You're encouraging
 and never make students feel bad for not knowing something.
 """
 
-# Example 2: The Creative Collaborator  
+# Primer 2: Kreativni sodelavec
 creative_prompt = """
 You are a creative writing partner who loves brainstorming wild ideas. You're 
 enthusiastic, imaginative, and always build on the user's ideas rather than 
@@ -379,7 +508,7 @@ replacing them. You ask thought-provoking questions to spark creativity and
 offer unexpected perspectives that make stories more interesting.
 """
 
-# Example 3: The Strategic Business Advisor
+# Primer 3: Strateški poslovni svetovalec
 business_prompt = """
 You are a strategic business consultant with an MBA and 20 years of experience 
 helping startups scale. You think in frameworks, provide structured advice, 
@@ -388,34 +517,34 @@ probing questions to understand the full business context before giving advice.
 """
 ```
 
-#### Opazovanje sistemskih pozivov v akciji
+#### Opazovanje sistemskih pozivov v praksi
 
-Testirajmo isto vprašanje z različnimi sistemskimi pozivi, da vidimo dramatične razlike:
+Preizkusimo isto vprašanje z različnimi sistemskimi pozivi in poglejmo dramatične razlike:
 
-**Vprašanje**: "Kako naj upravljam avtentikacijo uporabnikov v svoji spletni aplikaciji?"
+**Vprašanje**: "Kako upravljam z avtentikacijo uporabnikov v svoji spletni aplikaciji?"
 
 ```python
-# With teacher prompt:
+# Z navodilom učitelja:
 teacher_response = call_llm(
     "How do I handle user authentication in my web app?",
     teacher_prompt
 )
-# Typical response: "Great question! Let's break authentication down into simple steps. 
-# Think of it like a nightclub bouncer checking IDs..."
+# Tipičen odgovor: "Odlično vprašanje! Razdelimo avtentikacijo na preproste korake.
+# Pomislite nanjo kot na varnostnika v nočnem klubu, ki preverja osebne izkaznice..."
 
-# With business prompt:
+# Z navodilom za poslovni kontekst:
 business_response = call_llm(
     "How do I handle user authentication in my web app?", 
     business_prompt
 )
-# Typical response: "From a strategic perspective, authentication is crucial for user 
-# trust and regulatory compliance. Let me outline a framework considering security, 
-# user experience, and scalability..."
+# Tipičen odgovor: "Z vidika strategije je avtentikacija ključna za zaupanje uporabnikov
+# in skladnost z zakonodajo. Predstavil bom okvir, ki upošteva varnost,
+# uporabniško izkušnjo in razširljivost..."
 ```
 
 #### Napredne tehnike sistemskih pozivov
 
-**1. Nastavitev konteksta**: Dajte AI-ju ozadje
+**1. Nastavitev konteksta**: Dajte AI ozadje
 ```python
 system_prompt = """
 You are helping a junior developer who just started their first job at a startup. 
@@ -424,7 +553,7 @@ Be encouraging and explain things step-by-step without being condescending.
 """
 ```
 
-**2. Oblikovanje izhoda**: Povejte AI-ju, kako naj strukturira odgovore
+**2. Oblikovanje izhoda**: Povejte AI, kako naj strukturira odgovore
 ```python
 system_prompt = """
 You are a technical mentor. Always structure your responses as:
@@ -436,7 +565,7 @@ You are a technical mentor. Always structure your responses as:
 """
 ```
 
-**3. Nastavitev omejitev**: Določite, kaj AI ne sme početi
+**3. Nastavitev omejitev**: Določite, česa AI NE sme početi
 ```python
 system_prompt = """
 You are a coding tutor focused on teaching best practices. Never write complete 
@@ -447,72 +576,85 @@ learn by doing. Always explain the 'why' behind coding decisions.
 
 #### Zakaj je to pomembno za vašega klepetalnega asistenta
 
-Razumevanje sistemskih pozivov vam daje neverjetno moč za ustvarjanje specializiranih AI asistentov:
-- **Bot za podporo strankam**: Uporaben, potrpežljiv, seznanjen s politiko
-- **Učitelj za učenje**: Spodbuden, korak za korakom, preverja razumevanje
-- **Kreativni partner**: Domiseln, gradi na idejah, sprašuje "kaj če?"
-- **Tehnični strokovnjak**: Natančen, podroben, osredotočen na varnost
+Razumevanje sistemskih pozivov vam daje izjemno moč za ustvarjanje specializiranih AI asistentov:
+- **Bot za uporabniško podporo**: Računajoč, potrpežljiv, pozoren na politike
+- **Učni tutor**: Spodbuden, korak za korakom, preverja razumevanje
+- **Kreativni partner**: Domiseln, gradi na idejah, sprašuje "kaj pa če?"
+- **Tehnični strokovnjak**: Natančen, podroben, pozoren na varnost
 
-**Ključni vpogled**: Ne kličete le AI API-ja – ustvarjate prilagojeno AI osebnost, ki ustreza vašemu specifičnemu primeru uporabe. To je tisto, zaradi česar se sodobne AI aplikacije zdijo prilagojene in uporabne, namesto generične.
+**Ključni vpogled**: Ne kličeš le AI API-ja – ustvarjaš prilagojeno AI osebnost, ki služi tvojemu specifičnemu primeru uporabe. To je razlog, da se sodobne AI aplikacije zdijo prilagojene in uporabne namesto generične.
 
-## Gradnja spletnega API-ja z FastAPI: Vaš visokozmogljiv komunikacijski hub za AI
+### 🎯 Pedagoški premislek: Programiranje AI osebnosti
 
-Zdaj zgradimo backend, ki povezuje vaš frontend z AI storitvami. Uporabili bomo FastAPI, sodoben Python okvir, ki odlično podpira gradnjo API-jev za AI aplikacije.
+**Premor in razmislek**: Pravkar ste se naučili programirati AI osebnosti preko sistemskih pozivov. To je temeljna spretnost v razvoju sodobnih AI aplikacij.
 
-FastAPI ponuja več prednosti za tovrstne projekte: vgrajena podpora za asinhrono obdelavo sočasnih zahtev, samodejno generiranje dokumentacije API-ja in odlična zmogljivost. Vaš FastAPI strežnik deluje kot posrednik, ki prejema zahteve od frontenda, komunicira z AI storitvami in vrača formatirane odgovore.
+**Hitri samoevalvacijski vprašalnik**:
+- Ali lahko razložite, kako se sistemski pozivi razlikujejo od običajnih uporabniških sporočil?
+- Kakšna je razlika med parametroma temperature in top_p?
+- Kako bi ustvarili sistemski poziv za določen primer uporabe (npr. tutor za programiranje)?
+
+**Povezava z resničnim svetom**: Te tehnike sistemskih pozivov se uporabljajo v vsakem pomembnem AI izdelku – od pomočnika za kodiranje GitHub Copilot do pogovornega vmesnika ChatGPT. Obvladaš iste vzorce, ki jih uporabljajo ekipe za AI izdelke v velikih tehnoloških podjetjih.
+
+**Izziv**: Kako bi zasnovali različne AI osebnosti za različne vrste uporabnikov (začetnik proti strokovnjaku)? Razmisli, kako lahko isti osnovni AI model služi različnim ciljnim skupinam preko načrtovanja pozivov.
+
+## Gradnja spletnega API-ja z FastAPI: Vaš visokozmogljivi komunikacijski vozlišče za AI
+
+Zgradimo zdaj backend, ki povezuje vaš frontend z AI storitvami. Uporabili bomo FastAPI, moderni Python okvir, ki izstopa pri ustvarjanju API-jev za AI aplikacije.
+
+FastAPI ponuja več prednosti za tovrstne projekte: vgrajena podpora za asinhrono obdelavo sočasnih zahtevkov, samodejna generacija API dokumentacije in odlična zmogljivost. Vaš FastAPI strežnik deluje kot posrednik, ki sprejema zahtevke iz frontenda, komunicira z AI storitvami in vrača oblikovane odgovore.
 
 ### Zakaj FastAPI za AI aplikacije?
 
-Morda se sprašujete: "Ali ne morem preprosto klicati AI neposredno iz svojega JavaScripta na frontendu?" ali "Zakaj
-**Zakaj je FastAPI popoln za to, kar gradimo:**
-- **Privzeto asinhrono**: Omogoča obdelavo več AI zahtev hkrati, ne da bi se zataknilo
-- **Samodejna dokumentacija**: Obiščite `/docs` in brezplačno pridobite čudovito, interaktivno stran z dokumentacijo API-ja
-- **Vgrajena validacija**: Zazna napake, preden povzročijo težave
-- **Izjemno hitro**: Eden najhitrejših Python ogrodij
-- **Sodobni Python**: Uporablja najnovejše in najboljše funkcije Pythona
+Morda se sprašujete: "Ali ne morem kar direktno klicati AI iz mojega frontend JavaScripta?" ali "Zakaj FastAPI namesto Flask ali Django?" Odlična vprašanja!
 
-**Zakaj sploh potrebujemo zaledje:**
+**Tukaj je razlog, zakaj je FastAPI popoln za to, kar gradimo:**
+- **Privzeto asinhron**: Obvladuje več AI zahtevkov hkrati brez zastojev
+- **Samodejna dokumentacija**: Obiščite `/docs` in dobite čudovito, interaktivno API dokumentacijo brezplačno
+- **Vgrajena validacija**: Preveri napake preden povzročijo težave
+- **Izjemno hiter**: Eden najhitrejših Python okvirov
+- **Sodobni Python**: Izkoristi vse najnovejše funkcije Pythona
 
-**Varnost**: Vaš API ključ za AI je kot geslo – če ga postavite v JavaScript na sprednji strani, ga lahko vsakdo, ki si ogleda izvorno kodo vaše spletne strani, ukrade in uporabi vaše AI kredite. Zaledje ohranja občutljive podatke varne.
+**In zakaj sploh potrebujemo backend:**
 
-**Omejevanje hitrosti in nadzor**: Zaledje omogoča nadzor nad tem, kako pogosto lahko uporabniki pošiljajo zahteve, implementacijo avtentikacije uporabnikov in dodajanje beleženja za sledenje uporabi.
+**Varnost**: Vaš AI API ključ je kot geslo – če ga vstavite v frontend JavaScript, ga lahko kdorkoli, ki si ogleda izvorno kodo vaše spletne strani, ukrade in uporabi vaše AI kredite. Backend varuje občutljive podatke.
 
-**Obdelava podatkov**: Morda želite shraniti pogovore, filtrirati neprimerno vsebino ali združiti več AI storitev. Zaledje je mesto, kjer živi ta logika.
+**Omejitev hitrosti in nadzor**: Backend omogoča nadzor nad tem, kako pogosto lahko uporabniki pošiljajo zahtevke, omogoča uporabniško avtentikacijo in beleženje za sledenje uporabe.
 
-**Arhitektura spominja na model odjemalec-strežnik:**
-- **Sprednja stran**: Plast uporabniškega vmesnika za interakcijo
-- **API zaledja**: Plast za obdelavo zahtev in usmerjanje
-- **AI storitev**: Zunanja računalniška obdelava in generiranje odgovorov
-- **Okoljske spremenljivke**: Varno shranjevanje konfiguracije in poverilnic
+**Obdelava podatkov**: Morda želite shranjevati pogovore, filtrirati neprimerne vsebine ali združevati več AI storitev. Backend je kraj za to logiko.
 
-### Razumevanje toka zahteva-odgovor
+**Arhitektura spominja na model klient-strežnik:**
+- **Frontend**: Plasten uporabniškega vmesnika za interakcijo
+- **Backend API**: Plasten za obdelavo in usmerjanje zahtevkov
+- **AI storitev**: Zunanje računanje in generiranje odgovorov
+- **Okoljske spremenljivke**: Varen shranjevalec konfiguracije in poverilnic
 
-Sledimo, kaj se zgodi, ko uporabnik pošlje sporočilo:
+### Razumevanje toka zahteve in odgovora
+
+Poglejmo, kaj se zgodi, ko uporabnik pošlje sporočilo:
 
 ```mermaid
 sequenceDiagram
-    participant User as 👤 User
-    participant Frontend as 🌐 Frontend
-    participant API as 🔧 FastAPI Server
-    participant AI as 🤖 AI Service
+    participant User as 👤 Uporabnik
+    participant Frontend as 🌐 Vmesnik
+    participant API as 🔧 FastAPI strežnik
+    participant AI as 🤖 AI storitev
     
-    User->>Frontend: Types "Hello AI!"
-    Frontend->>API: POST /hello {"message": "Hello AI!"}
-    Note over API: Validates request<br/>Adds system prompt
-    API->>AI: Sends formatted request
-    AI->>API: Returns AI response
-    Note over API: Processes response<br/>Logs conversation
-    API->>Frontend: {"response": "Hello! How can I help?"}
-    Frontend->>User: Displays AI message
+    User->>Frontend: Vpiše "Pozdravljen AI!"
+    Frontend->>API: POST /hello {"message": "Pozdravljen AI!"}
+    Note over API: Preveri zahtevo<br/>Doda sistemski poziv
+    API->>AI: Pošlje oblikovano zahtevo
+    AI->>API: Vrne AI odgovor
+    Note over API: Obdeluje odgovor<br/>Zabeleži pogovor
+    API->>Frontend: {"response": "Pozdravljeni! Kako vam lahko pomagam?"}
+    Frontend->>User: Prikaže AI sporočilo
 ```
-
 **Razumevanje vsakega koraka:**
-1. **Interakcija uporabnika**: Oseba vtipka v klepetalni vmesnik
-2. **Obdelava na sprednji strani**: JavaScript zajame vnos in ga oblikuje kot JSON
-3. **Validacija API-ja**: FastAPI samodejno validira zahtevo z uporabo Pydantic modelov
-4. **Integracija AI**: Zaledje doda kontekst (sistemski poziv) in pokliče AI storitev
-5. **Obdelava odgovora**: API prejme AI odgovor in ga po potrebi spremeni
-6. **Prikaz na sprednji strani**: JavaScript prikaže odgovor v klepetalnem vmesniku
+1. **Interakcija z uporabnikom**: Oseba vpiše sporočilo v klepetalni vmesnik
+2. **Obdelava frontenda**: JavaScript zajame vnos in ga oblikuje v JSON
+3. **Validacija API-ja**: FastAPI samodejno preveri zahtevek s Pydantic modeli
+4. **Integracija AI**: Backend doda kontekst (sistemski poziv) in kliče AI storitev
+5. **Obdelava odgovora**: API prejme AI odgovor in ga lahko po potrebi spremeni
+6. **Prikaz frontenda**: JavaScript prikaže odgovor v klepetalnem vmesniku
 
 ### Razumevanje arhitekture API-ja
 
@@ -523,17 +665,38 @@ sequenceDiagram
     participant AI Function
     participant GitHub Models
     
-    Frontend->>FastAPI: POST /hello {"message": "Hello AI!"}
-    FastAPI->>AI Function: call_llm(message, system_prompt)
-    AI Function->>GitHub Models: API request
-    GitHub Models->>AI Function: AI response
-    AI Function->>FastAPI: response text
-    FastAPI->>Frontend: {"response": "Hello! How can I help?"}
+    Frontend->>FastAPI: POST /hello {"message": "Pozdravljen AI!"}
+    FastAPI->>AI Function: call_llm(sporočilo, sistemski_napotki)
+    AI Function->>GitHub Models: API zahteva
+    GitHub Models->>AI Function: AI odgovor
+    AI Function->>FastAPI: odgovor besedilo
+    FastAPI->>Frontend: {"response": "Živjo! Kako vam lahko pomagam?"}
 ```
+```mermaid
+flowchart TD
+    A[Uporabniški Vnos] --> B[Preverjanje na Sprednji Strani]
+    B --> C[HTTP POST Zahteva]
+    C --> D[FastAPI Usmerjevalnik]
+    D --> E[Pydantic Preverjanje]
+    E --> F[Klic AI Funkcije]
+    F --> G[GitHub API Modelov]
+    G --> H[Obdelava Odziva]
+    H --> I[JSON Odziv]
+    I --> J[Posodobitev Sprednje Strani]
+    
+    subgraph "Varnostna Plast"
+        K[CORS Vmesnik]
+        L[Okoljske Spremenljivke]
+        M[Ravnanje z Napakami]
+    end
+    
+    D --> K
+    F --> L
+    H --> M
+```
+### Ustvarjanje FastAPI aplikacije
 
-### Ustvarjanje aplikacije FastAPI
-
-Gradimo naš API korak za korakom. Ustvarite datoteko `api.py` z naslednjo kodo FastAPI:
+Zgradimo API korak za korakom. Ustvarite datoteko `api.py` z naslednjo FastAPI kodo:
 
 ```python
 # api.py
@@ -543,27 +706,27 @@ from pydantic import BaseModel
 from llm import call_llm
 import logging
 
-# Configure logging
+# Konfiguriraj beleženje
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Create FastAPI application
+# Ustvari FastAPI aplikacijo
 app = FastAPI(
     title="AI Chat API",
     description="A high-performance API for AI-powered chat applications",
     version="1.0.0"
 )
 
-# Configure CORS
+# Konfiguriraj CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure appropriately for production
+    allow_origins=["*"],  # Primerno konfiguriraj za produkcijo
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Pydantic models for request/response validation
+# Pydantic modeli za validacijo zahtevkov/odgovorov
 class ChatMessage(BaseModel):
     message: str
 
@@ -588,14 +751,14 @@ async def health_check():
 async def chat_endpoint(chat_message: ChatMessage):
     """Main chat endpoint that processes messages and returns AI responses."""
     try:
-        # Extract and validate message
+        # Izvleci in preveri sporočilo
         message = chat_message.message.strip()
         if not message:
             raise HTTPException(status_code=400, detail="Message cannot be empty")
         
         logger.info(f"Processing message: {message[:50]}...")
         
-        # Call AI service (note: call_llm should be made async for better performance)
+        # Pokliči AI storitev (opomba: call_llm naj bo asinhron za boljšo zmogljivost)
         ai_response = await call_llm_async(message, "You are a helpful and friendly assistant.")
         
         logger.info("AI response generated successfully")
@@ -613,175 +776,175 @@ if __name__ == "__main__":
 ```
 
 **Razumevanje implementacije FastAPI:**
-- **Uvozi** FastAPI za funkcionalnost sodobnega spletnega ogrodja in Pydantic za validacijo podatkov
-- **Ustvari** samodejno dokumentacijo API-ja (na voljo na `/docs`, ko strežnik deluje)
-- **Omogoči** CORS middleware za omogočanje zahtev s sprednje strani z različnih izvorov
-- **Določi** Pydantic modele za samodejno validacijo zahtev/odgovorov in dokumentacijo
-- **Uporablja** asinhrone končne točke za boljšo zmogljivost pri sočasnih zahtevah
-- **Izvaja** ustrezne HTTP statusne kode in obravnavo napak z HTTPException
-- **Vključuje** strukturirano beleženje za spremljanje in odpravljanje napak
-- **Ponuja** končno točko za preverjanje zdravja za spremljanje stanja storitve
+- **Uvozi** FastAPI za moderno funkcionalnost spletnega okvira in Pydantic za validacijo podatkov
+- **Ustvari** samodejno API dokumentacijo (dosegljivo na `/docs`, ko strežnik teče)
+- **Omogoči** CORS middleware za dovoljenje zahtevkov iz različnih izvorov frontenda
+- **Določi** Pydantic modele za samodejno validacijo zahtevkov/odgovorov in dokumentacijo
+- **Uporablja** asinhrone končne točke za boljšo zmogljivost ob sočasnih zahtevah
+- **Izvaja** pravilne HTTP statusne kode in obravnavo napak z HTTPException
+- **Vključuje** strukturirano beleženje za nadzor in odpravljanje težav
+- **Nudi** kontrolno točko za preverjanje stanja storitve (health check)
 
-**Ključne prednosti FastAPI v primerjavi s tradicionalnimi ogrodji:**
-- **Samodejna validacija**: Pydantic modeli zagotavljajo integriteto podatkov pred obdelavo
-- **Interaktivna dokumentacija**: Obiščite `/docs` za samodejno generirano, testno dokumentacijo API-ja
-- **Tipna varnost**: Pythonovi namigi tipov preprečujejo napake med izvajanjem in izboljšujejo kakovost kode
-- **Podpora za asinhronost**: Obdelava več AI zahtev hkrati brez blokiranja
-- **Zmogljivost**: Znatno hitrejša obdelava zahtev za aplikacije v realnem času
+**Glavne prednosti FastAPI pred tradicionalnimi okviri:**
+- **Samodejna validacija**: Pydantic modeli zagotavljajo celovitost podatkov pred obdelavo
+- **Interaktivna dokumentacija**: Obiščite `/docs` za avtomatsko generirano in testabilno API dokumentacijo
+- **Tipna varnost**: Pythonove tipne namige preprečujejo napake v času izvajanja in izboljšujejo kakovost kode
+- **Asinhrona podpora**: Obdeluje več AI zahtev hkrati brez blokad
+- **Zmganljivost**: Zelo hitra obdelava zahtevkov za aplikacije v realnem času
 
-### Razumevanje CORS: varnostni stražar spleta
+### Razumevanje CORS: varnostni varuh spleta
 
-CORS (Cross-Origin Resource Sharing) je kot varnostni stražar v stavbi, ki preverja, ali so obiskovalci dovoljeni vstopiti. Razumimo, zakaj je to pomembno in kako vpliva na vašo aplikacijo.
+CORS (Cross-Origin Resource Sharing) je kot varnostnik v stavbi, ki preverja, če so obiskovalci dovoljeni za vstop. Razumimo, zakaj je to pomembno in kako vpliva na vašo aplikacijo.
 
 #### Kaj je CORS in zakaj obstaja?
 
-**Problem**: Predstavljajte si, da bi katera koli spletna stran lahko pošiljala zahteve na spletno stran vaše banke v vašem imenu brez vašega dovoljenja. To bi bila varnostna nočna mora! Brskalniki to privzeto preprečujejo s "politiko istega izvora".
+**Problem**: Predstavljajte si, da bi lahko katera koli spletna stran na vašo banko pošiljala zahtevke v vašem imenu brez vašega dovoljenja. To bi bil varnostni nočna mora! Brskalniki to preprečujejo po privzetku z "Enak izvor (Same-Origin) politiko".
 
-**Politika istega izvora**: Brskalniki dovolijo, da spletne strani pošiljajo zahteve samo na isti domeni, vratih in protokolu, iz katerega so bile naložene.
+**Same-Origin politika**: Brskalniki dovoljujejo spletnim stranem pošiljanje zahtevkov le na isti domeni, vratih in protokolu, s katerega so bile naložene.
 
-**Resnična analogija**: To je kot varnost v stanovanjski stavbi – samo stanovalci (isti izvor) lahko privzeto dostopajo do stavbe. Če želite, da prijatelj (drugi izvor) obišče, morate izrecno obvestiti varnostnika, da je to v redu.
+**Resnični primer**: To je kot varnost v stanovanjski stavbi – samo prebivalci (isti izvor) imajo dostop. Če želite prijatelju (drug izvor) dovoliti obisk, morate varnost jasno obvestiti.
 
-#### CORS v vašem razvojnem okolju
+#### CORS v vašem razvojni okolju
 
-Med razvojem vaša sprednja in zaledna stran delujeta na različnih vratih:
-- Sprednja stran: `http://localhost:3000` (ali file://, če odpirate HTML neposredno)
-- Zaledje: `http://localhost:5000`
+Med razvojem frontend in backend tečeta na različnih vratih:
+- Frontend: `http://localhost:3000` (ali file://, če odprete HTML neposredno)
+- Backend: `http://localhost:5000`
 
-To se šteje za "različne izvore", čeprav sta na istem računalniku!
+To se šteje kot "drugi izvori", čeprav sta na istem računalniku!
 
 ```python
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(__name__)
-CORS(app)   # This tells browsers: "It's okay for other origins to make requests to this API"
+CORS(app)   # To brskalnikom pove: "Druge izvorne domene lahko zahtevajo podatke iz tega API-ja"
 ```
 
-**Kaj konfiguracija CORS dejansko počne:**
-- **Doda** posebne HTTP glave v odgovore API-ja, ki brskalnikom povedo "ta zahteva iz drugega izvora je dovoljena"
-- **Obravnava** "predhodne" zahteve (brskalniki včasih preverijo dovoljenja pred pošiljanjem dejanske zahteve)
-- **Preprečuje** zloglasno napako "blocked by CORS policy" v konzoli brskalnika
+**Kaj CORS nastavitve naredijo v praksi:**
+- **Dodajo** posebne HTTP glave v API odgovore, ki brskalniku povedo "zahtevek iz drugega izvora je dovoljen"
+- **Obravnavajo** "preletne" (preflight) zahtevke (brskalniki včasih preverijo dovoljenja pred pošiljanjem pravega zahtevka)
+- **Preprečujejo** strašno napako "blocked by CORS policy" v konzoli brskalnika
 
 #### Varnost CORS: razvoj proti produkciji
 
 ```python
-# 🚨 Development: Allows ALL origins (convenient but insecure)
+# 🚨 Razvoj: Dovoli VSI izvori (udobno, vendar nesvarno)
 CORS(app)
 
-# ✅ Production: Only allow your specific frontend domain
+# ✅ Proizvodnja: Dovoli samo vaš določen domeno frontend-a
 CORS(app, origins=["https://yourdomain.com", "https://www.yourdomain.com"])
 
-# 🔒 Advanced: Different origins for different environments
-if app.debug:  # Development mode
+# 🔒 Napredno: Različni izvori za različna okolja
+if app.debug:  # Način razvoja
     CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
-else:  # Production mode
+else:  # Način proizvodnje
     CORS(app, origins=["https://yourdomain.com"])
 ```
 
-**Zakaj je to pomembno**: Med razvojem je `CORS(app)` kot da pustite vhodna vrata odklenjena – priročno, a ne varno. V produkciji želite natančno določiti, katere spletne strani lahko komunicirajo z vašim API-jem.
+**Zakaj je to pomembno**: V razvoju je `CORS(app)` kot puščena vhodna vrata – priročno, a ne varno. V produkciji želite natančno določiti, katera spletišča lahko komunicirajo z vašim API-jem.
 
-#### Pogosti scenariji CORS in rešitve
+#### Pogoste CORS situacije in rešitve
 
-| Scenarij | Problem | Rešitev |
-|----------|---------|----------|
-| **Lokalni razvoj** | Sprednja stran ne more doseči zaledja | Dodajte CORSMiddleware v FastAPI |
-| **GitHub Pages + Heroku** | Nameščena sprednja stran ne more doseči API-ja | Dodajte URL vaše GitHub Pages v izvor CORS |
-| **Prilagojena domena** | Napake CORS v produkciji | Posodobite izvor CORS, da ustreza vaši domeni |
-| **Mobilna aplikacija** | Aplikacija ne more doseči spletnega API-ja | Dodajte domeno vaše aplikacije ali previdno uporabite `*` |
+| Situacija | Problem | Rešitev |
+|----------|---------|---------|
+| **Lokalni razvoj** | Frontend ne doseže backend | Dodajte CORSMiddleware v FastAPI |
+| **GitHub Pages + Heroku** | Deployed frontend ne doseže API | Dodajte URL GitHub Pages v CORS izvore |
+| **Prilagojena domena** | CORS napake v produkciji | Posodobite CORS izvore za vašo domeno |
+| **Mobilna aplikacija** | Aplikacija ne doseže spletnega API-ja | Dodajte domeno aplikacije ali previdno uporabite `*` |
 
-**Nasvet**: Glave CORS lahko preverite v orodjih za razvijalce brskalnika pod zavihkom Network. Poiščite glave, kot je `Access-Control-Allow-Origin` v odgovoru.
+**Nasvet**: CORS glave lahko preverite v orodjih za razvijalce v zavihku Omrežje (Network) v vašem brskalniku. Poiščite glave, kot je `Access-Control-Allow-Origin` v odgovoru.
 
 ### Obravnava napak in validacija
 
-Opazite, kako naš API vključuje ustrezno obravnavo napak:
+Opazite, kako naša API vključuje ustrezno ravnanje z napakami:
 
 ```python
-# Validate that we received a message
+# Preverite, ali smo prejeli sporočilo
 if not message:
     return jsonify({"error": "Message field is required"}), 400
 ```
 
 **Ključna načela validacije:**
-- **Preverja** zahtevana polja pred obdelavo zahtev
-- **Vrne** smiselna sporočila o napakah v formatu JSON
-- **Uporablja** ustrezne HTTP statusne kode (400 za slabe zahteve)
-- **Ponuja** jasne povratne informacije za pomoč razvijalcem sprednje strani pri odpravljanju težav
+- **Preveri** zahtevana polja pred obdelavo zahtevka
+- **Vrne** smiselna sporočila o napakah v JSON obliki
+- **Uporabi** primerne HTTP statusne kode (400 za napačne zahtevke)
+- **Nudi** jasne povratne informacije za lažje odpravljanje težav frontend razvijalcem
 
-## Nastavitev in zagon vašega zaledja
+## Priprava in zagon vašega backend strežnika
 
-Zdaj, ko imamo pripravljeno integracijo AI in strežnik FastAPI, začnimo z delovanjem. Postopek nastavitve vključuje namestitev Python odvisnosti, konfiguracijo okoljskih spremenljivk in zagon vašega razvojnega strežnika.
+Zdaj, ko imamo integracijo AI in FastAPI strežnik pripravljen, zaženimo vse skupaj. Postopek setup-a vključuje namestitev Python odvisnosti, konfiguracijo okoljskih spremenljivk in zagon razvojnega strežnika.
 
-### Nastavitev Python okolja
+### Priprava Python okolja
 
-Nastavimo vaše Python razvojno okolje. Virtualna okolja so kot pristop razdelitve projekta – vsak projekt dobi svoj izoliran prostor s specifičnimi orodji in odvisnostmi, kar preprečuje konflikte med različnimi projekti.
+Nastavimo Python razvojno okolje. Virtualna okolja so kot ločeni projekti Manhattan projekta – vsak projekt dobi svoj izoliran prostor z določenimi orodji in odvisnostmi, kar preprečuje konflikte med projekti.
 
 ```bash
-# Navigate to your backend directory
+# Pomaknite se do vaše direktorije za backend
 cd backend
 
-# Create a virtual environment (like creating a clean room for your project)
+# Ustvarite virtualno okolje (kot ustvarjanje čiste sobe za vaš projekt)
 python -m venv venv
 
-# Activate it (Linux/Mac)
+# Aktivirajte ga (Linux/Mac)
 source ./venv/bin/activate
 
-# On Windows, use:
+# Na Windows uporabite:
 # venv\Scripts\activate
 
-# Install the good stuff
+# Namestite dobre stvari
 pip install openai fastapi uvicorn python-dotenv
 ```
 
 **Kaj smo pravkar naredili:**
-- **Ustvarili** smo svoj lasten Python mehurček, kjer lahko namestimo pakete, ne da bi vplivali na karkoli drugega
-- **Aktivirali** smo ga, da naš terminal ve, da uporablja to specifično okolje
-- **Namestili** smo bistvene stvari: OpenAI za AI čarovnijo, FastAPI za naš spletni API, Uvicorn za dejanski zagon in python-dotenv za varno upravljanje skrivnosti
+- **Ustvarili** majhen Python 'mehurček', kjer lahko nameščamo pakete brez vpliva na druge projekte
+- **Aktivirali** ga, da terminal ve, da naj uporablja to specifično okolje
+- **Namestili** bistvene pakete: OpenAI za AI magijo, FastAPI za spletni API, Uvicorn za zagon in python-dotenv za varno upravljanje skrivnosti
 
-**Razlaga ključnih odvisnosti:**
-- **FastAPI**: Sodobno, hitro spletno ogrodje s samodejno dokumentacijo API-ja
-- **Uvicorn**: Izjemno hiter ASGI strežnik, ki poganja aplikacije FastAPI
-- **OpenAI**: Uradna knjižnica za GitHub modele in integracijo OpenAI API-ja
-- **python-dotenv**: Varno nalaganje okoljskih spremenljivk iz .env datotek
+**Ključne odvisnosti:**
+- **FastAPI**: Moderni, hiter spletni okvir z samodejno API dokumentacijo
+- **Uvicorn**: Zelo hiter ASGI strežnik za FastAPI aplikacije
+- **OpenAI**: Uradna knjižnica za integracijo GitHub modelov in OpenAI API-ja
+- **python-dotenv**: Varen priklop okoljskih spremenljivk iz .env datotek
 
-### Konfiguracija okolja: ohranjanje skrivnosti varnih
+### Konfiguracija okolja: varovanje skrivnosti
 
-Preden začnemo z našim API-jem, moramo govoriti o eni najpomembnejših lekcij v spletnem razvoju: kako ohraniti vaše skrivnosti resnično skrivne. Okoljske spremenljivke so kot varni trezor, do katerega ima dostop samo vaša aplikacija.
+Preden zaženemo API, moramo govoriti o eni najpomembnejših lekcij v spletnem razvoju: kako ohraniti svoje skrivnosti resnično skrivne. Okoljske spremenljivke so kot varen trezor, ki mu ima dostop samo vaša aplikacija.
 
 #### Kaj so okoljske spremenljivke?
 
-**Pomislite na okoljske spremenljivke kot na sef** – vanj shranite dragocene stvari, do katerih imate dostop samo vi (in vaša aplikacija). Namesto da občutljive informacije neposredno napišete v kodo (kjer jih lahko vidi dobesedno vsak), jih varno shranite v okolje.
+**Razmišljajte o njih kot o sefih za dragocenosti** – tam dajete svoje vrednosti, dostop do njih pa imate samo vi (in vaša aplikacija). Namesto da občutljive podatke pišete neposredno v kodo (kjer jih vidi prav vsak), jih shranite varno v okolju.
 
-**Razlika:**
-- **Napačen način**: Zapisati geslo na samolepilni listek in ga prilepiti na monitor
-- **Pravi način**: Shraniti geslo v varen upravitelj gesel, do katerega imate dostop samo vi
+**Razlika je taka:**
+- **Napačno**: Pisati geslo na listku in ga prilepiti na zaslon
+- **Pravilno**: Hraniti geslo v varnem upravitelju gesel, do katerega imate samo vi dostop
 
 #### Zakaj so okoljske spremenljivke pomembne
 
 ```python
-# 🚨 NEVER DO THIS - API key visible to everyone
+# 🚨 NIKOLI NE DELAJTE TEGA - API ključ je viden vsem
 client = OpenAI(
-    api_key="ghp_1234567890abcdef...",  # Anyone can steal this!
+    api_key="ghp_1234567890abcdef...",  # Vsakdo ga lahko ukrade!
     base_url="https://models.github.ai/inference"
 )
 
-# ✅ DO THIS - API key stored securely
+# ✅ DELAJTE TO - API ključ shranjen varno
 client = OpenAI(
-    api_key=os.environ["GITHUB_TOKEN"],  # Only your app can access this
+    api_key=os.environ["GITHUB_TOKEN"],  # Do tega dostopa samo vaša aplikacija
     base_url="https://models.github.ai/inference"
 )
 ```
 
-**Kaj se zgodi, ko trdo kodirate skrivnosti:**
-1. **Izpostavljenost nadzoru različic**: Kdor koli z dostopom do vašega Git repozitorija vidi vaš API ključ
-2. **Javni repozitoriji**: Če potisnete na GitHub, je vaš ključ viden celotnemu internetu
-3. **Deljenje z ekipo**: Drugi razvijalci, ki delajo na vašem projektu, dobijo dostop do vašega osebnega API ključa
-4. **Varnostne kršitve**: Če nekdo ukrade vaš API ključ, lahko uporabi vaše AI kredite
+**Kaj se zgodi, če skušate trdo kodirati skrivnosti:**
+1. **Razkritje v sistemu za verzioniranje**: Vsakdo z dostopom do vašega Git repozitorija vidi vaš API ključ
+2. **Javni repozitoriji**: Če potisnete kodo na GitHub, je ključ viden vsem na internetu
+3. **Deljenje z ekipo**: Drugi razvijalci projekta dobijo dostop do vaše osebne API ključa
+4. **Varnostne ranljivosti**: Če nekdo ukrade vaš API ključ, lahko uporabi vaše AI kredite
 
-#### Nastavitev vaše okoljske datoteke
+#### Nastavitev vaše datoteke okolja (.env)
 
-Ustvarite `.env` datoteko v vaši zaledni mapi. Ta datoteka lokalno shranjuje vaše skrivnosti:
+Ustvarite `.env` datoteko v vaši backend mapi. Ta datoteka shrani vaše skrivnosti lokalno:
 
 ```bash
-# .env file - This should NEVER be committed to Git
+# Datoteka .env - te datoteke nikoli ne smete dodati v Git
 GITHUB_TOKEN=your_github_personal_access_token_here
 FASTAPI_DEBUG=True
 ENVIRONMENT=development
@@ -793,20 +956,20 @@ ENVIRONMENT=development
 - **Brez narekovajev** okoli vrednosti (običajno)
 - **Komentarji** se začnejo z `#`
 
-#### Ustvarjanje vašega GitHub osebnega dostopnega žetona
+#### Ustvarjanje vašega osebnega GitHub dostopnega žetona
 
-Vaš GitHub žeton je kot posebno geslo, ki daje vaši aplikaciji dovoljenje za uporabo GitHub AI storitev:
+Vaš GitHub žeton je kot posebno geslo, ki daje vaši aplikaciji dovoljenje za uporabo AI storitev GitHuba:
 
-**Koraki za ustvarjanje žetona:**
-1. **Pojdite v GitHub Nastavitve** → Nastavitve razvijalca → Osebni dostopni žetoni → Žetoni (klasični)
-2. **Kliknite "Ustvari nov žeton (klasični)"**
-3. **Nastavite potek veljavnosti** (30 dni za testiranje, daljše za produkcijo)
-4. **Izberite obseg**: Označite "repo" in vse druge potrebne pravice
-5. **Ustvarite žeton** in ga takoj kopirajte (kasneje ga ne boste več videli!)
-6. **Prilepite v vašo .env datoteko**
+**Korak za korakom izdelava žetona:**
+1. **Pojdite v GitHub Nastavitve** → Developer settings → Personal access tokens → Tokens (classic)
+2. **Kliknite "Generate new token (classic)"**
+3. **Nastavite potek veljavnosti** (30 dni za testiranje, daljši čas za produkcijo)
+4. **Izberite obsege dostopa**: Označite "repo" in druge potrebne pravice
+5. **Ustvarite žeton** in ga takoj kopirajte (po tem ga ne vidite več!)
+6. **Prilepite ga v vašo .env datoteko**
 
 ```bash
-# Example of what your token looks like (this is fake!)
+# Primer, kako izgleda vaš žeton (to je lažno!)
 GITHUB_TOKEN=ghp_1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R
 ```
 
@@ -816,10 +979,10 @@ GITHUB_TOKEN=ghp_1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Naloži spremenljivke okolja iz datoteke .env
 load_dotenv()
 
-# Now you can access them securely
+# Zdaj jih lahko varno dostopate
 api_key = os.environ.get("GITHUB_TOKEN")
 if not api_key:
     raise ValueError("GITHUB_TOKEN not found in environment variables!")
@@ -831,17 +994,17 @@ client = OpenAI(
 ```
 
 **Kaj ta koda počne:**
-- **Naloži** vašo .env datoteko in naredi spremenljivke dostopne Pythonu
-- **Preveri**, ali zahtevani žeton obstaja (dobra obravnava napak!)
-- **Dvigne** jasno napako, če žetona ni
-- **Uporablja** žeton varno, ne da bi ga izpostavil v kodi
+- **Naloži** vašo .env datoteko in naredi spremenljivke dostopne za Python
+- **Preveri**, ali je zahtevan žeton prisoten (dobra obravnava napak!)
+- **Vrže** jasen error, če žeton manjka
+- **Uporablja** žeton varno, brez izpostavljanja v kodi
 
-#### Git varnost: datoteka .gitignore
+#### Varnost Git-a: datoteka .gitignore
 
-Vaša `.gitignore` datoteka pove Gitu, katere datoteke naj nikoli ne sledi ali naloži:
+Vaša `.gitignore` datoteka Git-u pove, katere datoteke naj nikoli ne spremlja ali naloži:
 
 ```bash
-# .gitignore - Add these lines
+# .gitignore - Dodajte te vrstice
 .env
 *.env
 .env.local
@@ -851,7 +1014,7 @@ venv/
 .vscode/
 ```
 
-**Zakaj je to ključno**: Ko dodate `.env` v `.gitignore`, bo Git ignoriral vašo okoljsko datoteko, kar preprečuje, da bi pomotoma naložili svoje skrivnosti na GitHub.
+**Zakaj je to ključno**: Ko dodate `.env` v `.gitignore`, bo Git ignoriral datoteko okolja in preprečil nenameren prenos vaših skrivnosti na GitHub.
 
 #### Različna okolja, različne skrivnosti
 
@@ -862,44 +1025,43 @@ Profesionalne aplikacije uporabljajo različne API ključe za različna okolja:
 GITHUB_TOKEN=your_development_token
 DEBUG=True
 
-# .env.production  
+# .env.production
 GITHUB_TOKEN=your_production_token
 DEBUG=False
 ```
 
-**Zakaj je to pomembno**: Ne želite, da vaši razvojni eksperimenti vplivajo na vašo produkcijsko AI kvoto, in želite različne varnostne ravni za različna okolja.
+**Zakaj je to pomembno**: Ne želite, da vaši razvojni eksperimenti vplivajo na produkcijsko AI kvoto, hkrati pa želite različne nivoje zaščite za različna okolja.
 
-### Zagon vašega razvojnega strežnika: oživitev vašega FastAPI-ja
+### Zagon vašega razvojnega strežnika: oživitev FastAPI aplikacije
+Zdaj pride razburljiv trenutek – zagon strežnika za razvoj FastAPI in ogled oživele integracije AI! FastAPI uporablja Uvicorn, bliskovito hiter ASGI strežnik, ki je posebej zasnovan za asinhrone Python aplikacije.
 
-Zdaj prihaja razburljiv trenutek – zagon vašega razvojnega strežnika FastAPI in oživitev vaše AI integracije! FastAPI uporablja Uvicorn, izjemno hiter ASGI strežnik, ki je posebej zasnovan za asinhrone Python aplikacije.
-
-#### Razumevanje procesa zagona strežnika FastAPI
+#### Razumevanje procesa zagona FastAPI strežnika
 
 ```bash
-# Method 1: Direct Python execution (includes auto-reload)
+# Metoda 1: Neposredno izvajanje v Pythonu (vključuje samodejno ponovni zagon)
 python api.py
 
-# Method 2: Using Uvicorn directly (more control)
+# Metoda 2: Neposredna uporaba Uvicorna (več nadzora)
 uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-Ko zaženete ta ukaz, se za kulisami zgodi naslednje:
+Ko zaženete ta ukaz, se za kulisami odvija naslednje:
 
-**1. Python naloži vašo aplikacijo FastAPI**:
+**1. Python naloži vašo FastAPI aplikacijo**:
 - Uvozi vse potrebne knjižnice (FastAPI, Pydantic, OpenAI itd.)
-- Naloži okoljske spremenljivke iz vaše `.env` datoteke
-- Ustvari instanco aplikacije FastAPI s samodejno dokumentacijo
+- Naloži okoljske spremenljivke iz vaše datoteke `.env`
+- Ustvari instanco FastAPI aplikacije z avtomatsko dokumentacijo
 
 **2. Uvicorn konfigurira ASGI strežnik**:
-- Poveže se na vrata 5000 z zmogljivostmi za asinhrono obdelavo zahtev
-- Nastavi usmerjanje zahtev s samodejno validacijo
-- Omogoči samodejno ponovno nalaganje za razvoj (ponovni zagon ob spremembah datotek)
-- Ustvari interaktivno dokumentacijo API-ja
+- Poveže se na vrata 5000 z asinhronimi sposobnostmi obdelave zahtevkov
+- Nastavi usmerjanje zahtevkov z avtomatsko validacijo
+- Omogoči vroč ponovni zagon za razvoj (restart ob spremembah datotek)
+- Ustvari interaktivno API dokumentacijo
 
 **3. Strežnik začne poslušati**:
 - Vaš terminal prikaže: `INFO: Uvicorn running on http://0.0.0.0:5000`
-- Strežnik lahko obdeluje več sočasnih AI zahtev
-- Vaš API je pripravljen s samodejno dokumentacijo na `http://localhost:5000/docs`
+- Strežnik lahko obdeluje več sočasnih AI zahtevkov
+- Vaš API je pripravljen z avtomatsko dokumentacijo na `http://localhost:5000/docs`
 
 #### Kaj bi morali videti, ko vse deluje
 
@@ -913,30 +1075,46 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
 
-**Razumevanje izhoda FastAPI:**
-- **Bo spremljal spremembe**: Samodejno ponovno nalaganje omogočeno za razvoj
-- **Uvicorn deluje**: Visoko zmogljiv ASGI strežnik je aktiven
-- **Začetek procesa ponovnega nalaganja**: Opazovalec datotek za samodejne ponovne zagone
-- **Zagon aplikacije zaključen**: Aplikacija FastAPI uspešno inicializirana
-- **Interaktivna dokumentacija na voljo**: Obiščite `/docs` za samodejno dokumentacijo API-ja
+**Razumevanje izpisa FastAPI:**
+- **Will watch for changes**: Samodejni ponovni zagon omogočen za razvoj
+- **Uvicorn running**: Visoko zmogljiv ASGI strežnik je aktiven
+- **Started reloader process**: Opazovalec datotek za samodejne ponovne zagone
+- **Application startup complete**: FastAPI aplikacija uspešno inicializirana
+- **Interactive docs available**: Obiščite `/docs` za avtomatsko API dokumentacijo
 
-#### Testiranje vašega FastAPI-ja: več močnih pristopov
+#### Testiranje FastAPI: Več zmogljivih pristopov
 
-FastAPI ponuja več priročnih načinov za testiranje vašega API-ja, vključno s samodejno interaktivno dokumentacijo:
+FastAPI ponuja več priročnih načinov za testiranje vašega API-ja, vključno z avtomatsko interaktivno dokumentacijo:
 
-**Metoda 1: Interaktivna dokumentacija API-ja (priporočeno)**
+**Metoda 1: Interaktivna API dokumentacija (Priporočeno)**
 1. Odprite brskalnik in pojdite na `http://localhost:5000/docs`
-2. Videli boste Swagger UI z dokumentiranimi vsemi vašimi končnimi točkami
+2. Videli boste Swagger UI z vsemi dokumentiranimi končnimi točkami
 3. Kliknite na `/hello` → "Try it out" → Vnesite testno sporočilo → "Execute"
-4. Oglejte si odgovor neposredno v brskalniku z ustreznim formatiranjem
+4. Odziv si oglejte neposredno v brskalniku z ustreznim formatiranjem
 
-**Metoda 2: Osnovni
+**Metoda 2: Osnovni preizkus z brskalnikom**
+1. Pojdite na `http://localhost:5000` za korensko točko
+2. Pojdite na `http://localhost:5000/health` za preverjanje zdravja strežnika
+3. S tem potrdite, da vaš FastAPI strežnik pravilno deluje
+
+**Metoda 2: Test prek ukazne vrstice (Napredno)**
+```bash
+# Testirajte s curl (če je na voljo)
+curl -X POST http://localhost:5000/hello \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello AI!"}'
+
+# Pričakovani odgovor:
+# {"response": "Pozdravljeni! Sem vaš AI pomočnik. Kako vam lahko danes pomagam?"}
+```
+
+**Metoda 3: Python testni skript**
 ```python
-# test_api.py - Create this file to test your API
+# test_api.py - Ustvarite to datoteko za testiranje vaše API
 import requests
 import json
 
-# Test the API endpoint
+# Preizkusite API končno točko
 url = "http://localhost:5000/hello"
 data = {"message": "Tell me a joke about programming"}
 
@@ -951,31 +1129,31 @@ else:
 #### Odpravljanje pogostih težav pri zagonu
 
 | Sporočilo o napaki | Kaj pomeni | Kako odpraviti |
-|--------------------|------------|----------------|
+|--------------------|------------|---------------|
 | `ModuleNotFoundError: No module named 'fastapi'` | FastAPI ni nameščen | Zaženite `pip install fastapi uvicorn` v vašem virtualnem okolju |
 | `ModuleNotFoundError: No module named 'uvicorn'` | ASGI strežnik ni nameščen | Zaženite `pip install uvicorn` v vašem virtualnem okolju |
-| `KeyError: 'GITHUB_TOKEN'` | Okoljska spremenljivka ni najdena | Preverite svojo `.env` datoteko in klic `load_dotenv()` |
-| `Address already in use` | Vrata 5000 so zasedena | Ustavite druge procese, ki uporabljajo vrata 5000, ali spremenite vrata |
-| `ValidationError` | Podatki zahteve se ne ujemajo z modelom Pydantic | Preverite, ali format vaše zahteve ustreza pričakovani shemi |
-| `HTTPException 422` | Neobdelana entiteta | Validacija zahteve ni uspela, preverite `/docs` za pravilen format |
-| `OpenAI API error` | Avtentikacija AI storitve ni uspela | Preverite, ali je vaš GitHub token pravilen in ima ustrezne pravice |
+| `KeyError: 'GITHUB_TOKEN'` | Okoljska spremenljivka ni najdena | Preverite vašo `.env` datoteko in klic `load_dotenv()` |
+| `Address already in use` | Vrata 5000 so zasedena | Ubijte druge procese, ki uporabljajo vrata 5000 ali spremenite vrata |
+| `ValidationError` | Podatki v zahtevku ne ustrezajo Pydantic modelu | Preverite, da je format vašega zahtevka skladen s pričakovano shemo |
+| `HTTPException 422` | Neobdelovljiv entitet | Validacija zahtevka ni uspela, preverite `/docs` za pravilen format |
+| `OpenAI API error` | Avtentikacija AI storitve ni uspela | Preverite, da je vaš GitHub žeton pravilen in ima ustrezna dovoljenja |
 
-#### Najboljše prakse za razvoj
+#### Najboljše prakse razvoja
 
-**Samodejno osveževanje**: FastAPI z Uvicorn omogoča samodejno osveževanje ob shranjevanju sprememb v Python datotekah. To pomeni, da lahko takoj preizkusite spremembe, ne da bi morali ročno znova zagnati aplikacijo.
+**Vroči ponovni zagon**: FastAPI z Uvicorn omogoča samodejni ponovni zagon, ko shranite spremembe Python datotek. To pomeni, da lahko takoj spremenite kodo in testirate brez ročnega ponovnega zagona.
 
 ```python
-# Enable hot reloading explicitly
+# Omogoči eksplicitno vroče ponovno nalaganje
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)  # debug=True enables hot reload
+    app.run(host="0.0.0.0", port=5000, debug=True)  # debug=True omogoča vroče ponovno nalaganje
 ```
 
-**Beleženje za razvoj**: Dodajte beleženje, da boste razumeli, kaj se dogaja:
+**Dnevniški zapisi za razvoj**: Dodajte beleženje, da razumete, kaj se dogaja:
 
 ```python
 import logging
 
-# Set up logging
+# Nastavite beleženje
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -999,73 +1177,73 @@ def hello():
         return jsonify({"error": "AI service temporarily unavailable"}), 500
 ```
 
-**Zakaj beleženje pomaga**: Med razvojem lahko vidite, katere zahteve prihajajo, kako AI odgovarja in kje se pojavljajo napake. To močno pospeši odpravljanje težav.
+**Zakaj pomaga beleženje**: Med razvojem lahko natančno vidite, kakšni zahtevki prihajajo, kakšni so odgovori AI in kje nastanejo napake. To pospeši odpravljanje težav.
 
-### Konfiguracija za GitHub Codespaces: Enostaven razvoj v oblaku
+### Konfiguracija za GitHub Codespaces: razvoj v oblaku z lahkoto
 
-GitHub Codespaces je kot zmogljiv razvojni računalnik v oblaku, do katerega lahko dostopate iz katerega koli brskalnika. Če delate v Codespaces, je nekaj dodatnih korakov, da omogočite dostop do vašega zaledja iz sprednjega dela aplikacije.
+GitHub Codespaces je kot močan računalnik za razvoj v oblaku, do katerega lahko dostopate iz kateregakoli brskalnika. Če delate v Codespaces, je nekaj dodatnih korakov, da je vaš backend dostopen frontend-u.
 
-#### Razumevanje omrežja Codespaces
+#### Razumevanje omrežja v Codespaces
 
-V lokalnem razvojnem okolju vse deluje na istem računalniku:
-- Zaledje: `http://localhost:5000`
-- Sprednji del: `http://localhost:3000` (ali file://)
+V lokalnem razvojnem okolju vse teče na istem računalniku:
+- Backend: `http://localhost:5000`
+- Frontend: `http://localhost:3000` (ali file://)
 
-V Codespaces vaše razvojno okolje deluje na strežnikih GitHuba, zato "localhost" pomeni nekaj drugega. GitHub samodejno ustvari javne URL-je za vaše storitve, vendar jih morate pravilno konfigurirati.
+V Codespaces teče vaše razvojno okolje na GitHub strežnikih, zato "localhost" pomeni nekaj drugega. GitHub samodejno ustvari javne URL-je za vaše storitve, a jih morate pravilno konfigurirati.
 
-#### Koraki za konfiguracijo Codespaces
+#### Korak po koraku konfiguracija Codespaces
 
-**1. Zaženite svoj zaledni strežnik**:
+**1. Zaženite vaš backend strežnik**:
 ```bash
 cd backend
 python api.py
 ```
 
-Videli boste znano sporočilo o zagonu FastAPI/Uvicorn, vendar opazite, da deluje znotraj okolja Codespace.
+Videli boste znano sporočilo o zagonu FastAPI/Uvicorn, a znotraj okolja Codespace.
 
 **2. Konfigurirajte vidnost vrat**:
 - Poiščite zavihek "Ports" v spodnjem panelu VS Code
-- Poiščite vrata 5000 na seznamu
-- Kliknite z desno tipko na vrata 5000
+- Najdite vrata 5000 na seznamu
+- Z desnim klikom na vrata 5000
 - Izberite "Port Visibility" → "Public"
 
-**Zakaj jih narediti javna?** Privzeto so vrata v Codespace zasebna (dostopna samo vam). Če jih naredite javna, omogočite komunikacijo med sprednjim delom (ki deluje v brskalniku) in zaledjem.
+**Zakaj narediti vrata javna?** Privzeto so Codespace vrata zasebna (dostopate jih le vi). Javna vrata omogočajo, da vaš frontend (ki teče v brskalniku) komunicira z backend-om.
 
-**3. Pridobite svoj javni URL**:
-Ko vrata nastavite na javna, boste videli URL, kot je:
+**3. Pridobite vaš javni URL**:
+Po nastavitvi javnih vrat boste videli URL, kot je:
 ```
 https://your-codespace-name-5000.app.github.dev
 ```
 
-**4. Posodobite konfiguracijo sprednjega dela**:
+**4. Posodobite konfiguracijo frontend-a**:
 ```javascript
-// In your frontend app.js, update the BASE_URL:
+// V vaši frontend datoteki app.js posodobite BASE_URL:
 this.BASE_URL = "https://your-codespace-name-5000.app.github.dev";
 ```
 
-#### Razumevanje URL-jev Codespace
+#### Razumevanje Codespace URL-jev
 
-URL-ji Codespace sledijo predvidljivemu vzorcu:
+Codespace URL-ji sledijo predvidljivemu vzorcu:
 ```
 https://[codespace-name]-[port].app.github.dev
 ```
 
-**Razlaga:**
-- `codespace-name`: Edinstven identifikator za vaš Codespace (običajno vključuje vaše uporabniško ime)
-- `port`: Številka vrat, na katerih deluje vaša storitev (5000 za našo FastAPI aplikacijo)
-- `app.github.dev`: GitHubova domena za aplikacije Codespace
+**Podrobna razlaga:**
+- `codespace-name`: Enoličen identifikator vašega Codespace (pogosto vključuje vaše uporabniško ime)
+- `port`: Številka vrat, na katerih teče vaša storitev (5000 za našo FastAPI aplikacijo)
+- `app.github.dev`: GitHubova domena za Codespace aplikacije
 
-#### Testiranje vaše konfiguracije Codespace
+#### Testiranje Codespace nastavitve
 
-**1. Testirajte zaledje neposredno**:
-Odprite svoj javni URL v novem zavihku brskalnika. Videti bi morali:
+**1. Preizkusite backend neposredno**:
+Odprite vaš javni URL v novem zavihku brskalnika. Morali bi videti:
 ```
 Welcome to the AI Chat API. Send POST requests to /hello with JSON payload containing 'message' field.
 ```
 
-**2. Testirajte z orodji za razvijalce v brskalniku**:
+**2. Test z orodji za razvijalce v brskalniku**:
 ```javascript
-// Open browser console and test your API
+// Odprite konzolo brskalnika in preizkusite svoj API
 fetch('https://your-codespace-name-5000.app.github.dev/hello', {
   method: 'POST',
   headers: {'Content-Type': 'application/json'},
@@ -1075,101 +1253,123 @@ fetch('https://your-codespace-name-5000.app.github.dev/hello', {
 .then(data => console.log(data));
 ```
 
-#### Codespaces vs lokalni razvoj
+#### Primerjava Codespaces in lokalnega razvoja
 
 | Vidik | Lokalni razvoj | GitHub Codespaces |
-|-------|----------------|-------------------|
-| **Čas nastavitve** | Daljši (namestitev Pythona, odvisnosti) | Trenuten (vnaprej konfigurirano okolje) |
+|--------|-------------------|-------------------|
+| **Čas nastavitve** | Daljši (namestitev Pythona, odvisnosti) | Trenuten (prednastavljeno okolje) |
 | **Dostop do URL-ja** | `http://localhost:5000` | `https://xyz-5000.app.github.dev` |
-| **Konfiguracija vrat** | Samodejna | Ročna (naredite vrata javna) |
+| **Konfiguracija vrat** | Samodejna | Ročna (odpravljanje vrat) |
 | **Shranjevanje datotek** | Lokalni računalnik | GitHub repozitorij |
-| **Sodelovanje** | Težko deliti okolje | Enostavno deliti povezavo Codespace |
-| **Odvisnost od interneta** | Samo za klice AI API | Potrebno za vse |
+| **Sodelovanje** | Težko deliti okolje | Enostavno deliti povezavo do Codespace |
+| **Zahteva internet** | Samo za AI API kliče | Potrebno za vse |
 
-#### Nasveti za razvoj v Codespaces
+#### Nasveti za delo v Codespaces
 
 **Okoljske spremenljivke v Codespaces**:
-Vaša `.env` datoteka deluje enako v Codespaces, vendar lahko okoljske spremenljivke nastavite tudi neposredno v Codespace:
+Vaša `.env` datoteka deluje enako tudi v Codespaces, lahko pa nastavite okoljske spremenljivke neposredno v Codespace-u:
 
 ```bash
-# Set environment variable for the current session
+# Nastavi okoljsko spremenljivko za trenutno sejo
 export GITHUB_TOKEN="your_token_here"
 
-# Or add to your .bashrc for persistence
+# Ali dodaj v svojo .bashrc za trajnost
 echo 'export GITHUB_TOKEN="your_token_here"' >> ~/.bashrc
 ```
 
 **Upravljanje vrat**:
-- Codespaces samodejno zazna, ko vaša aplikacija začne poslušati na vratih
-- Hkrati lahko posredujete več vrat (koristno, če kasneje dodate bazo podatkov)
+- Codespaces samodejno zazna, ko se aplikacija začne poslušati na vratih
+- Lahko preusmerite več vrat hkrati (uporabno npr. če dodate bazo podatkov)
 - Vrata ostanejo dostopna, dokler vaš Codespace deluje
 
-**Delovni proces razvoja**:
-1. Naredite spremembe kode v VS Code
-2. FastAPI se samodejno osveži (zahvaljujoč načinu ponovnega nalaganja Uvicorn)
-3. Takoj preizkusite spremembe prek javnega URL-ja
-4. Ko ste pripravljeni, jih zavežite in potisnite
+**Razvojni potek dela**:
+1. Naredite spremembe v kodi v VS Code
+2. FastAPI samodejno ponovno naloži (zaradi Uvicorn reload načina)
+3. Takoj testirajte spremembe preko javnega URL-ja
+4. Ko ste pripravljeni, commitajte in pushajte
 
-> 💡 **Nasvet**: Med razvojem si shranite zaznamek za URL zaledja Codespace. Ker so imena Codespace stabilna, se URL ne bo spremenil, dokler uporabljate isti Codespace.
+> 💡 **Nasvet**: Med razvojem si shranite zaznamek za vaš Codespace backend URL. Ker so imena Codespace stabilna, URL ostane enak, dokler uporabljate isti Codespace.
 
-## Ustvarjanje vmesnika za klepet: Kjer se ljudje srečajo z AI
+## Izdelava frontend klepetalnega vmesnika: Kjer se ljudje srečujejo z AI
 
-Zdaj bomo zgradili uporabniški vmesnik – del, ki določa, kako ljudje komunicirajo z vašim AI asistentom. Tako kot pri oblikovanju prvotnega vmesnika iPhona se osredotočamo na to, da kompleksno tehnologijo naredimo intuitivno in naravno za uporabo.
+Zdaj bomo zgradili uporabniški vmesnik – tisti del, ki določa, kako ljudje komunicirajo z vašim AI pomočnikom. Tako kot je bila zasnova vmesnika originalnega iPhona osredotočena na intuitivno in naravno uporabo, tudi mi želimo kompleksno tehnologijo narediti enostavno razumljivo.
 
-### Razumevanje sodobne arhitekture sprednjega dela
+### Razumevanje moderne frontend arhitekture
 
-Naš vmesnik za klepet bo tisto, kar imenujemo "enostranska aplikacija" ali SPA. Namesto starega pristopa, kjer vsak klik naloži novo stran, naša aplikacija posodablja gladko in takoj:
+Naš klepetalni vmesnik bo t.i. "enostranska aplikacija" ali SPA. Namesto starega načina, kjer vsak klik naloži novo stran, se naša aplikacija gladko posodablja in instantno reagira:
 
-**Stare spletne strani**: Kot branje fizične knjige – obračate popolnoma nove strani
-**Naša aplikacija za klepet**: Kot uporaba telefona – vse teče in se posodablja brez prekinitev
+**Stare spletne strani**: Kot branje fizične knjige – listate na popolnoma nove strani  
+**Naša klepetalna aplikacija**: Kot uporaba telefona – vse teče in se osvežuje brez prekinitve
 
 ```mermaid
 graph TD
-    A[User Types Message] --> B[JavaScript Captures Input]
-    B --> C[Validate & Format Data]
-    C --> D[Send to Backend API]
-    D --> E[Display Loading State]
-    E --> F[Receive AI Response]
-    F --> G[Update Chat Interface]
-    G --> H[Ready for Next Message]
+    A[Uporabnik vpiše sporočilo] --> B[JavaScript zajame vnos]
+    B --> C[Preveri in oblikuj podatke]
+    C --> D[Pošlji na Backend API]
+    D --> E[Prikaži stanje nalaganja]
+    E --> F[Prejmi odgovor AI]
+    F --> G[Posodobi vmesnik klepeta]
+    G --> H[Pripravljen za naslednje sporočilo]
 ```
+```mermaid
+classDiagram
+    class ChatApp {
+        +messages: HTMLElement
+        +form: HTMLElement
+        +input: HTMLElement
+        +sendButton: HTMLElement
+        +BASE_URL: string
+        +API_ENDPOINT: string
+        
+        +constructor()
+        +initializeEventListeners()
+        +handleSubmit(dogodek)
+        +callAPI(sporočilo)
+        +appendMessage(besedilo, vloga)
+        +escapeHtml(besedilo)
+        +scrollToBottom()
+        +setLoading(nalaganje)
+    }
+    
+    ChatApp --> DOM : manipulira
+    ChatApp --> FastAPI : pošilja zahteve
+```
+### Tri stebre frontend razvoja
 
-### Trije stebri razvoja sprednjega dela
+Vsaka frontend aplikacija – od preprostih spletnih strani do zapletenih aplikacij kot Discord ali Slack – temelji na treh osnovnih tehnologijah. Pomislite nanje kot na temelj vsega, kar vidite in s čimer interaktirate na spletu:
 
-Vsaka aplikacija sprednjega dela – od preprostih spletnih strani do kompleksnih aplikacij, kot sta Discord ali Slack – temelji na treh osnovnih tehnologijah. Pomislite nanje kot na temelj vsega, kar vidite in s čimer interagirate na spletu:
+**HTML (Struktura)**: To je vaša osnova  
+- Določa, kateri elementi obstajajo (gumbi, področja za tekst, vsebniki)  
+- Daja pomen vsebini (to je naslov, to je obrazec itd.)  
+- Ustvari osnovno strukturo, na kateri je vse ostalo zgrajeno
 
-**HTML (Struktura)**: To je vaš temelj
-- Določa, kateri elementi obstajajo (gumbi, besedilna polja, vsebniki)
-- Daje pomen vsebini (to je naslov, to je obrazec itd.)
-- Ustvari osnovno strukturo, na kateri se gradi vse ostalo
+**CSS (Predstavitev)**: To je vaš notranji oblikovalec  
+- Naredi vse lepo (barve, pisave, razporeditve)  
+- Prilagodi se različnim velikostim zaslonov (telefon, prenosnik, tablica)  
+- Ustvari gladke animacije in vizualne odzive
 
-**CSS (Predstavitev)**: To je vaš notranji oblikovalec
-- Naredi vse lepo (barve, pisave, postavitve)
-- Upošteva različne velikosti zaslona (telefon, prenosnik, tablica)
-- Ustvari gladke animacije in vizualne povratne informacije
-
-**JavaScript (Obnašanje)**: To je vaš možgani
-- Odziva se na to, kar uporabniki počnejo (kliki, tipkanje, pomikanje)
-- Komunicira z vašim zaledjem in posodablja stran
+**JavaScript (Vedenje)**: To je vaš možgan  
+- Odziva se na dejanja uporabnikov (kliki, tipkanje, pomikanje)  
+- Komunicira z backend-om in posodablja stran  
 - Naredi vse interaktivno in dinamično
 
-**Pomislite na to kot na arhitekturno zasnovo:**
-- **HTML**: Strukturni načrt (določanje prostorov in odnosov)
-- **CSS**: Estetska in okoljska zasnova (vizualni slog in uporabniška izkušnja)
+**Pomislite na to kot arhitekturno zasnovo:**  
+- **HTML**: Strukturni načrt (definiranje prostorov in odnosov)  
+- **CSS**: Estetski in okoljski dizajn (vizualni stil in uporabniška izkušnja)  
 - **JavaScript**: Mehanski sistemi (funkcionalnost in interaktivnost)
 
-### Zakaj je sodobna arhitektura JavaScripta pomembna
+### Zakaj je pomembna moderna JavaScript arhitektura
 
-Naša aplikacija za klepet bo uporabljala sodobne vzorce JavaScripta, ki jih boste videli v profesionalnih aplikacijah. Razumevanje teh konceptov vam bo pomagalo pri razvoju kot razvijalcu:
+Naša klepetalna aplikacija bo uporabljala sodobne JavaScript vzorce, kakršne vidite v profesionalnih aplikacijah. Razumevanje teh konceptov vam bo pomagalo pri rasti kot razvijalec:
 
-**Arhitektura na osnovi razredov**: Našo kodo bomo organizirali v razrede, kar je podobno ustvarjanju načrtov za objekte
-**Async/Await**: Sodobni način obravnave operacij, ki trajajo (kot so klici API)
-**Programiranje na osnovi dogodkov**: Naša aplikacija se odziva na dejanja uporabnika (kliki, pritiski tipk) namesto da bi delovala v zanki
-**Manipulacija DOM**: Dinamično posodabljanje vsebine spletne strani na podlagi interakcij uporabnika in odgovorov API
+**Arhitektura temelječa na razredih**: Kodo bomo organizirali v razrede, kar je kot ustvarjanje načrtov za objekte  
+**Async/Await**: Sodobna metoda za delo z operacijami, ki trajajo (kot so API klici)  
+**Dogodkovno vodeno programiranje**: Aplikacija se odziva na uporabniške akcije (klike, pritiske tipk), ne teče v zanki  
+**Manipulacija DOM-a**: Dinamična posodobitev vsebine strani glede na uporabniške interakcije in API odgovore
 
 ### Nastavitev strukture projekta
 
-Ustvarite mapo sprednjega dela z organizirano strukturo:
+Ustvarite imenik frontend s to organizirano strukturo:
 
 ```text
 frontend/
@@ -1178,18 +1378,18 @@ frontend/
 └── styles.css      # Visual styling
 ```
 
-**Razumevanje arhitekture:**
-- **Ločuje** skrbi med strukturo (HTML), obnašanjem (JavaScript) in predstavitvijo (CSS)
-- **Ohranja** preprosto strukturo datotek, ki je enostavna za navigacijo in spreminjanje
+**Razumevanje arhitekture:**  
+- **Ločuje** skrb za strukturo (HTML), vedenje (JavaScript) in predstavitev (CSS)  
+- **Ohranja** preprosto strukturo datotek, ki je enostavna za navigacijo in spremembe  
 - **Sledi** najboljšim praksam spletnega razvoja za organizacijo in vzdrževanje
 
-### Gradnja HTML temeljev: Semantična struktura za dostopnost
+### Gradnja HTML osnove: Semantična struktura za dostopnost
 
-Začnimo z HTML strukturo. Sodobni spletni razvoj poudarja "semantični HTML" – uporabo HTML elementov, ki jasno opisujejo svoj namen, ne le svoj videz. To naredi vašo aplikacijo dostopno bralnikom zaslona, iskalnikom in drugim orodjem.
+Začnimo s HTML strukturo. Sodobni spletni razvoj poudarja "semantični HTML" – uporabo HTML elementov, ki jasno opisujejo svoj namen, ne le videz. To naredi vašo aplikacijo dostopno za bralnike zaslona, iskalnike in druga orodja.
 
-**Zakaj je semantični HTML pomemben**: Predstavljajte si, da opisujete svojo aplikacijo za klepet nekomu po telefonu. Rekli bi "na vrhu je glava z naslovom, glavno območje, kjer se pojavljajo pogovori, in obrazec na dnu za vnos sporočil." Semantični HTML uporablja elemente, ki ustrezajo temu naravnemu opisu.
+**Zakaj je semantični HTML pomemben**: Predstavljajte si, da nekomu po telefonu opisujete vašo klepetalno aplikacijo. Rekli bi "tam je glava s naslovom, glavno območje, kjer potekajo pogovori, in obrazec na dnu za vnos sporočil." Semantični HTML uporablja elemente, ki ustrezajo temu naravnemu opisu.
 
-Ustvarite `index.html` z premišljeno strukturirano oznako:
+Ustvarite `index.html` s to premišljeno strukturirano označbo:
 
 ```html
 <!DOCTYPE html>
@@ -1231,77 +1431,76 @@ Ustvarite `index.html` z premišljeno strukturirano oznako:
 </html>
 ```
 
-**Razumevanje vsakega HTML elementa in njegovega namena:**
+**Razumevanje posameznega HTML elementa in njegovega namena:**
 
 #### Struktura dokumenta
-- **`<!DOCTYPE html>`**: Brskalniku pove, da gre za sodobni HTML5
-- **`<html lang="en">`**: Določa jezik strani za bralnike zaslona in orodja za prevajanje
-- **`<meta charset="UTF-8">`**: Zagotavlja pravilno kodiranje znakov za mednarodna besedila
-- **`<meta name="viewport"...>`**: Omogoča mobilno odzivnost strani z nadzorom povečave in merila
+- **`<!DOCTYPE html>`**: Pove brskalniku, da gre za sodoben HTML5
+- **`<html lang="en">`**: Določa jezik strani za bralnike zaslona in prevajalska orodja
+- **`<meta charset="UTF-8">`**: Zagotavlja pravilno kodiranje znakov za mednarodni tekst
+- **`<meta name="viewport"...>`**: Naredi stran odzivno na mobilnih napravah z nadzorom povečave in razmerja
 
 #### Semantični elementi
-- **`<header>`**: Jasno označuje zgornji del z naslovom in opisom
-- **`<main>`**: Označuje glavno vsebinsko območje (kjer se dogajajo pogovori)
-- **`<form>`**: Semantično pravilno za vnos uporabnika, omogoča pravilno navigacijo s tipkovnico
+- **`<header>`**: Jasno označuje zgornji del s naslovom in opisom
+- **`<main>`**: Določa primarno vsebino (kjer potekajo pogovori)
+- **`<form>`**: Semantično pravilno za uporabniški vnos, omogoča pravilno navigacijo s tipkovnico
 
-#### Funkcije dostopnosti
-- **`role="log"`**: Bralnikom zaslona pove, da to območje vsebuje kronološki dnevnik sporočil
-- **`aria-live="polite"`**: Napoveduje nova sporočila bralnikom zaslona brez prekinitev
-- **`aria-label`**: Zagotavlja opisne oznake za kontrolnike obrazca
-- **`required`**: Brskalnik preveri, da uporabniki vnesejo sporočilo pred pošiljanjem
+#### Funkcije za dostopnost
+- **`role="log"`**: Sporoča bralnikom zaslona, da je to kronološki dnevnik sporočil
+- **`aria-live="polite"`**: Oznanja nova sporočila bralnikom zaslona brez prekinitve
+- **`aria-label`**: Nudi opisne oznake za kontrole obrazca
+- **`required`**: Brskalnik preveri, da uporabnik vnese sporočilo pred pošiljanjem
 
 #### Integracija CSS in JavaScript
-- **`class` atributi**: Zagotavljajo stilne kljuke za CSS (npr. `chat-container`, `input-group`)
+- **`class` atributi**: Nudi povezave za stiliziranje s CSS (npr. `chat-container`, `input-group`)
 - **`id` atributi**: Omogočajo JavaScriptu iskanje in manipulacijo specifičnih elementov
-- **Postavitev skriptov**: JavaScript datoteka se naloži na koncu, da se HTML najprej naloži
+- **Postavitev skript**: JavaScript datoteka naložena na koncu, tako da se HTML najprej naloži
 
 **Zakaj ta struktura deluje:**
-- **Logičen tok**: Glava → Glavna vsebina → Obrazec za vnos ustreza naravnemu vrstnemu redu branja
-- **Dostopno s tipkovnico**: Uporabniki lahko prehajajo med vsemi interaktivnimi elementi
-- **Prijazno bralnikom zaslona**: Jasne oznake in opisi za slabovidne uporabnike
-- **Odzivno na mobilnih napravah**: Meta oznaka za viewport omogoča odzivno oblikovanje
-- **Progresivna izboljšava**: Deluje tudi, če CSS ali JavaScript ne uspe naložiti
+- **Logičen potek**: Glava → Glavna vsebina → Obrazec za vnos sledi naravnemu vrstnemu redu branja
+- **Dostopnost s tipkovnico**: Uporabniki lahko z zavihkom prehajajo skozi vse interaktivne elemente
+- **Prijazno do bralnikov zaslona**: Jasne točke orientacije in opisi za slabovidne uporabnike
+- **Mobilna odzivnost**: Meta oznaka viewport omogoča prilagodljiv dizajn
+- **Postopen razcvet**: Dela tudi, če CSS ali JavaScript ne uspe naložiti
 
-### Dodajanje interaktivnega JavaScripta: Logika sodobne spletne aplikacije
+### Dodajanje interaktivnega JavaScript-a: Logika sodobne spletne aplikacije
+Zdaj pa sestavimo JavaScript, ki oživi naš klepetalni vmesnik. Uporabili bomo moderne JavaScript vzorce, s katerimi se boste srečali pri profesionalnem spletnem razvoju, vključno z ES6 razredi, async/await in dogodkovno programiranjem.
 
-Zdaj bomo zgradili JavaScript, ki bo oživil naš vmesnik za klepet. Uporabili bomo sodobne vzorce JavaScripta, ki jih boste srečali v profesionalnem spletnem razvoju, vključno z razredi ES6, async/await in programiranjem na osnovi dogodkov.
+#### Razumevanje moderne JavaScript arhitekture
 
-#### Razumevanje sodobne arhitekture JavaScripta
-
-Namesto pisanja proceduralne kode (serija funkcij, ki se izvajajo zaporedno), bomo ustvarili **arhitekturo na osnovi razredov**. Razred si lahko predstavljate kot načrt za ustvarjanje objektov – kot arhitektov načrt, ki se lahko uporabi za gradnjo več hiš.
+Namesto pisanja proceduralne kode (vrste funkcij, ki se izvajajo ena za drugo), bomo ustvarili **arhitekturo na osnovi razredov**. Razred si predstavljajte kot načrt za ustvarjanje objektov – tako kot arhitektov načrt služi za gradnjo več hiš.
 
 **Zakaj uporabljati razrede za spletne aplikacije?**
-- **Organizacija**: Vsa povezana funkcionalnost je združena
+- **Organizacija**: Vsa sorodna funkcionalnost je združena skupaj
 - **Ponovna uporaba**: Na isti strani lahko ustvarite več primerkov klepeta
-- **Vzdrževanje**: Lažje odpravljanje napak in spreminjanje specifičnih funkcij
-- **Profesionalni standard**: Ta vzorec se uporablja v ogrodjih, kot so React, Vue in Angular
+- **Vzdrževalnost**: Lažje je odpravljati napake in spreminjati specifične funkcije
+- **Profesionalni standard**: Ta vzorec uporabljajo ogrodja kot React, Vue in Angular
 
-Ustvarite `app.js` z modernim, dobro strukturiranim JavaScriptom:
+Ustvarite `app.js` z to moderno, dobro strukturirano JavaScript kodo:
 
 ```javascript
-// app.js - Modern chat application logic
+// app.js - Logika sodobne klepetalne aplikacije
 
 class ChatApp {
     constructor() {
-        // Get references to DOM elements we'll need to manipulate
+        // Pridobite reference na DOM elemente, s katerimi bomo manipulirali
         this.messages = document.getElementById("messages");
         this.form = document.getElementById("chatForm");
         this.input = document.getElementById("messageInput");
         this.sendButton = document.getElementById("sendBtn");
         
-        // Configure your backend URL here
-        this.BASE_URL = "http://localhost:5000"; // Update this for your environment
+        // Tukaj konfigurirajte URL vašega strežnika
+        this.BASE_URL = "http://localhost:5000"; // Posodobite to za vaše okolje
         this.API_ENDPOINT = `${this.BASE_URL}/hello`;
         
-        // Set up event listeners when the chat app is created
+        // Nastavite poslušalce dogodkov, ko je aplikacija za klepet ustvarjena
         this.initializeEventListeners();
     }
     
     initializeEventListeners() {
-        // Listen for form submission (when user clicks Send or presses Enter)
+        // Poslušajte oddajo obrazca (ko uporabnik klikne Pošlji ali pritisne Enter)
         this.form.addEventListener("submit", (e) => this.handleSubmit(e));
         
-        // Also listen for Enter key in the input field (better UX)
+        // Prav tako poslušajte tipko Enter v vhodnem polju (boljša uporabniška izkušnja)
         this.input.addEventListener("keypress", (e) => {
             if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
@@ -1311,31 +1510,31 @@ class ChatApp {
     }
     
     async handleSubmit(event) {
-        event.preventDefault(); // Prevent form from refreshing the page
+        event.preventDefault(); // Preprečite osveževanje strani ob oddaji obrazca
         
         const messageText = this.input.value.trim();
-        if (!messageText) return; // Don't send empty messages
+        if (!messageText) return; // Ne pošiljajte praznih sporočil
         
-        // Provide user feedback that something is happening
+        // Zagotovite uporabniku povratno informacijo, da se nekaj dogaja
         this.setLoading(true);
         
-        // Add user message to chat immediately (optimistic UI)
+        // Takoj dodajte uporabnikovo sporočilo v klepet (optimistično UI)
         this.appendMessage(messageText, "user");
         
-        // Clear input field so user can type next message
+        // Počistite vhodno polje, da lahko uporabnik vpiše naslednje sporočilo
         this.input.value = '';
         
         try {
-            // Call the AI API and wait for response
+            // Pokličite AI API in počakajte na odgovor
             const reply = await this.callAPI(messageText);
             
-            // Add AI response to chat
+            // Dodajte AI odgovor v klepet
             this.appendMessage(reply, "assistant");
         } catch (error) {
             console.error('API Error:', error);
             this.appendMessage("Sorry, I'm having trouble connecting right now. Please try again.", "error");
         } finally {
-            // Re-enable the interface regardless of success or failure
+            // Ponovno omogočite vmesnik, ne glede na uspeh ali napako
             this.setLoading(false);
         }
     }
@@ -1388,38 +1587,38 @@ class ChatApp {
     }
 }
 
-// Initialize the chat application when the page loads
+// Inicializirajte klepetalno aplikacijo ob nalaganju strani
 document.addEventListener("DOMContentLoaded", () => {
     new ChatApp();
 });
 ```
 
-#### Razumevanje vsakega koncepta JavaScripta
+#### Razumevanje posameznih konceptov JavaScript
 
-**Struktura razreda ES6**:
+**Struktura ES6 razreda**:
 ```javascript
 class ChatApp {
     constructor() {
-        // This runs when you create a new ChatApp instance
-        // It's like the "setup" function for your chat
+        // To se izvede, ko ustvarite novo primerek ChatApp
+        // To je kot funkcija "setup" za vaš klepet
     }
     
     methodName() {
-        // Methods are functions that belong to the class
-        // They can access class properties using "this"
+        // Metode so funkcije, ki pripadajo razredu
+        // Lahko dostopajo do lastnosti razreda z uporabo "this"
     }
 }
 ```
 
 **Vzorec Async/Await**:
 ```javascript
-// Old way (callback hell):
+// Stari način (paklenski vračilni klici):
 fetch(url)
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error(error));
 
-// Modern way (async/await):
+// Sodobni način (async/await):
 try {
     const response = await fetch(url);
     const data = await response.json();
@@ -1429,26 +1628,26 @@ try {
 }
 ```
 
-**Programiranje na osnovi dogodkov**:
-Namesto nenehnega preverjanja, ali se je nekaj zgodilo, "poslušamo" dogodke:
+**Dogodkovno programiranje**:
+Namesto stalnega preverjanja, ali se je nekaj zgodilo, "poslušamo" dogodke:
 ```javascript
-// When form is submitted, run handleSubmit
+// Ko je obrazec poslan, zaženi handleSubmit
 this.form.addEventListener("submit", (e) => this.handleSubmit(e));
 
-// When Enter key is pressed, also run handleSubmit
+// Ko je pritisnjena tipka Enter, zaženi tudi handleSubmit
 this.input.addEventListener("keypress", (e) => { /* ... */ });
 ```
 
-**Manipulacija DOM**:
+**Manipulacija DOM-a**:
 ```javascript
-// Create new elements
+// Ustvari nove elemente
 const messageElement = document.createElement("div");
 
-// Modify their properties
+// Spremeni njihove lastnosti
 messageElement.className = "message user";
 messageElement.innerHTML = "Hello world!";
 
-// Add to the page
+// Dodaj na stran
 this.messages.appendChild(messageElement);
 ```
 
@@ -1458,44 +1657,61 @@ this.messages.appendChild(messageElement);
 ```javascript
 escapeHtml(text) {
     const div = document.createElement('div');
-    div.textContent = text;  // This automatically escapes HTML
+    div.textContent = text;  // To samodejno pobegne HTML
     return div.innerHTML;
 }
 ```
 
-**Zakaj je to pomembno**: Če uporabnik vpiše `<script>alert('hack')</script>`, ta funkcija zagotovi, da se prikaže kot besedilo in se ne izvrši kot koda.
+**Zakaj je to pomembno**: Če uporabnik vnese `<script>alert('hack')</script>`, ta funkcija zagotovi, da se to prikaže kot besedilo in ne izvrši kot koda.
 
-**Obravnava napak**:
+**Ravnanje z napakami**:
 ```javascript
 try {
     const reply = await this.callAPI(messageText);
     this.appendMessage(reply, "assistant");
 } catch (error) {
-    // Show user-friendly error instead of breaking the app
+    // Prikaži uporabniku prijazno napako namesto, da aplikacija crkne
     this.appendMessage("Sorry, I'm having trouble...", "error");
 }
 ```
 
-**Premisleki o uporabniški izkušnji**:
-- **Optimistični UI**: Dodajte uporabniško sporočilo takoj, ne čakajte na odgovor strežnika
-- **Stanja nalaganja**: Onemogočite gumbe in prikažite "Pošiljanje..." med čakanjem
-- **Samodejno pomikanje**: Najnovejša sporočila naj bodo vidna
+**Razmislek o uporabniški izkušnji**:
+- **Optimiziran UI**: Uporabnikovo sporočilo dodajte takoj, ne čakajte na odziv strežnika
+- **Stanja nalaganja**: Onemogočite gumbe in prikažite "Pošiljam..." med čakanjem
+- **Avtomatski pomik**: Vedno prikažite najnovejša sporočila
 - **Validacija vnosa**: Ne pošiljajte praznih sporočil
-- **Bližnjice na tipkovnici**: Tipka Enter pošlje sporočila (kot v pravih aplikacijah za klepet)
+- **Tipkovni bližnjici**: Tipka Enter pošlje sporočila (kot v pravih klepetalnicah)
 
-#### Razumevanje toka aplikacije
+#### Razumevanje poteka aplikacije
 
-1. **Stran se naloži** → Sproži se dogodek `DOMContentLoaded` → Ustvari se `new ChatApp()`
-2. **Konstruktor se zažene** → Pridobi reference na elemente DOM → Nastavi poslušalce dogodkov
-3. **Uporabnik vpiše sporočilo** → Pritisne Enter ali klikne Pošlji → Zažene se `handleSubmit`
-4. **handleSubmit** → Validira vnos
-Ta arhitektura je razširljiva – funkcije, kot so urejanje sporočil, nalaganje datotek ali več pogovornih niti, lahko enostavno dodate brez preoblikovanja osnovne strukture.
+1. **Stran se naloži** → sproži se dogodek `DOMContentLoaded` → ustvari se `new ChatApp()`
+2. **Izvede se konstruktor** → pridobi sklice na DOM elemente → nastavi poslušalce dogodkov
+3. **Uporabnik vpiše sporočilo** → pritisne Enter ali klikne Pošlji → se zažene `handleSubmit`
+4. **handleSubmit** → Validira vnos → Prikaže stanje nalaganja → Kliče API
+5. **API odgovori** → Doda sporočilo AI v klepet → Ponovno omogoči vmesnik
+6. **Pripravljen za novo sporočilo** → uporabnik lahko nadaljuje klepet
 
-### Oblikovanje vašega vmesnika za klepet
+Ta arhitektura je razširljiva – enostavno lahko dodate funkcije, kot so urejanje sporočil, nalaganje datotek ali več pogovorov brez prepisovanja osnovne strukture.
 
-Zdaj bomo ustvarili sodoben, vizualno privlačen vmesnik za klepet s CSS. Dobra oblikovna zasnova naredi vašo aplikacijo profesionalno in izboljša splošno uporabniško izkušnjo. Uporabili bomo sodobne funkcije CSS, kot so Flexbox, CSS Grid in prilagojene lastnosti za odziven in dostopen dizajn.
+### 🎯 Pedagoški pregled: Moderna frontend arhitektura
 
-Ustvarite datoteko `styles.css` s temi celovitimi slogi:
+**Razumevanje arhitekture**: Implementirali ste celotno enostransko aplikacijo z modernimi JavaScript vzorci. To predstavlja profesionalni nivo frontend razvoja.
+
+**Osnovni izrazi, ki jih obvladate**:
+- **ES6 arhitektura razredov**: Organizirana, vzdrževana struktura kode
+- **Vzorec Async/Await**: Sodobno asinhrono programiranje
+- **Dogodkovno programiranje**: Oblikovanje odzivnega uporabniškega vmesnika
+- **Najboljše prakse varnosti**: Preprečevanje XSS in validacija vnosa
+
+**Povezava z industrijo**: Vzorci, ki ste se jih naučili (arhitektura na osnovi razredov, asinhroni klici, manipulacija DOM-a) so temelj sodobnih ogrodij kot so React, Vue in Angular. Gradite z enakim arhitekturnim razmišljanjem kot profesionalni razvijalci.
+
+**Vprašanje za razmislek**: Kako bi razširili to klepetalno aplikacijo za več pogovorov ali uporabniško prijavo? Razmislite o potrebnih arhitekturnih spremembah in razvoju strukture razredov.
+
+### Stilizacija vašega klepetalnega vmesnika
+
+Zdaj ustvarimo moder, vizualno privlačen klepetalni vmesnik s CSS. Dobra stilizacija naredi vašo aplikacijo profesionalno in izboljša uporabniško izkušnjo. Uporabili bomo sodobne CSS lastnosti kot so Flexbox, CSS Grid in prilagojene spremenljivke za odziven in dostopen dizajn.
+
+Ustvarite `styles.css` z naslednjimi celovitimi slogi:
 
 ```css
 /* styles.css - Modern chat interface styling */
@@ -1754,109 +1970,166 @@ body {
 }
 ```
 
-**Razumevanje arhitekture CSS:**
-- **Uporablja** prilagojene lastnosti CSS (spremenljivke) za dosledno tematsko oblikovanje in enostavno vzdrževanje
-- **Izvaja** postavitev Flexbox za odziven dizajn in pravilno poravnavo
-- **Vključuje** gladke animacije za prikaz sporočil, ki niso moteče
-- **Omogoča** vizualno razlikovanje med uporabniškimi sporočili, odgovori AI in stanji napak
-- **Podpira** odziven dizajn, ki deluje tako na namiznih kot mobilnih napravah
-- **Upošteva** dostopnost z zmanjšanimi preferencami gibanja in ustreznimi kontrastnimi razmerji
-- **Ponuja** podporo za temni način glede na uporabnikove sistemske nastavitve
+**Razumevanje CSS arhitekture:**
+- **Uporaba** CSS prilagojenih lastnosti (spremenljivk) za konsistentno tematiko in lažje vzdrževanje
+- **Izvajanje** Flexbox postavitve za odziven dizajn in pravilno poravnavo
+- **Vključevanje** gladkih animacij za pojavljanje sporočil brez odvračanja pozornosti
+- **Zagotavljanje** vizualne razlikovanja med uporabniškimi sporočili, odgovori AI in stanji napak
+- **Podpora** odzivnemu dizajnu za računalnike in mobilne naprave
+- **Upoštevanje** dostopnosti z nastavitvami zmanjšane animacije in ustreznim kontrastom
+- **Ponudba** temnega načina glede na uporabnikove sistemske nastavitve
 
-### Konfiguracija URL-ja vašega zalednega strežnika
+### Konfiguracija vaše URL za backend
 
-Zadnji korak je posodobitev `BASE_URL` v vašem JavaScriptu, da se ujema z vašim zalednim strežnikom:
+Zadnji korak je posodobitev `BASE_URL` v vašem JavaScriptu, da ustreza vašemu strežniku backend:
 
 ```javascript
-// For local development
+// Za lokalni razvoj
 this.BASE_URL = "http://localhost:5000";
 
-// For GitHub Codespaces (replace with your actual URL)
+// Za GitHub Codespaces (zamenjajte z vašo dejansko URL)
 this.BASE_URL = "https://your-codespace-name-5000.app.github.dev";
 ```
 
-**Določanje URL-ja vašega zalednega strežnika:**
-- **Lokalni razvoj**: Uporabite `http://localhost:5000`, če lokalno poganjate tako sprednji kot zaledni del
-- **Codespaces**: Poiščite URL vašega zalednega strežnika v zavihku Ports, potem ko naredite vrata 5000 javna
-- **Produkcija**: Zamenjajte z vašo dejansko domeno ob namestitvi na gostiteljsko storitev
+**Kako določiti URL backend strežnika:**
+- **Lokalni razvoj**: Uporabite `http://localhost:5000`, če poganjate frontend in backend lokalno
+- **Codespaces**: URL backend strežnika poiščite pod zavihkom Ports, ko odprete vrata 5000 v javnost
+- **Produkcija**: Nadomestite z dejansko domeno, ko nameščate na gostovanje
 
-> 💡 **Nasvet za testiranje**: Vaš zaledni strežnik lahko neposredno testirate tako, da obiščete korenski URL v vašem brskalniku. Videti bi morali pozdravno sporočilo vašega strežnika FastAPI.
+> 💡 **Nasvet za testiranje**: Backend lahko testirate neposredno tako, da v brskalniku obiščete root URL. Tam bi morali videti pozdravno sporočilo vašega FastAPI strežnika.
 
 
 
-## Testiranje in namestitev
+## Preizkušanje in namestitev
 
-Zdaj, ko ste zgradili tako sprednji kot zaledni del, preverimo, ali vse deluje skupaj, in raziščimo možnosti namestitve za deljenje vašega klepetalnega asistenta z drugimi.
+Zdaj, ko imate oba komponenta, frontend in backend, sestavljena, preizkusimo, ali vse skupaj deluje, in preučimo možnosti namestitve za deljenje vašega klepetalnega asistenta z drugimi.
 
-### Delovni proces lokalnega testiranja
+### Lokalni preizkusni postopek
 
-Sledite tem korakom za testiranje vaše celotne aplikacije:
+Sledite tem korakom, da preizkusite vašo aplikacijo v celoti:
 
 ```mermaid
 graph TD
-    A[Start Backend Server] --> B[Configure Environment Variables]
-    B --> C[Test API Endpoints]
-    C --> D[Open Frontend in Browser]
-    D --> E[Test Chat Functionality]
-    E --> F[Debug Any Issues]
+    A[Zaženi Backend Strežnik] --> B[Konfiguriraj Spremenljivke Okolja]
+    B --> C[Preizkusi API Končne Točke]
+    C --> D[Odpri Frontend v Brskalniku]
+    D --> E[Preizkusi Funkcionalnost Čata]
+    E --> F[Ponaglji Morebitne Težave]
 ```
+**Postopno testiranje:**
 
-**Postopek testiranja korak za korakom:**
-
-1. **Zaženite vaš zaledni strežnik**:
+1. **Zaženite strežnik backend**:
    ```bash
    cd backend
-   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   source venv/bin/activate  # ali v venv\Scripts\activate na Windows
    python api.py
    ```
 
-2. **Preverite, ali API deluje**:
-   - Odprite `http://localhost:5000` v vašem brskalniku
-   - Videti bi morali pozdravno sporočilo vašega strežnika FastAPI
+2. **Preverite, da API deluje**:
+   - Odprite `http://localhost:5000` v brskalniku
+   - Videti bi morali pozdravno sporočilo vašega FastAPI strežnika
 
-3. **Odprite vaš sprednji del**:
-   - Pojdite v mapo vašega sprednjega dela
-   - Odprite `index.html` v vašem spletnem brskalniku
-   - Ali uporabite razširitev Live Server v VS Code za boljšo izkušnjo razvoja
+3. **Odprite frontend**:
+   - Pomaknite se v katalog za frontend
+   - Odprite `index.html` v vašem brskalniku
+   - Ali uporabite razširitev Live Server v VS Code za boljšo razvojno izkušnjo
 
-4. **Testirajte funkcionalnost klepeta**:
+4. **Preizkusite klepetalno funkcionalnost**:
    - Vnesite sporočilo v vnosno polje
    - Kliknite "Pošlji" ali pritisnite Enter
-   - Preverite, ali AI ustrezno odgovarja
-   - Preverite konzolo brskalnika za morebitne napake v JavaScriptu
+   - Preverite, ali AI primerno odgovori
+   - Preverite brskalnikov konzolo za morebitne JavaScript napake
 
-### Odpravljanje pogostih težav
+### Reševanje pogostih težav
 
 | Težava | Simptomi | Rešitev |
-|--------|----------|---------|
-| **Napaka CORS** | Sprednji del ne more doseči zalednega dela | Prepričajte se, da je FastAPI CORSMiddleware pravilno konfiguriran |
-| **Napaka API ključa** | Odzivi 401 Unauthorized | Preverite vašo okoljsko spremenljivko `GITHUB_TOKEN` |
-| **Zavrnjena povezava** | Napake omrežja v sprednjem delu | Preverite URL zalednega strežnika in ali strežnik Flask deluje |
-| **Brez odgovora AI** | Prazni ali napačni odgovori | Preverite dnevnike zalednega dela za težave s kvoto API ali avtentikacijo |
+|---------|----------|----------|
+| **Napaka CORS** | Frontend ne doseže backend | Prepričajte se, da je FastAPI CORSMiddleware pravilno nastavljen |
+| **Napaka ključa API** | Odgovori 401 Unauthorized | Preverite okoljsko spremenljivko `GITHUB_TOKEN` |
+| **Povezava zavrnjena** | Omrežne napake na frontendu | Preverite URL backend strežnika in ali Flask strežnik teče |
+| **Brez AI odgovora** | Prazni ali napake odgovori | Preverite zapise backend strežnika za morebitne omejitve API ali težave z avtentikacijo |
 
 **Pogosti koraki za odpravljanje napak:**
-- **Preverite** konzolo orodij za razvijalce brskalnika za napake v JavaScriptu
-- **Preverite** zavihek Network za uspešne zahteve in odgovore API
-- **Preglejte** izhod terminala zalednega dela za napake v Pythonu ali težave z API
-- **Preverite**, ali so okoljske spremenljivke pravilno naložene in dostopne
+- **Preverite** konzolo razvijalskih orodij v brskalniku za JavaScript napake
+- **Preverite** v zavihku Network uspešne API klice in odgovore
+- **Preglejte** izhod terminala backend strežnika za Python napake ali težave z API
+- **Potrdite**, da so okoljske spremenljivke pravilno naložene in dostopne
+
+## 📈 Časovni načrt vašega razvoja AI aplikacije
+
+```mermaid
+timeline
+    title Popolna Pot Razvoja AI Aplikacij
+    
+    section Osnove AI
+        Razumevanje Generativne AI
+            : Razumeti koncepte prepoznavanja vzorcev
+            : Obvladati nadzor AI parametrov
+            : Naučiti se tehnik inženiringa pozivov
+        
+        Integracija Modelov GitHub
+            : Obvladati platforme za AI storitve
+            : Varnostno upravljati avtorizacijo
+            : Optimizirati parametre modelov
+    
+    section Razvoj Backend-a
+        Python API Arhitektura
+            : Graditi FastAPI aplikacije
+            : Izvajati asinhrone operacije
+            : Ustvariti varne končne točke
+        
+        Integracija AI Storitev
+            : Povezati se z zunanjimi AI API-ji
+            : Upravljati omejitve hitrosti
+            : Uvesti meje za napake
+    
+    section Obvlada Frontenda
+        Moderni JavaScript Vzorci
+            : Obvladati ES6 razredno arhitekturo
+            : Implementirati asinhrone/await poteke
+            : Graditi odzivne vmesnike
+        
+        Uporabniška Izkušnja v Realnem Času
+            : Ustvariti dinamične klepetalne vmesnike
+            : Upravljati stanja nalaganja
+            : Optimizirati uporabniške interakcije
+    
+    section Pripravljenost za Produkcijo
+        Varnost in Zmogljivost
+            : Uvesti varno upravljanje žetonov
+            : Preprečiti ranljivosti XSS
+            : Optimizirati zmogljivost API-jev
+        
+        Profesionalna Namestitev
+            : Graditi razširljive arhitekture
+            : Ustvariti vzdržen kodo
+            : Dokumentirati razvojne procese
+```
+**🎓 Mejniki diplome**: Uspešno ste zgradili popolno AI-poganjano aplikacijo z uporabo istih tehnologij in arhitekturnih vzorcev kot moderni AI asistenti. Ta znanja predstavljajo stik tradicionalnega spletnega razvoja in vrhunske AI integracije.
+
+**🔄 Naslednje sposobnosti**:
+- Pripravljeni za raziskovanje naprednih AI ogrodij (LangChain, LangGraph)
+- Opremeljeni za gradnjo multimodalnih AI aplikacij (besedilo, slika, glas)
+- Zmožni implementirati vektorske podatkovne baze in iskalne sisteme
+- Postavljeni temelji za strojno učenje in fino nastavitev AI modelov
 
 ## Izziv GitHub Copilot Agent 🚀
 
-Uporabite način Agent za dokončanje naslednjega izziva:
+Uporabite režim Agent, da dokončate naslednji izziv:
 
-**Opis:** Izboljšajte klepetalnega asistenta z dodajanjem zgodovine pogovorov in trajnosti sporočil. Ta izziv vam bo pomagal razumeti, kako upravljati stanje v aplikacijah za klepet in implementirati shranjevanje podatkov za boljšo uporabniško izkušnjo.
+**Opis:** Izboljšajte klepetalnega asistenta z dodajanjem zgodovine pogovorov in ohranjanjem sporočil. Ta izziv vam bo pomagal razumeti upravljanje stanja v klepetalnih aplikacijah in implementacijo shranjevanja podatkov za boljšo uporabniško izkušnjo.
 
-**Navodilo:** Spremenite aplikacijo za klepet tako, da vključuje zgodovino pogovorov, ki se ohrani med sejami. Dodajte funkcionalnost za shranjevanje sporočil klepeta v lokalno shrambo, prikaz zgodovine pogovorov ob nalaganju strani in vključite gumb "Počisti zgodovino". Prav tako implementirajte indikatorje tipkanja in časovne oznake sporočil, da bo izkušnja klepeta bolj realistična.
+**Navodilo:** Spremenite aplikacijo, da vključuje zgodovino pogovorov, ki se ohranja med sejami. Dodajte funkcionalnost shranjevanja sporočil v lokalni pomnilnik, prikaz zgodovine ob nalaganju strani ter gumb "Počisti zgodovino". Prav tako implementirajte indikatorje tipkanja in časovne žige sporočil za bolj realistično izkušnjo klepeta.
 
-Več o [načinu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) si preberite tukaj.
+Več o [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) preberite tukaj.
 
 ## Naloga: Zgradite svojega osebnega AI asistenta
 
-Zdaj boste ustvarili svojo implementacijo AI asistenta. Namesto da preprosto ponovite kodo iz vadnice, je to priložnost, da uporabite koncepte in ustvarite nekaj, kar odraža vaše interese in potrebe.
+Zdaj boste ustvarili svojo lastno implementacijo AI asistenta. Namesto običajnega prepisovanja primerov v vodiču je to priložnost, da uporabite koncepte pri izdelavi nečesa, kar odraža vaše interese in primere uporabe.
 
 ### Zahteve projekta
 
-Postavimo vaš projekt z jasno in organizirano strukturo:
+Postavimo vašo strukturo projekta čisto in organizirano:
 
 ```text
 my-ai-assistant/
@@ -1874,86 +2147,86 @@ my-ai-assistant/
 
 ### Osnovne naloge implementacije
 
-**Razvoj zalednega dela:**
-- **Prilagodite** našo kodo FastAPI in jo naredite svojo
-- **Ustvarite** edinstveno osebnost AI – morda koristnega kuharskega asistenta, kreativnega pisateljskega partnerja ali učnega pomočnika?
-- **Dodajte** zanesljivo obravnavo napak, da se vaša aplikacija ne bo zrušila, ko gre kaj narobe
-- **Napišite** jasno dokumentacijo za vsakogar, ki želi razumeti, kako deluje vaš API
+**Razvoj backend-a:**
+- **Vzemite** naš FastAPI kodo in jo naredite svojo
+- **Ustvarite** unikatno osebnost AI – mogoče pomočnik za kuhanje, ustvarjalni partner pri pisanju ali spremljevalec pri učenju?
+- **Dodajte** trdno ravnanje z napakami, da aplikacija ne pade ob napakah
+- **Napišite** jasno dokumentacijo za vsakogar, ki želi razumeti delovanje API-ja
 
-**Razvoj sprednjega dela:**
-- **Zgradite** vmesnik za klepet, ki je intuitiven in prijazen
-- **Napišite** čisto, sodobno JavaScript kodo, na katero boste ponosni
-- **Oblikujte** prilagojeno oblikovanje, ki odraža osebnost vašega AI – zabavno in barvito? Čisto in minimalistično? Popolnoma po vaši izbiri!
-- **Poskrbite**, da bo delovalo odlično tako na telefonih kot računalnikih
+**Razvoj frontend-a:**
+- **Izdelajte** klepetalni vmesnik, ki je intuitiven in prijazen
+- **Napišite** čisto, moderno JavaScript kodo, na katero boste ponosni pred drugimi razvijalci
+- **Oblikujte** lasten stil, ki odraža osebnost vaše AI – zabaven in barvit? Čist in minimalen? Odvisno od vas!
+- **Poskrbite**, da bo dobro delovalo na telefonih in računalnikih
 
-**Zahteve za personalizacijo:**
-- **Izberite** edinstveno ime in osebnost za vašega AI asistenta – morda nekaj, kar odraža vaše interese ali težave, ki jih želite rešiti
-- **Prilagodite** vizualno oblikovanje, da ustreza vibracijam vašega asistenta
-- **Napišite** privlačno pozdravno sporočilo, ki bo ljudi spodbudilo k začetku klepeta
-- **Testirajte** vašega asistenta z različnimi vrstami vprašanj, da vidite, kako se odziva
+**Zahteve po personalizaciji:**
+- **Izberite** unikatno ime in osebnost za svojega AI asistenta – nekaj, kar odraža vaše interese ali probleme, ki jih želite rešiti
+- **Prilagodite** vizualno obliko, da se ujema z vibe vašega asistenta
+- **Napišite** privlačno uvodno sporočilo, ki ljudi vabi v klepet
+- **Testirajte** svojega asistenta z različnimi vrstami vprašanj, da vidite, kako odgovarja
 
 ### Ideje za izboljšave (neobvezno)
 
-Želite svoj projekt dvigniti na višjo raven? Tukaj je nekaj zabavnih idej za raziskovanje:
+Želite svoj projekt dvigniti na višji nivo? Tukaj je nekaj zabavnih idej, ki jih lahko preizkusite:
 
-| Funkcija | Opis | Spretnosti, ki jih boste vadili |
-|----------|------|--------------------------------|
-| **Zgodovina sporočil** | Zapomni si pogovore tudi po osvežitvi strani | Delo z localStorage, obdelava JSON |
-| **Indikatorji tipkanja** | Prikaži "AI tipka..." med čakanjem na odgovore | Animacije CSS, asinhrono programiranje |
-| **Časovne oznake sporočil** | Prikaži, kdaj je bilo poslano vsako sporočilo | Oblikovanje datuma/časa, UX dizajn |
-| **Izvoz klepeta** | Omogoči uporabnikom prenos njihovega pogovora | Upravljanje datotek, izvoz podatkov |
-| **Preklapljanje tem** | Preklop med svetlim in temnim načinom | Spremenljivke CSS, uporabniške nastavitve |
-| **Vnos glasu** | Dodaj funkcionalnost pretvorbe govora v besedilo | Spletni API-ji, dostopnost |
+| Funkcija | Opis | Znanja, ki jih boste vadili |
+|---------|-------------|------------------------|
+| **Zgodovina sporočil** | Še vedno si zapomni pogovore tudi po osvežitvi strani | Delo z localStorage, upravljanje JSON |
+| **Indikatorji tipkanja** | Prikaže "AI tipka..." med čakanjem na odgovor | CSS animacije, asinhrono programiranje |
+| **Časovni žigi sporočil** | Prikazuje, kdaj je bilo sporočilo poslano | Oblikovanje datuma/ure, UX oblikovanje |
+| **Izvoz klepeta** | Omogočite prenos pogovora | Delo s datotekami, izvoz podatkov |
+| **Preklapljanje teme** | Stikalo med svetlo in temno obliko | CSS spremenljivke, uporabniške preference |
+| **Glasovni vnos** | Dodajte pretvorbo govora v besedilo | Web API, dostopnost |
 
 ### Testiranje in dokumentacija
 
 **Zagotavljanje kakovosti:**
-- **Testirajte** vašo aplikacijo z različnimi vrstami vnosov in robnimi primeri
-- **Preverite**, ali odziven dizajn deluje na različnih velikostih zaslona
-- **Preverite** dostopnost s pomočjo navigacije s tipkovnico in bralnikov zaslona
-- **Validirajte** HTML in CSS za skladnost s standardi
+- **Testirajte** aplikacijo z raznimi vrstami vnosov in robnimi primeri
+- **Preverite** odzivni dizajn na različnih velikostih zaslonov
+- **Preverite** dostopnost z uporabo tipkovnice in bralnikov zaslona
+- **Validirajte** HTML in CSS v skladu s standardi
 
 **Zahteve za dokumentacijo:**
-- **Napišite** README.md, ki pojasnjuje vaš projekt in kako ga zagnati
-- **Vključite** posnetke zaslona vašega vmesnika za klepet v akciji
-- **Dokumentirajte** vse edinstvene funkcije ali prilagoditve, ki ste jih dodali
-- **Zagotovite** jasna navodila za nastavitev za druge razvijalce
+- **Napišite** README.md, ki pojasnjuje projekt in navodila za zagon
+- **Priložite** posnetke zaslona klepetalnega vmesnika v akciji
+- **Dokumentirajte** edinstvene funkcije ali prilagoditve, ki ste jih dodali
+- **Ponudite** jasna navodila za namestitev drugim razvijalcem
 
-### Smernice za oddajo
+### Navodila za oddajo
 
-**Dostava projekta:**
-1. Popolna mapa projekta z vso izvorno kodo
-2. README.md z opisom projekta in navodili za nastavitev
+**Oddaja projekta:**
+1. Celotna mapa projekta z vsemi izvorni kodami
+2. README.md s opisom projekta in navodili za nastavitve
 3. Posnetki zaslona, ki prikazujejo vašega klepetalnega asistenta v akciji
 4. Kratek razmislek o tem, kaj ste se naučili in s kakšnimi izzivi ste se soočili
 
-**Merila za ocenjevanje:**
-- **Funkcionalnost**: Ali klepetalni asistent deluje, kot je pričakovano?
-- **Kakovost kode**: Ali je koda dobro organizirana, komentirana in vzdržljiva?
-- **Oblikovanje**: Ali je vmesnik vizualno privlačen in uporabniku prijazen?
-- **Kreativnost**: Kako edinstvena in personalizirana je vaša implementacija?
-- **Dokumentacija**: Ali so navodila za nastavitev jasna in popolna?
+**Merila ocenjevanja:**
+- **Funkcionalnost**: Ali klepetalni asistent deluje kot pričakovano?
+- **Kakovost kode**: Ali je koda dobro organizirana, komentirana in vzdrževana?
+- **Oblikovanje**: Je vmesnik vizualno privlačen in uporabniku prijazen?
+- **Ustvarjalnost**: Kako unikaten in personaliziran je vaš pristop?
+- **Dokumentacija**: Ali so navodila za namestitev jasna in izčrpna?
 
-> 💡 **Nasvet za uspeh**: Najprej se osredotočite na osnovne zahteve, nato pa dodajte izboljšave, ko bo vse delovalo. Osredotočite se na ustvarjanje izpopolnjene osnovne izkušnje, preden dodate napredne funkcije.
+> 💡 **Nasvet za uspeh**: Najprej se osredotočite na osnovne zahteve, nato dodajajte izboljšave, ko vse deluje. Osredotočite se na popolno osnovno izkušnjo, preden vključite napredne funkcije.
 
 ## Rešitev
 
 [Rešitev](./solution/README.md)
 
-## Bonusni izzivi
+## Bonus izzivi
 
-Pripravljeni, da svojega AI asistenta dvignete na višjo raven? Preizkusite te napredne izzive, ki bodo poglobili vaše razumevanje integracije AI in spletnega razvoja.
+Ste pripravljeni dvigniti svojega AI asistenta na višji nivo? Preizkusite te zahtevne izzive, ki vam bodo poglobili znanja o AI integraciji in spletnem razvoju.
 
 ### Prilagoditev osebnosti
 
-Prava magija se zgodi, ko svojemu AI asistentu dodate edinstveno osebnost. Eksperimentirajte z različnimi sistemskimi pozivi za ustvarjanje specializiranih asistentov:
+Prava čarovnija se zgodi, ko svojemu AI asistentu daste unikatno osebnost. Eksperimentirajte z različnimi sistemskimi pozivi za ustvarjanje specializiranih asistentov:
 
 **Primer profesionalnega asistenta:**
 ```python
 call_llm(message, "You are a professional business consultant with 20 years of experience. Provide structured, actionable advice with specific steps and considerations.")
 ```
 
-**Primer pomočnika za kreativno pisanje:**
+**Primer pomočnika za ustvarjalno pisanje:**
 ```python
 call_llm(message, "You are an enthusiastic creative writing coach. Help users develop their storytelling skills with imaginative prompts and constructive feedback.")
 ```
@@ -1963,114 +2236,149 @@ call_llm(message, "You are an enthusiastic creative writing coach. Help users de
 call_llm(message, "You are a patient senior developer who explains complex programming concepts using simple analogies and practical examples.")
 ```
 
-### Izboljšave sprednjega dela
+### Izboljšave frontenda
 
-Preoblikujte svoj vmesnik za klepet s temi vizualnimi in funkcionalnimi izboljšavami:
+Preoblikujte svoj klepetalni vmesnik z naslednjimi vizualnimi in funkcionalnimi izboljšavami:
 
-**Napredne funkcije CSS:**
+**Napredne CSS funkcije:**
 - **Izvedite** gladke animacije in prehode sporočil
-- **Dodajte** prilagojene oblike mehurčkov za klepet s CSS oblikami in gradienti
-- **Ustvarite** animacijo indikatorja tipkanja za čas, ko AI "razmišlja"
-- **Oblikujte** emoji reakcije ali sistem ocenjevanja sporočil
+- **Dodajte** prilagojene oblike klepetalnih oblačkov z uporabo CSS oblik in gradientov
+- **Ustvarite** animacijo indikatorja tipkanja za "razmišljanje" AI
+- **Oblikujte** reakcije z emojiji ali sistem ocenjevanja sporočil
 
-**Izboljšave JavaScripta:**
-- **Dodajte** bližnjice na tipkovnici (Ctrl+Enter za pošiljanje, Escape za čiščenje vnosa)
-- **Izvedite** funkcionalnost iskanja in filtriranja sporočil
-- **Ustvarite** funkcijo izvoza pogovora (prenos kot besedilo ali JSON)
+**Izboljšave JavaScript-a:**
+- **Dodajte** tipkovne bližnjice (Ctrl+Enter za pošiljanje, Escape za brisanje)
+- **Implementirajte** iskanje in filtriranje sporočil
+- **Ustvarite** funkcijo izvoza pogovora (kot besedilo ali JSON)
 - **Dodajte** samodejno shranjevanje v localStorage, da preprečite izgubo sporočil
 
-### Napredna integracija AI
+### Napredna AI integracija
 
 **Več osebnosti AI:**
-- **Ustvarite** spustni meni za preklapljanje med različnimi osebnostmi AI
+- **Ustvarite** padajoči seznam za preklapljanje med različnimi osebnostmi AI
 - **Shranjujte** uporabnikovo izbrano osebnost v localStorage
-- **Izvedite** preklapljanje konteksta, ki ohranja tok pogovora
+- **Izvedite** preklapljanje konteksta, ki ohranja potek pogovora
 
-**Pametne funkcije odgovarjanja:**
+**Pametne funkcionalnosti odgovorov:**
 - **Dodajte** zavedanje konteksta pogovora (AI si zapomni prejšnja sporočila)
-- **Izvedite** pametne predloge na podlagi teme pogovora
-- **Ustvarite** gumbe za hitre odgovore na pogosta vprašanja
+- **Izvedite** pametne predloge na podlagi teme pogovora  
+- **Ustvarite** gumbe za hitre odgovore na pogosta vprašanja  
 
-> 🎯 **Cilj učenja**: Ti bonusni izzivi vam pomagajo razumeti napredne vzorce spletnega razvoja in tehnike integracije AI, ki se uporabljajo v produkcijskih aplikacijah.
+> 🎯 **Cilj učenja**: Ti dodatni izzivi vam pomagajo razumeti napredne vzorce spletnega razvoja in tehnike integracije umetne inteligence, ki se uporabljajo v produkcijskih aplikacijah.
 
-## Povzetek in naslednji koraki
+## Povzetek in nadaljnji koraki
 
-Čestitke! Uspešno ste zgradili popolnega klepetalnega asistenta, ki ga poganja AI, od začetka. Ta projekt vam je omogočil praktične izkušnje s sodobnimi tehnologijami spletnega razvoja in integracijo AI – veščine, ki so v današnjem tehnološkem okolju vse bolj dragocene.
+Čestitke! Uspešno ste zgradili popolnega klepetalnega asistenta, ki ga poganja umetna inteligenca, popolnoma od začetka. Ta projekt vam je dal praktične izkušnje z modernimi tehnologijami spletnega razvoja in integracijo AI – veščine, ki so vse bolj cenjene v današnjem tehnološkem okolju.
 
 ### Kaj ste dosegli
 
-V tem poglavju ste obvladali več ključnih tehnologij in konceptov:
+V celotnem tečaju ste osvojili več ključnih tehnologij in konceptov:
 
-**Razvoj zalednega dela:**
-- **Integrirali** z GitHub Models API za funkcionalnost AI
-- **Zgradili** RESTful API z uporabo Flask z ustrezno obravnavo napak
-- **Izvedli** varno avtentikacijo z uporabo okoljskih spremenljivk
-- **Konfigurirali** CORS za zahteve med sprednjim in zalednim delom
+**Razvoj backend-a:**  
+- **Integrirali** ste GitHub API za modele za AI funkcionalnost  
+- **Zgradili** RESTful API z uporabo Flaska z ustreznim upravljanjem napak  
+- **Izvedli** varno avtentikacijo z uporabo okoljskih spremenljivk  
+- **Konfigurirali** CORS za zahteve med frontend in backend  
 
-**Razvoj sprednjega dela:**
-- **Ustvarili** odziven vmesnik za klepet z uporabo semantičnega HTML
-- **Izvedli** sodoben JavaScript z async/await in arhitekturo na osnovi razredov
-- **Oblikovali** privlačen uporabniški vmesnik z CSS Grid, Flexbox in animacijami
-- **Dodali** funkcije dostopnosti in načela odzivnega dizajna
+**Razvoj frontend-a:**  
+- **Ustvarili** odziven klepetalni vmesnik s semantičnim HTML-jem  
+- **Uporabili** sodobni JavaScript z async/await in arhitekturo na osnovi razredov  
+- **Oblikovali** privlačen uporabniški vmesnik s CSS Grid, Flexbox in animacijami  
+- **Dodali** funkcije dostopnosti in načela odzivnega oblikovanja  
 
-**Integracija celotnega sklopa:**
-- **Povezali** sprednji in zaledni del prek HTTP API klicev
-- **Obravnavali** interakcije uporabnikov v realnem času in asinhroni tok podatkov
-- **Izvedli** obravnavo napak in povratne informacije uporabnikom skozi aplikacijo
-- **Testirali** celoten delovni proces aplikacije od vnosa uporabnika do odgovora AI
+**Celovita integracija:**  
+- **Povezali** frontend in backend prek HTTP API klicev  
+- **Obvladovali** interakcije uporabnikov v realnem času in asinhrono pretakanje podatkov  
+- **Izvedli** upravljanje napak in povratne informacije uporabnikom po vsej aplikaciji  
+- **Testirali** celoten potek aplikacije od vnosa uporabnika do odziva AI  
 
 ### Ključni učni izidi
 
 ```mermaid
 mindmap
-  root((AI Chat App Skills))
-    API Integration
-      Authentication
-      Error Handling
-      Async Programming
-    Web Development
-      HTML5 Semantics
-      Modern CSS
+  root((Spretnosti AI klepetalnice))
+    API Integracija
+      Avtentikacija
+      Ravnanje z napakami
+      Asinhrono programiranje
+    Spletni razvoj
+      HTML5 semantika
+      Moderna CSS
       ES6+ JavaScript
-    User Experience
-      Responsive Design
-      Accessibility
-      Real-time Interaction
-    AI Understanding
-      Prompt Engineering
-      Model Parameters
-      Conversation Flow
-```
+    Uporabniška izkušnja
+      Prilagodljiv dizajn
+      Dostopnost
+      Interakcija v realnem času
+    Razumevanje AI
+      Konstruiranje pozivov
+      Parametri modela
+      Potek pogovora
+```  
+Ta projekt vas je seznanil z osnovami gradnje aplikacij, ki jih poganja umetna inteligenca, kar predstavlja prihodnost spletnega razvoja. Sedaj razumete, kako integrirati AI zmogljivosti v tradicionalne spletne aplikacije in ustvariti privlačne uporabniške izkušnje, ki delujejo inteligentno in odzivno.
 
-Ta projekt vas je uvedel v osnove gradnje aplikacij, ki jih poganja AI, kar predstavlja prihodnost spletnega razvoja. Zdaj razumete, kako integrirati zmogljivosti AI v tradicionalne spletne aplikacije in ustvariti privlačne uporabniške izkušnje, ki se zdijo inteligentne in odzivne.
+### Poklicne uporabe
 
-### Profesionalne aplikacije
+Veščine, ki ste jih razvili v tem tečaju, so neposredno uporabne v sodobnih karierah razvoja programske opreme:
 
-Spretnosti, ki ste jih razvili v tem poglavju, so neposredno uporabne v sodobnih karierah programske opreme:
+- **Celostni spletni razvoj** z uporabo sodobnih ogrodij in API-jev  
+- **Integracija AI** v spletne in mobilne aplikacije  
+- **Oblikovanje in razvoj API-jev** za arhitekture mikro-storitev  
+- **Razvoj uporabniškega vmesnika** s poudarkom na dostopnosti in odzivnem oblikovanju  
+- **Prakse DevOps** vključno s konfiguracijo okolja in nameščanjem  
 
-- **Spletni razvoj celotnega sklopa** z uporabo sodobnih ogrodij in API-jev
-- **Integracija AI** v spletne aplikacije in mobilne aplikacije
-- **Oblikovanje in razvoj API-jev** za arhitekture mikrostoritev
-- **Razvoj uporabniškega vmesnika** s poudarkom na dostopnosti in odzivnem dizajnu
-- **Prakse DevOps**, vključno s konfiguracijo okolja in namestitvijo
+### Nadaljujte svojo pot razvoja z umetno inteligenco
 
-### Nadaljevanje vaše poti razvoja AI
+**Nadaljnji koraki učenja:**  
+- **Raziščite** bolj napredne AI modele in API-je (GPT-4, Claude, Gemini)  
+- **Naučite se** tehnik priprave ukazov za boljše odgovore AI  
+- **Študirajte** oblikovanje pogovorov in principe uporabniške izkušnje chatbotov  
+- **Preučite** varnost, etiko in odgovorne prakse razvoja AI  
+- **Gradite** zahtevnejše aplikacije z možnostjo pomnjenja pogovorov in zavedanjem konteksta  
 
-**Naslednji koraki učenja:**
-- **Raziščite** bolj napredne modele AI in API-je (GPT-4, Claude, Gemini)
-- **Naučite se** tehnik oblikovanja pozivov za boljše odgovore AI
-- **Preučite** oblikovanje pogovorov
-- **Posredovanje vrat** za testiranje vaših aplikacij
+**Napredne ideje za projekte:**  
+- Večuporabniške klepetalnice z AI moderiranjem  
+- Klepetalniki za podporo strankam, ki jih poganja AI  
+- Izobraževalni tutorji z osebnim pristopom k učenju  
+- Sodelavci pri ustvarjalnem pisanju z različnimi AI osebnostmi  
+- Pomočniki za tehnično dokumentacijo za razvijalce  
 
-**Kaj Codespaces omogoča:**
-- **Odpravlja** težave z nastavitvijo in konfiguracijo lokalnega okolja
-- **Omogoča** dosledno razvojno okolje na različnih napravah
-- **Vključuje** vnaprej konfigurirana orodja in razširitve za spletni razvoj
-- **Ponuja** brezhibno integracijo z GitHubom za nadzor različic in sodelovanje
+## Začnite z GitHub Codespaces
 
-> 🚀 **Nasvet za strokovnjake**: Codespaces je idealen za učenje in prototipiranje AI aplikacij, saj samodejno poskrbi za zapleteno nastavitev okolja, kar vam omogoča, da se osredotočite na ustvarjanje in učenje namesto na odpravljanje težav s konfiguracijo.
+Želite preizkusiti ta projekt v oblačnem razvojno okolju? GitHub Codespaces vam nudi popolno razvojno okolje v vašem brskalniku, idealno za eksperimentiranje z AI aplikacijami brez lokalnih zahtev po nastavitvi.
+
+### Namestitev razvojnega okolja
+
+**Korak 1: Ustvarite iz predloge**  
+- **Odprite** [Web Dev For Beginners repozitorij](https://github.com/microsoft/Web-Dev-For-Beginners)  
+- **Kliknite** "Use this template" v zgornjem desnem kotu (preverite, da ste prijavljeni v GitHub)  
+
+![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.sl.png)  
+
+**Korak 2: Zaženite Codespaces**  
+- **Odprite** novoustanovljeni repozitorij  
+- **Kliknite** zeleno tipko "Code" in izberite "Codespaces"  
+- **Izberite** "Create codespace on main", da začnete razvojno okolje  
+
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.sl.png)  
+
+**Korak 3: Konfiguracija okolja**  
+Ko se vaš Codespace naloži, boste imeli dostop do:  
+- **Prednameščenih** Python, Node.js in vseh potrebnih orodij za razvoj  
+- **Vmesnika VS Code** z razširitvami za spletni razvoj  
+- **Terminala** za zagon backend in frontend strežnikov  
+- **Posredovanja vrat** za preizkušanje vaših aplikacij  
+
+**Kaj Codespaces nudi:**  
+- **Odpravlja** težave z nastavitvijo in konfiguracijo lokalnega okolja  
+- **Nudi** dosledno razvojno okolje na različnih napravah  
+- **Vključuje** vnaprej konfigurirana orodja in razširitve za spletni razvoj  
+- **Omogoča** nemoteno integracijo z GitHubom za nadzor različic in sodelovanje  
+
+> 🚀 **Nasvet za profesionalce**: Codespaces je popoln za učenje in prototipiziranje AI aplikacij, saj samodejno ureja vse zapletene nastavitve okolja, kar vam omogoča, da se osredotočite na razvoj in učenje namesto na odpravljanje težav s konfiguracijo.
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v izvorni jezik se šteje za avtoritativni vir. Za pomembne informacije priporočamo strokovni prevod s strani človeka. Ne odgovarjamo za kakršne koli nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

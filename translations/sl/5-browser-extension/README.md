@@ -23,7 +23,7 @@ To razširitev lahko uporabnik po potrebi pokliče, ko v obrazec vnese ključ AP
 
 ### Zasluge
 
-![zelena razširitev za brskalnik](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.sl.png)
+![zelena razširitev za brskalnik](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sl.png)
 
 ## Zasluge
 
