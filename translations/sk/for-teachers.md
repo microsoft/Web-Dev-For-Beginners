@@ -42,10 +42,10 @@ Tento učebný plán obsahuje importovateľné balíky pre bežné pracovné pos
   - Moodle Cloud má obmedzenú podporu Common Cartridge. Uprednostnite vyššie uvedený súbor Moodle, ktorý je možné nahrať aj do Canvas.
   - Po importe skontrolujte moduly, termíny a nastavenia kvízov, aby zodpovedali vášmu rozvrhu.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.sk.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.sk.png)
 > Učebný plán v Moodle triede
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.sk.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.sk.png)
 > Učebný plán v Canvas
 
 ### Použitie úložiska priamo (bez Classroom)

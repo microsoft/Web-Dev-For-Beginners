@@ -1,105 +1,205 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "bc93f6285423033ebf5b8abeb5282888",
-  "translation_date": "2025-10-24T21:35:22+00:00",
+  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
+  "translation_date": "2026-01-07T05:07:43+00:00",
   "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
   "language_code": "sk"
 }
 -->
-# Projekt Terárium Časť 3: Manipulácia s DOM a JavaScript Closures
+# Projekt Terrárium Časť 3: Manipulácia s DOM a JavaScriptové Closures
 
-![DOM a closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.sk.png)
+```mermaid
+journey
+    title Vaša cesta JavaScript DOM
+    section Základy
+      Understand DOM: 3: Student
+      Learn closures: 4: Student
+      Connect elements: 4: Student
+    section Interakcia
+      Setup drag events: 4: Student
+      Track coordinates: 5: Student
+      Handle movement: 5: Student
+    section Doladenie
+      Add cleanup: 4: Student
+      Test functionality: 5: Student
+      Complete terrarium: 5: Student
+```
+![DOM a closure](../../../../translated_images/webdev101-js.10280393044d7eaa.sk.png)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Vitajte v jednej z najzaujímavejších oblastí webového vývoja - vytváranie interaktívnych prvkov! Document Object Model (DOM) je ako most medzi vaším HTML a JavaScriptom, a dnes ho použijeme na oživenie vášho terária. Keď Tim Berners-Lee vytvoril prvý webový prehliadač, predstavil si web, kde dokumenty môžu byť dynamické a interaktívne - DOM tento sen umožňuje.
+Vitajte v jednej z najpútavejších oblastí webového vývoja – robíme veci interaktívnymi! Document Object Model (DOM) je ako most medzi vaším HTML a JavaScriptom, a dnes ho použijeme na oživenie vášho terrária. Keď Tim Berners-Lee vytvoril prvý webový prehliadač, predstavoval si web, kde môžu byť dokumenty dynamické a interaktívne – DOM túto víziu umožňuje.
 
-Preskúmame tiež JavaScript closures, ktoré môžu na začiatku znieť zastrašujúco. Predstavte si closures ako "pamäťové kapsy", kde si vaše funkcie môžu pamätať dôležité informácie. Je to ako keby každá rastlina vo vašom teráriu mala vlastný záznam na sledovanie svojej polohy. Na konci tejto lekcie pochopíte, aké prirodzené a užitočné sú.
+Preskúmame aj JavaScriptové closures, ktoré môžu znieť najprv zastrašujúco. Myslite na closures ako na vytváranie "pamäťových vreckárov", kde vaše funkcie môžu pamätať dôležité informácie. Je to ako keby každá rastlina v terráriu mala vlastný dátový záznam na sledovanie svojej pozície. Na konci tejto lekcie pochopíte, ako sú prirodzené a užitočné.
 
-Tu je, čo budeme vytvárať: terárium, kde môžu používatelia presúvať rastliny kamkoľvek chcú. Naučíte sa techniky manipulácie s DOM, ktoré poháňajú všetko od presúvania súborov až po interaktívne hry. Poďme oživiť vaše terárium.
+Tu je to, čo budeme stavať: terrárium, kde používatelia môžu ťahať a pustiť rastliny kamkoľvek chcú. Naučíte sa techniky manipulácie s DOM, ktoré poháňajú všetko od drag-and-drop nahrávania súborov až po interaktívne hry. Poďme oživiť vaše terrárium.
 
-## Kvíz pred prednáškou
+```mermaid
+mindmap
+  root((DOM & JavaScript))
+    DOM Tree
+      Výber Elementov
+      Prístup k Vlastnostiam
+      Spracovanie Udalostí
+      Dynamické Aktualizácie
+    Events
+      Ukazovacie Udalosti
+      Myšacie Udalosti
+      Dotykové Udalosti
+      Poslucháči Udalostí
+    Closures
+      Súkromné Premenné
+      Rozsah Funkcie
+      Udržanie Pamäte
+      Správa Stavu
+    Drag & Drop
+      Sledovanie Pozície
+      Matematika Súradníc
+      Životný Cyklus Udalosti
+      Interakcia Používateľa
+    Modern Patterns
+      Delegovanie Udalostí
+      Výkon
+      Medzi-Zariadení
+      Prístupnosť
+```
+## Prednáškový kvíz
 
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/19)
+[Prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/19)
 
-## Pochopenie DOM: Vaša brána k interaktívnym webovým stránkam
+## Pochopenie DOM: Vstupná brána k interaktívnym webovým stránkam
 
-Document Object Model (DOM) je spôsob, akým JavaScript komunikuje s vašimi HTML prvkami. Keď váš prehliadač načíta HTML stránku, vytvorí štruktúrovanú reprezentáciu tejto stránky v pamäti - to je DOM. Predstavte si to ako rodokmeň, kde každý HTML prvok je člen rodiny, ku ktorému má JavaScript prístup, môže ho upraviť alebo preskupiť.
+Document Object Model (DOM) je spôsob, akým JavaScript komunikuje s vašimi HTML prvkami. Keď váš prehliadač načíta HTML stránku, vytvorí štruktúrovanú reprezentáciu tejto stránky v pamäti – to je DOM. Predstavte si to ako rodokmeň, kde každý HTML prvok je člen rodiny, ku ktorému má JavaScript prístup, môže ho meniť alebo prestavovať.
 
-Manipulácia s DOM premieňa statické stránky na interaktívne webové stránky. Kedykoľvek vidíte tlačidlo meniace farbu pri prechode myšou, aktualizáciu obsahu bez obnovenia stránky alebo prvky, ktoré môžete presúvať, to je práca manipulácie s DOM.
+Manipulácia s DOM premieňa statické stránky na interaktívne webové stránky. Kedykoľvek vidíte tlačidlo meniť farbu po najetí myšou, obsah sa aktualizuje bez obnovenia stránky alebo prvky, ktoré môžete presúvať, je to práca manipulácie s DOM.
 
-![Reprezentácia stromu DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.sk.png)
+```mermaid
+flowchart TD
+    A["Dokument"] --> B["HTML"]
+    B --> C["Hlavička"]
+    B --> D["Telo"]
+    C --> E["Názov"]
+    C --> F["Meta značky"]
+    D --> G["H1: Môj Terárium"]
+    D --> H["Div: Kontajner stránky"]
+    H --> I["Div: Ľavý kontajner"]
+    H --> J["Div: Pravý kontajner"]
+    H --> K["Div: Terárium"]
+    I --> L["Rastlinné prvky 1-7"]
+    J --> M["Rastlinné prvky 8-14"]
+    
+    L --> N["img#plant1"]
+    L --> O["img#plant2"]
+    M --> P["img#plant8"]
+    M --> Q["img#plant9"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style D fill:#e8f5e8
+    style H fill:#fff3e0
+    style N fill:#ffebee
+    style O fill:#ffebee
+    style P fill:#ffebee
+    style Q fill:#ffebee
+```
+![Reprezentácia DOM stromu](../../../../translated_images/dom-tree.7daf0e763cbbba92.sk.png)
 
-> Reprezentácia DOM a HTML značiek, ktoré naň odkazujú. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> Reprezentácia DOM a HTML značkovania, ktoré naň odkazuje. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-**Čo robí DOM takým silným:**
-- **Poskytuje** štruktúrovaný spôsob prístupu k akémukoľvek prvku na vašej stránke
+**Čo robí DOM silným:**
+- **Poskytuje** štruktúrovaný spôsob prístupu ku akémukoľvek prvku na vašej stránke
 - **Umožňuje** dynamické aktualizácie obsahu bez obnovenia stránky
-- **Reaguje** v reálnom čase na interakcie používateľa, ako sú kliknutia a presuny
+- **Dovoľuje** reagovať v reálnom čase na interakcie používateľa, ako sú kliknutia a ťahanie
 - **Vytvára** základ pre moderné interaktívne webové aplikácie
 
-## JavaScript Closures: Tvorba organizovaného a výkonného kódu
+## JavaScriptové Closures: Vytváranie organizovaného a silného kódu
 
-[JavaScript closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) je ako dať funkcii vlastný súkromný pracovný priestor s trvalou pamäťou. Predstavte si Darwinove pinky na Galapágach, ktoré si každá vyvinula špecializované zobáky podľa svojho konkrétneho prostredia - closures fungujú podobne, vytvárajú špecializované funkcie, ktoré si "pamätajú" svoj konkrétny kontext aj po skončení svojej nadradenej funkcie.
+[JavaScriptové closure](https://developer.mozilla.org/docs/Web/JavaScript/Closures) sú ako dať funkcii jej vlastný súkromný pracovný priestor s trvalou pamäťou. Zamyslite sa, ako Darwinove vrabce na Galapágach vyvinuli špecializované zobáky podľa svojho prostredia – closures fungujú podobne, vytvárajú špecializované funkcie, ktoré si "pamätajú" svoj konkrétny kontext aj po tom, ako rodičovská funkcia skončila.
 
-V našom teráriu closures pomáhajú každej rastline nezávisle si pamätať svoju vlastnú polohu. Tento vzor sa objavuje v profesionálnom JavaScript vývoji, čo z neho robí cenný koncept na pochopenie.
+V našom terráriu closures pomáhajú každej rastline zapamätať si svoju pozíciu nezávisle. Tento vzor sa objavuje v profesionálnom JavaScripte, takže je to cenný koncept na pochopenie.
 
-> 💡 **Pochopenie Closures**: Closures sú významnou témou v JavaScripte a mnoho vývojárov ich používa roky, než úplne pochopia všetky teoretické aspekty. Dnes sa zameriame na praktické použitie - uvidíte, ako prirodzene vznikajú pri budovaní našich interaktívnych funkcií. Pochopenie sa rozvinie, keď uvidíte, ako riešia skutočné problémy.
+```mermaid
+flowchart LR
+    A["dragElement(plant1)"] --> B["Vytvára Closure"]
+    A2["dragElement(plant2)"] --> B2["Vytvára Closure"]
+    
+    B --> C["Súkromné Premenné"]
+    B2 --> C2["Súkromné Premenné"]
+    
+    C --> D["pos1, pos2, pos3, pos4"]
+    C --> E["funkcia pointerDrag"]
+    C --> F["funkcia elementDrag"]
+    C --> G["funkcia stopElementDrag"]
+    
+    C2 --> D2["pos1, pos2, pos3, pos4"]
+    C2 --> E2["funkcia pointerDrag"]
+    C2 --> F2["funkcia elementDrag"]
+    C2 --> G2["funkcia stopElementDrag"]
+    
+    H["Rastlina 1 si pamätá svoju pozíciu"] --> B
+    H2["Rastlina 2 si pamätá svoju pozíciu"] --> B2
+    
+    style B fill:#e8f5e8
+    style B2 fill:#e8f5e8
+    style C fill:#fff3e0
+    style C2 fill:#fff3e0
+```
+> 💡 **Pochopenie Closures**: Closures sú významnou témou v JavaScripte a mnoho vývojárov ich používa roky, než úplne pochopia všetky teoretické aspekty. Dnes sa zameriame na praktickú aplikáciu – closures prirodzene uvidíte vzniknúť počas budovania našich interaktívnych funkcií. Pochopenie sa vyvinie, ako uvidíte, ako riešia skutočné problémy.
 
-![Reprezentácia stromu DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.sk.png)
+![Reprezentácia DOM stromu](../../../../translated_images/dom-tree.7daf0e763cbbba92.sk.png)
 
-> Reprezentácia DOM a HTML značiek, ktoré naň odkazujú. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
+> Reprezentácia DOM a HTML značkovania, ktoré naň odkazuje. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
-V tejto lekcii dokončíme náš interaktívny projekt terária vytvorením JavaScriptu, ktorý umožní používateľovi manipulovať s rastlinami na stránke.
+V tejto lekcii dokončíme náš interaktívny projekt terrária vytvorením JavaScriptu, ktorý umožní používateľovi manipulovať s rastlinami na stránke.
 
-## Predtým, než začneme: Príprava na úspech
+## Pred začiatkom: Príprava na úspech
 
-Budete potrebovať svoje HTML a CSS súbory z predchádzajúcich lekcií o teráriu - chystáme sa urobiť túto statickú dizajn interaktívnou. Ak sa pripájate prvýkrát, dokončenie týchto lekcií vám poskytne dôležitý kontext.
+Budete potrebovať svoje HTML a CSS súbory z predchádzajúcich lekcií o terráriu – chystáme sa urobiť ten statický dizajn interaktívnym. Ak sa pripájate prvýkrát, najprv si dokončite tieto lekcie, aby ste získali dôležitý kontext.
 
-Tu je, čo budeme vytvárať:
-- **Plynulé presúvanie** všetkých rastlín v teráriu
-- **Sledovanie súradníc**, aby si rastliny pamätali svoje polohy
-- **Kompletné interaktívne rozhranie** pomocou vanilla JavaScriptu
-- **Čistý, organizovaný kód** pomocou closure vzorov
+Tu je to, čo zhotovíme:
+- **Plynulé ťahanie a púšťanie** pre všetky rastliny v terráriu
+- **Sledovanie súradníc**, aby rastliny pamätali svoje pozície
+- **Kompletné interaktívne rozhranie** využívajúce čistý JavaScript
+- **Čistý, usporiadaný kód** pomocou closure vzoru
 
-## Nastavenie vášho JavaScript súboru
+## Nastavenie JavaScriptového súboru
 
-Vytvorme JavaScript súbor, ktorý urobí vaše terárium interaktívnym.
+Vytvorme JavaScriptový súbor, ktorý spraví vaše terrárium interaktívnym.
 
 **Krok 1: Vytvorte svoj script súbor**
 
-Vo vašom teráriovom priečinku vytvorte nový súbor s názvom `script.js`.
+Vo vašom adresári terrária vytvorte nový súbor s názvom `script.js`.
 
-**Krok 2: Prepojte JavaScript s vaším HTML**
+**Krok 2: Prepojte JavaScript so svojím HTML**
 
-Pridajte tento script tag do sekcie `<head>` vášho súboru `index.html`:
+Pridajte tento značkový tag do sekcie `<head>` vášho súboru `index.html`:
 
 ```html
 <script src="./script.js" defer></script>
 ```
 
-**Prečo je atribút `defer` dôležitý:**
-- **Zabezpečuje**, že váš JavaScript počká, kým sa načíta všetok HTML
-- **Zabraňuje** chybám, kde JavaScript hľadá prvky, ktoré ešte nie sú pripravené
-- **Zaručuje**, že všetky vaše rastlinné prvky sú dostupné na interakciu
+**Prečo je dôležitý atribút `defer`:**
+- **Zabezpečuje**, že váš JavaScript počká, kým sa načíta celé HTML
+- **Zabraňuje** chybám, keď JavaScript hľadá prvky, ktoré ešte nie sú pripravené
+- **Zaručuje**, že všetky vaše rastliny sú dostupné na interakciu
 - **Poskytuje** lepší výkon ako umiestnenie skriptov na spodok stránky
 
-> ⚠️ **Dôležitá poznámka**: Atribút `defer` zabraňuje bežným problémom s načasovaním. Bez neho by sa JavaScript mohol pokúsiť pristupovať k HTML prvkom pred ich načítaním, čo by spôsobilo chyby.
+> ⚠️ **Dôležité upozornenie**: Atribút `defer` zabraňuje bežným časovým problémom. Bez neho môže JavaScript skúsiť pristupovať k HTML prvkom pred ich načítaním, čo spôsobí chyby.
 
 ---
 
-## Prepojenie JavaScriptu s vašimi HTML prvkami
+## Pripojenie JavaScriptu k vašim HTML prvkom
 
-Predtým, než môžeme urobiť prvky presúvateľnými, JavaScript ich musí nájsť v DOM. Predstavte si to ako systém katalogizácie knižnice - keď máte číslo katalógu, môžete presne nájsť knihu, ktorú potrebujete, a získať prístup k jej obsahu.
+Skôr než môžeme urobiť prvky ťahateľnými, JavaScript ich musí nájsť v DOM. Predstavte si to ako systém knižničného katalógu – keď máte číslo katalógu, nájdete presne tú knihu, ktorú potrebujete, a máte prístup ku všetkému jej obsahu.
 
-Použijeme metódu `document.getElementById()` na vytvorenie týchto prepojení. Je to ako mať presný systém archivácie - poskytnete ID a nájde presne ten prvok, ktorý potrebujete vo vašom HTML.
+Použijeme metódu `document.getElementById()`, aby sme tieto prepojenia vytvorili. Je to ako mať presný systém archivácie – zadáte ID a nájde presne ten prvok, ktorý potrebujete v HTML.
 
-### Aktivácia funkcie presúvania pre všetky rastliny
+### Povolenie funkcie ťahania pre všetky rastliny
 
-Pridajte tento kód do vášho súboru `script.js`:
+Pridajte tento kód do súboru `script.js`:
 
 ```javascript
-// Enable drag functionality for all 14 plants
+// Povoliť pretiahnutie funkcie pre všetky 14 rastlín
 dragElement(document.getElementById('plant1'));
 dragElement(document.getElementById('plant2'));
 dragElement(document.getElementById('plant3'));
@@ -117,38 +217,48 @@ dragElement(document.getElementById('plant14'));
 ```
 
 **Čo tento kód dosahuje:**
-- **Nájde** každý rastlinný prvok v DOM pomocou jeho jedinečného ID
-- **Získa** JavaScript referenciu na každý HTML prvok
-- **Prenesie** každý prvok do funkcie `dragElement` (ktorú vytvoríme neskôr)
-- **Pripraví** každú rastlinu na interakciu presúvania
-- **Prepojí** vašu HTML štruktúru s JavaScript funkčnosťou
+- **Nájde** každý prvok rastliny v DOM podľa jeho jedinečného ID
+- **Získa** JavaScriptový odkaz na každý HTML prvok
+- **Odovzdá** každý prvok funkcii `dragElement` (ktorú si teraz vytvoríme)
+- **Pripraví** každú rastlinu na interakciu ťahania a púšťania
+- **Prepojí** vašu HTML štruktúru s JavaScriptovou funkcionalitou
 
-> 🎯 **Prečo používať ID namiesto tried?** ID poskytujú jedinečné identifikátory pre konkrétne prvky, zatiaľ čo CSS triedy sú určené na štýlovanie skupín prvkov. Keď JavaScript potrebuje manipulovať s jednotlivými prvkami, ID ponúkajú presnosť a výkon, ktorý potrebujeme.
+> 🎯 **Prečo používať ID namiesto tried?** ID poskytujú jedinečné identifikátory pre konkrétne prvky, zatiaľ čo CSS triedy sú určené na styling skupín prvkov. Keď JavaScript potrebuje manipulovať s jednotlivými prvkami, ID ponúka presnosť a výkon, ktorý potrebujeme.
 
-> 💡 **Tip**: Všimnite si, ako voláme `dragElement()` pre každú rastlinu individuálne. Tento prístup zaručuje, že každá rastlina dostane svoje vlastné nezávislé správanie pri presúvaní, čo je nevyhnutné pre plynulú interakciu používateľa.
+> 💡 **Tip pre profesionálov**: Všimnite si, ako voláme `dragElement()` pre každú rastlinu samostatne. Tento prístup zaručuje, že každá rastlina dostane svoj vlastný nezávislý ťahací režim, čo je kľúčové pre plynulú interakciu používateľa.
+
+### 🔄 **Pedagogická kontrola**
+**Pochopenie pripojenia k DOM**: Predtým, než sa pustíte do ťahania, overte, že viete:
+- ✅ Vysvetliť, ako `document.getElementById()` nájde HTML prvky
+- ✅ Pochopiť, prečo používame jedinečné ID pre každú rastlinu
+- ✅ Opísať účel atribútu `defer` v značkách skriptov
+- ✅ Rozpoznať, ako JavaScript a HTML komunikujú cez DOM
+
+**Rýchly seba-test**: Čo by sa stalo, keby mali dva prvky rovnaké ID? Prečo `getElementById()` vráti iba jeden prvok?  
+*Odpoveď: ID by mali byť jedinečné; ak sú duplikované, vyberie sa len prvý prvok*
 
 ---
 
-## Vytvorenie Closure pre funkciu dragElement
+## Vytvorenie closure pre funkciu dragElement
 
-Teraz vytvoríme jadro našej funkcie presúvania: closure, ktorý spravuje správanie presúvania pre každú rastlinu. Tento closure bude obsahovať viacero vnútorných funkcií, ktoré spolupracujú na sledovaní pohybov myši a aktualizácii polohy prvkov.
+Teraz vytvoríme jadro našej ťahacej funkcionality: closure, ktorá riadi správanie ťahania pre každú rastlinu. Táto closure bude obsahovať viac vnútorných funkcií, ktoré spolupracujú na sledovaní pohybov myši a aktualizácii pozícií prvkov.
 
-Closures sú pre túto úlohu ideálne, pretože nám umožňujú vytvoriť "súkromné" premenné, ktoré pretrvávajú medzi volaniami funkcií, čím dávajú každej rastline vlastný nezávislý systém sledovania súradníc.
+Closures sú na tento úkol ideálne, pretože umožňujú vytvoriť "súkromné" premenné, ktoré pretrvávajú medzi volaniami funkcie, takže každá rastlina má nezávislý systém sledovania súradníc.
 
-### Pochopenie Closures pomocou jednoduchého príkladu
+### Pochopenie closures na jednoduchom príklade
 
-Ukážme si closures na jednoduchom príklade, ktorý ilustruje koncept:
+Ukážem vám closures na jednoduchom príklade, ktorý ilustruje tento koncept:
 
 ```javascript
 function createCounter() {
-    let count = 0; // This is like a private variable
+    let count = 0; // Toto je ako súkromná premenná
     
     function increment() {
-        count++; // The inner function remembers the outer variable
+        count++; // Vnútorná funkcia si pamätá vonkajšiu premennú
         return count;
     }
     
-    return increment; // We're giving back the inner function
+    return increment; // Vraciame vnútornú funkciu
 }
 
 const myCounter = createCounter();
@@ -157,129 +267,168 @@ console.log(myCounter()); // 2
 ```
 
 **Čo sa deje v tomto vzore closure:**
-- **Vytvára** súkromnú premennú `count`, ktorá existuje iba v tomto closure
-- **Vnútorná funkcia** môže pristupovať k tejto vonkajšej premennej a upravovať ju (mechanizmus closure)
-- **Keď vrátime** vnútornú funkciu, zachováva si spojenie s týmito súkromnými dátami
-- **Aj po skončení** `createCounter()` premenná `count` pretrváva a pamätá si svoju hodnotu
+- **Vytvára** súkromnú premennú `count`, ktorá existuje iba v rámci tejto closure
+- **Vnútorná funkcia** má prístup a môže meniť túto vonkajšiu premennú (mechanizmus closure)
+- **Keď vraciame** vnútornú funkciu, udržiava svoje prepojenie na tieto súkromné dáta
+- **Aj po tom, čo** skončí vykonávanie `createCounter()`, `count` pretrváva a pamätá si svoju hodnotu
 
-### Prečo sú Closures ideálne pre funkciu presúvania
+### Prečo sú closures ideálne pre funkciu ťahania
 
-Pre naše terárium každá rastlina potrebuje pamätať si svoje aktuálne súradnice. Closures poskytujú ideálne riešenie:
+Pre naše terrárium musí každá rastlina pamätať svoje aktuálne súradnice pozície. Closures ponúkajú ideálne riešenie:
 
 **Kľúčové výhody pre náš projekt:**
-- **Udržuje** súkromné premenné polohy pre každú rastlinu nezávisle
-- **Zachováva** údaje o súradniciach medzi udalosťami presúvania
-- **Zabraňuje** konfliktom premenných medzi rôznymi presúvateľnými prvkami
-- **Vytvára** čistú, organizovanú štruktúru kódu
+- **Udržiavajú** súkromné premenné pozície pre každú rastlinu nezávisle
+- **Zachovávajú** dáta súradníc medzi ťahacími udalosťami
+- **Zabraňujú** konfliktom premenných medzi rôznymi ťahateľnými prvkami
+- **Vytvárajú** čistú a organizovanú štruktúru kódu
 
-> 🎯 **Cieľ učenia**: Nemusíte teraz ovládať každý aspekt closures. Zamerajte sa na to, ako nám pomáhajú organizovať kód a udržiavať stav pre našu funkciu presúvania.
+> 🎯 **Učebný cieľ**: Nemusíte teraz ovládať všetky aspekty closures. Zamerajte sa na to, ako nám pomáhajú organizovať kód a udržiavať stav pre našu ťahaciu funkcionalitu.
 
-### Vytvorenie funkcie dragElement
+```mermaid
+stateDiagram-v2
+    [*] --> Ready: Načítanie stránky
+    Ready --> DragStart: Používateľ stlačí (pointerdown)
+    DragStart --> Dragging: Myš/prst sa pohybuje (pointermove)
+    Dragging --> Dragging: Pokračovať v pohybe
+    Dragging --> DragEnd: Používateľ pustí (pointerup)
+    DragEnd --> Ready: Reset pre ďalšie ťahanie
+    
+    state DragStart {
+        [*] --> CapturePosition
+        CapturePosition --> SetupListeners
+        SetupListeners --> [*]
+    }
+    
+    state Dragging {
+        [*] --> CalculateMovement
+        CalculateMovement --> UpdatePosition
+        UpdatePosition --> [*]
+    }
+    
+    state DragEnd {
+        [*] --> RemoveListeners
+        RemoveListeners --> CleanupState
+        CleanupState --> [*]
+    }
+```
+### Vytváranie funkcie dragElement
 
-Teraz vytvoríme hlavnú funkciu, ktorá bude spracovávať všetku logiku presúvania. Pridajte túto funkciu pod deklarácie rastlinných prvkov:
+Teraz postavme hlavnú funkciu, ktorá zvládne celú logiku ťahania. Pridajte túto funkciu pod deklarácie prvkov rastlín:
 
 ```javascript
 function dragElement(terrariumElement) {
-    // Initialize position tracking variables
-    let pos1 = 0,  // Previous mouse X position
-        pos2 = 0,  // Previous mouse Y position  
-        pos3 = 0,  // Current mouse X position
-        pos4 = 0;  // Current mouse Y position
+    // Inicializovať premenné na sledovanie pozície
+    let pos1 = 0,  // Predchádzajúca pozícia myši na osi X
+        pos2 = 0,  // Predchádzajúca pozícia myši na osi Y
+        pos3 = 0,  // Aktuálna pozícia myši na osi X
+        pos4 = 0;  // Aktuálna pozícia myši na osi Y
     
-    // Set up the initial drag event listener
+    // Nastaviť počiatočný poslucháč udalosti ťahania
     terrariumElement.onpointerdown = pointerDrag;
 }
 ```
 
-**Pochopenie systému sledovania polohy:**
-- **`pos1` a `pos2`**: Uchovávajú rozdiel medzi starými a novými polohami myši
-- **`pos3` a `pos4`**: Sledovanie aktuálnych súradníc myši
-- **`terrariumElement`**: Konkrétny rastlinný prvok, ktorý robíme presúvateľným
-- **`onpointerdown`**: Udalosť, ktorá sa spustí, keď používateľ začne presúvať
+**Pochopenie systému sledovania pozície:**
+- **`pos1` a `pos2`**: Uchovávajú rozdiel medzi starou a novou pozíciou myši
+- **`pos3` a `pos4`**: Sledujú aktuálne súradnice myši
+- **`terrariumElement`**: Konkrétny prvok rastliny, ktorý robíme ťahateľným
+- **`onpointerdown`**: Udalosť, ktorá sa spustí, keď používateľ začne ťahanie
 
 **Ako funguje vzor closure:**
-- **Vytvára** súkromné premenné polohy pre každý rastlinný prvok
-- **Udržuje** tieto premenné počas celého životného cyklu presúvania
-- **Zaručuje**, že každá rastlina sleduje svoje vlastné súradnice nezávisle
-- **Poskytuje** čisté rozhranie prostredníctvom funkcie `dragElement`
+- **Vytvára** súkromné premenné pozície pre každý prvok rastliny
+- **Udržiava** tieto premenné počas celej životnosti ťahania
+- **Zabezpečuje**, že každá rastlina sleduje svoje súradnice nezávisle
+- **Poskytuje** čisté rozhranie cez funkciu `dragElement`
 
-### Prečo používať Pointer Events?
+### Prečo použiť pointer udalosti?
 
-Možno sa pýtate, prečo používame `onpointerdown` namiesto známejšieho `onclick`. Tu je vysvetlenie:
+Možno vás zaujíma, prečo používame `onpointerdown` namiesto známejšieho `onclick`. Tu je vysvetlenie:
 
 | Typ udalosti | Najlepšie pre | Nevýhoda |
 |--------------|---------------|----------|
-| `onclick` | Jednoduché kliknutia na tlačidlá | Nedokáže spracovať presúvanie (iba kliknutia a uvoľnenia) |
-| `onpointerdown` | Myš aj dotyk | Novšie, ale dnes dobre podporované |
-| `onmousedown` | Iba myš na desktopoch | Vylučuje mobilných používateľov |
+| `onclick` | Jednoduché kliknutia tlačidla | Nevhodné pre ťahanie (iba kliky a pustenie) |
+| `onpointerdown` | Myš aj dotykové ovládanie | Novšie, ale dnes dobre podporované |
+| `onmousedown` | Myš na desktopoch | Nezahŕňa mobilných používateľov |
 
-**Prečo sú pointer events ideálne pre to, čo vytvárame:**
-- **Funguje skvele**, či už niekto používa myš, prst alebo dokonca stylus
-- **Pôsobí rovnako** na notebooku, tablete alebo telefóne
-- **Spracováva** skutočný pohyb presúvania (nielen kliknutie a hotovo)
-- **Vytvára** plynulý zážitok, ktorý používatelia očakávajú od moderných webových aplikácií
+**Prečo sú pointer udalosti ideálne pre našu funkciu ťahania:**
+- **Fungujú skvelo** či už používateľ používa myš, prst alebo stylus
+- **Cítia sa rovnako** na laptopoch, tabletoch aj telefónoch
+- **Zvládajú** samotný ťahací pohyb (nie iba kliknutie a pustenie)
+- **Vytvárajú** plynulý zážitok, ktorý používatelia očakávajú od moderných webových aplikácií
 
-> 💡 **Príprava na budúcnosť**: Pointer events sú moderný spôsob spracovania interakcií používateľa. Namiesto písania samostatného kódu pre myš a dotyk získate oboje zadarmo. Celkom šikovné, však?
+> 💡 **Budúca pripravenosť**: Pointer udalosti sú moderný spôsob spracovania používateľských interakcií. Namiesto písania samostatného kódu pre myš a dotyk získate oboje zadarmo. Celkom pekné, že?
+
+### 🔄 **Pedagogická kontrola**
+**Pochopenie spracovania udalostí**: Zastavte sa a overte si porozumenie:
+- ✅ Prečo používame pointer udalosti namiesto myšových udalostí?
+- ✅ Ako pretrvávajú closure premenné medzi volaniami funkcie?
+- ✅ Akú úlohu má `preventDefault()` pri plynulom ťahaní?
+- ✅ Prečo pripájame poslucháčov na dokument namiesto jednotlivých prvkov?
+
+**Spojenie s reálnym svetom**: Premýšľajte o rozhraniach drag-and-drop, ktoré denne používate:
+- **Nahrávanie súborov**: Pretiahnutie súborov do prehliadača
+- **Kanban tabuľky**: Presúvanie úloh medzi stĺpcami
+- **Galérie obrázkov**: Zmena poradia fotografií
+- **Mobilné rozhrania**: Potiahnutie a ťahanie na dotykových obrazovkách
 
 ---
 
-## Funkcia pointerDrag: Zachytenie začiatku presúvania
+## Funkcia pointerDrag: Zachytenie začiatku ťahania
 
-Keď používateľ stlačí rastlinu (či už kliknutím myšou alebo dotykom prsta), funkcia `pointerDrag` sa aktivuje. Táto funkcia zachytáva počiatočné súradnice a nastavuje systém presúvania.
+Keď používateľ stlačí rastlinu (či už kliknutím myšou alebo dotykom), funkcia `pointerDrag` sa aktivuje. Táto funkcia zachytáva počiatočné súradnice a nastavuje ťahací systém.
 
-Pridajte túto funkciu do vášho closure `dragElement`, hneď po riadku `terrariumElement.onpointerdown = pointerDrag;`:
+Pridajte túto funkciu do closure `dragElement`, hneď po riadku `terrariumElement.onpointerdown = pointerDrag;`:
 
 ```javascript
 function pointerDrag(e) {
-    // Prevent default browser behavior (like text selection)
+    // Zabrániť predvolenému správaniu prehliadača (napríklad výber textu)
     e.preventDefault();
     
-    // Capture the initial mouse/touch position
-    pos3 = e.clientX;  // X coordinate where drag started
-    pos4 = e.clientY;  // Y coordinate where drag started
+    // Zachytiť počiatočnú pozíciu myši/touch
+    pos3 = e.clientX;  // Súradnica X, kde sa ťahanie začalo
+    pos4 = e.clientY;  // Súradnica Y, kde sa ťahanie začalo
     
-    // Set up event listeners for the dragging process
+    // Nastaviť poslucháčov udalostí pre proces ťahania
     document.onpointermove = elementDrag;
     document.onpointerup = stopElementDrag;
 }
 ```
 
 **Krok za krokom, čo sa deje:**
-- **Zabraňuje** predvoleným správaním prehliadača, ktoré by mohlo rušiť presúvanie
-- **Zaznamenáva** presné súradnice, kde používateľ začal gesto presúvania
-- **Nastavuje** event listener pre pokračujúci pohyb presúvania
-- **Pripravuje** systém na sledovanie pohybu myši/prsta po celej stránke
+- **Zabraňuje** predvoleným správaniam prehliadača, ktoré by mohli narúšať ťahanie
+- **Ukladá** presné súradnice, kde používateľ začal ťahanie
+- **Nastavuje** poslucháčov udalostí pre priebežný pohyb ťahania
+- **Pripravuje** systém na sledovanie pohybu myši/prsta cez celý dokument
 
-### Pochopenie prevencie udalostí
+### Pochopenie zabránenia udalostí
 
-Riadok `e.preventDefault()` je kľúčový pre plynulé presúvanie:
+Riadok `e.preventDefault()` je kľúčový pre plynulé ťahanie:
 
-**Bez prevencie by prehliadače mohli:**
-- **Vybrať** text pri presúvaní po stránke
-- **Spustiť** kontextové menu pri kliknutí pravým tlačidlom počas presúvania
-- **Rušiť** naše vlastné správanie presúvania
-- **Vytvárať** vizuálne artefakty počas operácie presúvania
+**Bez tohto zabránenia môžu prehliadače:**
+- **Označovať** text pri ťahaní cez stránku
+- **Vyvolať** kontextové menu pri ťahaní pravým tlačidlom
+- **Narúšať** naše vlastné správanie pri ťahaní
+- **Vytvárať** vizuálne artefakty počas ťahania
 
-> 🔍 **Experiment**: Po dokončení tejto lekcie skúste odstrániť `e.preventDefault()` a pozrite sa, ako to ovplyvní zážitok z presúvania. Rýchlo pochopíte, prečo je tento riadok nevyhnutný!
+> 🔍 **Experiment**: Po dokončení tejto lekcie skúste odstrániť `e.preventDefault()` a sledujte, ako to ovplyvní zážitok z ťahania. Rýchlo pochopíte, prečo je tento riadok nevyhnutný!
 
 ### Systém sledovania súradníc
 
-Vlastnosti `e.clientX` a `e.clientY` nám poskytujú presné súradnice myši/dotyku:
+Vlastnosti `e.clientX` a `e.clientY` nám dávajú presné súradnice myši/dotyku:
 
 | Vlastnosť | Čo meria | Použitie |
-|-----------|----------|----------|
-| `clientX` | Horizontálnu polohu vzhľadom na viewport | Sledovanie pohybu doľava-doprava |
-| `clientY` | Vertikálnu polohu vzhľadom na viewport | Sledovanie pohybu hore-dole |
-
+|-----------|----------|-----------|
+| `clientX` | Horizontálna pozícia vzhľadom na viewport | Sledovanie pohybu doľava-doprava |
+| `clientY` | Vertikálna pozícia vzhľadom na viewport | Sledovanie pohybu hore-dole |
 **Pochopenie týchto súradníc:**
-- **Poskytuje** presné informácie o polohe v pixeloch
-- **Aktualizuje** sa v reálnom čase, keď sa používateľ pohybuje ukazovateľom
-- **Zostáva** konzistentné na rôznych veľkostiach obrazovky a úrovniach priblíženia
-- **Umožňuje** plynulé, responzívne interakcie presúvania
+- **Poskytuje** presné umiestnenie v pixeloch
+- **Aktualizuje** sa v reálnom čase, keď používateľ pohybuje ukazovateľom
+- **Zostáva** konzistentné naprieč rôznymi veľkosťami obrazovky a úrovňami priblíženia
+- **Umožňuje** plynulé, citlivé ťahanie
 
-### Nastavenie event listenerov na úrovni dokumentu
+### Nastavenie poslucháčov udalostí na úrovni dokumentu
 
-Všimnite si, ako pripájame udalosti pohybu a zastavenia na celý `document`, nie len na rastlinný prvok:
+Všimnite si, ako pripájame udalosti `move` a `stop` na celý `document`, nie len na element rastliny:
 
 ```javascript
 document.onpointermove = elementDrag;
@@ -287,21 +436,73 @@ document.onpointerup = stopElementDrag;
 ```
 
 **Prečo pripájať na dokument:**
-- **Pokračuje** v sledovaní, aj keď myš opustí rastlinný prvok
-- **Zabraňuje** prerušeniu presúvania, ak sa používateľ pohybuje rýchlo
-- **Poskytuje** plynulé presúvanie po celej obrazovke
-- **Rieši** okrajové príp
-- **`pos3` a `pos4`**: Ukladajú aktuálnu pozíciu myši pre ďalší výpočet
-- **`offsetTop` a `offsetLeft`**: Získavajú aktuálnu pozíciu prvku na stránke
-- **Logika odčítania**: Posúva prvok o rovnakú vzdialenosť, akú prešla myš
+- **Pokračuje** v sledovaní aj keď myš opustí element rastliny
+- **Zabraňuje** prerušeniu ťahania, ak používateľ rýchlo pohne myšou
+- **Poskytuje** plynulé ťahanie naprieč celou obrazovkou
+- **Rieši** okrajové prípady, keď kurzor opustí okno prehliadača
 
-**Tu je rozpis výpočtu pohybu:**
-1. **Meria** rozdiel medzi starou a novou pozíciou myši
-2. **Vypočíta**, o koľko sa má prvok posunúť na základe pohybu myši
-3. **Aktualizuje** vlastnosti pozície CSS prvku v reálnom čase
+> ⚡ **Poznámka k výkonu**: Po zastavení ťahania tieto poslucháče udalostí na dokumente odstránime, aby sme predišli únikom pamäte a problémom s výkonom.
+
+## Dokončovanie systému ťahania: Pohyb a vyčistenie
+
+Teraz pridáme dve zostávajúce funkcie, ktoré riešia samotný pohyb ťahania a vyčistenie po jeho ukončení. Tieto funkcie spolupracujú na vytvorení plynulého a citlivého pohybu rastlín vo vašom teráriu.
+
+### Funkcia elementDrag: Sledovanie pohybu
+
+Pridajte funkciu `elementDrag` hneď za uzatváraciu zátvorku funkcie `pointerDrag`:
+
+```javascript
+function elementDrag(e) {
+    // Vypočítajte vzdialenosť, ktorú sa pohli od poslednej udalosti
+    pos1 = pos3 - e.clientX;  // Vodorovná vzdialenosť pohybu
+    pos2 = pos4 - e.clientY;  // Zvislá vzdialenosť pohybu
+    
+    // Aktualizujte sledovanie aktuálnej pozície
+    pos3 = e.clientX;  // Nová aktuálna pozícia X
+    pos4 = e.clientY;  // Nová aktuálna pozícia Y
+    
+    // Aplikujte pohyb na pozíciu prvku
+    terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
+    terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
+}
+```
+
+**Pochopenie matematického výpočtu súradníc:**
+- **`pos1` a `pos2`**: Vypočítavajú, o koľko sa myš posunula od poslednej aktualizácie
+- **`pos3` a `pos4`**: Ukladajú aktuálnu polohu myši pre ďalší výpočet
+- **`offsetTop` a `offsetLeft`**: Získavajú aktuálnu pozíciu elementu na stránke
+- **Logika odčítania**: Posúva element o rovnakú vzdialenosť, ako sa myš pohla
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Mouse
+    participant JavaScript
+    participant Plant
+    
+    User->>Mouse: Spustenie pretiahnutia na (100, 50)
+    Mouse->>JavaScript: pointerdown udalosť
+    JavaScript->>JavaScript: Uloženie počiatočnej pozície (pos3=100, pos4=50)
+    JavaScript->>JavaScript: Nastavenie poslucháčov pohybu/up
+    
+    User->>Mouse: Presun na (110, 60)
+    Mouse->>JavaScript: pointermove udalosť
+    JavaScript->>JavaScript: Výpočet: pos1=10, pos2=10
+    JavaScript->>Plant: Aktualizácia: left += 10px, top += 10px
+    Plant->>Plant: Vykreslenie na novej pozícii
+    
+    User->>Mouse: Uvoľnenie na (120, 65)
+    Mouse->>JavaScript: pointerup udalosť
+    JavaScript->>JavaScript: Odstránenie poslucháčov
+    JavaScript->>JavaScript: Reset pre ďalšie pretiahnutie
+```
+**Rozklad výpočtu pohybu:**
+1. **Meria** rozdiel medzi starou a novou polohou myši
+2. **Vypočíta** o koľko pohnúť elementom na základe pohybu myši
+3. **Aktualizuje** CSS pozíciu elementu v reálnom čase
 4. **Ukladá** novú pozíciu ako základ pre ďalší výpočet pohybu
 
-### Vizualizácia výpočtu
+### Vizualizácia matematiky
 
 ```mermaid
 sequenceDiagram
@@ -309,153 +510,262 @@ sequenceDiagram
     participant JavaScript
     participant Plant
     
-    Mouse->>JavaScript: Move from (100,50) to (110,60)
-    JavaScript->>JavaScript: Calculate: moved 10px right, 10px down
-    JavaScript->>Plant: Update position by +10px right, +10px down
-    Plant->>Plant: Render at new position
+    Mouse->>JavaScript: Presun z (100,50) na (110,60)
+    JavaScript->>JavaScript: Vypočítať: posunuté o 10px doprava, 10px nadol
+    JavaScript->>Plant: Aktualizovať pozíciu o +10px doprava, +10px nadol
+    Plant->>Plant: Vykresliť na novej pozícii
 ```
+### Funkcia stopElementDrag: Vyčistenie
 
-### Funkcia stopElementDrag: Upratovanie
-
-Pridajte funkciu na upratovanie za zatváraciu zloženú zátvorku funkcie `elementDrag`:
+Pridajte čistiacu funkciu po uzatváracej zátvorke funkcie `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
-    // Remove the document-level event listeners
+    // Odstrániť poslucháčov udalostí na úrovni dokumentu
     document.onpointerup = null;
     document.onpointermove = null;
 }
 ```
 
-**Prečo je upratovanie dôležité:**
-- **Zabraňuje** úniku pamäte spôsobenému pretrvávajúcimi poslucháčmi udalostí
-- **Zastavuje** správanie pri ťahaní, keď používateľ uvoľní rastlinu
-- **Umožňuje** nezávislé ťahanie iných prvkov
+**Prečo je vyčistenie nevyhnutné:**
+- **Zabraňuje** únikom pamäte spôsobeným ponechanými poslucháčmi udalostí
+- **Zastavuje** správanie ťahania, keď používateľ pustí rastlinu
+- **Umožňuje** iným elementom byť ťahané nezávisle
 - **Resetuje** systém pre ďalšiu operáciu ťahania
 
-**Čo sa stane bez upratovania:**
-- Poslucháči udalostí pokračujú v behu aj po zastavení ťahania
-- Výkon sa zhoršuje, keď sa hromadia nepoužívaní poslucháči
-- Neočakávané správanie pri interakcii s inými prvkami
-- Zdroje prehliadača sa plytvajú na zbytočné spracovanie udalostí
+**Čo sa stane bez vyčistenia:**
+- Poslucháči udalostí bežia aj po skončení ťahania
+- Výkon sa zhoršuje, pretože sa hromadia nepoužívaní poslucháči
+- Neočakávané správanie pri interakcii s inými elementmi
+- Prehliadač plytvá zdrojmi na zbytočné spracovanie udalostí
 
-### Pochopenie vlastností pozície CSS
+### Pochopenie CSS vlastností pozície
 
-Náš systém ťahania manipuluje s dvoma kľúčovými vlastnosťami CSS:
+Náš systém ťahania manipuluje s dvoma kľúčovými CSS vlastnosťami:
 
-| Vlastnosť | Čo ovláda | Ako ju používame |
-|-----------|-----------|------------------|
+| Vlastnosť | Čo riadi | Ako ju používame |
+|----------|------------------|---------------|
 | `top` | Vzdialenosť od horného okraja | Vertikálne umiestnenie počas ťahania |
 | `left` | Vzdialenosť od ľavého okraja | Horizontálne umiestnenie počas ťahania |
 
-**Kľúčové poznatky o vlastnostiach offset:**
-- **`offsetTop`**: Aktuálna vzdialenosť od horného okraja umiestneného rodičovského prvku
-- **`offsetLeft`**: Aktuálna vzdialenosť od ľavého okraja umiestneného rodičovského prvku
-- **Kontext umiestnenia**: Tieto hodnoty sú relatívne voči najbližšiemu umiestnenému predkovi
-- **Aktualizácie v reálnom čase**: Menia sa okamžite, keď upravíme vlastnosti CSS
+**Kľúčové poznatky o offset vlastnostiach:**
+- **`offsetTop`**: Aktuálna vzdialenosť od hornej hrany rodiča s pozíciou
+- **`offsetLeft`**: Aktuálna vzdialenosť od ľavej hrany rodiča s pozíciou
+- **Pozíciný kontext**: Tieto hodnoty sú vzťahované k najbližšiemu rodičovi s pozíciou
+- **Aktualizácie v reálnom čase**: Hodnoty sa menia okamžite, keď upravujeme CSS vlastnosti
 
-> 🎯 **Filozofia dizajnu**: Tento systém ťahania je zámerne flexibilný – neexistujú žiadne "zónové obmedzenia" ani obmedzenia. Používatelia môžu umiestniť rastliny kdekoľvek, čo im dáva úplnú kreatívnu kontrolu nad dizajnom terária.
+> 🎯 **Filozofia dizajnu**: Tento systém ťahania je účelovo flexibilný – neexistujú „zóny pre pád“ ani obmedzenia. Používatelia môžu rastliny umiestniť kdekoľvek, čím získavajú úplnú tvorivú kontrolu nad dizajnom svojho terária.
 
-## Spojenie všetkého: Váš kompletný systém ťahania
+## Spojenie všetkého do celku: Váš kompletný systém ťahania
 
-Gratulujeme! Práve ste vytvorili sofistikovaný systém ťahania a púšťania pomocou vanilla JavaScriptu. Vaša kompletná funkcia `dragElement` teraz obsahuje výkonný uzáver, ktorý spravuje:
+Gratulujeme! Práve ste vytvorili sofistikovaný systém ťahania pomocou vanilla JavaScriptu. Vaša kompletná funkcia `dragElement` teraz obsahuje silný closure, ktorý spravuje:
 
-**Čo váš uzáver dosahuje:**
+**Čo váš closure dosahuje:**
 - **Udržiava** súkromné premenné pozície pre každú rastlinu nezávisle
-- **Spracováva** kompletný životný cyklus ťahania od začiatku do konca
-- **Poskytuje** plynulý, responzívny pohyb po celej obrazovke
-- **Správne čistí** zdroje, aby zabránil úniku pamäte
-- **Vytvára** intuitívne, kreatívne rozhranie pre dizajn terária
+- **Riadi** celý životný cyklus ťahania od začiatku po koniec
+- **Poskytuje** plynulý, citlivý pohyb naprieč celým displejom
+- **Správne** upratuje zdroje, aby zabránil únikom pamäte
+- **Vytvára** intuitívne a kreatívne rozhranie pre dizajn terária
 
 ### Testovanie vášho interaktívneho terária
 
-Teraz otestujte svoje interaktívne terárium! Otvorte svoj súbor `index.html` v webovom prehliadači a vyskúšajte funkčnosť:
+Teraz otestujte svoje interaktívne terárium! Otvorte súbor `index.html` vo webovom prehliadači a vyskúšajte funkčnosť:
 
-1. **Kliknite a podržte** akúkoľvek rastlinu, aby ste začali ťahať
-2. **Pohybujte myšou alebo prstom** a sledujte, ako rastlina plynule nasleduje
-3. **Uvoľnite**, aby ste rastlinu pustili na nové miesto
+1. **Kliknite a podržte** ľubovoľnú rastlinu na začatie ťahania
+2. **Pohybujte myšou alebo prstom** a sledujte, ako rastlina plynulo nasleduje
+3. **Pusťte** rastlinu na novú pozíciu
 4. **Experimentujte** s rôznymi usporiadaniami a preskúmajte rozhranie
 
-🥇 **Úspech**: Vytvorili ste plne interaktívnu webovú aplikáciu pomocou základných konceptov, ktoré profesionálni vývojári používajú denne. Táto funkcia ťahania a púšťania využíva rovnaké princípy ako nahrávanie súborov, kanbanové tabuľky a mnoho ďalších interaktívnych rozhraní.
+🥇 **Úspech**: Vytvorili ste plne interaktívnu webovú aplikáciu založenú na základných princípoch, ktoré profesionálni vývojári denne používajú. Táto funkcia ťahania je založená na princípoch rovnakých, aké sa používajú pri nahrávaní súborov, kanban nástenkách a mnohých ďalších interaktívnych rozhraniach.
 
-![hotové terárium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.sk.png)
+### 🔄 **Pedagogická kontrola**
+**Kompletné pochopenie systému**: Overte si majstrovstvo celého systému ťahania:
+- ✅ Ako closure udržiava nezávislý stav pre každú rastlinu?
+- ✅ Prečo je matematika výpočtu súradníc nevyhnutná pre plynulý pohyb?
+- ✅ Čo by sa stalo, keby sme zabudli vyčistiť poslucháčov udalostí?
+- ✅ Ako tento vzor škáluje do zložitejších interakcií?
+
+**Reflexia kvality kódu**: Prezrite si svoje kompletné riešenie:
+- **Modulárny dizajn**: Každá rastlina má vlastnú inštanciu closuru
+- **Efektivita udalostí**: Správne nastavenie a vyčistenie poslucháčov
+- **Podpora zariadení**: Funguje na desktopoch aj mobiloch
+- **Výkonová uvedomelosť**: Žiadne úniky pamäte alebo nadbytočné výpočty
+
+![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.sk.png)
 
 ---
 
-## Výzva GitHub Copilot Agent 🚀
+## Výzva GitHub Copilot Agenta 🚀
 
-Použite režim Agent na splnenie nasledujúcej výzvy:
+Použite režim Agenta na dokončenie nasledujúcej výzvy:
 
-**Popis:** Vylepšite projekt terária pridaním funkcie resetovania, ktorá vráti všetky rastliny na ich pôvodné pozície s plynulými animáciami.
+**Popis:** Vylepšite projekt terária pridaním funkcie resetu, ktorá vráti všetky rastliny na pôvodné pozície so zvolenou plynulou animáciou.
 
-**Výzva:** Vytvorte tlačidlo na resetovanie, ktoré po kliknutí animuje všetky rastliny späť na ich pôvodné pozície v bočnom paneli pomocou prechodov CSS. Funkcia by mala uložiť pôvodné pozície pri načítaní stránky a plynulo presunúť rastliny späť na tieto pozície počas 1 sekundy po stlačení tlačidla resetovania.
+**Výzva:** Vytvorte tlačidlo reset, ktoré pri kliknutí animuje všetky rastliny späť na ich pôvodné pozície v bočnom paneli pomocou CSS prechodov. Funkcia by mala uložiť pôvodné pozície pri načítaní stránky a plynulo prejsť rastliny späť na tieto pozície počas 1 sekundy po stlačení tlačidla reset.
 
-Viac informácií o [režime agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) nájdete tu.
+Viac informácií o [agent režime](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) nájdete tu.
 
-## 🚀 Dodatočná výzva: Rozšírte svoje zručnosti
+## 🚀 Ďalšia výzva: Rozvíjajte svoje zručnosti
 
-Pripravení posunúť svoje terárium na ďalšiu úroveň? Skúste implementovať tieto vylepšenia:
+Pripravte sa dostať svoje terárium na vyššiu úroveň! Vyskúšajte implementovať tieto vylepšenia:
 
-**Kreatívne rozšírenia:**
-- **Dvojité kliknutie** na rastlinu, aby sa dostala do popredia (manipulácia s z-indexom)
-- **Pridajte vizuálnu spätnú väzbu**, ako jemné žiarenie pri prechode myšou nad rastlinami
-- **Implementujte hranice**, aby sa zabránilo ťahaniu rastlín mimo terária
-- **Vytvorte funkciu uloženia**, ktorá si zapamätá pozície rastlín pomocou localStorage
-- **Pridajte zvukové efekty** pri zdvíhaní a umiestňovaní rastlín
+**Tvorivé rozšírenia:**
+- **Dvojklik** na rastlinu na jej pritiahnutie do popredia (manipulácia so z-indexom)
+- **Pridajte vizuálnu spätnú väzbu** ako jemné žiarenie pri prechode myšou nad rastlinou
+- **Implementujte hranice**, ktoré zabránia ťahaniu rastlín mimo terária
+- **Vytvorte funkciu ukladania**, ktorá si zapamätá pozície rastlín pomocou localStorage
+- **Pridajte zvukové efekty** pri zdvíhaní a pokladaní rastlín
 
-> 💡 **Príležitosť na učenie**: Každá z týchto výziev vás naučí nové aspekty manipulácie s DOM, spracovania udalostí a dizajnu používateľského rozhrania.
+> 💡 **Príležitosť na učenie**: Každá z týchto výziev vás naučí nové aspekty manipulácie s DOM, spracovania udalostí a dizajnu používateľského zážitku.
 
 ## Kvíz po prednáške
 
-[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/20)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/20)
 
-## Prehľad a samostatné štúdium: Prehĺbenie vašich znalostí
+## Prehľad a samostatné štúdium: Prehĺbenie vášho porozumenia
 
-Ovládli ste základy manipulácie s DOM a uzáverov, ale vždy je čo objavovať! Tu sú niektoré cesty na rozšírenie vašich znalostí a zručností.
+Ovládli ste základy manipulácie s DOM a closures, ale vždy je čo objavovať! Tu sú niektoré cesty na rozšírenie vašich znalostí a zručností.
 
-### Alternatívne prístupy k ťahaniu a púšťaniu
+### Alternatívne prístupy k drag and drop
 
-Použili sme ukazovacie udalosti pre maximálnu flexibilitu, ale webový vývoj ponúka viacero prístupov:
+Použili sme pointer udalosti pre maximálnu flexibilitu, ale webový vývoj ponúka viacero prístupov:
 
 | Prístup | Najlepšie pre | Hodnota učenia |
-|---------|---------------|----------------|
-| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Nahrávanie súborov, formálne zóny ťahania | Pochopenie natívnych schopností prehliadača |
-| [Touch Events](https://developer.mozilla.org/docs/Web/API/Touch_events) | Interakcie špecifické pre mobilné zariadenia | Vzory vývoja zamerané na mobilné zariadenia |
-| Vlastnosti CSS `transform` | Plynulé animácie | Techniky optimalizácie výkonu |
+|----------|----------|----------------|
+| [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) | Nahrávanie súborov, formálne zóny ťahania | Pochopenie natívnych prehliadačových schopností |
+| [Touch Events](https://developer.mozilla.org/docs/Web/API/Touch_events) | Mobilné špecifické interakcie | Mobilné vývojové vzory |
+| CSS vlastnosti `transform` | Plynulé animácie | Techniky optimalizácie výkonu |
 
 ### Pokročilé témy manipulácie s DOM
 
-**Ďalšie kroky vo vašej učebnej ceste:**
-- **Delegácia udalostí**: Efektívne spracovanie udalostí pre viacero prvkov
-- **Intersection Observer**: Detekcia, keď prvky vstupujú/vychádzajú z pohľadu
+**Ďalšie kroky vo vašom štúdiu:**
+- **Delegácia udalostí**: Efektívna správa udalostí pre viacero elementov
+- **Intersection Observer**: Detekcia vstupu a opustenia elementov v pohľade
 - **Mutation Observer**: Sledovanie zmien v štruktúre DOM
-- **Web Components**: Vytváranie opakovane použiteľných, zapuzdrených prvkov UI
-- **Koncepty virtuálneho DOM**: Pochopenie, ako frameworky optimalizujú aktualizácie DOM
+- **Web Components**: Vytváranie znovu použiteľných, izolovaných komponentov
+- **Koncepty virtuálneho DOM**: Pochopenie optimalizácie aktualizácií DOM rámcami
 
 ### Základné zdroje na pokračovanie v učení
 
 **Technická dokumentácia:**
-- [MDN Pointer Events Guide](https://developer.mozilla.org/docs/Web/API/Pointer_events) - Komplexný referenčný sprievodca ukazovacími udalosťami
-- [W3C Pointer Events Specification](https://www.w3.org/TR/pointerevents1/) - Oficiálna dokumentácia štandardov
-- [JavaScript Closures Deep Dive](https://developer.mozilla.org/docs/Web/JavaScript/Closures) - Pokročilé vzory uzáverov
+- [MDN Sprievodca Pointer Events](https://developer.mozilla.org/docs/Web/API/Pointer_events) – Komplexný referenčný materiál pointer udalostí
+- [W3C Špecifikácia Pointer Events](https://www.w3.org/TR/pointerevents1/) – Oficiálna štandardná dokumentácia
+- [Hĺbkové štúdium JavaScript closures](https://developer.mozilla.org/docs/Web/JavaScript/Closures) – Pokročilé vzory closures
 
 **Kompatibilita prehliadačov:**
-- [CanIUse.com](https://caniuse.com/) - Skontrolujte podporu funkcií v rôznych prehliadačoch
-- [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data) - Podrobné informácie o kompatibilite
+- [CanIUse.com](https://caniuse.com/) – Kontrola podpory funkcií naprieč prehliadačmi
+- [MDN Dáta o kompatibilite prehliadačov](https://github.com/mdn/browser-compat-data) – Detailné informácie o kompatibilite
 
-**Príležitosti na prax:**
-- **Vytvorte** puzzle hru pomocou podobných mechanizmov ťahania
-- **Navrhnite** kanbanovú tabuľu s manažmentom úloh pomocou ťahania a púšťania
-- **Navrhnite** galériu obrázkov s usporiadaním fotografií pomocou ťahania
+**Príležitosti na cvičenie:**
+- **Vytvorte** puzzle hru so slučkovou mechanikou ťahania
+- **Navrhnite** kanban nástenku s drag-and-drop správou úloh
+- **Urobte** galériu obrázkov s ťahacími fotografiami
 - **Experimentujte** s dotykovými gestami pre mobilné rozhrania
 
-> 🎯 **Stratégia učenia**: Najlepší spôsob, ako si tieto koncepty upevniť, je prax. Skúste vytvárať variácie rozhraní s možnosťou ťahania – každý projekt vás naučí niečo nové o interakcii používateľa a manipulácii s DOM.
+> 🎯 **Učiaca stratégia**: Najlepším spôsobom, ako upevniť tieto koncepty, je prax. Skúšajte vytvárať rôzne variácie ťahacích rozhraní – každý projekt vás naučí niečo nové o interakcii používateľa a manipulácii s DOM.
+
+### ⚡ **Čo môžete urobiť za nasledujúcich 5 minút**
+- [ ] Otvorte DevTools prehliadača a zadajte `document.querySelector('body')` do konzoly
+- [ ] Vyskúšajte zmeniť text na webovej stránke pomocou `innerHTML` alebo `textContent`
+- [ ] Pridajte poslucháča udalosti kliknutia na akékoľvek tlačidlo alebo odkaz na stránke
+- [ ] Preskúmajte štruktúru DOM stromu v paneli Elements
+
+### 🎯 **Čo môžete dosiahnuť za túto hodinu**
+- [ ] Dokončite kvíz po lekcii a prejdite koncepty manipulácie s DOM
+- [ ] Vytvorte interaktívnu stránku reagujúcu na kliknutia používateľa
+- [ ] Precvičte spracovanie udalostí s rôznymi typmi udalostí (click, mouseover, keypress)
+- [ ] Vytvorte jednoduchý zoznam úloh alebo počítadlo pomocou manipulácie s DOM
+- [ ] Preskúmajte vzťah medzi HTML elementmi a JavaScript objektmi
+
+### 📅 **Váš týždenný JavaScript plán**
+- [ ] Dokončite interaktívny projekt terária s funkciou drag-and-drop
+- [ ] Ovládnite delegáciu udalostí pre efektívne spracovanie
+- [ ] Naučte sa o event loop a asynchrónnom JavaScripte
+- [ ] Precvičte closures vytváraním modulov s privátnym stavom
+- [ ] Preskúmajte moderné DOM API ako Intersection Observer
+- [ ] Vytvorte interaktívne komponenty bez použitia frameworkov
+
+### 🌟 **Váš mesačný plán zvládnutia JavaScriptu**
+- [ ] Vytvorte komplexnú jednoriadkovú aplikáciu s vanilla JavaScriptom
+- [ ] Naučte sa moderný framework (React, Vue alebo Angular) a porovnajte ho s vanilla DOM
+- [ ] Prispievajte do open source JavaScript projektov
+- [ ] Ovládnite pokročilé koncepty ako web components a custom elements
+- [ ] Vytvorte výkonné webové aplikácie s optimálnymi vzormi DOM
+- [ ] Učte ostatných o manipulácii s DOM a základoch JavaScriptu
+
+## 🎯 Váš časový plán zvládnutia JavaScript DOM
+
+```mermaid
+timeline
+    title DOM & JavaScript vývoj učenia
+    
+    section Základy (15 minút)
+        Pochopenie DOM: Metódy výberu prvkov
+                         : Navigácia stromovou štruktúrou
+                         : Vzory prístupu k vlastnostiam
+        
+    section Spracovanie udalostí (20 minút)
+        Interakcia používateľa: Základy udalostí ukazovateľa
+                        : Nastavenie poslucháča udalostí
+                        : Kompatibilita naprieč zariadeniami
+                        : Techniky prevencie udalostí
+        
+    section Uzávery (25 minút)
+        Správa rozsahu: Vytváranie súkromných premenných
+                        : Trvalosť funkcií
+                        : Vzory správy stavu
+                        : Efektívnosť pamäte
+        
+    section Systém ťahania (30 minút)
+        Interaktívne funkcie: Sledovanie súradníc
+                            : Výpočet polohy
+                            : Matematika pohybu
+                            : Postupy čistenia
+        
+    section Pokročilé vzory (45 minút)
+        Profesionálne zručnosti: Delegovanie udalostí
+                           : Optimalizácia výkonu
+                           : Spracovanie chýb
+                           : Zohľadnenie prístupnosti
+        
+    section Pochopenie rámca (1 týždeň)
+        Moderný vývoj: Koncepty virtuálneho DOM
+                          : Knižnice správy stavu
+                          : Architektúry komponentov
+                          : Integrácia nástrojov na tvorbu
+        
+    section Odborná úroveň (1 mesiac)
+        Pokročilé DOM API: Intersection Observer
+                         : Mutation Observer
+                         : Vlastné prvky
+                         : Webové komponenty
+```
+### 🛠️ Zhrnutie vášho JavaScript náradia
+
+Po dokončení tejto lekcie už viete:
+- **Zvládnutie DOM**: Výber elementov, manipulácia s vlastnosťami, navigácia v strome
+- **Odbornosť na udalosti**: Spracovanie interakcií naprieč zariadeniami pomocou pointer udalostí
+- **Pochopenie closures**: Správa súkromného stavu a perzistencia funkcií
+- **Interaktívne systémy**: Kompletná implementácia drag-and-drop od základov
+- **Uvedomelosť vo výkone**: Správne vyčistenie udalostí a správa pamäte
+- **Moderné vzory**: Techniky organizácie kódu používané v profesionálnom vývoji
+- **Používateľská skúsenosť**: Vytváranie intuitívnych, citlivých rozhraní
+
+**Získané profesijné zručnosti**: Vytvorili ste funkcie použitím rovnakých techník ako:
+- **Trello/Kanban nástenky**: Ťahanie kariet medzi stĺpcami
+- **Systémy nahrávania súborov**: Drag-and-drop súborová manipulácia
+- **Galerie obrázkov**: Rozhrania pre usporiadanie fotiek
+- **Mobilné aplikácie**: Dotykové interakcie
+
+**Ďalší level**: Ste pripravení objavovať moderné frameworky ako React, Vue alebo Angular, ktoré stavajú na týchto základných konceptoch manipulácie s DOM!
 
 ## Zadanie
 
-[Pracujte trochu viac s DOM](assignment.md)
+[Práca s DOM pokračuje](assignment.md)
 
 ---
 
-**Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zrieknutie sa zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, berte prosím na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

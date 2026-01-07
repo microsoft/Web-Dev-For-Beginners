@@ -1,66 +1,111 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-24T22:13:36+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2026-01-07T05:56:56+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "ro"
 }
 -->
-# Construirea unei aplicații bancare Partea 2: Crearea unui formular de autentificare și înregistrare
+# Construiește o Aplicație Bancară Partea 2: Construiește un Formular de Autentificare și Înregistrare
 
-## Chestionar înainte de lecție
+```mermaid
+journey
+    title Călătoria ta în dezvoltarea formularelor
+    section Baza HTML
+      Înțelege elementele formularului: 3: Student
+      Învață tipurile de input: 4: Student
+      Stăpânește accesibilitatea: 4: Student
+    section Integrarea JavaScript
+      Gestionează trimiterea formularului: 4: Student
+      Implementează comunicarea AJAX: 5: Student
+      Procesează răspunsurile serverului: 5: Student
+    section Sisteme de validare
+      Creează validare pe mai multe niveluri: 5: Student
+      Îmbunătățește experiența utilizatorului: 5: Student
+      Asigură integritatea datelor: 5: Student
+```
+## Chestionar Pre-Prelecție
 
-[Chestionar înainte de lecție](https://ff-quizzes.netlify.app/web/quiz/43)
+[Chestionar pre-prelecție](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Ai completat vreodată un formular online și ți-a respins formatul adresei de email? Sau ai pierdut toate informațiile când ai apăsat pe butonul de trimitere? Cu toții am întâlnit astfel de experiențe frustrante.
+Ți s-a întâmplat vreodată să completezi un formular online și să îți fie respins formatul de email? Sau să pierzi toate informațiile după ce ai apăsat trimite? Toți am experimentat astfel de frustrări.
 
-Formularele sunt puntea dintre utilizatori și funcționalitatea aplicației tale. Așa cum controlorii de trafic aerian folosesc protocoale precise pentru a ghida avioanele în siguranță la destinație, formularele bine concepute oferă feedback clar și previn erorile costisitoare. Formularele prost realizate, pe de altă parte, pot alunga utilizatorii mai repede decât o comunicare greșită într-un aeroport aglomerat.
+Formularele sunt puntea dintre utilizatorii tăi și funcționalitatea aplicației tale. Așa cum protocoalele riguroase folosite de controlorii de trafic aerian ghidează avioanele în siguranță către destinațiile lor, formularele bine proiectate oferă feedback clar și previn erori costisitoare. În schimb, formularele prost realizate pot alunga utilizatorii mai repede decât o neînțelegere într-un aeroport aglomerat.
 
-În această lecție, vom transforma aplicația bancară statică într-o aplicație interactivă. Vei învăța să construiești formulare care validează datele introduse de utilizatori, comunică cu serverele și oferă feedback util. Gândește-te la asta ca la construirea unei interfețe de control care permite utilizatorilor să navigheze prin funcțiile aplicației tale.
+În această lecție, vom transforma aplicația ta bancară statică într-o aplicație interactivă. Vei învăța să construiești formulare care validează datele introduse de utilizatori, comunică cu serverele și oferă feedback util. Gândește-te la asta ca la crearea interfeței de control care permite utilizatorilor să navigheze funcționalitățile aplicației tale.
 
-La final, vei avea un sistem complet de autentificare și înregistrare cu validare, care ghidează utilizatorii spre succes, nu spre frustrare.
+La final, vei avea un sistem complet de autentificare și înregistrare cu validare care îi ghidează pe utilizatori spre succes, nu spre frustrare.
 
-## Cerințe preliminare
+```mermaid
+mindmap
+  root((Dezvoltarea Formularelor))
+    HTML Foundation
+      Elemente Semantice
+      Tipuri de Intrare
+      Accesibilitate
+      Asocierea Etichetelor
+    User Experience
+      Feedback de Validare
+      Prevenirea Erorilor
+      Stări de Încărcare
+      Mesaje de Succes
+    JavaScript Integration
+      Gestionarea Evenimentelor
+      Comunicare AJAX
+      Procesarea Datelor
+      Managementul Erorilor
+    Validation Layers
+      Validare HTML5
+      Logică pe Partea de Client
+      Securitate pe Partea de Server
+      Îmbunătățire Progressivă
+    Modern Patterns
+      Fetch API
+      Async/Await
+      API pentru Datele Formularului
+      Gestionarea Promisiunilor
+```
+## Cerințe Prealabile
 
-Înainte de a începe să construim formulare, să ne asigurăm că ai totul configurat corect. Această lecție continuă de unde am rămas în cea anterioară, așa că, dacă ai sărit peste, poate vrei să te întorci și să pui bazele mai întâi.
+Înainte de a începe să construim formularele, să ne asigurăm că ai totul configurat corect. Această lecție continuă exact de unde am rămas în cea anterioară, așa că dacă ai sărit peste partea de bază, poate vrei să te întorci să o parcurgi mai întâi.
 
 ### Configurare necesară
 
-| Componentă | Status | Descriere |
-|------------|--------|-----------|
-| [Șabloane HTML](../1-template-route/README.md) | ✅ Necesare | Structura de bază a aplicației bancare |
-| [Node.js](https://nodejs.org) | ✅ Necesare | Runtime JavaScript pentru server |
-| [Server API bancar](../api/README.md) | ✅ Necesare | Serviciu backend pentru stocarea datelor |
+| Componentă | Stare | Descriere |
+|-----------|--------|-------------|
+| [Șabloane HTML](../1-template-route/README.md) | ✅ Necesare | Structura de bază a aplicației tale bancare |
+| [Node.js](https://nodejs.org) | ✅ Necesare | Mediu de execuție JavaScript pentru server |
+| [Server API Bancar](../api/README.md) | ✅ Necesare | Serviciu backend pentru stocarea datelor |
 
-> 💡 **Sfat pentru dezvoltare**: Vei rula simultan două servere separate – unul pentru aplicația bancară front-end și altul pentru API-ul backend. Această configurare reflectă dezvoltarea reală, unde serviciile front-end și backend funcționează independent.
+> 💡 **Sfat de Dezvoltare**: Vei rula două servere separate simultan – unul pentru aplicația ta bancară frontend și altul pentru API-ul backend. Această configurare reflectă dezvoltarea din lumea reală, unde frontend-ul și backend-ul funcționează independent.
 
 ### Configurarea serverului
 
 **Mediul tău de dezvoltare va include:**
-- **Serverul front-end**: Servește aplicația bancară (de obicei portul `3000`)
-- **Serverul API backend**: Se ocupă de stocarea și recuperarea datelor (portul `5000`)
-- **Ambele servere** pot funcționa simultan fără conflicte
+- **Server frontend**: Deserveste aplicația ta bancară (de obicei portul `3000`)
+- **Server API backend**: Gestionează stocarea și recuperarea datelor (portul `5000`)
+- **Ambele servere** pot rula simultan fără conflicte
 
 **Testarea conexiunii API:**
 ```bash
 curl http://localhost:5000/api
-# Expected response: "Bank API v1.0.0"
+# Răspuns așteptat: "Bank API v1.0.0"
 ```
 
 **Dacă vezi răspunsul cu versiunea API, ești gata să continui!**
 
 ---
 
-## Înțelegerea formularelor și controalelor HTML
+## Înțelegerea Formularelor HTML și a Controlurilor
 
-Formularele HTML sunt modul prin care utilizatorii comunică cu aplicația ta web. Gândește-te la ele ca la sistemul de telegraf care conecta locuri îndepărtate în secolul al XIX-lea – ele sunt protocolul de comunicare între intenția utilizatorului și răspunsul aplicației. Când sunt concepute cu grijă, ele detectează erorile, ghidează formatul de introducere și oferă sugestii utile.
+Formularele HTML sunt modul prin care utilizatorii comunică cu aplicația ta web. Gândește-te la ele ca la sistemul de telegraf care conecta locuri îndepărtate în secolul al XIX-lea – ele sunt protocolul de comunicare între intenția utilizatorului și răspunsul aplicației. Când sunt concepute cu atenție, ele detectează erorile, ghidează formatul datelor și oferă sugestii utile.
 
-Formularele moderne sunt mult mai sofisticate decât simplele câmpuri de text. HTML5 a introdus tipuri de input specializate care gestionează validarea email-urilor, formatarea numerelor și selecția datelor în mod automat. Aceste îmbunătățiri sunt benefice atât pentru accesibilitate, cât și pentru experiențele utilizatorilor de pe dispozitivele mobile.
+Formularele moderne sunt mult mai sofisticate decât simple intrări text. HTML5 a introdus tipuri specializate de input care gestionează automat validarea emailurilor, formatarea numerelor și selecția datelor. Aceste îmbunătățiri aduc beneficii atât pentru accesibilitate, cât și pentru experiențele pe dispozitive mobile.
 
-### Elemente esențiale ale formularelor
+### Elemente esențiale de formular
 
-**Elemente de bază necesare fiecărui formular:**
+**Blocurile de construcție de care are nevoie fiecare formular:**
 
 ```html
 <!-- Basic form structure -->
@@ -72,25 +117,25 @@ Formularele moderne sunt mult mai sofisticate decât simplele câmpuri de text. 
 </form>
 ```
 
-**Ce face acest cod:**
-- **Creează** un container de formular cu un identificator unic
-- **Specifică** metoda HTTP pentru trimiterea datelor
-- **Asociază** etichetele cu câmpurile de input pentru accesibilitate
+**Iată ce face acest cod:**
+- **Creează** un container pentru formular cu un identificator unic
+- **Specifică** metoda HTTP pentru transmiterea datelor
+- **Asociază** etichete (label) cu câmpurile pentru accesibilitate
 - **Definește** un buton de trimitere pentru procesarea formularului
 
-### Tipuri moderne de input și atribute
+### Tipuri și atribute moderne pentru input
 
-| Tip de input | Scop | Exemplu de utilizare |
-|--------------|------|----------------------|
-| `text` | Introducere text generală | `<input type="text" name="username">` |
+| Tip Input | Scop | Exemplu de utilizare |
+|------------|---------|---------------|
+| `text` | Intrare text generală | `<input type="text" name="username">` |
 | `email` | Validare email | `<input type="email" name="email">` |
-| `password` | Introducere text ascuns | `<input type="password" name="password">` |
-| `number` | Introducere numerică | `<input type="number" name="balance" min="0">` |
+| `password` | Text ascuns | `<input type="password" name="password">` |
+| `number` | Intrare numerică | `<input type="number" name="balance" min="0">` |
 | `tel` | Numere de telefon | `<input type="tel" name="phone">` |
 
-> 💡 **Avantajul HTML5 modern**: Utilizarea tipurilor specifice de input oferă validare automată, tastaturi mobile adecvate și suport mai bun pentru accesibilitate fără a fi nevoie de JavaScript suplimentar!
+> 💡 **Avantaj HTML5 Modern**: Utilizarea unor tipuri specifice de input oferă validare automată, tastaturi mobile potrivite și suport mai bun pentru accesibilitate fără JavaScript suplimentar!
 
-### Tipuri de butoane și comportament
+### Tipuri de butoane și comportamentul lor
 
 ```html
 <!-- Different button behaviors -->
@@ -99,16 +144,16 @@ Formularele moderne sunt mult mai sofisticate decât simplele câmpuri de text. 
 <button type="button">Custom Action</button> <!-- No default behavior -->
 ```
 
-**Ce face fiecare tip de buton:**
-- **Butoane de trimitere**: Declanșează trimiterea formularului și trimit datele către endpoint-ul specificat
-- **Butoane de resetare**: Resetează toate câmpurile formularului la starea inițială
-- **Butoane obișnuite**: Nu au un comportament implicit, necesitând JavaScript personalizat pentru funcționalitate
+**Iată ce face fiecare tip de buton:**
+- **Buton Submit**: Declanșează trimiterea formularului și trimite datele către endpoint-ul specificat
+- **Buton Reset**: Resetează toate câmpurile formularului la starea inițială
+- **Buton normal**: Nu oferă comportament implicit, fiind necesar JavaScript personalizat pentru funcționalitate
 
-> ⚠️ **Notă importantă**: Elementul `<input>` este auto-închis și nu necesită un tag de închidere. Practica modernă recomandă scrierea `<input>` fără slash.
+> ⚠️ **Notă Importantă**: Elementul `<input>` este autoînchis și nu necesită tag de închidere. Cea mai bună practică modernă este să scrii `<input>` fără bara oblică.
 
-### Construirea formularului de autentificare
+### Construirea formularului tău de autentificare
 
-Acum să creăm un formular practic de autentificare care demonstrează practicile moderne ale formularelor HTML. Vom începe cu o structură de bază și o vom îmbunătăți treptat cu funcții de accesibilitate și validare.
+Acum să creăm un formular practic de autentificare care demonstrează bunele practici moderne pentru formulare HTML. Vom începe cu o structură de bază și o vom îmbunătăți treptat cu caracteristici de accesibilitate și validare.
 
 ```html
 <template id="login">
@@ -127,42 +172,41 @@ Acum să creăm un formular practic de autentificare care demonstrează practici
 </template>
 ```
 
-**Analiză a ceea ce se întâmplă aici:**
+**Descompunând ce se întâmplă aici:**
 - **Structurarea** formularului cu elemente semantice HTML5
-- **Gruparea** elementelor conexe folosind containere `div` cu clase semnificative
-- **Asocierea** etichetelor cu câmpurile de input folosind atributele `for` și `id`
-- **Includerea** atributelor moderne precum `autocomplete` și `placeholder` pentru o experiență mai bună a utilizatorului
-- **Adăugarea** atributului `novalidate` pentru a gestiona validarea cu JavaScript în loc de setările implicite ale browserului
+- **Gruparea** elementelor în containere `div` cu clase descriptive
+- **Asocierea** etichetelor cu intrările folosind atributele `for` și `id`
+- **Include** atribute moderne precum `autocomplete` și `placeholder` pentru o experiență mai bună
+- **Adaugă** `novalidate` pentru a trata validarea cu JavaScript în locul validării implicite a browserului
 
-### Importanța etichetelor corecte
+### Puterea etichetelor corecte
 
 **De ce contează etichetele pentru dezvoltarea web modernă:**
 
 ```mermaid
 graph TD
-    A[Label Element] --> B[Screen Reader Support]
-    A --> C[Click Target Expansion]
-    A --> D[Form Validation]
-    A --> E[SEO Benefits]
+    A[Etichetă Element] --> B[Suport Cititor Ecran]
+    A --> C[Extindere Țintă Clic]
+    A --> D[Validare Formular]
+    A --> E[Beneficii SEO]
     
-    B --> F[Accessible to all users]
-    C --> G[Better mobile experience]
-    D --> H[Clear error messaging]
-    E --> I[Better search ranking]
+    B --> F[Accesibil pentru toți utilizatorii]
+    C --> G[Experiență mobilă mai bună]
+    D --> H[Mesaje clare de eroare]
+    E --> I[Clasament mai bun în căutări]
 ```
-
 **Ce realizează etichetele corecte:**
-- **Permite** cititoarelor de ecran să anunțe clar câmpurile formularului
-- **Extinde** zona clicabilă (clicul pe etichetă focalizează input-ul)
-- **Îmbunătățește** utilizarea pe mobil cu ținte tactile mai mari
-- **Sprijină** validarea formularului cu mesaje de eroare semnificative
-- **Îmbunătățește** SEO prin oferirea de semnificație semantică elementelor formularului
+- **Permite** cititoarelor de ecran să anunțe clar câmpurile de formular
+- **Extinde** zona clicabilă (clic pe etichetă focalizează inputul)
+- **Îmbunătățește** utilizarea pe mobil cu ținte tactice mai mari
+- **Susține** validarea formularului cu mesaje de eroare relevante
+- **Optimizează** SEO oferind semnificație semantică elementelor formularului
 
-> 🎯 **Obiectiv de accesibilitate**: Fiecare câmp de input al formularului ar trebui să aibă o etichetă asociată. Această practică simplă face ca formularele tale să fie utilizabile de toată lumea, inclusiv de utilizatorii cu dizabilități, și îmbunătățește experiența pentru toți utilizatorii.
+> 🎯 **Obiectiv Accesibilitate**: Fiecare câmp din formular ar trebui să aibă o etichetă asociată. Această practică simplă face formularele utilizabile pentru toată lumea, inclusiv pentru persoanele cu dizabilități, și îmbunătățește experiența tuturor utilizatorilor.
 
 ### Crearea formularului de înregistrare
 
-Formularul de înregistrare necesită informații mai detaliate pentru a crea un cont complet de utilizator. Să-l construim folosind funcții moderne HTML5 și accesibilitate îmbunătățită.
+Formularul de înregistrare necesită informații mai detaliate pentru a crea un cont complet de utilizator. Hai să-l construim cu caracteristici HTML5 moderne și accesibilitate îmbunătățită.
 
 ```html
 <hr/>
@@ -196,79 +240,94 @@ Formularul de înregistrare necesită informații mai detaliate pentru a crea un
 </form>
 ```
 
-**În codul de mai sus, am:**
-- **Organizat** fiecare câmp în div-uri de container pentru o mai bună stilizare și aranjare
-- **Adăugat** atribute `autocomplete` adecvate pentru suportul de completare automată al browserului
-- **Inclus** text de ajutor în placeholder pentru a ghida introducerea utilizatorului
-- **Setat** valori implicite sensibile folosind atributul `value`
+**În exemplul de mai sus am:**
+- **Organizat** fiecare câmp în containere `div` pentru stilizare și layout mai bune
+- **Adăugat** atributele `autocomplete` potrivite pentru suportul de completare automată a browserului
+- **Includ** texte placeholder utile pentru a ghida utilizatorul
+- **Setat** valori implicite rezonabile prin atributul `value`
 - **Aplicat** atribute de validare precum `required`, `maxlength` și `min`
-- **Utilizat** `type="number"` pentru câmpul de sold cu suport pentru zecimale
+- **Folosind** `type="number"` pentru câmpul balansului cu suport pentru zecimale
 
-### Explorarea tipurilor de input și comportamentului
+### Explorarea tipurilor de input și comportamentului lor
 
-**Tipurile moderne de input oferă funcționalități îmbunătățite:**
+**Tipurile moderne de input oferă funcționalități superioare:**
 
-| Funcție | Beneficiu | Exemplu |
-|---------|-----------|---------|
+| Caracteristică | Beneficiu | Exemplu |
+|---------|---------|----------|
 | `type="number"` | Tastatură numerică pe mobil | Introducere mai ușoară a soldului |
-| `step="0.01"` | Controlul preciziei zecimale | Permite introducerea centimilor în monedă |
+| `step="0.01"` | Control precis pentru zecimale | Permite cenții în monedă |
 | `autocomplete` | Completare automată în browser | Completare mai rapidă a formularului |
-| `placeholder` | Indicii contextuale | Ghidează așteptările utilizatorului |
+| `placeholder` | Indicații contextuale | Ghidează așteptările utilizatorului |
 
-> 🎯 **Provocare de accesibilitate**: Încearcă să navighezi prin formulare folosind doar tastatura! Folosește `Tab` pentru a te deplasa între câmpuri, `Space` pentru a bifa casetele și `Enter` pentru a trimite. Această experiență te ajută să înțelegi cum utilizatorii de cititoare de ecran interacționează cu formularele tale.
+> 🎯 **Provocare Accesibilitate**: Încearcă să navighezi în formulare folosind doar tastatura! Folosește `Tab` pentru a trece între câmpuri, `Spațiu` pentru a bifa căsuțele și `Enter` pentru trimitere. Această experiență te ajută să înțelegi cum interacționează utilizatorii de cititoare de ecran cu formularele tale.
 
-## Înțelegerea metodelor de trimitere a formularelor
+### 🔄 **Verificare Pedagogică**
+**Înțelegerea Bazei Formularelor**: Înainte de a implementa JavaScript-ul, asigură-te că înțelegi:
+- ✅ Cum crează HTML-ul semantic structuri accesibile pentru formular
+- ✅ De ce contează tipurile de input pentru tastaturile mobile și validare
+- ✅ Legătura dintre etichete și controalele formularelor
+- ✅ Cum afectează atributele formularului comportamentul implicit al browserului
 
-Când cineva completează formularul și apasă pe butonul de trimitere, datele trebuie să ajungă undeva – de obicei la un server care le poate salva. Există câteva moduri diferite în care acest lucru se poate întâmpla, iar cunoașterea celui potrivit te poate scuti de unele bătăi de cap mai târziu.
+**Auto-Test rapid**: Ce se întâmplă dacă trimiți un formular fără manipularea JavaScript?
+*Răspuns: Browserul efectuează trimiterea implicită, de regulă redirecționând către URL-ul specificat în atributul action*
 
-Să vedem ce se întâmplă de fapt când cineva apasă pe butonul de trimitere.
+**Beneficiile Formularelor HTML5**: Formularele moderne oferă:
+- **Validare încorporată**: Verificare automată a formatului email și numerelor
+- **Optimizare mobilă**: Tastaturi potrivite pentru diferite tipuri de input
+- **Accesibilitate**: Suport pentru cititoare de ecran și navigare cu tastatura
+- **Îmbunătățire progresivă**: Funcționează chiar și când JavaScript este dezactivat
+
+## Înțelegerea Metodelor de Trimitere a Formularului
+
+Când cineva completează formularul tău și apasă trimite, acele date trebuie să ajungă undeva – de obicei la un server care poate să le salveze. Există câteva moduri diferite în care poate să se întâmple asta, iar să știi care să folosești îți poate salva multe bătăi de cap mai târziu.
+
+Hai să vedem ce se întâmplă exact când cineva apasă butonul de trimitere.
 
 ### Comportamentul implicit al formularului
 
-Mai întâi, să observăm ce se întâmplă cu trimiterea de bază a unui formular:
+Mai întâi, să observăm ce se întâmplă cu o trimitere simplă a formularului:
 
-**Testează formularele actuale:**
-1. Apasă pe butonul *Înregistrează-te* din formularul tău
+**Testează formularele curente:**
+1. Apasă butonul *Înregistrează* din formularul tău
 2. Observă schimbările din bara de adrese a browserului
-3. Observă cum pagina se reîncarcă și datele apar în URL
+3. Observă cum pagina se reîncarcă și apar date în URL
 
-![Captură de ecran a schimbării URL-ului browserului după apăsarea butonului Înregistrează-te](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.ro.png)
+![Captură de ecran cu schimbarea URL-ului în browser după ce s-a apăsat butonul Înregistrează](../../../../translated_images/click-register.e89a30bf0d4bc9ca.ro.png)
 
 ### Compararea metodelor HTTP
 
 ```mermaid
 graph TD
-    A[Form Submission] --> B{HTTP Method}
-    B -->|GET| C[Data in URL]
-    B -->|POST| D[Data in Request Body]
+    A[Trimitere Formular] --> B{Metoda HTTP}
+    B -->|GET| C[Date în URL]
+    B -->|POST| D[Date în corpul cererii]
     
-    C --> E[Visible in address bar]
-    C --> F[Limited data size]
-    C --> G[Bookmarkable]
+    C --> E[Vizibil în bara de adrese]
+    C --> F[Dimensiune limitată a datelor]
+    C --> G[Se poate salva ca marcaj]
     
-    D --> H[Hidden from URL]
-    D --> I[Large data capacity]
-    D --> J[More secure]
+    D --> H[Ascuns din URL]
+    D --> I[Capacitate mare de date]
+    D --> J[Mai sigur]
 ```
-
 **Înțelegerea diferențelor:**
 
-| Metodă | Caz de utilizare | Locația datelor | Nivel de securitate | Limită de dimensiune |
-|--------|------------------|-----------------|---------------------|----------------------|
-| `GET` | Interogări de căutare, filtre | Parametri URL | Scăzut (vizibil) | ~2000 caractere |
-| `POST` | Conturi de utilizator, date sensibile | Corpul cererii | Mai ridicat (ascuns) | Fără limită practică |
+| Metodă | Caz de utilizare | Locul datelor | Nivel de securitate | Limită de mărime |
+|--------|----------|---------------|----------------|-------------|
+| `GET` | Căutări, filtre | Parametri în URL | Scăzut (vizibil) | ~2000 caractere |
+| `POST` | Conturi utilizator, date sensibile | În corpul cererii | Mai mare (ascuns) | Fără limită practică |
 
 **Înțelegerea diferențelor fundamentale:**
-- **GET**: Adaugă datele formularului la URL ca parametri de interogare (potrivit pentru operațiuni de căutare)
+- **GET**: Atașează datele formularului la URL ca parametri de interogare (adecvat pentru operații de căutare)
 - **POST**: Include datele în corpul cererii (esențial pentru informații sensibile)
-- **Limitări GET**: Constrângeri de dimensiune, date vizibile, istoric persistent al browserului
-- **Avantaje POST**: Capacitate mare de date, protecția confidențialității, suport pentru încărcarea fișierelor
+- **Limitări GET**: Limită de mărime, date vizibile, istoric persistent în browser
+- **Avantaje POST**: Capacitate mare de date, protecție a confidențialității, suport upload fișiere
 
-> 💡 **Practica optimă**: Folosește `GET` pentru formularele de căutare și filtre (recuperarea datelor), folosește `POST` pentru înregistrarea utilizatorilor, autentificare și crearea datelor.
+> 💡 **Cea mai bună practică**: Folosește `GET` pentru formulare de căutare și filtre (retrageri de date), folosește `POST` pentru înregistrarea utilizatorului, autentificare și creare date.
 
 ### Configurarea trimiterii formularului
 
-Să configurăm formularul de înregistrare pentru a comunica corect cu API-ul backend folosind metoda POST:
+Să configurăm formularul tău de înregistrare să comunice corect cu API-ul backend folosind metoda POST:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" 
@@ -276,29 +335,29 @@ Să configurăm formularul de înregistrare pentru a comunica corect cu API-ul b
 ```
 
 **Ce face această configurare:**
-- **Direcționează** trimiterea formularului către endpoint-ul API
-- **Folosește** metoda POST pentru transmiterea sigură a datelor
-- **Include** `novalidate` pentru a gestiona validarea cu JavaScript
+- **Direcționează** trimiterea formularului către endpoint-ul API-ului tău
+- **Folosește** metoda POST pentru transmisie securizată a datelor
+- **Include** `novalidate` pentru a trata validarea cu JavaScript
 
 ### Testarea trimiterii formularului
 
 **Urmează acești pași pentru a testa formularul:**
 1. **Completează** formularul de înregistrare cu informațiile tale
-2. **Apasă** butonul "Creează cont"
-3. **Observă** răspunsul serverului în browserul tău
+2. **Apasă** butonul „Creare Cont”
+3. **Observă** răspunsul serverului în browser
 
-![Fereastră de browser la adresa localhost:5000/api/accounts, afișând un șir JSON cu datele utilizatorului](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.ro.png)
+![Fereastră de browser la adresa localhost:5000/api/accounts, arătând un șir JSON cu datele utilizatorului](../../../../translated_images/form-post.61de4ca1b964d91a.ro.png)
 
 **Ce ar trebui să vezi:**
-- **Redirecționarea browserului** către URL-ul endpoint-ului API
-- **Răspuns JSON** care conține datele noului cont creat
+- **Browserul redirecționează** către URL-ul endpoint-ului API
+- **Răspuns JSON** conținând datele contului tău nou creat
 - **Confirmarea serverului** că contul a fost creat cu succes
 
-> 🧪 **Timp de experimentare**: Încearcă să te înregistrezi din nou cu același nume de utilizator. Ce răspuns primești? Acest lucru te ajută să înțelegi cum serverul gestionează datele duplicate și condițiile de eroare.
+> 🧪 **Moment de experiment**: Încearcă să te înregistrezi din nou cu același nume de utilizator. Ce răspuns primești? Aceasta te ajută să înțelegi cum serverul gestionează datele duplicate și condițiile de eroare.
 
 ### Înțelegerea răspunsurilor JSON
 
-**Când serverul procesează formularul tău cu succes:**
+**Când serverul procesează cu succes formularul tău:**
 ```json
 {
   "user": "john_doe",
@@ -310,18 +369,18 @@ Să configurăm formularul de înregistrare pentru a comunica corect cu API-ul b
 ```
 
 **Acest răspuns confirmă:**
-- **Crearea** unui cont nou cu datele specificate
-- **Atribuirea** unui identificator unic pentru referințe viitoare
-- **Returnarea** tuturor informațiilor contului pentru verificare
+- **Crează** un cont nou cu datele specificate
+- **Atribuie** un identificator unic pentru referințe viitoare
+- **Returnează** toate informațiile contului pentru verificare
 - **Indică** stocarea cu succes în baza de date
 
-## Gestionarea modernă a formularelor cu JavaScript
+## Gestionarea Modernă a Formularelor cu JavaScript
 
-Trimiterea tradițională a formularelor cauzează reîncărcarea completă a paginii, similar cu modul în care misiunile spațiale timpurii necesitau resetări complete ale sistemului pentru corectarea traiectoriei. Această abordare perturbă experiența utilizatorului și pierde starea aplicației.
+Trimiterile tradiționale de formulare determină reîncărcări complete ale paginii, asemănător modului în care misiunile spațiale timpurii necesitau resetări totale ale sistemului pentru corecții de curs. Această abordare perturbă experiența utilizatorului și pierde starea aplicației.
 
-Gestionarea formularelor cu JavaScript funcționează ca sistemele moderne de ghidare continuă utilizate de navele spațiale – făcând ajustări în timp real fără a pierde contextul navigației. Putem intercepta trimiterea formularelor, oferi feedback imediat, gestiona erorile cu grație și actualiza interfața pe baza răspunsurilor serverului, menținând în același timp poziția utilizatorului în aplicație.
+Gestionarea formularelor cu JavaScript funcționează ca sistemele continue de ghidare folosite de navele spațiale moderne – făcând ajustări în timp real fără a pierde contextul navigației. Putem intercepta trimiterea formularelor, oferi feedback imediat, gestiona erorile elegant și actualiza interfața pe baza răspunsurilor serverului în timp ce utilizatorul rămâne în aplicație.
 
-### De ce să evităm reîncărcările paginii?
+### De ce să eviți reîncărcările paginii?
 
 ```mermaid
 sequenceDiagram
@@ -329,38 +388,37 @@ sequenceDiagram
     participant SPA
     participant Server
     
-    User->>SPA: Submits form
-    SPA->>Server: AJAX request
-    Server-->>SPA: JSON response
-    SPA->>User: Updates interface
+    User->>SPA: Trimite formular
+    SPA->>Server: Cerere AJAX
+    Server-->>SPA: Răspuns JSON
+    SPA->>User: Actualizează interfața
     
-    Note over User,SPA: No page reload!
+    Note over User,SPA: Fără reîncărcare pagină!
 ```
-
-**Beneficiile gestionării formularelor cu JavaScript:**
+**Beneficiile gestionării formularului cu JavaScript:**
 - **Menține** starea aplicației și contextul utilizatorului
-- **Oferă** feedback instantaneu și indicatoare de încărcare
-- **Permite** gestionarea dinamică a erorilor și validarea
-- **Creează** experiențe fluide, asemănătoare aplicațiilor
-- **Permite** logica condițională bazată pe răspunsurile serverului
+- **Oferă** feedback instant și indicatori de încărcare
+- **Permite** tratarea dinamică a erorilor și validarea
+- **Creează** experiențe fluide, ca într-o aplicație
+- **Permite** logică condiționată bazată pe răspunsuri de la server
 
-### Tranziția de la formulare tradiționale la cele moderne
+### Tranziția de la formularele tradiționale la cele moderne
 
-**Provocările abordării tradiționale:**
-- **Redirecționează** utilizatorii în afara aplicației tale
-- **Pierderea** stării și contextului aplicației curente
-- **Necesită** reîncărcări complete ale paginii pentru operațiuni simple
+**Provocările metodei tradiționale:**
+- **Redirectează** utilizatorii în afara aplicației tale
+- **Pierde** starea și contextul aplicației curente
+- **Necesită** reîncărcări complete pentru operații simple
 - **Oferă** control limitat asupra feedback-ului utilizatorului
 
 **Avantajele abordării moderne cu JavaScript:**
-- **Menține** utilizatorii în cadrul aplicației tale
-- **Păstrează** toate stările și datele aplicației
-- **Permite** validarea și feedback-ul în timp real
-- **Sprijină** îmbunătățirea progresivă și accesibilitatea
+- **Păstrează** utilizatorii în cadrul aplicației
+- **Menține** toată starea și datele aplicației
+- **Permite** validare și feedback în timp real
+- **Susține** îmbunătățirea progresivă și accesibilitatea
 
-### Implementarea gestionării formularelor cu JavaScript
+### Implementarea gestionării formularului cu JavaScript
 
-Să înlocuim trimiterea tradițională a formularelor cu gestionarea modernă a evenimentelor în JavaScript:
+Să înlocuim trimiterea tradițională a formularului cu gestionare modernă prin evenimente JavaScript:
 
 ```html
 <!-- Remove the action attribute and add event handling -->
@@ -370,7 +428,7 @@ Să înlocuim trimiterea tradițională a formularelor cu gestionarea modernă a
 **Adaugă logica de înregistrare în fișierul tău `app.js`:**
 
 ```javascript
-// Modern event-driven form handling
+// Gestionare modernă a formularelor bazată pe evenimente
 function register() {
   const registerForm = document.getElementById('registerForm');
   const formData = new FormData(registerForm);
@@ -380,67 +438,119 @@ function register() {
   console.log('Form data prepared:', data);
 }
 
-// Attach event listener when the page loads
+// Atașează ascultătorul de evenimente când se încarcă pagina
 document.addEventListener('DOMContentLoaded', () => {
   const registerForm = document.getElementById('registerForm');
   registerForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Previno trimiterea implicită a formularului
     register();
   });
 });
 ```
 
-**Analiză a ceea ce se întâmplă aici:**
+**Descompunând ce se întâmplă aici:**
 - **Previne** trimiterea implicită a formularului folosind `event.preventDefault()`
 - **Recuperează** elementul formularului folosind selecția modernă DOM
 - **Extrage** datele formularului folosind API-ul puternic `FormData`
-- **Transformă** FormData într-un obiect simplu cu `Object.fromEntries()`
-- **Serializă** datele în format JSON pentru comunicarea cu serverul
+- **Convertește** FormData într-un obiect simplu cu `Object.fromEntries()`
+- **Serializează** datele în format JSON pentru comunicare cu serverul
 - **Înregistrează** datele procesate pentru depanare și verificare
 
 ### Înțelegerea API-ului FormData
 
 **API-ul FormData oferă o gestionare puternică a formularelor:**
-
 ```javascript
-// Example of what FormData captures
+// Exemplu de ceea ce capturează FormData
 const formData = new FormData(registerForm);
 
-// FormData automatically captures:
+// FormData capturează automat:
 // {
 //   "user": "john_doe",
-//   "currency": "$", 
-//   "description": "Personal account",
+//   "currency": "$",
+//   "description": "Cont personal",
 //   "balance": "100"
 // }
 ```
 
-**Avantajele API-
-- **Oferă** mesaje detaliate de eroare pentru depanare  
-- **Returnează** o structură de date consistentă pentru cazurile de succes și eroare  
+**Avantajele API-ului FormData:**
+- **Colecție cuprinzătoare**: Captură toate elementele formularului, inclusiv text, fișiere și inputuri complexe
+- **Conștientizare a tipului**: Gestionează diferite tipuri de input automat, fără cod personalizat
+- **Eficiență**: Elimină colectarea manuală a câmpurilor printr-un singur apel API
+- **Adaptabilitate**: Menține funcționalitatea pe măsură ce structura formularului evoluează
 
-### Puterea API-ului Modern Fetch  
+### Crearea Funcției de Comunicare cu Serverul
 
-**Avantajele API-ului Fetch față de metodele mai vechi:**  
+Acum să construim o funcție robustă pentru a comunica cu serverul API folosind modele moderne de JavaScript:
 
-| Caracteristică | Beneficiu | Implementare |  
-|----------------|-----------|--------------|  
-| Bazat pe Promisiuni | Cod asincron curat | `await fetch()` |  
-| Personalizare cerere | Control complet HTTP | Headere, metode, corp |  
-| Gestionarea răspunsului | Parsare flexibilă a datelor | `.json()`, `.text()`, `.blob()` |  
-| Gestionarea erorilor | Capturare cuprinzătoare a erorilor | Blocuri Try/catch |  
+```javascript
+async function createAccount(account) {
+  try {
+    const response = await fetch('//localhost:5000/api/accounts', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: account
+    });
+    
+    // Verifică dacă răspunsul a fost de succes
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('Account creation failed:', error);
+    return { error: error.message || 'Network error occurred' };
+  }
+}
+```
 
-> 🎥 **Află mai multe**: [Tutorial Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - Înțelegerea modelelor asincrone din JavaScript pentru dezvoltarea web modernă.  
+**Înțelegerea JavaScript asincron:**
 
-**Concepte cheie pentru comunicarea cu serverul:**  
-- **Funcțiile asincrone** permit întreruperea execuției pentru a aștepta răspunsurile serverului  
-- **Cuvântul cheie await** face ca codul asincron să fie citit ca și cum ar fi sincron  
-- **API-ul Fetch** oferă cereri HTTP moderne, bazate pe promisiuni  
-- **Gestionarea erorilor** asigură că aplicația ta răspunde elegant la problemele de rețea  
+```mermaid
+sequenceDiagram
+    participant JS as JavaScript
+    participant Fetch as Fetch API
+    participant Server as Backend Server
+    
+    JS->>Fetch: cerere fetch()
+    Fetch->>Server: HTTP POST
+    Server-->>Fetch: răspuns JSON
+    Fetch-->>JS: așteaptă răspunsul
+    JS->>JS: Procesează datele
+```
+**Ce realizează această implementare modernă:**
+- **Folosește** `async/await` pentru cod asincron ușor de citit
+- **Include** gestionarea corectă a erorilor cu blocuri try/catch
+- **Verifică** statusul răspunsului înainte de a procesa datele
+- **Setează** header-ele corespunzătoare pentru comunicarea JSON
+- **Oferă** mesaje detaliate de eroare pentru depanare
+- **Returnează** o structură de date consecventă pentru cazurile de succes și eroare
 
-### Finalizarea Funcției de Înregistrare  
+### Puterea API-ului Modern Fetch
 
-Să aducem totul împreună cu o funcție completă, pregătită pentru producție, de înregistrare:  
+**Avantajele Fetch API față de metodele mai vechi:**
+
+| Caracteristică | Beneficiu | Implementare |
+|---------|---------|----------------|
+| Bazat pe Promise | Cod asincron curat | `await fetch()` |
+| Personalizarea cererii | Control complet HTTP | Headere, metode, corp |
+| Gestionarea răspunsului | Parsare flexibilă a datelor | `.json()`, `.text()`, `.blob()` |
+| Gestionarea erorilor | Captare completă a erorilor | Blocuri try/catch |
+
+> 🎥 **Află mai mult**: [Tutorial Async/Await](https://youtube.com/watch?v=YwmlRkrxvkk) - Înțelegerea modelelor asincrone JavaScript pentru dezvoltarea web modernă.
+
+**Concepte cheie pentru comunicarea cu serverul:**
+- **Funcțiile asincrone** permit pauzarea execuției pentru a aștepta răspunsurile serverului
+- **Cuvântul cheie await** face codul asincron să arate ca și cod sincron
+- **Fetch API** oferă cereri HTTP moderne bazate pe promise
+- **Gestionarea erorilor** asigură că aplicația răspunde elegant la problemele de rețea
+
+### Completarea Funcției de Înregistrare
+
+Să reunim totul cu o funcție completă și gata de producție pentru înregistrare:
 
 ```javascript
 async function register() {
@@ -448,15 +558,15 @@ async function register() {
   const submitButton = registerForm.querySelector('button[type="submit"]');
   
   try {
-    // Show loading state
+    // Afișează starea de încărcare
     submitButton.disabled = true;
     submitButton.textContent = 'Creating Account...';
     
-    // Process form data
+    // Procesează datele formularului
     const formData = new FormData(registerForm);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-    // Send to server
+    // Trimite către server
     const result = await createAccount(jsonData);
     
     if (result.error) {
@@ -468,89 +578,108 @@ async function register() {
     console.log('Account created successfully!', result);
     alert(`Welcome, ${result.user}! Your account has been created.`);
     
-    // Reset form after successful registration
+    // Resetează formularul după înregistrarea cu succes
     registerForm.reset();
     
   } catch (error) {
     console.error('Unexpected error:', error);
     alert('An unexpected error occurred. Please try again.');
   } finally {
-    // Restore button state
+    // Restaurează starea butonului
     submitButton.disabled = false;
     submitButton.textContent = 'Create Account';
   }
 }
 ```
-  
-**Această implementare îmbunătățită include:**  
-- **Oferă** feedback vizual în timpul trimiterii formularului  
-- **Dezactivează** butonul de trimitere pentru a preveni trimiterea duplicată  
-- **Gestionează** atât erorile așteptate, cât și cele neașteptate, cu grație  
-- **Afișează** mesaje prietenoase de succes și eroare  
-- **Resetează** formularul după o înregistrare reușită  
-- **Restabilește** starea interfeței indiferent de rezultat  
 
-### Testarea Implementării  
+**Această implementare îmbunătățită include:**
+- **Oferă** feedback vizual în timpul trimiterii formularului
+- **Dezactivează** butonul de trimitere pentru a preveni trimiterea dublă
+- **Gestionează** erorile așteptate și neașteptate elegant
+- **Afișează** mesaje prietenoase de succes și eroare către utilizator
+- **Resetează** formularul după înregistrarea reușită
+- **Restaurează** starea UI indiferent de rezultat
 
-**Deschide instrumentele de dezvoltare ale browserului și testează înregistrarea:**  
+### Testarea Implementării
 
-1. **Deschide** consola browserului (F12 → fila Console)  
-2. **Completează** formularul de înregistrare  
-3. **Apasă** "Creează cont"  
-4. **Observă** mesajele din consolă și feedback-ul utilizatorului  
+**Deschide instrumentele de dezvoltare ale browserului și testează înregistrarea:**
 
-![Captură de ecran care arată mesajul de log în consola browserului](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.ro.png)  
+1. **Deschide** consola browserului (F12 → fila Console)
+2. **Completează** formularul de înregistrare
+3. **Apasă** pe "Creează cont"
+4. **Observă** mesajele din consolă și feedback-ul utilizatorului
 
-**Ce ar trebui să vezi:**  
-- **Starea de încărcare** apare pe butonul de trimitere  
-- **Logurile din consolă** arată informații detaliate despre proces  
-- **Mesajul de succes** apare când crearea contului reușește  
-- **Formularul se resetează** automat după trimiterea reușită  
+![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.ro.png)
 
-> 🔒 **Considerație de securitate**: În prezent, datele sunt transmise prin HTTP, ceea ce nu este sigur pentru producție. În aplicațiile reale, folosește întotdeauna HTTPS pentru a cripta transmiterea datelor. Află mai multe despre [securitatea HTTPS](https://en.wikipedia.org/wiki/HTTPS) și de ce este esențială pentru protejarea datelor utilizatorilor.  
+**Ce ar trebui să vezi:**
+- **Stare de încărcare** apare pe butonul de trimitere
+- **Log-uri în consolă** afișează informații detaliate despre proces
+- **Mesaj de succes** apare când crearea contului reușește
+- **Formularul se resetează** automat după trimiterea reușită
 
-## Validare Completă a Formularului  
+> 🔒 **Considerație de securitate**: Datele călătoresc momentan prin HTTP, care nu este sigur pentru producție. În aplicațiile reale, folosiți întotdeauna HTTPS pentru criptarea transmiterii datelor. Aflați mai multe despre [securitatea HTTPS](https://en.wikipedia.org/wiki/HTTPS) și de ce este esențială pentru protecția datelor utilizatorilor.
 
-Validarea formularului previne experiența frustrantă de a descoperi erori doar după trimitere. La fel ca sistemele redundante multiple de pe Stația Spațială Internațională, validarea eficientă folosește mai multe straturi de verificare.  
+### 🔄 **Verificare pedagogică**
+**Integrare Modernă JavaScript**: Verifică-ți înțelegerea manipulării asincrone a formularului:
+- ✅ Cum schimbă `event.preventDefault()` comportamentul implicit al formularului?
+- ✅ De ce API-ul FormData este mai eficient decât colectarea manuală a câmpurilor?
+- ✅ Cum îmbunătățesc modelele async/await lizibilitatea codului?
+- ✅ Ce rol joacă gestionarea erorilor în experiența utilizatorului?
 
-Abordarea optimă combină validarea la nivel de browser pentru feedback imediat, validarea JavaScript pentru o experiență îmbunătățită a utilizatorului și validarea pe server pentru securitate și integritatea datelor. Această redundanță asigură atât satisfacția utilizatorului, cât și protecția sistemului.  
+**Arhitectura Sistemului**: Manipularea ta de formular demonstrează:
+- **Programare bazată pe evenimente**: Formulare ce reacționează la acțiunile utilizatorului fără reîncărcarea paginii
+- **Comunicare asincronă**: Cererile către server nu blochează interfața utilizatorului
+- **Gestionarea erorilor**: Degradare elegantă când cererile de rețea eșuează
+- **Managementul stării**: Actualizări UI care reflectă corect răspunsurile serverului
+- **Îmbunătățire progresivă**: Funcționalitate de bază care funcționează, JavaScript o îmbunătățește
 
-### Înțelegerea Straturilor de Validare  
+**Modele Profesionale**: Ai implementat:
+- **Responsabilitate unică**: Funcții cu scopuri clare și concentrate
+- **Frontiere de eroare**: Blocuri try/catch care previn prăbușirea aplicației
+- **Feedback utilizator**: Stări de încărcare și mesaje de succes/eroare
+- **Transformarea datelor**: FormData în JSON pentru comunicarea cu serverul
+
+## Validarea Completă a Formularului
+
+Validarea formularului previne experiența frustrantă de a afla erorile abia după trimitere. La fel ca sistemele multiple redundante de pe Stația Spațială Internațională, validarea eficientă utilizează mai multe niveluri de verificări de siguranță.
+
+Abordarea optimă combină validarea la nivel de browser pentru feedback imediat, validarea JavaScript pentru experiență utilizator îmbunătățită și validarea pe server pentru securitate și integritatea datelor. Această redundanță asigură satisfacția utilizatorului și protecția sistemului.
+
+### Înțelegerea Nivelurilor de Validare
 
 ```mermaid
 graph TD
-    A[User Input] --> B[HTML5 Validation]
-    B --> C[Custom JavaScript Validation]
-    C --> D[Client-Side Complete]
-    D --> E[Server-Side Validation]
-    E --> F[Data Storage]
+    A[Introducere Utilizator] --> B[Validare HTML5]
+    B --> C[Validare JavaScript Personalizată]
+    C --> D[Finalizare pe Client]
+    D --> E[Validare pe Server]
+    E --> F[Stocare Date]
     
-    B -->|Invalid| G[Browser Error Message]
-    C -->|Invalid| H[Custom Error Display]
-    E -->|Invalid| I[Server Error Response]
+    B -->|Invalid| G[Mesaj Eroare Browser]
+    C -->|Invalid| H[Afișare Eroare Personalizată]
+    E -->|Invalid| I[Răspuns Eroare Server]
 ```
-  
-**Strategia de validare pe mai multe straturi:**  
-- **Validare HTML5**: Verificări imediate bazate pe browser  
-- **Validare JavaScript**: Logică personalizată și experiență pentru utilizator  
-- **Validare pe server**: Verificări finale de securitate și integritate a datelor  
-- **Îmbunătățire progresivă**: Funcționează chiar dacă JavaScript este dezactivat  
+**Strategie de validare multi-strat:**
+- **Validare HTML5**: Verificări imediate bazate pe browser
+- **Validare JavaScript**: Logică personalizată și experiență utilizator
+- **Validare pe server**: Verificări finale de securitate și integritate date
+- **Îmbunătățire progresivă**: Funcționează chiar dacă JavaScript este dezactivat
 
-### Atribute de Validare HTML5  
+### Atributele de Validare HTML5
 
-**Instrumente moderne de validare la dispoziția ta:**  
+**Instrumente moderne de validare la dispoziția ta:**
 
-| Atribut | Scop | Exemplu de utilizare | Comportament browser |  
-|---------|------|-----------------------|-----------------------|  
-| `required` | Câmpuri obligatorii | `<input required>` | Previne trimiterea goală |  
-| `minlength`/`maxlength` | Limite de lungime text | `<input maxlength="20">` | Impune limite de caractere |  
-| `min`/`max` | Interval numeric | `<input min="0" max="1000">` | Validează limitele numerice |  
-| `pattern` | Reguli regex personalizate | `<input pattern="[A-Za-z]+">` | Potrivește formate specifice |  
-| `type` | Validare tip de date | `<input type="email">` | Validare specifică formatului |  
+| Atribut | Scop | Exemplu de utilizare | Comportamentul browserului |
+|-----------|---------|---------------|------------------|
+| `required` | Câmpuri obligatorii | `<input required>` | Previnde trimiterea goală |
+| `minlength`/`maxlength` | Limite pentru lungimea textului | `<input maxlength="20">` | Impune limite de caractere |
+| `min`/`max` | Interval numeric | `<input min="0" max="1000">` | Validează limitele numerice |
+| `pattern` | Reguli regex personalizate | `<input pattern="[A-Za-z]+">` | Potrivește formate specifice |
+| `type` | Validare tip de date | `<input type="email">` | Validare specifică pentru format |
 
-### Stilizare CSS pentru Validare  
+### Stilizarea Validării CSS
 
-**Creează feedback vizual pentru stările de validare:**  
+**Creează feedback vizual pentru stările de validare:**
 
 ```css
 /* Valid input styling */
@@ -574,18 +703,18 @@ input:focus:invalid {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 ```
-  
-**Ce realizează aceste indicii vizuale:**  
-- **Borduri verzi**: Indică validarea reușită, ca semafoarele verzi din centrul de control  
-- **Borduri roșii**: Semnalează erori de validare care necesită atenție  
-- **Evidențierea focusului**: Oferă context vizual clar pentru locația curentă a inputului  
-- **Stilizare consistentă**: Stabilește modele de interfață previzibile pe care utilizatorii le pot învăța  
 
-> 💡 **Sfat util**: Folosește pseudo-clasele CSS `:valid` și `:invalid` pentru a oferi feedback vizual imediat pe măsură ce utilizatorii tastează, creând o interfață receptivă și utilă.  
+**Ce realizează aceste indicii vizuale:**
+- **Chenar verde**: Indică validare cu succes, ca luminile verzi din controlul misiunii
+- **Chenar roșu**: Semnalează erori de validare care necesită atenție
+- **Evidențiere la focus**: Oferă context vizual clar pentru locația curentă a inputului
+- **Stilizare consistentă**: Stabilește modele previzibile pe care utilizatorii le pot învăța
 
-### Implementarea Validării Complete  
+> 💡 **Sfat util**: Folosește pseudo-clasele CSS `:valid` și `:invalid` pentru a oferi feedback vizual imediat pe măsură ce utilizatorii tastează, creând o interfață receptivă și utilă.
 
-Să îmbunătățim formularul de înregistrare cu o validare robustă care oferă o experiență excelentă utilizatorului și calitate datelor:  
+### Implementarea Validării Cuprinzătoare
+
+Să îmbunătățim formularul tău de înregistrare cu o validare robustă care oferă o experiență excelentă utilizatorului și calitatea datelor:
 
 ```html
 <form id="registerForm" method="POST" novalidate>
@@ -627,100 +756,210 @@ Să îmbunătățim formularul de înregistrare cu o validare robustă care ofer
   <button type="submit">Create Account</button>
 </form>
 ```
-  
-**Înțelegerea validării îmbunătățite:**  
-- **Combină** indicatorii de câmpuri obligatorii cu descrieri utile  
-- **Include** atribute `pattern` pentru validarea formatului  
-- **Oferă** atribute `title` pentru accesibilitate și tooltip-uri  
-- **Adaugă** text de ajutor pentru a ghida introducerea datelor de către utilizator  
-- **Folosește** structura HTML semantică pentru o mai bună accesibilitate  
 
-### Reguli Avansate de Validare  
+**Înțelegerea validării îmbunătățite:**
+- **Combină** indicatori pentru câmpuri obligatorii cu descrieri utile
+- **Include** atribute `pattern` pentru validarea formatului
+- **Oferă** atribute `title` pentru accesibilitate și tooltip-uri
+- **Adaugă** texte de ajutor pentru ghidarea inputului utilizatorului
+- **Folosește** structură semantică HTML pentru o accesibilitate mai bună
 
-**Ce realizează fiecare regulă de validare:**  
+### Reguli Avansate de Validare
 
-| Câmp | Reguli de validare | Beneficiul utilizatorului |  
-|------|--------------------|---------------------------|  
-| Nume utilizator | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Asigură identificatori valizi și unici |  
-| Monedă | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Acceptă simboluri comune ale monedelor |  
-| Sold | `min="0"`, `step="0.01"`, `type="number"` | Previne soldurile negative |  
-| Descriere | `maxlength="100"` | Limite rezonabile de lungime |  
+**Ce realizează fiecare regulă de validare:**
 
-### Testarea Comportamentului Validării  
+| Câmp | Reguli de validare | Beneficiul utilizatorului |
+|-------|------------------|--------------|
+| Nume utilizator | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Asigură identificatori validați și unici |
+| Monedă | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Acceptă simboluri comune de monedă |
+| Sold | `min="0"`, `step="0.01"`, `type="number"` | Previne solduri negative |
+| Descriere | `maxlength="100"` | Limite rezonabile privind lungimea |
 
-**Încearcă aceste scenarii de validare:**  
-1. **Trimite** formularul cu câmpuri obligatorii goale  
-2. **Introdu** un nume de utilizator mai scurt de 3 caractere  
-3. **Încearcă** caractere speciale în câmpul de nume utilizator  
-4. **Introdu** o sumă negativă pentru sold  
+### Testarea Comportamentului Validării
 
-![Captură de ecran care arată eroarea de validare la încercarea de a trimite formularul](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.ro.png)  
+**Încearcă aceste scenarii de validare:**
+1. **Trimite** formularul cu câmpuri obligatorii goale
+2. **Introdu** un nume de utilizator mai scurt de 3 caractere
+3. **Încearcă** caractere speciale în câmpul de nume utilizator
+4. **Introdu** o sumă negativă în sold
 
-**Ce vei observa:**  
-- **Browserul afișează** mesaje native de validare  
-- **Schimbări de stilizare** bazate pe stările `:valid` și `:invalid`  
-- **Trimiterea formularului** este împiedicată până când toate validările sunt trecute  
-- **Focusul se mută automat** pe primul câmp invalid  
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.ro.png)
 
-### Validare pe Client vs Validare pe Server  
+**Ce vei observa:**
+- **Browserul afișează** mesaje native de validare
+- **Stilizarea se modifică** în funcție de stările `:valid` și `:invalid`
+- **Trimiterea formularului** este prevenită până când toate validările sunt satisfăcute
+- **Focusul se mută automat** pe primul câmp invalid
+
+### Validarea pe Client vs pe Server
 
 ```mermaid
 graph LR
-    A[Client-Side Validation] --> B[Instant Feedback]
-    A --> C[Better UX]
-    A --> D[Reduced Server Load]
+    A[Validare pe partea clientului] --> B[Feedback instant]
+    A --> C[UX mai bun]
+    A --> D[Încărcare redusă a serverului]
     
-    E[Server-Side Validation] --> F[Security]
-    E --> G[Data Integrity]
-    E --> H[Business Rules]
+    E[Validare pe partea serverului] --> F[Securitate]
+    E --> G[Integritatea datelor]
+    E --> H[Reguli de afaceri]
     
-    A -.-> I[Both Required]
+    A -.-> I[Ambele sunt necesare]
     E -.-> I
 ```
-  
-**De ce ai nevoie de ambele straturi:**  
-- **Validarea pe client**: Oferă feedback imediat și îmbunătățește experiența utilizatorului  
-- **Validarea pe server**: Asigură securitatea și gestionează regulile complexe de afaceri  
-- **Abordare combinată**: Creează aplicații robuste, prietenoase și sigure  
-- **Îmbunătățire progresivă**: Funcționează chiar și când JavaScript este dezactivat  
+**De ce ai nevoie de ambele niveluri:**
+- **Validarea pe client**: Oferă feedback imediat și îmbunătățește experiența utilizatorului
+- **Validarea pe server**: Asigură securitatea și gestionează reguli de afaceri complexe
+- **Abordare combinată**: Creează aplicații robuste, prietenoase și sigure
+- **Îmbunătățire progresivă**: Funcționează chiar și când JavaScript este dezactivat
 
-> 🛡️ **Reamintire de securitate**: Nu te baza doar pe validarea pe client! Utilizatorii rău intenționați pot ocoli verificările pe client, așa că validarea pe server este esențială pentru securitate și integritatea datelor.  
+> 🛡️ **Reamintire de securitate**: Nu te baza niciodată doar pe validarea pe client! Utilizatorii rău intenționați pot ocoli verificările client, astfel validarea pe server este esențială pentru securitate și integritatea datelor.
+
+### ⚡ **Ce poți face în următoarele 5 minute**
+- [ ] Testează formularul cu date invalide pentru a vedea mesajele de validare
+- [ ] Încearcă să trimiți formularul cu JavaScript dezactivat pentru a vedea validarea HTML5
+- [ ] Deschide DevTools și inspectează datele formularului trimise către server
+- [ ] Experimentează cu diferite tipuri de input pentru a vedea schimbările tastaturii pe mobil
+
+### 🎯 **Ce poți realiza în această oră**
+- [ ] Completează quiz-ul post-lectură și înțelege conceptele de manipulare a formularelor
+- [ ] Implementează provocarea validării complete cu feedback în timp real
+- [ ] Adaugă stiluri CSS pentru a crea formulare cu aspect profesional
+- [ ] Creează gestionarea erorilor pentru nume utilizator duplicate și erori de server
+- [ ] Adaugă câmpuri de confirmare parolă cu validare de potrivire
+
+### 📅 **Drumul tău de o săptămână pentru stăpânirea formularelor**
+- [ ] Completează aplicația bancară completă cu funcții avansate de formular
+- [ ] Implementează încărcarea de fișiere pentru poze de profil sau documente
+- [ ] Adaugă formulare în mai mulți pași cu indicatori de progres și managementul stării
+- [ ] Creează formulare dinamice care se adaptează pe baza selecțiilor utilizatorului
+- [ ] Implementează salvare automată și recuperare a formularului pentru experiență îmbunătățită
+- [ ] Adaugă validare avansată, precum verificarea emailului și formatarea numerelor de telefon
+
+### 🌟 **Drumul tău de o lună pentru stăpânirea dezvoltării frontend**
+- [ ] Construiește aplicații complexe de formular cu logică condițională și fluxuri de lucru
+- [ ] Învață biblioteci și framework-uri pentru formulare pentru dezvoltare rapidă
+- [ ] Stăpânește ghidurile de accesibilitate și principiile designului incluziv
+- [ ] Implementează internaționalizarea și localizarea pentru formulare globale
+- [ ] Creează biblioteci de componente de formular reutilizabile și sisteme de design
+- [ ] Contribuie la proiecte open source de formulare și împărtășește cele mai bune practici
+
+## 🎯 Cronologia ta pentru Stăpânirea Dezvoltării de Formulare
+
+```mermaid
+timeline
+    title Dezvoltarea Formularului & Progresul Învățării Experienței Utilizatorului
+    
+    section Baza HTML (15 minute)
+        Formulare Semantice: Elemente de formular
+                          : Tipuri de input
+                          : Etichete și accesibilitate
+                          : Îmbunătățire progresivă
+        
+    section Integrarea JavaScript (25 minute)
+        Gestionarea Evenimentelor: Trimiterea formularului
+                              : Colectarea datelor
+                              : Comunicare AJAX
+                              : Modele Async/await
+        
+    section Sisteme de Validare (35 minute)
+        Securitate pe Mai Multe Niveluri: Validare HTML5
+                                      : Logică pe partea clientului
+                                      : Verificare pe partea serverului
+                                      : Gestionarea erorilor
+        
+    section Experiența Utilizatorului (45 minute)
+        Finisarea Interfeței: Stări de încărcare
+                         : Mesaje de succes
+                         : Recuperarea după erori
+                         : Funcționalități de accesibilitate
+        
+    section Modele Avansate (1 săptămână)
+        Formulare Profesionale: Validare dinamică
+                            : Fluxuri de lucru pe mai mulți pași
+                            : Încărcare de fișiere
+                            : Feedback în timp real
+        
+    section Abilități Enterprise (1 lună)
+        Aplicații de Producție: Biblioteci de formulare
+                             : Strategii de testare
+                             : Optimizarea performanței
+                             : Cele mai bune practici de securitate
+```
+### 🛠️ Rezumatul Uneltei tale pentru Dezvoltarea Formularelor
+
+După ce ai terminat această lecție, ai stăpânit acum:
+- **Formulare HTML5**: Structură semantică, tipuri de input și caracteristici de accesibilitate
+- **Manipulare JavaScript a formelor**: Gestionare de evenimente, colectare de date și comunicație AJAX
+- **Arhitectura validării**: Validare multi-strat pentru securitate și experiența utilizatorului
+- **Programare asincronă**: Modern fetch API și modele async/await
+- **Managementul erorilor**: Gestionare cuprinzătoare a erorilor și sisteme de feedback
+- **Design de experiență utilizator**: Stări de încărcare, mesaje de succes și recuperare la eroare
+- **Îmbunătățire progresivă**: Formulare care funcționează în toate browserele și medii
+
+**Aplicații din lumea reală**: Abilitățile tale de dezvoltare a formularelor se aplică direct la:
+- **Aplicații e-commerce**: Procese de checkout, înregistrare cont și formulare de plată
+- **Software enterprise**: Sisteme de introducere date, interfețe de raportare și aplicații de workflow
+- **Management conținut**: Platforme de publicare, conținut generat de utilizatori și interfețe administrative
+- **Aplicații financiare**: Interfețe bancare, platforme de investiții și sisteme de tranzacții
+- **Sisteme medicale**: Portaluri pacient, programări și formulare cu istoricul medical
+- **Platforme educaționale**: Înregistrare cursuri, instrumente de evaluare și management al învățării
+
+**Competențe profesionale dobândite**: Acum poți:
+- **Proiecta** formulare accesibile care funcționează pentru toți utilizatorii inclusiv cei cu dizabilități
+- **Implementa** validare sigură a formularelor ce previne coruperea datelor și vulnerabilității de securitate
+- **Crea** interfețe responsive care oferă feedback clar și ghidaj
+- **Depana** interacțiuni complexe ale formularelor folosind DevTools și analiza rețelei browserului
+- **Optimiza** performanța formularelor prin gestionarea eficientă a datelor și strategiilor de validare
+
+**Concepte de dezvoltare frontend stăpânite**:
+- **Arhitectură bazată pe evenimente**: Gestionare interacțiuni utilizator și sisteme de răspuns
+- **Programare asincronă**: Comunicare server non-blocantă și gestionare erori
+- **Validarea datelor**: Verificări de securitate și integritate pe client și server
+- **Design experiență utilizator**: Interfețe intuitive ce ghidează utilizatorii spre succes
+- **Inginerie accesibilitate**: Design incluziv care funcționează pentru diverse nevoi ale utilizatorilor
+
+**Nivel următor**: Ești gata să explorezi biblioteci avansate de formulare, să implementezi reguli complexe de validare sau să construiești sisteme de colectare date la nivel enterprise!
+
+🌟 **Realizare deblocheată**: Ai construit un sistem complet de gestionare a formularului cu validare profesională, gestionare erori și modele de experiență utilizator!
 
 ---
 
----
 
-## Provocarea Agentului GitHub Copilot 🚀  
-
-Folosește modul Agent pentru a finaliza următoarea provocare:  
-
-**Descriere:** Îmbunătățește formularul de înregistrare cu validare completă pe client și feedback pentru utilizator. Această provocare te va ajuta să exersezi validarea formularelor, gestionarea erorilor și îmbunătățirea experienței utilizatorului cu feedback interactiv.  
-
-**Instrucțiuni:** Creează un sistem complet de validare a formularului pentru înregistrare care să includă: 1) Feedback de validare în timp real pentru fiecare câmp pe măsură ce utilizatorul tastează, 2) Mesaje personalizate de validare care apar sub fiecare câmp de input, 3) Un câmp de confirmare a parolei cu validare de potrivire, 4) Indicatori vizuali (cum ar fi bife verzi pentru câmpuri valide și avertismente roșii pentru cele invalide), 5) Un buton de trimitere care devine activ doar când toate validările sunt trecute. Folosește atributele de validare HTML5, CSS pentru stilizarea stărilor de validare și JavaScript pentru comportamentul interactiv.  
-
-Află mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.  
-
-## 🚀 Provocare  
-
-Afișează un mesaj de eroare în HTML dacă utilizatorul există deja.  
-
-Iată un exemplu de cum poate arăta pagina finală de autentificare după un pic de stilizare:  
-
-![Captură de ecran a paginii de autentificare după adăugarea stilurilor CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.ro.png)  
-
-## Test de evaluare post-lectură  
-
-[Test de evaluare post-lectură](https://ff-quizzes.netlify.app/web/quiz/44)  
-
-## Recapitulare & Studiu Individual  
-
-Dezvoltatorii au devenit foarte creativi în eforturile lor de a construi formulare, mai ales în ceea ce privește strategiile de validare. Află despre diferite fluxuri de formulare explorând [CodePen](https://codepen.com); poți găsi formulare interesante și inspiratoare?  
-
-## Temă  
-
-[Stilizează aplicația ta bancară](assignment.md)  
 
 ---
 
+## Provocarea Agentului GitHub Copilot 🚀
+
+Folosește modul Agent pentru a finaliza următoarea provocare:
+
+**Descriere:** Îmbunătățește formularul de înregistrare cu o validare completă pe client și feedback pentru utilizator. Această provocare te va ajuta să exersezi validarea formularelor, gestionarea erorilor și îmbunătățirea experienței utilizatorilor cu feedback interactiv.
+**Prompt:** Creează un sistem complet de validare a formularului pentru formularul de înregistrare care să includă: 1) Feedback de validare în timp real pentru fiecare câmp pe măsură ce utilizatorul tastează, 2) Mesaje de validare personalizate care apar sub fiecare câmp de input, 3) Un câmp de confirmare a parolei cu validare de potrivire, 4) Indicatori vizuali (cum ar fi bife verzi pentru câmpurile valide și avertismente roșii pentru cele invalide), 5) Un buton de trimitere care devine activ doar când toate validările sunt aprobate. Folosește atributele de validare HTML5, CSS pentru stilizarea stărilor de validare și JavaScript pentru comportamentul interactiv.
+
+Află mai multe despre [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
+
+## 🚀 Provocare
+
+Afișează un mesaj de eroare în HTML dacă utilizatorul există deja.
+
+Iată un exemplu de cum poate arăta pagina finală de login după un pic de stilizare:
+
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.ro.png)
+
+## Chestionar Post-Lecție
+
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/44)
+
+## Revizuire & Auto-studiu
+
+Dezvoltatorii au devenit foarte creativi în eforturile lor de construire a formularelor, în special în ceea ce privește strategiile de validare. Explorează diferite fluxuri ale formularelor vizitând [CodePen](https://codepen.com); poți găsi formulare interesante și inspiraționale?
+
+## Tema
+
+[Stilizează aplicația ta bancară](assignment.md)
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să țineți cont că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesionistă realizată de un traducător uman. Nu ne asumăm nicio răspundere pentru eventualele neînțelegeri sau interpretări greșite cauzate de utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

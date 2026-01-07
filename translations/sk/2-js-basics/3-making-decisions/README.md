@@ -1,149 +1,295 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90a3c32c3377f83ab750c2447c77ab98",
-  "translation_date": "2025-10-24T21:18:24+00:00",
+  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
+  "translation_date": "2026-01-07T04:32:22+00:00",
   "source_file": "2-js-basics/3-making-decisions/README.md",
   "language_code": "sk"
 }
 -->
-# Základy JavaScriptu: Rozhodovanie
+# JavaScript základy: Robenie rozhodnutí
 
-![Základy JavaScriptu - Rozhodovanie](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.sk.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.sk.png)
 
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Premýšľali ste niekedy nad tým, ako aplikácie robia inteligentné rozhodnutia? Napríklad ako navigačný systém vyberá najrýchlejšiu trasu alebo ako termostat rozhoduje, kedy zapnúť kúrenie? Toto je základný koncept rozhodovania v programovaní.
+```mermaid
+journey
+    title Tvoja dobrodružná cesta rozhodovania v JavaScripte
+    section Základy
+      Boolean hodnoty: 5: You
+      Porovnávacie operátory: 4: You
+      Logické myslenie: 5: You
+    section Základné rozhodnutia
+      If príkazy: 4: You
+      If-Else logika: 5: You
+      Switch príkazy: 4: You
+    section Pokročilá logika
+      Logické operátory: 5: You
+      Zložité podmienky: 4: You
+      Ternárne výrazy: 5: You
+```
+Už ste niekedy premýšľali nad tým, ako aplikácie robia inteligentné rozhodnutia? Ako navigačný systém vyberá najrýchlejšiu trasu, alebo ako termostat rozhoduje, kedy zapnúť kúrenie? Toto je základný koncept rozhodovania v programovaní.
 
-Rovnako ako analytický stroj Charlesa Babbagea bol navrhnutý tak, aby vykonával rôzne sekvencie operácií na základe podmienok, moderné programy v JavaScripte musia robiť rozhodnutia na základe rôznych okolností. Táto schopnosť vetvenia a rozhodovania je to, čo premieňa statický kód na responzívne, inteligentné aplikácie.
+Rovnako ako analytický stroj Charlesa Babbagea bol navrhnutý tak, aby sledoval rôzne sekvencie operácií na základe podmienok, aj moderné programy v JavaScripte potrebujú robiť voľby na základe meniacich sa okolností. Táto schopnosť vetvenia a rozhodovania mení statický kód na citlivé, inteligentné aplikácie.
 
-V tejto lekcii sa naučíte, ako implementovať podmienenú logiku vo svojich programoch. Preskúmame podmienené príkazy, operátory porovnania a logické výrazy, ktoré umožňujú vášmu kódu vyhodnotiť situácie a primerane na ne reagovať.
+V tejto lekcii sa naučíte, ako implementovať podmienenú logiku vo vašich programoch. Preskúmame podmienkové príkazy, porovnávacie operátory a logické výrazy, ktoré umožňujú vášmu kódu vyhodnocovať situácie a primerane na ne reagovať.
 
-## Kvíz pred prednáškou
+## Prednáškový kvíz
 
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/11)
+[Prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/11)
 
-Schopnosť robiť rozhodnutia a kontrolovať tok programu je základným aspektom programovania. Táto sekcia sa zaoberá tým, ako kontrolovať cestu vykonávania vašich JavaScriptových programov pomocou Boolean hodnôt a podmienenej logiky.
+Schopnosť robiť rozhodnutia a ovládať tok programu je základným aspektom programovania. Táto časť sa zaoberá tým, ako ovládať priebeh vykonávania vašich JavaScript programov pomocou Booleovských hodnôt a podmienených logík.
 
-[![Rozhodovanie](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Rozhodovanie")
+[![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
 > 🎥 Kliknite na obrázok vyššie pre video o rozhodovaní.
 
-> Túto lekciu si môžete prejsť na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
+> Túto lekciu môžete absolvovať na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-77807-sagibbon)!
 
-## Krátke opakovanie o Booleanoch
+```mermaid
+mindmap
+  root((Rozhodovanie))
+    Boolean Logic
+      pravda/nepravda
+      Výsledky porovnaní
+      Logické výrazy
+    Conditional Statements
+      if statements
+        Jedna podmienka
+        Spustenie kódu
+      if-else
+        Dve cesty
+        Alternatívne činnosti
+      switch
+        Viacero možností
+        Čistá štruktúra
+    Operators
+      Comparison
+        === !== < > <= >=
+        Vzťahy hodnôt
+      Logical
+        && || !
+        Kombinovanie podmienok
+    Advanced Patterns
+      Ternary
+        ? : syntax
+        Riadenie inline
+      Complex Logic
+        Vnorené podmienky
+        Viacero kritérií
+```
+## Krátke zopakovanie o Booleanoch
 
-Predtým, než sa pustíme do rozhodovania, si zopakujme hodnoty Boolean z našej predchádzajúcej lekcie. Pomenované po matematikovi Georgeovi Booleovi, tieto hodnoty predstavujú binárne stavy – buď `true` alebo `false`. Nie je tu žiadna nejasnosť, žiadna stredná cesta.
+Predtým než sa pustíme do rozhodovania, vráťme sa k Booleovským hodnotám z našej predchádzajúcej lekcie. Pomenované po matematikovi Georgovi Booleovi, tieto hodnoty predstavujú binárne stavy – buď `true` alebo `false`. Nie je tu žiadna nejasnosť, žiadny šedý priestor.
 
-Tieto binárne hodnoty tvoria základ všetkej výpočtovej logiky. Každé rozhodnutie, ktoré váš program urobí, sa nakoniec redukuje na Boolean hodnotenie.
+Tieto binárne hodnoty tvoria základ všetkej výpočtovej logiky. Každé rozhodnutie, ktoré váš program urobí, sa napokon zredukuje na Booleovské vyhodnotenie.
 
-Vytvorenie Boolean premenných je jednoduché:
+Vytváranie Booleovských premenných je jednoduché:
 
 ```javascript
 let myTrueBool = true;
 let myFalseBool = false;
 ```
 
-Týmto vytvoríte dve premenné s explicitnými Boolean hodnotami.
+Týmto vytvoríte dve premenné s explicitnými Booleovskými hodnotami.
 
-✅ Booleany sú pomenované po anglickom matematikovi, filozofovi a logikovi Georgeovi Booleovi (1815–1864).
+✅ Booleány sú pomenované po anglickom matematikovi, filozofovi a logikovi Georgovi Booleovi (1815–1864).
 
-## Operátory porovnania a Booleany
+## Porovnávacie operátory a Booleány
 
-V praxi len zriedka nastavujete Boolean hodnoty manuálne. Namiesto toho ich generujete vyhodnocovaním podmienok: "Je toto číslo väčšie ako tamto?" alebo "Sú tieto hodnoty rovnaké?"
+V praxi budete len zriedka nastavovať Booleovské hodnoty manuálne. Namiesto toho ich budete generovať vyhodnotením podmienok: "Je toto číslo väčšie ako tamto?" alebo "Sú tieto hodnoty rovnaké?"
 
-Operátory porovnania umožňujú tieto vyhodnotenia. Porovnávajú hodnoty a vracajú Boolean výsledky na základe vzťahu medzi operandmi.
+Porovnávacie operátory umožňujú tieto vyhodnotenia. Porovnávajú hodnoty a vracajú Booleovský výsledok na základe vzťahu medzi operandmi.
 
-| Symbol | Popis                                                                                                                                                   | Príklad            |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| `<`    | **Menej ako**: Porovnáva dve hodnoty a vracia `true`, ak je hodnota na ľavej strane menšia ako na pravej                                                | `5 < 6 // true`    |
-| `<=`   | **Menej alebo rovné**: Porovnáva dve hodnoty a vracia `true`, ak je hodnota na ľavej strane menšia alebo rovná ako na pravej                            | `5 <= 6 // true`   |
-| `>`    | **Väčšie ako**: Porovnáva dve hodnoty a vracia `true`, ak je hodnota na ľavej strane väčšia ako na pravej                                               | `5 > 6 // false`   |
-| `>=`   | **Väčšie alebo rovné**: Porovnáva dve hodnoty a vracia `true`, ak je hodnota na ľavej strane väčšia alebo rovná ako na pravej                           | `5 >= 6 // false`  |
-| `===`  | **Striktná rovnosť**: Porovnáva dve hodnoty a vracia `true`, ak sú hodnoty na pravej a ľavej strane rovnaké A majú rovnaký dátový typ                   | `5 === 6 // false` |
-| `!==`  | **Nerovnosť**: Porovnáva dve hodnoty a vracia opačnú Boolean hodnotu, než by vrátil operátor striktná rovnosť                                           | `5 !== 6 // true`  |
+| Symbol | Popis                                                                                                                                                           | Príklad            |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `<`    | **Menšie ako**: Porovná dve hodnoty a vráti hodnotu typu Boolean `true`, ak je hodnota na ľavej strane menšia ako hodnota na pravej                              | `5 < 6 // true`    |
+| `<=`   | **Menšie alebo rovné**: Porovná dve hodnoty a vráti hodnotu typu Boolean `true`, ak je hodnota na ľavej strane menšia alebo rovná hodnote na pravej      | `5 <= 6 // true`   |
+| `>`    | **Väčšie ako**: Porovná dve hodnoty a vráti hodnotu typu Boolean `true`, ak je hodnota na ľavej strane väčšia ako hodnota na pravej                             | `5 > 6 // false`   |
+| `>=`   | **Väčšie alebo rovné**: Porovná dve hodnoty a vráti hodnotu typu Boolean `true`, ak je hodnota na ľavej strane väčšia alebo rovná hodnote na pravej | `5 >= 6 // false`  |
+| `===`  | **Prísna rovnosť**: Porovná dve hodnoty a vráti hodnotu typu Boolean `true`, ak sú hodnoty na pravej a ľavej strane rovnaké a majú rovnaký dátový typ         | `5 === 6 // false` |
+| `!==`  | **Nerovnosť**: Porovná dve hodnoty a vráti opačnú Booleovskú hodnotu než by vrátil prísny operátor rovnosti                                                     | `5 !== 6 // true`  |
 
-✅ Otestujte svoje znalosti napísaním niekoľkých porovnaní v konzole vášho prehliadača. Prekvapili vás niektoré vrátené údaje?
+✅ Otestujte si svoje znalosti písaním niekoľkých porovnaní v konzole prehliadača. Prekvapila vás nejaká vrátená hodnota?
 
-## Príkaz If
+```mermaid
+flowchart LR
+    A["🔢 Hodnoty"] --> B["⚖️ Porovnanie"]
+    B --> C["✅ Boolean výsledok"]
+    
+    D["5"] --> E["< 6"]
+    E --> F["pravda"]
+    
+    G["10"] --> H["=== '10'"]
+    H --> I["nepravda"]
+    
+    J["'ahoj'"] --> K["!== 'svet'"]
+    K --> L["pravda"]
+    
+    M["📋 Typy operátorov"] --> M1["Rovnosť: === !=="]
+    M --> M2["Vzťahové: < > <= >="]
+    M --> M3["Prísne vs Voľné"]
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style M fill:#fff3e0
+```
+### 🧠 **Ovládnutie porovnávania: Pochopenie Booleovskej logiky**
 
-Príkaz `if` je ako kladenie otázky vo vašom kóde. "Ak je táto podmienka pravdivá, urob túto vec." Je to pravdepodobne najdôležitejší nástroj, ktorý budete používať na rozhodovanie v JavaScripte.
+**Otestujte si pochopenie porovnávania:**
+- Prečo si myslíte, že `===` (prísna rovnosť) je spravidla preferované pred `==` (voľná rovnosť)?
+- Dokážete predpovedať, čo vráti `5 === '5'`? A čo `5 == '5'`?
+- Aký je rozdiel medzi `!==` a `!=`?
+
+```mermaid
+stateDiagram-v2
+    [*] --> Comparison: Dve hodnoty
+    Comparison --> StrictEqual: === alebo !==
+    Comparison --> Relational: < > <= >=
+    
+    StrictEqual --> TypeCheck: Skontrolovať typ A hodnotu
+    Relational --> NumberCompare: Konvertovať na čísla
+    
+    TypeCheck --> BooleanResult: pravda alebo nepravda
+    NumberCompare --> BooleanResult
+    
+    note right of StrictEqual
+        Preferovaný prístup
+        Žiadna konverzia typu
+    end note
+    
+    note right of Relational
+        Užitočné pre rozsahy
+        Číselné porovnania
+    end note
+```
+> **Profesionálny tip**: Vždy používajte `===` a `!==` pre kontroly rovnosti, pokiaľ nepotrebujete explicitnú konverziu typu. Tým predídete nečakanému správaniu!
+
+## Príkaz if
+
+Príkaz `if` je ako klásť otázku vo vašom kóde. "Ak je táto podmienka pravdivá, urob toto." Pravdepodobne je to najdôležitejší nástroj, ktorý použijete na rozhodovanie v JavaScripte.
 
 Takto to funguje:
 
 ```javascript
 if (condition) {
-  // Condition is true. Code in this block will run.
+  // Podmienka je pravdivá. Kód v tomto bloku sa vykoná.
 }
 ```
 
-Podmienka ide do zátvoriek a ak je `true`, JavaScript vykoná kód vo vnútri zložených zátvoriek. Ak je `false`, JavaScript jednoducho preskočí celý blok.
+Podmienka sa umiestňuje do zátvoriek, a ak je `true`, JavaScript vykoná kód v zložených zátvorkách. Ak je to `false`, JavaScript celý blok preskočí.
 
-Často budete používať operátory porovnania na vytvorenie týchto podmienok. Pozrime sa na praktický príklad:
+Často budete používať porovnávacie operátory na vytvorenie týchto podmienok. Pozrime sa na praktický príklad:
 
 ```javascript
 let currentMoney = 1000;
 let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  // Condition is true. Code in this block will run.
+  // Podmienka je pravdivá. Kód v tomto bloku sa vykoná.
   console.log("Getting a new laptop!");
 }
 ```
 
-Keďže `1000 >= 800` sa vyhodnotí ako `true`, kód vo vnútri bloku sa vykoná a v konzole sa zobrazí "Kupujem nový laptop!".
+Keďže `1000 >= 800` sa vyhodnotí ako `true`, kód vo vnútri bloku sa vykoná, a v konzole sa zobrazí "Getting a new laptop!".
 
-## Príkaz If..Else
+```mermaid
+flowchart TD
+    A["🚀 Štart programu"] --> B{"💰 currentMoney >= laptopPrice?"}
+    B -->|true| C["🎉 'Kupujem nový laptop!'"]
+    B -->|false| D["⏭️ Preskočiť blok kódu"]
+    C --> E["📋 Pokračovať v programe"]
+    D --> E
+    
+    F["📊 Štruktúra príkazu if"] --> F1["if (condition) {"]
+    F1 --> F2["  // kód na spustenie, ak je pravda"]
+    F2 --> F3["}"]
+    
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style D fill:#ffebee
+    style F fill:#e3f2fd
+```
+## Príkaz if..else
 
-Ale čo ak chcete, aby váš program urobil niečo iné, keď je podmienka nepravdivá? Tu prichádza na rad `else` – je to ako mať záložný plán.
+Čo ak chcete, aby váš program vykonal niečo iné, ak je podmienka nepravdivá? Práve tu prichádza `else` – je to ako mať záložný plán.
 
-Príkaz `else` vám umožňuje povedať "ak táto podmienka nie je pravdivá, urob namiesto toho túto inú vec."
+Príkaz `else` vám umožňuje povedať: "Ak táto podmienka nie je pravdivá, urob toto iné."
 
 ```javascript
 let currentMoney = 500;
 let laptopPrice = 800;
 
 if (currentMoney >= laptopPrice) {
-  // Condition is true. Code in this block will run.
+  // Podmienka je pravdivá. Kód v tomto bloku sa vykoná.
   console.log("Getting a new laptop!");
 } else {
-  // Condition is false. Code in this block will run.
+  // Podmienka je nepravdivá. Kód v tomto bloku sa vykoná.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
-Teraz, keďže `500 >= 800` je `false`, JavaScript preskočí prvý blok a namiesto toho vykoná blok `else`. V konzole uvidíte "Ešte si nemôžem dovoliť nový laptop!".
+Keďže `500 >= 800` je `false`, JavaScript preskočí prvý blok a vykoná blok za `else`. V konzole uvidíte "Can't afford a new laptop, yet!".
 
-✅ Otestujte svoje pochopenie tohto kódu a nasledujúceho kódu jeho spustením v konzole prehliadača. Zmeňte hodnoty premenných currentMoney a laptopPrice, aby ste zmenili vrátený `console.log()`.
+✅ Otestujte si porozumenie tomuto a nasledujúcemu kódu spustením v konzole prehliadača. Zmeňte hodnoty premenných currentMoney a laptopPrice a sledujte výstup `console.log()`.
 
-## Príkaz Switch
+### 🎯 **Kontrola logiky If-Else: Vetvenie ciest**
 
-Niekedy potrebujete porovnať jednu hodnotu s viacerými možnosťami. Aj keď by ste mohli zreťaziť niekoľko príkazov `if..else`, tento prístup sa stáva neprehľadným. Príkaz `switch` poskytuje čistejšiu štruktúru na spracovanie viacerých diskrétnych hodnôt.
+**Zhodnoťte svoje pochopenie podmieneného logiky:**
+- Čo sa stane, ak `currentMoney` presne rovná `laptopPrice`?
+- Vedeli by ste myslieť na situáciu z reálneho života, kde by bola if-else logika užitočná?
+- Ako by ste to rozšírili na viaceré cenové rozpätia?
 
-Koncept pripomína mechanické prepínacie systémy používané v skorých telefónnych ústredniach – jedna vstupná hodnota určuje, ktorou konkrétnou cestou sa vykonávanie bude uberať.
+```mermaid
+flowchart TD
+    A["🔍 Vyhodnotiť Podmienku"] --> B{"Podmienka Pravdivá?"}
+    B -->|Áno| C["📤 Vykonať IF blok"]
+    B -->|Nie| D["📥 Vykonať ELSE blok"]
+    
+    C --> E["✅ Jedna cesta bola vybraná"]
+    D --> E
+    
+    F["🌐 Príklady zo života"] --> F1["Stav prihlásenia používateľa"]
+    F --> F2["Overenie veku"]
+    F --> F3["Validácia formulára"]
+    F --> F4["Zmeny stavu hry"]
+    
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style D fill:#e3f2fd
+    style F fill:#f3e5f5
+```
+> **Kľúčové poznanie**: If-else zaručuje, že sa vykoná presne jedna cesta. Tým je zabezpečené, že váš program vždy odpovie na akúkoľvek podmienku!
+
+## Príkaz switch
+
+Niekedy musíte porovnať jednu hodnotu s viacerými možnosťami. Hoci by ste mohli reťaziť niekoľko príkazov `if..else`, tento prístup sa rýchlo stáva nepriehľadným. Príkaz `switch` poskytuje čistejšiu štruktúru na ovládanie viacerých diskrétnych hodnôt.
+
+Koncept pripomína mechanické prepínacie systémy používané v skorých telefónnych ústredniach – jedna vstupná hodnota určuje, ktorou konkrétnou cestou vykonávanie pokračuje.
 
 ```javascript
 switch (expression) {
   case x:
-    // code block
+    // blok kódu
     break;
   case y:
-    // code block
+    // blok kódu
     break;
   default:
-    // code block
+    // blok kódu
 }
 ```
 
-Takto je štruktúrovaný:
+Takto je to štruktúrované:
 - JavaScript vyhodnotí výraz raz
-- Prejde každým `case`, aby našiel zhodu
+- Prezrie si každý `case` a hľadá zhody
 - Keď nájde zhodu, vykoná daný blok kódu
-- Príkaz `break` povie JavaScriptu, aby zastavil a opustil switch
-- Ak žiadny case nesedí, vykoná sa blok `default` (ak ho máte)
+- Príkaz `break` hovorí JavaScriptu, aby zastavil a opustil switch
+- Ak nie je žiadna zhoda, vykoná sa blok `default` (ak je prítomný)
 
 ```javascript
-// Program using switch statement for day of week
+// Program používajúci príkaz switch pre deň v týždni
 let dayNumber = 2;
 let dayName;
 
@@ -164,72 +310,168 @@ switch (dayNumber) {
 console.log(`Today is ${dayName}`);
 ```
 
-V tomto príklade JavaScript vidí, že `dayNumber` je `2`, nájde zodpovedajúci `case 2`, nastaví `dayName` na "Utorok" a potom opustí switch. Výsledok? V konzole sa zobrazí "Dnes je utorok".
+V tomto príklade JavaScript vidí, že `dayNumber` je `2`, nájde zodpovedajúci `case 2`, nastaví `dayName` na "Tuesday" a potom ukončí switch. Výsledok? V konzole sa vypíše "Today is Tuesday".
 
-✅ Otestujte svoje pochopenie tohto kódu a nasledujúceho kódu jeho spustením v konzole prehliadača. Zmeňte hodnoty premennej a, aby ste zmenili vrátený `console.log()`.
+```mermaid
+flowchart TD
+    A["📥 switch(výraz)"] --> B["🔍 Vyhodnotiť raz"]
+    B --> C{"Zodpovedá prípad 1?"}
+    C -->|Áno| D["📋 Vykonať prípad 1"]
+    C -->|Nie| E{"Zodpovedá prípad 2?"}
+    E -->|Áno| F["📋 Vykonať prípad 2"]
+    E -->|Nie| G{"Zodpovedá prípad 3?"}
+    G -->|Áno| H["📋 Vykonať prípad 3"]
+    G -->|Nie| I["📋 Vykonať predvolený prípad"]
+    
+    D --> J["🛑 prerušiť"]
+    F --> K["🛑 prerušiť"]
+    H --> L["🛑 prerušiť"]
+    
+    J --> M["✅ Opustiť switch"]
+    K --> M
+    L --> M
+    I --> M
+    
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style M fill:#e8f5e8
+```
+✅ Otestujte si porozumenie tomuto a nasledujúcemu kódu spustením v konzole prehliadača. Zmeňte hodnotu premennej a a sledujte výstup `console.log()`.
 
-## Logické operátory a Booleany
+### 🔄 **Ovládnutie príkazu Switch: Viaceré možnosti**
 
-Komplexné rozhodnutia často vyžadujú vyhodnotenie viacerých podmienok súčasne. Rovnako ako Boolean algebra umožňuje matematikom kombinovať logické výrazy, programovanie poskytuje logické operátory na prepojenie viacerých Boolean podmienok.
+**Otestujte si porozumenie switchu:**
+- Čo sa stane, ak zabudnete príkaz `break`?
+- Kedy by ste použili `switch` namiesto viacerých príkazov if-else?
+- Prečo je blok `default` užitočný, aj keď si myslíte, že ste pokryli všetky možnosti?
 
-Tieto operátory umožňujú sofistikovanú podmienenú logiku kombinovaním jednoduchých hodnotení true/false.
+```mermaid
+pie title "Kedy použiť každú rozhodovaciu štruktúru"
+    "Jednoduché if-else" : 40
+    "Zložité if-else reťazce" : 25
+    "Switch príkazy" : 20
+    "Ternárne operátory" : 15
+```
+> **Najlepšia prax**: Používajte `switch`, keď porovnávate jednu premennú s viacerými konkrétnymi hodnotami. Používajte if-else pre kontrolu rozsahov alebo zložité podmienky!
 
-| Symbol | Popis                                                                                     | Príklad                                                                 |
-| ------ | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `&&`   | **Logické AND**: Porovnáva dva Boolean výrazy. Vracia true **iba** ak sú obe strany true   | `(5 > 3) && (5 < 10) // Obe strany sú pravdivé. Vracia true`            |
-| `\|\|` | **Logické OR**: Porovnáva dva Boolean výrazy. Vracia true, ak je aspoň jedna strana true   | `(5 > 10) \|\| (5 < 10) // Jedna strana je nepravdivá, druhá je pravdivá. Vracia true` |
-| `!`    | **Logické NOT**: Vracia opačnú hodnotu Boolean výrazu                                     | `!(5 > 10) // 5 nie je väčšie ako 10, takže "!" to zmení na true`       |
+## Logické operátory a Booleány
 
-Tieto operátory vám umožňujú kombinovať podmienky užitočnými spôsobmi:
+Zložité rozhodnutia často vyžadujú vyhodnocovanie viacerých podmienok súčasne. Rovnako ako Booleova algebra umožňuje matematikom kombinovať logické výrazy, programovanie poskytuje logické operátory na spojenie viacerých Booleovských podmienok.
+
+Tieto operátory umožňujú sofistikovanú podmienenú logiku kombináciou jednoduchých pravdivostných hodnotení.
+
+| Symbol | Popis                                                                                         | Príklad                                                                    |
+| ------ | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `&&`   | **Logické AND**: Porovnáva dva Booleovské výrazy. Vracia true **len** ak sú obe strany pravdivé | `(5 > 3) && (5 < 10) // Obe strany sú pravdivé. Vracia true` |
+| `\|\|` | **Logické OR**: Porovnáva dva Booleovské výrazy. Vracia true, ak je aspoň jedna strana pravdivá | `(5 > 10) \|\| (5 < 10) // Jedna strana je nepravdivá, druhá pravdivá. Vracia true` |
+| `!`    | **Logické NOT**: Vracia opačnú hodnotu Booleovského výrazu                                  | `!(5 > 10) // 5 nie je väčšie ako 10, takže "!" z toho robí true`          |
+
+Tieto operátory vám umožnia kombinovať podmienky užitočnými spôsobmi:
 - AND (`&&`) znamená, že obe podmienky musia byť pravdivé
 - OR (`||`) znamená, že aspoň jedna podmienka musí byť pravdivá  
-- NOT (`!`) prevráti true na false (a naopak)
+- NOT (`!`) otočí true na false (a naopak)
 
+```mermaid
+flowchart LR
+    A["🔗 Logické operátory"] --> B["&& A A"]
+    A --> C["|| ALEBO"]
+    A --> D["! NIE"]
+    
+    B --> B1["Obidva musia byť pravdivé"]
+    B --> B2["pravda && pravda = pravda"]
+    B --> B3["pravda && nepravda = nepravda"]
+    
+    C --> C1["Aspoň jeden pravdivý"]
+    C --> C2["pravda || nepravda = pravda"]
+    C --> C3["nepravda || nepravda = nepravda"]
+    
+    D --> D1["Otočí hodnotu"]
+    D --> D2["!pravda = nepravda"]
+    D --> D3["!nepravda = pravda"]
+    
+    E["🌍 Skutočné príklady"] --> E1["Vek >= 18 && máVodičák"]
+    E --> E2["jeVíkend || jeSviatok"]
+    E --> E3["!jePrihlásený"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 ## Podmienky a rozhodnutia s logickými operátormi
 
-Pozrime sa na tieto logické operátory v akcii s realistickejším príkladom:
+Pozrime sa na tieto logické operátory v akcii na realistickejšom príklade:
 
 ```javascript
 let currentMoney = 600;
 let laptopPrice = 800;
-let laptopDiscountPrice = laptopPrice - (laptopPrice * 0.2); // Laptop price at 20 percent off
+let laptopDiscountPrice = laptopPrice - (laptopPrice * 0.2); // Cena notebooku so zľavou 20 percent
 
 if (currentMoney >= laptopPrice || currentMoney >= laptopDiscountPrice) {
-  // Condition is true. Code in this block will run.
+  // Podmienka je pravdivá. Kód v tomto bloku sa vykoná.
   console.log("Getting a new laptop!");
 } else {
-  // Condition is false. Code in this block will run.
+  // Podmienka je nepravdivá. Kód v tomto bloku sa vykoná.
   console.log("Can't afford a new laptop, yet!");
 }
 ```
 
-V tomto príklade: vypočítame cenu so zľavou 20 % (640), potom vyhodnotíme, či naše dostupné prostriedky pokrývajú buď plnú cenu ALEBO cenu so zľavou. Keďže 600 spĺňa prahovú hodnotu zľavovej ceny 640, podmienka sa vyhodnotí ako true.
+V tomto príklade: vypočítame 20% zľavu (640), potom hodnotíme, či naše dostupné financie pokrývajú buď plnú cenu ALEBO zľavnenú cenu. Keďže 600 zodpovedá zľavnenému prahu 640, podmienka sa vyhodnotí ako pravdivá.
+
+### 🧮 **Kontrola logických operátorov: Kombinovanie podmienok**
+
+**Otestujte si pochopenie logických operátorov:**
+- Čo sa stane v výraze `A && B`, ak A je nepravdivé? Vyhodnotí sa vôbec B?
+- Viete si predstaviť situáciu, kde by ste potrebovali všetky tri operátory (&&, ||, !) naraz?
+- Aký je rozdiel medzi `!user.isActive` a `user.isActive !== true`?
+
+```mermaid
+stateDiagram-v2
+    [*] --> EvaluateA: A && B
+    EvaluateA --> CheckB: A je pravda
+    EvaluateA --> ReturnFalse: A je nepravda
+    CheckB --> ReturnTrue: B je pravda
+    CheckB --> ReturnFalse: B je nepravda
+    
+    [*] --> EvaluateC: A || B
+    EvaluateC --> ReturnTrue: A je pravda
+    EvaluateC --> CheckD: A je nepravda
+    CheckD --> ReturnTrue: B je pravda
+    CheckD --> ReturnFalse: B je nepravda
+    
+    note right of EvaluateA
+        Skoré vyhodnotenie:
+        Ak je A nepravda, B sa nikdy neoverí
+    end note
+```
+> **Tip na výkon**: JavaScript používa "skracované vyhodnocovanie" - v `A && B`, ak A je nepravdivé, B sa už nevyhodnocuje. Využite to vo svoj prospech!
 
 ### Operátor negácie
 
-Niekedy je jednoduchšie premýšľať o tom, kedy niečo NIE je pravdivé. Napríklad namiesto otázky "Je používateľ prihlásený?" môžete chcieť položiť otázku "Nie je používateľ prihlásený?" Operátor výkričník (`!`) prevráti logiku za vás.
+Niekedy je jednoduchšie myslieť na to, kedy niečo NIE JE pravda. Namiesto otázky "Je používateľ prihlásený?" sa môžete opýtať "NIE JE používateľ prihlásený?" Operátor výkričníka (`!`) otočí logiku za vás.
 
 ```javascript
 if (!condition) {
-  // runs if condition is false
+  // spustí sa, ak je podmienka nepravdivá
 } else {
-  // runs if condition is true
+  // spustí sa, ak je podmienka pravdivá
 }
 ```
 
-Operátor `!` je ako povedať "opakom je..." – ak je niečo `true`, `!` to zmení na `false`, a naopak.
+Operátor `!` je ako povedať "pravý opak..." – ak je niečo `true`, `!` zmení na `false`, a naopak.
 
 ### Ternárne výrazy
 
-Pre jednoduché podmienené priradenia JavaScript poskytuje **ternárny operátor**. Tento stručný zápis vám umožňuje napísať podmienený výraz na jednom riadku, čo je užitočné, keď potrebujete priradiť jednu z dvoch hodnôt na základe podmienky.
+Pre jednoduché podmienené priradenia JavaScript poskytuje **ternárny operátor**. Táto stručná syntax umožňuje napísať podmienený výraz na jednom riadku, čo je užitočné, keď potrebujete priradiť jednu z dvoch hodnôt na základe podmienky.
 
 ```javascript
 let variable = condition ? returnThisIfTrue : returnThisIfFalse;
 ```
 
-Číta sa to ako otázka: "Je táto podmienka pravdivá? Ak áno, použite túto hodnotu. Ak nie, použite tamtú hodnotu."
+Číta sa ako otázka: "Je táto podmienka pravdivá? Ak áno, použi túto hodnotu. Ak nie, použi tamtu hodnotu."
 
-Nižšie je konkrétnejší príklad:
+Nižšie je konkrétny príklad:
 
 ```javascript
 let firstNumber = 20;
@@ -237,11 +479,11 @@ let secondNumber = 10;
 let biggestNumber = firstNumber > secondNumber ? firstNumber : secondNumber;
 ```
 
-✅ Venujte chvíľu čítaniu tohto kódu niekoľkokrát. Rozumiete tomu, ako tieto operátory fungujú?
+✅ Venujte chvíľku čítaniu tohto kódu niekoľkokrát. Rozumiete, ako tieto operátory fungujú?
 
-Tento riadok hovorí: "Je `firstNumber` väčšie ako `secondNumber`? Ak áno, vložte `firstNumber` do `biggestNumber`. Ak nie, vložte `secondNumber` do `biggestNumber`."
+Tento riadok hovorí: "Je `firstNumber` väčšie ako `secondNumber`? Ak áno, daj `firstNumber` do `biggestNumber`. Ak nie, daj `secondNumber` do `biggestNumber`."
 
-Ternárny operátor je len kratší spôsob, ako napísať tradičný príkaz `if..else`:
+Ternárny operátor je len kratšia cesta na zapísanie tradičného príkazu `if..else`:
 
 ```javascript
 let biggestNumber;
@@ -252,58 +494,179 @@ if (firstNumber > secondNumber) {
 }
 ```
 
-Oba prístupy prinášajú identické výsledky. Ternárny operátor ponúka stručnosť, zatiaľ čo tradičná štruktúra if-else môže byť čitateľnejšia pri zložitejších podmienkach.
+Oba prístupy produkujú identický výsledok. Ternárny operátor prináša stručnosť, zatiaľ čo tradičná štruktúra if-else môže byť pre zložité podmienky čitateľnejšia.
 
+```mermaid
+flowchart LR
+    A["🤔 Ternárny operátor"] --> B["podmienka ?"]
+    B --> C["hodnotaAkPravda :"]
+    C --> D["hodnotaAkNepravda"]
+    
+    E["📝 Tradičné If-Else"] --> F["ak (podmienka) {"]
+    F --> G["  vrátiť hodnotaAkPravda"]
+    G --> H["} inak {"]
+    H --> I["  vrátiť hodnotaAkNepravda"]
+    I --> J["}"]
+    
+    K["⚡ Kedy použiť"] --> K1["Jednoduché priradenia"]
+    K --> K2["Krátke podmienky"]
+    K --> K3["Rozhodnutia v riadku"]
+    K --> K4["Príkazy return"]
+    
+    style A fill:#e3f2fd
+    style E fill:#fff3e0
+    style K fill:#e8f5e8
+```
 ---
 
 
 
 ## 🚀 Výzva
 
-Vytvorte program, ktorý je najskôr napísaný s logickými operátormi, a potom ho prepíšte pomocou ternárneho výrazu. Ktorá syntax vám vyhovuje viac?
+Vytvorte program, ktorý najprv využíva logické operátory, a potom ho prepíšte pomocou ternárneho výrazu. Ktorú syntax preferujete?
 
 ---
 
-## Výzva GitHub Copilot Agent 🚀
+## Výzva GitHub Copilot Agenta 🚀
 
-Použite režim Agent na splnenie nasledujúcej výzvy:
+Použite režim Agenta na splnenie nasledujúcej výzvy:
 
-**Popis:** Vytvorte komplexný kalkulátor známok, ktorý demonštruje viacero konceptov rozhodovania z tejto lekcie, vrátane príkazov if-else, switch, logických operátorov a ternárnych výrazov.
+**Popis:** Vytvorte komplexný kalkulátor známok, ktorý demonštruje viaceré koncepty rozhodovania z tejto lekcie, vrátane príkazov if-else, switch, logických operátorov a ternárnych výrazov.
 
-**Zadanie:** Napíšte program v JavaScripte, ktorý zoberie číselné skóre študenta (0-100) a určí jeho písmenkovú známku podľa nasledujúcich kritérií:
+**Zadanie:** Napíšte JavaScript program, ktorý prijme číselný výsledok študenta (0-100) a určí jeho písmenkovú známku podľa nasledujúcich kritérií:
 - A: 90-100
 - B: 80-89  
 - C: 70-79
 - D: 60-69
-- F: Menej ako 60
+- F: Pod 60
 
 Požiadavky:
 1. Použite príkaz if-else na určenie písmenkovej známky
-2. Použite logické operátory na kontrolu, či študent prešiel (známka >= 60) A má vyznamenanie (známka >= 90)
-3. Použite príkaz switch na poskytnutie konkrétnej spätnej väzby pre každú písmenkovú známku
-4. Použite ternárny operátor na určenie, či je študent oprávnený na ďalší kurz (známka >= 70)
-5. Zahrňte validáciu vstupu, aby ste zabezpečili, že skóre je medzi 0 a 100
+2. Použite logické operátory na kontrolu, či študent prešiel (grade >= 60) A má vyznamenanie (grade >= 90)  
+3. Použite príkaz switch na poskytnutie konkrétnej spätnej väzby pre každú písmenovú známku  
+4. Použite ternárny operátor na zistenie, či je študent oprávnený na ďalší kurz (grade >= 70)  
+5. Zahrňte kontrolu vstupu, aby ste zaistili, že skóre je medzi 0 a 100  
 
-Otestujte svoj program s rôznymi skóre vrátane hraničných prípadov, ako sú 59, 60, 89, 90 a neplatné vstupy.
+Otestujte svoj program s rôznymi skóre vrátane hraničných prípadov ako 59, 60, 89, 90 a neplatnými vstupmi.
 
-Viac o [režime agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) sa dozviete tu.
+Dozviete sa viac o [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) tu.
 
 
-## Kvíz po prednáške
+## Post-Lecture Quiz
 
-[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/12)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/12)
 
-## Opakovanie a samostatné štúdium
+## Review & Self Study
 
 Prečítajte si viac o mnohých operátoroch dostupných používateľovi [na MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators).
 
-Prejdite si skvelý [prehľad operátorov od Josha Comeaua](https://joshwcomeau.com/operator-lookup/)!
+Prejdite si úžasný [operator lookup](https://joshwcomeau.com/operator-lookup/) od Josha Comeaua!
 
-## Zadanie
+## Assignment
 
-[Operátory](assignment.md)
+[Operators](assignment.md)
 
 ---
 
+## 🧠 **Zhrnutie vašej sady nástrojov na rozhodovanie**
+
+```mermaid
+graph TD
+    A["🎯 Rozhodnutia v JavaScripte"] --> B["🔍 Booleanová logika"]
+    A --> C["📊 Podmienkové príkazy"]
+    A --> D["🔗 Logické operátory"]
+    A --> E["⚡ Pokročilé vzory"]
+    
+    B --> B1["true/false hodnoty"]
+    B --> B2["Porovnávacie operátory"]
+    B --> B3["Koncepty pravdivosti"]
+    
+    C --> C1["if príkazy"]
+    C --> C2["if-else reťazce"]
+    C --> C3["switch príkazy"]
+    
+    D --> D1["&& (AND)"]
+    D --> D2["|| (OR)"]
+    D --> D3["! (NOT)"]
+    
+    E --> E1["Ternárny operátor"]
+    E --> E2["Krátke-zastavenie vyhodnotenia"]
+    E --> E3["Komplexné podmienky"]
+    
+    F["💡 Kľúčové princípy"] --> F1["Jasné čitateľné podmienky"]
+    F --> F2["Konzistentný štýl porovnávania"]
+    F --> F3["Správna priorita operátorov"]
+    F --> F4["Efektívne poradie vyhodnotenia"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+    style F fill:#fce4ec
+```
+---
+
+## 🚀 Časová os vášho majstrovstva rozhodovania v JavaScripte
+
+### ⚡ **Čo môžete urobiť v nasledujúcich 5 minútach**
+- [ ] Precvičte si porovnávacie operátory v konzole vášho prehliadača
+- [ ] Napíšte jednoduchý if-else príkaz, ktorý kontroluje váš vek
+- [ ] Skúste výzvu: prepíšte if-else pomocou ternárneho operátora
+- [ ] Otestujte, čo sa stane s rôznymi „pravdivými“ a „nepravdivými“ hodnotami
+
+### 🎯 **Čo môžete dosiahnuť v tejto hodine**
+- [ ] Dokončite kvíz po lekcii a prejdite si nejasné koncepty
+- [ ] Vytvorte komplexný kalkulátor známok z výzvy GitHub Copilot
+- [ ] Vytvorte jednoduchý rozhodovací strom pre reálnu situáciu (napríklad výber oblečenia)
+- [ ] Precvičujte kombináciu viacerých podmienok s logickými operátormi
+- [ ] Experimentujte s príkazmi switch pre rôzne použitia
+
+### 📅 **Vaše týždenné zdokonaľovanie logiky**
+- [ ] Dokončite zadanie operátorov s kreatívnymi príkladmi
+- [ ] Vytvorte mini kvízovú aplikáciu pomocou rôznych podmienkových štruktúr
+- [ ] Vytvorte validátor formulárov, ktorý kontroluje viacero vstupných podmienok
+- [ ] Precvičujte si cvičenia Josha Comeaua [operator lookup](https://joshwcomeau.com/operator-lookup/)
+- [ ] Refaktorujte existujúci kód na použitie vhodnejších podmienkových štruktúr
+- [ ] Študujte vyhodnocovanie krátkeho spoja a dôsledky na výkon
+
+### 🌟 **Váš mesačný transformačný plán**
+- [ ] Ovládnite zložité vnorené podmienky a zachovajte čitateľnosť kódu
+- [ ] Vytvorte aplikáciu so sofistikovanou logikou rozhodovania
+- [ ] Prispievajte do open source vylepšením podmienkovej logiky v existujúcich projektoch
+- [ ] Učte niekoho iného o rôznych podmienkových štruktúrach a kedy ich použiť
+- [ ] Preskúmajte funkcionálne programovanie prístupov k podmienkovej logike
+- [ ] Vytvorte si osobného sprievodcu najlepšími praktikami podmienok
+
+### 🏆 **Záverečná kontrola majstra rozhodovania**
+
+**Oslávte svoje majstrovstvo logického myslenia:**  
+- Akú najzložitejšiu rozhodovaciu logiku ste úspešne implementovali?  
+- Ktorá podmienková štruktúra vám pripadá najprirodzenejšia a prečo?  
+- Ako sa zmenil váš prístup k riešeniu problémov po naučení sa o logických operátoroch?  
+- Ktorá reálna aplikácia by mohla prospieť sofistikovanej logike rozhodovania?
+
+```mermaid
+journey
+    title Váš vývoj logického myslenia
+    section Dnes
+      Boolean zmätok: 3: You
+      Pochopenie If-Else: 4: You
+      Rozpoznávanie operátorov: 5: You
+    section Tento týždeň
+      Zložité podmienky: 4: You
+      Ovládnutie Switch: 5: You
+      Logické kombinácie: 5: You
+    section Budúci mesiac
+      Pokročilé vzory: 5: You
+      Povedomie o výkonnosti: 5: You
+      Učenie iných: 5: You
+```  
+> 🧠 **Ovládli ste umenie digitálneho rozhodovania!** Každá interaktívna aplikácia sa spolieha na podmienkovú logiku, aby inteligentne reagovala na akcie používateľov a meniacich sa podmienok. Teraz rozumiete, ako prinútiť svoje programy myslieť, vyhodnocovať a vybrať vhodné reakcie. Táto logická základňa bude poháňať každú dynamickú aplikáciu, ktorú vytvoríte! 🎉
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne výklady vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
