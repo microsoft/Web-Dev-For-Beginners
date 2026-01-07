@@ -1,53 +1,148 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2c1164912414820c8efd699b43f64954",
-  "translation_date": "2025-10-24T20:20:49+00:00",
+  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
+  "translation_date": "2026-01-07T02:58:24+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "hu"
 }
 -->
-# Banki Alkalmazás Készítése 3. rész: Adatok Lekérése és Használata
+# Banki alkalmazás készítése 3. rész: Az adatok lekérésének és használatának módszerei
 
-Gondolj a Star Trek Enterprise számítógépére - amikor Picard kapitány megkérdezi a hajó állapotát, az információ azonnal megjelenik anélkül, hogy az egész felület újratöltődne vagy újraépülne. Pontosan ezt a zökkenőmentes információáramlást építjük most dinamikus adatlekéréssel.
+Gondolj az Enterprise számítógépére a Star Trekből – amikor Picard kapitány megkéri az állapotjelentést, az információ azonnal megjelenik anélkül, hogy az egész felület leállna és újraépülne. Pont ezt a zökkenőmentes adatáramlást építjük most dinamikus adatlekéréssel.
 
-Jelenleg a banki alkalmazásod olyan, mint egy nyomtatott újság - informatív, de statikus. Átalakítjuk valami olyasmivé, mint a NASA irányítóközpontja, ahol az adatok folyamatosan áramlanak és valós időben frissülnek anélkül, hogy megszakítanák a felhasználó munkafolyamatát.
+Most a banki alkalmazásod olyan, mint egy nyomtatott újság – információgazdag, de statikus. Átalakítjuk olyanná, mint a NASA parancsnoki központja, ahol az adatok folyamatosan, valós időben frissülnek anélkül, hogy megzavarnák a felhasználó munkafolyamatát.
 
-Megtanulod, hogyan kommunikálj aszinkron módon a szerverekkel, hogyan kezeld a különböző időpontokban érkező adatokat, és hogyan alakítsd át a nyers információkat a felhasználók számára érthető formába. Ez a különbség egy bemutató és egy éles szoftver között.
+Megtanulod, hogyan kommunikálj aszinkron módon a szerverrel, kezelni az eltérő időben érkező adatokat, és hogyan alakítsd át a nyers információt valami értékessé a felhasználók számára. Ez a különbség a demó és a gyártásra kész szoftver között.
 
-## Előadás előtti kvíz
+## ⚡ Amit a következő 5 percben megtehetsz
 
-[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/45)
+**Gyors indítás elfoglalt fejlesztőknek**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 perc] --> B[API szerver beállítása]
+    B --> C[Fetch tesztelése curl-lel]
+    C --> D[Bejelentkezési funkció létrehozása]
+    D --> E[Adatok működés közben]
+```
+- **1-2. perc**: Indítsd el az API szervert (`cd api && npm start`), és teszteld a kapcsolatot
+- **3. perc**: Hozz létre egy alap `getAccount()` függvényt fetch használatával
+- **4. perc**: Kapcsold össze a bejelentkező űrlapot az `action="javascript:login()"` attribútummal
+- **5. perc**: Teszteld a bejelentkezést, és figyeld meg, ahogy a fiókadatok megjelennek a konzolon
+
+**Gyors teszt parancsok**:
+```bash
+# Ellenőrizze, hogy az API fut-e
+curl http://localhost:5000/api
+
+# Tesztelje a fiókadatok lekérését
+curl http://localhost:5000/api/accounts/test
+```
+
+**Miért fontos ez?** 5 perc alatt megtapasztalod az aszinkron adatlekérés varázsát, amely a modern webalkalmazások motorja. Ez az alapja annak, hogy az appok reszponzívnak és élőnek érezzék magukat.
+
+## 🗺️ Tanulási utad adatvezérelt webalkalmazásokkal
+
+```mermaid
+journey
+    title Statikus lapoktól a dinamikus alkalmazásokig
+    section Az evolúció megértése
+      Hagyományos oldalfrissítések: 3: You
+      AJAX/SPA előnyeinek felfedezése: 5: You
+      Fetch API minták elsajátítása: 7: You
+    section Hitelesítés felépítése
+      Bejelentkező funkciók létrehozása: 4: You
+      Aszinkron műveletek kezelése: 6: You
+      Felhasználói munkamenetek kezelése: 8: You
+    section Dinamikus UI frissítések
+      DOM manipuláció tanulása: 5: You
+      Tranzakciós megjelenítések készítése: 7: You
+      Reszponzív irányítópultok létrehozása: 9: You
+    section Professzionális minták
+      Template alapú renderelés: 6: You
+      Hibakezelési stratégiák: 7: You
+      Teljesítmény optimalizálás: 8: You
+```
+**Utazásod célja**: A lecke végére megérted, hogyan kérnek le, dolgoznak fel és jelenítenek meg adatokat a modern webalkalmazások dinamikusan, létrehozva az általunk elvárt zökkenőmentes felhasználói élményeket.
+
+## Előzetes kvíz
+
+[Előadó előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Előfeltételek
 
-Mielőtt belevágnánk az adatok lekérésébe, győződj meg róla, hogy ezek az elemek készen állnak:
+Mielőtt belevágnál az adatlekérésbe, győződj meg róla, hogy ezek az összetevők készen állnak:
 
-- **Előző lecke**: Fejezd be a [Bejelentkezési és regisztrációs űrlapot](../2-forms/README.md) - erre fogunk építeni
-- **Helyi szerver**: Telepítsd a [Node.js-t](https://nodejs.org) és [indítsd el a szerver API-t](../api/README.md), hogy elérhető legyen a fiókadatokhoz
-- **API kapcsolat**: Teszteld a szerverkapcsolatot ezzel a paranccsal:
+- **Előző lecke**: Készítsd el a [Bejelentkező és regisztrációs űrlapot](../2-forms/README.md) – erre építünk majd tovább
+- **Helyi szerver**: Telepítsd a [Node.js-t](https://nodejs.org) és [indítsd el az API szervert](../api/README.md), hogy szolgáltassa a fiókadatokat
+- **API kapcsolat**: Teszteld a szerver kapcsolatot ezzel a paranccsal:
 
 ```bash
 curl http://localhost:5000/api
-# Expected response: "Bank API v1.0.0"
+# Várt válasz: "Bank API v1.0.0"
 ```
 
-Ez a gyors teszt biztosítja, hogy minden komponens megfelelően kommunikáljon:
-- Ellenőrzi, hogy a Node.js helyesen fut-e a rendszereden
+Ez a gyors teszt biztosítja a kommunikációt:
+- Ellenőrzi, hogy a Node.js helyesen fut a gépeden
 - Megerősíti, hogy az API szerver aktív és válaszol
-- Validálja, hogy az alkalmazásod eléri-e a szervert (mint egy rádiókapcsolat ellenőrzése egy küldetés előtt)
+- Érvényesíti, hogy az app eléri a szervert (mint rádiókapcsolat ellenőrzése a küldetés előtt)
+
+## 🧠 Adatkezelési rendszer áttekintése
+
+```mermaid
+mindmap
+  root((Adatkezelés))
+    Authentication Flow
+      Login Process
+        Form Validation
+        Credential Verification
+        Session Management
+      User State
+        Global Account Object
+        Navigation Guards
+        Error Handling
+    API Communication
+      Fetch Patterns
+        GET Requests
+        POST Requests
+        Error Responses
+      Data Formats
+        JSON Processing
+        URL Encoding
+        Response Parsing
+    Dynamic UI Updates
+      DOM Manipulation
+        Safe Text Updates
+        Element Creation
+        Template Cloning
+      User Experience
+        Real-time Updates
+        Error Messages
+        Loading States
+    Security Considerations
+      XSS Prevention
+        textContent Usage
+        Input Sanitization
+        Safe HTML Creation
+      CORS Handling
+        Cross-Origin Requests
+        Header Configuration
+        Development Setup
+```
+**Alapelvek**: A modern webalkalmazások adat-orchestrációs rendszerek – koordinálják a felhasználói felületet, a szerver API-kat és a böngésző biztonsági modelljét, hogy zökkenőmentes, reszponzív élményeket alkossanak.
 
 ---
 
-## Az adatok lekérésének megértése a modern webalkalmazásokban
+## Az adatlekérés megértése a modern webalkalmazásokban
 
-Az, ahogyan a webalkalmazások kezelik az adatokat, drámaian fejlődött az elmúlt két évtizedben. Ennek az evolúciónak a megértése segít abban, hogy értékelni tudd, miért olyan erőteljesek a modern technikák, mint az AJAX és a Fetch API, és miért váltak nélkülözhetetlen eszközökké a webfejlesztők számára.
+Az elmúlt két évtizedben drámaian fejlődött, ahogyan a webalkalmazások kezelik az adatokat. Az evolúció megértése segít értékelni, miért olyan erőteljesek a mai AJAX és Fetch API technikák, és miért váltak elengedhetetlen eszközökké a fejlesztők számára.
 
-Nézzük meg, hogyan működtek a hagyományos weboldalak a dinamikus, reszponzív alkalmazásokhoz képest, amelyeket ma építünk.
+Vizsgáljuk meg, hogyan működtek a hagyományos weboldalak a mai dinamikus, reszponzív alkalmazásokhoz képest.
 
-### Hagyományos többoldalas alkalmazások (MPA)
+### Hagyományos, sokoldalas alkalmazások (MPA)
 
-A web korai napjaiban minden kattintás olyan volt, mintha egy régi televízión csatornát váltanánk - a képernyő elsötétült, majd lassan megjelent az új tartalom. Ez volt a valóság a korai webalkalmazásoknál, ahol minden interakció az egész oldal teljes újraépítését jelentette.
+A web korai napjaiban minden kattintás olyan volt, mint a tévécsatorna váltás – a képernyő elsötétült, majd lassan töltődött be az új tartalom. Ez volt a korai webalkalmazások valósága, ahol minden interakció az egész oldal teljes újraépítését jelentette.
 
 ```mermaid
 sequenceDiagram
@@ -55,24 +150,23 @@ sequenceDiagram
     participant Browser
     participant Server
     
-    User->>Browser: Clicks link or submits form
-    Browser->>Server: Requests new HTML page
-    Note over Browser: Page goes blank
-    Server->>Browser: Returns complete HTML page
-    Browser->>User: Displays new page (flash/reload)
+    User->>Browser: Kattint a linkre vagy elküldi az űrlapot
+    Browser->>Server: Új HTML oldal kérése
+    Note over Browser: Az oldal üressé válik
+    Server->>Browser: Teljes HTML oldalt ad vissza
+    Browser->>User: Megjeleníti az új oldalt (villanás/újratöltés)
 ```
+![Frissítési folyamat sokoldalas alkalmazásban](../../../../translated_images/mpa.7f7375a1a2d4aa77.hu.png)
 
-![Frissítési folyamat egy többoldalas alkalmazásban](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.hu.png)
-
-**Miért érezte ezt az ember nehézkesnek:**
+**Miért volt kényelmetlen ez az eljárás:**
 - Minden kattintás az egész oldal újraépítését jelentette
-- A felhasználókat megszakították a zavaró oldalvillanások
-- Az internetkapcsolat túlórázott, hogy újra és újra letöltse ugyanazt a fejlécet és láblécet
-- Az alkalmazások inkább egy iratszekrény átlapozására hasonlítottak, mint egy szoftver használatára
+- A felhasználók közbeszakadtak a gondolataikban a zavaró oldal-frissítések miatt
+- A netkapcsolat túlórázott, mert folyton letöltötte ugyanazt a fejlécet és láblécet
+- Az appok inkább fájlszekrények között való kattintgatáshoz hasonlítottak, mint szoftverhasználathoz
 
-### Modern egyoldalas alkalmazások (SPA)
+### Modern egylapos alkalmazások (SPA)
 
-Az AJAX (Asynchronous JavaScript and XML) teljesen megváltoztatta ezt a paradigmát. Mint az űrállomás moduláris kialakítása, ahol az űrhajósok egyes komponenseket kicserélhetnek anélkül, hogy az egész szerkezetet újra kellene építeni, az AJAX lehetővé teszi, hogy egy weboldal bizonyos részeit frissítsük anélkül, hogy mindent újratöltenénk. Bár a névben szerepel az XML, ma már leginkább JSON-t használunk, de az alapelv ugyanaz: csak azt frissítjük, amire szükség van.
+Az AJAX (Asynchronous JavaScript and XML) teljesen megváltoztatta ezt a paradigmát. Olyan, mint a Nemzetközi Űrállomás moduláris felépítése, ahol az asztronauták tudják cserélni az egyes részegységeket anélkül, hogy az egészet újraépítenék – az AJAX lehetővé teszi, hogy egy weboldal adott részeit frissítsük újratöltés nélkül. Az elnevezés XML-t említ, de ma főként JSON-t használunk, a lényeg az, hogy csak azt frissítjük, ami változott.
 
 ```mermaid
 sequenceDiagram
@@ -81,49 +175,48 @@ sequenceDiagram
     participant JavaScript
     participant Server
     
-    User->>Browser: Interacts with page
-    Browser->>JavaScript: Triggers event handler
-    JavaScript->>Server: Fetches only needed data
-    Server->>JavaScript: Returns JSON data
-    JavaScript->>Browser: Updates specific page elements
-    Browser->>User: Shows updated content (no reload)
+    User->>Browser: Kapcsolódik az oldalhoz
+    Browser->>JavaScript: Eseménykezelő aktiválása
+    JavaScript->>Server: Csak a szükséges adatokat kéri le
+    Server->>JavaScript: JSON adatokat küld vissza
+    JavaScript->>Browser: Frissíti a konkrét oldal elemeket
+    Browser->>User: Megjeleníti a frissített tartalmat (újratöltés nélkül)
 ```
+![Frissítési folyamat egylapos alkalmazásban](../../../../translated_images/spa.268ec73b41f992c2.hu.png)
 
-![Frissítési folyamat egy egyoldalas alkalmazásban](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.hu.png)
+**Miért jobb az SPA:**
+- Csak a ténylegesen változott részek frissülnek (okosan, ugye?)
+- Nincs több menet közbeni megszakítás – a felhasználók áramlásban maradnak
+- Kevesebb adat utazik, gyorsabb a betöltés
+- Minden gyors és reszponzív érzésű, mint a telefonodon futó appok
 
-**Miért jobbak az SPA-k:**
-- Csak azok a részek frissülnek, amelyek valóban megváltoztak (okos, nem?)
-- Nincsenek zavaró megszakítások - a felhasználók a saját ritmusukban maradnak
-- Kevesebb adatot kell továbbítani, ami gyorsabb betöltést eredményez
-- Minden gyors és reszponzív, mint a telefonos alkalmazások
+### Az áttérés a modern Fetch API-ra
 
-### Az evolúció a modern Fetch API-ig
+A modern böngészők biztosítják a [`Fetch` API-t](https://developer.mozilla.org/docs/Web/API/Fetch_API), amely leváltotta a régebbi [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) megoldást. Mint a távíró és az email különbsége, a Fetch ígéreteket használ a tisztább aszinkron kódért, és natívan kezeli a JSON-t.
 
-A modern böngészők biztosítják a [`Fetch` API-t](https://developer.mozilla.org/docs/Web/API/Fetch_API), amely felváltja a régebbi [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) technológiát. Mint a távíró és az e-mail közötti különbség, a Fetch API ígéreteket használ a tisztább aszinkron kódhoz, és természetesen kezeli a JSON-t.
+| Tulajdonság | XMLHttpRequest | Fetch API |
+|-------------|----------------|-----------|
+| **Szintaxis** | Bonyolult callback alapú | Tiszta promise alapú |
+| **JSON kezelés** | Kézi feldolgozás szükséges | Beépített `.json()` metódus |
+| **Hiba kezelés** | Korlátozott hibainformáció | Részletes hibakezelés |
+| **Modern támogatás** | Legacy kompatibilitás | ES6+ ígéretek és async/await |
 
-| Funkció | XMLHttpRequest | Fetch API |
-|---------|----------------|-----------|
-| **Szintaxis** | Bonyolult, visszahívás-alapú | Tiszta, ígéret-alapú |
-| **JSON kezelés** | Manuális elemzés szükséges | Beépített `.json()` metódus |
-| **Hibakezelés** | Korlátozott hibainformáció | Átfogó hibainformáció |
-| **Modern támogatás** | Régi kompatibilitás | ES6+ ígéretek és async/await |
-
-> 💡 **Böngésző kompatibilitás**: Jó hír - a Fetch API minden modern böngészőben működik! Ha kíváncsi vagy a konkrét verziókra, a [caniuse.com](https://caniuse.com/fetch) teljes kompatibilitási történetet nyújt.
-> 
-**A lényeg:**
-- Kiválóan működik Chrome, Firefox, Safari és Edge böngészőkben (gyakorlatilag mindenhol, ahol a felhasználóid vannak)
-- Csak az Internet Explorer igényel extra segítséget (és őszintén szólva, ideje elengedni az IE-t)
-- Tökéletesen előkészíti az utat az elegáns async/await mintákhoz, amelyeket később használunk
+> 💡 **Böngésző kompatibilitás**: Jó hír – a Fetch API működik minden modern böngészőben! Ha kíváncsi vagy adott verziókra, [caniuse.com](https://caniuse.com/fetch) teljes kompatibilitási táblázatot nyújt.
+>  
+**Összefoglalva:**
+- Jól működik Chrome-ban, Firefox-ban, Safari-ban és Edge-ben (ahol a felhasználóid is vannak)
+- Csak az Internet Explorer igényel plusz támogatást (Őszintén, ideje elengedni az IE-t)
+- Tökéletes alapot ad az elegáns async/await mintákhoz, amiket még látni fogunk
 
 ### Felhasználói bejelentkezés és adatlekérés megvalósítása
 
-Most valósítsuk meg azt a bejelentkezési rendszert, amely a banki alkalmazásodat egy statikus kijelzőből működőképes alkalmazássá alakítja. Mint a biztonságos katonai létesítményekben használt hitelesítési protokollok, ellenőrizzük a felhasználói hitelesítő adatokat, majd hozzáférést biztosítunk a saját adataikhoz.
+Most valósítsuk meg a bejelentkező rendszert, amely a statikus megjelenítésből funkcionális alkalmazást varázsol. Mint a biztonságos katonai létesítmények hitelesítési protokolljai, ellenőrizzük a felhasználó adatait, majd hozzáférést adunk a személyes fiókadataihoz.
 
-Ezt lépésről lépésre építjük fel, kezdve az alapvető hitelesítéssel, majd hozzáadva az adatlekérési képességeket.
+Fokozatosan építjük fel: először a hitelesítés, aztán az adatlekérés funkciókat.
 
-#### 1. lépés: A bejelentkezési funkció alapjainak létrehozása
+#### 1. lépés: A bejelentkező függvény alapja
 
-Nyisd meg az `app.js` fájlt, és adj hozzá egy új `login` függvényt. Ez fogja kezelni a felhasználói hitelesítési folyamatot:
+Nyisd meg az `app.js` fájlodat, és adj hozzá egy új `login` függvényt, amely kezeli a felhasználó hitelesítését:
 
 ```javascript
 async function login() {
@@ -132,17 +225,17 @@ async function login() {
 }
 ```
 
-**Részletezzük:**
-- Az `async` kulcsszó azt jelzi a JavaScript számára, hogy "hé, ennek a függvénynek lehet, hogy várnia kell valamire"
-- Megkeressük az űrlapot az oldalon (semmi bonyolult, csak az ID alapján)
-- Ezután kinyerjük, amit a felhasználó beírt felhasználónévként
-- Egy jó trükk: bármely űrlapmezőt elérheted a `name` attribútumán keresztül - nincs szükség extra getElementById hívásokra!
+**Íme a bontás:**
+- Az `async` kulcsszó azt jelzi a JavaScriptnek, hogy várakoznia kellhet
+- Kikeressük az űrlapot az oldalon (semmi extra, csak az ID alapján)
+- Kiolvassuk a felhasználónév értékét
+- Egy praktikus trükk: bármely űrlapelemhez hozzáférhetsz a `name` attribútumán keresztül – nem kell plusz getElementById hívás!
 
-> 💡 **Űrlap elérési minta**: Minden űrlapvezérlő elérhető a `name` attribútumán keresztül (amelyet a HTML-ben állítasz be) az űrlapelem tulajdonságaként. Ez tiszta, olvasható módot biztosít az űrlapadatok elérésére.
+> 💡 **Űrlap elérési minta**: Minden űrlapvezérlőhöz hozzáférsz a `name` attribútum alapján, az űrlap elem tulajdonságaként. Ez átlátható, tiszta mód az adatkinyeréshez.
 
-#### 2. lépés: Hozz létre egy fiókadatok lekérési függvényt
+#### 2. lépés: Az adatlekérő függvény létrehozása
 
-Ezután hozz létre egy dedikált függvényt a fiókadatok szerverről történő lekérésére. Ez ugyanazt a mintát követi, mint a regisztrációs függvényed, de az adatok lekérésére összpontosít:
+Készítsünk egy külön függvényt a fiókadatok szerverről való lekérésére. Ez hasonló a regisztrációs funkcióhoz, de most az adatokat kérjük le:
 
 ```javascript
 async function getAccount(user) {
@@ -155,59 +248,225 @@ async function getAccount(user) {
 }
 ```
 
-**Ez a kód a következőket végzi:**
-- **Használja** a modern `fetch` API-t az adatok aszinkron lekérésére
-- **Összeállít** egy GET kérés URL-t a felhasználónév paraméterrel
-- **Alkalmazza** az `encodeURIComponent()`-et, hogy biztonságosan kezelje az URL-ek speciális karaktereit
-- **Átalakítja** a választ JSON formátumba az egyszerű adatkezelés érdekében
-- **Kezeli** a hibákat, hogy ne omoljon össze a program
+**Mit csinál ez a kód:**
+- **Használ** modernebb `fetch` API-t az aszinkron adatlekéréshez
+- **Összerak** egy GET kérést a felhasználónév paraméterével
+- **Használja** az `encodeURIComponent()`-ot az URL speciális karaktereinek biztonságos kezelésére
+- **Átalakítja** a választ JSON formátummá az egyszerű adatkezelés miatt
+- **Kezeletlenül kezeli** a hibákat, hibaobjektummal tér vissza, nem omlik össze
 
-> ⚠️ **Biztonsági megjegyzés**: Az `encodeURIComponent()` függvény kezeli az URL-ek speciális karaktereit. Mint a haditengerészeti kommunikációs kódolási rendszerek, biztosítja, hogy az üzenet pontosan érkezzen meg, és megakadályozza, hogy a karakterek, mint például a "#" vagy "&", félreértelmezésre kerüljenek.
-> 
-**Miért fontos ez:**
-- Megakadályozza, hogy a speciális karakterek tönkretegyék az URL-eket
-- Véd az URL-manipulációs támadások ellen
-- Biztosítja, hogy a szerver a szándékolt adatokat kapja meg
-- Biztonságos kódolási gyakorlatokat követ
+> ⚠️ **Biztonsági megjegyzés**: Az `encodeURIComponent()` védi az URL-ben szereplő speciális karaktereket. Mint egy haditengerészeti kódolási rendszer, megakadályozza, hogy a `#` vagy `&` karakterek rossz értelmezést kapjanak.
+>  
+**Miért fontos:**
+- Megakadályozza, hogy speciális karakterek tönkretegyék az URL-t
+- Védekezik az URL manipulációs támadások ellen
+- Biztosítja, hogy a szerver pontosan megkapja az adatot
+- Követi a biztonságos kódolási gyakorlatokat
 
 #### HTTP GET kérések megértése
 
-Talán meglepő lehet: amikor a `fetch`-et használod extra opciók nélkül, az automatikusan egy [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) kérést hoz létre. Ez tökéletes arra, amit most csinálunk - megkérdezzük a szervert: "Hé, megnézhetem ennek a felhasználónak a fiókadatait?"
+Valami, ami talán meglep: ha fetch-t használunk opciók nélkül, automatikusan egy [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) kérést készít. Ez tökéletes arra, hogy megkérjük a szervert: „Mutasd a felhasználó fiókadatait!”
 
-Folytatás...
-Bonyolultabb tartalom esetén kombináld a [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) metódust az [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) metódussal:
+Gondolj a GET-re úgy, mintha udvariasan kölcsönkérnél egy könyvet a könyvtárból – már létező adatot kérsz. A POST (amit a regisztrációhoz használtunk) inkább új könyv beadásához hasonlít.
+
+| GET kérés | POST kérés |
+|-----------|------------|
+| **Cél** | Meglévő adat lekérése | Új adat elküldése a szerverre |
+| **Paraméterek** | URL-ben/kérdésben | Kérés törzsében |
+| **Gyorsítótár** | Böngésző gyorsítótárazhatja | Általában nem gyorsítótárazott |
+| **Biztonság** | Látható az URL-ben/naplókban | El van rejtve a kérés törzsében |
+
+```mermaid
+sequenceDiagram
+    participant B as Böngésző
+    participant S as Szerver
+    
+    Note over B,S: GET Kérés (Adatlekérés)
+    B->>S: GET /api/accounts/test
+    S-->>B: 200 OK + Fiókadatok
+    
+    Note over B,S: POST Kérés (Adatbeküldés)
+    B->>S: POST /api/accounts + Új fiók adatai
+    S-->>B: 201 Created + Visszaigazolás
+    
+    Note over B,S: Hibakezelés
+    B->>S: GET /api/accounts/nonexistent
+    S-->>B: 404 Nem található + Hibaüzenet
+```
+#### 3. lépés: Összekapcsolás
+
+Most jön a lényeg: csatlakoztassuk a fiókadat lekérő függvényt a bejelentkezéshez. Itt áll össze minden:
 
 ```javascript
-// Safe way to create new elements
+async function login() {
+  const loginForm = document.getElementById('loginForm');
+  const user = loginForm.user.value;
+  const data = await getAccount(user);
+
+  if (data.error) {
+    return console.log('loginError', data.error);
+  }
+
+  account = data;
+  navigate('/dashboard');
+}
+```
+
+Ez a függvény világos sorrendet követ:
+- Kimenti a felhasználónevet az űrlapról
+- Lekéri a fiókadatokat a szerverről
+- Kezeli az esetleges hibákat
+- Siker esetén eltárolja az adatokat és a műszerfalra navigál
+
+> 🎯 **Async/Await minta**: Mivel `getAccount` aszinkron, használjuk az `await` kulcsszót, hogy várjon a válaszra, így ne folytassa a kódot nem definiált adatokkal.
+
+#### 4. lépés: Hol tároljuk az adatokat?
+
+Az appnak kell valami „rövid távú memóriája”, ahol megtartja a beolvasott adatokat. Ezt helyezd az `app.js` tetejére:
+
+```javascript
+// Ez tárolja az aktuális felhasználó fiókadatait
+let account = null;
+```
+
+**Miért van erre szükség:**
+- Mindenhol hozzáférhetővé teszi az aktuális adatokat
+- Kezdőérték `null`, ami azt jelenti: „még senki nincs bejelentkezve”
+- Frissítve lesz bejelentkezés vagy regisztráció után
+- Központi forrásként szolgál – egyértelmű, ki van bejelentkezve
+
+#### 5. lépés: Kapcsold be az űrlapot
+
+Most kösd össze az űrlapot az új login függvénnyel. Módosítsd az űrlap címkéjét:
+
+```html
+<form id="loginForm" action="javascript:login()">
+  <!-- Your existing form inputs -->
+</form>
+```
+
+**Mit tesz ez a kis módosítás:**
+- Meggátolja az űrlapot abban, hogy újratöltse az egész oldalt
+- Ezzel helyette a saját JavaScript függvényedet hívja meg
+- Minden simán, egylapos-alkalmazásszerűen történik
+- Teljes kontrollt ad, mi történjen a bejelentkezéskor
+
+#### 6. lépés: Regisztrációs funkció bővítése
+
+Az egységesség kedvéért frissítsd a `register` függvényt is, hogy eltárolja az adatokat és a műszerfalra navigáljon:
+
+```javascript
+// Add hozzá ezeket a sorokat a register függvényed végéhez
+account = result;
+navigate('/dashboard');
+```
+
+**Ez a bővítés biztosítja:**
+- **Zökkenőmentes** átmenet regisztráció után a műszerfalra
+- **Egységes** felhasználói élmény bejelentkezés és regisztráció között
+- **Azonnali** hozzáférést a fiókadatokhoz sikeres regisztráció után
+
+#### Teszteld az implementációt
+
+```mermaid
+flowchart TD
+    A[Felhasználó megadja a hitelesítő adatokat] --> B[Bejelentkező függvény hívása]
+    B --> C[Fiókadatok lekérése a szerverről]
+    C --> D{Az adatok sikeresen megérkeztek?}
+    D -->|Igen| E[Fiókadatok globális tárolása]
+    D -->|Nem| F[Hibaüzenet megjelenítése]
+    E --> G[Átnavigálás a műszerfalra]
+    F --> H[Felhasználó a bejelentkező oldalon marad]
+```
+**Itt az idő kipróbálni:**
+1. Hozz létre új fiókot, hogy megbizonyosodj a működésről
+2. Jelentkezz be ezekkel az adatokkal
+3. Nézd meg a böngésző konzolt (F12), ha valami nem stimmel
+4. Ellenőrizd, hogy a sikeres bejelentkezés után a műszerfalra kerülsz-e
+
+Ha valami nem működik, ne ess pánikba! A legtöbb hibát elírás vagy az API szerver el nem indítása okozza.
+
+#### Egy gyors szó a cross-origin varázslatról
+
+Lehet, hogy érdekel: "Hogy beszél a webalkalmazásom a másik porton futó API szerverrel?" Ez egy általános kérdés, ami minden webfejlesztőt előbb-utóbb foglalkoztat.
+
+> 🔒 **Cross-Origin biztonság**: A böngészők “same-origin policy”-t alkalmaznak, hogy megelőzzék a jogosulatlan kommunikációt. Mint a Pentagon ellenőrző pontja, letesztelik, hogy engedélyezett-e az adatátvitel.
+>  
+**A mi esetünkben:**
+- A webappod a `localhost:3000` címen fut (fejlesztői szerver)
+- Az API szerver a `localhost:5000` címen fut (backend)
+- Az API szerver CORS fejléceket alkalmaz, melyek engedélyezik a kommunikációt a webalkalmazásodtól
+
+Ez tükrözi a valós fejlesztői környezetet, ahol front- és backend külön szervereken fut.
+
+> 📚 **További tanulás**: Mélyedj el az API-k és adatlekérés témakörében a [Microsoft Learn részletes moduljában API-król](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
+
+## Az adatok életre keltése HTML-ben
+
+Most megjelenítjük a lekért adatokat a felhasználóknak a DOM manipuláció segítségével. Olyan, mintha a fényképeket kidolgoznánk a sötétkamrában – az eddig láthatatlan adatokat valami láthatóvá és használhatóvá alakítjuk.
+A DOM manipuláció az a technika, amely statikus weboldalakat dinamikus alkalmazásokká alakít, amelyek a felhasználói interakciók és a szerver válaszai alapján frissítik tartalmukat.
+
+### A megfelelő eszköz kiválasztása a feladathoz
+
+Amikor a HTML-edet JavaScript-tel szeretnéd frissíteni, több lehetőséged van. Gondolj ezekre úgy, mint egy szerszámosládában lévő különféle szerszámokra – mindegyik tökéletes bizonyos feladatokhoz:
+
+| Módszer | Mire jó | Mikor használd | Biztonsági szint |
+|---------|---------|----------------|------------------|
+| `textContent` | Felhasználói adatok biztonságos megjelenítése | Bármikor, amikor szöveget jelenítesz meg | ✅ Sziklaszilárd |
+| `createElement()` + `append()` | Összetett elrendezések építése | Új szekciók/listák létrehozásához | ✅ Több sebből vérzik |
+| `innerHTML` | HTML tartalom beállítása | ⚠️ Próbáld meg kerülni | ❌ Kockázatos |
+
+#### Szöveg biztonságos megjelenítése: textContent
+
+A [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) tulajdonság a legjobb barátod, amikor felhasználói adatokat szeretnél megjeleníteni. Olyan, mint egy kidobó az oldaladon – semmi káros nem jut át:
+
+```javascript
+// A szöveg biztonságos, megbízható frissítési módja
+const balanceElement = document.getElementById('balance');
+balanceElement.textContent = account.balance;
+```
+
+**A textContent előnyei:**
+- Minden elemet egyszerű szövegként kezel (megakadályozza a szkriptek futtatását)
+- Automatikusan törli a meglévő tartalmat
+- Hatékony egyszerű szövegfrissítéshez
+- Beépített védelem a rosszindulatú tartalom ellen
+
+#### Dinamikus HTML elemek létrehozása
+
+Összetettebb tartalomhoz kombináld a [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) metódust az [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) módszerrel:
+
+```javascript
+// Biztonságos módja új elemek létrehozásának
 const transactionItem = document.createElement('div');
 transactionItem.className = 'transaction-item';
 transactionItem.textContent = `${transaction.date}: ${transaction.description}`;
 container.append(transactionItem);
 ```
 
-**Ennek a megközelítésnek a megértése:**
-- **Programozottan létrehoz** új DOM elemeket
-- **Teljes kontrollt biztosít** az elemek attribútumai és tartalma felett
-- **Lehetővé teszi** összetett, egymásba ágyazott elemek struktúráját
-- **Biztonságot nyújt**, mivel elválasztja a struktúrát a tartalomtól
+**Az eljárás megértése:**
+- **Új** DOM elemeket hoz létre programozottan
+- **Teljes** kontrollt biztosít az elem attribútumai és tartalma felett
+- **Lehetővé** teszi összetett, egymásba ágyazott elemszerkezetek létrehozását
+- **Megőrzi** a biztonságot azáltal, hogy szétválasztja a szerkezetet a tartalomtól
 
-> ⚠️ **Biztonsági megfontolás**: Bár az [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) sok oktatóanyagban szerepel, képes beágyazott szkripteket futtatni. Akárcsak a CERN biztonsági protokolljai, amelyek megakadályozzák az illetéktelen kódvégrehajtást, a `textContent` és a `createElement` használata biztonságosabb alternatívát kínál.
+> ⚠️ **Biztonsági megfontolás**: Bár az [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) sok oktatóanyagban előfordul, képes végrehajtani beágyazott szkripteket. Akárcsak a CERN biztonsági protokolljai, amelyek megakadályozzák az illetéktelen kódvégrehajtást, a `textContent` és `createElement` használata biztonságosabb alternatívákat nyújt.
 > 
 **Az innerHTML kockázatai:**
-- Végrehajtja a felhasználói adatokban található `<script>` címkéket
-- Sérülékeny a kódinjektálási támadásokkal szemben
-- Potenciális biztonsági rést hoz létre
-- Az általunk használt biztonságos alternatívák egyenértékű funkcionalitást biztosítanak
+- Végrehajt minden `<script>` taget a felhasználói adatokban
+- Kódinjekciós támadásokra sebezhető
+- Potenciális biztonsági réseket hoz létre
+- A használt biztonságosabb alternatívák egyenértékű funkciókat biztosítanak
 
-### Hibák felhasználóbaráttá tétele
+### Hibaüzenetek felhasználóbaráttá tétele
 
-Jelenleg a bejelentkezési hibák csak a böngésző konzoljában jelennek meg, ami a felhasználók számára láthatatlan. Akárcsak a pilóta belső diagnosztikája és az utasok információs rendszere közötti különbség, fontos információkat kell közvetítenünk a megfelelő csatornán keresztül.
+Jelenleg a bejelentkezési hibák csak a böngésző konzoljában jelennek meg, ami a felhasználók számára láthatatlan. Olyan ez, mint a pilóta belső diagnosztikája és az utasok tájékoztató rendszere között a különbség, fontos, hogy a megfelelő csatornán közöljük a fontos információkat.
 
-A látható hibaüzenetek megvalósítása azonnali visszajelzést nyújt a felhasználóknak arról, hogy mi ment rosszul, és hogyan lehet tovább lépni.
+A látható hibaüzenetek megjelenítése azonnali visszajelzést ad a felhasználóknak arról, hogy mi siklott félre és hogyan tovább.
 
-#### 1. lépés: Hely a hibaüzeneteknek
+#### 1. lépés: Adj helyet a hibaüzeneteknek
 
-Először adjunk helyet a hibaüzeneteknek a HTML-ben. Ezt a bejelentkezési gomb előtt helyezzük el, hogy a felhasználók természetesen észrevegyék:
+Először is adj a hibaüzeneteknek egy helyet a HTML-edben. Tedd ezt közvetlenül a bejelentkezés gomb elé, hogy a felhasználók természetesen lássák:
 
 ```html
 <!-- This is where error messages will appear -->
@@ -216,14 +475,14 @@ Először adjunk helyet a hibaüzeneteknek a HTML-ben. Ezt a bejelentkezési gom
 ```
 
 **Mi történik itt:**
-- Létrehozunk egy üres tárolót, amely láthatatlan marad, amíg szükség nem lesz rá
-- Olyan helyre helyezzük, ahol a felhasználók természetesen keresik a "Bejelentkezés" gomb megnyomása után
-- A `role="alert"` egy szép kiegészítés a képernyőolvasók számára - ez azt mondja az akadálymentesítési technológiának, hogy "hé, ez fontos!"
-- Az egyedi `id` megkönnyíti a JavaScript számára a célzást
+- Létrehozunk egy üres konténert, ami rejtve marad, amíg szükség nem lesz rá
+- Olyan helyen van, ahol a felhasználók természetesen néznek a "Bejelentkezés" gombra kattintás után
+- A `role="alert"` egy kedves extra a képernyőolvasóknak – jelzi a segédeszközöknek, hogy „hé, ez fontos!”
+- Az egyedi `id` könnyű célpontot ad a JavaScriptnek
 
-#### 2. lépés: Készíts egy praktikus segédfunkciót
+#### 2. lépés: Készíts egy hasznos segédfüggvényt
 
-Hozzunk létre egy kis segédfunkciót, amely bármely elem szövegét frissíteni tudja. Ez egy olyan "egyszer megírod, mindenhol használod" típusú funkció, amely időt takarít meg:
+Készítsünk egy kis segédfunkciót, ami bármely elem szövegét frissíteni tudja. Ez egy "írj egyszer, használj mindenhol" fajta függvény, ami időt takarít meg:
 
 ```javascript
 function updateElement(id, text) {
@@ -232,80 +491,93 @@ function updateElement(id, text) {
 }
 ```
 
-**A funkció előnyei:**
-- Egyszerű interfész, amely csak egy elem ID-t és szövegtartalmat igényel
+**A függvény előnyei:**
+- Egyszerű interfész, csak az elem azonosítóját és a szöveget kell megadni
 - Biztonságosan megtalálja és frissíti a DOM elemeket
-- Újrahasználható minta, amely csökkenti a kódismétlést
-- Egységes frissítési viselkedést biztosít az alkalmazásban
+- Újrahasznosítható mintázat, ami csökkenti a kódduplikációt
+- Konzisztens frissítési viselkedést tart fenn az alkalmazásban
 
-#### 3. lépés: Mutasd meg a hibákat, ahol a felhasználók látják őket
+#### 3. lépés: Mutasd a hibákat ott, ahol a felhasználók látják
 
-Most cseréljük ki a rejtett konzolüzenetet valamire, amit a felhasználók ténylegesen láthatnak. Frissítsd a bejelentkezési funkciót:
+Most cseréljük le a rejtett konzolüzenetet olyanra, amit a felhasználók ténylegesen láthatnak. Frissítsd a bejelentkező függvényed:
 
 ```javascript
-// Instead of just logging to console, show the user what's wrong
+// A konzolra való naplózás helyett mutasd meg a felhasználónak, mi a probléma
 if (data.error) {
   return updateElement('loginError', data.error);
 }
 ```
 
 **Ez a kis változtatás nagy különbséget jelent:**
-- A hibaüzenetek ott jelennek meg, ahol a felhasználók keresik őket
-- Nincs többé rejtélyes, csendes hiba
+- A hibaüzenetek ott jelennek meg, ahol a felhasználók néznek
+- Nincs több titokzatos csendes hiba
 - A felhasználók azonnali, cselekvésre ösztönző visszajelzést kapnak
-- Az alkalmazás professzionálisabbnak és átgondoltabbnak tűnik
+- Az alkalmazásod professzionálisnak és átgondoltnak tűnik
 
-Most, ha egy érvénytelen fiókkal tesztelsz, egy hasznos hibaüzenetet fogsz látni közvetlenül az oldalon!
+Most, ha hibás fiókkal próbálkozol, egy segítőkész hibaüzenetet fogsz látni az oldalon!
 
-![Képernyőkép, amely a bejelentkezés során megjelenő hibaüzenetet mutatja](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.hu.png)
+![Képernyőkép a bejelentkezés közben megjelenő hibaüzenetről](../../../../translated_images/login-error.416fe019b36a6327.hu.png)
 
-#### 4. lépés: Legyél befogadó az akadálymentességgel
+#### 4. lépés: Legyél befogadó az akadálymentesítéssel
 
-Van valami szuper dolog abban a korábban hozzáadott `role="alert"` attribútumban - ez nem csak díszítés! Ez a kis attribútum egy úgynevezett [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)-t hoz létre, amely azonnal bejelenti a változásokat a képernyőolvasóknak:
+Valami menő az előbb hozzáadott `role="alert"` attribútumban – nem csak dísznek van ott! Ez az apró jelző létrehoz egy úgynevezett [élő régiót (Live Region)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), ami azonnal közli a változásokat a képernyőolvasókkal:
 
 ```html
 <div id="loginError" role="alert"></div>
 ```
 
 **Miért fontos ez:**
-- A képernyőolvasó felhasználók azonnal hallják a hibaüzenetet, amint megjelenik
+- A képernyőolvasót használók azonnal meghallják a hibaüzenetet amint megjelenik
 - Mindenki ugyanazt a fontos információt kapja, függetlenül attól, hogyan navigál
-- Egyszerű módja annak, hogy az alkalmazás több ember számára működjön
-- Megmutatja, hogy törődsz az inkluzív élmények megteremtésével
+- Egyszerű módja annak, hogy az app több ember számára is használható legyen
+- Megmutatja, hogy törődsz a befogadó élmények létrehozásával
 
 Az ilyen apró részletek különböztetik meg a jó fejlesztőket a kiválóaktól!
 
-#### 5. lépés: Alkalmazd ugyanazt a mintát a regisztrációra
+### 🎯 Pedagógiai ellenőrzőpont: Hitelesítési minták
 
-A konzisztencia érdekében valósítsd meg azonos hibaüzenet-kezelést a regisztrációs űrlapban:
+**Állj meg és gondolkodj**: Most fejezted be egy teljes hitelesítési folyamat megvalósítását. Ez az alapminták egyike a webfejlesztésben.
 
-1. **Adj hozzá** egy hibaüzenet megjelenítő elemet a regisztrációs HTML-hez:
+**Gyors önértékelés**:
+- El tudod magyarázni, miért használunk async/await-et API hívásokhoz?
+- Mi történne, ha elfelejtenénk az `encodeURIComponent()` függvényt?
+- Hogyan javítja a hiba kezelés a felhasználói élményt?
+
+**Kapcsolódás a valósághoz**: Az itt tanult minták (async adatlekérés, hiba kezelés, felhasználói visszajelzés) minden nagyobb webalkalmazásban előfordulnak, a közösségi médiától az e-kereskedelmi oldalakig. Gyakorlatilag éles környezethez szükséges készségeket fejlesztesz!
+
+**Kihívás kérdés**: Hogyan módosítanád ezt a hitelesítési rendszert több felhasználói szerepkör (ügyfél, admin, pénztáros) kezelésére? Gondolj az adatstruktúrára és a felhasználói felület változtatásaira.
+
+#### 5. lépés: Alkalmazd ugyanazt a mintát a regisztrációra is
+
+Az egységesség érdekében valósítsd meg ugyanazt a hiba kezelési mintát a regisztrációs űrlapban is:
+
+1. **Adj hozzá** egy hiba megjelenítő elemet a regisztráció HTML-jéhez:
 ```html
 <div id="registerError" role="alert"></div>
 ```
 
-2. **Frissítsd** a regisztrációs funkciót, hogy ugyanazt a hibaüzenet-megjelenítési mintát használja:
+2. **Frissítsd** a regisztrációs függvényt, hogy ugyanazt a hiba megjelenítési mintát használja:
 ```javascript
 if (data.error) {
   return updateElement('registerError', data.error);
 }
 ```
 
-**A konzisztens hibaüzenet-kezelés előnyei:**
-- **Egységes** felhasználói élményt biztosít minden űrlapon
-- **Csökkenti** a kognitív terhelést az ismerős minták használatával
-- **Egyszerűsíti** a karbantartást az újrahasználható kóddal
-- **Biztosítja** az akadálymentességi szabványok betartását az alkalmazás egészében
+**Az egységes hiba kezelés előnyei:**
+- **Biztosít** egységes felhasználói élményt az összes űrlapon
+- **Csökkenti** a kognitív terhelést ismerős minták használatával
+- **Egyszerűsíti** a karbantartást újrahasznosítható kóddal
+- **Garantálja** az akadálymentességi szabványok betartását az egész alkalmazásban
 
-## Dinamikus irányítópult létrehozása
+## Dinamikus irányítópult készítése
 
-Most átalakítjuk a statikus irányítópultodat egy dinamikus felületté, amely valós fiókadatokat jelenít meg. Akárcsak a nyomtatott repülési menetrend és a repülőterek élő indulási táblái közötti különbség, statikus információról valós idejű, reagáló megjelenítésre váltunk.
+Most átalakítjuk a statikus irányítópultodat egy olyan dinamikus felületté, amely valós fiókadatokat mutat. Olyan ez, mint a nyomtatott menetrend és az élő indulási táblák a reptereken; a statikus információról az azonnali, válaszképes megjelenítésre lépünk.
 
-A megtanult DOM manipulációs technikák segítségével olyan irányítópultot hozunk létre, amely automatikusan frissül az aktuális fiókadatokkal.
+A korábban tanult DOM manipulációs technikák segítségével egy irányítópultot hozunk létre, ami automatikusan frissül az aktuális fiókinformációkkal.
 
-### Ismerkedés az adatokkal
+### Ismerkedj az adataiddal
 
-Mielőtt elkezdenénk építeni, nézzük meg, milyen adatokat küld vissza a szerver. Amikor valaki sikeresen bejelentkezik, itt van az információk kincsesbányája, amivel dolgozhatsz:
+Mielőtt elkezdenénk építeni, kukkantsunk bele, milyen adatokat küld vissza a szerver. Amikor valaki sikeresen bejelentkezik, ezt a kincsesládát kapod munkára:
 
 ```json
 {
@@ -321,30 +593,45 @@ Mielőtt elkezdenénk építeni, nézzük meg, milyen adatokat küld vissza a sz
 }
 ```
 
-**Ez az adatstruktúra biztosítja:**
-- **`user`**: Tökéletes a személyre szabott élményhez ("Üdv újra, Sarah!")
-- **`currency`**: Biztosítja, hogy a pénzösszegeket helyesen jelenítsük meg
-- **`description`**: Egy barátságos név a fiókhoz
+**Ez az adatstruktúra tartalmazza:**
+- **`user`**: Személyre szabott élményhez ("Üdv újra, Sarah!")
+- **`currency`**: Pontosan mutatja a pénznemeket
+- **`description`**: Barátságos név a fiókhoz
 - **`balance`**: A legfontosabb aktuális egyenleg
-- **`transactions`**: A teljes tranzakciós előzmény minden részletével
+- **`transactions`**: Teljes tranzakciós történet minden részlettel
 
-Minden, amire szükséged van egy professzionális megjelenésű banki irányítópult létrehozásához!
+Minden, amire szükséged van egy professzionális kinézetű banki irányítópult felépítéséhez!
 
-> 💡 **Profi tipp**: Szeretnéd az irányítópultodat azonnal működés közben látni? Használd a `test` felhasználónevet bejelentkezéskor - előre feltöltött mintaadatokkal érkezik, így mindent láthatsz működés közben anélkül, hogy először tranzakciókat kellene létrehoznod.
+```mermaid
+flowchart TD
+    A[Felhasználó bejelentkezése] --> B[Fiókadatok lekérése]
+    B --> C{Az adatok érvényesek?}
+    C -->|Igen| D[Globális változóba mentés]
+    C -->|Nem| E[Hibaüzenet megjelenítése]
+    D --> F[Ugrás a műszerfalra]
+    F --> G[Felhasználói felület elemeinek frissítése]
+    G --> H[Egyszerűség megjelenítése]
+    G --> I[Leírás megjelenítése]
+    G --> J[Ügyletek megjelenítése]
+    J --> K[Tábla sorainak létrehozása]
+    K --> L[Pénznem formázása]
+    L --> M[A felhasználó élő adatokat lát]
+```
+> 💡 **Pro tipp**: Szeretnéd az irányítópultodat azonnal működés közben látni? Használd a `test` felhasználónevet a bejelentkezéskor – előre betöltött mintaadatokkal érkezik, így anélkül is láthatod a működést, hogy előzetesen tranzakciókat hoznál létre.
 > 
 **Miért hasznos a tesztfiók:**
-- Már előre feltöltött valósághű mintaadatokkal érkezik
-- Tökéletes a tranzakciók megjelenítésének megtekintéséhez
-- Nagyszerű az irányítópult funkcióinak teszteléséhez
-- Megkímél attól, hogy manuálisan kelljen tesztadatokat létrehozni
+- Már valósághű mintaadatokkal érkezik
+- Tökéletes arra, hogy lásd, hogyan jelennek meg a tranzakciók
+- Jól használható az irányítópult funkcióinak teszteléséhez
+- Megspórolja, hogy kézzel kelljen hamis adatokat létrehoznod
 
 ### Az irányítópult megjelenítő elemeinek létrehozása
 
-Lépésről lépésre építsük fel az irányítópult felületét, kezdve a fiók összefoglaló információival, majd haladjunk tovább az összetettebb funkciók, például a tranzakciós listák felé.
+Építsük fel lépésről lépésre az irányítópult felületét, először a fiók összefoglaló információival, majd haladjunk tovább az összetettebb funkciók, mint a tranzakciós listák felé.
 
-#### 1. lépés: Frissítsd a HTML struktúrát
+#### 1. lépés: Frissítsd a HTML szerkezetet
 
-Először cseréld le a statikus "Egyenleg" szekciót dinamikus helyőrző elemekre, amelyeket a JavaScript tölthet ki:
+Először cseréld le a statikus "Egyenleg" részt dinamikus helyőrző elemekre, amelyeket a JavaScripted majd kitölt:
 
 ```html
 <section>
@@ -352,23 +639,23 @@ Először cseréld le a statikus "Egyenleg" szekciót dinamikus helyőrző eleme
 </section>
 ```
 
-Ezután adj hozzá egy szekciót a fiók leírásához. Mivel ez a tartalom címeként működik az irányítópulton, használj szemantikus HTML-t:
+Ezután adj hozzá egy szekciót a fiók leírásának megjelenítésére. Mivel ez szolgál az irányítópult tartalmának címeként, használj szemantikus HTML-t:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-**A HTML struktúra megértése:**
-- **Különálló** `<span>` elemeket használ az egyenleg és a pénznem egyedi kezeléséhez
-- **Egyedi ID-ket** alkalmaz minden elemhez a JavaScript célzásához
-- **Szemantikus HTML-t** követve `<h2>`-t használ a fiók leírásához
-- **Logikus hierarchiát** hoz létre a képernyőolvasók és SEO számára
+**A HTML szerkezet megértése:**
+- **Külön `<span>` elemeket használ** az egyenleghez és a pénznemhez, egyéni vezérlésért
+- **Egyedi azonosítókat alkalmaz** minden elemnél, hogy a JavaScript hivatkozhasson rájuk
+- **Szemantikus HTML-t követ** a fiókleíráshoz `<h2>` használatával
+- **Logikus hierarchiát hoz létre** a képernyőolvasók és a SEO számára
 
-> ✅ **Akadálymentességi betekintés**: A fiók leírása a tartalom címeként működik az irányítópulton, ezért szemantikusan fejlécként van megjelölve. Tudj meg többet arról, hogy a [fejlécstruktúra](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) hogyan befolyásolja az akadálymentességet. Felismered az oldalad más elemeit, amelyek hasznosak lehetnek fejléc címkék használatával?
+> ✅ **Akadálymentességi megjegyzés**: A fiókleírás az irányítópult tartalmának címe, ezért szerepel szemantikusan címsorként. Tudj meg többet arról, hogyan befolyásolja a [címsor struktúra](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) az akadálymentességet. Tudsz az oldaladon más elemeket is azonosítani, amelyeknek hasznos lenne a címsor használata?
 
-#### 2. lépés: Hozd létre az irányítópult frissítő funkcióját
+#### 2. lépés: Készítsd el az irányítópult frissítő függvényét
 
-Most hozz létre egy funkciót, amely valódi fiókadatokkal tölti fel az irányítópultot:
+Most hozz létre egy függvényt, amely valódi fiókadatokkal tölti fel az irányítópultot:
 
 ```javascript
 function updateDashboard() {
@@ -382,20 +669,20 @@ function updateDashboard() {
 }
 ```
 
-**Lépésről lépésre, mit csinál ez a funkció:**
-- **Ellenőrzi**, hogy léteznek-e fiókadatok, mielőtt folytatná
-- **Átirányítja** a hitelesítetlen felhasználókat a bejelentkezési oldalra
-- **Frissíti** a fiók leírását az újrahasználható `updateElement` funkcióval
-- **Formázza** az egyenleget, hogy mindig két tizedesjegyet mutasson
-- **Megjeleníti** a megfelelő pénznem szimbólumot
+**Lépésről lépésre, mit csinál ez a függvény:**
+- **Ellenőrzi**, hogy vannak-e fiókadatok mielőtt folytatná
+- **Átirányítja** a nem hitelesített felhasználókat vissza a bejelentkezési oldalra
+- **Frissíti** a fiókleírást az újrahasznosítható `updateElement` függvénnyel
+- **Formázza** az egyenleget úgy, hogy mindig két tizedesjegyet mutasson
+- **Megjeleníti** a megfelelő pénznemsimbólumot
 
-> 💰 **Pénzformázás**: Az [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) metódus életmentő! Biztosítja, hogy az egyenleg mindig valódi pénznek tűnjön - "75.00" a "75" helyett. A felhasználók értékelni fogják a megszokott pénznem formázást.
+> 💰 **Pénzformázás**: Az a [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) metódus igazi segítség! Ez biztosítja, hogy az egyenleg mindig úgy nézzen ki, mint valódi pénz – „75.00” és ne csak „75”. A felhasználóid értékelni fogják, hogy ismerős formátumot látnak.
 
-#### 3. lépés: Biztosítsd, hogy az irányítópult frissüljön
+#### 3. lépés: Biztosítsd, hogy az irányítópultod frissüljön
 
-Annak érdekében, hogy az irányítópult minden alkalommal frissüljön, amikor valaki meglátogatja, be kell építenünk a navigációs rendszeredbe. Ha befejezted az [1. lecke feladatát](../1-template-route/assignment.md), ez ismerős lesz. Ha nem, ne aggódj - itt van, amire szükséged van:
+Annak érdekében, hogy az irányítópultod minden alkalommal frissüljön, amikor valaki meglátogatja, be kell horgonyoznunk a navigációs rendszeredbe. Ha elvégezted a [1. leckében kapott feladatot](../1-template-route/assignment.md), ez ismerős lesz. Ha nem, ne aggódj – itt van, amire szükséged van:
 
-Add hozzá ezt az `updateRoute()` funkció végéhez:
+Add ezt a `updateRoute()` függvény végére:
 
 ```javascript
 if (typeof route.init === 'function') {
@@ -403,7 +690,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-Ezután frissítsd az útvonalakat, hogy tartalmazzák az irányítópult inicializálását:
+Majd frissítsd az útvonalakat, hogy tartalmazzák az irányítópult inicializációját:
 
 ```javascript
 const routes = {
@@ -412,41 +699,57 @@ const routes = {
 };
 ```
 
-**Mit csinál ez az okos beállítás:**
-- Ellenőrzi, hogy egy útvonalnak van-e speciális inicializáló kódja
-- Automatikusan futtatja azt a kódot, amikor az útvonal betöltődik
+**Mit csinál ez az ügyes megoldás:**
+- Ellenőrzi, van-e speciális inicializációs kód az adott útvonalhoz
+- Automatikusan lefuttatja ezt a kódot az útvonal betöltésekor
 - Biztosítja, hogy az irányítópult mindig friss, aktuális adatokat mutasson
-- Tisztán és szervezetten tartja az útvonalkezelési logikát
+- Tisztán és rendezetten tartja a routing logikát
 
 #### Az irányítópult tesztelése
 
-A változtatások bevezetése után teszteld az irányítópultot:
+Miután bevezetted ezeket a változtatásokat, teszteld az irányítópultot:
 
 1. **Jelentkezz be** egy tesztfiókkal
-2. **Ellenőrizd**, hogy átirányítanak az irányítópultra
-3. **Győződj meg róla**, hogy a fiók leírása, egyenlege és pénzneme helyesen jelenik meg
-4. **Próbálj meg kijelentkezni és újra bejelentkezni**, hogy megbizonyosodj az adatok megfelelő frissítéséről
+2. **Ellenőrizd**, hogy átirányít a műszerfalra
+3. **Győződj meg róla**, hogy a fiókleírás, egyenleg és pénznem jól jelenik meg
+4. **Próbálj kijelentkezni, majd újra bejelentkezni**, hogy meggyőződj, az adatok frissülnek rendesen
 
-Az irányítópultnak most dinamikus fiókadatokat kell megjelenítenie, amelyek a bejelentkezett felhasználó adatai alapján frissülnek!
+Most az irányítópult dinamikus fiókinformációkat jelenít meg, amelyek a bejelentkezett felhasználó adatai alapján frissülnek!
 
-## Okos tranzakciós listák létrehozása sablonokkal
+## Okos tranzakciós listák készítése sablonokkal
 
-Ahelyett, hogy manuálisan hoznánk létre HTML-t minden tranzakcióhoz, sablonokat fogunk használni, hogy automatikusan biztosítsuk az egységes formázást. Akárcsak az űrhajógyártásban használt szabványosított alkatrészek, a sablonok biztosítják, hogy minden tranzakciós sor ugyanazt a struktúrát és megjelenést kövesse.
+Ahelyett, hogy kézzel hoznánk létre HTML-t minden tranzakcióhoz, sablonokat használunk, amely automatikusan generál egységes formázást. Olyan ez, mint az űrhajógyártás szabványos alkatrészei: a sablonok biztosítják, hogy minden tranzakciós sor azonos szerkezetet és megjelenést kapjon.
 
-Ez a technika hatékonyan skálázódik néhány tranzakciótól több ezerig, miközben fenntartja a következetes teljesítményt és megjelenést.
+Ez a technika hatékonyan skálázódik néhány tranzakciótól akár több ezerig, miközben egyenletes teljesítményt és megjelenítést biztosít.
 
 ```mermaid
-flowchart LR
-    A[Transaction Data] --> B[HTML Template]
-    B --> C[Clone Template]
-    C --> D[Populate with Data]
-    D --> E[Add to DOM]
-    E --> F[Repeat for Each Transaction]
+graph LR
+    A[HTML sablon] --> B[JavaScript klón]
+    B --> C[Adatok feltöltése]
+    C --> D[Hozzáadás a fragmenthez]
+    D --> E[Tömeges beszúrás a DOM-ba]
+    
+    subgraph "Teljesítmény előnyei"
+        F[Egyszeri DOM frissítés]
+        G[Egységes formázás]
+        H[Újrafelhasználható minta]
+    end
+    
+    E --> F
+    E --> G
+    E --> H
 ```
-
+```mermaid
+flowchart LR
+    A[Tranzakciós Adatok] --> B[HTML Sablon]
+    B --> C[Sablon Klónozása]
+    C --> D[Kitöltés Adatokkal]
+    D --> E[Hozzáadás a DOM-hoz]
+    E --> F[Ismétlés Minden Tranzakcióra]
+```
 ### 1. lépés: Hozd létre a tranzakciós sablont
 
-Először adj hozzá egy újrahasználható sablont a tranzakciós sorokhoz a HTML `<body>` részében:
+Először adj hozzá egy újrahasznosítható sablont a tranzakciós sorokhoz a HTML `<body>` részében:
 
 ```html
 <template id="transaction">
@@ -458,28 +761,28 @@ Először adj hozzá egy újrahasználható sablont a tranzakciós sorokhoz a HT
 </template>
 ```
 
-**A HTML sablonok megértése:**
-- **Meghatározza** egyetlen táblázatsor struktúráját
-- **Láthatatlan** marad, amíg JavaScript segítségével klónozzák és kitöltik
-- **Három cellát** tartalmaz dátum, leírás és összeg számára
-- **Újrahasználható mintát** biztosít az egységes formázáshoz
+**Az HTML sablon megértése:**
+- **Meghatározza** egyetlen táblázatsor szerkezetét
+- **Láthatatlan** marad, amíg JavaScript klónozza és kitölti
+- **Három cellát tartalmaz** a dátum, leírás és összeg számára
+- **Újrahasznosítható mintázatot biztosít** az egységes formázáshoz
 
-### 2. lépés: Készítsd elő a táblázatot dinamikus tartalomhoz
+### 2. lépés: Készülj fel a táblázat dinamikus tartalmára
 
-Ezután adj egy `id`-t a táblázat törzséhez, hogy a JavaScript könnyen célozhassa:
+Ezután adj az asztal törzsének (`tbody`) egy `id` attribútumot, hogy a JavaScript könnyen megtalálja:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-**Mit ér el ez:**
-- **Egyértelmű célt** hoz létre a tranzakciós sorok beszúrásához
-- **Elválasztja** a táblázat struktúráját a dinamikus tartalomtól
-- **Lehetővé teszi** a tranzakciós adatok egyszerű törlését és újrapopulálását
+**Mit érünk el ezzel:**
+- **Egy tiszta célt teremtünk** a tranzakciós sorok beszúrásához
+- **Elválasztjuk** a táblázat szerkezetét a dinamikus tartalomtól
+- **Lehetővé tesszük az egyszerű törlést és újratöltést** a tranzakciós adatoknak
 
-### 3. lépés: Építsd meg a tranzakciós sor gyártó funkciót
+### 3. lépés: Építsd meg a tranzakciós sor gyártó függvényt
 
-Most hozz létre egy funkciót, amely a tranzakciós adatokat HTML elemekké alakítja:
+Most készíts egy függvényt, amely a tranzakciós adatokat HTML elemmé alakítja:
 
 ```javascript
 function createTransactionRow(transaction) {
@@ -493,28 +796,163 @@ function createTransactionRow(transaction) {
 }
 ```
 
-**A gyártó funkció lebontása:**
-- **Lekéri** a sablonelemet az ID alapján
--
-**Prompt:** Hozzon létre keresési funkciót a banki alkalmazáshoz, amely tartalmazza: 1) Egy keresési űrlapot dátumtartomány (kezdő/vég), minimum/maximum összeg és tranzakció leírás kulcsszavak mezőkkel, 2) Egy `filterTransactions()` függvényt, amely az account.transactions tömböt szűri a keresési kritériumok alapján, 3) Frissítse az `updateDashboard()` függvényt, hogy a szűrt eredményeket jelenítse meg, és 4) Adjon hozzá egy "Szűrők törlése" gombot a nézet visszaállításához. Használjon modern JavaScript tömbmetódusokat, mint például a `filter()`, és kezelje az üres keresési kritériumokkal kapcsolatos szélsőséges eseteket.
+**A gyártó függvény részletezése:**
+- **Megkeresi a sablon elemet** azonosító alapján
+- **Klónozza a sablon tartalmát**, így biztonságosan dolgozik vele
+- **Kiválasztja** a táblázatsort a klónozott tartalmon belül
+- **Kitölti** az egyes cellákat a tranzakciós adatokkal
+- **Formázza** az összeget megfelelő tizedesjegyekkel
+- **Visszaadja** a kész sort, amely készen áll a beszúrásra
 
-Tudjon meg többet az [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) funkcióról itt.
+### 4. lépés: Több tranzakciós sor hatékony generálása
+
+Add hozzá ezt a kódot az `updateDashboard()` függvényedhez, hogy megjelenítse az összes tranzakciót:
+
+```javascript
+const transactionsRows = document.createDocumentFragment();
+for (const transaction of account.transactions) {
+  const transactionRow = createTransactionRow(transaction);
+  transactionsRows.appendChild(transactionRow);
+}
+updateElement('transactions', transactionsRows);
+```
+
+**Az eredmény hatékony megközelítése:**
+- **Létrehoz egy dokumentum töredéket** a DOM műveletek csoportosításához
+- **Végigiterál** az összes tranzakción a fiókadatokban
+- **Generál** egy-egy sor minden tranzakcióra a gyártó függvény segítségével
+- **Összegyűjti** az összes sort a töredékben, mielőtt a DOM-ba illesztené
+- **Egyszeri DOM frissítést hajt végre**, nem pedig több külön beszúrást
+> ⚡ **Teljesítményoptimalizálás**: A [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) olyan, mint a Boeing összeszerelő folyamata – az alkatrészeket a fő vonaltól távol készítik elő, majd teljes egységként szerelik össze. Ez a csoportosítás csökkenti a DOM újrarajzolásokat azáltal, hogy egyetlen beszúrást hajt végre több különálló művelet helyett.
+
+### 5. lépés: Frissítő függvény fejlesztése vegyes tartalomhoz
+
+Az `updateElement()` függvényed jelenleg csak szöveges tartalmat kezel. Frissítsd úgy, hogy mind szöveggel, mind DOM csomópontokkal működjön:
+
+```javascript
+function updateElement(id, textOrNode) {
+  const element = document.getElementById(id);
+  element.textContent = ''; // Minden gyerekelemet eltávolít
+  element.append(textOrNode);
+}
+```
+
+**A frissítés kulcsfontosságú fejlesztései:**
+- **Kitörli** a meglévő tartalmat, mielőtt új tartalmat ad hozzá
+- **Elfogad** paraméterként szöveges stringeket vagy DOM csomópontokat
+- **A [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) metódust használja a rugalmasság érdekében
+- **Megőrzi** a korábbi, szövegalapú használattal való visszafelé kompatibilitást
+
+### Próbáld ki a dashboardodat
+
+Elérkezett az igazság pillanata! Nézzük meg, hogyan működik a dinamikus dashboardod:
+
+1. Jelentkezz be a `test` fiókkal (ez előre feltöltött mintaadatokat tartalmaz)
+2. Navigálj a dashboardodra
+3. Ellenőrizd, hogy a tranzakciós sorok megjelennek-e megfelelő formázással
+4. Győződj meg róla, hogy a dátumok, leírások és összegek mind rendben vannak-e
+
+Ha minden működik, egy teljesen működő tranzakciós listát kell látnod a dashboardodon! 🎉
+
+**Amit elértél:**
+- Egy olyan dashboardot építettél, amely bármennyi adatra skálázódik
+- Újrahasználható sablonokat hoztál létre egységes formázáshoz
+- Hatékony DOM manipulációs technikákat alkalmaztál
+- Olyan funkcionalitást fejlesztettél, ami összevethető egy éles banki alkalmazással
+
+Sikeresen egy statikus weboldalt alakítottál át dinamikus webalkalmazássá.
+
+### 🎯 Pedagógiai állomás: Dinamikus tartalom generálás
+
+**Architektúra megértése**: Egy kifinomult adat–UI csővezeték rendszert valósítottál meg, amely tükrözi a React, Vue és Angular keretrendszerekben használt mintákat.
+
+**Főbb elsajátított fogalmak**:
+- **Sablonalapú renderelés**: Újrahasználható UI komponensek létrehozása
+- **Dokumentumfragementumok**: A DOM teljesítményének optimalizálása
+- **Biztonságos DOM manipuláció**: Biztonsági rések megelőzése
+- **Adat transzformáció**: Szerveroldali adatok átalakítása felhasználói felületté
+
+**Ipari összefüggés**: Ezek a technikák képezik a modern frontend keretrendszerek alapját. A React virtuális DOM-ja, a Vue sablonrendszere és az Angular komponens architektúrája is ezekre az alapokra épít.
+
+**Elmélkedő kérdés**: Hogyan bővítenéd ki ezt a rendszert valós idejű frissítések kezelésére (például új tranzakciók automatikus megjelenése)? Gondolkodj WebSocketeken vagy Server-Sent Eventeken.
+
+---
+
+## 📈 Az adataid kezelésének mesterszintű idővonala
+
+```mermaid
+timeline
+    title Adatvezérelt Fejlesztési Utazás
+    
+    section Alapok Kiépítése
+        API Beállítás & Tesztelés
+            : Értsük meg a kliens-szerver kommunikációt
+            : Sajátítsuk el a HTTP kérés/válasz ciklust
+            : Tanuljuk meg a hibakeresési technikákat
+    
+    section Hitelesítés Mesterfokon
+        Aszinkron Függvény Minták
+            : Írjunk tiszta async/await kódot
+            : Kezeljük hatékonyan a promise-okat
+            : Valósítsunk meg hibahatárokat
+        Felhasználói Munkamenet Kezelés
+            : Hozzunk létre globális állapot mintákat
+            : Építsünk navigációs őröket
+            : Tervezzünk felhasználói visszacsatolási rendszereket
+    
+    section Dinamikus UI Fejlesztés
+        Biztonságos DOM Manipuláció
+            : Előzzük meg az XSS sebezhetőségeket
+            : Használjuk a textContent-et az innerHTML helyett
+            : Készítsünk akadálymentes barát felületeket
+        Sablon Rendszerek
+            : Építsünk újrahasználható UI komponenseket
+            : Optimalizáljuk a teljesítményt fragmentekkel
+            : Skálázzuk nagy adathalmazok kezelésére
+    
+    section Professzionális Minták
+        Gyártásra Kész Kód
+            : Valósítsunk meg átfogó hiba kezelést
+            : Kövessük a biztonsági legjobb gyakorlatokat
+            : Hozzunk létre fenntartható architektúrákat
+        Modern Web Szabványok
+            : Sajátítsuk el a Fetch API mintákat
+            : Értsük meg a CORS konfigurációkat
+            : Építsünk reszponzív, akadálymentes UI-kat
+```
+**🎓 Diplomaszerzési mérföldkő**: Sikeresen elkészítettél egy teljes adatvezérelt webalkalmazást modern JavaScript minták segítségével. Ezek a képességek közvetlenül alkalmazhatók olyan keretrendszereknél, mint a React, Vue vagy Angular.
+
+**🔄 A következő szint képességei**:
+- Készen állsz, hogy további frontend keretrendszereket fedezz fel, amelyek ezen koncepciókra épülnek
+- Felkészült vagy valós idejű funkciók megvalósítására WebSocketekkel
+- Képes vagy offline képességekkel rendelkező Progresszív Webalkalmazások (PWA) fejlesztésére
+- Megvan az alapod a fejlett állapotkezelő minták elsajátításához
+
+## GitHub Copilot Ügynök kihívás 🚀
+
+Használd az Ügynök módot a következő kihívás teljesítéséhez:
+
+**Leírás:** Fejleszd a banki alkalmazást tranzakciókereső és szűrő funkcióval, amely lehetővé teszi a felhasználók számára, hogy dátum intervallum, összeg vagy leírás alapján keressenek konkrét tranzakciókat.
+
+**Kérés:** Készíts kereső funkciót a banki alkalmazáshoz, amely tartalmazza: 1) egy kereső űrlapot, amely ad mezőket a dátum intervallumhoz (tól-ig), a minimum/maximum összeghez és a tranzakció leírás kulcsszavaihoz, 2) egy `filterTransactions()` függvényt, amely az `account.transactions` tömböt szűri a keresési feltételek alapján, 3) frissítsd az `updateDashboard()` függvényt a szűrt eredmények megjelenítésére, és 4) adj egy "Szűrők törlése" gombot a nézet visszaállításához. Használj modern JavaScript tömbmetódusokat, mint a `filter()`, és kezeld az üres keresési feltételek speciális esetét.
+
+Tudj meg többet az [ügynök módról](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) itt.
 
 ## 🚀 Kihívás
 
-Készen áll arra, hogy a banki alkalmazását a következő szintre emelje? Tegyük olyanná, amit valóban szívesen használna. Íme néhány ötlet, hogy inspirálódjon:
+Készen állsz, hogy a banki alkalmazásodat a következő szintre emeld? Tegyük olyan élményessé és megjelenésűvé, amit valóban használni szeretnél. Íme néhány ötlet, hogy beindítsuk a kreativitásodat:
 
-**Tegye gyönyörűvé**: Adjon hozzá CSS-stílusokat, hogy az egyszerű műszerfalat vizuálisan vonzóvá alakítsa. Gondoljon tiszta vonalakra, jó térközökre, és talán néhány finom animációra is.
+**Tedd szépé**: Adj CSS stílusokat, hogy a működő dashboardod vizuálisan is vonzó legyen. Gondolj letisztult vonalakra, jó térközökre, és akár finom animációkra is.
 
-**Tegye reszponzívvá**: Próbálja ki a [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) használatát, hogy [reszponzív dizájnt](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) hozzon létre, amely telefonokon, táblagépeken és asztali gépeken is remekül működik. A felhasználói hálásak lesznek érte!
+**Legyen reszponzív**: Próbáld ki a [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) használatát, hogy egy [reszponzív dizájnt](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) hozz létre, ami jól működik telefonon, tableten és asztali gépen is. A felhasználóid hálásak lesznek!
 
-**Adjon hozzá némi stílust**: Fontolja meg a tranzakciók színkódolását (zöld a bevételekhez, piros a kiadásokhoz), ikonok hozzáadását, vagy olyan hover-effekteket, amelyek interaktívvá teszik a felületet.
+**Adj egy kis csavart**: Gondolkodj színezett tranzakciókon (zöld a bevétel, piros a kiadás), ikonokon, vagy hover effekteken, melyek interaktívabbá teszik a felületet.
 
-Így nézhet ki egy kifinomult műszerfal:
+Így nézhet ki egy kidolgozott dashboard:
 
-![Példa a műszerfal stílusos eredményére](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.hu.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.hu.png)
 
-Nem kell pontosan ezt követnie - használja inspirációként, és alakítsa saját ízlése szerint!
+Nem kell pontosan ezt másolnod – használd inspirációnak és alakítsd saját ízlésed szerint!
 
 ## Előadás utáni kvíz
 
@@ -522,9 +960,11 @@ Nem kell pontosan ezt követnie - használja inspirációként, és alakítsa sa
 
 ## Feladat
 
-[Refaktorálja és kommentálja a kódját](assignment.md)
+[Kódod refaktorálása és kommentelése](assignment.md)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:  
+Ezt a dokumentumot az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hivatalos forrásnak. Fontos információk esetén professzionális, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

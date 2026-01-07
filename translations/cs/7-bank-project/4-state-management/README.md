@@ -1,46 +1,98 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
-  "translation_date": "2025-10-24T21:01:15+00:00",
+  "original_hash": "b807b09df716dc48a2b750835bf8e933",
+  "translation_date": "2026-01-07T03:59:14+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "cs"
 }
 -->
-# Vytvoření bankovní aplikace, část 4: Koncepty správy stavu
+# Tvorba bankovní aplikace část 4: Koncepty správy stavu
 
-## Kvíz před lekcí
+## ⚡ Co můžete udělat v následujících 5 minutách
 
-[Kvíz před lekcí](https://ff-quizzes.netlify.app/web/quiz/47)
+**Rychlá cesta pro zaneprázdněné vývojáře**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minut] --> B[Diagnostikovat problémy stavu]
+    B --> C[Vytvořit centrální objekt stavu]
+    C --> D[Přidat funkci updateState]
+    D --> E[Vidět okamžitá zlepšení]
+```
+- **Minuta 1**: Otestujte aktuální problém se stavem – přihlaste se, obnovte stránku, sledujte odhlášení
+- **Minuta 2**: Nahraďte `let account = null` za `let state = { account: null }`
+- **Minuta 3**: Vytvořte jednoduchou funkci `updateState()` pro řízené aktualizace
+- **Minuta 4**: Aktualizujte jednu funkci, aby používala nový vzor
+- **Minuta 5**: Otestujte lepší předvídatelnost a možnosti ladění
+
+**Rychlý diagnostický test**:
+```javascript
+// Před: Rozptýlený stav
+let account = null; // Ztraceno při obnově!
+
+// Po: Centralizovaný stav
+let state = Object.freeze({ account: null }); // Řízené a sledovatelné!
+```
+
+**Proč je to důležité**: Za 5 minut zažijete proměnu chaotické správy stavu na předvídatelné a snadno laditelné vzory. Toto je základ, díky kterému jsou složité aplikace udržovatelné.
+
+## 🗺️ Vaše cesta za mistrovstvím ve správě stavu
+
+```mermaid
+journey
+    title Ze rozptýleného stavu k profesionální architektuře
+    section Diagnostika problémů
+      Identifikace problémů se ztrátou stavu: 3: You
+      Porozumění rozptýleným aktualizacím: 4: You
+      Rozpoznání potřeb architektury: 6: You
+    section Centralizace kontroly
+      Vytvoření sjednoceného objektu stavu: 5: You
+      Implementace řízených aktualizací: 7: You
+      Přidání neproměnných vzorů: 8: You
+    section Přidání perzistence
+      Implementace localStorage: 6: You
+      Zpracování serializace: 7: You
+      Vytvoření kontinuity relace: 9: You
+    section Vyvážení čerstvosti
+      Řešení zastarávání dat: 5: You
+      Vytvoření systémů obnovy: 8: You
+      Dosažení optimální rovnováhy: 9: You
+```
+**Cíl vaší cesty**: Na konci této lekce budete mít vytvořený profesionální systém správy stavu, který řeší perzistenci, čerstvost dat a předvídatelné aktualizace – stejné vzory, které se používají v produkčních aplikacích.
+
+## Přednáškový kvíz
+
+[Přednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ## Úvod
 
-Správa stavu je jako navigační systém na vesmírné lodi Voyager – když vše funguje hladce, sotva si ho všimnete. Ale když se něco pokazí, stává se rozdílem mezi dosažením mezihvězdného prostoru a ztracením se v kosmickém prázdnu. Ve webovém vývoji představuje stav vše, co si vaše aplikace musí pamatovat: stav přihlášení uživatele, data formulářů, historii navigace a dočasné stavy rozhraní.
+Správa stavu je jako navigační systém na kosmické sondě Voyager – když vše funguje hladce, téměř si toho nevšimnete. Ale když něco nefunguje, může to být rozdíl mezi dosažením mezihvězdného prostoru a zmizením v kosmické prázdnotě. Ve webovém vývoji stav představuje vše, co vaše aplikace potřebuje pamatovat: stav přihlášení uživatele, data z formulářů, historii navigace a dočasné stavy rozhraní.
 
-Jak se vaše bankovní aplikace vyvinula z jednoduchého přihlašovacího formuláře do sofistikovanější aplikace, pravděpodobně jste narazili na některé běžné problémy. Obnovíte stránku a uživatelé jsou neočekávaně odhlášeni. Zavřete prohlížeč a veškerý pokrok zmizí. Při ladění problému procházíte více funkcí, které všechny různými způsoby upravují stejná data.
+Jak se vaše bankovní aplikace vyvinula z jednoduchého přihlašovacího formuláře do sofistikovanější aplikace, pravděpodobně jste narazili na některé běžné problémy. Obnovíte stránku a uživatelé jsou neočekávaně odhlášeni. Zavřete prohlížeč a veškerý postup zmizí. Ladíte problém a procházíte mnoha funkcemi, které všechny mění stejná data různými způsoby.
 
-To nejsou známky špatného kódování – jsou to přirozené problémy, které se objevují, když aplikace dosáhnou určité úrovně složitosti. Každý vývojář čelí těmto výzvám, když se jeho aplikace posouvají z fáze "důkazu konceptu" do fáze "připraveno k produkci".
+To nejsou známky špatného kódování – jsou to přirozené porodní bolesti, ke kterým dochází, když aplikace dosáhnou určité úrovně složitosti. Každý vývojář čelí těmto výzvám, když jeho aplikace přecházejí z fáze „proof of concept“ do „produkčně připravené“.
 
-V této lekci implementujeme centralizovaný systém správy stavu, který promění vaši bankovní aplikaci v spolehlivou, profesionální aplikaci. Naučíte se spravovat tok dat předvídatelně, správně uchovávat uživatelské relace a vytvořit hladký uživatelský zážitek, který moderní webové aplikace vyžadují.
+V této lekci implementujeme centralizovaný systém správy stavu, který promění vaši bankovní aplikaci v spolehlivou profesionální aplikaci. Naučíte se řídit toky dat předvídatelně, správně uchovávat uživatelskou sezení a vytvářet plynulý uživatelský zážitek, který moderní webové aplikace vyžadují.
 
-## Předpoklady
+## Požadavky
 
-Než se ponoříme do konceptů správy stavu, je třeba mít správně nastavené vývojové prostředí a základ vaší bankovní aplikace. Tato lekce přímo navazuje na koncepty a kód z předchozích částí této série.
+Než se pustíte do konceptů správy stavu, musíte mít správně nastavené vývojové prostředí a mít základ bankovní aplikace. Tato lekce přímo navazuje na koncepty a kód z předchozích částí této série.
 
-Ujistěte se, že máte připravené následující komponenty:
+Ujistěte se, že máte připravené následující komponenty, než budete pokračovat:
 
 **Požadované nastavení:**
-- Dokončete [lekci o získávání dat](../3-data/README.md) – vaše aplikace by měla úspěšně načítat a zobrazovat data účtu
-- Nainstalujte [Node.js](https://nodejs.org) na váš systém pro spuštění backendového API
-- Spusťte [server API](../api/README.md) lokálně pro zpracování operací s daty účtu
+- Dokončete [lekci o načítání dat](../3-data/README.md) – vaše aplikace by měla úspěšně načítat a zobrazovat data účtu
+- Nainstalujte [Node.js](https://nodejs.org) do systému pro spuštění backendového API
+- Spusťte [serverové API](../api/README.md) lokálně pro zpracování operací s daty účtu
 
 **Testování vašeho prostředí:**
 
-Ověřte, že váš API server běží správně, spuštěním tohoto příkazu v terminálu:
+Ověřte, že váš server API běží správně spuštěním tohoto příkazu v terminálu:
 
 ```sh
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# -> by mělo vrátit "Bank API v1.0.0" jako výsledek
 ```
 
 **Co tento příkaz dělá:**
@@ -48,65 +100,137 @@ curl http://localhost:5000/api
 - **Testuje** připojení a ověřuje, zda server odpovídá
 - **Vrací** informace o verzi API, pokud vše funguje správně
 
+## 🧠 Přehled architektury správy stavu
+
+```mermaid
+mindmap
+  root((Správa stavu))
+    Current Problems
+      Session Loss
+        Problémy s obnovením stránky
+        Dopad zavření prohlížeče
+        Problémy s resetováním proměnných
+      Scattered Updates
+        Více míst úprav
+        Výzvy při ladění
+        Nepředvídatelné chování
+      Incomplete Cleanup
+        Problémy se stavem odhlášení
+        Úniky paměti
+        Bezpečnostní obavy
+    Centralized Solutions
+      Unified State Object
+        Jediný zdroj pravdy
+        Předvídatelná struktura
+        Škálovatelný základ
+      Controlled Updates
+        Nezměnitelné vzory
+        Použití Object.freeze
+        Změny založené na funkcích
+      State Tracking
+        Správa historie
+        Viditelnost ladění
+        Audit změn
+    Persistence Strategies
+      localStorage Integration
+        Kontinuita relace
+        Serializace JSON
+        Automatická synchronizace
+      Data Freshness
+        Obnovení ze serveru
+        Řešení zastaralých dat
+        Optimalizace rovnováhy
+      Storage Optimization
+        Minimální data
+        Důraz na výkon
+        Bezpečnostní úvahy
+```
+**Základní princip**: Profesionální správa stavu vyvažuje předvídatelnost, perzistenci a výkon, aby vytvořila spolehlivé uživatelské zážitky, které škálují od jednoduchých interakcí po složité pracovní postupy aplikací.
+
 ---
 
 ## Diagnostika aktuálních problémů se stavem
 
-Jako Sherlock Holmes zkoumající místo činu musíme přesně pochopit, co se děje v naší aktuální implementaci, než budeme moci vyřešit záhadu mizejících uživatelských relací.
+Jako Sherlock Holmes zkoumající místo činu potřebujeme přesně pochopit, co se v našem současném řešení děje, než vyřešíme záhadu mizících uživatelských sezení.
 
-Proveďme jednoduchý experiment, který odhalí základní problémy správy stavu:
+Proveďme jednoduchý experiment, který odhalí základní výzvy správy stavu:
 
 **🧪 Vyzkoušejte tento diagnostický test:**
-1. Přihlaste se do své bankovní aplikace a přejděte na hlavní stránku
-2. Obnovte stránku prohlížeče
-3. Sledujte, co se stane s vaším stavem přihlášení
+1. Přihlaste se do své bankovní aplikace a přejděte na ovládací panel
+2. Obnovte stránku v prohlížeči
+3. Sledujte, co se stane se stavem přihlášení
 
-Pokud jste přesměrováni zpět na přihlašovací obrazovku, objevili jste klasický problém s uchováváním stavu. Toto chování nastává, protože naše aktuální implementace ukládá uživatelská data do JavaScriptových proměnných, které se při každém načtení stránky resetují.
+Pokud jste přesměrováni zpět na přihlašovací obrazovku, narazili jste na klasický problém s perzistencí stavu. Toto chování nastává, protože naše současná implementace ukládá uživatelská data do JavaScriptových proměnných, které se při načtení stránky resetují.
 
-**Problémy aktuální implementace:**
+**Problémy současné implementace:**
 
-Jednoduchá proměnná `account` z naší [předchozí lekce](../3-data/README.md) vytváří tři významné problémy, které ovlivňují jak uživatelskou zkušenost, tak udržovatelnost kódu:
+Jednoduchá proměnná `account` z naší [předchozí lekce](../3-data/README.md) vytváří tři významné problémy, které ovlivňují jak uživatelský zážitek, tak udržovatelnost kódu:
 
 | Problém | Technická příčina | Dopad na uživatele |
-|---------|-------------------|--------------------|
-| **Ztráta relace** | Obnovení stránky vymaže JavaScriptové proměnné | Uživatelé se musí často znovu přihlašovat |
-| **Rozptýlené aktualizace** | Více funkcí přímo upravuje stav | Ladění se stává stále obtížnějším |
-| **Neúplné vyčištění** | Odhlášení nevymaže všechny odkazy na stav | Potenciální bezpečnostní a soukromé problémy |
+|---------|-----------------|--------------------|
+| **Ztráta sezení** | Obnovení stránky vymaže JavaScriptové proměnné | Uživatelé se musí často znovu přihlašovat |
+| **Roztříštěné aktualizace** | Více funkcí přímo mění stav | Ladění se stává složitějším |
+| **Neúplné čištění** | Odhlášení nevymaže všechny reference na stav | Potenciální bezpečnostní a soukromí rizika |
 
 **Architektonická výzva:**
 
-Stejně jako při konstrukci Titaniku, kde se zdálo, že oddělené komory jsou robustní, dokud se nezaplavilo více komor najednou, řešení těchto problémů jednotlivě neřeší základní architektonický problém. Potřebujeme komplexní řešení správy stavu.
+Stejně jako třída Titanicu s oddíly, jež se zdála robustní, dokud se nenaplnilo několik oddílů najednou, řešení těchto problémů jednotlivě nepomůže odstranit základní architektonickou chybu. Potřebujeme komplexní řešení správy stavu.
 
-> 💡 **Co se vlastně snažíme dosáhnout?**
+> 💡 **Co vlastně chceme dosáhnout?**
 
-[Správa stavu](https://en.wikipedia.org/wiki/State_management) je ve skutečnosti o řešení dvou základních otázek:
+[Správa stavu](https://cs.wikipedia.org/wiki/Spr%C3%A1va_stavu) skutečně řeší dvě základní hádanky:
 
-1. **Kde jsou moje data?**: Sledování, jaké informace máme a odkud pocházejí
-2. **Jsou všichni na stejné stránce?**: Zajištění, že to, co uživatelé vidí, odpovídá tomu, co se skutečně děje
+1. **Kde jsou moje data?**: Sledovat, jaké informace máme a odkud pocházejí
+2. **Jsou všichni na stejné stránce?**: Zajistit, že to, co uživatelé vidí, odpovídá skutečnému stavu
 
 **Náš plán:**
 
-Místo toho, abychom se honili za problémy, vytvoříme **centralizovaný systém správy stavu**. Představte si to jako jednoho opravdu organizovaného člověka, který má na starosti všechny důležité věci:
+Místo běhání dokola vytvoříme **centralizovaný systém správy stavu**. Představte si to jako opravdu organizovanou osobu, která má na starosti všechny důležité věci:
 
-![Schéma ukazující tok dat mezi HTML, uživatelskými akcemi a stavem](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.cs.png)
+![Schema ukazující datové toky mezi HTML, uživatelskými akcemi a stavem](../../../../translated_images/data-flow.fa2354e0908fecc8.cs.png)
 
-**Porozumění tomuto toku dat:**
-- **Centralizuje** veškerý stav aplikace na jednom místě
-- **Směřuje** všechny změny stavu přes kontrolované funkce
-- **Zajišťuje**, že uživatelské rozhraní zůstane synchronizované s aktuálním stavem
-- **Poskytuje** jasný, předvídatelný vzor pro správu dat
+```mermaid
+flowchart TD
+    A[Uživatelská akce] --> B[Obslužný program události]
+    B --> C[Funkce updateState]
+    C --> D{Validace stavu}
+    D -->|Platný| E[Vytvořit nový stav]
+    D -->|Neplatný| F[Zpracování chyby]
+    E --> G[Object.freeze]
+    G --> H[Aktualizovat localStorage]
+    H --> I[Spustit aktualizaci UI]
+    I --> J[Uživatel vidí změny]
+    F --> K[Uživatel vidí chybu]
+    
+    subgraph "Vrstva správy stavu"
+        C
+        E
+        G
+    end
+    
+    subgraph "Vrstva perzistence"
+        H
+        L[localStorage]
+        H -.-> L
+    end
+```
+**Co znamená tento datový tok:**
+- **Centralizuje** veškerý stav aplikace na jedno místo
+- **Směřuje** všechny změny stavu přes řízené funkce
+- **Zajišťuje**, že uživatelské rozhraní zůstává synchronizované s aktuálním stavem
+- **Poskytuje** jasný a předvídatelný vzor pro správu dat
 
-> 💡 **Profesionální pohled**: Tato lekce se zaměřuje na základní koncepty. Pro složitější aplikace poskytují knihovny jako [Redux](https://redux.js.org) pokročilejší funkce správy stavu. Porozumění těmto základním principům vám pomůže zvládnout jakoukoli knihovnu pro správu stavu.
+> 💡 **Profesionální poznatek**: Tato lekce se zaměřuje na základní koncepty. Pro složité aplikace vyvíjejí knihovny jako [Redux](https://redux.js.org) pokročilejší funkce pro správu stavu. Pochopení těchto principů vám pomůže ovládnout jakoukoli knihovnu správy stavu.
 
-> ⚠️ **Pokročilé téma**: Nebudeme se zabývat automatickými aktualizacemi uživatelského rozhraní vyvolanými změnami stavu, protože to zahrnuje koncepty [reaktivního programování](https://en.wikipedia.org/wiki/Reactive_programming). Považujte to za skvělý další krok ve vašem vzdělávacím procesu!
+> ⚠️ **Pokročilé téma**: Automatické aktualizace rozhraní vyvolané změnami stavu nebudeme v této lekci pokrývat, protože zahrnují koncepty [reaktivního programování](https://en.wikipedia.org/wiki/Reactive_programming). Považujte to za vynikající další krok ve vaší cestě za učiněním!
 
-### Úkol: Centralizace struktury stavu
+### Úkol: Centralizovat strukturu stavu
 
-Začněme transformovat naši rozptýlenou správu stavu do centralizovaného systému. Tento první krok vytvoří základ pro všechny následující zlepšení.
+Pojďme začít transformovat roztříštěný způsob správy stavu do centralizovaného systému. Tento první krok stanoví základ pro všechny následující vylepšení.
 
-**Krok 1: Vytvořte centralizovaný objekt stavu**
+**Krok 1: Vytvořte centrální objekt stavu**
 
-Nahraďte jednoduché deklarování `account`:
+Nahraďte jednoduché `account`:
 
 ```js
 let account = null;
@@ -120,77 +244,109 @@ let state = {
 };
 ```
 
-**Proč na této změně záleží:**
-- **Centralizuje** všechna data aplikace na jednom místě
-- **Připravuje** strukturu pro přidání dalších vlastností stavu později
+**Proč je tato změna důležitá:**
+- **Centralizuje** veškerá data aplikace na jedno místo
+- **Připravuje** strukturu pro přidání dalších stavových vlastností později
 - **Vytváří** jasnou hranici mezi stavem a ostatními proměnnými
-- **Zavádí** vzor, který se škáluje s růstem vaší aplikace
+- **Zakládá** vzor, který škáluje s růstem vaší aplikace
 
-**Krok 2: Aktualizace vzorů přístupu ke stavu**
+**Krok 2: Aktualizujte vzory přístupu ke stavu**
 
-Aktualizujte své funkce tak, aby používaly novou strukturu stavu:
+Upravte své funkce, aby používaly novou strukturu stavu:
 
-**Ve funkcích `register()` a `login()`**, nahraďte:
+**Ve funkcích `register()` a `login()` nahraďte:**
 ```js
 account = ...
 ```
 
-Tímto:
+tímto:
 ```js
 state.account = ...
 ```
 
-**Ve funkci `updateDashboard()`**, přidejte tento řádek na začátek:
+**Ve funkci `updateDashboard()` přidejte tento řádek nahoře:**
 ```js
 const account = state.account;
 ```
 
-**Co tyto aktualizace přinášejí:**
-- **Zachovávají** stávající funkčnost při zlepšení struktury
-- **Připravují** váš kód na sofistikovanější správu stavu
-- **Vytvářejí** konzistentní vzory pro přístup k datům stavu
-- **Zavádějí** základ pro centralizované aktualizace stavu
+**Co tyto změny přinášejí:**
+- **Udržují** existující funkčnost při zlepšení struktury
+- **Připravují** kód pro pokročilejší správu stavu
+- **Vytvářejí** konzistentní vzory pro přístup ke stavovým datům
+- **Zakládají** základ pro centralizované aktualizace stavu
 
-> 💡 **Poznámka**: Toto refaktorování okamžitě nevyřeší naše problémy, ale vytvoří nezbytný základ pro silná zlepšení, která přijdou!
+> 💡 **Poznámka**: Tento refaktor hned nevyřeší naše problémy, ale vytváří nezbytný základ pro sílu vylepšení, která přijdou!
 
-## Implementace kontrolovaných aktualizací stavu
+### 🎯 Pedagogická kontrola: Principy centralizace
 
-S naším stavem centralizovaným je dalším krokem zavedení kontrolovaných mechanismů pro úpravy dat. Tento přístup zajišťuje předvídatelné změny stavu a snazší ladění.
+**Zastavte se a zamyslete**: Právě jste implementovali základ centralizované správy stavu. Toto je klíčové architektonické rozhodnutí.
 
-Základní princip připomíná řízení leteckého provozu: místo toho, aby více funkcí nezávisle upravovalo stav, budeme všechny změny směrovat přes jednu kontrolovanou funkci. Tento vzor poskytuje jasný přehled o tom, kdy a jak dochází ke změnám dat.
+**Rychlé sebehodnocení**:
+- Dokážete vysvětlit, proč je lepší centralizovat stav do jednoho objektu než mít roztroušené proměnné?
+- Co by se stalo, kdybyste zapomněli upravit funkci, aby používala `state.account`?
+- Jak tento vzor připravuje váš kód na pokročilejší funkce?
 
-**Správa neměnného stavu:**
+**Spojení s praxí**: Vzor centralizace, který jste právě poznali, je základem moderních frameworků jako Redux, Vuex a React Context. Stavíte architektonické myšlení používané v hlavních aplikacích.
 
-Budeme zacházet s naším objektem `state` jako s [*neměnným*](https://en.wikipedia.org/wiki/Immutable_object), což znamená, že ho nikdy nebudeme upravovat přímo. Místo toho každá změna vytvoří nový objekt stavu s aktualizovanými daty.
+**Výzva**: Kdybyste chtěli do aplikace přidat uživatelská nastavení (témata, jazyk), kam byste je přidali ve struktuře stavu? Jak by to škálovalo?
 
-I když se tento přístup může zpočátku zdát méně efektivní než přímé úpravy, poskytuje významné výhody pro ladění, testování a udržení předvídatelnosti aplikace.
+## Implementace řízených aktualizací stavu
 
-**Výhody správy neměnného stavu:**
+S centralizovaným stavem dalším krokem je zavedení řízených mechanismů pro úpravy dat. Tento přístup zajišťuje předvídatelné změny stavu a snazší ladění.
+
+Základní princip připomíná řízení letového provozu: místo toho, aby více funkcí měnilo stav nezávisle, budeme všechny změny řídit jednou kontrolovanou funkcí. Tento vzor poskytuje jasný dohled nad tím, kdy a jak data měníme.
+
+**Nezbytnost immutable správy stavu:**
+
+Budeme s objektem `state` zacházet jako s [*neměnným*](https://cs.wikipedia.org/wiki/Neměnný_objekt), což znamená, že ho nikdy neměníme přímo. Místo toho každá změna vytvoří nový objekt stavu s aktualizovanými daty.
+
+I když se může zdát, že je tento přístup zpočátku méně efektivní než přímé úpravy, poskytuje zásadní výhody při ladění, testování a zachování předvídatelnosti aplikace.
+
+**Výhody immutable správy stavu:**
 
 | Výhoda | Popis | Dopad |
-|--------|-------|-------|
-| **Předvídatelnost** | Změny probíhají pouze přes kontrolované funkce | Snazší ladění a testování |
-| **Sledování historie** | Každá změna stavu vytvoří nový objekt | Umožňuje funkci zpět/znovu |
-| **Prevence vedlejších efektů** | Žádné náhodné úpravy | Zabraňuje záhadným chybám |
-| **Optimalizace výkonu** | Snadné zjištění, kdy se stav skutečně změnil | Umožňuje efektivní aktualizace UI |
+|---------|-------|--------|
+| **Předvídatelnost** | Změny se dějí pouze prostřednictvím řízených funkcí | Snazší ladění a testování |
+| **Sledování historie** | Každá změna stavu vytváří nový objekt | Umožňuje funkce zpět/vpřed (undo/redo) |
+| **Prevence vedlejších efektů** | Žádné náhodné úpravy | Předejde záhadným chybám |
+| **Optimalizace výkonu** | Snadná detekce, kdy se stav skutečně změnil | Umožňuje efektivní aktualizace UI |
 
-**Neměnnost v JavaScriptu pomocí `Object.freeze()`:**
+**JavaScriptová neměnnost s `Object.freeze()`:**
 
-JavaScript poskytuje [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) k zabránění úprav objektů:
+JavaScript poskytuje [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) k zabránění úpravám objektu:
 
 ```js
 const immutableState = Object.freeze({ account: userData });
-// Any attempt to modify immutableState will throw an error
+// Jakýkoli pokus o úpravu immutableState vyvolá chybu
 ```
 
-**Rozbor toho, co se zde děje:**
-- **Zabraňuje** přímému přiřazování nebo mazání vlastností
-- **Vyvolává** výjimky při pokusech o úpravy
-- **Zajišťuje**, že změny stavu musí probíhat přes kontrolované funkce
-- **Vytváří** jasnou smlouvu o tom, jak lze stav aktualizovat
+**Co se zde děje:**
+- **Zabraňuje** přímému přiřazení či mazání vlastností
+- **Vyhazuje** výjimky při pokusu o změnu
+- **Zajišťuje**, že změny stavu musí probíhat řízeně
+- **Vytváří** jasnou smlouvu, jak lze stav měnit
 
-> 💡 **Hlubší pohled**: Přečtěte si o rozdílu mezi *mělkými* a *hlubokými* neměnnými objekty v [dokumentaci MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Porozumění tomuto rozdílu je klíčové pro složité struktury stavu.
+> 💡 **Podrobný pohled**: Naučte se rozdíl mezi *mělkou* a *hlubokou* neměnností objektů v [dokumentaci MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#Co_je_melke_zmrazeni). Porozumění tomuto rozdílu je klíčové pro složité struktury stavu.
 
+```mermaid
+stateDiagram-v2
+    [*] --> StateV1: Počáteční stav
+    StateV1 --> StateV2: updateState('account', newData)
+    StateV2 --> StateV3: updateState('account', anotherUpdate)
+    StateV3 --> StateV4: updateState('preferences', userSettings)
+    
+    note right of StateV1
+        Object.freeze()
+        Neměnný
+        Lze ladit
+    end note
+    
+    note right of StateV2
+        Vytvořen nový objekt
+        Předchozí stav zachován
+        Předvídatelné změny
+    end note
+```
 ### Úkol
 
 Vytvořme novou funkci `updateState()`:
@@ -204,9 +360,9 @@ function updateState(property, newData) {
 }
 ```
 
-V této funkci vytvoříme nový objekt stavu a zkopírujeme data z předchozího stavu pomocí [*operátoru rozprostření (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Poté přepíšeme konkrétní vlastnost objektu stavu novými daty pomocí [notace hranatých závorek](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` pro přiřazení. Nakonec objekt uzamkneme, aby se zabránilo úpravám pomocí `Object.freeze()`. V současné době máme v stavu uloženou pouze vlastnost `account`, ale s tímto přístupem můžete do stavu přidat tolik vlastností, kolik potřebujete.
+V této funkci vytváříme nový objekt stavu a kopírujeme data ze stávajícího stavu pomocí [*operátoru rozprostření (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Poté přepíšeme konkrétní vlastnost objektu stavu novými daty pomocí [zápisu v hranatých závorkách](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` pro přiřazení. Nakonec objekt zamkneme, aby se zabránilo úpravám pomocí `Object.freeze()`. V současnosti ukládáme do stavu pouze vlastnost `account`, ale touto metodou můžete přidat libovolný počet vlastností.
 
-Také aktualizujeme inicializaci `state`, abychom zajistili, že počáteční stav bude také zmrazen:
+Také aktualizujeme inicializaci `state`, aby byl počáteční stav rovněž zamrzlý:
 
 ```js
 let state = Object.freeze({
@@ -214,19 +370,19 @@ let state = Object.freeze({
 });
 ```
 
-Poté aktualizujte funkci `register` nahrazením přiřazení `state.account = result;`:
+Poté upravte funkci `register`, nahraďte přiřazení `state.account = result;` tímto:
 
 ```js
 updateState('account', result);
 ```
 
-Uděláme totéž s funkcí `login`, kde nahradíme `state.account = data;`:
+Totéž proveďte ve funkci `login`, nahraďte `state.account = data;` tímto:
 
 ```js
 updateState('account', data);
 ```
 
-Nyní využijeme příležitosti k opravě problému, kdy se data účtu nevymažou, když uživatel klikne na *Odhlásit*.
+Využijeme příležitost a opravíme problém, kdy se data účtu nevymazala při kliknutí na *Odhlásit*.
 
 Vytvořte novou funkci `logout()`:
 
@@ -237,67 +393,105 @@ function logout() {
 }
 ```
 
-Ve funkci `updateDashboard()` nahraďte přesměrování `return navigate('/login');` za `return logout();`;
+V `updateDashboard()` nahraďte přesměrování `return navigate('/login');` voláním `return logout();`
 
-Vyzkoušejte registraci nového účtu, odhlášení a opětovné přihlášení, abyste ověřili, že vše stále funguje správně.
+Vyzkoušejte registraci nového účtu, odhlášení a opětovné přihlášení, aby vše fungovalo správně.
 
-> Tip: můžete se podívat na všechny změny stavu přidáním `console.log(state)` na konec `updateState()` a otevřením konzole v nástrojích pro vývojáře vašeho prohlížeče.
+> Tip: můžete sledovat všechny změny stavu přidáním `console.log(state)` na konec funkce `updateState()` a otevřením konzole ve vývojářských nástrojích prohlížeče.
 
-## Implementace uchovávání dat
+## Implementace perzistence dat
 
-Problém ztráty relace, který jsme identifikovali dříve, vyžaduje řešení uchovávání, které udržuje uživatelský stav napříč relacemi prohlížeče. To transformuje naši aplikaci z dočasného zážitku na spolehlivý, profesionální nástroj.
+Problém se ztrátou sezení, který jsme identifikovali dříve, vyžaduje řešení perzistence, které udrží uživatelský stav přes relace v prohlížeči. Tím proměníme naši aplikaci z dočasného zážitku na spolehlivý profesionální nástroj.
 
-Představte si, jak atomové hodiny udržují přesný čas i během výpadků napájení tím, že ukládají kritický stav do nevolatilní paměti. Podobně webové aplikace potřebují mechanismy pro uchovávání dat, aby zachovaly důležitá uživatelská data napříč relacemi prohlížeče a obnovením stránky.
+Přemýšlejte o atomových hodinách, které udržují přesný čas i přes výpadky napájení tím, že ukládají kritický stav do nevolatilní paměti. Podobně i webové aplikace potřebují perzistentní úložiště, aby zachovaly důležitá uživatelská data přes relace prohlížeče a obnovy stránek.
 
-**Strategické otázky pro uchovávání dat:**
+**Strategické otázky pro perzistenci dat:**
 
-Než implementujete uchovávání, zvažte tyto klíčové faktory:
+Než implementujete perzistenci, zvažte tyto klíčové faktory:
 
-| Otázka | Kontext bankovní aplikace | Dopad rozhodnutí |
-|--------|---------------------------|------------------|
-| **Jsou data citlivá?** | Zůstatek na účtu, historie transakcí | Vyberte bezpečné metody uchovávání |
-| **Jak dlouho by měla data přetrvávat?** | Stav přihlášení vs. dočasné preference UI | Zvolte vhodnou dobu uchovávání |
-| **Potřebuje je server?** | Autentizační tokeny vs. nastavení UI | Určete požadavky na sdílení |
+| Otázka | Kontext bankovní aplikace | Dopad na rozhodnutí |
+|----------|-------------------------|---------------------|
+| **Jsou data citlivá?** | Zůstatek účtu, historie transakcí | Vybrat bezpečné metody uložení |
+| **Jak dlouho by to mělo přetrvávat?** | Stav přihlášení vs. dočasné nastavení UI | Vyberte vhodnou dobu ukládání |
+| **Potřebuje to server?** | Autentizační tokeny vs. nastavení UI | Určete požadavky na sdílení |
 
-**Možnosti úložiště v prohlížeči:**
+**Možnosti uložení v prohlížeči:**
 
-Moderní prohlížeče poskytují několik mechanismů úložiště, z nichž každý je navržen pro různé případy použití:
+Moderní prohlížeče nabízejí několik mechanismů pro ukládání dat, každý určený pro různé případy použití:
 
-**Primární API úložiště:**
+**Hlavní Storage API:**
 
-1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Trvalé [úložiště klíč/hodnota](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
-   - **Uchovává** data napříč relacemi prohlížeče na neurčito  
-   - **Přežívá** restartování prohlížeče a počítače
-   - **Vázáno** na konkrétní doménu webové stránky
-   - **Ideální** pro uživatelské preference a stavy přihlášení
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Trvalé [uložení klíč/hodnota](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Přetrvává** data mezi sezeními prohlížeče neomezeně  
+   - **Přežije** zavření prohlížeče i restart počítače
+   - **Platí** jen pro konkrétní doménu webu
+   - **Perfektní** pro uživatelská nastavení a stavy přihlášení
 
-2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Dočasné úložiště relací
-   - **Funguje** identicky jako localStorage během aktivních relací
-   - **Vymaže se** automaticky při zavření karty prohlížeče
-   - **Ideální** pro dočasná data, která by neměla přetrvávat
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Dočasné úložiště sezení
+   - **Funguje** stejně jako localStorage během aktivního sezení
+   - **Vymaže se** automaticky po zavření záložky prohlížeče
+   - **Ideální** pro dočasná data, která nemají přetrvávat
 
-3. **[HTTP Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Úložiště sdílené serverem
-   - **Automaticky** se odesílá s každým požadavkem na server
-   - **Ideální
-> 💡 **Pokročilá možnost**: Pro komplexní offline aplikace s velkými datovými sadami zvažte použití [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Poskytuje plnohodnotnou databázi na straně klienta, ale vyžaduje složitější implementaci.
+3. **[HTTP Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Úložiště sdílené se serverem
+   - **Automaticky** se odesílají s každým požadavkem na server
+   - **Perfektní** pro [autentizační](https://en.wikipedia.org/wiki/Authentication) tokeny
+   - **Mají** omezenou velikost a mohou ovlivnit výkon
 
-### Úkol: Implementace persistence pomocí localStorage
+**Požadavek na serializaci dat:**
 
-Implementujeme trvalé ukládání, aby uživatelé zůstali přihlášeni, dokud se explicitně neodhlásí. Použijeme `localStorage` k ukládání údajů o účtu napříč relacemi prohlížeče.
+`localStorage` i `sessionStorage` ukládají pouze [řetězce](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String):
 
-**Krok 1: Definujte konfiguraci úložiště**
+```js
+// Převést objekty na JSON řetězce pro uložení
+const accountData = { user: 'john', balance: 150 };
+localStorage.setItem('account', JSON.stringify(accountData));
+
+// Parsovat JSON řetězce zpět na objekty při načítání
+const savedAccount = JSON.parse(localStorage.getItem('account'));
+```
+
+**Pochopení serializace:**
+- **Převádí** JavaScript objekty na JSON řetězce pomocí [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- **Obnovuje** objekty z JSON pomocí [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- **Zvládá** automaticky složité zanořené objekty a pole
+- **Selhává** u funkcí, undefined hodnot a cyklických referencí
+
+> 💡 **Pokročilá možnost**: Pro složité offline aplikace s velkými daty zvažte API [`IndexedDB`](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Poskytuje plnohodnotnou databázi na straně klienta, ale vyžaduje složitější implementaci.
+
+```mermaid
+quadrantChart
+    title Možnosti úložiště prohlížeče
+    x-axis Nízká složitost --> Vysoká složitost
+    y-axis Krátká doba --> Dlouhá doba
+    
+    quadrant-1 Profesionální nástroje
+    quadrant-2 Jednoduchá perzistence
+    quadrant-3 Dočasné úložiště
+    quadrant-4 Pokročilé systémy
+    
+    localStorage: [0.3, 0.8]
+    sessionStorage: [0.2, 0.2]
+    HTTP Cookies: [0.6, 0.7]
+    IndexedDB: [0.9, 0.9]
+    Memory Variables: [0.1, 0.1]
+```
+### Úkol: Implementace perzistence v localStorage
+
+Implementujeme perzistentní úložiště, aby uživatelé zůstali přihlášeni, dokud se výslovně neodhlásí. Použijeme `localStorage` k uložení dat účtu přes prohlížečová sezení.
+
+**Krok 1: Definice konfigurace úložiště**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
 **Co tato konstanta poskytuje:**
-- **Vytváří** konzistentní identifikátor pro naše uložená data
-- **Zabraňuje** překlepům v odkazech na klíče úložiště
-- **Umožňuje** snadnou změnu klíče úložiště, pokud je to potřeba
-- **Dodržuje** osvědčené postupy pro udržovatelný kód
+- **Vytváří** konzistentní identifikátor pro uložená data
+- **Zabraňuje** překlepům při odkazování na klíče v úložišti
+- **Umožňuje** snadnou změnu klíče úložiště, pokud bude potřeba
+- **Následuje** osvědčené postupy pro udržovatelný kód
 
-**Krok 2: Přidejte automatickou persistenci**
+**Krok 2: Přidejte automatickou perzistenci**
 
 Přidejte tento řádek na konec funkce `updateState()`:
 
@@ -305,13 +499,13 @@ Přidejte tento řádek na konec funkce `updateState()`:
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-**Rozbor toho, co se zde děje:**
+**Rozbor, co se zde děje:**
 - **Převádí** objekt účtu na JSON řetězec pro uložení
 - **Ukládá** data pomocí našeho konzistentního klíče úložiště
 - **Provádí** se automaticky při každé změně stavu
-- **Zajišťuje**, že uložená data jsou vždy synchronizována s aktuálním stavem
+- **Zajišťuje**, že uložená data vždy odpovídají aktuálnímu stavu
 
-> 💡 **Výhoda architektury**: Protože jsme centralizovali všechny aktualizace stavu prostřednictvím `updateState()`, přidání persistence vyžadovalo pouze jeden řádek kódu. To ukazuje sílu dobrých architektonických rozhodnutí!
+> 💡 **Výhoda architektury**: Protože jsme centralizovali všechny aktualizace stavu přes `updateState()`, přidání perzistence vyžadovalo jen jeden řádek kódu. To ukazuje sílu dobrých architektonických rozhodnutí!
 
 **Krok 3: Obnovte stav při načtení aplikace**
 
@@ -324,7 +518,7 @@ function init() {
     updateState('account', JSON.parse(savedAccount));
   }
 
-  // Our previous initialization code
+  // Náš předchozí inicializační kód
   window.onpopstate = () => updateRoute();
   updateRoute();
 }
@@ -332,49 +526,63 @@ function init() {
 init();
 ```
 
-**Porozumění procesu inicializace:**
-- **Načítá** dříve uložená data účtu z localStorage
-- **Parsuje** JSON řetězec zpět na JavaScriptový objekt
-- **Aktualizuje** stav pomocí naší kontrolované funkce aktualizace
-- **Obnovuje** uživatelskou relaci automaticky při načtení stránky
-- **Provádí** se před aktualizací tras, aby byl stav dostupný
+**Pochopení inicializačního procesu:**
+- **Načte** dříve uložená data účtu z localStorage
+- **Převede** JSON řetězec zpět na JavaScript objekt
+- **Aktualizuje** stav pomocí řízené funkce aktualizace
+- **Automaticky obnoví** uživatelskou relaci při načtení stránky
+- **Provede se** před aktualizací routy, aby byl stav k dispozici
 
-**Krok 4: Optimalizujte výchozí trasu**
+**Krok 4: Optimalizace výchozí routy**
 
-Aktualizujte výchozí trasu, aby využívala persistenci:
+Aktualizujte výchozí routu, aby využívala perzistenci:
 
-V `updateRoute()` nahraďte:
+Ve funkci `updateRoute()` nahraďte:
 ```js
-// Replace: return navigate('/login');
+// Nahraďte: return navigate('/login');
 return navigate('/dashboard');
 ```
 
-**Proč tato změna dává smysl:**
-- **Efektivně využívá** náš nový systém persistence
-- **Umožňuje** dashboardu provádět kontrolu autentizace
-- **Automaticky přesměrovává** na přihlášení, pokud neexistuje uložená relace
+**Proč je tato změna rozumná:**
+- **Využívá efektivně** náš nový perzistentní systém
+- **Umožňuje** dashboardu ověřovat autentizaci
+- **Automaticky přesměruje** na přihlášení, pokud není uložená relace
 - **Vytváří** plynulejší uživatelský zážitek
 
 **Testování vaší implementace:**
 
-1. Přihlaste se do své bankovní aplikace
+1. Přihlaste se do vaší bankovní aplikace
 2. Obnovte stránku v prohlížeči
 3. Ověřte, že zůstáváte přihlášeni a na dashboardu
 4. Zavřete a znovu otevřete prohlížeč
-5. Vraťte se zpět do své aplikace a ověřte, že jste stále přihlášeni
+5. Vraťte se do aplikace a potvrďte, že jste stále přihlášeni
 
-🎉 **Úspěch odemčen**: Úspěšně jste implementovali správu trvalého stavu! Vaše aplikace se nyní chová jako profesionální webová aplikace.
+🎉 **Dosáhli jste cíle**: Úspěšně jste implementovali perzistentní správu stavu! Vaše aplikace se nyní chová jako profesionální webová aplikace.
 
-## Vyvážení persistence a aktuálnosti dat
+### 🎯 Pedagogická kontrola: Architektura perzistence
 
-Náš systém persistence úspěšně udržuje uživatelské relace, ale přináší nový problém: zastaralost dat. Když více uživatelů nebo aplikací upravuje stejná data na serveru, místní uložené informace se stávají neaktuálními.
+**Pochopení architektury**: Zavedli jste sofistikovanou vrstvu perzistence, která vyvažuje uživatelský zážitek s komplexností správy dat.
 
-Tato situace připomíná vikingské navigátory, kteří se spoléhali na uložené hvězdné mapy i aktuální pozorování nebeských těles. Mapy poskytovaly konzistenci, ale navigátoři potřebovali čerstvá pozorování, aby zohlednili měnící se podmínky. Podobně naše aplikace potřebuje jak trvalý uživatelský stav, tak aktuální data ze serveru.
+**Klíčové ovládnuté koncepty**:
+- **Serializace JSON**: Převod složitých objektů na ukládatelné řetězce
+- **Automatická synchronizace**: Změny stavu spouští perzistentní uložení
+- **Obnova sezení**: Aplikace obnoví uživatelský kontext po přerušení
+- **Centralizovaná perzistence**: Jedna funkce řeší veškeré ukládání
 
-**🧪 Objevování problému zastaralosti dat:**
+**Spojení s praxí**: Tento vzor perzistence je základem pro Progressive Web Apps (PWA), offline-first aplikace a moderní mobilní webové zážitky. Budujete produkčně použitelné funkcionality.
 
-1. Přihlaste se na dashboard pomocí účtu `test`
-2. Spusťte tento příkaz v terminálu, abyste simulovali transakci z jiného zdroje:
+**Reflexní otázka**: Jak byste upravili tento systém pro více uživatelských účtů na jednom zařízení? Zvažte dopady na soukromí a bezpečnost.
+
+## Vyvážení perzistence a aktuálnosti dat
+
+Náš perzistentní systém úspěšně udržuje uživatelské relace, ale přináší novou výzvu: zastaralost dat. Když více uživatelů nebo aplikací modifikuje stejná data na serveru, lokálně uložená data mohou být neaktuální.
+
+Tato situace je podobná vikingským navigátorům, kteří se spoléhali jak na uložené hvězdné mapy, tak na aktuální pozorování. Mapy poskytovaly konzistenci, ale navigátoři potřebovali čerstvá pozorování kvůli měnícím se podmínkám. Podobně naše aplikace potřebuje jak perzistentní uživatelský stav, tak aktuální data ze serveru.
+
+**🧪 Objevení problému zastaralosti dat:**
+
+1. Přihlaste se do dashboardu pomocí účtu `test`
+2. Spusťte tento příkaz v terminálu, aby simuloval transakci z jiného zdroje:
 
 ```sh
 curl --request POST \
@@ -384,28 +592,44 @@ curl --request POST \
 ```
 
 3. Obnovte stránku dashboardu v prohlížeči
-4. Sledujte, zda vidíte novou transakci
+4. Sledujte, zda se zobrazí nová transakce
 
 **Co tento test ukazuje:**
-- **Ukazuje**, jak může být localStorage "zastaralý" (neaktuální)
-- **Simuluje** reálné scénáře, kdy dochází ke změnám dat mimo vaši aplikaci
-- **Odhaluje** napětí mezi persistencí a aktuálností dat
+- **Ukazuje**, jak lokální úložiště může být „zastaralé“
+- **Simuluje** situace, kdy se data mění mimo vaši aplikaci
+- **Odhaluje** rozpor mezi perzistencí a aktuálností dat
 
 **Výzva zastaralosti dat:**
 
 | Problém | Příčina | Dopad na uživatele |
 |---------|---------|--------------------|
-| **Zastaralá data** | localStorage se nikdy automaticky nevyprší | Uživatelé vidí neaktuální informace |
-| **Změny na serveru** | Jiné aplikace/uživatelé upravují stejná data | Nekonzistentní zobrazení napříč platformami |
-| **Cache vs. realita** | Místní cache neodpovídá stavu serveru | Špatný uživatelský zážitek a zmatení |
+| **Zastaralá data** | localStorage nikdy automaticky neexpiruje | Uživatelé vidí neaktuální informace |
+| **Změny na serveru** | Jiné aplikace/uživatelé mění stejná data | Nekonzistentní pohled na data na různých platformách |
+| **Cache vs skutečnost** | Lokální cache neodpovídá stavu serveru | Špatný uživatelský zážitek a zmatek |
 
 **Strategie řešení:**
 
-Implementujeme vzor "obnovy při načtení", který vyvažuje výhody persistence s potřebou aktuálních dat. Tento přístup zachovává plynulý uživatelský zážitek a zároveň zajišťuje přesnost dat.
+Zavedeme vzor „obnovy při načtení“, který vyvažuje výhody perzistence s potřebou čerstvých dat. Tento přístup zachová plynulý uživatelský zážitek a současně zajistí přesnost dat.
 
-### Úkol: Implementace systému obnovy dat
+```mermaid
+sequenceDiagram
+    participant U as Uživateli
+    participant A as Aplikace
+    participant L as místníÚložiště
+    participant S as Server
+    
+    U->>A: Otevře aplikaci
+    A->>L: Načíst uložený stav
+    L-->>A: Vrátit uložená data
+    A->>U: Okamžitě zobrazit UI
+    A->>S: Načíst čerstvá data
+    S-->>A: Vrátit aktuální data
+    A->>L: Aktualizovat cache
+    A->>U: Aktualizovat UI s čerstvými daty
+```
+### Úkol: Implementujte systém obnovy dat
 
-Vytvoříme systém, který automaticky načítá aktuální data ze serveru a zároveň zachovává výhody naší správy trvalého stavu.
+Vytvoříme systém, který automaticky načte čerstvá data ze serveru a zároveň zachová výhody naší perzistentní správy stavu.
 
 **Krok 1: Vytvořte aktualizátor dat účtu**
 
@@ -425,15 +649,15 @@ async function updateAccountData() {
 }
 ```
 
-**Porozumění logice této funkce:**
+**Logika této funkce:**
 - **Kontroluje**, zda je uživatel aktuálně přihlášen (existuje state.account)
-- **Přesměrovává** na odhlášení, pokud není nalezena platná relace
-- **Načítá** aktuální data účtu ze serveru pomocí existující funkce `getAccount()`
-- **Elegantně zpracovává** chyby serveru odhlášením neplatných relací
-- **Aktualizuje** stav s aktuálními daty pomocí našeho kontrolovaného systému aktualizace
-- **Spouští** automatickou persistenci localStorage prostřednictvím funkce `updateState()`
+- **Přesměruje** na odhlášení, pokud není platné sezení
+- **Načítá** čerstvá data účtu ze serveru pomocí stávající funkce `getAccount()`
+- **Řeší** chyby serveru zdvořile odhlášením neplatných sezení
+- **Aktualizuje** stav čerstvými daty pomocí našeho kontrolovaného systému aktualizace
+- **Spouští** automatickou perzistenci do localStorage skrze `updateState()`
 
-**Krok 2: Vytvořte obslužnou funkci pro obnovu dashboardu**
+**Krok 2: Vytvořte handler obnovy dashboardu**
 
 ```js
 async function refresh() {
@@ -442,15 +666,15 @@ async function refresh() {
 }
 ```
 
-**Co tato funkce obnovy zajišťuje:**
-- **Koordinuje** proces obnovy dat a aktualizace uživatelského rozhraní
-- **Čeká**, až budou načtena aktuální data, než aktualizuje zobrazení
+**Co tato funkce obnovení dělá:**
+- **Koordinuje** proces obnovy dat a aktualizace UI
+- **Čeká**, až se načtou čerstvá data před aktualizací zobrazení
 - **Zajišťuje**, že dashboard zobrazuje nejaktuálnější informace
-- **Udržuje** čisté oddělení mezi správou dat a aktualizací uživatelského rozhraní
+- **Udržuje** čisté oddělení správy dat od aktualizací UI
 
-**Krok 3: Integrace s trasovým systémem**
+**Krok 3: Integrujte do systému rout**
 
-Aktualizujte konfiguraci tras, aby se obnova spouštěla automaticky:
+Aktualizujte konfiguraci routingů tak, aby spouštěla obnovu automaticky:
 
 ```js
 const routes = {
@@ -460,68 +684,125 @@ const routes = {
 ```
 
 **Jak tato integrace funguje:**
-- **Spouští** funkci obnovy pokaždé, když se načte trasa dashboardu
-- **Zajišťuje**, že aktuální data jsou vždy zobrazena, když uživatelé přejdou na dashboard
-- **Udržuje** stávající strukturu tras a zároveň přidává aktuálnost dat
-- **Poskytuje** konzistentní vzor pro inicializaci specifickou pro trasu
+- **Provádí** funkci obnovy pokaždé, když se načte route dashboardu
+- **Zajišťuje**, že vždy při navigaci na dashboard jsou zobrazeny čerstvé údaje
+- **Zachovává** stávající strukturu rout při přidání čerstvosti dat
+- **Poskytuje** konzistentní vzor pro inicializaci specifickou pro routu
 
 **Testování vašeho systému obnovy dat:**
 
-1. Přihlaste se do své bankovní aplikace
-2. Spusťte curl příkaz z dřívějška, abyste vytvořili novou transakci
-3. Obnovte stránku dashboardu nebo přejděte pryč a zpět
+1. Přihlaste se do bankovní aplikace
+2. Spusťte předchozí curl příkaz pro vytvoření nové transakce
+3. Obnovte dashboard nebo přejděte jinam a zpět
 4. Ověřte, že se nová transakce okamžitě zobrazí
 
-🎉 **Dokonalá rovnováha dosažena**: Vaše aplikace nyní kombinuje plynulý zážitek z trvalého stavu s přesností aktuálních dat ze serveru!
+🎉 **Dokonalá rovnováha**: Vaše aplikace nyní kombinuje plynulý zážitek perzistence s přesností čerstvých dat ze serveru!
 
-## Výzva GitHub Copilot Agent 🚀
+## 📈 Časová osa vašeho mistrovství ve správě stavu
 
-Použijte režim Agent k dokončení následující výzvy:
+```mermaid
+timeline
+    title Profesionální cesta správy stavu
+    
+    section Rozpoznání problému
+        Diagnóza problémů se stavem
+            : Identifikace problémů s výpadkem relace
+            : Pochopení problémů s rozptýlenými aktualizacemi
+            : Uvědomění si architektonických potřeb
+    
+    section Základy architektury
+        Centralizovaný návrh stavu
+            : Vytvoření sjednocených stavových objektů
+            : Implementace řízených vzorů aktualizace
+            : Zavedení principů neměnnosti
+        
+        Předvídatelné aktualizace
+            : Ovládnutí použití Object.freeze()
+            : Vytváření systémů přátelských k ladění
+            : Tvorba škálovatelných vzorů
+    
+    section Mistrovství perzistence
+        Integrace localStorage
+            : Zacházení s JSON serializací
+            : Implementace automatické synchronizace
+            : Vytvoření kontinuity relace
+        
+        Rovnováha čerstvosti dat
+            : Řešení výzev zastaralosti
+            : Budování mechanismů obnovy
+            : Optimalizace výkonu vs. přesnosti
+    
+    section Profesionální vzory
+        Produkčně připravené systémy
+            : Implementace zpracování chyb
+            : Vytvoření udržovatelných architektur
+            : Dodržování nejlepších průmyslových praktik
+        
+        Pokročilé schopnosti
+            : Připraveno na integraci do frameworku
+            : Připraveno na složité potřeby stavu
+            : Základ pro funkce v reálném čase
+```
+**🎓 Milník absolvování**: Úspěšně jste vybudovali kompletní systém správy stavu podle stejných principů jako Redux, Vuex a další profesionální knihovny. Tyto vzory škálují od jednoduchých aplikací po podnikové řešení.
 
-**Popis:** Implementujte komplexní systém správy stavu s funkcionalitou undo/redo pro bankovní aplikaci. Tato výzva vám pomůže procvičit pokročilé koncepty správy stavu, včetně sledování historie stavu, neměnných aktualizací a synchronizace uživatelského rozhraní.
+**🔄 Další úroveň schopností**:
+- Připraveno zvládnout frameworky správy stavu (Redux, Zustand, Pinia)
+- Připraveno implementovat reálné časové funkce s WebSockets
+- Vybaveno pro budování offline-first Progressive Web Apps
+- Položeny základy pro pokročilé vzory jako stavové stroje a pozorovatele
 
-**Zadání:** Vytvořte rozšířený systém správy stavu, který zahrnuje: 1) Pole historie stavu, které sleduje všechny předchozí stavy, 2) Funkce undo a redo, které umožňují návrat k předchozím stavům, 3) Tlačítka v uživatelském rozhraní pro operace undo/redo na dashboardu, 4) Maximální limit historie na 10 stavů, aby se předešlo problémům s pamětí, a 5) Správné vyčištění historie při odhlášení uživatele. Zajistěte, aby funkce undo/redo fungovala se změnami zůstatku na účtu a přetrvávala i po obnovení prohlížeče.
+## Výzva GitHub Copilot Agenta 🚀
 
-Více o [režimu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) se dozvíte zde.
+Použijte režim Agenta k dokončení následující výzvy:
+
+**Popis:** Implementujte komplexní systém správy stavu s funkcí zpět/vpřed (undo/redo) pro bankovní aplikaci. Výzva vám pomůže procvičit pokročilé koncepty správy stavu včetně sledování historie stavu, neměnných aktualizací a synchronizace uživatelského rozhraní.
+
+**Prompt:** Vytvořte rozšířený systém správy stavu, který zahrnuje: 1) pole historie stavu sledující všechny předchozí stavy, 2) funkce undo a redo umožňující návrat do předchozích stavů, 3) tlačítka UI pro operace undo/redo na dashboardu, 4) maximální limit historie 10 stavů pro prevenci problémů s pamětí, a 5) správné čištění historie po odhlášení uživatele. Zajistěte, že funkčnost undo/redo bude pracovat se změnami stavu účtu a přetrvá i po obnovení prohlížeče.
+
+Více o [režimu agenta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) zde.
 
 ## 🚀 Výzva: Optimalizace úložiště
 
-Vaše implementace nyní efektivně zpracovává uživatelské relace, obnovu dat a správu stavu. Zvažte však, zda náš současný přístup optimálně vyvažuje efektivitu úložiště s funkčností.
+Vaše implementace nyní efektivně zvládá uživatelské relace, obnovu dat a správu stavu. Přemýšlejte však, zda náš současný přístup optimálně vyvažuje efektivitu uložení s funkcionalitou.
 
-Stejně jako šachoví mistři rozlišují mezi klíčovými figurami a postradatelnými pěšci, efektivní správa stavu vyžaduje identifikaci dat, která musí být trvale uložena, oproti těm, která by měla být vždy aktuální ze serveru.
+Jako šachoví mistři, kteří rozlišují mezi důležitými figurami a obětovatelnými pěšci, efektivní správa stavu vyžaduje rozpoznat, která data musí přetrvávat a která by měla být vždy čerstvá ze serveru.
 
 **Analýza optimalizace:**
 
-Zhodnoťte svou aktuální implementaci localStorage a zvažte tyto strategické otázky:
-- Jaké jsou minimální informace potřebné k udržení autentizace uživatele?
-- Která data se mění tak často, že místní cache poskytuje jen malý přínos?
-- Jak může optimalizace úložiště zlepšit výkon bez zhoršení uživatelského zážitku?
+Zhodnoťte vaši současnou implementaci localStorage a zvažte tyto strategické otázky:
+- Jaké jsou minimální informace potřebné k udržení uživatelské autentizace?
+- Která data se mění natolik často, že lokální cache nemá velký přínos?
+- Jak může optimalizace úložiště zlepšit výkon, aniž by došlo ke zhoršení uživatelského zážitku?
+
+Tento typ architektonické analýzy odlišuje zkušené vývojáře, kteří berou v potaz jak funkcionalitu, tak efektivitu.
 
 **Strategie implementace:**
-- **Identifikujte** základní data, která musí být trvale uložena (pravděpodobně jen identifikace uživatele)
-- **Upravte** svou implementaci localStorage tak, aby ukládala pouze kritická data relace
-- **Zajistěte**, že aktuální data budou vždy načtena ze serveru při návštěvě dashboardu
-- **Otestujte**, zda váš optimalizovaný přístup zachovává stejný uživatelský zážitek
+- **Identifikujte** základní data, která musí přetrvávat (pravděpodobně jen identifikace uživatele)
+- **Upravte** vaši implementaci localStorage tak, aby ukládala pouze kritická data sezení
+- **Zajistěte**, že čerstvá data se vždy načtou ze serveru při návštěvě dashboardu
+- **Otestujte**, že optimalizovaný přístup zachovává stejný uživatelský zážitek
 
-**Pokročilé úvahy:**
-- **Porovnejte** kompromisy mezi ukládáním úplných dat účtu a pouze autentizačních tokenů
-- **Zdokumentujte** svá rozhodnutí a důvody pro budoucí členy týmu
+**Pokročilé zvažování:**
+- **Porovnejte** kompromisy mezi ukládáním kompletních dat účtu vs. jen autentizačních tokenů
+- **Zdokumentujte** svá rozhodnutí a zdůvodnění pro budoucí vývojáře v týmu
 
-Tato výzva vám pomůže myslet jako profesionální vývojář, který zvažuje jak uživatelský zážitek, tak efektivitu aplikace. Věnujte čas experimentování s různými přístupy!
+Tato výzva vám pomůže myslet jako profesionální vývojář, který zohledňuje jak uživatelský zážitek, tak efektivitu aplikace. Věnujte čas experimentování s různými přístupy!
 
 ## Kvíz po přednášce
 
-[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
-## Úkol
+## Zadání
 
-[Implementujte dialog "Přidat transakci"](assignment.md)
+[Implementujte dialog „Přidat transakci“](assignment.md)
 
-Zde je příklad výsledku po dokončení úkolu:
+Zde je ukázkový výsledek po dokončení zadání:
 
-![Screenshot zobrazující příklad dialogu "Přidat transakci"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.cs.png)
+![Screenshot zobrazující ukázkový dialog „Přidat transakci“](../../../../translated_images/dialog.93bba104afeb79f1.cs.png)
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o vyloučení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby či nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neručíme za jakékoli nedorozumění nebo mylné výklady vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

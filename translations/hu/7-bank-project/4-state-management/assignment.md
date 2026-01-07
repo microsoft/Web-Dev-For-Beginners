@@ -112,7 +112,7 @@ Tekintsd meg a [szerver API dokumentációját](../api/README.md) az alábbiakho
 **Várható eredmény:**
 A feladat elvégzése után a banki alkalmazásodnak teljesen működőképes "Tranzakció hozzáadása" funkcióval kell rendelkeznie, amely professzionálisan néz ki és működik:
 
-![Példa "Tranzakció hozzáadása" párbeszédablakot bemutató képernyőkép](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.hu.png)
+![Példa "Tranzakció hozzáadása" párbeszédablakot bemutató képernyőkép](../../../../translated_images/dialog.93bba104afeb79f1.hu.png)
 
 ## Az implementáció tesztelése
 

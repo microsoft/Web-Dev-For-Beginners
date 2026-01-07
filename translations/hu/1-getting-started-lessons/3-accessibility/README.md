@@ -1,45 +1,85 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
-  "translation_date": "2025-10-24T20:01:16+00:00",
+  "original_hash": "7f2c48e04754724123ea100a822765e5",
+  "translation_date": "2026-01-07T03:10:19+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "hu"
 }
 -->
-# Hozzáférhető weboldalak létrehozása
+# Akadálymentes weboldalak készítése
 
-![Minden a hozzáférhetőségről](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.hu.png)
-> Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
+![Mindent az akadálymentességről](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.hu.png)
+> Sketchnote [Tomomi Imura](https://twitter.com/girlie_mac) műve
 
+```mermaid
+journey
+    title Az akadálymentesség tanulási kalandja
+    section Alapok
+      Felhasználók megértése: 5: You
+      Tesztelő eszközök: 4: You
+      POUR elvek: 5: You
+    section Képességek fejlesztése
+      Szemantikus HTML: 4: You
+      Vizuális tervezés: 5: You
+      ARIA technikák: 4: You
+    section Gyakorlás mesterfokon
+      Billentyűzetes navigáció: 5: You
+      Űrlap akadálymentessége: 4: You
+      Valós tesztelés: 5: You
+```
 ## Előadás előtti kvíz
 [Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/)
 
-> A web ereje az egyetemességében rejlik. A hozzáférés mindenki számára, függetlenül a fogyatékosságtól, alapvető szempont.
+> A web ereje az egyetemességében rejlik. Az, hogy mindenki hozzáférhessen, függetlenül a fogyatékosságtól, alapvető szempont.
 >
-> \- Sir Timothy Berners-Lee, a W3C igazgatója és a World Wide Web feltalálója
+> \- Sir Timothy Berners-Lee, a W3C igazgatója és a Világháló feltalálója
 
-Van valami, ami meglephet: amikor hozzáférhető weboldalakat készítesz, nem csak a fogyatékkal élőknek segítesz – valójában mindenki számára jobbá teszed a webet!
+Íme valami, ami meglephet: amikor akadálymentes weboldalakat készítesz, nem csak a fogyatékossággal élőknek segítesz — valójában jobbá teszed a webet mindenki számára!
 
-Észrevetted már azokat a járdaszegélyeket az utcasarkokon? Eredetileg kerekesszékek számára tervezték őket, de most már segítenek a babakocsis embereknek, a szállítómunkásoknak, akik kézikocsit használnak, az utazóknak gurulós bőröndökkel, és a kerékpárosoknak is. Pontosan így működik a hozzáférhető webdesign – az egyik csoportot segítő megoldások gyakran mindenki számára előnyösek. Elég menő, igaz?
+Észrevetted már azokat a járdaszegély-lejtőket az utcák sarkainál? Eredetileg kerekesszékesek számára tervezték, de ma már babakocsisoknak, kéziszerszámokkal dolgozó futároknak, gurulós poggyásszal utazóknak és kerékpárosoknak is segítenek. Pont így működik az akadálymentes webdesign is — azok a megoldások, amelyek egy csoportnak segítenek, gyakran végül mindenki számára hasznosak lesznek. Elég menő, igaz?
 
-Ebben a leckében azt fogjuk megvizsgálni, hogyan lehet olyan weboldalakat létrehozni, amelyek valóban mindenki számára működnek, függetlenül attól, hogyan böngészik a webet. Felfedezhetsz gyakorlati technikákat, amelyek már beépültek a webes szabványokba, kipróbálhatsz tesztelő eszközöket, és megláthatod, hogyan teszi a hozzáférhetőség a weboldalakat minden felhasználó számára használhatóbbá.
+Ebben az órában megvizsgáljuk, hogyan készíthetünk olyan weboldalakat, amelyek valóban mindenki számára működnek, bármilyen böngészési módot alkalmazzanak is. Felfedezheted a webes szabványokba beépített gyakorlati technikákat, kipróbálhatsz tesztelő eszközöket, és meglátod, miként teszi az akadálymentesség a weboldalaidat minden felhasználó számára használhatóbbá.
 
-A lecke végére magabiztosan tudod majd a hozzáférhetőséget természetes részévé tenni a fejlesztési munkafolyamatodnak. Készen állsz arra, hogy felfedezd, hogyan nyithatja meg a webet milliárdnyi felhasználó előtt az átgondolt tervezés? Merüljünk el benne!
+Az óra végére magabiztos leszel abban, hogy az akadálymentességet természetes részeként kezeld a fejlesztési munkafolyamataidnak. Készen állsz felfedezni, hogyan nyithatják meg az átgondolt tervezési döntések a webet milliárdok számára? Vágjunk bele!
 
-> Ezt a leckét elérheted a [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon) oldalon!
+```mermaid
+mindmap
+  root((Web akadálymentesítés))
+    Users
+      Képernyőolvasók
+      Billentyűzetes navigáció
+      Hangvezérlés
+      Nagyítás
+    Technologies
+      HTML szemantika
+      ARIA attribútumok
+      CSS fókusz jelzők
+      Billentyűzet események
+    Benefits
+      Szélesebb közönség
+      Jobb SEO
+      Jogi megfelelés
+      Univerzális tervezés
+    Testing
+      Automatikus eszközök
+      Manuális tesztelés
+      Felhasználói visszajelzés
+      Valós segédeszközök
+```
+> Ezt az órát elvégezheted a [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon) oldalán is!
 
 ## Az asszisztív technológiák megértése
 
-Mielőtt belevágnánk a kódolásba, szánjunk egy pillanatot arra, hogy megértsük, hogyan tapasztalják meg a webet a különböző képességekkel rendelkező emberek. Ez nem csak elmélet – ezeknek a valós navigációs mintáknak a megértése sokkal jobb fejlesztővé tesz!
+Mielőtt kódolásba kezdenénk, szánjunk egy percet arra, hogy megértsük, hogyan tapasztalják meg a webet különböző képességű emberek. Ez nem csak elmélet — ezeknek a valós navigációs mintáknak az ismerete sokkal jobb fejlesztővé tesz!
 
-Az asszisztív technológiák lenyűgöző eszközök, amelyek segítenek a fogyatékkal élőknek a weboldalakkal való interakcióban, oly módon, ami meglephet téged. Ha egyszer megérted, hogyan működnek ezek a technológiák, a hozzáférhető webes élmények létrehozása sokkal intuitívabbá válik. Olyan, mintha megtanulnád a kódodat valaki más szemével látni.
+Az asszisztív technológiák igazán lenyűgöző eszközök, amelyek segítenek a fogyatékossággal élőknek úgy használni a weboldalakat, ami talán meglepő lehet. Amint megérted ezek működését, az akadálymentes webes élmények készítése jóval intuitívabbá válik. Olyan, mintha más szemén keresztül látnád a kódodat.
 
 ### Képernyőolvasók
 
-A [képernyőolvasók](https://en.wikipedia.org/wiki/Screen_reader) meglehetősen kifinomult technológiák, amelyek a digitális szöveget beszéddé vagy Braille kimenetté alakítják. Bár elsősorban látássérült emberek használják őket, rendkívül hasznosak tanulási nehézségekkel küzdő felhasználók, például diszlexiások számára is.
+A [képernyőolvasók](https://en.wikipedia.org/wiki/Screen_reader) elég kifinomult technológiák, melyek a digitális szöveget beszéddé vagy braille kimenetté alakítják. Habár elsősorban látássérültek használják őket, nagyon hasznosak a tanulási nehézségekkel, például diszlexiával küzdő felhasználók számára is.
 
-Úgy gondolok a képernyőolvasóra, mint egy nagyon okos narrátorra, aki könyvet olvas neked. Logikai sorrendben olvassa fel a tartalmat, bejelenti az interaktív elemeket, mint például "gomb" vagy "link", és billentyűparancsokat biztosít az oldal körüli navigációhoz. De van egy dolog – a képernyőolvasók csak akkor tudják elvégezni a varázslatukat, ha megfelelő struktúrával és értelmes tartalommal építjük fel a weboldalakat. Ez a te feladatod fejlesztőként!
+Szeretem úgy elképzelni a képernyőolvasót, mint egy nagyon okos mesélőt, aki neked felolvassa a könyvet. Logikus sorrendben olvassa fel a tartalmat, bejelenti az interaktív elemeket, például „gomb” vagy „hivatkozás”, és lehetővé teszi a gyors billentyűparancsokat, hogy az oldalon könnyen mozogj. De az a lényeg, hogy a képernyőolvasók csak akkor tudják varázslatukat tenni, ha megfelelő szerkezetet és értelmes tartalmat építünk a weboldalakba. Itt jössz te képbe fejlesztőként!
 
 **Népszerű képernyőolvasók különböző platformokon:**
 - **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (ingyenes és legnépszerűbb), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (beépített)
@@ -47,131 +87,238 @@ A [képernyőolvasók](https://en.wikipedia.org/wiki/Screen_reader) meglehetőse
 - **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (beépített)
 - **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (ingyenes és nyílt forráskódú)
 
-**Hogyan navigálnak a képernyőolvasók a webes tartalomban:**
+**Hogyan navigálnak a képernyőolvasók webtartalmakon:**
 
-A képernyőolvasók többféle navigációs módszert kínálnak, amelyek hatékony böngészést tesznek lehetővé a tapasztalt felhasználók számára:
-- **Szekvenciális olvasás**: Felülről lefelé olvassa a tartalmat, mint egy könyvet követve
-- **Landmark navigáció**: Ugrás az oldal szekciói között (fejléc, navigáció, fő tartalom, lábléc)
-- **Fejléc navigáció**: Ugrás a fejlécek között az oldal struktúrájának megértéséhez
-- **Linkek listája**: Az összes link listájának generálása gyors hozzáféréshez
-- **Űrlapvezérlők**: Közvetlen navigáció a beviteli mezők és gombok között
+A képernyőolvasók többféle navigációs módszert kínálnak, amelyek hatékony böngészést tesznek lehetővé a tapasztalt felhasználóknak:
+- **Sorrendi olvasás**: A tartalmat fentről lefelé olvassa, mint egy könyvet
+- **Jelölőpontok közötti navigáció**: Ugrás az oldal különböző részei (fejléc, navigáció, fő tartalom, lábléc) között
+- **Címsorok közötti navigáció**: Címsorok közti ugrás a lap szerkezetének megértéséhez
+- **Hivatkozások listája**: Az összes hivatkozás felsorolása gyors hozzáféréshez
+- **Űrlap vezérlőelemei**: Közvetlen navigáció a bevitel mezők és gombok között
 
-> 💡 **Egy érdekesség, ami lenyűgözött**: A képernyőolvasó felhasználók 68%-a elsősorban a fejlécek alapján navigál ([WebAIM felmérés](https://webaim.org/projects/screenreadersurvey9/#finding)). Ez azt jelenti, hogy a fejlécstruktúrád olyan, mint egy térkép a felhasználók számára – ha jól csinálod, szó szerint segítesz az embereknek gyorsabban megtalálni a tartalmadat!
+> 💡 **Valami, ami megfogott**: A képernyőolvasó felhasználók 68%-a elsősorban a címsorok segítségével navigál ([WebAIM felmérés](https://webaim.org/projects/screenreadersurvey9/#finding)). Ez azt jelenti, hogy a címsorszerkezet olyan, mint egy térkép a felhasználóknak — ha jól készíted el, szó szerint segítesz nekik gyorsabban eligazodni a tartalomban!
 
-### Tesztelési munkafolyamat kiépítése
+### A tesztelési munkafolyamat kialakítása
 
-Van egy jó hír – a hatékony hozzáférhetőségi tesztelés nem kell, hogy túlterhelő legyen! Érdemes kombinálni az automatizált eszközöket (nagyszerűek az egyértelmű problémák észlelésére) némi kézi teszteléssel. Íme egy rendszerezett megközelítés, amely a legtöbb problémát észleli anélkül, hogy az egész napodat felemésztené:
+Van egy jó hírem — a hatékony akadálymentességi tesztelés nem kell, hogy túlterhelő legyen! Érdemes ötvözni az automatikus eszközöket (amelyek remekül fogják az egyértelmű hibákat) és a kézi tesztelést is. Íme egy rendszerezett módszer, amivel a legtöbb problémát tudod felfedezni anélkül, hogy az egész napodat felemésztené:
 
 **Alapvető kézi tesztelési munkafolyamat:**
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
-    B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
-    D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
-    F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
-    H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
-    J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+flowchart TD
+    A[🚀 Tesztelés indítása] --> B{⌨️ Billentyűzet navigáció}
+    B --> C[Mozgás a tab billentyűvel az összes interaktív elemen]
+    C --> D{🎧 Képernyőolvasó tesztelés}
+    D --> E[Teszt NVDA/VoiceOver-rel]
+    E --> F{🔍 Nagyítás tesztelése}
+    F --> G[Nagyítás 200%-ra és funkciók tesztelése]
+    G --> H{🎨 Szín/kontraszt ellenőrzése}
+    H --> I[Minden szöveg kontrasztaránya ellenőrizve]
+    I --> J{👁️ Fókusz kezelése}
+    J --> K[Fókuszindikátorok láthatóságának biztosítása]
+    K --> L[✅ Tesztelés befejezve]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
 ```
+**Lépésenkénti tesztlista:**
+1. **Billentyűzetes navigáció**: Csak Tab, Shift+Tab, Enter, Space és nyíl billentyűk használata
+2. **Képernyőolvasó tesztelés**: Kapcsold be az NVDA, VoiceOver vagy Narrator programot és navigálj csukott szemmel
+3. **Nagyítás tesztelés**: Teszteld 200%-os és 400%-os nagyítási szinteken
+4. **Színkontraszt ellenőrzés**: Vizsgáld meg az összes szöveget és felületet
+5. **Fókuszjelző tesztelés**: Győződj meg arról, hogy az összes interaktív elem jól látható fókuszállapottal rendelkezik
 
-**Lépésről lépésre tesztelési ellenőrzőlista:**
-1. **Billentyűzet navigáció**: Csak a Tab, Shift+Tab, Enter, Space és nyílbillentyűket használd
-2. **Képernyőolvasó tesztelés**: Kapcsold be az NVDA-t, VoiceOver-t vagy Narrator-t, és navigálj csukott szemmel
-3. **Zoom tesztelés**: Teszteld 200% és 400% nagyítási szinteken
-4. **Színkontraszt ellenőrzés**: Ellenőrizd az összes szöveget és UI-komponenst
-5. **Fókuszjelző tesztelés**: Győződj meg róla, hogy minden interaktív elemnek látható fókuszállapota van
+✅ **Kezdj Lighthouse-szal**: Nyisd meg a böngésződ fejlesztői eszközeit, futtass egy Lighthouse akadálymentességi auditot, majd használd az eredményeket a kézi tesztelési fókuszterületek meghatározásához.
 
-✅ **Kezdd a Lighthouse-szal**: Nyisd meg a böngésződ DevTools-át, futtass egy Lighthouse hozzáférhetőségi auditot, majd használd az eredményeket a kézi tesztelési fókuszterületek irányítására.
+### Nagyító és nagyítási eszközök
 
-### Zoom és nagyítási eszközök
+Ismered azt, amikor a telefonodon csippentve nagyítasz, mert a szöveg túl kicsi, vagy hunyorogsz a laptopod képernyője felé erős napsütésben? Sok felhasználó minden nap nagyító eszközökre támaszkodik, hogy olvashatóvá tegye a tartalmat. Ez magában foglalja az aliglátó embereket, az időseket és bárkit, aki valaha próbált egy weboldalt kültéren olvasni.
 
-Tudod, amikor néha nagyítasz a telefonodon, mert a szöveg túl kicsi, vagy hunyorogsz a laptop képernyőjén erős napfényben? Sok felhasználó napi szinten támaszkodik nagyítási eszközökre, hogy olvashatóvá tegye a tartalmat. Ez magában foglalja a gyengén látó embereket, az idősebb felnőtteket, és bárkit, aki valaha próbált weboldalt olvasni a szabadban.
+A modern nagyítási technológiák már túlmutatnak azon, hogy egyszerűen nagyobbá teszik a dolgokat. Megérteni, hogyan működnek ezek az eszközök, segít olyan reszponzív dizájnokat létrehozni, amelyek bármilyen nagyítás mellett is funkcionálisak és vonzóak maradnak.
 
-A modern nagyítási technológiák túlmutatnak azon, hogy egyszerűen csak nagyobbá teszik a dolgokat. Ha megérted, hogyan működnek ezek az eszközök, olyan reszponzív dizájnokat hozhatsz létre, amelyek bármilyen nagyítási szinten funkcionálisak és vonzóak maradnak.
+**Modern böngészői nagyítási képességek:**
+- **Oldal nagyítása**: Az összes tartalmat arányosan méretezi (szöveg, képek, elrendezés) – ez a preferált módszer
+- **Csak szöveg nagyítása**: A betűméret növelése az eredeti elrendezés megtartásával
+- **Csippentő nagyítás**: Mobil gesztus a ideiglenes nagyításhoz
+- **Böngésző támogatás**: Minden modern böngésző támogatja az akár 500%-os nagyítást anélkül, hogy megtörné a funkcionalitást
 
-**Modern böngésző nagyítási képességek:**
-- **Oldal nagyítás**: Minden tartalmat arányosan méretez (szöveg, képek, elrendezés) – ez az előnyben részesített módszer
-- **Csak szöveg nagyítás**: Növeli a betűméretet, miközben megtartja az eredeti elrendezést
-- **Csípéses nagyítás**: Mobil gesztus támogatás ideiglenes nagyításhoz
-- **Böngésző támogatás**: Minden modern böngésző támogatja a nagyítást akár 500%-ig anélkül, hogy a funkcionalitás megszakadna
+**Speciális nagyító szoftverek:**
+- **Windows**: [Nagyító](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (beépített), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
+- **macOS/iOS**: [Nagyító](https://www.apple.com/accessibility/mac/vision/) (beépített, fejlett funkciókkal)
 
-**Speciális nagyítási szoftverek:**
-- **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (beépített), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
-- **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (beépített, fejlett funkciókkal)
+> ⚠️ **Tervezési megfontolás**: A WCAG előírja, hogy a tartalom működőképes maradjon 200%-os nagyítás mellett. Ezen a szinten a vízszintes görgetés minimális legyen, és az összes interaktív elem legyen hozzáférhető.
 
-> ⚠️ **Tervezési szempont**: A WCAG megköveteli, hogy a tartalom 200%-os nagyításnál is funkcionális maradjon. Ezen a szinten a vízszintes görgetésnek minimálisnak kell lennie, és minden interaktív elemnek hozzáférhetőnek kell maradnia.
+✅ **Teszteld a reszponzív dizájnodat**: Nagyítsd a böngésződ 200%-ra és 400%-ra. Az elrendezés szépen alkalmazkodik? Minden funkció elérhető még túlzott görgetés nélkül?
 
-✅ **Teszteld a reszponzív dizájnodat**: Nagyítsd a böngésződet 200%-ra és 400%-ra. Az elrendezésed elegánsan alkalmazkodik? Még mindig hozzáférsz minden funkcióhoz túlzott görgetés nélkül?
+## Modern akadálymentességi tesztelő eszközök
 
-## Modern hozzáférhetőségi tesztelő eszközök
+Most, hogy érted, hogyan navigálnak az emberek a weben asszisztív technológiákkal, nézzük meg a segítségül szolgáló eszközöket az akadálymentes weboldalak építésére és tesztelésére.
 
-Most, hogy megértetted, hogyan navigálnak az emberek a weben asszisztív technológiákkal, nézzük meg azokat az eszközöket, amelyek segítenek hozzáférhető weboldalak építésében és tesztelésében.
-
-Gondolj rá így: az automatizált eszközök nagyszerűek az egyértelmű problémák (például hiányzó alt szöveg) észlelésére, míg a kézi tesztelés segít biztosítani, hogy a weboldalad a valós világban is jól használható legyen. Együtt magabiztosságot adnak, hogy a weboldalaid mindenki számára működnek.
+Gondolj úgy erre, hogy az automatikus eszközök jól fogják az egyértelmű hibákat (például hiányzó alt szöveg), míg a kézi tesztelés segít megbizonyosodni arról, hogy az oldal használata a való életben is kényelmes. Együtt magabiztosabbá tesznek abban, hogy a weboldalaid mindenki számára működnek.
 
 ### Színkontraszt tesztelés
 
-Van egy jó hír: a színkontraszt az egyik leggyakoribb hozzáférhetőségi probléma, de egyben az egyik legkönnyebben javítható is. A jó kontraszt mindenki számára előnyös – a látássérült felhasználóktól kezdve azokig, akik a telefonjukat próbálják olvasni a strandon.
+Van egy jó hír: a színkontraszt az egyik leggyakoribb akadálymentességi probléma, de egyben az egyik legegyszerűbb is javítani. A jó kontraszt mindenkinek előnyös — a látássérültektől a strandon olvasgató telefonhasználókig.
 
-**WCAG kontraszt követelmények:**
+**WCAG kontrasztkövetelmények:**
 
-| Szövegtípus | WCAG AA (Minimum) | WCAG AAA (Fokozott) |
-|-------------|-------------------|---------------------|
-| **Normál szöveg** (18pt alatt) | 4.5:1 kontraszt arány | 7:1 kontraszt arány |
-| **Nagy szöveg** (18pt+ vagy 14pt+ félkövér) | 3:1 kontraszt arány | 4.5:1 kontraszt arány |
-| **UI komponensek** (gombok, űrlapkeretek) | 3:1 kontraszt arány | 3:1 kontraszt arány |
+| Szöveg típusa | WCAG AA (Minimum) | WCAG AAA (Fokozott) |
+|--------------|-------------------|---------------------|
+| **Normál szöveg** (18pt alatt) | 4.5:1 kontrasztarány | 7:1 kontrasztarány |
+| **Nagy szöveg** (18pt+ vagy 14pt+ félkövér) | 3:1 kontrasztarány | 4.5:1 kontrasztarány |
+| **Felületi elemek** (gombok, űrlapszegélyek) | 3:1 kontrasztarány | 3:1 kontrasztarány |
 
 **Alapvető tesztelő eszközök:**
-- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Asztali alkalmazás színválasztóval
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Webalapú azonnali visszajelzéssel
-- [Stark](https://www.getstark.co/) - Tervezőeszköz plugin Figma, Sketch, Adobe XD számára
-- [Accessible Colors](https://accessible-colors.com/) - Hozzáférhető színpaletták keresése
+- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) – Asztali alkalmazás színválasztóval
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) – Webes, azonnali visszajelzéssel
+- [Stark](https://www.getstark.co/) – Tervező eszköz plugin Figma, Sketch, Adobe XD-hez
+- [Accessible Colors](https://accessible-colors.com/) – Akadálymentes színpaletták keresése
 
-✅ **Hozz létre jobb színpalettákat**: Kezdd a márkád színeivel, és használj kontraszt ellenőrzőket hozzáférhető variációk létrehozásához. Dokumentáld ezeket a tervezési rendszered hozzáférhető szín tokenjeiként.
+✅ **Készíts jobb színpalettákat**: Kezdd a márkád színeivel, és használd a kontraszt ellenőrzőket akadálymentes variációk létrehozásához. Dokumentáld őket mint a dizájn rendszered akadálymentes színjegyeit.
 
-### Átfogó hozzáférhetőségi auditálás
+### Átfogó akadálymentességi auditálás
 
-A leghatékonyabb hozzáférhetőségi tesztelés több megközelítést kombinál. Egyetlen eszköz sem talál meg mindent, így a különböző módszerekkel végzett tesztelési rutin biztosítja az alapos lefedettséget.
+A leghatékonyabb akadálymentességi tesztelés több megközelítés kombinációja. Egyetlen eszköz sem talál meg mindent, ezért egy tesztelési rutin összeállítása különböző módszerekkel biztosítja a teljes körű lefedettséget.
 
-**Böngésző alapú tesztelés (beépítve a DevTools-ba):**
-- **Chrome/Edge**: Lighthouse hozzáférhetőségi audit + Hozzáférhetőségi panel
-- **Firefox**: Hozzáférhetőségi ellenőrző részletes fa nézettel
+**Böngészőben elérhető tesztelés (beépítve a fejlesztői eszközökbe):**
+- **Chrome/Edge**: Lighthouse akadálymentességi audit + Accessibility panel
+- **Firefox**: Accessibility Inspector részletes fa nézettel
 - **Safari**: Audit fül a Web Inspectorban VoiceOver szimulációval
 
-**Professzionális tesztelő bővítmények:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - Iparági szabvány automatizált tesztelés
-- [WAVE](https://wave.webaim.org/extension/) - Vizualis visszajelzés hibakiemeléssel
-- [Accessibility Insights](https://accessibilityinsights.io/) - Microsoft átfogó tesztelő csomagja
+**Professzionális tesztelő kiegészítők:**
+- [axe DevTools](https://www.deque.com/axe/devtools/) – Iparági szabványú automatikus tesztelés
+- [WAVE](https://wave.webaim.org/extension/) – Vizuális visszajelzés hibák kiemelésével
+- [Accessibility Insights](https://accessibilityinsights.io/) – Microsoft komplex tesztelő eszközei
 
-**Parancssoros és CI/CD integráció:**
-- [axe-core](https://github.com/dequelabs/axe-core) - JavaScript könyvtár automatizált teszteléshez
-- [Pa11y](https://pa11y.org/) - Parancssoros hozzáférhetőségi tesztelő eszköz
-- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Automatizált hozzáférhetőségi pontozás
+**Parancssori és CI/CD integráció:**
+- [axe-core](https://github.com/dequelabs/axe-core) – JavaScript könyvtár automatizált teszteléshez
+- [Pa11y](https://pa11y.org/) – Parancssori akadálymentességi tesztelő eszköz
+- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) – Automatikus akadálymentességi pontozás
 
-> 🎯 **Tesztelési cél**: Törekedj egy 95+ Lighthouse hozzáférhetőségi pontszámra alapként. Ne feledd, az automatizált eszközök csak a hozzáférhetőségi problémák körülbelül 30-40%-át találják meg – a kézi tesztelés továbbra is elengedhetetlen!
+> 🎯 **Tesztelési cél**: Tűzd ki, hogy a Lighthouse akadálymentességi pontszámod elérje a 95+ értéket. Ne feledd, az automatikus eszközök csak a hibák 30-40%-át találják meg – a kézi tesztelés továbbra is elengedhetetlen!
 
-## Hozzáférhetőség építése az alapoktól
+### 🧠 **Tesztelési készségek ellenőrzése: készen állsz, hogy hibákat találj?**
 
-A hozzáférhetőség sikerének kulcsa, hogy már az első naptól beépítsük az alapokba. Tudom, hogy csábító azt gondolni, hogy "később hozzáadom a hozzáférhetőséget", de ez olyan, mintha megpróbálnál rámpát építeni egy házhoz, miután már felépült. Lehetséges? Igen. Könnyű? Nem igazán.
+**Nézzük, hogyan érzed magad az akadálymentességi tesztelés kapcsán:**
+- Melyik tesztelési módszer tűnik számodra a legmegközelíthetőbbnek most?
+- El tudod képzelni, hogy egy teljes napot csak billentyűzettel navigálsz?
+- Mi az az egy akadálymentességi akadály, amivel személyesen találkoztál már online?
 
-Gondolj a hozzáférhetőségre, mint egy ház tervezésére – sokkal könnyebb a kerekesszékes hozzáférhetőséget beépíteni a kezdeti építészeti tervekbe, mint utólag mindent átalakítani.
+```mermaid
+pie title "Különböző Módszerekkel Felismert Hozzáférhetőségi Problémák"
+    "Automatizált Eszközök" : 35
+    "Kézi Tesztelés" : 40
+    "Felhasználói Visszajelzés" : 25
+```
+> **Magabiztosság növelő**: A profi akadálymentességi tesztelők pontosan ezt a módszerkombinációt használják. Te is az iparági szabványokat tanulod!
 
-### A POUR elvek: A hozzáférhetőség alapja
+## Az akadálymentesség alapjainak megteremtése
 
-A Webes Tartalom Hozzáférhetőségi Irányelvek (WCAG) négy alapvető elvre épülnek, amelyek a POUR szót alkotják. Ne aggódj – ezek nem száraz akadémiai fogalmak
-A színek erőteljesek a kommunikációban, de soha nem szabad, hogy csak színekkel közvetíts fontos információt. A színeken túlmutató tervezés robusztusabb, befogadóbb élményeket teremt, amelyek több helyzetben működnek.
+Az akadálymentesség sikerének kulcsa, hogy már az alapoktól építsd be a fejlesztésbe. Tudom, hogy kísértő, hogy úgy gondold: „majd később hozzáadom az akadálymentességet”, de ez olyan, mintha egy lépcsős házhoz utólag próbálnál rámpát építeni. Lehetséges? Igen. Könnyű? Nem igazán.
 
-**Tervezés színlátási különbségekre:**
+Gondolj az akadálymentességre úgy, mint egy ház tervezésére — sokkal egyszerűbb már az eredeti építészeti tervbe beépíteni a kerekesszékes hozzáférhetőséget, mint utólag hozzáigazítani mindent.
 
-Körülbelül a férfiak 8%-ának és a nők 0,5%-ának van valamilyen színlátási különbsége (gyakran "színtévesztésnek" nevezik). A leggyakoribb típusok:
-- **Deuteranopia**: Nehézség a piros és zöld megkülönböztetésében
+### A POUR elvei: Az akadálymentességed alapja
+
+A Webes Tartalom Akadálymentességi Irányelvek (WCAG) négy alapvető elven alapulnak, amelyek POUR-t alkotnak. Ne aggódj — ezek nem rideg elméleti fogalmak! Valójában nagyon gyakorlati útmutatók a mindenki számára használható tartalom készítéséhez.
+
+Amint rászoksz a POUR szemléletre, az akadálymentességi döntéshozatal jóval intuitívabbá válik. Olyan, mintha egy mentális ellenőrző listád lenne, amely vezeti a tervezési választásaidat. Nézzük meg:
+
+```mermaid
+flowchart LR
+    A[🔍 ÉRTHETŐ<br/>Érzékelhetik-e a felhasználók?] --> B[🎮 MŰKÖDHETŐ<br/>Használhatják-e a felhasználók?]
+    B --> C[📖 ÉRTHETŐ<br/>Megértik-e a felhasználók?]
+    C --> D[💪 ROBUSZTUS<br/>Működik-e mindenhol?]
+    
+    A1[Alternatív szöveg<br/>Feliratok<br/>Kontraszt] --> A
+    B1[Billentyűzet hozzáférés<br/>Nincs roham<br/>Időkorlátok] --> B
+    C1[Világos nyelvezet<br/>Előre látható<br/>Hibajavítás] --> C
+    D1[Érvényes kód<br/>Kompatibilis<br/>Jövőbiztos] --> D
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+```
+**🔍 Érzékelhető**: Az információnak oly módon kell megjelenni, hogy a felhasználók az elérhető érzékszerveiken keresztül érzékelhessék azt
+
+- Szöveges alternatívákat biztosítani nem szöveges tartalmakhoz (képek, videók, hangok)
+- Biztosítani kell a megfelelő színkontrasztot minden szöveg és felület esetén
+- Feliratok és leiratok biztosítása multimédiás tartalmakhoz
+- Olyan tartalmat tervezni, amely 200%-os nagyítás esetén is működik
+- Több érzékszervi jellemző használata (nem csak a szín) az információ közvetítéséhez
+
+**🎮 Használható**: Az összes felületi elemet működtetni kell az elérhető bevitel módokon keresztül
+
+- Minden funkció elérhető legyen billentyűzetről történő navigációval
+- Biztosítani kell a felhasználóknak elegendő időt az olvasásra és az interakcióra
+- Elkerülni az olyan tartalmat, ami görcsöt vagy vestibuláris zavarokat okozhat
+- Segíteni a hatékony navigációt világos szerkezettel és jelölőpontokkal
+- Biztosítani, hogy az interaktív elemek célterülete megfelelő méretű legyen (minimum 44px)
+
+**📖 Érthető**: Az információnak és a kezelőfelületnek egyértelműnek és könnyen érthetőnek kell lennie
+
+- Egyértelmű, egyszerű nyelvhasználat a célközönség számára megfelelően
+- Biztosítani, hogy a tartalom kiszámíthatóan, következetesen jelenjen meg és működjön
+- Világos utasításokat és hibajelzéseket adni a felhasználói bevitelhez
+- Segíteni a felhasználókat a hibák megértésében és javításában űrlapoknál
+- Logikus olvasási sorrend és információs hierarchia alkalmazása
+
+**💪 Robusztus**: A tartalomnak megbízhatóan működnie kell különböző technológiák és asszisztív eszközök esetén
+
+- **Használj érvényes, szemantikus HTML-t alapként**
+- **Biztosíts kompatibilitást a jelenlegi és jövőbeli asszisztív technológiákkal**
+- **Kövess webes szabványokat és legjobb gyakorlatokat a jelölés készítésekor**
+- **Teszteld különböző böngészőkben, eszközökön és segédeszközökkel**
+- **Strukturáld úgy a tartalmat, hogy az fokozatosan degradálódjon, ha az fejlett funkciók nem támogatottak**
+
+### 🎯 **POUR elvek ellenőrzése: Megjegyzés**
+
+**Gyors reflektálás az alapokra:**
+- Tudsz mondani olyan weboldal jellemzőt, ami egyik POUR elvet sem tart be?
+- Melyik elv tűnik számodra legtermészetesebbnek fejlesztőként?
+- Hogyan javíthatják ezek az elvek a tervezést mindenki számára, nem csak a fogyatékkal élőknek?
+
+```mermaid
+quadrantChart
+    title POUR elvek hatásmátrixa
+    x-axis Alacsony erőfeszítés --> Magas erőfeszítés
+    y-axis Alacsony hatás --> Magas hatás
+    quadrant-1 Gyors sikerek
+    quadrant-2 Nagy projektek
+    quadrant-3 Későbbre tervezve
+    quadrant-4 Stratégiai fókusz
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
+> **Emlékezz**: Kezdj magas hatású, alacsony erőfeszítésű javításokkal. A szemantikus HTML és az alt szöveg adja a legnagyobb akadálymentesítési előnyt a legkisebb erőfeszítéssel!
+
+## Akadálymentes vizuális tervezés létrehozása
+
+A jó vizuális tervezés és az akadálymentesség kéz a kézben jár. Ha akadálymentességet szem előtt tartva tervezel, gyakran fedezel fel tisztább, elegánsabb megoldásokat, amelyek minden felhasználónak előnyösek.
+
+Vizsgáljuk meg, hogyan készíthetünk vizuálisan vonzó terveket, amelyek mindenki számára működnek, függetlenül attól, milyen látási képességekkel rendelkeznek vagy milyen körülmények között nézik a tartalmadat.
+
+### Szín- és vizuális akadálymentességi stratégiák
+
+A szín erős kommunikációs eszköz, de soha ne legyen az egyetlen módja a fontos információ átadásának. A színek túlmutató tervezés erősebb, befogadóbb élményeket hoz létre, amelyek több helyzetben működnek.
+
+**Tervezés a színlátás különbségekhez:**
+
+Körülbelül a férfiak 8%-ának és a nők 0,5%-ának van valamilyen színlátási különbsége (gyakran "színvakságnak" nevezik). A leggyakoribb típusok:
+- **Deuteranopia**: Piros és zöld nehéz megkülönböztetése
 - **Protanopia**: A piros halványabbnak tűnik
-- **Tritanopia**: Nehézség a kék és sárga megkülönböztetésében (ritka)
+- **Tritanopia**: Kék és sárga felismerési nehézség (ritka)
 
 **Befogadó színstratégiák:**
 
@@ -200,19 +347,19 @@ Körülbelül a férfiak 8%-ának és a nők 0,5%-ának van valamilyen színlát
 }
 ```
 
-**A kontrasztkövetelményeken túl:**
-- Teszteld színválasztásaid színtévesztés-szimulátorokkal
-- Használj mintákat, textúrákat vagy formákat a színkódolás mellett
-- Biztosítsd, hogy az interaktív állapotok szín nélkül is megkülönböztethetők legyenek
-- Gondolj arra, hogyan néz ki a design magas kontrasztú módban
+**Alapvető kontraszt követelményeken túl:**
+- Teszteld a színválasztásaidat színvakság szimulátorokkal
+- Használj mintákat, textúrákat vagy formákat a szín mellett
+- Biztosítsd, hogy az interaktív állapotok színtől függetlenül is megkülönböztethetőek legyenek
+- Vedd figyelembe, hogyan néz ki a design magas kontraszt üzemmódban
 
-✅ **Teszteld a színek hozzáférhetőségét**: Használj eszközöket, mint például a [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/), hogy megnézd, hogyan jelenik meg az oldalad különböző színlátási típusokkal rendelkező felhasználóknak.
+✅ **Teszteld a szín akadálymentességet**: Használj eszközöket, mint a [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/), hogy lásd, hogyan jelenik meg az oldalad különböző színlátású felhasználóknak.
 
 ### Fókuszjelzők és interakciótervezés
 
-A fókuszjelzők a digitális kurzor megfelelői – megmutatják a billentyűzetet használó felhasználóknak, hogy hol vannak az oldalon. Jól megtervezett fókuszjelzők mindenki számára javítják az élményt, mivel egyértelművé és kiszámíthatóvá teszik az interakciókat.
+A fókuszjelzők a digitális kurzor megfelelői — megmutatják a billentyűzetet használóknak, hogy hol vannak az oldalon. A jól megtervezett fókuszjelzők mindenki élményét javítják azzal, hogy egyértelművé és kiszámíthatóvá teszik az interakciókat.
 
-**Modern fókuszjelzők legjobb gyakorlatai:**
+**Modern fókuszjelző legjobb gyakorlatok:**
 
 ```css
 /* Enhanced focus styles that work across browsers */
@@ -242,22 +389,43 @@ button:focus:not(:focus-visible) {
 ```
 
 **Fókuszjelző követelmények:**
-- **Láthatóság**: Legalább 3:1 kontrasztarány a környező elemekkel
-- **Szélesség**: Minimum 2px vastagság az elem körül
-- **Állandóság**: Láthatónak kell maradnia, amíg a fókusz máshová nem kerül
-- **Megkülönböztetés**: Vizuálisan különböznie kell más UI állapotoktól
+- **Láthatóság**: Legalább 3:1 kontrasztarány a környező elemekhez képest
+- **Szélesség**: Minimum 2 px vastag a teljes elem körül
+- **Tartósság**: Látható marad, amíg a fókusz el nem mozdul máshova
+- **Megkülönböztetés**: Vizualisan különböznie kell más UI állapotoktól
 
-> 💡 **Tervezési tipp**: A nagyszerű fókuszjelzők gyakran kombinálják a körvonalat, box-shadow-t és színváltozásokat, hogy különböző hátterek és kontextusok között is láthatóak legyenek.
+> 💡 **Tervezési tipp**: A nagyszerű fókuszjelzők gyakran kombinálják a körvonalat, dobozárnyékot és színváltoztatást, hogy minden háttéren és kontextusban látható legyen.
 
-✅ **Auditáld a fókuszjelzőket**: Tab-bal navigálj végig az oldaladon, és jegyezd fel, mely elemeknek van egyértelmű fókuszjelzője. Van olyan, amelyik nehezen látható vagy teljesen hiányzik?
+✅ **Ellenőrizd a fókuszjelzőket**: Navigálj a weboldaladon Tab billentyűvel és jegyezd fel, mely elemeknek van egyértelmű fókuszjelzőjük. Vannak-e nehezen látható vagy teljesen hiányzó fókuszjelzők?
 
-### Szemantikus HTML: A hozzáférhetőség alapja
+### Szemantikus HTML: az akadálymentesség alapja
 
-A szemantikus HTML olyan, mintha segítő technológiáknak GPS-t adnál a weboldaladhoz. Ha a megfelelő HTML elemeket használod a rendeltetésüknek megfelelően, gyakorlatilag részletes térképet biztosítasz képernyőolvasóknak, billentyűzeteknek és más eszközöknek, hogy hatékonyan navigáljanak.
+A szemantikus HTML olyan, mint egy GPS rendszer a segítő technológiák számára a weboldaladon. Ha a megfelelő HTML elemeket használod a rendeltetésüknek megfelelően, akkor tulajdonképpen részletes térképet adsz a képernyőolvasóknak, billentyűzeteknek és más eszközöknek, hogy hatékonyan navigáljanak.
 
-Egy analógia, ami igazán megvilágította számomra: a szemantikus HTML olyan, mint egy jól szervezett könyvtár, egyértelmű kategóriákkal és hasznos táblákkal, szemben egy raktárral, ahol a könyvek véletlenszerűen vannak szétszórva. Mindkét helyen ugyanazok a könyvek vannak, de melyikben próbálnál inkább keresni valamit? Pontosan!
+Íme egy analógia, ami nekem nagyon megfogta: a szemantikus HTML olyan, mintha egy jól szervezett könyvtárad lenne világos kategóriákkal és segítő táblákkal szemben egy raktárral, ahol a könyvek össze vannak dobálva. Mindkettőben megvannak ugyanazok a könyvek, de melyikben keresnél szívesebben valamit? Pontosan!
 
-**A hozzáférhető oldalstruktúra építőkövei:**
+```mermaid
+flowchart TD
+    A[🏠 HTML dokumentum] --> B[📰 fejléc]
+    A --> C[🧭 navigáció]
+    A --> D[📄 fő]
+    A --> E[📋 lábléc]
+    
+    B --> B1[h1: Webhely neve<br/>Logó & arculat]
+    C --> C1[ul: Navigáció<br/>Elsődleges linkek]
+    D --> D1[cikk: Tartalom<br/>szakasz: Alkérdések]
+    D --> D2[melléklet: Oldalsáv<br/>Kapcsolódó tartalom]
+    E --> E1[navigáció: Lábléclinkek<br/>Szerzői jogi információ]
+    
+    D1 --> D1a[h1: Oldalcím<br/>h2: Fő szakaszok<br/>h3: Alkérdések]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+**Az akadálymentes oldalstruktúra építőkövei:**
 
 ```html
 <!-- Landmark elements provide page navigation structure -->
@@ -312,36 +480,62 @@ Egy analógia, ami igazán megvilágította számomra: a szemantikus HTML olyan,
 </footer>
 ```
 
-**Miért alakítja át a szemantikus HTML a hozzáférhetőséget:**
+**Miért alakítja át a szemantikus HTML az akadálymentességet:**
 
-| Szemantikus elem | Cél | Képernyőolvasó előny |
-|------------------|-----|---------------------|
-| `<header>` | Oldal vagy szakasz fejléc | "Banner landmark" - gyors navigáció a tetejére |
-| `<nav>` | Navigációs linkek | "Navigation landmark" - navigációs szakaszok listája |
-| `<main>` | Elsődleges oldal tartalom | "Main landmark" - közvetlen ugrás a tartalomhoz |
-| `<article>` | Önálló tartalom | Bejelenti az cikk határait |
-| `<section>` | Tematikus tartalomcsoportok | Tartalmi struktúrát biztosít |
-| `<aside>` | Kapcsolódó oldalsáv tartalom | "Complementary landmark" |
-| `<footer>` | Oldal vagy szakasz lábléc | "Contentinfo landmark" |
+| Szemantikus Elem | Cél | Képernyőolvasó előny |
+|------------------|-----|-----------------------|
+| `<header>` | Oldal vagy szekció fejléc | "Banner látnivaló" - gyors navigáció a tetejére |
+| `<nav>` | Navigációs linkek | "Navigációs látnivaló" - navigációs szekciók listája |
+| `<main>` | Elsődleges oldal tartalom | "Fő látnivaló" - közvetlen ugrás a tartalomra |
+| `<article>` | Önálló tartalom | Kijelöli a cikk határait |
+| `<section>` | Témakörök tartalom | Tartalmi struktúrát biztosít |
+| `<aside>` | Kapcsolódó oldalsáv tartalom | "Kiegészítő látnivaló" |
+| `<footer>` | Oldal vagy szekció lábléc | "Tartalmi információ látnivaló" |
 
 **Képernyőolvasó szuperképességek szemantikus HTML-lel:**
-- **Landmark navigáció**: Azonnali ugrás az oldal fő szakaszai között
-- **Fejléc vázlatok**: Tartalomjegyzék generálása a fejlécstruktúrából
-- **Elem listák**: Linkek, gombok vagy űrlapvezérlők listáinak létrehozása
-- **Kontextus tudatosság**: Megérti a tartalmi szakaszok közötti kapcsolatokat
+- **Látnivaló alapú navigáció**: Azonnal ugrás a főbb oldalrészek között
+- **Címsorok vázlata**: Tartalomjegyzék generálása a címsorstruktúrából
+- **Elem listák**: Minden link, gomb vagy űrlap vezérlő listája készítése
+- **Kontekstus tudatosság**: Értelmezi a tartalmi szekciók közötti kapcsolatokat
 
-> 🎯 **Gyors teszt**: Próbáld meg navigálni az oldaladat képernyőolvasóval landmark gyorsbillentyűk (D landmarkhoz, H fejléchez, K linkhez NVDA/JAWS-ban) használatával. Logikusnak tűnik a navigáció?
+> 🎯 **Gyors teszt**: Próbáld meg navigálni az oldalad képernyőolvasóval látnivaló gyorsbillentyűkkel (D látnivaló, H címsor, K link NVDA/JAWS alatt). Értelmes a navigáció?
 
-✅ **Auditáld a szemantikus struktúrádat**: Használd a böngésződ DevTools hozzáférhetőségi paneljét, hogy megtekintsd a hozzáférhetőségi fát, és ellenőrizd, hogy a jelölésed logikus struktúrát hoz-e létre.
+### 🏗️ **Szemantikus HTML mesterellenőrzés: Erős alapok építése**
 
-### Fejléc hierarchia: Logikus tartalomvázlat létrehozása
+**Értékeljük a szemantikus tudásodat:**
+- Fel tudod ismerni a látnivalókat egy oldalon csak az HTML alapján?
+- Hogyan magyaráznád el egy barátnak a `<section>` és a `<div>` közötti különbséget?
+- Mi az első dolog, amit megnéznél, ha egy képernyőolvasó felhasználó navigációs problémát jelentene?
 
-A fejlécek abszolút kulcsfontosságúak a hozzáférhető tartalomhoz – olyanok, mint a gerinc, amely mindent összetart. A képernyőolvasó felhasználók erősen támaszkodnak a fejlécekre, hogy megértsék és navigálják a tartalmat. Gondolj rá úgy, mint egy tartalomjegyzék biztosítására az oldaladhoz.
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: div leves
+    UnsementicHTML --> SemanticHTML: Jelölőhelyek hozzáadása
+    SemanticHTML --> AccessibleHTML: Tesztelés AT-vel
+    AccessibleHTML --> [*]: Felhasználó siker!
+    
+    note right of UnsementicHTML
+        Képernyőolvasók elvesznek
+        Billentyűzetes navigáció hibás
+    end note
+    
+    note right of AccessibleHTML
+        Tiszta navigáció
+        Hatékony böngészés
+    end note
+```
+> **Professzionális tipp**: A jó szemantikus HTML automatikusan megoldja az akadálymentességi problémák kb. 70%-át. Ezt az alapot sajátítsd el jól, és jó úton vagy!
 
-**Íme a fejlécek aranyszabálya:**
-Soha ne hagyj ki szinteket. Mindig logikusan haladj `<h1>`-től `<h2>`-ig, `<h3>`-ig, és így tovább. Emlékszel, amikor iskolában vázlatokat készítettél? Pontosan ugyanaz az elv – nem ugornál "I. Fő pont"-ról közvetlenül "C. Al-alpont"-ra "A. Al-pont" nélkül, igaz?
+✅ **Ellenőrizd a szemantikus struktúrát**: Használd a böngésződ Fejlesztői eszközeiben az Akadálymentességi panelt az akadálymentességi fa megtekintéséhez, és győződj meg róla, hogy a markup logikus szerkezetet eredményez.
 
-**Tökéletes fejlécstruktúra példa:**
+### Címsor hierarchia: Logikus tartalomvázlat készítése
+
+A címsorok rendkívül fontosak az akadálymentes tartalomhoz — olyanok, mint a gerinc, ami mindent összetart. A képernyőolvasó felhasználók nagyban támaszkodnak a címsorokra a tartalom megértéséhez és navigálásához. Olyan, mintha tartalomjegyzéket adnál az oldaladhoz.
+
+**Íme a fő szabály a címsorokhoz:**
+Soha ne ugorj át szinteket. Mindig haladj logikusan `<h1>`-től `<h2>`-ig, majd `<h3>`-ig, és így tovább. Emlékszel amikor iskolában vázlatokat készítettél? Pont ugyanez az elv: nem ugrándoznál "I. Fő pont"-ról közvetlenül "C. Alpont-al-alponton"-ra "A. Alponton" nélkül, ugye?
+
+**Tökéletes címsor struktúra példa:**
 
 ```html
 <!-- ✅ Excellent: Logical, hierarchical progression -->
@@ -380,34 +574,34 @@ Soha ne hagyj ki szinteket. Mindig logikusan haladj `<h1>`-től `<h2>`-ig, `<h3>
 <h1>Another main heading?</h1> <!-- Multiple h1s -->
 ```
 
-**Fejléc legjobb gyakorlatok:**
-- **Egy `<h1>` oldalanként**: Általában az oldal fő címe vagy elsődleges tartalomfejléc
-- **Logikus haladás**: Soha ne hagyj ki szinteket (h1 → h2 → h3, nem h1 → h3)
-- **Leíró tartalom**: Tedd a fejléceket értelmessé, ha kontextus nélkül olvassák
-- **Vizuális stílus CSS-sel**: Használj CSS-t a megjelenéshez, HTML szinteket a struktúrához
+**Címsor legjobb gyakorlatok:**
+- **Egy `<h1>` oldalanként**: Általában az oldal fő címe vagy elsődleges tartalmi címsora
+- **Logikus előrehaladás**: Soha ne hagyj ki szinteket (h1 → h2 → h3, ne h1 → h3)
+- **Értelmes tartalom**: A címsorok értelmesek legyenek, ha kontextus nélkül olvassák őket
+- **Vizuális stílus CSS-sel**: Megjelenéshez CSS-t használj, a HTML szintjeit a szerkezethez
 
 **Képernyőolvasó navigációs statisztikák:**
-- A képernyőolvasó felhasználók 68%-a fejléc alapján navigál ([WebAIM felmérés](https://webaim.org/projects/screenreadersurvey9/#finding))
-- A felhasználók logikus fejlécvázlatot várnak
-- A fejlécek biztosítják a leggyorsabb módot az oldal struktúrájának megértésére
+- A képernyőolvasó felhasználók 68%-a címsorok alapján navigál ([WebAIM felmérés](https://webaim.org/projects/screenreadersurvey9/#finding))
+- A felhasználók logikus címsorvázlatot várnak el
+- A címsorok adják az oldal szerkezetének leggyorsabb megértési módját
 
-> 💡 **Profi tipp**: Használj böngészőbővítményeket, mint például a "HeadingsMap", hogy vizualizáld a fejlécstruktúrádat. Olyan legyen, mint egy jól szervezett tartalomjegyzék.
+> 💡 **Professzionális tipp**: Használj böngésző kiegészítőket, például a "HeadingsMap"-et, hogy vizualizáld a címsor struktúrádat. Olyannak kell lennie, mint egy jól szervezett tartalomjegyzék.
 
-✅ **Teszteld a fejlécstruktúrádat**: Használj képernyőolvasó fejléc navigációt (H gomb NVDA-ban), hogy végigugorj a fejléceken. Logikusan meséli el a tartalom történetét?
+✅ **Teszteld a címsor struktúrát**: Használj képernyőolvasó címsor navigációt (H billentyű NVDA-ben), hogy gyorsan ugorj a címsorok között. A haladás logikusan meséli el a tartalom történetét?
 
-### Fejlett vizuális hozzáférhetőségi technikák
+### Fejlett vizuális akadálymentességi technikák
 
-A kontraszt és színek alapjain túl vannak kifinomult technikák, amelyek valóban befogadó vizuális élményeket teremtenek. Ezek a módszerek biztosítják, hogy a tartalom különböző megtekintési körülmények és segítő technológiák között is működjön.
+A kontraszt és a szín alapjain túl vannak kifinomult technikák, amelyek valóban befogadó vizuális élményt hoznak létre. Ezek a módszerek biztosítják, hogy a tartalmad különböző megtekintési körülmények között és segédeszközökkel is működjön.
 
-**Alapvető vizuális kommunikációs stratégiák:**
+**Fontos vizuális kommunikációs stratégiák:**
 
-- **Multimodális visszajelzés**: Kombináld a vizuális, szöveges és néha hangos jelzéseket
-- **Progresszív feltárás**: Információ bemutatása emészthető részekben
-- **Konzisztens interakciós minták**: Ismert UI konvenciók használata
-- **Reszponzív tipográfia**: Szöveg méretezése eszközök között
-- **Betöltési és hibastátuszok**: Egyértelmű visszajelzés minden felhasználói művelethez
+- **Több módusú visszajelzés**: Kombináld a vizuális, szöveges és néha hang alapú jeleket
+- **Fokozatos felfedés**: Tálald az információt könnyen emészthető darabokban
+- **Konzisztens interakciós minták**: Használj ismerős UI konvenciókat
+- **Reszponzív tipográfia**: Méretezd a szöveget eszközöktől függően
+- **Betöltési és hibastátuszok**: Nyújts egyértelmű visszajelzést minden felhasználói művelethez
 
-**CSS segédprogramok a hozzáférhetőség fokozásához:**
+**CSS segédeszközök az akadálymentességhez:**
 
 ```css
 /* Screen reader only text - visually hidden but accessible */
@@ -463,57 +657,404 @@ A kontraszt és színek alapjain túl vannak kifinomult technikák, amelyek val�
 }
 ```
 
-> 🎯 **Hozzáférhetőségi minta**: A "skip link" elengedhetetlen a billentyűzetet használók számára. Ez legyen az oldal első fókuszálható eleme, és ugorjon közvetlenül a fő tartalomterületre.
+> 🎯 **Akadálymentességi minta**: A "skip link" kulcsfontosságú a billentyűzetet használó felhasználók számára. Ennek kell lennie az oldal első fókuszálható elemének, és közvetlenül a fő tartalomra kell ugrania.
 
-✅ **Valósítsd meg a skip navigációt**: Adj hozzá skip linkeket az oldalaidhoz, és teszteld őket úgy, hogy Tab-ot nyomsz, amint az oldal betöltődik. Meg kell jelenniük, és lehetővé kell tenniük, hogy a fő tartalomhoz ugorj.
-5. **Kezdj egyszerűen**: A bonyolult ARIA megvalósítások nagyobb valószínűséggel tartalmaznak hibákat
+✅ **Valósítsd meg a ugró navigációt**: Adj hozzá skip linkeket az oldalakhoz és teszteld őket a Tab megnyomásával az oldal betöltésekor. Meg kell jelenniük és lehetővé kell tenniük a fő tartalomra ugrást.
+
+## Értelmes link szöveg készítése
+
+A linkek gyakorlatilag az internet autópályái, de a rosszul megírt link szöveg olyan, mintha olyan útjelző táblák lennének, amik csak annyit mondanak: "Hely", ahelyett hogy "Chicago belváros" lenne. Nem túl hasznos, igaz?
+
+Valami, ami nagyon meglepett, amikor először tanultam: a képernyőolvasók ki tudják szedni az oldal összes linkjét és egy nagy listaként megmutatni. Képzeld el, ha valaki átadna neked egy címtárat az oldalad összes linkjével. Mindegyik értelmes lenne önmagában? Ez az a teszt, amin a link szövegnek át kell mennie!
+
+### Link navigációs minták megértése
+
+A képernyőolvasók erőteljes link navigációs funkciókat kínálnak, amelyek jó link szövegre épülnek:
+
+**Link navigációs módok:**
+- **Sorrendi olvasás**: A linkeket kontextusba helyezve olvassák, mint a tartalom részeit
+- **Link lista generálás**: Az oldal összes linkjének kompakt kereshető listája
+- **Gyors navigáció**: Ugrás linkek között billentyűparancsokkal (K NVDA-ben)
+- **Keresés**: Konkrét linkek megtalálása részleges szöveg beírásával
+
+**Miért számít a kontextus:**
+Amikor képernyőolvasó felhasználók link listát generálnak, ilyesmit látnak:
+- "Jelentés letöltése"
+- "További információ"
+- "Kattints ide"
+- "Adatvédelmi szabályzat"
+- "Kattints ide"
+
+Csak két link ad hasznos információt kontextus nélkül!
+
+> 📊 **Felhasználói hatás**: A képernyőolvasó felhasználók link listákat átnézve próbálják gyorsan érteni az oldal tartalmát. Az általános link szöveg miatt vissza kell menniük minden link kontextusához, ami jelentősen lassítja a böngészést.
+
+### Elkerülendő gyakori link szöveg hibák
+
+Az, hogy mit ne csináljunk, segít felismerni és javítani az akadálymentességi problémákat a már meglévő tartalomban.
+
+**❌ Általános link szöveg, ami nem ad kontextust:**
+
+```html
+<!-- Meaningless when read from a link list -->
+<p>Our sustainability efforts are detailed in our recent report. 
+   <a href="/sustainability-2024.pdf">Click here</a> to view it.</p>
+
+<!-- Repeated generic text throughout the page -->
+<div class="article-card">
+  <h3>Web Accessibility Guide</h3>
+  <p>Learn the fundamentals...</p>
+  <a href="/accessibility-guide">Read more</a>
+</div>
+<div class="article-card">
+  <h3>Color Contrast Tips</h3>
+  <p>Improve your design...</p>
+  <a href="/color-contrast">Read more</a>
+</div>
+
+<!-- URLs as link text (difficult for screen readers to announce) -->
+<p>Visit https://www.w3.org/WAI/WCAG21/quickref/ for WCAG guidelines.</p>
+
+<!-- Vague action words -->
+<a href="/contact">Go</a> | <a href="/about">See</a> | <a href="/help">View</a>
+```
+
+**Miért buknak el ezek a minták:**
+- **"Kattints ide"** nem mond semmit a célról
+- **"Olvass tovább"** többször ismételve zavaró
+- **Nyers URL-ek** nehezen érthetőek és kiejthetőek képernyőolvasóval
+- **Egyetlen szavak**, mint a "Menj" vagy "Nézd" leírás nélküli kontextus nélkül
+
+### Kiváló link szöveg írása
+
+A leíró link szöveg mindenkinek előnyös — látó felhasználó gyorsan átfuthatja a linkeket, képernyőolvasó felhasználó azonnal megérti a célt.
+
+**✅ Tiszta, leíró link szöveg példák:**
+
+```html
+<!-- Descriptive text that explains the destination -->
+<p>Our comprehensive <a href="/sustainability-2024.pdf">2024 sustainability report (PDF, 2.1MB)</a> details our environmental initiatives.</p>
+
+<!-- Specific, unique link text for each card -->
+<div class="article-card">
+  <h3>Web Accessibility Guide</h3>
+  <p>Learn the fundamentals of inclusive design...</p>
+  <a href="/accessibility-guide">Read our complete web accessibility guide</a>
+</div>
+<div class="article-card">
+  <h3>Color Contrast Tips</h3>
+  <p>Improve your design with better color choices...</p>
+  <a href="/color-contrast">Explore color contrast best practices</a>
+</div>
+
+<!-- Meaningful text instead of raw URLs -->
+<p>The <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 Quick Reference guide</a> provides comprehensive accessibility guidelines.</p>
+
+<!-- Descriptive action links -->
+<a href="/contact">Contact our support team</a> | 
+<a href="/about">About our company</a> | 
+<a href="/help">Get help with your account</a>
+```
+
+**Link szöveg legjobb gyakorlatok:**
+- **Légy specifikus**: "A negyedéves pénzügyi jelentés letöltése" vs. "Letöltés"
+- **Tüntesd fel a fájl típusát és méretét**: "(PDF, 1,2MB)" letölthető fájloknál
+- **Jelöld, ha a link külső ablakban nyílik meg**: "(új ablakban nyílik)" ahol szükséges
+- **Használj aktív nyelvezetet**: "Lépj kapcsolatba velünk" vs. "Kapcsolat oldal"
+- **Tartsd tömören**: Törekedj 2-8 szó között, ha lehetséges
+
+### Fejlett link akadálymentességi minták
+
+Néha a vizuális tervezési korlátok vagy technikai követelmények speciális megoldásokat igényelnek. Íme kifinomult technikák tipikus kihívásokra:
+
+**ARIA használata a kontextus erősítésére:**
+
+```html
+<!-- When button text must be short but needs more context -->
+<a href="/report.pdf" 
+   aria-label="Download 2024 annual financial report, PDF format, 2.3MB">
+  Download Report
+</a>
+
+<!-- When the full context comes from surrounding content -->
+<h3 id="sustainability-heading">Sustainability Initiative</h3>
+<p>Our efforts to reduce environmental impact...</p>
+<a href="/sustainability-details" 
+   aria-labelledby="sustainability-heading"
+   aria-describedby="sustainability-summary">
+  Learn more
+</a>
+<p id="sustainability-summary">Detailed breakdown of our 2024 environmental goals and achievements</p>
+```
+
+**Fájltípus és külső cél jelölése:**
+
+```html
+<!-- Method 1: Include information in visible link text -->
+<a href="/annual-report.pdf">
+  Download our 2024 annual report (PDF, 2.3MB)
+</a>
+
+<!-- Method 2: Use screen reader-only text for file details -->
+<a href="/annual-report.pdf">
+  Download our 2024 annual report
+  <span class="sr-only">(PDF format, 2.3MB)</span>
+</a>
+
+<!-- Method 3: External link indication -->
+<a href="https://example.com" 
+   target="_blank" 
+   aria-describedby="external-link-warning">
+  Visit external resource
+</a>
+<span id="external-link-warning" class="sr-only">
+  (opens in new window)
+</span>
+
+<!-- Method 4: Using CSS for visual indicators -->
+<a href="https://example.com" class="external-link">
+  External resource
+</a>
+```
+
+```css
+/* Visual indicator for external links */
+.external-link::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* Screen reader announcement for external links */
+.external-link::before {
+  content: "External link: ";
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+```
+
+> ⚠️ **Fontos**: Ha `target="_blank"`-et használsz, mindig tájékoztasd a felhasználókat, hogy a link új ablakban vagy fülön nyílik meg. A váratlan navigációváltozás zavaró lehet.
+
+✅ **Teszteld a link kontextust**: Használd a böngésződ fejlesztői eszközeit, hogy készíts listát az oldal összes linkjéről. Érted az egyes linkek célját kontextus nélkül is?
+
+## ARIA: HTML akadálymentesség felpörgetése
+
+[Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) olyan, mint egy univerzális fordító a komplex webalkalmazásaid és a segítő technológiák között. Amikor a HTML önmagában nem képes kifejezni mindent, amit az interaktív komponenseid csinálnak, az ARIA lép be, hogy kitöltse ezeket a réseket.
+
+Szeretem az ARIA-t úgy elképzelni, mint hasznos megjegyzéseket a HTML-edhez — olyasmi, mint a színpadi utasítások egy színdarabban, amik segítik a színészeket a szerepük és kapcsolataik megértésében.
+
+**A legfontosabb szabály az ARIA kapcsán**: Mindig először használj szemantikus HTML-t, majd adj hozzá ARIA-t a javításhoz. Gondolj az ARIA-ra fűszerként, nem főételként. Javítania kell és kiegészítenie a HTML szerkezetet, soha nem helyettesítenie. Az alapot először jól csináld meg!
+
+### Stratégiai ARIA alkalmazás
+
+Az ARIA hatékony, de a hatalom felelősséggel jár. Hibás ARIA rosszabbá teheti az akadálymentességet, mint ha nem lenne ARIA. Íme, mikor és hogyan használd hatékonyan:
+
+**✅ Használd az ARIA-t, amikor:**
+- Egyedi interaktív vezérlőket készítesz (akkordions, fülek, karusszelek)
+- Dinamikus tartalmat építesz, amely oldalfrissítés nélkül változik
+- További kontextust adsz bonyolult UI kapcsolatokhoz
+- Betöltési állapotokat vagy élő tartalom frissítéseket jelezel
+- Alkalmazásszerű felületeket építesz egyedi vezérlőkkel
+
+**❌ Kerüld az ARIA használatát, amikor:**
+- A szabványos HTML elemek már megadják a szükséges szemantikát
+- Nem vagy biztos a helyes implementációban
+- Az információt megismétli, amit a szemantikus HTML már tartalmaz
+- Nem tesztelted valódi segítő technológiával
+
+> 🎯 **ARIA aranyszabály**: "Ne változtass szemantikán, hacsak nem muszáj, mindig biztosíts billentyűzetes hozzáférhetőséget, és tesztelj valós segédeszközzel."
+**Az ARIA öt kategóriája:**
+
+1. **Szerepek**: Mi ez az elem? (`button`, `tab`, `dialog`)
+2. **Tulajdonságok**: Mik a jellemzői? (`aria-required`, `aria-haspopup`)
+3. **Állapotok**: Mi az aktuális állapota? (`aria-expanded`, `aria-checked`)
+4. **Térképek**: Hol helyezkedik el az oldal szerkezetében? (`banner`, `navigation`, `main`)
+5. **Élő régiók**: Hogyan kell bejelenteni a változásokat? (`aria-live`, `aria-atomic`)
+
+### Alapvető ARIA minták modern webalkalmazásokhoz
+
+Ezek a minták megoldják az interaktív webalkalmazások leggyakoribb akadálymentesítési kihívásait:
+
+**Elemerk elnevezése és leírása:**
+
+```html
+<!-- aria-label: Provides accessible name when visible text isn't sufficient -->
+<button aria-label="Close newsletter subscription dialog">×</button>
+
+<!-- aria-labelledby: References existing text as the accessible name -->
+<section aria-labelledby="news-heading">
+  <h2 id="news-heading">Latest News</h2>
+  <!-- news content -->
+</section>
+
+<!-- aria-describedby: Links to additional descriptive text -->
+<input type="password" 
+       aria-describedby="pwd-requirements pwd-strength"
+       required>
+<div id="pwd-requirements">
+  Password must contain at least 8 characters, including uppercase, lowercase, and numbers.
+</div>
+<div id="pwd-strength" aria-live="polite">
+  <!-- Dynamic password strength indicator -->
+</div>
+```
+
+**Élő régiók dinamikus tartalomhoz:**
+
+```html
+<!-- Polite announcements (don't interrupt current speech) -->
+<div aria-live="polite" id="status-updates">
+  <!-- Status messages appear here -->
+</div>
+
+<!-- Assertive announcements (interrupt and announce immediately) -->
+<div aria-live="assertive" id="urgent-alerts">
+  <!-- Error messages and critical alerts -->
+</div>
+
+<!-- Loading states with live regions -->
+<button id="submit-btn" aria-describedby="loading-status">
+  Submit Application
+</button>
+<div id="loading-status" aria-live="polite" aria-atomic="true">
+  <!-- "Processing your application..." appears here -->
+</div>
+```
+
+**Interaktív widget példa (accordion):**
+
+```html
+<div class="accordion">
+  <h3>
+    <button aria-expanded="false" 
+            aria-controls="panel-1" 
+            id="accordion-trigger-1"
+            class="accordion-trigger">
+      Accessibility Guidelines
+    </button>
+  </h3>
+  <div id="panel-1" 
+       role="region"
+       aria-labelledby="accordion-trigger-1" 
+       hidden>
+    <p>WCAG 2.1 provides comprehensive guidelines...</p>
+  </div>
+</div>
+```
+
+```javascript
+// JavaScript az akordeon állapotának kezelésére
+function toggleAccordion(trigger) {
+  const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+  const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  
+  // Állapotok váltása
+  trigger.setAttribute('aria-expanded', !isExpanded);
+  panel.hidden = isExpanded;
+  
+  // Változás bejelentése képernyőolvasóknak
+  const status = document.getElementById('status-updates');
+  status.textContent = isExpanded ? 'Section collapsed' : 'Section expanded';
+}
+```
+
+### ARIA megvalósítás legjobb gyakorlatai
+
+Az ARIA hatékony, de gondos megvalósítást igényel. Ezek a irányelvek segítenek biztosítani, hogy az ARIA inkább javítsa, semmint akadályozza az akadálymentességet:
+
+**🛡️ Alapelvek:**
+
+```mermaid
+flowchart TD
+    A[🚀 Indulás szemantikus HTML-lel] --> B{Biztosítja az HTML a szükséges szemantikát?}
+    B -->|Igen| C[✅ Csak HTML használata]
+    B -->|Nem| D[Fontolóra venni az ARIA kiegészítést]
+    D --> E{Elérhető egyszerűbb eszközökkel?}
+    E -->|Igen| F[🔄 Egyszerűsítsd a megközelítést]
+    E -->|Nem| G[📝 Gondosan valósítsd meg az ARIA-t]
+    G --> H[🧪 Teszteld valódi AT-vel]
+    H --> I{Várakozások szerint működik?}
+    I -->|Nem| J[🔧 Hibakeresés és javítás]
+    I -->|Igen| K[✅ Siker!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+1. **Elsődlegesen szemantikus HTML**: Mindig részesítsd előnyben a `<button>` elemet a `<div role="button">` helyett
+2. **Ne törj meg szemantikát**: Soha ne írj felül meglévő HTML jelentést (kerüld a `<h1 role="button">` használatát)
+3. **Tartsd meg a billentyűzetes elérhetőséget**: Minden interaktív ARIA elemnek teljesen billentyűzetesen elérhetőnek kell lennie
+4. **Tesztelj valós felhasználókkal**: Az ARIA támogatása jelentősen eltér a segédeszközök között
+5. **Kezdj egyszerűen**: A bonyolult ARIA megvalósítások nagyobb valószínűséggel hibásak
 
 **🔍 Tesztelési munkafolyamat:**
 
 ```mermaid
 graph TD
-    A[Write ARIA code] --> B[Validate HTML]
-    B --> C[Test with keyboard only]
-    C --> D[Test with screen reader]
-    D --> E[Test across browsers]
-    E --> F{Issues found?}
-    F -->|Yes| G[Fix and re-test]
-    F -->|No| H[Implementation complete]
+    A[ARIA kód írása] --> B[HTML érvényesítése]
+    B --> C[Csak billentyűzettel tesztelés]
+    C --> D[Képernyőolvasóval tesztelés]
+    D --> E[Böngészők közötti tesztelés]
+    E --> F{Talált problémák?}
+    F -->|Igen| G[Javítás és újratesztelés]
+    F -->|Nem| H[Megvalósítás befejezve]
     G --> B
 ```
-
 **🚫 Gyakori ARIA hibák, amelyeket el kell kerülni:**
 
-- **Ellentmondó információk**: Ne mondj ellent a HTML szemantikának
-- **Túlzott címkézés**: Túl sok ARIA információ megterheli a felhasználókat
-- **Statikus ARIA**: Az ARIA állapotok frissítésének elfelejtése, amikor a tartalom változik
-- **Nem tesztelt megvalósítások**: Az ARIA elméletben működik, de gyakorlatban nem
-- **Hiányzó billentyűzet támogatás**: ARIA szerepek megfelelő billentyűzet interakciók nélkül
+- **Ellenmondó információk**: Ne legyen ellentmondás a HTML szemantikával
+- **Túlzott címkézés**: Túl sok ARIA információ eláraszthatja a felhasználókat
+- **Statikus ARIA**: Ne feledd frissíteni az ARIA állapotokat, amikor a tartalom változik
+- **Nem tesztelt megvalósítások**: Elméletben működő ARIA, amely a gyakorlatban hibás
+- **Hiányzó billentyűzet támogatás**: ARIA szerepek billentyűzetes interakció nélkül
 
-> 💡 **Tesztelési források**: Használj olyan eszközöket, mint az [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) az ARIA automatikus validálásához, de mindig tesztelj valódi képernyőolvasókkal a teljes élmény érdekében.
+> 💡 **Tesztelési források**: Használj olyan eszközöket, mint az [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) az automatikus ARIA érvényesítéshez, de mindig tesztelj valós képernyőolvasókkal a teljes élményért.
 
-✅ **Tanulj szakértőktől**: Tanulmányozd az [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) útmutatót, amely bevált mintákat és összetett interaktív widgetek megvalósításait tartalmazza.
+### 🎭 **ARIA Készségek Ellenőrzése: Készen állsz a bonyolult interakciókra?**
 
-## Képek és média hozzáférhetőségének biztosítása
+**Mérd fel ARIA magabiztosságodat:**
+- Mikor választanád az ARIA-t a szemantikus HTML helyett? (Tip: szinte soha!)
+- Meg tudod magyarázni, miért rosszabb általában a `<div role="button">`, mint a `<button>`?
+- Mi a legfontosabb dolog, amit az ARIA tesztelésről meg kell jegyezni?
 
-A vizuális és hangalapú tartalom a modern webes élmények alapvető része, de akadályokat okozhat, ha nem gondosan valósítják meg. A cél az, hogy az információ és a média érzelmi hatása minden felhasználóhoz eljusson. Ha egyszer belejössz, természetessé válik.
+```mermaid
+pie title "Gyakori ARIA Használati Minták"
+    "Címkék és Leírások" : 40
+    "Élő Területek" : 25
+    "Widget Állapotok" : 20
+    "Összetett Vezérlők" : 15
+```
+> **Kulcsfontosságú meglátás**: Az ARIA használatának többsége címkézésre és elemek leírására szolgál. A bonyolult widget minták sokkal ritkábbak, mint gondolnád!
 
-A különböző típusú médiák eltérő hozzáférhetőségi megközelítést igényelnek. Olyan, mint a főzés—nem bánnál egy finom hallal ugyanúgy, mint egy kiadós steakkel. Ezeknek a különbségeknek a megértése segít a megfelelő megoldás kiválasztásában minden helyzetben.
+✅ **Tanulj szakértőktől**: Tanulmányozd az [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) oldalát a kipróbált minták és bonyolult interaktív widgetek megvalósításaiért.
 
-### Stratégiai kép hozzáférhetőség
+## Képek és média akadálymentesítése
 
-Minden kép a weboldaladon egy célt szolgál. Ennek a célnak a megértése segít jobb alternatív szöveget írni és befogadóbb élményeket teremteni.
+A vizuális és hang alapú tartalmak a modern webélmények alapvető részei, de akadályokat jelenthetnek, ha nem gondosan valósítják meg őket. A cél, hogy a média információi és érzelmi hatása minden felhasználóhoz eljusson. Ha egyszer ráérzel, az második természeteddé válik.
 
-**A képek négy típusa és az alt szöveg stratégiák:**
+Különböző típusú média különböző akadálymentesítési megközelítést igényel. Olyan, mint a főzés — egy törékeny halat nem úgy kezelsz, mint egy szaftos steaket. Ezeknek a különbségeknek a megértése segít megtalálni a megfelelő megoldást minden helyzetre.
 
-**Információs képek** - fontos információt közvetítenek:
+### Stratégiai kép akadálymentesítés
+
+Az oldalodon található minden képnek célja van. E cél megértése segít jobb helyettesítő szöveget írni, és inkluzívabb élményeket létrehozni.
+
+**A négy kép típus és azok alt szöveg stratégiái:**
+
+**Tájékoztató képek** - fontos információt közvetítenek:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.hu.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.hu.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
-**Dekoratív képek** - pusztán vizuálisak, nincs információs értékük:
+**Dekoratív képek** - kizárólag vizuálisak, információértékkel nem bírnak:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.hu.png" alt="" role="presentation">
+<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.hu.png" alt="" role="presentation">
 ```
 
 **Funkcionális képek** - gombként vagy vezérlőként szolgálnak:
@@ -523,20 +1064,20 @@ Minden kép a weboldaladon egy célt szolgál. Ennek a célnak a megértése seg
 </button>
 ```
 
-**Összetett képek** - diagramok, infografikák:
+**Összetett képek** - diagramok, grafikonok, infografikák:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.hu.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/complex-chart.c831f461a363b446.hu.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
 ```
 
-### Videó és hang hozzáférhetőség
+### Videó és hang akadálymentessége
 
 **Videó követelmények:**
-- **Feliratok**: A beszélt tartalom és hanghatások szöveges változata
-- **Hangos leírások**: A vizuális elemek narrációja vak felhasználók számára
-- **Átiratok**: Az összes hang- és vizuális tartalom teljes szöveges változata
+- **Feliratok**: A beszéd és hanghatások szöveges változata
+- **Hangos leírások**: Vizualitás narrációja vak felhasználók számára
+- **Átiratok**: Teljes szöveges változat az audio és vizuális tartalomról
 
 ```html
 <video controls>
@@ -547,12 +1088,12 @@ Minden kép a weboldaladon egy célt szolgál. Ennek a célnak a megértése seg
 ```
 
 **Hang követelmények:**
-- **Átiratok**: Az összes beszélt tartalom szöveges változata
-- **Vizuális jelzések**: Csak hangalapú tartalom esetén vizuális jelzéseket biztosíts
+- **Átiratok**: Minden beszéd szöveges változata
+- **Vizuális jelzések**: Csak hang esetén biztosíts vizuális jeleket
 
 ### Modern kép technikák
 
-**Dekoratív képek használata CSS-sel:**
+**CSS használata dekoratív képekhez:**
 ```css
 .hero-section {
   background-image: url('decorative-hero.jpg');
@@ -560,34 +1101,52 @@ Minden kép a weboldaladon egy célt szolgál. Ennek a célnak a megértése seg
 }
 ```
 
-**Reszponzív képek hozzáférhetőséggel:**
+**Reszponzív képek akadálymentességgel:**
 ```html
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.hu.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.hu.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 
-✅ **Teszteld a képek hozzáférhetőségét**: Használj képernyőolvasót egy képeket tartalmazó oldal navigálásához. Kapsz elég információt a tartalom megértéséhez?
+✅ **Teszteld a képek akadálymentességét**: Használj képernyőolvasót, és böngéssz egy képekkel teleoldalt. Megkapsz elég információt a tartalom megértéséhez?
 
-## Billentyűzet navigáció és fókusz kezelés
+## Billentyűzetes navigáció és fókusz kezelés
 
-Sok felhasználó kizárólag billentyűzettel navigál a weben. Ide tartoznak a motoros fogyatékossággal élők, azok a felhasználók, akik gyorsabbnak találják a billentyűzetet, mint az egeret, és bárki, akinek az egere nem működik. Az, hogy az oldalad jól működjön billentyűzet bemenettel, alapvető fontosságú, és gyakran mindenki számára hatékonyabbá teszi az oldaladat.
+Sok felhasználó kizárólag billentyűzettel navigál az interneten. Ide tartoznak a mozgáskorlátozottak, a hatékony felhasználók, akiknek gyorsabb a billentyűzet az egérnél, és mindenki, akinek az egere nem működik. Fontos, hogy az oldalad jól működjön billentyűzetes bevitel esetén, hiszen ez gyakran hatékonyabbá is teszi az oldalt mindenki számára.
 
+```mermaid
+flowchart LR
+    A[⌨️ Billentyűzetes navigáció] --> B[Tab sorrend]
+    A --> C[Fókusz indikátorok]
+    A --> D[Ugró linkek]
+    A --> E[Billentyűparancsok]
+    
+    B --> B1[Logikus sorrend<br/>Minden interaktív elem<br/>Nincsenek tab csapdák]
+    C --> C1[Látható keretek<br/>Magas kontraszt<br/>Tiszta határok]
+    D --> D1[Ugrás a fő részre<br/>Ugrás a navigációra<br/>Ismétlődők átugrása]
+    E --> E1[Esc a bezáráshoz<br/>Enter az aktiváláshoz<br/>Nyilak csoportokban]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
 ### Alapvető billentyűzet navigációs minták
 
-**Standard billentyűzet interakciók:**
+**Szokásos billentyűzet interakciók:**
 - **Tab**: Fókusz előre mozgatása az interaktív elemek között
-- **Shift + Tab**: Fókusz visszafelé mozgatása
+- **Shift + Tab**: Fókusz hátrafelé mozgása
 - **Enter**: Gombok és linkek aktiválása
-- **Space**: Gombok aktiválása, jelölőnégyzetek bejelölése
-- **Nyílbillentyűk**: Navigáció komponens csoportokon belül (rádiógombok, menük)
-- **Escape**: Modális ablakok, legördülő menük bezárása vagy műveletek megszakítása
+- **Space**: Gombok aktiválása, jelölőnégyzetek be- és kikapcsolása
+- **Nyilak**: Komponenscsoportokon belüli navigáció (rádiógombok, menük)
+- **Escape**: Modalok, legördülő menük bezárása, műveletek megszakítása
 
-### Fókusz kezelés legjobb gyakorlatai
+### Fókuszkezelés legjobb gyakorlatai
 
-**Látható fókusz jelzők:**
+**Látható fókusz indikátorok:**
 ```css
 /* Ensure focus is always visible */
 button:focus-visible {
@@ -601,7 +1160,7 @@ button:focus-visible {
 }
 ```
 
-**Átugró linkek a hatékony navigációhoz:**
+**Ugró linkek a gyors navigációhoz:**
 ```html
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -628,12 +1187,12 @@ button:focus-visible {
 </form>
 ```
 
-### Fókusz csapdázása modális ablakokban
+### Fókusz csapda modaloknál
 
-Modális párbeszédablakok megnyitásakor a fókuszt a modális ablakon belül kell tartani:
+Modal dialógusok megnyitásakor a fókuszt a modalon belül kell rögzíteni:
 
 ```javascript
-// Modern focus trap implementation
+// Modern fókusz csapda megvalósítás
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -658,20 +1217,20 @@ function trapFocus(element) {
     }
   });
   
-  // Focus first element when modal opens
+  // Az első elem fókuszálása, amikor a modális megnyílik
   firstElement.focus();
 }
 ```
 
-✅ **Teszteld a billentyűzet navigációt**: Próbáld meg csak a Tab billentyűvel navigálni az oldaladon. Elérheted az összes interaktív elemet? Logikus a fókusz sorrend? Jól láthatóak a fókusz jelzők?
+✅ **Teszteld a billentyűzetes navigációt**: Próbálj meg kizárólag a Tab billentyűvel navigálni az oldaladon. Eléred az összes interaktív elemet? Logikus a fókusz sorrend? Egyértelműek a fókusz indikátorok?
 
-## Űrlap hozzáférhetőség
+## Űrlap akadálymentessége
 
-Az űrlapok kritikusak a felhasználói interakcióhoz, és különös figyelmet igényelnek a hozzáférhetőség szempontjából.
+Az űrlapok kritikusak a felhasználói interakciókhoz, különös figyelmet igényelnek az akadálymentesség szempontjából.
 
-### Címke és űrlap vezérlő társítás
+### Címkék és űrlapvezérlők kapcsolata
 
-**Minden űrlap vezérlőnek szüksége van egy címkére:**
+**Minden űrlapmezőnek kell címke:**
 ```html
 <!-- Explicit labeling (preferred) -->
 <label for="username">Username:</label>
@@ -687,9 +1246,9 @@ Az űrlapok kritikusak a felhasználói interakcióhoz, és különös figyelmet
 <input type="search" aria-label="Search products" placeholder="Search...">
 ```
 
-### Hibakezelés és validáció
+### Hibakezelés és érvényesítés
 
-**Hozzáférhető hibaüzenetek:**
+**Akadálymentes hibaüzenetek:**
 ```html
 <label for="email">Email Address:</label>
 <input type="email" id="email" name="email" 
@@ -700,15 +1259,15 @@ Az űrlapok kritikusak a felhasználói interakcióhoz, és különös figyelmet
 </div>
 ```
 
-**Űrlap validáció legjobb gyakorlatai:**
-- Használj `aria-invalid` attribútumot az érvénytelen mezők jelzésére
-- Nyújts egyértelmű, specifikus hibaüzeneteket
-- Használj `role="alert"` attribútumot fontos hiba bejelentésekhez
-- Mutasd a hibákat azonnal és az űrlap beküldésekor is
+**Űrlap érvényesítés legjobb gyakorlatai:**
+- Használd az `aria-invalid`-et érvénytelen mezők jelzésére
+- Adj világos, specifikus hibaüzeneteket
+- Használj `role="alert"`-et fontos hiba bejelentésekhez
+- Mutasd meg a hibákat azonnal és az űrlap beküldésekor is
 
 ### Mezőcsoportok és csoportosítás
 
-**Kapcsolódó űrlap vezérlők csoportosítása:**
+**Csoportosítsd a kapcsolódó űrlapmezőket:**
 ```html
 <fieldset>
   <legend>Shipping Address</legend>
@@ -729,72 +1288,73 @@ Az űrlapok kritikusak a felhasználói interakcióhoz, és különös figyelmet
 </fieldset>
 ```
 
-## Az akadálymentességi utazásod: Főbb tanulságok
+## Az akadálymentességi utad legfontosabb tanulságai
 
-Gratulálunk! Most már megvan az alapvető tudásod ahhoz, hogy valóban befogadó webes élményeket hozz létre. Ez igazán izgalmas! Az akadálymentesség nem csak a megfelelőségi követelmények kipipálásáról szól—hanem arról, hogy felismerjük, milyen sokféleképpen lépnek kapcsolatba az emberek a digitális tartalommal, és ennek az elképesztő komplexitásnak a tervezéséről.
+Gratulálunk! Most szerezted meg az alapvető tudást igazán inkluzív webélmények létrehozásához. Ez igazán izgalmas dolog! A web akadálymentesség nem pusztán megfelelőség ellenőrzése – arról szól, hogy felismerjük, milyen sokféleképpen lépnek kapcsolatba az emberek a digitális tartalommal, és ennek a fantasztikus összetettségnek megfelelően tervezünk.
 
-Most már egy növekvő fejlesztői közösség tagja vagy, amely megérti, hogy a nagyszerű tervezés mindenki számára működik. Üdv a klubban!
+Most már egy növekvő fejlesztői közösség tagja vagy, amely megérti, hogy a nagyszerű tervezés mindenkinek működik. Üdv a klubban!
 
 **🎯 Az akadálymentességi eszköztárad mostantól tartalmazza:**
 
 | Alapelv | Megvalósítás | Hatás |
-|---------|--------------|-------|
-| **Szemantikus HTML alapok** | Használj megfelelő HTML elemeket a rendeltetésük szerint | A képernyőolvasók hatékonyan navigálhatnak, a billentyűzetek automatikusan működnek |
-| **Befogadó vizuális tervezés** | Megfelelő kontraszt, jelentőségteljes színhasználat, látható fókusz jelzők | Mindenki számára érthető bármilyen fényviszony mellett |
-| **Leíró tartalom** | Jelentőségteljes link szöveg, alt szöveg, címsorok | A felhasználók vizuális kontextus nélkül is megértik a tartalmat |
-| **Billentyűzet hozzáférhetőség** | Tab sorrend, billentyűzet gyorsbillentyűk, fókusz kezelés | Motoros hozzáférhetőség és hatékonyabb használat |
-| **ARIA fejlesztés** | Stratégiai használat a szemantikai hiányosságok kitöltésére | Összetett alkalmazások működnek segítő technológiákkal |
-| **Átfogó tesztelés** | Automatikus eszközök + manuális ellenőrzés + valódi felhasználói tesztelés | Hibák elkapása, mielőtt hatással lennének a felhasználókra |
+|----------------|----------------|---------|
+| **Szemantikus HTML alap** | Megfelelő HTML elemek használata a rendeltetésüknek megfelelően | A képernyőolvasók hatékonyan navigálnak, a billentyűzet pedig automatikusan működik |
+| **Inkluzív vizuális dizájn** | Kellő kontraszt, értelmes színhasználat, látható fókusz jelölők | Világos mindenki számára bármilyen fényviszony mellett |
+| **Leíró tartalom** | Értelmes link szövegek, alt szövegek, címsorok | A felhasználók értik a tartalmat vizuális kontextus nélkül is |
+| **Billentyűzetes elérhetőség** | Tab sorrend, billentyűparancsok, fókuszkezelés | Mozgáskorlátozottak és haladó felhasználók hatékonysága |
+| **ARIA kibővítés** | Stratégiai használat szemantikai hiányosságok kitöltésére | Bonyolult alkalmazások működése segédeszközökkel |
+| **Átfogó tesztelés** | Automatikus eszközök + manuális ellenőrzés + valós felhasználói tesztelés | Hibák kiszűrése még mielőtt a felhasználókhoz jutnának |
 
 **🚀 Következő lépések:**
 
 1. **Építsd be az akadálymentességet a munkafolyamatodba**: Tedd a tesztelést a fejlesztési folyamat természetes részévé
-2. **Tanulj valódi felhasználóktól**: Kérj visszajelzést segítő technológiákat használó emberektől
-3. **Maradj naprakész**: Az akadálymentességi technikák az új technológiákkal és szabványokkal fejlődnek
-4. **Képviseld a befogadást**: Oszd meg tudásodat, és tedd az akadálymentességet csapat prioritássá
+2. **Tanulj valós felhasználóktól**: Kérj visszajelzést segédeszközöket használóktól
+3. **Maradj naprakész**: Az akadálymentességi technikák fejlődnek az új technológiákkal és szabványokkal
+4. **Légy az inklúzió támogatója**: Oszd meg tudásod, és tedd az akadálymentességet csapatod prioritásává
 
-> 💡 **Ne feledd**: Az akadálymentességi korlátok gyakran innovatív, elegáns megoldásokhoz vezetnek, amelyek mindenki számára előnyösek. A járdaszegélyek, feliratok és hangvezérlés mind akadálymentességi funkcióként indultak, és mainstream fejlesztésekké váltak.
+> 💡 **Ne feledd**: Az akadálymentességi korlátok gyakran innovatív, elegáns megoldásokhoz vezetnek, amelyek mindenki számára előnyösek. A rámpák, feliratok és hangvezérlés mind eredetileg akadálymentesítő funkcióként kezdődtek, majd általános fejlesztéssé váltak.
 
-**Az üzleti érvek egyértelműek**: Az akadálymentes weboldalak több felhasználót érnek el, jobb helyezést érnek el a keresőmotorokban, alacsonyabb karbantartási költségekkel rendelkeznek, és elkerülik a jogi kockázatokat. De őszintén? Az igazi ok, amiért törődni kell az akadálymentességgel, sokkal mélyebb. Az akadálymentes weboldalak a web legjobb értékeit testesítik meg—nyitottságot, befogadást és azt az elképzelést, hogy mindenki megérdemli az információhoz való egyenlő hozzáférést.
+**Az üzleti megfontolás kristálytiszta**: Az akadálymentes weboldalak több felhasználót érnek el, jobban rangsorolnak a keresőkben, alacsonyabb karbantartási költséggel járnak és elkerülik a jogi kockázatokat. De őszintén? Az igazán mély ok, ami miatt fontos az akadálymentesség, az a web legjobb értékeinek megtestesítése — nyitottság, befogadás és az az elképzelés, hogy mindenkinek egyenlő hozzáférése van az információkhoz.
 
-Most már felkészültél arra, hogy megépítsd a jövő befogadó webjét. Minden akadálymentes oldal, amit létrehozol, barátságosabbá teszi az internetet mindenki számára. Ez igazán csodálatos, ha belegondolsz!
+Most felvérteztél a jövő inkluzív webének építéséhez. Minden akadálymentes oldallal, amit létrehozol, barátságosabbá teszed az internetet mindenki számára. Ez igazán nagyszerű dolog, ha belegondolsz!
 
 ## További források
 
-Folytasd az akadálymentességi tanulási utadat ezekkel az alapvető forrásokkal:
+Folytasd akadálymentességi tanulmányaidat ezekkel az alapvető forrásokkal:
 
 **📚 Hivatalos szabványok és irányelvek:**
-- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - A hivatalos akadálymentességi szabvány gyors referenciával
+- [WCAG 2.1 Irányelvek](https://www.w3.org/WAI/WCAG21/quickref/) - A hivatalos akadálymentességi szabvány gyors áttekintéssel
 - [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) - Átfogó minták interaktív widgetekhez
-- [WebAIM Guidelines](https://webaim.org/) - Gyakorlati, kezdőbarát akadálymentességi útmutató
+- [WebAIM Irányelvek](https://webaim.org/) - Gyakorlati, kezdőknek szóló akadálymentességi útmutatás
 
 **🛠️ Eszközök és tesztelési források:**
 - [axe DevTools](https://www.deque.com/axe/devtools/) - Iparági szabvány akadálymentességi teszteléshez
-- [A11y Project Checklist](https://www.a11yproject.com/checklist/) - Lépésről lépésre akadálymentességi ellenőrzés
-- [Accessibility Insights](https://accessibilityinsights.io/) - Microsoft átfogó tesztelési csomagja
-- [Color Oracle](https://colororacle.org/) - Színvakság szimulátor tervezési teszteléshez
+- [A11y Project Ellenőrzőlista](https://www.a11yproject.com/checklist/) - Lépésről lépésre akadálymentességi ellenőrzés
+- [Accessibility Insights](https://accessibilityinsights.io/) - A Microsoft átfogó tesztelő eszköze
+- [Color Oracle](https://colororacle.org/) - Színvak szimulátor dizájn teszteléshez
 
 **🎓 Tanulás és közösség:**
-- [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey9/) - Valódi felhasználói preferenciák és viselkedések
-- [Inclusive Components](https://inclusive-components.design/) - Modern akadálymentes komponens minták
-- [A11y Coffee](https://a11y.coffee/) - Gyors akadálymentességi tippek és betekintések
-- [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) - W3C átfogó akadálymentességi forrásai
+- [WebAIM Képernyőolvasó Felmérés](https://webaim.org/projects/screenreadersurvey9/) - Valós felhasználói preferenciák és viselkedés
+- [Inclusive Components](https://inclusive-components.design/) - Modern akadálymentes komponensminták
+- [A11y Coffee](https://a11y.coffee/) - Gyors akadálymentességi tippek és meglátások
+- [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) - A W3C átfogó akadálymentességi erőforrásai
 
 **🎥 Gyakorlati tanulás:**
 - [Accessibility Developer Guide](https://www.accessibility-developer-guide.com/) - Gyakorlati megvalósítási útmutató
-- [Deque University](https://dequeuniversity.com/) - Professzionális akadálymentességi képzési kurzusok
+- [Deque University](https://dequeuniversity.com/) - Professzionális akadálymentességi képzések
 
 ## GitHub Copilot Agent Kihívás 🚀
 
-Használd az Agent módot a következő kihívás teljesítéséhez:
+Használd az Agent módot a következő kihívás elvégzéséhez:
 
-**Leírás:** Hozz létre egy akadálymentes modális párbeszédablak komponenst, amely bemutatja a megfelelő fókusz kezelést, ARIA attribútumokat és billentyűzet navigációs mintákat.
+**Leírás:** Készíts egy akadálymentes modális dialógus komponenst, amely bemutatja a megfelelő fókuszkezelést, ARIA attribútumokat és billentyűzetes navigációs mintákat.
 
-**Feladat:** Készíts egy teljes modális párbeszédablak komponenst HTML, CSS és JavaScript segítségével, amely tartalmazza: megfelelő fókusz csapdázás, ESC billentyűvel való bezárás, kattintás kívül a bezáráshoz, ARIA attribútumok képernyőolvasókhoz, és látható fókusz jelzők. A modálisnak tartalmaznia kell egy űrlapot megfelelő címkékkel és hibakezeléssel. Biztosítsd, hogy a komponens megfeleljen a WCAG 2.1 AA szabványoknak.
+**Prompt:** Építs egy teljes modális dialógus komponenst HTML, CSS és JavaScript használatával, amely tartalmazza: megfelelő fókusz csapdázást, ESC billentyűvel való bezárást, kívülre kattintásra való bezárást, képernyőolvasók számára ARIA attribútumokat és látható fókusz indikátorokat. A modal tartalmazzon egy űrlapot a megfelelő címkékkel és hibakezeléssel. Gondoskodj róla, hogy a komponens megfeleljen a WCAG 2.1 AA szabványoknak.
+
 
 ## 🚀 Kihívás
 
-Vedd ezt a HTML-t, és írd át, hogy a lehető legakadálymentesebb legyen, az általad tanult stratégiák alapján.
+Vedd ezt a HTML-t, és írd át a lehető legakadálymentesebbre a tanult stratégiák alapján.
 
 ```html
 <!DOCTYPE html>
@@ -852,29 +1412,90 @@ Vedd ezt a HTML-t, és írd át, hogy a lehető legakadálymentesebb legyen, az 
 </html>
 ```
 
-**Kulcsfontosságú fejlesztések:**
-- Megfelelő szemantikus HTML struktúra hozzáadása
-- Címsor hierarchia javítása (egy h1, logikus sorrend)
-- Jelentőségteljes link szöveg használata "kattints ide" helyett
+**Főbb javítások:**
+- Megfelelő szemantikus HTML struktúra hozzáadva
+- Címsor hierarchia javítva (egyetlen h1, logikus előrehaladás)
+- Értelmes link szöveg beillesztése "kattints ide" helyett
 - Megfelelő ARIA címkék hozzáadása a navigációhoz
-- Lang attribútum és megfelelő meta címkék használata
-- Gomb elem használata interaktív elemekhez
-- Lábjegyzet tartalom strukturálása megfelelő tájékozódási pontokkal
+- lang attribútum és megfelelő meta tagek hozzáadása
+- Interaktív elemekhez button elem használata
+- Látható lábléc tartalom megfelelő térképekkel strukturálva
 
 ## Előadás utáni kvíz
 [Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/en/)
 
 ## Áttekintés és önálló tanulás
 
-Számos kormány rendelkezik törvényekkel az akadálymentességi követelményekről. Olvass utána saját országod akadálymentességi törvényeinek. Mi van lefedve, és mi nincs? Példa erre [ez a kormányzati weboldal](https://accessibility.blog.gov.uk/).
+Sok kormányzat törvényekkel rendelkezik az akadálymentességi követelményekről. Ismerd meg az otthoni országod akadálymentességi törvényeit. Mi van lefedve és mi nincs? Egy példa erre [ez a kormányzati weboldal](https://accessibility.blog.gov.uk/).
 
-## Feladat
- 
+## Házi feladat
+
 [Elemezz egy nem akadálymentes weboldalt](assignment.md)
 
-Kreditek: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) az Instrument által
+Köszönet: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) től Instrument
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+## 🚀 Az akadálymentesség mesterfokú idővonala
+
+### ⚡ **Mit tudsz megtenni a következő 5 percben?**
+- [ ] Telepítsd az axe DevTools bővítményt a böngésződbe
+- [ ] Fuss egy Lighthouse akadálymentességi auditot a kedvenc weboldaladon
+- [ ] Próbálj meg bármelyik weboldalon kizárólag a Tab billentyűt használva navigálni
+- [ ] Teszteld a böngésződ beépített képernyőolvasóját (Narrator/VoiceOver)
+
+### 🎯 **Mit érhetsz el ezen az órán?**
+- [ ] Töltsd ki az utólagos kvízt és gondolkodj el az akadálymentességi tanulságokon
+- [ ] Gyakorold 10 különböző kép megfelelő alt szövegének írását
+- [ ] Auditáld egy weboldal címsorszerkezetét a HeadingsMap bővítménnyel
+- [ ] Javítsd ki az akadálymentességi hibákat, amelyeket a kihívás HTML-jében találsz
+- [ ] Teszteld a színkontrasztot a jelenlegi projekteden a WebAIM eszközével
+
+### 📅 **Heti akadálymentességi feladataid**
+- [ ] Fejezd be a feladatot, amely egy nem akadálymentes weboldal elemzése
+- [ ] Állítsd be a fejlesztőkörnyezeted akadálymentességi tesztelő eszközökkel
+- [ ] Gyakorold a billentyűzetes navigációt 5 különböző, összetett webhelyen
+- [ ] Építs egy egyszerű űrlapot megfelelő címkékkel, hibakezeléssel és ARIA-val
+- [ ] Csatlakozz egy akadálymentesítési közösséghez (A11y Slack, WebAIM fórum)
+- [ ] Figyelj meg valós fogyatékkal élő felhasználókat, ahogy weboldalakat navigálnak (a YouTube-on nagyszerű példák vannak)
+
+### 🌟 **Az egyhónapos átalakulásod**
+- [ ] Integráld az akadálymentesítési tesztelést a fejlesztési munkafolyamatodba
+- [ ] Adj hozzájárulást egy nyílt forráskódú projekthez akadálymentesítési hibák javításával
+- [ ] Végezz használhatósági tesztelést valakivel, aki segédeszközt használ
+- [ ] Építs akadálymentes komponenskönyvtárat a csapatod számára
+- [ ] Lépj fel az akadálymentesítésért a munkahelyeden vagy a közösségedben
+- [ ] Mentorálj valakit, aki most ismerkedik az akadálymentesítési koncepciókkal
+
+### 🏆 **Végső akadálymentesítési bajnok ellenőrzés**
+
+**Ünnepeld meg az akadálymentesítési utadat:**
+- Mi volt a legmeglepőbb dolog, amit megtanultál arról, hogyan használják az emberek a webet?
+- Melyik akadálymentesítési elv rezonál leginkább a fejlesztési stílusoddal?
+- Hogyan változtatta meg az akadálymentesítés megismerése a tervezéshez való hozzáállásodat?
+- Mi az első akadálymentesítési fejlesztés, amit egy valódi projekten szeretnél megvalósítani?
+
+```mermaid
+journey
+    title Az Ön akadálymentességi magabiztosságának fejlődése
+    section Ma
+      Túlhajszolt: 3: You
+      Kíváncsi: 4: You
+      Motivált: 5: You
+    section Ezen a héten
+      Gyakorlás: 4: You
+      Tesztelés: 5: You
+      Megértés: 5: You
+    section Következő hónap
+      Érvelés: 5: You
+      Vezetés: 5: You
+      Alapértelmezett befogadás: 5: You
+```
+> 🌍 **Most már akadálymentesítési bajnok vagy!** Érted, hogy a remek webes élmények mindenki számára működnek, függetlenül attól, hogyan férnek hozzá a webhez. Minden akadálymentes funkció, amit építesz, befogadóbbá teszi az internetet. A webnek olyan fejlesztőkre van szüksége, mint te, akik az akadálymentesítést nem megszorításként, hanem lehetőségként látják arra, hogy jobb élményeket teremtsenek minden felhasználó számára. Üdv a mozgalomban! 🎉
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Felmentés**:
+Ezt a dokumentumot az [Co-op Translator](https://github.com/Azure/co-op-translator) mesterséges intelligencia fordító szolgáltatással fordítottuk. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén profi emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

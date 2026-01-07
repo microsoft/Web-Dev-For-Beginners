@@ -1,45 +1,30 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "7965cd2bc5dc92ad888dc4c6ab2ab70a",
-  "translation_date": "2025-08-28T08:11:11+00:00",
+  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
+  "translation_date": "2026-01-07T05:26:30+00:00",
   "source_file": "3-terrarium/README.md",
   "language_code": "ro"
 }
 -->
-# Terrariul Meu: Un proiect pentru a învăța despre HTML, CSS și manipularea DOM folosind JavaScript 🌵🌱
+## Publicați Terrarium-ul dumneavoastră
 
-Un mic exercițiu de tip drag and drop. Cu puțin HTML, JS și CSS, vei putea construi o interfață web, să o stilizezi și chiar să adaugi multiple interacțiuni la alegerea ta.
+Puteți publica Terrarium-ul dumneavoastră pe web folosind **Azure Static Web Apps**.
 
-![my terrarium](../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.ro.png)
+1. Faceți fork la acest repo
 
-# Lecții
+2. Apăsați acest buton 👇  
 
-1. [Introducere în HTML](./1-intro-to-html/README.md)
-2. [Introducere în CSS](./2-intro-to-css/README.md)
-3. [Introducere în DOM și JS Closures](./3-intro-to-DOM-and-closures/README.md)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp)
 
-## Credite
-
-Scris cu ♥️ de [Jen Looper](https://www.twitter.com/jenlooper)
-
-Terrariul creat prin CSS a fost inspirat de borcanul de sticlă al lui Jakub Mandra [codepen](https://codepen.io/Rotarepmi/pen/rjpNZY).
-
-Ilustrațiile sunt desenate manual de [Jen Looper](http://jenlooper.com) cu ajutorul Procreate.
-
-## Publică-ți Terrariul
-
-Poți publica terrariul tău pe web folosind Azure Static Web Apps.
-
-1. Fă un fork acestui repo
-
-2. Apasă acest buton
-
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=academic-77807-sagibbon#create/Microsoft.StaticApp)
-
-3. Parcurge pașii din asistent pentru a-ți crea aplicația. Asigură-te că setezi rădăcina aplicației la `/solution` sau la rădăcina codului tău. Această aplicație nu are un API, așa că nu trebuie să te îngrijorezi de acest aspect. Un folder github va fi creat în repository-ul tău fork-uit, care va ajuta serviciile de build ale Azure Static Web Apps să construiască și să publice aplicația ta la o nouă adresă URL.
+3. Urmați expertul de configurare pentru a crea aplicația.  
+   - Setează **App root** fie la `/solution`, fie la rădăcina codului.  
+   - Nu există un API în această aplicație, deci puteți sări peste configurarea API-ului.  
+   - Un folder `.github` va fi creat automat pentru a ajuta Azure Static Web Apps să construiască și să publice aplicația.
 
 ---
 
-**Declinarea responsabilității**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru a asigura acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Declinare a responsabilității**:  
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa nativă, trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un traducător uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea în urma utilizării acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

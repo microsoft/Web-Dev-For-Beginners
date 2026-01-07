@@ -1,170 +1,209 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "acad15f3164cd6348e065ff38619aae9",
-  "translation_date": "2025-10-24T20:51:11+00:00",
+  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
+  "translation_date": "2026-01-07T04:15:32+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "cs"
 }
 -->
 # Úvod do GitHubu
 
-Ahoj, budoucí vývojáři! 👋 Připraveni připojit se k milionům programátorů po celém světě? Jsem opravdu nadšený, že vám mohu představit GitHub – představte si to jako sociální síť pro programátory, ale místo sdílení fotek obědů sdílíme kód a společně vytváříme úžasné věci!
+Ahoj, budoucí vývojáři! 👋 Připraven připojit se k milionům programátorů po celém světě? Jsem opravdu nadšený, že ti mohu představit GitHub – představ si to jako sociální síť pro programátory, jen místo sdílení fotek oběda sdílíme kód a společně budujeme neuvěřitelné věci!
 
-To, co mě naprosto fascinuje, je fakt, že každá aplikace na vašem telefonu, každá webová stránka, kterou navštívíte, a většina nástrojů, které se naučíte používat, byly vytvořeny týmy vývojářů spolupracujících na platformách jako GitHub. Ta hudební aplikace, kterou milujete? Někdo jako vy na ní pracoval. Ta hra, kterou nemůžete odložit? Jo, pravděpodobně byla vytvořena díky spolupráci na GitHubu. A teď se i VY naučíte, jak být součástí této úžasné komunity!
+Co mi fakt bere dech: každá aplikace v tvém telefonu, každá webová stránka, kterou navštívíš, a většina nástrojů, které se naučíš používat, byla vytvořena týmy vývojářů spolupracujících na platformách právě jako GitHub. Ta hudební aplikace, kterou máš rád? Někdo jako ty na ní přispěl. Ta hra, od které se nedokážeš odtrhnout? Jo, pravděpodobně postavená díky spolupráci na GitHubu. A teď se naučíš, jak být součástí té úžasné komunity!
 
-Vím, že to na začátku může působit trochu složitě – pamatuji si, jak jsem poprvé zíral na stránku GitHubu a říkal si: „Co to všechno znamená?“ Ale věřte mi, každý vývojář začínal přesně tam, kde jste teď vy. Na konci této lekce budete mít svůj vlastní GitHub repozitář (představte si to jako svou osobní výstavní síň projektů v cloudu) a budete vědět, jak si ukládat svou práci, sdílet ji s ostatními a dokonce přispívat do projektů, které používají miliony lidí.
+Vím, že to může ze začátku působit jako hodně – hele, pamatuju si, jak jsem poprvé koukal na svou první stránku GitHubu a říkal si „Co to sakra všechno znamená?“ Ale tady je ten vtip: každý jediný vývojář začal přesně tam, kde jsi teď ty. Na konci této lekce budeš mít svůj vlastní GitHub repozitář (představ si to jako tvoji osobní prezentaci projektu v cloudu) a budeš vědět, jak si uložit svou práci, sdílet ji s ostatními a dokonce přispívat do projektů, které používají miliony lidí.
 
-Půjdeme na tuto cestu společně, krok za krokem. Žádný spěch, žádný tlak – jen vy, já a pár opravdu skvělých nástrojů, které se stanou vašimi novými nejlepšími přáteli!
+Vyrazíme na tuto cestu spolu, krok za krokem. Bez spěchu, bez tlaku – jen ty, já a pár opravdu skvělých nástrojů, které se právě stanou tvými novými nejlepšími přáteli!
 
-![Úvod do GitHubu](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.cs.png)
+![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.cs.png)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Kvíz před lekcí
-[Kvíz před lekcí](https://ff-quizzes.netlify.app)
+```mermaid
+journey
+    title Vaše dnešní dobrodružství na GitHubu
+    section Nastavení
+      Nainstalovat Git: 4: You
+      Vytvořit účet: 5: You
+      První repozitář: 5: You
+    section Ovládněte Git
+      Lokální změny: 4: You
+      Commity a pushování: 5: You
+      Větvení: 4: You
+    section Spolupráce
+      Forkování projektů: 4: You
+      Pull requesty: 5: You
+      Open Source: 5: You
+```
+## Přednáškový kvíz
+[Přednáškový kvíz](https://ff-quizzes.netlify.app)
 
 ## Úvod
 
-Než se pustíme do opravdu vzrušujících věcí, připravíme váš počítač na trochu GitHub magie! Představte si to jako organizování svých uměleckých potřeb před vytvořením mistrovského díla – mít správné nástroje připravené dělá všechno mnohem hladší a zábavnější.
+Než se pustíme do opravdu vzrušujících věcí, připravme tvůj počítač na trochu GitHub kouzel! Představ si to jako uspořádání výtvarných potřeb před vytvořením mistrovského díla – mít správné nástroje připravené vše usnadní a hlavně udělá víc zábavné.
 
-Provedu vás každým krokem nastavení osobně a slibuji, že to není ani zdaleka tak děsivé, jak to na první pohled může vypadat. Pokud vám něco hned nedojde, je to úplně normální! Pamatuji si, jak jsem nastavoval své první vývojové prostředí a měl pocit, že se snažím číst starověké hieroglyfy. Každý vývojář byl přesně tam, kde jste teď vy, a přemýšlel, jestli to dělá správně. Malý spoiler: pokud se učíte, už to děláte správně! 🌟
+Provedu tě osobně každým krokem nastavení a slibuji, že to není zdaleka tak děsivé, jak to na první pohled může vypadat. Pokud něco hned nepochopíš, je to naprosto normální! Pamatuju si, jak jsem vybavoval své první vývojové prostředí a měl pocit, že čtu starověké hieroglyfy. Každý vývojář stál přesně tam, kde jsi teď ty, a přemýšlel, jestli to dělá správně. Malá nápověda: pokud se učíš, už to děláš správně! 🌟
 
-V této lekci se naučíte:
+V této lekci se naučíme:
 
-- sledovat práci, kterou děláte na svém počítači
+- sledovat práci, kterou děláš na svém počítači
 - pracovat na projektech s ostatními
 - jak přispívat do open source softwaru
 
-### Předpoklady
+### Požadavky
 
-Pojďme připravit váš počítač na trochu GitHub magie! Nebojte se – toto nastavení je něco, co musíte udělat jen jednou, a pak budete připraveni na celou svou programátorskou cestu.
+Připravíme tvůj počítač na trochu GitHub kouzel! Neboj – toto nastavení musíš udělat jen jednou a pak jsi připravený na celou svou cestu programováním.
 
-Dobře, začněme od základu! Nejprve musíme zkontrolovat, zda už máte na svém počítači nainstalovaný Git. Git je v podstatě jako super chytrý asistent, který si pamatuje každou změnu, kterou provedete ve svém kódu – mnohem lepší než zběsilé mačkání Ctrl+S každé dvě sekundy (to jsme zažili všichni!).
+Dobře, začněme od základů! Nejprve musíme zkontrolovat, jestli už máš na svém počítači Git. Git je vlastně jako mít super chytrého asistenta, který pamatuje každou změnu, kterou uděláš ve svém kódu – mnohem lepší než zoufale mačkat Ctrl+S každé dvě sekundy (všichni jsme tím prošli!).
 
-Podívejme se, jestli už máte Git nainstalovaný, zadáním tohoto kouzelného příkazu do terminálu:
+Podívejme se, jestli je Git už nainstalovaný, tím, že napíšeš do terminálu tento kouzelný příkaz:
 `git --version`
 
-Pokud Git ještě nemáte, žádný problém! Stačí přejít na [download Git](https://git-scm.com/downloads) a stáhnout si ho. Jakmile ho nainstalujete, musíme Git správně představit:
+Pokud Git ještě není, neboj! Stačí jít na [download Git](https://git-scm.com/downloads) a stáhnout ho. Jakmile budeš mít Git nainstalovaný, musíme se s ním správně seznámit:
 
-> 💡 **První nastavení**: Tyto příkazy řeknou Gitu, kdo jste. Tyto informace budou připojeny ke každému commitu, který provedete, takže si vyberte jméno a e-mail, které jste ochotni sdílet veřejně.
+> 💡 **První nastavení**: Tyto příkazy řeknou Gitu, kdo jsi. Tyto údaje budou připojeny ke každému commitu, který uděláš, takže si vyber jméno a e-mail, který chceš zveřejňovat.
 
 ```bash
 git config --global user.name "your-name"
 git config --global user.email "your-email"
 ```
 
-Pro kontrolu, zda je Git již nakonfigurován, můžete zadat:
+Pro kontrolu, jestli je Git nakonfigurovaný, můžeš napsat:
 ```bash
 git config --list
 ```
 
-Budete také potřebovat účet na GitHubu, editor kódu (například Visual Studio Code) a budete muset otevřít svůj terminál (nebo: příkazový řádek).
+Také budeš potřebovat účet na GitHubu, editor kódu (například Visual Studio Code) a otevřít terminál (nebo: příkazový řádek).
 
-Přejděte na [github.com](https://github.com/) a vytvořte si účet, pokud ho ještě nemáte, nebo se přihlaste a vyplňte svůj profil.
+Přejdi na [github.com](https://github.com/) a založ si účet, pokud ho ještě nemáš, nebo se přihlas a vyplň svůj profil.
 
-💡 **Moderní tip**: Zvažte nastavení [SSH klíčů](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) nebo použití [GitHub CLI](https://cli.github.com/) pro snadnější autentizaci bez hesel.
+💡 **Moderní tip**: Zvaž nastavení [SSH klíčů](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) nebo použití [GitHub CLI](https://cli.github.com/) pro jednodušší autentifikaci bez hesel.
 
-✅ GitHub není jediný repozitář kódu na světě; existují i jiné, ale GitHub je nejznámější.
+✅ GitHub není jediným repozitářem kódu na světě; jsou i jiné, ale GitHub je nejznámější
 
 ### Příprava
 
-Budete potřebovat složku s projektem kódu na svém lokálním počítači (notebooku nebo PC) a veřejný repozitář na GitHubu, který bude sloužit jako příklad, jak přispívat do projektů ostatních.
+Budeš potřebovat složku s kódovým projektem na svém počítači (notebook nebo PC) a veřejný repozitář na GitHubu, který poslouží jako příklad, jak přispívat do projektů ostatních.
 
-### Udržování vašeho kódu v bezpečí
+### Uchování kódu v bezpečí
 
-Pojďme si na chvíli promluvit o bezpečnosti – ale nebojte se, nebudeme vás zahlcovat strašidelnými věcmi! Představte si tyto bezpečnostní postupy jako zamykání auta nebo domu. Jsou to jednoduché návyky, které se stanou samozřejmostí a ochrání vaši tvrdou práci.
+Pojďme si chvíli povídat o bezpečnosti – ale neboj, nebudeme tě zahlcovat strašidelnými věcmi! Bezpečnostní praktiky jsou jako zamykání auta nebo domu. Jsou to jednoduché návyky, které se stanou samozřejmostí a ochrání tvou tvrdou práci.
 
-Ukážeme vám moderní, bezpečné způsoby práce s GitHubem hned od začátku. Tímto způsobem si osvojíte dobré návyky, které vám budou sloužit po celou vaši programátorskou kariéru.
+Ukážeme ti moderní a bezpečné způsoby, jak pracovat s GitHubem od samého začátku. Tím si vytvoříš dobré návyky, které ti budou sloužit celou tvou programátorskou kariéru.
 
-Při práci s GitHubem je důležité dodržovat nejlepší bezpečnostní postupy:
+Při práci s GitHub je důležité dodržovat bezpečnostní doporučení:
 
 | Oblast bezpečnosti | Nejlepší postup | Proč je to důležité |
 |--------------------|-----------------|---------------------|
-| **Autentizace** | Používejte SSH klíče nebo osobní přístupové tokeny | Hesla jsou méně bezpečná a postupně se vyřazují |
-| **Dvoufaktorová autentizace** | Aktivujte 2FA na svém GitHub účtu | Přidává další vrstvu ochrany účtu |
-| **Bezpečnost repozitáře** | Nikdy necommitujte citlivé informace | API klíče a hesla by nikdy neměly být ve veřejných repozitářích |
-| **Správa závislostí** | Aktivujte Dependabot pro aktualizace | Udržuje vaše závislosti bezpečné a aktuální |
+| **Autentifikace** | Používej SSH klíče nebo osobní přístupové tokeny | Hesla jsou méně bezpečná a postupně se ruší |
+| **Dvoufaktorová autentifikace** | Zapni 2FA na svém GitHub účtu | Přidává další vrstvu ochrany účtu |
+| **Bezpečnost repozitáře** | Nikdy nedávej do commitu citlivé informace | API klíče a hesla nesmí být ve veřejných repozitářích |
+| **Správa závislostí** | Zapni Dependabot pro aktualizace | Udržuje závislosti bezpečné a aktuální |
 
-> ⚠️ **Důležité bezpečnostní upozornění**: Nikdy necommitujte API klíče, hesla nebo jiné citlivé informace do žádného repozitáře. Používejte environmentální proměnné a soubory `.gitignore` k ochraně citlivých dat.
+> ⚠️ **Kritické bezpečnostní upozornění**: Nikdy neukládej API klíče, hesla nebo jiné citlivé údaje do žádného repozitáře. Používej proměnné prostředí a soubory `.gitignore` k ochraně citlivých dat.
 
-**Moderní nastavení autentizace:**
+**Moderní nastavení autentifikace:**
 
 ```bash
-# Generate SSH key (modern ed25519 algorithm)
+# Vygenerujte SSH klíč (moderní algoritmus ed25519)
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
-# Set up Git to use SSH
+# Nastavte Git pro používání SSH
 git remote set-url origin git@github.com:username/repository.git
 ```
 
-> 💡 **Tip pro profíky**: SSH klíče eliminují potřebu opakovaného zadávání hesel a jsou bezpečnější než tradiční metody autentizace.
+> 💡 **Profesionální tip**: SSH klíče eliminují potřebu opakovaně zadávat hesla a jsou bezpečnější než tradiční způsoby autentifikace.
 
 ---
 
-## Správa vašeho kódu jako profík
+## Správa kódu jako profesionál
 
-Dobře, TEĎ to začne být opravdu vzrušující! 🎉 Naučíme se, jak sledovat a spravovat váš kód jako profíci, a upřímně, tohle je jedna z mých nejoblíbenějších věcí, které učím, protože je to opravdová změna hry.
+Tak jo, TADY se to stává opravdu vzrušující! 🎉 Naučíme se, jak sledovat a spravovat svůj kód jako profíci, a upřímně, je to jedna z mých nejoblíbenějších věcí učit, protože to doslova mění hru.
 
-Představte si to: píšete úžasný příběh a chcete si uchovat každou verzi, každou brilantní úpravu a každý „počkej, to je geniální!“ moment. Přesně to Git dělá pro váš kód! Je to jako mít neuvěřitelný cestující zápisník, který si pamatuje VŠECHNO – každý stisk klávesy, každou změnu, každý „ups, to všechno rozbilo“ moment, který můžete okamžitě vrátit zpět.
+Představ si to: píšeš úžasný příběh a chceš sledovat každý návrh, každou geniální úpravu a každý „počkat, tohle je nápad!“ moment během procesu. Přesně to Git dělá s tvým kódem! Je to jako mít neuvěřitelný deník cestování časem, který si pamatuje VŠECHNO – každý stisk klávesy, každou změnu, každý „oops, to jsem zkazil“ okamžik, který můžeš okamžitě vzít zpět.
 
-Budu upřímný – na začátku to může působit ohromně. Když jsem začínal, říkal jsem si: „Proč si prostě nemůžu ukládat soubory normálně?“ Ale věřte mi: jakmile vám Git začne dávat smysl (a ono začne!), budete mít ten moment „aha“, kdy si řeknete: „Jak jsem kdy mohl programovat bez tohohle?“ Je to jako objevit, že můžete létat, když jste celý život chodili pěšky!
+Upřímně – může to působit zpočátku zahlcujícím dojmem. Když jsem začínal, říkal jsem si „Proč si prostě nemůžu uložit soubory jako normálně?“ Ale věř mi: jakmile ti Git začne dávat smysl (a dá!), zažiješ tu momentální „aha!“ chvíli, kdy si řekneš „Jak jsem kdy mohl programovat bez toho?“ Je to jako objevit, že umíš létat, když jsi celý život chodil pěšky!
 
-Představme si, že máte na svém počítači složku s nějakým projektem kódu a chcete začít sledovat svůj pokrok pomocí gitu – systému pro správu verzí. Někteří lidé přirovnávají používání gitu k psaní milostného dopisu svému budoucímu já. Když si za pár dní, týdnů nebo měsíců přečtete své commit zprávy, budete schopni si vybavit, proč jste udělali určité rozhodnutí, nebo „vrátit“ změnu – to vše, když píšete dobré „commit zprávy“.
+Představ si, že máš lokálně složku s nějakým projektem a chceš začít sledovat svůj progres pomocí gitu – systému pro správu verzí. Někteří lidé přirovnávají používání gitu k psaní milostného dopisu svému budoucímu já. Když si pak za dny, týdny nebo měsíce přečteš zprávy commitů, budeš si pamatovat, proč jsi učinil určité rozhodnutí, nebo můžeš „vrátit“ změnu – to platí, když píšeš dobré zprávy commitů.
 
-### Úkol: Vytvořte svůj první repozitář!
+```mermaid
+flowchart TD
+    A[📁 Vaše soubory projektu] --> B{Je to Git repozitář?}
+    B -->|Ne| C[git init]
+    B -->|Ano| D[Proveďte změny]
+    C --> D
+    D --> E[git add .]
+    E --> F["git commit -m 'zpráva'"]
+    F --> G[git push]
+    G --> H[🌟 Kód na GitHubu!]
+    
+    H --> I{Chcete spolupracovat?}
+    I -->|Ano| J[Fork & Klonovat]
+    I -->|Ne| D
+    J --> K[Vytvořit větev]
+    K --> L[Proveďte změny]
+    L --> M[Pull Request]
+    M --> N[🎉 Přispívání!]
+    
+    style A fill:#fff59d
+    style H fill:#c8e6c9
+    style N fill:#ff4081,color:#fff
+```
+### Úkol: Vytvoř svůj první repozitář!
 
-> 🎯 **Vaše mise (a jsem z toho nadšený!)**: Společně vytvoříme váš úplně první GitHub repozitář! Až skončíme, budete mít svůj vlastní malý koutek internetu, kde bude váš kód, a provedete svůj první „commit“ (to je vývojářský slang pro chytré ukládání vaší práce).
+> 🎯 **Tvůj úkol (a já jsem nadšený za tebe!)**: Společně vytvoříme tvůj úplně první GitHub repozitář! Až tady skončíme, budeš mít svůj malý koutek internetu, kde bude tvůj kód žít, a uděláš svůj první "commit" (to je programátorský výraz pro chytré uložení práce).
 >
-> To je opravdu speciální moment – právě se oficiálně připojujete ke globální komunitě vývojářů! Stále si pamatuji ten pocit vzrušení, když jsem vytvořil svůj první repozitář a říkal si: „Wow, opravdu to dělám!“
+> Je to opravdu zvláštní moment – chystáš se oficiálně připojit ke globální komunitě vývojářů! Stále si pamatuju ten adrenalin z vytvoření svého prvního repa, kdy jsem si říkal „Wow, opravdu to dělám!“
 
-Projdeme si toto dobrodružství společně, krok za krokem. Věnujte každému kroku dostatek času – není žádná cena za spěchání a slibuji, že každý jednotlivý krok bude dávat smysl. Pamatujte, každý programátorský superstar, kterého obdivujete, byl jednou přesně tam, kde jste teď vy, připraven vytvořit svůj první repozitář. Jak úžasné to je?
+Projďme tím dobrodružstvím společně, krok za krokem. Dej si na každé části tolik času, kolik potřebuješ – není žádná soutěž, kdo to udělá rychle. A slibuju ti, že každý krok bude dávat smysl. Pamatuj, každý hvězdný programátor, kterého obdivuješ, seděl přesně tam, kde jsi ty, a chystal se vytvořit svůj první repozitář. Jak to je skvělé?
 
-> Podívejte se na video
+> Podívej se na video
 > 
-> [![Video o základech Gitu a GitHubu](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+> [![Základy Gitu a GitHubu video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
 **Pojďme na to společně:**
 
-1. **Vytvořte svůj repozitář na GitHubu**. Přejděte na GitHub.com a najděte jasně zelené tlačítko **New** (nebo znak **+** v pravém horním rohu). Klikněte na něj a vyberte **New repository**.
+1. **Vytvoř si repozitář na GitHubu**. Přejdi na GitHub.com a hledej jasně zelené tlačítko **New** (nebo znak **+** v pravém horním rohu). Klikni na něj a vyber **New repository**.
 
-   Co udělat:
-   1. Dejte svému repozitáři jméno – udělejte ho pro vás smysluplným!
-   1. Přidejte popis, pokud chcete (to pomáhá ostatním pochopit, o čem váš projekt je)
-   1. Rozhodněte se, zda chcete, aby byl veřejný (viditelný pro všechny) nebo soukromý (jen pro vás)
-   1. Doporučuji zaškrtnout políčko pro přidání README souboru – je to jako titulní stránka vašeho projektu
-   1. Klikněte na **Create repository** a oslavte – právě jste vytvořili svůj první repozitář! 🎉
+   Co máš udělat:
+   1. Dej repozitáři jméno – ať něco pro tebe znamená!
+   1. Přidej popis, pokud chceš (to pomůže ostatním pochopit, o co tvůj projekt je)
+   1. Rozhodni se, jestli bude veřejný (každý ho může vidět) nebo soukromý (jen ty)
+   1. Doporučuji zaškrtnout políčko na přidání README souboru – je to jako titulní strana tvého projektu
+   1. Klikni na **Create repository** a oslavuj – právě jsi vytvořil svůj první repozitář! 🎉
 
-2. **Přejděte do složky svého projektu**. Teď si otevřeme váš terminál (nebojte se, není to tak děsivé, jak to vypadá!). Musíme říct vašemu počítači, kde jsou vaše projektové soubory. Zadejte tento příkaz:
+2. **Přejdi do složky s projektem**. Teď otevři svůj terminál (neboj, není to tak strašidelné, jak to vypadá!). Musíme říct počítači, kde jsou tvoje projektové soubory. Napiš tento příkaz:
 
    ```bash
    cd [name of your folder]
    ```
 
-   **Co tady děláme:**
-   - V podstatě říkáme „Hej počítači, vezmi mě do složky mého projektu“
-   - Je to jako otevřít konkrétní složku na ploše, ale děláme to pomocí textových příkazů
-   - Nahraďte `[name of your folder]` skutečným názvem vaší projektové složky
+   **Co děláme:**
+   - Říkáme "Hej počítači, ukaž mi moji projektovou složku"
+   - Je to jako otevření konkrétní složky na ploše, ale děláme to pomocí příkazů
+   - Nahraď `[name of your folder]` skutečným názvem své projektové složky
 
-3. **Proměňte svou složku v Git repozitář**. Tady se děje magie! Zadejte:
+3. **Přeměň složku na Git repozitář**. Tady začíná magie! Napiš:
 
    ```bash
    git init
    ```
 
-   **Co se právě stalo (docela cool věc!):**
-   - Git právě vytvořil skrytou složku `.git` ve vašem projektu – neuvidíte ji, ale je tam!
-   - Vaše běžná složka je nyní „repozitář“, který může sledovat každou změnu, kterou provedete
-   - Představte si to jako přidání super schopností vaší složce, aby si pamatovala všechno
+   **Co se právě stalo (fakt cool věci!):**
+   - Git vytvořil skrytou složku `.git` ve tvém projektu – neuvidíš ji, ale je tam!
+   - Tvoje běžná složka je teď „repozitář“, který může sledovat každou tvou změnu
+   - Představ si to jako dát své složce superschopnosti pamatovat si všechno
 
-4. **Zkontrolujte, co se děje**. Podívejme se, co si Git myslí o vašem projektu právě teď:
+4. **Zkontroluj, co se děje**. Podívejme se, co si Git myslí o tvém projektu právě teď:
 
    ```bash
    git status
    ```
 
-   **Porozumění tomu, co vám Git říká:**
+   **Co ti Git říká:**
    
-   Můžete vidět něco, co vypadá takto:
+   Můžeš vidět něco jako toto:
 
    ```output
    Changes not staged for commit:
@@ -175,96 +214,102 @@ Projdeme si toto dobrodružství společně, krok za krokem. Věnujte každému 
         modified:   file2.txt
    ```
 
-   **Nebojte se! Tady je, co to znamená:**
-   - Soubory v **červené** jsou soubory, které mají změny, ale ještě nejsou připraveny k uložení
-   - Soubory v **zelené** (až je uvidíte) jsou připraveny k uložení
-   - Git je užitečný tím, že vám přesně říká, co můžete udělat dál
+   **Neboj se! Tady je, co to znamená:**
+   - Soubory červeně jsou soubory, které se změnily, ale ještě nejsou připravené k uložení
+   - Soubory zeleně (když je vidíš) jsou připravené k uložení
+   - Git ti pomáhá tím, že přesně říká, co můžeš udělat dál
 
-   > 💡 **Tip pro profíky**: Příkaz `git status` je váš nejlepší přítel! Používejte ho kdykoli, když si nejste jisti, co se děje. Je to jako ptát se Gitu „Hej, jaká je teď situace?“
+   > 💡 **Profesionální tip**: Příkaz `git status` je tvůj nejlepší přítel! Používej ho kdykoliv budeš mít zmatek. Je to jako ptát se Gitu: "Hej, co je teď za situaci?"
 
-5. **Připravte své soubory k uložení** (tomu se říká „staging“):
+5. **Připrav si soubory na uložení** (říká se tomu "staging"):
 
    ```bash
    git add .
    ```
 
    **Co jsme právě udělali:**
-   - Řekli jsme Gitu „Hej, chci zahrnout VŠECHNY své soubory do dalšího uložení“
-   - Tečka znamená „všechno v této složce“
-   - Teď jsou vaše soubory „připravené“ na další krok
+   - Řekli jsme Gitu: „Hej, chci do dalšího uložení zahrnout VŠECHNY své soubory“
+   - `.` znamená „vše v této složce“
+   - Teď jsou tvoje soubory „připravené“ na další krok
 
-   **Chcete být selektivnější?** Můžete přidat jen konkrétní soubory:
+   **Chceš být vybíravější?** Můžeš přidat jen konkrétní soubory:
 
    ```bash
    git add [file or folder name]
    ```
 
-   **Proč byste to chtěli udělat?**
-   - Někdy chcete uložit související změny dohromady
-   - Pomáhá vám organizovat práci do logických celků
-   - Usnadňuje pochopení, co se změnilo a kdy
+   **Proč by tě to mohlo zajímat?**
+   - Někdy chceš uložit související změny společně
+   - Pomáhá ti to uspořádat práci do logických celků
+   - Usnadňuje to pochopení, co a kdy se změnilo
 
-   **Změnili jste názor?** Žádný problém! Můžete soubory odebrat z přípravy takto:
+   **Změnil/a jsi názor?** Nevadí! Můžeš odebrat soubory z připravených takto:
 
    ```bash
-   # Unstage everything
+   # Zrušit přidání všeho
    git reset
    
-   # Unstage just one file
+   # Zrušit přidání pouze jednoho souboru
    git reset [file name]
    ```
 
-   Nebojte se – tohle vaši práci nesmaže, jen odebere soubory z „připravené k uložení“ hromady.
+   Neboj, to nevymaže tvou práci, jen to vezme soubory z „připravených k uložení“ balíčku.
 
-6. **Trvale uložte svou práci** (provedení prvního commitu!):
+6. **Ulož svou práci natrvalo** (uděláš svůj první commit!):
 
    ```bash
    git commit -m "first commit"
    ```
 
-   **🎉 Gratulace! Právě jste provedli svůj první commit!**
+   **🎉 Gratuluji! Právě jsi udělal svůj první commit!**
    
    **Co se právě stalo:**
-   - Git si vzal „snímek“ všech vašich připravených souborů v tomto přesném okamžiku
-   - Vaše commit zpráva „first commit“ vysvětluje, o čem je tento bod uložení
-   - Git dal tomuto snímku unikátní ID, takže ho vždy najdete
-   - Oficiálně jste začali sledovat historii svého projektu!
+   - Git pořídil „momentku“ všech připravených souborů v tento přesný okamžik
+   - Zpráva commitu „first commit“ vysvětluje, co tento bod uložení znamená
+   - Git dal této momentce unikátní ID, abys ji vždy našel
+   - Oficiálně jsi začal sledovat historii svého projektu!
 
-   > 💡 **Budoucí commit zprávy**: Pro vaše další commity buďte více popisní! Místo „updated stuff“ zkuste „Přidání kontaktního formuláře na domovskou stránku“ nebo „Oprava chyby v navigačním menu“. Vaše budoucí já vám poděkuje!
+   > 💡 **Budoucí zprávy commitů**: Další zprávy piš podrobněji! Místo „updated stuff“ zkus „Přidání kontaktního formuláře na úvodní stránku“ nebo „Oprava chyby v menu navigace“. Tvůj budoucí já ti poděkuje!
 
-7. **Připojte svůj lokální projekt k GitHubu**. Právě teď váš projekt existuje pouze na vašem počítači. Pojďme ho připojit k vašemu GitHub repozitáři, abyste ho mohli sdílet se světem!
+7. **Propoj svůj lokální projekt s GitHubem**. Tvojí projekt má zatím domov jen v počítači. Pojďme ho propojit s GitHub repozitářem, aby ho mohl vidět celý svět!
 
-   Nejprve přejděte na stránku svého GitHub repozitáře a zkopírujte URL. Poté se vraťte sem a zadejte:
+   Nejprve jdi na stránku svého GitHub repozitáře a zkopíruj URL. Pak se vrať sem a napiš:
 
-@@CODE
-   - Vytvořili jsme spojení mezi vaším lokálním projektem a vaším GitHub repozitářem.
-   - "Origin" je jen přezdívka pro váš GitHub repozitář – je to jako přidání kontaktu do vašeho telefonu.
-   - Nyní váš lokální Git ví, kam poslat váš kód, když jste připraveni ho sdílet.
+   ```bash
+   git remote add origin https://github.com/username/repository_name.git
+   ```
+   
+   (Nahraď tu URL skutečnou adresou svého repozitáře!)
 
-   💡 **Jednodušší způsob**: Pokud máte nainstalovaný GitHub CLI, můžete to udělat jedním příkazem:
+   **Co jsme právě udělali:**
+   - Vytvořili jsme spojení mezi vaším lokálním projektem a vaším repozitářem na GitHubu
+   - „Origin“ je jen přezdívka pro váš GitHub repozitář – je to jako přidat kontakt do telefonu
+   - Teď váš lokální Git ví, kam poslat váš kód, když budete připraveni jej sdílet
+
+   💡 **Jednodušší cesta**: Pokud máte nainstalovaný GitHub CLI, můžete to udělat jedním příkazem:
    ```bash
    gh repo create my-repo --public --push --source=.
    ```
 
-8. **Pošlete svůj kód na GitHub** (velký okamžik!):
+8. **Poslat svůj kód na GitHub** (ten velký okamžik!):
 
    ```bash
    git push -u origin main
    ```
 
-   **🚀 To je ono! Nahráváte svůj kód na GitHub!**
+   **🚀 To je ono! Nahazujete svůj kód na GitHub!**
    
    **Co se děje:**
-   - Vaše commity cestují z vašeho počítače na GitHub.
-   - Příznak `-u` nastavuje trvalé spojení, takže budoucí pushování je jednodušší.
-   - "main" je název vašeho hlavního větve (jako hlavní složka).
-   - Poté už stačí pro budoucí nahrávání zadat jen `git push`!
+   - Vaše commity putují z vašeho počítače na GitHub
+   - Přepínač `-u` nastaví trvalé spojení, aby budoucí pushování bylo snazší
+   - „main“ je název vašeho primárního větve (jako hlavní složka)
+   - Po tomto můžete pro budoucí nahrávání jednoduše zadat `git push`!
 
-   💡 **Rychlá poznámka**: Pokud se vaše větev jmenuje jinak (například "master"), použijte tento název. Můžete to zkontrolovat pomocí `git branch --show-current`.
+   💡 **Rychlá poznámka**: Pokud se vaše větev jmenuje jinak (např. „master“), použijte ten název místo toho. Můžete to zkontrolovat příkazem `git branch --show-current`.
 
-9. **Váš nový každodenní rytmus kódování** (tady to začne být návykové!):
+9. **Váš nový denní rytmus kódování** (tady to začne být návykové!):
 
-   Odteď, kdykoli provedete změny ve svém projektu, máte před sebou tento jednoduchý tříkrokový postup:
+   Odteď, kdykoliv provedete změny ve svém projektu, máte tento jednoduchý tříkrokový tanec:
 
    ```bash
    git add .
@@ -273,66 +318,110 @@ Projdeme si toto dobrodružství společně, krok za krokem. Věnujte každému 
    ```
 
    **To se stane vaším kódovacím rytmem:**
-   - Udělejte nějaké skvělé změny ve svém kódu ✨
-   - Připravte je pomocí `git add` ("Hej Git, všimni si těchto změn!")
-   - Uložte je pomocí `git commit` a popisné zprávy (budoucí vy vám poděkuje!)
+   - Proveďte skvělé změny ve svém kódu ✨
+   - Připravte je pomocí `git add` („Hej Gite, věnuj pozornost těmto změnám!“)
+   - Uložte je pomocí `git commit` s popisnou zprávou (vaše budoucí já vám poděkuje!)
    - Sdílejte je se světem pomocí `git push` 🚀
-   - Opakujte – vážně, stane se to tak přirozené jako dýchání!
+   - Opakujte – vážně, tohle se stane tak přirozeným jako dýchání!
 
-   Miluji tento pracovní postup, protože je to jako mít více uložených bodů ve videohře. Udělali jste změnu, kterou milujete? Commitujte ji! Chcete zkusit něco riskantního? Žádný problém – vždy se můžete vrátit k poslednímu commitu, pokud se věci pokazí!
+   Miluji tento pracovní tok, protože je to jako mít v počítačové hře více uložených bodů. Udělali jste změnu, která se vám líbí? Commitujte ji! Chcete zkusit něco riskantního? Žádný problém – vždy se můžete vrátit k poslednímu commitu, pokud se něco pokazí!
 
-   > 💡 **Tip**: Možná budete chtít použít soubor `.gitignore`, abyste zabránili sledování souborů, které nechcete na GitHubu – například poznámkový soubor, který ukládáte ve stejné složce, ale nemá místo ve veřejném repozitáři. Šablony pro soubory `.gitignore` najdete na [.gitignore templates](https://github.com/github/gitignore) nebo si vytvořte vlastní pomocí [gitignore.io](https://www.toptal.com/developers/gitignore).
+   > 💡 **Tip**: Možná budete chtít také použít `.gitignore` soubor, abyste zabránili souborům, které nechcete sledovat, aby se objevovaly na GitHubu – jako třeba ten poznámkový soubor, který máte ve stejné složce, ale nemá co dělat v veřejném repozitáři. Šablony pro `.gitignore` soubory najdete na [.gitignore templates](https://github.com/github/gitignore) nebo si můžete jeden vytvořit pomocí [gitignore.io](https://www.toptal.com/developers/gitignore).
 
-#### Moderní pracovní postupy s Gitem
+### 🧠 **První commit do repozitáře: Jaké to bylo?**
+
+**Věnujte chvíli oslavě a zamyšlení:**
+- Jaké to bylo vidět svůj kód poprvé na GitHubu?
+- Který krok byl nejnáročnější, a který naopak překvapivě snadný?
+- Dokážete vlastními slovy vysvětlit rozdíl mezi `git add`, `git commit` a `git push`?
+
+```mermaid
+stateDiagram-v2
+    [*] --> LocalFiles: Vytvořit projekt
+    LocalFiles --> Staged: git add .
+    Staged --> Committed: git commit
+    Committed --> GitHub: git push
+    GitHub --> [*]: Úspěch! 🎉
+    
+    note right of Staged
+        Soubory připravené k uložení
+    end note
+    
+    note right of Committed
+        Snímek vytvořen
+    end note
+```
+> **Pamatujte**: I zkušení vývojáři někdy zapomenou přesné příkazy. Aby se tento pracovní tok stal svalovou pamětí, je třeba cvičit – daří se vám to skvěle!
+
+#### Moderní Git pracovní toky
 
 Zvažte přijetí těchto moderních praktik:
 
-- **Konvenční commity**: Používejte standardizovaný formát zpráv commitů jako `feat:`, `fix:`, `docs:` atd. Více se dozvíte na [conventionalcommits.org](https://www.conventionalcommits.org/).
-- **Atomické commity**: Každý commit by měl představovat jednu logickou změnu.
-- **Časté commity**: Commitujte často s popisnými zprávami, místo velkých a nepravidelných commitů.
+- **Conventional Commits**: Používejte standardizovaný formát commit zpráv jako `feat:`, `fix:`, `docs:`, atd. Více na [conventionalcommits.org](https://www.conventionalcommits.org/)
+- **Atomic commits**: Každý commit by měl představovat jednu logickou změnu
+- **Časté commity**: Commitujte často s popisnými zprávami, spíše než velké, zřídka prováděné commity
 
-#### Zprávy commitů
+#### Commit zprávy
 
-Skvělý předmět zprávy commitu by měl dokončit následující větu:
-Pokud bude aplikován, tento commit <vaše předmětná zpráva zde>
+Skvělý předmět commit zprávy dokončí následující větu:
+Pokud bude tento commit aplikován, <váš text předmětu zde>
 
-Pro předmět používejte rozkazovací způsob v přítomném čase: "změnit" místo "změněno" nebo "změny". 
-Stejně jako v předmětu, i v těle (volitelném) používejte rozkazovací způsob v přítomném čase. Tělo by mělo zahrnovat motivaci ke změně a kontrastovat to s předchozím chováním. Vysvětlujete `proč`, ne `jak`.
+Pro předmět používejte imperativ v přítomném čase: „change“ ne „changed“ ani „changes“.
+Stejně tak i v těle (volitelném) používejte imperativ v přítomném čase. Tělo by mělo obsahovat motivaci ke změně a kontrast k předchozímu chování. Vysvětlujete *proč*, ne *jak*.
 
-✅ Věnujte pár minut prozkoumání GitHubu. Najdete opravdu skvělou zprávu commitu? Najdete nějakou velmi stručnou? Jaké informace považujete za nejdůležitější a užitečné pro sdělení ve zprávě commitu?
+✅ Věnujte několik minut prohlížení GitHubu. Najdete opravdu dobrou commit zprávu? Najdete opravdu minimalistickou? Jaké informace považujete za nejdůležitější a nejvíce užitečné sdělit v commit zprávě?
 
-## Spolupráce s ostatními (ta zábavná část!)
+## Práce s ostatními (Zábavná část!)
 
-Připravte se, protože TOTO je místo, kde se GitHub stává naprosto magickým! 🪄 Zvládli jste správu vlastního kódu, ale teď se ponoříme do mé absolutně nejoblíbenější části – spolupráce s úžasnými lidmi z celého světa.
+Držte si klobouk, protože TADY GitHub začne být opravdu magický! 🪄 Ovládli jste správu vlastního kódu, ale teď se ponoříme do mé úplně nejoblíbenější části – spolupráce s úžasnými lidmi z celého světa.
 
-Představte si to: zítra se probudíte a zjistíte, že někdo v Tokiu vylepšil váš kód, zatímco jste spali. Pak někdo v Berlíně opraví chybu, na které jste uvízli. Odpoledne přidá vývojář v São Paulu funkci, na kterou jste ani nepomysleli. To není sci-fi – to je prostě úterý ve vesmíru GitHubu!
+Představte si: vzbudíte se zítra a uvidíte, že někdo v Tokiu vylepšil váš kód, zatímco jste spali. Pak někdo v Berlíně opraví chybu, na které jste byli zaseknutí. Odpoledne už vývojář v São Paulu přidal funkci, na kterou byste nikdy nepomysleli. To není sci-fi – to je prostě úterý ve světě GitHubu!
 
-Co mě opravdu nadchne, je to, že dovednosti spolupráce, které se chystáte naučit? To jsou PŘESNĚ ty samé pracovní postupy, které týmy v Googlu, Microsoftu a vašich oblíbených startupech používají každý den. Nejenže se učíte skvělý nástroj – učíte se tajný jazyk, který umožňuje celému softwarovému světu spolupracovat.
+Co mě opravdu těší, jsou ty spolupracující dovednosti, které se právě naučíte? Jsou to EXAKTNĚ tyto pracovní toky, které týmy ve firmách jako Google, Microsoft a vaše oblíbené startupy používají každý den. Neučíte se jen nějaký skvělý nástroj – učíte se tajný jazyk, který umožňuje celému světu softwaru spolupracovat.
 
-Vážně, jakmile zažijete ten pocit, když někdo poprvé sloučí váš pull request, pochopíte, proč jsou vývojáři tak vášniví ohledně open source. Je to jako být součástí největšího, nejkreativnějšího týmového projektu na světě!
+Vážně, jakmile zažijete ten pocit, když někdo sloučí váš první pull request, pochopíte, proč jsou vývojáři tak zapálení pro open source. Je to jako být součástí největšího, nejkreativnějšího týmového projektu na světě!
 
 > Podívejte se na video
 >
-> [![Video o základech Gitu a GitHubu](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
 Hlavním důvodem pro umístění věcí na GitHub bylo umožnit spolupráci s ostatními vývojáři.
 
-Ve vašem repozitáři přejděte na `Insights > Community`, abyste viděli, jak váš projekt odpovídá doporučeným komunitním standardům.
+```mermaid
+flowchart LR
+    A[🔍 Najít Projekt] --> B[🍴 Vytvořit Fork Repozitáře]
+    B --> C[📥 Klonovat Lokálně]
+    C --> D[🌿 Vytvořit Větev]
+    D --> E[✏️ Proveďte Změny]
+    E --> F[💾 Uložit Změny]
+    F --> G[📤 Push Větve]
+    G --> H[🔄 Vytvořit Pull Request]
+    H --> I{Recenze Správcem}
+    I -->|✅ Schváleno| J[🎉 Sloučit!]
+    I -->|❓ Požadovány Změny| K[📝 Proveďte Aktualizace]
+    K --> F
+    J --> L[🧹 Úklid Větví]
+    
+    style A fill:#e3f2fd
+    style J fill:#e8f5e8
+    style L fill:#fff3e0
+```
+Ve svém repozitáři přejděte na `Insights > Community`, abyste viděli, jak váš projekt odpovídá doporučeným komunitním standardům.
 
-Chcete, aby váš repozitář vypadal profesionálně a přívětivě? Přejděte do svého repozitáře a klikněte na `Insights > Community`. Tato skvělá funkce vám ukáže, jak váš projekt odpovídá tomu, co GitHub komunita považuje za "dobré praktiky repozitáře."
+Chcete, aby váš repozitář vypadal profesionálně a přívětivě? Přejděte do svého repozitáře a klikněte na `Insights > Community`. Tato skvělá funkce vám ukáže, jak váš projekt odpovídá tomu, co komunita GitHub považuje za „dobré praktiky repozitáře“.
 
-> 🎯 **Jak udělat váš projekt atraktivním**: Dobře organizovaný repozitář s kvalitní dokumentací je jako mít čistý, přívětivý obchod. Ukazuje lidem, že vám na vaší práci záleží, a motivuje ostatní, aby přispěli!
+> 🎯 **Nechte svůj projekt zazářit**: Dobře organizovaný repozitář s dobrou dokumentací je jako mít čistý, přívětivý výklad obchodu. Ukazuje lidem, že vám na vaší práci záleží, a motivuje ostatní přispívat!
 
-**Co dělá repozitář skvělým:**
+**Co dělá repozitář úžasným:**
 
 | Co přidat | Proč je to důležité | Co to pro vás znamená |
-|-----------|---------------------|-----------------------|
-| **Popis** | První dojem je důležitý! | Lidé okamžitě vědí, o čem váš projekt je |
-| **README** | Hlavní stránka vašeho projektu | Jako přívětivý průvodce pro nové návštěvníky |
-| **Pokyny pro přispěvatele** | Ukazuje, že vítáte pomoc | Lidé přesně vědí, jak vám mohou pomoci |
-| **Kodex chování** | Vytváří přátelské prostředí | Každý se cítí vítán k účasti |
-| **Licence** | Právní jasnost | Ostatní vědí, jak mohou váš kód používat |
-| **Bezpečnostní politika** | Ukazuje, že jste zodpovědní | Demonstruje profesionální přístup |
+|-----------|--------------------|----------------------|
+| **Popis** | První dojem je důležitý! | Lidé hned vědí, co váš projekt dělá |
+| **README** | Úvodní stránka projektu | Jako přátelský průvodce pro nové návštěvníky |
+| **Příručka pro přispívání** | Ukazuje, že pomoc vítáte | Lidé přesně vědí, jak vám můžou pomoci |
+| **Kodex chování** | Vytváří přátelské prostředí | Každý se cítí vítán a může se zapojit |
+| **Licence** | Právní jasnost | Ostatní vědí, jak s vaším kódem mohou pracovat |
+| **Bezpečnostní politika** | Ukazuje vaši odpovědnost | Demonstruje profesionální přístup |
 
 > 💡 **Profesionální tip**: GitHub poskytuje šablony pro všechny tyto soubory. Při vytváření nového repozitáře zaškrtněte políčka pro automatické generování těchto souborů.
 
@@ -343,239 +432,346 @@ Chcete, aby váš repozitář vypadal profesionálně a přívětivě? Přejdět
 - **Dependabot** pro automatické aktualizace závislostí
 
 💬 **Komunita & řízení projektů:**
-- **GitHub Discussions** pro komunitní diskuze nad rámec problémů
-- **GitHub Projects** pro řízení projektů ve stylu kanban
-- **Pravidla ochrany větví** pro prosazování standardů kvality kódu
+- **GitHub Discussions** pro komunitní diskuse mimo issues
+- **GitHub Projects** pro kanbanové řízení projektů
+- **Pravidla ochrany větví** pro udržování standardů kvality kódu
 
-Všechny tyto zdroje budou užitečné při začleňování nových členů týmu. A to jsou obvykle věci, na které se noví přispěvatelé podívají, než se podívají na váš kód, aby zjistili, zda je váš projekt tím správným místem, kde by měli trávit svůj čas.
 
-✅ README soubory, i když jejich příprava zabere čas, jsou často přehlíženy zaneprázdněnými správci. Najdete příklad obzvláště popisného README? Poznámka: existují [nástroje, které pomáhají vytvářet dobré README](https://www.makeareadme.com/), které byste mohli vyzkoušet.
+Všechny tyto nástroje pomohou při onboardingu nových členů týmu. A typicky to jsou věci, na které se noví přispěvatelé dívají ještě předtím, než se podívají na váš kód, aby zjistili, jestli je jejich čas investovaný správně.
+
+✅ README soubory, ačkoliv příprava je časově náročná, jsou často zanedbávány zaneprázdněnými správci. Najdete příklad obzvlášť popisného README? Poznámka: existují [nástroje pro tvorbu kvalitních README](https://www.makeareadme.com/), které můžete vyzkoušet.
 
 ### Úkol: Sloučit nějaký kód
 
-Dokumentace pro přispěvatele pomáhá lidem přispívat do projektu. Vysvětluje, jaké typy příspěvků hledáte a jak proces funguje. Přispěvatelé budou muset projít sérií kroků, aby mohli přispět do vašeho repozitáře na GitHubu:
+Dokumenty pro přispěvatele pomáhají lidem přispívat do projektu. Vysvětlují, jaké typy příspěvků hledáte a jak proces funguje. Přispěvatelé budou muset projít několika kroky, aby mohli přispět do vašeho repozitáře na GitHubu:
 
-1. **Forkování vašeho repozitáře**. Pravděpodobně budete chtít, aby lidé _forkovali_ váš projekt. Forkování znamená vytvoření repliky vašeho repozitáře na jejich GitHub profilu.
-1. **Klonování**. Odtud si projekt naklonují na svůj lokální počítač.
-1. **Vytvoření větve**. Budete chtít, aby si vytvořili _větev_ pro svou práci.
-1. **Zaměření změny na jednu oblast**. Požádejte přispěvatele, aby se soustředili na jednu věc najednou – tím se zvýší šance, že budete moci _sloučit_ jejich práci. Představte si, že opraví chybu, přidají novou funkci a aktualizují několik testů – co když chcete nebo můžete implementovat jen 2 z 3 nebo 1 z 3 změn?
 
-✅ Představte si situaci, kdy jsou větve obzvláště důležité pro psaní a odesílání dobrého kódu. Jaké případy použití vás napadají?
+1. **Forkování vašeho repozitáře** Pravděpodobně chcete, aby lidé _forkovali_ váš projekt. Forkování znamená vytvoření kopie vašeho repozitáře na jejich GitHub profilu.
+1. **Klonování**. Odtamtud projekt naklonují na svůj lokální počítač.
+1. **Vytvoření větve**. Chcete, aby si vytvořili _větev_ pro svou práci.
+1. **Zaměření změn na jednu oblast**. Požádejte přispěvatele, aby své příspěvky soustředili na jednu věc najednou – tím zvýšíte šanci, že budete moct jejich práci _sloučit_. Představte si, že napíšou opravu chyby, přidají novou funkci a aktualizují několik testů – co když chcete nebo můžete implementovat jen 2 z 3, nebo 1 z 3 změn?
 
-> Poznámka: Buďte tou změnou, kterou chcete vidět ve světě, a vytvářejte větve i pro svou vlastní práci. Jakékoli commity, které provedete, budou provedeny na větvi, na kterou jste aktuálně "přepnuti". Použijte `git status`, abyste viděli, na které větvi právě jste.
+✅ Představte si situaci, kdy jsou větve obzvlášť důležité pro psaní a doručování kvalitního kódu. Jaké případy použití vás napadají?
 
-Pojďme si projít pracovní postup přispěvatele. Předpokládejme, že přispěvatel již _forkoval_ a _naklonoval_ repozitář, takže má připravený Git repozitář na svém lokálním počítači:
+> Poznámka, buďte tou změnou, kterou chcete ve světě vidět, a vytvářejte větve i pro svou vlastní práci. Jakékoliv commity, které provedete, budou provedeny na větvi, na které jste momentálně „checkoutnuti“. Použijte `git status`, abyste zjistili, která to je.
 
-1. **Vytvoření větve**. Použijte příkaz `git branch` k vytvoření větve, která bude obsahovat změny, které chce přispěvatel přidat:
+Projďme si pracovní tok přispěvatele. Předpokládejme, že přispěvatel již repozitář _forknul_ a _klonoval_, takže má Git repo připravené k práci na svém lokálním počítači:
+
+1. **Vytvoření větve**. Použijte příkaz `git branch` k vytvoření větve, která bude obsahovat změny, které chtějí přispět:
 
    ```bash
    git branch [branch-name]
    ```
 
-   > 💡 **Moderní přístup**: Můžete také vytvořit a přepnout na novou větev jedním příkazem:
+   > 💡 **Moderní přístup**: Novou větev můžete vytvořit a přepnout se na ni jediným příkazem:
    ```bash
    git switch -c [branch-name]
    ```
 
-1. **Přepnutí na pracovní větev**. Přepněte na určenou větev a aktualizujte pracovní adresář pomocí `git switch`:
+1. **Přepnutí na pracovní větev**. Přepněte se na zadanou větev a aktualizujte pracovní adresář pomocí `git switch`:
 
    ```bash
    git switch [branch-name]
    ```
 
-   > 💡 **Moderní poznámka**: `git switch` je moderní náhrada za `git checkout` při změně větví. Je jasnější a bezpečnější pro začátečníky.
+   > 💡 **Moderní poznámka**: `git switch` je moderní náhrada za `git checkout`, pokud měníte větve. Je to jasnější a bezpečnější pro začátečníky.
 
-1. **Práce na změnách**. V tomto bodě chcete přidat své změny. Nezapomeňte o nich informovat Git pomocí následujících příkazů:
+1. **Pracujte**. Teď chcete přidat své změny. Nezapomeňte Gitu to dát najevo následujícími příkazy:
 
    ```bash
    git add .
    git commit -m "my changes"
    ```
 
-   > ⚠️ **Kvalita zprávy commitu**: Ujistěte se, že dáváte svému commit názorný název, jak pro vás, tak pro správce repozitáře, na kterém pomáháte. Buďte konkrétní ohledně toho, co jste změnili!
+   > ⚠️ **Kvalita commit zpráv**: Postarejte se, aby vaše commit zpráva měla dobrý název, pro vás i pro správce repozitáře, kterému pomáháte. Buďte konkrétní, co jste změnili!
 
-1. **Sloučení vaší práce s větví `main`**. V určitém okamžiku dokončíte práci a budete chtít sloučit svou práci s větví `main`. Mezitím se mohla větev `main` změnit, takže se ujistěte, že ji nejprve aktualizujete na nejnovější verzi pomocí následujících příkazů:
+1. **Sloučte svou práci s větví `main`**. V určitém okamžiku skončíte s prací a chcete svou práci spojit s větví `main`. Ta možná mezitím změnila, proto ji nejprve aktualizujte na nejnovější stav těmito příkazy:
 
    ```bash
    git switch main
    git pull
    ```
 
-   V tomto bodě se chcete ujistit, že jakékoli _konflikty_, situace, kdy Git nemůže snadno _sloučit_ změny, se objeví ve vaší pracovní větvi. Proto spusťte následující příkazy:
+   V tuto chvíli chcete zajistit, že případné _konflikty_, tedy situace, kdy Git nemůže jednoduše _sloučit_ změny, se stanou ve vaší pracovní větvi. Proto spusťte tyto příkazy:
 
    ```bash
    git switch [branch_name]
    git merge main
    ```
 
-   Příkaz `git merge main` přinese všechny změny z `main` do vaší větve. Doufejme, že můžete pokračovat. Pokud ne, VS Code vám ukáže, kde je Git _zmatený_, a vy jen upravíte dotčené soubory, abyste určili, který obsah je nejpřesnější.
+   Příkaz `git merge main` přenese všechny změny z větve `main` do vaší větve. Doufejme, že můžete pokračovat dál. Pokud ne, VS Code vám ukáže, kde je Git _zmatený_ a vy jen upravíte postižené soubory tak, aby obsahovaly správný obsah.
 
-   💡 **Moderní alternativa**: Zvažte použití `git rebase` pro čistší historii:
+   💡 **Moderní alternativa**: Zvažte použití `git rebase` pro přehlednější historii:
    ```bash
    git rebase main
    ```
-   Tím se vaše commity přehrají na vrchol nejnovější větve main, čímž se vytvoří lineární historie.
+   Tím se vaše commity „přehrávají“ na nejnovější větev main, což vytváří lineární historii.
 
-1. **Pošlete svou práci na GitHub**. Poslání vaší práce na GitHub znamená dvě věci. Pushnutí vaší větve do vašeho repozitáře a poté otevření PR, Pull Request.
+1. **Pošlete svou práci na GitHub**. Posílání vaší práce na GitHub znamená dvě věci. Pushnutí větve do vašeho repozitáře a otevření PR (Pull Requestu).
 
    ```bash
    git push --set-upstream origin [branch-name]
    ```
 
-   Výše uvedený příkaz vytvoří větev na vašem forkovaném repozitáři.
+   Tento příkaz vytvoří větev ve vašem forkovaném repozitáři.
 
-1. **Otevřete PR**. Dále chcete otevřít PR. To uděláte tak, že přejdete na forkovaný repozitář na GitHubu. Na GitHubu uvidíte indikaci, zda chcete vytvořit nový PR, kliknete na to a dostanete se do rozhraní, kde můžete změnit název zprávy commitu, dát jí vhodnější popis. Nyní správce repozitáře, který jste forkovali, uvidí tento PR a _držte palce_, že ho ocení a _sloučí_ váš PR. Nyní jste přispěvatelem, hurá :)
+### 🤝 **Kontrola dovedností spolupráce: Jste připraveni pracovat s ostatními?**
 
-   💡 **Moderní tip**: PR můžete také vytvořit pomocí GitHub CLI:
+**Podívejme se, jak se cítíte ohledně spolupráce:**
+- Dává vám teď smysl koncept forkování a pull requestů?
+- Co je jedna věc ohledně práce s větvemi, kterou byste chtěli více procvičit?
+- Jak pohodlně se cítíte přispívat do cizího projektu?
+
+```mermaid
+mindmap
+  root((Spolupráce na Gitu))
+    Branching
+      Feature branches
+      Bug fix branches
+      Experimental work
+    Pull Requests
+      Code review
+      Discussion
+      Testing
+    Best Practices
+      Jasné zprávy commitů
+      Malé zaměřené změny
+      Dobrá dokumentace
+```
+> **Zvýšení sebedůvěry**: Každý vývojář, kterého obdivujete, byl jednou nervózní z prvního pull requestu. GitHub komunita je pro nováčky nesmírně vstřícná!
+
+1. **Otevřít PR**. Dále chcete otevřít PR. Uděláte to tak, že přejdete do forkovaného repozitáře na GitHubu. Uvidíte tam indikaci, která se zeptá, zda chcete vytvořit nový PR, kliknete na to a dostanete se do rozhraní, kde můžete změnit název commit zprávy, dát jí vhodnější popis. Nyní správce repozitáře, který jste forkli, uvidí tento PR a _držme palce_, že ocení a váš PR _sloučí_. Už jste přispěvatel, hurá :)
+
+   💡 **Moderní tip**: PR můžete také vytvářet pomocí GitHub CLI:
    ```bash
    gh pr create --title "Your PR title" --body "Description of changes"
    ```
 
-   🔧 **Nejlepší praktiky pro PR**:
-   - Odkazujte na související problémy pomocí klíčových slov jako "Fixes #123".
-   - Přidejte screenshoty pro změny v uživatelském rozhraní.
-   - Požádejte o konkrétní recenzenty.
-   - Používejte draft PR pro rozpracované úkoly.
-   - Ujistěte se, že všechny CI kontroly projdou před žádostí o recenzi.
-
-1. **Úklid**. Je považováno za dobrou praxi _uklidit_ po úspěšném sloučení PR. Chcete vyčistit jak svou lokální větev, tak větev, kterou jste pushovali na GitHub. Nejprve ji smažte lokálně pomocí následujícího příkazu:
+   🔧 **Nejlepší postupy pro PR:**
+   - Propojte s příslušnými issues pomocí klíčových slov jako „Fixes #123“
+   - Přidejte screenshoty u změn UI
+   - Požádejte o konkrétní recenzenty
+   - Používejte draft PR pro rozpracovanou práci
+   - Ujistěte se, že všechny CI kontroly projdou, než požádáte o revizi
+1. **Úklid**. Je považováno za dobrý zvyk _uklidit_ poté, co úspěšně sloučíte PR. Chcete uklidit jak svoji lokální větev, tak větev, kterou jste pushli na GitHub. Nejprve ji smažte lokálně pomocí následujícího příkazu:
 
    ```bash
    git branch -d [branch-name]
    ```
 
-   Ujistěte se, že přejdete na stránku GitHub pro forkovaný repozitář a odstraníte vzdálenou větev, kterou jste právě pushovali.
+   Poté nezapomeňte navštívit stránku forku na GitHubu a odstranit vzdálenou větev, kterou jste právě pushli.
 
-`Pull request` se může zdát jako zvláštní termín, protože ve skutečnosti chcete své změny pushovat do projektu. Ale správce (vlastník projektu) nebo hlavní tým musí zvážit vaše změny před jejich sloučením s "hlavní" větví projektu, takže ve skutečnosti žádáte správce o rozhodnutí o změně.
+`Pull request` se může zdát jako hloupý termín, protože ve skutečnosti chcete pushovat své změny do projektu. Ale správce (vlastník projektu) nebo hlavní tým musí vaše změny zvážit, než je sloučí s "main" větví projektu, takže v podstatě žádáte správce o rozhodnutí o změně.
 
-Pull request je místo, kde můžete porovnávat a diskutovat o rozdílech zavedených na větvi s recenzemi, komentáři, integrovanými testy a dalšími věcmi. Dobrý pull request se řídí přibližně stejnými pravidly jako zpráva commitu. Můžete přidat odkaz na problém v trackeru problémů, když
-🤞Držme palce, aby všechny kontroly prošly a majitelé projektu sloučili vaše změny do projektu🤞
+Pull request je místo, kde porovnáváte a diskutujete rozdíly přidané do větve s recenzemi, komentáři, integrovanými testy a dalšími. Dobrá pull request dodržuje přibližně stejná pravidla jako commit message. Můžete přidat odkaz na issue v issue trackeru, pokud vaše práce například opravuje problém. To se dělá pomocí `#` následovaného číslem issue, například `#97`.
 
-Aktualizujte svou aktuální lokální pracovní větev o všechny nové commity z odpovídající vzdálené větve na GitHubu:
+🤞Držíme palce, aby všechny kontroly prošly a vlastník projektu vaše změny sloučil do projektu🤞
+
+Aktualizujte svoji aktuální lokální pracovní větev o všechny nové commity z odpovídající vzdálené větve na GitHubu:
 
 `git pull`
 
-## Přispívání do open source (Vaše šance udělat změnu!)
+## Přispívání do Open Source (Vaše šance udělat rozdíl!)
 
-Jste připraveni na něco, co vám naprosto vyrazí dech? 🤯 Pojďme si povídat o přispívání do open source projektů – už jen při pomyšlení na to, že vám to sdílím, mám husí kůži!
+Jste připraveni na něco, co vám doslova vyrazí dech? 🤯 Pojďme mluvit o přispívání do open source projektů – a už jen při tom mám husí kůži, když to s vámi sdílím!
 
-Tohle je vaše šance stát se součástí něčeho opravdu mimořádného. Představte si, že zlepšujete nástroje, které každý den používají miliony vývojářů, nebo opravujete chybu v aplikaci, kterou vaši přátelé milují. To není jen sen – to je přesně to, o čem je přispívání do open source!
+Toto je vaše šance stát se součástí něčeho skutečně výjimečného. Představte si, že zlepšujete nástroje, které miliony vývojářů používají každý den, nebo opravujete chybu v aplikaci, kterou vaši přátelé milují. To není jen sen – to je podstata přispívání do open source!
 
-Tady je něco, co mě pokaždé nadchne: každý jednotlivý nástroj, se kterým jste se učili – váš editor kódu, frameworky, které budeme zkoumat, dokonce i prohlížeč, ve kterém tohle čtete – začal s někým, kdo byl přesně jako vy a udělal svůj úplně první příspěvek. Ten geniální vývojář, který vytvořil váš oblíbený doplněk pro VS Code? I on byl jednou začátečníkem, který s třesoucíma se rukama klikl na "create pull request", přesně jako se chystáte udělat vy.
+Co mi nahání zimnici pokaždé, když na to myslím: každý nástroj, se kterým jste se učili – váš kódový editor, frameworky, které budeme objevovat, dokonce i prohlížeč, ve kterém to čtete – začal tak, že někdo přesně jako vy udělal svůj první příspěvek. Ten geniální vývojář, který vytvořil vaše oblíbené rozšíření VS Code? Byl taky začátečník, který se klepal, když klikal na "create pull request", stejně jako teď vy.
 
-A tady je ta nejkrásnější část: komunita open source je jako největší internetové objetí. Většina projektů aktivně hledá nováčky a má problémy označené jako "good first issue" speciálně pro lidi jako vy! Správci projektů se opravdu těší, když vidí nové přispěvatele, protože si pamatují své vlastní první kroky.
+A tady je ta nejkrásnější část: open source komunita je jako největší internetové objetí. Většina projektů aktivně hledá nováčky a má označené issues „good first issue“ právě pro lidi jako jste vy! Správci projektů se upřímně těší, když vidí nové přispěvatele, protože si pamatují své první kroky.
 
-Nejenže se učíte kódovat – připravujete se na to, že se připojíte ke globální rodině tvůrců, kteří se každý den probouzejí s myšlenkou "Jak můžeme udělat digitální svět o něco lepší?" Vítejte v klubu! 🌟
+```mermaid
+flowchart TD
+    A[🔍 Prozkoumejte GitHub] --> B[🏷️ Najděte "dobrý první úkol"]
+    B --> C[📖 Přečtěte si Pokyny pro přispívání]
+    C --> D[🍴 Vytvořte Fork repozitáře]
+    D --> E[💻 Nastavte lokální prostředí]
+    E --> F[🌿 Vytvořte větev pro funkci]
+    F --> G[✨ Proveďte svůj příspěvek]
+    G --> H[🧪 Otestujte své změny]
+    H --> I[📝 Napište jasný commit]
+    I --> J[📤 Pushněte a vytvořte PR]
+    J --> K[💬 Zapojte se do zpětné vazby]
+    K --> L[🎉 Sloučeno! Jste přispěvatel!]
+    L --> M[🌟 Najděte další úkol]
+    
+    style A fill:#e1f5fe
+    style L fill:#c8e6c9
+    style M fill:#fff59d
+```
+Tady se nejen učíte programovat – připravujete se stát se součástí globální rodiny tvůrců, kteří každý den vstávají s myšlenkou "Jak můžeme digitální svět udělat o něco lepším?" Vítejte v klubu! 🌟
 
-Nejprve najděte na GitHubu repozitář (nebo **repo**), který vás zajímá a do kterého byste chtěli přispět změnou. Budete chtít zkopírovat jeho obsah na svůj počítač.
+Nejprve najděte na GitHubu repozitář (nebo **repo**) zajímavý pro vás, do kterého chcete přispět změnou. Budete chtít zkopírovat jeho obsah do svého počítače.
 
-✅ Skvělý způsob, jak najít repozitáře vhodné pro začátečníky, je [vyhledávání podle tagu 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
+✅ Dobrý způsob, jak najít repozitáře vhodné pro začátečníky, je [vyhledat podle štítku 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Zkopírujte repozitář lokálně](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.cs.png)
+![Zkopírování repozitáře lokálně](../../../../translated_images/clone_repo.5085c48d666ead57.cs.png)
 
-Existuje několik způsobů, jak zkopírovat kód. Jedním z nich je "klonování" obsahu repozitáře pomocí HTTPS, SSH nebo GitHub CLI (Command Line Interface).
+Existuje několik způsobů, jak zkopírovat kód. Jedním z nich je "klonování" obsahu repozitáře přes HTTPS, SSH nebo pomocí GitHub CLI (Command Line Interface).
 
-Otevřete svůj terminál a klonujte repozitář takto:
+Otevřete terminál a klonujte repozitář takto:
 ```bash
-# Using HTTPS
+# Použití HTTPS
 git clone https://github.com/ProjectURL
 
-# Using SSH (requires SSH key setup)
+# Použití SSH (vyžaduje nastavení SSH klíče)
 git clone git@github.com:username/repository.git
 
-# Using GitHub CLI
+# Použití GitHub CLI
 gh repo clone username/repository
 ```
 
 Pro práci na projektu přepněte do správné složky:
 `cd ProjectURL`
 
-Celý projekt můžete také otevřít pomocí:
-- **[GitHub Codespaces](https://github.com/features/codespaces)** - Cloudové vývojové prostředí GitHubu s VS Code v prohlížeči
+Projekt můžete také otevřít celý pomocí:
+- **[GitHub Codespaces](https://github.com/features/codespaces)** - cloudové vývojové prostředí GitHubu s VS Code v prohlížeči
 - **[GitHub Desktop](https://desktop.github.com/)** - GUI aplikace pro operace s Gitem  
-- **[GitHub.dev](https://github.dev)** - Stiskněte klávesu `.` na jakémkoli repozitáři GitHubu a otevřete VS Code v prohlížeči
+- **[GitHub.dev](https://github.dev)** - Stiskněte klávesu `.` v jakémkoli GitHub repozitáři a otevřete VS Code v prohlížeči
 - **VS Code** s rozšířením GitHub Pull Requests
 
-Nakonec můžete kód stáhnout ve formě zipovaného souboru.
+Nakonec můžete stáhnout kód ve formě zip archivu.
 
 ### Několik dalších zajímavostí o GitHubu
 
-Na GitHubu můžete označit hvězdičkou, sledovat nebo "forkovat" jakýkoli veřejný repozitář. Své označené repozitáře najdete v rozbalovací nabídce v pravém horním rohu. Je to jako záložky, ale pro kód.
+Můžete si označit hvězdičkou, sledovat a/nebo "forkovat" jakýkoli veřejný repozitář na GitHubu. Vaše označené repozitáře najdete v rozbalovacím menu vpravo nahoře. Je to jako záložka, ale pro kód.
 
-Projekty mají sledovač problémů, většinou na GitHubu v záložce "Issues", pokud není uvedeno jinak, kde lidé diskutují o problémech souvisejících s projektem. A záložka Pull Requests je místem, kde lidé diskutují a recenzují změny, které jsou v procesu.
+Projekty mají issue tracker, většinou na GitHubu v záložce „Issues“, pokud není uvedeno jinak, kde se diskutují problémy související s projektem. A záložka Pull Requests je místo, kde lidé diskutují a přezkoumávají probíhající změny.
 
-Projekty mohou mít také diskuse ve fórech, mailing listech nebo chatovacích kanálech jako Slack, Discord nebo IRC.
+Projekty mohou mít také diskuse na fórech, mailing listech nebo v chat kanálech jako Slack, Discord nebo IRC.
 
 🔧 **Moderní funkce GitHubu**:
-- **GitHub Discussions** - Vestavěné fórum pro komunitní konverzace
-- **GitHub Sponsors** - Finanční podpora správců  
-- **Security tab** - Zprávy o zranitelnostech a bezpečnostní doporučení
-- **Actions tab** - Automatizované pracovní postupy a CI/CD pipeline
-- **Insights tab** - Analýzy o přispěvatelích, commitech a zdraví projektu
-- **Projects tab** - Vestavěné nástroje pro správu projektů na GitHubu
+- **GitHub Discussions** - integrované fórum pro komunitní diskuse
+- **GitHub Sponsors** - finanční podpora správců  
+- **Záložka Security** - hlášení zranitelností a bezpečnostní upozornění
+- **Záložka Actions** - přehled automatizovaných workflow a CI/CD pipeline
+- **Záložka Insights** - statistiky o přispěvatelích, commitech a zdraví projektu
+- **Záložka Projects** - vestavěné nástroje správy projektů na GitHubu
 
-✅ Prozkoumejte svůj nový GitHub repozitář a vyzkoušejte několik věcí, jako je úprava nastavení, přidání informací do repozitáře, vytvoření projektu (například Kanban board) a nastavení GitHub Actions pro automatizaci. Je toho hodně, co můžete dělat!
+✅ Projděte svůj nový GitHub repozitář a vyzkoušejte pár věcí, jako upravit nastavení, přidat informace do repozitáře, vytvořit projekt (například Kanban board) a nastavit GitHub Actions pro automatizaci. Můžete toho udělat opravdu hodně!
 
 ---
 
-## 🚀 Výzva 
+## 🚀 Výzva
 
-Dobře, je čas otestovat vaše nové GitHub super schopnosti! 🚀 Tady je výzva, která vám vše krásně spojí dohromady:
+Dobře, je čas otestovat vaše nové super schopnosti na GitHubu! 🚀 Tady je výzva, která vám všechno krásně usadí:
 
-Vezměte kamaráda (nebo člena rodiny, který se vás pořád ptá, co děláte s tím "počítačovým věcem") a pusťte se společně do dobrodružství kolaborativního kódování! Tady se děje ta pravá magie – vytvořte projekt, nechte je ho forkovat, vytvořte nějaké větve a slučte změny jako profíci, kterými se stáváte.
+Vezměte si kamaráda (nebo člena rodiny, který se vždy ptá, co to děláte s tím „počítačovým“), a pusťte se do společného kódovacího dobrodružství! Tady se děje ta pravá magie – vytvořte projekt, nechte ho forkovat, vytvořte větve a sloučte změny jako opravdoví profíci, kterými se stáváte.
 
-Nebudu lhát – pravděpodobně se někdy zasmějete (zvlášť když se oba pokusíte změnit stejný řádek), možná budete chvíli zmatení, ale určitě zažijete ty úžasné "aha!" momenty, které dělají celé učení tak hodnotným. Navíc je něco speciálního na tom, když sdílíte první úspěšné sloučení s někým jiným – je to jako malá oslava toho, jak daleko jste se dostali!
+Nebudu lhát – pravděpodobně se mnohokrát zasmějete (zejména když se oba pokusíte změnit stejný řádek), možná si poplácáte hlavy zmateně, ale rozhodně zažijete ty úžasné „aha!“ momenty, které dělají učení smysluplným. Navíc je něco zvláštního na sdílení prvního úspěšného merge s někým jiným – je to jako malá oslava toho, jak daleko jste došli!
 
-Nemáte zatím parťáka na kódování? Žádný problém! Komunita GitHubu je plná neuvěřitelně přátelských lidí, kteří si pamatují, jaké to bylo být nováčkem. Hledejte repozitáře s označením "good first issue" – v podstatě říkají "Hej začátečníci, pojďte se učit s námi!" Jak úžasné to je?
+Ještě nemáte parťáka na kódování? Žádný problém! GitHub komunita je plná neuvěřitelně vstřícných lidí, kteří si pamatují, jaké to bylo být nováčkem. Hledejte repozitáře s označením „good first issue“ – v podstatě říkají „Hej začátečníci, pojďte se učit s námi!“ Jak úžasné je to?
 
 ## Kvíz po přednášce
-[Kvíz po přednášce](https://ff-quizzes.netlify.app/web/en/)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/en/)
 
-## Recenze & Pokračujte v učení
+## Recenze & další učení
 
-Uf! 🎉 Podívejte se na sebe – právě jste zvládli základy GitHubu jako absolutní šampion! Pokud máte pocit, že je vaše hlava teď trochu plná, je to úplně normální a upřímně dobré znamení. Právě jste se naučili nástroje, které mi trvalo týdny, než jsem se s nimi cítil pohodlně.
+Uf! 🎉 Podívejte se na sebe – právě jste zvládli základy GitHubu jako opravdoví šampioni! Pokud máte mozek teď trochu plný, je to zcela normální a upřímně dobré znamení. Právě jste se naučili nástroje, které mi trvalo týdny pochopit, když jsem začínal.
 
-Git a GitHub jsou neuvěřitelně silné (opravdu silné) a každý vývojář, kterého znám – včetně těch, kteří teď vypadají jako kouzelníci – musel cvičit a trochu se potýkat, než mu to všechno docvaklo. Skutečnost, že jste prošli touto lekcí, znamená, že už jste na cestě k ovládnutí některých z nejdůležitějších nástrojů v sadě vývojáře.
+Git a GitHub jsou nesmírně silné (opravdu mocné), a každý vývojář, kterého znám – včetně těch, kteří teď vypadají jako kouzelníci – si musel procvičovat a trochu tápat, než mu to celé došlo. To, že jste tuto lekci dokončili, znamená, že jste na cestě stát se mistrem jednoho z nejdůležitějších nástrojů ve vývojářském arzenálu.
 
-Tady jsou některé naprosto fantastické zdroje, které vám pomohou cvičit a stát se ještě úžasnějšími:
+Tady je několik fantastických zdrojů, které vám pomohou procvičovat a stát se ještě lepšími:
 
-- [Průvodce přispíváním do open source softwaru](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution) – Vaše mapa k tomu, jak udělat změnu
-- [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/) – Mějte to po ruce pro rychlou referenci!
+- [Průvodce přispíváním do open source softwaru](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution) – Vaše mapa k tomu, jak něco změnit
+- [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/) – Mějte po ruce pro rychlý přehled!
 
-A pamatujte: praxe dělá pokrok, ne dokonalost! Čím více budete používat Git a GitHub, tím přirozenější to bude. GitHub vytvořil několik úžasných interaktivních kurzů, které vám umožní cvičit v bezpečném prostředí:
+A pamatujte: praxe dělá pokrok, ne dokonalost! Čím více budete používat Git a GitHub, tím přirozenější to bude. GitHub vytvořil úžasné interaktivní kurzy, které umožňují procvičovat v bezpečném prostředí:
 
 - [Úvod do GitHubu](https://github.com/skills/introduction-to-github)
-- [Komunikace pomocí Markdownu](https://github.com/skills/communicate-using-markdown)  
+- [Komunikace pomocí Markdown](https://github.com/skills/communicate-using-markdown)  
 - [GitHub Pages](https://github.com/skills/github-pages)
-- [Řešení konfliktů při slučování](https://github.com/skills/resolve-merge-conflicts)
+- [Řešení konfliktů při mergování](https://github.com/skills/resolve-merge-conflicts)
 
-**Cítíte se dobrodružně? Podívejte se na tyto moderní nástroje:**
-- [Dokumentace GitHub CLI](https://cli.github.com/manual/) – Pro chvíle, kdy se chcete cítit jako kouzelník příkazového řádku
-- [Dokumentace GitHub Codespaces](https://docs.github.com/en/codespaces) – Kódujte v cloudu!
+**Cítíte dobrodružství? Vyzkoušejte tyto moderní nástroje:**
+- [Dokumentace GitHub CLI](https://cli.github.com/manual/) – Pro chvíle, kdy chcete být pány příkazové řádky
+- [Dokumentace GitHub Codespaces](https://docs.github.com/en/codespaces) – Kódování v cloudu!
 - [Dokumentace GitHub Actions](https://docs.github.com/en/actions) – Automatizujte vše
-- [Nejlepší praktiky pro Git](https://www.atlassian.com/git/tutorials/comparing-workflows) – Zlepšete své pracovní postupy 
+- [Dobré postupy s Git](https://www.atlassian.com/git/tutorials/comparing-workflows) – Vylepšete si pracovní postupy
 
-## Výzva GitHub Copilot Agent 🚀
+## Výzva GitHub Copilot Agenta 🚀
 
-Použijte režim Agent k dokončení následující výzvy:
+Použijte režim Agenta k dokončení následující výzvy:
 
-**Popis:** Vytvořte kolaborativní projekt webového vývoje, který demonstruje kompletní GitHub workflow, který jste se naučili v této lekci. Tato výzva vám pomůže procvičit vytvoření repozitáře, funkce spolupráce a moderní Git workflow v reálném scénáři.
+**Popis:** Vytvořte společný projekt pro webový vývoj, který předvede kompletní GitHub workflow, které jste se v této lekci naučili. Tato výzva vám pomůže procvičit vytváření repozitářů, funkce spolupráce a moderní Git workflow v reálném scénáři.
 
-**Zadání:** Vytvořte nový veřejný GitHub repozitář pro jednoduchý projekt "Web Development Resources". Repozitář by měl obsahovat dobře strukturovaný soubor README.md, který uvádí užitečné nástroje a zdroje pro webový vývoj, organizované podle kategorií (HTML, CSS, JavaScript atd.). Nastavte repozitář s odpovídajícími komunitními standardy včetně licence, pokynů pro přispívání a kodexu chování. Vytvořte alespoň dvě větve funkcí: jednu pro přidání zdrojů pro CSS a druhou pro zdroje pro JavaScript. Proveďte commity do každé větve s popisnými zprávami o commitech, poté vytvořte pull requesty pro sloučení změn zpět do hlavní větve. Aktivujte funkce GitHubu jako Issues, Discussions a nastavte základní workflow GitHub Actions pro automatické kontroly.
+**Úkol:** Vytvořte nový veřejný GitHub repozitář pro jednoduchý projekt „Web Development Resources“. Repozitář by měl obsahovat dobře strukturovaný soubor README.md s přehledem užitečných nástrojů a zdrojů pro webový vývoj, uspořádaných podle kategorií (HTML, CSS, JavaScript atd.). Nastavte repozitář s odpovídajícími komunitními standardy včetně licence, pravidel přispívání a kodexu chování. Vytvořte minimálně dvě feature větve: jednu pro přidání zdrojů CSS a druhou pro JavaScriptové zdroje. Pro každou větev proveďte commity s popisnými zprávami a poté vytvořte pull requesty pro sloučení změn zpět do main. Aktivujte na GitHubu funkce jako Issues, Discussions a nastavte základní workflow GitHub Actions pro automatické kontroly.
 
-## Úkol 
+## Zadání
 
-Vaše mise, pokud ji přijmete: Dokončete kurz [Úvod do GitHubu](https://github.com/skills/introduction-to-github) na GitHub Skills. Tento interaktivní kurz vám umožní procvičit vše, co jste se naučili, v bezpečném, vedeném prostředí. Navíc získáte skvělý odznak, když ho dokončíte! 🏅
+Vaším úkolem, pokud ho přijmete: Dokončit kurz [Úvod do GitHubu](https://github.com/skills/introduction-to-github) na GitHub Skills. Tento interaktivní kurz vám umožní procvičit vše, co jste se naučili, v bezpečném a krok za krokem vedeném prostředí. Navíc získáte parádní odznak po dokončení! 🏅
 
-**Cítíte se připraveni na další výzvy?**
-- Nastavte SSH autentizaci pro svůj GitHub účet (už žádná hesla!)
-- Zkuste používat GitHub CLI pro své každodenní operace s Gitem
+**Chcete další výzvy?**
+- Nastavte SSH autentizaci pro váš GitHub účet (už žádná hesla!)
+- Zkuste používat GitHub CLI pro své denní Git operace
 - Vytvořte repozitář s workflow GitHub Actions
-- Prozkoumejte GitHub Codespaces otevřením tohoto repozitáře v cloudovém editoru
-
-Pamatujte: každý expert byl jednou začátečníkem. Máte na to! 💪
+- Vyzkoušejte GitHub Codespaces otevřením právě tohoto repozitáře v cloudovém editoru
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+## 🚀 Váš časový plán mistrovství na GitHubu
+
+### ⚡ **Co můžete udělat za dalších 5 minut**
+- [ ] Označit tento repozitář a další 3 projekty, které vás zajímají
+- [ ] Nastavit dvoufaktorovou autentizaci na GitHubu
+- [ ] Vytvořit jednoduchý README pro svůj první repozitář
+- [ ] Začít sledovat 5 vývojářů, jejichž práce vás inspiruje
+
+### 🎯 **Co můžete zvládnout během tohoto hodiny**
+- [ ] Dokončit kvíz po lekci a zamyslet se nad svoji GitHub cestou
+- [ ] Nastavit SSH klíče pro bezheslové přihlašování na GitHub
+- [ ] Vytvořit svůj první významný commit s dobrou zprávou
+- [ ] Prozkoumat záložku „Explore“ na GitHubu a objevit trendy projekty
+- [ ] Procvičit fork repozitáře a provést malou změnu
+
+### 📅 **Týdenní GitHub dobrodružství**
+- [ ] Dokončit GitHub Skills kurzy (Úvod do GitHubu, Markdown)
+- [ ] Vytvořit první pull request pro open source projekt
+- [ ] Nastavit GitHub Pages web k prezentaci své práce
+- [ ] Připojit se k diskuzím na projektech, které vás zajímají
+- [ ] Vytvořit repozitář s komunitními standardy (README, Licence atd.)
+- [ ] Vyzkoušet GitHub Codespaces pro cloudový vývoj
+
+### 🌟 **Měsíční proměna**
+- [ ] Přispět do 3 různých open source projektů
+- [ ] Mentorovat někoho nového na GitHubu (vrátit pomoc dál)
+- [ ] Nastavit automatizované workflow s GitHub Actions
+- [ ] Vytvořit portfolio prezentující vaše příspěvky na GitHubu
+- [ ] Zúčastnit se Hacktoberfestu nebo podobných komunitních akcí
+- [ ] Stát se správcem vlastního projektu, do kterého přispívají i druzí
+
+### 🎓 **Závěrečné ověření GitHub mistrovství**
+
+**Oslavte, jak daleko jste došli:**
+- Co se vám na používání GitHubu líbí nejvíc?
+- Která funkce spolupráce vás nejvíce nadchla?
+- Jak si teď věříte, že můžete přispívat do open source?
+- Na který projekt chcete přispět jako první?
+
+```mermaid
+journey
+    title Vaše cesta důvěry v GitHub
+    section Dnes
+      Nervózní: 3: You
+      Zvědavý: 4: You
+      Nadšený: 5: You
+    section Tento týden
+      Procvičování: 4: You
+      Přispívání: 5: You
+      Spojování: 5: You
+    section Příští měsíc
+      Spolupráce: 5: You
+      Vedení: 5: You
+      Inspirování ostatních: 5: You
+```
+> 🌍 **Vítejte v globální vývojářské komunitě!** Teď máte nástroje ke spolupráci s miliony vývojářů po celém světě. Váš první příspěvek může vypadat malý, ale pamatujte – každý velký open source projekt začal někým, kdo udělal svůj první commit. Otázka není, jestli budete mít dopad, ale který úžasný projekt zaujme váš jedinečný pohled jako první! 🚀
+
+Pamatujte: každý expert byl jednou začátečník. Vy to zvládnete! 💪
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za závazný zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za žádné nedorozumění nebo špatné výklady vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
