@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # יסודות JavaScript: שיטות ופונקציות
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.he.png)
+![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.he.png)
 > סקיצה מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

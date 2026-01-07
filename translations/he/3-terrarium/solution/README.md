@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 תרגול קטן של גרירה ושחרור. עם מעט HTML, JS ו-CSS, תוכלו לבנות ממשק אינטרנט, לעצב אותו ולהוסיף אינטראקציה.
 
-![הטרריום שלי](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.he.png)
+![הטרריום שלי](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.he.png)
 
 ## קרדיטים
 
