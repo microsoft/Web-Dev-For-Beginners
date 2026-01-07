@@ -1,45 +1,105 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92e136090efc4341b1d51c37924c1802",
-  "translation_date": "2025-08-29T16:53:09+00:00",
+  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
+  "translation_date": "2026-01-07T11:05:54+00:00",
   "source_file": "2-js-basics/2-functions-methods/README.md",
   "language_code": "lt"
 }
 -->
 # JavaScript pagrindai: metodai ir funkcijos
 
-![JavaScript pagrindai - funkcijos](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.lt.png)
-> Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
+![JavaScript pagrindai – funkcijos](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.lt.png)
+> Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Klausimai prieš paskaitą
-[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app)
+```mermaid
+journey
+    title Jūsų JavaScript funkcijų nuotykis
+    section Pagrindai
+      Function Syntax: 5: You
+      Calling Functions: 4: You
+      Parameters & Arguments: 5: You
+    section Pažangios koncepcijos
+      Return Values: 4: You
+      Default Parameters: 5: You
+      Function Composition: 4: You
+    section Moderni JavaScript
+      Arrow Functions: 5: You
+      Anonymous Functions: 4: You
+      Higher-Order Functions: 5: You
+```
+## Priešpaskaitinis testas
+[Priešpaskaitinis testas](https://ff-quizzes.netlify.app)
 
-Kai galvojame apie kodo rašymą, visada norime užtikrinti, kad mūsų kodas būtų lengvai skaitomas. Nors tai gali atrodyti nelogiška, kodas yra skaitomas daug daugiau kartų nei rašomas. Vienas pagrindinių įrankių, padedančių kurti lengvai prižiūrimą kodą, yra **funkcija**.
+Tas pats kodas kelis kartus yra vienas iš dažniausių programavimo erzinimų. Funkcijos išsprendžia šią problemą leidžiant supakuoti kodą į pakartotinai naudojamus blokus. Pagalvokite apie funkcijas kaip standartizuotas dalis, kurios padarė Henry Ford surinkimo liniją revoliucine – kai sukuri patikimą komponentą, jį gali naudoti bet kur, nereikalaudamas perkurti nuo nulio.
+
+Funkcijos leidžia sugrupuoti kodo dalis, kad galėtumėte jas naudoti visame savo programoje. Vietoj to, kad visur kopijuotumėte ir įklijuotumėte tą pačią logiką, galite sukurti funkciją vieną kartą ir ją kviesti, kai reikia. Šis požiūris padeda palaikyti jūsų kodą tvarkingą ir palengvina atnaujinimus.
+
+Šiame pamokoje sužinosite, kaip sukurti savo funkcijas, perduoti joms informaciją ir gauti naudingus rezultatus. Išmoksite skirtumą tarp funkcijų ir metodų, susipažinsite su šiuolaikinėmis sintaksės priemonėmis ir pamatysite, kaip funkcijos gali bendradarbiauti su kitomis funkcijomis. Mes apžvelgsime šias sąvokas žingsnis po žingsnio.
 
 [![Metodai ir funkcijos](https://img.youtube.com/vi/XgKsD6Zwvlc/0.jpg)](https://youtube.com/watch?v=XgKsD6Zwvlc "Metodai ir funkcijos")
 
-> 🎥 Spustelėkite paveikslėlį aukščiau, kad peržiūrėtumėte vaizdo įrašą apie metodus ir funkcijas.
+> 🎥 Paspauskite aukščiau esantį vaizdą, kad peržiūrėtumėte vaizdo įrašą apie metodus ir funkcijas.
 
-> Šią pamoką galite rasti [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon)!
+> Šią pamoką galite atlikti [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-functions/?WT.mc_id=academic-77807-sagibbon) platformoje!
 
+```mermaid
+mindmap
+  root((JavaScript Functions))
+    Basic Concepts
+      Declaration
+        Tradicinė sintaksė
+        Rodyklės funkcijos sintaksė
+      Calling
+        Naudojant skliaustus
+        Reikalingi skliaustai
+    Parameters
+      Input Values
+        Keli parametrai
+        Numatytoji reikšmė
+      Arguments
+        Pateiktos reikšmės
+        Gali būti bet kokio tipo
+    Return Values
+      Output Data
+        grąžinimo sakinys
+        Funkcijos pabaiga
+      Use Results
+        Saugojimas kintamuosiuose
+        Grandinės funkcijos
+    Advanced Patterns
+      Higher-Order
+        Funkcijos kaip parametrai
+        Atgaliniai kvietimai
+      Anonymous
+        Vardas nereikalingas
+        Tiesioginė apibrėžtis
+```
 ## Funkcijos
 
-Funkcija iš esmės yra kodo blokas, kurį galime vykdyti pagal poreikį. Tai puikiai tinka situacijoms, kai reikia atlikti tą pačią užduotį kelis kartus; vietoj to, kad logiką dubliuotume keliose vietose (kas apsunkintų atnaujinimą ateityje), galime ją centralizuoti vienoje vietoje ir iškviesti, kai tik reikia atlikti operaciją – funkcijas netgi galima iškviesti iš kitų funkcijų!
+Funkcija yra savarankiškas kodo blokas, atliekantis tam tikrą užduotį. Ji apima logiką, kurią galite vykdyti kada tik reikia.
 
-Taip pat svarbu suteikti funkcijai pavadinimą. Nors tai gali atrodyti nereikšminga, pavadinimas suteikia greitą būdą dokumentuoti kodo dalį. Galite tai įsivaizduoti kaip etiketę ant mygtuko. Jei paspausiu mygtuką, ant kurio parašyta „Atšaukti laikmatį“, žinau, kad jis sustabdys laikrodžio veikimą.
+Vietoj to, kad rašytumėte tą patį kodą kelis kartus visoje programoje, galite supakuoti jį į funkciją ir kviesti šią funkciją, kai reikia. Šis požiūris palaiko jūsų kodą švarų ir palengvina atnaujinimus. Pagalvokite, kokia būtų palaikymo kliūtis, jei reikėtų keisti logiką, išmėtytą net 20 skirtingų vietų jūsų kodo bazėje.
 
-## Funkcijos kūrimas ir iškvietimas
+Labai svarbu funkcijoms suteikti aprašomuosius pavadinimus. Gerai pavadinta funkcija aiškiai perteikia savo paskirtį – kai matote `cancelTimer()`, iš karto suprantate, ką ji daro, kaip ir aiškiai pažymėtas mygtukas tiksliai nurodo, kas nutiks, kai jį spustelėsite.
 
-Funkcijos sintaksė atrodo taip:
+## Funkcijos kūrimas ir kvietimas
+
+Pažiūrėkime, kaip sukurti funkciją. Sintaksė laikosi nuoseklaus modelio:
 
 ```javascript
-function nameOfFunction() { // function definition
- // function definition/body
+function nameOfFunction() { // funkcijos apibrėžimas
+ // funkcijos apibrėžimas/kūnas
 }
 ```
 
-Jei norėčiau sukurti funkciją, kuri rodytų pasisveikinimą, ji galėtų atrodyti taip:
+Išskaidykime tai:
+- Raktažodis `function` sako JavaScript „Ei, aš kuriu funkciją!“
+- `nameOfFunction` yra vieta, kur suteikiate funkcijai aprašomą pavadinimą
+- Skliaustai `()` – čia galite pridėti parametrų (apie juos kalbėsime netrukus)
+- Garbanotosios kabutės `{}` talpina tikrąjį kodą, kuris vykdomas, kai kviečiate funkciją
+
+Sukurkime paprastą pasisveikinimo funkciją, kad tai pamatytume praktiškai:
 
 ```javascript
 function displayGreeting() {
@@ -47,28 +107,57 @@ function displayGreeting() {
 }
 ```
 
-Kai norime iškviesti (arba aktyvuoti) savo funkciją, naudojame funkcijos pavadinimą, po kurio seka `()`. Verta paminėti, kad funkcija gali būti apibrėžta prieš arba po jos iškvietimo; JavaScript kompiliatorius ją suras už jus.
+Ši funkcija išveda „Hello, world!“ į konsolę. Kai ją apibrėžiate, galite ją naudoti tiek kartų, kiek reikia.
+
+Kad paleistumėte (arba „kvietumėte“) funkciją, rašykite jos pavadinimą, po kurio eina skliaustai. JavaScript leidžia apibrėžti funkciją prieš arba po jos kvietimo – JavaScript variklis pasirūpins vykdymo tvarka.
 
 ```javascript
-// calling our function
+// kviečiame mūsų funkciją
 displayGreeting();
 ```
 
-> **NOTE:** Yra specialus funkcijų tipas, vadinamas **metodu**, kurį jūs jau naudojote! Iš tiesų, tai matėme aukščiau pateiktame pavyzdyje, kai naudojome `console.log`. Skirtumas tarp metodo ir funkcijos yra tas, kad metodas yra priskirtas objektui (mūsų pavyzdyje – `console`), o funkcija yra laisvai plaukiojanti. Daugelis programuotojų šiuos terminus naudoja pakaitomis.
+Paleidus šią eilutę, bus vykdomas visas kodas jūsų `displayGreeting` funkcijoje, rodantis „Hello, world!“ naršyklės konsolėje. Šią funkciją galite kviesti kelis kartus.
 
-### Geriausios praktikos kuriant funkcijas
+### 🧠 **Funkcijos pagrindų patikra: Pirmųjų funkcijų kūrimas**
 
-Kuriant funkcijas verta atsižvelgti į keletą geriausių praktikų:
+**Pažiūrėkime, kaip jaučiatės dėl pagrindinių funkcijų:**
+- Kodėl funkcijos apibrėžime naudojamos garbanotosios kabutės `{}`?
+- Kas nutinka, jei parašote `displayGreeting` be skliaustų?
+- Kodėl norėtumėte tą pačią funkciją kviesti kelis kartus?
 
-- Visada naudokite aiškius pavadinimus, kad žinotumėte, ką funkcija atliks
-- Naudokite **camelCasing**, kad sujungtumėte žodžius
-- Funkcijas orientuokite į konkrečią užduotį
+```mermaid
+flowchart TD
+    A["✏️ Apibrėžti funkciją"] --> B["📦 Supakuoti kodą"]
+    B --> C["🏷️ Suteikti pavadinimą"]
+    C --> D["📞 Kviesti, kai reikalinga"]
+    D --> E["🔄 Naudoti pakartotinai bet kur"]
+    
+    F["💡 Privalumai"] --> F1["Nėra kodo dubliavimo"]
+    F --> F2["Lengva prižiūrėti"]
+    F --> F3["Aiški organizacija"]
+    F --> F4["Lengvesnis testavimas"]
+    
+    style A fill:#e3f2fd
+    style E fill:#e8f5e8
+    style F fill:#fff3e0
+```
+> **Pastaba:** Šiose pamokose naudojote **metodus**. `console.log()` yra metodas – iš esmės funkcija, priklausanti `console` objektui. Pagrindinis skirtumas yra tas, kad metodai yra pririšti prie objektų, o funkcijos veikia savarankiškai. Daugelis programuotojų šiuos terminus neformaliuose pokalbiuose vartoja kaip sinonimus.
+
+### Geriausios funkcijų rašymo praktikos
+
+Štai kelios gairės, padedančios kurti puikias funkcijas:
+
+- Suteikite funkcijoms aiškius, aprašomuosius pavadinimus – ateities jūs jums padėkos!
+- Naudokite **camelCase** kelių žodžių pavadinimams (pvz., `calculateTotal` vietoje `calculate_total`)
+- Laikykite kiekvieną funkciją vienoje užduotyje ir atlikite ją gerai
 
 ## Informacijos perdavimas funkcijai
 
-Kad funkcija būtų universalesnė, dažnai norėsite perduoti jai informaciją. Jei pažvelgtume į mūsų aukščiau pateiktą `displayGreeting` pavyzdį, jis rodys tik **Hello, world!**. Tai nėra pati naudingiausia funkcija, kurią galima sukurti. Jei norime ją padaryti šiek tiek lankstesnę, pavyzdžiui, leisti nurodyti asmens, kuriam sveikinamės, vardą, galime pridėti **parametrą**. Parametras (kartais vadinamas **argumentu**) yra papildoma informacija, perduodama funkcijai.
+Mūsų funkcija `displayGreeting` yra ribota – ji gali rodyti tik „Hello, world!“ visiems. Parametrai leidžia mums padaryti funkcijas lankstesnes ir naudingesnes.
 
-Parametrai nurodomi apibrėžimo dalyje, skliausteliuose, ir yra atskirti kableliais, kaip parodyta:
+**Parametrai** elgiasi kaip vietos užtvarai, kuriuose galite įstatyti skirtingas vertes kiekvieną kartą naudodami funkciją. Taip ta pati funkcija kiekvieną kartą dirbs su skirtinga informacija.
+
+Parametrai išvardijami skliaustuose funkcijos apibrėžime, atskirti kableliais:
 
 ```javascript
 function name(param, param2, param3) {
@@ -76,7 +165,9 @@ function name(param, param2, param3) {
 }
 ```
 
-Galime atnaujinti savo `displayGreeting`, kad priimtų vardą ir jį rodytų.
+Kiekvienas parametras elgiasi kaip vietos užtvaras – kai kas nors kviečia jūsų funkciją, jis pateikia tikrąsias vertes, kurios įterpiamos į šias vietas.
+
+Pakeiskime mūsų pasisveikinimo funkciją, kad ji priimtų vardą:
 
 ```javascript
 function displayGreeting(name) {
@@ -85,16 +176,44 @@ function displayGreeting(name) {
 }
 ```
 
-Kai norime iškviesti funkciją ir perduoti parametrą, nurodome jį skliausteliuose.
+Atkreipkite dėmesį, kad naudojame kabliataškius (`` ` ``) ir `${}` – tokiu būdu vardas yra tiesiogiai įterpiamas į mūsų žinutę – tai vadinama šablonine eilute (template literal) ir yra labai patogi eilutės kūrimo su kintamaisiais technika.
+
+Dabar, kai kviesime funkciją, galime perduoti bet kokį vardą:
 
 ```javascript
 displayGreeting('Christopher');
-// displays "Hello, Christopher!" when run
+// paleidus rodomas „Sveikas, Christopher!“
 ```
 
-## Numatytosios reikšmės
+JavaScript paima eilutę `'Christopher'`, priskiria ją parametrui `name` ir sukuria suasmenintą žinutę „Hello, Christopher!“
 
-Funkciją galime padaryti dar lankstesnę, pridėdami daugiau parametrų. Bet ką daryti, jei nenorime, kad kiekviena reikšmė būtų privaloma? Grįžtant prie mūsų sveikinimo pavyzdžio, galime palikti vardą kaip privalomą (mums reikia žinoti, kam sveikinamės), tačiau norime leisti sveikinimą pritaikyti pagal poreikį. Jei kas nors nenori jo pritaikyti, vietoj to pateikiame numatytąją reikšmę. Norėdami nustatyti numatytąją parametro reikšmę, ją nustatome taip pat, kaip nustatytume reikšmę kintamajam – `parameterName = 'defaultValue'`. Pilnas pavyzdys:
+```mermaid
+flowchart LR
+    A["🎯 Funkcijos kvietimas"] --> B["📥 Parametrai"]
+    B --> C["⚙️ Funkcijos kūnas"]
+    C --> D["📤 Rezultatas"]
+    
+    A1["displayGreeting('Alice')"] --> A
+    B1["vardas = 'Alice'"] --> B
+    C1["Šabloninė eilutė\n\`Sveiki, \${vardas}!\`"] --> C
+    D1["'Sveiki, Alice!'"] --> D
+    
+    E["🔄 Parametrų tipai"] --> E1["Eilutės"]
+    E --> E2["Skaičiai"]
+    E --> E3["Būlio reikšmės"]
+    E --> E4["Objektai"]
+    E --> E5["Funkcijos"]
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+```
+## Numatytoji reikšmė
+
+O kas, jei norime, kad kai kurie parametrai būtų neprivalomi? Štai čia praverčia numatytosios reikšmės!
+
+Tarkime, norime, kad žmonės galėtų pritaikyti pasisveikinimo žodį, bet jei jo nenurodys, naudokime „Hello“ kaip atsarginę vertę. Galite nustatyti numatytąsias reikšmes naudodami lygybės ženklą, kaip kintamajam:
 
 ```javascript
 function displayGreeting(name, salutation='Hello') {
@@ -102,29 +221,63 @@ function displayGreeting(name, salutation='Hello') {
 }
 ```
 
-Kai iškviečiame funkciją, galime nuspręsti, ar norime nustatyti reikšmę `salutation`.
+Čia `name` dar vis reikalingas, tačiau `salutation` turi atsarginę vertę `'Hello'`, jei niekas nepateikia kito pasisveikinimo žodžio.
+
+Dabar galime iškviesti funkciją dviem būdais:
 
 ```javascript
 displayGreeting('Christopher');
-// displays "Hello, Christopher"
+// rodo "Sveikas, Christopher"
 
 displayGreeting('Christopher', 'Hi');
-// displays "Hi, Christopher"
+// rodo "Labas, Christopher"
 ```
+
+Pirmuoju atveju JavaScript naudoja numatytąjį „Hello“, nes nenurodėme pasisveikinimo žodžio. Antruoju atveju jis naudoja mūsų pasirinktą „Hi“. Šis lankstumas leidžia funkcijoms prisitaikyti prie skirtingų situacijų.
+
+### 🎛️ **Parametrų įvaldymo patikra: funkcijų lankstumas**
+
+**Patikrinkite savąjį parametrų supratimą:**
+- Kuo skiriasi parametras ir argumentas?
+- Kodėl numatytosios reikšmės svarbios realiame programavime?
+- Ar galite numatyti, kas nutiks, jei perduosite daugiau argumentų nei parametrų?
+
+```mermaid
+stateDiagram-v2
+    [*] --> NoParams: function greet() {}
+    [*] --> WithParams: function greet(name) {}
+    [*] --> WithDefaults: function greet(name, greeting='Hi') {}
+    
+    NoParams --> Static: Visada tas pats rezultatas
+    WithParams --> Dynamic: Kinta priklausomai nuo įvesties
+    WithDefaults --> Flexible: Pasirenkamas pritaikymas
+    
+    Static --> [*]
+    Dynamic --> [*]
+    Flexible --> [*]
+    
+    note right of WithDefaults
+        Labiausiai lankstus požiūris
+        Suderinamas atgal
+    end note
+```
+> **Profesionali pastaba**: numatytieji parametrai daro funkcijas patogesnes vartotojui. Vartotojai gali greitai pradėti naudotis su sveiku protu pagrįstomis reikšmėmis, bet vis tiek gali pritaikyti pagal poreikį!
 
 ## Grąžinamosios reikšmės
 
-Iki šiol mūsų sukurta funkcija visada išves informaciją į [console](https://developer.mozilla.org/docs/Web/API/console). Kartais tai gali būti būtent tai, ko ieškome, ypač kai kuriame funkcijas, kurios iškvies kitas paslaugas. Bet ką daryti, jei noriu sukurti pagalbinę funkciją, kuri atliktų skaičiavimą ir grąžintų reikšmę, kad galėčiau ją naudoti kitur?
+Mūsų funkcijos iki šiol tik spausdino pranešimus į konsolę, bet ką daryti, jei norite, kad funkcija apskaičiuotų kažką ir grąžintų rezultatą?
 
-Tai galime padaryti naudodami **grąžinamąją reikšmę**. Grąžinamoji reikšmė yra grąžinama funkcijos ir gali būti saugoma kintamajame taip pat, kaip galėtume saugoti literalinę reikšmę, pvz., eilutę ar skaičių.
+Čia praverčia **grąžinamosios reikšmės**. Vietoj to, kad tiesiog kažką rodytų, funkcija gali grąžinti reikšmę, kurią galite priskirti kintamajam arba naudoti kitose kodo vietose.
 
-Jei funkcija grąžina kažką, tada naudojamas raktažodis `return`. Raktažodis `return` tikisi reikšmės arba nuorodos į tai, kas grąžinama, kaip parodyta:
+Norėdami grąžinti reikšmę, naudokite raktažodį `return` ir po jo parašykite, ką norite grąžinti:
 
 ```javascript
 return myVariable;
-```  
+```
 
-Galime sukurti funkciją, kuri sukurtų sveikinimo pranešimą ir grąžintų reikšmę atgal kvietėjui.
+Svarbu žinoti: kai funkcija pasiekia `return` sakinį, ji iš karto sustoja ir grąžina tą reikšmę tam, kuris ją pašaukė.
+
+Pakeiskime mūsų pasisveikinimo funkciją, kad ji grąžintų žinutę, o ne spausdintų ją:
 
 ```javascript
 function createGreetingMessage(name) {
@@ -133,35 +286,81 @@ function createGreetingMessage(name) {
 }
 ```
 
-Kai kviečiame šią funkciją, reikšmę saugosime kintamajame. Tai labai panašu į tai, kaip nustatytume kintamąjį statinei reikšmei (pvz., `const name = 'Christopher'`).
+Dabar, vietoj to, kad atspausdintų pasisveikinimą, ši funkcija sukuria žinutę ir perduoda ją mums.
+
+Norėdami naudoti grąžintą reikšmę, galite ją priskirti kintamajam, kaip ir bet kokią kitą vertę:
 
 ```javascript
 const greetingMessage = createGreetingMessage('Christopher');
 ```
 
-## Funkcijos kaip funkcijų parametrai
+Dabar `greetingMessage` laikys „Hello, Christopher“ ir galime ją naudoti bet kur programoje – parodyti tinklalapyje, įtraukti el. laiške ar perduoti kitai funkcijai.
 
-Tobulėjant jūsų programavimo karjerai, susidursite su funkcijomis, kurios priima funkcijas kaip parametrus. Šis įdomus triukas dažnai naudojamas, kai nežinome, kada kažkas įvyks ar baigsis, bet žinome, kad reikia atlikti operaciją reaguojant į tai.
+```mermaid
+flowchart TD
+    A["🔧 Funkcijos apdorojimas"] --> B{"return sakinys?"}
+    B -->|Taip| C["📤 Grąžinama reikšmė"]
+    B -->|Ne| D["📭 Grąžinti undefined"]
+    
+    C --> E["💾 Išsaugoti kintamajame"]
+    C --> F["🔗 Naudoti išraše"]
+    C --> G["📞 Paduoti funkcijai"]
+    
+    D --> H["⚠️ Dažniausiai nenaudinga"]
+    
+    I["📋 Grąžintos reikšmės panaudojimas"] --> I1["Apskaičiuoti rezultatus"]
+    I --> I2["Patikrinti įvestį"]
+    I --> I3["Transformuoti duomenis"]
+    I --> I4["Kurti objektus"]
+    
+    style C fill:#e8f5e8
+    style D fill:#ffebee
+    style I fill:#e3f2fd
+```
+### 🔄 **Grąžinamųjų reikšmių patikra: gavimas atgal**
 
-Pavyzdžiui, apsvarstykite [setTimeout](https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), kuris pradeda laikmatį ir vykdo kodą, kai jis baigiasi. Turime nurodyti, kokį kodą norime vykdyti. Skamba kaip puikus darbas funkcijai!
+**Įvertinkite supratimą apie grąžinamas reikšmes:**
+- Kas nutinka kodui po `return` sakinio funkcijoje?
+- Kodėl grąžinti reikšmes dažnai yra geriau nei tiesiog atspausdinti konsolėje?
+- Ar funkcija gali grąžinti skirtingų tipų reikšmes (eilutę, skaičių, loginę reikšmę)?
 
-Jei paleisite žemiau pateiktą kodą, po 3 sekundžių pamatysite pranešimą **Praėjo 3 sekundės**.
+```mermaid
+pie title "Dažniausi grąžinimo reikšmių tipai"
+    "Eilutės" : 30
+    "Skaičiai" : 25
+    "Objektai" : 20
+    "Būlio tipas" : 15
+    "Masyvai" : 10
+```
+> **Svarbi įžvalga**: funkcijos, kurios grąžina reikšmes, yra lankstesnės, nes tas, kas jas kviečia, nusprendžia, ką daryti su rezultatu. Tai daro jūsų kodą moduliarią ir pakartotinai naudojamą!
+
+## Funkcijos kaip parametrų perdavimas funkcijoms
+
+Funkcijos gali būti perduodamos kaip parametrai kitoms funkcijoms. Nors ši sąvoka iš pradžių gali pasirodyti sudėtinga, tai galinga funkcija, leidžianti kurti lankstų programavimo stilių.
+
+Šis modelis labai dažnas, kai norima pasakyti „kai kas nors įvyksta, padaryk šį kitą dalyką“. Pavyzdžiui, „kai laikmatis pasibaigia, paleisk šį kodą“ arba „kai vartotojas spaudžia mygtuką, iškviesk šią funkciją“.
+
+Pažiūrėkime į `setTimeout`, kuri yra integruota funkcija, kuri laukia tam tikrą laiką ir tada vykdo kodą. Turime pasakyti, ką vykdyti – puikus atvejis perduoti funkciją!
+
+Išbandykite šį kodą – po 3 sekundžių pamatysite pranešimą:
 
 ```javascript
 function displayDone() {
   console.log('3 seconds has elapsed');
 }
-// timer value is in milliseconds
+// laikmačio reikšmė yra milisekundėmis
 setTimeout(displayDone, 3000);
 ```
 
+Atkreipkite dėmesį, kaip perduodame `displayDone` (be skliaustų) į `setTimeout`. Mes patys nekviečiame funkcijos – perduodame ją `setTimeout` ir sakome „iškviesk tai po 3 sekundžių“.
+
 ### Anoniminės funkcijos
 
-Pažvelkime dar kartą į tai, ką sukūrėme. Mes sukuriame funkciją su pavadinimu, kuri bus naudojama tik vieną kartą. Kai mūsų programa tampa sudėtingesnė, galime pastebėti, kad kuriame daug funkcijų, kurios bus iškviestos tik vieną kartą. Tai nėra idealu. Pasirodo, ne visada reikia suteikti funkcijai pavadinimą!
+Kartais jums reikia funkcijos tik vienai užduočiai ir nenorite suteikti jai pavadinimo. Pagalvokite – jei naudosite funkciją tik vieną kartą, kam apkrauti kodą papildomu vardu?
 
-Kai perduodame funkciją kaip parametrą, galime apeiti jos kūrimą iš anksto ir vietoj to ją sukurti kaip parametro dalį. Naudojame tą patį raktažodį `function`, tačiau ją sukuriame kaip parametrą.
+JavaScript leidžia kurti **anoniminias funkcijas** – funkcijas be pavadinimo, kurias galite apibrėžti tiesiai ten, kur jų reikia.
 
-Perrašykime aukščiau pateiktą kodą, kad naudotume anoniminę funkciją:
+Štai kaip galime perrašyti mūsų laikmačio pavyzdį naudodami anoniminę funkciją:
 
 ```javascript
 setTimeout(function() {
@@ -169,13 +368,15 @@ setTimeout(function() {
 }, 3000);
 ```
 
-Jei paleisite mūsų naują kodą, pastebėsite, kad gauname tuos pačius rezultatus. Sukūrėme funkciją, tačiau nereikėjo suteikti jai pavadinimo!
+Tai pasiekia tą patį rezultatą, bet funkcija yra apibrėžta tiesiai `setTimeout` kvietime, nereikia atskiro deklaravimo.
 
-### Fat arrow funkcijos
+### Trumpųjų rodyklių (fat arrow) funkcijos
 
-Vienas iš dažnai naudojamų trumpinių daugelyje programavimo kalbų (įskaitant JavaScript) yra vadinamosios **arrow** arba **fat arrow** funkcijos. Jos naudoja specialų simbolį `=>`, kuris atrodo kaip rodyklė – todėl toks pavadinimas! Naudodami `=>`, galime praleisti raktažodį `function`.
+Šiuolaikinis JavaScript turi dar trumpesnį būdą rašyti funkcijas, vadinamas **rodyklinėmis funkcijomis (arrow functions)**. Jos naudoja `=>` (atrodo kaip rodyklė – supratote?) ir yra labai populiarios tarp programuotojų.
 
-Perrašykime mūsų kodą dar kartą, kad naudotume fat arrow funkciją:
+Rodyklinės funkcijos leidžia praleisti raktažodį `function` ir rašyti trumpesnį kodą.
+
+Štai mūsų laikmačio pavyzdys naudojant rodyklinę funkciją:
 
 ```javascript
 setTimeout(() => {
@@ -183,28 +384,200 @@ setTimeout(() => {
 }, 3000);
 ```
 
-### Kada naudoti kiekvieną strategiją
+Skliaustai `()` – tai vieta, kur būtų parametrai (šiuo atveju tušti), po jų eina rodyklė `=>`, o po jos – funkcijos turinys garbanotose kabutėse. Tai suteikia tą pačią funkcionalumą su trumpesne sintakse.
 
-Dabar matėte, kad turime tris būdus perduoti funkciją kaip parametrą ir galbūt svarstote, kada naudoti kiekvieną. Jei žinote, kad funkciją naudosite daugiau nei vieną kartą, sukurkite ją įprastai. Jei ją naudosite tik vienoje vietoje, paprastai geriausia naudoti anoniminę funkciją. Ar naudosite fat arrow funkciją, ar tradicinę `function` sintaksę, priklauso nuo jūsų, tačiau pastebėsite, kad dauguma šiuolaikinių programuotojų renkasi `=>`.
+```mermaid
+flowchart LR
+    A["📝 Funkcijų stiliai"] --> B["Tradiciškai"]
+    A --> C["Rodyklė"]
+    A --> D["Anoniminė"]
+    
+    B --> B1["funkcijos pavadinimas() {}"]
+    B --> B2["Perkelta"]
+    B --> B3["Pavadinta"]
+    
+    C --> C1["const pavadinimas = () => {}"]
+    C --> C2["Konkretus sintaksė"]
+    C --> C3["Modernus stilius"]
+    
+    D --> D1["funkcija() {}"]
+    D --> D2["Be pavadinimo"]
+    D --> D3["Vienkartinis naudojimas"]
+    
+    E["⏰ Kada naudoti"] --> E1["Tradiciškai: pakartotinai naudojamos funkcijos"]
+    E --> E2["Rodyklė: trumpi atgaliniai kvietimai"]
+    E --> E3["Anoniminė: įvykių tvarkyklės"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+### Kada naudoti kurią strategiją
+
+Kada verta rinktis kurią? Praktinė taisyklė: jeigu funkciją naudositės kelis kartus, suteikite jai pavadinimą ir apibrėžkite atskirai. Jeigu funkcija skirta vienai specifinei užduočiai, apsvarstykite anoniminę funkciją. Abu – tiek rodyklinės, tiek tradicinės funkcijos – yra tinkamos, nors rodyklinės funkcijos vyrauja šiuolaikiniame JavaScript kode.
+
+### 🎨 **Funkcijų stiliaus patikra: tinkamos sintaksės pasirinkimas**
+
+**Patikrinkite savo sintaksės supratimą:**
+- Kada galėtumėte rinktis rodyklines funkcijas prieš tradicinę sintaksę?
+- Koks anoniminių funkcijų pagrindinis privalumas?
+- Ar galite įsivaizduoti situaciją, kur varduota funkcija būtų geresnė už anoniminę?
+
+```mermaid
+quadrantChart
+    title Funkcijos Pasirinkimo Sprendimų Matrica
+    x-axis Paprasta --> Sudėtinga
+    y-axis Vienkartinis naudojimas --> Pakartotinis naudojimas
+    quadrant-1 Rodyklių Funkcijos
+    quadrant-2 Pavadintos Funkcijos
+    quadrant-3 Anoniminės Funkcijos
+    quadrant-4 Tradicinės Funkcijos
+    
+    Event Handlers: [0.3, 0.2]
+    Utility Functions: [0.7, 0.8]
+    Callbacks: [0.2, 0.3]
+    Class Methods: [0.8, 0.7]
+    Mathematical Operations: [0.4, 0.6]
+```
+> **Šiuolaikinė tendencija**: rodykliniai funkcijos tampa daugelio programuotojų pagrindiniu pasirinkimu dėl savo trumpumos, bet tradicinės funkcijos vis dar turi savo vietą!
 
 ---
+
+
 
 ## 🚀 Iššūkis
 
-Ar galite vienu sakiniu paaiškinti skirtumą tarp funkcijų ir metodų? Pabandykite!
+Ar galite vienu sakiniu apibrėžti skirtumą tarp funkcijų ir metodų? Išbandykite!
 
-## Klausimai po paskaitos
-[Klausimai po paskaitos](https://ff-quizzes.netlify.app)
+## GitHub Copilot agento iššūkis 🚀
 
-## Apžvalga ir savarankiškas mokymasis
+Naudokite Agent režimą, kad įvykdytumėte šį iššūkį:
 
-Verta [pasidomėti daugiau apie arrow funkcijas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), nes jos vis dažniau naudojamos kodų bazėse. Praktikuokite rašyti funkciją, o tada perrašykite ją naudodami šią sintaksę.
+**Aprašymas:** Sukurkite matematikos funkcijų pagalbinę biblioteką, kuri demonstruoja įvairias šiame pamokoje apžvelgtas funkcijų sąvokas, įskaitant parametrus, numatytąsias reikšmes, grąžinamas reikšmes ir rodyklines funkcijas.
 
-## Užduotis
+**Užduotis:** Sukurkite JavaScript failą `mathUtils.js`, kuriame būtų šios funkcijos:
+1. Funkcija `add`, kuri priima du parametrus ir grąžina jų sumą
+2. Funkcija `multiply` su numatytosiomis parametrų reikšmėmis (antras parametras numatytas lygiu 1)
+3. Rodyklinė funkcija `square`, kuri priima skaičių ir grąžina jo kvadratą
+4. Funkcija `calculate`, kuri priima kitą funkciją kaip parametrą ir du skaičius, tada taiko funkciją tiems skaičiams
+5. Demonstracija, kaip kiekviena funkcija kviečiama su tinkamais testiniais atvejais
 
-[Linksmybės su funkcijomis](assignment.md)
+Daugiau apie [agentų režimą](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) skaitykite čia.
+
+## Po paskaitos testas
+[Po paskaitos testas](https://ff-quizzes.netlify.app)
+
+## Peržiūra ir savarankiškas mokymasis
+
+Vertėtų [pažvelgti šiek tiek giliau apie rodyklines funkcijas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions), nes jos vis dažniau naudojamos kodų bazėse. Praktikuokite rašyti funkciją ir tada perrašykite ją šia sintakse.
+
+## Namų darbai
+
+[Žaidžiame su funkcijomis](assignment.md)
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.
+## 🧰 **Jūsų JavaScript funkcijų įrankių rinkinio santrauka**
+
+```mermaid
+graph TD
+    A["🎯 JavaScript funkcijos"] --> B["📋 Funkcijos deklaracija"]
+    A --> C["📥 Parametrai"]
+    A --> D["📤 Grąžinamos vertės"]
+    A --> E["🎨 Moderni sintaksė"]
+    
+    B --> B1["function name() {}"]
+    B --> B2["Aprašomas pavadinimas"]
+    B --> B3["Pakartotinai naudojami kodo blokai"]
+    
+    C --> C1["Įvesties duomenys"]
+    C --> C2["Numatytosios reikšmės"]
+    C --> C3["Daugybė parametrų"]
+    
+    D --> D1["return sakinys"]
+    D --> D2["Funkcijos pabaiga"]
+    D --> D3["Perduoti duomenis atgal"]
+    
+    E --> E1["Rodyklinės funkcijos: () =>"]
+    E --> E2["Anoniminės funkcijos"]
+    E --> E3["Funkcijos aukštesniojo lygio"]
+    
+    F["⚡ Pagrindinės naudos"] --> F1["Kodo pakartotinis naudojimas"]
+    F --> F2["Geresnė organizacija"]
+    F --> F3["Lengvesnis testavimas"]
+    F --> F4["Modulinis dizainas"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+    style F fill:#fce4ec
+```
+---
+
+## 🚀 Jūsų JavaScript funkcijų įvaldymo laiko juosta
+
+### ⚡ **Ką galite padaryti per kitą 5 minutes**
+- [ ] Parašyti paprastą funkciją, grąžinančią jūsų mėgstamiausią skaičių
+- [ ] Sukurti funkciją su dviem parametrais, kuri juos sudeda
+- [ ] Išbandykite tradicinės funkcijos konvertavimą į rodyklių funkcijų sintaksę  
+- [ ] Praktikuokite užduotį: paaiškinkite skirtumą tarp funkcijų ir metodų  
+
+### 🎯 **Ką galite pasiekti per šią valandą**  
+- [ ] Užbaikite pamokos pabaigos testą ir peržiūrėkite painias sąvokas  
+- [ ] Sukurkite matematikos įrankių biblioteką iš GitHub Copilot iššūkio  
+- [ ] Sukurkite funkciją, kuri naudoja kitą funkciją kaip parametrą  
+- [ ] Praktikuokite rašyti funkcijas su numatytosiomis reikšmėmis  
+- [ ] Eksperimentuokite su šablonų literaliais funkcijų grąžinimo reikšmėse  
+
+### 📅 **Jūsų savaitės trukmės funkcijų įvaldymas**  
+- [ ] Kūrybiškai atlikite užduotį „Smagiai su funkcijomis“  
+- [ ] Pertvarkykite kai kurį pasikartojantį kodą į pakartotinai naudojamas funkcijas  
+- [ ] Sukurkite mažą skaičiuotuvą naudodami tik funkcijas (be globalių kintamųjų)  
+- [ ] Praktikuokite rodyklių funkcijas su masyvo metodais kaip `map()` ir `filter()`  
+- [ ] Sudarykite naudingų funkcijų rinkinį dažnai pasitaikantiems darbams  
+- [ ] Išstudijuokite aukštesnio lygio funkcijas ir funkcinio programavimo koncepcijas  
+
+### 🌟 **Jūsų mėnesio trukmės transformacija**  
+- [ ] Įvaldykite pažangias funkcijų sąvokas kaip uždarymus ir apimtį  
+- [ ] Sukurkite projektą, kuris daugiausia remiasi funkcijų sudėtimi  
+- [ ] Prisidėkite prie atviro kodo gerindami funkcijų dokumentaciją  
+- [ ] Mokykite kitus apie funkcijas ir skirtingus sintaksės stilius  
+- [ ] Tyrinėkite funkcinio programavimo paradigmas JavaScripte  
+- [ ] Sukurkite asmeninę pakartotinai naudojamų funkcijų biblioteką būsimiesiems projektams  
+
+### 🏆 **Galutinis funkcijų čempiono patikrinimas**  
+
+**Švęskite savo funkcijų įvaldymą:**  
+- Kokia naudingiausia funkcija, kurią iki šiol sukūrėte?  
+- Kaip funkcijų mokymasis pakeitė jūsų požiūrį į kodo organizavimą?  
+- Kuria funkcijų sintakse teikiate pirmenybę ir kodėl?  
+- Kokią realaus pasaulio problemą išspręstumėte rašydami funkciją?  
+
+```mermaid
+journey
+    title Jūsų funkcijos pasitikėjimo evoliucija
+    section Šiandien
+      Supainiotas dėl sintaksės: 3: You
+      Pagrindų supratimas: 4: You
+      Paprastų funkcijų rašymas: 5: You
+    section Ši savaitė
+      Parametrų naudojimas: 4: You
+      Reikšmių grąžinimas: 5: You
+      Moderni sintaksė: 5: You
+    section Kitas mėnuo
+      Funkcijų sudarymas: 5: You
+      Pažangios schemos: 5: You
+      Kitiems mokymas: 5: You
+```  
+> 🎉 **Jūs įvaldėte vieną galingiausių programavimo koncepcijų!** Funkcijos yra pagrindiniai didesnių programų statybiniai blokai. Kiekviena programa, kurią kursite, naudos funkcijas kodui organizuoti, pakartotinai naudoti ir struktūruoti. Dabar suprantate, kaip logiką supakuoti į pakartotinai naudojamus komponentus, kas jus daro efektyvesniu ir rezultatyvesniu programuotoju. Sveiki modularaus programavimo pasaulyje! 🚀
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors mes siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus vertimas žmogaus. Mes neatsakome už klaidingą supratimą ar neteisingą interpretaciją, kilusią dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

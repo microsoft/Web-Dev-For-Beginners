@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 tmrow ၏ C02 Signal API ကို အသုံးပြု၍ လျှပ်စစ်စွမ်းအင်သုံးစွဲမှုကို ချက်ချင်းစောင့်ကြည့်နိုင်ရန် သင့်ဘရောက်ဇာတွင် သတိပေးချက်တစ်ခုရရှိစေရန် ဘရောက်ဇာအတွက် Extension တစ်ခု ဖန်တီးပါ။ ဒီအထူး Extension ကို အသုံးပြုခြင်းဖြင့် သင့်ဒေသရှိ လျှပ်စစ်စွမ်းအင်သုံးစွဲမှုအခြေအနေအပေါ် မူတည်ပြီး သင့်လုပ်ဆောင်မှုများအတွက် ပိုမိုသင့်တော်သော ဆုံးဖြတ်ချက်များ ချမှတ်နိုင်စေပါမည်။
 
-![Extension Screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.my.png)
+![Extension Screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.my.png)
 
 ## စတင်ရန်
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge တွင် ထည့်သွင်းရန်အတွက် ဘရောက်ဇာ၏ အပေါ်ယံညာဘက်ရှိ 'သုံးချက်' မီနူးကို အသုံးပြု၍ Extensions ပန်းနယ်ကို ရှာပါ။ အဲဒီနေရာမှ 'Unpacked Extension ကို Load လုပ်ရန်' ကို ရွေးချယ်ပြီး Extension အသစ်တစ်ခုကို ထည့်သွင်းပါ။ Prompt တွင် 'dist' ဖိုလ်ဒါကို ဖွင့်ပြီး Extension ကို Load လုပ်ပါ။ အသုံးပြုရန်အတွက် CO2 Signal API အတွက် API Key တစ်ခုလိုအပ်ပါမည် ([ဒီမှာ အီးမေးလ်ဖြင့် ရယူပါ](https://www.co2signal.com/) - ဒီစာမျက်နှာရှိ အကွက်ထဲတွင် သင့်အီးမေးလ်ကို ထည့်သွင်းပါ) နှင့် [Electricity Map](https://www.electricitymap.org/map) တွင် သင့်ဒေသအတွက် [Zone Code](http://api.electricitymap.org/v3/zones) ကို ရယူပါ။ (ဥပမာ - Boston အတွက် 'US-NEISO' ကို အသုံးပြုပါ။)
 
-![Installation](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.my.png)
+![Installation](../../../../../translated_images/install-on-edge.78634f02842c4828.my.png)
 
 API Key နှင့် ဒေသကုဒ်ကို Extension Interface ထဲတွင် ထည့်သွင်းပြီးပါက ဘရောက်ဇာ၏ Extension Bar တွင် ရောင်စုံအမှတ်တစ်ခုသည် သင့်ဒေသရှိ လျှပ်စစ်စွမ်းအင်သုံးစွဲမှုအခြေအနေကို ပြသရန် ပြောင်းလဲသွားပါမည်။ ထို့အပြင် သင့်အတွက် သင့်တော်သော စွမ်းအင်သုံးစွဲမှုဆိုင်ရာ လုပ်ဆောင်မှုများကို အကြံပြုနိုင်မည်ဖြစ်သည်။ ဒီ 'အမှတ်' စနစ်၏ အကြံကို [Energy Lollipop Extension](https://energylollipop.com/) မှ ကယ်လီဖိုးနီးယားရှိ အထူးထုတ်လွှင့်မှုများအတွက် ရယူထားပါသည်။
 

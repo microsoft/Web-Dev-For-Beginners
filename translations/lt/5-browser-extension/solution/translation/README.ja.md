@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Naudodami tmrow CO2 Signal API, sukursime naršyklės plėtinį, kuris primins, kiek energijos sunaudojama jūsų regione. Šis plėtinys leis stebėti elektros energijos suvartojimą ir priimti sprendimus, pagrįstus šia informacija.
 
-![plėtinio ekrano nuotrauka](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.lt.png)
+![plėtinio ekrano nuotrauka](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.lt.png)
 
 ## Pradžia
 
@@ -31,7 +31,7 @@ npm run build
 
 Norėdami įdiegti plėtinį Edge naršyklėje, eikite į naršyklės viršutiniame dešiniajame kampe esantį „trijų taškų“ meniu ir suraskite „Plėtiniai“ skydelį. Pasirinkite „Įkelti neišpakuotą“ ir nurodykite „dist“ aplanką. Plėtinys bus įkeltas. Norėdami naudoti plėtinį, jums reikės CO2 Signal API rakto ([gaukite jį čia el. paštu](https://www.co2signal.com/) - įveskite savo el. pašto adresą į šios svetainės laukelį) ir [Electricity Map](https://www.electricitymap.org/map) atitinkančio [kodo jūsų regionui](http://api.electricitymap.org/v3/zones) (pavyzdžiui, Bostone naudojamas 'US-NEISO').
 
-![įdiegimas](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.lt.png)
+![įdiegimas](../../../../../translated_images/install-on-edge.78634f02842c4828.lt.png)
 
 Įvedę API raktą ir regiono kodą į plėtinio sąsają, naršyklės plėtinių juostoje matysite spalvotą tašką, kuris atspindės jūsų regiono energijos suvartojimą. Tai padės nuspręsti, kokią veiklą atlikti, atsižvelgiant į energijos poreikius. Šios „taško“ sistemos idėją įkvėpė Kalifornijos emisijų stebėjimui skirtas [Energy Lollipop plėtinys](https://energylollipop.com/).
 

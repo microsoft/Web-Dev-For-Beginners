@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![CSS ကိုမိတ်ဆက်ခြင်း](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.my.png)
+![CSS ကိုမိတ်ဆက်ခြင်း](../../../../translated_images/webdev101-css.3f7af5991bf53a20.my.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML သင့်ရဲ့ terrarium အခြေခံပုံစံကို သတိရပါသလား? CSS က plain structure ကို visually appealing ဖြစ်အောင် ပြောင်းလဲပေးမယ်။
@@ -205,7 +205,7 @@ body {
 
 Browser ရဲ့ developer tools (F12) ကိုဖွင့်ပြီး Elements tab ကိုသွားပါ။ သင့်ရဲ့ `<h1>` element ကို inspect လုပ်ပါ။ `<body>` element ကနေ font family ကို inherit လုပ်ထားတာကိုတွေ့ပါလိမ့်မယ်:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.my.png)
+![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.my.png)
 
 ✅ **Experiment Time**: `<body>` element မှာ `color`, `line-height`, `text-align` လို inheritable property တွေကို set လုပ်ကြည့်ပါ။ Heading နဲ့ အခြား element တွေမှာ ဘာတွေဖြစ်သွားလဲ?
 
@@ -531,7 +531,7 @@ Terrarium ကိုလက်တွေ့ကျတဲ့ glass reflections နဲ
 
 Light က glass surfaces တွေမှာဘယ်လိုပြန်လည်ထင်ရလဲဆိုတာ simulation လုပ်တဲ့ subtle highlights တွေကိုဖန်တီးပါမယ်။ Renaissance painters တွေက Jan van Eyck လိုမျိုး light နဲ့ reflection ကိုအသုံးပြုပြီး painted glass ကို three-dimensional ဖြစ်အောင်လုပ်ခဲ့သလိုမျိုးပါ။ သင့်ရဲ့ရည်မှန်းချက်ကတော့:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.my.png)
+![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.my.png)
 
 **သင့်ရဲ့ challenge:**
 - **Subtle white or light-colored oval shapes** ကို glass reflections အတွက်ဖန်တီးပါ

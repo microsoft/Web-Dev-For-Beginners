@@ -1,54 +1,64 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-09-01T15:50:27+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2026-01-07T12:28:19+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "lt"
 }
 -->
-# Paleiskite kodą
+# Vykdyti kodą
 
 ## Paruošimas
 
-Sukurkite virtualią aplinką
+Sukurti virtualią aplinką
 
 ```sh
 python -m venv venv
 source ./venv/bin/activate
 ```
 
-## Įdiekite priklausomybes
+## Įdiegti priklausomybes
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
-## Paleiskite API
+## Vykdyti API
 
 ```sh
+# Metodas 1: Tiesioginis vykdymas
 python api.py
+
+# Metodas 2: Naudojant uvicorn
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-## Paleiskite frontendą
+## Testuoti API
+
+Aplankykite interaktyvią API dokumentaciją adresu: `http://localhost:5000/docs`
+
+## Vykdyti frontendą
 
 Įsitikinkite, kad esate frontend aplanke
 
-Suraskite *app.js*, pakeiskite `BASE_URL` į savo backend URL
+Suraskite *app.js*, pakeiskite `BASE_URL` į savo backend'o URL
 
-Paleiskite
+Vykdykite jį
 
 ```
 npx http-server -p 8000
 ```
 
-Pabandykite įvesti žinutę pokalbyje, turėtumėte matyti atsakymą (jei tai vykdote Codespace aplinkoje arba nustatėte prieigos raktą).
+Pabandykite įvesti žinutę pokalbyje, turėtumėte pamatyti atsakymą (jei vykdote tai Codespace aplinkoje arba esate nustatę prieigos tokeną).
 
-## Nustatykite prieigos raktą (jei nevykdote to Codespace aplinkoje)
+## Prieigos tokeno nustatymas (jei nevykdote Codespace aplinkoje)
 
-Žiūrėkite [Nustatyti PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+Žr. [Nustatyti PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, atkreipkite dėmesį, kad automatizuoti vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas gimtąja kalba laikomas autoritetingu šaltiniu. Esant kritinei informacijai, rekomenduojame naudoti profesionalų žmogaus atliktą vertimą. Mes neatsakome už bet kokius nesusipratimus ar klaidingus interpretavimus, kylančius iš šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

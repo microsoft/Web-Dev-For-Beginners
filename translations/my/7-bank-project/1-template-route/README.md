@@ -541,7 +541,7 @@ sequenceDiagram
 
 `history.pushState` ကို အသုံးပြုကာ browser ရဲ့ navigation history မှာ entry အသစ်တွေကို ဖန်တီးနိုင်ပါတယ်။ Browser ရဲ့ *back button* ကို နှိပ်ထားပြီး စစ်ဆေးကြည့်ပါ၊ navigation history က ဒီလိုပုံစံတစ်ခုကို ပြသသင့်ပါတယ်:
 
-![Navigation history ရဲ့ screenshot](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.my.png)
+![Navigation history ရဲ့ screenshot](../../../../translated_images/history.7fdabbafa521e064.my.png)
 
 Back button ကို အကြိမ်အများကြိမ် click လုပ်ကြည့်ပါ၊ လက်ရှိ URL က ပြောင်းလဲပြီး history က update လုပ်သွားမယ်၊ ဒါပေမယ့် အတူတူ template ကိုပဲ ပြသနေပါမယ်။
 

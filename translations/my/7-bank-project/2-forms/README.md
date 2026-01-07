@@ -295,7 +295,7 @@ Submit button ကိုနှိပ်တဲ့အခါမှာ ဘာတွ�
 2. Browser ရဲ့ address bar မှာ ပြောင်းလဲမှုတွေကို သတိထားပါ
 3. Page reload ဖြစ်ပြီး data တွေ URL မှာ ပေါ်လာတာကို သတိထားပါ
 
-![Register button ကိုနှိပ်ပြီး browser URL ပြောင်းလဲမှု screenshot](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.my.png)
+![Register button ကိုနှိပ်ပြီး browser URL ပြောင်းလဲမှု screenshot](../../../../translated_images/click-register.e89a30bf0d4bc9ca.my.png)
 
 ### HTTP Method တွေကို နှိုင်းယှဉ်ခြင်း
 
@@ -502,7 +502,7 @@ async function register() {
 3. **"Create Account" ကို နှိပ်ပါ**
 4. **Console messages နှင့် user feedback ကို ကြည့်ရှုပါ**
 
-![Browser console တွင် log message ကို ပြသထားသော screenshot](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.my.png)
+![Browser console တွင် log message ကို ပြသထားသော screenshot](../../../../translated_images/browser-console.efaf0b51aaaf6778.my.png)
 
 **သင်မြင်ရမည့်အရာများ:**
 - **Loading state** submit button တွင် ပေါ်လာသည်
@@ -677,7 +677,7 @@ Registration form ကို robust validation ဖြင့် user experience �
 3. **Special character များကို** username field တွင် စမ်းသပ်ပါ
 4. **Negative balance amount ကို** input လုပ်ပါ
 
-![Validation error ကို ပြသထားသော screenshot](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.my.png)
+![Validation error ကို ပြသထားသော screenshot](../../../../translated_images/validation-error.8bd23e98d416c22f.my.png)
 
 **သင်မြင်ရမည့်အရာများ:**
 - **Browser သည်** native validation message များကို ပြသသည်
@@ -825,7 +825,7 @@ timeline
 
 CSS အလှဆင်မှုများထည့်ပြီးနောက် login စာမျက်နှာ၏ နောက်ဆုံးပုံစံကို အောက်ပါပုံကဲ့သို့ ရနိုင်ပါသည် -
 
-![CSS အလှဆင်မှုများထည့်ပြီးနောက် login စာမျက်နှာ၏ screenshot](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.my.png)
+![CSS အလှဆင်မှုများထည့်ပြီးနောက် login စာမျက်နှာ၏ screenshot](../../../../translated_images/result.96ef01f607bf856a.my.png)
 
 ## Post-Lecture Quiz
 
