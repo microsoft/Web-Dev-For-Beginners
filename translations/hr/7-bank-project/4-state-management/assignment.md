@@ -112,7 +112,7 @@ Pogledajte [dokumentaciju API-ja poslužitelja](../api/README.md) za:
 **Očekivani rezultat:**
 Nakon završetka ovog zadatka, vaša aplikacija za bankarstvo trebala bi imati potpuno funkcionalnu značajku "Dodaj transakciju" koja izgleda i ponaša se profesionalno:
 
-![Snimka zaslona koja prikazuje primjer dijaloga "Dodaj transakciju"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.hr.png)
+![Snimka zaslona koja prikazuje primjer dijaloga "Dodaj transakciju"](../../../../translated_images/dialog.93bba104afeb79f1.hr.png)
 
 ## Testiranje implementacije
 

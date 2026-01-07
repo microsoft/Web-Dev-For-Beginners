@@ -1,53 +1,148 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "2c1164912414820c8efd699b43f64954",
-  "translation_date": "2025-10-25T00:05:01+00:00",
+  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
+  "translation_date": "2026-01-07T09:20:37+00:00",
   "source_file": "7-bank-project/3-data/README.md",
   "language_code": "hr"
 }
 -->
-# Izrada aplikacije za bankarstvo, dio 3: Metode dohvaćanja i korištenja podataka
+# Izrada bankarske aplikacije - dio 3: Načini dohvaćanja i korištenja podataka
 
-Razmislite o računalu Enterprisea iz Zvjezdanih staza - kada kapetan Picard zatraži status broda, informacije se pojavljuju trenutno, bez da se cijelo sučelje zatvori i ponovno izgradi. Taj neprekidni tok informacija upravo je ono što ovdje gradimo s dinamičkim dohvaćanjem podataka.
+Razmislite o Enterpriseovom računalu u Star Treku - kada kapetan Picard zatraži status broda, informacije se pojavljuju odmah bez da se cijeli sučelje zaustavi i ponovno sastavi. Taj besprijekoran tijek informacija upravo gradimo ovdje s dinamičkim dohvaćanjem podataka.
 
-Trenutno je vaša aplikacija za bankarstvo poput tiskane novine - informativna, ali statična. Pretvorit ćemo je u nešto slično kontrolnom centru NASA-e, gdje podaci kontinuirano teku i ažuriraju se u stvarnom vremenu bez prekida korisničkog tijeka rada.
+Trenutno je vaša banka unutar aplikacije poput tiskanih novina - informativna, ali statična. Pretvorit ćemo je u nešto poput kontrolnog centra NASA-e, gdje podaci kontinuirano teku i ažuriraju se u stvarnom vremenu bez prekidanja korisničkog tijeka rada.
 
-Naučit ćete kako komunicirati s poslužiteljima asinkrono, kako rukovati podacima koji dolaze u različito vrijeme i kako transformirati sirove informacije u nešto značajno za vaše korisnike. Ovo je razlika između demo verzije i softvera spremnog za produkciju.
+Naučit ćete kako asinkrono komunicirati sa serverima, rukovati podacima koji dolaze u različito vrijeme i pretvarati sirove informacije u nešto smisleno za vaše korisnike. Ovo je razlika između demonstracije i softvera spremnog za produkciju.
 
-## Kviz prije predavanja
+## ⚡ Što možete napraviti u sljedećih 5 minuta
+
+**Brzi put za zaposlene programere**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minuta] --> B[Postavi API poslužitelj]
+    B --> C[Isprobaj dohvaćanje s curlom]
+    C --> D[Izradi funkciju za prijavu]
+    D --> E[Pogledaj podatke u akciji]
+```
+- **Minuta 1-2**: Pokrenite svoj API server (`cd api && npm start`) i testirajte vezu
+- **Minuta 3**: Napravite osnovnu funkciju `getAccount()` koristeći fetch
+- **Minuta 4**: Povežite login formu s `action="javascript:login()"`
+- **Minuta 5**: Testirajte login i pratite pojavu podataka o računu u konzoli
+
+**Brze testne naredbe**:
+```bash
+# Provjerite radi li API
+curl http://localhost:5000/api
+
+# Testirajte dohvaćanje podataka računa
+curl http://localhost:5000/api/accounts/test
+```
+
+**Zašto je ovo važno**: U 5 minuta vidjet ćete magiju asinkronog dohvaćanja podataka koja pokreće svaku modernu web aplikaciju. Ovo je temelj koji aplikacijama daje osjećaj odzivnosti i živosti.
+
+## 🗺️ Vaše putovanje kroz podatkovno vođene web aplikacije
+
+```mermaid
+journey
+    title Od statičkih stranica do dinamičkih aplikacija
+    section Razumijevanje evolucije
+      Tradicionalna ponovna učitavanja stranica: 3: You
+      Otkrijte prednosti AJAX/SPA: 5: You
+      Savladajte obrasce Fetch API-ja: 7: You
+    section Izgradnja autentifikacije
+      Izradite funkcije prijave: 4: You
+      Rukujte asinkronim operacijama: 6: You
+      Upravljajte korisničkim sesijama: 8: You
+    section Dinamičke ažuriranja UI-a
+      Naučite manipulaciju DOM-om: 5: You
+      Izradite prikaze transakcija: 7: You
+      Izradite responzivne nadzorne ploče: 9: You
+    section Profesionalni obrasci
+      Renderiranje temeljeno na predlošcima: 6: You
+      Strategije rukovanja greškama: 7: You
+      Optimizacija performansi: 8: You
+```
+**Cilj vašeg putovanja**: Do kraja ove lekcije razumjet ćete kako moderne web aplikacije dohvaćaju, obrađuju i prikazuju podatke dinamički, stvarajući besprijekorna korisnička iskustva koja očekujemo od profesionalnih aplikacija.
+
+## Predpredavanje Kviza
 
 [Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/45)
 
 ### Preduvjeti
 
-Prije nego što se upustite u dohvaćanje podataka, osigurajte da imate sljedeće komponente spremne:
+Prije nego što zaronite u dohvaćanje podataka, osigurajte da imate spremne ove komponente:
 
-- **Prethodna lekcija**: Završite [Formu za prijavu i registraciju](../2-forms/README.md) - nadogradit ćemo na ovom temelju
-- **Lokalni poslužitelj**: Instalirajte [Node.js](https://nodejs.org) i [pokrenite API poslužitelj](../api/README.md) za pružanje podataka o računima
-- **API veza**: Testirajte vezu s poslužiteljem pomoću ove naredbe:
+- **Prethodna lekcija**: Završite [Login i registracijski obrazac](../2-forms/README.md) - na tome ćemo graditi
+- **Lokalni server**: Instalirajte [Node.js](https://nodejs.org) i [pokrenite API server](../api/README.md) za pružanje podataka o računu
+- **API veza**: Testirajte vezu sa serverom ovom naredbom:
 
 ```bash
 curl http://localhost:5000/api
-# Expected response: "Bank API v1.0.0"
+# Očekivani odgovor: "Bank API v1.0.0"
 ```
 
 Ovaj brzi test osigurava da svi dijelovi ispravno komuniciraju:
-- Provjerava da Node.js ispravno radi na vašem sustavu
-- Potvrđuje da je vaš API poslužitelj aktivan i odgovara
-- Validira da vaša aplikacija može dosegnuti poslužitelj (kao provjera radio veze prije misije)
+- Provjerava radi li Node.js ispravno na vašem sustavu
+- Potvrđuje da je vaš API server aktivan i odgovara
+- Validira da vaša aplikacija može doći do servera (kao provjera radio veze prije misije)
+
+## 🧠 Pregled ekosustava za upravljanje podacima
+
+```mermaid
+mindmap
+  root((Upravljanje podacima))
+    Authentication Flow
+      Login Process
+        Form Validation
+        Credential Verification
+        Session Management
+      User State
+        Global Account Object
+        Navigation Guards
+        Error Handling
+    API Communication
+      Fetch Patterns
+        GET Requests
+        POST Requests
+        Error Responses
+      Data Formats
+        JSON Processing
+        URL Encoding
+        Response Parsing
+    Dynamic UI Updates
+      DOM Manipulation
+        Safe Text Updates
+        Element Creation
+        Template Cloning
+      User Experience
+        Real-time Updates
+        Error Messages
+        Loading States
+    Security Considerations
+      XSS Prevention
+        textContent Usage
+        Input Sanitization
+        Safe HTML Creation
+      CORS Handling
+        Cross-Origin Requests
+        Header Configuration
+        Development Setup
+```
+**Osnovni princip**: Moderne web aplikacije su sustavi za orkestraciju podataka - koordiniraju između korisničkih sučelja, API servera i sigurnosnih modela preglednika kako bi stvorile besprijekorna, responzivna iskustva.
 
 ---
 
 ## Razumijevanje dohvaćanja podataka u modernim web aplikacijama
 
-Način na koji web aplikacije rukovode podacima dramatično se razvio tijekom posljednja dva desetljeća. Razumijevanje ove evolucije pomoći će vam da cijenite zašto su moderni pristupi poput AJAX-a i Fetch API-ja toliko moćni i zašto su postali ključni alati za web programere.
+Način na koji web aplikacije rukuju podacima dramatično se razvio tijekom posljednja dva desetljeća. Razumijevanje te evolucije pomoći će vam shvatiti zašto su moderne tehnike poput AJAX-a i Fetch API-ja toliko moćne i zašto su postale ključni alati web programera.
 
-Istražimo kako su tradicionalne web stranice funkcionirale u usporedbi s dinamičnim, responzivnim aplikacijama koje danas gradimo.
+Istražimo kako su tradicionalne web-stranice funkcionirale u odnosu na dinamične, responzivne aplikacije koje danas gradimo.
 
-### Tradicionalne višestranične aplikacije (MPA)
+### Tradicionalne više-stranične aplikacije (MPA)
 
-U ranim danima weba, svaki klik bio je poput mijenjanja kanala na starom televizoru - ekran bi se zamračio, a zatim polako prikazivao novi sadržaj. To je bila stvarnost ranih web aplikacija, gdje je svaka interakcija značila potpuno ponovno izgrađivanje cijele stranice od nule.
+U ranim danima weba, svaki klik bio je poput promjene kanala na starom televizoru - zaslon bi potamnio, zatim se polako napunio novim sadržajem. Tako je bilo u ranim web aplikacijama, gdje je svaka interakcija značila potpuno ponovno građenje cijele stranice ispočetka.
 
 ```mermaid
 sequenceDiagram
@@ -55,24 +150,23 @@ sequenceDiagram
     participant Browser
     participant Server
     
-    User->>Browser: Clicks link or submits form
-    Browser->>Server: Requests new HTML page
-    Note over Browser: Page goes blank
-    Server->>Browser: Returns complete HTML page
-    Browser->>User: Displays new page (flash/reload)
+    User->>Browser: Klikne na vezu ili pošalje obrazac
+    Browser->>Server: Zahtijeva novu HTML stranicu
+    Note over Browser: Stranica postaje prazna
+    Server->>Browser: Vraća kompletnu HTML stranicu
+    Browser->>User: Prikazuje novu stranicu (kašalj/ponovno učitavanje)
 ```
+![Radni tijek ažuriranja u više-straničnoj aplikaciji](../../../../translated_images/mpa.7f7375a1a2d4aa77.hr.png)
 
-![Radni tijek ažuriranja u višestraničnoj aplikaciji](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.hr.png)
+**Zašto je taj pristup djelovao nezgrapno:**
+- Svaki klik značio je potpuno ponovno građenje stranice od nule
+- Korisnici su bili prekidani usred misli onim dosadnim bljeskovima stranice
+- Vaša internetska veza je prekomjerno preuzimala isti zaglavlje i podnožje više puta
+- Aplikacije su više djelovale kao klikanje kroz arhivski ormar nego korištenje softvera
 
-**Zašto je ovaj pristup bio nezgrapan:**
-- Svaki klik značio je ponovno izgrađivanje cijele stranice od nule
-- Korisnici su bili prekidani usred razmišljanja zbog tih dosadnih bljeskova stranice
-- Vaša internetska veza radila je prekovremeno preuzimajući isti zaglavlje i podnožje iznova i iznova
-- Aplikacije su se osjećale više kao pretraživanje kartoteke nego korištenje softvera
+### Moderne jedno-stranične aplikacije (SPA)
 
-### Moderne jednostranične aplikacije (SPA)
-
-AJAX (Asynchronous JavaScript and XML) potpuno je promijenio ovu paradigmu. Kao modularni dizajn Međunarodne svemirske postaje, gdje astronauti mogu zamijeniti pojedine komponente bez ponovnog izgrađivanja cijele strukture, AJAX nam omogućuje ažuriranje specifičnih dijelova web stranice bez ponovnog učitavanja svega. Iako ime spominje XML, danas uglavnom koristimo JSON, ali osnovni princip ostaje isti: ažuriraj samo ono što treba promijeniti.
+AJAX (Asinhroni JavaScript i XML) potpuno je promijenio ovaj paradigmu. Kao modularni dizajn Međunarodne svemirske postaje, gdje astronauti mogu zamijeniti pojedine dijelove bez hitnog rekonstrukcije sustava, AJAX omogućuje da ažuriramo specifične dijelove web stranice bez ponovnog učitavanja svega. Iako naziv spominje XML, danas najviše koristimo JSON, ali osnovni princip ostaje isti: mijenjamo samo ono što treba.
 
 ```mermaid
 sequenceDiagram
@@ -81,49 +175,48 @@ sequenceDiagram
     participant JavaScript
     participant Server
     
-    User->>Browser: Interacts with page
-    Browser->>JavaScript: Triggers event handler
-    JavaScript->>Server: Fetches only needed data
-    Server->>JavaScript: Returns JSON data
-    JavaScript->>Browser: Updates specific page elements
-    Browser->>User: Shows updated content (no reload)
+    User->>Browser: Interagira sa stranicom
+    Browser->>JavaScript: Okida rukovatelj događaja
+    JavaScript->>Server: Dohvaća samo potrebne podatke
+    Server->>JavaScript: Vraća JSON podatke
+    JavaScript->>Browser: Ažurira određene elemente stranice
+    Browser->>User: Prikazuje ažurirani sadržaj (bez ponovnog učitavanja)
 ```
+![Radni tijek ažuriranja u jedno-straničnoj aplikaciji](../../../../translated_images/spa.268ec73b41f992c2.hr.png)
 
-![Radni tijek ažuriranja u jednostraničnoj aplikaciji](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.hr.png)
-
-**Zašto se SPA aplikacije osjećaju puno bolje:**
-- Ažuriraju se samo dijelovi koji se stvarno mijenjaju (pametno, zar ne?)
-- Nema više neugodnih prekida - vaši korisnici ostaju u svom tijeku
+**Zašto SPA aplikacije djeluju puno bolje:**
+- Ažuriraju samo dijelove koji su stvarno promijenjeni (pametno, zar ne?)
+- Nema više bolnih prekida - korisnici ostaju u svom tijeku rada
 - Manje podataka putuje mrežom, što znači brže učitavanje
-- Sve se osjeća brzo i responzivno, poput aplikacija na vašem telefonu
+- Sve djeluje brzo i responzivno, kao aplikacije na vašem telefonu
 
-### Evolucija prema modernom Fetch API-ju
+### Evolucija do modernog Fetch API-ja
 
-Moderni preglednici pružaju [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), koji zamjenjuje stariji [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Kao razlika između upravljanja telegrafom i korištenja e-pošte, Fetch API koristi obećanja za čišći asinkroni kod i prirodno rukuje JSON-om.
+Moderni preglednici pružaju [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), koji zamjenjuje stariji [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). Kao razlika između rada s telegrafom i korištenja elektroničke pošte, Fetch API koristi promiseove za čišći asinhroni kod i prirodno rukuje JSON-om.
 
 | Značajka | XMLHttpRequest | Fetch API |
-|----------|----------------|-----------|
-| **Sintaksa** | Složena, temeljena na povratnim pozivima | Čista, temeljena na obećanjima |
-| **Rukovanje JSON-om** | Potrebno ručno parsiranje | Ugrađena metoda `.json()` |
-| **Rukovanje greškama** | Ograničene informacije o greškama | Detaljne informacije o greškama |
-| **Podrška za moderne tehnologije** | Kompatibilnost sa starijim verzijama | ES6+ obećanja i async/await |
+|---------|----------------|----------|
+| **Sintaksa** | Složene povratne funkcije | Čist kod baziran na promisevima |
+| **Rukovanje JSON-om** | Ručna obrada potrebna | Ugrađena `.json()` metoda |
+| **Rukovanje greškama** | Ograničene informacije | Sveobuhvatni detalji o pogreškama |
+| **Moderna podrška** | Kompatibilnost sa starijim verzijama | ES6+ promise i async/await |
 
 > 💡 **Kompatibilnost preglednika**: Dobre vijesti - Fetch API radi u svim modernim preglednicima! Ako vas zanimaju specifične verzije, [caniuse.com](https://caniuse.com/fetch) ima kompletnu priču o kompatibilnosti.
 > 
 **Zaključak:**
-- Odlično radi u Chromeu, Firefoxu, Safariju i Edgeu (praktički svugdje gdje su vaši korisnici)
-- Samo Internet Explorer treba dodatnu pomoć (i iskreno, vrijeme je da se oprostimo od IE-a)
-- Savršeno vas priprema za elegantne async/await obrasce koje ćemo kasnije koristiti
+- Odlično radi u Chromeu, Firefoxu, Safariu i Edgeu (prakticno svugdje gdje su vaši korisnici)
+- Samo Internet Explorer treba dodatnu pomoć (i iskreno, vrijeme je da ga pustimo)
+- Savršeno vas priprema za elegantne async/await obrasce koje ćemo koristiti kasnije
 
-### Implementacija prijave korisnika i dohvaćanja podataka
+### Implementacija korisničkog prijavljivanja i dohvaćanja podataka
 
-Sada ćemo implementirati sustav prijave koji vašu aplikaciju za bankarstvo transformira iz statičnog prikaza u funkcionalnu aplikaciju. Kao što se koriste protokoli autentifikacije u sigurnim vojnim objektima, provjerit ćemo korisničke vjerodajnice i zatim omogućiti pristup njihovim specifičnim podacima.
+Sad ćemo implementirati sustav za prijavu koji vašu bankarsku aplikaciju pretvara iz statičnog prikaza u funkcionalnu aplikaciju. Kao autentični protokoli u sigurnim vojnim objektima, provjerit ćemo korisničke vjerodajnice i zatim pružiti pristup njihovim specifičnim podacima.
 
-Gradit ćemo ovo postupno, počevši od osnovne autentifikacije, a zatim dodajući mogućnosti dohvaćanja podataka.
+Gradit ćemo to inkrementalno, počevši s osnovnim ovjeravanjem, a zatim dodajući mogućnosti dohvaćanja podataka.
 
-#### Korak 1: Kreiranje temelja funkcije za prijavu
+#### Korak 1: Izradite osnovu funkcije login
 
-Otvorite svoju datoteku `app.js` i dodajte novu funkciju `login`. Ova funkcija će rukovati procesom autentifikacije korisnika:
+Otvorite svoj `app.js` fajl i dodajte novu funkciju `login`. Ova će upravljati procesom autentifikacije korisnika:
 
 ```javascript
 async function login() {
@@ -132,17 +225,17 @@ async function login() {
 }
 ```
 
-**Razložimo ovo:**
-- Ključna riječ `async`? Ona govori JavaScriptu "hej, ova funkcija možda treba pričekati na neke stvari"
-- Dohvaćamo našu formu sa stranice (ništa posebno, samo je pronalazimo po njenom ID-u)
-- Zatim izvlačimo ono što je korisnik unio kao svoje korisničko ime
-- Evo zgodnog trika: možete pristupiti bilo kojem unosu forme pomoću atributa `name` - nema potrebe za dodatnim pozivima getElementById!
+**Objasnimo ovo:**
+- Ta `async` riječ? Govori JavaScriptu "hej, ova funkcija možda će morati pričekati nešto"
+- Hvatamo naš obrazac s stranice (nema ništa posebno, samo ga pronalazimo po njegovom ID-u)
+- Izvlačimo što god je korisnik upisao kao korisničko ime
+- Evo zgodnog trika: možete pristupiti bilo kojem elementu forme po njegovom `name` atributu - nema potrebe za dodatnim pozivima getElementById!
 
-> 💡 **Obrazac pristupa formi**: Svakom kontroleru forme može se pristupiti putem njegovog imena (postavljenog u HTML-u pomoću atributa `name`) kao svojstva elementa forme. Ovo pruža čist i čitljiv način za dohvaćanje podataka iz forme.
+> 💡 **Obrazac pristupa**: Svakom kontrolnom elementu obrasca može se pristupiti po imenu (postavljeno u HTML-u koristeći atribut `name`) kao svojstvu forme. Ovo pruža čist i čitljiv način dohvaćanja podataka iz forme.
 
-#### Korak 2: Kreiranje funkcije za dohvaćanje podataka o računu
+#### Korak 2: Izradite funkciju za dohvaćanje podataka o računu
 
-Zatim ćemo kreirati namjensku funkciju za dohvaćanje podataka o računu s poslužitelja. Ovo slijedi isti obrazac kao vaša funkcija za registraciju, ali se fokusira na dohvaćanje podataka:
+Zatim ćemo napraviti posebnu funkciju za dohvaćanje podataka o računu sa servera. Ovo slijedi isti obrazac kao i vaša funkcija registracije, ali fokusira se na dohvaćanje podataka:
 
 ```javascript
 async function getAccount(user) {
@@ -155,37 +248,54 @@ async function getAccount(user) {
 }
 ```
 
-**Što ovaj kod postiže:**
-- **Koristi** moderni `fetch` API za asinkrono slanje zahtjeva za podatke
-- **Konstruira** URL GET zahtjeva s parametrom korisničkog imena
+**Evo što ovaj kod radi:**
+- **Koristi** moderni `fetch` API za asinhroni zahtjev podataka
+- **Gradi** URL za GET zahtjev s parametrima korisničkog imena
 - **Primjenjuje** `encodeURIComponent()` za sigurno rukovanje posebnim znakovima u URL-ovima
-- **Pretvara** odgovor u JSON format za jednostavnu manipulaciju podacima
-- **Rukuje** greškama na elegantan način vraćanjem objekta greške umjesto rušenja
+- **Pretvara** odgovor u JSON za jednostavnu obradu podataka
+- **Rukuje** greškama na elegantan način vraćajući objekt s greškom umjesto pada
 
-> ⚠️ **Napomena o sigurnosti**: Funkcija `encodeURIComponent()` rukuje posebnim znakovima u URL-ovima. Kao kodni sustavi koji se koriste u pomorskim komunikacijama, osigurava da vaša poruka stigne točno onako kako je namijenjena, sprječavajući da se znakovi poput "#" ili "&" pogrešno interpretiraju.
+> ⚠️ **Sigurnosna napomena**: Funkcija `encodeURIComponent()` rukuje posebnim znakovima u URL-ovima. Kao kodovi u pomorskoj komunikaciji, osigurava da vaša poruka stigne točno onako kako treba, sprečavajući da znakovi poput "#" ili "&" budu pogrešno protumačeni.
 > 
 **Zašto je ovo važno:**
-- Sprječava da posebni znakovi pokvare URL-ove
-- Štiti od napada manipulacijom URL-om
-- Osigurava da vaš poslužitelj primi namijenjene podatke
-- Slijedi sigurne prakse kodiranja
+- Sprečava da posebni znakovi slome URL
+- Štiti od napada manipulacije URL-om
+- Osigurava da server dobije točne podatke
+- Prati sigurne prakse kodiranja
 
 #### Razumijevanje HTTP GET zahtjeva
 
-Evo nečega što bi vas moglo iznenaditi: kada koristite `fetch` bez dodatnih opcija, automatski stvara [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) zahtjev. Ovo je savršeno za ono što radimo - tražimo od poslužitelja "hej, mogu li vidjeti podatke o ovom korisniku?"
+Evo nečega što bi vas moglo iznenaditi: kada koristite `fetch` bez dodatnih opcija, on automatski stvara [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) zahtjev. To je savršeno za ono što radimo - pitamo server "hej, mogu li vidjeti podatke ovog korisničkog računa?"
 
-Razmislite o GET zahtjevima kao o pristojnom traženju posudbe knjige iz knjižnice - tražite da vidite nešto što već postoji. POST zahtjevi (koje smo koristili za registraciju) više su poput predaje nove knjige da se doda u kolekciju.
+Razmislite o GET zahtjevima kao ljubaznom traženju posudbe knjige u knjižnici - tražite nešto što već postoji. POST zahtjevi (koje smo koristili za registraciju) su poput slanja nove knjige da se doda u zbirku.
 
-| GET zahtjev | POST zahtjev |
-|-------------|-------------|
-| **Svrha** | Dohvaćanje postojećih podataka | Slanje novih podataka na poslužitelj |
+| GET Zahtjev | POST Zahtjev |
+|-------------|--------------|
+| **Svrha** | Dohvaćanje postojećih podataka | Slanje novih podataka serveru |
 | **Parametri** | U URL putanji/upitu | U tijelu zahtjeva |
-| **Keširanje** | Može se keširati od strane preglednika | Obično se ne kešira |
-| **Sigurnost** | Vidljivo u URL-u/logovima | Skriveno u tijelu zahtjeva |
+| **Keširanje** | Može biti keširano od strane preglednika | Obično se ne kešira |
+| **Sigurnost** | Vidljivo u URL-u/zapisima | Sakriveno u tijelu zahtjeva |
 
-#### Korak 3: Povezivanje svih dijelova
+```mermaid
+sequenceDiagram
+    participant B as Preglednik
+    participant S as Poslužitelj
+    
+    Note over B,S: GET Zahtjev (Preuzimanje Podataka)
+    B->>S: GET /api/accounts/test
+    S-->>B: 200 OK + Podaci Računa
+    
+    Note over B,S: POST Zahtjev (Slanje Podataka)
+    B->>S: POST /api/accounts + Novi Podaci Računa
+    S-->>B: 201 Stvoreno + Potvrda
+    
+    Note over B,S: Obrada Pogrešaka
+    B->>S: GET /api/accounts/nepostojeći
+    S-->>B: 404 Nije Pronađeno + Poruka o Pogrešci
+```
+#### Korak 3: Sve povezujemo zajedno
 
-Sada dolazi zadovoljavajući dio - povežimo vašu funkciju za dohvaćanje podataka o računu s procesom prijave. Ovo je trenutak kada sve klikne na svoje mjesto:
+Sad onaj zadovoljavajući dio - povežimo vašu funkciju dohvaćanja računa s procesom prijave. Ovo je trenutak gdje sve dolazi na svoje mjesto:
 
 ```javascript
 async function login() {
@@ -203,31 +313,31 @@ async function login() {
 ```
 
 Ova funkcija slijedi jasan slijed:
-- Izvlači korisničko ime iz unosa forme
-- Zahtijeva podatke o korisničkom računu s poslužitelja
-- Rukuje svim greškama koje se pojave tijekom procesa
-- Sprema podatke o računu i navigira na nadzornu ploču nakon uspjeha
+- Izvlači korisničko ime iz obrasca
+- Traži podatke korisničkog računa sa servera
+- Rukuje bilo kakvim greškama tijekom procesa
+- Spremi podatke računa i preusmjeri na nadzornu ploču ako je uspješno
 
-> 🎯 **Async/Await obrazac**: Budući da je `getAccount` asinkrona funkcija, koristimo ključnu riječ `await` kako bismo pauzirali izvršavanje dok poslužitelj ne odgovori. Ovo sprječava da kod nastavi s neodređenim podacima.
+> 🎯 **Async/Await obrazac**: Budući da je `getAccount` asinhrona funkcija, koristimo ključnu riječ `await` da pauziramo izvršenje dok server ne odgovori. Time sprječavamo da kod nastavi raditi s nepoznatim podacima.
 
-#### Korak 4: Kreiranje prostora za vaše podatke
+#### Korak 4: Stvaranje mjesta za vaše podatke
 
-Vaša aplikacija treba mjesto gdje će pamtiti informacije o računu nakon što se učitaju. Razmislite o ovome kao o kratkoročnoj memoriji vaše aplikacije - mjesto za čuvanje podataka trenutnog korisnika. Dodajte ovu liniju na vrh vaše datoteke `app.js`:
+Vašoj aplikaciji treba mjesto za pamćenje podataka o računu nakon što su učitani. Pomislite na to kao kratkoročnu memoriju vaše aplikacije - mjesto za pohranu podataka trenutnog korisnika pod rukom. Dodajte ovaj redak na vrh datoteke `app.js`:
 
 ```javascript
-// This holds the current user's account data
+// Ovo sadrži podatke trenutnog korisničkog računa
 let account = null;
 ```
 
-**Zašto nam je ovo potrebno:**
-- Čuva podatke o računu dostupnima s bilo kojeg mjesta u vašoj aplikaciji
-- Početak s `null` znači "još nitko nije prijavljen"
-- Ažurira se kada se netko uspješno prijavi ili registrira
-- Djeluje kao jedinstveni izvor istine - nema zabune oko toga tko je prijavljen
+**Zašto nam treba ovo:**
+- Čuva dostupne podatke o računu s bilo kojeg mjesta u aplikaciji
+- Početna vrijednost `null` znači "nitko još nije prijavljen"
+- Ažurira se kad se netko uspješno prijavi ili registrira
+- Djeluje kao jedini izvor istine - nema zbunjenosti tko je prijavljen
 
-#### Korak 5: Povezivanje vaše forme
+#### Korak 5: Povežite vaš obrazac
 
-Sada povežimo vašu novu funkciju za prijavu s HTML formom. Ažurirajte oznaku forme ovako:
+Sada povežimo vašu novu login funkciju s HTML formom. Ažurirajte svoj tag forme ovako:
 
 ```html
 <form id="loginForm" action="javascript:login()">
@@ -235,86 +345,99 @@ Sada povežimo vašu novu funkciju za prijavu s HTML formom. Ažurirajte oznaku 
 </form>
 ```
 
-**Što ova mala promjena čini:**
-- Zaustavlja formu da radi svoje zadano ponašanje "ponovnog učitavanja cijele stranice"
+**Što ova mala promjena radi:**
+- Sprječava da forma radi svoju zadanu akciju "ponovno učitavanje cijele stranice"
 - Poziva vašu prilagođenu JavaScript funkciju umjesto toga
-- Održava sve glatkim i u stilu jednostranične aplikacije
-- Daje vam potpunu kontrolu nad onim što se događa kada korisnici kliknu "Prijava"
+- Održava sve glatkim i slično SPA aplikacijama
+- Daje vam potpunu kontrolu nad onim što se događa kad korisnici kliknu "Login"
 
-#### Korak 6: Poboljšanje funkcije za registraciju
+#### Korak 6: Poboljšajte funkciju registracije
 
-Radi dosljednosti, ažurirajte svoju funkciju `register` kako bi također spremala podatke o računu i navigirala na nadzornu ploču:
+Radi dosljednosti, ažurirajte vašu funkciju `register` da također sprema podatke o računu i preusmjerava na nadzornu ploču:
 
 ```javascript
-// Add these lines at the end of your register function
+// Dodajte ove retke na kraj vaše funkcije register
 account = result;
 navigate('/dashboard');
 ```
 
 **Ovo poboljšanje pruža:**
-- **Neometan** prijelaz s registracije na nadzornu ploču
-- **Dosljedno** korisničko iskustvo između prijave i registracije
-- **Trenutni** pristup podacima o računu nakon uspješne registracije
+- **Neprekidan** prijelaz od registracije do nadzorne ploče
+- **Dosljedan** korisnički dojam između prijave i registracije
+- **Trenutni** pristup podacima računa nakon uspješne registracije
 
 #### Testiranje vaše implementacije
 
 ```mermaid
 flowchart TD
-    A[User enters credentials] --> B[Login function called]
-    B --> C[Fetch account data from server]
-    C --> D{Data received successfully?}
-    D -->|Yes| E[Store account data globally]
-    D -->|No| F[Display error message]
-    E --> G[Navigate to dashboard]
-    F --> H[User stays on login page]
+    A[Korisnik unosi vjerodajnice] --> B[Pozvana funkcija prijave]
+    B --> C[Dohvati podatke računa sa servera]
+    C --> D{Podaci su uspješno primljeni?}
+    D -->|Da| E[Spremi podatke računa globalno]
+    D -->|Ne| F[Prikaži poruku o pogrešci]
+    E --> G[Navigiraj na nadzornu ploču]
+    F --> H[Korisnik ostaje na stranici prijave]
 ```
-
 **Vrijeme je za testiranje:**
-1. Kreirajte novi račun kako biste provjerili radi li sve ispravno
+1. Kreirajte novi račun da se uvjerite da sve radi
 2. Pokušajte se prijaviti s istim vjerodajnicama
-3. Pogledajte konzolu vašeg preglednika (F12) ako nešto ne funkcionira
-4. Provjerite jeste li stigli na nadzornu ploču nakon uspješne prijave
+3. Pogledajte konzolu preglednika (F12) ako nešto izgleda čudno
+4. Provjerite da li ste preusmjereni na nadzornu ploču nakon uspješne prijave
 
-Ako nešto ne radi, ne paničarite! Većina problema su jednostavne greške poput tipfelera ili zaborava pokretanja API poslužitelja.
+Ako nešto ne radi, ne paničarite! Većina problema su male greške poput tipfelera ili zaborava pokretanja API servera.
 
-#### Kratka riječ o magiji među-domenne komunikacije
+#### Kratka riječ o magiji Cross-Origin
 
-Možda se pitate: "Kako moja web aplikacija komunicira s ovim API poslužiteljem kad rade na različitim portovima?" Odlično pitanje! Ovo se tiče nečega na što svaki web programer kad-tad naiđe.
+Možda se pitate: "Kako moja web aplikacija komunicira s ovim API serverom ako rade na različitim portovima?" Odlično pitanje! Ovo je nešto što svaki web developer prije ili kasnije susretne.
 
-> 🔒 **Sigurnost među-domenne komunikacije**: Preglednici provode "politiku istog podrijetla" kako bi spriječili neovlaštenu komunikaciju između različitih domena. Kao sustav kontrolnih točaka u Pentagonu, provjeravaju je li komunikacija ovlaštena prije nego što dopuste prijenos podataka.
+> 🔒 **Cross-Origin sigurnost**: Preglednici primjenjuju "pravilo iste domene" da spriječe neovlaštenu komunikaciju između različitih domena. Kao kontrolni punkt u Pentagonskoj zgradi, oni provjeravaju je li komunikacija odobrena prije omogućavanja prijenosa podataka.
 > 
-**U našem postavljanju:**
-- Vaša web aplikacija radi na `localhost:3000` (razvojni poslužitelj)
-- Vaš API poslužitelj radi na `localhost:5000` (poslužitelj pozadinskog sustava)
-- API poslužitelj uključuje [CORS zaglavlja](https://developer.mozilla.org/docs/Web/HTTP/CORS) koja eksplicitno autoriziraju komunikaciju s vašom web aplikacijom
+**U našem slučaju:**
+- Vaša web aplikacija radi na `localhost:3000` (razvojni server)
+- Vaš API server radi na `localhost:5000` (backend server)
+- API server uključuje [CORS zaglavlja](https://developer.mozilla.org/docs/Web/HTTP/CORS) koja izričito dopuštaju komunikaciju s vaše web aplikacije
 
-Ova konfiguracija odražava stvarni razvoj gdje frontend i backend aplikacije obično rade na odvojenim poslužiteljima.
+Ovo je česta konfiguracija u razvoju gdje frontend i backend obično rade na različitim serverima.
 
-> 📚 **Saznajte više**: Dublje istražite API-je i dohvaćanje podataka s ovim sveobuhvatnim [Microsoft Learn modulom o API-jima](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
+> 📚 **Saznajte više**: Dublje istražite API-je i dohvaćanje podataka u ovom opsežnom [Microsoft Learn modulu o API-jima](https://docs.microsoft.com/learn/modules/use-apis-discover-museum-art/?WT.mc_id=academic-77807-sagibbon).
 
 ## Oživljavanje vaših podataka u HTML-u
 
-Sada ćemo učiniti dohvaćene podatke vidljivima korisnicima putem manipulacije DOM-om. Kao proces razvijanja fotografija u tamnoj komori, uzimamo nevidljive podatke i prikazujemo ih u nešto što korisnici mogu vidjeti i s čime mogu interagirati.
+Sad ćemo učiniti dohvaćene podatke vidljivima korisnicima kroz manipulaciju DOM-om. Kao proces razvijanja fotografija u mračnoj komori, uzimamo nevidljive podatke i prikazujemo ih u nečemu što korisnici mogu vidjeti i s čim mogu komunicirati.
+Manipulacija DOM-om je tehnika koja pretvara statične web stranice u dinamičke aplikacije koje ažuriraju svoj sadržaj na temelju korisničkih interakcija i odgovora poslužitelja.
 
-Manipulacija DOM-om je tehnika koja transformira statične web stranice u dinamičke aplikacije koje ažuriraju svoj sadržaj na temelju interakcija korisnika i odgovora poslužitelja.
+### Odabir Pravog Alata za Posao
 
-### Odabir pravog alata za posao
+Kad je riječ o ažuriranju vašeg HTML-a s JavaScriptom, imate nekoliko opcija. Zamislite ih kao različite alate u kutiji s alatima - svaki savršen za određene zadatke:
 
-Kada je riječ o ažuriranju vašeg HTML-a pomoću JavaScripta, imate nekoliko opcija. Razmislite o njima kao o različitim alatima u kutiji s alatima - svaki je savršen za određene zadatke:
+| Metoda | Za što je izvrsna | Kada je koristiti | Razina sigurnosti |
+|--------|-------------------|------------------|-------------------|
+| `textContent` | Sigurno prikazivanje korisničkih podataka | Kad god prikazujete tekst | ✅ Čvrsto kao stijena |
+| `createElement()` + `append()` | Izrada složenih rasporeda | Kreiranje novih sekcija/lista | ✅ Neprobojno |
+| `innerHTML` | Postavljanje HTML sadržaja | ⚠️ Pokušajte ovo izbjegavati | ❌ Rizično poslovanje |
 
-| Metoda | Za što je odlična | Kada je koristiti | Razina sigurnosti |
-|--------|-------------------|-------------------|-------------------|
-| `textContent` | Sigurno prikazivanje korisničkih podataka | Kad god prikazujete tekst | ✅ Potpuno sigurno |
-| `createElement()` + `append()` | Izgradnja složenih izgleda | Kreiranje novih sekcija/lista | ✅ Pouzdano |
-| `innerHTML` | Postavljanje HTML sadržaja | ⚠️ Pokušajte izbjegavati ovu metodu | ❌ Rizično |
+#### Siguran Način za Prikaz Teksta: textContent
 
-#### Siguran način prikazivanja teksta: textContent
+Svojstvo [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) je vaš najbolji prijatelj kad prikazujete korisničke podatke. Kao da imate portira na svojoj web stranici - ništa štetno ne prolazi:
 
-Svojstvo [`textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent) vaš je najbolji prijatelj kada prikazujete korisničke podatke. To je poput zaštitara za vašu web stranicu - ništa štetno ne
+```javascript
+// Siguran, pouzdan način za ažuriranje teksta
+const balanceElement = document.getElementById('balance');
+balanceElement.textContent = account.balance;
+```
+
+**Prednosti textContent:**
+- Sve tretira kao običan tekst (sprječava izvršavanje skripti)
+- Automatski briše postojeći sadržaj
+- Učinkovit za jednostavna ažuriranja teksta
+- Pruža ugrađenu sigurnost protiv zlonamjernog sadržaja
+
+#### Izrada Dinamičkih HTML Elemenata
+
 Za složeniji sadržaj, kombinirajte [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement) s metodom [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append):
 
 ```javascript
-// Safe way to create new elements
+// Siguran način za stvaranje novih elemenata
 const transactionItem = document.createElement('div');
 transactionItem.className = 'transaction-item';
 transactionItem.textContent = `${transaction.date}: ${transaction.description}`;
@@ -323,27 +446,27 @@ container.append(transactionItem);
 
 **Razumijevanje ovog pristupa:**
 - **Stvara** nove DOM elemente programatski
-- **Omogućuje** potpunu kontrolu nad atributima i sadržajem elemenata
-- **Omogućuje** složene, ugniježđene strukture elemenata
-- **Održava** sigurnost odvajanjem strukture od sadržaja
+- **Održava** punu kontrolu nad atributima i sadržajem elemenata
+- **Omogućuje** složene, ugniježdene strukture elemenata
+- **Čuva** sigurnost odvajanjem strukture od sadržaja
 
-> ⚠️ **Sigurnosno upozorenje**: Iako se [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) često pojavljuje u tutorijalima, može izvršavati ugrađene skripte. Kao što sigurnosni protokoli u CERN-u sprječavaju neovlašteno izvršavanje koda, korištenje `textContent` i `createElement` pruža sigurnije alternative.
+> ⚠️ **Sigurnosna Napomena**: Iako se [`innerHTML`](https://developer.mozilla.org/docs/Web/API/Element/innerHTML) često pojavljuje u tutorijalima, može izvršavati ugrađene skripte. Kao što sigurnosni protokoli u CERN-u sprječavaju neovlašteno izvršavanje koda, korištenje `textContent` i `createElement` nudi sigurnije alternative.
 > 
-**Rizici innerHTML-a:**
-- Izvršava bilo koje `<script>` oznake u korisničkim podacima
-- Podložno napadima ubrizgavanja koda
-- Stvara potencijalne sigurnosne ranjivosti
-- Sigurnije alternative koje koristimo pružaju ekvivalentnu funkcionalnost
+**Rizici innerHTML:**
+- Izvršava sve `<script>` oznake u korisničkim podacima
+- Podložan napadima injektiranja koda
+- Stvara potencijalne sigurnosne propuste
+- Sigurnije alternative koje koristimo daju ekvivalentnu funkcionalnost
 
-### Učiniti pogreške razumljivima korisnicima
+### Pravljenje Prijateljskih Poruka o Pogreškama
 
-Trenutno se pogreške pri prijavi pojavljuju samo u konzoli preglednika, što korisnicima nije vidljivo. Kao razlika između unutarnje dijagnostike pilota i sustava informiranja putnika, trebamo komunicirati važne informacije kroz odgovarajući kanal.
+Trenutno se pogreške kod prijave prikazuju samo u preglednikovoj konzoli, što je korisnicima nevidljivo. Kao razlika između pilotske interne dijagnostike i sustava za informacije putnicima, moramo komunicirati važne informacije kroz odgovarajući kanal.
 
-Implementacija vidljivih poruka o pogreškama pruža korisnicima trenutne povratne informacije o tome što je pošlo po zlu i kako dalje postupiti.
+Implementacija vidljivih poruka o pogreškama omogućuje korisnicima odmah povratnu informaciju o tome što je pošlo po zlu i kako nastaviti.
 
-#### Korak 1: Dodajte mjesto za poruke o pogreškama
+#### Korak 1: Dodajte Mjesto za Poruke o Pogreškama
 
-Prvo, dodijelite mjesto za poruke o pogreškama u vašem HTML-u. Dodajte ovo neposredno prije gumba za prijavu kako bi korisnici to prirodno primijetili:
+Prvo, dajmo porukama o pogreškama mjesto u vašem HTML-u. Dodajte ovo točno prije gumba za prijavu kako bi korisnici prirodno to vidjeli:
 
 ```html
 <!-- This is where error messages will appear -->
@@ -352,14 +475,14 @@ Prvo, dodijelite mjesto za poruke o pogreškama u vašem HTML-u. Dodajte ovo nep
 ```
 
 **Što se ovdje događa:**
-- Stvaramo prazan spremnik koji ostaje nevidljiv dok nije potreban
-- Postavljen je tamo gdje korisnici prirodno gledaju nakon klika na "Prijava"
-- Taj `role="alert"` je koristan dodatak za čitače ekrana - obavještava pomoćnu tehnologiju "hej, ovo je važno!"
-- Jedinstveni `id` omogućuje našim JavaScript funkcijama jednostavno ciljanje
+- Kreiramo prazan kontejner koji ostaje nevidljiv dok nije potreban
+- Pozicioniran je tamo gdje korisnici prirodno pogledaju nakon klika na "Prijava"
+- Taj `role="alert"` je odlična stvar za čitače ekrana - govori asistivnoj tehnologiji "hej, ovo je važno!"
+- Jedinstveni `id` daje JavaScriptu jednostavan cilj
 
-#### Korak 2: Napravite korisnu pomoćnu funkciju
+#### Korak 2: Napravite Pomoćnu Funkciju
 
-Napravimo malu pomoćnu funkciju koja može ažurirati tekst bilo kojeg elementa. Ovo je jedna od onih funkcija "napiši jednom, koristi svugdje" koja će vam uštedjeti vrijeme:
+Neka napravimo malu pomoćnu funkciju koja može ažurirati bilo koji tekst u elementu. Ovo je jedna od onih "napiši jednom, koristi svugdje" funkcija koje će vam uštedjeti vrijeme:
 
 ```javascript
 function updateElement(id, text) {
@@ -369,35 +492,35 @@ function updateElement(id, text) {
 ```
 
 **Prednosti funkcije:**
-- Jednostavno sučelje koje zahtijeva samo ID elementa i tekstualni sadržaj
+- Jednostavno sučelje koje zahtjeva samo ID elementa i tekst
 - Sigurno pronalazi i ažurira DOM elemente
-- Ponovno upotrebljiv obrazac koji smanjuje dupliciranje koda
-- Održava dosljedno ponašanje ažuriranja u cijeloj aplikaciji
+- Reupotrebljiv obrazac koji smanjuje dupliciranje koda
+- Održava dosljedno ponašanje ažuriranja kroz aplikaciju
 
-#### Korak 3: Prikazivanje pogrešaka tamo gdje ih korisnici mogu vidjeti
+#### Korak 3: Prikažite Pogreške Gdje ih Korisnici Mogu Vidjeti
 
-Sada zamijenimo tu skrivenu poruku u konzoli nečim što korisnici zapravo mogu vidjeti. Ažurirajte svoju funkciju za prijavu:
+Sada zamijenimo skrivenu poruku u konzoli s nečim što korisnici zaista mogu vidjeti. Ažurirajte vašu funkciju prijave:
 
 ```javascript
-// Instead of just logging to console, show the user what's wrong
+// Umjesto samo zapisivanja u konzolu, pokažite korisniku što nije u redu
 if (data.error) {
   return updateElement('loginError', data.error);
 }
 ```
 
-**Ova mala promjena čini veliku razliku:**
+**Ova mala promjena donosi veliku razliku:**
 - Poruke o pogreškama pojavljuju se točno tamo gdje korisnici gledaju
-- Nema više tajanstvenih tihih pogrešaka
-- Korisnici dobivaju trenutne, korisne povratne informacije
-- Vaša aplikacija počinje izgledati profesionalno i promišljeno
+- Nema više misterioznih tihih neuspjeha
+- Korisnici dobivaju trenutnu, korisnu povratnu informaciju
+- Vaša aplikacija počinje djelovati profesionalno i promišljeno
 
-Sada, kada testirate s nevažećim računom, vidjet ćete korisnu poruku o pogrešci izravno na stranici!
+Sada, kad testirate s nevažećim računom, vidjet ćete korisnu poruku o pogrešci direktno na stranici!
 
-![Snimka zaslona koja prikazuje poruku o pogrešci tijekom prijave](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.hr.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.hr.png)
 
-#### Korak 4: Biti inkluzivan s pristupačnošću
+#### Korak 4: Biti Uključiv s Pristupačnošću
 
-Evo nečeg zanimljivog o onom `role="alert"` koji smo ranije dodali - to nije samo ukras! Ovaj mali atribut stvara ono što se zove [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) koji odmah najavljuje promjene čitačima ekrana:
+Evo nešto kul o tom `role="alert"` koji smo ranije dodali - nije samo dekoracija! Ovaj mali atribut stvara ono što se zove [Živa Regija (Live Region)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARI_Live_Regions) koja odmah objavljuje promjene čitačima ekrana:
 
 ```html
 <div id="loginError" role="alert"></div>
@@ -407,41 +530,54 @@ Evo nečeg zanimljivog o onom `role="alert"` koji smo ranije dodali - to nije sa
 - Korisnici čitača ekrana čuju poruku o pogrešci čim se pojavi
 - Svi dobivaju iste važne informacije, bez obzira na način navigacije
 - Jednostavan način da vaša aplikacija radi za više ljudi
-- Pokazuje da vam je stalo do stvaranja inkluzivnih iskustava
+- Pokazuje da vam je stalo do stvaranja uključivog iskustva
 
-Male stvari poput ove razlikuju dobre programere od izvrsnih!
+Male sitnice poput ove razdvajaju dobre programere od izvrsnih!
 
-#### Korak 5: Primijenite isti obrazac na registraciju
+### 🎯 Pedagoška Provjera: Obrasci Autentikacije
 
-Radi dosljednosti, implementirajte identično rukovanje pogreškama u svom obrascu za registraciju:
+**Stani i Promisli**: Upravo ste implementirali kompletan tijek autentikacije. Ovo je osnovni obrazac u web razvoju.
 
-1. **Dodajte** element za prikaz pogrešaka u svoj HTML za registraciju:
+**Brza Samoprocjena**:
+- Možete li objasniti zašto koristimo async/await za pozive API-ja?
+- Što bi se dogodilo da zaboravimo funkciju `encodeURIComponent()`?
+- Kako naše rukovanje pogreškama poboljšava korisničko iskustvo?
+
+**Poveznica s Praktikom**: Obrasci koje ste ovdje naučili (asinkrono dohvaćanje podataka, rukovanje pogreškama, korisnička povratna informacija) koriste se u svakoj većoj web aplikaciji od društvenih mreža do e-trgovina. Gradite vještine spremne za proizvodnju!
+
+**Izazovno Pitanje**: Kako biste mogli modificirati ovaj sustav autentikacije da podrži više korisničkih uloga (kupac, administrator, blagajnik)? Razmislite o strukturi podataka i potrebnim promjenama u korisničkom sučelju.
+
+#### Korak 5: Primijenite Isti Obrazac na Registraciju
+
+Za konzistentnost, implementirajte identično rukovanje pogreškama u formi za registraciju:
+
+1. **Dodajte** element za prikaz pogrešaka u vaš registracijski HTML:
 ```html
 <div id="registerError" role="alert"></div>
 ```
 
-2. **Ažurirajte** svoju funkciju za registraciju kako biste koristili isti obrazac za prikaz pogrešaka:
+2. **Ažurirajte** vašu funkciju registracije da koristi isti obrazac prikaza pogrešaka:
 ```javascript
 if (data.error) {
   return updateElement('registerError', data.error);
 }
 ```
 
-**Prednosti dosljednog rukovanja pogreškama:**
-- **Pruža** ujednačeno korisničko iskustvo na svim obrascima
+**Prednosti konzistentnog rukovanja pogreškama:**
+- **Osigurava** ujednačeno korisničko iskustvo kroz sve forme
 - **Smanjuje** kognitivno opterećenje korištenjem poznatih obrazaca
-- **Pojednostavljuje** održavanje s ponovljivim kodom
-- **Osigurava** da se standardi pristupačnosti poštuju u cijeloj aplikaciji
+- **Pojednostavljuje** održavanje s reupotrebljivim kodom
+- **Jamči** da se standardi pristupačnosti poštuju u cijeloj aplikaciji
 
-## Stvaranje dinamičke nadzorne ploče
+## Izrada Vaše Dinamične Kontrolne Ploče
 
-Sada ćemo vašu statičnu nadzornu ploču pretvoriti u dinamičko sučelje koje prikazuje stvarne podatke o računu. Kao razlika između ispisanog rasporeda letova i uživo prikazanih odlazaka na aerodromima, prelazimo s statičnih informacija na prikaz u stvarnom vremenu.
+Sada ćemo vaš statični dashboard transformirati u dinamičko sučelje koje prikazuje stvarne podatke računa. Kao razlika između tiskanog rasporeda leta i živih tablo na aerodromima, prelazimo sa statičnih informacija na prikaze u stvarnom vremenu.
 
-Koristeći tehnike manipulacije DOM-om koje ste naučili, stvorit ćemo nadzornu ploču koja se automatski ažurira s trenutnim informacijama o računu.
+Koristeći tehnike manipulacije DOM-om koje ste naučili, izradit ćemo dashboard koji se automatski ažurira sa trenutnim informacijama o računu.
 
-### Upoznavanje s vašim podacima
+### Upoznavanje s Vašim Podacima
 
-Prije nego što počnemo graditi, zavirimo u vrstu podataka koje vaš poslužitelj vraća. Kada se netko uspješno prijavi, evo blaga informacija s kojima možete raditi:
+Prije nego što počnemo graditi, zavirimo kakve podatke vaš poslužitelj vraća. Kad se netko uspješno prijavi, evo kakvo blago informacija dobijete:
 
 ```json
 {
@@ -458,29 +594,44 @@ Prije nego što počnemo graditi, zavirimo u vrstu podataka koje vaš poslužite
 ```
 
 **Ova struktura podataka pruža:**
-- **`user`**: Savršeno za personalizaciju iskustva ("Dobrodošao natrag, Sara!")
-- **`currency`**: Osigurava ispravan prikaz iznosa novca
-- **`description`**: Prijateljski naziv za račun
-- **`balance`**: Trenutno stanje računa
-- **`transactions`**: Kompletna povijest transakcija sa svim detaljima
+- **`user`**: Savršeno za personaliziranje iskustva ("Dobro došla nazad, Sarah!")
+- **`currency`**: Osigurava ispravan prikaz novčanih iznosa
+- **`description`**: Prijateljski naziv računa
+- **`balance`**: Vrlo važan trenutačni saldo
+- **`transactions`**: Cjelovitu povijest transakcija sa svim detaljima
 
-Sve što vam treba za izradu profesionalne nadzorne ploče za bankarstvo!
+Sve što vam treba da izgradite profesionalan bankarski dashboard!
 
-> 💡 **Savjet stručnjaka**: Želite odmah vidjeti svoju nadzornu ploču u akciji? Koristite korisničko ime `test` prilikom prijave - dolazi unaprijed učitano s uzorcima podataka kako biste mogli vidjeti kako sve funkcionira bez potrebe za stvaranjem transakcija unaprijed.
+```mermaid
+flowchart TD
+    A[Korisnička prijava] --> B[Dohvati podatke računa]
+    B --> C{Podaci valjani?}
+    C -->|Da| D[Spremi u globalnu varijablu]
+    C -->|Ne| E[Prikaži poruku o grešci]
+    D --> F[Navigiraj na nadzornu ploču]
+    F --> G[Ažuriraj UI elemente]
+    G --> H[Prikaži stanje]
+    G --> I[Prikaži opis]
+    G --> J[Prikaz transakcija]
+    J --> K[Napravi redove tablice]
+    K --> L[Formatiraj valutu]
+    L --> M[Korisnik vidi aktualne podatke]
+```
+> 💡 **Savjet za Profesionalce**: Želite odmah vidjeti vaš dashboard u akciji? Koristite korisničko ime `test` kada se prijavljujete - već dolazi s unaprijed učitanim primjerima podataka pa možete odmah vidjeti sve bez potrebe da prvo kreirate transakcije.
 > 
 **Zašto je testni račun koristan:**
-- Dolazi s realističnim uzorcima podataka već učitanim
-- Savršen za pregled kako se transakcije prikazuju
-- Odličan za testiranje značajki vaše nadzorne ploče
-- Štedi vas od ručnog stvaranja lažnih podataka
+- Dolazi s realističnim primjerima podataka već učitanim
+- Savršen je za gledanje kako se transakcije prikazuju
+- Odličan za testiranje značajki vašeg dashboarda
+- Štedi vam trud ručnog unosa lažnih podataka
 
-### Stvaranje elemenata za prikaz nadzorne ploče
+### Izrada Elemenata za Prikaz Dashboarda
 
-Izgradimo vaše sučelje nadzorne ploče korak po korak, počevši s informacijama o sažetku računa, a zatim prelazeći na složenije značajke poput popisa transakcija.
+Gradimo sučelje vaše kontrolne ploče korak po korak, počevši sa sažetkom računa, a zatim prelazimo na složenije značajke poput lista transakcija.
 
-#### Korak 1: Ažurirajte strukturu HTML-a
+#### Korak 1: Ažurirajte Vašu HTML Strukturu
 
-Prvo, zamijenite statički odjeljak "Stanje" dinamičkim elementima rezerviranim za popunjavanje putem JavaScripta:
+Prvo, zamijenite statičan odjeljak "Saldo" dinamičnim placeholder elementima koje vaš JavaScript može popuniti:
 
 ```html
 <section>
@@ -488,23 +639,23 @@ Prvo, zamijenite statički odjeljak "Stanje" dinamičkim elementima rezerviranim
 </section>
 ```
 
-Zatim dodajte odjeljak za opis računa. Budući da ovo djeluje kao naslov za sadržaj nadzorne ploče, koristite semantički HTML:
+Zatim dodajte sekciju za opis računa. Budući da ovo djeluje kao naslov za sadržaj dashboarda, koristite semantički HTML:
 
 ```html
 <h2 id="description"></h2>
 ```
 
-**Razumijevanje strukture HTML-a:**
-- **Koristi** odvojene `<span>` elemente za stanje i valutu radi individualne kontrole
-- **Primjenjuje** jedinstvene ID-ove na svaki element za ciljanje putem JavaScripta
+**Razumijevanje HTML strukture:**
+- **Koristi** zasebne `<span>` elemente za saldo i valutu radi pojedinačne kontrole
+- **Primjenjuje** jedinstvene ID-jeve na svaki element za ciljanje iz JavaScripta
 - **Prati** semantički HTML koristeći `<h2>` za opis računa
-- **Stvara** logičnu hijerarhiju za čitače ekrana i SEO
+- **Stvara** logičku hijerarhiju za čitače ekrana i SEO
 
-> ✅ **Uvid u pristupačnost**: Opis računa funkcionira kao naslov za sadržaj nadzorne ploče, pa je označen semantički kao naslov. Saznajte više o tome kako [struktura naslova](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) utječe na pristupačnost. Možete li identificirati druge elemente na svojoj stranici koji bi mogli imati koristi od oznaka naslova?
+> ✅ **Pristupačnost na Umu**: Opis računa funkcionira kao naslov za sadržaj dashboarda, stoga je označen semantički kao zaglavlje. Više o utjecaju [strukture zaglavlja](https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility) na pristupačnost. Možete li identificirati druge elemente na svojoj stranici koji bi mogli imati koristi od zaglavlja?
 
-#### Korak 2: Kreirajte funkciju za ažuriranje nadzorne ploče
+#### Korak 2: Napravite Funkciju za Ažuriranje Dashboarda
 
-Sada kreirajte funkciju koja popunjava vašu nadzornu ploču stvarnim podacima o računu:
+Sada napravite funkciju koja ispunjava dashboard stvarnim podacima računa:
 
 ```javascript
 function updateDashboard() {
@@ -519,19 +670,19 @@ function updateDashboard() {
 ```
 
 **Korak po korak, evo što ova funkcija radi:**
-- **Provjerava** postoje li podaci o računu prije nastavka
-- **Preusmjerava** neautorizirane korisnike natrag na stranicu za prijavu
-- **Ažurira** opis računa koristeći ponovljivu funkciju `updateElement`
-- **Formatira** stanje tako da uvijek prikazuje dvije decimale
+- **Provjerava** da li podaci o računu postoje prije nastavka
+- **Preusmjerava** neautentificirane korisnike natrag na stranicu prijave
+- **Ažurira** opis računa koristeći ponovo upotrebljivu funkciju `updateElement`
+- **Formatira** saldo da uvijek prikazuje dvije decimale
 - **Prikazuje** odgovarajući simbol valute
 
-> 💰 **Formatiranje novca**: Ta metoda [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) je spas! Osigurava da vaše stanje uvijek izgleda kao pravi novac - "75.00" umjesto samo "75". Vaši korisnici će cijeniti poznato formatiranje valute.
+> 💰 **Formatiranje Novca**: Ta metoda [`toFixed(2)`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) je spasitelj! Osigurava da vaš saldo uvijek izgleda kao pravi novac - "75.00" umjesto samo "75". Vaši korisnici će cijeniti poznati prikaz valute.
 
-#### Korak 3: Osigurajte da se vaša nadzorna ploča ažurira
+#### Korak 3: Osigurajte Da Se Vaš Dashboard Ažurira
 
-Kako biste osigurali da se vaša nadzorna ploča osvježava s trenutnim podacima svaki put kada je netko posjeti, trebamo je povezati s vašim navigacijskim sustavom. Ako ste završili [zadatak iz lekcije 1](../1-template-route/assignment.md), ovo bi vam trebalo biti poznato. Ako niste, ne brinite - evo što trebate:
+Kako bismo bili sigurni da se vaš dashboard osvježava s trenutnim podacima svaki put kad netko posjeti, trebamo se uhvatiti vašeg navigacijskog sustava. Ako ste odradili [zadanu vježbu iz lekcije 1](../1-template-route/assignment.md), ovo bi vam trebalo biti poznato. Ako ne, ne brinite - evo što vam treba:
 
-Dodajte ovo na kraj svoje funkcije `updateRoute()`:
+Dodajte ovo na kraj vaše funkcije `updateRoute()`:
 
 ```javascript
 if (typeof route.init === 'function') {
@@ -539,7 +690,7 @@ if (typeof route.init === 'function') {
 }
 ```
 
-Zatim ažurirajte svoje rute kako biste uključili inicijalizaciju nadzorne ploče:
+Zatim ažurirajte vaše rute da uključe inicijalizaciju dashboarda:
 
 ```javascript
 const routes = {
@@ -548,41 +699,57 @@ const routes = {
 };
 ```
 
-**Što ovaj pametan postav radi:**
-- Provjerava ima li ruta posebni kod za inicijalizaciju
-- Automatski pokreće taj kod kada se ruta učita
-- Osigurava da vaša nadzorna ploča uvijek prikazuje svježe, trenutne podatke
-- Održava vašu logiku rutiranja čistom i organiziranom
+**Što ova pametna postavka radi:**
+- Provjerava ako ruta ima poseban inicijalizacijski kod
+- Automatski pokreće taj kod kad se ruta učita
+- Osigurava da vaš dashboard uvijek prikazuje svježe, aktualne podatke
+- Drži vašu logiku rutanja čistom i organiziranom
 
-#### Testiranje vaše nadzorne ploče
+#### Testiranje Vašeg Dashboarda
 
-Nakon implementacije ovih promjena, testirajte svoju nadzornu ploču:
+Nakon implementacije ovih promjena, testirajte vaš dashboard:
 
 1. **Prijavite se** s testnim računom
-2. **Provjerite** jeste li preusmjereni na nadzornu ploču
-3. **Provjerite** prikazuju li se ispravno opis računa, stanje i valuta
-4. **Pokušajte se odjaviti i ponovno prijaviti** kako biste osigurali da se podaci pravilno osvježavaju
+2. **Provjerite** jeste li preusmjereni na dashboard
+3. **Pogledajte** jesu li opis računa, saldo i valuta ispravno prikazani
+4. **Pokušajte se odjaviti i ponovo prijaviti** kako biste bili sigurni da se podaci pravilno osvježavaju
 
-Vaša nadzorna ploča sada bi trebala prikazivati dinamične informacije o računu koje se ažuriraju na temelju podataka prijavljenog korisnika!
+Vaš dashboard sada treba prikazivati dinamične podatke računa koji se ažuriraju na temelju podataka prijavljenog korisnika!
 
-## Izrada pametnih popisa transakcija pomoću predložaka
+## Izrada Pametnih Lista Transakcija pomoću Predložaka
 
-Umjesto ručnog stvaranja HTML-a za svaku transakciju, koristit ćemo predloške za automatsko generiranje dosljednog formatiranja. Kao standardizirane komponente koje se koriste u proizvodnji svemirskih letjelica, predlošci osiguravaju da svaki redak transakcije slijedi istu strukturu i izgled.
+Umjesto da ručno kreiramo HTML za svaku transakciju, koristit ćemo predloške za automatsko generiranje ujednačenog formata. Kao standardizirani dijelovi u proizvodnji svemirskih letjelica, predlošci osiguravaju da svaki redak transakcije slijedi istu strukturu i izgled.
 
 Ova tehnika učinkovito skalira od nekoliko transakcija do tisuća, održavajući dosljedne performanse i prezentaciju.
 
 ```mermaid
-flowchart LR
-    A[Transaction Data] --> B[HTML Template]
-    B --> C[Clone Template]
-    C --> D[Populate with Data]
-    D --> E[Add to DOM]
-    E --> F[Repeat for Each Transaction]
+graph LR
+    A[HTML Predložak] --> B[JavaScript Klon]
+    B --> C[Popuni s Podacima]
+    C --> D[Dodaj u Fragment]
+    D --> E[Skupno Umetni u DOM]
+    
+    subgraph "Prednosti Učinkovitosti"
+        F[Jednokratna DOM Ažuriranja]
+        G[Ujednačeno Formatiranje]
+        H[Ponovno Iskoristiv Uzorak]
+    end
+    
+    E --> F
+    E --> G
+    E --> H
 ```
+```mermaid
+flowchart LR
+    A[Podaci o transakciji] --> B[HTML predložak]
+    B --> C[Kloniraj predložak]
+    C --> D[Popuni podacima]
+    D --> E[Dodaj u DOM]
+    E --> F[Ponovi za svaku transakciju]
+```
+### Korak 1: Kreirajte Predložak za Transakciju
 
-### Korak 1: Kreirajte predložak za transakcije
-
-Prvo, dodajte ponovljivi predložak za retke transakcija u svoj HTML `<body>`:
+Prvo, dodajte reupotrebljivi predložak za retke transakcija unutar vašeg `<body>` HTML-a:
 
 ```html
 <template id="transaction">
@@ -596,26 +763,26 @@ Prvo, dodajte ponovljivi predložak za retke transakcija u svoj HTML `<body>`:
 
 **Razumijevanje HTML predložaka:**
 - **Definira** strukturu za jedan redak tablice
-- **Ostaje** nevidljiv dok se ne klonira i popuni pomoću JavaScripta
-- **Sadrži** tri ćelije za datum, opis i iznos
-- **Pruža** ponovljivi obrazac za dosljedno formatiranje
+- **Ostaje** nevidljiv dok se ne klonira i ne popuni JavaScriptom
+- **Uključuje** tri ćelije za datum, opis i iznos
+- **Pruža** reupotrebljiv obrazac za dosljedan format
 
-### Korak 2: Pripremite svoju tablicu za dinamički sadržaj
+### Korak 2: Pripremite Tablicu za Dinamički Sadržaj
 
-Zatim dodajte `id` tijelu tablice kako bi ga JavaScript mogao lako ciljati:
+Zatim, dodajte `id` vašem tijelu tablice kako bi JavaScript mogao lako ciljati:
 
 ```html
 <tbody id="transactions"></tbody>
 ```
 
-**Što ovo postiže:**
+**Što ovo omogućuje:**
 - **Stvara** jasan cilj za umetanje redaka transakcija
-- **Razdvaja** strukturu tablice od dinamičkog sadržaja
-- **Omogućuje** jednostavno čišćenje i ponovno popunjavanje podataka o transakcijama
+- **Odvaja** strukturu tablice od dinamičkog sadržaja
+- **Omogućuje** jednostavno brisanje i ponovno punjenje podataka transakcija
 
-### Korak 3: Izradite funkciju za generiranje redaka transakcija
+### Korak 3: Izgradite Tvornicu Redaka Transakcija
 
-Sada kreirajte funkciju koja transformira podatke o transakcijama u HTML elemente:
+Sada napravite funkciju koja pretvara podatke transakcija u HTML elemente:
 
 ```javascript
 function createTransactionRow(transaction) {
@@ -629,17 +796,17 @@ function createTransactionRow(transaction) {
 }
 ```
 
-**Razrada ove funkcije:**
-- **Dohvaća** element predloška prema njegovom ID-u
+**Raskrinkavanje ove tvornice funkcija:**
+- **Dohvaća** element predloška po njegovom ID-ju
 - **Klonira** sadržaj predloška za sigurnu manipulaciju
-- **Odabire** redak tablice unutar kloniranog sadržaja
-- **Popunjava** svaku ćeliju podacima o transakciji
-- **Formatira** iznos kako bi prikazao ispravne decimalne brojeve
-- **Vraća** gotov redak spreman za umetanje
+- **Odabire** red tablice unutar kloniranog sadržaja
+- **Popunjava** svaku ćeliju podacima transakcije
+- **Formatira** iznos da pokaže ispravne decimale
+- **Vraća** kompletan red spreman za umetanje
 
-### Korak 4: Učinkovito generirajte više redaka transakcija
+### Korak 4: Učinkovito Generirajte Više Redova Transakcija
 
-Dodajte ovaj kod u svoju funkciju `updateDashboard()` kako biste prikazali sve transakcije:
+Dodajte ovaj kod u vašu funkciju `updateDashboard()` za prikaz svih transakcija:
 
 ```javascript
 const transactionsRows = document.createDocumentFragment();
@@ -650,18 +817,17 @@ for (const transaction of account.transactions) {
 updateElement('transactions', transactionsRows);
 ```
 
-**Razumijevanje ovog učinkovitog pristupa:**
-- **Stvara** dokumentni fragment za grupne operacije na DOM-u
-- **Iterira** kroz sve transakcije u podacima o računu
-- **Generira** redak za svaku transakciju koristeći funkciju za generiranje
+**Razumijevanje ovoga učinkovitog pristupa:**
+- **Stvara** fragment dokumenta za grupiranje DOM operacija
+- **Iterira** kroz sve transakcije u podacima računa
+- **Generira** redak za svaku transakciju pomoću tvornice funkcija
 - **Prikuplja** sve retke u fragment prije dodavanja u DOM
-- **Izvodi** jedno ažuriranje DOM-a umjesto više pojedinačnih umetanja
+- **Izvršava** jedno ažuriranje DOM-a umjesto više pojedinačnih umetanja
+> ⚡ **Optimizacija performansi**: [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) radi poput procesa sklapanja u Boeingu – komponente se pripremaju izvan glavne linije, a zatim se instaliraju kao cjelovita jedinica. Ovaj pristup grupiranju minimizira ponovne izračune DOM-a izvođenjem jedinstvene umetnute radnje umjesto više pojedinačnih operacija.
 
-> ⚡ **Optimizacija performansi**: [`document.createDocumentFragment()`](https://developer.mozilla.org/docs/Web/API/Document/createDocumentFragment) radi poput proizvodnog procesa u Boeingu - komponente se pripremaju izvan glavne linije, a zatim se instaliraju kao cjelovita jedinica. Ovaj pristup grupiranja minimizira ponovno crtanje DOM-a izvođenjem jedne umjesto više pojedinačnih operacija.
+### Korak 5: Poboljšajte funkciju ažuriranja za mješoviti sadržaj
 
-### Korak 5: Poboljšajte funkciju ažuriranja za miješani sadržaj
-
-Vaša funkcija `updateElement()` trenutno obrađuje samo tekstualni sadržaj. Ažurirajte je kako bi radila i s tekstom i s DOM čvorovima:
+Vaša funkcija `updateElement()` trenutno obrađuje samo tekstualni sadržaj. Ažurirajte je da radi i s tekstom i s DOM čvorovima:
 
 ```javascript
 function updateElement(id, textOrNode) {
@@ -672,46 +838,121 @@ function updateElement(id, textOrNode) {
 ```
 
 **Ključna poboljšanja u ovom ažuriranju:**
-- **Čisti** postojeći sadržaj prije dodavanja novog
+- **Briše** postojeći sadržaj prije dodavanja novog sadržaja
 - **Prihvaća** ili tekstualne nizove ili DOM čvorove kao parametre
-- **Koristi** metodu [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) za fleksibilnost
-- **Održava** kompatibilnost unatrag s postojećom upotrebom temeljenom na tekstu
+- **Koristi** metodu [`append()`](https://developer.mozilla.org/docs/Web/API/ParentNode/append) za veću fleksibilnost
+- **Održava** kompatibilnost unatrag s postojećim načinom rada temeljenim na tekstu
 
-### Testiranje vaše nadzorne ploče
+### Vozite svoj kontrolni panel na test
 
-Vrijeme je za trenutak istine! Pogledajmo vašu dinamičku nadzornu ploču u akciji:
+Vrijeme je za trenutak istine! Pogledajmo vaš dinamični kontrolni panel u akciji:
 
-1. Prijavite se koristeći `test` račun (ima unaprijed pripremljene uzorke podataka)
-2. Navigirajte na svoju nadzornu ploču
-3. Provjerite pojavljuju li se redci transakcija s ispravnim formatiranjem
-4. Provjerite izgledaju li datumi, opisi i iznosi ispravno
+1. Prijavite se koristeći račun `test` (već sadrži primjerni sadržaj)
+2. Navigirajte do svog kontrolnog panela
+3. Provjerite pojavljuju li se redovi transakcija s ispravnim oblikovanjem
+4. Provjerite jesu li datum, opisi i iznosi ispravno prikazani
 
-Ako sve funkcionira, trebali biste vidjeti potpuno funkcionalan popis transakcija na svojoj nadzornoj ploči! 🎉
+Ako sve radi, trebali biste vidjeti potpuno funkcionalnu listu transakcija na svom kontrolnom panelu! 🎉
 
 **Što ste postigli:**
-- Izgradili ste nadzornu ploču koja se skalira s bilo kojom količinom podataka
-- Kreirali ste ponovljive predloške za dosljedno formatiranje
-- Implementirali ste učinkovite tehnike manipulacije DOM-om
-- Razvili ste funkcionalnost usporedivu s profesionalnim
-**Upit:** Kreirajte funkcionalnost pretraživanja za aplikaciju za bankarstvo koja uključuje: 1) Obrazac za pretraživanje s unosnim poljima za vremenski raspon (od/do), minimalni/maksimalni iznos i ključne riječi opisa transakcije, 2) Funkciju `filterTransactions()` koja filtrira niz account.transactions na temelju kriterija pretraživanja, 3) Ažurirajte funkciju `updateDashboard()` kako bi prikazala filtrirane rezultate, i 4) Dodajte gumb "Očisti filtere" za resetiranje prikaza. Koristite moderne JavaScript metode za nizove poput `filter()` i obradite rubne slučajeve za prazne kriterije pretraživanja.
+- Izgradili ste kontrolni panel koji se prilagođava bilo kojoj količini podataka
+- Kreirali ste ponovo upotrebljive predloške za dosljedno oblikovanje
+- Proveli ste učinkovite tehnike manipulacije DOM-om
+- Razvili ste funkcionalnost usporedivu s proizvodnim bankarskim aplikacijama
 
-Saznajte više o [agent modu](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
+Uspješno ste transformirali statičnu web stranicu u dinamičku web aplikaciju.
+
+### 🎯 Pedagoški pregled: Generiranje dinamičkog sadržaja
+
+**Razumijevanje arhitekture**: Implementirali ste sofisticirani podatkovni tok prema korisničkom sučelju koji odražava obrasce korištene u okvirima poput React, Vue i Angular.
+
+**Glavne usvojene koncepte**:
+- **Renderiranje temeljeno na predlošcima**: Izrada ponovo upotrebljivih UI komponenti
+- **Dokument fragmenti**: Optimizacija performansi DOM-a
+- **Sigurna manipulacija DOM-om**: Sprječavanje sigurnosnih ranjivosti
+- **Transformacija podataka**: Pretvaranje serverskih podataka u korisnička sučelja
+
+**Industrijska povezanost**: Ove tehnike čine temelj modernih frontend okvira. Reactov virtualni DOM, Vue sustav predložaka i Angularova komponentna arhitektura svi se oslanjaju na ove osnovne koncepte.
+
+**Pitanje za razmišljanje**: Kako biste proširili ovaj sustav da podrži ažuriranja u stvarnom vremenu (npr., da nove transakcije automatski budu vidljive)? Razmotrite WebSockets ili Server-Sent Events.
+
+---
+
+## 📈 Vaš vremenski tijek ovladavanja upravljanjem podacima
+
+```mermaid
+timeline
+    title Putovanje razvoja vođenog podacima
+    
+    section Izgradnja temelja
+        API postavljanje i testiranje
+            : Razumjeti komunikaciju klijent-poslužitelj
+            : Ovladati ciklusom HTTP zahtjev/odgovor
+            : Naučiti tehnike otklanjanja pogrešaka
+    
+    section Ovladavanje autentifikacijom
+        Uzorci asinhronih funkcija
+            : Pisati čist async/await kod
+            : Učinkovito rukovati obećanjima
+            : Implementirati granice za pogreške
+        Upravljanje korisničkom sesijom
+            : Kreirati uzorke globalnog stanja
+            : Izgraditi zaštite za navigaciju
+            : Dizajnirati sustave povratnih informacija korisnika
+    
+    section Razvoj dinamičkog UI-a
+        Sigurna manipulacija DOM-om
+            : Spriječiti XSS ranjivosti
+            : Koristiti textContent umjesto innerHTML
+            : Kreirati sučelja prilagođena pristupačnosti
+        Sustavi predložaka
+            : Izgraditi ponovno upotrebljive UI komponente
+            : Optimizirati performanse s fragmentima
+            : Skalirati za rukovanje velikim skupovima podataka
+    
+    section Profesionalni uzorci
+        Kod spreman za produkciju
+            : Implementirati sveobuhvatno upravljanje pogreškama
+            : Pridržavati se sigurnosnih najboljih praksi
+            : Kreirati održive arhitekture
+        Moderni web standardi
+            : Ovladati Fetch API uzorcima
+            : Razumjeti CORS konfiguracije
+            : Izgraditi responzivne, pristupačne UI-e
+```
+**🎓 Prekretnica diplomiranja**: Uspješno ste izgradili cjelovitu web aplikaciju vođenu podacima koristeći moderne JavaScript uzorke. Ove vještine direktno se prenose na rad s okvirima poput React, Vue ili Angular.
+
+**🔄 Sposobnosti sljedeće razine**:
+- Spremni za istraživanje frontend okvira koji nadograđuju ove koncepte
+- Pripremljeni za implementaciju značajki u stvarnom vremenu s WebSockets
+- Opremljeni za izgradnju progresivnih web aplikacija s offline mogućnostima
+- Postavljeni temelji za učenje naprednih obrazaca upravljanja stanjem
+
+## Izazov GitHub Copilot agenta 🚀
+
+Upotrijebite način rada Agent za dovršetak sljedećeg izazova:
+
+**Opis:** Poboljšajte bankarsku aplikaciju implementiranjem funkcije pretraživanja i filtriranja transakcija koja korisnicima omogućava pronalazak specifičnih transakcija prema rasponu datuma, iznosu ili opisu.
+
+**Naredba:** Izradite funkcionalnost pretraživanja za bankarsku aplikaciju koja uključuje: 1) Obrazac za pretraživanje s poljima za unos raspona datuma (od/do), minimalnog/maksimalnog iznosa, i ključnih riječi u opisu transakcije, 2) Funkciju `filterTransactions()` koja filtrira niz account.transactions na temelju kriterija pretraživanja, 3) Ažurirajte funkciju `updateDashboard()` da prikazuje filtrirane rezultate, i 4) Dodajte gumb "Obriši filtre" za resetiranje prikaza. Koristite moderne JavaScript metode nizova poput `filter()` i obradite rubne slučajeve za prazne kriterije pretraživanja.
+
+Saznajte više o [načinu rada agente](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
 
 ## 🚀 Izazov
 
-Spremni za podizanje vaše aplikacije za bankarstvo na višu razinu? Učinite da izgleda i osjeća se kao nešto što biste stvarno željeli koristiti. Evo nekoliko ideja koje će potaknuti vašu kreativnost:
+Spremni da podignete svoju bankarsku aplikaciju na sljedeću razinu? Učinite da izgleda i osjeća se kao nešto što biste zapravo željeli koristiti. Evo nekoliko ideja za poticanje vaše kreativnosti:
 
-**Učinite je lijepom**: Dodajte CSS stilizaciju kako biste transformirali svoju funkcionalnu nadzornu ploču u nešto vizualno privlačno. Razmislite o čistim linijama, dobrom razmaku, pa čak i suptilnim animacijama.
+**Uljepšajte je**: Dodajte CSS stilove kako biste svoj funkcionalni kontrolni panel pretvorili u nešto vizualno privlačno. Razmislite o čistim linijama, dobrom razmaku i možda čak nekoliko suptilnih animacija.
 
-**Učinite je responzivnom**: Pokušajte koristiti [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) za kreiranje [responzivnog dizajna](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) koji odlično funkcionira na telefonima, tabletima i računalima. Vaši korisnici će vam biti zahvalni!
+**Učinite je responsivnom**: Probajte koristiti [media queries](https://developer.mozilla.org/docs/Web/CSS/Media_Queries) za stvaranje [responsivnog dizajna](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) koji savršeno radi na telefonima, tabletima i računalima. Vaši korisnici će vam biti zahvalni!
 
-**Dodajte malo stila**: Razmislite o bojanju transakcija (zeleno za prihode, crveno za troškove), dodavanju ikona ili kreiranju efekata prilikom prelaska mišem koji čine sučelje interaktivnim.
+**Dodajte malo štiha**: Razmislite o kodiranju boja za transakcije (zeleno za prihod, crveno za rashode), dodavanju ikona ili kreiranju efekata pri prelasku mišem koje čine sučelje interaktivnim.
 
-Evo kako bi mogla izgledati dotjerana nadzorna ploča:
+Evo kako bi mogao izgledati dotjerani kontrolni panel:
 
-![Snimka zaslona primjera rezultata nadzorne ploče nakon stilizacije](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.hr.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.hr.png)
 
-Ne morate se osjećati obveznima da ovo točno kopirate - koristite to kao inspiraciju i prilagodite prema vlastitom ukusu!
+Nemojte osjećati potrebu da točno replicirate – upotrijebite ga kao inspiraciju i prilagodite po svom ukusu!
 
 ## Kviz nakon predavanja
 
@@ -723,5 +964,7 @@ Ne morate se osjećati obveznima da ovo točno kopirate - koristite to kao inspi
 
 ---
 
-**Izjava o odricanju odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane čovjeka. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Odricanje od odgovornosti**:
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati službenim i autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili kriva tumačenja nastala korištenjem ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
