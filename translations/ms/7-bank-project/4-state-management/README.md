@@ -190,7 +190,7 @@ Seperti reka bentuk berkompartmen Titanic yang kelihatan kukuh sehingga beberapa
 
 Daripada mengejar ekor kita sendiri, kita akan mencipta sistem **pengurusan keadaan berpusat**. Anggaplah ia seperti mempunyai seorang yang sangat teratur yang bertanggungjawab ke atas semua perkara penting:
 
-![Skema menunjukkan aliran data antara HTML, tindakan pengguna dan keadaan](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.ms.png)
+![Skema menunjukkan aliran data antara HTML, tindakan pengguna dan keadaan](../../../../translated_images/data-flow.fa2354e0908fecc8.ms.png)
 
 ```mermaid
 flowchart TD
@@ -803,7 +803,7 @@ Cabaran ini akan membantu anda berfikir seperti pembangun profesional yang mempe
 
 Berikut adalah contoh hasil selepas menyelesaikan tugasan:
 
-![Tangkapan skrin menunjukkan contoh dialog "Tambah transaksi"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.ms.png)
+![Tangkapan skrin menunjukkan contoh dialog "Tambah transaksi"](../../../../translated_images/dialog.93bba104afeb79f1.ms.png)
 
 ---
 

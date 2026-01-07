@@ -1,59 +1,142 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "862f7f2ef320f6f8950fae379e6ece45",
-  "translation_date": "2025-10-24T19:43:20+00:00",
+  "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
+  "translation_date": "2026-01-07T01:39:09+00:00",
   "source_file": "6-space-game/1-introduction/README.md",
   "language_code": "sw"
 }
 -->
 # Jenga Mchezo wa Anga Sehemu ya 1: Utangulizi
 
-![Mchezo wa anga unaonyesha uchezaji](../../../../6-space-game/images/pewpew.gif)
+```mermaid
+journey
+    title Safari Yako ya Maendeleo ya Michezo
+    section Msingi
+      Jifunze usanifu wa mchezo: 3: Student
+      Elewa urithi: 4: Student
+      Chunguza muundo: 4: Student
+    section Mawasiliano
+      Jenga mfumo wa pub/sub: 4: Student
+      Tengeneza mtiririko wa matukio: 5: Student
+      Unganisha vipengele: 5: Student
+    section Maombi
+      Unda vitu vya mchezo: 5: Student
+      Tekeleza mifano: 5: Student
+      Panga muundo wa mchezo: 5: Student
+```
+![Uhuishaji wa mchezo wa anga unaoonyesha mchezo](../../../../6-space-game/images/pewpew.gif)
 
-Kama vile udhibiti wa NASA unavyoratibu mifumo mingi wakati wa uzinduzi wa anga, tutajenga mchezo wa anga unaoonyesha jinsi sehemu tofauti za programu zinaweza kufanya kazi pamoja bila matatizo. Wakati tunaunda kitu ambacho unaweza kucheza, utajifunza dhana muhimu za programu zinazotumika katika mradi wowote wa programu.
+Kama vile kituo cha udhibiti cha NASA kinavyoratibu mifumo mingi wakati wa uzinduzi wa anga, tutajenga mchezo wa anga unaoonyesha jinsi sehemu tofauti za programu zinaweza kushirikiana bila mshono. Wakati wa kuunda kitu ambacho unaweza kucheza kweli, utajifunza dhana muhimu za programu zinazotumika kwa mradi wowote wa programu.
 
-Tutachunguza njia mbili za msingi za kupanga msimbo: urithi na muundo. Hizi si dhana za kitaaluma tu – ni mifumo ile ile inayotumika kuendesha kila kitu kutoka michezo ya video hadi mifumo ya benki. Pia tutatekeleza mfumo wa mawasiliano unaoitwa pub/sub ambao hufanya kazi kama mitandao ya mawasiliano inayotumika kwenye vyombo vya anga, ikiruhusu vipengele tofauti kushiriki taarifa bila kuunda utegemezi.
+Tutachunguza mbinu mbili za msingi za kupanga msimbo: urithi na muundo. Hizi si dhana za kitaaluma tu – ni mifumo ile ile inayotumiwa kuendesha kila kitu kuanzia michezo ya video hadi mifumo ya benki. Pia tutaweka mfumo wa mawasiliano uitwao pub/sub unaofanya kazi kama mitandao ya mawasiliano inayotumiwa katika meli za anga, na kuruhusu sehemu tofauti kushiriki taarifa bila kuunda utegemezi.
 
-Mwisho wa mfululizo huu, utaelewa jinsi ya kujenga programu zinazoweza kupanuka na kubadilika – iwe unaunda michezo, programu za wavuti, au mfumo wowote wa programu.
+Mwisho wa mfululizo huu, utaelewa jinsi ya kujenga programu zinazoweza kupanuka na kuendelea kubadilika – iwe unatengeneza michezo, programu za wavuti, au mfumo mwingine wowote wa programu.
 
-## Maswali ya Awali ya Somo
+```mermaid
+mindmap
+  root((Mimarisho ya Mchezo))
+    Object Organization
+      Urithi
+      Muundo
+      Miti ya Madarasa
+      Mchanganyiko wa Tabia
+    Communication Patterns
+      Mfumo wa Pub/Sub
+      Watumiaji wa Tukio
+      Kupitisha Ujumbe
+      Kuunganishwa kwa Wazi
+    Game Objects
+      Mali (x, y)
+      Tabia (kusogea, kugongana)
+      Usimamizi wa Mzunguko wa Maisha
+      Usimamizi wa Hali
+    Design Patterns
+      Kazi za Kiwanda
+      Mfano wa Mchunguzi
+      Mfumo wa Vipengele
+      Mimarisho Iliyosababishwa na Tukio
+    Scalability
+      Muundo wa Moduli
+      Msimbo Unaoweza Kudumishwa
+      Mikakati ya Upimaji
+      Uboreshaji wa Utendaji
+```
+## Mtihani wa Kabla ya Nasisho
 
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/29)
+[Mtihani kabla ya nasisho](https://ff-quizzes.netlify.app/web/quiz/29)
 
-## Urithi na Muundo katika Uundaji wa Michezo
+## Urithi na Muundo katika Maendeleo ya Mchezo
 
-Kadri miradi inavyokua kwa ugumu, mpangilio wa msimbo unakuwa muhimu. Kinachoanza kama hati rahisi kinaweza kuwa kigumu kudumisha bila muundo sahihi – kama vile misheni za Apollo zilivyohitaji uratibu makini kati ya maelfu ya vipengele.
+Maziwa ya miradi yanapoongezeka, upangaji wa msimbo unakuwa muhimu. Kile kinachoanza kama script rahisi kinaweza kuwa kigumu kudumisha bila muundo mzuri – kama vile misheni za Apollo zilivyo hitaji uratibu makini kati ya maelfu ya vipengele.
 
-Tutachunguza njia mbili za msingi za kupanga msimbo: urithi na muundo. Kila moja ina faida zake, na kuelewa zote mbili hukusaidia kuchagua njia sahihi kwa hali tofauti. Tutadhihirisha dhana hizi kupitia mchezo wetu wa anga, ambapo mashujaa, maadui, nguvu za ziada, na vitu vingine lazima vishirikiane kwa ufanisi.
+Tutachunguza mbinu mbili za msingi za kupanga msimbo: urithi na muundo. Kila moja ina faida zake, na kuelewa zote kunakusaidia kuchagua njia sahihi kwa hali tofauti. Tutathibitisha dhana hizi kupitia mchezo wetu wa anga, ambapo mashujaa, adui, vitu vya nguvu, na vitu vingine lazima vishirikiane kwa ufanisi.
 
-✅ Mojawapo ya vitabu maarufu zaidi vya programu vilivyowahi kuandikwa linahusu [mifumo ya muundo](https://en.wikipedia.org/wiki/Design_Patterns).
+✅ Moja ya vitabu maarufu zaidi vya programu vilivyoandikwa ni kuhusu [mifumo ya kubuni](https://en.wikipedia.org/wiki/Design_Patterns).
 
-Katika mchezo wowote, una `vitu vya mchezo` – vipengele vya maingiliano vinavyojaza ulimwengu wa mchezo wako. Mashujaa, maadui, nguvu za ziada, na athari za kuona vyote ni vitu vya mchezo. Kila kimoja kipo katika viwianishi maalum vya skrini kwa kutumia thamani za `x` na `y`, sawa na kuweka alama kwenye ndege ya viwianishi.
+Katika mchezo wowote, una `vitu vya mchezo` – vipengele vinavyoshirikiana vinavyokaa katika dunia ya mchezo wako. Mashujaa, adui, vitu vya nguvu, na athari za kuona vyote ni vitu vya mchezo. Kila kipo katika kuratibu maalum za skrini kwa kutumia thamani za `x` na `y`, kama vile kuonyesha pointi kwenye mhimili wa kuratibu.
 
-Licha ya tofauti zao za kuona, vitu hivi mara nyingi hushiriki tabia za msingi:
+Licha ya tofauti zao za kuona, vitu hivi mara nyingi hushiriki tabia kuu:
 
-- **Vipo mahali fulani** – Kila kitu kina viwianishi vya x na y ili mchezo ujue wapi kukichora
-- **Vingi vinaweza kusogea** – Mashujaa hukimbia, maadui hufuatilia, risasi huruka kwenye skrini
-- **Vinakuwa na muda wa maisha** – Baadhi hubaki milele, vingine (kama milipuko) huonekana kwa muda mfupi na kutoweka
-- **Hureact kwa vitu** – Wakati vitu vinagongana, nguvu za ziada hukusanywa, baa za afya husasishwa
+- **Vipo mahali fulani** – Kila kitu kina kuratibu x na y ili mchezo ujue pa kuchora
+- **Nyingi zinaweza kusogea** – Mashujaa hukimbia, adui hufuata, risasi huruka juu ya skrini
+- **Zina maisha** – Baadhi hudumu daima, wengine (kama milipuko) huonekana kwa muda mfupi na kuondoka
+- **Hureagiza kwa vitu** – Wakati vitu vinapogongana, vitu vya nguvu huchukuliwa, ajili za afya hubadilika
 
-✅ Fikiria mchezo kama Pac-Man. Je, unaweza kutambua aina nne za vitu vilivyoorodheshwa hapo juu katika mchezo huu?
+✅ Fikiria mchezo kama Pac-Man. Je, unaweza kutambua aina nne za vitu zilizotajwa hapo juu katika mchezo huu?
 
-### Kueleza Tabia Kupitia Msimbo
+```mermaid
+classDiagram
+    class GameObject {
+        +x: nambari
+        +y: nambari
+        +aina: kamba
+        +ipo_kwa_maeneo()
+    }
+    
+    class MovableObject {
+        +hamiaKwa(x, y)
+        +inaweza_kusogea()
+    }
+    
+    class TemporaryObject {
+        +muda_wa_maisha: nambari
+        +ina_muda_wa_maisha()
+    }
+    
+    class InteractiveObject {
+        +wakatiWaMgongano()
+        +hurekebishwa_kwa_mambo()
+    }
+    
+    GameObject <|-- MovableObject
+    GameObject <|-- TemporaryObject
+    GameObject <|-- InteractiveObject
+    
+    MovableObject <|-- Hero
+    MovableObject <|-- Enemy
+    MovableObject <|-- Bullet
+    
+    TemporaryObject <|-- PowerUp
+    TemporaryObject <|-- Explosion
+    
+    InteractiveObject <|-- Collectible
+    InteractiveObject <|-- Obstacle
+```
+### Kuonyesha Tabia Kupitia Msimbo
 
-Sasa kwa kuwa unaelewa tabia za kawaida ambazo vitu vya mchezo hushiriki, hebu tuchunguze jinsi ya kutekeleza tabia hizi katika JavaScript. Unaweza kueleza tabia za kitu kupitia mbinu zilizounganishwa na madarasa au vitu binafsi, na kuna njia kadhaa za kuchagua.
+Sasa unapoelewa tabia za kawaida za vitu vya mchezo, hebu tuchunguze jinsi ya kutekeleza tabia hizi kwa JavaScript. Unaweza kuonyesha tabia za kitu kupitia mbinu zilizoambatanishwa na darasa au vitu binafsi, na kuna mbinu kadhaa za kuchagua.
 
-**Njia ya Kulingana na Darasa**
+**Mbinu ya Kutegemea Madarasa**
 
-Madarasa na urithi hutoa njia iliyopangwa ya kupanga vitu vya mchezo. Kama mfumo wa uainishaji wa kitalaamu ulioanzishwa na Carl Linnaeus, unaanza na darasa la msingi linalo na mali za kawaida, kisha kuunda madarasa maalum yanayorithi misingi hii huku yakiongeza uwezo maalum.
+Madarasa na urithi hutoa njia iliyopangwa za kupanga vitu vya mchezo. Kama mfumo wa upangaji wa k分类 uliozinduliwa na Carl Linnaeus, unaanza na darasa la msingi lenye sifa za pamoja, kisha huunda madarasa maalum yanayorithi msingi huu huku yakiongeza uwezo maalum.
 
 ✅ Urithi ni dhana muhimu kuelewa. Jifunze zaidi kwenye [makala ya MDN kuhusu urithi](https://developer.mozilla.org/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-Hivi ndivyo unavyoweza kutekeleza vitu vya mchezo kwa kutumia madarasa na urithi:
+Hivi ndivyo unavyoweza kutekeleza vitu vya mchezo ukitumia madarasa na urithi:
 
 ```javascript
-// Step 1: Create the base GameObject class
+// Hatua 1: Unda darasa la msingi la GameObject
 class GameObject {
   constructor(x, y, type) {
     this.x = x;
@@ -63,19 +146,19 @@ class GameObject {
 }
 ```
 
-**Hebu tuvunje hatua kwa hatua:**
+**Tuchambue hatua kwa hatua:**
 - Tunaunda kiolezo cha msingi ambacho kila kitu cha mchezo kinaweza kutumia
-- Constructor huhifadhi wapi kitu kipo (`x`, `y`) na ni aina gani ya kitu
-- Hii inakuwa msingi ambao vitu vyote vya mchezo vitajengwa juu yake
+- Kijengo huhifadhi mahali kitu kiko (`x`, `y`) na ni aina gani ya kitu
+- Hii inakuwa msingi ambao vitu vyote vya mchezo vitajenga juu yake
 
 ```javascript
-// Step 2: Add movement capability through inheritance
+// Hatua ya 2: Ongeza uwezo wa kuhamahama kupitia urithi
 class Movable extends GameObject {
   constructor(x, y, type) {
-    super(x, y, type); // Call parent constructor
+    super(x, y, type); // Piga simu kwa konstrukta wa mzazi
   }
 
-  // Add the ability to move to a new position
+  // Ongeza uwezo wa kuhamia kwenye nafasi mpya
   moveTo(x, y) {
     this.x = x;
     this.y = y;
@@ -83,47 +166,47 @@ class Movable extends GameObject {
 }
 ```
 
-**Katika hapo juu, tumefanya:**
-- **Kuongeza** darasa la GameObject ili kuongeza utendaji wa kusogea
-- **Kuita** constructor ya mzazi kwa kutumia `super()` ili kuanzisha mali zilizorithiwa
-- **Kuongeza** mbinu ya `moveTo()` inayosasisha nafasi ya kitu
+**Juu tume:**
+- **Kupanua** darasa la GameObject ili kuongeza uwezo wa kusogea
+- **Kupiga simu** kwa kijengo cha mzazi kwa kutumia `super()` kuanzisha sifa zilizorithiwa
+- **Kuongeza** njia `moveTo()` inayobadilisha nafasi ya kitu
 
 ```javascript
-// Step 3: Create specific game object types
+// Hatua ya 3: Unda aina maalum za vitu vya mchezo
 class Hero extends Movable {
   constructor(x, y) {
-    super(x, y, 'Hero'); // Set type automatically
+    super(x, y, 'Hero'); // Weka aina moja kwa moja
   }
 }
 
 class Tree extends GameObject {
   constructor(x, y) {
-    super(x, y, 'Tree'); // Trees don't need movement
+    super(x, y, 'Tree'); // Miti haihitaji kusogea
   }
 }
 
-// Step 4: Use your game objects
+// Hatua ya 4: Tumia vitu vya mchezo wako
 const hero = new Hero(0, 0);
-hero.moveTo(5, 5); // Hero can move!
+hero.moveTo(5, 5); // Shujaa anaweza kusogea!
 
 const tree = new Tree(10, 15);
-// tree.moveTo() would cause an error - trees can't move
+// tree.moveTo() itasababisha kosa - miti haiwezi kusogea
 ```
 
 **Kuelewa dhana hizi:**
-- **Kuunda** aina maalum za vitu vinavyorithi tabia zinazofaa
-- **Kudhirisha** jinsi urithi unavyoruhusu ujumuishaji wa vipengele kwa kuchagua
-- **Kuonyesha** kwamba mashujaa wanaweza kusogea huku miti ikibaki imara
-- **Kueleza** jinsi hierarkia ya darasa inavyopunguza vitendo visivyofaa
+- **Hutengeneza** aina maalum za vitu vinavyorithi tabia zinazofaa
+- **Inaonyesha** jinsi urithi unavyoruhusu kuchagua sifa maalum
+- **Inaonyesha** kuwa mashujaa wanaweza kusogea wakati miti iko pasipo kusogea
+- **Inaonyesha** jinsi mwelekeo wa madarasa unavyozuia vitendo visivyosahaulika
 
-✅ Chukua dakika chache kufikiria shujaa wa Pac-Man (Inky, Pinky au Blinky, kwa mfano) na jinsi ambavyo ingeandikwa katika JavaScript.
+✅ Chukua dakika chache kufikiria tena mashujaa wa Pac-Man (kama Inky, Pinky au Blinky) na jinsi wangekuwa wanaandikwa kwa JavaScript.
 
-**Njia ya Muundo**
+**Mbinu ya Muundo**
 
-Muundo unafuata falsafa ya muundo wa modular, sawa na jinsi wahandisi wanavyounda vyombo vya anga na vipengele vinavyoweza kubadilishwa. Badala ya kurithi kutoka darasa la mzazi, unachanganya tabia maalum ili kuunda vitu vyenye utendaji unaohitajika. Njia hii inatoa kubadilika bila vikwazo vya hierarkia ngumu.
+Muundo unafuata falsafa ya muundo wa moduli, sawa na jinsi wahandisi wanavyobuni meli za anga zikiwa na vipengele vinavyoweza kubadilishwa. Badala ya kurithi kutoka kwa darasa mzazi, unaunganisha tabia maalum kuunda vitu vyenye kazi kamili wanazohitaji. Mbinu hii hutoa ufanisi bila mipaka kali ya mwelekeo wa madarasa.
 
 ```javascript
-// Step 1: Create base behavior objects
+// Hatua 1: Tengeneza vitu vya tabia msingi
 const gameObject = {
   x: 0,
   y: 0,
@@ -138,16 +221,16 @@ const movable = {
 };
 ```
 
-**Hii ndiyo msimbo unavyofanya:**
-- **Inafafanua** msingi wa `gameObject` na mali za nafasi na aina
-- **Inaunda** kitu cha tabia ya `movable` chenye utendaji wa kusogea
-- **Inatenganisha** masuala kwa kuweka data ya nafasi na mantiki ya kusogea huru
+**Msimbo huu unafanya yafuatayo:**
+- **Unafafanua** `gameObject` ya msingi yenye sifa za nafasi na aina
+- **Unaunda** kitu tofauti cha tabia cha `movable` chenye uwezo wa kusogea
+- **Unatenganisha** masuala kwa kuweka data ya nafasi na kanuni za harakati huru
 
 ```javascript
-// Step 2: Compose objects by combining behaviors
+// Hatua ya 2: Tengeneza vitu kwa kuunganisha tabia
 const movableObject = { ...gameObject, ...movable };
 
-// Step 3: Create factory functions for different object types
+// Hatua ya 3: Unda kazi za kiwanda kwa aina tofauti za vitu
 function createHero(x, y) {
   return {
     ...movableObject,
@@ -167,68 +250,127 @@ function createStatic(x, y, type) {
 }
 ```
 
-**Katika hapo juu, tumefanya:**
-- **Kuunganisha** mali za msingi za kitu na tabia ya kusogea kwa kutumia spread syntax
-- **Kuunda** kazi za kiwanda zinazorejesha vitu vilivyobinafsishwa
-- **Kuwezesha** uundaji wa vitu vya kubadilika bila hierarkia ngumu za darasa
-- **Kuruhusu** vitu kuwa na tabia zinazohitajika tu
+**Juu tume:**
+- **Kuja na** sifa za kitu cha msingi pamoja na tabia ya kusogea kwa kutumia spread syntax
+- **Kuumba** kazi za kiwanda zinazorejesha vitu zilizobinafsishwa
+- **Kuwezesha** uundaji wa vitu ulio huru bila mwelekeo wa madarasa mbinu kali
+- **Kuruhusu** vitu kuwa na tabia ambazo vinahitaji tu
 
 ```javascript
-// Step 4: Create and use your composed objects
+// Hatua ya 4: Unda na tumia vitu vyako vilivyoundwa
 const hero = createHero(10, 10);
-hero.moveTo(5, 5); // Works perfectly!
+hero.moveTo(5, 5); // Inaendana kikamilifu!
 
 const tree = createStatic(0, 0, 'Tree');
-// tree.moveTo() is undefined - no movement behavior was composed
+// tree.moveTo() haijafafanuliwa - hakuna mwenendo uliounganishwa
 ```
 
-**Vidokezo vya kukumbuka:**
-- **Kuunda** vitu kwa kuchanganya tabia badala ya kuvirithi
-- **Kutoa** kubadilika zaidi kuliko hierarkia ngumu za urithi
-- **Kuruhusu** vitu kuwa na vipengele vinavyohitajika tu
-- **Kutumia** spread syntax ya kisasa ya JavaScript kwa mchanganyiko safi wa vitu
+**Mambo muhimu ya kukumbuka:**
+- **Inaunda** vitu kwa kuchanganya tabia badala ya kuzirithi
+- **Hutoa** ufanisi zaidi kuliko mwelekeo mgumu wa urithi
+- **Inaruhusu** vitu kuwa na sifa haswa wanazohitaji
+- **Inatumia** spread syntax ya JavaScript ya kisasa kwa mchanganyiko safi wa vitu
 ```
 
 **Which Pattern Should You Choose?**
 
-> 💡 **Pro Tip**: Both patterns have their place in modern JavaScript development. Classes work well for clearly defined hierarchies, while composition shines when you need maximum flexibility.
+**Which Pattern Should You Choose?**
+
+```mermaid
+quadrantChart
+    title Code Organization Patterns
+    x-axis Simple --> Complex
+    y-axis Rigid --> Flexible
+    quadrant-1 Advanced Composition
+    quadrant-2 Hybrid Approaches
+    quadrant-3 Basic Inheritance
+    quadrant-4 Modern Composition
+    
+    Class Inheritance: [0.3, 0.2]
+    Interface Implementation: [0.6, 0.4]
+    Mixin Patterns: [0.7, 0.7]
+    Pure Composition: [0.8, 0.9]
+    Factory Functions: [0.5, 0.8]
+    Prototype Chain: [0.4, 0.3]
+```
+
+> 💡 **Ushauri wa Mtaalamu**: Mifumo yote miwili ina nafasi yake katika maendeleo ya kisasa ya JavaScript. Madarasa yanafaa kwa mwelekeo uliotangazwa wazi, wakati muundo huangaza zaidi unapotakiwa ufanisi wa hali ya juu.
 > 
-**Here's when to use each approach:**
-- **Choose** inheritance when you have clear "is-a" relationships (a Hero *is-a* Movable object)
-- **Select** composition when you need "has-a" relationships (a Hero *has* movement abilities)
-- **Consider** your team's preferences and project requirements
-- **Remember** that you can mix both approaches in the same application
+**Hivi ndivyo unavyotumia mbinu hizi:**
+- **Chagua** urithi unapokuwa na uhusiano wa "ni" wazi (Shujaa *ni* kitu cha Kusogea)
+- **Chagua** muundo unapohitaji uhusiano wa "ana" (Shujaa *ana* uwezo wa kusogea)
+- **Fikiria** mapendeleo ya timu yako na mahitaji ya mradi
+- **Kumbuka** unaweza kuchanganya mbinu zote mbili katika programu moja
 
-## Communication Patterns: The Pub/Sub System
+### 🔄 **Kagua Elimu**
+**Ufahamu wa Upangaji wa Vitu**: Kabla ya kuingia kwenye mifumo ya mawasiliano, hakikisha unaweza:
+- ✅ Eleza tofauti kati ya urithi na muundo
+- ✅ Tambua wakati wa kutumia madarasa dhidi ya kazi za kiwanda
+- ✅ Elewa jinsi neno kuu `super()` linavyofanya kazi katika urithi
+- ✅ Tambua faida za kila mbinu kwa maendeleo ya mchezo
 
-As applications grow complex, managing communication between components becomes challenging. The publish-subscribe pattern (pub/sub) solves this problem using principles similar to radio broadcasting – one transmitter can reach multiple receivers without knowing who's listening.
+**Jaribio la Haraka:** Je, ungeundaje Adui Anayeruka anayeweza kusogea na kuruka?
+- **Mbinu ya urithi**: `class FlyingEnemy extends Movable`
+- **Mbinu ya muundo**: `{ ...movable, ...flyable, ...gameObject }`
 
-Consider what happens when a hero takes damage: the health bar updates, sound effects play, visual feedback appears. Rather than coupling the hero object directly to these systems, pub/sub allows the hero to broadcast a "damage taken" message. Any system that needs to respond can subscribe to this message type and react accordingly.
+**Mfungamano wa Dunia Halisi:** Mifumo hii inaonekana kila mahali:
+- **Vitu vya React**: Props (muundo) dhidi ya urithi wa darasa
+- **Injini za Mchezo**: Mfumo wa vipengele-anavyo-husiana hutumia muundo
+- **Programu za Simu**: Mifumo ya UI mara nyingi hutumia mwelekeo wa urithi
 
-✅ **Pub/Sub** stands for 'publish-subscribe'
+## Mifumo ya Mawasiliano: Mfumo wa Pub/Sub
 
-### Understanding the Pub/Sub Architecture
+Programu zinapozidi kuwa ngumu, kusimamia mawasiliano kati ya vipengele kunakuwa changamoto. Mfumo wa kuchapisha-kujisajili (pub/sub) unatatua tatizo hili kwa kutumia kanuni zinazofanana na za matangazo ya redio – mtangazaji mmoja anaweza kufikia wapokeaji wengi bila kujua ni nani wasikilizaji.
 
-The pub/sub pattern keeps different parts of your application loosely coupled, meaning they can work together without being directly dependent on each other. This separation makes your code more maintainable, testable, and flexible to changes.
+Fikiria kinachotokea shujaa anapopata jeraha: njia ya afya hubadilika, sauti huchezwa, mrejesho wa kuona unaonekana. Badala ya kuunganisha kitu cha shujaa moja kwa moja na mifumo hii, pub/sub huruhusu shujaa kutangaza ujumbe wa "jeraha limetokea." Mfumo wowote unaohitaji kujibu unaweza kujisajili kwa aina hii ya ujumbe na ku-react ipasavyo.
 
-**The key players in pub/sub:**
-- **Messages** – Simple text labels like `'PLAYER_SCORED'` that describe what happened (plus any extra info)
-- **Publishers** – The objects that shout out "Something happened!" to anyone who's listening
-- **Subscribers** – The objects that say "I care about that event" and react when it happens
-- **Event System** – The middleman that makes sure messages get to the right listeners
+✅ **Pub/Sub** inasimama kwa 'chapisha-jisajili'
 
-### Building an Event System
+```mermaid
+flowchart TD
+    A[Shujaa Apata Madhara] --> B[Chapisha: HERO_DAMAGED]
+    B --> C[Mfumo wa Matukio]
+    
+    C --> D[Mshiriki wa Kipindi cha Afya]
+    C --> E[Mshiriki wa Mfumo wa Sauti]
+    C --> F[Mshiriki wa Athari za Kuonyesha]
+    C --> G[Mshiriki wa Mfumo wa Mafanikio]
+    
+    D --> H[Sasisha Onyesho la Afya]
+    E --> I[Piga Sauti ya Madhara]
+    F --> J[Onyesha Mwangaza Mwekundu]
+    G --> K[Kagua Mafanikio ya Kuishi]
+    
+    style A fill:#ffebee
+    style B fill:#e1f5fe
+    style C fill:#e8f5e8
+    style H fill:#fff3e0
+    style I fill:#fff3e0
+    style J fill:#fff3e0
+    style K fill:#fff3e0
+```
+### Kuelewa Miundo ya Pub/Sub
 
-Let's create a simple but powerful event system that demonstrates these concepts:
+Mfumo wa pub/sub huhifadhi sehemu tofauti za programu yako zikiwa huru kabisa, maana zinaweza kushirikiana bila kuwa na utegemezi mzito. Kutenganisha huku kunafanya msimbo wako kuwa rahisi kudumisha, kupima, na kubadilika.
+
+**Wachezaji muhimu katika pub/sub:**
+- **Ujumbe** – Lebo rahisi za maandishi kama `'PLAYER_SCORED'` zinazoelezea kilichotokea (pamoja na taarifa za ziada)
+- **Wachapishaji** – Vitu vinavyotoa "Kitu kitatokea!" kwa yeyote anayesikiliza
+- **Wajiandikishaji** – Vitu vinavyosema "Ninajali tukio hilo" na kufanya kazi linapotokea
+- **Mfumo wa Tukio** – Mlezi anaye hakikisha ujumbe unafika kwa wasikilizaji sahihi
+
+### Kujenga Mfumo wa Tukio
+
+Tujenge mfumo rahisi lakini wenye nguvu wa tukio unaoonyesha dhana hizi:
 
 ```javascript
-// Step 1: Create the EventEmitter class
+// Hatua 1: Unda darasa la EventEmitter
 class EventEmitter {
   constructor() {
-    this.listeners = {}; // Store all event listeners
+    this.listeners = {}; // Hifadhi wasikilizaji wote wa matukio
   }
   
-  // Register a listener for a specific message type
+  // Sajili msikilizaji kwa aina maalum ya ujumbe
   on(message, listener) {
     if (!this.listeners[message]) {
       this.listeners[message] = [];
@@ -236,7 +378,7 @@ class EventEmitter {
     this.listeners[message].push(listener);
   }
   
-  // Send a message to all registered listeners
+  // Tuma ujumbe kwa wasikilizaji wote waliojisajili
   emit(message, payload = null) {
     if (this.listeners[message]) {
       this.listeners[message].forEach(listener => {
@@ -247,37 +389,37 @@ class EventEmitter {
 }
 ```
 
-**Kuvunja kinachotokea hapa:**
-- **Kuunda** mfumo wa usimamizi wa matukio wa kati kwa kutumia darasa rahisi
-- **Kuhifadhi** wasikilizaji katika kitu kilichopangwa kwa aina ya ujumbe
-- **Kusajili** wasikilizaji wapya kwa kutumia mbinu ya `on()`
-- **Kutangaza** ujumbe kwa wasikilizaji wote wanaovutiwa kwa kutumia `emit()`
-- **Kusaidia** payloads za data za hiari kwa kupitisha taarifa husika
+**Kuangalia kinachotokea hapa:**
+- **Huunda** mfumo wa utawala wa tukio wa katikati kwa kutumia darasa rahisi
+- **Huhifadhi** wasikilizaji katika kitu kilicho pangwa kwa aina ya ujumbe
+- **Huandika** wasikilizaji wapya kwa kutumia njia `on()`
+- **Hutangaza** ujumbe kwa wasikilizaji wote wenye nia kwa kutumia `emit()`
+- **Husaidia** mzigo wa data usio lazima kwa kupitisha taarifa muhimu
 
-### Kuweka Yote Pamoja: Mfano wa Vitendo
+### Kuunganisha: Mfano Halisi
 
-Sawa, hebu tuone hii ikifanya kazi! Tutajenga mfumo rahisi wa kusogea unaoonyesha jinsi pub/sub ilivyo safi na rahisi:
+Sawa, tuchunguze hii katika vitendo! Tutengeneza mfumo rahisi wa harakati unaoonyesha jinsi pub/sub ni safi na rahisi:
 
 ```javascript
-// Step 1: Define your message types
+// Hatua ya 1: Eleza aina za ujumbe wako
 const Messages = {
   HERO_MOVE_LEFT: 'HERO_MOVE_LEFT',
   HERO_MOVE_RIGHT: 'HERO_MOVE_RIGHT',
   ENEMY_SPOTTED: 'ENEMY_SPOTTED'
 };
 
-// Step 2: Create your event system and game objects
+// Hatua ya 2: Unda mfumo wako wa matukio na vitu vya mchezo
 const eventEmitter = new EventEmitter();
 const hero = createHero(0, 0);
 ```
 
-**Hii ndiyo msimbo unavyofanya:**
-- **Inafafanua** kitu cha constants ili kuzuia makosa ya herufi katika majina ya ujumbe
-- **Inaunda** mfano wa emitter ya matukio ili kushughulikia mawasiliano yote
-- **Inaanzisha** kitu cha shujaa katika nafasi ya kuanzia
+**Msimbo huu unafanya yafuatayo:**
+- **Umefafanua** kitu cha constants kuzuia makosa ya tahajia katika majina ya ujumbe
+- **Umeunda** mfano wa mtangazaji wa tukio kushughulikia mawasiliano yote
+- **Umeanzisha** kitu cha shujaa katika nafasi ya mwanzo
 
 ```javascript
-// Step 3: Set up event listeners (subscribers)
+// Hatua ya 3: Weka wasikilizaji wa matukio (wanajisajili)
 eventEmitter.on(Messages.HERO_MOVE_LEFT, () => {
   hero.moveTo(hero.x - 5, hero.y);
   console.log(`Hero moved to position: ${hero.x}, ${hero.y}`);
@@ -289,14 +431,14 @@ eventEmitter.on(Messages.HERO_MOVE_RIGHT, () => {
 });
 ```
 
-**Katika hapo juu, tumefanya:**
-- **Kusajili** wasikilizaji wa matukio wanaojibu ujumbe wa kusogea
-- **Kusasisha** nafasi ya shujaa kulingana na mwelekeo wa kusogea
-- **Kuongeza** logging ya console kufuatilia mabadiliko ya nafasi ya shujaa
-- **Kutenganisha** mantiki ya kusogea kutoka kwa usimamizi wa pembejeo
+**Juu tume:**
+- **Kusajili** wasikilizaji wa tukio wanaojibu ujumbe wa harakati
+- **Kusasisha** nafasi ya shujaa kulingana na mwelekeo wa harakati
+- **Kuongeza** uandishi wa kumbukumbu wa hali ya shujaa
+- **Kutenganisha** mantiki ya harakati na usimamizi wa pembejeo
 
 ```javascript
-// Step 4: Connect keyboard input to events (publishers)
+// Hatua ya 4: Unganisha ingizo la kibodi na matukio (wachapishaji)
 window.addEventListener('keydown', (event) => {
   switch(event.key) {
     case 'ArrowLeft':
@@ -310,60 +452,211 @@ window.addEventListener('keydown', (event) => {
 ```
 
 **Kuelewa dhana hizi:**
-- **Kuunganisha** pembejeo ya kibodi na matukio ya mchezo bila kuunganisha kwa karibu
-- **Kuwezesha** mfumo wa pembejeo kuwasiliana na vitu vya mchezo kwa njia isiyo ya moja kwa moja
-- **Kuruhusu** mifumo mingi kujibu matukio sawa ya kibodi
-- **Kufanya** iwe rahisi kubadilisha funguo au kuongeza njia mpya za pembejeo
+- **Kuunganisha** pembejeo ya kibodi na matukio ya mchezo bila utegemezi mkali
+- **Kuwezesha** mfumo wa pembejeo kuwasiliana na vitu vya mchezo kwa njia zisizo za moja kwa moja
+- **Kuruhusu** mifumo mingi kujibu matukio yale yale ya kibodi
+- **Kufanya** rahisi kubadilisha vifungo au kuongeza njia mpya za pembejeo
 
-> 💡 **Kidokezo cha Kitaalamu**: Uzuri wa muundo huu ni kubadilika! Unaweza kuongeza athari za sauti, mtikisiko wa skrini, au athari za chembe kwa urahisi kwa kuongeza wasikilizaji zaidi wa matukio – hakuna haja ya kurekebisha msimbo wa kibodi au kusogea uliopo.
+```mermaid
+sequenceDiagram
+    participant User
+    participant Keyboard
+    participant EventEmitter
+    participant Hero
+    participant SoundSystem
+    participant Camera
+    
+    User->>Keyboard: Bonyeza MshaleKushoto
+    Keyboard->>EventEmitter: emit('HERO_MOVE_LEFT')
+    EventEmitter->>Hero: Hamisha kushoto pixel 5
+    EventEmitter->>SoundSystem: Cheza sauti ya hatua
+    EventEmitter->>Camera: Fuata shujaa
+    
+    Hero->>Hero: Sasisha nafasi
+    SoundSystem->>SoundSystem: Cheza sauti
+    Camera->>Camera: Rekebisha eneo la kuona
+```
+> 💡 **Ushauri wa Mtaalamu**: Uzuri wa mfumo huu ni kubadilika! Unaweza kuongeza sauti, kutikisa skrini, au athari za chembe kwa tu kuongeza wasikilizaji zaidi wa tukio – hauitaji kubadilisha msimbo uliopo wa kibodi au harakati.
 > 
-**Hii ndiyo sababu utaipenda njia hii:**
-- Kuongeza vipengele vipya kunakuwa rahisi sana – sikiliza tu matukio unayojali
-- Mambo mengi yanaweza kuguswa na tukio moja bila kuingiliana
-- Kupima kunakuwa rahisi sana kwa sababu kila kipande hufanya kazi kwa uhuru
-- Wakati kitu kinaharibika, unajua hasa wapi pa kuangalia
+**Hii ndiyo sababu utapenda mbinu hii:**
+- Kuongeza sifa mpya ni rahisi sana – sikiliza tu matukio unayojali
+- Mambo mengi yanaweza kuyatendea tukio moja bila kughumuana
+- Kupima kunakuwa rahisi zaidi kwa sababu kila kipengele hufanya kazi pekee yake
+- Tukio lolote linapovunjika, unajua hasa pa kuangalia
 
-### Kwa Nini Pub/Sub Inapimika Vyema
+### Kwa Nini Pub/Sub Huongeza Ufanisi
 
-Mfumo wa pub/sub unadumisha urahisi kadri programu zinavyokua kwa ugumu. Iwe unashughulikia maadui wengi, masasisho ya UI yenye nguvu, au mifumo ya sauti, mfumo hushughulikia ongezeko la ukubwa bila mabadiliko ya usanifu. Vipengele vipya vinaunganishwa katika mfumo wa matukio uliopo bila kuathiri utendaji uliowekwa.
+Mfumo wa pub/sub huendeleza ustahimilivu wakati programu zinapozidi kuwa ngumu. Iwe unaongoza adui mamia, masasisho ya UI ya kidigitali, au mifumo ya sauti, mfumo unakamilisha wingi bila mabadiliko ya usanifu. Sifa mpya zinaunganishwa kwenye mfumo wa tukio uliopo bila kuathiri utendaji uliowekwa.
 
-> ⚠️ **Kosa la Kawaida**: Usianze na aina nyingi sana za ujumbe maalum mapema. Anza na makundi mapana na uyaboreshe kadri mahitaji ya mchezo wako yanavyokuwa wazi.
+> ⚠️ **Kosa la Kawaida**: Usizalisha aina nyingi sana za ujumbe mapema mno. Anza na makundi makubwa kisha boresha kadri mahitaji ya mchezo yanavyoonekana.
 > 
-**Mazoea bora ya kufuata:**
-- **Kugawanya** ujumbe unaohusiana katika makundi ya kimantiki
-- **Kutumia** majina ya kuelezea yanayoonyesha wazi kilichotokea
-- **Kuweka** payloads za ujumbe rahisi na zenye lengo
-- **Kudokumentisha** aina za ujumbe kwa ushirikiano wa timu
+**Mazoezi bora ya kufuata:**
+- **Unganisha** ujumbe zinazohusiana katika makundi yenye mantiki
+- **Tumia** majina ya kueleweka yanayoelezea kilichotokea
+- **Hifadhi** mzigo wa ujumbe kuwa rahisi na makini
+- **Andika** aina za ujumbe kwa ajili ya ushirikiano wa timu
+
+### 🔄 **Kagua Elimu**
+**Ufahamu wa Miundo Inayotegemea Tukio**: Thibitisha ufahamu wako wa mfumo mzima:
+- ✅ Mfumo wa pub/sub unazuiaje utegemezi mkali kati ya vipengele?
+- ✅ Kwa nini ni rahisi kuongeza sifa mpya kwa miundo inayotegemea tukio?
+- ✅ Je, EventEmitter ina jukumu gani katika mchakato wa mawasiliano?
+- ✅ Vifaa vya ujumbe vinazuiaje makosa na kuboresha uthabiti?
+
+**Changamoto ya Ubunifu**: Ungetatua vipi matukio haya ya mchezo kwa pub/sub?
+1. **Adui anapokufa**: Sasisha alama, cheza sauti, toa kitu cha nguvu, ifute kutoka skrini
+2. **Kiwilaya kumemalizika**: Ikome muziki, onyesha UI, hifadhi maendeleo, paku nyuma level ifuatayo
+3. **Vitu vya nguvu vilipokelewa**: Boreshwa uwezo, sasisha UI, cheza athari, anza kengele
+
+**Mfungamano wa Kitaalamu**: Mifumo hii inaonekana katika:
+- **Mifumo ya mbele**: Matukio ya React/Vue
+- **Huduma za nyuma**: Mawasiliano ya microservice
+- **Injini za mchezo**: Mfumo wa tukio wa Unity
+- **Maendeleo ya simu**: Mifumo ya notisi ya iOS/Android
 
 ---
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## Changamoto ya GitHub Copilot Agent 🚀
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+Tumia mode ya Agent kukamilisha changamoto ifuatayo:
 
-**Maelezo:** Unda mfumo rahisi wa vitu vya mchezo kwa kutumia urithi na mfumo wa pub/sub. Utatekeleza mchezo wa msingi ambapo vitu tofauti vinaweza kuwasiliana kupitia matukio bila kujua moja kwa moja kuhusu kila mmoja.
+**Maelezo:** Unda mfumo rahisi wa vitu vya mchezo ukitumia urithi na mfumo wa pub/sub. Utatekeleza mchezo wa msingi ambapo vitu tofauti vinaweza kuwasiliana kupitia matukio bila kufahamiana moja kwa moja.
 
-**Maelekezo:** Unda mfumo wa mchezo wa JavaScript wenye mahitaji yafuatayo: 1) Unda darasa la msingi la GameObject lenye viwianishi vya x, y na mali ya aina. 2) Unda darasa la Hero linalopanua GameObject na linaweza kusogea. 3) Unda darasa la Enemy linalopanua GameObject na linaweza kufuatilia shujaa. 4) Tekeleza darasa la EventEmitter kwa mfumo wa pub/sub. 5) Sanidi wasikilizaji wa matukio ili shujaa anaposogea, maadui wa karibu wapokee tukio la 'HERO_MOVED' na kusasisha nafasi zao kufuatilia shujaa. Jumuisha kauli za console.log kuonyesha mawasiliano kati ya vitu.
+**Kauli:** Unda mfumo wa mchezo wa JavaScript wenye mahitaji yafuatayo: 1) Unda darasa la msingi GameObject lenye kuratibu x, y na sifa ya aina. 2) Unda darasa Hero linaloendeleza GameObject na linaweza kusogea. 3) Unda darasa Enemy linaloendeleza GameObject na linaweza kumfuata shujaa. 4) Tekeleza darasa la EventEmitter kwa mfumo wa pub/sub. 5) Weka wasikilizaji wa matukio ili shujaa anaposogea, adui wa karibu wapokee tukio la 'HERO_MOVED' na wasasisha nafasi zao kuelekea shujaa. Jumuisha taarifa za console.log kuonyesha mawasiliano kati ya vitu.
 
-Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+Jifunze zaidi kuhusu [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
 ## 🚀 Changamoto
+Fikiria jinsi muundo wa pub-sub unavyoweza kuboresha usanifu wa mchezo. Tambua vipengele vinavyopaswa kutoa matukio na jinsi mfumo unavyopaswa kujibu. Buni dhana ya mchezo na chorongea mifumo ya mawasiliano kati ya vipengele vyake.
 
-Fikiria jinsi mfumo wa pub-sub unavyoweza kuboresha usanifu wa mchezo. Tambua ni vipengele gani vinapaswa kutangaza matukio na jinsi mfumo unavyopaswa kujibu. Buni dhana ya mchezo na panga mifumo ya mawasiliano kati ya vipengele vyake.
+## Mtihani wa Baada ya Mhadhara
 
-## Maswali ya Baada ya Somo
+[Mtihani wa baada ya mhadhara](https://ff-quizzes.netlify.app/web/quiz/30)
 
-[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/30)
-
-## Mapitio na Kujisomea
+## Mapitio & Kujisomea
 
 Jifunze zaidi kuhusu Pub/Sub kwa [kusoma kuhusu hilo](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber/?WT.mc_id=academic-77807-sagibbon).
 
-## Kazi
+### ⚡ **Nini Unaweza Kufanya Katika Dakika 5 Zijazo**
+- [ ] Fungua mchezo wowote wa HTML5 mtandaoni na chunguza msimbo wake ukiwa na DevTools
+- [ ] Tengeneza kipengele rahisi cha HTML5 Canvas na chora umbo la msingi
+- [ ] Jaribu kutumia `setInterval` kuunda mzunguko rahisi wa uhuishaji
+- [ ] Chunguza nyaraka za Canvas API na jaribu mbinu ya kuchora
 
-[Unda mfano wa mchezo](assignment.md)
+### 🎯 **Nini Unaweza Kufanikisha Katika Saa Hii**
+- [ ] Kamili mtihani wa baada ya somo na kuelewa dhana za maendeleo ya michezo
+- [ ] Pangilia muundo wa mradi wa mchezo wako na faili za HTML, CSS, na JavaScript
+- [ ] Tengeneza mzunguko wa msingi wa mchezo unaosasisha na kuonyesha kwa kuendelea
+- [ ] Chora sprite zako za kwanza za mchezo kwenye canvas
+- [ ] Tekeleza upakiaji wa mali za msingi kwa picha na sauti
+
+### 📅 **Uundaji Wako wa Mchezo wa Wiki Nzima**
+- [ ] Kamili mchezo kamili wa anga na vipengele vyote vilivyopangwa
+- [ ] Ongeza michoro ya kupendeza, athari za sauti, na uhuishaji laini
+- [ ] Tekeleza hali za mchezo (skrini ya kuanza, mchezo, mchezo umekamilika)
+- [ ] Tengeneza mfumo wa alama na ufuatiliaji wa maendeleo ya mchezaji
+- [ ] Fanya mchezo wako uwe mzuri na wa kufikika kwa vifaa mbalimbali
+- [ ] Shiriki mchezo wako mtandaoni na ukusanye maoni kutoka kwa wachezaji
+
+### 🌟 **Maendeleo Yako ya Mchezo wa Mwezi**
+- [ ] Tengeneza michezo mingi ikichunguza aina na mbinu mbalimbali
+- [ ] Jifunze mfumo wa maendeleo ya mchezo kama Phaser au Three.js
+- [ ] Changia katika miradi ya maendeleo michezo ya chanzo wazi
+- [ ] Tambua mifumo ya hali ya juu ya programu za mchezo na uboreshaji
+- [ ] Tengeneza jalada linaloonyesha ujuzi wako wa maendeleo ya mchezo
+- [ ] Fundisha wengine wanaopenda maendeleo ya michezo na vyombo vya mwingiliano
+
+## 🎯 Ratiba Yako ya Utaalamu wa Maendeleo ya Mchezo
+
+```mermaid
+timeline
+    title Muendelezo wa Kujifunza Miundo ya Mchezo
+    
+    section Mifumo ya Vitu (dakika 20)
+        Mpangilio wa Msimbo: Urithi wa darasa
+                         : Mifumo ya muundo
+                         : Kazi za kiwanda
+                         : Mchanganyiko wa tabia
+        
+    section Mifumo ya Mawasiliano (dakika 25)
+        Muundo wa Tukio: Utekelezaji wa Pub/Sub
+                          : Ubunifu wa ujumbe
+                          : Watoa matukio
+                          : Uunganishaji mwepesi
+        
+    section Ubunifu wa Vitu vya Mchezo (dakika 30)
+        Mifumo ya Kitu: Usimamizi wa mali
+                      : Muundo wa tabia
+                      : Usimamizi wa hali
+                      : Usimamizi wa mzunguko wa maisha
+        
+    section Mifumo ya Miundo (dakika 35)
+        Ubunifu wa Mfumo: Mifumo ya vipengele
+                     : Mfano wa mtazamaji
+                     : Mfano wa amri
+                     : Mashine za hali
+        
+    section Dhana Zinazoendelea (dakika 45)
+        Muundo Unaoweza Kupanuka: Uboreshaji wa utendaji
+                             : Usimamizi wa kumbukumbu
+                             : Ubunifu wa moduli
+                             : Mikakati ya upimaji
+        
+    section Dhana za Injini ya Mchezo (wiki 1)
+        Maendeleo ya Kitaalamu: Grafu za mandhari
+                                 : Usimamizi wa mali
+                                 : Mipangilio ya uchoraji
+                                 : Muungano wa fizikia
+        
+    section Ustadi wa Mfumo wa Kazi (wiki 2)
+        Maendeleo ya Moderni ya Mchezo: Mifumo ya mchezo ya React
+                               : Uboreshaji wa Canvas
+                               : Misingi ya WebGL
+                               : Michezo ya PWA
+        
+    section Mbinu za Viwanda (mwezi 1)
+        Ujuzi wa Kitaalamu: Ushirikiano wa timu
+                           : Mapitio ya msimbo
+                           : Mifumo ya muundo wa mchezo
+                           : Uchanganuzi wa utendaji
+```
+### 🛠️ Muhtasari wa Kifaa Chako cha Usanifu wa Mchezo
+
+Baada ya kumaliza somo hili, sasa una:
+- **Utaalamu wa Mtindo wa Ubunifu**: Uelewa wa faida na hasara za urithi dhidi ya muundo
+- **Usanifu Unaotegemea Matukio**: Utekelezaji wa pub/sub kwa mawasiliano yanayoweza kupanuka
+- **Ubunifu Unaotegemea Vitu**: Mitishamba ya madaraja na mchanganyiko wa tabia
+- **JavaScript ya Kisasa**: Kifaa cha kiwanda, sintaksia ya spread, na mifumo ya ES6+
+- **Usanifu Unaoweza Kupanuka**: Ufungamano mpanao na kanuni za muundo wa moduli
+- **Msingi wa Maendeleo ya Mchezo**: Mfumo wa vitu na mifumo ya vipengele
+- **Mifumo ya Kitaalamu**: Mbinu za viwango vya tasnia za kupanga msimbo
+
+**Matumizi Halisi**: Mifumo hii hutumika moja kwa moja kwa:
+- **Mifumo ya Mbele**: Usanifu wa vipengele vya React/Vue na usimamizi wa hali
+- **Huduma Za Nyuma**: Mawasiliano ya microservice na mifumo inayoendeshwa na matukio
+- **Maendeleo ya Simu**: Usanifu wa app za iOS/Android na mifumo ya arifa
+- **Mifumo ya Mchezo**: Unity, Unreal, na maendeleo ya michezo ya mtandao
+- **Programu za Biashara**: Chanzo cha tukio na usanifu wa mifumo iliyoenea
+- **Ubunifu wa API**: Huduma za RESTful na mawasiliano ya wakati halisi
+
+**Ujuzi wa Kitaalamu Uliopatikana**: Sasa unaweza:
+- **Kubuni** usanifu wa programu unaoweza kupanuka kwa kutumia mifumo iliyothibitishwa
+- **Tekeleza** mifumo inayotegemea matukio inayoshughulikia mwingiliano tata
+- **Chagua** mikakati inayofaa ya kupanga msimbo kwa hali tofauti
+- **Rekebisha** na kudumisha mifumo isiyofungwa kwa ufanisi
+- **Wasiliana** maamuzi ya kiufundi kwa kutumia istilahi za viwango vya tasnia
+
+**Kiwango Kijacho**: Uko tayari kutekeleza mifumo hii katika mchezo halisi, kuchunguza mada za maendeleo ya mchezo yaliyo wazi, au kutumia dhana hizi za usanifu kwenye programu za wavuti!
+
+🌟 **Mafanikio Yapotekwa**: Umejifunza mifumo ya msingi ya usanifu wa programu inayoiwezesha kutoka michezo rahisi hadi mifumo tata ya biashara!
+
+## Kazi ya Nyumba
+
+[Tengeneza mfano wa mchezo](assignment.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kiarifu cha Msamaha**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au kushindwa kutoa maana kamili. Hati asili kwa lugha yake ya mama inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatuwezi kuwajibika kwa kutoelewana au tafsiri mbaya zitokanazo na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

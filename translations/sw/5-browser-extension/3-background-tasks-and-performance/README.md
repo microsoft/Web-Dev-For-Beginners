@@ -1,163 +1,332 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "eb358f3f4c2c082f9f3a4f98efa1d337",
-  "translation_date": "2025-10-24T19:44:25+00:00",
+  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
+  "translation_date": "2026-01-07T01:45:23+00:00",
   "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
   "language_code": "sw"
 }
 -->
-# Mradi wa Kiendelezi cha Kivinjari Sehemu ya 3: Jifunze Kuhusu Kazi za Nyuma na Utendaji
+# Mradi wa Kiongezi cha Kivinjari Sehemu ya 3: Jifunze Kuhusu Majukumu ya Nyuma na Utendaji
 
-Umewahi kujiuliza ni nini hufanya baadhi ya viendelezi vya kivinjari kuhisi haraka na vyenye mwitikio huku vingine vikionekana kuwa polepole? Siri iko katika kile kinachotokea nyuma ya pazia. Wakati watumiaji wanabonyeza kwenye kiolesura cha kiendelezi chako, kuna ulimwengu mzima wa michakato ya nyuma inayosimamia upatikanaji wa data, masasisho ya ikoni, na rasilimali za mfumo kwa utulivu.
+```mermaid
+journey
+    title Safari Yako ya Kuboresha Utendaji
+    section Msingi
+      Jifunze zana za kivinjari: 3: Student
+      Elewa upimaji: 4: Student
+      Tambua vikwazo: 4: Student
+    section Vipengele vya Ongezeko
+      Jenga mfumo wa rangi: 4: Student
+      Unda kazi za nyuma: 5: Student
+      Sasisha alama kwa nguvu: 5: Student
+    section Uboreshaji
+      Simamia utendaji: 5: Student
+      Rekebisha matatizo: 4: Student
+      Pamba uzoefu: 5: Student
+```
+Umewahi kujiuliza ni nini kinachofanya baadhi ya viongezi vya kivinjari kuonekana vya kasi na vya majibu wakati vingine vinaonekana vya polepole? Siri iko katika kile kinachotokea nyuma ya pazia. Wakati watumiaji wanabofya katika kiolesura cha kiongezi chako, kuna ulimwengu mzima wa michakato ya nyuma ambayo hushughulikia kwa utulivu upokeaji wa data, sasisho za ikoni, na rasilimali za mfumo.
 
-Hii ni somo letu la mwisho katika mfululizo wa viendelezi vya kivinjari, na tunakwenda kufanya kifuatiliaji chako cha alama ya kaboni kifanye kazi kwa urahisi. Utaongeza masasisho ya ikoni ya nguvu na kujifunza jinsi ya kugundua masuala ya utendaji kabla hayajawa matatizo. Ni kama kurekebisha gari la mbio - marekebisho madogo yanaweza kufanya tofauti kubwa katika jinsi kila kitu kinavyofanya kazi.
+Hii ni somo letu la mwisho katika mfululizo wa viongezi vya kivinjari, na tutaifanya kipima alama cha kaboni kiende kwa ufanisi. Utaongeza sasisho za ikoni zinazobadilika na kujifunza jinsi ya kutambua matatizo ya utendaji kabla hayajawa shida. Ni kama kusawazisha gari la mbio - marekebisho madogo yanaweza kufanya tofauti kubwa katika jinsi kila kitu kinavyoendeshwa.
 
-Tunapomaliza, utakuwa na kiendelezi kilichosafishwa na kuelewa kanuni za utendaji zinazotofautisha programu za wavuti nzuri na zile bora. Hebu tuzame katika ulimwengu wa uboreshaji wa kivinjari.
+Mara tutakapomaliza, utakuwa na kiongezi kilichosafishwa na utaelewa kanuni za utendaji zinazotenganisha programu za wavuti nzuri na bora. Tuchimbue ulimwengu wa uboreshaji wa kivinjari.
 
-## Maswali ya Kabla ya Somo
+## Mtihani wa Kabla ya Somo
 
-[Maswali ya kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/27)
+[Mtihani wa kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/27)
 
 ### Utangulizi
 
-Katika masomo yetu ya awali, ulijenga fomu, ukaunganisha na API, na ukashughulikia upatikanaji wa data usio wa moja kwa moja. Kiendelezi chako kinachukua sura vizuri.
+Katika masomo yetu ya awali, ulijenga fomu, ukaunganisha na API, na kushughulikia upokeaji wa data usio sawa wa wakati. Kiongezi chako kiko katika hatua nzuri ya kuundwa.
 
-Sasa tunahitaji kuongeza ukamilifu - kama kufanya ikoni ya kiendelezi hicho ibadilishe rangi kulingana na data ya kaboni. Hii inanikumbusha jinsi NASA ilivyolazimika kuboresha kila mfumo kwenye chombo cha Apollo. Hawakuweza kumudu mizunguko au kumbukumbu iliyopotea kwa sababu maisha yalitegemea utendaji. Ingawa kiendelezi chetu cha kivinjari si muhimu kiasi hicho, kanuni zile zile zinatumika - msimbo mzuri huunda uzoefu bora wa mtumiaji.
+Sasa tunahitaji kuongeza matokeo ya mwisho - kama kufanya ikoni ya kiongezi kubadilisha rangi kulingana na data ya kaboni. Hii inanifanya nikumbuke jinsi NASA ilivyolazimika kuboresha kila mfumo kwenye chombo cha angani cha Apollo. Hawakuweza kupoteza mizunguko au kumbukumbu kwa sababu maisha yaliweza kutegemea utendaji. Ingawa kiongezi chetu cha kivinjari siyo muhimu sana hivyo, kanuni sawa zinatumika - msimbo mzuri hutoa uzoefu bora kwa mtumiaji.
 
+```mermaid
+mindmap
+  root((Utendaji na Kazi za Mandhari))
+    Browser Performance
+      Rendering Pipeline
+      Asset Optimization
+      DOM Manipulation
+      JavaScript Execution
+    Profiling Tools
+      Developer Tools
+      Performance Tab
+      Timeline Analysis
+      Bottleneck Detection
+    Extension Architecture
+      Background Scripts
+      Content Scripts
+      Message Passing
+      Icon Management
+    Optimization Strategies
+      Code Splitting
+      Lazy Loading
+      Caching
+      Resource Compression
+    Visual Feedback
+      Dynamic Icons
+      Color Coding
+      Real-time Updates
+      User Experience
+```
 ## Misingi ya Utendaji wa Wavuti
 
-Wakati msimbo wako unafanya kazi kwa ufanisi, watu wanaweza *kuhisi* tofauti. Unajua wakati ambapo ukurasa unapakia mara moja au uhuishaji unafanyika kwa urahisi? Huo ni utendaji mzuri kazini.
+Wakati msimbo wako unafanya kazi kwa ufanisi, watu wanaweza hata *kuhisi* tofauti. Unajua wakati huo ambapo ukurasa unapakia mara moja au uhuishaji unaflow vizuri? Hiyo ni utendaji mzuri ukiwa kazini.
 
-Utendaji si tu kuhusu kasi - ni kuhusu kuunda uzoefu wa wavuti unaohisi wa asili badala ya kuwa wa kusumbua na wa kufadhaisha. Katika siku za mwanzo za kompyuta, Grace Hopper maarufu alihifadhi nanosekondi (kipande cha waya chenye urefu wa futi moja) kwenye dawati lake kuonyesha jinsi mwanga unavyosafiri kwa sekunde bilioni moja. Ilikuwa njia yake ya kuelezea kwa nini kila mikrosekondi ni muhimu katika kompyuta. Hebu tuchunguze zana za upelelezi zinazokusaidia kugundua kinachochelewesha mambo.
+Utendaji siyo tu kuhusu kasi - ni kuhusu kutengeneza uzoefu wa wavuti unaohisi kuwa wa asili badala ya usumbufu na shida. Zamani katika siku za mwanzo za kompyuta, Grace Hopper alihifadhi kipande cha waya chenye urefu wa sentimita moja mezani mwake kuonyesha jinsi mwanga unavyosafiri katika nanosekunde moja (sehemu ya sekunde bilioni moja). Hii ilikuwa njia yake ya kuelezea kwa nini kila mikrosekunde ni muhimu katika kompyuta. Tuchunguze zana za uchunguzi zinazokusaidia kugundua kinachosababisha kucheleweshwa.
 
-> "Utendaji wa wavuti ni kuhusu mambo mawili: jinsi ukurasa unavyopakia haraka, na jinsi msimbo wake unavyofanya kazi haraka." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
+> "Utendaji wa tovuti unahusu mambo mawili: jinsi ukurasa unavyopakuliwa kwa haraka, na jinsi msimbo unavyokimbia haraka." -- [Zack Grossbart](https://www.smashingmagazine.com/2012/06/javascript-profiling-chrome-developer-tools/)
 
-Mada ya jinsi ya kufanya tovuti zako ziwe haraka sana kwenye aina zote za vifaa, kwa aina zote za watumiaji, katika hali zote, bila shaka ni pana. Hapa kuna mambo ya kuzingatia unapoijenga mradi wa kawaida wa wavuti au kiendelezi cha kivinjari.
+Mada ya jinsi ya kufanya tovuti zako ziwe za kasi sana katika vifaa vyote aina mbalimbali, kwa watumiaji wote, katika hali zote za mazingira, haishangazi kuwa ni pana sana. Hapa kuna mambo ya kuzingatia unapojenga mradi wa wavuti wa kawaida au kiongezi cha kivinjari.
 
-Hatua ya kwanza ya kuboresha tovuti yako ni kuelewa kinachotokea kwa kweli nyuma ya pazia. Kwa bahati nzuri, kivinjari chako kina zana za upelelezi zenye nguvu zilizojengwa ndani.
+Hatua ya kwanza katika kuboresha tovuti yako ni kuelewa kinachotokea kweli chini ya pazia. Bahati nzuri, kivinjari chako kina zana za uchunguzi zilizo na nguvu zaidi ndani yake.
 
-Ili kufungua Zana za Watengenezaji katika Edge, bonyeza zile nukta tatu juu kulia, kisha nenda kwenye Zana Zaidi > Zana za Watengenezaji. Au tumia njia ya mkato ya kibodi: `Ctrl` + `Shift` + `I` kwenye Windows au `Option` + `Command` + `I` kwenye Mac. Ukishafika hapo, bonyeza kichupo cha Utendaji - hapa ndipo utakapofanya uchunguzi wako.
+```mermaid
+flowchart LR
+    A[HTML] --> B[Parsia]
+    B --> C[Mti wa DOM]
+    D[CSS] --> E[Parsia]
+    E --> F[CSSOM]
+    G[JavaScript] --> H[Tekeleza]
+    
+    C --> I[Mti wa Uwasilishaji]
+    F --> I
+    H --> I
+    
+    I --> J[Mpangilio]
+    J --> K[Paka]
+    K --> L[Muunganiko]
+    L --> M[Onyesha]
+    
+    subgraph "Njia Muhimu ya Uwasilishaji"
+        N["1. Parsia HTML"]
+        O["2. Parsia CSS"]
+        P["3. Tekeleza JS"]
+        Q["4. Tengeneza Mti wa Uwasilishaji"]
+        R["5. Pangilia Vitu"]
+        S["6. Paka Piksela"]
+        T["7. Muunganiko wa Tabaka"]
+    end
+    
+    style M fill:#e8f5e8
+    style I fill:#fff3e0
+    style H fill:#ffebee
+```
+Ili kufungua Zana za Wavumbuzi katika Edge, bonyeza vidoti vitatu hapo juu kulia, kisha nenda kwenye More Tools > Developer Tools. Au tumia njia ya keyboard: `Ctrl` + `Shift` + `I` kwenye Windows au `Option` + `Command` + `I` kwenye Mac. Ukifika hapo, bonyeza kichupo cha Performance - hapa ndipo utafanya uchunguzi wako.
 
-**Hii ndiyo zana yako ya upelelezi wa utendaji:**
-- **Fungua** Zana za Watengenezaji (utazitumia mara kwa mara kama mtengenezaji!)
-- **Nenda** kwenye kichupo cha Utendaji - fikiria kama kifuatiliaji cha usawa wa programu yako ya wavuti
-- **Bonyeza** kitufe cha Rekodi na tazama ukurasa wako ukifanya kazi
-- **Chunguza** matokeo ili kugundua kinachochelewesha mambo
+**Hapa kuna jumla ya zana zako za kufuatilia utendaji:**
+- **Fungua** Zana za Wavumbuzi (utazitumia mara kwa mara kama msanidi programu!)
+- **Nenda** kwenye kichupo cha Performance - fikiria kama kichunguzi cha mazoezi cha programu yako ya wavuti
+- **Bonyeza** kitufe cha Record na ukae uangalie ukurasa ukiendesha
+- **Chunguza** matokeo kugundua kinachosababisha ucheleweshaji
 
-Hebu jaribu hili. Fungua tovuti (Microsoft.com inafanya kazi vizuri kwa hili) na bonyeza kitufe cha 'Rekodi'. Sasa fresha ukurasa na tazama profaili ikikamata kila kitu kinachotokea. Unapomaliza kurekodi, utaona muhtasari wa kina wa jinsi kivinjari kinavyofanya 'scripts', 'renders', na 'paints' tovuti. Inanikumbusha jinsi udhibiti wa misheni unavyofuatilia kila mfumo wakati wa uzinduzi wa roketi - unapata data ya wakati halisi juu ya kinachotokea na lini.
+Tujaribu hili. Fungua tovuti (Microsoft.com inafanya kazi vizuri) na bonyeza kitufe cha 'Record'. Sasa refreshing ukurasa na angalia profaaili ikichukua kila kinachoendelea. Ukimaliza kurekodi, utaona maelezo ya kina ya jinsi kivinjari kinavyofanya 'scripts', 'renders', na 'paints' tovuti. Inanikumbusha jinsi kituo cha udhibiti cha misheni kinavyofuata kila mfumo wakati wa uzinduzi wa roketi - unapata data halisi kwa wakati halisi kuhusu kinachotokea na lini.
 
-✅ [Nyaraka za Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) zina maelezo mengi zaidi ikiwa unataka kuchimba zaidi
+![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.sw.png)
 
-> Kidokezo cha kitaalamu: Futa akiba ya kivinjari chako kabla ya kupima ili kuona jinsi tovuti yako inavyofanya kazi kwa wageni wa mara ya kwanza - kawaida ni tofauti sana na ziara za kurudia!
+✅ [Hati ya Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) ina maelezo mengi zaidi ikiwa unataka kifahamike zaidi
 
-Chagua vipengele vya muda wa profaili ili kukuza matukio yanayotokea wakati ukurasa wako unapakia.
+> Ushauri wa Pro: Safisha cache ya kivinjari chako kabla ya kujaribu kuona jinsi tovuti yako inavyofanya kazi kwa wageni wa mara ya kwanza - mara nyingi ni tofauti na ziara za kurudia!
 
-Pata muhtasari wa utendaji wa ukurasa wako kwa kuchagua sehemu ya muda wa profaili na kuangalia jopo la muhtasari:
+Chagua vipengele vya ratiba ya profaili kupanua matukio yanayotokea wakati ukurasa wako unapakia.
 
-![Muhtasari wa profaili ya Edge](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.sw.png)
+Pata picha ya utendaji wa ukurasa wako kwa kuchagua sehemu ya ratiba ya profaili na kuangalia dirisha la muhtasari:
 
-Angalia jopo la Kumbukumbu ya Matukio ili kuona kama tukio lolote lilichukua zaidi ya ms 15:
+![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.sw.png)
 
-![Kumbukumbu ya matukio ya Edge](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.sw.png)
+Angalia dirisha la Log la Tukio kuona kama tukio lolote limechukua zaidi ya ms 15:
 
-✅ Jifunze profaili yako! Fungua zana za watengenezaji kwenye tovuti hii na uone kama kuna vizuizi. Ni rasilimali gani inayopakia polepole zaidi? Haraka zaidi?
+![Edge event log](../../../../translated_images/log.804026979f3707e0.sw.png)
 
-## Nini cha Kuangalia Unapofanya Profaili
+✅ Jifunze profaaili yako! Fungua zana za msanidi kwenye tovuti hii na ona kama kuna vikwazo yoyote. Nini ni mali ambayo inapakia polepole zaidi? Haraka zaidi?
 
-Kuendesha profaili ni mwanzo tu - ujuzi halisi ni kujua kile grafu za rangi zinakuambia. Usijali, utazoea kuzisoma. Watengenezaji wenye uzoefu wamejifunza kugundua ishara za onyo kabla hazijawa matatizo makubwa.
+```mermaid
+flowchart TD
+    A[Fungua DevTools] --> B[Elekea Kichupo cha Utendaji]
+    B --> C[Bofya Kitufe cha Kurekodi]
+    C --> D[Fanya Vitendo]
+    D --> E[Acha Kurekodi]
+    E --> F{Chambua Matokeo}
+    
+    F --> G[Angalia Mstari wa Muda]
+    F --> H[Angalia Mtandao]
+    F --> I[Tazama Skripti]
+    F --> J[Tambua Matukio ya Uchoraji]
+    
+    G --> K{Kazi Ndefu?}
+    H --> L{Mali Kubwa?}
+    I --> M{Kuzuia Uchoraji?}
+    J --> N{Uchoraji Mghali?}
+    
+    K -->|Ndiyo| O[Boresha JavaScript]
+    L -->|Ndiyo| P[Finyaza Mali]
+    M -->|Ndiyo| Q[Ongeza Async/Defer]
+    N -->|Ndiyo| R[Rahisisha Mitindo]
+    
+    O --> S[Jaribu Tena]
+    P --> S
+    Q --> S
+    R --> S
+    
+    style A fill:#e1f5fe
+    style F fill:#fff3e0
+    style S fill:#e8f5e8
+```
+## Nini cha Kuutafuta Unapotengeneza Profaili
 
-Hebu tuzungumze kuhusu wahalifu wa kawaida - matatizo ya utendaji yanayopenda kujificha kwenye miradi ya wavuti. Kama jinsi Marie Curie alivyolazimika kufuatilia viwango vya mionzi kwa uangalifu katika maabara yake, tunahitaji kuangalia mifumo fulani inayonyesha matatizo yanayokuja. Kuyagundua mapema kutakuokoa (na watumiaji wako) kutoka kwa kufadhaika.
+Kukimbia profaaili ni mwanzo tu - ujuzi wa kweli ni kujua kile chati za rangi kinakokufahamisha kweli. Usijali, utajifunza kuzi soma. Wasanidi programu wenye uzoefu wamejifunza kugundua ishara za onyo kabla hazijawa matatizo makubwa.
 
-**Ukubwa wa rasilimali**: Tovuti zimekuwa "nzito" zaidi kwa miaka, na uzito mwingi wa ziada unatokana na picha. Ni kama tumekuwa tukijaza zaidi na zaidi kwenye masanduku yetu ya kidijitali.
+Tuzungumze kuhusu walaghai wa kawaida - waumbaji wa matatizo ya utendaji wanaojaribu kuingia kwenye miradi ya wavuti. Kama Marie Curie alivyolazimika kufuatilia kwa makini viwango vya mionzi maabara yake, tunahitaji kuangalia mifumo fulani inayoashiria matatizo yanayokuja. Kukamata haya mapema kutakuokoa wewe (na watumiaji wako) msongo mkubwa.
 
-✅ Angalia [Arki ya Mtandao](https://httparchive.org/reports/page-weight) ili kuona jinsi ukubwa wa kurasa umekua kwa muda - ni wazi sana.
+**Ukubwa wa mali**: Tovuti zimekuwa 'nzito' zaidi kwa miaka, na uzito huo mwingi unatokana na picha. Ni kama tunajaza mzigo mwingi zaidi kwenye mifuko yetu ya kidijitali.
 
-**Hivi ndivyo unavyoweza kuweka rasilimali zako zikiwa bora:**
-- **Banisha** picha hizo! Miundo ya kisasa kama WebP inaweza kupunguza ukubwa wa faili kwa kiasi kikubwa
-- **Toa** saizi sahihi ya picha kwa kila kifaa - hakuna haja ya kutuma picha kubwa za desktop kwa simu
-- **Punguza** CSS na JavaScript yako - kila byte ni muhimu
-- **Tumia** upakiaji wa polepole ili picha zipakie tu wakati watumiaji wanapozisogeza
+✅ Angalia [Internet Archive](https://httparchive.org/reports/page-weight) kuona jinsi ukubwa wa kurasa umeongezeka kwa muda - ni wazi sana.
 
-**Uchambuzi wa DOM**: Kivinjari kinapaswa kujenga Mfano wa Kitu cha Nyaraka kulingana na msimbo unaoandika, kwa hivyo ni kwa maslahi ya utendaji mzuri wa ukurasa kuweka lebo zako kwa kiwango cha chini, ukitumia na kuunda tu kile kinachohitajika na ukurasa. Kwa hatua hii, CSS ya ziada inayohusiana na ukurasa inaweza kuboreshwa; mitindo inayohitajika kutumika tu kwenye ukurasa mmoja haitahitaji kujumuishwa kwenye karatasi kuu ya mitindo, kwa mfano.
+**Hapa ni jinsi ya kuendelea kuboresha mali zako:**
+- **Punguza ukubwa** wa picha hizo! Miundo ya kisasa kama WebP inaweza kupunguza faili kwa kiasi kikubwa
+- **Toa** picha nzuri kwa kifaa kila wakati - hakuna haja ya kutuma picha kubwa za desktop kwa simu
+- **Punguza** CSS na JavaScript yako - kila baiti ni muhimu
+- **Tumia** upakiaji wa polepole ili picha zipakuliwe tu watumiaji wanapozizama kwa msururu
 
-**Mikakati muhimu ya uboreshaji wa DOM:**
-- **Punguza** idadi ya vipengele vya HTML na viwango vya kuingiza
-- **Ondoa** sheria za CSS zisizotumika na unganisha karatasi za mitindo kwa ufanisi
+**Kupitia DOM**: Kivinjari kinapaswa kujenga Modeli ya Hati kulingana na msimbo unaoandika, hivyo ni kwa maslahi ya utendaji mzuri kuweka majina ya elemeni kuwa machache, kutumia na kupamba kile ukurasa unachohitaji tu. Hadi hapa, CSS nyingi zisizotumika zinazohusiana na ukurasa zinaweza kuboreshwa; mitindo inayohitaji kutumiwa ukurasa mmoja tu haipaswi kuingizwa kwenye karatasi kuu ya mitindo.
+
+**Mikakati muhimu ya kuboresha DOM:**
+- **Punguza** idadi ya vipengele vya HTML na viwango vya uingizaji
+- **Ondoa** sheria za CSS zisizotumika na umekanishaji wa karatasi za mitindo kwa ufanisi
 - **Panga** CSS kupakia tu kinachohitajika kwa kila ukurasa
-- **Unda** HTML kwa njia ya kimantiki kwa uchambuzi bora wa kivinjari
+- **Panga** HTML kwa maana bora kwa uchambuzi wa kivinjari
 
-**JavaScript**: Kila mtengenezaji wa JavaScript anapaswa kuangalia 'scripts' zinazozuia uchoraji ambazo lazima zipakie kabla ya DOM nyingine kuweza kuchambuliwa na kuchorwa kwenye kivinjari. Fikiria kutumia `defer` na scripts zako za ndani (kama inavyofanyika kwenye moduli ya Terrarium).
+**JavaScript**: Kila msanidi JavaScript anapaswa kuangalia kwa skripti zinazozuia upangaji kabla DOM inaweza kusafirishwa na kupakwa rangi kwenye kivinjari. Fikiria kutumia `defer` na skripti zako za umbali (kama inavyofanyika katika moduli ya Terrarium).
 
-**Mbinu za kisasa za uboreshaji wa JavaScript:**
-- **Tumia** sifa ya `defer` kupakia scripts baada ya uchambuzi wa DOM
-- **Tekeleza** kugawanya msimbo ili kupakia JavaScript inayohitajika tu
-- **Tumia** upakiaji wa polepole kwa utendaji usio wa muhimu
-- **Punguza** matumizi ya maktaba na mifumo mizito inapowezekana
+**Mbinu za kisasa za kuboresha JavaScript:**
+- **Tumia** sifa ya `defer` kupakia skripti baada ya uchambuzi wa DOM
+- **Tekeleza** kugawanya msimbo kupakia only JavaScript inayohitajika
+- **Tumia** upakiaji polepole kwa kazi zisizo muhimu mara moja
+- **Punguza** matumizi ya maktaba nzito na mifumo inapowezekana
 
-✅ Jaribu tovuti kadhaa kwenye [Tovuti ya Mtihani wa Kasi ya Tovuti](https://www.webpagetest.org/) ili kujifunza zaidi kuhusu ukaguzi wa kawaida unaofanywa ili kubaini utendaji wa tovuti.
+✅ Jaribu baadhi ya tovuti kwenye [Site Speed Test website](https://www.webpagetest.org/) kujifunza zaidi kuhusu ukaguzi wa kawaida unaofanywa kubaini utendaji wa tovuti.
 
-Sasa kwa kuwa una wazo la jinsi kivinjari kinavyotoa rasilimali unazotuma kwake, hebu tuangalie mambo ya mwisho unayohitaji kufanya ili kukamilisha kiendelezi chako:
+### 🔄 **Ukaguzi wa Mafunzo**
+**Uelewa wa Utendaji**: Kabla ya kujenga vipengele vya kiongezi, hakikisha unaweza:
+- ✅ Eleza njia muhimu ya uchoraji kutoka HTML hadi piksela
+- ✅ Tambua vikwazo vya utendaji vinavyotokea mara kwa mara katika programu za wavuti
+- ✅ Tumia zana za msanidi kivinjari kufuatilia utendaji wa ukurasa
+- ✅ Elewa jinsi ukubwa wa mali na ugumu wa DOM unavyoathiri kasi
+
+**Mtihani wa Haraka wa Kujijua**: Nini kinatokea wakati una JavaScript inayozuia upangaji?
+*Jibu: Kivinjari kinapaswa kupakua na kutekeleza script kabla ya kuendelea kusoma HTML na kuchora ukurasa*
+
+**Athari Halisi za Utendaji**:
+- **Kuchelewa kwa 100ms**: Watumiaji hutoa hisia ya kuchelewa
+- **Kuchelewa kwa sekunde 1**: Watumiaji huanza kupoteza umakini
+- **Zaidi ya sekunde 3**: 40% ya watumiaji wanasitiza kutumia ukurasa
+- **Mitandao ya simu**: Utendaji ni muhimu zaidi
+
+Sasa huku ukijua jinsi kivinjari kinavyopaka mali unazotuma, tazama vitu vya mwisho unavyohitaji kufanya kuimaliza kiongezi chako:
 
 ### Unda kazi ya kuhesabu rangi
 
-Sasa tutaunda kazi inayogeuza data ya nambari kuwa rangi zenye maana. Fikiria kama mfumo wa taa za barabarani - kijani kwa nishati safi, nyekundu kwa kiwango cha juu cha kaboni.
+Sasa tutaunda kazi inaygeuza data za nambari kuwa rangi zenye maana. Fikiri kama mfumo wa taa za barabarani - kijani kwa nishati safi, nyekundu kwa mwanga mkubwa wa kaboni.
 
-Kazi hii itachukua data ya CO2 kutoka API yetu na kuamua ni rangi gani inayoonyesha vyema athari za mazingira. Ni sawa na jinsi wanasayansi wanavyotumia mfumo wa rangi katika ramani za joto kuonyesha mifumo tata ya data - kutoka kwa joto la bahari hadi uundaji wa nyota. Hebu tuongeze hii kwenye `/src/index.js`, mara tu baada ya zile `const` tulizoanzisha awali:
+Kazi hii itachukua data za CO2 kutoka API yetu na kubaini ni rangi gani inayoashiria zaidi athari za mazingira. Ni kama walimu wa sayansi wanavyotumia rangi kwenye ramani za joto kuonesha mifumo tata ya data - kutoka joto la bahari hadi uundaji wa nyota. Tutaongeza hii kwa `/src/index.js`, mara tu baada ya zile `const` tunazoziongeza mapema:
 
+```mermaid
+flowchart LR
+    A[Thamani ya CO2] --> B[Tafuta Kiwango Karibu Zaidi]
+    B --> C[Pata Kielekezi cha Kiwango]
+    C --> D[Ramani kwa Rangi]
+    D --> E[Tuma kwa Mandharinyuma]
+    
+    subgraph "Kiwango cha Rangi"
+        F["0-150: Kijani (Safisha)"]
+        G["150-600: Njano (Kiwango cha Kati)"]
+        H["600-750: Machungwa (Kiwango cha Juu)"]
+        I["750+: Kahawia (Kiwango Sana Juu)"]
+    end
+    
+    subgraph "Ujumbe Kupitia"
+        J[Script ya Maudhui]
+        K[chrome.runtime.sendMessage]
+        L[Script ya Mandharinyuma]
+        M[Update ya Ikoni]
+    end
+    
+    style A fill:#e1f5fe
+    style D fill:#e8f5e8
+    style E fill:#fff3e0
+```
 ```javascript
 function calculateColor(value) {
-	// Define CO2 intensity scale (grams per kWh)
+	// Tambua kiwango cha mkazo wa CO2 (gramu kwa kWh)
 	const co2Scale = [0, 150, 600, 750, 800];
-	// Corresponding colors from green (clean) to dark brown (high carbon)
+	// Rangi zinazolingana kutoka kijani (safi) hadi kahawia kuu (oksijeni ya juu)
 	const colors = ['#2AA364', '#F5EB4D', '#9E4229', '#381D02', '#381D02'];
 
-	// Find the closest scale value to our input
+	// Tafuta thamani ya kiwango inayokaribia zaidi na ingizo letu
 	const closestNum = co2Scale.sort((a, b) => {
 		return Math.abs(a - value) - Math.abs(b - value);
 	})[0];
 	
 	console.log(`${value} is closest to ${closestNum}`);
 	
-	// Find the index for color mapping
+	// Tafuta nambari ya ramani ya rangi
 	const num = (element) => element > closestNum;
 	const scaleIndex = co2Scale.findIndex(num);
 
 	const closestColor = colors[scaleIndex];
 	console.log(scaleIndex, closestColor);
 
-	// Send color update message to background script
+	// Tuma ujumbe wa kusasisha rangi kwa script ya nyuma
 	chrome.runtime.sendMessage({ action: 'updateIcon', value: { color: closestColor } });
 }
 ```
 
-**Hebu tuchambue kazi hii ya busara:**
-- **Inaweka** safu mbili - moja kwa viwango vya CO2, nyingine kwa rangi (kijani = safi, kahawia = chafu!)
-- **Inapata** mechi ya karibu zaidi na thamani yetu halisi ya CO2 kwa kutumia upangaji wa safu
+**Hebu tuchambue kazi hii maridadi:**
+- **Inaanzisha** safu mbili - moja kwa viwango vya CO2, nyingine kwa rangi (kijani = safi, kahawia = chafu!)
+- **Inatafuta** thamani iliyo karibu zaidi na CO2 halisi kwa kutumia upangaji wa safu
 - **Inachukua** rangi inayolingana kwa kutumia njia ya findIndex()
-- **Inatuma** ujumbe kwa script ya nyuma ya Chrome na rangi yetu iliyochaguliwa
-- **Inatumia** maandishi ya kiolezo (hizo backticks) kwa muundo safi wa maandishi
-- **Inahifadhi** kila kitu kikiwa kimepangwa kwa tamko la const
+- **Inatuma** ujumbe kwa script ya nyuma ya Chrome yenye rangi tuliiyochagua
+- **Inatumia** literals za template (hizo nyota) kwa usafi zaidi wa muundo wa maneno
+- **Inahifadhi** kila kitu kwa utaratibu na maelezo ya const
 
-API ya `chrome.runtime` [API](https://developer.chrome.com/extensions/runtime) ni kama mfumo wa neva wa kiendelezi chako - inashughulikia mawasiliano yote ya nyuma ya pazia na kazi:
+`chrome.runtime` [API](https://developer.chrome.com/extensions/runtime) ni kama mfumo wa neva wa kiongezi chako - hushughulikia mawasiliano na majukumu ya nyuma ya pazia:
 
-> "Tumia API ya chrome.runtime kupata ukurasa wa nyuma, kurudisha maelezo kuhusu manifest, na kusikiliza na kujibu matukio katika maisha ya programu au kiendelezi. Unaweza pia kutumia API hii kubadilisha njia ya URL za jamaa kuwa URL zilizo na sifa kamili."
+> "Tumia chrome.runtime API kupata ukurasa wa nyuma, rudisha maelezo kuhusu hati, na sikiliza na jibu matukio katika mzunguko wa maisha wa app au kiongezi. Pia unaweza kutumia API hii kubadilisha njia za relative za URLs kuwa URLs kamili."
 
-**Kwa nini API ya Chrome Runtime ni muhimu:**
-- **Inaruhusu** sehemu tofauti za kiendelezi chako kuzungumza
-- **Inashughulikia** kazi za nyuma bila kufungia kiolesura cha mtumiaji
-- **Inasimamia** matukio ya maisha ya kiendelezi chako
-- **Inafanya** kupitisha ujumbe kati ya scripts kuwa rahisi sana
+**Kwa nini Chrome Runtime API ni ya kufaa sana:**
+- **Inaruhusu** sehemu tofauti za kiongezi chako kuwasiliana
+- **Inashughulikia** kazi za nyuma bila kuzuia kiolesura cha mtumiaji
+- **Inasimamia** matukio ya mzunguko wa maisha ya kiongezi chako
+- **Inafanya** upitishaji ujumbe kati ya script kuwa rahisi sana
 
-✅ Ikiwa unakijenga kiendelezi hiki cha kivinjari kwa Edge, inaweza kushangaza kwamba unatumia API ya chrome. Matoleo mapya ya kivinjari cha Edge yanaendesha injini ya kivinjari ya Chromium, kwa hivyo unaweza kutumia zana hizi.
+✅ Ikiwa unatengeneza kiongezi hiki cha kivinjari kwa Edge, inaweza kukushangaza kwamba unatumia API ya chrome. Mabadiliko ya kivinjari cha Edge yanatumia injini ya kivinjari cha Chromium, hivyo unaweza kutumia zana hizi.
 
-> **Kidokezo cha Kitaalamu**: Ikiwa unataka kufanya profaili ya kiendelezi cha kivinjari, fungua zana za watengenezaji kutoka ndani ya kiendelezi chenyewe, kwani ni kivinjari chake tofauti. Hii inakupa ufikiaji wa vipimo vya utendaji maalum vya kiendelezi.
+```mermaid
+architecture-beta
+    group browser(logos:chrome)[Kivinjari]
+    
+    service popup(logos:html5)[UI ya Popup] in browser
+    service content(logos:javascript)[Skripti ya Maudhui] in browser
+    service background(database)[Skripti ya Nyuma] in browser
+    service api(logos:api)[API ya Nje] in browser
+    
+    popup:R -- L:content
+    content:R -- L:background
+    background:T -- B:api
+    content:T -- B:api
+    
+    junction junctionCenter in browser
+    popup:R -- L:junctionCenter
+    junctionCenter:R -- L:background
+```
+> **Ushauri wa Pro**: Ikiwa ungependa kufuatilia kiongezi cha kivinjari, anza zana za msanidi kutoka ndani ya kiongezi chenyewe, kwani ni mfano tofauti wa kivinjari. Hii inakuwezesha kupata vipimo maalum vya utendaji wa kiongezi.
 
 ### Weka rangi ya ikoni ya msingi
 
-Kabla ya kuanza kupata data halisi, hebu tupe kiendelezi chetu mwanzo. Hakuna mtu anayependa kutazama ikoni tupu au inayovunjika. Tutaanza na rangi ya kijani ili watumiaji wajue kiendelezi kinafanya kazi mara tu wanapokisakinisha.
+Kabla ya kuanza kupokea data halisi, tupe kiongezi mwanzo mzuri. Hakuna anayependa kuangalia ikoni tupu au kuonekana imevunjika. Tutaanza na rangi ya kijani ili watumiaji wajue kiongezi kinafanya kazi mara wanapo kichukua.
 
-Katika kazi yako ya `init()`, hebu weka ikoni ya kijani ya msingi:
+Katika kazi yako ya `init()`, tuweke ikoni ya kijani kama ili ya msingi:
 
 ```javascript
 chrome.runtime.sendMessage({
@@ -168,105 +337,261 @@ chrome.runtime.sendMessage({
 });
 ```
 
-**Hii uanzishaji unakamilisha:**
-- **Inaweka** rangi ya kijani ya kawaida kama hali ya msingi
-- **Inatoa** maoni ya haraka ya kuona wakati kiendelezi kinapopakia
-- **Inaanzisha** muundo wa mawasiliano na script ya nyuma
-- **Inahakikisha** watumiaji wanaona kiendelezi kinachofanya kazi kabla ya data kupakia
-### Piga kazi, tekeleza wito
+**Huu mwanzo unayafanya ni:**
+- **Weka** rangi ya kijani isiyoegemea upande kama hali ya msingi
+- **Toa** mrejesho wa kuona mara moja wakati kiongezi kinapakia
+- **Anzisha** mtindo wa mawasiliano na script ya nyuma
+- **Hakikisha** watumiaji wanaona kiongezi kinachofanya kazi kabla data haijapakia
 
-Sasa hebu tuunganishe kila kitu pamoja ili kwamba data mpya ya CO2 inapokuja, ikoni yako ibadilike kiotomatiki na rangi sahihi. Ni kama kuunganisha mzunguko wa mwisho katika kifaa cha elektroniki - ghafla vipengele vyote vya mtu binafsi vinafanya kazi kama mfumo mmoja.
+### Piga simu kwa kazi, tekeleza simu
 
-Ongeza mstari huu mara tu baada ya kupata data ya CO2 kutoka API:
+Sasa tunganishe kila kitu pamoja ili kutokea data mpya ya CO2, ikoni yako ibadilishwe kiotomatiki na rangi sahihi. Ni kama kuunganisha mzunguko wa mwisho katika kifaa cha umeme - ghafla sehemu zote zinafanya kazi kama mfumo mmoja.
+
+Ongeza mstari huu mara baada ya kupata data ya CO2 kutoka API:
 
 ```javascript
-// After retrieving CO2 data from the API
-// let CO2 = data.data[0].intensity.actual;
+// Baada ya kupata data ya CO2 kutoka API
+// acha CO2 = data.data[0].intensity.actual;
 calculateColor(CO2);
 ```
 
-**Muunganiko huu unakamilisha:**
-- **Unaunganisha** mtiririko wa data ya API na mfumo wa kiashiria cha kuona
-- **Unasababisha** masasisho ya ikoni kiotomatiki wakati data mpya inafika
-- **Unahakikisha** maoni ya kuona ya wakati halisi kulingana na kiwango cha sasa cha kaboni
-- **Unadumisha** mgawanyo wa wasiwasi kati ya upatikanaji wa data na mantiki ya kuonyesha
+**Uunganisho huu unafanikisha:**
+- **Unganisha** mtiririko wa data ya API na mfumo wa kielekezi cha kuona
+- **Unda** sasisho la ikoni kiotomatiki wakati data mpya inapotokea
+- **Hakikisha** mrejesho wa kuona wa wakati halisi kulingana na mwanga wa kaboni wa sasa
+- **Dumisha** utofauti wa majukumu kati ya upokeaji wa data na mantiki ya onyesho
 
-Na hatimaye, katika `/dist/background.js`, ongeza msikilizaji wa simu hizi za hatua za nyuma:
+Na mwisho, katika `/dist/background.js`, ongeza msikilizaji kwa simu hizi za vitendo vya nyuma:
 
 ```javascript
-// Listen for messages from the content script
+// Sikiliza ujumbe kutoka kwa script ya maudhui
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.action === 'updateIcon') {
 		chrome.action.setIcon({ imageData: drawIcon(msg.value) });
 	}
 });
 
-// Draw dynamic icon using Canvas API
-// Borrowed from energy lollipop extension - nice feature!
+// Chora ikoni ya nguvu kwa kutumia API ya Canvas
+// Imekopwa kutoka kwenye extension ya energy lollipop - kipengele kizuri!
 function drawIcon(value) {
-	// Create an offscreen canvas for better performance
+	// Tengeneza canvas isiyoonyeshwa kwa utendaji bora
 	const canvas = new OffscreenCanvas(200, 200);
 	const context = canvas.getContext('2d');
 
-	// Draw a colored circle representing carbon intensity
+	// Chora duara lenye rangi linaloonyesha nguvu ya kaboni
 	context.beginPath();
 	context.fillStyle = value.color;
 	context.arc(100, 100, 50, 0, 2 * Math.PI);
 	context.fill();
 
-	// Return the image data for the browser icon
+	// Rudisha data ya picha kwa ikoni ya kivinjari
 	return context.getImageData(50, 50, 100, 100);
 }
 ```
 
-**Hii script ya nyuma inafanya:**
-- **Inasikiliza** ujumbe kutoka kwa script yako kuu (kama mpokeaji wa simu)
-- **Inashughulikia** maombi hayo ya 'updateIcon' kubadilisha ikoni ya zana yako
-- **Inaunda** ikoni mpya papo hapo kwa kutumia API ya Canvas
-- **Inachora** duara rahisi la rangi linaloonyesha kiwango cha sasa cha kaboni
-- **Inasasisha** zana ya kivinjari chako na ikoni mpya
-- **Inatumia** OffscreenCanvas kwa utendaji laini (hakuna kuzuia UI)
+**Hii ni kile script ya nyuma inachofanya:**
+- **Inasikiliza** ujumbe kutoka script yako kuu (kama mkaribishaji anapokea simu)
+- **Inashughulikia** maombi ya 'updateIcon' kubadilisha ikoni ya upau wa zana
+- **Inaunda** ikoni mpya moja kwa moja kwa kutumia Canvas API
+- **Inachora** mduara rahisi wenye rangi unaoonyesha mwanga wa kaboni wa sasa
+- **Inasasisha** upau wa zana wa kivinjari chako na ikoni mpya
+- **Inatumia** OffscreenCanvas kwa utendaji mzuri (hakuna kuzuia UI)
 
-✅ Utajifunza zaidi kuhusu API ya Canvas katika [Masomo ya Mchezo wa Anga](../../6-space-game/2-drawing-to-canvas/README.md).
+✅ Utajifunza zaidi kuhusu Canvas API katika masomo ya [Space Game](../../6-space-game/2-drawing-to-canvas/README.md).
 
-**Wakati wa kujaribu kiendelezi chako:**
-- **Jenga** kila kitu kwa `npm run build`
-- **Pakia upya** kiendelezi chako kwenye kivinjari (usisahau hatua hii)
-- **Fungua** kiendelezi chako na tazama ikoni hiyo ikibadilisha rangi
-- **Angalia** jinsi inavyoitikia data halisi ya kaboni kutoka kote ulimwenguni
+```mermaid
+sequenceDiagram
+    participant CS as Skripti ya Maudhui
+    participant BG as Skripti ya Kifahari
+    participant Canvas as OffscreenCanvas
+    participant Browser as Ikoni ya Kivinjari
+    
+    CS->>BG: sendMessage({action: 'updateIcon', color})
+    BG->>Canvas: new OffscreenCanvas(200, 200)
+    Canvas->>Canvas: getContext('2d')
+    Canvas->>Canvas: beginPath() + fillStyle + arc()
+    Canvas->>Canvas: fill() + getImageData()
+    Canvas->>BG: Rudisha data ya picha
+    BG->>Browser: chrome.action.setIcon(imageData)
+    Browser->>Browser: Sasisha ikoni ya zana
+```
+### 🔄 **Ukaguzi wa Mafunzo**
+**Uelewa Kamili wa Kiongezi**: Thibitisha ustadi wako wa mfumo mzima:
+- ✅ Ujumbe unavyopita kati ya script tofauti za kiongezi kazi yake ni gani?
+- ✅ Kwa nini tunatumia OffscreenCanvas badala ya Canvas ya kawaida kwa utendaji?
+- ✅ Ni jukumu gani la Chrome Runtime API katika usanifu wa upanuzi?
+- ✅ Je, algoriti ya hesabu ya rangi hupangaje data kwa mrejesho wa kuona?
 
-Sasa utajua kwa haraka ikiwa ni wakati mzuri wa kufua nguo au ikiwa unapaswa kusubiri nishati safi zaidi. Umejenga kitu chenye manufaa halisi na umejifunza kuhusu utendaji wa kivinjari njiani.
+**Mambo ya Kuzingatia Utendaji**: Upanuzi wako sasa unaonyesha:
+- **Ujumbe bora**: Mawasiliano safi kati ya muktadha wa maandishi
+- **Uchoraji ulioboreshwa**: OffscreenCanvas huzuia kuziba kwa UI
+- **Mabadiliko ya wakati halisi**: Mabadiliko ya icon yanayotegemea data za moja kwa moja
+- **Usimamizi wa kumbukumbu**: Usafishaji mzuri na usimamizi wa rasilimali
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+**Wakati wa kujaribu upanuzi wako:**
+- **Jenga** yote kwa `npm run build`
+- **Pakia upya** upanuzi wako kwenye kivinjari (usisahau hatua hii)
+- **Fungua** upanuzi wako na angalia icon ikibadilisha rangi
+- **Angalia** jinsi unavyotegemea data halisi za kaboni kutoka duniani kote
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+Sasa utajua kwa haraka kama ni wakati mzuri wa kufanya mzigo huo wa nguo au kama unapaswa kusubiri nishati safi. Umekuwa umejenga kitu kinachotumika kweli na kujifunza kuhusu utendaji wa kivinjari kwa njia hii.
 
-**Maelezo:** Boresha uwezo wa ufuatiliaji wa utendaji wa kiendelezi cha kivinjari kwa kuongeza kipengele kinachofuatilia na kuonyesha nyakati za upakiaji kwa vipengele tofauti vya kiendelezi.
+## Changamoto ya GitHub Copilot Agent 🚀
 
-**Kichocheo:** Unda mfumo wa ufuatiliaji wa utendaji kwa kiendelezi cha kivinjari kinachopima na kurekodi muda unaochukua kupata data ya CO2 kutoka API, kuhesabu rangi, na kusasisha ikoni. Ongeza kazi inayoitwa `performanceTracker` inayotumia API ya
-Hapa kuna misheni ya kuvutia ya upelelezi: chagua tovuti chache za chanzo huria ambazo zimekuwepo kwa miaka mingi (fikiri Wikipedia, GitHub, au Stack Overflow) na chunguza historia yao ya commit. Je, unaweza kugundua walipofanya maboresho ya utendaji? Ni matatizo gani yaliendelea kujitokeza?
+Tumia hali ya Agent kukamilisha changamoto ifuatayo:
+
+**Maelezo:** Boresha uwezo wa ufuatiliaji wa utendaji wa upanuzi wa kivinjari kwa kuongeza kipengele kinachofuatilia na kuonyesha nyakati za upakiaji kwa vipengele tofauti vya upanuzi.
+
+**Agizo:** Tengeneza mfumo wa ufuatiliaji wa utendaji kwa upanuzi wa kivinjari unaopima na kurekodi muda unaochukua kupata data za CO2 kutoka API, kuhesabu rangi, na kusasisha icon. Ongeza kazi inayoitwa `performanceTracker` inayotumia Performance API kupima michakato hii na kuonyesha matokeo kwenye konsoli ya kivinjari ikiwa na alama za muda na vipimo vya muda wa utekelezaji.
+
+Jifunze zaidi kuhusu [hali ya agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+
+## 🚀 Changamoto
+
+Hii ni misheni ya mshtuki ya kuvutia: chagua tovuti chache chanzo wazi ambazo zimekuwepo kwa miaka mingi (fikiria Wikipedia, GitHub, au Stack Overflow) na chunguza historia ya mabadiliko yao. Je, unaweza kugundua wapi walifanya maboresho ya utendaji? Ni matatizo gani yaliendelea kujitokeza?
 
 **Mbinu yako ya uchunguzi:**
-- **Tafuta** ujumbe wa commit kwa maneno kama "boresha," "utendaji," au "haraka"
-- **Angalia** mifumo - je, wanazidi kurekebisha aina zile zile za matatizo?
-- **Tambua** sababu za kawaida zinazochelewesha tovuti
-- **Shiriki** unachogundua - waendelezaji wengine hujifunza kutoka kwa mifano halisi
+- **Tafuta** ujumbe wa mabadiliko kwa maneno kama "boresha," "utendaji," au "haraka zaidi"
+- **Tazama** mifumo - je, wanaendelea kurekebisha aina sawa za matatizo?
+- **Tambua** wahusika wa kawaida wanaosababisha tovuti kupungua kasi
+- **Shiriki** kile unachogundua - waendelezaji wengine wajifunze kutoka kwa mifano halisi
 
-## Jaribio Baada ya Somo
+## Mtihani wa Baada ya Darasa
 
-[Jaribio baada ya somo](https://ff-quizzes.netlify.app/web/quiz/28)
+[Mtihani wa baada ya darasa](https://ff-quizzes.netlify.app/web/quiz/28)
 
-## Mapitio na Kujisomea
+## Tathmini & Kujisomea
 
-Fikiria kujisajili kwa [jarida la utendaji](https://perf.email/)
+Fikiria kujiandikisha kwa [jarida la utendaji](https://perf.email/)
 
-Chunguza baadhi ya njia ambazo vivinjari hupima utendaji wa wavuti kwa kuangalia kupitia tabo za utendaji katika zana zao za wavuti. Je, unapata tofauti kubwa?
+Chunguza baadhi ya njia ambazo vivinjari hupima utendaji wa mtandao kwa kupitia tabo za utendaji katika zana zao za mtandaoni. Je, unapata tofauti kubwa yoyote?
+
+### ⚡ **Kitu Unachoweza Kufanya Katika Dakika 5 Zijazo**
+- [ ] Fungua Meneja wa Kazi wa kivinjari (Shift+Esc katika Chrome) kuona matumizi ya rasilimali ya upanuzi
+- [ ] Tumia tabo ya Utendaji ya DevTools kurekodi na kuchambua utendaji wa ukurasa wa wavuti
+- [ ] Angalia ukurasa wa Upanuzi wa kivinjari kuona ni upanuzi gani unaathiri wakati wa kuanza
+- [ ] Jaribu kuzima upanuzi kwa muda kuona tofauti za utendaji
+
+### 🎯 **Kitu Unachoweza Kufanikisha Katika Saa Hii**
+- [ ] Kamilisha mtihani wa baada ya somo na kuelewa dhana za utendaji
+- [ ] Tekeleza script ya nyuma kwa upanuzi wako wa kivinjari
+- [ ] Jifunze kutumia browser.alarms kwa kazi za nyuma zilizo bora
+- [ ] Fanya mazoezi ya kupitisha ujumbe kati ya maandishi ya maudhui na maandishi ya nyuma
+- [ ] Pima na boresha matumizi ya rasilimali ya upanuzi wako
+
+### 📅 **Safari Yako ya Utendaji ya Wiki Moja**
+- [ ] Kamilisha upanuzi wa kivinjari wa utendaji wa hali ya juu uliyo na kazi za nyuma
+- [ ] Jifunze wafanyakazi wa huduma na usanifu wa kisasa wa upanuzi
+- [ ] Tekeleza mbinu bora za usawazishaji na uhifadhi wa data
+- [ ] Jifunze mbinu za hali ya juu za ufumbuzi hitilafu kwa utendaji wa upanuzi
+- [ ] Boreshaji upanuzi wako kwa kazi na ufanisi wa rasilimali
+- [ ] Tengeneza vipimo vya kina kwa hali za utendaji wa upanuzi
+
+### 🌟 **Utaalamu Wako wa Boresha wa Mwezi Mmoja**
+- [ ] Jenga upanuzi wa kivinjari wa kiwango cha biashara na utendaji bora
+- [ ] Jifunze kuhusu Web Workers, Service Workers, na utendaji wa wavuti wa kisasa
+- [ ] Changia miradi ya chanzo wazi inayolenga uboreshaji wa utendaji
+- [ ] Zawadi kwa undani wa kivinjari na mbinu za juu za ufumbuzi hitilafu
+- [ ] Tengeneza zana za ufuatiliaji wa utendaji na miongozo ya mbinu bora
+- [ ] Kuwa mtaalamu wa utendaji anayesaidia kuboresha programu za wavuti
+
+## 🎯 Muda Wako wa Utaalamu wa Upanuzi wa Kivinjari
+
+```mermaid
+timeline
+    title Maendeleo Kamili ya Maendeleo ya Ongeza
+    
+    section Misingi ya Utendaji (dakika 20)
+        Utoaji wa Vifaa vya Kivinjari: Ustadi wa DevTools
+                         : Uchambuzi wa mfululizo wa matukio
+                         : Utambuzi wa vikwazo
+                         : Njia muhimu ya uwasilishaji
+        
+    section Kazi za Usuli (dakika 25)
+        Miundo ya Ongeza: Ujumbe wa ujumbe
+                              : Skripti za usuli
+                              : Matumizi ya API ya muda wa utekelezaji
+                              : Mawasiliano ya muktadha wa msalaba
+        
+    section Maoni ya Kuona (dakika 30)
+        UI Inayoendelea: Algorithmi za hesabu za rangi
+                  : Uingizaji wa API ya Canvas
+                  : Uzalishaji wa icons
+                  : Sasisho za wakati halisi
+        
+    section Uboreshaji wa Utendaji (dakika 35)
+        Msimbo Bora: Mifumo ya async
+                      : Usimamizi wa kumbukumbu
+                      : Usafishaji wa rasilimali
+                      : Ufuatiliaji wa utendaji
+        
+    section Tayari kwa Uzalishaji (dakika 45)
+        Kupendeza & Kupima: Ulinganifu wa vivinjari vingi
+                        : Usimamizi wa makosa
+                        : Uzoefu wa mtumiaji
+                        : Uhakiki wa utendaji
+        
+    section Vipengele vya Juu (wiki 1)
+        Ekosistimu ya Ongeza: Duka la Chrome Web
+                           : Maoni ya watumiaji
+                           : Uingizaji wa uchambuzi
+                           : Usimamizi wa sasisho
+        
+    section Maendeleo ya Kitaalamu (wiki 2)
+        Ongeza za Biashara: Ushirikiano wa timu
+                             : Mapitio ya msimbo
+                             : Mifereji ya CI/CD
+                             : Ukaguzi wa usalama
+        
+    section Ustadi wa Mtaalamu (mwezi 1)
+        Utaalamu wa Jukwaa: API za juu za Chrome
+                          : Uboreshaji wa utendaji
+                          : Mifumo ya usanifu
+                          : Michango ya chanzo wazi
+```
+### 🛠️ Zana Kamili za Maendeleo ya Upanuzi Wako
+
+Baada ya kumaliza trilojia hii, sasa umebobea:
+- **Usanifu wa Kivinjari**: Uelewa wa kina wa jinsi upanuzi unavyoingiliana na mifumo ya kivinjari
+- **Uchambuzi wa Utendaji**: Uwezo wa kutambua na kurekebisha vizuizi kwa kutumia zana za msanidi
+- **Uandishi wa async**: Mitindo ya kisasa ya JavaScript kwa operesheni zisizozuia
+- **Uingiliano wa API**: Upataji wa data za nje kwa uthibitishaji na usimamizi wa makosa
+- **Ubunifu wa Picha**: Sasisho za UI zenye mabadiliko na uundaji wa michoro inayotegemea Canvas
+- **Upitishaji Ujumbe**: Mawasiliano kati ya maandishi katika usanifu wa upanuzi
+- **Uzoefu wa Mtumiaji**: Hali za upakiaji, usimamizi wa makosa, na mwingiliano wa asili
+- **Ujuzi wa Uzalishaji**: Vipimo, ufumbuzi hitilafu, na uboreshaji kwa matumizi halisi
+
+**Matumizi Halisi**: Ujuzi wako wa maendeleo ya upanuzi hutumika moja kwa moja kwa:
+- **Programu za Wavuti Zinazokua**: Usanifu na mifumo ya utendaji sawa
+- **Programu za Desktop za Electron**: Programu za mitandao ya mtandao kwa majukwaa mbalimbali
+- **Programu za Simu mchanganyiko**: Maendeleo ya Cordova/PhoneGap kwa API za wavuti
+- **Programu za Wavuti za Biashara**: Dashibodi ngumu na zana za uzalishaji
+- **Upanuzi wa Chrome DevTools**: Zana za hali ya juu za msanidi na ufumbuzi hitilafu
+- **Uingiliano wa API za Wavuti**: Programu yoyote inayozungumza na huduma za nje
+
+**Madhara ya Kitaalamu**: Sasa unaweza:
+- **Jenga** upanuzi wa kivinjari tayari kwa uzalishaji kutoka wazo hadi utekelezaji
+- **Boresha** utendaji wa programu za wavuti kwa kutumia zana za uchanganuzi za viwandani
+- **Panga** mifumo inayoweza kupanuka kwa mgawanyo mzuri wa majukumu
+- **Fumbua** operesheni za async ngumu na mawasiliano ya muktadha mseto
+- **Changia** miradi ya upanuzi wa chanzo wazi na viwango vya kivinjari
+
+**Fursa Zilizopo Next Level**:
+- **Mtaalamu wa Chrome Web Store**: Chapisha upanuzi kwa mamilioni ya watumiaji
+- **Mhandisi wa Utendaji wa Wavuti**: Kubobea katika uboreshaji na uzoefu wa mtumiaji
+- **Mtaalamu wa Jukwaa la Kivinjari**: Changia katika maendeleo ya injini za kivinjari
+- **Muumba wa Mfumo wa Upanuzi**: Tengeneza zana zinazosaidia waendelezaji wengine
+- **Mahusiano ya Wasanidi**: Sambaza maarifa kupitia ufundishaji na uundaji wa maudhui
+
+🌟 **Nafasi Imetangazwa**: Umejenga upanuzi wa kivinjari kamili, unaofanya kazi unaoonyesha mbinu za kitaalamu za maendeleo na viwango vya kisasa vya wavuti!
 
 ## Kazi
 
-[Chambua tovuti kwa utendaji](assignment.md)
+[Tathmini tovuti kwa utendaji](assignment.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Mazoea**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya utafiti wa lugha kwa AI [Co-op Translator](https://github.com/Azure/co-op-translator). Wakati tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokamilika. Hati ya asili kwa lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatubebwi dhamana kwa maana potofu au tafsiri mbaya inayotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -652,7 +652,7 @@ sequenceDiagram
 
 Menggunakan `history.pushState` menciptakan entri baru dalam riwayat navigasi browser. Anda dapat memeriksanya dengan menahan *tombol kembali* browser Anda, seharusnya menampilkan sesuatu seperti ini:
 
-![Screenshot riwayat navigasi](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.id.png)
+![Screenshot riwayat navigasi](../../../../translated_images/history.7fdabbafa521e064.id.png)
 
 Jika Anda mencoba mengklik tombol kembali beberapa kali, Anda akan melihat bahwa URL saat ini berubah dan riwayat diperbarui, tetapi template yang sama tetap ditampilkan.
 

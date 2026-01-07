@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Sketchnote Browser](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.id.jpg)
+![Sketchnote Browser](../../../../translated_images/browser.60317c9be8b7f84a.id.jpg)
 > Sketchnote oleh [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Kuis Pra-Pelajaran
@@ -79,7 +79,7 @@ Proses ini mencerminkan bagaimana browser web pertama, WorldWideWeb, dirancang o
 
 ✅ **Sedikit sejarah**: Browser pertama disebut 'WorldWideWeb' dan dibuat oleh Sir Timothy Berners-Lee pada tahun 1990.
 
-![browser awal](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.id.jpg)
+![browser awal](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.id.jpg)
 > Beberapa browser awal, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Bagaimana Browser Memproses Konten Web
@@ -198,7 +198,7 @@ quadrantChart
 
 Memahami proses pemasangan ekstensi membantu Anda mengantisipasi pengalaman pengguna saat mereka memasang ekstensi Anda. Proses pemasangan distandarisasi di browser modern, dengan variasi kecil dalam desain antarmuka.
 
-![tangkapan layar browser Edge yang menunjukkan halaman edge://extensions terbuka dan menu pengaturan terbuka](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.id.png)
+![tangkapan layar browser Edge yang menunjukkan halaman edge://extensions terbuka dan menu pengaturan terbuka](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.id.png)
 
 > **Penting**: Pastikan untuk mengaktifkan mode pengembang dan izinkan ekstensi dari toko lain saat menguji ekstensi Anda sendiri.
 
@@ -313,10 +313,10 @@ Ini mengikuti prinsip pengungkapan progresif yang digunakan dalam desain antarmu
 ### Ikhtisar Tampilan Ekstensi
 
 **Tampilan Pengaturan** - Konfigurasi pengguna pertama kali:
-![tangkapan layar ekstensi yang selesai terbuka di browser, menampilkan formulir dengan input untuk nama wilayah dan kunci API.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.id.png)
+![tangkapan layar ekstensi yang selesai terbuka di browser, menampilkan formulir dengan input untuk nama wilayah dan kunci API.](../../../../translated_images/1.b6da8c1394b07491.id.png)
 
 **Tampilan Hasil** - Tampilan data jejak karbon:
-![tangkapan layar ekstensi yang selesai menampilkan nilai penggunaan karbon dan persentase bahan bakar fosil untuk wilayah US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.id.png)
+![tangkapan layar ekstensi yang selesai menampilkan nilai penggunaan karbon dan persentase bahan bakar fosil untuk wilayah US-NEISO.](../../../../translated_images/2.1dae52ff08042246.id.png)
 
 ### Membuat Formulir Konfigurasi
 

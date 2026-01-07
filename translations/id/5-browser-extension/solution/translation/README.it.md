@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kita akan menggunakan API Signal CO2 dari tmrow untuk memantau penggunaan listrik dan membuat ekstensi browser agar dapat memberikan pengingat langsung di browser tentang seberapa besar penggunaan listrik di wilayah kita. Penggunaan ekstensi ini akan membantu mengevaluasi aktivitas kita berdasarkan informasi tersebut.
 
-![tangkapan layar ekstensi](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.id.png)
+![tangkapan layar ekstensi](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.id.png)
 
 ## Memulai
 
@@ -31,7 +31,7 @@ npm run build
 
 Untuk menginstal di Edge, gunakan menu "tiga titik" di sudut kanan atas browser untuk menemukan panel Ekstensi. Jika belum aktif, aktifkan Mode Pengembang (di bagian kiri bawah). Pilih "Muat tanpa kompresi" untuk memuat ekstensi baru. Buka folder "dist" saat diminta, dan ekstensi akan dimuat. Untuk menggunakannya, Anda memerlukan kunci API untuk API CO2 Signal (Anda dapat [memperolehnya melalui email di sini](https://www.co2signal.com/) - masukkan email Anda di kotak pada halaman tersebut) dan [kode untuk wilayah Anda](http://api.electricitymap.org/v3/zones) yang sesuai dengan [peta listrik](https://www.electricitymap.org/map) (misalnya, di Boston, "US-NEISO").
 
-![instalasi](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.id.png)
+![instalasi](../../../../../translated_images/install-on-edge.78634f02842c4828.id.png)
 
 Setelah kunci API dan wilayah dimasukkan ke dalam antarmuka ekstensi, titik berwarna di bilah ekstensi browser seharusnya berubah untuk mencerminkan penggunaan energi di wilayah tersebut dan memberikan petunjuk tentang aktivitas berenergi tinggi yang sesuai untuk dilakukan. Konsep di balik sistem "titik" ini terinspirasi oleh [ekstensi Energy Lollipop](https://energylollipop.com/) untuk emisi di California.
 

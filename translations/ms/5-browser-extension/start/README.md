@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Menggunakan API C02 Signal daripada tmrow untuk menjejak penggunaan elektrik, bina sambungan pelayar supaya anda boleh mendapat peringatan terus di pelayar anda tentang seberapa berat penggunaan elektrik di kawasan anda. Menggunakan sambungan ini secara ad hoc akan membantu anda membuat keputusan berdasarkan maklumat ini.
 
-![screenshot sambungan](../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.ms.png)
+![screenshot sambungan](../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ms.png)
 
 ## Memulakan
 
@@ -31,7 +31,7 @@ npm run build
 
 Untuk memasang pada Edge, gunakan menu 'tiga titik' di sudut kanan atas pelayar untuk mencari panel Sambungan. Dari situ, pilih 'Load Unpacked' untuk memuatkan sambungan baru. Buka folder 'dist' apabila diminta, dan sambungan akan dimuatkan. Untuk menggunakannya, anda memerlukan kunci API untuk API CO2 Signal ([dapatkan satu di sini melalui emel](https://www.co2signal.com/) - masukkan emel anda di kotak pada halaman ini) dan [kod untuk kawasan anda](http://api.electricitymap.org/v3/zones) yang sepadan dengan [Peta Elektrik](https://www.electricitymap.org/map) (contohnya, di Boston, saya menggunakan 'US-NEISO').
 
-![memasang](../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.ms.png)
+![memasang](../../../../translated_images/install-on-edge.78634f02842c4828.ms.png)
 
 Setelah kunci API dan kawasan dimasukkan ke dalam antara muka sambungan, titik berwarna di bar sambungan pelayar sepatutnya berubah untuk mencerminkan penggunaan tenaga di kawasan anda dan memberikan anda petunjuk tentang aktiviti berat tenaga yang sesuai untuk dilakukan. Konsep di sebalik sistem 'titik' ini diilhamkan oleh [sambungan Energy Lollipop](https://energylollipop.com/) untuk pelepasan di California.
 

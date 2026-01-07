@@ -1,207 +1,324 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "90b19cde5b79b29e91babd3138cd8035",
-  "translation_date": "2025-10-24T19:17:54+00:00",
+  "original_hash": "7f2c48e04754724123ea100a822765e5",
+  "translation_date": "2026-01-07T02:05:47+00:00",
   "source_file": "1-getting-started-lessons/3-accessibility/README.md",
   "language_code": "sw"
 }
 -->
-# Kuunda Kurasa za Wavuti Zinazoweza Kufikiwa
+# Kuunda Kurasa za Wavuti Zenye Ufikiaji Rahisi
 
-![Yote Kuhusu Ufikiaji](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.sw.png)
+![Yote Kuhusu Ufikiaji Rahisi](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.sw.png)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Maswali ya Awali ya Somo
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/)
+```mermaid
+journey
+    title Safari Yako ya Kujifunza Ufikiaji
+    section Msingi
+      Kuelewa Watumiaji: 5: You
+      Zana za Kupima: 4: You
+      Kanuni za POUR: 5: You
+    section Jenga Ujuzi
+      HTML ya Semantiki: 4: You
+      Ubunifu wa Kuona: 5: You
+      Mbinu za ARIA: 4: You
+    section Mazoezi ya Mtaalam
+      Urambazaji wa Kibodi: 5: You
+      Ufikiaji wa Fomu: 4: You
+      Upimaji wa Duniani: 5: You
+```
+## Mtihani wa Kabla ya Mwaliko
+[Mtihani wa kabla ya mwaliko](https://ff-quizzes.netlify.app/web/)
 
-> Nguvu ya Wavuti iko katika ulimwengu wake. Ufikiaji kwa kila mtu bila kujali ulemavu ni kipengele muhimu.
+> Nguvu ya Wavuti iko katika ulimwengu wake wote. Upatikanaji kwa kila mtu bila kujali ulemavu ni kipengele muhimu.
 >
-> \- Sir Timothy Berners-Lee, Mkurugenzi wa W3C na mvumbuzi wa Wavuti ya Ulimwenguni
+> \- Sir Timothy Berners-Lee, Mkurugenzi wa W3C na mvumbuzi wa World Wide Web
 
-Hili linaweza kukushangaza: unapojenga tovuti zinazoweza kufikiwa, hauwasaidii tu watu wenye ulemavu—unafanya wavuti kuwa bora kwa kila mtu!
+Hapa kuna kitu ambacho kinaweza kukushangaza: unapounda tovuti zinazopatikana kwa wote, hutawasaidia tu watu wenye ulemavu—bali unafanya wavuti kuwa bora kwa kila mtu!
 
-Je, umewahi kuona zile sehemu za kupanda kwenye pembe za barabara? Zilikuwa zimetengenezwa awali kwa ajili ya viti vya magurudumu, lakini sasa zinasaidia watu wenye mikokoteni ya watoto, wafanyakazi wa usafirishaji wenye mikokoteni, wasafiri wenye mizigo inayovutwa, na hata waendesha baiskeli. Hivyo ndivyo muundo wa wavuti unaoweza kufikiwa unavyofanya kazi—suluhisho zinazosaidia kikundi kimoja mara nyingi huishia kufaidisha kila mtu. Inapendeza, sivyo?
+Je, umewahi kuona zile mionyo ya mtaa kwenye pembe za barabara? Awali zilikuwa zimetengenezwa kwa ajili ya viti vya magurudumu, lakini sasa zinawasaidia watu wenye strollers, wafanyakazi wa usambazaji wa mizigo, wasafiri wenye vali zenye magurudumu, na pia wanaume wa baiskeli. Hivyo ndizo funguo za usanifu wa wavuti za kupata ufikiaji rahisi—madhubuti yanayowasaidia kundi moja mara nyingi hufaidi kila mtu. Hilo si wazo zuri kabisa?
 
-Katika somo hili, tutachunguza jinsi ya kuunda tovuti zinazofanya kazi kwa kila mtu, bila kujali jinsi wanavyotumia wavuti. Utajifunza mbinu za vitendo ambazo tayari zimejumuishwa katika viwango vya wavuti, utajaribu zana za kupima, na utaona jinsi ufikiaji unavyofanya tovuti zako kuwa rahisi kutumia kwa watumiaji wote.
+Katika somo hili, tutachunguza jinsi ya kuunda tovuti ambazo kweli zinafanya kazi kwa kila mtu, bila kujali wanavyotembelea wavuti. Utagundua mbinu za vitendo ambazo tayari zimejengwa ndani ya viwango vya wavuti, utajifunza kutumia zana za upimaji, na utaona jinsi ufikiaji rahisi unavyofanya tovuti zako zifae kutumika kwa watumiaji wote.
 
-Mwisho wa somo hili, utakuwa na ujasiri wa kufanya ufikiaji kuwa sehemu ya kawaida ya mtiririko wako wa maendeleo. Uko tayari kuchunguza jinsi chaguo za muundo wa kufikiria zinaweza kufungua wavuti kwa mabilioni ya watumiaji? Twende!
-
-> Unaweza kuchukua somo hili kwenye [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
-
-## Kuelewa Teknolojia za Usaidizi
-
-Kabla ya kuanza kuandika msimbo, hebu tuchukue muda kuelewa jinsi watu wenye uwezo tofauti wanavyopitia wavuti. Hii si nadharia tu—kuelewa mifumo halisi ya urambazaji kutakufanya kuwa msanidi bora zaidi!
-
-Teknolojia za usaidizi ni zana za kushangaza zinazosaidia watu wenye ulemavu kuingiliana na tovuti kwa njia ambazo zinaweza kukushangaza. Mara tu unapopata jinsi teknolojia hizi zinavyofanya kazi, kuunda uzoefu wa wavuti unaoweza kufikiwa kunakuwa rahisi zaidi. Ni kama kujifunza kuona msimbo wako kupitia macho ya mtu mwingine.
-
-### Wasomaji wa Skrini
-
-[Wasomaji wa skrini](https://en.wikipedia.org/wiki/Screen_reader) ni vipande vya teknolojia vilivyo na ustadi mkubwa vinavyogeuza maandishi ya kidijitali kuwa sauti au matokeo ya maandishi ya braille. Ingawa hutumiwa hasa na watu wenye ulemavu wa kuona, pia ni msaada mkubwa kwa watumiaji wenye matatizo ya kujifunza kama vile dyslexia.
-
-Ninapenda kufikiria msomaji wa skrini kama kuwa na msimulizi mwenye akili sana anayesoma kitabu kwako. Husoma maudhui kwa sauti kwa mpangilio wa kimantiki, hutangaza vipengele vya kuingiliana kama "kitufe" au "kiungo," na hutoa njia za mkato za kibodi za kuruka kwenye ukurasa. Lakini hapa kuna jambo—wasomaji wa skrini wanaweza kufanya uchawi wao tu ikiwa tutajenga tovuti zenye muundo sahihi na maudhui yenye maana. Hapo ndipo unapoingia kama msanidi!
-
-**Wasomaji wa skrini maarufu kwenye majukwaa mbalimbali:**
-- **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (bure na maarufu zaidi), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (iliyojengwa ndani)
-- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (iliyojengwa ndani na yenye uwezo mkubwa)
-- **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (iliyojengwa ndani)
-- **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (bure na chanzo wazi)
-
-**Jinsi wasomaji wa skrini wanavyosoma maudhui ya wavuti:**
-
-Wasomaji wa skrini hutoa mbinu nyingi za urambazaji zinazofanya kuvinjari kuwa rahisi kwa watumiaji wenye uzoefu:
-- **Usomaji wa mfululizo**: Husoma maudhui kutoka juu hadi chini, kama kufuata kitabu
-- **Urambazaji wa alama**: Kuruka kati ya sehemu za ukurasa (kichwa, nav, kuu, footer)
-- **Urambazaji wa vichwa**: Kuruka kati ya vichwa ili kuelewa muundo wa ukurasa
-- **Orodha za viungo**: Kutengeneza orodha ya viungo vyote kwa ufikiaji wa haraka
-- **Udhibiti wa fomu**: Kusogea moja kwa moja kati ya sehemu za kuingiza na vitufe
-
-> 💡 **Hili linanishangaza**: 68% ya watumiaji wa wasomaji wa skrini husogea hasa kwa vichwa ([Utafiti wa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding)). Hii ina maana muundo wa vichwa vyako ni kama ramani kwa watumiaji—unapopata muundo sahihi, unawasaidia watu kupata njia yao haraka zaidi!
-
-### Kujenga Mtiririko wa Kupima
-
-Habari njema ni kwamba kupima ufikiaji kwa ufanisi hakuhitaji kuwa jambo la kutisha! Utataka kuchanganya zana za kiotomatiki (ni nzuri sana katika kugundua masuala dhahiri) na kupima kwa mikono. Hapa kuna mbinu ya kimfumo ambayo nimegundua inagundua masuala mengi bila kutumia siku nzima:
-
-**Mtiririko muhimu wa kupima kwa mikono:**
+Mwisho wa somo hili, utakuwa na uhakika wa kufanya ufikiaji kuwa sehemu ya kawaida ya mtiririko wako wa maendeleo. Tayari kuchunguza jinsi maamuzi ya kubuni kwa makini yanavyoweza kufungua wavuti kwa mabilioni ya watumiaji? Twende!
 
 ```mermaid
-graph TD
-    A[Start Testing] --> B{Keyboard Navigation}
-    B --> C[Tab through all interactive elements]
-    C --> D{Screen Reader Testing}
-    D --> E[Test with NVDA/VoiceOver]
-    E --> F{Zoom Testing}
-    F --> G[Zoom to 200% and test functionality]
-    G --> H{Color/Contrast Check}
-    H --> I[Verify all text meets contrast ratios]
-    I --> J{Focus Management}
-    J --> K[Ensure focus indicators are visible]
-    K --> L[Testing Complete]
+mindmap
+  root((Ufikiaji wa Wavuti))
+    Users
+      Screen readers
+      Keyboard navigation
+      Voice control
+      Magnification
+    Technologies
+      HTML semantics
+      ARIA attributes
+      CSS focus indicators
+      Keyboard events
+    Benefits
+      Watazamaji wengi
+      SEO bora
+      Uzingatiaji wa sheria
+      Ubunifu wa ulimwengu wote
+    Testing
+      Automated tools
+      Manual testing
+      User feedback
+      Real assistive tech
 ```
+> Unaweza kufuata somo hili kwenye [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility/?WT.mc_id=academic-77807-sagibbon)!
 
-**Orodha ya kupima hatua kwa hatua:**
-1. **Urambazaji wa kibodi**: Tumia tu Tab, Shift+Tab, Enter, Space, na funguo za mshale
-2. **Kupima wasomaji wa skrini**: Washa NVDA, VoiceOver, au Narrator na usogee ukiwa umefumba macho
-3. **Kupima kwa kukuza**: Jaribu viwango vya kukuza 200% na 400%
-4. **Uthibitishaji wa utofauti wa rangi**: Angalia maandishi yote na vipengele vya UI
-5. **Kupima viashiria vya umakini**: Hakikisha vipengele vyote vya kuingiliana vina hali za umakini zinazoonekana
+## Kuelewa Teknolojia Za Kusaidia
 
-✅ **Anza na Lighthouse**: Fungua DevTools ya kivinjari chako, fanya ukaguzi wa ufikiaji wa Lighthouse, kisha tumia matokeo kuongoza maeneo yako ya kupima kwa mikono.
+Kabla hatujaanza kuandika msimbo, tuchukue muda kuelewa jinsi watu wenye uwezo tofauti wanavyopata uzoefu wa wavuti. Hii si nadharia tu—kuelewa mifumo hii halisi ya kuvinjari kutakufanya kuwa mtaalamu bora zaidi!
 
-### Zana za kukuza na kukuza
+Teknolojia za kusaidia ni zana za kushangaza ambazo husaidia watu wenye ulemavu kuingiliana na tovuti kwa njia ambazo zinaweza kukushangaza. Ukipata namna teknolojia hizi zinavyofanya kazi, kuunda uzoefu wa wavuti unaopatikana kwa wote kutakuwa rahisi zaidi kuelewa. Ni kama kujifunza kuona msimbo wako kwa macho ya mtu mwingine.
 
-Unajua jinsi unavyobana ili kukuza kwenye simu yako wakati maandishi ni madogo sana, au unakaza macho kwenye skrini ya kompyuta ndogo katika mwangaza mkali wa jua? Watumiaji wengi hutegemea zana za kukuza ili kufanya maudhui yasomeke kila siku. Hii inajumuisha watu wenye uoni hafifu, wazee, na yeyote aliyewahi kujaribu kusoma tovuti nje.
+### Wasomaji wa skrini
 
-Teknolojia za kisasa za kukuza zimebadilika zaidi ya kufanya vitu kuwa vikubwa tu. Kuelewa jinsi zana hizi zinavyofanya kazi kutakusaidia kuunda miundo inayojibika ambayo inabaki kuwa ya kazi na ya kuvutia katika kiwango chochote cha kukuza.
+[Wasomaji wa skrini](https://en.wikipedia.org/wiki/Screen_reader) ni vifaa vya kiteknolojia vyenye ufanisi ambavyo hubadilisha maandishi ya kidijitali kuwa matamshi au matokeo ya braille. Wakati wanatumika hasa kwa watu wenye ulemavu wa kuona, pia ni msaada mkubwa kwa watumiaji wenye matatizo ya kujifunza kama dyslexia.
 
-**Uwezo wa kisasa wa kukuza kivinjari:**
-- **Kukuza ukurasa**: Hukadiria maudhui yote kwa uwiano (maandishi, picha, muundo) - hii ndiyo njia inayopendekezwa
-- **Kukuza maandishi pekee**: Huongeza ukubwa wa fonti huku ukihifadhi muundo wa awali
-- **Kubana ili kukuza**: Msaada wa ishara ya simu kwa kukuza kwa muda
-- **Msaada wa kivinjari**: Vivinjari vyote vya kisasa vinaunga mkono kukuza hadi 500% bila kuvunja utendaji
+Napenda kufikiria wasomaji wa skrini kama kuwa msimulizi mzuri sana anayeimba kitabu kwako. Huwanadi maudhui kwa sauti kwa mpangilio wa mantiki, hutangaza vipengele vinavyoshirikisha kama "kitufe" au "kiungo," na hutoa njia za mkato za kibodi za kuruka kuruka ukurasa. Lakini hapa ni kitu—wasomaji wa skrini wanaweza kufanya maajabu yao tu ikiwa tunaunda tovuti zikiwa na muundo sahihi na maudhui yenye maana. Hapa ndipo unapoingia wewe kama mtaalamu wa maendeleo!
 
-**Programu maalum za kukuza:**
-- **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (iliyojengwa ndani), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
-- **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (iliyojengwa ndani na vipengele vya hali ya juu)
+**Wasomaji maarufu wa skrini kwenye majukwaa mbalimbali:**
+- **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (bure na maarufu zaidi), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (imejengwa ndani)
+- **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (imejengwa ndani na yenye uwezo mkubwa)
+- **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (imejengwa ndani)
+- **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (bure na chanzo huria)
 
-> ⚠️ **Fikiria Muundo**: WCAG inahitaji kwamba maudhui yabaki ya kazi yanapokuzwa hadi 200%. Katika kiwango hiki, kusogeza kwa usawa kunapaswa kuwa kidogo, na vipengele vyote vya kuingiliana vinapaswa kubaki kufikiwa.
+**Jinsi wasomaji wa skrini wanavyovinjari maudhui ya wavuti:**
 
-✅ **Jaribu muundo wako unaojibika**: Kukuza kivinjari chako hadi 200% na 400%. Je, muundo wako unabadilika kwa uzuri? Je, bado unaweza kufikia utendaji wote bila kusogeza kupita kiasi?
+Wasomaji wa skrini hutoa mbinu nyingi za kuvinjari ambazo hufanya kuvinjari kuwa rahisi kwa watumiaji wenye uzoefu:
+- **Kusoma kwa mfuatano**: Husoma maudhui kutoka juu hadi chini, kama kufuata kitabu
+- **Kuvinjari kwa alama za maeneo**: Kuruka kati ya sehemu za ukurasa (kichwa, nav, kuu, futi)
+- **Kuvinjari kwa vichwa**: Kuruka kati ya vichwa kuelewa muundo wa ukurasa
+- **Orodha za viungo**: Tengeneza orodha ya viungo vyote kwa upatikanaji wa haraka
+- **Dhibiti za fomu**: Vinjari moja kwa moja kati ya maeneo ya kuingiza na vitufe
 
-## Zana za Kisasa za Kupima Ufikiaji
+> 💡 **Hiki ni kitu kilichondhihirisha akili yangu**: 68% ya watumiaji wa wasomaji wa skrini huvinjari zaidi kwa vichwa ([Utafiti wa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding)). Hii ina maana muundo wa vichwa ni kama ramani ya watumiaji—ukifanya vibaya unawasaidia watu kupata njia haraka zaidi kupitia maudhui yako!
 
-Sasa kwa kuwa umeelewa jinsi watu wanavyosogea kwenye wavuti kwa kutumia teknolojia za usaidizi, hebu tuchunguze zana zinazokusaidia kujenga na kupima tovuti zinazoweza kufikiwa.
+### Kuunda mtiririko wako wa upimaji
 
-Fikiria hivi: zana za kiotomatiki ni nzuri katika kugundua masuala dhahiri (kama maandishi ya alt yaliyokosekana), wakati kupima kwa mikono kunakusaidia kuhakikisha tovuti yako inahisi vizuri kutumia katika ulimwengu halisi. Pamoja, zinakupa ujasiri kwamba tovuti zako zinafanya kazi kwa kila mtu.
+Hapa kuna habari njema—upimaji mzuri wa ufikiaji hauhitaji kuwa mzito! Utataka kuunganisha zana za kiotomatiki (ni bora kwa kugundua matatizo dhahiri) na baadhi ya upimaji wa mkono. Hapa kuna mbinu ya kisistemati ambayo nimegundua hugundua matatizo mengi bila kutumia muda mwingi sana:
 
-### Kupima utofauti wa rangi
+**Mtiririko muhimu wa upimaji wa mkono:**
 
-Habari njema: utofauti wa rangi ni mojawapo ya masuala ya kawaida ya ufikiaji, lakini pia ni mojawapo ya rahisi kurekebisha. Utofauti mzuri unafaidisha kila mtu—kutoka kwa watumiaji wenye ulemavu wa kuona hadi watu wanaojaribu kusoma simu zao pwani.
+```mermaid
+flowchart TD
+    A[🚀 Anza Kupima] --> B{⌨️ Uvinjari wa Kibodi}
+    B --> C[Tumia Tab kupitia vitu vyote vinavyoweza kushirikiana]
+    C --> D{🎧 Upimaji wa Kisomaji cha Skrini}
+    D --> E[Jaribio na NVDA/VoiceOver]
+    E --> F{🔍 Upimaji wa Kubadili Ukubwa}
+    F --> G[Badilisha ukubwa hadi 200% na upime utendaji]
+    G --> H{🎨 Ukaguzi wa Rangi/Mwingiliano}
+    H --> I[Thibitisha kuwa maandishi yote yanatimiza viwango vya mng’ao]
+    I --> J{👁️ Usimamizi wa Kuzingatia}
+    J --> K[Hakikisha viashirio vya kuzingatia vinaonekana]
+    K --> L[✅ Upimaji Umeisha]
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style B fill:#fff3e0
+    style D fill:#f3e5f5
+    style F fill:#e0f2f1
+    style H fill:#fce4ec
+    style J fill:#e8eaf6
+```
+**Orodha ya ukaguzi hatua kwa hatua:**
+1. **Kuvinjari kwa kibodi**: Tumia tu Tab, Shift+Tab, Enter, Space, na funguo za Mshale
+2. **Upimaji wa wasomaji wa skrini**: Washa NVDA, VoiceOver, au Narrator na vinjari ukiwa na macho yako yamefumba
+3. **Upimaji wa kunazana**: Pima kwa viwango vya kunazana 200% na 400%
+4. **Uhakiki wa mchanganyiko wa rangi**: Angalia maandishi yote na vipengele vya UI
+5. **Upimaji wa dalili za umakini**: Hakikisha vipengele vyote vinavyoshirikisha vina dalili za umakini zinazoonekana
 
-**Mahitaji ya utofauti wa WCAG:**
+✅ **Anza na Lighthouse**: Fungua DevTools za kivinjari chako, endesha ukaguzi wa ufikiaji wa Lighthouse, kisha tumia matokeo kuongoza maeneo yako ya upimaji wa mkono.
 
-| Aina ya Maandishi | WCAG AA (Kiwango cha chini) | WCAG AAA (Iliyoboreshwa) |
-|-------------------|----------------------------|--------------------------|
-| **Maandishi ya kawaida** (chini ya 18pt) | Uwiano wa utofauti wa 4.5:1 | Uwiano wa utofauti wa 7:1 |
-| **Maandishi makubwa** (18pt+ au 14pt+ bold) | Uwiano wa utofauti wa 3:1 | Uwiano wa utofauti wa 4.5:1 |
-| **Vipengele vya UI** (vitufe, mipaka ya fomu) | Uwiano wa utofauti wa 3:1 | Uwiano wa utofauti wa 3:1 |
+### Zana za kunazana na kuongezea ukubwa
 
-**Zana muhimu za kupima:**
-- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Programu ya kompyuta yenye kiondoa rangi
-- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Kivinjari cha wavuti chenye maoni ya papo hapo
-- [Stark](https://www.getstark.co/) - Programu-jalizi ya zana ya muundo kwa Figma, Sketch, Adobe XD
-- [Accessible Colors](https://accessible-colors.com/) - Tafuta paleti za rangi zinazoweza kufikiwa
+Unajua jinsi unavyopiga kidole kunazana kwenye simu yako wakati maandishi ni madogo sana, au kuziangalia macho kidogo kwenye skrini ya kompyuta chini ya mwanga mkali? Watumiaji wengi hutegemea zana za kuongeza ukubwa kufanya maudhui yawe rahisi kusoma kila siku. Hii ni pamoja na watu wenye upofu mdogo, wazee, na mtu yeyote aliyewahi kujaribu kusoma tovuti nje.
 
-✅ **Jenga paleti bora za rangi**: Anza na rangi za chapa yako na tumia vihakiki vya utofauti kuunda tofauti zinazoweza kufikiwa. Hati hizi kama tokeni za rangi zinazoweza kufikiwa za mfumo wako wa muundo.
+Teknolojia za kisasa za kunazana zimeendelea zaidi ya kuongeza ukubwa tu. Kuelewa jinsi zana hizi zinavyofanya kazi kutakusaidia kuunda muundo unaojibadilisha ambao unabaki kuwa bora na kuvutia hata wakati wa kunazana kwa kiwango chochote.
 
-### Ukaguzi wa kina wa ufikiaji
+**Uwezo wa kunazana wa vivinjari vya kisasa:**
+- **Kunazana kwa ukurasa**: Hupanua maudhui yote kwa uwiano (maandishi, picha, muundo) - hii ni njia inayopendekezwa
+- **Kunazana kwa maandishi pekee**: Huongeza ukubwa wa fonti huku ikidumisha muundo wa awali
+- **Kidonge cha kunazana**: Mvuto wa kugusa kwenye simu kwa kuongeza ukubwa kwa muda mfupi
+- **Msaada wa kivinjari**: Vivinjari vyote vya kisasa vina msaada wa kunazana hadi 500% bila kuvunja utendaji
 
-Kupima ufikiaji kwa ufanisi zaidi kunachanganya mbinu nyingi. Hakuna zana moja inayogundua kila kitu, kwa hivyo kujenga utaratibu wa kupima kwa mbinu mbalimbali huhakikisha chanjo ya kina.
+**Programu maalum za kuongeza ukubwa:**
+- **Windows**: [Magnifier](https://support.microsoft.com/windows/use-magnifier-to-make-things-on-the-screen-easier-to-see-414948ba-8b1c-d3bd-8615-0e5e32204198) (imejengwa ndani), [ZoomText](https://www.freedomscientific.com/training/zoomtext/getting-started/)
+- **macOS/iOS**: [Zoom](https://www.apple.com/accessibility/mac/vision/) (imejengwa ndani na sifa za hali ya juu)
 
-**Kupima kwa kivinjari (iliyojengwa ndani ya DevTools):**
-- **Chrome/Edge**: Ukaguzi wa ufikiaji wa Lighthouse + paneli ya Ufikiaji
-- **Firefox**: Inspekta ya Ufikiaji yenye mwonekano wa mti wa kina
-- **Safari**: Kichupo cha ukaguzi katika Web Inspector na simulizi ya VoiceOver
+> ⚠️ **Tafakari za Ubunifu**: WCAG inahitaji maudhui kubaki na kazi hata kama yamepandishwa ukubwa hadi 200%. Kiwango hiki, kusogea upande hadi upande kunapaswa kuwa kidogo, na vipengele vyote vinavyoshirikisha vinapaswa kubaki vinapatikana.
 
-**Viendelezi vya kupima kitaalamu:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - Kupima kiotomatiki kwa kiwango cha tasnia
+✅ **Pima muundo wako unaojibadilisha**: Panua kivinjari chako hadi 200% na 400%. Je, muundo wako unajibadilisha kwa neema? Je, bado unaweza kufikia kila utendakazi bila kuchuja sana?
+
+## Zana za Kisasa za Upimaji wa Ufikiaji Rahisi
+
+Sasa unapoelewa jinsi watu wanavyovinjari wavuti kwa kutumia teknolojia za kusaidia, tuchunguza zana zinazokusaidia kuunda na kupima tovuti zinazo patikana kwa wote.
+
+Fikiria hivi: zana za kiotomatiki ni nzuri kugundua matatizo dhahiri (kama kukosekana kwa maandishi ya alt), wakati upimaji wa mkono unakusaidia kuhakikisha tovuti yako inahisi nzuri kutumika katika dunia halisi. Pamoja, zinakupa uhakika kwamba tovuti zako zinatumika kwa kila mtu.
+
+### Upimaji wa mchanganyiko wa rangi
+
+Hapa kuna habari njema: mchanganyiko wa rangi ni mojawapo ya matatizo ya kawaida ya ufikiaji rahisi, lakini pia ni miongoni mwa rahisi kutatuliwa. Mchanganyiko mzuri hufaidisha kila mtu—kuanzia watumiaji wenye ulemavu wa kuona hadi watu wanaojaribu kusoma simu zao pwani.
+
+**Matakwa ya mchanganyiko wa WCAG:**
+
+| Aina ya Maandishi | WCAG AA (Chini) | WCAG AAA (Imboreshwa) |
+|-----------|-------------------|---------------------|
+| **Maandishi ya kawaida** (chini ya 18pt) | uwiano wa 4.5:1 | uwiano wa 7:1 |
+| **Maandishi makubwa** (18pt+ au 14pt+ yenye herufi nzito) | uwiano wa 3:1 | uwiano wa 4.5:1 |
+| **Vipengele vya UI** (vitufe, mipaka ya fomu) | uwiano wa 3:1 | uwiano wa 3:1 |
+
+**Zana muhimu za upimaji:**
+- [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) - Programu ya desktop yenye chaguo la rangi
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Mtandaoni na maoni ya papo hapo
+- [Stark](https://www.getstark.co/) - Kiendelezi cha zana za kubuni kwa Figma, Sketch, Adobe XD
+- [Accessible Colors](https://accessible-colors.com/) - Tafuta rangi zinazo patikana kwa watu wote
+
+✅ **Tengeneza mchanganyiko bora wa rangi**: Anza na rangi za chapa yako na tumia zana za mchanganyiko kuunda mabadiliko yanayopatikana. Andika hizi kama tokeni za rangi za mfumo wako wa kubuni unaopatikana.
+
+### Ukaguzi kamili wa ufikiaji rahisi
+
+Upimaji bora zaidi wa ufikiaji rahisi unaunganisha mbinu nyingi. Hakuna zana moja inayogundua yote, hivyo kuunda utaratibu wa upimaji kwa njia mbalimbali huhakikisha ukaguzi wa kina.
+
+**Upimaji wa kivinjari (umejengwa ndani ya DevTools):**
+- **Chrome/Edge**: Ukaguzi wa ufikiaji wa Lighthouse + Paneli ya Ufikiaji
+- **Firefox**: Mchunguzi wa Ufikiaji na mtazamo wa mti wa kina
+- **Safari**: Tabu ya ukaguzi kwenye Web Inspector na simulizi ya VoiceOver
+
+**Viongezeo vya kitaalamu vya upimaji:**
+- [axe DevTools](https://www.deque.com/axe/devtools/) - Ukaguzi wa kiotomatiki wa viwango vya sekta
 - [WAVE](https://wave.webaim.org/extension/) - Maoni ya kuona na kuonyesha makosa
-- [Accessibility Insights](https://accessibilityinsights.io/) - Suite ya kupima ya Microsoft
+- [Accessibility Insights](https://accessibilityinsights.io/) - Suite kamili ya upimaji ya Microsoft
 
-**Mstari wa amri na ujumuishaji wa CI/CD:**
-- [axe-core](https://github.com/dequelabs/axe-core) - Maktaba ya JavaScript kwa kupima kiotomatiki
-- [Pa11y](https://pa11y.org/) - Zana ya kupima ufikiaji wa mstari wa amri
-- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Upimaji wa alama za ufikiaji kiotomatiki
+**Amri za mstari na ushirikiano wa CI/CD:**
+- [axe-core](https://github.com/dequelabs/axe-core) - Maktaba ya JavaScript kwa upimaji wa kiotomatiki
+- [Pa11y](https://pa11y.org/) - Zana ya upimaji wa ufikiaji kwa amri za mstari
+- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) - Alama za ufikiaji wa kiotomatiki
 
-> 🎯 **Lengo la Kupima**: Lenga alama ya ufikiaji ya Lighthouse ya 95+ kama msingi wako. Kumbuka, zana za kiotomatiki zinagundua takriban 30-40% ya masuala ya ufikiaji—kupima kwa mikono bado ni muhimu!
+> 🎯 **Lengo la upimaji**: Lenga alama ya ufikiaji ya Lighthouse ya 95+ kama msingi wako. Kumbuka, zana za kiotomatiki hugundua tu takriban 30-40% ya matatizo ya ufikiaji—upimaji wa mkono bado ni muhimu!
 
-## Kujenga Ufikiaji Kuanzia Mwanzo
+### 🧠 **Kukagua Ujuzi wa Upimaji: Tayari Kupata Matatizo?**
 
-Ufunguo wa mafanikio ya ufikiaji ni kuujenga katika msingi wako tangu siku ya kwanza. Najua ni rahisi kufikiria "Nitaongeza ufikiaji baadaye," lakini hiyo ni kama kujaribu kuongeza njia ya kupanda kwenye nyumba baada ya kujengwa tayari. Inawezekana? Ndiyo. Rahisi? Sio sana.
+**Tuitaone jinsi unavyo jisikia kuhusu upimaji wa ufikiaji:**
+- Ni njia gani ya upimaji inayokuonekana kufaa zaidi kwako kwa sasa?
+- Je, unaweza kufikiria kutumia tu kibodi kuvinjari siku nzima?
+- Ni kizuizi kipi cha ufikiaji rahisi ambacho umepitia binafsi mtandaoni?
 
-Fikiria ufikiaji kama kupanga nyumba—ni rahisi zaidi kujumuisha ufikiaji wa viti vya magurudumu katika mipango yako ya awali ya usanifu kuliko kurekebisha kila kitu baadaye.
+```mermaid
+pie title "Matatizo ya Ufikiaji Yaliyogunduliwa na Njia Mbali Mbali"
+    "Vyombo vya Kielektroniki" : 35
+    "Ujaribu wa Mikono" : 40
+    "Maoni ya Watumiaji" : 25
+```
+> **Kiongezaji wa kujiamini**: Wapimaji wa kitaalamu wa ufikiaji hutumia mchanganyiko huu halisi wa mbinu. Unajifunza mazoea ya kiwango cha sekta!
 
-### Kanuni za POUR: Msingi wako wa ufikiaji
+## Kujenga Ufikiaji Rahisi Kutoka Mwanzoni
 
-Miongozo ya Maudhui ya Ufikiaji wa Wavuti (WCAG) imejengwa kuzunguka kanuni nne za msingi zinazojumuisha POUR. Usijali—hizi si dhana za kitaaluma za kuchosha! Kwa kweli ni miongozo ya vitendo ya kuunda maudhui yanayofanya kazi kwa kila mtu.
+Ufikiaji rahisi hufanikiwa kwa kuujenga kwenye msingi wako tangu siku ya kwanza. Najua ni rahisi kudhani "Nitaongeza ufikiaji baadaye," lakini hiyo ni kama kujaribu kuongeza kizingiti cha wheelchair kwenye nyumba baada ya kujengwa. Inawezekana? Ndiyo. Rahisi? Sio kweli.
 
-Mara tu unapopata jinsi POUR inavyofanya kazi, kufanya maamuzi ya ufikiaji kunakuwa rahisi zaidi. Ni kama kuwa na orodha ya kiakili inayokuongoza katika chaguo zako za muundo. Hebu tuivunje:
+Fikiria ufikiaji rahisi kama kupanga nyumba—ni rahisi zaidi kujumuisha upatikanaji wa kiti cha magurudumu kwenye mipango yako ya awali ya usanifu kuliko kubadilisha kila kitu baadaye.
 
-**🔍 Inayoweza Kutambulika**: Habari lazima iweze kuwasilishwa kwa njia ambazo watumiaji wanaweza kuzitambua kupitia hisia zao zinazopatikana
+### Kanuni za POUR: Msingi wako wa ufikiaji rahisi
+
+Miongozo ya Ufikiaji wa Maudhui ya Wavuti (WCAG) imejengwa kwa misingi minne ya msingi inayojulikana kama POUR. Usijali—hizi si dhana za maktaba za kitaaluma! Ni miongozo ya vitendo ya kuunda maudhui yanayofanya kazi kwa kila mtu.
+
+Ukifanya kazi na POUR, kufanya maamuzi kuhusu ufikiaji rahisi kutakuwa rahisi zaidi kuelewa. Ni kama kuwa na orodha ya ukaguzi wa akili inayoongoza chaguzi zako za kubuni. Hebu tugawanye:
+
+```mermaid
+flowchart LR
+    A[🔍 INAWEZEKANA KUONEKANA<br/>Je, watumiaji wanaweza kuihisi?] --> B[🎮 INAWEZEKANA KUTUMIA<br/>Je, watumiaji wanaweza kuitumia?]
+    B --> C[📖 INAWEZEKANA KUELEWA<br/>Je, watumiaji wanaweza kuelewa?]
+    C --> D[💪 IMARA<br/>Je, inafanya kazi kila mahali?]
+    
+    A1[Maandishi ya Alt<br/>Maelezo ya sauti<br/>Tofauti] --> A
+    B1[Kuingia kwa kibodi<br/>Hakuna shambulio la kifafa<br/>Muda wa mipaka] --> B
+    C1[Lugha wazi<br/>Inayotabirika<br/>Msaada wa makosa] --> C
+    D1[Msimbo halali<br/>Inayolingana<br/>Imara kwa siku zijazo] --> D
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+```
+**🔍 Kutambulika**: Taarifa lazima ziwasilishwe kwa njia ambazo watumiaji wanaweza kuziona kupitia hisia zao zilizopo
 
 - Toa mbadala wa maandishi kwa maudhui yasiyo ya maandishi (picha, video, sauti)
-- Hakikisha utofauti wa rangi wa kutosha kwa maandishi yote na vipengele vya UI
-- Toa manukuu na nakala za maudhui ya multimedia
-- Buni maudhui yanayobaki ya kazi yanapopunguzwa hadi 200%
-- Tumia sifa nyingi za hisia (si rangi pekee) kuwasilisha habari
+- Hakikisha mchanganyiko wa rangi wa kutosha kwa maandishi yote na vipengele vya UI
+- Toa manukuu na waraka wa maandishi kwa maudhui ya multimedia
+- Buni maudhui ambayo yanabaki na utendaji wakati yanapopakuliwa ukubwa hadi 200%
+- Tumia sifa nyingi za hisia (sio rangi tu) kuwasilisha taarifa
 
-**🎮 Inayoweza Kufanya Kazi**: Vipengele vyote vya kiolesura lazima viweze kufanya kazi kupitia mbinu za kuingiza zinazopatikana
+**🎮 Kufikia**: Vipengele vyote vya kiolesura vinapaswa kufikiwa kupitia mbinu za kuingiza zilizopo
 
-- Fanya utendaji wote uweze kufikiwa kupitia urambazaji wa kibodi
-- Toa muda wa kutosha kwa watumiaji kusoma na kuingiliana na maudhui
-- Epuka maudhui yanayosababisha mshtuko au matatizo ya vestibular
-- Saidia watumiaji kusogea kwa ufanisi kwa muundo wazi na alama
-- Hakikisha vipengele vya kuingiliana vina ukubwa wa kutosha wa lengo (44px minimum)
+- Fanya utendaji wote upatikane kupitia kuvinjari kwa kibodi pekee
+- Wape watumiaji muda wa kutosha kusoma na kuingiliana na maudhui
+- Epuka maudhui yanayosababisha kifafa au matatizo ya vestibular
+- Saidia watumiaji kuvinjari kwa ufanisi na muundo wazi na alama za maeneo
+- Hakikisha vipengele vinavyoshirikisha vina ukubwa wa madhumuni unaotosheleza (minimum 44px)
 
-**📖 Inayoweza Kueleweka**: Habari na utendaji wa UI lazima iwe wazi na rahisi kueleweka
+**📖 Kueleweka**: Taarifa na utendakazi wa UI vinapaswa kuwa wazi na kueleweka
 
-- Tumia lugha wazi, rahisi inayofaa kwa hadhira yako
-- Hakikisha maudhui yanaonekana na kufanya kazi kwa njia zinazoeleweka, thabiti
-- Toa maelekezo wazi na ujumbe wa makosa kwa pembejeo za mtumiaji
-- Saidia watumiaji kuelewa na kurekebisha makosa katika fomu
-- Panga maudhui kwa mpangilio wa kusoma wa kimantiki na muundo wa habari
+- Tumia lugha wazi na rahisi inayofaa hadhira yako
+- Hakikisha maudhui yanaonekana na kufanya kazi kwa njia zinazotarajiwa na thabiti
+- Toa maelekezo wazi na ujumbe za makosa kwa ingizo la mtumiaji
+- Msaidie watumiaji kuelewa na kusahihisha makosa katika fomu
+- Panga maudhui kwa mpangilio wa kusoma wenye mantiki na mpangilio wa taarifa
 
-**💪 Imara**: Maudhui lazima yafanye kazi kwa uaminifu katika teknolojia tofauti na vifaa vya usaidizi
+**💪 Imara**: Maudhui lazima yafanye kazi kwa kuaminika kupitia teknolojia mbalimbali na vifaa vya kusaidia
 
-- T
-Rangi ni zana yenye nguvu ya mawasiliano, lakini haipaswi kamwe kuwa njia pekee ya kuwasilisha taarifa muhimu. Kubuni zaidi ya rangi huunda uzoefu thabiti na jumuishi unaofanya kazi katika hali nyingi.
+- **Tumia HTML halali, ya maana kama msingi wako**
+- **Hakikisha uendeshaji na teknolojia za kusaidia za sasa na za baadaye**
+- **Fuata viwango vya wavuti na mazoea bora ya alama**
+- **Jaribu katika vivinjari tofauti, vifaa, na zana za kusaidia**
+- **Panga yaliyomo ili yaanguke polepole pale vipengele vya hali ya juu havitiwi maana**
 
-**Kubuni kwa tofauti za kuona rangi:**
+### 🎯 **Ukaguzi wa Kanuni za POUR: Kufanya Ize**
 
-Takriban asilimia 8 ya wanaume na asilimia 0.5 ya wanawake wana aina fulani ya tofauti ya kuona rangi (mara nyingi huitwa "upofu wa rangi"). Aina za kawaida ni:
-- **Deuteranopia**: Ugumu wa kutofautisha nyekundu na kijani
-- **Protanopia**: Nyekundu inaonekana hafifu zaidi
-- **Tritanopia**: Ugumu na rangi ya bluu na njano (nadra)
+**Fikiria haraka kuhusu misingi:**
+- Je, unaweza kufikiria kipengele cha tovuti kinachoshindwa kila kanuni ya POUR?
+- Ni kanuni ipi inayohisi kuwa ya asili kwako kama msanidi programu?
+- Kanuni hizi zinaweza kuboresha muundo kwa kila mtu vipi, si kwa watumiaji walio na ulemavu tu?
+
+```mermaid
+quadrantChart
+    title MATRITI YA MABADILIKO YA PRINCIPLES ZA POUR
+    x-axis Juhudi Ndogo --> Juhudi Kuu
+    y-axis Athari Ndogo --> Athari Kuu
+    quadrant-1 Mafanikio ya Haraka
+    quadrant-2 Miradi Mikubwa
+    quadrant-3 Fikiria Baadaye
+    quadrant-4 Mkazo Mkakati
+    
+    Alt Text: [0.2, 0.9]
+    Color Contrast: [0.3, 0.8]
+    Semantic HTML: [0.4, 0.9]
+    Keyboard Nav: [0.6, 0.8]
+    ARIA Complex: [0.8, 0.7]
+    Screen Reader Testing: [0.7, 0.6]
+```
+> **Kumbuka**: Anza na maboresho yenye athari kubwa na juhudi ndogo. HTML ya kihisia na maandishi ya alt hukupa ongezeko kubwa la upatikanaji kwa juhudi ndogo!
+
+## Kuunda Muundo wa Kuonekana Unaopatikana
+
+Muundo mzuri wa kuonekana na upatikanaji huenda sambamba. Unapobuni ukiwa na upatikanaji akilini, mara nyingi unagundua kwamba vikwazo hivi hutoa suluhisho safi na maridadi zaidi linalonufaisha watumiaji wote.
+
+Tuchunguze jinsi ya kuunda miundo inayovutia kwa macho inayofaa kwa kila mtu, bila kujali uwezo wao wa kuona au hali wanavyotazama yaliyomo yako.
+
+### Mikakati ya rangi na upatikanaji wa kuona
+
+Rangi ni zana yenye nguvu kwa mawasiliano, lakini haitakiwi kuwa njia pekee ya kutoa taarifa muhimu. Kubuni zaidi ya rangi huunda uzoefu thabiti, jumuishi unaofanya kazi katika hali zaidi.
+
+**Buni kwa ajili ya tofauti za kuona rangi:**
+
+Takriban asilimia 8 ya wanaume na 0.5% ya wanawake wana aina fulani ya tofauti ya kuona rangi (mara nyingi huitwa "kupofu rangi"). Aina zinazojulikana zaidi ni:
+- **Deuteranopia**: Ugumu kutofautisha nyekundu na kijani
+- **Protanopia**: Nyekundu inaonekana dhaifu zaidi
+- **Tritanopia**: Ugumu na buluu na manjano (adimu)
 
 **Mikakati jumuishi ya rangi:**
 
@@ -230,19 +347,19 @@ Takriban asilimia 8 ya wanaume na asilimia 0.5 ya wanawake wana aina fulani ya t
 }
 ```
 
-**Zaidi ya mahitaji ya msingi ya utofauti wa rangi:**
-- Jaribu chaguo zako za rangi kwa kutumia simulizi za upofu wa rangi
-- Tumia mifumo, textures, au maumbo pamoja na alama za rangi
-- Hakikisha hali za mwingiliano zinabaki kutambulika bila rangi
-- Fikiria jinsi muundo wako unavyoonekana katika hali ya utofauti wa juu
+**Zaidi ya mahitaji ya msingi ya mlinganyo wa rangi:**
+- Jaribu uchaguzi wako wa rangi na simulator za upofu wa rangi
+- Tumia mifumo, muundo, au maumbo sambamba na rangi
+- Hakikisha hali za mwingiliano zinaweza kutofautishwa bila rangi
+- Fikiria jinsi muundo wako unaonekana katika hali ya mkanganyiko wa juu
 
-✅ **Jaribu upatikanaji wa rangi yako**: Tumia zana kama [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) kuona jinsi tovuti yako inavyoonekana kwa watumiaji wenye aina tofauti za kuona rangi.
+✅ **Jaribu upatikanaji wa rangi zako**: Tumia zana kama [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) kuona jinsi tovuti yako inavyoonekana kwa watumiaji wenye aina tofauti za kuona rangi.
 
-### Viashiria vya umakini na muundo wa mwingiliano
+### Viashirio vya umakini na muundo wa mwingiliano
 
-Viashiria vya umakini ni sawa na mshale wa kidijitali—vinaonyesha watumiaji wa kibodi walipo kwenye ukurasa. Viashiria vya umakini vilivyobuniwa vizuri vinaboresha uzoefu kwa kila mtu kwa kufanya mwingiliano kuwa wazi na wa kutabirika.
+Viashirio vya umakini ni sawa na mshale wa kidijitali—vinaonyesha wapiga kibodi wapi wako kwenye ukurasa. Viashirio vya umakini vilivyo vizuri huongeza uzoefu kwa kila mtu kwa kufanya mwingiliano wazi na unaotarajiwa.
 
-**Mazoea bora ya kisasa ya viashiria vya umakini:**
+**Mambo ya kufuata kwa viashirio vya umakini vya kisasa:**
 
 ```css
 /* Enhanced focus styles that work across browsers */
@@ -271,23 +388,44 @@ button:focus:not(:focus-visible) {
 }
 ```
 
-**Mahitaji ya viashiria vya umakini:**
-- **Uonekano**: Lazima iwe na uwiano wa utofauti wa angalau 3:1 na vipengele vinavyozunguka
+**Mahitaji ya kiashirio cha umakini:**
+- **Kuonekana**: Lazima iwe na mlinganyo wa angalau 3:1 na vitu vinavyozunguka
 - **Upana**: Unene wa angalau 2px kuzunguka kipengele chote
-- **Uendelevu**: Inapaswa kubaki kuonekana hadi umakini uhamie mahali pengine
-- **Utofauti**: Lazima iwe tofauti kwa macho kutoka kwa hali nyingine za UI
+- **Kubaki**: Inapaswa kubaki kuonekana hadi umakini uhamie mahali pengine
+- **Tofauti**: Lazima ionekane tofauti kwa macho kutoka kwa hali zingine za UI
 
-> 💡 **Ushauri wa Kubuni**: Viashiria bora vya umakini mara nyingi hutumia mchanganyiko wa muhtasari, kivuli cha kisanduku, na mabadiliko ya rangi ili kuhakikisha uonekano katika mandhari tofauti.
+> 💡 **Ushauri wa Kubuni**: Viashirio bora vya umakini mara nyingi hutumia mchanganyiko wa mipaka, kivuli cha kisanduku, na mabadiliko ya rangi kuhakikisha kuonekana kwa mandhari na muktadha tofauti.
 
-✅ **Kagua viashiria vya umakini**: Tembea kupitia tovuti yako kwa kutumia kibodi na angalia ni vipengele vipi vina viashiria vya umakini vilivyo wazi. Je, kuna vyovyote ambavyo ni vigumu kuona au havipo kabisa?
+✅ **Kagua viashirio vya umakini**: Tumia Tab kuzunguka kwenye tovuti yako na angalia vipengele vyenye viashirio vya umakini vya wazi. Kuna vishawishi vingi vigumu kuiona au havipo kabisa?
 
-### HTML ya Kisemantiki: Msingi wa upatikanaji
+### HTML ya Kihisia: Msingi wa Upatikanaji
 
-HTML ya kisemantiki ni kama kutoa teknolojia za kusaidia mfumo wa GPS kwa tovuti yako. Unapotumia vipengele sahihi vya HTML kwa madhumuni yake yaliyokusudiwa, kimsingi unatoa ramani ya kina kwa wasomaji wa skrini, kibodi, na zana nyingine kusaidia watumiaji kuvinjari kwa ufanisi.
+HTML ya kihisia ni kama kumpa teknolojia za msaada mfumo wa GPS wa tovuti yako. Unapotumia vipengele sahihi vya HTML kwa madhumuni hayo, unatoa kwa zana kama wasomaji wa skrini, vibodi, na zingine ramani ya kina kusaidia watumiaji kusafiri kwa ufanisi.
 
-Hapa kuna mfano ulionigusa sana: HTML ya kisemantiki ni tofauti kati ya maktaba iliyoandaliwa vizuri yenye kategoria wazi na alama za msaada dhidi ya ghala ambapo vitabu vimesambazwa kiholela. Sehemu zote zina vitabu sawa, lakini ungependa kujaribu kutafuta kitu wapi? Sahihi!
+Hapa kuna mufano uliogusa: html ya kihisia ni tofauti kati ya maktaba iliyoandaliwa vyema yenye makundi wazi na alama za msaada dhidi ya ghala ambapo vitabu vinaachwa kiholela. Pamoja na kwamba pande zote zina vitabu sawa, ni ipi ungapendelea kutafuta kitu?
 
-**Misingi ya muundo wa ukurasa unaopatikana:**
+```mermaid
+flowchart TD
+    A[🏠 Hati ya HTML] --> B[📰 kichwa]
+    A --> C[🧭 nav]
+    A --> D[📄 kuu]
+    A --> E[📋 miguuko]
+    
+    B --> B1[h1: Jina la Tovuti<br/>Nembo & chapa]
+    C --> C1[ul: Urambazaji<br/>Viungo vikuu]
+    D --> D1[makala: Yaliyomo<br/>sehemu: Sehemu ndogo]
+    D --> D2[aside: Ukanda wa upande<br/>Yaliyohusiana]
+    E --> E1[nav: Viungo vya miguuko<br/>Taarifa za Haki miliki]
+    
+    D1 --> D1a[h1: Kichwa cha ukurasa<br/>h2: Sehemu kuu<br/>h3: Sehemu ndogo]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+**Vipengele vya kujenga muundo wa ukurasa unaopatikana:**
 
 ```html
 <!-- Landmark elements provide page navigation structure -->
@@ -342,36 +480,62 @@ Hapa kuna mfano ulionigusa sana: HTML ya kisemantiki ni tofauti kati ya maktaba 
 </footer>
 ```
 
-**Kwa nini HTML ya kisemantiki hubadilisha upatikanaji:**
+**Kwa nini HTML ya kihisia hubadilisha upatikanaji:**
 
-| Kipengele cha Kisemantiki | Madhumuni | Faida kwa Wasomaji wa Skrini |
-|---------------------------|-----------|-----------------------------|
-| `<header>` | Kichwa cha ukurasa au sehemu | "Banner landmark" - urambazaji wa haraka hadi juu |
-| `<nav>` | Viungo vya urambazaji | "Navigation landmark" - orodha ya sehemu za urambazaji |
-| `<main>` | Maudhui ya msingi ya ukurasa | "Main landmark" - ruka moja kwa moja hadi maudhui |
-| `<article>` | Maudhui ya kujitegemea | Hutangaza mipaka ya makala |
-| `<section>` | Vikundi vya maudhui vyenye mandhari | Hutoa muundo wa maudhui |
-| `<aside>` | Maudhui ya pembeni yanayohusiana | "Complementary landmark" |
-| `<footer>` | Kichwa cha ukurasa au sehemu | "Contentinfo landmark" |
+| Kipengele cha Kihisia | Madhumuni | Faida kwa Msomaji wa Skrini |
+|-----------------------|-----------|-----------------------------|
+| `<header>` | Kichwa cha ukurasa au sehemu | "Maeneo ya bendera" - urambazaji haraka juu |
+| `<nav>` | Viungo vya urambazaji | "Maeneo ya urambazaji" - orodha ya sehemu za nav |
+| `<main>` | Yaliyomo kuu ya ukurasa | "Maeneo kuu" - ruka moja kwa moja kwenye yaliyomo |
+| `<article>` | Yaliyomo huru | Tangaza mipaka ya makala |
+| `<section>` | Makundi ya yaliyomo yaliyo na mada | Hutoa muundo wa yaliyomo |
+| `<aside>` | Yaliyomo ya upande yanayohusiana | "Maeneo ya nyongeza" |
+| `<footer>` | Msingi wa ukurasa au sehemu | "Maeneo ya taarifa za maudhui" |
 
-**Nguvu za wasomaji wa skrini na HTML ya kisemantiki:**
-- **Urambazaji wa alama**: Ruka kati ya sehemu kuu za ukurasa mara moja
-- **Muhtasari wa vichwa**: Tengeneza jedwali la maudhui kutoka kwa muundo wa vichwa vyako
-- **Orodha za vipengele**: Unda orodha za viungo vyote, vifungo, au vidhibiti vya fomu
-- **Uelewa wa muktadha**: Elewa uhusiano kati ya sehemu za maudhui
+**Nguvu za wasomaji wa skrini na HTML ya kihisia:**
+- **Urambazaji wa maeneo**: Ruka kati ya sehemu kuu za ukurasa mara moja
+- **Muhtasari wa vichwa**: Tengeneza jedwali la yaliyomo kutoka kwa muundo wa vichwa vyako
+- **Orodha ya vipengele**: Tengeneza orodha ya viungo vyote, vitufe, au vidhibiti vya fomu
+- **Ufahamu wa muktadha**: Elewa uhusiano kati ya sehemu za yaliyomo
 
-> 🎯 **Jaribio la Haraka**: Jaribu kuvinjari tovuti yako kwa msomaji wa skrini ukitumia njia za mkato za alama (D kwa alama, H kwa kichwa, K kwa kiungo katika NVDA/JAWS). Je, urambazaji una mantiki?
+> 🎯 **Jaribio la Haraka**: Jaribu kuvinjari tovuti yako kwa msomaji wa skrini ukitumia njia za haraka za maeneo (D kwa eneo, H kwa kichwa, K kwa kiungo katika NVDA/JAWS). Je, urambazaji unafanya maana?
 
-✅ **Kagua muundo wako wa kisemantiki**: Tumia paneli ya Upatikanaji katika DevTools ya kivinjari chako kuona mti wa upatikanaji na kuhakikisha markup yako inaunda muundo wa mantiki.
+### 🏗️ **Ukaguzi wa Uwezo wa HTML ya Kihisia: Kujenga Misingi Imara**
 
-### Uhierakia wa vichwa: Kuunda muhtasari wa maudhui wa mantiki
+**Tuchunguze uelewa wako wa kihisia:**
+- Je, unaweza kutambua maeneo kwenye ukurasa kwa kuangalia HTML tu?
+- Ungeeleza vipi tofauti kati ya `<section>` na `<div>` kwa rafiki?
+- Ni kitu gani cha kwanza uangalie ikiwa mtumiaji wa msomaji wa skrini anaripoti shida za urambazaji?
 
-Vichwa ni muhimu sana kwa maudhui yanayopatikana—ni kama uti wa mgongo unaoshikilia kila kitu pamoja. Watumiaji wa wasomaji wa skrini wanategemea sana vichwa kuelewa na kuvinjari maudhui yako. Fikiria kama kutoa jedwali la maudhui kwa ukurasa wako.
+```mermaid
+stateDiagram-v2
+    [*] --> UnsementicHTML: supu ya div
+    UnsementicHTML --> SemanticHTML: Ongeza alama za maeneo
+    SemanticHTML --> AccessibleHTML: Jaribu na AT
+    AccessibleHTML --> [*]: Mafanikio ya mtumiaji!
+    
+    note right of UnsementicHTML
+        Wasomaji wa skrini walipotea
+        Urambazaji wa kibodi uvunjikaji
+    end note
+    
+    note right of AccessibleHTML
+        Urambazaji wazi
+        Kivinjari chenye ufanisi
+    end note
+```
+> **Maarifa ya mtaalamu**: HTML ya kihisia bora hutatua takriban asilimia 70 ya matatizo ya upatikanaji kiotomatiki. Jifunze misingi hii na uko njiani sawa!
 
-**Hii ndiyo kanuni ya dhahabu kwa vichwa:**
-Usiruke viwango. Daima endelea kwa mantiki kutoka `<h1>` hadi `<h2>` hadi `<h3>`, na kadhalika. Kumbuka kutengeneza muhtasari shuleni? Ni kanuni ile ile—usingeruka kutoka "I. Hoja Kuu" moja kwa moja hadi "C. Hoja ndogo-ndogo" bila "A. Hoja ndogo" katikati, sivyo?
+✅ **Kagua muundo wako wa kihisia**: Tumia paneli ya Upatikanaji katika DevTools za kivinjari chako kuangalia mti wa upatikanaji na uhakikishe kuwa alamisho lako lina muundo wa mantiki.
 
-**Mfano wa muundo kamili wa kichwa:**
+### Mpangilio wa vichwa: Kuunda muhtasari wa yaliyomo wa mantiki
+
+Vichwa ni muhimu sana kwa yaliyomo yanayopatikana—ni kama uti wa mgongo unaoshikilia kila kitu pamoja. Watumiaji wa wasomaji wa skrini hutegemea sana vichwa kuelewa na kuvinjari yaliyomo. Fikiria kama unatoa jedwali la yaliyomo kwa ukurasa wako.
+
+**Huu ni utaratibu wa dhahabu kwa vichwa:**
+Usicheze viwango. Endelea kwa mantiki kutoka `<h1>` hadi `<h2>` hadi `<h3>`, na kadhalika. Kumbuka ulipokuwa ukifanya muhtasari shuleni? Kanuni ni sawa kabisa—[h1 → h3 pasipo h2 katikati ni kosa].
+
+**Mfano mzuri wa muundo wa vichwa:**
 
 ```html
 <!-- ✅ Excellent: Logical, hierarchical progression -->
@@ -410,34 +574,34 @@ Usiruke viwango. Daima endelea kwa mantiki kutoka `<h1>` hadi `<h2>` hadi `<h3>`
 <h1>Another main heading?</h1> <!-- Multiple h1s -->
 ```
 
-**Mazoea bora ya vichwa:**
-- **Moja `<h1>` kwa kila ukurasa**: Kawaida kichwa chako kikuu cha ukurasa au kichwa cha maudhui ya msingi
-- **Maendeleo ya mantiki**: Usiruke viwango (h1 → h2 → h3, si h1 → h3)
-- **Maudhui ya kuelezea**: Fanya vichwa kuwa na maana vinaposomwa bila muktadha
-- **Muundo wa kuona kwa CSS**: Tumia CSS kwa mwonekano, viwango vya HTML kwa muundo
+**Mambo ya kufuata kwa vichwa:**
+- **H1 moja kwa ukurasa**: Kwa kawaida kichwa kikuu cha ukurasa au kichwa cha maudhui kuu
+- **Maendeleo ya mantiki**: Usicheze viwango (h1 → h2 → h3, si h1 → h3)
+- **Maelezo yenye maana**: Fanya vichwa viwe na maana hata vikisomwa nje ya muktadha
+- **Mitindo ya kuona kwa CSS**: Tumia CSS kwa muonekano, viwango vya HTML kwa muundo
 
 **Takwimu za urambazaji wa wasomaji wa skrini:**
-- Asilimia 68 ya watumiaji wa wasomaji wa skrini huvinjari kwa vichwa ([Utafiti wa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding))
+- Asilimia 68 ya watumiaji hutumia vichwa kurambaza ([Utafiti wa WebAIM](https://webaim.org/projects/screenreadersurvey9/#finding))
 - Watumiaji wanatarajia kupata muhtasari wa vichwa wa mantiki
-- Vichwa hutoa njia ya haraka ya kuelewa muundo wa ukurasa
+- Vichwa hutoa njia ya haraka kuelewa muundo wa ukurasa
 
-> 💡 **Ushauri wa Wataalamu**: Tumia viendelezi vya kivinjari kama "HeadingsMap" kuona muundo wa vichwa vyako. Inapaswa kusomeka kama jedwali la maudhui lililoandaliwa vizuri.
+> 💡 **Ushauri wa Mtaalam**: Tumia nyongeza za kivinjari kama "HeadingsMap" kuona muundo wako wa vichwa. Inapaswa kusomeka kama jedwali la yaliyomo lililoandaliwa vizuri.
 
-✅ **Jaribu muundo wa vichwa vyako**: Tumia urambazaji wa vichwa wa msomaji wa skrini (kitufe cha H katika NVDA) kuruka kupitia vichwa vyako. Je, maendeleo yanaelezea hadithi ya maudhui yako kwa mantiki?
+✅ **Jaribu muundo wa vichwa wako**: Tumia urambazaji wa vichwa wa msomaji wa skrini (kipindi H katika NVDA) kuruka kupitia vichwa vyako. Je, mfuatano unasimulia hadithi ya yaliyomo yako kwa mantiki?
 
 ### Mbinu za hali ya juu za upatikanaji wa kuona
 
-Zaidi ya misingi ya utofauti na rangi, kuna mbinu za kisasa zinazosaidia kuunda uzoefu wa kuona unaojumuisha kweli. Mbinu hizi zinahakikisha maudhui yako yanafanya kazi katika hali tofauti za kutazama na teknolojia za kusaidia.
+Zaidi ya msingi za tofauti na rangi, kuna mbinu za hali ya juu zinazosaidia kuunda uzoefu wa kuona jumuishi kabisa. Njia hizi huthibitisha kuwa yaliyomo yako yanapata kazi katika hali tofauti za mtazamo na teknolojia za msaada.
 
 **Mikakati muhimu ya mawasiliano ya kuona:**
 
-- **Maoni ya njia nyingi**: Changanya dalili za kuona, maandishi, na wakati mwingine sauti
-- **Ufunuo wa hatua kwa hatua**: Wasilisha maudhui kwa vipande vinavyoweza kumeng’enywa
-- **Mifumo thabiti ya mwingiliano**: Tumia kanuni za UI zinazofahamika
-- **Typography inayojibika**: Pima maandishi ipasavyo katika vifaa tofauti
-- **Hali za kupakia na makosa**: Toa maoni wazi kwa vitendo vyote vya mtumiaji
+- **Mrejesho wa njia nyingi**: Changanya alama za kuona, maandishi, na pengine sauti
+- **Ufichaji wa hatua kwa hatua**: Toa taarifa kwa sehemu ndogo zinazoweza kusomwa
+- **Mifumo ya mwingiliano thabiti**: Tumia desturi za UI zinazojulikana
+- **Typography inayojiboresha**: Pima maandishi ipasavyo katika vifaa mbalimbali
+- **Hali za upakiaji na makosa**: Toa mrejesho wazi kwa vitendo vyote vya mtumiaji
 
-**Huduma za CSS kwa upatikanaji ulioboreshwa:**
+**Zana za CSS kwa upatikanaji ulioboreshwa:**
 
 ```css
 /* Screen reader only text - visually hidden but accessible */
@@ -493,43 +657,43 @@ Zaidi ya misingi ya utofauti na rangi, kuna mbinu za kisasa zinazosaidia kuunda 
 }
 ```
 
-> 🎯 **Mfano wa Upatikanaji**: "Kiungo cha kuruka" ni muhimu kwa watumiaji wa kibodi. Inapaswa kuwa kipengele cha kwanza kinachoweza kuzingatiwa kwenye ukurasa wako na kuruka moja kwa moja kwenye eneo la maudhui kuu.
+> 🎯 **Mfano wa Upatikanaji**: "Kiungo cha kuruka" ni muhimu kwa watumiaji wa kibodi. Kiwajibike kwa kuwa kiashirio cha kwanza katika ukurasa na kuruka moja kwa moja kwenye maudhui kuu.
 
-✅ **Tekeleza urambazaji wa kuruka**: Ongeza viungo vya kuruka kwenye kurasa zako na uvijaribu kwa kubonyeza Tab mara tu ukurasa unapopakia. Vinapaswa kuonekana na kukuruhusu kuruka kwenye maudhui kuu.
+✅ **Tekeleza urambazaji wa kuruka**: Ongeza viungo vya kuruka kwenye kurasa zako na vipime kwa kubonyeza Tab mara ukurasa unapopakia. Vinapaswa kuonekana na kuruhusu kuruka kwenye maudhui kuu.
 
-## Kuunda Maandishi ya Kiungo Yenye Maana
+## Kuunda Maandishi Muhimu ya Viungo
 
-Viungo kimsingi ni njia kuu za mtandao, lakini maandishi ya kiungo yasiyoandikwa vizuri ni kama kuwa na alama za barabara zinazosema tu "Mahali" badala ya "Downtown Chicago." Si ya msaada sana, sivyo?
+Viungo ni kama barabara kuu za mtandao, lakini maandishi duni ya viungo ni kama alama za barabara zinazosema "Sehemu" badala ya "Katikati mwa Chicago." Sio msaada sana, sivyo?
 
-Hapa kuna kitu kilichonishangaza nilipojifunza: wasomaji wa skrini wanaweza kutoa viungo vyote kutoka kwa ukurasa na kuonyesha kama orodha moja kubwa. Fikiria kama mtu akikupa orodha ya kila kiungo kwenye ukurasa wako. Je, kila moja ingekuwa na maana peke yake? Hilo ndilo jaribio ambalo maandishi yako ya kiungo yanapaswa kupita!
+Hii alinifurahisha sana nilipojifunza: wasomaji wa skrini wanaweza kutoa orodha ya viungo vyote kwenye ukurasa na kuonyesha kama orodha kubwa. Fikiria kama mtu angekupelekea orodha ya kila kiungo kwenye ukurasa wako. Je, kila kiungo kingeza maana peke yake? Hiyo ni jaribio la maandishi ya kiungo lako kutimiza!
 
 ### Kuelewa mifumo ya urambazaji wa viungo
 
-Wasomaji wa skrini hutoa vipengele vya nguvu vya urambazaji wa viungo vinavyotegemea maandishi ya kiungo yaliyoandikwa vizuri:
+Wasomaji wa skrini hutoa uwezo mkubwa wa urambazaji wa viungo unaotegemea maandishi mema ya viungo:
 
-**Mbinu za urambazaji wa viungo:**
-- **Usomaji wa mfululizo**: Viungo husomwa katika muktadha kama sehemu ya mtiririko wa maudhui
-- **Uundaji wa orodha ya viungo**: Viungo vyote vya ukurasa vinakusanywa kuwa saraka inayoweza kutafutwa
-- **Urambazaji wa haraka**: Ruka kati ya viungo kwa kutumia njia za mkato za kibodi (K katika NVDA)
-- **Utendaji wa utafutaji**: Tafuta viungo maalum kwa kuandika maandishi ya sehemu
+**Njia za urambazaji wa viungo:**
+- **Kusoma mfululizo**: Viungo husomwa ndani ya muktadha kama sehemu ya mtiririko wa yaliyomo
+- **Utengenezaji wa orodha ya viungo**: Viungo vyote vya ukurasa vinakusanywa katika directory inayoweza kutafutwa
+- **Urambazaji wa haraka**: Ruka kati ya viungo ukitumia mbofyo za kibodi (K katika NVDA)
+- **Utafutaji**: Tafuta viungo maalum kwa kuandika sehemu ya maandishi
 
 **Kwa nini muktadha ni muhimu:**
-Watumiaji wa wasomaji wa skrini wanapounda orodha ya viungo, wanaona kitu kama hiki:
+Watumiaji wa wasomaji wa skrini wanapotengeneza orodha ya viungo, wanaona kama ifuatavyo:
 - "Pakua ripoti"
 - "Jifunze zaidi"
 - "Bonyeza hapa"
 - "Sera ya faragha"
 - "Bonyeza hapa"
 
-Ni viungo viwili tu kati ya hivi vinatoa taarifa muhimu vinaposomwa bila muktadha!
+Ni viungo viwili tu vinavyotoa taarifa za maana zikiangaliwa nje ya muktadha!
 
-> 📊 **Athari kwa Mtumiaji**: Watumiaji wa wasomaji wa skrini huchanganua orodha za viungo ili kuelewa maudhui ya ukurasa haraka. Maandishi ya kiungo yasiyoelezea yanawalazimisha kurudi kwenye muktadha wa kila kiungo, na hivyo kupunguza kasi ya uzoefu wao wa kuvinjari.
+> 📊 **Athari kwa Mtumiaji**: Watumiaji wa wasomaji wa skrini husaka orodha za viungo kuelewa yaliyomo haraka. Maandishi ya viungo yasiyoeleweka huwafanya warudi muktadha wa kila kiungo, kuchelewesha sana uzoefu wa kuvinjari.
 
-### Makosa ya kawaida ya maandishi ya kiungo ya kuepuka
+### Makosa ya kawaida ya maandishi ya viungo kuepuka
 
-Kuelewa kinachoshindwa husaidia kutambua na kurekebisha masuala ya upatikanaji katika maudhui yaliyopo.
+Kuelewa nini hakifanyi kazi kunakusaidia kutambua na kurekebisha matatizo ya upatikanaji katika yaliyomo ya sasa.
 
-**❌ Maandishi ya kiungo yasiyoelezea:**
+**❌ Maandishi ya viungo yasiyoeleweka hayatoi muktadha:**
 
 ```html
 <!-- Meaningless when read from a link list -->
@@ -555,17 +719,17 @@ Kuelewa kinachoshindwa husaidia kutambua na kurekebisha masuala ya upatikanaji k
 <a href="/contact">Go</a> | <a href="/about">See</a> | <a href="/help">View</a>
 ```
 
-**Kwa nini mifumo hii inashindwa:**
-- **"Bonyeza hapa"** haiwaambii watumiaji chochote kuhusu unakoelekea
-- **"Soma zaidi"** ikirudiwa mara nyingi husababisha mkanganyiko
-- **URL mbichi** ni ngumu kwa wasomaji wa skrini kutamka wazi
-- **Maneno moja** kama "Nenda" au "Tazama" hayana muktadha wa kuelezea
+**Kwa nini mifano hii inashindwa:**
+- **"Bonyeza hapa"** hawaitoi watumiaji taarifa yoyote kuhusu marudio
+- **"Soma zaidi"** mara nyingi hurudia na kuleta mkanganyiko
+- **Anwani za URL ghafi** ni vigumu kwa wasomaji wa skrini kutoa sauti kwa usahihi
+- **Maneno moja-tu** kama "Nenda" au "Tazama" hayana muktadha wa kueleweka
 
-### Kuandika maandishi bora ya kiungo
+### Kuandika maandishi bora ya viungo
 
-Maandishi ya kiungo yaliyoelezea yanawanufaisha kila mtu—watumiaji wa macho wanaweza kuchanganua viungo haraka, na watumiaji wa wasomaji wa skrini wanaelewa marudio mara moja.
+Maandishi ya viungo yaliyoeleweka hawanufaisha kila mtu—watumiaji waliotazama haraka wanaweza kuchambua viungo, na watumiaji wa wasomaji wa skrini huelewa marudio mara moja.
 
-**✅ Mifano ya maandishi ya kiungo yaliyo wazi na ya kuelezea:**
+**✅ Mifano ya maandishi wazi, yenye maelezo ya viungo:**
 
 ```html
 <!-- Descriptive text that explains the destination -->
@@ -592,16 +756,16 @@ Maandishi ya kiungo yaliyoelezea yanawanufaisha kila mtu—watumiaji wa macho wa
 <a href="/help">Get help with your account</a>
 ```
 
-**Mazoea bora ya maandishi ya kiungo:**
-- **Kuwa maalum**: "Pakua ripoti ya kifedha ya robo mwaka" dhidi ya "Pakua"
-- **Jumuisha aina ya faili na ukubwa**: "(PDF, 1.2MB)" kwa faili zinazoweza kupakuliwa
-- **Taja ikiwa viungo vinafunguka nje**: "(inafunguka katika dirisha jipya)" inapofaa
-- **Tumia lugha ya hatua**: "Wasiliana nasi" dhidi ya "Ukurasa wa mawasiliano"
-- **Iwe fupi**: Lenga maneno 2-8 inapowezekana
+**Mambo ya kufuata kwa maandishi ya viungo:**
+- **Kuwa mahususi**: "Pakua ripoti ya kifedha ya robo mwaka" dhidi ya "Pakua"
+- **Jumuisha aina na ukubwa wa faili**: "(PDF, 1.2MB)" kwa faili zinazopakuliwa
+- **Taja ikiwa viungo hufungua kwa dirisha jipya**: "(hufungua dirisha jipya)" inapohitajika
+- **Tumia lugha hai**: "Wasiliana nasi" dhidi ya "Ukurasa wa mawasiliano"
+- **Fanya kifupi**: Lenga maneno 2-8 pale panapowezekana
 
-### Mifumo ya hali ya juu ya upatikanaji wa viungo
+### Mikakati ya hali ya juu ya upatikanaji wa viungo
 
-Wakati mwingine vikwazo vya muundo wa kuona au mahitaji ya kiufundi yanahitaji suluhisho maalum. Hapa kuna mbinu za kisasa kwa hali za kawaida zinazochangamoto:
+Wakati mwingine vikwazo vya muundo wa kuona au mahitaji ya kiufundi yanahitaji suluhisho maalum. Hapa kuna mbinu za hali ya juu kwa hali changamani za kawaida:
 
 **Kutumia ARIA kwa muktadha ulioboreshwa:**
 
@@ -672,113 +836,248 @@ Wakati mwingine vikwazo vya muundo wa kuona au mahitaji ya kiufundi yanahitaji s
 }
 ```
 
-> ⚠️ **Muhimu**: Unapotumia `target="_blank"`, daima wajuze watumiaji kuwa kiungo kinafunguka katika dirisha au tabo mpya. Mabadiliko yasiyotarajiwa ya urambazaji yanaweza kuwachanganya.
+> ⚠️ **Muhimu**: Unapojumuisha `target="_blank"`, daima waambie watumiaji viungo hufungua kwenye dirisha au kichupo kipya. Mabadiliko yasiyotegemewa ya urambazaji yanaweza kuwa ya kuchanganya.
 
-✅ **Jaribu muktadha wa kiungo chako**: Tumia zana za msanidi wa kivinjari chako kuunda orodha ya viungo vyote kwenye ukurasa wako. Je, unaweza kuelewa madhumuni ya kila kiungo bila muktadha wowote unaozunguka?
+✅ **Jaribu muktadha wa viungo vyako**: Tumia zana za msanidi wa kivinjari kuunda orodha ya viungo vyote kwenye ukurasa wako. Je, unaelewa madhumuni ya kila kiungo bila muktadha wowote?
 
 ## ARIA: Kuimarisha Upatikanaji wa HTML
 
-[Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) ni kama kuwa na mfasiri wa ulimwengu kati ya programu zako za wavuti ngumu na teknolojia za kusaidia. Wakati HTML pekee haiwezi kueleza kila kitu vipengele vyako vya mwingiliano vinavyofanya, ARIA huingia kujaza mapengo hayo.
+[Maombi ya Mtandao Yenye Upatikanaji (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) ni kama kuwa na mtafsiri wa ulimwengu kati ya programu zako za wavuti changamano na teknolojia za msaada. HTML peke yake inaposhindwa kuelezea kila kitu vipengele vyako vya mwingiliano vinavyofanya, ARIA huingia kutimiza pengo hilo.
 
-Ninapenda kufikiria ARIA kama kuongeza maelezo ya msaada kwenye HTML yako—kama maelekezo ya jukwaa katika script ya mchezo ambayo husaidia waigizaji kuelewa majukumu yao na uhusiano.
+Napenda kuifikiria ARIA kama kuongeza maelezo ya msaada kwenye HTML yako—kama maagizo ya jukwaani kwenye hati za kazi ambayo huwasaidia waigizaji kuelewa majukumu yao na uhusiano.
 
-**Hii ndiyo kanuni muhimu zaidi kuhusu ARIA**: Daima tumia HTML ya kisemantiki kwanza, kisha ongeza ARIA ili kuiboresha. Fikiria ARIA kama kiungo, si sahani kuu. Inapaswa kufafanua na kuboresha muundo wako wa HTML, kamwe usibadilishe. Pata msingi huo sahihi kwanza!
+**Hii ndiyo kanuni muhimu kabisa kuhusu ARIA**: Daima tumia HTML ya kihisia kwanza, kisha ongeza ARIA ili kuimarisha. Fikiria ARIA kama viungo vya mchuzi, si sahani kuu. Inapaswa kufafanua na kuboresha muundo wa HTML, si kuubadilisha. Anza na misingi hii kwanza!
 
 ### Utekelezaji wa kimkakati wa ARIA
 
-ARIA ni yenye nguvu, lakini kwa nguvu huja jukumu. ARIA isiyo sahihi inaweza kufanya upatikanaji kuwa mbaya zaidi kuliko kutokuwa na ARIA kabisa. Hapa kuna wakati na jinsi ya kuitumia kwa ufanisi:
+ARIA ni nguvu, lakini nguvu huleta wajibu. ARIA isiyotumiwa ipasavyo inaweza kufanya upatikanaji kuwa mbaya zaidi kuliko kutokuwepo kwake. Hapa ni lini na jinsi ya kuitumia kwa usahihi:
 
 **✅ Tumia ARIA wakati:**
-- Unaunda vidhibiti vya mwingiliano vya kawaida (accordions, tabs, carousels)
-- Unajenga maudhui ya nguvu yanayobadilika bila kupakia ukurasa
-- Unatoa muktadha wa ziada kwa uhusiano wa UI ngumu
-- Unaonyesha hali za kupakia au masasisho ya maudhui ya moja kwa moja
-- Unaunda interfaces za programu na vidhibiti vya kawaida
+- Unaunda vipengele vya mwingiliano maalum (accordion, tabo, carousel)
+- Kujenga yaliyomo yanayobadilika bila kurudisha ukurasa
+- Kutoa muktadha wa ziada kwa uhusiano mgumu wa UI
+- Kuhakikisha hali za upakiaji au masasisho ya yaliyomo ya moja kwa moja
+- Kuunda interfaces za programu zenye vidhibiti maalum
 
 **❌ Epuka ARIA wakati:**
-- Vipengele vya kawaida vya HTML tayari vinatoa semantiki zinazohitajika
-- Huna uhakika jinsi ya kuitekeleza kwa usahihi
-- Inarudia taarifa tayari zinazotolewa na HTML ya kisemantiki
-- Hujajaribu na teknolojia za kusaidia halisi
+- Vipengele vya kawaida vya HTML tayari vinatoa maana inayohitajika
+- Huwezi kutekeleza kwa usahihi
+- Inajirudia taarifa zilizotolewa na HTML ya kihisia
+- Hujajaribu na teknolojia halisi za msaada
 
-> 🎯 **Kanuni ya Dhahabu ya ARIA**: "Usibadilishe semantiki isipokuwa unapaswa kabisa, hakikisha upatikanaji wa kibodi kila wakati, na jaribu na teknolojia za kusaidia halisi."
+> 🎯 **Kanuni ya Dhahabu ya ARIA**: "Usibadilishe maana isipokuwa ni lazima kabisa, hakikisha upatikanaji wa kibodi kila wakati, na jaribu na teknolojia halisi za msaada."
+**Aina tano za ARIA:**
 
-**Makundi matano ya ARIA:**
+1. **Majukumu**: Kipi kipengele hiki? (`button`, `tab`, `dialog`)
+2. **Sifa**: Ni sifa gani zilizopo? (`aria-required`, `aria-haspopup`)
+3. **Hali**: Hali yake ya sasa ni ipi? (`aria-expanded`, `aria-checked`)
+4. **Alama za maeneo**: Iko wapi katika muundo wa ukurasa? (`banner`, `navigation`, `main`)
+5. **Maeneo ya kuishi**: Mabadiliko yanapaswa kutangazwa vipi? (`aria-live`, `aria-atomic`)
 
-1. **Majukumu**: Kipengele hiki ni nini? (`button`, `tab`, `dialog`)
-2. **Mali**: Vipengele vyake ni nini? (`aria-required`, `aria-haspopup`)
-3. **Hali**: Hali yake ya sasa ni nini
-5. **Anza kwa urahisi**: Utekelezaji wa ARIA wenye ugumu zaidi una uwezekano mkubwa wa kuwa na makosa
+### Mifano muhimu ya ARIA kwa programu za wavuti za kisasa
 
-**🔍 Mchakato wa kupima:**
+Mifano hii inatatua changamoto za kawaida zaidi za upatikanaji katika programu za wavuti zinazoshirikiana:
+
+**Kuita majina na kuelezea vipengele:**
+
+```html
+<!-- aria-label: Provides accessible name when visible text isn't sufficient -->
+<button aria-label="Close newsletter subscription dialog">×</button>
+
+<!-- aria-labelledby: References existing text as the accessible name -->
+<section aria-labelledby="news-heading">
+  <h2 id="news-heading">Latest News</h2>
+  <!-- news content -->
+</section>
+
+<!-- aria-describedby: Links to additional descriptive text -->
+<input type="password" 
+       aria-describedby="pwd-requirements pwd-strength"
+       required>
+<div id="pwd-requirements">
+  Password must contain at least 8 characters, including uppercase, lowercase, and numbers.
+</div>
+<div id="pwd-strength" aria-live="polite">
+  <!-- Dynamic password strength indicator -->
+</div>
+```
+
+**Maeneo ya kuishi kwa yaliyomo mabadiliko:**
+
+```html
+<!-- Polite announcements (don't interrupt current speech) -->
+<div aria-live="polite" id="status-updates">
+  <!-- Status messages appear here -->
+</div>
+
+<!-- Assertive announcements (interrupt and announce immediately) -->
+<div aria-live="assertive" id="urgent-alerts">
+  <!-- Error messages and critical alerts -->
+</div>
+
+<!-- Loading states with live regions -->
+<button id="submit-btn" aria-describedby="loading-status">
+  Submit Application
+</button>
+<div id="loading-status" aria-live="polite" aria-atomic="true">
+  <!-- "Processing your application..." appears here -->
+</div>
+```
+
+**Mfano wa widget inayoshirikiana (accordion):**
+
+```html
+<div class="accordion">
+  <h3>
+    <button aria-expanded="false" 
+            aria-controls="panel-1" 
+            id="accordion-trigger-1"
+            class="accordion-trigger">
+      Accessibility Guidelines
+    </button>
+  </h3>
+  <div id="panel-1" 
+       role="region"
+       aria-labelledby="accordion-trigger-1" 
+       hidden>
+    <p>WCAG 2.1 provides comprehensive guidelines...</p>
+  </div>
+</div>
+```
+
+```javascript
+// JavaScript kusimamia hali ya kifungu
+function toggleAccordion(trigger) {
+  const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+  const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  
+  // Badilisha hali
+  trigger.setAttribute('aria-expanded', !isExpanded);
+  panel.hidden = isExpanded;
+  
+  // Tangaza mabadiliko kwa wasikilizaji wa skrini
+  const status = document.getElementById('status-updates');
+  status.textContent = isExpanded ? 'Section collapsed' : 'Section expanded';
+}
+```
+
+### Mazoezi bora ya utekelezaji wa ARIA
+
+ARIA ni yenye nguvu lakini inahitaji utekelezaji wa tahadhari. Kufuatilia miongozo hii kunasaidia kuhakikisha ARIA yako inaongeza badala ya kuzuia upatikanaji:
+
+**🛡️ Kanuni za msingi:**
+
+```mermaid
+flowchart TD
+    A[🚀 Anza na HTML ya semantiki] --> B{Je, HTML inatoa semantiki zinazohitajika?}
+    B -->|Ndiyo| C[✅ Tumia HTML pekee]
+    B -->|Hapana| D[Fikiria kuongeza ARIA]
+    D --> E{Je, unaweza kufanikisha kwa njia rahisi zaidi?}
+    E -->|Ndiyo| F[🔄 Raraisha mbinu]
+    E -->|Hapana| G[📝 Tekeleza ARIA kwa uangalifu]
+    G --> H[🧪 Jaribu na AT halisi]
+    H --> I{Inafanya kazi kama inavyotarajiwa?}
+    I -->|Hapana| J[🔧 Rekebisha na tatua]
+    I -->|Ndiyo| K[✅ Mafanikio!]
+    J --> H
+    F --> C
+    
+    style A fill:#e3f2fd
+    style C fill:#e8f5e8
+    style K fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+```
+1. **HTML ya maana kwanza**: Daima pendelea `<button>` kuliko `<div role="button">`
+2. **Usiharibu maana**: Kamwe usibadilishe maana ya HTML iliyopo (epuka `<h1 role="button">`)
+3. **Hifadhi upatikanaji wa kibodi**: Vipengele vyote vya ARIA vinavyoshirikiana lazima viwe vinavyofikika kikamilifu kwa kibodi
+4. **Jaribu na watumiaji halisi**: Msaada wa ARIA hutofautiana sana kati ya teknolojia za kusaidia
+5. **Anza kwa ufanisi**: Utekelezaji mgumu wa ARIA una uwezekano mkubwa wa makosa
+
+**🔍 Mchakato wa upimaji:**
 
 ```mermaid
 graph TD
-    A[Write ARIA code] --> B[Validate HTML]
-    B --> C[Test with keyboard only]
-    C --> D[Test with screen reader]
-    D --> E[Test across browsers]
-    E --> F{Issues found?}
-    F -->|Yes| G[Fix and re-test]
-    F -->|No| H[Implementation complete]
+    A[Andika msimbo wa ARIA] --> B[Thibitisha HTML]
+    B --> C[Jaribu kwa kutumia kibodi pekee]
+    C --> D[Jaribu kwa msomaji wa skrini]
+    D --> E[Jaribu katika vivinjari tofauti]
+    E --> F{Kuna matatizo?}
+    F -->|Ndiyo| G[Rekebisha na jaribu tena]
+    F -->|Hapana| H[Utekelezaji umekamilika]
     G --> B
 ```
+**🚫 Makosa ya kawaida ya ARIA yasiyotakiwa:**
 
-**🚫 Makosa ya kawaida ya ARIA ya kuepuka:**
+- **Taarifa zinazopingana**: Usipinge maana ya HTML
+- **Kulika sana kwa lebo**: Taarifa nyingi sana za ARIA huzidi uwezo wa watumiaji
+- **ARIA isiyobadilika**: Kusahau kusasisha hali za ARIA wakati yaliyomo yanabadilika
+- **Utekelezaji usiolipimwa**: ARIA inayofanya kazi kwa nadharia lakini inashindwa vitendo
+- **Ukosefu wa msaada wa kibodi**: Majukumu ya ARIA bila mwingiliano unaohusiana wa kibodi
 
-- **Taarifa zinazokinzana**: Usipingane na semantiki za HTML
-- **Maelezo mengi kupita kiasi**: Maelezo mengi ya ARIA yanawachanganya watumiaji
-- **ARIA isiyobadilika**: Kusahau kusasisha hali za ARIA wakati maudhui yanabadilika
-- **Utekelezaji usiojaribiwa**: ARIA inayofanya kazi kwa nadharia lakini inashindwa kwa vitendo
-- **Ukosefu wa msaada wa kibodi**: Majukumu ya ARIA bila mwingiliano wa kibodi unaolingana
+> 💡 **Rasilimali za Upimaji**: Tumia zana kama [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) kwa uthibitishaji wa ARIA wa moja kwa moja, lakini daima jaribu na wasomaji wa skrini halisi kwa uzoefu kamili.
 
-> 💡 **Rasilimali za kupima**: Tumia zana kama [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) kwa uthibitishaji wa ARIA wa kiotomatiki, lakini jaribu kila mara na wasomaji wa skrini halisi kwa uzoefu kamili.
+### 🎭 **Ukaguzi wa Ujuzi wa ARIA: Uko Tayari kwa Mwingiliano Mgonjwa?**
 
-✅ **Jifunze kutoka kwa wataalamu**: Soma [Mwongozo wa Uandishi wa ARIA](https://w3c.github.io/aria-practices/) kwa mifumo iliyojaribiwa na utekelezaji wa vidude vya mwingiliano vyenye ugumu.
+**Pima ujasiri wako wa ARIA:**
+- Ungechagua lini ARIA badala ya HTML ya maana? (Kibukizi: karibu kamwe!)
+- Je, unaweza kuelezea kwa nini `<div role="button">` kawaida ni mbaya kuliko `<button>`?
+- Nini jambo muhimu zaidi kukumbuka kuhusu upimaji wa ARIA?
 
-## Kufanya Picha na Vyombo vya Habari Viweze Kufikiwa
+```mermaid
+pie title "Mifumo ya Matumizi ya ARIA Maarufu"
+    "Lebo & Maelezo" : 40
+    "Maeneo Hai" : 25
+    "Hali za Vifaa" : 20
+    "Dhibiti Maenezi" : 15
+```
+> **Maarifa muhimu**: Matumizi mengi ya ARIA ni kwa kuweka lebo na kuelezea vipengele. Mifano ngumu ya widgets ni nadra zaidi kuliko unavyofikiria!
 
-Maudhui ya kuona na sauti ni sehemu muhimu za uzoefu wa kisasa wa wavuti, lakini yanaweza kuunda vikwazo ikiwa hayajatekelezwa kwa umakini. Lengo ni kuhakikisha kwamba taarifa na athari za kihisia za vyombo vyako vya habari zinawafikia watumiaji wote. Ukishazoea, inakuwa jambo la kawaida.
+✅ **Jifunze kutoka kwa wataalamu**: Soma [ARIA Authoring Practices Guide](https://w3c.github.io/aria-practices/) kwa mifano iliyothibitishwa na utekelezaji wa widgets changamano zinazoshirikiana.
 
-Aina tofauti za vyombo vya habari zinahitaji mbinu tofauti za ufikivu. Ni kama kupika—usingechukulia samaki laini kwa njia sawa na unavyoshughulikia nyama nzito. Kuelewa tofauti hizi kunakusaidia kuchagua suluhisho sahihi kwa kila hali.
+## Kufanya Picha na Media Ziwe Rahisi Kupata
 
-### Ufikiaji wa picha kwa mkakati
+Maudhui ya kuona na sauti ni sehemu muhimu za uzoefu wa wavuti wa kisasa, lakini yanaweza kuleta vizingiti ikiwa hayatekelezwi kwa uangalifu. Lengo ni kuhakikisha habari na athari za hisia za media yako zinawafikia kila mtumiaji. Mara unapoanza, inakuwa tabia ya kawaida.
 
-Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuandika maandishi mbadala bora na kuunda uzoefu jumuishi zaidi.
+Aina tofauti za media zinahitaji mbinu tofauti za upatikanaji. Ni kama kupika—huwezi kutibu samaki mwembamba kama unavyomtibu steak yenye uzito. Kuelewa tofauti hizi kunakusaidia kuchagua suluhisho sahihi kwa kila hali.
 
-**Aina nne za picha na mikakati yao ya maandishi mbadala:**
+### Mkakati wa upatikanaji wa picha
 
-**Picha za taarifa** - zinatoa taarifa muhimu:
+Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuandika maandishi ya mbadala bora na kuunda uzoefu wa kujumuisha zaidi.
+
+**Aina nne za picha na mikakati ya maandishi ya alt:**
+
+**Picha za taarifa** - zinaeleza taarifa muhimu:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.sw.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.sw.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
-**Picha za mapambo** - za kuona tu bila thamani ya taarifa:
+**Picha za mapambo** - ni za kuona tu na haina thamani ya taarifa:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.sw.png" alt="" role="presentation">
+<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.sw.png" alt="" role="presentation">
 ```
 
-**Picha za kazi** - hutumika kama vifungo au vidhibiti:
+**Picha za kazi** - hutumika kama vitufe au vidhibiti:
 ```html
 <button>
   <img src="search-icon.svg" alt="Search">
 </button>
 ```
 
-**Picha ngumu** - chati, michoro, infografia:
+**Picha ngumu** - chati, michoro, infographics:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.sw.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/complex-chart.c831f461a363b446.sw.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
 ```
 
-### Ufikiaji wa video na sauti
+### Upatikanaji wa video na sauti
 
 **Mahitaji ya video:**
-- **Manukuu**: Toleo la maandishi la maudhui ya sauti na athari za sauti
-- **Maelezo ya sauti**: Usimulizi wa vipengele vya kuona kwa watumiaji wasioona
-- **Nakala**: Toleo kamili la maandishi la maudhui yote ya sauti na kuona
+- **Manukuu**: Toleo la maandishi la yaliyosemwa na athari za sauti
+- **Maelezo ya sauti**: Maandishi ya vipengele vya kuona kwa watumiaji wamesioona
+- **Nakala**: Toleo kamili la maandishi ya sauti na maudhui ya kuona
 
 ```html
 <video controls>
@@ -789,10 +1088,10 @@ Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuand
 ```
 
 **Mahitaji ya sauti:**
-- **Nakala**: Toleo la maandishi la maudhui yote ya sauti
-- **Viashiria vya kuona**: Kwa maudhui ya sauti pekee, toa vidokezo vya kuona
+- **Nakala**: Toleo la maandishi la yaliyosemwa yote
+- **Viashiria vya kuona**: Kwa maudhui ya sauti tu, toa vidokezo vya kuona
 
-### Mbinu za kisasa za picha
+### Mbinu za picha za kisasa
 
 **Kutumia CSS kwa picha za mapambo:**
 ```css
@@ -802,34 +1101,52 @@ Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuand
 }
 ```
 
-**Picha zinazojibika na ufikivu:**
+**Picha zinazojibadilisha na upatikanaji:**
 ```html
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.sw.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.sw.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 
-✅ **Pima ufikivu wa picha**: Tumia msomaji wa skrini kuvinjari ukurasa wenye picha. Je, unapata taarifa za kutosha kuelewa maudhui?
+✅ **Jaribu upatikanaji wa picha**: Tumia msomaji wa skrini kuvinjari ukurasa wenye picha. Je, unapata taarifa za kutosha kuelewa maudhui?
 
-## Uvinjari wa kibodi na usimamizi wa mwelekeo
+## Uvinjari wa kibodi na usimamizi wa umakini
 
-Watumiaji wengi huvinjari wavuti kwa kutumia kibodi pekee. Hii inajumuisha watu wenye ulemavu wa viungo, watumiaji wa nguvu wanaopata kibodi kuwa ya haraka kuliko panya, na yeyote ambaye panya yake imekoma kufanya kazi. Kuhakikisha tovuti yako inafanya kazi vizuri na pembejeo ya kibodi ni muhimu na mara nyingi hufanya tovuti yako kuwa bora kwa kila mtu.
+Watumiaji wengi huvinjari wavuti kwa kutumia kibodi yao peke yake. Hii ni pamoja na watu wenye ulemavu wa mwendo, watumiaji wenye nguvu ambao hupata kibodi kuwa kasi zaidi kuliko panya, na mtu yeyote ambaye panya wake haifanyi kazi. Kuhakikisha tovuti yako inafanya kazi vizuri na kibodi ni muhimu na mara nyingi hufanya tovuti yako kuwa bora kwa kila mtu.
 
-### Mifumo muhimu ya uvinjari wa kibodi
+```mermaid
+flowchart LR
+    A[⌨️ Urambazaji kwa Kibodi] --> B[Mpangilio wa Tab]
+    A --> C[Viashirio vya Kuzingatia]
+    A --> D[Viungo vya Ruka]
+    A --> E[Njia za Mkato za Kibodi]
+    
+    B --> B1[Mfuatano wa mantiki<br/>Vipengele vyote shirikishi<br/>Hakuna mitego ya tab]
+    C --> C1[Miisho inayoonekana<br/>Kontrasti ya juu<br/>Mipaka wazi]
+    D --> D1[Ruka hadi kuu<br/>Ruka hadi nav<br/>Pita rudia]
+    E --> E1[Kimbia kufunga<br/>Ingiza kuwasha<br/>Mishale katika makundi]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+```
+### Mifano muhimu ya uvinjari wa kibodi
 
 **Mwingiliano wa kawaida wa kibodi:**
-- **Tab**: Hamisha mwelekeo mbele kupitia vipengele vya mwingiliano
-- **Shift + Tab**: Hamisha mwelekeo nyuma
-- **Enter**: Washa vifungo na viungo
-- **Space**: Washa vifungo, angalia visanduku vya tiki
-- **Mifumo ya mishale**: Vinjari ndani ya vikundi vya vipengele (vifungo vya redio, menyu)
-- **Escape**: Funga modali, menyu za kushuka, au ghairi shughuli
+- **Tab**: Hamisha umakini mbele kupitia vipengele vinavyoshirikiana
+- **Shift + Tab**: Hamisha umakini nyuma
+- **Enter**: Washa vitufe na viungo
+- **Space**: Washa vitufe, angalia masanduku ya alama
+- **Mfunguo wa mshale**: Vinjari ndani ya makundi ya vipengele (vitufe vya redio, menyu)
+- **Escape**: Funga modali, menyu zinazoshuka, au ghairi shughuli
 
-### Mazoea bora ya usimamizi wa mwelekeo
+### Mazoezi bora ya usimamizi wa umakini
 
-**Viashiria vya mwelekeo vinavyoonekana:**
+**Viashiria vinavyoonekana vya umakini:**
 ```css
 /* Ensure focus is always visible */
 button:focus-visible {
@@ -843,7 +1160,7 @@ button:focus-visible {
 }
 ```
 
-**Viungo vya kuruka kwa uvinjari bora:**
+**Viungo vya kuruka kwa uvinjari mzuri:**
 ```html
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -870,12 +1187,12 @@ button:focus-visible {
 </form>
 ```
 
-### Kufunga mwelekeo kwenye modali
+### Kufungwa kwa umakini ndani ya modali
 
-Unapofungua mazungumzo ya modali, mwelekeo unapaswa kufungwa ndani ya modali:
+Unapo fungua mazungumzo ya modali, umakini unapaswa kufungwa ndani ya modali:
 
 ```javascript
-// Modern focus trap implementation
+// Utekelezaji wa kisasa wa mtego wa mkazo
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -900,18 +1217,18 @@ function trapFocus(element) {
     }
   });
   
-  // Focus first element when modal opens
+  // Zingatia kipengele cha kwanza unapo fungua dirisha la modali
   firstElement.focus();
 }
 ```
 
-✅ **Pima uvinjari wa kibodi**: Jaribu kuvinjari tovuti yako kwa kutumia kitufe cha Tab pekee. Je, unaweza kufikia vipengele vyote vya mwingiliano? Je, mpangilio wa mwelekeo ni wa kimantiki? Je, viashiria vya mwelekeo vinaonekana wazi?
+✅ **Jaribu uvinjari wa kibodi**: Jaribu kuvinjari tovuti yako kwa kutumia funguo ya Tab pekee. Je, unaweza kufikia vipengele vyote vinavyoshirikiana? Je, mpangilio wa umakini ni wa kimantiki? Je, viashiria vya umakini vinaonekana vizuri?
 
-## Ufikiaji wa fomu
+## Upatikanaji wa fomu
 
-Fomu ni muhimu kwa mwingiliano wa mtumiaji na zinahitaji umakini maalum kwa ufikivu.
+Fomu ni muhimu kwa mwingiliano wa mtumiaji na zinahitaji umakini maalum katika upatikanaji.
 
-### Uhusiano wa lebo na vidhibiti vya fomu
+### Uhusiano kati ya lebo na kidhibiti cha fomu
 
 **Kila kidhibiti cha fomu kinahitaji lebo:**
 ```html
@@ -929,9 +1246,9 @@ Fomu ni muhimu kwa mwingiliano wa mtumiaji na zinahitaji umakini maalum kwa ufik
 <input type="search" aria-label="Search products" placeholder="Search...">
 ```
 
-### Kushughulikia makosa na uthibitishaji
+### Usimamizi wa makosa na uthibitishaji
 
-**Ujumbe wa makosa unaoweza kufikiwa:**
+**Ujumbe wa makosa yanayopatikana:**
 ```html
 <label for="email">Email Address:</label>
 <input type="email" id="email" name="email" 
@@ -942,15 +1259,15 @@ Fomu ni muhimu kwa mwingiliano wa mtumiaji na zinahitaji umakini maalum kwa ufik
 </div>
 ```
 
-**Mazoea bora ya uthibitishaji wa fomu:**
-- Tumia `aria-invalid` kuonyesha sehemu batili
-- Toa ujumbe wa makosa ulio wazi na maalum
+**Mazoezi bora ya uthibitishaji wa fomu:**
+- Tumia `aria-invalid` kuonyesha sehemu zilizo na hitilafu
+- Toa ujumbe wa makosa wazi na maalum
 - Tumia `role="alert"` kwa matangazo muhimu ya makosa
-- Onyesha makosa mara moja na wakati wa kuwasilisha fomu
+- Onyesha makosa mara moja na pia wakati wa kuwasilisha fomu
 
-### Vikundi vya sehemu za fomu
+### Seti za fomu na upangaji wa vikundi
 
-**Panga vidhibiti vya fomu vinavyohusiana:**
+**Fanya vikundi vya vidhibiti vinavyohusiana:**
 ```html
 <fieldset>
   <legend>Shipping Address</legend>
@@ -971,72 +1288,72 @@ Fomu ni muhimu kwa mwingiliano wa mtumiaji na zinahitaji umakini maalum kwa ufik
 </fieldset>
 ```
 
-## Safari Yako ya Ufikivu: Mambo Muhimu ya Kukumbuka
+## Safari yako ya Upatikanaji: Mambo Muhimu
 
-Hongera! Umepata maarifa ya msingi ya kuunda uzoefu wa wavuti ulio jumuishi kweli. Hili ni jambo la kusisimua sana! Ufikivu wa wavuti si tu kuhusu kuangalia masanduku ya kufuata sheria—ni kuhusu kutambua njia mbalimbali ambazo watu huingiliana na maudhui ya kidijitali na kubuni kwa ajili ya utofauti huo wa kushangaza.
+Hongera! Umejifunza maarifa ya msingi ya kuunda uzoefu wa wavuti unaojumuisha kweli. Hii ni jambo la kufurahisha sana! Upatikanaji wa wavuti siyo tu kuhusu kukagua masharti—ni kuhusu kutambua njia mbalimbali watu wanavyoshirikiana na maudhui ya kidijitali na kubuni kwa ajili ya ugumu huo mzuri.
 
-Sasa wewe ni sehemu ya jamii inayokua ya watengenezaji wanaoelewa kwamba muundo mzuri unafanya kazi kwa kila mtu. Karibu kwenye klabu!
+Sasa wewe ni sehemu ya jamii inayokua ya watengenezaji wanaoelewa kuwa muundo mzuri hufanyia kila mtu kazi. Karibu katika klabu!
 
-**🎯 Zana yako ya ufikivu sasa inajumuisha:**
+**🎯 Kifaa chako cha upatikanaji sasa kina:**
 
-| Kanuni ya Msingi | Utekelezaji | Athari |
-|------------------|-------------|--------|
-| **Msingi wa HTML ya Semantiki** | Tumia vipengele sahihi vya HTML kwa kusudi lao | Wasomaji wa skrini wanaweza kuvinjari kwa ufanisi, kibodi inafanya kazi kiotomatiki |
-| **Muundo wa Kuonekana Jumuishi** | Tofauti ya kutosha, matumizi ya rangi yenye maana, viashiria vya mwelekeo vinavyoonekana | Wazi kwa kila mtu katika hali yoyote ya mwanga |
-| **Maudhui ya Maelezo** | Maandishi ya kiungo yenye maana, maandishi mbadala, vichwa | Watumiaji wanaelewa maudhui bila muktadha wa kuona |
-| **Ufikivu wa Kibodi** | Mpangilio wa tab, njia za mkato za kibodi, usimamizi wa mwelekeo | Ufikivu wa viungo na ufanisi wa watumiaji wa nguvu |
-| **Uboreshaji wa ARIA** | Matumizi ya kimkakati ya kujaza mapengo ya semantiki | Programu ngumu zinafanya kazi na teknolojia za usaidizi |
-| **Upimaji wa Kina** | Zana za kiotomatiki + uthibitishaji wa mwongozo + upimaji wa watumiaji halisi | Kugundua masuala kabla ya kuathiri watumiaji |
+| Kanuni Msingi | Utekelezaji | Athari |
+|----------------|----------------|---------|
+| **Msingi wa Semantic HTML** | Tumia vipengele sahihi vya HTML kwa kusudi lao | Wasomaji wa skrini wanaweza kuvinjari kwa ufanisi, kibodi zinafanya kazi moja kwa moja |
+| **Ubunifu wa Visual Unaojumuisha** | Mwangaza wa kutosha, matumizi ya rangi zenye maana, viashiria vya umakini vinavyoonekana | Wazi kwa kila mtu katika hali yoyote ya mwanga |
+| **Maudhui Yanayobainisha** | Maandishi ya viungo yenye maana, maandishi mbadala, vichwa vya habari | Watumiaji huelewa maudhui bila muktadha wa kuona |
+| **Upatikanaji wa Kibodi** | Mpangilio wa tab, mbinu za mkato za kibodi, usimamizi wa umakini | Upatikanaji wa mwendo na ufanisi kwa watumiaji wenye nguvu |
+| **Kuongeza ARIA** | Matumizi ya kimkakati kujaza mapengo ya maana | Programu changamano zinafanya kazi na teknolojia za kusaidia |
+| **Upimaji Kamili** | Zana za otomatiki + uhakiki wa mikono + upimaji na watumiaji halisi | Gusa matatizo kabla hayajawaathiri watumiaji |
 
 **🚀 Hatua zako zinazofuata:**
 
-1. **Jenga ufikivu katika mchakato wako wa kazi**: Fanya upimaji kuwa sehemu ya kawaida ya mchakato wako wa maendeleo
-2. **Jifunze kutoka kwa watumiaji halisi**: Tafuta maoni kutoka kwa watu wanaotumia teknolojia za usaidizi
-3. **Endelea kuwa na habari**: Mbinu za ufikivu zinabadilika na teknolojia na viwango vipya
-4. **Shawishi ujumuishaji**: Shiriki maarifa yako na ufanye ufikivu kuwa kipaumbele cha timu
+1. **Jumuisha upatikanaji katika mchakato wako**: Tafuta majaribio kuwa sehemu ya kawaida ya maendeleo yako
+2. **Jifunze kutoka kwa watumiaji halisi**: Tafuta maoni kutoka kwa watu wanaotumia teknolojia za msaada
+3. **Dumisha taarifa mpya**: Mbinu za upatikanaji hubadilika na teknolojia na viwango vipya
+4. **Tetea ujumuishaji**: Sambaza maarifa yako na fanya upatikanaji kuwa kipaumbele cha timu
 
-> 💡 **Kumbuka**: Vizuizi vya ufikivu mara nyingi husababisha suluhisho za ubunifu, za kifahari ambazo zinawanufaisha kila mtu. Njia za kupita, manukuu, na vidhibiti vya sauti vyote vilianza kama vipengele vya ufikivu na kuwa maboresho ya kawaida.
+> 💡 **Kumbuka**: Vizingiti vya upatikanaji mara nyingi huleta suluhisho bunifu na zuri ambazo zinawafaidisha wote. Njia za kupita, maelezo ya manukuu, na udhibiti wa sauti zilianza kama sifa za upatikanaji na kuwa maboresho makuu.
 
-**Sababu ya kibiashara ni wazi kabisa**: Tovuti zinazoweza kufikiwa zinawafikia watumiaji zaidi, zinapata nafasi bora katika injini za utafutaji, zina gharama ndogo za matengenezo, na kuepuka hatari za kisheria. Lakini kwa kweli? Sababu halisi ya kujali kuhusu ufikivu inaenda mbali zaidi. Tovuti zinazoweza kufikiwa zinawakilisha maadili bora ya wavuti—ufunguzi, ujumuishaji, na wazo kwamba kila mtu anastahili kupata taarifa kwa usawa.
+**Sababu ya biashara ni wazi kabisa**: Tovuti zinazopatikana humfikia mtumiaji zaidi, zina nafasi bora katika injini za utafutaji, zina gharama ndogo za matengenezo, na zinazuia hatari za kisheria. Lakini kwa kweli? Sababu kuu ya kuhudhuria upatikanaji ni zaidi sana. Tovuti zinazopatikana zinaakisi maadili bora ya wavuti—ufungaji, ujumuishaji, na wazo kwamba kila mtu anastahili upatikanaji sawa wa habari.
 
-Sasa umejiandaa kujenga wavuti jumuishi ya siku zijazo. Kila tovuti inayoweza kufikiwa unayounda inafanya mtandao kuwa mahali pa kukaribisha zaidi kwa kila mtu. Hilo ni jambo la kushangaza unapolifikiria!
+Sasa umewekwa vifaa vya kujenga wavuti jumuishi wa siku za usoni. Kila tovuti inayopatikana unayounda hufanya mtandao kuwa mahali pa kukaribisha kila mtu. Hiyo ni jambo la kushangaza unapotafakari!
 
-## Rasilimali za Ziada
+## Rasilimali Zaidi
 
-Endelea na safari yako ya kujifunza ufikivu kwa rasilimali hizi muhimu:
+Endelea safari yako ya kujifunza upatikanaji na rasilimali muhimu hizi:
 
-**📚 Viwango na Miongozo Rasmi:**
-- [Mwongozo wa WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) - Kiwango rasmi cha ufikivu na rejeleo la haraka
-- [Mwongozo wa Uandishi wa ARIA](https://w3c.github.io/aria-practices/) - Mifumo kamili ya vidude vya mwingiliano
-- [Miongozo ya WebAIM](https://webaim.org/) - Mwongozo wa ufikivu wa wavuti kwa wanaoanza
+**📚 Viwango Rasmi na Miongozo:**
+- [Mwongozo wa WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) - Kiwango rasmi cha upatikanaji chenye rejea ya haraka
+- [Mwongozo wa Mazoezi ya Uandishi wa ARIA](https://w3c.github.io/aria-practices/) - Mifano kamili ya widgets zinazoshirikiana
+- [Mwongozo wa WebAIM](https://webaim.org/) - Miongozo ya vitendo, rafiki kwa wanaoanza
 
-**🛠️ Zana na Rasilimali za Kupima:**
-- [axe DevTools](https://www.deque.com/axe/devtools/) - Upimaji wa ufikivu wa kiwango cha sekta
-- [Orodha ya Mradi wa A11y](https://www.a11yproject.com/checklist/) - Uthibitishaji wa hatua kwa hatua wa ufikivu
-- [Accessibility Insights](https://accessibilityinsights.io/) - Suite ya upimaji ya kina ya Microsoft
-- [Color Oracle](https://colororacle.org/) - Kisimulizi cha upofu wa rangi kwa upimaji wa muundo
+**🛠️ Zana na Rasilimali za Upimaji:**
+- [axe DevTools](https://www.deque.com/axe/devtools/) - Upimaji wa upatikanaji wa kiwango cha sekta
+- [Orodha ya Kazi ya Mradi wa A11y](https://www.a11yproject.com/checklist/) - Hakiki ya upatikanaji hatua kwa hatua
+- [Accessibility Insights](https://accessibilityinsights.io/) - Suite kamili ya upimaji wa Microsoft
+- [Color Oracle](https://colororacle.org/) - Msimulizi wa ulemavu wa rangi kwa majaribio ya muundo
 
 **🎓 Kujifunza na Jamii:**
 - [Utafiti wa Wasomaji wa Skrini wa WebAIM](https://webaim.org/projects/screenreadersurvey9/) - Mapendeleo na tabia za watumiaji halisi
-- [Vipengele Jumuishi](https://inclusive-components.design/) - Mifumo ya kisasa ya vipengele vinavyoweza kufikiwa
-- [A11y Coffee](https://a11y.coffee/) - Vidokezo vya haraka vya ufikivu na maarifa
-- [Mpango wa Ufikiaji wa Wavuti (WAI)](https://www.w3.org/WAI/) - Rasilimali za ufikivu za kina za W3C
+- [Vipengele Jumuishi](https://inclusive-components.design/) - Mifano ya vipengele vya upatikanaji wa kisasa
+- [Kahawa ya A11y](https://a11y.coffee/) - Vidokezo na maarifa ya haraka ya upatikanaji
+- [Mpango wa Upatikanaji wa Wavuti (WAI)](https://www.w3.org/WAI/) - Rasilimali kamili za upatikanaji za W3C
 
 **🎥 Kujifunza kwa Vitendo:**
-- [Mwongozo wa Watengenezaji wa Ufikiaji](https://www.accessibility-developer-guide.com/) - Mwongozo wa utekelezaji wa vitendo
-- [Deque University](https://dequeuniversity.com/) - Kozi za mafunzo ya kitaalamu ya ufikivu
+- [Mwongozo wa Mwandishi wa Upatikanaji](https://www.accessibility-developer-guide.com/) - Miongozo ya utekelezaji wa vitendo
+- [Deque University](https://dequeuniversity.com/) - Kozi za kitaalamu za mafunzo ya upatikanaji
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## Changamoto ya Github Copilot Agent 🚀
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+Tumia hali ya Agent kukamilisha changamoto ifuatayo:
 
-**Maelezo:** Unda kipengele cha mazungumzo ya modali kinachoweza kufikiwa kinachoonyesha usimamizi sahihi wa mwelekeo, sifa za ARIA, na mifumo ya uvinjari wa kibodi.
+**Maelezo:** Unda kipengele cha mazungumzo cha modali kinachopatikana kinachoonyesha usimamizi sahihi wa umakini, sifa za ARIA, na mifano ya uvinjari wa kibodi.
 
-**Kichocheo:** Unda kipengele kamili cha mazungumzo ya modali kwa kutumia HTML, CSS, na JavaScript kinachojumuisha: kufunga mwelekeo sahihi, kitufe cha ESC kufunga, kubofya nje kufunga, sifa za ARIA kwa wasomaji wa skrini, na viashiria vya mwelekeo vinavyoonekana. Modali inapaswa kuwa na fomu yenye lebo sahihi na kushughulikia makosa. Hakikisha kipengele kinakidhi viwango vya WCAG 2.1 AA.
+**Kichocheo:** Tunga kipengele kamili cha mazungumzo cha modali kwa HTML, CSS, na JavaScript kinachojumuisha: kufungwa kwa umakini ipasavyo, kufunga kwa funguo ya ESC, kufunga kwa kubofya nje, sifa za ARIA kwa wasomaji wa skrini, na viashiria vinavyoonekana vya umakini. Modali inapaswa kuwa na fomu iliyo na lebo sahihi na usimamizi wa makosa. Hakikisha kipengele kinakidhi viwango vya WCAG 2.1 AA.
 
 ## 🚀 Changamoto
 
-Chukua HTML hii na uiandike upya ili iweze kufikiwa kadri inavyowezekana, ukizingatia mikakati uliyosoma.
+Chukua HTML hii uandike upya iwe rahisi kupatikana zaidi iwezekanavyo, ukizingatia mikakati uliyojifunza.
 
 ```html
 <!DOCTYPE html>
@@ -1094,29 +1411,90 @@ Chukua HTML hii na uiandike upya ili iweze kufikiwa kadri inavyowezekana, ukizin
 </html>
 ```
 
-**Maboresho muhimu yaliyofanywa:**
-- Kuongeza muundo sahihi wa HTML ya semantiki
-- Kurekebisha ufuatano wa vichwa (h1 moja, mpangilio wa kimantiki)
-- Kuongeza maandishi ya kiungo yenye maana badala ya "bonyeza hapa"
-- Kujumuisha lebo sahihi za ARIA kwa uvinjari
-- Kuongeza sifa ya lugha na lebo sahihi za meta
-- Kutumia kipengele cha kifungo kwa vipengele vya mwingiliano
-- Kuweka maudhui ya chini ya ukurasa na alama sahihi
+**Marekebisho makuu yaliyofanywa:**
+- Kuongezwa kwa muundo sahihi wa semantic HTML
+- Marekebisho ya mfuatano wa vichwa (h1 moja tu, maendeleo ya mantiki)
+- Kuongezwa kwa maandishi ya maana kwa viungo badala ya "bonyeza hapa"
+- Kuongezwa kwa lebo za ARIA sahihi za uvinjari
+- Kuongezwa kwa sifa za lang na meta sahihi
+- Kutumia kipengele cha kitufe kwa vipengele vinavyoshirikiana
+- Kupangilia maudhui ya miguu kwa alama sahihi za maeneo
 
-## Jaribio la Baada ya Somo
-[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/en/)
+## Mtihani wa Baada ya Mtaala
+[Mtihani wa baada ya mtaala](https://ff-quizzes.netlify.app/web/en/)
 
-## Mapitio na Kujisomea
+## Mapitio & Kujisomea
 
-Serikali nyingi zina sheria kuhusu mahitaji ya ufikivu. Soma kuhusu sheria za ufikivu za nchi yako. Nini kinajumuishwa, na nini hakijajumuishwa? Mfano ni [tovuti hii ya serikali](https://accessibility.blog.gov.uk/).
+Serikali nyingi zina sheria kuhusu mahitaji ya upatikanaji. Soma kuhusu sheria za upatikanaji za nchi yako. Ni nini kinachofunikwa, na ni nini hakifunikwi? Mfano ni [tovuti hii ya serikali](https://accessibility.blog.gov.uk/).
 
 ## Kazi
 
-[Chambua tovuti isiyo na ufikivu](assignment.md)
+[Chambua tovuti isiyopatikana](assignment.md)
 
-Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) na Instrument
+Shukrani: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) na Instrument
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+## 🚀 Ratiba yako ya Ustadi wa Upatikanaji
+
+### ⚡ **Nini Unaweza Kufanya Katika Dakika 5 Zijazo**
+- [ ] Sakinisha nyongeza ya axe DevTools kwenye kivinjari chako
+- [ ] Endesha ukaguzi wa upatikanaji wa Lighthouse kwenye tovuti unayopendelea
+- [ ] Jaribu kuvinjari tovuti yoyote kwa kutumia funguo ya Tab pekee
+- [ ] Jaribu msomaji wa skrini aliyejumuishwa kwenye kivinjari chako (Narrator/VoiceOver)
+
+### 🎯 **Nini Unaweza Kufanikisha Katika Saa Hii**
+- [ ] Kamilisha mtihani wa baada ya somo na tafakari juu ya maarifa ya upatikanaji
+- [ ] Fanya mazoezi ya kuandika maandishi mkaltifu kwa picha 10 tofauti
+- [ ] Kagua muundo wa kichwa cha tovuti kwa kutumia nyongeza ya HeadingsMap
+- [ ] Rekebisha matatizo ya upatikanaji yaliyo kwenye changamoto ya HTML
+- [ ] Jaribu tofauti ya rangi kwenye mradi wako wa sasa kwa kutumia zana ya WebAIM
+
+### 📅 **Safari yako ya Upatikanaji kwa Wiki Hii**
+- [ ] Kamilisha kazi ya kuchambua tovuti isiyopatikana
+- [ ] Weka mazingira yako ya maendeleo na zana za upimaji upatikanaji
+- [ ] Funza kuvinjari kwa kibodi kwenye tovuti 5 tofauti zinazochanganya
+- [ ] Tengeneza fomu rahisi yenye lebo sahihi, usimamizi wa makosa, na ARIA
+- [ ] Jiunge na jamii ya upatikanaji (A11y Slack, jukwaa la WebAIM)
+- [ ] Tazama watumiaji halisi wenye ulemavu wakivinjari tovuti (YouTube ina mifano mizuri)
+
+### 🌟 **Mabadiliko Yako ya Mwezi Mzima**
+- [ ] Ingiza upimaji wa upatikanaji katika mchakato wako wa maendeleo
+- [ ] Changia katika mradi wa chanzo huria kwa kurekebisha matatizo ya upatikanaji
+- [ ] Fanya upimaji wa matumizi na mtu anaye tumia teknolojia ya kuongezea
+- [ ] Tengeneza maktaba ya sehemu zinazo patikana kwa urahisi kwa timu yako
+- [ ] Tetea upatikanaji mahali pako pa kazi au jamii
+- [ ] Mwelekeze mtu mpya kuhusu dhana za upatikanaji
+
+### 🏆 **Kukagua Hatua ya Mwisho ya Bingwa wa Upatikanaji**
+
+**Sherehekea safari yako ya upatikanaji:**
+- Nini kilichoshangaza zaidi ulichojifunza kuhusu jinsi watu wanavyotumia mtandao?
+- Ni kanuni gani ya upatikanaji inayokufaa zaidi katika mtindo wako wa maendeleo?
+- Je, kujifunza kuhusu upatikanaji kumebadilisha mtazamo wako kuhusu muundo vipi?
+- Ni maboresho gani ya kwanza ya upatikanaji unayotaka kufanya katika mradi halisi?
+
+```mermaid
+journey
+    title Mabadiliko Yako ya Kujiamini Kuhusu Upatikanaji
+    section Leo
+      Kufunikwa: 3: You
+      Kuulizia: 4: You
+      Kupewa Motisha: 5: You
+    section Wiki Hii
+      Kufanyakazi: 4: You
+      Kujaribu: 5: You
+      Kuelewa: 5: You
+    section Mwezi Ujao
+      Kutetea: 5: You
+      Kuongoza: 5: You
+      Ushirikiano Kwa Chaguo La Msingi: 5: You
+```
+> 🌍 **Sasa wewe ni bingwa wa upatikanaji!** Unaelewa kwamba uzoefu mzuri wa mtandao unafaa kwa kila mtu, bila kujali wanavyopata huduma za mtandao. Kila sehemu inayopatikana unayotengeneza huifanya intaneti kuwa jumuishi zaidi. Mtandao unahitaji watengenezaji kama wewe wanaoona upatikanaji si kikwazo, bali fursa ya kuunda uzoefu bora kwa watumiaji wote. Karibu kwenye harakati! 🎉
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kauli ya Kusamehewa**:  
+Nyaraka hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuwa sahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au kasoro. Nakala asili ya nyaraka katika lugha yake ya asili ndiyo chanzo cha kuaminika zaidi. Kwa taarifa muhimu, tafsiri ya kitaalamu na ya binadamu inashauriwa. Hatubeba dhamana kuhusu kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,113 +1,232 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "84053695dca714e16ed064366503ebd5",
-  "translation_date": "2025-10-24T19:40:40+00:00",
+  "original_hash": "7994743c5b21fdcceb36307916ef249a",
+  "translation_date": "2026-01-07T01:34:13+00:00",
   "source_file": "6-space-game/2-drawing-to-canvas/README.md",
   "language_code": "sw"
 }
 -->
-# Jenga Mchezo wa Anga Sehemu ya 2: Chora Shujaa na Wanyama wa Ajabu kwenye Canvas
+# Jenga Mchezo wa Anga Sehemu ya 2: Chora Shujaa na Mashetani kwenye Canvas
 
-API ya Canvas ni mojawapo ya vipengele vyenye nguvu zaidi katika maendeleo ya wavuti kwa kuunda michoro ya nguvu na ya kuingiliana moja kwa moja kwenye kivinjari chako. Katika somo hili, tutabadilisha kipengele cha HTML `<canvas>` kilicho tupu kuwa ulimwengu wa mchezo uliojaa mashujaa na wanyama wa ajabu. Fikiria canvas kama ubao wako wa sanaa wa kidijitali ambapo msimbo unakuwa wa kuona.
+```mermaid
+journey
+    title Safari Yako ya Mchuzi wa Canvas
+    section Msingi
+      Elewa API ya Canvas: 3: Student
+      Jifunze mfumo wa kuratibu: 4: Student
+      Chora maumbo ya msingi: 4: Student
+    section Kushughulikia Picha
+      Pakua mali za mchezo: 4: Student
+      Shughulikia upakuaji wa async: 5: Student
+      Weka sprites nafasi: 5: Student
+    section Uchoraji wa Mchezo
+      Tengeneza skrini ya mchezo: 5: Student
+      Jenga maumbo: 5: Student
+      Boresha utendaji: 4: Student
+```
+API ya Canvas ni mojawapo ya vipengele vyenye nguvu zaidi vya maendeleo ya wavuti kwa kuunda michoro yenye nguvu na ya mwingiliano moja kwa moja katika kivinjari chako. Katika somo hili, tutabadilisha kipengele tupu cha HTML `<canvas>` kuwa dunia ya mchezo yenye mashujaa na mashetani. Tafakari canvas kama ubao wako wa sanaa za kidijitali ambapo msimbo hugeuka kuwa picha.
 
-Tunajenga juu ya kile ulichojifunza katika somo la awali, na sasa tutazama katika vipengele vya kuona. Utajifunza jinsi ya kupakia na kuonyesha sprites za mchezo, kuweka vipengele kwa usahihi, na kuunda msingi wa kuona kwa mchezo wako wa anga. Hii inaziba pengo kati ya kurasa za wavuti zisizobadilika na uzoefu wa nguvu na wa kuingiliana.
+Tunajenga juu ya kile ulichojifunza katika somo lililopita, na sasa tutaingia katika vipengele vya kuona. Utajifunza jinsi ya kupakia na kuonyesha sprites za mchezo, kuweka vitu mahali sahihi, na kuunda msingi wa kuona kwa mchezo wako wa anga. Hii inapunguza pengo kati ya kurasa za wavuti zisizosogezwa na uzoefu unaohusisha mwingiliano.
 
-Mwisho wa somo hili, utakuwa na eneo kamili la mchezo na meli ya shujaa wako ikiwa imewekwa kwa usahihi na maumbo ya adui tayari kwa vita. Utaelewa jinsi michezo ya kisasa inavyotoa michoro kwenye vivinjari na kupata ujuzi wa kuunda uzoefu wako wa kuona wa kuingiliana. Hebu tuchunguze michoro ya canvas na kuleta mchezo wako wa anga uhai!
+Mwishoni mwa somo hili, utakuwa na pazia kamili la mchezo na meli yako ya shujaa ikiwa imewekwa mahali sahihi na maumbo ya adui tayari kwa mapambano. Utafahamu jinsi michezo ya kisasa inavyophyonyesha michoro katika vivinjari na utapata ujuzi wa kuunda uzoefu wako wenye mwingiliano wa kuona. Tuchunguze michoro ya canvas na kuleta mchezo wako wa anga hai!
 
-## Maswali ya Awali ya Somo
+```mermaid
+mindmap
+  root((Michoro ya Canvas))
+    Canvas Element
+      Kipengele cha HTML5
+      Muktadha wa 2D
+      Mfumo wa Msingi wa Kuratibu
+      Udhibiti wa Pikseli
+    Drawing Operations
+      Maumbo ya Msingi
+      Uchapishaji wa Maandishi
+      Uonyeshaji wa Picha
+      Kuchora Njia
+    Asset Management
+      Kupakia Picha
+      Operesheni za Msimamizi
+      Udhibiti wa Makosa
+      Utendaji
+    Game Rendering
+      Uwekaji wa Picha Ndogo
+      Mpangilio wa Muundo
+      Muundo wa Mzizi
+      Sasisho la Fremu
+    Visual Effects
+      Rangi & Mitindo
+      Mabadiliko
+      Miondoko
+      Upangaji Vigae
+```
+## Mtihani Kabla ya Mhadhara
 
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/31)
+[Mtihani kabla ya mhadhara](https://ff-quizzes.netlify.app/web/quiz/31)
 
 ## Canvas
 
-Kwa hivyo, kipengele hiki cha `<canvas>` ni nini hasa? Ni suluhisho la HTML5 la kuunda michoro ya nguvu na uhuishaji katika vivinjari vya wavuti. Tofauti na picha za kawaida au video ambazo ni za kudumu, canvas inakupa udhibiti wa kiwango cha pikseli juu ya kila kitu kinachoonekana kwenye skrini. Hii inafanya kuwa bora kwa michezo, taswira za data, na sanaa ya kuingiliana. Fikiria kama uso wa kuchora unaoweza kupangwa ambapo JavaScript inakuwa brashi yako ya rangi.
+Sasa basi, ni nini hasa kipengele hiki cha `<canvas>`? Ni suluhisho la HTML5 la kuunda michoro yenye nguvu na michoro ya kusogeza kwenye vivinjari vya wavuti. Tofauti na picha au video za kawaida zisizosogezwa, canvas inakupa udhibiti wa pixel kwa kila kitu kinachoonekana kwenye skrini. Hii inafanya iwe bora kwa michezo, maonyesho ya data, na sanaa zinazohusisha mwingiliano. Tafakari kama uso wa kuchora unaoweza kuprogramwa ambapo JavaScript ni brashi yako ya rangi.
 
-Kwa chaguo-msingi, kipengele cha canvas kinaonekana kama mstatili tupu, wa uwazi kwenye ukurasa wako. Lakini hapo ndipo uwezo wake unapoonekana! Nguvu yake halisi inaibuka unapoitumia JavaScript kuchora maumbo, kupakia picha, kuunda uhuishaji, na kufanya vitu viitike kwa mwingiliano wa mtumiaji. Ni sawa na jinsi waanzilishi wa michoro za kompyuta wa mapema huko Bell Labs katika miaka ya 1960 walivyolazimika kupanga kila pikseli kuunda uhuishaji wa kidijitali wa kwanza.
+Kawaida, kipengele cha canvas kinaonekana kama mstatili tupu, ulio wazi kwenye ukurasa wako. Lakini hapo ndipo kilicho na uwezo! Nguvu yake halisi huibuka unapojaribu kutumia JavaScript kuchora maumbo, kupakia picha, kuunda michoro ya mzunguko, na kufanya vitu kujibu mwingiliano wa mtumiaji. Hii ni sawa na jinsi waanzilishi wa michoro ya kompyuta katika Bell Labs miaka ya 1960 walilazimika kuprogramu kila pixel kuunda michoro ya kwanza ya kidijitali.
 
 ✅ Soma [zaidi kuhusu API ya Canvas](https://developer.mozilla.org/docs/Web/API/Canvas_API) kwenye MDN.
 
-Hivi ndivyo inavyotangazwa kawaida, kama sehemu ya mwili wa ukurasa:
+Hivi ndivyo kawaida hupangwa, kama sehemu ya mwili wa ukurasa:
 
 ```html
 <canvas id="myCanvas" width="200" height="100"></canvas>
 ```
 
 **Hivi ndivyo msimbo huu unavyofanya:**
-- **Huweka** sifa ya `id` ili uweze kurejelea kipengele hiki maalum cha canvas katika JavaScript
-- **Hufafanua** `width` kwa pikseli ili kudhibiti ukubwa wa usawa wa canvas
-- **Huweka** `height` kwa pikseli ili kuamua vipimo vya wima vya canvas
+- **Huanzisha** sifa ya `id` ili uweze kurejelea kipengele hiki maalum cha canvas ndani ya JavaScript
+- **Huainisha** upana kwa pixel kudhibiti ukubwa wa canvas usawa
+- **Huamua** urefu kwa pixel kuainisha vipimo vya wima vya canvas
 
-## Kuchora Jiometri Rahisi
+## Kuchora Mawumbo Rahisi
 
-Sasa kwa kuwa unajua kipengele cha canvas ni nini, hebu tuchunguze jinsi ya kuchora juu yake! Canvas hutumia mfumo wa kuratibu ambao unaweza kuhisi kuwa wa kawaida kutoka darasa la hesabu, lakini kuna mabadiliko moja muhimu maalum kwa michoro za kompyuta.
+Sasa kwani unajua ni nini kipengele cha canvas, tuchunguze jinsi ya kweli ya kuchora juu yake! Canvas hutumia mfumo wa kuratibu ambao unaweza kuwa umemfahamu kutoka darasani hesabu, lakini kuna tofauti moja muhimu inayohusiana na michoro ya kompyuta.
 
-Canvas hutumia kuratibu za Cartesian na mhimili wa x (usawa) na mhimili wa y (wima) kuweka kila kitu unachochora. Lakini hapa kuna tofauti kuu: tofauti na mfumo wa kuratibu kutoka darasa la hesabu, sehemu ya asili `(0,0)` huanza kwenye kona ya juu-kushoto, na thamani za x huongezeka unapohamia kulia na thamani za y huongezeka unaposhuka chini. Njia hii inatokana na maonyesho ya kompyuta ya mapema ambapo mihimili ya elektroni ilichunguza kutoka juu hadi chini, na kufanya juu-kushoto kuwa sehemu ya asili ya kawaida.
+Canvas hutumia kuratibu za Cartesian zenye mhimili wa x (usawa) na mhimili wa y (wima) kuweka kila kitu unachochora. Lakini hapa ndipo tofauti kuu: tofauti na mfumo wa kuratibu wa hesabu, sehemu ya asili `(0,0)` huanza pembezoni mwa juu-kushoto, ambapo thamani za x huongezeka unapohama kulia na thamani za y huongezeka unaposhuka chini. Mbinu hii inatokana na maonyesho ya kompyuta za awali ambapo nyuzi za elektroni zilipiga kutoka juu hadi chini, hivyo juu-kushoto ilikuwa sehemu ya kuanzia.
 
-![grid ya canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.sw.png)
+```mermaid
+quadrantChart
+    title Mfumo wa Kuratibu wa Kainisi
+    x-axis Kushoto --> Kulia
+    y-axis Juu --> Chini
+    quadrant-1 Robo ya 1
+    quadrant-2 Robo ya 2  
+    quadrant-3 Robo ya 3
+    quadrant-4 Robo ya 4
+    
+    Origin Point: [0.1, 0.1]
+    Hero Center: [0.5, 0.8]
+    Enemy Formation: [0.3, 0.2]
+    Power-up: [0.7, 0.6]
+    UI Elements: [0.9, 0.1]
+```
+![gridi ya canvas](../../../../translated_images/canvas_grid.5f209da785ded492.sw.png)
 > Picha kutoka [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
-Ili kuchora kwenye kipengele cha canvas, utafuata mchakato wa hatua tatu ambao unaunda msingi wa michoro yote ya canvas. Mara unapofanya hivi mara chache, inakuwa rahisi:
+Ili kuchora kwenye kipengele cha canvas, utafuata mchakato wa hatua tatu unaounda msingi wa michoro yote ya canvas. Mara unavyofanya mara kadhaa, hutakuwa jambo gumu tena:
 
-1. **Pata rejeleo** la kipengele chako cha Canvas kutoka DOM (kama kipengele kingine chochote cha HTML)
-2. **Pata muktadha wa utoaji wa 2D** – hii inatoa mbinu zote za kuchora
-3. **Anza kuchora!** Tumia mbinu za muktadha zilizojengwa ndani kuunda michoro yako
+```mermaid
+flowchart LR
+    A[Elementi ya Canvas ya HTML] --> B[Pata Marejeleo ya Canvas]
+    B --> C[Pata Muktadha wa 2D]
+    C --> D[Operesheni za Kuchora]
+    
+    D --> E[Chora Maumbo]
+    D --> F[Chora Maandishi]
+    D --> G[Chora Picha]
+    D --> H[Tumia Mitindo]
+    
+    E --> I[Tengeneza kwenye Skrini]
+    F --> I
+    G --> I
+    H --> I
+    
+    style A fill:#e1f5fe
+    style C fill:#e8f5e8
+    style I fill:#fff3e0
+```
+1. **Pata rejea** ya kipengele chako cha Canvas kutoka DOM (kama vile kipengele kingine chochote cha HTML)
+2. **Pata muktadha wa kuona wa 2D** – huu hutupa njia zote za kuchora
+3. **Anza kuchora!** Tumia njia zilizojengewa ndani za muktadha kuunda michoro yako
 
 Hivi ndivyo inavyoonekana katika msimbo:
 
 ```javascript
-// Step 1: Get the canvas element
+// Hatua ya 1: Pata kipengele cha turubai
 const canvas = document.getElementById("myCanvas");
 
-// Step 2: Get the 2D rendering context
+// Hatua ya 2: Pata muktadha wa uchoraji wa 2D
 const ctx = canvas.getContext("2d");
 
-// Step 3: Set fill color and draw a rectangle
+// Hatua ya 3: Weka rangi ya kujaza na chora mstatili
 ctx.fillStyle = 'red';
-ctx.fillRect(0, 0, 200, 200); // x, y, width, height
+ctx.fillRect(0, 0, 200, 200); // x, y, upana, urefu
 ```
 
-**Hebu tuchambue hatua kwa hatua:**
-- Tunachukua kipengele chetu cha canvas kwa kutumia ID yake na kuhifadhi katika kigezo
-- Tunapata muktadha wa utoaji wa 2D – hii ni zana yetu iliyojaa mbinu za kuchora
-- Tunaiambia canvas tunataka kujaza vitu kwa rangi nyekundu kwa kutumia mali ya `fillStyle`
-- Tunachora mstatili kuanzia kwenye kona ya juu-kushoto (0,0) ambao ni upana wa pikseli 200 na urefu
+**Tuchambue hatua kwa hatua:**
+- Tunakamata kipengele chetu cha canvas kwa kutumia ID yake na kuihifadhi kwenye tofauti
+- Tunapata muktadha wa kuonyesha wa 2D – zana yetu kamili ya njia za kuchora
+- Tunaambia canvas tunataka kujaza vitu kwa rangi nyekundu kwa kutumia mali `fillStyle`
+- Tunachora mstatili kuanzia pembezoni mwa juu kushoto (0,0) wenye upana na urefu wa pixel 200
 
-✅ API ya Canvas inazingatia zaidi maumbo ya 2D, lakini unaweza pia kuchora vipengele vya 3D kwenye tovuti; kwa hili, unaweza kutumia [API ya WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API).
+✅ API ya Canvas inazingatia zaidi maumbo ya 2D, lakini pia unaweza kuchora vitu vya 3D kwenye tovuti; kwa hili, unaweza kutumia [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API).
 
-Unaweza kuchora vitu vya aina mbalimbali kwa kutumia API ya Canvas kama:
+Unaweza kuchora aina zote za vitu kwa API ya Canvas kama:
 
-- **Maumbo ya jiometri**, tayari tumeonyesha jinsi ya kuchora mstatili, lakini kuna mengi zaidi unayoweza kuchora.
-- **Maandishi**, unaweza kuchora maandishi kwa fonti yoyote na rangi unayotaka.
-- **Picha**, unaweza kuchora picha kulingana na mali ya picha kama .jpg au .png kwa mfano.
+- **Maumbo ya kijiometri**, tayari tumeonyesha jinsi ya kuchora mstatili, lakini kuna zaidi unayoweza kuchora.
+- **Maandishi**, unaweza kuchora maandishi kwa aina yoyote ya fonti na rangi unayoitaka.
+- **Picha**, unaweza kuchora picha kulingana na picha za rasilimali kama .jpg au .png kwa mfano.
 
-✅ Jaribu! Unajua jinsi ya kuchora mstatili, unaweza kuchora duara kwenye ukurasa? Angalia baadhi ya michoro ya kuvutia ya Canvas kwenye CodePen. Hapa kuna [mfano wa kuvutia sana](https://codepen.io/dissimulate/pen/KrAwx).
+✅ Jaribu! Unajua jinsi ya kuchora mstatili, unaweza kuchora mduara kwenye ukurasa? Tazama michoro ya Canvas ya kuvutia kwenye CodePen. Hapa kuna [mfano mzuri sana](https://codepen.io/dissimulate/pen/KrAwx).
 
-## Pakia na Chora Mali ya Picha
+### 🔄 **Ukaguzi wa Kufundisha**
+**Uelewa wa Misingi ya Canvas**: Kabla ya kuhamia kwa upakiaji picha, hakikisha unaweza:
+- ✅ Eleza jinsi mfumo wa kuratibu wa canvas unavyotofautiana na kuratibu za hesabu
+- ✅ Elewa mchakato wa hatua tatu wa shughuli za kuchora canvas
+- ✅ Tambua kile muktadha wa uchoraji wa 2D hutoa
+- ✅ Eleza jinsi `fillStyle` na `fillRect` vinavyofanya kazi pamoja
 
-Kuchora maumbo ya msingi ni muhimu kwa kuanza, lakini michezo mingi inahitaji picha halisi! Sprites, mandhari, na textures ndizo zinazotoa mvuto wa kuona kwa michezo. Kupakia na kuonyesha picha kwenye canvas hufanya kazi tofauti na kuchora maumbo ya jiometri, lakini ni rahisi mara unapofahamu mchakato.
+**Jaribio la Kujitathmini Haraka**: Ungechora mduara wa bluu wapi kwenye (100, 50) akiwa na radius 25?
+```javascript
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(100, 50, 25, 0, 2 * Math.PI);
+ctx.fill();
+```
 
-Tunahitaji kuunda kipengele cha `Image`, kupakia faili ya picha yetu (hii hufanyika kwa njia ya asinkroni, ikimaanisha "katika usuli"), na kisha kuichora kwenye canvas mara tu inapokuwa tayari. Njia hii inahakikisha picha zako zinaonyeshwa vizuri bila kuzuia programu yako wakati zinapakia.
+**Njia za Kuchora Canvas Unazojua Sasa**:
+- **fillRect()**: Huchora mistari iliyojazwa
+- **fillStyle**: Huweka rangi na mifumo
+- **beginPath()**: Huanzisha njia mpya za kuchora
+- **arc()**: Huunda miduara na miondoko
 
-### Kupakia Picha ya Msingi
+## Pakia na Chora Picha
+
+Kuchora maumbo ya msingi ni muhimu kwa kuanza, lakini michezo mingi inahitaji picha halisi! Sprites, mandhari, na muundo ndio huipa mchezo mvuto wa kuona. Kupakia na kuonyesha picha kwenye canvas hufanyika tofauti na kuchora maumbo ya kijiometri, lakini ni rahisi mara utakapoelewa mchakato.
+
+Tunahitaji kuunda kipengele cha `Image`, kupakia faili la picha yetu (hili hufanyika kwa njia isiyo ya mara moja, ikimaanisha "katika usuli"), kisha kuichora kwenye canvas mara inapoandaliwa. Njia hii huhakikisha picha zako zinaonyeshwa ipasavyo bila kuzuia programu yako wakati zinapopakia.
+
+```mermaid
+sequenceDiagram
+    participant JS as JavaScript
+    participant Img as Kifaa cha Picha
+    participant Server as Seva ya Faili
+    participant Canvas as Muktadha wa Canvas
+    
+    JS->>Img: new Image()
+    JS->>Img: Weka mali ya src
+    Img->>Server: Omba faili la picha
+    Server->>Img: Rudisha data ya picha
+    Img->>JS: Chochea tukio la onload
+    JS->>Canvas: drawImage(img, x, y)
+    Canvas->>Canvas: Choragharama kwa skrini
+    
+    Note over JS,Canvas: Upakiaji wa async huzuia kuzuiwa kwa UI
+```
+### Upakiaji wa Picha wa Kimsingi
 
 ```javascript
 const img = new Image();
 img.src = 'path/to/my/image.png';
 img.onload = () => {
-  // Image loaded and ready to be used
+  // Picha imepakiwa na iko tayari kutumika
   console.log('Image loaded successfully!');
 };
 ```
 
-**Hivi ndivyo kinachotokea katika msimbo huu:**
-- Tunaunda kipengele kipya cha Picha ili kushikilia sprite au texture yetu
-- Tunaiambia faili gani ya picha ya kupakia kwa kuweka njia ya chanzo
-- Tunaisikiliza tukio la kupakia ili tujue hasa wakati picha iko tayari kutumika
+**Hivi ndivyo msimbo huu unavyofanya:**
+- Tuna **unda** kitu kipya cha Image kushikilia sprite au muundo wetu
+- Tuna **ambia** ni faili gani la picha kupakia kwa kuweka njia ya chanzo
+- Tuna **sikiliza** tukio la kupakia ili tujue picha iko tayari lini
 
 ### Njia Bora ya Kupakia Picha
 
-Hapa kuna njia thabiti zaidi ya kushughulikia upakiaji wa picha ambayo watengenezaji wa kitaalamu hutumia mara kwa mara. Tutafunga upakiaji wa picha katika kazi inayotegemea Promise – njia hii, maarufu wakati Promise za JavaScript zilipokuwa kiwango cha ES6, hufanya msimbo wako kuwa wa mpangilio zaidi na hushughulikia makosa kwa urahisi:
+Hapa kuna njia bora zaidi ya kushughulikia upakiaji wa picha ambayo watengenezaji wataalamu hutumia sana. Tutazungusha upakiaji wa picha katika kazi inayotegemea Promise – njia hii, iliyopendekezwa wakati Usahidi wa JavaScript ulipokuwa kawaida katika ES6, huifanya msimbo wako kuonekana vizuri zaidi na kushughulikia makosa kwa heshima:
 
 ```javascript
 function loadAsset(path) {
@@ -123,38 +242,38 @@ function loadAsset(path) {
   });
 }
 
-// Modern usage with async/await
+// Matumizi ya kisasa na async/await
 async function initializeGame() {
   try {
     const heroImg = await loadAsset('hero.png');
     const monsterImg = await loadAsset('monster.png');
-    // Images are now ready to use
+    // Picha sasa ziko tayari kutumika
   } catch (error) {
     console.error('Failed to load game assets:', error);
   }
 }
 ```
 
-**Kile tulichofanya hapa:**
-- Tumefunga mantiki yote ya upakiaji wa picha katika Promise ili tuweze kuishughulikia vizuri
-- Tumeongeza utunzaji wa makosa ambao hutufahamisha wakati kitu kinakwenda vibaya
-- Tumetumia sintaksia ya kisasa ya async/await kwa sababu ni rahisi kusoma
-- Tumetumia vizuizi vya try/catch kushughulikia kwa urahisi matatizo yoyote ya upakiaji
+**Tumefanya nini hapa:**
+- **Tumefunga** yale yote ya upakiaji wa picha kwenye Promise ili tuweze kuyashughulikia vizuri zaidi
+- **Tumekuwa na** usimamizi wa makosa unaotuambia mara moja ikiwa kuna tatizo
+- **Tumetumia** sintaksia ya async/await ya kisasa kwa sababu ni safi kusoma zaidi
+- **Tumemjumuisha** sehemu za try/catch kushughulikia makosa kwa heshima
 
-Mara picha zako zinapopakiwa, kuzichora kwenye canvas ni rahisi sana:
+Mara picha zako zikipakiwa, kuzieleza kwenye canvas ni rahisi kabisa:
 
 ```javascript
 async function renderGameScreen() {
   try {
-    // Load game assets
+    // Pakua mali za mchezo
     const heroImg = await loadAsset('hero.png');
     const monsterImg = await loadAsset('monster.png');
 
-    // Get canvas and context
+    // Pata turubai na muktadha
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
 
-    // Draw images to specific positions
+    // Chorasyua picha kwenye nafasi maalum
     ctx.drawImage(heroImg, canvas.width / 2, canvas.height / 2);
     ctx.drawImage(monsterImg, 0, 0);
   } catch (error) {
@@ -163,32 +282,56 @@ async function renderGameScreen() {
 }
 ```
 
-**Hebu tuchambue hatua kwa hatua:**
-- Tunapakia picha zetu za shujaa na monster kwa usuli kwa kutumia await
-- Tunachukua kipengele chetu cha canvas na kupata muktadha wa utoaji wa 2D tunaohitaji
-- Tunapanga picha ya shujaa katikati kwa kutumia hesabu ya haraka ya kuratibu
-- Tunaiweka picha ya monster kwenye kona ya juu-kushoto kuanza maumbo ya adui
-- Tunashika makosa yoyote yanayoweza kutokea wakati wa upakiaji au utoaji
+**Tupite hatua kwa hatua:**
+- Tunapakia picha za shujaa na shabiki katika usuli kwa kutumia await
+- Tunakamata kipengele cha canvas na kupata muktadha wa kuonyesha wa 2D tunayohitaji
+- Tunaweka picha ya shujaa katikati katikati kwa kutumia hesabu rahisi ya kuratibu
+- Tunaweka picha ya monster pembezoni juu kushoto kuanzisha maumbo ya adui
+- Tunakamata makosa yoyote yanayoweza kutokea wakati wa upakiaji au kuonyesha
 
-## Sasa Ni Wakati wa Kuanza Kujenga Mchezo Wako
+```mermaid
+flowchart TD
+    A[Pakia Mali] --> B{Picha Zote Zimepakwa?}
+    B -->|Hapana| C[Onyesha Inapakia]
+    B -->|Ndio| D[Pata Muktadha wa Kawaida]
+    C --> B
+    D --> E[Futa Skrini]
+    E --> F[Chora Mandhari]
+    F --> G[Chora Muundo wa Adui]
+    G --> H[Chora Meli ya Shujaa]
+    H --> I[Tumia Athari za Kuona]
+    I --> J[Onyesha Fremu]
+    
+    subgraph "Rendering Pipeline"
+        K[Usimamizi wa Mali]
+        L[Muundo wa Taarifa]
+        M[Operesheni za Kuchora]
+        N[Tokea la Fremu]
+    end
+    
+    style A fill:#e1f5fe
+    style J fill:#e8f5e8
+    style I fill:#fff3e0
+```
+## Sasa Ni Wakati wa Kuanzisha Mchezo Wako
 
-Sasa tutaweka kila kitu pamoja kuunda msingi wa kuona wa mchezo wako wa anga. Una uelewa mzuri wa misingi ya canvas na mbinu za upakiaji wa picha, kwa hivyo sehemu hii ya vitendo itakuongoza kupitia kujenga skrini kamili ya mchezo na sprites zilizowekwa kwa usahihi.
+Sasa tutaunganisha kila kitu kuunda msingi wa kuona wa mchezo wako wa anga. Una uelewa thabiti wa misingi ya canvas na mbinu za upakiaji picha, hivyo sehemu hii ya vitendo itakuongoza kuunda skrini kamili ya mchezo ukiwa na sprites zilizopangwa vyema.
 
 ### Kile cha Kujenga
 
-Utajenga ukurasa wa wavuti na kipengele cha Canvas. Inapaswa kutoa skrini nyeusi `1024*768`. Tumekupa picha mbili:
+Utajenga ukurasa wa wavuti wenye kipengele cha Canvas. Inapaswa kuonyesha skrini nyeusi ya `1024*768`. Tumekupa picha mbili:
 
 - Meli ya shujaa
 
-   ![Meli ya shujaa](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.sw.png)
+   ![Meli ya shujaa](../../../../translated_images/player.dd24c1afa8c71e9b.sw.png)
 
 - 5*5 monster
 
-   ![Meli ya monster](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.sw.png)
+   ![Meli ya monster](../../../../translated_images/enemyShip.5df2a822c16650c2.sw.png)
 
-### Hatua Zinazopendekezwa za Kuanza Maendeleo
+### Hatua zilizopendekezwa kuanza maendeleo
 
-Tafuta faili za kuanzia ambazo zimeundwa kwa ajili yako katika folda ndogo ya `your-work`. Muundo wa mradi wako unapaswa kuwa na:
+Tafuta faili za kuanzia zilizoundwa kwako katika folda ndogo ya `your-work`. Muundo wa mradi wako unapaswa kuwa na:
 
 ```bash
 your-work/
@@ -200,46 +343,46 @@ your-work/
 └── package.json
 ```
 
-**Hivi ndivyo unavyofanya kazi:**
-- **Sprites za mchezo** ziko katika folda ya `assets/` ili kila kitu kiwe kimepangwa
-- **Faili yako kuu ya HTML** inaweka kipengele cha canvas na kuandaa kila kitu
-- **Faili ya JavaScript** ambapo utaandika uchawi wako wote wa utoaji wa mchezo
-- **Package.json** inayoseti seva ya maendeleo ili uweze kujaribu kwa ndani
+**Hivi ndivyo unavyofanya kazi na:**
+- **Sprites za mchezo** zimehifadhiwa katika folda ya `assets/` ili kila kitu kike na kufanywa kwa mpangilio
+- **Faili yako kuu ya HTML** inaandaa kipengele cha canvas na kuandaa kila kitu
+- **Faili ya JavaScript** ambapo utaandika kila uchawi wa kuonyesha mchezo wako
+- **package.json** inayounda seva ya maendeleo ili ujue kujaribu ndani ya mwenyewe
 
-Fungua folda hii katika Visual Studio Code ili kuanza maendeleo. Utahitaji mazingira ya maendeleo ya ndani na Visual Studio Code, NPM, na Node.js imewekwa. Ikiwa huna `npm` imewekwa kwenye kompyuta yako, [hivi ndivyo unavyoweza kuisakinisha](https://www.npmjs.com/get-npm).
+Fungua folda hii katika Visual Studio Code kuanza maendeleo. Utahitaji mazingira ya maendeleo ya kimtandao ikiwa ni pamoja na Visual Studio Code, NPM, na Node.js vilivyojengwa. Ikiwa bado huna `npm` kompyutani mwako, [hapa ndilo jinsi ya kuisakinisha](https://www.npmjs.com/get-npm).
 
-Anzisha seva yako ya maendeleo kwa kuvinjari folda ya `your-work`:
+Anzisha seva yako ya maendeleo kwa kwenda kwenye folda ya `your-work`:
 
 ```bash
 cd your-work
 npm start
 ```
 
-**Amri hii inafanya mambo mazuri sana:**
-- **Inaanzisha** seva ya ndani kwenye `http://localhost:5000` ili uweze kujaribu mchezo wako
-- **Inahudumia** faili zako zote vizuri ili kivinjari chako kiweze kuzibeba kwa usahihi
-- **Inatazama** faili zako kwa mabadiliko ili uweze kuendeleza kwa urahisi
-- **Inakupa** mazingira ya maendeleo ya kitaalamu ya kujaribu kila kitu
+**Amri hii hufanya mambo haya mazuri:**
+- **Huanzisha** seva ya ndani kwenye `http://localhost:5000` ili ujue kujaribu mchezo wako
+- **Huhudumia** faili zako zote kwa usahihi ili kivinjari chako kiweze kuzisoma
+- **Hutazama** mabadiliko kwenye faili zako ili uendelee kuendeleza bila shida
+- **Hukupa** mazingira ya maendeleo ya kitaalam kwa ajili ya majaribio
 
-> 💡 **Kumbuka**: Kivinjari chako kitaonyesha ukurasa tupu mwanzoni – hilo linatarajiwa! Unapoongeza msimbo, safisha kivinjari chako ili kuona mabadiliko yako. Njia hii ya maendeleo ya kurudia ni sawa na jinsi NASA ilivyojenga kompyuta ya mwongozo wa Apollo – kujaribu kila sehemu kabla ya kuijumuisha katika mfumo mkubwa.
+> 💡 **Kumbuka**: Kivinjari chako kitaonyesha ukurasa tupu hapo awali – ni kawaida! Unapoongeza msimbo, bofya tena refresh kuona mabadiliko. Njia hii ya maendeleo ya hatua kwa hatua ni sawa na jinsi NASA ilivyounda kompyuta ya uongozi ya Apollo – ikijaribu kila kipengele kabla ya kuzijumuisha kwenye mfumo mkubwa.
 
-### Ongeza Msimbo
+### Ongeza msimbo
 
-Ongeza msimbo unaohitajika kwenye `your-work/app.js` kukamilisha kazi zifuatazo:
+Ongeza msimbo unaotakiwa kwenye `your-work/app.js` kumaliza kazi zifuatazo:
 
-1. **Chora canvas na mandhari nyeusi**
-   > 💡 **Hivi ndivyo**: Tafuta TODO katika `/app.js` na ongeza mistari miwili tu. Weka `ctx.fillStyle` kuwa nyeusi, kisha tumia `ctx.fillRect()` kuanzia (0,0) na vipimo vya canvas yako. Rahisi!
+1. **Chora canvas yenye mfumo wa nyuma mweusi**
+   > 💡 **Hivi ndivyo**: Tafuta TODO katika `/app.js` na ongeza mistari miwili tu. Weka `ctx.fillStyle` kuwa nyeusi, kisha tumia `ctx.fillRect()` kuanzia (0,0) kwa vipimo vya canvas yako. Rahisi!
 
-2. **Pakia textures za mchezo**
-   > 💡 **Hivi ndivyo**: Tumia `await loadAsset()` kupakia picha zako za mchezaji na adui. Hifadhi katika vigezo ili uweze kuzitumia baadaye. Kumbuka – hazitaonekana hadi uzichore!
+2. **Pakia muundo wa mchezo**
+   > 💡 **Hivi ndivyo**: Tumia `await loadAsset()` kupakia picha zako za mchezaji na adui. Hifadhi kwenye tofauti ili uweze kuzitumia baadaye. Kumbuka – hazitaonekana hadi uchore!
 
-3. **Chora meli ya shujaa katikati-chini**
-   > 💡 **Hivi ndivyo**: Tumia `ctx.drawImage()` kuweka shujaa wako. Kwa kuratibu ya x, jaribu `canvas.width / 2 - 45` kuisogeza katikati, na kwa kuratibu ya y tumia `canvas.height - canvas.height / 4` kuisogeza eneo la chini.
+3. **Chora meli ya shujaa katikati chini**
+   > 💡 **Hivi ndivyo**: Tumia `ctx.drawImage()` kuweka shujaa. Kwa kuratibu ya x, jaribu `canvas.width / 2 - 45` kumuweka katikati, na kwa y tumia `canvas.height - canvas.height / 4` kumuweka sehemu ya chini.
 
-4. **Chora maumbo ya adui ya 5×5**
-   > 💡 **Hivi ndivyo**: Tafuta kazi ya `createEnemies` na weka kitanzi kilichopachikwa. Utahitaji kufanya hesabu kwa nafasi na kuweka, lakini usijali – nitakuonyesha jinsi ya kufanya!
+4. **Chora safu ya meli 5×5 ya maadui**
+   > 💡 **Hivi ndivyo**: Tafuta kazi ya `createEnemies` na andaa mizunguko ndani ya mizunguko. Utahitaji kufanya hesabu kidogo ya nafasi na maeneo, lakini usijali – nitakuonyesha hasa jinsi!
 
-Kwanza, weka constants kwa mpangilio sahihi wa maumbo ya adui:
+Kwanza, anza kwa kuweka constants za mpangilio sahihi wa maadui:
 
 ```javascript
 const ENEMY_TOTAL = 5;
@@ -249,13 +392,39 @@ const START_X = (canvas.width - FORMATION_WIDTH) / 2;
 const STOP_X = START_X + FORMATION_WIDTH;
 ```
 
-**Hebu tuchambue constants hizi:**
-- Tunapanga maadui 5 kwa kila safu na safu (gridi nzuri ya 5×5)
-- Tunafafanua nafasi ya kuweka kati ya maadui ili wasionekane wamebanwa
-- Tunahesabu upana wa mpangilio wetu wote
-- Tunajua wapi pa kuanza na kuacha ili mpangilio uonekane katikati
+**Hivi ndivyo constants hizi zinavyofanya kazi:**
+- Tunaweka maadui 5 kwa kila safu na safu (gridi nzuri ya 5×5)
+- Tunaainisha nafasi ya kuweka kati ya maadui ili wasionekane wamechanganika
+- Tunahesabu upana wa mpangilio mzima wa maadui
+- Tunaamua wapi kuanzia na kuisha ili safu ionekane katikati
 
-Kisha, unda vitanzi vilivyopachikwa kuchora mpangilio wa maadui:
+```mermaid
+flowchart LR
+    A["Upana wa Kanvas: 1024px"] --> B["Upana wa Maumbo: 490px"]
+    B --> C["Anza X: 267px"]
+    C --> D["Mkutano wa Adui: 98px"]
+    
+    subgraph "Muumbo wa Adui 5x5"
+        E["Safu 1: Y=0"]
+        F["Safu 2: Y=50"]
+        G["Safu 3: Y=100"]
+        H["Safu 4: Y=150"]
+        I["Safu 5: Y=200"]
+    end
+    
+    subgraph "Mkutano wa Safu"
+        J["Safu 1: X=267"]
+        K["Safu 2: X=365"]
+        L["Safu 3: X=463"]
+        M["Safu 4: X=561"]
+        N["Safu 5: X=659"]
+    end
+    
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+```
+Kisha, tengeneza mizunguko iliyopangwa kuchora mpangilio wa maadui:
 
 ```javascript
 for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
@@ -265,51 +434,191 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 }
 ```
 
-**Hivi ndivyo kitanzi kilichopachikwa kinavyofanya:**
-- Kitanzi cha nje **kinasogea** kutoka kushoto kwenda kulia kwenye mpangilio wetu
-- Kitanzi cha ndani **kinapita** kutoka juu kwenda chini kuunda safu nadhifu
-- Tunachora kila sprite ya adui kwenye kuratibu sahihi za x,y tulizohesabu
-- Kila kitu kinabaki **kimepangwa vizuri** ili kionekane kitaalamu na kimepangwa
+**Hivi mizunguko hii hufanya:**
+- Mzunguko wa nje unahama kutoka kushoto kwenda kulia kwenye mpangilio wetu
+- Mzunguko wa ndani unatembea kutoka juu hadi chini kuunda safu nzuri
+- Tunachora kila sprite ya adui kwenye kuratibu halisi za x,y tulizohesabu
+- Kila kitu kinawekwa kwa nafasi sawa ili kuonekana kitaalamu na kwa mpangilio
+
+### 🔄 **Ukaguzi wa Kufundisha**
+**Ustadi wa Kuonyeshwa kwa Mchezo**: Thibitisha uelewa wako wa mfumo kamili wa kuonyesha:
+- ✅ Je, upakiaji wa picha kwa async unazuia vikwazo vya UI wakati mchezo unapoanza vipi?
+- ✅ Kwa nini tunahesabu maeneo ya mpangilio wa maadui kwa constants badala ya kuweka nambari moja kwa moja?
+- ✅ Muktadha wa uchoraji wa 2D huchukua jukumu gani katika shughuli za kuchora?
+- ✅ Mizunguko ndani ya mizunguko huunda mpangilio wa sprite vya namna gani?
+
+**Mambo ya Kufikiria Kuhusu Utendaji**: Mchezo wako sasa unaonyesha:
+- **Upakiaji wa mali kwa ufanisi**: Usimamizi wa picha kwa kutumia Promise
+- **Uwezeshaji wa kuonyesha mzuri**: Shughuli za kuchora zilizo na muundo
+- **Mahesabu ya kuweka mahali**: Upangaji wa sprite kwa kutumia hesabu
+- **Usimamizi makosa**: Kushughulikia makosa kwa heshima
+
+**Mafundisho ya Kuprogramu kwa Mtazamo wa Picha**: Umejifunza:
+- **Mifumo ya kuratibu**: Kutafsiri hisabati hadi nafasi za skrini
+- **Usimamizi wa sprite**: Kupakia na kuonyesha picha za mchezo
+- **Algorithmi za muundo**: Mifumo ya kihisabati kwa upangaji wa mpangilio
+- **Uendeshaji usio wategemezi (Async)**: JavaScript ya kisasa kwa uzoefu laini wa mtumiaji
 
 ## Matokeo
 
-Matokeo ya mwisho yanapaswa kuonekana kama hivi:
+Matokeo yaliyokamilika yanapaswa kuonekana kama ifuatavyo:
 
-![Skrini nyeusi na shujaa na maadui 5*5](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.sw.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.sw.png)
 
 ## Suluhisho
 
-Tafadhali jaribu kutatua mwenyewe kwanza lakini ukikwama, angalia [suluhisho](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)
+Tafadhali jaribu kutatua mwenyewe kwanza lakini ukikumbwa na shida, angalia [suluhisho](../../../../6-space-game/2-drawing-to-canvas/solution/app.js)
 
 ---
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## Changamoto ya GitHub Copilot Agent 🚀
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+Tumia hali ya Agent kukamilisha changamoto ifuatayo:
 
-**Maelezo:** Boresha canvas ya mchezo wako wa anga kwa kuongeza athari za kuona na vipengele vya kuingiliana kwa kutumia mbinu za API ya Canvas ulizojifunza.
+**Maelezo:** Boresha kanga ya mchezo wako wa angani kwa kuongeza athari za kuona na vipengele vinavyohusiana kwa kutumia mbinu za Canvas API ulizojifunza.
 
-**Kichocheo:** Unda faili mpya inayoitwa `enhanced-canvas.html` na canvas inayonyesha nyota zinazong'aa kwenye mandhari, upau wa afya unaopiga kwa meli ya shujaa, na meli za adui zinazotembea polepole chini. Jumuisha msimbo wa JavaScript unaochora nyota zinazong'aa kwa kutumia nafasi za nasibu na opacity, kutekeleza upau wa afya unaobadilisha rangi kulingana na kiwango cha afya (kijani > njano > nyekundu), na kuhuisha meli za adui kusonga chini ya skrini kwa kasi tofauti.
+**Onyo:** Tengeneza faili mpya iitwayo `enhanced-canvas.html` yenye kanga inayoonyesha nyota zinazong'aa nyuma, kipengele cha afya kinachobadilika cha meli ya shujaa, na meli za maadui zinazotembea polepole chini. Jumuisha nambari ya JavaScript inayochora nyota zinazong'aa kwa nafasi nasibu na uwazi, kutekeleza kipengele cha afya kinachobadilika rangi kulingana na kiwango cha afya (kijani > njano > nyekundu), na kuunda meli za maadui kutembea chini ya skrini kwa kasi tofauti.
 
-Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+Jifunze zaidi kuhusu [hali ya agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
 ## 🚀 Changamoto
 
-Umejifunza kuhusu kuchora kwa API ya Canvas inayozingatia 2D; angalia [API ya WebGL](https://developer.mozilla.org/docs/Web/API/WebGL_API), na jaribu kuchora kitu cha 3D.
+Umejifunza kuhusu kuchora kwa kutumia Canvas API iliyoelekezwa kwa 2D; angalia [WebGL API](https://developer.mozilla.org/docs/Web/API/WebGL_API), kisha jaribu kuchora kitu cha 3D.
 
-## Maswali ya Baada ya Somo
+## Jaribio Baada ya Mwalimu
 
-[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/32)
+[Jaribio baada ya mwalimu](https://ff-quizzes.netlify.app/web/quiz/32)
 
-## Mapitio na Kujisomea
+## Mapitio na Kujifunza Binafsi
 
-Jifunze zaidi kuhusu API ya Canvas kwa [kusoma kuhusu](https://developer.mozilla.org/docs/Web/API/Canvas_API).
+Jifunze zaidi kuhusu Canvas API kwa [kusoma kuhusu hilo](https://developer.mozilla.org/docs/Web/API/Canvas_API).
 
-## Kazi
+### ⚡ **Unachoweza Kufanya Kama Dakika 5 Zijazo**
+- [ ] Fungua kikao cha kivinjari na tengeneza kipengele cha kanga kwa kutumia `document.createElement('canvas')`
+- [ ] Jaribu kuchora mraba kwa kutumia `fillRect()` kwenye muktadha wa kanga
+- [ ] Jaribu kutumia rangi tofauti kwa kutumia mali ya `fillStyle`
+- [ ] Chora mduara rahisi kwa kutumia njia ya `arc()`
 
-[Cheza na API ya Canvas](assignment.md)
+### 🎯 **Unachoweza Kufanikisha Saa Hii**
+- [ ] Maliza jaribio baada ya somo na uelewe misingi ya kanga
+- [ ] Tengeneza programu ya kuchora kanga yenye sura na rangi mbalimbali
+- [ ] Tekeleza upakiaji wa picha na uchoraji wa sprite kwenye mchezo wako
+- [ ] Jenga uhuishaji rahisi unaohamisha vitu kwenye kanga
+- [ ] Fanya mazoezi ya mabadiliko kwenye kanga kama usawa, mzunguko, na tafsiri
+
+### 📅 **Safari Yako ya Wiki Mmoja ya Kanga**
+- [ ] Maliza mchezo wa anga kwa picha zilizopambwa na uhuishaji wa sprite
+- [ ] Pitia mbinu za juu za kanga kama mwelekeo wa rangi, mifumo, na muungano
+- [ ] Tengeneza maonyesho ya mwingiliano kwa kutumia kanga kwa ushawishi wa data
+- [ ] Jifunze mbinu za uboreshaji wa kanga kwa utendaji rahisi
+- [ ] Jenga programu ya kuchora au kupaka rangi yenye zana mbalimbali
+- [ ] Chunguza mifumo ya uundaji ubunifu na sanaa za kuzalisha kwa kanga
+
+### 🌟 **Ubobezi Wako wa Mwezi Mmoja wa Picha**
+- [ ] Jenga programu tata za kuona kwa kutumia Canvas 2D na WebGL
+- [ ] Jifunze dhana za programu za picha na msingi wa shader
+- [ ] Changia kwenye maktaba za picha za chanzo wazi na zana za maonyesho
+- [ ] Kuwa mtaalamu wa uboreshaji wa utendaji kwa programu za picha nzito
+- [ ] Tengeneza maudhui ya elimu kuhusu programu za kanga na picha za kompyuta
+- [ ] Kuwa mtaalamu wa programu za picha anayeweza kusaidia wengine kuunda uzoefu wa kuona
+
+## 🎯 Ratiba Yako ya Ubobezi wa Picha za Kanga
+
+```mermaid
+timeline
+    title Mchakato wa Kujifunza API ya Canvas
+    
+    section Msingi wa Canvas (dakika 15)
+        Operesheni za Msingi: Marejeleo ya kipengee
+                        : Upatikanaji wa muktadha wa 2D
+                        : Mfumo wa kuratibu
+                        : Kuchora maumbo rahisi
+        
+    section Mbinu za Kuchora (dakika 20)
+        Misingi ya Grafikisi: Mraba na mizunguko
+                           : Rangi na mitindo
+                           : Uchoraji wa maandishi
+                           : Operesheni za njia
+        
+    section Usimamizi wa Picha (dakika 25)
+        Usimamizi wa Mali: Uundaji wa kipengee cha picha
+                        : Mifumo ya upakiaji wa asynkro
+                        : Usimamizi wa makosa
+                        : Uboreshaji wa utendaji
+        
+    section Grafikisi za Michezo (dakika 30)
+        Uchoraji wa Sprite: Algoriti za kuweka nafasi
+                        : Hisa za umbo
+                        : Uundaji wa mandhari
+                        : Uchoraji wa fremu
+        
+    section Mbinu za Juu (dakika 40)
+        Athari za Kuona: Mabadiliko
+                      : Miondoko
+                      : Uwekezaji tabaka
+                      : Usimamizi wa hali
+        
+    section Utendaji (dakika 35)
+        Uboreshaji: Uchoraji wenye ufanisi
+                    : Usimamizi wa kumbukumbu
+                    : Udhibiti wa kiwango cha fremu
+                    : Kuweka rasilimali akiba
+        
+    section Ujuzi wa Kitaalamu (wiki 1)
+        Grafikisi za Uzalishaji: Muingiliano wa WebGL
+                           : Maktaba za Canvas
+                           : Injini za michezo
+                           : Masuala ya kuvuka majukwaa
+        
+    section Grafikisi za Juu (mwezi 1)
+        Programu Maalum: Uwasilishaji wa data
+                                : Sanaa ya mwingiliano
+                                : Athari za wakati halisi
+                                : Grafikisi za 3D
+```
+### 🛠️ Muhtasari wa Seti Yako ya Zana za Picha za Kanga
+
+Baada ya kumaliza somo hili, sasa una:
+- **Ubobezi wa Canvas API**: Uelewa kamili wa programu za picha za 2D
+- **Hisabati za Ratiba**: Msimamo sahihi na algorithmi za upangaji
+- **Usimamizi wa Mali**: Kupakia picha kitaalamu na usimamizi wa makosa
+- **Mchakato wa Uchoraji**: Njia iliyopangwa ya muundo wa picha
+- **Picha za Mchezo**: Msimamo wa sprite na hesabu za muundo
+- **Programu zisizo wategemezi**: Mifumo ya kisasa ya JavaScript kwa utendaji laini
+- **Programu za Kuona**: Kutafsiri dhana za kihisabati hadi picha za skrini
+
+**Matumia halisi**: Uwezo wako wa Canvas unatumika moja kwa moja kwa:
+- **Onyesho la Data**: Chati, grafu, na dashibodi zinazoingiliana
+- **Maendeleo ya Mchezo**: Michezo ya 2D, maonyesho, na uzoefu wa mwingiliano
+- **Sanaa ya Kidijitali**: Usanifu wa ubunifu na miradi ya sanaa za kuzalisha
+- **Ubunifu wa UI/UX**: Picha maalum na vipengele vinavyoshirikiana
+- **Programu za Elimu**: Zana za kujifunza za kuona na maonyesho
+- **Programu za Mtandao**: Picha dinamik na maonyesho ya wakati halisi
+
+**Ujuzi wa Kitaalamu Uliopata**: Sasa unaweza:
+- **Jenga** suluhisho za picha za kawaida bila maktaba za nje
+- **Boresha** utendaji wa uchoraji kwa uzoefu laini wa mtumiaji
+- **Pata Kasoro** matatizo tata ya kuona kwa kutumia zana za mtengenezaji wa kivinjari
+- **Buni** mifumo ya picha inayoweza kupanuka kwa kutumia kanuni za kihisabati
+- **Unganisha** picha za Canvas na mfumo wa programu wa mtandao wa kisasa
+
+**Mbinu za Canvas API Uliyotawala**:
+- **Usimamizi wa Vipengele**: getElementById, getContext
+- **Uendeshaji wa Kuchora**: fillRect, drawImage, fillStyle
+- **Upakiaji Mali**: Vitu vya Picha, mifumo ya Promise
+- **Msimamo wa Hisabati**: Hesabu za ratiba, algorithmi za muundo
+
+**Kiwango Kifuatayo**: Uko tayari kuongeza uhuishaji, mwingiliano wa mtumiaji, kugundua mgongano, au kuchunguza WebGL kwa picha za 3D!
+
+🌟 **Tuzo Imepatikana**: Umejenga mfumo kamili wa uchoraji wa mchezo kwa kutumia mbinu za msingi za Canvas API!
+
+## Kazi ya Nyumbani
+
+[Tumia Canvas API](assignment.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Tangazo la Kukataa**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri kwa AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuwa sahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na watu inashauriwa. Hatubebii uwajibikaji wowote kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

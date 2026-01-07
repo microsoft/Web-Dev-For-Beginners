@@ -42,10 +42,10 @@ Kurikulum ini termasuk pakej yang boleh diimport untuk aliran kerja LMS yang bia
   - Moodle Cloud mempunyai sokongan Common Cartridge yang terhad. Lebih baik gunakan fail Moodle di atas, yang juga boleh dimuat naik ke Canvas.
   - Selepas import, semak modul, tarikh akhir, dan tetapan kuiz untuk disesuaikan dengan jadual penggal anda.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.ms.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ms.png)
 > Kurikulum dalam kelas Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.ms.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ms.png)
 > Kurikulum dalam Canvas
 
 ### Penggunaan repositori secara langsung (tanpa Classroom)

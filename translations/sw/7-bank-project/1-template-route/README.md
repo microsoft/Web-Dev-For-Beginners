@@ -1,51 +1,96 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d259f6962464ad91e671083aa0398f4",
-  "translation_date": "2025-10-24T19:34:01+00:00",
+  "original_hash": "351678bece18f07d9daa987a881fb062",
+  "translation_date": "2026-01-07T01:52:22+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "sw"
 }
 -->
-# Jenga Programu ya Benki Sehemu ya 1: Violezo vya HTML na Njia katika Programu ya Wavuti
+# Jenga Programu ya Benki Sehemu ya 1: Violezo vya HTML na Njia katika Programu ya Mtandao
 
-Wakati kompyuta ya Apollo 11 iliongoza kwenda mwezini mwaka 1969, ilibidi ibadilishe kati ya programu tofauti bila kuwasha upya mfumo mzima. Programu za kisasa za wavuti hufanya kazi kwa njia sawa – zinabadilisha unachoona bila kupakia kila kitu kutoka mwanzo. Hii huunda uzoefu laini na wa haraka ambao watumiaji wanatarajia leo.
+```mermaid
+journey
+    title Safari Yako ya Maendeleo ya App ya Benki
+    section Misingi ya SPA
+      Elewa apps za ukurasa mmoja: 3: Student
+      Jifunze dhana za templeti: 4: Student
+      Fuzu udhibiti wa DOM: 4: Student
+    section Mifumo ya Routing
+      Tekeleza routing upande wa mteja: 4: Student
+      Dhibiti historia ya kivinjari: 5: Student
+      Unda mifumo ya urambazaji: 5: Student
+    section Mifumo ya Kitaalamu
+      Jenga usanifu wa moduli: 5: Student
+      Tumia mbinu bora: 5: Student
+      Unda uzoefu wa mtumiaji: 5: Student
+```
+Wakati kompyuta ya uongozi ya Apollo 11 ilipoelekeza kwenda mwezi mwaka 1969, ilikuwa inabidi kubadilisha kati ya programu tofauti bila kuanzisha tena mfumo mzima. Programu za wavuti za kisasa hufanya kazi kwa njia sawa – hubadilisha unachokiona bila kupakia tena kila kitu kuanzia mwanzo. Hii huunda uzoefu laini na unaojibu haraka unaotarajiwa na watumiaji leo.
 
-Tofauti na tovuti za jadi ambazo hupakia upya kurasa nzima kwa kila mwingiliano, programu za wavuti za kisasa husasisha tu sehemu zinazohitaji kubadilishwa. Njia hii, kama jinsi udhibiti wa misheni unavyobadilisha kati ya maonyesho tofauti huku ukidumisha mawasiliano ya mara kwa mara, huunda uzoefu laini ambao tumekuwa tukitarajia.
+Tofauti na tovuti za jadi ambazo hupakia kurasa nzima kwa kila mwingiliano, programu za wavuti za kisasa huboresha sehemu tu zinazohitaji kubadilishwa. Njia hii, kama vile ikolojia ya misheni hubadilisha kati ya maonyesho tofauti huku ikidumisha mawasiliano thabiti, huunda uzoefu huo laini ambao tumekuwa tukitarajia.
 
-Hivi ndivyo tofauti inavyokuwa ya kushangaza:
+Hii ndiyo kinachofanya tofauti iwe kubwa:
 
-| Programu za Kurasa Nyingi za Jadi | Programu za Kurasa Moja za Kisasa |
-|----------------------------------|----------------------------------|
-| **Urambazaji** | Kupakia upya kurasa nzima kwa kila skrini | Kubadilisha maudhui papo hapo |
-| **Utendaji** | Polepole kwa sababu ya kupakua HTML nzima | Haraka na masasisho ya sehemu |
-| **Uzoefu wa Mtumiaji** | Mwangaza wa kurasa unaoshtua | Mabadiliko laini kama programu |
-| **Kushiriki Data** | Ngumu kati ya kurasa | Rahisi kudhibiti hali |
-| **Maendeleo** | Faili nyingi za HTML za kudumisha | HTML moja na violezo vya nguvu |
+| Programu za Kurasa Nyingi za Kiasili | Programu za Ukurasa Mmoja za Kisasa |
+|-------------------------------------|-------------------------------------|
+| **Uelekezaji** | Kupakia tena kurasa nzima kwa kila skrini | Kubadilisha maudhui papo hapo |
+| **Utendaji** | Polepole kutokana na upakuaji kamili wa HTML | Haraka kwa masasisho sehemu fulani |
+| **Uzoefu wa Mtumiaji** | Mwangaza wa kurasa unaosumbua | Mabadiliko laini, kama app |
+| **Kushirikiana Data** | Gumu kati ya kurasa | Usimamizi rahisi wa hali |
+| **Maendeleo** | Faili nyingi za HTML za kudumisha | HTML moja yenye violezo vya mabadiliko |
 
-**Kuelewa mabadiliko:**
-- **Programu za jadi** zinahitaji maombi ya seva kwa kila hatua ya urambazaji
-- **SPAs za kisasa** hupakia mara moja na kusasisha maudhui kwa nguvu kwa kutumia JavaScript
-- **Matarajio ya watumiaji** sasa yanapendelea mwingiliano wa papo hapo na laini
-- **Faida za utendaji** ni pamoja na kupunguza matumizi ya data na majibu ya haraka
+**Kuelewa mageuzi:**
+- **Programu za jadi** zinahitaji maombi ya seva kwa kila hatua ya uelekezaji
+- **SPA za kisasa** hupakia mara moja na huboresha maudhui kwa JavaScript
+- **Matakwa ya watumiaji** sasa yanapendelea mwingiliano wa papo hapo na usio na katikati
+- **Faida za utendaji** ni pamoja na kupunguza upendeleo na majibu ya haraka
 
-Katika somo hili, tutajenga programu ya benki yenye skrini nyingi zinazotiririka pamoja kwa urahisi. Kama jinsi wanasayansi wanavyotumia vyombo vya modular vinavyoweza kusanidiwa kwa majaribio tofauti, tutatumia violezo vya HTML kama vipengele vinavyoweza kutumika tena ambavyo vinaweza kuonyeshwa inapohitajika.
+Katika somo hili, tutajenga programu ya benki yenye skrini nyingi zinazofuatana kwa usawa. Kama vile wanasayansi wanavyotumia vifaa vya moduli vinavyoweza kubadilishwa kwa majaribio tofauti, tutatumia violezo vya HTML kama vipengele vinavyoweza kutumika tena vinavyoweza kuonyeshwa inapobidi.
 
-Utatumia violezo vya HTML (michoro inayoweza kutumika tena kwa skrini tofauti), urambazaji wa JavaScript (mfumo unaobadilisha kati ya skrini), na API ya historia ya kivinjari (ambayo huweka kitufe cha kurudi kikifanya kazi kama inavyotarajiwa). Hizi ni mbinu za msingi zinazotumiwa na mifumo kama React, Vue, na Angular.
+Utashughulikia violezo vya HTML (ramani za matumizi tena kwa skrini tofauti), njia za JavaScript (mfumo unaobadilisha kati ya skrini), na API ya historia ya kivinjari (inayo dhamini kitufe cha nyuma kinavyofanya kazi kama ilivyo tarajiwa). Hizi ni mbinu za msingi zinazotumiwa na fremu kama React, Vue, na Angular.
 
-Mwisho wa somo, utakuwa na programu ya benki inayofanya kazi ambayo inaonyesha kanuni za kitaalamu za programu za kurasa moja.
+Mwisho wa somo, utakuwa na programu ya benki inayofanya kazi inayoonyesha kanuni za kitaalamu za programu moja ya ukurasa.
 
-## Maswali ya Kabla ya Somo
+```mermaid
+mindmap
+  root((Single-Page Applications))
+    Architecture
+      Template System
+      Client-side Routing
+      State Management
+      Event Handling
+    Templates
+      Reusable Components
+      Dynamic Content
+      DOM Manipulation
+      Content Switching
+    Routing
+      URL Management
+      History API
+      Navigation Logic
+      Browser Integration
+    User Experience
+      Haraka Kuendesha
+      Mabadiliko Laini
+      Hali Imara
+      Mwingiliano wa Kisasa
+    Performance
+      Kupunguza Maombi kwa Server
+      Mabadiliko ya Ukurasa Haraka
+      Matumizi Bora ya Rasilimali
+      Uwezo wa Kujibu Bora
+```
+## Mtihani wa Kabla ya Mihadhara
 
-[Maswali ya kabla ya somo](https://ff-quizzes.netlify.app/web/quiz/41)
+[Mtihani wa kabla ya mihadhara](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Unachohitaji
 
-Tutahitaji seva ya wavuti ya ndani kujaribu programu yetu ya benki – usijali, ni rahisi kuliko inavyosikika! Ikiwa huna moja tayari, weka tu [Node.js](https://nodejs.org) na endesha `npx lite-server` kutoka kwenye folda ya mradi wako. Amri hii rahisi huanzisha seva ya ndani na kufungua programu yako moja kwa moja kwenye kivinjari.
+Tutahitaji seva ya wavuti ya ndani kujaribu programu yetu ya benki – usijali, ni rahisi zaidi kuliko inavyosikika! Ikiwa bado hujajiandaa, ingiza [Node.js](https://nodejs.org) na endesha `npx lite-server` kutoka kwenye folda ya mradi wako. Amri hii rahisi huanzisha seva ya ndani na kufungua programu yako moja kwa moja kwenye kivinjari.
 
 ### Maandalizi
 
-Kwenye kompyuta yako, tengeneza folda inayoitwa `bank` yenye faili inayoitwa `index.html` ndani yake. Tutaanza kutoka kwa [boilerplate ya HTML](https://en.wikipedia.org/wiki/Boilerplate_code):
+Kwenye kompyuta yako, tengeneza folda iitwayo `bank` yenye faili iitwayo `index.html` ndani yake. Tutaanza na boilerplate hii ya HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -62,15 +107,15 @@ Kwenye kompyuta yako, tengeneza folda inayoitwa `bank` yenye faili inayoitwa `in
 ```
 
 **Hivi ndivyo boilerplate hii inavyotoa:**
-- **Inaanzisha** muundo wa hati ya HTML5 na tamko sahihi la DOCTYPE
-- **Inasanidi** usimbaji wa herufi kama UTF-8 kwa msaada wa maandishi ya kimataifa
-- **Inawezesha** muundo unaojibika na tagi ya meta ya viewport kwa utangamano wa simu
-- **Inaweka** kichwa cha kuelezea kinachoonekana kwenye kichupo cha kivinjari
+- **Inaweka** muundo wa hati ya HTML5 na tangazo sahihi la DOCTYPE
+- **Inapanga** usimbaji wa herufi kama UTF-8 kwa msaada wa maandishi ya kimataifa
+- **Inawezesha** usanifu unaojibika kwa kutumia tagi ya meta ya viewport kwa ufanisi wa simu
+- **Inaweka** kichwa cha maelezo kinachoonekana kwenye kichupo cha kivinjari
 - **Inaunda** sehemu safi ya mwili ambapo tutajenga programu yetu
 
 > 📁 **Muhtasari wa Muundo wa Mradi**
 > 
-> **Mwisho wa somo hili, mradi wako utakuwa na:**
+> **Mwisho wa somo hili, mradi wako uta kuwa na:**
 > ```
 > bank/
 > ├── index.html      <!-- Main HTML with templates -->
@@ -80,41 +125,58 @@ Kwenye kompyuta yako, tengeneza folda inayoitwa `bank` yenye faili inayoitwa `in
 > 
 > **Majukumu ya faili:**
 > - **index.html**: Ina violezo vyote na hutoa muundo wa programu
-> - **app.js**: Inashughulikia urambazaji, uelekezaji, na usimamizi wa violezo
-> - **Violezo**: Hufafanua UI kwa kuingia, dashibodi, na skrini nyingine
+> - **app.js**: Inasimamia njia, uelekezaji, na usimamizi wa violezo
+> - **Templates**: Hufafanua mtazamo wa kuingia, dashibodi, na skrini nyingine
 
 ---
 
 ## Violezo vya HTML
 
-Violezo hutatua tatizo la msingi katika maendeleo ya wavuti. Wakati Gutenberg aligundua uchapishaji wa herufi zinazoweza kusogezwa katika miaka ya 1440, aligundua kuwa badala ya kuchonga kurasa nzima, angeweza kuunda vizuizi vya herufi vinavyoweza kutumika tena na kuviweka kama inavyohitajika. Violezo vya HTML hufanya kazi kwa kanuni sawa – badala ya kuunda faili tofauti za HTML kwa kila skrini, unafafanua miundo inayoweza kutumika tena ambayo inaweza kuonyeshwa inapohitajika.
+Violezo hutatua tatizo msingi katika maendeleo ya wavuti. Wakati Gutenberg alibuni uchapishaji wa aina inayoelea miaka ya 1440, alitambua kuwa badala ya kuchonga kurasa zote, anaweza kutengeneza vitalu vya herufi vya matumizi tena na kwa kupanga kama inavyotakiwa. Violezo vya HTML hufanya kazi kwa kanuni sawa – badala ya kutengeneza faili za HTML tofauti kwa kila skrini, unafafanua miundo inayoweza kutumika tena inayoweza kuonyeshwa inapobidi.
 
-Fikiria violezo kama michoro ya sehemu tofauti za programu yako. Kama vile mbunifu anavyounda mchoro mmoja na kuutumia mara nyingi badala ya kuchora vyumba vinavyofanana tena, tunaunda violezo mara moja na kuvitumia inapohitajika. Kivinjari huweka violezo hivi vimefichwa hadi JavaScript inapoviamsha.
+```mermaid
+flowchart TD
+    A["📋 Ufafanuzi wa Kiolezo"] --> B["💬 Fichwa katika DOM"]
+    B --> C["🔍 JavaScript Inatafuta Kiolezo"]
+    C --> D["📋 Nakili Yaliyomo ya Kiolezo"]
+    D --> E["🔗 Ambatanisha kwenye DOM Inayoonekana"]
+    E --> F["👁️ Mtumiaji Anaona Yaliyomo"]
+    
+    G["Kiolezo cha Kuingia"] --> A
+    H["Kiolezo cha Dashibodi"] --> A
+    I["Violezo vya Baadaye"] --> A
+    
+    style A fill:#e3f2fd
+    style D fill:#e8f5e8
+    style F fill:#fff3e0
+    style B fill:#f3e5f5
+```
+Fikiria violezo kama ramani za matumizi kwa sehemu tofauti za programu yako. Kama vile mbunifu anavyotengeneza ramani moja na kuitumia mara kadhaa badala ya kuchora vyumba visivyo tofauti, sisi tunaunda violezo mara moja na kuvitumia inapobidi. Kivinjari huweka violezo hivi visivyoonekana hadi JavaScript ianze kuvitumia.
 
-Ikiwa unataka kuunda skrini nyingi kwa ukurasa wa wavuti, suluhisho moja litakuwa kuunda faili moja ya HTML kwa kila skrini unayotaka kuonyesha. Hata hivyo, suluhisho hili lina usumbufu fulani:
+Ikiwa unataka kutengeneza skrini nyingi kwa ukurasa wa wavuti, suluhisho moja litakuwa kutengeneza faili moja ya HTML kwa kila skrini unayotaka kuonyesha. Hata hivyo, suluhisho hili lina usumbufu kadhaa:
 
-- Unalazimika kupakia upya HTML nzima unaposwitch skrini, ambayo inaweza kuwa polepole.
-- Ni vigumu kushiriki data kati ya skrini tofauti.
+- Unapaswa kupakia tena HTML nzima unapotumia kubadilisha skrini, jambo ambalo linaweza kuwa polepole.
+- Ni vigumu kushirikiana data kati ya skrini tofauti.
 
-Njia nyingine ni kuwa na faili moja ya HTML, na kufafanua violezo vingi vya [HTML](https://developer.mozilla.org/docs/Web/HTML/Element/template) kwa kutumia kipengele cha `<template>`. Kiolezo ni kizuizi cha HTML kinachoweza kutumika tena ambacho hakionyeshwi na kivinjari, na kinahitaji kuanzishwa wakati wa utekelezaji kwa kutumia JavaScript.
+Njia nyingine ni kuwa na faili moja tu ya HTML, na kufafanua violezo vingi vya [HTML templates](https://developer.mozilla.org/docs/Web/HTML/Element/template) kwa kutumia kipengele cha `<template>`. Kiolezo ni kipande cha HTML kinachoweza kutumika tena ambacho hakionyeshwi na kivinjari, na kinahitaji kuanzishwa wakati wa utekelezaji kwa kutumia JavaScript.
 
 ### Hebu Tujenge
 
-Tutaunda programu ya benki yenye skrini kuu mbili: ukurasa wa kuingia na dashibodi. Kwanza, ongeza kipengele cha nafasi kwenye mwili wa HTML – hapa ndipo skrini zetu tofauti zitaonekana:
+Tutaunda programu ya benki yenye skrini mbili kuu: ukurasa wa kuingia na dashibodi. Kwanza, tuongeze kipengele cha mahali pangi katika mwili wa HTML – hapa ndipo skrini zetu zote tofauti zitaonekana:
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-**Kuelewa nafasi hii:**
-- **Inaunda** kontena lenye kitambulisho "app" ambapo skrini zote zitaonyeshwa
-- **Inaonyesha** ujumbe wa kupakia hadi JavaScript itakapoanzisha skrini ya kwanza
-- **Inatoa** sehemu moja ya kuweka maudhui yetu ya nguvu
-- **Inawezesha** kulenga kwa urahisi kutoka kwa JavaScript kwa kutumia `document.getElementById()`
+**Kuelewa mahali pango hili:**
+- **Inaweka** chombo chenye ID "app" ambacho skrini zote zitaonyeshwa ndani yake
+- **Inaonyesha** ujumbe wa kuja hadi JavaScript ianzishe skrini ya kwanza
+- **Inatoa** sehemu moja ya kuingilia kwenye maudhui yetu yanayobadilika
+- **Inawezesha** upatikanaji rahisi kutoka JavaScript kwa kutumia `document.getElementById()`
 
-> 💡 **Ushauri wa Kitaalamu**: Kwa kuwa maudhui ya kipengele hiki yatabadilishwa, tunaweza kuweka ujumbe wa kupakia au kiashiria kinachoonyeshwa wakati programu inachaji.
+> 💡 **Ushauri wa Pro**: Kwa kuwa maudhui ya kipengele hiki yatabadilishwa, tunaweza kuweka ujumbe wa kuja au kiashiria kitakachoonyeshwa wakati programu inapakuja.
 
-Kisha, ongeza chini kiolezo cha HTML kwa ukurasa wa kuingia. Kwa sasa tutaweka tu kichwa na sehemu inayojumuisha kiungo ambacho tutatumia kufanya urambazaji.
+Ifuatayo, tuongeze chini ya kiolezo cha HTML kwa ukurasa wa kuingia. Kwa sasa tutajumuisha kichwa na sehemu yenye kiungo ambacho tutatumia kufanya uelekezaji.
 
 ```html
 <template id="login">
@@ -125,17 +187,17 @@ Kisha, ongeza chini kiolezo cha HTML kwa ukurasa wa kuingia. Kwa sasa tutaweka t
 </template>
 ```
 
-**Kuchambua kiolezo hiki cha kuingia:**
-- **Inafafanua** kiolezo chenye kitambulisho cha kipekee "login" kwa kulenga JavaScript
-- **Inajumuisha** kichwa kikuu kinachoweka chapa ya programu
-- **Inajumuisha** kipengele cha semantiki `<section>` cha kuunda maudhui yanayohusiana
-- **Inatoa** kiungo cha urambazaji ambacho kitaelekeza watumiaji kwenye dashibodi
+**Kuvunja kiolezo hiki cha kuingia:**
+- **Hufafanua** kiolezo chenye kitambulisho cha kipekee "login" kwa ajili ya uelekezaji wa JavaScript
+- **Inajumuisha** kichwa kuu kinachotambulisha chapa ya programu
+- **Ina sehemu** ya `<section>` ya maana kuweka maudhui yanayohusiana pamoja
+- **Inatoa** kiungo cha uelekezaji kitakachompeleka mtumiaji kwenye dashibodi
 
-Kisha tutaongeza kiolezo kingine cha HTML kwa ukurasa wa dashibodi. Ukurasa huu utakuwa na sehemu tofauti:
+Kisha tutaongeza kiolezo kingine cha HTML kwa ukurasa wa dashibodi. Ukurasa huu utajumuisha sehemu tofauti:
 
-- Kichwa chenye kichwa na kiungo cha kutoka
+- Kichwa chenye kichwa kidogo na kiungo cha kutoka
 - Salio la sasa la akaunti ya benki
-- Orodha ya miamala, inayoonyeshwa kwenye jedwali
+- Orodha ya miamala, inaonyeshwa kwenye meza
 
 ```html
 <template id="dashboard">
@@ -162,73 +224,88 @@ Kisha tutaongeza kiolezo kingine cha HTML kwa ukurasa wa dashibodi. Ukurasa huu 
 </template>
 ```
 
-**Hebu tuelewe kila sehemu ya dashibodi hii:**
-- **Inaunda** ukurasa kwa kipengele cha semantiki `<header>` chenye urambazaji
-- **Inaonyesha** kichwa cha programu kwa uthabiti kwenye skrini zote kwa chapa
-- **Inatoa** kiungo cha kutoka kinachoelekeza tena kwenye skrini ya kuingia
-- **Inaonyesha** salio la akaunti ya sasa kwenye sehemu maalum
-- **Inaandaa** data ya miamala kwa kutumia jedwali la HTML lililopangwa vizuri
-- **Inafafanua** vichwa vya jedwali kwa safu za Tarehe, Kitu, na Kiasi
-- **Inaacha** mwili wa jedwali ukiwa mtupu kwa kuingiza maudhui ya nguvu baadaye
+**Hebu kuelewa kila sehemu ya dashibodi hii:**
+- **Inaweka muundo** wa ukurasa kwa kipengele cha `<header>` chenye uelekezaji
+- **Inaonyesha** kichwa cha programu kwa usahihi kwa chapa kwenye skrini zote
+- **Inatoa** kiungo cha kutoka kinachompeleka mtu tena kwenye ukurasa wa kuingia
+- **Inaonyesha** salio la akaunti sasa kwa sehemu maalum
+- **Inaandaa** data ya miamala kwa kutumia meza ya HTML yenye muundo mzuri
+- **Hufafanua** vichwa vya meza kwa Siku, Kitu, na Kiasi
+- **Inaacha** mwili wa meza wazi kwa kuingiza maudhui ya mabadiliko baadaye
 
-> 💡 **Ushauri wa Kitaalamu**: Unapounda violezo vya HTML, ikiwa unataka kuona jinsi itakavyoonekana, unaweza kutoa maoni kwenye mistari ya `<template>` na `</template>` kwa kuifunga na `<!-- -->`.
+> 💡 **Ushauri wa Pro**: Unapotengeneza violezo vya HTML, ikiwa ungependa kuona ni kama inaonekana vipi, unaweza kutaja mstari wa `<template>` na `</template>` kwa kuziweka ndani ya `<!-- -->`.
 
-✅ Kwa nini unadhani tunatumia sifa za `id` kwenye violezo? Je, tungeweza kutumia kitu kingine kama darasa?
+### 🔄 **Ukaguzi wa Kielekezi**
+**Kuelewa Mfumo wa Violezo**: Kabla ya kutekeleza JavaScript, hakikisha unaelewa:
+- ✅ Violezo vinatofautianaje na vipengele vya kawaida vya HTML
+- ✅ Kwa nini violezo hubaki visivyoonekana hadi vianzishwe na JavaScript
+- ✅ Umuhimu wa muundo wa maana wa HTML katika violezo
+- ✅ Jinsi violezo vinavyowawezesha vipengele vya UI vinavyoweza kutumika tena
 
-## Kuleta Violezo Hai kwa JavaScript
+**Jaribio la Haraka Binafsi**: Nini hutokea ikiwa utaondoa lebo za `<template>` kutoka kwenye HTML yako?
+*Jibu: Maudhui yanakuwa yanaonekana mara moja na hupoteza kazi ya kiolezo*
 
-Sasa tunahitaji kufanya violezo vyetu vifanye kazi. Kama jinsi printer ya 3D inavyotumia mchoro wa kidijitali na kuunda kitu halisi, JavaScript inachukua violezo vyetu vilivyofichwa na kuunda vipengele vinavyoonekana, vinavyoweza kuingiliana ambavyo watumiaji wanaweza kuona na kutumia.
+**Faida za Usanifu**: Violezo vinatoa:
+- **Matumizi tena**: Ufafanuzi mmoja, matukio mengi
+- **Utendaji**: Hakuna uchambuzi wa ziada wa HTML
+- **Usimamizi**: Muundo wa UI ulio katikati
+- **Ubunifu**: Kubadilisha maudhui kwa urahisi
 
-Mchakato hufuata hatua tatu thabiti zinazounda msingi wa maendeleo ya wavuti ya kisasa. Mara tu unapofahamu muundo huu, utautambua katika mifumo na maktaba nyingi.
+✅ Kwa nini unadhani tunatumia sifa za `id` kwenye violezo? Je, tungeweza kutumia kitu kingine kama madarasa?
 
-Ukijaribu faili yako ya HTML ya sasa kwenye kivinjari, utaona kuwa inakwama ikionyesha `Loading...`. Hii ni kwa sababu tunahitaji kuongeza msimbo wa JavaScript ili kuanzisha na kuonyesha violezo vya HTML.
+## Kuleta Violezo Kuwa Hai kwa JavaScript
 
-Kuanzisha kiolezo kawaida hufanywa kwa hatua 3:
+Sasa tunahitaji kufanya violezo vyetu viwe na kazi. Kama vile printa ya 3D inavyochukua ramani ya kidijitali na kutengeneza kitu halisi, JavaScript huchukua violezo vilivyo fichwa na vinafanya vipengele vinaweza kuonekana, vinavyointerakti vinavyoonekana na vinavyotumiwa na watumiaji.
+
+Mchakato unafuata hatua tatu thabiti zinazotengeneza msingi wa maendeleo ya wavuti za kisasa. Ukielewa muundo huu, utaona mfano huu katika fremu na maktaba nyingi.
+
+Ikiwa uta jaribu faili yako ya HTML katika kivinjari, utaona kwamba inakaa kuonyesha `Loading...`. Hii ni kwa sababu tunahitaji kuongeza sehemu ya JavaScript ili kuanzisha na kuonyesha violezo vya HTML.
+
+Kuanza kiolezo kawaida hufanywa kwa hatua 3:
 
 1. Pata kipengele cha kiolezo kwenye DOM, kwa mfano kwa kutumia [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
 2. Nakili kipengele cha kiolezo, kwa kutumia [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
-3. Kiunganishe kwenye DOM chini ya kipengele kinachoonekana, kwa mfano kwa kutumia [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
+3. Ambatisha kwenye DOM chini ya kipengele kinachoonekana, kwa mfano kwa kutumia [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ```mermaid
 flowchart TD
-    A[🔍 Step 1: Find Template] --> B[📋 Step 2: Clone Template]
-    B --> C[🔗 Step 3: Attach to DOM]
+    A[🔍 Hatua 1: Tafuta Kiolezo] --> B[📋 Hatua 2: Nakili Kiolezo]
+    B --> C[🔗 Hatua 3: Ambatisha kwenye DOM]
     
     A1["document.getElementById('login')"] --> A
     B1["template.content.cloneNode(true)"] --> B  
     C1["app.appendChild(view)"] --> C
     
-    C --> D[👁️ Template Visible to User]
+    C --> D[👁️ Kiolezo Kinaonekana kwa Mtumiaji]
     
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
     style D fill:#fff3e0
 ```
-
-**Uchambuzi wa kuona wa mchakato:**
-- **Hatua ya 1** inatafuta kiolezo kilichofichwa kwenye muundo wa DOM
-- **Hatua ya 2** inaunda nakala inayoweza kufanyiwa marekebisho kwa usalama
-- **Hatua ya 3** inaingiza nakala kwenye eneo la ukurasa linaloonekana
+**Maelezo ya mchakato kwa picha:**
+- **Hatua 1** inapata kiolezo kilichofichwa ndani ya muundo wa DOM
+- **Hatua 2** inaunda nakala inayoweza kuhaririwa salama
+- **Hatua 3** inaingiza nakala kwenye eneo la ukurasa linaloonekana
 - **Matokeo** ni skrini inayofanya kazi ambayo watumiaji wanaweza kuingiliana nayo
 
-✅ Kwa nini tunahitaji kunakili kiolezo kabla ya kukiunganisha kwenye DOM? Unadhani nini kingetokea ikiwa tungeacha hatua hii?
+✅ Kwa nini tunahitaji kunakili kiolezo kabla ya kukibandika kwenye DOM? Unadhani ni nini kingetokea ikiwa tungeacha hatua hii?
 
 ### Kazi
 
-Tengeneza faili mpya inayoitwa `app.js` kwenye folda ya mradi wako na uingize faili hiyo kwenye sehemu ya `<head>` ya HTML yako:
+Tengeneza faili mpya iitwayo `app.js` katika folda ya mradi wako na ingiza faili hiyo kwenye sehemu ya `<head>` ya HTML yako:
 
 ```html
 <script src="app.js" defer></script>
 ```
 
-**Kuelewa uingizaji huu wa script:**
-- **Inaunganisha** faili ya JavaScript kwenye hati yetu ya HTML
-- **Inatumia** sifa ya `defer` kuhakikisha script inaendeshwa baada ya uchambuzi wa HTML kukamilika
-- **Inawezesha** ufikiaji wa vipengele vyote vya DOM kwa kuwa vimepakuliwa kikamilifu kabla ya utekelezaji wa script
-- **Inafuata** mbinu bora za kisasa za upakiaji wa script na utendaji
+**Kuelewa uingizaji wa script hii:**
+- **Inaunganisha** faili ya JavaScript na hati yetu ya HTML
+- **Inatumia** sifa ya `defer` kuhakikisha script inaenda baada ya uchambuzi wa HTML kukamilika
+- **Inaruhusu** upatikanaji wa vipengele vyote vya DOM kwa sababu viko tayari kabla ya utekelezaji wa script
+- **Inafuata** mbinu bora za kisasa za kupakia script na utendaji
 
-Sasa kwenye `app.js`, tutaunda kazi mpya `updateRoute`:
+Sasa katika `app.js`, tutaunda kazi mpya iitwayo `updateRoute`:
 
 ```js
 function updateRoute(templateId) {
@@ -240,56 +317,71 @@ function updateRoute(templateId) {
 }
 ```
 
-**Hatua kwa hatua, hivi ndivyo kinachotokea:**
-- **Inatafuta** kipengele cha kiolezo kwa kutumia kitambulisho chake cha kipekee
-- **Inaunda** nakala ya kina ya maudhui ya kiolezo kwa kutumia `cloneNode(true)`
-- **Inapata** kontena la programu ambapo maudhui yataonyeshwa
-- **Inafuta** maudhui yoyote yaliyopo kutoka kwenye kontena la programu
+**Hatua kwa hatua, hivi ndivyo inavyotokea:**
+- **Inapata** kipengele cha kiolezo kwa kutumia ID yake ya kipekee
+- **Inatengeneza** nakala halisi ya maudhui ya kiolezo kwa kutumia `cloneNode(true)`
+- **Inatafuta** kontena ya programu ambapo maudhui yataonyeshwa
+- **Inatakata** maudhui yoyote yaliyopo kwenye kontena ya programu
 - **Inaingiza** maudhui ya kiolezo kilichonakiliwa kwenye DOM inayoonekana
 
-Sasa piga simu kwa kazi hii na moja ya violezo na angalia matokeo.
+Sasa itaje kazi hii na kiolezo kimoja na uangalie matokeo.
 
 ```js
 updateRoute('login');
 ```
 
-**Kile simu hii ya kazi inachokamilisha:**
-- **Inaamsha** kiolezo cha kuingia kwa kupitisha kitambulisho chake kama parameter
-- **Inaonyesha** jinsi ya kubadilisha programu kati ya skrini tofauti kwa njia ya programu
+**Kazi ya wito huu wa kazi:**
+- **Inaamsha** kiolezo cha kuingia kwa kupitisha ID yake kama vigezo
+- **Inaonyesha** jinsi ya kubadilisha skrini za programu kwa mpangilio wa programu
 - **Inaonyesha** skrini ya kuingia badala ya ujumbe wa "Loading..."
 
-✅ Kusudi la msimbo huu `app.innerHTML = '';` ni nini? Nini kinatokea bila hiyo?
+✅ Kusudi la msimbo huu `app.innerHTML = '';` ni nini? Nini hutokea bila huo?
 
-## Kuunda Njia
+## Kutengeneza Njia
 
-Urambazaji kimsingi unahusu kuunganisha URL na maudhui sahihi. Fikiria jinsi waendeshaji wa simu wa mapema walivyotumia switchboards kuunganisha simu – wangepokea ombi linaloingia na kulielekeza kwenye marudio sahihi. Urambazaji wa wavuti hufanya kazi kwa njia sawa, kuchukua ombi la URL na kuamua ni maudhui gani ya kuonyesha.
-
-Kawaida, seva za wavuti zilishughulikia hili kwa kutoa faili tofauti za HTML kwa URL tofauti. Kwa kuwa tunajenga programu ya kurasa moja, tunahitaji kushughulikia urambazaji huu sisi wenyewe kwa JavaScript. Njia hii inatupa udhibiti zaidi juu ya uzoefu wa mtumiaji na utendaji.
+Routing lina maana ya kuunganisha URLs na maudhui sahihi. Fikiria jinsi waendeshaji wa simu wa zamani walivyotumia meza za kuwasilisha simu – walichukua ombi la kuingia na kulielekeza mahali sahihi. Routing ya wavuti hufanya kazi kwa njia sawa, inachukua ombi la URL na kuamua ni maudhui gani yaonyeshwe.
 
 ```mermaid
 flowchart LR
-    A["🌐 URL Path<br/>/dashboard"] --> B["🗺️ Routes Object<br/>Lookup"]
-    B --> C["🎯 Template ID<br/>'dashboard'"]
-    C --> D["📄 Find Template<br/>getElementById"]
-    D --> E["👁️ Display Screen<br/>Clone & Append"]
+    A["🌐 Njia ya URL<br/>/dashboard"] --> B["🗺️ Kitu cha Nyanja<br/>Uchunguzi"]
+    B --> C["🎯 Kitambulisho cha Kiolezo<br/>'dashboard'"]
+    C --> D["📌 Tafuta Kiolezo<br/>pataElementById"]
+    D --> E["👁️ Onyesha Skrini<br/>Nakili & Ongeza"]
     
     F["📍 /login"] --> G["🎯 'login'"]
-    H["📍 /unknown"] --> I["❌ Not Found"]
-    I --> J["🔄 Redirect to /login"]
+    H["📍 /unknown"] --> I["❌ Haipatikani"]
+    I --> J["🔄 Elekeza tena kwenda /login"]
     
     style B fill:#e3f2fd
     style E fill:#e8f5e8
     style I fill:#ffebee
     style J fill:#fff3e0
 ```
+Kiasa, seva za wavuti zilishughulikia hili kwa kuhudumia faili tofauti za HTML kwa URLs tofauti. Kwa kuwa tunajenga programu moja ya ukurasa, tunahitaji kushughulikia routing hii wenyewe kwa JavaScript. Njia hii inatupa udhibiti zaidi juu ya uzoefu wa mtumiaji na utendaji.
 
-**Kuelewa mtiririko wa urambazaji:**
-- **Mabadiliko ya URL** husababisha utafutaji katika usanidi wa njia zetu
-- **Njia halali** zinaonyesha vitambulisho maalum vya violezo kwa uonyeshaji
-- **Njia batili** husababisha tabia ya kurudi nyuma ili kuzuia hali zilizovunjika
-- **Uonyeshaji wa violezo** hufuata mchakato wa hatua tatu tuliojifunza awali
+```mermaid
+flowchart LR
+    A["🌐 Njia ya URL<br/>/dashboard"] --> B["🗺️ Kitu cha Njia<br/>Kagua"]
+    B --> C["🎯 Kitambulisho cha Kiolezi<br/>'dashboard'"]
+    C --> D["📄 Tafuta Kiolezi<br/>getElementById"]
+    D --> E["👁️ Onyesha Skrini<br/>Nakili & Ambatisha"]
+    
+    F["📍 /login"] --> G["🎯 'login'"]
+    H["📍 /unknown"] --> I["❌ Haipatikani"]
+    I --> J["🔄 Elekeza tena kwenda /login"]
+    
+    style B fill:#e3f2fd
+    style E fill:#e8f5e8
+    style I fill:#ffebee
+    style J fill:#fff3e0
+```
+**Kuelewa mtiririko wa routing:**
+- **Mabadiliko ya URL** husababisha utafutaji kwenye usanidi wa njia zetu
+- **Njia halali** zinaelekezwa kwenye template maalum za uonyesaji
+- **Njia zisizo halali** husababisha tabia ya badiliko ili kuzuia hali za kuvunjika
+- **Uonyesaji wa template** unafuata mchakato wa hatua tatu tuliyo nayo awali
 
-Tunapozungumzia programu ya wavuti, tunaita *Urambazaji* nia ya kuunganisha **URL** na skrini maalum ambazo zinapaswa kuonyeshwa. Kwenye tovuti yenye faili nyingi za HTML, hili hufanyika moja kwa moja kwa kuwa njia za faili zinaonyeshwa kwenye URL. Kwa mfano, na faili hizi kwenye folda ya mradi wako:
+Tunapozungumzia programu ya mtandao, tunaita *Routing* kama nia ya kubainisha **URL** kwa skrini maalum zinazosuguliwa kuonyeshwa. Kwenye tovuti yenye faili nyingi za HTML, hili hufanyika moja kwa moja kwani njia za faili zinaonekana kwenye URL. Kwa mfano, ikiwa una faili hizi katika folda ya mradi wako:
 
 ```
 mywebsite/index.html
@@ -297,7 +389,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Ukianzisha seva ya wavuti na `mywebsite` kama mzizi, ramani ya URL itakuwa:
+Ikiwa unaanzisha seva ya wavuti na `mywebsite` kama mzizi, ramani ya URL itakuwa:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -305,7 +397,7 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Hata hivyo, kwa programu yetu ya wavuti tunatumia faili moja ya HTML yenye skrini zote kwa hivyo tabia hii ya kawaida haitatusaidia. Tunapaswa kuunda ramani hii kwa mikono na kusasisha kiolezo kinachoonyeshwa kwa kutumia JavaScript.
+Hata hivyo, kwa programu yetu ya wavuti tunatumia faili moja la HTML lenye skrini zote, hivyo tabia hii ya msingi haitatupatia msaada. Tunapaswa kutengeneza ramani hii kwa mkono na kufanya sasisho la template inayoonyeshwa kwa kutumia JavaScript.
 
 ### Kazi
 
@@ -319,12 +411,11 @@ const routes = {
 ```
 
 **Kuelewa usanidi huu wa njia:**
-- **Inafafanua** ramani kati ya njia za URL na vitambulisho vya violezo
-- **Inatumia** sintaksia ya kitu ambapo funguo ni njia za URL na maadili yana maelezo ya kiolezo
-- **Inawezesha** utafutaji rahisi wa kiolezo cha kuonyesha kwa URL yoyote
-- **Inatoa** muundo unaoweza kupanuka kwa kuongeza njia mpya baadaye
-
-Sasa hebu tubadilishe kidogo kazi ya `updateRoute`. Badala ya kupitisha moja kwa moja `templateId` kama hoja, tunataka kuipata kwa kwanza kuangalia URL ya sasa, kisha kutumia ramani yetu kupata thamani ya kitambulisho cha kiolezo. Tunaweza kutumia [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) kupata sehemu ya njia kutoka kwenye URL.
+- **Hufafanua** ramani kati ya njia za URL na kitambulisho cha template
+- **Inatumia** muundo wa kitu ambapo funguo ni njia za URL na thamani ni taarifa za template
+- **Inaruhusu** urahisi wa kutafuta kiolezo cha kuonyesha kwa URL yoyote
+- **Inatoa** muundo unaoweza kupanuka kwa kuongeza njia mpya siku zijazo
+Sasa hebu tubadilishe kidogo kazi ya `updateRoute`. Badala ya kupeana moja kwa moja `templateId` kama hoja, tunataka kuipata kwa kuangalia kwanza URL ya sasa, kisha tutumie ramani yetu kupata thamani inayolingana ya template ID. Tunaweza kutumia [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) kupata sehemu ya njia kutoka kwenye URL pekee.
 
 ```js
 function updateRoute() {
@@ -339,50 +430,100 @@ function updateRoute() {
 }
 ```
 
-**Kuchambua kinachotokea hapa:**
-- **Inatoa** njia ya sasa kutoka kwenye URL ya kivinjari kwa kutumia `window.location.pathname`
-- **Inatafuta** usanidi wa njia husika kwenye kitu chetu cha njia
-- **Inapata** kitambulisho cha kiolezo kutoka kwa usanidi wa njia
-- **Inafuata** mchakato wa uonyeshaji wa kiolezo kama awali
-- **Inaunda** mfumo wa nguvu unaojibu mabadiliko ya URL
+**Kuvunja kile kinachotokea hapa:**
+- **Inachukua** njia ya sasa kutoka kwenye URL ya kibrowza kwa kutumia `window.location.pathname`
+- **Inaangalia** usanidi wa njia unaolingana kwenye kengele letu la routes
+- **Inapata** template ID kutoka kwenye usanidi wa njia
+- **Inafuata** mchakato ule ule wa kuonyesha template kama hapo awali
+- **Inaunda** mfumo unaobadilika unaojibu mabadiliko ya URL
 
-Hapa tumepanga njia tul
-✅ Nini hutokea ikiwa utaingiza njia isiyojulikana kwenye URL? Tunawezaje kutatua hili?
+Hapa tumerondoa njia tulizotangaza kwa template inayolingana. Unaweza kujaribu kuona kama inafanya kazi ipasavyo kwa kubadilisha URL kwa mkono katika kivinjari chako.
 
-## Kuongeza Uelekezaji
+✅ Nini kinatokea ikiwa utaingiza njia isiyotambulika kwenye URL? Tunawezaje kutatua hili?
 
-Kwa kuwa njia za uelekezaji zimeshawekwa, watumiaji wanahitaji njia ya kuzunguka ndani ya programu. Tovuti za jadi hurekebisha kurasa nzima unapobofya viungo, lakini tunataka kuboresha URL na maudhui bila ku-refresh ukurasa. Hii inatoa uzoefu laini kama vile programu za desktop zinavyobadilisha maoni tofauti.
+## Kuongeza Uelekezaji (Navigation)
 
-Tunapaswa kuratibu mambo mawili: kuboresha URL ya kivinjari ili watumiaji waweze kuhifadhi kurasa na kushiriki viungo, na kuonyesha maudhui sahihi. Ikiwa imefanywa vizuri, hii huunda uzoefu wa uelekezaji laini ambao watumiaji wanatarajia kutoka kwa programu za kisasa.
+Baada ya kuweka routing, watumiaji wanahitaji njia ya kuvinjari ndani ya app. Tovuti za kawaida hurudisha kurasa zote zozote wanapobofya viungo, lakini sisi tunataka kusasisha URL na maudhui bila kupakia ukurasa upya. Hii huunda uzoefu laini kama vile programu za desktop zinavyobadilisha kati ya maoni tofauti.
 
-> 🏗️ **Uchambuzi wa Muundo**: Vipengele vya Mfumo wa Uelekezaji  
+Tunahitaji kuratibu vitu viwili: kusasisha URL ya kivinjari ili watumiaji waweze kuweka alama kurasa na kushiriki viungo, na kuonyesha maudhui yanayofaa. Ikiwa itatekelezwa ipasavyo, hii huunda uelekezaji usio na mshono ambao watumiaji wanatarajia kutoka kwa programu za kisasa.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant App
+    participant Template
+    
+    User->>Browser: Kubofya kiungo "Ingia"
+    Browser->>App: tukio la onclick limeanzishwa
+    App->>App: preventDefault() & navigate('/dashboard')
+    App->>Browser: history.pushState('/dashboard')
+    Browser->>Browser: URL inasasishwa kuwa /dashboard
+    App->>App: updateRoute() imeitwa
+    App->>Template: Tafuta & nakili templeti ya dashibodi
+    Template->>App: Rejesha yaliyokopiwa
+    App->>Browser: Badilisha maudhui ya app na templeti
+    Browser->>User: Onyesha skrini ya dashibodi
+    
+    Note over User,Template: Mtumiaji anabonyeza kitufe cha nyuma cha kivinjari
+    
+    User->>Browser: Kubofya kitufe cha nyuma
+    Browser->>Browser: Historia inarudi nyuma hadi /login
+    Browser->>App: tukio la popstate limeanzishwa
+    App->>App: updateRoute() imeitwa kwa kiotomatiki
+    App->>Template: Tafuta & nakili templeti ya kuingia
+    Template->>App: Rejesha yaliyokopiwa
+    App->>Browser: Badilisha maudhui ya app na templeti
+    Browser->>User: Onyesha skrini ya kuingia
+```
+### 🔄 **Ukaguzi wa Kipekee wa Kitaalamu**
+**Msimbo wa Programu ya Ukurasa Mmoja**: Hakiki ufahamu wako wa mfumo mzima:
+- ✅ Routing upande wa mteja ni tofauti vipi na routing za kawaida upande wa seva?
+- ✅ Kwa nini History API ni muhimu kwa uelekezaji mzuri wa SPA?
+- ✅ Template zinawezaje kufanya maudhui ya mabadiliko bila kupakia ukurasa upya?
+- ✅ Nini nafasi ya kushughulikia matukio katika kukamata uelekezaji?
+
+**Muungano wa Mfumo**: SPA yako inaonyesha:
+- **Usimamizi wa Template**: Vipengele vinavyoweza kutumika tena vya UI vyenye maudhui yanayobadilika
+- **Routing Upande wa Mteja**: Usimamizi wa URL bila maombi ya seva
+- **Mali Zilizotokana na Matukio**: Uelekezaji na mwingiliano wa mtumiaji unaojibu haraka
+- **Muungano wa Kivinjari**: Historia na usaidizi wa vitufe vya nyuma/juu
+- **Uboreshaji wa Utendaji**: Mabadiliko ya kasi na kupunguza mzigo wa seva
+
+**Mifumo ya Kitaalamu**: Umetekeleza:
+- **Utofauti wa Mfano na Mwonekano**: Template ziko mbali na mantiki ya programu
+- **Usimamizi wa Hali**: Hali ya URL inalingana na maudhui yanayoonyeshwa
+- **Maboresho ya Polepole**: JavaScript huongeza uwezo wa msingi wa HTML
+- **Uzoefu wa Mtumiaji**: Uelekezaji laini, kama programu, bila upakiaji upya wa ukurasa
+
+> � **Maarifa ya Msingi wa Miundo**: Vipengele vya Mfumo wa Uelekezaji
 >
-> **Unachojenga:**  
-> - **🔄 Usimamizi wa URL**: Huboresha bar ya anwani ya kivinjari bila ku-refresh ukurasa  
-> - **📋 Mfumo wa Template**: Hubadilisha maudhui kwa njia ya nguvu kulingana na njia ya sasa  
-> - **📚 Muunganiko wa Historia**: Hudumisha utendaji wa vifungo vya kurudi mbele/nyuma vya kivinjari  
-> - **🛡️ Kushughulikia Makosa**: Hutoa suluhisho la kifahari kwa njia batili au zinazokosekana  
+> **Unavyojenga:**
+> - **🔄 Usimamizi wa URL**: Husasisha bar ya anwani ya kivinjari bila upakiaji upya
+> - **📋 Mfumo wa Template**: Hubadilisha maudhui kulingana na njia ya sasa  
+> - **📚 Muungano wa Historia**: Huhifadhi vitufe vya kivinjari vya nyuma/juu
+> - **🛡️ Kushughulikia Makosa**: Mikakati ya kurejesha hali wakati njia si halali
 >
-> **Jinsi vipengele vinavyofanya kazi pamoja:**  
-> - **Husikiliza** matukio ya uelekezaji (mibofyo, mabadiliko ya historia)  
-> - **Huboresha** URL kwa kutumia History API  
-> - **Huonyesha** template sahihi kwa njia mpya  
-> - **Hudumisha** uzoefu laini wa mtumiaji wakati wote  
+> **Vipengele hus働ana vipi:**
+> - **Husikiliza** matukio ya uelekezaji (kubofya, mabadiliko ya historia)
+> - **Husasisha** URL kwa kutumia History API
+> - **Hutoa** template inayofaa kwa njia mpya
+> - **Huhakikisha** uzoefu usio na mshono kwa mtumiaji wote
 
-Hatua inayofuata kwa programu yetu ni kuongeza uwezekano wa kuzunguka kati ya kurasa bila kubadilisha URL kwa mikono. Hii inamaanisha mambo mawili:
+Hatua inayofuata kwa app yetu ni kuweza kuvinjari kati ya kurasa bila kubadilisha URL kwa mkono. Hii inamaanisha vitu viwili:
 
-1. Kuboresha URL ya sasa  
-2. Kuboresha template inayoonyeshwa kulingana na URL mpya  
+  1. Kusasisha URL ya sasa
+  2. Kusasisha template inayotolewa kulingana na URL mpya
 
-Tayari tumeshughulikia sehemu ya pili kwa kutumia kazi ya `updateRoute`, kwa hivyo tunapaswa kufikiria jinsi ya kuboresha URL ya sasa.
+Tumejadili sehemu ya pili kwa kazi ya `updateRoute`, sasa tunapaswa kubaini jinsi ya kusasisha URL ya sasa.
 
-Tutahitaji kutumia JavaScript na hasa [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) ambayo inaruhusu kuboresha URL na kuunda rekodi mpya kwenye historia ya kivinjari, bila ku-refresh HTML.
+Tutahitaji kutumia JavaScript na hasa [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState) ambayo huruhusu kusasisha URL na kuunda rekodi mpya katika historia ya kuvinjari, bila kupakia upya HTML.
 
-> ⚠️ **Kumbuka Muhimu**: Ingawa kipengele cha HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kinaweza kutumika peke yake kuunda viungo vya URL tofauti, kitaifanya kivinjari ku-refresh HTML kwa default. Ni muhimu kuzuia tabia hii wakati wa kushughulikia uelekezaji kwa JavaScript maalum, kwa kutumia kazi ya `preventDefault()` kwenye tukio la mibofyo.
+> ⚠️ **Kumbuka Muhimu**: Ingawa kipengele cha kiungo cha HTML [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) kinaweza kutumika peke yake kuunda viungo vya URL tofauti, kivinjari kitafanya kupakia upya HTML kwa kawaida. Ni muhimu kuzuia tabia hii wakati wa kushughulikia routing kwa javascript ya kawaida, kwa kutumia preventDefault() kwenye tukio la kubofya.
 
 ### Kazi
 
-Hebu tuunde kazi mpya ambayo tunaweza kutumia kuzunguka ndani ya programu yetu:
+Hebu tengeneze kazi mpya tunayoweza kutumia kuvinjari ndani ya app yetu:
 
 ```js
 function navigate(path) {
@@ -390,16 +531,16 @@ function navigate(path) {
   updateRoute();
 }
 ```
-  
-**Kuelewa kazi hii ya uelekezaji:**  
-- **Huboresha** URL ya kivinjari kwa njia mpya kwa kutumia `history.pushState`  
-- **Huongeza** rekodi mpya kwenye stack ya historia ya kivinjari kwa utendaji sahihi wa vifungo vya kurudi mbele/nyuma  
-- **Husababisha** kazi ya `updateRoute()` kuonyesha template inayolingana  
-- **Hudumisha** uzoefu wa programu ya ukurasa mmoja bila ku-refresh ukurasa  
 
-Njia hii kwanza huboresha URL ya sasa kulingana na njia iliyotolewa, kisha huboresha template. Mali ya `window.location.origin` inarudisha mzizi wa URL, ikituruhusu kuunda URL kamili kutoka kwa njia iliyotolewa.
+**Kuelewa kazi hii ya uelekezaji:**
+- **Husasisha** URL ya kivinjari hadi njia mpya kwa kutumia `history.pushState`
+- **Inaongeza** rekodi mpya kwenye orodha ya historia ya kivinjari kwa usaidizi wa vitufe vya nyuma/juu
+- **Inachochea** kazi ya `updateRoute()` kuonyesha template inayofaa
+- **Huhakikisha** uzoefu wa programu ya ukurasa mmoja bila kupakia upya kurasa
 
-Sasa kwa kuwa tuna kazi hii, tunaweza kushughulikia tatizo tunalopata ikiwa njia haifani na njia yoyote iliyofafanuliwa. Tutabadilisha kazi ya `updateRoute` kwa kuongeza suluhisho la kurudi kwenye mojawapo ya njia zilizopo ikiwa hatuwezi kupata mechi.
+Njia hii kwanza husasisha URL ya sasa kulingana na njia iliyopewa, kisha husasisha template. Mali `window.location.origin` hurudisha mzizi wa URL, ikiruhusu kujenga URL kamili kutoka njia iliyotolewa.
+
+Sasa tunayo kazi hii, tunaweza kushughulikia tatizo la ikiwa njia haipatikani kwenye njia zilizotangazwa. Tutabadilisha kazi ya `updateRoute` kwa kuongeza njia mbadala ya moja ya njia zilizopo ikiwa hatuwezi kupata mechi.
 
 ```js
 function updateRoute() {
@@ -417,16 +558,16 @@ function updateRoute() {
   app.appendChild(view);
 }
 ```
-  
-**Mambo muhimu ya kukumbuka:**  
-- **Hukagua** ikiwa njia ipo kwa njia ya sasa  
-- **Huelekeza** kwenye ukurasa wa kuingia wakati njia batili inafikiwa  
-- **Hutoa** suluhisho la kuzuia uelekezaji uliovunjika  
-- **Inahakikisha** watumiaji daima wanaona skrini sahihi, hata kwa URL zisizo sahihi  
 
-Ikiwa njia haiwezi kupatikana, sasa tutarudi kwenye ukurasa wa `login`.
+**Mambo muhimu ya kukumbuka:**
+- **Huhakiki** kama njia ipo kwa njia ya sasa
+- **Huelekeza tena** kwenda ukurasa wa login wakati njia isiyoruhusiwa imetumika
+- **Hutoa** njia mbadala inayozuia uelekezaji kuharibika
+- **Huhakikisha** watumiaji daima wanaona skrini halali, hata kwa URL zisizo sahihi
 
-Sasa hebu tuunde kazi ya kupata URL wakati kiungo kinabofya, na kuzuia tabia ya kawaida ya kiungo cha kivinjari:
+Kama njia haipatikani, sasa tutamwelekeza tena kwenye ukurasa wa `login`.
+
+Sasa hebu tengeneze kazi ya kupata URL wakati kiungo kinapobofiwa, na kuzuia tabia ya kawaida ya kivinjari:
 
 ```js
 function onLinkClick(event) {
@@ -434,36 +575,36 @@ function onLinkClick(event) {
   navigate(event.target.href);
 }
 ```
-  
-**Kuchambua mshughulikiaji huu wa mibofyo:**  
-- **Huzuia** tabia ya kawaida ya kiungo cha kivinjari kwa kutumia `preventDefault()`  
-- **Hutoa** URL ya marudio kutoka kwa kipengele cha kiungo kilichobofya  
-- **Huita** kazi yetu ya uelekezaji maalum badala ya ku-refresh ukurasa  
-- **Hudumisha** uzoefu laini wa programu ya ukurasa mmoja  
+
+**Kuvunja mtunzi wa kubofya huu:**
+- **Huzuia** tabia ya kawaida ya kivinjari kwa kutumia `preventDefault()`
+- **Inachukua** URL ya sehemu inayolengwa kutoka kwenye kipengele kilichobofiwa
+- **Inaita** kazi yetu ya uelekezaji badala ya kupakia ukurasa upya
+- **Huhakikisha** uzoefu laini wa programu ya ukurasa mmoja
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
 ...
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
-  
-**Kile ambacho binding hii ya onclick inakamilisha:**  
-- **Huunganisha** kila kiungo na mfumo wetu maalum wa uelekezaji  
-- **Hupitisha** tukio la mibofyo kwa kazi yetu ya `onLinkClick` kwa usindikaji  
-- **Huwezesha** uelekezaji laini bila ku-refresh ukurasa  
-- **Hudumisha** muundo sahihi wa URL ambao watumiaji wanaweza kuhifadhi au kushiriki  
 
-Sifa ya [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) inaunganisha tukio la `click` na msimbo wa JavaScript, hapa ni wito wa kazi ya `navigate()`.
+**Kifungo hiki cha onclick kinachofanikisha:**
+- **Huhusisha** kila kiungo na mfumo wetu wa uelekezaji wa desturi
+- **Hupeleka** tukio la kubofya kwa kazi yetu `onLinkClick` kwa usindikaji
+- **Huiruhusu** uelekezaji laini bila upakiaji wa kurasa
+- **Huhakikisha** muundo sahihi wa URL ambao watumiaji wanaweza kuweka alama au kushiriki
 
-Jaribu kubofya viungo hivi, sasa unapaswa kuwa na uwezo wa kuzunguka kati ya skrini tofauti za programu yako.
+Sifa ya [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) huunganisha tukio la `click` kwenye msimbo wa JavaScript, hapa ni wito kwa kazi ya `navigate()`.
 
-✅ Njia ya `history.pushState` ni sehemu ya kiwango cha HTML5 na imewekwa kwenye [vivinjari vyote vya kisasa](https://caniuse.com/?search=pushState). Ikiwa unajenga programu ya wavuti kwa vivinjari vya zamani, kuna mbinu unayoweza kutumia badala ya API hii: kwa kutumia [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) kabla ya njia unaweza kutekeleza uelekezaji unaofanya kazi na uelekezaji wa kawaida wa viungo vya ndani na hau-refresh ukurasa, kwani kusudi lake lilikuwa kuunda viungo vya ndani ndani ya ukurasa.
+Jaribu kubofya viungo hivi, sasa unapaswa kuwa na uwezo wa kuvinjari kati ya skrini tofauti za app yako.
 
-## Kufanya Vifungo vya Kurudi na Mbele Kufanya Kazi
+✅ Njia ya `history.pushState` ni sehemu ya viwango vya HTML5 na imetekelezwa katika [vinjari vyote vya kisasa](https://caniuse.com/?search=pushState). Ikiwa unajenga app ya wavuti kwa vivinjari vya zamani, kuna mbinu unayoweza kutumia badala ya API hii: kutumia [alama ya hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) kabla ya njia unaweza kutekeleza routing inayofanya kazi na uelekezaji wa kawaida wa kiungo na haipakii ukurasa upya, kwa sababu yake ilikuwa ni kuunda viungo vya ndani ndani ya ukurasa.
 
-Vifungo vya kurudi na mbele ni muhimu kwa kuvinjari wavuti, kama vile jinsi wakaguzi wa misheni ya NASA wanavyoweza kukagua hali za mfumo za awali wakati wa misheni za anga. Watumiaji wanatarajia vifungo hivi kufanya kazi, na vinaposhindwa, inavunja uzoefu wa kawaida wa kuvinjari.
+## Kufanya Vitufe vya Nyuma na Mbele Kifanye Kazi
 
-Programu yetu ya ukurasa mmoja inahitaji usanidi wa ziada ili kuunga mkono hili. Kivinjari kinadumisha stack ya historia (ambayo tumekuwa tukiongeza kwa `history.pushState`), lakini wakati watumiaji wanapozunguka kupitia historia hii, programu yetu inahitaji kujibu kwa kuboresha maudhui yanayoonyeshwa ipasavyo.
+Vitufe vya nyuma na mbele ni muhimu sana katika kuvinjari wavuti, kama vile wasimamizi wa mashinikizo ya NASA wanavyoweza kupitia hali za zamani za mfumo wakati wa misheni za anga. Watumiaji wanatarajia vitufe hivi kufanya kazi, na wakati havifanyi kazi, hupunguza uzoefu wa kupiga kivinjari.
+
+App yetu ya ukurasa mmoja inahitaji usanidi ziada kuunga mkono hili. Kivinjari huwa na orodha ya historia ya kuvinjari (ambayo tumekuwa tukiongeza na `history.pushState`), lakini wakati watumiaji wanapovinjari kupitia historia hii, app yetu inahitaji kujibu kwa kusasisha maudhui yanayoonyeshwa ipasavyo.
 
 ```mermaid
 sequenceDiagram
@@ -472,69 +613,176 @@ sequenceDiagram
     participant App
     participant Template
     
-    User->>Browser: Clicks "Login" link
-    Browser->>App: onclick event triggered
+    User->>Browser: Anabonyeza kiungo "Ingia"
+    Browser->>App: tukio la onclick limetekelezwa
     App->>App: preventDefault() & navigate('/dashboard')
     App->>Browser: history.pushState('/dashboard')
-    Browser->>Browser: URL updates to /dashboard
-    App->>App: updateRoute() called
-    App->>Template: Find & clone dashboard template
-    Template->>App: Return cloned content
-    App->>Browser: Replace app content with template
-    Browser->>User: Display dashboard screen
+    Browser->>Browser: URL inasasishwa kuwa /dashboard
+    App->>App: updateRoute() imeitwa
+    App->>Template: Tafuta & nakili kiolezo cha dashibodi
+    Template->>App: Rejesha yaliyoko yaliyopakuliwa
+    App->>Browser: Badilisha yaliyomo ya app na kiolezo
+    Browser->>User: Onyesha skrini ya dashibodi
     
-    Note over User,Template: User clicks browser back button
+    Note over User,Template: Mtumiaji anabonyeza kitufe cha nyuma cha kivinjari
     
-    User->>Browser: Clicks back button
-    Browser->>Browser: History moves back to /login
-    Browser->>App: popstate event fired
-    App->>App: updateRoute() called automatically
-    App->>Template: Find & clone login template
-    Template->>App: Return cloned content
-    App->>Browser: Replace app content with template
-    Browser->>User: Display login screen
+    User->>Browser: Anabonyeza kitufe cha nyuma
+    Browser->>Browser: Historia inarudi nyuma hadi /login
+    Browser->>App: tukio la popstate limetekelezwa
+    App->>App: updateRoute() imeitwa moja kwa moja
+    App->>Template: Tafuta & nakili kiolezo cha kuingia
+    Template->>App: Rejesha yaliyoko yaliyopakuliwa
+    App->>Browser: Badilisha yaliyomo ya app na kiolezo
+    Browser->>User: Onyesha skrini ya kuingia
 ```
-  
-**Sehemu muhimu za mwingiliano:**  
-- **Matendo ya mtumiaji** husababisha uelekezaji kupitia mibofyo au vifungo vya kivinjari  
-- **Programu inachukua** mibofyo ya viungo ili kuzuia ku-refresh ukurasa  
-- **History API** inasimamia mabadiliko ya URL na stack ya historia ya kivinjari  
-- **Templates** hutoa muundo wa maudhui kwa kila skrini  
-- **Wasikilizaji wa matukio** huhakikisha programu inajibu aina zote za uelekezaji  
+**Mambo muhimu ya kuingiliana:**
+- **Matendo ya mtumiaji** huchochea uelekezaji kwa kubofya au kutumia vitufe vya kivinjari
+- **App hukamata** bofya viungo ili kuzuia upakiaji wa ukurasa upya
+- **History API** inasimamia mabadiliko ya URL na orodha ya historia ya kivinjari
+- **Templates** hutoa muundo wa maudhui kwa kila skrini
+- **Wasikilizaji wa matukio** huhakikisha app inajibu aina zote za uelekezaji
 
-Kutumia `history.pushState` huunda rekodi mpya kwenye historia ya uelekezaji ya kivinjari. Unaweza kuangalia hilo kwa kushikilia *kifungo cha kurudi nyuma* cha kivinjari chako, kinapaswa kuonyesha kitu kama hiki:
+Kutumia `history.pushState` huunda rekodi mpya kwenye historia ya uelekezaji ya kivinjari. Unaweza kuona hili kwa kushikilia *kitufe cha nyuma* cha kivinjari chako, kinapaswa kuonyesha kitu kama hiki:
 
-![Picha ya historia ya uelekezaji](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.sw.png)
+![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.sw.png)
 
-Ukijaribu kubofya kifungo cha kurudi nyuma mara kadhaa, utaona kwamba URL ya sasa inabadilika na historia inasasishwa, lakini template ile ile inaendelea kuonyeshwa.
+Ikiwa utajaribu kubofya kitufe cha nyuma mara kadhaa, utaona URL ya sasa inabadilika na historia inasasishwa, lakini template ile ile inaendelea kuonyeshwa.
 
-Hii ni kwa sababu programu haijui kwamba tunahitaji kuita `updateRoute()` kila wakati historia inabadilika. Ukichunguza [nyaraka za `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), unaweza kuona kwamba ikiwa hali inabadilika - ikimaanisha kwamba tumekwenda kwenye URL tofauti - tukio la [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) linachochewa. Tutatumia hilo kutatua tatizo hilo.
+Hii ni kwa sababu programu haijui kuwa tunahitaji kuita `updateRoute()` kila wakati historia inapo badilika. Ikiwa utaangalia maelezo ya [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), utaona kuwa kama hali (state) itabadilika - maana tumebadilika kwenda URL tofauti - tukio la [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event) linaamuliwa. Tutatumia hili kutatua tatizo hilo.
 
 ### Kazi
 
-Ili kuhakikisha template inayoonyeshwa inasasishwa wakati historia ya kivinjari inabadilika, tutaunganisha kazi mpya inayotumia `updateRoute()`. Tutafanya hivyo chini ya faili yetu ya `app.js`:
+Ili kuhakikisha template inayoonyeshwa inasasishwa wakati historia ya kivinjari inabadilika, tutafunga kazi mpya inayaita `updateRoute()`. Tufanye hivyo mwishoni mwa faili yetu ya `app.js`:
 
 ```js
 window.onpopstate = () => updateRoute();
 updateRoute();
 ```
-  
-**Kuelewa muunganiko huu wa historia:**  
-- **Husikiliza** matukio ya `popstate` yanayotokea wakati watumiaji wanazunguka kwa vifungo vya kivinjari  
-- **Hutumia** kazi ya mshale kwa muundo mfupi wa mshughulikiaji wa matukio  
-- **Huita** `updateRoute()` moja kwa moja kila wakati hali ya historia inabadilika  
-- **Huanza** programu kwa kuita `updateRoute()` wakati ukurasa unapoanza kupakia  
-- **Inahakikisha** template sahihi inaonyeshwa bila kujali jinsi watumiaji wanavyosafiri  
 
-> 💡 **Ushauri wa Kitaalam**: Tumetumia [kazi ya mshale](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) hapa kutangaza mshughulikiaji wetu wa tukio la `popstate` kwa muundo mfupi, lakini kazi ya kawaida ingefanya kazi sawa.
+**Kuelewa muunganiko huu wa historia:**
+- **Husikiliza** matukio ya `popstate` yanayotokea wakati watumiaji wanapovinjari kwa vitufe vya kivinjari
+- **Inatumia** kazi ya mshale (arrow function) kwa msimbo mfupi wa mshughulikia tukio
+- **Huita** `updateRoute()` moja kwa moja kila wakati hali ya historia inapo badilika
+- **Huanzisha** app kwa kuita `updateRoute()` wakati ukurasa unapopakuliwa mara ya kwanza
+- **Huhakikisha** template sahihi inaonyeshwa popote watumiaji walipovinjari
 
-Hapa kuna video ya ukumbusho kuhusu kazi za mshale:
+> 💡 **Kidokezo cha Mtaalam**: Tumetumia [kazi ya mshale](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) hapa kutangaza mshughulikiaji wa tukio la `popstate` kwa msimbo mfupi, lakini kazi ya kawaida ingefanya kazi sawa.
 
-[![Kazi za Mshale](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Kazi za Mshale")
+Hapa kuna video fupi kuhusu kazi za mshale:
 
-> 🎥 Bofya picha hapo juu kwa video kuhusu kazi za mshale.
+[![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
-Sasa jaribu kutumia vifungo vya kurudi na mbele vya kivinjari chako, na hakikisha kwamba njia inayoonyeshwa inasasishwa kwa usahihi wakati huu.
+> 🎥 Bonyeza picha hapo juu kwa video kuhusu kazi za mshale.
+
+Sasa jaribu kutumia vitufe vya nyuma na mbele vya kivinjari chako, na angalia kuwa njia inayonyeshwa imesasishwa ipasavyo mara hii.
+
+### ⚡ **Kitu Unachoweza Kufanya Katika Dakika 5 Zijazo**
+- [ ] Jaribu uelekezaji wa app yako ya benki ukitumia vitufe vya kivinjari vya nyuma/juu
+- [ ] Jaribu kuandika URL tofauti kwa mkono kwenye bar ya anwani ili kupima routing
+- [ ] Fungua DevTools za kivinjari na kagua jinsi template zinavyotengenezwa nakala ndani ya DOM
+- [ ] Jaribu kuongeza taarifa za console.log kufuatilia mtiririko wa routing
+
+### 🎯 **Kitu Unachoweza Kufanikisha Katika Saa Hii**
+- [ ] Maliza mtihani wa baada ya somo na uelewe dhana za usanifu wa SPA
+- [ ] Ongeza mitindo ya CSS kufanya template za app yako ya benki zionekane kitaalamu
+- [ ] Tekeleza ukurasa wa kosa 404 na ushughulikiaji sahihi wa makosa
+- [ ] Unda changamoto ya ukurasa wa mikopo na utendaji wa routing ziada
+- [ ] Ongeza hali za upakiaji na mabadiliko kati ya mabadiliko ya template
+
+### 📅 **Safari Yako ya Maendeleo ya SPA ya Wiki Moja**
+- [ ] Maliza app kamili ya benki yenye fomu, usimamizi wa data, na uhifadhi
+- [ ] Ongeza vipengele vya routing vya hali ya juu kama vigezo vya njia na njia zilizojikita
+- [ ] Tekeleza walinzi wa uelekezaji na routing inayotumia uthibitisho
+- [ ] Unda vipengele vya template vinavyoweza kutumika tena na maktaba ya vipengele
+- [ ] Ongeza michoro na mabadiliko kwa uzoefu wa mtumiaji laini
+- [ ] Sambaza SPA yako kwenye jukwaa la mwenyeji na usanidi sahihi wa routing
+
+### 🌟 **Utaalamu Wako wa Miundo ya Mbele wa Mwezi Mmoja**
+- [ ] Jenga SPA tata kutumia mifumo ya kisasa kama React, Vue, au Angular
+- [ ] Jifunze mifumo ya hali ya juu ya usimamizi wa hali na maktaba
+- [ ] Tawala zana za kujenga na mtiririko wa maendeleo wa SPA
+- [ ] Tekeleza vipengele vya Progressive Web App na utendaji wa mtandao wa offline
+- [ ] Jifunze mbinu za uboreshaji wa utendaji kwa SPA kubwa
+- [ ] Changia miradi ya open source ya SPA na shiriki maarifa yako
+
+## 🎯 Muda wa Utaalamu Wako wa Programu ya Ukurasa Mmoja
+
+```mermaid
+timeline
+    title Mchakato wa Kujifunza Maendeleo ya SPA & Miundombinu ya Wavuti ya Kisasa
+    
+    section Msingi (dakika 20)
+        Mifumo ya Template: vipengele vya template vya HTML
+                        : Uendeshaji wa DOM
+                        : Kunakili maudhui
+                        : Uchoraji wa nguvu
+        
+    section Misingi ya Usanidi (dakika 30)
+        Uelekezaji wa Mteja: Usimamizi wa URL
+                              : API ya Historia
+                              : Ramani ya njia
+                              : Usimamizi wa Matukio
+        
+    section Uzoefu wa Mtumiaji (dakika 40)
+        Kuimarisha Uelekezaji: Uunganisho wa kivinjari
+                         : Msaada wa kitufe cha nyuma
+                         : Usimamizi wa makosa
+                         : Mabadiliko laini
+        
+    section Mifumo ya Ubunifu (dakika 50)
+        SPA za Kitaalamu: Mifumo ya vipengele
+                         : Usimamizi wa hali
+                         : Uboreshaji wa utendaji
+                         : Mipaka ya makosa
+        
+    section Mbinu Zaidi (wiki 1)
+        Uunganisho wa Mfumo: React Router
+                             : Vue Router
+                             : Angular Router
+                             : Maktaba za hali
+        
+    section Ujuzi wa Uzalishaji (mwezi 1)
+        Maendeleo ya Biashara: Mifumo ya kujenga
+                              : Mikakati ya majaribio
+                              : Mifereji ya usambazaji
+                              : Ufuatiliaji wa utendaji
+```
+### 🛠️ Muhtasari wa Zana za Maendeleo ya SPA Yako
+
+Baada ya kumaliza somo hili, sasa umefikia ujuzi wa:
+- **Muundo wa Template**: Vipengele vya HTML vinavyoweza kutumika tena vya kuonyesha maudhui ya mabadiliko
+- **Routing Upande wa Mteja**: Usimamizi wa URL na uelekezaji bila upakiaji kurasa upya
+- **Muungano wa Kivinjari**: Matumizi ya History API na usaidizi wa vitufe vya nyuma/juu
+- **Mifumo ya Matukio**: Usimamizi wa uelekezaji na mwingiliano wa mtumiaji
+- **Usimamizi wa DOM**: Nakala za template, kubadilisha maudhui, na usimamizi wa vipengele
+- **Kushughulikia Makosa**: Njia za kurejesha hali ipasavyo kwa njia au maudhui yasiyopatikana
+- **Mfumo wa Utendaji**: Mikakati ya kupakia na kuonyesha maudhui kwa ufanisi
+
+**Matumizi Halisi ya Dunia**: Ujuzi wako wa maendeleo ya SPA hutumika moja kwa moja kwa:
+- **Programu za Wavuti za Kisasa**: React, Vue, Angular, na maendeleo mengine ya mifumo
+- **Programu za Wavuti zinazopitisha hatua (Progressive Web Apps)**: Programu zinazofanya kazi offline na uzoefu kama app
+- **Dashibodi za Biashara**: Programu ngumu za biashara zenye maoni mengi
+- **Majukwaa ya Biashara Mtandaoni**: Katalogi za bidhaa, vikapu vya ununuzi, na michakato ya malipo
+- **Usimamizi wa Maudhui**: Uundaji na uhariri wa maudhui ya mabadiliko
+- **Maendeleo ya Simu**: Programu mseto zinazotumia teknolojia za wavuti
+
+**Ujuzi wa Kitaalamu Uliopatikana**: Sasa unaweza:
+- **Sanifu** programu za ukurasa mmoja kwa mgawanyiko sahihi wa masuala
+- **Tekeleza** mifumo ya njia za upande wa mteja inayokua na ugumu wa programu
+- **Fafanua hitilafu** za migezo tata ya urambazaji kwa kutumia zana za msanidi wa kivinjari
+- **Boresha** utendaji wa programu kupitia usimamizi mzuri wa templeti
+- **Buni** uzoefu wa mtumiaji unaohisi kuwa wa asili na wa haraka kujibu
+
+**Dhana za Maendeleo ya Sehemu ya Mbele Zilizopata Ustadi**:
+- **Mikakati ya Sehemu**: Mifumo ya UI inayoweza kutumika tena na templeti
+- **Ulinganifu wa Hali**: Usimamizi wa hali ya URL na historia ya kivinjari
+- **Programu Inayotegemea Matukio**: Kushughulikia mwingiliano wa mtumiaji na urambazaji
+- **Uboreshaji wa Utendaji**: Udhibiti wa DOM kwa ufanisi na upakiaji wa maudhui
+- **Ubunifu wa Uzoefu wa Mtumiaji**: Mabadiliko laini na urambazaji wa kitaalamu
+
+**Ngazi Ifuatayo**: Uko tayari kuchunguza mifumo ya kisasa ya mbele, usimamizi wa hali wa hali ya juu, au kujenga programu tata za mashirika!
+
+🌟 **Mafanikio Yamefunguliwa**: Umejenga msingi wa kitaalamu wa programu ya ukurasa mmoja kwa mifumo ya kisasa ya muundo wa wavuti!
 
 ---
 
@@ -542,41 +790,43 @@ Sasa jaribu kutumia vifungo vya kurudi na mbele vya kivinjari chako, na hakikish
 
 Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
 
-**Maelezo:** Boresha programu ya benki kwa kutekeleza kushughulikia makosa na template ya ukurasa wa 404 kwa njia batili, kuboresha uzoefu wa mtumiaji wakati wa kuvinjari kurasa zisizopo.
+**Maelezo:** Boresha programu ya benki kwa kutekeleza usimamizi wa makosa na templeti ya ukurasa wa 404 kwa njia zisizokubalika, kuboresha uzoefu wa mtumiaji anapovuka kwa kurasa zisizoipo.
 
-**Kichocheo:** Unda template mpya ya HTML yenye id "not-found" inayonyesha ukurasa wa kosa la 404 unaovutia mtumiaji na muundo. Kisha badilisha mantiki ya uelekezaji wa JavaScript ili kuonyesha template hii wakati watumiaji wanazunguka kwenye URL batili, na ongeza kifungo cha "Go Home" kinachorudi kwenye ukurasa wa kuingia.
+**Mwongozo:** Unda templeti mpya ya HTML yenye kitambulisho "not-found" inayonyesha ukurasa wa makosa ya 404 rafiki kwa mtumiaji yenye mtindo. Kisha badilisha mantiki ya njia ya JavaScript ili kuonyesha templeti hii watumiaji wanapobonyeza URL zisizokubalika, na ongeza kitufe cha "Rudi Nyumbani" kinachorejesha kwenye ukurasa wa kuingia.
 
 Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
 ## 🚀 Changamoto
 
-Ongeza template mpya na njia kwa ukurasa wa tatu unaoonyesha credits za programu hii.
+Ongeza templeti mpya na njia kwa ukurasa wa tatu unaoonyesha majina ya waliotoa mchango kwa programu hii.
 
-**Malengo ya changamoto:**  
-- **Unda** template mpya ya HTML yenye muundo sahihi wa maudhui  
-- **Ongeza** njia mpya kwenye kitu chako cha usanidi wa njia  
-- **Jumuisha** viungo vya uelekezaji kwenda na kutoka kwenye ukurasa wa credits  
-- **Jaribu** kwamba uelekezaji wote unafanya kazi kwa usahihi na historia ya kivinjari  
+**Malengo ya Changamoto:**
+- **Unda** templeti mpya ya HTML yenye muundo sahihi wa maudhui
+- **Ongeza** njia mpya kwenye kitu cha usanidi wa njia zako
+- **Jumuisha** viungo vya urambazaji kwenda na kutoka kwenye ukurasa wa majina
+- **Jaribu** kuwa urambazaji wote unafanya kazi vizuri na historia ya kivinjari
 
-## Maswali ya Baada ya Somo
+## Mtihani wa Baada ya Mhadhara
 
-[Maswali ya baada ya somo](https://ff-quizzes.netlify.app/web/quiz/42)
+[Mtihani wa baada ya mhadhara](https://ff-quizzes.netlify.app/web/quiz/42)
 
-## Mapitio na Kujisomea
+## Mapitio & Kujifunza Binafsi
 
-Uelekezaji ni mojawapo ya sehemu za kushangaza za maendeleo ya wavuti, hasa wakati wavuti inahama kutoka tabia za ku-refresh kurasa hadi programu za ukurasa mmoja. Soma kidogo kuhusu [jinsi huduma ya Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) inavyoshughulikia uelekezaji. Je, unaweza kueleza kwa nini baadhi ya maamuzi yaliyoelezwa kwenye hati hiyo ni muhimu?
+Urambazaji ni moja ya sehemu zinazoweza kujuakwa ngumu za maendeleo ya wavuti, hasa wakati wavuti inapoelekea kutoka kwenye tabia za upya wa ukurasa hadi upya wa ukurasa wa Programu za Ukurasa Mmoja. Soma kidogo kuhusu [jinsi huduma ya Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) inavyoshughulikia urambazaji. Je, unaweza kueleza kwa nini baadhi ya maamuzi yaliyotajwa katika hati hiyo ni muhimu?
 
-**Rasilimali za ziada za kujifunza:**  
-- **Chunguza** jinsi mifumo maarufu kama React Router na Vue Router inavyotekeleza uelekezaji wa upande wa mteja  
-- **Tafiti** tofauti kati ya uelekezaji wa msingi wa hash na uelekezaji wa History API  
-- **Jifunze** kuhusu utoaji wa upande wa seva (SSR) na jinsi unavyoathiri mikakati ya uelekezaji  
-- **Chunguza** jinsi Programu za Wavuti Zinazoendelea (PWAs) zinavyoshughulikia uelekezaji na uelekezaji  
+**Rasilimali za ziada za kujifunza:**
+- **Chunguza** jinsi mifumo maarufu kama React Router na Vue Router zinavyotekeleza urambazaji wa upande wa mteja
+- **Fanya utafiti** juu ya tofauti kati ya urambazaji unaotegemea hash na urambazaji wa historia API
+- **Jifunze** kuhusu utoaji wa upande wa seva (SSR) na jinsi unavyoathiri mikakati ya urambazaji
+- **Chunguza** jinsi Programu za Wavuti Zinazoendelea (PWAs) zinavyoshughulikia urambazaji na mizunguko
 
-## Kazi
+## Kazi ya Nyuma
 
-[Boresha uelekezaji](assignment.md)
+[Boresha urambazaji](assignment.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kauli ya Hukumu**:
+Nyaraka hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au upotovu. Nyaraka asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya mtaalamu wa binadamu inapendekezwa. Hatubebei mzigo wa dhana potofu au tafsiri batili zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
