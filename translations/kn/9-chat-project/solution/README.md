@@ -1,0 +1,20 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
+  "translation_date": "2026-01-08T20:38:50+00:00",
+  "source_file": "9-chat-project/solution/README.md",
+  "language_code": "kn"
+}
+-->
+# ಪರಿಹಾರವನ್ನು چلائیں
+
+1. [backend](./backend/README.md) ಪ್ರಾರಂಭಿಸಿ
+1. ಈಗ [frontend](./frontend/README.md) ಪ್ರಾರಂಭಿಸಿ
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**ಅಸ್ವೀಕರಣ**:
+ಈ ದಾಖಲೆ AI ಅನುವಾದ ಸೇವೆ [Co-op Translator](https://github.com/Azure/co-op-translator) ಬಳಸಿ ಅನುವದಿಸಲಾಗಿದೆ. ನಾವು ನಿಖರತೆಯನ್ನು ಪಡೆಯಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದ್ದರೂ, ಸ್ವಯಂಚಾಲಿತ ಅನುವಾದಗಳಲ್ಲಿ ತಪ್ಪುಗಳು ಅಥವಾ ಅಸಮೀಕ್ಷಿತತೆಗಳು ಇರಬಹುದೆಂದು ದಯವಿಟ್ಟು ಗಮನಿಸಿ. ಮೂಲ ಭಾಷೆಯಲ್ಲಿನ ಮೂಲ ದಾಖಲೆನ್ನು ಅಧಿಕಾರಿಕ ಮೂಲ ಎಂದು ಪರಿಗಣಿಸಬೇಕು. ಗಂಭೀರ ಮಾಹಿತಿಗಾಗಿ, ವೃತ್ತಿಪರ ಮಾನವ ಅನುವಾದವನ್ನು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ. ಈ ಅನುವಾದದ ಬಳಕೆಯಿಂದ ಉಂಟಾಗುವ ಯಾವುದೇ ತಪ್ಪು ಅರಿತುಕೊಳ್ಳುವಿಕೆ ಅಥವಾ ವಿಭ್ರಮಗಳಿಗೆ ನಾವು ಹೊಣೆಗಾರರು ಅನೇಕರಾಗಿಲ್ಲ.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
