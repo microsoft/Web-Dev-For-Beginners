@@ -1,236 +1,265 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "caf2ca695e9d259153d24a5cf3e07ef5",
-  "translation_date": "2025-10-11T11:38:55+00:00",
+  "original_hash": "fea3a0fceb8ad86fd640c09cf63a2aac",
+  "translation_date": "2026-01-08T08:39:44+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
 -->
-[![GitHub license](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)  
-[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)  
-[![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)  
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)  
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  
+# Veebiarendus algajatele – õppekava
 
-[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)  
-[![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)  
-[![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)  
+Õppige veebi arendamise põhialuseid meie Microsoft Cloud Advocatesi 12-nädalase põhjaliku kursuse kaudu. Iga 24 õppetundi süveneb JavaScripti, CSS-i ja HTML-i käeliste projektide kaudu nagu terrariumid, brauserilaiendused ja kosmosemängud. Osalege viktoriinides, aruteludes ja praktilistes ülesannetes. Täiustage oma oskusi ja optimeerige teadmiste omandamist meie tõhusa projektipõhise õpetamismeetodiga. Alustage oma kodeerimise teekonda juba täna!
 
-[![](https://dcbadge.vercel.app/api/server/ByRwuEEgH4)](https://discord.gg/zxKYvhSnVp?WT.mc_id=academic-000002-leestott)  
+Liituge Azure AI Foundry Discordi kogukonnaga
 
-# Veebiarendus algajatele - õppekava  
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Õpi veebiarenduse põhitõdesid Microsoft Cloud Advocates'i 12-nädalase põhjaliku kursuse abil. Iga 24 õppetundi keskendub JavaScriptile, CSS-ile ja HTML-ile praktiliste projektide kaudu, nagu terraariumid, brauserilaiendused ja kosmosemängud. Osale viktoriinides, aruteludes ja praktilistes ülesannetes. Arenda oma oskusi ja optimeeri teadmiste omandamist meie tõhusa projektipõhise metoodikaga. Alusta oma kodeerimise teekonda juba täna!  
+Järgige neid samme, et hakata neid ressursse kasutama:
+1. **Looge repositsiooni koopia (fork)**: Klõpsake [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **Kloonige repositsioon**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Liituge Azure AI Foundry Discordiga ja kohtuge ekspertide ning teiste arendajatega**](https://discord.com/invite/ByRwuEEgH4)
 
-Liitu Azure AI Foundry Discordi kogukonnaga  
+### 🌐 Mitmekeelne tugi
 
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://discord.com/invite/ByRwuEEgH4)  
+#### Toetatud GitHub Actioni kaudu (automatiseeritud ja alati ajakohane)
 
-Järgi neid samme, et alustada nende ressursside kasutamist:  
-1. **Forki repositoorium**: Klõpsa [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)  
-2. **Klooni repositoorium**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
-3. [**Liitu Azure AI Foundry Discordiga ja kohtume ekspertide ning teiste arendajatega**](https://discord.com/invite/ByRwuEEgH4)  
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[araabia](../ar/README.md) | [bengali](../bn/README.md) | [bulgaaria](../bg/README.md) | [birma keel (Myanmar)](../my/README.md) | [hiina (lihtsustatud)](../zh/README.md) | [hiina (traditsiooniline, Hongkong)](../hk/README.md) | [hiina (traditsiooniline, Macau)](../mo/README.md) | [hiina (traditsiooniline, Taiwani)](../tw/README.md) | [horvaadi](../hr/README.md) | [tšehhi](../cs/README.md) | [taani](../da/README.md) | [hollandi](../nl/README.md) | [eesti](./README.md) | [soome](../fi/README.md) | [prantsuse](../fr/README.md) | [saksa](../de/README.md) | [kreeka](../el/README.md) | [heebrea](../he/README.md) | [hindi](../hi/README.md) | [ungari](../hu/README.md) | [indoneesia](../id/README.md) | [itaalia](../it/README.md) | [jaapani](../ja/README.md) | [kannada](../kn/README.md) | [korea](../ko/README.md) | [leedu](../lt/README.md) | [malai keel](../ms/README.md) | [malajalami](../ml/README.md) | [marathi](../mr/README.md) | [nepali](../ne/README.md) | [nigeeria pidgin](../pcm/README.md) | [norra](../no/README.md) | [pärsia (Farsi)](../fa/README.md) | [poola](../pl/README.md) | [portugali (Brasiilia)](../br/README.md) | [portugali (Portugal)](../pt/README.md) | [pandžabi (Gurmukhi)](../pa/README.md) | [rumeenia](../ro/README.md) | [vene](../ru/README.md) | [serbia (kirillitsa)](../sr/README.md) | [skaapaki](../sk/README.md) | [sloveeni](../sl/README.md) | [hispaania](../es/README.md) | [svahili](../sw/README.md) | [rootsi](../sv/README.md) | [tagalogi (filipino)](../tl/README.md) | [tamiili](../ta/README.md) | [telugu](../te/README.md) | [tai](../th/README.md) | [türgi](../tr/README.md) | [ukraina](../uk/README.md) | [urdu](../ur/README.md) | [vietnami](../vi/README.md)
 
-### 🌐 Mitmekeelne tugi  
+> **Eelistate kloonida lokaalselt?**
 
-#### Toetatud GitHub Actioni kaudu (automaatne ja alati ajakohane)  
+> See repositsioon sisaldab enam kui 50 keele tõlget, mis suurendab oluliselt allalaadimise mahtu. Tõlgeteta kloonimiseks kasutage spetsiifilist kontrolli (sparse checkout):
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
+> cd Web-Dev-For-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> See annab teile kõik vajaliku kursuse läbimiseks märksa kiiremalt.
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->  
-[Araabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Hiina (lihtsustatud)](../zh/README.md) | [Hiina (traditsiooniline, Hongkong)](../hk/README.md) | [Hiina (traditsiooniline, Macau)](../mo/README.md) | [Hiina (traditsiooniline, Taiwan)](../tw/README.md) | [Horvaatia](../hr/README.md) | [Tšehhi](../cs/README.md) | [Taani](../da/README.md) | [Hollandi](../nl/README.md) | [Eesti](./README.md) | [Soome](../fi/README.md) | [Prantsuse](../fr/README.md) | [Saksa](../de/README.md) | [Kreeka](../el/README.md) | [Heebrea](../he/README.md) | [Hindi](../hi/README.md) | [Ungari](../hu/README.md) | [Indoneesia](../id/README.md) | [Itaalia](../it/README.md) | [Jaapani](../ja/README.md) | [Korea](../ko/README.md) | [Leedu](../lt/README.md) | [Malai](../ms/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Norra](../no/README.md) | [Pärsia (Farsi)](../fa/README.md) | [Poola](../pl/README.md) | [Portugali (Brasiilia)](../br/README.md) | [Portugali (Portugal)](../pt/README.md) | [Pandžabi (Gurmukhi)](../pa/README.md) | [Rumeenia](../ro/README.md) | [Vene](../ru/README.md) | [Serbia (kirillitsa)](../sr/README.md) | [Slovaki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Hispaania](../es/README.md) | [Suahiili](../sw/README.md) | [Rootsi](../sv/README.md) | [Tagalogi (Filipino)](../tl/README.md) | [Tamili](../ta/README.md) | [Tai](../th/README.md) | [Türgi](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnami](../vi/README.md)  
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->  
+**Kui soovite lisada toetust täiendavatele tõlkekeeltele, on need loetletud [siin](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
-**Kui soovid lisada täiendavaid tõlkeid, on toetatud keeled loetletud [siin](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**  
+[![Ava Visual Studio Code'is](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-[![Ava Visual Studio Code'is](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Ava%20Visual%20Studio%20Code'is&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)  
+#### 🧑‍🎓 _Oled õpilane?_
 
-#### 🧑‍🎓 _Kas oled tudeng?_  
+Külasta [**Õpilase tugikeskuse lehte**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), kus leiad algajatest ressurssid, õpilase pakke ja isegi võimalusi saada tasuta sertifikaadikupong. See on leht, mida tasub järjehoidjates hoida ja aeg-ajalt kontrollida, sest sisu uuendatakse iga kuu.
 
-Külasta [**Student Hub lehte**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), kus leiad algajatele mõeldud ressursse, tudengipakette ja isegi võimalusi tasuta sertifikaadi saamiseks. See on leht, mida tasub järjehoidjatesse lisada ja aeg-ajalt külastada, kuna sisu vahetub igakuiselt.  
+### 📣 Teade – uued GitHub Copilot Agendi režiimi väljakutsed täitmiseks!
 
-### 📣 Teade - _Uus projekt generatiivse tehisintellekti kasutamiseks_  
+Uus väljakutse lisatud, otsi "GitHub Copilot Agent Challenge 🚀" enamikust peatükkidest. See on uus väljakutse, mille saad täita GitHub Copiloti ja Agendi režiimi abil. Kui sa pole varem Agendi režiimi kasutanud, siis see suudab mitte ainult teksti genereerida, vaid ka faile luua ja muuta, käsklusi käivitada ja palju muud.
 
-Just lisatud uus AI assistendi projekt, vaata [projekti](./09-chat-project/README.md)  
+### 📣 Teade – _uus projekt loomaks Generatiivse tehisintellekti abil_
 
-### 📣 Teade - _Uus õppekava_ generatiivse tehisintellekti kohta JavaScriptis on just avaldatud  
+Uus AI assistendi projekt just lisatud, vaata [projekti](./9-chat-project/README.md)
 
-Ära jäta vahele meie uut generatiivse tehisintellekti õppekava!  
+### 📣 Teade – _uus õppekava_ Generatiivse tehisintellekti jaoks JavaScriptis on just avaldatud
 
-Külasta [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), et alustada!  
+Ära maga maha meie uut Generatiivse AI õppekava!
 
-![Taust](../../translated_images/background.148a8d43afde57303419a663f50daf586681bc2fabf833f66ef6954073983c66.et.png)  
+Alusta siit: [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
-- Õppetunnid, mis hõlmavad kõike alates põhitõdedest kuni RAG-ni.  
-- Suhtle ajalooliste tegelastega GenAI ja meie kaaslase rakenduse abil.  
-- Lõbus ja kaasahaarav narratiiv, mis viib sind ajarännakule!  
+![Taust](../../translated_images/background.148a8d43afde5730.et.png)
 
-![Tegelane](../../translated_images/character.5c0dd8e067ffd693c16e2c5b7412ab075a2215ce31f998305639fa3a05e14fbe.et.png)  
+- Tunnid katavad kõike alates põhialustest kuni RAGini.
+- Suhtle ajalooliste tegelastega kasutades GenAI-d ja meie kaasrakendust.
+- Lõbus ja kaasahaarav jutustus, rändad ajas!
 
-Iga õppetund sisaldab ülesannet, mida täita, teadmiste kontrolli ja väljakutset, mis juhendab sind õppima järgmisi teemasid:  
-- Küsitluste loomine ja nende optimeerimine  
-- Teksti- ja pildirakenduste loomine  
-- Otsingurakendused  
+![tegelane](../../translated_images/character.5c0dd8e067ffd693.et.png)
 
-Külasta [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course), et alustada!  
+Iga tund sisaldab ülesannet, teadmiste kontrolli ja väljakutset, mis juhatavad teid järgmiste teemade õppimisel:
+- Promptide ja prompt-engineeringi kasutamine
+- Teksti- ja pildirakenduste genereerimine
+- Otsingurakendused
 
-## 🌱 Alustamine  
+Alusta siit: [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)
 
-> **Õpetajad**, oleme [lisanud mõned soovitused](for-teachers.md), kuidas seda õppekava kasutada. Ootame teie tagasisidet [meie arutelufoorumis](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!  
+## 🌱 Alustamine
 
-**[Õppijad](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, iga õppetunni puhul alustage eelloengu viktoriiniga, lugege loengumaterjali, täitke erinevaid tegevusi ja kontrollige oma arusaamist järelloengu viktoriiniga.  
+> **Õpetajad**, oleme lisanud [mõned soovitused](for-teachers.md), kuidas seda õppekava kasutada. Meil oleks hea meel teie tagasiside üle [meie arutelufoorumis](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-Et oma õpikogemust täiustada, tehke koostööd kaasõppijatega projektide kallal! Arutelud on teretulnud meie [arutelufoorumis](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), kus meie moderaatorite meeskond on valmis vastama teie küsimustele.  
+**[Õppijad](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, iga õppetunni algul tehke sissejuhatav viktoriin ja seejärel jätkake loengumaterjali lugemisega, täitke erinevad tegevused ning kontrollige oma arusaamist lõpus tehtava viktoriiniga.
 
-Hariduse edendamiseks soovitame tungivalt uurida [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) täiendavate õppematerjalide jaoks.  
+Õppimise paremaks toetamiseks võtke ühendust kaasõppijatega, et projekte koos teha! Arutelud on soovitatavad meie [arutelufoorumis](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), kus meie moderaatorite meeskond on valmis vastama teie küsimustele.
 
-### 📋 Keskkonna seadistamine  
+Tulge haridust veelgi täiustama, soovitame soojalt uurida [Microsoft Learni](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) täiendavate õppevahendite jaoks.
 
-Sellel õppekaval on valmis arenduskeskkond! Alustades saate valida, kas käivitada õppekava [Codespace'is](https://github.com/features/codespaces/) (_brauseripõhine keskkond, kus pole vaja midagi installida_) või kohapeal oma arvutis, kasutades tekstiredaktorit, näiteks [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
+### 📋 Keskkonna seadistamine
 
-#### Loo oma repositoorium  
-Et saaksid oma tööd hõlpsasti salvestada, soovitame luua selle repositooriumi koopia. Seda saab teha, klõpsates lehe ülaosas nuppu **Use this template**. See loob sinu GitHubi kontole uue repositooriumi koos õppekava koopiaga.  
+Sellel õppekaval on valmis arenduskeskkond! Kursuse alustamisel võite valida selle kasutamise [Codespace'is](https://github.com/features/codespaces/) (_brauseripõhine keskkond, mis ei vaja installimist_) või kohapeal oma arvutis tekstitöötlusprogrammiga nagu [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-Järgi neid samme:  
-1. **Forki repositoorium**: Klõpsa lehe paremas ülanurgas nuppu "Fork".  
-2. **Klooni repositoorium**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
+#### Looge oma repositsioon
 
-#### Õppekava käivitamine Codespace'is  
+Et oma tööd mugavalt salvestada, soovitatakse teil luua oma koopia sellest repositsioonist. Seda saate teha, klõpsates lehe ülaosas nuppu **Use this template**. See loob teie GitHubi kontole uue repositsiooni koopia.
 
-Selles repositooriumis, mille sa lõid, klõpsa nuppu **Code** ja vali **Open with Codespaces**. See loob sulle uue Codespace'i, kus saad töötada.  
+Järgige neid samme:
+1. **Forkige repositsioon**: Klõpsake selle lehe paremas ülaosas nuppu "Fork".
+2. **Kloonige repositsioon**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955fa8fa7f7b6602a3cb6499a24708fbee589f83211c5a613b7.et.png)  
+#### Õppekava käivitamine Codespace'is
 
-#### Õppekava käivitamine kohapeal oma arvutis  
+Teie loodud koopia repositsioonist klõpsake nuppu **Code** ja valige **Open with Codespaces**. See loob teile uue Codespace'i, kus töötada.
 
-Et käivitada õppekava kohapeal oma arvutis, vajad tekstiredaktorit, brauserit ja käsurea tööriista. Meie esimene õppetund, [Sissejuhatus programmeerimiskeeltesse ja tööriistadesse](../../1-getting-started-lessons/1-intro-to-programming-languages), juhendab sind erinevate tööriistade valimisel, et leida endale sobivaim.  
+![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.et.png)
 
-Meie soovitus on kasutada [Visual Studio Code'i](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) redaktorina, millel on ka sisseehitatud [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Saad Visual Studio Code'i alla laadida [siit](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).  
+#### Õppekava kohapealne käivitamine oma arvutis
 
-1. Klooni oma repositoorium arvutisse. Seda saab teha, klõpsates nuppu **Code** ja kopeerides URL-i:  
+Selle õppekava kohapealseks jooksutamiseks oma arvutis vajate tekstiredaktorit, brauserit ja käsureatööriista. Esimene tunnistus, [Tutvustus programmeerimiskeeltele ja tööriistadele](../../1-getting-started-lessons/1-intro-to-programming-languages), tutvustab erinevaid valikuid iga nende tööriista puhul, et saaksite valida endale sobivaima.
 
-    [CodeSpace](./images/createcodespace.png)  
+Soovitame kasutada [Visual Studio Code'i](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) redaktorit, millel on ka sisseehitatud [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Visual Studio Code'i saate alla laadida [siit](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-    Seejärel ava [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) [Visual Studio Code'is](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ja käivita järgmine käsk, asendades `<your-repository-url>` just kopeeritud URL-iga:  
+1. Kloonige oma repositsioon arvutisse. Seda saate teha, klõpsates nupul **Code** ja kopeerides URL-i:
+
+    [Codespace](./images/createcodespace.png)
+Seejärel ava [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) sees ja käivita järgmine käsk, asendades `<your-repository-url>` just äsja kopeeritud URL-iga:
 
     ```bash 
     git clone <your-repository-url>
     ```
-  
-2. Ava kaust Visual Studio Code'is. Seda saab teha, klõpsates **File** > **Open Folder** ja valides just kloonitud kausta.  
 
-> Soovitatavad Visual Studio Code'i laiendused:  
->  
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - HTML-lehtede eelvaateks Visual Studio Code'is  
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - aitab kiiremini koodi kirjutada  
+2. Ava kaust Visual Studio Codes. Seda saab teha, klõpsates **File** > **Open Folder** ja valides kausta, mille just kloonisid.
 
-## 📂 Iga õppetund sisaldab:  
 
-- valikulist visuaalset märkmete komplekti  
-- valikulist täiendavat videot  
-- eelloengu soojendusviktoriini  
-- kirjalik õppetund  
-- projektipõhiste õppetundide jaoks samm-sammult juhendid projekti loomiseks  
-- teadmiste kontrollid  
-- väljakutse  
-- täiendav lugemine  
-- ülesanne  
-- [järgnev viktoriin](https://ff-quizzes.netlify.app/web/)  
+> Soovitatud Visual Studio Code laiendused:
+>
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - et eelvaadata HTML-lehti Visual Studio Codes
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - et aidata sul koodi kiiremini kirjutada
 
-> **Märkus viktoriinide kohta**: Kõik viktoriinid asuvad Quiz-app kaustas, kokku 48 viktoriini, igaühes kolm küsimust. Need on saadaval [siin](https://ff-quizzes.netlify.app/web/). Viktoriinirakendust saab käivitada lokaalselt või Azure'is; järgige juhiseid `quiz-app` kaustas.  
+## 📂 Igas õppetükis sisaldub:
 
-## 🗃️ Õppetunnid  
+- valikuline visandmärkmed
+- valikuline lisavideo
+- enne tundi soojendusülesanne
+- kirjalik õppetükk
+- projektipõhiste õppetükkide puhul samm-sammult juhendid projekti ülesehitamiseks
+- teadmiste kontroll
+- väljakutse
+- lisalugemine
+- ülesanne
+- [pärastundi viktoriin](https://ff-quizzes.netlify.app/web/)
 
-|     |                       Projekti nimi                       |                            Õpetatavad kontseptsioonid                            | Õpieesmärgid                                                                                                                 |                                                         Lingitud õppetund                                                          |         Autor          |  
-| :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |  
-| 01  |                     Alustamine                      |           Programmeerimise sissejuhatus ja tööriistad           | Õpi programmeerimiskeelte põhialuseid ja tarkvara, mis aitab professionaalsetel arendajatel oma tööd teha | [Sissejuhatus programmeerimiskeeltesse ja tööriistadesse](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |  
-| 02  |                     Alustamine                      |             GitHubi põhialused, sealhulgas meeskonnatöö             | Kuidas kasutada GitHubi oma projektis ja teha koostööd teistega koodibaasis                                                    |                            [Sissejuhatus GitHubi](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |  
-| 03  |                     Alustamine                      |                             Juurdepääsetavus                              | Õpi veebijuurdepääsetavuse põhialuseid                                                                                               |                       [Juurdepääsetavuse alused](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |  
-| 04  |                        JS põhialused                         |                         JavaScripti andmetüübid                          | JavaScripti andmetüüpide põhialused                                                                                                 |                                       [Andmetüübid](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |  
-| 05  |                        JS põhialused                         |                         Funktsioonid ja meetodid                          | Õpi funktsioonide ja meetodite kohta, et hallata rakenduse loogikavoogu                                                             |                              [Funktsioonid ja meetodid](./2-js-basics/2-functions-methods/README.md)                               | Jasmine ja Christopher |  
-| 06  |                        JS põhialused                         |                        Otsuste tegemine JavaScriptiga                        | Õpi looma tingimusi oma koodis, kasutades otsuste tegemise meetodeid                                                           |                                 [Otsuste tegemine](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |  
-| 07  |                        JS põhialused                         |                            Massiivid ja tsüklid                            | Töötamine andmetega, kasutades JavaScripti massiive ja tsükleid                                                                                 |                                   [Massiivid ja tsüklid](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |  
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML praktikas                            | Loo HTML, et luua veebipõhine terrarium, keskendudes paigutuse loomisele                                                         |                                 [Sissejuhatus HTML-i](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |  
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS praktikas                             | Loo CSS, et kujundada veebipõhine terrarium, keskendudes CSS-i põhialustele, sealhulgas lehe reageerimisvõimekusele                     |                                  [Sissejuhatus CSS-i](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |  
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScripti sulgemised, DOM-i manipuleerimine                  | Loo JavaScript, et muuta terrarium lohistamisfunktsiooniga liideseks, keskendudes sulgemistele ja DOM-i manipuleerimisele             |                  [JavaScripti sulgemised, DOM-i manipuleerimine](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |  
-| 11  |          [Trükimäng](./4-typing-game/solution/README.md)          |                          Loo trükimäng                           | Õpi kasutama klaviatuuri sündmusi, et juhtida oma JavaScripti rakenduse loogikat                                                          |                                [Sündmustepõhine programmeerimine](./4-typing-game/typing-game/README.md)                                |       Christopher       |  
-| 12  | [Roheline brauserilaiendus](./5-browser-extension/solution/README.md) |                         Töö brauseritega                          | Õpi, kuidas brauserid töötavad, nende ajalugu ja kuidas luua brauserilaienduse esimesed elemendid                               |                               [Brauseritest](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |  
-| 13  | [Roheline brauserilaiendus](./5-browser-extension/solution/README.md) | Vormide loomine, API-de kutsumine ja muutujate salvestamine lokaalsesse mällu | Loo oma brauserilaienduse JavaScripti elemendid, et kutsuda API-d, kasutades lokaalsesse mällu salvestatud muutujaid                      |                [API-d, vormid ja lokaalne mälu](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |  
-| 14  | [Roheline brauserilaiendus](./5-browser-extension/solution/README.md) |          Taustaprotsessid brauseris, veebijõudlus          | Kasuta brauseri taustaprotsesse laienduse ikooni haldamiseks; õpi veebijõudluse kohta ja mõningaid optimeerimisi   |             [Taustaprotsessid ja jõudlus](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |  
-| 15  |           [Kosmosemäng](./6-space-game/solution/README.md)           |             Täiustatud mänguarendus JavaScriptiga             | Õpi päriluse kohta, kasutades nii klasse kui kompositsiooni, ja Pub/Sub mustrit, valmistudes mängu loomiseks              |                      [Sissejuhatus täiustatud mänguarendusse](./6-space-game/1-introduction/README.md)                       |          Chris          |  
-| 16  |           [Kosmosemäng](./6-space-game/solution/README.md)           |                           Joonistamine lõuendile                            | Õpi lõuendi API kohta, mida kasutatakse elementide ekraanile joonistamiseks                                                                       |                                [Joonistamine lõuendile](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |  
-| 17  |           [Kosmosemäng](./6-space-game/solution/README.md)           |                   Elementide liigutamine ekraanil                    | Avastage, kuidas elemendid saavad liikuda, kasutades koordinaatsüsteemi ja lõuendi API-d                                            |                           [Elementide liigutamine](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |  
-| 18  |           [Kosmosemäng](./6-space-game/solution/README.md)           |                          Kokkupõrke tuvastamine                           | Muutke elemendid üksteisega kokku põrkama ja reageerima, kasutades klahvivajutusi, ning lisage jahtumisfunktsioon, et tagada mängu jõudlus    |                              [Kokkupõrke tuvastamine](./6-space-game/4-collision-detection/README.md)                              |          Chris          |  
-| 19  |           [Kosmosemäng](./6-space-game/solution/README.md)           |                             Punktide arvestamine                              | Tehke matemaatilisi arvutusi mängu oleku ja jõudluse põhjal                                                                |                                    [Punktide arvestamine](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |  
-| 20  |           [Kosmosemäng](./6-space-game/solution/README.md)           |                     Mängu lõpetamine ja taaskäivitamine                     | Õpi mängu lõpetamise ja taaskäivitamise kohta, sealhulgas ressursside puhastamine ja muutujate väärtuste lähtestamine                              |                                [Lõppetingimus](./6-space-game/6-end-condition/README.md)                                 |          Chris          |  
-| 21  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                 HTML-i mallid ja marsruudid veebirakenduses                 | Õpi looma mitmeleheküljelise veebisaidi arhitektuuri karkassi, kasutades marsruutimist ja HTML-i malle                             |                            [HTML-i mallid ja marsruudid](./7-bank-project/1-template-route/README.md)                             |          Yohan          |  
-| 22  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                  Sisselogimis- ja registreerimisvormi loomine                   | Õpi vormide loomise ja valideerimisrutiinide käsitlemise kohta                                                                          |                                           [Vormid](./7-bank-project/2-forms/README.md)                                           |          Yohan          |  
-| 23  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                   Andmete hankimise ja kasutamise meetodid                   | Kuidas andmed voolavad rakendusse ja sealt välja, kuidas neid hankida, salvestada ja kustutada                                                 |                                            [Andmed](./7-bank-project/3-data/README.md)                                            |          Yohan          |  
-| 24  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                      Oleku haldamise kontseptsioonid                      | Õpi, kuidas rakendus säilitab olekut ja kuidas seda programmiliselt hallata                                                              |                                [Oleku haldamine](./7-bank-project/4-state-management/README.md)                                |          Yohan          |  
-| 25 | [Brauser/VScode kood](../../8-code-editor) | Töö VScode'iga | Õpi, kuidas kasutada koodiredaktorit| [VScode koodiredaktori kasutamine](./8-code-editor/1-using-a-code-editor/README.md) | Chris |  
-| 26 | [AI assistendid](./9-chat-project/README.md) | Töö AI-ga | Õpi, kuidas luua oma AI assistent | [AI assistendi projekt](./9-chat-project/README.md) | Chris |  
+> **Märkused viktoriinide kohta**: Kõik viktoriinid on koondatud Quiz-app kausta, kokku 48 viktoriini, igas kolm küsimust. Neid on saadaval [siin](https://ff-quizzes.netlify.app/web/). Viktoriini rakendust saab käivitada lokaalselt või juurutada Azure'i; järgi juhiseid `quiz-app` kaustas.
 
-## 🏫 Pedagoogika  
+## 🗃️ Õppetükid
 
-Meie õppekava on loodud kahe peamise pedagoogilise põhimõtte järgi:  
-* projektipõhine õpe  
-* sagedased viktoriinid  
+|     |                       Projekti nimi                       |                            Õpitavad mõisted                             | Õpieesmärgid                                                                                                                 |                                                         Lingitud õppetükk                                                          |         Autor          |
+| :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     Alustamine                      |           Sissejuhatus programmeerimisse ja tööriistadesse           | Õpi programmeerimiskeelte põhialuseid ja tarkvara, mis aitab professionaalsetel arendajatel oma tööd teha | [Sissejuhatus programmeerimiskeeltesse ja tööriistadesse](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     Alustamine                      |             GitHub põhitõed, sh meeskonnatöö             | Kuidas kasutada GitHubi projektis, kuidas teha koostööd koodibaasil                                                    |                            [Sissejuhatus GitHubi](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     Alustamine                      |                             Juurdepääsetavus                              | Õpi veebipõhise juurdepääsetavuse põhialuseid                                                                                               |                       [Juurdepääsetavuse alused](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        JS põhitõed                         |                         JavaScripti andmetüübid                          | JavaScripti andmetüüpide alused                                                                                                 |                                       [Andmetüübid](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        JS põhitõed                         |                         Funktsioonid ja meetodid                          | Õpi funktsioonidest ja meetoditest, mis juhivad rakenduse loogikavoogu                                                             |                              [Funktsioonid ja meetodid](./2-js-basics/2-functions-methods/README.md)                               | Jasmine ja Christopher |
+| 06  |                        JS põhitõed                         |                        Otsuste tegemine JS-iga                        | Õpi tingimuste loomist koodis otsustamismeetodite abil                                                           |                                 [Otsuste tegemine](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        JS põhitõed                         |                            Massiivid ja tsüklid                            | Töötamine andmetega, kasutades massiive ja tsükleid JavaScriptis                                                                                 |                                   [Massiivid ja tsüklid](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML praktikas                            | Ehita HTML, et luua veebiterrarium, keskendudes paigutuse loomisele                                                         |                                 [Sissejuhatus HTML-i](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS praktikas                             | Ehita CSS veebiterrariumi stiilimiseks, keskendudes CSS põhialustele ja lehe muutumisele vastavalt ekraanisuurusele                     |                                  [Sissejuhatus CSS-i](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScripti sulgemised, DOM manipuleerimine                  | Ehita JavaScript, et teha terrarium funktsioneerivaks lohistamisliideselementina, keskendudes sulgemistele ja DOM manipuleerimisele             |                  [JavaScripti sulgemised, DOM manipuleerimine](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Tippmäng](./4-typing-game/solution/README.md)          |                          Tippmängu ehitamine                           | Õpi klahvivajutuste sündmustega töötamist, et juhtida JavaScripti rakenduse loogikat                                                          |                                [Sündmuspõhine programmeerimine](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Roheline Brauserilaiendus](./5-browser-extension/solution/README.md) |                         Töötamine brauseritega                          | Õpi, kuidas brauserid toimivad, nende ajalugu ja kuidas luua brauserilaienduse esimesi elemente                               |                               [Brauseritest](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [Roheline Brauserilaiendus](./5-browser-extension/solution/README.md) | Vormide loomine, API kutsumine ja muutujate salvestamine lokaalses mälus | Ehita brauserilaienduse JavaScripti elemendid API kutsumiseks, kasutades lokaalses mälus hoitud muutujaid                      |                [API-d, vormid ja lokaalne mälu](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [Roheline Brauserilaiendus](./5-browser-extension/solution/README.md) |          Brauseri taustaprotsessid, veebiperformance           | Kasuta brauseri taustaprotsesse laienduse ikooni juhtimiseks; õpi veebiperformance'ist ja optimeerimistehnikatest, et performants säilitada   |             [Taustatööd ja jõudlus](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [Tähtede Mäng](./6-space-game/solution/README.md)           |             Edasijõudnum mängude arendus JavaScriptiga             | Õpi pärimist kasutades nii klasse kui ka kompositsiooni ning Pub/Sub mustrit, valmistudes mängu ehitamiseks              |                      [Sissejuhatus edasijõudnumasse mänguarendusse](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [Tähtede Mäng](./6-space-game/solution/README.md)           |                           Joonistamine canvasile                            | Õpi Canvas API-d, mida kasutatakse elementide ekraanile joonistamiseks                                                                       |                                [Joonistamine canvasile](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Tähtede Mäng](./6-space-game/solution/README.md)           |                   Elementide liigutamine ekraanil                    | Avastage, kuidas elemendid saavad liikumise, kasutades kartesisüsteemi koordinaate ja Canvas API-d                                            |                           [Elementide liigutamine](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Tähtede Mäng](./6-space-game/solution/README.md)           |                          Kokkupõrgete tuvastamine                           | Pane elemendid põrkuma ja reageerima üksteisele klahvivajutuste kaudu ning lisa jahutusfunktsioon jõudluse tagamiseks    |                              [Kokkupõrgete tuvastamine](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Tähtede Mäng](./6-space-game/solution/README.md)           |                             Skori pidamine                              | Tee mängu staatuse ja tulemuse põhjal arvutusi                                                                |                                    [Skori pidamine](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [Tähtede Mäng](./6-space-game/solution/README.md)           |                     Mängu lõpetamine ja taaskäivitamine                     | Õpi mängu lõpetamisest ja taaskäivitamisest, sh ressursside vabastamisest ja muutujate lähtestamisest                              |                                [Lõpu tingimus](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                 HTML mallid ja marsruudid veebirakenduses                 | Õpi, kuidas luua mitmeleheküljelise veebisaidi arhitektuuri raamistik, kasutades marsruute ja HTML malle                             |                            [HTML mallid ja marsruudid](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                  Sisselogimise ja registreerimise vormi loomine                   | Õpi vormide koostamist ja valideerimise käitlusrutiine                                                                          |                                           [Vormid](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                   Andmete toomise ja kasutamise meetodid                   | Kuidas andmed rakendusse voolavad ja sellest välja, kuidas neid toota, salvestada ja kustutada                                                 |                                            [Andmed](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 24  |         [Pangarakendus](./7-bank-project/solution/README.md)          |                      Oleku halduse kontseptsioonid                      | Õpi, kuidas rakendus säilitab olekut ja kuidas seda programmiliselt hallata                                                              |                                [Oleku haldus](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [Brauser/Vscode Kood](../../8-code-editor) | Töö VScode'iga | Õpi, kuidas kasutada koodiredaktorit| [Kasuta VScode koodiredaktorit](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [Tehisintellekti assistendid](./9-chat-project/README.md) | Töö AI-ga | Õpi, kuidas ehitada oma AI assistent | [AI assistendi projekt](./9-chat-project/README.md) | Chris |
 
-Programm õpetab JavaScripti, HTML-i ja CSS-i põhialuseid ning tänapäeva veebiarendajate kasutatavaid uusimaid tööriistu ja tehnikaid. Õpilastel on võimalus omandada praktilisi kogemusi, luues trükimängu, virtuaalse terrariumi, keskkonnasõbraliku brauserilaienduse, kosmosemängu ja äripangarakenduse. Kursuse lõpuks on õpilased omandanud põhjalikud teadmised veebiarendusest.  
+## 🏫 Pedagoogika
 
-> 🎓 Selle õppekava esimesi tunde saate läbida [õppeprogrammi](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) osana Microsoft Learnis!  
+Meie õppekava on loodud kahel olulisel pedagoogilisel põhimõttel:
+* projektipõhine õppimine
+* sagedased viktoriinid
 
-Tagades, et sisu vastab projektidele, muutub õppeprotsess õpilaste jaoks kaasahaaravamaks ja kontseptsioonide meeldejätmine paraneb. Oleme kirjutanud ka mitmeid JavaScripti põhialuste algtunde, et tutvustada kontseptsioone, koos videoga "[Algajate sari: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" videokogust, mille autorid on osaliselt panustanud ka sellesse õppekavasse.  
+Programm õpetab JavaScripti, HTML ja CSS põhialuseid ning tänapäevaste veebiarendajate poolt kasutatavaid uusimaid tööriistu ja tehnikaid. Õpilastel on võimalus saada praktilisi kogemusi, ehitades tippmängu, virtuaalse terrariumi, keskkonnasõbraliku brauserilaienduse, kosmosesissetungija stiilis mängu ja äriklientidele mõeldud pangarakenduse. Seeria lõpuks on õpilastel tugev ülevaade veebiarendusest.
 
-Lisaks aitab madala panusega viktoriin enne tundi suunata õpilase tähelepanu teema õppimisele, samas kui teine viktoriin pärast tundi tagab parema meeldejätmise. See õppekava on loodud paindlikuks ja lõbusaks ning seda saab läbida tervikuna või osaliselt. Projektid algavad väikestest ja muutuvad 12-nädalase tsükli lõpuks järjest keerukamaks.  
+> 🎓 Saad läbida selle õppekava esimesed õppetükid ka [õppeteede](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) kaudu Microsoft Learn platvormil!
 
-Kuigi oleme teadlikult vältinud JavaScripti raamistikke, et keskenduda veebiarendaja põhioskustele enne raamistikuga tutvumist, oleks selle õppekava lõpetamise järel hea järgmine samm õppida Node.js-i teise videokogu kaudu: "[Algajate sari: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".  
+Tagades sisu sobivuse projektidega on protsess õpilaste jaoks huvitavam ning kontseptsioonide meeldejätmine parem. Kirjutasime ka mitu alustavat õppetükki JavaScripti alustest, tutvustamaks kontseptsioone, koos videoga "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", mille autorite hulgas on ka selle õppekava kaasautoreid.
 
-> Külastage meie [käitumisjuhendit](CODE_OF_CONDUCT.md) ja [panustamise](CONTRIBUTING.md) juhiseid. Ootame teie konstruktiivset tagasisidet!  
+Lisaks aitab enne tundi toimuv madala panusega viktoriin seatud õpilase sihti uue teema õppimiseks, samas kui teise viktoriiniga pärast tundi tagatakse parem kontseptsioonide kinnistumine. See õppekava on loodud paindlikuks ja lõbusaks, ning seda saab võtta ka ositi. Projektid algavad lihtsatest ja muutuvad 12-nädalase tsükli lõpuks järjest keerukamaks.
 
-## 🧭 Võimalus kasutada võrguühenduseta  
+Kuigi oleme teadlikult vältinud JavaScripti raamistikest rääkimist, keskendudes veebiarendajale vajalikele põhioskustele enne raamistikku võtmist, oleks järgmiseks heaks sammuks selle õppekava lõpetamiseks Node.js õppimine, kasutades videotest koosnevat seeriat: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-Seda dokumentatsiooni saab kasutada võrguühenduseta, kasutades [Docsify](https://docsify.js.org/#/). Forkige see repo, [installige Docsify](https://docsify.js.org/#/quickstart) oma kohalikku arvutisse ja seejärel sisestage selle repo juurkaustas `docsify serve`. Veebisait avatakse pordil 3000 teie localhostis: `localhost:3000`.  
+> Vaata meie [käitumisjuhendit](CODE_OF_CONDUCT.md) ja [panustamise](CONTRIBUTING.md) juhiseid. Ootame sinu konstruktiivset tagasisidet!
 
-## 📘 PDF  
 
-Kõigi õppetundide PDF-i leiate [siit](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).  
+## 🧭 Võimalus vajalike materjalide kasutamiseks ka offline
 
-## 🎒 Muud kursused  
+Seda dokumentatsiooni saab kasutada ka offline, kasutades [Docsify](https://docsify.js.org/#/). Kopeeri see repositoorium, paigalda [Docsify](https://docsify.js.org/#/quickstart) oma kohalikusse arvutisse ja siis selle repositooriumi juurkaustas tipi `docsify serve`. Veebileht avaneb aadressil port 3000 kaudu sinu kohalikus masinas: `localhost:3000`.
 
-Meie meeskond koostab ka teisi kursusi! Vaadake:  
+## 📘 PDF
 
-- [MCP algajatele](https://aka.ms/mcp-for-beginners)  
-- [Edge AI algajatele](https://aka.ms/edgeai-for-beginners)  
-- [AI agendid algajatele](https://aka.ms/ai-agents-beginners)  
-- [Generatiivne AI algajatele .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet)  
-- [Generatiivne AI JavaScriptiga](https://github.com/microsoft/generative-ai-with-javascript)  
-- [Generatiivne AI Javaga](https://github.com/microsoft/Generative-AI-for-beginners-java)  
-- [AI algajatele](https://aka.ms/ai-beginners)  
-- [Andmeteadus algajatele](https://aka.ms/datascience-beginners)  
-- [ML algajatele](https://aka.ms/ml-beginners)  
-- [Küberturvalisus algajatele](https://github.com/microsoft/Security-101)  
-- [Veebiarendus algajatele](https://aka.ms/webdev-beginners)  
-- [IoT algajatele](https://aka.ms/iot-beginners)  
-- [XR Arendamine Algajatele](https://github.com/microsoft/xr-development-for-beginners)  
-- [GitHub Copiloti Valdamine Agentlikuks Kasutamiseks](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)  
-- [GitHub Copiloti Valdamine C#/.NET Arendajatele](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers)  
-- [Vali Oma Copiloti Seiklus](https://github.com/microsoft/CopilotAdventures)  
+Kõikidest õppetükkidest PDF on leitav [siit](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
-## Abi Saamine  
 
-Kui jääd hätta või sul on küsimusi AI rakenduste loomise kohta, liitu:  
+## 🎒 Teised kursused
+Meie meeskond toodab ka teisi kursusi! Vaata lähemalt:
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)  
-
-Kui sul on tagasisidet toodete kohta või esineb vigu arendamisel, külasta:  
-
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)  
-
-## Litsents  
-
-See repositoorium on litsentseeritud MIT litsentsi alusel. Lisateabe saamiseks vaata [LICENSE](../../LICENSE) faili.  
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
+### LangChain
+[![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+### Azure / Edge / MCP / Agendid
+[![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI Agents for Beginners](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Generatiivse tehisintellekti seeria
+[![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### Põhiline õppimine
+[![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+
+---
+
+### CoPiloti seeria
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
+
+## Abi saamine
+
+Kui jääd hätta või sul on küsimusi AI-rakenduste loomise kohta, liitu teiste õppijate ja kogenud arendajatega MCP aruteludes. See on toetav kogukond, kus küsimused on teretulnud ja teadmisi jagatakse vabalt.
+
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
+
+Kui sul on toote tagasisidet või ehitamisel esineb vigu, külasta:
+
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
+## Litsents
+
+See hoidla on litsentseeritud MIT litsentsi alusel. Lisateabe saamiseks vaata faili [LICENSE](../../LICENSE).
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastutusest loobumine**:  
+See dokument on tõlgitud kasutades tehisintellekti tõlke teenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame tagada tõlkete täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
