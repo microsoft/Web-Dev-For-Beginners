@@ -1,25 +1,109 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a0c78d1dd9d1acdbf7f52e7cc3ebe1a7",
-  "translation_date": "2025-10-11T12:21:42+00:00",
+  "original_hash": "25b8d28b8531352d4eb67291fd7824c4",
+  "translation_date": "2026-01-08T09:23:16+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/assignment.md",
   "language_code": "et"
 }
 -->
-# Kasuta API-d
+# Hangi API
+
+## Ülevaade
+
+API-d avavad lõputud võimalused loovaks veebi arendamiseks! Selles ülesandes valid välise API ja ehitad brauserilaiendi, mis lahendab reaalse probleemi või pakub kasutajatele väärtuslikku funktsionaalsust.
 
 ## Juhised
 
-API-dega mängimine võib olla väga lõbus. Siin on [paljude tasuta API-de nimekiri](https://github.com/public-apis/public-apis). Vali üks API ja loo brauserilaiendus, mis lahendab mingi probleemi. See võib olla nii väike probleem nagu lemmikloomapiltide puudus (proovi näiteks [dog CEO API-d](https://dog.ceo/dog-api/)) või midagi suuremat – naudi protsessi!
+### 1. samm: vali oma API
+Vali API sellest kureeritud [tasuliste avalike API-de nimekirjast](https://github.com/public-apis/public-apis). Mõtle nende kategooriate peale:
+
+**Populaarsed valikud algajatele:**
+- **Meelelahutus**: [Dog CEO API](https://dog.ceo/dog-api/) juhuslike koerte piltide jaoks
+- **Ilm**: [OpenWeatherMap](https://openweathermap.org/api) praeguse ilmaandmete jaoks
+- **Tsitaadid**: [Quotable API](https://quotable.io/) inspireerivate tsitaatide jaoks
+- **Uudised**: [NewsAPI](https://newsapi.org/) praeguste pealkirjade jaoks
+- **Lõbusad faktid**: [Numbers API](http://numbersapi.com/) huvitavate numbrifaktide jaoks
+
+### 2. samm: planeeri oma laiend
+Enne kodeerimist vasta neile planeerimisküsimustele:
+- Millise probleemi sinu laiend lahendab?
+- Kes on sinu sihtkasutaja?
+- Milliseid andmeid salvestad kohalikku salvestusse?
+- Kuidas käsitled API rikkeid või kasutuspiiranguid?
+
+### 3. samm: ehita oma laiend
+Sinu laiend peaks sisaldama:
+
+**Nõutavad funktsioonid:**
+- Vormisisendid vajalike API parameetrite jaoks
+- API integratsioon koos korraliku veahaldusega
+- Kohalik salvestus kasutaja eelistuste või API võtmete jaoks
+- Puhas, reageeriv kasutajaliides
+- Laadimise seisundid ja kasutajate tagasiside
+
+**Koodi nõuded:**
+- Kasuta kaasaegseid JavaScripti (ES6+) funktsioone
+- Rakenda async/await API kutsumiste jaoks
+- Sisalda korralik veahaldus try/catch plokkidega
+- Lisa sisukad kommentaarid oma koodi selgitamiseks
+- Järgi ühtlast koodi vormistust
+
+### 4. samm: testi ja lihvi
+- Testi oma laiendit erinevate sisenditega
+- Käsitle äärejuhtumeid (puuduv internet, vigased API vastused)
+- Veendu, et laiend töötab ka pärast brauseri taaskäivitust
+- Lisa kasutajasõbralikud veateated
+
+## Boonus väljakutsed
+
+Viige oma laiend järgmisele tasemele:
+- Lisa mitu API lõpp-punkti rikkaliku funktsionaalsuse jaoks
+- Rakenda andmete vahemällu salvestamist API kutsude vähendamiseks
+- Loo klaviatuuri otseteed tavapäraste tegevuste jaoks
+- Lisa andmete eksportimise/importimise funktsioonid
+- Rakenda kasutaja kohandamise võimalusi
+
+## Esitamise nõuded
+
+1. **Töötav brauserilaiend**, mis edukalt integreerub valitud API-ga
+2. **README fail**, mis selgitab:
+   - Millise API sa valisid ja miks
+   - Kuidas paigaldada ja kasutada laiendit
+   - Mis tahes API võtmed või seadistused
+   - Kuvatõmmised laiendi töös
+3. **Puhas, kommenteeritud kood**, mis järgib kaasaegseid JavaScripti parimaid tavasid
 
 ## Hindamiskriteeriumid
 
-| Kriteerium | Näidislik                                                                  | Piisav                                 | Vajab Parandamist       |
-| ---------- | -------------------------------------------------------------------------- | -------------------------------------- | ----------------------- |
-|            | Esitatud on täielik brauserilaiendus, mis kasutab ülaltoodud nimekirja API-d | Esitatud on osaline brauserilaiendus  | Esitatud lahenduses on vigu |
+| Kriteerium | Suurepärane (90-100%) | Hea (80-89%) | Arendamisel (70-79%) | Algaja (60-69%) |
+|------------|-----------------------|--------------|----------------------|-----------------|
+| **API integratsioon** | Täiuslik API integratsioon koos põhjaliku veahalduse ja äärejuhtude käsitlemisega | Edukas API integratsioon põhiveahaldusega | API töötab, aga veahaldus piiratud | API integratsioonis olulised probleemid |
+| **Koodi kvaliteet** | Puhas, hästi kommenteeritud kaasaegne JavaScript, mis järgib parimaid tavasid | Hea koodistruktuur sobivate kommentaaridega | Kood töötab, kuid vajab paremat organiseerimist | Kehv koodi kvaliteet minimaalsete kommentaaridega |
+| **Kasutajakogemus** | Sile kasutajaliides koos suurepäraste laadimisseisundite ja kasutajate tagasisidega | Hea liides põhikasutajate tagasisidega | Põhiline liides, mis toimib adekvaatselt | Kehv kasutajakogemus, segane liides |
+| **Kohalik salvestus** | Arukas kohaliku salvestuse kasutus andmete valideerimise ja haldusega | Korralik kohaliku salvestuse rakendus võtmefunktsioonide jaoks | Põhjalik kohalik salvestuse rakendus | Minimaalne või vale kohaliku salvestuse kasutus |
+| **Dokumentatsioon** | Ulatuslik README koos seadistusjuhiste ja kuvatõmmistega | Hea dokumentatsioon, mis katab enamuse nõuetest | Põhidokumentatsioon, millelt mõned detailid puuduvad | Kehv või puuduv dokumentatsioon |
+
+## Alustamiseks näpunäited
+
+1. **Alusta lihtsalt**: vali API, mis ei vaja keerulist autentimist
+2. **Loe dokumentatsiooni**: mõista põhjalikult valitud API lõpp-punkte ja vastuseid
+3. **Planeeri oma kasutajaliidest**: joonista oma laiendi kasutajaliidese visand enne kodeerimist
+4. **Testi sageli**: ehita järk-järgult ja testi iga funktsiooni lisamisel
+5. **Käsitle vigu**: arvesta alati, et API kutsed võivad ebaõnnestuda ning planeeri vastavalt
+
+## Ressursid
+
+- [Brauserilaiendite dokumentatsioon](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions)
+- [Fetch API juhend](https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch)
+- [Kohaliku salvestuse juhend](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
+- [JSON-i analüüs ja käsitlemine](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+
+Loo midagi kasulikku ja loovat mängides! 🚀
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Tähelepanek**:
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi me püüdleme täpsuse poole, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks käsitleda autoriteetse allikana. Olulise teabe puhul soovitatakse kasutada professionaalset inimese tõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

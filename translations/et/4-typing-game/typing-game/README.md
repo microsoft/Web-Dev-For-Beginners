@@ -1,88 +1,154 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1b0aeccb600f83c603cd70cb42df594d",
-  "translation_date": "2025-10-11T12:08:54+00:00",
+  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
+  "translation_date": "2026-01-08T09:43:58+00:00",
   "source_file": "4-typing-game/typing-game/README.md",
   "language_code": "et"
 }
 -->
 # Mängu loomine sündmuste abil
 
-## Loengu-eelne viktoriin
+Kas oled kunagi mõelnud, kuidas veebisaidid teavad, millal sa klõpsad nuppu või tippid tekstikasti? See on sündmustepõhise programmeerimise võlu! Mis oleks parem viis selle olulise oskuse õppimiseks, kui ehitada midagi kasulikku – tippimiskiiruse mäng, mis reageerib iga su tehtud klahvivajutuse peale.
 
-[Loengu-eelne viktoriin](https://ff-quizzes.netlify.app/web/quiz/21)
+Sa näed ise, kuidas veebibrauserid "räägivad" su JavaScript koodiga. Iga kord, kui sa klõpsad, tipsid või lohistad hiirt, saadab brauser sinu koodile väikeseid sõnumeid (me nimetame neid sündmusteks), ja sina otsustad, kuidas reageerida!
+
+Siin lõpus oled ehitanud pärismaailma tippimismängu, mis jälgib su kiirust ja täpsust. Veelgi olulisem on see, et sa saad aru põhimõistetest, mis juhivad iga interaktiivset veebisaiti, mida sa oled kasutanud. Hakkame pihta!
+
+## Enne loengut test
+
+[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/21)
 
 ## Sündmustepõhine programmeerimine
 
-Veebirakenduse loomisel pakume kasutajale graafilist kasutajaliidest (GUI), mille abil ta saab meie loodud rakendusega suhelda. Kõige tavalisem viis brauseriga suhtlemiseks on klõpsamine ja erinevates elementides kirjutamine. Väljakutse, millega arendajana silmitsi seisame, on see, et me ei tea, millal kasutaja neid toiminguid teeb!
+Mõtle oma lemmikrakendusele või veebisaidile – mis teeb selle elavaks ja reageerivaks? Kõik saab alguse sellest, kuidas see reageerib su tegevustele! Iga koputus, klõps, libistus või klahvivajutus tekitab seda, mida me nimetame "sündmuseks", ja just siin toimub veebiarenduse tõeline võlu.
 
-[Sündmustepõhine programmeerimine](https://en.wikipedia.org/wiki/Event-driven_programming) on programmeerimisviis, mida vajame oma GUI loomiseks. Kui seda fraasi veidi lahti mõtestada, näeme, et keskne sõna siin on **sündmus**. [Sündmus](https://www.merriam-webster.com/dictionary/event), Merriam-Websteri järgi, on defineeritud kui "midagi, mis juhtub". See kirjeldab meie olukorda täiuslikult. Me teame, et midagi juhtub, millele tahame koodi täitmisega reageerida, kuid me ei tea, millal see juhtub.
+See teeb veebiprogrammeerimise väga huvitavaks: me ei tea kunagi, millal keegi selle nupu klõpsab või tekstikasti hakkab tippima. Nad võivad klõpsata kohe, oodata viis minutit või võib-olla ei klõpsa üldse! See ettearvamatus nõuab, et me mõtleksime teisiti koodi kirjutamisele.
 
-Viis, kuidas me tähistame koodiosa, mida tahame täita, on funktsiooni loomine. Kui mõtleme [protseduuripõhisele programmeerimisele](https://en.wikipedia.org/wiki/Procedural_programming), kutsutakse funktsioone kindlas järjekorras. Sama kehtib ka sündmustepõhise programmeerimise puhul. Erinevus seisneb selles, **kuidas** funktsioone kutsutakse.
+Selle asemel, et kirjutada kood, mis jookseb ülevalt alla nagu retsept, kirjutame koodi, mis ootab kannatlikult, kuni midagi juhtub. See on nagu 1800. aastate telegraafitöötajad, kes istusid oma masinate kõrval valmis, et kohe reageerida, kui sõnum traat läbi tuli.
 
-Sündmuste (nupu klõpsamine, kirjutamine jne) käsitlemiseks registreerime **sündmuste kuulajad**. Sündmuste kuulaja on funktsioon, mis ootab sündmuse toimumist ja täidab koodi vastuseks. Sündmuste kuulajad võivad värskendada kasutajaliidest, teha serverikõnesid või teha muid vajalikke toiminguid vastuseks kasutaja tegevusele. Sündmuste kuulaja lisamiseks kasutame [addEventListener](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener) ja anname ette funktsiooni, mida täita.
+Mis on siis täpsemalt "sündmus"? Lihtsalt öeldes: see on midagi, mis juhtub! Kui sa klõpsad nuppu – see on sündmus. Kui sa tippid tähe – see on sündmus. Kui sa liigutad hiirt – see on teine sündmus.
 
-> **NOTE:** Tasub rõhutada, et sündmuste kuulajate loomiseks on mitmeid viise. Võite kasutada anonüümseid funktsioone või luua nimelisi funktsioone. Võite kasutada erinevaid otseteid, näiteks määrata `click` omaduse või kasutada `addEventListener`. Meie harjutuses keskendume `addEventListener`-ile ja anonüümsetele funktsioonidele, kuna see on tõenäoliselt kõige levinum tehnika, mida veebiarendajad kasutavad. See on ka kõige paindlikum, kuna `addEventListener` töötab kõigi sündmuste puhul ja sündmuse nime saab anda parameetrina.
+Sündmustepõhine programmeerimine laseb meil seadistada koodi kuulama ja reageerima. Loome spetsiaalsed funktsioonid, mida nimetatakse **sündmusekõrvutajateks (event listeners)**, mis ootavad kannatlikult konkreetsete sündmuste juhtumist ja reageerivad kohe, kui see juhtub.
+
+Mõtle sündmusekõrvutaja peale nagu uksekella oma koodi jaoks. Sa seadistad uksekella (`addEventListener()`), ütled, millist heli kuulata (näiteks 'click' või 'keypress'), ja määrad, mis peaks juhtuma, kui keegi selle helistab (sinu kohandatud funktsioon).
+
+**Nii toimivad sündmusekõrvutajad:**
+- **Kuulavad** konkreetseid kasutaja tegevusi nagu klõpsud, klahvivajutused või hiire liigutused
+- **Käivitatakse** sinu kohandatud kood, kui määratud sündmus toimub
+- **Reageerivad** kohe kasutaja interaktsioonidele, luues sujuva kogemuse
+- **Haldavad** mitut sündmust sama elemendi peal erinevate kõrvutajate kaudu
+
+> **MÄRKUS:** Tasub rõhutada, et sündmusekõrvutajaid on mitut moodi luua. Võid kasutada anonüümseid funktsioone või luua nimelisi. Sa võid kasutada erinevaid otseteid, nagu `click` omaduse seadistamine või `addEventListener()`. Meie ülesandes keskendume `addEventListener()` ja anonüümsete funktsioonide kasutamisele, kuna see on tõenäoliselt kõige tavalisem tehnika veebiarendajate seas. Samuti on see kõige paindlikum, sest `addEventListener()` töötab kõigi sündmustega ja sündmuse nimi saab olla parameetrina.
 
 ### Levinumad sündmused
 
-Rakenduse loomisel on saadaval [kümneid sündmusi](https://developer.mozilla.org/docs/Web/Events), mida saate kuulata. Põhimõtteliselt tõstab iga kasutaja tegevus lehel esile sündmuse, mis annab teile palju võimalusi tagada, et nad saavad soovitud kogemuse. Õnneks vajate tavaliselt ainult väikest hulka sündmusi. Siin on mõned levinumad (sealhulgas kaks, mida kasutame oma mängu loomisel):
+Kuigi veebibrauserid pakuvad mitmekümneid erinevaid sündmusi, mida kuulata, toetuvad enamus interaktiivseid rakendusi vaid mõnele olulisemale sündmusele. Nende põhielementide mõistmine annab sulle vundamendi keerukamate kasutajaliideste loomiseks.
 
-- [click](https://developer.mozilla.org/docs/Web/API/Element/click_event): Kasutaja klõpsas millelgi, tavaliselt nupul või hüperlingil
-- [contextmenu](https://developer.mozilla.org/docs/Web/API/Element/contextmenu_event): Kasutaja klõpsas parema hiireklahviga
-- [select](https://developer.mozilla.org/docs/Web/API/Element/select_event): Kasutaja valis teksti
-- [input](https://developer.mozilla.org/docs/Web/API/Element/input_event): Kasutaja sisestas teksti
+On olemas [kümneid sündmusi](https://developer.mozilla.org/docs/Web/Events), mida saad rakenduses kuulata. Peaaegu iga kasutaja tegevus lehel tekitab sündmuse, mis annab sulle palju võimu tagada soovitud kasutajakogemus. Õnneks vajad sa tavaliselt vaid väikest valikut sündmusi. Siin on mõned levinumad (sealhulgas kaks, mida kasutame oma mängu loomisel):
+
+| Sündmus | Kirjeldus | Levinumad kasutusjuhtumid |
+|---------|-----------|----------------------------|
+| `click` | Kasutaja klõpsas millegi peal | Nupud, lingid, interaktiivsed elemendid |
+| `contextmenu` | Kasutaja klõpsas parema hiirenupuga | Kohandatud paremklõpsumenüüd |
+| `select` | Kasutaja märgistas teksti | Tekstiredigeerimine, kopeerimine |
+| `input` | Kasutaja sisestas teksti | Vormide valideerimine, reaalajas otsing |
+
+**Nende sündmustüüpide mõistmine:**
+- **Käivitub**, kui kasutajad suhtlevad konkreetsete elementidega sinu lehel
+- **Pakkuvad** detailset infot kasutaja tegevuse kohta sündmuse objektide kaudu
+- **Võimaldavad** sul luua vastutulelikke ja interaktiivseid veebiäppe
+- **Töötavad** järjekindlalt erinevates brauserites ja seadmetes
 
 ## Mängu loomine
 
-Loome mängu, et uurida, kuidas sündmused JavaScriptis töötavad. Meie mäng testib mängija kirjutamisoskust, mis on üks kõige alahinnatumaid oskusi, mida kõik arendajad peaksid omama. Me kõik peaksime harjutama oma kirjutamisoskust! Mängu üldine voog näeb välja järgmine:
+Nüüd, kui sa tead, kuidas sündmused töötavad, paneme selle teadmise praktikasse, luues midagi kasulikku. Loome tippimiskiiruse mängu, mis demonstreerib sündmuste käsitlemist ja aitab sul arendada olulist arendaja oskust.
 
-- Mängija klõpsab nuppu "Start" ja talle kuvatakse tsitaat, mida kirjutada
-- Mängija kirjutab tsitaadi nii kiiresti kui võimalik tekstikasti
-  - Kui iga sõna on lõpetatud, tõstetakse järgmine esile
-  - Kui mängija teeb kirjavea, muutub tekstikast punaseks
-  - Kui mängija lõpetab tsitaadi, kuvatakse edukuse sõnum koos kulunud ajaga
+Me hakkame looma mängu, et uurida, kuidas JavaScriptis sündmused töötavad. Meie mäng testib mängija tippimisoskust, mis on üks alahinnatud oskusi, mida iga arendaja peaks valdama. Huvitav fakt: klaviatuuripaigutus QWERTY, mida me tänapäeval kasutame, töötati tegelikult välja 1870. aastatel kirjutusmasinate jaoks – ja head tippimisoskused on programmeerijatele tänaseni väga väärtuslikud! Mängu üldine voog näeb välja järgmine:
 
-Hakkame oma mängu looma ja õpime sündmuste kohta!
+```mermaid
+flowchart TD
+    A[Mängija klikib Alusta] --> B[Juhuslik tsitaat kuvatakse]
+    B --> C[Mängija sisestab tekstikasti]
+    C --> D[Sõna lõpuni?]
+    D -->|Jah| E[Esile tõsta järgmine sõna]
+    D -->|Ei| F[Kuni nüüd korrektne?]
+    F -->|Jah| G[Hoia normaalset stiili]
+    F -->|Ei| H[Näita veast stiili]
+    E --> I[Tsitaat lõpetatud?]
+    I -->|Ei| C
+    I -->|Jah| J[Kuva edusõnum ajaga]
+    G --> C
+    H --> C
+```
+**Mäng töötab nii:**
+- **Algab**, kui mängija klõpsab start nupul ja kuvab juhusliku tsitaadi
+- **Jälgib** mängija tippimise edenemist sõna haaval reaalajas
+- **Tõstab esile** praeguse sõna, et juhatada mängija tähelepanu
+- **Anname** kohese visuaalse tagasiside tippimisvigade kohta
+- **Arvutab** ja kuvab koguaega, kui tsitaat on lõpetatud
 
-### Failistruktuur
+Teeme ära ja õpime sündmuste kohta!
 
-Meil on vaja kokku kolme faili: **index.html**, **script.js** ja **style.css**. Alustame nende seadistamisest, et muuta töö lihtsamaks.
+### Failide struktuur
 
-- Looge oma töö jaoks uus kaust, avades konsooli või terminali akna ja sisestades järgmise käsu:
+Enne kui hakkame koodi kirjutama, tehkem endale selgeks failistruktuur! Alates algusest korras olev failistruktuur säästab hiljem peavalu ja teeb su projekti professionaalsemaks. 😊
+
+Hoidke asjad lihtsana kolme failiga: `index.html` meie lehe struktuuri jaoks, `script.js` kogu mängu loogika jaoks ja `style.css`, et kõik ilus välja näeks. See on klassikaline trioon, mis paneb suurema osa veebist tööle!
+
+**Loo uus kaust oma töö jaoks, avades konsooli või terminali ning käivitades järgmise käsu:**
 
 ```bash
-# Linux or macOS
+# Linux või macOS
 mkdir typing-game && cd typing-game
 
 # Windows
 md typing-game && cd typing-game
 ```
 
-- Avage Visual Studio Code
+**Need käsud teevad järgmist:**
+- **Loovad** uue kausta nimega `typing-game` sinu projekti failide jaoks
+- **Liiguvad** automaatselt äsja loodud kausta
+- **Seadistavad** puhta tööruumi sinu mänguarenduseks
+
+**Ava Visual Studio Code:**
 
 ```bash
 code .
 ```
 
-- Lisage kausta Visual Studio Code'is kolm faili järgmiste nimedega:
-  - index.html
-  - script.js
-  - style.css
+**See käsk:**
+- **Avab** Visual Studio Code'i praeguses kaustas
+- **Laeb** sinu projekti kausta redaktoris
+- **Pakkuvab** juurdepääsu kõikidele vajalikele arendusvahenditele
+
+**Lisa Visual Studio Codes kausta kolm faili järgmiste nimedega:**
+- `index.html` – sisaldab mängu struktuuri ja sisu
+- `script.js` – haldab kogu mängu loogikat ja sündmusekõrvutajaid
+- `style.css` – määratleb visuaalse välimuse ja stiilid
 
 ## Kasutajaliidese loomine
 
-Kui uurime nõudeid, teame, et vajame HTML-lehel mitmeid elemente. See on natuke nagu retsept, kus vajame mõningaid koostisosi:
+Korteri ehitamiseks leiame nüüd ruumi, kus kogu meie mängutegelane toimub! Mõtle sellele kui kosmoselaeva juhtpaneeli kujundamine – me peame tagama, et kõik, mida mängijad vajavad, on täpselt seal, kus nad seda ootavad.
 
-- Koht, kus kuvada tsitaati, mida kasutaja peaks kirjutama
-- Koht, kus kuvada sõnumeid, näiteks edukuse sõnumit
-- Tekstikast kirjutamiseks
-- Start-nupp
+Vaatame, mida meie mäng tegelikult vajab. Kui sa mängiksid tippimismängu, mida sa tahaksid ekraanil näha? Siin on, mida me vajame:
 
-Igal neist peab olema ID, et saaksime nendega JavaScriptis töötada. Samuti lisame viited CSS- ja JavaScripti failidele, mida loome.
+| Kasutajaliidese element | Eesmärk | HTML element |
+|-------------------------|---------|--------------|
+| Tsitaadi kuvamine       | Kuvab teksti, mida tippida | `<p>` koos `id="quote"` |
+| Sõnumiala              | Kuvab staatuse ja edusõnumeid | `<p>` koos `id="message"` |
+| Tekstisisestus         | Koht, kuhu mängijad tsitaati tipivad | `<input>` koos `id="typed-value"` |
+| Start-nupp             | Algatab mängu | `<button>` koos `id="start"` |
 
-Looge uus fail nimega **index.html**. Lisage järgmine HTML:
+**Kasutajaliidese struktuuri mõistmine:**
+- **Organiseerib** sisu loogiliselt ülevalt alla
+- **Määrab** unikaalsed ID-d elementidele JavaScripti sihtimiseks
+- **Pakub** selget visuaalset hierarhiat parema kasutajakogemuse jaoks
+- **Sisaldab** semantilisi HTML elemente ligipääsetavuse tagamiseks
+
+Igaühel neist peab olema ID, et saaksime nendega meie JavaScriptis töötada. Lisame ka CSS ja JavaScripti failide viited, mida hakkame looma.
+
+Loo uus fail nimega `index.html`. Lisa järgnev HTML:
 
 ```html
 <!-- inside index.html -->
@@ -105,26 +171,52 @@ Looge uus fail nimega **index.html**. Lisage järgmine HTML:
 </html>
 ```
 
+**Mida see HTML struktuur saavutab:**
+- **Seob** CSS stiililehe `<head>` sees stiilimiseks
+- **Loob** selge pealkirja ja kasutaja juhised
+- **Määrab** reservalapeatavad lõigud konkreetsete ID-dega dünaamiliseks sisuks
+- **Lisab** tekstivälja ligipääsetavuse atribuutidega
+- **Pakub** start-nuppu mängu käivitamiseks
+- **Laeb** JavaScripti faili lõpus optimaalseks jõudluseks
+
 ### Rakenduse käivitamine
 
-Alati on kõige parem arendada iteratiivselt, et näha, kuidas asjad välja näevad. Käivitame oma rakenduse. Visual Studio Code'i jaoks on suurepärane laiendus nimega [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), mis hostib teie rakendust kohapeal ja värskendab brauserit iga kord, kui salvestate.
+Rakenduse tihe testimine arenduse käigus aitab vigu varakult avastada ja näha oma edenemist reaalajas. Live Server on hindamatu tööriist, mis värskendab brauserit automaatselt iga kord, kui salvestad muudatuse, muutes arendamise palju tõhusamaks.
 
-- Installige [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), järgides linki ja klõpsates **Install**
-  - Brauser palub teil avada Visual Studio Code'i ja seejärel Visual Studio Code palub teil installimist kinnitada
-  - Taaskäivitage Visual Studio Code, kui seda palutakse
-- Kui installimine on lõpetatud, klõpsake Visual Studio Code'is Ctrl-Shift-P (või Cmd-Shift-P), et avada käsupalett
-- Sisestage **Live Server: Open with Live Server**
-  - Live Server alustab teie rakenduse hostimist
-- Avage brauser ja navigeerige aadressile **https://localhost:5500**
-- Nüüd peaksite nägema loodud lehte!
+On alati parim arendada järjestikku, et näha, kuidas asjad välja näevad. Käivitame oma rakenduse. Visual Studio Code'ile on olemas imeline laiendus nimega [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), mis majutab su rakendust lokaalselt ja värskendab brauserit iga kord, kui fail salvestatakse.
 
-Lisame veidi funktsionaalsust.
+**Paigalda [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon), järgides linki ja klikkides Install:**
 
-## CSS-i lisamine
+**Paigaldamise käigus juhtub:**
+- **Avab** brauseri Visual Studio Code'i kasutajaliidesele
+- **Juhendab** sind laienduse paigaldamise protsessis
+- **Võib nõuda** Visual Studio Code'i taaskäivitamist seadistuse lõpetamiseks
 
-Kui meie HTML on loodud, lisame CSS-i põhilise kujunduse jaoks. Peame esile tõstma sõna, mida mängija peaks kirjutama, ja värvima tekstikasti, kui see, mida nad on kirjutanud, on vale. Teeme seda kahe klassi abil.
+**Kui paigaldatud, vajuta Visual Studio Codes Ctrl-Shift-P (või Cmd-Shift-P), et avada käsupalett:**
 
-Looge uus fail nimega **style.css** ja lisage järgmine süntaks.
+**Käsupaleti mõistmine:**
+- **Pakub** kiiret juurdepääsu kõigile VS Code käskudele
+- **Otsib** käskusid juba trükkimise ajal
+- **Pakkub** klaviatuuri otseteid arenduse kiirendamiseks
+
+**Tippige "Live Server: Open with Live Server":**
+
+**Mida Live Server teeb:**
+- **Käivitab** kohaliku arendusserveri sinu projekti jaoks
+- **Värskendab** automaatselt brauserit, kui salvestad faile
+- **Serveerib** su faile lokaalsest URL-ist (tavaliselt `localhost:5500`)
+
+**Ava brauser ja navigeeri aadressile `https://localhost:5500`:**
+
+Sa peaksid nüüd nägema enda loodud lehte! Lisame nüüd funktsionaalsuse.
+
+## Lisa CSS
+
+Nüüd teeme asjad ilusaks! Visuaalne tagasiside on olnud kasutajaliideste jaoks oluline juba arvutamise algusaegadest saati. 1980ndatel avastati, et kohene visuaalne tagasiside parandab drastiliselt kasutaja sooritust ja vähendab vigu. Just selle me nüüd ka loome.
+
+Meie mäng peab olema kristallselge, mis toimub. Mängijad peaksid kohe teadma, millist sõna nad peaksid tippima, ja kui nad teevad vea, siis peaksid nad seda kohe ka nägema. Teeme lihtsa, ent efektiivse stiili:
+
+Loo uus fail nimega `style.css` ja lisa järgmine süntaks.
 
 ```css
 /* inside style.css */
@@ -138,40 +230,61 @@ Looge uus fail nimega **style.css** ja lisage järgmine süntaks.
 }
 ```
 
-✅ CSS-i osas saate oma lehe paigutada vastavalt oma soovile. Võtke veidi aega ja tehke leht visuaalselt atraktiivsemaks:
+**Mida need CSS klassid teevad:**
+- **Tõstavad esile** praeguse sõna kollase taustavärviga selgeks visuaalseks juhiseks
+- **Näitavad** tippimisvigu helekorallikirju taustaga
+- **Annavad** kohe Tagasisidet ilma kasutaja tippimisteekonda segamata
+- **Kasuttavad** kontrastseid värve ligipääsetavuse ja selge visuaalse kommunikatsiooni jaoks
 
-- Valige erinev font
-- Värvige pealkirjad
-- Muutke elementide suurust
+✅ CSS-i puhul võid oma lehte kujundada, kuidas soovid. Võta veidi aega ja tee lehekülg visuaalselt atraktiivsemaks:
+
+- Vali mõni muu font
+- Värvusta päised
+- Muuda elementide suurusi
 
 ## JavaScript
 
-Kui meie kasutajaliides on loodud, keskendume JavaScriptile, mis pakub loogikat. Jagame selle mitmeks etapiks:
+Siin läheb asi huvitavaks! 🎉 Meil on meie HTML struktuur ja CSS stiilid, aga praegu on meie mäng nagu ilus auto ilma mootorita. JavaScript on see mootor – see teeb kõik tegelikult tööle ja reageerib mängijate tegevusele.
 
-- [Konstantide loomine](../../../../4-typing-game/typing-game)
-- [Sündmuste kuulaja mängu alustamiseks](../../../../4-typing-game/typing-game)
-- [Sündmuste kuulaja kirjutamiseks](../../../../4-typing-game/typing-game)
+Siin näed palju oma loomingut ellu ärkamas. Võtame selle sammhaaval, et mitte üle jõu käia:
 
-Kuid kõigepealt looge uus fail nimega **script.js**.
+| Samm | Eesmärk | Mida õpid |
+|------|---------|-----------|
+| [Lisa konstandid](../../../../4-typing-game/typing-game) | Määratle tsitaadid ja DOM viited | Muutuja haldus ja DOM valik |
+| [Sündmusekõrvutaja mängu alustamiseks](../../../../4-typing-game/typing-game) | Käivita mängu initsialiseerimine | Sündmuste käsitlemine ja UI uuendused |
+| [Sündmusekõrvutaja tippimiseks](../../../../4-typing-game/typing-game) | Töötle kasutaja sisendit reaalajas | Sisendi valideerimine ja dünaamiline tagasiside |
 
-### Konstantide lisamine
+**See struktureeritud lähenemine aitab sul:**
+- **Korraldada** oma koodi loogilisteks ja hallatavateks osadeks
+- **Luua** funktsionaalsust samm-sammult, et oleks lihtsam siluda vigu
+- **Mõista**, kuidas erinevad rakenduse osad omavahel töötavad
+- **Luua** taaskasutatavaid mustreid tulevikuprojektide jaoks
 
-Meil on vaja mõningaid elemente, et muuta programmeerimine lihtsamaks. Jällegi, nagu retseptis, on siin, mida me vajame:
+Aga esmalt loo uus fail nimega `script.js`.
 
-- Massiiv kõigi tsitaatide loendiga
-- Tühi massiiv praeguse tsitaadi sõnade salvestamiseks
-- Koht, kus salvestada sõna indeks, mida mängija praegu kirjutab
-- Aeg, millal mängija klõpsas starti
+### Lisa konstandid
 
-Samuti vajame viiteid kasutajaliidese elementidele:
+Enne kui sukelduda tegevusse, kogume kokku kõik vajalikud ressursid! Nagu NASA missioonijuhtimine seab kõik oma jälgimissüsteemid enne starti valmis, on palju lihtsam, kui sul on kõik ette valmistatud. See säästab meid hilisema otsimise ja kirjavigade otsimise eest.
 
-- Tekstikast (**typed-value**)
-- Tsitaadi kuvamine (**quote**)
-- Sõnum (**message**)
+Siin on, mida peame esmalt seadistama:
+
+| Andmetüüp | Eesmärk | Näide |
+|-----------|---------|-------|
+| Tsitaatide massiiv | Salvestab kõik mängu võimalikud tsitaadid | `['Quote 1', 'Quote 2', ...]` |
+| Sõnade massiiv | Jagab praeguse tsitaadi üksikuteks sõnadeks | `['When', 'you', 'have', ...]` |
+| Sõna indeks | Jälgib, millist sõna mängija parasjagu kirjutab | `0, 1, 2, 3...` |
+| Algusaeg | Arvutab möödunud aja punktisüsteemi jaoks | `Date.now()` |
+
+**Meil on vaja ka viiteid meie kasutajaliidese elementidele:**
+| Element | ID | Eesmärk |
+|---------|----|---------|
+| Teksti sisend | `typed-value` | Kus mängijad kirjutavad |
+| Tsitaadi kuvamine | `quote` | Kuvab tsitaadi, mida kirjutada |
+| Sõnumiala | `message` | Kuvab oleku uuendusi |
 
 ```javascript
-// inside script.js
-// all of our quotes
+// skripti.js sees
+// kõik meie tsitaadid
 const quotes = [
     'When you have eliminated the impossible, whatever remains, however improbable, must be the truth.',
     'There is nothing more deceptive than an obvious fact.',
@@ -181,173 +294,320 @@ const quotes = [
     'Nothing clears up a case so much as stating it to another person.',
     'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
 ];
-// store the list of words and the index of the word the player is currently typing
+// salvesta sõnade nimekiri ja sõna indeks, mida mängija hetkel kirjutab
 let words = [];
 let wordIndex = 0;
-// the starting time
+// algusaeg
 let startTime = Date.now();
-// page elements
+// lehe elemendid
 const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
 ```
 
-✅ Lisage oma mängule rohkem tsitaate
+**Lähemalt, mida see kooditegur teeb:**
+- **Salvestab** Sherlock Holmesi tsitaatide massiivi kasutades `const`, kuna tsitaadid ei muutu
+- **Algatab** jälgimismuutujaid kasutades `let`, sest need väärtused muutuvad mängu jooksul
+- **Püüab kinni** os viited DOM elementidele kasutades `document.getElementById()` efektiivseks ligipääsuks
+- **Seadistab** aluse kogu mängu funktsionaalsusele selgete, kirjeldavate muutujate nimedega
+- **Korraldab** seotud andmeid ja elemente loogiliselt lihtsamaks koodi hoolduseks
 
-> **NOTE:** Saame elemente koodis igal ajal hankida, kasutades `document.getElementById`. Kuna viitame neile elementidele regulaarselt, väldime stringiliteralide kirjavigu, kasutades konstante. Raamistikud nagu [Vue.js](https://vuejs.org/) või [React](https://reactjs.org/) aitavad teil paremini hallata koodi tsentraliseerimist.
+✅ Lisa oma mängule julgesti rohkem tsitaate
 
-Võtke hetk, et vaadata videot `const`, `let` ja `var` kasutamise kohta.
+> 💡 **Nipp**: Saame elemente saada koodis igal ajal, kasutades `document.getElementById()`. Kuna me viitame neile elementidele regulaarselt, väldime kirjavigu stringikonstantide abil. Karkassid nagu [Vue.js](https://vuejs.org/) või [React](https://reactjs.org/) aitavad sul koodi paremini tsentraliseerida.
+>
+**Miks see lähenemine nii hästi töötab:**
+- **Väldib** õigekirjavigu, viidates elementidele korduvalt
+- **Parandab** koodi loetavust kirjeldavate konstantide nimede kaudu
+- **Võimaldab** paremat IDE tuge autokomplekteerimise ja veakontrolliga
+- **Lihtsustab** ümberkorraldust, kui elementide ID-d hiljem muutuvad
 
-[![Muutuja tüübid](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Muutuja tüübid")
+Võta hetk ning vaata videot `const`, `let` ja `var` kasutamisest
 
-> 🎥 Klõpsake ülaloleval pildil, et vaadata videot muutujatest.
+[![Muud tüüpi muutujad](https://img.youtube.com/vi/JNIXfGiDWM8/0.jpg)](https://youtube.com/watch?v=JNIXfGiDWM8 "Muud tüüpi muutujad")
 
-### Alustamisloogika lisamine
+> 🎥 Klõpsa ülaloleval pildil, et vaadata videot muutujatest.
 
-Mängu alustamiseks klõpsab mängija start-nuppu. Loomulikult me ei tea, millal nad starti klõpsavad. Siin tuleb mängu [sündmuste kuulaja](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener). Sündmuste kuulaja võimaldab meil oodata, et midagi juhtub (sündmus), ja täita koodi vastuseks. Meie puhul tahame täita koodi, kui kasutaja klõpsab starti.
+### Lisa käivitamise loogika
 
-Kui kasutaja klõpsab **start**, peame valima tsitaadi, seadistama kasutajaliidese ja seadistama praeguse sõna ja ajastuse jälgimise. Allpool on JavaScript, mida peate lisama; arutame seda pärast skriptiplokki.
+Siin läheb kõik paika! 🚀 Sa oled valmis kirjutama oma esimese tõelise sündmuse kuulaja ja see tunne, kui näed oma koodi reageerimas nupu klõpsule, on väga rahuldustpakkuv.
+
+Mõtle sellele: kuskil seal väljas klõpsab mängija "Start" nuppu ja su kood peab sellele valmis olema. Me ei tea, millal ta seda teeb – võib olla kohe, võib olla pärast kohvi – kuid kui ta seda teeb, ärkab sinu mäng ellu.
+
+Kui kasutaja klikib `start`, peame valima tsitaadi, seadistama kasutajaliidese ning alustama praeguse sõna ja aja jälgimist. Allpool on JavaScript, mida pead lisama; sellest räägime täpsemalt kohe pärast skripti plokki.
 
 ```javascript
-// at the end of script.js
+// skripti.js lõpus
 document.getElementById('start').addEventListener('click', () => {
-  // get a quote
+  // saada tsitaat
   const quoteIndex = Math.floor(Math.random() * quotes.length);
   const quote = quotes[quoteIndex];
-  // Put the quote into an array of words
+  // pane tsitaat sõnade massiivi
   words = quote.split(' ');
-  // reset the word index for tracking
+  // lähtesta sõna indeks jälgimiseks
   wordIndex = 0;
 
-  // UI updates
-  // Create an array of span elements so we can set a class
+  // kasutajaliidese uuendused
+  // loo span-elementide massiiv, et saaksime määrata klassi
   const spanWords = words.map(function(word) { return `<span>${word} </span>`});
-  // Convert into string and set as innerHTML on quote display
+  // muuda stringiks ja sea innerHTML tsitaadi kuvamisel
   quoteElement.innerHTML = spanWords.join('');
-  // Highlight the first word
+  // esile tõsta esimene sõna
   quoteElement.childNodes[0].className = 'highlight';
-  // Clear any prior messages
+  // tühjenda kõik varasemad sõnumid
   messageElement.innerText = '';
 
-  // Setup the textbox
-  // Clear the textbox
+  // seadista tekstikast
+  // tühjenda tekstikast
   typedValueElement.value = '';
-  // set focus
+  // sea fookus
   typedValueElement.focus();
-  // set the event handler
+  // sea sündmuse töötleja
 
-  // Start the timer
+  // alusta taimerit
   startTime = new Date().getTime();
 });
 ```
 
-Vaatame koodi lähemalt!
+**Lahutame koodi loogilistesse osadesse:**
 
-- Sõnade jälgimise seadistamine
-  - [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) ja [Math.random](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/random) kasutamine võimaldab meil juhuslikult valida tsitaadi `quotes` massiivist
-  - Muudame `quote` massiiviks `words`, et saaksime jälgida sõna, mida mängija praegu kirjutab
-  - `wordIndex` määratakse väärtuseks 0, kuna mängija alustab esimesest sõnast
-- Kasutajaliidese seadistamine
-  - Loome `spanWords` massiivi, mis sisaldab iga sõna `span` elemendi sees
-    - See võimaldab meil kuvada sõna ekraanil esile tõstetuna
-  - Kasutame `join`, et luua string, mida saame kasutada `quoteElement` `innerHTML` värskendamiseks
-    - See kuvab tsitaadi mängijale
-  - Määrame esimese `span` elemendi `className` väärtuseks `highlight`, et tõsta see kollaselt esile
-  - Puhastame `messageElement` määrates `innerText` väärtuseks `''`
-- Tekstikasti seadistamine
-  - Kustutame praeguse `typedValueElement` `value`
-  - Määrame `focus` `typedValueElement`-ile
-- Käivitame taimeri, kutsudes `getTime`
+**📊 Sõnajälgimise seadistus:**
+- **Valib** juhusliku tsitaadi kasutades `Math.floor()` ja `Math.random()`, et varieerida
+- **Konverteerib** tsitaadi üksikutesse sõnadesse, kasutades `split(' ')`
+- **Lähtestab** `wordIndex` nulli, sest mängijad alustavad esimesest sõnast
+- **Valmistab** mängu oleku uueks vooruks ette
 
-### Kirjutamisloogika lisamine
+**🎨 Kasutajaliidese seadistamine ja kuvamine:**
+- **Luuakse** `<span>` elementide massiiv, iga sõna pakitakse eraldi stiilimiseks
+- **Kombineerib** span elemendid ühte stringi efektiivseks DOM uuenduseks
+- **Tõstab esile** esimese sõna, lisades CSS klassi `highlight`
+- **Tühjendab** kõik varasemad mängu sõnumid, et alustada puhtalt
 
-Kui mängija kirjutab, tõstetakse esile `input` sündmus. See sündmuste kuulaja kontrollib, kas mängija kirjutab sõna õigesti, ja haldab mängu praegust olekut. Tagasi **script.js**-i juurde, lisage järgmine kood lõppu. Arutame seda hiljem.
+**⌨️ Tekstikasti ettevalmistus:**
+- **Tühjendab** sisendväljale varem sisestatud teksti
+- **Seab fookuse** tekstikastile, et mängijad saaksid kohe kirjutama hakata
+- **Valmistab** sisendala uueks mängukorraks ette
+
+**⏱️ Taimeri algatamine:**
+- **Püüab kinni** praeguse aja templi kasutades `new Date().getTime()`
+- **Võimaldab** täpset kirjutamiskiiruse ja lõpetamisaja arvutamist
+- **Alustab** soorituse jälgimist mängusessioonil
+
+### Lisa kirjutamise loogika
+
+Siin tegeleme meie mängu tuumaga! Ära muretse, kui see tundub alguses palju – me käime läbi iga tüki ja lõpus näed, kui loogiline see kõik on.
+
+See, mida me ehitame, on üsna keerukas: iga kord, kui keegi kirjuta tähe, kontrollib meie kood, mida kirjutati, annab tagasisidet ja otsustab, mis edasi teha. See on sarnane esimeste 1970ndate sõnastikupõhiste tekstiprotsessoritega nagu WordStar, mis andsid otse kirjutajale tagasisidet.
 
 ```javascript
-// at the end of script.js
+// script.js lõpus
 typedValueElement.addEventListener('input', () => {
-  // Get the current word
+  // Hangi praegune sõna
   const currentWord = words[wordIndex];
-  // get the current value
+  // Hangi praegune väärtus
   const typedValue = typedValueElement.value;
 
   if (typedValue === currentWord && wordIndex === words.length - 1) {
-    // end of sentence
-    // Display success
+    // lause lõpp
+    // Kuvage edu
     const elapsedTime = new Date().getTime() - startTime;
     const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
     messageElement.innerText = message;
   } else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
-    // end of word
-    // clear the typedValueElement for the new word
+    // sõna lõpp
+    // tühjenda typedValueElement uue sõna jaoks
     typedValueElement.value = '';
-    // move to the next word
+    // liigu järgmise sõna juurde
     wordIndex++;
-    // reset the class name for all elements in quote
+    // lähtesta kõigi tsitaadi elementide klassinimi
     for (const wordElement of quoteElement.childNodes) {
       wordElement.className = '';
     }
-    // highlight the new word
+    // esile tõsta uus sõna
     quoteElement.childNodes[wordIndex].className = 'highlight';
   } else if (currentWord.startsWith(typedValue)) {
-    // currently correct
-    // highlight the next word
+    // praegu õige
+    // esile tõsta järgmine sõna
     typedValueElement.className = '';
   } else {
-    // error state
+    // veateade
     typedValueElement.className = 'error';
   }
 });
 ```
 
-Vaatame koodi lähemalt! Alustame praeguse sõna ja mängija poolt seni kirjutatud väärtuse haaramisega. Seejärel kontrollime järjestikku, kas tsitaat on lõpetatud, sõna on lõpetatud, sõna on õige või (lõpuks), kas on viga.
+**Kirjutamise loogika voog:**
 
-- Tsitaat on lõpetatud, kui `typedValue` on võrdne `currentWord`-iga ja `wordIndex` on võrdne ühe võrra väiksemaga kui `words` pikkus
-  - Arvutame `elapsedTime`, lahutades `startTime` praegusest ajast
-  - Jagame `elapsedTime` 1,000-ga, et teisendada millisekundid sekunditeks
-  - Kuvame edukuse sõnumi
-- Sõna on lõpetatud, kui `typedValue` lõpeb tühikuga (sõna lõpp) ja `typedValue` on võrdne `currentWord`-iga
-  - Määrame `typedElement` `value` väärtuseks `''`, et võimaldada järgmise sõna kirjutamist
-  - Suurendame `wordIndex`, et liikuda järgmise sõna juurde
-  - Läbime kõik `quoteElement` `childNodes`, et määrata `className` väärtuseks `''`, et taastada vaikimisi kuvamine
-  - Määrame praeguse sõna `className` väärtuseks `highlight`, et tähistada seda kui järgmist sõna, mida kirjutada
-- Sõna on praegu õigesti kirjutatud (kuid mitte lõpetatud), kui `currentWord` algab `typedValue`-ga
-  - Veendume, et `typedValueElement` kuvatakse vaikimisi, kustutades `className`
-- Kui oleme siiani jõudnud, on viga
-  - Määrame `typedValueElement` `className` väärtuseks `error`
+See funktsioon kasutab järjestikust meetodit, kontrollides tingimusi kõige spetsiifilisemast kõige üldisemani. Vaatame iga stsenaariumi lähemalt:
 
-## Testige oma rakendust
+```mermaid
+flowchart TD
+    A[Mängija tüüpides tähemärk] --> B[Saa praegune sõna ja sisestatud väärtus]
+    B --> C{Tsitaat valmis?}
+    C -->|Jah| D[Näita lõpetamise teadet ajaga]
+    C -->|Ei| E{Sõna valmis tühikuga?}
+    E -->|Jah| F[Tühjenda sisend, liigu järgmise sõna juurde, uuenda esiletõstmist]
+    E -->|Ei| G{Kirjutamine seni õige?}
+    G -->|Jah| H[Eemalda vea stiilid]
+    G -->|Ei| I[Näita vea stiile]
+```
+**🏁 Tsitaat lõpetatud (stsenaarium 1):**
+- **Kontrollib**, kas kirjutatud väärtus vastab praegusele sõnale JA me oleme viimase sõna juures
+- **Arvutab** möödunud aja, lahutades algusaja praegusest ajast
+- **Konverteerib** millisekundid sekunditeks, jagades 1000-ga
+- **Kuvab** õnnitlus-sõnumi koos lõpetamisajaga
 
-Olete jõudnud lõpuni! Viimane samm on veenduda, et meie rakendus töötab. Proovige seda! Ärge muretsege, kui esineb vigu; **kõigil arendajatel** on vigu. Uurige sõnumeid ja tehke vajadusel silumist.
+**✅ Sõna lõpetatud (stsenaarium 2):**
+- **Tuletab** sõna lõpetamist, kui sisendi lõpus on tühik
+- **Kontrollib**, et kärbitud sisend vastab täpselt praegusele sõnale
+- **Puhastab** sisendväljale järgmise sõna jaoks
+- **Liigutab** edasi järgmisele sõnale, suurendades `wordIndex` väärtust
+- **Uuendab** visuaalset rõhutust, eemaldades kõik klassid ja rõhutades uut sõna
 
-Klõpsake **start** ja hakake kirjutama! See peaks välja nägema umbes nagu animatsioon, mida varem nägime.
+**📝 Kirjutamine käib (stsenaarium 3):**
+- **Kontrollib**, et praegune sõna algab kirjutatud tekstiga
+- **Eemaldab** veaklassi, näitamaks sisendi õigsust
+- **Lubab** jätkata kirjutamist katkestuseta
 
-![Mängu animatsioon tegevuses](../../../../4-typing-game/images/demo.gif)
+**❌ Vea seisund (stsenaarium 4):**
+- **Tekib**, kui kirjutatud tekst ei vasta oodatud sõna algusele
+- **Rakendab** vea CSS klassi, et anda kohene visuaalne tagasiside
+- **Aitab** mängijatel kiiresti vigu märgata ja parandada
+
+## Testi oma rakendust
+
+Vaata, mida oled saavutanud! 🎉 Sa just ehitasid nullist toimiva kirjutamismängu sündmuste-põhise programmeerimise abil. Võta hetk ja tunnusta seda – see pole sugugi väiklane saavutus!
+
+Nüüd algab testimise faas! Kas kõik töötab ootuspäraselt? Kas midagi jäi kahe silma vahele? Asi on selles: kui midagi ei tööta esimesel korral ideaalselt, on see täiesti normaalne. Ka kogenud arendajad leiavad regulaarselt koodist vigu. See on osa arendusprotsessist!
+
+Klikka `start` nuppu ja alusta kirjutamist! See peaks välja nägema veidi nagu animatsioon, mida me varem nägime.
+
+![Mängu tegevuse animatsioon](../../../../4-typing-game/images/demo.gif)
+
+**Mida testida rakenduses:**
+- **Kontrollib**, et Start nupu vajutus kuvab juhusliku tsitaadi
+- **Veendub**, et kirjutamine rõhutab õigesti praegust sõna
+- **Kontrollib**, et vigase kirjutamise korral kuvatakse vea stiilid
+- **Tagab**, et sõnade lõpetamine liigutab rõhutust õigesti edasi
+- **Testib**, et tsitaadi lõpetamisel kuvatakse lõpetamise sõnum koos ajaga
+
+**Üldised silumise nipid:**
+- **Kontrolli** brauseri konsooli (F12) JavaScripti vigade jaoks
+- **Veendu**, et kõik failinimed vastavad täpselt (tõstutundlikult)
+- **Kontrolli**, et Live Server töötab ja värskendab korralikult
+- **Testi** erinevaid tsitaate, et veenduda juhusliku valiku toimimises
 
 ---
+
+## GitHub Copiloti Agendi Väljakutse 🎮
+
+Kasuta agendi režiimi, et lahendada järgmine ülesanne:
+
+**Kirjeldus:** Laienda kirjutamismängu rakendades raskustaseme süsteemi, mis kohandab mängu mängija soorituse põhjal. See väljakutse aitab sul harjutada täiustatud sündmuste haldamist, andmete analüüsi ja dünaamilisi kasutajaliidese uuendusi.
+
+**Ülesanne:** Loo raskustaseme häälestussüsteem, mis:
+1. Jälgib mängija kirjutamiskiirust (sõnu minutis) ja täpsuse protsenti
+2. Kohandub automaatselt kolme raskustasemega: Lihtne (lihtsad tsitaadid), Keskmine (praegused tsitaadid), Raske (keerukad tsitaadid, punktuatsiooniga)
+3. Kuvab kasutajaliidesel praeguse raskustaseme ja mängija statistika
+4. Rakendab järjestikuse soorituse loendurit, mis tõstab raskustaset pärast 3 järjestikust head tulemust
+5. Lisab visuaalse tagasiside (värvid, animatsioonid), mis näitab raskustaseme muutusi
+
+Lisa vajalikud HTML elemendid, CSS stiilid ja JavaScripti funktsioonid selle funktsionaalsuse rakendamiseks. Kaasa korralik veahaldus ja tagada mängu ligipääsetavus sobivate ARIA siltidega.
+
+Lisateave [agendi režiimi](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) kohta.
 
 ## 🚀 Väljakutse
 
-Lisage rohkem funktsionaalsust
+Kas oled valmis viima oma kirjutamismängu järgmisele tasemele? Proovi rakendada neid täiustatud funktsioone, et süvendada oma teadmisi sündmuste haldamisest ja DOM manipuleerimisest:
 
-- Keelake `input` sündmuste kuulaja lõpetamisel ja lubage see uuesti, kui nuppu klõpsatakse
-- Keela tekstikast, kui mängija lõpetab tsitaadi
-- Kuvage modaalne dialoogikast edusõnumiga
-- Salvestage kõrged punktisummad, kasutades [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
+**Lisa rohkem funktsionaalsust:**
 
-## Loengu järgne viktoriin
+| Funktsioon | Kirjeldus | Oskused, mida harjutad |
+|------------|-----------|-------------------------|
+| **Sisendi kontroll** | Keela `input` sündmuse kuulaja lõpetamisel ning luba see uuesti nupu vajutusel | Sündmuste haldamine ja oleku kontroll |
+| **Kasutajaliidese oleku haldus** | Keela tekstikast, kui mängija lõpetab tsitaadi | DOM omaduste manipuleerimine |
+| **Modaalaken** | Kuvab õnnestumise sõnumiga modaalakna | Täiustatud kasutajaliidese mustrid ja ligipääsetavus |
+| **Kõrgeima skoori süsteem** | Salvestab kõrgeima tulemuse kasutades `localStorage` | Brauseri salvestus API-d ja andmete püsivus |
 
-[Loengu järgne viktoriin](https://ff-quizzes.netlify.app/web/quiz/22)
+**Rakendusnipid:**
+- **Uuri** `localStorage.setItem()` ja `localStorage.getItem()` püsiva salvestuse jaoks
+- **Harjuta** sündmuste kuulajate dünaamilist lisamist ja eemaldamist
+- **Uuri** HTML dialoogielemente või CSS modaal-mustreid
+- **Arvesta** ligipääsetavust vormikontrollide keelamisel ja lubamisel
 
-## Ülevaade ja iseseisev õppimine
+## Loengujärgne viktoriin
 
-Lugege [kõikide sündmuste kohta](https://developer.mozilla.org/docs/Web/Events), mis on veebibrauseri kaudu arendajale kättesaadavad, ja mõelge olukordadele, kus te neid kasutaksite.
-
-## Ülesanne
-
-[Loo uus klaviatuurimäng](assignment.md)
+[Loengujärgne viktoriin](https://ff-quizzes.netlify.app/web/quiz/22)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+## 🚀 Sinu kirjutamismängu meistriklassi ajaskaala
+
+### ⚡ **Mida saad teha järgmise 5 minutiga**
+- [ ] Testi oma kirjutamismängu erinevate tsitaatidega, veendumaks, et see töötab sujuvalt
+- [ ] Katseta CSS stiile – muuda rõhutuse ja vea värve
+- [ ] Ava brauseri arendajatööriistad (F12) ja jälgi konsooli mängimise ajal
+- [ ] Sea endale eesmärgiks lõpetada tsitaat võimalikult kiiresti
+
+### ⏰ **Mida saad selle tunni jooksul saavutada**
+- [ ] Lisa massiivi veel tsitaate (näiteks oma lemmikraamatutest või filmidest)
+- [ ] Rakenda väljakutsetes kirjeldatud localStorage põhine kõrgeima skoori süsteem
+- [ ] Loo sõnade minutis kalkulaator, mis kuvab tulemuse pärast mängu
+- [ ] Lisa heliefektid õigeks kirjutamiseks, vigadeks ja lõpetamiseks
+
+### 📅 **Sinu nädala pikkune seiklus**
+- [ ] Ehita mitmikmängu versioon, kus sõbrad saavad võistelda kõrvuti
+- [ ] Loo erinevad raskustasemed, kasutades tsitaatide keerukust
+- [ ] Lisa edenemisriba, mis näitab tsitaadi kirjutamise protsenti
+- [ ] Rakenda kasutajakontosid isiklike statistika jälgimiseks
+- [ ] Kujunda kohandatud teemad ja lase kasutajatel valida eelistatud stiil
+
+### 🗓️ **Sinu kuu pikkune transformatsioon**
+- [ ] Loo kirjutamiskursus, mis samm-sammult õpetab õigete sõrmede asetust
+- [ ] Ehita analüütika, mis näitab, millised tähed või sõnad põhjustavad kõige rohkem vigu
+- [ ] Lisa tugi erinevatele keeltele ja klaviatuuripaigutustele
+- [ ] Integreeri hariduslikke API-sid, et importida tsitaate kirjanduse andmebaasidest
+- [ ] Avalda oma täiustatud kirjutamismäng teistele kasutamiseks ja nautimiseks
+
+### 🎯 **Lõpumõtisklused**
+
+**Enne edasi liikumist, võta hetk ja tähista:**
+- Mis oli kõige rahuldustpakkuvam hetk selle mängu ehitamisel?
+- Kuidas sa nüüd tunnetad sündmuspõhist programmeerimist võrreldes algusega?
+- Millise funktsiooni lisamine teeb selle mängu sinu jaoks ainulaadseks ja põnevaks?
+- Kuidas võiksid sündmuste haldamise kontseptsioone rakendada teistes projektides?
+
+```mermaid
+journey
+    title Sinu Ürituste Programmeerimise Enesekindluse Teekond
+    section Täna
+      Ürituste mõistmine: 3: You
+      Kasutajaliidese loomine: 4: You
+      Ürituskuulajate kirjutamine: 5: You
+    section See Nädal
+      Funktsioonide lisamine: 4: You
+      Tõrgete silumine: 5: You
+      Kasutajakogemuse parandamine: 4: You
+    section Järgmine Kuu
+      Keeruliste rakenduste loomine: 5: You
+      Teiste õpetamine: 5: You
+      Raamistike loomine: 5: You
+```
+> 🌟 **Mäleta:** Sa oled just valdanud ühe põhikontseptsiooni, mis annab jõudu igale interaktiivsele veebilehele ja rakendusele. Sündmuspõhine programmeerimine muudab veebi elavaks ja reageerivaks. Iga kord kui näed rippmenüüd, vormi, mis kontrollib sisestust kirjutamisel või mängu, mis reageerib su klõpsudele, mõistad nüüd selle taga olevat võlu. Sa ei õpi lihtsalt kodeerima – sa õpid looma kogemusi, mis tunduvad intuitiivsed ja kaasahaaravad! 🎉
+
+---
+
+## Ülevaade & Iseseisev õpe
+
+Loe lähemalt [kõigi veebibrauseri sündmuste kohta](https://developer.mozilla.org/docs/Web/Events) ning mõtle, millistes olukordades sa neid kasutaksid.
+
+## Kodune ülesanne
+
+[Loo uus klahvimäng](assignment.md)
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastutusest loobumine**:
+See dokument on tõlgitud kasutades tehisintellektil põhinevat tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüame täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks lugeda autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste ega valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

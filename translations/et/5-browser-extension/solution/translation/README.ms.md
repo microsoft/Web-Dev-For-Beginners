@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kasutades tmrow CO2 Signaali API-d elektritarbimise jälgimiseks, loo brauserilaiendus, mis annab sulle brauseris märguandeid selle kohta, kui suur on sinu piirkonna elektritarbimise koormus. Selle laienduse kasutamine aitab sul teha teadlikumaid otsuseid oma tegevuste osas, tuginedes sellele teabele.
 
-![brauserilaienduse ekraanipilt](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.et.png)
+![brauserilaienduse ekraanipilt](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.et.png)
 
 ## Alustamine
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge'i paigaldamiseks kasuta brauseri paremas ülanurgas asuvat kolme punktiga menüüd, et leida Laienduste paneel. Sealt vali 'Load Unpacked', et laadida uus laiendus. Ava 'dist' kaust, kui seda küsitakse, ja laiendus laaditakse. Kasutamiseks vajad CO2 Signaali API võtit ([hankige see siit e-posti teel](https://www.co2signal.com/) - sisesta oma e-posti aadress sellel lehel olevasse kasti) ja [oma piirkonna koodi](http://api.electricitymap.org/v3/zones), mis vastab [Electricity Mapile](https://www.electricitymap.org/map) (näiteks Bostonis kasutan 'US-NEISO').
 
-![allalaadimine](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.et.png)
+![allalaadimine](../../../../../translated_images/install-on-edge.78634f02842c4828.et.png)
 
 Kui API võti ja piirkond on laienduse liidesesse sisestatud, muutub brauserilaienduse tööriistaribal olev värviline punkt, et kajastada sinu piirkonna energiatarbimist, ning annab sulle soovitusi, milliseid tegevusi on sobiv teha. Selle 'punktisüsteemi' kontseptsiooni sain inspiratsiooniks [Energy Lollipop brauserilaiendusest](https://energylollipop.com/) California heitkoguste jaoks.
 
