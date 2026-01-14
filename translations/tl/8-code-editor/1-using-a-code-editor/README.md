@@ -185,7 +185,7 @@ Katulad ng kung paano nagkonekta ang telepono ni Alexander Graham Bell sa mga ma
 
 Kapag na-load na ang lahat, makikita mo ang isang malinis na workspace na dinisenyo para panatilihin kang nakatuon sa mahalaga – ang iyong code!
 
-![Default VSCode.dev interface](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.tl.png)
+![Default VSCode.dev interface](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.tl.png)
 
 **Narito ang tour sa iyong bagong lugar:**
 - **Activity Bar** (ang strip sa kaliwa): Ang iyong pangunahing navigation na may Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩, at Settings ⚙️
@@ -233,7 +233,7 @@ Perpekto ito kapag nagsisimula ka sa VSCode.dev at nais magbukas ng partikular n
 1. Pumunta sa [vscode.dev](https://vscode.dev) kung hindi ka pa naroon
 2. Hanapin ang "Open Remote Repository" button sa welcome screen at i-click ito
 
-   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.tl.png)
+   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.tl.png)
 
 3. I-paste ang anumang GitHub repository URL (subukan ito: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Pindutin ang Enter at panoorin ang magic!
@@ -242,7 +242,7 @@ Perpekto ito kapag nagsisimula ka sa VSCode.dev at nais magbukas ng partikular n
 
 Gusto mo bang maramdaman na parang coding wizard? Subukan ang keyboard shortcut na ito: Ctrl+Shift+P (o Cmd+Shift+P sa Mac) para buksan ang Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.tl.png)
+![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.tl.png)
 
 **Ang Command Palette ay parang search engine para sa lahat ng magagawa mo:**
 - I-type ang "open remote" at hahanapin nito ang repository opener para sa iyo
@@ -304,7 +304,7 @@ Katulad ng pag-aayos ng mga blueprint sa opisina ng isang arkitekto, ang paggawa
 3. I-type ang filename kasama ang tamang extension (`style.css`, `script.js`, `index.html`)
 4. Pindutin ang Enter para gawin ang file
 
-![Creating a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.tl.png)
+![Creating a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb.tl.png)
 
 **Mga Naming Conventions:**
 - Gumamit ng mga deskriptibong pangalan na nagpapahiwatig ng layunin ng file
@@ -322,7 +322,7 @@ Dito nagsisimula ang totoong kasiyahan! Ang editor ng VSCode.dev ay puno ng mga 
 2. Simulan ang pag-type at panoorin ang VSCode.dev na tumutulong sa iyo gamit ang kulay, mga suggestion, at pag-detect ng error
 3. I-save ang iyong trabaho gamit ang Ctrl+S (Windows/Linux) o Cmd+S (Mac) – bagama't auto-save din ito!
 
-![Editing files in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.tl.png)
+![Editing files in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.tl.png)
 
 **Ang mga cool na bagay na nangyayari habang nagko-code ka:**
 - Ang iyong code ay nagiging maganda ang kulay kaya madali itong basahin
@@ -343,7 +343,7 @@ Katulad ng kung paano gumagawa ng detalyadong tala ang mga archaeologist ng exca
 2. Ang mga binagong file ay lumalabas sa seksyong "Changes"
 3. Ang color coding ay nagpapahiwatig ng uri ng pagbabago: berde para sa mga dagdag, pula para sa mga binura
 
-![Viewing changes in Source Control](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.tl.png)
+![Viewing changes in Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.tl.png)
 
 **Pag-save ng iyong trabaho (ang commit workflow):**
 
@@ -438,7 +438,7 @@ Ang extension marketplace ay talagang maayos ang pagkakaorganisa, kaya hindi ka 
 2. Mag-browse o maghanap ng isang partikular na bagay  
 3. I-click ang anumang mukhang kawili-wili upang matuto pa tungkol dito  
 
-![Interface ng extension marketplace](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.tl.png)  
+![Interface ng extension marketplace](../../../../translated_images/extensions.eca0e0c7f59a10b5.tl.png)  
 
 **Ano ang makikita mo roon:**  
 
@@ -491,7 +491,7 @@ Karamihan sa mga extension ay may mga setting na maaari mong i-tweak upang guman
 3. Piliin ang "Extension Settings" mula sa dropdown  
 4. Ayusin ang mga bagay hanggang sa maging tama ang pakiramdam para sa iyong workflow  
 
-![Pag-customize ng mga setting ng extension](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.tl.png)  
+![Pag-customize ng mga setting ng extension](../../../../translated_images/extension-settings.21c752ae4f4cdb78.tl.png)  
 
 **Mga karaniwang bagay na maaaring gusto mong ayusin:**  
 - Paano nafo-format ang iyong code (tabs vs spaces, haba ng linya, atbp.)  

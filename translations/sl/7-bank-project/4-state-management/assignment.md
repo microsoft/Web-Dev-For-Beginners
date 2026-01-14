@@ -112,7 +112,7 @@ Oglejte si [dokumentacijo strežniškega API-ja](../api/README.md) za:
 **Pričakovani rezultat:**
 Po dokončanju te naloge bi morala vaša bančna aplikacija imeti popolnoma funkcionalno funkcijo "Dodaj transakcijo", ki izgleda profesionalno in se obnaša ustrezno:
 
-![Posnetek zaslona, ki prikazuje primer pogovornega okna "Dodaj transakcijo"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.sl.png)
+![Posnetek zaslona, ki prikazuje primer pogovornega okna "Dodaj transakcijo"](../../../../translated_images/dialog.93bba104afeb79f1.sl.png)
 
 ## Testiranje vaše implementacije
 

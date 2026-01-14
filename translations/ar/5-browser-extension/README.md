@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### الشكر والتقدير
 
-![إضافة متصفح خضراء](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.ar.png)
+![إضافة متصفح خضراء](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ar.png)
 
 ## الشكر والتقدير
 

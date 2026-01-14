@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 Ecco come apparirà il tuo progetto finito:
 
-![Interfaccia dell'app di chat che mostra una conversazione tra utente e assistente AI](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.it.png)
+![Interfaccia dell'app di chat che mostra una conversazione tra utente e assistente AI](../../../translated_images/screenshot.0a1ee0d123df681b.it.png)
 
 ## 🗺️ Il Tuo Percorso di Apprendimento nello Sviluppo di Applicazioni AI
 
@@ -194,7 +194,7 @@ mindmap
 
 **Principio Fondamentale**: Lo sviluppo di applicazioni AI combina competenze tradizionali di sviluppo web con l'integrazione di servizi AI, creando applicazioni intelligenti che sembrano naturali e reattive per gli utenti.
 
-![Interfaccia del GitHub Models AI Playground con selezione del modello e area di test](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.it.png)
+![Interfaccia del GitHub Models AI Playground con selezione del modello e area di test](../../../translated_images/playground.d2b927122224ff8f.it.png)
 
 **Ecco cosa rende il playground così utile:**
 - **Prova** diversi modelli AI come GPT-4o-mini, Claude e altri (tutti gratuiti!)
@@ -204,7 +204,7 @@ mindmap
 
 Una volta che hai sperimentato un po', basta cliccare sulla scheda "Code" e scegliere il tuo linguaggio di programmazione per ottenere il codice di implementazione di cui hai bisogno.
 
-![Scelta del playground che mostra opzioni di generazione del codice per diversi linguaggi di programmazione](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.it.png)
+![Scelta del playground che mostra opzioni di generazione del codice per diversi linguaggi di programmazione](../../../translated_images/playground-choice.1d23ba7d407f4758.it.png)
 
 ## Configurare l'Integrazione Backend Python
 
@@ -2364,14 +2364,14 @@ Vuoi provare questo progetto in un ambiente di sviluppo cloud? GitHub Codespaces
 - **Vai** al [repository Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Clicca** su "Use this template" nell'angolo in alto a destra (assicurati di essere loggato su GitHub)  
 
-![Interfaccia per creare dal template che mostra il pulsante verde "Use this template"](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.it.png)  
+![Interfaccia per creare dal template che mostra il pulsante verde "Use this template"](../../../translated_images/template.67ad477109d29a2b.it.png)  
 
 **Passo 2: Avvia Codespaces**  
 - **Apri** il tuo repository appena creato  
 - **Clicca** sul pulsante verde "Code" e seleziona "Codespaces"  
 - **Scegli** "Create codespace on main" per avviare il tuo ambiente di sviluppo  
 
-![Interfaccia per creare codespace con opzioni per avviare l'ambiente di sviluppo cloud](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.it.png)  
+![Interfaccia per creare codespace con opzioni per avviare l'ambiente di sviluppo cloud](../../../translated_images/codespace.bcecbdf5d2747d3d.it.png)  
 
 **Passo 3: Configurazione dell'Ambiente**  
 Una volta caricato il tuo Codespace, avrai accesso a:  

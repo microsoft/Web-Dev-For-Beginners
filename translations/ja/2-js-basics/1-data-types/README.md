@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptの基本: データ型
 
-![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.ja.png)
+![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.ja.png)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

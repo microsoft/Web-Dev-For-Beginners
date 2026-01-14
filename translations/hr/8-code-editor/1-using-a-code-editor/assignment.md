@@ -78,7 +78,7 @@ Budući da VSCode.dev zahtijeva barem jednu datoteku za otvaranje repozitorija, 
 4. **Napišite** poruku za commit: "Dodaj početnu HTML strukturu"
 5. **Kliknite** "Commit new file" za spremanje promjena
 
-![Kreiranje početne datoteke na GitHubu](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.hr.png)
+![Kreiranje početne datoteke na GitHubu](../../../../translated_images/new-file-github.com.c886796d800e8056.hr.png)
 
 **Što se postiže ovim početnim postavljanjem:**
 - **Postavlja** pravilnu HTML5 strukturu dokumenta sa semantičkim elementima
@@ -104,7 +104,7 @@ Sada kada je temelj vašeg repozitorija postavljen, prebacimo se na VSCode.dev z
 
 ✅ **Indikator uspjeha**: Trebali biste vidjeti datoteke svog projekta u bočnoj traci Explorer i `index.html` dostupan za uređivanje u glavnom području uređivača.
 
-![Projekt učitan u VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.hr.png)
+![Projekt učitan u VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.hr.png)
 
 **Što ćete vidjeti u sučelju:**
 - **Bočna traka Explorer**: **Prikazuje** datoteke i strukturu mapa vašeg repozitorija
@@ -448,7 +448,7 @@ Ekstenzije poboljšavaju vaše iskustvo razvoja pružajući mogućnosti za pregl
 **Rezultati odmah nakon instalacije:**
 Nakon instalacije CodeSwinga, vidjet ćete pregled uživo vaše web stranice za životopis u uređivaču. To vam omogućuje da vidite kako vaša stranica izgleda dok unosite promjene.
 
-![Ekstenzija CodeSwing prikazuje pregled uživo](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.hr.png)
+![Ekstenzija CodeSwing prikazuje pregled uživo](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.hr.png)
 
 **Razumijevanje poboljšanog sučelja:**
 - **Podijeljeni prikaz**: **Prikazuje** vaš kod na jednoj strani i pregled uživo na drugoj

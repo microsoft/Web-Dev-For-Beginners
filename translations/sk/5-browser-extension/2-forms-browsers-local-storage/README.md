@@ -1,43 +1,114 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8c8cd4af6086cc1d47e1d43aa4983d20",
-  "translation_date": "2025-10-24T21:50:30+00:00",
+  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
+  "translation_date": "2026-01-07T04:49:09+00:00",
   "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
   "language_code": "sk"
 }
 -->
-# Projekt rozšírenia prehliadača, časť 2: Volanie API, použitie lokálneho úložiska
+# Browser Extension Project Časť 2: Zavolať API, použiť Lokálne Úložisko
 
-## Kvíz pred prednáškou
+```mermaid
+journey
+    title Vaša cesta integrácie API a ukladania
+    section Základy
+      Setup DOM references: 3: Student
+      Add event listeners: 4: Student
+      Handle form submission: 4: Student
+    section Správa dát
+      Implement local storage: 4: Student
+      Build API calls: 5: Student
+      Handle async operations: 5: Student
+    section Používateľský zážitok
+      Add error handling: 5: Student
+      Create loading states: 4: Student
+      Polish interactions: 5: Student
+```
+## Prednáškový kvíz
 
-[Kvíz pred prednáškou](https://ff-quizzes.netlify.app/web/quiz/25)
+[Prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/25)
 
 ## Úvod
 
-Pamätáte si rozšírenie prehliadača, ktoré ste začali vytvárať? Momentálne máte pekne vyzerajúci formulár, ale je v podstate statický. Dnes ho oživíme tým, že ho prepojíme so skutočnými dátami a dáme mu pamäť.
+Pamätáte si tú rozšírenie prehliadača, ktoré ste začali stavať? Teraz máte pekný formulár, ale je v podstate statický. Dnes ho oživíme pripojením k reálnym dátam a pridáme mu pamäť.
 
-Premýšľajte o počítačoch riadiaceho strediska misie Apollo - nezobrazovali len pevné informácie. Neustále komunikovali s vesmírnou loďou, aktualizovali sa telemetrickými údajmi a pamätali si kritické parametre misie. Takýto dynamický systém dnes budeme budovať. Vaše rozšírenie sa pripojí na internet, získa skutočné environmentálne údaje a zapamätá si vaše nastavenia na budúce použitie.
+Myslite na riadiace počítače misie Apollo - nezobrazovali len pevné informácie. Neustále komunikovali s vesmírnou loďou, aktualizovali sa o telemetrické údaje a pamatovali si kritické parametre misie. Presne taký dynamický behavior dnes budujeme. Vaše rozšírenie bude pristupovať na internet, získavať reálne environmentálne dáta a pamätať si vaše nastavenia na ďalšie použitie.
 
-Integrácia API môže znieť zložito, ale v skutočnosti ide len o to, naučiť váš kód komunikovať s inými službami. Či už získavate údaje o počasí, príspevky zo sociálnych médií alebo informácie o uhlíkovej stope, ako to dnes urobíme, všetko je to o vytváraní týchto digitálnych spojení. Preskúmame tiež, ako môžu prehliadače uchovávať informácie - podobne ako knižnice používajú kartotéky na zapamätanie, kde sa nachádzajú knihy.
+Integrácia API môže znieť zložito, ale v skutočnosti to znamená naučiť váš kód, ako komunikovať s inými službami. Či už načítavate údaje o počasí, sociálne médiá alebo informácie o uhlíkovej stope, ako dnes urobíme, ide o nadviazanie týchto digitálnych spojení. Preskúmame aj, ako prehliadače dokážu trvalo uchovávať informácie – podobne ako knižnice používali kartotéky na zapamätanie si, kde patria knihy.
 
-Na konci tejto lekcie budete mať rozšírenie prehliadača, ktoré získava skutočné údaje, ukladá preferencie používateľa a poskytuje plynulý zážitok. Poďme na to!
+Na konci tejto lekcie budete mať rozšírenie prehliadača, ktoré získava reálne dáta, ukladá používateľské preferencie a poskytuje plynulý zážitok. Poďme na to!
 
-✅ Sledujte očíslované segmenty v príslušných súboroch, aby ste vedeli, kam umiestniť svoj kód.
+```mermaid
+mindmap
+  root((Dynamické rozšírenia))
+    DOM Manipulácia
+      Výber prvkov
+      Spracovanie udalostí
+      Správa stavu
+      Aktualizácie UI
+    Lokálne úložisko
+      Ukladanie dát
+      Páry kľúč-hodnota
+      Správa relácií
+      Používateľské preferencie
+    Integrácia API
+      HTTP požiadavky
+      Autentifikácia
+      Parsovanie dát
+      Spracovanie chýb
+    Asynchrónne programovanie
+      Promise objekty
+      Async/Await
+      Zachytávanie chýb
+      Nezablokujúci kód
+    Používateľská skúsenosť
+      Stav načítania
+      Chybové správy
+      Plynulé prechody
+      Overovanie dát
+```
+✅ Postupujte podľa očíslovaných segmentov v príslušných súboroch, aby ste vedeli, kde umiestniť svoj kód
 
-## Nastavenie prvkov na manipuláciu v rozšírení
+## Nastavte prvky na manipuláciu v rozšírení
 
-Predtým, než váš JavaScript môže manipulovať s rozhraním, potrebuje odkazy na konkrétne HTML prvky. Predstavte si to ako teleskop, ktorý musí byť nasmerovaný na konkrétne hviezdy - predtým, než Galileo mohol študovať Jupiterove mesiace, musel najprv nájsť a zaostriť na samotný Jupiter.
+Predtým, než váš JavaScript môže manipulovať s rozhraním, potrebuje odkazy na konkrétne HTML prvky. Je to ako keď teleskop musí byť nasmerovaný na určité hviezdy – predtým, než Galileo mohol skúmať Jupiterove mesiace, musel najprv nájsť a zaostriť na Jupiter.
 
-Vo vašom súbore `index.js` vytvoríme premenné `const`, ktoré zachytia odkazy na každý dôležitý prvok formulára. Je to podobné ako keď vedci označujú svoje vybavenie - namiesto toho, aby hľadali po celej laboratóriu, môžu priamo pristupovať k tomu, čo potrebujú.
+Vo vašom súbore `index.js` vytvoríme `const` premenné, ktoré zachytávajú odkazy na každý dôležitý prvok formulára. Je to podobné, ako vedci označujú svoje vybavenie – namiesto hľadania v celej laboratóriu môžu priamo pristupovať k tomu, čo potrebujú.
 
+```mermaid
+flowchart LR
+    A[JavaScript Kód] --> B[document.querySelector]
+    B --> C[CSS Selektory]
+    C --> D[HTML Prvky]
+    
+    D --> E[".form-data"]
+    D --> F[".region-name"]
+    D --> G[".api-key"]
+    D --> H[".loading"]
+    D --> I[".errors"]
+    D --> J[".result-container"]
+    
+    E --> K[Formulárový Prvok]
+    F --> L[Vstupné Pole]
+    G --> M[Vstupné Pole]
+    H --> N[UI Prvok]
+    I --> O[UI Prvok]
+    J --> P[UI Prvok]
+    
+    style A fill:#e1f5fe
+    style D fill:#e8f5e8
+    style K fill:#fff3e0
+    style L fill:#fff3e0
+    style M fill:#fff3e0
+```
 ```javascript
-// form fields
+// polia formulára
 const form = document.querySelector('.form-data');
 const region = document.querySelector('.region-name');
 const apiKey = document.querySelector('.api-key');
 
-// results
+// výsledky
 const errors = document.querySelector('.errors');
 const loading = document.querySelector('.loading');
 const results = document.querySelector('.result-container');
@@ -48,16 +119,38 @@ const clearBtn = document.querySelector('.clear-btn');
 ```
 
 **Čo tento kód robí:**
-- **Zachytáva** prvky formulára pomocou `document.querySelector()` s CSS selektormi
+- **Zachytáva** prvky formulára pomocou `document.querySelector()` s CSS selektormi tried
 - **Vytvára** odkazy na vstupné polia pre názov regiónu a API kľúč
-- **Nadväzuje** spojenie s prvkami na zobrazenie výsledkov údajov o uhlíkovej spotrebe
-- **Nastavuje** prístup k prvkom UI, ako sú indikátory načítania a chybové hlásenia
-- **Ukladá** každý odkaz na prvok do premennej `const` pre jednoduché opakované použitie v kóde
+- **Nadväzuje** spojenia na prvky zobrazenia výsledkov pre údaje o spotrebe uhlíka
+- **Nastavuje** prístup k UI prvkom ako indikátory načítavania a chybové hlásenia
+- **Ukladá** každý odkaz na prvok do `const` premennej pre jednoduché opätovné použitie vo vašom kóde
 
-## Pridanie poslucháčov udalostí
+## Pridajte event listenery
 
-Teraz urobíme vaše rozšírenie citlivé na akcie používateľa. Poslucháči udalostí sú spôsob, akým váš kód monitoruje interakcie používateľa. Predstavte si ich ako operátorov v skorých telefónnych ústredniach - počúvali prichádzajúce hovory a spájali správne obvody, keď niekto chcel uskutočniť spojenie.
+Teraz spravíme, aby vaše rozšírenie reagovalo na akcie používateľa. Event listenery sú spôsobom, akým váš kód sleduje interakcie používateľa. Predstavte si ich ako operátorov v ranných telefónnych ústredniach – počúvali prichádzajúce hovory a prepájali správne okruhy, keď chcel niekto nadviazať spojenie.
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant Form
+    participant JavaScript
+    participant API
+    participant Storage
+    
+    User->>Form: Vyplní región/kľúč API
+    User->>Form: Klikne na odoslať
+    Form->>JavaScript: Spustí udalosť odoslania
+    JavaScript->>JavaScript: handleSubmit(e)
+    JavaScript->>Storage: Uložiť používateľské preferencie
+    JavaScript->>API: Načítať dáta o uhlíku
+    API->>JavaScript: Vráti dáta
+    JavaScript->>Form: Aktualizovať UI s výsledkami
+    
+    User->>Form: Klikne na tlačidlo vymazať
+    Form->>JavaScript: Spustí udalosť kliknutia
+    JavaScript->>Storage: Vymazať uložené dáta
+    JavaScript->>Form: Obnoviť do počiatočného stavu
+```
 ```javascript
 form.addEventListener('submit', (e) => handleSubmit(e));
 clearBtn.addEventListener('click', (e) => reset(e));
@@ -65,37 +158,47 @@ init();
 ```
 
 **Pochopenie týchto konceptov:**
-- **Pripojí** poslucháč na odoslanie formulára, ktorý sa spustí, keď používateľ stlačí Enter alebo klikne na odoslanie
-- **Pripojí** poslucháč na kliknutie na tlačidlo vymazania pre resetovanie formulára
-- **Prenáša** objekt udalosti `(e)` do funkcií spracovania pre dodatočnú kontrolu
-- **Volá** funkciu `init()` okamžite na nastavenie počiatočného stavu vášho rozšírenia
+- **Pripája** listener na odoslanie formulára, ktorý sa spustí, keď používatelia stlačia Enter alebo kliknú na odoslať
+- **Pripája** listener na kliknutie tlačidla resetu pre vyčistenie formulára
+- **Prenáša** objekt udalosti `(e)` do funkcií spracovania pre ďalšiu kontrolu
+- **Volá** funkciu `init()` okamžite, aby nastavila počiatočný stav rozšírenia
 
-✅ Všimnite si skrátenú syntax šípkových funkcií použitú tu. Tento moderný prístup v JavaScripte je čistejší než tradičné výrazy funkcií, ale oba fungujú rovnako dobre!
+✅ Všimnite si tu použitý skrátený šípkový zápis funkcie. Tento moderný spôsob v JavaScript je čistejší než tradičné funkčné výrazy, ale oba fungujú rovnako dobre!
 
-## Vytvorenie funkcií inicializácie a resetovania
+### 🔄 **Pedagogická kontrola**
+**Pochopenie spracovania udalostí**: Pred presunom k inicializácii si overte, či viete:
+- ✅ Vysvetliť, ako `addEventListener` prepája používateľské akcie s JavaScript funkciami
+- ✅ Pochopiť, prečo odovzdávame objekt udalosti `(e)` do handler funkcií
+- ✅ Rozpoznať rozdiel medzi udalosťami `submit` a `click`
+- ✅ Opísať, kedy a prečo sa spúšťa funkcia `init()`
 
-Vytvorme logiku inicializácie vášho rozšírenia. Funkcia `init()` je ako navigačný systém lode kontrolujúci svoje prístroje - určuje aktuálny stav a upravuje rozhranie podľa toho. Kontroluje, či niekto už vaše rozšírenie použil, a načíta jeho predchádzajúce nastavenia.
+**Rýchly samo-test**: Čo by sa stalo, keby ste zabudli `e.preventDefault()` pri odoslaní formulára?
+*Odpoveď: Stránka by sa znovu načítala, stratila by sa celá JavaScriptová konfigurácia a narušil by sa užívateľský zážitok*
 
-Funkcia `reset()` poskytuje používateľom nový začiatok - podobne ako vedci resetujú svoje prístroje medzi experimentmi, aby zabezpečili čisté údaje.
+## Vytvorte inicializačné a reset funkcie
+
+Vytvorme inicializačnú logiku pre vaše rozšírenie. Funkcia `init()` je ako navigačný systém lode, ktorý kontroluje svoje prístroje – určuje aktuálny stav a podľa toho upravuje rozhranie. Skontroluje, či už niekto vaše rozšírenie používal, a načíta jeho predchádzajúce nastavenia.
+
+Funkcia `reset()` poskytuje používateľom nový štart – podobne ako vedci medzi experimentmi resetujú svoje prístroje, aby mali čisté dáta.
 
 ```javascript
 function init() {
-	// Check if user has previously saved API credentials
+	// Skontrolujte, či používateľ predtým uložil API poverenia
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
 
-	// Set extension icon to generic green (placeholder for future lesson)
-	// TODO: Implement icon update in next lesson
+	// Nastaviť ikonu rozšírenia na všeobecnú zelenú (zástupca pre budúcu lekciu)
+	// TODO: Implementovať aktualizáciu ikony v nasledujúcej lekcii
 
 	if (storedApiKey === null || storedRegion === null) {
-		// First-time user: show the setup form
+		// Používateľ prvýkrát: zobraziť formulár nastavenia
 		form.style.display = 'block';
 		results.style.display = 'none';
 		loading.style.display = 'none';
 		clearBtn.style.display = 'none';
 		errors.textContent = '';
 	} else {
-		// Returning user: load their saved data automatically
+		// Vracajúci sa používateľ: automaticky načítať ich uložené údaje
 		displayCarbonUsage(storedApiKey, storedRegion);
 		results.style.display = 'none';
 		form.style.display = 'none';
@@ -105,49 +208,72 @@ function init() {
 
 function reset(e) {
 	e.preventDefault();
-	// Clear stored region to allow user to choose a new location
+	// Vymazať uložený región, aby si používateľ mohol vybrať novú lokalitu
 	localStorage.removeItem('regionName');
-	// Restart the initialization process
+	// Reštartovať inicializačný proces
 	init();
 }
 ```
 
-**Rozdelenie toho, čo sa tu deje:**
-- **Načítava** uložený API kľúč a región z lokálneho úložiska prehliadača
-- **Kontroluje**, či ide o prvého používateľa (žiadne uložené údaje) alebo vracajúceho sa používateľa
-- **Zobrazuje** formulár nastavenia pre nových používateľov a skrýva ostatné prvky rozhrania
-- **Automaticky načítava** uložené údaje pre vracajúcich sa používateľov a zobrazuje možnosť resetovania
-- **Spravuje** stav používateľského rozhrania na základe dostupných údajov
+**Čo sa tu deje krok po kroku:**
+- **Načíta** uložený API kľúč a región z lokálneho úložiska prehliadača
+- **Skontroluje**, či je používateľ prvýkrát (žiadne uložené údaje) alebo sa vracia
+- **Zobrazí** konfiguračný formulár pre nových používateľov a skryje ostatné UI prvky
+- **Automaticky načíta** uložené údaje pre vracajúcich sa používateľov a zobrazí možnosť resetu
+- **Spravuje** stav používateľského rozhrania na základe dostupných dát
 
-**Kľúčové koncepty o lokálnom úložisku:**
+**Kľúčové koncepty o Local Storage:**
 - **Uchováva** údaje medzi reláciami prehliadača (na rozdiel od session storage)
-- **Ukladá** údaje ako páry kľúč-hodnota pomocou `getItem()` a `setItem()`
-- **Vracia** `null`, keď pre daný kľúč neexistujú žiadne údaje
-- **Poskytuje** jednoduchý spôsob, ako si zapamätať preferencie a nastavenia používateľa
+- **Ukladá** dáta ako páry kľúč – hodnota pomocou `getItem()` a `setItem()`
+- **Vracia** `null`, keď neexistujú údaje pre daný kľúč
+- **Poskytuje** jednoduchý spôsob, ako zapamätať používateľské nastavenia
 
-> 💡 **Pochopenie úložiska prehliadača**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) je ako dať vášmu rozšíreniu trvalú pamäť. Predstavte si, ako staroveká knižnica v Alexandrii uchovávala zvitky - informácie zostali dostupné, aj keď vedci odišli a vrátili sa.
+> 💡 **Pochopenie úložiska prehliadača**: [LocalStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) je ako trvalá pamäť pre vaše rozšírenie. Premyslite si, ako staroveká Alexandrijská knižnica uchovávala zvitky – informácie zostávali dostupné čitateľom aj po ich opustení a návrate.
 >
-> **Kľúčové vlastnosti:**
-> - **Uchováva** údaje aj po zatvorení prehliadača
-> - **Prežije** reštarty počítača a havárie prehliadača
-> - **Poskytuje** značný úložný priestor pre preferencie používateľa
-> - **Ponúka** okamžitý prístup bez oneskorení siete
+> **Hlavné vlastnosti:**
+> - **Pretrvá** dáta aj po zatvorení prehliadača
+> - **Prežije** reštarty počítača a zlyhania prehliadača
+> - **Ponúka** značný priestor na uloženie používateľských preferencií
+> - **Umožňuje** okamžitý prístup bez sieťových meškaní
 
-> **Dôležitá poznámka**: Vaše rozšírenie prehliadača má svoje vlastné izolované lokálne úložisko, ktoré je oddelené od bežných webových stránok. To poskytuje bezpečnosť a zabraňuje konfliktom s inými webovými stránkami.
+> **Dôležitá poznámka**: Vaše rozšírenie prehliadača má svoje izolované lokálne úložisko oddelené od bežných webových stránok. To poskytuje bezpečnosť a zabraňuje konfliktom s inými stránkami.
 
-Uložené údaje si môžete prezrieť otvorením nástrojov pre vývojárov prehliadača (F12), prechodom na kartu **Application** a rozbalením sekcie **Local Storage**.
+Uložené údaje si môžete zobraziť otvorením Nástrojov vývojára prehliadača (F12), prejsť na kartu **Application** a rozbaliť sekciu **Local Storage**.
 
-![Panel lokálneho úložiska](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.sk.png)
+```mermaid
+stateDiagram-v2
+    [*] --> CheckStorage: Rozšírenie sa spustí
+    CheckStorage --> FirstTime: Žiadne uložené údaje
+    CheckStorage --> Returning: Údaje nájdené
+    
+    FirstTime --> ShowForm: Zobraziť formulár nastavenia
+    ShowForm --> UserInput: Používateľ zadáva údaje
+    UserInput --> SaveData: Uložiť do localStorage
+    SaveData --> FetchAPI: Získať údaje o uhlíku
+    
+    Returning --> LoadData: Čítať z localStorage
+    LoadData --> FetchAPI: Získať údaje o uhlíku
+    
+    FetchAPI --> ShowResults: Zobraziť údaje
+    ShowResults --> UserAction: Používateľ interaguje
+    
+    UserAction --> Reset: Kliknuté tlačidlo Vymazať
+    UserAction --> ShowResults: Zobraziť údaje
+    
+    Reset --> ClearStorage: Odstrániť uložené údaje
+    ClearStorage --> FirstTime: Späť na nastavenie
+```
+![Panel lokálneho úložiska](../../../../translated_images/localstorage.472f8147b6a3f8d1.sk.png)
 
-> ⚠️ **Bezpečnostné upozornenie**: V produkčných aplikáciách ukladanie API kľúčov do LocalStorage predstavuje bezpečnostné riziká, pretože JavaScript môže k týmto údajom pristupovať. Na účely učenia je tento prístup v poriadku, ale skutočné aplikácie by mali používať bezpečné serverové úložisko pre citlivé údaje.
+> ⚠️ **Bezpečnostné upozornenie**: V produkčných aplikáciách predstavuje uloženie API kľúčov v LocalStorage bezpečnostné riziko, pretože JavaScript k nim môže pristupovať. Pre vzdelávacie účely to funguje, ale reálne aplikácie by mali citlivé poverenia ukladať bezpečne na serverovej strane.
 
-## Spracovanie odoslania formulára
+## Spracujte odoslanie formulára
 
-Teraz spracujeme, čo sa stane, keď niekto odošle váš formulár. Predvolene prehliadače obnovia stránku pri odoslaní formulára, ale my tento proces zachytíme, aby sme vytvorili plynulejší zážitok.
+Teraz spracujeme, čo sa stane, keď niekto odošle váš formulár. Štandardne prehliadače pri odoslaní formulára načítajú stránku znova, ale my toto správanie zachytíme, aby sme vytvorili plynulejší zážitok.
 
-Tento prístup odráža spôsob, akým riadiace stredisko spracováva komunikáciu s vesmírnou loďou - namiesto resetovania celého systému pri každom prenose udržujú nepretržitú prevádzku a zároveň spracovávajú nové informácie.
+Tento prístup pripomína, ako riadiace stredisko rieši komunikáciu s vesmírnymi loďami – namiesto resetovania celého systému pri každom prenose udržiavajú nepretržitý chod a spracovávajú nové informácie.
 
-Vytvorte funkciu, ktorá zachytí udalosť odoslania formulára a extrahuje vstup používateľa:
+Vytvorte funkciu, ktorá zachytáva udalosť odoslania formulára a získava vstup používateľa:
 
 ```javascript
 function handleSubmit(e) {
@@ -156,93 +282,148 @@ function handleSubmit(e) {
 }
 ```
 
-**V uvedenom sme:**
+**Čo sme tu urobili:**
 - **Zabránili** predvolenému správaniu odoslania formulára, ktoré by obnovilo stránku
-- **Extrahovali** hodnoty vstupov používateľa z polí API kľúča a regiónu
-- **Preniesli** údaje z formulára do funkcie `setUpUser()` na spracovanie
-- **Udržali** správanie aplikácie na jednej stránke tým, že sme sa vyhli obnoveniu stránky
+- **Získali** hodnoty vstupu používateľa z polí API kľúča a regiónu
+- **Odovzdali** dáta formulára funkcii `setUpUser()` na spracovanie
+- **Udržali** správanie jednostránkovej aplikácie tým, že sa stránka znovu nenačítava
 
-✅ Pamätajte, že vaše HTML polia formulára obsahujú atribút `required`, takže prehliadač automaticky overí, že používateľ poskytol API kľúč a región pred spustením tejto funkcie.
+✅ Pamätajte, že vaše HTML polia vo formulári majú atribút `required`, takže prehliadač automaticky overí, či používateľ zadal API kľúč aj región ešte pred spustením tejto funkcie.
 
-## Nastavenie preferencií používateľa
+## Nastavte používateľské preferencie
 
-Funkcia `setUpUser` je zodpovedná za uloženie poverení používateľa a iniciovanie prvého volania API. Tým sa vytvorí plynulý prechod od nastavenia k zobrazovaniu výsledkov.
+Funkcia `setUpUser` je zodpovedná za uloženie používateľských poverení a spustenie prvého volania API. Tým sa vytvorí plynulý prechod od nastavenia k zobrazovaniu výsledkov.
 
 ```javascript
 function setUpUser(apiKey, regionName) {
-	// Save user credentials for future sessions
+	// Uložiť prihlasovacie údaje používateľa pre budúce relácie
 	localStorage.setItem('apiKey', apiKey);
 	localStorage.setItem('regionName', regionName);
 	
-	// Update UI to show loading state
+	// Aktualizovať používateľské rozhranie na zobrazenie stavu načítavania
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
 	
-	// Fetch carbon usage data with user's credentials
+	// Získať údaje o spotrebe CO2 s prihlasovacími údajmi používateľa
 	displayCarbonUsage(apiKey, regionName);
 }
 ```
 
-**Krok za krokom, čo sa tu deje:**
-- **Ukladá** API kľúč a názov regiónu do lokálneho úložiska pre budúce použitie
-- **Zobrazuje** indikátor načítania, aby informoval používateľov, že sa načítavajú údaje
-- **Vymazáva** všetky predchádzajúce chybové hlásenia z rozhrania
-- **Zobrazuje** tlačidlo vymazania, aby mohli používatelia neskôr resetovať svoje nastavenia
-- **Iniciuje** volanie API na získanie skutočných údajov o uhlíkovej spotrebe
+**Krok po kroku, čo sa deje:**
+- **Uloží** API kľúč a názov regiónu do lokálneho úložiska pre ďalšie použitie
+- **Zobrazí** indikátor načítavania, aby používateľ vedel, že sa získavajú dáta
+- **Vyčistí** všetky predchádzajúce chybové hlásenia z obrazovky
+- **Zobrazí** tlačidlo reset pre používateľov na neskoršie vyčistenie nastavení
+- **Spustí** volanie API na získanie reálnych údajov o spotrebe uhlíka
 
-Táto funkcia vytvára plynulý používateľský zážitok tým, že koordinovane spravuje uchovávanie údajov a aktualizácie používateľského rozhrania.
+Táto funkcia vytvára plynulý používateľský zážitok tým, že kombinuje uchovávanie dát a aktualizácie užívateľského rozhrania v jednej koordinovanej akcii.
 
-## Zobrazenie údajov o uhlíkovej spotrebe
+## Zobrazte údaje o spotrebe uhlíka
 
-Teraz pripojíme vaše rozšírenie k externým zdrojom údajov prostredníctvom API. Tým sa vaše rozšírenie transformuje zo samostatného nástroja na niečo, čo môže pristupovať k informáciám v reálnom čase z celého internetu.
+Teraz prepojíme vaše rozšírenie s externými zdrojmi dát cez API. Tým sa vaše rozšírenie z samostatného nástroja transformuje na niečo, čo môže pristupovať k reálnym informáciám v reálnom čase z celého internetu.
 
 **Pochopenie API**
 
-[API](https://www.webopedia.com/TERM/A/API.html) sú spôsob, akým medzi sebou komunikujú rôzne aplikácie. Predstavte si ich ako telegrafný systém, ktorý spájal vzdialené mestá v 19. storočí - operátori posielali požiadavky na vzdialené stanice a dostávali odpovede s požadovanými informáciami. Kedykoľvek kontrolujete sociálne médiá, pýtate sa hlasového asistenta otázku alebo používate aplikáciu na doručovanie, API uľahčujú tieto výmeny údajov.
+[API](https://www.webopedia.com/TERM/A/API.html) sú spôsoby, akým spolu aplikácie komunikujú. Predstavte si ich ako telegrafný systém, ktorý spájal vzdialené mestá v 19. storočí – operátori posielali požiadavky na vzdialené stanice a dostávali odpovede s požadovanými informáciami. Kedykoľvek kontrolujete sociálne médiá, pýtate sa hlasového asistenta alebo používate dodávkovú aplikáciu, API umožňujú tieto výmeny dát.
 
-**Kľúčové koncepty o REST API:**
+```mermaid
+flowchart TD
+    A[Vaše Rozšírenie] --> B[HTTP Požiadavka]
+    B --> C[CO2 Signal API]
+    C --> D{Platná Požiadavka?}
+    D -->|Áno| E[Dotaz na Databázu]
+    D -->|Nie| F[Vrátiť Chybu]
+    E --> G[Údaje o Emisiách]
+    G --> H[JSON Odpoveď]
+    H --> I[Vaše Rozšírenie]
+    F --> I
+    I --> J[Aktualizovať UI]
+    
+    subgraph "API Požiadavka"
+        K[Hlavičky: auth-token]
+        L[Parametre: countryCode]
+        M[Metóda: GET]
+    end
+    
+    subgraph "API Odpoveď"
+        N[Intenzita Uhlíka]
+        O[Percento Fosílnych Palív]
+        P[Časová Značka]
+    end
+    
+    style C fill:#e8f5e8
+    style G fill:#fff3e0
+    style I fill:#e1f5fe
+```
+**Kľúčové koncepty REST API:**
 - **REST** znamená 'Representational State Transfer'
-- **Používa** štandardné HTTP metódy (GET, POST, PUT, DELETE) na interakciu s údajmi
-- **Vracia** údaje v predvídateľných formátoch, zvyčajne JSON
-- **Poskytuje** konzistentné, URL-based koncové body pre rôzne typy požiadaviek
+- **Používa** štandardné HTTP metódy (GET, POST, PUT, DELETE) na prácu s dátami
+- **Vracia** dáta v predvídateľných formátoch, typicky JSON
+- **Poskytuje** konzistentné, URL - založené koncové body pre rôzne typy požiadaviek
 
-✅ [CO2 Signal API](https://www.co2signal.com/), ktoré použijeme, poskytuje údaje o intenzite uhlíka v elektrických sieťach po celom svete v reálnom čase. To pomáha používateľom pochopiť environmentálny dopad ich spotreby elektriny!
+✅ API [CO2 Signal](https://www.co2signal.com/), ktoré budeme používať, poskytuje aktuálne dáta o uhlíkovej intenzite elektrických sietí po celom svete. Pomáha používateľom pochopiť environmentálny dopad ich spotreby elektriny!
 
-> 💡 **Pochopenie asynchrónneho JavaScriptu**: Kľúčové slovo [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) umožňuje vášmu kódu spracovávať viacero operácií súčasne. Keď požadujete údaje zo servera, nechcete, aby sa celé rozšírenie zastavilo - to by bolo ako zastavenie všetkých operácií riadenia letovej prevádzky pri čakaní na odpoveď jedného lietadla.
+> 💡 **Pochopenie asynchrónneho JavaScriptu**: Kľúčové slovo [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function) umožňuje vášmu kódu spracovávať viac operácií naraz. Keď požiadate server o dáta, nechcete, aby sa celé rozšírenie zablokovalo – to by bolo ako riadenie letovej prevádzky, ktoré zastaví všetky operácie, kým jedna lietadlo neodpovie.
 >
-> **Kľúčové výhody:**
-> - **Udržuje** odozvu rozšírenia počas načítania údajov
-> - **Umožňuje** pokračovanie vykonávania iného kódu počas sieťových požiadaviek
-> - **Zlepšuje** čitateľnosť kódu v porovnaní s tradičnými vzormi spätného volania
-> - **Umožňuje** elegantné spracovanie chýb pri problémoch so sieťou
+> **Hlavné výhody:**
+> - **Zachováva** odozvu rozšírenia počas načítavania dát
+> - **Umožňuje** ostatnému kódu pokračovať v behu počas sieťových požiadaviek
+> - **Zlepšuje** čitateľnosť kódu oproti tradičným callbackom
+> - **Umožňuje** elegantnú správu chýb pri sieťových problémoch
 
 Tu je krátke video o `async`:
 
-[![Async a Await na správu sľubov](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async a Await na správu sľubov")
+[![Async a Await pre správu sľubov](https://img.youtube.com/vi/YwmlRkrxvkk/0.jpg)](https://youtube.com/watch?v=YwmlRkrxvkk "Async a Await pre správu sľubov")
 
 > 🎥 Kliknite na obrázok vyššie pre video o async/await.
 
-Vytvorte funkciu na získanie a zobrazenie údajov o uhlíkovej spotrebe:
+### 🔄 **Pedagogická kontrola**
+**Pochopenie asynchrónneho programovania**: Predtým než sa pustíte do API funkcie, overte si, či rozumiete:
+- ✅ Prečo používame `async/await` namiesto blokovania celého rozšírenia
+- ✅ Ako bloky `try/catch` elegantne spracovávajú sieťové chyby
+- ✅ Rozdiel medzi synchronnými a asynchronnými operáciami
+- ✅ Prečo môže volanie API zlyhať a ako s týmito zlyhaniami naložiť
+
+**Skutočné príklady asynchronity:**
+- **Objednanie jedla**: Nečakáte pri kuchyni, dostanete potvrdenku a pokračujete ďalej
+- **Odoslanie e-mailov**: Aplikácia sa nezamrzne, môžete písať ďalšie správy
+- **Načítavanie webových stránok**: Obrázky sa načítajú postupne, zatiaľ čo vy čítate text
+
+**Priebeh autentifikácie API**:
+```mermaid
+sequenceDiagram
+    participant Ext as Rozšírenie
+    participant API as CO2 Signal API
+    participant DB as Databáza
+    
+    Ext->>API: Požiadavka s auth-token
+    API->>API: Overiť token
+    API->>DB: Dotaz na údaje o uhlíku
+    DB->>API: Vrátiť údaje
+    API->>Ext: JSON odpoveď
+    Ext->>Ext: Aktualizovať UI
+```
+Vytvorte funkciu na získanie a zobrazenie dát o spotrebe uhlíka:
 
 ```javascript
-// Modern fetch API approach (no external dependencies needed)
+// Moderný prístup pomocou fetch API (nie sú potrebné žiadne externé závislosti)
 async function displayCarbonUsage(apiKey, region) {
 	try {
-		// Fetch carbon intensity data from CO2 Signal API
+		// Načítať údaje o uhlíkovej intenzite z CO2 Signal API
 		const response = await fetch('https://api.co2signal.com/v1/latest', {
 			method: 'GET',
 			headers: {
 				'auth-token': apiKey,
 				'Content-Type': 'application/json'
 			},
-			// Add query parameters for the specific region
+			// Pridať parametre dotazu pre konkrétny región
 			...new URLSearchParams({ countryCode: region }) && {
 				url: `https://api.co2signal.com/v1/latest?countryCode=${region}`
 			}
 		});
 
-		// Check if the API request was successful
+		// Skontrolovať, či bol API požiadavok úspešný
 		if (!response.ok) {
 			throw new Error(`API request failed: ${response.status}`);
 		}
@@ -250,10 +431,10 @@ async function displayCarbonUsage(apiKey, region) {
 		const data = await response.json();
 		const carbonData = data.data;
 
-		// Calculate rounded carbon intensity value
+		// Vypočítať zaokrúhlenú hodnotu uhlíkovej intenzity
 		const carbonIntensity = Math.round(carbonData.carbonIntensity);
 
-		// Update the user interface with fetched data
+		// Aktualizovať používateľské rozhranie s načítanými údajmi
 		loading.style.display = 'none';
 		form.style.display = 'none';
 		myregion.textContent = region.toUpperCase();
@@ -261,12 +442,12 @@ async function displayCarbonUsage(apiKey, region) {
 		fossilfuel.textContent = `${carbonData.fossilFuelPercentage.toFixed(2)}% (percentage of fossil fuels used to generate electricity)`;
 		results.style.display = 'block';
 
-		// TODO: calculateColor(carbonIntensity) - implement in next lesson
+		// TODO: calculateColor(carbonIntensity) - implementovať v ďalšej lekcii
 
 	} catch (error) {
 		console.error('Error fetching carbon data:', error);
 		
-		// Show user-friendly error message
+		// Zobraziť používateľovi priateľskú chybovú správu
 		loading.style.display = 'none';
 		results.style.display = 'none';
 		errors.textContent = 'Sorry, we couldn\'t fetch data for that region. Please check your API key and region code.';
@@ -274,48 +455,209 @@ async function displayCarbonUsage(apiKey, region) {
 }
 ```
 
-**Rozdelenie toho, čo sa tu deje:**
-- **Používa** moderné API `fetch()` namiesto externých knižníc ako Axios pre čistejší kód bez závislostí
-- **Implementuje** správne overenie chýb pomocou `response.ok`, aby sa chyby API zachytili včas
-- **Spracováva** asynchrónne operácie pomocou `async/await` pre čitateľnejší tok kódu
-- **Autentifikuje** sa s CO2 Signal API pomocou hlavičky `auth-token`
-- **Analyzuje** údaje JSON z odpovede a extrahuje informácie o intenzite uhlíka
-- **Aktualizuje** viacero prvkov UI s formátovanými environmentálnymi údajmi
-- **Poskytuje** používateľsky prívetivé chybové hlásenia, keď volania API zlyhajú
+**Čo sa tu deje:**
+- **Používa** moderné API `fetch()` namiesto externých knižníc ako Axios pre čistý, nezávislý kód
+- **Implementuje** správnu kontrolu chýb pomocou `response.ok` na rýchle zachytenie neúspechov
+- **Spracováva** asynchrónne operácie s `async/await` pre čitateľnejší tok kódu
+- **Autentifikuje** sa v CO2 Signal API pomocou hlavičky `auth-token`
+- **Parsuje** JSON odpoveď a extrahuje informácie o uhlíkovej intenzite
+- **Aktualizuje** viaceré UI prvky s formátovanými environmentálnymi údajmi
+- **Poskytuje** používateľsky prívetivé chybové hlásenia, keď volanie API zlyhá
 
-**Kľúčové moderné koncepty JavaScriptu:**
-- **Šablónové literály** so syntaxou `${}` pre čisté formátovanie reťazcov
-- **Spracovanie chýb** s blokmi try/catch pre robustné aplikácie
+**Ukázané moderné JavaScript koncepty:**
+- **Template literály** s `${}` syntaxou pre čisté formátovanie reťazcov
+- **Spracovanie chýb** pomocou blokov try/catch pre robustné aplikácie
 - **Async/await** vzor pre elegantné spracovanie sieťových požiadaviek
-- **Destrukturalizácia objektov** na extrakciu konkrétnych údajov z odpovedí API
-- **Reťazenie metód** pre viacnásobné manipulácie s DOM
+- **Destrukturalizácia objektov** pre vyťaženie konkrétnych dát z odpovedí API
+- **Reťazenie metód** pre viacnásobné manipulácie DOM
 
-✅ Táto funkcia demonštruje niekoľko dôležitých konceptov webového vývoja - komunikáciu s externými servermi, spracovanie autentifikácie, spracovanie údajov, aktualizáciu rozhraní a elegantné spracovanie chýb. Toto sú základné zručnosti, ktoré profesionálni vývojári pravidelne používajú.
+✅ Táto funkcia ukazuje viacero kľúčových konceptov webového vývoja – komunikáciu s externými servermi, správu autentifikácie, spracovanie dát, aktualizáciu rozhraní a šikovnú správu chýb. To sú základné zručnosti, ktoré profesionáli denne používajú.
+
+```mermaid
+flowchart TD
+    A[Spustiť API Volanie] --> B[Získať Požiadavku]
+    B --> C{Sieť úspešná?}
+    C -->|Nie| D[Chyba siete]
+    C -->|Áno| E{Odpoveď OK?}
+    E -->|Nie| F[Chyba API]
+    E -->|Áno| G[Parsovanie JSON]
+    G --> H{Platné dáta?}
+    H -->|Nie| I[Chyba dát]
+    H -->|Áno| J[Aktualizovať UI]
+    
+    D --> K[Zobraziť chybovú správu]
+    F --> K
+    I --> K
+    J --> L[Skryť načítavanie]
+    K --> L
+    
+    style A fill:#e1f5fe
+    style J fill:#e8f5e8
+    style K fill:#ffebee
+    style L fill:#f3e5f5
+```
+### 🔄 **Pedagogická kontrola**
+**Celkové pochopenie systému**: Overte si svoje znalosti celého postupu:
+- ✅ Ako odkazy na DOM umožňujú JavaScriptu ovládať rozhranie
+- ✅ Prečo lokálne úložisko vytvára trvalosť medzi reláciami prehliadača
+- ✅ Ako async/await robí volania API bez zaseknutia rozšírenia
+- ✅ Čo sa stane, keď volanie API zlyhá a ako sa chyba spracuje
+- ✅ Prečo používateľský zážitok zahŕňa načítavacie stavy a chybové hlásenia
 
 🎉 **Čo ste dosiahli:** Vytvorili ste rozšírenie prehliadača, ktoré:
-- **Pripája sa** na internet a získava skutočné environmentálne údaje
-- **Uchováva** nastavenia používateľa medzi reláciami
-- **Spracováva** chyby elegantne namiesto zlyhania
-- **Poskytuje** plynulý, profesionálny používateľský zážitok
+- **Spojuje** sa s internetom a získava reálne environmentálne dáta
+- **Uchováva** používateľské nastavenia medzi reláciami
+- **Spracováva** chyby elegantne, namiesto havárie
+- **Poskytuje** plynulý a profesionálny užívateľský zážitok
 
-Otestujte svoju prácu spustením `npm run build` a obnovením vášho rozšírenia v prehliadači. Teraz máte funkčný sledovač uhlíkovej stopy. V ďalšej lekcii pridáme funkciu dynamických ikon na dokončenie rozšírenia.
-
----
-
-## Výzva GitHub Copilot Agent 🚀
-
-Použite režim Agent na splnenie nasledujúcej výzvy:
-
-**Popis:** Vylepšite rozšírenie prehliadača pridaním zlepšení spracovania chýb a funkcií používateľského zážitku. Táto výzva vám pomôže precvičiť prácu s API, lokálnym úložiskom a manipuláciou s DOM pomocou moderných JavaScriptových vzorov.
-
-**Výzva:** Vytvorte vylepšenú verziu funkcie displayCarbonUsage, ktorá zahŕňa: 1) Mechanizmus opakovania pre zlyhané volania API s exponenciálnym oneskorením, 2) Validáciu vstupu pre kód regiónu pred vykonaním volania API,
-V tejto lekcii ste sa naučili o LocalStorage a API, oboch veľmi užitočných pre profesionálneho webového vývojára. Dokážete si predstaviť, ako tieto dve veci spolupracujú? Premýšľajte o tom, ako by ste navrhli webovú stránku, ktorá by uchovávala položky na použitie prostredníctvom API.
-
-## Úloha
-
-[Prijmite API](assignment.md)
+Otestujte svoju prácu spustením `npm run build` a obnovením rozšírenia v prehliadači. Teraz máte funkčný merač uhlíkovej stopy. Nasledujúca lekcia pridá dynamickú funkciu ikony na dokončenie rozšírenia.
 
 ---
 
-**Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+## Výzva GitHub Copilot Agenta 🚀
+
+Použite režim Agent na dokončenie nasledujúcej výzvy:
+**Popis:** Vylepšite rozšírenie prehliadača pridaním zlepšení spracovania chýb a funkcií pre používateľskú skúsenosť. Táto výzva vám pomôže precvičiť si prácu s API, lokálnym úložiskom a manipuláciou s DOM pomocou moderných vzorov JavaScriptu.
+
+**Výzva:** Vytvorte rozšírenú verziu funkcie displayCarbonUsage, ktorá bude obsahovať: 1) Mechanizmus opakovaní pre neúspešné volania API s exponenciálnym backoffom, 2) Overenie vstupu pre kód regiónu pred vykonaním volania API, 3) Animáciu načítania s indikátormi priebehu, 4) Ukladanie odpovedí API do localStorage s časovými značkami expirácie (cache na 30 minút), a 5) Funkciu na zobrazenie historických dát z predchádzajúcich volaní API. Takisto pridajte správne TypeScript-štýlové JSDoc komentáre na dokumentovanie všetkých parametrov funkcie a typov návratových hodnôt.
+
+Viac sa dozviete o [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) tu.
+
+## 🚀 Výzva
+
+Rozšírte svoje znalosti o API preskúmaním bohatstva browserových API, ktoré sú dostupné pre webový vývoj. Vyberte si jedno z týchto browserových API a vytvorte malú ukážku:
+
+- [Geolocation API](https://developer.mozilla.org/docs/Web/API/Geolocation_API) - Získajte aktuálnu polohu používateľa
+- [Notification API](https://developer.mozilla.org/docs/Web/API/Notifications_API) - Posielajte desktopové notifikácie
+- [HTML Drag and Drop API](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) - Vytvorte interaktívne rozhranie pre presúvanie
+- [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) - Pokročilé techniky lokálneho ukladania
+- [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) - Moderná alternatíva XMLHttpRequest
+
+**Výskumné otázky na zváženie:**
+- Aké reálne problémy toto API rieši?
+- Ako API spracováva chyby a okrajové prípady?
+- Aké bezpečnostné aspekty je potrebné zvážiť pri používaní tohto API?
+- Ako široko je API podporované naprieč rôznymi prehliadačmi?
+
+Po vašom výskume identifikujte, ktoré vlastnosti robia API užívateľsky prívetivým a spoľahlivým pre vývojárov.
+
+## Kvíz po prednáške
+
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/26)
+
+## Prehľad a samostatné štúdium
+
+Naučili ste sa o LocalStorage a API v tejto lekcii, oboje je veľmi užitočné pre profesionálneho webového developera. Môžete premýšľať o tom, ako tieto dve veci spolupracujú? Zamyslite sa, ako by ste navrhli webovú stránku, ktorá by ukladala položky na použitie v API.
+
+### ⚡ **Čo môžete urobiť v nasledujúcich 5 minútach**
+- [ ] Otvorte záložku Application v DevTools a preskúmajte localStorage na ľubovoľnej webovej stránke
+- [ ] Vytvorte jednoduchý HTML formulár a otestujte validáciu formulára v prehliadači
+- [ ] Vyskúšajte uložiť a načítať údaje pomocou localStorage v konzole prehliadača
+- [ ] Skontrolujte odosielané dáta formulára pomocou záložky Network
+
+### 🎯 **Čo môžete dosiahnuť v tomto hodine**
+- [ ] Dokončiť kvíz po lekcii a pochopiť koncepty práce s formulármi
+- [ ] Vytvoriť formulár pre rozšírenie prehliadača, ktorý ukladá používateľské preferencie
+- [ ] Implementovať validáciu na strane klienta s užitočnými chybovými správami
+- [ ] Precvičiť používanie API chrome.storage pre uchovávanie údajov rozšírenia
+- [ ] Vytvoriť používateľské rozhranie reagujúce na uložené nastavenia používateľa
+
+### 📅 **Vývoj rozšírenia počas týždňa**
+- [ ] Dokončiť plnohodnotné rozšírenie prehliadača s funkciami formulára
+- [ ] Ovládnuť rôzne možnosti ukladania: lokalné, synchronizované a session storage
+- [ ] Implementovať pokročilé funkcie formulára ako automatické dopĺňanie a validáciu
+- [ ] Pridať import/export funkciu pre používateľské dáta
+- [ ] Dôkladne testovať rozšírenie v rôznych prehliadačoch
+- [ ] Vylepšiť používateľský zážitok a spracovanie chýb rozšírenia
+
+### 🌟 **Mesiac ovládania Web API**
+- [ ] Vytvárať komplexné aplikácie pomocou rôznych browserových storage API
+- [ ] Naučiť sa offline-first vývojové vzory
+- [ ] Prispievať do open-source projektov zaoberajúcich sa perzistentným ukladaniem dát
+- [ ] Ovládnuť vývoj s ohľadom na súkromie a dodržiavanie GDPR
+- [ ] Vytvárať znovupoužiteľné knižnice pre prácu s formulármi a správu dát
+- [ ] Zdieľať poznatky o webových API a vývoji rozšírení
+
+## 🎯 Časový harmonogram vášho majstrovstva vo vývoji rozšírení
+
+```mermaid
+timeline
+    title Pokrok v učení integrácie API a ukladania dát
+    
+    section Základy DOM (15 minút)
+        Referencie prvkov: majstrovstvo querySelector
+                          : Nastavenie poslucháča udalostí
+                          : Základy správy stavu
+        
+    section Lokálne ukladanie (20 minút)
+        Utrvalosť dát: Ukladanie kľúč-hodnota
+                        : Správa relácií
+                        : Spracovanie používateľských preferencií
+                        : Nástroje na kontrolu ukladania
+        
+    section Spracovanie formulárov (25 minút)
+        Vstup používateľa: Validácia formulárov
+                  : Zabránenie udalostiam
+                  : Extrakcia dát
+                  : Prechody stavov UI
+        
+    section Integrácia API (35 minút)
+        Vonkajšia komunikácia: HTTP požiadavky
+                              : Vzory autentifikácie
+                              : Parsovanie JSON dát
+                              : Spracovanie odpovedí
+        
+    section Asynchrónne programovanie (40 minút)
+        Moderný JavaScript: Spracovanie Promise
+                         : Vzory async/await
+                         : Správa chýb
+                         : Nezablokujúce operácie
+        
+    section Spracovanie chýb (30 minút)
+        Robustné aplikácie: Bloky try/catch
+                           : Používateľsky prívetivé správy
+                           : Hladké zhoršovanie funkčnosti
+                           : Techniky ladenia
+        
+    section Pokročilé vzory (1 týždeň)
+        Profesionálny rozvoj: Stratégie cachovania
+                                : Obmedzovanie rýchlosti
+                                : Mechanizmy opakovania
+                                : Optimalizácia výkonu
+        
+    section Produkčné zručnosti (1 mesiac)
+        Podnikové funkcie: Najlepšie bezpečnostné postupy
+                           : Verzionovanie API
+                           : Monitorovanie a logovanie
+                           : Škálovateľná architektúra
+```
+### 🛠️ Zhrnutie vášho full-stack vývojárskeho nástroja
+
+Po absolvovaní tejto lekcie teraz máte:
+- **Majstrovstvo DOM**: Precízne cielene a manipulácie s prvkami
+- **Expertízu s úložiskom**: Perzistentná správa dát pomocou localStorage
+- **Integráciu API**: Načítavanie dát v reálnom čase a autentifikáciu
+- **Asynchrónne programovanie**: Nezablokujúce operácie s moderným JavaScriptom
+- **Spracovanie chýb**: Robustné aplikácie, ktoré elegantne zvládajú zlyhania
+- **Používateľskú skúsenosť**: Stav načítania, validácie a plynulé interakcie
+- **Moderné vzory**: fetch API, async/await a ES6+ funkcie
+
+**Získané profesionálne zručnosti**: Implementovali ste vzory používané v:
+- **Webových aplikáciách**: Single-page aplikácie s externými zdrojmi dát
+- **Mobilnom vývoji**: API-riadené aplikácie s offline schopnosťami
+- **Desktopovom softvéri**: Electron aplikácie s perzistentným úložiskom
+- **Podnikových systémoch**: Autentifikácia, kešovanie a spracovanie chýb
+- **Moderných frameworkoch**: Vzory správy dát v React/Vue/Angular
+
+**Ďalšia úroveň**: Ste pripravení preskúmať pokročilé témy ako kešovacie stratégie, realtime websocket pripojenia alebo komplexnú správu stavov!
+
+## Zadanie
+
+[Adoptujte API](assignment.md)
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Upozornenie**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, vezmite, prosím, na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne výklady vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

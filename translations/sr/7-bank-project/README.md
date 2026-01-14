@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 У овом пројекту ћете научити како да направите измишљену банку. Ове лекције укључују упутства о томе како да распоредите веб апликацију и обезбедите руте, направите форме, управљате стањем и преузимате податке са API-ја од којег можете добити податке банке.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.sr.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.sr.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.sr.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.sr.png) |
 |--------------------------------|--------------------------------|
 
 ## Лекције

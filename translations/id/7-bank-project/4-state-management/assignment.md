@@ -112,7 +112,7 @@ Lihat [dokumentasi API server](../api/README.md) untuk:
 **Hasil yang Diharapkan:**
 Setelah menyelesaikan tugas ini, aplikasi perbankan Anda harus memiliki fitur "Tambah Transaksi" yang berfungsi penuh dan terlihat profesional:
 
-![Screenshot yang menunjukkan contoh dialog "Tambah Transaksi"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.id.png)
+![Screenshot yang menunjukkan contoh dialog "Tambah Transaksi"](../../../../translated_images/dialog.93bba104afeb79f1.id.png)
 
 ## Pengujian Implementasi Anda
 

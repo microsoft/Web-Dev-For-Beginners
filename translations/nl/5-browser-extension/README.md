@@ -23,7 +23,7 @@ Deze extensie kan ad hoc door een gebruiker worden opgeroepen zodra een API-sleu
 
 ### Credits
 
-![een groene browserextensie](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.nl.png)
+![een groene browserextensie](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.nl.png)
 
 ## Credits
 

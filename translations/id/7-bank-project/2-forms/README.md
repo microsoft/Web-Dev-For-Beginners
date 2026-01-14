@@ -295,7 +295,7 @@ Pertama, mari kita amati apa yang terjadi dengan pengiriman formulir dasar:
 2. Amati perubahan di bilah alamat browser Anda
 3. Perhatikan bagaimana halaman memuat ulang dan data muncul di URL
 
-![Screenshot perubahan URL browser setelah mengklik tombol Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.id.png)
+![Screenshot perubahan URL browser setelah mengklik tombol Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca.id.png)
 
 ### Perbandingan Metode HTTP
 
@@ -350,7 +350,7 @@ Mari kita konfigurasi formulir registrasi Anda untuk berkomunikasi dengan benar 
 2. **Klik** tombol "Create Account"
 3. **Amati** respons server di browser Anda
 
-![Jendela browser di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.id.png)
+![Jendela browser di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/form-post.61de4ca1b964d91a.id.png)
 
 **Apa yang harus Anda lihat:**
 - **Browser mengarahkan** ke URL endpoint API
@@ -615,7 +615,7 @@ async function register() {
 3. **Klik** "Buat Akun"
 4. **Amati** pesan konsol dan umpan balik pengguna
 
-![Screenshot menunjukkan pesan log di konsol browser](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.id.png)
+![Screenshot menunjukkan pesan log di konsol browser](../../../../translated_images/browser-console.efaf0b51aaaf6778.id.png)
 
 **Apa yang harus Anda lihat:**
 - **Status pemuatan** muncul di tombol kirim
@@ -790,7 +790,7 @@ Mari tingkatkan formulir registrasi Anda dengan validasi yang kuat yang memberik
 3. **Coba** karakter khusus di bidang nama pengguna
 4. **Masukkan** jumlah saldo negatif
 
-![Screenshot menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.id.png)
+![Screenshot menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/validation-error.8bd23e98d416c22f.id.png)
 
 **Apa yang akan Anda amati:**
 - **Browser menampilkan** pesan validasi bawaan
@@ -952,7 +952,7 @@ Tampilkan pesan kesalahan di HTML jika pengguna sudah ada.
 
 Berikut adalah contoh tampilan halaman login setelah ditambahkan beberapa gaya CSS:
 
-![Screenshot halaman login setelah menambahkan gaya CSS](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.id.png)
+![Screenshot halaman login setelah menambahkan gaya CSS](../../../../translated_images/result.96ef01f607bf856a.id.png)
 
 ## Kuis Pasca-Pelajaran
 

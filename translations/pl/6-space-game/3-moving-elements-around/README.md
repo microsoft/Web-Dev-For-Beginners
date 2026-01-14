@@ -1,114 +1,283 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "a9a161871de7706cb0e23b1bd0c74559",
-  "translation_date": "2025-08-29T16:29:25+00:00",
+  "original_hash": "8c55a2bd4bc0ebe4c88198fd563a9e09",
+  "translation_date": "2026-01-06T19:19:19+00:00",
   "source_file": "6-space-game/3-moving-elements-around/README.md",
   "language_code": "pl"
 }
 -->
-# Tworzenie gry kosmicznej, część 3: Dodawanie ruchu
+# Tworzenie gry kosmicznej Część 3: Dodawanie ruchu
 
+```mermaid
+journey
+    title Twoja podróż animacji w grze
+    section Podstawy ruchu
+      Zrozum zasady ruchu: 3: Student
+      Naucz się aktualizacji współrzędnych: 4: Student
+      Wdroż podstawowy ruch: 4: Student
+    section Sterowanie graczem
+      Obsłuż zdarzenia klawiatury: 4: Student
+      Zapobiegaj domyślnym zachowaniom: 5: Student
+      Stwórz responsywne sterowanie: 5: Student
+    section Systemy gry
+      Zbuduj pętlę gry: 5: Student
+      Zarządzaj cyklem życia obiektów: 5: Student
+      Wdroż wzorzec pub/sub: 5: Student
+```
+Pomyśl o swoich ulubionych grach – to, co czyni je fascynującymi, to nie tylko ładna grafika, ale sposób, w jaki wszystko się porusza i reaguje na twoje działania. Obecnie twoja gra kosmiczna przypomina piękny obraz, ale zaraz dodamy ruch, który ożywi ją.
+
+Gdy inżynierowie NASA programowali komputer nawigacyjny dla misji Apollo, stali przed podobnym wyzwaniem: jak sprawić, by statek kosmiczny reagował na polecenia pilota, jednocześnie automatycznie utrzymując poprawki kursu? Zasady, których się dziś nauczymy, odzwierciedlają właśnie te koncepcje – zarządzanie ruchem kontrolowanym przez gracza oraz automatycznymi zachowaniami systemu.
+
+W tej lekcji nauczysz się, jak sprawić, by statki kosmiczne sunęły po ekranie, reagowały na polecenia gracza i tworzyły płynne wzorce ruchu. Wszystko rozłożymy na przystępne koncepcje, które naturalnie ze sobą współgrają.
+
+Na koniec gracze będą pilotować swój statek bohatera po ekranie, podczas gdy statki wroga będą patrolować niebo. Co ważniejsze, zrozumiesz podstawowe zasady napędzające systemy ruchu w grach.
+
+```mermaid
+mindmap
+  root((Animacja Gry))
+    Movement Types
+      Sterowanie Gracza
+      Ruch Automatyczny
+      Oparte na Fizyce
+      Zaprogramowane Ścieżki
+    Event Handling
+      Wejście z Klawiatury
+      Zdarzenia Myszy
+      Sterowanie Dotykowe
+      Zapobieganie Domyślne
+    Game Loop
+      Aktualizacja Logiki
+      Renderowanie Klatki
+      Czyszczenie Płótna
+      Kontrola Częstotliwości Klatek
+    Object Management
+      Aktualizacje Pozycji
+      Detekcja Kolizji
+      Zarządzanie Cyklem Życia
+      Śledzenie Stanu
+    Communication
+      Wzorzec Pub/Sub
+      Emitery Zdarzeń
+      Przesyłanie Wiadomości
+      Luźne Powiązania
+```
 ## Quiz przed wykładem
 
 [Quiz przed wykładem](https://ff-quizzes.netlify.app/web/quiz/33)
 
-Gry nie są zbyt ekscytujące, dopóki na ekranie nie pojawią się poruszające się obiekty! W tej grze wykorzystamy dwa rodzaje ruchu:
+## Zrozumienie ruchu w grach
 
-- **Ruch za pomocą klawiatury/myszy**: gdy użytkownik używa klawiatury lub myszy, aby poruszać obiektem na ekranie.
-- **Ruch generowany przez grę**: gdy gra automatycznie porusza obiektem w określonych odstępach czasu.
+Gry ożywają, gdy coś zaczyna się poruszać, a zasadniczo dzieje się to na dwa sposoby:
 
-Jak więc poruszać obiektami na ekranie? Wszystko sprowadza się do współrzędnych kartezjańskich: zmieniamy położenie (x, y) obiektu, a następnie odświeżamy ekran.
+- **Ruch kontrolowany przez gracza**: Gdy naciskasz klawisz lub klikasz myszą, coś się porusza. To bezpośrednie powiązanie między tobą a światem gry.
+- **Ruch automatyczny**: Gdy gra sama decyduje o ruchu – na przykład statki wroga, które muszą patrolować ekran, niezależnie od tego, co robisz.
 
-Typowe kroki, aby osiągnąć *ruch* na ekranie, to:
+Poruszanie obiektów na ekranie komputera jest prostsze, niż myślisz. Pamiętasz te współrzędne x i y z lekcji matematyki? To właśnie nimi się tu posługujemy. Gdy Galileo obserwował księżyce Jowisza w 1610 roku, robił zasadniczo to samo – śledził pozycje w czasie, by zrozumieć wzory ruchu.
 
-1. **Ustawienie nowej lokalizacji** obiektu; jest to konieczne, aby obiekt wydawał się poruszać.
-2. **Wyczyszczenie ekranu**, ekran musi być czyszczony pomiędzy kolejnymi rysowaniami. Możemy to zrobić, rysując prostokąt wypełniony kolorem tła.
-3. **Ponowne narysowanie obiektu** w nowej lokalizacji. Dzięki temu osiągamy efekt przesunięcia obiektu z jednego miejsca na drugie.
+Poruszanie czegoś na ekranie jest jak tworzenie animacji flipbook – trzeba wykonać te trzy proste kroki:
 
-Oto jak to może wyglądać w kodzie:
+```mermaid
+flowchart LR
+    A["Klatka N"] --> B["Aktualizuj pozycje"]
+    B --> C["Wyczyść płótno"]
+    C --> D["Narysuj obiekty"]
+    D --> E["Klatka N+1"]
+    E --> F{Kontynuować?}
+    F -->|Tak| B
+    F -->|Nie| G["Koniec gry"]
+    
+    subgraph "Cykl animacji"
+        H["1. Oblicz nowe pozycje"]
+        I["2. Zetrzyj poprzednią klatkę"]
+        J["3. Renderuj nową klatkę"]
+    end
+    
+    style B fill:#e1f5fe
+    style C fill:#ffebee
+    style D fill:#e8f5e8
+```
+1. **Zaktualizuj pozycję** – Zmień miejsce, w którym powinien się znaleźć obiekt (np. przesuń go o 5 pikseli w prawo)
+2. **Usuń stary obraz** – Wyczyść ekran, aby nie było widoczne "duchowe" ślady
+3. **Narysuj nową klatkę** – Umieść obiekt w nowym miejscu
+
+Robiąc to wystarczająco szybko, masz płynny ruch, który graczom wydaje się naturalny.
+
+Oto jak może to wyglądać w kodzie:
 
 ```javascript
-//set the hero's location
+// Ustaw lokalizację bohatera
 hero.x += 5;
-// clear the rectangle that hosts the hero
+// Wyczyść prostokąt, który gości bohatera
 ctx.clearRect(0, 0, canvas.width, canvas.height);
-// redraw the game background and hero
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// Prerysuj tło gry i bohatera
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "black";
 ctx.drawImage(heroImg, hero.x, hero.y);
 ```
 
-✅ Czy potrafisz wymyślić, dlaczego rysowanie bohatera wiele razy na sekundę może powodować problemy z wydajnością? Przeczytaj o [alternatywach dla tego wzorca](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
+**To, co robi ten kod:**
+- **Aktualizuje** współrzędną x bohatera o 5 pikseli, aby przesunąć go w poziomie
+- **Czyści** cały obszar canvas, usuwając poprzednią klatkę
+- **Wypełnia** canvas czarnym kolorem tła
+- **Rysuje ponownie** obraz bohatera na jego nowej pozycji
+
+✅ Potrafisz wskazać powód, dla którego rysowanie bohatera wielu klatek na sekundę może obciążać wydajność? Przeczytaj o [alternatywach dla tego wzorca](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas).
 
 ## Obsługa zdarzeń klawiatury
 
-Zdarzenia obsługujemy, przypisując konkretne zdarzenia do kodu. Zdarzenia klawiatury są wywoływane na całym oknie, podczas gdy zdarzenia myszy, takie jak `click`, mogą być powiązane z kliknięciem konkretnego elementu. W tym projekcie będziemy korzystać ze zdarzeń klawiatury.
+To miejsce, gdzie łączymy wejście gracza z akcją w grze. Gdy ktoś naciśnie spację, by wystrzelić laser, lub dotknie klawisza strzałki, by uniknąć asteroidy, twoja gra musi wykryć i zareagować na te dane wejściowe.
 
-Aby obsłużyć zdarzenie, należy użyć metody `addEventListener()` okna i podać jej dwa parametry wejściowe. Pierwszy parametr to nazwa zdarzenia, na przykład `keyup`. Drugi parametr to funkcja, która ma zostać wywołana w wyniku wystąpienia zdarzenia.
+Zdarzenia klawiatury zachodzą na poziomie okna, co oznacza, że całe twoje okno przeglądarki nasłuchuje na naciśnięcia klawiszy. Kliknięcia myszą natomiast mogą być powiązane z konkretnymi elementami (np. kliknięcie przycisku). W naszej grze kosmicznej skupimy się na sterowaniu klawiaturą, ponieważ to one dają graczom klasyczne arcade'owe wrażenie.
+
+Przypomina mi to, jak operatorzy telegrafu w XIX wieku musieli tłumaczyć kod Morse’a na zrozumiałe wiadomości – robimy podobnie, tłumacząc naciśnięcia klawiszy na polecenia gry.
+
+Aby obsłużyć zdarzenie, należy użyć metody `addEventListener()` okna i podać jej dwa parametry. Pierwszy to nazwa zdarzenia, np. `keyup`. Drugi to funkcja, która zostanie wywołana po zajściu zdarzenia.
 
 Oto przykład:
 
 ```javascript
 window.addEventListener('keyup', (evt) => {
-  // `evt.key` = string representation of the key
+  // evt.key = reprezentacja klawisza w postaci łańcucha znaków
   if (evt.key === 'ArrowUp') {
-    // do something
+    // zrób coś
   }
-})
+});
 ```
 
-Dla zdarzeń klawiatury istnieją dwie właściwości zdarzenia, które można wykorzystać, aby sprawdzić, który klawisz został naciśnięty:
+**Analiza tego, co się tutaj dzieje:**
+- **Nasłuchuje** zdarzeń klawiatury na całym oknie
+- **Przechwytuje** obiekt zdarzenia, który zawiera informacje, jaki klawisz został naciśnięty
+- **Sprawdza**, czy naciśnięty klawisz to konkretny (tu strzałka w górę)
+- **Wykonuje** kod, jeśli warunek jest spełniony
 
-- `key`, czyli reprezentacja tekstowa naciśniętego klawisza, na przykład `ArrowUp`.
-- `keyCode`, czyli reprezentacja numeryczna, na przykład `37`, odpowiadająca `ArrowLeft`.
+Do zdarzeń klawiaturowych można użyć dwóch właściwości obiektu event, by zobaczyć, który klawisz został naciśnięty:
 
-✅ Manipulacja zdarzeniami klawiatury jest przydatna nie tylko w tworzeniu gier. Jakie inne zastosowania tej techniki przychodzą Ci do głowy?
+- `key` – to jest reprezentacja tekstowa klawisza, np. `'ArrowUp'`
+- `keyCode` – to jest liczba, np. `37`, odpowiadająca `ArrowLeft`
 
-### Klawisze specjalne: uwaga
+✅ Manipulacja zdarzeniami klawiatury jest przydatna także poza tworzeniem gier. Jakie inne zastosowania przychodzą ci do głowy dla tej techniki?
 
-Istnieją pewne *specjalne* klawisze, które wpływają na okno. Oznacza to, że jeśli nasłuchujesz zdarzenia `keyup` i używasz tych klawiszy do poruszania bohaterem, może to również powodować przewijanie poziome. Z tego powodu możesz chcieć *wyłączyć* to wbudowane zachowanie przeglądarki podczas tworzenia gry. Potrzebujesz kodu takiego jak ten:
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant EventSystem
+    participant GameLogic
+    participant Hero
+    
+    User->>Browser: Naciska klawisz StrzałkaWgórę
+    Browser->>EventSystem: zdarzenie keydown
+    EventSystem->>EventSystem: preventDefault()
+    EventSystem->>GameLogic: emit('KEY_EVENT_UP')
+    GameLogic->>Hero: hero.y -= 5
+    Hero->>Hero: Aktualizuj pozycję
+    
+    Note over Browser,GameLogic: Przepływ zdarzeń zapobiega domyślnym działaniom przeglądarki
+    Note over GameLogic,Hero: Wzorzec pub/sub umożliwia czystą komunikację
+```
+### Specjalne klawisze: uwaga!
+
+Niektóre klawisze mają wbudowane zachowania przeglądarki, które mogą przeszkadzać w grze. Strzałki przewijają stronę, a spacja przesuwa ją w dół – tego nie chcemy, gdy ktoś steruje statkiem kosmicznym.
+
+Możemy zapobiec tym domyślnym zachowaniom i pozwolić naszej grze obsłużyć wejście. To podobne do tego, jak pierwsi programiści musieli nadpisać przerwania systemowe, by tworzyć własne zachowania – tutaj robimy to na poziomie przeglądarki. Oto jak:
 
 ```javascript
-let onKeyDown = function (e) {
+const onKeyDown = function (e) {
   console.log(e.keyCode);
   switch (e.keyCode) {
     case 37:
     case 39:
     case 38:
-    case 40: // Arrow keys
+    case 40: // Klawisze strzałek
     case 32:
       e.preventDefault();
-      break; // Space
+      break; // Spacja
     default:
-      break; // do not block other keys
+      break; // nie blokuj innych klawiszy
   }
 };
 
 window.addEventListener('keydown', onKeyDown);
 ```
 
-Powyższy kod zapewni, że klawisze strzałek i spacja będą miały *domyślne* zachowanie wyłączone. Mechanizm *wyłączania* działa, gdy wywołujemy `e.preventDefault()`.
+**Zrozumienie tego kodu zapobiegającego:**
+- **Sprawdza** konkretne kody klawiszy, które mogą wywołać niechciane zachowania przeglądarki
+- **Zatrzymuje** domyślną akcję przeglądarki dla klawiszy strzałek i spacji
+- **Pozwala** innym klawiszom działać normalnie
+- **Używa** `e.preventDefault()` aby zatrzymać wbudowane zachowanie przeglądarki
 
-## Ruch generowany przez grę
+### 🔄 **Pedagogiczne podsumowanie**
+**Zrozumienie obsługi zdarzeń**: Zanim przejdziemy do ruchu automatycznego, upewnij się, że potrafisz:
+- ✅ Wyjaśnić różnicę między zdarzeniami `keydown` i `keyup`
+- ✅ Zrozumieć, dlaczego zapobiegamy domyślnym zachowaniom przeglądarki
+- ✅ Opisać jak event listenery łączą wejścia użytkownika z logiką gry
+- ✅ Wskazać, które klawisze mogą przeszkadzać w sterowaniu grą
 
-Możemy sprawić, że obiekty będą poruszać się same, używając timerów, takich jak funkcje `setTimeout()` lub `setInterval()`, które aktualizują lokalizację obiektu w każdym cyklu czasowym. Oto jak to może wyglądać:
+**Szybki test**: Co by się stało, gdybyś nie zapobiegł domyślnemu zachowaniu klawiszy strzałek?
+*Odpowiedź: Przeglądarka przewijałaby stronę, przeszkadzając w ruchu gry*
+
+**Architektura systemu zdarzeń**: Teraz rozumiesz:
+- **Nasłuchiwanie na poziomie okna**: przechwytywanie zdarzeń w przeglądarce
+- **Właściwości obiektu zdarzenia**: łańcuchy `key` vs liczby `keyCode`
+- **Zapobieganie domyślnemu zachowaniu**: zatrzymywanie niepożądanych działań przeglądarki
+- **Logika warunkowa**: reagowanie na konkretne kombinacje klawiszy
+
+## Ruch sterowany przez grę
+
+Porozmawiajmy teraz o obiektach, które poruszają się bez wejścia od gracza. Pomyśl o statkach wroga przemierzających ekran, pociskach lecących po liniach prostych lub chmurach unoszących się w tle. Ten autonomiczny ruch sprawia, że świat twojej gry jest żywy, nawet gdy nikt nie steruje.
+
+Używamy wbudowanych timerów JavaScript do aktualizacji pozycji w regularnych odstępach czasu. Ta koncepcja przypomina działanie zegarów wahadłowych – mechanizm wyzwalający spójne, ustalone działania w określonych odstępach. Oto jak prosto to może działać:
 
 ```javascript
-let id = setInterval(() => {
-  //move the enemy on the y axis
+const id = setInterval(() => {
+  // Przesuń wroga na osi y
   enemy.y += 10;
-})
+}, 100);
 ```
+
+**To, co robi ten kod ruchu:**
+- **Tworzy** timer, który działa co 100 milisekund
+- **Aktualizuje** współrzędną y wroga o 10 pikseli za każdym razem
+- **Przechowuje** ID interwału, aby można go było zatrzymać w razie potrzeby
+- **Przesuwa** wroga automatycznie w dół na ekranie
 
 ## Pętla gry
 
-Pętla gry to koncepcja, która polega na funkcji wywoływanej w regularnych odstępach czasu. Nazywa się ją pętlą gry, ponieważ wszystko, co powinno być widoczne dla użytkownika, jest rysowane w tej pętli. Pętla gry wykorzystuje wszystkie obiekty gry, które są jej częścią, rysując je, chyba że z jakiegoś powodu nie powinny już być częścią gry. Na przykład, jeśli obiekt to wróg, który został trafiony laserem i eksploduje, nie jest już częścią bieżącej pętli gry (więcej na ten temat dowiesz się w kolejnych lekcjach).
+Oto koncepcja łącząca wszystko razem – pętla gry. Gdyby twoja gra była filmem, pętla gry byłaby projektorem, pokazującym klatkę za klatką na tyle szybko, że wszystko wygląda na płynny ruch.
 
-Oto jak typowa pętla gry może wyglądać w kodzie:
+Każda gra ma taką pętlę działającą w tle. To funkcja, która aktualizuje obiekty gry, rysuje ekran i ciągle powtarza ten proces. Śledzi twojego bohatera, wszystkich wrogów, pociski latające — stan całej gry.
 
+Przypomina mi to, jak pierwsi filmowi animatorzy, tacy jak Walt Disney, musieli rysować postaci klatka po klatce, by stworzyć iluzję ruchu. Teraz robimy to samo, ale za pomocą kodu zamiast ołówków.
+
+Oto jak typowo może wyglądać pętla gry, wyrażona w kodzie:
+
+```mermaid
+flowchart TD
+    A["Rozpocznij pętlę gry"] --> B["Wyczyść płótno"]
+    B --> C["Wypełnij tło"]
+    C --> D["Zaktualizuj obiekty gry"]
+    D --> E["Narysuj bohatera"]
+    E --> F["Narysuj przeciwników"]
+    F --> G["Narysuj elementy interfejsu"]
+    G --> H["Poczekaj na następnej klatki"]
+    H --> I{Gra działa?}
+    I -->|Tak| B
+    I -->|Nie| J["Zakończ grę"]
+    
+    subgraph "Sterowanie liczba klatek"
+        K["60 FPS = 16.67ms"]
+        L["30 FPS = 33.33ms"]
+        M["10 FPS = 100ms"]
+    end
+    
+    style B fill:#ffebee
+    style D fill:#e1f5fe
+    style E fill:#e8f5e8
+    style F fill:#e8f5e8
+```
 ```javascript
-let gameLoopId = setInterval(() =>
+const gameLoopId = setInterval(() => {
   function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -116,21 +285,33 @@ let gameLoopId = setInterval(() =>
     drawHero();
     drawEnemies();
     drawStaticObjects();
+  }
+  gameLoop();
 }, 200);
 ```
 
-Powyższa pętla jest wywoływana co `200` milisekund, aby odświeżyć płótno. Możesz wybrać najlepszy interwał, który ma sens dla Twojej gry.
+**Zrozumienie struktury pętli gry:**
+- **Czyści** cały canvas, usuwając poprzednią klatkę
+- **Wypełnia** tło jednostajnym kolorem
+- **Rysuje** wszystkie obiekty gry w ich aktualnych pozycjach
+- **Powtarza** ten proces co 200 milisekund, tworząc płynną animację
+- **Zarządza** liczbą klatek przez kontrolę interwału czasowego
 
 ## Kontynuacja gry kosmicznej
 
-Weźmiesz istniejący kod i go rozbudujesz. Możesz zacząć od kodu, który ukończyłeś w części I, lub użyć kodu z [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work).
+Teraz dodamy ruch do statycznej sceny, którą wcześniej zbudowałeś. Zamienimy ją ze statycznego obrazka w interaktywne doświadczenie. Przejdziemy przez to krok po kroku, aby każdy element naturalnie wynikał z poprzedniego.
 
-- **Ruch bohatera**: dodasz kod, aby umożliwić poruszanie bohaterem za pomocą klawiszy strzałek.
-- **Ruch wrogów**: dodasz również kod, aby wrogowie poruszali się z góry na dół w określonym tempie.
+Weź kod z miejsca, w którym skończyliśmy w poprzedniej lekcji (lub zacznij od kodu w folderze [Part II- starter](../../../../6-space-game/3-moving-elements-around/your-work), jeśli potrzebujesz świeży start).
 
-## Zalecane kroki
+**To, co dziś budujemy:**
+- **Sterowanie bohaterem**: Klawisze strzałek będą pilotować twój statek kosmiczny po ekranie
+- **Ruch wrogów**: Te obce statki rozpoczną swój marsz
 
-Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. Powinny zawierać następujące:
+Zacznijmy implementować te funkcje.
+
+## Polecane kroki
+
+Znajdź pliki utworzone dla ciebie w podfolderze `your-work`. Powinny zawierać:
 
 ```bash
 -| assets
@@ -141,25 +322,29 @@ Znajdź pliki, które zostały dla Ciebie utworzone w podfolderze `your-work`. P
 -| package.json
 ```
 
-Uruchom swój projekt w folderze `your_work`, wpisując:
+Projekt rozpoczynasz w folderze `your-work` wpisując:
 
 ```bash
 cd your-work
 npm start
 ```
 
-Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres. Na razie powinien wyświetlać bohatera i wszystkich wrogów; nic się jeszcze nie porusza!
+**Co robi to polecenie:**
+- **Przechodzi** do katalogu twojego projektu
+- **Uruchamia** serwer HTTP pod adresem `http://localhost:5000`
+- **Serwuje** pliki gry, byś mógł testować ją w przeglądarce
+
+Powyższe uruchomi serwer HTTP pod adresem `http://localhost:5000`. Otwórz przeglądarkę i wpisz ten adres – powinien wyświetlić bohatera i wszystkich wrogów; nic się jeszcze nie porusza!
 
 ### Dodaj kod
 
-1. **Dodaj dedykowane obiekty** dla `hero`, `enemy` i `game object`, które powinny mieć właściwości `x` i `y`. (Pamiętaj o części dotyczącej [dziedziczenia lub kompozycji](../README.md)).
+1. **Dodaj dedykowane obiekty** dla `hero`, `enemy` i `game object`, powinny mieć właściwości `x` i `y`. (Przypomnij sobie fragment o [dziedziczeniu lub kompozycji](../README.md)).
 
-   *PODPOWIEDŹ* `game object` powinien być tym, który ma `x` i `y` oraz zdolność rysowania się na płótnie.
+   *PODPOWIEDŹ* `game object` powinien mieć `x` i `y` oraz zdolność do rysowania siebie na canvas.
 
-   > wskazówka: zacznij od dodania nowej klasy GameObject z jej konstruktorem zdefiniowanym jak poniżej, a następnie narysuj ją na płótnie:
-  
+   > **Wskazówka**: Zacznij od dodania nowej klasy `GameObject` z konstruktorem przedstawionym poniżej, a potem narysuj ją na canvas:
+
     ```javascript
-        
     class GameObject {
       constructor(x, y) {
         this.x = x;
@@ -177,12 +362,58 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
     }
     ```
 
-    Teraz rozszerz ten GameObject, aby utworzyć Hero i Enemy.
+    **Zrozumienie tej klasy bazowej:**
+    - **Definiuje** wspólne właściwości współdzielone przez wszystkie obiekty gry (pozycja, rozmiar, obraz)
+    - **Zawiera** flagę `dead`, by śledzić, czy obiekt powinien zostać usunięty
+    - **Dostarcza** metodę `draw()`, która renderuje obiekt na canvas
+    - **Ustawia** wartości domyślne dla wszystkich właściwości, które mogą być nadpisane przez klasy potomne
+
+```mermaid
+classDiagram
+    class GameObject {
+        +x: number
+        +y: number
+        +dead: boolean
+        +type: string
+        +width: number
+        +height: number
+        +img: Image
+        +draw(ctx)
+    }
     
+    class Hero {
+        +speed: number
+        +type: "Bohater"
+        +width: 98
+        +height: 75
+    }
+    
+    class Enemy {
+        +type: "Wróg"
+        +width: 98
+        +height: 50
+        +setInterval()
+    }
+    
+    GameObject <|-- Hero
+    GameObject <|-- Enemy
+    
+    class EventEmitter {
+        +listeners: object
+        +on(wiadomość, słuchacz)
+        +emit(wiadomość, ładunek)
+    }
+```
+    Teraz rozszerz tę klasę `GameObject`, aby stworzyć `Hero` i `Enemy`:
+
     ```javascript
     class Hero extends GameObject {
       constructor(x, y) {
-        ...it needs an x, y, type, and speed
+        super(x, y);
+        this.width = 98;
+        this.height = 75;
+        this.type = "Hero";
+        this.speed = 5;
       }
     }
     ```
@@ -191,129 +422,173 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
     class Enemy extends GameObject {
       constructor(x, y) {
         super(x, y);
-        (this.width = 98), (this.height = 50);
+        this.width = 98;
+        this.height = 50;
         this.type = "Enemy";
-        let id = setInterval(() => {
+        const id = setInterval(() => {
           if (this.y < canvas.height - this.height) {
             this.y += 5;
           } else {
-            console.log('Stopped at', this.y)
+            console.log('Stopped at', this.y);
             clearInterval(id);
           }
-        }, 300)
+        }, 300);
       }
     }
     ```
 
-2. **Dodaj obsługę zdarzeń klawiatury**, aby obsługiwać nawigację klawiszami (poruszanie bohaterem w górę/dół, w lewo/prawo).
+    **Kluczowe koncepcje w tych klasach:**
+    - **Dziedziczy** po `GameObject` używając słowa kluczowego `extends`
+    - **Wywołuje** konstruktor klasy nadrzędnej za pomocą `super(x, y)`
+    - **Ustawia** specyficzne wymiary i właściwości dla każdego typu obiektu
+    - **Implementuje** automatyczny ruch wrogów wykorzystując `setInterval()`
 
-   *PAMIĘTAJ* to układ kartezjański, lewy górny róg to `0,0`. Pamiętaj również, aby dodać kod zatrzymujący *domyślne zachowanie*.
+2. **Dodaj obsługę zdarzeń klawiatury** do nawigacji (ruch bohatera góra/dół/lewo/prawo)
 
-   > wskazówka: utwórz swoją funkcję onKeyDown i przypisz ją do okna:
+   *PAMIĘTAJ* to system kartezjański, lewy górny róg to `0,0`. Pamiętaj też o dodaniu kodu blokującego *domyślne zachowanie*
+
+   > **Wskazówka**: Utwórz funkcję `onKeyDown` i podłącz ją do okna:
 
    ```javascript
-    let onKeyDown = function (e) {
-	      console.log(e.keyCode);
-	        ...add the code from the lesson above to stop default behavior
-	      }
-    };
+   const onKeyDown = function (e) {
+     console.log(e.keyCode);
+     // Dodaj kod z powyższej lekcji, aby zatrzymać domyślne zachowanie
+     switch (e.keyCode) {
+       case 37:
+       case 39:
+       case 38:
+       case 40: // Klawisze strzałek
+       case 32:
+         e.preventDefault();
+         break; // Spacja
+       default:
+         break; // nie blokuj innych klawiszy
+     }
+   };
 
-    window.addEventListener("keydown", onKeyDown);
+   window.addEventListener("keydown", onKeyDown);
    ```
     
-   Sprawdź konsolę przeglądarki w tym momencie i obserwuj logowane naciśnięcia klawiszy.
+   **Co robi ten handler zdarzeń:**
+   - **Nasłuchuje** zdarzeń `keydown` na całym oknie
+   - **Loguje** kod klawisza, aby ułatwić debugowanie, które klawisze są naciskane
+   - **Zapobiega** domyślnemu zachowaniu przeglądarki dla klawiszy strzałek i spacji
+   - **Pozwala** innym klawiszom działać normalnie
+   
+   Sprawdź teraz konsolę przeglądarki i obserwuj logowanie naciśnięć klawiszy.
 
-3. **Zaimplementuj** [wzorzec Pub-Sub](../README.md), aby Twój kod był bardziej przejrzysty w kolejnych częściach.
+3. **Zaimplementuj** wzorzec [Pub sub](../README.md), co pozwoli utrzymać kod w czystości, gdy przejdziesz do dalszych części.
+
+   Wzorzec Publish-Subscribe pomaga zorganizować kod przez oddzielenie wykrywania zdarzeń od ich obsługi. Sprawia to, że kod jest bardziej modułowy i łatwiejszy w utrzymaniu.
 
    Aby to zrobić, możesz:
 
-   1. **Dodać nasłuchiwacza zdarzeń** do okna:
+   1. **Dodać listener zdarzeń** na oknie:
 
        ```javascript
-        window.addEventListener("keyup", (evt) => {
-          if (evt.key === "ArrowUp") {
-            eventEmitter.emit(Messages.KEY_EVENT_UP);
-          } else if (evt.key === "ArrowDown") {
-            eventEmitter.emit(Messages.KEY_EVENT_DOWN);
-          } else if (evt.key === "ArrowLeft") {
-            eventEmitter.emit(Messages.KEY_EVENT_LEFT);
-          } else if (evt.key === "ArrowRight") {
-            eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
-          }
-        });
-        ```
+       window.addEventListener("keyup", (evt) => {
+         if (evt.key === "ArrowUp") {
+           eventEmitter.emit(Messages.KEY_EVENT_UP);
+         } else if (evt.key === "ArrowDown") {
+           eventEmitter.emit(Messages.KEY_EVENT_DOWN);
+         } else if (evt.key === "ArrowLeft") {
+           eventEmitter.emit(Messages.KEY_EVENT_LEFT);
+         } else if (evt.key === "ArrowRight") {
+           eventEmitter.emit(Messages.KEY_EVENT_RIGHT);
+         }
+       });
+       ```
 
-    1. **Utworzyć klasę EventEmitter**, aby publikować i subskrybować wiadomości:
+   **Co robi ten system zdarzeń:**
+   - **Wykrywa** wejścia z klawiatury i zamienia je na niestandardowe zdarzenia gry
+   - **Oddziela** wykrywanie wejścia od logiki gry
+   - **Ułatwia** późniejszą zmianę sterowania bez wpływu na kod gry
+   - **Pozwala** wielu systemom reagować na to samo wejście
 
-        ```javascript
-        class EventEmitter {
-          constructor() {
-            this.listeners = {};
-          }
-        
-          on(message, listener) {
-            if (!this.listeners[message]) {
-              this.listeners[message] = [];
-            }
-            this.listeners[message].push(listener);
-          }
-        
-          emit(message, payload = null) {
-            if (this.listeners[message]) {
-              this.listeners[message].forEach((l) => l(message, payload));
-            }
-          }
-        }
-        ```
-
-    1. **Dodać stałe** i skonfigurować EventEmitter:
-
-        ```javascript
-        const Messages = {
-          KEY_EVENT_UP: "KEY_EVENT_UP",
-          KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
-          KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
-          KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
-        };
-        
-        let heroImg, 
-            enemyImg, 
-            laserImg,
-            canvas, ctx, 
-            gameObjects = [], 
-            hero, 
-            eventEmitter = new EventEmitter();
-        ```
-
-    1. **Zainicjalizować grę**
-
-    ```javascript
-    function initGame() {
-      gameObjects = [];
-      createEnemies();
-      createHero();
+```mermaid
+flowchart TD
+    A["Wejście z klawiatury"] --> B["Nasłuchiwacz zdarzeń okna"]
+    B --> C["Emiter zdarzeń"]
+    C --> D["WYDARZENIE_KLAWISZA_GÓRA"]
+    C --> E["WYDARZENIE_KLAWISZA_DÓŁ"]
+    C --> F["WYDARZENIE_KLAWISZA_LEWO"]
+    C --> G["WYDARZENIE_KLAWISZA_PRAWO"]
     
-      eventEmitter.on(Messages.KEY_EVENT_UP, () => {
-        hero.y -=5 ;
-      })
+    D --> H["Ruch bohatera"]
+    D --> I["System dźwiękowy"]
+    D --> J["Efekty wizualne"]
     
-      eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
-        hero.y += 5;
-      });
+    E --> H
+    F --> H
+    G --> H
     
-      eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
-        hero.x -= 5;
-      });
-    
-      eventEmitter.on(Messages.KEY_EVENT_RIGHT, () => {
-        hero.x += 5;
-      });
-    }
-    ```
+    style A fill:#e1f5fe
+    style C fill:#e8f5e8
+    style H fill:#fff3e0
+```
+   2. **Utwórz klasę EventEmitter**, aby publikować i subskrybować wiadomości:
 
-1. **Skonfiguruj pętlę gry**
+       ```javascript
+       class EventEmitter {
+         constructor() {
+           this.listeners = {};
+         }
+       
+         on(message, listener) {
+           if (!this.listeners[message]) {
+             this.listeners[message] = [];
+           }
+           this.listeners[message].push(listener);
+         }
+       
+   3. **Dodaj stałe** i skonfiguruj EventEmitter:
 
-   Zrefaktoruj funkcję window.onload, aby zainicjalizować grę i ustawić pętlę gry w odpowiednim interwale. Dodasz również wiązkę laserową:
+       ```javascript
+       const Messages = {
+         KEY_EVENT_UP: "KEY_EVENT_UP",
+         KEY_EVENT_DOWN: "KEY_EVENT_DOWN",
+         KEY_EVENT_LEFT: "KEY_EVENT_LEFT",
+         KEY_EVENT_RIGHT: "KEY_EVENT_RIGHT",
+       };
+       
+       let heroImg, 
+           enemyImg, 
+           laserImg,
+           canvas, ctx, 
+           gameObjects = [], 
+           hero, 
+           eventEmitter = new EventEmitter();
+       ```
+
+   **Zrozumienie konfiguracji:**
+   - **Definiuje** stałe wiadomości, by unikać literówek i ułatwić refaktoryzację
+   - **Deklaruje** zmienne dla obrazów, kontekstu canvas i stanu gry
+   - **Tworzy** globalny emiter zdarzeń dla systemu pub-sub
+   - **Inicjuje** tablicę do przechowywania wszystkich obiektów gry
+
+   4. **Zainicjuj grę**
+
+       ```javascript
+       function initGame() {
+         gameObjects = [];
+         createEnemies();
+         createHero();
+       
+         eventEmitter.on(Messages.KEY_EVENT_UP, () => {
+           hero.y -= 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_DOWN, () => {
+           hero.y += 5;
+         });
+       
+         eventEmitter.on(Messages.KEY_EVENT_LEFT, () => {
+           hero.x -= 5;
+         });
+       
+4. **Ustaw pętlę gry**
+
+   Zrefaktoryzuj funkcję `window.onload`, aby zainicjować grę i ustawić pętlę gry w dobrym odstępie czasowym. Dodasz też wiązkę lasera:
 
     ```javascript
     window.onload = async () => {
@@ -324,19 +599,25 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
       laserImg = await loadTexture("assets/laserRed.png");
     
       initGame();
-      let gameLoopId = setInterval(() => {
+      const gameLoopId = setInterval(() => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawGameObjects(ctx);
-      }, 100)
-      
+      }, 100);
     };
     ```
 
-5. **Dodaj kod**, aby wrogowie poruszali się w określonych odstępach czasu.
+   **Zrozumienie ustawień gry:**
+   - **Czeka** na pełne załadowanie strony przed rozpoczęciem
+   - **Pobiera** element canvas i jego kontekst renderowania 2D
+   - **Ładuje** asynchronicznie wszystkie assety obrazów używając `await`
+   - **Uruchamia** pętlę gry działającą co 100 ms (10 kl./s)
+   - **Czyści** i ponownie rysuje cały ekran każdą klatkę
 
-    Zrefaktoruj funkcję `createEnemies()`, aby tworzyła wrogów i dodawała ich do nowej klasy gameObjects:
+5. **Dodaj kod** do poruszania się wrogów w określonych odstępach czasu
+
+    Zrefaktoryzuj funkcję `createEnemies()`, aby tworzyć wrogów i dodawać ich do nowej klasy gameObjects:
 
     ```javascript
     function createEnemies() {
@@ -354,8 +635,14 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
       }
     }
     ```
+
+    **Co robi tworzenie wrogów:**
+    - **Oblicza** pozycje, by wycentrować wrogów na ekranie
+    - **Tworzy** siatkę wrogów za pomocą zagnieżdżonych pętli
+    - **Przypisuje** obraz wroga do każdego obiektu wroga
+    - **Dodaje** każdego wroga do globalnej tablicy obiektów gry
     
-    oraz dodaj funkcję `createHero()`, aby wykonać podobny proces dla bohatera.
+    oraz dodaj funkcję `createHero()`, aby w podobny sposób utworzyć bohatera.
     
     ```javascript
     function createHero() {
@@ -368,7 +655,12 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
     }
     ```
 
-    Na koniec dodaj funkcję `drawGameObjects()`, aby rozpocząć rysowanie:
+    **Co robi tworzenie bohatera:**
+    - **Ustawia** bohatera na dole, na środku ekranu
+    - **Przypisuje** obraz bohatera do obiektu bohatera
+    - **Dodaje** bohatera do tablicy obiektów gry do renderowania
+
+    i na koniec dodaj funkcję `drawGameObjects()`, aby rozpocząć rysowanie:
 
     ```javascript
     function drawGameObjects(ctx) {
@@ -376,21 +668,224 @@ Powyższe polecenie uruchomi serwer HTTP pod adresem `http://localhost:5000`. Ot
     }
     ```
 
-    Twoi wrogowie powinni zacząć zbliżać się do statku kosmicznego bohatera!
+    **Zrozumienie funkcji rysującej:**
+    - **Iteruje** przez wszystkie obiekty gry w tablicy
+    - **Wywołuje** metodę `draw()` na każdym obiekcie
+    - **Przekazuje** kontekst canvas, aby obiekty mogły się same renderować
+
+    ### 🔄 **Pedagogiczne Podsumowanie**
+    **Kompletne zrozumienie systemu gry**: Zweryfikuj swoją znajomość całej architektury:
+    - ✅ Jak dziedziczenie pozwala bohaterowi i wrogom dzielić wspólne właściwości GameObject?
+    - ✅ Dlaczego wzorzec pub/sub sprawia, że twój kod jest bardziej utrzymywany?
+    - ✅ Jaką rolę pełni pętla gry w tworzeniu płynnej animacji?
+    - ✅ Jak nasłuchiwacze zdarzeń łączą interakcję użytkownika z zachowaniem obiektów gry?
+
+    **Integracja systemu**: Twoja gra teraz demonstruje:
+    - **Projektowanie obiektowe**: Klasy bazowe z wyspecjalizowanym dziedziczeniem
+    - **Architektura zdarzeniowa**: Wzorzec pub/sub dla luźnego powiązania
+    - **Framework animacji**: Pętla gry ze spójnymi aktualizacjami klatek
+    - **Obsługa wejścia**: Zdarzenia klawiatury z zapobieganiem domyślnemu działaniu
+    - **Zarządzanie assetami**: Ładowanie obrazów i renderowanie sprite'ów
+
+    **Wzorce profesjonalne**: Zaimplementowałeś:
+    - **Separation of Concerns**: Separacja logiki, wejścia i renderowania
+    - **Polimorfizm**: Wszystkie obiekty gry dzielą wspólny interfejs rysowania
+    - **Przesyłanie wiadomości**: Czysta komunikacja między komponentami
+    - **Zarządzanie zasobami**: Efektywne zarządzanie sprite'ami i animacjami
+
+    Twoi wrogowie powinni zacząć przesuwać się w stronę Twojego statku bohatera!
+      }
+    }
+    ```
+    
+    and add a `createHero()` function to do a similar process for the hero.
+    
+    ```javascript
+    function createHero() {
+      hero = new Hero(
+        canvas.width / 2 - 45,
+        canvas.height - canvas.height / 4
+      );
+      hero.img = heroImg;
+      gameObjects.push(hero);
+    }
+    ```
+
+    i na koniec dodaj funkcję `drawGameObjects()`, aby rozpocząć rysowanie:
+
+    ```javascript
+    function drawGameObjects(ctx) {
+      gameObjects.forEach(go => go.draw(ctx));
+    }
+    ```
+
+    Twoi wrogowie powinni zacząć przesuwać się w stronę Twojego statku bohatera!
 
 ---
 
+## GitHub Copilot Agent Challenge 🚀
+
+Oto wyzwanie, które poprawi dopracowanie Twojej gry: dodanie granic i płynnych sterowań. Obecnie Twój bohater może wyjść poza ekran, a ruch może wydawać się szarpany.
+
+**Twoja misja:** Spraw, aby Twój statek kosmiczny był bardziej realistyczny, implementując granice ekranu i płynny ruch. To podobne do systemów kontroli lotów NASA, które zapobiegają przekraczaniu bezpiecznych parametrów operacyjnych przez statki kosmiczne.
+
+**Co zbudować:** Stwórz system, który utrzymuje statek bohatera na ekranie i spraw, aby sterowanie było płynne. Gdy gracze przytrzymają klawisz strzałki, statek powinien się ślizgać ciągle, zamiast poruszać się skokowo. Rozważ dodanie wizualnej informacji zwrotnej, gdy statek dotrze do granic ekranu – np. subtelny efekt wskazujący krawędź obszaru gry.
+
+Dowiedz się więcej o [trybie agenta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
+
 ## 🚀 Wyzwanie
 
-Jak widzisz, Twój kod może zamienić się w "spaghetti", gdy zaczynasz dodawać funkcje, zmienne i klasy. Jak możesz lepiej zorganizować swój kod, aby był bardziej czytelny? Naszkicuj system organizacji kodu, nawet jeśli nadal znajduje się w jednym pliku.
+Organizacja kodu staje się coraz ważniejsza w miarę rozrostu projektów. Mogłeś zauważyć, że Twój plik robi się zatłoczony od funkcji, zmiennych i klas wymieszanych razem. Przypomina to to, jak inżynierowie organizujący kod misji Apollo musieli tworzyć jasne, łatwe w utrzymaniu systemy, nad którymi mogło pracować wiele zespołów jednocześnie.
+
+**Twoja misja:**
+Myśl jak architekt oprogramowania. Jak zorganizowałbyś swój kod, aby za sześć miesięcy Ty (lub kolega) mogli z łatwością zrozumieć, co się dzieje? Nawet jeśli wszystko zostanie w jednym pliku, możesz stworzyć lepszą organizację:
+
+- **Grupowanie powiązanych funkcji** razem z wyraźnymi nagłówkami komentarzy
+- **Separacja obowiązków** – oddzielenie logiki gry od renderowania
+- **Stosowanie spójnej nazewnictwa** zmiennych i funkcji
+- **Tworzenie modułów** lub przestrzeni nazw do organizacji różnych aspektów Twojej gry
+- **Dodanie dokumentacji** wyjaśniającej cel każdej większej sekcji
+
+**Pytania refleksyjne:**
+- Które części Twojego kodu są najtrudniejsze do zrozumienia po powrocie do nich?
+- Jak mógłbyś zorganizować kod, by ułatwić innym programistom współpracę?
+- Co by się stało, gdybyś chciał dodać nowe funkcje, jak power-upy lub różne typy wrogów?
 
 ## Quiz po wykładzie
 
 [Quiz po wykładzie](https://ff-quizzes.netlify.app/web/quiz/34)
 
-## Przegląd i samodzielna nauka
+## Przegląd & Samodzielna nauka
 
-Chociaż piszemy naszą grę bez użycia frameworków, istnieje wiele frameworków opartych na JavaScript do tworzenia gier na płótnie. Poświęć trochę czasu na [przeczytanie o nich](https://github.com/collections/javascript-game-engines).
+Budowaliśmy wszystko od podstaw, co jest fantastyczne dla nauki, ale oto mały sekret – istnieje wiele świetnych frameworków JavaScript, które mogą odciążyć Cię w wielu zadaniach. Kiedy poczujesz się pewnie z podstawami, warto [sprawdzić, co jest dostępne](https://github.com/collections/javascript-game-engines).
+
+Pomyśl o frameworkach jak o dobrze wyposażonej skrzynce narzędziowej zamiast tworzeniu każdego narzędzia samodzielnie. Mogą rozwiązać wiele wyzwań związanych z organizacją kodu, o których rozmawialiśmy, a także oferują funkcje, które zbudowanie samemu zajęłoby tygodnie.
+
+**Warto zbadać:**
+- Jak silniki gier organizują kod – zdziwisz się, jakie sprytne wzorce stosują
+- Triki wydajnościowe pozwalające uruchomić gry canvas płynnie  
+- Nowoczesne funkcje JavaScript, które mogą uczynić Twój kod czystszym i łatwiejszym w utrzymaniu
+- Różne podejścia do zarządzania obiektami gry i ich relacjami
+
+## 🎯 Twój Oś Czasu Mistrzostwa Animacji Gry
+
+```mermaid
+timeline
+    title Postępy w nauce animacji i interakcji w grach
+    
+    section Podstawy ruchu (20 minut)
+        Zasady animacji: Animacja klatkowa
+                       : Aktualizacje pozycji
+                       : Układy współrzędnych
+                       : Płynny ruch
+        
+    section Systemy zdarzeń (25 minut)
+        Wejście użytkownika: Obsługa zdarzeń klawiatury
+                           : Zapobieganie domyślnemu zachowaniu
+                           : Właściwości obiektu zdarzenia
+                           : Nasłuchiwanie na poziomie okna
+        
+    section Architektura gry (30 minut)
+        Projektowanie obiektów: Wzorce dziedziczenia
+                             : Tworzenie klasy bazowej
+                             : Wyszukane zachowania
+                             : Polimorficzne interfejsy
+        
+    section Wzorce komunikacji (35 minut)
+        Implementacja Pub/Sub: Emiter zdarzeń
+                             : Stałe wiadomości
+                             : Luźne powiązania
+                             : Integracja systemu
+        
+    section Opanowanie pętli gry (40 minut)
+        Systemy czasu rzeczywistego: Kontrola liczby klatek
+                                   : Cykl aktualizacji/renderowania
+                                   : Zarządzanie stanem
+                                   : Optymalizacja wydajności
+        
+    section Zaawansowane techniki (45 minut)
+        Funkcje profesjonalne: Wykrywanie kolizji
+                             : Symulacja fizyki
+                             : Maszyny stanów
+                             : Systemy komponentów
+        
+    section Koncepcje silnika gry (1 tydzień)
+        Zrozumienie frameworka: Systemy encja-komponent
+                              : Grafy scen
+                              : Kanały zasobów
+                              : Profilowanie wydajności
+        
+    section Umiejętności produkcyjne (1 miesiąc)
+        Rozwój zawodowy: Organizacja kodu
+                        : Współpraca w zespole
+                        : Strategie testowania
+                        : Optymalizacja wdrożenia
+```
+### 🛠️ Podsumowanie Twojego Zestawu Narzędzi Do Tworzenia Gier
+
+Po ukończeniu tej lekcji, opanowałeś:
+- **Zasady animacji**: Ruch oparty na klatkach i płynne przejścia
+- **Programowanie zdarzeniowe**: Obsługa wejścia z klawiatury z odpowiednim zarządzaniem zdarzeniami
+- **Projektowanie obiektowe**: Hierarchie dziedziczenia i polimorficzne interfejsy
+- **Wzorce komunikacji**: Architektura pub/sub dla utrzymania kodu
+- **Architektura pętli gry**: Aktualizacje i cykle renderowania w czasie rzeczywistym
+- **Systemy wejścia**: Mapowanie sterowania użytkownika z zapobieganiem domyślnemu zachowaniu
+- **Zarządzanie zasobami**: Ładowanie sprite’ów i efektywne techniki renderowania
+
+### ⚡ **Co Możesz Zrobić w Następnych 5 Minutach**
+- [ ] Otwórz konsolę przeglądarki i wypróbuj `addEventListener('keydown', console.log)` aby zobaczyć zdarzenia klawiatury
+- [ ] Stwórz prosty element div i przesuwaj go za pomocą klawiszy strzałek
+- [ ] Eksperymentuj z `setInterval`, aby uzyskać ciągły ruch
+- [ ] Spróbuj zapobiegać domyślnemu zachowaniu za pomocą `event.preventDefault()`
+
+### 🎯 **Co Możesz Osiągnąć w Ciągu Godziny**
+- [ ] Ukończ quiz po lekcji i zrozum programowanie zdarzeniowe
+- [ ] Zbuduj poruszający się statek bohatera z pełną obsługą klawiatury
+- [ ] Zaimplementuj płynne wzory ruchu wrogów
+- [ ] Dodaj granice zapobiegające opuszczaniu ekranu przez obiekty gry
+- [ ] Stwórz podstawową detekcję kolizji między obiektami gry
+
+### 📅 **Twoja Tygodniowa Podróż Animacji**
+- [ ] Ukończ pełną grę kosmiczną z dopracowanym ruchem i interakcjami
+- [ ] Dodaj zaawansowane wzory ruchu, jak krzywe, przyspieszenia i fizyka
+- [ ] Wprowadź płynne przejścia i funkcje easing
+- [ ] Stwórz efekty cząsteczkowe i systemy informacji wizualnej
+- [ ] Optymalizuj wydajność gry dla płynnej rozgrywki 60fps
+- [ ] Dodaj sterowanie dotykowe i responsywny design
+
+### 🌟 **Twój Miesięczny Interaktywny Rozwój**
+- [ ] Buduj złożone aplikacje interaktywne z zaawansowanymi systemami animacji
+- [ ] Ucz się bibliotek animacji takich jak GSAP lub stwórz własny silnik animacji
+- [ ] Współpracuj przy open source’owych projektach gier i animacji
+- [ ] Opanuj optymalizację wydajności dla aplikacji intensywnie korzystających z grafiki
+- [ ] Twórz materiały edukacyjne o tworzeniu gier i animacji
+- [ ] Zbuduj portfolio prezentujące zaawansowane umiejętności programowania interaktywnego
+
+**Zastosowania w rzeczywistości:** Twoje umiejętności animacji gier odnoszą się bezpośrednio do:
+- **Interaktywnych aplikacji webowych**: Dynamiczne pulpity i interfejsy w czasie rzeczywistym
+- **Wizualizacji danych**: Animowane wykresy i grafiki interaktywne
+- **Oprogramowania edukacyjnego**: Symulacje interaktywne i narzędzia do nauki
+- **Rozwoju mobilnego**: Gry i obsługa gestów dotykowych
+- **Aplikacji desktopowych**: Aplikacje Electron z płynnymi animacjami
+- **Animacji webowych**: Biblioteki animacji CSS i JavaScript
+
+**Umiejętności zawodowe zdobyte:** Potrafisz teraz:
+- **Projektować** systemy zdarzeniowe skalujące się złożonością
+- **Implementować** płynne animacje za pomocą zasad matematycznych
+- **Debugować** złożone systemy interakcji używając narzędzi deweloperskich przeglądarki
+- **Optymalizować** wydajność gry na różne urządzenia i przeglądarki
+- **Projektować** utrzymywalne struktury kodu wg sprawdzonych wzorców
+
+**Opanowane koncepcje tworzenia gier:**
+- **Zarządzanie liczbą klatek**: Zrozumienie FPS i kontroli czasu
+- **Obsługa wejścia**: Wieloplatformowe systemy klawiatury i zdarzeń
+- **Cykl życia obiektu**: Wzorce tworzenia, aktualizacji i niszczenia
+- **Synchronizacja stanu**: Utrzymanie spójności stanu gry między klatkami
+- **Architektura zdarzeń**: Luzowanie powiązań między systemami gry
+
+**Kolejny poziom:** Jesteś gotowy dodać detekcję kolizji, systemy punktacji, efekty dźwiękowe lub zgłębić nowoczesne frameworki gier, takie jak Phaser lub Three.js!
+
+🌟 **Osiągnięcie odblokowane**: Zbudowałeś kompletny interaktywny system gry z profesjonalnymi wzorcami architektonicznymi!
 
 ## Zadanie
 
@@ -398,5 +893,7 @@ Chociaż piszemy naszą grę bez użycia frameworków, istnieje wiele framework�
 
 ---
 
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego języku źródłowym powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Oświadczenie**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uważany za źródło autorytatywne. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Подяки
 
-![зелене розширення для браузера](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.uk.png)
+![зелене розширення для браузера](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.uk.png)
 
 ## Подяки
 

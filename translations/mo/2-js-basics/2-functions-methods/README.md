@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 基礎：方法與函數
 
-![JavaScript 基礎 - 函數](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.mo.png)
+![JavaScript 基礎 - 函數](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.mo.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "537f02a36d73db093cbb8b9b44867645",
-  "translation_date": "2025-10-11T11:55:08+00:00",
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2026-01-08T10:09:43+00:00",
   "source_file": "9-chat-project/solution/backend/python/README.md",
   "language_code": "et"
 }
@@ -21,18 +21,26 @@ source ./venv/bin/activate
 ## Paigalda sõltuvused
 
 ```sh
-pip install openai flask flask-cors 
+pip install openai fastapi uvicorn python-dotenv
 ```
 
 ## Käivita API
 
 ```sh
+# Meetod 1: Otsekäivitus
 python api.py
+
+# Meetod 2: Uvicorni kasutamine
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
+
+## Testi API-t
+
+Külasta interaktiivset API dokumentatsiooni aadressil: `http://localhost:5000/docs`
 
 ## Käivita frontend
 
-Veendu, et oled frontend-kaustas
+Veendu, et oled frontend kaustas
 
 Leia *app.js*, muuda `BASE_URL` oma backend URL-iks
 
@@ -42,13 +50,15 @@ Käivita see
 npx http-server -p 8000
 ```
 
-Proovi vestluses sõnumit sisestada, peaksid nägema vastust (eeldusel, et käivitad seda Codespace'is või oled seadistanud juurdepääsutunnuse).
+Proovi saata sõnumi vestlusesse, sa peaksid nägema vastust (kui jooksutad seda Codespaces'is või oled seadistanud ligipääsutokeni).
 
-## Juurdepääsutunnuse seadistamine (kui sa ei käivita seda Codespace'is)
+## Ligipääsutokeni seadistamine (kui sa ei jookse seda Codespaces'is)
 
-Vaata [Juurdepääsutunnuse seadistamine](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+Vaata [Ligipääsutokeni seadistamine](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastutusest loobumine**:
+See dokument on tõlgitud tehisintellekti tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, tuleb arvestada, et automatiseeritud tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks lugeda ametlikuks allikaks. Olulise info puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate mõistmatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

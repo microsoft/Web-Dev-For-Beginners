@@ -78,7 +78,7 @@ Siden VSCode.dev krever minst én fil for å åpne et repository, oppretter vi h
 4. **Skriv** en commit-melding: "Legg til innledende HTML-struktur"
 5. **Klikk** "Commit new file" for å lagre endringene dine
 
-![Opprette innledende fil på GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.no.png)
+![Opprette innledende fil på GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.no.png)
 
 **Dette oppnår den innledende oppsettet:**
 - **Etablerer** riktig HTML5-dokumentstruktur med semantiske elementer
@@ -104,7 +104,7 @@ Nå som grunnlaget for repositoryen din er etablert, la oss gå over til VSCode.
 
 ✅ **Indikator for suksess**: Du bør se prosjektfilene dine i Explorer-sidepanelet og `index.html` tilgjengelig for redigering i hovedredigeringsområdet.
 
-![Prosjekt lastet inn i VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.no.png)
+![Prosjekt lastet inn i VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.no.png)
 
 **Hva du vil se i grensesnittet:**
 - **Explorer-sidepanel**: **Viser** prosjektfilene og mappestrukturen din
@@ -448,7 +448,7 @@ Utvidelser forbedrer utviklingsopplevelsen din ved å gi muligheter for live for
 **Umiddelbare resultater etter installasjon:**
 Når CodeSwing er installert, vil du se en live forhåndsvisning av CV-nettsiden din vises i redigeringsverktøyet. Dette lar deg se nøyaktig hvordan siden din ser ut mens du gjør endringer.
 
-![CodeSwing-utvidelse viser live forhåndsvisning](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.no.png)
+![CodeSwing-utvidelse viser live forhåndsvisning](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.no.png)
 
 **Forstå det forbedrede grensesnittet:**
 - **Delt visning**: **Viser** koden din på den ene siden og live forhåndsvisning på den andre

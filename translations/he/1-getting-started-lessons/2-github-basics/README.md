@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 אנחנו הולכים לעבור את המסע הזה יחד, צעד אחר צעד. בלי למהר, בלי לחץ – רק אתה, אני, וכמה כלים מגניבים שהולכים להפוך לחברים הכי טובים שלך!
 
-![מבוא ל-GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.he.png)
+![מבוא ל-GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.he.png)
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ flowchart TD
 
 ✅ דרך טובה למצוא ריפואים 'ידידותיים למתחילים' היא [לחפש לפי התג 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![העתקת ריפו מקומית](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.he.png)
+![העתקת ריפו מקומית](../../../../translated_images/clone_repo.5085c48d666ead57.he.png)
 
 יש כמה דרכים להעתיק קוד. אחת מהן היא "לשכפל" את התוכן של הריפו, באמצעות HTTPS, SSH, או באמצעות GitHub CLI (ממשק שורת הפקודה).
 

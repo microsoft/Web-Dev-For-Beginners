@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Το Moodle Cloud έχει περιορισμένη υποστήριξη Common Cartridge. Προτιμήστε το αρχείο Moodle παραπάνω, το οποίο μπορεί επίσης να μεταφορτωθεί στο Canvas.
   - Μετά την εισαγωγή, ελέγξτε τα modules, τις ημερομηνίες λήξης και τις ρυθμίσεις κουίζ ώστε να ταιριάζουν με το πρόγραμμα του εξαμήνου σας.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.el.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.el.png)
 > Το πρόγραμμα σπουδών σε μια τάξη Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.el.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.el.png)
 > Το πρόγραμμα σπουδών στο Canvas
 
 ### Χρήση του αποθετηρίου απευθείας (χωρίς Classroom)

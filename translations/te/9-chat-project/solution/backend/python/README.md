@@ -1,0 +1,64 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+  "translation_date": "2026-01-08T20:45:19+00:00",
+  "source_file": "9-chat-project/solution/backend/python/README.md",
+  "language_code": "te"
+}
+-->
+# కోడ్ నడపండి
+
+## సెటప్
+
+వర్చువల్ ఎన్విరాన్‌మెంట్ సృష్టించండి
+
+```sh
+python -m venv venv
+source ./venv/bin/activate
+```
+
+## డిపెండెన్సీలను ఇన్‌స్టాల్ చేయండి
+
+```sh
+pip install openai fastapi uvicorn python-dotenv
+```
+
+## API నడపండి
+
+```sh
+# విధానం 1: నేరుగా అమలు చేయడం
+python api.py
+
+# విధానం 2: uvicorn ఉపయోగించడం
+uvicorn api:app --host 0.0.0.0 --port 5000 --reload
+```
+
+## APIని పరీక్షించండి
+
+ఇంటరాక్టివ్ API డాక్యుమెంటేషన్ ని సందర్శించండి: `http://localhost:5000/docs`
+
+## ఫ్రంట్‌ఎండ్ నడపండి
+
+మీరు ఫ్రంట్‌ఎండ్ ఫోల్డర్ లో ఉంటున్నారని నిర్ధారించుకోండి
+
+*app.js* ని కనుగొని, `BASE_URL` ను మీ బ్యాక్‌ఎండ్ URL కి మార్చండి
+
+అది నడపండి
+
+```
+npx http-server -p 8000
+```
+
+చాట్ లో సందేశం టైప్ చేయడానికి ప్రయత్నించండి, మీకు స్పందన కనిపించాలి (మీరు దీన్ని కోడ్స్పేస్ లో నడుపుతుంటే లేదా యాక్సెస్ టోకెన్ సెటప్ చేసుకున్నట్లయితే).
+
+## యాక్సెస్ టోకెన్ సెటప్ (మీరు దీన్ని కోడ్స్పేస్ లో నడపకపోతే)
+
+[Set up PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) చూడండి
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**అస్పష్టత**:  
+ఈ పత్రాన్ని AI అనువాద సేవ అయిన [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువాదం చేయబడింది. మేము సరిగా ఉండేందుకు శ్రమిస్తూన్నాం గానీ, స్వయంచాలక అనువాదాల్లో పొరపాట్లు లేదా అసత్యాలు ఉండవచ్చు. అసలు పత్రం దీని స్థానిక భాషలోనే అధికారిక మూలసూచనగా పరిగణించాలి. ముఖ్యమైన సమాచారానికై, నిపుణుల మానవ అనువాదాన్ని సూచిస్తున్నాము. ఈ అనువాదాన్ని ఉపయోగించడంవలన జరిగే ఏమైనా అపార్థాలు లేదా తప్పుగా అర్థం చేసుకోవడాలపై మేము బాధ్యత వహించము.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

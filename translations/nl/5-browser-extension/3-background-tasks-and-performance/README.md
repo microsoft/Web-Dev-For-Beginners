@@ -126,7 +126,7 @@ Om Developer Tools in Edge te openen, klik je op die drie puntjes rechtsboven, g
 
 Laten we dit uitproberen. Open een website (Microsoft.com werkt goed hiervoor) en klik op die 'Opnemen'-knop. Vernieuw nu de pagina en bekijk hoe de profiler alles vastlegt wat er gebeurt. Wanneer je stopt met opnemen, zie je een gedetailleerde uitsplitsing van hoe de browser de site 'script', 'rendert' en 'schildert'. Het doet me denken aan hoe de missiecontrole elk systeem monitort tijdens een raketlancering - je krijgt realtime gegevens over precies wat er gebeurt en wanneer.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.nl.png)
+![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.nl.png)
 
 ✅ De [Microsoft Documentatie](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) heeft veel meer details als je dieper wilt duiken.
 
@@ -136,11 +136,11 @@ Selecteer elementen van de profieltijdlijn om in te zoomen op gebeurtenissen die
 
 Krijg een momentopname van de prestaties van je pagina door een deel van de profieltijdlijn te selecteren en naar het samenvattingspaneel te kijken:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.nl.png)
+![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.nl.png)
 
 Controleer het Event Log-paneel om te zien of een gebeurtenis langer dan 15 ms duurde:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.nl.png)
+![Edge event log](../../../../translated_images/log.804026979f3707e0.nl.png)
 
 ✅ Leer je profiler kennen! Open de ontwikkelaarstools op deze site en kijk of er knelpunten zijn. Wat is het langzaamst ladende bestand? Het snelste?
 

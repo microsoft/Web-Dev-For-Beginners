@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Giới thiệu về HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.vi.png)
+![Giới thiệu về HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.vi.png)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, hay HyperText Markup Language, là nền tảng của mọi trang web mà bạn từng truy cập. Hãy nghĩ về HTML như bộ khung xương cung cấp cấu trúc cho các trang web – nó xác định nơi nội dung sẽ xuất hiện, cách tổ chức và ý nghĩa của từng phần. Trong khi CSS sẽ "trang trí" HTML của bạn với màu sắc và bố cục, và JavaScript sẽ làm cho nó sống động với tính tương tác, HTML cung cấp cấu trúc cơ bản làm nền tảng cho mọi thứ khác.
@@ -88,7 +88,7 @@ Bạn sẽ tạo một thư mục dành riêng cho dự án terrarium và thêm 
 4. Trong bảng Explorer, nhấp vào biểu tượng "New File"
 5. Đặt tên tệp của bạn là `index.html`
 
-![VS Code Explorer hiển thị việc tạo tệp mới](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.vi.png)
+![VS Code Explorer hiển thị việc tạo tệp mới](../../../../translated_images/vs-code-index.e2986cf919471eb9.vi.png)
 
 **Cách 2: Sử dụng Lệnh Terminal**
 ```bash

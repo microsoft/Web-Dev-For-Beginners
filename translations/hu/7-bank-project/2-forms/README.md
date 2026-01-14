@@ -1,66 +1,111 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b24f28fc46dd473aa9080f174182adde",
-  "translation_date": "2025-10-24T20:25:07+00:00",
+  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+  "translation_date": "2026-01-07T02:53:50+00:00",
   "source_file": "7-bank-project/2-forms/README.md",
   "language_code": "hu"
 }
 -->
-# Banki Alkalmazás Készítése 2. rész: Bejelentkezési és Regisztrációs Űrlap Készítése
+# Banki alkalmazás készítése 2. rész: Bejelentkezési és regisztrációs űrlap készítése
 
-## Előzetes Kvíz
+```mermaid
+journey
+    title Az űrlapfejlesztési utazásod
+    section HTML Alapok
+      Értelmezd az űrlapelemeket: 3: Student
+      Tanuld meg a bemeneti típusokat: 4: Student
+      Sajátítsd el a hozzáférhetőséget: 4: Student
+    section JavaScript Integráció
+      Kezeld az űrlap beküldését: 4: Student
+      Valósítsd meg az AJAX kommunikációt: 5: Student
+      Dolgozd fel a szerver válaszait: 5: Student
+    section Érvényesítési Rendszerek
+      Hozz létre többrétegű érvényesítést: 5: Student
+      Javítsd a felhasználói élményt: 5: Student
+      Biztosítsd az adatok integritását: 5: Student
+```
+## Előadás előtti kvíz
 
-[Előzetes kvíz](https://ff-quizzes.netlify.app/web/quiz/43)
+[Előadás előtti kvíz](https://ff-quizzes.netlify.app/web/quiz/43)
 
-Töltöttél már ki online űrlapot, amely elutasította az e-mail formátumodat? Vagy elvesztetted az összes adatodat, miután a "Küldés" gombra kattintottál? Mindannyian találkoztunk már ezekkel a bosszantó helyzetekkel.
+Töltöttél már ki online űrlapot, ami elutasította az email formátumodat? Vagy elveszítetted az összes adatodat, amikor a küldés gombra kattintottál? Mindannyian találkoztunk már ezekkel a frusztráló élményekkel.
 
-Az űrlapok jelentik a hidat a felhasználók és az alkalmazásod funkcionalitása között. Ahogyan a légi irányítók gondosan követik a protokollokat, hogy a repülőgépeket biztonságosan célba juttassák, a jól megtervezett űrlapok is egyértelmű visszajelzést adnak és megelőzik a költséges hibákat. A rosszul megtervezett űrlapok viszont gyorsan elriaszthatják a felhasználókat, mint egy félreértés egy forgalmas repülőtéren.
+Az űrlapok híd szerepét töltik be a felhasználók és az alkalmazás funkciói között. Ahogy a légiforgalmi irányítók pontos protokollokat alkalmaznak a repülőgépek biztonságos irányítására, úgy a jól megtervezett űrlapok tiszta visszajelzést adnak és megelőzik a költséges hibákat. A rosszul megtervezett űrlapok viszont messzebb űzik a felhasználókat, mint egy félreértés a zsúfolt repülőtéren.
 
-Ebben a leckében az állóképes banki alkalmazásodat interaktív alkalmazássá alakítjuk. Megtanulod, hogyan készíts olyan űrlapokat, amelyek érvényesítik a felhasználói adatokat, kommunikálnak a szerverekkel, és hasznos visszajelzéseket adnak. Gondolj erre úgy, mint egy vezérlőfelület megépítésére, amely lehetővé teszi a felhasználók számára, hogy eligazodjanak az alkalmazás funkciói között.
+Ebben a leckében átalakítjuk a statikus banki alkalmazásodat interaktívvá. Megtanulod, hogyan építs űrlapokat, melyek érvényesítik a felhasználói adatokat, kommunikálnak a szerverekkel, és hasznos visszajelzést nyújtanak. Olyan, mintha a vezérlőfelületet építenéd, amely lehetővé teszi a felhasználóknak, hogy navigáljanak az alkalmazás funkciói között.
 
-A végére egy teljes bejelentkezési és regisztrációs rendszert fogsz létrehozni, amely érvényesítéssel segíti a felhasználókat a sikeres használatban, a frusztráció helyett.
+A végére teljes bejelentkezési és regisztrációs rendszert fogsz látni, amely érvényesítéssel segíti a felhasználókat a sikeres használat felé a frusztráció helyett.
 
+```mermaid
+mindmap
+  root((Űrlap Fejlesztés))
+    HTML Alapok
+      Szemantikus Elemei
+      Bemeneti Típusok
+      Akadálymentesség
+      Címke Kapcsolás
+    Felhasználói Élmény
+      Érvényesítési Visszajelzés
+      Hiba Megelőzés
+      Betöltési Állapotok
+      Siker Üzenetküldés
+    JavaScript Integráció
+      Esemény Kezelés
+      AJAX Kommunikáció
+      Adatfeldolgozás
+      Hiba Kezelés
+    Érvényesítési Rétegek
+      HTML5 Érvényesítés
+      Kliensoldali Logika
+      Szerveroldali Biztonság
+      Progresszív Javítás
+    Modern Minták
+      Fetch API
+      Async/Await
+      Form Adat API
+      Promise Kezelés
+```
 ## Előfeltételek
 
-Mielőtt elkezdenénk az űrlapok készítését, győződjünk meg róla, hogy minden megfelelően be van állítva. Ez a lecke ott folytatódik, ahol az előző véget ért, így ha előreugrottál, érdemes visszatérni és először az alapokat működésbe hozni.
+Mielőtt elkezdenénk az űrlapok építését, győződj meg róla, hogy minden megfelelően van beállítva. Ez a lecke ott folytatja, ahol az előző abbahagyta, így ha átlépted, érdemes visszamenni és először az alapokat működésbe hozni.
 
 ### Szükséges beállítások
 
 | Komponens | Állapot | Leírás |
-|-----------|---------|--------|
+|-----------|--------|-------------|
 | [HTML sablonok](../1-template-route/README.md) | ✅ Szükséges | Az alap banki alkalmazás szerkezete |
 | [Node.js](https://nodejs.org) | ✅ Szükséges | JavaScript futtatókörnyezet a szerverhez |
-| [Bank API szerver](../api/README.md) | ✅ Szükséges | Háttérszolgáltatás az adatok tárolásához |
+| [Bank API szerver](../api/README.md) | ✅ Szükséges | Háttérszolgáltatás adat tárolásához |
 
-> 💡 **Fejlesztési tipp**: Két különálló szervert fogsz egyszerre futtatni – egyet a front-end banki alkalmazásodhoz, és egy másikat a háttér API-hoz. Ez a beállítás tükrözi a valós fejlesztési környezetet, ahol a front-end és a back-end szolgáltatások egymástól függetlenül működnek.
+> 💡 **Fejlesztési tipp**: Egyszerre két külön szervert fogsz futtatni – egyet a front-end banki alkalmazásodhoz, és egyet a backend API-hoz. Ez a beállítás tükrözi a valós fejlesztést, ahol a frontend és backend szolgáltatások külön működnek.
 
-### Szerver Konfiguráció
+### Szerver konfiguráció
 
-**A fejlesztési környezeted tartalmazni fogja:**
-- **Front-end szerver**: A banki alkalmazás kiszolgálására (általában `3000` porton)
-- **Háttér API szerver**: Az adatok tárolására és lekérésére (port `5000`)
-- **Mindkét szerver** egyszerre futhat ütközés nélkül
+**A fejlesztői környezeted tartalmazni fogja:**
+- **Frontend szerver**: Szolgálja a banki alkalmazásodat (általában a `3000` porton)
+- **Backend API szerver**: Kezeli az adat tárolást és lekérést (a `5000` porton)
+- **Mindkét szerver** egyszerre is futtatható összeütközés nélkül
 
 **API kapcsolat tesztelése:**
 ```bash
 curl http://localhost:5000/api
-# Expected response: "Bank API v1.0.0"
+# Várt válasz: "Bank API v1.0.0"
 ```
 
-**Ha látod az API verzió válaszát, készen állsz a folytatásra!**
+**Ha az API verzió válaszát látod, készen állsz a folytatásra!**
 
 ---
 
-## HTML Űrlapok és Vezérlők Megértése
+## HTML űrlapok és vezérlők megértése
 
-A HTML űrlapok segítségével kommunikálnak a felhasználók a webalkalmazásoddal. Gondolj rájuk úgy, mint a 19. századi távíró rendszerre, amely távoli helyeket kötött össze – ezek jelentik a kommunikációs protokollt a felhasználói szándék és az alkalmazás válasza között. Ha átgondoltan tervezzük meg őket, képesek hibákat elkapni, irányítani az adatbevitel formátumát, és hasznos javaslatokat adni.
+A HTML űrlapok azok, amin keresztül a felhasználók kommunikálnak a webalkalmazásoddal. Olyanok, mint a távírórendszer, ami a 19. században összekötötte a távoli helyeket – ők a kommunikációs protokoll a felhasználói szándék és az alkalmazás válasza között. Ha jól tervezik őket, elkapják a hibákat, vezetik a bevitel formázását, és hasznos javaslatokat adnak.
 
-A modern űrlapok sokkal kifinomultabbak, mint az alapvető szövegbeviteli mezők. A HTML5 speciális bemeneti típusokat vezetett be, amelyek automatikusan kezelik az e-mail érvényesítést, a számformázást és a dátumválasztást. Ezek a fejlesztések mind a hozzáférhetőséget, mind a mobil felhasználói élményt javítják.
+A modern űrlapok sokkal fejlettebbek, mint az egyszerű szövegmezők. Az HTML5 speciális bemeneti típusokat vezetett be, amelyek automatikusan kezelik az email érvényesítést, számformázást, dátum kiválasztást. Ezek az fejlesztések javítják mind az akadálymentességet, mind a mobilos felhasználói élményt.
 
-### Alapvető Űrlapelemek
+### Alapvető űrlapelemek
 
-**Az űrlapok alapvető építőelemei:**
+**Azok az építőkövek, amik minden űrlapban szükségesek:**
 
 ```html
 <!-- Basic form structure -->
@@ -72,25 +117,25 @@ A modern űrlapok sokkal kifinomultabbak, mint az alapvető szövegbeviteli mez�
 </form>
 ```
 
-**Ez a kód a következőket teszi:**
-- **Létrehoz** egy egyedi azonosítóval ellátott űrlaptartót
-- **Meghatározza** az adatok beküldéséhez használt HTTP metódust
-- **Hozzárendeli** a címkéket a bemenetekhez a hozzáférhetőség érdekében
-- **Meghatároz** egy küldés gombot az űrlap feldolgozásához
+**Ez a kód a következőket végzi:**
+- **Létrehoz** egy űrlap konténert egyedi azonosítóval
+- **Meghatározza** az HTTP metódust az adatküldéshez
+- **Összekapcsolja** a címkéket a bemenetekkel az akadálymentességért
+- **Definiál** egy beküldő gombot az űrlap feldolgozásához
 
-### Modern Bemeneti Típusok és Attribútumok
+### Modern bemeneti típusok és attribútumok
 
 | Bemeneti típus | Cél | Példa használat |
-|----------------|-----|-----------------|
+|------------|---------|---------------|
 | `text` | Általános szövegbevitel | `<input type="text" name="username">` |
-| `email` | E-mail érvényesítés | `<input type="email" name="email">` |
-| `password` | Rejtett szövegbevitel | `<input type="password" name="password">` |
+| `email` | Email érvényesítés | `<input type="email" name="email">` |
+| `password` | Rejtett szöveg bevitel | `<input type="password" name="password">` |
 | `number` | Számbevitel | `<input type="number" name="balance" min="0">` |
-| `tel` | Telefonszámok | `<input type="tel" name="phone">` |
+| `tel` | Telefonszám | `<input type="tel" name="phone">` |
 
-> 💡 **Modern HTML5 Előny**: A specifikus bemeneti típusok használata automatikus érvényesítést, megfelelő mobil billentyűzeteket és jobb hozzáférhetőségi támogatást biztosít további JavaScript nélkül!
+> 💡 **Modern HTML5 előnyök**: A specifikus bemeneti típusok automatikus érvényesítést, megfelelő mobil billentyűzetet, és jobb akadálymentességet biztosítanak JavaScript nélkül is!
 
-### Gombtípusok és Viselkedésük
+### Gomb típusok és működésük
 
 ```html
 <!-- Different button behaviors -->
@@ -99,16 +144,16 @@ A modern űrlapok sokkal kifinomultabbak, mint az alapvető szövegbeviteli mez�
 <button type="button">Custom Action</button> <!-- No default behavior -->
 ```
 
-**Mit csinál minden gombtípus:**
-- **Küldés gombok**: Elindítják az űrlap beküldését, és elküldik az adatokat a megadott végpontra
-- **Visszaállítás gombok**: Visszaállítják az összes űrlapmezőt az eredeti állapotukba
-- **Általános gombok**: Nem rendelkeznek alapértelmezett viselkedéssel, egyedi JavaScript szükséges a funkcionalitáshoz
+**Minden gomb típus ennél többet tesz:**
+- **Submit gombok**: Elindítják az űrlap küldést, és elküldik az adatokat a megadott végpontra
+- **Reset gombok**: Visszaállítják az összes mezőt eredeti állapotába
+- **Rendes gombok**: Nincsenek előre definiált funkciók, egyedi JavaScript kell hozzájuk
 
-> ⚠️ **Fontos Megjegyzés**: Az `<input>` elem önzáró, és nem igényel záró tagot. A modern legjobb gyakorlat az, hogy `<input>`-ot írunk záró perjel nélkül.
+> ⚠️ **Fontos megjegyzés**: Az `<input>` elem önzáró, nincs szükség lezáró tagra. A modern gyakorlat az, hogy `<input>`-ot írsz perjel nélkül.
 
-### Bejelentkezési Űrlap Készítése
+### Bejelentkezési űrlap építése
 
-Most készítsünk egy gyakorlati bejelentkezési űrlapot, amely bemutatja a modern HTML űrlapgyakorlatokat. Kezdjük egy alapvető szerkezettel, és fokozatosan bővítsük ki hozzáférhetőségi funkciókkal és érvényesítéssel.
+Most készítsünk egy gyakorlati bejelentkezési űrlapot, amely megmutatja a modern HTML űrlapgyakorlati megoldásokat. Egy alap szerkezettel kezdünk, majd fokozatosan javítjuk akadálymentességi funkciókkal és érvényesítéssel.
 
 ```html
 <template id="login">
@@ -127,42 +172,41 @@ Most készítsünk egy gyakorlati bejelentkezési űrlapot, amely bemutatja a mo
 </template>
 ```
 
-**Ami itt történik:**
-- **Strukturálja** az űrlapot szemantikus HTML5 elemekkel
-- **Csoportosítja** a kapcsolódó elemeket jelentőségteljes osztályokkal ellátott `div` konténerekben
-- **Hozzárendeli** a címkéket a bemenetekhez a `for` és `id` attribútumok használatával
-- **Tartalmazza** a modern attribútumokat, mint az `autocomplete` és a `placeholder` a jobb felhasználói élmény érdekében
-- **Hozzáadja** a `novalidate` attribútumot, hogy az érvényesítést JavaScript kezelje a böngésző alapértelmezett helyett
+**Itt történik:**
+- **Szervezi** az űrlapot szemantikus HTML5 elemekkel
+- **Csoportosítja** a kapcsolódó elemeket `div` konténerekkel osztályokkal
+- **Összekapcsolja** a címkéket a bemenetekkel `for` és `id` attribútumokkal
+- **Tartalmazza** a modern attribútumokat, mint `autocomplete` és `placeholder` jobb UX érdekében
+- **Hozzáadja** a `novalidate`-ot, hogy a érvényesítést JavaScript kezelje a böngésző helyett
 
-### A Megfelelő Címkék Fontossága
+### A helyes címkék ereje
 
 **Miért fontosak a címkék a modern webfejlesztésben:**
 
 ```mermaid
 graph TD
-    A[Label Element] --> B[Screen Reader Support]
-    A --> C[Click Target Expansion]
-    A --> D[Form Validation]
-    A --> E[SEO Benefits]
+    A[Címkefejlesztő] --> B[Képernyőolvasó támogatás]
+    A --> C[Kattintási célpont bővítése]
+    A --> D[Űrlapellenőrzés]
+    A --> E[SEO előnyök]
     
-    B --> F[Accessible to all users]
-    C --> G[Better mobile experience]
-    D --> H[Clear error messaging]
-    E --> I[Better search ranking]
+    B --> F[Minden felhasználó számára elérhető]
+    C --> G[Jobb mobil élmény]
+    D --> H[Világos hibaüzenet]
+    E --> I[Jobb keresési rangsorolás]
 ```
+**Mit érünk el a helyes címkékkel:**
+- **Lehetővé teszi** a képernyőolvasók számára az űrlapmezők tiszta bemondását
+- **Növeli** a kattintható területet (a címke kattintásával az input fókuszba kerül)
+- **Javítja** a mobil használhatóságot nagyobb érintési célpontokkal
+- **Támogatja** az érvényesítést értelmes hibaüzenetekkel
+- **Erősíti** az SEO-t szemantikus jelentéssel az űrlapelemeknek
 
-**Mit érnek el a megfelelő címkék:**
-- **Lehetővé teszik**, hogy a képernyőolvasók egyértelműen bejelentsék az űrlapmezőket
-- **Kibővítik** a kattintható területet (a címkére kattintva a bemeneti mezőre fókuszál)
-- **Javítják** a mobil használhatóságot nagyobb érintési célterületekkel
-- **Támogatják** az űrlap érvényesítést értelmes hibaüzenetekkel
-- **Növelik** a SEO-t az űrlapelemek szemantikai jelentésének biztosításával
+> 🎯 **Akadálymentességi cél**: Minden űrlapmezőhöz kötelező a kapcsolódó címke. Ez az egyszerű gyakorlat az űrlapokat mindenki számára használhatóvá teszi, beleértve a fogyatékkal élőket is, és az összes felhasználó élményét javítja.
 
-> 🎯 **Hozzáférhetőségi Cél**: Minden űrlapmezőhöz tartoznia kell egy címkének. Ez az egyszerű gyakorlat mindenki számára használhatóvá teszi az űrlapokat, beleértve a fogyatékkal élő felhasználókat is, és javítja az élményt mindenki számára.
+### Regisztrációs űrlap készítése
 
-### Regisztrációs Űrlap Létrehozása
-
-A regisztrációs űrlap részletesebb információkat igényel egy teljes felhasználói fiók létrehozásához. Készítsük el modern HTML5 funkciókkal és továbbfejlesztett hozzáférhetőséggel.
+A regisztrációs űrlap több részletes adatot igényel a felhasználói fiók létrehozásához. Építsük meg modern HTML5 funkciókkal és fokozott akadálymentességgel.
 
 ```html
 <hr/>
@@ -196,109 +240,124 @@ A regisztrációs űrlap részletesebb információkat igényel egy teljes felha
 </form>
 ```
 
-**A fentiekben:**
-- **Rendszereztük** az egyes mezőket konténer div-ekbe a jobb stílus és elrendezés érdekében
-- **Hozzáadtuk** a megfelelő `autocomplete` attribútumokat a böngésző automatikus kitöltési támogatásához
-- **Beépítettük** a hasznos helykitöltő szöveget az adatbevitel irányításához
-- **Beállítottuk** az ésszerű alapértelmezéseket a `value` attribútum használatával
-- **Alkalmaztuk** az érvényesítési attribútumokat, mint a `required`, `maxlength` és `min`
-- **Használtuk** a `type="number"` mezőt a balance mezőhöz, amely támogatja a tizedesjegyeket
+**Ebben a példában:**
+- **Szerveztük** az egyes mezőket konténer `div`-ekbe jobb stílus és elrendezés érdekében
+- **Hozzáadtuk** a megfelelő `autocomplete` attribútumokat a böngésző automatikus kitöltés támogatásához
+- **Tartalmaztunk** hasznos helykitöltő szöveget a felhasználói bevitel segítésére
+- **Alapértelmezett értékeket állítottunk be** a `value` attribútummal
+- **Alkalmaztunk** érvényesítési attribútumokat, mint `required`, `maxlength` és `min`
+- **Használtuk** a `type="number"` típust egyenleg mezőre, tizedes értékek támogatásával
 
-### Bemeneti Típusok és Viselkedésük Felfedezése
+### Bemeneti típusok és viselkedésük áttekintése
 
-**A modern bemeneti típusok fejlettebb funkcionalitást biztosítanak:**
+**A modern bemeneti típusok kibővített funkciókat nyújtanak:**
 
-| Funkció | Előny | Példa |
-|---------|-------|-------|
-| `type="number"` | Számgombok mobilon | Egyszerűbb egyenlegbevitel |
-| `step="0.01"` | Tizedes pontosság szabályozása | Lehetővé teszi a centek megadását |
-| `autocomplete` | Böngésző automatikus kitöltés | Gyorsabb űrlapkitöltés |
-| `placeholder` | Kontextuális útmutatók | Segíti a felhasználói elvárásokat |
+| Jellemző | Előny | Példa |
+|---------|---------|----------|
+| `type="number"` | Numerikus billentyűzet mobilon | Egyszerűbb egyenleg bevitel |
+| `step="0.01"` | Tizedes pontosság szabályozás | Lehetővé teszi az aprópénzt a pénznémeknél |
+| `autocomplete` | Böngésző automatikus kitöltés | Gyorsabb űrlap kitöltés |
+| `placeholder` | Kontekstus alapú segítség | Segíti a felhasználói elvárásokat |
 
-> 🎯 **Hozzáférhetőségi Kihívás**: Próbáld meg csak a billentyűzeted segítségével navigálni az űrlapokon! Használd a `Tab`-ot a mezők közötti mozgáshoz, a `Space`-t a jelölőnégyzetek bejelöléséhez, és az `Enter`-t az űrlap beküldéséhez. Ez az élmény segít megérteni, hogyan használják a képernyőolvasót használó felhasználók az űrlapjaidat.
+> 🎯 **Akadálymentességi kihívás**: Próbáld ki az űrlapokat csak billentyűzettel használva! Használd a `Tab`-ot a mezők közt váltáshoz, `Space`-t a jelölőnégyzet kipipálásához és `Enter`-t a beküldéshez. Ez segít megérteni, hogyan használják a képernyőolvasót igénylő felhasználók az űrlapjaidat.
 
-## Az Űrlapbeküldési Módszerek Megértése
+### 🔄 **Pedagógiai ellenőrzés**
+**Űrlap alapok megértése**: Mielőtt JavaScriptet alkalmaznánk, biztos vagy benne, hogy érted:
+- ✅ Hogyan hoz létre a szemantikus HTML akadálymentes űrlapszerkezeteket
+- ✅ Miért számítanak a bemeneti típusok a mobil billentyűzetek és az érvényesítés szempontjából
+- ✅ A címkék és az űrlap vezérlők közötti kapcsolatot
+- ✅ Hogyan befolyásolják az űrlap attribútumok a böngésző alapértelmezett viselkedését
 
-Amikor valaki kitölti az űrlapodat és a küldés gombra kattint, az adatoknak valahová el kell jutniuk – általában egy szerverre, amely elmenti azokat. Ennek többféle módja van, és ha tudod, melyiket használd, elkerülheted a későbbi fejfájást.
+**Gyors önellenőrzés**: Mi történik, ha beküldesz egy űrlapot JavaScript kezelés nélkül?
+*Válasz: A böngésző végrehajtja az alapértelmezett beküldést, általában átirányítva a megadott akció URL-re*
 
-Nézzük meg, mi történik valójában, amikor valaki rákattint a küldés gombra.
+**HTML5 űrlap előnyei**: A modern űrlapok biztosítják:
+- **Beépített érvényesítés**: Automatikus email és szám formátum ellenőrzés
+- **Mobil optimalizáció**: Megfelelő billentyűzetek különböző bemeneti típusokra
+- **Akadálymentesség**: Képernyőolvasó támogatás és billentyűzetes navigáció
+- **Fokozatos fejlesztés**: Működik JavaScript kikapcsolásakor is
 
-### Az Űrlap Alapértelmezett Viselkedése
+## Az űrlapküldési módszerek megértése
 
-Először is, figyeljük meg, mi történik az alapvető űrlapbeküldés során:
+Amikor valaki kitölti az űrlapodat és megnyomja a küldés gombot, az adat valahova el kell jusson – általában egy szerverhez, ami el tudja tárolni. Erre többféle módszer létezik, és tudni, melyiket használjuk, később sok gondtól megóvhat.
+
+Nézzük meg, mi történik valójában, amikor valaki rákattint a beküldés gombra.
+
+### Alapértelmezett űrlap viselkedés
+
+Először nézzük meg, mi történik alapvető űrlap beküldéssel:
 
 **Teszteld a jelenlegi űrlapjaidat:**
 1. Kattints a *Regisztráció* gombra az űrlapodon
-2. Figyeld meg a böngésződ címsorában bekövetkező változásokat
-3. Vedd észre, hogy az oldal újratöltődik, és az adatok megjelennek az URL-ben
+2. Figyeld meg a böngésző címsávjának változását
+3. Jegyezd meg, hogy az oldal újratöltődik és az adatok megjelennek az URL-ben
 
-![Képernyőkép a böngésző címsorának változásáról a Regisztráció gombra kattintás után](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.hu.png)
+![Képernyőkép a böngésző URL változásáról a Regisztráció gomb kattintása után](../../../../translated_images/click-register.e89a30bf0d4bc9ca.hu.png)
 
-### HTTP Metódusok Összehasonlítása
+### HTTP metódusok összehasonlítása
 
 ```mermaid
 graph TD
-    A[Form Submission] --> B{HTTP Method}
-    B -->|GET| C[Data in URL]
-    B -->|POST| D[Data in Request Body]
+    A[Űrlap beküldése] --> B{HTTP metódus}
+    B -->|GET| C[Adatok az URL-ben]
+    B -->|POST| D[Adatok a kérés törzsében]
     
-    C --> E[Visible in address bar]
-    C --> F[Limited data size]
-    C --> G[Bookmarkable]
+    C --> E[Látható a címsorban]
+    C --> F[Korlátozott adatméret]
+    C --> G[Könyvjelzőzhető]
     
-    D --> H[Hidden from URL]
-    D --> I[Large data capacity]
-    D --> J[More secure]
+    D --> H[Rejtett az URL-ből]
+    D --> I[Nagy adatkapacitás]
+    D --> J[Biztonságosabb]
 ```
+**A különbségek magyarázata:**
 
-**A különbségek megértése:**
-
-| Metódus | Használati eset | Adatok helye | Biztonsági szint | Méretkorlát |
-|---------|----------------|--------------|------------------|-------------|
-| `GET` | Keresési lekérdezések, szűrők | URL paraméterek | Alacsony (látható) | ~2000 karakter |
-| `POST` | Felhasználói fiókok, érzékeny adatok | Kérés törzse | Magasabb (rejtett) | Gyakorlatilag nincs korlát |
+| Módszer | Használati eset | Adat helye | Biztonsági szint | Méretkorlát |
+|--------|----------|---------------|----------------|-------------|
+| `GET` | Keresések, szűrők | URL paraméterek | Alacsony (látható) | ~2000 karakter |
+| `POST` | Felhasználói fiókok, érzékeny adatok | Kérés törzse | Magasabb (rejtett) | Nincs érdemi korlát |
 
 **Az alapvető különbségek megértése:**
-- **GET**: Az űrlap adatait URL paraméterként csatolja (keresési műveletekhez megfelelő)
-- **POST**: Az adatokat a kérés törzsébe helyezi (érzékeny információkhoz elengedhetetlen)
-- **GET korlátai**: Méretkorlátok, látható adatok, böngésző történetében megmarad
-- **POST előnyei**: Nagy adatmennyiség, adatvédelem, fájlfeltöltés támogatása
+- **GET**: Az űrlapadatokat a URL-hez fűzi query paraméterekként (kereséshez ideális)
+- **POST**: Az adatokat a kérés törzsében küldi (lényeges érzékeny információknál)
+- **GET korlátai**: Méretkorlátok, látható adatok, tartós böngésző előzmények
+- **POST előnyei**: Nagyobb adatkapacitás, adatvédelem, fájlfeltöltés támogatás
 
-> 💡 **Legjobb Gyakorlat**: Használj `GET` metódust keresési űrlapokhoz és szűrőkhöz (adatlekérés), és `POST` metódust felhasználói regisztrációhoz, bejelentkezéshez és adat létrehozásához.
+> 💡 **Legjobb gyakorlat**: Használd a `GET`-et kereső űrlapokhoz és szűrőkhöz (adatlekéréshez), és a `POST`-ot felhasználói regisztrációhoz, bejelentkezéshez, és adat létrehozáshoz.
 
-### Az Űrlapbeküldés Konfigurálása
+### Az űrlapküldés konfigurálása
 
-Konfiguráljuk a regisztrációs űrlapodat, hogy megfelelően kommunikáljon a háttér API-val a POST metódus használatával:
+Konfiguráljuk a regisztrációs űrlapodat, hogy megfelelően kommunikáljon a backend API-val POST módszerrel:
 
 ```html
 <form id="registerForm" action="//localhost:5000/api/accounts" 
       method="POST" novalidate>
 ```
 
-**Ez a konfiguráció a következőket teszi:**
-- **Irányítja** az űrlap beküldését az API végpontra
-- **POST metódust használ** az adatok biztonságos továbbításához
-- **Tartalmazza** a `novalidate` attribútumot, hogy az érvényesítést JavaScript kezelje
+**Ez a beállítás a következőket teszi:**
+- **Irányítja** az űrlap küldést az API végpontodra
+- **Használja** a POST metódust az adatok biztonságos átvitelére
+- **Tartalmazza** a `novalidate`-ot, hogy az érvényesítést JavaScript kezelje
 
-### Az Űrlapbeküldés Tesztelése
+### Az űrlapküldés tesztelése
 
-**Kövesd ezeket a lépéseket az űrlap teszteléséhez:**
+**Kövesd ezeket a lépéseket az űrlapod teszteléséhez:**
 1. **Töltsd ki** a regisztrációs űrlapot az adataiddal
 2. **Kattints** a "Fiók létrehozása" gombra
 3. **Figyeld meg** a szerver válaszát a böngésződben
 
-![Egy böngészőablak a localhost:5000/api/accounts címen, amely egy JSON karakterláncot mutat a felhasználói adatokkal](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.hu.png)
+![Böngésző ablak a localhost:5000/api/accounts címen, amely egy JSON sztringet mutat felhasználói adatokkal](../../../../translated_images/form-post.61de4ca1b964d91a.hu.png)
 
 **Amit látnod kell:**
-- **A böngésző átirányít** az API végpont URL-jére
-- **JSON válasz**, amely tartalmazza az újonnan létrehozott fiók adatait
-- **Szerver megerősítése**, hogy a fiók sikeresen létrejött
+- **Böngésző átirányít** az API végpont URL-jére
+- **JSON válasz** az újonnan létrehozott fiók adataival
+- **Szerver megerősítés** hogy a fiók sikeresen létrejött
 
-> 🧪 **Kísérleti Idő**: Próbálj meg újra regisztrálni ugyanazzal a felhasználónévvel. Milyen választ kapsz? Ez segít megérteni, hogyan kezeli a szerver a duplikált adatokat és a hibás feltételeket.
+> 🧪 **Kísérlet idő**: Próbálj meg ismét regisztrálni ugyanazzal a felhasználónévvel. Milyen választ kapsz? Ez segít megérteni, hogyan kezeli a szerver az ismétlődő adatokat és a hibás állapotokat.
 
-### JSON Válaszok Megértése
+### JSON válaszok megértése
 
-**Amikor a szerver sikeresen feldolgozza az űrlapodat:**
+**Amikor a szerver sikeresen feldolgozza az űrlapod:**
 ```json
 {
   "user": "john_doe",
@@ -309,34 +368,189 @@ Konfiguráljuk a regisztrációs űrlapodat, hogy megfelelően kommunikáljon a 
 }
 ```
 
-**Ez a válasz megerősíti:**
-- **Létrehoz** egy új fiókot az általad megadott adatokkal
--
-- **Részletes** hibaüzeneteket biztosít a hibakereséshez
-- **Egységes** adatstruktúrát ad vissza sikeres és hibás esetekben
+**Ez a válasz azt igazolja:**
+- **Új fiókot hoz létre** a megadott adatokkal
+- **Hozzárendel** egy egyedi azonosítót a jövőbeni hivatkozásokhoz
+- **Visszaadja** az összes fiókinformációt ellenőrzésre
+- **Jelzi** a sikeres adatbázis tárolást
 
-### A Modern Fetch API ereje
+## Modern űrlapkezelés JavaScript-tel
 
-**Fetch API előnyei a régebbi módszerekkel szemben:**
+A hagyományos űrlapküldés teljes oldal újratöltést okoz, hasonlóan ahhoz, amikor a korai űrmissziók teljes rendszerresetet igényeltek az iránykorrekciókhoz. Ez megzavarja a felhasználói élményt és elveszíti az alkalmazás állapotát.
+
+A JavaScript alapú űrlapkezelés olyan, mint a folyamatos irányító rendszerek a modern űrhajóknál – valós idejű korrekciókat tesz lehetővé anélkül, hogy elveszítenénk a navigációs kontextust. Elfoghatjuk az űrlap küldést, azonnali visszajelzést nyújtunk, hibákat kezelünk, és frissítjük a felületet a szerver válaszai alapján miközben megtartjuk a felhasználó pozícióját az alkalmazásban.
+
+### Miért kerülendő az oldal újratöltése?
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant SPA
+    participant Server
+    
+    User->>SPA: Űrlap elküldése
+    SPA->>Server: AJAX kérés
+    Server-->>SPA: JSON válasz
+    SPA->>User: Felület frissítése
+    
+    Note over User,SPA: Nincs oldal újratöltés!
+```
+**A JavaScript űrlapkezelés előnyei:**
+- **Megtartja** az alkalmazás állapotát és a felhasználói kontextust
+- **Azonnali** visszajelzést és betöltési jelzőket nyújt
+- **Lehetővé teszi** dinamikus hibakezelést és érvényesítést
+- **Zökkenőmentes**, alkalmazásszerű felhasználói élményt teremt
+- **Feltételes logikát** alkalmazhat a szerver válaszai alapján
+
+### Átállás a hagyományosról a modern űrlapokra
+
+**Hagyományos megközelítés problémái:**
+- **Elirányítja** a felhasználót az alkalmazásodból
+- **Elveszíti** az aktuális alkalmazásállapotot és kontextust
+- **Teljes oldal újratöltéseket** igényel egyszerű műveletekhez
+- **Korlátozott vezérlést** ad a felhasználói visszajelzés felett
+
+**Modern JavaScript megközelítés előnyei:**
+- **Benn tartja** a felhasználót az alkalmazásban
+- **Megőrzi** az összes alkalmazásállapotot és adatot
+- **Lehetővé teszi** a valós idejű érvényesítést és visszajelzést
+- **Támogatja** a fokozatos fejlesztést és akadálymentességet
+
+### JavaScript űrlapkezelés megvalósítása
+
+Cseréljük le a hagyományos űrlapküldést modern JavaScript eseménykezelésre:
+
+```html
+<!-- Remove the action attribute and add event handling -->
+<form id="registerForm" method="POST" novalidate>
+```
+
+**Add hozzá a regisztráció logikát az `app.js` fájlodhoz:**
+
+```javascript
+// Modern eseményvezérelt űrlapkezelés
+function register() {
+  const registerForm = document.getElementById('registerForm');
+  const formData = new FormData(registerForm);
+  const data = Object.fromEntries(formData);
+  const jsonData = JSON.stringify(data);
+  
+  console.log('Form data prepared:', data);
+}
+
+// Eseményfigyelő hozzáadása az oldal betöltésekor
+document.addEventListener('DOMContentLoaded', () => {
+  const registerForm = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Az alapértelmezett űrlapbeküldés megakadályozása
+    register();
+  });
+});
+```
+
+**Itt történik:**
+- **Megakadályozza** az alapértelmezett űrlapküldést az `event.preventDefault()` használatával
+- **Lekéri** az űrlapelemet modern DOM kiválasztással
+- **Kinyeri** az űrlapadatokat a hatékony `FormData` API segítségével
+- **Átalakítja** a FormData objektumot sima objektummá az `Object.fromEntries()`-el
+- **Szerializálja** az adatokat JSON formátumba a szerver kommunikációhoz
+- **Ellenőrző naplózást** végez a feldolgozott adatokkal hibakereséshez
+
+### A FormData API megértése
+
+**A FormData API erőteljes űrlapkezelést tesz lehetővé:**
+```javascript
+// Példa arra, mit rögzít a FormData
+const formData = new FormData(registerForm);
+
+// A FormData automatikusan rögzíti:
+// {
+//   "user": "john_doe",
+//   "currency": "$",
+//   "description": "Személyes számla",
+//   "balance": "100"
+// }
+```
+
+**A FormData API előnyei:**
+- **Átfogó gyűjtés**: Minden űrlapelem begyűjtése, beleértve a szöveget, fájlokat és összetett beviteli mezőket
+- **Típusérzékenység**: Különböző inputtípusokat automatikusan kezel, egyedi kódolás nélkül
+- **Hatékonyság**: Kézi mezőgyűjtés helyett egyetlen API hívás
+- **Alkalmazkodóképesség**: Megőrzi a működést az űrlap szerkezetének változása során
+
+### A szerverkommunikációs függvény létrehozása
+
+Most építsünk egy robusztus függvényt, hogy kommunikáljunk az API szerverünkkel modern JavaScript mintákkal:
+
+```javascript
+async function createAccount(account) {
+  try {
+    const response = await fetch('//localhost:5000/api/accounts', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: account
+    });
+    
+    // Ellenőrizze, hogy a válasz sikeres volt-e
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('Account creation failed:', error);
+    return { error: error.message || 'Network error occurred' };
+  }
+}
+```
+
+**Az aszinkron JavaScript megértése:**
+
+```mermaid
+sequenceDiagram
+    participant JS as JavaScript
+    participant Fetch as Fetch API
+    participant Server as Backend Server
+    
+    JS->>Fetch: fetch() kérés
+    Fetch->>Server: HTTP POST
+    Server-->>Fetch: JSON válasz
+    Fetch-->>JS: vár választ
+    JS->>JS: Adatok feldolgozása
+```
+**Mit valósít meg ez a modern megvalósítás:**
+- **Használja** az `async/await`-et az olvasható aszinkron kódért
+- **Tartalmaz** megfelelő hibakezelést try/catch blokkokkal
+- **Ellenőrzi** a válasz státuszát a feldolgozás előtt
+- **Beállítja** a megfelelő fejléceket JSON kommunikációhoz
+- **Részletes** hibaüzeneteket ad a hibakereséshez
+- **Konzisztens** adatstruktúrát ad vissza siker és hiba esetén egyaránt
+
+### A modern Fetch API ereje
+
+**A Fetch API előnyei a régi módszerekkel szemben:**
 
 | Funkció | Előny | Megvalósítás |
-|---------|-------|--------------|
-| Ígéret-alapú | Tiszta aszinkron kód | `await fetch()` |
-| Kérés testreszabása | Teljes HTTP vezérlés | Fejlécek, metódusok, törzs |
-| Válaszkezelés | Rugalmas adatfeldolgozás | `.json()`, `.text()`, `.blob()` |
-| Hibakezelés | Átfogó hibakezelés | Try/catch blokkok |
+|---------|---------|----------------|
+| Promise alapú | Tiszta aszinkron kód | `await fetch()` |
+| Kérés testreszabás | Teljes HTTP vezérlés | Fejlécek, metódusok, törzs |
+| Válasz kezelése | Rugalmas adatfeldolgozás | `.json()`, `.text()`, `.blob()` |
+| Hibakezelés | Átfogó hibafogás | Try/catch blokkok |
 
-> 🎥 **Tudj meg többet**: [Async/Await oktatóanyag](https://youtube.com/watch?v=YwmlRkrxvkk) - Az aszinkron JavaScript minták megértése a modern webfejlesztéshez.
+> 🎥 **Tudj meg többet**: [Async/Await oktatóanyag](https://youtube.com/watch?v=YwmlRkrxvkk) – Az aszinkron JavaScript minták megértése a modern webfejlesztéshez.
 
-**Kulcsfogalmak a szerverrel való kommunikációhoz:**
-- **Aszinkron függvények** lehetővé teszik a végrehajtás szüneteltetését a szerver válaszára várva
-- **Await kulcsszó** az aszinkron kódot szinkron kódhoz hasonlóvá teszi
-- **Fetch API** modern, ígéret-alapú HTTP kéréseket biztosít
-- **Hibakezelés** garantálja, hogy az alkalmazás hálózati problémák esetén is megfelelően reagáljon
+**Kulcsfontosságú fogalmak szerverkommunikációhoz:**
+- **Async függvények** lehetővé teszik a végrehajtás szüneteltetését, amíg a szerver válaszol
+- **Await kulcsszó** az aszinkron kódot szinkronként olvashatóvá teszi
+- **Fetch API** modern, promise-alapú HTTP kérésekhez
+- **Hibakezelés** biztosítja, hogy az app hálózati hibák esetén is megfelelően reagáljon
 
-### A regisztrációs funkció befejezése
+### A regisztrációs függvény befejezése
 
-Hozzuk össze mindent egy teljes, éles környezetre kész regisztrációs funkcióval:
+Hozzuk össze az egészet egy kész, éles használatra alkalmas regisztrációs függvénnyé:
 
 ```javascript
 async function register() {
@@ -344,15 +558,15 @@ async function register() {
   const submitButton = registerForm.querySelector('button[type="submit"]');
   
   try {
-    // Show loading state
+    // Betöltési állapot megjelenítése
     submitButton.disabled = true;
     submitButton.textContent = 'Creating Account...';
     
-    // Process form data
+    // Űrlapadatok feldolgozása
     const formData = new FormData(registerForm);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-    // Send to server
+    // Küldés a szervernek
     const result = await createAccount(jsonData);
     
     if (result.error) {
@@ -364,14 +578,14 @@ async function register() {
     console.log('Account created successfully!', result);
     alert(`Welcome, ${result.user}! Your account has been created.`);
     
-    // Reset form after successful registration
+    // Űrlap visszaállítása sikeres regisztráció után
     registerForm.reset();
     
   } catch (error) {
     console.error('Unexpected error:', error);
     alert('An unexpected error occurred. Please try again.');
   } finally {
-    // Restore button state
+    // Gomb állapotának visszaállítása
     submitButton.disabled = false;
     submitButton.textContent = 'Create Account';
   }
@@ -379,74 +593,93 @@ async function register() {
 ```
 
 **Ez a továbbfejlesztett megvalósítás tartalmazza:**
-- **Vizualizált** visszajelzést biztosít az űrlap beküldése közben
-- **Letiltja** a beküldés gombot a duplikált beküldések elkerülése érdekében
-- **Kezeli** az előre látható és váratlan hibákat egyaránt
-- **Felhasználóbarát** siker- és hibaüzeneteket jelenít meg
-- **Visszaállítja** az űrlapot sikeres regisztráció után
-- **Helyreállítja** a felhasználói felület állapotát az eredménytől függetlenül
+- **Vizuális visszajelzést** ad az űrlap beküldése alatt
+- **Letiltja** a küldés gombot az ismétlődő beküldés megakadályozására
+- **Kezeli** a várt és váratlan hibákat is elegánsan
+- **Felhasználóbarát** siker- és hibaüzeneteket mutat
+- **Alaphelyzetbe állítja** az űrlapot sikeres regisztráció után
+- **Visszaállítja** a felhasználói felület állapotát az eredménytől függetlenül
 
-### Az implementáció tesztelése
+### A megvalósítás tesztelése
 
-**Nyisd meg a böngésző fejlesztői eszközeit és teszteld a regisztrációt:**
+**Nyisd meg a böngésződ fejlesztői eszközeit és teszteld a regisztrációt:**
 
-1. **Nyisd meg** a böngésző konzolt (F12 → Console fül)
+1. **Nyisd meg** a böngésző konzolját (F12 → Konzol fül)
 2. **Töltsd ki** a regisztrációs űrlapot
-3. **Kattints** a "Fiók létrehozása" gombra
-4. **Figyeld meg** a konzol üzeneteket és a felhasználói visszajelzést
+3. **Kattints** a „Fiók létrehozása” gombra
+4. **Figyeld** a konzol üzeneteket és a felhasználói visszajelzést
 
-![Képernyőkép, amely a böngésző konzolban megjelenő naplóüzenetet mutatja](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.hu.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.hu.png)
 
-**Amit látnod kell:**
-- **Betöltési állapot** jelenik meg a beküldés gombon
-- **Konzol naplók** részletes információt adnak a folyamatról
-- **Sikerüzenet** jelenik meg, ha a fiók létrehozása sikeres
-- **Az űrlap automatikusan** visszaáll sikeres beküldés után
+**Mit kell látnod:**
+- **Betöltési állapot** jelenik meg a küldés gombon
+- **Konzol üzenetek** részletes információkat mutatnak
+- **Sikerüzenet** jelenik meg, ha a fiók létrejött
+- **Az űrlap automatikusan törlődik** sikeres beküldés után
 
-> 🔒 **Biztonsági megfontolás**: Jelenleg az adatok HTTP-n keresztül utaznak, ami nem biztonságos éles környezetben. Valódi alkalmazásokban mindig használj HTTPS-t az adatátvitel titkosításához. Tudj meg többet a [HTTPS biztonságról](https://en.wikipedia.org/wiki/HTTPS) és arról, miért elengedhetetlen a felhasználói adatok védelméhez.
+> 🔒 **Biztonsági megjegyzés**: Jelenleg az adatok HTTP-n keresztül utaznak, ami nem biztonságos éles környezetben. Valódi alkalmazásoknál mindig használj HTTPS-t az adatátvitel titkosításához. Tudj meg többet a [HTTPS biztonságról](https://en.wikipedia.org/wiki/HTTPS) és miért elengedhetetlen a felhasználói adatok védelméhez.
 
-## Átfogó űrlapellenőrzés
+### 🔄 **Pedagógiai ellenőrzőpont**
+**Modern JavaScript integráció**: Ellenőrizd az aszinkron űrlapkezelés megértését:
+- ✅ Hogyan változtatja meg az `event.preventDefault()` az alapértelmezett űrlap viselkedést?
+- ✅ Miért hatékonyabb a FormData API a kézi mezőgyűjtésnél?
+- ✅ Hogyan javítja az async/await minta a kód olvashatóságát?
+- ✅ Milyen szerepe van a hibakezelésnek a felhasználói élményben?
 
-Az űrlapellenőrzés megakadályozza azt a frusztráló élményt, amikor a hibák csak beküldés után derülnek ki. Akárcsak a Nemzetközi Űrállomás többszörös biztonsági rendszerei, a hatékony ellenőrzés több rétegű biztonsági ellenőrzést alkalmaz.
+**Rendszerarchitektúra**: Az űrlapkezelésed bemutatja:
+- **Eseményvezérelt programozást**: Az űrlapok azonnal reagálnak felhasználói műveletekre
+- **Aszinkron kommunikációt**: A szerverrel való kérés nem blokkolja a felhasználói felületet
+- **Hibakezelést**: Méltányos visszaesés hálózati hibák esetén
+- **Állapotkezelést**: A felhasználói felület a szerver válaszainak megfelelően frissül
+- **Fokozatos fejlesztést**: Alapfunkcionalitás működik, JavaScript tovább javítja azt
 
-Az optimális megközelítés ötvözi a böngésző szintű ellenőrzést az azonnali visszajelzés érdekében, a JavaScript ellenőrzést a jobb felhasználói élményért, és a szerveroldali ellenőrzést a biztonság és adatintegritás érdekében. Ez a redundancia biztosítja a felhasználói elégedettséget és a rendszer védelmét.
+**Professzionális minták**: Megvalósítottad:
+- **Egység felelősség elvét**: A függvényeknek világos, fókuszált céljuk van
+- **Hibahatárokat**: A try/catch blokkok megakadályozzák az alkalmazás összeomlását
+- **Felhasználói visszajelzést**: Betöltési állapotok és siker/hiba üzenetek
+- **Adatátalakítást**: FormData-ból JSON a szerver kommunikációhoz
 
-### Az ellenőrzési rétegek megértése
+## Átfogó űrlapvalidálás
+
+Az űrlapvalidálás megakadályozza, hogy a hibákat csak a beküldés után fedezzük fel, ami frusztráló. Akárcsak az Űrállomás több redundáns rendszere, a hatékony validálás több biztonsági réteget alkalmaz.
+
+Az optimális megoldás kombinálja a böngészőszintű validálást az azonnali visszajelzésért, a JavaScript validálást a jobb felhasználói élményért, és a szerveroldali ellenőrzést a biztonság és adat integritás érdekében. Ez a redundancia biztosítja a felhasználói elégedettséget és a rendszer védelmét.
+
+### A validálási rétegek megértése
 
 ```mermaid
 graph TD
-    A[User Input] --> B[HTML5 Validation]
-    B --> C[Custom JavaScript Validation]
-    C --> D[Client-Side Complete]
-    D --> E[Server-Side Validation]
-    E --> F[Data Storage]
+    A[Felhasználói Bemenet] --> B[HTML5 Érvényesítés]
+    B --> C[Egyedi JavaScript Érvényesítés]
+    C --> D[Kliens Oldali Kész]
+    D --> E[Szerver Oldali Érvényesítés]
+    E --> F[Adattárolás]
     
-    B -->|Invalid| G[Browser Error Message]
-    C -->|Invalid| H[Custom Error Display]
-    E -->|Invalid| I[Server Error Response]
+    B -->|Érvénytelen| G[Böngésző Hibajelzés]
+    C -->|Érvénytelen| H[Egyedi Hibamegjelenítés]
+    E -->|Érvénytelen| I[Szerver Hibaválasz]
 ```
+**Többrétegű validálási stratégia:**
+- **HTML5 validálás**: Azonnali böngészői ellenőrzés
+- **JavaScript validálás**: Egyedi logika és jobb felhasználói élmény
+- **Szerveroldali validálás**: Végső biztonsági és adatintegritási ellenőrzés
+- **Fokozatos fejlesztés**: Működik akkor is, ha a JavaScript ki van kapcsolva
 
-**Többrétegű ellenőrzési stratégia:**
-- **HTML5 ellenőrzés**: Azonnali böngésző-alapú ellenőrzések
-- **JavaScript ellenőrzés**: Egyedi logika és felhasználói élmény
-- **Szerveroldali ellenőrzés**: Végső biztonsági és adatintegritási ellenőrzések
-- **Progresszív fejlesztés**: Akkor is működik, ha a JavaScript le van tiltva
+### HTML5 validációs attribútumok
 
-### HTML5 ellenőrzési attribútumok
+**Modern validáló eszközök kezedben:**
 
-**Modern ellenőrzési eszközök a rendelkezésedre:**
-
-| Attribútum | Cél | Példa | Böngésző viselkedése |
-|------------|-----|-------|----------------------|
+| Attribútum | Célja | Példa használat | Böngésző viselkedés |
+|-----------|---------|---------------|------------------|
 | `required` | Kötelező mezők | `<input required>` | Megakadályozza az üres beküldést |
-| `minlength`/`maxlength` | Szöveghossz korlátok | `<input maxlength="20">` | Karakterkorlátokat érvényesít |
-| `min`/`max` | Számértékek határai | `<input min="0" max="1000">` | Számhatárokat ellenőriz |
-| `pattern` | Egyedi regex szabályok | `<input pattern="[A-Za-z]+">` | Meghatározott formátumokat ellenőriz |
-| `type` | Adattípus ellenőrzés | `<input type="email">` | Formátum-specifikus ellenőrzés |
+| `minlength`/`maxlength` | Szöveg hossz korlátok | `<input maxlength="20">` | Karakter limitet szab |
+| `min`/`max` | Numerikus tartományok | `<input min="0" max="1000">` | Számhatárokat ellenőriz |
+| `pattern` | Egyedi reguláris kifejezés szabályok | `<input pattern="[A-Za-z]+">` | Meghatározott formátumokat ellenőriz |
+| `type` | Adattípus validálás | `<input type="email">` | Formátum specifikus ellenőrzés |
 
-### CSS ellenőrzési stílusok
+### CSS validációs stílus
 
-**Hozz létre vizuális visszajelzést az ellenőrzési állapotokhoz:**
+**Létrehoz vizuális visszajelzést a validáció állapotokhoz:**
 
 ```css
 /* Valid input styling */
@@ -471,17 +704,17 @@ input:focus:invalid {
 }
 ```
 
-**Amit ezek a vizuális jelek elérnek:**
-- **Zöld keretek**: Sikeres ellenőrzést jeleznek, mint a zöld lámpák az irányító központban
-- **Piros keretek**: Hibákat jeleznek, amelyek figyelmet igényelnek
-- **Fókusz kiemelések**: Egyértelmű vizuális kontextust biztosítanak az aktuális bemeneti helyhez
-- **Konzisztens stílus**: Megtanulható, kiszámítható felhasználói felület mintákat hoz létre
+**Mit érnek el ezek a vizuális jelek:**
+- **Zöld keretek**: Sikeres validálást jeleznek, mint a zöld lámpák a küldetésirányításnál
+- **Piros keretek**: Figyelmet igénylő validációs hibákat jelölnek
+- **Fókuszkiemelések**: Egyértelmű vizuális útmutató az aktuális bevitel helyére
+- **Konzisztens stílus**: Megjósolható interfész mintákat alakítanak ki, amelyeket a felhasználók megtanulnak
 
-> 💡 **Profi tipp**: Használd a `:valid` és `:invalid` CSS pszeudo-osztályokat, hogy azonnali vizuális visszajelzést adj a felhasználóknak gépelés közben, ezzel egy reszponzív és segítőkész felületet hozva létre.
+> 💡 **Hasznos tipp**: Használjuk a `:valid` és `:invalid` CSS pszeudo-osztályokat, hogy azonnali vizuális visszajelzést adjunk a gépelés során, így reszponzív és segítő felületet alkotva.
 
-### Átfogó ellenőrzés megvalósítása
+### Átfogó validáció implementálása
 
-Fejlesszük tovább a regisztrációs űrlapot robusztus ellenőrzéssel, amely kiváló felhasználói élményt és adatminőséget biztosít:
+Fejlesszük tovább a regisztrációs űrlapodat robusztus validációval, ami kiváló felhasználói élményt és adatminőséget biztosít:
 
 ```html
 <form id="registerForm" method="POST" novalidate>
@@ -524,63 +757,170 @@ Fejlesszük tovább a regisztrációs űrlapot robusztus ellenőrzéssel, amely 
 </form>
 ```
 
-**A továbbfejlesztett ellenőrzés megértése:**
-- **Kombinálja** a kötelező mezők jelölését hasznos leírásokkal
-- **Tartalmazza** a `pattern` attribútumokat a formátum ellenőrzéséhez
-- **Biztosítja** a `title` attribútumokat az akadálymentesség és a súgók számára
-- **Segítő szöveget ad** a felhasználói bemenet irányításához
-- **Használja** a szemantikus HTML struktúrát a jobb akadálymentesség érdekében
+**Az továbbfejlesztett validálás megértése:**
+- **Kombinálja** a kötelező mezőjelöléseket segítő leírásokkal
+- **Tartalmazza** a formátumellenőrzéshez `pattern` attribútumokat
+- **Biztosítja** az elérhetőséget és tooltip-eket a `title` attribútummal
+- **Hozzáad** segédszöveget a felhasználói bevitel támogatására
+- **Használ** szemantikus HTML szerkezetet jobb akadálymentességért
 
-### Haladó ellenőrzési szabályok
+### Haladó validációs szabályok
 
-**Mit érnek el az egyes ellenőrzési szabályok:**
+**Mit teljesít minden validációs szabály:**
 
-| Mező | Ellenőrzési szabályok | Felhasználói előny |
-|------|-----------------------|--------------------|
+| Mező | Validációs szabályok | Felhasználói előny |
+|-------|------------------|--------------|
 | Felhasználónév | `required`, `minlength="3"`, `maxlength="20"`, `pattern="[a-zA-Z0-9_]+"` | Érvényes, egyedi azonosítókat biztosít |
 | Pénznem | `required`, `maxlength="3"`, `pattern="[A-Z$€£¥₹]+"` | Elfogadja a gyakori pénznem szimbólumokat |
-| Egyenleg | `min="0"`, `step="0.01"`, `type="number"` | Megakadályozza a negatív egyenlegeket |
-| Leírás | `maxlength="100"` | Ésszerű hosszúsági korlátokat biztosít |
+| Egyenleg | `min="0"`, `step="0.01"`, `type="number"` | Megakadályozza a negatív egyenleget |
+| Leírás | `maxlength="100"` | Ésszerű hosszkorlátokat állít be |
 
-### Az ellenőrzési viselkedés tesztelése
+### Validációs viselkedés tesztelése
 
-**Próbáld ki ezeket az ellenőrzési forgatókönyveket:**
+**Próbáld ki ezeket a validációs helyzeteket:**
 1. **Küldd be** az űrlapot üres kötelező mezőkkel
-2. **Adj meg** egy 3 karakternél rövidebb felhasználónevet
-3. **Próbálj ki** speciális karaktereket a felhasználónév mezőben
-4. **Írj be** negatív egyenleg összeget
+2. **Írj be** 3 karakternél rövidebb felhasználónevet
+3. **Próbálj meg** különleges karaktereket a felhasználónév mezőbe
+4. **Add meg** negatív egyenleg értéket
 
-![Képernyőkép, amely az űrlap beküldésekor megjelenő ellenőrzési hibát mutatja](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.hu.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.hu.png)
 
-**Amit tapasztalni fogsz:**
-- **A böngésző megjeleníti** a natív ellenőrzési üzeneteket
+**Mit fogsz tapasztalni:**
+- **A böngésző megjeleníti** a natív validációs üzeneteket
 - **A stílus változik** a `:valid` és `:invalid` állapotok alapján
-- **Az űrlap beküldése** addig nem lehetséges, amíg minden ellenőrzés nem sikeres
-- **A fókusz automatikusan** az első érvénytelen mezőre ugrik
+- **Az űrlap beküldése megakadályozott**, amíg az összes validáció nem teljesül
+- **A fókusz automatikusan** az első hibás mezőre ugrik
 
-### Ügyféloldali vs Szerveroldali ellenőrzés
+### Ügyféloldali vs Szerveroldali validáció
 
 ```mermaid
 graph LR
-    A[Client-Side Validation] --> B[Instant Feedback]
-    A --> C[Better UX]
-    A --> D[Reduced Server Load]
+    A[Ügyféloldali ellenőrzés] --> B[Azonnali visszajelzés]
+    A --> C[Jobb UX]
+    A --> D[Csökkentett szerverterhelés]
     
-    E[Server-Side Validation] --> F[Security]
-    E --> G[Data Integrity]
-    E --> H[Business Rules]
+    E[Szerveroldali ellenőrzés] --> F[Biztonság]
+    E --> G[Adatintegritás]
+    E --> H[Üzleti szabályok]
     
-    A -.-> I[Both Required]
+    A -.-> I[Mindkettő szükséges]
     E -.-> I
 ```
+**Miért kell mindkettő:**
+- **Ügyféloldali validáció**: Azonnali visszajelzést ad és javítja a felhasználói élményt
+- **Szerveroldali validáció**: Biztosítja a biztonságot és kezeli az összetett üzleti szabályokat
+- **Kombinált megközelítés**: Erős, felhasználóbarát és biztonságos alkalmazásokat hoz létre
+- **Fokozatos fejlesztés**: Működik akkor is, ha a JavaScript ki van kapcsolva
 
-**Miért van szükség mindkét rétegre:**
-- **Ügyféloldali ellenőrzés**: Azonnali visszajelzést ad és javítja a felhasználói élményt
-- **Szerveroldali ellenőrzés**: Biztonságot nyújt és kezeli az összetett üzleti szabályokat
-- **Kombinált megközelítés**: Robusztus, felhasználóbarát és biztonságos alkalmazásokat hoz létre
-- **Progresszív fejlesztés**: Akkor is működik, ha a JavaScript le van tiltva
+> 🛡️ **Biztonsági emlékeztető**: Soha ne bízz csak az ügyféloldali validálásban! A rosszindulatú felhasználók megkerülhetik az ügyféloldali ellenőrzéseket, ezért a szerveroldali validáció elengedhetetlen a biztonság és az adat integritás miatt.
 
-> 🛡️ **Biztonsági emlékeztető**: Soha ne bízz kizárólag az ügyféloldali ellenőrzésben! Rosszindulatú felhasználók megkerülhetik az ügyféloldali ellenőrzéseket, ezért a szerveroldali ellenőrzés elengedhetetlen a biztonság és az adatintegritás érdekében.
+### ⚡ **Amit a következő 5 percben megtehetsz**
+- [ ] Teszteld az űrlapot érvénytelen adatokkal, hogy lásd a validációs üzeneteket
+- [ ] Próbáld meg beküldeni az űrlapot JavaScript nélkül az HTML5 validálás teszteléséhez
+- [ ] Nyisd meg a böngésző fejlesztői eszközeit és nézd meg a szervernek küldött űrlapadatokat
+- [ ] Kísérletezz különböző input típusokkal, hogy lásd a mobil billentyűzet változásokat
+
+### 🎯 **Amit ebben az órában elérhetsz**
+- [ ] Töltsd ki az óra utáni tesztet és értsd meg az űrlapkezelési koncepciókat
+- [ ] Valósítsd meg az átfogó validálási kihívást valós idejű visszajelzésekkel
+- [ ] Adj hozzá CSS stílusokat professzionális űrlapok létrehozásához
+- [ ] Készíts hibakezelést az ismétlődő felhasználónevek és szerverhibák kezelésére
+- [ ] Adj hozzá jelszó megerősítő mezőket egyező validálással
+
+### 📅 **Az egyhetes űrlap-mester kurzusod**
+- [ ] Készítsd el a teljes banki appot haladó űrlapfunkciókkal
+- [ ] Valósítsd meg a fájlfeltöltést profilképek vagy dokumentumok számára
+- [ ] Adj hozzá több lépésből álló űrlapokat előrehaladási mutatókkal és állapotkezeléssel
+- [ ] Készíts dinamikus űrlapokat, amelyek alkalmazkodnak a felhasználó választásaihoz
+- [ ] Valósítsd meg az űrlap automatikus mentést és visszaállítást a jobb felhasználói élmény érdekében
+- [ ] Adj hozzá haladó validálási funkciókat, például email ellenőrzést és telefonszám formázást
+
+### 🌟 **Az egyhónapos frontend fejlesztő mesterséged**
+- [ ] Építs komplex űrlapalkalmazásokat feltételes logikával és munkafolyamatokkal
+- [ ] Tanulj meg űrlap könyvtárakat és keretrendszereket a gyors fejlesztéshez
+- [ ] Sajátítsd el az akadálymentességi irányelveket és befogadó tervezési elveket
+- [ ] Valósíts meg nemzetközivé és lokalizáltá tás a globális űrlapokért
+- [ ] Készíts újrahasználható űrlap komponens könyvtárakat és dizájn rendszereket
+- [ ] Vegyél részt nyílt forráskódú űrlap projektekben és oszd meg a bevált gyakorlatokat
+
+## 🎯 Az űrlapfejlesztés mesterfokú idővonala
+
+```mermaid
+timeline
+    title Űrlapfejlesztés és Felhasználói Élmény Tanulási Folyamat
+    
+    section HTML Alapok (15 perc)
+        Szemantikus Űrlapok: Űrlapelemek
+                      : Bemeneti típusok
+                      : Címkék és akadálymentesség
+                      : Fokozatos fejlesztés
+        
+    section JavaScript Integráció (25 perc)
+        Eseménykezelés: Űrlap beküldése
+                      : Adatgyűjtés
+                      : AJAX kommunikáció
+                      : Async/await minták
+        
+    section Érvényesítési Rendszerek (35 perc)
+        Többrétegű Biztonság: HTML5 érvényesítés
+                            : Ügyféloldali logika
+                            : Szerveroldali ellenőrzés
+                            : Hibakezelés
+        
+    section Felhasználói Élmény (45 perc)
+        Felület Finomítás: Betöltési állapotok
+                        : Sikerüzenetek
+                        : Hibajavítás
+                        : Akadálymentességi funkciók
+        
+    section Haladó Minták (1 hét)
+        Profi Űrlapok: Dinamikus érvényesítés
+                          : Többlépéses munkafolyamatok
+                          : Fájl feltöltések
+                          : Valós idejű visszajelzés
+        
+    section Vállalati Készségek (1 hónap)
+        Termelési Alkalmazások: Űrlap könyvtárak
+                               : Tesztelési stratégiák
+                               : Teljesítmény-optimalizálás
+                               : Biztonsági bevált gyakorlatok
+```
+### 🛠️ Az űrlapfejlesztő eszköztárad összefoglalója
+
+A lecke elvégzése után mostanra elsajátítottad:
+- **HTML5 űrlapok**: Szemantikus struktúra, bemeneti típusok és akadálymentességi funkciók
+- **JavaScript űrlapkezelés**: Eseménykezelés, adatgyűjtés és AJAX kommunikáció
+- **Validációs architektúra**: Többrétegű validálás a biztonságért és felhasználói élményért
+- **Aszinkron programozás**: Modern fetch API és async/await minták
+- **Hibakezelés**: Átfogó hibakezelés és felhasználói visszajelző rendszerek
+- **Felhasználói élmény dizájn**: Betöltési állapotok, sikerüzenetek és hibakezelés
+- **Fokozatos fejlesztés**: Működő űrlapok minden böngészőben és képességnél
+
+**Valós alkalmazásokhoz**: Az űrlapfejlesztési képességeid közvetlenül alkalmazhatók:
+- **E-kereskedelmi alkalmazások**: Kosárfeldolgozás, fiók regisztráció, fizetési űrlapok
+- **Vállalati szoftverek**: Adatbeviteli rendszerek, jelentéskészítő felületek, munkafolyamat alkalmazások
+- **Tartalomkezelés**: Publikáló platformok, felhasználói tartalom, adminisztrációs felületek
+- **Pénzügyi alkalmazások**: Banki felületek, befektetési platformok, tranzakciós rendszerek
+- **Egészségügyi rendszerek**: Páciensek portáljai, időpontfoglalás, orvosi dokumentációs űrlapok
+- **Oktatási platformok**: Kurzus regisztráció, értékelő eszközök, tanulásmenedzsment
+
+**Megszerezett szakmai készségek**: Most már képes vagy:
+- **Tervezni** akadálymentes űrlapokat, amelyek minden felhasználó számára működnek, beleértve a fogyatékkal élőket is
+- **Megvalósítani** biztonságos validációt, amely megakadályozza az adatok sérülését és biztonsági rések kialakulását
+- **Készíteni** reszponzív felhasználói felületeket, amelyek egyértelmű visszajelzést és útmutatást nyújtanak
+- **Hibakeresni** összetett űrlaphatásokat böngésző fejlesztői eszközökkel és hálózat elemzéssel
+- **Optimalizálni** az űrlapok teljesítményét hatékony adatkezeléssel és validációs stratégiákkal
+
+**Elsajátított frontend fejlesztési koncepciók**:
+- **Eseményvezérelt architektúra**: Felhasználói interakciók kezelése és válasz rendszerek
+- **Aszinkron programozás**: Nem blokkoló szerver kommunikáció és hibakezelés
+- **Adat validáció**: Ügyfél- és szerveroldali biztonsági és integritás ellenőrzés
+- **Felhasználói élmény dizájn**: Intuitív felületek, amelyek a sikert segítik elő
+- **Akadálymentesség mérnöksége**: Befogadó tervezés, amely sokféle felhasználói igénynek megfelel
+
+**Következő szint**: Készen állsz, hogy felfedezd a fejlett űrlapk könyvtárakat, megvalósíts összetett validációs szabályokat, vagy építs vállalati szintű adatgyűjtő rendszereket!
+
+🌟 **Elért siker**: Teljes űrlapkezelő rendszert építettél profi validációval, hibakezeléssel és felhasználói élmény mintákkal!
 
 ---
 
@@ -588,37 +928,38 @@ graph LR
 
 ---
 
-## GitHub Copilot Agent kihívás 🚀
+## GitHub Copilot Agent Challenge 🚀
 
 Használd az Agent módot a következő kihívás teljesítéséhez:
 
-**Leírás:** Fejleszd tovább a regisztrációs űrlapot átfogó ügyféloldali ellenőrzéssel és felhasználói visszajelzéssel. Ez a kihívás segít gyakorolni az űrlapellenőrzést, hibakezelést és a felhasználói élmény javítását interaktív visszajelzésekkel.
+**Leírás:** Bővítsd ki a regisztrációs űrlapot átfogó ügyféloldali validációval és felhasználói visszajelzéssel. Ez a kihívás segít gyakorolni az űrlapvalidálást, hibakezelést és a felhasználói élmény javítását interaktív visszajelzéssel.
+**Prompt:** Hozz létre egy teljes űrlap-érvényesítő rendszert a regisztrációs űrlaphoz, amely tartalmazza: 1) Valós idejű visszajelzést az egyes mezőkhöz, miközben a felhasználó gépel, 2) Egyedi érvényesítési üzeneteket, amelyek az egyes bemeneti mezők alatt jelennek meg, 3) Jelszó megerősítő mezőt az egyezőség ellenőrzésére, 4) Vizuális jelzéseket (például zöld pipa az érvényes mezőkhöz és piros figyelmeztetés a nem érvényesekhez), 5) Egy beküldés gombot, amely csak akkor engedélyezett, ha az összes érvényesítés sikeres. Használj HTML5 érvényesítési attribútumokat, CSS-t az érvényesítési állapotok stílusához, és JavaScriptet az interaktív viselkedéshez.
 
-**Feladat:** Hozz létre egy teljes űrlapellenőrzési rendszert a regisztrációs űrlaphoz, amely tartalmazza: 1) Valós idejű ellenőrzési visszajelzést minden mezőhöz, ahogy a felhasználó gépel, 2) Egyedi ellenőrzési üzeneteket, amelyek minden bemeneti mező alatt megjelennek, 3) Egy jelszó megerősítő mezőt, amely ellenőrzi az egyezést, 4) Vizuális jelzéseket (például zöld pipák az érvényes mezőkhöz és piros figyelmeztetések az érvénytelenekhez), 5) Egy beküldés gombot, amely csak akkor válik aktívvá, ha minden ellenőrzés sikeres. Használj HTML5 ellenőrzési attribútumokat, CSS-t az ellenőrzési állapotok stílusához, és JavaScriptet az interaktív viselkedéshez.
-
-Tudj meg többet az [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) funkcióról itt.
+Tudj meg többet az [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) használatáról itt.
 
 ## 🚀 Kihívás
 
-Mutass egy hibaüzenetet a HTML-ben, ha a felhasználó már létezik.
+Mutass meg egy hibaüzenetet az HTML-ben, ha a felhasználó már létezik.
 
-Íme egy példa arra, hogyan nézhet ki a végleges bejelentkezési oldal némi stílus hozzáadása után:
+Íme egy példa arra, hogy nézhet ki a végleges bejelentkezési oldal egy kis stílus hozzáadása után:
 
-![Képernyőkép a bejelentkezési oldalról, miután CSS stílusokat adtunk hozzá](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.hu.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.hu.png)
 
-## Előadás utáni kvíz
+## Óra utáni kvíz
 
-[Előadás utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/44)
+[Óra utáni kvíz](https://ff-quizzes.netlify.app/web/quiz/44)
 
-## Áttekintés és önálló tanulás
+## Áttekintés & Önkéntes tanulás
 
-A fejlesztők nagyon kreatívak lettek az űrlapkészítési erőfeszítéseik során, különösen az ellenőrzési stratégiák tekintetében. Ismerd meg a különböző űrlapfolyamatokat, ha átnézed a [CodePen](https://codepen.com) oldalát; találsz-e érdekes és inspiráló űrlapokat?
+A fejlesztők nagyon kreatívak lettek az űrlapépítési munkájuk során, különösen az érvényesítési stratégiákat illetően. Ismerj meg különböző űrlapfolyamatokat a [CodePen](https://codepen.com) böngészésével; találsz érdekes és inspiráló űrlapokat?
 
 ## Feladat
 
-[Stilizáld a banki alkalmazásodat](assignment.md)
+[Stílusozd a banki alkalmazásod](assignment.md)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítás hibákat vagy pontatlanságokat tartalmazhat. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

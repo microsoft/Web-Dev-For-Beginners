@@ -126,7 +126,7 @@ Per aprire gli Strumenti per Sviluppatori in Edge, clicca sui tre puntini in alt
 
 Proviamolo. Apri un sito web (Microsoft.com funziona bene per questo) e clicca sul pulsante 'Registra'. Ora aggiorna la pagina e osserva il profiler catturare tutto ciò che accade. Quando interrompi la registrazione, vedrai una ripartizione dettagliata di come il browser 'scrive', 'renderizza' e 'dipinge' il sito. Mi ricorda come il controllo missione monitori ogni sistema durante un lancio di razzi - ottieni dati in tempo reale su ciò che sta accadendo e quando.
 
-![Profiler Edge](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.it.png)
+![Profiler Edge](../../../../translated_images/profiler.5a4a62479c5df01c.it.png)
 
 ✅ La [Documentazione Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) ha tantissimi dettagli se vuoi approfondire.
 
@@ -136,11 +136,11 @@ Seleziona gli elementi della timeline del profilo per ingrandire gli eventi che 
 
 Ottieni un'istantanea delle prestazioni della tua pagina selezionando una parte della timeline del profilo e guardando il pannello di riepilogo:
 
-![Snapshot profiler Edge](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.it.png)
+![Snapshot profiler Edge](../../../../translated_images/snapshot.97750180ebcad737.it.png)
 
 Controlla il pannello del registro eventi per vedere se qualche evento ha impiegato più di 15 ms:
 
-![Registro eventi Edge](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.it.png)
+![Registro eventi Edge](../../../../translated_images/log.804026979f3707e0.it.png)
 
 ✅ Familiarizza con il tuo profiler! Apri gli strumenti per sviluppatori su questo sito e verifica se ci sono colli di bottiglia. Qual è l'asset che si carica più lentamente? E quello più velocemente?
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Dalam projek ini, anda akan belajar cara membina bank fiksyen. Pelajaran ini merangkumi arahan tentang cara menyusun aplikasi web dan menyediakan laluan, membina borang, menguruskan keadaan, dan mendapatkan data daripada API yang membolehkan anda mengambil data bank.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.ms.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.ms.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.ms.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.ms.png) |
 |--------------------------------|--------------------------------|
 
 ## Pelajaran

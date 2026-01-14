@@ -1,0 +1,20 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
+  "translation_date": "2026-01-08T20:38:26+00:00",
+  "source_file": "9-chat-project/solution/README.md",
+  "language_code": "te"
+}
+-->
+# Run solution
+
+1. ప్రారంభించండి [backend](./backend/README.md)
+1. ఇప్పుడు ప్రారంభించండి [fronten](./frontend/README.md)
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**విమర్శన**:  
+ఈ పత్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువదించాం. మనం సరిగ్గా ఉండేందుకు ప్రయత్నించినప్పటికీ, ఆటోమేటెడ్ అనువాదాల్లో తప్పులు లేదా లోపాలు ఉండవచ్చు. అసలు పత్రం దాని మూల భాషలోనే అధికారిక మూలంగా భావించాలి. కీలక సమాచారానికి, ప్రొఫెషనల్ మానవ అనువాదం చేయించుకోవాలని సూచన. ఈ అనువాదం ఉపయోగంపై తలెత్తిన ఎలాంటి అపార్థాలు మరియు మూల్యాంకనాలకు మేము బాధ్యులు కావము.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

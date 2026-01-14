@@ -1,175 +1,639 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f8d4b0284f3fc1de7eb65073d8338cca",
-  "translation_date": "2025-10-11T11:46:56+00:00",
+  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
+  "translation_date": "2026-01-08T09:02:53+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "et"
 }
 -->
-***
+# Koodi redaktori kasutamine: VSCode.devi valdamine
 
-# Koodi redaktori kasutamine: [VSCode.dev](https://vscode.dev) valdamine
+Kas mäletad filmist *Matrix* seda kohta, kus Neo pidi arvutimaailmaga ühenduse saamiseks suure kooditerminaliga liidestuma? Tänapäeva veebiarendusvahendid on selle vastand – uskumatult võimsad võimalused, mis on ligipääsetavad kõikjalt. VSCode.dev on brauseripõhine koodi redaktor, mis toob professionaalsed arendusvahendid igasse internetiühendusega seadmesse.
 
-**Tere tulemast!**  
-See õppetund viib teid [VSCode.dev](https://vscode.dev)—võimsa veebipõhise koodi redaktori—põhitõdedest kuni edasijõudnud kasutamiseni. Õpite enesekindlalt koodi redigeerima, projekte haldama, muudatusi jälgima, laiendusi installima ja professionaalselt koostööd tegema—kõike seda otse oma brauserist, ilma et oleks vaja midagi installida.
+Nii nagu trükipress tegi raamatud kättesaadavaks kõigile, mitte ainult kloostrite kirjutajatele, demokraatiseerib VSCode.dev kodeerimise. Sa võid töötada projektidega raamatukogu arvutist, kooli laboris või ükskõik kust, kus on brauseri ligipääs. Pole vaja installida, pole "mul on oma spetsiifiline keskkond" piiranguid.
 
-***
+Selle õppetüki lõpuks saad aru, kuidas VSCode.devis navigeerida, avada GitHubi hoidlaid otse brauseris ja kasutada Gitit versioonihalduseks – kõik oskused, millele professionaalsed arendajad iga päev toetuvad.
 
-## Õppe-eesmärgid
+## ⚡ Mida saad järgnevate 5 minutiga teha
 
-Selle õppetunni lõpuks oskate:
+**Kiire algus hõivatud arendajatele**
 
-- Tõhusalt kasutada koodi redaktorit mis tahes projekti jaoks, igal pool
-- Sujuvalt jälgida oma tööd sisseehitatud versioonihalduse abil
-- Kohandada ja täiustada oma arenduskeskkonda redaktori seadistuste ja laiendustega
+```mermaid
+flowchart LR
+    A[⚡ 5 minutit] --> B[Külasta vscode.dev]
+    B --> C[Ühenda GitHubi konto]
+    C --> D[Ava ükskõik milline hoidla]
+    D --> E[Alusta koheselt redigeerimist]
+```
+- **1. minut**: Mine aadressile [vscode.dev](https://vscode.dev) – pole vaja midagi installeerida
+- **2. minut**: Logi sisse GitHubiga, et oma hoidlaid ühendada
+- **3. minut**: Proovi URL-i trikki: muuda mistahes hoidla aadressis `github.com` osaks `vscode.dev/github`
+- **4. minut**: Loo uus fail ja vaata, kuidas süntaksi esiletõstmine automaatselt tööle hakkab
+- **5. minut**: Tee muudatus ja salvesta see Source Control paneeli kaudu
 
-***
+**Kiirika URL**:
+```
+# Transform this:
+github.com/microsoft/Web-Dev-For-Beginners
 
-## Eeltingimused
+# Into this:
+vscode.dev/github/microsoft/Web-Dev-For-Beginners
+```
 
-Alustamiseks **registreerige tasuta [GitHubi](https://github.com) konto**, mis võimaldab teil hallata koodirepositooriume ja teha koostööd üle maailma. Kui teil pole veel kontot, [looge see siin](https://github.com/).
+**Miks see oluline on**: 5 minutiga saad kogeda vabadust koodida kõikjalt kasutades professionaalseid tööriistu. See tähistab arenduse tulevikku – ligipääsetav, võimas ja vahetu.
 
-***
+## 🗺️ Sinu õpiteek pilvepõhises arenduses
 
-## Miks kasutada veebipõhist koodi redaktorit?
+```mermaid
+journey
+    title Kohalikust seadistusest pilve arenduse meistrini
+    section Platvormi mõistmine
+      Avastage veebipõhine redigeerimine: 4: You
+      Ühenduge GitHubi ökosüsteemiga: 6: You
+      Valdage liidese navigeerimine: 7: You
+    section Failihaldusoskused
+      Looge ja organiseerige faile: 5: You
+      Redigeerige süntaksi esiletõstmisega: 7: You
+      Navigeerige projektistruktuuride vahel: 8: You
+    section Versioonihalduse valdamine
+      Mõistke Giti integratsiooni: 6: You
+      Harjutage commit-töövooge: 8: You
+      Valdage koostöö mustreid: 9: You
+    section Professionaalne kohandamine
+      Installige võimsad laiendused: 7: You
+      Konfigureerige arendus keskkond: 8: You
+      Looge isiklikud töövood: 9: You
+```
+**Sihtpunkt sinu teekonnal**: Selle õppetüki lõpuks valdad professionaalset pilvearenduskeskkonda, mis töötab ükskõik millisest seadmest, võimaldades sul kasutada samu tööriistu, mida kasutavad suured tehnoloogiafirmad.
 
-**Koodi redaktor**, nagu VSCode.dev, on teie juhtimiskeskus koodi kirjutamiseks, redigeerimiseks ja haldamiseks. Intuitiivse liidese, rohkete funktsioonide ja brauseri kaudu kohese juurdepääsuga saate:
+## Mida õpid
 
-- Redigeerida projekte mis tahes seadmes
-- Vältida installimisega seotud tülikust
-- Koostööd teha ja panustada koheselt
+Pärast seda koos läbikäimist saad:
 
-Kui olete VSCode.dev-iga mugav, olete valmis lahendama koodiga seotud ülesandeid igal ajal ja igal pool.
+- Navigeerida VSCode.devis nagu see oleks sinu teine kodu – leida kõike vajalikku ilma ekslemata
+- Avada mistahes GitHubi hoidla oma brauseris ja kohe hakata seda muutma (see on päris maagiline!)
+- Kasutada Giti oma muudatuste jälgimiseks ja edenemise salvestamiseks nagu professionaal
+- Kiirendada oma redaktorit laiendustega, mis muudavad kodeerimise kiiremaks ja lõbusamaks
+- Luua ja korrastada projektifaile enesekindlalt
 
-***
+## Mida vajad
 
-## VSCode.dev kasutamise alustamine
+Nõuded on lihtsad:
 
-Liikuge **[VSCode.dev](https://vscode.dev)** lehele—ei installimist, ei allalaadimist. GitHubiga sisselogimine avab täieliku juurdepääsu, sealhulgas teie seadistuste, laienduste ja repositooriumide sünkroonimise. Kui küsitakse, ühendage oma GitHubi konto.
+- Tasuta [GitHubi konto](https://github.com) (vajadusel juhendame sind selle loomisel)
+- Algteadmised veebibrauseritest
+- GitHub Basics õppetükk annab kasulikku taustainfot, kuid pole kohustuslik
 
-Pärast laadimist näeb teie tööruum välja selline:
+> 💡 **Uus GitHubis?** Konto loomine on tasuta ja võtab vaid paar minutit. Nii nagu raamatukogu kaart annab ligipääsu raamatutele kogu maailmas, avab GitHubi konto uksi koodihaldushoidlatesse üle interneti.
 
-![Vaikimisi VSCode.dev](../images/default-vscode-dev Kolm põhiosa vasakult paremale:
-- **Tegevusriba:** Ikonid nagu 🔎 (Otsing), ⚙️ (Seaded), failid, versioonihaldus jne.
-- **Külgriba:** Muutub vastavalt valitud tegevusriba ikoonile (vaikimisi *Explorer*, et näidata faile).
-- **Redaktori/koodi ala:** Suurim osa paremal—koht, kus tegelikult koodi redigeerite ja vaatate.
+## 🧠 Pilvearenduse ökosüsteemi ülevaade
 
-Klõpsake ikoonidel, et funktsioone uurida, kuid naaske _Explorer_ juurde, et oma koht säilitada.
+```mermaid
+mindmap
+  root((VSCode.dev Meisterlikkus))
+    Platform Benefits
+      Accessibility
+        Device Independence
+        No Installation Required
+        Instant Updates
+        Universal Access
+      Integration
+        GitHub Connection
+        Repository Sync
+        Settings Persistence
+        Collaboration Ready
+    Development Workflow
+      Failide Halduse
+        Projekti Struktuur
+        Süntaksi Esiletõstmine
+        Mitme Vahelehega Redigeerimine
+        Automaatse Salvestamise Funktsioonid
+      Versioonihaldus
+        Giti Integratsioon
+        Kinnitamise Töövood
+        Harude Halduse
+        Muudatuste Jälgimine
+    Customization Power
+      Laienduste Ökosüsteem
+        Tootlikkuse Tööriistad
+        Keelte Tugi
+        Teema Valikud
+        Kohandatud Kiirklahvid
+      Keskkonna Häälestus
+        Isiklikud Eelistused
+        Töölaua Konfiguratsioon
+        Tööriistade Integratsioon
+        Töövoo Optimeerimine
+    Professional Skills
+      Tööstuse Standardid
+        Versioonihaldus
+        Koodi Kvaliteet
+        Koostöö
+        Dokumentatsioon
+      Karjääri Valmisolek
+        Kaug töö
+        Pilve arendus
+        Meeskonna Projektid
+        Avatud Lähtekood
+```
+**Põhiprintsiip**: Pilvepõhised arenduskeskkonnad on kodeerimise tulevik – need pakuvad professionaalse taseme tööriistu, mis on ligipääsetavad, koostöövõimelised ja sõltumatud platvormist.
 
-***
+## Miks veebipõhised koodi redaktorid on olulised
 
-## GitHubi repositooriumi avamine
+Enne internetti ei saanud teadlased erinevatest ülikoolidest kergesti oma uurimistöid jagada. Siis tuli 1960ndail ARPANET, mis ühendas arvuteid kaugustel. Veebipõhised koodi redaktorid järgivad sama printsiipi – teha võimsad tööriistad ligipääsetavaks sõltumata sinu füüsilisest asukohast või seadmest.
 
-### Meetod 1: Redaktori kaudu
+Koodi redaktor on su arendustööruum, kus kirjutad, redigeerid ja korraldad koodifaile. Erinevalt lihtsatest tekstiredaktoritest pakuvad professionaalsed redaktorid süntaksi esiletõstmist, vigade tuvastamist ja projektihaldust.
 
-1. Minge [VSCode.dev](https://vscode.dev) lehele. Klõpsake **"Open Remote Repository."**
+VSCode.dev toob need võimalused su brauserisse:
 
-   ![Ava kaugrepositoorium](../../../../8-code-editor/images/open-remote-repository Kasutage _Command Palette_ (Ctrl-Shift-P või Cmd-Shift-P Macis).
+**Veebipõhise redigeerimise eelised:**
 
-   ![Paleti menüü](../images/palette-menu.png Ava kaugrepositoorium.”
-   - Valige see valik.
-   - Kleepige oma GitHubi repo URL (nt `https://github.com/microsoft/Web-Dev-For-Beginners`) ja vajutage Enter.
+| Omadus | Kirjeldus | Praktiline Eelis |
+|---------|-------------|----------|
+| **Platvormist sõltumatu** | Töötab igas brauseriga seadmes | Töötamine erinevatel arvutitel sujuvalt |
+| **Pole vaja installida** | Ligipääs veebiaadressi kaudu | Vabastus tarkvara installeerimise piirangutest |
+| **Automaatvärskendused** | Alati töötab uusima versiooniga | Uued funktsioonid ilma käsitsi uuendamata |
+| **Hoidla integratsioon** | Otseühendus GitHubiga | Koodi muutmine ilma kohaliku failihalduseta |
 
-Kui õnnestub, näete kogu projekti laadituna ja redigeerimiseks valmis!
+**Praktilised tagajärjed:**
+- Töö jätkamine erinevates keskkondades
+- Ühtne liides sõltumata operatsioonisüsteemist
+- Kohene koostöövõimalus
+- Vähenenud kohaliku salvestusruumi vajadus
 
-***
+## VSCode.devi avastamine
 
-### Meetod 2: Kohene avamine URL-i kaudu
+Nii nagu Marie Curie labor sisaldas keerulist tehnoloogiat suhteliselt lihtsas ruumis, pakib VSCode.dev professionaalsed arendustööriistad brauseriliidesesse. See veebirakendus pakub samasugust põhifunktsionaalsust nagu lauaarvuti koodi redaktorid.
 
-Muutke mis tahes GitHubi repo URL, et avada see otse VSCode.dev-is, asendades `github.com` `vscode.dev/github`-iga.  
-Näiteks:
+Alusta, minnes oma brauseris aadressile [vscode.dev](https://vscode.dev). Liides laeb end ilma allalaadimiseta või süsteemi installatsioonita – pilvearvutuse põhimõtete otse rakendus.
 
-- GitHub: `https://github.com/microsoft/Web-Dev-For-Beginners`
-- VSCode.dev: `https://vscode.dev/github/microsoft/Web-Dev-For-Beginners`
+### Ühenda oma GitHubi konto
 
-See funktsioon kiirendab mis tahes projekti kiiret avamist.
+Nii nagu Alexander Graham Bell ühendaski kaugustes kohad telefoni abil, seob GitHubi konto ühendamine VSCode.devi sinu koodihaldushoidlatele ligipääsu. Kui küsitakse sisselogimist GitHubiga, soovitatakse see ühendus aktsepteerida.
 
-***
+**GitHubi integratsioon pakub:**
+- Otse ligipääsu sinu hoidlatele redaktoris
+- Sünkroonitud seadistused ja laiendused seadmete vahel
+- Sujuv salvestuskäik GitHubi
+- Isikupärastatud arenduskeskkond
 
-## Failide redigeerimine projektis
+### Tutvu oma uue tööruumiga
 
-Kui teie repo on avatud, saate:
+Kui kõik laeb, näed ilusat ja puhtat töölaua keskkonda, mis on loodud sind keskenduma olulisele – koodile!
 
-### 1. **Luua uue faili**
-- *Explorer* külgribal liikuge soovitud kausta või kasutage juurkausta.
-- Klõpsake _‘New file ...’_ ikooni.
-- Pange failile nimi, vajutage **Enter**, ja fail ilmub koheselt.
+![Vaikimisi VSCode.devi liides](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.et.png)
 
-![Loo uus fail](../images/create-new-file 2. **Redigeeri ja salvesta faile**
+**Siin on ülevaade su ümbrusest:**
+- **Activity Bar** (vasakul olev riba): Sinu peamine navigeerimisriba, kus on Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩 ja Settings ⚙️
+- **Sidebar** (naabruses asuv paneel): Muutub sõltuvalt sinu valikutest ja näitab asjakohast infot
+- **Editor Area** (suur keskmine ala): Siin käib võlu – sinu peamine kodeerimisala
 
-- Klõpsake *Explorer* failil, et avada see koodialas.
-- Tehke vajalikud muudatused.
-- VSCode.dev salvestab muudatused automaatselt, kuid saate käsitsi salvestada, vajutades Ctrl+S.
+**Võta hetk uurimiseks:**
+- Klõpsa Activity Bari ikoonidel ja vaata, mida igaüks teeb
+- Märka, kuidas sidriba muutub, näidates erinevat informatsiooni – päris äge, eks?
+- Explorer vaade (📁) on koht, kus veedad tõenäoliselt kõige enam aega, harju sellega
 
-![Redigeeri faili](../images/edit-a-file.png. **Jälgi ja kinnita muudatusi versioonihaldusega**
+```mermaid
+flowchart TB
+    subgraph "VSCode.dev liidese arhitektuur"
+        A[Aktiivriba] --> B[Explorer 📁]
+        A --> C[Otsi 🔍]
+        A --> D[Allikahalduse 🌿]
+        A --> E[Laiendused 🧩]
+        A --> F[Seaded ⚙️]
+        
+        B --> G[Failipuu]
+        C --> H[Leia ja asenda]
+        D --> I[Git staatus]
+        E --> J[Laienduste turg]
+        F --> K[Konfiguratsioon]
+        
+        L[Külgriba] --> M[Kontekstipaneel]
+        N[Redaktori ala] --> O[Koodifailid]
+        P[Terminal/Väljund] --> Q[Käsurida]
+    end
+```
+## GitHubi hoidlate avamine
 
-VSCode.dev sisaldab integreeritud **Git** versioonihaldust!
+Enne internetti pidid teadlased füüsiliselt raamatukogudesse sõitma dokumentidele ligipääsuks. GitHubi hoidlad töötavad samamoodi – need on kaugel hoitavad koodikogumikud. VSCode.dev kaotab traditsioonilise sammu, kus hoidlaid tuli esmalt alla laadida oma kohalikku masinasse enne muutmist.
 
-- Klõpsake _'Source Control'_ ikooni, et näha kõiki tehtud muudatusi.
-- Failid `Changes` kaustas näitavad lisamisi (roheline) ja kustutamisi (punane).  
-  ![Vaata muudatusi](../images/working-tree.png Muudatused, klõpsates `+` failide kõrval, et valmistada ette kinnitamiseks.
-- **Loobu** soovimatutest muudatustest, klõpsates tagasivõtuikooni.
-- Sisestage selge kinnitussõnum, seejärel klõpsake linnukest, et kinnitada ja lükata muudatused üles.
+See võimaldab kohest ligipääsu igale avalikule hoidla vaatamiseks, redigeerimiseks või panustamiseks. Siin on kaks hoidlate avamise meetodit:
 
-Tagasi GitHubi repositooriumisse naasmiseks valige vasakpoolne hamburgerimenüü.
+### Meetod 1: Osuta ja klõpsa
 
-![Etapp ja kinnita muudatused](../images/edit-vscode.dev Laiendustega
+Sobib ideaalselt, kui alustad VSCode.devis nullist ja soovid konkreetset hoidlat avada. Lihtne ja algajasõbralik:
 
-Laiendused võimaldavad lisada keeli, teemasid, silureid ja tootlikkuse tööriistu VSCode.dev-ile—muutes teie koodikirjutamise lihtsamaks ja lõbusamaks.
+**Nii teed seda:**
 
-### Laienduste sirvimine ja haldamine
+1. Mine aadressile [vscode.dev](https://vscode.dev), kui sa pole seal veel
+2. Otsi tervituslehel nuppu "Open Remote Repository" ja klõpsa
 
-- Klõpsake **Laienduste ikooni** tegevusribal.
-- Otsige laiendust _'Search Extensions in Marketplace'_ kastis.
+   ![Ava kaughoidla](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.et.png)
 
-  ![Laienduse üksikasjad](../images/extension-details:
-  - **Paigaldatud**: Kõik lisatud laiendused
-  - **Populaarsed**: Tööstuse lemmikud
-  - **Soovitatud**: Kohandatud teie töövoo jaoks
+3. Kleebi siia mistahes GitHubi hoidla URL (proovi seda: `https://github.com/microsoft/Web-Dev-For-Beginners`)
+4. Vajuta Enter ja vaata imet!
 
-  ![Vaata laiendusi](
+**Pro nipp – Command Palette otsetee:**
 
-  
+Tahad tunda end nagu koodimise võlur? Proovi klaviatuuri otseteed Ctrl+Shift+P (või Cmd+Shift+P Macil), et avada Command Palette:
 
-***
+![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.et.png)
 
-### 1. **Installi laiendused**
+**Command Palette on nagu otsingumootor kõigile sinu tehtavatele asjadele:**
+- Kirjuta "open remote" ja see leiab hoidla avaja sinu eest
+- Mäletab viimati avatud hoidlaid (üllatavalt kasulik!)
+- Kui harjud selle kasutama, tundub nagu kodeeriksid välkkiirusel
+- Tegelikult on see VSCode.devi variatsioon sellele, nagu öelda "Hey Siri, aga koodi jaoks"
 
-- Sisestage laienduse nimi otsingusse, klõpsake seda ja vaadake üksikasju redaktoris.
-- Vajutage **sinist Installi nuppu** külgribal _või_ peamises koodialas.
+### Meetod 2: URL-i muutmise meetod
 
-  ![Installi laiendused](../images/install-extension 2. **Kohanda laiendusi**
+Nii nagu HTTP ja HTTPS kasutavad erinevaid protokolle, hoides samas domeeni struktuuri, kasutab VSCode.dev URL-it, mis peegeldab GitHubi aadressimustrit. Iga GitHubi hoidla URL-i saab muuta, et see avada otse VSCode.devis.
 
-- Leidke oma paigaldatud laiendus.
-- Klõpsake **Hammasratta ikooni** → valige _Extension Settings_, et peenhäälestada käitumist vastavalt oma eelistustele.
+**URL-i teisendamise muster:**
 
-  ![Muuda laienduse seadeid](../images/extension-settings 3. **Halda laiendusi**
-Saate:
+| Hoidla tüüp | GitHubi URL | VSCode.devi URL |
+|----------------|---------------------|----------------|
+| **Avalik hoidla** | `github.com/microsoft/Web-Dev-For-Beginners` | `vscode.dev/github/microsoft/Web-Dev-For-Beginners` |
+| **Isiklik projekt** | `github.com/sinu-kasutajanimi/minu-projekt` | `vscode.dev/github/sinu-kasutajanimi/minu-projekt` |
+| **Mingi ligipääsetav hoidla** | `github.com/nende-kasutajanimi/lahe-hoidla` | `vscode.dev/github/nende-kasutajanimi/lahe-hoidla` |
 
-- **Keelata:** Ajutiselt välja lülitada laienduse, säilitades selle paigaldatuna
-- **Desinstallida:** Püsivalt eemaldada, kui seda enam ei vajata
+**Rakendus:**
+- Asenda `github.com` osaks `vscode.dev/github`
+- Kõik teised URL-i osad jäävad muutmata
+- Toimib kõikide avalikult ligipääsetavate hoidlate puhul
+- Pakub kohest redigeerimisvõimalust
 
-  Leidke laiendus, vajutage Hammasratta ikooni ja valige ‘Disable’ või ‘Uninstall,’ või kasutage siniseid nuppe koodialas.
+> 💡 **Elumuutev nipp**: Jäädvusta järjehoidjatena VSCode.devi versioonid oma lemmikhoidlatest. Mul on järjehoidjad nagu "Redigeeri oma portfooliot" ja "Paranda dokumentatsiooni", mis viivad mind otse redigeerimisrežiimi!
 
-***
+**Millist meetodit kasutada?**
+- **Liidese meetod**: Hea, kui uurid või ei mäleta kokkulepitud hoidlate nimesid
+- **URL trikiga**: Täiuslik kiireks ligipääsuks, kui tead täpselt, kuhu minna
+
+### 🎯 Pedagoogiline paus: Pilvearenduse ligipääs
+
+**Peatu ja mõtle**: Õppisid just kahte viisi, kuidas veebibrauseri kaudu koodihaldushoidlatesse ligipääsu saada. See tähistab fundamentaalset muutust arendustegevuses.
+
+**Kiire enesehindamine**:
+- Kas oskad selgitada, miks veebipõhine redigeerimine kaotab traditsioonilise “arenduskeskkonna seadistamise” vajaduse?
+- Milliseid eeliseid pakub URL-i muutmisvõte võrreldes kohaliku git kloonimisega?
+- Kuidas muudab see lähenemine sinu võimalikku panust avatud lähtekoodiga projektidesse?
+
+**Tegelik maailm**: Suured firmad nagu GitHub, GitLab ja Replit on ehitanud oma arendusplatvormid nende pilve-esmastel põhimõtetel. Õpid samu töövooge, mida kasutavad professionaalsed arendusmeeskonnad üle maailma.
+
+**Väljakutse küsimus**: Kuidas võib pilvepõhine arendus muuta koodi õpetamist koolides? Mõtle seadmete nõuetele, tarkvara haldusele ja koostöövõimalustele.
+
+## Failide ja projektidega töötamine
+
+Kui hoidla on avatud, asume ehitama! VSCode.dev annab kõik vahendid, mida vajad, et luua, redigeerida ja korrastada oma koodifaile. Mõtle sellest kui oma digitaalsest töökojast – iga tööriist on täpselt seal, kus vaja.
+
+Vaatame iga päevaseid toiminguid, mis moodustavad suurema osa sinu koodi töövoost.
+
+### Uute failide loomine
+
+Nii nagu arhitekti kontoris sinised trükid organiseeritud on, järgib faililoome VSCode.devis struktureeritud lähenemist. Süsteem toetab kõiki tavalisi veebiarenduse failitüüpe.
+
+**Faili loomise protsess:**
+
+1. Navigeeri Explorer külgpaanil sihtkausta
+2. Liigu hiirega kausta nime kohale, et ilmuks ikoon "New File" (📄+)
+3. Sisesta failinimi koos sobiva laiendiga (`style.css`, `script.js`, `index.html`)
+4. Vajuta Enter, et fail luua
+
+![Uue faili loomine](../../../../translated_images/create-new-file.2814e609c2af9aeb.et.png)
+
+**Nimeandmise soovitused:**
+- Kasuta kirjeldavaid nimesid, mis viitavad faili eesmärgile
+- Lisa faililaiendid, et süntaksi esiletõstmine töötaks
+- Järgi projektides järjepidevaid nimetamismustreid
+- Kasuta väiketähti ja sidekriipse tühikute asemel
+
+### Failide redigeerimine ja salvestamine
+
+Siin algab tõeline lõbu! VSCode.devi redaktor on täis abistavaid omadusi, mis muudavad kodeerimise sujuvaks ja intuitiivseks. See on nagu väga nutikas kirjutamisassistent, aga koodile.
+
+**Sinu redigeerimisvoog:**
+
+1. Klõpsa suvalisel Exploreris oleval failil, et avada see peaaknas
+2. Hakka kirjutama ja jälgi, kuidas VSCode.dev aitab värvide, soovituste ja vigade leidmisega
+3. Salvesta töö Ctrl+S (Windows/Linux) või Cmd+S (Mac) – kuigi see salvestab ka automaatselt!
+
+![Faili redigeerimine VSCode.devis](../../../../translated_images/edit-a-file.52c0ee665ef19f08.et.png)
+
+**Mis toimub, kui koodid:**
+- Sinu kood saab kaunilt värvitud ja on lihtsam lugeda
+- VSCode.dev pakub täitmisi, kui tipid (nagu õigekirjakontroll, aga palju nutikam)
+- Enne salvestamist tabab trükivigu ja vigu
+- Sa võid avada mitu faili vahelehtedel nagu brauseris
+- Kõik salvestatakse taustal automaatselt
+
+> ⚠️ **Kiire nipp**: Kuigi automaatsalvestus on aktiivne, on hea harjumus vajutada Ctrl+S või Cmd+S. See salvestab koheselt kõik ja käivitab lisafunktsioonid nagu vigade kontrolli.
+
+### Versioonihaldus Gitiga
+
+Nii nagu arheoloogid teevad täpseid kirjeid kaevamiskihistest, jälgib Git sinu koodi muudatusi aja jooksul. See süsteem säilitab projekti ajaloo ja võimaldab vajadusel varasemate versioonide juurde tagasi minna. VSCode.dev sisaldab integreeritud Git funktsionaalsust.
+
+**Source Control liides:**
+
+1. Ava Source Control paneel 🌿 ikooni kaudu Activity Baril
+2. Muudetud failid ilmuvad jaotises "Changes"
+3. Värvikood näitab muudatuste liike: roheline lisandumised, punane kustutamised
+
+![Muudatuste vaatamine Source Control paneelis](../../../../translated_images/working-tree.c58eec08e6335c79.et.png)
+
+**Töö salvestamine (commit töövoog):**
+
+```mermaid
+flowchart TD
+    A[Muuda faile] --> B[Vaata muudatusi allika juhtimises]
+    B --> C[Lisa muudatused etapidklõpsuga +]
+    C --> D[Kirjuta kirjeldav commit sõnum]
+    D --> E[Klõpsa linnukesel commitimiseks]
+    E --> F[Muudatused lükatakse GitHubi]
+```
+```mermaid
+stateDiagram-v2
+    [*] --> Modified: Failide muutmine
+    Modified --> Staged: Vajuta + lisamiseks
+    Staged --> Modified: Vajuta - eemaldamiseks
+    Staged --> Committed: Lisa sõnum ja kinnita
+    Committed --> [*]: Sünkrooni GitHubiga
+    
+    state Committed {
+        [*] --> LocalCommit
+        LocalCommit --> RemotePush: Automaatne sünkroonimine
+    }
+```
+**Sinu samm-sammuline protsess:**
+- Klõpsa "+" ikoonile nende failide kõrval, mida soovid salvestada (see "stage'-ib" need)
+- Kontrolli hoolikalt, kas oled rahul kõigi oma lavastatud muudatustega
+- Kirjuta lühike märkus, mis selgitab, mida tegid (see on sinu "commit message")
+- Klõpsa linnukese ikoonil, et kõik GitHubi salvestada
+- Kui muudad meelt, laseb tagasi võtmise ikoon muudatused tagasi võtta
+
+**Heade commit-kirjete kirjutamine (see on lihtsam kui arvad!):**
+- Kirjelda lihtsalt, mida tegid, näiteks "Lisa kontaktvorm" või "Paranda katkine navigeerimine"
+- Hoia see lühike ja mõnus – mõtle tweet pikkusele, mitte esseele
+- Alusta tegusõnaga nagu "Lisa", "Paranda", "Uuenda" või "Eemalda"
+- **Head näited:** "Lisa responsiivne navigeerimismenüü", "Paranda mobiilivaate probleemid", "Uuenda värve parema ligipääsetavuse jaoks"
+
+> 💡 **Kiirnavigeerimise näpunäide**: Kasuta hamburger-menüüd (☰) vasakus ülanurgas, et hüpata tagasi oma GitHubi repositooriumi ja näha oma commititud muudatusi veebis. See on nagu portaal sinu redigeerimiskeskkonna ja projekti kodu GitHubis vahel!
+
+## Funktsionaalsuse täiustamine laiendustega
+
+Nii nagu käsitöölise töökojas on spetsiaalsed tööriistad erinevate ülesannete jaoks, saab ka VSCode.devi kohandada laiendustega, mis lisavad spetsiifilisi võimeid. Need kogukonna loodud pluginad lahendavad levinud arendaja vajadusi nagu koodi vormindamine, reaalajas eelvaade ja täiustatud Git integratsioon.
+
+Laienduste turg sisaldab tuhandeid tasuta tööriistu, mida on loonud arendajad üle kogu maailma. Iga laiendus lahendab konkreetseid töövoo väljakutseid, võimaldades sul luua isikupärastatud arenduskeskkonna, mis vastab sinu spetsiifilistele vajadustele ja eelistustele.
+
+```mermaid
+mindmap
+  root((Laienduste Ökosüsteem))
+    Essential Categories
+      Tootlikkus
+        Live Server
+        Auto Rename Tag
+        Bracket Pair Colorizer
+        GitLens
+      Koodi Kvaliteet
+        Prettier
+        ESLint
+        Spell Checker
+        Error Lens
+      Keelte Tugi
+        HTML CSS Support
+        JavaScript ES6
+        Python Extension
+        Markdown Preview
+      Teemad & Kasutajaliides
+        Dark+ Modern
+        Material Icon Theme
+        Peacock
+        Rainbow Brackets
+    Discovery Methods
+      Populaarsed Edetabelid
+        Laadimiste Arvud
+        Kasutajate Hinnangud
+        Viimased Uuendused
+        Kogukonna Arvustused
+      Soovitused
+        Tööruumi Soovitused
+        Keelepõhised
+        Töövoo-spetsiifilised
+        Meeskonna Standardid
+```
+### Sinu täiuslike laienduste leidmine
+
+Laienduste turg on tõesti hästi organiseeritud, seega sa ei eksle, kui otsid, mida vajad. See on loodud aitama avastada nii spetsiifilisi tööriistu kui ka lahedaid asju, millest sa varem teadlik ei olnud!
+
+**Kuidas turule jõuda:**
+
+1. Klõpsa tegevusribal laienduste ikoonile (🧩)
+2. Sirvi või otsi midagi kindlat
+3. Klõpsa kõigile huvitavatele laiendustele, et rohkem teada saada
+
+![Laienduste turu liides](../../../../translated_images/extensions.eca0e0c7f59a10b5.et.png)
+
+**Mida seal näed:**
+
+| Sektsioon | Sisu | Miks see kasulik on |
+|----------|---------|----------|
+| **Paigaldatud** | Laiendused, mille oled juba lisanud | Sinu isiklik kooditööriistakast |
+| **Populaarsed** | Rahva lemmikud | Mis paljude arendajate lemmikud on |
+| **Soovitatud** | Nutikad soovitused sinu projektile | VSCode.devi kasulikud soovitused |
+
+**Mugavaks sirvimiseks:**
+- Iga laiendus näitab hinnanguid, allalaadimiste arvu ja kasutajate arvustusi
+- Saad ekraanipilte ja selgeid kirjeldusi, mida igaüks teha saab
+- Kõik on selgelt märgistatud ühilduvusinfoga
+- Pakutakse sarnaseid laiendusi, et saaksid võrrelda võimalusi
+
+### Laienduste paigaldamine (see on väga lihtne!)
+
+Uute võimaluste lisamine oma redaktorile on sama lihtne kui ühe nupu klõpsamine. Laiendused paigaldatakse sekunditega ja hakkavad kohe tööle – pole vaja taaskäivitada ega oodata.
+
+**Kõik, mida pead tegema:**
+
+1. Otsi see, mida tahad (proovi otsida "live server" või "prettier")
+2. Klõpsa ühele, mis tundub hea, et näha rohkem detaile
+3. Loe, mida see teeb, ja vaata hinnanguid
+4. Vajuta sinist "Paigalda" nuppu ja ongi tehtud!
+
+![Laienduste paigaldamine](../../../../8-code-editor/images/install-extension.gif)
+
+**Mis toimub tagaplaanil:**
+- Laiendus laaditakse alla ja seadistatakse automaatselt
+- Uued funktsioonid ilmuvad kohe su liidesesse
+- Kõik hakkab koheselt tööle (tõesti, nii kiiresti!)
+- Kui oled sisse logitud, sünkroniseeritakse laiendus kõigi su seadmetega
+
+**Mõned laiendused, mida soovitan alustada:**
+- **Live Server**: Näed oma veebilehe muudatusi reaalajas koodides (see on maagiline!)
+- **Prettier**: Muudab su koodi automaatselt puhtaks ja professionaalseks
+- **Auto Rename Tag**: Muudad ühe HTML sildi ja selle paar uuendatakse ka
+- **Bracket Pair Colorizer**: Värvib sulud nii, et sa ei kao kunagi ära
+- **GitLens**: Tugevdab su Git funktsioone hulga kasuliku infoga
+
+### Oma laienduste kohandamine
+
+Enamikul laiendustest on seaded, mida saad muuta, et need töötaksid just nii nagu sulle meeldib. Mõtle sellele nagu auto iste ja peeglite seadistamine – kõigil on omad eelistused!
+
+**Laienduste seadete muutmine:**
+
+1. Leia oma paigaldatud laiendus laienduste paneelis
+2. Otsi selle nime kõrval väikest hammasratta ikooni (⚙️) ja klõpsa sellel
+3. Vali rippmenüüst "Extension Settings"
+4. Muuda seadeid, kuni need sobivad su töövooga ideaalselt
+
+![Laienduste seadete kohandamine](../../../../translated_images/extension-settings.21c752ae4f4cdb78.et.png)
+
+**Tavalised asjad, mida võid tahtagi sättida:**
+- Kuidas su kood vormindatakse (tabid vs tühikud, rea pikkus jms)
+- Millised kiirklahvid käivitavad erinevaid toiminguid
+- Millist tüüpi failidega laiendus peaks töötama
+- Spetsiifiliste funktsioonide sisse- või väljalülitamine, et hoida puhtust
+
+### Oma laienduste korrashoid
+
+Kui avastad rohkem lahedaid laiendusi, tahad hoida oma kollektsiooni korras ja sujuvalt töötavana. VSCode.dev teeb selle väga lihtsaks hallata.
+
+**Sinu laienduste haldamise võimalused:**
+
+| Mida Sa Võid Teha | Millal See Kasulik On | Pro näpunäide |
+|--------|---------|----------|
+| **Keela** | Testimaks, kas mõni laiendus põhjustab probleeme | Parem kui desinstallida, kui võib hiljem tarvis minna |
+| **Desinstalli** | Täielikult vabane laiendustest, mida ei vaja | Hoiab su keskkonna puhtana ja kiiremana |
+| **Uuenda** | Saa uusimad funktsioonid ja vigade parandused | Tavaliselt käib automaatselt, aga tasub kontrollida |
+
+**Kuidas mulle meeldib laiendusi hallata:**
+- Mõne kuu tagant vaatan üle, mida olen paigaldanud ja eemaldan mittevajalikud
+- Hoian laiendusi kursis, et saada uusimaid täiustusi ja turvaparandusi
+- Kui midagi tundub aeglane, keelan ajutiselt laiendused, et näha, kas mõni neist on põhjus
+- Loe uuenduste märkmeid, kui tuleb suuri uuendusi – mõnikord on lahedad uued funktsioonid!
+
+> ⚠️ **Jõudluse näpunäide**: Laiendused on toredad, aga liiga palju võib aeglustada. Keskendu neile, mis päriselt su elu lihtsamaks teevad, ja ära karda eemaldada neid, mida sa kunagi ei kasuta.
+
+### 🎯 Pedagoogiline kontroll: Arenduskeskkonna kohandamine
+
+**Arhitektuuri mõistmine**: Oled õppinud kohandama professionaalset arenduskeskkonda kogukonna loodud laienduste abil. See peegeldab, kuidas ettevõtete arendusmeeskonnad ehitavad standardiseeritud tööriistakomplekte.
+
+**Olulised kontseptsioonid, mida omandatud**:
+- **Laienduste leidmine**: Leida tööriistu, mis lahendavad kindlaid arenduse väljakutseid
+- **Keskkonna konfiguratsioon**: Kohandada tööriistu vastavalt isiklikele või meeskonna eelistustele
+- **Jõudluse optimeerimine**: Tasakaalustada funktsionaalsus süsteemi jõudlusega
+- **Kogukonna koostöö**: Kasutada ülemaailmse arendajate kogukonna loodud tööriistu
+
+**Tööstuse seos**: Laienduste ökosüsteemid toidavad suuri arendusplatvorme nagu VS Code, Chrome DevTools ja moodsad IDE-d. Laienduste hindamise, installimise ja seadistamise oskus on professionaalsete arendusprotsesside jaoks hädavajalik.
+
+**Mõtiskluse küsimus**: Kuidas sa läheneksid 10-liikmelise arendusmeeskonna standardiseeritud arenduskeskkonna ülesseadmisel? Mõtle järjepidevusele, jõudlusele ja individuaalsetele eelistustele.
+
+## 📈 Sinu pilvepõhise arenduse meistriklassi ajaskaala
+
+```mermaid
+timeline
+    title Professionaalne pilve arendusreis
+    
+    section Platvormi alused
+        Pilve arenduse mõistmine
+            : Valda veebipõhise redigeerimise kontseptsioone
+            : Ühenda GitHubi integratsioonimustreid
+            : Liigu professionaalsete liideste vahel
+    
+    section Töövoo valdamine
+        Faili- ja projektihaldus
+            : Loo organiseeritud projektistruktuurid
+            : Valda süntaksi esiletõstmise eeliseid
+            : Halda mitme-faili redigeerimise töövooge
+        
+        Versioonikontrolli integratsioon
+            : Mõista Giti visualiseerimist
+            : Harjuta commit-sõnumite standardeid
+            : Valda muudatuste jälgimise töövooge
+    
+    section Keskkonna kohandamine
+        Laienduste ökosüsteem
+            : Avastage tootlikkust suurendavad laiendused
+            : Sea arenduseelistusi
+            : Optimeeri jõudlust ja funktsionaalsust
+        
+        Professionaalne seadistus
+            : Loo järjepidevad töövood
+            : Loo taaskasutatavaid konfiguratsioone
+            : Kehtesta meeskonna standardid
+    
+    section Tööstuse valmisolek
+        Pilve-esmane arendus
+            : Valda kaug-arenduse praktikaid
+            : Mõista koostöö töövooge
+            : Loo platvormist sõltumatud oskused
+        
+        Professionaalsed tavad
+            : Järgi tööstuse standardeid
+            : Loo hooldatavaid töövooge
+            : Valmista ette meeskonnakeskkondi
+```
+**🎓 Lõpetamise verstapost**: Oled edukalt omandanud pilvepõhise arenduse kasutades samu tööriistu ja töövooge, mida kasutavad professionaalsed arendajad suurtes tehnoloogiafirmades. Need oskused tähistavad tarkvaraarenduse tulevikku.
+
+**🔄 Järgmise taseme võimed**:
+- Valmis avastama arenenud pilvearenduse platvorme (Codespaces, GitPod)
+- Valmis töötama hajutatud arendusmeeskondades
+- Võimeline panustama avatud lähtekoodiga projektidesse üle maailma
+- Vundament moodsale DevOpsi ja pideva integratsiooni praktikatele
+
+## GitHub Copilot Agent Väljakutse 🚀
+
+Nii nagu NASA kasutab kosmosemissioonide jaoks struktureeritud lähenemist, hõlmab see väljakutse VSCode.devi oskuste süsteemset rakendamist terviklikus töövoo stsenaariumis.
+
+**Eesmärk:** Tõesta oma oskusi VSCode.devis, luues põhjaliku veebiarenduse töövoo.
+
+**Projekti nõuded:** Agent režiimi abiga tee ära järgmised ülesanded:
+1. Tee olemasolevast repositooriumist fork või loo uus
+2. Loo toimiv projektistruktuur HTML, CSS ja JavaScript failidega
+3. Paigalda ja konfigureeri kolm arendust täiustavat laiendust
+4. Harjuta versioonihaldust kirjeldavate commit-kirjetega
+5. Katseta funktsiooniharude loomist ja muutmist
+6. Dokumenteeri protsess ja õppetunnid README.md faili
+
+See harjutus koondab kõik VSCode.devi kontseptsioonid praktiliseks töövooks, mida saad rakendada tulevates arendusprojektides.
+
+Loe rohkem [agent-režiimi](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) kohta siin.
 
 ## Ülesanne
 
-Proovige oma oskusi: [Looge CV veebisait, kasutades vscode.dev](https://github.com/microsoft/Web-Dev-For-Beginners/blob/main/8-code-editor/1-using-a-code-editor/assignment.md)
+On aeg proovile panna need oskused päris projektis! Mul on praktiline ülesanne, mis laseb sul harjutada kõike, mida oleme käsitlenud: [Loo CV veebileht kasutades VSCode.devi](./assignment.md)
 
-***
+See ülesanne juhendab sind läbi professionaalse CV veebisaidi loomise täielikult brauseris. Kasutad kõiki VSCode.devi funktsioone, mida oleme uurinud, ja lõpuks on sul nii suurepärane veebileht kui ka kindel enesetunne uue töövoo osas.
 
-## Edasine uurimine ja iseseisev õppimine
+## Jätka avastamist ja oma oskuste kasvatamist
 
-- Süvenege [ametlikesse VSCode veebidokumentidesse](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza).
-- Avastage edasijõudnud tööruumi funktsioone, kiirklahve ja seadeid.
+Sul on nüüd tugev vundament olemas, aga on veel nii palju lahedaid asju, mida avastada! Siin on mõned ressursid ja ideed, kuidas viia oma VSCode.devi oskused järgmisele tasandile:
 
-***
+**Ametlik dokumentatsioon, mida tasub järjehoidjates hoida:**
+- [VSCode Web Dokumentatsioon](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) – Täielik juhend brauseripõhiseks redigeerimiseks
+- [GitHub Codespaces](https://docs.github.com/en/codespaces) – Kui vajad pilves veelgi rohkem võimsust
 
-**Nüüd olete valmis koodi kirjutama, looma ja koostööd tegema—igal pool, igas seadmes, kasutades VSCode.dev-i!**
+**Lahedad funktsioonid, millega järgmisena katsetada:**
+- **Klaviatuuri kiirklahvid**: Õpi kombinatsioone, mis teevad sinust koodipeedi ninja
+- **Tööruumi sätted**: Sea üles erinevad keskkonnad erinevate projektitüüpide jaoks
+- **Mitme juurega tööruumid**: Töötle mitut repositooriumi samaaegselt (väga mugav!)
+- **Terminali integratsioon**: Kasuta käsurea tööriistu otse brauseris
+
+**Praktikaks mõtted:**
+- Sukeldu mõnda avatud lähtekoodiga projekti ja panusta VSCode.devi abil – see on suurepärane viis tagasi anda!
+- Proovi erinevaid laiendusi, et leida oma ideaalne seadistus
+- Loo projektimallid kõige sagedamini ehitatavate saitide jaoks
+- Harjuta Git töövooge nagu harude loomine ja ühendamine – need oskused on meeskonnaprojektides kullaväärtusega
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+**Oled omandanud brauseripõhise arenduse meistriks!** 🎉 Nii nagu kaasaskantavate instrumentide leiutamine võimaldas teadlastel uurimistööd teha kaugetes paikades, võimaldab VSCode.dev professionaalset kodeerimist mis tahes internetiühendusega seadmest.
+
+Need oskused peegeldavad tänaseid tööstustavasid – paljud professionaalsed arendajad kasutavad pilvepõhiseid arenduskeskkondi nende paindlikkuse ja ligipääsetavuse tõttu. Oled õppinud töövoo, mis skaleerub üksikprojektidest kuni suurte meeskonnatööde koostöödeni.
+
+Rakenda neid tehnikaid oma järgmises arendusprojektis! 🚀
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastutusest loobumine**:
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüdleme täpsuse poole, tuleb arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,75 +1,187 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e2c4ae5688e34b4b8b09d52aec56c79e",
-  "translation_date": "2025-10-23T21:59:53+00:00",
+  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
+  "translation_date": "2026-01-06T23:21:28+00:00",
   "source_file": "10-ai-framework-project/README.md",
   "language_code": "da"
 }
 -->
-# AI Framework
+# AI-rammeværk
 
-Har du nogensinde følt dig overvældet af at skulle bygge AI-applikationer fra bunden? Du er ikke alene! AI-frameworks er som en schweizerkniv for AI-udvikling - kraftfulde værktøjer, der kan spare dig tid og besvær, når du bygger intelligente applikationer. Tænk på et AI-framework som et velorganiseret bibliotek: det tilbyder forudbyggede komponenter, standardiserede API'er og smarte abstraktioner, så du kan fokusere på at løse problemer i stedet for at kæmpe med implementeringsdetaljer.
+Har du nogensinde følt dig overvældet ved at bygge AI-applikationer fra bunden? Du er ikke alene! AI-rammeværk er som at have en schweizerkniv til AI-udvikling – de er kraftfulde værktøjer, der kan spare dig tid og hovedpiner, når du bygger intelligente applikationer. Tænk på et AI-rammeværk som et velorganiseret bibliotek: det tilbyder forbyggede komponenter, standardiserede API'er og smarte abstraktioner, så du kan fokusere på at løse problemer i stedet for at kæmpe med implementeringsdetaljer.
 
-I denne lektion vil vi udforske, hvordan frameworks som LangChain kan forvandle tidligere komplekse AI-integrationer til ren og overskuelig kode. Du vil opdage, hvordan du kan tackle virkelige udfordringer som at holde styr på samtaler, implementere værktøjskald og jonglere med forskellige AI-modeller gennem én samlet grænseflade.
+I denne lektion vil vi udforske, hvordan rammeværker som LangChain kan gøre det, der tidligere var komplekse AI-integrationsopgaver, til ren og læsbar kode. Du vil opdage, hvordan du tackler virkelighedsnære udfordringer som at holde styr på samtaler, implementere værktøjskald og jonglere forskellige AI-modeller gennem én samlet grænseflade.
 
-Når vi er færdige, vil du vide, hvornår du skal vælge frameworks frem for rå API-kald, hvordan du bruger deres abstraktioner effektivt, og hvordan du bygger AI-applikationer, der er klar til brug i den virkelige verden. Lad os udforske, hvad AI-frameworks kan gøre for dine projekter.
+Når vi er færdige, vil du vide, hvornår du skal vælge rammeværker frem for rå API-kald, hvordan du effektivt bruger deres abstraktioner, og hvordan du bygger AI-applikationer, der er klar til virkelighedens brug. Lad os udforske, hvad AI-rammeværk kan gøre for dine projekter.
 
-## Hvorfor vælge et framework?
+## ⚡ Hvad du kan nå på de næste 5 minutter
 
-Så du er klar til at bygge en AI-app - fantastisk! Men her er sagen: du har flere forskellige veje, du kan tage, og hver har sine egne fordele og ulemper. Det er lidt som at vælge mellem at gå, cykle eller køre for at komme et sted hen - de vil alle få dig derhen, men oplevelsen (og indsatsen) vil være helt forskellig.
+**Hurtig start-rute for travle udviklere**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minutter] --> B[Installer LangChain]
+    B --> C[Opret ChatOpenAI-klient]
+    C --> D[Send første prompt]
+    D --> E[Se frameworkets kraft]
+```
+- **Minut 1**: Installer LangChain: `pip install langchain langchain-openai`
+- **Minut 2**: Opsæt dit GitHub-token og importer ChatOpenAI-klienten
+- **Minut 3**: Opret en simpel samtale med system- og menneskebeskeder
+- **Minut 4**: Tilføj et grundlæggende værktøj (som en add-funktion) og se AI-værktøjskald
+- **Minut 5**: Oplev forskellen mellem rå API-kald og rammeværksabstraktion
+
+**Hurtig testkode**:
+```python
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
+
+llm = ChatOpenAI(
+    api_key=os.environ["GITHUB_TOKEN"],
+    base_url="https://models.github.ai/inference",
+    model="openai/gpt-4o-mini"
+)
+
+response = llm.invoke([
+    SystemMessage(content="You are a helpful coding assistant"),
+    HumanMessage(content="Explain Python functions briefly")
+])
+print(response.content)
+```
+
+**Hvorfor det betyder noget**: På 5 minutter vil du opleve, hvordan AI-rammeværk forvandler kompleks AI-integration til simple metodekald. Dette er fundamentet, der driver produktionsklare AI-applikationer.
+
+## Hvorfor vælge et rammeværk?
+
+Så du er klar til at bygge en AI-app – fantastisk! Men sagen er den: du har flere forskellige veje at gå, og hver har sine fordele og ulemper. Det er lidt ligesom at vælge mellem at gå, cykle eller køre for at komme et sted hen – de vil alle bringe dig derhen, men oplevelsen (og indsatsen) vil være helt forskellig.
 
 Lad os bryde de tre hovedmåder ned, som du kan integrere AI i dine projekter:
 
-| Metode | Fordele | Bedst til | Overvejelser |
-|--------|---------|----------|--------------|
-| **Direkte HTTP-anmodninger** | Fuld kontrol, ingen afhængigheder | Enkle forespørgsler, lære grundprincipper | Mere omfattende kode, manuel fejlbehandling |
-| **SDK-integration** | Mindre boilerplate, model-specifik optimering | Applikationer med én model | Begrænset til specifikke udbydere |
-| **AI-frameworks** | Samlet API, indbyggede abstraktioner | Apps med flere modeller, komplekse arbejdsgange | Læringskurve, potentiel over-abstraktion |
+| Tilgang | Fordele | Bedst til | Overvejelser |
+|----------|------------|----------|--------------|
+| **Direkte HTTP-forespørgsler** | Fuld kontrol, ingen afhængigheder | Simple forespørgsler, læringsgrundlag | Mere omstændig kode, manuel fejlbehandling |
+| **SDK-integration** | Mindre boilerplate, modelspecifik optimering | Applikationer med én model | Begrænset til specifikke udbydere |
+| **AI-rammeværk** | Enheds-API, indbyggede abstraktioner | Multi-model-applikationer, komplekse workflows | Læringskurve, potentiel overabstraktion |
 
-### Fordele ved frameworks i praksis
+### Rammeværkets fordele i praksis
 
 ```mermaid
 graph TD
-    A[Your Application] --> B[AI Framework]
+    A[Din applikation] --> B[AI-rammeværk]
     B --> C[OpenAI GPT]
     B --> D[Anthropic Claude]
-    B --> E[GitHub Models]
-    B --> F[Local Models]
+    B --> E[GitHub-modeller]
+    B --> F[Lokal modeller]
     
-    B --> G[Built-in Tools]
-    G --> H[Memory Management]
-    G --> I[Conversation History]
-    G --> J[Function Calling]
-    G --> K[Error Handling]
+    B --> G[Indbyggede værktøjer]
+    G --> H[Hukommelsesstyring]
+    G --> I[Samtalehistorik]
+    G --> J[Funktionsopkald]
+    G --> K[Fejlhåndtering]
 ```
+**Hvorfor rammeværk er vigtige:**
+- **Forener** flere AI-udbydere under én grænseflade
+- **Håndterer** samtalememorien automatisk
+- **Tilbyder** færdigbyggede værktøjer til almindelige opgaver som embeddings og funktionskald
+- **Styrer** fejlbehandling og genforsøg-logik
+- **Gør** komplekse workflows til læsbare metodekald
 
-**Hvorfor frameworks er vigtige:**
-- **Samler** flere AI-udbydere under én grænseflade
-- **Håndterer** samtaleminde automatisk
-- **Tilbyder** færdiglavede værktøjer til almindelige opgaver som embeddings og funktionskald
-- **Administrerer** fejlbehandling og retry-logik
-- **Forvandler** komplekse arbejdsgange til overskuelige metodekald
+> 💡 **Pro Tip**: Brug rammeværk, når du skifter mellem forskellige AI-modeller eller bygger komplekse funktioner som agenter, hukommelse eller værktøjskald. Hold dig til direkte API’er, når du lærer det grundlæggende eller bygger simple, fokuserede applikationer.
 
-> 💡 **Pro Tip**: Brug frameworks, når du skifter mellem forskellige AI-modeller eller bygger komplekse funktioner som agenter, hukommelse eller værktøjskald. Hold dig til direkte API'er, når du lærer det grundlæggende eller bygger enkle, fokuserede applikationer.
+**Bundlinjen**: Som når man vælger mellem en håndværkers specialværktøj og et komplet værksted, handler det om at matche værktøjet til opgaven. Rammeværk excellerer til komplekse, funktionsrige applikationer, mens direkte API’er fungerer godt til mere ligetil brug.
 
-**Konklusion**: Ligesom valget mellem en håndværkers specialværktøjer og et komplet værksted handler det om at matche værktøjet til opgaven. Frameworks er fremragende til komplekse, funktionsrige applikationer, mens direkte API'er fungerer godt til enkle anvendelser.
+## 🗺️ Din læringsrejse mod mestring af AI-rammeværk
+
+```mermaid
+journey
+    title Fra rå API'er til produktions-AI-applikationer
+    section Framework Foundations
+      Forstå fordelene ved abstraktion: 4: You
+      Mestre LangChain grundlæggende: 6: You
+      Sammenlign tilgange: 7: You
+    section Conversation Systems
+      Byg chatgrænseflader: 5: You
+      Implementer hukommelsesmønstre: 7: You
+      Håndter streaming-svar: 8: You
+    section Advanced Features
+      Opret brugerdefinerede værktøjer: 6: You
+      Mestre struktureret output: 8: You
+      Byg dokumentsystemer: 8: You
+    section Production Applications
+      Kombiner alle funktioner: 7: You
+      Håndter fejlscenarier: 8: You
+      Udrul komplette systemer: 9: You
+```
+**Din rejsemål**: Når du er færdig med denne lektion, har du mestret AI-rammeværksudvikling og kan bygge sofistikerede, produktionsklare AI-applikationer, der kan måle sig med kommercielle AI-assistenter.
 
 ## Introduktion
 
-I denne lektion vil vi lære at:
+I denne lektion lærer vi at:
 
-- Bruge et almindeligt AI-framework.
-- Løse almindelige problemer som chatsamtaler, værktøjsbrug, hukommelse og kontekst.
-- Udnytte dette til at bygge AI-applikationer.
+- Bruge et almindeligt AI-rammeværk.
+- Løse almindelige problemer som chat-samtaler, brug af værktøjer, hukommelse og kontekst.
+- Udnytte dette til at bygge AI-apps.
+
+## 🧠 AI-rammeværksudviklingsøkosystem
+
+```mermaid
+mindmap
+  root((AI Frameworks))
+    Abstraktionsfordele
+      Kodesimplificering
+        Forenede API'er
+        Indbygget Fejlhåndtering
+        Konsistente Mønstre
+        Reduceret Gentagelseskode
+      Multi-Model Support
+        Udbyderagnostisk
+        Let Skift
+        Fallbackmuligheder
+        Omkostningsoptimering
+    Kernekomponenter
+      Samtaleadministration
+        Beskedtyper
+        Hukommelsessystemer
+        Kontekstsporing
+        Historikbevarelse
+      Værktøjsintegration
+        Funktionsopkald
+        API-forbindelser
+        Tilpassede Værktøjer
+        Workflow Automatisering
+    Avancerede Funktioner
+      Struktureret Output
+        Pydantic-modeller
+        JSON-skemaer
+        Typetilgængelighed
+        Valideringsregler
+      Dokumentbehandling
+        Indlejringer
+        Vektorbutikker
+        Lighedssøgning
+        RAG-systemer
+    Produktionsmønstre
+      Applikationsarkitektur
+        Modulært Design
+        Fejlgrænser
+        Asynkrone Operationer
+        Tilstandsadministration
+      Implementeringsstrategier
+        Skalerbarhed
+        Overvågning
+        Ydeevne
+        Sikkerhed
+```
+**Kerneprincip**: AI-rammeværk abstraherer kompleksitet og tilbyder stærke abstraktioner til samtalehåndtering, værktøjsintegration og dokumentbehandling, hvilket gør det muligt for udviklere at bygge sofistikerede AI-applikationer med ren og vedligeholdelig kode.
 
 ## Din første AI-prompt
 
-Lad os starte med det grundlæggende ved at oprette din første AI-applikation, der sender et spørgsmål og får et svar tilbage. Ligesom Archimedes, der opdagede opdriftens princip i sit bad, kan de enkleste observationer føre til de mest kraftfulde indsigter - og frameworks gør disse indsigter tilgængelige.
+Lad os starte med det grundlæggende ved at skabe din første AI-applikation, der sender et spørgsmål og får et svar tilbage. Som Archimedes, der opdagede forskydningsprincippet i sit bad, fører de enkleste observationer sommetider til de mest kraftfulde indsigter – og rammeværk gør disse indsigter tilgængelige.
 
 ### Opsætning af LangChain med GitHub-modeller
 
-Vi vil bruge LangChain til at forbinde til GitHub-modeller, hvilket er ret fedt, fordi det giver dig gratis adgang til forskellige AI-modeller. Det bedste? Du behøver kun nogle få enkle konfigurationsparametre for at komme i gang:
+Vi vil bruge LangChain til at forbinde til GitHub Models, hvilket er ret fedt, fordi det giver dig gratis adgang til forskellige AI-modeller. Det bedste? Du behøver kun nogle få simple konfigurationsparametre for at komme i gang:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -81,19 +193,19 @@ llm = ChatOpenAI(
     model="openai/gpt-4o-mini",
 )
 
-# Send a simple prompt
+# Send en simpel prompt
 response = llm.invoke("What's the capital of France?")
 print(response.content)
 ```
 
 **Lad os bryde ned, hvad der sker her:**
-- **Opretter** en LangChain-klient ved hjælp af klassen `ChatOpenAI` - dette er din adgang til AI!
-- **Konfigurerer** forbindelsen til GitHub-modeller med din autentificeringstoken
-- **Angiver** hvilken AI-model der skal bruges (`gpt-4o-mini`) - tænk på det som at vælge din AI-assistent
-- **Sender** dit spørgsmål ved hjælp af metoden `invoke()` - her sker magien
-- **Ekstraherer** og viser svaret - og voilà, du chatter med AI!
+- **Opretter** en LangChain-klient ved hjælp af klassen `ChatOpenAI` – dette er din port til AI!
+- **Konfigurerer** forbindelsen til GitHub Models med dit autentifikationstoken
+- **Angiver** hvilken AI-model der skal bruges (`gpt-4o-mini`) – tænk på det som at vælge din AI-assistent
+- **Sender** dit spørgsmål med `invoke()`-metoden – her sker magien
+- **Ekstraherer** og viser svaret – voilà, du chatter med AI!
 
-> 🔧 **Opsætningsnotat**: Hvis du bruger GitHub Codespaces, er du heldig - `GITHUB_TOKEN` er allerede sat op for dig! Arbejder du lokalt? Bare rolig, du skal blot oprette en personlig adgangstoken med de rigtige tilladelser.
+> 🔧 **Opsætningsnotat**: Hvis du bruger GitHub Codespaces, er du heldig – `GITHUB_TOKEN` er allerede opsat for dig! Arbejder du lokalt? Ingen problemer, du skal blot oprette et personligt adgangstoken med de rette tilladelser.
 
 **Forventet output:**
 ```text
@@ -102,38 +214,37 @@ The capital of France is Paris.
 
 ```mermaid
 sequenceDiagram
-    participant App as Your Python App
+    participant App as Din Python App
     participant LC as LangChain
-    participant GM as GitHub Models
+    participant GM as GitHub Modeller
     participant AI as GPT-4o-mini
     
-    App->>LC: llm.invoke("What's the capital of France?")
-    LC->>GM: HTTP request with prompt
-    GM->>AI: Process prompt
-    AI->>GM: Generated response
-    GM->>LC: Return response
+    App->>LC: llm.invoke("Hvad er hovedstaden i Frankrig?")
+    LC->>GM: HTTP anmodning med prompt
+    GM->>AI: Behandl prompt
+    AI->>GM: Genereret svar
+    GM->>LC: Returner svar
     LC->>App: response.content
 ```
+## Opbygning af samtale-AI
 
-## Bygning af samtale-AI
+Det første eksempel demonstrerer det grundlæggende, men det er kun en enkelt udveksling – du stiller et spørgsmål, får et svar, og det var det. I virkelige applikationer vil du have, at din AI husker, hvad I har talt om, ligesom Watson og Holmes byggede deres efterforskende samtaler over tid.
 
-Det første eksempel demonstrerer det grundlæggende, men det er kun en enkelt udveksling - du stiller et spørgsmål, får et svar, og det er det. I virkelige applikationer vil du have, at din AI husker, hvad du har diskuteret, ligesom Watson og Holmes byggede deres undersøgende samtaler op over tid.
-
-Her bliver LangChain særligt nyttig. Det tilbyder forskellige beskedtyper, der hjælper med at strukturere samtaler og giver dig mulighed for at give din AI en personlighed. Du vil bygge chatoplevelser, der opretholder kontekst og karakter.
+Her bliver LangChain særligt nyttigt. Det tilbyder forskellige beskedtyper, der hjælper med at strukturere samtaler og lader dig give din AI en personlighed. Du vil bygge chatoplevelser, der bevarer kontekst og karakter.
 
 ### Forståelse af beskedtyper
 
-Tænk på disse beskedtyper som forskellige "roller", som deltagerne har i en samtale. LangChain bruger forskellige beskedklasser til at holde styr på, hvem der siger hvad:
+Tænk på disse beskedtyper som forskellige "hatte", som deltagerne bærer i en samtale. LangChain bruger forskellige beskedklasser til at holde styr på, hvem der siger hvad:
 
 | Beskedtype | Formål | Eksempel på brug |
-|------------|--------|------------------|
-| `SystemMessage` | Definerer AI's personlighed og adfærd | "Du er en hjælpsom kodeassistent" |
-| `HumanMessage` | Repræsenterer brugerinput | "Forklar hvordan funktioner fungerer" |
-| `AIMessage` | Gemmer AI-svar | Tidligere AI-svar i samtalen |
+|--------------|---------|------------------|
+| `SystemMessage` | Definerer AI-personlighed og adfærd | "Du er en hjælpsom kodeassistent" |
+| `HumanMessage` | Repræsenterer brugerinput | "Forklar, hvordan funktioner virker" |
+| `AIMessage` | Gemmer AI's svar | Tidligere AI-svar i samtalen |
 
-### Oprettelse af din første samtale
+### Opret din første samtale
 
-Lad os oprette en samtale, hvor vores AI antager en bestemt rolle. Vi får den til at indtage rollen som Captain Picard - en karakter kendt for sin diplomatiske visdom og lederskab:
+Lad os skabe en samtale, hvor vores AI antager en specifik rolle. Vi lader den indtage rollen som kaptajn Picard – en karakter kendt for sin diplomatiske visdom og lederskab:
 
 ```python
 messages = [
@@ -142,12 +253,12 @@ messages = [
 ]
 ```
 
-**Gennemgang af denne samtaleopsætning:**
-- **Etablerer** AI's rolle og personlighed gennem `SystemMessage`
+**Nedbrydning af denne samtaleopsætning:**
+- **Etablerer** AI'ens rolle og personlighed gennem `SystemMessage`
 - **Giver** den første brugerforespørgsel via `HumanMessage`
-- **Skaber** grundlaget for en samtale med flere ture
+- **Skaber** et grundlag for en samtale med flere omgange
 
-Den fulde kode for dette eksempel ser sådan ud:
+Den fulde kode til dette eksempel ser sådan ud:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -166,12 +277,12 @@ messages = [
 ]
 
 
-# works
+# virker
 response  = llm.invoke(messages)
 print(response.content)
 ```
 
-Du bør se et resultat, der ligner:
+Du bør se et resultat svarende til:
 
 ```text
 I am Captain Jean-Luc Picard, the commanding officer of the USS Enterprise (NCC-1701-D), a starship in the United Federation of Planets. My primary mission is to explore new worlds, seek out new life and new civilizations, and boldly go where no one has gone before. 
@@ -181,7 +292,7 @@ I believe in the importance of diplomacy, reason, and the pursuit of knowledge. 
 I hold the ideals of the Federation close to my heart, believing in the importance of cooperation, understanding, and respect for all sentient beings. My experiences have shaped my leadership style, and I strive to be a thoughtful and just captain. How may I assist you further?
 ```
 
-For at opretholde samtalekontinuitet (i stedet for at nulstille konteksten hver gang) skal du fortsætte med at tilføje svar til din beskedliste. Ligesom de mundtlige traditioner, der bevarede historier gennem generationer, bygger denne tilgang en varig hukommelse:
+For at bevare kontinuiteten i samtalen (i stedet for at nulstille konteksten hver gang) skal du fortsætte med at tilføje svar til din beskedliste. Ligesom mundtlige traditioner, der bevarede historier på tværs af generationer, bygger denne tilgang varig hukommelse:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -200,7 +311,7 @@ messages = [
 ]
 
 
-# works
+# virker
 response  = llm.invoke(messages)
 
 print(response.content)
@@ -216,9 +327,9 @@ print(response.content)
 
 ```
 
-Ret smart, ikke? Det, der sker her, er, at vi kalder LLM to gange - først med kun vores første to beskeder, men derefter igen med hele samtalehistorikken. Det er som om, AI'en faktisk følger med i vores chat!
+Ret smart, ikke? Hvad der sker her, er, at vi kalder LLM to gange – først med bare vores oprindelige to beskeder, men så igen med hele samtalehistorikken. Det er som om, AI’en virkelig følger med i vores chat!
 
-Når du kører denne kode, får du et andet svar, der lyder noget i retning af:
+Når du kører denne kode, vil du få et andet svar, der lyder noget i retning af:
 
 ```text
 Welcome aboard, Chris! It's always a pleasure to meet those who share a passion for exploration and discovery. While I cannot formally offer you a position on the Enterprise right now, I encourage you to pursue your aspirations. We are always in need of talented individuals with diverse skills and backgrounds. 
@@ -226,11 +337,34 @@ Welcome aboard, Chris! It's always a pleasure to meet those who share a passion 
 If you are interested in space exploration, consider education and training in the sciences, engineering, or diplomacy. The values of curiosity, resilience, and teamwork are crucial in Starfleet. Should you ever find yourself on a starship, remember to uphold the principles of the Federation: peace, understanding, and respect for all beings. Your journey can lead you to remarkable adventures, whether in the stars or on the ground. Engage!
 ```
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant App
+    participant LangChain
+    participant AI
+    
+    User->>App: "Fortæl mig om dig"
+    App->>LangChain: [SystemMessage, HumanMessage]
+    LangChain->>AI: Formateret samtale
+    AI->>LangChain: Captain Picard svar
+    LangChain->>App: AIMessage objekt
+    App->>User: Vis svar
+    
+    Note over App: Tilføj AIMessage til samtalen
+    
+    User->>App: "Kan jeg slutte mig til dit mandskab?"
+    App->>LangChain: [SystemMessage, HumanMessage, AIMessage, HumanMessage]
+    LangChain->>AI: Fuldt samtalekontekst
+    AI->>LangChain: Kontekstuel respons
+    LangChain->>App: Nyt AIMessage
+    App->>User: Vis kontekstuel respons
+```
 Det tager jeg som et måske ;)
 
-## Streaming-svar
+## Streaming svar
 
-Har du nogensinde bemærket, hvordan ChatGPT ser ud til at "skrive" sine svar i realtid? Det er streaming i aktion. Ligesom at se en dygtig kalligraf arbejde - se tegnene dukke op streg for streg i stedet for at materialisere sig med det samme - gør streaming interaktionen mere naturlig og giver øjeblikkelig feedback.
+Har du nogensinde lagt mærke til, hvordan ChatGPT ser ud til at "skrive" sine svar i realtid? Det er streaming i aktion. Som at se en dygtig kalligraf arbejde – hvor tegnene dukker op streg for streg i stedet for at materialisere sig øjeblikkeligt – gør streaming interaktionen mere naturlig og giver øjeblikkelig feedback.
 
 ### Implementering af streaming med LangChain
 
@@ -245,35 +379,48 @@ llm = ChatOpenAI(
     streaming=True
 )
 
-# Stream the response
+# Stream svaret
 for chunk in llm.stream("Write a short story about a robot learning to code"):
     print(chunk.content, end="", flush=True)
 ```
 
-**Hvorfor streaming er fantastisk:**
-- **Viser** indhold, mens det bliver skabt - ikke mere akavet ventetid!
-- **Får** brugerne til at føle, at der faktisk sker noget
-- **Føles** hurtigere, selv når det teknisk set ikke er det
-- **Lader** brugerne begynde at læse, mens AI stadig "tænker"
+**Hvorfor streaming er fedt:**
+- **Viser** indhold, mens det bliver skabt – ikke mere akavet venten!
+- **Får** brugerne til at føle, at der rent faktisk sker noget
+- **Føles** hurtigere, selv om det teknisk set ikke er det
+- **Lader** brugerne begynde at læse, mens AI’en stadig "tænker"
 
-> 💡 **Brugeroplevelse Tip**: Streaming er virkelig effektivt, når du arbejder med længere svar som kodeforklaringer, kreativ skrivning eller detaljerede vejledninger. Dine brugere vil elske at se fremskridt i stedet for at stirre på en tom skærm!
+> 💡 **Brugeroplevelsestip**: Streaming gør sig virkelig godt, når du arbejder med længere svar som kodeforklaringer, kreativ skrivning eller detaljerede vejledninger. Dine brugere vil elske at se fremskridtene i stedet for at stirre på en tom skærm!
 
-## Prompt-skabeloner
+### 🎯 Pædagogisk gennemgang: Fordele ved rammeværksabstraktion
 
-Prompt-skabeloner fungerer som de retoriske strukturer, der blev brugt i klassisk retorik - tænk på, hvordan Cicero ville tilpasse sine taleformer til forskellige publikum, mens han bevarede den samme overbevisende ramme. De giver dig mulighed for at skabe genanvendelige prompts, hvor du kan udskifte forskellige oplysninger uden at skulle omskrive alt fra bunden. Når du har oprettet skabelonen, skal du bare fylde variablerne med de nødvendige værdier.
+**Pause og refleksion**: Du har lige oplevet styrken ved AI-rammeværksabstraktioner. Sammenlign, hvad du har lært, med rå API-kald fra tidligere lektioner.
+
+**Hurtig selvevaluering**:
+- Kan du forklare, hvordan LangChain forenkler samtalehåndtering sammenlignet med manuelt beskedsoverblik?
+- Hvad er forskellen på `invoke()`- og `stream()`-metoderne, og hvornår vil du bruge dem hver især?
+- Hvordan forbedrer rammeværkets beskedtyper kodens organisering?
+
+**Virkelighedsforbindelse**: De abstraheringsmønstre, du har lært (beskedtyper, streaminggrænseflader, samtaleminde), bruges i alle større AI-applikationer – fra ChatGPT’s interface til GitHub Copilot’s kodeassistance. Du mestrer de samme arkitektoniske mønstre, som professionelle AI-udviklingsteams benytter.
+
+**Udfordrende spørgsmål**: Hvordan ville du designe en rammeværksabstraktion for håndtering af forskellige AI-modeludbydere (OpenAI, Anthropic, Google) gennem en enkelt grænseflade? Overvej fordele og ulemper.
+
+## Prompt-templates
+
+Prompt-templates fungerer som de retoriske strukturer, der bruges i klassisk oratorik – tænk på, hvordan Cicero ville tilpasse sine talepatterner til forskellige publikum, mens han bevarer den samme overbevisende ramme. De lader dig skabe genanvendelige prompts, hvor du kan udskifte forskellige informationer uden at skulle omskrive alt fra bunden. Når du har sat templaten op, skal du bare udfylde variablerne med de værdier, du har brug for.
 
 ### Oprettelse af genanvendelige prompts
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
 
-# Define a template for code explanations
+# Definer en skabelon til kodeforklaringer
 template = ChatPromptTemplate.from_messages([
     ("system", "You are an expert programming instructor. Explain concepts clearly with examples."),
     ("human", "Explain {concept} in {language} with a practical example for {skill_level} developers")
 ])
 
-# Use the template with different values
+# Brug skabelonen med forskellige værdier
 questions = [
     {"concept": "functions", "language": "JavaScript", "skill_level": "beginner"},
     {"concept": "classes", "language": "Python", "skill_level": "intermediate"},
@@ -286,17 +433,17 @@ for question in questions:
     print(f"Topic: {question['concept']}\n{response.content}\n---\n")
 ```
 
-**Hvorfor du vil elske at bruge skabeloner:**
-- **Holder** dine prompts konsistente i hele din app
-- **Ingen flere** rodede strengsammenkædninger - bare rene, enkle variabler
-- **Din AI** opfører sig forudsigeligt, fordi strukturen forbliver den samme
-- **Opdateringer** er nemme - ændr skabelonen én gang, og det er rettet overalt
+**Hvorfor du vil elske at bruge templates:**
+- **Holder** dine prompts konsistente på tværs af hele din app
+- **Ingen mere** rodet strengsammenkædning – bare rene, simple variabler
+- **Din AI** opfører sig forudsigeligt, fordi strukturen er ensartet
+- **Opdateringer** er lette – ændr templaten én gang, og det er fikset overalt
 
 ## Struktureret output
 
-Har du nogensinde været frustreret over at skulle analysere AI-svar, der kommer tilbage som ustruktureret tekst? Struktureret output er som at lære din AI at følge den systematiske tilgang, som Linnaeus brugte til biologisk klassifikation - organiseret, forudsigelig og nem at arbejde med. Du kan anmode om JSON, specifikke datastrukturer eller ethvert format, du har brug for.
+Er du nogensinde blevet frustreret over at skulle parse AI-svar, der kommer tilbage som ustruktureret tekst? Struktureret output er som at lære din AI den systematiske tilgang, som Linnaeus brugte til biologisk klassifikation – organiseret, forudsigeligt og let at arbejde med. Du kan bede om JSON, specifikke datastrukturer eller et hvilket som helst format, du har brug for.
 
-### Definere outputskemaer
+### Definering af output-skemaer
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
@@ -309,19 +456,19 @@ class CodeReview(BaseModel):
     improvements: list[str] = Field(description="List of suggested improvements")
     overall_feedback: str = Field(description="Summary feedback")
 
-# Set up the parser
+# Opsæt parseren
 parser = JsonOutputParser(pydantic_object=CodeReview)
 
-# Create prompt with format instructions
+# Opret prompt med formateringsinstruktioner
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a code reviewer. {format_instructions}"),
     ("human", "Review this code: {code}")
 ])
 
-# Format the prompt with instructions
+# Formatér prompten med instruktioner
 chain = prompt | llm | parser
 
-# Get structured response
+# Hent struktureret svar
 code_sample = """
 def calculate_average(numbers):
     return sum(numbers) / len(numbers)
@@ -337,18 +484,18 @@ print(f"Strengths: {', '.join(result['strengths'])}")
 ```
 
 **Hvorfor struktureret output er en game-changer:**
-- **Ingen flere** gæt om, hvilket format du får tilbage - det er konsekvent hver gang
-- **Plugs** direkte ind i dine databaser og API'er uden ekstra arbejde
-- **Fanger** mærkelige AI-svar, før de ødelægger din app
+- **Ikke mere** gætteri om, hvilket format du får – det er konsekvent hver gang
+- **Kan** kobles direkte til dine databaser og API’er uden ekstra arbejde
+- **Fanger** underlige AI-svar, før de ødelægger din app
 - **Gør** din kode renere, fordi du ved præcis, hvad du arbejder med
 
 ## Værktøjskald
 
-Nu når vi til en af de mest kraftfulde funktioner: værktøjer. Dette er, hvordan du giver din AI praktiske evner ud over samtale. Ligesom hvordan middelalderlige laug udviklede specialværktøjer til specifikke håndværk, kan du udstyre din AI med fokuserede instrumenter. Du beskriver, hvilke værktøjer der er tilgængelige, og når nogen anmoder om noget, der matcher, kan din AI tage handling.
+Nu når vi til en af de mest kraftfulde funktioner: værktøjer. Det er sådan, du giver din AI praktiske evner ud over samtale. Ligesom middelalderlige laug udviklede specialiserede værktøjer til specifikke håndværk, kan du udstyre din AI med fokuserede instrumenter. Du beskriver, hvilke værktøjer der er tilgængelige, og når nogen anmoder om noget, der matcher, kan din AI handle.
 
 ### Brug af Python
 
-Lad os tilføje nogle værktøjer som så:
+Lad os tilføje nogle værktøjer som følger:
 
 ```python
 from typing_extensions import Annotated, TypedDict
@@ -356,7 +503,7 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Annotationer skal have typen og kan valgfrit inkludere en standardværdi og beskrivelse (i den rækkefølge).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
@@ -367,7 +514,7 @@ functions = {
 }
 ```
 
-Så hvad sker der her? Vi opretter en skabelon for et værktøj kaldet `add`. Ved at arve fra `TypedDict` og bruge de smarte `Annotated` typer for `a` og `b`, giver vi LLM et klart billede af, hvad dette værktøj gør, og hvad det har brug for. Ordbogen `functions` er som vores værktøjskasse - den fortæller vores kode præcis, hvad der skal gøres, når AI'en beslutter sig for at bruge et specifikt værktøj.
+Så hvad sker der her? Vi opretter en køreplan for et værktøj kaldet `add`. Ved at arve fra `TypedDict` og bruge de smarte `Annotated`-typer for `a` og `b` giver vi LLM et klart billede af, hvad dette værktøj gør, og hvad det har brug for. Ordbogen `functions` er som vores værktøjskasse – den fortæller vores kode præcis, hvad den skal gøre, når AI’en beslutter at bruge et bestemt værktøj.
 
 Lad os se, hvordan vi kalder LLM med dette værktøj næste gang:
 
@@ -381,7 +528,7 @@ llm = ChatOpenAI(
 llm_with_tools = llm.bind_tools(tools)
 ```
 
-Her kalder vi `bind_tools` med vores `tools` array, og dermed har LLM `llm_with_tools` nu kendskab til dette værktøj.
+Her kalder vi `bind_tools` med vores `tools`-array, og dermed har LLM `llm_with_tools` nu kendskab til dette værktøj.
 
 For at bruge denne nye LLM kan vi skrive følgende kode:
 
@@ -395,7 +542,7 @@ if(res.tool_calls):
 print("CONTENT: ",res.content)
 ```
 
-Nu hvor vi kalder `invoke` på denne nye LLM, der har værktøjer, kan egenskaben `tool_calls` blive udfyldt. Hvis det er tilfældet, har ethvert identificeret værktøj en `name` og `args` egenskab, der identificerer, hvilket værktøj der skal kaldes og med hvilke argumenter. Den fulde kode ser sådan ud:
+Nu hvor vi kalder `invoke` på denne nye LLM, der har værktøjer, bliver egenskaben `tool_calls` muligvis udfyldt. Hvis det sker, har ethvert identificeret værktøj en `name`- og `args`-egenskab, som identificerer, hvilket værktøj der skal kaldes og med hvilke argumenter. Den fulde kode ser således ud:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -406,7 +553,7 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anmærkninger skal have typen og kan valgfrit inkludere en standardværdi og beskrivelse (i den rækkefølge).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
@@ -433,28 +580,27 @@ if(res.tool_calls):
 print("CONTENT: ",res.content)
 ```
 
-Når du kører denne kode, bør du se output, der ligner:
+Når du kører denne kode, skulle du se output lignende:
 
 ```text
 TOOL CALL:  15
 CONTENT: 
 ```
 
-AI'en undersøgte "Hvad er 3 + 12" og genkendte dette som en opgave for værktøjet `add`. Ligesom hvordan en dygtig bibliotekar ved, hvilken reference der skal konsulteres baseret på typen af spørgsmål, tog den denne beslutning ud fra værktøjets navn, beskrivelse og felt-specifikationer. Resultatet på 15 kommer fra vores ordbog `functions`, der udfører værktøjet:
+AI’en undersøgte "What is 3 + 12" og genkendte dette som en opgave for værktøjet `add`. Ligesom en dygtig bibliotekar ved, hvilket referenceværk man skal konsultere afhængigt af spørgsmålets type, traf den denne afgørelse ud fra værktøjets navn, beskrivelse og feltspecifikationer. Resultatet på 15 kommer fra vores `functions`-ordbog, der udfører værktøjet:
 
 ```python
 print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 ```
 
-### Et mere interessant værktøj, der kalder et web-API
-
-At lægge tal sammen demonstrerer konceptet, men rigtige værktøjer udfører typisk mere komplekse operationer, som at kalde web-API'er. Lad os udvide vores eksempel, så AI'en kan hente indhold fra internettet - ligesom hvordan telegrafoperatører engang forbandt fjerne steder:
+### Et mere interessant værktøj, der kalder en web-API
+At lægge tal sammen demonstrerer konceptet, men rigtige værktøjer udfører typisk mere komplekse operationer, som at kalde web-API'er. Lad os udvide vores eksempel, så AI henter indhold fra internettet - på samme måde som telegrafister engang forbandt fjerne steder:
 
 ```python
 class joke(TypedDict):
     """Tell a joke."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Annotationer skal have typen og kan valgfrit indeholde en standardværdi og beskrivelse (i den rækkefølge).
     category: Annotated[str, ..., "The joke category"]
 
 def get_joke(category: str) -> str:
@@ -470,16 +616,42 @@ functions = {
 
 query = "Tell me a joke about animals"
 
-# the rest of the code is the same
+# resten af koden er den samme
 ```
 
-Nu, hvis du kører denne kode, vil du få et svar, der siger noget i retning af:
+Hvis du nu kører denne kode, vil du få et svar, der siger noget i retning af:
 
 ```text
 TOOL CALL:  Chuck Norris once rode a nine foot grizzly bear through an automatic car wash, instead of taking a shower.
 CONTENT:  
 ```
 
+```mermaid
+flowchart TD
+    A[Brugerforespørgsel: "Fortæl mig en vittighed om dyr"] --> B[LangChain Analyse]
+    B --> C{Værktøj tilgængeligt?}
+    C -->|Ja| D[Vælg vittighedsværktøj]
+    C -->|Nej| E[Generer direkte svar]
+    
+    D --> F[Udtræk parametre]
+    F --> G[Ring til joke(kategori="dyr")]
+    G --> H[API-anmodning til chucknorris.io]
+    H --> I[Returner vittighedsindhold]
+    I --> J[Vis for bruger]
+    
+    E --> K[AI-genereret svar]
+    K --> J
+    
+    subgraph "Værktøjsdefinitionslag"
+        L[TypedDict Skema]
+        M[Funktionsimplementering]
+        N[Parameter validering]
+    end
+    
+    D --> L
+    F --> N
+    G --> M
+```
 Her er koden i sin helhed:
 
 ```python
@@ -491,14 +663,14 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anmærkninger skal have typen og kan valgfrit inkludere en standardværdi og beskrivelse (i den rækkefølge).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
 class joke(TypedDict):
     """Tell a joke."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anmærkninger skal have typen og kan valgfrit inkludere en standardværdi og beskrivelse (i den rækkefølge).
     category: Annotated[str, ..., "The joke category"]
 
 tools = [add, joke]
@@ -527,14 +699,14 @@ query = "Tell me a joke about animals"
 res = llm_with_tools.invoke(query)
 if(res.tool_calls):
     for tool in res.tool_calls:
-        # print("TOOL CALL: ", tool)
+        # print("VÆRKTØJSKALD: ", tool)
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
 
 ## Embeddings og dokumentbehandling
 
-Embeddings repræsenterer en af de mest elegante løsninger i moderne AI. Forestil dig, hvis du kunne tage et hvilket som helst stykke tekst og konvertere det til numeriske koordinater, der fanger dets betydning. Det er præcis, hvad embeddings gør - de transformerer tekst til punkter i et multidimensionelt rum, hvor lignende begreber samles. Det er som at have et koordinatsystem for ideer, der minder om, hvordan Mendeleev organiserede det periodiske system efter atomare egenskaber.
+Embeddings repræsenterer en af de mest elegante løsninger i moderne AI. Forestil dig, at du kan tage et hvilket som helst tekststykke og konvertere det til numeriske koordinater, der fanger dets betydning. Det er præcis, hvad embeddings gør - de omdanner tekst til punkter i et flerdimensionelt rum, hvor lignende begreber samles. Det er som at have et koordinatsystem for idéer, der minder om, hvordan Mendeleev organiserede det periodiske system efter atomare egenskaber.
 
 ### Oprettelse og brug af embeddings
 
@@ -544,24 +716,24 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 
-# Initialize embeddings
+# Initialiser indlejringer
 embeddings = OpenAIEmbeddings(
     api_key=os.environ["GITHUB_TOKEN"],
     base_url="https://models.github.ai/inference",
     model="text-embedding-3-small"
 )
 
-# Load and split documents
+# Indlæs og del dokumenter
 loader = TextLoader("documentation.txt")
 documents = loader.load()
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
-# Create vector store
+# Opret vektorlager
 vectorstore = FAISS.from_documents(texts, embeddings)
 
-# Perform similarity search
+# Udfør søgning efter lighed
 query = "How do I handle user authentication?"
 similar_docs = vectorstore.similarity_search(query, k=3)
 
@@ -579,30 +751,54 @@ from langchain_community.document_loaders import (
     WebBaseLoader
 )
 
-# Load different document types
+# Indlæs forskellige dokumenttyper
 pdf_loader = PyPDFLoader("manual.pdf")
 csv_loader = CSVLoader("data.csv")
 json_loader = JSONLoader("config.json")
 web_loader = WebBaseLoader("https://example.com/docs")
 
-# Process all documents
+# Behandl alle dokumenter
 all_documents = []
 for loader in [pdf_loader, csv_loader, json_loader, web_loader]:
     docs = loader.load()
     all_documents.extend(docs)
 ```
 
-**Hvad du kan gøre med embeddings:**
-- **Byg** søgning, der faktisk forstår, hvad du mener, ikke kun nøgleord
-- **Skab** AI, der kan besvare spørgsmål om dine dokumenter
-- **Lav** anbefalingssystemer, der foreslår virkelig relevant indhold
-- **Organiser** og kategoriser automatisk dit indhold
+**Det kan du gøre med embeddings:**
+- **Bygge** søgning, der faktisk forstår, hvad du mener, ikke bare nøgleordsmatch
+- **Skabe** AI, der kan besvare spørgsmål om dine dokumenter
+- **Lave** anbefalingssystemer, som foreslår virkelig relevant indhold
+- **Automatisk** organisere og kategorisere dit indhold
 
-## Bygning af en komplet AI-applikation
+```mermaid
+flowchart LR
+    A[Dokumenter] --> B[Tekstopdeler]
+    B --> C[Opret Indlejringer]
+    C --> D[Vektorlager]
+    
+    E[Brugerforespørgsel] --> F[Forespørgselsindlejring]
+    F --> G[Lighedssøgning]
+    G --> D
+    D --> H[Relevante Dokumenter]
+    H --> I[AI Svar]
+    
+    subgraph "Vektorrum"
+        J[Dokument A: [0.1, 0.8, 0.3...]]
+        K[Dokument B: [0.2, 0.7, 0.4...]]
+        L[Forespørgsel: [0.15, 0.75, 0.35...]]
+    end
+    
+    C --> J
+    C --> K
+    F --> L
+    G --> J
+    G --> K
+```
+## Opbygning af en komplet AI-applikation
 
-Nu vil vi integrere alt, hvad du har lært, i en omfattende applikation - en kodeassistent, der kan besvare spørgsmål, bruge værktøjer og opretholde samtaleminde. Ligesom hvordan trykpressen kombinerede eksisterende teknologier (bevægelige typer, blæk, papir og tryk) til noget transformerende, vil vi kombinere vores AI-komponenter til noget praktisk og nyttigt.
+Nu integrerer vi alt, hvad du har lært, i en omfattende applikation - en kodeassistent, der kan svare på spørgsmål, bruge værktøjer og bevare samtaleminder. Ligesom trykpressen kombinerede eksisterende teknologier (flytbar type, blæk, papir og tryk) til noget banebrydende, vil vi kombinere vores AI-komponenter til noget praktisk og brugbart.
 
-### Komplet applikationseksempel
+### Komplekt applikationseksempel
 
 ```python
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -627,7 +823,7 @@ class CodingAssistant:
             Use tools when needed and maintain a helpful, encouraging tone.""")
         ]
         
-        # Define tools
+        # Definer værktøjer
         self.setup_tools()
     
     def setup_tools(self):
@@ -644,20 +840,20 @@ class CodingAssistant:
         self.llm_with_tools = self.llm.bind_tools(self.tools)
     
     def chat(self, user_input: str):
-        # Add user message to conversation
+        # Tilføj brugermeddelelse til samtale
         self.conversation_history.append(HumanMessage(content=user_input))
         
-        # Get AI response
+        # Få AI-svar
         response = self.llm_with_tools.invoke(self.conversation_history)
         
-        # Handle tool calls if any
+        # Håndter kald til værktøjer, hvis nogen
         if response.tool_calls:
             for tool_call in response.tool_calls:
                 tool_result = self.execute_tool(tool_call)
                 print(f"🔧 Tool used: {tool_call['name']}")
                 print(f"📊 Result: {tool_result}")
         
-        # Add AI response to conversation
+        # Tilføj AI-svar til samtale
         self.conversation_history.append(response)
         
         return response.content
@@ -673,7 +869,7 @@ class CodingAssistant:
         
         return "Tool execution completed"
 
-# Usage example
+# Brugs eksempel
 assistant = CodingAssistant()
 
 print("🤖 Coding Assistant Ready! Type 'quit' to exit.\n")
@@ -691,188 +887,260 @@ while True:
 
 ```mermaid
 graph TD
-    A[User Input] --> B[Coding Assistant]
-    B --> C[Conversation Memory]
-    B --> D[Tool Detection]
-    B --> E[LLM Processing]
+    A[Brugerinput] --> B[Kodeassistent]
+    B --> C[Samtaleminne]
+    B --> D[Værktøjsregistrering]
+    B --> E[LLM-behandling]
     
-    D --> F[Web Search Tool]
-    D --> G[Code Formatter Tool]
+    D --> F[Websøgningsværktøj]
+    D --> G[Kodeformateringsværktøj]
     
-    E --> H[Response Generation]
+    E --> H[Svar generering]
     F --> H
     G --> H
     
-    H --> I[User Interface]
+    H --> I[Brugergrænseflade]
     H --> C
 ```
-
 **Nøglefunktioner vi har implementeret:**
-- **Husker** hele din samtale for kontekstkontinuitet
-- **Udfører handlinger** gennem værktøjskald, ikke kun samtale
+- **Husker** hele din samtale for kontekstuel kontinuitet
+- **Udfører handlinger** via værktøjskald, ikke bare samtale
 - **Følger** forudsigelige interaktionsmønstre
-- **Administrerer** fejlbehandling og komplekse arbejdsgange automatisk
+- **Håndterer** fejlhåndtering og komplekse arbejdsgange automatisk
+
+### 🎯 Pædagogisk status: Produktionsarkitektur for AI
+
+**Forståelse af arkitektur**: Du har bygget en komplet AI-applikation, der kombinerer samtalestyring, værktøjskald og strukturerede arbejdsgange. Dette repræsenterer AI-applikationsudvikling på produktionsniveau.
+
+**Nøglebegreber, der er mestret**:
+- **Klassesbaseret arkitektur**: Organiseret, vedligeholdelig AI-applikationsstruktur
+- **Værktøjsintegration**: Tilpasset funktionalitet ud over samtale
+- **Hukommelsesstyring**: Vedvarende samtalekontekst
+- **Fejlhåndtering**: Robust applikationsadfærd
+
+**Branchens forbindelse**: De arkitekturmønstre, du har implementeret (samtaleklasser, værktøjssystemer, hukommelsesstyring), er de samme mønstre, der anvendes i virksomheders AI-applikationer som Slack’s AI-assistent, GitHub Copilot og Microsoft Copilot. Du bygger med professionel arkitekturtænkning.
+
+**Refleksionsspørgsmål**: Hvordan ville du udvide denne applikation til at håndtere flere brugere, vedvarende lagring eller integration med eksterne databaser? Overvej udfordringer med skalerbarhed og tilstandsstyring.
 
 ## Opgave: Byg din egen AI-drevne studieassistent
 
-**Mål**: Opret en AI-applikation, der hjælper studerende med at lære programmeringskoncepter ved at give forklaringer, kodeeksempler og interaktive quizzer.
+**Mål**: Skab en AI-applikation, der hjælper studerende med at lære programmeringskoncepter ved at give forklaringer, kodeeksempler og interaktive quizzer.
 
 ### Krav
 
 **Kernefunktioner (påkrævet):**
-1. **Samtalegrænseflade**: Implementer et chatsystem, der opretholder kontekst på tværs af flere spørgsmål
-2. **Uddannelsesværktøjer**: Opret mindst to værktøjer, der hjælper med læring:
+1. **Samtaleinterface**: Implementer et chatsystem, der bevarer kontekst på tværs af flere spørgsmål
+2. **Uddannelsesværktøjer**: Lav mindst to værktøjer, der hjælper med læring:
    - Værktøj til kodeforklaring
-   - Generator til konceptquiz
-3. **Personlig læring**: Brug systemmeddelelser til at tilpasse svar til forskellige færdighedsniveauer  
-4. **Svarformatering**: Implementer struktureret output til quizspørgsmål  
+   - Quizgenerator til koncepter
+3. **Personlig læring**: Brug systembeskeder til at tilpasse svar til forskellige færdighedsniveauer
+4. **Svarformatering**: Implementer struktureret output til quizspørgsmål
 
-### Implementeringstrin  
+### Implementeringstrin
 
-**Trin 1: Opsæt dit miljø**  
+**Trin 1: Opsæt dit miljø**
 ```bash
 pip install langchain langchain-openai
 ```
-  
-**Trin 2: Grundlæggende chatfunktionalitet**  
-- Opret en `StudyAssistant`-klasse  
-- Implementer samtaleminde  
-- Tilføj personlighedskonfiguration til pædagogisk støtte  
 
-**Trin 3: Tilføj undervisningsværktøjer**  
-- **Kodeforklarer**: Bryder kode ned i forståelige dele  
-- **Quizgenerator**: Skaber spørgsmål om programmeringskoncepter  
-- **Fremskridtssporing**: Holder styr på dækkede emner  
+**Trin 2: Grundlæggende chatfunktionalitet**
+- Opret en `StudyAssistant`-klasse
+- Implementer samtaleminde
+- Tilføj personlighedskonfiguration til uddannelsesstøtte
 
-**Trin 4: Avancerede funktioner (valgfrit)**  
-- Implementer streaming-svar for bedre brugeroplevelse  
-- Tilføj dokumentindlæsning for at integrere kursusmateriale  
-- Opret embeddings til indholdsgenkendelse baseret på lighed  
+**Trin 3: Tilføj uddannelsesværktøjer**
+- **Kodeforklarer**: Opdeler kode i forståelige dele
+- **Quizgenerator**: Opretter spørgsmål om programmeringskoncepter
+- **Fremskridtssporer**: Holder styr på dækkede emner
 
-### Evalueringskriterier  
+**Trin 4: Forbedrede funktioner (valgfrit)**
+- Implementer streaming-svar for bedre brugeroplevelse
+- Tilføj dokumentindlæsning for at inkorporere kursusmaterialer
+- Opret embeddings til lighedsbaseret indholdshentning
 
-| Funktion | Fremragende (4) | God (3) | Tilfredsstillende (2) | Kræver arbejde (1) |  
-|----------|-----------------|---------|-----------------------|--------------------|  
-| **Samtaleflow** | Naturlige, kontekstbevidste svar | God kontekstbevarelse | Grundlæggende samtale | Ingen hukommelse mellem udvekslinger |  
-| **Værktøjsintegration** | Flere nyttige værktøjer fungerer problemfrit | 2+ værktøjer implementeret korrekt | 1-2 grundlæggende værktøjer | Værktøjer fungerer ikke |  
-| **Kodekvalitet** | Ren, veldokumenteret, fejlhåndtering | God struktur, noget dokumentation | Grundlæggende funktionalitet fungerer | Dårlig struktur, ingen fejlhåndtering |  
-| **Uddannelsesmæssig værdi** | Virkelig nyttig for læring, tilpasset | God læringsstøtte | Grundlæggende forklaringer | Begrænset uddannelsesmæssig fordel |  
+### Evalueringskriterier
 
-### Eksempel på kodestruktur  
+| Funktion | Fremragende (4) | God (3) | Tilfredsstillende (2) | Skal forbedres (1) |
+|---------|---------------|----------|------------------|----------------|
+| **Samtaleflow** | Naturlige, kontekstfølsomme svar | God kontekstbevarelse | Grundlæggende samtale | Ingen hukommelse mellem udvekslinger |
+| **Værktøjsintegration** | Flere nyttige værktøjer fungerer problemfrit | 2+ værktøjer implementeret korrekt | 1-2 grundlæggende værktøjer | Værktøjer ikke funktionelle |
+| **Kodekvalitet** | Ren, veldokumenteret, fejlhåndtering | God struktur, noget dokumentation | Grundlæggende funktionalitet virker | Dårlig struktur, ingen fejlhåndtering |
+| **Uddannelsesmæssig værdi** | Virkelig hjælpsom til læring, adaptiv | God læringsstøtte | Grundlæggende forklaringer | Begrænset pædagogisk værdi |
+
+### Eksempelkodestruktur
 
 ```python
 class StudyAssistant:
     def __init__(self, skill_level="beginner"):
-        # Initialize LLM, tools, and conversation memory
+        # Initialiser LLM, værktøjer og samtalehukommelse
         pass
     
     def explain_code(self, code, language):
-        # Tool: Explain how code works
+        # Værktøj: Forklar hvordan kode fungerer
         pass
     
     def generate_quiz(self, topic, difficulty):
-        # Tool: Create practice questions
+        # Værktøj: Opret øvelsesspørgsmål
         pass
     
     def chat(self, user_input):
-        # Main conversation interface
+        # Hovedsamtalegrænseflade
         pass
 
-# Example usage
+# Eksempel på anvendelse
 assistant = StudyAssistant(skill_level="intermediate")
 response = assistant.chat("Explain how Python functions work")
 ```
-  
-**Bonusudfordringer:**  
-- Tilføj stemmeinput/output-funktioner  
-- Implementer en webgrænseflade ved hjælp af Streamlit eller Flask  
-- Opret en vidensbase fra kursusmateriale ved hjælp af embeddings  
-- Tilføj fremskridtssporing og personlige læringsforløb  
 
-## Resumé  
+**Bonusudfordringer:**
+- Tilføj stemmeinput/-output-muligheder
+- Implementer et webinterface med Streamlit eller Flask
+- Opret en vidensbase fra kursusmaterialer ved hjælp af embeddings
+- Tilføj fremskridtssporing og personlige læringsforløb
 
-🎉 Du har nu mestret grundlæggende AI-rammeudvikling og lært, hvordan man bygger sofistikerede AI-applikationer ved hjælp af LangChain. Som at fuldføre en omfattende lærlingeuddannelse har du erhvervet en betydelig værktøjskasse af færdigheder. Lad os gennemgå, hvad du har opnået.  
+## 📈 Din tidslinje for mestring af AI-frameworkudvikling
 
-### Hvad du har lært  
+```mermaid
+timeline
+    title Produktions AI Framework Udviklingsrejse
+    
+    section Framework Grundlag
+        Forstå Abstraktioner
+            : Mestre framework vs API beslutninger
+            : Lær LangChain kernekoncepter
+            : Implementer beskedtypers systemer
+        
+        Grundlæggende Integration
+            : Forbind til AI-udbydere
+            : Håndter autentificering
+            : Administrer konfiguration
+    
+    section Samtalesystemer
+        Hukommelsesstyring
+            : Byg samtalehistorik
+            : Implementer kontekstspor
+            : Håndter session vedholdenhed
+        
+        Avancerede Interaktioner
+            : Mestre streaming svar
+            : Opret promptskabeloner
+            : Implementer struktureret output
+    
+    section Værktøjsintegration
+        Egenudviklet Værktøj
+            : Design værktøjsskemaer
+            : Implementer funktionsopkald
+            : Håndter eksterne API'er
+        
+        Arbejdsgangsautomatisering
+            : Kæd flere værktøjer sammen
+            : Opret beslutningstræer
+            : Byg agentadfærd
+    
+    section Produktionsapplikationer
+        Kompleks Systemarkitektur
+            : Kombiner alle framework-funktioner
+            : Implementer fejlkontroller
+            : Opret vedligeholdelsesvenlig kode
+        
+        Virksomhedsklarhed
+            : Håndter skalerbarhedsproblemer
+            : Implementer overvågning
+            : Byg udrulningsstrategier
+```
+**🎓 Eksamenstrin**: Du har med succes mestret AI-frameworkudvikling ved brug af de samme værktøjer og mønstre, der driver moderne AI-applikationer. Disse færdigheder repræsenterer frontlinjen i AI-applikationsudvikling og forbereder dig på at bygge intelligente systemer på virksomhedsplan.
 
-**Kernekoncepter for rammer:**  
-- **Fordele ved rammer**: Forståelse af, hvornår man skal vælge rammer frem for direkte API-kald  
-- **Grundlæggende om LangChain**: Opsætning og konfiguration af AI-modelforbindelser  
-- **Meddelelsestyper**: Brug af `SystemMessage`, `HumanMessage` og `AIMessage` til strukturerede samtaler  
+**🔄 Næste niveau kapaciteter**:
+- Klar til at udforske avancerede AI-arkitekturer (agenter, multi-agent systemer)
+- Forberedt til at bygge RAG-systemer med vektordatabaser
+- Udstyret til at skabe multimodale AI-applikationer
+- Fundament lagt til skalerbarhed og optimering af AI-applikationer
 
-**Avancerede funktioner:**  
-- **Værktøjskald**: Oprettelse og integration af brugerdefinerede værktøjer til forbedrede AI-funktioner  
-- **Samtaleminde**: Bevare kontekst på tværs af flere samtaleomgange  
-- **Streaming-svar**: Implementering af realtidslevering af svar  
-- **Promptskabeloner**: Opbygning af genanvendelige, dynamiske prompts  
-- **Struktureret output**: Sikring af konsistente, parsebare AI-svar  
-- **Embeddings**: Oprettelse af semantisk søgning og dokumentbehandlingsfunktioner  
+## Resumé
 
-**Praktiske anvendelser:**  
-- **Opbygning af komplette apps**: Kombinere flere funktioner til produktionsklare applikationer  
-- **Fejlhåndtering**: Implementering af robust fejlstyring og validering  
-- **Værktøjsintegration**: Oprettelse af brugerdefinerede værktøjer, der udvider AI-funktioner  
+🎉 Du har nu mestret grundlæggende AI-frameworkudvikling og lært at bygge sofistikerede AI-applikationer med LangChain. Ligesom at fuldføre en omfattende læreplads har du opnået et stort sæt færdigheder. Lad os gennemgå, hvad du har opnået.
 
-### Vigtige pointer  
+### Hvad du har lært
 
-> 🎯 **Husk**: AI-rammer som LangChain er i bund og grund dine kompleksitetsskjulende, funktionsfyldte bedste venner. De er perfekte, når du har brug for samtaleminde, værktøjskald eller ønsker at arbejde med flere AI-modeller uden at miste overblikket.  
+**Kerneframework-koncepter:**
+- **Framework-fordele**: Forstå hvornår man vælger frameworks frem for direkte API-kald
+- **LangChain basics**: Opsætning og konfiguration af AI-modelforbindelser
+- **Beskedtyper**: Brug af `SystemMessage`, `HumanMessage` og `AIMessage` til strukturerede samtaler
 
-**Beslutningsramme for AI-integration:**  
+**Avancerede funktioner:**
+- **Værktøjskald**: Oprettelse og integration af tilpassede værktøjer for forbedret AI-funktionalitet
+- **Samtaleminde**: Vedligeholdelse af kontekst over flere samtaletrin
+- **Streaming-svar**: Implementering af realtidsresponslevering
+- **Promptskabeloner**: Opbygning af genanvendelige, dynamiske prompts
+- **Struktureret output**: Sikring af konsistente, parsebare AI-svar
+- **Embeddings**: Opbygning af semantisk søgning og dokumentbehandlingsfunktioner
+
+**Praktiske anvendelser:**
+- **Opbygning af komplette apps**: Kombination af flere funktioner til produktionsklare applikationer
+- **Fejlhåndtering**: Implementering af robust fejlstyring og validering
+- **Værktøjsintegration**: Oprettelse af specialværktøjer, der udvider AI’s muligheder
+
+### Vigtige pointer
+
+> 🎯 **Husk**: AI-frameworks som LangChain er i bund og grund dine kompleksitetsskjulende, feature-rige bedste venner. De er perfekte, når du har brug for samtaleminde, værktøjskald eller vil arbejde med flere AI-modeller uden at miste forstanden.
+
+**Beslutningsframework for AI-integration:**
 
 ```mermaid
 flowchart TD
-    A[AI Integration Need] --> B{Simple single query?}
-    B -->|Yes| C[Direct API calls]
-    B -->|No| D{Need conversation memory?}
-    D -->|No| E[SDK Integration]
-    D -->|Yes| F{Need tools or complex features?}
-    F -->|No| G[Framework with basic setup]
-    F -->|Yes| H[Full framework implementation]
+    A[Behov for AI-integration] --> B{Simpel enkelt forespørgsel?}
+    B -->|Ja| C[Direkte API-kald]
+    B -->|Nej| D{Behov for samtaleminde?}
+    D -->|Nej| E[SDK-integration]
+    D -->|Ja| F{Behov for værktøjer eller komplekse funktioner?}
+    F -->|Nej| G[Rammeværk med grundlæggende opsætning]
+    F -->|Ja| H[Fuldt rammeværksimplementering]
     
-    C --> I[HTTP requests, minimal dependencies]
-    E --> J[Provider SDK, model-specific]
-    G --> K[LangChain basic chat]
-    H --> L[LangChain with tools, memory, agents]
+    C --> I[HTTP-anmodninger, minimale afhængigheder]
+    E --> J[Udbyder SDK, model-specifik]
+    G --> K[LangChain grundlæggende chat]
+    H --> L[LangChain med værktøjer, hukommelse, agenter]
 ```
-  
-### Hvor går du hen herfra?  
+### Hvor går du hen herfra?
 
-**Begynd at bygge med det samme:**  
-- Tag disse koncepter og byg noget, der begejstrer DIG!  
-- Eksperimenter med forskellige AI-modeller gennem LangChain - det er som en legeplads for AI-modeller  
-- Skab værktøjer, der løser reelle problemer, du står over for i dit arbejde eller projekter  
+**Begynd at bygge nu:**
+- Tag disse koncepter og byg noget, der begejstrer DIG!
+- Eksperimentér med forskellige AI-modeller via LangChain - det er som at have en legeplads med AI-modeller
+- Lav værktøjer, der løser reelle problemer, du møder i dit arbejde eller projekter
 
-**Klar til næste niveau?**  
-- **AI-agenter**: Byg AI-systemer, der faktisk kan planlægge og udføre komplekse opgaver på egen hånd  
-- **RAG (Retrieval-Augmented Generation)**: Kombiner AI med dine egne vidensbaser for superkraftige applikationer  
-- **Multi-modal AI**: Arbejd med tekst, billeder og lyd sammen - mulighederne er uendelige!  
-- **Produktionsimplementering**: Lær hvordan du skalerer dine AI-apps og overvåger dem i den virkelige verden  
+**Klar til næste niveau?**
+- **AI-agenter**: Byg AI-systemer, der faktisk kan planlægge og udføre komplekse opgaver selvstændigt
+- **RAG (Retrieval-Augmented Generation)**: Kombinér AI med dine egne vidensbaser til superkraftfulde applikationer
+- **Multimodal AI**: Arbejd med tekst, billeder og lyd samlet - mulighederne er uendelige!
+- **Produktionsdrift**: Lær, hvordan du skalerer dine AI-apps og overvåger dem i den virkelige verden
 
-**Bliv en del af fællesskabet:**  
-- LangChain-fællesskabet er fantastisk til at holde sig opdateret og lære bedste praksis  
-- GitHub Models giver dig adgang til avancerede AI-funktioner - perfekt til eksperimenter  
-- Bliv ved med at øve dig med forskellige anvendelsesscenarier - hvert projekt vil lære dig noget nyt  
+**Deltag i fællesskabet:**
+- LangChain-fællesskabet er fremragende til at holde sig opdateret og lære bedst praksis
+- GitHub Models giver dig adgang til banebrydende AI-funktioner - perfekt til eksperimenter
+- Øv dig med forskellige brugsscenarier - hvert projekt lærer dig noget nyt
 
-Du har nu viden til at bygge intelligente, samtalebaserede applikationer, der kan hjælpe folk med at løse reelle problemer. Ligesom renæssancens håndværkere, der kombinerede kunstnerisk vision med teknisk dygtighed, kan du nu kombinere AI-funktioner med praktisk anvendelse. Spørgsmålet er: hvad vil du skabe? 🚀  
+Du har nu viden til at bygge intelligente, samtalebaserede applikationer, der kan hjælpe folk med at løse rigtige problemer. Ligesom renæssancens håndværkere, der forenede kunstnerisk vision med teknisk dygtighed, kan du nu fusionere AI-kapaciteter med praktisk anvendelse. Spørgsmålet er: hvad vil du skabe? 🚀
 
-## GitHub Copilot Agent-udfordring 🚀  
+## GitHub Copilot Agent Challenge 🚀
 
-Brug Agent-tilstand til at fuldføre følgende udfordring:  
+Brug Agent-tilstand til at løse følgende udfordring:
 
-**Beskrivelse:** Byg en avanceret AI-drevet kodegennemgangsassistent, der kombinerer flere LangChain-funktioner, herunder værktøjskald, struktureret output og samtaleminde for at give omfattende feedback på kodeindsendelser.  
+**Beskrivelse:** Byg en avanceret AI-drevet kodegennemgangsassistent, der kombinerer flere LangChain-funktioner inklusive værktøjskald, struktureret output og samtaleminde for at give omfattende feedback på kodeindsendelser.
 
-**Prompt:** Opret en CodeReviewAssistant-klasse, der implementerer:  
-1. Et værktøj til at analysere kodekompleksitet og foreslå forbedringer  
-2. Et værktøj til at kontrollere kode mod bedste praksis  
-3. Struktureret output ved hjælp af Pydantic-modeller for konsistent gennemgangsformat  
-4. Samtaleminde til at spore gennemgangssessioner  
-5. En hovedchatgrænseflade, der kan håndtere kodeindsendelser og give detaljeret, handlingsrettet feedback  
+**Prompt:** Opret en CodeReviewAssistant-klasse, der implementerer:
+1. Et værktøj til analyse af kodekompleksitet og forslag til forbedringer
+2. Et værktøj til kontrol af kode i forhold til best practices
+3. Struktureret output ved brug af Pydantic-modeller for konsistent gennemgangsformat
+4. Samtaleminde til at spore gennemgangssessioner
+5. Et hovedchatinterface, der kan håndtere kodeindsendelser og levere detaljeret, handlingsrettet feedback
 
-Assistenten skal kunne gennemgå kode i flere programmeringssprog, bevare kontekst på tværs af flere kodeindsendelser i en session og give både sammenfattende vurderinger og detaljerede forbedringsforslag.  
+Assistenten skal kunne gennemgå kode i flere programmeringssprog, bevare kontekst på tværs af flere kodeindsendelser i en session og levere både resumébedømmelser og detaljerede forbedringsforslag.
 
-Læs mere om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.  
+Læs mere om [agent-tilstand](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) her.
 
 ---
 
-**Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfraskrivelse**:
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets modersmål bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for eventuelle misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

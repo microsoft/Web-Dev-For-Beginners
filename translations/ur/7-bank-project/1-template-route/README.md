@@ -616,7 +616,7 @@ sequenceDiagram
 
 `history.pushState` براؤزر کے نیویگیشن history میں نئے entries بناتا ہے۔ آپ اسے چیک کر سکتے ہیں براؤزر کے *back button* کو دبائے رکھ کر، یہ کچھ اس طرح دکھائے گا:
 
-![نیویگیشن history کا اسکرین شاٹ](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.ur.png)
+![نیویگیشن history کا اسکرین شاٹ](../../../../translated_images/history.7fdabbafa521e064.ur.png)
 
 اگر آپ back button پر چند بار کلک کرنے کی کوشش کریں، تو آپ دیکھیں گے کہ موجودہ URL تبدیل ہوتا ہے اور history اپ ڈیٹ ہوتی ہے، لیکن وہی template ظاہر ہوتا رہتا ہے۔
 

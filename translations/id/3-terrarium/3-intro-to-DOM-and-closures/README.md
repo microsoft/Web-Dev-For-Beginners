@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM dan sebuah closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.id.png)
+![DOM dan sebuah closure](../../../../translated_images/webdev101-js.10280393044d7eaa.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Selamat datang di salah satu aspek paling menarik dari pengembangan web - membuat sesuatu menjadi interaktif! Document Object Model (DOM) adalah seperti jembatan antara HTML dan JavaScript Anda, dan hari ini kita akan menggunakannya untuk menghidupkan terrarium Anda. Ketika Tim Berners-Lee menciptakan browser web pertama, dia membayangkan web di mana dokumen bisa menjadi dinamis dan interaktif - DOM membuat visi itu menjadi mungkin.
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![Representasi pohon DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.id.png)
+![Representasi pohon DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.id.png)
 
 > Representasi DOM dan markup HTML yang merujuk padanya. Dari [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **Memahami Penutupan**: Penutupan adalah topik penting dalam JavaScript, dan banyak pengembang menggunakannya selama bertahun-tahun sebelum sepenuhnya memahami semua aspek teoritisnya. Hari ini, kita fokus pada aplikasi praktis - Anda akan melihat penutupan muncul secara alami saat kita membangun fitur interaktif kita. Pemahaman akan berkembang saat Anda melihat bagaimana mereka menyelesaikan masalah nyata.
 
-![Representasi pohon DOM](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.id.png)
+![Representasi pohon DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.id.png)
 
 > Representasi DOM dan markup HTML yang merujuk padanya. Dari [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ Sekarang uji terrarium interaktif Anda! Buka file `index.html` Anda di browser w
 - **Dukungan lintas perangkat**: Berfungsi di desktop dan mobile
 - **Sadar kinerja**: Tidak ada kebocoran memori atau perhitungan redundan
 
-![terrarium selesai](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.id.png)
+![terrarium selesai](../../../../translated_images/terrarium-final.0920f16e87c13a84.id.png)
 
 ---
 

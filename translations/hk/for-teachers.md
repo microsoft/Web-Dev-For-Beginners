@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud 對 Common Cartridge 的支持有限。建議使用上面的 Moodle 文件，該文件也可以上傳到 Canvas。
   - 導入後，請檢查模塊、截止日期和測驗設置，以匹配您的學期安排。
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.hk.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.hk.png)
 > Moodle 課堂中的課程內容
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.hk.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.hk.png)
 > Canvas 課堂中的課程內容
 
 ### 直接使用資源庫（不使用 Classroom）

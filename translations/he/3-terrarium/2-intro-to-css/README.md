@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![מבוא ל-CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.he.png)
+![מבוא ל-CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.he.png)
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 זוכרים איך הטרריום שלכם ב-HTML נראה די בסיסי? CSS הוא המקום שבו אנו הופכים את המבנה הפשוט הזה למשהו מושך מבחינה חזותית.
@@ -205,7 +205,7 @@ body {
 
 פתחו את כלי המפתחים של הדפדפן שלכם (F12), עברו ללשונית Elements ובדקו את אלמנט `<h1>` שלכם. תראו שהוא יורש את משפחת הגופן מה-body:
 
-![גופן בירושה](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.he.png)
+![גופן בירושה](../../../../translated_images/1.cc07a5cbe114ad1d.he.png)
 
 ✅ **זמן ניסוי**: נסו להגדיר תכונות אחרות שניתן לרשת על `<body>` כמו `color`, `line-height` או `text-align`. מה קורה לכותרת ולשאר האלמנטים?
 
@@ -599,7 +599,7 @@ flowchart LR
 
 תיצרו הדגשות עדינות שמדמות כיצד אור משתקף על פני זכוכית. גישה זו דומה לאופן שבו ציירי הרנסנס כמו יאן ואן אייק השתמשו באור והשתקפות כדי לגרום לזכוכית מצוירת להיראות תלת-ממדית. הנה מה שאתם שואפים להשיג:  
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.he.png)  
+![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.he.png)  
 
 **האתגר שלכם:**  
 - **צרו** צורות אליפטיות עדינות בצבע לבן או בהיר עבור השתקפויות הזכוכית  

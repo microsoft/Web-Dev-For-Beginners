@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Cơ bản về JavaScript: Kiểu dữ liệu
 
-![Cơ bản về JavaScript - Kiểu dữ liệu](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.vi.png)
+![Cơ bản về JavaScript - Kiểu dữ liệu](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.vi.png)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

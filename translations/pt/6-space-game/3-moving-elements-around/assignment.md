@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ccfcd8c2932761359fbaff3d6b01ace4",
-  "translation_date": "2025-08-24T12:32:42+00:00",
+  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
+  "translation_date": "2026-01-06T18:00:47+00:00",
   "source_file": "6-space-game/3-moving-elements-around/assignment.md",
   "language_code": "pt"
 }
@@ -11,13 +11,28 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Instruções
 
-Revise o ficheiro /app.js na pasta do seu jogo e procure maneiras de comentá-lo e organizá-lo. É muito fácil o código ficar desorganizado, e agora é uma boa oportunidade para adicionar comentários e garantir que o código seja legível para que possa utilizá-lo mais tarde.
+Código limpo e bem documentado é essencial para manter e partilhar os seus projetos. Nesta tarefa, irá praticar um dos hábitos mais importantes dos programadores profissionais: escrever comentários claros e úteis que expliquem o propósito e a funcionalidade do seu código.
+
+Revise o seu ficheiro `app.js` atual na pasta do seu jogo, e encontre formas de o comentar e organizar. É muito fácil o código fugir do controlo, e agora é uma boa oportunidade para adicionar comentários para garantir que tem um código legível para poder utilizá-lo mais tarde.
+
+**A sua tarefa inclui:**
+- **Adicionar comentários** que expliquem o que cada secção principal do código faz
+- **Documentar funções** com descrições claras do seu propósito e parâmetros
+- **Organizar o código** em blocos lógicos com cabeçalhos de secção
+- **Remover** qualquer código não utilizado ou redundante
+- **Usar** convenções de nomes consistentes para variáveis e funções
 
 ## Rubrica
 
-| Critérios | Exemplar                                                          | Adequado                              | Precisa de Melhorias                                           |
-| --------- | ----------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------- |
-|           | O código de `app.js` está totalmente comentado e organizado em blocos lógicos | O código de `app.js` está adequadamente comentado | O código de `app.js` está um pouco desorganizado e carece de bons comentários |
+| Critério | Exemplar | Adequado | Precisa de Melhorar |
+| -------- | -------- | -------- | ------------------- |
+| **Documentação do Código** | Código `app.js` totalmente comentado com explicações claras e úteis para todas as secções e funções principais | Código `app.js` adequadamente comentado com explicações básicas para a maioria das secções | Código `app.js` tem comentários mínimos e carece de explicações claras |
+| **Organização do Código** | Código organizado em blocos lógicos com cabeçalhos de secção claros e estrutura consistente | Código tem alguma organização com agrupamento básico de funcionalidades relacionadas | Código está um pouco desorganizado e difícil de seguir |
+| **Qualidade do Código** | Todas as variáveis e funções usam nomes descritivos, não há código não utilizado, segue convenções consistentes | A maioria do código segue boas práticas de nomes com código não utilizado mínimo | Nomes de variáveis pouco claros, contém código não utilizado, estilo inconsistente |
 
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso Legal**:
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, por favor note que as traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

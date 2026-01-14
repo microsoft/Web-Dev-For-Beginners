@@ -1,369 +1,639 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cfd4a15974168ca426d50c67682ab9d4",
-  "translation_date": "2025-10-24T21:55:50+00:00",
+  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
+  "translation_date": "2026-01-07T05:39:08+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "ro"
 }
 -->
-# Utilizarea unui Editor de Cod: Stăpânirea VSCode.dev
+# Folosirea unui Editor de Cod: Stăpânirea VSCode.dev
 
-Îți amintești în *The Matrix* când Neo trebuia să se conecteze la un terminal uriaș pentru a accesa lumea digitală? Instrumentele de dezvoltare web de astăzi spun o poveste complet diferită – capabilități incredibil de puternice accesibile de oriunde. VSCode.dev este un editor de cod bazat pe browser care aduce instrumente profesionale de dezvoltare pe orice dispozitiv cu conexiune la internet.
+Țineți minte în *The Matrix* când Neo trebuia să se conecteze la un terminal uriaș pentru a accesa lumea digitală? Instrumentele de dezvoltare web de azi spun povestea opusă – capabilități incredibil de puternice accesibile de oriunde. VSCode.dev este un editor de cod bazat pe browser care aduce unelte profesionale de dezvoltare pe orice dispozitiv cu conexiune la internet.
 
-Așa cum tiparul a făcut cărțile accesibile tuturor, nu doar scribilor din mănăstiri, VSCode.dev democratizează programarea. Poți lucra la proiecte de pe un computer din bibliotecă, un laborator școlar sau de oriunde ai acces la un browser. Fără instalări, fără limitări de tipul "Am nevoie de configurația mea specifică".
+Exact așa cum tiparnița a făcut cărțile accesibile tuturor, nu doar călugărilor din mănăstiri, VSCode.dev democratizează programarea. Poți lucra la proiecte de pe un calculator din bibliotecă, dintr-un laborator școlar sau de oriunde ai acces la browser. Fără instalări, fără limitări de genul „am nevoie de configurarea mea specifică”.
 
-Până la sfârșitul acestei lecții, vei înțelege cum să navighezi în VSCode.dev, să deschizi depozite GitHub direct în browser și să folosești Git pentru controlul versiunilor – toate abilități pe care dezvoltatorii profesioniști se bazează zilnic.
+La finalul acestei lecții vei înțelege cum să navighezi în VSCode.dev, să deschizi direct în browser depozite GitHub și să folosești Git pentru controlul versiunilor – toate abilități de care dezvoltatorii profesioniști depind zilnic.
 
-## Ce vei învăța
+## ⚡ Ce Poți Face în Următoarele 5 Minute
 
-După ce parcurgem acest material împreună, vei putea:
+**Cale Rapidă pentru Dezvoltatori Ocupați**
 
-- Naviga în VSCode.dev ca și cum ar fi a doua ta casă – găsind tot ce ai nevoie fără să te pierzi
-- Deschide orice depozit GitHub în browser și să începi să editezi imediat (asta e destul de magic!)
-- Folosi Git pentru a urmări modificările și a-ți salva progresul ca un profesionist
-- Îmbunătăți editorul cu extensii care fac programarea mai rapidă și mai distractivă
-- Crea și organiza fișierele proiectului cu încredere
+```mermaid
+flowchart LR
+    A[⚡ 5 minute] --> B[Vizitează vscode.dev]
+    B --> C[Conectează contul GitHub]
+    C --> D[Deschide orice depozit]
+    D --> E[Începe editarea imediat]
+```
+- **Minutul 1**: Accesează [vscode.dev](https://vscode.dev) - fără nevoie de instalare  
+- **Minutul 2**: Autentifică-te cu GitHub pentru a conecta depozitele tale  
+- **Minutul 3**: Încearcă trucul cu URL-ul: schimbă `github.com` în `vscode.dev/github` în orice URL de repo  
+- **Minutul 4**: Creează un fișier nou și urmărește cum funcționează evidențierea sintaxei automat  
+- **Minutul 5**: Fă o modificare și comite-o prin panoul de Source Control  
 
-## Ce vei avea nevoie
+**URL de Test Rapid**:  
+```
+# Transform this:
+github.com/microsoft/Web-Dev-For-Beginners
+
+# Into this:
+vscode.dev/github/microsoft/Web-Dev-For-Beginners
+```
+  
+**De ce contează asta**: În 5 minute vei experimenta libertatea de a programa oriunde cu unelte profesionale. Acesta reprezintă viitorul dezvoltării - accesibil, puternic și imediat.
+
+## 🗺️ Călătoria Ta de Învățare prin Dezvoltare în Cloud
+
+```mermaid
+journey
+    title De la configurare locală la măiestria dezvoltării în cloud
+    section Înțelegerea platformei
+      Descoperă editarea web: 4: You
+      Conectare la ecosistemul GitHub: 6: You
+      Stăpânește navigarea interfeței: 7: You
+    section Abilități de gestionare a fișierelor
+      Creează și organizează fișiere: 5: You
+      Editează cu evidențierea sintaxei: 7: You
+      Navighează structurile proiectului: 8: You
+    section Măiestria controlului versiunilor
+      Înțelege integrarea Git: 6: You
+      Exersează fluxurile de commit: 8: You
+      Stăpânește modelele de colaborare: 9: You
+    section Personalizare profesională
+      Instalează extensii puternice: 7: You
+      Configurează mediul de dezvoltare: 8: You
+      Construiește fluxuri de lucru personale: 9: You
+```  
+**Destinația Călătoriei Tale**: La finalul acestei lecții, vei stăpâni un mediu profesional de dezvoltare în cloud care funcționează de pe orice dispozitiv, permițându-ți să codezi cu aceleași unelte folosite de dezvoltatorii marilor companii tech.
+
+## Ce Vei Învăța
+
+După ce vom parcurge împreună acest proces, vei fi capabil să:
+
+- Navighezi în VSCode.dev ca și cum ar fi a doua ta casă – găsind tot ce ai nevoie fără să te rătăcești  
+- Deschizi orice depozit GitHub în browser și să începi editarea imediat (asta e chiar magie!)  
+- Folosești Git pentru a urmări modificările și a-ți salva progresul ca un profesionist  
+- Îți îmbunătățești editorul cu extensii care fac programarea mai rapidă și mai distractivă  
+- Creezi și organizezi fișierele proiectelor cu încredere  
+
+## Ce Vei Avea Nevoie
 
 Cerințele sunt simple:
 
-- Un cont gratuit [GitHub](https://github.com) (te vom ghida cum să-l creezi dacă este necesar)
-- Familiaritate de bază cu browserele web
-- Lecția de Baze GitHub oferă informații utile, deși nu este esențială
+- Un cont gratuit [GitHub](https://github.com) (te vom ghida cum să-l creezi dacă nu ai)  
+- Familiaritate de bază cu browserele web  
+- Lecția GitHub Basics oferă o pregătire utilă, deși nu este esențială  
 
-> 💡 **Nou pe GitHub?** Crearea unui cont este gratuită și durează câteva minute. Așa cum un card de bibliotecă îți oferă acces la cărți din întreaga lume, un cont GitHub deschide uși către depozite de cod de pe internet.
+> 💡 **Ești nou pe GitHub?** Crearea unui cont este gratuită și durează câteva minute. La fel cum un abonament la bibliotecă îți oferă acces la cărți din întreaga lume, un cont GitHub deschide uși la depozite de cod de pe internet.
 
-## De ce contează editorii de cod bazat pe web
+## 🧠 Prezentare Generală a Ecosistemului de Dezvoltare Cloud
 
-Înainte de internet, oamenii de știință de la diferite universități nu puteau împărtăși ușor cercetările. Apoi a apărut ARPANET în anii 1960, conectând computerele la distanță. Editorii de cod bazat pe web urmează același principiu – făcând instrumentele puternice accesibile indiferent de locația fizică sau dispozitiv.
+```mermaid
+mindmap
+  root((Stăpânirea VSCode.dev))
+    Beneficii Platformă
+      Accesibilitate
+        Independența Dispozitivului
+        Fără Instalare Necesara
+        Actualizări Instantanee
+        Acces Universal
+      Integrare
+        Conexiune GitHub
+        Sincronizare Repozitoriu
+        Persistența Setărilor
+        Gata pentru Colaborare
+    Flux de Dezvoltare
+      Gestionare Fișiere
+        Structura Proiectului
+        Evidențiere Sintaxă
+        Editare Multi-tab
+        Funcții de Salvare Automată
+      Control Versiuni
+        Integrare Git
+        Fluxuri de Lucru Commit
+        Gestionare Ramuri
+        Monitorizare Schimbări
+    Puterea Personalizării
+      Ecosistem Extensii
+        Unelte de Productivitate
+        Suport pentru Limbi
+        Opțiuni Temă
+        Comenzi Rapide Personalizate
+      Configurare Mediu
+        Preferințe Personale
+        Configurare Spațiu de Lucru
+        Integrare Unelte
+        Optimizare Flux de Lucru
+    Abilități Profesionale
+      Standardele Industriei
+        Control Versiuni
+        Calitatea Codului
+        Colaborare
+        Documentație
+      Pregătire pentru Cariere
+        Muncă Remote
+        Dezvoltare în Cloud
+        Proiecte de Echipa
+        Open Source
+```  
+**Principiul de Bază**: Mediile de dezvoltare bazate pe cloud reprezintă viitorul programării - oferind unelte profesionale accesibile, colaborative și independente de platformă.
 
-Un editor de cod servește ca spațiu de lucru pentru dezvoltare, unde scrii, editezi și organizezi fișierele de cod. Spre deosebire de editorii de text simpli, editorii de cod profesioniști oferă evidențierea sintaxei, detectarea erorilor și funcții de gestionare a proiectelor.
+## De Ce Contează Editorii de Cod Bazati pe Web
 
-VSCode.dev aduce aceste capabilități în browserul tău:
+Înainte de internet, oamenii de știință de la diverse universități nu puteau să-și împărtășească ușor cercetările. Apoi a apărut ARPANET în anii 1960, conectând computere la distanță. Editorii de cod bazati pe web urmează același principiu – fac unelte puternice accesibile indiferent de locația fizică sau dispozitiv.
 
-**Avantajele editării bazate pe web:**
+Un editor de cod servește ca spațiu de lucru pentru dezvoltare, unde scrii, editezi și organizezi fișierele de cod. Spre deosebire de editoarele simple de text, edițiile profesionale oferă evidențierea sintaxei, detectarea erorilor și facilități de management al proiectului.
 
-| Caracteristică | Descriere | Beneficiu Practic |
-|----------------|-----------|-------------------|
-| **Independență de platformă** | Rulează pe orice dispozitiv cu browser | Lucrează de pe diferite computere fără probleme |
-| **Fără instalare necesară** | Acces printr-un URL web | Evită restricțiile de instalare a software-ului |
-| **Actualizări automate** | Rulează mereu cea mai recentă versiune | Acces la funcții noi fără actualizări manuale |
-| **Integrare cu depozite** | Conexiune directă la GitHub | Editează codul fără gestionarea fișierelor locale |
+VSCode.dev aduce aceste capacități în browserul tău:
 
-**Implicații practice:**
-- Continuitatea muncii în diferite medii
-- Interfață consistentă indiferent de sistemul de operare
-- Capacități imediate de colaborare
-- Reducerea cerințelor de stocare locală
+**Avantaje ale editării bazate pe web:**
 
-## Explorarea VSCode.dev
+| Funcționalitate | Descriere | Beneficiu Practic |
+|-----------------|-----------|-------------------|
+| **Independență de platformă** | Rulează pe orice dispozitiv cu browser | Lucrezi de pe diferite computere fără probleme |
+| **Fără nevoie de instalare** | Acces printr-un URL web | Ocolești restricțiile de instalare software |
+| **Actualizări automate** | Rulează întotdeauna cea mai nouă versiune | Ai acces la funcții noi fără actualizări manuale |
+| **Integrare cu depozite** | Conexiune directă cu GitHub | Editezi codul fără să gestionezi fișiere local |
 
-Așa cum laboratorul lui Marie Curie conținea echipamente sofisticate într-un spațiu relativ simplu, VSCode.dev înglobează instrumente profesionale de dezvoltare într-o interfață de browser. Această aplicație web oferă aceeași funcționalitate de bază ca editorii de cod desktop.
+**Implicații practice:**  
+- Continuitate în muncă pe diferite medii  
+- Interfață consistentă indiferent de sistemul de operare  
+- Capacități imediate de colaborare  
+- Cerințe reduse de stocare locală  
 
-Începe prin a naviga la [vscode.dev](https://vscode.dev) în browserul tău. Interfața se încarcă fără descărcări sau instalări de sistem – o aplicare directă a principiilor calculului în cloud.
+## Explorând VSCode.dev
 
-### Conectarea contului GitHub
+Așa cum laboratorul lui Marie Curie conținea echipamente sofisticate într-un spațiu relativ simplu, VSCode.dev încorporează unelte profesionale de dezvoltare într-o interfață de browser. Această aplicație web oferă aceeași funcționalitate de bază ca editoarele desktop.
 
-Așa cum telefonul lui Alexander Graham Bell conecta locații îndepărtate, conectarea contului tău GitHub face legătura între VSCode.dev și depozitele tale de cod. Când ți se cere să te autentifici cu GitHub, este recomandat să accepți această conexiune.
+Începe prin a accesa [vscode.dev](https://vscode.dev) în browserul tău. Interfața se încarcă fără niciun download sau instalare – o aplicare directă a principiilor cloud computing.
 
-**Integrarea cu GitHub oferă:**
-- Acces direct la depozitele tale din editor
-- Setări și extensii sincronizate pe diferite dispozitive
-- Flux de lucru simplificat pentru salvarea pe GitHub
-- Mediu de dezvoltare personalizat
+### Conectarea Contului Tău GitHub
 
-### Familiarizarea cu noul tău spațiu de lucru
+Așa cum telefonul lui Alexander Graham Bell conecta locații îndepărtate, conectarea contului tău GitHub leagă VSCode.dev de depozitele tale de cod. Când ți se cere să te autentifici cu GitHub, este recomandat să accepți această conexiune.
 
-După ce totul se încarcă, vei vedea un spațiu de lucru frumos și curat, conceput pentru a te ajuta să te concentrezi pe ceea ce contează – codul tău!
+**Integrarea GitHub oferă:**  
+- Acces direct la depozitele tale în editor  
+- Setări și extensii sincronizate pe dispozitive  
+- Flux de lucru simplificat pentru salvare pe GitHub  
+- Mediu de dezvoltare personalizat  
 
-![Interfața implicită VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.ro.png)
+### Familiarizează-te cu Noul Tău Spațiu de Lucru
 
-**Iată un tur al zonei:**
-- **Activity Bar** (acea bandă din stânga): Navigarea principală cu Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩 și Settings ⚙️
-- **Sidebar** (panoul de lângă): Se schimbă pentru a-ți arăta informații relevante în funcție de ceea ce ai selectat
-- **Editor Area** (spațiul mare din mijloc): Aici se întâmplă magia – zona ta principală de codare
+Odată ce totul s-a încărcat, vei vedea un spațiu de lucru frumos curat, conceput să te mențină concentrat pe ceea ce contează – codul tău!
 
-**Ia-ți un moment să explorezi:**
-- Dă click pe pictogramele din Activity Bar și vezi ce face fiecare
-- Observă cum se actualizează sidebar-ul pentru a afișa informații diferite – destul de interesant, nu-i așa?
-- Vizualizarea Explorer (📁) este probabil locul unde vei petrece cel mai mult timp, așa că familiarizează-te cu ea
+![Interfața implicită VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.ro.png)
 
-## Deschiderea depozitelor GitHub
+**Iată un tur al cartierului:**  
+- **Bară de Activitate** (această bandă din stânga): Navigarea ta principală cu Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩 și Settings ⚙️  
+- **Sidebar** (panoul alăturat): Se schimbă pentru a-ți arăta informații relevante în funcție de ce ai selectat  
+- **Zona Editorului** (spațiul mare din mijloc): Aici se întâmplă magia – zona ta principală de codare  
 
-Înainte de internet, cercetătorii trebuiau să călătorească fizic la biblioteci pentru a accesa documente. Depozitele GitHub funcționează similar – sunt colecții de cod stocate la distanță. VSCode.dev elimină pasul tradițional de descărcare a depozitelor pe mașina locală înainte de editare.
+**Ia un moment să explorezi:**  
+- Apasă pe pictogramele din Bara de Activitate și vezi ce face fiecare  
+- Observă cum sidebar-ul se actualizează pentru a afișa informații diferite – drăguț, nu?  
+- Vizualizarea Explorer (📁) probabil că e locul unde vei petrece cea mai mare parte a timpului, așa că obișnuiește-te cu ea  
 
-Această capacitate permite accesul imediat la orice depozit public pentru vizualizare, editare sau contribuție. Iată două metode pentru deschiderea depozitelor:
+```mermaid
+flowchart TB
+    subgraph "Arhitectura Interfeței VSCode.dev"
+        A[Bară Activități] --> B[Explorer 📁]
+        A --> C[Căutare 🔍]
+        A --> D[Sursă Control 🌿]
+        A --> E[Extensii 🧩]
+        A --> F[Setări ⚙️]
+        
+        B --> G[Structura Fișierelor]
+        C --> H[Găsește & Înlocuiește]
+        D --> I[Stare Git]
+        E --> J[Marketplace Extensii]
+        F --> K[Configurare]
+        
+        L[Bara Laterală] --> M[Panou Context]
+        N[Zona Editorului] --> O[Fișiere Cod]
+        P[Terminal/Output] --> Q[Linii Comandă]
+    end
+```  
+## Deschiderea Depozitelor GitHub
 
-### Metoda 1: Calea simplă prin click
+Înainte de internet, cercetătorii trebuiau să călătorească fizic la biblioteci pentru a accesa documente. Depozitele GitHub funcționează similar – sunt colecții de cod stocate la distanță. VSCode.dev elimină pasul tradițional de a descărca depozitele pe mașina locală înainte de editare.
 
-Aceasta este perfectă atunci când începi de la zero în VSCode.dev și vrei să deschizi un depozit specific. Este simplă și prietenoasă pentru începători:
+Această capabilitate oferă acces imediat la orice depozit public pentru vizualizare, editare sau contribuție. Iată două metode de deschidere a depozitelor:
 
-**Cum să faci:**
+### Metoda 1: Varianta Point-and-Click
 
-1. Accesează [vscode.dev](https://vscode.dev) dacă nu ești deja acolo
-2. Caută butonul "Open Remote Repository" pe ecranul de bun venit și dă click pe el
+Perfectă când începi în VSCode.dev și vrei să deschizi un depozit specific. Simplu și prietenos pentru începători:
 
-   ![Deschide depozit la distanță](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.ro.png)
+**Cum se face:**  
 
-3. Introdu URL-ul unui depozit GitHub (încearcă acesta: `https://github.com/microsoft/Web-Dev-For-Beginners`)
+1. Mergi la [vscode.dev](https://vscode.dev) dacă nu ești deja acolo  
+2. Caută butonul "Open Remote Repository" pe ecranul de bun venit și dă click pe el  
+
+   ![Deschide depozit la distanță](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.ro.png)  
+
+3. Lipsește orice URL GitHub de depozit (încearcă asta: `https://github.com/microsoft/Web-Dev-For-Beginners`)  
 4. Apasă Enter și privește magia!
 
-**Sfat profesionist - Scurtătura Command Palette:**
+**Sfat de profesionist – Comanda rapidă Command Palette:**  
 
-Vrei să te simți ca un vrăjitor al codării? Încearcă această scurtătură de la tastatură: Ctrl+Shift+P (sau Cmd+Shift+P pe Mac) pentru a deschide Command Palette:
+Vrei să te simți ca un vrăjitor al codului? Încearcă comanda rapidă Ctrl+Shift+P (sau Cmd+Shift+P pe Mac) pentru a deschide Command Palette:
 
-![Meniul Command Palette](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ro.png)
+![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.ro.png)
 
-**Command Palette este ca un motor de căutare pentru tot ce poți face:**
-- Tastează "open remote" și va găsi deschizătorul de depozite pentru tine
-- Își amintește depozitele pe care le-ai deschis recent (super util!)
-- Odată ce te obișnuiești cu ea, te vei simți ca și cum ai codifica cu viteza luminii
-- Este practic versiunea VSCode.dev de "Hei Siri, dar pentru codare"
+**Command Palette este ca un motor de căutare pentru tot ce poți face:**  
+- Tastează „open remote” și va găsi deschizătorul de depozite pentru tine  
+- Își amintește depozitele deschise recent (foarte util!)  
+- Când te obișnuiești, vei simți că programezi cu viteza luminii  
+- E practic versiunea VSCode.dev a „Hei Siri, dar pentru programare”  
 
-### Metoda 2: Tehnica modificării URL-ului
+### Metoda 2: Tehnica Modificării URL-ului
 
-Așa cum HTTP și HTTPS folosesc protocoale diferite, dar mențin aceeași structură de domeniu, VSCode.dev folosește un model de URL care oglindește sistemul de adresare al GitHub. Orice URL de depozit GitHub poate fi modificat pentru a se deschide direct în VSCode.dev.
+Așa cum HTTP și HTTPS folosesc protocoale diferite păstrând structura domeniului aceeași, VSCode.dev folosește un tipar de URL care oglindește sistemul de adresare GitHub. Orice URL de depozit GitHub poate fi modificat pentru a se deschide direct în VSCode.dev.
 
-**Model de transformare a URL-ului:**
+**Model de transformare URL:**  
 
-| Tip de depozit | URL GitHub | URL VSCode.dev |
-|----------------|------------|----------------|
-| **Depozit public** | `github.com/microsoft/Web-Dev-For-Beginners` | `vscode.dev/github/microsoft/Web-Dev-For-Beginners` |
-| **Proiect personal** | `github.com/your-username/my-project` | `vscode.dev/github/your-username/my-project` |
-| **Orice depozit accesibil** | `github.com/their-username/awesome-repo` | `vscode.dev/github/their-username/awesome-repo` |
+| Tip Depozit | URL GitHub | URL VSCode.dev |  
+|-------------|------------|----------------|  
+| **Depozit Public** | `github.com/microsoft/Web-Dev-For-Beginners` | `vscode.dev/github/microsoft/Web-Dev-For-Beginners` |  
+| **Proiect Personal** | `github.com/numele-tau/my-project` | `vscode.dev/github/numele-tau/my-project` |  
+| **Orice Repo Accesibil** | `github.com/numele-lor/awesome-repo` | `vscode.dev/github/numele-lor/awesome-repo` |  
 
-**Implementare:**
-- Înlocuiește `github.com` cu `vscode.dev/github`
-- Menține toate celelalte componente ale URL-ului neschimbate
-- Funcționează cu orice depozit public accesibil
-- Oferă acces imediat la editare
+**Implementare:**  
+- Înlocuiește `github.com` cu `vscode.dev/github`  
+- Păstrează toate celelalte componente ale URL-ului neschimbate  
+- Funcționează cu orice depozit public accesibil  
+- Oferă acces imediat pentru editare  
 
-> 💡 **Sfat care îți poate schimba viața**: Salvează în marcaje versiunile VSCode.dev ale depozitelor tale preferate. Eu am marcaje precum "Edit My Portfolio" și "Fix Documentation" care mă duc direct în modul de editare!
+> 💡 **Sfat care îți schimbă viața**: Marchează versiunea VSCode.dev a depozitelor tale preferate. Eu am bookmark-uri ca „Editează Portofoliul” sau „Corectează Documentația” care mă duc direct în modul de editare!
 
-**Ce metodă ar trebui să folosești?**
-- **Calea prin interfață**: Excelentă când explorezi sau nu îți amintești exact numele depozitelor
-- **Trucul URL-ului**: Perfect pentru acces rapid când știi exact unde vrei să ajungi
+**Pe care metodă să o folosești?**  
+- **Varianta interfață**: Excelentă când explorezi sau nu-ți amintești exact numele depozitelor  
+- **Trucul URL**: Perfect pentru acces ultra-rapid când știi exact unde vrei să ajungi  
 
-## Lucrul cu fișiere și proiecte
+### 🎯 Verificare Pedagogică: Accesul la Dezvoltarea în Cloud
 
-Acum că ai deschis un depozit, să începem să construim! VSCode.dev îți oferă tot ce ai nevoie pentru a crea, edita și organiza fișierele de cod. Gândește-te la el ca la atelierul tău digital – fiecare unealtă este exact acolo unde ai nevoie.
+**Opresc și Reflect:** Tocmai ai învățat două metode de accesare a depozitelor de cod prin browser. Aceasta reprezintă o schimbare fundamentală în modul în care funcționează dezvoltarea.
 
-Să explorăm sarcinile zilnice care vor face parte din fluxul tău de lucru de programare.
+**Autoevaluare rapidă:**  
+- Poți explica de ce editarea bazată pe web elimină pasul tradițional „configurarea mediului de dezvoltare”?  
+- Ce avantaje oferă tehnica modificării URL-ului față de clonarea locală cu git?  
+- Cum schimbă această abordare modul în care ai putea contribui la proiecte open source?  
 
-### Crearea de fișiere noi
+**Conexiune cu lumea reală:** Companii majore precum GitHub, GitLab și Replit și-au construit platformele de dezvoltare pe aceste principii cloud-first. Înveți aceleași fluxuri de lucru folosite de echipe profesionale din întreaga lume.
 
-Așa cum organizarea planurilor într-un birou de arhitectură urmează o abordare structurată, crearea fișierelor în VSCode.dev urmează un proces bine definit. Sistemul suportă toate tipurile standard de fișiere pentru dezvoltarea web.
+**Întrebare provocatoare:** Cum ar putea dezvolatarea bazată pe cloud să schimbe modul în care se predă programarea în școli? Ia în considerare cerințele legate de dispozitive, managementul software-ului și posibilitățile colaborative.
 
-**Procesul de creare a fișierelor:**
+## Lucrul cu Fișiere și Proiecte
 
-1. Navighează la folderul țintă în bara laterală Explorer
-2. Plasează cursorul peste numele folderului pentru a dezvălui pictograma "New File" (📄+)
-3. Introdu numele fișierului, inclusiv extensia corespunzătoare (`style.css`, `script.js`, `index.html`)
-4. Apasă Enter pentru a crea fișierul
+Acum că ai un depozit deschis, hai să începem să construim! VSCode.dev îți oferă tot ce ai nevoie pentru a crea, edita și organiza fișierele de cod. Gândește-te la el ca la atelierul tău digital – fiecare unealtă este exact unde trebuie.
 
-![Crearea unui fișier nou](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.ro.png)
+Hai să intrăm în sarcinile de zi cu zi care vor constitui majoritatea fluxului tău de lucru.
 
-**Convenții de denumire:**
-- Folosește nume descriptive care indică scopul fișierului
-- Include extensii de fișiere pentru evidențierea corectă a sintaxei
-- Urmează modele de denumire consistente în proiecte
-- Folosește litere mici și cratime în loc de spații
+### Crearea Fișierelor Noi
 
-### Editarea și salvarea fișierelor
+Ca atunci când organizezi planuri într-un birou de arhitect, crearea fișierelor în VSCode.dev urmează o abordare structurată. Sistemul acceptă toate tipurile standard de fișiere web.
 
-Aici începe distracția adevărată! Editorul VSCode.dev este plin de funcții utile care fac codarea să se simtă fluidă și intuitivă. Este ca și cum ai avea un asistent inteligent pentru scris, dar pentru cod.
+**Procesul de creare fișier:**
+
+1. Navighează în folderul țintă din sidebar Explorer  
+2. Trece cursorul peste numele folderului pentru a scoate la iveală iconița „New File” (📄+)  
+3. Introdu numele fișierului cu extensia potrivită (`style.css`, `script.js`, `index.html`)  
+4. Apasă Enter pentru a crea fișierul  
+
+![Crearea unui fișier nou](../../../../translated_images/create-new-file.2814e609c2af9aeb.ro.png)
+
+**Convenții de denumire:**  
+- Folosește nume descriptive care indică scopul fișierului  
+- Include extensiile pentru evidențiere corectă a sintaxei  
+- Urmează un model consecvent de denumire în toate proiectele  
+- Folosește litere mici și cratime în loc de spații  
+
+### Editarea și Salvarea Fișierelor
+
+Aici începe distracția adevărată! Editorul VSCode.dev este plin de caracteristici utile ce fac programarea lină și intuitivă. E ca și cum ai avea un asistent de scris foarte deștept, dar pentru cod.
 
 **Fluxul tău de editare:**
 
-1. Dă click pe orice fișier din Explorer pentru a-l deschide în zona principală
-2. Începe să tastezi și observă cum VSCode.dev te ajută cu culori, sugestii și detectarea erorilor
-3. Salvează-ți munca cu Ctrl+S (Windows/Linux) sau Cmd+S (Mac) – deși salvează automat și el!
+1. Dă click pe orice fișier în Explorer pentru al deschide în zona principală  
+2. Începe să tastezi și privește cum VSCode.dev te ajută cu culori, sugestii și detectarea erorilor  
+3. Salvează-ți munca cu Ctrl+S (Windows/Linux) sau Cmd+S (Mac) – deși editorul salvează automat!  
 
-![Editarea fișierelor în VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.ro.png)
+![Editarea unui fișier în VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.ro.png)
 
-**Lucruri interesante care se întâmplă în timp ce codezi:**
-- Codul tău este evidențiat frumos, astfel încât să fie ușor de citit
-- VSCode.dev sugerează completări pe măsură ce tastezi (ca autocorect, dar mult mai inteligent)
-- Detectează greșelile și erorile înainte să salvezi
-- Poți avea mai multe fișiere deschise în tab-uri, la fel ca într-un browser
-- Totul se salvează automat în fundal
+**Ce se întâmplă în timp ce codezi:**  
+- Codul tău este frumos colorat pentru o lectură ușoară  
+- VSCode.dev sugerează completări pe măsură ce tastezi (ca un autocorrect, dar mult mai inteligent)  
+- Depistează greșelile și erorile înainte să salvezi  
+- Poți avea mai multe fișiere deschise în tab-uri, ca într-un browser  
+- Totul se salvează automat în fundal  
 
-> ⚠️ **Sfat rapid**: Deși auto-save te ajută, apăsarea Ctrl+S sau Cmd+S este încă un obicei bun. Salvează imediat totul și declanșează câteva funcții suplimentare utile, cum ar fi verificarea erorilor.
+> ⚠️ **Sfat rapid**: Chiar dacă auto-save te ajută, a obișnui să apeși Ctrl+S sau Cmd+S rămâne o practică bună. Salvează imediat orice și declanșează funcții suplimentare utile precum verificarea erorilor.
 
-### Controlul versiunilor cu Git
+### Controlul Versiunilor cu Git
 
-Așa cum arheologii creează înregistrări detaliate ale straturilor de excavare, Git urmărește modificările din codul tău de-a lungul timpului. Acest sistem păstrează istoria proiectului și îți permite să revii la versiunile anterioare atunci când este necesar. VSCode.dev include funcționalitate Git integrată.
+Așa cum arheologii creează înregistrări detaliate ale straturilor de săpătură, Git urmărește modificările codului tău în timp. Acest sistem păstrează istoricul proiectului și îți permite să revii la versiuni anterioare când e nevoie. VSCode.dev include funcționalitate Git integrată.
 
-**Interfața Source Control:**
+**Interfața Source Control:**  
 
-1. Accesează panoul Source Control prin pictograma 🌿 din Activity Bar
-2. Fișierele modificate apar în secțiunea "Changes"
-3. Codarea culorilor indică tipurile de modificări: verde pentru adăugiri, roșu pentru ștergeri
+1. Accesează panoul Source Control prin iconița 🌿 din Bara de Activitate  
+2. Fișierele modificate apar în secțiunea „Changes”  
+3. Codarea color indică tipurile de schimbări: verde pentru adaosuri, roșu pentru ștergeri  
 
-![Vizualizarea modificărilor în Source Control](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.ro.png)
+![Vizualizarea modificărilor în Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.ro.png)
 
-**Salvarea muncii tale (fluxul de lucru pentru commit):**
+**Salvarea muncii tale (fluxul de commit):**
 
 ```mermaid
 flowchart TD
-    A[Make changes to files] --> B[View changes in Source Control]
-    B --> C[Stage changes by clicking +]
-    C --> D[Write descriptive commit message]
-    D --> E[Click checkmark to commit]
-    E --> F[Changes pushed to GitHub]
+    A[Faceți modificări în fișiere] --> B[Vizualizați modificările în Controlul Surselor]
+    B --> C[Efectuați etape pentru modificări făcând clic pe +]
+    C --> D[Scrieți un mesaj descriptiv de commit]
+    D --> E[Faceți clic pe bifa pentru a face commit]
+    E --> F[Modificările sunt împinse pe GitHub]
+```  
+```mermaid
+stateDiagram-v2
+    [*] --> Modified: Editează fișierele
+    Modified --> Staged: Click pe + pentru a adăuga la etapă
+    Staged --> Modified: Click pe - pentru a elimina din etapă
+    Staged --> Committed: Adaugă mesaj & confirmă
+    Committed --> [*]: Sincronizează cu GitHub
+    
+    state Committed {
+        [*] --> LocalCommit
+        LocalCommit --> RemotePush: Sincronizare automată
+    }
+```  
+**Iată pașii tăi:**  
+- Apasă pe iconița "+" din dreptul fișierelor pe care vrei să le salvezi (astfel „stage”-ezi modificările)
+- Verifică încă o dată dacă ești mulțumit de toate modificările pregătite
+- Scrie o notă scurtă explicând ce ai făcut (asta este „mesajul tău de commit”)
+- Apasă butonul cu bifa pentru a salva totul pe GitHub
+- Dacă te răzgândești în legătură cu ceva, pictograma undo îți permite să renunți la modificări
+
+**Scrierea de mesaje bune de commit (este mai ușor decât crezi!):**
+- Doar descrie ce ai făcut, de exemplu „Adaugă formular de contact” sau „Remediază navigația stricată”
+- Păstrează-l scurt și la obiect – gândește-te la lungimea unui tweet, nu la un eseu
+- Începe cu verbe de acțiune ca „Adaugă”, „Remediază”, „Actualizează” sau „Elimină”
+- **Exemple bune**: „Adaugă meniu de navigare responsive”, „Remediază problemele layout-ului pe mobil”, „Actualizează culorile pentru accesibilitate mai bună”
+
+> 💡 **Sfat rapid de navigare**: Folosește meniul hamburger (☰) din stânga sus pentru a reveni la depozitul tău GitHub și a vedea schimbările făcute online. Este ca un portal între mediul tău de editare și „acasă” pe GitHub!
+
+## Îmbunătățirea Funcționalității cu Extensii
+
+Așa cum atelierul unui meșteșugar conține unelte specializate pentru diverse sarcini, VSCode.dev poate fi personalizat cu extensii care adaugă capabilități specifice. Aceste pluginuri dezvoltate de comunitate răspund nevoilor comune de dezvoltare, cum ar fi formatarea codului, previzualizarea live și integrarea avansată cu Git.
+
+Marketplace-ul de extensii găzduiește mii de unelte gratuite create de dezvoltatori din întreaga lume. Fiecare extensie rezolvă provocări particulare de flux de lucru, permițându-ți să construiești un mediu de dezvoltare personalizat, adaptat nevoilor și preferințelor tale.
+
+```mermaid
+mindmap
+  root((Extension Ecosystem))
+    Categorii Esențiale
+      Productivitate
+        Live Server
+        Auto Rename Tag
+        Bracket Pair Colorizer
+        GitLens
+      Calitatea Codului
+        Prettier
+        ESLint
+        Spell Checker
+        Error Lens
+      Suport pentru Limbaje
+        HTML CSS Support
+        JavaScript ES6
+        Python Extension
+        Markdown Preview
+      Tematici & UI
+        Dark+ Modern
+        Material Icon Theme
+        Peacock
+        Rainbow Brackets
+    Metode de Descoperire
+      Clasamente Populare
+        Număr de Descărcări
+        Evaluările Utilizatorilor
+        Actualizări Recente
+        Recenzii Comunitare
+      Recomandări
+        Sugestii pentru Spațiul de Lucru
+        Bazate pe Limbaj
+        Specifice Fluxului de Lucru
+        Standarde ale Echipei
 ```
+### Găsirea Extensiilor Perfecte pentru Tine
 
-**Iată procesul pas cu pas:**
-- Dă click pe pictograma "+" de lângă fișierele pe care vrei să le salvezi (asta le "pregătește")
-- Verifică dacă ești mulțumit de toate modificările pregătite
-- Scrie o notă scurtă care să explice ce ai făcut (acesta este "commit message-ul" tău)
-- Dă click pe butonul cu bifa pentru a salva totul pe GitHub
-- Dacă te răzgândești în privința a ceva, pictograma de anulare îți permite să renunți la modificări
+Marketplace-ul extensiilor este foarte bine organizat, astfel încât să nu te pierzi încercând să găsești ce ai nevoie. Este conceput să te ajute să descoperi atât unelte specifice, cât și chestii cool de care nici nu știai!
 
-**Scrierea unor mesaje de commit bune (mai ușor decât crezi!):**
-- Descrie pur și simplu ce ai făcut, cum ar fi "Adaugă formular de contact" sau "Rezolvă navigarea defectă"
-- Fii scurt și la obiect – gândește-te la lungimea unui tweet, nu la un eseu
-- Începe cu verbe de acțiune precum "Adaugă", "Rezolvă", "Actualizează" sau "Șterge"
-- **Exemple bune**: "Adaugă meniu de navigare responsiv", "Rezolvă problemele de aspect pe mobil", "Actualizează culorile pentru o mai bună accesibilitate"
+**Cum ajungi la marketplace:**
 
-> 💡 **Sfat rapid de navigare**: Folosește meniul hamburger (☰) din stânga sus pentru a reveni la depozitul tău GitHub și a vedea modificările tale online. Este ca un portal între mediul tău de editare și pagina principală a proiectului tău pe GitHub!
+1. Apasă pe pictograma Extensii (🧩) din Bara de Activitate
+2. Răsfoiește sau caută ceva anume
+3. Apasă pe orice arată interesant ca să afli mai multe
 
-## Îmbunătățirea funcționalității cu extensii
+![Interfața marketplace-ului de extensii](../../../../translated_images/extensions.eca0e0c7f59a10b5.ro.png)
 
-Așa cum atelierul unui meșteșugar conține instrumente specializate pentru diferite sarcini, VSCode.dev poate fi personalizat cu extensii care adaugă capabilități specifice. Aceste pluginuri dezvoltate de comunitate abordează nevoile comune de dezvoltare, cum ar fi formatarea codului, previzualizarea în timp real și integrarea îmbunătățită cu Git.
+**Ce vei vedea acolo:**
 
-Piața de extensii găzduiește mii de instrumente gratuite create de dezvoltatori din întreaga lume. Fiecare extensie rezolvă provocări specifice ale fluxului de lucru, permițându-ți să construiești un mediu de dezvoltare personalizat, adaptat nevoilor și preferințelor tale.
+| Secțiune | Ce conține | De ce este utilă |
+|----------|------------|-----------------|
+| **Instalate** | Extensiile pe care le-ai adăugat deja | Kitul tău personal de unelte de codare |
+| **Populare** | Favoritele mulțimii | Ce folosesc majoritatea dezvoltatorilor |
+| **Recomandate** | Sugestii inteligente pentru proiectul tău | Recomandările utile ale VSCode.dev |
 
-### Găsirea extensiilor perfecte
-
-Piața de extensii este foarte bine organizată, astfel încât să nu te pierzi încercând să găsești ceea ce ai nevoie. Este concepută pentru a te ajuta să descoperi atât instrumente specifice, cât și lucruri interesante pe care nici măcar nu știai că le cauți!
-
-**Accesarea pieț
-- Fiecare extensie afișează evaluări, numărul de descărcări și recenzii reale ale utilizatorilor
-- Primești capturi de ecran și descrieri clare despre ce face fiecare extensie
-- Totul este marcat clar cu informații despre compatibilitate
+**Ce face navigarea ușoară:**
+- Fiecare extensie afișează evaluări, numărul de descărcări și review-uri reale de la utilizatori
+- Vezi capturi de ecran și descrieri clare despre ce face fiecare extensie
+- Totul este clar marcat cu informații de compatibilitate
 - Sunt sugerate extensii similare pentru a putea compara opțiunile
 
-### Instalarea extensiilor (E super simplu!)
+### Instalarea Extensiilor (Este Foarte Simplu!)
 
-Adăugarea de funcționalități noi editorului tău este la fel de simplă ca apăsarea unui buton. Extensiile se instalează în câteva secunde și încep să funcționeze imediat – fără restartări, fără așteptări.
+Adăugarea de puteri noi editorului tău este la fel de simplă ca apăsarea unui buton. Extensiile se instalează în câteva secunde și încep să funcționeze imediat – fără reporniri, fără așteptări.
 
-**Tot ce trebuie să faci este:**
+**Iată ce trebuie să faci:**
 
-1. Caută ceea ce îți dorești (încearcă să cauți "live server" sau "prettier")
-2. Apasă pe extensia care pare interesantă pentru a vedea mai multe detalii
+1. Caută ce vrei (încearcă „live server” sau „prettier”)
+2. Apasă pe una care pare bună pentru mai multe detalii
 3. Citește ce face și verifică evaluările
-4. Apasă butonul albastru "Install" și ai terminat!
+4. Apasă butonul albastru „Install” și gata!
 
 ![Instalarea extensiilor](../../../../8-code-editor/images/install-extension.gif)
 
-**Ce se întâmplă în culise:**
+**Ce se întâmplă în fundal:**
 - Extensia se descarcă și se configurează automat
 - Funcționalitățile noi apar imediat în interfața ta
-- Totul începe să funcționeze imediat (serios, e atât de rapid!)
-- Dacă ești autentificat, extensia se sincronizează pe toate dispozitivele tale
+- Totul începe să funcționeze instantaneu (serios, chiar așa de rapid!)
+- Dacă ești autentificat, extensia se sincronizează cu toate dispozitivele tale
 
-**Câteva extensii pe care le recomand pentru început:**
-- **Live Server**: Vezi cum site-ul tău se actualizează în timp real pe măsură ce scrii cod (e magic!)
-- **Prettier**: Face ca codul tău să arate curat și profesionist automat
-- **Auto Rename Tag**: Modifică un tag HTML și partenerul său se actualizează automat
-- **Bracket Pair Colorizer**: Codifică culorile parantezelor astfel încât să nu te pierzi
-- **GitLens**: Îmbunătățește funcționalitățile Git cu o mulțime de informații utile
+**Câteva extensii pe care ți le recomand:**
+- **Live Server**: Vezi site-ul actualizându-se în timp real pe măsură ce scrii cod (asta e magic!)
+- **Prettier**: Face codul să arate curat și profesional automat
+- **Auto Rename Tag**: Schimbi o etichetă HTML și cealaltă pereche se actualizează
+- **Bracket Pair Colorizer**: Codifică culoarea parantezelor ca să nu te mai pierzi niciodată
+- **GitLens**: Îmbunătățește funcțiile Git cu o mulțime de informații utile
 
-### Personalizarea extensiilor tale
+### Personalizarea Extensiilor Tale
 
-Majoritatea extensiilor vin cu setări pe care le poți ajusta pentru a le face să funcționeze exact cum îți place. Gândește-te la asta ca la ajustarea scaunului și oglinzilor într-o mașină – fiecare are preferințele sale!
+Majoritatea extensiilor vin cu setări pe care le poți ajusta ca să funcționeze exact cum îți place. Gândește-te ca și cum ți-ai ajusta scaunul și oglinzile într-o mașină – fiecare are preferințele sale!
 
-**Cum să ajustezi setările extensiilor:**
+**Cum să modifici setările extensiei:**
 
 1. Găsește extensia instalată în panoul Extensii
-2. Caută pictograma mică de rotiță (⚙️) lângă numele ei și apasă pe ea
-3. Alege "Extension Settings" din meniul derulant
-4. Ajustează setările până când se potrivesc perfect cu stilul tău de lucru
+2. Caută pictograma mică cu rotiță (⚙️) lângă numele ei și apasă pe ea
+3. Alege „Extension Settings” din meniul derulant
+4. Ajustează ce trebuie până când se potrivește perfect fluxului tău de lucru
 
-![Personalizarea setărilor extensiilor](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.ro.png)
+![Personalizarea setărilor extensiei](../../../../translated_images/extension-settings.21c752ae4f4cdb78.ro.png)
 
-**Lucruri comune pe care ai putea dori să le ajustezi:**
-- Cum este formatat codul tău (taburi vs spații, lungimea liniilor etc.)
-- Ce combinații de taste declanșează diferite acțiuni
-- Tipurile de fișiere cu care extensia ar trebui să funcționeze
-- Activarea sau dezactivarea anumitor funcționalități pentru a păstra lucrurile simple
+**Setări comune pe care s-ar putea să vrei să le modifici:**
+- Cum este formatat codul tău (taburi vs spații, lungimea liniei etc.)
+- Ce comenzi rapide de tastatură declanșează acțiuni diferite
+- Cu ce tipuri de fișiere ar trebui să funcționeze extensia
+- Activarea sau dezactivarea anumitor funcții pentru a păstra ordinea
 
-### Organizarea extensiilor tale
+### Menținerea Extensiilor Organizate
 
-Pe măsură ce descoperi mai multe extensii interesante, vei dori să îți păstrezi colecția ordonată și funcțională. VSCode.dev face acest lucru foarte ușor de gestionat.
+Pe măsură ce descoperi mai multe extensii interesante, vei vrea să-ți păstrezi colecția ordonată și să funcționeze fără probleme. VSCode.dev face acest lucru foarte ușor de gestionat.
 
-**Opțiuni pentru gestionarea extensiilor:**
+**Opțiunile tale de gestionare a extensiilor:**
 
-| Ce poți face | Când este util | Sfat |
-|--------|---------|----------|
-| **Dezactivează** | Testarea dacă o extensie cauzează probleme | Mai bine decât să o dezinstalezi dacă crezi că vei avea nevoie de ea din nou |
-| **Dezinstalează** | Eliminarea completă a extensiilor de care nu ai nevoie | Menține mediul curat și rapid |
-| **Actualizează** | Obținerea celor mai noi funcționalități și remedieri de erori | De obicei se întâmplă automat, dar merită verificat |
+| Ce poți face | Când este util | Sfat util |
+|--------------|----------------|-----------|
+| **Dezactivează** | Când testezi dacă o extensie cauzează probleme | Mai bine decât să o dezinstalezi dacă vrei să o păstrezi |
+| **Dezinstalează** | Pentru a elimina complet extensiile nefolositoare | Păstrează-ți mediul curat și rapid |
+| **Actualizează** | Pentru a obține cele mai noi funcții și corecții | De obicei se întâmplă automat, dar merită verificat |
 
 **Cum îmi place să gestionez extensiile:**
-- La fiecare câteva luni, revizuiesc ce am instalat și elimin ceea ce nu folosesc
-- Mențin extensiile actualizate pentru a beneficia de cele mai noi îmbunătățiri și remedieri de securitate
-- Dacă ceva pare lent, dezactivez temporar extensiile pentru a vedea dacă una dintre ele este cauza
-- Citesc notele de actualizare când extensiile primesc actualizări majore – uneori apar funcționalități noi interesante!
+- La câteva luni, revizuiesc ce am instalat și elimin ce nu mai folosesc
+- Păstrez extensiile actualizate pentru a avea cele mai noi îmbunătățiri și patch-uri de securitate
+- Dacă ceva pare lent, dezactivez temporar extensiile pentru a vedea dacă una e de vină
+- Citesc notele de actualizare când extensiile primesc update-uri majore – uneori apar funcții noi faine!
 
-> ⚠️ **Sfat pentru performanță**: Extensiile sunt grozave, dar prea multe pot încetini lucrurile. Concentrează-te pe cele care îți fac cu adevărat viața mai ușoară și nu ezita să dezinstalezi cele pe care nu le folosești niciodată.
+> ⚠️ **Sfat de performanță**: Extensiile sunt grozave, dar prea multe pot încetini mediul. Concentrează-te pe cele care îți fac viața mai ușoară și nu te teme să dezinstalezi pe cele pe care nu le folosești niciodată.
+
+### 🎯 Verificare Pedagogică: Personalizarea Mediului de Dezvoltare
+
+**Înțelegerea Arhitecturii**: Ai învățat să personalizezi un mediu profesional de dezvoltare folosind extensii create de comunitate. Aceasta reflectă modul în care echipele enterprise construiesc toolchain-uri standardizate.
+
+**Concepte cheie asimilate**:
+- **Descoperirea extensiilor**: Găsirea uneltelor care rezolvă provocări specifice de dezvoltare
+- **Configurarea mediului**: Personalizarea uneltelor pentru a se potrivi preferințelor personale sau de echipă
+- **Optimizarea performanței**: Echilibrarea funcționalității cu performanța sistemului
+- **Colaborarea comunitară**: Folosirea uneltelor create de comunitatea globală de dezvoltatori
+
+**Legătura cu industrie**: Ecosistemele de extensii alimentează platforme majore de dezvoltare precum VS Code, Chrome DevTools și IDE-uri moderne. Înțelegerea modului de evaluare, instalare și configurare a extensiilor este esențială pentru fluxurile profesionale de dezvoltare.
+
+**Întrebare de reflecție**: Cum ai aborda configurarea unui mediu de dezvoltare standardizat pentru o echipă de 10 dezvoltatori? Ține cont de consistență, performanță și preferințele individuale.
+
+## 📈 Cronologia Stăpânirii Dezvoltării în Cloud
+
+```mermaid
+timeline
+    title Parcurs Profesional de Dezvoltare Cloud
+    
+    section Baze ale Platformei
+        Înțelegerea Dezvoltării Cloud
+            : Stăpânește conceptele de editare web-based
+            : Conectează modelele de integrare GitHub
+            : Navigatează interfețe profesionale
+    
+    section Stăpânirea Fluxului de Lucru
+        Gestionarea Fișierelor și Proiectelor
+            : Creează structuri de proiect organizate
+            : Stăpânește avantajele evidențierii sintaxei
+            : Gestionează fluxurile de lucru cu mai multe fișiere
+        
+        Integrarea Controlului Versiunilor
+            : Înțelege vizualizarea Git
+            : Exersează standardele mesajelor de commit
+            : Stăpânește fluxurile de urmărire a modificărilor
+    
+    section Personalizarea Mediului
+        Ecosistemul de Extensii
+            : Descoperă extensii pentru productivitate
+            : Configurează preferințele de dezvoltare
+            : Optimizează performanța vs funcționalitatea
+        
+        Configurare Profesională
+            : Construiește fluxuri de lucru coerente
+            : Creează configurații reutilizabile
+            : Stabilește standarde de echipă
+    
+    section Pregătirea pentru Industrie
+        Dezvoltare Cloud-First
+            : Stăpânește practicile de dezvoltare remote
+            : Înțelege fluxurile de lucru colaborative
+            : Construiește abilități independente de platformă
+        
+        Practici Profesionale
+            : Urmează standardele industriei
+            : Creează fluxuri de lucru ușor de întreținut
+            : Pregătește-te pentru medii de echipă
+```
+**🎓 Punct de absolvire**: Ai stăpânit cu succes dezvoltarea în cloud folosind aceleași unelte și fluxuri folosite de dezvoltatorii profesioniști ai marilor companii tech. Aceste competențe reprezintă viitorul dezvoltării software.
+
+**🔄 Abilități la nivel următor**:
+- Pregătit să explorezi platforme avansate de dezvoltare cloud (Codespaces, GitPod)
+- Echipat pentru a lucra în echipe distribuite de dezvoltare
+- Capabil să contribui la proiecte open source la nivel global
+- Fundament pus pentru DevOps moderne și practici de integrare continuă
 
 ## Provocarea Agentului GitHub Copilot 🚀
 
-La fel ca abordarea structurată pe care NASA o folosește pentru misiunile spațiale, această provocare implică aplicarea sistematică a abilităților VSCode.dev într-un scenariu complet de flux de lucru.
+Ca abordarea structurată folosită de NASA pentru misiuni spațiale, această provocare implică aplicarea sistematică a abilităților VSCode.dev într-un scenariu complet de flux de lucru.
 
-**Obiectiv:** Demonstrează competența în utilizarea VSCode.dev prin stabilirea unui flux de lucru complet pentru dezvoltarea web.
+**Obiectiv:** Demonstrează competența cu VSCode.dev stabilind un flux complet de dezvoltare web.
 
-**Cerințele proiectului:** Folosind asistența modului Agent, completează aceste sarcini:
-1. Clonează un depozit existent sau creează unul nou
-2. Stabilește o structură funcțională de proiect cu fișiere HTML, CSS și JavaScript
+**Cerințe proiect:** Folosind modul Agent, finalizează aceste sarcini:
+1. Fă fork la un depozit existent sau creează unul nou
+2. Configurează o structură funcțională de proiect cu fișiere HTML, CSS și JavaScript
 3. Instalează și configurează trei extensii care îmbunătățesc dezvoltarea
-4. Exersează controlul versiunilor cu mesaje descriptive de commit
-5. Experimentează cu crearea și modificarea ramurilor de funcționalitate
-6. Documentează procesul și învățăturile într-un fișier README.md
+4. Practică controlul versiunilor cu mesaje de commit descriptive
+5. Experimentează crearea și modificarea de branch-uri pentru funcționalități
+6. Documentează procesul și ce ai învățat într-un fișier README.md
 
-Acest exercițiu consolidează toate conceptele VSCode.dev într-un flux de lucru practic care poate fi aplicat la proiecte viitoare de dezvoltare.
+Acest exercițiu consolidează toate conceptele VSCode.dev într-un flux de lucru practic aplicabil la proiecte viitoare.
 
 Află mai multe despre [modul agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) aici.
 
 ## Temă
 
-E timpul să testezi aceste abilități! Am pregătit un proiect practic care îți va permite să exersezi tot ce am discutat: [Creează un site web de tip CV folosind VSCode.dev](./assignment.md)
+Este timpul să testezi aceste abilități în practică! Am un proiect hands-on care te va lăsa să exersezi tot ce am acoperit: [Creează un site de CV folosind VSCode.dev](./assignment.md)
 
-Această temă te ghidează în construirea unui site web profesional de tip CV, complet în browserul tău. Vei folosi toate funcționalitățile VSCode.dev pe care le-am explorat, iar la final vei avea atât un site web bine realizat, cât și încredere solidă în noul tău flux de lucru.
+Această temă te ghidează pas cu pas pentru a construi un site profesional de CV complet în browser. Vei folosi toate funcțiile VSCode.dev pe care le-am explorat, iar la final vei avea un site bine realizat și o mare încredere în noul tău flux de lucru.
 
-## Continuă să explorezi și să îți dezvolți abilitățile
+## Continuă să Explorezi și să-ți Dezvolți Abilitățile
 
-Acum ai o bază solidă, dar există atât de multe lucruri interesante de descoperit! Iată câteva resurse și idei pentru a-ți duce abilitățile VSCode.dev la nivelul următor:
+Ai o bază solidă acum, dar mai sunt o mulțime de chestii faine de descoperit! Iată câteva resurse și idei pentru a-ți duce abilitățile VSCode.dev la nivelul următor:
 
-**Documentație oficială de reținut:**
-- [Documentația VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) – Ghidul complet pentru editarea în browser
-- [GitHub Codespaces](https://docs.github.com/en/codespaces) – Pentru momentele în care vrei și mai multă putere în cloud
+**Documentație oficială ce merită salvată:**
+- [Documentația VSCode Web](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) – Ghidul complet pentru editare în browser
+- [GitHub Codespaces](https://docs.github.com/en/codespaces) – Pentru când vrei mai multă putere în cloud
 
-**Funcționalități interesante de experimentat:**
-- **Scurtături de tastatură**: Învață combinațiile de taste care te vor face să te simți ca un ninja al codării
-- **Setări pentru spațiul de lucru**: Configurează medii diferite pentru diferite tipuri de proiecte
-- **Spații de lucru multi-root**: Lucrează pe mai multe depozite în același timp (foarte util!)
-- **Integrarea terminalului**: Accesează instrumentele de linie de comandă direct din browser
+**Funcții faine de încercat:**
+- **Comenzi rapide de tastatură**: Învață combinațiile care te vor face să te simți ca un ninja al codării
+- **Setări workspace**: Configurează medii diferite pentru tipuri diferite de proiecte
+- **Multi-root Workspaces**: Lucrează la mai multe depozite simultan (super util!)
+- **Integrare terminal**: Accesează unelte de linie de comandă direct în browser
 
-**Idei pentru exersare:**
-- Implică-te în proiecte open-source și contribuie folosind VSCode.dev – e o modalitate excelentă de a da ceva înapoi!
-- Testează diferite extensii pentru a găsi configurația perfectă
-- Creează șabloane de proiect pentru tipurile de site-uri pe care le construiești cel mai des
-- Exersează fluxurile de lucru Git, cum ar fi ramificarea și îmbinarea – aceste abilități sunt de aur în proiectele de echipă
-
----
-
-**Ai stăpânit dezvoltarea în browser!** 🎉 La fel cum invenția instrumentelor portabile le-a permis oamenilor de știință să facă cercetări în locații îndepărtate, VSCode.dev îți permite să scrii cod profesional de pe orice dispozitiv conectat la internet.
-
-Aceste abilități reflectă practicile actuale din industrie – mulți dezvoltatori profesioniști folosesc medii de dezvoltare bazate pe cloud pentru flexibilitatea și accesibilitatea lor. Ai învățat un flux de lucru care se potrivește atât proiectelor individuale, cât și colaborărilor în echipă.
-
-Aplică aceste tehnici la următorul tău proiect de dezvoltare! 🚀
+**Idei pentru practică:**
+- Implică-te în proiecte open source și contribuie folosind VSCode.dev – e o modalitate grozavă de a da înapoi comunității!
+- Încearcă diferite extensii pentru a-ți găsi configurarea perfectă
+- Creează template-uri de proiecte pentru tipurile de site-uri pe care le faci cel mai des
+- Exersează fluxuri Git precum branching și merging – aceste aptitudini sunt aur pentru proiecte în echipă
 
 ---
 
+**Ai stăpânit dezvoltarea în browser!** 🎉 Așa cum invenția instrumentelor portabile a permis oamenilor de știință să cerceteze în locuri îndepărtate, VSCode.dev îți permite să codezi profesionist de pe orice dispozitiv conectat la internet.
+
+Aceste competențe reflectă practicile curente din industrie – mulți dezvoltatori profesioniști folosesc medii de dezvoltare în cloud pentru flexibilitate și accesibilitate. Ai învățat un flux de lucru scalabil de la proiecte individuale până la colaborări mari în echipă.
+
+Aplică aceste tehnici în următorul tău proiect de dezvoltare! 🚀
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa natală ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere automatizată AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă utilizarea unei traduceri profesionale realizate de un traducător uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

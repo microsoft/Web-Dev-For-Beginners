@@ -23,7 +23,7 @@ Toto rozšírenie môže byť používateľom spustené ad hoc po zadaní API k�
 
 ### Kredity
 
-![zelené rozšírenie prehliadača](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.sk.png)
+![zelené rozšírenie prehliadača](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sk.png)
 
 ## Kredity
 

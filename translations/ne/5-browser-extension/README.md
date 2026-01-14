@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### क्रेडिट्स
 
-![हरियो ब्राउजर एक्स्टेन्सन](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.ne.png)
+![हरियो ब्राउजर एक्स्टेन्सन](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ne.png)
 
 ## क्रेडिट्स
 

@@ -1,0 +1,17 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+  "translation_date": "2026-01-08T14:59:08+00:00",
+  "source_file": "6-space-game/4-collision-detection/your-work/README.md",
+  "language_code": "te"
+}
+-->
+ఇది ఒక ప్లేస్‌హోల్డర్, గురించి ఉద్దేశపూర్వకంగా ఖాళీగా bırakబడింది.
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**అస्वीరణ**:  
+ఈ పత్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ఉపయోగించి అనువదించబడింది. మేము ఖచ్చితత్వానికి ప్రయత్నించినప్పటికీ, ఆటోమేటెడ్ అనువాదాల్లో పొరపాట్లు లేదా తప్పుల болушే అవకాశం ఉంది. మూల భాషలోని అసలు పత్రాన్ని అధికారిక మూలంగా పరిగణించాలి. ముఖ్యమైన సమాచారానికి నిపుణుల చేత manu అనువాదం చేయించుకోవడం సిఫారసు చేయబడుతుంది. ఈ అనువాదం ఉపయోగపడే కారణంగా జరిగిన ఏవైనా తప్పుల గానీ, తప్ప అర్థం చేసుకోవడాల గానీ మా పక్షాన బాధ్యత తీసుకోబడదు.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

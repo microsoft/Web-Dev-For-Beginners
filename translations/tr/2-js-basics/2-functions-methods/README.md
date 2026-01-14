@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Temelleri: Metotlar ve Fonksiyonlar
 
-![JavaScript Temelleri - Fonksiyonlar](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.tr.png)
+![JavaScript Temelleri - Fonksiyonlar](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.tr.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -1,102 +1,213 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46d665af66e51524598af34a42b9b663",
-  "translation_date": "2025-10-24T19:24:51+00:00",
+  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
+  "translation_date": "2026-01-07T01:18:46+00:00",
   "source_file": "9-chat-project/README.md",
   "language_code": "sw"
 }
 -->
-# Jinsi ya Kujenga Msaidizi wa Mazungumzo kwa Kutumia AI
+# Jenga Msaidizi wa Chat kwa AI
 
-Unakumbuka kwenye Star Trek jinsi wafanyakazi walivyokuwa wakiongea na kompyuta ya meli, wakiuliza maswali magumu na kupata majibu ya kina? Kile kilichoonekana kama hadithi ya kisayansi katika miaka ya 1960 sasa ni kitu unachoweza kujenga kwa kutumia teknolojia za mtandao unazozijua tayari.
+Kumbuka kwenye Star Trek wanapotumia mazungumzo ya kawaida na kompyuta ya meli, wakimuuliza maswali magumu na kupata majibu yenye fikira? Kinachokuwa kama hadithi ya sayansi katika miaka ya 1960 sasa ni kitu ambacho unaweza kujenga kwa kutumia teknolojia za wavuti unazozijua tayari.
 
-Katika somo hili, tutatengeneza msaidizi wa mazungumzo wa AI kwa kutumia HTML, CSS, JavaScript, na muunganisho wa nyuma. Utajifunza jinsi ujuzi ule ule unaojifunza unaweza kuunganishwa na huduma za AI zenye uwezo wa kuelewa muktadha na kutoa majibu yenye maana.
+Katika somo hili, tutaunda msaidizi wa AI wa mazungumzo kwa kutumia HTML, CSS, JavaScript, na muunganisho wa nyuma. Utagundua jinsi ujuzi ule ule ambao umekuwa ukijifunza unaweza kuunganishwa na huduma zenye nguvu za AI ambazo zinaweza kuelewa muktadha na kutoa majibu yenye maana.
 
-Fikiria AI kama kuwa na ufikiaji wa maktaba kubwa ambayo si tu inapata taarifa bali pia inazichanganya kuwa majibu yanayofaa kulingana na maswali yako maalum. Badala ya kutafuta kupitia maelfu ya kurasa, unapata majibu ya moja kwa moja na ya muktadha.
+Fikiria AI kama kuwa na upatikanaji wa maktaba kubwa ambayo si tu inatafuta taarifa bali pia inaunda majibu yaliyo na maelezo yaliyounganishwa na maswali yako maalum. Badala ya kutafuta kupitia maelfu ya kurasa, unapata majibu ya moja kwa moja na yenye muktadha.
 
-Muunganisho unafanyika kupitia teknolojia za mtandao zinazofanya kazi pamoja. HTML inaunda kiolesura cha mazungumzo, CSS inashughulikia muundo wa kuona, JavaScript inasimamia mwingiliano wa mtumiaji, na API ya nyuma inaunganisha kila kitu na huduma za AI. Ni sawa na jinsi sehemu tofauti za orchestra zinavyofanya kazi pamoja kuunda symphony.
+Muunganisho hufanyika kupitia teknolojia za wavuti zinazojulikana zinazofanya kazi pamoja. HTML huunda kiolesura cha mazungumzo, CSS hushughulikia muundo wa kuona, JavaScript inasimamia mwingiliano wa mtumiaji, na API ya nyuma inaunganisha kila kitu na huduma za AI. Hii ni sawa na jinsi sehemu tofauti za orkesta zinavyofanya kazi pamoja kuunda sinfonia.
 
-Kimsingi tunajenga daraja kati ya mawasiliano ya kawaida ya binadamu na usindikaji wa mashine. Utajifunza utekelezaji wa kiufundi wa muunganisho wa huduma za AI na mifumo ya muundo inayofanya mwingiliano kuwa wa kawaida.
+Kwa msingi, tunajenga daraja kati ya mawasiliano ya asili ya binadamu na usindikaji wa mashine. Utajifunza utekelezaji wa kiufundi wa muunganisho wa huduma za AI na mifumo ya muundo inayofanya mwingiliano hisike kwa njia ya asili.
 
-Mwisho wa somo hili, muunganisho wa AI hautahisi kama mchakato wa ajabu bali kama API nyingine unayoweza kufanya kazi nayo. Utaelewa mifumo ya msingi inayowezesha programu kama ChatGPT na Claude, kwa kutumia kanuni zile zile za maendeleo ya mtandao unazojifunza.
+Mwisho wa somo hili, muunganisho wa AI utakuhisi si kama mchakato wa ajabu bali kama API nyingine unayoweza kutumia. Utatafuta mifumo ya msingi inayochochea programu kama ChatGPT na Claude, ukitumia kanuni zile zile za maendeleo ya wavuti ulizojifunza.
 
-Hivi ndivyo mradi wako wa mwisho utakavyoonekana:
+## ⚡ Unaweza Kufanya Nini Katika Dakika 5 Zijazo
 
-![Kiolesura cha programu ya mazungumzo kinachoonyesha mazungumzo kati ya mtumiaji na msaidizi wa AI](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.sw.png)
-
-## Kuelewa AI: Kutoka Siri hadi Ustadi
-
-Kabla ya kuingia kwenye msimbo, hebu tuelewe tunachofanya kazi nacho. Ikiwa umewahi kutumia API, unajua muundo wa msingi: tuma ombi, pokea jibu.
-
-API za AI zinafuata muundo sawa, lakini badala ya kupata data iliyohifadhiwa kutoka kwenye hifadhidata, zinazalisha majibu mapya kulingana na mifumo iliyojifunza kutoka kwa maandishi mengi. Fikiria kama tofauti kati ya mfumo wa katalogi ya maktaba na mtaalamu wa maktaba anayejua kuchanganya taarifa kutoka vyanzo mbalimbali.
-
-### "Generative AI" ni Nini Haswa?
-
-Fikiria jinsi Jiwe la Rosetta lilivyowezesha wasomi kuelewa hieroglyphics za Misri kwa kutafuta mifumo kati ya lugha zinazojulikana na zisizojulikana. Miundo ya AI inafanya kazi kwa njia sawa – inatafuta mifumo katika maandishi mengi ili kuelewa jinsi lugha inavyofanya kazi, kisha kutumia mifumo hiyo kutoa majibu yanayofaa kwa maswali mapya.
-
-**Hebu niweke wazi kwa kulinganisha rahisi:**
-- **Hifadhidata ya jadi**: Kama kuuliza cheti chako cha kuzaliwa – unapata hati ile ile kila wakati
-- **Injini ya utafutaji**: Kama kuuliza mtaalamu wa maktaba kutafuta vitabu kuhusu paka – wanakuonyesha kilichopo
-- **Generative AI**: Kama kuuliza rafiki mwenye ujuzi kuhusu paka – wanakuambia mambo ya kuvutia kwa maneno yao wenyewe, kulingana na unachotaka kujua
+**Njia ya Kuanzisha Haraka kwa Waendelezaji Walioko Mbusy**
 
 ```mermaid
-graph LR
-    A[Your Question] --> B[AI Model]
-    B --> C[Pattern Recognition]
-    C --> D[Content Generation]
-    D --> E[Contextual Response]
-    
-    F[Training Data<br/>Books, Articles, Web] --> B
+flowchart LR
+    A[⚡ Dakika 5] --> B[Pata tokeni ya GitHub]
+    B --> C[Jaribu uwanja wa michezo wa AI]
+    C --> D[Nakili msimbo wa Python]
+    D --> E[Tazama majibu ya AI]
+```
+- **Dakika 1**: Tembelea [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) na tengeneza tokeni ya upatikanaji binafsi
+- **Dakika 2**: Jaribu mwingiliano wa AI moja kwa moja kwenye kiolesura cha playground
+- **Dakika 3**: Bonyeza kichupo cha "Code" na nakili kipande cha Python
+- **Dakika 4**: Endesha msimbo kwa ndani kwa kutumia tokeni yako: `GITHUB_TOKEN=your_token python test.py`
+- **Dakika 5**: Tazama jibu lako la kwanza la AI likiundwa kutoka kwa msimbo wako mwenyewe
+
+**Msimbo wa Jaribio la Haraka**:
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://models.github.ai/inference",
+    api_key="your_token_here"
+)
+
+response = client.chat.completions.create(
+    messages=[{"role": "user", "content": "Hello AI!"}],
+    model="openai/gpt-4o-mini"
+)
+
+print(response.choices[0].message.content)
 ```
 
-### Jinsi Miundo ya AI Inavyojifunza (Toleo Rahisi)
+**Kwa Nini Hii ni Muhimu**: Ndani ya dakika 5, utaona uchawi wa mwingiliano wa AI kwa programu. Hii inaonyesha kizuizi cha msingi kinachochochea kila programu ya AI unayotumia.
 
-Miundo ya AI hujifunza kupitia kufichuliwa na seti kubwa za data zinazojumuisha maandishi kutoka vitabu, makala, na mazungumzo. Kupitia mchakato huu, inatambua mifumo katika:
-- Jinsi mawazo yanavyopangwa katika mawasiliano ya maandishi
-- Maneno yanayojitokeza pamoja mara kwa mara
-- Jinsi mazungumzo yanavyotiririka kawaida
-- Tofauti za muktadha kati ya mawasiliano rasmi na yasiyo rasmi
+Hivi ndivyo mradi wako utakavyoonekana umemalizika:
 
-**Ni sawa na jinsi wanajiolojia wanavyotafsiri lugha za kale**: wanachambua maelfu ya mifano ili kuelewa sarufi, msamiati, na muktadha wa kitamaduni, hatimaye kuwa na uwezo wa kutafsiri maandishi mapya kwa kutumia mifumo iliyojifunza.
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.sw.png)
 
-### Kwa Nini Miundo ya GitHub?
+## 🗺️ Safari Yako ya Kujifunza Kupitia Maendeleo ya Programu za AI
 
-Tunatumia Miundo ya GitHub kwa sababu ya sababu ya kiutendaji – inatupa ufikiaji wa AI ya kiwango cha biashara bila kulazimika kuanzisha miundombinu yetu ya AI (ambayo, kwa hakika, hutaki kufanya sasa hivi!). Fikiria kama kutumia API ya hali ya hewa badala ya kujaribu kutabiri hali ya hewa mwenyewe kwa kuanzisha vituo vya hali ya hewa kila mahali.
+```mermaid
+journey
+    title Kutoka Maendeleo ya Wavuti hadi Muunganiko wa AI
+    section Kuelewa Misingi ya AI
+      Gundua dhana za AI inayotengeneza: 4: You
+      Chunguza jukwaa la Models la GitHub: 6: You
+      Kamilisha vigezo na maagizo ya AI: 8: You
+    section Muunganiko wa Backend
+      Jenga seva ya API ya Python: 5: You
+      Tekeleza simu za kazi za AI: 7: You
+      Shughulikia shughuli zisizo za wakati mmoja: 8: You
+    section Maendeleo ya Mbele (Frontend)
+      Tengeneza interface ya mazungumzo ya kisasa: 6: You
+      Kamilisha mwingiliano wa wakati halisi: 8: You
+      Jenga uzoefu wa mtumiaji unaojibu: 9: You
+    section Maombi ya Kitaalamu
+      Tumia mfumo kamili wa AI: 7: You
+      Boresha mifumo ya utendaji: 8: You
+      Tengeneza app inayostahili uzalishaji: 9: You
+```
+**Hatua Yako ya Mwisho**: Mwisho wa somo hili, utakuwa umejenga programu kamilifu inayotumia AI kwa kutumia teknolojia na mifumo ileile inayochochea wasaidizi wa AI wa kisasa kama ChatGPT, Claude, na Google Bard.
 
-Ni kimsingi "AI-kama-Huduma," na sehemu bora? Ni bure kuanza, kwa hivyo unaweza kujaribu bila kuwa na wasiwasi kuhusu gharama kubwa.
+## Kuelewa AI: Kutoka Shaka hadi Utaalamu
+
+Kabla ya kuingia kwenye msimbo, hebu kuelewa tunafanya kazi na nini. Ikiwa umewahi kutumia API hapo awali, unajua muundo wa msingi: tuma ombi, pokea jibu.
+
+API za AI hufuata muundo ule ule, lakini badala ya kupata data iliyohifadhiwa tayari kutoka kwa hifadhidata, zinatengeneza majibu mapya kulingana na mifumo iliyojifunza kutoka kwa maandishi mengi sana. Fikiria kama tofauti kati ya mfumo wa katalogi wa maktaba na mkutubi mwenye maarifa anayeweza kuchanganya taarifa kutoka vyanzo vingi.
+
+### Nini Ni "AI Inayozalisha" Kweli?
+
+Fikiria jinsi Jiwe la Rosetta lilivyoruhusu wataalamu kuelewa hieroglyphics za Misri kwa kutafuta mifumo kati ya lugha zinazoeleweka na zisizoeleweka. Mifano ya AI hufanya jambo kama hilo – huita patterns kutoka kwa maandishi mengi kuelewa jinsi lugha inavyofanya kazi, halafu hutumia mifano hiyo kutengeneza majibu yanayofaa kwa maswali mapya.
+
+**Hebu niifafanue kwa kulinganisha rahisi:**
+- **Hifadhidata ya kawaida**: Kama kuomba cheti chako cha kuzaliwa – unapata hati ile ile kila wakati
+- **Mfumo wa utafutaji**: Kama kumuomba mkutubi kupata vitabu kuhusu paka – wanaonyesha kinachopatikana
+- **AI Inayozalisha**: Kama kumuuliza rafiki mwenye maarifa kuhusu paka – wanakuambia mambo ya kuvutia kwa maneno yao wenyewe, yaliyobinafsishwa kwa kile unachotaka kujua
 
 ```mermaid
 graph LR
-    A[Frontend Chat UI] --> B[Your Backend API]
-    B --> C[GitHub Models API]
-    C --> D[AI Model Processing]
+    A[Swali Lako] --> B[Mfano wa AI]
+    B --> C[Utambuzi wa Mifumo]
+    C --> D[Uundaji wa Yaliyomo]
+    D --> E[Jibu la Muktadha]
+    
+    F[Data ya Mafunzo<br/>Vitabu, Makala, Tovuti] --> B
+```
+### Jinsi Mifano ya AI Hujifunza (Toleo Rahisi)
+
+Mifano ya AI hujifunza kupitia kufundishwa na seti kubwa za data zinazojumuisha maandishi kutoka vitabu, makala, na mazungumzo. Kupitia mchakato huu, hutambua mifumo katika:
+- Jinsi mawazo yanavyopangwa katika mawasiliano yaliyoandikwa
+- Ni maneno gani yanayotokea pamoja mara kwa mara
+- Jinsi mazungumzo huendelea kawaida
+- Tofauti za muktadha kati ya mawasiliano rasmi na yasiyo rasmi
+
+**Hii ni sawa na jinsi wanasayansi wa kale wanavyofasiri lugha za zamani**: huchambua maelfu ya mifano kuelewa sarufi, msamiati, na muktadha wa kitamaduni, na hatimaye kuwa na uwezo wa kutafsiri maandishi mapya kwa kutumia mifumo hiyo iliyojifunza.
+
+### Kwa Nini GitHub Models?
+
+Tunatumia GitHub Models kwa sababu ya kiutendaji – inatupa upatikanaji wa AI ya viwango vya biashara bila kuanzisha miundombinu yetu ya AI (ambayo, niamini, hutaki kufanya sasa hivi!). Fikiria kama kutumia API ya hali ya hewa badala ya kujaribu kutabiri hali ya hewa mwenyewe kwa kuweka vituo vya hali ya hewa kila mahali.
+
+Hii ni "AI kama Huduma," na sehemu nzuri ni kwamba ni bure kuanza, hivyo unaweza kujaribu bila wasiwasi wa gharama kubwa.
+
+```mermaid
+graph LR
+    A[UI ya Chat ya Mbele] --> B[API Yako ya Backend]
+    B --> C[API za Mfano wa GitHub]
+    C --> D[Usindikaji wa Mfano wa AI]
     D --> C
     C --> B
     B --> A
 ```
+Tutatumia GitHub Models kwa muunganisho wetu wa nyuma, inayotoa upatikanaji wa uwezo wa AI wa kiwango cha kitaalamu kupitia kiolesura kinachopendelewa na waendelezaji. [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) ni mazingira ya majaribio ambapo unaweza kujaribu mifano tofauti ya AI na kuelewa uwezo wake kabla ya kuitekeleza katika msimbo.
 
-Tutatumia Miundo ya GitHub kwa muunganisho wetu wa nyuma, ambayo hutoa ufikiaji wa uwezo wa AI wa kiwango cha kitaalamu kupitia kiolesura kinachofaa kwa watengenezaji. [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) inatumika kama mazingira ya majaribio ambapo unaweza kujaribu miundo tofauti ya AI na kuelewa uwezo wake kabla ya kuitekeleza kwenye msimbo.
+## 🧠 Mfumo wa Maendeleo ya Programu za AI
 
-![Kiolesura cha GitHub Models AI Playground kinachoonyesha uteuzi wa modeli na eneo la majaribio](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.sw.png)
+```mermaid
+mindmap
+  root((AI Development))
+    Understanding AI
+      Generative Models
+        Pattern Recognition
+        Content Generation
+        Context Understanding
+        Response Synthesis
+      AI Parameters
+        Temperature Control
+        Token Limits
+        Top-p Filtering
+        System Prompts
+    Backend Architecture
+      API Integration
+        GitHub Models
+        Authentication
+        Request Handling
+        Error Management
+      Python Infrastructure
+        FastAPI Framework
+        Async Operations
+        Environment Security
+        CORS Configuration
+    Frontend Experience
+      Chat Interface
+        Real-time Updates
+        Message History
+        User Feedback
+        Loading States
+      Modern Web Tech
+        ES6 Classes
+        Async/Await
+        DOM Manipulation
+        Event Handling
+    Professional Patterns
+      Security Best Practices
+        Token Management
+        Input Validation
+        XSS Prevention
+        Error Boundaries
+      Production Readiness
+        Performance Optimization
+        Responsive Design
+        Accessibility
+        Testing Strategies
+```
+**Kanuni Msingi**: Maendeleo ya programu za AI yanachanganya ujuzi wa maendeleo ya wavuti wa kawaida na muunganisho wa huduma za AI, kuunda programu za akili zinazohisi kuwa za asili na zinazojibu watumiaji vizuri.
 
-**Hivi ndivyo uwanja wa majaribio unavyofaa:**
-- **Jaribu** miundo tofauti ya AI kama GPT-4o-mini, Claude, na nyinginezo (bure kabisa!)
-- **Pima** mawazo yako na maelekezo kabla ya kuandika msimbo wowote
-- **Pata** vipande vya msimbo vilivyotayarishwa kwa lugha yako ya programu unayoipenda
-- **Rekebisha** mipangilio kama kiwango cha ubunifu na urefu wa majibu ili kuona jinsi yanavyoathiri matokeo
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.sw.png)
 
-Baada ya kucheza kidogo, bonyeza tu kichupo cha "Code" na uchague lugha yako ya programu ili kupata msimbo wa utekelezaji utakaohitaji.
+**Hapa ni kinachofanya playground kuwa muhimu:**
+- **Jaribu** mifano tofauti ya AI kama GPT-4o-mini, Claude, na mingine (zote ni bure!)
+- **Testi** mawazo yako na maelekezo kabla hujaandika msimbo wowote
+- **Pata** vipande vya msimbo vinavyotumika moja kwa moja kwa lugha unayopendelea ya programu
+- **Boresha** mipangilio kama kiwango cha ubunifu na urefu wa jibu kuona jinsi zinavyoathiri matokeo
 
-![Uchaguzi wa uwanja wa majaribio unaoonyesha chaguo za kizazi cha msimbo kwa lugha tofauti za programu](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.sw.png)
+Baada ya kucheza kidogo, bonyeza kichupo cha "Code" na chagua lugha yako ya programu kupata msimbo wa utekelezaji utakao hitajiwa.
 
-## Kuweka Muunganisho wa Nyuma wa Python
+![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.sw.png)
 
-Sasa hebu tutekeleze muunganisho wa AI kwa kutumia Python. Python ni bora kwa programu za AI kwa sababu ya sintaksia yake rahisi na maktaba zenye nguvu. Tutaanza na msimbo kutoka uwanja wa majaribio wa Miundo ya GitHub kisha kuubadilisha kuwa kazi inayoweza kutumika tena na inayofaa kwa uzalishaji.
+## Kuanzisha Muunganisho wa Backend wa Python
+
+Sasa tutaweka muunganisho wa AI kwa kutumia Python. Python ni nzuri kwa programu za AI kwa sababu ya sarufi yake rahisi na maktaba zenye nguvu. Tutaanza na msimbo kutoka GitHub Models playground kisha tuurekebishe ili kuwa kazi inayoweza kutumika tena na tayari kwa uzalishaji.
 
 ### Kuelewa Utekelezaji wa Msingi
 
-Unapochukua msimbo wa Python kutoka uwanja wa majaribio, utapata kitu kinachoonekana kama hiki. Usijali ikiwa inaonekana kuwa nyingi mwanzoni – hebu tuipitie kipande kwa kipande:
+Unapopata msimbo wa Python kutoka playground, utapata kitu kinachofanana na hiki. Usijali kama kinaonekana kuwa kingi mwanzoni – tuitakaye kidogo kidogo:
 
 ```python
 """Run this model in Python
@@ -106,14 +217,13 @@ Unapochukua msimbo wa Python kutoka uwanja wa majaribio, utapata kitu kinachoone
 import os
 from openai import OpenAI
 
-# To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings. 
-# Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+# Ili kuthibitisha na modeli utahitaji kuunda tokeni ya upatikanaji binafsi (PAT) kwenye mipangilio yako ya GitHub.
+# Unda tokeni yako ya PAT kwa kufuata maelekezo hapa: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 client = OpenAI(
     base_url="https://models.github.ai/inference",
     api_key=os.environ["GITHUB_TOKEN"],
 )
 
-```python
 response = client.chat.completions.create(
     messages=[
         {
@@ -134,17 +244,17 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-**Hivi ndivyo kinachotokea kwenye msimbo huu:**
-- **Tunajumuisha** zana tunazohitaji: `os` kwa kusoma vigezo vya mazingira na `OpenAI` kwa kuzungumza na AI
-- **Tunasanidi** mteja wa OpenAI kuelekeza kwenye seva za AI za GitHub badala ya OpenAI moja kwa moja
-- **Tunathibitisha** kwa kutumia tokeni maalum ya GitHub (zaidi kuhusu hilo baadaye!)
-- **Tunapanga** mazungumzo yetu na "roles" tofauti – fikiria kama kuweka mandhari ya mchezo wa kuigiza
-- **Tunatuma** ombi letu kwa AI na baadhi ya vigezo vya kurekebisha
-- **Tunatoa** maandishi halisi ya majibu kutoka kwa data yote inayorudi
+**Hivi ndivyo msimbo unavyofanya:**
+- **Tunachukua** zana tunazohitaji: `os` kusoma mazingira ya mabadiliko na `OpenAI` kuzungumza na AI
+- **Tunaanzisha** mteja wa OpenAI kuelekea seva za AI za GitHub badala ya OpenAI moja kwa moja
+- **Tunathibitisha** kwa kutumia tokeni maalum ya GitHub (zaidi kuhusu hayo baadae!)
+- **Tunapanga** mazungumzo yetu na "maudhi" tofauti – fikiria kama kuweka onyesho kwa tamthilia
+- **Tunatuma** ombi letu kwa AI na baadhi ya vigezo vya kufinyanga
+- **Tunachukua** maandishi halisi ya jibu kutoka kwenye data yote inayorudi
 
-### Kuelewa Majukumu ya Ujumbe: Mfumo wa Mazungumzo ya AI
+### Kuelewa Nafasi za Ujumbe: Mfumo wa Mazungumzo wa AI
 
-Mazungumzo ya AI hutumia muundo maalum na "roles" tofauti zinazotumikia madhumuni maalum:
+Mazungumzo ya AI hutumia muundo maalum wenye “maudhi” tofauti yenye majukumu tofauti:
 
 ```python
 messages=[
@@ -159,97 +269,97 @@ messages=[
 ]
 ```
 
-**Fikiria kama kuongoza mchezo wa kuigiza:**
-- **System role**: Kama maelekezo ya jukwaa kwa mwigizaji – inamwambia AI jinsi ya kujiendesha, tabia gani kuwa nayo, na jinsi ya kujibu
-- **User role**: Swali halisi au ujumbe kutoka kwa mtu anayetumia programu yako
-- **Assistant role**: Jibu la AI (hili hutumika katika historia ya mazungumzo lakini halitumwi)
+**Fikiria kama kuongoza tamthilia:**
+- **Nafasi ya mfumo**: Kama maelekezo ya jukwaani kwa mhusika – inamuambia AI jinsi ya tabia, utu wake, na jinsi ya kujibu
+- **Nafasi ya mtumiaji**: Swali halisi au ujumbe kutoka kwa mtu anayetumia programu yako
+- **Nafasi ya msaidizi**: Jibu la AI (huli tuma, lakini linaonekana katika historia ya mazungumzo)
 
-**Mfano wa maisha halisi**: Fikiria unamtambulisha rafiki kwa mtu kwenye sherehe:
-- **Ujumbe wa mfumo**: "Huyu ni rafiki yangu Sarah, yeye ni daktari mzuri katika kuelezea dhana za matibabu kwa njia rahisi"
-- **Ujumbe wa mtumiaji**: "Unaweza kuelezea jinsi chanjo zinavyofanya kazi?"
-- **Jibu la msaidizi**: Sarah anajibu kama daktari rafiki, si kama wakili au mpishi
+**Mfano wa maisha halisi**: Fikiria unamtambulisha rafiki kwa mtu kwenye karamu:
+- **Ujumbe wa mfumo**: "Huyu ni rafiki yangu Sarah, ni daktari mzuri wa kuelezea dhana za matibabu kwa maneno rahisi"
+- **Ujumbe wa mtumiaji**: "Unaweza kufafanua jinsi chanjo zinavyofanya kazi?"
+- **Jibu la msaidizi**: Sarah anajibu kama daktari mkarimu, si kama mwanasheria au mpishi
 
-### Kuelewa Vigezo vya AI: Kurekebisha Tabia ya Majibu
+### Kuelewa Vigezo vya AI: Kufinyanga Tabia ya Jibu
 
-Vigezo vya nambari katika miito ya API ya AI vinadhibiti jinsi modeli inavyotoa majibu. Mipangilio hii inakuruhusu kurekebisha tabia ya AI kwa matumizi tofauti:
+Vigezo vya nambari katika API za AI vinadhibiti jinsi mfano unavyotengeneza majibu. Mipangilio hii inakuwezesha kurekebisha tabia ya AI kwa matumizi tofauti:
 
-#### Temperature (0.0 hadi 2.0): Kidhibiti Ubunifu
+#### Joto (0.0 hadi 2.0): Diali ya Ubunifu
 
-**Kazi yake**: Hudhibiti jinsi majibu ya AI yatakavyokuwa ya ubunifu au yanayotarajiwa.
+**Inafanya nini**: Inadhibiti ni kiasi gani majibu ya AI yatakuwa ya ubunifu au yanayoweza kutabirika.
 
-**Fikiria kama kiwango cha ubunifu cha mpiga jazz:**
-- **Temperature = 0.1**: Kucheza melodi ile ile kila wakati (inayotarajiwa sana)
-- **Temperature = 0.7**: Kuongeza tofauti za ladha huku ikibaki kutambulika (ubunifu wa wastani)
-- **Temperature = 1.5**: Jazz ya majaribio kamili na mabadiliko yasiyotarajiwa (isiyotabirika sana)
+**Fikiria kama kiwango cha kuigiza kwa mwanamuziki wa jazz:**
+- **Joto = 0.1**: Kuimba melodi ile ile kila mara (inayoweza kutabirika sana)
+- **Joto = 0.7**: Kuongeza mabadiliko ya ladha huku ukibaki waeleweke (uwezo wa ubunifu wa wastani)
+- **Joto = 1.5**: Jazz ya majaribio kamili yenye miondoko isiyotabirika (ubunifu mkubwa)
 
 ```python
-# Very predictable responses (good for factual questions)
+# Majibu yanayoweza kutabirika sana (mzuri kwa maswali ya ukweli)
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "What is 2+2?"}],
-    temperature=0.1  # Will almost always say "4"
+    temperature=0.1  # Takriban kila mara atasema "4"
 )
 
-# Creative responses (good for brainstorming)
+# Majibu ya ubunifu (mzuri kwa kuibua mawazo)
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Write a creative story opening"}],
-    temperature=1.2  # Will generate unique, unexpected stories
+    temperature=1.2  # Atatengeneza hadithi za kipekee, zisizotarajiwa
 )
 ```
 
-#### Max Tokens (1 hadi 4096+): Kidhibiti Urefu wa Majibu
+#### Juu ya Tokens (1 hadi 4096+): Kidhibiti cha Urefu wa Jibu
 
-**Kazi yake**: Huweka kikomo cha jinsi majibu ya AI yanavyoweza kuwa marefu.
+**Inafanya nini**: Inaweka kikomo juu ya urefu wa jibu la AI.
 
-**Fikiria tokeni kama maneno kwa takriban** (karibu tokeni 1 = maneno 0.75 kwa Kiingereza):
-- **max_tokens=50**: Fupi na tamu (kama ujumbe wa maandishi)
-- **max_tokens=500**: Aya moja au mbili nzuri
-- **max_tokens=2000**: Maelezo ya kina na mifano
+**Fikiria tokens kama maneno kwa takriban** (kati ya token moja = karibu maneno 0.75 kwa Kiingereza):
+- **max_tokens=50**: Fupi na tamu (kama ujumbe mfupi)
+- **max_tokens=500**: Aya nzuri au mbili
+- **max_tokens=2000**: Maelezo ya kina yenye mifano
 
 ```python
-# Short, concise answers
+# Majibu mafupi na ya wazi
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Explain JavaScript"}],
-    max_tokens=100  # Forces a brief explanation
+    max_tokens=100  # Inalazimisha maelezo mafupi
 )
 
-# Detailed, comprehensive answers  
+# Majibu ya kina na ya kina
 response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Explain JavaScript"}],
-    max_tokens=1500  # Allows for detailed explanations with examples
+    max_tokens=1500  # Inaruhusu maelezo ya kina pamoja na mifano
 )
 ```
 
-#### Top_p (0.0 hadi 1.0): Kidhibiti Umakini
+#### Top_p (0.0 hadi 1.0): Kigezo cha Kuzingatia
 
-**Kazi yake**: Hudhibiti jinsi AI inavyobaki makini kwenye majibu yanayowezekana zaidi.
+**Inafanya nini**: Inadhibiti jinsi AI inavyolingania na majibu yanayoweza kutokea zaidi.
 
-**Fikiria AI kuwa na msamiati mkubwa, uliopangwa kulingana na uwezekano wa kila neno:**
-- **top_p=0.1**: Inazingatia maneno 10% ya juu zaidi yanayowezekana (makini sana)
-- **top_p=0.9**: Inazingatia 90% ya maneno yanayowezekana (ubunifu zaidi)
-- **top_p=1.0**: Inazingatia kila kitu (tofauti kubwa)
+**Picha inaonyesha AI akiwa na msamiati mkubwa, umesawazishwa kwa uwezekano wa kila neno:**
+- **top_p=0.1**: Inazingatia maneno 10% ya juu yenye uwezekano mkubwa zaidi (ilenye makini sana)
+- **top_p=0.9**: Inazingatia 90% ya maneno yanayowezekana (zaidi ya ubunifu)
+- **top_p=1.0**: Inazingatia yote (tofauti kubwa zaidi)
 
-**Kwa mfano**: Ukisema "Anga kwa kawaida ni..."
-- **Top_p ya chini**: Karibu hakika itasema "bluu"
-- **Top_p ya juu**: Inaweza kusema "bluu", "mawingu", "kubwa", "inabadilika", "nzuri", n.k.
+**Kwa mfano**: Ukiuliza "Anga ni kawaida..."
+- **Top_p ya chini**: Kusema "buluu" kabisa bila shaka
+- **Top_p ya juu**: Inaweza kusema "buluu", "mawingu", "kubwa", "kubadilika", "mzuri", n.k.
 
-### Kuweka Yote Pamoja: Mchanganyiko wa Vigezo kwa Matumizi Tofauti
+### Kuunganisha Pamoja: Mchanganyiko wa Vigezo kwa Matumizi Tofauti
 
 ```python
-# For factual, consistent answers (like a documentation bot)
+# Kwa majibu ya kweli, ya kuzingatia (kama roboti wa hati)
 factual_params = {
     "temperature": 0.2,
     "max_tokens": 300,
     "top_p": 0.3
 }
 
-# For creative writing assistance
+# Kwa msaada wa uandishi wa ubunifu
 creative_params = {
     "temperature": 1.1,
     "max_tokens": 1000,
     "top_p": 0.9
 }
 
-# For conversational, helpful responses (balanced)
+# Kwa majibu ya mazungumzo, yenye msaada (yenye uwiano)
 conversational_params = {
     "temperature": 0.7,
     "max_tokens": 500,
@@ -257,56 +367,293 @@ conversational_params = {
 }
 ```
 
-**Kuelewa kwa nini vigezo hivi ni muhimu**: Programu tofauti zinahitaji aina tofauti za majibu. Boti ya huduma kwa wateja inapaswa kuwa thabiti na ya ukweli (temperature ya chini), wakati msaidizi wa uandishi wa ubunifu anapaswa kuwa wa kufikiria na wa tofauti (temperature ya juu). Kuelewa vigezo hivi kunakupa udhibiti wa tabia na mtindo wa majibu ya AI yako.
-**Hii ndiyo sababu FastAPI ni bora kwa kile tunachojenga:**
-- **Async kwa default**: Inaweza kushughulikia maombi mengi ya AI kwa wakati mmoja bila kukwama
-- **Nyaraka za kiotomatiki**: Tembelea `/docs` na upate ukurasa mzuri wa nyaraka za API unaoweza kuingiliana bila malipo
-- **Uthibitishaji wa ndani**: Hukamata makosa kabla hayajasababisha matatizo
-- **Haraka sana**: Mojawapo ya mifumo ya Python yenye kasi zaidi
-- **Python ya kisasa**: Inatumia vipengele vyote vya hivi karibuni na bora vya Python
+```mermaid
+quadrantChart
+    title Mkataba wa Uboreshaji wa Vigezo vya AI
+    x-axis Ubunifu Mdogo --> Ubunifu Mkubwa
+    y-axis Jibu Fupi --> Jibu Refu
+    
+    quadrant-1 Maudhui ya Ubunifu
+    quadrant-2 Uchambuzi wa Kina
+    quadrant-3 Taarifa za Haraka
+    quadrant-4 AI ya Mazungumzo
+    
+    Documentation Bot: [0.2, 0.3]
+    Customer Service: [0.4, 0.4]
+    General Assistant: [0.7, 0.5]
+    Creative Writer: [0.9, 0.9]
+    Brainstorming Tool: [0.8, 0.8]
+```
+**Kuelewa kwa nini vigezo hivi ni muhimu**: Programu tofauti zinahitaji aina tofauti za majibu. Bot wa huduma kwa wateja anatakiwa kuwa thabiti na wa ukweli (joto la chini), wakati msaidizi wa uandishi wa ubunifu anatakiwa kuwa wa mawazo na mabadiliko (joto la juu). Kuelewa vigezo hivi kunakupa udhibiti juu ya utu na mtindo wa jibu wa AI yako.
+```
 
-**Na hii ndiyo sababu tunahitaji backend kabisa:**
+**Here's what's happening in this code:**
+- **We import** the tools we need: `os` for reading environment variables and `OpenAI` for talking to the AI
+- **We set up** the OpenAI client to point to GitHub's AI servers instead of OpenAI directly
+- **We authenticate** using a special GitHub token (more on that in a minute!)
+- **We structure** our conversation with different "roles" – think of it like setting the scene for a play
+- **We send** our request to the AI with some fine-tuning parameters
+- **We extract** the actual response text from all the data that comes back
 
-**Usalama**: API key yako ya AI ni kama nywila – ukiiweka kwenye JavaScript ya frontend, mtu yeyote anayepitia msimbo wa tovuti yako anaweza kuiba na kutumia mikopo yako ya AI. Backend inahifadhi hati nyeti salama.
+> 🔐 **Security Note**: Never hardcode API keys in your source code! Always use environment variables to store sensitive credentials like your `GITHUB_TOKEN`.
 
-**Kudhibiti Kiwango cha Maombi**: Backend inakuruhusu kudhibiti mara ngapi watumiaji wanaweza kufanya maombi, kutekeleza uthibitishaji wa watumiaji, na kuongeza ufuatiliaji wa matumizi.
+### Creating a Reusable AI Function
 
-**Usindikaji wa Data**: Unaweza kutaka kuhifadhi mazungumzo, kuchuja maudhui yasiyofaa, au kuunganisha huduma nyingi za AI. Backend ndiyo mahali mantiki hii inapoishi.
+Let's refactor this code into a clean, reusable function that we can easily integrate into our web application:
 
-**Muundo unafanana na mfano wa mteja-server:**
-- **Frontend**: Safu ya kiolesura cha mtumiaji kwa mwingiliano
-- **Backend API**: Safu ya usindikaji wa maombi na uelekezaji
-- **Huduma ya AI**: Hesabu ya nje na kizazi cha majibu
-- **Vigezo vya Mazingira**: Usanidi salama na uhifadhi wa hati
+```python
+import asyncio
+from openai import AsyncOpenAI
 
-### Kuelewa Mtiririko wa Maombi na Majibu
+# Use AsyncOpenAI for better performance
+client = AsyncOpenAI(
+    base_url="https://models.github.ai/inference",
+    api_key=os.environ["GITHUB_TOKEN"],
+)
 
-Hebu tufuate kinachotokea mtumiaji anapotuma ujumbe:
+async def call_llm_async(prompt: str, system_message: str = "You are a helpful assistant."):
+    """
+    Sends a prompt to the AI model asynchronously and returns the response.
+    
+    Args:
+        prompt: The user's question or message
+        system_message: Instructions that define the AI's behavior and personality
+    
+    Returns:
+        str: The AI's response to the prompt
+    """
+    try:
+        response = await client.chat.completions.create(
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_message,
+                },
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            model="openai/gpt-4o-mini",
+            temperature=1,
+            max_tokens=4096,
+            top_p=1
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        logger.error(f"AI API error: {str(e)}")
+        return "I'm sorry, I'm having trouble processing your request right now."
+
+# Backward compatibility function for synchronous calls
+def call_llm(prompt: str, system_message: str = "You are a helpful assistant."):
+    """Synchronous wrapper for async AI calls."""
+    return asyncio.run(call_llm_async(prompt, system_message))
+```
+
+**Kuelewa kazi hii iliyoboreshwa:**
+- **Inakubali** vigezo viwili: maelekezo ya mtumiaji na ujumbe wa mfumo wa hiari
+- **Inatoa** ujumbe wa mfumo wa msingi kwa tabia ya msaidizi kwa ujumla
+- **Inatumia** aina za Python kwa usahihi kwa ajili ya nyaraka bora za msimbo
+- **Inajumuisha** maelezo ya kina ya kazi na vigezo vyake
+- **Inarejesha** maudhui ya jibu tu, kufanya iwe rahisi kutumia katika API yetu ya wavuti
+- **Inadumisha** vigezo vile vile vya mfano kwa tabia thabiti ya AI
+
+### Uchawi wa Maelekezo ya Mfumo: Kuprogramu Utu wa AI
+
+Ikiwa vigezo vinadhibiti jinsi AI inavyofikiria, maelekezo ya mfumo yanadhibiti ni nani AI anayejiamini kuwa. Hii ni mojawapo ya sehemu za kuvutia zaidi za kufanya kazi na AI – unampa AI utu kamili, kiwango cha utaalamu, na mtindo wa mawasiliano.
+
+**Fikiria maelekezo ya mfumo kama kung'oa wauigizaji tofauti kwa majukumu tofauti**: Badala ya kuwa na msaidizi mmoja wa kawaida, unaweza kuunda wataalamu maalum kwa hali tofauti. Unahitaji mwalimu mvumilivu? Mshirika wa ubunifu? Mshauri wa biashara asiye na upotovu? Badilisha tu maelekezo ya mfumo!
+
+#### Kwa Nini Maelekezo ya Mfumo Ni Yenye Nguvu
+
+Sehemu ya kuvutia: mifano ya AI imetengenezwa kwa mazungumzo mengi ambapo watu hukumbatia majukumu na viwango vya utaalamu tofauti. Unapompa AI jukumu maalum, ni kama kuwasha swichi inayochochea mifumo yote hiyo iliyojifunza.
+
+**Ni kama utendaji wa kina kwa AI**: Mwambie mwigizaji "wewe ni profesa mzee mwenye busara" na uone jinsi wanavyobadilisha mkao, msamiati, na tabia zao. AI hufanya kitu kinachofanana sana na mifumo ya lugha.
+
+#### Kuunda Maelekezo Bora ya Mfumo: Sanaa na Sayansi
+
+**Muundo wa maelekezo bora ya mfumo:**
+1. **Jukumu/Utu**: AI ni nani?
+2. **Utaalamu**: Anajua nini?
+3. **Mtindo wa mawasiliano**: Anazungumza vipi?
+4. **Maelekezo maalum**: Angalau atazingatia nini?
+
+```python
+# ❌ Amri ya mfumo isiyoeleweka
+"You are helpful."
+
+# ✅ Amri ya mfumo yenye maelezo, yenye ufanisi
+"You are Dr. Sarah Chen, a senior software engineer with 15 years of experience at major tech companies. You explain programming concepts using real-world analogies and always provide practical examples. You're patient with beginners and enthusiastic about helping them understand complex topics."
+```
+
+#### Mifano ya Maelekezo ya Mfumo kwa Muktadha
+
+Tuwone jinsi maelekezo tofauti ya mfumo yanavyounda utu tofauti kabisa wa AI:
+
+```python
+# Mfano 1: Mwalimu Muvumilivu
+teacher_prompt = """
+You are an experienced programming instructor who has taught thousands of students. 
+You break down complex concepts into simple steps, use analogies from everyday life, 
+and always check if the student understands before moving on. You're encouraging 
+and never make students feel bad for not knowing something.
+"""
+
+# Mfano 2: Mshirikishi Mbunifu
+creative_prompt = """
+You are a creative writing partner who loves brainstorming wild ideas. You're 
+enthusiastic, imaginative, and always build on the user's ideas rather than 
+replacing them. You ask thought-provoking questions to spark creativity and 
+offer unexpected perspectives that make stories more interesting.
+"""
+
+# Mfano 3: Mshauri Mkakati wa Biashara
+business_prompt = """
+You are a strategic business consultant with an MBA and 20 years of experience 
+helping startups scale. You think in frameworks, provide structured advice, 
+and always consider both short-term tactics and long-term strategy. You ask 
+probing questions to understand the full business context before giving advice.
+"""
+```
+
+#### Kuona Maelekezo ya Mfumo Kazi
+
+Tujaribu swali lile lile na maelekezo tofauti ya mfumo kuona tofauti kubwa:
+
+**Swali**: "Ninawezaje kushughulikia uthibitishaji wa mtumiaji katika app yangu ya wavuti?"
+
+```python
+# Kwa maelekezo ya mwalimu:
+teacher_response = call_llm(
+    "How do I handle user authentication in my web app?",
+    teacher_prompt
+)
+# Jibu la kawaida: "Swali zuri! Hebu tugawanye uthibitishaji katika hatua rahisi.
+# Fikiria kama mlinzi wa klabu ya usiku anayeangalia kitambulisho..."
+
+# Kwa maelekezo ya biashara:
+business_response = call_llm(
+    "How do I handle user authentication in my web app?", 
+    business_prompt
+)
+# Jibu la kawaida: "Kwa mtazamo wa kimkakati, uthibitishaji ni muhimu kwa
+# imani ya mtumiaji na uzingatiaji wa sheria. Acha nitoe muundo ukizingatia usalama,
+# uzoefu wa mtumiaji, na uwezekano wa kupanuka..."
+```
+
+#### Mbinu Zinazopiga Kufika za Maelekezo ya Mfumo
+
+**1. Kuweka Muktadha**: Mpa AI taarifa za awali
+```python
+system_prompt = """
+You are helping a junior developer who just started their first job at a startup. 
+They know basic HTML/CSS/JavaScript but are new to backend development and databases. 
+Be encouraging and explain things step-by-step without being condescending.
+"""
+```
+
+**2. Kupangilia Matokeo**: Mwambie AI jinsi ya kupanga majibu
+```python
+system_prompt = """
+You are a technical mentor. Always structure your responses as:
+1. Quick Answer (1-2 sentences)
+2. Detailed Explanation 
+3. Code Example
+4. Common Pitfalls to Avoid
+5. Next Steps for Learning
+"""
+```
+
+**3. Kuweka Vizingiti**: Eleza kile ambacho AI haipaswi kufanya
+```python
+system_prompt = """
+You are a coding tutor focused on teaching best practices. Never write complete 
+solutions for the user - instead, guide them with hints and questions so they 
+learn by doing. Always explain the 'why' behind coding decisions.
+"""
+```
+
+#### Kwa Nini Hii Inahusu Msaidizi Wako wa Chat
+
+Kuelewa maelekezo ya mfumo kunakupa nguvu kubwa ya kuunda wasaidizi maalum wa AI:
+- **Bot ya huduma kwa wateja**: Msaidizi, mvumilivu, anayejuwa sera
+- **Mwalimu wa kujifunza**: Anayehimiza, hatua kwa hatua, anathibitisha kuelewa
+- **Mshirika mbunifu**: Mzuri katika kufikiria, huongeza mawazo, huuliza "je, vipi?"
+- **Mtaalamu wa kiufundi**: Sahihi, ana maelezo, anayeangalia usalama
+
+**Mwelekeo muhimu**: Haujui tu kuwaita API ya AI – unaunda utu maalum wa AI unaotumikia matumizi yako maalum. Hii ndiyo inayofanya programu za kisasa za AI kuonekana zimebinafsishwa na zikiwa na manufaa badala ya za kawaida.
+
+### 🎯 Ukaguzi wa Kitaalamu: Kuprogramu Utu wa AI
+
+**Acha na Fikiria**: Umejifunza programu za utu wa AI kupitia maelekezo ya mfumo. Hii ni ujuzi wa msingi katika maendeleo ya programu za kisasa za AI.
+
+**Tathmini Haraka ya Kibinafsi**:
+- Je, unaweza kueleza tofauti kati ya maelekezo ya mfumo na ujumbe wa kawaida wa mtumiaji?
+- Je, tofauti kati ya vigezo vya joto na top_p ni ipi?
+- Je, ungeundaje maelekezo ya mfumo kwa matumizi maalum (kama mwalimu wa kupanga programu)?
+
+**Uhusiano wa Dunia halisi**: Mbinu za maelekezo ya mfumo ulizojifunza hutumika katika kila programu kuu ya AI - kuanzia msaada wa uandishi wa GitHub Copilot hadi kiolesura cha mazungumzo cha ChatGPT. Unatambua mifumo ile ile inayotumiwa na timu za bidhaa za AI katika makampuni makubwa ya teknolojia.
+
+**Swali la Changamoto**: Unawezaje kubuni utu tofauti wa AI kwa aina tofauti za watumiaji (mwanzo dhidi ya mtaalamu)? Fikiria jinsi mfano huo huo wa AI unavyoweza kuhudumia hadhira tofauti kupitia uhandisi wa maelekezo.
+
+## Kujenga Web API kwa FastAPI: Kituo chako cha Mawasiliano ya AI ya Ufanisi Mno
+
+Sasa tuanze kujenga backend inayounganisha frontend yako na huduma za AI. Tutatumia FastAPI, fremu ya kisasa ya Python inayobobea katika ujenzi wa API za programu za AI.
+
+FastAPI inatoa faida kadhaa kwa mradi huu: msaada wa async ukiwezesha kushughulikia maombi mengi sambamba, utengenezaji wa moja kwa moja wa nyaraka za API, na utendaji bora. Server yako ya FastAPI inafanya kazi kama mpatanishi anayepokea maombi kutoka frontend, kuwasiliana na huduma za AI, na kurudisha majibu yaliyopangwa.
+
+### Kwa Nini FastAPI Kwa Programu za AI?
+
+Huenda unajiuliza: "Siwezi tu kuitwa AI moja kwa moja kutoka JavaScript ya frontend yangu?" au "Kwa nini FastAPI badala ya Flask au Django?" Maswali mazuri!
+
+**Hapa ndio sababu FastAPI ni bora kwa tunachojenga:**
+- **Async kwa default**: Inaweza kushughulikia maombi mengi ya AI kwa wakati mmoja bila kuziba
+- **Nyaraka moja kwa moja**: Tembelea `/docs` upate ukurasa mzuri wa nyaraka za API zenye mwingiliano bure
+- **Uthibitishaji uliojengewa ndani**: Hugundua makosa kabla hayajasababisha matatizo
+- **Haraka sana**: Moja ya fremu za Python zenye kasi zaidi
+- **Python ya kisasa**: Inatumia vipengele vyote vya hivi karibuni vya Python
+
+**Na hapa ndio kwanini tunahitaji backend kabisa:**
+
+**Usalama**: Ufunguo wako wa API ya AI ni kama nenosiri – ukiuweka kwenye JavaScript ya frontend, mtu yeyote anayehakikisha chanzo cha tovuti yako anaweza kuiba na kutumia mikopo yako ya AI. Backend huhifadhi habari nyeti salama.
+
+**Kudhibiti Kasi na Udhibiti**: Backend inakusaidia kudhibiti mara ngapi watumiaji wanaweza kutuma maombi, kutekeleza uthibitishaji wa watumiaji, na kuongeza rejista ya matumizi.
+
+**Usindikaji Data**: Huenda unataka kuhifadhi mazungumzo, kuchuja maudhui yasiyofaa, au kuunganisha huduma nyingi za AI. Backend ndio mahali hii mantiki inakuwa.
+
+**Muundo unafanana na mfano wa mteja-serveri:**
+- **Frontend**: Tabaka la kiolesura cha mtumiaji kwa mwingiliano
+- **Backend API**: Tabaka la usindikaji wa maombi na kupitisha
+- **Huduma ya AI**: Utambuzi wa nje na uzalishaji wa majibu
+- **Mabadiliko ya Mazingira**: Usanidi salama na uhifadhi wa nyaraka za siri
+
+### Kuelewa Mtiririko wa Ombi-Jibu
+
+Tufuate kinachoendelea wakati mtumiaji anapotuma ujumbe:
 
 ```mermaid
 sequenceDiagram
-    participant User as 👤 User
-    participant Frontend as 🌐 Frontend
-    participant API as 🔧 FastAPI Server
-    participant AI as 🤖 AI Service
+    participant User as 👤 Mtumiaji
+    participant Frontend as 🌐 Mbele ya Mbele
+    participant API as 🔧 Seva ya FastAPI
+    participant AI as 🤖 Huduma ya AI
     
-    User->>Frontend: Types "Hello AI!"
+    User->>Frontend: Andika "Hello AI!"
     Frontend->>API: POST /hello {"message": "Hello AI!"}
-    Note over API: Validates request<br/>Adds system prompt
-    API->>AI: Sends formatted request
-    AI->>API: Returns AI response
-    Note over API: Processes response<br/>Logs conversation
-    API->>Frontend: {"response": "Hello! How can I help?"}
-    Frontend->>User: Displays AI message
+    Note over API: Inathibitisha ombi<br/>Inaongeza kiito mfumo
+    API->>AI: Inatuma ombi lililopangwa
+    AI->>API: Inarudisha jibu la AI
+    Note over API: Inachakata jibu<br/>Inaandika mazungumzo
+    API->>Frontend: {"response": "Hello! Naweza kusaidia vipi?"}
+    Frontend->>User: Inaonyesha ujumbe wa AI
 ```
-
 **Kuelewa kila hatua:**
-1. **Mwingiliano wa mtumiaji**: Mtu anaandika kwenye kiolesura cha mazungumzo
-2. **Usindikaji wa frontend**: JavaScript inakamata pembejeo na kuunda kama JSON
-3. **Uthibitishaji wa API**: FastAPI inathibitisha kiotomatiki ombi kwa kutumia mifano ya Pydantic
-4. **Muunganisho wa AI**: Backend inaongeza muktadha (mfano wa mfumo) na kuita huduma ya AI
-5. **Usimamizi wa majibu**: API inapokea majibu ya AI na inaweza kuyabadilisha ikiwa inahitajika
-6. **Onyesho la frontend**: JavaScript inaonyesha majibu kwenye kiolesura cha mazungumzo
+1. **Mwingiliano wa mtumiaji**: Mtu anaandika katika kiolesura cha mazungumzo
+2. **Usindikaji wa frontend**: JavaScript inachukua maingizo na kuyaweka katika muundo wa JSON
+3. **Uthibitishaji wa API**: FastAPI inathibitisha maombi moja kwa moja kwa kutumia mifano ya Pydantic
+4. **Uingizaji wa AI**: Backend inaongeza muktadha (maelekezo ya mfumo) na kuita huduma ya AI
+5. **Ushughulikiaji wa jibu**: API inapokea jibu la AI na inaweza kulibadilisha kama ni lazima
+6. **Onyesho la frontend**: JavaScript inaonyesha jibu kwenye kiolesura cha mazungumzo
 
 ### Kuelewa Muundo wa API
 
@@ -317,17 +664,38 @@ sequenceDiagram
     participant AI Function
     participant GitHub Models
     
-    Frontend->>FastAPI: POST /hello {"message": "Hello AI!"}
+    Frontend->>FastAPI: POST /hello {"message": "Hujambo AI!"}
     FastAPI->>AI Function: call_llm(message, system_prompt)
-    AI Function->>GitHub Models: API request
-    GitHub Models->>AI Function: AI response
-    AI Function->>FastAPI: response text
-    FastAPI->>Frontend: {"response": "Hello! How can I help?"}
+    AI Function->>GitHub Models: Ombi la API
+    GitHub Models->>AI Function: Jibu la AI
+    AI Function->>FastAPI: maandishi ya jibu
+    FastAPI->>Frontend: {"response": "Hujambo! Naweza kusaidia vipi?"}
 ```
-
+```mermaid
+flowchart TD
+    A[Ingizo la Mtumiaji] --> B[Uthibitishaji wa Mbele]
+    B --> C[Ombi la HTTP POST]
+    C --> D[Router ya FastAPI]
+    D --> E[Uthibitishaji wa Pydantic]
+    E --> F[Simu ya Kazi ya AI]
+    F --> G[API za Modeli za GitHub]
+    G --> H[Usindikaji wa Majibu]
+    H --> I[Jibu la JSON]
+    I --> J[Usasishaji wa Mbele]
+    
+    subgraph "Tabaka la Usalama"
+        K[Kati ya CORS]
+        L[Hali za Mazingira]
+        M[Ushughulikiaji wa Makosa]
+    end
+    
+    D --> K
+    F --> L
+    H --> M
+```
 ### Kuunda Programu ya FastAPI
 
-Hebu tujenge API yetu hatua kwa hatua. Unda faili inayoitwa `api.py` na msimbo wa FastAPI ufuatao:
+Tujenge API yetu hatua kwa hatua. Tengeneza faili liitwalo `api.py` na msimbo unaofuata wa FastAPI:
 
 ```python
 # api.py
@@ -337,27 +705,27 @@ from pydantic import BaseModel
 from llm import call_llm
 import logging
 
-# Configure logging
+# Sanidi uandikishaji logi
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Create FastAPI application
+# Unda programu ya FastAPI
 app = FastAPI(
     title="AI Chat API",
     description="A high-performance API for AI-powered chat applications",
     version="1.0.0"
 )
 
-# Configure CORS
+# Sanidi CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure appropriately for production
+    allow_origins=["*"],  # Sanidi ipasavyo kwa ajili ya uzalishaji
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Pydantic models for request/response validation
+# Mifano ya Pydantic kwa uthibitishaji wa ombi/jibu
 class ChatMessage(BaseModel):
     message: str
 
@@ -382,14 +750,14 @@ async def health_check():
 async def chat_endpoint(chat_message: ChatMessage):
     """Main chat endpoint that processes messages and returns AI responses."""
     try:
-        # Extract and validate message
+        # Toa na thibitisha ujumbe
         message = chat_message.message.strip()
         if not message:
             raise HTTPException(status_code=400, detail="Message cannot be empty")
         
         logger.info(f"Processing message: {message[:50]}...")
         
-        # Call AI service (note: call_llm should be made async for better performance)
+        # Piga huduma ya AI (kumbuka: call_llm inapaswa kufanywa async kwa utendaji bora)
         ai_response = await call_llm_async(message, "You are a helpful and friendly assistant.")
         
         logger.info("AI response generated successfully")
@@ -407,213 +775,213 @@ if __name__ == "__main__":
 ```
 
 **Kuelewa utekelezaji wa FastAPI:**
-- **Inaleta** FastAPI kwa utendakazi wa mfumo wa wavuti wa kisasa na Pydantic kwa uthibitishaji wa data
-- **Inaunda** nyaraka za API kiotomatiki (zinapatikana kwenye `/docs` wakati seva inapoendesha)
-- **Inawezesha** middleware ya CORS kuruhusu maombi ya frontend kutoka asili tofauti
-- **Inafafanua** mifano ya Pydantic kwa uthibitishaji wa maombi/majibu kiotomatiki na nyaraka
-- **Inatumia** endpoints za async kwa utendaji bora na maombi ya wakati mmoja
-- **Inatekeleza** nambari sahihi za hali ya HTTP na usimamizi wa makosa kwa HTTPException
-- **Inajumuisha** ufuatiliaji uliopangwa kwa ufuatiliaji na urekebishaji wa makosa
-- **Inatoa** endpoint ya ukaguzi wa afya kwa ufuatiliaji wa hali ya huduma
+- **Inaagiza** FastAPI kwa utendaji wa fremu ya wavuti ya kisasa na Pydantic kwa uthibitishaji wa data
+- **Inaunda** nyaraka za API moja kwa moja (zinapatikana kwenye `/docs` wakati server inapoanza)
+- **Inawezeshwa** CORS middleware kuruhusu maombi ya frontend kutoka asili tofauti
+- **Inaeleza** mifano ya Pydantic kwa uthibitishaji wa maombi/majibu na nyaraka za moja kwa moja
+- **Inatumia** maeneo async kwa utendaji bora na maombi mengi sambamba
+- **Inatekeleza** misimbo sahihi ya hali za HTTP na usimamizi wa makosa kwa HTTPException
+- **Inajumuisha** uandikishaji uliopangwa kwa ajili ya ufuatiliaji na utatuzi wa matatizo
+- **Inatoa** sehemu ya ukaguzi wa afya kwa kufuatilia hali ya huduma
 
-**Faida kuu za FastAPI ikilinganishwa na mifumo ya jadi:**
-- **Uthibitishaji wa kiotomatiki**: Mifano ya Pydantic inahakikisha uadilifu wa data kabla ya usindikaji
-- **Nyaraka za kiingiliana**: Tembelea `/docs` kwa nyaraka za API zinazotengenezwa kiotomatiki na zinazoweza kujaribiwa
-- **Usalama wa aina**: Maelezo ya aina ya Python yanazuia makosa ya wakati wa kukimbia na kuboresha ubora wa msimbo
-- **Msaada wa async**: Kushughulikia maombi mengi ya AI kwa wakati mmoja bila kuzuia
-- **Utendaji**: Usindikaji wa maombi kwa kasi zaidi kwa programu za wakati halisi
+**Faida kuu za FastAPI dhidi ya fremu za kawaida:**
+- **Uthibitishaji moja kwa moja**: Mifano ya Pydantic huhakikisha usahihi wa data kabla ya usindikaji
+- **Nyaraka zenye mwingiliano**: Tembelea `/docs` kupata nyaraka za API zinazotengenezwa na zinaweza kujaribiwa
+- **Usalama wa aina**: Vidokezo vya aina za Python hupunguza makosa ya wakati wa utekelezaji na kuboresha ubora wa msimbo
+- **Msaada wa async**: Hudumia maombi mengi ya AI kwa wakati mmoja bila kuziba
+- **Utendaji**: Usindikaji wa maombi kwa kasi kubwa kwa programu zinazotegemea wakati halisi
 
 ### Kuelewa CORS: Mlinzi wa Usalama wa Wavuti
 
-CORS (Cross-Origin Resource Sharing) ni kama mlinzi wa usalama katika jengo ambaye hukagua ikiwa wageni wanaruhusiwa kuingia. Hebu tuelewe kwa nini hili ni muhimu na jinsi linavyoathiri programu yako.
+CORS (Cross-Origin Resource Sharing) ni kama mlinzi wa usalama kwenye jengo ambaye hakuangalia kama wageni wanaruhusiwa kuingia. Tuelewe kwa nini hii ni muhimu na jinsi inavyoathiri programu yako.
 
-#### CORS ni nini na Kwa Nini Lipo?
+#### CORS ni Nini na Kwa Nini Ipo?
 
-**Tatizo**: Fikiria ikiwa tovuti yoyote ingeweza kufanya maombi kwa tovuti ya benki yako kwa niaba yako bila ruhusa yako. Hilo lingekuwa janga la usalama! Vivinjari vinazuia hili kwa default kupitia "Sera ya Asili Moja."
+**Tatizo**: Fikiria kama tovuti yoyote ingekuwa na uwezo wa kutuma maombi kwenye tovuti ya benki yako kwa niaba yako bila idhini yako. Hii ingekuwa shida kubwa ya usalama! Vivinjari huzuia hili kwa kutumia "Sera ya Asili Ileile."
 
-**Sera ya Asili Moja**: Vivinjari huruhusu kurasa za wavuti kufanya maombi tu kwa kikoa, bandari, na itifaki sawa walizopakiwa kutoka.
+**Sera ya Asili Ileile**: Vivinjari huruhusu kuruhusu kuruka maombi kutoka kwenye tovuti zenye eneo, bandari, na itifaki ile ile waliyoanzia kupakiwa.
 
-**Mfano wa ulimwengu halisi**: Ni kama usalama wa jengo la ghorofa – ni wakazi tu (asili sawa) wanaweza kufikia jengo kwa default. Ikiwa unataka kumruhusu rafiki (asili tofauti) kutembelea, unahitaji kumwambia mlinzi wa usalama waziwazi kuwa ni sawa.
+**Mfano wa dunia halisi**: Ni kama usalama wa nyumba ya ghorofa – wakazi tu (asilimia ile ile) wanaruhusiwa kuingia. Ukitaka kuruhusu rafiki (asilimia tofauti) kutembelea, lazima umwambie mlinzi waziwazi ni sawa.
 
-#### CORS katika Mazingira Yako ya Maendeleo
+#### CORS Katika Mazingira Yako ya Maendeleo
 
-Wakati wa maendeleo, frontend yako na backend yako zinaendesha kwenye bandari tofauti:
+Wakati wa maendeleo, frontend na backend zako zinafanya kazi katika bandari tofauti:
 - Frontend: `http://localhost:3000` (au file:// ikiwa unafungua HTML moja kwa moja)
 - Backend: `http://localhost:5000`
 
-Hizi zinachukuliwa kuwa "asili tofauti" hata kama ziko kwenye kompyuta moja!
+Hizi zinachukuliwa kuwa "asilimia tofauti" ingawa ziko kwenye kompyuta ile ile!
 
 ```python
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(__name__)
-CORS(app)   # This tells browsers: "It's okay for other origins to make requests to this API"
+CORS(app)   # Hii inawaambia vivinjari: "Ni sawa kwa asili nyingine kuomba huduma kwa API hii"
 ```
 
-**Kile usanidi wa CORS unachofanya kwa vitendo:**
-- **Huongeza** vichwa maalum vya HTTP kwa majibu ya API yanayoambia vivinjari "ombi hili la asili tofauti linaruhusiwa"
-- **Hushughulikia** maombi ya "preflight" (vivinjari wakati mwingine hukagua ruhusa kabla ya kutuma ombi halisi)
-- **Huzuia** kosa la "kuzuia na sera ya CORS" katika koni ya kivinjari chako
+**Kifanikio cha usanidi wa CORS kwa vitendo:**
+- **Inaongeza** vichwa maalum vya HTTP kwenye majibu ya API vinavyoambia vivinjari "ombi hili la asili tofauti linaruhusiwa"
+- **Inashughulikia** maombi ya "preflight" (vivinjari mara nyingine huchunguza ruhusa kabla ya kutuma ombi halisi)
+- **Inazuia** kosa la "kuzuia sera ya CORS" ambalo linapotokea kwenye koni ya kivinjari chako
 
-#### Usalama wa CORS: Maendeleo dhidi ya Uzalishaji
+#### Usalama wa CORS: Maendeleo vs Uzalishaji
 
 ```python
-# 🚨 Development: Allows ALL origins (convenient but insecure)
+# 🚨 Maendeleo: Inaruhusu vyanzo vyote (rahisi lakini hatari)
 CORS(app)
 
-# ✅ Production: Only allow your specific frontend domain
+# ✅ Uzalishaji: Ruhusu tu eneo lako la frontend lililobainishwa
 CORS(app, origins=["https://yourdomain.com", "https://www.yourdomain.com"])
 
-# 🔒 Advanced: Different origins for different environments
-if app.debug:  # Development mode
+# 🔒 Kiwango cha juu: Vyanzo tofauti kwa mazingira tofauti
+if app.debug:  # Hali ya maendeleo
     CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
-else:  # Production mode
+else:  # Hali ya uzalishaji
     CORS(app, origins=["https://yourdomain.com"])
 ```
 
-**Kwa nini hili ni muhimu**: Katika maendeleo, `CORS(app)` ni kama kuacha mlango wako wazi – rahisi lakini si salama. Katika uzalishaji, unataka kubainisha ni tovuti gani hasa zinaweza kuzungumza na API yako.
+**Kwa nini hii ni muhimu**: Katika maendeleo, `CORS(app)` ni kama kuacha mlango wa mbele wazi – ndio rahisi lakini si salama. Katika uzalishaji, unataka kutaja ni tovuti gani hasa zinaweza kuongea na API yako.
 
-#### Matukio ya Kawaida ya CORS na Suluhisho
+#### Hali za Kawaida za CORS na Suluhisho
 
 | Hali | Tatizo | Suluhisho |
-|------|--------|----------|
-| **Maendeleo ya Kawaida** | Frontend haiwezi kufikia backend | Ongeza CORSMiddleware kwa FastAPI |
-| **GitHub Pages + Heroku** | Frontend iliyotumwa haiwezi kufikia API | Ongeza URL ya GitHub Pages yako kwa asili za CORS |
-| **Kikoa Maalum** | Makosa ya CORS katika uzalishaji | Sasisha asili za CORS ili zilingane na kikoa chako |
-| **Programu ya Simu** | Programu haiwezi kufikia API ya wavuti | Ongeza kikoa cha programu yako au tumia `*` kwa uangalifu |
+|----------|---------|----------|
+| **Maendeleo ya Ndani (Local Development)** | Frontend haiwezi kufikia backend | Ongeza CORSMiddleware kwenye FastAPI |
+| **GitHub Pages + Heroku** | Frontend iliyowekwa haitumii API | Ongeza URL ya GitHub Pages kwenye asili za CORS |
+| **Domeni Maalum** | Makosa ya CORS uzalishaji | Sasisha asili za CORS kulingana na domeni yako |
+| **Programu ya Simu** | Programu haiwezi kufikia API ya wavuti | Ongeza domeni ya programu yako au tumia `*` kwa uangalifu |
 
-**Kidokezo cha kitaalamu**: Unaweza kuangalia vichwa vya CORS katika Zana za Wasanidi wa kivinjari chako chini ya kichupo cha Mtandao. Tafuta vichwa kama `Access-Control-Allow-Origin` katika majibu.
+**Ushauri mzuri**: Unaweza kuangalia vichwa vya CORS kwenye zana za Watengenezaji wa kivinjari chako chini ya kichupo cha Mtandao. Tafuta vichwa kama `Access-Control-Allow-Origin` kwenye jibu.
 
-### Usimamizi wa Makosa na Uthibitishaji
+### Ushughulikiaji wa Makosa na Uthibitishaji
 
-Angalia jinsi API yetu inavyoshirikisha usimamizi sahihi wa makosa:
+Angalia jinsi API yetu inavyoshughulikia makosa kwa usahihi:
 
 ```python
-# Validate that we received a message
+# Thibitisha kwamba tumepokea ujumbe
 if not message:
     return jsonify({"error": "Message field is required"}), 400
 ```
 
 **Kanuni kuu za uthibitishaji:**
-- **Hukagua** uwanja unaohitajika kabla ya kusindika maombi
+- **Huthibitisha** viwanja muhimu kabla ya kusindika maombi
 - **Hurejesha** ujumbe wa makosa wenye maana katika muundo wa JSON
-- **Hutumia** nambari sahihi za hali ya HTTP (400 kwa maombi mabaya)
-- **Hutoa** maoni wazi kusaidia wasanidi wa frontend kurekebisha masuala
+- **Inatumia** misimbo sahihi ya hali ya HTTP (400 kwa maombi mabaya)
+- **Hutoa** mrejesho wazi kusaidia waendelezaji wa frontend kutatua matatizo
 
 ## Kuweka na Kuendesha Backend Yako
 
-Sasa kwa kuwa tuna muunganisho wetu wa AI na seva ya FastAPI tayari, hebu tuanze kila kitu. Mchakato wa usanidi unahusisha kusakinisha utegemezi wa Python, kusanidi vigezo vya mazingira, na kuanzisha seva yako ya maendeleo.
+Sasa tunapokuwa na uingizaji wetu wa AI na server ya FastAPI tayari, tuanzishe kila kitu kilicho tayari. Mchakato wa usanikishaji unahusisha kusakinisha maktaba za Python, kusanidi mabadiliko ya mazingira, na kuanzisha server yako ya maendeleo.
 
-### Usanidi wa Mazingira ya Python
+### Kuanzisha Mazingira ya Python
 
-Hebu tusanidi mazingira yako ya maendeleo ya Python. Mazingira ya kawaida ni kama mbinu ya mradi wa Manhattan – kila mradi unapata nafasi yake ya pekee na zana maalum na utegemezi, kuzuia migongano kati ya miradi tofauti.
+Tuwashie mazingira ya maendeleo ya Python. Mazingira ya virtual ni kama mpango wa Manhattan uliogawanywa sehemu – kila mradi unapata nafasi yake pekee ya pekee yenye zana maalum na utegemezi, kuzuia migongano kati ya miradi tofauti.
 
 ```bash
-# Navigate to your backend directory
+# Elekea kwenye saraka yako ya nyuma
 cd backend
 
-# Create a virtual environment (like creating a clean room for your project)
+# Unda mazingira ya kweli (kama kuunda chumba safi kwa mradi wako)
 python -m venv venv
 
-# Activate it (Linux/Mac)
+# Iwasha (Linux/Mac)
 source ./venv/bin/activate
 
-# On Windows, use:
+# Kwenye Windows, tumia:
 # venv\Scripts\activate
 
-# Install the good stuff
+# Sakinisha vitu vizuri
 pip install openai fastapi uvicorn python-dotenv
 ```
 
-**Kile tulichofanya:**
-- **Tumeunda** Bubble yetu ya Python ambapo tunaweza kusakinisha vifurushi bila kuathiri chochote kingine
-- **Tumeiwezesha** ili terminal yetu ijue kutumia mazingira haya maalum
-- **Tumesakinisha** vitu muhimu: OpenAI kwa uchawi wa AI, FastAPI kwa API yetu ya wavuti, Uvicorn kuendesha, na python-dotenv kwa usimamizi salama wa siri
+**Tulichofanya sasa hivi:**
+- **Tumeunda** povu yetu ndogo ya Python ambapo tunaweza kusakinisha maktaba bila kuathiri vingine
+- **Tumezikwa** ili terminal yetu ijue kutumia mazingira haya maalum
+- **Tumefunga** muhimu: OpenAI kwa uchawi wa AI, FastAPI kwa API yetu ya wavuti, Uvicorn kuendesha server, na python-dotenv kwa usimamizi wa siri salama
 
-**Utegemezi muhimu umeelezwa:**
-- **FastAPI**: Mfumo wa wavuti wa kisasa, wa haraka na nyaraka za API kiotomatiki
-- **Uvicorn**: Seva ya ASGI yenye kasi inayoweza kuendesha programu za FastAPI
-- **OpenAI**: Maktaba rasmi kwa GitHub Models na muunganisho wa API ya OpenAI
-- **python-dotenv**: Upakiaji salama wa vigezo vya mazingira kutoka kwa faili za .env
+**Marekebisho muhimu yaliyoelezwa:**
+- **FastAPI**: Fremu ya kisasa, yenye kasi ya wavuti na nyaraka za API za moja kwa moja
+- **Uvicorn**: Server ya ASGI yenye kasi mno inayochukua na kuendesha programu za FastAPI
+- **OpenAI**: Maktaba rasmi kwa modeli za GitHub na API ya OpenAI
+- **python-dotenv**: Kubeba mabadiliko ya mazingira kwa usalama kutoka kwa faili `.env`
 
-### Usanidi wa Mazingira: Kuhifadhi Siri Salama
+### Usanidi wa Mazingira: Kuzingatia Siri Salama
 
-Kabla ya kuanza API yetu, tunahitaji kuzungumzia mojawapo ya masomo muhimu zaidi katika maendeleo ya wavuti: jinsi ya kuhifadhi siri zako salama. Vigezo vya mazingira ni kama chumba cha usalama ambacho programu yako pekee inaweza kufikia.
+Kabla hatujaanza API yetu, tunahitaji kujadili moja ya masomo muhimu zaidi katika maendeleo ya wavuti: jinsi ya kuweka siri zako kweli zisiwe wazi. Mabadiliko ya mazingira ni kama sefeli salama ambayo programu yako tu inaweza kufikia.
 
-#### Vigezo vya Mazingira ni Nini?
+#### Mabadiliko ya Mazingira ni Nini?
 
-**Fikiria vigezo vya mazingira kama sanduku la usalama** – unaweka vitu vyako vya thamani humo, na ni wewe tu (na programu yako) unayeweza kufungua. Badala ya kuandika taarifa nyeti moja kwa moja kwenye msimbo wako (ambapo kila mtu anaweza kuiona), unaihifadhi salama katika mazingira.
+**Fikiria mabadiliko ya mazingira kama sanduku la amana salama** – unailaza vitu vyako vya thamani humo, na wewe tu (na programu yako) una funguo la kuipata. Badala ya kuandika taarifa nyeti moja kwa moja kwenye msimbo wako (ambapo mtu yeyote anaweza kuiona), unahifadhi kwa usalama katika mazingira.
 
-**Hii ndiyo tofauti:**
-- **Njia mbaya**: Kuandika nywila yako kwenye karatasi ya kunata na kuiweka kwenye skrini yako
-- **Njia sahihi**: Kuhifadhi nywila yako katika meneja wa nywila salama ambao ni wewe tu unayeweza kufikia
+**Hii ndio tofauti:**
+- **Njia mbaya**: Kuandika nenosiri lako kwenye karatasi na kuiweka kwenye skrini yako ya kompyuta
+- **Njia sahihi**: Kuweka nenosiri lako kwenye meneja wa nenosiri salama unayemiliki wewe peke yako
 
-#### Kwa Nini Vigezo vya Mazingira ni Muhimu
+#### Kwa Nini Mabadiliko ya Mazingira Ni Muhimu
 
 ```python
-# 🚨 NEVER DO THIS - API key visible to everyone
+# 🚨 USIFANYE HIVYO - Fikira la API linaonekana kwa kila mtu
 client = OpenAI(
-    api_key="ghp_1234567890abcdef...",  # Anyone can steal this!
+    api_key="ghp_1234567890abcdef...",  # Mtu yeyote anaweza kuiba hii!
     base_url="https://models.github.ai/inference"
 )
 
-# ✅ DO THIS - API key stored securely
+# ✅ FANYA HIVYO - Fikira la API lihifadhiwe kwa usalama
 client = OpenAI(
-    api_key=os.environ["GITHUB_TOKEN"],  # Only your app can access this
+    api_key=os.environ["GITHUB_TOKEN"],  # Ni programu yako tu inaweza kufikia hii
     base_url="https://models.github.ai/inference"
 )
 ```
 
-**Kinachotokea unapoweka siri moja kwa moja kwenye msimbo:**
-1. **Ufunuo wa udhibiti wa toleo**: Mtu yeyote mwenye ufikiaji wa hifadhi yako ya Git anaona API key yako
-2. **Hifadhi za umma**: Ukisukuma kwenye GitHub, key yako inaonekana kwa mtandao mzima
-3. **Kushiriki timu**: Wasanidi wengine wanaofanya kazi kwenye mradi wako wanapata ufikiaji wa API key yako ya kibinafsi
-4. **Uvunjaji wa usalama**: Ikiwa mtu ataiba API key yako, anaweza kutumia mikopo yako ya AI
+**Kinachotokea ukiandika siri moja kwa moja:**
+1. **Ufunuo kwa usimamizi wa toleo**: Yeyote aliye na ufikiaji wa hifadhi yako ya Git anaona ufunguo wako wa API
+2. **Hifadhi za umma**: Ukiweka kwenye GitHub, ufunguo wako unaonekana kwa kila mtu mtandaoni
+3. **Kushirikiana kwa timu**: Waendelezaji wengine kwenye mradi wako wanapata ufunguo wako wa API binafsi
+4. **Uvunjaji wa usalama**: Ikiwa mtu ataiba ufunguo wako wa API, anaweza kutumia mikopo yako ya AI
 
-#### Kuunda Faili Yako ya Mazingira
+#### Kuunda Faili Yako la Mazingira `.env`
 
-Unda faili `.env` katika saraka ya backend yako. Faili hii huhifadhi siri zako kwa ndani:
+Tengeneza faili `.env` katika saraka ya backend yako. Faili hii huhifadhi siri zako ndani ya kompyuta:
 
 ```bash
-# .env file - This should NEVER be committed to Git
+# Faili la .env - Hili HAUWASHWI kamwe kupelekwa kwenye Git
 GITHUB_TOKEN=your_github_personal_access_token_here
 FASTAPI_DEBUG=True
 ENVIRONMENT=development
 ```
 
-**Kuelewa faili ya .env:**
-- **Siri moja kwa kila mstari** katika muundo wa `KEY=value`
-- **Hakuna nafasi** karibu na alama ya usawa
-- **Hakuna nukuu** zinazohitajika karibu na maadili (kawaida)
+**Kuelewa faili la .env:**
+- **Siri moja kwa mstari** katika muundo wa `KEY=value`
+- **Hakuna nafasi** karibu na alama ya sawa
+- **Hakuna nukuu** zinahitajika kwenye thamani (kawaida)
 - **Maoni** huanza na `#`
 
-#### Kuunda Tokeni Yako ya Ufikiaji wa Kibinafsi ya GitHub
+#### Kuunda Tokeni Yako Binafsi ya Kufikia GitHub
 
-Tokeni yako ya GitHub ni kama nywila maalum inayotoa ruhusa kwa programu yako kutumia huduma za AI za GitHub:
+Tokeni yako ya GitHub ni kama nenosiri maalum linaloruhusu programu yako kutumia huduma za AI za GitHub:
 
 **Hatua kwa hatua kuunda tokeni:**
-1. **Nenda kwa Mipangilio ya GitHub** → Mipangilio ya msanidi programu → Tokeni za ufikiaji wa kibinafsi → Tokeni (classic)
+1. **Nenda kwenye Mipangilio ya GitHub** → Mipangilio ya mtengenezaji → Tokeni za huduma binafsi → Tokeni (classic)
 2. **Bonyeza "Generate new token (classic)"**
-3. **Weka muda wa kuisha** (siku 30 kwa majaribio, muda mrefu kwa uzalishaji)
-4. **Chagua maeneo**: Angalia "repo" na ruhusa nyingine unazohitaji
-5. **Tengeneza tokeni** na nakili mara moja (huwezi kuiona tena!)
-6. **Bandika kwenye faili yako ya .env**
+3. **Weka muda wa kumalizika** (siku 30 kwa majaribio, muda mrefu kwa uzalishaji)
+4. **Chagua wigo**: Angalia "repo" na ruhusa zingine unazohitaji
+5. **Tengeneza tokeni** na uibandike mara moja (hauna tena ruhusa ya kuiona!)
+6. **Mweka kwenye faili lako la .env**
 
 ```bash
-# Example of what your token looks like (this is fake!)
+# Mfano wa jinsi tokeni yako inavyoonekana (hii ni feki!)
 GITHUB_TOKEN=ghp_1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R
 ```
 
-#### Kupakia Vigezo vya Mazingira katika Python
+#### Kupakia Mabadiliko ya Mazingira katika Python
 
 ```python
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Pakia mabadiliko ya mazingira kutoka kwa faili la .env
 load_dotenv()
 
-# Now you can access them securely
+# Sasa unaweza kuyafikia kwa usalama
 api_key = os.environ.get("GITHUB_TOKEN")
 if not api_key:
     raise ValueError("GITHUB_TOKEN not found in environment variables!")
@@ -624,18 +992,18 @@ client = OpenAI(
 )
 ```
 
-**Kile msimbo huu unafanya:**
-- **Unapakia** faili yako ya .env na kufanya vigezo kupatikana kwa Python
-- **Hukagua** ikiwa tokeni inayohitajika ipo (usimamizi mzuri wa makosa!)
-- **Inainua** kosa wazi ikiwa tokeni haipo
-- **Inatumia** tokeni kwa usalama bila kuifunua kwenye msimbo
+**Msimbo huu unafanya:**
+- **Unapakia** faili lako la .env na kufanya mabadiliko kupatikana kwa Python
+- **Huthibitisha** kama tokeni muhimu ipo (ushughulikiaji mzuri wa makosa!)
+- **Hutoa** kosa la wazi ikiwa tokeni haipo
+- **Inatumia** tokeni kwa usalama bila kuionyesha kwenye msimbo
 
-#### Usalama wa Git: Faili ya .gitignore
+#### Usalama wa Git: Faili la .gitignore
 
-Faili yako ya `.gitignore` inaambia Git ni faili zipi zisizo na haja ya kufuatiliwa au kupakiwa:
+Faili lako la `.gitignore` linaambia Git ni faili gani isizotakwa kufuatiliwa au kupakiwa:
 
 ```bash
-# .gitignore - Add these lines
+# .gitignore - Ongeza mistari hii
 .env
 *.env
 .env.local
@@ -645,57 +1013,56 @@ venv/
 .vscode/
 ```
 
-**Kwa nini hili ni muhimu**: Mara tu unapoongeza `.env` kwa `.gitignore`, Git itapuuza faili yako ya mazingira, kuzuia wewe kupakia siri zako kwa GitHub kwa bahati mbaya.
+**Kwa nini hii ni muhimu**: Mara tu unapoongeza `.env` kwenye `.gitignore`, Git itapuuzia faili lako la mazingira, ikuzuia kupakia siri zako kwa bahati mbaya kwenye GitHub.
 
 #### Mazingira Tofauti, Siri Tofauti
 
-Programu za kitaalamu hutumia API key tofauti kwa mazingira tofauti:
+Programu za kitaalamu hutumia funguo tofauti za API kwa mazingira tofauti:
 
 ```bash
-# .env.development
+# .env.kuendeleza
 GITHUB_TOKEN=your_development_token
 DEBUG=True
 
-# .env.production  
+# .env.utengenezaji
 GITHUB_TOKEN=your_production_token
 DEBUG=False
 ```
 
-**Kwa nini hili ni muhimu**: Hutaki majaribio yako ya maendeleo yaathiri kiwango chako cha matumizi ya AI ya uzalishaji, na unataka viwango tofauti vya usalama kwa mazingira tofauti.
+**Kwa nini hii ni muhimu**: Hutaki majaribio ya maendeleo kuathiri msamaha wako wa matumizi ya AI wa uzalishaji, na unataka viwango tofauti vya usalama kwa mazingira tofauti.
 
-### Kuanzisha Seva Yako ya Maendeleo: Kuleta FastAPI Yako Hai
-
-Sasa ni wakati wa kusisimua – kuanzisha seva yako ya maendeleo ya FastAPI na kuona muunganisho wako wa AI ukifanya kazi! FastAPI inatumia Uvicorn, seva ya ASGI yenye kasi iliyoundwa mahsusi kwa programu za Python za async.
+### Kuanzisha Server ya Maendeleo: Kuleta FastAPI Yako Kuishi
+Sasa inakuja wakati wa kusisimua – kuanzisha seva yako ya maendeleo ya FastAPI na kuona muunganisho wako wa AI ukiamka hai! FastAPI hutumia Uvicorn, seva ya ASGI yenye mwendo wa mwanga ambayo imeundwa mahsusi kwa programu za Python async.
 
 #### Kuelewa Mchakato wa Kuanzisha Seva ya FastAPI
 
 ```bash
-# Method 1: Direct Python execution (includes auto-reload)
+# Njia 1: Utekelezaji wa moja kwa moja wa Python (inajumuisha upya-ziada wa moja kwa moja)
 python api.py
 
-# Method 2: Using Uvicorn directly (more control)
+# Njia 2: Kutumia Uvicorn moja kwa moja (udhibiti zaidi)
 uvicorn api:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-Unapoendesha amri hii, haya ndiyo yanayotokea nyuma ya pazia:
+Unapoendesha amri hii, hapa ndilo linatokea nyuma ya pazia:
 
-**1. Python inapakua programu yako ya FastAPI**:
-- Inaleta maktaba zote zinazohitajika (FastAPI, Pydantic, OpenAI, nk.)
-- Inapakia vigezo vya mazingira kutoka kwa faili yako ya `.env`
-- Inaunda mfano wa programu ya FastAPI na nyaraka za kiotomatiki
+**1. Python inapakia programu yako ya FastAPI**:
+- Inaingiza maktaba zote muhimu (FastAPI, Pydantic, OpenAI, n.k.)
+- Inapakia mabadiliko ya mazingira kutoka kwa faili yako `.env`
+- Inatengeneza mfano wa programu ya FastAPI na nyaraka za moja kwa moja
 
-**2. Uvicorn inasanidi seva ya ASGI**:
-- Inaunganisha na bandari ya 5000 na uwezo wa kushughulikia maombi ya async
-- Inasanidi uelekezaji wa maombi na uthibitishaji wa kiotomatiki
-- Inawezesha upakiaji wa haraka kwa maendeleo (kuanzisha upya mabadiliko ya faili)
-- Inazalisha nyaraka za API zinazoweza kuingiliana
+**2. Uvicorn huandaa seva ya ASGI**:
+- Inajihusisha na bandari 5000 na uwezo wa kushughulikia maombi async
+- Inaweka njia za kuongoza maombi na uhakikisho wa moja kwa moja
+- Inawezeshwa upya moja kwa moja kwa maendeleo (huanzisha upya faili zinapobadilika)
+- Inazalisha nyaraka za API zenye mwingiliano
 
 **3. Seva inaanza kusikiliza**:
 - Terminal yako inaonyesha: `INFO: Uvicorn running on http://0.0.0.0:5000`
-- Seva inaweza kushughulikia maombi mengi ya AI kwa wakati mmoja
-- API yako iko tayari na nyaraka za kiotomatiki kwenye `http://localhost:5000/docs`
+- Seva inaweza kushughulikia maombi mengi ya AI sambamba
+- API yako iko tayari na nyaraka za moja kwa moja kwenye `http://localhost:5000/docs`
 
-#### Kile Unachopaswa Kuona Wakati Kila Kitu Kinafanya Kazi
+#### Unapaswa Kuona Nini Wakati Kila Kitu Kinafanya Kazi
 
 ```bash
 $ python api.py
@@ -708,27 +1075,45 @@ INFO:     Application startup complete.
 ```
 
 **Kuelewa matokeo ya FastAPI:**
-- **Itatazama mabadiliko**: Upakiaji wa kiotomatiki umewezeshwa kwa maendeleo
-- **Uvicorn inaendesha**: Seva ya ASGI yenye utendaji wa juu iko hai
-- **Mchakato wa upakiaji upya umeanza**: Mfuatiliaji wa faili kwa kuanzisha upya kiotomatiki
-- **Kuanzisha programu kumekamilika**: Programu ya FastAPI imeanzishwa kwa mafanikio
-- **Nyaraka za kiingiliana zinapatikana**: Tembelea `/docs` kwa nyaraka za API kiotomatiki
+- **Itatazama mabadiliko**: Auto-reload imewezeshwa kwa maendeleo
+- **Uvicorn inafanya kazi**: Seva ya ASGI yenye utendaji mkubwa inatumika
+- **Mchakato wa reloader umeanzishwa**: Mtafiti wa faili kwa kuanzisha upya moja kwa moja
+- **Mwanzo wa programu umekamilika**: App ya FastAPI imezinduliwa kwa mafanikio
+- **Nyaraka za mwingiliano zinapatikana**: Tembelea `/docs` kwa nyaraka za API za moja kwa moja
 
-#### Kujaribu FastAPI Yako: Njia Nyingi Zenye Nguvu
+#### Kupima FastAPI Yako: Njia Nyingi Zenye Nguvu
 
-FastAPI inatoa njia kadhaa rahisi za kujaribu API yako, ikiwa ni pamoja na nyaraka za kiotomatiki zinazoweza kuingiliana:
+FastAPI hutoa njia kadhaa rahisi za kupima API yako, ikiwa ni pamoja na nyaraka za mwingiliano za moja kwa moja:
 
-**Njia ya 1: Nyaraka za API Zinazoweza Kuingiliana (Inapendekezwa)**
-1. Fungua kivinjari chako na nenda kwa `http://localhost:5000/docs`
-2. Utaona Swagger UI na endpoints zako zote zikiwa zimeandikwa
-3. Bonyeza kwenye `/hello` → "Jaribu" → Weka ujumbe wa majaribio → "Tekeleza"
-4. Tazama majibu moja kwa moja
+**Njia 1: Nyaraka za Mwingiliano za API (Inapendekezwa)**
+1. Fungua kivinjari chako na nenda `http://localhost:5000/docs`
+2. Utaona Swagger UI na mwisho wote wako umeandikwa
+3. Bonyeza `/hello` → "Try it out" → Andika ujumbe wa majaribio → "Execute"
+4. Tazama jibu moja kwa moja kwenye kivinjari kwa muundo sahihi
+
+**Njia 2: Jaribio la Kivinjari la Msingi**
+1. Nenda `http://localhost:5000` kwa mwisho wa mzizi
+2. Nenda `http://localhost:5000/health` kuangalia afya ya seva
+3. Hii inathibitisha seva yako ya FastAPI inafanya kazi vizuri
+
+**Njia 2: Jaribio la Line ya Amri (Zaidi)**
+```bash
+# Jaribu kwa kutumia curl (ikiwa inapatikana)
+curl -X POST http://localhost:5000/hello \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello AI!"}'
+
+# Jibu linalotarajiwa:
+# {"response": "Habari! Mimi ni msaidizi wako wa AI. Naweza kukusaidiaje leo?"}
+```
+
+**Njia 3: Skripti ya Jaribio la Python**
 ```python
-# test_api.py - Create this file to test your API
+# test_api.py - Unda faili hili kupima API yako
 import requests
 import json
 
-# Test the API endpoint
+# Pima mwisho wa API
 url = "http://localhost:5000/hello"
 data = {"message": "Tell me a joke about programming"}
 
@@ -740,34 +1125,34 @@ else:
     print("Error:", response.status_code, response.text)
 ```
 
-#### Kutatua Masuala ya Kawaida ya Kuanza
+#### Kutatua Tatizo la Kawaida la Mwanzo
 
-| Ujumbe wa Kosa | Maana Yake | Jinsi ya Kurekebisha |
-|----------------|------------|-----------------------|
-| `ModuleNotFoundError: No module named 'fastapi'` | FastAPI haijasakinishwa | Run `pip install fastapi uvicorn` katika mazingira yako ya virtual |
-| `ModuleNotFoundError: No module named 'uvicorn'` | ASGI server haijasakinishwa | Run `pip install uvicorn` katika mazingira yako ya virtual |
-| `KeyError: 'GITHUB_TOKEN'` | Kigezo cha mazingira hakijapatikana | Angalia faili yako ya `.env` na wito wa `load_dotenv()` |
-| `Address already in use` | Bandari 5000 inatumika | Zima michakato mingine inayotumia bandari 5000 au badilisha bandari |
-| `ValidationError` | Data ya ombi haifanani na modeli ya Pydantic | Hakikisha muundo wa ombi lako unalingana na schema inayotarajiwa |
-| `HTTPException 422` | Kitu kisichoweza kusindika | Uthibitishaji wa ombi umeshindwa, angalia `/docs` kwa muundo sahihi |
-| `OpenAI API error` | Uthibitishaji wa huduma ya AI umeshindwa | Hakikisha token yako ya GitHub ni sahihi na ina ruhusa zinazofaa |
+| Ujumbe wa Hitilafu | Kinachomaanisha | Jinsi ya Kurekebisha |
+|---------------|---------------|------------|
+| `ModuleNotFoundError: No module named 'fastapi'` | FastAPI haijasakinishwa | Endesha `pip install fastapi uvicorn` kwenye mazingira yako ya virtual |
+| `ModuleNotFoundError: No module named 'uvicorn'` | Seva ya ASGI haijasakinishwa | Endesha `pip install uvicorn` kwenye mazingira yako ya virtual |
+| `KeyError: 'GITHUB_TOKEN'` | Kigezo cha mazingira hakipatikani | Angalia faili yako `.env` na mwito wa `load_dotenv()` |
+| `Address already in use` | Bandari 5000 inatumika | Funga mchakato mwingine unaotumia bandari 5000 au badilisha bandari |
+| `ValidationError` | Data ya ombi hailingani na mfano wa Pydantic | Angalia muundo wa ombi lako unaendana na skimu inayotarajiwa |
+| `HTTPException 422` | Kiumbe kisichoshughulikiwa | Uhakiki wa ombi umefaulu, angalia `/docs` kwa muundo sahihi |
+| `OpenAI API error` | Huduma ya AI imeshindwa kuthibitishwa | Hakikisha tokeni yako ya GitHub ni sahihi na ina ruhusa sahihi |
 
-#### Mazoea Bora ya Maendeleo
+#### Miongozo Bora ya Maendeleo
 
-**Hot Reloading**: FastAPI na Uvicorn hutoa upakiaji wa moja kwa moja unapohifadhi mabadiliko kwenye faili zako za Python. Hii inamaanisha unaweza kurekebisha msimbo wako na kujaribu mara moja bila kuanzisha tena kwa mikono.
+**Upakiaji Moto**: FastAPI na Uvicorn hutoa upakiaji wa moja kwa moja unapohifadhi mabadiliko kwenye faili zako za Python. Hii inamaanisha unaweza kubadilisha msimbo na kupima mara moja bila kuanzisha upya kwa mkono.
 
 ```python
-# Enable hot reloading explicitly
+# Wezesha upakiaji wa moto kwa uwazi
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)  # debug=True enables hot reload
+    app.run(host="0.0.0.0", port=5000, debug=True)  # debug=True inaruhusu upakiaji wa moto
 ```
 
-**Kuweka kumbukumbu kwa Maendeleo**: Ongeza kumbukumbu ili kuelewa kinachoendelea:
+**Kuinua kumbukumbu kwa Maendeleo**: Ongeza kumbukumbu ili kuelewa kinachoendelea:
 
 ```python
 import logging
 
-# Set up logging
+# Weka upigaji taarifa
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -791,21 +1176,21 @@ def hello():
         return jsonify({"error": "AI service temporarily unavailable"}), 500
 ```
 
-**Kwa nini kuweka kumbukumbu kunasaidia**: Wakati wa maendeleo, unaweza kuona hasa ni maombi gani yanayoingia, ni nini AI inajibu, na wapi makosa yanatokea. Hii inafanya utatuzi kuwa wa haraka zaidi.
+**Kwa nini kumbukumbu husaidia**: Wakati wa maendeleo, unaweza kuona hasa maombi yanayokuja, AI inajibu vipi, na mahali pa kutokea kwa makosa. Hii hufanya utambuzi wa hitilafu kuwa wa kasi zaidi.
 
-### Kuseti kwa GitHub Codespaces: Maendeleo ya Wingu Rahisi
+### Kusanidi kwa GitHub Codespaces: Maendeleo ya Wingu Yaliyorahisishwa
 
-GitHub Codespaces ni kama kuwa na kompyuta yenye nguvu ya maendeleo kwenye wingu ambayo unaweza kufikia kutoka kwa kivinjari chochote. Ikiwa unafanya kazi katika Codespaces, kuna hatua kadhaa za ziada za kufanya backend yako ipatikane kwa frontend yako.
+GitHub Codespaces ni kama kuwa na kompyuta yenye nguvu ya maendeleo kwenye wingu unayoweza kufikia kutoka kivinjari chochote. Ikiwa unafanya kazi ndani ya Codespaces, kuna hatua chache za ziada za kufanya backend yako ipatikane kwa frontend yako.
 
 #### Kuelewa Mtandao wa Codespaces
 
-Katika mazingira ya maendeleo ya ndani, kila kitu kinaendeshwa kwenye kompyuta moja:
+Katika mazingira ya maendeleo ya ndani, kila kitu kinaendeshwa kwenye kompyuta ile ile:
 - Backend: `http://localhost:5000`
 - Frontend: `http://localhost:3000` (au file://)
 
-Katika Codespaces, mazingira yako ya maendeleo yanaendeshwa kwenye seva za GitHub, kwa hivyo "localhost" ina maana tofauti. GitHub huunda URLs za umma kwa huduma zako kiotomatiki, lakini unahitaji kuzisanidi ipasavyo.
+Katika Codespaces, mazingira yako ya maendeleo yanaendeshwa kwenye seva za GitHub, hivyo "localhost" ina maana tofauti. GitHub hutengeneza URL za umma kwa huduma zako kwa moja, lakini unahitaji kuziweka ipasavyo.
 
-#### Hatua kwa Hatua ya Usanidi wa Codespaces
+#### Usaidizi wa Hatua kwa Hatua wa Codespaces
 
 **1. Anzisha seva yako ya backend**:
 ```bash
@@ -813,51 +1198,51 @@ cd backend
 python api.py
 ```
 
-Utaona ujumbe wa kawaida wa kuanza wa FastAPI/Uvicorn, lakini tambua kuwa inaendeshwa ndani ya mazingira ya Codespace.
+Utaona ujumbe wa kuanzisha FastAPI/Uvicorn unaofahamika, lakini ukumbuke iko ndani ya mazingira ya Codespace.
 
-**2. Sanidi mwonekano wa bandari**:
-- Tafuta tabo ya "Ports" kwenye paneli ya chini ya VS Code
+**2. Sanidi uonekano wa bandari**:
+- Tafuta kichupo cha "Ports" kwenye paneli ya chini ya VS Code
 - Tafuta bandari 5000 kwenye orodha
 - Bonyeza kulia kwenye bandari 5000
 - Chagua "Port Visibility" → "Public"
 
-**Kwa nini kuifanya iwe ya umma?** Kwa kawaida, bandari za Codespace ni za kibinafsi (zinapatikana tu kwako). Kuzifanya za umma kunaruhusu frontend yako (ambayo inaendeshwa kwenye kivinjari) kuwasiliana na backend yako.
+**Kwa nini kuweka umma?** Kwa kawaida, bandari za Codespace ni za faragha (zinapatikana kwako tu). Kuweka umma kunaruhusu frontend yako (inayoendesha kwenye kivinjari) kuwasiliana na backend yako.
 
 **3. Pata URL yako ya umma**:
-Baada ya kufanya bandari iwe ya umma, utaona URL kama:
+Baada ya kuweka bandari kuwa umma, utaona URL kama hii:
 ```
 https://your-codespace-name-5000.app.github.dev
 ```
 
 **4. Sasisha usanidi wa frontend yako**:
 ```javascript
-// In your frontend app.js, update the BASE_URL:
+// Katika app.js ya frontend yako, sasisha BASE_URL:
 this.BASE_URL = "https://your-codespace-name-5000.app.github.dev";
 ```
 
-#### Kuelewa URLs za Codespace
+#### Kuelewa URL za Codespace
 
-URLs za Codespace zinafuata muundo unaotabirika:
+URL za Codespace zina muundo unaotabirika:
 ```
 https://[codespace-name]-[port].app.github.dev
 ```
 
-**Kuvunja hii:**
-- `codespace-name`: Kitambulisho cha kipekee cha Codespace yako (kwa kawaida kinajumuisha jina lako la mtumiaji)
-- `port`: Namba ya bandari ambayo huduma yako inaendeshwa (5000 kwa programu yetu ya FastAPI)
+**Kuvunja haya:**
+- `codespace-name`: Kitambulisho cha kipekee kwa Codespace yako (kawaida kina jina la mtumiaji wako)
+- `port`: Nambari ya bandari huduma yako inayoendeshwa (5000 kwa app yetu ya FastAPI)
 - `app.github.dev`: Kikoa cha GitHub kwa programu za Codespace
 
-#### Kujaribu Usanidi wa Codespace Yako
+#### Kupima Usanidi wako wa Codespace
 
 **1. Jaribu backend moja kwa moja**:
-Fungua URL yako ya umma kwenye tabo mpya ya kivinjari. Unapaswa kuona:
+Fungua URL yako ya umma kwa kichupo kipya cha kivinjari. Unapaswa kuona:
 ```
 Welcome to the AI Chat API. Send POST requests to /hello with JSON payload containing 'message' field.
 ```
 
-**2. Jaribu na zana za msanidi wa kivinjari**:
+**2. Jaribu na zana za mende wa kivinjari**:
 ```javascript
-// Open browser console and test your API
+// Fungua console ya kivinjari na jaribu API yako
 fetch('https://your-codespace-name-5000.app.github.dev/hello', {
   method: 'POST',
   headers: {'Content-Type': 'application/json'},
@@ -867,101 +1252,123 @@ fetch('https://your-codespace-name-5000.app.github.dev/hello', {
 .then(data => console.log(data));
 ```
 
-#### Codespaces vs Maendeleo ya Ndani
+#### Codespaces dhidi ya Maendeleo ya Ndani
 
 | Kipengele | Maendeleo ya Ndani | GitHub Codespaces |
-|-----------|--------------------|-------------------|
-| **Muda wa Usanidi** | Mrefu (sakinisha Python, utegemezi) | Papo hapo (mazingira yaliyosanidiwa awali) |
-| **Ufikiaji wa URL** | `http://localhost:5000` | `https://xyz-5000.app.github.dev` |
-| **Usanidi wa Bandari** | Kiotomatiki | Mwongozo (fanya bandari ziwe za umma) |
-| **Uhifadhi wa Faili** | Kompyuta ya ndani | Hifadhi ya GitHub |
-| **Ushirikiano** | Ngumu kushiriki mazingira | Rahisi kushiriki kiungo cha Codespace |
-| **Utegemezi wa Mtandao** | Kwa simu za API za AI pekee | Inahitajika kwa kila kitu |
+|--------|-------------------|-------------------|
+| **Muda wa Usanidi** | Mrefu (sasisha Python, utegemezi) | Mara moja (mazingira tayari yamesanidiwa) |
+| **Upatikanaji wa URL** | `http://localhost:5000` | `https://xyz-5000.app.github.dev` |
+| **Usanidi wa Bandari** | Moja kwa moja | Mikono (weka bandari kuwa za umma) |
+| **Uendelevu wa Faili** | Kompyuta ya ndani | Rejesta ya GitHub |
+| **Ushirikiano** | Gumu kushiriki mazingira | Rahisi kushiriki kiungo cha Codespace |
+| **Utegemezi wa Intaneti** | Kwa maombi ya API ya AI pekee | Inahitajika kwa kila kitu |
 
 #### Vidokezo vya Maendeleo ya Codespace
 
-**Vigezo vya Mazingira katika Codespaces**:
-Faili yako ya `.env` inafanya kazi kwa njia sawa katika Codespaces, lakini unaweza pia kuweka vigezo vya mazingira moja kwa moja katika Codespace:
+**Mabadiliko ya Mazingira katika Codespaces**:
+Faili yako `.env` inafanya kazi sawa ndani ya Codespaces, lakini pia unaweza kuweka vigezo vya mazingira moja kwa Codespace:
 
 ```bash
-# Set environment variable for the current session
+# Weka thamani ya mazingira kwa kikao cha sasa
 export GITHUB_TOKEN="your_token_here"
 
-# Or add to your .bashrc for persistence
+# Au ongeza kwenye .bashrc yako kwa kudumu
 echo 'export GITHUB_TOKEN="your_token_here"' >> ~/.bashrc
 ```
 
 **Usimamizi wa Bandari**:
-- Codespaces hugundua kiotomatiki wakati programu yako inaanza kusikiliza kwenye bandari
-- Unaweza kupeleka bandari nyingi kwa wakati mmoja (inasaidia ikiwa utaongeza hifadhidata baadaye)
+- Codespaces hutambua moja kwa moja wakati programu yako inaanza kusikiliza bandari
+- Unaweza kupeleka bandari nyingi kwa wakati mmoja (inayosaidia kama utaongeza hifadhidata baadaye)
 - Bandari zinabaki kupatikana mradi Codespace yako inaendelea
 
 **Mtiririko wa Kazi wa Maendeleo**:
 1. Fanya mabadiliko ya msimbo katika VS Code
-2. FastAPI inajipakia upya kiotomatiki (shukrani kwa hali ya upakiaji upya ya Uvicorn)
+2. FastAPI ina auto-reload (shukrani kwa mode ya reload ya Uvicorn)
 3. Jaribu mabadiliko mara moja kupitia URL ya umma
-4. Fanya commit na push unapokuwa tayari
+4. Fanya commit na push ukimaliza
 
-> 💡 **Kidokezo cha Pro**: Weka alama URL yako ya backend ya Codespace wakati wa maendeleo. Kwa kuwa majina ya Codespace ni thabiti, URL haitabadilika mradi unatumia Codespace ile ile.
+> 💡 **Ushauri Bora**: Weka alama URL ya backend ya Codespace wakati wa maendeleo. Kwa kuwa majina ya Codespace ni thabiti, URL haitabadilika mradi unatumia Codespace ile ile.
 
-## Kuunda Kiolesura cha Gumzo cha Frontend: Ambapo Binadamu Hukutana na AI
+## Kuunda Uso wa Chat wa Frontend: Hapo Watu Wanakutana na AI
 
-Sasa tutajenga kiolesura cha mtumiaji – sehemu inayodhibiti jinsi watu wanavyowasiliana na msaidizi wako wa AI. Kama muundo wa kiolesura cha awali cha iPhone, tunazingatia kufanya teknolojia ngumu iwe rahisi na ya asili kutumia.
+Sasa tutaweka muonekano wa mtumiaji – sehemu inayobainisha jinsi watu wanavyowasiliana na msaidizi wako wa AI. Kama muundo wa interface ya iPhone asili, tunalenga kufanya teknolojia tata ionekane rahisi na ya asili kutumia.
 
-### Kuelewa Usanifu wa Kisasa wa Frontend
+### Kuelewa Mhandisi wa Kisasa wa Frontend
 
-Kiolesura chetu cha gumzo kitakuwa kile tunachokiita "Single Page Application" au SPA. Badala ya mbinu ya zamani ambapo kila bonyeza inasababisha ukurasa mpya kupakiwa, programu yetu inasasisha kwa urahisi na mara moja:
+Uso wetu wa chat utakuwa kile tunachokiita "Programu ya Ukurasa Mmoja" au SPA. Badala ya mbinu ya zamani ambapo kila kubonyeza kunapakia ukurasa mpya, app yetu husasisha kwa simu na papo hapo:
 
-**Tovuti za zamani**: Kama kusoma kitabu cha karatasi – unageuza kurasa mpya kabisa
-**Programu yetu ya gumzo**: Kama kutumia simu yako – kila kitu kinatiririka na kusasishwa bila shida
+**Tovuti za zamani**: Kama kusoma kitabu cha karatasi – unageuza kurasa mpya kabisa  
+**App yetu ya chat**: Kama kutumia simu yako – kila kitu kinatiririka na kusasishwa bila shida
 
 ```mermaid
 graph TD
-    A[User Types Message] --> B[JavaScript Captures Input]
-    B --> C[Validate & Format Data]
-    C --> D[Send to Backend API]
-    D --> E[Display Loading State]
-    E --> F[Receive AI Response]
-    F --> G[Update Chat Interface]
-    G --> H[Ready for Next Message]
+    A[Mtu Mtumiaji Andika Ujumbe] --> B[JavaScript Inakamata Kuingiza]
+    B --> C[Thibitisha & Panga Data]
+    C --> D[Tuma kwa API ya Backend]
+    D --> E[Onyesha Hali ya Kupakia]
+    E --> F[Pokea Jibu la AI]
+    F --> G[Sabisha Kiolesura cha Mazungumzo]
+    G --> H[Tayari kwa Ujumbe Ufuo]
 ```
-
+```mermaid
+classDiagram
+    class ChatApp {
+        +messages: HTMLElement
+        +form: HTMLElement
+        +input: HTMLElement
+        +sendButton: HTMLElement
+        +BASE_URL: string
+        +API_ENDPOINT: string
+        
+        +constructor()
+        +initializeEventListeners()
+        +handleSubmit(event)
+        +callAPI(message)
+        +appendMessage(text, role)
+        +escapeHtml(text)
+        +scrollToBottom()
+        +setLoading(isLoading)
+    }
+    
+    ChatApp --> DOM : inaendesha
+    ChatApp --> FastAPI : inatuma maombi
+```
 ### Nguzo Tatu za Maendeleo ya Frontend
 
-Kila programu ya frontend – kutoka tovuti rahisi hadi programu ngumu kama Discord au Slack – inajengwa juu ya teknolojia tatu za msingi. Fikiria kama msingi wa kila kitu unachokiona na kuingiliana nacho kwenye wavuti:
+Kila programu ya frontend – kutoka tovuti rahisi hadi app ngumu kama Discord au Slack – imejengwa kwa teknolojia kuu tatu. Fikiri kama msingi wa kila unachoona na kuwasiliana nacho kwenye wavuti:
 
-**HTML (Muundo)**: Hii ni msingi wako
-- Inaamua ni vipengele gani vinavyokuwepo (vifungo, maeneo ya maandishi, vyombo)
-- Inatoa maana kwa maudhui (hii ni kichwa, hii ni fomu, nk.)
-- Inaunda muundo wa msingi ambao kila kitu kingine kinajengwa juu yake
+**HTML (Muundo)**: Hii ni msingi wako  
+- Hutoa maelezo kuhusu vipengele vilivyopo (vitufe, maeneo ya maandishi, chombo)  
+- Hutoa maana kwa maudhui (hii ni kichwa, hii ni fomu, n.k.)  
+- Hutengeneza muundo wa msingi unaoendeshwa na kila kitu kingine
 
-**CSS (Uwasilishaji)**: Hii ni mbunifu wako wa ndani
-- Inafanya kila kitu kionekane kizuri (rangi, fonti, mipangilio)
-- Inashughulikia saizi tofauti za skrini (simu vs laptop vs tablet)
-- Inaunda michoro laini na maoni ya kuona
+**CSS (Uwasilishaji)**: Hii ni mbunifu wako wa ndani  
+- Inafanya kila kitu kuonekana nzuri (rangi, fonti, upangaji)  
+- Inasimamia ukubwa tofauti za skrini (simu vs laptop vs kibao)  
+- Hutoa michoro laini na mrejesho wa kuona
 
-**JavaScript (Tabia)**: Hii ni akili yako
-- Inajibu kile watumiaji wanachofanya (kubofya, kuandika, kusogeza)
-- Inazungumza na backend yako na kusasisha ukurasa
-- Inafanya kila kitu kiwe cha kuingiliana na cha nguvu
+**JavaScript (Tabia)**: Hii ni ubongo wako  
+- Inajibu kile watumiaji wanachofanya (kubofya, kuandika, kurusha chini)  
+- Inazungumza na backend yako na kusasisha ukurasa  
+- Inafanya kila kitu kuwa mwingiliano na nguvu
 
-**Fikiria kama muundo wa usanifu:**
-- **HTML**: Mchoro wa muundo (kufafanua nafasi na uhusiano)
-- **CSS**: Muundo wa uzuri na mazingira (mtindo wa kuona na uzoefu wa mtumiaji)
+**Fikiri kama usanifu wa usanifu:**
+- **HTML**: Ramani ya muundo (kueleza nafasi na uhusiano)
+- **CSS**: Muundo wa urembo na mazingira (mwelekeo wa kuona na uzoefu wa mtumiaji)
 - **JavaScript**: Mifumo ya mitambo (utendaji na mwingiliano)
 
-### Kwa nini Usanifu wa Kisasa wa JavaScript Unahitajika
+### Kwa Nini Usanifu wa JavaScript wa Kisasa Ni Muhimu
 
-Programu yetu ya gumzo itatumia mifumo ya kisasa ya JavaScript ambayo utaona katika programu za kitaalamu. Kuelewa dhana hizi kutakusaidia unapokua kama msanidi programu:
+App yetu ya chat itatumia mifumo ya kisasa ya JavaScript ambayo utaiona katika programu za kitaalamu. Kuelewa dhana hizi kutakusaidia unavyoendelea kama mendelezaji:
 
-**Usanifu wa Msingi wa Darasa**: Tutapanga msimbo wetu katika madarasa, ambayo ni kama kuunda michoro ya vitu
-**Async/Await**: Njia ya kisasa ya kushughulikia shughuli zinazochukua muda (kama simu za API)
-**Programu Inayoendeshwa na Matukio**: Programu yetu inajibu vitendo vya mtumiaji (kubofya, kubonyeza funguo) badala ya kuendesha katika mzunguko
-**Manipulation ya DOM**: Kusasisha maudhui ya ukurasa wa wavuti kwa nguvu kulingana na mwingiliano wa mtumiaji na majibu ya API
+**Usanifu wa Mifumo ya Darasa**: Tutapanga msimbo wetu kwa madarasa, ambayo ni kama kutengeneza ramani za vitu  
+**Async/Await**: Njia ya kisasa kushughulikia shughuli zinazochukua muda (kama miito ya API)  
+**Programu Iliyotegemea Matukio**: App yetu inajibu hatua za mtumiaji (kama kubofya, kubonyeza vidokezo) badala ya kuendesha kwa mizunguko  
+**Udhibiti wa DOM**: Kusasisha mabadiliko ya ukurasa wa wavuti kwa misukumo ya mtumiaji na majibu ya API
 
-### Usanidi wa Muundo wa Mradi
+### Mpangilio wa Mradi
 
-Unda saraka ya frontend na muundo huu uliopangwa:
+Unda saraka ya frontend na mpangilio huu uliopangwa:
 
 ```text
 frontend/
@@ -971,17 +1378,17 @@ frontend/
 ```
 
 **Kuelewa usanifu:**
-- **Inatenganisha** masuala kati ya muundo (HTML), tabia (JavaScript), na uwasilishaji (CSS)
-- **Inadumisha** muundo rahisi wa faili ambao ni rahisi kuvinjari na kurekebisha
-- **Inafuata** mazoea bora ya maendeleo ya wavuti kwa shirika na usimamizi
+- **Inatenga** masuala kati ya muundo (HTML), tabia (JavaScript), na uwasilishaji (CSS)  
+- **Inadumisha** muundo rahisi wa faili unaoweza kutembea na kuhariri kwa urahisi  
+- **Inafuata** mbinu bora za maendeleo ya wavuti kwa usimamizi na uendelevu
 
-### Kujenga Msingi wa HTML: Muundo wa Semantiki kwa Ufikiaji
+### Kujenga Msingi wa HTML: Muundo wa Semantic kwa Upatikanaji
 
-Hebu tuanze na muundo wa HTML. Maendeleo ya kisasa ya wavuti yanasisitiza "HTML ya semantiki" – kutumia vipengele vya HTML vinavyoelezea waziwazi kusudi lao, si tu muonekano wao. Hii inafanya programu yako ipatikane kwa wasomaji wa skrini, injini za utafutaji, na zana zingine.
+Tuanze na muundo wa HTML. Maendeleo ya wavuti ya kisasa yanasisitiza "HTML semantic" – kutumia vipengele vya HTML vinavyoelezea wazi kusudi lao, si tu muonekano. Hii hufanya programu yako ipatikane kwa wasomaji wa skrini, injini za utafutaji, na zana nyingine.
 
-**Kwa nini HTML ya semantiki ni muhimu**: Fikiria kuelezea programu yako ya gumzo kwa mtu kupitia simu. Ungeweza kusema "kuna kichwa na kichwa, eneo kuu ambapo mazungumzo yanaonekana, na fomu chini kwa kuandika ujumbe." HTML ya semantiki hutumia vipengele vinavyolingana na maelezo haya ya asili.
+**Kwa nini HTML semantic ni muhimu**: Fikiria unamuambia mtu app yako ya chat kwa simu. Ungesema "kuna kichwa lenye kichwa na maelezo, eneo kuu ambapo mazungumzo yanaonekana, na fomu chini kwa kuandika ujumbe." HTML semantic hutumia vipengele vinavyolingana na maelezo haya ya asili.
 
-Unda `index.html` na markup hii iliyopangwa kwa uangalifu:
+Tengeneza `index.html` na alama hii iliyoundwa kwa kufikiria:
 
 ```html
 <!DOCTYPE html>
@@ -1026,74 +1433,73 @@ Unda `index.html` na markup hii iliyopangwa kwa uangalifu:
 **Kuelewa kila kipengele cha HTML na kusudi lake:**
 
 #### Muundo wa Hati
-- **`<!DOCTYPE html>`**: Inaambia kivinjari hii ni HTML5 ya kisasa
-- **`<html lang="en">`**: Inataja lugha ya ukurasa kwa wasomaji wa skrini na zana za tafsiri
-- **`<meta charset="UTF-8">`**: Inahakikisha usimbaji sahihi wa herufi kwa maandishi ya kimataifa
-- **`<meta name="viewport"...>`**: Inafanya ukurasa uweze kujibika kwa simu kwa kudhibiti zoom na kiwango
+- **`<!DOCTYPE html>`**: Inamfahamisha kivinjari hii ni HTML5 ya kisasa  
+- **`<html lang="en">`**: Inaeleza lugha ya ukurasa kwa wasomaji wa skrini na zana za tafsiri  
+- **`<meta charset="UTF-8">`**: Inahakikisha usimbaji wa herufi uko sahihi kwa maandishi ya kimataifa  
+- **`<meta name="viewport"...>`**: Inafanya ukurasa uwe na muundo unaojibu simu kwa kudhibiti boriti na kiwango
 
-#### Vipengele vya Semantiki
-- **`<header>`**: Inatambulisha wazi sehemu ya juu na kichwa na maelezo
-- **`<main>`**: Inateua eneo kuu la maudhui (ambapo mazungumzo yanatokea)
-- **`<form>`**: Sahihi semantiki kwa pembejeo ya mtumiaji, inawezesha urambazaji sahihi wa kibodi
+#### Vipengele vya Semantic
+- **`<header>`**: Hutoa sehemu ya juu wazi ya kichwa na maelezo  
+- **`<main>`**: Inaonyesha eneo kuu la maudhui (ambapo mazungumzo hufanyika)  
+- **`<form>`**: Ni sahihi kwa kisheria kwa ingizo la mtumiaji, hurahisisha kuvinjari kwa keyboard
 
-#### Vipengele vya Ufikiaji
-- **`role="log"`**: Inaambia wasomaji wa skrini eneo hili lina kumbukumbu ya mpangilio wa ujumbe
-- **`aria-live="polite"`**: Inatangaza ujumbe mpya kwa wasomaji wa skrini bila kuingilia
-- **`aria-label`**: Inatoa lebo za maelezo kwa vidhibiti vya fomu
-- **`required`**: Kivinjari kinathibitisha kwamba watumiaji wanaingiza ujumbe kabla ya kutuma
+#### Sifa za Upatikanaji
+- **`role="log"`**: Inaambia wasomaji wa skrini eneo hili lina daftari la muda wa maandishi  
+- **`aria-live="polite"`**: Inatangaza ujumbe mpya kwa wasomaji wa skrini bila kuvuruga  
+- **`aria-label`**: Hutoa maelezo ya vidhibiti vya fomu  
+- **`required`**: Kivinjari kinathibitisha mtumiaji anaingiza ujumbe kabla ya kutuma
 
-#### Ujumuishaji wa CSS na JavaScript
-- **`class` attributes**: Hutoa ndoano za mitindo kwa CSS (mfano, `chat-container`, `input-group`)
-- **`id` attributes**: Inaruhusu JavaScript kupata na kudhibiti vipengele maalum
-- **Mahali pa Script**: Faili ya JavaScript imepakizwa mwishoni ili HTML ipakizwe kwanza
+#### Mchanganyiko wa CSS na JavaScript
+- **`class` attributes**: Hutoa alama za mtindo kwa CSS (mfano, `chat-container`, `input-group`)  
+- **`id` attributes**: Huruhusu JavaScript kupata na kuhariri vipengele maalumu  
+- **Mahali pa script**: Faili la JavaScript linaletwa mwishoni ili HTML ipakie kwanza
 
-**Kwa nini muundo huu unafanya kazi:**
-- **Mtiririko wa kimantiki**: Kichwa → Maudhui kuu → Fomu ya pembejeo inalingana na mpangilio wa kusoma wa asili
-- **Inapatikana kwa kibodi**: Watumiaji wanaweza kuzunguka vipengele vyote vya kuingiliana
-- **Inafaa kwa wasomaji wa skrini**: Alama wazi na maelezo kwa watumiaji wenye ulemavu wa kuona
-- **Inajibu kwa simu**: Lebo ya meta ya viewport inawezesha muundo unaojibika
-- **Uboreshaji wa maendeleo**: Inafanya kazi hata kama CSS au JavaScript haijapakizwa
+**Kwa nini muundo huu unaendana:**
+- **Mtiririko wa mantiki**: Kichwa → Maudhui kuu → Fomu la ingizo linaendana na mfululizo wa kusoma asilia  
+- **Upatikanaji wa keyboard**: Watumiaji wanaweza kutumia tab kupitia vipengele vyote vya kuingilia  
+- **Rafiki kwa wasomaji wa skrini**: Alama za wazi na maelezo kwa watumiaji wenye ulemavu wa kuona  
+- **Inayojibu simu**: Meta tag ya viewport inaruhusu muundo unaojibu  
+- **Uboreshaji Endelevu**: Hufanya kazi hata kama CSS au JavaScript itashindikana kupakia
 
-### Kuongeza JavaScript ya Kuingiliana: Mantiki ya Programu ya Kisasa ya Wavuti
+### Kuongeza JavaScript ya Mwingiliano: Mantiki ya Programu ya Wavuti ya Kisasa
+Sasa tufanye JavaScript inayoleta kiolesura chetu cha mazungumzo kuwa hai. Tutatumia mitindo ya kisasa ya JavaScript ambayo utakutana nayo katika maendeleo ya wavuti ya kitaalamu, ikiwa ni pamoja na madarasa ya ES6, async/await, na programu zinazotegemea matukio.
 
-Sasa hebu tujenge JavaScript inayofanya kiolesura chetu cha gumzo kiwe hai. Tutatumia mifumo ya kisasa ya JavaScript ambayo utakutana nayo katika maendeleo ya wavuti ya kitaalamu, ikiwa ni pamoja na madarasa ya ES6, async/await, na programu inayoendeshwa na matukio.
+#### Kuelewa Mimariko ya Kisasa ya JavaScript
 
-#### Kuelewa Usanifu wa Kisasa wa JavaScript
+Badala ya kuandika msururu wa vipengele (mfululizo wa kazi ambazo zinafanya kwa mpangilio), tutaunda **mimari inayotegemea madarasa**. Fikiria darasa kama ramani ya jinsi ya kutengeneza vitu – kama vile ramani za mbunifu jengo zinazoweza kutumika kujenga nyumba nyingi.
 
-Badala ya kuandika msimbo wa utaratibu (mfululizo wa kazi zinazokimbia kwa mpangilio), tutaunda **usanifu wa msingi wa darasa**. Fikiria darasa kama mchoro wa kuunda vitu – kama vile mchoro wa mhandisi unaweza kutumika kujenga nyumba nyingi.
+**Kwa nini kutumia madarasa kwa maombi ya wavuti?**
+- **Mpangilio**: Kazi zote zinazohusiana zimeunganishwa pamoja
+- **Tumia tena**: Unaweza kuunda matukio mengi ya mazungumzo kwenye ukurasa mmoja
+- **Matengenezo rahisi**: Rahisi kuchunguza hitilafu na kubadilisha vipengele maalum
+- **Kiwango cha kitaalamu**: Mtindo huu hutumika katika mifumo kama React, Vue, na Angular
 
-**Kwa nini kutumia madarasa kwa programu za wavuti?**
-- **Shirika**: Utendaji wote unaohusiana umewekwa pamoja
-- **Urejelezaji**: Unaweza kuunda matukio mengi ya gumzo kwenye ukurasa mmoja
-- **Usimamizi**: Rahisi kutatua na kurekebisha vipengele maalum
-- **Kiwango cha kitaalamu**: Muundo huu unatumika katika mifumo kama React, Vue, na Angular
-
-Unda `app.js` na JavaScript hii ya kisasa, iliyopangwa vizuri:
+Unda `app.js` ukiwa na JavaScript hii ya kisasa, iliyopangwa vizuri:
 
 ```javascript
-// app.js - Modern chat application logic
+// app.js - Mmantikio wa programu ya mazungumzo ya kisasa
 
 class ChatApp {
     constructor() {
-        // Get references to DOM elements we'll need to manipulate
+        // Pata marejeo kwa vipengele vya DOM tunavyohitaji kuvitawala
         this.messages = document.getElementById("messages");
         this.form = document.getElementById("chatForm");
         this.input = document.getElementById("messageInput");
         this.sendButton = document.getElementById("sendBtn");
         
-        // Configure your backend URL here
-        this.BASE_URL = "http://localhost:5000"; // Update this for your environment
+        // Sanidi URL ya seva yako hapa
+        this.BASE_URL = "http://localhost:5000"; // Sasisha hii kwa mazingira yako
         this.API_ENDPOINT = `${this.BASE_URL}/hello`;
         
-        // Set up event listeners when the chat app is created
+        // Weka wasikilizaji wa matukio unapounda programu ya mazungumzo
         this.initializeEventListeners();
     }
     
     initializeEventListeners() {
-        // Listen for form submission (when user clicks Send or presses Enter)
+        // Sikiliza kuwasilishwa kwa fomu (wakati mtumiaji anabonyeza Tuma au anabonyeza Enter)
         this.form.addEventListener("submit", (e) => this.handleSubmit(e));
         
-        // Also listen for Enter key in the input field (better UX)
+        // Pia sikiliza kitufe cha Enter kwenye sehemu ya ingizo (UX bora)
         this.input.addEventListener("keypress", (e) => {
             if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
@@ -1103,31 +1509,31 @@ class ChatApp {
     }
     
     async handleSubmit(event) {
-        event.preventDefault(); // Prevent form from refreshing the page
+        event.preventDefault(); // Zuia fomu isiboreshe ukurasa
         
         const messageText = this.input.value.trim();
-        if (!messageText) return; // Don't send empty messages
+        if (!messageText) return; // Usitume ujumbe tupu
         
-        // Provide user feedback that something is happening
+        // Toa mrejesho kwa mtumiaji kwamba kuna jambo linaendelea
         this.setLoading(true);
         
-        // Add user message to chat immediately (optimistic UI)
+        // Ongeza ujumbe wa mtumiaji kwenye mazungumzo mara moja (UI ya matumaini)
         this.appendMessage(messageText, "user");
         
-        // Clear input field so user can type next message
+        // Futa sehemu ya ingizo ili mtumiaji aweze kuandika ujumbe unaofuata
         this.input.value = '';
         
         try {
-            // Call the AI API and wait for response
+            // Piga API ya AI na subiri jibu
             const reply = await this.callAPI(messageText);
             
-            // Add AI response to chat
+            // Ongeza jibu la AI kwenye mazungumzo
             this.appendMessage(reply, "assistant");
         } catch (error) {
             console.error('API Error:', error);
             this.appendMessage("Sorry, I'm having trouble connecting right now. Please try again.", "error");
         } finally {
-            // Re-enable the interface regardless of success or failure
+            // Rejesha kiolesura kwa kutumia mafanikio au kushindwa
             this.setLoading(false);
         }
     }
@@ -1180,7 +1586,7 @@ class ChatApp {
     }
 }
 
-// Initialize the chat application when the page loads
+// Anzisha programu ya mazungumzo wakati ukurasa unapopakia
 document.addEventListener("DOMContentLoaded", () => {
     new ChatApp();
 });
@@ -1192,26 +1598,26 @@ document.addEventListener("DOMContentLoaded", () => {
 ```javascript
 class ChatApp {
     constructor() {
-        // This runs when you create a new ChatApp instance
-        // It's like the "setup" function for your chat
+        // Hii inakwenda wakati unapotengeneza mfano mpya wa ChatApp
+        // Ni kama kazi ya "setup" kwa mazungumzo yako
     }
     
     methodName() {
-        // Methods are functions that belong to the class
-        // They can access class properties using "this"
+        // Mbinu ni kazi ambazo ni mali ya darasa
+        // Wanaweza kufikia mali za darasa kwa kutumia "this"
     }
 }
 ```
 
-**Mfumo wa Async/Await**:
+**Mtindo wa Async/Await**:
 ```javascript
-// Old way (callback hell):
+// Njia ya zamani (jeuri ya kurejea):
 fetch(url)
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error(error));
 
-// Modern way (async/await):
+// Njia ya kisasa (async/await):
 try {
     const response = await fetch(url);
     const data = await response.json();
@@ -1221,73 +1627,90 @@ try {
 }
 ```
 
-**Programu Inayoendeshwa na Matukio**:
-Badala ya kuangalia kila mara ikiwa kitu kimetokea, tunasikiliza matukio:
+**Programu Inayotegemea Matukio**:
+Badala ya kuangalia kila wakati kama kitu kimefanyika, tunasikiliza matukio:
 ```javascript
-// When form is submitted, run handleSubmit
+// Wakati fomu inapotumwa, endesha handleSubmit
 this.form.addEventListener("submit", (e) => this.handleSubmit(e));
 
-// When Enter key is pressed, also run handleSubmit
+// Wakati kitufe cha Enter kinapobonyezwa, pia endesha handleSubmit
 this.input.addEventListener("keypress", (e) => { /* ... */ });
 ```
 
-**Manipulation ya DOM**:
+**Udhibiti wa DOM**:
 ```javascript
-// Create new elements
+// Tengeneza vipengele vipya
 const messageElement = document.createElement("div");
 
-// Modify their properties
+// Badilisha mali zao
 messageElement.className = "message user";
 messageElement.innerHTML = "Hello world!";
 
-// Add to the page
+// Ongeza kwenye ukurasa
 this.messages.appendChild(messageElement);
 ```
 
-#### Usalama na Mazoea Bora
+#### Usalama na Maarifa Bora
 
 **Kuzuia XSS**:
 ```javascript
 escapeHtml(text) {
     const div = document.createElement('div');
-    div.textContent = text;  // This automatically escapes HTML
+    div.textContent = text;  // Hii huhifadhi HTML kiotomatiki
     return div.innerHTML;
 }
 ```
 
-**Kwa nini hii ni muhimu**: Ikiwa mtumiaji anaandika `<script>alert('hack')</script>`, kazi hii inahakikisha inaonyeshwa kama maandishi badala ya kutekelezwa kama msimbo.
+**Kwa nini hili ni muhimu**: Ikiwa mtumiaji ataandika `<script>alert('hack')</script>`, kazi hii inahakikisha inaonyeshwa kama maandishi badala ya kutekelezwa kama msimbo.
 
-**Kushughulikia Makosa**:
+**Udhibiti wa Makosa**:
 ```javascript
 try {
     const reply = await this.callAPI(messageText);
     this.appendMessage(reply, "assistant");
 } catch (error) {
-    // Show user-friendly error instead of breaking the app
+    // Onyesha kosa rafiki kwa mtumiaji badala ya kuvunja programu
     this.appendMessage("Sorry, I'm having trouble...", "error");
 }
 ```
 
-**Mazingatio ya Uzoefu wa Mtumiaji**:
-- **UI ya Optimistic**: Ongeza ujumbe wa mtumiaji mara moja, usisubiri majibu ya seva
-- **Hali za kupakia**: Lemaza vifungo na onyesha "Inatuma..." wakati wa kusubiri
-- **Auto-scroll**: Weka ujumbe mpya zaidi unaoonekana
-- **Uthibitishaji wa pembejeo**: Usitume ujumbe tupu
-- **Njia za mkato za kibodi**: Funguo ya Enter inatuma ujumbe (kama programu halisi za gumzo)
+**Mambo ya Kuzingatia Kuhusu Uzoefu wa Mtumiaji**:
+- **UI ya matumaini**: Ongeza ujumbe wa mtumiaji mara moja, usisubiri jibu la seva
+- **Hali ya kupakia**: Zima vifungo na onyesha "Inatumwa..." wakati wa kusubiri
+- **Kuzungusha kiotomatiki**: Weka ujumbe mpya uwe waonekana
+- **Uthibitisho wa ingizo**: Usitume ujumbe tupu
+- **Njia za ufunguo wa kibodi**: Kitufe cha Enter kinatuma ujumbe (kama programu halisi za mazungumzo)
 
 #### Kuelewa Mtiririko wa Programu
 
-1. **Ukurasa unapakizwa** → Tukio la `DOMContentLoaded` linatokea → `new ChatApp()` linaundwa
-2. **Constructor inaendeshwa** → Inapata marejeleo ya vipengele vya DOM → Inasanidi wasikilizaji wa matukio
-3. **Mtumiaji anaandika ujumbe** → Anabonyeza Enter au anabonyeza Tuma → `handleSubmit` inaendeshwa
-4. **handleSubmit** → Inathibitisha pembejeo → Ina
-Muundo huu unaweza kupanuka – unaweza kuongeza vipengele kama kuhariri ujumbe, kupakia faili, au nyuzi nyingi za mazungumzo bila kuandika upya muundo wa msingi.
+1. **Ukifungua ukurasa** → tukio la `DOMContentLoaded` linaanzishwa → `new ChatApp()` inaumbwa
+2. **Kijenga kinaendesha** → hupata marejeleo ya vipengele vya DOM → huandaa wasikilizaji wa matukio
+3. **Mtumiaji anaandika ujumbe** → Bonyeza Enter au bonyeza Send → `handleSubmit` inaendesha
+4. **handleSubmit** → Inathibitisha ingizo → Inaonyesha hali ya kupakia → Inaita API
+5. **API inajibu** → Ongeza ujumbe wa AI kwenye mazungumzo → Rudisha hali ya kiolesura kuweza kutumika tena
+6. **Tayari kwa ujumbe unaofuata** → Mtumiaji anaweza kuendelea kuzungumza
 
-### Kustaili Kiolesura Chako cha Gumzo
+Mimari hii inaweza kupanuliwa – unaweza kwa urahisi kuongeza vipengele kama kuhariri ujumbe, kupakia faili, au nyuzi nyingi za mazungumzo bila kuandika upya muundo mkuu.
 
-Sasa hebu tuunde kiolesura cha kisasa, kinachovutia kwa CSS. Staili nzuri hufanya programu yako ionekane ya kitaalamu na kuboresha uzoefu wa mtumiaji kwa ujumla. Tutatumia vipengele vya kisasa vya CSS kama Flexbox, CSS Grid, na mali maalum kwa muundo unaojibika na unaopatikana.
+### 🎯 Ukaguzi wa Kisia: Mimariko ya Kisasa ya Frontend
 
-Unda `styles.css` na staili hizi za kina:
+**Kuelewa Mimariko**: Umetekeleza programu kamili ya ukurasa mmoja kwa kutumia mitindo ya kisasa ya JavaScript. Hii inaonyesha maendeleo ya frontendi ya kiwango cha kitaalamu.
+
+**Dhana Muhimu Ulizozifahamu**:
+- **Mimari ya darasa la ES6**: Muundo wa msimbo uliopangwa na rahisi kutunza
+- **Mitindo ya Async/Await**: Programu ya kisasa isiyo sambaa
+- **Programu Inayotegemea Matukio**: Ubunifu unaojibu wa kiolesura cha mtumiaji
+- **Mbinu Bora za Usalama**: Kuzuia XSS na uthibitisho wa ingizo
+
+**Muunganisho wa Sekta**: Mitindo uliyojifunza (mimari ya darasa, shughuli za async, udhibiti wa DOM) ni msingi wa mifumo ya kisasa kama React, Vue, na Angular. Unajenga kwa kufikiria kama inayotumika katika maombi ya uzalishaji.
+
+**Swali la Tafakari**: Unaweza kutumiaje programu hii ya mazungumzo kushughulikia mazungumzo mengi au uthibitishaji wa mtumiaji? Fikiria mabadiliko ya mimari yanayohitajika na jinsi muundo wa darasa unavyobadilika.
+
+### Kubuni Kiolesura Chako cha Mazungumzo
+
+Sasa tujenge kiolesura cha mazungumzo cha kisasa, chenye mvuto wa kuona kwa kutumia CSS. Urembo mzuri hufanya programu yako ionekane ya kitaalamu na kuboresha uzoefu wa mtumiaji kwa ujumla. Tutatumia sifa za kisasa za CSS kama Flexbox, CSS Grid, na mali za desturi kwa muundo unaojibu na unaopatikana kwa ajili ya wote.
+
+Unda `styles.css` ukiwa na mitindo hii kamili:
 
 ```css
 /* styles.css - Modern chat interface styling */
@@ -1546,107 +1969,166 @@ body {
 }
 ```
 
-**Kuelewa muundo wa CSS:**
-- **Inatumia** mali maalum za CSS (variables) kwa mandhari thabiti na matengenezo rahisi
-- **Inatekeleza** mpangilio wa Flexbox kwa muundo unaojibika na mpangilio sahihi
-- **Inajumuisha** michoro laini kwa kuonekana kwa ujumbe bila kuvuruga
-- **Inatoa** utofauti wa kuona kati ya ujumbe wa mtumiaji, majibu ya AI, na hali za makosa
-- **Inasaidia** muundo unaojibika unaofanya kazi kwenye vifaa vya mezani na simu
-- **Inazingatia** upatikanaji kwa mapendeleo ya mwendo uliopunguzwa na uwiano sahihi wa utofauti
-- **Inatoa** msaada wa hali ya giza kulingana na mapendeleo ya mfumo wa mtumiaji
+**Kuelewa mimariko ya CSS:**
+- **Inatumia** mali za desturi za CSS (mabadiliko ya thamani) kwa muundo thabiti na urahisi wa matengenezo
+- **Inatekeleza** mpangilio wa Flexbox kwa muundo unaojibu na upangaji sahihi
+- **Inajumuisha** mienendo laini ya ujumbe bila kusumbua
+- **Inatoa** tofauti za kuona kati ya ujumbe wa mtumiaji, majibu ya AI, na hali za makosa
+- **Inaunga mkono** muundo unaofaa kwa vifaa vya desktop na simu za mkononi
+- **Inazingatia** upatikanaji kwa upendeleo wa kupunguza mienendo na uwiano mzuri wa rangi
+- **Inatoa** msaada wa hali ya giza kulingana na upendeleo wa mfumo wa mtumiaji
 
-### Kuseti URL ya Backend Yako
+### Kusanidi URL ya Seva Yako ya Backend
 
-Hatua ya mwisho ni kusasisha `BASE_URL` katika JavaScript yako ili ilingane na seva yako ya backend:
+Hatua ya mwisho ni kusasisha `BASE_URL` katika JavaScript yako ili ifuate seva yako ya backend:
 
 ```javascript
-// For local development
+// Kwa maendeleo ya ndani
 this.BASE_URL = "http://localhost:5000";
 
-// For GitHub Codespaces (replace with your actual URL)
+// Kwa GitHub Codespaces (badilisha na URL yako halisi)
 this.BASE_URL = "https://your-codespace-name-5000.app.github.dev";
 ```
 
 **Kujua URL ya backend yako:**
-- **Maendeleo ya ndani**: Tumia `http://localhost:5000` ikiwa unakimbia frontend na backend zote ndani
-- **Codespaces**: Tafuta URL ya backend yako katika kichupo cha Ports baada ya kufanya bandari ya 5000 kuwa ya umma
-- **Uzalishaji**: Badilisha na kikoa chako halisi unapoweka kwenye huduma ya mwenyeji
+- **Maendeleo ya eneo la karibu**: Tumia `http://localhost:5000` ikiwa unafanya kazi mbili, frontend na backend, eneo hilo moja
+- **Codespaces**: Tafuta URL ya backend kwenye kichupo cha Ports baada ya kufungua mlangoni 5000 kwa umma
+- **Uzalishaji**: Badilisha na kikoa chako halisi unapopeleka huduma kwenye mtoa huduma
 
-> 💡 **Kidokezo cha Kupima**: Unaweza kupima backend yako moja kwa moja kwa kutembelea URL ya mizizi kwenye kivinjari chako. Unapaswa kuona ujumbe wa kukaribisha kutoka kwa seva yako ya FastAPI.
+> 💡 **Kidokezo cha Mtihani**: Unaweza kujaribu backend yako moja kwa moja kwa kutembelea URL ya mzizi katika kivinjari chako. Unapaswa kuona ujumbe wa karibu kutoka kwa seva yako ya FastAPI.
 
-## Kupima na Kuweka
 
-Sasa kwa kuwa una vipengele vya frontend na backend vilivyojengwa, hebu tujaribu kila kitu kinafanya kazi pamoja na kuchunguza chaguo za kuweka ili kushiriki msaidizi wako wa gumzo na wengine.
 
-### Mtiririko wa Kupima wa Ndani
+## Upimaji na Uwekaji Mtandaoni
 
-Fuata hatua hizi kupima programu yako kamili:
+Sasa baada ya kuwa na vipengele vya frontendi na backend vimejengwa, tukajaribu kama yote yanafanya kazi pamoja na kuchunguza chaguzi za kuweka mtandaoni ili kushiriki msaidizi wako wa mazungumzo na wengine.
+
+### Mtiririko wa Kujaribu Kwenye Eneo la Mitaa
+
+Fuatilia hatua hizi kujaribu programu yako kamili:
 
 ```mermaid
 graph TD
-    A[Start Backend Server] --> B[Configure Environment Variables]
-    B --> C[Test API Endpoints]
-    C --> D[Open Frontend in Browser]
-    D --> E[Test Chat Functionality]
-    E --> F[Debug Any Issues]
+    A[Anzisha Mtoaji wa Backend] --> B[Rekebisha Vigezo vya Mazingira]
+    B --> C[Jaribu Vipindi vya API]
+    C --> D[Fungua Frontend kwenye Kivinjari]
+    D --> E[Jaribu Uwezo wa Mazungumzo]
+    E --> F[Rekebisha Tatizo Lolote]
 ```
-
-**Mchakato wa kupima hatua kwa hatua:**
+**Mchakato wa hatua kwa hatua wa majaribio:**
 
 1. **Anzisha seva yako ya backend**:
    ```bash
    cd backend
-   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   source venv/bin/activate  # au venv\Scripts\activate kwenye Windows
    python api.py
    ```
 
-2. **Thibitisha API inafanya kazi**:
-   - Fungua `http://localhost:5000` kwenye kivinjari chako
-   - Unapaswa kuona ujumbe wa kukaribisha kutoka kwa seva yako ya FastAPI
+2. **Thibitisha API ina kazi**:
+   - Fungua `http://localhost:5000` katika kivinjari chako
+   - Unapaswa kuona ujumbe wa karibu kutoka kwa seva yako ya FastAPI
 
 3. **Fungua frontend yako**:
-   - Nenda kwenye saraka ya frontend yako
-   - Fungua `index.html` kwenye kivinjari chako cha wavuti
-   - Au tumia kiendelezi cha Live Server cha VS Code kwa uzoefu bora wa maendeleo
+   - Nenda kwenye saraka ya frontend
+   - Fungua `index.html` katika kivinjari chako
+   - Au tumia ugani wa Live Server wa VS Code kwa uzoefu bora wa maendeleo
 
-4. **Jaribu utendaji wa gumzo**:
-   - Andika ujumbe kwenye uwanja wa kuingiza
-   - Bonyeza "Tuma" au bonyeza Enter
+4. **Jaribu kazi ya mazungumzo**:
+   - Andika ujumbe katika sehemu ya ingizo
+   - Bonyeza "Send" au bonyeza Enter
    - Thibitisha AI inajibu ipasavyo
-   - Angalia console ya kivinjari kwa makosa yoyote ya JavaScript
+   - Angalia console ya kivinjari kwa makosa ya JavaScript
 
 ### Kutatua Masuala ya Kawaida
 
 | Tatizo | Dalili | Suluhisho |
-|--------|--------|-----------|
-| **Hitilafu ya CORS** | Frontend haiwezi kufikia backend | Hakikisha FastAPI CORSMiddleware imewekwa vizuri |
-| **Hitilafu ya API Key** | Majibu ya 401 Unauthorized | Angalia variable ya mazingira ya `GITHUB_TOKEN` |
-| **Muunganisho Umekataliwa** | Hitilafu za mtandao kwenye frontend | Thibitisha URL ya backend na kwamba seva ya Flask inafanya kazi |
-| **Hakuna Jibu la AI** | Majibu tupu au makosa | Angalia magogo ya backend kwa masuala ya API au uthibitishaji |
+|---------|----------|----------|
+| **Hitilafu ya CORS** | Frontend haiwezi kufikia backend | Hakikisha FastAPI CORSMiddleware imeandaliwa vizuri |
+| **Hitilafu ya API Key** | Misingi ya 401 Unauthorized | Angalia toleo lako la mazingira `GITHUB_TOKEN` |
+| **Muunganisho Umezuiwa** | Makosa ya mtandao frontend | Hakikisha URL ya backend ni sahihi na seva ya Flask inaendesha |
+| **Hakuna Jibu la AI** | Majibu tupu au ya makosa | Angalia kumbukumbu za backend kwa makosa ya API au hitilafu za uthibitisho |
 
-**Hatua za kawaida za kutatua matatizo:**
-- **Angalia** Console ya Zana za Msanidi Programu wa kivinjari kwa makosa ya JavaScript
-- **Thibitisha** kichupo cha Mtandao kinaonyesha maombi na majibu ya API yaliyofanikiwa
-- **Pitia** matokeo ya terminal ya backend kwa makosa ya Python au masuala ya API
-- **Thibitisha** variables za mazingira zimepakiwa vizuri na zinapatikana
+**Hatua za kawaida za uchunguzi wa hitilafu:**
+- **Angalia** Console ya Zana za Developer wa kivinjari kwa makosa ya JavaScript
+- **Thibitisha** kichupo cha Mtandao kinaonyesha maombi na majibu ya API kwa mafanikio
+- **Kagua** matokeo ya kiolesura cha backend kwa makosa ya Python au matatizo ya API
+- **Hakiki** mipangilio ya mazingira imeload kwa usahihi na inapatikana
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## 📈 Muda wako wa Mwalimu wa Mageuzi wa AI
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+```mermaid
+timeline
+    title Safari Kamili ya Maendeleo ya Programu ya AI
+    
+    section Misingi ya AI
+        Kuelewa AI Inayotengeneza
+            : Fahamu dhana za utambuzi wa mifumo
+            : Shuhudia udhibiti wa vigezo vya AI
+            : Jifunze mbinu za uhandisi wa maelekezo
+        
+        Muunganisho wa Modeli za GitHub
+            : Naviga majukwaa ya huduma za AI
+            : Shimika usalama wa uthibitishaji
+            : Boreshaji vigezo vya modeli
+    
+    section Maendeleo ya Backend
+        Miundo ya API ya Python
+            : Tengeneza programu za FastAPI
+            : Tekeleza kazi zisizo za kawaida (async)
+            : Unda njia salama za kuingia
+        
+        Muunganisho wa Huduma za AI
+            : Unganishaji na API za AI kutoka nje
+            : Shimika ukomo wa kiasi cha maombi
+            : Tekeleza mipaka ya makosa
+    
+    section Utaalamu wa Frontend
+        Mifumo ya Kisasa ya JavaScript
+            : Shuhudia usanifu wa darasa la ES6
+            : Tekeleza mtiririko wa async/await
+            : Tengeneza interfaces zinazojibadilisha
+        
+        Uzoefu wa Mtumiaji wa Wakati Halisi
+            : Tengeneza interfaces za mazungumzo zilizo hai
+            : Shimika hali za upakiaji
+            : Boreshaji mwingiliano wa mtumiaji
+    
+    section Utayari wa Uzalishaji
+        Usalama & Utendaji
+            : Tekeleza usimamizi salama wa vibali
+            : Zuia udhaifu wa XSS
+            : Boreshaji utendaji wa API
+        
+        Utekelezaji wa Kitaalamu
+            : Tengeneza usanifu unaoweza kupanuka
+            : Unda msimbo unaotunzwa kwa urahisi
+            : Andika mchakato wa maendeleo
+```
+**🎓 Hatua ya Kuisha Masomo**: Umefanikiwa kujenga programu kamili yenye nguvu za AI ukitumia teknolojia na mitindo ya mibuni inayotumia programu za msaidizi wa AI wa kisasa. Ujuzi huu unaonyesha mseto wa maendeleo ya wavuti wa jadi na ushirikiano wa AI wa kisasa.
 
-**Maelezo:** Boresha msaidizi wa gumzo kwa kuongeza historia ya mazungumzo na uhifadhi wa ujumbe. Changamoto hii itakusaidia kuelewa jinsi ya kudhibiti hali katika programu za gumzo na kutekeleza uhifadhi wa data kwa uzoefu bora wa mtumiaji.
+**🔄 Uwezo wa Kiwango Kifuatacho**:
+- Tayari kuchunguza mifumo ya AI yenye maendeleo (LangChain, LangGraph)
+- Imekomeshwa kujenga programu za AI zenye aina nyingi (maandishi, picha, sauti)
+- Imetayarishwa kutekeleza hifadhidata za vekta na mifumo ya upokezaji
+- Msingi umewekwa kwa kujifunza mashine na marekebisho ya mfano wa AI
 
-**Kichocheo:** Badilisha programu ya gumzo ili kujumuisha historia ya mazungumzo inayodumu kati ya vikao. Ongeza utendaji wa kuhifadhi ujumbe wa gumzo kwenye uhifadhi wa ndani, onyesha historia ya mazungumzo wakati ukurasa unapopakia, na ujumuisha kitufe cha "Futa Historia". Pia tekeleza viashiria vya kuandika na timestamps za ujumbe ili kufanya uzoefu wa gumzo uwe wa kweli zaidi.
+## Changamoto ya Wakalimu wa GitHub Copilot 🚀
 
-Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+Tumia hali ya Wakili kumaliza changamoto ifuatayo:
 
-## Kazi: Jenga Msaidizi Wako wa AI Binafsi
+**Maelezo:** Boresha msaidizi wa mazungumzo kwa kuongeza historia ya mazungumzo na uhifadhi wa ujumbe. Changamoto hii itakusaidia kuelewa jinsi ya kusimamia hali katika programu za mazungumzo na kutekeleza uhifadhi wa data kwa uzoefu bora wa mtumiaji.
 
-Sasa utaunda utekelezaji wako wa msaidizi wa AI. Badala ya kurudia tu msimbo wa mafunzo, hii ni fursa ya kutumia dhana huku ukijenga kitu kinachoakisi maslahi yako na matumizi yako.
+**Mhimili:** Badilisha programu ya mazungumzo ili kujumuisha historia ya mazungumzo inayodumu kati ya vikao. Ongeza kazi ya kuhifadhi ujumbe wa mazungumzo kwenye hifadhi ya ndani, onesha historia ya mazungumzo wakati ukurasa unapopakia, na jumuisha kitufe cha "Futa Historia". Pia tekeleza viashiria vya uandikaji na nyakati za ujumbe kufanya uzoefu wa mazungumzo kuwa halisi zaidi.
 
-### Mahitaji ya Mradi
+Jifunze zaidi kuhusu [hali ya wakili](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
-Hebu tuweke mradi wako na muundo safi, uliopangwa:
+## Kazi: Tengeneza Msaidizi Wako wa AI Binafsi
+
+Sasa utaunda utekelezaji wako wa msaidizi wa AI binafsi. Badala ya kunakili msimbo wa mafunzo tu, hii ni fursa ya kutumia dhana huku unajenga kitu kinachokamilisha maslahi na matumizi yako binafsi.
+
+### Sharti za Mradi
+
+Tuweke mradi wako ukiwa na muundo safi, uliopangwa:
 
 ```text
 my-ai-assistant/
@@ -1662,69 +2144,69 @@ my-ai-assistant/
 └── README.md           # Tell the world about your creation
 ```
 
-### Kazi za Msingi za Utekelezaji
+### Kazi Muhimu za Utekelezaji
 
 **Maendeleo ya Backend:**
-- **Chukua** msimbo wetu wa FastAPI na uufanye wako
-- **Unda** utu wa kipekee wa AI – labda msaidizi wa kupika mwenye msaada, mshirika wa uandishi wa ubunifu, au rafiki wa kujifunza?
-- **Ongeza** utunzaji mzuri wa makosa ili programu yako isivunjike wakati mambo yanapokwenda vibaya
+- **Chukua** msimbo wetu wa FastAPI na uufanye wake
+- **Tengeneza** tabia ya kipekee ya AI – labda msaidizi wa upishi, mshirika wa uandishi wa ubunifu, au rafiki wa kusomea?
+- **Ongeza** udhibiti madhubuti wa makosa ili programu yako isivunjike wakati mambo yanaposhindikana
 - **Andika** nyaraka wazi kwa yeyote anayetaka kuelewa jinsi API yako inavyofanya kazi
 
 **Maendeleo ya Frontend:**
-- **Jenga** kiolesura cha gumzo kinachohisi kuwa cha angavu na cha kukaribisha
-- **Andika** JavaScript safi, ya kisasa ambayo ungejivunia kuonyesha kwa watengenezaji wengine
-- **Buni** staili maalum zinazoakisi utu wa AI yako – za kufurahisha na za rangi? Safi na ndogo? Ni juu yako kabisa!
+- **Jenga** kiolesura cha mazungumzo kinachoonekana kuwa rahisi na kinachokaribisha
+- **Andika** JavaScript safi, ya kisasa ambayo utajivunia kuonyesha kwa watengenezaji wengine
+- **Buni** mitindo ya desturi inayowakilisha tabia ya AI yako – mchangamfu na yenye rangi? Safi na ya chini kabisa? Yako kabisa!
 - **Hakikisha** inafanya kazi vizuri kwenye simu na kompyuta
 
-**Mahitaji ya Kubinafsisha:**
-- **Chagua** jina la kipekee na utu kwa msaidizi wako wa AI – labda kitu kinachoakisi maslahi yako au matatizo unayotaka kutatua
-- **Binafsisha** muundo wa kuona ili ulingane na hali ya msaidizi wako
-- **Andika** ujumbe wa kukaribisha wa kuvutia unaowafanya watu watake kuanza kuzungumza
-- **Jaribu** msaidizi wako na aina tofauti za maswali ili kuona jinsi unavyojibu
+**Sharti za Uboreshaji Binafsi:**
+- **Chagua** jina na tabia ya kipekee kwa msaidizi wako wa AI – labda kitu kinachowakilisha maslahi yako au matatizo unayotaka kutatua
+- **Boresha** muundo wa kuona ili uendane na hali ya msaidizi wako
+- **Andika** ujumbe wa ukaribisho mzuri unaowafanya watu watake kuanza kuzungumza
+- **Jaribu** msaidizi wako na aina mbalimbali za maswali kuona jinsi anavyojibu
 
-### Mawazo ya Uboreshaji (Hiari)
+### Mapendekezo ya Uboreshaji (Hiari)
 
-Unataka kuchukua mradi wako hadi kiwango kingine? Hapa kuna mawazo ya kufurahisha ya kuchunguza:
+Unataka kupeleka mradi wako hatua inayofuata? Hapa kuna mawazo ya kufurahia:
 
-| Kipengele | Maelezo | Ujuzi Utakaofanya Mazoezi |
-|-----------|---------|--------------------------|
-| **Historia ya Ujumbe** | Kumbuka mazungumzo hata baada ya upya wa ukurasa | Kufanya kazi na localStorage, kushughulikia JSON |
-| **Viashiria vya Kuandika** | Onyesha "AI inaandika..." wakati wa kusubiri majibu | Michoro ya CSS, programu ya async |
-| **Timestamps za Ujumbe** | Onyesha wakati kila ujumbe ulitumwa | Uundaji wa tarehe/muda, muundo wa UX |
-| **Hamisha Gumzo** | Waruhusu watumiaji kupakua mazungumzo yao | Kushughulikia faili, usafirishaji wa data |
-| **Kubadilisha Mandhari** | Kubadili hali ya mwanga/giza | Mali za CSS, mapendeleo ya mtumiaji |
-| **Ingizo la Sauti** | Ongeza utendaji wa hotuba-kwa-maandishi | API za Wavuti, upatikanaji |
+| Kipengele | Maelezo | Ujuzi Utayafanyia Mazoezi |
+|---------|-------------|------------------------|
+| **Historia ya Ujumbe** | Kukumbuka mazungumzo hata baada ya ukurasa kusasishwa | Kufanya kazi na localStorage, kushughulikia JSON |
+| **Viashiria vya Kuandika** | Onyesha "AI anaandika..." wakati wa kusubiri majibu | Mienendo ya CSS, programu asynchronous |
+| **Nyakati za Ujumbe** | Onyesha lini kila ujumbe umetumwa | Muundo wa tarehe/nyakati, ubunifu wa uzoefu wa mtumiaji |
+| **Kukabidhi Mazungumzo** | Ruhusu watumiaji kupakua mazungumzo yao | Udhibiti faili, usafirishaji wa data |
+| **Kubadilisha Mandhari** | Badilisha kati ya hali nyepesi/giza | Mali za CSS, mapendeleo ya mtumiaji |
+| **Ingizo la Sauti** | Ongeza utendakazi wa hotuba hadi maandishi | API za wavuti, upatikanaji |
 
-### Kupima na Nyaraka
+### Upimaji na Nyaraka
 
-**Uhakikisho wa Ubora:**
-- **Jaribu** programu yako na aina mbalimbali za pembejeo na hali za ukingo
-- **Thibitisha** muundo unaojibika unafanya kazi kwenye saizi tofauti za skrini
+**Uhakiki wa Ubora:**
+- **Jaribu** programu yako kwa aina tofauti za ingizo na hali maalum
+- **Thibitisha** muundo unaojibu unafanya kazi kwenye saizi mbalimbali za skrini
 - **Angalia** upatikanaji kwa urambazaji wa kibodi na wasomaji wa skrini
 - **Thibitisha** HTML na CSS kwa kufuata viwango
 
-**Mahitaji ya Nyaraka:**
-- **Andika** README.md inayoelezea mradi wako na jinsi ya kuendesha
-- **Jumuisha** picha za skrini za kiolesura chako cha gumzo kikiwa kimefanya kazi
-- **Andika** vipengele vyovyote vya kipekee au ubinafsishaji ulioongeza
-- **Toa** maelekezo wazi ya usanidi kwa watengenezaji wengine
+**Sharti za Nyaraka:**
+- **Andika** README.md inayoelezea mradi wako na jinsi ya kuutumia
+- **Jumuisha** picha za skrini za kiolesura chako cha mazungumzo kinavyofanya kazi
+- **Andika** vipengele vyovyote maalum au ubinafsishaji ulioufanya
+- **Toa** maelezo wazi ya usanidi kwa watengenezaji wengine
 
-### Miongozo ya Uwasilishaji
+### Miongozo ya Kuwasilisha
 
-**Vitu vya Mradi:**
-1. Folda kamili ya mradi na msimbo wote wa chanzo
+**Vifurushi vya Mradi:**
+1. Folda kamili ya mradi yenye msimbo wote chanzo
 2. README.md yenye maelezo ya mradi na maelekezo ya usanidi
-3. Picha za skrini zinazoonyesha msaidizi wako wa gumzo ukifanya kazi
+3. Picha za skrini zinaonyesha msaidizi wako wa mazungumzo akifanya kazi
 4. Tafakari fupi juu ya kile ulichojifunza na changamoto ulizokutana nazo
 
 **Vigezo vya Tathmini:**
-- **Utendaji**: Je, msaidizi wa gumzo unafanya kazi kama inavyotarajiwa?
-- **Ubora wa Msimbo**: Je, msimbo umeandaliwa vizuri, umeandikwa maoni, na unadumika?
-- **Muundo**: Je, kiolesura ni cha kuvutia na rahisi kutumia?
-- **Ubunifu**: Je, utekelezaji wako ni wa kipekee na wa kibinafsi kiasi gani?
-- **Nyaraka**: Je, maelekezo ya usanidi ni wazi na kamili?
+- **Ufanisi**: Je, msaidizi wa mazungumzo anafanya kazi kama inavyotarajiwa?
+- **Ubora wa Msimbo**: Je, msimbo umepangwa vizuri, umeandikwa maelezo, na unaendeshwa kwa urahisi?
+- **Muundo**: Je, kiolesura kina mvuto wa kuona na kinavutia mtumiaji?
+- **Ubunifu**: Utekelezaji wako ni wa kipekee kiasi gani na umebinafsishwa vipi?
+- **Nyaraka**: Je, maagizo ya usanidi ni wazi na kamili?
 
-> 💡 **Kidokezo cha Mafanikio**: Anza na mahitaji ya msingi kwanza, kisha ongeza uboreshaji mara tu kila kitu kinapofanya kazi. Lenga kuunda uzoefu wa msingi uliosuguliwa kabla ya kuongeza vipengele vya hali ya juu.
+> 💡 **Kidokezo cha Mafanikio**: Anza na mahitaji ya msingi kwanza, kisha ongeza uboreshaji baada ya kila kitu kuwa kinavyofanya kazi. Lenga kuunda uzoefu mzuri kabla ya kuongeza vipengele vya hali ya juu.
 
 ## Suluhisho
 
@@ -1732,11 +2214,11 @@ Unataka kuchukua mradi wako hadi kiwango kingine? Hapa kuna mawazo ya kufurahish
 
 ## Changamoto za Ziada
 
-Uko tayari kuchukua msaidizi wako wa AI hadi kiwango kingine? Jaribu changamoto hizi za hali ya juu ambazo zitakufundisha zaidi kuhusu ujumuishaji wa AI na maendeleo ya wavuti.
+Tayari kuchukua msaidizi wako wa AI hatua inayofuata? Jaribu changamoto hizi za hali ya juu zitakazoroga uelewa wako wa ushirikiano wa AI na maendeleo ya wavuti.
 
-### Kubinafsisha Utu
+### Uboreshaji wa Tabia
 
-Uchawi halisi hutokea unapompa msaidizi wako wa AI utu wa kipekee. Jaribu vichocheo tofauti vya mfumo kuunda wasaidizi maalum:
+Uchawi halisi hutokea unapoleta tabia ya kipekee kwa msaidizi wako wa AI. Jaribu maagizo tofauti ya mfumo kuunda wasaidizi maalum:
 
 **Mfano wa Msaidizi wa Kitaalamu:**
 ```python
@@ -1755,65 +2237,65 @@ call_llm(message, "You are a patient senior developer who explains complex progr
 
 ### Uboreshaji wa Frontend
 
-Badilisha kiolesura chako cha gumzo na uboreshaji huu wa kuona na wa kiutendaji:
+Badilisha kiolesura chako cha mazungumzo kwa maboresho haya ya kuona na utendaji:
 
-**Vipengele vya CSS vya Juu:**
-- **Tekeleza** michoro laini za ujumbe na mabadiliko
-- **Ongeza** miundo maalum ya baluni za gumzo na maumbo ya CSS na gradients
-- **Unda** michoro ya kiashiria cha kuandika kwa wakati AI "inawaza"
-- **Buni** maoni ya emoji au mfumo wa ukadiriaji wa ujumbe
+**Sifa za CSS za Juu:**
+- **Tekeleza** mienendo laini na mabadiliko ya ujumbe
+- **Ongeza** muundo wa bubbule maalum za mazungumzo kwa kutumia umbo la CSS na miale ya rangi
+- **Tengeneza** mienendo ya kiashiria cha kuandika wakati AI anafanya "kufikiria"
+- **Buni** hisia za emoji au mfumo wa tathmini ya ujumbe
 
 **Uboreshaji wa JavaScript:**
-- **Ongeza** njia za mkato za kibodi (Ctrl+Enter kwa kutuma, Escape kufuta pembejeo)
-- **Tekeleza** utendaji wa kutafuta na kuchuja ujumbe
-- **Unda** kipengele cha kusafirisha mazungumzo (pakua kama maandishi au JSON)
-- **Ongeza** uhifadhi wa kiotomatiki kwenye localStorage ili kuzuia kupoteza ujumbe
+- **Ongeza** njia za mkato wa kibodi (Ctrl+Enter kutuma, Escape kufuta ingizo)
+- **Tekeleza** utambuzi na uchujaji wa ujumbe
+- **Tengeneza** kipengele cha kusafirisha mazungumzo (kupakua kama maandishi au JSON)
+- **Ongeza** uhifadhi kiotomatiki kwenye localStorage kuepuka kupoteza ujumbe
 
-### Ujumuishaji wa AI wa Juu
+### Ushirikiano wa AI wa Juu
 
-**Utu Mbalimbali wa AI:**
-- **Unda** menyu ya kushuka kubadili kati ya utu tofauti wa AI
-- **Hifadhi** utu unaopendelewa na mtumiaji kwenye localStorage
-- **Tekeleza** ubadilishaji wa muktadha unaodumisha mtiririko wa mazungumzo
+**Tabia Nyingi za AI:**
+- **Tengeneza** menyu ya kunyang’anywa kuchagua kati ya tabia tofauti za AI
+- **Hifadhi** tabia inayopendelewa ya mtumiaji katika localStorage
+- **Tekeleza** kubadilisha muktadha unaoendeleza mtiririko wa mazungumzo
 
-**Vipengele vya Jibu la Smart:**
-- **Ongeza** ufahamu wa muktadha wa mazungumzo (AI inakumbuka ujumbe wa awali)
-- **Tekeleza** mapendekezo ya smart kulingana na mada ya mazungumzo
-- **Unda** vifungo vya jibu la haraka kwa maswali ya kawaida
+**Vipengele Mahiri vya Jibu:**
+- **Ongeza** ufahamu wa muktadha wa mazungumzo (AI anakumbuka ujumbe uliopita)
+- **Tekeleza** mapendekezo mahiri kulingana na mada ya mazungumzo  
+- **Unda** vitufe vya majibu ya haraka kwa maswali ya kawaida  
 
-> 🎯 **Lengo la Kujifunza**: Changamoto hizi za ziada zinakusaidia kuelewa mifumo ya hali ya juu ya maendeleo ya wavuti na mbinu za ujumuishaji wa AI zinazotumika katika programu za uzalishaji.
+> 🎯 **Lengo la Kujifunza**: Changamoto hizi za ziada zinakusaidia kuelewa mifumo ya maendeleo ya wavuti yenye maendeleo ya hali ya juu na mbinu za uunganishaji wa AI zinazotumiwa katika programu za uzalishaji.  
 
-## Muhtasari na Hatua Zifuatazo
+## Muhtasari na Hatua Zitakazofuata  
 
-Hongera! Umefanikiwa kujenga msaidizi kamili wa gumzo unaotumia AI kutoka mwanzo. Mradi huu umekupa uzoefu wa vitendo na teknolojia za kisasa za maendeleo ya wavuti na ujumuishaji wa AI – ujuzi ambao unazidi kuwa muhimu katika mazingira ya teknolojia ya leo.
+Hongera! Umefanikiwa kujenga msaidizi wa mazungumzo unaotumia AI kutoka mwanzo. Mradi huu umekupa uzoefu wa vitendo na teknolojia za kisasa za maendeleo ya wavuti na uunganishaji wa AI – ujuzi unaozidi kuwa muhimu katika mazingira ya teknolojia ya sasa.  
 
-### Uliyofanikiwa
+### Uliyofanikiwa Kutanua  
 
-Katika somo hili, umemudu teknolojia na dhana kadhaa muhimu:
+Katika somo hili, umejifunza teknolojia na dhana kuu kadhaa:  
 
-**Maendeleo ya Backend:**
-- **Umeunganisha** na GitHub Models API kwa utendaji wa AI
-- **Umejenga** API ya RESTful kwa kutumia Flask na utunzaji sahihi wa makosa
-- **Umetekeleza** uthibitishaji salama kwa kutumia variables za mazingira
-- **Umesanidi** CORS kwa maombi ya asili tofauti kati ya frontend na backend
+**Maendeleo ya Backend:**  
+- **Umeunganishwa** na GitHub Models API kwa ajili ya utendaji wa AI  
+- **Umejenga** API ya RESTful kwa kutumia Flask na usimamizi sahihi wa makosa  
+- **Umetekeleza** uthibitishaji salama kwa kutumia mabadiliko ya mazingira  
+- **Umeweka** CORS kwa maombi ya kuvuka-meneo kati ya frontend na backend  
 
-**Maendeleo ya Frontend:**
-- **Umeunda** kiolesura cha gumzo kinachojibika kwa kutumia HTML ya kimantiki
-- **Umetekeleza** JavaScript ya kisasa kwa async/await na muundo wa msingi wa darasa
-- **Umebuni** kiolesura cha mtumiaji kinachovutia kwa CSS Grid, Flexbox, na michoro
-- **Umeongeza** vipengele vya upatikanaji na kanuni za muundo unaojibika
+**Maendeleo ya Frontend:**  
+- **Umeunda** kiolesura cha mazungumzo kinachobadili ukubwa kwa kutumia HTML semantiki  
+- **Umetumia** JavaScript za kisasa na async/await pamoja na usanifu wa darasa  
+- **Umetengeneza** kiolesura cha kuvutia kwa kutumia CSS Grid, Flexbox, na michoro ya michoro  
+- **Umeongeza** vipengele vya upatikanaji na kanuni za muundo unaobadilika saizi  
 
-**Ujumuishaji wa Full-Stack:**
-- **Umeunganisha** frontend na backend kupitia maombi ya API ya HTTP
-- **Umeshughulikia** mwingiliano wa mtumiaji wa wakati halisi na mtiririko wa data wa async
-- **Umetekeleza** utunzaji wa makosa na maoni ya mtumiaji katika programu nzima
-- **Umejaribu** mtiririko kamili wa programu kutoka pembejeo ya mtumiaji hadi jibu la AI
+**Uunganishaji wa Full-Stack:**  
+- **Umeunganisha** frontend na backend kupitia simu za API za HTTP  
+- **Umesimamia** mwingiliano wa wakati halisi wa mtumiaji na mtiririko wa data usio na usawa  
+- **Umetekeleza** usimamizi wa makosa na mrejesho kwa mtumiaji katika programu nzima  
+- **Umejaribu** mtiririko kamili wa programu kutoka kwa ingizo la mtumiaji hadi jibu la AI  
 
-### Matokeo Muhimu ya Kujifunza
+### Matokeo Muhimu ya Kujifunza  
 
 ```mermaid
 mindmap
-  root((AI Chat App Skills))
+  root((Ujuzi wa AI Chat App))
     API Integration
       Authentication
       Error Handling
@@ -1830,45 +2312,72 @@ mindmap
       Prompt Engineering
       Model Parameters
       Conversation Flow
-```
+```  
+Mradi huu umekujulisha misingi ya kujenga programu zinazoendeshwa na AI, ambayo ni mustakabali wa maendeleo ya wavuti. Sasa unaelewa jinsi ya kuingiza uwezo wa AI katika programu za wavuti za jadi, kuunda uzoefu wa mtumiaji unaovutia unaoonekana kuwa mwenye akili na wa haraka.  
 
-Mradi huu umekutambulisha kwa misingi ya kujenga programu zinazotumia AI, ambayo inawakilisha mustakabali wa maendeleo ya wavuti. Sasa unaelewa jinsi ya kuunganisha uwezo wa AI katika programu za wavuti za jadi, kuunda uzoefu wa mtumiaji unaovutia ambao unahisi kuwa wa akili na unaojibika.
+### Matumizi ya Kitaalamu  
 
-### Matumizi ya Kitaalamu
+Ujuzi ulioupata katika somo hili unatumika moja kwa moja katika taaluma za kisasa za maendeleo ya programu:  
 
-Ujuzi uliouendeleza katika somo hili unatumika moja kwa moja kwa kazi za kisasa za maendeleo ya programu:
+- **Maendeleo ya wavuti ya full-stack** kwa kutumia mifumo na API za kisasa  
+- **Uunganishaji wa AI** katika programu za wavuti na programu za simu  
+- **Ubunifu na maendeleo ya API** kwa usanifu wa microservices  
+- **Maendeleo ya kiolesura cha mtumiaji** kwa kuzingatia upatikanaji na muundo unaobadilika ukubwa  
+- **Mazoezi ya DevOps** ikijumuisha usanidi wa mazingira na utoaji   
 
-- **Maendeleo ya wavuti ya full-stack** kwa kutumia mifumo ya kisasa na API
-- **Ujumuishaji wa AI** katika programu za wavuti na programu za simu
-- **Ubunifu na maendeleo ya API** kwa usanifu wa huduma ndogo
-- **Maendeleo ya kiolesura cha mtumiaji** kwa kuzingatia upatikanaji na muundo unaojibika
-- **Mazoezi ya DevOps** ikiwa ni pamoja na usanidi wa mazingira na uwekaji
+### Kuendeleza Safari Yako ya Maendeleo ya AI  
 
-### Kuendeleza Safari Yako ya Maendeleo ya AI
+**Hatua Zinazo Fuata za Kujifunza:**  
+- **Chunguza** mifano na API za AI za hali ya juu zaidi (GPT-4, Claude, Gemini)  
+- **Jifunze** mbinu za uhandisi wa prompt kwa majibu bora ya AI  
+- **Soma** kuhusu ubunifu wa mazungumzo na kanuni za uzoefu wa mtumiaji wa chatbot  
+- **Chunguza** usalama wa AI, maadili, na mbinu za maendeleo ya AI kwa uwajibikaji  
+- **Jenga** programu tata zaidi zenye kumbukumbu za mazungumzo na ufahamu wa muktadha  
 
-**Hatua Zifuatazo za Kujifunza:**
-- **Chunguza** mifano ya AI ya hali ya juu zaidi na API (GPT-4, Claude, Gemini)
-- **Jifunze** kuhusu mbinu za uhandisi wa kichocheo kwa majibu bora ya AI
-- **Soma** muundo wa mazungumzo na kanuni za uzoefu wa mtumiaji wa chatbot
-- **Chunguza** usalama wa AI, maadili, na mazoea ya maendeleo ya AI yenye uwajibikaji
-- **Jenga** programu ngumu zaidi na kumbukumbu ya mazungumzo na ufahamu wa muktadha
+**Mawazo ya Miradi ya Juu:**  
+- Vyumba vya mazungumzo vya watumiaji wengi na udhibiti wa AI  
+- Chatbots za huduma kwa wateja zinazotumia AI  
+- Msaada wa kufundisha wa kielimu wenye mafunzo binafsi  
+- Washirika wa uandishi wa ubunifu wenye tabia mbalimbali za AI  
+- Msaidizi wa nyaraka za kiufundi kwa watengenezaji  
 
-**Mawazo ya Mradi wa Juu:**
-- Vyumba vya gumzo vya watumiaji wengi na usimamizi wa AI
-- Chatbots za huduma kwa wateja zinazotumia AI
-- Wasaidizi wa kufundisha elimu na ujifunzaji wa kibinafsi
--
-- **Kuelekeza bandari** kwa ajili ya kujaribu programu zako
+## Kuanzisha na GitHub Codespaces  
 
-**Kile Codespaces inatoa:**
-- **Inaondoa** matatizo ya usanidi na mipangilio ya mazingira ya ndani
-- **Inatoa** mazingira ya maendeleo yanayofanana kwenye vifaa tofauti
-- **Inajumuisha** zana na viendelezi vilivyosanidiwa awali kwa ajili ya maendeleo ya wavuti
-- **Inatoa** muunganisho wa moja kwa moja na GitHub kwa udhibiti wa toleo na ushirikiano
+Unataka kujaribu mradi huu katika mazingira ya maendeleo ya wingu? GitHub Codespaces inatoa usanidi kamili wa maendeleo katika kivinjari chako, bora kwa kujaribu programu za AI bila haja ya usanidi wa eneo lako la mashine.  
 
-> 🚀 **Ushauri wa Wataalamu**: Codespaces ni bora kwa kujifunza na kuunda programu za AI kwa sababu inashughulikia usanidi wa mazingira magumu moja kwa moja, ikikuruhusu kuzingatia kujenga na kujifunza badala ya matatizo ya usanidi.
+### Kuweka Mazingira Yako ya Maendeleo  
+
+**Hatua 1: Unda Kutoka Kwenye Kiolezo**  
+- **Tembelea** hazina ya [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
+- **Bonyeza** "Use this template" juu kulia (hakikisha umeingia kwenye GitHub)  
+
+![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.sw.png)  
+
+**Hatua 2: Anzisha Codespaces**  
+- **Fungua** hazina uliyounda hivi karibuni  
+- **Bonyeza** kitufe cha kijani "Code" na chagua "Codespaces"  
+- **Chagua** "Create codespace on main" kuanzisha mazingira yako ya maendeleo  
+
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.sw.png)  
+
+**Hatua 3: Usanidi wa Mazingira**  
+Mara wakati Codespace yako ianzishwa, utakuwa na:  
+- **Zana zilizo wekwa tayari** Python, Node.js, na zana zote zinazohitajika za maendeleo  
+- **Kiolesura cha VS Code** na viendelezi vya maendeleo ya wavuti  
+- **Ufikiaji wa terminal** kwa kuendesha seva za backend na frontend  
+- **Kuweka mbele bandari** kwa ajili ya kujaribu programu zako  
+
+**Nini Codespaces hutolewa:**  
+- **Hutoa kuondoa matatizo ya usanidi wa mazingira ya eneo lako**  
+- **Hutoa mazingira thabiti ya maendeleo kwa vifaa mbalimbali**  
+- **Inajumuisha zana na viendelezi vilivyosanidiwa kwa maendeleo ya wavuti**  
+- **Inatoa uunganisho mzuri na GitHub kwa usimamizi wa matoleo na ushirikiano**  
+
+> 🚀 **Kipendekezo cha Mtaalamu**: Codespaces ni bora kwa kujifunza na kutunga mfano wa programu za AI kwa kuwa hutatua kabisa matatizo ya usanidi wa mazingira, ikikuruhusu kuzingatia kujenga na kujifunza badala ya kutatua changamoto za usanidi.
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kiasi cha Masuala**:  
+Nyaraka hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Wakati tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au kutokukamilika. Nyaraka ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo halali. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inashauriwa. Hatutawajibika kwa mkanganyiko wowote au tafsiri potofu zitokanazo na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

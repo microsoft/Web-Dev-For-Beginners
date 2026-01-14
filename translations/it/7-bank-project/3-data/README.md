@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Flusso di aggiornamento in un'applicazione multi-pagina](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.it.png)
+![Flusso di aggiornamento in un'applicazione multi-pagina](../../../../translated_images/mpa.7f7375a1a2d4aa77.it.png)
 
 **Perché questo approccio sembrava macchinoso:**
 - Ogni clic significava ricostruire l'intera pagina da zero
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Flusso di aggiornamento in un'applicazione a pagina singola](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.it.png)
+![Flusso di aggiornamento in un'applicazione a pagina singola](../../../../translated_images/spa.268ec73b41f992c2.it.png)
 
 **Perché le SPA sono così migliori:**
 - Solo le parti che effettivamente cambiano vengono aggiornate (intelligente, vero?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Ora, quando testi con un account non valido, vedrai un utile messaggio di errore direttamente sulla pagina!
 
-![Screenshot che mostra il messaggio di errore visualizzato durante il login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.it.png)
+![Screenshot che mostra il messaggio di errore visualizzato durante il login](../../../../translated_images/login-error.416fe019b36a6327.it.png)
 
 #### Passo 4: Essere Inclusivi con l'Accessibilità
 
@@ -961,7 +961,7 @@ Pronto a portare la tua app bancaria al livello successivo? Rendiamola qualcosa 
 
 Ecco come potrebbe apparire un dashboard ben rifinito:
 
-![Screenshot di un esempio di risultato del dashboard dopo la stilizzazione](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.it.png)
+![Screenshot di un esempio di risultato del dashboard dopo la stilizzazione](../../../../translated_images/screen2.123c82a831a1d14a.it.png)
 
 Non sentirti obbligato a replicarlo esattamente - usalo come ispirazione e rendilo unico!
 

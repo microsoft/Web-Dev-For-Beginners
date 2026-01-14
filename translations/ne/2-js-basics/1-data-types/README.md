@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जाभास्क्रिप्ट आधारभूत: डाटा प्रकारहरू
 
-![जाभास्क्रिप्ट आधारभूत - डाटा प्रकारहरू](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c756480d3ffa46507f746e5975ebf80f99fdaaf1cff09a7f4.ne.png)
+![जाभास्क्रिप्ट आधारभूत - डाटा प्रकारहरू](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.ne.png)
 > स्केच नोट [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid

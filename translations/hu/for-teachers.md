@@ -42,10 +42,10 @@ Ez a tananyag importálható csomagokat tartalmaz a gyakori LMS munkafolyamatokh
   - A Moodle Cloud korlátozott Common Cartridge támogatással rendelkezik. Előnyben részesítse a fenti Moodle fájlt, amely Canvasba is feltölthető.
   - Az importálás után ellenőrizze a modulokat, határidőket és kvízbeállításokat, hogy illeszkedjenek az Ön tanévi ütemtervéhez.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.hu.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.hu.png)
 > A tananyag egy Moodle osztályteremben
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.hu.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.hu.png)
 > A tananyag a Canvasban
 
 ### A repó közvetlen használata (Classroom nélkül)

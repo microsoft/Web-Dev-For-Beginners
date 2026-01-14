@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Luodaan saavutettavia verkkosivuja
 
-![Kaikki saavutettavuudesta](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.fi.png)
+![Kaikki saavutettavuudesta](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

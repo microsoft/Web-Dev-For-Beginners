@@ -1,170 +1,209 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "acad15f3164cd6348e065ff38619aae9",
-  "translation_date": "2025-10-24T19:20:07+00:00",
+  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
+  "translation_date": "2026-01-07T02:11:42+00:00",
   "source_file": "1-getting-started-lessons/2-github-basics/README.md",
   "language_code": "sw"
 }
 -->
 # Utangulizi wa GitHub
 
-Habari, mtaalamu wa baadaye! 👋 Uko tayari kujiunga na mamilioni ya waandaaji programu duniani? Nimefurahi sana kukutambulisha kwa GitHub – fikiria kama mtandao wa kijamii kwa waandaaji programu, isipokuwa badala ya kushiriki picha za chakula chako cha mchana, tunashiriki misimbo na kujenga mambo ya ajabu pamoja!
+Hujambo, msanidi programu wa baadaye! 👋 Uko tayari kuungana na mamilioni ya wapenzi wa programu duniani kote? Nina hamu sana kukutambulisha kwa GitHub – fikiria kama jukwaa la mitandao ya kijamii kwa wapenzi wa programu, isipokuwa badala ya kushiriki picha za chakula chako, tunashiriki msimbo na kuunda mambo mazuri pamoja!
 
-Hili ndilo linanivutia sana: kila programu kwenye simu yako, kila tovuti unayotembelea, na zana nyingi utakazojifunza kutumia zilitengenezwa na timu za waandaaji programu wakishirikiana kwenye majukwaa kama GitHub. Hiyo programu ya muziki unayoipenda? Mtu kama wewe alichangia kuijenga. Hiyo mchezo usiyoweza kuacha kucheza? Ndio, labda ilijengwa kwa ushirikiano wa GitHub. Na sasa WEWE unakwenda kujifunza jinsi ya kuwa sehemu ya jamii hiyo ya ajabu!
+Hiki ndicho kinachonishangaza: kila app kwenye simu yako, kila tovuti unayotembelea, na zana nyingi utakazojifunza kutumia zimetengenezwa na timu za wapenzi wa programu wakishirikiana kwenye majukwaa kama vile GitHub. App ya muziki unayopenda? Mtu kama wewe alichangia. Mchezo huo usioachwa chini? Ndiyo, huenda umetengenezwa kwa ushirikiano wa GitHub. Na sasa WEWE uta jifunza jinsi ya kuwa sehemu ya jamii hiyo ya kushangaza!
 
-Najua hii inaweza kuonekana kama mengi mwanzoni – kwa kweli, nakumbuka nilipotazama ukurasa wangu wa kwanza wa GitHub nikifikiria "Hii yote ina maana gani?" Lakini jambo ni hili: kila mtaalamu wa programu alianza mahali ulipo sasa. Mwishoni mwa somo hili, utakuwa na hifadhi yako mwenyewe ya GitHub (fikiria kama maonyesho ya mradi wako binafsi mtandaoni), na utajua jinsi ya kuhifadhi kazi yako, kushiriki na wengine, na hata kuchangia miradi inayotumiwa na mamilioni ya watu.
+Najua linaweza kuhisi mengi mwanzoni – hata mimi nilikumbuka nikitazama ukurasa wangu wa kwanza wa GitHub nikiwa na mawazo “Hii yote inamaanisha nini?” Lakini jambo ni hili: kila msanidi programu alianza mahali ulipo sasa hivi. Mwishoni mwa somo hili, utakuwa na hazina yako ya GitHub (fikiri kama jukwaa lako la kuonyesha miradi ulio nayo kwenye wingu), na utajua jinsi ya kuhifadhi kazi yako, kuishirikisha wengine, na hata kuchangia miradi inayotumiwa na mamilioni ya watu.
 
-Tutachukua safari hii pamoja, hatua kwa hatua. Hakuna haraka, hakuna shinikizo – ni wewe, mimi, na zana za kuvutia ambazo zitakuwa marafiki zako wapya wa karibu!
+Tutachukua safari hii pamoja, hatua kwa hatua. Hakuna haraka, hakuna msongo – ni wewe, mimi, na zana mzuri zitakazokufanya marafiki wako wapya!
 
-![Utangulizi wa GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.sw.png)
+![Utangulizi wa GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.sw.png)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Maswali ya Awali ya Somo
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app)
+```mermaid
+journey
+    title Safari Yako ya GitHub Leo
+    section Setup
+      Install Git: 4: You
+      Create Account: 5: You
+      First Repository: 5: You
+    section Master Git
+      Local Changes: 4: You
+      Commits & Pushes: 5: You
+      Branching: 4: You
+    section Collaborate
+      Fork Projects: 4: You
+      Pull Requests: 5: You
+      Open Source: 5: You
+```
+## Mtihani Kabla ya Mhadhara
+[Mtihani kabla ya mhadhara](https://ff-quizzes.netlify.app)
 
 ## Utangulizi
 
-Kabla ya kuingia kwenye mambo ya kusisimua, hebu tuandae kompyuta yako kwa ajili ya uchawi wa GitHub! Fikiria hili kama kupanga vifaa vyako vya sanaa kabla ya kuunda kazi ya sanaa – kuwa na zana sahihi tayari hufanya kila kitu kuwa rahisi na cha kufurahisha zaidi.
+Kabla hatujaingia kwenye mambo ya kusisimua, hebu tukamuweke kompyuta yako tayari kwa uchawi wa GitHub! Fikiria kama kuandaa vifaa vyako vya sanaa kabla ya kuunda kazi bora – kuwa na zana sahihi tayari hufanya kila kitu kuwa rahisi na kufurahisha zaidi.
 
-Nitakutembeza hatua kwa hatua katika kila hatua ya maandalizi, na naahidi siyo ngumu kama inavyoonekana mwanzoni. Ikiwa kuna kitu hakieleweki mara moja, ni kawaida kabisa! Nakumbuka nilipokuwa naandaa mazingira yangu ya kwanza ya maendeleo na kuhisi kama nilikuwa najaribu kusoma maandishi ya kale. Kila mtaalamu wa programu amewahi kuwa mahali ulipo sasa, akijiuliza kama anafanya sawa. Siri ni kwamba: ikiwa uko hapa unajifunza, tayari unafanya sawa! 🌟
+Nitakuonyesha kila hatua ya kusanidi binafsi, na naahidi siogopi kama inavyoonekana mwanzoni. Ikiwa jambo fulani halieleweki mara moja, hiyo ni kawaida kabisa! Nilikumbuka nianze kusanidi mazingira yangu ya kwanza ya maendeleo na kuhisi kama ninajaribu kusoma maandishi ya zamani. Kila msanidi programu amewahi kuwa mahali ulipo sasa hivi, akijiuliza kama anafanya vizuri. Habari njema: ikiwa uko hapa kujifunza, tayari unafanya vizuri! 🌟
 
-Katika somo hili, tutajadili:
+Katika somo hili, tutajifunza:
 
-- kufuatilia kazi unayofanya kwenye kompyuta yako
+- kufuatilia kazi unayofanya kwenye mashine yako
 - kufanya kazi kwenye miradi na wengine
-- jinsi ya kuchangia programu za chanzo huria
+- jinsi ya kuchangia kwenye programu za chanzo huria
 
 ### Mahitaji ya Awali
 
-Hebu tuandae kompyuta yako kwa ajili ya uchawi wa GitHub! Usijali – maandalizi haya ni kitu unachohitaji kufanya mara moja tu, na kisha utakuwa tayari kwa safari yako yote ya programu.
+Tuweke kompyuta yako tayari kwa uchawi wa GitHub! Usijali – usanidi huu ni jambo moja tu unalotakiwa kufanya, kisha utakuwa tayari kwa safari yako yote ya kuandika msimbo.
 
-Sawa, hebu tuanze na msingi! Kwanza, tunahitaji kuangalia kama Git tayari ipo kwenye kompyuta yako. Git kimsingi ni kama kuwa na msaidizi mwenye akili nyingi anayekumbuka kila mabadiliko unayofanya kwenye misimbo yako – bora zaidi kuliko kubonyeza Ctrl+S kila sekunde mbili (sote tumewahi kufanya hivyo!).
+Sawa, tuanze na misingi! Kwanza, tunahitaji kuangalia kama Git tayari iko kwenye kompyuta yako. Git ni sawa na kuwa na msaidizi mwerevu ambaye anakumbuka kila mabadiliko tunayofanya kwenye msimbo wetu – bora zaidi kuliko kubonyeza Ctrl+S kila sekunde mbili (sisi sote tumewahi kutokea hapo!).
 
-Hebu tuone kama Git tayari imewekwa kwa kuandika amri hii ya kichawi kwenye terminal yako:
+Tuweke tuchunguze ikiwa Git tayari imewekwa kwa kuandika amri hii ya kichawi kwenye terminal yako:  
 `git --version`
 
-Ikiwa Git bado haipo, usijali! Nenda tu kwenye [download Git](https://git-scm.com/downloads) na ipakue. Mara tu unapokuwa umeiweka, tunahitaji kuitambulisha Git kwako vizuri:
+Kama Git bado haipo, usijali! Nenda tu [pakua Git](https://git-scm.com/downloads) na upakue. Baada ya kuiweka, tunahitaji kumtambulisha Git wewe vizuri:
 
-> 💡 **Maandalizi ya Mara ya Kwanza**: Amri hizi zinaambia Git wewe ni nani. Taarifa hii itaambatanishwa na kila commit unayofanya, kwa hivyo chagua jina na barua pepe unayojisikia vizuri kushiriki hadharani.
+> 💡 **Usanidi wa Mara ya Kwanza**: Amri hizi zinaambia Git wewe ni nani. Habari hii itahusishwa na kila commit unayofanya, hivyo chagua jina na barua pepe unayotaka kuzishirikisha kwa umma.
 
 ```bash
 git config --global user.name "your-name"
 git config --global user.email "your-email"
 ```
-
-Ili kuangalia kama Git tayari imewekwa unaweza kuandika:
+  
+Ili kuangalia kama Git tayari imepangwa unaweza kuandika:  
 ```bash
 git config --list
 ```
+  
+Pia utahitaji akaunti ya GitHub, mhariri wa msimbo (kama Visual Studio Code), na utahitaji kufungua terminal yako (au: command prompt).
 
-Pia utahitaji akaunti ya GitHub, mhariri wa misimbo (kama Visual Studio Code), na utahitaji kufungua terminal yako (au: command prompt).
+Tafuta [github.com](https://github.com/) na unda akaunti ikiwa bado huna, au ingia na ujaze wasifu wako.
 
-Tembelea [github.com](https://github.com/) na unda akaunti ikiwa bado huna, au ingia na ujaze wasifu wako.
+💡 **Ushauri wa kisasa**: Fikiria usanidi wa [funguo za SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) au kutumia [GitHub CLI](https://cli.github.com/) kwa urahisi zaidi wa kuthibitisha bila nywila.
 
-💡 **Ushauri wa Kisasa**: Fikiria kuweka [SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) au kutumia [GitHub CLI](https://cli.github.com/) kwa urahisi wa uthibitisho bila nywila.
-
-✅ GitHub siyo hifadhi pekee ya misimbo duniani; kuna nyingine, lakini GitHub ndiyo inayojulikana zaidi.
+✅ GitHub sio hazina pekee ya msimbo duniani; zingine zipo, lakini GitHub ni maarufu zaidi.
 
 ### Maandalizi
 
-Utahitaji folda yenye mradi wa misimbo kwenye kompyuta yako ya ndani (laptop au PC), na hifadhi ya umma kwenye GitHub, ambayo itatumika kama mfano wa jinsi ya kuchangia miradi ya wengine.
+Utahitaji folda yenye mradi wa msimbo kwenye mashine yako ya ndani (kompyuta mpakato au PC), na hazina ya wazi (public repository) kwenye GitHub, ambayo itatumika kama mfano wa jinsi ya kuchangia miradi ya wengine.
 
-### Kuhifadhi Misimbo Yako Salama
+### Kuhifadhi Msimbo Wako Salama
 
-Hebu tuzungumze kuhusu usalama kwa muda – lakini usijali, hatutakufanya uhisi kuzidiwa na mambo ya kutisha! Fikiria mazoea haya ya usalama kama kufunga gari lako au nyumba yako. Ni tabia rahisi zinazokuwa za kawaida na kulinda kazi yako ngumu.
+Tuzungumze kuhusu usalama kwa muda – lakini usijali, hatutakulemea kwa mambo ya kuogopesha! Fikiria mbinu hizi za usalama kama kufunga gari lako au nyumba. Ni tabia rahisi zinazokuwa kawaida na zinazohifadhi kazi yako kwa usalama.
 
-Tutakuonyesha njia za kisasa, salama za kufanya kazi na GitHub tangu mwanzo. Kwa njia hii, utajenga tabia nzuri ambazo zitakusaidia vizuri katika kazi yako ya programu.
+Tutakuonyesha mbinu za kisasa, salama za kutumia GitHub tangu mwanzo. Hii itakusaidia kuendeleza tabia nzuri ambazo zitakutumikia vyema katika taaluma yako ya kuandika msimbo.
 
-Unapofanya kazi na GitHub, ni muhimu kufuata mazoea bora ya usalama:
+Unapofanya kazi na GitHub, ni muhimu kufuata mbinu bora za usalama:
 
-| Eneo la Usalama | Mazoea Bora | Kwa Nini Ni Muhimu |
-|------------------|-------------|--------------------|
-| **Uthibitisho** | Tumia SSH keys au Personal Access Tokens | Nywila si salama sana na zinatolewa |
-| **Uthibitisho wa Hatua Mbili** | Washa 2FA kwenye akaunti yako ya GitHub | Inaongeza safu ya ziada ya ulinzi wa akaunti |
-| **Usalama wa Hifadhi** | Usikubali taarifa nyeti | Funguo za API na nywila hazipaswi kuwa kwenye hifadhi za umma |
-| **Usimamizi wa Vitegemezi** | Washa Dependabot kwa masasisho | Inahakikisha vitegemezi vyako ni salama na vimesasishwa |
+| Eneo la Usalama | Mbinu Bora | Kwa Nini Ni Muhimu |
+|-----------------|------------|--------------------|
+| **Uthibitishaji** | Tumia funguo za SSH au Personal Access Tokens | Nywila ni hatari na zinaondolewa taratibu |
+| **Uthibitishaji wa Vipindi Viwili** | Washa 2FA kwenye akaunti yako ya GitHub | Inatoa kinga ya ziada kwa akaunti |
+| **Usalama wa Hazina** | Usihifadhi taarifa nyeti kwa commit | Funguo za API na nywila hazipaswi kuwa kwenye hazina za umma |
+| **Usimamizi wa Tegemezi** | Washa Dependabot kwa masasisho | Huhakikisha tegemezi zako ziko salama na zimesasishwa |
 
-> ⚠️ **Kumbusho Muhimu la Usalama**: Usikubali funguo za API, nywila, au taarifa nyingine nyeti kwenye hifadhi yoyote. Tumia mazingira ya kutofautisha na faili za `.gitignore` kulinda data nyeti.
+> ⚠️ **Kumbusho Muhimu la Usalama**: Usihifadhi funguo za API, nywila, au taarifa nyingine nyeti katika hazina yoyote. Tumia mabadiliko ya mazingira (environment variables) na faili za `.gitignore` kulinda taarifa nyeti.
 
-**Maandalizi ya Kisasa ya Uthibitisho:**
+**Usanidi wa Uthibitishaji wa Kisasa:**
 
 ```bash
-# Generate SSH key (modern ed25519 algorithm)
+# Tengeneza funguo za SSH (algorithmi ya kisasa ya ed25519)
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
-# Set up Git to use SSH
+# Weka Git itumie SSH
 git remote set-url origin git@github.com:username/repository.git
 ```
-
-> 💡 **Ushauri wa Wataalamu**: SSH keys huondoa hitaji la kuingiza nywila mara kwa mara na ni salama zaidi kuliko njia za jadi za uthibitisho.
+  
+> 💡 **Ushauri Bora**: Funguo za SSH zinahakikisha hauhitajiki kuingiza nywila mara nyingi na ni salama kuliko mbinu za kawaida za uthibitishaji.
 
 ---
 
-## Kusimamia Misimbo Yako Kama Mtaalamu
+## Kusimamia Msimbo Wako Kama Mtaalamu
 
-Sawa, HII ndiyo sehemu ambapo mambo yanakuwa ya kusisimua sana! 🎉 Tunakaribia kujifunza jinsi ya kufuatilia na kusimamia misimbo yako kama wataalamu wanavyofanya, na kwa kweli, hii ni moja ya mambo ninayopenda kufundisha kwa sababu ni mabadiliko makubwa.
+Sawa, HII ndio sehemu ambayo mambo yanakuwa ya kusisimua kweli! 🎉 Tutaweza kujifunza jinsi ya kufuatilia na kusimamia msimbo wako kama wataalamu hufanya, na kweli, hii ni mojawapo ya mambo ninayopenda kufundisha kwa sababu hubadilisha mchezo kabisa.
 
-Fikiria hivi: unaandika hadithi ya kushangaza, na unataka kufuatilia kila rasimu, kila mabadiliko mazuri, na kila "subiri, hiyo ni nzuri!" wakati njiani. Hivyo ndivyo Git inavyofanya kwa misimbo yako! Ni kama kuwa na daftari la kusafiri kwa wakati ambalo linakumbuka KILA KITU – kila neno, kila mabadiliko, kila "oops, hiyo iliharibu kila kitu" ambalo unaweza kurekebisha mara moja.
+Fikiria hivi: unaandika hadithi ya kushangaza, na unataka kufuatilia kila rasimu, kila marekebisho mazuri, na kila “ngoja, hiyo ni akili ya ajabu!” wakati katika safari yako. Hiyo ndiyo Git hufanya kwa msimbo wako! Ni kama kuwa na daftari la kusafiri wakati lililo bora kabisa linalokumbuka KILA KITU – kila tugizo la kibodi, kila mabadiliko, kila wakati wa “oops, hilo limetatiza yote” ambao unaweza kufuta papo hapo.
 
-Nitakuwa mkweli – hii inaweza kuhisi kuzidiwa mwanzoni. Nilipoanza, nilifikiria "Kwa nini siwezi tu kuhifadhi faili zangu kama kawaida?" Lakini niamini: mara Git itakapokufungukia (na itafunguka!), utakuwa na moja ya nyakati hizo za mwangaza ambapo unafikiria "Nilifanyaje programu bila hii?" Ni kama kugundua unaweza kuruka wakati umekuwa ukitembea kila mahali maisha yako yote!
+Nitasema kweli – hii inaweza kuhisi ngumu mwanzoni. Nilipanzia, nilifikiria “Kwa nini siwezi kuhifadhi faili zangu kama kawaida?” Lakini niamini hili: mara Git itakapokueleweka (na itakueleweka!), utakuwa na wakati wa kufikiria “Nilivyoweza KODI bila hili kabla?” Ni kama kugundua unaweza kuruka wakati ulitembea kila mahali maisha yako yote!
 
-Tuseme una folda ya ndani yenye mradi wa misimbo na unataka kuanza kufuatilia maendeleo yako ukitumia git - mfumo wa kudhibiti toleo. Watu wengine hulinganisha kutumia git na kuandika barua ya mapenzi kwa nafsi yako ya baadaye. Kusoma ujumbe wa commit siku, wiki, au miezi baadaye utaweza kukumbuka kwa nini ulifanya uamuzi, au "kurudisha nyuma" mabadiliko - yaani, unapokuwa unaandika ujumbe mzuri wa "commit".
+Tuseme una folda kwenye kompyuta yako yenye mradi wa msimbo na unataka kuanza kufuatilia maendeleo yako ukitumia git – mfumo wa kudhibiti toleo la msimbo. Watu wengine hufananisha kutumia git na kuandika barua ya upendo kwa nafsi yako ya baadaye. Kusoma ujumbe wako wa commit siku, wiki, au miezi baadaye kutakuwezesha kukumbuka kwa nini ulifanya uamuzi fulani, au “kurudisha nyuma” mabadiliko – yaani, pale unapobandika ujumbe mzuri wa commit.
 
-### Kazi: Unda Hifadhi Yako ya Kwanza!
+```mermaid
+flowchart TD
+    A[📁 Faili Zako za Mradi] --> B{Je Ni Git Repository?}
+    B -->|Hapana| C[git init]
+    B -->|Ndiyo| D[Fanya Mabadiliko]
+    C --> D
+    D --> E[git add .]
+    E --> F["git commit -m 'message'"]
+    F --> G[git push]
+    G --> H[🌟 Msimbo Kwenye GitHub!]
+    
+    H --> I{Unataka Kushirikiana?}
+    I -->|Ndiyo| J[Fork & Clone]
+    I -->|Hapana| D
+    J --> K[Tengeneza Tawi]
+    K --> L[Fanya Mabadiliko]
+    L --> M[Omba Mvuto]
+    M --> N[🎉 Kuchangia!]
+    
+    style A fill:#fff59d
+    style H fill:#c8e6c9
+    style N fill:#ff4081,color:#fff
+```
+### Kazi: Unda Hazina Yako ya Kwanza!
 
-> 🎯 **Dhamira Yako (na ninasisimka kwa ajili yako!)**: Tunakwenda kuunda hifadhi yako ya kwanza ya GitHub pamoja! Kufikia mwisho wa hapa, utakuwa na kona yako ndogo ya mtandao ambapo misimbo yako inaishi, na utakuwa umefanya "commit" yako ya kwanza (hiyo ni lugha ya waandaaji programu kwa kuhifadhi kazi yako kwa njia ya akili sana).
->
-> Hii ni wakati maalum sana – unakaribia kujiunga rasmi na jamii ya kimataifa ya waandaaji programu! Bado nakumbuka msisimko wa kuunda hifadhi yangu ya kwanza na kufikiria "Wow, kweli ninafanya hili!"
+> 🎯 **Kazi Yako (na nina hamu sana kwako!)**: Tutaunda hazina yako ya kwanza ya GitHub pamoja! Mwisho wa haya, utakuwa na kona yako ndogo ya mtandao ambapo msimbo wako utaishi, na utakuwa umefanya "commit" yako ya kwanza (hiyo ni lugha ya msanidi programu ya kuhifadhi kazi yako kwa njia ya mwerevu).  
+>  
+> Hili ni tukio la kipekee kweli – uko njiani kujiunga rasmi na jamii ya kimataifa ya wapenzi wa programu! Bado nakumbuka hisia ya kuunda hazina yangu ya kwanza na kufikiria "Wow, nashangaza kweli!"
 
-Hebu tuendelee na safari hii pamoja, hatua kwa hatua. Chukua muda wako kwa kila sehemu – hakuna zawadi kwa haraka, na naahidi kila hatua itakuwa na maana. Kumbuka, kila nyota wa programu unayempenda aliwahi kukaa mahali ulipo, akijiandaa kuunda hifadhi yake ya kwanza. Si hilo ni la kuvutia?
+Tupitie tukio hili pamoja, hatua kwa hatua. Chukua muda wako kwa kila sehemu – hakuna zawadi kwa haraka, na naahidi kila hatua itakuwa na maana. Kumbuka, kila nyota wa kuandika msimbo unayemheshimu alikuwa amekaa mahali ulipo sasa, akikaribia kuunda hazina yao ya kwanza. Je, si baraka?
 
-> Tazama video
-> 
-> [![Video ya misingi ya Git na GitHub](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
+> Angalia video  
+>  
+> [![Msingi wa Git na GitHub video](https://img.youtube.com/vi/9R31OUPpxU4/0.jpg)](https://www.youtube.com/watch?v=9R31OUPpxU4)
 
-**Hebu Tufanye Hili Pamoja:**
+**Tufanye Hii Pamoja:**
 
-1. **Unda hifadhi yako kwenye GitHub**. Nenda GitHub.com na tafuta kitufe cha kijani kibichi **New** (au alama ya **+** kwenye kona ya juu kulia). Bonyeza na uchague **New repository**.
+1. **Unda hazina yako kwenye GitHub**. Nenda GitHub.com na tafuta kitufe kijani angavu cha **New** (au alama ya **+** kwenye kona ya juu kulia). Bonyeza na chagua **New repository**.
 
-   Hivi ndivyo unavyofanya:
-   1. Peana hifadhi yako jina – lifanye kuwa na maana kwako!
-   1. Ongeza maelezo ikiwa unataka (hii husaidia wengine kuelewa mradi wako unahusu nini)
-   1. Amua ikiwa unataka iwe ya umma (kila mtu anaweza kuiona) au ya binafsi (kwa ajili yako tu)
-   1. Ninapendekeza kuangalia kisanduku cha kuongeza faili ya README – ni kama ukurasa wa mbele wa mradi wako
-   1. Bonyeza **Create repository** na sherehekea – umeunda hifadhi yako ya kwanza! 🎉
+   Hapa ni kile cha kufanya:  
+   1. Wape hazina yako jina – lifanye kuwa jambo lenye maana kwako!  
+   1. Ongeza maelezo ikiwa unataka (hii husaidia wengine kuelewa mradi wako ni nini)  
+   1. Amua ikiwa unataka iwe wazi kwa wote (kila mtu aione) au binafsi (kwako wewe pekee)  
+   1. Napendekeza ukaangalia kisanduku cha kuongeza faili la README – ni kama ukurasa wa mbele wa mradi wako  
+   1. Bonyeza **Create repository** na sherehekea – umeunda hazina yako ya kwanza! 🎉
 
-2. **Elekea kwenye folda ya mradi wako**. Sasa hebu tufungue terminal yako (usijali, si ya kutisha kama inavyoonekana!). Tunahitaji kuambia kompyuta yako mahali faili za mradi wako zipo. Andika amri hii:
+2. **Nenda kwenye folda ya mradi wako**. Sasa fungua terminal yako (usijali, haogopi kama inavyoonekana!). Tunahitaji kuambia kompyuta yako faili za mradi wako ziko wapi. Andika amri hii:
 
    ```bash
    cd [name of your folder]
    ```
-
-   **Tunachofanya hapa:**
-   - Kimsingi tunasema "Hey kompyuta, nipeleke kwenye folda ya mradi wangu"
-   - Hii ni kama kufungua folda maalum kwenye desktop yako, lakini tunafanya kwa amri za maandishi
+  
+   **Tunachofanya hapa:**  
+   - Kimsingi tunasema "Hey kompyuta, niongoze kwenye folda yangu ya mradi"  
+   - Hii ni sawa na kufungua folda maalum kwenye desktop yako, lakini tunafanya kwa amri za maandishi  
    - Badilisha `[name of your folder]` na jina halisi la folda ya mradi wako
 
-3. **Geuza folda yako kuwa hifadhi ya Git**. Hapa ndipo uchawi unapotokea! Andika:
+3. **Geuza folda yako kuwa hazina ya Git**. Hapa ndipo uchawi unaanza! Andika:
 
    ```bash
    git init
    ```
+  
+   **Hii ndio ilitokea (mambo mazuri!):**  
+   - Git imeunda folda fiche `.git` kwenye mradi wako – hutaiwona, lakini ipo!  
+   - Folda yako ya kawaida sasa ni "hazina" inayoweza kufuatilia kila mabadiliko unayofanya  
+   - Fikiria kama umeipa folda yako nguvu za kumbukumbu kila kitu
 
-   **Hapa ndipo kilichotokea (mambo ya kuvutia!):**
-   - Git imeunda folda ya siri `.git` kwenye mradi wako – huwezi kuiona, lakini ipo!
-   - Folda yako ya kawaida sasa ni "hifadhi" inayoweza kufuatilia kila mabadiliko unayofanya
-   - Fikiria kama kutoa folda yako nguvu za kipekee za kukumbuka kila kitu
-
-4. **Angalia kinachoendelea**. Hebu tuone Git inafikiria nini kuhusu mradi wako kwa sasa:
+4. **Angalia kinachoendelea**. Tuweke tuchunguze kile Git kinafikiri kuhusu mradi wako sasa hivi:
 
    ```bash
    git status
    ```
-
-   **Kuelewa kinachosemwa na Git:**
+  
+   **Kuelewa kile Git inachokuambia:**  
    
-   Unaweza kuona kitu kinachoonekana kama hiki:
+   Huenda ukaona jambo kama hili:
 
    ```output
    Changes not staged for commit:
@@ -174,103 +213,103 @@ Hebu tuendelee na safari hii pamoja, hatua kwa hatua. Chukua muda wako kwa kila 
         modified:   file.txt
         modified:   file2.txt
    ```
+  
+   **Usijali! Hii inamaanisha:**  
+   - Faili zilizo **nyekundu** ni faili zilizo na mabadiliko lakini bado hazijatayarishwa kuhifadhiwa  
+   - Faili zilizo **kijani** (unapoziona) tayari ziko tayari kuhifadhiwa  
+   - Git inakusaidia kwa kukuambia kile unachoweza kufanya baadaye
 
-   **Usiogope! Hii inamaanisha:**
-   - Faili za **nyekundu** ni faili ambazo zina mabadiliko lakini haziko tayari kuhifadhiwa bado
-   - Faili za **kijani** (ukiziona) ziko tayari kuhifadhiwa
-   - Git inakuwa msaada kwa kukuambia hasa unachoweza kufanya baadaye
+   > 💡 **Ushauri bora**: Amri `git status` ni rafiki yako mkubwa! Tumia wakati wowote ukiwa na shaka kuhusu kile kinachoendelea. Ni sawa na kumuuliza Git "Hey, hali ya sasa ni gani?"
 
-   > 💡 **Ushauri wa Wataalamu**: Amri ya `git status` ni rafiki yako bora! Tumia wakati wowote unapochanganyikiwa kuhusu kinachoendelea. Ni kama kuuliza Git "Hey, hali ikoje sasa?"
-
-5. **Andaa faili zako kwa kuhifadhi** (hii inaitwa "staging"):
+5. **Tayarisha faili zako kuhifadhi (hii huitwa "staging")**:
 
    ```bash
    git add .
    ```
+  
+   **Tulichofanya sasa hivi:**  
+   - Tumeambia Git "Hey, nataka kuingiza faili zote zangu kwenye kuhifadhi kijacho"  
+   - `.` ni sawa na kusema "kila kitu kwenye folda hii"  
+   - Sasa faili zako zimeshapangwa na ziko tayari kwa hatua inayofuata
 
-   **Tulichofanya:**
-   - Tuliambia Git "Hey, nataka niweke FAILI ZOTE kwenye hifadhi inayofuata"
-   - `.` ni kama kusema "kila kitu kwenye folda hii"
-   - Sasa faili zako ziko "staged" na ziko tayari kwa hatua inayofuata
-
-   **Unataka kuchagua zaidi?** Unaweza kuongeza faili maalum tu:
+   **Unataka kuwa makini zaidi?** Unaweza kuongeza faili maalum tu:
 
    ```bash
    git add [file or folder name]
    ```
+  
+   **Kwa nini ungependa kufanya hivyo?**  
+   - Wakati mwingine unataka kuhifadhi mabadiliko yanayohusiana pamoja  
+   - Husaidia kupanga kazi yako katika sehemu za mantiki  
+   - Hufanya iwe rahisi kuelewa kilichobadilika na lini
 
-   **Kwa nini unaweza kutaka kufanya hivi?**
-   - Wakati mwingine unataka kuhifadhi mabadiliko yanayohusiana pamoja
-   - Inakusaidia kupanga kazi yako katika sehemu za kimantiki
-   - Inafanya iwe rahisi kuelewa kilichobadilika na lini
-
-   **Umebadilisha mawazo?** Usijali! Unaweza kuondoa faili kutoka kwa "staged" kama hivi:
+   **Umebadilisha mawazo?** Usijali! Unaweza kuondoa faili kutoka kwenye staging kama hii:
 
    ```bash
-   # Unstage everything
+   # Ondoa kila kitu kwenye hatua
    git reset
    
-   # Unstage just one file
+   # Ondoa faili moja tu kwenye hatua
    git reset [file name]
    ```
+  
+   Usijali – hili halifuti kazi yako, linaondoa faili kwenye orodha ya "zako tayari kuhifadhiwa".
 
-   Usijali – hii haifuti kazi yako, inachukua tu faili kutoka kwenye "hifadhi inayofuata".
-
-6. **Hifadhi kazi yako milele** (kutengeneza commit yako ya kwanza!):
+6. **Hifadhi kazi yako milele (kutengeneza commit yako ya kwanza!):**
 
    ```bash
    git commit -m "first commit"
    ```
-
-   **🎉 Hongera! Umefanya commit yako ya kwanza!**
+  
+   **🎉 Hongera! Umefanya commit yako ya kwanza!**  
    
-   **Hapa ndipo kilichotokea:**
-   - Git ilichukua "picha" ya faili zako zote zilizowekwa kwenye hatua hii halisi
-   - Ujumbe wako wa commit "first commit" unaelezea kuhusu hatua hii ya kuhifadhi
-   - Git ilitoa ID ya kipekee kwa picha hii ili uweze kuipata wakati wowote baadaye
+   **Hili ndilo lililotokea:**  
+   - Git ilichukua "picha" ya kila faili ulizoweka staging kwa wakati huu  
+   - Ujumbe wako wa commit "first commit" unaeleza kuhusu hii pointi ya kuhifadhi  
+   - Git ilitoa ndiyo ID ya kipekee kwa picha hii ili iwe rahisi kuitafuta baadaye  
    - Umeanza rasmi kufuatilia historia ya mradi wako!
 
-   > 💡 **Ujumbe wa commit wa baadaye**: Kwa commit zako zijazo, kuwa na maelezo zaidi! Badala ya "updated stuff", jaribu "Ongeza fomu ya mawasiliano kwenye ukurasa wa mwanzo" au "Rekebisha hitilafu ya menyu ya urambazaji". Nafsi yako ya baadaye itakushukuru!
+   > 💡 **Ujumbe wa commit wa baadaye**: Kwa commits zako zijazo, jaribu kuwa na maelezo zaidi! Badala ya "updated stuff", jaribu "Ongeza fomu ya mawasiliano kwenye ukurasa wa nyumbani" au "Rekebisha hitilafu ya menyu ya urambazaji". Nafsi yako ya baadaye itakushukuru!
 
-7. **Unganisha mradi wako wa ndani na GitHub**. Kwa sasa, mradi wako upo tu kwenye kompyuta yako. Hebu tuunganishe na hifadhi yako ya GitHub ili uweze kushiriki na dunia!
+7. **Unganisha mradi wako wa ndani na GitHub**. Sasa mradi wako bado uko kwenye kompyuta yako peke yake. Tuchunguze kuunganisha kwenye hazina yako ya GitHub ili uweze kuihifadhi kwa ulimwengu!
 
-   Kwanza, nenda kwenye ukurasa wa hifadhi yako ya GitHub na nakili URL. Kisha rudi hapa na andika:
+   Kwanza, nenda kwenye ukurasa wa hazina yako ya GitHub na nakili URL. Kisha rudi hapa na uandike:
 
    ```bash
    git remote add origin https://github.com/username/repository_name.git
    ```
    
-   (Badilisha URL hiyo na URL halisi ya hifadhi yako!) 
+   (Badilisha URL hiyo na URL halisi ya hazina yako!)
 
-   **Hapa ndipo kilichotokea:**
-   - Tumeunda muunganisho kati ya mradi wako wa ndani na hifadhi yako ya GitHub
-   - "Origin" ni jina la utani tu kwa hifadhi yako ya GitHub – ni kama kuongeza mawasiliano kwenye simu yako
-   - Sasa Git yako ya ndani inajua wapi pa kutuma msimbo wako unapokuwa tayari kuushiriki
+   **Tulichofanya sasa hivi:**
+   - Tulitengeneza muunganisho kati ya mradi wako wa ndani na ghala lako la GitHub
+   - "Origin" ni nadra tu kwa ghala lako la GitHub – ni sawa na kuongeza mpenzi kwenye simu yako
+   - Sasa Git ya ndani inajua ni wapi ya kutuma msimbo wako unapokuwa tayari kuushiriki
 
-   💡 **Njia rahisi zaidi**: Ikiwa umeweka GitHub CLI, unaweza kufanya hili kwa amri moja:
+   💡 **Njia rahisi**: Ikiwa una GitHub CLI imewekwa, unaweza kufanya hili kwa amri moja:
    ```bash
    gh repo create my-repo --public --push --source=.
    ```
 
-8. **Tuma msimbo wako kwenye GitHub** (wakati mkubwa!):
+8. **Tuma msimbo wako GitHub** (wakati mkubwa!):
 
    ```bash
    git push -u origin main
    ```
 
-   **🚀 Hii ndiyo! Unapakia msimbo wako kwenye GitHub!**
+   **🚀 Hii ndio! Unapakia msimbo wako GitHub!**
    
-   **Kinachotokea:**
-   - Mabadiliko yako yanatoka kwenye kompyuta yako kwenda GitHub
-   - Bendera ya `-u` inaweka muunganisho wa kudumu ili usukumo wa baadaye uwe rahisi
+   **Kinachojiri:**
+   - Malipo yako yanasafiri kutoka kompyuta yako hadi GitHub
+   - Bendera `-u` inaweka muunganisho wa kudumu ili mawasilisho ya baadaye yawe rahisi
    - "main" ni jina la tawi lako kuu (kama folda kuu)
    - Baada ya hili, unaweza tu kuandika `git push` kwa upakiaji wa baadaye!
 
-   💡 **Kumbuka haraka**: Ikiwa tawi lako linaitwa kitu kingine (kama "master"), tumia jina hilo. Unaweza kuangalia kwa `git branch --show-current`.
+   💡 **Kumbuka haraka**: Ikiwa tawi lako lina jina tofauti (kama "master"), tumia jina hilo badala. Unaweza kuangalia kwa `git branch --show-current`.
 
-9. **Mpangilio wako mpya wa kila siku wa usimbaji** (hapa ndipo inakuwa ya kuvutia!):
+9. **Mdundo wako mpya wa kila siku wa uandishi wa msimbo** (hapa ndipo unapoanza kuutamani!):
 
-   Kuanzia sasa, kila unapofanya mabadiliko kwenye mradi wako, una hatua hizi tatu rahisi za kufuata:
+   Kuanzia sasa, kila wakati unapofanya mabadiliko kwenye mradi wako, una ngoma rahisi ya hatua tatu:
 
    ```bash
    git add .
@@ -278,310 +317,460 @@ Hebu tuendelee na safari hii pamoja, hatua kwa hatua. Chukua muda wako kwa kila 
    git push
    ```
 
-   **Hii inakuwa mapigo ya moyo wa usimbaji wako:**
+   **Hii inakuwa mapigo ya moyo ya uandishi wako wa msimbo:**
    - Fanya mabadiliko mazuri kwenye msimbo wako ✨
-   - Yape nafasi kwa `git add` ("Hey Git, zingatia mabadiliko haya!")
-   - Yahifadhi kwa `git commit` na ujumbe wa kuelezea (wewe wa baadaye atakushukuru!)
-   - Yashiriki na dunia kwa kutumia `git push` 🚀
-   - Rudia tena – kwa kweli, hii inakuwa ya kawaida kama kupumua!
+   - Yazae (stage) kwa `git add` ("Hey Git, zingatia mabadiliko haya!")
+   - Yahifadhi na ujumbe wa kufafanua kwa `git commit` (wewe wa baadaye utashukuru!)
+   - Ya mshiriki na ulimwengu kwa kutumia `git push` 🚀
+   - Rudia na rudia – kwa kweli, hii inakuwa rahisi kama kupumua!
 
-   Napenda mtiririko huu kwa sababu ni kama kuwa na sehemu nyingi za kuhifadhi katika mchezo wa video. Umefanya mabadiliko unayopenda? Yathibitishe! Unataka kujaribu kitu hatari? Hakuna shida – unaweza kurudi kwenye uhifadhi wako wa mwisho ikiwa mambo yataenda vibaya!
+   Ninapenda mtiririko huu wa kazi kwa sababu ni kama kuwa na pointi kadhaa za kuokoa ndani ya mchezo wa video. Umefanya mabadiliko unayopenda? Commiti! Unataka kujaribu kitu hatari? Hakuna shida – kila wakati unaweza kurudi kwenye commit yako ya mwisho ikiwa mambo yataenda mrama!
 
-   > 💡 **Kidokezo**: Unaweza pia kutaka kutumia faili ya `.gitignore` ili kuzuia faili ambazo hutaki kufuatilia zisionekane kwenye GitHub - kama faili ya maelezo unayohifadhi kwenye folda hiyo hiyo lakini haina nafasi kwenye hifadhi ya umma. Unaweza kupata templeti za faili za `.gitignore` kwenye [.gitignore templates](https://github.com/github/gitignore) au kuunda moja kwa kutumia [gitignore.io](https://www.toptal.com/developers/gitignore).
+   > 💡 **Ubunifu**: Pia unaweza kutaka kutumia faili la `.gitignore` ili kuzuia faili ambazo hutaki kufuatiliwa kuonekana GitHub - kama vile faili la noti unalohifadhi katika folda hiyo hiyo lakini halina mahali katika ghala la umma. Unaweza kupata templeti za faili `.gitignore` kwenye [.gitignore templates](https://github.com/github/gitignore) au kutengeneza moja kwa kutumia [gitignore.io](https://www.toptal.com/developers/gitignore).
 
-#### Mitiririko ya kisasa ya Git
+### 🧠 **Kuingia Mara ya Kwanza Ghalani: Ilikuwa Vipi?**
+
+**Chukua muda kusherehekea na kufikiria:**
+- Ilikuwa vipi kuona msimbo wako ukaonekana GitHub kwa mara ya kwanza?
+- Hatua gani ilikuonekana ngumu zaidi, na ipi ilionekana rahisi kwa mshangao?
+- Je, unaweza kuelezea tofauti kati ya `git add`, `git commit`, na `git push` kwa maneno yako mwenyewe?
+
+```mermaid
+stateDiagram-v2
+    [*] --> LocalFiles: Unda mradi
+    LocalFiles --> Staged: git add .
+    Staged --> Committed: git commit
+    Committed --> GitHub: git push
+    GitHub --> [*]: Mafanikio! 🎉
+    
+    note right of Staged
+        Fayela tayari kuhifadhi
+    end note
+    
+    note right of Committed
+        Picha ya hali imetengenezwa
+    end note
+```
+> **Kumbuka**: Hata waendelezaji wenye uzoefu mara nyingine huwezi kukumbuka amri zake zote. Kuwa na mtiririko huu wa kazi kama kumbukumbu ya misuli inahitaji mazoezi – unafanya vizuri!
+
+#### Mitiririko ya Kazi ya Git ya Kisasa
 
 Fikiria kutumia mbinu hizi za kisasa:
 
-- **Conventional Commits**: Tumia muundo wa ujumbe wa uhifadhi uliosimamiwa kama `feat:`, `fix:`, `docs:`, nk. Jifunze zaidi kwenye [conventionalcommits.org](https://www.conventionalcommits.org/)
-- **Atomic commits**: Fanya kila uhifadhi uwakilishe mabadiliko moja ya kimantiki
-- **Frequent commits**: Hifadhi mara kwa mara na ujumbe wa kuelezea badala ya uhifadhi mkubwa, wa nadra
+- **Mawasilisho ya Kawaida (Conventional Commits)**: Tumia muundo wa ujumbe wa commit uliosanifiwa kama `feat:`, `fix:`, `docs:`, nk. Jifunze zaidi kwenye [conventionalcommits.org](https://www.conventionalcommits.org/)
+- **Commiti ndogo ndogo**: Fanya kila commit iwe mfano wa mabadiliko ya mantiki moja
+- **Commiti nyingi**: Commit mara kwa mara kwa ujumbe unaofafanua badala ya commit kubwa, isiyo mara kwa mara
 
-#### Ujumbe wa uhifadhi
+#### Ujumbe wa commit
 
-Mstari mzuri wa somo la uhifadhi wa Git unakamilisha sentensi ifuatayo:
-Ikiwa itatumika, uhifadhi huu uta <weka mstari wako wa somo hapa>
+Mstari mzuri wa kichwa cha commit ya Git hujaza sentensi ifuatayo:
+Ikiwa itatekelezwa, commit hii itafanya <mstari wako wa kichwa hapa>
 
-Kwa somo tumia hali ya amri, wakati wa sasa: "badilisha" si "imebadilishwa" wala "inabadilisha". 
-Kama ilivyo kwenye somo, kwenye mwili (hiari) pia tumia hali ya amri, wakati wa sasa. Mwili unapaswa kujumuisha motisha ya mabadiliko na kulinganisha hii na tabia ya awali. Unafafanua `kwa nini`, si `jinsi`.
+Kwa kichwa tumia kitenzi katika hali ya amri, wakati wa sasa: "badilisha" sio "imebadilika" wala "mabadiliko". 
+Kama katika kichwa, pia tumia kitenzi katika hali ya amri, wakati wa sasa mwilini (hiari). Mwili unapaswa kujumuisha sababu ya mabadiliko na kulinganisha na tabia ya awali. Unaeleza `kwa nini`, sio `jinsi`.
 
-✅ Chukua dakika chache kuzunguka GitHub. Je, unaweza kupata ujumbe mzuri wa uhifadhi? Je, unaweza kupata mmoja wa kiwango cha chini sana? Ni taarifa gani unadhani ni muhimu zaidi na ya manufaa kufikisha kwenye ujumbe wa uhifadhi?
+✅ Chukua dakika chache kuvinjari GitHub. Je, unaweza kupata ujumbe mzuri sana wa commit? Je, unaweza kupata ujumbe mdogo kabisa? Ni taarifa gani unadhani ni muhimu na yenye manufaa zaidi kuwasilishwa katika ujumbe wa commit?
 
-## Kufanya kazi na Wengine (Sehemu ya Kufurahisha!)
+## Kufanya Kazi na Wengine (Sehemu ya Kufurahisha!)
 
-Shikilia kofia yako kwa sababu HII ndiyo ambapo GitHub inakuwa ya kichawi kabisa! 🪄 Umejifunza kusimamia msimbo wako mwenyewe, lakini sasa tunaingia kwenye sehemu ninayopenda zaidi – kushirikiana na watu wa ajabu kutoka kote ulimwenguni.
+Shikilia kofia yako kwa sababu HII ndio sehemu GitHub inakuwa ya kichawi kabisa! 🪄 Umetawala usimamizi wa msimbo wako, lakini sasa tunaingia sehemu niliyopenda zaidi – kushirikiana na watu wa kushangaza kutoka sehemu zote za dunia.
 
-Fikiria hili: unaamka kesho na kuona kwamba mtu huko Tokyo ameboresha msimbo wako wakati ulikuwa umelala. Kisha mtu huko Berlin anarekebisha hitilafu ambayo umekuwa ukikwama nayo. Kufikia alasiri, msanidi programu huko São Paulo ameongeza kipengele ambacho hata hukuwahi kufikiria. Hiyo siyo hadithi ya kisayansi – hiyo ni Jumanne tu katika ulimwengu wa GitHub!
+Fikiria hii: unaamka kesho na kuona mtu Tokyo ameongeza uboreshaji kwenye msimbo wako huku umelala. Kisha mtu Berlin anarekebisha hitilafu iliyokufanya kusuasua. Alasiri, mtaalamu wa São Paulo ameongeza kipengele ambacho hukuwahi kufikiri. Hiyo si sayansi ya kubuni – ni tu Jumanne katika ulimwengu wa GitHub!
 
-Kinachonifanya niwe na furaha sana ni kwamba ujuzi wa kushirikiana unaojifunza sasa? Hizi ni mbinu SAWA ambazo timu huko Google, Microsoft, na kampuni unazozipenda hutumia kila siku. Hujifunzi tu zana nzuri – unajifunza lugha ya siri inayofanya ulimwengu mzima wa programu kufanya kazi pamoja.
+Kinachonifanya nisisimke ni kwamba ujuzi wa ushirikiano unaojiandaa kujifunza? Hii ni MITIRIRIKO HAISI sawa ambayo timu katika Google, Microsoft, na startups ulizopenda hutumia kila siku. Haujifunzi tu zana nzuri – unajifunza lugha ya siri inayofanya ulimwengu mzima wa programu kufanya kazi pamoja.
 
-Kwa kweli, mara tu unapopata msisimko wa kuwa na mtu kuunganisha ombi lako la kwanza la kuvuta, utaelewa kwa nini wasanidi programu wanakuwa na shauku sana kuhusu chanzo wazi. Ni kama kuwa sehemu ya mradi mkubwa zaidi, wa ubunifu zaidi wa timu duniani!
+Kwa kweli, mara utakapopata furaha ya mtu kuchanganya ombi lako la kuleta msimbo la kwanza, utaelewa kwanini waendelezaji wanavutiwa sana na chanzo huria. Ni kama kuwa sehemu ya mradi mkubwa zaidi wa ubunifu wa timu duniani!
 
 > Tazama video
 >
-> [![Video ya misingi ya Git na GitHub](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
+> [![Git and GitHub basics video](https://img.youtube.com/vi/bFCM-PC3cu8/0.jpg)](https://www.youtube.com/watch?v=bFCM-PC3cu8)
 
-Sababu kuu ya kuweka vitu kwenye GitHub ilikuwa kufanya iwezekane kushirikiana na wasanidi programu wengine.
+Sababu kubwa ya kuweka vitu GitHub ilikuwa kuwezesha kushirikiana na waendelezaji wengine.
 
-Katika hifadhi yako, nenda kwenye `Insights > Community` ili kuona jinsi mradi wako unavyolinganishwa na viwango vya jamii vinavyopendekezwa.
+```mermaid
+flowchart LR
+    A[🔍 Tafuta Mradi] --> B[🍴 Nakili Hifadhidata]
+    B --> C[📥 Nakili kwa Ndani]
+    C --> D[🌿 Unda Tawi]
+    D --> E[✏️ Fanya Mabadiliko]
+    E --> F[💾 Hifadhi Mabadiliko]
+    F --> G[📤 Sogeza Tawi]
+    G --> H[🔄 Unda Ombi la Kuunganisha]
+    H --> I{Ukaguzi wa Msimamizi}
+    I -->|✅ Imekubaliwa| J[🎉 Unganisha!]
+    I -->|❓ Mabadiliko Yameombwa| K[📝 Fanya Marekebisho]
+    K --> F
+    J --> L[🧹 Safisha Matawi]
+    
+    style A fill:#e3f2fd
+    style J fill:#e8f5e8
+    style L fill:#fff3e0
+```
+Katika ghala lako, nenda `Insights > Community` kuona jinsi mradi wako unavyolinganishwa na viwango vinavyopendekezwa vya jamii.
 
-Unataka kufanya hifadhi yako ionekane kitaalamu na ya kuvutia? Nenda kwenye hifadhi yako na bonyeza `Insights > Community`. Kipengele hiki kizuri kinaonyesha jinsi mradi wako unavyolinganishwa na kile jamii ya GitHub inachokiona kama "mazoea mazuri ya hifadhi."
+Unataka ghala lako lionekane kitaalamu na kukaribisha? Nenda kwenye ghala lako na bofya `Insights > Community`. Kipengele hiki kizuri kinaonyesha jinsi mradi wako unavyolinganishwa na kile jamii ya GitHub inachokiona kama "mbinu nzuri za ghala."
 
-> 🎯 **Kufanya Mradi Wako Kung'aa**: Hifadhi iliyoandaliwa vizuri na nyaraka nzuri ni kama kuwa na duka safi, la kuvutia. Inaonyesha watu kwamba unajali kazi yako na inawafanya wengine kutaka kuchangia!
+> 🎯 **Kufanya Mradi Wako Uchwe Macho**: Ghala lililopangwa vizuri lenye nyaraka nzuri ni kama kuwa na duka safi, linalokaribisha. Linawaambia watu unathamini kazi yako na kuwafanya wengine watake kuchangia!
 
-**Hivi ndivyo hifadhi inavyokuwa ya ajabu:**
+**Haya ndiyo yanayofanya ghala kuwa bora:**
 
 | Kitu cha Kuongeza | Kwa Nini Ni Muhimu | Kinachokufanyia |
-|-------------------|-------------------|-----------------|
-| **Maelezo** | Muonekano wa kwanza ni muhimu! | Watu wanajua mara moja mradi wako unafanya nini |
-| **README** | Ukurasa wa mbele wa mradi wako | Kama mwongozo wa kirafiki kwa wageni wapya |
-| **Miongozo ya Kuchangia** | Inaonyesha unakaribisha msaada | Watu wanajua hasa jinsi wanavyoweza kukusaidia |
+|-------------------|--------------------|-----------------|
+| **Maelezo** | Mtazamo wa kwanza ni muhimu! | Watu wanajua mara moja mradi wako unafanya nini |
+| **README** | Ukurasa wa mbele wa mradi wako | Kama mwongozaji mwenye kirafiki kwa wageni wapya |
+| **Miongozo ya Kuchangia** | Inaonyesha unakaribisha msaada | Watu wanajua hasa jinsi wanavyoweza kusaidia |
 | **Kanuni za Maadili** | Inaunda nafasi ya kirafiki | Kila mtu anahisi kukaribishwa kushiriki |
-| **Leseni** | Uwazi wa kisheria | Wengine wanajua jinsi wanavyoweza kutumia msimbo wako |
-| **Sera ya Usalama** | Inaonyesha unawajibika | Inaonyesha mazoea ya kitaalamu |
+| **Leseni** | Uwiano wa kisheria | Wengine wanajua jinsi wanavyoweza kutumia msimbo wako |
+| **Sera ya Usalama** | Inaonyesha wewe ni mwekezaji | Inaonyesha mbinu za kitaalamu |
 
-> 💡 **Kidokezo cha Kitaalamu**: GitHub hutoa templeti za faili zote hizi. Unapounda hifadhi mpya, angalia masanduku ili kuunda faili hizi moja kwa moja.
+> 💡 **Ushauri wa Mtaalamu**: GitHub hutoa templeti za faili zote hizi. Unapotengeneza ghala jipya, angalia masanduku kuunda faili hizi moja kwa moja.
 
 **Vipengele vya Kisasa vya GitHub vya Kuchunguza:**
 
-🤖 **Otomatiki & CI/CD:**
-- **GitHub Actions** kwa majaribio ya kiotomatiki na usambazaji
-- **Dependabot** kwa masasisho ya kiotomatiki ya utegemezi
+🤖 **Otomasishaji & CI/CD:**
+- **GitHub Actions** kwa majaribio na usambazaji wa kiotomatiki
+- **Dependabot** kwa masasisho ya mara kwa mara ya utegemezi
 
-💬 **Jamii & Usimamizi wa Mradi:**
-- **GitHub Discussions** kwa mazungumzo ya jamii zaidi ya masuala
+💬 **Jamii & Usimamizi wa Miradi:**
+- **GitHub Discussions** kwa mazungumzo ya jamii zaidi ya matatizo
 - **GitHub Projects** kwa usimamizi wa mradi wa mtindo wa kanban
-- **Sheria za ulinzi wa tawi** za kutekeleza viwango vya ubora wa msimbo
+- **Sheria za ulinzi wa matawi** kuhakikisha viwango vya ubora wa msimbo
 
-Rasilimali hizi zote zitasaidia kuingiza wanachama wapya wa timu. Na hizi ndizo kawaida vitu ambavyo wachangiaji wapya huangalia kabla hata ya kuangalia msimbo wako, ili kujua ikiwa mradi wako ni mahali sahihi pa kutumia muda wao.
+Rasilimali zote hizi zitasaidia kuingiza wanachama wapya wa timu. Na hizo kwa kawaida ndizo mambo ambayo wachangiaji wapya huangalia kabla hata ya kuangalia msimbo wako, kutambua kama mradi wako ndilo mahali sahihi kwao kutumia muda wao.
 
-✅ Faili za README, ingawa zinachukua muda kuandaa, mara nyingi hupuuzwa na waangalizi wenye shughuli nyingi. Je, unaweza kupata mfano wa moja iliyoelezea hasa? Kumbuka: kuna [zana za kusaidia kuunda README nzuri](https://www.makeareadme.com/) ambazo unaweza kupenda kujaribu.
+✅ Faili za README, ingawa zinachukua muda kuandaa, mara nyingi huachwa na waajiri wa shughuli nyingi. Je, unaweza kupata mfano wa README yenye maelezo mazuri sana? Kumbuka: kuna baadhi ya [zana za kusaidia kutengeneza READMEs nzuri](https://www.makeareadme.com/) ambazo unaweza kutaka kujaribu.
 
-### Kazi: Unganisha msimbo fulani
+### Kazi: Changanya Msimbo
 
-Nyaraka za kuchangia husaidia watu kuchangia mradi. Inaelezea ni aina gani za michango unayotafuta na jinsi mchakato unavyofanya kazi. Wachangiaji watahitaji kupitia mfululizo wa hatua ili waweze kuchangia kwenye hifadhi yako ya GitHub:
+Nyaraka za kuchangia husaidia watu kuchangia kwenye mradi. Inafafanua aina za michango unayotafuta na mchakato unavyofanya kazi. Wachangiaji watahitaji kupitia hatua kadhaa ili waweze kuchangia ghala lako GitHub:
 
-1. **Kufork hifadhi yako** Labda utataka watu _kufork_ mradi wako. Kufork inamaanisha kuunda nakala ya hifadhi yako kwenye wasifu wao wa GitHub.
-1. **Clone**. Kutoka hapo wataiga mradi kwenye kompyuta yao ya ndani. 
-1. **Unda tawi**. Utataka kuwaomba waunde _tawi_ kwa kazi yao. 
-1. **Kuzingatia mabadiliko yao kwenye eneo moja**. Waombe wachangiaji kuzingatia michango yao kwenye kitu kimoja kwa wakati mmoja - kwa njia hiyo nafasi za kuweza _kuunganisha_ kazi yao ni kubwa. Fikiria wanaandika marekebisho ya hitilafu, kuongeza kipengele kipya, na kusasisha majaribio kadhaa - vipi ikiwa unataka, au unaweza tu kutekeleza 2 kati ya 3, au 1 kati ya 3 mabadiliko?
 
-✅ Fikiria hali ambapo matawi ni muhimu sana kwa kuandika na kusafirisha msimbo mzuri. Ni matumizi gani unayoweza kufikiria?
+1. **Kufork ghala lako** Huenda unataka watu waforke mradi wako. Kufork ina maana ya kuunda nakala ya ghala lako kwenye wasifu wao wa GitHub.
+1. **Kukopa (Clone)**. Kutoka hapo watakopa mradi kwa mashine yao ya ndani. 
+1. **Tengeneza tawi**. Utawataka waumba tawi la kazi yao. 
+1. **Lenga mabadiliko yao sehemu moja**. Waombe wachangiaji waelekeze michango yao kwa jambo moja kwa wakati - hivyo nafasi za wewe kuweza kuchanganya kazi zao ni kubwa. Fikiria wanapandika suluhisho la hitilafu, kuongeza kipengele kipya, na kusasisha majaribio kadhaa – vipi ikiwa unataka, au unaweza tu kutekeleza 2 kati ya 3, au 1 kati ya 3 mabadiliko?
 
-> Kumbuka, kuwa mabadiliko unayotaka kuona duniani, na unda matawi kwa kazi yako mwenyewe pia. Uhifadhi wowote unaofanya utakuwa kwenye tawi ambalo umechagua "kuingia" kwa sasa. Tumia `git status` kuona ni tawi gani hilo.
+✅ Fikiria hali ambapo matawi ni muhimu sana kwa ajili ya kuandika na kupeleka msimbo mzuri. Unafikiri matukio yapi yanaweza kutokea?
 
-Hebu tuendelee kupitia mtiririko wa mchango wa mchangiaji. Fikiria mchangiaji tayari ame _fork_ na _clone_ hifadhi hivyo ana hifadhi ya Git tayari kufanyiwa kazi, kwenye kompyuta yake ya ndani:
+> Kumbuka, kuwa mabadiliko unayotaka kuona duniani, na tengeneza matawi kwa kazi zako pia. Commiti yoyote utakayofanya itafanyika kwenye tawi ambalo umechagua kwa sasa. Tumia `git status` kuona ni tawi gani hilo.
 
-1. **Unda tawi**. Tumia amri `git branch` kuunda tawi ambalo litakuwa na mabadiliko wanayokusudia kuchangia:
+Tuangalie mtiririko wa mchangiaji. Thibitisha mchangiaji amefork na kukopa ghala hivyo ana Git repo tayari kufanyiwa kazi kwenye mashine yao ya ndani:
+
+1. **Tengeneza tawi**. Tumia amri `git branch` kutengeneza tawi litakalo kuwa na mabadiliko wanayokusudia kuchangia:
 
    ```bash
    git branch [branch-name]
    ```
 
-   > 💡 **Njia ya Kisasa**: Unaweza pia kuunda na kubadili tawi jipya kwa amri moja:
+   > 💡 **Njia ya Kisasa**: Pia unaweza kuunda na kubadili tawi mpya kwa amri moja:
    ```bash
    git switch -c [branch-name]
    ```
 
-1. **Badilisha kwenye tawi la kazi**. Badilisha kwenye tawi lililobainishwa na usasishe saraka ya kazi kwa `git switch`:
+1. **Badili kwa tawi la kazi**. Badilisha kwa tawi lililotajwa na sasisha saraka ya kazi kwa `git switch`:
 
    ```bash
    git switch [branch-name]
    ```
 
-   > 💡 **Kumbuka ya Kisasa**: `git switch` ni mbadala wa kisasa wa `git checkout` wakati wa kubadilisha matawi. Ni wazi zaidi na salama kwa wanaoanza.
+   > 💡 **Kumbuka ya Kisasa**: `git switch` ni mbadala wa kisasa kwa `git checkout` wakati wa kubadilisha matawi. Ni wazi na salama zaidi kwa wanaoanza.
 
-1. **Fanya kazi**. Kwa wakati huu unataka kuongeza mabadiliko yako. Usisahau kumwambia Git kuhusu hilo kwa amri zifuatazo:
+1. **Fanya kazi**. Hapa unataka kuongeza mabadiliko yako. Usisahau kuambia Git kuhusu hili kwa amri zifuatazo:
 
    ```bash
    git add .
    git commit -m "my changes"
    ```
 
-   > ⚠️ **Ubora wa Ujumbe wa Uhifadhi**: Hakikisha unatoa uhifadhi wako jina zuri, kwa ajili yako na kwa msimamizi wa hifadhi unayesaidia. Kuwa maalum kuhusu kile ulichobadilisha!
+   > ⚠️ **Ubora wa Ujumbe wa Commitment**: Hakikisha unampa commit jina zuri, kwa ajili yako na msimamizi wa ghala unayemsaidia. Kuwa mahususi kuhusu uliyobadilisha!
 
-1. **Unganisha kazi yako na tawi la `main`**. Wakati fulani unamaliza kazi na unataka kuunganisha kazi yako na ile ya tawi la `main`. Tawi la `main` linaweza kuwa limebadilika wakati huo kwa hivyo hakikisha unalisasisha kwanza na amri zifuatazo:
+1. **Changanya kazi yako na tawi `main`**. Hapo unamaliza kazi na unataka kuichanganya na tawi la `main`. Tawi la `main` linaweza kuwa limebadilika kwa sasa hivyo hakikisha una updates za hivi karibuni kwa amri zifuatazo:
 
    ```bash
    git switch main
    git pull
    ```
 
-   Kwa wakati huu unataka kuhakikisha kwamba mizozo yoyote, hali ambapo Git haiwezi _kuunganisha_ mabadiliko kwa urahisi inatokea kwenye tawi lako la kazi. Kwa hivyo endesha amri zifuatazo:
+   Hapa unataka kuhakikisha hatari zozote za migongano (konflikti), hali ambapo Git hawezi kuunganisha kwa urahisi mabadiliko hutokea kwenye tawi lako la kazi. Kwa hiyo tumia amri zifuatazo:
 
    ```bash
    git switch [branch_name]
    git merge main
    ```
 
-   Amri ya `git merge main` italeta mabadiliko yote kutoka `main` kwenye tawi lako. Tunatumaini unaweza tu kuendelea. Ikiwa sivyo, VS Code itakuonyesha wapi Git _imechanganyikiwa_ na unarekebisha faili zilizoathiriwa ili kusema ni maudhui gani yaliyo sahihi zaidi.
+   Amri `git merge main` italeta mabadiliko yote kutoka `main` kwenye tawi lako. Tunatumaini utaweza kuendelea tu. Ikiwa si hivyo, VS Code itakuambia Git imesumbuliwa wapi na utabadilisha faili zilizoathiriwa ili kusema ni maudhui gani ni sahihi zaidi.
 
-   💡 **Njia mbadala ya kisasa**: Fikiria kutumia `git rebase` kwa historia safi zaidi:
+   💡 **Mbadala wa Kisasa**: Fikiria kutumia `git rebase` kwa historia safi:
    ```bash
    git rebase main
    ```
-   Hii inacheza tena uhifadhi wako juu ya tawi kuu la hivi karibuni, ikitengeneza historia ya mstari.
+   Hii huweka commits zako juu ya tawi la mwisho la main, kuunda historia ya mstari moja.
 
-1. **Tuma kazi yako kwenye GitHub**. Kutuma kazi yako kwenye GitHub inamaanisha mambo mawili. Kusukuma tawi lako kwenye hifadhi yako na kisha kufungua PR, Ombi la Kuvuta.
+1. **Tuma kazi yako GitHub**. Kutuma kazi yako GitHub kunamaanisha vitu viwili. Kusukuma tawi lako kwa ghala lako na kisha kufungua PR, Ombi la Pull.
 
    ```bash
    git push --set-upstream origin [branch-name]
    ```
 
-   Amri hapo juu inaunda tawi kwenye hifadhi yako ya kufork.
+   Amri hapo juu hutengeneza tawi kwenye ghala lako la fork.
 
-1. **Fungua PR**. Kisha, unataka kufungua PR. Unafanya hivyo kwa kwenda kwenye hifadhi ya kufork kwenye GitHub. Utaona dalili kwenye GitHub ambapo inauliza ikiwa unataka kuunda PR mpya, unabonyeza hiyo na unapelekwa kwenye kiolesura ambapo unaweza kubadilisha kichwa cha ujumbe wa uhifadhi, kutoa maelezo yanayofaa zaidi. Sasa msimamizi wa hifadhi uliyofork ataona PR hii na _vidole vimevukwa_ wataithamini na _kuunganisha_ PR yako. Sasa wewe ni mchangiaji, hongera :)
+### 🤝 **Ukaguzi wa Ujuzi wa Ushirikiano: Uko Tayari Kufanya Kazi na Wengine?**
 
-   💡 **Kidokezo cha Kisasa**: Unaweza pia kuunda PRs kwa kutumia GitHub CLI:
+**Tuchunguze hali yako kuhusu ushirikiano:**
+- Je, wazo la kufork na maombi ya pull request linaeleweka kwako sasa?
+- Nini kimoja kuhusu kufanya kazi na matawi unayotaka kufanyia mazoezi zaidi?
+- Je, unajisikia vizuri kiasi gani kuhusu kuchangia mradi wa mtu mwingine?
+
+```mermaid
+mindmap
+  root((Ushirikiano wa Git))
+    Branching
+      Mashami ya vipengele
+      Mashami ya marekebisho ya mdudu
+      Kazi za majaribio
+    Pull Requests
+      Mapitio ya msimbo
+      Majadiliano
+      Upimaji
+    Best Practices
+      Ujumbe wazi wa commit
+      Mabadiliko madogo yenye lengo
+      Nyaraka nzuri
+```
+> **Kuimarisha Kujiamini**: Kila msanidi programu unayemheshimu alikuwa mshtuko kuhusu ombi lao la kwanza la pull request. Jamii ya GitHub ni ya kukaribisha sana kwa wanaoanza!
+
+1. **Fungua PR**. Ifuatayo, unataka kufungua PR. Unafanya hivyo kwa kuingia kwenye ghala la fork kwenye GitHub. Utaona dalili GitHub inapouliza ikiwa unataka kutengeneza PR mpya, bonyeza hapo na utaelekezwa kwenye kiolesura ambapo unaweza kubadilisha kichwa cha ujumbe wa commit, kumpa maelezo mazuri zaidi. Sasa msimamizi wa ghala ulichofork atatazama PR hii na _tumia vidole wako kuombea_ watathamini na _kuunganisha_ PR yako. Sasa wewe ni mchangiaji, poa :)
+
+   💡 **Ushauri wa Kisasa**: Pia unaweza kutengeneza PR kwa kutumia GitHub CLI:
    ```bash
    gh pr create --title "Your PR title" --body "Description of changes"
    ```
 
-   🔧 **Mazoea bora kwa PRs**:
-   - Unganisha masuala yanayohusiana kwa kutumia maneno kama "Fixes #123"
-   - Ongeza picha za skrini kwa mabadiliko ya UI
+   🔧 **Mazingira Bora kwa PRs**:
+   - Unganisha na matatizo yanayohusiana kwa kutumia maneno muhimu kama "Fixes #123"
+   - Ongeza picha za mabadiliko ya UI
    - Omba wakaguzi maalum
    - Tumia PR za rasimu kwa kazi inayofanyika
-   - Hakikisha ukaguzi wote wa CI unakamilika kabla ya kuomba ukaguzi
-
-1. **Safisha**. Inachukuliwa kuwa mazoea mazuri _kusafisha_ baada ya kufanikiwa kuunganisha PR. Unataka kusafisha tawi lako la ndani na tawi ulilosukuma kwenye GitHub. Kwanza hebu tulifute kwa ndani kwa amri ifuatayo:
+   - Hakikisha lahatheka za CI zimepitwa kabla ya kuomba ukaguzi
+1. **Safisha**. Inachukuliwa kuwa mbinu nzuri kusafisha _baada ya kuunganisha PR kwa mafanikio_. Unataka kusafisha tawi lako la eneo la kazi pamoja na tawi ulilotuma kwenye GitHub. Kwanza tuifute eneo la kazi kwa amri ifuatayo:
 
    ```bash
    git branch -d [branch-name]
    ```
 
-   Hakikisha unakwenda kwenye ukurasa wa GitHub wa hifadhi ya kufork na kuondoa tawi la mbali ulilosukuma kwake.
+   Hakikisha unaenda kwenye ukurasa wa GitHub wa repo lililochakuliwa kisha uondoe tawi la mbali ulilotuma hapo.
 
-`Pull request` inaonekana kama neno la kijinga kwa sababu kwa kweli unataka kusukuma mabadiliko yako kwenye mradi. Lakini msimamizi (mmiliki wa mradi) au timu kuu inahitaji kuzingatia mabadiliko yako kabla ya kuunganisha na tawi "kuu" la mradi, kwa hivyo kwa kweli unaomba uamuzi wa mabadiliko kutoka kwa msimamizi.  
+`Pull request` inaonekana kama neno la kuchekesha kwa sababu kweli unataka kusukuma mabadiliko yako kwenye mradi. Lakini mtunzaji (mwenye mradi) au timu kuu wanahitaji kuzingatia mabadiliko yako kabla ya kuziunganisha na tawi "kuu" la mradi, kwa hivyo kwa kweli unamuomba mtunzaji kufikiria mabadiliko.
 
-Ombi la kuvuta ni mahali pa kulinganisha na kujadili tofauti zilizoletwa kwenye tawi na ukaguzi, maoni, majaribio yaliyojumuishwa, na zaidi. Ombi zuri la kuvuta linafuata takriban sheria sawa na ujumbe wa uhifadhi. Unaweza kuongeza rejeleo kwa suala kwenye ufuatiliaji wa masuala, wakati kazi yako kwa mfano inarekebisha suala. Hii inafanywa kwa kutumia `#` ikifuatiwa na namba ya suala lako. Kwa mfano `#97`.
-🤞Vidole vimevukwa kwamba ukaguzi wote utapita na mmiliki wa mradi ataunganisha mabadiliko yako kwenye mradi🤞
+Pull request ni mahali pa kulinganisha na kujadili tofauti zilizojumuishwa kwenye tawi kwa kupitia mapitio, maoni, mitihani iliyojumuishwa, na mengineyo. Pull request nzuri hufuata kanuni kama zile za ujumbe wa commit. Unaweza kuongeza rejeleo kwa tatizo kwenye msimami wa masuala, kwa mfano kazi yako ikiweka tatizo fulani. Hii hufanywa kwa kutumia `#` ikifuatiwa na nambari ya tatizo lako. Kwa mfano `#97`.
 
-Sasisha tawi lako la kazi la ndani na mabadiliko yote mapya kutoka kwenye tawi la mbali linalolingana kwenye GitHub:
+🤞Mikotoko mikwinyo kwamba ukaguzi wote utapita na mmiliki wa mradi ataunganisha mabadiliko yako kwenye mradi🤞
+
+Sasisha tawi lako la sasa la eneo la kazi kwa commits zote mpya kutoka kwenye tawi la mbali linalolingana kwenye GitHub:
 
 `git pull`
 
-## Kuchangia kwa Open Source (Fursa Yako ya Kuleta Mabadiliko!)
+## Kuchangia Chanzo Huria (Fursa Yako Kuleta Mbadala!)
 
-Je, uko tayari kwa kitu ambacho kitakushangaza kabisa? 🤯 Hebu tuzungumze kuhusu kuchangia kwenye miradi ya open source – na ninapata msisimko tu kufikiria kushiriki hili nawe!
+Je, uko tayari kwa jambo litakalokuangua akili kabisa? 🤯 Tujadili kuchangia miradi ya chanzo huria – na ninapata vipu vya gandu kwa kufikiri kuhusu kushiriki hili nawe!
 
-Hii ni fursa yako ya kuwa sehemu ya kitu cha kipekee sana. Fikiria kuboresha zana ambazo mamilioni ya watengenezaji hutumia kila siku, au kurekebisha hitilafu kwenye programu ambayo marafiki zako wanapenda. Hiyo si ndoto tu – hiyo ndiyo maana ya kuchangia kwenye open source!
+Hii ni fursa yako ya kuwa sehemu ya jambo la kipekee kabisa. Fikiria kuboresha zana ambazo mamilioni ya watengenezaji hutumia kila siku, au kurekebisha hitilafu katika programu ambayo marafiki zako wanapenda. Hii si ndoto tu – ndiyo maana ya mchango wa chanzo huria!
 
-Hiki ndicho kinachonipa msisimko kila ninapofikiria: kila zana moja uliyojifunza nayo – mhariri wako wa msimbo, mifumo tutakayoichunguza, hata kivinjari unachosoma hiki ndani – ilianza na mtu kama wewe akifanya mchango wake wa kwanza. Yule mtengenezaji mahiri aliyeunda kiendelezi unachopenda cha VS Code? Wakati mmoja walikuwa mwanzilishi akibonyeza "create pull request" kwa mikono inayotetemeka, kama vile unavyotarajia kufanya.
+Hapa ndiyo kinachonipa uoga kila mara ninapofikiri juu yake: kila zana ulicyojifunza nayo – mhariri wako wa maandishi, mifumo tutakayotafuta, hata kivinjari unachosoma hii – ilianza na mtu kama wewe akifanya mchango wake wa kwanza kabisa. Mtaalamu huyu mzuri aliyeunda kifungu chako unachopenda cha VS Code? Hawa walikuwa mwanzo wakibonyeza "create pull request" kwa mikono tete, kama unavyotarajia sasa.
 
-Na hapa ndipo sehemu nzuri zaidi: jamii ya open source ni kama kukumbatiana kwa pamoja kwa mtandao. Miradi mingi hutafuta kwa bidii wanaoanza na ina masuala yaliyopewa alama "good first issue" mahsusi kwa watu kama wewe! Walezi wa miradi wanapendezwa sana wanapoona wachangiaji wapya kwa sababu wanakumbuka hatua zao za kwanza.
+Na sehemu nzuri zaidi ni hii: jamii ya chanzo huria ni kama kifuata nyoyo kikubwa cha mtandao. Miradi mingi inatafuta wapya na ina masuala yaliyoandikwa "good first issue" hasa kwa watu kama wewe! Watunzaji wanafurahi kweli wanapomuona mchango mpya kwa sababu wanakumbuka hatua zao za mwanzo.
 
-Hujifunzi tu kuandika msimbo hapa – unajiandaa kujiunga na familia ya kimataifa ya wajenzi wanaoamka kila siku wakifikiria "Tunawezaje kuboresha ulimwengu wa kidijitali kidogo zaidi?" Karibu kwenye klabu! 🌟
+```mermaid
+flowchart TD
+    A[🔍 Chunguza GitHub] --> B[🏷️ Tafuta "tatizo nzuri la kwanza"]
+    B --> C[📖 Soma Miongozo ya Kuchangia]
+    C --> D[🍴 Ficha Hifadhi]
+    D --> E[💻 Tengeneza Mazingira ya Ndani]
+    E --> F[🌿 Unda Tawi la Kipengele]
+    F --> G[✨ Fanya Mchango Wako]
+    G --> H[🧪 Jaribu Mabadiliko Yako]
+    H --> I[📝 Andika Kiapo Kifafikacho]
+    I --> J[📤 Sogeza & Unda PR]
+    J --> K[💬 Shirikiana na Maoni]
+    K --> L[🎉 Imeunganishwa! Wewe ni Mchangiaji!]
+    L --> M[🌟 Tafuta Tatizo Lijalo]
+    
+    style A fill:#e1f5fe
+    style L fill:#c8e6c9
+    style M fill:#fff59d
+```
+Hapa, humjifunzi tu kuandika msimbo – unajiandaa kujiunga na familia ya wamiliki wa miradi duniani kote ambao huamka kila siku wakiuliza "Je, tunawezaje kuboresha kidogo dunia ya kidijitali?" Karibu kwenye klabu! 🌟
 
-Kwanza, hebu tupate hifadhi (au **repo**) kwenye GitHub inayokuvutia na ambayo ungependa kuchangia mabadiliko. Utataka kunakili yaliyomo kwenye mashine yako.
+Kwanza, tukutafute hifadhidata (au **repo**) kwenye GitHub inayokuvutia na unayotaka kuchangia mabadiliko. Utataka kuiga yaliyomo kwenye mashine yako.
 
-✅ Njia nzuri ya kupata hifadhi zinazofaa kwa wanaoanza ni [kutafuta kwa alama 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
+✅ Njia nzuri ya kupata repozitori zinazofaa wanaoanza ni [kutafuta kwa alama 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Nakili hifadhi kwa ndani](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.sw.png)
+![Nakili repo kiasili](../../../../translated_images/clone_repo.5085c48d666ead57.sw.png)
 
-Kuna njia kadhaa za kunakili msimbo. Njia moja ni "kuiga" yaliyomo ya hifadhi, kwa kutumia HTTPS, SSH, au kutumia GitHub CLI (Command Line Interface).
+Kuna njia kadhaa za kunakili msimbo. Njia moja ni "clone" yaliyomo kwenye hifadhidata, ukitumia HTTPS, SSH, au CLI ya GitHub (Kiolesura cha Amri).
 
-Fungua terminal yako na iga hifadhi kama hivi:
+Fungua terminal yako na kloni hifadhidata kama ifuatavyo:
 ```bash
-# Using HTTPS
+# Kutumia HTTPS
 git clone https://github.com/ProjectURL
 
-# Using SSH (requires SSH key setup)
+# Kutumia SSH (inahitaji usanidi wa ufunguo wa SSH)
 git clone git@github.com:username/repository.git
 
-# Using GitHub CLI
+# Kutumia GitHub CLI
 gh repo clone username/repository
 ```
 
-Ili kufanya kazi kwenye mradi, nenda kwenye folda sahihi:
+Ili kufanyia kazi mradi, badilisha kwenda folda sahihi:
 `cd ProjectURL`
 
-Unaweza pia kufungua mradi mzima kwa kutumia:
-- **[GitHub Codespaces](https://github.com/features/codespaces)** - Mazingira ya maendeleo ya wingu ya GitHub na VS Code kwenye kivinjari
-- **[GitHub Desktop](https://desktop.github.com/)** - Programu ya GUI kwa operesheni za Git  
-- **[GitHub.dev](https://github.dev)** - Bonyeza kitufe cha `.` kwenye hifadhi yoyote ya GitHub kufungua VS Code kwenye kivinjari
-- **VS Code** na kiendelezi cha GitHub Pull Requests
+Unaweza pia kufungua mradi wote kwa kutumia:
+- **[GitHub Codespaces](https://github.com/features/codespaces)** - Mazingira ya maendeleo ya mawingu ya GitHub na VS Code kwenye kivinjari  
+- **[GitHub Desktop](https://desktop.github.com/)** - Programu ya GUI kwa shughuli za Git  
+- **[GitHub.dev](https://github.dev)** - Bonyeza kitufe `.` kwenye repo yoyote ya GitHub kufungua VS Code kwenye kivinjari  
+- VS Code na ugani wa GitHub Pull Requests
 
-Mwisho, unaweza kupakua msimbo kwenye folda iliyobanwa.
+Mwisho, unaweza kupakua msimbo kwenye folda imefungwa kwa zipu.
 
-### Mambo machache ya kuvutia kuhusu GitHub
+### Mambo mengine ya kuvutia kuhusu GitHub
 
-Unaweza kuweka nyota, kutazama na/au "fork" hifadhi yoyote ya umma kwenye GitHub. Unaweza kupata hifadhi zako zilizowekewa nyota kwenye menyu ya kushuka ya juu-kulia. Ni kama kuweka alama ya kurasa, lakini kwa msimbo.
+Unaweza kutoa nyota, kuangalia au "fork" hifadhidata yoyote ya umma kwenye GitHub. Unaweza kupata hifadhidata ulizoweka nyota kwenye menyu ya juu-kulia yenye menyu kunjuzi (drop-down). Ni kama kuweka kitambulisho cha kurudi, lakini kwa msimbo.
 
-Miradi ina kifuatilia masuala, mara nyingi kwenye GitHub katika kichupo cha "Issues" isipokuwa imeonyeshwa vinginevyo, ambapo watu hujadili masuala yanayohusiana na mradi. Na kichupo cha Pull Requests ni mahali ambapo watu hujadili na kukagua mabadiliko yanayoendelea.
+Miradi ina msimami wa masuala, kimsingi kwenye GitHub kwenye kichupo cha "Issues" isipokuwa kama imedhabitiwa vinginevyo, ambapo watu hujadili masuala yanayohusiana na mradi. Na kichupo cha Pull Requests ndicho ambacho watu hujadili na kupitia mabadiliko yanayoendelea.
 
-Miradi inaweza pia kuwa na majadiliano katika vikao, orodha za barua pepe, au njia za mazungumzo kama Slack, Discord au IRC.
+Miradi inaweza pia kuwa na mijadala kwenye majukwaa, orodha za barua pepe, au kwenye chaneli za mazungumzo kama Slack, Discord au IRC.
 
 🔧 **Vipengele vya kisasa vya GitHub**:
-- **GitHub Discussions** - Jukwaa la mazungumzo ya jamii lililojengwa ndani
-- **GitHub Sponsors** - Kusaidia walezi kifedha  
-- **Kichupo cha Usalama** - Ripoti za udhaifu na ushauri wa usalama
-- **Kichupo cha Actions** - Tazama mtiririko wa kazi otomatiki na CI/CD
-- **Kichupo cha Insights** - Takwimu kuhusu wachangiaji, ahadi, na afya ya mradi
-- **Kichupo cha Projects** - Zana za usimamizi wa miradi zilizojengwa ndani ya GitHub
+- **GitHub Discussions** - Jukwaa lililojengwa kwa mazungumzo ya jamii
+- **GitHub Sponsors** - Msaada wa kifedha kwa watunzaji  
+- **Kichupo cha Usalama** - Ripoti za uwazi wa usalama na viambatanisho vya usalama
+- **Kichupo cha Actions** - Tazama mikondo ya kazi ya moja kwa moja na mizunguko ya CI/CD
+- **Kichupo cha Insights** - Takwimu kuhusu wachangiaji, commits, na afya ya mradi
+- **Kichupo cha Projects** - Zana za usimamizi wa miradi zilizo ndani ya GitHub
 
-✅ Angalia hifadhi yako mpya ya GitHub na jaribu mambo kadhaa, kama kuhariri mipangilio, kuongeza taarifa kwenye hifadhi yako, kuunda mradi (kama bodi ya Kanban), na kuweka GitHub Actions kwa otomatiki. Kuna mengi unaweza kufanya!
+✅ Tazama hifadhidata yako mpya ya GitHub na jaribu mambo machache, kama kuhariri mipangilio, kuongeza taarifa kwenye repo, kuanzisha mradi (kama bodi ya Kanban), na kusanidi GitHub Actions kwa ajili ya automatisering. Kuna mengi unayoweza kufanya!
 
 ---
 
-## 🚀 Changamoto 
+## 🚀 Changamoto
 
-Sawa, ni wakati wa kujaribu nguvu zako mpya za GitHub! 🚀 Hapa kuna changamoto itakayokufanya uelewe kila kitu kwa njia ya kuridhisha zaidi:
+Sawa, ni wakati wa kujaribu nguvu zako mpya za GitHub! 🚀 Hapa kuna changamoto itakayofanya kila kitu kifanye kazi kwa njia ya kusisimua:
 
-Chukua rafiki (au yule mwanafamilia ambaye kila mara huuliza unafanya nini na "vitu vyote vya kompyuta" hivi) na anza safari ya pamoja ya kuandika msimbo! Hapa ndipo uchawi halisi hutokea – unda mradi, wacha waifork, tengeneza matawi kadhaa, na unganisha mabadiliko kama wataalamu mnaokuwa.
+Chukua rafiki (au mwanafamilia aliyejikuta siku zote akiuliza unafanya nini na mambo yote haya ya "kompyuta") na uanze ushirikiano wa kuandika msimbo pamoja! Hapa ndipo maajabu halisi yanapotokea – tengeneza mradi, waruhusu wafanye fork, tengeneza matawi, na unganisha mabadiliko kama wataalamu mnavyokuwa.
 
-Sitakuficha – labda mtacheka wakati fulani (hasa mnapojaribu kubadilisha mstari mmoja), labda mtashangaa kidogo, lakini hakika mtakuwa na nyakati za "aha!" za kushangaza zinazofanya kujifunza yote kuwa na thamani. Zaidi ya hayo, kuna kitu maalum kuhusu kushiriki muunganiko wa kwanza uliofanikiwa na mtu mwingine – ni kama sherehe ndogo ya jinsi mlivyofika mbali!
+Sitakuficha – labda mtacheka wakati fulani (hasa mnapojaribu kubadilisha mstari uleule), labda mtaweza kubweta kichwa kwa kuchanganyikiwa, lakini hakika mtapata wakati mzuri wa "aha!" ambao hufanya mafunzo yote kuwa ya thamani. Zaidi, kuna jambo zuri la kushiriki kuunganishwa kwako kwa mara ya kwanza kwa mtu mwingine – ni kama sherehe ndogo ya mafanikio yako!
 
-Huna rafiki wa kuandika msimbo bado? Usijali kabisa! Jamii ya GitHub imejaa watu wenye ukarimu sana wanaokumbuka jinsi ilivyokuwa kuwa mpya. Tafuta hifadhi zilizo na lebo za "good first issue" – kimsingi zinasema "Hey wanaoanza, njoo mjifunze nasi!" Hiyo ni ya kushangaza kiasi gani?
+Huna bado rafiki wa kuandika msimbo? Usijali kabisa! Jamii ya GitHub imejaa watu wenye ukarimu ambao wanakumbuka kile cha kuwa wapya. Tafuta hifadhidata zilizo na lebo ya "good first issue" – ni kiasili kusema "Hey waliani, njoo ujifunze nasi!" Hiyo ni nzuri kiasi gani?
 
-## Jaribio la Baada ya Somo
-[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/en/)
+## Mtihani Baada ya Kozi
+[Mtihani baada ya kozi](https://ff-quizzes.netlify.app/web/en/)
 
-## Mapitio & Endelea Kujifunza
+## Kagua & Endelea Kujifunza
 
-Phew! 🎉 Tazama wewe – umeshinda misingi ya GitHub kama bingwa halisi! Ikiwa ubongo wako unahisi umejaa kidogo sasa, hiyo ni kawaida kabisa na kwa kweli ni ishara nzuri. Umejifunza zana ambazo zilinichukua wiki kujisikia vizuri nazo nilipoanza.
+Haa! 🎉 Tazama wewe – umemaliza misingi ya GitHub kama bingwa wa kweli! Ikiwa akili yako inahisi imejaa sasa hivi, hiyo ni kawaida kabisa na ni dalili nzuri. Umejifunza zana ambazo zilinichukua wiki kadhaa kupata uhakika nikiwa mwanzo.
 
-Git na GitHub ni zana zenye nguvu sana (kama, nguvu sana), na kila mtengenezaji ninayemjua – ikiwa ni pamoja na wale wanaoonekana kama wachawi sasa – walilazimika kufanya mazoezi na kujikwaa kidogo kabla ya kila kitu kuingia akilini. Ukweli kwamba umemaliza somo hili ina maana tayari uko njiani kuelekea kufahamu baadhi ya zana muhimu zaidi katika mkoba wa zana wa mtengenezaji.
+Git na GitHub ni zana zenye nguvu sana (kwa kweli sana), na kila mtaalamu ninayemjua – ikiwemo wale wanaonekana kama wachawi sasa – walilazimika kuzoezana na kushindwa kidogo kabla ya kuelewa vyema. Ukweli kwamba umefikia somo hili una maana tayari uko njiani kumudu baadhi ya zana muhimu zaidi katika kifaa cha msanidi programu.
 
-Hapa kuna rasilimali za kushangaza kabisa zitakazokusaidia kufanya mazoezi na kuwa bora zaidi:
+Hapa kuna rasilimali bora kabisa kukusaidia kufanya mazoezi na kuwa bora zaidi:
 
-- [Mwongozo wa kuchangia kwa programu ya open source](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution) – Ramani yako ya kuleta mabadiliko
-- [Karatasi ya mkato ya Git](https://training.github.com/downloads/github-git-cheat-sheet/) – Weka hii karibu kwa marejeleo ya haraka!
+- [Mwongozo wa kuchangia programu za chanzo huria](https://opensource.guide/how-to-contribute/#how-to-submit-a-contribution) – Ramani yako ya njia ya kuleta mabadiliko
+- [Karatasi ya mbinu za Git](https://training.github.com/downloads/github-git-cheat-sheet/) – Ibe tayari kwa marejeo ya haraka!
 
-Na kumbuka: mazoezi huleta maendeleo, si ukamilifu! Kadri unavyotumia Git na GitHub, ndivyo inavyokuwa ya kawaida zaidi. GitHub imeunda kozi za maingiliano za kushangaza zinazokuruhusu kufanya mazoezi katika mazingira salama:
+Na kumbuka: mazoezi hufanya maendeleo, si ukamilifu! Kadri unavyotumia Git na GitHub, ndivyo inavyokuwa za kawaida. GitHub imeandaa kozi za maingiliano zinazokuza mazoezi katika mazingira salama:
 
 - [Utangulizi wa GitHub](https://github.com/skills/introduction-to-github)
-- [Wasiliana kwa kutumia Markdown](https://github.com/skills/communicate-using-markdown)  
+- [Wasiliana kutumia Markdown](https://github.com/skills/communicate-using-markdown)  
 - [Kurasa za GitHub](https://github.com/skills/github-pages)
 - [Kusimamia migogoro ya muunganiko](https://github.com/skills/resolve-merge-conflicts)
 
-**Unahisi kuwa na ujasiri? Angalia zana hizi za kisasa:**
-- [Nyaraka za GitHub CLI](https://cli.github.com/manual/) – Kwa wakati unataka kujisikia kama mchawi wa mstari wa amri
-- [Nyaraka za GitHub Codespaces](https://docs.github.com/en/codespaces) – Andika msimbo kwenye wingu!
-- [Nyaraka za GitHub Actions](https://docs.github.com/en/actions) – Otematiki kila kitu
-- [Mazoea bora ya Git](https://www.atlassian.com/git/tutorials/comparing-workflows) – Pandisha kiwango cha mtiririko wako wa kazi 
+**Unahisi ujasiri? Tazama zana hizi za kisasa:**
+- [Nyaraka za GitHub CLI](https://cli.github.com/manual/) – Kwa wakati unataka kuhisi kama mtaalamu wa amri za mstari
+- [Nyaraka za GitHub Codespaces](https://docs.github.com/en/codespaces) – Andika msimbo kwenye mawingu!
+- [Nyaraka za GitHub Actions](https://docs.github.com/en/actions) – Fanya kila jambo kiotomatiki
+- [Mazoezi bora ya Git](https://www.atlassian.com/git/tutorials/comparing-workflows) – Pandisha kiwango chako cha mtiririko wa kazi
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## Changamoto ya GitHub Copilot Agent 🚀
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+Tumia hali ya Agent kukamilisha changamoto ifuatayo:
 
-**Maelezo:** Unda mradi wa maendeleo ya wavuti wa kushirikiana unaoonyesha mtiririko kamili wa GitHub uliyojifunza katika somo hili. Changamoto hii itakusaidia kufanya mazoezi ya uundaji wa hifadhi, vipengele vya ushirikiano, na mtiririko wa kazi wa Git wa kisasa katika hali halisi.
+**Maelezo:** Tengeneza mradi wa ushirikiano wa maendeleo ya wavuti unaoonyesha mchakato kamili wa GitHub uliyojifunza katika somo hili. Changamoto hii itakusaidia kufanya mazoezi ya uundaji wa hifadhidata, vipengele vya ushirikiano, na miongozo ya kisasa ya Git katika mazingira halisi.
 
-**Kichocheo:** Unda hifadhi mpya ya umma ya GitHub kwa mradi rahisi wa "Rasilimali za Maendeleo ya Wavuti". Hifadhi inapaswa kujumuisha faili ya README.md iliyopangwa vizuri inayoorodhesha zana na rasilimali muhimu za maendeleo ya wavuti, zilizopangwa kwa kategoria (HTML, CSS, JavaScript, nk). Weka hifadhi na viwango sahihi vya jamii ikiwa ni pamoja na leseni, miongozo ya kuchangia, na kanuni za maadili. Unda angalau matawi mawili ya vipengele: moja kwa kuongeza rasilimali za CSS na nyingine kwa rasilimali za JavaScript. Fanya ahadi kwa kila tawi na ujumbe wa ahadi unaoelezea, kisha unda maombi ya muunganiko ili kuunganisha mabadiliko kurudi kwenye tawi kuu. Washa vipengele vya GitHub kama Masuala, Majadiliano, na weka mtiririko wa kazi wa GitHub Actions wa ukaguzi wa otomatiki.
+**Onyo:** Unda hifadhidata mpya ya umma ya GitHub kwa mradi rahisi wa "Rasilimali za Maendeleo ya Wavuti". Hifadhidata ipaswa kuwa na faili la README.md lililoandikwa vizuri linaloorodhesha zana na rasilimali muhimu za maendeleo ya wavuti, zikiainishwa kwa makundi (HTML, CSS, JavaScript, n.k.). Sanidi hifadhidata kwa viwango vya jamii ikijumuisha leseni, miongozo ya kuchangia, na msimbo wa maadili. Unda matawi mawili ya vipengele: moja kwa kuongezea rasilimali za CSS na jingine kwa rasilimali za JavaScript. Fanya commits kwenye kila tawi zikiwa na ujumbe wa commit unaoelezea, kisha tengeneza pull requests kuunganisha mabadiliko kwenye tawi kuu. Washa vipengele vya GitHub kama Issues, Discussions, na sanidi mtiririko rahisi wa GitHub Actions kwa ukaguzi wa moja kwa moja.
 
-## Kazi 
+## Kazi
 
-Dhamira yako, ikiwa utaamua kuikubali: Kamilisha kozi ya [Utangulizi wa GitHub](https://github.com/skills/introduction-to-github) kwenye Ujuzi wa GitHub. Kozi hii ya maingiliano itakuruhusu kufanya mazoezi ya kila kitu ulichojifunza katika mazingira salama, yanayoongozwa. Zaidi ya hayo, utapata beji nzuri unapomaliza! 🏅
+Dhamira yako, endapo utakubali: Kamilisha kozi ya [Utangulizi wa GitHub](https://github.com/skills/introduction-to-github) kwenye GitHub Skills. Kozi hii ya maingiliano itakuwezesha kutekeleza yote uliyojifunza katika mazingira salama na yaliyoongozwa. Zaidi, utapata beji nzuri ukimaliza! 🏅
 
-**Unahisi kuwa tayari kwa changamoto zaidi?**
-- Weka uthibitisho wa SSH kwa akaunti yako ya GitHub (hakuna nywila tena!)
-- Jaribu kutumia GitHub CLI kwa operesheni zako za kila siku za Git
-- Unda hifadhi yenye mtiririko wa kazi wa GitHub Actions
-- Chunguza GitHub Codespaces kwa kufungua hifadhi hii katika mhariri wa wingu
-
-Kumbuka: kila mtaalamu alikuwa mwanzilishi. Unaweza kufanya hili! 💪
+**Una hisia ya changamoto zaidi?**
+- Sanidi uthibitishaji wa SSH kwa akaunti yako ya GitHub (hakuna tena nywila!)
+- Jaribu kutumia GitHub CLI kwa shughuli zako za kila siku za Git
+- Unda hifadhidata na mtiririko wa kazi wa GitHub Actions
+- Chunguza GitHub Codespaces kwa kufungua hifadhidata hii kama mhariri wa mawingu
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+## 🚀 Ratiba Yako ya Uwezo wa GitHub
+
+### ⚡ **Unachoweza Kufanya Katika Dakika 5 Zijazo**
+- [ ] Toa nyota kwa hifadhidata hii na miradi mingine 3 inayokuvutia
+- [ ] Sanidi uthibitishaji wa vipengele viwili kwenye akaunti yako ya GitHub
+- [ ] Unda README rahisi kwa hifadhidata yako ya kwanza
+- [ ] Fuata watengenezaji 5 wanaokutia moyo
+
+### 🎯 **Unachoweza Kufanikisha Saa Hii**
+- [ ] Kamilisha mtihani baada ya kozi na fikiria juu ya safari yako ya GitHub
+- [ ] Sanidi funguo za SSH kwa uthibitishaji bila nywila GitHub
+- [ ] Tengeneza commit yako ya maana ya kwanza na ujumbe mzuri wa commit
+- [ ] Chunguza kichupo cha "Explore" cha GitHub kugundua miradi maarufu
+- [ ] Fanya mazoezi ya kuchukua fork ya hifadhidata na kufanya mabadiliko madogo
+
+### 📅 **Safari Yako ya GitHub ya Wiki Mmoja**
+- [ ] Kamilisha kozi za GitHub Skills (Utangulizi wa GitHub, Markdown)
+- [ ] Fanya pull request yako ya kwanza kwenye mradi wa chanzo huria
+- [ ] Sanidi tovuti ya GitHub Pages kuonyesha kazi yako
+- [ ] Jiunge na majadiliano ya GitHub kwenye miradi unayovutiwa nayo
+- [ ] Unda hifadhidata yenye viwango vya jamii vinavyostahili (README, Leseni, n.k.)
+- [ ] Jaribu GitHub Codespaces kwa maendeleo ya mawingu
+
+### 🌟 **Mabadiliko Yako ya Mwezi Mmoja**
+- [ ] Changia kwenye miradi 3 mbalimbali ya chanzo huria
+- [ ] Saidia mtu mpya kuingia GitHub (lipia mbele!)
+- [ ] Sanidi mikondo otomatiki kwa GitHub Actions
+- [ ] Tengeneza wavuti ya maonyesho ya michango yako ya GitHub
+- [ ] Shiriki kwenye Hacktoberfest au matukio mengine ya jamii
+- [ ] Kuwa mtunzaji wa mradi wako mwenyewe ambapo wengine wanachangia
+
+### 🎓 **Ukaguzi wa Mwisho wa Uwezo wa GitHub**
+
+**Sherehekea mafanikio yako:**
+- Nini kipengele unachokipenda zaidi kuhusu kutumia GitHub?
+- Ni kipengele gani cha ushirikiano kinachokufanya ufurahie zaidi?
+- Je, unahisije kuhusu kuchangia chanzo huria sasa?
+- Ni mradi gani wa kwanza ungependa kuchangia?
+
+```mermaid
+journey
+    title Safari Yako ya Kujiamini GitHub
+    section Leo
+      Nervous: 3: You
+      Curious: 4: You
+      Excited: 5: You
+    section Wiki Hii
+      Practicing: 4: You
+      Contributing: 5: You
+      Connecting: 5: You
+    section Mwezi Ujao
+      Collaborating: 5: You
+      Leading: 5: You
+      Inspiring Others: 5: You
+```
+> 🌍 **Karibu kwenye jamii ya wamiliki wa mradi wa kimataifa!** Sasa una zana za kushirikiana na mamilioni ya wamiliki wa mradi duniani kote. Mchango wako wa kwanza unaweza kuonekana mdogo, lakini kumbuka - kila mradi mkubwa wa chanzo huria ulianza na mtu aliyefanya commit yake ya kwanza kabisa. Suwali sio kama utaathiri, bali ni mradi upi mzuri utafaidika na mtazamo wako wa kipekee kwanza! 🚀
+
+Kumbuka: kila mtaalamu alikuwa mwanzo. Unaweza! 💪
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ugawaji wa Majukumu**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za moja kwa moja zinaweza kuwa na makosa au upungufu wa usahihi. Hati asilia katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha kuaminika. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatubeba jukumu lolote kwa makosa au tafsiri potofu zinazoweza kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

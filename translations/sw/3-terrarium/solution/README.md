@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Mradi mdogo wa kuburudisha akili kwa kuburuta na kudondosha. Kwa kutumia HTML, JS, na CSS kidogo, unaweza kujenga kiolesura cha wavuti, kukipamba, na kuongeza mwingiliano.
 
-![terrarium yangu](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.sw.png)
+![terrarium yangu](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.sw.png)
 
 ## Shukrani
 

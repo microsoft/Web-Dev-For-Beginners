@@ -78,7 +78,7 @@ Karena VSCode.dev membutuhkan setidaknya satu file untuk membuka repositori, kit
 4. **Tulis** pesan commit: "Tambahkan struktur HTML awal"
 5. **Klik** "Commit new file" untuk menyimpan perubahan Anda
 
-![Membuat file awal di GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.id.png)
+![Membuat file awal di GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.id.png)
 
 **Apa yang dicapai oleh pengaturan awal ini:**
 - **Membangun** struktur dokumen HTML5 yang tepat dengan elemen semantik
@@ -104,7 +104,7 @@ Setelah fondasi repositori Anda dibuat, mari beralih ke VSCode.dev untuk pekerja
 
 ✅ **Indikator keberhasilan**: Anda akan melihat file proyek Anda di sidebar Explorer dan `index.html` tersedia untuk diedit di area editor utama.
 
-![Proyek dimuat di VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.id.png)
+![Proyek dimuat di VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.id.png)
 
 **Apa yang akan Anda lihat di antarmuka:**
 - **Sidebar Explorer**: **Menampilkan** file dan struktur folder repositori Anda
@@ -448,7 +448,7 @@ Ekstensi meningkatkan pengalaman pengembangan Anda dengan menyediakan kemampuan 
 **Hasil langsung setelah instalasi:**
 Setelah CodeSwing diinstal, Anda akan melihat preview langsung dari website resume Anda muncul di editor. Ini memungkinkan Anda melihat dengan tepat bagaimana tampilan situs Anda saat Anda membuat perubahan.
 
-![Ekstensi CodeSwing menampilkan preview langsung](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.id.png)
+![Ekstensi CodeSwing menampilkan preview langsung](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.id.png)
 
 **Memahami antarmuka yang ditingkatkan:**
 - **Tampilan terpisah**: **Menampilkan** kode Anda di satu sisi dan preview langsung di sisi lain

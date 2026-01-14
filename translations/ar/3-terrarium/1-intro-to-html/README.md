@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![مقدمة إلى HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.ar.png)
+![مقدمة إلى HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.ar.png)
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML، أو لغة ترميز النص التشعبي، هي الأساس لكل موقع ويب قمت بزيارته. فكر في HTML كهيكل عظمي يمنح الصفحات الإلكترونية بنيتها – فهو يحدد مكان المحتوى، وكيف يتم تنظيمه، وما الذي يمثله كل جزء. بينما ستقوم CSS لاحقًا "بتزيين" HTML بالألوان والتصميمات، وستجعل JavaScript الصفحات تفاعلية، فإن HTML يوفر الهيكل الأساسي الذي يجعل كل شيء ممكنًا.
@@ -88,7 +88,7 @@ mindmap
 4. في لوحة Explorer، انقر على أيقونة "New File"
 5. قم بتسمية ملفك `index.html`
 
-![مستكشف VS Code يظهر إنشاء ملف جديد](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.ar.png)
+![مستكشف VS Code يظهر إنشاء ملف جديد](../../../../translated_images/vs-code-index.e2986cf919471eb9.ar.png)
 
 **الخيار الثاني: باستخدام أوامر الطرفية**
 ```bash

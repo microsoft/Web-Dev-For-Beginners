@@ -78,7 +78,7 @@ Protože VSCode.dev vyžaduje alespoň jeden soubor pro otevření repozitáře,
 4. **Napište** zprávu ke commitu: „Přidání počáteční HTML struktury“
 5. **Klikněte** na „Commit new file“ pro uložení změn
 
-![Vytvoření počátečního souboru na GitHubu](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.cs.png)
+![Vytvoření počátečního souboru na GitHubu](../../../../translated_images/new-file-github.com.c886796d800e8056.cs.png)
 
 **Co tento počáteční setup zajišťuje:**
 - **Zavádí** správnou HTML5 strukturu dokumentu se sémantickými prvky
@@ -104,7 +104,7 @@ Nyní, když je základ vašeho repozitáře nastaven, přejděme do VSCode.dev 
 
 ✅ **Indikátor úspěchu**: Měli byste vidět soubory svého projektu v postranním panelu Explorer a `index.html` dostupný pro úpravy v hlavní oblasti editoru.
 
-![Projekt načtený ve VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.cs.png)
+![Projekt načtený ve VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.cs.png)
 
 **Co uvidíte v rozhraní:**
 - **Postranní panel Explorer**: **Zobrazuje** soubory a strukturu složek vašeho repozitáře
@@ -448,7 +448,7 @@ Rozšíření zlepšují váš vývojový zážitek tím, že poskytují možnos
 **Okamžité výsledky po instalaci:**
 Jakmile je CodeSwing nainstalován, uvidíte živý náhled své webové stránky životopisu přímo v editoru. To vám umožní přesně vidět, jak vaše stránka vypadá, zatímco provádíte změny.
 
-![Rozšíření CodeSwing zobrazující živý náhled](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.cs.png)
+![Rozšíření CodeSwing zobrazující živý náhled](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.cs.png)
 
 **Porozumění vylepšenému rozhraní:**
 - **Rozdělený pohled**: **Zobrazuje** váš kód na jedné straně a živý náhled na druhé

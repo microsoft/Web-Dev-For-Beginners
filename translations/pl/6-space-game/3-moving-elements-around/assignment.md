@@ -1,23 +1,38 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "ccfcd8c2932761359fbaff3d6b01ace4",
-  "translation_date": "2025-08-24T12:33:04+00:00",
+  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
+  "translation_date": "2026-01-06T19:21:49+00:00",
   "source_file": "6-space-game/3-moving-elements-around/assignment.md",
   "language_code": "pl"
 }
 -->
-# Komentuj swój kod
+# Komentuj Swój Kod
 
 ## Instrukcje
 
-Przejrzyj swój obecny plik /app.js w folderze gry i znajdź sposoby na dodanie komentarzy oraz uporządkowanie kodu. Kod bardzo łatwo może wymknąć się spod kontroli, więc teraz jest dobra okazja, aby dodać komentarze i upewnić się, że jest czytelny, co pozwoli Ci na łatwe korzystanie z niego w przyszłości.
+Czysty, dobrze udokumentowany kod jest niezbędny do utrzymania i udostępniania Twoich projektów. W tym zadaniu poćwiczysz jeden z najważniejszych nawyków profesjonalnych programistów: pisanie jasnych, pomocnych komentarzy, które wyjaśniają cel i funkcjonalność Twojego kodu.
+
+Przejrzyj swój aktualny plik `app.js` w folderze gry i znajdź sposoby na skomentowanie go oraz uporządkowanie. Łatwo jest, żeby kod wymknął się spod kontroli, a teraz masz dobrą okazję, aby dodać komentarze, które zapewnią czytelność kodu, tak abyś mógł go później wykorzystać.
+
+**Twoje zadanie obejmuje:**
+- **Dodanie komentarzy** wyjaśniających, co robi każda główna sekcja kodu
+- **Dokumentowanie funkcji** z jasnym opisem ich celu i parametrów
+- **Organizowanie kodu** w logiczne bloki z nagłówkami sekcji
+- **Usunięcie** nieużywanego lub zbędnego kodu
+- **Stosowanie spójnej** konwencji nazewnictwa dla zmiennych i funkcji
 
 ## Kryteria oceny
 
-| Kryterium | Wzorowe                                                           | Wystarczające                        | Wymaga poprawy                                                |
-| --------- | ----------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------- |
-|           | Kod `app.js` jest w pełni skomentowany i zorganizowany w logiczne bloki | Kod `app.js` jest odpowiednio skomentowany | Kod `app.js` jest nieco chaotyczny i brakuje w nim dobrych komentarzy |
+| Kryterium | Wzorowe | Wystarczające | Wymaga Poprawy |
+| -------- | --------- | -------- | ----------------- |
+| **Dokumentacja kodu** | Kod `app.js` jest w pełni skomentowany z jasnymi, pomocnymi wyjaśnieniami dla wszystkich głównych sekcji i funkcji | Kod `app.js` jest odpowiednio skomentowany z podstawowymi wyjaśnieniami dla większości sekcji | Kod `app.js` ma minimalne komentarze i brakuje mu jasnych wyjaśnień |
+| **Organizacja kodu** | Kod jest zorganizowany w logiczne bloki z wyraźnymi nagłówkami sekcji i spójną strukturą | Kod ma pewną organizację z podstawowym grupowaniem powiązanej funkcjonalności | Kod jest dość nieuporządkowany i trudny do śledzenia |
+| **Jakość kodu** | Wszystkie zmienne i funkcje mają opisowe nazwy, brak nieużywanego kodu, stosuje spójne konwencje | Większość kodu stosuje dobre praktyki nazewnictwa z minimalną ilością nieużywanego kodu | Nazwy zmiennych są niejasne, zawiera nieużywany kod, niestandardowy styl |
 
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby zapewnić precyzję, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zrzeczenie się odpowiedzialności**:  
+Dokument ten został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było jak najbardziej precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego oryginalnym języku należy uważać za źródło autorytatywne. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

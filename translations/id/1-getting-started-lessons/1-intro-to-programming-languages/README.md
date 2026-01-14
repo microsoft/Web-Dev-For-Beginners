@@ -17,7 +17,7 @@ Dengar, saya benar-benar mengerti jika pemrograman terasa menakutkan sekarang. K
 
 Hari ini, kita akan menjelajahi alat-alat luar biasa yang membuat pengembangan web modern tidak hanya mungkin, tetapi juga sangat adiktif. Saya berbicara tentang editor, browser, dan alur kerja yang sama persis yang digunakan pengembang di Netflix, Spotify, dan studio aplikasi indie favoritmu setiap hari. Dan ini bagian yang akan membuatmu ingin menari kegirangan: sebagian besar alat profesional kelas industri ini sepenuhnya gratis!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.id.png)
+![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -185,7 +185,7 @@ Seperti bagaimana telefon Alexander Graham Bell menghubungkan lokasi yang jauh, 
 
 Apabila semuanya dimuatkan, anda akan melihat ruang kerja yang bersih dan cantik yang direka untuk memastikan anda fokus pada perkara yang penting – kod anda!
 
-![Antara muka lalai VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.ms.png)
+![Antara muka lalai VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.ms.png)
 
 **Inilah lawatan kawasan anda:**
 - **Bar Aktiviti** (jalur di sebelah kiri): Navigasi utama anda dengan Explorer 📁, Carian 🔍, Kawalan Sumber 🌿, Sambungan 🧩, dan Tetapan ⚙️
@@ -233,7 +233,7 @@ Ini sesuai apabila anda baru bermula di VSCode.dev dan ingin membuka repositori 
 1. Pergi ke [vscode.dev](https://vscode.dev) jika anda belum berada di sana
 2. Cari butang "Open Remote Repository" pada skrin selamat datang dan klik
 
-   ![Buka repositori jauh](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.ms.png)
+   ![Buka repositori jauh](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.ms.png)
 
 3. Tampal mana-mana URL repositori GitHub (cuba yang ini: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Tekan Enter dan lihat keajaiban berlaku!
@@ -242,7 +242,7 @@ Ini sesuai apabila anda baru bermula di VSCode.dev dan ingin membuka repositori 
 
 Ingin berasa seperti ahli sihir pengekodan? Cuba pintasan papan kekunci ini: Ctrl+Shift+P (atau Cmd+Shift+P pada Mac) untuk membuka Palet Perintah:
 
-![Palet Perintah](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ms.png)
+![Palet Perintah](../../../../translated_images/palette-menu.4946174e07f42622.ms.png)
 
 **Palet Perintah adalah seperti mempunyai enjin carian untuk semua yang anda boleh lakukan:**
 - Taip "open remote" dan ia akan mencari pembuka repositori untuk anda
@@ -304,7 +304,7 @@ Seperti mengatur pelan di pejabat arkitek, penciptaan fail dalam VSCode.dev meng
 3. Masukkan nama fail termasuk sambungan yang sesuai (`style.css`, `script.js`, `index.html`)
 4. Tekan Enter untuk mencipta fail
 
-![Mencipta fail baru](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.ms.png)
+![Mencipta fail baru](../../../../translated_images/create-new-file.2814e609c2af9aeb.ms.png)
 
 **Konvensyen penamaan:**
 - Gunakan nama deskriptif yang menunjukkan tujuan fail
@@ -322,7 +322,7 @@ Di sinilah keseronokan sebenar bermula! Editor VSCode.dev dipenuhi dengan ciri-c
 2. Mula menaip dan lihat VSCode.dev membantu anda dengan warna, cadangan, dan pengesanan ralat
 3. Simpan kerja anda dengan Ctrl+S (Windows/Linux) atau Cmd+S (Mac) – walaupun ia juga menyimpan secara automatik!
 
-![Menyunting fail dalam VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.ms.png)
+![Menyunting fail dalam VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.ms.png)
 
 **Perkara menarik yang berlaku semasa anda mengekod:**
 - Kod anda akan diwarnakan dengan cantik supaya mudah dibaca
@@ -343,7 +343,7 @@ Seperti bagaimana ahli arkeologi mencipta rekod terperinci lapisan penggalian, G
 2. Fail yang diubah suai muncul dalam bahagian "Changes"
 3. Pengekodan warna menunjukkan jenis perubahan: hijau untuk penambahan, merah untuk penghapusan
 
-![Melihat perubahan dalam Kawalan Sumber](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.ms.png)
+![Melihat perubahan dalam Kawalan Sumber](../../../../translated_images/working-tree.c58eec08e6335c79.ms.png)
 
 **Menyimpan kerja anda (aliran kerja komit):**
 
@@ -438,7 +438,7 @@ Pasaran sambungan sangat teratur, jadi anda tidak akan tersesat mencari apa yang
 2. Jelajah atau cari sesuatu yang spesifik
 3. Klik pada apa sahaja yang kelihatan menarik untuk mengetahui lebih lanjut mengenainya
 
-![Antara muka pasaran sambungan](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.ms.png)
+![Antara muka pasaran sambungan](../../../../translated_images/extensions.eca0e0c7f59a10b5.ms.png)
 
 **Apa yang anda akan lihat di sana:**
 
@@ -491,7 +491,7 @@ Kebanyakan sambungan datang dengan tetapan yang boleh anda ubah untuk membuatnya
 3. Pilih "Tetapan Sambungan" dari menu dropdown
 4. Laraskan perkara sehingga ia sesuai dengan aliran kerja anda
 
-![Menyesuaikan tetapan sambungan](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.ms.png)
+![Menyesuaikan tetapan sambungan](../../../../translated_images/extension-settings.21c752ae4f4cdb78.ms.png)
 
 **Perkara biasa yang mungkin anda mahu laraskan:**
 - Bagaimana kod anda diformatkan (tab vs ruang, panjang baris, dll.)

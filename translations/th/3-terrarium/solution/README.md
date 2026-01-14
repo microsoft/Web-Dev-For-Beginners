@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 โค้ดเล็กๆ ที่สามารถลากและวางได้ พร้อมด้วย HTML, JS และ CSS คุณสามารถสร้างอินเทอร์เฟซเว็บ ออกแบบสไตล์ และเพิ่มการโต้ตอบได้
 
-![my terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.th.png)
+![my terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.th.png)
 
 ## เครดิต
 

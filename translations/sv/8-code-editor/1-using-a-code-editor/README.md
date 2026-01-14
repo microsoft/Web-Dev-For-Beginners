@@ -1,43 +1,147 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "cfd4a15974168ca426d50c67682ab9d4",
-  "translation_date": "2025-10-23T21:28:37+00:00",
+  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
+  "translation_date": "2026-01-06T22:45:06+00:00",
   "source_file": "8-code-editor/1-using-a-code-editor/README.md",
   "language_code": "sv"
 }
 -->
-# Använda en kodredigerare: Mästra VSCode.dev
+# Använda en kodredigerare: Bemästra VSCode.dev
 
-Minns du i *The Matrix* när Neo behövde koppla in sig till en massiv datorterminal för att komma åt den digitala världen? Dagens verktyg för webbutveckling är raka motsatsen – otroligt kraftfulla funktioner som är tillgängliga var som helst. VSCode.dev är en webbaserad kodredigerare som ger professionella utvecklingsverktyg till vilken enhet som helst med internetanslutning.
+Kom ihåg i *The Matrix* när Neo var tvungen att koppla in sig i en massiv datorterminal för att komma åt den digitala världen? Dagens webbverktyg är motsatsen – otroligt kraftfulla möjligheter tillgängliga från var som helst. VSCode.dev är en webbläsarbaserad kodredigerare som tar professionella utvecklingsverktyg till vilken enhet som helst med en internetuppkoppling.
 
-Precis som tryckpressen gjorde böcker tillgängliga för alla, inte bara munkar i kloster, demokratiserar VSCode.dev kodning. Du kan arbeta med projekt från en biblioteksdator, ett skolaboratorium eller var som helst där du har tillgång till en webbläsare. Ingen installation, inga begränsningar som "jag behöver min specifika uppsättning".
+Precis som boktryckarkonsten gjorde böcker tillgängliga för alla, inte bara skrivare i kloster, demokratiserar VSCode.dev kodandet. Du kan arbeta på projekt från ett bibliotek, en skol-labb eller var som helst du har webbläsaråtkomst. Inga installationer, inga "Jag behöver min specifika setup"-begränsningar.
 
-I slutet av denna lektion kommer du att förstå hur du navigerar i VSCode.dev, öppnar GitHub-repositorier direkt i din webbläsare och använder Git för versionskontroll – färdigheter som professionella utvecklare förlitar sig på dagligen.
+I slutet av denna lektion kommer du att förstå hur du navigerar i VSCode.dev, öppnar GitHub-repositorier direkt i din webbläsare och använder Git för versionshantering – alla färdigheter som professionella utvecklare förlitar sig på varje dag.
+
+## ⚡ Vad du kan göra på de nästa 5 minuterna
+
+**Snabbstartsväg för upptagna utvecklare**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minuter] --> B[Besök vscode.dev]
+    B --> C[Anslut GitHub-konto]
+    C --> D[Öppna valfri repository]
+    D --> E[Börja redigera direkt]
+```
+- **Minut 1**: Navigera till [vscode.dev](https://vscode.dev) - ingen installation behövs
+- **Minut 2**: Logga in med GitHub för att koppla dina repositorier
+- **Minut 3**: Prova URL-tricket: byt ut `github.com` till `vscode.dev/github` i vilken repo-URL som helst
+- **Minut 4**: Skapa en ny fil och se hur syntaxmarkering fungerar automatiskt
+- **Minut 5**: Gör en ändring och committa den via panelen Källkodshantering
+
+**Snabb test-URL**:
+```
+# Transform this:
+github.com/microsoft/Web-Dev-For-Beginners
+
+# Into this:
+vscode.dev/github/microsoft/Web-Dev-For-Beginners
+```
+
+**Varför det här är viktigt**: På 5 minuter kommer du att uppleva friheten att kunna koda var som helst med professionella verktyg. Detta representerar framtidens utveckling – tillgänglig, kraftfull och omedelbar.
+
+## 🗺️ Din läranderesa genom molnbaserad utveckling
+
+```mermaid
+journey
+    title Från lokal installation till molnutvecklingsmästerskap
+    section Förstå plattformen
+      Upptäck webbaserad redigering: 4: You
+      Anslut till GitHub-ekosystemet: 6: You
+      Bemästra gränssnittsnavigering: 7: You
+    section Färdigheter i filhantering
+      Skapa och organisera filer: 5: You
+      Redigera med syntaxmarkering: 7: You
+      Navigera projektstrukturer: 8: You
+    section Mästare på versionskontroll
+      Förstå Git-integration: 6: You
+      Öva commit-arbetsflöden: 8: You
+      Bemästra samarbetsmönster: 9: You
+    section Professionell anpassning
+      Installera kraftfulla tillägg: 7: You
+      Konfigurera utvecklingsmiljö: 8: You
+      Bygg personliga arbetsflöden: 9: You
+```
+**Din resmål**: I slutet av denna lektion har du bemästrat en professionell molnutvecklingsmiljö som fungerar från vilken enhet som helst, vilket gör att du kan koda med samma verktyg som utvecklare på stora teknikföretag använder.
 
 ## Vad du kommer att lära dig
 
 Efter att vi gått igenom detta tillsammans kommer du att kunna:
 
-- Navigera i VSCode.dev som om det vore ditt andra hem – hitta allt du behöver utan att gå vilse
-- Öppna vilket GitHub-repository som helst i din webbläsare och börja redigera direkt (det här är ganska magiskt!)
-- Använda Git för att spåra dina ändringar och spara dina framsteg som ett proffs
-- Förbättra din redigerare med tillägg som gör kodning snabbare och roligare
+- Navigera VSCode.dev som om det vore ditt andra hem – hitta allt du behöver utan att gå vilse
+- Öppna vilket GitHub-repositorium som helst i webbläsaren och börja redigera direkt (det här är ganska magiskt!)
+- Använda Git för att spåra dina ändringar och spara ditt arbete som ett proffs
+- Snabbladda din editor med tillägg som gör kodandet snabbare och roligare
 - Skapa och organisera projektfiler med självförtroende
 
 ## Vad du behöver
 
-Kravet är enkelt:
+Kravbilden är enkel:
 
-- Ett gratis [GitHub-konto](https://github.com) (vi guidar dig genom att skapa ett om det behövs)
-- Grundläggande kunskaper om webbläsare
-- Lektionen GitHub Basics ger användbar bakgrund, även om den inte är nödvändig
+- Ett gratis [GitHub-konto](https://github.com) (vi guidar dig genom skapandet om det behövs)
+- Grundläggande bekantskap med webbläsare
+- Lektionen GitHub Basics ger hjälpsamt bakgrundskunskap, men är inte obligatorisk
 
 > 💡 **Ny på GitHub?** Att skapa ett konto är gratis och tar bara några minuter. Precis som ett bibliotekskort ger dig tillgång till böcker världen över, öppnar ett GitHub-konto dörrar till kodrepositorier över hela internet.
 
+## 🧠 Översikt av molnutvecklings-ekosystemet
+
+```mermaid
+mindmap
+  root((VSCode.dev Mästerskap))
+    Plattformfördelar
+      Tillgänglighet
+        Enhetsoberoende
+        Ingen Installation Krävs
+        Omedelbara Uppdateringar
+        Universell Tillgång
+      Integration
+        GitHub-anslutning
+        Förrådssynkronisering
+        Inställningspersistens
+        Samarbetsredo
+    Utvecklingsarbetsflöde
+      Filhantering
+        Projektstruktur
+        Syntaxmarkering
+        Redigering med flikar
+        Autosparfunktioner
+      Versionshantering
+        Git-integration
+        Commit-arbetsflöden
+        Grenhantering
+        Ändringsspårning
+    Anpassningskraft
+      Tilläggsekosystem
+        Produktivitetsverktyg
+        Språkstöd
+        Temaalternativ
+        Egna Genvägar
+      Miljöinställning
+        Personliga Preferenser
+        Arbetsytkonfiguration
+        Verktygsintegration
+        Arbetsflödesoptimering
+    Professionella färdigheter
+      Branschstandarder
+        Versionshantering
+        Kodkvalitet
+        Samarbete
+        Dokumentation
+      Karriärberedskap
+        Distansarbete
+        Molnutveckling
+        Teamprojekt
+        Öppen Källkod
+```
+**Kärnprincip**: Molnbaserade utvecklingsmiljöer representerar framtiden för kodning – de erbjuder professionella verktyg som är tillgängliga, samarbetsvänliga och plattformsoberoende.
+
 ## Varför webbaserade kodredigerare är viktiga
 
-Före internet kunde forskare vid olika universitet inte enkelt dela forskning. Sedan kom ARPANET på 1960-talet, som kopplade samman datorer över avstånd. Webbaserade kodredigerare följer samma princip – att göra kraftfulla verktyg tillgängliga oavsett din fysiska plats eller enhet.
+Innan internet fanns kunde forskare på olika universitet inte enkelt dela forskning. Sedan kom ARPANET på 1960-talet som kopplade samman datorer över avstånd. Webbaserade kodredigerare följer samma princip – att göra kraftfulla verktyg tillgängliga oavsett var du befinner dig eller vilken enhet du använder.
 
 En kodredigerare fungerar som din utvecklingsarbetsplats, där du skriver, redigerar och organiserar kodfiler. Till skillnad från enkla textredigerare erbjuder professionella kodredigerare syntaxmarkering, felupptäckt och projektledningsfunktioner.
 
@@ -46,340 +150,490 @@ VSCode.dev tar dessa funktioner till din webbläsare:
 **Fördelar med webbaserad redigering:**
 
 | Funktion | Beskrivning | Praktisk nytta |
-|----------|-------------|----------------|
-| **Plattformsoberoende** | Körs på vilken enhet som helst med en webbläsare | Arbeta sömlöst från olika datorer |
-| **Ingen installation krävs** | Tillgång via en webbadress | Undvik begränsningar för programvaruinstallation |
-| **Automatiska uppdateringar** | Kör alltid den senaste versionen | Få tillgång till nya funktioner utan manuella uppdateringar |
-| **Repository-integration** | Direkt anslutning till GitHub | Redigera kod utan lokal filhantering |
+|---------|-------------|----------|
+| **Plattformsoberoende** | Körs på vilken enhet som helst med webbläsare | Arbeta från olika datorer sömlöst |
+| **Ingen installation krävs** | Åtkomst via en webbadress | Hoppa över begränsningar för installation av mjukvara |
+| **Automatiska uppdateringar** | Kör alltid senaste versionen | Få tillgång till nya funktioner utan manuella uppdateringar |
+| **Repositoryintegration** | Direkt koppling till GitHub | Redigera kod utan lokal filhantering |
 
 **Praktiska konsekvenser:**
-- Arbetskontinuitet över olika miljöer
-- Konsistent gränssnitt oavsett operativsystem
-- Omedelbara samarbetsmöjligheter
+- Arbetskontinuitet mellan olika miljöer
+- Enhetligt gränssnitt oavsett operativsystem
+- Omedelbar samarbetsförmåga
 - Minskade krav på lokal lagring
 
 ## Utforska VSCode.dev
 
-Precis som Marie Curies laboratorium innehöll sofistikerad utrustning i ett relativt enkelt utrymme, packar VSCode.dev professionella utvecklingsverktyg i ett webbläsargränssnitt. Denna webbapplikation erbjuder samma kärnfunktionalitet som stationära kodredigerare.
+Precis som Marie Curies laboratorium hade avancerad utrustning i en relativt enkel miljö, packar VSCode.dev professionella utvecklingsverktyg i ett webbläsargränssnitt. Den här webbapplikationen erbjuder samma kärnfunktionalitet som stationära kodredigerare.
 
-Börja med att navigera till [vscode.dev](https://vscode.dev) i din webbläsare. Gränssnittet laddas utan nedladdningar eller systeminstallationer – en direkt tillämpning av principerna för molnbaserad databehandling.
+Börja med att gå till [vscode.dev](https://vscode.dev) i din webbläsare. Gränssnittet laddas utan nedladdningar eller systeminstallationer – en direkt tillämpning av molndatorprinciper.
 
 ### Koppla ditt GitHub-konto
 
-Precis som Alexander Graham Bells telefon kopplade samman avlägsna platser, skapar kopplingen till ditt GitHub-konto en bro mellan VSCode.dev och dina kodrepositorier. När du uppmanas att logga in med GitHub rekommenderas det att acceptera denna anslutning.
+Precis som Alexander Graham Bells telefon kopplade samman avlägsna platser, kopplar du ditt GitHub-konto VSCode.dev till dina kodrepositorier. När du uppmanas att logga in med GitHub rekommenderas det att acceptera denna koppling.
 
-**GitHub-integrationen ger:**
-- Direkt åtkomst till dina repositorier inom redigeraren
+**GitHub-integration ger:**
+- Direkt åtkomst till dina repositorier i editorn
 - Synkroniserade inställningar och tillägg över enheter
-- Strömlinjeformad sparningsprocess till GitHub
-- Personligt anpassad utvecklingsmiljö
+- Smidigt sparflöde till GitHub
+- Personlig utvecklingsmiljö
 
 ### Lär känna din nya arbetsyta
 
 När allt har laddats ser du en vackert ren arbetsyta som är designad för att hålla dig fokuserad på det som är viktigt – din kod!
 
-![Standardgränssnittet för VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.sv.png)
+![Standardgränssnitt VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.sv.png)
 
 **Här är din rundtur i grannskapet:**
-- **Aktivitetsfältet** (den remsan till vänster): Din huvudsakliga navigering med Explorer 📁, Sök 🔍, Versionskontroll 🌿, Tillägg 🧩 och Inställningar ⚙️
-- **Sidofältet** (panelen bredvid): Ändras för att visa relevant information baserat på vad du har valt
-- **Redigeringsområdet** (det stora utrymmet i mitten): Här händer magin – din huvudsakliga kodningsyta
+- **Aktivitetsfältet** (den remsan till vänster): Din huvudsakliga navigering med Utforskaren 📁, Sök 🔍, Källkodshantering 🌿, Tillägg 🧩 och Inställningar ⚙️
+- **Sidopanelen** (panelen bredvid): Visar relevant information beroende på vad du har valt
+- **Editorområdet** (det stora utrymmet i mitten): Här händer magin – ditt huvudområde för kodning
 
 **Ta en stund att utforska:**
-- Klicka runt på ikonerna i aktivitetsfältet och se vad var och en gör
-- Lägg märke till hur sidofältet uppdateras för att visa olika information – ganska häftigt, eller hur?
-- Utforskaren (📁) är förmodligen där du kommer att tillbringa mest tid, så bli bekväm med den
+- Klicka runt på ikonerna i aktivitetsfältet och se vad varje gör
+- Lägg märke till hur sidopanelen uppdateras för att visa olika information – rätt häftigt, eller hur?
+- Utforskarvyn (📁) är förmodligen där du kommer spendera mest tid, så lär känna den väl
 
+```mermaid
+flowchart TB
+    subgraph "VSCode.dev Gränssnittsarkitektur"
+        A[Aktivitetsfält] --> B[Utforskaren 📁]
+        A --> C[Sök 🔍]
+        A --> D[Källkontroll 🌿]
+        A --> E[Tillägg 🧩]
+        A --> F[Inställningar ⚙️]
+        
+        B --> G[Filträd]
+        C --> H[Hitta & Ersätt]
+        D --> I[Git Status]
+        E --> J[Tilläggsmarknad]
+        F --> K[Konfiguration]
+        
+        L[Sidofält] --> M[Kontextpanel]
+        N[Redigeringsområde] --> O[Kodfiler]
+        P[Terminal/Utdata] --> Q[Kommandorad]
+    end
+```
 ## Öppna GitHub-repositorier
 
-Före internet var forskare tvungna att fysiskt resa till bibliotek för att få tillgång till dokument. GitHub-repositorier fungerar på liknande sätt – de är samlingar av kod som lagras på distans. VSCode.dev eliminerar det traditionella steget att ladda ner repositorier till din lokala dator innan du redigerar.
+Innan internet var forskare tvungna att fysiskt resa till bibliotek för att få tillgång till dokument. GitHub-repositorier fungerar på liknande sätt – de är samlingar av kod som lagras på distans. VSCode.dev eliminerar det traditionella steget att ladda ner repositorier till din lokala maskin innan du redigerar.
 
-Denna funktion möjliggör omedelbar åtkomst till alla offentliga repositorier för visning, redigering eller bidrag. Här är två metoder för att öppna repositorier:
+Denna funktion gör det möjligt att omedelbart få tillgång till vilket offentligt repositorium som helst för visning, redigering eller bidragande. Här är två sätt att öppna repositorier:
 
-### Metod 1: Den enkla vägen
+### Metod 1: Klicka-och-öppna-sättet
 
-Detta är perfekt när du börjar från början i VSCode.dev och vill öppna ett specifikt repository. Det är enkelt och nybörjarvänligt:
+Detta är perfekt när du börjar från grunden i VSCode.dev och vill öppna ett specifikt repositorium. Det är enkelt och nybörjarvänligt:
 
 **Så här gör du:**
 
 1. Gå till [vscode.dev](https://vscode.dev) om du inte redan är där
-2. Leta efter knappen "Open Remote Repository" på välkomstskärmen och klicka på den
+2. Leta upp knappen "Open Remote Repository" på välkomstskärmen och klicka på den
 
-   ![Öppna fjärrrepository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.sv.png)
+   ![Öppna fjärrrepositorium](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.sv.png)
 
-3. Klistra in en GitHub-repository-URL (prova denna: `https://github.com/microsoft/Web-Dev-For-Beginners`)
-4. Tryck på Enter och se magin hända!
+3. Klistra in vilken GitHub-repo-URL som helst (prova den här: `https://github.com/microsoft/Web-Dev-For-Beginners`)
+4. Tryck Enter och se magin ske!
 
-**Proffstips - Snabbkommandot för kommandopaletten:**
+**Proffstips – Kommando-Palettens genväg:**
 
-Vill du känna dig som en kodningsmästare? Prova detta tangentbordsgenväg: Ctrl+Shift+P (eller Cmd+Shift+P på Mac) för att öppna kommandopaletten:
+Vill du känna dig som en kodtrollkarl? Prova detta tangentbordskommando: Ctrl+Shift+P (eller Cmd+Shift+P på Mac) för att öppna Kommando-Paletten:
 
-![Kommandopalett](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.sv.png)
+![Kommando-Palett](../../../../translated_images/palette-menu.4946174e07f42622.sv.png)
 
-**Kommandopaletten är som en sökmotor för allt du kan göra:**
-- Skriv "open remote" så hittar den repository-öppnaren åt dig
-- Den kommer ihåg repositorier du har öppnat nyligen (superpraktiskt!)
-- När du väl har vant dig vid den kommer du att känna dig som om du kodar i blixtens hastighet
-- Det är i princip VSCode.devs version av "Hej Siri, men för kodning"
+**Kommando-Paletten är som en sökmotor för allt du kan göra:**
+- Skriv "open remote" så hittar den öppnaren för repositorier åt dig
+- Den kommer ihåg repositorier du öppnat nyligen (superpraktiskt!)
+- När du väl vant dig kommer du att känna att du kodar i blixtens hastighet
+- Den är i princip VSCode.devs version av "Hey Siri, men för kodning"
 
-### Metod 2: URL-modifikationsteknik
+### Metod 2: URL-omvandlingstekniken
 
-Precis som HTTP och HTTPS använder olika protokoll medan de behåller samma domänstruktur, använder VSCode.dev ett URL-mönster som speglar GitHubs adresseringssystem. Alla GitHub-repository-URL:er kan modifieras för att öppnas direkt i VSCode.dev.
+Precis som HTTP och HTTPS använder olika protokoll men behåller samma domänstruktur, använder VSCode.dev ett URL-mönster som speglar GitHubs adressystem. Vilken GitHub-repo-URL som helst kan ändras för att öppnas direkt i VSCode.dev.
 
-**URL-transformationsmönster:**
+**URL-omvandlingsmönster:**
 
-| Typ av repository | GitHub-URL | VSCode.dev-URL |
-|-------------------|------------|----------------|
-| **Offentligt repository** | `github.com/microsoft/Web-Dev-For-Beginners` | `vscode.dev/github/microsoft/Web-Dev-For-Beginners` |
-| **Personligt projekt** | `github.com/ditt-användarnamn/mitt-projekt` | `vscode.dev/github/ditt-användarnamn/mitt-projekt` |
-| **Vilket tillgängligt repo som helst** | `github.com/deras-användarnamn/fantastiskt-repo` | `vscode.dev/github/deras-användarnamn/fantastiskt-repo` |
+| Repositorietyp | GitHub-URL | VSCode.dev-URL |
+|----------------|---------------------|----------------|
+| **Offentligt Repo** | `github.com/microsoft/Web-Dev-For-Beginners` | `vscode.dev/github/microsoft/Web-Dev-For-Beginners` |
+| **Personligt Projekt** | `github.com/ditt-användarnamn/min-projekt` | `vscode.dev/github/ditt-användarnamn/min-projekt` |
+| **Vilket Tillgängligt Repo som helst** | `github.com/deras-användarnamn/awesome-repo` | `vscode.dev/github/deras-användarnamn/awesome-repo` |
 
-**Implementering:**
-- Ersätt `github.com` med `vscode.dev/github`
-- Behåll alla andra URL-komponenter oförändrade
-- Fungerar med alla offentligt tillgängliga repositorier
-- Ger omedelbar åtkomst för redigering
+**Genomförande:**
+- Byt ut `github.com` mot `vscode.dev/github`
+- Behåll alla andra delar av URL:en oförändrade
+- Fungerar med alla offentligt åtkomliga repositorier
+- Ger omedelbar redigeringstillgång
 
-> 💡 **Livsförändrande tips**: Bokmärk VSCode.dev-versionerna av dina favorit-repositorier. Jag har bokmärken som "Redigera min portfolio" och "Fix dokumentation" som tar mig direkt till redigeringsläget!
+> 💡 **Livsförändrande tips**: Bokmärk VSCode.dev-versioner av dina favoritrepositories. Jag har bokmärken som "Redigera mitt Portfolio" och "Fix Dokumentation" som tar mig direkt till redigeringsläge!
 
 **Vilken metod ska du använda?**
-- **Gränssnittsvägen**: Perfekt när du utforskar eller inte kan komma ihåg exakta repository-namn
-- **URL-tricket**: Perfekt för blixtsnabb åtkomst när du vet exakt vart du ska
+- **Gränssnittssättet**: Perfekt när du utforskar eller inte kommer ihåg exakta repnamn
+- **URL-tricket**: Perfekt för blixtsnabb åtkomst när du vet exakt var du ska
+
+### 🎯 Pedagogisk check-in: Molnutvecklingstillgång
+
+**Pausa och reflektera**: Du har just lärt dig två metoder för att få åtkomst till kodrepositorier via webbläsare. Detta representerar en fundamental förändring i hur utveckling fungerar.
+
+**Snabb självbedömning**:
+- Kan du förklara varför webbaserad redigering eliminerar traditionell "utvecklingsmiljösetup"?
+- Vilka fördelar ger URL-omvandlingstekniken jämfört med lokal git-kloning?
+- Hur förändrar detta sättet du kan bidra till open source-projekt?
+
+**Verklighetskoppling**: Stora företag som GitHub, GitLab och Replit har byggt sina utvecklingsplattformar kring dessa molnförst-principer. Du lär dig samma arbetsflöden som professionella utvecklarteam världen över.
+
+**Utmaningsfråga**: Hur kan molnbaserad utveckling förändra hur kodning lärs ut i skolor? Tänk på krav på enheter, mjukvaruhantering och samarbetsmöjligheter.
 
 ## Arbeta med filer och projekt
 
-Nu när du har öppnat ett repository, låt oss börja bygga! VSCode.dev ger dig allt du behöver för att skapa, redigera och organisera dina kodfiler. Tänk på det som din digitala verkstad – varje verktyg finns precis där du behöver det.
+Nu när du har ett repositorium öppet, låt oss börja bygga! VSCode.dev ger dig allt du behöver för att skapa, redigera och organisera dina kodfiler. Tänk på det som din digitala verkstad – varje verktyg finns precis där du behöver det.
 
-Låt oss dyka in i de vardagliga uppgifterna som kommer att utgöra större delen av din kodningsarbetsflöde.
+Låt oss dyka ner i vardagliga uppgifter som kommer att utgöra större delen av ditt kodarbetsflöde.
 
 ### Skapa nya filer
 
-Precis som att organisera ritningar på en arkitekts kontor följer filskapande i VSCode.dev en strukturerad metod. Systemet stöder alla standardfiltyper för webbutveckling.
+Precis som att organisera ritningar i en arkitekts kontor följer filskapande i VSCode.dev en strukturerad metod. Systemet stödjer alla standard webbutvecklingsfiltyper.
 
-**Process för att skapa filer:**
+**Filskapande process:**
 
-1. Navigera till målmappen i utforskaren i sidofältet
+1. Navigera till målmappen i Utforskaren i sidopanelen
 2. Håll muspekaren över mappnamnet för att visa ikonen "Ny fil" (📄+)
-3. Ange filnamnet inklusive lämplig filändelse (`style.css`, `script.js`, `index.html`)
-4. Tryck på Enter för att skapa filen
+3. Skriv in filnamnet inklusive lämplig filändelse (`style.css`, `script.js`, `index.html`)
+4. Tryck Enter för att skapa filen
 
-![Skapa en ny fil](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.sv.png)
+![Skapa ny fil](../../../../translated_images/create-new-file.2814e609c2af9aeb.sv.png)
 
 **Namngivningskonventioner:**
-- Använd beskrivande namn som indikerar filens syfte
+- Använd beskrivande namn som visar filens syfte
 - Inkludera filändelser för korrekt syntaxmarkering
-- Följ konsekventa namngivningsmönster genom hela projektet
+- Följ konsekventa namngivningsmönster i hela projektet
 - Använd små bokstäver och bindestreck istället för mellanslag
 
 ### Redigera och spara filer
 
-Här börjar det roliga! VSCode.devs redigerare är fullpackad med hjälpsamma funktioner som gör kodning smidig och intuitiv. Det är som att ha en riktigt smart skrivassistent, fast för kod.
+Här börjar det riktiga roliga! VSCode.devs editor är fullpackad med hjälpsamma funktioner som gör kodandet smidigt och intuitivt. Det är som att ha en riktigt smart skrivassistent, men för kod.
 
-**Ditt redigeringsarbetsflöde:**
+**Ditt redigeringsflöde:**
 
-1. Klicka på vilken fil som helst i utforskaren för att öppna den i huvudområdet
+1. Klicka på en fil i Utforskaren för att öppna den i huvudområdet
 2. Börja skriva och se hur VSCode.dev hjälper dig med färger, förslag och felupptäckt
-3. Spara ditt arbete med Ctrl+S (Windows/Linux) eller Cmd+S (Mac) – även om det också sparas automatiskt!
+3. Spara ditt arbete med Ctrl+S (Windows/Linux) eller Cmd+S (Mac) – även om den autosparar!
 
-![Redigera filer i VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.sv.png)
+![Redigera filer i VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.sv.png)
 
-**Det coola som händer medan du kodar:**
-- Din kod får vackert färgkodade markeringar så att den blir lätt att läsa
-- VSCode.dev föreslår kompletteringar medan du skriver (som autokorrigering, men mycket smartare)
+**Det häftiga som händer medan du kodar:**
+- Din kod får vackra färgmarkeringar så att den är lätt att läsa
+- VSCode.dev föreslår kompletteringar medan du skriver (som autokorrigering fast mycket smartare)
 - Den fångar stavfel och fel innan du ens sparar
 - Du kan ha flera filer öppna i flikar, precis som i en webbläsare
 - Allt sparas automatiskt i bakgrunden
 
-> ⚠️ **Snabbtips**: Även om autosparning är till hjälp, är det fortfarande en bra vana att trycka på Ctrl+S eller Cmd+S. Det sparar allt direkt och aktiverar några extra hjälpsamma funktioner som felkontroll.
+> ⚠️ **Snabbtips**: Fast auto-save finns där, är det ändå bra vana att trycka Ctrl+S eller Cmd+S. Det sparar allt omedelbart och triggar extra hjälpfunktioner som felkontroll.
 
-### Versionskontroll med Git
+### Versionshantering med Git
 
-Precis som arkeologer skapar detaljerade register över utgrävningslager, spårar Git ändringar i din kod över tid. Detta system bevarar projektets historia och gör det möjligt att återgå till tidigare versioner vid behov. VSCode.dev inkluderar integrerad Git-funktionalitet.
+Precis som arkeologer skapar detaljerade journaler över utgrävningslager, spårar Git ändringar i din kod över tid. Detta system bevarar projektets historia och gör det möjligt att återgå till tidigare versioner vid behov. VSCode.dev inkluderar integrerad Git-funktionalitet.
 
-**Gränssnitt för versionskontroll:**
+**Källkodshanteringsgränssnittet:**
 
-1. Gå till panelen för versionskontroll via 🌿-ikonen i aktivitetsfältet
-2. Modifierade filer visas i avsnittet "Changes"
-3. Färgkodning indikerar typ av ändringar: grönt för tillägg, rött för borttagningar
+1. Öppna panelen Källkodshantering via 🌿-ikonen i aktivitetsfältet
+2. Modifierade filer visas i avsnittet "Ändringar"
+3. Färgkodning visar ändringstyper: grönt för tillägg, rött för borttagningar
 
-![Visa ändringar i versionskontroll](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.sv.png)
+![Visa ändringar i källkodshantering](../../../../translated_images/working-tree.c58eec08e6335c79.sv.png)
 
-**Spara ditt arbete (commit-arbetsflöde):**
+**Spara ditt arbete (commit-flödet):**
 
 ```mermaid
 flowchart TD
-    A[Make changes to files] --> B[View changes in Source Control]
-    B --> C[Stage changes by clicking +]
-    C --> D[Write descriptive commit message]
-    D --> E[Click checkmark to commit]
-    E --> F[Changes pushed to GitHub]
+    A[Gör ändringar i filer] --> B[Visa ändringar i källkontroll]
+    B --> C[Ställ in ändringar genom att klicka på +]
+    C --> D[Skriv beskrivande commit-meddelande]
+    D --> E[Klicka på bocken för att committa]
+    E --> F[Ändringar skickade till GitHub]
 ```
-
-**Här är din steg-för-steg-process:**
+```mermaid
+stateDiagram-v2
+    [*] --> Modified: Redigera filer
+    Modified --> Staged: Klicka + för att stagea
+    Staged --> Modified: Klicka - för att ta bort från stage
+    Staged --> Committed: Lägg till meddelande & commit
+    Committed --> [*]: Synkronisera till GitHub
+    
+    state Committed {
+        [*] --> LocalCommit
+        LocalCommit --> RemotePush: Autosynk
+    }
+```
+**Så här går du steg för steg tillväga:**
 - Klicka på "+"-ikonen bredvid filer du vill spara (detta "stager" dem)
-- Dubbelkolla att du är nöjd med alla dina stagerade ändringar
-- Skriv en kort anteckning som förklarar vad du gjorde (detta är ditt "commit-meddelande")
-- Klicka på bockikonen för att spara allt till GitHub
-- Om du ångrar dig om något kan du använda ångra-ikonen för att ta bort ändringar
+- Dubbelkolla att du är nöjd med alla dina förberedda ändringar
+- Skriv en kort anteckning som förklarar vad du gjort (det här är ditt "commit-meddelande")
+- Klicka på bock-knappen för att spara allt till GitHub
+- Om du ändrar dig om något kan du använda ångra-ikonen för att förkasta ändringarna
 
-**Skriva bra commit-meddelanden (det är lättare än du tror!):**
-- Beskriv bara vad du gjorde, som "Lägg till kontaktformulär" eller "Fixa trasig navigering"
-- Håll det kort och koncist – tänk tweetlängd, inte uppsats
-- Börja med aktiva ord som "Lägg till", "Fixa", "Uppdatera" eller "Ta bort"
-- **Bra exempel**: "Lägg till responsiv navigeringsmeny", "Fixa problem med mobil layout", "Uppdatera färger för bättre tillgänglighet"
+**Att skriva bra commit-meddelanden (det är enklare än du tror!):**
+- Beskriv bara vad du gjort, som "Lägg till kontaktformulär" eller "Åtgärda trasig navigering"
+- Håll det kort och koncist – tänk tweet-längd, inte uppsats
+- Börja med handlingsord som "Lägg till", "Åtgärda", "Uppdatera" eller "Ta bort"
+- **Bra exempel**: "Lägg till responsiv navigationsmeny", "Åtgärda layoutproblem på mobil", "Uppdatera färger för bättre tillgänglighet"
 
-> 💡 **Snabbnavigeringstips**: Använd hamburgermenyn (☰) längst upp till vänster för att hoppa tillbaka till ditt GitHub-repository och se dina commit-ändringar online. Det är som en portal mellan din redigeringsmiljö och ditt projekts hem på GitHub!
+> 💡 **Snabb navigeringstips**: Använd hamburgermenyn (☰) uppe till vänster för att snabbt hoppa tillbaka till ditt GitHub-repo och se dina committade ändringar online. Det är som en portal mellan din redigeringsmiljö och projektets hem på GitHub!
 
-## Förbättra funktionaliteten med tillägg
+## Förbättra funktionalitet med tillägg
 
-Precis som en hantverkares verkstad innehåller specialverktyg för olika uppgifter, kan VSCode.dev anpassas med tillägg som lägger till specifika funktioner. Dessa community-utvecklade plugins löser vanliga utvecklingsbehov som kodformatering, liveförhandsgranskning och förbättrad Git-integration.
+Precis som en hantverkares verkstad innehåller specialiserade verktyg för olika uppgifter, kan VSCode.dev anpassas med tillägg som lägger till specifika funktioner. Dessa plugins som utvecklats av gemenskapen löser vanliga utvecklingsbehov som kodformatering, liveförhandsvisning och förbättrad Git-integrering.
 
-Marknadsplatsen för tillägg innehåller tusentals gratisverktyg skapade av utvecklare världen över. Varje tillägg löser specifika arbetsflödesutmaningar, vilket gör det möjligt för dig att bygga en personlig utvecklingsmiljö som passar dina specifika behov och preferenser.
+Tilläggsmarknaden har tusentals gratis verktyg skapade av utvecklare över hela världen. Varje tillägg löser särskilda arbetsflödesutmaningar, vilket låter dig bygga en personlig utvecklingsmiljö anpassad efter dina specifika behov och preferenser.
 
+```mermaid
+mindmap
+  root((Extension Ecosystem))
+    Essential Categories
+      Produktivitet
+        Live Server
+        Auto Rename Tag
+        Bracket Pair Colorizer
+        GitLens
+      Kodkvalitet
+        Prettier
+        ESLint
+        Spell Checker
+        Error Lens
+      Språkstöd
+        HTML CSS Support
+        JavaScript ES6
+        Python Extension
+        Markdown Preview
+      Teman & UI
+        Dark+ Modern
+        Material Icon Theme
+        Peacock
+        Rainbow Brackets
+    Discovery Methods
+      Populära Rankningar
+        Nedladdningsantal
+        Användarbetyg
+        Nya Uppdateringar
+        Community Recensioner
+      Rekommendationer
+        Arbetsytessuggetioner
+        Språkbasserade
+        Arbetsflödesspecifika
+        Teamstandarder
+```
 ### Hitta dina perfekta tillägg
 
-Marknadsplatsen för tillägg är riktigt välorganiserad, så du kommer inte att gå vilse när du letar efter vad du behöver. Den är designad för att hjälpa dig att upptäcka både specifika verktyg och coola saker du inte ens visste att du behövde!
+Tilläggsmarknaden är väldigt välorganiserad, så du går inte vilse när du letar efter det du behöver. Den är designad för att hjälpa dig upptäcka både specifika verktyg och häftiga saker du inte ens visste fanns!
 
-**Komma till marknadsplatsen:**
+**Så här tar du dig till marknaden:**
 
-1. Klicka på ikonen för tillägg (🧩) i aktivitetsfältet
+1. Klicka på tilläggsikonen (🧩) i aktivitetsfältet
 2. Bläddra runt eller sök efter något specifikt
-3. Klicka på något som ser intressant ut för att lära dig mer om det
+3. Klicka på något som ser intressant ut för att lära dig mer
 
-![Gränssnitt för tilläggsmarknadsplatsen](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.sv.png)
+![Extension marketplace interface](../../../../translated_images/extensions.eca0e0c7f59a10b5.sv.png)
 
-**Vad du kommer att se där:**
+**Det du kommer att se där:**
 
-| Sektion | Vad som finns | Varför det är hjälpsamt |
-|---------|---------------|-------------------------|
-| **Installerade** | Tillägg du redan har lagt till | Din personliga kodningsverktygslåda |
-| **Populära** | Favoriter bland användare | Vad de flesta utvecklare rekommenderar |
-| **Rekommenderade** | Smarta förslag för ditt projekt | VSCode.devs hjälpsamma rekommendationer |
+| Sektion | Innehåll | Varför det är hjälpsamt |
+|----------|---------|----------|
+| **Installerade** | Tillägg du redan lagt till | Din personliga kodningsverktygslåda |
+| **Populära** | Folkets favoriter | Vad de flesta utvecklare svär vid |
+| **Rekommenderade** | Smarta förslag för ditt projekt | VSCode.dev:s hjälpsamma rekommendationer |
 
-**Vad som gör det enkelt att bläddra:**
-- Varje tillägg visar betyg, antal nedladdningar och recensioner från riktiga användare
-- Du får skärmdumpar och tydliga beskrivningar av vad varje tillägg gör
-- Allt är tydligt markerat med kompatibilitetsinformation
+**Vad som gör surfningen enkel:**
+- Varje tillägg visar betyg, antal nedladdningar och riktiga användarrecensioner
+- Du får skärmbilder och tydliga beskrivningar av vad varje gör
+- Allt är tydligt märkt med kompatibilitetsinformation
 - Liknande tillägg föreslås så att du kan jämföra alternativ
 
-### Installera tillägg (Det är superenkelt!)
+### Installera tillägg (det är superenkelt!)
 
-Att lägga till nya funktioner i din editor är lika enkelt som att klicka på en knapp. Tillägg installeras på några sekunder och börjar fungera direkt – inga omstarter, ingen väntan.
+Att lägga till nya krafter till din editor är lika enkelt som att klicka på en knapp. Tillägg installeras på några sekunder och börjar fungera direkt – inga omstarter, inget väntande.
 
 **Så här gör du:**
 
-1. Sök efter det du vill ha (prova att söka på "live server" eller "prettier")
-2. Klicka på ett som ser bra ut för att se mer information
+1. Sök efter det du vill ha (testa att söka på "live server" eller "prettier")
+2. Klicka på ett som ser bra ut för att se fler detaljer
 3. Läs igenom vad det gör och kolla betygen
-4. Klicka på den blå "Installera"-knappen och du är klar!
+4. Tryck på den blå "Installera"-knappen och klart!
 
-![Installera tillägg](../../../../8-code-editor/images/install-extension.gif)
+![Installing extensions](../../../../8-code-editor/images/install-extension.gif)
 
-**Vad händer bakom kulisserna:**
-- Tillägget laddas ner och konfigureras automatiskt
+**Vad som händer bakom kulisserna:**
+- Tillägget laddas ner och ställer in sig automatiskt
 - Nya funktioner dyker upp i ditt gränssnitt direkt
-- Allt börjar fungera omedelbart (seriöst, det går så snabbt!)
+- Allt börjar fungera omedelbart (seriöst, det är så snabbt!)
 - Om du är inloggad synkroniseras tillägget till alla dina enheter
 
 **Några tillägg jag rekommenderar att börja med:**
-- **Live Server**: Se din webbplats uppdateras i realtid medan du kodar (den här är magisk!)
-- **Prettier**: Gör din kod snygg och professionell automatiskt
-- **Auto Rename Tag**: Ändra en HTML-tagg och dess partner uppdateras också
-- **Bracket Pair Colorizer**: Färglägger dina parenteser så att du aldrig tappar bort dig
-- **GitLens**: Förbättrar dina Git-funktioner med massor av användbar information
+- **Live Server**: Se din webbplats uppdateras i realtid medan du kodar (det här är magiskt!)
+- **Prettier**: Gör din kod ren och professionell automatiskt
+- **Auto Rename Tag**: Byt ut en HTML-tagg så ändras dess partner också
+- **Bracket Pair Colorizer**: Färgkodar dina parenteser så att du aldrig tappar bort dig
+- **GitLens**: Förstärker dina Git-funktioner med massor av hjälpsam info
 
 ### Anpassa dina tillägg
 
-De flesta tillägg har inställningar som du kan justera för att få dem att fungera precis som du vill. Tänk på det som att justera sätet och speglarna i en bil – alla har sina egna preferenser!
+De flesta tillägg har inställningar du kan justera för att få dem att fungera precis som du vill. Tänk på det som att ställa in säte och backspeglar i en bil – alla har sina preferenser!
 
 **Justera tilläggsinställningar:**
 
-1. Hitta ditt installerade tillägg i tilläggspanelen
-2. Leta efter den lilla kugghjulsikonen (⚙️) bredvid dess namn och klicka på den
-3. Välj "Tilläggsinställningar" från rullgardinsmenyn
-4. Justera inställningarna tills de passar perfekt för ditt arbetsflöde
+1. Hitta ditt installerade tillägg i panelen Extensions
+2. Leta efter den lilla kugghjulsikonen (⚙️) bredvid namnet och klicka på den
+3. Välj "Extension Settings" i rullgardinsmenyn
+4. Justera tills det känns exakt rätt för ditt arbetsflöde
 
-![Anpassa tilläggsinställningar](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.sv.png)
+![Customizing extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78.sv.png)
 
 **Vanliga saker du kanske vill justera:**
-- Hur din kod formateras (tabbar vs mellanslag, radlängd, etc.)
-- Vilka kortkommandon som triggar olika åtgärder
+- Hur din kod formateras (flikar vs mellanslag, radlängd, osv.)
+- Vilka tangentbordsgenvägar som triggar olika åtgärder
 - Vilka filtyper tillägget ska fungera med
-- Slå på eller av specifika funktioner för att hålla det enkelt
+- Att slå på eller av specifika funktioner för att hålla det rent
 
-### Håll dina tillägg organiserade
+### Hålla dina tillägg organiserade
 
-När du upptäcker fler coola tillägg vill du hålla din samling snygg och fungerande smidigt. VSCode.dev gör det väldigt enkelt att hantera detta.
+När du upptäcker fler häftiga tillägg vill du hålla din samling prydlig och fungerande smidigt. VSCode.dev gör det väldigt enkelt att hantera.
 
-**Dina alternativ för att hantera tillägg:**
+**Dina hanteringsalternativ för tillägg:**
 
-| Vad du kan göra | När det är användbart | Tips |
+| Vad du kan göra | När det är hjälpsamt | Proffstips |
 |--------|---------|----------|
-| **Inaktivera** | Testa om ett tillägg orsakar problem | Bättre än att avinstallera om du kanske vill ha tillbaka det |
-| **Avinstallera** | Ta bort tillägg du inte behöver helt | Håller din miljö ren och snabb |
-| **Uppdatera** | Få de senaste funktionerna och buggfixarna | Sker vanligtvis automatiskt, men värt att kolla |
+| **Inaktivera** | För att testa om ett tillägg orsakar problem | Bättre än att avinstallera om du kanske vill ha tillbaka det |
+| **Avinstallera** | Ta bort tillägg du inte behöver | Håller din miljö ren och snabb |
+| **Uppdatera** | Skaffa de senaste funktionerna och buggfixarna | Oftast automatiskt, men värt att kolla |
 
-**Hur jag gillar att hantera tillägg:**
-- Varje kvartal går jag igenom vad jag har installerat och tar bort allt jag inte använder
-- Jag håller tilläggen uppdaterade för att få de senaste förbättringarna och säkerhetsfixarna
-- Om något verkar långsamt inaktiverar jag tillfälligt tillägg för att se om något av dem är orsaken
-- Jag läser uppdateringsanteckningarna när tillägg får stora uppdateringar – ibland finns det coola nya funktioner!
+**Så här brukar jag hantera tillägg:**
+- Varje par månader går jag igenom vad jag installerat och tar bort det jag inte använder
+- Jag håller tilläggen uppdaterade så jag får de senaste förbättringarna och säkerhetsfixarna
+- Om något känns segt så inaktiverar jag tillfälligt tillägg för att se om någon är boven
+- Jag läser uppdateringsnotiser när tillägg får stora uppdateringar – ibland finns där häftiga nya funktioner!
 
-> ⚠️ **Prestandatips**: Tillägg är fantastiska, men att ha för många kan göra saker långsammare. Fokusera på de som verkligen gör ditt liv enklare och var inte rädd för att avinstallera de du aldrig använder.
+> ⚠️ **Prestandatips**: Tillägg är fantastiska, men för många kan göra allt långsamt. Fokusera på de som verkligen gör ditt liv enklare och var inte rädd för att avinstallera sådana du aldrig använder.
 
-## GitHub Copilot Agent Challenge 🚀
+### 🎯 Pedagogisk kontrolpunkt: Anpassning av utvecklingsmiljö
 
-Precis som den strukturerade metod som NASA använder för rymduppdrag, innebär denna utmaning systematisk tillämpning av VSCode.dev-färdigheter i ett komplett arbetsflöde.
+**Förståelse för arkitektur**: Du har lärt dig att anpassa en professionell utvecklingsmiljö med hjälp av tillägg skapade av gemenskapen. Detta speglar hur professionella utvecklingsteam bygger standardiserade verktygskedjor.
 
-**Mål:** Visa din skicklighet med VSCode.dev genom att etablera ett omfattande arbetsflöde för webbutveckling.
+**Nyckelkoncept du behärskar**:
+- **Upptäckt av tillägg**: Hitta verktyg som löser specifika utvecklingsutmaningar
+- **Miljök配置**: Anpassa verktyg för att matcha personliga eller teamets preferenser
+- **Prestandaoptimering**: Balansera funktionalitet med systemprestanda
+- **Gemenskapsarbete**: Utnyttja verktyg skapade av den globala utvecklargemenskapen
 
-**Projektkrav:** Med hjälp av Agent-läget, slutför dessa uppgifter:
+**Branschkoppling**: Tilläggsekosystem driver stora utvecklingsplattformar som VS Code, Chrome DevTools och moderna IDE:er. Att förstå hur man utvärderar, installerar och konfigurerar tillägg är avgörande för professionella utvecklingsarbetsflöden.
+
+**Reflektionsfråga**: Hur skulle du gå tillväga för att sätta upp en standardiserad utvecklingsmiljö för ett team med 10 utvecklare? Tänk på konsekvens, prestanda och individuella preferenser.
+
+## 📈 Din tidslinje för molnutvecklingsmästerskap
+
+```mermaid
+timeline
+    title Professionell molnutvecklingsresa
+    
+    section Plattformgrunder
+        Förståelse för molnutveckling
+            : Bemästra webbaserade redigeringskoncept
+            : Anslut GitHub-integrationsmönster
+            : Navigera professionella gränssnitt
+    
+    section Arbetsflödesskicklighet
+        Fil- & projektledning
+            : Skapa organiserade projektstrukturer
+            : Bemästra fördelarna med syntaxmarkering
+            : Hantera arbetsflöden med flera filer
+        
+        Versionskontrollintegration
+            : Förstå Git-visualisering
+            : Öva commit-meddelandestandarder
+            : Bemästra arbetsflöden för ändringsspårning
+    
+    section Anpassning av miljö
+        Tilläggsekosystem
+            : Upptäck produktivitetstillägg
+            : Konfigurera utvecklingspreferenser
+            : Optimera prestanda vs funktionalitet
+        
+        Professionell konfiguration
+            : Bygg konsekventa arbetsflöden
+            : Skapa återanvändbara konfigurationer
+            : Etablera teamstandarder
+    
+    section Branschklarhet
+        Molnförst-utveckling
+            : Bemästra fjärrutvecklingspraxis
+            : Förstå samarbetsarbetsflöden
+            : Bygg plattformsoberoende färdigheter
+        
+        Professionella metoder
+            : Följ branschstandarder
+            : Skapa underhållbara arbetsflöden
+            : Förbered för teammiljöer
+```
+**🎓 Examensmilstolpe**: Du har framgångsrikt behärskat molnbaserad utveckling med samma verktyg och arbetsflöden som proffs hos stora teknikföretag. Dessa färdigheter representerar framtiden för mjukvaruutveckling.
+
+**🔄 Nästa nivå kapabiliteter**:
+- Redo att utforska avancerade molnutvecklingsplattformar (Codespaces, GitPod)
+- Förberedd för att arbeta i distribuerade utvecklingsteam
+- Utrustad för att bidra till open source-projekt globalt
+- Grund lagd för moderna DevOps- och kontinuerlig integrationsrutiner
+
+## GitHub Copilot Agent-utmaning 🚀
+
+Precis som det strukturerade tillvägagångssätt NASA använder för rymduppdrag innebär denna utmaning systematisk tillämpning av VSCode.dev-färdigheter i ett komplett arbetsflödesscenario.
+
+**Mål:** Visa skicklighet i VSCode.dev genom att etablera ett omfattande webbapputvecklingsarbetsflöde.
+
+**Projektkrav:** Med hjälp av agent-läge slutför dessa uppgifter:
 1. Forka ett befintligt repository eller skapa ett nytt
 2. Skapa en fungerande projektstruktur med HTML-, CSS- och JavaScript-filer
-3. Installera och konfigurera tre tillägg som förbättrar utvecklingen
-4. Öva på versionskontroll med beskrivande commit-meddelanden
-5. Experimentera med att skapa och ändra feature branches
+3. Installera och konfigurera tre utvecklingsförbättrande tillägg
+4. Öva versionskontroll med beskrivande commit-meddelanden
+5. Experimentera med att skapa och modifiera feature branches
 6. Dokumentera processen och lärdomarna i en README.md-fil
 
-Denna övning sammanfattar alla VSCode.dev-koncept i ett praktiskt arbetsflöde som kan tillämpas på framtida utvecklingsprojekt.
+Denna övning konsoliderar alla VSCode.dev-koncept till ett praktiskt arbetsflöde som kan appliceras i framtida utvecklingsprojekt.
 
 Läs mer om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.
 
 ## Uppgift
 
-Dags att testa dessa färdigheter på riktigt! Jag har ett praktiskt projekt som låter dig öva på allt vi har gått igenom: [Skapa en CV-webbplats med VSCode.dev](./assignment.md)
+Dags att ta dessa färdigheter på en riktig testkörning! Jag har ett praktiskt projekt som låter dig öva allt vi täckt: [Skapa en CV-webbplats med VSCode.dev](./assignment.md)
 
-Denna uppgift guidar dig genom att bygga en professionell CV-webbplats helt i din webbläsare. Du kommer att använda alla VSCode.dev-funktioner vi har utforskat, och i slutet kommer du att ha både en snygg webbplats och solid självsäkerhet i ditt nya arbetsflöde.
+Denna uppgift guidar dig genom att bygga en professionell CV-webbplats helt och hållet i din webbläsare. Du kommer använda alla VSCode.dev-funktioner vi utforskat, och i slutet har du både en snygg webbplats och stor självförtroende i ditt nya arbetsflöde.
 
 ## Fortsätt utforska och utveckla dina färdigheter
 
-Du har nu en solid grund, men det finns så mycket mer coolt att upptäcka! Här är några resurser och idéer för att ta dina VSCode.dev-färdigheter till nästa nivå:
+Du har en stabil grund nu, men det finns så mycket mer coola saker att upptäcka! Här är några resurser och idéer för att ta dina VSCode.dev-kunskaper till nästa nivå:
 
-**Officiella dokument värda att bokmärka:**
-- [VSCode Web Documentation](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) – Den kompletta guiden till webbaserad redigering
+**Officiell dokumentation värd att bokmärka:**
+- [VSCode Web Documentation](https://code.visualstudio.com/docs/editor/vscode-web?WT.mc_id=academic-0000-alfredodeza) – Den kompletta guiden för redigering i webbläsare
 - [GitHub Codespaces](https://docs.github.com/en/codespaces) – För när du vill ha ännu mer kraft i molnet
 
-**Coola funktioner att experimentera med härnäst:**
-- **Kortkommandon**: Lär dig tangentkombinationerna som får dig att känna dig som en kodningsninja
-- **Arbetsmiljöinställningar**: Ställ in olika miljöer för olika typer av projekt
+**Häftiga funktioner att experimentera med nästa gång:**
+- **Tangentbordsgenvägar**: Lär dig genvägarna som får dig att känna dig som en kodningsninja
+- **Workspace-inställningar**: Ställ in olika miljöer för olika typer av projekt
 - **Multi-root Workspaces**: Arbeta med flera repositories samtidigt (superpraktiskt!)
-- **Terminalintegration**: Få tillgång till kommandoradsverktyg direkt i din webbläsare
+- **Terminalintegrering**: Använd kommandoradsverktyg direkt i din webbläsare
 
-**Idéer för att öva:**
-- Hoppa in i några open source-projekt och bidra med hjälp av VSCode.dev – det är ett bra sätt att ge tillbaka!
-- Testa olika tillägg för att hitta din perfekta uppsättning
-- Skapa projektmallar för de typer av webbplatser du bygger oftast
-- Öva på Git-arbetsflöden som att skapa och slå ihop branches – dessa färdigheter är guld värda i teamprojekt
+**Idéer för övning:**
+- Hoppa in i open source-projekt och bidra via VSCode.dev – det är ett utmärkt sätt att ge tillbaka!
+- Testa olika tillägg för att hitta din perfekta setup
+- Skapa projektmallar för de typer av sajter du bygger oftast
+- Öva Git-arbetsflöden som branching och merging – dessa färdigheter är guld värda i teamprojekt
 
 ---
 
-**Du har bemästrat webbaserad utveckling!** 🎉 Precis som uppfinningen av portabla instrument gjorde det möjligt för forskare att bedriva forskning på avlägsna platser, gör VSCode.dev det möjligt att koda professionellt från vilken internetansluten enhet som helst.
+**Du har behärskat webbläsarbaserad utveckling!** 🎉 Precis som portabla instrument gjorde det möjligt för forskare att bedriva forskning på avlägsna platser, gör VSCode.dev det möjligt att koda professionellt från vilken internetansluten enhet som helst.
 
-Dessa färdigheter speglar aktuella branschpraxis – många professionella utvecklare använder molnbaserade utvecklingsmiljöer för deras flexibilitet och tillgänglighet. Du har lärt dig ett arbetsflöde som skalar från individuella projekt till stora teamprojekt.
+Dessa färdigheter speglar dagens branschpraxis – många professionella utvecklare använder molnbaserade utvecklingsmiljöer för deras flexibilitet och tillgänglighet. Du har lärt dig ett arbetsflöde som skalar från individuella projekt till stora teamsamarbeten.
 
 Använd dessa tekniker i ditt nästa utvecklingsprojekt! 🚀
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Trots att vi strävar efter noggrannhet kan automatiska översättningar innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

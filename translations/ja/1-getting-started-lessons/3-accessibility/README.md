@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # アクセシブルなウェブページの作成
 
-![アクセシビリティについて](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.ja.png)
+![アクセシビリティについて](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ja.png)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

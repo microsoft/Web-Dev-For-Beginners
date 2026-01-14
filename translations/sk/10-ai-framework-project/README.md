@@ -1,75 +1,187 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e2c4ae5688e34b4b8b09d52aec56c79e",
-  "translation_date": "2025-10-24T21:30:05+00:00",
+  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
+  "translation_date": "2026-01-07T04:19:54+00:00",
   "source_file": "10-ai-framework-project/README.md",
   "language_code": "sk"
 }
 -->
 # AI Framework
 
-Už ste sa niekedy cítili zahltení pri pokuse vytvoriť AI aplikácie od nuly? Nie ste sami! AI frameworky sú ako švajčiarsky nožík pre vývoj AI - sú to výkonné nástroje, ktoré vám môžu ušetriť čas a starosti pri budovaní inteligentných aplikácií. Predstavte si AI framework ako dobre organizovanú knižnicu: poskytuje predpripravené komponenty, štandardizované API a inteligentné abstrakcie, aby ste sa mohli sústrediť na riešenie problémov namiesto boja s implementačnými detailmi.
+Už ste niekedy mali pocit, že stavanie AI aplikácií od základov je príliš zložité? Nie ste sami! AI frameworky sú ako švajčiarsky armádny nôž pre vývoj AI – sú to výkonné nástroje, ktoré vám môžu ušetriť čas a nervy pri tvorbe inteligentných aplikácií. Predstavte si AI framework ako dobre zorganizovanú knižnicu: poskytuje predpripravené komponenty, štandardizované API a inteligentné abstrakcie, takže sa môžete sústrediť na riešenie problémov namiesto zápasenia s detailmi implementácie.
 
-V tejto lekcii preskúmame, ako frameworky ako LangChain môžu premeniť kedysi zložité úlohy integrácie AI na čistý, prehľadný kód. Objavíte, ako sa vysporiadať s reálnymi výzvami, ako je sledovanie konverzácií, implementácia volania nástrojov a manipulácia s rôznymi AI modelmi prostredníctvom jedného zjednoteného rozhrania.
+V tejto lekcii preskúmame, ako frameworky ako LangChain môžu premeniť kedysi zložité úlohy integrácie AI na čistý, čitateľný kód. Objavíte, ako riešiť reálne výzvy, ako sledovanie rozhovorov, implementácia volania nástrojov a správa rôznych AI modelov cez jednotné rozhranie.
 
-Keď skončíme, budete vedieť, kedy siahnuť po frameworkoch namiesto surových API volaní, ako efektívne používať ich abstrakcie a ako vytvárať AI aplikácie pripravené na reálne použitie. Poďme preskúmať, čo môžu AI frameworky urobiť pre vaše projekty.
+Na konci budete vedieť, kedy siahnuť po frameworkoch namiesto priamych API volaní, ako efektívne využívať ich abstrakcie a ako zostaviť AI aplikácie pripravené na reálne použitie. Poďme preskúmať, čo môžu AI frameworky priniesť vašim projektom.
+
+## ⚡ Čo môžete urobiť počas nasledujúcich 5 minút
+
+**Rýchly štart pre zaneprázdnených vývojárov**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minút] --> B[Nainštalujte LangChain]
+    B --> C[Vytvorte klienta ChatOpenAI]
+    C --> D[Odošlite prvý prompt]
+    D --> E[Pozrite si silu frameworku]
+```
+- **Minúta 1**: Nainštalujte LangChain: `pip install langchain langchain-openai`
+- **Minúta 2**: Nastavte si GitHub token a importujte klienta ChatOpenAI
+- **Minúta 3**: Vytvorte jednoduchý rozhovor s systémovými a ľudskými správami
+- **Minúta 4**: Pridajte základný nástroj (napríklad sčítaciu funkciu) a vyskúšajte volanie AI nástrojov
+- **Minúta 5**: Zažite rozdiel medzi priamymi API volaniami a abstrakciou frameworku
+
+**Rýchly testovací kód**:  
+```python
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
+
+llm = ChatOpenAI(
+    api_key=os.environ["GITHUB_TOKEN"],
+    base_url="https://models.github.ai/inference",
+    model="openai/gpt-4o-mini"
+)
+
+response = llm.invoke([
+    SystemMessage(content="You are a helpful coding assistant"),
+    HumanMessage(content="Explain Python functions briefly")
+])
+print(response.content)
+```
+  
+**Prečo je to dôležité**: Za 5 minút zažijete, ako AI frameworky pretransformujú zložité AI integrácie na jednoduché volania metód. Toto je základ, ktorý poháňa produkčné AI aplikácie.
 
 ## Prečo si vybrať framework?
 
-Takže ste pripravení vytvoriť AI aplikáciu - skvelé! Ale tu je vec: máte niekoľko rôznych ciest, ktorými sa môžete vydať, a každá z nich má svoje výhody a nevýhody. Je to trochu ako rozhodovanie medzi chôdzou, bicyklovaním alebo jazdou autom, aby ste sa niekam dostali - všetky vás tam dostanú, ale zážitok (a úsilie) bude úplne odlišné.
+Takže ste pripravení vytvoriť AI aplikáciu – skvelé! Ale tu je vec: máte niekoľko rôznych ciest, ktoré môžete zvoliť, a každá má svoje výhody a nevýhody. Je to ako vybrať si medzi chôdzou, bicyklovaním alebo jazdou autom – všetky vás dostanú do cieľa, ale zážitok (a námaha) bude úplne iný.
 
-Rozdeľme si tri hlavné spôsoby, ako môžete integrovať AI do svojich projektov:
+Poďme rozobrať tri hlavné spôsoby, ako integrovať AI do vašich projektov:
 
-| Prístup | Výhody | Najlepšie pre | Zváženia |
-|---------|--------|--------------|----------|
-| **Priame HTTP požiadavky** | Plná kontrola, žiadne závislosti | Jednoduché dotazy, učenie základov | Viac rozvláčny kód, manuálne spracovanie chýb |
-| **Integrácia SDK** | Menej boilerplate kódu, optimalizácia pre konkrétny model | Aplikácie s jedným modelom | Obmedzené na konkrétnych poskytovateľov |
-| **AI Frameworky** | Zjednotené API, zabudované abstrakcie | Aplikácie s viacerými modelmi, zložité pracovné postupy | Krivka učenia, potenciálne nadmerná abstrakcia |
+| Prístup | Výhody | Najvhodnejšie pre | Upozornenia |
+|----------|------------|----------|--------------|
+| **Priame HTTP požiadavky** | Plná kontrola, žiadne závislosti | Jednoduché dotazy, učenie základov | Viac rozťahaný kód, manuálne spracovanie chýb |
+| **SDK integrácia** | Menej šablónového kódu, optimalizácia pre konkrétny model | Aplikácie s jedným modelom | Obmedzené na konkrétnych poskytovateľov |
+| **AI frameworky** | Jednotné API, zabudované abstrakcie | Multi-modelové aplikácie, zložité pracovné toky | Krivka učenia, potenciálne nadmerné abstrakcie |
 
 ### Výhody frameworkov v praxi
 
 ```mermaid
 graph TD
-    A[Your Application] --> B[AI Framework]
+    A[Vaša aplikácia] --> B[AI rámec]
     B --> C[OpenAI GPT]
     B --> D[Anthropic Claude]
-    B --> E[GitHub Models]
-    B --> F[Local Models]
+    B --> E[GitHub modely]
+    B --> F[Lokálne modely]
     
-    B --> G[Built-in Tools]
-    G --> H[Memory Management]
-    G --> I[Conversation History]
-    G --> J[Function Calling]
-    G --> K[Error Handling]
-```
+    B --> G[Vstavané nástroje]
+    G --> H[Správa pamäte]
+    G --> I[História konverzácie]
+    G --> J[Volanie funkcií]
+    G --> K[Riešenie chýb]
+```  
+**Prečo sú frameworky dôležité:**  
+- **Zjednotia** viacerých AI poskytovateľov pod jedno rozhranie  
+- **Automaticky spravujú** pamäť konverzácií  
+- **Poskytujú** hotové nástroje na bežné úlohy ako embeddingy a volanie funkcií  
+- **Riadi** spracovanie chýb a logiku opakovaných pokusov  
+- **Premieňajú** zložité pracovné toky na čitateľné volania metód  
 
-**Prečo sú frameworky dôležité:**
-- **Zjednocujú** viacerých poskytovateľov AI pod jedno rozhranie
-- **Automaticky spracovávajú** pamäť konverzácií
-- **Poskytujú** hotové nástroje na bežné úlohy, ako sú embeddings a volanie funkcií
-- **Spravujú** spracovanie chýb a logiku opakovania
-- **Premieňajú** zložité pracovné postupy na prehľadné volania metód
+> 💡 **Tip od profesionála**: Frameworky používajte pri prepínaní medzi rôznymi AI modelmi alebo pri tvorbe komplexných funkcií ako agenti, pamäť alebo volanie nástrojov. Pri učení základov alebo tvorbe jednoduchých, špecializovaných aplikácií zostaňte pri priamych API.
 
-> 💡 **Tip**: Používajte frameworky pri prepínaní medzi rôznymi AI modelmi alebo pri budovaní zložitých funkcií, ako sú agenti, pamäť alebo volanie nástrojov. Pri učení základov alebo vytváraní jednoduchých, zameraných aplikácií sa držte priamych API.
+**Zhrnutie**: Rovnako ako pri výbere medzi remeselnými špecializovanými nástrojmi a plnohodnotnou dielňou, ide o prispôsobenie nástroja úlohe. Frameworky vynikajú pri zložitých, bohatých aplikáciách, zatiaľ čo priame API dobre fungujú pri jednoduchých prípadoch použitia.
 
-**Zhrnutie**: Je to ako výber medzi špecializovanými nástrojmi remeselníka a kompletnou dielňou - ide o prispôsobenie nástroja úlohe. Frameworky vynikajú pri zložitých, funkčne bohatých aplikáciách, zatiaľ čo priame API fungujú dobre pre jednoduché prípady použitia.
+## 🗺️ Vaša cesta učenia sa majstrovstvu AI frameworkov
+
+```mermaid
+journey
+    title Od surových API po produkčné AI aplikácie
+    section Základy rámca
+      Pochopiť výhody abstrakcie: 4: You
+      Ovládnuť základy LangChain: 6: You
+      Porovnať prístupy: 7: You
+    section Konverzačné systémy
+      Vytvoriť chatovacie rozhrania: 5: You
+      Implementovať vzory pamäte: 7: You
+      Spravovať prichádzajúce odpovede: 8: You
+    section Pokročilé funkcie
+      Vytvoriť vlastné nástroje: 6: You
+      Ovládnuť štruktúrovaný výstup: 8: You
+      Vytvoriť dokumentové systémy: 8: You
+    section Produkčné aplikácie
+      Kombinovať všetky funkcie: 7: You
+      Riešiť chybové scenáre: 8: You
+      Nasadiť kompletné systémy: 9: You
+```  
+**Vaša cieľová destinácia**: Na konci tejto lekcie ovládnete vývoj AI frameworkov a budete schopní vytvárať sofistikované, produkčne pripravené AI aplikácie, ktoré môžu konkurovať komerčným AI asistentom.
 
 ## Úvod
 
-V tejto lekcii sa naučíme:
+V tejto lekcii sa naučíme:  
 
-- Používať bežný AI framework.
-- Riešiť bežné problémy, ako sú chatové konverzácie, používanie nástrojov, pamäť a kontext.
-- Využiť to na vytvorenie AI aplikácií.
+- Používať bežný AI framework.  
+- Riešiť bežné problémy ako chat, využívanie nástrojov, pamäť a kontext.  
+- Využiť toto na tvorbu AI aplikácií.
+
+## 🧠 Ekosystém vývoja AI frameworkov
+
+```mermaid
+mindmap
+  root((AI Frameworks))
+    Abstraction Benefits
+      Code Simplification
+        Unified APIs
+        Built-in Error Handling
+        Consistent Patterns
+        Reduced Boilerplate
+      Multi-Model Support
+        Provider Agnostic
+        Easy Switching
+        Fallback Options
+        Cost Optimization
+    Core Components
+      Conversation Management
+        Message Types
+        Memory Systems
+        Context Tracking
+        History Persistence
+      Tool Integration
+        Function Calling
+        API Connections
+        Custom Tools
+        Workflow Automation
+    Advanced Features
+      Structured Output
+        Pydantic Models
+        JSON Schemas
+        Type Safety
+        Validation Rules
+      Document Processing
+        Embeddings
+        Vector Stores
+        Similarity Search
+        RAG Systems
+    Production Patterns
+      Application Architecture
+        Modular Design
+        Error Boundaries
+        Async Operations
+        State Management
+      Deployment Strategies
+        Scalability
+        Monitoring
+        Performance
+        Security
+```  
+**Hlavný princíp**: AI frameworky abstraktujú komplexnosť, pričom poskytujú výkonné abstrakcie pre správu rozhovorov, integráciu nástrojov a spracovanie dokumentov, čo umožňuje vývojárom vytvárať sofistikované AI aplikácie s čistým, udržiavateľným kódom.
 
 ## Váš prvý AI prompt
 
-Začnime základmi a vytvorme vašu prvú AI aplikáciu, ktorá pošle otázku a dostane odpoveď späť. Ako Archimedes objavil princíp vztlaku vo svojej vani, niekedy najjednoduchšie pozorovania vedú k najvýznamnejším poznatkom - a frameworky robia tieto poznatky prístupnými.
+Začnime so základmi vytvorením vašej prvej AI aplikácie, ktorá odošle otázku a dostane odpoveď späť. Rovnako ako Archimedes objavil princíp vypudenia vo svojej kúpeli, niekedy najjednoduchšie pozorovania vedú k najvýkonnejším poznatkom – a frameworky tieto poznatky sprístupňujú.
 
 ### Nastavenie LangChain s GitHub modelmi
 
-Použijeme LangChain na pripojenie k GitHub modelom, čo je skvelé, pretože vám poskytuje bezplatný prístup k rôznym AI modelom. Najlepšia časť? Na začiatok potrebujete len niekoľko jednoduchých konfiguračných parametrov:
+Použijeme LangChain na pripojenie k GitHub modelom, čo je veľmi užitočné, pretože vám to poskytuje bezplatný prístup k rôznym AI modelom. Najlepšie na tom je, že stačí len niekoľko jednoduchých konfiguračných parametrov, aby ste mohli začať:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -81,59 +193,58 @@ llm = ChatOpenAI(
     model="openai/gpt-4o-mini",
 )
 
-# Send a simple prompt
+# Odoslať jednoduchý prompt
 response = llm.invoke("What's the capital of France?")
 print(response.content)
 ```
+  
+**Rozobratie, čo sa tu deje:**  
+- **Vytvára** LangChain klienta pomocou triedy `ChatOpenAI` - to je váš vstup do AI!  
+- **Konfiguruje** pripojenie k GitHub modelom s vaším autentifikačným tokenom  
+- **Špecifikuje**, ktorý AI model použiť (`gpt-4o-mini`) – predstavte si to ako výber AI asistenta  
+- **Odosiela** vašu otázku cez metódu `invoke()` – tu sa deje kúzlo  
+- **Extrahuje** a zobrazí odpoveď – a voilà, rozprávate sa s AI!
 
-**Rozdelenie toho, čo sa tu deje:**
-- **Vytvorí** klienta LangChain pomocou triedy `ChatOpenAI` - toto je vaša brána k AI!
-- **Konfiguruje** pripojenie k GitHub modelom pomocou vášho autentifikačného tokenu
-- **Určuje**, ktorý AI model použiť (`gpt-4o-mini`) - predstavte si to ako výber vášho AI asistenta
-- **Odosiela** vašu otázku pomocou metódy `invoke()` - tu sa deje mágia
-- **Extrahuje** a zobrazuje odpoveď - a voilà, rozprávate sa s AI!
+> 🔧 **Poznámka k nastaveniu**: Ak používate GitHub Codespaces, máte šťastie – `GITHUB_TOKEN` je už nastavený! Pracujete lokálne? Žiadny problém, stačí si vytvoriť osobný prístupový token s potrebnými právami.
 
-> 🔧 **Poznámka k nastaveniu**: Ak používate GitHub Codespaces, máte šťastie - `GITHUB_TOKEN` je už nastavený! Pracujete lokálne? Žiadny problém, stačí si vytvoriť osobný prístupový token s potrebnými oprávneniami.
-
-**Očakávaný výstup:**
+**Očakávaný výstup:**  
 ```text
 The capital of France is Paris.
 ```
-
+  
 ```mermaid
 sequenceDiagram
-    participant App as Your Python App
+    participant App as Vaša Python aplikácia
     participant LC as LangChain
-    participant GM as GitHub Models
+    participant GM as GitHub modely
     participant AI as GPT-4o-mini
     
-    App->>LC: llm.invoke("What's the capital of France?")
-    LC->>GM: HTTP request with prompt
-    GM->>AI: Process prompt
-    AI->>GM: Generated response
-    GM->>LC: Return response
+    App->>LC: llm.invoke("Aké je hlavné mesto Francúzska?")
+    LC->>GM: HTTP požiadavka s výzvou
+    GM->>AI: Spracovať výzvu
+    AI->>GM: Vygenerovaná odpoveď
+    GM->>LC: Vrátiť odpoveď
     LC->>App: response.content
-```
+```  
+## Budovanie konverzačnej AI
 
-## Budovanie konverzačného AI
+Prvý príklad demonštruje základy, ale je to iba jedna výmena – položíte otázku, dostanete odpoveď a hotovo. V reálnych aplikáciách chcete, aby si vaša AI pamätala, o čom ste hovorili, podobne ako Watson a Holmes budovali svoje vyšetrovacie rozhovory v priebehu času.
 
-Tento prvý príklad demonštruje základy, ale je to len jednorazová výmena - položíte otázku, dostanete odpoveď a to je všetko. V reálnych aplikáciách chcete, aby si AI pamätalo, o čom ste diskutovali, podobne ako Watson a Holmes budovali svoje investigatívne rozhovory v priebehu času.
+Tu sa LangChain stáva obzvlášť užitočným. Poskytuje rôzne typy správ, ktoré pomáhajú štruktúrovať konverzácie a umožňujú dať vašej AI osobnosť. Budete vytvárať chatové skúsenosti, ktoré udržiavajú kontext a charakter.
 
-Tu sa LangChain stáva obzvlášť užitočným. Poskytuje rôzne typy správ, ktoré pomáhajú štruktúrovať konverzácie a umožňujú vám dať AI osobnosť. Budete vytvárať chatovacie zážitky, ktoré si udržujú kontext a charakter.
+### Porozumenie typom správ
 
-### Pochopenie typov správ
-
-Predstavte si tieto typy správ ako rôzne "klobúky", ktoré účastníci nosia v konverzácii. LangChain používa rôzne triedy správ na sledovanie toho, kto čo hovorí:
+Predstavte si tieto typy správ ako rôzne "klobúky", ktoré účastníci nosia v konverzácii. LangChain používa rôzne triedy správ na sledovanie, kto čo povedal:
 
 | Typ správy | Účel | Príklad použitia |
-|------------|------|------------------|
-| `SystemMessage` | Definuje osobnosť a správanie AI | "Ste užitočný asistent pre programovanie" |
-| `HumanMessage` | Reprezentuje vstup používateľa | "Vysvetlite, ako fungujú funkcie" |
-| `AIMessage` | Ukladá odpovede AI | Predchádzajúce odpovede AI v konverzácii |
+|--------------|---------|------------------|
+| `SystemMessage` | Definuje osobnosť a správanie AI | "Si nápomocný asistent pre kódovanie" |
+| `HumanMessage` | Reprezentuje vstup používateľa | "Vysvetli, ako fungujú funkcie" |
+| `AIMessage` | Ukladá odpovede AI | Predchádzajúce AI odpovede v rozhovore |
 
 ### Vytvorenie vašej prvej konverzácie
 
-Vytvorme konverzáciu, kde naše AI prevezme konkrétnu úlohu. Necháme ho stelesniť kapitána Picarda - postavu známu svojou diplomatickou múdrosťou a vodcovstvom:
+Vytvorme rozhovor, kde naša AI zaujme špecifickú rolu. Nech je to kapitán Picard – postava známa svojou diplomatickou múdrosťou a vodcovstvom:
 
 ```python
 messages = [
@@ -141,13 +252,13 @@ messages = [
     HumanMessage(content="Tell me about you"),
 ]
 ```
+  
+**Rozobratie nastavenia tejto konverzácie:**  
+- **Určuje** rolu a osobnosť AI cez `SystemMessage`  
+- **Dodáva** počiatočný používateľský dotaz cez `HumanMessage`  
+- **Vytvára** základ pre viackolový rozhovor
 
-**Rozdelenie nastavenia tejto konverzácie:**
-- **Stanovuje** úlohu a osobnosť AI prostredníctvom `SystemMessage`
-- **Poskytuje** počiatočný dotaz používateľa cez `HumanMessage`
-- **Vytvára** základ pre viacnásobnú konverzáciu
-
-Celý kód pre tento príklad vyzerá takto:
+Celý kód príkladu vyzerá takto:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -166,12 +277,12 @@ messages = [
 ]
 
 
-# works
+# funguje
 response  = llm.invoke(messages)
 print(response.content)
 ```
-
-Mali by ste vidieť výsledok podobný:
+  
+Mali by ste vidieť výstup podobný tomuto:
 
 ```text
 I am Captain Jean-Luc Picard, the commanding officer of the USS Enterprise (NCC-1701-D), a starship in the United Federation of Planets. My primary mission is to explore new worlds, seek out new life and new civilizations, and boldly go where no one has gone before. 
@@ -180,8 +291,8 @@ I believe in the importance of diplomacy, reason, and the pursuit of knowledge. 
 
 I hold the ideals of the Federation close to my heart, believing in the importance of cooperation, understanding, and respect for all sentient beings. My experiences have shaped my leadership style, and I strive to be a thoughtful and just captain. How may I assist you further?
 ```
-
-Na udržanie kontinuity konverzácie (namiesto resetovania kontextu pri každom volaní) musíte neustále pridávať odpovede do zoznamu správ. Podobne ako ústne tradície, ktoré uchovávali príbehy cez generácie, tento prístup buduje trvalú pamäť:
+  
+Aby ste udržali kontinuitu rozhovoru (namiesto resetovania kontextu pri každom novom spustení), musíte neustále pridávať odpovede do zoznamu správ. Rovnako ako ústne tradície, ktoré uchovávali príbehy po generácie, tento prístup vytvára trvalú pamäť:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -200,7 +311,7 @@ messages = [
 ]
 
 
-# works
+# funguje
 response  = llm.invoke(messages)
 
 print(response.content)
@@ -215,24 +326,47 @@ response  = llm.invoke(messages)
 print(response.content)
 
 ```
+  
+Celkom šikovné, však? Čo sa tu deje, je volanie LLM dvakrát – najprv s našimi počiatočnými dvoma správami, a potom znovu s celou históriou rozhovoru. Je to, akoby AI skutočne sledovala náš rozhovor!
 
-Celkom zaujímavé, však? Čo sa tu deje, je to, že voláme LLM dvakrát - najprv len s našimi počiatočnými dvoma správami, ale potom znova s celou históriou konverzácie. Je to, akoby AI skutočne sledovalo našu diskusiu!
-
-Keď spustíte tento kód, dostanete druhú odpoveď, ktorá znie niečo ako:
+Pri spustení tohto kódu dostanete druhú odpoveď, ktorá bude znieť asi takto:
 
 ```text
 Welcome aboard, Chris! It's always a pleasure to meet those who share a passion for exploration and discovery. While I cannot formally offer you a position on the Enterprise right now, I encourage you to pursue your aspirations. We are always in need of talented individuals with diverse skills and backgrounds. 
 
 If you are interested in space exploration, consider education and training in the sciences, engineering, or diplomacy. The values of curiosity, resilience, and teamwork are crucial in Starfleet. Should you ever find yourself on a starship, remember to uphold the principles of the Federation: peace, understanding, and respect for all beings. Your journey can lead you to remarkable adventures, whether in the stars or on the ground. Engage!
 ```
+  
+```mermaid
+sequenceDiagram
+    participant User
+    participant App
+    participant LangChain
+    participant AI
+    
+    User->>App: "Povedz mi o sebe"
+    App->>LangChain: [SystemMessage, HumanMessage]
+    LangChain->>AI: Formátovaná konverzácia
+    AI->>LangChain: Odpoveď kapitána Picarda
+    LangChain->>App: Objekt AIMessage
+    App->>User: Zobraziť odpoveď
+    
+    Note over App: Pridať AIMessage do konverzácie
+    
+    User->>App: "Môžem sa pridať k vašej posádke?"
+    App->>LangChain: [SystemMessage, HumanMessage, AIMessage, HumanMessage]
+    LangChain->>AI: Plný kontext konverzácie
+    AI->>LangChain: Kontextová odpoveď
+    LangChain->>App: Nová AIMessage
+    App->>User: Zobraziť kontextovú odpoveď
+```  
+Toto beriem ako "možno" ;)
 
-To beriem ako možno ;)
+## Streaming odpovede
 
-## Streamovanie odpovedí
+Všimli ste si niekedy, že ChatGPT akoby "písal" svoje odpovede v reálnom čase? To je práve streaming v akcii. Ako sledovať zručného kaligrafa pri práci – vidieť znaky objavovať sa ťah po ťahu namiesto toho, aby sa objavili naraz – streaming robí interakciu prirodzenejšou a poskytuje okamžitú spätnú väzbu.
 
-Už ste si niekedy všimli, ako ChatGPT "píše" svoje odpovede v reálnom čase? To je streamovanie v akcii. Podobne ako sledovanie zručného kaligrafa pri práci - vidieť, ako sa znaky objavujú ťah za ťahom namiesto toho, aby sa objavili naraz - streamovanie robí interakciu prirodzenejšou a poskytuje okamžitú spätnú väzbu.
-
-### Implementácia streamovania s LangChain
+### Implementácia streamingu s LangChain
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -245,35 +379,48 @@ llm = ChatOpenAI(
     streaming=True
 )
 
-# Stream the response
+# Streamujte odpoveď
 for chunk in llm.stream("Write a short story about a robot learning to code"):
     print(chunk.content, end="", flush=True)
 ```
+  
+**Prečo je streaming skvelý:**  
+- **Zobrazuje** obsah počas vytvárania – žiadne trápne čakanie!  
+- **Dáva** používateľom pocit, že sa niečo naozaj deje  
+- **Pôsobí** rýchlejšie, aj keď technicky nemusí byť  
+- **Umožňuje** používateľom začať čítať, kým AI ešte "premýšľa"
 
-**Prečo je streamovanie skvelé:**
-- **Zobrazuje** obsah, ako sa vytvára - už žiadne trápne čakanie!
-- **Dáva** používateľom pocit, že sa niečo skutočne deje
-- **Pôsobí** rýchlejšie, aj keď technicky nie je
-- **Umožňuje** používateľom začať čítať, zatiaľ čo AI stále "premýšľa"
+> 💡 **Tip pre používateľský zážitok**: Streaming naozaj vynikne pri dlhších odpovediach ako vysvetlenia kódu, tvorivom písaní alebo detailných tutoriáloch. Vaši používatelia si obľúbia vidieť progres namiesto pozerania na prázdnu obrazovku!
 
-> 💡 **Tip pre používateľskú skúsenosť**: Streamovanie naozaj vyniká, keď pracujete s dlhšími odpoveďami, ako sú vysvetlenia kódu, kreatívne písanie alebo podrobné tutoriály. Vaši používatelia budú milovať sledovanie pokroku namiesto pozerania na prázdnu obrazovku!
+### 🎯 Pedagogická kontrola: Výhody abstrakcie frameworku
+
+**Zastavte sa a zamyslite sa**: Práve ste zažili silu abstrahovaní AI frameworku. Porovnajte, čo ste sa naučili, s priamymi API volaniami z predchádzajúcich lekcií.
+
+**Rýchle sebahodnotenie**:  
+- Dokážete vysvetliť, ako LangChain zjednodušuje správu rozhovorov oproti manuálnemu sledovaniu správ?  
+- Aký je rozdiel medzi metódami `invoke()` a `stream()`, a kedy ktorú použiť?  
+- Ako zlepšuje systém typov správ organizáciu kódu?
+
+**Prepojenie s realitou**: Vzor abstrakcií, ktoré ste sa naučili (typy správ, streaming rozhrania, pamäť rozhovorov), sa používajú v každej veľkej AI aplikácii – od rozhrania ChatGPT po kódovacieho asistenta GitHub Copilot. Ovládate rovnaké architektonické vzory ako profesionálne AI vývojárske tímy.
+
+**Výzva**: Ako by ste navrhli abstrakciu frameworku na spracovanie rôznych poskytovateľov AI modelov (OpenAI, Anthropic, Google) cez jedno rozhranie? Zvážte výhody a kompromisy.
 
 ## Šablóny promptov
 
-Šablóny promptov fungujú ako rétorické štruktúry používané v klasickej rétorike - predstavte si, ako by Cicero prispôsobil svoje vzorce reči pre rôzne publikum, pričom by si zachoval rovnaký presvedčivý rámec. Umožňujú vám vytvárať opakovane použiteľné prompty, kde môžete vymeniť rôzne časti informácií bez toho, aby ste museli všetko prepisovať od začiatku. Keď nastavíte šablónu, stačí len vyplniť premenné potrebnými hodnotami.
+Šablóny promptov fungujú ako rétorické štruktúry používané v klasickej oratórii – predstavte si, ako Cicero prispôsoboval svoje prejavy rôznym publikám, pričom si zachovával rovnaký presvedčivý rámec. Umožňujú vám vytvárať znovu použiteľné prompty, kde môžete vymeniť rôzne informácie bez prepísania všetkého od začiatku. Keď šablónu nastavíte, len zaplníte premenné hodnotami, ktoré potrebujete.
 
-### Vytvorenie opakovane použiteľných promptov
+### Vytváranie znovu použiteľných promptov
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
 
-# Define a template for code explanations
+# Definujte šablónu pre vysvetlenia kódu
 template = ChatPromptTemplate.from_messages([
     ("system", "You are an expert programming instructor. Explain concepts clearly with examples."),
     ("human", "Explain {concept} in {language} with a practical example for {skill_level} developers")
 ])
 
-# Use the template with different values
+# Použite šablónu s rôznymi hodnotami
 questions = [
     {"concept": "functions", "language": "JavaScript", "skill_level": "beginner"},
     {"concept": "classes", "language": "Python", "skill_level": "intermediate"},
@@ -285,16 +432,16 @@ for question in questions:
     response = llm.invoke(prompt)
     print(f"Topic: {question['concept']}\n{response.content}\n---\n")
 ```
-
-**Prečo si zamilujete používanie šablón:**
-- **Udržuje** vaše prompty konzistentné v celej aplikácii
-- **Žiadne viac** chaotické spájanie reťazcov - len čisté, jednoduché premenné
-- **Vaše AI** sa správa predvídateľne, pretože štruktúra zostáva rovnaká
-- **Aktualizácie** sú jednoduché - zmeňte šablónu raz a je opravená všade
+  
+**Prečo si zamilujete používanie šablón:**  
+- **Zabezpečuje** konzistentnosť promptov v celej aplikácii  
+- **Koniec s** neprehľadným zlučovaním reťazcov – len čisté, jednoduché premenné  
+- **Vaša AI** sa správa predvídateľne, pretože štruktúra zostáva rovnaká  
+- **Aktualizácie** sú jednoduché – zmeňte šablónu raz a je to opravené všade
 
 ## Štruktúrovaný výstup
 
-Už ste niekedy boli frustrovaní pri pokuse analyzovať AI odpovede, ktoré sa vracajú ako neštruktúrovaný text? Štruktúrovaný výstup je ako naučiť vaše AI dodržiavať systematický prístup, ktorý používal Linnaeus na biologickú klasifikáciu - organizovaný, predvídateľný a ľahko použiteľný. Môžete požiadať o JSON, konkrétne dátové štruktúry alebo akýkoľvek formát, ktorý potrebujete.
+Už ste sa niekedy rozčuľovali, keď ste sa snažili rozparsovať odpovede AI, ktoré prišli ako nestruktúrovaný text? Štruktúrovaný výstup je ako naučiť vašu AI nasledovať systematický prístup, ktorý používal Linnaeus na biologickú klasifikáciu – organizovaný, predvídateľný a ľahko použiteľný. Môžete si žiadať JSON, špecifické dátové štruktúry alebo akýkoľvek formát, ktorý potrebujete.
 
 ### Definovanie schém výstupu
 
@@ -309,19 +456,19 @@ class CodeReview(BaseModel):
     improvements: list[str] = Field(description="List of suggested improvements")
     overall_feedback: str = Field(description="Summary feedback")
 
-# Set up the parser
+# Nastaviť parser
 parser = JsonOutputParser(pydantic_object=CodeReview)
 
-# Create prompt with format instructions
+# Vytvoriť prompt s formátovacími inštrukciami
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a code reviewer. {format_instructions}"),
     ("human", "Review this code: {code}")
 ])
 
-# Format the prompt with instructions
+# Naformátovať prompt s inštrukciami
 chain = prompt | llm | parser
 
-# Get structured response
+# Získať štruktúrovanú odpoveď
 code_sample = """
 def calculate_average(numbers):
     return sum(numbers) / len(numbers)
@@ -335,20 +482,20 @@ result = chain.invoke({
 print(f"Score: {result['score']}")
 print(f"Strengths: {', '.join(result['strengths'])}")
 ```
-
-**Prečo je štruktúrovaný výstup prelomový:**
-- **Žiadne viac** hádanie, aký formát dostanete späť - je konzistentný vždy
-- **Pripojí sa** priamo do vašich databáz a API bez ďalšej práce
-- **Zachytí** divné AI odpovede skôr, než rozbijú vašu aplikáciu
-- **Robí** váš kód čistejším, pretože presne viete, s čím pracujete
+  
+**Prečo je štruktúrovaný výstup revolučný:**  
+- **Nuž už nemusíte** hádať, aký formát dostanete späť – je konzistentný zakaždým  
+- **Integruje sa** priamo do vašich databáz a API bez dodatočnej práce  
+- **Zachytáva** divné AI odpovede skôr, než aplikáciu zlomia  
+- **Robí** váš kód prehľadnejším, pretože presne viete, s čím pracujete
 
 ## Volanie nástrojov
 
-Teraz sa dostávame k jednej z najvýkonnejších funkcií: nástroje. Takto dávate svojmu AI praktické schopnosti nad rámec konverzácie. Podobne ako stredoveké cechy vyvíjali špecializované nástroje pre konkrétne remeslá, môžete vybaviť svoje AI zameranými nástrojmi. Popíšete, aké nástroje sú k dispozícii, a keď niekto požiada o niečo, čo zodpovedá, vaše AI môže konať.
+Teraz prichádzame k jednej z najsilnejších funkcií: nástroje. Takto dávate svojej AI praktické schopnosti nad rámec konverzácie. Rovnako ako stredoveké cechy vyvíjali špecializované nástroje na konkrétne remeslá, môžete vašu AI vybaviť zameranými nástrojmi. Opíšete, aké nástroje sú k dispozícii, a keď niekto požiada o niečo, čo zodpovedá, vaša AI môže konať.
 
 ### Použitie Pythonu
 
-Pridajme niekoľko nástrojov takto:
+Pridajme nejaké nástroje takto:
 
 ```python
 from typing_extensions import Annotated, TypedDict
@@ -356,7 +503,7 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anotácie musia mať typ a môžu voliteľne obsahovať predvolenú hodnotu a popis (v tomto poradí).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
@@ -366,10 +513,10 @@ functions = {
     "add": lambda a, b: a + b
 }
 ```
+  
+Čo sa tu deje? Vytvárame plán pre nástroj nazvaný `add`. Dedením z `TypedDict` a použitím tých moderných `Annotated` typov pre `a` a `b` dávame LLM jasnú predstavu, čo tento nástroj robí a čo potrebuje. Slovník `functions` je ako naša skrinka s náradím – hovorí nášmu kódu presne, čo má robiť, keď sa AI rozhodne použiť konkrétny nástroj.
 
-Čo sa tu deje? Vytvárame plán pre nástroj nazvaný `add`. Tým, že dedíme z `TypedDict` a používame tie šikovné typy `Annotated` pre `a` a `b`, dávame LLM jasný obraz o tom, čo tento nástroj robí a čo potrebuje. Slovník `functions` je ako naša sada nástrojov - hovorí nášmu kódu presne, čo má robiť, keď sa AI rozhodne použiť konkrétny nástroj.
-
-Pozrime sa, ako zavoláme LLM s týmto nástrojom:
+Teraz si pozrime, ako voláme LLM s týmto nástrojom:
 
 ```python
 llm = ChatOpenAI(
@@ -380,10 +527,10 @@ llm = ChatOpenAI(
 
 llm_with_tools = llm.bind_tools(tools)
 ```
+  
+Tu voláme `bind_tools` s našim poľom `tools` a tým pádom má LLM `llm_with_tools` teraz znalosti o tomto nástroji.
 
-Tu voláme `bind_tools` s naším poľom `tools`, a tým pádom má LLM `llm_with_tools` teraz vedomosti o tomto nástroji.
-
-Na použitie tohto nového LLM môžeme napísať nasledujúci kód:
+Na používanie tohto nového LLM môžeme použiť nasledujúci kód:
 
 ```python
 query = "What is 3 + 12?"
@@ -394,8 +541,8 @@ if(res.tool_calls):
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
-
-Teraz, keď zavoláme `invoke` na tomto novom LLM, ktoré má nástroje, môže byť vlastnosť `tool_calls` naplnená. Ak áno, akýkoľvek identifikovaný nástroj má vlastnosti `name` a `args`, ktoré identifikujú, aký nástroj by mal byť použitý a s akými argumentmi. Celý kód vyzerá takto:
+  
+Keď teraz zavoláme `invoke` na tomto novom llm, ktorý má nástroje, možno bude vlastnosť `tool_calls` vyplnená. Ak áno, každý identifikovaný nástroj má vlastnosti `name` a `args`, ktoré určujú, ktorý nástroj sa má volať a s akými argumentmi. Celý kód vyzerá takto:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -406,7 +553,7 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anotácie musia mať typ a môžu voliteľne obsahovať predvolenú hodnotu a popis (v tomto poradí).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
@@ -432,29 +579,28 @@ if(res.tool_calls):
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
-
-Po spustení tohto kódu by ste mali vidieť výstup podobný:
+  
+Pri spustení tohto kódu by ste mali vidieť výstup podobný tomuto:
 
 ```text
 TOOL CALL:  15
 CONTENT: 
 ```
-
-AI preskúmalo "Čo je 3 + 12" a rozpoznalo to ako úlohu pre nástroj `add`. Podobne ako zručný knihovník vie, na ktorý odkaz sa obrátiť na základe typu otázky, urobilo toto rozhodnutie na základe názvu nástroja, popisu a špecifikácií polí. Výsledok 15 pochádza z nášho slovníka `functions`, ktorý vykonáva nástroj:
+  
+AI preskúmala "Čo je 3 + 12" a rozpoznala to ako úlohu pre nástroj `add`. Rovnako ako skúsený knihovník vie, ktorú referenciu konzultovať podľa typu kladenej otázky, urobila toto rozhodnutie na základe názvu nástroja, popisu a špecifikácie polí. Výsledok 15 pochádza z vykonania nástroja cez náš slovník `functions`:
 
 ```python
 print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 ```
-
+  
 ### Zaujímavejší nástroj, ktorý volá webové API
-
-Sčítanie čísel demonštruje koncept, ale skutočné nástroje zvyčajne vykonávajú zložitejšie operácie, ako je volanie webových API. Rozšírme náš príklad, aby AI získalo obsah z internetu - podobne ako telegrafní operátori kedysi spájali vzdialené lokality:
+Pridávanie čísel demonštruje koncept, ale skutočné nástroje zvyčajne vykonávajú zložitejšie operácie, ako napríklad volanie webových API. Rozšírme náš príklad tak, že AI načíta obsah z internetu – podobne ako kedysi telegrafní operátori spájali vzdialené miesta:
 
 ```python
 class joke(TypedDict):
     """Tell a joke."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anotácie musia mať typ a môžu voliteľne obsahovať predvolenú hodnotu a popis (v tomto poradí).
     category: Annotated[str, ..., "The joke category"]
 
 def get_joke(category: str) -> str:
@@ -470,17 +616,43 @@ functions = {
 
 query = "Tell me a joke about animals"
 
-# the rest of the code is the same
+# zvyšok kódu je rovnaký
 ```
 
-Teraz, ak spustíte tento kód, dostanete odpoveď, ktorá znie niečo ako:
+Ak teraz spustíte tento kód, dostanete odpoveď s niečím ako:
 
 ```text
 TOOL CALL:  Chuck Norris once rode a nine foot grizzly bear through an automatic car wash, instead of taking a shower.
 CONTENT:  
 ```
 
-Tu je celý kód:
+```mermaid
+flowchart TD
+    A[Používateľský dopyt: "Povedz mi vtip o zvieratách"] --> B[Analýza LangChain]
+    B --> C{Nástroj dostupný?}
+    C -->|Áno| D[Vybrať nástroj na vtipy]
+    C -->|Nie| E[Vygenerovať priamu odpoveď]
+    
+    D --> F[Extrahovať parametre]
+    F --> G[Zavolať vtip(kategória="zvieratá")]
+    G --> H[API požiadavka na chucknorris.io]
+    H --> I[Vrátiť obsah vtipu]
+    I --> J[Zobraziť používateľovi]
+    
+    E --> K[AI-generovaná odpoveď]
+    K --> J
+    
+    subgraph "Vrstva definície nástroja"
+        L[TypedDict Schéma]
+        M[Implementácia funkcie]
+        N[Validácia parametrov]
+    end
+    
+    D --> L
+    F --> N
+    G --> M
+```
+Tu je kód v celej jeho podobe:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -491,14 +663,14 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anotácie musia mať typ a môžu voliteľne obsahovať predvolenú hodnotu a popis (v tomto poradí).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
 class joke(TypedDict):
     """Tell a joke."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anotácie musia mať typ a môžu voliteľne obsahovať predvolenú hodnotu a popis (v tomto poradí).
     category: Annotated[str, ..., "The joke category"]
 
 tools = [add, joke]
@@ -527,16 +699,16 @@ query = "Tell me a joke about animals"
 res = llm_with_tools.invoke(query)
 if(res.tool_calls):
     for tool in res.tool_calls:
-        # print("TOOL CALL: ", tool)
+        # print("VOLANIE NÁSTROJA: ", nástroj)
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
 
-## Embeddings a spracovanie dokumentov
+## Embeddingy a spracovanie dokumentov
 
-Embeddings predstavujú jedno z najelegantnejších riešení v modernej AI. Predstavte si, že by ste mohli vziať akýkoľvek text a previesť ho na číselné súradnice, ktoré zachytávajú jeho význam. Presne to embeddings robia - transformujú text na body v multidimenzionálnom priestore, kde podobné koncepty tvoria zhluky. Je to ako mať súradnicový systém pre myšlienky, pripomínajúci, ako Mendelejev usporiadal periodickú tabuľku podľa vlastností atómov.
+Embeddingy predstavujú jedno z najvyspelejších riešení v modernej AI. Predstavte si, že by ste mohli z ľubovoľného textu vytvoriť číselné súradnice, ktoré zachytávajú jeho význam. Presne to embeddingy robia – transformujú text na body v viacrozmernom priestore, kde sa podobné koncepty zhlukujú. Je to ako mať súradnicový systém pre myšlienky, pripomínajúci, ako Mendelejev usporiadal periodickú tabuľku podľa atómových vlastností.
 
-### Vytváranie a používanie embeddings
+### Vytváranie a používanie embeddingov
 
 ```python
 from langchain_openai import OpenAIEmbeddings
@@ -544,24 +716,24 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 
-# Initialize embeddings
+# Inicializujte vektory
 embeddings = OpenAIEmbeddings(
     api_key=os.environ["GITHUB_TOKEN"],
     base_url="https://models.github.ai/inference",
     model="text-embedding-3-small"
 )
 
-# Load and split documents
+# Načítajte a rozdeľte dokumenty
 loader = TextLoader("documentation.txt")
 documents = loader.load()
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
-# Create vector store
+# Vytvorte úložisko vektorov
 vectorstore = FAISS.from_documents(texts, embeddings)
 
-# Perform similarity search
+# Vykonajte vyhľadávanie podľa podobnosti
 query = "How do I handle user authentication?"
 similar_docs = vectorstore.similarity_search(query, k=3)
 
@@ -569,7 +741,7 @@ for doc in similar_docs:
     print(f"Relevant content: {doc.page_content[:200]}...")
 ```
 
-### Načítavače dokumentov pre rôzne formáty
+### Nahrávače dokumentov pre rôzne formáty
 
 ```python
 from langchain_community.document_loaders import (
@@ -579,170 +751,396 @@ from langchain_community.document_loaders import (
     WebBaseLoader
 )
 
-# Load different document types
+# Načítať rôzne typy dokumentov
 pdf_loader = PyPDFLoader("manual.pdf")
 csv_loader = CSVLoader("data.csv")
 json_loader = JSONLoader("config.json")
 web_loader = WebBaseLoader("https://example.com/docs")
 
-# Process all documents
+# Spracovať všetky dokumenty
 all_documents = []
 for loader in [pdf_loader, csv_loader, json_loader, web_loader]:
     docs = loader.load()
     all_documents.extend(docs)
 ```
 
-**Čo môžete robiť s embeddings:**
-- **Vytvárať** vyhľadávanie, ktoré skutočne rozumie tomu, čo myslíte, nielen
-3. **Personalizované učenie**: Používajte systémové správy na prispôsobenie odpovedí rôznym úrovniam zručností  
-4. **Formátovanie odpovedí**: Implementujte štruktúrovaný výstup pre kvízové otázky  
+**Čo môžete robiť s embeddingami:**
+- **Vytvoriť** vyhľadávanie, ktoré naozaj rozumie, čo máte na mysli, nielen hľadanie kľúčových slov
+- **Vytvoriť** AI, ktorá dokáže odpovedať na otázky o vašich dokumentoch
+- **Tvoriť** odporúčacie systémy, ktoré navrhujú skutočne relevantný obsah
+- **Automaticky** organizovať a kategorizovať váš obsah
 
-### Kroky implementácie  
+```mermaid
+flowchart LR
+    A[Dokumenty] --> B[Rozdeľovač textu]
+    B --> C[Vytvorenie vektorov]
+    C --> D[Vektorové uloženisko]
+    
+    E[Dotaz používateľa] --> F[Vektor dotazu]
+    F --> G[Vyhľadávanie podobnosti]
+    G --> D
+    D --> H[Relevantné dokumenty]
+    H --> I[Odpoveď AI]
+    
+    subgraph "Vektorový priestor"
+        J[Dokument A: [0.1, 0.8, 0.3...]]
+        K[Dokument B: [0.2, 0.7, 0.4...]]
+        L[Dotaz: [0.15, 0.75, 0.35...]]
+    end
+    
+    C --> J
+    C --> K
+    F --> L
+    G --> J
+    G --> K
+```
+## Vytvorenie kompletnej AI aplikácie
 
-**Krok 1: Nastavte svoje prostredie**  
+Teraz všetko, čo ste sa naučili, integrujeme do komplexnej aplikácie – pomocníka na kódovanie, ktorý dokáže odpovedať na otázky, používať nástroje a udržiavať pamäť konverzácie. Podobne ako tlačiarenský lis spojil existujúce technológie (pohyblivé písmo, atrament, papier a tlak) do niečoho transformačného, spojíme naše AI komponenty do praktickej a užitočnej podoby.
+
+### Príklad kompletnej aplikácie
+
+```python
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
+from langchain_community.vectorstores import FAISS
+from typing_extensions import Annotated, TypedDict
+import os
+import requests
+
+class CodingAssistant:
+    def __init__(self):
+        self.llm = ChatOpenAI(
+            api_key=os.environ["GITHUB_TOKEN"],
+            base_url="https://models.github.ai/inference",
+            model="openai/gpt-4o-mini"
+        )
+        
+        self.conversation_history = [
+            SystemMessage(content="""You are an expert coding assistant. 
+            Help users learn programming concepts, debug code, and write better software.
+            Use tools when needed and maintain a helpful, encouraging tone.""")
+        ]
+        
+        # Definujte nástroje
+        self.setup_tools()
+    
+    def setup_tools(self):
+        class web_search(TypedDict):
+            """Search for programming documentation or examples."""
+            query: Annotated[str, "Search query for programming help"]
+        
+        class code_formatter(TypedDict):
+            """Format and validate code snippets."""
+            code: Annotated[str, "Code to format"]
+            language: Annotated[str, "Programming language"]
+        
+        self.tools = [web_search, code_formatter]
+        self.llm_with_tools = self.llm.bind_tools(self.tools)
+    
+    def chat(self, user_input: str):
+        # Pridajte správu používateľa do konverzácie
+        self.conversation_history.append(HumanMessage(content=user_input))
+        
+        # Získajte odpoveď AI
+        response = self.llm_with_tools.invoke(self.conversation_history)
+        
+        # Spracujte volania nástrojov, ak existujú
+        if response.tool_calls:
+            for tool_call in response.tool_calls:
+                tool_result = self.execute_tool(tool_call)
+                print(f"🔧 Tool used: {tool_call['name']}")
+                print(f"📊 Result: {tool_result}")
+        
+        # Pridajte odpoveď AI do konverzácie
+        self.conversation_history.append(response)
+        
+        return response.content
+    
+    def execute_tool(self, tool_call):
+        tool_name = tool_call['name']
+        args = tool_call['args']
+        
+        if tool_name == 'web_search':
+            return f"Found documentation for: {args['query']}"
+        elif tool_name == 'code_formatter':
+            return f"Formatted {args['language']} code: {args['code'][:50]}..."
+        
+        return "Tool execution completed"
+
+# Príklad použitia
+assistant = CodingAssistant()
+
+print("🤖 Coding Assistant Ready! Type 'quit' to exit.\n")
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == 'quit':
+        break
+    
+    response = assistant.chat(user_input)
+    print(f"🤖 Assistant: {response}\n")
+```
+
+**Architektúra aplikácie:**
+
+```mermaid
+graph TD
+    A[Zadanie používateľa] --> B[Asistent programovania]
+    B --> C[Ukladanie konverzácie]
+    B --> D[Detekcia nástrojov]
+    B --> E[Spracovanie LLM]
+    
+    D --> F[Nástroj na vyhľadávanie na webe]
+    D --> G[Nástroj na formátovanie kódu]
+    
+    E --> H[Generovanie odpovede]
+    F --> H
+    G --> H
+    
+    H --> I[Používateľské rozhranie]
+    H --> C
+```
+**Kľúčové funkcie, ktoré sme implementovali:**
+- **Pamätá si** celú vašu konverzáciu pre kontinuitu kontextu
+- **Vykonáva akcie** cez volanie nástrojov, nielen rozhovor
+- **Nasleduje** predvídateľné vzory interakcie
+- **Spravuje** automaticky správu chýb a komplexné pracovné toky
+
+### 🎯 Pedagogické zhodnotenie: Architektúra produkčnej AI
+
+**Pochopenie architektúry**: Vytvorili ste kompletnú AI aplikáciu, ktorá kombinuje správu konverzácie, volanie nástrojov a štruktúrované pracovné toky. Toto predstavuje vývoj produkčnej úrovne AI aplikácií.
+
+**Kľúčové zvládnuté koncepty**:
+- **Architektúra založená na triedach**: Organizovaná, udržiavateľná štruktúra AI aplikácie
+- **Integrácia nástrojov**: Vlastná funkcionalita nad rámec konverzácie
+- **Správa pamäte**: Perzistentný kontext konverzácie
+- **Správa chýb**: Robustné správanie aplikácie
+
+**Spojenie s priemyslom**: Vzorce architektúry, ktoré ste implementovali (triedy konverzácie, systémy nástrojov, správa pamäte), sú rovnaké vzory používané v podnikových AI aplikáciách ako Slack AI asistent, GitHub Copilot a Microsoft Copilot. Staviate s profesionálnym architektonickým myslením.
+
+**Otázka na zamyslenie**: Ako by ste rozšírili túto aplikáciu pre viacerých používateľov, perzistentné ukladanie dát alebo integráciu s externými databázami? Zvážte škálovateľnosť a výzvy správy stavu.
+
+## Zadanie: Vytvorte si vlastného AI študijného asistenta
+
+**Cieľ**: Vytvoriť AI aplikáciu, ktorá pomáha študentom učiť sa programovacie koncepty poskytovaním vysvetlení, príkladov kódu a interaktívnych kvízov.
+
+### Požiadavky
+
+**Základné funkcie (povinné):**
+1. **Rozhranie pre rozhovor**: Implementujte chat systém, ktorý si udržiava kontext pri viacerých otázkach
+2. **Vzdelávacie nástroje**: Vytvorte aspoň dva nástroje na podporu učenia:
+   - Nástroj na vysvetlenie kódu
+   - Generátor otázok na koncepty
+3. **Personalizované učenie**: Použite systémové správy na prispôsobenie odpovedí rôznym úrovniam znalostí
+4. **Formátovanie odpovedí**: Implementujte štruktúrovaný výstup pre otázky kvízu
+
+### Kroky implementácie
+
+**Krok 1: Nastavte si prostredie**
 ```bash
 pip install langchain langchain-openai
 ```
-  
-**Krok 2: Základná funkcia chatu**  
-- Vytvorte triedu `StudyAssistant`  
-- Implementujte pamäť konverzácie  
-- Pridajte konfiguráciu osobnosti na podporu vzdelávania  
 
-**Krok 3: Pridajte vzdelávacie nástroje**  
-- **Vysvetľovač kódu**: Rozkladá kód na zrozumiteľné časti  
-- **Generátor kvízov**: Vytvára otázky o programovacích konceptoch  
-- **Sledovač pokroku**: Sleduje pokryté témy  
+**Krok 2: Základná funkcionalita chatu**
+- Vytvorte triedu `StudyAssistant`
+- Implementujte pamäť konverzácie
+- Pridajte konfiguráciu osobnosti pre vzdelávaciu podporu
 
-**Krok 4: Rozšírené funkcie (voliteľné)**  
-- Implementujte streamovanie odpovedí pre lepší používateľský zážitok  
-- Pridajte načítanie dokumentov na začlenenie učebných materiálov  
-- Vytvorte embeddings na vyhľadávanie obsahu na základe podobnosti  
+**Krok 3: Pridajte vzdelávacie nástroje**
+- **Vysvetľovač kódu**: Rozkladá kód na pochopiteľné časti
+- **Generátor kvízov**: Vytvára otázky o programovacích konceptoch
+- **Sledovač progresu**: Sleduje pokryté témy
 
-### Kritériá hodnotenia  
+**Krok 4: Rozšírené funkcie (voliteľné)**
+- Implementujte streamované odpovede pre lepší používateľský zážitok
+- Pridajte nahrávanie dokumentov na začlenenie učebných materiálov
+- Vytvorte embeddingy pre vyhľadávanie na základe podobnosti
 
-| Funkcia | Výborné (4) | Dobré (3) | Uspokojivé (2) | Potrebuje zlepšenie (1) |  
-|---------|-------------|-----------|----------------|--------------------------|  
-| **Tok konverzácie** | Prirodzené, kontextovo uvedomelé odpovede | Dobré udržanie kontextu | Základná konverzácia | Žiadna pamäť medzi výmenami |  
-| **Integrácia nástrojov** | Viacero užitočných nástrojov funguje bez problémov | 2+ nástroje implementované správne | 1-2 základné nástroje | Nástroje nefunkčné |  
-| **Kvalita kódu** | Čistý, dobre dokumentovaný, spracovanie chýb | Dobrá štruktúra, nejaká dokumentácia | Základná funkčnosť funguje | Zlá štruktúra, žiadne spracovanie chýb |  
-| **Vzdelávacia hodnota** | Skutočne užitočné pre učenie, adaptívne | Dobrá podpora učenia | Základné vysvetlenia | Obmedzený vzdelávací prínos |  
+### Kritériá hodnotenia
 
-### Ukážková štruktúra kódu  
+| Funkcia | Výborné (4) | Dobré (3) | Úplné (2) | Treba zlepšiť (1) |
+|---------|-------------|-----------|-----------|-------------------|
+| **Tok konverzácie** | Prirodzené, kontextovo vedomé odpovede | Dobré udržiavanie kontextu | Základná konverzácia | Žiadna pamäť medzi výmenami |
+| **Integrácia nástrojov** | Viacero užitočných nástrojov bezproblémovo | 2+ nástroje správne implementované | 1-2 základné nástroje | Nástroje nefungujú |
+| **Kvalita kódu** | Čistý, dobre dokumentovaný, správa chýb | Dobrá štruktúra, čiastočná dokumentácia | Základná funkčnosť | Slabá štruktúra, žiadna správa chýb |
+| **Vzdelávacia hodnota** | Naozaj nápomocné pri učení, adaptívne | Dobrá podpora učenia | Základné vysvetlenia | Obmedzený vzdelávací prínos |
+
+### Vzorová štruktúra kódu
 
 ```python
 class StudyAssistant:
     def __init__(self, skill_level="beginner"):
-        # Initialize LLM, tools, and conversation memory
+        # Inicializovať LLM, nástroje a pamäť konverzácie
         pass
     
     def explain_code(self, code, language):
-        # Tool: Explain how code works
+        # Nástroj: Vysvetliť, ako kód funguje
         pass
     
     def generate_quiz(self, topic, difficulty):
-        # Tool: Create practice questions
+        # Nástroj: Vytvoriť cvičné otázky
         pass
     
     def chat(self, user_input):
-        # Main conversation interface
+        # Hlavné rozhranie konverzácie
         pass
 
-# Example usage
+# Príklad použitia
 assistant = StudyAssistant(skill_level="intermediate")
 response = assistant.chat("Explain how Python functions work")
 ```
-  
-**Bonusové výzvy:**  
-- Pridajte schopnosti hlasového vstupu/výstupu  
-- Implementujte webové rozhranie pomocou Streamlit alebo Flask  
-- Vytvorte databázu znalostí z učebných materiálov pomocou embeddings  
-- Pridajte sledovanie pokroku a personalizované učebné cesty  
 
-## Zhrnutie  
+**Bonusové výzvy:**
+- Pridajte hlasové vstupy/výstupy
+- Implementujte webové rozhranie pomocou Streamlit alebo Flask
+- Vytvorte vedomostnú databázu z učebných materiálov pomocou embeddingov
+- Pridajte sledovanie progresu a personalizované učebné cesty
 
-🎉 Teraz ste zvládli základy vývoja AI frameworkov a naučili sa, ako vytvárať sofistikované AI aplikácie pomocou LangChain. Ako pri dokončení komplexného učňovského programu, získali ste rozsiahlu sadu zručností. Poďme si zhrnúť, čo ste dosiahli.  
+## 📈 Váš časový horizont zvládnutia vývoja AI frameworku
 
-### Čo ste sa naučili  
+```mermaid
+timeline
+    title Vývojový proces produkčného AI rámca
+    
+    section Základy rámca
+        Pochopenie abstrakcií
+            : Rozhodnutia medzi hlavným rámcom a API
+            : Naučiť sa základné koncepty LangChain
+            : Implementovať systémy typov správ
+        
+        Základná integrácia
+            : Pripojenie k poskytovateľom AI
+            : Riešiť autentifikáciu
+            : Spravovať konfiguráciu
+    
+    section Systémy konverzácie
+        Správa pamäti
+            : Vytvoriť históriu konverzácie
+            : Implementovať sledovanie kontextu
+            : Riešiť perzistenciu relácií
+        
+        Pokročilé interakcie
+            : Ovládnuť streamovanie odpovedí
+            : Vytvárať šablóny promptov
+            : Implementovať štruktúrovaný výstup
+    
+    section Integrácia nástrojov
+        Vývoj vlastných nástrojov
+            : Navrhovať schémy nástrojov
+            : Implementovať volanie funkcií
+            : Riešiť externé API
+        
+        Automatizácia pracovných tokov
+            : Reťaziť viacero nástrojov
+            : Vytvárať rozhodovacie stromy
+            : Vytvárať správanie agentov
+    
+    section Produkčné aplikácie
+        Kompletná architektúra systému
+            : Kombinovať všetky funkcie rámca
+            : Implementovať hranice chýb
+            : Vytvárať udržiavateľný kód
+        
+        Pripravenosť pre podnik
+            : Riešiť otázky škálovateľnosti
+            : Implementovať monitorovanie
+            : Vytvárať stratégie nasadzovania
+```
+**🎓 Milník ukončenia štúdia**: Úspešne ste zvládli vývoj AI frameworku pomocou rovnakých nástrojov a vzorov, ktoré poháňajú moderné AI aplikácie. Tieto zručnosti predstavujú špičku vývoja AI aplikácií a pripravujú vás na tvorbu inteligentných systémov podnikovej úrovne.
 
-**Základné koncepty frameworku:**  
-- **Výhody frameworkov**: Pochopenie, kedy si vybrať frameworky namiesto priamych API volaní  
-- **Základy LangChain**: Nastavenie a konfigurácia pripojení AI modelov  
-- **Typy správ**: Používanie `SystemMessage`, `HumanMessage` a `AIMessage` na štruktúrované konverzácie  
+**🔄 Schopnosti na ďalšiu úroveň**:
+- Pripravení preskúmať pokročilé AI architektúry (agentné, multi-agentné systémy)
+- Privyrábanie systémov RAG s vektorovými databázami
+- Vybavení na tvorbu multi-modálnych AI aplikácií
+- Základy pripravené na škálovanie a optimalizáciu AI aplikácií
 
-**Pokročilé funkcie:**  
-- **Volanie nástrojov**: Vytváranie a integrácia vlastných nástrojov na rozšírené schopnosti AI  
-- **Pamäť konverzácie**: Udržiavanie kontextu naprieč viacerými výmenami v konverzácii  
-- **Streamovanie odpovedí**: Implementácia doručovania odpovedí v reálnom čase  
-- **Šablóny promptov**: Vytváranie opakovane použiteľných, dynamických promptov  
-- **Štruktúrovaný výstup**: Zabezpečenie konzistentných, analyzovateľných odpovedí AI  
-- **Embeddings**: Vytváranie semantického vyhľadávania a spracovania dokumentov  
+## Zhrnutie
 
-**Praktické aplikácie:**  
-- **Vytváranie kompletných aplikácií**: Kombinovanie viacerých funkcií do aplikácií pripravených na produkciu  
-- **Spracovanie chýb**: Implementácia robustného spracovania chýb a validácie  
-- **Integrácia nástrojov**: Vytváranie vlastných nástrojov, ktoré rozširujú schopnosti AI  
+🎉 Teraz ste zvládli základy vývoja AI frameworkov a naučili ste sa, ako stavať sofistikované AI aplikácie pomocou LangChain. Ako keď ukončíte komplexné učňovské obdobie, získali ste obsiahly súbor zručností. Pozrime sa, čo ste dosiahli.
 
-### Kľúčové poznatky  
+### Čo ste sa naučili
 
-> 🎯 **Pamätajte**: AI frameworky ako LangChain sú v podstate vaši pomocníci, ktorí skrývajú zložitosť a ponúkajú množstvo funkcií. Sú ideálne, keď potrebujete pamäť konverzácie, volanie nástrojov alebo chcete pracovať s viacerými AI modelmi bez straty rozumu.  
+**Základné koncepty frameworku:**
+- **Výhody frameworkov**: Pochopenie, kedy zvoliť framework namiesto priamych volaní API
+- **Základy LangChain**: Nastavenie a konfigurácia pripojení k AI modelom
+- **Typy správ**: Použitie `SystemMessage`, `HumanMessage` a `AIMessage` pre štruktúrované rozhovory
 
-**Rozhodovací rámec pre integráciu AI:**  
+**Pokročilé funkcie:**
+- **Volanie nástrojov**: Tvorba a integrácia vlastných nástrojov pre rozšírené AI schopnosti
+- **Pamäť konverzácie**: Udržiavanie kontextu cez viaceré kolá rozhovoru
+- **Streaming odpovede**: Implementácia doručovania odpovedí v reálnom čase
+- **Šablóny výziev**: Stavanie znovupoužiteľných, dynamických promptov
+- **Štruktúrovaný výstup**: Zabezpečenie konzistentných a parsovateľných AI odpovedí
+- **Embeddingy**: Vytváranie sémantického vyhľadávania a spracovania dokumentov
+
+**Praktické aplikácie:**
+- **Vytváranie kompletných aplikácií**: Kombinácia viacerých funkcií do produkčných aplikácií
+- **Správa chýb**: Implementácia robustného manažmentu chýb a validácií
+- **Integrácia nástrojov**: Tvorba vlastných nástrojov, ktoré rozširujú schopnosti AI
+
+### Kľúčové zistenia
+
+> 🎯 **Pamätajte**: AI frameworky ako LangChain sú v podstate vaši skvelí priatelia, ktorí skrývajú zložitosť a majú veľa funkcií. Sú dokonalé, keď potrebujete pamäť konverzácie, volanie nástrojov alebo chcete pracovať s viacerými AI modelmi bez straty zdravého rozumu.
+
+**Rámec rozhodovania pri integrácii AI:**
 
 ```mermaid
 flowchart TD
-    A[AI Integration Need] --> B{Simple single query?}
-    B -->|Yes| C[Direct API calls]
-    B -->|No| D{Need conversation memory?}
-    D -->|No| E[SDK Integration]
-    D -->|Yes| F{Need tools or complex features?}
-    F -->|No| G[Framework with basic setup]
-    F -->|Yes| H[Full framework implementation]
+    A[Potrebujete integráciu AI] --> B{Jednoduchý jeden dotaz?}
+    B -->|Áno| C[Priame volania API]
+    B -->|Nie| D{Potrebujete pamäť konverzácie?}
+    D -->|Nie| E[Integrácia SDK]
+    D -->|Áno| F{Potrebujete nástroje alebo zložité funkcie?}
+    F -->|Nie| G[Rámec so základným nastavením]
+    F -->|Áno| H[Úplná implementácia rámca]
     
-    C --> I[HTTP requests, minimal dependencies]
-    E --> J[Provider SDK, model-specific]
-    G --> K[LangChain basic chat]
-    H --> L[LangChain with tools, memory, agents]
+    C --> I[HTTP požiadavky, minimálne závislosti]
+    E --> J[Poskytovateľské SDK, špecifické pre model]
+    G --> K[Základný chat LangChain]
+    H --> L[LangChain s nástrojmi, pamäťou, agentmi]
 ```
-  
-### Kam ďalej?  
+### Kam ísť odtiaľto?
 
-**Začnite budovať hneď teraz:**  
-- Vezmite tieto koncepty a vytvorte niečo, čo vás nadchne!  
-- Experimentujte s rôznymi AI modelmi cez LangChain - je to ako mať ihrisko plné AI modelov  
-- Vytvárajte nástroje, ktoré riešia skutočné problémy vo vašej práci alebo projektoch  
+**Začnite stavať hneď teraz:**
+- Vezmite tieto koncepty a vytvorte niečo, čo VÁS baví!
+- Hrajte sa s rôznymi AI modelmi cez LangChain – je to ako mať ihrisko AI modelov
+- Vytvárajte nástroje, ktoré riešia reálne problémy, s ktorými sa stretávate vo svojej práci alebo projektoch
 
-**Pripravení na ďalšiu úroveň?**  
-- **AI agenti**: Vytvárajte AI systémy, ktoré dokážu samostatne plánovať a vykonávať zložité úlohy  
-- **RAG (Retrieval-Augmented Generation)**: Kombinujte AI s vlastnými databázami znalostí pre aplikácie s rozšírenými schopnosťami  
-- **Multimodálne AI**: Pracujte s textom, obrázkami a zvukom naraz - možnosti sú nekonečné!  
-- **Nasadenie do produkcie**: Naučte sa, ako škálovať svoje AI aplikácie a monitorovať ich v reálnom svete  
+**Pripravení na ďalšiu úroveň?**
+- **AI agenti**: Stavte AI systémy, ktoré dokážu samostatne plánovať a vykonávať zložité úlohy
+- **RAG (Retrieval-Augmented Generation)**: Kombinujte AI s vlastnými databázami vedomostí pre super výkonné aplikácie
+- **Multi-modálna AI**: Pracujte so zmesou textu, obrázkov a zvuku – možnosti sú nekonečné!
+- **Produktívne nasadenie**: Naučte sa škálovať AI aplikácie a monitorovať ich v reálnom svete
 
-**Pripojte sa ku komunite:**  
-- Komunita LangChain je skvelá na to, aby ste zostali informovaní a naučili sa osvedčené postupy  
-- GitHub Models vám poskytuje prístup k najnovším schopnostiam AI - ideálne na experimentovanie  
-- Pokračujte v praxi s rôznymi prípadmi použitia - každý projekt vás naučí niečo nové  
+**Pridajte sa ku komunite:**
+- Komunita LangChain je skvelá na sledovanie noviniek a učenie najlepších praktík
+- GitHub Models vám dáva prístup ku špičkovým AI schopnostiam – ideálne na experimentovanie
+- Pokračujte v praxi s rôznymi prípadmi použitia – každý projekt vás niečo naučí
 
-Teraz máte vedomosti na vytváranie inteligentných, konverzačných aplikácií, ktoré môžu pomôcť ľuďom riešiť skutočné problémy. Rovnako ako renesanční remeselníci, ktorí spojili umeleckú víziu s technickými zručnosťami, môžete teraz spojiť schopnosti AI s praktickým využitím. Otázka znie: čo vytvoríte? 🚀  
+Teraz máte vedomosti na tvorbu inteligentných, konverzačných aplikácií, ktoré pomáhajú riešiť skutočné problémy. Rovnako ako remeselníci renesancie, ktorí spojili umelecké vízie s technickými zručnosťami, môžete teraz skombinovať AI schopnosti s praktickou aplikáciou. Otázka znie: čo vytvoríte? 🚀
 
-## Výzva GitHub Copilot Agent 🚀  
+## Výzva GitHub Copilot Agenta 🚀
 
-Použite režim Agent na splnenie nasledujúcej výzvy:  
+Použite režim agenta na splnenie nasledujúcej výzvy:
 
-**Popis:** Vytvorte pokročilého AI asistenta na kontrolu kódu, ktorý kombinuje viacero funkcií LangChain vrátane volania nástrojov, štruktúrovaného výstupu a pamäte konverzácie na poskytovanie komplexnej spätnej väzby k odoslaným kódom.  
+**Popis:** Vytvorte pokročilého AI asistenta na kontrolu kódu, ktorý kombinuje viacero funkcií LangChain vrátane volania nástrojov, štruktúrovaného výstupu a pamäte konverzácie na poskytovanie komplexnej spätnej väzby ku kódu.
 
-**Prompt:** Vytvorte triedu CodeReviewAssistant, ktorá implementuje:  
-1. Nástroj na analýzu zložitosti kódu a navrhovanie zlepšení  
-2. Nástroj na kontrolu kódu podľa najlepších praktík  
-3. Štruktúrovaný výstup pomocou Pydantic modelov na konzistentný formát recenzií  
-4. Pamäť konverzácie na sledovanie relácií recenzií  
-5. Hlavné rozhranie chatu, ktoré dokáže spracovať odoslané kódy a poskytovať podrobné, akčné odporúčania  
+**Prompt:** Vytvorte triedu CodeReviewAssistant, ktorá implementuje:
+1. Nástroj na analýzu zložitosti kódu a návrhy na zlepšenie
+2. Nástroj na kontrolu kódu podľa najlepších praktík
+3. Štruktúrovaný výstup pomocou Pydantic modelov pre konzistentný formát recenzií
+4. Pamäť konverzácie na sledovanie revíznych sedení
+5. Hlavné chat rozhranie, ktoré zvláda odosielanie kódu a poskytuje podrobné, akčné pripomienky
 
-Asistent by mal byť schopný kontrolovať kód v viacerých programovacích jazykoch, udržiavať kontext naprieč viacerými odoslanými kódmi v jednej relácii a poskytovať súhrnné skóre aj podrobné návrhy na zlepšenie.  
+Asistent by mal vedieť kontrolovať kód v rôznych programovacích jazykoch, udržiavať kontext cez viaceré kódové príspevky v relácii a poskytovať súhrnné skóre aj podrobné návrhy na zlepšenie.
 
-Viac informácií o [režime agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) nájdete tu.  
+Viac o [režime agenta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) sa dozviete tu.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa usilujeme o presnosť, upozorňujeme, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

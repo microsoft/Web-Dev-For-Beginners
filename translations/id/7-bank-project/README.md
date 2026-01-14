@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Dalam proyek ini, Anda akan belajar cara membangun bank fiksi. Pelajaran ini mencakup instruksi tentang cara merancang aplikasi web dan menyediakan rute, membuat formulir, mengelola state, serta mengambil data dari API yang memungkinkan Anda mendapatkan data bank.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.id.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.id.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.id.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.id.png) |
 |--------------------------------|--------------------------------|
 
 ## Pelajaran

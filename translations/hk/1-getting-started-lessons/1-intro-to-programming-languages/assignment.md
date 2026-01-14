@@ -1,31 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "9e2f84e351a6fcb44bfc4066d98525f0",
-  "translation_date": "2025-10-03T08:56:49+00:00",
+  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
+  "translation_date": "2026-01-06T13:14:37+00:00",
   "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
   "language_code": "hk"
 }
 -->
-## 指示
+# Assignment: Exploring Modern Web Development Tools
 
-網頁開發者可能需要許多工具，這些工具列在 [MDN 客戶端工具文檔](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview) 中。請選擇 **三個工具**，這些工具 **未在本課程中涵蓋**（排除 [列出特定工具或參考課程內容]），解釋 **為什麼** 網頁開發者會使用每個工具，並找到符合每個類別的工具。對於每個工具，分享其官方文檔的鏈接（而非 MDN 上的示例）。
+## Instructions
 
-**格式：**  
-- 工具名稱  
-- 為什麼網頁開發者會使用它（2-3 句）  
-- 文檔鏈接
+The web development ecosystem includes hundreds of specialized tools that help developers build, test, and maintain applications efficiently. Your task is to research and understand tools that complement the ones covered in this lesson.
 
-**字數要求：**  
-- 每個解釋應為 2-3 句。
+**Your Mission:** Select **three tools** that are **not covered in this lesson** (avoid choosing code editors, browsers, or command line tools already listed). Focus on tools that solve specific problems in modern web development workflows.
 
-## 評分標準
+**For each tool, provide:**
 
-卓越 | 合格 | 需要改進
---- | --- | --- |
-解釋了為什麼網頁開發者會使用工具 | 解釋了如何使用，但未解釋為什麼開發者會使用工具 | 未提及開發者如何或為什麼使用工具 |
+1. **Tool name and category** (e.g., "Figma - Design Tool" or "Jest - Testing Framework")
+2. **Purpose and benefits** - Explain in 2-3 sentences why a web developer would use this tool and what problems it solves
+3. **Official documentation link** - Provide a link to the tool's official documentation or website (not just tutorial sites)
+4. **Real-world context** - Mention one way this tool fits into a professional development workflow
+
+## Suggested Tool Categories
+
+Consider exploring tools from these categories:
+
+| Category | Examples | What They Do |
+|----------|----------|--------------|
+| **Build Tools** | Vite, Webpack, Parcel, esbuild | Bundle and optimize code for production with fast development servers |
+| **Testing Frameworks** | Vitest, Jest, Cypress, Playwright | Ensure code works correctly and catch bugs before deployment |
+| **Design Tools** | Figma, Adobe XD, Penpot | Create mockups, prototypes, and design systems collaboratively |
+| **Deployment Platforms** | Netlify, Vercel, Cloudflare Pages | Host and distribute websites with automatic CI/CD |
+| **Version Control** | GitHub, GitLab, Bitbucket | Manage code changes, collaboration, and project workflows |
+| **CSS Frameworks** | Tailwind CSS, Bootstrap, Bulma | Accelerate styling with pre-built component libraries |
+| **Package Managers** | npm, pnpm, Yarn | Install and manage code libraries and dependencies |
+| **Accessibility Tools** | axe-core, Lighthouse, Pa11y | Test for inclusive design and WCAG compliance |
+| **API Development** | Postman, Insomnia, Thunder Client | Test and document APIs during development |
+
+## Format Requirements
+
+**For each tool:**
+```
+### [Tool Name] - [Category]
+
+**Purpose:** [2-3 sentences explaining why developers use this tool]
+
+**Documentation:** [Official website/documentation link]
+
+**Workflow Integration:** [1 sentence about how it fits into development process]
+```
+
+## Quality Guidelines
+
+- **Choose current tools**: Select tools that are actively maintained and widely used in 2025
+- **Focus on value**: Explain the specific benefits, not just what the tool does
+- **Professional context**: Consider tools used by development teams, not just individual hobbyists
+- **Diverse selection**: Pick tools from different categories to show breadth of the ecosystem
+- **Modern relevance**: Prioritize tools that align with current web development trends and best practices
+
+## Rubric
+
+| Excellent | Good | Needs Improvement |
+|-----------|------|-------------------|
+| **Clearly explained why developers use each tool and what problems it solves** | **Explained what the tool does but missed some context about its value** | **Listed tools but didn't explain their purpose or benefits** |
+| **Provided official documentation links for all tools** | **Provided mostly official links with 1-2 tutorial sites** | **Relied mainly on tutorial sites rather than official documentation** |
+| **Selected current, professionally-used tools from diverse categories** | **Selected good tools but limited variety in categories** | **Selected outdated tools or only from one category** |
+| **Demonstrated understanding of how tools fit into development workflows** | **Showed some understanding of professional context** | **Focused only on tool features without workflow context** |
+
+> 💡 **Research Tip**: Look for tools mentioned in job postings for web developers, check popular developer surveys, or explore the dependencies used by successful open-source projects on GitHub!
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的本地語言版本應被視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們對因使用本翻譯而引起的任何誤解或誤讀概不負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

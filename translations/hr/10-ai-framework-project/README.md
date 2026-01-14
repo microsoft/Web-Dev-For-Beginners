@@ -1,75 +1,187 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e2c4ae5688e34b4b8b09d52aec56c79e",
-  "translation_date": "2025-10-24T23:57:01+00:00",
+  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
+  "translation_date": "2026-01-07T08:40:10+00:00",
   "source_file": "10-ai-framework-project/README.md",
   "language_code": "hr"
 }
 -->
-# AI Framework
+# Okvir za umjetnu inteligenciju
 
-Jeste li se ikada osjećali preplavljeno pokušavajući izgraditi AI aplikacije od nule? Niste jedini! AI okviri su poput švicarskog nožića za razvoj umjetne inteligencije - moćni alati koji vam mogu uštedjeti vrijeme i glavobolje pri izradi inteligentnih aplikacija. Zamislite AI okvir kao dobro organiziranu knjižnicu: pruža unaprijed izgrađene komponente, standardizirane API-je i pametne apstrakcije kako biste se mogli usredotočiti na rješavanje problema umjesto na borbu s detaljima implementacije.
+Jeste li se ikad osjećali preplavljeno pokušavajući izgraditi AI aplikacije od nule? Niste sami! AI okviri su poput švicarskog noža za razvoj umjetne inteligencije - moćni alati koji vam mogu uštedjeti vrijeme i glavobolje pri izgradnji inteligentnih aplikacija. Zamislite AI okvir kao dobro organiziranu biblioteku: on pruža unaprijed izrađene komponente, standardizirane API-je i pametne apstrakcije kako biste se mogli usredotočiti na rješavanje problema umjesto na borbu s detaljima implementacije.
 
-U ovoj lekciji istražit ćemo kako okviri poput LangChain-a mogu pretvoriti nekada složene zadatke integracije AI-a u čist i čitljiv kod. Otkrit ćete kako se nositi s izazovima iz stvarnog svijeta, poput praćenja razgovora, implementacije poziva alata i upravljanja različitim AI modelima putem jednog ujedinjenog sučelja.
+U ovom ćemo lekciji istražiti kako okviri poput LangChain mogu pretvoriti ono što je nekad bilo složen zadatak integracije AI-a u čist i čitljiv kod. Otkrit ćete kako se nositi s izazovima iz stvarnog svijeta kao što su praćenje razgovora, implementacija pozivanja alata i upravljanje različitim AI modelima kroz jedan objedinjeni sučelje.
 
-Do kraja lekcije znat ćete kada posegnuti za okvirima umjesto za sirovim API pozivima, kako učinkovito koristiti njihove apstrakcije i kako izgraditi AI aplikacije spremne za stvarnu upotrebu. Istražimo što AI okviri mogu učiniti za vaše projekte.
+Do kraja lekcije znat ćete kada posegnuti za okvirima umjesto za sirovim API pozivima, kako učinkovito koristiti njihove apstrakcije te kako graditi AI aplikacije spremne za stvarnu upotrebu. Istražimo što AI okviri mogu učiniti za vaše projekte.
+
+## ⚡ Što možete napraviti u sljedećih 5 minuta
+
+**Put za brzi početak za zaposlene programere**
+
+```mermaid
+flowchart LR
+    A[⚡ 5 minuta] --> B[Instaliraj LangChain]
+    B --> C[Stvori ChatOpenAI klijent]
+    C --> D[Pošalji prvi upit]
+    D --> E[Vidi snagu okvira]
+```
+- **Minuta 1**: Instalirajte LangChain: `pip install langchain langchain-openai`
+- **Minuta 2**: Postavite svoj GitHub token i uvezite ChatOpenAI klijenta
+- **Minuta 3**: Kreirajte jednostavni razgovor sa sistemskim i ljudskim porukama
+- **Minuta 4**: Dodajte osnovni alat (poput funkcije zbrajanja) i isprobajte pozivanje AI alata
+- **Minuta 5**: Iskusite razliku između sirovih API poziva i apstrakcije okvira
+
+**Brzi testni kod**:  
+```python
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
+
+llm = ChatOpenAI(
+    api_key=os.environ["GITHUB_TOKEN"],
+    base_url="https://models.github.ai/inference",
+    model="openai/gpt-4o-mini"
+)
+
+response = llm.invoke([
+    SystemMessage(content="You are a helpful coding assistant"),
+    HumanMessage(content="Explain Python functions briefly")
+])
+print(response.content)
+```
+  
+**Zašto je ovo važno**: U 5 minuta iskusit ćete kako AI okviri pretvaraju složenu integraciju umjetne inteligencije u jednostavne metode poziva. Ovo je temelj koji pokreće proizvodne AI aplikacije.
 
 ## Zašto odabrati okvir?
 
-Spremni ste za izradu AI aplikacije - sjajno! Ali evo u čemu je stvar: imate nekoliko različitih puteva koje možete odabrati, a svaki od njih ima svoje prednosti i nedostatke. To je pomalo kao biranje između hodanja, vožnje biciklom ili autom kako biste stigli negdje - svi će vas odvesti na odredište, ali iskustvo (i trud) bit će potpuno različiti.
+Dakle, spremni ste izgraditi AI aplikaciju - sjajno! Ali evo stvar: imate nekoliko različitih puteva kojima možete ići, a svaki ima svoje prednosti i nedostatke. To je kao biranje između hodanja, vožnje bicikla ili automobila - svi će vas odvesti tamo, ali iskustvo (i trud) će biti potpuno različiti.
 
-Razmotrimo tri glavna načina na koja možete integrirati AI u svoje projekte:
+Podijelimo tri glavna načina na koja možete integrirati AI u svoje projekte:
 
 | Pristup | Prednosti | Najbolje za | Razmatranja |
-|----------|------------|----------|--------------|
-| **Izravni HTTP zahtjevi** | Potpuna kontrola, bez ovisnosti | Jednostavni upiti, učenje osnova | Više opsežan kod, ručno rukovanje greškama |
-| **SDK integracija** | Manje boilerplate koda, optimizacija specifična za model | Aplikacije s jednim modelom | Ograničeno na specifične pružatelje usluga |
-| **AI okviri** | Ujedinjeni API, ugrađene apstrakcije | Aplikacije s više modela, složeni tijekovi rada | Krivulja učenja, potencijalna prekomjerna apstrakcija |
+|---------|------------|-------------|-------------|
+| **Izravni HTTP zahtjevi** | Potpuna kontrola, bez ovisnosti | Jednostavni upiti, učenje osnova | Opširniji kod, ručno upravljanje greškama |
+| **SDK integracija** | Manje boilerplate koda, optimizacija za određene modele | Aplikacije s jednim modelom | Ograničeno na određene pružatelje |
+| **AI okviri** | Jedinstveni API, ugrađene apstrakcije | Višestruke modele, složeni tijekovi rada | Krivulja učenja, moguća pretjerana apstrakcija |
 
 ### Prednosti okvira u praksi
 
 ```mermaid
 graph TD
-    A[Your Application] --> B[AI Framework]
+    A[Vaša aplikacija] --> B[AI okvir]
     B --> C[OpenAI GPT]
     B --> D[Anthropic Claude]
-    B --> E[GitHub Models]
-    B --> F[Local Models]
+    B --> E[GitHub modeli]
+    B --> F[Lokalni modeli]
     
-    B --> G[Built-in Tools]
-    G --> H[Memory Management]
-    G --> I[Conversation History]
-    G --> J[Function Calling]
-    G --> K[Error Handling]
-```
+    B --> G[Ugrađeni alati]
+    G --> H[Upravljanje memorijom]
+    G --> I[Povijest razgovora]
+    G --> J[Pozivanje funkcija]
+    G --> K[Rukovanje pogreškama]
+```  
+**Zašto su okviri važni:**  
+- **Objedinjuju** više AI pružatelja pod jednim sučeljem  
+- **Automatski upravljaju** memorijom razgovora  
+- **Pružaju** gotove alate za uobičajene zadatke poput ugradnji i pozivanja funkcija  
+- **Upravljaju** obradom grešaka i logikom ponovnog pokušaja  
+- **Pretvaraju** složene tijekove rada u čitljive metode poziva  
 
-**Zašto su okviri važni:**
-- **Ujedinjuju** više AI pružatelja usluga pod jednim sučeljem
-- **Automatski upravljaju** memorijom razgovora
-- **Pružaju** gotove alate za uobičajene zadatke poput ugrađivanja i poziva funkcija
-- **Upravljaju** rukovanjem greškama i logikom ponovnog pokušaja
-- **Pretvaraju** složene tijekove rada u čitljive metode poziva
+> 💡 **Savjet od profesionalca**: Koristite okvire kad prelazite između različitih AI modela ili gradite složene značajke kao što su agenti, memorija ili pozivanje alata. Držite se izravnih API-ja pri učenju osnova ili izgradnji jednostavnih, fokusiranih aplikacija.
 
-> 💡 **Savjet stručnjaka**: Koristite okvire kada prelazite između različitih AI modela ili gradite složene značajke poput agenata, memorije ili poziva alata. Držite se izravnih API-ja kada učite osnove ili gradite jednostavne, fokusirane aplikacije.
+**Zaključak**: Kao kod izbora između specijaliziranih alata majstora i kompletne radionice, bitno je uskladiti alat sa zadatkom. Okviri su izvrsni za složene, bogate značajkama aplikacije, dok izravni API-ji dobro funkcioniraju za jednostavne slučajeve upotrebe.
 
-**Zaključak**: Kao i kod odabira između specijaliziranih alata majstora i kompletne radionice, sve ovisi o prilagodbi alata zadatku. Okviri su izvrsni za složene, bogate značajkama aplikacije, dok izravni API-ji dobro funkcioniraju za jednostavne slučajeve upotrebe.
+## 🗺️ Vaše putovanje u svladavanje AI okvira
+
+```mermaid
+journey
+    title Od sirovih API-ja do produkcijskih AI aplikacija
+    section Osnove okvira
+      Razumjeti prednosti apstrakcije: 4: You
+      Savladati osnove LangChaina: 6: You
+      Usporedite pristupe: 7: You
+    section Sustavi za razgovor
+      Izgraditi chat sučelja: 5: You
+      Implementirati obrasce memorije: 7: You
+      Rukovati streaming odgovorima: 8: You
+    section Napredne značajke
+      Izraditi prilagođene alate: 6: You
+      Savladati strukturirani izlaz: 8: You
+      Izgraditi sustave dokumenata: 8: You
+    section Produkcijske aplikacije
+      Kombinirati sve značajke: 7: You
+      Rukovati scenarijima pogrešaka: 8: You
+      Postaviti kompletne sustave: 9: You
+```  
+**Vaš cilj na ovom putovanju**: Do kraja lekcije svladat ćete razvoj AI okvira i moći ćete izgraditi sofisticirane, proizvodno spremne AI aplikacije koje pariraju komercijalnim AI asistentima.
 
 ## Uvod
 
 U ovoj lekciji naučit ćemo:
 
-- Kako koristiti uobičajeni AI okvir.
-- Kako riješiti uobičajene probleme poput razgovora, korištenja alata, memorije i konteksta.
-- Kako to iskoristiti za izradu AI aplikacija.
+- Koristiti uobičajeni AI okvir.  
+- Riješiti uobičajene probleme poput razgovora, korištenja alata, memorije i konteksta.  
+- Iskoristiti ovo za izgradnju AI aplikacija.
+
+## 🧠 Ekosustav razvoja AI okvira
+
+```mermaid
+mindmap
+  root((AI Okviri))
+    Abstraction Benefits
+      Pojednostavljenje Koda
+        Jedinstveni API-jevi
+        Ugrađeno Upravljanje Pogreškama
+        Dosljedni Obrasci
+        Smanjeni Boilerplate
+      Multi-Model Support
+        Neovisan o Pružatelju
+        Lako Prebacivanje
+        Rezervne Opcije
+        Optimizacija Troškova
+    Core Components
+      Upravljanje Razgovorom
+        Vrste Poruka
+        Sustavi Memorije
+        Praćenje Konteksta
+        Trajnost Povijesti
+      Integracija Alata
+        Pozivanje Funkcija
+        API Veze
+        Prilagođeni Alati
+        Automatizacija Tokova Posla
+    Advanced Features
+      Strukturirani Izlaz
+        Pydantic Modeli
+        JSON Sheme
+        Sigurnost Tipova
+        Pravila Validacije
+      Obrada Dokumenata
+        Ugrađivanja
+        Spremišta Vektora
+        Pretraživanje Sličnosti
+        RAG Sustavi
+    Production Patterns
+      Arhitektura Aplikacije
+        Modularni Dizajn
+        Granice Pogrešaka
+        Asinkrone Operacije
+        Upravljanje Stanjima
+      Strategije Implementacije
+        Skalabilnost
+        Praćenje
+        Performanse
+        Sigurnost
+```  
+**Ključno načelo**: AI okviri apstrahiraju složenost dok pružaju moćne apstrakcije za upravljanje razgovorom, integraciju alata i obradu dokumenata, omogućujući programerima izgradnju sofisticiranih AI aplikacija s čistim i održivim kodom.
 
 ## Vaš prvi AI upit
 
-Započnimo s osnovama stvaranjem vaše prve AI aplikacije koja šalje pitanje i dobiva odgovor. Kao što je Arhimed otkrio princip istiskivanja u svojoj kadi, ponekad najjednostavnija opažanja vode do najmoćnijih uvida - a okviri čine te uvide dostupnima.
+Počnimo s osnovama kreiranjem vaše prve AI aplikacije koja šalje pitanje i dobiva odgovor. Kao što je Arhimed otkrio princip istiskivanja u svojoj kadi, ponekad najjednostavnija zapažanja vode do najmoćnijih uvida - a okviri čine te uvide dostupnima.
 
-### Postavljanje LangChain-a s GitHub modelima
+### Postavljanje LangChaina s GitHub modelima
 
-Koristit ćemo LangChain za povezivanje s GitHub modelima, što je prilično sjajno jer vam omogućuje besplatan pristup raznim AI modelima. Najbolji dio? Trebate samo nekoliko jednostavnih parametara konfiguracije da biste započeli:
+Koristit ćemo LangChain za povezivanje s GitHub modelima, što je super jer vam daje besplatan pristup raznim AI modelima. Najbolji dio? Trebate samo nekoliko jednostavnih konfiguracijskih parametara za početak:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -81,59 +193,58 @@ llm = ChatOpenAI(
     model="openai/gpt-4o-mini",
 )
 
-# Send a simple prompt
+# Pošaljite jednostavan upit
 response = llm.invoke("What's the capital of France?")
 print(response.content)
 ```
+  
+**Objasnimo što se ovdje događa:**  
+- **Kreira** LangChain klijenta koristeći `ChatOpenAI` klasu - ovo je vaš pristup AI-u!  
+- **Konfigurira** vezu s GitHub modelima koristeći vaš autentifikacijski token  
+- **Navodi** koji AI model koristiti (`gpt-4o-mini`) - zamislite to kao odabir svog AI asistenta  
+- **Šalje** pitanje koristeći `invoke()` metodu - ovdje se događa magija  
+- **Izvlači** i prikazuje odgovor - i eto, razgovarate s AI-em!
 
-**Razložimo što se ovdje događa:**
-- **Stvara** LangChain klijent koristeći klasu `ChatOpenAI` - ovo je vaš ulaz u AI!
-- **Konfigurira** vezu s GitHub modelima pomoću vašeg autentifikacijskog tokena
-- **Određuje** koji AI model koristiti (`gpt-4o-mini`) - zamislite to kao odabir vašeg AI asistenta
-- **Šalje** vaše pitanje koristeći metodu `invoke()` - ovdje se događa magija
-- **Izvlači** i prikazuje odgovor - i voilà, razgovarate s AI-jem!
+> 🔧 **Napomena o postavljanju**: Ako koristite GitHub Codespaces, imate sreće - `GITHUB_TOKEN` je već postavljen! Radite lokalno? Nema brige, samo trebate kreirati osobni pristupni token s odgovarajućim dopuštenjima.
 
-> 🔧 **Napomena o postavljanju**: Ako koristite GitHub Codespaces, imate sreće - `GITHUB_TOKEN` je već postavljen za vas! Radite lokalno? Bez brige, samo trebate stvoriti osobni pristupni token s odgovarajućim dozvolama.
-
-**Očekivani izlaz:**
+**Očekivani izlaz:**  
 ```text
 The capital of France is Paris.
 ```
-
+  
 ```mermaid
 sequenceDiagram
-    participant App as Your Python App
+    participant App as Vaša Python aplikacija
     participant LC as LangChain
-    participant GM as GitHub Models
+    participant GM as GitHub modeli
     participant AI as GPT-4o-mini
     
-    App->>LC: llm.invoke("What's the capital of France?")
-    LC->>GM: HTTP request with prompt
-    GM->>AI: Process prompt
-    AI->>GM: Generated response
-    GM->>LC: Return response
+    App->>LC: llm.invoke("Koji je glavni grad Francuske?")
+    LC->>GM: HTTP zahtjev s upitom
+    GM->>AI: Obraditi upit
+    AI->>GM: Generirani odgovor
+    GM->>LC: Vrati odgovor
     LC->>App: response.content
-```
+```  
+## Izgradnja razgovornog AI-a
 
-## Izrada konverzacijskog AI-a
+Prvi primjer pokazuje osnove, ali riječ je o jednoj razmjeni – postavite pitanje, dobijete odgovor, i to je to. U stvarnim aplikacijama želite da vaš AI pamti o čemu ste raspravljali, poput načina na koji su Watson i Holmes gradili svoje istraživačke razgovore tijekom vremena.
 
-Prvi primjer pokazuje osnove, ali to je samo jedna razmjena - postavite pitanje, dobijete odgovor i to je to. U stvarnim aplikacijama želite da vaš AI zapamti o čemu ste razgovarali, poput načina na koji su Watson i Holmes gradili svoje istraživačke razgovore tijekom vremena.
-
-Tu LangChain postaje posebno koristan. Pruža različite vrste poruka koje pomažu u strukturiranju razgovora i omogućuju vam da svom AI-ju date osobnost. Gradit ćete iskustva razgovora koja održavaju kontekst i karakter.
+Ovdje LangChain postaje naročito koristan. Pruža različite vrste poruka koje pomažu strukturirati razgovore i omogućiti da svojem AI-u date osobnost. Izgradit ćete iskustva chata koja održavaju kontekst i karakter.
 
 ### Razumijevanje vrsta poruka
 
-Zamislite ove vrste poruka kao različite "kape" koje sudionici nose u razgovoru. LangChain koristi različite klase poruka za praćenje tko što govori:
+Zamislite ove vrste poruka kao različite "kape" koje sudionici nose u razgovoru. LangChain koristi različite klase poruka da prati tko što govori:
 
 | Vrsta poruke | Svrha | Primjer upotrebe |
-|--------------|---------|------------------|
-| `SystemMessage` | Definira osobnost i ponašanje AI-ja | "Vi ste korisni asistent za kodiranje" |
-| `HumanMessage` | Predstavlja unos korisnika | "Objasnite kako funkcije rade" |
-| `AIMessage` | Pohranjuje odgovore AI-ja | Prethodni odgovori AI-ja u razgovoru |
+|--------------|-------|------------------|
+| `SystemMessage` | Definira osobnost i ponašanje AI-a | "Ti si koristan asistent za programiranje" |
+| `HumanMessage` | Predstavlja korisnički unos | "Objasni kako funkcioniraju funkcije" |
+| `AIMessage` | Pohranjuje AI odgovore | Prethodni AI odgovori u razgovoru |
 
-### Stvaranje vašeg prvog razgovora
+### Kreiranje prvog razgovora
 
-Stvorimo razgovor u kojem naš AI preuzima određenu ulogu. Neka utjelovi kapetana Picarda - lika poznatog po svojoj diplomatskoj mudrosti i vodstvu:
+Napravimo razgovor u kojem naš AI preuzima specifičnu ulogu. Dat ćemo mu osobnost kapetana Picarda - lika poznatog po diplomatskoj mudrosti i vodstvu:
 
 ```python
 messages = [
@@ -141,13 +252,13 @@ messages = [
     HumanMessage(content="Tell me about you"),
 ]
 ```
+  
+**Razbijanje postavki ovog razgovora:**  
+- **Postavlja** ulogu i osobnost AI-a kroz `SystemMessage`  
+- **Daje** početni korisnički upit kroz `HumanMessage`  
+- **Stvara** temelj za višekratni razgovor
 
-**Razlaganje postavke ovog razgovora:**
-- **Uspostavlja** ulogu i osobnost AI-ja putem `SystemMessage`
-- **Pruža** početni upit korisnika putem `HumanMessage`
-- **Stvara** temelj za razgovor u više koraka
-
-Cijeli kod za ovaj primjer izgleda ovako:
+Cijeli kod ovog primjera izgleda ovako:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -166,12 +277,12 @@ messages = [
 ]
 
 
-# works
+# radi
 response  = llm.invoke(messages)
 print(response.content)
 ```
-
-Trebali biste vidjeti ishod sličan:
+  
+Trebali biste vidjeti rezultat sličan ovome:
 
 ```text
 I am Captain Jean-Luc Picard, the commanding officer of the USS Enterprise (NCC-1701-D), a starship in the United Federation of Planets. My primary mission is to explore new worlds, seek out new life and new civilizations, and boldly go where no one has gone before. 
@@ -180,8 +291,8 @@ I believe in the importance of diplomacy, reason, and the pursuit of knowledge. 
 
 I hold the ideals of the Federation close to my heart, believing in the importance of cooperation, understanding, and respect for all sentient beings. My experiences have shaped my leadership style, and I strive to be a thoughtful and just captain. How may I assist you further?
 ```
-
-Kako biste održali kontinuitet razgovora (umjesto da svaki put resetirate kontekst), trebate nastaviti dodavati odgovore na svoj popis poruka. Kao usmena tradicija koja je očuvala priče kroz generacije, ovaj pristup gradi trajnu memoriju:
+  
+Da biste održali kontinuitet razgovora (umjesto resetiranja konteksta svaki put), trebate nastaviti dodavati odgovore na svoj popis poruka. Kao što su usmene tradicije prenosile priče kroz generacije, ovaj pristup gradi trajnu memoriju:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -200,7 +311,7 @@ messages = [
 ]
 
 
-# works
+# radi
 response  = llm.invoke(messages)
 
 print(response.content)
@@ -215,24 +326,47 @@ response  = llm.invoke(messages)
 print(response.content)
 
 ```
+  
+Prilično genijalno, zar ne? Ono što se događa je da pozivamo LLM dvaput - prvo s našim početnim dvjema porukama, a zatim opet sa cijelom povijesti razgovora. Kao da AI stvarno prati naš razgovor!
 
-Prilično zgodno, zar ne? Ono što se ovdje događa jest da pozivamo LLM dvaput - prvo samo s našim početnim dvjema porukama, a zatim ponovno s cijelom poviješću razgovora. Kao da AI zapravo prati naš razgovor!
-
-Kada pokrenete ovaj kod, dobit ćete drugi odgovor koji zvuči otprilike ovako:
+Kad izvršite ovaj kod, dobit ćete drugi odgovor koji zvuči otprilike ovako:
 
 ```text
 Welcome aboard, Chris! It's always a pleasure to meet those who share a passion for exploration and discovery. While I cannot formally offer you a position on the Enterprise right now, I encourage you to pursue your aspirations. We are always in need of talented individuals with diverse skills and backgrounds. 
 
 If you are interested in space exploration, consider education and training in the sciences, engineering, or diplomacy. The values of curiosity, resilience, and teamwork are crucial in Starfleet. Should you ever find yourself on a starship, remember to uphold the principles of the Federation: peace, understanding, and respect for all beings. Your journey can lead you to remarkable adventures, whether in the stars or on the ground. Engage!
 ```
+  
+```mermaid
+sequenceDiagram
+    participant User
+    participant App
+    participant LangChain
+    participant AI
+    
+    User->>App: "Ispričaj mi o sebi"
+    App->>LangChain: [SystemMessage, HumanMessage]
+    LangChain->>AI: Formatirani razgovor
+    AI->>LangChain: Odgovor kapetana Picarda
+    LangChain->>App: AIMessage objekt
+    App->>User: Prikaz odgovora
+    
+    Note over App: Dodaj AIMessage u razgovor
+    
+    User->>App: "Mogu li se pridružiti tvojoj posadi?"
+    App->>LangChain: [SystemMessage, HumanMessage, AIMessage, HumanMessage]
+    LangChain->>AI: Potpuni kontekst razgovora
+    AI->>LangChain: Kontekstualni odgovor
+    LangChain->>App: Novi AIMessage
+    App->>User: Prikaz kontekstualnog odgovora
+```  
+Uzet ću to kao možda ;)
 
-Uzeti ću to kao možda ;)
+## Streaming odgovori
 
-## Streaming odgovora
+Jeste li ikad primijetili kako ChatGPT izgleda kao da "tipka" odgovore u stvarnom vremenu? To je streaming u akciji. Kao da gledate vještog kaligrafa kako radi - vidite znakove kako se pojavljuju potez po potez, a ne odmah u potpunosti - streaming čini interakciju prirodnijom i pruža trenutnu povratnu informaciju.
 
-Jeste li ikada primijetili kako ChatGPT "tipka" svoje odgovore u stvarnom vremenu? To je streaming u akciji. Kao gledanje vještog kaligrafa na djelu - vidjeti kako se znakovi pojavljuju potez po potez umjesto da se materijaliziraju trenutno - streaming čini interakciju prirodnijom i pruža trenutne povratne informacije.
-
-### Implementacija streaminga s LangChain-om
+### Implementacija streaminga s LangChainom
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -245,35 +379,48 @@ llm = ChatOpenAI(
     streaming=True
 )
 
-# Stream the response
+# Strimirajte odgovor
 for chunk in llm.stream("Write a short story about a robot learning to code"):
     print(chunk.content, end="", flush=True)
 ```
+  
+**Zašto je streaming sjajan:**  
+- **Prikazuje** sadržaj dok se stvara - nema više neugodnog čekanja!  
+- **Čini** da korisnici osjećaju kako se nešto stvarno događa  
+- **Izgleda** brže, čak i kad tehnički nije  
+- **Dopustite** korisnicima da počnu čitati dok AI još "razmišlja"
 
-**Zašto je streaming sjajan:**
-- **Prikazuje** sadržaj dok se stvara - nema više neugodnog čekanja!
-- **Čini** da se korisnici osjećaju kao da se nešto stvarno događa
-- **Djeluje** brže, čak i kad tehnički nije
-- **Omogućuje** korisnicima da počnu čitati dok AI još "razmišlja"
+> 💡 **Savjet za korisničko iskustvo**: Streaming je posebno koristan kod duljih odgovora poput objašnjenja koda, kreativnog pisanja ili detaljnih vodiča. Korisnici će voljeti vidjeti napredak umjesto da gledaju prazni ekran!
 
-> 💡 **Savjet za korisničko iskustvo**: Streaming se zaista ističe kada se bavite duljim odgovorima poput objašnjenja koda, kreativnog pisanja ili detaljnih tutorijala. Vaši korisnici će voljeti vidjeti napredak umjesto da zure u prazan ekran!
+### 🎯 Pedagoška provjera: Prednosti apstrakcije okvira
+
+**Pauza za razmišljanje**: Upravo ste iskusi moć apstrakcija AI okvira. Usporedite što ste naučili s sirovim API pozivima iz prethodnih lekcija.
+
+**Brza samo-evaluacija**:  
+- Možete li objasniti kako LangChain pojednostavljuje upravljanje razgovorom u usporedbi s ručnim praćenjem poruka?  
+- Koja je razlika između metoda `invoke()` i `stream()`, i kada biste koristili koji?  
+- Kako sustav vrsta poruka u okviru poboljšava organizaciju koda?
+
+**Veza sa stvarnim svijetom**: Apstrakcijski obrasci koje ste naučili (vrste poruka, streaming sučelja, memorija razgovora) koriste se u svim velikim AI aplikacijama - od sučelja ChatGPT-a do GitHub Copilotove pomoći kodiranju. Svladavate iste arhitektonske obrasce koje koriste profesionalni AI razvojni timovi.
+
+**Izazovno pitanje**: Kako biste dizajnirali apstrakciju okvira za rukovanje različitim pružateljima AI modela (OpenAI, Anthropic, Google) s jednim sučeljem? Razmotrite prednosti i nedostatke.
 
 ## Predlošci upita
 
-Predlošci upita funkcioniraju poput retoričkih struktura korištenih u klasičnoj oratoriji - razmislite o tome kako bi Ciceron prilagodio svoje obrasce govora za različitu publiku, dok bi zadržao isti uvjerljivi okvir. Omogućuju vam stvaranje ponovljivih upita gdje možete zamijeniti različite dijelove informacija bez ponovnog pisanja svega. Jednom kada postavite predložak, samo popunite varijable s potrebnim vrijednostima.
+Predlošci upita rade kao retoričke strukture korištene u klasičnoj oratoriji - razmislite kako bi Ciceron prilagodio svoje govorne obrasce različitim publikama održavajući istu uvjerljivu strukturu. Oni vam omogućuju da stvarate ponovljive upite u kojima možete zamijeniti različite dijelove informacija bez ponovnog pisanja svega od početka. Kad postavite predložak, samo popunite varijable s bilo kojim vrijednostima koje trebate.
 
-### Stvaranje ponovljivih upita
+### Izrada ponovljivih upita
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
 
-# Define a template for code explanations
+# Definirajte predložak za objašnjenja koda
 template = ChatPromptTemplate.from_messages([
     ("system", "You are an expert programming instructor. Explain concepts clearly with examples."),
     ("human", "Explain {concept} in {language} with a practical example for {skill_level} developers")
 ])
 
-# Use the template with different values
+# Koristite predložak s različitim vrijednostima
 questions = [
     {"concept": "functions", "language": "JavaScript", "skill_level": "beginner"},
     {"concept": "classes", "language": "Python", "skill_level": "intermediate"},
@@ -285,18 +432,18 @@ for question in questions:
     response = llm.invoke(prompt)
     print(f"Topic: {question['concept']}\n{response.content}\n---\n")
 ```
-
-**Zašto ćete voljeti koristiti predloške:**
-- **Održava** vaše upite dosljednima u cijeloj aplikaciji
-- **Nema više** neurednog spajanja stringova - samo čiste, jednostavne varijable
-- **Vaš AI** se ponaša predvidljivo jer struktura ostaje ista
-- **Ažuriranja** su jednostavna - promijenite predložak jednom i svugdje je ažuriran
+  
+**Zašto ćete voljeti korištenje predložaka:**  
+- **Održava** vaše upite dosljednima kroz cijelu aplikaciju  
+- **Nema više** neurednog povezivanja nizova - samo čiste, jednostavne varijable  
+- **Vaš AI** se ponaša predvidljivo jer struktura ostaje ista  
+- **Ažuriranja** su jednostavna - promijenite predložak jednom i to je popravak svugdje
 
 ## Strukturirani izlaz
 
-Jeste li ikada bili frustrirani pokušavajući analizirati AI odgovore koji se vraćaju kao nestrukturirani tekst? Strukturirani izlaz je poput podučavanja vašeg AI-ja da slijedi sustavni pristup koji je Linnaeus koristio za biološku klasifikaciju - organiziran, predvidljiv i jednostavan za rad. Možete zatražiti JSON, specifične podatkovne strukture ili bilo koji format koji vam je potreban.
+Jeste li se ikad frustrirali pokušavajući parsirati AI odgovore koji dolaze kao nestrukturirani tekst? Strukturirani izlaz kao da podučavate vaš AI da slijedi sustavan pristup kakav je Linnaeus koristio za biološku klasifikaciju - organiziran, predvidljiv i lak za rad. Možete zatražiti JSON, određene podatkovne strukture ili bilo koji format koji vam treba.
 
-### Definiranje shema izlaza
+### Definiranje izlaznih shema
 
 ```python
 from langchain_core.prompts import ChatPromptTemplate
@@ -309,19 +456,19 @@ class CodeReview(BaseModel):
     improvements: list[str] = Field(description="List of suggested improvements")
     overall_feedback: str = Field(description="Summary feedback")
 
-# Set up the parser
+# Postavi parser
 parser = JsonOutputParser(pydantic_object=CodeReview)
 
-# Create prompt with format instructions
+# Kreiraj prompt s uputama za format
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a code reviewer. {format_instructions}"),
     ("human", "Review this code: {code}")
 ])
 
-# Format the prompt with instructions
+# Formatiraj prompt s uputama
 chain = prompt | llm | parser
 
-# Get structured response
+# Dohvati strukturirani odgovor
 code_sample = """
 def calculate_average(numbers):
     return sum(numbers) / len(numbers)
@@ -335,20 +482,20 @@ result = chain.invoke({
 print(f"Score: {result['score']}")
 print(f"Strengths: {', '.join(result['strengths'])}")
 ```
-
-**Zašto je strukturirani izlaz revolucionaran:**
-- **Nema više** nagađanja u kojem formatu ćete dobiti odgovor - uvijek je dosljedan
-- **Izravno se povezuje** s vašim bazama podataka i API-jima bez dodatnog rada
-- **Hvata** čudne AI odgovore prije nego što pokvare vašu aplikaciju
-- **Čini** vaš kod čišćim jer točno znate s čime radite
+  
+**Zašto je strukturirani izlaz revolucija:**  
+- **Nema više** pogađanja u kojem formatu ćete dobiti odgovor - uvijek je dosljedan  
+- **Izravno se priključuje** u vaše baze podataka i API-je bez dodatnog rada  
+- **Hvata** čudne AI odgovore prije nego što pokvare vašu aplikaciju  
+- **Čini** vaš kod čišćim jer točno znate s čim radite
 
 ## Pozivanje alata
 
-Sada dolazimo do jedne od najmoćnijih značajki: alata. Ovo je način na koji svom AI-ju dajete praktične sposobnosti izvan razgovora. Kao što su srednjovjekovni cehovi razvili specijalizirane alate za određene zanate, možete opremiti svoj AI fokusiranim instrumentima. Opisujete koji su alati dostupni, a kada netko zatraži nešto što odgovara, vaš AI može poduzeti akciju.
+Sada dolazimo do jedne od najmoćnijih značajki: alata. Ovo je način na koji svom AI-u dajete praktične mogućnosti izvan razgovora. Kao što su srednjovjekovne cehove razvijale specijalizirane alate za specifične zanate, možete opremiti svoj AI fokusiranim instrumentima. Vi opisujete koje su alatke dostupne, i kada netko zatraži nešto što odgovara, vaš AI može poduzeti akciju.
 
 ### Korištenje Pythona
 
-Dodajmo nekoliko alata ovako:
+Dodajmo neke alate ovako:
 
 ```python
 from typing_extensions import Annotated, TypedDict
@@ -356,7 +503,7 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Bilješke moraju imati tip i mogu opcionalno uključivati zadanu vrijednost i opis (tim redoslijedom).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
@@ -366,10 +513,10 @@ functions = {
     "add": lambda a, b: a + b
 }
 ```
+  
+Što se ovdje događa? Kreiramo nacrt za alat nazvan `add`. Nasljeđujući od `TypedDict` i koristeći te elegantne `Annotated` tipove za `a` i `b`, dajemo LLM-u jasnu sliku što ovaj alat radi i što treba. Rječnik `functions` je kao naša kutija s alatima - kaže našem kodu točno što treba učiniti kada AI odluči koristiti određeni alat.
 
-Što se ovdje događa? Stvaramo nacrt za alat nazvan `add`. Nasljeđivanjem iz `TypedDict` i korištenjem tih naprednih `Annotated` tipova za `a` i `b`, dajemo LLM-u jasnu sliku o tome što ovaj alat radi i što mu je potrebno. Rječnik `functions` je poput našeg alata - govori našem kodu točno što učiniti kada AI odluči koristiti određeni alat.
-
-Pogledajmo kako sljedeće pozivamo LLM s ovim alatom:
+Pogledajmo kako pozvati LLM s ovim alatom sljedeće:
 
 ```python
 llm = ChatOpenAI(
@@ -380,10 +527,10 @@ llm = ChatOpenAI(
 
 llm_with_tools = llm.bind_tools(tools)
 ```
+  
+Ovdje pozivamo `bind_tools` s našim nizom `tools` i time LLM `llm_with_tools` sada ima znanje o ovom alatu.
 
-Ovdje pozivamo `bind_tools` s našim nizom `tools`, čime LLM `llm_with_tools` sada ima znanje o ovom alatu.
-
-Da bismo koristili ovaj novi LLM, možemo upisati sljedeći kod:
+Za korištenje ovog novog LLM-a možemo napisati sljedeći kod:
 
 ```python
 query = "What is 3 + 12?"
@@ -394,8 +541,8 @@ if(res.tool_calls):
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
-
-Sada kada pozivamo `invoke` na ovom novom LLM-u, koji ima alate, možda će svojstvo `tool_calls` biti popunjeno. Ako je tako, bilo koji identificirani alat ima svojstvo `name` i `args` koje identificira koji alat treba pozvati i s argumentima. Cijeli kod izgleda ovako:
+  
+Sada kad pozovemo `invoke` na ovom novom llm-u koji ima alate, možda će svojstvo `tool_calls` biti popunjeno. Ako jest, svaki identificirani alat ima svojstva `name` i `args` koja identificiraju koji alat se treba pozvati i s kojim argumentima. Cijeli kod izgleda ovako:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -406,7 +553,7 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Bilješke moraju imati tip i mogu opcionalno uključivati zadanu vrijednost i opis (tim redoslijedom).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
@@ -432,29 +579,28 @@ if(res.tool_calls):
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
-
-Pokretanjem ovog koda trebali biste vidjeti izlaz sličan:
+  
+Pokretanjem ovog koda trebali biste vidjeti rezultat sličan:
 
 ```text
 TOOL CALL:  15
 CONTENT: 
 ```
-
-AI je analizirao "Što je 3 + 12" i prepoznao ovo kao zadatak za alat `add`. Kao što vješt knjižničar zna na koji izvor se obratiti na temelju vrste postavljenog pitanja, AI je to zaključio iz naziva alata, opisa i specifikacija polja. Rezultat od 15 dolazi iz našeg rječnika `functions` koji izvršava alat:
+  
+AI je analizirao "What is 3 + 12" i prepoznao to kao zadatak za alat `add`. Kao što vješti knjižničar zna koji izvor konzultirati na temelju vrste pitanja, napravio je ovu procjenu prema imenu alata, opisu i specifikacijama polja. Rezultat 15 dolazi iz izvršavanja alata putem našeg rječnika `functions`:
 
 ```python
 print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 ```
-
+  
 ### Zanimljiviji alat koji poziva web API
-
-Dodavanje brojeva demonstrira koncept, ali stvarni alati obično obavljaju složenije operacije, poput pozivanja web API-ja. Proširimo naš primjer kako bismo omogućili AI-ju da dohvaća sadržaj s interneta - slično kao što su telegrafisti nekada povezivali udaljene lokacije:
+Dodavanje brojeva demonstrira koncept, ali stvarni alati obično izvode složenije operacije, poput pozivanja web API-ja. Proširimo naš primjer tako da AI dohvaća sadržaj s interneta - slično kao što su telegrafisti nekada povezivali udaljena mjesta:
 
 ```python
 class joke(TypedDict):
     """Tell a joke."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Anotacije moraju sadržavati tip i opcionalno mogu uključivati zadanu vrijednost i opis (tim redoslijedom).
     category: Annotated[str, ..., "The joke category"]
 
 def get_joke(category: str) -> str:
@@ -470,17 +616,43 @@ functions = {
 
 query = "Tell me a joke about animals"
 
-# the rest of the code is the same
+# ostatak koda je isti
 ```
 
-Sada, ako pokrenete ovaj kod, dobit ćete odgovor koji kaže nešto poput:
+Sada, ako pokrenete ovaj kod, dobit ćete odgovor koji će reći nešto poput:
 
 ```text
 TOOL CALL:  Chuck Norris once rode a nine foot grizzly bear through an automatic car wash, instead of taking a shower.
 CONTENT:  
 ```
 
-Evo cijelog koda:
+```mermaid
+flowchart TD
+    A[Korisnički upit: "Ispričaj mi vic o životinjama"] --> B[LangChain analiza]
+    B --> C{Alat dostupan?}
+    C -->|Da| D[Odaberi alat za vic]
+    C -->|Ne| E[Generiraj izravan odgovor]
+    
+    D --> F[Izvuci parametre]
+    F --> G[Pozovi vic(kategorija="životinje")]
+    G --> H[API zahtjev prema chucknorris.io]
+    H --> I[Vraćanje sadržaja vica]
+    I --> J[Prikaži korisniku]
+    
+    E --> K[AI-generirani odgovor]
+    K --> J
+    
+    subgraph "Sloj definicije alata"
+        L[TypedDict shema]
+        M[Implementacija funkcije]
+        N[Provjera parametara]
+    end
+    
+    D --> L
+    F --> N
+    G --> M
+```
+Evo koda u cijelosti:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -491,14 +663,14 @@ from typing_extensions import Annotated, TypedDict
 class add(TypedDict):
     """Add two integers."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Bilješke moraju imati tip i mogu opcionalno uključiti zadanu vrijednost i opis (tim redoslijedom).
     a: Annotated[int, ..., "First integer"]
     b: Annotated[int, ..., "Second integer"]
 
 class joke(TypedDict):
     """Tell a joke."""
 
-    # Annotations must have the type and can optionally include a default value and description (in that order).
+    # Bilješke moraju imati tip i mogu opcionalno uključiti zadanu vrijednost i opis (tim redoslijedom).
     category: Annotated[str, ..., "The joke category"]
 
 tools = [add, joke]
@@ -527,16 +699,16 @@ query = "Tell me a joke about animals"
 res = llm_with_tools.invoke(query)
 if(res.tool_calls):
     for tool in res.tool_calls:
-        # print("TOOL CALL: ", tool)
+        # print("POZIV ALATA: ", alat)
         print("TOOL CALL: ", functions[tool["name"]](../../../10-ai-framework-project/**tool["args"]))
 print("CONTENT: ",res.content)
 ```
 
-## Ugrađivanja i obrada dokumenata
+## Ugrađivanje i obrada dokumenata
 
-Ugrađivanja predstavljaju jedno od najelegantnijih rješenja u modernom AI-ju. Zamislite da možete uzeti bilo koji tekst i pretvoriti ga u numeričke koordinate koje hvataju njegovo značenje. To je upravo ono što ugrađivanja rade - transformiraju tekst u točke u višedimenzionalnom prostoru gdje se slični koncepti grupiraju. To je poput koordinatnog sustava za ideje, nalik na način na koji je Mendeljejev organizirao periodni sustav prema atomskim svojstvima.
+Ugrađivanje predstavlja jedno od najelegantnijih rješenja u modernom AI-u. Zamislite da možete uzeti bilo koji tekst i pretvoriti ga u numeričke koordinate koje hvataju njegovo značenje. Upravo to ugrađivanje i radi - pretvara tekst u točke u višedimenzionalnom prostoru gdje se slični pojmovi grupiraju zajedno. To je kao da imate koordinatni sustav za ideje, podsjećajući na način na koji je Mendelejev organizirao periodni sustav prema atomskim svojstvima.
 
-### Stvaranje i korištenje ugrađivanja
+### Izrada i korištenje ugrađivanja
 
 ```python
 from langchain_openai import OpenAIEmbeddings
@@ -544,24 +716,24 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 
-# Initialize embeddings
+# Inicijaliziraj ugradnje
 embeddings = OpenAIEmbeddings(
     api_key=os.environ["GITHUB_TOKEN"],
     base_url="https://models.github.ai/inference",
     model="text-embedding-3-small"
 )
 
-# Load and split documents
+# Učitaj i podijeli dokumente
 loader = TextLoader("documentation.txt")
 documents = loader.load()
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
 
-# Create vector store
+# Kreiraj vektorsku pohranu
 vectorstore = FAISS.from_documents(texts, embeddings)
 
-# Perform similarity search
+# Izvrši pretraživanje po sličnosti
 query = "How do I handle user authentication?"
 similar_docs = vectorstore.similarity_search(query, k=3)
 
@@ -569,7 +741,7 @@ for doc in similar_docs:
     print(f"Relevant content: {doc.page_content[:200]}...")
 ```
 
-### Učitavanje dokumenata u različitim formatima
+### Učitavači dokumenata za različite formate
 
 ```python
 from langchain_community.document_loaders import (
@@ -579,28 +751,52 @@ from langchain_community.document_loaders import (
     WebBaseLoader
 )
 
-# Load different document types
+# Učitajte različite vrste dokumenata
 pdf_loader = PyPDFLoader("manual.pdf")
 csv_loader = CSVLoader("data.csv")
 json_loader = JSONLoader("config.json")
 web_loader = WebBaseLoader("https://example.com/docs")
 
-# Process all documents
+# Obradite sve dokumente
 all_documents = []
 for loader in [pdf_loader, csv_loader, json_loader, web_loader]:
     docs = loader.load()
     all_documents.extend(docs)
 ```
 
-**Što možete učiniti s ugrađivanjima:**
-- **Izgraditi** pretraživanje koje zaista razumije što mislite, a ne samo podudaranje ključnih riječi
-- **Stvoriti** AI koji može odgovarati na pitanja o vašim dokumentima
-- **Napraviti** sustave preporuka koji predlažu zaista relevantan sadržaj
+**Što možete učiniti s ugrađivanjem:**
+- **Izgraditi** pretraživanje koje zapravo razumije što mislite, a ne samo podudaranje ključnih riječi
+- **Kreirati** AI koji može odgovarati na pitanja o vašim dokumentima
+- **Napraviti** sustave preporuka koji sugeriraju doista relevantan sadržaj
 - **Automatski** organizirati i kategorizirati vaš sadržaj
 
-## Izrada kompletne AI aplikacije
+```mermaid
+flowchart LR
+    A[Dokumenti] --> B[Razdjelnik Teksta]
+    B --> C[Stvori Ugrađivanja]
+    C --> D[Spremište Vektora]
+    
+    E[Upit Korisnika] --> F[Ugrađivanje Upita]
+    F --> G[Pretraga Sličnosti]
+    G --> D
+    D --> H[Relevantni Dokumenti]
+    H --> I[Odgovor AI]
+    
+    subgraph "Vektorski Prostor"
+        J[Dokument A: [0.1, 0.8, 0.3...]]
+        K[Dokument B: [0.2, 0.7, 0.4...]]
+        L[Upit: [0.15, 0.75, 0.35...]]
+    end
+    
+    C --> J
+    C --> K
+    F --> L
+    G --> J
+    G --> K
+```
+## Izgradnja kompletne AI aplikacije
 
-Sada ćemo integrirati sve što ste naučili u sveobuhvatnu aplikaciju - asistenta za kodiranje koji može odgovarati na pitanja, koristiti alate i održavati memoriju razgovora. Kao što je tiskarski stroj kombinirao postojeće tehnologije (pomicanje slova, tinta, papir i pritisak) u nešto transformativno, kombinirat ćemo naše AI komponente u nešto praktično i korisno.
+Sada ćemo integrirati sve što ste naučili u sveobuhvatnu aplikaciju - pomoćnika za kodiranje koji može odgovarati na pitanja, koristiti alate i održavati memoriju razgovora. Kao što je tiskarski stroj kombinirao postojeće tehnologije (pomični tip, tintu, papir i pritisak) u nešto transformativno, mi ćemo kombinirati naše AI komponente u nešto praktično i korisno.
 
 ### Primjer kompletne aplikacije
 
@@ -627,7 +823,7 @@ class CodingAssistant:
             Use tools when needed and maintain a helpful, encouraging tone.""")
         ]
         
-        # Define tools
+        # Definirajte alate
         self.setup_tools()
     
     def setup_tools(self):
@@ -644,20 +840,20 @@ class CodingAssistant:
         self.llm_with_tools = self.llm.bind_tools(self.tools)
     
     def chat(self, user_input: str):
-        # Add user message to conversation
+        # Dodajte korisničku poruku u razgovor
         self.conversation_history.append(HumanMessage(content=user_input))
         
-        # Get AI response
+        # Dohvati AI odgovor
         response = self.llm_with_tools.invoke(self.conversation_history)
         
-        # Handle tool calls if any
+        # Obradi pozive alata ako ih ima
         if response.tool_calls:
             for tool_call in response.tool_calls:
                 tool_result = self.execute_tool(tool_call)
                 print(f"🔧 Tool used: {tool_call['name']}")
                 print(f"📊 Result: {tool_result}")
         
-        # Add AI response to conversation
+        # Dodajte AI odgovor u razgovor
         self.conversation_history.append(response)
         
         return response.content
@@ -673,7 +869,7 @@ class CodingAssistant:
         
         return "Tool execution completed"
 
-# Usage example
+# Primjer upotrebe
 assistant = CodingAssistant()
 
 print("🤖 Coding Assistant Ready! Type 'quit' to exit.\n")
@@ -691,188 +887,260 @@ while True:
 
 ```mermaid
 graph TD
-    A[User Input] --> B[Coding Assistant]
-    B --> C[Conversation Memory]
-    B --> D[Tool Detection]
-    B --> E[LLM Processing]
+    A[Unos Korisnika] --> B[Pomoćnik za Kodiranje]
+    B --> C[Pamćenje Razgovora]
+    B --> D[Detekcija Alata]
+    B --> E[Obrada LLM-a]
     
-    D --> F[Web Search Tool]
-    D --> G[Code Formatter Tool]
+    D --> F[Alat za Pretraživanje Weba]
+    D --> G[Alat za Formatiranje Koda]
     
-    E --> H[Response Generation]
+    E --> H[Generiranje Odgovora]
     F --> H
     G --> H
     
-    H --> I[User Interface]
+    H --> I[Korisničko Sučelje]
     H --> C
 ```
-
 **Ključne značajke koje smo implementirali:**
-- **Pamti** cijeli vaš razgovor za kontinuitet konteksta
-- **Izvršava radnje** putem poziva alata, ne samo razgovora
+- **Pamti** cijeli vaš razgovor radi kontinuiteta konteksta
+- **Izvodi radnje** pozivanjem alata, ne samo razgovorom
 - **Prati** predvidljive obrasce interakcije
-- **Automatski upravlja** rukovanjem greškama i složenim tijekovima rada
+- **Upravlja** automatskim rukovanjem pogreškama i složenim radnim tijekovima
 
-## Zadatak: Izradite vlastitog AI asistenta za učenje
+### 🎯 Pedagoška provjera: Arhitektura AI za produkciju
 
-**Cilj**: Stvorite AI aplikaciju koja pomaže studentima u učenju programskih koncepata pružanjem objašnjenja, primjera koda i interaktivnih kvizova.
+**Razumijevanje arhitekture**: Izgradili ste kompletnu AI aplikaciju koja kombinira upravljanje razgovorom, pozivanje alata i strukturirane radne tijekove. Ovo predstavlja razvoj AI aplikacija na proizvodnoj razini.
+
+**Ključni pojmovi koje ste svladali**:
+- **Arhitektura temeljena na klasama**: Organizirana, održiva struktura AI aplikacije
+- **Integracija alata**: Prilagođena funkcionalnost izvan samog razgovora
+- **Upravljanje memorijom**: Perzistentni kontekst razgovora
+- **Rukovanje pogreškama**: Robusno ponašanje aplikacije
+
+**Povezanost s industrijom**: Obrasci arhitekture koje ste implementirali (razredi za razgovor, sustavi alata, upravljanje memorijom) isti su obrasci koji se koriste u enterprise AI aplikacijama poput Slackovog AI asistenta, GitHub Copilota i Microsoft Copilota. Gradite s razmišljanjem profesionalne arhitekture.
+
+**Pitanje za razmišljanje**: Kako biste proširili ovu aplikaciju za rukovanje s više korisnika, perzistentnim pohranama ili integracijom s vanjskim bazama podataka? Razmotrite izazove skalabilnosti i upravljanja stanjem.
+
+## Zadatak: Izgradite vlastitog asistenta za učenje pokretanog AI-em
+
+**Cilj**: Kreirati AI aplikaciju koja pomaže studentima učiti programske koncepte pružajući objašnjenja, primjere koda i interaktivne kvizove.
 
 ### Zahtjevi
 
-**Osnovne značajke (obavezno):**
-1. **Razgovorno sučelje**: Implementirajte sustav za chat koji održava kontekst kroz više pitanja
-2. **Obrazovni alati**: Stvorite barem dva alata koja pomažu u učenju:
-   - Alat za objašnjenje koda
-   - Generator kvizova za koncepte
-3. **Personalizirano učenje**: Koristite sistemske poruke za prilagodbu odgovora različitim razinama vještina  
-4. **Formatiranje odgovora**: Implementirajte strukturirani izlaz za pitanja kviza  
+**Temeljne značajke (obvezno):**
+1. **Sučelje za razgovor**: Implementirajte sustav za chat koji održava kontekst kroz više pitanja
+2. **Alati za učenje**: Kreirajte barem dva alata koji pomažu u učenju:
+   - alat za objašnjavanje koda
+   - generator kvizova o konceptima
+3. **Personalizirano učenje**: Koristite sistemske poruke za prilagodbu odgovora različitim razinama vještina
+4. **Formatiranje odgovora**: Implementirajte strukturirani izlaz za pitanja iz kviza
 
-### Koraci implementacije  
+### Koraci implementacije
 
-**Korak 1: Postavljanje okruženja**  
+**Korak 1: Postavljanje okruženja**
 ```bash
 pip install langchain langchain-openai
 ```
-  
-**Korak 2: Osnovna funkcionalnost razgovora**  
-- Kreirajte klasu `StudyAssistant`  
-- Implementirajte memoriju razgovora  
-- Dodajte konfiguraciju osobnosti za edukativnu podršku  
 
-**Korak 3: Dodavanje edukativnih alata**  
-- **Objašnjenje koda**: Razlaže kod na razumljive dijelove  
-- **Generator kvizova**: Stvara pitanja o konceptima programiranja  
-- **Praćenje napretka**: Prati teme koje su obrađene  
+**Korak 2: Osnovna funkcionalnost chata**
+- Kreirajte klasu `StudyAssistant`
+- Implementirajte memoriju razgovora
+- Dodajte konfiguraciju osobnosti za edukativnu podršku
 
-**Korak 4: Napredne značajke (opcionalno)**  
-- Implementirajte streaming odgovore za bolje korisničko iskustvo  
-- Dodajte učitavanje dokumenata za uključivanje materijala s tečaja  
-- Kreirajte ugrađene elemente za pretraživanje sadržaja na temelju sličnosti  
+**Korak 3: Dodavanje edukativnih alata**
+- **Objašnjivač koda**: Razbija kod na razumljive dijelove
+- **Generator kvizova**: Stvara pitanja o programskim konceptima
+- **Pratitelj napretka**: Prati obrađene teme
 
-### Kriteriji evaluacije  
+**Korak 4: Poboljšane značajke (neobavezno)**
+- Implementirajte streaming odgovore za bolje korisničko iskustvo
+- Dodajte učitavanje dokumenata za uključivanje nastavnih materijala
+- Kreirajte ugrađivanje za pronalazak sadržaja temeljenog na sličnosti
 
-| Značajka | Izvrsno (4) | Dobro (3) | Zadovoljavajuće (2) | Potrebno poboljšanje (1) |  
-|----------|-------------|-----------|---------------------|--------------------------|  
-| **Tijek razgovora** | Prirodni, kontekstualno svjesni odgovori | Dobro zadržavanje konteksta | Osnovni razgovor | Nema memorije između razmjena |  
-| **Integracija alata** | Više korisnih alata koji besprijekorno rade | 2+ alata ispravno implementirana | 1-2 osnovna alata | Alati ne funkcioniraju |  
-| **Kvaliteta koda** | Čist, dobro dokumentiran, rukovanje greškama | Dobra struktura, neka dokumentacija | Osnovna funkcionalnost radi | Loša struktura, bez rukovanja greškama |  
-| **Edukativna vrijednost** | Zaista korisno za učenje, prilagodljivo | Dobra podrška za učenje | Osnovna objašnjenja | Ograničena edukativna korist |  
+### Kriteriji evaluacije
 
-### Primjer strukture koda  
+| Značajka | Izvrsno (4) | Dobro (3) | Zadovoljavajuće (2) | Potrebno poboljšanje (1) |
+|---------|--------------|------------|---------------------|--------------------------|
+| **Tijek razgovora** | Prirodni, svjesni konteksta odgovori | Dobar zadržan kontekst | Osnovni razgovor | Nema memorije između razmjena |
+| **Integracija alata** | Više korisnih alata radi besprijekorno | 2+ alata ispravno implementirano | 1-2 osnovna alata | Alati nisu funkcionalni |
+| **Kvaliteta koda** | Čist, dobro dokumentiran, s rukovanjem pogreškama | Dobra struktura, nešto dokumentacije | Osnovne funkcije rade | Loša struktura, bez rukovanja pogreškama |
+| **Edukativna vrijednost** | Doista pomaže u učenju, prilagodljivo | Dobra podrška učenju | Osnovna objašnjenja | Ograničena edukativna korist |
+
+### Primjer strukture koda
 
 ```python
 class StudyAssistant:
     def __init__(self, skill_level="beginner"):
-        # Initialize LLM, tools, and conversation memory
+        # Inicijaliziraj LLM, alate i memoriju razgovora
         pass
     
     def explain_code(self, code, language):
-        # Tool: Explain how code works
+        # Alat: Objasni kako kod radi
         pass
     
     def generate_quiz(self, topic, difficulty):
-        # Tool: Create practice questions
+        # Alat: Izradi praktična pitanja
         pass
     
     def chat(self, user_input):
-        # Main conversation interface
+        # Glavno sučelje za razgovor
         pass
 
-# Example usage
+# Primjer uporabe
 assistant = StudyAssistant(skill_level="intermediate")
 response = assistant.chat("Explain how Python functions work")
 ```
-  
-**Bonus izazovi:**  
-- Dodajte mogućnosti glasovnog unosa/izlaza  
-- Implementirajte web sučelje koristeći Streamlit ili Flask  
-- Kreirajte bazu znanja iz materijala s tečaja koristeći ugrađene elemente  
-- Dodajte praćenje napretka i personalizirane putanje učenja  
 
-## Sažetak  
+**Bonus izazovi:**
+- Dodajte mogućnosti glasovnog unosa/izlaza
+- Implementirajte web sučelje koristeći Streamlit ili Flask
+- Kreirajte bazu znanja iz nastavnih materijala pomoću ugrađivanja
+- Dodajte praćenje napretka i personalizirane putove učenja
 
-🎉 Sada ste savladali osnove razvoja AI okvira i naučili kako izgraditi sofisticirane AI aplikacije koristeći LangChain. Kao da ste završili sveobuhvatno naukovanje, stekli ste značajan set vještina. Pogledajmo što ste postigli.  
+## 📈 Vaš vremenski okvir usavršavanja razvoja AI okvira
 
-### Što ste naučili  
+```mermaid
+timeline
+    title Razvojni put proizvođačkog AI okvira
+    
+    section Temelji okvira
+        Razumijevanje apstrakcija
+            : Glavne odluke između okvira i API-ja
+            : Učenje osnovnih pojmova LangChaina
+            : Implementacija sustava tipova poruka
+        
+        Osnovna integracija
+            : Povezivanje s AI pružateljima
+            : Rukovanje autentifikacijom
+            : Upravljanje konfiguracijom
+    
+    section Sustavi razgovora
+        Upravljanje memorijom
+            : Izgradnja povijesti razgovora
+            : Implementacija praćenja konteksta
+            : Rukovanje trajnošću sesije
+        
+        Napredne interakcije
+            : Savladavanje streaming odgovora
+            : Izrada predložaka upita
+            : Implementacija strukturiranog izlaza
+    
+    section Integracija alata
+        Razvoj prilagođenih alata
+            : Dizajn shema alata
+            : Implementacija poziva funkcija
+            : Rukovanje vanjskim API-jima
+        
+        Automatizacija tijeka rada
+            : Lanci višestrukih alata
+            : Izrada stabala odlučivanja
+            : Izgradnja ponašanja agenata
+    
+    section Proizvođačke aplikacije
+        Kompletna arhitektura sustava
+            : Kombinacija svih značajki okvira
+            : Implementacija granica pogrešaka
+            : Izrada održivog koda
+        
+        Spremnost za poduzeća
+            : Rukovanje pitanjima skalabilnosti
+            : Implementacija nadzora
+            : Izrada strategija implementacije
+```
+**🎓 Mjerilo diplome**: Uspješno ste savladali razvoj AI okvira koristeći iste alate i obrasce koji pokreću moderne AI aplikacije. Ove vještine predstavljaju vrhunac razvoja AI aplikacija i pripremaju vas za izgradnju inteligentnih sustava na razini poduzeća.
 
-**Osnovni koncepti okvira:**  
-- **Prednosti okvira**: Razumijevanje kada odabrati okvire umjesto izravnih API poziva  
-- **Osnove LangChain-a**: Postavljanje i konfiguriranje AI modela  
-- **Vrste poruka**: Korištenje `SystemMessage`, `HumanMessage` i `AIMessage` za strukturirane razgovore  
+**🔄 Sljedeće razine sposobnosti**:
+- Spremni za istraživanje naprednih AI arhitektura (agenti, višestruki agenti)
+- Pripremljeni za izgradnju RAG sustava s vektorskim bazama podataka
+- Opremljeni za stvaranje višemodalnih AI aplikacija
+- Postavljena osnova za skaliranje i optimizaciju AI aplikacija
 
-**Napredne značajke:**  
-- **Pozivanje alata**: Kreiranje i integracija prilagođenih alata za poboljšane AI mogućnosti  
-- **Memorija razgovora**: Održavanje konteksta kroz više izmjena u razgovoru  
-- **Streaming odgovori**: Implementacija isporuke odgovora u stvarnom vremenu  
-- **Predlošci upita**: Izrada ponovljivih, dinamičnih upita  
-- **Strukturirani izlaz**: Osiguravanje dosljednih, lako čitljivih AI odgovora  
-- **Ugrađeni elementi**: Kreiranje semantičkog pretraživanja i mogućnosti obrade dokumenata  
+## Sažetak
 
-**Praktične primjene:**  
-- **Izrada kompletnih aplikacija**: Kombiniranje više značajki u aplikacije spremne za proizvodnju  
-- **Rukovanje greškama**: Implementacija robusnog upravljanja greškama i validacije  
-- **Integracija alata**: Kreiranje prilagođenih alata koji proširuju AI mogućnosti  
+🎉 Sada ste savladali osnove razvoja AI okvira i naučili kako graditi sofisticirane AI aplikacije koristeći LangChain. Kao da ste završili sveobuhvatan naukovanje, stekli ste opsežan skup vještina. Pogledajmo što ste postigli.
 
-### Ključne lekcije  
+### Što ste naučili
 
-> 🎯 **Zapamtite**: AI okviri poput LangChain-a su u osnovi vaši najbolji prijatelji za skrivanje složenosti i pružanje bogatih značajki. Savršeni su kada trebate memoriju razgovora, pozivanje alata ili želite raditi s više AI modela bez gubitka razuma.  
+**Temeljni koncepti okvira:**
+- **Prednosti okvira**: Razumijevanje kada odabrati okvire umjesto izravnih poziva API-ja
+- **Osnove LangChaina**: Postavljanje i konfiguracija veza za AI modele
+- **Vrste poruka**: Korištenje `SystemMessage`, `HumanMessage` i `AIMessage` za strukturirane razgovore
 
-**Okvir za donošenje odluka o integraciji AI-a:**  
+**Napredne značajke:**
+- **Pozivanje alata**: Kreiranje i integracija prilagođenih alata za povećane AI sposobnosti
+- **Memorija razgovora**: Održavanje konteksta kroz više okretaja razgovora
+- **Streaming odgovori**: Implementacija isporuke odgovora u stvarnom vremenu
+- **Predlošci za upite**: Izrada višekratno upotrebljivih, dinamičnih upita
+- **Strukturirani izlaz**: Osiguravanje konzistentnih, parsabilnih AI odgovora
+- **Ugrađivanje**: Kreiranje semantičkog pretraživanja i obrada dokumenata
+
+**Praktične primjene:**
+- **Izgradnja kompletnih aplikacija**: Kombiniranje više značajki u aplikacije spremne za produkciju
+- **Rukovanje pogreškama**: Implementacija robusnog upravljanja pogreškama i validacija
+- **Integracija alata**: Kreiranje prilagođenih alata koji proširuju AI sposobnosti
+
+### Ključne spoznaje
+
+> 🎯 **Zapamtite**: AI okviri poput LangChain-a su u osnovi vaši najbolji prijatelji koji skrivaju složenost i prepuni su značajki. Savršeni su kad trebate memoriju razgovora, pozivanje alata ili želite raditi s više AI modela bez gubitka razuma.
+
+**Okvir odluke za integraciju AI-a:**
 
 ```mermaid
 flowchart TD
-    A[AI Integration Need] --> B{Simple single query?}
-    B -->|Yes| C[Direct API calls]
-    B -->|No| D{Need conversation memory?}
-    D -->|No| E[SDK Integration]
-    D -->|Yes| F{Need tools or complex features?}
-    F -->|No| G[Framework with basic setup]
-    F -->|Yes| H[Full framework implementation]
+    A[Potreba za integracijom AI] --> B{Jednostavan jedinstveni upit?}
+    B -->|Da| C[Direktni API pozivi]
+    B -->|Ne| D{Trebate li memoriju za razgovor?}
+    D -->|Ne| E[SDK integracija]
+    D -->|Da| F{Trebate li alate ili složene značajke?}
+    F -->|Ne| G[Okvir s osnovnim postavkama]
+    F -->|Da| H[Puna implementacija okvira]
     
-    C --> I[HTTP requests, minimal dependencies]
-    E --> J[Provider SDK, model-specific]
-    G --> K[LangChain basic chat]
-    H --> L[LangChain with tools, memory, agents]
+    C --> I[HTTP zahtjevi, minimalne ovisnosti]
+    E --> J[Provider SDK, specifičan za model]
+    G --> K[Osnovni LangChain chat]
+    H --> L[LangChain s alatima, memorijom, agentima]
 ```
-  
-### Što dalje?  
+### Kuda dalje?
 
-**Počnite graditi odmah:**  
-- Iskoristite ove koncepte i izgradite nešto što vas uzbuđuje!  
-- Eksperimentirajte s različitim AI modelima kroz LangChain - to je kao igralište za AI modele  
-- Kreirajte alate koji rješavaju stvarne probleme s kojima se suočavate u svom radu ili projektima  
+**Započnite odmah graditi:**
+- Uzmite ove koncepte i izgradite nešto što VAS oduševljava!
+- Igrajte se s različitim AI modelima preko LangChaina - to je kao igralište za AI modele
+- Kreirajte alate koji rješavaju stvarne probleme na poslu ili u projektima
 
-**Spremni za sljedeću razinu?**  
-- **AI agenti**: Izradite AI sustave koji mogu planirati i izvršavati složene zadatke samostalno  
-- **RAG (Generacija uz prošireno pretraživanje)**: Kombinirajte AI s vlastitim bazama znanja za aplikacije s povećanim mogućnostima  
-- **Multimodalni AI**: Radite s tekstom, slikama i zvukom zajedno - mogućnosti su beskrajne!  
-- **Implementacija u produkciju**: Naučite kako skalirati svoje AI aplikacije i pratiti ih u stvarnom svijetu  
+**Spremni za sljedeću razinu?**
+- **AI agenti**: Izradite AI sustave koji mogu sami planirati i izvršavati složene zadatke
+- **RAG (Retrieval-Augmented Generation)**: Kombinirajte AI sa svojim bazama znanja za supermoćne aplikacije
+- **Višemodalni AI**: Radite s tekstom, slikama i zvukom zajedno - mogućnosti su beskonačne!
+- **Producentsko pokretanje**: Naučite kako skalirati svoje AI aplikacije i nadzirati ih u stvarnom svijetu
 
-**Pridružite se zajednici:**  
-- Zajednica LangChain-a je fantastična za praćenje novosti i učenje najboljih praksi  
-- GitHub Models vam pruža pristup najnovijim AI mogućnostima - savršeno za eksperimentiranje  
-- Nastavite vježbati s različitim slučajevima upotrebe - svaki projekt će vas naučiti nešto novo  
+**Pridružite se zajednici:**
+- Zajednica LangChain je izvrsna za praćenje novosti i učenje najboljih praksi
+- GitHub Models vam pruža pristup najmodernijim AI mogućnostima - savršeno za eksperimentiranje
+- Nastavite vježbati s različitim slučajevima upotrebe - svaki projekt će vas nešto novo naučiti
 
-Sada imate znanje za izradu inteligentnih, konverzacijskih aplikacija koje mogu pomoći ljudima u rješavanju stvarnih problema. Kao renesansni majstori koji su kombinirali umjetničku viziju s tehničkom vještinom, sada možete spojiti AI mogućnosti s praktičnom primjenom. Pitanje je: što ćete stvoriti? 🚀  
+Sada imate znanje za izgradnju inteligentnih, konverzacijskih aplikacija koje mogu pomoći ljudima riješiti stvarne probleme. Kao renesansni majstori koji su spojili umjetničku viziju i tehničku vještinu, sada možete spojiti AI sposobnosti s praktičnom primjenom. Pitanje je: što ćete stvoriti? 🚀
 
-## Izazov GitHub Copilot Agenta 🚀  
+## Izazov GitHub Copilot Agenta 🚀
 
-Koristite Agent način rada za dovršavanje sljedećeg izazova:  
+Iskoristite Agent mod za dovršetak sljedećeg izazova:
 
-**Opis:** Izradite naprednog AI asistenta za pregled koda koji kombinira više značajki LangChain-a, uključujući pozivanje alata, strukturirani izlaz i memoriju razgovora, kako bi pružio sveobuhvatne povratne informacije o predaji koda.  
+**Opis:** Izradite naprednog AI asistenta za pregled koda koji kombinira više LangChain značajki uključujući pozivanje alata, strukturirani izlaz i memoriju razgovora kako biste pružili sveobuhvatne povratne informacije o predajama koda.
 
-**Upit:** Kreirajte klasu CodeReviewAssistant koja implementira:  
-1. Alat za analizu složenosti koda i predlaganje poboljšanja  
-2. Alat za provjeru koda prema najboljim praksama  
-3. Strukturirani izlaz koristeći Pydantic modele za dosljedan format pregleda  
-4. Memoriju razgovora za praćenje sesija pregleda  
-5. Glavno sučelje za razgovor koje može obrađivati predaju koda i pružiti detaljne, korisne povratne informacije  
+**Zadatak:** Kreirajte klasu CodeReviewAssistant koja implementira:
+1. Alat za analizu složenosti koda i prijedloge poboljšanja
+2. Alat za provjeru koda s obzirom na najbolje prakse
+3. Strukturirani izlaz koristeći Pydantic modele za dosljedan format recenzije
+4. Memoriju razgovora za praćenje sesija recenzije
+5. Glavno chat sučelje koje može obrađivati predaje koda i pružati detaljne, primjenjive povratne informacije
 
-Asistent bi trebao moći pregledavati kod na više programskih jezika, održavati kontekst kroz više predaja koda u jednoj sesiji i pružiti i sažetke ocjena i detaljne prijedloge za poboljšanje.  
+Asistent bi trebao moći pregledavati kod u više programskih jezika, održavati kontekst kroz više predaja koda u sesiji i pružati i sažetke ocjena i detaljne prijedloge za poboljšanje.
 
-Saznajte više o [agent načinu rada](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.  
+Više saznajte o [agent modu](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) ovdje.
 
 ---
 
-**Izjava o odricanju odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Odricanje od odgovornosti**:  
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba se smatrati službenim izvorom informacija. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne odgovaramo za bilo kakve nesporazume ili pogrešna tumačenja nastala korištenjem ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

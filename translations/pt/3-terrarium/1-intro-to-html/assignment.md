@@ -1,53 +1,154 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5a764667bbe82aa72ac0a67f4c97ff4a",
-  "translation_date": "2025-10-03T09:32:10+00:00",
+  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
+  "translation_date": "2026-01-06T18:22:25+00:00",
   "source_file": "3-terrarium/1-intro-to-html/assignment.md",
   "language_code": "pt"
 }
 -->
-# Tarefa de Prática de HTML: Criar um Mockup de Blog
+# Trabalho Prático de HTML: Construir um Modelo de Blog
 
-## Objetivo
+## Objectivos de Aprendizagem
 
-Desenhar e codificar manualmente a estrutura HTML para a página inicial de um blog pessoal. Este exercício ajudará a praticar HTML semântico, planeamento de layout e organização de código.
+Aplique os seus conhecimentos de HTML ao desenhar e codificar uma estrutura completa para a página inicial de um blog. Este trabalho prático reforçará conceitos de HTML semântico, melhores práticas de acessibilidade e competências de organização profissional de código que usará ao longo da sua jornada no desenvolvimento web.
 
-## Instruções
+**Ao completar este trabalho, irá:**
+- Praticar o planeamento de layouts de websites antes de programar
+- Aplicar elementos HTML semânticos de forma adequada
+- Criar marcação acessível e bem estruturada
+- Desenvolver hábitos profissionais de codificação com comentários e organização
 
-1. **Desenhar o Mockup do Blog**
-   - Faça um esboço visual da página inicial do seu blog. Inclua secções principais como cabeçalho, navegação, conteúdo principal, barra lateral e rodapé.
-   - Pode usar papel e digitalizar o seu esboço ou utilizar ferramentas digitais (por exemplo, Figma, Adobe XD, Canva ou até PowerPoint).
+## Requisitos do Projeto
 
-2. **Identificar os Elementos HTML**
-   - Liste os elementos HTML que planeia usar em cada secção (por exemplo, `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<footer>`, `<section>`, `<h1>`–`<h6>`, `<p>`, `<img>`, `<ul>`, `<li>`, `<a>`, etc.).
+### Parte 1: Planeamento do Design (Modelo Visual)
 
-3. **Escrever o Código HTML**
-   - Codifique manualmente o HTML para o seu mockup. Foque-se na estrutura semântica e nas melhores práticas.
-   - Inclua pelo menos 10 elementos HTML distintos.
-   - Adicione comentários para explicar as suas escolhas e estrutura.
+**Crie um modelo visual da página inicial do seu blog que inclua:**
+- Cabeçalho com o título do site e navegação
+- Área principal com pelo menos 2-3 pré-visualizações de publicações do blog
+- Barra lateral com informação adicional (secção sobre, publicações recentes, categorias)
+- Rodapé com informação de contacto ou links
 
-4. **Submeter o Trabalho**
-   - Carregue o seu esboço/mockup e o ficheiro HTML.
-   - Opcionalmente, forneça uma breve reflexão (2–3 frases) sobre as suas decisões de design.
+**Opções para criação do modelo:**
+- **Esboço feito à mão**: Use papel e lápis, e depois fotografe ou digitalize o seu desenho
+- **Ferramentas digitais**: Figma, Adobe XD, Canva, PowerPoint ou qualquer aplicação de desenho
+- **Ferramentas de wireframe**: Balsamiq, MockFlow ou software similar para wireframing
 
-## Rubrica
+**Identifique as secções do seu modelo** com os elementos HTML que planeia usar (ex.: "Cabeçalho - `<header>`", "Publicações do Blog - `<article>`").
 
-| Critério         | Exemplar                                                                                   | Adequado                                                                         | Necessita de Melhorias                                                          |
-|------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Mockup Visual    | Mockup claro e detalhado com secções identificadas e layout bem pensado                    | Mockup básico com algumas secções identificadas                                  | Mockup mínimo ou pouco claro; falta identificação das secções                   |
-| Elementos HTML   | Utiliza 10+ elementos HTML semânticos; demonstra compreensão de estrutura e melhores práticas | Utiliza 5–9 elementos HTML; alguma estrutura semântica                           | Utiliza menos de 5 elementos; falta estrutura semântica                         |
-| Qualidade do Código | Código bem organizado, legível e com comentários; segue os padrões HTML                  | Código maioritariamente organizado; poucos comentários                           | Código desorganizado; falta de comentários                                      |
-| Reflexão         | Reflexão perspicaz sobre escolhas de design e desafios                                    | Reflexão básica                                                                  | Sem reflexão ou irrelevante                                                     |
+### Parte 2: Planeamento dos Elementos HTML
 
-## Dicas
+**Crie uma lista que associe cada secção do seu modelo a elementos HTML específicos:**
 
-- Utilize tags HTML semânticas para melhor acessibilidade e SEO.
-- Organize o seu código com indentação e comentários.
-- Consulte [Referência de Elementos HTML do MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) para orientação.
-- Pense em como o seu layout pode ser expandido ou estilizado em tarefas futuras.
+```
+Example:
+- Site Header → <header>
+- Main Navigation → <nav> with <ul> and <li>
+- Blog Post → <article> with <h2>, <p>, <time>
+- Sidebar → <aside> with <section> elements
+- Page Footer → <footer>
+```
+
+**Elementos Obrigatórios a Incluir:**
+O seu HTML deve conter pelo menos 10 elementos semânticos diferentes desta lista:
+- `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
+- `<h1>`, `<h2>`, `<h3>`, `<p>`, `<ul>`, `<li>`, `<a>`
+- `<img>`, `<time>`, `<blockquote>`, `<strong>`, `<em>`
+
+### Parte 3: Implementação em HTML
+
+**Codifique a sua página inicial do blog seguindo estes padrões:**
+
+1. **Estrutura do Documento**: Inclua DOCTYPE, html, head e body corretamente
+2. **Marcação Semântica**: Use elementos HTML para os seus fins próprios
+3. **Acessibilidade**: Inclua texto alt adequado para imagens e texto significativo para links
+4. **Qualidade do Código**: Use indentação consistente e comentários úteis
+5. **Conteúdo**: Inclua conteúdo realista do blog (pode usar texto fictício)
+
+**Estrutura HTML de exemplo:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+</head>
+<body>
+    <!-- Main site header -->
+    <header>
+        <h1>My Blog Title</h1>
+        <nav>
+            <!-- Navigation menu -->
+        </nav>
+    </header>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Blog posts go here -->
+    </main>
+    
+    <!-- Sidebar content -->
+    <aside>
+        <!-- Additional information -->
+    </aside>
+    
+    <!-- Site footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
+```
+
+### Parte 4: Reflexão
+
+**Escreva uma breve reflexão (3-5 frases) respondendo a:**
+- Quais elementos HTML usou com mais confiança?
+- Que desafios encontrou no planeamento ou na codificação?
+- Como o HTML semântico ajudou a organizar o seu conteúdo?
+- O que faria de diferente no seu próximo projeto HTML?
+
+## Lista de Verificação para Entrega
+
+**Antes de submeter, certifique-se de que tem:**
+- [ ] Modelo visual com os elementos HTML identificados
+- [ ] Ficheiro HTML completo com estrutura correta do documento
+- [ ] Pelo menos 10 elementos HTML semânticos diferentes usados apropriadamente
+- [ ] Comentários significativos que expliquem a estrutura do seu código
+- [ ] Sintaxe HTML válida (teste num navegador)
+- [ ] Reflexão escrita respondendo às perguntas do enunciado
+
+## Rubrica de Avaliação
+
+| Critérios | Exemplar (4) | Proficiente (3) | Em Desenvolvimento (2) | Iniciante (1) |
+|----------|---------------|----------------|----------------|---------------|
+| **Planeamento & Design** | Modelo detalhado e bem identificado, mostrando compreensão clara do layout e da estrutura semântica HTML | Modelo claro com a maioria das secções identificadas corretamente | Modelo básico com alguma identificação, mostra compreensão geral | Modelo mínimo ou pouco claro, falta identificação adequada das secções |
+| **Uso de HTML Semântico** | Usa 10+ elementos semânticos correcta e apropriadamente, demonstra profundo entendimento da estrutura HTML e acessibilidade | Usa 8-9 elementos semânticos correctamente, mostra bom entendimento da marcação semântica | Usa 6-7 elementos semânticos, alguma confusão no uso adequado | Usa menos de 6 elementos ou faz mau uso dos elementos semânticos |
+| **Qualidade & Organização do Código** | Código excecionalmente bem organizado, com indentação correta, comentários abrangentes e sintaxe HTML perfeita | Código bem organizado com boa indentação, comentários úteis e sintaxe válida | Código maioritariamente organizado com alguns comentários, problemas menores de sintaxe | Pouca organização, comentários mínimos, múltiplos erros de sintaxe |
+| **Acessibilidade & Melhores Práticas** | Excelentes considerações de acessibilidade, texto alt significativo, hierarquia correta de títulos, segue todas as melhores práticas modernas de HTML | Boas características de acessibilidade, uso apropriado de títulos e texto alt, segue a maioria das boas práticas | Algumas considerações de acessibilidade, texto alt básico e estrutura básica de títulos | Acessibilidade limitada, má estrutura de títulos, não segue boas práticas |
+| **Reflexão & Aprendizagem** | Reflexão perspicaz mostrando profundo entendimento dos conceitos HTML e análise ponderada do processo de aprendizagem | Boa reflexão mostrando compreensão dos conceitos chave e algum autoconhecimento no processo de aprendizagem | Reflexão básica com visão limitada sobre conceitos HTML ou processo de aprendizagem | Reflexão mínima ou ausente, mostra pouco entendimento dos conceitos aprendidos |
+
+## Recursos de Aprendizagem
+
+**Referências Essenciais:**
+- [MDN HTML Elements Reference](https://developer.mozilla.org/docs/Web/HTML/Element) - Guia completo de todos os elementos HTML
+- [HTML5 Semantic Elements](https://developer.mozilla.org/docs/Web/HTML/Element#content_sectioning) - Compreender a marcação semântica
+- [Web Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Criar conteúdos web acessíveis
+- [HTML Validator](https://validator.w3.org/) - Verifique a sintaxe do seu HTML
+
+**Dicas Profissionais para o Sucesso:**
+- Comece pelo seu modelo antes de escrever qualquer código
+- Use as ferramentas de desenvolvimento do navegador para inspecionar a estrutura do seu HTML
+- Teste a sua página com diferentes tamanhos de ecrã (mesmo sem CSS)
+- Leia o seu HTML em voz alta para verificar se a estrutura faz sentido lógico
+- Considere como um leitor de ecrãs interpretaria a estrutura da sua página
+
+> 💡 **Lembre-se**: Este trabalho foca-se na estrutura e semântica do HTML. Não se preocupe com o estilo visual – para isso é o CSS! A sua página pode parecer simples, mas deve ser bem estruturada e significativa.
 
 ---
 
-**Aviso**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, é importante notar que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso Legal**:
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, pedimos que tenha em conta que traduções automatizadas podem conter erros ou imprecisões. O documento original, na sua língua nativa, deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes da utilização desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

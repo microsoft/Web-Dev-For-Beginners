@@ -1,118 +1,242 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "32bd800759c3e943c38ad9ae6e1f51e0",
-  "translation_date": "2025-10-24T19:30:49+00:00",
+  "original_hash": "b807b09df716dc48a2b750835bf8e933",
+  "translation_date": "2026-01-07T01:56:56+00:00",
   "source_file": "7-bank-project/4-state-management/README.md",
   "language_code": "sw"
 }
 -->
-# Jenga Programu ya Benki Sehemu ya 4: Dhana za Usimamizi wa Hali
+# Jenga App ya Benki Sehemu ya 4: Dhana za Usimamizi wa Hali
 
-## Maswali ya Awali ya Somo
+## ⚡ Unachoweza Kufanya Katika Dakika 5 Zijazo
 
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/47)
+**Njia ya Mwanzo wa Haraka kwa Waendelezaji Wenye Muda Mfupi**
+
+```mermaid
+flowchart LR
+    A[⚡ Dakika 5] --> B[Chunguza matatizo ya hali]
+    B --> C[Tengeneza kitu cha hali ya kati]
+    C --> D[Ongeza kazi ya updateState]
+    D --> E[Tazama maboresho ya haraka]
+```
+- **Dakika 1**: Jaribu tatizo la hali ya sasa - ingia, tazama upya ukurasa, angalia kuondolewa kwa kiingilio
+- **Dakika 2**: Badilisha `let account = null` na `let state = { account: null }`
+- **Dakika 3**: Unda kazi rahisi ya `updateState()` kwa sasisho za kidhibitiwa
+- **Dakika 4**: Sasisha moja ya kazi ili kutumia muundo mpya
+- **Dakika 5**: Jaribu utabiri ulioboreshwa na uwezo wa kutatua matatizo
+
+**Jaribio la Haraka la Uchunguzi**:
+```javascript
+// Kabla: Hali iliyosambazwa
+let account = null; // Imepotea wakati wa kufungua upya!
+
+// Baada: Hali iliyojumuishwa
+let state = Object.freeze({ account: null }); // Imebadiliwa na inafuata!
+```
+
+**Kwa Nini Hii ni Muhimu**: Katika dakika 5, utashuhudia mabadiliko kutoka kwa usimamizi wa hali usiovurugika hadi mifumo inayoweza kutabirika na kutatuliwa kwa urahisi. Hii ni msingi unaofanya programu changamano kuwa rahisi kudumishwa.
+
+## 🗺️ Safari Yako ya Kujifunza Kupitia Utaalamu wa Usimamizi wa Hali
+
+```mermaid
+journey
+    title Kutoka Hali Zilizotawanyika hadi Usanifu wa Kitaalamu
+    section Kugundua Matatizo
+      Tambua matatizo ya upotevu wa hali: 3: You
+      Elewa masasisho yaliyotawanyika: 4: You
+      Tambua mahitaji ya usanifu: 6: You
+    section Kuweka Udhibiti Kando
+      Tengeneza kitu kimoja cha hali: 5: You
+      Tekeleza masasisho yanayodhibitiwa: 7: You
+      Ongeza mifumo isiyobadilika: 8: You
+    section Kuongeza Kudumu
+      Tekeleza localStorage: 6: You
+      Hudumia serialization: 7: You
+      Tengeneza kuendelea kwa kikao: 9: You
+    section Kuweka Mizani Kuwa Safi
+      Takasa uchakavu wa data: 5: You
+      Jenga mifumo ya kusasisha: 8: You
+      Fikia usawa bora: 9: You
+```
+**Mwenendo wa Safari Yako**: Mwisho wa somo hili, utakuwa umejenga mfumo wa usimamizi wa hali wa kiwango cha kitaalamu unaoshughulikia uhifadhi, uhalisia wa data, na sasisho zinazotabirika - mifumo ile ile inayotumika katika programu za uzalishaji.
+
+## Mtihani wa Kabla ya Mzungumzo
+
+[Mtihani wa kabla ya mzungumzo](https://ff-quizzes.netlify.app/web/quiz/47)
 
 ## Utangulizi
 
-Usimamizi wa hali ni kama mfumo wa urambazaji kwenye chombo cha Voyager – kila kitu kinapofanya kazi vizuri, huwezi hata kugundua kuwa upo. Lakini mambo yanapokwenda vibaya, inakuwa tofauti kati ya kufika anga za mbali na kupotea katika ulimwengu wa nyota. Katika ukuzaji wa wavuti, hali inawakilisha kila kitu ambacho programu yako inahitaji kukumbuka: hali ya kuingia kwa mtumiaji, data ya fomu, historia ya urambazaji, na hali za muda za kiolesura.
+Usimamizi wa hali ni kama mfumo wa urambazaji kwenye chombo cha anga cha Voyager – wakati kila kitu kinafanya kazi kwa usawa, hujali tu kwamba upo. Lakini pale mambo yanapokosea, huwa ni tofauti kati ya kufika angani interstellar na kutawanyika kupotea katika maporomoko ya anga. Katika ujenzi wa wavuti, hali inaashiria kila kitu ambacho programu yako inahitaji kukumbuka: hali ya kuingia mtumiaji, data za fomu, historia ya urambazaji, na hali za muda za kiolesura.
 
-Kadri programu yako ya benki imeendelea kutoka fomu rahisi ya kuingia hadi kuwa programu ya kisasa zaidi, huenda umekutana na changamoto za kawaida. Ukiboresha ukurasa, watumiaji huingia tena bila kutarajia. Ukifunga kivinjari, maendeleo yote yanapotea. Ukijaribu kutatua tatizo, unatafuta kupitia kazi nyingi zinazobadilisha data kwa njia tofauti.
+App yako ya benki ikiwa imeendelea kutoka fomu rahisi ya kuingia hadi programu tata zaidi, labda umekutana na changamoto za kawaida. Rudisha ukurasa na watumiaji hupata kuondolewa kiotomatiki. Funga kivinjari na maendeleo yote hupotea. Tatua tatizo na unatafuta kupitia kazi nyingi zinazobadilisha data ile ile kwa njia tofauti.
 
-Hizi si dalili za uandishi mbaya wa programu – ni changamoto za kawaida zinazotokea programu zinapofikia kiwango fulani cha ugumu. Kila msanidi programu hukutana na changamoto hizi programu zao zinapobadilika kutoka "uthibitisho wa dhana" hadi "tayari kwa uzalishaji."
+Hizi si dalili za uandishi mbaya wa msimbo – ni maumivu ya kawaida yanayotokea wakati programu zinapofikia kiwango fulani cha ugumu. Kila msanidi hujikuta na changamoto hizi wakati programu zao zinapoanza kutoka "ushahidi wa dhana" hadi "tayari kwa uzalishaji."
 
-Katika somo hili, tutaweka mfumo wa usimamizi wa hali ulio katikati ambao utabadilisha programu yako ya benki kuwa programu ya kuaminika na ya kitaalamu. Utajifunza kudhibiti mtiririko wa data kwa njia inayotabirika, kuhifadhi vikao vya watumiaji ipasavyo, na kuunda uzoefu laini wa mtumiaji ambao programu za wavuti za kisasa zinahitaji.
+Katika somo hili, tutatekeleza mfumo wa usimamizi wa hali uliolengwa ambao utageuza app yako ya benki kuwa programu inayotegemeka na ya kitaalamu. Utajifunza kusimamia mtiririko wa data kwa utabiri, kuhifadhi vikao vya mtumiaji ipasavyo, na kutengeneza uzoefu laini wa mtumiaji unaohitajika na programu za kisasa za wavuti.
 
 ## Mahitaji ya Awali
 
-Kabla ya kuingia kwenye dhana za usimamizi wa hali, unahitaji kuwa na mazingira yako ya ukuzaji yamewekwa vizuri na msingi wa programu yako ya benki uko tayari. Somo hili linajengwa moja kwa moja juu ya dhana na msimbo kutoka sehemu za awali za mfululizo huu.
+Kabla ya kuingia katika dhana za usimamizi wa hali, unahitaji kuwa na mazingira yako ya maendeleo yamesh/setup kikamilifu na msingi wa app yako ya benki uko sawa. Somo hili linajengwa moja kwa moja kwenye dhana na msimbo kutoka sehemu zilizopita za mfululizo huu.
 
 Hakikisha una vipengele vifuatavyo tayari kabla ya kuendelea:
 
-**Mazingira Yanayohitajika:**
-- Kamilisha [somo la upatikanaji wa data](../3-data/README.md) - programu yako inapaswa kupakia na kuonyesha data ya akaunti kwa mafanikio
+**Mipangilio Inayohitajika:**
+- Maliza [somo la kupata data](../3-data/README.md) - app yako inapaswa kupakia na kuonyesha data za akaunti kwa mafanikio
 - Sakinisha [Node.js](https://nodejs.org) kwenye mfumo wako kwa ajili ya kuendesha API ya nyuma
-- Anzisha [API ya seva](../api/README.md) kwa ndani ili kushughulikia shughuli za data ya akaunti
+- Anzisha [seva API](../api/README.md) mahali pa ndani kushughulikia operesheni za data za akaunti
 
-**Kujaribu Mazingira Yako:**
+**Kujifunza Mazingira Yako:**
 
-Thibitisha kuwa seva yako ya API inafanya kazi kwa usahihi kwa kutekeleza amri hii kwenye terminal:
+Thibitisha kuwa seva yako ya API inaendesha kwa usahihi kwa kutekeleza amri hii kwenye terminal:
 
 ```sh
 curl http://localhost:5000/api
-# -> should return "Bank API v1.0.0" as a result
+# -> inapaswa kurudisha "Bank API v1.0.0" kama matokeo
 ```
 
-**Kile amri hii inafanya:**
+**Mambo haya amri hufanya:**
 - **Inatuma** ombi la GET kwa seva yako ya API ya ndani
-- **Inajaribu** muunganisho na kuthibitisha kuwa seva inajibu
-- **Inarudisha** taarifa ya toleo la API ikiwa kila kitu kinafanya kazi vizuri
+- **Inajaribu** muunganisho na kuthibitisha seva inatoa majibu
+- **Inarejesha** taarifa za toleo la API ikiwa kila kitu kinafanya kazi vizuri
+
+## 🧠 Muhtasari wa Msingi wa Usimamizi wa Hali
+
+```mermaid
+mindmap
+  root((Usimamizi wa Hali))
+    Matatizo ya Sasa
+      Kupoteza Kikao
+        matatizo ya Kurejesha Ukurasa
+        Athari ya Kufunga Kivinjari
+        Matatizo ya Kurejesha Mabadiliko
+      Marekebisho yaliyogawanyika
+        Sehemu Nyingi za Mabadiliko
+        Changamoto za Kufuatilia Hitilafu
+        Tabia Isiyotabirika
+      Usafishaji Usio kamilifu
+        Matatizo ya Hali za Kutoka
+        Mtoaji wa Kumbukumbu
+        Masuala ya Usalama
+    Suluhisho za Kati
+      Kituo cha Hali Kimoja
+        Chanzo Kimoja cha Ukweli
+        Muundo Unaotabirika
+        Msingi Unaoweza Kupanuka
+      Marekebisho Dharura
+        Mifano Isiyobadilika
+        Matumizi ya Object.freeze
+        Mabadiliko Yaliyo kwenye Kazi
+      Ufuatiliaji wa Hali
+        Usimamizi wa Historia
+        Uonekano wa Hitilafu
+        Ukaguzi wa Mabadiliko
+    Mikakati ya Kuhifadhi
+      Muunganisho wa localStorage
+        Muendelevu wa Kikao
+        Uandikishaji wa JSON
+        Mlandanisho wa Kiotomatiki
+      Ubora wa Data
+        Ukaribishaji wa Server
+        Matibabu ya Data iliyochakaa
+        Uboreshaji wa Mizani
+      Uboreshaji wa Hifadhi
+        Data Ndogo
+        Kipaumbele cha Utendaji
+        Mawazo ya Usalama
+```
+**Kanuni Muhimu**: Usimamizi wa hali wa kitaalamu unaweka mizani kati ya utabiri, uhifadhi, na utendaji kazi ili kuunda uzoefu wa mtumiaji unaotegemeka unaoweza kupanuka kutoka mwingiliano rahisi hadi michakato tata ya programu.
 
 ---
 
-## Kutambua Masuala ya Hali ya Sasa
+## Kuchambua Tatizo la Hali ya Sasa
 
-Kama Sherlock Holmes akichunguza eneo la uhalifu, tunahitaji kuelewa kinachotokea katika utekelezaji wetu wa sasa kabla ya kutatua fumbo la vikao vya watumiaji vinavyopotea.
+Kama Sherlock Holmes akichunguza eneo la uhalifu, tunahitaji kuelewa hasa kinachotokea katika utekelezaji wetu wa sasa kabla ya kutatua fumbo la kupotea kwa vikao vya mtumiaji.
 
-Tufanye jaribio rahisi linaloonyesha changamoto za usimamizi wa hali:
+Tufanye jaribio rahisi linaloonyesha changamoto za msingi za usimamizi wa hali:
 
-**🧪 Jaribu Uchunguzi Huu:**
-1. Ingia kwenye programu yako ya benki na nenda kwenye dashibodi
-2. Boresha ukurasa wa kivinjari
-3. Angalia kinachotokea kwa hali yako ya kuingia
+**🧪 Jaribu Hili la Uchunguzi:**
+1. Ingia kwenye app yako ya benki na nenda kwenye dashibodi
+2. Rudisha ukurasa wa kivinjari
+3. Tazama kinachotokea kwenye hali yako ya kuingia
 
-Ikiwa unarudishwa kwenye skrini ya kuingia, umegundua tatizo la kawaida la uhifadhi wa hali. Tabia hii hutokea kwa sababu utekelezaji wetu wa sasa huhifadhi data ya mtumiaji kwenye vigezo vya JavaScript vinavyofutwa kila ukurasa unapobadilishwa.
+Kama unarudiwa tena kwenye skrini ya kuingia, umegundua tatizo la uhifadhi wa hali. Tabia hii hutokea kwa sababu utekelezaji wetu wa sasa huhifadhi data za mtumiaji kwenye vigezo vya JavaScript vinavyosafishwa kila mara ukurasa unaporudishwa.
 
 **Matatizo ya Utekelezaji wa Sasa:**
 
-Kigezo rahisi cha `account` kutoka [somo letu la awali](../3-data/README.md) kinazalisha matatizo matatu makubwa yanayoathiri uzoefu wa mtumiaji na utunzaji wa msimbo:
+Kigezo rahisi cha `account` kutoka kwa [somo letu la awali](../3-data/README.md) kinasababisha matatizo makubwa matatu yanayoathiri uzoefu wa mtumiaji na uimara wa msimbo:
 
 | Tatizo | Sababu ya Kiufundi | Athari kwa Mtumiaji |
 |---------|--------|----------------|
-| **Upotevu wa Kikao** | Kuboresha ukurasa hufuta vigezo vya JavaScript | Watumiaji wanapaswa kuingia mara kwa mara |
-| **Mabadiliko Yaliyotawanyika** | Kazi nyingi hubadilisha hali moja kwa moja | Utatuzi wa matatizo unakuwa mgumu zaidi |
-| **Usafishaji Usio Kamili** | Kuondoka hakufuti marejeleo yote ya hali | Wasiwasi wa usalama na faragha |
+| **Kupotea kwa Kikao** | Kurudisha ukurasa kunafuta vigezo vya JavaScript | Watumiaji wanapaswa kuingia mara kwa mara |
+| **Sasisho Zilizopangwa Kwenye Sehemu Zenye Tofauti** | Kazi nyingi hubadilisha hali moja kwa moja | Kutatua matatizo kunazidi kuwa ngumu |
+| **Usafishaji Mfupi** | Kuondoka haafuta marejeleo yote ya hali | Hatari za usalama na faragha |
 
-**Changamoto ya Kimuundo:**
+**Changamoto ya Miundo:**
 
-Kama muundo wa sehemu za Titanic ulioonekana kuwa thabiti hadi sehemu nyingi zilipojaa maji kwa wakati mmoja, kutatua matatizo haya moja moja hakutashughulikia tatizo la kimuundo lililopo. Tunahitaji suluhisho la kina la usimamizi wa hali.
+Kama muundo wa sehemu za Titanic ulioonekana imara hadi sehemu nyingi kuzama kwa pamoja, kurekebisha matatizo haya moja baada ya nyingine haitaondoa tatizo la msingi la usanifu. Tunahitaji suluhisho kamili la usimamizi wa hali.
 
-> 💡 **Tunajaribu kufanikisha nini hapa?**
+> 💡 **Tunajaribu kufanikisha nini hasa hapa?**
 
-[Usimamizi wa hali](https://en.wikipedia.org/wiki/State_management) kimsingi ni kuhusu kutatua mafumbo mawili ya msingi:
+[Usimamizi wa hali](https://en.wikipedia.org/wiki/State_management) ni kweli kuhusu kutatua fumbo mbili za msingi:
 
-1. **Data Yangu Iko Wapi?**: Kufuatilia taarifa tuliyonayo na inatoka wapi
-2. **Je, Kila Mtu Yuko Ukurasa Mmoja?**: Kuhakikisha kile watumiaji wanachoona kinawiana na kinachotokea
+1. **Data Yangu Iko Wapi?**: Kufuatilia taarifa tunazozipata na chanzo chake
+2. **Je, Wote Wako na Taarifa Sawia?**: Kuhakikisha kile watumiaji wanaona kinaendana na kinachotokea
 
-**Mpango Wetu wa Mchezo:**
+**Mpango wetu wa Kiongozi:**
 
-Badala ya kuzunguka bila mwelekeo, tutaunda mfumo wa **usimamizi wa hali ulio katikati**. Fikiria kama kuwa na mtu mmoja aliyeandaliwa vizuri anayesimamia mambo yote muhimu:
+Badala ya kuzunguka kwa kutafuta mwishowe, tutaunda **mfumo wa usimamizi wa hali uliolengwa katikati**. Fikiria kama mtu mmoja aliyepangwa vizuri anayehudumia vitu vyote muhimu:
 
-![Mchoro unaoonyesha mtiririko wa data kati ya HTML, vitendo vya mtumiaji na hali](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.sw.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.sw.png)
 
+```mermaid
+flowchart TD
+    A[Hatua ya Mtumiaji] --> B[Msimamizi wa Tukio]
+    B --> C[Kazi ya updateState]
+    C --> D{Uhakiki wa Hali}
+    D -->|Halali| E[Tengeneza Hali Mpya]
+    D -->|Sio Halali| F[Usimamizi wa Makosa]
+    E --> G[Object.freeze]
+    G --> H[Update localStorage]
+    H --> I[Anzisha Sasisho la UI]
+    I --> J[Mtumiaji Anaona Mabadiliko]
+    F --> K[Mtumiaji Anaona Kosa]
+    
+    subgraph "Tabaka la Usimamizi wa Hali"
+        C
+        E
+        G
+    end
+    
+    subgraph "Tabaka la Uhifadhi"
+        H
+        L[localStorage]
+        H -.-> L
+    end
+```
 **Kuelewa mtiririko huu wa data:**
-- **Unakusanya** hali yote ya programu katika eneo moja
-- **Unapanga** mabadiliko yote ya hali kupitia kazi zilizodhibitiwa
-- **Unahakikisha** UI inabaki kulingana na hali ya sasa
-- **Unatoa** muundo wazi na unaotabirika wa usimamizi wa data
+- **Unahusisha** hali zote za programu mahali pamoja
+- **Pitia** mabadiliko yote ya hali kupitia kazi za kidhibitiwa
+- **Hakikisha** UI inabaki sambamba na hali ya sasa
+- **Toa** muundo wazi, unaoweza kutabirika wa usimamizi wa data
 
-> 💡 **Ujuzi wa Kitaalamu**: Somo hili linazingatia dhana za msingi. Kwa programu ngumu, maktaba kama [Redux](https://redux.js.org) hutoa vipengele vya hali ya juu vya usimamizi wa hali. Kuelewa kanuni hizi za msingi kutakusaidia kumudu maktaba yoyote ya usimamizi wa hali.
+> 💡 **Maarifa ya Kitaalamu**: Somo hili linazingatia dhana za msingi. Kwa programu changamano, maktaba kama [Redux](https://redux.js.org) hutoa vipengele vya juu vya usimamizi wa hali. Kuelewa misingi hii kutakusaidia kumiliki maktaba yoyote ya usimamizi wa hali.
 
-> ⚠️ **Mada ya Juu**: Hatutashughulikia masasisho ya UI yanayotokea moja kwa moja kutokana na mabadiliko ya hali, kwani hili linahusisha dhana za [Programu ya Kijibu](https://en.wikipedia.org/wiki/Reactive_programming). Fikiria hili kama hatua nzuri inayofuata katika safari yako ya kujifunza!
+> ⚠️ **Mada ya Juu**: Hatujajadili sasisho la kiotomatiki la UI linapotokea kwa mabadiliko ya hali, kwa kuwa hili linahusisha dhana za [Programming ya Kusikika](https://en.wikipedia.org/wiki/Reactive_programming). Dhana hii tena ni hatua nzuri kwa safari yako ya kujifunza!
 
-### Kazi: Kuweka Muundo wa Hali Katikati
+### Kazi: Kuweka Mfumo wa Hali Katikati
 
-Tuanzishe mabadiliko ya usimamizi wa hali uliotawanyika kuwa mfumo ulio katikati. Hatua hii ya kwanza inaweka msingi wa maboresho yote yanayofuata.
+Tuanze kubadilisha usimamizi wetu wa hali uliotawanyika kuwa mfumo ulioko katikati. Hatua hii ya kwanza inaweka msingi kwa maboresho yote yatakayofuata.
 
-**Hatua ya 1: Unda Kitu cha Hali Katikati**
+**Hatua ya 1: Unda Kitu cha Hali Kati**
 
-Badilisha tamko rahisi la `account`:
+Badilisha tangazo rahisi la `account`:
 
 ```js
 let account = null;
 ```
 
-Na kitu cha hali kilichopangwa:
+Kwa kitu cha hali chenye muundo:
 
 ```js
 let state = {
@@ -120,80 +244,112 @@ let state = {
 };
 ```
 
-**Kwa nini mabadiliko haya ni muhimu:**
-- **Unakusanya** data yote ya programu katika eneo moja
-- **Unatayarisha** muundo wa kuongeza mali zaidi za hali baadaye
-- **Unaunda** mpaka wazi kati ya hali na vigezo vingine
-- **Unaanzisha** muundo unaokua kadri programu yako inavyopanuka
+**Hii ni kwa nini mabadiliko haya ni muhimu:**
+- **Unahusisha** data zote za programu mahali pamoja
+- **Huandaa** muundo wa kuongeza mali zaidi baadaye
+- **Huunda** mpaka wazi kati ya hali na vigezo vingine
+- **Huanzisha** muundo unaopanuka kadri app yako inavyoendelea
 
-**Hatua ya 2: Sasisha Mifumo ya Ufikiaji wa Hali**
+**Hatua ya 2: Sasisha Mifumo ya Kufikia Hali**
 
 Sasisha kazi zako kutumia muundo mpya wa hali:
 
-**Katika kazi za `register()` na `login()`**, badilisha:
+**Katika kazi `register()` na `login()`**, badilisha:
 ```js
 account = ...
 ```
 
-Na:
+Kwa:
 ```js
 state.account = ...
 ```
 
-**Katika kazi ya `updateDashboard()`**, ongeza mstari huu juu:
+**Katika kazi `updateDashboard()`**, ongeza mstari huu juu:
 ```js
 const account = state.account;
 ```
 
-**Kile masasisho haya yanayofanikisha:**
-- **Yanaweka** utendaji uliopo huku yakiboresha muundo
-- **Yanatayarisha** msimbo wako kwa usimamizi wa hali wa kisasa zaidi
-- **Yanaanzisha** mifumo thabiti ya kufikia data ya hali
-- **Yanaweka** msingi wa masasisho ya hali yaliyo katikati
+**Haya maboresho yanayafanya nini:**
+- **Hudumisha** utendaji uliopo huku hutangaza muundo
+- **Huandaa** msimbo wako kwa usimamizi wa hali wenye ustadi zaidi
+- **Huunda** mifumo thabiti ya kufikia data ya hali
+- **Huanzisha** msingi wa sasisho za hali zilizo na lengo katikati
 
-> 💡 **Kumbuka**: Urekebishaji huu hauwezi kutatua matatizo yetu mara moja, lakini unaweka msingi muhimu kwa maboresho yenye nguvu yanayokuja!
+> 💡 **Kumbuka**: Marekebisho haya hayatatatua matatizo yetu mara moja, bali huweka msingi muhimu kwa maboresho makubwa yajayo!
 
-## Kutekeleza Masasisho ya Hali Yaliyo Dhibitiwa
+### 🎯 Ukaguzi wa Kielimu: Kanuni za Kuweka Katikati
 
-Kadri hali yetu inavyokusanywa, hatua inayofuata inahusisha kuanzisha mifumo iliyodhibitiwa ya mabadiliko ya data. Mbinu hii inahakikisha mabadiliko ya hali yanayotabirika na utatuzi rahisi wa matatizo.
+**Pumzika na Fikiria**: Umeweka msingi wa usimamizi wa hali ulioko katikati. Hii ni uamuzi muhimu wa usanifu.
 
-Kanuni ya msingi inafanana na udhibiti wa trafiki ya anga: badala ya kuruhusu kazi nyingi kubadilisha hali kwa uhuru, tutapanga mabadiliko yote kupitia kazi moja iliyodhibitiwa. Muundo huu unatoa usimamizi wazi wa wakati na jinsi data inavyobadilika.
+**Uhakiki wa Haraka:**
+- Je, unaweza kueleza kwa nini kuweka hali katikati kwenye kitu kimoja ni bora zaidi kuliko vigezo vilivyoenea?
+- Kitatokea nini kama umetah forget kusasisha kazi kutumia `state.account`?
+- Muundo huu hutayarisha vipi msimbo wako kwa vipengele vya hali vya juu?
 
-**Usimamizi wa Hali Isiyobadilika:**
+**Uhusiano wa Kisheria**: Muundo wa katikati uliyojifunza ni msingi wa mifumo ya kisasa kama Redux, Vuex, na React Context. Unajenga ile fikra ya usanifu inayotumika kwenye programu kubwa.
 
-Tutachukulia kitu chetu cha `state` kama [*kisichobadilika*](https://en.wikipedia.org/wiki/Immutable_object), ikimaanisha hatutabadilisha moja kwa moja. Badala yake, kila mabadiliko yataunda kitu kipya cha hali na data iliyosasishwa.
+**Swali la Changamoto**: Kama unahitaji kuongeza mapendeleo ya mtumiaji (mandhari, lugha), ungeongeza wapi kwenye muundo wa hali? Hii ingeenea vipi?
 
-Ingawa mbinu hii inaweza kuonekana kuwa isiyo na ufanisi mwanzoni ikilinganishwa na mabadiliko ya moja kwa moja, inatoa faida kubwa kwa utatuzi wa matatizo, upimaji, na kudumisha utabiri wa programu.
+## Kutekeleza Sasisho za Hali za Kudhibitiwa
+
+Hali yetu ikiwa katikati, hatua inayofuata ni kuunda mbinu za kudhibiti mabadiliko ya data. Njia hii huhakikisha mabadiliko ya hali yanayoweza kutabirika na rahisi kuchunguza tatizo.
+
+Kanuni kuu ni kama ukaguzi wa usafiri wa anga: badala ya kuruhusu kazi nyingi kubadilisha hali peke yake, tutapeleka mabadiliko yote kupitia kazi moja iliyodhibitiwa. Muundo huu hutoa usimamizi wazi wakati na jinsi data inavyobadilika.
+
+**Usimamizi wa Hali Isiyobadilika (Immutable):**
+
+Tutachukulia kitu cha `state` kama [*kisichobadilika*](https://en.wikipedia.org/wiki/Immutable_object), ikimaanisha hatubadilishi moja kwa moja. Badala yake, kila mabadiliko huunda kitu kipya cha hali chenye data iliyosasishwa.
+
+Ingawa njia hii inaweza kuonekana isiyo na ufanisi ikilinganishwa na mabadiliko ya moja kwa moja, inatoa faida kubwa katika kutatua matatizo, kufanya majaribio, na kudumisha utabiri wa programu.
 
 **Faida za usimamizi wa hali isiyobadilika:**
 
 | Faida | Maelezo | Athari |
 |---------|-------------|--------|
-| **Utabiri** | Mabadiliko hutokea tu kupitia kazi zilizodhibitiwa | Rahisi kutatua matatizo na kupima |
-| **Ufuatiliaji wa Historia** | Kila mabadiliko ya hali huunda kitu kipya | Inawezesha utendakazi wa kurudisha/kufanya upya |
-| **Kuzuia Athari za Pembeni** | Hakuna mabadiliko ya bahati mbaya | Huzuia hitilafu za ajabu |
-| **Uboreshaji wa Utendaji** | Rahisi kugundua wakati hali imebadilika | Inawezesha masasisho ya UI yenye ufanisi |
+| **Utabiri** | Mabadiliko hutokea tu kupitia kazi za kudhibitiwa | Rahisi kutatua matatizo na kufanya majaribio |
+| **Ufuatiliaji wa Historia** | Kila mabadiliko wa hali huunda kitu kipya | Inawezesha kipengele cha kubatilisha/kurudisha (undo/redo) |
+| **Kuzuia Athari za Pembeni** | Hakuna mabadiliko ya bahati nasibu | Huzuia mende zisizojulikana |
+| **Uboreshaji wa Utendaji** | Rahisi kugundua wakati hali hubadilika kweli | Inawezesha sasisho la UI kwa ufanisi |
 
-**Usimamizi wa Hali Isiyobadilika kwa JavaScript na `Object.freeze()`:**
+**Ubadilishaji wa JavaScript kwa `Object.freeze()`:**
 
-JavaScript inatoa [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) kuzuia mabadiliko ya vitu:
+JavaScript hutoa [`Object.freeze()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) ili kuzuia mabadiliko ya kitu:
 
 ```js
 const immutableState = Object.freeze({ account: userData });
-// Any attempt to modify immutableState will throw an error
+// Jaribio lolote la kubadilisha immutableState litasababisha kosa
 ```
 
-**Kufafanua kinachotokea hapa:**
-- **Inazuia** uwekaji wa mali moja kwa moja au ufutaji
-- **Inatupa** makosa ikiwa majaribio ya mabadiliko yanafanywa
+**Kuvunja kile kinachotokea hapa:**
+- **Huzuia** kuweka au kufuta mali moja kwa moja
+- **Inatupa** makosa ikiwa jaribio la kuibadilisha linatokea
 - **Inahakikisha** mabadiliko ya hali lazima yapitie kazi zilizodhibitiwa
-- **Inaunda** mkataba wazi wa jinsi hali inavyoweza kusasishwa
+- **Inatengeneza** makubaliano wazi ya jinsi hali inaweza kusasishwa
 
-> 💡 **Uchambuzi wa Kina**: Jifunze kuhusu tofauti kati ya vitu vya *juu juu* na *vilivyo ndani kabisa* visivyobadilika katika [mdokumentari ya MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Kuelewa tofauti hii ni muhimu kwa miundo ya hali ngumu.
+> 💡 **Kujifunza Zaidi**: Jifunze tofauti kati ya vitu *isipozidi* na *isipozidi kwa kina* katika [nyaraka za MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze). Kuelewa tofauti hii ni muhimu kwa miundo ya hali tata.
 
+```mermaid
+stateDiagram-v2
+    [*] --> StateV1: Hali ya Awali
+    StateV1 --> StateV2: updateState('account', newData)
+    StateV2 --> StateV3: updateState('account', anotherUpdate)
+    StateV3 --> StateV4: updateState('preferences', userSettings)
+    
+    note right of StateV1
+        Object.freeze()
+        Haibadiliki
+        Inaweza kufuatiliwa
+    end note
+    
+    note right of StateV2
+        Kitu kipya kimeundwa
+        Hali ya awali imehifadhiwa
+        Mabadiliko yanayoweza kutabirika
+    end note
+```
 ### Kazi
 
-Tuunde kazi mpya ya `updateState()`:
+Tundike kazi mpya ya `updateState()`:
 
 ```js
 function updateState(property, newData) {
@@ -204,9 +360,9 @@ function updateState(property, newData) {
 }
 ```
 
-Katika kazi hii, tunaunda kitu kipya cha hali na kunakili data kutoka hali ya awali kwa kutumia [*spread (`...`) operator*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Kisha tunabadilisha mali fulani ya kitu cha hali na data mpya kwa kutumia [bracket notation](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties) `[property]` kwa uwekaji. Hatimaye, tunafungia kitu ili kuzuia mabadiliko kwa kutumia `Object.freeze()`. Kwa sasa tuna mali ya `account` tu iliyohifadhiwa katika hali, lakini kwa mbinu hii unaweza kuongeza mali nyingi unavyohitaji katika hali.
+Katika kazi hii, tunaunda kitu kipya cha hali na kunakili data kutoka hali ya awali kwa kutumia [*operator ya spread (`...`)*](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals). Kisha tunabadilisha mali fulani ya kitu cha hali na data mpya kwa kutumia alama za mabano `[property]` kwa ajili ya kuweka. Hatimaye, tunalazimisha kitu hicho kwa kutumia `Object.freeze()`. Kwa sasa tunayo property `account` tu huhifadhiwa katika hali, lakini kwa njia hii unaweza kuongeza mali nyingi kama unavyohitaji.
 
-Tutasasisha pia uanzishaji wa `state` kuhakikisha hali ya awali imefungwa pia:
+Pia tutajisahihisha kuanzisha kwa `state` ili kuhakikisha hali ya mwanzo inawekwa imara:
 
 ```js
 let state = Object.freeze({
@@ -214,19 +370,19 @@ let state = Object.freeze({
 });
 ```
 
-Baada ya hapo, sasisha kazi ya `register` kwa kubadilisha uwekaji wa `state.account = result;` na:
+Baada ya hapo, sasisha kazi ya `register` kwa kubadilisha `state.account = result;` na:
 
 ```js
 updateState('account', result);
 ```
 
-Fanya vivyo hivyo na kazi ya `login`, ukibadilisha `state.account = data;` na:
+Fanya vivyo hivyo kwa kazi ya `login`, badilisha `state.account = data;` na:
 
 ```js
 updateState('account', data);
 ```
 
-Sasa tutatumia fursa ya kutatua tatizo la data ya akaunti kutosafishwa mtumiaji anapobofya *Logout*.
+Sasa tutatumia fursa hii kurekebisha tatizo la data za akaunti kutafutwa wakati mtumiaji anabonyeza *Logout*.
 
 Unda kazi mpya `logout()`:
 
@@ -237,105 +393,123 @@ function logout() {
 }
 ```
 
-Katika `updateDashboard()`, badilisha uelekezaji `return navigate('/login');` na `return logout()`;
+Katika `updateDashboard()`, badilisha urejeshaji `return navigate('/login');` na `return logout()`;
 
-Jaribu kusajili akaunti mpya, kutoka na kuingia tena ili kuhakikisha kila kitu bado kinafanya kazi vizuri.
+Jaribu kuunda akaunti mpya, kutoka na kuingia tena ili kuhakiki kuwa kila kitu bado kinafanya kazi ipasavyo.
 
-> Kidokezo: unaweza kuangalia mabadiliko yote ya hali kwa kuongeza `console.log(state)` chini ya `updateState()` na kufungua console katika zana za ukuzaji za kivinjari chako.
+> Vidokezo: unaweza kutazama mabadiliko yote ya hali kwa kuongeza `console.log(state)` chini ya `updateState()` na kufungua console katika vifaa vya maendeleo vya kivinjari chako.
 
 ## Kutekeleza Uhifadhi wa Data
 
-Tatizo la upotevu wa kikao tulilobaini awali linahitaji suluhisho la uhifadhi linalodumisha hali ya mtumiaji katika vikao vya kivinjari. Hii inabadilisha programu yetu kutoka uzoefu wa muda hadi kuwa zana ya kuaminika na ya kitaalamu.
+Tatizo la kupotea kwa kikao tuliloligundua awali linahitaji suluhisho la uhifadhi unaoendelea unaoendeleza hali za mtumiaji kati ya vikao vya kivinjari. Hii hubadilisha programu yetu kutoka uzoefu wa muda mfupi hadi chombo kinachotegemewa na kitaalamu.
 
-Fikiria jinsi saa za atomiki zinavyodumisha muda sahihi hata wakati wa kukatika kwa umeme kwa kuhifadhi hali muhimu katika kumbukumbu isiyopotea. Vivyo hivyo, programu za wavuti zinahitaji mifumo ya uhifadhi wa kudumu ili kuhifadhi data muhimu ya mtumiaji katika vikao vya kivinjari na ubadilishaji wa ukurasa.
+Fikiria jinsi saa za atomiki zinavyoendelea kuonyesha saa sahihi hata wakati wa kukatika kwa nguvu kwa umeme kwa kuhifadhi hali muhimu katika kumbukumbu isiyohamishika. Vivyo hivyo, programu za wavuti zinahitaji mbinu za uhifadhi endelevu ili kuhifadhi data muhimu za mtumiaji kati ya vikao vya kivinjari na kurudisha ukurasa.
 
-**Maswali ya Kistratejia kwa Uhifadhi wa Data:**
+**Maswali ya Mkakati kwa Uhifadhi Data:**
 
 Kabla ya kutekeleza uhifadhi, fikiria mambo haya muhimu:
 
-| Swali | Muktadha wa Programu ya Benki | Athari ya Uamuzi |
+| Swali | Muktadha wa App ya Benki | Athari ya Uamuzi |
 |----------|-------------------|----------------|
-| **Je, data ni nyeti?** | Mizani ya akaunti, historia ya miamala | Chagua mbinu salama za uhifadhi |
-| **Inapaswa kudumu kwa muda gani?** | Hali ya kuingia vs. mapendeleo ya muda ya UI | Chagua muda wa uhifadhi unaofaa |
-| **Je, seva inaihitaji?** | Tokeni za uthibitishaji vs. mipangilio ya UI | Amua mahitaji ya kushiriki |
+| **Je, data ni nyeti?** | Salio la akaunti, historia ya muamala | Chagua mbinu za usalama za kuhifadhi |
+| **Inapaswa kudumu kwa muda gani?** | Hali ya kuingia vs. mapendeleo ya muda ya UI | Chagua muda unaofaa wa kuhifadhi |
+| **Je, server inahitaji?** | Vitambulisho vya uthibitishaji vs. mipangilio ya UI | Amua mahitaji ya kushirikiana |
 
-**Chaguo za Uhifadhi wa Kivinjari:**
+**Chaguzi za Uhifadhi wa Kivinjari:**
 
-Vivinjari vya kisasa vinatoa mifumo kadhaa ya uhifadhi, kila moja imeundwa kwa matumizi tofauti:
+Vivinjari vya kisasa vina taratibu mbalimbali za kuhifadhi, kila moja imetengenezwa kwa matumizi tofauti:
 
-**API za Uhifadhi wa Msingi:**
+**API Kuu za Uhifadhi:**
 
-1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Uhifadhi wa [Key/Value](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) wa kudumu
-   - **Hudumu** data katika vikao vya kivinjari bila kikomo  
-   - **Husalia** hata kivinjari kinapofungwa na kompyuta kuanzishwa upya
-   - **Imefungwa** kwa kikoa maalum cha tovuti
-   - **Inafaa** kwa mapendeleo ya mtumiaji na hali za kuingia
+1. **[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage)**: Uhifadhi wa kudumu wa [Key/Value](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+   - **Hudumu** data kati ya vikao vya kivinjari bila kikomo  
+   - **Huanguka** mara kivinjari kinapoanzishwa upya na kompyuta kuwa boot
+   - **Inahudumia** eneo maalum la tovuti
+   - **Inafaa** kwa mapendeleo ya mtumiaji na hali za kujisajili
 
-2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Uhifadhi wa kikao cha muda
-   - **Hufanya kazi** sawa na localStorage wakati wa vikao hai
-   - **Hufutwa** kiotomatiki kivinjari kinapofungwa
-   - **Inafaa** kwa data ya muda ambayo haipaswi kudumu
+2. **[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)**: Uhifadhi wa muda wa kikao
+   - **Hufanya kazi** kama vile localStorage wakati wa vikao vinavyotumika
+   - **Hufuta** moja kwa moja wakati kichupo cha kivinjari kinapofungwa
+   - **Inafaa** kwa data za muda ambazo hazipaswi kuhifadhiwa
 
-3. **[HTTP Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Uhifadhi unaoshirikiwa na seva
-   - **Hutumwa** kiotomatiki na kila ombi la seva
-   - **Inafaa** kwa [uthibitishaji](https://en.wikipedia.org/wiki/Authentication) wa tokeni
-   - **Imewekewa mipaka** kwa ukubwa na inaweza kuathiri utendaji
+3. **[HTTP Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)**: Uhifadhi wa kushirikiana na server
+   - **Hutumwa moja kwa moja** na kila ombi la server
+   - **Inafaa** kwa vitambulisho vya [uthibitishaji](https://en.wikipedia.org/wiki/Authentication)
+   - **Ina kikomo** ukubwa na inaweza kuathiri utendaji
 
-**Mahitaji ya Usawazishaji wa Data:**
+**Hitaji la Usanifuaji wa Data:**
 
 Zote `localStorage` na `sessionStorage` huhifadhi tu [nyuzi](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String):
 
 ```js
-// Convert objects to JSON strings for storage
+// Geuza vitu kuwa mizstrings ya JSON kwa ajili ya uhifadhi
 const accountData = { user: 'john', balance: 150 };
 localStorage.setItem('account', JSON.stringify(accountData));
 
-// Parse JSON strings back to objects when retrieving
+// Tafsiri mizstrings ya JSON kurudi kuwa vitu wakati wa kuondoa
 const savedAccount = JSON.parse(localStorage.getItem('account'));
 ```
 
-**Kuelewa usawazishaji:**
+**Kuelewa usanifuaji:**
 - **Hubadilisha** vitu vya JavaScript kuwa nyuzi za JSON kwa kutumia [`JSON.stringify()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-- **Hujenga upya** vitu kutoka JSON kwa kutumia [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
-- **Hushughulikia** vitu vilivyopangwa kwa kina na safu kiotomatiki
-- **Hushindwa** kwa kazi, thamani zisizoelezwa, na marejeleo ya mzunguko
-> 💡 **Chaguo la Juu**: Kwa programu ngumu za nje ya mtandao zenye hifadhidata kubwa, fikiria kutumia [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Inatoa hifadhidata kamili upande wa mteja lakini inahitaji utekelezaji tata zaidi.
+- **Huunda upya** vitu kutoka JSON kwa kutumia [`JSON.parse()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- **Hushughulikia** vitu tata vilivyopangwa na orodha moja kwa moja
+- **Hushindwa** kwenye kazi, thamani zisizojulikana, na marejeleo ya duara
 
-### Kazi: Tekeleza Uhifadhi wa localStorage
+> 💡 **Uchaguo wa Kipekee**: Kwa programu tata zisizo mtandaoni zilizo na seti kubwa za data, angalia [`IndexedDB` API](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). Inatoa hifadhidata kamili upande wa mteja lakini inahitaji utekelezaji tata zaidi.
 
-Tutaweka uhifadhi wa kudumu ili watumiaji wabaki wameingia hadi watakapoamua kujiondoa. Tutatumia `localStorage` kuhifadhi data ya akaunti kati ya vikao vya kivinjari.
+```mermaid
+quadrantChart
+    title Chaguzi za Hifadhi ya Kivinjari
+    x-axis Ugumu Mdogo --> Ugumu Mkubwa
+    y-axis Muda Mfupi --> Muda Mrefu
+    
+    quadrant-1 Zana za Kitaalamu
+    quadrant-2 Uhifadhi Rahisi
+    quadrant-3 Hifadhi ya Muda
+    quadrant-4 Mifumo ya Juu
+    
+    localStorage: [0.3, 0.8]
+    sessionStorage: [0.2, 0.2]
+    HTTP Cookies: [0.6, 0.7]
+    IndexedDB: [0.9, 0.9]
+    Memory Variables: [0.1, 0.1]
+```
+### Kazi: Tekeleza Kudumu kwa localStorage
 
-**Hatua ya 1: Fafanua Usanidi wa Uhifadhi**
+Tuwekee uhifadhi wa kudumu ili watumiaji wabaki wameingia hadi waondoke waziwazi. Tutatumia `localStorage` kuhifadhi data za akaunti kati ya vikao vya kivinjari.
+
+**Hatua 1: Eleza Mipangilio ya Uhifadhi**
 
 ```js
 const storageKey = 'savedAccount';
 ```
 
-**Kile ambacho kigezo hiki kinatoa:**
-- **Hutengeneza** kitambulisho thabiti kwa data yetu iliyohifadhiwa
-- **Huzuia** makosa ya herufi katika marejeleo ya funguo za uhifadhi
-- **Hufanya** iwe rahisi kubadilisha ufunguo wa uhifadhi ikiwa inahitajika
-- **Hufuata** mbinu bora za msimbo unaoweza kudumishwa
+**Hili linalotolewa na tabia hii:**
+- **Huzima** kitambulisho thabiti kwa data yetu iliyohifadhiwa
+- **Huzuia** makosa ya tahajia katika marejeleo ya ufunguo wa kuhifadhi
+- **Hurahisisha** kubadilisha ufunguo wa kuhifadhi inapohitajika
+- **Hufuata** mbinu bora za kuandika msimbo unaotunzwa
 
-**Hatua ya 2: Ongeza Uhifadhi wa Kiotomatiki**
+**Hatua 2: Ongeza Kudumu Moja kwa Moja**
 
-Ongeza mstari huu mwishoni mwa kazi ya `updateState()`:
+Ongeza mstari huu mwishoni mwa kazi `updateState()`:
 
 ```js
 localStorage.setItem(storageKey, JSON.stringify(state.account));
 ```
 
-**Kufafanua kinachotokea hapa:**
-- **Hubadilisha** kitu cha akaunti kuwa kamba ya JSON kwa uhifadhi
-- **Huokoa** data kwa kutumia ufunguo wetu thabiti wa uhifadhi
-- **Hutekeleza** kiotomatiki kila mabadiliko ya hali yanapotokea
-- **Hakikisha** data iliyohifadhiwa inalingana na hali ya sasa
+**Kuvunja kile kinachotokea hapa:**
+- **Hubadilisha** kitu cha akaunti kuwa nyuzi ya JSON kwa kuhifadhi
+- **Huinua** data kwa kutumia ufunguo wetu wa kuhifadhi thabiti
+- **Hutekelezwa** moja kwa moja kila mara hali inapo badilika
+- **Hakikisha** data iliyohifadhiwa inaendana kila wakati na hali ya sasa
 
-> 💡 **Faida ya Usanifu**: Kwa sababu tulizingatia mabadiliko yote ya hali kupitia `updateState()`, kuongeza uhifadhi kulihitaji mstari mmoja tu wa msimbo. Hii inaonyesha nguvu ya maamuzi mazuri ya usanifu!
+> 💡 **Faida ya Mimariko**: Kwa sababu tulilenga masasisho yote ya hali kupitia `updateState()`, kuongeza kudumu kulihitaji mstari mmoja tu wa msimbo. Hii inaonyesha nguvu ya maamuzi mazuri ya miundo!
 
-**Hatua ya 3: Rudisha Hali Wakati Programu Inapopakia**
+**Hatua 3: Rudisha Hali Unapoanzisha App**
 
-Tengeneza kazi ya uanzishaji ili kurudisha data iliyohifadhiwa:
+Tengeneza kazi ya kuanzisha ili kurudisha data iliyohifadhiwa:
 
 ```js
 function init() {
@@ -344,7 +518,7 @@ function init() {
     updateState('account', JSON.parse(savedAccount));
   }
 
-  // Our previous initialization code
+  // Msimbo wetu wa awali wa kuanzisha
   window.onpopstate = () => updateRoute();
   updateRoute();
 }
@@ -352,49 +526,63 @@ function init() {
 init();
 ```
 
-**Kuelewa mchakato wa uanzishaji:**
-- **Hurejesha** data yoyote ya akaunti iliyohifadhiwa awali kutoka localStorage
-- **Huchambua** kamba ya JSON kurudi kuwa kitu cha JavaScript
-- **Husasa** hali kwa kutumia kazi yetu ya kusasisha iliyodhibitiwa
-- **Hurudisha** kikao cha mtumiaji kiotomatiki wakati ukurasa unapopakia
-- **Hutekeleza** kabla ya masasisho ya njia ili kuhakikisha hali inapatikana
+**Kuelewa mchakato wa kuanzisha:**
+- **Inapokea** data yoyote ya akaunti iliyohifadhiwa awali kutoka localStorage
+- **Inatambua** nyuzi za JSON kurudisha tena kuwa kitu cha JavaScript
+- **Inasasisha** hali kwa kutumia kazi yetu ya kusawazisha
+- **Inarejesha** kikao cha mtumiaji moja kwa moja anapopakua ukurasa
+- **Inatekelezwa** kabla ya masasisho ya njia ili kuhakikisha hali inapatikana
 
-**Hatua ya 4: Boresha Njia ya Kawaida**
+**Hatua 4: Boresha Njia ya Chaguo-msingi**
 
-Sasisha njia ya kawaida ili kutumia uhifadhi:
+Sasisha njia ya chaguo-msingi ili kutumia faida ya kudumu:
 
 Katika `updateRoute()`, badilisha:
 ```js
-// Replace: return navigate('/login');
+// Badilisha: return navigate('/login');
 return navigate('/dashboard');
 ```
 
-**Kwa nini mabadiliko haya yana mantiki:**
-- **Hutumia** mfumo wetu mpya wa uhifadhi kwa ufanisi
-- **Huruhusu** dashibodi kushughulikia ukaguzi wa uthibitisho
-- **Huelekeza** kiotomatiki kwenye kuingia ikiwa hakuna kikao kilichohifadhiwa
-- **Hutengeneza** uzoefu wa mtumiaji usio na mshono
+**Kwa nini mabadiliko haya yanaeleweka:**
+- **Yatumia** mfumo wetu mpya wa kudumu kwa ufanisi
+- **Inaruhusu** dashibodi kushughulikia ukaguzi wa uthibitishaji
+- **Huelekeza** kwa kuingia moja kwa moja kama hakuna kikao kilichohifadhiwa
+- **Inaunda** uzoefu mzuri zaidi kwa mtumiaji
 
-**Kupima Utekelezaji Wako:**
+**Jaribu Utekelezaji Wako:**
 
-1. Ingia kwenye programu yako ya benki
-2. Fanya upya ukurasa wa kivinjari
-3. Thibitisha unakaa umeingia na uko kwenye dashibodi
+1. Ingia kwenye app yako ya benki
+2. Fanyia upya ukurasa wa kivinjari
+3. Thibitisha bado uko umeingia na uko kwenye dashibodi
 4. Funga na fungua tena kivinjari chako
-5. Rudi kwenye programu yako na thibitisha bado uko umeingia
+5. Rudi kwenye app yako na hakikisha bado umeingia
 
-🎉 **Ufanisi Umefikiwa**: Umefanikiwa kutekeleza usimamizi wa hali ya kudumu! Programu yako sasa inafanya kazi kama programu ya kitaalamu ya wavuti.
+🎉 **Mafanikio Yamepatikana**: Umefanikiwa kutekeleza usimamizi wa hali ya kudumu! App yako sasa hufanya kazi kama programu ya mtandao ya kitaalamu.
 
-## Kuweka Mizani Kati ya Uhifadhi na Ufreshi wa Data
+### 🎯 Chunguzi la Kifundisho: Mimariko ya Kudumu
 
-Mfumo wetu wa uhifadhi unadumisha vikao vya mtumiaji kwa mafanikio, lakini unaleta changamoto mpya: uchakavu wa data. Wakati watumiaji au programu nyingi zinapobadilisha data sawa ya seva, taarifa iliyohifadhiwa ndani inakuwa ya zamani.
+**Uelewa wa Mimariko**: Umetekeleza safu ya kudumu ya kisasa inayobadilisha uzoefu wa mtumiaji na urahisi wa usimamizi wa data.
 
-Hali hii inafanana na mabaharia wa Viking waliotegemea ramani za nyota zilizohifadhiwa na uchunguzi wa nyota wa sasa. Ramani zilitoa uthabiti, lakini mabaharia walihitaji uchunguzi mpya ili kuzingatia hali zinazobadilika. Vivyo hivyo, programu yetu inahitaji hali ya mtumiaji iliyohifadhiwa na data ya sasa ya seva.
+**Mafundisho Muhimu yaliyopatikana**:
+- **Usanifuaji wa JSON**: Kubadilisha vitu tata kuwa nyuzi za kuhifadhi
+- **Mlinganyo Moja kwa Moja**: Mabadiliko ya hali husababisha uhifadhi wa kudumu
+- **Urekebishaji wa Kikao**: Programu zinaweza kurudisha mtazamo wa mtumiaji baada ya kuingiliwa
+- **Kudumu Kwenye Kitu Kimoja**: Kazi moja ya masasisho hushughulikia sehemu zote za uhifadhi
+
+**Muunganisho wa Sekta**: Mfumo huu wa kudumu ni msingi wa Progressive Web Apps (PWAs), programu za offline kwanza, na uzoefu wa mtandao wa kisasa wa simu. Unajenga uwezo wa kiwango cha uzalishaji.
+
+**Swali la Tafakari**: Utabadilishaje mfumo huu kushughulikia akaunti nyingi za mtumiaji kwenye kifaa kimoja? Fikiria mambo ya faragha na usalama.
+
+## Kuweka Mizani kati ya Kudumu na Ufreshi wa Data
+
+Mfumo wetu wa kudumu umetunza vikao vya watumiaji kwa mafanikio, lakini umeleta changamoto mpya: data ya zamani. Wakati watumiaji wengi au programu hubadilisha data sawa ya server, taarifa zilizogandishwa haziwezi kusasishwa.
+
+Hali hii ni kama wavaazi wa Viking walivyotegemea ramani za nyota zilizo hifadhiwa pamoja na maangalia ya nyota wa sasa. Ramani zilihakikisha uthabiti, lakini wapiga ramani walihitaji maangalia mapya ili kuzingatia hali zinabadilika. Vivyo hivyo, programu yetu inahitaji hali ya kudumu ya mtumiaji na data ya sasa ya server.
 
 **🧪 Kugundua Tatizo la Ufreshi wa Data:**
 
-1. Ingia kwenye dashibodi ukitumia akaunti ya `test`
-2. Endesha amri hii kwenye terminal ili kuiga muamala kutoka chanzo kingine:
+1. Ingia kwenye dashibodi kwa kutumia akaunti ya `test`
+2. Endesha amri hii kwenye terminal kuiga muamala kutoka chanzo kingine:
 
 ```sh
 curl --request POST \
@@ -403,31 +591,47 @@ curl --request POST \
      http://localhost:5000/api/accounts/test/transactions
 ```
 
-3. Fanya upya ukurasa wa dashibodi yako kwenye kivinjari
-4. Angalia ikiwa unaona muamala mpya
+3. Fanyia upya ukurasa wako wa dashibodi kwenye kivinjari
+4. Angalia kama unaona muamala mpya
 
-**Kile ambacho jaribio hili linaonyesha:**
-- **Inaonyesha** jinsi localStorage inaweza kuwa "chakavu" (ya zamani)
-- **Inaiga** hali halisi ambapo mabadiliko ya data hutokea nje ya programu yako
-- **Inafichua** mvutano kati ya uhifadhi na ufreshi wa data
+**Kile jaribio hili linaonyesha:**
+- **Inaonesha** jinsi uhifadhi wa ndani unaweza kuwa "zamani" (hauko sawa)
+- **Inaigiza** hali halisi ambapo data hubadilika nje ya app yako
+- **Inafichua** mgogoro kati ya kudumu na ufreshi wa data
 
-**Changamoto ya Uchakavu wa Data:**
+**Changamoto ya Data Zamani:**
 
 | Tatizo | Sababu | Athari kwa Mtumiaji |
-|--------|--------|---------------------|
-| **Data Chakavu** | localStorage haimaliziki kiotomatiki | Watumiaji wanaona taarifa za zamani |
-| **Mabadiliko ya Seva** | Programu/Watumiaji wengine hubadilisha data sawa | Maoni yasiyo thabiti kati ya majukwaa |
-| **Akiba vs. Uhalisia** | Akiba ya ndani haifanani na hali ya seva | Uzoefu duni wa mtumiaji na mkanganyiko |
+|---------|-------|-------------|
+| **Data Zamani** | localStorage haijagiika kiotomatiki | Watumiaji wanaona taarifa za zamani |
+| **Mabadiliko ya Server** | Programu/watumiaji wengine hubadilisha data moja | Mtazamo usio sambamba katika majukwaa |
+| **Cache vs. Ukweli** | Cache ya ndani haifanani na hali ya server | Uzoefu mbaya wa mtumiaji na mkanganyiko |
 
 **Mkakati wa Suluhisho:**
 
-Tutatekeleza muundo wa "ufreshi wakati wa kupakia" ambao unadumisha faida za uhifadhi huku ukihakikisha usahihi wa data.
+Tutatekeleza mfumo wa "kusasisha kwa upakiaji" unaowezesha faida za udumu na uhifadhi wa data safi. Njia hii huhakikisha uzoefu laini wa mtumiaji huku ikihakikisha usahihi wa data.
 
-### Kazi: Tekeleza Mfumo wa Ufreshi wa Data
+```mermaid
+sequenceDiagram
+    participant U as Mtumiaji
+    participant A as App
+    participant L as localStorage
+    participant S as Seva
+    
+    U->>A: Fungua app
+    A->>L: Pakia hali iliyohifadhiwa
+    L-->>A: Rudisha data iliyohifadhiwa
+    A->>U: Onyesha UI mara moja
+    A->>S: Pata data safi
+    S-->>A: Rudisha data ya sasa
+    A->>L: Sasisha hifadhidata
+    A->>U: Sasisha UI na data safi
+```
+### Kazi: Tekeleza Mfumo wa Kusasisha Data
 
-Tutatengeneza mfumo ambao unaleta kiotomatiki data mpya kutoka kwa seva huku ukidumisha faida za usimamizi wetu wa hali ya kudumu.
+Tutaunda mfumo unaopakua data safi kutoka server pamoja na kutunza faida za usimamizi wa hali ya kudumu.
 
-**Hatua ya 1: Tengeneza Kisasa cha Data ya Akaunti**
+**Hatua 1: Tengeneza Kisahihishaji cha Data ya Akaunti**
 
 ```js
 async function updateAccountData() {
@@ -446,14 +650,14 @@ async function updateAccountData() {
 ```
 
 **Kuelewa mantiki ya kazi hii:**
-- **Hukagua** ikiwa mtumiaji ameingia (state.account ipo)
-- **Huelekeza** kwenye kujiondoa ikiwa hakuna kikao halali kilichopatikana
-- **Huleta** data mpya ya akaunti kutoka kwa seva kwa kutumia kazi ya `getAccount()` iliyopo
-- **Hushughulikia** makosa ya seva kwa kujiondoa vikao visivyo halali
-- **Husasa** hali na data mpya kwa kutumia mfumo wetu wa kusasisha uliodhibitiwa
-- **Husababisha** uhifadhi wa localStorage kiotomatiki kupitia kazi ya `updateState()`
+- **Hukagua** kama mtumiaji anaingia sasa (state.account ipo)
+- **Hupeleka** mtu aondoke ikiwa hakuna kikao halali
+- **Huleta** data safi ya akaunti kutoka server kwa kutumia kazi `getAccount()`
+- **Hushughulikia** makosa ya server kwa kuondoa vikao visivyo halali
+- **Huisasisha** hali kwa data safi kwa kutumia mfumo wetu wa masasisho
+- **Huisababishia** uhifadhi wa moja kwa moja wa localStorage kupitia `updateState()`
 
-**Hatua ya 2: Tengeneza Kishughulikia Ufreshi wa Dashibodi**
+**Hatua 2: Tengeneza Kishughulikiaji cha Kusasisha Dashibodi**
 
 ```js
 async function refresh() {
@@ -462,15 +666,15 @@ async function refresh() {
 }
 ```
 
-**Kile ambacho kazi hii ya ufreshi inakamilisha:**
-- **Husimamia** mchakato wa ufreshi wa data na masasisho ya UI
-- **Husubiri** data mpya ipakie kabla ya kusasisha onyesho
-- **Hakikisha** dashibodi inaonyesha taarifa za sasa zaidi
-- **Hudumisha** mgawanyo safi kati ya usimamizi wa data na masasisho ya UI
+**Kile kazi hii ya kusasisha inafanya:**
+- **Iratibu** mchakato wa kusasisha data na masasisho ya UI
+- **Inasubiri** data safi ipakuliwe kabla ya kusasisha onyesho
+- **Inahakikisha** dashibodi inaonesha taarifa za hivi sasa zaidi
+- **Inazuia** ufungamano kati ya usimamizi wa data na masasisho ya UI
 
-**Hatua ya 3: Jumuisha na Mfumo wa Njia**
+**Hatua 3: Unganisha na Mfumo wa Njia**
 
-Sasisha usanidi wa njia zako ili kusababisha ufreshi kiotomatiki:
+Sasisha usanidi wa njia yako ili kuanzisha kusasisha moja kwa moja:
 
 ```js
 const routes = {
@@ -479,71 +683,126 @@ const routes = {
 };
 ```
 
-**Jinsi ujumuishaji huu unavyofanya kazi:**
-- **Hutekeleza** kazi ya ufreshi kila wakati njia ya dashibodi inapopakia
-- **Hakikisha** data mpya inaonyeshwa kila wakati watumiaji wanapohamia kwenye dashibodi
-- **Hudumisha** muundo wa njia uliopo huku ukiongeza ufreshi wa data
-- **Hutoa** muundo thabiti wa uanzishaji maalum wa njia
+**Jinsi muunganisho huu unavyofanya kazi:**
+- **Hutekeleza** kazi ya kusasisha kila mara njia ya dashibodi inapopakuliwa
+- **Hakikisha** data safi daima inaonyeshwa watumiaji wanapotembelea dashibodi
+- **Inatunza** muundo wa njia uliopo huku ikiongeza ufreshi wa data
+- **Inatoa** mfano thabiti wa kuanzisha sehemu maalum za njia
 
-**Kupima Mfumo Wako wa Ufreshi wa Data:**
+**Jaribu Mfumo wako wa Kusasisha Data:**
 
-1. Ingia kwenye programu yako ya benki
-2. Endesha amri ya curl kutoka awali ili kuunda muamala mpya
-3. Fanya upya ukurasa wa dashibodi yako au nenda mbali na urudi
-4. Thibitisha kuwa muamala mpya unaonekana mara moja
+1. Ingia kwenye app yako ya benki
+2. Endesha amri ya curl tuliyotumia awali kuunda muamala mpya
+3. Fanyia upya ukurasa wa dashibodi au tembelea mbali na rudi
+4. Thibitisha muamala mpya unaonekana mara moja
 
-🎉 **Mizani Kamili Imepatikana**: Programu yako sasa inachanganya uzoefu laini wa hali ya kudumu na usahihi wa data mpya ya seva!
+🎉 **Mizani Bora Imepatikana**: App yako sasa inachanganya uzoefu laini wa hali ya kudumu pamoja na usahihi wa data safi ya server!
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## 📈 Ratiba Yako ya Ujuzi wa Usimamizi wa Hali
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+```mermaid
+timeline
+    title Safari ya Usimamizi wa Hali ya Kitaalamu
+    
+    section Kutambua Tatizo
+        State Issues Diagnosis
+            : Tambua matatizo ya kupoteza kikao
+            : Elewa matatizo ya masasisho yaliyosambazwa
+            : Tambua mahitaji ya usanifu
+    
+    section Msingi wa Usanifu
+        Centralized State Design
+            : Tengeneza vitu vya hali vilivyoundwa pamoja
+            : Tekeleza mifumo ya masasisho yenye udhibiti
+            : Anzisha kanuni zisizobadilika
+        
+        Predictable Updates
+            : Jifunze matumizi ya Object.freeze()
+            : Jenga mifumo inayorahisisha utambuzi wa makosa
+            : Tengeneza mifano inayoweza kupanuka
+    
+    section Ustadi wa Kuhifadhi
+        localStorage Integration
+            : Shughulikia usindikaji wa JSON
+            : Tekeleza usawazishaji wa moja kwa moja
+            : Tengeneza uendelevu wa kikao
+        
+        Data Freshness Balance
+            : Shughulikia changamoto za upungufu wa data
+            : Jenga mifumo ya kuhuisha data
+            : Boresha utendakazi dhidi ya usahihi
+    
+    section Mifumo ya Kitaalamu
+        Production-Ready Systems
+            : Tekeleza usimamizi wa makosa
+            : Tengeneza usanifu unaoweza kudumishwa
+            : Fuata mbinu bora za sekta
+        
+        Advanced Capabilities
+            : Kuwa tayari kwa ujumuishwaji wa mfumo
+            : Kuwa tayari kwa mahitaji magumu ya hali
+            : Msingi wa vipengele vya wakati halisi
+```
+**🎓 Hatua ya Kuandikishwa**: Umefanikiwa kujenga mfumo kamili wa usimamizi wa hali kwa kutumia kanuni zinazotumika katika Redux, Vuex, na maktaba zingine za hali wa kitaalamu. Mifumo hii hukua kutoka programu rahisi hadi programu za viwanda.
 
-**Maelezo:** Tekeleza mfumo wa kina wa usimamizi wa hali na utendakazi wa kurudisha/kufanya upya kwa programu ya benki. Changamoto hii itakusaidia kufanya mazoezi ya dhana za hali ya juu za usimamizi wa hali ikiwa ni pamoja na ufuatiliaji wa historia ya hali, masasisho yasiyobadilika, na usawazishaji wa kiolesura cha mtumiaji.
+**🔄 Uwezo wa Ngazi Inayofuata**:
+- Tayari kwa ujuzi wa mifumo ya usimamizi wa hali (Redux, Zustand, Pinia)
+- Tayari kutekeleza vipengele vya wakati halisi kwa kutumia WebSockets
+- Umejifunza kujenga Progressive Web Apps zinazoanza offline kwanza
+- Msingi umewekwa kwa mifumo ya hali ya juu kama mashine za hali na wachunguzi
 
-**Kichocheo:** Tengeneza mfumo wa hali ulioboreshwa unaojumuisha: 1) Kundi la historia ya hali linalofuatilia hali zote za awali, 2) Kazi za kurudisha na kufanya upya zinazoweza kurudi kwenye hali za awali, 3) Vitufe vya UI vya operesheni za kurudisha/kufanya upya kwenye dashibodi, 4) Kikomo cha historia cha hali 10 ili kuzuia masuala ya kumbukumbu, na 5) Usafishaji sahihi wa historia wakati mtumiaji anajiondoa. Hakikisha utendakazi wa kurudisha/kufanya upya unafanya kazi na mabadiliko ya salio la akaunti na unadumu kati ya upya wa kivinjari.
+## Changamoto ya GitHub Copilot Agent 🚀
 
-Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+Tumia hali ya Agent kukamilisha changamoto ifuatayo:
+
+**Maelezo:** Tekeleza mfumo kamili wa usimamizi wa hali unaojumuisha uwezo wa kufuta/kurudi nyuma kwa mabadiliko kwa app ya benki. Changamoto hii itakuwezesha kufanya mazoezi ya dhana za hali za juu za usimamizi wakiwemo rekodi ya historia ya hali, masasisho yasiyobadilika, na ulinganifu wa kiolesura cha mtumiaji.
+
+**Onyesho:** Tengeneza mfumo ulioimarishwa wa usimamizi wa hali unaojumuisha: 1) safu ya historia ya hali inayofuatilia hali zote zilizopita, 2) kazi za kufuta na kutekeleza tena zinazoweza kurudisha hali zilizopita, 3) vifungo vya UI kwa operesheni za ufuta/tekeleza tena kwenye dashibodi, 4) kikomo cha historia cha hali 10 ili kuzuia matatizo ya kumbukumbu, na 5) usafishaji wa historia baada ya mtumiaji kuondoka. Hakikisha utendaji wa ufuta/tekeleza tena unafanya kazi na mabadiliko ya salio la akaunti na unadumu hata baada ya kivinjari kufanywa upya.
+
+Jifunze zaidi kuhusu [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
 ## 🚀 Changamoto: Uboreshaji wa Uhifadhi
 
-Utekelezaji wako sasa unashughulikia vikao vya mtumiaji, ufreshi wa data, na usimamizi wa hali kwa ufanisi. Hata hivyo, fikiria ikiwa mbinu yetu ya sasa inasawazisha kwa ufanisi uhifadhi na utendakazi.
+Utekelezaji wako sasa unashughulikia vikao vya watumiaji, kusasisha data, na usimamizi wa hali kwa ufanisi. Hata hivyo, fikiria kama njia yetu ya sasa inalinganisha vyema ufanisi wa uhifadhi na kazi.
 
-Kama mabingwa wa chess wanaotofautisha kati ya vipande muhimu na vigae vinavyoweza kutolewa, usimamizi mzuri wa hali unahitaji kutambua data gani lazima ihifadhiwe dhidi ya data gani inapaswa kuwa mpya kila wakati kutoka kwa seva.
+Kama mabingwa wa chess wanaotofautisha kati ya vipande muhimu na askari wa kurudisha mithili, usimamizi mzuri wa hali unahitaji kubaini ni data gani lazima idumu na ni ipi inapaswa kila wakati kuwa mpya kutoka server.
 
 **Uchambuzi wa Uboreshaji:**
 
-Tathmini utekelezaji wako wa localStorage wa sasa na fikiria maswali haya ya kimkakati:
-- Ni taarifa gani ya chini inayohitajika kudumisha uthibitisho wa mtumiaji?
-- Ni data gani hubadilika mara kwa mara kiasi kwamba uhifadhi wa ndani hauna faida?
-- Uboreshaji wa uhifadhi unaweza kuboresha utendakazi bila kupunguza uzoefu wa mtumiaji?
+Tathmini utekelezaji wako wa localStorage sasa na fikiria maswali haya ya kimkakati:
+- Ni taarifa ngapi minimal zinazohitajika kudumisha uthibitishaji wa mtumiaji?
+- Ni data gani hubadilika mara kwa mara kiasi ambayo kuhifadhiwa mara nyingi ndani haileti faida?
+- Je, uboreshaji wa uhifadhi unaweza kuboresha utendaji bila kupunguza uzoefu wa mtumiaji?
 
-Aina hii ya uchambuzi wa usanifu inawatofautisha watengenezaji wenye uzoefu wanaozingatia utendakazi na ufanisi katika suluhisho zao.
+Aina hii ya uchambuzi wa miundo hutoa tofauti kwa watengenezaji wenye uzoefu wanaofikiria kazi na ufanisi kwa suluhisho zao.
 
 **Mkakati wa Utekelezaji:**
-- **Tambua** data muhimu ambayo lazima ihifadhiwe (labda tu kitambulisho cha mtumiaji)
-- **Badilisha** utekelezaji wako wa localStorage ili kuhifadhi tu data muhimu ya kikao
-- **Hakikisha** data mpya inapakiwa kila wakati kutoka kwa seva wakati wa ziara za dashibodi
-- **Jaribu** kwamba mbinu yako iliyoboreshwa inadumisha uzoefu sawa wa mtumiaji
+- **Baini** data muhimu kabisa inayohitaji kudumu (labda ni kitambulisho cha mtumiaji tu)
+- **Badilisha** utekelezaji wako wa localStorage kuhifadhi tu data muhimu ya kikao
+- **Hakikisha** data safi kila wakati inapakia kutoka server unapotembelea dashibodi
+- **Jaribu** kuwa njia yako iliyoboreshwa bado inatunza uzoefu mmoja wa mtumiaji
 
-**Fikra ya Juu:**
-- **Linganisheni** faida na hasara kati ya kuhifadhi data kamili ya akaunti dhidi ya tokeni za uthibitisho pekee
-- **Andika** maamuzi yako na mantiki kwa wanachama wa timu ya baadaye
+**Kuzingatia kwa Juu:**
+- **Linganisho** la manufaa na hasara kati ya kuhifadhi data kamili ya akaunti dhidi ya vitambulisho vya uthibitishaji pekee
+- **Andika** maamuzi yako na sababu zako kwa wanateam wa baadaye
 
-Changamoto hii itakusaidia kufikiria kama mtengenezaji wa kitaalamu anayezingatia uzoefu wa mtumiaji na ufanisi wa programu. Chukua muda wako kujaribu mbinu tofauti!
+Changamoto hii itakusaidia kufikiri kama mtaalamu anayeangalia uzoefu wa mtumiaji na ufanisi wa programu. Chukua muda wako kujaribu mbinu mbalimbali!
 
-## Jaribio la Baada ya Somo
+## Mtihani wa Baada ya Mhadhara
 
-[Jaribio la baada ya somo](https://ff-quizzes.netlify.app/web/quiz/48)
+[Post-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/48)
 
-## Kazi
+## Kazi ya Nyumbani
 
-[Tekeleza "Ongeza muamala" dirisha](assignment.md)
+[Implement "Add transaction" dialog](assignment.md)
 
-Hapa kuna mfano wa matokeo baada ya kukamilisha kazi:
+Huu ni mfano wa matokeo baada ya kukamilisha kazi:
 
-![Picha inayoonyesha mfano wa dirisha la "Ongeza muamala"](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.sw.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.sw.png)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Hapati**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Wakati tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri zilizotengenezwa kwa mashine zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa za muhimu sana, tafsiri ya kitaalamu inayotolewa na watu inashauriwa. Hatubeba uwajibikaji wowote kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

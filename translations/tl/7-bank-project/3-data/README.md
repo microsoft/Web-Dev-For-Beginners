@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Workflow ng pag-update sa multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.tl.png)
+![Workflow ng pag-update sa multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa77.tl.png)
 
 **Bakit pakiramdam na clunky ang approach na ito:**
 - Bawat click ay nangangahulugan ng pag-rebuild ng buong page mula sa simula
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Workflow ng pag-update sa single-page application](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.tl.png)
+![Workflow ng pag-update sa single-page application](../../../../translated_images/spa.268ec73b41f992c2.tl.png)
 
 **Bakit mas maganda ang pakiramdam ng SPAs:**
 - Ang mga bahagi lang na talagang nagbago ang na-update (matalino, di ba?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Ngayon, kapag sinubukan mong mag-login gamit ang invalid na account, makikita mo ang isang kapaki-pakinabang na mensahe ng error sa mismong pahina!
 
-![Screenshot na nagpapakita ng mensahe ng error na lumalabas sa pag-login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.tl.png)
+![Screenshot na nagpapakita ng mensahe ng error na lumalabas sa pag-login](../../../../translated_images/login-error.416fe019b36a6327.tl.png)
 
 #### Hakbang 4: Pagiging Inclusive sa Accessibility
 
@@ -961,7 +961,7 @@ Handa ka na bang dalhin ang iyong banking app sa susunod na antas? Gawin natin i
 
 Ganito ang maaaring hitsura ng isang polished na dashboard:
 
-![Screenshot ng isang halimbawa ng resulta ng dashboard pagkatapos ng styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.tl.png)
+![Screenshot ng isang halimbawa ng resulta ng dashboard pagkatapos ng styling](../../../../translated_images/screen2.123c82a831a1d14a.tl.png)
 
 Huwag kang mag-alala kung hindi mo ito eksaktong ma-match - gamitin ito bilang inspirasyon at gawin itong sarili mo!
 

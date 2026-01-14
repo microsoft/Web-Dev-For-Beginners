@@ -190,7 +190,7 @@ Net als het compartimentontwerp van de Titanic dat robuust leek totdat meerdere 
 
 In plaats van achter de feiten aan te lopen, gaan we een **gecentraliseerd state management** systeem creëren. Denk eraan als één echt georganiseerd persoon die verantwoordelijk is voor alle belangrijke zaken:
 
-![Schema dat de datastromen toont tussen de HTML, gebruikersacties en state](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.nl.png)
+![Schema dat de datastromen toont tussen de HTML, gebruikersacties en state](../../../../translated_images/data-flow.fa2354e0908fecc8.nl.png)
 
 ```mermaid
 flowchart TD
@@ -803,7 +803,7 @@ Deze uitdaging helpt u te denken als een professionele ontwikkelaar die zowel ge
 
 Hier is een voorbeeldresultaat na het voltooien van de opdracht:
 
-![Screenshot van een voorbeeld "Transactie toevoegen"-dialoogvenster](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.nl.png)
+![Screenshot van een voorbeeld "Transactie toevoegen"-dialoogvenster](../../../../translated_images/dialog.93bba104afeb79f1.nl.png)
 
 ---
 

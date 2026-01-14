@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![Canvas 的網格](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.mo.png)
+![Canvas 的網格](../../../../translated_images/canvas_grid.5f209da785ded492.mo.png)
 > 圖片來源：[MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 要在 Canvas 元素上繪圖，你需要遵循三個步驟，這是所有 Canvas 圖形的基礎。一旦你多次完成這些步驟，它就會變得非常自然：
@@ -329,11 +329,11 @@ flowchart TD
 
 - 英雄飛船
 
-   ![英雄飛船](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.mo.png)
+   ![英雄飛船](../../../../translated_images/player.dd24c1afa8c71e9b.mo.png)
 
 - 5×5 怪物
 
-   ![怪物飛船](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.mo.png)
+   ![怪物飛船](../../../../translated_images/enemyShip.5df2a822c16650c2.mo.png)
 
 ### 建議的開發步驟
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 完成的結果應該看起來像這樣：
 
-![黑色螢幕上有一個英雄和5*5的怪物](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.mo.png)
+![黑色螢幕上有一個英雄和5*5的怪物](../../../../translated_images/partI-solution.36c53b48c9ffae2a.mo.png)
 
 ## 解決方案
 

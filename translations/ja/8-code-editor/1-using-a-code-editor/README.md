@@ -185,7 +185,7 @@ VSCode.devはこれらの機能をブラウザに提供します:
 
 すべてが読み込まれると、コードに集中できるように設計された美しくクリーンなワークスペースが表示されます。
 
-![デフォルトのVSCode.devインターフェース](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.ja.png)
+![デフォルトのVSCode.devインターフェース](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.ja.png)
 
 **ワークスペースのツアー:**
 - **アクティビティバー**（左側のストリップ）: エクスプローラー📁、検索🔍、ソースコントロール🌿、拡張機能🧩、設定⚙️などのメインナビゲーション
@@ -233,7 +233,7 @@ VSCode.devで新しく始める場合や特定のリポジトリを開きたい�
 1. [vscode.dev](https://vscode.dev)にアクセス（まだアクセスしていない場合）
 2. ウェルカム画面で「Open Remote Repository」ボタンを探してクリック
 
-   ![リモートリポジトリを開く](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.ja.png)
+   ![リモートリポジトリを開く](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.ja.png)
 
 3. 任意のGitHubリポジトリURLを貼り付け（例: `https://github.com/microsoft/Web-Dev-For-Beginners`）
 4. Enterキーを押して魔法を体験！
@@ -242,7 +242,7 @@ VSCode.devで新しく始める場合や特定のリポジトリを開きたい�
 
 コーディングの魔法使いのように感じたいですか？このキーボードショートカットを試してください: Ctrl+Shift+P（MacではCmd+Shift+P）でコマンドパレットを開く:
 
-![コマンドパレット](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.ja.png)
+![コマンドパレット](../../../../translated_images/palette-menu.4946174e07f42622.ja.png)
 
 **コマンドパレットは、できることすべての検索エンジンのようなものです:**
 - 「open remote」と入力するとリポジトリオープナーを見つけられます
@@ -304,7 +304,7 @@ HTTPとHTTPSが異なるプロトコルを使用しながら同じドメイン�
 3. 適切な拡張子を含むファイル名を入力（例: `style.css`, `script.js`, `index.html`）
 4. Enterキーを押してファイルを作成
 
-![新しいファイルを作成](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.ja.png)
+![新しいファイルを作成](../../../../translated_images/create-new-file.2814e609c2af9aeb.ja.png)
 
 **命名規則:**
 - ファイルの目的を示す説明的な名前を使用
@@ -322,7 +322,7 @@ HTTPとHTTPSが異なるプロトコルを使用しながら同じドメイン�
 2. タイピングを開始すると、VSCode.devが色付け、提案、エラー検出で助けてくれます
 3. Ctrl+S（Windows/Linux）またはCmd+S（Mac）で作業を保存 - 自動保存もあります！
 
-![VSCode.devでファイルを編集](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.ja.png)
+![VSCode.devでファイルを編集](../../../../translated_images/edit-a-file.52c0ee665ef19f08.ja.png)
 
 **コーディング中に起こる素晴らしいこと:**
 - コードが美しく色分けされ、読みやすくなる
@@ -395,7 +395,7 @@ mindmap
 2. 探索するか、特定のものを検索  
 3. 興味深いものをクリックして詳細を確認  
 
-![拡張機能マーケットプレイスのインターフェース](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.ja.png)
+![拡張機能マーケットプレイスのインターフェース](../../../../translated_images/extensions.eca0e0c7f59a10b5.ja.png)
 
 **中にあるもの：**
 
@@ -448,7 +448,7 @@ mindmap
 3. ドロップダウンから「拡張機能設定」を選択  
 4. ワークフローに合うように調整  
 
-![拡張機能設定のカスタマイズ](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.ja.png)
+![拡張機能設定のカスタマイズ](../../../../translated_images/extension-settings.21c752ae4f4cdb78.ja.png)
 
 **調整したい一般的な項目：**  
 - コードのフォーマット方法（タブ vs スペース、行の長さなど）  

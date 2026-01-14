@@ -185,7 +185,7 @@ Net zoals de telefoon van Alexander Graham Bell verre locaties verbond, verbindt
 
 Zodra alles is geladen, zie je een prachtig schone werkruimte die is ontworpen om je gefocust te houden op wat belangrijk is – je code!
 
-![Standaard VSCode.dev interface](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.nl.png)
+![Standaard VSCode.dev interface](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.nl.png)
 
 **Hier is je rondleiding door de buurt:**
 - **Activiteitenbalk** (die strook links): Je hoofdnavigatie met Explorer 📁, Zoeken 🔍, Source Control 🌿, Extensies 🧩, en Instellingen ⚙️
@@ -233,7 +233,7 @@ Dit is perfect wanneer je nieuw begint in VSCode.dev en een specifieke repositor
 1. Ga naar [vscode.dev](https://vscode.dev) als je daar nog niet bent
 2. Zoek de knop "Open Remote Repository" op het welkomstscherm en klik erop
 
-   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.nl.png)
+   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.nl.png)
 
 3. Plak een GitHub-repository-URL (probeer deze: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Druk op Enter en zie de magie gebeuren!
@@ -242,7 +242,7 @@ Dit is perfect wanneer je nieuw begint in VSCode.dev en een specifieke repositor
 
 Wil je je als een codeerwizard voelen? Probeer deze sneltoets: Ctrl+Shift+P (of Cmd+Shift+P op Mac) om de Command Palette te openen:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.nl.png)
+![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.nl.png)
 
 **De Command Palette is als een zoekmachine voor alles wat je kunt doen:**
 - Typ "open remote" en het vindt de repository-opener voor je
@@ -304,7 +304,7 @@ Net zoals het organiseren van blauwdrukken in het kantoor van een architect, vol
 3. Voer de bestandsnaam in, inclusief de juiste extensie (`style.css`, `script.js`, `index.html`)
 4. Druk op Enter om het bestand te maken
 
-![Een nieuw bestand maken](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.nl.png)
+![Een nieuw bestand maken](../../../../translated_images/create-new-file.2814e609c2af9aeb.nl.png)
 
 **Naamgevingsconventies:**
 - Gebruik beschrijvende namen die het doel van het bestand aangeven
@@ -322,7 +322,7 @@ Hier begint het echte plezier! De editor van VSCode.dev zit boordevol handige fu
 2. Begin met typen en zie hoe VSCode.dev je helpt met kleuren, suggesties en foutdetectie
 3. Sla je werk op met Ctrl+S (Windows/Linux) of Cmd+S (Mac) – hoewel het ook automatisch opslaat!
 
-![Bestanden bewerken in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.nl.png)
+![Bestanden bewerken in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.nl.png)
 
 **De coole dingen die gebeuren terwijl je codeert:**
 - Je code wordt prachtig ingekleurd, zodat het gemakkelijk te lezen is
@@ -343,7 +343,7 @@ Net zoals archeologen gedetailleerde verslagen maken van opgravingslagen, houdt 
 2. Gewijzigde bestanden verschijnen in de sectie "Changes"
 3. Kleuraanduidingen geven wijzigingstypen aan: groen voor toevoegingen, rood voor verwijderingen
 
-![Wijzigingen bekijken in Source Control](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.nl.png)
+![Wijzigingen bekijken in Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.nl.png)
 
 **Je werk opslaan (de commit-workflow):**
 
@@ -438,7 +438,7 @@ De extensiemarkt is heel overzichtelijk, dus je raakt niet verdwaald terwijl je 
 2. Blader rond of zoek naar iets specifieks  
 3. Klik op iets interessants om er meer over te leren  
 
-![Interface van de extensiemarkt](../../../../translated_images/extensions.eca0e0c7f59a10b5c88be7fe24b3e32cca6b6058b35a49026c3a9d80b1813b7c.nl.png)  
+![Interface van de extensiemarkt](../../../../translated_images/extensions.eca0e0c7f59a10b5.nl.png)  
 
 **Wat je daar zult zien:**  
 
@@ -491,7 +491,7 @@ De meeste extensies hebben instellingen die je kunt aanpassen zodat ze precies w
 3. Kies "Extensie-instellingen" in het dropdownmenu  
 4. Pas dingen aan totdat ze perfect aansluiten bij jouw workflow  
 
-![Instellingen van extensies aanpassen](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.nl.png)  
+![Instellingen van extensies aanpassen](../../../../translated_images/extension-settings.21c752ae4f4cdb78.nl.png)  
 
 **Veelvoorkomende dingen die je wilt aanpassen:**  
 - Hoe je code wordt geformatteerd (tabs vs spaties, regellengte, etc.)  

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 اس پروجیکٹ میں، آپ ایک خیالی بینک بنانے کا طریقہ سیکھیں گے۔ یہ اسباق آپ کو ویب ایپ کی ترتیب اور راستے فراہم کرنے، فارم بنانے، اسٹیٹ کو منظم کرنے، اور API سے ڈیٹا حاصل کرنے کے طریقے سکھائیں گے جس سے آپ بینک کا ڈیٹا حاصل کر سکتے ہیں۔
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.ur.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.ur.png) |
+| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.ur.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.ur.png) |
 |--------------------------------|--------------------------------|
 
 ## اسباق

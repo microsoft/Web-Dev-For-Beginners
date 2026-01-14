@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Küçük bir sürükle ve bırak kod meditasyonu. Biraz HTML, JS ve CSS ile bir web arayüzü oluşturabilir, stil verebilir ve etkileşim ekleyebilirsiniz.
 
-![teraryumum](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.tr.png)
+![teraryumum](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.tr.png)
 
 ## Katkıda Bulunanlar
 

@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 İşte bitmiş projenizin nasıl görüneceği:
 
-![Kullanıcı ve AI asistanı arasındaki sohbeti gösteren sohbet uygulaması arayüzü](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.tr.png)
+![Kullanıcı ve AI asistanı arasındaki sohbeti gösteren sohbet uygulaması arayüzü](../../../translated_images/screenshot.0a1ee0d123df681b.tr.png)
 
 ## 🗺️ AI Uygulama Geliştirme Yolculuğunuz
 
@@ -194,7 +194,7 @@ mindmap
 
 **Temel İlke**: AI uygulama geliştirme, geleneksel web geliştirme becerilerini AI hizmet entegrasyonu ile birleştirerek kullanıcılar için doğal ve duyarlı hissedilen akıllı uygulamalar oluşturur.
 
-![Model seçimi ve test alanı içeren GitHub Models AI Playground arayüzü](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.tr.png)
+![Model seçimi ve test alanı içeren GitHub Models AI Playground arayüzü](../../../translated_images/playground.d2b927122224ff8f.tr.png)
 
 **Oyun alanını bu kadar kullanışlı yapan şey:**
 - **Farklı AI modellerini deneyin**: GPT-4o-mini, Claude ve diğerleri (hepsi ücretsiz!)
@@ -204,7 +204,7 @@ mindmap
 
 Biraz oynadıktan sonra, sadece "Code" sekmesine tıklayın ve ihtiyacınız olan uygulama kodunu almak için programlama dilinizi seçin.
 
-![Farklı programlama dilleri için kod oluşturma seçeneklerini gösteren oyun alanı seçimi](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.tr.png)
+![Farklı programlama dilleri için kod oluşturma seçeneklerini gösteren oyun alanı seçimi](../../../translated_images/playground-choice.1d23ba7d407f4758.tr.png)
 
 ## Python Backend Entegrasyonunu Kurma
 
@@ -2355,14 +2355,14 @@ Bu projeyi bir bulut geliştirme ortamında denemek ister misiniz? GitHub Codesp
 - [Web Dev For Beginners deposuna](https://github.com/microsoft/Web-Dev-For-Beginners) **gidin**
 - Sağ üst köşedeki "Use this template" (Bu şablonu kullan) düğmesine **tıklayın** (GitHub'da oturum açtığınızdan emin olun)
 
-![Şablondan oluşturma arayüzü, yeşil "Use this template" düğmesini gösteriyor](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.tr.png)
+![Şablondan oluşturma arayüzü, yeşil "Use this template" düğmesini gösteriyor](../../../translated_images/template.67ad477109d29a2b.tr.png)
 
 **Adım 2: Codespaces'i Başlat**
 - Yeni oluşturduğunuz depoyu **açın**
 - Yeşil "Code" düğmesine **tıklayın** ve "Codespaces" seçeneğini seçin
 - Geliştirme ortamınızı başlatmak için "Create codespace on main" seçeneğini **seçin**
 
-![Bulut geliştirme ortamını başlatma seçenekleriyle Codespace oluşturma arayüzü](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.tr.png)
+![Bulut geliştirme ortamını başlatma seçenekleriyle Codespace oluşturma arayüzü](../../../translated_images/codespace.bcecbdf5d2747d3d.tr.png)
 
 **Adım 3: Ortam Yapılandırması**  
 Codespace yüklendiğinde, şu özelliklere erişiminiz olacak:  

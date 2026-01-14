@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Utilizzando l'API CO2 Signal di tmrow per monitorare l'uso dell'elettricità, è stato creato un'estensione del browser che ti ricorda quanto è intenso l'uso dell'elettricità nella tua area. Usare questa estensione ti aiuterà a prendere decisioni sulle tue attività basandoti su queste informazioni.
 
-![Screenshot dell'estensione](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.it.png)
+![Screenshot dell'estensione](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.it.png)
 
 ## Per iniziare
 
@@ -31,7 +31,7 @@ npm run build
 
 Per installarla su Edge, utilizza il menu "tre punti" nell'angolo in alto a destra del browser per trovare il pannello delle estensioni. Da lì, seleziona "Carica non impacchettato" per caricare una nuova estensione. Quando richiesto, apri la cartella "dist" e l'estensione verrà caricata. Per utilizzarla, avrai bisogno di una chiave API di CO2 Signal ([ottienila qui via email](https://www.co2snal.com/) inserendo il tuo indirizzo email nel box sulla pagina) e del [codice della tua area](http://api.electricitymap.org/v3/zones) da [Electricity Map](https://www.electricitymap.org/map) (ad esempio, per Boston, utilizzo "US-NEISO").
 
-![installazione](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.it.png)
+![installazione](../../../../../translated_images/install-on-edge.78634f02842c4828.it.png)
 
 Una volta che la chiave API e il codice dell'area sono stati inseriti nell'interfaccia dell'estensione, il punto colorato nella barra delle estensioni del browser dovrebbe cambiare per riflettere l'uso energetico della tua area e fornire un indicatore su quali attività ad alto consumo energetico sono più adatte. Il concetto dietro questo sistema di "punti" mi è stato ispirato dall'estensione [Energy Lollipop](https://energylollipop.com/) per le emissioni in California.
 

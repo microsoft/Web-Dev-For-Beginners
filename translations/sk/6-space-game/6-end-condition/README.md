@@ -1,57 +1,161 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "46bcdd9a0174031655a49bb062aa279c",
-  "translation_date": "2025-10-24T21:47:25+00:00",
+  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
+  "translation_date": "2026-01-07T04:42:10+00:00",
   "source_file": "6-space-game/6-end-condition/README.md",
   "language_code": "sk"
 }
 -->
-# Vytvorenie vesmírnej hry, časť 6: Koniec a reštart
+# Build a Space Game Part 6: Koniec a reštart
 
-Každá skvelá hra potrebuje jasné podmienky ukončenia a plynulý mechanizmus reštartu. Vytvorili ste pôsobivú vesmírnu hru s pohybom, bojom a skórovaním - teraz je čas pridať posledné kúsky, ktoré ju urobia kompletnou.
+```mermaid
+journey
+    title Vaša cesta dokončenia hry
+    section Podmienky ukončenia
+      Definovať stavy výhry/prehry: 3: Student
+      Implementovať kontrolu podmienok: 4: Student
+      Riešiť prechody stavov: 4: Student
+    section Herný zážitok hráča
+      Navrhnúť systémy spätnej väzby: 4: Student
+      Vytvoriť mechaniku reštartu: 5: Student
+      Vyleštiť používateľské rozhranie: 5: Student
+    section Integrácia systému
+      Spravovať životný cyklus hry: 5: Student
+      Riešiť čistenie pamäte: 5: Student
+      Vytvoriť kompletný zážitok: 5: Student
+```
+Každá skvelá hra potrebuje jasné podmienky ukončenia a plynulý mechanizmus reštartu. Vybudovali ste pôsobivú vesmírnu hru s pohybom, bojom a skórovaním – teraz je čas pridať posledné kúsky, ktoré ju urobia kompletnou.
 
-Vaša hra momentálne beží nekonečne, podobne ako sondy Voyager, ktoré NASA vypustila v roku 1977 - stále cestujú vesmírom aj po desaťročiach. Zatiaľ čo to je v poriadku pre vesmírny prieskum, hry potrebujú definované konce, aby poskytli uspokojivý zážitok.
+Vaša hra momentálne beží donekonečna, ako sondy Voyager, ktoré NASA vypustila v roku 1977 – stále cestujú vesmírom aj po desiatkach rokov. Zatiaľ čo to je v poriadku pre vesmírny prieskum, hry potrebujú definované koncové body, aby vytvorili uspokojivé zážitky.
 
-Dnes implementujeme správne podmienky víťazstva/prehry a systém reštartu. Na konci tejto lekcie budete mať vyleštenú hru, ktorú hráči môžu dokončiť a znova hrať, podobne ako klasické arkádové hry, ktoré definovali tento žáner.
+Dnes implementujeme správne podmienky výhry/prehry a systém reštartu. Na konci tejto lekcie budete mať vyladenú hru, ktorú si hráči môžu dokončiť a znovu hrať, presne ako klasické arkádové hry, ktoré definovali tento žáner.
 
-## Kvíz pred prednáškou
+```mermaid
+mindmap
+  root((Dokončenie Hry))
+    End Conditions
+      Victory States
+      Defeat Conditions
+      Progress Tracking
+      State Validation
+    Player Feedback
+      Visual Messages
+      Color Psychology
+      Clear Communication
+      Emotional Response
+    State Management
+      Game Loop Control
+      Memory Cleanup
+      Object Lifecycle
+      Event Handling
+    Restart Systems
+      Input Handling
+      State Reset
+      Fresh Initialization
+      User Experience
+    Polish Elements
+      Message Display
+      Smooth Transitions
+      Error Prevention
+      Accessibility
+```
+## Prednáškový kvíz
 
 [Prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/39)
 
-## Pochopenie podmienok ukončenia hry
+## Porozumenie podmienkam ukončenia hry
 
-Kedy by mala vaša hra skončiť? Táto základná otázka formovala dizajn hier už od éry prvých arkádových hier. Pac-Man končí, keď vás chytia duchovia alebo vyčistíte všetky bodky, zatiaľ čo Space Invaders končí, keď mimozemšťania dosiahnu spodok alebo ich všetkých zničíte.
+Kedy by mala vaša hra skončiť? Táto základná otázka formuje dizajn hier už od skorých arkádových čias. Pac-Man končí, keď vás chytia duchovia alebo zoberiete všetky bodky, zatiaľ čo Space Invaders končí, keď mimozemšťania dosiahnu spodok alebo ich všetkých zničíte.
 
-Ako tvorca hry definujete podmienky víťazstva a prehry. Pre našu vesmírnu hru tu sú osvedčené prístupy, ktoré vytvárajú pútavú hrateľnosť:
+Ako tvorca hry definujete podmienky výhry a prehry. Pre našu vesmírnu hru sú tu overené prístupy, ktoré vytvárajú pútavú hrateľnosť:
 
-- **Zničenie `N` nepriateľských lodí**: Je bežné, že ak rozdelíte hru na rôzne úrovne, musíte zničiť `N` nepriateľských lodí, aby ste dokončili úroveň.
-- **Vaša loď bola zničená**: Existujú hry, kde prehráte, ak je vaša loď zničená. Ďalším bežným prístupom je koncept životov. Každýkrát, keď je vaša loď zničená, odpočíta sa jeden život. Keď stratíte všetky životy, prehráte hru.
-- **Nazbierali ste `N` bodov**: Ďalšou bežnou podmienkou ukončenia je nazbieranie bodov. Ako získate body, je na vás, ale je bežné priradiť body k rôznym aktivitám, ako je ničenie nepriateľskej lode alebo zbieranie predmetov, ktoré sa objavia po ich zničení.
-- **Dokončenie úrovne**: To môže zahŕňať niekoľko podmienok, ako napríklad zničenie `X` nepriateľských lodí, nazbieranie `Y` bodov alebo možno získanie konkrétneho predmetu.
+```mermaid
+flowchart TD
+    A["🎮 Začiatok hry"] --> B{"Skontroluj podmienky"}
+    
+    B --> C["Počet nepriateľov"]
+    B --> D["Životy hrdinu"]
+    B --> E["Prahové skóre"]
+    B --> F["Pokrok v úrovni"]
+    
+    C --> C1{"Nepriateľov = 0?"}
+    D --> D1{"Životy = 0?"}
+    E --> E1{"Skóre ≥ cieľ?"}
+    F --> F1{"Úlohy dokončené?"}
+    
+    C1 -->|Áno| G["🏆 Víťazstvo"]
+    D1 -->|Áno| H["💀 Prehra"]
+    E1 -->|Áno| G
+    F1 -->|Áno| G
+    
+    C1 -->|Nie| B
+    D1 -->|Nie| B
+    E1 -->|Nie| B
+    F1 -->|Nie| B
+    
+    G --> I["🔄 Možnosť reštartu"]
+    H --> I
+    
+    style G fill:#e8f5e8
+    style H fill:#ffebee
+    style I fill:#e3f2fd
+```
+- **Zničených bolo `N` nepriateľských lodí**: Je celkom bežné, že ak si hru rozdelíte do rôznych úrovní, potrebujete zničiť `N` nepriateľských lodí na dokončenie úrovne.
+- **Vaša loď bola zničená**: Existujú hry, kde prehráte, ak je vaša loď zničená. Ďalší častý prístup je mať koncept životov. Každý raz, keď je vaša loď zničená, stratíte jeden život. Akonáhle stratíte všetky životy, hra končí.
+- **Nasbieraných bolo `N` bodov**: Ďalšou bežnou podmienkou ukončenia je nazbierať body. Ako získavate body je na vás, ale často sa body prideľujú za rôzne aktivity ako zničenie nepriateľskej lode alebo zber predmetov, ktoré sa *spawnujú* po ich zničení.
+- **Dokončenie úrovne**: Môže zahŕňať niekoľko podmienok, ako napríklad zničenie `X` nepriateľských lodí, nazbieranie `Y` bodov alebo zber špecifického predmetu.
 
-## Implementácia funkcie reštartu hry
+## Implementácia funkčnosti reštartu hry
 
-Dobré hry podporujú opakovateľnosť prostredníctvom plynulých mechanizmov reštartu. Keď hráči dokončia hru (alebo utrpia porážku), často chcú okamžite skúsiť znova - či už na zlepšenie skóre alebo výkonu.
+Dobré hry podporujú opätovnú hrateľnosť prostredníctvom plynulých mechanizmov reštartu. Keď hráči dokončia hru (alebo prehrávajú), často chcú vyskúšať znova okamžite – či už aby prekonali svoje skóre, alebo zlepšili výkon.
 
-Tetris je toho dokonalým príkladom: keď vaše bloky dosiahnu vrchol, môžete okamžite začať novú hru bez nutnosti prechádzať zložitými menu. Vytvoríme podobný systém reštartu, ktorý čisto resetuje stav hry a rýchlo vráti hráčov späť do akcie.
+```mermaid
+stateDiagram-v2
+    [*] --> Playing: Začiatok hry
+    Playing --> Victory: Všetci nepriatelia zničení
+    Playing --> Defeat: Životy = 0
+    
+    Victory --> MessageDisplay: Zobraziť správu o výhre
+    Defeat --> MessageDisplay: Zobraziť správu o prehre
+    
+    MessageDisplay --> WaitingRestart: Výzva na stlačenie Enter
+    WaitingRestart --> Resetting: Stlačený kláves Enter
+    
+    Resetting --> CleanupMemory: Vyčistiť intervaly
+    CleanupMemory --> ClearEvents: Odstrániť poslucháčov
+    ClearEvents --> InitializeGame: Čistý štart
+    InitializeGame --> Playing: Začína nová hra
+    
+    note right of MessageDisplay
+        Spätná väzba podľa farieb:
+        Zelená = Výhra
+        Červená = Prehra
+    end note
+    
+    note right of Resetting
+        Kompletné obnovenie stavu
+        zabraňuje únikom pamäti
+    end note
+```
+Tetris je toho dokonalým príkladom: keď vám bloky dosiahnu na vrchol, môžete ihneď začať novú hru bez zložitého prepínania v menu. My postavíme podobný systém reštartu, ktorý čisto obnoví stav hry a rýchlo vráti hráčov späť do akcie.
 
-✅ **Reflexia**: Zamyslite sa nad hrami, ktoré ste hrali. Za akých podmienok končia a ako vás motivujú k reštartu? Čo robí zážitok z reštartu plynulým oproti frustrujúcemu?
+✅ **Reflexia**: Zamyslite sa nad hrami, ktoré ste hrali. Za akých podmienok končia a ako ste vyzvaní k reštartu? Čo robí skúsenosť s reštartom plynulou oproti frustrujúcej?
 
 ## Čo budete vytvárať
 
-Implementujete posledné funkcie, ktoré premenia váš projekt na kompletný herný zážitok. Tieto prvky odlišujú vyleštené hry od základných prototypov.
+Implementujete posledné funkcie, ktoré váš projekt premenia na kompletný herný zážitok. Tieto prvky odlišujú vyladené hry od základných prototypov.
 
-**Tu je, čo dnes pridáme:**
+**Dnes pridávame:**
 
-1. **Podmienka víťazstva**: Zničte všetkých nepriateľov a užite si zaslúženú oslavu!
-2. **Podmienka prehry**: Prídete o všetky životy a čelíte porážke na obrazovke.
-3. **Mechanizmus reštartu**: Stlačte Enter a okamžite sa vráťte do hry - pretože jedna hra nikdy nestačí.
-4. **Správa stavu**: Čistý začiatok pri každom reštarte - žiadni zvyšní nepriatelia ani zvláštne chyby z predchádzajúcej hry.
+1. **Podmienka výhry**: Zničte všetkých nepriateľov a získajte správne oslavy (zaslúžite si to!)
+2. **Podmienka prehry**: Stratíte všetky životy a zobrazí sa obrazovka prehry
+3. **Mechanizmus reštartu**: Stlačte Enter a okamžite začnite znova – pretože jedna hra nikdy nestačí
+4. **Správa stavu**: Čistý štart vždy – žiadni zvyšní nepriatelia ani zvlášne chyby z poslednej hry
 
 ## Začíname
 
-Pripravme si vaše vývojové prostredie. Mali by ste mať pripravené všetky súbory vašej vesmírnej hry z predchádzajúcich lekcií.
+Pripravte si svoje vývojové prostredie. Mali by ste mať pripravené všetky súbory z predošlých lekcií vesmírnej hry.
 
 **Váš projekt by mal vyzerať nejako takto:**
 
@@ -66,7 +170,7 @@ Pripravme si vaše vývojové prostredie. Mali by ste mať pripravené všetky s
 -| package.json
 ```
 
-**Spustite váš vývojový server:**
+**Spustite svoj vývojový server:**
 
 ```bash
 cd your-work
@@ -75,18 +179,43 @@ npm start
 
 **Tento príkaz:**
 - Spustí lokálny server na `http://localhost:5000`
-- Správne poskytne vaše súbory
-- Automaticky obnoví stránku pri vykonaní zmien
+- Správne obslúži vaše súbory
+- Automaticky sa obnoví pri zmene kódu
 
-Otvorte `http://localhost:5000` vo vašom prehliadači a overte, či vaša hra beží. Mali by ste byť schopní pohybovať sa, strieľať a interagovať s nepriateľmi. Ak je všetko v poriadku, môžeme pokračovať v implementácii.
+Otvorte `http://localhost:5000` vo vašom prehliadači a overte, či hra beží. Mali by ste sa vedieť pohybovať, strieľať a interagovať s nepriateľmi. Po potvrdení môžeme pokračovať s implementáciou.
 
-> 💡 **Tip**: Aby ste sa vyhli varovaniam vo Visual Studio Code, deklarujte `gameLoopId` na začiatku vášho súboru ako `let gameLoopId;` namiesto deklarovania vo funkcii `window.onload`. Toto nasleduje moderné najlepšie praktiky deklarácie premenných v JavaScripte.
+> 💡 **Tip pre profesionálov**: Aby ste sa vyhli varovaniam vo Visual Studio Code, deklarujte `gameLoopId` na začiatku súboru ako `let gameLoopId;`, namiesto deklarovania vo vnútri funkcie `window.onload`. Toto je odporúčaná prax pre deklarácie premenných v modernom JavaScripte.
 
+```mermaid
+flowchart TD
+    A["1. Sledovanie Stavu"] --> B["2. Spracovanie Udalostí"]
+    B --> C["3. Konštanty Správ"]
+    C --> D["4. Ovládanie Reštartu"]
+    D --> E["5. Zobrazovanie Správ"]
+    E --> F["6. Resetovanie Systému"]
+    
+    G["isHeroDead()\nisEnemiesDead()"] --> A
+    H["Kolízne Udalosti\nUdalosti Konca Hry"] --> B
+    I["VÍŤAZSTVO_HRY\nPREHRA_HRY"] --> C
+    J["Kláves Enter\nSpúšťač Reštartu"] --> D
+    K["Víťazstvo/Prehra\nFarebne Kódovaný Text"] --> E
+    L["Čistenie Stavu\nNová Inicializácia"] --> F
+    
+    F --> M["🎮 Kompletná Hra"]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e0f2f1
+    style F fill:#fce4ec
+    style M fill:#e1f5fe
+```
 ## Kroky implementácie
 
-### Krok 1: Vytvorenie funkcií na sledovanie podmienok ukončenia
+### Krok 1: Vytvorte funkcie na sledovanie koncových podmienok
 
-Potrebujeme funkcie na sledovanie, kedy by mala hra skončiť. Podobne ako senzory na Medzinárodnej vesmírnej stanici, ktoré neustále monitorujú kritické systémy, tieto funkcie budú nepretržite kontrolovať stav hry.
+Potrebujeme funkcie, ktoré budú sledovať, kedy by hra mala skončiť. Ako senzory na Medzinárodnej vesmírnej stanici, ktoré neustále monitorujú kritické systémy, tieto funkcie budú priebežne kontrolovať stav hry.
 
 ```javascript
 function isHeroDead() {
@@ -99,17 +228,50 @@ function isEnemiesDead() {
 }
 ```
 
-**Čo sa deje v zákulisí:**
-- **Kontroluje**, či náš hrdina stratil všetky životy (au!)
-- **Počíta**, koľko nepriateľov je stále nažive
-- **Vracia** `true`, keď je bojisko čisté od nepriateľov
-- **Používa** jednoduchú logiku true/false na udržanie prehľadnosti
-- **Filtruje** všetky herné objekty, aby našiel preživších
+**Čo sa deje pod kapotou:**
+- **Kontroluje**, či náš hrdina nemá životy (au!)
+- **Počíta**, koľko nepriateľov je ešte nažive
+- **Vracia** `true`, keď je bojisko bez nepriateľov
+- **Používa** jednoduchú logiku pravda/nepravda pre prehľadnosť
+- **Filtrovať** všetky herné objekty, aby našiel preživších
 
-### Krok 2: Aktualizácia obsluhy udalostí pre podmienky ukončenia
+### Krok 2: Aktualizujte obslužné rutiny udalostí pre koncové podmienky
 
-Teraz prepojíme tieto kontroly podmienok s udalosťovým systémom hry. Pri každom zrážke hra vyhodnotí, či spúšťa podmienku ukončenia. Tým sa vytvorí okamžitá spätná väzba na kritické herné udalosti.
+Teraz tieto kontroly podmienok pripojíme k event systému hry. Pri každej kolízii hra vyhodnotí, či nastala koncová podmienka. To vytvára okamžitú spätnú väzbu pri kritických udalostiach.
 
+```mermaid
+sequenceDiagram
+    participant Collision
+    participant GameLogic
+    participant Conditions
+    participant EventSystem
+    participant Display
+    
+    Collision->>GameLogic: Laser zasiahne nepriateľa
+    GameLogic->>GameLogic: Zničiť objekty
+    GameLogic->>Conditions: Skontrolovať isEnemiesDead()
+    
+    alt Všetci nepriatelia porazení
+        Conditions->>EventSystem: Vyslať GAME_END_WIN
+        EventSystem->>Display: Zobraziť správu o víťazstve
+    else Nepriatelia zostávajú
+        Conditions->>GameLogic: Pokračovať v hre
+    end
+    
+    Collision->>GameLogic: Nepriateľ zasiahne hrdinu
+    GameLogic->>GameLogic: Znížiť životy
+    GameLogic->>Conditions: Skontrolovať isHeroDead()
+    
+    alt Životy = 0
+        Conditions->>EventSystem: Vyslať GAME_END_LOSS
+        EventSystem->>Display: Zobraziť správu o porážke
+    else Životy zostávajú
+        GameLogic->>Conditions: Skontrolovať isEnemiesDead()
+        alt Všetci nepriatelia porazení
+            Conditions->>EventSystem: Vyslať GAME_END_WIN
+        end
+    end
+```
 ```javascript
 eventEmitter.on(Messages.COLLISION_ENEMY_LASER, (_, { first, second }) => {
     first.dead = true;
@@ -126,7 +288,7 @@ eventEmitter.on(Messages.COLLISION_ENEMY_HERO, (_, { enemy }) => {
     hero.decrementLife();
     if (isHeroDead())  {
       eventEmitter.emit(Messages.GAME_END_LOSS);
-      return; // loss before victory
+      return; // strata pred víťazstvom
     }
     if (isEnemiesDead()) {
       eventEmitter.emit(Messages.GAME_END_WIN);
@@ -143,30 +305,30 @@ eventEmitter.on(Messages.GAME_END_LOSS, () => {
 ```
 
 **Čo sa tu deje:**
-- **Laser zasiahne nepriateľa**: Obaja zmiznú, získate body a skontrolujeme, či ste vyhrali
-- **Nepriateľ zasiahne vás**: Stratíte život a skontrolujeme, či ste stále nažive
-- **Inteligentné poradie**: Najprv kontrolujeme porážku (nikto nechce vyhrať a zároveň prehrať!)
-- **Okamžité reakcie**: Hneď ako sa stane niečo dôležité, hra o tom vie
+- **Lasér zasiahne nepriateľa**: Obaja zmiznú, získate body a kontrolujeme, či ste vyhrali
+- **Nepriateľ zasiahne vás**: Stratíte život a kontrolujeme, či ešte žijete
+- **Šikovné poradie**: Najprv kontrolujeme prehru (nikto nechce vyhrať a prehrať naraz!)
+- **Okamžité reakcie**: Hra vie hneď o všetkom dôležitom, čo sa stane
 
-### Krok 3: Pridanie nových konštánt správ
+### Krok 3: Pridajte nové konštanty správ
 
-Budete musieť pridať nové typy správ do vášho objektu `Messages`. Tieto konštanty pomáhajú udržiavať konzistenciu a predchádzať preklepom vo vašom udalosťovom systéme.
+Do svojho objektu `Messages` pridáte nové typy správ, ktoré pomáhajú zabezpečiť konzistenciu a zabraňujú preklepom v event systéme.
 
 ```javascript
 GAME_END_LOSS: "GAME_END_LOSS",
 GAME_END_WIN: "GAME_END_WIN",
 ```
 
-**V uvedenom sme:**
-- **Pridali** konštanty pre udalosti ukončenia hry na udržanie konzistencie
-- **Použili** popisné názvy, ktoré jasne naznačujú účel udalosti
-- **Dodržali** existujúcu konvenciu pomenovania typov správ
+**Čo sme urobili:**
+- **Pridali** konštanty pre udalosti konca hry, aby sme zachovali konzistenciu
+- **Použili** popisné názvy, ktoré jasne vyjadrujú účel udalosti
+- **Dodržali** existujúce pomenovanie typov správ
 
-### Krok 4: Implementácia ovládania reštartu
+### Krok 4: Implementujte ovládanie reštartu
 
-Teraz pridáte ovládanie klávesnice, ktoré umožní hráčom reštartovať hru. Kláves Enter je prirodzenou voľbou, pretože sa bežne spája s potvrdením akcií a začiatkom nových hier.
+Teraz pridáte klávesové ovládanie, ktoré umožní hráčom reštartovať hru. Kláves Enter je prirodzená voľba, pretože sa často používa na potvrdenie akcií a začatie nových hier.
 
-**Pridajte detekciu klávesy Enter do existujúceho poslucháča udalostí keydown:**
+**Pridajte detekciu stlačenia Enter do existujúceho event listenera pre keydown:**
 
 ```javascript
 else if(evt.key === "Enter") {
@@ -181,14 +343,14 @@ KEY_EVENT_ENTER: "KEY_EVENT_ENTER",
 ```
 
 **Čo potrebujete vedieť:**
-- **Rozširuje** váš existujúci systém obsluhy udalostí klávesnice
-- **Používa** kláves Enter ako spúšťač reštartu pre intuitívny používateľský zážitok
-- **Vysiela** vlastnú udalosť, ktorú môžu počúvať iné časti vašej hry
-- **Udržuje** rovnaký vzor ako vaše ostatné ovládanie klávesnice
+- **Rozširuje** existujúci systém spracovania klávesových udalostí
+- **Používa** kláves Enter ako spúšťač reštartu pre intuitívnu používateľskú skúsenosť
+- **Vysiela** vlastnú udalosť, na ktorú môžu ostatné časti hry reagovať
+- **Dodržuje** rovnaký vzor ako ostatné klávesové ovládacie prvky
 
-### Krok 5: Vytvorenie systému zobrazovania správ
+### Krok 5: Vytvorte systém zobrazovania správ
 
-Vaša hra potrebuje jasne komunikovať výsledky hráčom. Vytvoríme systém správ, ktorý zobrazuje stavy víťazstva a prehry pomocou farebne odlíšeného textu, podobne ako terminálové rozhrania starých počítačových systémov, kde zelená znamenala úspech a červená signalizovala chyby.
+Vaša hra potrebuje jasne komunikovať výsledky hráčom. Vytvoríme systém správ, ktorý zobrazuje stavy výhry a prehry farebným textom, podobne ako terminály starých počítačov, kde zelená znamenala úspech a červená chyby.
 
 **Vytvorte funkciu `displayMessage()`:**
 
@@ -201,12 +363,12 @@ function displayMessage(message, color = "red") {
 }
 ```
 
-**Krok za krokom, čo sa deje:**
-- **Nastavuje** veľkosť a typ písma pre jasný, čitateľný text
-- **Používa** parameter farby s predvolenou hodnotou "červená" pre varovania
-- **Centrovanie** textu horizontálne a vertikálne na plátne
-- **Využíva** moderné predvolené parametre JavaScriptu pre flexibilné možnosti farieb
-- **Používa** kontext 2D plátna na priame vykreslenie textu
+**Postupne toto robíme:**
+- **Nastavuje** veľkosť a font písma pre čitateľný text
+- **Používa** parameter farby, pričom predvolená je červená pre varovania
+- **Centruje** text horizontálne aj vertikálne na plátne
+- **Využíva** moderné predvolené parametre JavaScriptu pre flexibilitu farieb
+- **Používa** 2D kontext canvasu na priame vykreslenie textu
 
 **Vytvorte funkciu `endGame()`:**
 
@@ -214,7 +376,7 @@ function displayMessage(message, color = "red") {
 function endGame(win) {
   clearInterval(gameLoopId);
 
-  // Set a delay to ensure any pending renders complete
+  // Nastavte oneskorenie, aby sa zabezpečilo dokončenie všetkých čakajúcich vykreslení
   setTimeout(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -234,16 +396,32 @@ function endGame(win) {
 ```
 
 **Čo táto funkcia robí:**
-- **Zmrazí** všetko na mieste - žiadne ďalšie pohyby lodí alebo laserov
-- **Urobí** malú pauzu (200 ms), aby sa posledný snímok dokončil
-- **Vyčistí** obrazovku a zafarbí ju na čierno pre dramatický efekt
-- **Zobrazí** rôzne správy pre víťazov a porazených
-- **Farebne odlíši** správy - zelená pre dobré, červená pre... no, nie tak dobré
-- **Informuje** hráčov, ako sa môžu vrátiť do hry
+- **Zamŕza** všetko na mieste – žiadne ďalšie pohyby lodí alebo lasery
+- **Robí** krátku pauzu (200 ms), aby posledný frame stihol vykresliť
+- **Vyčistí** obrazovku a namaľuje ju čiernou pre dramatický efekt
+- **Ukazuje** rôzne správy pre víťazov a porazených
+- **Farebne rozlišuje** výsledky – zelená pre dobré, červená pre... nie tak dobré
+- **Povie** hráčom, ako sa hneď vrátiť do hry
 
-### Krok 6: Implementácia funkcie resetovania hry
+### 🔄 **Pedagogická kontrola**
+**Správa herného stavu**: Pred implementáciou resetu si overte, či rozumiete:
+- ✅ Ako koncové podmienky vytvárajú jasné herné ciele
+- ✅ Prečo je vizuálna spätná väzba dôležitá pre pochopenie hráča
+- ✅ Význam správneho vyčistenia pri predchádzaní únikom pamäte
+- ✅ Ako event-driven architektúra umožňuje čisté prechody stavov
 
-Systém resetovania musí úplne vyčistiť aktuálny stav hry a inicializovať novú hernú reláciu. To zaručí, že hráči začnú odznova bez akýchkoľvek zvyškových údajov z predchádzajúcej hry.
+**Krátky seba-test**: Čo by sa stalo, keby ste neodstránili event listenery počas resetu?
+*Odpoveď: Úniky pamäte a duplikované event handlery spôsobujú nepredvídateľné správanie*
+
+**Zásady dizajnu hier**: Práve implementujete:
+- **Jasné ciele**: Hráči presne vedia, čo znamená výhra a prehra
+- **Okamžitú spätnú väzbu**: Zmeny herného stavu sú okamžite komunikované
+- **Kontrolu používateľa**: Hráči môžu reštartovať, keď sú pripravení
+- **Spoľahlivosť systému**: Správne vyčistenie zabraňuje chybám a problémom s výkonom
+
+### Krok 6: Implementujte funkciu resetu hry
+
+Systém resetu musí úplne vyčistiť aktuálny stav hry a inicializovať novú hernú reláciu. To zabezpečí, že hráči získajú čistý štart bez zvyšných dát z predchádzajúcej hry.
 
 **Vytvorte funkciu `resetGame()`:**
 
@@ -266,15 +444,15 @@ function resetGame() {
 }
 ```
 
-**Pochopme jednotlivé časti:**
-- **Kontroluje**, či aktuálne beží herná slučka pred resetovaním
-- **Vyčistí** existujúcu hernú slučku, aby zastavila všetku aktuálnu hernú aktivitu
-- **Odstráni** všetky poslucháče udalostí, aby sa zabránilo úniku pamäte
-- **Reinicializuje** stav hry s novými objektmi a premennými
-- **Spustí** novú hernú slučku so všetkými základnými hernými funkciami
-- **Udržuje** rovnaký interval 100 ms pre konzistentný výkon hry
+**Rozoberme každý krok:**
+- **Kontroluje**, či momentálne beží herný cyklus pred resetom
+- **Zastavuje** existujúci herný cyklus, aby sa zablokovala aktuálna aktivita
+- **Odstraňuje** všetky event listenery, aby sa zabránilo únikom pamäte
+- **Znova inicializuje** herný stav s novými objektmi a premennými
+- **Spúšťa** nový herný cyklus so všetkými nevyhnutnými funkciami
+- **Udržiava** rovnaký 100ms interval pre konzistentný výkon hry
 
-**Pridajte obsluhu udalosti klávesy Enter do vašej funkcie `initGame()`:**
+**Pridajte event handler pre Enter key do funkcie `initGame()`:**
 
 ```javascript
 eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
@@ -282,7 +460,7 @@ eventEmitter.on(Messages.KEY_EVENT_ENTER, () => {
 });
 ```
 
-**Pridajte metódu `clear()` do vašej triedy EventEmitter:**
+**Pridajte metódu `clear()` do triedy EventEmitter:**
 
 ```javascript
 clear() {
@@ -290,79 +468,217 @@ clear() {
 }
 ```
 
-**Kľúčové body na zapamätanie:**
-- **Spojí** stlačenie klávesy Enter s funkciou resetovania hry
-- **Registruje** tento poslucháč udalostí počas inicializácie hry
-- **Poskytuje** čistý spôsob odstránenia všetkých poslucháčov udalostí pri resetovaní
-- **Zabraňuje** úniku pamäte vymazaním obsluhy udalostí medzi hrami
-- **Resetuje** objekt poslucháčov na prázdny stav pre novú inicializáciu
+**Dôležité body na zapamätanie:**
+- **Prepojuje** stlačenie klávesu Enter so spustením resetu hry
+- **Registruje** tento event listener počas inicializácie hry
+- **Poskytuje** čistý spôsob odstránenia všetkých event listenerov pri reštarte
+- **Predchádza** únikom pamäte vyčistením handlerov medzi hrami
+- **Resetuje** objekt `listeners` do prázdneho stavu pre čistú inicializáciu
 
 ## Gratulujeme! 🎉
 
-👽 💥 🚀 Úspešne ste vytvorili kompletnú hru od základov. Rovnako ako programátori, ktorí vytvorili prvé videohry v 70. rokoch, ste premenili riadky kódu na interaktívny zážitok s riadnymi hernými mechanizmami a spätnou väzbou pre používateľa. 🚀 💥 👽
+👽 💥 🚀 Úspešne ste postavili kompletnú hru od základov. Rovnako ako programátori, ktorí vytvorili prvé videohry v 70. rokoch, zmenili ste riadky kódu na interaktívny zážitok so správnou hernou mechanikou a spätou väzbou pre používateľa. 🚀 💥 👽
 
 **Dosiahli ste:**
-- **Implementovali** kompletné podmienky víťazstva a prehry s používateľskou spätnou väzbou
-- **Vytvorili** plynulý systém reštartu pre nepretržitú hrateľnosť
-- **Navrhli** jasnú vizuálnu komunikáciu pre herné stavy
-- **Spravovali** zložité prechody stavov hry a ich vyčistenie
-- **Zostavili** všetky komponenty do súdržnej, hrateľnej hry
+- **Implementovali** kompletné podmienky víťazstva a prehry so spätnou väzbou pre hráča
+- **Vytvorili** plynulý systém reštartu pre kontinuálnu hrateľnosť
+- **Navrhli** jasnú vizuálnu komunikáciu herných stavov
+- **Spravovali** komplexné prechody a čistenie herného stavu
+- **Zložili** všetky komponenty do koherentnej, hrateľnej hry
 
-## Výzva GitHub Copilot Agent 🚀
+### 🔄 **Pedagogická kontrola**
+**Kompletný systém vývoja hry**: Oslávte svoje ovládnutie kompletného cyklu vývoja hry:
+- ✅ Ako koncové podmienky vytvárajú uspokojivé zážitky pre hráča?
+- ✅ Prečo je správna správa stavu kľúčová pre stabilitu hry?
+- ✅ Ako vizuálna spätná väzba zlepšuje pochopenie hráča?
+- ✅ Akú úlohu zohráva systém reštartu v udržaní hráčov?
 
-Použite režim Agent na splnenie nasledujúcej výzvy:
+**Ovládnutie systému**: Vaša kompletná hra demonštruje:
+- **Full-Stack vývoj hier**: Od grafiky cez vstupy po správu stavu
+- **Profesionálnu architektúru**: Event-driven systémy so správnym vyčistením
+- **Dizajn používateľského zážitku**: Jasná spätná väzba a intuitívne ovládanie
+- **Optimalizáciu výkonu**: Efektívne vykresľovanie a správa pamäte
+- **Úpravu a dokončenie**: Všetky detaily, ktoré robia hru komplexnou
 
-**Popis:** Vylepšite vesmírnu hru implementáciou systému postupu úrovní so zvyšujúcou sa obtiažnosťou a bonusovými funkciami.
+**Zručnosti pripravené pre priemysel**: Implementovali ste:
+- **Hernú slučku**: Systémy v reálnom čase s konzistentným výkonom
+- **Programovanie na báze udalostí**: Oddelené systémy, ktoré dobre škálujú
+- **Správu stavu**: Správa komplexných dát a životného cyklu
+- **Dizajn UI**: Jasná komunikácia a responzívne ovládanie
+- **Testovanie a ladenie**: Iteratívny vývoj a riešenie problémov
 
-**Výzva:** Vytvorte systém viacúrovňovej vesmírnej hry, kde každá úroveň má viac nepriateľských lodí so zvýšenou rýchlosťou a zdravím. Pridajte násobič skóre, ktorý sa zvyšuje s každou úrovňou, a implementujte vylepšenia (ako rýchle streľby alebo štít), ktoré sa náhodne objavia, keď sú nepriatelia zničení. Zahrňte bonus za dokončenie úrovne a zobrazte aktuálnu úroveň na obrazovke spolu s existujúcim skóre a životmi.
+### ⚡ **Čo môžete urobiť v nasledujúcich 5 minútach**
+- [ ] Zahrajte si kompletnú hru a otestujte všetky podmienky výhry a prehry
+- [ ] Experimentujte s rôznymi parametrami koncových podmienok
+- [ ] Skúste pridať console.log pre sledovanie zmien stavu hry
+- [ ] Podeľte sa o hru s priateľmi a získajte spätnú väzbu
 
-Viac informácií o [režime agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) nájdete tu.
+### 🎯 **Čo môžete dosiahnuť v tejto hodine**
+- [ ] Dokončiť post-lekčný kvíz a reflektovať svoju cestu vývoja hry
+- [ ] Pridať zvukové efekty pre stavy výhry a prehry
+- [ ] Implementovať ďalšie koncové podmienky ako časové limity alebo bonusové ciele
+- [ ] Vytvoriť rôzne úrovne obtiažnosti s rôznym počtom nepriateľov
+- [ ] Vylepšiť vizuálne spracovanie lepšími fontami a farbami
+
+### 📅 **Vaše týždňové majstrovstvo vo vývoji hier**
+- [ ] Dokončiť rozšírenú vesmírnu hru s viacerými úrovňami a progresiou
+- [ ] Pridať pokročilé funkcie ako power-upy, rôzne typy nepriateľov a špeciálne zbrane
+- [ ] Vytvoriť systém vysokých skóre s perzistentným ukladacím priestorom
+- [ ] Navrhnúť používateľské rozhranie pre menu, nastavenia a herné voľby
+- [ ] Optimalizovať výkon pre rôzne zariadenia a prehliadače
+- [ ] Nasadiť hru online a zdieľať ju s komunitou
+### 🌟 **Tvoja mesačná kariéra v tvorbe hier**
+- [ ] Vytvoriť niekoľko kompletných hier skúmajúcich rôzne žánre a mechaniky
+- [ ] Naučiť sa pokročilé herné vývojové rámce ako Phaser alebo Three.js
+- [ ] Prispievať do open source projektov na tvorbu hier
+- [ ] Študovať herné dizajnové princípy a psychológiu hráčov
+- [ ] Vytvoriť portfólio prezentujúce tvoje schopnosti v tvorbe hier
+- [ ] Spojiť sa s komunitou vývojárov hier a pokračovať v učení
+
+## 🎯 Tvoj kompletný časový plán na ovládnutie tvorby hier
+
+```mermaid
+timeline
+    title Kompletný postup učenia vývoja hier
+    
+    section Základy (Lekcie 1-2)
+        Architektúra hry: Štruktúra projektu
+                         : Správa aktív
+                         : Základy plátna
+                         : Systémy udalostí
+        
+    section Interakčné systémy (Lekcie 3-4)
+        Ovládanie hráča: Spracovanie vstupov
+                      : Mechanika pohybu
+                      : Detekcia kolízií
+                      : Simulácia fyziky
+        
+    section Herné mechaniky (Lekcia 5)
+        Systémy odozvy: Mechanizmy bodovania
+                        : Správa životov
+                        : Vizualná komunikácia
+                        : Motivácia hráča
+        
+    section Dokončenie hry (Lekcia 6)
+        Dokončovanie a tok: Podmienky ukončenia
+                     : Správa stavov
+                     : Systémy reštartovania
+                     : Užívateľská skúsenosť
+        
+    section Pokročilé funkcie (1 týždeň)
+        Zlepšovacie zručnosti: Integrácia zvuku
+                          : Vizualne efekty
+                          : Postup úrovní
+                          : Optimalizácia výkonu
+        
+    section Profesionálny rozvoj (1 mesiac)
+        Pripravenosť na priemysel: Ovládanie rámcov
+                          : Tímová spolupráca
+                          : Vývoj portfólia
+                          : Zapojenie komunity
+        
+    section Kariérny postup (3 mesiace)
+        Špecializácia: Pokročilé herné enginy
+                      : Nasadenie na platformy
+                      : Monetizačné stratégie
+                      : Networking v priemysle
+```
+### 🛠️ Zhrnutie tvojho kompletného súpravy nástrojov na tvorbu hier
+
+Po dokončení celej tejto série vesmírnych hier si teraz ovládol:
+- **Architektúru hier**: Systémy riadené udalosťami, herné slučky a manažment stavov
+- **Grafické programovanie**: Canvas API, vykresľovanie spriteov a vizuálne efekty
+- **Vstupné systémy**: Ovládanie klávesnice, detekcia kolízií a responzívne ovládanie
+- **Herný dizajn**: Spätná väzba pre hráča, systémy progresie a zapájanie mechaník
+- **Optimalizáciu výkonu**: Efektívne vykresľovanie, správa pamäte a kontrola obnovovacej frekvencie
+- **Používateľskú skúsenosť**: Jasná komunikácia, intuitívne ovládanie a detailné vybrušovanie
+- **Profesionálne vzory**: Čistý kód, techniky ladenia a organizácia projektu
+
+**Reálne využitie**: Tvoje schopnosti tvorby hier sa dajú priamo aplikovať na:
+- **Interaktívne webové aplikácie**: Dynamické rozhrania a systémy v reálnom čase
+- **Vizualizáciu dát**: Animované grafy a interaktívna grafika
+- **Vzdelávaciu technológiu**: Gamifikácia a pútavé vzdelávacie zážitky
+- **Mobilný vývoj**: Interakcie založené na dotykovom ovládaní a optimalizácia výkonu
+- **Simulačný softvér**: Fyzikálne engine a modelovanie v reálnom čase
+- **Kreatívne odvetvia**: Interaktívne umenie, zábava a digitálne zážitky
+
+**Získané profesionálne zručnosti**: Teraz dokážeš:
+- **Navrhovať architektúru** komplexných interaktívnych systémov od základov
+- **Ladiť** aplikácie bežiace v reálnom čase pomocou systematických prístupov
+- **Optimalizovať** výkon pre plynulé používateľské zážitky
+- **Dizajnovať** pútavé používateľské rozhrania a interakčné vzory
+- **Spolupracovať** efektívne na technických projektoch s dobrou organizáciou kódu
+
+**Ovládnuté koncepty tvorby hier**:
+- **Systémy v reálnom čase**: Herné slučky, riadenie obnovovacej frekvencie a výkon
+- **Architektúra riadená udalosťami**: Oddelené systémy a posielanie správ
+- **Manažment stavov**: Komplexná správa dát a životného cyklu
+- **Programovanie používateľského rozhrania**: Canvas grafika a responzívny dizajn
+- **Teória herného dizajnu**: Psychológia hráča a mechaniky zapájania
+
+**Ďalší level**: Si pripravený preskúmať pokročilé herné rámce, 3D grafiku, multiplayer systémy alebo prejsť do profesionálnych rolí vo vývoji hier!
+
+🌟 **Úspech dosiahnutý**: Dokončil si kompletnú cestu tvorbou hier a vytvoril profesionálne kvalitný interaktívny zážitok od základov!
+
+**Vitaj v komunite tvorcov hier!** 🎮✨
+
+## GitHub Copilot Agent Challenge 🚀
+
+Použi režim Agenta na dokončenie nasledujúcej výzvy:
+
+**Popis:** Vylepši vesmírnu hru implementáciou systému postupovania úrovní so zvyšujúcou sa ťažkosťou a bonusovými prvkami.
+
+**Výzva:** Vytvor viacúrovňový vesmírny herný systém, kde každá úroveň má viac nepriateľských lodí s vyššou rýchlosťou a zdravím. Pridaj násobiteľ skóre, ktorý sa zvyšuje s každou úrovňou, a implementuj power-upy (ako rýchla paľba alebo štít), ktoré sa náhodne objavujú po zničení nepriateľov. Zahrň bonus za dokončenie úrovne a zobraz aktuálnu úroveň na obrazovke spolu s existujúcim skóre a životmi.
+
+Viac informácií o [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) nájdeš tu.
 
 ## 🚀 Voliteľná výzva na vylepšenie
 
-**Pridajte zvuk do vašej hry**: Vylepšite zážitok z hry implementáciou zvukových efektov! Zvážte pridanie zvuku pre:
+**Pridaj zvuk do svojej hry**: Vylepši svoj herný zážitok implementáciou zvukových efektov! Zváž pridanie zvukov pre:
 
-- **Výstrely laseru**, keď hráč strieľa
+- **Laserové strely**, keď hráč strieľa
 - **Zničenie nepriateľa**, keď sú lode zasiahnuté
 - **Poškodenie hrdinu**, keď hráč utrpí zásah
-- **Víťaznú hudbu**, keď je hra vyhraná
-- **Zvuk porážky**, keď je hra prehraná
+- **Hudbu víťazstva**, keď sa vyhrá hra
+- **Zvuk prehry**, keď sa hra prehrá
 
 **Príklad implementácie zvuku:**
 
 ```javascript
-// Create audio objects
+// Vytvorte zvukové objekty
 const laserSound = new Audio('assets/laser.wav');
 const explosionSound = new Audio('assets/explosion.wav');
 
-// Play sounds during game events
+// Prehrávajte zvuky počas herných udalostí
 function playLaserSound() {
-  laserSound.currentTime = 0; // Reset to beginning
+  laserSound.currentTime = 0; // Obnoviť na začiatok
   laserSound.play();
 }
 ```
 
-**Čo potrebujete vedieť:**
-- **Vytvára** objekty Audio pre rôzne zvukové efekty
-- **Resetuje** `currentTime`, aby umožnil rýchle prehrávanie zvukových efektov
-- **Rieši** pravidlá automatického prehrávania prehliadača spustením zvukov z interakcií používateľa
-- **Spravuje** hlasitosť a načasovanie zvukov pre lepší herný zážitok
+**Čo potrebuješ vedieť:**
+- **Vytvára** Audio objekty pre rôzne zvukové efekty
+- **Resetuje** `currentTime` pre umožnenie rýchlej paľby zvukových efektov
+- **Rieši** prehliadačové pravidlá automatického prehrávania spustením zvukov z používateľských interakcií
+- **Riadi** hlasitosť a časovanie zvuku pre lepší herný zážitok
 
-> 💡 **Zdroj na učenie**: Preskúmajte tento [audio sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play), aby ste sa dozvedeli viac o implementácii zvuku v JavaScriptových hrách.
+> 💡 **Vzdelávací zdroj**: Preskúmaj tento [audio sandbox](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_audio_play) a nauč sa viac o implementácii zvuku v JavaScript hrách.
 
 ## Kvíz po prednáške
 
-[Po prednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/40)
+[Kvíz po prednáške](https://ff-quizzes.netlify.app/web/quiz/40)
 
-## Prehľad a samostatné štúdium
+## Revízia & samostatné štúdium
 
-Vašou úlohou je vytvoriť nový vzorový projekt hry, preto preskúmajte niektoré zaujímavé hry, aby ste zistili, aký typ hry by ste mohli vytvoriť.
+Tvojim zadaním je vytvoriť novú ukážkovú hru, preto si prezri niektoré zaujímavé hry, aby si zistil, aký typ hry by si mohol vytvoriť.
 
-## Úloha
+## Zadanie
 
-[Vytvorte vzorovú hru](assignment.md)
+[Vytvor ukážkovú hru](assignment.md)
 
 ---
 
-**Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, uvedomte si, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Upozornenie**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa usilujeme o presnosť, berte prosím na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nepochopenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

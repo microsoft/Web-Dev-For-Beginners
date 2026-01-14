@@ -112,7 +112,7 @@ Se [server-API-dokumentationen](../api/README.md) for:
 **Forventet resultat:**
 Efter at have fuldført denne opgave, bør din bankapp have en fuldt funktionel "Tilføj Transaktion"-funktion, der ser professionel ud og fungerer perfekt:
 
-![Skærmbillede, der viser et eksempel på "Tilføj transaktion"-dialog](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.da.png)
+![Skærmbillede, der viser et eksempel på "Tilføj transaktion"-dialog](../../../../translated_images/dialog.93bba104afeb79f1.da.png)
 
 ## Test af din implementering
 

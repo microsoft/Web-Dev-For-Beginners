@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Johdatus CSS:ään](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.fi.png)
+![Johdatus CSS:ään](../../../../translated_images/webdev101-css.3f7af5991bf53a20.fi.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Muistatko, kuinka HTML-terrariumisi näytti melko yksinkertaiselta? CSS:n avulla voimme muuttaa tuon pelkistetyn rakenteen visuaalisesti houkuttelevaksi.
@@ -205,7 +205,7 @@ body {
 
 Avaa selaimesi kehitystyökalut (F12), siirry Elements-välilehteen ja tarkista `<h1>`-elementtisi. Näet, että se perii fonttiperheen body-elementiltä:
 
-![peritty fontti](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.fi.png)
+![peritty fontti](../../../../translated_images/1.cc07a5cbe114ad1d.fi.png)
 
 ✅ **Kokeilua**: Kokeile asettaa muita periytyviä ominaisuuksia `<body>`-elementille, kuten `color`, `line-height` tai `text-align`. Mitä tapahtuu otsikolle ja muille elementeille?
 
@@ -592,7 +592,7 @@ Valmis parantamaan terrariumiasi realistisilla lasin heijastuksilla? Tämä tekn
 
 Luot hienovaraisia korostuksia, jotka simuloivat, miten valo heijastuu lasipinnoilta. Tämä lähestymistapa on samanlainen kuin miten renessanssimaalari Jan van Eyck käytti valoa ja heijastusta saadakseen maalatun lasin näyttämään kolmiulotteiselta. Tässä on tavoitteenasi:
 
-![valmis terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.fi.png)
+![valmis terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.fi.png)
 
 **Haasteesi:**
 - **Luo** hienovaraisia valkoisia tai vaaleanvärisiä soikeita muotoja lasin heijastuksille

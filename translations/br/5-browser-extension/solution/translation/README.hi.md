@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Usando a API CO2 Signal da tmrow para rastrear o uso de eletricidade, esta extensão de navegador foi criada para lembrar você sobre o impacto do uso de energia na sua região enquanto navega. Utilizar esta extensão pode ajudá-lo a tomar decisões informadas com base nessas informações.
 
-![Captura de tela da extensão](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.br.png)
+![Captura de tela da extensão](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.br.png)
 
 ## Começando
 
@@ -31,7 +31,7 @@ npm run build
 
 Para instalar no Edge, use o menu de 'três pontos' no canto superior direito do navegador para encontrar o painel de extensões. A partir daí, selecione 'Carregar sem empacotar' para carregar uma nova extensão. No prompt, abra a pasta 'dist' e a extensão será carregada. Para utilizá-la, você precisará de uma chave de API do CO2 Signal ([obtenha por e-mail aqui](https://www.co2signal.com/) - insira seu e-mail na caixa desta página) e [o código da sua região](http://api.electricitymap.org/v3/zones) no [Electricity Map](https://www.electricitymap.org/map) (por exemplo, em Boston, eu uso 'US-NEISO').
 
-![instalando](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.br.png)
+![instalando](../../../../../translated_images/install-on-edge.78634f02842c4828.br.png)
 
 Depois que a chave de API e o código da região forem inseridos na interface da extensão, o ponto colorido na barra de extensões do navegador deve mudar para refletir o uso de energia na sua região e fornecer um indicador sobre quais atividades intensivas em energia são mais adequadas para o momento. O conceito por trás deste sistema de 'ponto' foi inspirado pela extensão [Energy Lollipop](https://energylollipop.com/) para emissões na Califórnia.
 

@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![la griglia del canvas](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.it.png)
+![la griglia del canvas](../../../../translated_images/canvas_grid.5f209da785ded492.it.png)
 > Immagine da [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Per disegnare sull'elemento canvas, seguirai lo stesso processo in tre fasi che forma la base di tutta la grafica del canvas. Una volta fatto alcune volte, diventa naturale:
@@ -329,11 +329,11 @@ Creerai una pagina web con un elemento Canvas. Dovrebbe rendere uno schermo nero
 
 - Nave eroica
 
-   ![Nave eroica](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.it.png)
+   ![Nave eroica](../../../../translated_images/player.dd24c1afa8c71e9b.it.png)
 
 - 5*5 mostri
 
-   ![Nave mostro](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.it.png)
+   ![Nave mostro](../../../../translated_images/enemyShip.5df2a822c16650c2.it.png)
 
 ### Passaggi Consigliati per Iniziare lo Sviluppo
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Il risultato finale dovrebbe apparire così:  
 
-![Schermo nero con un eroe e 5*5 mostri](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.it.png)  
+![Schermo nero con un eroe e 5*5 mostri](../../../../translated_images/partI-solution.36c53b48c9ffae2a.it.png)  
 
 ## Soluzione  
 

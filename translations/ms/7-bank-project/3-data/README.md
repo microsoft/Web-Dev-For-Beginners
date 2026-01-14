@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Aliran kerja kemas kini dalam aplikasi berbilang halaman](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.ms.png)
+![Aliran kerja kemas kini dalam aplikasi berbilang halaman](../../../../translated_images/mpa.7f7375a1a2d4aa77.ms.png)
 
 **Kenapa pendekatan ini terasa tidak lancar:**
 - Setiap klik bermaksud membina semula keseluruhan halaman dari awal
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Aliran kerja kemas kini dalam aplikasi halaman tunggal](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.ms.png)
+![Aliran kerja kemas kini dalam aplikasi halaman tunggal](../../../../translated_images/spa.268ec73b41f992c2.ms.png)
 
 **Kenapa SPA terasa lebih baik:**
 - Hanya bahagian yang benar-benar berubah dikemas kini (bijak, bukan?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Sekarang apabila anda menguji dengan akaun yang tidak sah, anda akan melihat mesej kesalahan yang berguna terus di halaman!
 
-![Tangkapan skrin menunjukkan mesej kesalahan yang dipaparkan semasa log masuk](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.ms.png)
+![Tangkapan skrin menunjukkan mesej kesalahan yang dipaparkan semasa log masuk](../../../../translated_images/login-error.416fe019b36a6327.ms.png)
 
 #### Langkah 4: Menjadi Inklusif dengan Kebolehaksesan
 
@@ -961,7 +961,7 @@ Bersedia untuk membawa aplikasi perbankan anda ke tahap seterusnya? Mari jadikan
 
 Berikut adalah contoh bagaimana papan pemuka yang digilap boleh kelihatan:
 
-![Tangkapan skrin hasil contoh papan pemuka selepas gaya](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.ms.png)
+![Tangkapan skrin hasil contoh papan pemuka selepas gaya](../../../../translated_images/screen2.123c82a831a1d14a.ms.png)
 
 Jangan rasa seperti anda perlu meniru ini sepenuhnya - gunakan ia sebagai inspirasi dan jadikan ia milik anda!
 

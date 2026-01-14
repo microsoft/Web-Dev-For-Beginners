@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Fluxo de atualização em um aplicativo de múltiplas páginas](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.br.png)
+![Fluxo de atualização em um aplicativo de múltiplas páginas](../../../../translated_images/mpa.7f7375a1a2d4aa77.br.png)
 
 **Por que essa abordagem parecia desajeitada:**
 - Cada clique significava reconstruir a página inteira do zero
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Fluxo de atualização em um aplicativo de página única](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.br.png)
+![Fluxo de atualização em um aplicativo de página única](../../../../translated_images/spa.268ec73b41f992c2.br.png)
 
 **Por que os SPAs são muito melhores:**
 - Apenas as partes que realmente mudaram são atualizadas (inteligente, né?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Agora, ao testar com uma conta inválida, você verá uma mensagem de erro útil diretamente na página!
 
-![Captura de tela mostrando a mensagem de erro exibida durante o login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.br.png)
+![Captura de tela mostrando a mensagem de erro exibida durante o login](../../../../translated_images/login-error.416fe019b36a6327.br.png)
 
 #### Passo 4: Sendo Inclusivo com Acessibilidade
 
@@ -961,7 +961,7 @@ Pronto para levar seu aplicativo bancário para o próximo nível? Vamos fazer c
 
 Aqui está como um dashboard polido poderia parecer:
 
-![Captura de tela de um exemplo de resultado do dashboard após a estilização](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.br.png)
+![Captura de tela de um exemplo de resultado do dashboard após a estilização](../../../../translated_images/screen2.123c82a831a1d14a.br.png)
 
 Não sinta que precisa seguir exatamente este modelo - use-o como inspiração e crie algo único!
 

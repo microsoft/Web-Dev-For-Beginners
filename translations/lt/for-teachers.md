@@ -42,10 +42,10 @@ Patarimas: Venkite saugyklų laikymo sinchronizuotuose aplankuose (pvz., OneDriv
   - Moodle Cloud turi ribotą Common Cartridge palaikymą. Geriau naudoti aukščiau pateiktą Moodle failą, kurį taip pat galima įkelti į Canvas.
   - Po importavimo peržiūrėkite modulius, terminų datas ir testų nustatymus, kad jie atitiktų jūsų semestro tvarkaraštį.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.lt.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.lt.png)
 > Mokymo programa Moodle klasėje
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.lt.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.lt.png)
 > Mokymo programa Canvas platformoje
 
 ### Naudojimas tiesiogiai iš repo (be Classroom)

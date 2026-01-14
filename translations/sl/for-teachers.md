@@ -42,10 +42,10 @@ Ta učni načrt vključuje uvozne pakete za običajne LMS delovne tokove.
   - Moodle Cloud ima omejeno podporo za Common Cartridge. Raje uporabite zgornjo datoteko Moodle, ki jo lahko naložite tudi v Canvas.
   - Po uvozu pregledajte module, roke in nastavitve kvizov, da se ujemajo z vašim urnikom semestra.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.sl.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.sl.png)
 > Učni načrt v učilnici Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.sl.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.sl.png)
 > Učni načrt v Canvas
 
 ### Neposredna uporaba repozitorija (brez Classroom)

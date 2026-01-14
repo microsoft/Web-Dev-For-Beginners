@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Xây dựng một tiện ích mở rộng trình duyệt để hiển thị lời nhắc trên trình duyệt về mức độ sử dụng điện trong khu vực của bạn, sử dụng API CO2 Signal của tmrow để theo dõi lượng điện tiêu thụ. Bằng cách sử dụng tiện ích mở rộng này, bạn có thể đưa ra quyết định về các hoạt động của mình dựa trên thông tin này.
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.vi.png)
+![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.vi.png)
 
 ## Bắt đầu
 
@@ -31,7 +31,7 @@ npm run build
 
 Để cài đặt trên Edge, hãy tìm bảng điều khiển "Tiện ích mở rộng" từ menu "ba chấm" ở góc trên bên phải của trình duyệt. Từ đó, chọn "Load Unpacked" để tải tiện ích mở rộng mới. Khi được nhắc, mở thư mục "dist" và tiện ích mở rộng sẽ được tải. Để sử dụng, bạn cần một API key của CO2 Signal ([lấy tại đây qua email](https://www.co2signal.com/) - nhập email của bạn vào ô trên trang này) và [mã khu vực tương ứng](http://api.electricitymap.org/v3/zones) từ [Electricity Map](https://www.electricitymap.org/map) (ví dụ, ở Boston, sử dụng 'US-NEISO').
 
-![installing](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.vi.png)
+![installing](../../../../../translated_images/install-on-edge.78634f02842c4828.vi.png)
 
 Sau khi nhập API key và khu vực vào giao diện tiện ích, một chấm màu sẽ xuất hiện trên thanh tiện ích mở rộng của trình duyệt, thay đổi màu sắc để phản ánh mức độ sử dụng năng lượng trong khu vực của bạn. Điều này giúp bạn biết khi nào là thời điểm thích hợp để thực hiện các hoạt động cần nhiều năng lượng. Ý tưởng về hệ thống "chấm màu" này được lấy cảm hứng từ [Energy Lollipop extension](https://energylollipop.com/) dành cho lượng phát thải ở California.
 

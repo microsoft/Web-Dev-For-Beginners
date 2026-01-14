@@ -1,0 +1,17 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+  "translation_date": "2026-01-08T14:59:54+00:00",
+  "source_file": "6-space-game/4-collision-detection/solution/README.md",
+  "language_code": "te"
+}
+-->
+ఇది ఒక ప్లేస్‌హోల్డర్, ఉద్దేశపూర్వకంగా ఖాళీగా bırakబడింది
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**అస్పష్టత**:
+ఈ దస్త్రాన్ని AI అనువాద సేవ [Co-op Translator](https://github.com/Azure/co-op-translator) ద్వారా అనువదించారు. మేము ఖచ్చితత్వానికి శ్రద్ధగా ప్రయత్నిస్తున్నప్పటికీ, ఆటోమేటెడ్ అనువాదాలలో పొరపాట్లు లేదా లోపాలు ఉండవచ్చు. అసలు దస్త్రం దాని స్వదేశ భాషలోనే అత్యంత అధికారిక మూలం కాగా పరిగణించాలి. కీలక సమాచారానికి, వృత్తిపరమైన మానవ అనువాదం అవసరం. ఈ అనువాదం వలన కలిగే ఏవైనా అపవిప్రాయాలు లేదా తప్పైన అర్థం కోసం మేము బాధ్యులను కాదు.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

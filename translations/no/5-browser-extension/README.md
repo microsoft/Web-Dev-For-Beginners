@@ -23,7 +23,7 @@ Denne utvidelsen kan kalles ad hoc av en bruker når en API-nøkkel og regionkod
 
 ### Krediteringer
 
-![en grønn nettleserutvidelse](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.no.png)
+![en grønn nettleserutvidelse](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.no.png)
 
 ## Krediteringer
 

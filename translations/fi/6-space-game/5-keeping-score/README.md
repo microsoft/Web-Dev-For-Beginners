@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Pistejärjestelmä**: Jokainen tuhottu vihollisalus antaa 100 pistettä (pyöreät numerot ovat helpompia pelaajien laskea mielessään). Pisteet näytetään vasemmassa alakulmassa.
-- **Elämälaskuri**: Sankarisi aloittaa kolmella elämällä – standardi, jonka varhaiset arcade-pelit asettivat tasapainottamaan haastetta ja pelattavuutta. Jokainen törmäys viholliseen maksaa yhden elämän. Näytämme jäljellä olevat elämät oikeassa alakulmassa aluksen ikoneilla ![elämäkuva](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.fi.png).
+- **Elämälaskuri**: Sankarisi aloittaa kolmella elämällä – standardi, jonka varhaiset arcade-pelit asettivat tasapainottamaan haastetta ja pelattavuutta. Jokainen törmäys viholliseen maksaa yhden elämän. Näytämme jäljellä olevat elämät oikeassa alakulmassa aluksen ikoneilla ![elämäkuva](../../../../translated_images/life.6fb9f50d53ee0413.fi.png).
 
 ## Aloitetaan rakentaminen!
 

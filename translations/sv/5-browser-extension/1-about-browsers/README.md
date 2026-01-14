@@ -1,74 +1,124 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "33a875c522f237a2026e4653240dfc07",
-  "translation_date": "2025-10-23T21:50:38+00:00",
+  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
+  "translation_date": "2026-01-06T22:58:07+00:00",
   "source_file": "5-browser-extension/1-about-browsers/README.md",
   "language_code": "sv"
 }
 -->
-# Webbläsartillägg Projekt Del 1: Allt om Webbläsare
+# Webbläsartilläggsprojekt Del 1: Allt om webbläsare
 
-![Sketchnote av webbläsare](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.sv.jpg)
+```mermaid
+journey
+    title Din webbläsartilläggsutvecklingsresa
+    section Grundläggande
+      Förstå webbläsare: 3: Student
+      Lär dig tilläggstyper: 4: Student
+      Sätt upp utveckling: 4: Student
+    section Utveckling
+      Bygg gränssnitt: 4: Student
+      Lägg till funktionalitet: 5: Student
+      Hantera data: 5: Student
+    section Integration
+      Testa i webbläsare: 5: Student
+      Felsök problem: 4: Student
+      Förbättra upplevelsen: 5: Student
+```
+![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.sv.jpg)
 > Sketchnote av [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
-## Förhandsquiz
+## Förföreläsningsquiz
 
-[Förhandsquiz](https://ff-quizzes.netlify.app/web/quiz/23)
+[Förföreläsningsquiz](https://ff-quizzes.netlify.app/web/quiz/23)
 
 ### Introduktion
 
-Webbläsartillägg är små applikationer som förbättrar din webbläsarupplevelse. Precis som Tim Berners-Lees ursprungliga vision om en interaktiv web, utökar tillägg webbläsarens kapacitet bortom enkel dokumentvisning. Från lösenordshanterare som håller dina konton säkra till färgväljare som hjälper designers att hitta perfekta nyanser, löser tillägg vardagliga utmaningar vid surfning.
+Webbläsartillägg är miniapplikationer som förbättrar din webbupplevelse. Precis som Tim Berners-Lees ursprungliga vision om en interaktiv web, utökar tillägg webbläsarens funktioner bortom enkel dokumentvisning. Från lösenordshanterare som håller dina konton säkra till färgväljare som hjälper designers att hitta perfekta nyanser, löser tillägg vardagliga utmaningar vid webbsurfning.
 
-Innan vi bygger ditt första tillägg, låt oss förstå hur webbläsare fungerar. Precis som Alexander Graham Bell behövde förstå ljudöverföring innan han uppfann telefonen, kommer kunskap om webbläsarens grunder att hjälpa dig att skapa tillägg som integreras smidigt med befintliga webbläsarsystem.
+Innan vi bygger ditt första tillägg, låt oss förstå hur webbläsare fungerar. Precis som Alexander Graham Bell behövde förstå ljudöverföring innan han uppfann telefonen, kommer kunskap om webbläsarens grunder hjälpa dig att skapa tillägg som integreras sömlöst med befintliga webbläsarsystem.
 
-I slutet av denna lektion kommer du att förstå webbläsarens arkitektur och ha påbörjat byggandet av ditt första tillägg.
+I slutet av denna lektion kommer du att förstå webbläsararkitektur och ha påbörjat byggandet av ditt första tillägg.
 
-## Förstå Webbläsare
+```mermaid
+mindmap
+  root((Webbläsararkitektur))
+    Core Components
+      Rendering Engine
+      JavaScript Engine
+      Network Stack
+      Storage APIs
+    User Interface
+      Adressfält
+      Flikhantering
+      Bokmärken
+      Tilläggsikoner
+    Extension System
+      Manifestfiler
+      Innehållsskript
+      Bakgrundssidor
+      Popup-fönster
+    Security Model
+      Samma ursprungsprincip
+      Behörighets-API
+      Innehållssäkerhet
+      Isolerade världar
+    Development Tools
+      DevTools-integration
+      Felsökningskonsol
+      Prestandaövervakare
+      Tilläggsinspektör
+```
+## Förståelse av webbläsare
 
-En webbläsare är i grunden en sofistikerad dokumenttolkare. När du skriver "google.com" i adressfältet utför webbläsaren en komplex serie operationer - begär innehåll från servrar världen över, och tolkar och renderar sedan den koden till de interaktiva webbsidor du ser.
+En webbläsare är i grund och botten en sofistikerad dokumenttolkare. När du skriver "google.com" i adressfältet utför webbläsaren en komplex serie av operationer - begär innehåll från servrar över hela världen, sedan analyserar och renderar den den koden till de interaktiva webbsidor du ser.
 
 Denna process speglar hur den första webbläsaren, WorldWideWeb, designades av Tim Berners-Lee 1990 för att göra hyperlänkade dokument tillgängliga för alla.
 
-✅ **Lite historia**: Den första webbläsaren kallades 'WorldWideWeb' och skapades av Sir Timothy Berners-Lee 1990.
+✅ **Lite historia**: Den första webbläsaren kallades "WorldWideWeb" och skapades av Sir Timothy Berners-Lee 1990.
 
-![tidiga webbläsare](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.sv.jpg)
+![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.sv.jpg)
 > Några tidiga webbläsare, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
-### Hur Webbläsare Bearbetar Webbinnehåll
+### Hur webbläsare bearbetar webbinnehåll
 
-Processen mellan att skriva in en URL och att se en webbsida involverar flera samordnade steg som sker inom några sekunder:
+Processen mellan att skriva in en URL och att se en webbsida involverar flera samordnade steg som sker inom sekunder:
 
 ```mermaid
 sequenceDiagram
     participant User
     participant Browser
+    participant Extension
     participant DNS
     participant Server
     
-    User->>Browser: Types URL and presses Enter
-    Browser->>DNS: Looks up server IP address
-    DNS->>Browser: Returns IP address
-    Browser->>Server: Requests web page content
-    Server->>Browser: Sends HTML, CSS, and JavaScript
-    Browser->>User: Renders complete web page
+    User->>Browser: Skriver URL och trycker på Enter
+    Browser->>Extension: Utlös beforeRequest-händelse
+    Extension->>Extension: Kontrollera om URL behöver ändras
+    Browser->>DNS: Slår upp serverns IP-adress
+    DNS->>Browser: Returnerar IP-adress
+    Browser->>Server: Begär webbsidans innehåll
+    Server->>Browser: Skickar HTML, CSS och JavaScript
+    Browser->>Extension: Utlös beforeResponse-händelse
+    Extension->>Extension: Ändra innehåll om det behövs
+    Browser->>User: Visar komplett webbsida
+    Extension->>User: Visa uppdateringar i extensionens gränssnitt
 ```
-
 **Det här uppnår processen:**
-- **Översätter** den människoläsbara URL:en till en server-IP-adress via DNS-uppslag
-- **Upprättar** en säker anslutning med webbservern med hjälp av HTTP- eller HTTPS-protokoll
+- **Översätter** den lättlästa URL:en till en server-IP-adress genom DNS-uppslagning
+- **Etablerar** en säker anslutning till webbservern via HTTP eller HTTPS-protokoll
 - **Begär** det specifika webbsidans innehåll från servern
 - **Tar emot** HTML-markup, CSS-styling och JavaScript-kod från servern
-- **Renderar** allt innehåll till den interaktiva webbsidan du ser
+- **Renderar** allt innehåll till den interaktiva webbsida du ser
 
-### Webbläsarens Kärnfunktioner
+### Webbläsarens kärnfunktioner
 
-Moderna webbläsare erbjuder många funktioner som tilläggsutvecklare kan dra nytta av:
+Moderna webbläsare erbjuder många funktioner som tilläggsutvecklare kan utnyttja:
 
 | Funktion | Syfte | Möjligheter för tillägg |
-|----------|-------|-------------------------|
-| **Renderingsmotor** | Visar HTML, CSS och JavaScript | Innehållsmodifiering, stylinginjektion |
-| **JavaScript-motor** | Kör JavaScript-kod | Anpassade skript, API-interaktioner |
+|---------|---------|------------------------|
+| **Renderingsmotor** | Visar HTML, CSS och JavaScript | Innehållsmodifiering, stilinjektion |
+| **JavaScript-motor** | Kör JavaScript-kod | Egna skript, API-interaktioner |
 | **Lokal lagring** | Sparar data lokalt | Användarinställningar, cachelagrad data |
 | **Nätverksstack** | Hanterar webbförfrågningar | Övervakning av förfrågningar, dataanalys |
 | **Säkerhetsmodell** | Skyddar användare från skadligt innehåll | Innehållsfiltrering, säkerhetsförbättringar |
@@ -76,102 +126,154 @@ Moderna webbläsare erbjuder många funktioner som tilläggsutvecklare kan dra n
 **Att förstå dessa funktioner hjälper dig att:**
 - **Identifiera** var ditt tillägg kan tillföra mest värde
 - **Välja** rätt webbläsar-API:er för ditt tilläggs funktionalitet
-- **Designa** tillägg som fungerar effektivt med webbläsarsystem
+- **Designa** tillägg som fungerar effektivt med webbläsarsystemen
 - **Säkerställa** att ditt tillägg följer webbläsarens säkerhetsriktlinjer
 
-### Överväganden för Utveckling av Tillägg för Flera Webbläsare
+### Överväganden för utveckling av tillägg för flera webbläsare
 
-Olika webbläsare implementerar standarder med små variationer, på samma sätt som olika programmeringsspråk kan hantera samma algoritm på olika sätt. Chrome, Firefox och Safari har var och en unika egenskaper som utvecklare måste ta hänsyn till vid utveckling av tillägg.
+Olika webbläsare implementerar standarder med små variationer, likt hur olika programmeringsspråk kan hantera samma algoritm olika. Chrome, Firefox och Safari har unika egenskaper som utvecklare måste ta hänsyn till vid tilläggsutveckling.
 
-> 💡 **Tips**: Använd [caniuse.com](https://www.caniuse.com) för att kontrollera vilka webbteknologier som stöds i olika webbläsare. Detta är ovärderligt när du planerar funktionerna för ditt tillägg!
+> 💡 **Proffstips**: Använd [caniuse.com](https://www.caniuse.com) för att kolla vilka webteknologier som stöds över olika webbläsare. Detta är ovärderligt när du planerar vilka funktioner ditt tillägg ska ha!
 
-**Viktiga överväganden för tilläggsutveckling:**
-- **Testa** ditt tillägg i Chrome, Firefox och Edge-webbläsare
-- **Anpassa** till olika webbläsartilläggs-API:er och manifestformat
-- **Hantera** varierande prestandaegenskaper och begränsningar
-- **Tillhandahåll** alternativ för webbläsarspecifika funktioner som kanske inte är tillgängliga
+**Viktiga aspekter för tilläggsutveckling:**
+- **Testa** ditt tillägg i Chrome, Firefox och Edge
+- **Anpassa** dig till olika API:er och manifestformat för webbläsartillägg
+- **Hantera** variationer i prestanda och begränsningar
+- **Ge** backuplösningar för funktioner som kan saknas i vissa webbläsare
 
-✅ **Analysinsikt**: Du kan ta reda på vilka webbläsare dina användare föredrar genom att installera analysverktyg i dina webbutvecklingsprojekt. Denna data hjälper dig att prioritera vilka webbläsare du ska stödja först.
+✅ **Analysinsikt**: Du kan ta reda på vilka webbläsare dina användare föredrar genom att installera analysverktyg i dina webbprojekt. Denna data hjälper dig att prioritera vilka webbläsare du ska stödja först.
 
-## Förstå Webbläsartillägg
+## Förståelse för webbläsartillägg
 
-Webbläsartillägg löser vanliga utmaningar vid webbsurfning genom att lägga till funktionalitet direkt i webbläsarens gränssnitt. Istället för att kräva separata applikationer eller komplexa arbetsflöden, ger tillägg omedelbar tillgång till verktyg och funktioner.
+Webbläsartillägg löser vanliga problem vid webbupptäckande genom att lägga till funktionalitet direkt i webbläsargränssnittet. Istället för att kräva separata program eller komplexa arbetsflöden, ger tillägg snabb åtkomst till verktyg och funktioner.
 
-Detta koncept speglar hur tidiga datorteknikpionjärer som Douglas Engelbart föreställde sig att förstärka mänskliga förmågor med teknik - tillägg förstärker webbläsarens grundläggande funktionalitet.
+Detta koncept speglar hur tidiga datorpionjärer som Douglas Engelbart föreställde sig att teknologi kan förstärka mänskliga förmågor – tillägg förstärker webbläsarens grundläggande funktionalitet.
 
-**Populära tilläggskategorier och deras fördelar:**
-- **Produktivitetsverktyg**: Uppgiftsplanerare, anteckningsappar och tidsspårare som hjälper dig att hålla dig organiserad
-- **Säkerhetsförbättringar**: Lösenordshanterare, annonsblockerare och integritetsverktyg som skyddar dina data
-- **Utvecklingsverktyg**: Kodformaterare, färgväljare och felsökningsverktyg som förenklar utveckling
-- **Innehållsförbättring**: Läslägen, videonedladdare och skärmdumpsverktyg som förbättrar din webbupplevelse
+```mermaid
+quadrantChart
+    title Kategorier av webbläsartillägg
+    x-axis Enkel --> Komplex
+    y-axis Personlig användning --> Professionella verktyg
+    quadrant-1 Utvecklarverktyg
+    quadrant-2 Företagslösningar
+    quadrant-3 Personliga verktyg
+    quadrant-4 Produktivitetsappar
+    
+    Ad Blockers: [0.3, 0.2]
+    Password Managers: [0.7, 0.3]
+    Color Pickers: [0.4, 0.8]
+    Code Formatters: [0.8, 0.9]
+    Note Taking: [0.6, 0.5]
+    Video Downloaders: [0.5, 0.2]
+    Time Trackers: [0.7, 0.6]
+    Screenshot Tools: [0.4, 0.4]
+```
+**Populära typer av tillägg och deras fördelar:**
+- **Produktivitetsverktyg**: Uppgiftshanterare, anteckningsappar och tidsmätare som hjälper dig behålla ordning
+- **Säkerhetsförbättringar**: Lösenordshanterare, annonsblockerare och integritetsverktyg som skyddar din data
+- **Utvecklarverktyg**: Kodformaterare, färgväljare och felsökningsverktyg som effektiviserar utveckling
+- **Innehållsförbättringar**: Läs-lägen, videonedladdare och skärmdumpar som förbättrar din webbupplevelse
 
-✅ **Reflektionsfråga**: Vilka är dina favoritwebbläsartillägg? Vilka specifika uppgifter utför de, och hur förbättrar de din webbläsarupplevelse?
+✅ **Reflektionsfråga**: Vilka är dina favoritwebbläsartillägg? Vilka specifika uppgifter utför de, och hur förbättrar de din surfupplevelse?
 
-## Installera och Hantera Tillägg
+### 🔄 **Pedagogisk kontrollpunkt**
+**Förståelse för webbläsararkitektur**: Innan du går vidare till tilläggsutveckling, se till att du kan:
+- ✅ Förklara hur webbläsare bearbetar webbförfrågningar och renderar innehåll
+- ✅ Identifiera huvudkomponenterna i webbläsararkitektur
+- ✅ Förstå hur tillägg integreras med webbläsarfunktioner
+- ✅ Känna igen säkerhetsmodellen som skyddar användarna
 
-Att förstå installationsprocessen för tillägg hjälper dig att förutse användarupplevelsen när människor installerar ditt tillägg. Installationsprocessen är standardiserad över moderna webbläsare, med mindre variationer i gränssnittsdesign.
+**Snabb självtest**: Kan du följa steget från att skriva en URL till att se en webbsida?
+1. **DNS-uppslagning** omvandlar URL till IP-adress
+2. **HTTP-förfrågan** hämtar innehåll från servern
+3. **Parsing** bearbetar HTML, CSS och JavaScript
+4. **Rendering** visar slutgiltig webbsida
+5. **Tillägg** kan modifiera innehåll i flera steg
 
-![Skärmdump av Edge-webbläsaren som visar sidan edge://extensions och öppet inställningsmeny](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.sv.png)
+## Installera och hantera tillägg
 
-> **Viktigt**: Se till att aktivera utvecklarläge och tillåta tillägg från andra butiker när du testar dina egna tillägg.
+Att förstå installationsprocessen för tillägg hjälper dig att förutse användarupplevelsen när personer installerar ditt tillägg. Installationsprocessen är standardiserad över moderna webbläsare med små skillnader i gränssnittsdesign.
 
-### Utvecklingsinstallation av Tillägg
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.sv.png)
 
-När du utvecklar och testar dina egna tillägg, följ detta arbetsflöde:
+> **Viktigt**: Se till att aktivera utvecklarläge och tillåt tillägg från andra butiker när du testar dina egna tillägg.
 
+### Utvecklingsinstallationsprocess för tillägg
+
+När du utvecklar och testar egna tillägg, följ detta arbetsflöde:
+
+```mermaid
+flowchart TD
+    A[Skriv kod] --> B[Bygg tillägg]
+    B --> C{Första installationen?}
+    C -->|Ja| D[Ladda uppackad]
+    C -->|Nej| E[Ladda om tillägg]
+    D --> F[Testa funktionalitet]
+    E --> F
+    F --> G{Fungerar korrekt?}
+    G -->|Nej| H[Felsök problem]
+    G -->|Ja| I[Redo för användare]
+    H --> A
+    I --> J[Publicera i butik]
+    
+    style A fill:#e1f5fe
+    style F fill:#e8f5e8
+    style I fill:#f3e5f5
+    style J fill:#fff3e0
+```
 ```bash
-# Step 1: Build your extension
+# Steg 1: Bygg din tillägg
 npm run build
 ```
 
-**Vad detta kommando uppnår:**
-- **Kompilerar** din källkod till webbläsarklara filer
+**Detta kommando gör:**
+- **Kompilerar** din källkod till filer som är klara för webbläsaren
 - **Paketerar** JavaScript-moduler till optimerade paket
-- **Genererar** de slutliga tilläggsfilerna i `/dist`-mappen
+- **Genererar** slutliga tilläggsfiler i `/dist`-mappen
 - **Förbereder** ditt tillägg för installation och testning
 
-**Steg 2: Navigera till Webbläsartillägg**
+**Steg 2: Navigera till webbläsartillägg**
 1. **Öppna** webbläsarens sida för hantering av tillägg
-2. **Klicka** på knappen "Inställningar och mer" (ikonen `...`) längst upp till höger
-3. **Välj** "Tillägg" från rullgardinsmenyn
+2. **Klicka** på knappen "Inställningar och mer" (ikonen `...`) uppe till höger
+3. **Välj** "Tillägg" i rullgardinsmenyn
 
-**Steg 3: Ladda Ditt Tillägg**
-- **För nya installationer**: Välj `ladda uppackat` och välj din `/dist`-mapp
-- **För uppdateringar**: Klicka på `ladda om` bredvid ditt redan installerade tillägg
-- **För testning**: Aktivera "Utvecklarläge" för att få tillgång till ytterligare felsökningsfunktioner
+**Steg 3: Ladda ditt tillägg**
+- **För nya installationer**: Välj `load unpacked` och peka på din `/dist`-mapp
+- **För uppdateringar**: Klicka `reload` bredvid ditt redan installerade tillägg
+- **För testning**: Aktivera "Utvecklarläge" för att få fler felsökningsfunktioner
 
-### Installation av Färdiga Tillägg
+### Produktioninstallationsprocess för tillägg
 
-> ✅ **Observera**: Dessa utvecklingsinstruktioner är specifikt för tillägg du bygger själv. För att installera publicerade tillägg, besök de officiella webbläsartilläggsbutikerna som [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
+> ✅ **Observera**: Dessa utvecklingsinstruktioner gäller tillägg som du själv bygger. För att installera publicerade tillägg, besök officiella webbläsarbutiker som [Microsoft Edge Add-ons store](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
 
-**Förstå skillnaden:**
+**Skillnaden i korthet:**
 - **Utvecklingsinstallationer** låter dig testa opublicerade tillägg under utveckling
-- **Butiksinstallationer** tillhandahåller granskade, publicerade tillägg med automatiska uppdateringar
-- **Sidoinstallation** tillåter installation av tillägg från andra källor än officiella butiker (kräver utvecklarläge)
+- **Butiksinstallationer** ger granskade och publicerade tillägg med automatiska uppdateringar
+- **Sidoinstallation** möjliggör installation av tillägg utanför de officiella butikerna (kräver utvecklarläge)
 
-## Bygga Ditt Koldioxidavtryckstillägg
+## Bygga ditt koldioxidavtryckstillägg
 
-Vi kommer att skapa ett webbläsartillägg som visar koldioxidavtrycket för energianvändningen i din region. Detta projekt demonstrerar viktiga koncept för tilläggsutveckling samtidigt som det skapar ett praktiskt verktyg för miljömedvetenhet.
+Vi ska skapa ett webbläsartillägg som visar koldioxidavtrycket för energianvändningen i din region. Detta projekt demonstrerar viktiga koncept inom tilläggsutveckling samtidigt som du skapar ett praktiskt verktyg för miljömedvetenhet.
 
-Denna metod följer principen "learning by doing" som har visat sig vara effektiv sedan John Deweys pedagogiska teorier - att kombinera tekniska färdigheter med meningsfulla verkliga tillämpningar.
+Detta tillvägagångssätt följer principen "learning by doing" som varit framgångsrikt sedan John Deweys pedagogiska teorier – att kombinera tekniska färdigheter med meningsfulla tillämpningar i verkligheten.
 
 ### Projektkrav
 
-Innan vi börjar utvecklingen, låt oss samla de nödvändiga resurserna och beroendena:
+Innan utvecklingen börjar, låt oss samla de nödvändiga resurserna och beroenden:
 
 **Nödvändig API-åtkomst:**
 - **[CO2 Signal API-nyckel](https://www.co2signal.com/)**: Ange din e-postadress för att få din gratis API-nyckel
-- **[Regionskod](http://api.electricitymap.org/v3/zones)**: Hitta din regionskod med hjälp av [Electricity Map](https://www.electricitymap.org/map) (till exempel använder Boston 'US-NEISO')
+- **[Regionkod](http://api.electricitymap.org/v3/zones)**: Hitta din regionkod med [Electricity Map](https://www.electricitymap.org/map) (t.ex. använder Boston 'US-NEISO')
 
 **Utvecklingsverktyg:**
-- **[Node.js och NPM](https://www.npmjs.com)**: Verktyg för paketadministration för att installera projektberoenden
-- **[Startkod](../../../../5-browser-extension/start)**: Ladda ner mappen `start` för att börja utvecklingen
+- **[Node.js och NPM](https://www.npmjs.com)**: Paketverktyg för att installera projektberoenden
+- **[Startkod](../../../../5-browser-extension/start)**: Ladda ner mappen `start` för att börja utveckla
 
-✅ **Läs Mer**: Förbättra dina färdigheter inom paketadministration med denna [omfattande Learn-modul](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
+✅ **Lär dig mer**: Förbättra dina kunskaper i paketshantering med denna [omfattande Learn-modul](https://docs.microsoft.com/learn/modules/create-nodejs-project-dependencies/?WT.mc_id=academic-77807-sagibbon)
 
-### Förstå Projektstrukturen
+### Förståelse av projektstrukturen
 
-Att förstå projektstrukturen hjälper till att organisera utvecklingsarbetet effektivt. Precis som Biblioteket i Alexandria var organiserat för enkel kunskapsåtervinning, gör en välstrukturerad kodbas utvecklingen mer effektiv:
+Att förstå projektets struktur hjälper till att organisera utvecklingsarbetet effektivt. Precis som Biblioteket i Alexandria organiserades för lätt kunskapsåtkomst, gör en välstrukturerad kodbas utvecklingen mer effektiv:
 
 ```
 project-root/
@@ -180,40 +282,42 @@ project-root/
 │   ├── index.html           # User interface markup
 │   ├── background.js        # Background script functionality
 │   └── main.js              # Compiled JavaScript bundle
-└── src/                     # Source development files
-    └── index.js             # Your main JavaScript code
+├── src/                     # Source development files
+│   └── index.js             # Your main JavaScript code
+├── package.json             # Project dependencies and scripts
+└── webpack.config.js        # Build configuration
 ```
 
 **Vad varje fil gör:**
-- **`manifest.json`**: **Definierar** metadata, behörigheter och startpunkter för tillägget
+- **`manifest.json`**: **Definierar** tilläggets metadata, behörigheter och ingångspunkter
 - **`index.html`**: **Skapar** användargränssnittet som visas när användare klickar på ditt tillägg
 - **`background.js`**: **Hantera** bakgrundsuppgifter och webbläsarhändelselyssnare
-- **`main.js`**: **Innehåller** den slutliga paketerade JavaScript-koden efter byggprocessen
-- **`src/index.js`**: **Innehåller** din huvudsakliga utvecklingskod som kompileras till `main.js`
+- **`main.js`**: **Innehåller** den slutgiltiga sammansatta JavaScript-koden efter byggprocessen
+- **`src/index.js`**: **Huserar** din huvudsakliga utvecklingskod som kompileras till `main.js`
 
-> 💡 **Organisationsråd**: Spara din API-nyckel och regionskod i en säker anteckning för enkel åtkomst under utvecklingen. Du kommer att behöva dessa värden för att testa ditt tilläggs funktionalitet.
+> 💡 **Organiseringstips**: Spara din API-nyckel och regionkod i en säker anteckning för enkel åtkomst under utvecklingen. Du kommer behöva dessa värden för att testa ditt tilläggs funktionalitet.
 
-✅ **Säkerhetsråd**: Lämna aldrig in API-nycklar eller känsliga uppgifter till din koddatabas. Vi visar dig hur du hanterar dessa säkert i nästa steg.
+✅ **Säkerhetsnotis**: Aldrig checka in API-nycklar eller känsliga uppgifter i ditt kodförråd. Vi visar dig hur du hanterar detta säkert i nästa steg.
 
-## Skapa Tilläggets Gränssnitt
+## Skapa tilläggsgränssnittet
 
-Nu ska vi bygga användargränssnittskomponenterna. Tillägget använder en tvåskärmsmetod: en konfigurationsskärm för första inställningen och en resultatskärm för datavisning.
+Nu bygger vi gränssnittskomponenterna. Tillägget använder en tvåskärmsstrategi: en konfigurationsskärm för första setup och en resultatskärm för datavisning.
 
-Detta följer principen om progressiv avslöjande som används i gränssnittsdesign sedan datorernas tidiga dagar - att avslöja information och alternativ i en logisk sekvens för att undvika att överväldiga användare.
+Detta följer principen om progressiv avslöjande som använts i gränssnittsdesign sedan datorernas begynnelse – visa information och val i en logisk ordning för att undvika att användaren överbelastas.
 
-### Översikt över Tilläggets Vy
+### Översikt av tilläggsvyer
 
-**Inställningsvy** - Första gången användaren konfigurerar:
-![Skärmdump av det färdiga tillägget öppet i en webbläsare, som visar ett formulär med inmatningar för regionnamn och API-nyckel.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.sv.png)
+**Inställningsvy** – Konfiguration för första gången:
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.sv.png)
 
-**Resultatvy** - Visning av koldioxidavtrycksdata:
-![Skärmdump av det färdiga tillägget som visar värden för koldioxidanvändning och andel fossila bränslen för regionen US-NEISO.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.sv.png)
+**Resultatvy** – Visning av koldioxidavtrycksdata:
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.sv.png)
 
-### Bygga Konfigurationsformuläret
+### Bygga konfigurationsformuläret
 
-Inställningsformuläret samlar användarkonfigurationsdata vid första användningen. När det är konfigurerat, sparas denna information i webbläsarens lagring för framtida sessioner.
+Inställningsformuläret samlar in användarens konfigurationsdata vid första användning. När det är konfigurerat sparas informationen i webbläsarens lagring för framtida sessioner.
 
-I filen `/dist/index.html`, lägg till denna formulärstruktur:
+I filen `/dist/index.html`, lägg till denna formstrukturen:
 
 ```html
 <form class="form-data" autocomplete="on">
@@ -232,16 +336,16 @@ I filen `/dist/index.html`, lägg till denna formulärstruktur:
 </form>
 ```
 
-**Vad detta formulär gör:**
-- **Skapar** en semantisk formulärstruktur med korrekta etiketter och inmatningsassociationer
-- **Aktiverar** webbläsarens autofyllfunktion för förbättrad användarupplevelse
-- **Kräver** att båda fälten fylls i innan inskickning med attributet `required`
-- **Organiserar** inmatningar med beskrivande klassnamn för enkel styling och JavaScript-mål
-- **Tillhandahåller** tydliga instruktioner för användare som konfigurerar tillägget för första gången
+**Det här formuläret gör:**
+- **Skapar** en semantisk formulärstruktur med korrekta etiketter och inputkopplingar
+- **Aktiverar** webbläsarens autokomplettering för förbättrad användarupplevelse
+- **Kräver** att båda fälten fylls i före inskickning med `required`-attribut
+- **Organiserar** inputfält med beskrivande klassnamn för enkel styling och JavaScript-målning
+- **Ger** tydliga instruktioner för användare som ställer in tillägget första gången
 
-### Bygga Resultatvisningen
+### Bygga resultatsvisningen
 
-Skapa sedan resultatområdet som ska visa koldioxidavtrycksdata. Lägg till denna HTML under formuläret:
+Skapa sedan området som visar koldioxidavtrycksdata. Lägg till detta HTML nedanför formuläret:
 
 ```html
 <div class="result">
@@ -257,74 +361,195 @@ Skapa sedan resultatområdet som ska visa koldioxidavtrycksdata. Lägg till denn
 </div>
 ```
 
-**Vad denna struktur tillhandahåller:**
+**Vad denna struktur ger:**
 - **`loading`**: **Visar** ett laddningsmeddelande medan API-data hämtas
 - **`errors`**: **Visar** felmeddelanden om API-anrop misslyckas eller data är ogiltig
-- **`data`**: **Innehåller** rådata för felsökning under utveckling
-- **`result-container`**: **Presenterar** formaterad information om koldioxidavtryck för användare
-- **`clear-btn`**: **Tillåter** användare att ändra sin region och konfigurera om tillägget
+- **`data`**: **Huserar** rådata för felsökning under utvecklingen
+- **`result-container`**: **Visar** formaterad koldioxidavtrycksinformation för användarna
+- **`clear-btn`**: **Tillåter** användare att ändra region och konfigurera tillägget på nytt
 
-### Ställa in Byggprocessen
+### Ställa in byggprocessen
 
-Nu ska vi installera projektberoenden och testa byggprocessen:
+Nu installerar vi projektets beroenden och testar byggprocessen:
 
 ```bash
 npm install
 ```
 
-**Vad denna installationsprocess gör:**
-- **Laddar ner** Webpack och andra utvecklingsberoenden som anges i `package.json`
+**Denna installationsprocess gör:**
+- **Laddar ner** Webpack och andra utvecklingsberoenden specificerade i `package.json`
 - **Konfigurerar** byggverktygskedjan för att kompilera modern JavaScript
-- **Förbereder** utvecklingsmiljön för att bygga och testa tillägg
-- **Aktiverar** kodpaketering, optimering och funktioner för webbläsarkompatibilitet
+- **Förbereder** utvecklingsmiljön för att bygga och testa tillägget
+- **Möjliggör** kodpaketering, optimering och flersäker webbläsarkompatibilitet
 
-> 💡 **Insikt om Byggprocessen**: Webpack paketerar din källkod från `/src/index.js` till `/dist/main.js`. Denna process optimerar din kod för produktion och säkerställer webbläsarkompatibilitet.
+> 💡 **Insikt i byggprocessen**: Webpack paketerar din källkod från `/src/index.js` till `/dist/main.js`. Denna process optimerar koden för produktion och säkerställer kompatibilitet med olika webbläsare.
 
-### Testa Din Framgång
+### Testa dina framsteg
 
 Vid denna punkt kan du testa ditt tillägg:
+1. **Kör** build-kommandot för att kompilera din kod  
+2. **Ladda** tillägget i din webbläsare med utvecklarläge  
+3. **Verifiera** att formuläret visas korrekt och ser professionellt ut  
+4. **Kontrollera** att alla formelement är korrekt justerade och funktionella  
 
-1. **Kör** byggkommandot för att kompilera din kod
-2. **Ladda** tillägget i din webbläsare med utvecklarläge
-3. **Verifiera** att formuläret visas korrekt och ser professionellt ut
-4. **Kontrollera** att alla formulärelement är korrekt justerade och funktionella
+**Det du har åstadkommit:**  
+- **Byggt** den grundläggande HTML-strukturen för ditt tillägg  
+- **Skapat** både konfigurations- och resultatgränssnitt med korrekt semantisk markup  
+- **Kommit igång** med en modern utvecklingsarbetsflöde med branschstandardverktyg  
+- **Förberett** grund för att lägga till interaktiv JavaScript-funktionalitet  
 
-**Vad du har uppnått:**
-- **Byggt** den grundläggande HTML-strukturen för ditt tillägg
-- **Skapat** både konfigurations- och resultatgränssnitt med korrekt semantisk markup
-- **Ställt in** ett modernt utvecklingsarbetsflöde med branschstandardverktyg
-- **Förberett** grunden för att lägga till interaktiv JavaScript-funktionalitet
+### 🔄 **Pedagogisk återkoppling**  
+**Utvecklingsprogress för tillägg:** Bekräfta din förståelse innan du fortsätter:  
+- ✅ Kan du förklara syftet med varje fil i projektstrukturen?  
+- ✅ Förstår du hur byggprocessen omvandlar din källkod?  
+- ✅ Varför separerar vi konfiguration och resultat i olika UI-sektioner?  
+- ✅ Hur stöder formulärstrukturen både användbarhet och tillgänglighet?  
 
-Du har slutfört den första fasen av utvecklingen av webbläsartillägg. Precis som Wright-bröderna först behövde förstå aerodynamik innan de kunde flyga, förbereder förståelsen av dessa grundläggande koncept dig för att bygga mer komplexa interaktiva funktioner
-**Beskrivning:** Förbättra webbläsartillägget genom att lägga till formulärvalidering och användarfeedback för att förbättra användarupplevelsen vid inmatning av API-nycklar och regionkoder.
+**Förståelse för utvecklingsarbetsflöde:** Du bör nu kunna:  
+1. **Ändra** HTML och CSS för ditt tilläggsgränssnitt  
+2. **Köra** build-kommandot för att kompilera dina ändringar  
+3. **Ladda om** tillägget i din webbläsare för att testa uppdateringar  
+4. **Felsöka** problem med webbläsarens utvecklarverktyg  
 
-**Uppgift:** Skapa JavaScript-valideringsfunktioner som kontrollerar om fältet för API-nyckeln innehåller minst 20 tecken och om regionkoden följer rätt format (som 'US-NEISO'). Lägg till visuell feedback genom att ändra färgen på inmatningsfältets kantlinje till grönt för giltiga inmatningar och rött för ogiltiga. Lägg också till en växlingsfunktion för att visa/dölja API-nyckeln av säkerhetsskäl.
+Du har genomfört den första fasen av webbläsartilläggsutveckling. Precis som bröderna Wright först behövde förstå aerodynamik innan de kunde flyga, förbereder förståelsen av dessa grundläggande begrepp dig för att skapa mer komplexa interaktiva funktioner i nästa lektion.  
 
-Läs mer om [agentläge](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.
+## GitHub Copilot Agent-utmaning 🚀  
 
-## 🚀 Utmaning
+Använd Agent-läget för att slutföra följande utmaning:  
 
-Ta en titt på en webbläsartilläggsbutik och installera ett tillägg i din webbläsare. Du kan undersöka dess filer på intressanta sätt. Vad upptäcker du?
+**Beskrivning:** Förbättra webbläsartillägget genom att lägga till formulärvalidering och användarfeedback för att förbättra användarupplevelsen när API-nycklar och regionskoder anges.  
 
-## Quiz efter föreläsningen
+**Uppmaning:** Skapa JavaScript-valideringsfunktioner som kontrollerar att API-nyckelfältet innehåller minst 20 tecken och att regionskoden följer korrekt format (som 'US-NEISO'). Lägg till visuell feedback genom att ändra inmatningsfältets kantfärg till grönt för giltiga inmatningar och rött för ogiltiga. Lägg även till en växlingsfunktion för att visa/dölja API-nyckeln för säkerhetsskäl.  
 
-[Quiz efter föreläsningen](https://ff-quizzes.netlify.app/web/quiz/24)
+Läs mer om [agent mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) här.  
 
-## Granskning & Självstudier
+## 🚀 Utmaning  
 
-I denna lektion lärde du dig lite om webbläsarens historia; ta tillfället i akt att lära dig mer om hur uppfinnarna av World Wide Web föreställde sig dess användning genom att läsa mer om dess historia. Några användbara webbplatser inkluderar:
+Ta en titt i en webbläsartilläggsbutik och installera ett till din webbläsare. Du kan undersöka dess filer på intressanta sätt. Vad upptäcker du?  
 
-[Webbläsarnas historia](https://www.mozilla.org/firefox/browsers/browser-history/)
+## Quiz efter lektionen  
 
-[Webbens historia](https://webfoundation.org/about/vision/history-of-the-web/)
+[Quiz efter lektionen](https://ff-quizzes.netlify.app/web/quiz/24)  
 
-[En intervju med Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
+## Översikt & Självstudier  
 
-## Uppgift 
+I den här lektionen lärde du dig lite om webbläsarens historia; ta tillfället i akt att lära dig mer om hur uppfinnarna av World Wide Web föreställde sig dess användning genom att läsa mer om dess historia. Några användbara sidor inkluderar:  
 
-[Styla om ditt tillägg](assignment.md)
+[Webbläsarens historia](https://www.mozilla.org/firefox/browsers/browser-history/)  
+
+[Webbens historia](https://webfoundation.org/about/vision/history-of-the-web/)  
+
+[En intervju med Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)  
+
+### ⚡ **Vad Du Kan Göra På Nästa 5 Minauter**  
+- [ ] Öppna Chrome/Edge tilläggssidan (chrome://extensions) och utforska vad du har installerat  
+- [ ] Titta på webbläsarens DevTools Network-flik medan du laddar en webbsida  
+- [ ] Försök visa sidans källa (Ctrl+U) för att se HTML-strukturen  
+- [ ] Inspektera vilket som helst webbsideselement och modifiera dess CSS i DevTools  
+
+### 🎯 **Vad Du Kan Uppnå Under Den Här Timmen**  
+- [ ] Slutför quizzen efter lektionen och förstå webbläsarens grunder  
+- [ ] Skapa en enkel manifest.json-fil för ett webbläsartillägg  
+- [ ] Bygg ett enkelt "Hello World"-tillägg som visar ett popup-fönster  
+- [ ] Testa att ladda ditt tillägg i utvecklarläge  
+- [ ] Utforska dokumentationen för webbläsartillägg för din målwebbläsare  
+
+### 📅 **Din Veckolånga Tilläggsresa**  
+- [ ] Slutför ett funktionellt webbläsartillägg med verklig nytta  
+- [ ] Lär dig om content scripts, background scripts och popup-interaktioner  
+- [ ] Bemästra webbläsar-API:er som lagring, flikar och meddelanden  
+- [ ] Designa användarvänliga gränssnitt för ditt tillägg  
+- [ ] Testa ditt tillägg på olika webbplatser och scenarier  
+- [ ] Publicera ditt tillägg i webbläsarens tilläggsbutik  
+
+### 🌟 **Din Månadslånga Webbläsarutveckling**  
+- [ ] Skapa flera tillägg som löser olika användarproblem  
+- [ ] Lär dig avancerade webbläsar-API:er och säkerhetsbästa praxis  
+- [ ] Bidra till öppna källkodsprojekt för webbläsartillägg  
+- [ ] Bemästra tvärwebbläsarkompatibilitet och progressiv förbättring  
+- [ ] Skapa utvecklingsverktyg och mallar för tillägg till andra  
+- [ ] Bli expert på webbläsartillägg som hjälper andra utvecklare  
+
+## 🎯 Din Tidslinje för Mästerskap i Webbläsartillägg  
+
+```mermaid
+timeline
+    title Webbläsartillägg Utvecklingsprogression
+    
+    section Grundläggande (15 minuter)
+        Förståelse för webbläsare: Kärnarkitektur
+                              : Renderingsprocess
+                              : Integration av tillägg
+        
+    section Installation (20 minuter)
+        Utvecklingsmiljö: Projektstruktur
+                         : Konfiguration av byggverktyg
+                         : Webbläsarens utvecklarläge
+                         : Tilläggets laddningsprocess
+        
+    section Gränssnittsdesign (25 minuter)
+        Användarupplevelse: HTML-struktur
+                         : CSS-styling
+                         : Formulärvalidering
+                         : Responsiv design
+        
+    section Kärnfunktionalitet (35 minuter)
+        JavaScript-integration: Händelsehantering
+                              : API-interaktioner
+                              : Datainlagring
+                              : Felhantering
+        
+    section Webbläsar-API:er (45 minuter)
+        Plattformintegration: Behörighetssystem
+                            : Lagrings-API:er
+                            : Flikhantering
+                            : Kontextmenyer
+        
+    section Avancerade funktioner (1 vecka)
+        Professionella tillägg: Bakgrundsskript
+                             : Innehållsskript
+                             : Kompatibilitet över webbläsare
+                             : Prestandaoptimering
+        
+    section Publicering (2 veckor)
+        Distribution: Butikspublicering
+                   : Granskningsprocess
+                   : Användarfeedback
+                   : Uppdateringshantering
+        
+    section Expertnivå (1 månad)
+        Tilläggsekosystem: Avancerade API:er
+                         : Säkerhetsbästa praxis
+                         : Företagsfunktioner
+                         : Ramverksintegration
+```  
+### 🛠️ Din Sammanfattning av Utvecklingsverktyg för Tillägg  
+
+Efter att ha genomfört denna lektion har du nu:  
+- **Kunskap om webbläsararkitektur:** Förståelse för renderingsmotorer, säkerhetsmodeller och tilläggsintegration  
+- **Utvecklingsmiljö:** Modern verktygskedja med Webpack, NPM och felsökningsmöjligheter  
+- **UI/UX-grund:** Semantisk HTML-struktur med progressiva avslöjandemönster  
+- **Säkerhetsmedvetenhet:** Förståelse för webbläsarbehörigheter och säker kodutveckling  
+- **Koncept för tvärwebbläsarkompatibilitet:** Kännedom om kompatibilitetsaspekter och testmetoder  
+- **API-integration:** Grund för att arbeta med externa datakällor  
+- **Professionellt arbetsflöde:** Branschstandard för utveckling och testning  
+
+**Verkliga tillämpningar:** Dessa färdigheter används direkt för:  
+- **Webbutveckling:** Enkel- och progressiva webbapplikationer  
+- **Stationära applikationer:** Electron och webbaserad stationär programvara  
+- **Mobilutveckling:** Hybridappar och webbaserade mobillösningar  
+- **Företagsverktyg:** Interna produktivitetsapplikationer och arbetsflödesautomatisering  
+- **Öppen källkod:** Bidra till projekt för webbläsartillägg och webbstandarder  
+
+**Nästa nivå:** Du är redo att lägga till interaktiv funktionalitet, arbeta med webbläsar-API:er och skapa tillägg som löser verkliga användarproblem!  
+
+## Uppgift  
+
+[Ge stil på ditt tillägg](assignment.md)
 
 ---
 
-**Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfriskrivning**:
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör du vara medveten om att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål ska betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell, mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

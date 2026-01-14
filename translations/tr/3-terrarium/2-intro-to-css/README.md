@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![CSS'e Giriş](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.tr.png)
+![CSS'e Giriş](../../../../translated_images/webdev101-css.3f7af5991bf53a20.tr.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML teraryumunuzun oldukça basit göründüğünü hatırlıyor musunuz? CSS, bu sade yapıyı görsel olarak çekici bir şeye dönüştürdüğümüz yerdir.
@@ -205,7 +205,7 @@ body {
 
 Tarayıcınızın geliştirici araçlarını (F12) açın, Elementler sekmesine gidin ve `<h1>` öğenizi inceleyin. Body'den yazı tipi ailesini miras aldığını göreceksiniz:
 
-![miras alınan yazı tipi](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.tr.png)
+![miras alınan yazı tipi](../../../../translated_images/1.cc07a5cbe114ad1d.tr.png)
 
 ✅ **Deney Zamanı**: Body öğesinde `color`, `line-height` veya `text-align` gibi diğer miras alınabilir özellikleri ayarlamayı deneyin. Başlığınız ve diğer öğeler üzerinde ne olur?
 
@@ -599,7 +599,7 @@ Teraryumunuzu gerçekçi cam yansımalarıyla geliştirmeye hazır mısınız? B
 
 Cam yüzeylerden ışığın nasıl yansıdığını simüle eden ince vurgular oluşturacaksınız. Bu yaklaşım, Jan van Eyck gibi Rönesans ressamlarının boyalı camı üç boyutlu göstermek için ışık ve yansımayı nasıl kullandıklarına benzer. İşte hedefiniz:
 
-![bitmiş teraryum](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.tr.png)
+![bitmiş teraryum](../../../../translated_images/terrarium-final.2f07047ffc597d0a.tr.png)
 
 **Meydan okumanız:**
 - **Oluşturun** cam yansımaları için ince beyaz veya açık renkli oval şekiller

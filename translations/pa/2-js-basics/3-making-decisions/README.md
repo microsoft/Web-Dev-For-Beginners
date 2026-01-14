@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ: ਫੈਸਲੇ ਲੈਣਾ
 
-![ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ - ਫੈਸਲੇ ਲੈਣਾ](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0b1cb2f8adaff3ed2a77c4f91db96d8a0594132a353fa189a.pa.png)
+![ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ - ਫੈਸਲੇ ਲੈਣਾ](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.pa.png)
 
 > ਸਕੈਚਨੋਟ [ਟੋਮੋਮੀ ਇਮੁਰਾ](https://twitter.com/girlie_mac) ਦੁਆਰਾ
 

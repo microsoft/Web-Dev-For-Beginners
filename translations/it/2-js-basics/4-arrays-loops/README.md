@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fondamenti di JavaScript: Array e Cicli
 
-![Fondamenti di JavaScript - Array](../../../../translated_images/webdev101-js-arrays.439d7528b8a294558d0e4302e448d193f8ad7495cc407539cc81f1afe904b470.it.png)
+![Fondamenti di JavaScript - Array](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.it.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

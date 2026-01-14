@@ -1,0 +1,17 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "e6d0f456dfc22afb41bbdefeb5ec179d",
+  "translation_date": "2026-01-08T19:53:39+00:00",
+  "source_file": "1-getting-started-lessons/3-accessibility/assignment.md",
+  "language_code": "ml"
+}
+-->
+Translation for chunk 1 of 'assignment.md' skipped due to timeout.
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**അവകാശവകാശ ഒഴിവാക്കൽ**:  
+ഈ ഡോക്യുമെന്റ് AI തർജ്ജമ സേവനമായ [Co-op Translator](https://github.com/Azure/co-op-translator) ഉപയോഗിച്ച് തർജ്ജിമ ചെയ്‌തതാണ്. ഞങ്ങൾ കൃത്യതയ്ക്കായി ശ്രമിക്കുന്നതിനുശേഷവും, സ്വയമേവ നടത്തുന്ന തർജ്ജമയിൽ പിഴവുകൾ അല്ലെങ്കിൽ പിശകുകൾ ഉണ്ടായിരിക്കാമെന്നത് ദയവായി മനസിലാക്കുക. മൗലികമായി ഉള്ള അവിടെ പ്രമാണം ഉറപ്പുള്ള സൂത്രമായി പരിഗണിക്കേണ്ടതാണ്. നിർണായകമായ വിവരങ്ങൾക്കായി പ്രൊഫഷണൽ മനുഷ്യ തർജ്ജമ നിർദേശിക്കപ്പെടുന്നു. ഈ തർജ്ജമ ഉപയോഗിക്കുന്നതിലൂടെ ഉദയിക്കുന്ന യാതൊരു തെറ്റുഅർത്ഥമാക്കലിനെയും ഞങ്ങൾ ഉത്തരവാദിത്വം ഏറ്റെടുക്കുന്നില്ല.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

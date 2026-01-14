@@ -1,51 +1,96 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d259f6962464ad91e671083aa0398f4",
-  "translation_date": "2025-10-24T21:04:41+00:00",
+  "original_hash": "351678bece18f07d9daa987a881fb062",
+  "translation_date": "2026-01-07T03:54:25+00:00",
   "source_file": "7-bank-project/1-template-route/README.md",
   "language_code": "cs"
 }
 -->
-# Vytvoření bankovní aplikace, část 1: HTML šablony a trasy ve webové aplikaci
+# Vytvoření bankovní aplikace Část 1: HTML šablony a směrování ve webové aplikaci
 
-Když navigační počítač Apolla 11 v roce 1969 letěl na Měsíc, musel přepínat mezi různými programy, aniž by restartoval celý systém. Moderní webové aplikace fungují podobně – mění to, co vidíte, bez nutnosti znovu načítat vše od začátku. To vytváří hladký a pohotový zážitek, který uživatelé dnes očekávají.
+```mermaid
+journey
+    title Vývojová cesta vaší bankovní aplikace
+    section Základy SPA
+      Pochopte jednopage aplikace: 3: Student
+      Naučte se šablonové koncepty: 4: Student
+      Ovládněte manipulaci s DOM: 4: Student
+    section Směrovací systémy
+      Implementujte směrování na straně klienta: 4: Student
+      Zpracujte historii prohlížeče: 5: Student
+      Vytvořte navigační systémy: 5: Student
+    section Profesionální vzory
+      Vytvářejte modulární architekturu: 5: Student
+      Aplikujte osvědčené postupy: 5: Student
+      Vytvořte uživatelské zážitky: 5: Student
+```
+Když počítač řízení Apollo 11 navigoval k Měsíci v roce 1969, musel přepínat mezi různými programy, aniž by restartoval celý systém. Moderní webové aplikace fungují podobně – mění to, co vidíte, bez načítání všeho znovu od začátku. To vytváří hladký, responzivní zážitek, který uživatelé dnes očekávají.
 
-Na rozdíl od tradičních webových stránek, které při každé interakci znovu načítají celé stránky, moderní webové aplikace aktualizují pouze části, které je třeba změnit. Tento přístup, podobně jako když řídící středisko přepíná mezi různými displeji při zachování stálé komunikace, vytváří plynulý zážitek, na který jsme si zvykli.
+Na rozdíl od tradičních webových stránek, které načítají celé stránky pro každou interakci, moderní webové aplikace aktualizují pouze části, které je potřeba změnit. Tento přístup, podobně jako řídící centrum mise, které přepíná mezi různými displeji při zachování stálé komunikace, vytváří ten plynulý zážitek, na který jsme zvyklí.
 
-Co dělá tento rozdíl tak dramatickým:
+Zde je důvod, proč je rozdíl tak výrazný:
 
-| Tradiční aplikace s více stránkami | Moderní aplikace s jednou stránkou |
-|-----------------------------------|------------------------------------|
-| **Navigace** | Načítání celé stránky pro každou obrazovku | Okamžité přepínání obsahu |
-| **Výkon** | Pomalejší kvůli kompletnímu stahování HTML | Rychlejší díky částečným aktualizacím |
-| **Uživatelský zážitek** | Rušivé blikání stránek | Plynulé, aplikaci podobné přechody |
+| Tradiční vícestránkové aplikace | Moderní jednostránkové aplikace |
+|----------------------------|-------------------------|
+| **Navigace** | Kompletní načítání stránky pro každou obrazovku | Okamžité přepínání obsahu |
+| **Výkon** | Pomalejší díky kompletnímu stažení HTML | Rychlejší díky částečným aktualizacím |
+| **Uživatelský zážitek** | Rušivé blikání stránky | Hladké, aplikací podobné přechody |
 | **Sdílení dat** | Obtížné mezi stránkami | Snadná správa stavu |
-| **Vývoj** | Údržba více HTML souborů | Jedno HTML s dynamickými šablonami |
+| **Vývoj** | Více HTML souborů k údržbě | Jediný HTML s dynamickými šablonami |
 
-**Porozumění evoluci:**
-- **Tradiční aplikace** vyžadují serverové požadavky pro každou navigační akci
-- **Moderní SPA** se načítají jednou a dynamicky aktualizují obsah pomocí JavaScriptu
-- **Očekávání uživatelů** nyní preferují okamžité, plynulé interakce
-- **Výhody výkonu** zahrnují sníženou šířku pásma a rychlejší odezvy
+**Pochopení vývoje:**
+- **Tradiční aplikace** vyžadují serverové požadavky pro každou navigaci
+- **Moderní SPA** se načtou jednou a obsah se dynamicky aktualizuje pomocí JavaScriptu
+- **Očekávání uživatelů** nyní preferují okamžité a bezproblémové interakce
+- **Výkonové výhody** zahrnují sníženou šířku pásma a rychlejší odezvu
 
-V této lekci vytvoříme bankovní aplikaci s více obrazovkami, které spolu plynule spolupracují. Stejně jako vědci používají modulární nástroje, které lze přizpůsobit různým experimentům, použijeme HTML šablony jako znovupoužitelné komponenty, které lze zobrazit podle potřeby.
+V této lekci vytvoříme bankovní aplikaci s více obrazovkami, které plynule na sebe navazují. Podobně jako vědci používají modulární přístroje, které lze přepracovat pro různé experimenty, použijeme HTML šablony jako znovupoužitelné komponenty, které se zobrazují dle potřeby.
 
-Budete pracovat s HTML šablonami (znovupoužitelné návrhy pro různé obrazovky), JavaScriptovými trasami (systém, který přepíná mezi obrazovkami) a historií prohlížeče (která zajišťuje správnou funkci tlačítka zpět). To jsou stejné základní techniky, které používají frameworky jako React, Vue a Angular.
+Budete pracovat s HTML šablonami (znovupoužitelné plány pro různé obrazovky), JavaScriptovým směrováním (systém, který přepíná mezi obrazovkami) a historií prohlížeče API (která zajistí správnou funkci tlačítka zpět). To jsou ty samé základní techniky, které používají frameworky jako React, Vue a Angular.
 
-Na konci budete mít funkční bankovní aplikaci, která demonstruje profesionální principy aplikací s jednou stránkou.
+Na konci budete mít funkční bankovní aplikaci, která demonstruje profesionální principy jednostránkových aplikací.
 
-## Kvíz před lekcí
+```mermaid
+mindmap
+  root((Jednostránkové aplikace))
+    Architecture
+      Template System
+      Client-side Routing
+      State Management
+      Event Handling
+    Templates
+      Znovupoužitelné komponenty
+      Dynamický obsah
+      Manipulace s DOM
+      Přepínání obsahu
+    Routing
+      Správa URL
+      History API
+      Navigační logika
+      Integrace s prohlížečem
+    User Experience
+      Rychlá navigace
+      Plynulé přechody
+      Konzistentní stav
+      Moderní interakce
+    Performance
+      Snížený počet požadavků na server
+      Rychlejší přechody mezi stránkami
+      Efektivní využití zdrojů
+      Lepší odezva
+```
+## Přednáškový kvíz
 
-[Pre-lecture quiz](https://ff-quizzes.netlify.app/web/quiz/41)
+[Přednáškový kvíz](https://ff-quizzes.netlify.app/web/quiz/41)
 
 ### Co budete potřebovat
 
-Budeme potřebovat lokální webový server pro testování naší bankovní aplikace – nebojte se, je to jednodušší, než to zní! Pokud ho ještě nemáte nastavený, stačí nainstalovat [Node.js](https://nodejs.org) a spustit `npx lite-server` z vaší složky projektu. Tento šikovný příkaz spustí lokální server a automaticky otevře vaši aplikaci v prohlížeči.
+Budeme potřebovat lokální webový server pro testování naší bankovní aplikace – nebojte, je to jednodušší, než to zní! Pokud ještě nemáte žádný nastavený, stačí nainstalovat [Node.js](https://nodejs.org) a spustit `npx lite-server` z vašeho projektového adresáře. Tento praktický příkaz spustí lokální server a automaticky otevře vaši aplikaci v prohlížeči.
 
 ### Příprava
 
-Na vašem počítači vytvořte složku s názvem `bank` a uvnitř ní soubor `index.html`. Začneme s tímto HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code):
+Na počítači si vytvořte složku pojmenovanou `bank` s uvnitř souborem `index.html`. Začneme od tohoto HTML [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code):
 
 ```html
 <!DOCTYPE html>
@@ -62,11 +107,11 @@ Na vašem počítači vytvořte složku s názvem `bank` a uvnitř ní soubor `i
 ```
 
 **Co tento boilerplate poskytuje:**
-- **Nastavuje** strukturu HTML5 dokumentu s řádnou deklarací DOCTYPE
-- **Konfiguruje** kódování znaků jako UTF-8 pro podporu mezinárodního textu
-- **Umožňuje** responzivní design pomocí meta tagu viewport pro mobilní kompatibilitu
-- **Nastavuje** popisný název, který se zobrazí na záložce prohlížeče
-- **Vytváří** čistou sekci těla, kde budeme budovat naši aplikaci
+- **Založení** struktury HTML5 dokumentu s řádným deklarováním DOCTYPE
+- **Nastavení** kódování znaků na UTF-8 pro podporu mezinárodního textu
+- **Povoluje** responzivní design díky meta tagu viewport pro kompatibilitu s mobily
+- **Určuje** popisný název, který se zobrazuje na kartě v prohlížeči
+- **Vytváří** čistou část těla, ve které budeme průběžně budovat aplikaci
 
 > 📁 **Náhled struktury projektu**
 > 
@@ -78,43 +123,60 @@ Na vašem počítači vytvořte složku s názvem `bank` a uvnitř ní soubor `i
 > └── style.css       <!-- (Optional for future lessons) -->
 > ```
 > 
-> **Odpovědnosti souborů:**
-> - **index.html**: Obsahuje všechny šablony a poskytuje strukturu aplikace
-> - **app.js**: Řídí trasy, navigaci a správu šablon
+> **Úlohy souborů:**
+> - **index.html**: Obsahuje všechny šablony a strukturu aplikace
+> - **app.js**: Řídí směrování, navigaci a správu šablon
 > - **Šablony**: Definují uživatelské rozhraní pro přihlášení, dashboard a další obrazovky
 
 ---
 
 ## HTML šablony
 
-Šablony řeší základní problém ve webovém vývoji. Když Gutenberg vynalezl pohyblivý typ tisku ve 40. letech 15. století, uvědomil si, že místo vyřezávání celých stránek může vytvořit znovupoužitelné bloky písmen a uspořádat je podle potřeby. HTML šablony fungují na stejném principu – místo vytváření samostatných HTML souborů pro každou obrazovku definujete znovupoužitelné struktury, které lze zobrazit podle potřeby.
+Šablony řeší základní problém ve webovém vývoji. Když Gutenberg vynalezl pohyblivé tiskové znaky v 40. letech 15. století, uvědomil si, že místo vyřezávání celých stran může vytvářet znovupoužitelné bloky písmen a sestavovat je podle potřeby. HTML šablony fungují na stejném principu – místo vytváření samostatných HTML souborů pro každou obrazovku definujete znovupoužitelné struktury, které lze zobrazit podle potřeby.
 
-Představte si šablony jako návrhy pro různé části vaší aplikace. Stejně jako architekt vytvoří jeden návrh a použije ho několikrát místo toho, aby znovu kreslil identické místnosti, vytvoříme šablony jednou a použijeme je podle potřeby. Prohlížeč tyto šablony uchovává skryté, dokud je JavaScript neaktivuje.
+```mermaid
+flowchart TD
+    A["📋 Definice šablony"] --> B["💬 Skryté v DOM"]
+    B --> C["🔍 JavaScript najde šablonu"]
+    C --> D["📋 Klonování obsahu šablony"]
+    D --> E["🔗 Připojit do viditelného DOM"]
+    E --> F["👁️ Uživatel vidí obsah"]
+    
+    G["Šablona přihlášení"] --> A
+    H["Šablona panelu"] --> A
+    I["Budoucí šablony"] --> A
+    
+    style A fill:#e3f2fd
+    style D fill:#e8f5e8
+    style F fill:#fff3e0
+    style B fill:#f3e5f5
+```
+Přemýšlejte o šablonách jako o plánech pro různé části vaší aplikace. Stejně jako architekt vytvoří jeden plán a používá ho víckrát, místo aby stále znovu kreslil stejné místnosti, my vytvoříme šablony jednou a spustíme je podle potřeby. Prohlížeč tyto šablony drží skryté, dokud je JavaScript neaktivuje.
 
-Pokud chcete vytvořit více obrazovek pro webovou stránku, jedním řešením by bylo vytvořit jeden HTML soubor pro každou obrazovku, kterou chcete zobrazit. Toto řešení však přináší určité nepohodlí:
+Pokud chcete vytvořit více obrazovek pro webovou stránku, jedním řešením by bylo vytvořit jeden HTML soubor pro každou obrazovku, kterou chcete zobrazit. Toto řešení však přináší některá omezení:
 
-- Při přepínání obrazovek musíte znovu načítat celé HTML, což může být pomalé.
-- Je obtížné sdílet data mezi různými obrazovkami.
+- Musíte stále znovu načítat celé HTML při přepínání obrazovek, což může být pomalé.
+- Sdílení dat mezi různými obrazovkami je obtížné.
 
-Dalším přístupem je mít pouze jeden HTML soubor a definovat více [HTML šablon](https://developer.mozilla.org/docs/Web/HTML/Element/template) pomocí elementu `<template>`. Šablona je znovupoužitelný HTML blok, který prohlížeč nezobrazuje a musí být vytvořen za běhu pomocí JavaScriptu.
+Dalším přístupem je mít pouze jeden HTML soubor a definovat více [HTML šablon](https://developer.mozilla.org/docs/Web/HTML/Element/template) pomocí elementu `<template>`. Šablona je znovupoužitelný HTML blok, který není prohlížečem zobrazen a musí být za běhu vytvořen instancí pomocí JavaScriptu.
 
-### Pojďme to vytvořit
+### Pojďme to postavit
 
-Vytvoříme bankovní aplikaci se dvěma hlavními obrazovkami: přihlašovací stránkou a dashboardem. Nejprve přidáme zástupný prvek do těla HTML – zde se objeví všechny naše různé obrazovky:
+Vytvoříme bankovní aplikaci se dvěma hlavními obrazovkami: přihlašovací stránkou a dashboardem. Nejprve přidáme do těla našeho HTML element placeholder – tohle je místo, kde se budou zobrazovat všechny naše různé obrazovky:
 
 ```html
 <div id="app">Loading...</div>
 ```
 
-**Porozumění tomuto zástupnému prvku:**
-- **Vytváří** kontejner s ID "app", kde budou zobrazeny všechny obrazovky
-- **Zobrazuje** zprávu o načítání, dokud JavaScript neinitializuje první obrazovku
-- **Poskytuje** jediné místo pro montáž našeho dynamického obsahu
+**Co tento placeholder dělá:**
+- **Vytváří** kontejner s ID "app", kam se budou zobrazovat všechny obrazovky
+- **Zobrazuje** zprávu načítání, dokud JavaScript nespustí první obrazovku
+- **Poskytuje** jediné místo, kam se bude dynamicky vkládat obsah
 - **Umožňuje** snadné cílení z JavaScriptu pomocí `document.getElementById()`
 
-> 💡 **Tip**: Jelikož obsah tohoto prvku bude nahrazen, můžeme sem vložit zprávu o načítání nebo indikátor, který se zobrazí během načítání aplikace.
+> 💡 **Profesionální tip**: Protože obsah tohoto elementu bude nahrazen, můžeme použít zobrazení zprávy o načítání nebo indikátor, který se ukáže během načítání aplikace.
 
-Dále přidáme pod HTML šablonu pro přihlašovací stránku. Prozatím tam vložíme pouze nadpis a sekci obsahující odkaz, který použijeme k navigaci.
+Dále přidáme pod to HTML šablonu pro přihlašovací stránku. Prozatím tam vložíme jen nadpis a sekci obsahující odkaz, který využijeme pro navigaci.
 
 ```html
 <template id="login">
@@ -125,17 +187,17 @@ Dále přidáme pod HTML šablonu pro přihlašovací stránku. Prozatím tam vl
 </template>
 ```
 
-**Rozbor této přihlašovací šablony:**
-- **Definuje** šablonu s jedinečným identifikátorem "login" pro cílení z JavaScriptu
-- **Obsahuje** hlavní nadpis, který určuje značku aplikace
-- **Zahrnuje** sémantický element `<section>` pro seskupení souvisejícího obsahu
-- **Poskytuje** navigační odkaz, který přesměruje uživatele na dashboard
+**Rozebrání přihlašovací šablony:**
+- **Definuje** šablonu s unikátním ID "login" pro cílení z JavaScriptu
+- **Obsahuje** hlavní nadpis, který nastavuje značku aplikace
+- **Má** sémantický element `<section>`, který seskupuje související obsah
+- **Obsahuje** navigační odkaz, který uživatele přesměruje na dashboard
 
-Poté přidáme další HTML šablonu pro stránku dashboardu. Tato stránka bude obsahovat různé sekce:
+Pak přidáme další HTML šablonu pro stránku dashboardu. Tato stránka bude obsahovat různé sekce:
 
-- Záhlaví s názvem a odkazem na odhlášení
-- Aktuální zůstatek na bankovním účtu
-- Seznam transakcí, zobrazený v tabulce
+- Hlavičku s titulkem a odkazem na odhlášení
+- Aktuální zůstatek bankovního účtu
+- Seznam transakcí zobrazený v tabulce
 
 ```html
 <template id="dashboard">
@@ -162,73 +224,88 @@ Poté přidáme další HTML šablonu pro stránku dashboardu. Tato stránka bud
 </template>
 ```
 
-**Pochopení jednotlivých částí tohoto dashboardu:**
+**Pojďme porozumět jednotlivým částem dashboardu:**
 - **Strukturuje** stránku pomocí sémantického elementu `<header>` obsahujícího navigaci
-- **Zobrazuje** název aplikace konzistentně na všech obrazovkách pro branding
-- **Poskytuje** odkaz na odhlášení, který přesměruje zpět na přihlašovací obrazovku
-- **Ukazuje** aktuální zůstatek účtu v dedikované sekci
-- **Organizuje** data transakcí pomocí správně strukturované HTML tabulky
-- **Definuje** záhlaví tabulky pro sloupce Datum, Objekt a Částka
-- **Nechává** tělo tabulky prázdné pro dynamické vkládání obsahu později
+- **Zobrazuje** název aplikace konzistentně napříč obrazovkami pro branding
+- **Obsahuje** odkaz na odhlášení vedoucí zpět na přihlašovací obrazovku
+- **Ukazuje** aktuální zůstatek účtu v samostatné sekci
+- **Organizuje** transakční data pomocí správně strukturované HTML tabulky
+- **Definuje** hlavičky tabulky pro sloupce Datum, Položka a Částka
+- **Nechává** tělo tabulky prázdné pro pozdější dynamické naplnění
 
-> 💡 **Tip**: Při vytváření HTML šablon, pokud chcete vidět, jak budou vypadat, můžete zakomentovat řádky `<template>` a `</template>` pomocí `<!-- -->`.
+> 💡 **Profesionální tip**: Při vytváření HTML šablon, pokud chcete vidět, jak by vypadaly, můžete zakomentovat řádky `<template>` a `</template>` tak, že je obalíte do `<!-- -->`.
 
-✅ Proč si myslíte, že používáme atributy `id` na šablonách? Mohli bychom použít něco jiného, například třídy?
+### 🔄 **Pedagogická kontrola**
+**Porozumění systému šablon**: Před implementací JavaScriptu si ověřte, že rozumíte:
+- ✅ Jak se šablony liší od běžných HTML prvků
+- ✅ Proč zůstávají šablony skryté, dokud je JavaScript neaktivuje
+- ✅ Význam sémantické HTML struktury v šablonách
+- ✅ Jak šablony umožňují znovupoužitelné komponenty uživatelského rozhraní
+
+**Rychlý sebepoznávací test**: Co se stane, když odstraníte tagy `<template>` kolem vašeho HTML?
+*Odpověď: Obsah se ihned zobrazí a ztrácí funkci šablony*
+
+**Výhody architektury**: Šablony poskytují:
+- **Znovupoužitelnost**: Jedna definice, více instancí
+- **Výkon**: Bez zbytečného zpracování HTML
+- **Údržbu**: Centralizovanou strukturu UI
+- **Flexibilitu**: Dynamické přepínání obsahu
+
+✅ Proč myslíte, že používáme atributy `id` na šablonách? Můžeme použít něco jiného, třeba třídy?
 
 ## Oživení šablon pomocí JavaScriptu
 
-Nyní musíme naše šablony zprovoznit. Stejně jako 3D tiskárna vezme digitální návrh a vytvoří fyzický objekt, JavaScript vezme naše skryté šablony a vytvoří viditelné, interaktivní prvky, které uživatelé mohou vidět a používat.
+Teď musíme naše šablony zpřístupnit. Stejně jako 3D tiskárna vezme digitální plán a vytvoří fyzický objekt, JavaScript z našich skrytých šablon vytváří viditelné, interaktivní prvky, které uživatelé vidí a používají.
 
-Proces následuje tři konzistentní kroky, které tvoří základ moderního webového vývoje. Jakmile pochopíte tento vzor, rozpoznáte ho v mnoha frameworcích a knihovnách.
+Proces následuje tři konzistentní kroky, které tvoří základ moderního webového vývoje. Jakmile tento vzor pochopíte, uvidíte jej v mnoha frameworcích a knihovnách.
 
-Pokud zkusíte svůj aktuální HTML soubor v prohlížeči, uvidíte, že se zasekne na zobrazení `Loading...`. To je proto, že musíme přidat nějaký JavaScriptový kód, který instancuje a zobrazí HTML šablony.
+Pokud vyzkoušíte svůj současný HTML soubor v prohlížeči, uvidíte, že zůstane na `Loading...`. Je to proto, že musíme přidat nějaký JavaScriptový kód, který vytvoří a zobrazí HTML šablony.
 
-Instancování šablony se obvykle provádí ve 3 krocích:
+Vytvoření instance šablony se obvykle dělá ve 3 krocích:
 
-1. Získání elementu šablony v DOM, například pomocí [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
-2. Klonování elementu šablony pomocí [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
-3. Připojení k DOM pod viditelný element, například pomocí [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
+1. Najít element šablony v DOM, například pomocí [`document.getElementById`](https://developer.mozilla.org/docs/Web/API/Document/getElementById).
+2. Naklonovat element šablony pomocí [`cloneNode`](https://developer.mozilla.org/docs/Web/API/Node/cloneNode).
+3. Připojit ji do DOM pod viditelný element, například pomocí [`appendChild`](https://developer.mozilla.org/docs/Web/API/Node/appendChild).
 
 ```mermaid
 flowchart TD
-    A[🔍 Step 1: Find Template] --> B[📋 Step 2: Clone Template]
-    B --> C[🔗 Step 3: Attach to DOM]
+    A[🔍 Krok 1: Najděte šablonu] --> B[📋 Krok 2: Naklonujte šablonu]
+    B --> C[🔗 Krok 3: Připojte k DOM]
     
     A1["document.getElementById('login')"] --> A
     B1["template.content.cloneNode(true)"] --> B  
     C1["app.appendChild(view)"] --> C
     
-    C --> D[👁️ Template Visible to User]
+    C --> D[👁️ Šablona viditelná uživateli]
     
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
     style D fill:#fff3e0
 ```
+**Vizualizace procesu:**
+- **Krok 1** najde skrytou šablonu ve struktuře DOM
+- **Krok 2** vytvoří pracovní kopii, která může být bezpečně upravena
+- **Krok 3** vloží kopii do viditelné části stránky
+- **Výsledek** je funkční obrazovka, s níž může uživatel interagovat
 
-**Vizuální rozbor procesu:**
-- **Krok 1** lokalizuje skrytou šablonu ve struktuře DOM
-- **Krok 2** vytvoří pracovní kopii, kterou lze bezpečně upravit
-- **Krok 3** vloží kopii do viditelné oblasti stránky
-- **Výsledek** je funkční obrazovka, se kterou mohou uživatelé interagovat
-
-✅ Proč musíme klonovat šablonu před jejím připojením k DOM? Co si myslíte, že by se stalo, kdybychom tento krok přeskočili?
+✅ Proč je potřeba šablonu klonovat před připojením k DOM? Co myslíte, co by se stalo, kdybychom tento krok přeskočili?
 
 ### Úkol
 
-Vytvořte nový soubor s názvem `app.js` ve vaší složce projektu a importujte tento soubor do sekce `<head>` vašeho HTML:
+Vytvořte nový soubor nazvaný `app.js` ve svém projektovém adresáři a importujte tento soubor v sekci `<head>` vašeho HTML:
 
 ```html
 <script src="app.js" defer></script>
 ```
 
-**Porozumění tomuto importu skriptu:**
+**Co tento import skriptu znamená:**
 - **Propojuje** JavaScriptový soubor s naším HTML dokumentem
-- **Používá** atribut `defer`, aby zajistil, že skript běží po dokončení analýzy HTML
-- **Umožňuje** přístup ke všem DOM elementům, protože jsou plně načteny před spuštěním skriptu
-- **Dodržuje** moderní osvědčené postupy pro načítání skriptů a výkon
+- **Používá** atribut `defer`, aby se skript spustil až po dokončení parsování HTML
+- **Zajišťuje** přístup ke všem DOM prvkům, protože jsou plně načtené před spuštěním skriptu
+- **Dodržuje** moderní nejlepší praxi pro načítání skriptů a výkon
 
-Nyní v `app.js` vytvoříme novou funkci `updateRoute`:
+V souboru `app.js` vytvoříme novou funkci `updateRoute`:
 
 ```js
 function updateRoute(templateId) {
@@ -241,55 +318,70 @@ function updateRoute(templateId) {
 ```
 
 **Krok za krokem, co se děje:**
-- **Lokalizuje** element šablony pomocí jeho jedinečného ID
-- **Vytváří** hlubokou kopii obsahu šablony pomocí `cloneNode(true)`
-- **Najde** kontejner aplikace, kde bude obsah zobrazen
-- **Vyčistí** jakýkoli existující obsah z kontejneru aplikace
-- **Vloží** klonovaný obsah šablony do viditelného DOM
+- **Najde** element šablony podle unikátního ID
+- **Vytvoří** hlubokou kopii obsahu šablony pomocí `cloneNode(true)`
+- **Najde** kontejner aplikace, kam bude obsah zobrazen
+- **Vyčistí** veškerý stávající obsah kontejneru aplikace
+- **Vloží** klonovaný šablonový obsah do viditelného DOM
 
-Nyní zavolejte tuto funkci s jednou ze šablon a podívejte se na výsledek.
+Nyní zavolejte tuto funkci s některou ze šablon a podívejte se na výsledek.
 
 ```js
 updateRoute('login');
 ```
 
-**Co tento volání funkce provádí:**
+**Co tento volání funkce dělá:**
 - **Aktivuje** přihlašovací šablonu předáním jejího ID jako parametru
-- **Demonstruje**, jak programově přepínat mezi různými obrazovkami aplikace
-- **Zobrazuje** přihlašovací obrazovku místo zprávy "Loading..."
+- **Ukazuje**, jak programově přepínat mezi různými obrazovkami aplikace
+- **Zobrazuje** přihlašovací obrazovku místo zprávy „Loading...“
 
-✅ Jaký je účel tohoto kódu `app.innerHTML = '';`? Co se stane bez něj?
+✅ Jaký je účel tohoto kódu `app.innerHTML = '';`? Co by se stalo bez něj?
 
-## Vytváření tras
+## Vytváření trasování (Routes)
 
-Routing je v podstatě o propojení URL s odpovídajícím obsahem. Představte si, jak raní telefonní operátoři používali přepojovací ústředny k propojení hovorů – vzali příchozí požadavek a přesměrovali ho na správné místo. Webový routing funguje podobně, bere požadavek URL a určuje, který obsah zobrazit.
-
-Tradičně webové servery zajišťovaly toto tím, že poskytovaly různé HTML soubory pro různé URL. Protože vytváříme aplikaci s jednou stránkou, musíme tento routing zajistit sami pomocí JavaScriptu. Tento přístup nám dává větší kontrolu nad uživatelským zážitkem a výkonem.
+Směrování je v podstatě spojení URL s odpovídajícím obsahem. Představte si, jak dřívější telefonní operátorky používaly ústředny k přesměrování hovorů – přijaly příchozí požadavek a spojily jej s cílovým místem. Webové směrování funguje podobně, vezme požadavek URL a určí, jaký obsah zobrazit.
 
 ```mermaid
 flowchart LR
-    A["🌐 URL Path<br/>/dashboard"] --> B["🗺️ Routes Object<br/>Lookup"]
-    B --> C["🎯 Template ID<br/>'dashboard'"]
-    C --> D["📄 Find Template<br/>getElementById"]
-    D --> E["👁️ Display Screen<br/>Clone & Append"]
+    A["🌐 Cesta URL<br/>/dashboard"] --> B["🗺️ Objekt tras<br/>Vyhledávání"]
+    B --> C["🎯 ID šablony<br/>'dashboard'"]
+    C --> D["📌 Najít šablonu<br/>getElementById"]
+    D --> E["👁️ Zobrazit obrazovku<br/>Klonovat & připojit"]
     
     F["📍 /login"] --> G["🎯 'login'"]
-    H["📍 /unknown"] --> I["❌ Not Found"]
-    I --> J["🔄 Redirect to /login"]
+    H["📍 /unknown"] --> I["❌ Nenalezeno"]
+    I --> J["🔄 Přesměrovat na /login"]
     
     style B fill:#e3f2fd
     style E fill:#e8f5e8
     style I fill:#ffebee
     style J fill:#fff3e0
 ```
+Tradičně webové servery toto řešily tak, že pro různé URL poskytovaly různé HTML soubory. Protože nyní stavíme jednostránkovou aplikaci, musíme směrování ošetřit sami v JavaScriptu. Tento přístup nám dává větší kontrolu nad uživatelským zážitkem a výkonem.
 
-**Porozumění toku routingu:**
-- **Změny URL** spouštějí vyhledávání v naší konfiguraci tras
-- **Platné trasy** mapují na konkrétní ID šablon pro vykreslení
-- **Neplatné trasy** spouštějí záložní chování, aby se zabránilo rozbitým stavům
-- **Vykreslení šablon** následuje tříkrokový proces, který jsme se naučili dříve
+```mermaid
+flowchart LR
+    A["🌐 Cesta URL<br/>/dashboard"] --> B["🗺️ Objekt tras<br/>Vyhledání"]
+    B --> C["🎯 ID šablony<br/>'dashboard'"]
+    C --> D["📄 Najít šablonu<br/>getElementById"]
+    D --> E["👁️ Zobrazit obrazovku<br/>Klonovat a připojit"]
+    
+    F["📍 /login"] --> G["🎯 'login'"]
+    H["📍 /unknown"] --> I["❌ Nenalezeno"]
+    I --> J["🔄 Přesměrovat na /login"]
+    
+    style B fill:#e3f2fd
+    style E fill:#e8f5e8
+    style I fill:#ffebee
+    style J fill:#fff3e0
+```
+**Pochopení směrovacího toku:**
+- **Změny URL** spouštějí vyhledání v naší konfiguraci tras
+- **Platné trasy** jsou mapovány na konkrétní ID šablon pro vykreslení
+- **Neplatné trasy** spouští záložní chování, aby nedošlo k chybám
+- **Vykreslení šablony** probíhá dle tří kroků, které jsme se naučili
 
-Když mluvíme o webové aplikaci, nazýváme *Routing* záměr mapovat **URL** na konkrétní obrazovky, které by měly být zobrazeny. Na webové stránce s více HTML soubory se to děje automaticky, protože cesty k souborům se odrážejí v URL. Například s těmito soubory ve vaší složce projektu:
+Když mluvíme o webové aplikaci, směrováním nazýváme úmysl mapovat **URL** na konkrétní obrazovky, které se mají zobrazit. Na webové stránce s více HTML soubory se to děje automaticky, protože cesty k souborům se zobrazují v URL. Například se soubory ve vašem projektovém adresáři:
 
 ```
 mywebsite/index.html
@@ -297,7 +389,7 @@ mywebsite/login.html
 mywebsite/admin/index.html
 ```
 
-Pokud vytvoříte webový server s `mywebsite` jako kořen, mapování URL bude:
+Pokud vytvoříte webový server se složkou `mywebsite` jako kořenovou, bude mapování URL vypadat:
 
 ```
 https://site.com            --> mywebsite/index.html
@@ -305,11 +397,11 @@ https://site.com/login.html --> mywebsite/login.html
 https://site.com/admin/     --> mywebsite/admin/index.html
 ```
 
-Nicméně, pro naši webovou aplikaci používáme jeden HTML soubor obsahující všechny obrazovky, takže toto výchozí chování nám nepomůže. Musíme tuto mapu vytvořit ručně a aktualizovat zobrazenou šablonu pomocí JavaScriptu.
+Pro naši webovou aplikaci však používáme jediný HTML soubor obsahující všechny obrazovky, takže toto výchozí chování nám nepomůže. Musíme tuto mapu vytvořit ručně a provádět aktualizaci zobrazené šablony pomocí JavaScriptu.
 
 ### Úkol
 
-Použijeme jednoduchý objekt k implementaci [mapy](https://en.wikipedia.org/wiki/Associative_array) mezi cestami URL a našimi šablonami. Přidejte tento objekt na začátek vašeho souboru `app.js`.
+Použijeme jednoduchý objekt k implementaci [mapy](https://en.wikipedia.org/wiki/Associative_array) mezi cestami URL a našimi šablonami. Přidejte tento objekt na začátek svého souboru `app.js`.
 
 ```js
 const routes = {
@@ -318,13 +410,12 @@ const routes = {
 };
 ```
 
-**Porozumění této konfiguraci tras:**
-- **Definuje** mapování mezi cestami URL a identifikátory šablon
-- **Používá** syntaxi objektu, kde klíče jsou cesty URL a hodnoty obsahují informace o šablonách
-- **Umožňuje** snadné vyhledávání, která šablona se má zobrazit pro danou URL
-- **Poskytuje** škálovatelnou strukturu pro přidávání nových tras v budoucnu
-
-Nyní trochu upravíme funkci `updateRoute`. Místo přímého předávání `templateId` jako argumentu chceme nejprve zjistit aktuální URL a poté použít naši mapu k získání odpovídající hodnoty ID šablony. Můžeme použít [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) k získání pouze části cesty z URL.
+**Co tato konfigurace tras znamená:**
+- **Definuje** mapování mezi URL cestami a identifikátory šablon
+- **Používá** syntaxi objektu, kdy klíče jsou URL cesty a hodnoty obsahují informace o šabloně
+- **Umožňuje** snadné vyhledávání, kterou šablonu zobrazit pro danou URL
+- **Poskytuje** škálovatelnou strukturu pro přidání nových tras v budoucnu
+Nyní trochu upravme funkci `updateRoute`. Místo předávání přímo `templateId` jako argumentu chceme nejprve získat aktuální URL a pak použít naši mapu pro získání odpovídající hodnoty ID šablony. Můžeme využít [`window.location.pathname`](https://developer.mozilla.org/docs/Web/API/Location/pathname) pro získání pouze části cesty z URL.
 
 ```js
 function updateRoute() {
@@ -340,39 +431,95 @@ function updateRoute() {
 ```
 
 **Rozbor toho, co se zde děje:**
-- **Extrahuje** aktuální cestu z URL pro
-✅ Co se stane, když zadáte neznámou cestu do URL? Jak bychom to mohli vyřešit?
+- **Získá** aktuální cestu z URL v prohlížeči pomocí `window.location.pathname`
+- **Najde** odpovídající konfiguraci trasy v našem objektu routes
+- **Získá** ID šablony z konfigurace trasy
+- **Následuje** stejný proces renderování šablony jako dříve
+- **Vytvoří** dynamický systém, který reaguje na změny URL
+
+Zde jsme namapovali deklarované trasy na odpovídající šablony. Můžete si to vyzkoušet a ověřit, že to správně funguje tím, že ručně změníte URL ve vašem prohlížeči.
+
+✅ Co se stane, když zadáte neznámou cestu v URL? Jak bychom to mohli vyřešit?
 
 ## Přidání navigace
 
-S nastaveným směrováním potřebují uživatelé způsob, jak se pohybovat po aplikaci. Tradiční webové stránky načítají celé stránky při kliknutí na odkazy, ale my chceme aktualizovat URL i obsah bez obnovování stránky. To vytváří plynulejší zážitek podobný tomu, jak desktopové aplikace přepínají mezi různými pohledy.
+Po zavedení směrování uživatelé potřebují způsob, jak se v aplikaci pohybovat. Tradiční webové stránky při kliknutí na odkazy načítají celé stránky znovu, ale my chceme aktualizovat URL i obsah bez obnovování stránky. To vytváří plynulejší zážitek podobný tomu, jak desktopové aplikace přepínají mezi různými pohledy.
 
-Musíme sladit dvě věci: aktualizaci URL v prohlížeči, aby si uživatelé mohli stránky uložit do záložek a sdílet odkazy, a zobrazení odpovídajícího obsahu. Při správné implementaci to vytváří plynulou navigaci, kterou uživatelé očekávají od moderních aplikací.
+Musíme koordinovat dvě věci: aktualizaci URL v prohlížeči, aby uživatelé mohli stránky zálohovat a sdílet odkazy, a zobrazení odpovídajícího obsahu. Pokud je to správně implementováno, vzniká plynulá navigace, kterou uživatelé od moderních aplikací očekávají.
 
-> 🏗️ **Pohled na architekturu**: Komponenty navigačního systému
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant App
+    participant Template
+    
+    User->>Browser: Klikne na odkaz "Přihlášení"
+    Browser->>App: vyvolána událost onclick
+    App->>App: preventDefault() & navigace('/dashboard')
+    App->>Browser: history.pushState('/dashboard')
+    Browser->>Browser: URL se změní na /dashboard
+    App->>App: zavolána updateRoute()
+    App->>Template: Najdi a zkopíruj šablonu dashboardu
+    Template->>App: Vrátit zkopírovaný obsah
+    App->>Browser: Nahradit obsah aplikace šablonou
+    Browser->>User: Zobrazit obrazovku dashboardu
+    
+    Note over User,Template: Uživatelské kliknutí na tlačítko zpět v prohlížeči
+    
+    User->>Browser: Klikne na tlačítko zpět
+    Browser->>Browser: Historie se vrátí na /login
+    Browser->>App: událost popstate vyvolána
+    App->>App: automaticky zavolána updateRoute()
+    App->>Template: Najdi a zkopíruj šablonu přihlášení
+    Template->>App: Vrátit zkopírovaný obsah
+    App->>Browser: Nahradit obsah aplikace šablonou
+    Browser->>User: Zobrazit přihlašovací obrazovku
+```
+### 🔄 **Pedagogická kontrola**
+**Architektura Single-Page Application**: Ověřte si pochopení celého systému:
+- ✅ Jak se klientské směrování liší od tradičního serverového směrování?
+- ✅ Proč je History API nezbytné pro správnou navigaci SPA?
+- ✅ Jak šablony umožňují dynamický obsah bez obnovování stránky?
+- ✅ Jakou roli hraje zpracování událostí při přesměrování navigace?
+
+**Integrace systému**: Vaše SPA prokazuje:
+- **Správa šablon**: znovupoužitelné UI komponenty s dynamickým obsahem
+- **Klientské směrování**: správa URL bez požadavků na server
+- **Architektura založená na událostech**: reakce na navigaci a uživatelské interakce
+- **Integrace s prohlížečem**: správná podpora historie a tlačítek zpět/vpřed
+- **Optimalizace výkonu**: rychlé přechody a snížená zátěž serveru
+
+**Profesionální vzory**: Implementovali jste:
+- **Oddělení modelu a zobrazení**: šablony oddělené od aplikační logiky
+- **Správa stavu**: synchronizace stavu URL a zobrazeného obsahu
+- **Postupné vylepšování**: JavaScript rozšiřuje základní funkčnost HTML
+- **Uživatelská zkušenost**: plynulá, aplikaci podobná navigace bez obnovení stránky
+
+> � **Architektonický pohled**: Komponenty navigačního systému
 >
 > **Co vytváříte:**
-> - **🔄 Správa URL**: Aktualizuje adresní řádek prohlížeče bez obnovování stránky
-> - **📋 Systém šablon**: Dynamicky mění obsah na základě aktuální trasy  
-> - **📚 Integrace historie**: Udržuje funkčnost tlačítek zpět/vpřed v prohlížeči
-> - **🛡️ Zpracování chyb**: Elegantní řešení pro neplatné nebo chybějící trasy
+> - **🔄 Správa URL**: aktualizuje adresní řádek prohlížeče bez obnovy stránky
+> - **📋 Systém šablon**: dynamicky mění obsah podle aktuální trasy  
+> - **📚 Integrace historie**: zachovává podporu tlačítek zpět/vpřed v prohlížeči
+> - **🛡️ Zpracování chyb**: elegantní záložní postupy pro neplatné nebo chybějící trasy
 >
 > **Jak komponenty spolupracují:**
-> - **Naslouchají** událostem navigace (kliknutí, změny historie)
-> - **Aktualizují** URL pomocí History API
-> - **Zobrazují** odpovídající šablonu pro novou trasu
-> - **Udržují** plynulý uživatelský zážitek
+> - **Naslouchá** navigačním událostem (kliknutí, změny historie)
+> - **Aktualizuje** URL pomocí History API
+> - **Zobrazuje** odpovídající šablonu pro novou trasu
+> - **Udržuje** plynulý uživatelský zážitek
 
-Dalším krokem pro naši aplikaci je přidání možnosti navigace mezi stránkami bez nutnosti ruční změny URL. To zahrnuje dvě věci:
+Dalším krokem naší aplikace je přidat možnost navigovat mezi stránkami bez nutnosti ručně měnit URL. Znamená to dvě věci:
 
-  1. Aktualizaci aktuální URL
-  2. Aktualizaci zobrazené šablony na základě nové URL
+  1. Aktualizovat aktuální URL
+  2. Aktualizovat zobrazenou šablonu dle nové URL
 
-Druhou část jsme již vyřešili pomocí funkce `updateRoute`, takže musíme zjistit, jak aktualizovat aktuální URL.
+O druhé části jsme už se postarali funkcí `updateRoute`, takže teď musíme přijít na to, jak změnit aktuální URL.
 
-Budeme muset použít JavaScript, konkrétně [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), který umožňuje aktualizovat URL a vytvořit nový záznam v historii prohlížení, aniž by se HTML znovu načítalo.
+Budeme muset použít JavaScript, konkrétně [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), která umožňuje aktualizovat URL a vytvořit novou položku v historii prohlížeče, aniž by se stránka znovu načetla.
 
-> ⚠️ **Důležitá poznámka**: Zatímco HTML prvek kotvy [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) lze použít samostatně k vytvoření hypertextových odkazů na různé URL, ve výchozím nastavení způsobí, že prohlížeč znovu načte HTML. Je nutné tomuto chování zabránit při zpracování směrování pomocí vlastního JavaScriptu, použitím funkce preventDefault() na události kliknutí.
+> ⚠️ **Důležitá poznámka**: Zatímco HTML prvek kotvy [`<a href>`](https://developer.mozilla.org/docs/Web/HTML/Element/a) lze použít samostatně pro vytváření hypertextových odkazů na různé URL, při kliknutí způsobí standardní obnovu stránky. Je nutné toto chování zabránit při zpracování směrování pomocí vlastního JavaScriptu pomocí funkce preventDefault() na klikací události.
 
 ### Úkol
 
@@ -386,14 +533,14 @@ function navigate(path) {
 ```
 
 **Porozumění této navigační funkci:**
-- **Aktualizuje** URL prohlížeče na novou cestu pomocí `history.pushState`
-- **Přidává** nový záznam do zásobníku historie prohlížeče pro správnou podporu tlačítek zpět/vpřed
-- **Spouští** funkci `updateRoute()` pro zobrazení odpovídající šablony
-- **Udržuje** zážitek z aplikace na jedné stránce bez obnovování stránky
+- **Aktualizuje** URL v prohlížeči na novou cestu pomocí `history.pushState`
+- **Přidává** novou položku do zásobníku historie pro správnou podporu tlačítek zpět/vpřed
+- **Spustí** funkci `updateRoute()` pro zobrazení odpovídající šablony
+- **Udržuje** zážitek single-page aplikace bez obnovení stránky
 
-Tato metoda nejprve aktualizuje aktuální URL na základě zadané cesty, poté aktualizuje šablonu. Vlastnost `window.location.origin` vrací kořen URL, což nám umožňuje rekonstruovat kompletní URL ze zadané cesty.
+Tato metoda nejprve aktualizuje aktuální URL podle zadané cesty, pak aktualizuje šablonu. Vlastnost `window.location.origin` vrací kořenovou URL, což nám umožňuje sestavit kompletní URL z předané cesty.
 
-Nyní, když máme tuto funkci, můžeme se postarat o problém, který máme, pokud cesta neodpovídá žádné definované trase. Upravením funkce `updateRoute` přidáme záložní řešení na jednu z existujících tras, pokud nenajdeme shodu.
+Protože nyní máme tuto funkci, můžeme se postarat o problém, který nastává, pokud cesta neodpovídá žádné definované trase. Upravením funkce `updateRoute` přidáme záložní řešení pro případ, kdy nenajdeme shodu.
 
 ```js
 function updateRoute() {
@@ -414,13 +561,13 @@ function updateRoute() {
 
 **Klíčové body k zapamatování:**
 - **Kontroluje**, zda existuje trasa pro aktuální cestu
-- **Přesměrovává** na přihlašovací stránku při přístupu na neplatnou trasu
-- **Poskytuje** záložní mechanismus, který zabraňuje nefunkční navigaci
-- **Zajišťuje**, že uživatelé vždy vidí platnou obrazovku, i při nesprávných URL
+- **Přesměruje** na přihlašovací stránku při přístupu na neplatnou trasu
+- **Poskytuje** záložní mechanismus, který zabraňuje rozbití navigace
+- **Zajišťuje**, že uživatel vždy vidí platnou obrazovku, i při nesprávných URL
 
-Pokud nelze najít trasu, nyní přesměrujeme na stránku `login`.
+Pokud trasa nebude nalezena, nyní přesměrujeme na stránku `login`.
 
-Nyní vytvoříme funkci pro získání URL při kliknutí na odkaz a zabránění výchozímu chování prohlížeče:
+Teď vytvořme funkci, která získá URL při kliknutí na odkaz a zabrání výchozímu chování prohlížeče:
 
 ```js
 function onLinkClick(event) {
@@ -429,11 +576,11 @@ function onLinkClick(event) {
 }
 ```
 
-**Rozbor tohoto obslužného programu kliknutí:**
-- **Zabraňuje** výchozímu chování prohlížeče při kliknutí na odkaz pomocí `preventDefault()`
-- **Extrahuje** cílovou URL z kliknutého prvku odkazu
-- **Volá** naši vlastní navigační funkci místo obnovování stránky
-- **Udržuje** plynulý zážitek z aplikace na jedné stránce
+**Rozbor tohoto zpracování kliknutí:**
+- **Zabrání** výchozímu chování prohlížeče u odkazu pomocí `preventDefault()`
+- **Získá** cílovou URL z kliknutého prvku odkazu
+- **Volá** naši vlastní funkci pro navigaci místo načtení stránky znovu
+- **Udržuje** plynulý zážitek single-page aplikace
 
 ```html
 <a href="/dashboard" onclick="onLinkClick(event)">Login</a>
@@ -441,23 +588,23 @@ function onLinkClick(event) {
 <a href="/login" onclick="onLinkClick(event)">Logout</a>
 ```
 
-**Co tento onclick binding zajišťuje:**
+**Co tento přiřazený onclick celý dělá:**
 - **Spojuje** každý odkaz s naším vlastním navigačním systémem
-- **Předává** událost kliknutí naší funkci `onLinkClick` pro zpracování
-- **Umožňuje** plynulou navigaci bez obnovování stránky
-- **Udržuje** správnou strukturu URL, kterou mohou uživatelé uložit do záložek nebo sdílet
+- **Předává** klikací událost do naší funkce `onLinkClick` pro zpracování
+- **Umožňuje** plynulou navigaci bez znovunačtení stránky
+- **Udržuje** správnou strukturu URL, kterou mohou uživatelé zálohovat nebo sdílet
 
-Atribut [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) váže událost `click` na JavaScriptový kód, zde volání funkce `navigate()`.
+Atribut [`onclick`](https://developer.mozilla.org/docs/Web/API/GlobalEventHandlers/onclick) přiřazuje událost kliknutí k JavaScriptovému kódu, zde volání funkce `navigate()`.
 
-Zkuste kliknout na tyto odkazy, nyní byste měli být schopni navigovat mezi různými obrazovkami vaší aplikace.
+Vyzkoušejte kliknutí na tyto odkazy, nyní byste měli být schopni přecházet mezi různými obrazovkami aplikace.
 
-✅ Metoda `history.pushState` je součástí standardu HTML5 a je implementována ve [všech moderních prohlížečích](https://caniuse.com/?search=pushState). Pokud vytváříte webovou aplikaci pro starší prohlížeče, existuje trik, který můžete použít místo tohoto API: použití [hashu (`#`)](https://en.wikipedia.org/wiki/URI_fragment) před cestou umožňuje implementovat směrování, které funguje s běžnou navigací pomocí kotvy a neobnovuje stránku, protože jeho účelem bylo vytvořit interní odkazy na stránce.
+✅ Metoda `history.pushState` je součástí standardu HTML5 a je implementována ve [všech moderních prohlížečích](https://caniuse.com/?search=pushState). Pokud vytváříte webovou aplikaci pro starší prohlížeče, existuje trik, který můžete použít místo tohoto API: využitím [hash (`#`)](https://en.wikipedia.org/wiki/URI_fragment) před cestou můžete implementovat směrování, které funguje s běžnou navigací pomocí kotvy a stránka se nepřenačítá, protože hash byl původně určen pro vytváření vnitřních odkazů uvnitř stránky.
 
-## Zajištění funkčnosti tlačítek zpět a vpřed
+## Jak fungují tlačítka Zpět a Vpřed
 
-Tlačítka zpět a vpřed jsou základními prvky webového prohlížení, podobně jako když kontrolní středisko NASA může přezkoumat předchozí stavy systému během vesmírných misí. Uživatelé očekávají, že tato tlačítka budou fungovat, a když nefungují, narušuje to očekávaný zážitek z prohlížení.
+Tlačítka zpět a vpřed jsou základem procházení webu, podobně jako operátoři misí NASA mohou během vesmírných misí zkontrolovat předchozí stavy systému. Uživatelé od těchto tlačítek očekávají funkčnost a pokud nefungují, narušuje to očekávané chování při prohlížení.
 
-Naše aplikace na jedné stránce potřebuje další konfiguraci, aby to podporovala. Prohlížeč udržuje zásobník historie (který jsme přidávali pomocí `history.pushState`), ale když uživatelé procházejí touto historií, naše aplikace musí reagovat aktualizací zobrazeného obsahu.
+Naše single-page aplikace potřebuje další konfiguraci, aby to podporovala. Prohlížeč si uchovává zásobník historie (do kterého jsme přidávali pomocí `history.pushState`), ale když uživatel změní historii, naše aplikace musí reagovat aktualizací zobrazeného obsahu.
 
 ```mermaid
 sequenceDiagram
@@ -466,47 +613,46 @@ sequenceDiagram
     participant App
     participant Template
     
-    User->>Browser: Clicks "Login" link
-    Browser->>App: onclick event triggered
-    App->>App: preventDefault() & navigate('/dashboard')
+    User->>Browser: Klikne na odkaz "Přihlásit se"
+    Browser->>App: aktivována událost onclick
+    App->>App: preventDefault() & navigace('/dashboard')
     App->>Browser: history.pushState('/dashboard')
-    Browser->>Browser: URL updates to /dashboard
-    App->>App: updateRoute() called
-    App->>Template: Find & clone dashboard template
-    Template->>App: Return cloned content
-    App->>Browser: Replace app content with template
-    Browser->>User: Display dashboard screen
+    Browser->>Browser: URL se aktualizuje na /dashboard
+    App->>App: zavolá se updateRoute()
+    App->>Template: Najdi a naklonuj šablonu dashboardu
+    Template->>App: Vrátí nakloněný obsah
+    App->>Browser: Nahradí obsah aplikace šablonou
+    Browser->>User: Zobrazí obrazovku dashboardu
     
-    Note over User,Template: User clicks browser back button
+    Note over User,Template: Uživatel klikne na tlačítko zpět v prohlížeči
     
-    User->>Browser: Clicks back button
-    Browser->>Browser: History moves back to /login
-    Browser->>App: popstate event fired
-    App->>App: updateRoute() called automatically
-    App->>Template: Find & clone login template
-    Template->>App: Return cloned content
-    App->>Browser: Replace app content with template
-    Browser->>User: Display login screen
+    User->>Browser: Klikne na tlačítko zpět
+    Browser->>Browser: Historie se posune zpět na /login
+    Browser->>App: vyvolána událost popstate
+    App->>App: updateRoute() zavoláno automaticky
+    App->>Template: Najdi a naklonuj šablonu přihlášení
+    Template->>App: Vrátí nakloněný obsah
+    App->>Browser: Nahradí obsah aplikace šablonou
+    Browser->>User: Zobrazí obrazovku přihlášení
 ```
-
-**Klíčové interakční body:**
-- **Akce uživatele** spouští navigaci kliknutím nebo tlačítky prohlížeče
-- **Aplikace zachytává** kliknutí na odkazy, aby zabránila obnovování stránky
+**Hlavní body interakce:**
+- **Uživatelské akce** spouští navigaci kliknutím nebo tlačítky v prohlížeči
+- **Aplikace zachytí** kliknutí na odkazy, aby zabránila obnově stránky
 - **History API** spravuje změny URL a zásobník historie prohlížeče
 - **Šablony** poskytují strukturu obsahu pro každou obrazovku
-- **Posluchači událostí** zajišťují, že aplikace reaguje na všechny typy navigace
+- **Naslouchající události** zajišťují, že aplikace reaguje na všechny typy navigace
 
-Použití `history.pushState` vytváří nové záznamy v historii navigace prohlížeče. Můžete to zkontrolovat podržením *tlačítka zpět* ve vašem prohlížeči, mělo by se zobrazit něco takového:
+Použití `history.pushState` vytváří nové položky v historii prohlížeče. Můžete to zkontrolovat podržením *tlačítka zpět* ve vašem prohlížeči, mělo by se zobrazit něco takového:
 
-![Screenshot historie navigace](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.cs.png)
+![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.cs.png)
 
-Pokud několikrát kliknete na tlačítko zpět, uvidíte, že se aktuální URL mění a historie se aktualizuje, ale stále se zobrazuje stejná šablona.
+Pokud několikrát kliknete na tlačítko zpět, uvidíte, že se aktuální URL změní a historie se aktualizuje, ale stále se zobrazuje stejná šablona.
 
-To je proto, že aplikace neví, že je potřeba volat `updateRoute()` pokaždé, když se historie změní. Pokud se podíváte na [dokumentaci k `history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), můžete vidět, že pokud se stav změní - což znamená, že jsme se přesunuli na jinou URL - je spuštěna událost [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Použijeme ji k vyřešení tohoto problému.
+Je to proto, že aplikace neví, že musí volat `updateRoute()` pokaždé, když se změní historie. Pokud si prohlédnete dokumentaci k [`history.pushState`](https://developer.mozilla.org/docs/Web/API/History/pushState), uvidíte, že pokud se změní stav - tedy přejdeme na jinou URL - spustí se událost [`popstate`](https://developer.mozilla.org/docs/Web/API/Window/popstate_event). Tu použijeme k opravě tohoto problému.
 
 ### Úkol
 
-Abychom zajistili, že zobrazená šablona bude aktualizována při změně historie prohlížeče, připojíme novou funkci, která volá `updateRoute()`. Uděláme to na konci našeho souboru `app.js`:
+Aby se zajistilo, že se zobrazená šablona aktualizuje při změně historie prohlížeče, přidáme novou funkci, která zavolá `updateRoute()`. Uděláme to na konci našeho souboru `app.js`:
 
 ```js
 window.onpopstate = () => updateRoute();
@@ -514,63 +660,173 @@ updateRoute();
 ```
 
 **Porozumění této integraci historie:**
-- **Naslouchá** událostem `popstate`, které nastávají, když uživatelé navigují pomocí tlačítek prohlížeče
-- **Používá** šipkovou funkci pro stručnou syntaxi obslužné rutiny událostí
-- **Automaticky volá** `updateRoute()` pokaždé, když se změní stav historie
+- **Naslouchá** události `popstate`, která nastává při navigaci tlačítky v prohlížeči
+- **Používá** šipkovou funkci pro stručný zápis obsluhy události
+- **Automaticky volá** `updateRoute()` při každé změně stavu historie
 - **Inicializuje** aplikaci voláním `updateRoute()` při prvním načtení stránky
-- **Zajišťuje**, že se správná šablona zobrazí bez ohledu na to, jak uživatelé navigují
+- **Zajišťuje**, že se správná šablona vždy zobrazí bez ohledu na způsob navigace
 
-> 💡 **Tip**: Použili jsme [šipkovou funkci](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) k deklaraci naší obslužné rutiny události `popstate` pro stručnost, ale stejnou funkci by splnila i běžná funkce.
+> 💡 **Profesionální tip**: Zde jsme použili [šipkovou funkci](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) pro deklaraci obsluhy události `popstate` pro stručnost, ale fungovala by stejným způsobem i běžná funkce.
 
-Zde je video o šipkových funkcích:
+Zde je připomínkové video o šipkových funkcích:
 
-[![Šipkové funkce](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Šipkové funkce")
+[![Arrow Functions](https://img.youtube.com/vi/OP6eEbOj2sc/0.jpg)](https://youtube.com/watch?v=OP6eEbOj2sc "Arrow Functions")
 
 > 🎥 Klikněte na obrázek výše pro video o šipkových funkcích.
 
-Nyní zkuste použít tlačítka zpět a vpřed ve vašem prohlížeči a zkontrolujte, že se zobrazená trasa tentokrát správně aktualizuje.
+Nyní zkuste použít tlačítka zpět a vpřed ve vašem prohlížeči a ověřte, že se tentokrát správně aktualizuje zobrazená trasa.
+
+### ⚡ **Co můžete stihnout za příštích 5 minut**
+- [ ] Otestujte navigaci ve své bankovní aplikaci pomocí tlačítek zpět/vpřed v prohlížeči
+- [ ] Zkuste ručně zadat různé URL do adresního řádku a testovat směrování
+- [ ] Otevřete vývojářské nástroje a prozkoumejte, jak jsou šablony klonovány do DOM
+- [ ] Experimentujte s přidáním console.log pro sledování průběhu směrování
+
+### 🎯 **Co můžete dosáhnout během tohoto hodiny**
+- [ ] Dokončit kvíz po lekci a pochopit koncepty architektury SPA
+- [ ] Přidat CSS stylování, aby vaše bankovní aplikace vypadala profesionálně
+- [ ] Implementovat výzvu stránky chyby 404 s patřičnou obsluhou chyb
+- [ ] Vytvořit výzvu s stránkou s kredity a další funkcionalitou směrování
+- [ ] Přidat stavy načítání a přechody mezi přepínáním šablon
+
+### 📅 **Váš týdenní vývojový plán SPA**
+- [ ] Dokončit celou bankovní aplikaci s formuláři, správou dat a perzistencí
+- [ ] Přidat pokročilé funkce směrování jako parametry tras a vnořené trasy
+- [ ] Implementovat strážce navigace a směrování na základě ověřování uživatele
+- [ ] Vytvořit znovupoužitelné komponenty šablon a knihovnu komponent
+- [ ] Přidat animace a přechody pro hladší uživatelský zážitek
+- [ ] Nasadit SPA na hostingovou platformu a správně nakonfigurovat směrování
+
+### 🌟 **Měsíční cesta k ovládnutí frontendové architektury**
+- [ ] Stavět komplexní SPA s moderními frameworky jako React, Vue nebo Angular
+- [ ] Naučit se pokročilé vzory správy stavu a používat knihovny
+- [ ] Ovládnout nástroje pro sestavení a vývojové workflow pro SPA
+- [ ] Implementovat funkce Progressive Web App a offline režim
+- [ ] Studium optimalizace výkonu pro rozsáhlé SPA
+- [ ] Přispívat do open source projektů SPA a sdílet znalosti
+
+## 🎯 Časová osa pro zvládnutí vaší Single-Page aplikace
+
+```mermaid
+timeline
+    title Vývoj SPA & Učení moderní webové architektury
+    
+    section Základy (20 minut)
+        Šablonové systémy: HTML šablonové prvky
+                         : Manipulace s DOM
+                         : Klonování obsahu
+                         : Dynamické vykreslování
+        
+    section Základy směrování (30 minut)
+        Navigace na straně klienta: Správa URL
+                                    : History API
+                                    : Mapování cest
+                                    : Zpracování událostí
+        
+    section Uživatelský zážitek (40 minut)
+        Vylepšení navigace: Integrace prohlížeče
+                           : Podpora tlačítka zpět
+                           : Zpracování chyb
+                           : Plynulé přechody
+        
+    section Architektonické vzory (50 minut)
+        Profesionální SPA: Systémy komponent
+                         : Správa stavu
+                         : Optimalizace výkonu
+                         : Chybové hranice
+        
+    section Pokročilé techniky (1 týden)
+        Integrace rámců: React Router
+                        : Vue Router
+                        : Angular Router
+                        : Stavové knihovny
+        
+    section Produkční dovednosti (1 měsíc)
+        Vývoj pro podniky: Systémy sestavení
+                          : Testovací strategie
+                          : Nasazovací pipeline
+                          : Monitorování výkonu
+```
+### 🛠️ Shrnutí vašeho nástroje pro vývoj SPA
+
+Po dokončení této lekce nyní ovládáte:
+- **Architekturu šablon**: Znovupoužitelné HTML komponenty s dynamickým vykreslováním obsahu
+- **Klientské směrování**: Správa URL a navigace bez obnovení stránky
+- **Integraci s prohlížečem**: Použití History API a podpora tlačítek zpět/vpřed
+- **Systémy založené na událostech**: Zpracování navigace a uživatelských interakcí
+- **Manipulaci s DOM**: Klonování šablon, přepínání obsahu a správa prvků
+- **Zpracování chyb**: Elegantní záložní řešení pro neplatné trasy a chybějící obsah
+- **Výkonové vzory**: Efektivní načítání a vykreslování obsahu
+
+**Praktické použití**: Vaše dovednosti ve vývoji SPA lze přímo aplikovat v:
+- **Moderních webových aplikacích**: vývoj v Reactu, Vue, Angular a dalších frameworcích
+- **Progressive Web Apps**: offline schopné aplikace s aplikaci podobným zážitkem
+- **Podnikových dashboardech**: komplexní podnikové aplikace s více pohledy
+- **E-commerce platformách**: katalogy produktů, nákupní košíky a procesy objednávky
+- **Správě obsahu**: dynamické vytváření a úprava obsahu
+- **Mobilním vývoji**: hybridní aplikace využívající webové technologie
+
+**Získané profesionální dovednosti**: Nyní umíte:
+- **Navrhnout** jednorázové aplikace s řádným oddělením odpovědností  
+- **Implementovat** systémy směrování na straně klienta, které škálují s komplexností aplikace  
+- **Ladit** složité navigační toky pomocí nástrojů pro vývojáře prohlížeče  
+- **Optimalizovat** výkon aplikace efektivní správou šablon  
+- **Návrh** uživatelských zážitků, které působí nativně a responsivně  
+
+**Osvojené koncepty frontendového vývoje**:  
+- **Architektura komponent**: Opakovaně použitelné vzory UI a systémy šablon  
+- **Synchronizace stavu**: Správa stavu URL a historie prohlížeče  
+- **Programování řízené událostmi**: Zpracování uživatelských interakcí a navigace  
+- **Optimalizace výkonu**: Efektivní manipulace s DOM a načítání obsahu  
+- **Návrh uživatelského zážitku**: Plynulé přechody a intuitivní navigace  
+
+**Další úroveň**: Jste připraveni prozkoumat moderní frontendové frameworky, pokročilou správu stavu nebo vytvořit složité podnikové aplikace!
+
+🌟 **Ocenění získáno**: Vybudovali jste profesionální základ jednorázové aplikace s moderními vzory webové architektury!
 
 ---
 
-## Výzva GitHub Copilot Agent 🚀
+## Výzva GitHub Copilot Agenta 🚀
 
-Použijte režim Agent k dokončení následující výzvy:
+Použijte režim Agenta k dokončení následující výzvy:
 
-**Popis:** Vylepšete bankovní aplikaci implementací zpracování chyb a šablony stránky 404 pro neplatné trasy, čímž zlepšíte uživatelský zážitek při navigaci na neexistující stránky.
+**Popis:** Vylepšete bankovní aplikaci implementací zpracování chyb a šablony stránky 404 pro neplatné cesty, čímž zlepšíte uživatelský zážitek při navigaci na neexistující stránky.
 
-**Zadání:** Vytvořte novou HTML šablonu s ID "not-found", která zobrazuje uživatelsky přívětivou stránku chyby 404 s designem. Poté upravte logiku směrování v JavaScriptu tak, aby se tato šablona zobrazila, když uživatelé navigují na neplatné URL, a přidejte tlačítko "Jít na domovskou stránku", které přesměruje zpět na přihlašovací stránku.
+**Úkol:** Vytvořte novou HTML šablonu s id "not-found", která zobrazuje uživatelsky přívětivou stránku chyby 404 se stylováním. Poté změňte logiku směrování v JavaScriptu tak, aby tato šablona byla zobrazena, když uživatelé navigují na neplatné URL, a přidejte tlačítko „Jít domů“, které přesměruje zpět na stránku přihlášení.
 
-Více o [režimu agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) se dozvíte zde.
+Více o [režimu agenta](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) se dozvíte zde.
 
 ## 🚀 Výzva
 
-Přidejte novou šablonu a trasu pro třetí stránku, která zobrazuje informace o autorech této aplikace.
+Přidejte novou šablonu a trasu pro třetí stránku, která zobrazuje kredity této aplikace.
 
-**Cíle výzvy:**
-- **Vytvořte** novou HTML šablonu s odpovídající strukturou obsahu
-- **Přidejte** novou trasu do vašeho konfiguračního objektu tras
-- **Zahrňte** navigační odkazy na a z stránky s informacemi o autorech
-- **Otestujte**, že veškerá navigace funguje správně s historií prohlížeče
+**Cíle výzvy:**  
+- **Vytvořit** novou HTML šablonu s odpovídající strukturou obsahu  
+- **Přidat** novou trasu do objektu konfigurace tras  
+- **Zahrnout** navigační odkazy tam i zpět na stránku kreditů  
+- **Otestovat** správnou funkčnost navigace s historií prohlížeče  
 
 ## Kvíz po přednášce
 
 [Kvíz po přednášce](https://ff-quizzes.netlify.app/web/quiz/42)
 
-## Přehled & Samostudium
+## Přehled a samostudium
 
-Směrování je jednou z překvapivě složitých částí vývoje webu, zejména jak se web přesouvá od chování obnovování stránky k aplikacím na jedné stránce. Přečtěte si něco o [tom, jak služba Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) řeší směrování. Dokážete vysvětlit, proč jsou některá rozhodnutí popsaná v tomto dokumentu nezbytná?
+Směrování je jednou z překvapivě složitých částí webového vývoje, zejména když web přechází od chování obnovy stránky k obnovování stránek jednorázových aplikací. Přečtěte si něco o tom, [jak služba Azure Static Web App](https://docs.microsoft.com/azure/static-web-apps/routes/?WT.mc_id=academic-77807-sagibbon) řeší směrování. Dokážete vysvětlit, proč jsou některá rozhodnutí popsaná v tomto dokumentu nezbytná?
 
-**Další zdroje k učení:**
-- **Prozkoumejte**, jak populární frameworky jako React Router a Vue Router implementují směrování na straně klienta
-- **Prozkoumejte** rozdíly mezi směrováním založeným na hashi a směrováním pomocí History API
-- **Zjistěte** více o server-side rendering (SSR) a jak ovlivňuje strategie směrování
-- **Prozkoumejte**, jak progresivní webové aplikace (PWAs) řeší směrování a navigaci
+**Další zdroje pro učení:**  
+- **Prozkoumat**, jak populární frameworky jako React Router a Vue Router implementují směrování na straně klienta  
+- **Prozkoumat** rozdíly mezi směrováním založeným na hashe a směrováním pomocí historie API  
+- **Naučit se** o serverovém renderování (SSR) a jeho vlivu na strategie směrování  
+- **Prozkoumat**, jak progresivní webové aplikace (PWA) řeší směrování a navigaci  
 
 ## Zadání
 
-[Vylepšete směrování](assignment.md)
+[Zlepšit směrování](assignment.md)
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za závazný zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nepřebíráme odpovědnost za případná nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

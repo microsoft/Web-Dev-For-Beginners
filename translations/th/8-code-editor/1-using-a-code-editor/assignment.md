@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **เขียน**ข้อความ commit: "Add initial HTML structure"
 5. **คลิก** "Commit new file" เพื่อบันทึกการเปลี่ยนแปลงของคุณ
 
-![สร้างไฟล์เริ่มต้นบน GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.th.png)
+![สร้างไฟล์เริ่มต้นบน GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.th.png)
 
 **สิ่งที่การตั้งค่าเริ่มต้นนี้ทำได้:**
 - **สร้าง**โครงสร้างเอกสาร HTML5 ที่เหมาะสมด้วยองค์ประกอบเชิงความหมาย
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **ตัวบ่งชี้ความสำเร็จ**: คุณควรเห็นไฟล์โปรเจกต์ของคุณในแถบด้านข้าง Explorer และ `index.html` พร้อมสำหรับการแก้ไขในพื้นที่เอดิเตอร์หลัก
 
-![โปรเจกต์โหลดใน VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.th.png)
+![โปรเจกต์โหลดใน VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.th.png)
 
 **สิ่งที่คุณจะเห็นในอินเทอร์เฟซ:**
 - **แถบด้านข้าง Explorer**: **แสดง**ไฟล์และโครงสร้างโฟลเดอร์ของ repository ของคุณ
@@ -448,7 +448,7 @@ li:before {
 **ผลลัพธ์ทันทีหลังการติดตั้ง:**
 เมื่อ CodeSwing ถูกติดตั้ง คุณจะเห็นการดูตัวอย่างสดของเว็บไซต์เรซูเม่ของคุณปรากฏในเอดิเตอร์ สิ่งนี้ช่วยให้คุณเห็นว่าเว็บไซต์ของคุณมีลักษณะอย่างไรในขณะที่คุณทำการเปลี่ยนแปลง
 
-![การขยาย CodeSwing แสดงการดูตัวอย่างสด](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.th.png)
+![การขยาย CodeSwing แสดงการดูตัวอย่างสด](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.th.png)
 
 **การทำความเข้าใจอินเทอร์เฟซที่ปรับปรุง:**
 - **มุมมองแยก**: **แสดง**โค้ดของคุณด้านหนึ่งและการดูตัวอย่างสดอีกด้านหนึ่ง

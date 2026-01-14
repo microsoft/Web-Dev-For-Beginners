@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Päivitysprosessi monisivuisessa sovelluksessa](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.fi.png)
+![Päivitysprosessi monisivuisessa sovelluksessa](../../../../translated_images/mpa.7f7375a1a2d4aa77.fi.png)
 
 **Miksi tämä lähestymistapa tuntui kömpelöltä:**
 - Jokainen klikkaus tarkoitti koko sivun uudelleenrakentamista
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Päivitysprosessi yksisivuisessa sovelluksessa](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.fi.png)
+![Päivitysprosessi yksisivuisessa sovelluksessa](../../../../translated_images/spa.268ec73b41f992c2.fi.png)
 
 **Miksi SPA:t tuntuvat niin paljon paremmilta:**
 - Vain ne osat, jotka oikeasti muuttuivat, päivitetään (fiksua, eikö?)
@@ -515,7 +515,7 @@ if (data.error) {
 
 Nyt kun testaat virheellisellä tilillä, näet hyödyllisen virheilmoituksen suoraan sivulla!
 
-![Näyttökuva, jossa virheilmoitus näkyy kirjautumisen aikana](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.fi.png)
+![Näyttökuva, jossa virheilmoitus näkyy kirjautumisen aikana](../../../../translated_images/login-error.416fe019b36a6327.fi.png)
 
 #### Vaihe 4: Ole inklusiivinen saavutettavuuden suhteen
 
@@ -928,7 +928,7 @@ Valmis viemään pankkisovelluksesi seuraavalle tasolle? Tehdään siitä jotain
 
 Tältä viimeistelty kojelauta voisi näyttää:
 
-![Esimerkkikuva viimeistellystä kojelaudasta tyylittelyn jälkeen](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.fi.png)
+![Esimerkkikuva viimeistellystä kojelaudasta tyylittelyn jälkeen](../../../../translated_images/screen2.123c82a831a1d14a.fi.png)
 
 Sinun ei tarvitse kopioida tätä täysin - käytä sitä inspiraationa ja tee siitä oman näköisesi!
 

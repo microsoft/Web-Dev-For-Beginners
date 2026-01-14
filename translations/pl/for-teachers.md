@@ -42,10 +42,10 @@ Ten program nauczania zawiera pakiety do importowania dla popularnych przepływ�
   - Moodle Cloud ma ograniczone wsparcie dla Common Cartridge. Preferuj powyższy plik Moodle, który można również przesłać do Canvas.
   - Po zaimportowaniu przejrzyj moduły, terminy i ustawienia quizów, aby dopasować je do harmonogramu semestru.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.pl.png)
+![Moodle](../../translated_images/moodle.94eb93d714a50cb2.pl.png)
 > Program nauczania w klasie Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.pl.png)
+![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.pl.png)
 > Program nauczania w Canvas
 
 ### Korzystanie bezpośrednio z repozytorium (bez Classroom)

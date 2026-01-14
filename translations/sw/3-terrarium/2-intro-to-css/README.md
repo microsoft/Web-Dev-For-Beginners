@@ -1,87 +1,141 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "92c4431eac70670b0450b02c1d11279a",
-  "translation_date": "2025-10-24T19:28:30+00:00",
+  "original_hash": "e39f3a4e3bcccf94639e3af1248f8a4d",
+  "translation_date": "2026-01-07T02:04:10+00:00",
   "source_file": "3-terrarium/2-intro-to-css/README.md",
   "language_code": "sw"
 }
 -->
 # Mradi wa Terrarium Sehemu ya 2: Utangulizi wa CSS
 
-![Utangulizi wa CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.sw.png)
+```mermaid
+journey
+    title Safari Yako ya Mtindo wa CSS
+    section Msingi
+      Linki faili la CSS: 3: Student
+      Elewa cascade: 4: Student
+      Jifunze urithi: 4: Student
+    section Wachagua
+      Lengo la elementi: 4: Student
+      Mifumo ya darasa: 5: Student
+      Uwezo wa ID: 5: Student
+    section Muundo
+      Weka elementi: 4: Student
+      Unda vyombo: 5: Student
+      Jenga terrarium: 5: Student
+    section Piga mswaki
+      Ongeza athari za kuona: 5: Student
+      Muundo unaojibu: 5: Student
+      Mwangaza wa glasi: 5: Student
+```
+![Utangulizi wa CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.sw.png)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
-Unakumbuka jinsi HTML ya terrarium yako ilivyokuwa rahisi sana? CSS ndiyo tunayotumia kubadilisha muundo huo wa kawaida kuwa kitu kinachovutia machoni.
+Kumbuka jinsi terrarium yako ya HTML ilivyoonekana ya kawaida? CSS ndio tunapobadilisha muundo huo rahisi kuwa kitu kinachovutia kwa macho.
 
-Ikiwa HTML ni kama kujenga fremu ya nyumba, basi CSS ni kila kitu kinachofanya nyumba hiyo ihisi kama nyumbani - rangi za ukuta, mpangilio wa samani, taa, na jinsi vyumba vinavyoungana. Fikiria jinsi Jumba la Versailles lilianza kama nyumba ya uwindaji rahisi, lakini kwa umakini wa mapambo na mpangilio, likabadilika kuwa moja ya majengo mazuri zaidi duniani.
+Kama HTML ni kama kujenga fremu ya nyumba, basi CSS ni kila kitu kinachofanya iwe nyumbani - rangi za rangi, upangaji wa samani, mwanga, na jinsi vyumba vinavyolimbikizana. Fikiria jinsi Ikulu ya Versailles ilivyoanza kama chumba cha uwindaji rahisi, lakini makini katika mapambo na upangaji kulitawanya kuwa moja ya majengo mazuri zaidi duniani.
 
-Leo, tutabadilisha terrarium yako kutoka kuwa ya kazi tu hadi kuwa ya kuvutia. Utajifunza jinsi ya kuweka vipengele kwa usahihi, kuunda mpangilio unaojibu ukubwa tofauti wa skrini, na kuunda mvuto wa kuona unaofanya tovuti kuvutia.
+Leo, tutabadilisha terrarium yako kutoka kuwa ya kawaida hadi kuwa nzuri. Utajifunza jinsi ya kuweka vipengele kwa usahihi, kufanya mipangilio itafakari ukubwa tofauti wa skrini, na kuunda mvuto wa kuona unaofanya tovuti kuwa za kuvutia.
 
-Mwisho wa somo hili, utaona jinsi mtindo wa kimkakati wa CSS unavyoweza kuboresha mradi wako kwa kiasi kikubwa. Hebu tuongeze mtindo kwenye terrarium yako.
+Mwisho wa somo hili, utaona jinsi mtindo wa CSS uliofikirika unaweza kuboresha mradi wako kwa kiasi kikubwa. Hebu tunaongeze mtindo kwenye terrarium yako.
 
-## Maswali ya Awali ya Somo
+```mermaid
+mindmap
+  root((Misingi ya CSS))
+    Cascade
+      Sheria za Utaftaji Maalum
+      Urithi
+      Kipaumbele cha Kufuata
+      Utatuzi wa Migongano
+    Selectors
+      Matag za Vipengele
+      Madarasa (.class)
+      Vitambulisho (#id)
+      Mchanganyiko
+    Box Model
+      Margini
+      Mipaka
+      Ufungaji
+      Yaliyomo
+    Layout
+      Uwekaji
+      Aina za Kuonyesha
+      Flexbox
+      Gridi
+    Visual Effects
+      Rangi
+      Vivuli
+      Mabadiliko
+      Michoro
+    Responsive Design
+      Maswali ya Vyombo vya Habari
+      Vitengo Rahisi
+      Meta ya Angalia
+      Simu Kwanza
+```
+## Mtihani Kabla ya Mafunzo
 
-[Maswali ya awali ya somo](https://ff-quizzes.netlify.app/web/quiz/17)
+[Mtihani kabla ya mafunzo](https://ff-quizzes.netlify.app/web/quiz/17)
 
-## Kuanza na CSS
+## Kuanzisha na CSS
 
-CSS mara nyingi hufikiriwa kama "kufanya vitu viwe vizuri," lakini ina madhumuni mapana zaidi. CSS ni kama kuwa mkurugenzi wa filamu - unadhibiti si tu jinsi kila kitu kinavyoonekana, bali pia jinsi kinavyosogea, kinavyoitikia mwingiliano, na kinavyobadilika kulingana na hali tofauti.
+CSS mara nyingi huhesabiwa kama "kufanya mambo yawe mazuri," lakini ina matumizi makubwa zaidi. CSS ni kama kuwa mkurugenzi wa filamu - una controlar si tu jinsi kila kitu kinavyoonekana, bali jinsi kinavyosogea, kinavyojibu mwingiliano, na kinavyobadilika kulingana na hali.
 
-CSS ya kisasa ina uwezo mkubwa sana. Unaweza kuandika msimbo unaobadilisha mpangilio kiotomatiki kwa simu, vidonge, na kompyuta za mezani. Unaweza kuunda michoro laini inayowaongoza watumiaji kwenye sehemu zinazohitajika. Matokeo yanaweza kuwa ya kuvutia sana wakati kila kitu kinapofanya kazi pamoja.
+CSS ya kisasa ina uwezo mkubwa sana. Unaweza kuandika msimbo unaoendana na mipangilio ya simu, vidonge, na kompyuta za mezani. Unaweza kuunda michoro laini inayowiongoza watumiaji mahali panapohitajika. Matokeo yanaweza kuwa ya kushangaza wakati kila kitu kinapofanya kazi pamoja.
 
-> 💡 **Ushauri wa Kitaalamu**: CSS inaendelea kubadilika na vipengele vipya na uwezo. Daima angalia [CanIUse.com](https://caniuse.com) ili kuthibitisha usaidizi wa kivinjari kwa vipengele vipya vya CSS kabla ya kuvitumia katika miradi ya uzalishaji.
+> 💡 **Ushauri wa Mtaalamu**: CSS inaendelea kubadilika mara kwa mara na vipengele vipya na uwezo mpya. Daima angalia [CanIUse.com](https://caniuse.com) kuthibitisha msaada wa kivinjari kwa vipengele vipya vya CSS kabla ya kuvitumia kwenye miradi ya uzalishaji.
 
-**Haya ndiyo tutakayofanikiwa katika somo hili:**
-- **Kuunda** muundo kamili wa kuona kwa terrarium yako kwa kutumia mbinu za kisasa za CSS
-- **Kuchunguza** dhana za msingi kama cascade, urithi, na vichagua vya CSS
-- **Kutumia** mikakati ya mpangilio na nafasi inayojibu
-- **Kujenga** kontena la terrarium kwa kutumia maumbo na mitindo ya CSS
+**Hivi ndivyo tutakavyofanikisha somo hili:**
+- **Kuunda** muundo kamilifu wa kuona kwa terrarium yako kwa kutumia mbinu za kisasa za CSS
+- **Kuchambua** dhana za msingi kama mtiririko, urithi, na wachaguzi wa CSS
+- **Kutekeleza** mikakati ya upangaji unaojibu na mipangilio
+- **Kujenga** chombo cha terrarium kwa kutumia maumbo na mitindo ya CSS
 
-### Sharti
+### Mahitaji ya Awali
 
-Unapaswa kuwa umekamilisha muundo wa HTML wa terrarium yako kutoka somo la awali na uwe tayari kuipamba.
+Unapaswa kuwa umekamilisha muundo wa HTML wa terrarium yako kutoka somo lililopita na kuwa tayari kuupamba.
 
-> 📺 **Rasilimali ya Video**: Tazama video hii ya maelezo
+> 📺 **Rasilimali ya Video**: Tazama video hii ya mwongozo wa msaada
 >
-> [![Mafunzo ya Msingi ya CSS](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
+> [![CSS Basics Tutorial](https://img.youtube.com/vi/6yIdOIV9p1I/0.jpg)](https://www.youtube.com/watch?v=6yIdOIV9p1I)
 
-### Kuandaa Faili Yako ya CSS
+### Kuweka Faili Yako la CSS
 
-Kabla ya kuanza kupamba, tunahitaji kuunganisha CSS na HTML yetu. Muunganisho huu unaiambia kivinjari wapi pa kupata maelekezo ya mitindo kwa terrarium yetu.
+Kabla hatujaweza kuanza kupamba, tunahitaji kuunganisha CSS na HTML yetu. Muunganisho huu unaambia kivinjari wapi kupata maagizo ya mitindo kwa terrarium yetu.
 
-Katika folda ya terrarium yako, unda faili mpya inayoitwa `style.css`, kisha uiunganishe kwenye sehemu ya `<head>` ya hati yako ya HTML:
+Katika folda ya terrarium yako, tengeneza faili mpya iitwayo `style.css`, kisha iunganishe katika sehemu ya `<head>` ya hati yako ya HTML:
 
 ```html
 <link rel="stylesheet" href="./style.css" />
 ```
 
-**Hii ndiyo kazi ya msimbo huu:**
-- **Kuunda** muunganisho kati ya faili zako za HTML na CSS
+**Hivi ndivyo msimbo huu unavyofanya kazi:**
+- **Kuunda** muunganisho kati ya faili za HTML na CSS zako
 - **Kuambia** kivinjari kupakia na kutumia mitindo kutoka `style.css`
-- **Kutumia** sifa ya `rel="stylesheet"` kuonyesha kuwa hii ni faili ya CSS
+- **Kutumia** sifa `rel="stylesheet"` kubainisha hii ni faili la CSS
 - **Kurejelea** njia ya faili kwa `href="./style.css"`
 
-## Kuelewa Cascade ya CSS
+## Kuelewa Mtiririko wa CSS
 
-Umewahi kujiuliza kwa nini CSS inaitwa "Cascading" Style Sheets? Mitindo inashuka kama maporomoko ya maji, na wakati mwingine inagongana.
+Je, umewahi kujiuliza kwa nini CSS inaitwa "Cascading" Style Sheets? Mitindo hutiririka chini kama maji ya mto, na wakati mwingine hugongana.
 
-Fikiria jinsi miundo ya amri ya kijeshi inavyofanya kazi - amri ya jumla inaweza kusema "wanajeshi wote wavae kijani," lakini amri maalum kwa kikosi chako inaweza kusema "vani mavazi ya sherehe ya bluu kwa hafla." Maelekezo maalum zaidi yanapewa kipaumbele. CSS inafuata mantiki sawa, na kuelewa hierarkia hii hufanya utatuzi kuwa rahisi zaidi.
+Fikiria jinsi jeshi linavyofanya agizo la kijeshi - agizo la mkuu linaweza kusema "wanajeshi wote vaa kijani," lakini agizo mahususi kwa kikosi chako linaweza kusema "vaa sare za bluu kwa sherehe." Maelekezo mahususi yanashinda. CSS hufuata mantiki kama hiyo, na kuelewa ngazi hii hufanya utatuzi wa matatizo kuwa rahisi.
 
-### Kujaribu Kipaumbele cha Cascade
+### Kujaribu Kipaumbele cha Mtiririko
 
-Hebu tuone cascade ikifanya kazi kwa kuunda mgongano wa mitindo. Kwanza, ongeza mtindo wa ndani kwenye tagi yako ya `<h1>`:
+Tuchunguze mtiririko kwa kuunda mgongano wa mtindo. Kwanza, ongeza mtindo wa moja kwa moja kwenye lebo `<h1>` yako:
 
 ```html
 <h1 style="color: red">My Terrarium</h1>
 ```
 
-**Kazi ya msimbo huu:**
-- **Kutumia** rangi nyekundu moja kwa moja kwenye kipengele cha `<h1>` kwa kutumia mtindo wa ndani
-- **Kutumia** sifa ya `style` kuingiza CSS moja kwa moja kwenye HTML
-- **Kuunda** sheria ya mtindo yenye kipaumbele cha juu zaidi kwa kipengele hiki maalum
+**Hivi msimbo huu unavyofanya:**
+- **Unaweka** rangi nyekundu moja kwa moja kwa kipengele `<h1>` kwa mtindo wa ndani
+- **Kutumia** sifa ya `style` kuweka CSS ndani kabisa ya HTML
+- **Kuunda** sheria ya mtindo yenye kipaumbele cha juu kabisa kwa kipengele hiki maalum
 
-Kisha, ongeza sheria hii kwenye faili yako ya `style.css`:
+Kisha, ongeza sheria hii kwenye faili lako la `style.css`:
 
 ```css
 h1 {
@@ -89,29 +143,50 @@ h1 {
 }
 ```
 
-**Katika hapo juu, tumefanya:**
+**Katika hapo juu, tumekuwa:**
 - **Kufafanua** sheria ya CSS inayolenga vipengele vyote vya `<h1>`
-- **Kuweka** rangi ya maandishi kuwa bluu kwa kutumia stylesheet ya nje
+- **Kuweka** rangi ya maandishi kuwa samawati kwa kutumia karatasi ya mitindo ya nje
 - **Kuunda** sheria ya kipaumbele cha chini ikilinganishwa na mitindo ya ndani
 
-✅ **Uhakiki wa Maarifa**: Ni rangi gani inaonekana kwenye programu yako ya wavuti? Kwa nini rangi hiyo inashinda? Je, unaweza kufikiria hali ambapo unaweza kutaka kuondoa mitindo?
+✅ **Tambua Maarifa**: Ni rangi gani inaonekana kwenye programu yako ya wavuti? Kwa nini rangi hiyo inashinda? Unaweza kufikiria hali gani ambapo ungependa kubadili mitindo?
 
-> 💡 **Mpangilio wa Kipaumbele cha CSS (cha juu hadi cha chini):**
+```mermaid
+flowchart TD
+    A["Kivinjari kinakutana na kipengele h1"] --> B{"Angalia mitindo ya mstari moja kwa moja"}
+    B -->|Imepatikana| C["style='rangi: nyekundu'"] 
+    B -->|Hakuna| D{"Angalia sheria za ID"}
+    C --> E["Weka rangi nyekundu (pointi 1000)"]
+    D -->|Imepatikana| F["#heading { rangi: kijani }"]
+    D -->|Hakuna| G{"Angalia sheria za darasa"}
+    F --> H["Weka rangi ya kijani (pointi 100)"]
+    G -->|Imepatikana| I[".title { rangi: buluu }"]
+    G -->|Hakuna| J{"Angalia sheria za kipengele"}
+    I --> K["Weka rangi ya buluu (pointi 10)"]
+    J -->|Imepatikana| L["h1 { rangi: zambarau }"]
+    J -->|Hakuna| M["Tumia chaguo-msingi cha kivinjari"]
+    L --> N["Weka rangi ya zambarau (pointi 1)"]
+    
+    style C fill:#ff6b6b
+    style F fill:#51cf66
+    style I fill:#339af0
+    style L fill:#9775fa
+```
+> 💡 **Orodha ya Kipaumbele cha CSS (kutoka juu hadi chini):**
 > 1. **Mitindo ya ndani** (sifa ya style)
-> 2. **IDs** (#myId)
-> 3. **Classes** (.myClass) na sifa
-> 4. **Vichagua vya vipengele** (h1, div, p)
-> 5. **Chaguo-msingi za kivinjari**
+> 2. **Vitambulisho** (#myId)
+> 3. **Madarasa** (.myClass) na sifa
+> 4. **Wachaguzi wa vipengele** (h1, div, p)
+> 5. **Mazingira ya kivinjari**
 
-## Urithi wa CSS kwa Vitendo
+## Urithi wa CSS Katika Vitendo
 
-Urithi wa CSS hufanya kazi kama maumbile - vipengele hurithi mali fulani kutoka kwa vipengele vya mzazi wao. Ikiwa utaweka familia ya fonti kwenye kipengele cha mwili, maandishi yote ndani yake hutumia fonti hiyo hiyo kiotomatiki. Ni sawa na jinsi sura ya kipekee ya familia ya Habsburg ilivyoonekana kwa vizazi bila kuainishwa kwa kila mtu binafsi.
+Urithi wa CSS hufanya kazi kama vinasaba - vipengele virithi mali fulani kutoka kwa vipengee vyao vya mzazi. Ikiwa utaweka familia ya font kwenye kipengele cha mwili, maandishi yote ndani yake hutumia font hiyo moja kwa moja. Hii ni kama jinsi mwili wa kipekee wa familia ya Habsburg ulivyobaki kwa vizazi bila kuainishwa kwa kila mtu kando kando.
 
-Hata hivyo, si kila kitu kinachorithiwa. Mitindo ya maandishi kama fonti na rangi inarithiwa, lakini mali za mpangilio kama margins na borders hazirithiwi. Kama vile watoto wanaweza kurithi sifa za mwili lakini si chaguo za mitindo za wazazi wao.
+Hata hivyo, si kila kitu hurithiwa. Mitindo ya maandishi kama fonti na rangi hurithiwa, lakini mali za mipangilio kama mipaka na mipaka siyo. Kama watoto wanaweza kurithi sifa za mwili lakini si mitindo ya mavazi ya wazazi wao.
 
-### Kuona Urithi wa Fonti
+### Kuangalia Urithi wa Fonti
 
-Hebu tuone urithi ukifanya kazi kwa kuweka familia ya fonti kwenye kipengele cha `<body>`:
+Tuchunguze urithi kwa kuweka familia ya font kwenye kipengele cha `<body>`:
 
 ```css
 body {
@@ -119,31 +194,46 @@ body {
 }
 ```
 
-**Kufafanua kinachotokea hapa:**
+**Kuvunja kile kinachotokea hapa:**
 - **Kuweka** familia ya fonti kwa ukurasa mzima kwa kulenga kipengele cha `<body>`
-- **Kutumia** stack ya fonti na chaguo za akiba kwa usaidizi bora wa kivinjari
-- **Kutumia** fonti za kisasa za mfumo zinazovutia kwenye mifumo tofauti ya uendeshaji
-- **Kuhakikisha** vipengele vyote vya watoto vinarithia fonti hii isipokuwa vimezuiliwa maalum
+- **Kutumia** orodha ya fonti na chaguo la kurudisha nyuma kwa msaada bora wa vivinjari
+- **Kuongeza** fonti za mfumo wa kisasa zinazoonekana vizuri kwenye mifumo tofauti ya uendeshaji
+- **Kuhakikisha** vipengele vyote vya watoto virithia fonti hii isipokuwa vikaangaliwe pia
 
-Fungua zana za msanidi wa kivinjari chako (F12), nenda kwenye kichupo cha Vipengele, na kagua kipengele chako cha `<h1>`. Utaona kuwa kinarithia familia ya fonti kutoka kwa mwili:
+Fungua zana za maendeleo za kivinjari chako (F12), nenda kwenye tab ya Elements, na kagua kipengele chako cha `<h1>`. Utaona kinarithi familia ya fonti kutoka kwa mwili:
 
-![fonti iliyorithiwa](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.sw.png)
+![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.sw.png)
 
-✅ **Jaribio la Kujaribu**: Jaribu kuweka mali nyingine zinazorithiwa kwenye `<body>` kama `color`, `line-height`, au `text-align`. Ni nini kinachotokea kwa kichwa chako na vipengele vingine?
+✅ **Jaribu**: Jaribu kuweka mali nyingine zinazorithiwa kwenye `<body>` kama `color`, `line-height`, au `text-align`. Nini kinakutokea kwa kichwa chako na vipengele vingine?
 
-> 📝 **Mali Zinazorithiwa ni Pamoja na**: `color`, `font-family`, `font-size`, `line-height`, `text-align`, `visibility`
+> 📝 **Mali Zinazorithiwa Zinajumuisha**: `color`, `font-family`, `font-size`, `line-height`, `text-align`, `visibility`
 >
-> **Mali Zisizorithiwa ni Pamoja na**: `margin`, `padding`, `border`, `width`, `height`, `position`
+> **Mali Zisizorithiwa Zinajumuisha**: `margin`, `padding`, `border`, `width`, `height`, `position`
 
-## Kumiliki Vichagua vya CSS
+### 🔄 **Ukaguzi wa Mafunzo**
+**Uelewa wa Msingi wa CSS**: Kabla ya kuingia kwa wachaguzi, hakikisha unajua:
+- ✅ Eleza tofauti kati ya mtiririko na urithi
+- ✅ Tabiri ni mtindo gani utashinda kwenye mgongano wa uelekeo mahususi
+- ✅ Tambua mali gani hurithiwa kutoka kwa vipengele vya mzazi
+- ✅ Unganisha faili za CSS kwa HTML ipasavyo
 
-Vichagua vya CSS ni njia yako ya kulenga vipengele maalum kwa mitindo. Vinavyofanya kazi kama kutoa maelekezo sahihi - badala ya kusema "nyumba," unaweza kusema "nyumba ya bluu yenye mlango mwekundu kwenye Mtaa wa Maple."
+**Jaribio la Haraka**: Ikiwa una mitindo hii, rangi gani itakuwa kwenye `<h1>` ndani ya `<div class="special">`?
+```css
+div { color: blue; }
+.special { color: green; }
+h1 { color: red; }
+```
+*Jibu: Nyekundu (mchaguo wa kipengele unamulika h1 moja kwa moja)*
 
-CSS hutoa njia tofauti za kuwa maalum, na kuchagua kichagua sahihi ni kama kuchagua zana inayofaa kwa kazi. Wakati mwingine unahitaji kupamba kila mlango katika mtaa, na wakati mwingine mlango mmoja tu maalum.
+## Kujua Kusoma Wachaguzi wa CSS
 
-### Vichagua vya Vipengele (Tagi)
+Wachaguzi wa CSS ni njia yako ya kulenga vipengele maalum kwa ajili ya mitindo. Hufanya kazi kama kutoa maelekezo sahihi - badala ya kusema "nyumba," unaweza kusema "nyumba ya buluu yenye mlango mwekundu kwenye Mtaa wa Maple."
 
-Vichagua vya vipengele vinatarget vipengele vya HTML kwa jina la tagi yao. Vinavyofaa kwa kuweka mitindo ya msingi inayotumika kwa upana kwenye ukurasa wako:
+CSS hutoa njia tofauti za kuwa mahususi, na kuchagua mchaguo sahihi ni kama kuchagua chombo kinachofaa kwa kazi. Wakati mwingine unahitaji kupamba kila mlango katika jirani, na wakati mwingine mlango mmoja tu.
+
+### Wachaguzi wa Vipengele (Tags)
+
+Wachaguzi wa vipengele hulenga vipengele vya HTML kwa jina la lebo yao. Ni bora kwa kuweka mitindo ya msingi inayotumika kote ukurasa wako:
 
 ```css
 body {
@@ -161,18 +251,18 @@ h1 {
 ```
 
 **Kuelewa mitindo hii:**
-- **Kuweka** typografia thabiti kwenye ukurasa mzima kwa kichagua cha `body`
-- **Kuondoa** margins na padding za chaguo-msingi za kivinjari kwa udhibiti bora
-- **Kupamba** vipengele vyote vya kichwa kwa rangi, mpangilio, na nafasi
-- **Kutumia** vitengo vya `rem` kwa ukubwa wa fonti unaoweza kubadilika na kupatikana
+- **Weka** tahajia thabiti kwenye ukurasa mzima kwa kutumia chaguzi ya `body`
+- **Ondoa** mipaka na padding za kivinjari kwa udhibiti bora
+- **Pamba** vipengele vyote vya kichwa kwa rangi, muafaka, na nafasi
+- **Tumia** vitengo vya `rem` kwa ukubwa unaoweza kubadilika na unaopatikana kirahisi
 
-Wakati vichagua vya vipengele vinafanya kazi vizuri kwa mitindo ya jumla, utahitaji vichagua maalum zaidi kupamba vipengele vya kibinafsi kama mimea katika terrarium yako.
+Wachaguzi wa vipengele hufanya kazi vizuri kwa mitindo ya jumla, lakini utahitaji wachaguzi mahususi zaidi kupamba vipengele kama mimea katika terrarium yako.
 
-### Vichagua vya ID kwa Vipengele Maalum
+### Wachaguzi wa ID kwa Vipengele Maalum
 
-Vichagua vya ID vinatumia alama ya `#` na vinatarget vipengele vyenye sifa maalum ya `id`. Kwa kuwa IDs lazima ziwe za kipekee kwenye ukurasa, vinavyofaa kwa kupamba vipengele vya kibinafsi, maalum kama kontena za mimea za kushoto na kulia.
+Wachaguzi wa ID hutumia alama ya `#` na hulenga vipengele vyenye sifa maalum za `id`. Kwa sababu IDs lazima ziwe za kipekee kwenye ukurasa, ni nzuri kwa kupamba vipengele binafsi kama vyombo vya mimea vya kushoto na kulia.
 
-Hebu tuunde mitindo kwa kontena za upande za terrarium yetu ambapo mimea itaishi:
+Tufanye mitindo ya chombo cha terrarium upande ambako mimea itaishi:
 
 ```css
 #left-container {
@@ -198,16 +288,16 @@ Hebu tuunde mitindo kwa kontena za upande za terrarium yetu ambapo mimea itaishi
 }
 ```
 
-**Hii ndiyo kazi ya msimbo huu:**
-- **Kuweka** kontena kwenye kingo za kushoto na kulia kwa kutumia nafasi ya `absolute`
-- **Kutumia** vitengo vya `vh` (urefu wa viewport) kwa urefu unaojibu ukubwa wa skrini
-- **Kutumia** `box-sizing: border-box` ili padding ijumuishwe katika upana wa jumla
-- **Kuondoa** vitengo vya `px` visivyo vya lazima kutoka kwa thamani za sifuri kwa msimbo safi zaidi
-- **Kuweka** rangi ya mandharinyuma laini inayovutia zaidi machoni kuliko kijivu mkali
+**Hili msimbo hufanikisha:**
+- **Weka** vyombo pembezoni kushoto na kulia kwa kutumia upangaji wa `absolute`
+- **Tumia** vitengo vya `vh` (urefu wa dirisha) kwa urefu unaojibadilisha kulingana na ukubwa wa skrini
+- **Tumia** `box-sizing: border-box` ili padding ijumuishwe katika upana mzima
+- **Ondoa** vitengo visivyohitajika vya `px` kwenye thamani za sifuri kwa msimbo safi
+- **Weka** rangi ya nyuma laini inayopendeza zaidi kuliko kijivu kizito
 
-✅ **Changamoto ya Ubora wa Msimbo**: Angalia jinsi CSS hii inavyokiuka kanuni ya DRY (Usirudie Mwenyewe). Je, unaweza kuiboresha kwa kutumia ID na darasa?
+✅ **Changamoto ya Ubora wa Msimbo**: Angalia jinsi CSS hii inavunja kanuni ya DRY (Usijirudie). Unaweza kuiboresha kwa kutumia ID na darasa kwa pamoja?
 
-**Njia iliyoboreshwa:**
+**Mbinu Iliyoimarishwa:**
 ```html
 <div id="left-container" class="container"></div>
 <div id="right-container" class="container"></div>
@@ -233,26 +323,26 @@ Hebu tuunde mitindo kwa kontena za upande za terrarium yetu ambapo mimea itaishi
 }
 ```
 
-### Vichagua vya Darasa kwa Mitindo Inayoweza Kutumika Tena
+### Wachaguzi wa Madarasa kwa Mitindo Inayoweza Kutumika Tena
 
-Vichagua vya darasa vinatumia alama ya `.` na vinavyofaa unapohitaji kutumia mitindo sawa kwa vipengele vingi. Tofauti na IDs, madarasa yanaweza kutumika tena katika HTML yako, na kuyafanya kuwa bora kwa mifumo ya mitindo thabiti.
+Wachaguzi wa darasa hutumia alama ya `.` na ni bora unapotaka kutumia mitindo ile ile kwa vipengele vingi. Tofauti na IDs, madarasa yanaweza kutumika tena katika HTML yako, na kufanya iwe rahisi kuunda mitindo inayolingana.
 
-Katika terrarium yetu, kila mmea unahitaji mitindo sawa lakini pia unahitaji nafasi ya kipekee. Tutatumia mchanganyiko wa madarasa kwa mitindo ya pamoja na IDs kwa nafasi ya kipekee.
+Katika terrarium yetu, kila mmea unahitaji mitindo sawa lakini pia unahitaji upangaji wa kipekee. Tutatumia mchanganyiko wa madarasa kwa mitindo ya pamoja na IDs kwa upangaji wa kipekee.
 
 **Hii ndiyo muundo wa HTML kwa kila mmea:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.sw.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.sw.png" />
 </div>
 ```
 
-**Vipengele muhimu vilivyoelezwa:**
-- **Kutumia** `class="plant-holder"` kwa mitindo thabiti ya kontena kwa mimea yote
-- **Kutumia** `class="plant"` kwa mitindo na tabia ya picha ya pamoja
-- **Kujumuisha** `id="plant1"` ya kipekee kwa nafasi ya kibinafsi na mwingiliano wa JavaScript
-- **Kutoa** maandishi ya alt yenye maelezo kwa upatikanaji wa wasomaji wa skrini
+**Vipengele muhimu vinaelezwa:**
+- **Tumia** `class="plant-holder"` kwa mitindo thabiti ya chombo kwa mimea yote
+- **Tumia** `class="plant"` kwa mtindo wa picha na tabia zinazoshirikiwa
+- **Mojawapo** `id="plant1"` kwa upangaji wa binafsi na mwingiliano wa JavaScript
+- **Toa** maelezo ya alt kwa ufikivu kwa wasomaji wa skrini
 
-Sasa ongeza mitindo hii kwenye faili yako ya `style.css`:
+Sasa ongeza mitindo hii kwenye faili lako la `style.css`:
 
 ```css
 .plant-holder {
@@ -274,37 +364,53 @@ Sasa ongeza mitindo hii kwenye faili yako ya `style.css`:
 }
 ```
 
-**Kufafanua mitindo hii:**
-- **Kuunda** nafasi ya jamaa kwa kontena la mmea ili kuanzisha muktadha wa nafasi
-- **Kuweka** kila kontena la mmea kwa urefu wa 13%, kuhakikisha mimea yote inatoshea wima bila kusogeza
-- **Kusogeza** kontena kidogo kushoto ili kuzingatia mimea vizuri ndani ya kontena zao
-- **Kuruhusu** mimea kupanuka kwa majibu kwa kutumia mali za `max-width` na `max-height`
-- **Kutumia** `z-index` kuweka mimea juu ya vipengele vingine katika terrarium
-- **Kuongeza** athari ya hover laini na mabadiliko ya CSS kwa mwingiliano bora wa mtumiaji
+**Kuvunja mitindo hii:**
+- **Tengeneza** upangaji wa relative kwa chombo cha mmea kuanzisha muktadha wa upangaji
+- **Weka** kila chombo cha mmea kuwa na urefu wa 13%, kuhakikisha mimea yote ina nafasi wima bila kusogea
+- **Inamaisha** vidhibiti kadhaa ili kuhamia kidogo kushoto kuonyesha mimea vizuri ndani ya vyombo
+- **Ruhusu** mimea kubadilika kwa urefu na upana na mali za `max-width` na `max-height`
+- **Tumia** `z-index` kuweka mimea juu ya vipengele vingine vya terrarium
+- **Ongeza** athari ya hover kwa mabadiliko ya CSS kwa mwingiliano bora
 
-✅ **Fikra Muhimu**: Kwa nini tunahitaji vichagua vyote `.plant-holder` na `.plant`? Nini kingetokea ikiwa tungejaribu kutumia kimoja tu?
+✅ **Fikra Muhimu**: Kwa nini tunahitaji wachaguzi `.plant-holder` na `.plant` wote wawili? Nini kingetokea kama tungetumia mmoja tu?
 
-> 💡 **Mfumo wa Ubunifu**: Kontena (`.plant-holder`) inadhibiti mpangilio na nafasi, wakati maudhui (`.plant`) yanadhibiti mwonekano na upanuzi. Mgawanyo huu hufanya msimbo uwe rahisi kudumisha na kubadilika.
+> 💡 **Mfano wa Ubunifu**: Chombo (`.plant-holder`) hukontroli upangaji na mahali, wakati maudhui (`.plant`) hukontroli muonekano na ukubwa. Ugawaji huu hufanya msimbo kuwa rahisi kudhibiti na kubadilika.
 
-## Kuelewa Nafasi ya CSS
+## Kuelewa Uwepo wa CSS
 
-Nafasi ya CSS ni kama kuwa mkurugenzi wa jukwaa la tamthilia - unadhibiti wapi kila mwigizaji anasimama na jinsi wanavyosogea kwenye jukwaa. Wengine hufuata mpangilio wa kawaida, wakati wengine wanahitaji nafasi maalum kwa athari ya kipekee.
+Uwepo wa CSS ni kama kuwa mwongozaji wa jukwaa la tamthilia - unaamrisha kila mhusika apatikane wapi na jinsi anavyosogea jukwaani. Baadhi ya waigizaji hufuata mpangilio wa kawaida, wengine wanahitaji upangaji maalum kwa athari ya riadha.
 
-Mara unapofahamu nafasi, changamoto nyingi za mpangilio zinakuwa rahisi kudhibiti. Unahitaji bar ya urambazaji inayobaki juu wakati watumiaji wanapokoroga? Nafasi inashughulikia hilo. Unataka tooltip inayojitokeza mahali maalum? Hilo pia ni nafasi.
+Mara unapojifunza kuweka maeneo, changamoto nyingi za upangaji hutarajika. Unahitaji bar ya urambazaji inayobaki juu wakati watumiaji wanapokata? Uwepo hufanya hivyo. Unataka vidokezo vya msaada vinaonekana mahali fulani? Hilo ni uwepo pia.
 
-### Thamani Tano za Nafasi
+### Maadili Matano ya Uwepo
 
-| Thamani ya Nafasi | Tabia | Matumizi |
+```mermaid
+quadrantChart
+    title Mbinu ya Uwekaji CSS
+    x-axis Mtiririko wa Nyaraka --> Kuondolewa kwenye Mtiririko
+    y-axis Nafasi Imobishaji --> Udhibiti Sahihi
+    quadrant-1 Kamili
+    quadrant-2 Imewekewa
+    quadrant-3 Imobishaji
+    quadrant-4 Kushikamana
+    
+    Static: [0.2, 0.2]
+    Relative: [0.3, 0.6]
+    Absolute: [0.8, 0.8]
+    Fixed: [0.9, 0.7]
+    Sticky: [0.5, 0.9]
+```
+| Thamani ya Uwepo | Tabia | Matumizi |
 |----------------|----------|----------|
-| `static` | Mtiririko wa kawaida, inapuuzia juu/kushoto/kulia/chini | Mpangilio wa kawaida wa hati |
-| `relative` | Imewekwa kulingana na nafasi yake ya kawaida | Marekebisho madogo, kuunda muktadha wa nafasi |
-| `absolute` | Imewekwa kulingana na mzazi wa karibu aliyewekwa | Uwekaji sahihi, overlays |
-| `fixed` | Imewekwa kulingana na viewport | Bar za urambazaji, vipengele vinavyosogea |
-| `sticky` | Hubadilika kati ya relative na fixed kulingana na koroga | Vichwa vinavyoshikamana wakati wa koroga |
+| `static` | Mtiririko wa kawaida, haizingatii top/left/right/bottom | Mpangilio wa kawaida wa hati |
+| `relative` | Iko kulingana na nafasi yake ya kawaida | Marekebisho madogo, kuanzisha muktadha wa upangaji |
+| `absolute` | Iko kulingana na mzazi aliye na nafasi | Uwekaji sahihi, kuweka kwa tabaka juu |
+| `fixed` | Iko kulingana na dirisha la kivinjari | Mabaa za urambazaji, vipengele vinavyoelea |
+| `sticky` | Hubadilika kati ya relative na fixed kulingana na kusogea | Vichwa vinavyoshikamana wakati wa kusogea |
 
-### Nafasi katika Terrarium Yetu
+### Uwepo Katika Terrarium Yetu
 
-Terrarium yetu inatumia mchanganyiko wa kimkakati wa aina za nafasi kuunda mpangilio unaotakiwa:
+Terrarium yetu inatumia mchanganyiko wa kimkakati wa aina za uwepo kuunda upangaji unaotakiwa:
 
 ```css
 /* Container positioning */
@@ -326,25 +432,61 @@ Terrarium yetu inatumia mchanganyiko wa kimkakati wa aina za nafasi kuunda mpang
 }
 ```
 
-**Kuelewa mkakati wa nafasi:**
-- **Kontena za absolute** zinatolewa kutoka mtiririko wa kawaida wa hati na zimewekwa kwenye kingo za skrini
-- **Wamiliki wa mimea wa relative** huunda muktadha wa nafasi huku wakibaki katika mtiririko wa hati
-- **Mimea ya absolute** inaweza kuwekwa kwa usahihi ndani ya kontena zao za relative
-- **Mchanganyiko huu** unaruhusu mimea kupangwa wima huku ikipatikana kwa nafasi ya kibinafsi
+**Kuelewa mikakati ya upangaji:**
+- **Vyombo vya absolute** vinatolewa kutoka mtiririko wa kawaida wa hati na kuwekwa pembezoni mwa skrini
+- **Vito vya mmea vya relative** huanzisha muktadha wa upangaji huku vikibaki katika mtiririko wa hati
+- **Mimea ya absolute** inaweza kuwekwa kwa usahihi ndani ya vyombo vya relative
+- **Mchanganyiko huu** huruhusu mimea kuwirirana wima huku ikiwa imepangwa binafsi
 
-> 🎯 **Kwa Nini Hili Ni Muhimu**: Vipengele vya `plant` vinahitaji nafasi ya absolute ili viweze kuvutwa katika somo linalofuata. Nafasi ya absolute inavitenganisha kutoka mtiririko wa kawaida wa mpangilio, na kufanya mwingiliano wa kuvuta na kuacha uwezekane.
+> 🎯 **Kwa Nini Hii Ni Muhimu**: Vipengele vya `plant` vinahitaji uwepo wa absolute ili viweze kubebeka katika somo lijalo. Uwepo wa absolute unawatoza kutoka kwenye mtiririko wa kawaida, kufanya mwingiliano wa buruta-na-acha uwezekane.
 
-✅ **Jaribio la Kujaribu**: Jaribu kubadilisha thamani za nafasi na uone matokeo:
-- Nini kinatokea ikiwa unabadilisha `.container` kutoka `absolute` hadi `relative`?
-- Mpangilio unabadilika vipi ikiwa `.plant-holder` inatumia `absolute` badala ya `relative`?
-- Nini kinatokea unapobadilisha `.plant` hadi nafasi ya `relative`?
+✅ **Jaribu**: Badilisha thamani za uwepo na uangalie matokeo:
+- Nini kitakachotokea ikiwa utabadilisha `.container` kutoka `absolute` kuwa `relative`?
+- Je, mpangilio hubadilika vipi ikiwa `.plant-holder` inatumia `absolute` badala ya `relative`?
+- Nini hutokea unapotumia `.plant` kwa upangilio wa `relative`?
+
+### 🔄 **Ukaguzi wa Kifahari**
+**Ukomavu wa Kuweka Nafasi za CSS**: Simama kidogo kuthibitisha uelewa wako:
+- ✅ Je, unaweza kueleza kwa nini mimea inahitaji upangilio wa absolute kwa ajili ya buruta-na-acha?
+- ✅ Je, unaelewa jinsi vyombo vya relative vinavyounda muktadha wa upangilio?
+- ✅ Kwa nini vyombo vya pembeni hutumia upangilio wa absolute?
+- ✅ Nini kingetokea kama ungeondoa kabisa tamko za position?
+
+**Unganisho wa Ulimwengu Halisi**: Fikiria jinsi upangilio wa CSS unavyolingana na mpangilio wa ulimwengu halisi:
+- **Static**: Vitabu kwenye rafu (mpangilio wa kawaida)
+- **Relative**: Kusogeza kidogo kitabu lakini kuhifadhi nafasi yake
+- **Absolute**: Kuweka alama ya kitabu kwenye ukurasa maalum
+- **Fixed**: Kumbukumbu ya kubandika ambayo inaonekana wakati unaendelea kurasa
 
 ## Kujenga Terrarium kwa CSS
 
-Sasa tutajenga chupa ya kioo kwa kutumia CSS pekee - bila picha au programu ya michoro.
+Sasa tutaandika chupa ya kioo kwa kutumia CSS tu - hakuna picha au programu ya michoro inayohitajika.
 
-Kuunda kioo kinachoonekana halisi, vivuli, na athari za kina kwa kutumia nafasi na uwazi kunaonyesha uwezo wa kuona wa CSS. Mbinu hii inaakisi jinsi wasanifu wa harakati ya Bauhaus walivyotumia maumbo rahisi ya kijiometri kuunda miundo tata, yenye uzuri. Mara unapofahamu kanuni hizi, utatambua mbinu za CSS nyuma ya miundo mingi ya
-Tujenge chupa ya terrarium hatua kwa hatua. Kila sehemu inatumia nafasi ya moja kwa moja na ukubwa wa asilimia kwa muundo unaojibika:
+Kuunda kioo kinachoonekana halisi, vivuli, na athari za kina kwa kutumia upangilio na uwazi kunaonyesha uwezo wa kuona wa CSS. Mbinu hii inaiga jinsi wakamishi wa Bauhaus walivyotumia maumbo rahisi ya kijiometri kuunda miundo changa, mizuri. Ukichukua hatua hizi, utaona mbinu za CSS nyuma ya muundo mwingi wa wavuti.
+
+```mermaid
+flowchart LR
+    A[Kofia ya Chupa] --> E[Terrarium Kamili]
+    B[kuta za Chupa] --> E
+    C[Safu ya Uto] --> E
+    D[Msingi wa Chupa] --> E
+    F[Madhara ya Kioo] --> E
+    
+    A1["Upana wa 50%<br/>Urefu wa 5%<br/>Msimamo wa Juu"] --> A
+    B1["Upana wa 60%<br/>Urefu wa 80%<br/>Vikono Vilivyopinda<br/>Uwazi wa 0.5"] --> B
+    C1["Upana wa 60%<br/>Urefu wa 5%<br/>Kahawia Mwekundu<br/>Safi ya Chini"] --> C
+    D1["Upana wa 50%<br/>Urefu wa 1%<br/>Msimamo wa Chini"] --> D
+    F1["Kivuli Kidogo<br/>Uwazi<br/>Upangaji wa Z-index"] --> F
+    
+    style E fill:#d1e1df,stroke:#3a241d
+    style A fill:#e8f5e8
+    style B fill:#e8f5e8
+    style C fill:#8B4513
+    style D fill:#e8f5e8
+```
+### Kuunda Vipengele vya Chupa ya Kioo
+
+Hebu tujenge chupa ya terrarium sehemu kwa sehemu. Kila sehemu inatumia upangilio wa absolute na ukubwa wa asilimia kwa ajili ya muundo unaojibadilisha:
 
 ```css
 .jar-walls {
@@ -397,88 +539,197 @@ Tujenge chupa ya terrarium hatua kwa hatua. Kila sehemu inatumia nafasi ya moja 
 ```
 
 **Kuelewa ujenzi wa terrarium:**
-- **Inatumia** vipimo vya asilimia kwa upanuzi unaojibika kwenye ukubwa wote wa skrini
-- **Inaweka** vipengele kwa nafasi ya moja kwa moja ili kuviweka na kuviunganisha kwa usahihi
-- **Inatumia** thamani tofauti za uwazi ili kuunda athari ya uwazi wa glasi
-- **Inatekeleza** tabaka za `z-index` ili mimea ionekane ndani ya chupa
-- **Inaongeza** kivuli cha kisanduku na pembe za mviringo zilizoboreshwa kwa mwonekano halisi zaidi
+- **Inatumia** vipimo vya asilimia kwa ajili ya upanuzi wa kiotomatiki katika saizi zote za skrini
+- **Inaweka** vitu kwa absolute ili kupachika na kuoanisha ipasavyo
+- **Inatumia** thamani tofauti za uwazi kutengeneza athari ya uwazi wa kioo
+- **Inatekeleza** uwanja wa `z-index` ili mimea ionekane ndani ya chupa
+- **Inaongeza** kivuli kidogo cha sanduku na mviringo ulio boreshwa kwa muonekano wa kweli zaidi
 
-### Muundo Unaobadilika na Asilimia
+### Muundo Jibu kwa Asilimia
 
-Angalia jinsi vipimo vyote vinavyotumia asilimia badala ya thamani za pikseli zilizowekwa:
+Zingatia jinsi vipimo vyote vinavyo tumia asilimia badala ya pixels imara:
 
 **Kwa nini hili ni muhimu:**
-- **Inahakikisha** terrarium inapanuka kwa uwiano kwenye ukubwa wowote wa skrini
-- **Inadumisha** uhusiano wa kuona kati ya vipengele vya chupa
-- **Inatoa** uzoefu thabiti kutoka simu za mkononi hadi skrini kubwa za kompyuta
-- **Inaruhusu** muundo kubadilika bila kuvunja mpangilio wa kuona
+- **Hakikisha** terrarium inakua kwa ulinganifu kwenye saizi yoyote ya skrini
+- **Iendeleze** uhusiano wa kuona kati ya vipengele vya chupa
+- **Toa** uzoefu wa kudumu kutoka simu za mkononi hadi skrini kubwa za kompyuta
+- **Ruhusu** muundo kubadilika bila kuvunja mpangilio wa kuona
 
-### Vipimo vya CSS kwa Vitendo
+### Vitengo vya CSS Katika Matendo
 
-Tunatumia vipimo vya `rem` kwa pembe za mviringo, ambavyo vinapanuka kulingana na ukubwa wa fonti ya mzizi. Hii inaunda miundo inayopatikana zaidi inayoheshimu mapendeleo ya fonti ya mtumiaji. Jifunze zaidi kuhusu [vipimo vya jamaa vya CSS](https://www.w3.org/TR/css-values-3/#font-relative-lengths) katika maelezo rasmi.
+Tunatumia vitengo vya `rem` kwa border-radius, ambavyo vinaendana na ukubwa wa fonti ya mizizi. Hii huunda miundo inayopatikana zaidi ambayo inaheshimu upendeleo wa fonti wa mtumiaji. Jifunze zaidi kuhusu [vitengo vya CSS vinavyohusiana](https://www.w3.org/TR/css-values-3/#font-relative-lengths) katika maelezo rasmi.
 
-✅ **Jaribio la Kuona**: Jaribu kubadilisha thamani hizi na uone athari:
-- Badilisha uwazi wa chupa kutoka 0.5 hadi 0.8 – hili linaathiri vipi mwonekano wa glasi?
-- Rekebisha rangi ya udongo kutoka `#3a241d` hadi `#8B4513` – athari ya kuona ni ipi?
-- Badilisha `z-index` ya udongo hadi 2 – nini kinatokea kwa tabaka?
+✅ **Jaribio la Kuona**: Jaribu kubadilisha thamani hizi na tazama matokeo:
+- Badilisha uwazi wa chupa kutoka 0.5 hadi 0.8 – hii huathirije muonekano wa kioo?
+- Badilisha rangi ya udongo kutoka `#3a241d` hadi `#8B4513` – athari gani ya kuona inaleta?
+- Badilisha `z-index` ya udongo kuwa 2 – ni nini kinatokea kwa mipako?
+
+### 🔄 **Ukaguzi wa Kifahari**
+**Uelewa wa Muundo wa Kuona wa CSS**: Thibitisha uelewa wako wa muundo wa CSS:
+- ✅ Jinsi vipimo vya asilimia vinavyounda muundo unaojibadilisha?
+- ✅ Kwa nini uwazi huunda athari ya uwazi wa kioo?
+- ✅ Kazi gani inachezwa na z-index katika mipako ya vitu?
+- ✅ Thamani za border-radius huunda sura ya chupa vipi?
+
+**Kanuni ya Muundo**: Zingatia jinsi tunavyojenga picha ngumu kutoka maumbo rahisi:
+1. **Mraba** → **Melee za mviringo** → **Vipengele vya chupa**
+2. **Rangi zenye tambarare** → **Uwazi** → **Athari ya kioo**
+3. **Vitu vya mtu binafsi** → **Muundo wenye mipako** → **Muonekano wa 3D**
 
 ---
 
-## Changamoto ya Wakala wa GitHub Copilot 🚀
+## Changamoto ya GitHub Copilot Agent 🚀
 
-Tumia hali ya Wakala kukamilisha changamoto ifuatayo:
+Tumia hali ya Agent kumaliza changamoto ifuatayo:
 
-**Maelezo:** Unda uhuishaji wa CSS unaofanya mimea ya terrarium kuyumba taratibu, ikionyesha athari ya upepo wa asili. Hii itakusaidia kufanya mazoezi ya uhuishaji wa CSS, mabadiliko, na keyframes huku ukiboresha mvuto wa kuona wa terrarium yako.
+**Maelezo:** Tengeneza mzunguko wa CSS unaofanya mimea ya terrarium kupepesa polepole kutoka pande zote mbili, kuiga athari ya upepo wa asili. Hii itakusaidia kufundisha mizunguko ya CSS, mabadiliko, na keyframes huku ukiboresha mvuto wa kuona wa terrarium yako.
 
-**Kichocheo:** Ongeza uhuishaji wa keyframe za CSS ili kufanya mimea kwenye terrarium kuyumba taratibu kutoka upande mmoja hadi mwingine. Unda uhuishaji wa kuyumba unaozungusha kila mmea kidogo (digrii 2-3) kushoto na kulia kwa muda wa sekunde 3-4, na uitumie kwa darasa la `.plant`. Hakikisha uhuishaji unarudia bila kikomo na una kazi ya kupunguza kwa mwendo wa asili.
+**Agizo:** Ongeza mizunguko ya CSS kwa kutumia keyframes ili kufanya mimea ndani ya terrarium kupepesa polepole kutoka upande mmoja hadi mwingine. Tengeneza mzunguko wa kupiga mzunguko kidogo (nyingi 2-3 digrii) kushoto na kulia kwa muda wa sekunde 3-4, na uanze kwa darasa la `.plant`. Hakikisha mzunguko unaendelea bila mwisho na unatumia kazi ya kupunguza kasi kwa mwendo wa asili.
 
-Jifunze zaidi kuhusu [hali ya wakala](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
+Jifunze zaidi kuhusu [hali ya agent](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) hapa.
 
-## 🚀 Changamoto: Kuongeza Mwangaza wa Glasi
+## 🚀 Changamoto: Kuongeza Mwangaza wa Kioo
 
-Uko tayari kuboresha terrarium yako kwa mwangaza halisi wa glasi? Mbinu hii itaongeza kina na uhalisia kwenye muundo.
+Je, uko tayari kuboresha terrarium yako kwa mwangaza wa kioo halisi? Mbinu hii itaongeza kina na uhalisia kwa muundo.
 
-Utaunda mwangaza mdogo unaoonyesha jinsi mwanga unavyorejea kwenye uso wa glasi. Mbinu hii ni sawa na jinsi wachoraji wa Renaissance kama Jan van Eyck walivyotumia mwanga na mwangaza kufanya glasi iliyochorwa ionekane ya pande tatu. Hivi ndivyo unavyolenga:
+Utaunda mwanga mdogo unaoiga jinsi mwanga unavyoakisi uso wa kioo. Mbinu hii ni sawa na jinsi wachoraji wa Renaissance kama Jan van Eyck walivyotumia mwanga na mng'ao kuifanya kioo chenye mchoro kuonekana cha tatu-kidimensioni. Haya ndio unayolenga:
 
-![terrarium iliyokamilika](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.sw.png)
+![terrarium iliyokamilika](../../../../translated_images/terrarium-final.2f07047ffc597d0a.sw.png)
 
 **Changamoto yako:**
-- **Unda** maumbo madogo meupe au yenye rangi nyepesi kwa mwangaza wa glasi
-- **Yapange** kimkakati upande wa kushoto wa chupa
-- **Tumia** uwazi na athari za ukungu zinazofaa kwa mwangaza halisi wa mwanga
-- **Tumia** `border-radius` kuunda maumbo ya asili, kama mapovu
-- **Jaribu** na gradients au kivuli cha kisanduku kwa uhalisia ulioimarishwa
+- **Tengeneza** maumbo madogo meupe au yenye rangi nyepesi ya mviringo kwa mwanga wa kioo
+- **Weka** kwa mkakati upande wa kushoto wa chupa
+- **Tumia** uwazi unaofaa na athari za blur kwa mwanga halisi unaoakisiwa
+- **Tumia** `border-radius` kuunda maumbo ya kiasili, kama matone
+- **Jaribu** mitawanyiko au kivuli cha sanduku kwa uhalisia ulioboreshwa
 
-## Jaribio Baada ya Somo
+## Mtihani wa Baada ya Mfululizo
 
-[Jaribio baada ya somo](https://ff-quizzes.netlify.app/web/quiz/18)
+[Mtihani wa baada ya mfululizo](https://ff-quizzes.netlify.app/web/quiz/18)
 
-## Panua Maarifa Yako ya CSS
+## Panua Uelewa wako wa CSS
 
-CSS inaweza kuhisi kuwa ngumu mwanzoni, lakini kuelewa dhana hizi za msingi kunatoa msingi thabiti kwa mbinu za hali ya juu zaidi.
+CSS inaweza kuonekana ngumu mwanzoni, lakini kuelewa dhana hizi za msingi hutoa msingi imara kwa mbinu ngumu zaidi.
 
-**Maeneo yako ya kujifunza CSS yanayofuata:**
-- **Flexbox** - hurahisisha mpangilio na usambazaji wa vipengele
-- **CSS Grid** - hutoa zana zenye nguvu za kuunda mpangilio changamano
-- **CSS Variables** - hupunguza kurudia na kuboresha usimamizi
-- **Muundo unaojibika** - huhakikisha tovuti zinafanya kazi vizuri kwenye ukubwa tofauti wa skrini
+**Maeneo yako yafuatayo ya kujifunza CSS:**
+- **Flexbox** - huwezesha urahisi wa kuoanisha na kugawa vitu
+- **CSS Grid** - huleta zana zenye nguvu za kuunda mipangilio tata
+- **Vigezo vya CSS** - hupunguza rudia na kuboresha utunzaji
+- **Muundo unaojibadilisha** - huhakikisha tovuti zinafanya kazi vyema kwa saizi tofauti za skrini
 
-### Rasilimali za Kujifunza kwa Vitendo
+### Rasilimali za Kujifunza Shirikishi
 
-Fanya mazoezi ya dhana hizi kwa michezo hii ya kuvutia, ya vitendo:
-- 🐸 [Flexbox Froggy](https://flexboxfroggy.com/) - Jifunze Flexbox kupitia changamoto za kufurahisha
-- 🌱 [Grid Garden](https://codepip.com/games/grid-garden/) - Jifunze CSS Grid kwa kulima karoti za mtandaoni
-- 🎯 [CSS Battle](https://cssbattle.dev/) - Jaribu ujuzi wako wa CSS kwa changamoto za usimbaji
+Fanya mazoezi na dhana hizi kupitia michezo yenye burudani, yenye ushawishi:
+- 🐸 [Flexbox Froggy](https://flexboxfroggy.com/) - Jifunze Flexbox kwa changamoto za kufurahisha
+- 🌱 [Grid Garden](https://codepip.com/games/grid-garden/) - Jifunze CSS Grid kwa kukuza karoti wa mtandaoni
+- 🎯 [CSS Battle](https://cssbattle.dev/) - Jaribu ujuzi wako wa CSS kwa changamoto za msimbo
 
 ### Kujifunza Zaidi
 
-Kwa misingi kamili ya CSS, kamilisha moduli hii ya Microsoft Learn: [Pamba programu yako ya HTML kwa CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
+Kwa msingi mpana wa CSS, maliza moduli hii ya Microsoft Learn: [Acha HTML yako ionekane kwa CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 
-## Kazi ya Nyumbani
+### ⚡ **Kile Unachoweza Kufanya Katika Dakika 5 Zijazo**
+- [ ] Fungua DevTools na chunguza mitindo ya CSS kwenye tovuti yoyote ukiitumia paneli ya Vipengele
+- [ ] Tengeneza faili rahisi la CSS na uilinke kwa ukurasa wa HTML
+- [ ] Jaribu kubadilisha rangi kwa njia tofauti: hex, RGB, na rangi zilizopewa majina
+- [ ] Fanya mazoezi ya sanduku kwa kuongeza padding na margin kwa div
 
-[Uboreshaji wa CSS](assignment.md)
+### 🎯 **Kile Unachoweza Kufanikisha Saa Hii**
+- [ ] Maliza mtihani wa baada ya masomo na hakiki msingi wa CSS
+- [ ] Pamba ukurasa wako wa HTML kwa fonti, rangi, na nafasi
+- [ ] Tengeneza mpangilio rahisi kwa kutumia flexbox au grid
+- [ ] Jaribu mabadiliko ya CSS kwa athari laini
+- [ ] Fanya mazoezi ya muundo unaojibadilisha kwa kutumia media queries
+
+### 📅 **Safari yako ya Wiki ya CSS**
+- [ ] Kamilisha kazi ya mtindo wa terrarium kwa ubunifu
+- [ ] Jifunze CSS Grid kwa kujenga mpangilio wa picha za makumbusho
+- [ ] Jifunza mitindo ya CSS kuleta muundo wako uhai
+- [ ] Gundua preprocessors za CSS kama Sass au Less
+- [ ] Soma kanuni za muundo na zitumie kwa CSS yako
+- [ ] Chambua na uirudie tena mitindo yenye mvuto unayopata mtandaoni
+
+### 🌟 **Ukomavu wako wa Mwezi Mzima wa Muundo**
+- [ ] Jenga mfumo kamili wa muundo wa tovuti unaojibadilisha
+- [ ] Jifunze CSS-in-JS au mifumo ya utility-first kama Tailwind
+- [ ] Changia miradi ya chanzo huria na maboresho ya CSS
+- [ ] Pitisha ujuzi wa CSS wa hali ya juu kama mali maalum za CSS na containment
+- [ ] Unda maktaba za vipengele vinavyotumika tena kwa CSS ya moduli
+- [ ] Fundisha wengine wanaojifunza CSS na kushiriki maarifa ya muundo
+
+## 🎯 Ratiba Yako ya Ukomavu wa CSS
+
+```mermaid
+timeline
+    title Mchakato wa Kujifunza CSS
+    
+    section Msingi (dakika 10)
+        File Connection: Unganisha CSS na HTML
+                       : Elewa kanuni za cascade
+                       : Jifunze mambo ya urithi
+        
+    section Wachaguzi (dakika 15)
+        Targeting Elements: Wachaguzi wa elementi
+                          : Mifumo ya darasa
+                          : Umaalum wa ID
+                          : Kombinat za mchanganyiko
+        
+    section Mfano wa Sanduku (dakika 20)
+        Layout Fundamentals: Mipaka na padding
+                           : Sifa za mipaka
+                           : Ukubwa wa maudhui
+                           : Tabia ya box-sizing
+        
+    section Uwekaji (dakika 25)
+        Element Placement: Static dhidi ya relative
+                         : Uwekaji wa kisababu
+                         : Kuweka tabaka kwa z-index
+                         : Vitengo vinavyojirekebisha
+        
+    section Ubunifu wa Kuonekanwa (dakika 30)
+        Styling Mastery: Rangi na uwazi
+                       : Mwingu na athari
+                       : Mabadiliko
+                       : Sifa za mabadiliko
+        
+    section Ubunifu Unaobadilika (dakika 45)
+        Multi-Device Support: Maswali ya media
+                            : Mipangilio inayobadilika
+                            : Mbinu ya kuanzia simu ya mkononi
+                            : Ubora wa viewport
+        
+    section Mbinu Zinazoendelea (wiki 1)
+        Modern CSS: Mipangilio ya Flexbox
+                  : Mifumo ya CSS Grid
+                  : Sifa za kawaida
+                  : Kufunga vigezo vya mvivu
+        
+    section Ujuzi wa Kitaalamu (mwezi 1)
+        CSS Architecture: Mifumo ya vipengele
+                        : Msimbo unaoweza kudumishwa
+                        : Uboreshaji wa utendaji
+                        : Ulinganifu wa mzunguko wa kivinjari
+```
+### 🛠️ Muhtasari wa Kifaa chako cha CSS
+
+Baada ya kumaliza somo hili, sasa una:
+- **Uelewa wa Cascade**: Jinsi mitindo inavyorithi na kubatilisha kila mmoja
+- **Ukomavu wa Chagua**: Lengo sahihi kwa vipengele, madarasa, na IDs
+- **Ujuzi wa Upangilio**: Kuweka vitu kwa mikakati na mipako
+- **Muundo wa Kuona**: Kuunda athari za kioo, vivuli, na ufanisi wa uwazi
+- **Mbinu za Kujibadilisha**: Mipangilio ya asilimia inayobadilika kwa skrini yoyote
+- **Utaratibu wa Msimbo**: Muundo wa CSS safi na rahisi kutunza
+- **Mienendo ya Kisasa**: Matumizi ya vitengo vinavyohusiana na muundo unaopatikana zaidi
+
+**Hatua Zifuatazo**: Terrarium yako sasa ina muundo (HTML) na mtindo (CSS). Somo la mwisho litaongeza mwingiliano kwa JavaScript!
+
+## Kazi
+
+[CSS Refactoring](assignment.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Utangulizi wa Hati**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kufanikisha usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au upotoshaji. Hati asili kwa lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu sana, tafsiri ya mtaalamu wa lugha ya kibinadamu inashauriwa. Hatutopewa lawama kwa kutokuelewana au upotoshaji unaotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

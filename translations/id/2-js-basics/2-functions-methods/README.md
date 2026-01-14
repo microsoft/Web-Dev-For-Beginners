@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Dasar-Dasar JavaScript: Metode dan Fungsi
 
-![Dasar-Dasar JavaScript - Fungsi](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b7605c36330ac42eeb5cd8ed02bcdd60fdac778174d6cb865.id.png)
+![Dasar-Dasar JavaScript - Fungsi](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.id.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Použitie API CO2 Signal od tmrow na sledovanie spotreby elektriny, vytvorenie rozšírenia prehliadača, ktoré vám pripomenie, aká náročná je spotreba elektriny vo vašej oblasti. Používanie tohto rozšírenia vám pomôže robiť rozhodnutia o vašich aktivitách na základe týchto informácií.
 
-![Screenshot rozšírenia](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.sk.png)
+![Screenshot rozšírenia](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sk.png)
 
 ## Začíname
 
@@ -31,7 +31,7 @@ npm run build
 
 Na inštaláciu v Edge použite menu „tri bodky“ v pravom hornom rohu prehliadača na vyhľadanie panelu rozšírení. Odtiaľ vyberte „Načítať nebalené“ na načítanie nového rozšírenia. V zobrazenom okne otvorte priečinok „dist“ a rozšírenie sa načíta. Na jeho používanie budete potrebovať API kľúč CO2 Signal ([získajte ho e-mailom tu](https://www.co2signal.com/) – zadajte svoj e-mail do políčka na tejto stránke) a [kód pre vašu oblasť](http://api.electricitymap.org/v3/zones) z [Electricity Map](https://www.electricitymap.org/map) (napríklad v Bostone používam „US-NEISO“).
 
-![Inštalácia](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.sk.png)
+![Inštalácia](../../../../../translated_images/install-on-edge.78634f02842c4828.sk.png)
 
 Keď zadáte API kľúč a kód oblasti do rozhrania rozšírenia, farebný bod v paneli rozšírenia prehliadača by sa mal zmeniť tak, aby odrážal spotrebu energie vo vašej oblasti. Poskytne vám indikátor, ktoré energeticky náročné aktivity sú vhodné pre váš výkon. Koncept tejto „bodovej“ systému mi bol inšpirovaný rozšírením [Energy Lollipop](https://energylollipop.com/) pre emisie v Kalifornii.
 

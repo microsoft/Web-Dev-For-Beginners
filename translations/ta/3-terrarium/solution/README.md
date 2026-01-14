@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 சிறிய டிராக் மற்றும் டிராப் கோட்-தியானம். சிறிது HTML, JS மற்றும் CSS கொண்டு, நீங்கள் ஒரு வலை இடைமுகத்தை உருவாக்கி, அதை அலங்கரித்து, ஒரு தொடர்பைச் சேர்க்கலாம்.
 
-![என் டெரேரியம்](../../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.ta.png)
+![என் டெரேரியம்](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.ta.png)
 
 ## க்ரெடிட்கள்
 

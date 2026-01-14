@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # إنشاء صفحات ويب ميسرة
 
-![كل شيء عن إمكانية الوصول](../../../../translated_images/webdev101-a11y.8ef3025c858d897a403a1a42c0897c76e11b724d9a8a0c0578dd4316f7507622.ar.png)
+![كل شيء عن إمكانية الوصول](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ar.png)
 > رسم توضيحي بواسطة [تومومي إيمورا](https://twitter.com/girlie_mac)
 
 ```mermaid

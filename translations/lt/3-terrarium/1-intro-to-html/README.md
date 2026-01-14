@@ -1,84 +1,168 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "89f7f9f800ce7c9f149e98baaae8491a",
-  "translation_date": "2025-08-29T16:55:06+00:00",
+  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
+  "translation_date": "2026-01-07T12:05:04+00:00",
   "source_file": "3-terrarium/1-intro-to-html/README.md",
   "language_code": "lt"
 }
 -->
 # Terrarium Projektas 1 dalis: Įvadas į HTML
 
-![Įvadas į HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.lt.png)
-> Sketchnote sukūrė [Tomomi Imura](https://twitter.com/girlie_mac)
+```mermaid
+journey
+    title Jūsų HTML mokymosi kelionė
+    section Pagrindai
+      Sukurti HTML failą: 3: Studentas
+      Pridėti DOCTYPE: 4: Studentas
+      Strukturizuoti dokumentą: 5: Studentas
+    section Turinys
+      Pridėti metaduomenis: 4: Studentas
+      Įtraukti paveikslėlius: 5: Studentas
+      Organizuoti maketą: 5: Studentas
+    section Semantika
+      Naudoti tinkamus žymeklius: 4: Studentas
+      Pagerinti prieinamumą: 5: Studentas
+      Sukurti terariumą: 5: Studentas
+```
+![Įvadas į HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.lt.png)
+> Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
-## Klausimai prieš paskaitą
+HTML arba HyperText Markup Language yra kiekvieno jūsų lankyto interneto svetainės pagrindas. Galvokite apie HTML kaip apie skeletą, kuris suteikia struktūrą tinklalapiams – jis apibrėžia, kur dedamas turinys, kaip jis organizuotas ir ką kiekvienas elementas reiškia. Nors CSS vėliau „papuoš“ jūsų HTML spalvomis ir išdėstymu, o JavaScript suteiks jam gyvybės su interaktyvumu, HTML suteikia būtiną struktūrą, dėl kurios visa kita tampa įmanoma.
 
-[Klausimai prieš paskaitą](https://ff-quizzes.netlify.app/web/quiz/15)
+Šios pamokos metu sukursite virtualaus terariumo sąsajos HTML struktūrą. Šis praktinis projektas išmokys pagrindines HTML sąvokas, tuo pačiu kuriant vizualiai patrauklų rezultatą. Išmoksite, kaip organizuoti turinį naudojant semantinius elementus, dirbti su paveikslėliais ir sukurti pagrindą interaktyviai interneto programai.
 
-> Peržiūrėkite vaizdo įrašą
+Pamokos pabaigoje turėsite veikiančią HTML puslapį, kuriame bus rodomi augalų paveikslėliai organizuotose stulpeliuose, paruoštus stilizavimui kitoje pamokoje. Nesijaudinkite, jei jis iš pradžių atrodo paprastas – būtent taip ir turi būti HTML prieš pridedant vizualinį apipavidalinimą su CSS.
 
+```mermaid
+mindmap
+  root((HTML Pagrindai))
+    Structure
+      DOCTYPE Deklaracija
+      HTML Elementas
+      Head Skyrius
+      Body Turinys
+    Elements
+      Žymės ir Atributai
+      Savarankiškos Žymės
+      Įdėti Elementai
+      Bloko prieš Į eilutę
+    Content
+      Teksto Elementai
+      Nuotraukos
+      Talpyklos (div)
+      Sąrašai
+    Semantics
+      Reikšmingos Žymės
+      Prieinamumas
+      Ekrano Skaitytuvai
+      SEO Privalumai
+    Best Practices
+      Teisingas Įdėjimas
+      Galiojantis Žymėjimas
+      Aprašomasis Alt Tekstas
+      Organizuota Struktūra
+```
+## Priešpaskaitinis testas
+
+[Priešpaskaitinis testas](https://ff-quizzes.netlify.app/web/quiz/15)
+
+> 📺 **Žiūrėkite ir mokykitės**: Peržiūrėkite šį naudingą vaizdo įrašo apžvalgą
 > 
-> [![Git ir GitHub pagrindai vaizdo įrašas](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
+> [![HTML pagrindai video](https://img.youtube.com/vi/1TvxJKBzhyQ/0.jpg)](https://www.youtube.com/watch?v=1TvxJKBzhyQ)
 
-### Įvadas
+## Projekto parengimas
 
-HTML, arba HyperText Markup Language, yra interneto „skeletas“. Jei CSS „aprengia“ jūsų HTML, o JavaScript suteikia jam gyvybės, HTML yra jūsų interneto aplikacijos kūnas. HTML sintaksė netgi atspindi šią idėją, nes ji apima „head“, „body“ ir „footer“ žymes.
+Prieš pradėdami rašyti HTML kodą, susikurkite tinkamą darbo vietą savo terariumo projektui. Iš karto sukuriant tvarkingą failų struktūrą yra svarbi įprotis, kuris jums labai pasitarnaus visos interneto svetainių kūrimo kelionės metu.
 
-Šioje pamokoje naudosime HTML, kad sukurtume virtualaus terariumo sąsajos „skeletą“. Jame bus pavadinimas ir trys stulpeliai: dešinysis ir kairysis stulpeliai, kuriuose bus perkeliamieji augalai, ir centrinė zona, kuri bus stiklinis terariumas. Pamokos pabaigoje galėsite matyti augalus stulpeliuose, tačiau sąsaja atrodys šiek tiek keistai; nesijaudinkite, kitame skyriuje pridėsite CSS stilius, kad sąsaja atrodytų geriau.
+### Užduotis: Sukurkite savo projekto struktūrą
 
-### Užduotis
+Sukursite atskirą aplanką savo terariumo projektui ir pridėsite pirmąjį HTML failą. Štai du būdai, kuriuos galite naudoti:
 
-Savo kompiuteryje sukurkite aplanką pavadinimu „terrarium“, o jame – failą „index.html“. Tai galite padaryti Visual Studio Code programoje, atidarę naują VS Code langą, paspaudę „open folder“ ir pasirinkę naują aplanką. Explorer skydelyje paspauskite mažą „file“ mygtuką ir sukurkite naują failą:
+**Variantas 1: Naudojant Visual Studio Code**  
+1. Atidarykite Visual Studio Code  
+2. Spauskite „File“ → „Open Folder“ arba naudokite `Ctrl+K, Ctrl+O` (Windows/Linux) arba `Cmd+K, Cmd+O` (Mac)  
+3. Sukurkite naują aplanką `terrarium` ir jį pasirinkite  
+4. „Explorer“ lange spauskite „New File“ ikoną  
+5. Pavadinkite savo failą `index.html`
 
-![Explorer VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.lt.png)
+![VS Code Explorer rodo naujo failo kūrimą](../../../../translated_images/vs-code-index.e2986cf919471eb9.lt.png)
 
-Arba
+**Variantas 2: Naudojant terminalo komandas**  
+```bash
+mkdir terrarium
+cd terrarium
+touch index.html
+code index.html
+```
+  
+**Štai ką šios komandos atlieka:**  
+- **Sukuria** naują katalogą `terrarium` jūsų projektui  
+- **Pereina** į terrarium katalogą  
+- **Sukuria** tuščią `index.html` failą  
+- **Atidaro** failą Visual Studio Code redagavimui
 
-Naudokite šias komandas git bash programoje:
-* `mkdir terrarium`
-* `cd terrarium`
-* `touch index.html`
-* `code index.html` arba `nano index.html`
+> 💡 **Pro patarimas**: Failo vardas `index.html` yra ypatingas interneto programavimo srityje. Kai kas nors apsilanko tinklalapyje, naršyklės automatiškai ieško `index.html` kaip numatytojo puslapio. Tai reiškia, kad URL kaip `https://mysite.com/projects/` automatiškai pateiks `index.html` failą iš katalogo `projects`, nereikalaujant nurodyti failo pavadinimo URL.
 
-> index.html failai nurodo naršyklei, kad tai yra numatytasis failas aplanke; URL, pvz., `https://anysite.com/test`, gali būti sukurtas naudojant aplanko struktūrą, kurioje yra aplankas „test“ su „index.html“ viduje; „index.html“ nebūtinai turi būti rodomas URL.
+## HTML dokumento struktūros supratimas
 
----
+Kiekvienas HTML dokumentas turi specifinę struktūrą, kurią naršyklės turi suprasti ir teisingai atvaizduoti. Galvokite apie šią struktūrą kaip apie oficialų laišką – ji turi privalomus elementus tam tikra tvarka, kurie padeda gavėjui (šiuo atveju naršyklei) tinkamai apdoroti turinį.
 
-## DocType ir html žymės
+```mermaid
+flowchart TD
+    A["<!DOCTYPE html>"] --> B["<html>"]
+    B --> C["<head>"]
+    C --> D["<title>"]
+    C --> E["<meta charset>"]
+    C --> F["<meta viewport>"]
+    B --> G["<body>"]
+    G --> H["<h1> Antraštė"]
+    G --> I["<div> Dėžutės"]
+    G --> J["<img> Paveikslėliai"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style G fill:#e8f5e8
+```  
+Pradėkime pridėdami esminį pamatą, kurio kiekvienas HTML dokumentas reikalauja.
 
-Pirmoji HTML failo eilutė yra jo doctype. Gali būti šiek tiek netikėta, kad ši eilutė turi būti pačiame failo viršuje, tačiau ji nurodo senesnėms naršyklėms, kad puslapis turi būti pateikiamas standartiniu režimu, laikantis dabartinės HTML specifikacijos.
+### DOCTYPE deklaracija ir šakninis elementas
 
-> Patarimas: VS Code programoje galite užvesti pelės žymeklį ant žymės ir gauti informaciją apie jos naudojimą iš MDN Reference vadovų.
+Pirmos dvi bet kokio HTML failo eilutės veikia kaip dokumento „įžanga“ naršyklei:
 
-Antroji eilutė turėtų būti `<html>` žymės atidarymo žymė, o po jos – uždarymo žymė `</html>`. Šios žymės yra jūsų sąsajos šakniniai elementai.
-
-### Užduotis
-
-Pridėkite šias eilutes savo `index.html` failo viršuje:
-
-```HTML
+```html
 <!DOCTYPE html>
 <html></html>
 ```
+  
+**Suprasdami ką daro šis kodas:**  
+- **Deklaruoja** dokumento tipą kaip HTML5 naudojant `<!DOCTYPE html>`  
+- **Sukuria** šakninį `<html>` elementą, kuriame bus visa puslapio turinys  
+- **Nustato** šiuolaikinius interneto standartus teisingam naršyklių atvaizdavimui  
+- **Užtikrina** vienodą rodymą skirtingose naršyklėse ir įrenginiuose
 
-✅ Yra keletas skirtingų režimų, kuriuos galima nustatyti naudojant DocType su užklausos eilute: [Quirks Mode ir Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Šie režimai buvo naudojami palaikyti labai senas naršykles, kurios šiais laikais paprastai nebenaudojamos (pvz., Netscape Navigator 4 ir Internet Explorer 5). Galite laikytis standartinio doctype deklaracijos.
+> 💡 **VS Code patarimas**: Užveskite pelę ant bet kurio HTML žymės VS Code, kad gautumėte naudingą informaciją iš MDN Web Docs, įskaitant naudojimo pavyzdžius ir naršyklių suderinamumo detales.
 
----
+> 📚 **Sužinokite daugiau**: DOCTYPE deklaracija apsaugo naršykles nuo „quirks režimo“, kuris buvo naudojamas labai senų svetainių palaikymui. Šiuolaikinė interneto kūrimo praktika naudoja paprastą `<!DOCTYPE html>` deklaraciją, kuri užtikrina [standartų atitinkantį atvaizdavimą](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode).
 
-## Dokumento 'head'
+### 🔄 **Pedagoginė peržiūra**  
+**Sustokite ir apmąstykite**: Prieš tęsdami, įsitikinkite, kad suprantate:  
+- ✅ Kodėl kiekvienas HTML dokumentas turi DOCTYPE deklaraciją  
+- ✅ Ką talpina šakninis `<html>` elementas  
+- ✅ Kaip ši struktūra padeda naršyklėms teisingai atvaizduoti puslapius
 
-HTML dokumento 'head' sritis apima svarbią informaciją apie jūsų tinklalapį, dar vadinamą [metaduomenimis](https://developer.mozilla.org/docs/Web/HTML/Element/meta). Mūsų atveju, mes nurodome interneto serveriui, kuriam šis puslapis bus siunčiamas, šiuos keturis dalykus:
+**Greitas savitikrinimas**: Ar galite savo žodžiais paaiškinti, ką reiškia „standartų atitinkantis atvaizdavimas“?
 
--   puslapio pavadinimą
--   puslapio metaduomenis, įskaitant:
-    -   'character set', nurodantį, kokia simbolių koduotė naudojama puslapyje
-    -   naršyklės informaciją, įskaitant `x-ua-compatible`, kuris nurodo, kad palaikoma IE=edge naršyklė
-    -   informaciją apie tai, kaip turėtų elgtis viewport, kai jis įkeliamas. Nustatant viewport pradinį mastelį 1, kontroliuojamas priartinimo lygis, kai puslapis pirmą kartą įkeliamas.
+## Esminių dokumento metaduomenų pridėjimas
 
-### Užduotis
+`<head>` sekcija HTML dokumente talpina svarbią informaciją, kurios reikia naršyklėms ir paieškos sistemoms, bet kurios lankytojai tiesiogiai nemato puslapyje. Galvokite apie tai kaip apie „užkulisių“ informaciją, kuri padeda jūsų tinklalapiui tinkamai veikti ir taisyklingai atrodyti įvairiuose įrenginiuose bei platformose.
 
-Pridėkite 'head' bloką savo dokumente tarp `<html>` žymių.
+Šie metaduomenys nurodo naršyklėms, kaip rodyti jūsų puslapį, kokį simbolių kodavimą naudoti ir kaip valdyti skirtingų ekrano dydžių palaikymą – visa tai būtina norint kurti profesionalias, prieinamas interneto svetaines.
+
+### Užduotis: Pridėkite dokumento antraštę
+
+Įterpkite šią `<head>` sekciją tarp atidarančių ir uždarančių `<html>` žymių:
 
 ```html
 <head>
@@ -88,18 +172,29 @@ Pridėkite 'head' bloką savo dokumente tarp `<html>` žymių.
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 ```
+  
+**Išskaidant ką daro kiekvienas elementas:**  
+- **Nustato** puslapio pavadinimą, kuris rodomas naršyklės skirtukuose ir paieškos rezultatuose  
+- **Nurodo** UTF-8 simbolių kodavimą, kad tekstas būtų tinkamai rodomas visame pasaulyje  
+- **Užtikrina** suderinamumą su naujesnėmis Internet Explorer versijomis  
+- **Konfigūruoja** reaguojantį dizainą nustatydama viewport dydį pagal įrenginio plotį  
+- **Valdo** pradinį padidinimą, kad turinys būtų rodomas natūraliu dydžiu
 
-✅ Kas nutiktų, jei nustatytumėte viewport meta žymę taip: `<meta name="viewport" content="width=600">`? Skaitykite daugiau apie [viewport](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
+> 🤔 **Pagalvokite apie tai**: Kas nutiktų, jei nustatytumėte viewport meta žymę taip: `<meta name="viewport" content="width=600">`? Tai priverstų puslapį visada būti 600 pikselių pločio, sulaužydama reaguojantį dizainą! Sužinokite daugiau apie [teisingą viewport konfigūravimą](https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag).
 
----
+## Dokumento turinio kūrimas
 
-## Dokumento `body`
+`<body>` elementas talpina visą matomą jūsų tinklalapio turinį – viską, ką vartotojai matys ir su kuo bendraus. Kol `<head>` sekcija pateikia naršyklei instrukcijas, `<body>` sekcija turi faktinį turinį: tekstą, paveikslėlius, mygtukus ir kitus elementus, kurie sudaro vartotojo sąsają.
 
-### HTML žymės
+Pridėkime kūno struktūrą ir supraskime, kaip HTML žymės veikia kartu, kad sukurtų prasmingą turinį.
 
-HTML faile pridedate žymes, kad sukurtumėte tinklalapio elementus. Kiekviena žymė paprastai turi atidarymo ir uždarymo žymę, pvz., `<p>hello</p>`, kad nurodytumėte pastraipą. Sukurkite savo sąsajos kūną, pridėdami `<body>` žymių rinkinį tarp `<html>` žymių; jūsų žymėjimas dabar atrodo taip:
+### HTML žymių struktūros supratimas
 
-### Užduotis
+HTML naudoja porines žymes elementams apibrėžti. Dauguma žymių turi atidarančią `<p>` ir uždarančią `</p>` žymes, su turiniu tarp jų: `<p>Labas, pasauli!</p>`. Tai sukuria paragrafą su tekstu „Labas, pasauli!“.
+
+### Užduotis: Pridėkite kūno elementą
+
+Atnaujinkite savo HTML failą, kad jis turėtų `<body>` elementą:
 
 ```html
 <!DOCTYPE html>
@@ -113,101 +208,180 @@ HTML faile pridedate žymes, kad sukurtumėte tinklalapio elementus. Kiekviena �
 	<body></body>
 </html>
 ```
+  
+**Štai ką suteikia ši pilna struktūra:**  
+- **Nustato** pagrindinę HTML5 dokumento schemą  
+- **Įtraukia** svarbius metaduomenis teisingam naršyklės atvaizdavimui  
+- **Sukuria** tuščią kūną, pasiruošusį jūsų matomam turiniui  
+- **Laikosi** modernių interneto kūrimo geriausių praktikų
 
-Dabar galite pradėti kurti savo puslapį. Paprastai naudojate `<div>` žymes, kad sukurtumėte atskirus puslapio elementus. Sukursime seriją `<div>` elementų, kuriuose bus vaizdai.
+Dabar esate pasiruošę pridėti savo terariumo matomus elementus. Naudosime `<div>` elementus kaip konteinerius skirtingoms turinio dalims organizuoti ir `<img>` elementus augalų paveikslėliams rodyti.
 
-### Vaizdai
+### Darbas su paveikslėliais ir išdėstymo konteineriais
 
-Viena HTML žymė, kuriai nereikia uždarymo žymės, yra `<img>` žymė, nes ji turi `src` elementą, kuriame yra visa informacija, reikalinga puslapiui, kad būtų pateiktas elementas.
+Paveikslėliai HTML yra specialūs, nes naudoja „savą uždarymą“ - žymę. Skirtingai nei elementai kaip `<p></p>`, kurie apima turinį, `<img>` žymė turi visą informaciją savyje naudodama atributus, tokius kaip `src` – paveikslėlio failo keliui ir `alt` – prieinamumui.
 
-Sukurkite aplanką savo aplikacijoje pavadinimu `images` ir jame pridėkite visus vaizdus iš [source code folder](../../../../3-terrarium/solution/images); (yra 14 augalų vaizdų).
+Prieš pridėdami paveikslėlius į HTML, turėsite tinkamai susiorganizuoti savo projekto failus sukurdami paveikslėlių aplanką ir pridėdami augalų grafikas.
 
-### Užduotis
+**Pirmiausia, paruoškite savo paveikslėlius:**  
+1. Sukurkite aplanką `images` savo terariumo projekto aplanko viduje  
+2. Atsisiųskite augalų paveikslėlius iš [sprendimo aplanko](../../../../3-terrarium/solution/images) (iš viso 14 augalų paveikslėlių)  
+3. Nukopijuokite visus augalų paveikslėlius į naują `images` aplanką
 
-Pridėkite tuos augalų vaizdus į du stulpelius tarp `<body></body>` žymių:
+### Užduotis: Sukurkite augalų rodymo išdėstymą
+
+Dabar pridėkite augalų paveikslėlius, organizuotus dviejuose stulpeliuose tarp `<body></body>` žymių:
 
 ```html
 <div id="page">
 	<div id="left-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/plant1.d87946a2ca70cc43.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant2" src="./images/plant2.png" />
+			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/plant2.8daa1606c9c1ad89.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant3" src="./images/plant3.png" />
+			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/plant3.8b0d484381a2a2a7.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant4" src="./images/plant4.png" />
+			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/plant4.656e16ae1df37be2.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant5" src="./images/plant5.png" />
+			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/plant5.2b41b9355f11ebcc.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant6" src="./images/plant6.png" />
+			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/plant6.3d1827d03b656994.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant7" src="./images/plant7.png" />
+			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/plant7.8152c302ac97f621.lt.png" />
 		</div>
 	</div>
 	<div id="right-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant8" src="./images/plant8.png" />
+			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/plant8.38d6428174ffa850.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant9" src="./images/plant9.png" />
+			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/plant9.f0e38d3327c37fc2.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant10" src="./images/plant10.png" />
+			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/plant10.b159d6d6e985595f.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant11" src="./images/plant11.png" />
+			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/plant11.2a03a1c2ec8ea84e.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant12" src="./images/plant12.png" />
+			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/plant12.60e9b53e538fbaf3.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant13" src="./images/plant13.png" />
+			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/plant13.07a51543c820bcf5.lt.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant14" src="./images/plant14.png" />
+			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/plant14.6e486371ba7d36ba.lt.png" />
 		</div>
 	</div>
 </div>
 ```
+  
+**Žingsnis po žingsnio, štai kas vyksta šiame kode:**  
+- **Sukuria** pagrindinį puslapio konteinerį su `id="page"`, kuris laiko visą turinį  
+- **Nustato** du stulpelių konteinerius: `left-container` ir `right-container`  
+- **Organizuoja** 7 augalus kairiajame stulpelyje ir 7 augalus dešiniajame stulpelyje  
+- **Įdeda** kiekvieną augalo paveikslėlį į `plant-holder` `div` atskiram pozicionavimui  
+- **Priskiria** nuoseklias klasės pavadinimus CSS stilizavimui kitoje pamokoje  
+- **Pateikia** unikalius ID kiekvienam paveikslėliui interaktyvumui su JavaScript vėliau  
+- **Nurodo** teisingus failų kelius į paveikslėlių aplanką
 
-> Pastaba: Spans vs. Divs. Divs laikomi 'blokų' elementais, o Spans – 'eilutės'. Kas nutiktų, jei šiuos divs pakeistumėte į spans?
+> 🤔 **Apmąstykite tai**: Pastebėkite, kad visų paveikslėlių `alt` tekstas dabar yra „plant“. Tai nėra idealu prieinamumui. Ekrano skaitytuvų vartotojai girdėtų „plant“ pakartotinai 14 kartų nežinodami, kuris konkretus augalas kiekviename paveikslėlyje. Ar galite sugalvoti geresnį, išsamesnį `alt` tekstą kiekvienam paveikslėliui?
 
-Su šiuo žymėjimu augalai dabar rodomi ekrane. Tai atrodo gana prastai, nes jie dar nėra stilizuoti naudojant CSS, ir tai padarysime kitoje pamokoje.
+> 📝 **HTML elementų tipai**: `<div>` elementai yra „blokinio lygio“ ir užima visą plotį, o `<span>` elementai yra „eilutės lygio“ ir užima tik reikiamą plotį. Ką manote, kas nutiktų, jei pakeistumėte visas `<div>` žymes į `<span>` žymes?
 
-Kiekvienas vaizdas turi alt tekstą, kuris pasirodys net jei negalite matyti ar pateikti vaizdo. Tai yra svarbus atributas, kurį reikia įtraukti dėl prieinamumo. Sužinokite daugiau apie prieinamumą būsimose pamokose; kol kas prisiminkite, kad alt atributas pateikia alternatyvią informaciją apie vaizdą, jei vartotojas dėl kokios nors priežasties negali jo matyti (dėl lėto ryšio, klaidos src attribute arba jei vartotojas naudoja ekrano skaitytuvą).
+### 🔄 **Pedagoginė peržiūra**  
+**Struktūros supratimas**: Skirkite akimirką peržiūrėti savo HTML struktūrą:  
+- ✅ Ar galite identifikuoti pagrindinius jūsų išdėstymo konteinerius?  
+- ✅ Ar suprantate, kodėl kiekvienas paveikslėlis turi unikalų ID?  
+- ✅ Kaip apibūdintumėte `plant-holder` divų paskirtį?
 
-✅ Ar pastebėjote, kad kiekvienas vaizdas turi tą patį alt tekstą? Ar tai gera praktika? Kodėl arba kodėl ne? Ar galite patobulinti šį kodą?
+**Vizualinė apžvalga**: Atidarykite HTML failą naršyklėje. Turėtumėte matyti:  
+- Paprastą augalų paveikslėlių sąrašą  
+- Paveikslėlius suskirstytus dviem stulpeliais  
+- Paprastą, nestilizuotą išdėstymą
 
----
+**Prisiminkite**: Ši paprasta išvaizda yra būtent tai, kaip turi atrodyti HTML prieš CSS stilizavimą!
 
-## Semantinis žymėjimas
+Su šiuo žymėjimu augalai pasirodys ekrane, nors dar neatrodys tvarkingai – tam reikalingas CSS kitame pamokoje! Dabar turite tvirtą HTML pagrindą, kuris tinkamai organizuoja jūsų turinį ir laikosi geriausių prieinamumo praktikų.
 
-Apskritai, rašant HTML, geriau naudoti prasmingą 'semantiką'. Ką tai reiškia? Tai reiškia, kad naudojate HTML žymes, kad atspindėtumėte duomenų tipą ar sąveiką, kuriai jos buvo sukurtos. Pavyzdžiui, pagrindinis puslapio pavadinimo tekstas turėtų naudoti `<h1>` žymę.
+## Semantinio HTML naudojimas prieinamumui
 
-Pridėkite šią eilutę tiesiai po atidarymo `<body>` žyme:
+Semantinis HTML reiškia HTML elementų pasirinkimą pagal jų prasmę ir paskirtį, ne tik pagal išvaizdą. Naudodami semantinį žymėjimą perduodate struktūrą ir turinio prasmę naršyklėms, paieškos sistemoms ir pagalbinėms technologijoms, pvz., ekrano skaitytuvams.
+
+```mermaid
+flowchart TD
+    A[Reikia pridėti turinį?] --> B{Kokio tipo?}
+    B -->|Pagrindinis antraštė| C["<h1>"]
+    B -->|Paantraštė| D["<h2>, <h3>, ir kt."]
+    B -->|Pastraipa| E["<p>"]
+    B -->|Sąrašas| F["<ul>, <ol>"]
+    B -->|Naršymas| G["<nav>"]
+    B -->|Straipsnis| H["<article>"]
+    B -->|Skiltis| I["<section>"]
+    B -->|Bendras konteineris| J["<div>"]
+    
+    C --> K[Ekrano skaitytuvai praneša kaip pagrindinį pavadinimą]
+    D --> L[Sukuria tinkamą antraščių hierarchiją]
+    E --> M[Užtikrina tinkamą teksto tarpus]
+    F --> N[Leidžia naudoti sąrašų navigacijos spartųjį klavišą]
+    G --> O[Nustato navigacijos orientyrus]
+    H --> P[Žymi atskirą turinį]
+    I --> Q[Grupuoja susijusį turinį]
+    J --> R[Naudoti tik jei netinka semantinis žymeklis]
+    
+    style C fill:#4caf50
+    style D fill:#4caf50
+    style E fill:#4caf50
+    style F fill:#4caf50
+    style G fill:#2196f3
+    style H fill:#2196f3
+    style I fill:#2196f3
+    style J fill:#ff9800
+```  
+Šis požiūris padaro jūsų svetaines prieinamesnes žmonėms su negalia ir padeda paieškos sistemoms geriau suprasti jūsų turinį. Tai esminė šiuolaikinio interneto plėtros principo dalis, kuri kuria geresnę patirtį visiems.
+
+### Semantinio puslapio pavadinimo pridėjimas
+
+Pridėkime tinkamą antraštę jūsų terariumo puslapiui. Įdėkite šią eilutę iškart po atidarančios `<body>` žymės:
 
 ```html
 <h1>My Terrarium</h1>
 ```
+  
+**Kodėl semantinis žymėjimas svarbus:**  
+- **Padeda** ekrano skaitytuvams naviguoti ir suprasti puslapio struktūrą  
+- **Pagerina** paieškos sistemų optimizavimą (SEO), aiškindamas turinio hierarchiją  
+- **Didina** prieinamumą vartotojams su regos sutrikimais ar pažinimo skirtumais  
+- **Kuria** geresnę vartotojo patirtį visuose įrenginiuose ir platformose  
+- **Laikosi** interneto standartų ir geriausių praktikos principų profesionaliai kūrėjų bendruomenei
 
-Naudojant semantinį žymėjimą, pvz., antraštėms `<h1>` ir nesutvarkytoms sąrašams `<ul>`, padedama ekrano skaitytuvams naršyti puslapyje. Apskritai, mygtukai turėtų būti rašomi kaip `<button>`, o sąrašai – kaip `<li>`. Nors _įmanoma_ naudoti specialiai stilizuotus `<span>` elementus su paspaudimo tvarkytojais, kad imituotumėte mygtukus, geriau neįgaliems vartotojams naudoti technologijas, kad nustatytų, kur puslapyje yra mygtukas, ir sąveikauti su juo, jei elementas atrodo kaip mygtukas. Dėl šios priežasties stenkitės kuo daugiau naudoti semantinį žymėjimą.
+**Semantinių ir neseemantinių pasirinkimų pavyzdžiai:**
 
-✅ Pažvelkite į ekrano skaitytuvą ir [kaip jis sąveikauja su tinklalapiu](https://www.youtube.com/watch?v=OUDV1gqs9GA). Ar matote, kodėl nesemantinis žymėjimas gali erzinti vartotoją?
+| Paskirtis | ✅ Semantinis pasirinkimas | ❌ Neseemantinis pasirinkimas |
+|---------|-----------------------|----------------------------|
+| Pagrindinė antraštė | `<h1>Pavadinimas</h1>` | `<div class="big-text">Pavadinimas</div>` |
+| Navigacija | `<nav><ul><li></li></ul></nav>` | `<div class="menu"><div></div></div>` |
+| Mygtukas | `<button>Spustelėk mane</button>` | `<span onclick="...">Spustelėk mane</span>` |
+| Straipsnio turinys | `<article><p></p></article>` | `<div class="content"><div></div></div>` |
 
-## Terariumas
+> 🎥 **Pažiūrėkite veiksme**: Žiūrėkite [kaip ekrano skaitytuvai bendrauja su tinklalapiais](https://www.youtube.com/watch?v=OUDV1gqs9GA), kad suprastumėte, kodėl semantinis žymėjimas yra svarbus prieinamumui. Atkreipkite dėmesį, kaip tinkama HTML struktūra padeda vartotojams veiksmingai naršyti.
 
-Paskutinė šios sąsajos dalis apima žymėjimo sukūrimą, kuris bus stilizuotas, kad sukurtų terariumą.
+## Terariumo konteinerio kūrimas
 
-### Užduotis:
+Dabar pridėkime HTML struktūrą pačiam terariumui – stiklinėms talpykloms, kur bus dedami augalai. Ši sekcija demonstruoja svarbią sąvoką: HTML suteikia struktūrą, bet be CSS stilizavimo šie elementai dar nebus matomi.
 
-Pridėkite šį žymėjimą virš paskutinės `</div>` žymės:
+Terariumo žymėjime naudojami aprašomieji klasės pavadinimai, kurie CSS stilizavimą padarys intuityvų ir lengvai prižiūrimą kitoje pamokoje.
+
+### Užduotis: Pridėkite terariumo struktūrą
+
+Įterpkite šį žymėjimą virš paskutinės `</div>` žymės (prieš puslapio konteinerio uždarymą):
 
 ```html
 <div id="terrarium">
@@ -220,30 +394,203 @@ Pridėkite šį žymėjimą virš paskutinės `</div>` žymės:
 	<div class="jar-bottom"></div>
 </div>
 ```
+  
+**Suprasdami šią terariumo struktūrą:**  
+- **Sukuria** pagrindinį terariumo konteinerį su unikaliu ID stilizavimui
+- **Apibrėžia** atskirus elementus kiekvienam vaizdiniam komponentui (viršus, sienos, žemė, apačia)
+- **Įtraukia** įdėtus elementus stiklo atspindžių efektams (blizgūs elementai)
+- **Naudoja** aprašomuosius klasės pavadinimus, aiškiai nurodančius kiekvieno elemento paskirtį
+- **Paruošia** struktūrą CSS stiliavimui, kuris sukurs stiklinio terariumo išvaizdą
 
-✅ Nors pridėjote šį žymėjimą ekrane, nieko nematote. Kodėl?
+> 🤔 **Pastebėjote kažką?**: Nors pridėjote šį žymėjimą, puslapyje nematote nieko naujo! Tai puikiai iliustruoja, kaip HTML suteikia struktūrą, o CSS suteikia išvaizdą. Šie `<div>` elementai egzistuoja, bet dar neturi jokio vizualinio stiliaus – tai bus kitoje pamokoje!
+
+```mermaid
+flowchart TD
+    A[HTML Dokumentas] --> B[Dokumento Antraštė]
+    A --> C[Dokumento Turinys]
+    B --> D[Pavadinimo Elementas]
+    B --> E[Meta CharSet]
+    B --> F[Meta Viewport]
+    C --> G[Pagrindinis Antraštė]
+    C --> H[Puslapio Talpykla]
+    H --> I[Kairioji Talpykla su 7 augalais]
+    H --> J[Dešinioji Talpykla su 7 augalais]
+    H --> K[Terariumo Struktūra]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style H fill:#f3e5f5
+```
+### 🔄 **Pedagoginė kontrolė**
+**HTML struktūros valdymas**: Prieš tęsdami, įsitikinkite, kad galite:
+- ✅ Paaiškinti skirtumą tarp HTML struktūros ir vaizdinės išvaizdos
+- ✅ Nustatyti semantinius ir ne-semantinius HTML elementus
+- ✅ Apibūdinti, kaip tinkamas žymėjimas pagerina prieinamumą
+- ✅ Atpažinti pilną dokumento medžio struktūrą
+
+**Testuokite savo supratimą**: Atidarykite savo HTML failą naršyklėje su išjungtu JavaScript ir pašalintu CSS. Tai parodys jums sukurtą gryną semantinę struktūrą!
 
 ---
 
-## 🚀Iššūkis
+## GitHub Copilot agento iššūkis
 
-HTML yra keletas senų 'laukinės' žymių, kurios vis dar smagu naudoti, nors neturėtumėte naudoti pasenusių žymių, tokių kaip [šios žymės](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements) savo žymėjime. Vis dėlto, ar galite naudoti seną `<marquee>` žymę, kad h1 pavadinimas slinktų horizontaliai? (jei tai padarysite, nepamirškite vėliau ją pašalinti)
+Naudokite Agent režimą, kad įvykdytumėte šį iššūkį:
 
-## Klausimai po paskaitos
+**Aprašymas:** Sukurkite semantinę HTML struktūrą augalų priežiūros gairių sekcijai, kurią būtų galima pridėti prie terariumo projekto.
 
-[Klausimai po paskaitos](https://ff-quizzes.netlify.app/web/quiz/16)
+**Užduotis:** Sukurkite semantinę HTML sekciją su pagrindiniu antrašte „Plantas priežiūros gidas“, trimis poskyriais su antraštėmis „Laistymas“, „Šviesos reikalavimai“ ir „Dirvožemio priežiūra“, kiekviename pateiktame po pastraipą augalo priežiūros informacijos. Naudokite tinkamus semantinius HTML žymėjimus, tokius kaip `<section>`, `<h2>`, `<h3>` ir `<p>`, kad turinys būtų teisingai struktūruotas.
 
-## Apžvalga ir savarankiškas mokymasis
+Sužinokite daugiau apie [agentų režimą](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode).
 
-HTML yra 'patikrinta ir patikima' blokų sistema, kuri padėjo sukurti internetą tokį, koks jis yra šiandien. Sužinokite šiek tiek apie jo istoriją, studijuodami senas ir naujas žymes. Ar galite suprasti, kodėl kai kurios žymės buvo pasenę, o kitos pridėtos? Kokios žymės galėtų būti įvestos ateityje?
+## Ištirkite HTML istorijos iššūkį
 
-Sužinokite daugiau apie svetainių kūrimą internetui ir mobiliesiems įrenginiams [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon).
+**Sužinokite apie interneto evoliuciją**
+
+HTML labai pasikeitė nuo tada, kai Timas Berners-Lee 1990 m. CERN sukūrė pirmąjį žiniatinklio naršyklę. Kai kurie senesni žymėjimai, pvz., `<marquee>`, dabar yra pasenę, nes jie blogai suderinami su šiuolaikiniais prieinamumo standartais ir reaguojančio dizaino principais.
+
+**Išbandykite šį eksperimentą:**
+1. Laikinai apvyniokite savo `<h1>` antraštę `<marquee>` žyma: `<marquee><h1>My Terrarium</h1></marquee>`
+2. Atidarykite puslapį naršyklėje ir stebėkite slinkties efektą
+3. Pagalvokite, kodėl ši žyma buvo pasenusi (užuomina: pagalvokite apie naudotojo patirtį ir prieinamumą)
+4. Pašalinkite `<marquee>` žymą ir grįžkite prie semantinio žymėjimo
+
+**Refleksijos klausimai:**
+- Kaip slenkantis pavadinimas galėtų paveikti regėjimo negalią turinčius ar judesio jautrumą turinčius naudotojus?
+- Kokios šiuolaikinės CSS technikos galėtų pasiekti panašius vaizdinius efektus, bet būtų labiau prieinamos?
+- Kodėl svarbu naudoti dabartinius interneto standartus, o ne pasenusius elementus?
+
+Išsamiau sužinokite apie [pasenusius ir pasenusius HTML elementus](https://developer.mozilla.org/docs/Web/HTML/Element#Obsolete_and_deprecated_elements), kad suprastumėte, kaip interneto standartai keičiasi siekiant geresnės naudotojo patirties.
+
+
+## Po paskaitos testas
+
+[Po paskaitos testas](https://ff-quizzes.netlify.app/web/quiz/16)
+
+## Peržiūra ir savarankiškas mokymasis
+
+**Pagilinkite savo HTML žinias**
+
+HTML jau daugiau nei 30 metų yra interneto pagrindas, nuo paprastos dokumentų žymėjimo kalbos išsivystęs į pažangią platformą interaktyvioms programoms kurti. Suprasdami šią evoliuciją, geriau įvertinsite šiuolaikinius interneto standartus ir priimsite geresnius sprendimus programuojant.
+
+**Rekomenduojami mokymosi keliai:**
+
+1. **HTML istorija ir evoliucija**
+   - Išnagrinėkite laiko juostą nuo HTML 1.0 iki HTML5
+   - Išsiaiškinkite, kodėl tam tikros žymos buvo pašalintos (prieinamumas, mobilių įrenginių pritaikymas, priežiūra)
+   - Tirti naujas HTML funkcijas ir pasiūlymus
+
+2. **Semantinis HTML giliau**
+   - Studijuokite pilną [HTML5 semantinių elementų sąrašą](https://developer.mozilla.org/docs/Web/HTML/Element)
+   - Praktikuokite, kada naudoti `<article>`, `<section>`, `<aside>`, ir `<main>`
+   - Sužinokite apie ARIA atributus geresniam prieinamumui
+
+3. **Šiuolaikinis interneto kūrimas**
+   - Išnagrinėkite [pritaikomų svetainių kūrimą](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-77807-sagibbon) Microsoft Learn platformoje
+   - Supraskite HTML integraciją su CSS ir JavaScript
+   - Susipažinkite su interneto našumu ir SEO gerosiomis praktikomis
+
+**Refleksijos klausimai:**
+- Kurias pasenusias HTML žymas atradote ir kodėl jos buvo pašalintos?
+- Kokios naujos HTML funkcijos siūlomos ateities versijoms?
+- Kaip semantinis HTML prisideda prie svetainių prieinamumo ir SEO?
+
+### ⚡ **Ką galite padaryti per ateinančias 5 minutes**
+- [ ] Atidarykite DevTools (F12) ir apžiūrėkite mėgstamos svetainės HTML struktūrą
+- [ ] Sukurkite paprastą HTML failą su pagrindinėmis žymomis: `<h1>`, `<p>`, ir `<img>`
+- [ ] Patikrinkite savo HTML W3C HTML Validator internete
+- [ ] Pabandykite pridėti komentarą į savo HTML su `<!-- comment -->`
+
+### 🎯 **Ką galite pasiekti šią valandą**
+- [ ] Baikite po pamokos testą ir peržiūrėkite semantinio HTML sąvokas
+- [ ] Sukurkite paprastą tinklapį apie save, naudodami tinkamą HTML struktūrą
+- [ ] Eksperimentuokite su skirtingų lygmenų antraštėmis ir teksto formatavimo žymomis
+- [ ] Įtraukite paveikslėlius ir nuorodas, kad išmėgintumėte multimedijos integraciją
+- [ ] Ištirkite HTML5 funkcijas, kurių dar neišbandėte
+
+### 📅 **Jūsų savaitės HTML kelias**
+- [ ] Baikite terariumo projekto užduotį su semantiniu žymėjimu
+- [ ] Sukurkite prieinamą tinklalapį, naudodami ARIA etiketes ir vaidmenis
+- [ ] Praktikuokite formų kūrimą su įvairiais įvedimo tipais
+- [ ] Išnagrinėkite HTML5 API, tokias kaip localStorage arba geolokacija
+- [ ] Studijuokite reaguojančio HTML raštus ir mobiliems įrenginiams orientuotą dizainą
+- [ ] Peržiūrėkite kitų kūrėjų HTML kodus, siekdami geriausių praktikų
+
+### 🌟 **Jūsų mėnesio interneto pagrindai**
+- [ ] Sukurkite portfelio svetainę, demonstruojančią jūsų HTML valdymą
+- [ ] Išmokite HTML šablonų kūrimą su sistema, pavyzdžiui, Handlebars
+- [ ] Prisidėkite prie atviro kodo projektų, tobulindami HTML dokumentaciją
+- [ ] Išmokite pažangių HTML koncepcijų, pvz., pasirinktinius elementus
+- [ ] Integruokite HTML su CSS sistemomis ir JavaScript bibliotekomis
+- [ ] Mokykite kitus ir dalinkitės HTML pagrindais
+
+## 🎯 Jūsų HTML įvaldymo laiko juosta
+
+```mermaid
+timeline
+    title HTML mokymosi eiga
+    
+    section Pagrindai (5 minutės)
+        Dokumento struktūra: DOCTYPE deklaracija
+                         : HTML šakninis elementas
+                         : Galvos ir kūno supratimas
+        
+    section Meta duomenys (10 minučių)
+        Būtinos Meta žymos: Simbolių koduotė
+                           : Vaizdo srities konfiguracija
+                           : Naršyklės suderinamumas
+        
+    section Turinys kūrimas (15 minučių)
+        Vaizdo integracija: Teisingi failų keliai
+                         : Alt teksto svarba
+                         : Savarankiškai uždaromi žymėjimai
+        
+    section Išdėstymo organizavimas (20 minučių)
+        Konteinerio strategija: Div elementai struktūrai
+                          : Klasės ir ID pavadinimai
+                          : Įdėtų elementų hierarchija
+        
+    section Semantikos įvaldymas (30 minučių)
+        Prasmę turintis žymėjimas: Antraščių hierarchija
+                                 : Ekrano skaitytuvo navigacija
+                                 : Prieinamumo geriausios praktikos
+        
+    section Išplėstiniai konceptai (1 valanda)
+        HTML5 savybės: Modernūs semantiniai elementai
+                      : ARIA atributai
+                      : Veikimo našumo aspektai
+        
+    section Profesiniai įgūdžiai (1 savaitė)
+        Kodo organizavimas: Failų struktūros šablonai
+                         : Lengvai prižiūrimas žymėjimas
+                         : Komandos bendradarbiavimas
+        
+    section Eksperto lygis (1 mėnuo)
+        Modernūs interneto standartai: Progresyvus papildymas
+                                    : Tarpnaršyklinis suderinamumas
+                                    : HTML specifikacijos atnaujinimai
+```
+### 🛠️ Jūsų HTML įrankių santrauka
+
+Pabaigę šią pamoką, turite:
+- **Dokumento struktūrą**: pilną HTML5 pagrindą su tinkamu DOCTYPE
+- **Semantinį žymėjimą**: prasmingas žymas, kurios gerina prieinamumą ir SEO
+- **Paveikslėlių integraciją**: tinkamą failų organizavimą ir alt teksto taikymą
+- **Išdėstymo konteinerius**: strategiškai naudojamus div su aprašomaisiais klasės pavadinimais
+- **Prieinamumo suvokimą**: supratimą apie ekrano skaitytuvų navigaciją
+- **Šiuolaikinius standartus**: dabartines HTML5 praktikas ir pasenusių žymų žinias
+- **Projekto pagrindą**: tvirtą bazę CSS stiliavimui ir JavaScript interaktyvumui
+
+**Tolimesni žingsniai**: Jūsų HTML struktūra paruošta CSS stiliaus pritaikymui! Sukurta semantinė bazė palengvins supratimą kitoje pamokoje.
+
 
 ## Užduotis
 
-[Praktikuokite HTML: Sukurkite tinklaraščio maketą](assignment.md)
+[Praktikuokite savo HTML: Sukurkite tinklaraščio maketą](assignment.md)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipiame dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudotis profesionalių vertėjų paslaugomis. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, kylančius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatizuoti vertimai gali turėti klaidų ar netikslumų. Pirminis dokumentas gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar klaidingas interpretacijas, kilusias dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

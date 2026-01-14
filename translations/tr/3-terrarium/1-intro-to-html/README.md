@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![HTML'e Giriş](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.tr.png)
+![HTML'e Giriş](../../../../translated_images/webdev101-html.4389c2067af68e98.tr.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, yani HyperText Markup Language, ziyaret ettiğiniz her web sitesinin temelini oluşturur. HTML'i web sayfalarına yapı kazandıran bir iskelet olarak düşünebilirsiniz – içeriklerin nereye gideceğini, nasıl organize edileceğini ve her bir parçanın neyi temsil ettiğini tanımlar. CSS daha sonra HTML'inizi renkler ve düzenlerle "süsler" ve JavaScript interaktivite ile "canlandırır", ancak HTML her şeyin mümkün olmasını sağlayan temel yapıyı sunar.
@@ -88,7 +88,7 @@ Teraryum projeniz için özel bir klasör oluşturacak ve ilk HTML dosyanızı e
 4. Explorer panelinde "New File" simgesine tıklayın
 5. Dosyanıza `index.html` adını verin
 
-![VS Code Explorer'da yeni dosya oluşturma](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.tr.png)
+![VS Code Explorer'da yeni dosya oluşturma](../../../../translated_images/vs-code-index.e2986cf919471eb9.tr.png)
 
 **Seçenek 2: Terminal Komutlarını Kullanarak**
 ```bash
