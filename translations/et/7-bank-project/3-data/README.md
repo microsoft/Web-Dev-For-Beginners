@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Tagastab täieliku HTML lehe
     Browser->>User: Kuvab uue lehe (vilgub/laeb uuesti)
 ```
-![Mitmelehelise rakenduse uuendustöövoog](../../../../translated_images/mpa.7f7375a1a2d4aa77.et.png)
+![Mitmelehelise rakenduse uuendustöövoog](../../../../translated_images/et/mpa.7f7375a1a2d4aa77.png)
 
 **Miks see tundus kohmakas:**
 - Iga klikiga tuli terve leht nullist ehitada
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Uuendab kindlaid lehe elemente
     Browser->>User: Kuvab uuendatud sisu (ilma taaskäivitamiseta)
 ```
-![Ühelehelise rakenduse uuendustöövoog](../../../../translated_images/spa.268ec73b41f992c2.et.png)
+![Ühelehelise rakenduse uuendustöövoog](../../../../translated_images/et/spa.268ec73b41f992c2.png)
 
 **Miks SPA-d tunduvad nii palju sujuvamad:**
 - Uuendatakse ainult neid osi, mis tegelikult muutusid (nutikas, eks?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Nüüd, kui testid valede andmetega, näed abistavat veateadet otse lehel!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.et.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/et/login-error.416fe019b36a6327.png)
 
 #### Samm 4: Kaasa arvutustel puudega kasutajad
 
@@ -950,7 +950,7 @@ Valmis viima oma pangarakenduse järgmisele tasemele? Muudame selle väljanägem
 
 Siin on, kuidas võib välja näha lihvitud juhtpaneel:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.et.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/et/screen2.123c82a831a1d14a.png)
 
 Sa ei pea seda täpselt kopeerima – kasuta seda inspiratsioonina ja loo oma stiil!
 

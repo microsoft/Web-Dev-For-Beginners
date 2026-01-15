@@ -42,10 +42,10 @@ Este plan de estudios incluye paquetes importables para flujos de trabajo comune
   - Moodle Cloud tiene soporte limitado para Common Cartridge. Es preferible usar el archivo de Moodle mencionado anteriormente, que también puede cargarse en Canvas.
   - Después de importar, revisa los módulos, fechas de entrega y configuraciones de cuestionarios para ajustarlos al calendario de tu periodo.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.es.png)
+![Moodle](../../translated_images/es/moodle.94eb93d714a50cb2.webp)
 > El plan de estudios en un aula de Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.es.png)
+![Canvas](../../translated_images/es/canvas.fbd605ff8e5b8aff.webp)
 > El plan de estudios en Canvas
 
 ### Uso del repositorio directamente (sin Classroom)

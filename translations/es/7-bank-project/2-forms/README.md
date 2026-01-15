@@ -292,7 +292,7 @@ Primero, observemos qué sucede con un envío básico:
 2. Observa los cambios en la barra de direcciones del navegador
 3. Nota cómo la página se recarga y los datos aparecen en la URL
 
-![Captura de pantalla del cambio en la URL del navegador después de hacer clic en el botón de Registrar](../../../../translated_images/click-register.e89a30bf0d4bc9ca.es.png)
+![Captura de pantalla del cambio en la URL del navegador después de hacer clic en el botón de Registrar](../../../../translated_images/es/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Comparación de Métodos HTTP
 
@@ -346,7 +346,7 @@ Configuremos tu formulario de registro para que se comunique correctamente con l
 2. **Haz clic** en el botón "Crear Cuenta"
 3. **Observa** la respuesta del servidor en tu navegador
 
-![Una ventana de navegador en la dirección localhost:5000/api/accounts, mostrando un string JSON con datos del usuario](../../../../translated_images/form-post.61de4ca1b964d91a.es.png)
+![Una ventana de navegador en la dirección localhost:5000/api/accounts, mostrando un string JSON con datos del usuario](../../../../translated_images/es/form-post.61de4ca1b964d91a.webp)
 
 **Lo que deberías ver:**
 - **El navegador redirige** a la URL del endpoint API
@@ -609,7 +609,7 @@ async function register() {
 3. **Haz clic** en "Crear Cuenta"
 4. **Observa** los mensajes en consola y la retroalimentación al usuario
 
-![Captura mostrando mensaje de log en la consola del navegador](../../../../translated_images/browser-console.efaf0b51aaaf6778.es.png)
+![Captura mostrando mensaje de log en la consola del navegador](../../../../translated_images/es/browser-console.efaf0b51aaaf6778.webp)
 
 **Lo que deberías ver:**
 - **Aparece estado de carga** en el botón de enviar
@@ -783,7 +783,7 @@ Mejoremos tu formulario de registro con validación robusta que brinda excelente
 3. **Prueba** caracteres especiales en el campo de nombre de usuario
 4. **Introduce** un saldo negativo
 
-![Captura mostrando error de validación al intentar enviar el formulario](../../../../translated_images/validation-error.8bd23e98d416c22f.es.png)
+![Captura mostrando error de validación al intentar enviar el formulario](../../../../translated_images/es/validation-error.8bd23e98d416c22f.webp)
 
 **Lo que observarás:**
 - **El navegador muestra** mensajes de validación nativos
@@ -943,7 +943,7 @@ Muestra un mensaje de error en el HTML si el usuario ya existe.
 
 Aquí tienes un ejemplo de cómo puede verse la página de inicio de sesión final después de un poco de estilo:
 
-![Captura de pantalla de la página de inicio de sesión después de agregar estilos CSS](../../../../translated_images/result.96ef01f607bf856a.es.png)
+![Captura de pantalla de la página de inicio de sesión después de agregar estilos CSS](../../../../translated_images/es/result.96ef01f607bf856a.webp)
 
 ## Cuestionario posterior a la clase
 

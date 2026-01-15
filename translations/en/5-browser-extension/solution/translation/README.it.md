@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 We will use tmrow's CO2 Signal API to monitor electricity usage and create a browser extension that provides a direct reminder in your browser about the electricity intensity in your region. Using this custom extension will help you evaluate your activities based on this information.
 
-![screenshot of the extension](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.en.png)
+![screenshot of the extension](../../../../../translated_images/en/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.png)
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ npm run build
 
 To install on Edge, use the "three dots" menu in the top-right corner of the browser to find the Extensions panel. If not already enabled, turn on Developer Mode (bottom left). Select "Load unpacked" to load a new extension. Open the "dist" folder when prompted, and the extension will be loaded. To use it, you will need an API key for the CO2 Signal API (you can [get one here via email](https://www.co2signal.com/) - enter your email in the box on this page) and the [code for your region](http://api.electricitymap.org/v3/zones) corresponding to the [electricity map](https://www.electricitymap.org/map) (for example, in Boston, "US-NEISO").
 
-![installation](../../../../../translated_images/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.en.png)
+![installation](../../../../../translated_images/en/install-on-edge.78634f02842c48283726c531998679a6f03a45556b2ee99d8ff231fe41446324.png)
 
 Once the API key and region are entered in the extension interface, the colored dot in the browser's extension bar should change to reflect your region's energy usage and provide a pointer on which high-energy activities would be appropriate to perform. The concept behind this "dot" system was inspired by the [Energy Lollipop extension](https://energylollipop.com/) for California emissions.
 

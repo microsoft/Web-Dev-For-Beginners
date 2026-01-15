@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # اصول جاوااسکریپت: متدها و توابع
 
-![اصول جاوااسکریپت - توابع](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.fa.png)
+![اصول جاوااسکریپت - توابع](../../../../translated_images/fa/webdev101-js-functions.be049c4726e94f8b.webp)
 > یادداشت تصویری توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

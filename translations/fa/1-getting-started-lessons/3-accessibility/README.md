@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ساخت صفحات وب قابل دسترس
 
-![همه چیز درباره‌ی دسترسی‌پذیری](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.fa.png)
+![همه چیز درباره‌ی دسترسی‌پذیری](../../../../translated_images/fa/webdev101-a11y.8ef3025c858d897a.webp)
 > اسکچ‌نوت توسط [تومومی ایمورا](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "الگوهای رایج استفاده ARIA"
 
 **تصاویر اطلاع‌رسان** - اطلاعات مهم منتقل می‌کنند:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.fa.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/fa/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **تصاویر تزئینی** - صرفاً تصویری بدون ارزش اطلاعاتی:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.fa.png" alt="" role="presentation">
+<img src="../../../../translated_images/fa/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **تصاویر کاربردی** - به عنوان دکمه یا کنترل عمل می‌کنند:
@@ -1066,7 +1066,7 @@ pie title "الگوهای رایج استفاده ARIA"
 
 **تصاویر پیچیده** - نمودارها، دیاگرام‌ها، اینفوگرافیک‌ها:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.fa.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/fa/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "الگوهای رایج استفاده ARIA"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.fa.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/fa/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

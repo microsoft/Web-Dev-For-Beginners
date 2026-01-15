@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 امروز، ما به ابزارهای شگفت‌انگیزی می‌پردازیم که توسعه وب مدرن را نه تنها ممکن بلکه واقعاً اعتیادآور کرده‌اند. منظورم دقیقاً همان ویرایشگرها، مرورگرها و جریان‌های کاری است که توسعه‌دهندگان شرکت‌های Netflix، Spotify و استودیوی اپلیکیشن‌های مستقل محبوب تو هر روز استفاده می‌کنند. و این بخشی است که باعث شادی تو می‌شود: بیشتر این ابزارهای حرفه‌ای و استاندارد صنعت کاملاً رایگان هستند!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.fa.png)
+![Intro Programming](../../../../translated_images/fa/webdev101-programming.d6e3f98e61ac4bff.webp)
 > یادداشت تصویری توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

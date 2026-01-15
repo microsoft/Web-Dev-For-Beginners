@@ -29,7 +29,7 @@ journey
       Reageeriv disain: 5: Student
       Klaasi peegeldused: 5: Student
 ```
-![Sissejuhatus CSS-i](../../../../translated_images/webdev101-css.3f7af5991bf53a20.et.png)
+![Sissejuhatus CSS-i](../../../../translated_images/et/webdev101-css.3f7af5991bf53a20.png)
 > Sketchnote autorilt [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Kas mäletad, kuidas su HTML-terraarium nägi üsna lihtne välja? CSS on koht, kus me muudame selle tavalise struktuuri millekski visuaalselt atraktiivseks.
@@ -202,7 +202,7 @@ body {
 
 Ava brauseri arendajatööriistad (F12), mine Elements vaatesse ja vaata oma `<h1>` elementi. Näed, et see pärib fondiperekonna body-lt:
 
-![pärandatud font](../../../../translated_images/1.cc07a5cbe114ad1d.et.png)
+![pärandatud font](../../../../translated_images/et/1.cc07a5cbe114ad1d.png)
 
 ✅ **Katsetamise aeg**: Proovi teisi pärandatavaid omadusi `<body>` peal nagu `color`, `line-height` või `text-align`. Mis juhtub su pealkirja ja teiste elementidega?
 
@@ -332,7 +332,7 @@ Meie terraariumis vajab iga taim sarnast stiili, kuid igaüks peab olema ka indi
 **Näide iga taime HTML struktuurist:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.et.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/et/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Valmis oma terrariumi täiustama realistlike klaasipeegeldustega? See tehnika li
 
 Sa lood peened helkivad läikekujud, mis simuleerivad valguse peegeldumist klaasipindadelt. See lähenemine on sarnane Renessansi maalikunstnikele nagu Jan van Eyck, kes kasutasid valgust ja peegeldust klaasi kolme-mõõtmelise mulje loomiseks. Siin on, mida sa saavutada tahad:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.et.png)
+![finished terrarium](../../../../translated_images/et/terrarium-final.2f07047ffc597d0a.png)
 
 **Sinu ülesanne:**
 - **Loo** pehmed valged või heledat värvi ovaalsed kujundid klaasipeegeldusteks

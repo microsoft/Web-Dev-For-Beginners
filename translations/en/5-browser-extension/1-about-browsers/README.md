@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Browser Extension Project Part 1: All about Browsers
 
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.en.jpg)
+![Browser sketchnote](../../../../translated_images/en/browser.60317c9be8b7f84adce43e30bff8d47a1ae15793beab762317b2bc6b74337c1a.jpg)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
@@ -28,7 +28,7 @@ So, what exactly is a browser? It's a software application that enables users to
 
 ✅ A bit of history: The first browser, called 'WorldWideWeb,' was created by Sir Timothy Berners-Lee in 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.en.jpg)
+![early browsers](../../../../translated_images/en/earlybrowsers.d984b711cdf3a42ddac919d46c4b5ca7232f68ccfbd81395e04e5a64c0015277.jpg)
 > Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 When a user connects to the internet using a URL (Uniform Resource Locator), typically through Hypertext Transfer Protocol (`http` or `https`), the browser communicates with a web server to retrieve a web page.
@@ -55,7 +55,7 @@ Developing browser extensions is also enjoyable. They focus on specific tasks an
 
 Before building your own extension, familiarize yourself with the process of creating and deploying one. While each browser has slight variations, the process is similar across Chrome, Firefox, and Edge. Here's an example for Edge:
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.en.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/en/install-on-edge.d68781acaf0b3d3dada8b7507cde7a64bf74b7040d9818baaa9070668e819f90.png)
 
 > Note: Make sure to toggle on developer mode and allow extensions from other stores.
 
@@ -97,11 +97,11 @@ src
 
 This extension has two views: one for collecting the API key and region code:
 
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.en.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/en/1.b6da8c1394b07491afeb6b2a8e5aca73ebd3cf478e27bcc9aeabb187e722648e.png)
 
 And another for displaying the region's carbon usage:
 
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.en.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/en/2.1dae52ff0804224692cd648afbf2342955d7afe3b0101b617268130dfb427f55.png)
 
 Start by creating the HTML for the form and styling it with CSS.
 

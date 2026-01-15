@@ -78,7 +78,7 @@ Kuna VSCode.dev vajab hoidla avamiseks vähemalt ühe faili olemasolu, loome oma
 4. **Kirjuta** commit sõnum: "Add initial HTML structure"
 5. **Klõpsa** "Commit new file", et muudatused salvestada
 
-![Create initial file on GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.et.png)
+![Create initial file on GitHub](../../../../translated_images/et/new-file-github.com.c886796d800e8056.png)
 
 **Selle algse seadistusega saavutad:**
 - **Korrektse HTML5 dokumendi struktuuri, kasutades semantilisi elemente**
@@ -104,7 +104,7 @@ Nüüd, kui hoidla vundament on paigas, liigume edasi VSCode.dev keskkonda põhi
 
 ✅ **Õnnestumise märguanne**: Peaksid nägema oma projekti faile Explorer küljeribal ning `index.html` faili, mida saad põhiredaktoris muuta.
 
-![Project loaded in VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.et.png)
+![Project loaded in VSCode.dev](../../../../translated_images/et/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **Liidese põhielemendid:**
 - **Explorer küljeriba**: **Kuvab** sinu hoidla failid ja kaustastruktuuri
@@ -448,7 +448,7 @@ Laiendused parandavad sinu arenduskogemust, pakkudes live eelvaate võimalusi ni
 **Kiired tulemused pärast paigaldamist:**
 Kui CodeSwing on paigaldatud, näed redaktoris oma CV veebilehe live eelvaadet. See võimaldab täpselt näha, kuidas su sait muudatustega muutub.
 
-![CodeSwing extension showing live preview](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.et.png)
+![CodeSwing extension showing live preview](../../../../translated_images/et/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **Täiustatud liidese mõistmine:**
 - **Poolitatud vaade**: **Näitab** vasakul koodi ja paremal live eelvaadet

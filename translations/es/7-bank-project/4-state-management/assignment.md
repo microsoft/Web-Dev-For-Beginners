@@ -112,7 +112,7 @@ Consulta la [documentación de la API del servidor](../api/README.md) para:
 **Resultado esperado:**
 Al completar esta tarea, tu aplicación bancaria debería tener una función "Agregar Transacción" totalmente funcional que luzca y se comporte profesionalmente:
 
-![Captura de pantalla mostrando un ejemplo del diálogo "Agregar transacción"](../../../../translated_images/dialog.93bba104afeb79f1.es.png)
+![Captura de pantalla mostrando un ejemplo del diálogo "Agregar transacción"](../../../../translated_images/es/dialog.93bba104afeb79f1.webp)
 
 ## Pruebas de tu implementación
 

@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Devuelve página HTML completa
     Browser->>User: Muestra nueva página (destello/recarga)
 ```
-![Flujo de actualización en una aplicación de múltiples páginas](../../../../translated_images/mpa.7f7375a1a2d4aa77.es.png)
+![Flujo de actualización en una aplicación de múltiples páginas](../../../../translated_images/es/mpa.7f7375a1a2d4aa77.webp)
 
 **Por qué este enfoque se sentía torpe:**
 - Cada clic significaba reconstruir toda la página desde cero
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Actualiza elementos específicos de la página
     Browser->>User: Muestra contenido actualizado (sin recargar)
 ```
-![Flujo de actualización en una aplicación de página única](../../../../translated_images/spa.268ec73b41f992c2.es.png)
+![Flujo de actualización en una aplicación de página única](../../../../translated_images/es/spa.268ec73b41f992c2.webp)
 
 **Por qué las SPA se sienten mucho mejor:**
 - Solo las partes que cambiaron realmente se actualizan (inteligente, ¿no?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 ¡Ahora, cuando pruebes con una cuenta inválida, verás un mensaje de error útil directamente en la página!
 
-![Captura de pantalla que muestra el mensaje de error durante el inicio de sesión](../../../../translated_images/login-error.416fe019b36a6327.es.png)
+![Captura de pantalla que muestra el mensaje de error durante el inicio de sesión](../../../../translated_images/es/login-error.416fe019b36a6327.webp)
 
 #### Paso 4: Ser Inclusivos con la Accesibilidad
 
@@ -950,7 +950,7 @@ Aprende más sobre [modo agente](https://code.visualstudio.com/blogs/2025/02/24/
 
 Así podría verse un panel pulido:
 
-![Captura de pantalla de un resultado ejemplo del panel después del estilo](../../../../translated_images/screen2.123c82a831a1d14a.es.png)
+![Captura de pantalla de un resultado ejemplo del panel después del estilo](../../../../translated_images/es/screen2.123c82a831a1d14a.webp)
 
 No sientas que tienes que igualar esto exactamente, úsalo como inspiración y hazlo tuyo.
 

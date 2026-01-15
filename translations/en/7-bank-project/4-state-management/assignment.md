@@ -25,7 +25,7 @@ Refer to the [server API specifications](../api/README.md) to identify the API y
 
 Here's an example of the result after completing the task:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.en.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/en/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.png)
 
 ## Rubric
 

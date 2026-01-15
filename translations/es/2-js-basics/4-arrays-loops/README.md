@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Conceptos Básicos de JavaScript: Arrays y Bucles
 
-![Conceptos Básicos de JavaScript - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.es.png)
+![Conceptos Básicos de JavaScript - Arrays](../../../../translated_images/es/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

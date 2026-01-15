@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # مبانی جاوااسکریپت: آرایه‌ها و حلقه‌ها
 
-![مبانی جاوااسکریپت - آرایه‌ها](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.fa.png)
+![مبانی جاوااسکریپت - آرایه‌ها](../../../../translated_images/fa/webdev101-js-arrays.439d7528b8a29455.webp)
 > نقاشی دست‌ساز از [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

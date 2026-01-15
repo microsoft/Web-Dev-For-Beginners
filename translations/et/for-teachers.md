@@ -42,10 +42,10 @@ See õppekava sisaldab importitavaid pakette, mis sobivad tavaliste LMS töövoo
   - Moodle Cloudil on piiratud Common Cartridge'i tugi. Eelistage ülaltoodud Moodle'i faili, mida saab samuti Canvas'isse üles laadida.
   - Pärast importimist vaadake üle moodulid, tähtaegade ja viktoriinide seaded, et need vastaksid teie semestri ajakavale.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.et.png)
+![Moodle](../../translated_images/et/moodle.94eb93d714a50cb2.png)
 > Õppekava Moodle'i klassiruumis
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.et.png)
+![Canvas](../../translated_images/et/canvas.fbd605ff8e5b8aff.png)
 > Õppekava Canvas'is
 
 ### Repositooriumi otsene kasutamine (ilma Classroomita)

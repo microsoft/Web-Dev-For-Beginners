@@ -23,7 +23,7 @@ Users can manually activate this extension by entering an API key and region cod
 
 ### Credits
 
-![a green browser extension](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.en.png)
+![a green browser extension](../../../translated_images/en/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.png)
 
 ## Credits
 

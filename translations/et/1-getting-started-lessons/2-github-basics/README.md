@@ -17,7 +17,7 @@ Ma tean, et alguses võib see kõik tunduda palju – ausalt öeldes mäletan, k
 
 Me võtame selle teekonna koos – sammhaaval. Ilma kiirustamise ja pingeta – ainult sina, mina ja mõned väga lahedad tööriistad, mis saavad sinu uueks parimaks sõbraks!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.et.png)
+![Intro to GitHub](../../../../translated_images/et/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ Esmalt leidke GitHubist endale huvipakkuv hoidlasse (või **repo**), kuhu soovik
 
 ✅ Hea viis "algajasõbralike" hoidlate leidmiseks on [otsida silti 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopeerige hoidla kohalikult](../../../../translated_images/clone_repo.5085c48d666ead57.et.png)
+![Kopeerige hoidla kohalikult](../../../../translated_images/et/clone_repo.5085c48d666ead57.png)
 
 Koodi kopeerimiseks on mitu võimalust. Üks neist on 'kloneerida' hoidla sisu HTTPS-i, SSH-ga või GitHub CLI (käsklusrida) abil.
 

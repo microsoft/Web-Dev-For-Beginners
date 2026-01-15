@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Selles projektis õpid, kuidas luua fiktiivset panka. Need õppetunnid sisaldavad juhiseid veebirakenduse kujundamiseks ja marsruutide loomiseks, vormide ehitamiseks, oleku haldamiseks ning API-st andmete hankimiseks, mille abil saad panga andmeid kätte.
 
-| ![Ekraan1](../../../translated_images/screen1.baccbba0f1f93364.et.png) | ![Ekraan2](../../../translated_images/screen2.123c82a831a1d14a.et.png) |
+| ![Ekraan1](../../../translated_images/et/screen1.baccbba0f1f93364.png) | ![Ekraan2](../../../translated_images/et/screen2.123c82a831a1d14a.png) |
 |--------------------------------|--------------------------------|
 
 ## Õppetunnid

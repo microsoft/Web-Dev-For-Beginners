@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 A small drag-and-drop coding exercise. With a bit of HTML, JS, and CSS, you’ll be able to create a web interface, style it, and even add various interactions of your choice.
 
-![my terrarium](../../../translated_images/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.en.png)
+![my terrarium](../../../translated_images/en/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.png)
 
 # Lessons
 

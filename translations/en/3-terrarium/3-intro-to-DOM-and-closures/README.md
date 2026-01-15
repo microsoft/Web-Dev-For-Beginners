@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Terrarium Project Part 3: DOM Manipulation and a Closure
 
-![DOM and a closure](../../../../translated_images/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.en.png)
+![DOM and a closure](../../../../translated_images/en/webdev101-js.10280393044d7eaaec7e847574946add7ddae6be2b2194567d848b61d849334a.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
@@ -28,7 +28,7 @@ We’ll use a closure to manipulate the DOM.
 
 Think of the DOM as a tree that represents all the ways a web page document can be manipulated. Various APIs (Application Program Interfaces) have been created to allow developers to access, edit, rearrange, and manage the DOM using their preferred programming language.
 
-![DOM tree representation](../../../../translated_images/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.en.png)
+![DOM tree representation](../../../../translated_images/en/dom-tree.7daf0e763cbbba9273f9a66fe04c98276d7d23932309b195cb273a9cf1819b42.png)
 
 > A representation of the DOM and the HTML markup that references it. From [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -205,7 +205,7 @@ This small function resets the `onpointerup` and `onpointermove` events, allowin
 
 Now your project is complete!
 
-🥇Congratulations! You’ve finished your beautiful terrarium! ![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.en.png)
+🥇Congratulations! You’ve finished your beautiful terrarium! ![finished terrarium](../../../../translated_images/en/terrarium-final.0920f16e87c13a84cd2b553a5af9a3ad1cffbd41fbf8ce715d9e9c43809a5e2c.png)
 
 ---
 

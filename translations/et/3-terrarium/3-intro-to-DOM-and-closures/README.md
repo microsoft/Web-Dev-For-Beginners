@@ -25,7 +25,7 @@ journey
       Testi funktsionaalsust: 5: Õpilane
       Lõpeta terrarium: 5: Õpilane
 ```
-![DOM ja sulud](../../../../translated_images/webdev101-js.10280393044d7eaa.et.png)
+![DOM ja sulud](../../../../translated_images/et/webdev101-js.10280393044d7eaa.png)
 > Sketš [Tomomi Imura](https://twitter.com/girlie_mac) poolt
 
 Tere tulemast ühe kõige kaasahaaravama veebiarenduse aspekti juurde – asjade interaktiivseks muutmine! Document Object Model (DOM) on nagu sild sinu HTMLi ja JavaScripti vahel ning täna kasutame seda, et tuua sinu terrarium ellu. Kui Tim Berners-Lee lõi esimese veebibrauseri, nägi ta ette veebi, kus dokumendid võiksid olla dünaamilised ja interaktiivsed – DOM teeb selle visiooni teoks.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM puu kujutis](../../../../translated_images/dom-tree.7daf0e763cbbba92.et.png)
+![DOM puu kujutis](../../../../translated_images/et/dom-tree.7daf0e763cbbba92.png)
 
 > DOM-i ja HTML-i märgenduse kujutis, mis viitab sellele. Autor [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Sulude mõistmine**: Sulud on JavaScriptis oluline teema ja paljud arendajad kasutavad neid aastaid, enne kui kõik teoreetilised aspektid täielikult selgeks saavad. Täna keskendume praktilisele rakendusele – näed sulud loomulikult tekkimas, kui ehitame oma interaktiivseid funktsioone. Mõistmine areneb koos sellega, kuidas nad lahendavad reaalseid probleeme.
 
-![DOM puu kujutis](../../../../translated_images/dom-tree.7daf0e763cbbba92.et.png)
+![DOM puu kujutis](../../../../translated_images/et/dom-tree.7daf0e763cbbba92.png)
 
 > DOM-i ja HTML-i märgenduse kujutis, mis viitab sellele. Autor [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Nüüd testi oma interaktiivset terrariumit! Ava oma `index.html` fail veebilehi
 - **Seadmeülene tugi**: Töötab nii lauaarvutis kui mobiilis
 - **Jõudluse teadlikkus**: Puuduvad mälulekked või tarbetud arvutused
 
-![valmis terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.et.png)
+![valmis terrarium](../../../../translated_images/et/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

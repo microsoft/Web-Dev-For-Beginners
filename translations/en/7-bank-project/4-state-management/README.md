@@ -53,7 +53,7 @@ We could address these issues individually, but doing so would lead to code dupl
 
 Once these challenges are addressed, other issues may either resolve themselves or become easier to fix. There are many approaches to solving these problems, but we'll use a common solution: **centralizing the data and the methods to modify it**. The data flows will look like this:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.en.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/en/data-flow.fa2354e0908fecc89b488010dedf4871418a992edffa17e73441d257add18da4.png)
 
 > We won't cover the part where data automatically triggers view updates, as it involves more advanced concepts of [Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming). It's a great topic for further exploration.
 
@@ -286,7 +286,7 @@ Work together to modify what is saved and loaded from `localStorage` to include 
 
 Here's an example result after completing the assignment:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.en.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/en/dialog.93bba104afeb79f12f65ebf8f521c5d64e179c40b791c49c242cf15f7e7fab15.png)
 
 ---
 

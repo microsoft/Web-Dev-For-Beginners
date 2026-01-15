@@ -29,7 +29,7 @@ The first step to ensuring your site runs efficiently is to gather data about it
 
 The Performance tab includes a Profiling tool. Open a website (for example, [https://www.microsoft.com](https://www.microsoft.com/?WT.mc_id=academic-77807-sagibbon)) and click the 'Record' button, then refresh the site. Stop the recording at any time, and you'll see routines generated for 'script', 'render', and 'paint' processes:
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.en.png)
+![Edge profiler](../../../../translated_images/en/profiler.5a4a62479c5df01cfec9aab74173dba13f91d2c968e1a1ae434c26165792df15.png)
 
 ✅ Visit the [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) on the Performance panel in Edge.
 
@@ -39,11 +39,11 @@ Select elements of the profile timeline to zoom in on events that occur while yo
 
 Get a snapshot of your page's performance by selecting a part of the profile timeline and reviewing the summary pane:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.en.png)
+![Edge profiler snapshot](../../../../translated_images/en/snapshot.97750180ebcad73794a3594b36925eb5c8dbaac9e03fec7f9b974188c9ac63c7.png)
 
 Check the Event Log pane to see if any event took longer than 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.en.png)
+![Edge event log](../../../../translated_images/en/log.804026979f3707e00eebcfa028b2b5a88cec6292f858767bb6703afba65a7d9c.png)
 
 ✅ Familiarize yourself with the profiler! Open the developer tools on this site and check for bottlenecks. What is the slowest-loading asset? The fastest?
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Creación de Páginas Web Accesibles
 
-![Todo sobre accesibilidad](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.es.png)
+![Todo sobre accesibilidad](../../../../translated_images/es/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Cada imagen en tu sitio web cumple un propósito. Entender ese propósito te ayu
 
 **Imágenes informativas** - transmiten información importante:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.es.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/es/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Imágenes decorativas** - puramente visuales sin valor informativo:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.es.png" alt="" role="presentation">
+<img src="../../../../translated_images/es/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Imágenes funcionales** - sirven como botones o controles:
@@ -1066,7 +1066,7 @@ Cada imagen en tu sitio web cumple un propósito. Entender ese propósito te ayu
 
 **Imágenes complejas** - gráficas, diagramas, infografías:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.es.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/es/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Cada imagen en tu sitio web cumple un propósito. Entender ese propósito te ayu
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.es.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/es/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

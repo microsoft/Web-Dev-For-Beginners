@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Ligipääsetavate Veebilehtede Loomine
 
-![Kõigest Ligipääsetavusest](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.et.png)
+![Kõigest Ligipääsetavusest](../../../../translated_images/et/webdev101-a11y.8ef3025c858d897a.png)
 > Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Iga pilt sinu veebilehel täidab eesmärki. Selle eesmärgi mõistmine aitab par
 
 **Informatiivsed pildid** – edastavad olulist infot:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.et.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/et/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Dekoratiivsed pildid** – puhtalt visuaalsed, informatsioonivabad:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.et.png" alt="" role="presentation">
+<img src="../../../../translated_images/et/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Funktsionaalsed pildid** – toimivad nuppude või kontrolleritena:
@@ -1066,7 +1066,7 @@ Iga pilt sinu veebilehel täidab eesmärki. Selle eesmärgi mõistmine aitab par
 
 **Keerukad pildid** – graafikud, diagrammid, infograafikud:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.et.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/et/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Iga pilt sinu veebilehel täidab eesmärki. Selle eesmärgi mõistmine aitab par
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.et.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/et/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

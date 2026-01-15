@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Väike lohistamise ja kodeerimise harjutus. Natukese HTML-i, JS-i ja CSS-i abil saad luua veebiliidese, kujundada selle ja lisada interaktsiooni.
 
-![minu terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.et.png)
+![minu terrarium](../../../../translated_images/et/screenshot_gray.0c796099a1f9f25e.png)
 
 ## Autorid
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScripti alused: meetodid ja funktsioonid
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.et.png)
+![JavaScript Basics - Functions](../../../../translated_images/et/webdev101-js-functions.be049c4726e94f8b.png)
 > Sketchnote autorilt [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
