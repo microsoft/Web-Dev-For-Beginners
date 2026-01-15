@@ -17,7 +17,7 @@ Look, I understand am if programming fit dey scare you now. When I first start, 
 
 Today, we go explore the correct tools wey dey make modern web development no be only possible, but e also dey very addictive. I dey talk about the same editors, browsers, and workflows wey developers for Netflix, Spotify, and your favorite indie app studio dey use every single day. And here na the part wey go make you dance with joy: most of these professional-grade, industry-standard tools na totally free!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.pcm.png)
+![Intro Programming](../../../../translated_images/pcm/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

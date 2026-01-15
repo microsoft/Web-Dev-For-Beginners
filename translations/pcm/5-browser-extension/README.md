@@ -23,7 +23,7 @@ Dis extension fit be call ad hoc by user once dem put API key and region code in
 
 ### Credits
 
-![a green browser extension](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.pcm.png)
+![a green browser extension](../../../translated_images/pcm/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Credits
 

@@ -644,7 +644,7 @@ sequenceDiagram
 
 Using `history.pushState` dey create new entries for browser navigation history. You fit check am by holding *back button* for your browser, e suppose show like dis:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.pcm.png)
+![Screenshot of navigation history](../../../../translated_images/pcm/history.7fdabbafa521e064.webp)
 
 If you dey click back button small times, you go see say current URL dey change and history dey updated, but di same template still dey show.
 

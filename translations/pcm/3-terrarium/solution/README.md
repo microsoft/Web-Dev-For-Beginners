@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Na small drag and drop code-meditation. Wit small HTML, JS and CSS, you fit build web interface, style am, and add interaction.
 
-![my terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.pcm.png)
+![my terrarium](../../../../translated_images/pcm/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Credits
 

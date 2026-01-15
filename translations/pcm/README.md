@@ -72,13 +72,13 @@ No miss our new Generative AI curriculum!
 
 Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to start!
 
-![Background](../../translated_images/background.148a8d43afde5730.pcm.png)
+![Background](../../translated_images/pcm/background.148a8d43afde5730.webp)
 
 - Lessons wey cover from basics reach RAG.
 - Talk wit historical characters using GenAI and our companion app.
 - Fun and interesting story, you go dey time travel!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.pcm.png)
+![character](../../translated_images/pcm/character.5c0dd8e067ffd693.webp)
 
 
 Each lesson get assignment to complete, knowledge check and challenge to guide you inside learning topics like:
@@ -115,7 +115,7 @@ Follow these steps:
 
 For your copy of this repository wey you create, click the **Code** button then select **Open with Codespaces**. E go create new Codespace for you to work inside.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.pcm.png)
+![Codespace](../../translated_images/pcm/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Running the curriculum locally on your computer
 

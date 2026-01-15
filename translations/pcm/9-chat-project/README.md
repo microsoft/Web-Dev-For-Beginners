@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 See wetin your finished project go look like:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.pcm.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/pcm/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Your Learning Journey Through AI Application Development
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Core Principle**: AI application development dey combine traditional web development skills wit AI service integration, to create smart apps wey dey feel natural an dey quick respond to users.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.pcm.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/pcm/playground.d2b927122224ff8f.webp)
 
 **Na wetin make di playground dey so useful:**
 - **Try out** different AI models like GPT-4o-mini, Claude, an others (dem free!)
@@ -199,7 +199,7 @@ mindmap
 
 After you don play small, just click di "Code" tab an choose your programming language to get di code wey you need.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.pcm.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/pcm/playground-choice.1d23ba7d407f4758.webp)
 
 ## Setting Up the Python Backend Integration
 
@@ -2352,14 +2352,14 @@ You want try this project for cloud development environment? GitHub Codespaces d
 - **Navigate** go the [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Click** "Use this template" for top-right corner (make sure say you don login for GitHub)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.pcm.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/pcm/template.67ad477109d29a2b.webp)
 
 **Step 2: Launch Codespaces**
 - **Open** your new repository
 - **Click** green "Code" button and select "Codespaces"
 - **Choose** "Create codespace on main" to start your development environment
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.pcm.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/pcm/codespace.bcecbdf5d2747d3d.webp)
 
 **Step 3: Environment Configuration**
 As your Codespace load, you go get access to:

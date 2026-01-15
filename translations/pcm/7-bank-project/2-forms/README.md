@@ -292,7 +292,7 @@ First, make we see wetin happen with normal form submission:
 2. Look di address bar your browser
 3. See how di page fresh and data enter for URL
 
-![Screenshot of the browser's URL change after clicking the Register button](../../../../translated_images/click-register.e89a30bf0d4bc9ca.pcm.png)
+![Screenshot of the browser's URL change after clicking the Register button](../../../../translated_images/pcm/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP Methods Comparison
 
@@ -346,7 +346,7 @@ Make we setup your registration form so e fit talk well with backend API using P
 2. **Click** "Create Account" button
 3. **Look** server response for your browser
 
-![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](../../../../translated_images/form-post.61de4ca1b964d91a.pcm.png)
+![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](../../../../translated_images/pcm/form-post.61de4ca1b964d91a.webp)
 
 **Wetin you suppose see:**
 - **Browser go redirect** go API endpoint URL
@@ -609,7 +609,7 @@ async function register() {
 3. **Click** "Create Account"
 4. **Watch** console messages and user feedback
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.pcm.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/pcm/browser-console.efaf0b51aaaf6778.webp)
 
 **Wetin you go see:**
 - **Loading state** show for submit button
@@ -783,7 +783,7 @@ Make we improve your registration form with strong validation wey go give better
 3. **Try** special characters for username
 4. **Input** negative number for balance
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.pcm.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/pcm/validation-error.8bd23e98d416c22f.webp)
 
 **Wetin you go see:**
 - **Browser show** native validation messages
@@ -943,7 +943,7 @@ Show error message for the HTML if di user don already exist.
 
 Here be example of how the final login page fit look after small styling:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.pcm.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/pcm/result.96ef01f607bf856a.webp)
 
 ## Post-Lecture Quiz
 

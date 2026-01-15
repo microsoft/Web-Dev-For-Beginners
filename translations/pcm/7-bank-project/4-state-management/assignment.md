@@ -112,7 +112,7 @@ Refer to the [server API documentation](../api/README.md) for:
 **Expected Result:**
 After you finish this assignment, your banking app suppose get fully working "Add Transaction" feature wey look and behave professionally:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.pcm.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/pcm/dialog.93bba104afeb79f1.webp)
 
 ## Testing Your Implementation
 

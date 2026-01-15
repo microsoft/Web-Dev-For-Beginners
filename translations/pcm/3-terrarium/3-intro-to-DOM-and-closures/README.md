@@ -25,7 +25,7 @@ journey
       Test functionality: 5: Student
       Complete terrarium: 5: Student
 ```
-![DOM and a closure](../../../../translated_images/webdev101-js.10280393044d7eaa.pcm.png)
+![DOM and a closure](../../../../translated_images/pcm/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Welcome to one of di most interesting tins for web development - to make tins wey fit react! Di Document Object Model (DOM) na bridge wey connect your HTML and JavaScript, and tiday we go use am bring your terrarium to life. Wen Tim Berners-Lee create di first web browser, e imagine say web go be place wey docs fit change and react - na di DOM sabi make dis thing happen.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM tree representation](../../../../translated_images/dom-tree.7daf0e763cbbba92.pcm.png)
+![DOM tree representation](../../../../translated_images/pcm/dom-tree.7daf0e763cbbba92.webp)
 
 > A representation of the DOM and the HTML markup that references it. From [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Understanding Closures**: Closures na big topic inside JavaScript, and many developers dey use am for years before dem understand all di theory. Tiday, we dey focus on how to use am for real - you go see closures naturally show as we dey build our interactive tins. You go understand well as you see how dem fit solve real problems.
 
-![DOM tree representation](../../../../translated_images/dom-tree.7daf0e763cbbba92.pcm.png)
+![DOM tree representation](../../../../translated_images/pcm/dom-tree.7daf0e763cbbba92.webp)
 
 > A representation of the DOM and the HTML markup that references it. From [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Now try test your interactive terrarium! Open your `index.html` file for web bro
 - **Cross-device support**: E dey work on desktop and mobile
 - **Performance conscious**: No memory leaks or unnecessary calculations
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.pcm.png)
+![finished terrarium](../../../../translated_images/pcm/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

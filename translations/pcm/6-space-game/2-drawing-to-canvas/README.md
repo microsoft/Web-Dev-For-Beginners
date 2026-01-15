@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```  
-![di canvas grid](../../../../translated_images/canvas_grid.5f209da785ded492.pcm.png)  
+![di canvas grid](../../../../translated_images/pcm/canvas_grid.5f209da785ded492.webp)  
 > Image from [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 To draw for di canvas element, you go follow same three-step process wey be foundation for all canvas graphics. Once you do am small times, e go become second nature:
@@ -323,11 +323,11 @@ You go build web page wey get Canvas element. E suppose show black screen `1024*
 
 - Hero ship  
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.pcm.png)
+   ![Hero ship](../../../../translated_images/pcm/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 monster  
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.pcm.png)
+   ![Monster ship](../../../../translated_images/pcm/enemyShip.5df2a822c16650c2.webp)
 
 ### Recommended steps to start development
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Di final result suppose be like dis:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.pcm.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/pcm/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Solution
 

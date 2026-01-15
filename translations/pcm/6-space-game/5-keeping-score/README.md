@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Scoring system**: Every enemy ship wey you destroy go give you 100 points (round numbers easy for players to calculate inside their head). The score go show for bottom left corner.
-- **Life counter**: Your hero start with three lives - na standard wey early arcade games set to balance challenge and playability. Every time you crash with enemy, you lose one life. We go show the lives left for bottom right with ship icons ![life image](../../../../translated_images/life.6fb9f50d53ee0413.pcm.png).
+- **Life counter**: Your hero start with three lives - na standard wey early arcade games set to balance challenge and playability. Every time you crash with enemy, you lose one life. We go show the lives left for bottom right with ship icons ![life image](../../../../translated_images/pcm/life.6fb9f50d53ee0413.webp).
 
 ## Make We Start Build!
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 For dis project, you go learn how to build one fictional bank. Dem lessons go show you how to layout web app and provide routes, build forms, manage state, plus how to fetch data from API wey you fit use take get di bank data.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.pcm.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.pcm.png) |
+| ![Screen1](../../../translated_images/pcm/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/pcm/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Lessons

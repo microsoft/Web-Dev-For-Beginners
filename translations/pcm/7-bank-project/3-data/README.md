@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Returns complete HTML page
     Browser->>User: Show new page (flash/reload)
 ```
-![Update workflow in a multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa77.pcm.png)
+![Update workflow in a multi-page application](../../../../translated_images/pcm/mpa.7f7375a1a2d4aa77.webp)
 
 **Wetin make dis approach be clunky:**
 - Every click mean rebuild di whole page from scratch
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Dey update specific page elements
     Browser->>User: Dey show updated content (no reload)
 ```
-![Update workflow in a single-page application](../../../../translated_images/spa.268ec73b41f992c2.pcm.png)
+![Update workflow in a single-page application](../../../../translated_images/pcm/spa.268ec73b41f992c2.webp)
 
 **Why SPAs feel better:**
 - Only di parts wey change dey update (smart na so)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Now if you test wit wrong account, you go see helpful error message well for page!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.pcm.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/pcm/login-error.416fe019b36a6327.webp)
 
 #### Step 4: Make E Inclusive wit Accessibility
 
@@ -950,7 +950,7 @@ You ready to take your banking app go next level? Make e dey look and feel as so
 
 See how better dashboard fit look:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.pcm.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/pcm/screen2.123c82a831a1d14a.webp)
 
 No feel say you suppose copy am exactly - use am for inspiration and do your own style!
 
