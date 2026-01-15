@@ -42,10 +42,10 @@ Dette pensumet inkluderer importbare pakker for vanlige LMS-arbeidsflyter.
   - Moodle Cloud har begrenset støtte for Common Cartridge. Foretrekk Moodle-filen ovenfor, som også kan lastes opp til Canvas.
   - Etter import, gjennomgå moduler, frister og quiz-innstillinger for å tilpasse til din terminplan.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.no.png)
+![Moodle](../../translated_images/no/moodle.94eb93d714a50cb2.png)
 > Pensumet i et Moodle-klasserom
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.no.png)
+![Canvas](../../translated_images/no/canvas.fbd605ff8e5b8aff.png)
 > Pensumet i Canvas
 
 ### Bruk repoet direkte (uten Classroom)

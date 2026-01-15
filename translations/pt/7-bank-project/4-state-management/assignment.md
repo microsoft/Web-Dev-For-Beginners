@@ -112,7 +112,7 @@ Consulte a [documentação da API do servidor](../api/README.md) para:
 **Resultado Esperado:**
 Depois de concluir este exercício, a sua aplicação bancária deve ter uma funcionalidade "Adicionar Transação" totalmente funcional, com aparência e comportamento profissionais:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.pt.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/pt/dialog.93bba104afeb79f1.png)
 
 ## Testar a Sua Implementação
 

@@ -29,7 +29,7 @@ journey
       Responsywny projekt: 5: Student
       Odbicia na szkle: 5: Student
 ```
-![Wprowadzenie do CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.pl.png)
+![Wprowadzenie do CSS](../../../../translated_images/pl/webdev101-css.3f7af5991bf53a20.png)
 > Notatka graficzna autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Pamiętasz, jak twoje terrarium HTML wyglądało dość prosto? CSS to miejsce, gdzie przekształcamy tę prostą strukturę w coś wizualnie atrakcyjnego.
@@ -202,7 +202,7 @@ body {
 
 Otwórz narzędzia deweloperskie przeglądarki (F12), przejdź do zakładki Elements i zbadaj swój element `<h1>`. Zobaczysz, że dziedziczy rodzinę czcionki po body:
 
-![dziedziczona czcionka](../../../../translated_images/1.cc07a5cbe114ad1d.pl.png)
+![dziedziczona czcionka](../../../../translated_images/pl/1.cc07a5cbe114ad1d.png)
 
 ✅ **Czas na eksperyment**: Spróbuj ustawić inne właściwości dziedziczone na `<body>`, jak `color`, `line-height` lub `text-align`. Co się stanie z nagłówkiem i innymi elementami?
 
@@ -332,7 +332,7 @@ W naszym terrarium każda roślina potrzebuje podobnych stylów, ale także indy
 **Oto struktura HTML każdej rośliny:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.pl.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/pl/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Gotowy, by wzbogacić terrarium o realistyczne refleksy szklane? Ta technika dod
 
 Stworzysz subtelne refleksy, które symulują odbicie światła od powierzchni szkła. Podejście to jest podobne do metody, jaką stosowali renesansowi malarze tacy jak Jan van Eyck, używając światła i odbić, aby nadać szkłu trójwymiarowy wygląd. Oto, do czego dążysz:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.pl.png)
+![finished terrarium](../../../../translated_images/pl/terrarium-final.2f07047ffc597d0a.png)
 
 **Twoje zadanie:**
 - **Stwórz** subtelne białe lub jasne owalne kształty dla refleksów szklanych

@@ -182,7 +182,7 @@ Jak telefon Alexandra Grahama Bella łączył odległe miejsca, tak połączenie
 
 Gdy wszystko się załaduje, zobaczysz czyste i uporządkowane środowisko, które pozwoli Ci skupić się na tym, co ważne – na Twoim kodzie!
 
-![Domyślny interfejs VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.pl.png)
+![Domyślny interfejs VSCode.dev](../../../../translated_images/pl/default-vscode-dev.5d06881d65c1b323.png)
 
 **Oto wycieczka po okolicy:**
 - **Pasek aktywności** (ta pionowa listwa po lewej): Twoja główna nawigacja z eksploratorem 📁, wyszukiwaniem 🔍, kontrolą źródła 🌿, rozszerzeniami 🧩 i ustawieniami ⚙️
@@ -229,7 +229,7 @@ Idealna, gdy zaczynasz w VSCode.dev i chcesz otworzyć konkretne repozytorium. P
 1. Wejdź na [vscode.dev](https://vscode.dev) jeśli jeszcze tam nie jesteś
 2. Znajdź przycisk „Open Remote Repository” na ekranie powitalnym i kliknij go
 
-   ![Otwórz zdalne repozytorium](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.pl.png)
+   ![Otwórz zdalne repozytorium](../../../../translated_images/pl/open-remote-repository.bd9c2598b8949e7f.png)
 
 3. Wklej dowolny adres repozytorium GitHub (np. `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Naciśnij Enter i zobacz, jak działa magia!
@@ -238,7 +238,7 @@ Idealna, gdy zaczynasz w VSCode.dev i chcesz otworzyć konkretne repozytorium. P
 
 Chcesz poczuć się jak czarodziej kodu? Wypróbuj skrót klawiszowy: Ctrl+Shift+P (lub Cmd+Shift+P na Macu) by otworzyć Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.pl.png)
+![Command Palette](../../../../translated_images/pl/palette-menu.4946174e07f42622.png)
 
 **Command Palette to jak wyszukiwarka wszystkiego, co możesz zrobić:**
 - Wpisz "open remote", a znajdzie otwieracz repozytoriów
@@ -300,7 +300,7 @@ Analogicznie do organizacji planów architektonicznych, tworzenie plików w VSCo
 3. Wpisz nazwę pliku wraz z odpowiednim rozszerzeniem (`style.css`, `script.js`, `index.html`)
 4. Naciśnij Enter, aby utworzyć plik
 
-![Tworzenie nowego pliku](../../../../translated_images/create-new-file.2814e609c2af9aeb.pl.png)
+![Tworzenie nowego pliku](../../../../translated_images/pl/create-new-file.2814e609c2af9aeb.png)
 
 **Zasady nazewnictwa:**
 - Używaj opisowych nazw wskazujących cel pliku
@@ -318,7 +318,7 @@ Tu zaczyna się prawdziwa zabawa! Edytor VSCode.dev jest wyposażony w funkcje u
 2. Zacznij pisać i zobacz, jak VSCode.dev pomaga kolorami, podpowiedziami i wykrywaniem błędów
 3. Zapisz pracę skrótem Ctrl+S (Windows/Linux) lub Cmd+S (Mac) – chociaż edytor zapisuje też automatycznie!
 
-![Edycja pliku w VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.pl.png)
+![Edycja pliku w VSCode.dev](../../../../translated_images/pl/edit-a-file.52c0ee665ef19f08.png)
 
 **Co się dzieje podczas pisania:**
 - Twój kod jest pięknie kolorowany dla lepszej czytelności
@@ -339,7 +339,7 @@ Tak jak archeolodzy tworzą dokładne zapisy warstw wykopalisk, Git rejestruje z
 2. Zmodyfikowane pliki pojawiają się w sekcji „Changes” (Zmiany)
 3. Kolory wskazują typ zmian: zielony dla dodatków, czerwony dla usunięć
 
-![Podgląd zmian w Kontroli Źródła](../../../../translated_images/working-tree.c58eec08e6335c79.pl.png)
+![Podgląd zmian w Kontroli Źródła](../../../../translated_images/pl/working-tree.c58eec08e6335c79.png)
 
 **Zapisywanie pracy (workflow commit):**
 
@@ -431,7 +431,7 @@ Marketplace rozszerzeń jest naprawdę dobrze zorganizowany, więc nie zgubisz s
 2. Przeglądaj lub wyszukaj coś konkretnego
 3. Kliknij na wszystko, co wygląda ciekawie, żeby dowiedzieć się więcej
 
-![Interfejs marketplace rozszerzeń](../../../../translated_images/extensions.eca0e0c7f59a10b5.pl.png)
+![Interfejs marketplace rozszerzeń](../../../../translated_images/pl/extensions.eca0e0c7f59a10b5.png)
 
 **Co tam zobaczysz:**
 
@@ -484,7 +484,7 @@ Większość rozszerzeń ma ustawienia, które możesz zmieniać, aby działały
 3. Wybierz „Extension Settings” z rozwijanego menu
 4. Dostosuj ustawienia, aż poczujesz, że odpowiadają Twojemu workflow
 
-![Dostosowywanie ustawień rozszerzeń](../../../../translated_images/extension-settings.21c752ae4f4cdb78.pl.png)
+![Dostosowywanie ustawień rozszerzeń](../../../../translated_images/pl/extension-settings.21c752ae4f4cdb78.png)
 
 **Typowe rzeczy, które możesz chcieć zmienić:**
 - Jak formatowany jest kod (tabulatory vs spacje, długość linii itd.)

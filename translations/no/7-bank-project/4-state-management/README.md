@@ -187,7 +187,7 @@ Som Titanics skillevegger som virket robuste til flere kamre fyltes samtidig, vi
 
 I stedet for å løpe i sirkel, skal vi lage et **sentralisert tilstandshåndteringssystem**. Tenk på det som å ha én virkelig organisert person som har ansvar for alt det viktige:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.no.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/no/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Denne utfordringen vil hjelpe deg å tenke som en profesjonell utvikler som bala
 
 Her er et eksempelresultat etter å ha fullført oppgaven:
 
-![Skjermbilde som viser et eksempel på "Legg til transaksjon"-dialog](../../../../translated_images/dialog.93bba104afeb79f1.no.png)
+![Skjermbilde som viser et eksempel på "Legg til transaksjon"-dialog](../../../../translated_images/no/dialog.93bba104afeb79f1.png)
 
 ---
 

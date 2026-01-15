@@ -17,7 +17,7 @@ Olha, eu entendo perfeitamente se a programação te parecer intimidante neste m
 
 Hoje, vamos explorar as ferramentas incríveis que tornam o desenvolvimento web moderno não só possível, mas mesmo viciante. Estou a falar dos mesmos editores, browsers e fluxos de trabalho que os programadores da Netflix, Spotify e do teu estúdio indie favorito usam todos os dias. E aqui está a parte que te vai fazer dançar de alegria: a maioria destas ferramentas profissionais e padrão na indústria é completamente gratuita!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.pt.png)
+![Intro Programming](../../../../translated_images/pt/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

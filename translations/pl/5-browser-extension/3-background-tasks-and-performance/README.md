@@ -123,7 +123,7 @@ Aby otworzyć Narzędzia deweloperskie w Edge, kliknij trzy kropki w prawym gór
 
 Wypróbujmy to. Otwórz jakąś stronę (Microsoft.com świetnie się sprawdzi) i kliknij 'Nagraj'. Teraz odśwież stronę i obserwuj, jak profiler rejestruje wszystko, co się dzieje. Po zatrzymaniu nagrywania zobaczysz szczegółowy rozkład tego, jak przeglądarka 'skryptuje', 'renderuje' i 'maluje' witrynę. Przypomina mi to, jak centrum kontroli misji monitoruje każdy system podczas startu rakiety – masz dane w czasie rzeczywistym o tym, co i kiedy się dzieje.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.pl.png)
+![Edge profiler](../../../../translated_images/pl/profiler.5a4a62479c5df01c.png)
 
 ✅ [Dokumentacja Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) zawiera dużo więcej szczegółów, jeśli chcesz zgłębić temat
 
@@ -133,11 +133,11 @@ Wybierz elementy linii czasu profilu, aby przybliżyć zdarzenia zachodzące pod
 
 Zyskaj migawkę wydajności strony, wybierając fragment linii czasu profilu i patrząc na panel podsumowania:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.pl.png)
+![Edge profiler snapshot](../../../../translated_images/pl/snapshot.97750180ebcad737.png)
 
 Sprawdź panel Dziennika zdarzeń, aby zobaczyć, czy jakieś zdarzenie trwało dłużej niż 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.pl.png)
+![Edge event log](../../../../translated_images/pl/log.804026979f3707e0.png)
 
 ✅ Poznaj swój profiler! Otwórz narzędzia deweloperskie na tej stronie i sprawdź, czy są jakieś wąskie gardła. Jaki zasób ładuje się najwolniej? Najszybciej?
 

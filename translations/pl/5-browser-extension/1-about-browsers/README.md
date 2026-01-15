@@ -25,7 +25,7 @@ journey
       Debuguj problemy: 4: Student
       Dopieszczaj doświadczenie: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.pl.jpg)
+![Browser sketchnote](../../../../translated_images/pl/browser.60317c9be8b7f84a.jpg)
 > Sketchnote autorstwa [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz przed wykładem
@@ -77,7 +77,7 @@ Proces ten odzwierciedla sposób, w jaki pierwsza przeglądarka internetowa, Wor
 
 ✅ **Trochę historii**: Pierwsza przeglądarka nazywała się „WorldWideWeb” i została stworzona przez Sir Timothy’ego Berners-Lee w 1990 roku.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.pl.jpg)
+![early browsers](../../../../translated_images/pl/earlybrowsers.d984b711cdf3a42d.jpg)
 > Niektóre wczesne przeglądarki, za [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Jak przeglądarki przetwarzają zawartość sieci
@@ -194,7 +194,7 @@ quadrantChart
 
 Zrozumienie procesu instalacji rozszerzenia pomaga przewidzieć, jak doświadczenie użytkownika będzie wyglądać podczas instalacji Twojego rozszerzenia. Proces instalacji jest ustandaryzowany we wszystkich nowoczesnych przeglądarkach, z drobnymi różnicami w designie interfejsu.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.pl.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/pl/install-on-edge.d68781acaf0b3d3d.png)
 
 > **Ważne**: Upewnij się, że włączyłeś tryb dewelopera i zezwoliłeś na rozszerzenia z innych sklepów podczas testowania swoich własnych rozszerzeń.
 
@@ -308,10 +308,10 @@ Zasada ta odpowiada regule stopniowego ujawniania informacji, stosowanej w proje
 ### Przegląd widoków rozszerzenia
 
 **Widok konfiguracji** – konfiguracja dla pierwszych użytkowników:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.pl.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/pl/1.b6da8c1394b07491.png)
 
 **Widok wyników** – wyświetlanie danych o śladzie węglowym:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.pl.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/pl/2.1dae52ff08042246.png)
 
 ### Tworzenie formularza konfiguracji
 

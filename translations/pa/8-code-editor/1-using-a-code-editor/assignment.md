@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. ਇੱਕ ਕਮਿਟ ਸੁਨੇਹਾ ਲਿਖੋ: "Add initial HTML structure"
 5. "Commit new file" 'ਤੇ ਕਲਿਕ ਕਰਕੇ ਆਪਣੇ ਬਦਲਾਅ ਸੇਵ ਕਰੋ
 
-![GitHub 'ਤੇ ਸ਼ੁਰੂਆਤੀ ਫਾਈਲ ਬਣਾਉਣਾ](../../../../translated_images/new-file-github.com.c886796d800e8056.pa.png)
+![GitHub 'ਤੇ ਸ਼ੁਰੂਆਤੀ ਫਾਈਲ ਬਣਾਉਣਾ](../../../../translated_images/pa/new-file-github.com.c886796d800e8056.png)
 
 **ਇਹ ਸ਼ੁਰੂਆਤੀ ਸੈਟਅਪ ਕੀ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ:**
 - **ਸਥਾਪਿਤ ਕਰਦਾ ਹੈ** ਸਹੀ HTML5 ਦਸਤਾਵੇਜ਼ ਸੰਰਚਨਾ ਸੈਮਾਂਟਿਕ ਤੱਤਾਂ ਨਾਲ
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **ਸਫਲਤਾ ਸੂਚਕ**: ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਫਾਈਲਾਂ Explorer ਸਾਈਡਬਾਰ ਵਿੱਚ ਅਤੇ `index.html` ਮੁੱਖ ਐਡੀਟਰ ਖੇਤਰ ਵਿੱਚ ਐਡੀਟ ਕਰਨ ਲਈ ਉਪਲਬਧ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।
 
-![VSCode.dev ਵਿੱਚ ਪ੍ਰੋਜੈਕਟ ਲੋਡ ਕੀਤਾ](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.pa.png)
+![VSCode.dev ਵਿੱਚ ਪ੍ਰੋਜੈਕਟ ਲੋਡ ਕੀਤਾ](../../../../translated_images/pa/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **ਇੰਟਰਫੇਸ ਵਿੱਚ ਤੁਸੀਂ ਕੀ ਦੇਖੋਗੇ:**
 - **Explorer sidebar**: **ਤੁਹਾਡੇ ਰਿਪੋਜ਼ਟਰੀ ਫਾਈਲਾਂ ਅਤੇ ਫੋਲਡਰ ਸੰਰਚਨਾ ਦਿਖਾਉਂਦਾ ਹੈ**

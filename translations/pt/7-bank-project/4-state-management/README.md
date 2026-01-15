@@ -187,7 +187,7 @@ Como o design compartimentado do Titanic, que parecia robusto até múltiplos co
 
 Em vez de correr atrás do rabo, vamos criar um sistema **centralizado de gestão de estado**. Imagine uma pessoa muito organizada responsável por toda a informação importante:
 
-![Schema mostrando os fluxos de dados entre o HTML, ações do utilizador e estado](../../../../translated_images/data-flow.fa2354e0908fecc8.pt.png)
+![Schema mostrando os fluxos de dados entre o HTML, ações do utilizador e estado](../../../../translated_images/pt/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -800,7 +800,7 @@ Este desafio ajudará a pensar como um desenvolvedor profissional que considera 
 
 Aqui está um exemplo do resultado após completar o trabalho:
 
-![Screenshot mostrando um exemplo do diálogo "Adicionar transação"](../../../../translated_images/dialog.93bba104afeb79f1.pt.png)
+![Screenshot mostrando um exemplo do diálogo "Adicionar transação"](../../../../translated_images/pt/dialog.93bba104afeb79f1.png)
 
 ---
 

@@ -72,13 +72,13 @@ Ikke gå glipp av vår nye læreplan for Generativ AI!
 
 Besøk [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) for å komme i gang!
 
-![Background](../../translated_images/background.148a8d43afde5730.no.png)
+![Background](../../translated_images/no/background.148a8d43afde5730.png)
 
 - Leksjoner som dekker alt fra det grunnleggende til RAG.
 - Samhandle med historiske figurer ved hjelp av GenAI og vår ledsagerapp.
 - Moro og engasjerende fortelling, du vil tidsreise!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.no.png)
+![character](../../translated_images/no/character.5c0dd8e067ffd693.png)
 
 
 Hver leksjon inkluderer en oppgave å fullføre, en kunnskapssjekk og en utfordring for å veilede deg i læringstemaer som:
@@ -115,7 +115,7 @@ Følg disse trinnene:
 
 I din kopi av dette depotet som du opprettet, klikk på **Kode**-knappen og velg **Åpne med Codespaces**. Dette vil opprette en ny Codespace for deg å jobbe i.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.no.png)
+![Codespace](../../translated_images/no/createcodespace.0238bbf4d7a8d955.png)
 
 #### Kjøre læreplanen lokalt på datamaskinen din
 

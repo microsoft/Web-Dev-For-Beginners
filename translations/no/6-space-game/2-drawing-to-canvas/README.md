@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![lerretets rutenett](../../../../translated_images/canvas_grid.5f209da785ded492.no.png)
+![lerretets rutenett](../../../../translated_images/no/canvas_grid.5f209da785ded492.png)
 > Bilde fra [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 For å tegne på canvas-elementet følger du den samme tre-trinns prosessen som danner grunnlaget for all lerretgrafikk. Når du gjør dette noen ganger, blir det helt naturlig:
@@ -323,11 +323,11 @@ Du skal lage en nettside med et Canvas-element. Den skal vise en svart skjerm `1
 
 - Helteskip
 
-   ![Helteskip](../../../../translated_images/player.dd24c1afa8c71e9b.no.png)
+   ![Helteskip](../../../../translated_images/no/player.dd24c1afa8c71e9b.png)
 
 - 5*5 monstre
 
-   ![Monsterskip](../../../../translated_images/enemyShip.5df2a822c16650c2.no.png)
+   ![Monsterskip](../../../../translated_images/no/enemyShip.5df2a822c16650c2.png)
 
 ### Anbefalte steg for å starte utvikling
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Det ferdige resultatet skal se slik ut:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.no.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/no/partI-solution.36c53b48c9ffae2a.png)
 
 ## Løsning
 

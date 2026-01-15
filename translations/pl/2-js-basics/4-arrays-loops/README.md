@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basics: Tablice i Pętle
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.pl.png)
+![JavaScript Basics - Arrays](../../../../translated_images/pl/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

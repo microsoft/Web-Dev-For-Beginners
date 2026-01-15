@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Slik vil ditt ferdige prosjekt se ut:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.no.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/no/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ Din Læringsreise Gjennom AI Applikasjonsutvikling
 
@@ -189,7 +189,7 @@ mindmap
 ```  
 **Kjerneprinsipp**: AI-applikasjonsutvikling kombinerer tradisjonelle webutviklingsferdigheter med AI-tjenesteintegrasjon, og skaper intelligente applikasjoner som føles naturlige og responsive for brukerne.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.no.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/no/playground.d2b927122224ff8f.png)
 
 **Dette gjør playground så nyttig:**  
 - **Prøv ut** forskjellige AI-modeller som GPT-4o-mini, Claude, og flere (alle gratis!)  
@@ -199,7 +199,7 @@ mindmap
 
 Når du har lekt deg litt, klikk bare på "Code"-fanen og velg programmeringsspråk for å få implementasjonskoden du trenger.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.no.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/no/playground-choice.1d23ba7d407f4758.png)
 
 ## Sette Opp Python Backend-integrasjon
 
@@ -2353,14 +2353,14 @@ Vil du prøve dette prosjektet i et skybasert utviklingsmiljø? GitHub Codespace
 - **Naviger** til [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Klikk** på "Use this template" øverst til høyre (sørg for at du er logget inn på GitHub)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.no.png)  
+![Create from template interface showing the green "Use this template" button](../../../translated_images/no/template.67ad477109d29a2b.png)  
 
 **Steg 2: Start Codespaces**  
 - **Åpne** ditt nylig opprettede repository  
 - **Klikk** på den grønne "Code"-knappen og velg "Codespaces"  
 - **Velg** "Create codespace on main" for å starte utviklingsmiljøet ditt  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.no.png)  
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/no/codespace.bcecbdf5d2747d3d.png)  
 
 **Steg 3: Miljøkonfigurasjon**  
 Når Codespace lastes inn, får du tilgang til:  

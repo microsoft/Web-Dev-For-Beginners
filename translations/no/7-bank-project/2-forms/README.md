@@ -292,7 +292,7 @@ Først, la oss observere hva som skjer med et grunnleggende skjema:
 2. Observer endringene i nettleserens adressefelt
 3. Legg merke til hvordan siden lastes på nytt og data vises i URLen
 
-![Skjermbilde av nettleserens URL-endring etter å ha klikket på Registrer-knappen](../../../../translated_images/click-register.e89a30bf0d4bc9ca.no.png)
+![Skjermbilde av nettleserens URL-endring etter å ha klikket på Registrer-knappen](../../../../translated_images/no/click-register.e89a30bf0d4bc9ca.png)
 
 ### Sammenligning av HTTP-metoder
 
@@ -346,7 +346,7 @@ La oss konfigurere registreringsskjemaet ditt til å kommunisere korrekt med bac
 2. **Klikk** på "Opprett konto"-knappen
 3. **Observer** serverens respons i nettleseren
 
-![Nettleservindu på adressen localhost:5000/api/accounts, som viser en JSON-streng med brukerdata](../../../../translated_images/form-post.61de4ca1b964d91a.no.png)
+![Nettleservindu på adressen localhost:5000/api/accounts, som viser en JSON-streng med brukerdata](../../../../translated_images/no/form-post.61de4ca1b964d91a.png)
 
 **Dette bør du se:**
 - **Nettleseren omdirigeres** til API-endepunktets URL
@@ -609,7 +609,7 @@ async function register() {
 3. **Klikk** "Opprett konto"
 4. **Observer** konsollmeldinger og brukerfeedback
 
-![Skjermbilde som viser loggmelding i nettleserkonsollen](../../../../translated_images/browser-console.efaf0b51aaaf6778.no.png)
+![Skjermbilde som viser loggmelding i nettleserkonsollen](../../../../translated_images/no/browser-console.efaf0b51aaaf6778.png)
 
 **Det du bør se:**
 - **Lastetilstand** vises på sendeknappen
@@ -783,7 +783,7 @@ La oss forbedre registreringsskjemaet ditt med robust validering som gir utmerke
 3. **Prøv** spesialtegn i brukernavnfeltet
 4. **Skriv inn** et negativt saldo-beløp
 
-![Skjermbilde som viser valideringsfeil ved forsøk på innsending av skjemaet](../../../../translated_images/validation-error.8bd23e98d416c22f.no.png)
+![Skjermbilde som viser valideringsfeil ved forsøk på innsending av skjemaet](../../../../translated_images/no/validation-error.8bd23e98d416c22f.png)
 
 **Dette vil du observere:**
 - **Nettleser viser** native valideringsmeldinger
@@ -943,7 +943,7 @@ Vis en feilmelding i HTML hvis brukeren allerede eksisterer.
 
 Her er et eksempel på hvordan den endelige innloggingssiden kan se ut etter litt styling:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.no.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/no/result.96ef01f607bf856a.png)
 
 ## Quiz etter forelesning
 

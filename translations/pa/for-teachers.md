@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud ਵਿੱਚ Common Cartridge ਸਹਾਇਤਾ ਸੀਮਿਤ ਹੈ। ਉਪਰੋਕਤ Moodle ਫਾਈਲ ਨੂੰ ਤਰਜੀਹ ਦਿਓ, ਜਿਸਨੂੰ Canvas ਵਿੱਚ ਵੀ ਅੱਪਲੋਡ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
   - ਇੰਪੋਰਟ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਮਾਡਿਊਲ, ਮਿਆਦ ਦੀਆਂ ਮਿਤੀਆਂ, ਅਤੇ ਕਵਿਜ਼ ਸੈਟਿੰਗਾਂ ਦੀ ਸਮੀਖਾ ਕਰੋ ਤਾਂ ਜੋ ਇਹ ਤੁਹਾਡੇ ਟਰਮ ਸ਼ਡਿਊਲ ਨਾਲ ਮੇਲ ਖਾਂਦੇ ਹੋਣ।
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.pa.png)
+![Moodle](../../translated_images/pa/moodle.94eb93d714a50cb2.png)
 > Moodle ਕਲਾਸਰੂਮ ਵਿੱਚ ਪਾਠਕ੍ਰਮ
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.pa.png)
+![Canvas](../../translated_images/pa/canvas.fbd605ff8e5b8aff.png)
 > Canvas ਵਿੱਚ ਪਾਠਕ੍ਰਮ
 
 ### ਰਿਪੋ ਨੂੰ ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਵਰਤੋ (ਕੋਈ Classroom ਨਹੀਂ)

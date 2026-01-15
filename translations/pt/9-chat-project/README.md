@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Eis como ficará o teu projeto terminado:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.pt.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/pt/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ A Tua Jornada de Aprendizagem no Desenvolvimento de Aplicações com IA
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Princípio Fundamental**: O desenvolvimento de aplicações com IA combina competências tradicionais de desenvolvimento web com integração de serviços de IA, criando aplicações inteligentes que parecem naturais e responsivas para os utilizadores.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.pt.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/pt/playground.d2b927122224ff8f.png)
 
 **Isto é o que torna o playground tão útil:**
 - **Experimenta** diferentes modelos de IA como GPT-4o-mini, Claude e outros (todos grátis!)
@@ -199,7 +199,7 @@ mindmap
 
 Depois de brincares um pouco, basta clicares no separador "Code" e escolheres a tua linguagem de programação para obter o código de implementação que precisarás.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.pt.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/pt/playground-choice.1d23ba7d407f4758.png)
 
 ## Configurar a Integração Backend em Python
 
@@ -2351,14 +2351,14 @@ Quer experimentar este projeto num ambiente de desenvolvimento na nuvem? O GitHu
 - **Navegue** até ao [repositório Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Clique** em "Use this template" no canto superior direito (certifique-se que está autenticado no GitHub)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.pt.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/pt/template.67ad477109d29a2b.png)
 
 **Passo 2: Lançar Codespaces**  
 - **Abra** o repositório recém-criado  
 - **Clique** no botão verde "Code" e selecione "Codespaces"  
 - **Escolha** "Create codespace on main" para iniciar o seu ambiente de desenvolvimento  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.pt.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/pt/codespace.bcecbdf5d2747d3d.png)
 
 **Passo 3: Configuração do Ambiente**  
 Quando o seu Codespace carregar, terá acesso a:  

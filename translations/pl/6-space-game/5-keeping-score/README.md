@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **System punktacji**: Każdy zniszczony statek wroga nagradza 100 punktów (okrągłe liczby są łatwiejsze do mentalnego liczenia dla graczy). Wynik wyświetlany jest w lewym dolnym rogu.
-- **Licznik żyć**: Twój bohater rozpoczyna z trzema życiami - standard ustalony przez wczesne gry arcade, by zbalansować wyzwanie z grywalnością. Każda kolizja z wrogiem kosztuje jedno życie. Pokażemy pozostałe życia w prawym dolnym rogu za pomocą ikon statków ![life image](../../../../translated_images/life.6fb9f50d53ee0413.pl.png).
+- **Licznik żyć**: Twój bohater rozpoczyna z trzema życiami - standard ustalony przez wczesne gry arcade, by zbalansować wyzwanie z grywalnością. Każda kolizja z wrogiem kosztuje jedno życie. Pokażemy pozostałe życia w prawym dolnym rogu za pomocą ikon statków ![life image](../../../../translated_images/pl/life.6fb9f50d53ee0413.png).
 
 ## Zaczynamy budować!
 

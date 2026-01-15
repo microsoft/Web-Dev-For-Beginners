@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਇਸ ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ, ਤੁਸੀਂ ਇੱਕ ਕਲਪਨਾਤਮਕ ਬੈਂਕ ਬਣਾਉਣਾ ਸਿੱਖੋਗੇ। ਇਹ ਪਾਠ ਤੁਹਾਨੂੰ ਸਿਖਾਉਣਗੇ ਕਿ ਵੈੱਬ ਐਪ ਦਾ ਲੇਆਉਟ ਕਿਵੇਂ ਬਣਾਉਣਾ ਹੈ ਅਤੇ ਰੂਟਸ ਪ੍ਰਦਾਨ ਕਰਨੇ ਹਨ, ਫਾਰਮ ਬਣਾਉਣੇ ਹਨ, ਸਟੇਟ ਨੂੰ ਮੈਨੇਜ ਕਰਨਾ ਹੈ, ਅਤੇ API ਤੋਂ ਡਾਟਾ ਫੈਚ ਕਰਨਾ ਹੈ ਜਿਸ ਤੋਂ ਤੁਸੀਂ ਬੈਂਕ ਦਾ ਡਾਟਾ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ।
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.pa.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.pa.png) |
+| ![Screen1](../../../translated_images/pa/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/pa/screen2.123c82a831a1d14a.png) |
 |--------------------------------|--------------------------------|
 
 ## ਪਾਠ

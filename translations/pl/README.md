@@ -72,13 +72,13 @@ Nie przegap naszego nowego programu Generatywnej AI!
 
 Odwiedź [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), aby zacząć!
 
-![Tło](../../translated_images/background.148a8d43afde5730.pl.png)
+![Tło](../../translated_images/pl/background.148a8d43afde5730.png)
 
 - Lekcje obejmujące wszystko od podstaw po RAG.
 - Interakcje z postaciami historycznymi za pomocą GenAI i naszej aplikacji towarzyszącej.
 - Zabawna i angażująca narracja, będziesz podróżować w czasie!
 
-![postać](../../translated_images/character.5c0dd8e067ffd693.pl.png)
+![postać](../../translated_images/pl/character.5c0dd8e067ffd693.png)
 
 Każda lekcja zawiera zadanie do wykonania, sprawdzanie wiedzy oraz wyzwanie, które poprowadzą Cię po tematach takich jak:
 - Tworzenie i inżynieria promptów
@@ -112,7 +112,7 @@ Wykonaj następujące kroki:
 
 W swojej kopii tego repozytorium, którą utworzyłeś, kliknij przycisk **Code** i wybierz **Open with Codespaces**. To utworzy nowy Codespace do pracy.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.pl.png)
+![Codespace](../../translated_images/pl/createcodespace.0238bbf4d7a8d955.png)
 
 #### Uruchamianie programu lokalnie na komputerze
 
