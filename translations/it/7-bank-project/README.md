@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 In questo progetto, imparerai come costruire una banca fittizia. Queste lezioni includono istruzioni su come strutturare un'app web e fornire percorsi, creare moduli, gestire lo stato e recuperare dati da un'API da cui puoi ottenere i dati della banca.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.it.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.it.png) |
+| ![Screen1](../../../translated_images/it/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/it/screen2.123c82a831a1d14a.png) |
 |--------------------------------|--------------------------------|
 
 ## Lezioni

@@ -187,7 +187,7 @@ mindmap
 
 우리가 할 일은 **중앙 집중식 상태 관리** 시스템을 만드는 것입니다. 중요한 모든 것을 단 하나의 매우 조직적인 책임자가 관리한다고 생각하세요:
 
-![HTML, 사용자 동작, 상태 간 데이터 흐름을 보여주는 도식](../../../../translated_images/data-flow.fa2354e0908fecc8.ko.png)
+![HTML, 사용자 동작, 상태 간 데이터 흐름을 보여주는 도식](../../../../translated_images/ko/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -802,7 +802,7 @@ Agent 모드를 사용해 다음 챌린지 수행:
 
 과제 완료 후 예시 결과:
 
-![예시 "거래 추가" 대화상자 스크린샷](../../../../translated_images/dialog.93bba104afeb79f1.ko.png)
+![예시 "거래 추가" 대화상자 스크린샷](../../../../translated_images/ko/dialog.93bba104afeb79f1.png)
 
 ---
 

@@ -295,7 +295,7 @@ graph TD
 2. ブラウザのアドレスバーの変化を観察
 3. ページがリロードされ、データがURLに表示されることに気づく
 
-![登録ボタンをクリックした後のブラウザのURL変化のスクリーンショット](../../../../translated_images/click-register.e89a30bf0d4bc9ca.ja.png)
+![登録ボタンをクリックした後のブラウザのURL変化のスクリーンショット](../../../../translated_images/ja/click-register.e89a30bf0d4bc9ca.png)
 
 ### HTTPメソッドの比較
 
@@ -350,7 +350,7 @@ graph TD
 2. **「アカウント作成」ボタンをクリック**
 3. **ブラウザでサーバー応答を確認**
 
-![localhost:5000/api/accountsのアドレスでブラウザウィンドウが表示され、ユーザーデータを含むJSON文字列が表示される](../../../../translated_images/form-post.61de4ca1b964d91a.ja.png)
+![localhost:5000/api/accountsのアドレスでブラウザウィンドウが表示され、ユーザーデータを含むJSON文字列が表示される](../../../../translated_images/ja/form-post.61de4ca1b964d91a.png)
 
 **確認すべきこと:**
 - **ブラウザがAPIエンドポイントURLにリダイレクト**
@@ -565,7 +565,7 @@ async function register() {
 3. **「アカウント作成」をクリック**
 4. **コンソールメッセージとユーザーフィードバックを確認**
 
-![ブラウザコンソールにログメッセージが表示されているスクリーンショット](../../../../translated_images/browser-console.efaf0b51aaaf6778.ja.png)
+![ブラウザコンソールにログメッセージが表示されているスクリーンショット](../../../../translated_images/ja/browser-console.efaf0b51aaaf6778.png)
 
 **期待される結果:**
 - **送信ボタンにローディング状態**が表示される
@@ -740,7 +740,7 @@ input:focus:invalid {
 3. **ユーザー名フィールドに特殊文字を入力**
 4. **負の残高額を入力**
 
-![フォーム送信時にバリデーションエラーが表示されるスクリーンショット](../../../../translated_images/validation-error.8bd23e98d416c22f.ja.png)
+![フォーム送信時にバリデーションエラーが表示されるスクリーンショット](../../../../translated_images/ja/validation-error.8bd23e98d416c22f.png)
 
 **観察されること:**
 - **ブラウザがネイティブのバリデーションメッセージを表示**
@@ -871,7 +871,7 @@ timeline
 
 以下は、CSSスタイルを追加した後のログインページの最終的な例です：
 
-![CSSスタイルを追加した後のログインページのスクリーンショット](../../../../translated_images/result.96ef01f607bf856a.ja.png)
+![CSSスタイルを追加した後のログインページのスクリーンショット](../../../../translated_images/ja/result.96ef01f607bf856a.png)
 
 ## 講義後のクイズ
 

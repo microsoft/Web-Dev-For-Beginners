@@ -25,7 +25,7 @@ journey
       Pagerinti prieinamumą: 5: Studentas
       Sukurti terariumą: 5: Studentas
 ```
-![Įvadas į HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.lt.png)
+![Įvadas į HTML](../../../../translated_images/lt/webdev101-html.4389c2067af68e98.png)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML arba HyperText Markup Language yra kiekvieno jūsų lankyto interneto svetainės pagrindas. Galvokite apie HTML kaip apie skeletą, kuris suteikia struktūrą tinklalapiams – jis apibrėžia, kur dedamas turinys, kaip jis organizuotas ir ką kiekvienas elementas reiškia. Nors CSS vėliau „papuoš“ jūsų HTML spalvomis ir išdėstymu, o JavaScript suteiks jam gyvybės su interaktyvumu, HTML suteikia būtiną struktūrą, dėl kurios visa kita tampa įmanoma.
@@ -86,7 +86,7 @@ Sukursite atskirą aplanką savo terariumo projektui ir pridėsite pirmąjį HTM
 4. „Explorer“ lange spauskite „New File“ ikoną  
 5. Pavadinkite savo failą `index.html`
 
-![VS Code Explorer rodo naujo failo kūrimą](../../../../translated_images/vs-code-index.e2986cf919471eb9.lt.png)
+![VS Code Explorer rodo naujo failo kūrimą](../../../../translated_images/lt/vs-code-index.e2986cf919471eb9.png)
 
 **Variantas 2: Naudojant terminalo komandas**  
 ```bash
@@ -236,48 +236,48 @@ Dabar pridėkite augalų paveikslėlius, organizuotus dviejuose stulpeliuose tar
 <div id="page">
 	<div id="left-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/plant1.d87946a2ca70cc43.lt.png" />
+			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/lt/plant1.d87946a2ca70cc43.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/plant2.8daa1606c9c1ad89.lt.png" />
+			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/lt/plant2.8daa1606c9c1ad89.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/plant3.8b0d484381a2a2a7.lt.png" />
+			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/lt/plant3.8b0d484381a2a2a7.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/plant4.656e16ae1df37be2.lt.png" />
+			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/lt/plant4.656e16ae1df37be2.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/plant5.2b41b9355f11ebcc.lt.png" />
+			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/lt/plant5.2b41b9355f11ebcc.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/plant6.3d1827d03b656994.lt.png" />
+			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/lt/plant6.3d1827d03b656994.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/plant7.8152c302ac97f621.lt.png" />
+			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/lt/plant7.8152c302ac97f621.png" />
 		</div>
 	</div>
 	<div id="right-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/plant8.38d6428174ffa850.lt.png" />
+			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/lt/plant8.38d6428174ffa850.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/plant9.f0e38d3327c37fc2.lt.png" />
+			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/lt/plant9.f0e38d3327c37fc2.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/plant10.b159d6d6e985595f.lt.png" />
+			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/lt/plant10.b159d6d6e985595f.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/plant11.2a03a1c2ec8ea84e.lt.png" />
+			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/lt/plant11.2a03a1c2ec8ea84e.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/plant12.60e9b53e538fbaf3.lt.png" />
+			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/lt/plant12.60e9b53e538fbaf3.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/plant13.07a51543c820bcf5.lt.png" />
+			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/lt/plant13.07a51543c820bcf5.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/plant14.6e486371ba7d36ba.lt.png" />
+			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/lt/plant14.6e486371ba7d36ba.png" />
 		</div>
 	</div>
 </div>

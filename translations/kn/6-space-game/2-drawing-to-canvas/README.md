@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![ಕ್ಯಾನ್‌ವಾಸ್‌ನ ಗ್ರಿಡ್](../../../../translated_images/canvas_grid.5f209da785ded492.kn.png)
+![ಕ್ಯಾನ್‌ವಾಸ್‌ನ ಗ್ರಿಡ್](../../../../translated_images/kn/canvas_grid.5f209da785ded492.png)
 > ಚಿತ್ರ: [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 ಕ್ಯಾನ್‌ವಾಸ್ ಅಂಶದಲ್ಲಿ ಬಿಡಿಸಲು, ನೀವು ಎಲ್ಲಾ ಕ್ಯಾನ್‌ವಾಸ್ ಗ್ರಾಫಿಕ್ಸ್ ಭಿತ್ತಿಯನ್ನು ರೂಪಿಸುವ ಮೂರು-ಹಂತ ಪ್ರಕ್ರಿಯೆಯನ್ನನುಸರಿಸಬೇಕು. ನೀವು ಇದನ್ನು ಕೆಲವು ಬಾರಿ ಮಾಡಿದರೆ, ಅದು ಸಹಜವಾಗುತ್ತದೆ:
@@ -323,11 +323,11 @@ flowchart TD
 
 - ಹೀರೋ ಹಡಗು
 
-   ![ಹೀರೋ ಹಡಗು](../../../../translated_images/player.dd24c1afa8c71e9b.kn.png)
+   ![ಹೀರೋ ಹಡಗು](../../../../translated_images/kn/player.dd24c1afa8c71e9b.png)
 
 - 5*5 ಮಾನ್ತ್ರಗಳು
 
-   ![ಮಾನ್ತ್ರ ಹಡಗು](../../../../translated_images/enemyShip.5df2a822c16650c2.kn.png)
+   ![ಮಾನ್ತ್ರ ಹಡಗು](../../../../translated_images/kn/enemyShip.5df2a822c16650c2.png)
 
 ### ಅಭಿವೃದ್ಧಿ ಪ್ರಾರಂಭಿಸಲು ಶಿಫಾರಸು ಮಾಡಿದ ಹಂತಗಳು
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 ಪೂರ್ಣವಾದ ಫಲಿತಾಂಶ ಹೀಗಿರಬೇಕು:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.kn.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/kn/partI-solution.36c53b48c9ffae2a.png)
 
 ## ಪರಿಹಾರ
 

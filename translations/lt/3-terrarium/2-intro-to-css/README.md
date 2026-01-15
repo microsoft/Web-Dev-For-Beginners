@@ -29,7 +29,7 @@ journey
       Reaguojantis dizainas: 5: Studentas
       Stiklo atspindžiai: 5: Studentas
 ```
-![Įvadas į CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.lt.png)
+![Įvadas į CSS](../../../../translated_images/lt/webdev101-css.3f7af5991bf53a20.png)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Prisimeni, kaip tavo HTML terrariumas atrodė gana paprastai? CSS yra ta vieta, kur mes tą paprastą struktūrą paverčiame vizualiai patrauklia.
@@ -202,7 +202,7 @@ body {
 
 Atidaryk naršyklės kūrėjų įrankius (F12), eik į "Elements" skiltį ir apžiūrėk savo `<h1>` elementą. Pamatysi, kad jis paveldi šrifto šeimą iš body:
 
-![paveldėtas šriftas](../../../../translated_images/1.cc07a5cbe114ad1d.lt.png)
+![paveldėtas šriftas](../../../../translated_images/lt/1.cc07a5cbe114ad1d.png)
 
 ✅ **Eksperimentas**: Išbandyk nustatyti kitas paveldimas savybes ant `<body>`, kaip `color`, `line-height` arba `text-align`. Kas nutinka tavo antraštei ir kitiems elementams?
 
@@ -332,7 +332,7 @@ Mūsų terrariume kiekvienam augalui reikia panašaus stilizavimo, bet kartu kie
 **Štai HTML struktūra kiekvienam augalui:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.lt.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/lt/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Pasiruošę pagerinti savo terrariumą realistiškais stiklo atspindžiais? Ši 
 
 Kursite subtilius šviesos žiburius, imituojančius, kaip šviesa atsispindi nuo stiklo paviršių. Šis būdas panašus į tai, kaip Renesanso tapytojai, pvz., Jan van Eyck, naudojo šviesą ir atspindžius, kad nudažytas stiklas atrodytų trimatis. Štai ko siekiate:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.lt.png)
+![finished terrarium](../../../../translated_images/lt/terrarium-final.2f07047ffc597d0a.png)
 
 **Jūsų iššūkis:**
 - **Sukurkite** subtilias baltas ar šviesias ovalo formos dėmes stiklo atspindžiams

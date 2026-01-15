@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 완성된 프로젝트는 다음과 같은 모습입니다:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.ko.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/ko/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ AI 애플리케이션 개발을 통한 학습 여정
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **핵심 원칙**: AI 애플리케이션 개발은 전통적인 웹 개발 기술과 AI 서비스 통합을 결합해 자연스럽고 반응성 높은 지능형 애플리케이션을 만듭니다.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.ko.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/ko/playground.d2b927122224ff8f.png)
 
 **플레이그라운드의 유용함 요점:**
 - GPT-4o-mini, Claude 등 무료로 다양한 AI 모델 사용해보기
@@ -199,7 +199,7 @@ mindmap
 
 조금 놀아본 뒤 “Code” 탭을 클릭하고 구현할 프로그래밍 언어를 선택해 필요한 코드를 얻으세요.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.ko.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/ko/playground-choice.1d23ba7d407f4758.png)
 
 ## Python 백엔드 통합 설정하기
 
@@ -2351,14 +2351,14 @@ mindmap
 - [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)로 이동  
 - 우측 상단에서 "Use this template" 클릭 (GitHub 로그인 필요)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.ko.png)  
+![Create from template interface showing the green "Use this template" button](../../../translated_images/ko/template.67ad477109d29a2b.png)  
 
 **2단계: Codespaces 실행**  
 - 새로 만든 저장소 열기  
 - 초록색 "Code" 버튼 클릭 후 "Codespaces" 선택  
 - "Create codespace on main" 선택하여 개발 환경 시작  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.ko.png)  
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/ko/codespace.bcecbdf5d2747d3d.png)  
 
 **3단계: 환경 구성**  
 Codespace가 로드되면 다음을 사용할 수 있습니다:  

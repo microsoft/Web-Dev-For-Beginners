@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript pagrindai: duomenų tipai
 
-![JavaScript pagrindai - duomenų tipai](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.lt.png)
+![JavaScript pagrindai - duomenų tipai](../../../../translated_images/lt/webdev101-js-datatypes.4cc470179730702c.png)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

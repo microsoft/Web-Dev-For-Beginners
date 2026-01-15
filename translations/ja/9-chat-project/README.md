@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 完成したプロジェクトは以下のようになります:
 
-![ユーザーとAIアシスタントの会話を表示するチャットアプリのインターフェース](../../../translated_images/screenshot.0a1ee0d123df681b.ja.png)
+![ユーザーとAIアシスタントの会話を表示するチャットアプリのインターフェース](../../../translated_images/ja/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ AIアプリケーション開発の学習の旅
 
@@ -194,7 +194,7 @@ mindmap
 
 **基本原則**: AIアプリケーション開発は、従来のウェブ開発スキルとAIサービス統合を組み合わせ、自然で応答性の高いインテリジェントなアプリケーションを作成します。
 
-![GitHub Models AI Playgroundのインターフェース。モデル選択とテストエリアを表示](../../../translated_images/playground.d2b927122224ff8f.ja.png)
+![GitHub Models AI Playgroundのインターフェース。モデル選択とテストエリアを表示](../../../translated_images/ja/playground.d2b927122224ff8f.png)
 
 **Playgroundが非常に便利な理由:**
 - **試す**: GPT-4o-mini、Claudeなどの異なるAIモデルを無料で試せる
@@ -204,7 +204,7 @@ mindmap
 
 少し試してみたら、「Code」タブをクリックしてプログラミング言語を選択し、必要な実装コードを取得するだけです。
 
-![Playgroundの選択画面。異なるプログラミング言語のコード生成オプションを表示](../../../translated_images/playground-choice.1d23ba7d407f4758.ja.png)
+![Playgroundの選択画面。異なるプログラミング言語のコード生成オプションを表示](../../../translated_images/ja/playground-choice.1d23ba7d407f4758.png)
 
 ## Pythonバックエンド統合のセットアップ
 
@@ -2139,14 +2139,14 @@ mindmap
 - **[Web Dev For Beginnersリポジトリ](https://github.com/microsoft/Web-Dev-For-Beginners)**に移動  
 - **右上の「Use this template」**をクリック（GitHubにログインしていることを確認）  
 
-![テンプレート作成インターフェースで緑色の「Use this template」ボタンが表示されている](../../../translated_images/template.67ad477109d29a2b.ja.png)
+![テンプレート作成インターフェースで緑色の「Use this template」ボタンが表示されている](../../../translated_images/ja/template.67ad477109d29a2b.png)
 
 **ステップ2: Codespacesを起動**
 - **新しく作成したリポジトリを開く**  
 - **緑色の「Code」ボタンをクリックし、「Codespaces」を選択**  
 - **「Create codespace on main」を選択して開発環境を開始**  
 
-![クラウド開発環境を起動するためのCodespaceインターフェース](../../../translated_images/codespace.bcecbdf5d2747d3d.ja.png)
+![クラウド開発環境を起動するためのCodespaceインターフェース](../../../translated_images/ja/codespace.bcecbdf5d2747d3d.png)
 
 **ステップ3: 環境設定**
 Codespaceが読み込まれると、以下にアクセスできます：

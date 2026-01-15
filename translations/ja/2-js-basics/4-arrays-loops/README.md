@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptの基本: 配列とループ
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ja.png)
+![JavaScript Basics - Arrays](../../../../translated_images/ja/webdev101-js-arrays.439d7528b8a29455.png)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

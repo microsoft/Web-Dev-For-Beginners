@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಇಂದಿನ ದಿನದಲ್ಲಿ, ಆಧುನಿಕ ವೆಬ್ ಅಭಿವೃದ್ಧಿಯನ್ನು ಸಾಧ್ಯಗೊಳಿಸುವ ಅದ್ಭುತ ಸಾಧನಗಳ ಮೇಲೆ ನಾವು ಪ್ರಯಾಣ ಮಾಡುವೆವು. ನಾನು ನಿಮ್ಮ Netflix, Spotify ಮತ್ತು ನಿಮ್ಮ ಇಷ್ಟದ ಸ್ವತಂತ್ರ ಆಪ್ ಸ್ಟುಡಿಯೋದ ಡೆವಲಪರ್ ಗಳು ಪ್ರತಿದಿನ ಬಳಸುವ ಎಡಿಟರ್ ಗಳು, ಬ್ರೌಸರ ಗಳು ಮತ್ತು ವರ್ಕ್‌ಫ್ಲೋಗಳನ್ನು ತಿಳಿಸುತ್ತಿದ್ದೇನೆ. ಮತ್ತು ಇದು ನಿಮಗೆ ಸಂತೋಷಕ್ಕಾಗುವ ಸಂಗತಿ: ಈ ಪರಿಣಿತಿ-ತರಗತಿಯ, ಉದ್ಯಮ-ಮಟ್ಟದ ಬಹುಮತ ಸಾಧನಗಳು ಬಹುಶಃ ಸಂಪೂರ್ಣ ಉಚಿತವಾಗಿವೆ!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.kn.png)
+![Intro Programming](../../../../translated_images/kn/webdev101-programming.d6e3f98e61ac4bff.png)
 > ಟೊಮೊಮಿ ಇಮುರಾ ಅವರ ಸ್ಕೆಚ್ ನೋಟ್ [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![ローカルストレージペイン](../../../../translated_images/localstorage.472f8147b6a3f8d1.ja.png)
+![ローカルストレージペイン](../../../../translated_images/ja/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **セキュリティ上の考慮事項**: 実際のアプリケーションでは、LocalStorageにAPIキーを保存することはセキュリティリスクを伴います。JavaScriptがこのデータにアクセスできるためです。学習目的ではこの方法で問題ありませんが、実際のアプリケーションでは機密資格情報を安全なサーバー側ストレージに保存する必要があります。
 

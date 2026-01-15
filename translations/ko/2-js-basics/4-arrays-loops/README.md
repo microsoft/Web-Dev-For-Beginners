@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 기본: 배열과 반복문
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ko.png)
+![JavaScript Basics - Arrays](../../../../translated_images/ko/webdev101-js-arrays.439d7528b8a29455.png)
 > 스케치노트 작성자 [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![マルチページアプリケーションの更新ワークフロー](../../../../translated_images/mpa.7f7375a1a2d4aa77.ja.png)
+![マルチページアプリケーションの更新ワークフロー](../../../../translated_images/ja/mpa.7f7375a1a2d4aa77.png)
 
 **このアプローチがぎこちなく感じられた理由:**
 - クリックするたびにページ全体を再構築する必要があった
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![シングルページアプリケーションの更新ワークフロー](../../../../translated_images/spa.268ec73b41f992c2.ja.png)
+![シングルページアプリケーションの更新ワークフロー](../../../../translated_images/ja/spa.268ec73b41f992c2.png)
 
 **SPAがより快適に感じられる理由:**
 - 実際に変更された部分だけが更新される（賢いですよね？）
@@ -510,7 +510,7 @@ if (data.error) {
 
 無効なアカウントでテストすると、ページ上に役立つエラーメッセージが表示されるようになります！
 
-![ログイン時に表示されるエラーメッセージのスクリーンショット](../../../../translated_images/login-error.416fe019b36a6327.ja.png)
+![ログイン時に表示されるエラーメッセージのスクリーンショット](../../../../translated_images/ja/login-error.416fe019b36a6327.png)
 
 #### ステップ4: アクセシビリティを考慮する
 
@@ -904,7 +904,7 @@ Agentモードを使用して以下のチャレンジを完了してください
 
 以下は、スタイリング後のダッシュボードの例のスクリーンショットです:
 
-![スタイリング後のダッシュボードの例のスクリーンショット](../../../../translated_images/screen2.123c82a831a1d14a.ja.png)
+![スタイリング後のダッシュボードの例のスクリーンショット](../../../../translated_images/ja/screen2.123c82a831a1d14a.png)
 
 これを完全に再現する必要はありません。インスピレーションとして使用し、自分のスタイルで仕上げてください！
 

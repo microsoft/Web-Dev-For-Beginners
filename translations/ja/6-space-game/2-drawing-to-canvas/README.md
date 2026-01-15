@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![キャンバスのグリッド](../../../../translated_images/canvas_grid.5f209da785ded492.ja.png)
+![キャンバスのグリッド](../../../../translated_images/ja/canvas_grid.5f209da785ded492.png)
 > 画像提供: [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 キャンバス要素に描画するには、キャンバスグラフィックの基礎を形成する同じ3ステップのプロセスに従います。このプロセスを数回行うと、自然に身につきます。
@@ -329,11 +329,11 @@ Canvas要素を含むウェブページを作成します。黒い画面 `1024*7
 
 - ヒーローの船
 
-   ![ヒーローの船](../../../../translated_images/player.dd24c1afa8c71e9b.ja.png)
+   ![ヒーローの船](../../../../translated_images/ja/player.dd24c1afa8c71e9b.png)
 
 - 5×5のモンスター
 
-   ![モンスターの船](../../../../translated_images/enemyShip.5df2a822c16650c2.ja.png)
+   ![モンスターの船](../../../../translated_images/ja/enemyShip.5df2a822c16650c2.png)
 
 ### 開発を始めるための推奨ステップ
 
@@ -468,7 +468,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 完成した結果は以下のようになります:
 
-![黒い画面にヒーローと5*5のモンスター](../../../../translated_images/partI-solution.36c53b48c9ffae2a.ja.png)
+![黒い画面にヒーローと5*5のモンスター](../../../../translated_images/ja/partI-solution.36c53b48c9ffae2a.png)
 
 ## 解答
 

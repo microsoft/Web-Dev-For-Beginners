@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 기초: 메서드와 함수
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ko.png)
+![JavaScript Basics - Functions](../../../../translated_images/ko/webdev101-js-functions.be049c4726e94f8b.png)
 > 스케치노트 by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

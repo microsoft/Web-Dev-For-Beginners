@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 접근성 높은 웹페이지 만들기
 
-![접근성에 관한 모든 것](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ko.png)
+![접근성에 관한 모든 것](../../../../translated_images/ko/webdev101-a11y.8ef3025c858d897a.png)
 > 스케치노트 by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "일반적인 ARIA 사용 패턴"
 
 **정보 전달 이미지** - 중요한 정보를 전달함:  
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.ko.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/ko/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
   
 **장식용 이미지** - 정보 가치 없는 순수 시각 이미지:  
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.ko.png" alt="" role="presentation">
+<img src="../../../../translated_images/ko/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
   
 **기능적 이미지** - 버튼이나 컨트롤 역할:  
@@ -1066,7 +1066,7 @@ pie title "일반적인 ARIA 사용 패턴"
   
 **복잡한 이미지** - 차트, 다이어그램, 인포그래픽:  
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.ko.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/ko/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "일반적인 ARIA 사용 패턴"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.ko.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/ko/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
   

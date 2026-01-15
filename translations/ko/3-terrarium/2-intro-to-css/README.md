@@ -29,7 +29,7 @@ journey
       Responsive design: 5: Student
       Glass reflections: 5: Student
 ```
-![CSS 소개](../../../../translated_images/webdev101-css.3f7af5991bf53a20.ko.png)
+![CSS 소개](../../../../translated_images/ko/webdev101-css.3f7af5991bf53a20.png)
 > 스케치노트 작성자: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 기억하시나요, HTML 테라리움이 꽤 기본적으로 보였던 것을? CSS는 그 단순한 구조를 시각적으로 매력적으로 변신시키는 부분입니다.
@@ -202,7 +202,7 @@ body {
 
 브라우저 개발자 도구(F12)를 열고 요소 탭에서 `<h1>` 요소를 검사해 보세요. `body`로부터 폰트 패밀리를 상속받는 것을 확인할 수 있습니다:
 
-![상속된 폰트](../../../../translated_images/1.cc07a5cbe114ad1d.ko.png)
+![상속된 폰트](../../../../translated_images/ko/1.cc07a5cbe114ad1d.png)
 
 ✅ **실험 시간**: `<body>`에 `color`, `line-height`, 또는 `text-align` 같은 다른 상속 속성을 설정해 보세요. 제목과 다른 요소들은 어떻게 변하나요?
 
@@ -332,7 +332,7 @@ ID 선택자는 `#` 심볼을 쓰며 특정 `id` 속성을 가진 요소를 타�
 **각 식물의 HTML 구조는 다음과 같습니다:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.ko.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/ko/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 빛이 유리 표면에 반사되는 미묘한 하이라이트를 만듭니다. 이는 르네상스 화가 얀 반 에이크가 빛과 반사를 사용해 유리를 3차원처럼 보이게 한 방법과 비슷합니다. 목표는 다음과 같습니다:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.ko.png)
+![finished terrarium](../../../../translated_images/ko/terrarium-final.2f07047ffc597d0a.png)
 
 **당신의 도전:**
 - 유리 반사를 위한 미묘한 흰색 또는 밝은 색의 타원형 모양 만들기

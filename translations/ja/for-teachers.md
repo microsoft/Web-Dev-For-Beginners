@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle CloudはCommon Cartridgeのサポートが限定的です。上記のMoodleファイルを使用することを推奨します。このファイルはCanvasにもアップロード可能です。
   - インポート後、モジュール、締切日、クイズ設定を学期スケジュールに合わせて確認してください。
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ja.png)
+![Moodle](../../translated_images/ja/moodle.94eb93d714a50cb2.png)
 > Moodle教室でのカリキュラム
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ja.png)
+![Canvas](../../translated_images/ja/canvas.fbd605ff8e5b8aff.png)
 > Canvasでのカリキュラム
 
 ### リポジトリを直接使用する場合（Classroomを使用しない場合）

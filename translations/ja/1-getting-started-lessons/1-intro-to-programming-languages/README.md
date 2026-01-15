@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 今日は、現代のウェブ開発を可能にするだけでなく、夢中にさせる素晴らしいツールを探求します。NetflixやSpotify、そしてお気に入りのインディーアプリスタジオの開発者が毎日使っているエディター、ブラウザ、ワークフローについて話します。そして、これがあなたを踊りたくさせる部分です：これらのプロ仕様の業界標準ツールのほとんどが完全に無料なんです！
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.ja.png)
+![Intro Programming](../../../../translated_images/ja/webdev101-programming.d6e3f98e61ac4bff.png)
 > スケッチノート提供：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಒಂದು ಸಣ್ಣ ಡ್ರಾಗ್ ಮತ್ತು ಡ್ರೋಪ್ ಕೋಡ್-ಪ್ರಾರ್ಥನೆ. ಸ್ವಲ್ಪ HTML, JS ಮತ್ತು CSS ಜೊತೆಗೆ, ನೀವು ಒಂದು ವೆಬ್ ಇಂಟರ್ಫೇಸ್ ನಿರ್ಮಿಸಿ, ಅಂದ Saj​​​​​​​​ ದಿ ಕೊಟ್ಟು, ಮತ್ತು ಒಂದು ಇಂಟರೆಕ್ಷನ್ ಸೇರಿಸಬಹುದು.
 
-![my terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.kn.png)
+![my terrarium](../../../../translated_images/kn/screenshot_gray.0c796099a1f9f25e.png)
 
 ## ಕ್ರೆಡಿಟ್ಸ್
 

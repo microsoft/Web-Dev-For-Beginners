@@ -72,13 +72,13 @@ Azure AI Foundry Discord 커뮤니티에 참여하세요.
 
 시작하려면 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 방문!
 
-![Background](../../translated_images/background.148a8d43afde5730.ko.png)
+![Background](../../translated_images/ko/background.148a8d43afde5730.png)
 
 - 기본부터 RAG까지 다루는 강의.
 - GenAI와 동반 앱을 이용해 역사적 인물과 상호작용하기.
 - 재미있고 몰입도 높은 스토리텔링, 시간 여행을 체험하세요!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.ko.png)
+![character](../../translated_images/ko/character.5c0dd8e067ffd693.png)
 
 각 강의에는 주제 학습을 돕는 과제, 지식 점검, 챌린지가 포함되어 있습니다:
 - 프롬프트 작성 및 프롬프트 엔지니어링
@@ -115,7 +115,7 @@ Azure AI Foundry Discord 커뮤니티에 참여하세요.
 
 생성한 저장소 복사본에서 **Code** 버튼을 클릭한 후 **Open with Codespaces**를 선택하세요. 새로운 Codespace가 생성되어 바로 작업할 수 있습니다.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ko.png)
+![Codespace](../../translated_images/ko/createcodespace.0238bbf4d7a8d955.png)
 
 #### 로컬 컴퓨터에서 커리큘럼 실행
 

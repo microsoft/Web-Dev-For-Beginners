@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript pagrindai: sprendimų priėmimas
 
-![JavaScript pagrindai - sprendimų priėmimas](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.lt.png)
+![JavaScript pagrindai - sprendimų priėmimas](../../../../translated_images/lt/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > Sketchnote autoriaus [Tomomi Imura](https://twitter.com/girlie_mac)
 

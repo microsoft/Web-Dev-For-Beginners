@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: 저장된 데이터 삭제
     ClearStorage --> FirstTime: 설정으로 돌아가기
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.ko.png)
+![Local storage pane](../../../../translated_images/ko/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **보안 고려사항**: 실제 애플리케이션에서는 로컬 스토리지에 API 키를 저장하는 것이 위험할 수 있습니다. JavaScript가 이 데이터를 접근할 수 있기 때문입니다. 학습 목적에는 적합하지만 실제 앱은 민감한 자격 증명을 서버 측 안전 저장소에 보관해야 합니다.
 

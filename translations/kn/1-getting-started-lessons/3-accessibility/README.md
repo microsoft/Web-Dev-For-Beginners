@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ಪ್ರವೇಶಿಸಲು ಅನುವುಮಾಡಿದ ವೆಬ್‌ಪೇಜ್‌ಗಳ ಸೃಷ್ಟಿ
 
-![ಎಲ್ಲಾ ಪ್ರವೇಶಾಸಾಧ್ಯತೆಯ ಬಗ್ಗೆ](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.kn.png)
+![ಎಲ್ಲಾ ಪ್ರವೇಶಾಸಾಧ್ಯತೆಯ ಬಗ್ಗೆ](../../../../translated_images/kn/webdev101-a11y.8ef3025c858d897a.png)
 > ಸ್ಕೆಚ್ನೋಟ್ [ಟೊಮೊಮಿ ಇಮುರಾ](https://twitter.com/girlie_mac) ಅವರಿಂದ
 
 ```mermaid
@@ -1051,12 +1051,12 @@ pie title "ಸಾಮಾನ್ಯ ARIA ಬಳಕೆ ಮಾದರಿಗಳು"
 
 **ಜ್ಞಾನಾರ್ಜಕ ಚಿತ್ರಗಳು** - ಮಹತ್ವದ ಮಾಹಿತಿಯನ್ನು ಪೂರೈಸುವವು:  
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.kn.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/kn/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
   
 **ಶೈಲಿಯಾದ ಚಿತ್ರಗಳು** - ಸಂಪೂರ್ಣ ದೃಶ್ಯ, ಮಾಹಿತಿ ಇಲ್ಲದವು:  
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.kn.png" alt="" role="presentation">
+<img src="../../../../translated_images/kn/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
   
 **ಕಾರ್ಯಕ್ಷಮ ಚಿತ್ರಗಳು** - ಬಟನ್‌ಗಳು ಅಥವಾ ನಿಯಂತ್ರಣಗಳಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸುವವು:  
@@ -1068,7 +1068,7 @@ pie title "ಸಾಮಾನ್ಯ ARIA ಬಳಕೆ ಮಾದರಿಗಳು"
   
 **ಸಂಕೀರ್ಣ ಚಿತ್ರಗಳು** - ಚಾರ್ಟ್‌ಗಳು, ಚಿತ್ರರೇಖೆಗಳು, ಮಾಹಿತಿ ಗ್ರಾಫ್‌ಗಳು:  
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.kn.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/kn/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1108,7 +1108,7 @@ pie title "ಸಾಮಾನ್ಯ ARIA ಬಳಕೆ ಮಾದರಿಗಳು"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.kn.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/kn/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
   

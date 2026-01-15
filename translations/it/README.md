@@ -56,13 +56,13 @@ Non perdere il nostro nuovo curriculum su AI Generativa!
 
 Visita [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) per iniziare!
 
-![Background](../../translated_images/background.148a8d43afde5730.it.png)
+![Background](../../translated_images/it/background.148a8d43afde5730.png)
 
 - Lezioni che coprono tutto, dalle basi a RAG.
 - Interagisci con personaggi storici usando GenAI e la nostra app companion.
 - Narrazione divertente e coinvolgente, faremo viaggi nel tempo!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.it.png)
+![character](../../translated_images/it/character.5c0dd8e067ffd693.png)
 
 Ogni lezione include un compito da completare, un controllo della conoscenza e una sfida per guidarti nell’apprendimento di argomenti come:
 - Prompt e ingegneria del prompt
@@ -96,7 +96,7 @@ Segui questi passaggi:
 
 Nella tua copia del repository creata, clicca il pulsante **Code** e seleziona **Open with Codespaces**. Questo creerà un nuovo Codespace per lavorare.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.it.png)
+![Codespace](../../translated_images/it/createcodespace.0238bbf4d7a8d955.png)
 
 #### Eseguire il curriculum localmente sul tuo computer
 
