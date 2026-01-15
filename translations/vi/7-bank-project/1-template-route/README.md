@@ -652,7 +652,7 @@ sequenceDiagram
 
 Sử dụng `history.pushState` tạo các mục mới trong lịch sử điều hướng của trình duyệt. Bạn có thể kiểm tra điều đó bằng cách giữ *nút quay lại* của trình duyệt, nó sẽ hiển thị như sau:
 
-![Ảnh chụp màn hình lịch sử điều hướng](../../../../translated_images/history.7fdabbafa521e064.vi.png)
+![Ảnh chụp màn hình lịch sử điều hướng](../../../../translated_images/vi/history.7fdabbafa521e064.png)
 
 Nếu bạn thử nhấp vào nút quay lại vài lần, bạn sẽ thấy rằng URL hiện tại thay đổi và lịch sử được cập nhật, nhưng cùng một mẫu vẫn được hiển thị.
 

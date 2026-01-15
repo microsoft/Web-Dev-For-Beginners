@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### کریڈٹس
 
-![ایک سبز براؤزر ایکسٹینشن](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ur.png)
+![ایک سبز براؤزر ایکسٹینشن](../../../translated_images/ur/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## کریڈٹس
 

@@ -295,7 +295,7 @@ Hãy cùng xem điều gì thực sự xảy ra khi ai đó nhấn nút gửi.
 2. Quan sát các thay đổi trong thanh địa chỉ của trình duyệt
 3. Lưu ý cách trang tải lại và dữ liệu xuất hiện trong URL
 
-![Ảnh chụp màn hình thay đổi URL của trình duyệt sau khi nhấn nút Đăng ký](../../../../translated_images/click-register.e89a30bf0d4bc9ca.vi.png)
+![Ảnh chụp màn hình thay đổi URL của trình duyệt sau khi nhấn nút Đăng ký](../../../../translated_images/vi/click-register.e89a30bf0d4bc9ca.png)
 
 ### So sánh phương thức HTTP
 
@@ -350,7 +350,7 @@ Hãy cấu hình biểu mẫu đăng ký của bạn để giao tiếp đúng c�
 2. **Nhấn** nút "Tạo tài khoản"
 3. **Quan sát** phản hồi của máy chủ trong trình duyệt của bạn
 
-![Một cửa sổ trình duyệt tại địa chỉ localhost:5000/api/accounts, hiển thị chuỗi JSON với dữ liệu người dùng](../../../../translated_images/form-post.61de4ca1b964d91a.vi.png)
+![Một cửa sổ trình duyệt tại địa chỉ localhost:5000/api/accounts, hiển thị chuỗi JSON với dữ liệu người dùng](../../../../translated_images/vi/form-post.61de4ca1b964d91a.png)
 
 **Những gì bạn nên thấy:**
 - **Trình duyệt chuyển hướng** đến URL điểm cuối API
@@ -615,7 +615,7 @@ async function register() {
 3. **Nhấp** vào "Tạo tài khoản"
 4. **Quan sát** các thông báo trên bảng điều khiển và phản hồi của người dùng
 
-![Ảnh chụp màn hình hiển thị thông báo nhật ký trong bảng điều khiển trình duyệt](../../../../translated_images/browser-console.efaf0b51aaaf6778.vi.png)
+![Ảnh chụp màn hình hiển thị thông báo nhật ký trong bảng điều khiển trình duyệt](../../../../translated_images/vi/browser-console.efaf0b51aaaf6778.png)
 
 **Những gì bạn sẽ thấy:**
 - **Trạng thái tải** xuất hiện trên nút gửi
@@ -790,7 +790,7 @@ Hãy nâng cao biểu mẫu đăng ký của bạn với xác thực mạnh mẽ
 3. **Thử** các ký tự đặc biệt trong trường tên người dùng
 4. **Nhập** số dư âm
 
-![Ảnh chụp màn hình hiển thị lỗi xác thực khi cố gắng gửi biểu mẫu](../../../../translated_images/validation-error.8bd23e98d416c22f.vi.png)
+![Ảnh chụp màn hình hiển thị lỗi xác thực khi cố gắng gửi biểu mẫu](../../../../translated_images/vi/validation-error.8bd23e98d416c22f.png)
 
 **Những gì bạn sẽ quan sát:**
 - **Trình duyệt hiển thị** các thông báo xác thực gốc
@@ -940,7 +940,7 @@ Hiển thị thông báo lỗi trong HTML nếu người dùng đã tồn tại.
 
 Dưới đây là một ví dụ về giao diện trang đăng nhập cuối cùng sau khi thêm một chút kiểu dáng:
 
-![Ảnh chụp màn hình của trang đăng nhập sau khi thêm kiểu dáng CSS](../../../../translated_images/result.96ef01f607bf856a.vi.png)
+![Ảnh chụp màn hình của trang đăng nhập sau khi thêm kiểu dáng CSS](../../../../translated_images/vi/result.96ef01f607bf856a.png)
 
 ## Câu hỏi sau bài giảng
 

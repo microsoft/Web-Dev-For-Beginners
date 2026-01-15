@@ -25,7 +25,7 @@ journey
       测试功能: 5: Student
       完成生态箱: 5: Student
 ```
-![DOM 和闭包](../../../../translated_images/webdev101-js.10280393044d7eaa.zh.png)
+![DOM 和闭包](../../../../translated_images/zh/webdev101-js.10280393044d7eaa.png)
 > 草图笔记作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 欢迎来到网页开发中最具趣味性的部分之一——让页面变得互动！文档对象模型（DOM）就像是你的 HTML 和 JavaScript 之间的一座桥梁，今天我们将用它让你的生态瓶变得栩栩如生。当 Tim Berners-Lee 创建第一款网页浏览器时，他设想了一个可以动态交互的网页世界——而DOM让这个设想成为可能。
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM 树结构表示](../../../../translated_images/dom-tree.7daf0e763cbbba92.zh.png)
+![DOM 树结构表示](../../../../translated_images/zh/dom-tree.7daf0e763cbbba92.png)
 
 > DOM 及其关联 HTML 标记的表示。来自 [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **理解闭包**：闭包是 JavaScript 中的重要话题，许多开发者多年使用后才完全掌握所有理论细节。今天我们专注于实用应用——你将看到闭包在实现交互功能时自然而然出现。理解将随着你观察它们解决实际问题而逐步加深。
 
-![DOM 树结构表示](../../../../translated_images/dom-tree.7daf0e763cbbba92.zh.png)
+![DOM 树结构表示](../../../../translated_images/zh/dom-tree.7daf0e763cbbba92.png)
 
 > DOM 及其关联 HTML 标记的表示。来自 [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ function stopElementDrag() {
 - **跨设备支持**：兼容桌面和移动端
 - **性能意识**：无内存泄漏或冗余计算
 
-![完成的花园](../../../../translated_images/terrarium-final.0920f16e87c13a84.zh.png)
+![完成的花园](../../../../translated_images/zh/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

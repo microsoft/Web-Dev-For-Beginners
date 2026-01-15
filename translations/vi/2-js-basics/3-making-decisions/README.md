@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Cơ bản về JavaScript: Ra quyết định
 
-![Cơ bản về JavaScript - Ra quyết định](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.vi.png)
+![Cơ bản về JavaScript - Ra quyết định](../../../../translated_images/vi/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 

@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud میں Common Cartridge کی محدود حمایت ہے۔ اوپر دی گئی Moodle فائل کو ترجیح دیں، جسے Canvas میں بھی اپلوڈ کیا جا سکتا ہے۔
   - درآمد کے بعد، ماڈیولز، مقررہ تاریخیں، اور کوئز کی ترتیبات کو اپنے ٹرم شیڈول کے مطابق دیکھیں۔
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ur.png)
+![Moodle](../../translated_images/ur/moodle.94eb93d714a50cb2.png)
 > Moodle کلاس روم میں نصاب
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ur.png)
+![Canvas](../../translated_images/ur/canvas.fbd605ff8e5b8aff.png)
 > Canvas میں نصاب
 
 ### ریپو کو براہ راست استعمال کریں (بغیر Classroom کے)

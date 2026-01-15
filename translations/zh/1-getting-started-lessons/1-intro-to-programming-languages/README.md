@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 今天，我们将探索那些让现代网页开发不仅可行而且极其上瘾的令人难以置信的工具。我说的是 Netflix、Spotify 和你最喜欢的独立应用工作室每天使用的同样的编辑器、浏览器和工作流程。最棒的是，这些专业级、行业标准的工具大多数是完全免费的！
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.zh.png)
+![Intro Programming](../../../../translated_images/zh/webdev101-programming.d6e3f98e61ac4bff.png)
 > 速写笔记由 [Tomomi Imura](https://twitter.com/girlie_mac) 制作
 
 ```mermaid

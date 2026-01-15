@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Sử dụng API tín hiệu CO2 của tmrow để theo dõi mức tiêu thụ điện năng, xây dựng một tiện ích mở rộng trình duyệt nhằm nhắc nhở bạn về mức độ tiêu thụ điện năng trong khu vực của bạn ngay trong trình duyệt. Việc sử dụng tiện ích này sẽ giúp bạn đưa ra quyết định dựa trên thông tin đó về các hoạt động của mình.
 
-![Ảnh chụp màn hình tiện ích mở rộng](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.vi.png)
+![Ảnh chụp màn hình tiện ích mở rộng](../../../../../translated_images/vi/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## Bắt đầu
 
@@ -31,7 +31,7 @@ npm run build
 
 Để cài đặt trên Edge, sử dụng menu 'ba chấm' ở góc trên bên phải của trình duyệt để tìm bảng tiện ích mở rộng. Từ đó, chọn 'Load unpacked' để tải một tiện ích mở rộng mới. Khi được nhắc, mở thư mục 'dist' và tiện ích mở rộng sẽ được tải. Để sử dụng, bạn cần một khóa API của CO2 Signal ([nhận qua email tại đây](https://www.co2signal.com/) - nhập email của bạn vào hộp trên trang này) và [mã khu vực của bạn](http://api.electricitymap.org/v3/zones) từ [Electricity Map](https://www.electricitymap.org/map) (ví dụ: ở Boston, tôi sử dụng 'US-NEISO').
 
-![Cài đặt](../../../../../translated_images/install-on-edge.78634f02842c4828.vi.png)
+![Cài đặt](../../../../../translated_images/vi/install-on-edge.78634f02842c4828.png)
 
 Sau khi nhập khóa API và mã khu vực vào giao diện tiện ích mở rộng, dấu chấm màu trong thanh tiện ích mở rộng của trình duyệt sẽ thay đổi để phản ánh mức tiêu thụ năng lượng của khu vực bạn và cung cấp cho bạn một chỉ báo về các hoạt động tiêu thụ năng lượng phù hợp với hiệu suất của bạn. Ý tưởng về hệ thống 'dấu chấm' này được lấy cảm hứng từ tiện ích mở rộng [Energy Lollipop](https://energylollipop.com/) dành cho lượng khí thải ở California.
 

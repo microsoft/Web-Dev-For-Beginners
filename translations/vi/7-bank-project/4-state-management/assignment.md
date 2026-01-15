@@ -112,7 +112,7 @@ Tham khảo [tài liệu API máy chủ](../api/README.md) để biết:
 **Kết quả mong đợi:**
 Sau khi hoàn thành bài tập này, ứng dụng ngân hàng của bạn sẽ có tính năng "Thêm giao dịch" hoạt động đầy đủ, trông chuyên nghiệp và hoạt động mượt mà:
 
-![Ảnh chụp màn hình hiển thị ví dụ về hộp thoại "Thêm giao dịch"](../../../../translated_images/dialog.93bba104afeb79f1.vi.png)
+![Ảnh chụp màn hình hiển thị ví dụ về hộp thoại "Thêm giao dịch"](../../../../translated_images/vi/dialog.93bba104afeb79f1.png)
 
 ## Kiểm tra triển khai của bạn
 

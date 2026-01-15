@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tạo Trang Web Dễ Tiếp Cận
 
-![Tất cả về khả năng tiếp cận](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.vi.png)
+![Tất cả về khả năng tiếp cận](../../../../translated_images/vi/webdev101-a11y.8ef3025c858d897a.png)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1045,12 +1045,12 @@ Mỗi hình ảnh trên trang web của bạn đều có một mục đích. Hi�
 
 **Hình ảnh thông tin** - truyền tải thông tin quan trọng:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.vi.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/vi/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Hình ảnh trang trí** - chỉ mang tính trực quan, không có giá trị thông tin:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.vi.png" alt="" role="presentation">
+<img src="../../../../translated_images/vi/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.png" alt="" role="presentation">
 ```
 
 **Hình ảnh chức năng** - đóng vai trò như nút hoặc điều khiển:
@@ -1062,7 +1062,7 @@ Mỗi hình ảnh trên trang web của bạn đều có một mục đích. Hi�
 
 **Hình ảnh phức tạp** - biểu đồ, sơ đồ, đồ họa thông tin:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.vi.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/vi/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1102,7 +1102,7 @@ Mỗi hình ảnh trên trang web của bạn đều có một mục đích. Hi�
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.vi.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/vi/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

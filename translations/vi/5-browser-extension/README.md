@@ -23,7 +23,7 @@ Tiện ích này có thể được người dùng gọi bất kỳ lúc nào sa
 
 ### Ghi nhận
 
-![một tiện ích mở rộng trình duyệt màu xanh lá cây](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.vi.png)
+![một tiện ích mở rộng trình duyệt màu xanh lá cây](../../../translated_images/vi/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## Ghi nhận
 

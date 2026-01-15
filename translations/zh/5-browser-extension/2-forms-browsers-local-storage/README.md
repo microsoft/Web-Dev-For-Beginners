@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: 删除保存的数据
     ClearStorage --> FirstTime: 返回设置
 ```
-![本地存储面板](../../../../translated_images/localstorage.472f8147b6a3f8d1.zh.png)
+![本地存储面板](../../../../translated_images/zh/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **安全注意事项**：在生产环境中，将 API 密钥存储在 LocalStorage 存在安全风险，因为 JavaScript 代码可以访问这些数据。学习用途这样做可以，但实际应用应使用安全的服务器端存储敏感凭证。
 
