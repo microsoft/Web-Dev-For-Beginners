@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Z uporabo API-ja CO2 Signal od tmrow za sledenje porabi električne energije ustvarite razširitev za brskalnik, ki vam omogoča, da imate neposreden opomnik o porabi električne energije v vaši regiji. Uporaba te ad hoc razširitve vam bo pomagala sprejemati odločitve o vaših dejavnostih na podlagi teh informacij.
 
-![posnetek zaslona razširitve](../../../../../translated_images/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.sl.png)
+![posnetek zaslona razširitve](../../../../../translated_images/sl/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.png)
 
 ## Začetek
 
@@ -31,7 +31,7 @@ npm run build
 
 Za namestitev v Edge uporabite meni 'tri pike' v zgornjem desnem kotu brskalnika, da odprete ploščo Razširitve. Tam izberite 'Naloži nepakirano', da naložite novo razširitev. Ko se prikaže poziv, odprite mapo 'dist' in razširitev bo naložena. Za uporabo boste potrebovali API ključ za CO2 Signal API ([pridobite ga tukaj po e-pošti](https://www.co2signal.com/) - vnesite svoj e-poštni naslov v polje na tej strani) ter [kodo za vašo regijo](http://api.electricitymap.org/v3/zones), ki ustreza [Električnemu zemljevidu](https://www.electricitymap.org/map) (na primer v Bostonu uporabljam 'US-NEISO').
 
-![namestitev](../../../../../translated_images/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.sl.png)
+![namestitev](../../../../../translated_images/sl/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.png)
 
 Ko vnesete API ključ in regijo v vmesnik razširitve, bi se morala barvna pika v vrstici razširitev brskalnika spremeniti, da odraža porabo energije v vaši regiji, ter vam dati indikator o dejavnostih z visoko porabo energije, ki bi bile primerne za vas. Koncept za ta sistem "pik" sem dobil od [razširitve Energy Lollipop](https://energylollipop.com/) za emisije v Kaliforniji.
 

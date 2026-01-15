@@ -29,7 +29,7 @@ journey
       Responsiv design: 5: Student
       Glasreflektioner: 5: Student
 ```
-![Introduktion till CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.sv.png)
+![Introduktion till CSS](../../../../translated_images/sv/webdev101-css.3f7af5991bf53a20.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Kommer du ihåg hur ditt HTML-terrarium såg ganska enkelt ut? CSS är där vi förvandlar den där enkla strukturen till något visuellt tilltalande.
@@ -202,7 +202,7 @@ body {
 
 Öppna webbläsarens utvecklarverktyg (F12), navigera till Elements-fliken och inspektera ditt `<h1>`-element. Du kommer se att det ärver fontfamilj från body:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.sv.png)
+![inherited font](../../../../translated_images/sv/1.cc07a5cbe114ad1d.png)
 
 ✅ **Experimentera**: Testa att sätta andra arvbara egenskaper på `<body>` som `color`, `line-height` eller `text-align`. Vad händer med din rubrik och andra element?
 
@@ -332,7 +332,7 @@ I vårt terrarium behöver varje växt liknande styling men även individuell po
 **Här är HTML-strukturen för varje växt:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.sv.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/sv/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Redo att förstärka ditt terrarium med realistiska glasreflektioner? Denna tekn
 
 Du skapar subtila högdagrar som simulerar hur ljus reflekteras från glasytor. Detta liknar hur renässansmålare som Jan van Eyck använde ljus och reflektion för att få målat glas att se tredimensionellt ut. Så här ser målet ut:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.sv.png)
+![finished terrarium](../../../../translated_images/sv/terrarium-final.2f07047ffc597d0a.png)
 
 **Din uppgift:**
 - **Skapa** subtila vita eller ljusa ovala former för glasreflektioner

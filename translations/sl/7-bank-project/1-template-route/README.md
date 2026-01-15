@@ -644,7 +644,7 @@ sequenceDiagram
 
 Uporaba `history.pushState` ustvarja nove vnose v zgodovini brskalnika. To lahko preveriš tako, da pritisneš in držiš *gumb nazaj* v brskalniku, kjer boš videl nekaj takega:
 
-![Posnetek zaslona zgodovine navigacije](../../../../translated_images/history.7fdabbafa521e064.sl.png)
+![Posnetek zaslona zgodovine navigacije](../../../../translated_images/sl/history.7fdabbafa521e064.png)
 
 Če poskusiš nekajkrat klikniti gumb nazaj, boš videl, da se trenutni URL spreminja in da je zgodovina posodobljena, ampak ista predloga se še vedno prikazuje.
 

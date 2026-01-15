@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Ta bort sparad data
     ClearStorage --> FirstTime: Tillbaka till installation
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.sv.png)
+![Local storage pane](../../../../translated_images/sv/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **Säkerhetsaspekt:** I produktionsapplikationer innebär lagring av API-nycklar i LocalStorage säkerhetsrisker eftersom JavaScript kan komma åt dessa data. För lärande ändamål fungerar det bra, men riktiga applikationer bör använda säker serverlagring för känsliga uppgifter.
 

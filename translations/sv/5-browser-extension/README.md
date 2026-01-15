@@ -23,7 +23,7 @@ Detta tillägg kan användas ad hoc av en användare när en API-nyckel och regi
 
 ### Krediter
 
-![ett grönt webbläsartillägg](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sv.png)
+![ett grönt webbläsartillägg](../../../translated_images/sv/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## Krediter
 

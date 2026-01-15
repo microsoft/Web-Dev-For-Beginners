@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![mreža platna](../../../../translated_images/canvas_grid.5f209da785ded492.sl.png)
+![mreža platna](../../../../translated_images/sl/canvas_grid.5f209da785ded492.png)
 > Slika iz [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Za risanje na element platna boste sledili istemu tristožnemu postopku, ki tvori osnovo vse grafike na platnu. Ko to storite nekajkrat, postane druga narava:
@@ -323,11 +323,11 @@ Zgradili boste spletno stran z elementom Canvas. Prikazal bo črno ozadje veliko
 
 - Ladja junaka
 
-   ![Ladja junaka](../../../../translated_images/player.dd24c1afa8c71e9b.sl.png)
+   ![Ladja junaka](../../../../translated_images/sl/player.dd24c1afa8c71e9b.png)
 
 - 5×5 pošasti
 
-   ![Ladja pošasti](../../../../translated_images/enemyShip.5df2a822c16650c2.sl.png)
+   ![Ladja pošasti](../../../../translated_images/sl/enemyShip.5df2a822c16650c2.png)
 
 ### Priporočeni koraki za začetek razvoja
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Končni rezultat naj bo videti tako:
 
-![Črn zaslon s junakom in 5*5 pošasti](../../../../translated_images/partI-solution.36c53b48c9ffae2a.sl.png)
+![Črn zaslon s junakom in 5*5 pošasti](../../../../translated_images/sl/partI-solution.36c53b48c9ffae2a.png)
 
 ## Rešitev
 

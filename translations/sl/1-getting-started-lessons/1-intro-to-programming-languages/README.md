@@ -17,7 +17,7 @@ Poglej, popolnoma razumem, če se ti programiranje zdaj zdi strašljivo. Ko sem 
 
 Danes bomo raziskali neverjetna orodja, zaradi katerih sodobni spletni razvoj ni le mogoč, ampak tudi resnično zasvojen. Govorim o točno teh urejevalnikih, brskalnikih in potekih dela, ki jih razvijalci pri Netflixu, Spotifyju in tvoji najljubši indie aplikacijski študiii uporabljajo vsak dan. In tukaj je del, ki te bo spravil v veselo plesanje: večina teh profesionalnih, industrijsko standardnih orodij je popolnoma brezplačnih!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.sl.png)
+![Intro Programming](../../../../translated_images/sl/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Данас ћемо истражити невероватне алате који савремени веб развој чине не само могућим, већ и озбиљно заразним. Причам о управо тим иста којима програмирају у Netflix, Spotify и твојој омиљеној инди апликационој студији сваки дан. И ево дела који ће те натерати да заиграш од радости: већина ових професионалних, индустријских алата је у потпуности бесплатна!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.sr.png)
+![Intro Programming](../../../../translated_images/sr/webdev101-programming.d6e3f98e61ac4bff.png)
 > Скечнот од [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

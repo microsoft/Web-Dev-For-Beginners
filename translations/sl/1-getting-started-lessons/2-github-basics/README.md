@@ -17,7 +17,7 @@ Vem, da je na začetku morda precej, spomnim se, kako sem strmel v svojo prvo Gi
 
 To pot bomo prehodili skupaj, korak za korakom. Brez hitenja, brez pritiska – samo ti, jaz in nekaj res kul orodij, ki bodo postali tvoji novi najboljši prijatelji!
 
-![Uvod v GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.sl.png)
+![Uvod v GitHub](../../../../translated_images/sl/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ Najprej poišči repozitorij (ali **repo**) na GitHub, ki te zanima in v katereg
 
 ✅ Dober način za iskanje 'prijaznih za začetnike' repozitorijev je [iskanje po oznaki 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopiraj repo lokalno](../../../../translated_images/clone_repo.5085c48d666ead57.sl.png)
+![Kopiraj repo lokalno](../../../../translated_images/sl/clone_repo.5085c48d666ead57.png)
 
 Obstaja več načinov za kopiranje kode. Eden izmed načinov je "kloniranje" vsebine repozitorija, preko HTTPS, SSH ali z uporabo GitHub CLI (ukazne vrstice).
 

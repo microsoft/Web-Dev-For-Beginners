@@ -72,13 +72,13 @@ Ne zamudi našega novega kurikuluma o Generativni AI!
 
 Obišči [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) za začetek!
 
-![Background](../../translated_images/background.148a8d43afde5730.sl.png)
+![Background](../../translated_images/sl/background.148a8d43afde5730.png)
 
 - Lekcije obsegajo vse od osnov do RAG.
 - Komuniciraj z zgodovinskimi liki s pomočjo GenAI in naše spremljevalne aplikacije.
 - Zabavna in privlačna pripoved, potoval boš skozi čas!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.sl.png)
+![character](../../translated_images/sl/character.5c0dd8e067ffd693.png)
 
 
 Vsaka lekcija vključuje nalogo za dokončanje, preverjanje znanja in izziv, ki te vodi pri učenju tem, kot so:
@@ -115,7 +115,7 @@ Sledite tem korakom:
 
 V svoji kopiji tega repozitorija, ki ste jo ustvarili, kliknite na gumb **Code** in izberite **Open with Codespaces**. To bo ustvarilo nov Codespace za vaše delo.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.sl.png)
+![Codespace](../../translated_images/sl/createcodespace.0238bbf4d7a8d955.png)
 
 #### Izvajanje kurikuluma lokalno na računalniku
 

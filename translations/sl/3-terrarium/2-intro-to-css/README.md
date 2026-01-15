@@ -29,7 +29,7 @@ journey
       Prilagodljiva zasnova: 5: Student
       Odsevi na steklu: 5: Student
 ```
-![Uvod v CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.sl.png)
+![Uvod v CSS](../../../../translated_images/sl/webdev101-css.3f7af5991bf53a20.png)
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Se spomnite, kako je vaš HTML terrarij izgledal precej osnovno? CSS je tisto, kjer to preprosto strukturo spremenimo v nekaj vizualno privlačnega.
@@ -202,7 +202,7 @@ body {
 
 Odprite orodja za razvijalce v brskalniku (F12), pojdite na zavihek Elements in preverite `<h1>` element. Videli boste, da podeduje pisavo od `body`:
 
-![podedovana pisava](../../../../translated_images/1.cc07a5cbe114ad1d.sl.png)
+![podedovana pisava](../../../../translated_images/sl/1.cc07a5cbe114ad1d.png)
 
 ✅ **Čas za eksperiment**: Poskusite nastaviti druge dedljive lastnosti na `<body>`, kot so `color`, `line-height` ali `text-align`. Kaj se zgodi z vašim naslovom in drugimi elementi?
 
@@ -332,7 +332,7 @@ V našem terrariju vsaka rastlina potrebuje podoben slog, hkrati pa tudi individ
 **Tukaj je HTML struktura za posamezno rastlino:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.sl.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/sl/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Pripravljen, da izboljšaš svoj terarij z realističnimi steklenimi odsevi? Ta 
 
 Ustvaril boš subtilne poudarke, ki simulirajo, kako se svetloba odbija od steklenih površin. Ta pristop je podoben, kot so renesančni slikarji, kot je Jan van Eyck, uporabljali svetlobo in odseve, da so naslikano steklo naredili tridimenzionalno. Tukaj je tisto, kar ciljaš:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.sl.png)
+![finished terrarium](../../../../translated_images/sl/terrarium-final.2f07047ffc597d0a.png)
 
 **Tvoj izziv:**
 - **Ustvari** subtilne bele ali svetle ovalne oblike za steklene odseve

@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![mрежа canvas-а](../../../../translated_images/canvas_grid.5f209da785ded492.sr.png)
+![mрежа canvas-а](../../../../translated_images/sr/canvas_grid.5f209da785ded492.png)
 > Слика са [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Да бисте цртали на canvas елементу, пратите исти тростепени поступак који чини основу целе canvas графике. Када то урадите неколико пута, постаје друга природа:
@@ -323,11 +323,11 @@ flowchart TD
 
 - Херојски брод
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.sr.png)
+   ![Hero ship](../../../../translated_images/sr/player.dd24c1afa8c71e9b.png)
 
 - 5*5 чудовишта
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.sr.png)
+   ![Monster ship](../../../../translated_images/sr/enemyShip.5df2a822c16650c2.png)
 
 ### Препоручени кораци за почетак развоја
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Потпун резултат треба да изгледа овако:
 
-![Црни екран са херојем и 5*5 чудовишта](../../../../translated_images/partI-solution.36c53b48c9ffae2a.sr.png)
+![Црни екран са херојем и 5*5 чудовишта](../../../../translated_images/sr/partI-solution.36c53b48c9ffae2a.png)
 
 ## Решење
 

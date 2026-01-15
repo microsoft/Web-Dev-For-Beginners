@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Vrne popolno HTML stran
     Browser->>User: Prikaže novo stran (utrip/osvežitev)
 ```
-![Delovni proces posodobitve v večstranični aplikaciji](../../../../translated_images/mpa.7f7375a1a2d4aa77.sl.png)
+![Delovni proces posodobitve v večstranični aplikaciji](../../../../translated_images/sl/mpa.7f7375a1a2d4aa77.png)
 
 **Zakaj je ta pristop deloval nerodno:**
 - Vsak klik je pomenil, da je bilo treba znova zgraditi celotno stran od začetka
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Posodobi specifične elemente strani
     Browser->>User: Prikaže posodobljeno vsebino (brez osvežitve)
 ```
-![Delovni proces posodobitve v enostranični aplikaciji](../../../../translated_images/spa.268ec73b41f992c2.sl.png)
+![Delovni proces posodobitve v enostranični aplikaciji](../../../../translated_images/sl/spa.268ec73b41f992c2.png)
 
 **Zakaj so SPA tako prijetne:**
 - Posodobijo se samo deli, ki so se dejansko spremenili (pametno, kajne?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Zdaj, ko testirate z neveljavnim računom, boste na strani videli uporabno sporočilo o napaki!
 
-![Posnetek zaslona, ki prikazuje sporočilo o napaki pri prijavi](../../../../translated_images/login-error.416fe019b36a6327.sl.png)
+![Posnetek zaslona, ki prikazuje sporočilo o napaki pri prijavi](../../../../translated_images/sl/login-error.416fe019b36a6327.png)
 
 #### Korak 4: Vključevanje dostopnosti
 
@@ -950,7 +950,7 @@ Pripravljeni, da svojo bančno aplikacijo popeljete na naslednjo raven? Poskrbim
 
 Tako bi lahko izgledala dodelana nadzorna plošča:
 
-![Posnetek zaslona primernega rezultata nadzorne plošče po stiliranju](../../../../translated_images/screen2.123c82a831a1d14a.sl.png)
+![Posnetek zaslona primernega rezultata nadzorne plošče po stiliranju](../../../../translated_images/sl/screen2.123c82a831a1d14a.png)
 
 Ne čutite obveznosti, da morate natančno ujemati ta izgled – uporabite ga kot navdih in naredite svojo različico!
 

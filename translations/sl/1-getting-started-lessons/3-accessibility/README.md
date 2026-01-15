@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Ustvarjanje dostopnih spletnih strani
 
-![Vse o dostopnosti](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.sl.png)
+![Vse o dostopnosti](../../../../translated_images/sl/webdev101-a11y.8ef3025c858d897a.png)
 > Sketchnote avtorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Vsaka slika na vaši spletni strani služi namenu. Razumevanje tega namena vam p
 
 **Informativne slike** - posredujejo pomembne informacije:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.sl.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/sl/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Dekorativne slike** - samo vizualne, brez informativne vrednosti:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.sl.png" alt="" role="presentation">
+<img src="../../../../translated_images/sl/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Funkcionalne slike** - služijo kot gumbi ali kontrolniki:
@@ -1066,7 +1066,7 @@ Vsaka slika na vaši spletni strani služi namenu. Razumevanje tega namena vam p
 
 **Kompleksne slike** - grafikoni, diagrami, infografike:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.sl.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/sl/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Vsaka slika na vaši spletni strani služi namenu. Razumevanje tega namena vam p
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.sl.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/sl/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 Посетите [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) да започнете!
 
-![Позадина](../../translated_images/background.148a8d43afde5730.sr.png)
+![Позадина](../../translated_images/sr/background.148a8d43afde5730.png)
 
 - Лекције обухватају све од основа до RAG.
 - Комуницирајте са историјским ликовима користећи GenAI и нашу придружену апликацију.
 - Забавна и занимаљива приповест, путоваћете кроз време!
 
-![лик](../../translated_images/character.5c0dd8e067ffd693.sr.png)
+![лик](../../translated_images/sr/character.5c0dd8e067ffd693.png)
 
 
 Свака лекција укључује задатак за завршетак, проверу знања и изазов који вас води у учењу тема као што су:
@@ -114,7 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 У својој копији овог репозиторијума коју сте направили, кликните на дугме **Code** и изаберите **Open with Codespaces**. Ово ће креирати нови Codespace у којем ћете радити.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.sr.png)
+![Codespace](../../translated_images/sr/createcodespace.0238bbf4d7a8d955.png)
 
 #### Покретање наставног плана локално на вашем рачунару
 

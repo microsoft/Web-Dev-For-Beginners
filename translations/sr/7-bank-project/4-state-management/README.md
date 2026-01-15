@@ -187,7 +187,7 @@ mindmap
 
 Уместо да трчимо у круг, креираћемо **централизовани систем управљања стањем**. Замислите да имамо једну заиста организовану особу која контролише све битне ствари:
 
-![Шема која приказује ток података између HTML-а, корисничких акција и стања](../../../../translated_images/data-flow.fa2354e0908fecc8.sr.png)
+![Шема која приказује ток података између HTML-а, корисничких акција и стања](../../../../translated_images/sr/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 Ево примера резултата након завршетка задатка:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.sr.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/sr/dialog.93bba104afeb79f1.png)
 
 ---
 
