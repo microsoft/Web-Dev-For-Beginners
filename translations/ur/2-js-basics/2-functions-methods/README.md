@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # جاوا اسکرپٹ کی بنیادی باتیں: طریقے اور فنکشنز
 
-![جاوا اسکرپٹ کی بنیادی باتیں - فنکشنز](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ur.png)
+![جاوا اسکرپٹ کی بنیادی باتیں - فنکشنز](../../../../translated_images/ur/webdev101-js-functions.be049c4726e94f8b.png)
 > اسکیچ نوٹ از [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

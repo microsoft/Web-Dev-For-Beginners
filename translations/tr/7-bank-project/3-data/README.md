@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Çoklu sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/mpa.7f7375a1a2d4aa77.tr.png)
+![Çoklu sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/tr/mpa.7f7375a1a2d4aa77.png)
 
 **Bu yaklaşım neden hantal hissettiriyordu:**
 - Her tıklama tüm sayfanın baştan sona yeniden inşa edilmesi anlamına geliyordu
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Tek sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/spa.268ec73b41f992c2.tr.png)
+![Tek sayfa uygulamasında güncelleme iş akışı](../../../../translated_images/tr/spa.268ec73b41f992c2.png)
 
 **SPA'lar neden daha iyi hissettiriyor:**
 - Sadece gerçekten değişen bölümler güncellenir (akıllıca, değil mi?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Şimdi geçersiz bir hesapla test ettiğinizde, sayfada yardımcı bir hata mesajı göreceksiniz!
 
-![Giriş sırasında hata mesajını gösteren ekran görüntüsü](../../../../translated_images/login-error.416fe019b36a6327.tr.png)
+![Giriş sırasında hata mesajını gösteren ekran görüntüsü](../../../../translated_images/tr/login-error.416fe019b36a6327.png)
 
 #### Adım 4: Erişilebilirlik ile Kapsayıcı Olmak
 
@@ -961,7 +961,7 @@ Bankacılık uygulamanızı bir üst seviyeye taşımaya hazır mısınız? İş
 
 İşte cilalanmış bir pano böyle görünebilir:
 
-![Panonun stil eklenmiş örnek sonucu ekran görüntüsü](../../../../translated_images/screen2.123c82a831a1d14a.tr.png)
+![Panonun stil eklenmiş örnek sonucu ekran görüntüsü](../../../../translated_images/tr/screen2.123c82a831a1d14a.png)
 
 Bunu tam olarak eşleştirmek zorunda hissetmeyin - ilham kaynağı olarak kullanın ve kendi tarzınızı yaratın!
 

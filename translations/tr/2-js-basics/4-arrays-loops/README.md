@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Temelleri: Diziler ve Döngüler
 
-![JavaScript Temelleri - Diziler](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.tr.png)
+![JavaScript Temelleri - Diziler](../../../../translated_images/tr/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

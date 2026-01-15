@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```  
-![the canvas's grid](../../../../translated_images/canvas_grid.5f209da785ded492.tw.png)  
+![the canvas's grid](../../../../translated_images/tw/canvas_grid.5f209da785ded492.png)  
 > 圖片來源：[MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 在 canvas 元素上繪圖，你需要遵循所有 canvas 圖形基礎的三個步驟。多練習幾次後，這將成為你的第二天性：
@@ -323,11 +323,11 @@ flowchart TD
 
 - 英雄飛船  
 
-  ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.tw.png)
+  ![Hero ship](../../../../translated_images/tw/player.dd24c1afa8c71e9b.png)
 
 - 5×5 的怪物陣列  
 
-  ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.tw.png)
+  ![Monster ship](../../../../translated_images/tw/enemyShip.5df2a822c16650c2.png)
 
 ### 推薦的開發步驟
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 完成的結果應如下圖所示：
 
-![黑色螢幕，有一名英雄與 5*5 怪物](../../../../translated_images/partI-solution.36c53b48c9ffae2a.tw.png)
+![黑色螢幕，有一名英雄與 5*5 怪物](../../../../translated_images/tw/partI-solution.36c53b48c9ffae2a.png)
 
 ## 解答
 

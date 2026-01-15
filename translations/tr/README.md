@@ -56,13 +56,13 @@ Yeni Generative AI müfredatımızı kaçırmayın!
 
 Başlamak için ziyaret edin [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/background.148a8d43afde5730.tr.png)
+![Background](../../translated_images/tr/background.148a8d43afde5730.png)
 
 - Temelden RAG'a kadar her şeyi kapsayan dersler.
 - GenAI ve yardımcı uygulamamızla tarihi karakterlerle etkileşim kurun.
 - Eğlenceli ve ilgi çekici anlatım, zamanda yolculuk yapacaksınız!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.tr.png)
+![character](../../translated_images/tr/character.5c0dd8e067ffd693.png)
 
 
 Her ders; tamamlanacak bir ödev, bilgi kontrolü ve şu konulara rehberlik eden bir zorluk içerir:
@@ -99,7 +99,7 @@ Bu müfredat hazır bir geliştirme ortamına sahiptir! Başlarken, müfredatı 
 
 Oluşturduğunuz deponuzda **Code** (Kod) düğmesine tıklayın ve **Open with Codespaces** (Codespaces ile Aç) seçeneğini seçin. Bu, üzerinde çalışmanız için yeni bir Codespace oluşturacaktır.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.tr.png)
+![Codespace](../../translated_images/tr/createcodespace.0238bbf4d7a8d955.png)
 
 #### Müfredatı bilgisayarınızda yerel olarak çalıştırma
 

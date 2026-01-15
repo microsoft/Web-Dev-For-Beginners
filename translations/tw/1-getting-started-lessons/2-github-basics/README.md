@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 我們將一起逐步踏上這趟旅程。不要急，不要緊張－只有你我，還有一些即將成為你新好朋友的超酷工具！
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.tw.png)
+![Intro to GitHub](../../../../translated_images/tw/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ flowchart TD
 
 ✅ 找尋「適合新手」的優良程式碼庫的好方法是 [透過 'good-first-issue' 標籤搜尋](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)。
 
-![將程式庫複製到本機](../../../../translated_images/clone_repo.5085c48d666ead57.tw.png)
+![將程式庫複製到本機](../../../../translated_images/tw/clone_repo.5085c48d666ead57.png)
 
 複製程式碼有多種方式。常見的一種是使用 HTTPS、SSH 或 GitHub CLI（命令列介面）來「克隆」整個程式庫內容。
 

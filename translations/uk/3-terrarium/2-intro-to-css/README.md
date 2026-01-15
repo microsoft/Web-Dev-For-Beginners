@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Вступ до CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.uk.png)
+![Вступ до CSS](../../../../translated_images/uk/webdev101-css.3f7af5991bf53a20.png)
 > Скетчноут від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Пам'ятаєте, як ваш HTML-тераріум виглядав досить просто? Завдяки CSS ми перетворимо цю просту структуру на щось візуально привабливе.
@@ -205,7 +205,7 @@ body {
 
 Відкрийте інструменти розробника вашого браузера (F12), перейдіть на вкладку Elements і перевірте ваш елемент `<h1>`. Ви побачите, що він успадковує шрифт від body:
 
-![успадкований шрифт](../../../../translated_images/1.cc07a5cbe114ad1d.uk.png)
+![успадкований шрифт](../../../../translated_images/uk/1.cc07a5cbe114ad1d.png)
 
 ✅ **Час експерименту**: Спробуйте встановити інші властивості, які можна успадкувати, для `<body>`, такі як `color`, `line-height` або `text-align`. Що відбувається з вашим заголовком та іншими елементами?
 
@@ -335,7 +335,7 @@ h1 {
 **Ось структура HTML для кожної рослини:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.uk.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/uk/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.png" />
 </div>
 ```
 
@@ -560,7 +560,7 @@ flowchart LR
 
 Ви створите тонкі відблиски, які імітують, як світло відбивається від скляних поверхонь. Цей підхід схожий на те, як художники епохи Відродження, такі як Ян ван Ейк, використовували світло і відображення, щоб зробити намальоване скло тривимірним. Ось до чого ви прагнете:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.uk.png)
+![finished terrarium](../../../../translated_images/uk/terrarium-final.2f07047ffc597d0a.png)
 
 **Ваш виклик:**
 - **Створіть** тонкі овальні форми білого або світлого кольору для відображень скла

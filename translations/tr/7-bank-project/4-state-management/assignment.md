@@ -112,7 +112,7 @@ Diyalogunuzu uygulamak için aşağıdaki iki yaklaşımdan birini seçin:
 **Beklenen Sonuç:**
 Bu görevi tamamladıktan sonra, bankacılık uygulamanız profesyonel bir görünüme ve davranışa sahip, tamamen işlevsel bir "İşlem Ekle" özelliğine sahip olmalıdır:
 
-![Bir örnek "İşlem ekle" diyalog kutusunu gösteren ekran görüntüsü](../../../../translated_images/dialog.93bba104afeb79f1.tr.png)
+![Bir örnek "İşlem ekle" diyalog kutusunu gösteren ekran görüntüsü](../../../../translated_images/tr/dialog.93bba104afeb79f1.png)
 
 ## Uygulamanızı Test Etme
 

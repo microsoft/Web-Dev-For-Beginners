@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # جاوا اسکرپٹ کی بنیادی باتیں: Arrays اور Loops
 
-![جاوا اسکرپٹ کی بنیادی باتیں - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ur.png)
+![جاوا اسکرپٹ کی بنیادی باتیں - Arrays](../../../../translated_images/ur/webdev101-js-arrays.439d7528b8a29455.png)
 > اسکیچ نوٹ [Tomomi Imura](https://twitter.com/girlie_mac) کی طرف سے
 
 ```mermaid
