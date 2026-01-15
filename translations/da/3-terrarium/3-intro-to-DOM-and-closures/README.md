@@ -25,7 +25,7 @@ journey
       Test funktionalitet: 5: Student
       Fuldfør terrarium: 5: Student
 ```
-![DOM og en closure](../../../../translated_images/webdev101-js.10280393044d7eaa.da.png)
+![DOM og en closure](../../../../translated_images/da/webdev101-js.10280393044d7eaa.png)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Velkommen til en af de mest engagerende aspekter af webudvikling - at gøre ting interaktive! Document Object Model (DOM) er som en bro mellem dit HTML og JavaScript, og i dag bruger vi det til at bringe dit terrarium til live. Da Tim Berners-Lee skabte den første webbrowser, forestillede han sig et web, hvor dokumenter kunne være dynamiske og interaktive - DOM gør denne vision mulig.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM trærepresentation](../../../../translated_images/dom-tree.7daf0e763cbbba92.da.png)
+![DOM trærepresentation](../../../../translated_images/da/dom-tree.7daf0e763cbbba92.png)
 
 > En repræsentation af DOM og den HTML markup, som henviser til den. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Forståelse af Closures**: Closures er et væsentligt emne i JavaScript, og mange udviklere bruger år på at forstå alle de teoretiske aspekter fuldt ud. I dag fokuserer vi på praktisk anvendelse – du vil se closures naturligt opstå, når vi bygger vores interaktive funktioner. Forståelsen udvikler sig, når du ser, hvordan de løser virkelige problemer.
 
-![DOM trærepresentation](../../../../translated_images/dom-tree.7daf0e763cbbba92.da.png)
+![DOM trærepresentation](../../../../translated_images/da/dom-tree.7daf0e763cbbba92.png)
 
 > En repræsentation af DOM og den HTML markup, som henviser til den. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Test nu dit interaktive terrarium! Åbn din `index.html` fil i en webbrowser og 
 - **Tvær-enheds support**: Virker på desktop og mobiler
 - **Ydelsesbevidsthed**: Ingen hukommelseslækager eller overflødige beregninger
 
-![færdigt terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.da.png)
+![færdigt terrarium](../../../../translated_images/da/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

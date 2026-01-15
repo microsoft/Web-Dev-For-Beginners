@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Pointsystem**: Hver ødelagt fjendtlige skib giver 100 point (runde tal er lettere for spillere at regne mentalt). Scoren vises i nederste venstre hjørne.
-- **Livstæller**: Din helt starter med tre liv - en standard etableret af tidlige arkadespil for at balancere udfordring med spilbarhed. Hver kollision med en fjende koster et liv. Vi viser resterende liv nederst til højre med skibsikoner ![liv billede](../../../../translated_images/life.6fb9f50d53ee0413.da.png).
+- **Livstæller**: Din helt starter med tre liv - en standard etableret af tidlige arkadespil for at balancere udfordring med spilbarhed. Hver kollision med en fjende koster et liv. Vi viser resterende liv nederst til højre med skibsikoner ![liv billede](../../../../translated_images/da/life.6fb9f50d53ee0413.png).
 
 ## Lad os komme i gang!
 

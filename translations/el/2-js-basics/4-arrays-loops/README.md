@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Βασικά JavaScript: Πίνακες και Βρόχοι
 
-![Βασικά JavaScript - Πίνακες](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.el.png)
+![Βασικά JavaScript - Πίνακες](../../../../translated_images/el/webdev101-js-arrays.439d7528b8a29455.png)
 > Σκέτς από τον/την [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

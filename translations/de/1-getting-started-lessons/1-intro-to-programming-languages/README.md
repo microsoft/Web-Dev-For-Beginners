@@ -17,7 +17,7 @@ Schau mal, ich kann total nachvollziehen, wenn Programmieren gerade einschüchte
 
 Heute werden wir die unglaublichen Werkzeuge erkunden, die moderne Webentwicklung nicht nur möglich, sondern richtig süchtig machend machen. Ich spreche von genau denselben Editoren, Browsern und Workflows, die Entwickler bei Netflix, Spotify und deinem Lieblings-Indie-App-Studio jeden einzelnen Tag verwenden. Und hier kommt der Teil, der dich einen Freudentanz machen lässt: Die meisten dieser professionellen, industrieweiten Werkzeuge sind komplett kostenlos!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.de.png)
+![Intro Programming](../../../../translated_images/de/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

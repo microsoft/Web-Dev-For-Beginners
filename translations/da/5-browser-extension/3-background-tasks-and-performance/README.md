@@ -123,7 +123,7 @@ For at åbne Udviklerværktøjer i Edge, klik på de tre prikker øverst til hø
 
 Lad os prøve det. Åbn en hjemmeside (Microsoft.com fungerer godt til dette) og klik på 'Optag' knappen. Opdater nu siden, og se profilen fange alt, hvad der sker. Når du stopper optagelsen, får du en detaljeret opdeling af, hvordan browseren ‘script’, ‘renderer’ og ‘maler’ sitet. Det minder mig om, hvordan mission control overvåger hvert system under en raketopsendelse – du får realtime-data om præcis, hvad der sker og hvornår.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.da.png)
+![Edge profiler](../../../../translated_images/da/profiler.5a4a62479c5df01c.png)
 
 ✅ [Microsoft Dokumentationen](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) har masser af flere detaljer, hvis du vil dykke dybere ned
 
@@ -133,11 +133,11 @@ Vælg elementer i profilens tidslinje for at zoome ind på begivenheder, der ske
 
 Få et øjebliksbillede af din sides ydeevne ved at vælge et stykke af profiltidslinjen og kigge på oversigtspanelet:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.da.png)
+![Edge profiler snapshot](../../../../translated_images/da/snapshot.97750180ebcad737.png)
 
 Tjek Event Log-panelet for at se, om nogen begivenhed tog længere tid end 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.da.png)
+![Edge event log](../../../../translated_images/da/log.804026979f3707e0.png)
 
 ✅ Lær din profiler at kende! Åbn udviklerværktøjerne på denne side og se, om der er nogen flaskehalse. Hvad er det langsomt indlæsende element? Hvad er det hurtigste?
 

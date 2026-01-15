@@ -187,7 +187,7 @@ Wie beim aufgeteilten Design der Titanic, das robust schien, bis mehrere Abteile
 
 Anstatt uns im Kreis zu drehen, schaffen wir ein **zentralisiertes State-Management**. Stellen Sie sich das vor wie eine wirklich organisierte Person, die für alle wichtigen Dinge verantwortlich ist:
 
-![Schema zeigt die Datenflüsse zwischen HTML, Benutzeraktionen und State](../../../../translated_images/data-flow.fa2354e0908fecc8.de.png)
+![Schema zeigt die Datenflüsse zwischen HTML, Benutzeraktionen und State](../../../../translated_images/de/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Diese Herausforderung hilft Ihnen, wie ein professioneller Entwickler zu denken,
 
 Hier ein Beispielergebnis nach Abschluss der Aufgabe:
 
-![Screenshot zeigt einen Beispiel-Dialog zum "Transaktion hinzufügen"](../../../../translated_images/dialog.93bba104afeb79f1.de.png)
+![Screenshot zeigt einen Beispiel-Dialog zum "Transaktion hinzufügen"](../../../../translated_images/de/dialog.93bba104afeb79f1.webp)
 
 ---
 

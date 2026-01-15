@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Ευχαριστίες
 
-![μια πράσινη επέκταση προγράμματος περιήγησης](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.el.png)
+![μια πράσινη επέκταση προγράμματος περιήγησης](../../../translated_images/el/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## Ευχαριστίες
 

@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Gibt komplette HTML-Seite zurück
     Browser->>User: Zeigt neue Seite an (Blitz/Neuladen)
 ```
-![Aktualisierungsworkflow in einer Mehrseitenanwendung](../../../../translated_images/mpa.7f7375a1a2d4aa77.de.png)
+![Aktualisierungsworkflow in einer Mehrseitenanwendung](../../../../translated_images/de/mpa.7f7375a1a2d4aa77.webp)
 
 **Warum sich dieser Ansatz schwerfällig anfühlte:**
 - Jeder Klick bedeutete, die gesamte Seite neu zu laden
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Aktualisiert spezifische Seitenelemente
     Browser->>User: Zeigt aktualisierten Inhalt (kein Neuladen)
 ```
-![Aktualisierungsworkflow in einer Single-Page-Anwendung](../../../../translated_images/spa.268ec73b41f992c2.de.png)
+![Aktualisierungsworkflow in einer Single-Page-Anwendung](../../../../translated_images/de/spa.268ec73b41f992c2.webp)
 
 **Warum SPAs sich so viel besser anfühlen:**
 - Nur die tatsächlich geänderten Bereiche werden aktualisiert (clever, oder?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Wenn du jetzt mit einem ungültigen Konto testest, siehst du eine hilfreiche Fehlermeldung direkt auf der Seite!
 
-![Screenshot zeigt die während des Logins angezeigte Fehlermeldung](../../../../translated_images/login-error.416fe019b36a6327.de.png)
+![Screenshot zeigt die während des Logins angezeigte Fehlermeldung](../../../../translated_images/de/login-error.416fe019b36a6327.webp)
 
 #### Schritt 4: Zugänglichkeit und Inklusion fördern
 
@@ -950,7 +950,7 @@ Bereit, Ihre Banking-App auf die nächste Stufe zu heben? Machen wir sie so sch�
 
 So könnte ein ausgefeiltes Dashboard aussehen:
 
-![Screenshot eines Beispielergebnisses des Dashboards nach Styling](../../../../translated_images/screen2.123c82a831a1d14a.de.png)
+![Screenshot eines Beispielergebnisses des Dashboards nach Styling](../../../../translated_images/de/screen2.123c82a831a1d14a.webp)
 
 Fühlen Sie sich nicht gezwungen, es exakt nachzumachen – nutzen Sie es als Inspiration und machen Sie es zu Ihrem eigenen!
 

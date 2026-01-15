@@ -42,10 +42,10 @@ Dieses Curriculum enthält importierbare Pakete für gängige LMS-Workflows.
   - Moodle Cloud unterstützt Common Cartridge nur eingeschränkt. Bevorzugen Sie die oben genannte Moodle-Datei, die auch in Canvas hochgeladen werden kann.
   - Überprüfen Sie nach dem Import die Module, Fälligkeitsdaten und Quiz-Einstellungen, um sie an Ihren Semesterplan anzupassen.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.de.png)
+![Moodle](../../translated_images/de/moodle.94eb93d714a50cb2.webp)
 > Das Curriculum in einem Moodle-Klassenzimmer
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.de.png)
+![Canvas](../../translated_images/de/canvas.fbd605ff8e5b8aff.webp)
 > Das Curriculum in Canvas
 
 ### Direkte Nutzung des Repositories (ohne Classroom)

@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Punktesystem**: Jedes zerstörte feindliche Schiff bringt 100 Punkte (runde Zahlen sind für Spieler leichter mental zu berechnen). Die Punktzahl wird unten links angezeigt.
-- **Lebenszähler**: Dein Held startet mit drei Leben – ein Standard, der von frühen Arcade-Spielen etabliert wurde, um Herausforderung mit Spielbarkeit auszubalancieren. Jede Kollision mit einem Feind kostet ein Leben. Die verbleibenden Leben zeigen wir unten rechts mit Schiffs-Icons an ![life image](../../../../translated_images/life.6fb9f50d53ee0413.de.png).
+- **Lebenszähler**: Dein Held startet mit drei Leben – ein Standard, der von frühen Arcade-Spielen etabliert wurde, um Herausforderung mit Spielbarkeit auszubalancieren. Jede Kollision mit einem Feind kostet ein Leben. Die verbleibenden Leben zeigen wir unten rechts mit Schiffs-Icons an ![life image](../../../../translated_images/de/life.6fb9f50d53ee0413.webp).
 
 ## Lass uns anfangen zu bauen!
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 This lesson introduces the fundamentals of programming languages. The topics discussed here are relevant to most modern programming languages today. In the 'Tools of the Trade' section, you'll explore software that can assist you as a developer.
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.en.png)
+![Intro Programming](../../../../translated_images/en/webdev101-programming.d6e3f98e61ac4bff0b27dcbf1c3f16c8ed46984866f2d29988929678b0058fde.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz

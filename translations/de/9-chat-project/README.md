@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 So sieht dein fertiges Projekt aus:
 
-![Chat-App-Oberfläche mit Konversation zwischen Nutzer und KI-Assistent](../../../translated_images/screenshot.0a1ee0d123df681b.de.png)
+![Chat-App-Oberfläche mit Konversation zwischen Nutzer und KI-Assistent](../../../translated_images/de/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Deine Lernreise durch die KI-Anwendungsentwicklung
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Kernprinzip**: Die Entwicklung von KI-Anwendungen kombiniert traditionelle Webentwicklungsfähigkeiten mit KI-Dienstintegrationen und erschafft intelligente Anwendungen, die sich natürlich und reaktionsfreudig für Nutzer anfühlen.
 
-![GitHub Models KI Playground-Oberfläche mit Modellauswahl und Testbereich](../../../translated_images/playground.d2b927122224ff8f.de.png)
+![GitHub Models KI Playground-Oberfläche mit Modellauswahl und Testbereich](../../../translated_images/de/playground.d2b927122224ff8f.webp)
 
 **Das macht den Playground so nützlich:**
 - **Teste** verschiedene KI-Modelle wie GPT-4o-mini, Claude und andere (alles kostenlos!)
@@ -199,7 +199,7 @@ mindmap
 
 Wenn du ein wenig gespielt hast, klick einfach auf den Reiter „Code“ und wähle deine Programmiersprache, um den Implementierungscode zu erhalten, den du brauchst.
 
-![Playground-Auswahl zeigt Code-Generierungsoptionen für verschiedene Programmiersprachen](../../../translated_images/playground-choice.1d23ba7d407f4758.de.png)
+![Playground-Auswahl zeigt Code-Generierungsoptionen für verschiedene Programmiersprachen](../../../translated_images/de/playground-choice.1d23ba7d407f4758.webp)
 
 ## Einrichtung der Python-Backend-Integration
 
@@ -2349,14 +2349,14 @@ Möchten Sie dieses Projekt in einer Cloud-Entwicklungsumgebung ausprobieren? Gi
 - **Navigieren** Sie zum [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Klicken** Sie oben rechts auf „Use this template“ (stellen Sie sicher, dass Sie bei GitHub angemeldet sind)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.de.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/de/template.67ad477109d29a2b.webp)
 
 **Schritt 2: Codespaces starten**  
 - **Öffnen** Sie Ihr neu erstelltes Repository  
 - **Klicken** Sie den grünen „Code“-Button und wählen Sie „Codespaces“  
 - **Wählen** Sie „Create codespace on main“, um Ihre Entwicklungsumgebung zu starten  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.de.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/de/codespace.bcecbdf5d2747d3d.webp)
 
 **Schritt 3: Konfiguration der Umgebung**  
 Sobald Ihr Codespace geladen ist, haben Sie Zugriff auf:  

@@ -123,7 +123,7 @@ Um die Entwicklertools in Edge zu öffnen, klicken Sie auf die drei Punkte oben 
 
 Probieren wir das aus. Öffnen Sie eine Webseite (Microsoft.com eignet sich gut dafür) und klicken Sie auf die Schaltfläche „Aufzeichnen“. Laden Sie nun die Seite neu und beobachten Sie, wie der Profiler alles erfasst, was passiert. Wenn Sie die Aufnahme stoppen, sehen Sie eine detaillierte Aufschlüsselung, wie der Browser die Seite „scriptet“, „rendert“ und „zeichnet“. Das erinnert mich daran, wie die Missionskontrolle bei einem Raketenstart jedes System überwacht – Sie erhalten Echtzeitdaten, was wann passiert.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.de.png)
+![Edge profiler](../../../../translated_images/de/profiler.5a4a62479c5df01c.webp)
 
 ✅ Die [Microsoft-Dokumentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) bietet noch viele weitere Details, wenn Sie tiefer einsteigen möchten
 
@@ -133,11 +133,11 @@ Wählen Sie Elemente des Profilzeitstrahls aus, um in Ereignisse hineinzuzoomen,
 
 Erhalten Sie eine Momentaufnahme der Performance Ihrer Seite, indem Sie einen Abschnitt des Profilzeitstrahls auswählen und sich die Zusammenfassung anschauen:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.de.png)
+![Edge profiler snapshot](../../../../translated_images/de/snapshot.97750180ebcad737.webp)
 
 Überprüfen Sie das Ereignisprotokoll, um zu sehen, ob ein Ereignis länger als 15 ms gedauert hat:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.de.png)
+![Edge event log](../../../../translated_images/de/log.804026979f3707e0.webp)
 
 ✅ Lernen Sie Ihren Profiler kennen! Öffnen Sie die Entwicklertools auf dieser Seite und prüfen Sie, ob es Engpässe gibt. Welches Asset lädt am langsamsten? Welches am schnellsten?
 

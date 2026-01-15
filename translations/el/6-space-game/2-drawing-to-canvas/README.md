@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![το πλέγμα του καμβά](../../../../translated_images/canvas_grid.5f209da785ded492.el.png)
+![το πλέγμα του καμβά](../../../../translated_images/el/canvas_grid.5f209da785ded492.png)
 > Εικόνα από [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Για να σχεδιάσετε στο στοιχείο καμβά, θα ακολουθήσετε την ίδια διαδικασία τριών βημάτων που αποτελεί τη βάση όλων των γραφικών καμβά. Μόλις το κάνετε μερικές φορές, γίνεται δεύτερη φύση:
@@ -323,11 +323,11 @@ flowchart TD
 
 - Πλοίο ήρωα
 
-   ![Πλοίο ήρωα](../../../../translated_images/player.dd24c1afa8c71e9b.el.png)
+   ![Πλοίο ήρωα](../../../../translated_images/el/player.dd24c1afa8c71e9b.png)
 
 - Μονάδα 5*5 τεράτων
 
-   ![Πλοίο τέρατος](../../../../translated_images/enemyShip.5df2a822c16650c2.el.png)
+   ![Πλοίο τέρατος](../../../../translated_images/el/enemyShip.5df2a822c16650c2.png)
 
 ### Προτεινόμενα βήματα για να ξεκινήσετε την ανάπτυξη
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Το τελικό αποτέλεσμα θα πρέπει να μοιάζει ως εξής:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.el.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/el/partI-solution.36c53b48c9ffae2a.png)
 
 ## Λύση
 

@@ -72,13 +72,13 @@ Verpasse nicht unseren neuen Lehrplan zur Generativen KI!
 
 Besuche [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), um zu starten!
 
-![Background](../../translated_images/background.148a8d43afde5730.de.png)
+![Background](../../translated_images/de/background.148a8d43afde5730.webp)
 
 - Lektionen, die alles von den Grundlagen bis zu RAG abdecken.  
 - Interagiere mit historischen Figuren mithilfe von GenAI und unserer Begleit-App.  
 - Spannende und unterhaltsame Erzählung, du wirst durch die Zeit reisen!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.de.png)
+![character](../../translated_images/de/character.5c0dd8e067ffd693.webp)
 
 
 Jede Lektion beinhaltet eine Aufgabe, einen Wissenstest und eine Herausforderung, die dich beim Lernen von Themen wie:  
@@ -115,7 +115,7 @@ Folge diesen Schritten:
 
 In deiner erstellten Kopie dieses Repositories, klicke auf die **Code**-Schaltfläche und wähle **Open with Codespaces**. Dies erstellt einen neuen Codespace für dich.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.de.png)
+![Codespace](../../translated_images/de/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Ausführen des Lehrplans lokal auf deinem Computer
 
