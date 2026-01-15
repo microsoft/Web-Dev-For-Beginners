@@ -29,7 +29,7 @@ journey
       Design responsiv: 5: Student
       Reflexii pe sticlă: 5: Student
 ```
-![Introducere în CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.ro.png)
+![Introducere în CSS](../../../../translated_images/ro/webdev101-css.3f7af5991bf53a20.png)
 > Sketchnote realizat de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Îți amintești cum arăta terrariul tău HTML destul de simplu? CSS este locul unde transformăm acea structură simplă într-un ceva atrăgător vizual.
@@ -202,7 +202,7 @@ body {
 
 Deschide unelte pentru dezvoltatori în browserul tău (F12), navighează la fila Elements, și inspectează elementul `<h1>`. Vei vedea că acesta moștenește familia fontului de la body:
 
-![font moștenit](../../../../translated_images/1.cc07a5cbe114ad1d.ro.png)
+![font moștenit](../../../../translated_images/ro/1.cc07a5cbe114ad1d.png)
 
 ✅ **Experiment**: Încearcă să setezi alte proprietăți moștenitoare pe `<body>` precum `color`, `line-height` sau `text-align`. Ce se întâmplă cu titlul și celelalte elemente?
 
@@ -332,7 +332,7 @@ Selectorii de clase folosesc simbolul `.` și sunt perfecți când vrei să apli
 **Iată structura HTML pentru fiecare plantă:**  
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.ro.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/ro/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
   
@@ -594,7 +594,7 @@ Ești gata să îmbunătățești terrariul cu reflecții realiste de sticlă? A
 
 Vei crea accente subtile care simulează modul în care lumina se reflectă pe suprafețele de sticlă. Această abordare este similară cu modul în care pictorii Renașterii, precum Jan van Eyck, foloseau lumina și reflectarea pentru a face sticla pictată să pară tridimensională. Iată ce vizezi:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.ro.png)
+![finished terrarium](../../../../translated_images/ro/terrarium-final.2f07047ffc597d0a.png)
 
 **Provocarea ta:**
 - **Creează** forme ovale albe sau deschise la culoare pentru reflexiile sticlei

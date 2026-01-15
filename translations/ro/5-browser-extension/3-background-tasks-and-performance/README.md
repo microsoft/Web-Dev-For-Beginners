@@ -123,7 +123,7 @@ Pentru a deschide Developer Tools în Edge, fă clic pe cele trei puncte din col
 
 Hai să încercăm asta. Deschide un site (Microsoft.com este potrivit pentru asta) și apasă butonul 'Record'. Acum reîncarcă pagina și urmărește cum profilatorul surprinde tot ce se întâmplă. Când oprești înregistrarea, vei vedea o defalcare detaliată a modului în care browserul 'scriptuiește', 'randează' și 'pictează' site-ul. Îmi amintește cum centrul de comandă monitorizează fiecare sistem în timpul lansării unei rachete – primești date în timp real despre exact ce se întâmplă și când.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.ro.png)
+![Edge profiler](../../../../translated_images/ro/profiler.5a4a62479c5df01c.png)
 
 ✅ Documentația [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) are o mulțime de detalii dacă vrei să explorezi mai mult.
 
@@ -133,11 +133,11 @@ Selectează elemente din cronologia profilului pentru a mări evenimentele care 
 
 Obține o imagine de ansamblu a performanței paginii tale selectând o parte din cronologia profilului și uitându-te în panoul de sumar:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.ro.png)
+![Edge profiler snapshot](../../../../translated_images/ro/snapshot.97750180ebcad737.png)
 
 Verifică panoul Event Log pentru a vedea dacă vreun eveniment a durat mai mult de 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.ro.png)
+![Edge event log](../../../../translated_images/ro/log.804026979f3707e0.png)
 
 ✅ Familiarizează-te cu profilatorul tău! Deschide uneltele pentru dezvoltatori pe acest site și vezi dacă există blocaje. Care este elementul cel mai lent la încărcare? Cel mai rapid?
 

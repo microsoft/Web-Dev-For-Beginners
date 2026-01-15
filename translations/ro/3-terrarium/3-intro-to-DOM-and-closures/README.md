@@ -25,7 +25,7 @@ journey
       Test functionality: 5: Student
       Complete terrarium: 5: Student
 ```
-![DOM și o închidere](../../../../translated_images/webdev101-js.10280393044d7eaa.ro.png)
+![DOM și o închidere](../../../../translated_images/ro/webdev101-js.10280393044d7eaa.png)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Bine ați venit la unul dintre cele mai atractive aspecte ale dezvoltării web - a face lucrurile interactive! Document Object Model (DOM) este ca un pod între HTML-ul tău și JavaScript, iar astăzi îl vom folosi pentru a da viață terariului tău. Când Tim Berners-Lee a creat primul browser web, și-a imaginat o web unde documentele pot fi dinamice și interactive - DOM face această viziune posibilă.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Reprezentare arbore DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.ro.png)
+![Reprezentare arbore DOM](../../../../translated_images/ro/dom-tree.7daf0e763cbbba92.png)
 
 > O reprezentare a DOM și a marcajului HTML care îl referențiază. De la [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Înțelegerea închiderilor**: Închiderile sunt un subiect important în JavaScript, iar mulți dezvoltatori le folosesc ani de zile înainte să înțeleagă pe deplin toate aspectele teoretice. Astăzi ne concentrăm pe aplicația practică - vei vedea cum închiderile apar natural pe măsură ce construim caracteristicile noastre interactive. Înțelegerea va crește pe măsură ce vezi cum rezolvă probleme reale.
 
-![Reprezentare arbore DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.ro.png)
+![Reprezentare arbore DOM](../../../../translated_images/ro/dom-tree.7daf0e763cbbba92.png)
 
 > O reprezentare a DOM și a marcajului HTML care îl referențiază. De la [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Acum testează-ți terariul interactiv! Deschide fișierul `index.html` într-un
 - **Suport cross-device**: Funcționează pe desktop și pe mobil
 - **Conștientizare a performanței**: Fără scurgeri de memorie sau calcule redundante
 
-![terrariu finalizat](../../../../translated_images/terrarium-final.0920f16e87c13a84.ro.png)
+![terrariu finalizat](../../../../translated_images/ro/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

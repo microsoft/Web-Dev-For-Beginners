@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Мы пройдем этот путь вместе, шаг за шагом. Без спешки, без давления – только ты, я и несколько действительно крутых инструментов, которые скоро станут твоими лучшими друзьями!
 
-![Введение в GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.ru.png)
+![Введение в GitHub](../../../../translated_images/ru/webdev101-github.8846d7971abef6f9.webp)
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ flowchart TD
 
 ✅ Хороший способ найти репозитории, подходящие для новичков, – [искать по тегу 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Скопировать репозиторий локально](../../../../translated_images/clone_repo.5085c48d666ead57.ru.png)
+![Скопировать репозиторий локально](../../../../translated_images/ru/clone_repo.5085c48d666ead57.webp)
 
 Существует несколько способов копирования кода. Один из них – "клонировать" содержимое репозитория, используя HTTPS, SSH или GitHub CLI (Command Line Interface).
 

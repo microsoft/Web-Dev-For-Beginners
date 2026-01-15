@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Systém bodovania**: Každá zničená nepriateľská loď udeľuje 100 bodov (okrúhle čísla sa hráčom ľahšie počítajú v hlave). Skóre sa zobrazuje v ľavom dolnom rohu.
-- **Počítadlo životov**: Tvoj hrdina začína s tromi životmi - štandard, ktorý stanovali rané arkádové hry pre rovnováhu výzvy a hrateľnosti. Každá kolízia s nepriateľom stojí jeden život. Zostávajúce životy zobrazíme v pravom dolnom rohu pomocou ikon lodí ![life image](../../../../translated_images/life.6fb9f50d53ee0413.sk.png).
+- **Počítadlo životov**: Tvoj hrdina začína s tromi životmi - štandard, ktorý stanovali rané arkádové hry pre rovnováhu výzvy a hrateľnosti. Každá kolízia s nepriateľom stojí jeden život. Zostávajúce životy zobrazíme v pravom dolnom rohu pomocou ikon lodí ![life image](../../../../translated_images/sk/life.6fb9f50d53ee0413.png).
 
 ## Let's Get Building!
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 În acest proiect, vei învăța cum să construiești o bancă fictivă. Aceste lecții includ instrucțiuni despre cum să creezi structura unei aplicații web și să oferi rute, să construiești formulare, să gestionezi starea, și să obții date de la un API de unde poți prelua informațiile băncii.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.ro.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.ro.png) |
+| ![Screen1](../../../translated_images/ro/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/ro/screen2.123c82a831a1d14a.png) |
 |--------------------------------|--------------------------------|
 
 ## Lecții

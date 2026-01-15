@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 В этом проекте вы научитесь создавать вымышленный банк. Эти уроки включают инструкции по созданию макета веб-приложения, настройке маршрутов, созданию форм, управлению состоянием и получению данных из API, откуда можно извлечь данные банка.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.ru.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.ru.png) |
+| ![Screen1](../../../translated_images/ru/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/ru/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Уроки

@@ -42,10 +42,10 @@ Acest curriculum include pachete importabile pentru fluxuri de lucru comune LMS.
   - Moodle Cloud are suport limitat pentru Common Cartridge. Preferabil să utilizați fișierul Moodle de mai sus, care poate fi încărcat și în Canvas.
   - După import, revizuiți modulele, termenele limită și setările chestionarelor pentru a se potrivi cu programul dvs. de semestru.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ro.png)
+![Moodle](../../translated_images/ro/moodle.94eb93d714a50cb2.png)
 > Curriculumul într-o clasă Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ro.png)
+![Canvas](../../translated_images/ro/canvas.fbd605ff8e5b8aff.png)
 > Curriculumul în Canvas
 
 ### Utilizare directă a depozitului (fără Classroom)

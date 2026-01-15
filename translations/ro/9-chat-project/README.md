@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Iată cum va arăta proiectul tău finalizat:
 
-![Interfață aplicație de chat arătând conversație între utilizator și asistentul AI](../../../translated_images/screenshot.0a1ee0d123df681b.ro.png)
+![Interfață aplicație de chat arătând conversație între utilizator și asistentul AI](../../../translated_images/ro/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ Călătoria ta de învățare prin dezvoltarea aplicațiilor AI
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Principiu de bază**: dezvoltarea aplicațiilor AI combină abilități tradiționale de dezvoltare web cu integrarea serviciilor AI, creând aplicații inteligente care par naturale și responsive pentru utilizatori.
 
-![Interfață GitHub Models AI Playground cu selecție de model și zonă de testare](../../../translated_images/playground.d2b927122224ff8f.ro.png)
+![Interfață GitHub Models AI Playground cu selecție de model și zonă de testare](../../../translated_images/ro/playground.d2b927122224ff8f.png)
 
 **Ce face playground-ul atât de util:**
 - **Încearcă** diferite modele AI precum GPT-4o-mini, Claude și altele (toate gratuite!)
@@ -199,7 +199,7 @@ mindmap
 
 După ce te joci puțin, apasă pe fila „Code” și alege limbajul de programare pentru a obține codul de implementare de care ai nevoie.
 
-![Alegerea în Playground arătând opțiuni de generare cod pentru diferite limbaje de programare](../../../translated_images/playground-choice.1d23ba7d407f4758.ro.png)
+![Alegerea în Playground arătând opțiuni de generare cod pentru diferite limbaje de programare](../../../translated_images/ro/playground-choice.1d23ba7d407f4758.png)
 
 ## Configurarea Integrației Backend în Python
 
@@ -2353,14 +2353,14 @@ Vrei să încerci acest proiect într-un mediu de dezvoltare în cloud? GitHub C
 - **Navighează** la [depozitul Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Apasă** pe „Use this template” în colțul din dreapta sus (asigură-te că ești logat în GitHub)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.ro.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/ro/template.67ad477109d29a2b.png)
 
 **Pasul 2: Pornește Codespaces**
 - **Deschide** depozitul proaspăt creat
 - **Apasă** pe butonul verde „Code” și selectează „Codespaces”
 - **Alege** „Create codespace on main” pentru a începe mediul de dezvoltare
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.ro.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/ro/codespace.bcecbdf5d2747d3d.png)
 
 **Pasul 3: Configurarea Mediului**
 Odată ce Codespace-ul tău este gata, vei avea acces la:

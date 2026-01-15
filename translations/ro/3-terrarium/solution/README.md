@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Un mic exercițiu de tip drag and drop. Cu puțin HTML, JS și CSS, poți construi o interfață web, să o stilizezi și să adaugi interacțiuni.
 
-![terariul meu](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.ro.png)
+![terariul meu](../../../../translated_images/ro/screenshot_gray.0c796099a1f9f25e.png)
 
 ## Credite
 

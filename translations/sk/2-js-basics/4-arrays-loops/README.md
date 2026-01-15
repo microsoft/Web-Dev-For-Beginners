@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript základy: Polia a slučky
 
-![JavaScript základy - Polia](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.sk.png)
+![JavaScript základy - Polia](../../../../translated_images/sk/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

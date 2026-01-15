@@ -292,7 +292,7 @@ Mai întâi, să observăm ce se întâmplă cu o trimitere simplă a formularul
 2. Observă schimbările din bara de adrese a browserului
 3. Observă cum pagina se reîncarcă și apar date în URL
 
-![Captură de ecran cu schimbarea URL-ului în browser după ce s-a apăsat butonul Înregistrează](../../../../translated_images/click-register.e89a30bf0d4bc9ca.ro.png)
+![Captură de ecran cu schimbarea URL-ului în browser după ce s-a apăsat butonul Înregistrează](../../../../translated_images/ro/click-register.e89a30bf0d4bc9ca.png)
 
 ### Compararea metodelor HTTP
 
@@ -346,7 +346,7 @@ Să configurăm formularul tău de înregistrare să comunice corect cu API-ul b
 2. **Apasă** butonul „Creare Cont”
 3. **Observă** răspunsul serverului în browser
 
-![Fereastră de browser la adresa localhost:5000/api/accounts, arătând un șir JSON cu datele utilizatorului](../../../../translated_images/form-post.61de4ca1b964d91a.ro.png)
+![Fereastră de browser la adresa localhost:5000/api/accounts, arătând un șir JSON cu datele utilizatorului](../../../../translated_images/ro/form-post.61de4ca1b964d91a.png)
 
 **Ce ar trebui să vezi:**
 - **Browserul redirecționează** către URL-ul endpoint-ului API
@@ -609,7 +609,7 @@ async function register() {
 3. **Apasă** pe "Creează cont"
 4. **Observă** mesajele din consolă și feedback-ul utilizatorului
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.ro.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/ro/browser-console.efaf0b51aaaf6778.png)
 
 **Ce ar trebui să vezi:**
 - **Stare de încărcare** apare pe butonul de trimitere
@@ -783,7 +783,7 @@ Să îmbunătățim formularul tău de înregistrare cu o validare robustă care
 3. **Încearcă** caractere speciale în câmpul de nume utilizator
 4. **Introdu** o sumă negativă în sold
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.ro.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/ro/validation-error.8bd23e98d416c22f.png)
 
 **Ce vei observa:**
 - **Browserul afișează** mesaje native de validare
@@ -943,7 +943,7 @@ Afișează un mesaj de eroare în HTML dacă utilizatorul există deja.
 
 Iată un exemplu de cum poate arăta pagina finală de login după un pic de stilizare:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.ro.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/ro/result.96ef01f607bf856a.png)
 
 ## Chestionar Post-Lecție
 

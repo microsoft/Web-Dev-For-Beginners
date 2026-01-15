@@ -17,7 +17,7 @@ Iată ce mă uimește total: fiecare aplicație de pe telefonul tău, fiecare si
 
 Vom parcurge acest drum împreună, pas cu pas. Fără grabă, fără presiune – doar tu, eu și niște unelte super tari care urmează să devină cei mai buni prieteni ai tăi!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.ro.png)
+![Intro to GitHub](../../../../translated_images/ro/webdev101-github.8846d7971abef6f9.png)
 > Schiță realizată de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ Mai întâi, hai să găsim un repository (sau **repo**) pe GitHub care să te i
 
 ✅ Un mod bun de a găsi repo-uri „prietenoase pentru începători” este să [cauți după eticheta 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copiază un repo local](../../../../translated_images/clone_repo.5085c48d666ead57.ro.png)
+![Copiază un repo local](../../../../translated_images/ro/clone_repo.5085c48d666ead57.png)
 
 Există mai multe modalități de a copia codul. Un mod este să „clonezi” conținutul repository-ului, folosind HTTPS, SSH sau folosind GitHub CLI (interfața de linie de comandă GitHub).
 

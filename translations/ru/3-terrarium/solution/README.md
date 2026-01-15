@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Небольшая медитация с перетаскиванием элементов. С помощью немного HTML, JS и CSS вы можете создать веб-интерфейс, стилизовать его и добавить интерактивность.
 
-![мой террариум](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.ru.png)
+![мой террариум](../../../../translated_images/ru/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Благодарности
 

@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Sistem de punctaj**: Fiecare navă inamic distrusă acordă 100 de puncte (numere rotunde sunt mai ușor de calculat mental pentru jucători). Scorul se afișează în colțul din stânga jos.
-- **Contor de vieți**: Eroul tău începe cu trei vieți - un standard stabilit de jocurile arcade timpurii pentru a echilibra provocarea cu jucabilitatea. Fiecare coliziune cu un inamic costă o viață. Vom afișa viețile rămase în colțul din dreapta jos folosind icoane de navă ![life image](../../../../translated_images/life.6fb9f50d53ee0413.ro.png).
+- **Contor de vieți**: Eroul tău începe cu trei vieți - un standard stabilit de jocurile arcade timpurii pentru a echilibra provocarea cu jucabilitatea. Fiecare coliziune cu un inamic costă o viață. Vom afișa viețile rămase în colțul din dreapta jos folosind icoane de navă ![life image](../../../../translated_images/ro/life.6fb9f50d53ee0413.png).
 
 ## Să începem construcția!
 

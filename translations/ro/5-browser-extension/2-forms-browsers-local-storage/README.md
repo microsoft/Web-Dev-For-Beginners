@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Șterge datele salvate
     ClearStorage --> FirstTime: Înapoi la configurare
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.ro.png)
+![Local storage pane](../../../../translated_images/ro/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **Considerație de Securitate**: În aplicațiile de producție, stocarea cheilor API în LocalStorage poate reprezenta un risc de securitate, deoarece JavaScript poate accesa aceste date. Pentru scopuri educaționale, această metodă este acceptabilă, dar aplicațiile reale ar trebui să folosească stocare sigură pe server pentru credențiale sensibile.
 

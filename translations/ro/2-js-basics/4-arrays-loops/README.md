@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bazele JavaScript: Array-uri și Bucla
 
-![Bazele JavaScript - Array-uri](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ro.png)
+![Bazele JavaScript - Array-uri](../../../../translated_images/ro/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

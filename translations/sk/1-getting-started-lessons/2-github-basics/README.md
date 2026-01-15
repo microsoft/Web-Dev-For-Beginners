@@ -17,7 +17,7 @@ Vieme, že to môže byť spočiatku veľa – ja si pamätám, ako som prvýkr�
 
 Túto cestu prejdeme spolu, krok za krokom. Bez naháňania, bez stresu – len ty, ja a niekoľko fakt skvelých nástrojov, ktoré sa stanú tvojimi novými najlepšími priateľmi!
 
-![Úvod do GitHubu](../../../../translated_images/webdev101-github.8846d7971abef6f9.sk.png)
+![Úvod do GitHubu](../../../../translated_images/sk/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ Najskôr nájdeme repozitár (alebo **repo**) na GitHub, ktorý vás zaujíma a 
 
 ✅ Dobrou cestou, ako nájsť 'začiatočníkom priateľské' repozitáre, je [vyhľadávanie podľa značky 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57.sk.png)
+![Copy a repo locally](../../../../translated_images/sk/clone_repo.5085c48d666ead57.png)
 
 Existuje niekoľko spôsobov, ako kód skopírovať. Jedným zo spôsobov je „klonovať“ obsah repozitára pomocou HTTPS, SSH alebo pomocou GitHub CLI (Command Line Interface).
 
