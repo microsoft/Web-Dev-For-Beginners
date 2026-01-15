@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Takto bude vypadat váš hotový projekt:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.cs.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/cs/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ Vaše cesta za vývojem AI aplikací
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Základní princip**: Vývoj AI aplikací kombinuje tradiční webové dovednosti s integrací AI služeb, vytvářející inteligentní aplikace, které působí přirozeně a reagují na uživatele.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.cs.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/cs/playground.d2b927122224ff8f.png)
 
 **Co dělá playground tak užitečným:**
 - **Vyzkoušejte** různé AI modely jako GPT-4o-mini, Claude a další (vše zdarma!)
@@ -199,7 +199,7 @@ mindmap
 
 Jakmile si trochu pohrajete, stačí kliknout na záložku "Code" a vybrat programovací jazyk, abyste získali implementační kód, který budete potřebovat.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.cs.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/cs/playground-choice.1d23ba7d407f4758.png)
 
 ## Nastavení Python backendové integrace
 
@@ -2351,14 +2351,14 @@ Chcete si tento projekt vyzkoušet v cloudovém vývojovém prostředí? GitHub 
 - **Přejděte** do [repositáře Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Klikněte** na „Use this template“ v pravém horním rohu (ujistěte se, že máte přihlášený účet GitHub)
 
-![Rozhraní pro vytvoření ze šablony, ukazující zelené tlačítko "Use this template"](../../../translated_images/template.67ad477109d29a2b.cs.png)
+![Rozhraní pro vytvoření ze šablony, ukazující zelené tlačítko "Use this template"](../../../translated_images/cs/template.67ad477109d29a2b.png)
 
 **Krok 2: Spusťte Codespaces**
 - **Otevřete** právě vytvořený repozitář
 - **Klikněte** na zelené tlačítko "Code" a vyberte "Codespaces"
 - **Zvolte** "Create codespace on main" pro spuštění vašeho vývojového prostředí
 
-![Rozhraní pro vytvoření codespace s možnostmi spuštění cloudového vývojového prostředí](../../../translated_images/codespace.bcecbdf5d2747d3d.cs.png)
+![Rozhraní pro vytvoření codespace s možnostmi spuštění cloudového vývojového prostředí](../../../translated_images/cs/codespace.bcecbdf5d2747d3d.png)
 
 **Krok 3: Konfigurace prostředí**
 Po načtení Codespace budete mít k dispozici:

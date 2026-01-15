@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Malá meditace s kódem typu drag and drop. S trochou HTML, JS a CSS můžete vytvořit webové rozhraní, upravit jeho styl a přidat interakci.
 
-![moje terárium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.cs.png)
+![moje terárium](../../../../translated_images/cs/screenshot_gray.0c796099a1f9f25e.png)
 
 ## Poděkování
 

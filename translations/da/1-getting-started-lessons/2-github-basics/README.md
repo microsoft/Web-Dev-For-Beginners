@@ -17,7 +17,7 @@ Jeg ved, det måske føles som meget i starten – pokkers, jeg husker at stirre
 
 Vi tager denne rejse sammen, skridt for skridt. Ingen hast, intet pres – bare dig, mig og nogle virkelig fede værktøjer, som snart bliver dine nye bedste venner!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.da.png)
+![Intro to GitHub](../../../../translated_images/da/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ Først, lad os finde et repository (eller **repo**) på GitHub, som interesserer
 
 ✅ En god måde at finde 'begynder-venlige' repos er at [søgge efter tagget 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57.da.png)
+![Copy a repo locally](../../../../translated_images/da/clone_repo.5085c48d666ead57.png)
 
 Der er flere måder at kopiere kode på. En måde er at "klone" indholdet af repositoryet, ved brug af HTTPS, SSH, eller GitHub CLI (Command Line Interface).
 

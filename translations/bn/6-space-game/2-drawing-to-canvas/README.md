@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![ক্যানভাসের গ্রিড](../../../../translated_images/canvas_grid.5f209da785ded492.bn.png)
+![ক্যানভাসের গ্রিড](../../../../translated_images/bn/canvas_grid.5f209da785ded492.png)
 > ছবি [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) থেকে
 
 ক্যানভাস উপাদানে আঁকার জন্য, আপনি একই তিন-ধাপের প্রক্রিয়া অনুসরণ করবেন, যা সমস্ত ক্যানভাস গ্রাফিক্সের ভিত্তি গঠন করে। এটি কয়েকবার করলে, এটি স্বাভাবিক হয়ে যাবে:
@@ -329,11 +329,11 @@ flowchart TD
 
 - হিরো শিপ
 
-   ![হিরো শিপ](../../../../translated_images/player.dd24c1afa8c71e9b.bn.png)
+   ![হিরো শিপ](../../../../translated_images/bn/player.dd24c1afa8c71e9b.png)
 
 - 5*5 মনস্টার
 
-   ![মনস্টার শিপ](../../../../translated_images/enemyShip.5df2a822c16650c2.bn.png)
+   ![মনস্টার শিপ](../../../../translated_images/bn/enemyShip.5df2a822c16650c2.png)
 
 ### ডেভেলপমেন্ট শুরু করার জন্য প্রস্তাবিত ধাপ
 
@@ -408,7 +408,7 @@ const STOP_X = START_X + FORMATION_WIDTH;
 
 শেষ ফলাফলটি এরকম দেখতে হবে:
 
-![কালো স্ক্রিন যেখানে একটি হিরো এবং ৫*৫ দানব রয়েছে](../../../../translated_images/partI-solution.36c53b48c9ffae2a.bn.png)
+![কালো স্ক্রিন যেখানে একটি হিরো এবং ৫*৫ দানব রয়েছে](../../../../translated_images/bn/partI-solution.36c53b48c9ffae2a.png)
 
 ## সমাধান
 

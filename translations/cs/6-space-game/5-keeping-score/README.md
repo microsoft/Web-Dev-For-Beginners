@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Skórovací systém**: Každá zničená nepřátelská loď uděluje 100 bodů (kulatá čísla jsou pro hráče mentálně jednodušší na počítání). Skóre se zobrazuje v levém dolním rohu.
-- **Počet životů**: Váš hrdina začíná se třemi životy – standardní nastavení z raných arkád, které vyvažuje výzvu s hratelností. Každá kolize s nepřítelem stojí jednoho života. Zbývající životy zobrazíme v pravém dolním rohu pomocí ikon lodí ![life image](../../../../translated_images/life.6fb9f50d53ee0413.cs.png).
+- **Počet životů**: Váš hrdina začíná se třemi životy – standardní nastavení z raných arkád, které vyvažuje výzvu s hratelností. Každá kolize s nepřítelem stojí jednoho života. Zbývající životy zobrazíme v pravém dolním rohu pomocí ikon lodí ![life image](../../../../translated_images/cs/life.6fb9f50d53ee0413.png).
 
 ## Jdeme stavět!
 

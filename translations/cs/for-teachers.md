@@ -42,10 +42,10 @@ Tento učební plán obsahuje importovatelné balíčky pro běžné pracovní p
   - Moodle Cloud má omezenou podporu Common Cartridge. Preferujte výše uvedený soubor pro Moodle, který lze také nahrát do Canvas.
   - Po importu zkontrolujte moduly, termíny odevzdání a nastavení kvízů, aby odpovídaly vašemu rozvrhu.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.cs.png)
+![Moodle](../../translated_images/cs/moodle.94eb93d714a50cb2.png)
 > Učební plán v prostředí Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.cs.png)
+![Canvas](../../translated_images/cs/canvas.fbd605ff8e5b8aff.png)
 > Učební plán v prostředí Canvas
 
 ### Použití úložiště přímo (bez Classroom)

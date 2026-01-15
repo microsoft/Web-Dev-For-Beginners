@@ -292,7 +292,7 @@ Nejdříve si ukažme, co se stane při základním odeslání formuláře:
 2. Sledujte změny v adresním řádku prohlížeče
 3. Všimněte si, jak se stránka znovu načte a data jsou v URL
 
-![Screenshot změny URL v prohlížeči po kliknutí na tlačítko Registrace](../../../../translated_images/click-register.e89a30bf0d4bc9ca.cs.png)
+![Screenshot změny URL v prohlížeči po kliknutí na tlačítko Registrace](../../../../translated_images/cs/click-register.e89a30bf0d4bc9ca.png)
 
 ### Porovnání HTTP metod
 
@@ -346,7 +346,7 @@ Nakonfigurujme váš registrační formulář tak, aby správně komunikoval s b
 2. **Klikněte** na tlačítko "Vytvořit účet"
 3. **Sledujte** odpověď serveru v prohlížeči
 
-![Okno prohlížeče na adrese localhost:5000/api/accounts, zobrazující JSON řetězec s údaji uživatele](../../../../translated_images/form-post.61de4ca1b964d91a.cs.png)
+![Okno prohlížeče na adrese localhost:5000/api/accounts, zobrazující JSON řetězec s údaji uživatele](../../../../translated_images/cs/form-post.61de4ca1b964d91a.png)
 
 **Co byste měli vidět:**
 - **Prohlížeč přesměruje** na URL API endpointu
@@ -609,7 +609,7 @@ async function register() {
 3. **Klikněte** na "Vytvořit účet"
 4. **Sledujte** zprávy v konzoli a zpětnou vazbu uživatele
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.cs.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/cs/browser-console.efaf0b51aaaf6778.png)
 
 **Co byste měli vidět:**
 - **Stav načítání** se objeví na tlačítku odeslání
@@ -783,7 +783,7 @@ Vylepšete svůj registrační formulář robustní validací, která nabízí v
 3. **Zkuste** speciální znaky v poli uživatelského jména
 4. **Zadejte** zápornou částku stavu účtu
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.cs.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/cs/validation-error.8bd23e98d416c22f.png)
 
 **Co uvidíte:**
 - **Prohlížeč zobrazí** nativní validační zprávy
@@ -943,7 +943,7 @@ Zobrazte chybovou zprávu v HTML, pokud uživatel již existuje.
 
 Zde je příklad, jak může finální přihlašovací stránka vypadat po malé úpravě stylů:
 
-![Screenshot přihlašovací stránky po přidání CSS stylů](../../../../translated_images/result.96ef01f607bf856a.cs.png)
+![Screenshot přihlašovací stránky po přidání CSS stylů](../../../../translated_images/cs/result.96ef01f607bf856a.png)
 
 ## Kvíz po přednášce
 

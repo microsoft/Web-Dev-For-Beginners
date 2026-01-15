@@ -112,7 +112,7 @@ Podívejte se na [dokumentaci serverového API](../api/README.md) pro:
 **Očekávaný výsledek:**
 Po dokončení tohoto úkolu by vaše bankovní aplikace měla mít plně funkční funkci „Přidat transakci“, která vypadá a chová se profesionálně:
 
-![Screenshot zobrazující příklad dialogu „Přidat transakci“](../../../../translated_images/dialog.93bba104afeb79f1.cs.png)
+![Screenshot zobrazující příklad dialogu „Přidat transakci“](../../../../translated_images/cs/dialog.93bba104afeb79f1.png)
 
 ## Testování vaší implementace
 

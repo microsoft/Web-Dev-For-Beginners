@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Sistema de pontuação**: Cada nave inimiga destruída concede 100 pontos (números redondos são mais fáceis para os jogadores calcularem mentalmente). A pontuação será exibida no canto inferior esquerdo.
-- **Contador de vidas**: Seu herói começa com três vidas - um padrão estabelecido pelos jogos de arcade antigos para equilibrar desafio e jogabilidade. Cada colisão com um inimigo custa uma vida. Vamos exibir as vidas restantes no canto inferior direito usando ícones de nave ![imagem de vida](../../../../translated_images/life.6fb9f50d53ee0413.br.png).
+- **Contador de vidas**: Seu herói começa com três vidas - um padrão estabelecido pelos jogos de arcade antigos para equilibrar desafio e jogabilidade. Cada colisão com um inimigo custa uma vida. Vamos exibir as vidas restantes no canto inferior direito usando ícones de nave ![imagem de vida](../../../../translated_images/br/life.6fb9f50d53ee0413.png).
 
 ## Vamos Começar!
 

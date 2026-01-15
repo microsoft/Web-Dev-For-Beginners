@@ -112,7 +112,7 @@ Consulte a [documentação da API do servidor](../api/README.md) para:
 **Resultado Esperado:**
 Após concluir esta tarefa, seu aplicativo bancário deve ter um recurso de "Adicionar Transação" totalmente funcional que pareça e se comporte de forma profissional:
 
-![Captura de tela mostrando um exemplo de diálogo "Adicionar transação"](../../../../translated_images/dialog.93bba104afeb79f1.br.png)
+![Captura de tela mostrando um exemplo de diálogo "Adicionar transação"](../../../../translated_images/br/dialog.93bba104afeb79f1.png)
 
 ## Testando Sua Implementação
 

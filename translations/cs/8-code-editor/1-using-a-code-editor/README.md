@@ -182,7 +182,7 @@ Stejně jako telefon Alexandra Grahama Bella propojil vzdálená místa, propoje
 
 Jakmile se vše načte, uvidíte krásně čisté pracovní prostředí, které je navržené tak, aby vás soustředilo na to nejdůležitější – váš kód!
 
-![Výchozí rozhraní VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.cs.png)
+![Výchozí rozhraní VSCode.dev](../../../../translated_images/cs/default-vscode-dev.5d06881d65c1b323.png)
 
 **Prohlídka okolí:**
 - **Activity Bar** (ten pruh vlevo): Hlavní navigace s Průzkumníkem 📁, Vyhledáváním 🔍, Source Control 🌿, Rozšířeními 🧩 a Nastaveními ⚙️
@@ -229,7 +229,7 @@ Perfektní, když začínáte ve VSCode.dev a chcete otevřít konkrétní repoz
 1. Přejděte na [vscode.dev](https://vscode.dev), pokud tam ještě nejste
 2. Na uvítací obrazovce klikněte na tlačítko „Open Remote Repository“
 
-   ![Otevřít vzdálené úložiště](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.cs.png)
+   ![Otevřít vzdálené úložiště](../../../../translated_images/cs/open-remote-repository.bd9c2598b8949e7f.png)
 
 3. Vložte URL libovolného GitHub repozitáře (zkuste třeba: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Stiskněte Enter a sledujte, jak se to načítá!
@@ -238,7 +238,7 @@ Perfektní, když začínáte ve VSCode.dev a chcete otevřít konkrétní repoz
 
 Chcete se cítit jako kouzelník s kódem? Zkuste klávesovou zkratku Ctrl+Shift+P (nebo Cmd+Shift+P na Macu) pro otevření Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.cs.png)
+![Command Palette](../../../../translated_images/cs/palette-menu.4946174e07f42622.png)
 
 **Command Palette je jako vyhledávač na vše, co můžete dělat:**
 - Zadejte „open remote“ a najde vám nástroj pro otevírání repozitářů
@@ -300,7 +300,7 @@ Stejně jako organizace plánů v kanceláři architekta, vytvoření souborů v
 3. Zadejte název souboru včetně příslušné přípony (`style.css`, `script.js`, `index.html`)
 4. Stiskněte Enter pro vytvoření souboru
 
-![Vytváření nového souboru](../../../../translated_images/create-new-file.2814e609c2af9aeb.cs.png)
+![Vytváření nového souboru](../../../../translated_images/cs/create-new-file.2814e609c2af9aeb.png)
 
 **Pravidla pojmenování:**
 - Používejte popisné názvy, které naznačují účel souboru
@@ -318,7 +318,7 @@ Zde začíná opravdová zábava! Editor VSCode.dev je nabitý užitečnými fun
 2. Začněte psát a sledujte, jak vám VSCode.dev pomáhá barvami, návrhy a odhalením chyb
 3. Ukládejte práci pomocí Ctrl+S (Windows/Linux) nebo Cmd+S (Mac) – i když editor ukládá automaticky!
 
-![Úprava souboru ve VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.cs.png)
+![Úprava souboru ve VSCode.dev](../../../../translated_images/cs/edit-a-file.52c0ee665ef19f08.png)
 
 **Co se děje, když kódujete:**
 - Váš kód je krásně barevně zvýrazněný, takže je snadno čitelný
@@ -339,7 +339,7 @@ Stejně jako archeologové vytvářejí detailní záznamy o vrstvách vykopáve
 2. Změněné soubory se zobrazí v sekci „Changes“
 3. Barevné kódování indikuje typ změn: zelená pro přidání, červená pro odstranění
 
-![Zobrazení změn v Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.cs.png)
+![Zobrazení změn v Source Control](../../../../translated_images/cs/working-tree.c58eec08e6335c79.png)
 
 **Ukládání práce (commit workflow):**
 
@@ -431,7 +431,7 @@ Marketplace je opravdu dobře uspořádaný, takže se neztratíte při hledán�
 2. Prohlížejte si nebo vyhledejte něco konkrétního
 3. Klikněte na cokoliv, co vypadá zajímavě, abyste se dozvěděli více
 
-![Rozhraní tržiště rozšíření](../../../../translated_images/extensions.eca0e0c7f59a10b5.cs.png)
+![Rozhraní tržiště rozšíření](../../../../translated_images/cs/extensions.eca0e0c7f59a10b5.png)
 
 **Co tam uvidíte:**
 
@@ -484,7 +484,7 @@ Většina rozšíření nabízí nastavení, která si můžete upravit, aby fun
 3. Vyberte „Extension Settings“ z nabídky
 4. Upravujte nastavení, dokud to nebude vyhovovat vašemu pracovnímu postupu
 
-![Přizpůsobení nastavení rozšíření](../../../../translated_images/extension-settings.21c752ae4f4cdb78.cs.png)
+![Přizpůsobení nastavení rozšíření](../../../../translated_images/cs/extension-settings.21c752ae4f4cdb78.png)
 
 **Běžné věci, které byste mohli chtít upravit:**
 - Jak se váš kód formátuje (záložky vs mezery, délka řádku apod.)
