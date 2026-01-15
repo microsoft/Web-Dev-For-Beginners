@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Quy trình cập nhật trong ứng dụng nhiều trang](../../../../translated_images/vi/mpa.7f7375a1a2d4aa77.png)
+![Quy trình cập nhật trong ứng dụng nhiều trang](../../../../translated_images/vi/mpa.7f7375a1a2d4aa77.webp)
 
 **Tại sao cách tiếp cận này cảm thấy cồng kềnh:**
 - Mỗi lần nhấp chuột đều yêu cầu xây dựng lại toàn bộ trang từ đầu
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Quy trình cập nhật trong ứng dụng một trang](../../../../translated_images/vi/spa.268ec73b41f992c2.png)
+![Quy trình cập nhật trong ứng dụng một trang](../../../../translated_images/vi/spa.268ec73b41f992c2.webp)
 
 **Tại sao SPA cảm thấy tốt hơn:**
 - Chỉ những phần thực sự thay đổi mới được cập nhật (thông minh, đúng không?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Bây giờ khi bạn thử với tài khoản không hợp lệ, bạn sẽ thấy một thông báo lỗi hữu ích ngay trên trang!
 
-![Ảnh chụp màn hình hiển thị thông báo lỗi trong quá trình đăng nhập](../../../../translated_images/vi/login-error.416fe019b36a6327.png)
+![Ảnh chụp màn hình hiển thị thông báo lỗi trong quá trình đăng nhập](../../../../translated_images/vi/login-error.416fe019b36a6327.webp)
 
 #### Bước 4: Tạo Sự Bao Gồm Với Khả Năng Tiếp Cận
 
@@ -958,7 +958,7 @@ Sẵn sàng nâng cấp ứng dụng ngân hàng của bạn lên một tầm ca
 
 Dưới đây là hình ảnh bảng điều khiển được chỉnh sửa:
 
-![Ảnh chụp màn hình ví dụ về kết quả bảng điều khiển sau khi thêm kiểu dáng](../../../../translated_images/vi/screen2.123c82a831a1d14a.png)
+![Ảnh chụp màn hình ví dụ về kết quả bảng điều khiển sau khi thêm kiểu dáng](../../../../translated_images/vi/screen2.123c82a831a1d14a.webp)
 
 Đừng cảm thấy rằng bạn phải làm giống hệt như vậy - hãy sử dụng nó làm nguồn cảm hứng và tạo dấu ấn riêng của bạn!
 

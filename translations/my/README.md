@@ -72,13 +72,13 @@ Azure AI Foundry Discord Community တွင် ပါဝင်ဆောင်�
 
 စတင်ရန် [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) သို့ သွားပါ!
 
-![Background](../../translated_images/my/background.148a8d43afde5730.png)
+![Background](../../translated_images/my/background.148a8d43afde5730.webp)
 
 - အခြေခံမှ RAG အထိ အကြောင်းအရာ များကို ဖွင့်ပြသသည်။
 - GenAI နှင့် ကျွန်ုပ်တို့ ရှေ့ဆောင် app ဖြင့် သမိုင်းပုဂ္ဂိုလ်များနှင့် ဝိုင်းယှဉ် ဆက်သွယ်နိုင်သည်။
 - ပျော်ရွှင်မှုနှင့် စိတ်ဝင်စားဖွယ်ရာ အသံစဉ်၊ သင့်အနေဖြင့် အချိန်ခရီးသွားနေပါသည်။
 
-![character](../../translated_images/my/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/my/character.5c0dd8e067ffd693.webp)
 
 
 ချင်းချင်း သင်ခန်းစာတိုင်းတွင် လေ့ကျင့်ခန်းတစ်ခုကို ပြီးမြောက်စေရန်၊ နောက်တစ်ခုမှာ အသိပညာ စစ်ဆေးမှုတစ်ခုပြုလုပ်ရန်နှင့် မိမိဆိုင်ရာ သင်ယူမှုအကြောင်းအရာများ အတွက် စိန်ခေါ်မှု တစ်ခု ရှိပါသည်-
@@ -115,7 +115,7 @@ Azure AI Foundry Discord Community တွင် ပါဝင်ဆောင်�
 
 သင်ဖန်တီးထားသော Repository မိတ္တူတွင် **Code** ခလုတ်ကို နှိပ်ပြီး **Open with Codespaces** ကို ရွေးချယ်ပါ။ ၎င်းသည် သင်အလုပ်လုပ်ရန် Codespace အသစ် တစ်ခု ဖန်တီးပေးပါလိမ့်မည်။
 
-![Codespace](../../translated_images/my/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/my/createcodespace.0238bbf4d7a8d955.webp)
 
 #### သင်၏ ကွန်ပြူတာတွင် သင်ခန်းစာများကို ပြေးရန်
 

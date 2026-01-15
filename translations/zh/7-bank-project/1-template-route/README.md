@@ -644,7 +644,7 @@ sequenceDiagram
 
 使用 `history.pushState` 创建了新的浏览历史条目。你可以按住浏览器的 *后退按钮* 来查看，如下图所示：
 
-![浏览历史截图](../../../../translated_images/zh/history.7fdabbafa521e064.png)
+![浏览历史截图](../../../../translated_images/zh/history.7fdabbafa521e064.webp)
 
 如果你尝试点击后退几次，你会发现当前 URL 变化了，历史记录也更新了，但显示的模板却没有变化。
 

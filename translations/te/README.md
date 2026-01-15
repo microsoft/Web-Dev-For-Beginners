@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 ప్రారంభించేందుకు సందర్శించండి [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/te/background.148a8d43afde5730.png)
+![Background](../../translated_images/te/background.148a8d43afde5730.webp)
 
 - ప్రాథమికాలు నుంచి RAG వరకు అన్ని అంశాలను కవర్ చేసే పాఠాలు.
 - GenAI మరియు మా సహచర యాప్ ద్వారా చరిత్రాత్మక పాత్రలతో పరస్పర చర్యలు.
 - సరదా మరియు ఆకర్షణీయమైన కథనం, మీరు కాల ప్రయాణంలో ఉన్నట్లవుతుంది!
 
-![character](../../translated_images/te/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/te/character.5c0dd8e067ffd693.webp)
 
 
 ప్రతి పాఠం పూర్తి చేసుకోవడానికి ఒక అసైన్మెంట్, ఒక జ్ఞాన తనిఖీ మరియు ఓ ఛాలెంజ్ కలిగివుంటుంది, ఇవి మీకు వీలుగా నేర్పుతాయి:
@@ -115,7 +115,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 మీ సృష్టించిన ఈ రిపాజిటరీ కాపీ లో **Code** బటన్‌ను క్లిక్ చేసి **Open with Codespaces** ఎంపికను ఎంపిక చేసుకోండి. ఇది మీరు పనిచేయడానికి కొత్త Codespaceను సృష్టిస్తుంది.
 
-![Codespace](../../translated_images/te/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/te/createcodespace.0238bbf4d7a8d955.webp)
 
 #### మీ కంప్యూటర్‌లో స్థానికంగా పాఠ్యాంశం నడపడం
 

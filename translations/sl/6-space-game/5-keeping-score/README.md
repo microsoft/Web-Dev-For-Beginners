@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Sistem točkovanja**: Vsaka uničena sovražna ladja prinese 100 točk (zaokrožene številke so igralcem lažje za mentalni izračun). Rezultat se prikazuje v spodnjem levem kotu.
-- **Števec življenj**: Vaš junak začne s tremi življenji – standard, ki so ga vzpostavile zgodnje arkadne igre za uravnoteženje izziva s igranjem. Vsak srečanje z nasprotnikom stane eno življenje. Preostala življenja bodo prikazana v spodnjem desnem kotu z ikonami ladij ![life image](../../../../translated_images/sl/life.6fb9f50d53ee0413.png).
+- **Števec življenj**: Vaš junak začne s tremi življenji – standard, ki so ga vzpostavile zgodnje arkadne igre za uravnoteženje izziva s igranjem. Vsak srečanje z nasprotnikom stane eno življenje. Preostala življenja bodo prikazana v spodnjem desnem kotu z ikonami ladij ![life image](../../../../translated_images/sl/life.6fb9f50d53ee0413.webp).
 
 ## Začnimo!
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Toegankelijke Webpagina's Maken
 
-![Alles Over Toegankelijkheid](../../../../translated_images/nl/webdev101-a11y.8ef3025c858d897a.png)
+![Alles Over Toegankelijkheid](../../../../translated_images/nl/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

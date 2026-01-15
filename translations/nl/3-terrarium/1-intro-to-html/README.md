@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Introductie tot HTML](../../../../translated_images/nl/webdev101-html.4389c2067af68e98.png)
+![Introductie tot HTML](../../../../translated_images/nl/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, of HyperText Markup Language, is de basis van elke website die je ooit hebt bezocht. Zie HTML als het skelet dat structuur geeft aan webpagina's – het bepaalt waar de inhoud komt, hoe het georganiseerd is en wat elk onderdeel betekent. Terwijl CSS later je HTML "aankleedt" met kleuren en lay-outs, en JavaScript het tot leven brengt met interactiviteit, biedt HTML de essentiële structuur die alles mogelijk maakt.
@@ -88,7 +88,7 @@ Je maakt een speciale map voor je terrariumproject en voegt je eerste HTML-besta
 4. Klik in het Explorer-paneel op het pictogram "New File"
 5. Noem je bestand `index.html`
 
-![VS Code Explorer toont het maken van een nieuw bestand](../../../../translated_images/nl/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer toont het maken van een nieuw bestand](../../../../translated_images/nl/vs-code-index.e2986cf919471eb9.webp)
 
 **Optie 2: Gebruik Terminalcommando's**
 ```bash

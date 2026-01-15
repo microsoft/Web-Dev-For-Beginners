@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![براؤزر اسکیچ نوٹ](../../../../translated_images/ur/browser.60317c9be8b7f84a.jpg)
+![براؤزر اسکیچ نوٹ](../../../../translated_images/ur/browser.60317c9be8b7f84a.webp)
 > اسکیچ نوٹ از [وسیم چگم](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## لیکچر سے پہلے کا کوئز
@@ -79,7 +79,7 @@ mindmap
 
 ✅ **تھوڑا سا تاریخ کے بارے میں**: پہلا براؤزر 'ورلڈ وائڈ ویب' کہلاتا تھا اور اسے سر ٹموتھی برنرز لی نے 1990 میں بنایا تھا۔
 
-![ابتدائی براؤزرز](../../../../translated_images/ur/earlybrowsers.d984b711cdf3a42d.jpg)
+![ابتدائی براؤزرز](../../../../translated_images/ur/earlybrowsers.d984b711cdf3a42d.webp)
 > کچھ ابتدائی براؤزرز، از [کیرن میکگرین](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### براؤزرز ویب مواد کو کیسے پروسیس کرتے ہیں
@@ -198,7 +198,7 @@ quadrantChart
 
 ایکسٹینشن انسٹالیشن کے عمل کو سمجھنا آپ کو صارف کے تجربے کی پیش گوئی کرنے میں مدد دیتا ہے جب لوگ آپ کا ایکسٹینشن انسٹال کرتے ہیں۔ انسٹالیشن کا عمل جدید براؤزرز میں معیاری ہے، انٹرفیس ڈیزائن میں معمولی فرق کے ساتھ۔
 
-![ایج براؤزر کا اسکرین شاٹ جس میں edge://extensions صفحہ اور سیٹنگز مینو کھلا ہوا دکھایا گیا ہے](../../../../translated_images/ur/install-on-edge.d68781acaf0b3d3d.png)
+![ایج براؤزر کا اسکرین شاٹ جس میں edge://extensions صفحہ اور سیٹنگز مینو کھلا ہوا دکھایا گیا ہے](../../../../translated_images/ur/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **اہم**: جب آپ اپنے ایکسٹینشنز کی جانچ کر رہے ہوں تو ڈویلپر موڈ کو آن کریں اور دوسرے اسٹورز سے ایکسٹینشنز کی اجازت دیں۔
 

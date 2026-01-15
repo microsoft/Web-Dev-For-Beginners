@@ -187,7 +187,7 @@ mindmap
 
 我们将创建一个**集中式状态管理**系统。把它想象成一个非常有条理的人掌管所有重要事务：
 
-![显示HTML、用户操作与状态间数据流的架构图](../../../../translated_images/zh/data-flow.fa2354e0908fecc8.png)
+![显示HTML、用户操作与状态间数据流的架构图](../../../../translated_images/zh/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -799,7 +799,7 @@ timeline
 
 完成作业后的示例效果：
 
-![显示“添加交易”对话框示例的截图](../../../../translated_images/zh/dialog.93bba104afeb79f1.png)
+![显示“添加交易”对话框示例的截图](../../../../translated_images/zh/dialog.93bba104afeb79f1.webp)
 
 ---
 

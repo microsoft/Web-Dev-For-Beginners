@@ -112,7 +112,7 @@ Odniesienie do [dokumentacji API serwera](../api/README.md) zawierającej:
 **Oczekiwany rezultat:**  
 Po ukończeniu tego zadania Twoja aplikacja bankowa powinna mieć w pełni funkcjonalną funkcję "Dodaj transakcję", która wygląda i działa profesjonalnie:
 
-![Zrzut ekranu pokazujący przykładowy dialog "Dodaj transakcję"](../../../../translated_images/pl/dialog.93bba104afeb79f1.png)
+![Zrzut ekranu pokazujący przykładowy dialog "Dodaj transakcję"](../../../../translated_images/pl/dialog.93bba104afeb79f1.webp)
 
 ## Testowanie implementacji
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tạo Trang Web Dễ Tiếp Cận
 
-![Tất cả về khả năng tiếp cận](../../../../translated_images/vi/webdev101-a11y.8ef3025c858d897a.png)
+![Tất cả về khả năng tiếp cận](../../../../translated_images/vi/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

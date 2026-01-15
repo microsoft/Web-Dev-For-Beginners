@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Local storage pane](../../../../translated_images/nl/localstorage.472f8147b6a3f8d1.png)
+![Local storage pane](../../../../translated_images/nl/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Beveiligingsoverweging**: In productie-applicaties brengt het opslaan van API-sleutels in LocalStorage beveiligingsrisico's met zich mee, omdat JavaScript toegang heeft tot deze gegevens. Voor leerdoeleinden werkt deze aanpak prima, maar echte applicaties zouden veilige server-side opslag moeten gebruiken voor gevoelige inloggegevens.
 

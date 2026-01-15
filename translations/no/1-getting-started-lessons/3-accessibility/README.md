@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Lage tilgjengelige nettsider
 
-![Alt om tilgjengelighet](../../../../translated_images/no/webdev101-a11y.8ef3025c858d897a.png)
+![Alt om tilgjengelighet](../../../../translated_images/no/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

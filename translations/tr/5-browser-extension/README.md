@@ -23,7 +23,7 @@ Bu uzantı, bir kullanıcı tarafından, bir API anahtarı ve bölge kodu bir fo
 
 ### Katkılar
 
-![yeşil bir tarayıcı uzantısı](../../../translated_images/tr/extension-screenshot.0e7f5bfa110e92e3.png)
+![yeşil bir tarayıcı uzantısı](../../../translated_images/tr/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Katkılar
 

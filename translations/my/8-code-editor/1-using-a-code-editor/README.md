@@ -185,7 +185,7 @@ Alexander Graham Bell ရဲ့ Telephone က အကွာအဝေးကို 
 
 အရာအားလုံး Load လုပ်ပြီးနောက်မှာ သင့် Code ကို အာရုံစိုက်နိုင်အောင် Design လုပ်ထားတဲ့ ရိုးရှင်းပြီး လှပတဲ့ Workspace ကို တွေ့ပါမယ်။
 
-![Default VSCode.dev interface](../../../../translated_images/my/default-vscode-dev.5d06881d65c1b323.png)
+![Default VSCode.dev interface](../../../../translated_images/my/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Neighborhood Tour:**
 - **Activity Bar** (ဘယ်ဘက် Strip): Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩, Settings ⚙️
@@ -233,7 +233,7 @@ VSCode.dev မှာ Fresh Start လုပ်ပြီး Specific Repository �
 1. [vscode.dev](https://vscode.dev) ကို သွားပါ
 2. Welcome Screen မှာ "Open Remote Repository" Button ကို ရှာပြီး Click လုပ်ပါ
 
-   ![Open remote repository](../../../../translated_images/my/open-remote-repository.bd9c2598b8949e7f.png)
+   ![Open remote repository](../../../../translated_images/my/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. GitHub Repository URL ကို Paste လုပ်ပါ (ဒီ URL ကို စမ်းကြည့်ပါ: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Enter ကို နှိပ်ပြီး Magic ဖြစ်တာကို ကြည့်ပါ!
@@ -242,7 +242,7 @@ VSCode.dev မှာ Fresh Start လုပ်ပြီး Specific Repository �
 
 Coding Wizard လို ခံစားချင်ပါသလား? Ctrl+Shift+P (Mac မှာ Cmd+Shift+P) Shortcut ကို စမ်းကြည့်ပါ:
 
-![Command Palette](../../../../translated_images/my/palette-menu.4946174e07f42622.png)
+![Command Palette](../../../../translated_images/my/palette-menu.4946174e07f42622.webp)
 
 **Command Palette က Coding အတွက် Search Engine လိုပါပဲ:**
 - "open remote" လို့ ရိုက်လိုက်တာနဲ့ Repository Opener ကို ရှာပေးပါမယ်
@@ -304,7 +304,7 @@ Architect ရဲ့ Office မှာ Blueprints တွေကို စီမံ�
 3. Appropriate Extension (`style.css`, `script.js`, `index.html`) ပါတဲ့ Filename ကို ရိုက်ပါ
 4. Enter ကို နှိပ်ပြီး File ကို ဖန်တီးပါ
 
-![Creating a new file](../../../../translated_images/my/create-new-file.2814e609c2af9aeb.png)
+![Creating a new file](../../../../translated_images/my/create-new-file.2814e609c2af9aeb.webp)
 
 **Naming Conventions:**
 - File ရဲ့ ရည်ရွယ်ချက်ကို ဖော်ပြတဲ့ Descriptive
@@ -374,7 +374,7 @@ Extension marketplace က အလွန်စီမံထားပြီး သ�
 2. Browse လုပ်ပါ သို့မဟုတ် အထူးတစ်ခုခုကို ရှာဖွေပါ
 3. စိတ်ဝင်စားစရာကောင်းတဲ့ အရာကို နှိပ်ပြီး အသေးစိတ်ကို ကြည့်ပါ
 
-![Extension marketplace interface](../../../../translated_images/my/extensions.eca0e0c7f59a10b5.png)
+![Extension marketplace interface](../../../../translated_images/my/extensions.eca0e0c7f59a10b5.webp)
 
 **အဲဒီမှာ တွေ့ရမှာ:**
 
@@ -427,7 +427,7 @@ Extension အများစုမှာ သင့် workflow အလိုက�
 3. Dropdown မှ "Extension Settings" ကို ရွေးပါ
 4. သင့် workflow အလိုက် အဆင်ပြေတဲ့အထိ ညှိပါ
 
-![Customizing extension settings](../../../../translated_images/my/extension-settings.21c752ae4f4cdb78.png)
+![Customizing extension settings](../../../../translated_images/my/extension-settings.21c752ae4f4cdb78.webp)
 
 **သင့်အနေနဲ့ ညှိချင်နိုင်တဲ့ အရာများ:**
 - Code formatting (tabs vs spaces, line length, စသည်တို့)

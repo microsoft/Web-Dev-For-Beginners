@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basis: Methoden en Functies
 
-![JavaScript Basis - Functies](../../../../translated_images/nl/webdev101-js-functions.be049c4726e94f8b.png)
+![JavaScript Basis - Functies](../../../../translated_images/nl/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

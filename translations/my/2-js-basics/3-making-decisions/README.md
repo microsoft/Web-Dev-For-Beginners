@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript အခြေခံ: ဆုံးဖြတ်ချက်များလုပ်ခြင်း
 
-![JavaScript အခြေခံ - ဆုံးဖြတ်ချက်များလုပ်ခြင်း](../../../../translated_images/my/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScript အခြေခံ - ဆုံးဖြတ်ချက်များလုပ်ခြင်း](../../../../translated_images/my/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 

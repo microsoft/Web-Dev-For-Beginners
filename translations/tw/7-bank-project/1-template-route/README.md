@@ -644,7 +644,7 @@ sequenceDiagram
 
 使用 `history.pushState` 會在瀏覽器導覽歷史新增紀錄。你可以長按瀏覽器的 *後退鍵* 查看，應該會顯示類似以下內容：
 
-![Screenshot of navigation history](../../../../translated_images/tw/history.7fdabbafa521e064.png)
+![Screenshot of navigation history](../../../../translated_images/tw/history.7fdabbafa521e064.webp)
 
 若嘗試點擊後退鍵幾次，你會看到 URL 變更且歷史紀錄更新，但畫面模板不變。
 

@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Panimula sa CSS](../../../../translated_images/tl/webdev101-css.3f7af5991bf53a20.png)
+![Panimula sa CSS](../../../../translated_images/tl/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Naalala mo ba kung gaano kasimple ang hitsura ng iyong HTML terrarium? Sa CSS, binabago natin ang simpleng istruktura na iyon upang maging mas kaakit-akit sa paningin.
@@ -205,7 +205,7 @@ body {
 
 Buksan ang developer tools ng iyong browser (F12), pumunta sa Elements tab, at i-inspect ang iyong `<h1>` element. Makikita mo na namamana nito ang font family mula sa body:
 
-![namana na font](../../../../translated_images/tl/1.cc07a5cbe114ad1d.png)
+![namana na font](../../../../translated_images/tl/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Experiment Time**: Subukang mag-set ng iba pang inheritable properties sa `<body>` tulad ng `color`, `line-height`, o `text-align`. Ano ang nangyayari sa iyong heading at iba pang elemento?
 
@@ -599,7 +599,7 @@ Handa ka na bang pagandahin ang iyong terrarium gamit ang realistic glass reflec
 
 Gagawa ka ng subtle highlights na ginagaya kung paano nagre-reflect ang ilaw sa glass surfaces. Ang approach na ito ay kahalintulad ng paraan ng mga pintor noong Renaissance tulad ni Jan van Eyck na gumamit ng ilaw at reflection upang gawing three-dimensional ang painted glass. Narito ang layunin mo:
 
-![finished terrarium](../../../../translated_images/tl/terrarium-final.2f07047ffc597d0a.png)
+![finished terrarium](../../../../translated_images/tl/terrarium-final.2f07047ffc597d0a.webp)
 
 **Ang iyong hamon:**
 - **Gumawa** ng subtle white o light-colored oval shapes para sa glass reflections

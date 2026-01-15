@@ -25,7 +25,7 @@ journey
       Enhance accessibility: 5: Student
       Build terrarium: 5: Student
 ```
-![Utangulizi wa HTML](../../../../translated_images/sw/webdev101-html.4389c2067af68e98.png)
+![Utangulizi wa HTML](../../../../translated_images/sw/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, au HyperText Markup Language, ni msingi wa kila tovuti uliyoitembelea. Fikiria HTML kama mfupa wa mifupa unaotoa muundo kwa kurasa za wavuti – inaeleza wapi maudhui yanapaswa kuwekwa, jinsi yanavyopangwa, na kila kipande kinachowakilisha nini. Ingawa CSS baadaye itafunika HTML yako kwa rangi na mpangilio, na JavaScript itakuleta uhai kupitia mwingiliano, HTML hutoa muundo muhimu unaofanya kila kitu kingine kuwa chawezekana.
@@ -86,7 +86,7 @@ Utaunda folda maalum kwa ajili ya mradi wako wa terrarium na kuongeza faili yako
 4. Katika dirisha la Explorer, bofya ikoni ya "New File"
 5. Panga faili yako `index.html`
 
-![Msafiri wa VS Code unaonyesha uundaji wa faili mpya](../../../../translated_images/sw/vs-code-index.e2986cf919471eb9.png)
+![Msafiri wa VS Code unaonyesha uundaji wa faili mpya](../../../../translated_images/sw/vs-code-index.e2986cf919471eb9.webp)
 
 **Chaguo 2: Kutumia Amri za Terminal**
 ```bash

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript ప్రాథమికాలు: శ్రేణులు మరియు పునరావృతాలు
 
-![JavaScript ప్రాథమికాలు - శ్రేణులు](../../../../translated_images/te/webdev101-js-arrays.439d7528b8a29455.png)
+![JavaScript ప్రాథమికాలు - శ్రేణులు](../../../../translated_images/te/webdev101-js-arrays.439d7528b8a29455.webp)
 > స్కెచ్నోట్ [టొమోమీ ఇమురా](https://twitter.com/girlie_mac) ద్వారా
 
 ```mermaid

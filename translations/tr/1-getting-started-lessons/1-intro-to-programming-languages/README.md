@@ -17,7 +17,7 @@ Bak, şu anda programlama gözünü korkutuyorsa seni tamamen anlıyorum. Ben il
 
 Bugün, modern web geliştirmeyi sadece mümkün kılmakla kalmayıp, aynı zamanda ciddi anlamda bağımlılık yapan inanılmaz araçları keşfedeceğiz. Netflix, Spotify ve en sevdiğin bağımsız uygulama stüdyosundaki geliştiricilerin her gün kullandığı tam olarak aynı editörler, tarayıcılar ve iş akışlarından bahsediyorum. Ve işte seni mutlu dans ettirecek kısım: Bu profesyonel düzeydeki, endüstri standardı araçların çoğu tamamen ücretsiz!
 
-![Programlama Giriş](../../../../translated_images/tr/webdev101-programming.d6e3f98e61ac4bff.png)
+![Programlama Giriş](../../../../translated_images/tr/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

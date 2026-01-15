@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Hivi ndivyo mradi wako utakavyoonekana umemalizika:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/sw/screenshot.0a1ee0d123df681b.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/sw/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Safari Yako ya Kujifunza Kupitia Maendeleo ya Programu za AI
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Kanuni Msingi**: Maendeleo ya programu za AI yanachanganya ujuzi wa maendeleo ya wavuti wa kawaida na muunganisho wa huduma za AI, kuunda programu za akili zinazohisi kuwa za asili na zinazojibu watumiaji vizuri.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/sw/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/sw/playground.d2b927122224ff8f.webp)
 
 **Hapa ni kinachofanya playground kuwa muhimu:**
 - **Jaribu** mifano tofauti ya AI kama GPT-4o-mini, Claude, na mingine (zote ni bure!)
@@ -199,7 +199,7 @@ mindmap
 
 Baada ya kucheza kidogo, bonyeza kichupo cha "Code" na chagua lugha yako ya programu kupata msimbo wa utekelezaji utakao hitajiwa.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/sw/playground-choice.1d23ba7d407f4758.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/sw/playground-choice.1d23ba7d407f4758.webp)
 
 ## Kuanzisha Muunganisho wa Backend wa Python
 
@@ -2351,14 +2351,14 @@ Unataka kujaribu mradi huu katika mazingira ya maendeleo ya wingu? GitHub Codesp
 - **Tembelea** hazina ya [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Bonyeza** "Use this template" juu kulia (hakikisha umeingia kwenye GitHub)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/sw/template.67ad477109d29a2b.png)  
+![Create from template interface showing the green "Use this template" button](../../../translated_images/sw/template.67ad477109d29a2b.webp)  
 
 **Hatua 2: Anzisha Codespaces**  
 - **Fungua** hazina uliyounda hivi karibuni  
 - **Bonyeza** kitufe cha kijani "Code" na chagua "Codespaces"  
 - **Chagua** "Create codespace on main" kuanzisha mazingira yako ya maendeleo  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/sw/codespace.bcecbdf5d2747d3d.png)  
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/sw/codespace.bcecbdf5d2747d3d.webp)  
 
 **Hatua 3: Usanidi wa Mazingira**  
 Mara wakati Codespace yako ianzishwa, utakuwa na:  

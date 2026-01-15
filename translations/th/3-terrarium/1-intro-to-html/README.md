@@ -25,7 +25,7 @@ journey
       เพิ่มการเข้าถึง: 5: Student
       สร้างสวนพฤกษา: 5: Student
 ```
-![Introduction to HTML](../../../../translated_images/th/webdev101-html.4389c2067af68e98.png)
+![Introduction to HTML](../../../../translated_images/th/webdev101-html.4389c2067af68e98.webp)
 > สเก็ตช์โน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML หรือที่เรียกว่า HyperText Markup Language คือรากฐานของเว็บไซต์ทุกเว็บไซต์ที่คุณเคยเยี่ยมชม ลองคิดว่า HTML เป็นโครงกระดูกที่ให้องค์ประกอบและโครงสร้างแก่หน้าเว็บ – มันกำหนดว่าคอนเทนต์อยู่ที่ไหน จัดระเบียบอย่างไร และแต่ละส่วนแทนความหมายอะไร ในขณะที่ CSS จะเป็นการ "แต่งตัว" ให้ HTML ของคุณด้วยสีสันและการจัดวาง และ JavaScript จะทำให้มันมีชีวิตชีวาด้วยความโต้ตอบ HTML จะให้โครงสร้างที่จำเป็นซึ่งทำให้ทุกอย่างเป็นไปได้
@@ -86,7 +86,7 @@ mindmap
 4. ในแผง Explorer คลิกไอคอน "New File"
 5. ตั้งชื่อไฟล์ของคุณว่า `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/th/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/th/vs-code-index.e2986cf919471eb9.webp)
 
 **ตัวเลือกที่ 2: ใช้คำสั่ง Terminal**
 ```bash

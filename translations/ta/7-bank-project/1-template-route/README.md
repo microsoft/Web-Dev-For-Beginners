@@ -644,7 +644,7 @@ sequenceDiagram
 
 `history.pushState` உலாவி வரலாறு பட்டியலில் புதிய பதிவுகளை உருவாக்குகிறது. உலாவியின் *பின் பொத்தானைப்* சில நிலைகளுக்கு நீட்டிப்பதன் மூலம் நீங்கள் இதைச் சரிபார்க்கலாம், இதுபோல காண்பிக்கும்:
 
-![Screenshot of navigation history](../../../../translated_images/ta/history.7fdabbafa521e064.png)
+![Screenshot of navigation history](../../../../translated_images/ta/history.7fdabbafa521e064.webp)
 
 பின் பொத்தானை சில தடவைகள் கிளிக் செய்ய முயன்றால், தற்போதைய URL மாற்றப்பட்டாலும், வரலாறு புதுப்பிக்கப்பட்டாலும் அதே template காட்டப்படும்.
 

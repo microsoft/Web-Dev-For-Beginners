@@ -17,7 +17,7 @@ Se, jeg skjønner helt hvis programmering føles skremmende akkurat nå. Da jeg 
 
 I dag skal vi utforske de utrolige verktøyene som gjør moderne webutvikling ikke bare mulig, men virkelig vanedannende. Jeg snakker om de samme redaktørene, nettleserne og arbeidsflytene som utviklere hos Netflix, Spotify og ditt favoritt indie app-studio bruker hver eneste dag. Og her er delen som får deg til å danse av glede: de fleste av disse profesjonelle, industristandard verktøyene er helt gratis!
 
-![Intro Programming](../../../../translated_images/no/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/no/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

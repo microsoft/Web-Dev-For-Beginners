@@ -23,7 +23,7 @@ Ang extension na ito ay maaaring tawagin ng isang user kapag ang isang API key a
 
 ### Mga Kredito
 
-![isang berdeng browser extension](../../../translated_images/tl/extension-screenshot.0e7f5bfa110e92e3.png)
+![isang berdeng browser extension](../../../translated_images/tl/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Mga Kredito
 

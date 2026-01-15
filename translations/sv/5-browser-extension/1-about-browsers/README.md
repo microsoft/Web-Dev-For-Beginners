@@ -25,7 +25,7 @@ journey
       Felsök problem: 4: Student
       Förbättra upplevelsen: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/sv/browser.60317c9be8b7f84a.jpg)
+![Browser sketchnote](../../../../translated_images/sv/browser.60317c9be8b7f84a.webp)
 > Sketchnote av [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Förföreläsningsquiz
@@ -77,7 +77,7 @@ Denna process speglar hur den första webbläsaren, WorldWideWeb, designades av 
 
 ✅ **Lite historia**: Den första webbläsaren kallades "WorldWideWeb" och skapades av Sir Timothy Berners-Lee 1990.
 
-![early browsers](../../../../translated_images/sv/earlybrowsers.d984b711cdf3a42d.jpg)
+![early browsers](../../../../translated_images/sv/earlybrowsers.d984b711cdf3a42d.webp)
 > Några tidiga webbläsare, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Hur webbläsare bearbetar webbinnehåll
@@ -194,7 +194,7 @@ quadrantChart
 
 Att förstå installationsprocessen för tillägg hjälper dig att förutse användarupplevelsen när personer installerar ditt tillägg. Installationsprocessen är standardiserad över moderna webbläsare med små skillnader i gränssnittsdesign.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sv/install-on-edge.d68781acaf0b3d3d.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sv/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Viktigt**: Se till att aktivera utvecklarläge och tillåt tillägg från andra butiker när du testar dina egna tillägg.
 
@@ -308,10 +308,10 @@ Detta följer principen om progressiv avslöjande som använts i gränssnittsdes
 ### Översikt av tilläggsvyer
 
 **Inställningsvy** – Konfiguration för första gången:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sv/1.b6da8c1394b07491.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sv/1.b6da8c1394b07491.webp)
 
 **Resultatvy** – Visning av koldioxidavtrycksdata:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sv/2.1dae52ff08042246.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sv/2.1dae52ff08042246.webp)
 
 ### Bygga konfigurationsformuläret
 

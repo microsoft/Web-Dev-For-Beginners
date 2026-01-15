@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Trong dự án này, bạn sẽ học cách xây dựng một ngân hàng giả tưởng. Những bài học này bao gồm hướng dẫn về cách thiết kế ứng dụng web và cung cấp các tuyến đường, xây dựng biểu mẫu, quản lý trạng thái, và lấy dữ liệu từ API để truy xuất thông tin của ngân hàng.
 
-| ![Screen1](../../../translated_images/vi/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/vi/screen2.123c82a831a1d14a.png) |
+| ![Screen1](../../../translated_images/vi/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/vi/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Các bài học

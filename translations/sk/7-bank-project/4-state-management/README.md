@@ -187,7 +187,7 @@ Ako konštrukcia Titanicu s oddeleniami, ktorá vyzerala pevne, kým sa nezalial
 
 Namiesto pobehovania za vlastným chvostom vytvoríme **centralizovaný systém správy stavu**. Predstavte si to ako mať jedného veľmi organizovaného človeka, ktorý má na starosti všetko dôležité:
 
-![Schéma zobrazujúca datové prúdy medzi HTML, užívateľskými akciami a stavom](../../../../translated_images/sk/data-flow.fa2354e0908fecc8.png)
+![Schéma zobrazujúca datové prúdy medzi HTML, užívateľskými akciami a stavom](../../../../translated_images/sk/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Táto výzva vám pomôže myslieť ako profesionálny vývojár, ktorý zvažuj
 
 Tu je príklad výsledku po dokončení zadania:
 
-![Screenshot zobrazujúci príklad dialógu „Pridať transakciu“](../../../../translated_images/sk/dialog.93bba104afeb79f1.png)
+![Screenshot zobrazujúci príklad dialógu „Pridať transakciu“](../../../../translated_images/sk/dialog.93bba104afeb79f1.webp)
 
 ---
 

@@ -25,7 +25,7 @@ journey
       提升无障碍性: 5: Student
       建造生态瓶: 5: Student
 ```
-![HTML 入门](../../../../translated_images/zh/webdev101-html.4389c2067af68e98.png)
+![HTML 入门](../../../../translated_images/zh/webdev101-html.4389c2067af68e98.webp)
 > 速记图由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 HTML，即超文本标记语言，是你访问过的每个网站的基础。把 HTML 想象成网页的骨架 —— 它定义了内容的位置、组织方式以及每个部分的含义。虽然 CSS 会在之后用颜色和布局“装饰”你的 HTML，JavaScript 会通过交互让它“活起来”，但 HTML 则提供了实现一切的基本结构。
@@ -86,7 +86,7 @@ mindmap
 4. 在资源管理器面板点击“新建文件”图标  
 5. 将你的文件命名为 `index.html`
 
-![VS Code 资源管理器显示新建文件](../../../../translated_images/zh/vs-code-index.e2986cf919471eb9.png)
+![VS Code 资源管理器显示新建文件](../../../../translated_images/zh/vs-code-index.e2986cf919471eb9.webp)
 
 **选项 2：使用终端命令**  
 ```bash

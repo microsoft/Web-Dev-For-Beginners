@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Update workflow in een multi-page applicatie](../../../../translated_images/nl/mpa.7f7375a1a2d4aa77.png)
+![Update workflow in een multi-page applicatie](../../../../translated_images/nl/mpa.7f7375a1a2d4aa77.webp)
 
 **Waarom deze aanpak onhandig aanvoelde:**
 - Elke klik betekende dat de hele pagina opnieuw moest worden opgebouwd
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Update workflow in een single-page applicatie](../../../../translated_images/nl/spa.268ec73b41f992c2.png)
+![Update workflow in een single-page applicatie](../../../../translated_images/nl/spa.268ec73b41f992c2.webp)
 
 **Waarom SPA's zoveel beter aanvoelen:**
 - Alleen de delen die daadwerkelijk zijn veranderd worden bijgewerkt (slim, toch?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Nu, wanneer je test met een ongeldig account, zie je een nuttige foutmelding direct op de pagina!
 
-![Screenshot van de foutmelding die wordt weergegeven tijdens het inloggen](../../../../translated_images/nl/login-error.416fe019b36a6327.png)
+![Screenshot van de foutmelding die wordt weergegeven tijdens het inloggen](../../../../translated_images/nl/login-error.416fe019b36a6327.webp)
 
 #### Stap 4: Inclusief zijn met toegankelijkheid
 
@@ -961,7 +961,7 @@ Klaar om je bankingapp naar een hoger niveau te tillen? Laten we ervoor zorgen d
 
 Hier is hoe een gepolijst dashboard eruit zou kunnen zien:
 
-![Screenshot van een voorbeeldresultaat van het dashboard na styling](../../../../translated_images/nl/screen2.123c82a831a1d14a.png)
+![Screenshot van een voorbeeldresultaat van het dashboard na styling](../../../../translated_images/nl/screen2.123c82a831a1d14a.webp)
 
 Voel je niet verplicht om dit precies na te maken - gebruik het als inspiratie en maak er je eigen versie van!
 

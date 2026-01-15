@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # அணுகக்கூடிய வலைப் பக்கங்களை உருவாக்குதல்
 
-![அணுகல் பற்றி அனைத்தும்](../../../../translated_images/ta/webdev101-a11y.8ef3025c858d897a.png)
+![அணுகல் பற்றி அனைத்தும்](../../../../translated_images/ta/webdev101-a11y.8ef3025c858d897a.webp)
 > [Tomomi Imura](https://twitter.com/girlie_mac) அவர்களின் ஸ்கெட்ச்நோட்
 
 ```mermaid

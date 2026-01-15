@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Elektrik kullanımını izlemek için tmrow CO2 Signal API'sini kullanarak, bölgenizdeki elektrik tüketiminin yoğunluğuna dair tarayıcınızda uyarılar almanızı sağlayan bir tarayıcı uzantısı oluşturun. Bu uzantıyı kullanmak, bu bilgiler doğrultusunda aktivitelerinizi değerlendirmenize yardımcı olacaktır.
 
-![tarayıcı uzantısı ekran görüntüsü](../../../../../translated_images/tr/extension-screenshot.0e7f5bfa110e92e3.png)
+![tarayıcı uzantısı ekran görüntüsü](../../../../../translated_images/tr/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Başlangıç
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge tarayıcısına yüklemek için, tarayıcının sağ üst köşesindeki 'üç nokta' menüsünü kullanarak Uzantılar panelini bulun. Buradan 'Load Unpacked' seçeneğini seçerek yeni bir uzantı yükleyin. İstendiğinde 'dist' klasörünü açın ve uzantı yüklenecektir. Kullanabilmek için CO2 Signal API için bir API anahtarına ihtiyacınız olacak ([buradan e-posta ile alın](https://www.co2signal.com/) - bu sayfadaki kutuya e-posta adresinizi girin) ve [Elektrik Haritası](https://www.electricitymap.org/map) ile uyumlu olan bölgenize ait [kod](http://api.electricitymap.org/v3/zones) (örneğin, Boston'da 'US-NEISO' kullanıyorum).
 
-![yükleniyor](../../../../../translated_images/tr/install-on-edge.78634f02842c4828.png)
+![yükleniyor](../../../../../translated_images/tr/install-on-edge.78634f02842c4828.webp)
 
 API anahtarı ve bölge bilgisi uzantı arayüzüne girildikten sonra, tarayıcı uzantı çubuğundaki renkli nokta, bölgenizdeki enerji tüketimini yansıtacak şekilde değişir ve size uygun aktiviteler hakkında önerilerde bulunur. Bu 'nokta' sisteminin konsepti, [California için Energy Lollipop tarayıcı uzantısından](https://energylollipop.com/) ilham alınmıştır.
 

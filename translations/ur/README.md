@@ -60,13 +60,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 شروع کرنے کے لیے وزٹ کریں [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/ur/background.148a8d43afde5730.png)
+![Background](../../translated_images/ur/background.148a8d43afde5730.webp)
 
 - اسباق بنیادی باتوں سے لے کر RAG تک سب کچھ کور کرتے ہیں۔  
 - GenAI اور ہمارے معاون ایپ کے ذریعے تاریخی شخصیات سے بات چیت کریں۔  
 - دلچسپ اور مشغول نگارش، آپ وقت کے سفر پر ہوں گے!
 
-![character](../../translated_images/ur/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/ur/character.5c0dd8e067ffd693.webp)
 
 
 ہر سبق میں ایک اسائنمنٹ، نالج چیک اور چیلنج شامل ہے تاکہ آپ اس طرح کے موضوعات پر سیکھنے میں رہنمائی کریں:  
@@ -103,7 +103,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 اپنی بنائی گئی ریپوزیٹری میں، **Code** بٹن پر کلک کریں اور **Open with Codespaces** منتخب کریں۔ یہ آپ کے لیے ایک نیا Codespace بنائے گا جہاں آپ کام کر سکتے ہیں۔
 
-![Codespace](../../translated_images/ur/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/ur/createcodespace.0238bbf4d7a8d955.webp)
 
 #### اپنے کمپیوٹر پر نصاب لوکل چلانا
 

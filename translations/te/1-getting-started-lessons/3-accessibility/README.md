@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ప్రాప్యత కలిగిన వెబ్‌పేజీల తయారీ
 
-![అమ్సర రీత్యా అన్ని సమాచారం](../../../../translated_images/te/webdev101-a11y.8ef3025c858d897a.png)
+![అమ్సర రీత్యా అన్ని సమాచారం](../../../../translated_images/te/webdev101-a11y.8ef3025c858d897a.webp)
 > స్కెచ్‌నోట్ రచయిత [టొమోమి ఇమురా](https://twitter.com/girlie_mac)
 
 ```mermaid

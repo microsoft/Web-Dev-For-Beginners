@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 Zo ziet je voltooide project eruit:
 
-![Chat-app interface die een gesprek toont tussen gebruiker en AI-assistent](../../../translated_images/nl/screenshot.0a1ee0d123df681b.png)
+![Chat-app interface die een gesprek toont tussen gebruiker en AI-assistent](../../../translated_images/nl/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Jouw leertraject door AI-toepassingsontwikkeling
 
@@ -194,7 +194,7 @@ mindmap
 
 **Kernprincipe**: AI-toepassingsontwikkeling combineert traditionele webontwikkelingsvaardigheden met AI-dienstintegratie, waardoor intelligente toepassingen ontstaan die natuurlijk en responsief aanvoelen voor gebruikers.
 
-![GitHub Models AI Playground interface met modelselectie en testgebied](../../../translated_images/nl/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface met modelselectie en testgebied](../../../translated_images/nl/playground.d2b927122224ff8f.webp)
 
 **Waarom de playground zo handig is:**
 - **Probeer** verschillende AI-modellen zoals GPT-4o-mini, Claude en anderen (allemaal gratis!)
@@ -204,7 +204,7 @@ mindmap
 
 Zodra je wat hebt geëxperimenteerd, klik je gewoon op het tabblad "Code" en kies je je programmeertaal om de implementatiecode te krijgen die je nodig hebt.
 
-![Playground keuze toont codegeneratie-opties voor verschillende programmeertalen](../../../translated_images/nl/playground-choice.1d23ba7d407f4758.png)
+![Playground keuze toont codegeneratie-opties voor verschillende programmeertalen](../../../translated_images/nl/playground-choice.1d23ba7d407f4758.webp)
 
 ## Het instellen van de Python backend-integratie
 
@@ -2365,14 +2365,14 @@ Wil je dit project uitproberen in een cloudontwikkelingsomgeving? GitHub Codespa
 - **Ga naar** de [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Klik** op "Use this template" in de rechterbovenhoek (zorg ervoor dat je bent ingelogd op GitHub)  
 
-![Interface voor het maken van een template met de groene knop "Use this template"](../../../translated_images/nl/template.67ad477109d29a2b.png)  
+![Interface voor het maken van een template met de groene knop "Use this template"](../../../translated_images/nl/template.67ad477109d29a2b.webp)  
 
 **Stap 2: Codespaces Starten**  
 - **Open** je nieuw aangemaakte repository  
 - **Klik** op de groene knop "Code" en selecteer "Codespaces"  
 - **Kies** "Create codespace on main" om je ontwikkelomgeving te starten  
 
-![Interface voor het maken van een codespace met opties voor het starten van een cloudontwikkelingsomgeving](../../../translated_images/nl/codespace.bcecbdf5d2747d3d.png)  
+![Interface voor het maken van een codespace met opties voor het starten van een cloudontwikkelingsomgeving](../../../translated_images/nl/codespace.bcecbdf5d2747d3d.webp)  
 
 **Stap 3: Omgevingsconfiguratie**  
 Zodra je Codespace is geladen, heb je toegang tot:  

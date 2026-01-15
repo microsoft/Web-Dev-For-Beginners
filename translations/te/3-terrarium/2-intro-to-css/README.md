@@ -29,7 +29,7 @@ journey
       ప్రతిస్పందనాత్మక డిజైన్: 5: Student
       గాజు ప్రతిబింబాలు: 5: Student
 ```
-![Introduction to CSS](../../../../translated_images/te/webdev101-css.3f7af5991bf53a20.png)
+![Introduction to CSS](../../../../translated_images/te/webdev101-css.3f7af5991bf53a20.webp)
 > స్కెచ్నోట్ చేసిన [Tomomi Imura](https://twitter.com/girlie_mac)
 
 మీ HTML టెర్రేరియం ఎంత సాధారణంగా కనిపించిందో గుర్తుందా? CSS ఆ సరళమైన నిర్మాణాన్ని దృశ్యంగా ఆకర్షణీయంగా మార్చే స్థానం.
@@ -202,7 +202,7 @@ body {
 
 మీ బ్రౌజర్ డెవలపర్ టూల్స్ (F12) తెరవండి, Elements ట్యాబ్ కు వెళ్లి `<h1>` ఎలిమెంట్ ని ఇన్స్పెక్ట్ చేయండి. అది బాడీ నుండి ఫాంట్ ఫ్యామిలీని వారసత్వంగా పొందుతుందని చూడొచ్చు:
 
-![inherited font](../../../../translated_images/te/1.cc07a5cbe114ad1d.png)
+![inherited font](../../../../translated_images/te/1.cc07a5cbe114ad1d.webp)
 
 ✅ **ప్రయోగ సమయం**: మీ `<body>` లో మరో వారసత్వ లక్షణాలను సెట్ చేయండి, ఉదాహరణకు `color`, `line-height`, లేదా `text-align`. మీ హెడ్డింగ్ మరియు ఇతర ఎలిమెంట్లకు ఏమి జరుగుతుందో గమనించండి.
 
@@ -594,7 +594,7 @@ flowchart LR
 
 మీరు గాజు ఉపరితలాలపై వెలుతురు ప్రతిబింబాలను కలిగించే సూక్ష్మ హైలైట్లను సృష్టిస్తారు. ఇది రెనెసెన్స్ పెయింటర్స్ జాన్ వాన్ ఎయ్క్ లాంటి వారు గాజు పెయింటింగ్లను 3D లాగా చూపించడానికి ఉపయోగించిన పరిస్థితిని అనుకరిస్తుంది. మీరు లక్ష్యం చేసుకునేది ఇలాగే ఉంది:
 
-![finished terrarium](../../../../translated_images/te/terrarium-final.2f07047ffc597d0a.png)
+![finished terrarium](../../../../translated_images/te/terrarium-final.2f07047ffc597d0a.webp)
 
 **మీ ఛాలెంజ్:**
 - గాజు ప్రతిబింబాల కోసం సూక్ష్మ తెల్లటి లేదా ప్రకాశవంత రంగు ఒవల్ ఆకారాలను సృష్టించండి

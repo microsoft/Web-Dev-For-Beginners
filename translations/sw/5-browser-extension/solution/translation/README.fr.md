@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kwa kutumia API ya C02 Signal kutoka tmrow kufuatilia matumizi ya umeme, tengeneza ugani wa kivinjari ili uweze kupata ukumbusho moja kwa moja kwenye kivinjari chako kuhusu matumizi ya umeme katika eneo lako. Kutumia ugani huu wa dharura kutakusaidia kufanya maamuzi kuhusu shughuli zako kwa kuzingatia taarifa hizi.
 
-![picha ya ugani](../../../../../translated_images/sw/extension-screenshot.0e7f5bfa110e92e3.png)
+![picha ya ugani](../../../../../translated_images/sw/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kuanza
 
@@ -31,7 +31,7 @@ npm run build
 
 Ili kusakinisha kwenye Edge, tumia menyu ya 'alama tatu' kwenye kona ya juu kulia ya kivinjari ili kupata paneli ya Ugani. Kutoka hapo, chagua 'Pakia ugani usiobanwa' ili kupakia ugani mpya. Fungua folda ya 'dist' unapoulizwa, na ugani utapakiwa. Ili kuitumia, utahitaji ufunguo wa API kwa API ya CO2 Signal ([pata moja hapa kwa barua pepe](https://www.co2signal.com/) - ingiza barua pepe yako kwenye kisanduku kwenye ukurasa huu) na [msimbo wa eneo lako](http://api.electricitymap.org/v3/zones) unaolingana na [Ramani ya Umeme](https://www.electricitymap.org/map) (kwa mfano, huko Boston, mimi hutumia 'US-NEISO').
 
-![usakinishaji](../../../../../translated_images/sw/install-on-edge.78634f02842c4828.png)
+![usakinishaji](../../../../../translated_images/sw/install-on-edge.78634f02842c4828.webp)
 
 Baada ya kuingiza ufunguo wa API na eneo kwenye kiolesura cha ugani, nukta ya rangi kwenye upau wa ugani wa kivinjari inapaswa kubadilika ili kuonyesha matumizi ya nishati ya eneo lako na kukupa kiashiria kuhusu shughuli zinazotumia nishati ambazo zinafaa kufanywa. Wazo nyuma ya mfumo huu wa 'nukta' lilinipa msukumo kutoka kwa [ugani wa Energy Lollipop](https://energylollipop.com/) kwa uzalishaji wa hewa chafu huko California.
 

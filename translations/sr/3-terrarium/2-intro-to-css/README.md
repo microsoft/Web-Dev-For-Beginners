@@ -29,7 +29,7 @@ journey
       Респонсив дизајн: 5: Student
       Огледала на стаклу: 5: Student
 ```
-![Uvod u CSS](../../../../translated_images/sr/webdev101-css.3f7af5991bf53a20.png)
+![Uvod u CSS](../../../../translated_images/sr/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Sećate li se kako je vaš HTML terarijum izgledao prilično osnovno? CSS je mesto gde tu običnu strukturu pretvaramo u nešto vizuelno privlačno.
@@ -202,7 +202,7 @@ body {
 
 Otvorite alatke za razvojne programere u pregledaču (F12), idite na karticu Elements i pregledajte `<h1>` element. Videćete da nasleđuje font familiju od `<body>`:
 
-![inherited font](../../../../translated_images/sr/1.cc07a5cbe114ad1d.png)
+![inherited font](../../../../translated_images/sr/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Eksperimentisanje**: Pokušajte da postavite druga svojstva koja se nasleđuju na `<body>` kao što su `color`, `line-height` ili `text-align`. Šta se dešava sa vašim naslovom i drugim elementima?
 
@@ -594,7 +594,7 @@ flowchart LR
 
 Направићете суптилне наглашене беле или светле овалне облике за стаклене рефлексије. Овај приступ подсећа на начин на који су ренесансни сликари попут Јана ван Ајка користили светлост и одраз да би направили тродимензионални изглед на сликаном стаклу. Ево шта циљате:
 
-![finished terrarium](../../../../translated_images/sr/terrarium-final.2f07047ffc597d0a.png)
+![finished terrarium](../../../../translated_images/sr/terrarium-final.2f07047ffc597d0a.webp)
 
 **Ваш задатак:**
 - **Креирајте** суптилне беле или светле овалне облике за стаклене рефлексије

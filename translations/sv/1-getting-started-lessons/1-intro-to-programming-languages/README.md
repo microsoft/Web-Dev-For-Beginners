@@ -17,7 +17,7 @@ Vi tar det från början: jag förstår helt om programmering känns skrämmande
 
 Idag ska vi utforska de otroliga verktyg som gör modern webbprogrammering inte bara möjlig, utan riktigt beroendeframkallande. Jag menar precis samma redigerare, webbläsare och arbetsflöden som utvecklare på Netflix, Spotify och din favorit indieapp-studio använder varje dag. Och här kommer det som får dig att vilja dansa glädjedans: de flesta av dessa professionella, branschstandardverktyg är helt gratis!
 
-![Intro Programming](../../../../translated_images/sv/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/sv/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

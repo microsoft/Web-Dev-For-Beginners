@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tworzenie dostępnych stron internetowych
 
-![Wszystko o dostępności](../../../../translated_images/pl/webdev101-a11y.8ef3025c858d897a.png)
+![Wszystko o dostępności](../../../../translated_images/pl/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -295,7 +295,7 @@ Una, obserbahan natin kung ano ang nangyayari sa basic form submission:
 2. Obserbahan ang mga pagbabago sa address bar ng iyong browser
 3. Pansinin kung paano nagre-reload ang page at lumalabas ang data sa URL
 
-![Screenshot ng pagbabago sa URL ng browser pagkatapos i-click ang Register button](../../../../translated_images/tl/click-register.e89a30bf0d4bc9ca.png)
+![Screenshot ng pagbabago sa URL ng browser pagkatapos i-click ang Register button](../../../../translated_images/tl/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Paghahambing ng HTTP Methods
 
@@ -350,7 +350,7 @@ I-configure natin ang iyong registration form para maayos na makipag-ugnayan sa 
 2. **I-click** ang "Create Account" button
 3. **Obserbahan** ang server response sa iyong browser
 
-![Isang browser window sa address na localhost:5000/api/accounts, nagpapakita ng JSON string na may user data](../../../../translated_images/tl/form-post.61de4ca1b964d91a.png)
+![Isang browser window sa address na localhost:5000/api/accounts, nagpapakita ng JSON string na may user data](../../../../translated_images/tl/form-post.61de4ca1b964d91a.webp)
 
 **Ang dapat mong makita:**
 - **Ang browser ay nagre-redirect** sa API endpoint URL
@@ -615,7 +615,7 @@ async function register() {
 3. **I-click** ang "Create Account"
 4. **Obserbahan** ang mga mensahe sa console at feedback ng user
 
-![Screenshot na nagpapakita ng log message sa console ng browser](../../../../translated_images/tl/browser-console.efaf0b51aaaf6778.png)
+![Screenshot na nagpapakita ng log message sa console ng browser](../../../../translated_images/tl/browser-console.efaf0b51aaaf6778.webp)
 
 **Ano ang dapat mong makita:**
 - **Loading state** na lumalabas sa submit button
@@ -790,7 +790,7 @@ Palakasin natin ang iyong registration form gamit ang matibay na pag-validate na
 3. **Subukan** ang mga espesyal na karakter sa field ng username
 4. **Mag-input** ng negatibong halaga ng balanse
 
-![Screenshot na nagpapakita ng error sa pag-validate kapag sinusubukang isumite ang form](../../../../translated_images/tl/validation-error.8bd23e98d416c22f.png)
+![Screenshot na nagpapakita ng error sa pag-validate kapag sinusubukang isumite ang form](../../../../translated_images/tl/validation-error.8bd23e98d416c22f.webp)
 
 **Ano ang iyong mapapansin:**
 - **Ipinapakita ng browser** ang mga native na mensahe ng pag-validate
@@ -932,7 +932,7 @@ Magpakita ng error message sa HTML kung ang user ay umiiral na.
 
 Narito ang isang halimbawa ng kung ano ang magiging hitsura ng final login page pagkatapos ng kaunting pag-istilo:
 
-![Screenshot ng login page pagkatapos magdagdag ng mga estilo sa CSS](../../../../translated_images/tl/result.96ef01f607bf856a.png)
+![Screenshot ng login page pagkatapos magdagdag ng mga estilo sa CSS](../../../../translated_images/tl/result.96ef01f607bf856a.webp)
 
 ## Post-Lecture Quiz
 

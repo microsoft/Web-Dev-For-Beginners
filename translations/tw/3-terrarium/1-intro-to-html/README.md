@@ -25,7 +25,7 @@ journey
       強化無障礙功能: 5: Student
       建造生態瓶: 5: Student
 ```
-![HTML 入門](../../../../translated_images/tw/webdev101-html.4389c2067af68e98.png)
+![HTML 入門](../../../../translated_images/tw/webdev101-html.4389c2067af68e98.webp)
 > 速寫筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 製作
 
 HTML，也就是超文字標記語言，是你曾經造訪過的每個網站的基礎。想像 HTML 是賦予網頁結構的骨架——它定義了內容放置的位置、組織方式，以及每個部分的意義。CSS 稍後會用色彩和版面來「裝扮」你的 HTML，JavaScript 會帶來互動效果，但 HTML 提供了讓一切成為可能的基本結構。
@@ -86,7 +86,7 @@ mindmap
 4. 在檔案總管窗格點擊「新增檔案」圖示
 5. 檔名命名為 `index.html`
 
-![VS Code 檔案總管示範建立新檔案](../../../../translated_images/tw/vs-code-index.e2986cf919471eb9.png)
+![VS Code 檔案總管示範建立新檔案](../../../../translated_images/tw/vs-code-index.e2986cf919471eb9.webp)
 
 **選項二：使用終端機指令**
 ```bash

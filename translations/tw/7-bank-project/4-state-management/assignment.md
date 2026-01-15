@@ -112,7 +112,7 @@ CO_OP_TRANSLATOR_METADATA:
 **預期成果：**
 完成此作業後，你的銀行應用程式應該擁有一個外觀專業且功能完整的「新增交易」功能：
 
-![顯示範例「新增交易」對話框截圖](../../../../translated_images/tw/dialog.93bba104afeb79f1.png)
+![顯示範例「新增交易」對話框截圖](../../../../translated_images/tw/dialog.93bba104afeb79f1.webp)
 
 ## 測試你的實作
 

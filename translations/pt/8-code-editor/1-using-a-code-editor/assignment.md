@@ -78,7 +78,7 @@ Como o VSCode.dev requer pelo menos um ficheiro para abrir um repositório, vamo
 4. **Escreva** uma mensagem de commit: "Add initial HTML structure"
 5. **Clique** em "Commit new file" para guardar as alterações
 
-![Creating initial file on GitHub](../../../../translated_images/pt/new-file-github.com.c886796d800e8056.png)
+![Creating initial file on GitHub](../../../../translated_images/pt/new-file-github.com.c886796d800e8056.webp)
 
 **Isto estabelece:**
 - **Uma estrutura** correta de documento HTML5 com elementos semânticos
@@ -104,7 +104,7 @@ Agora que a base do seu repositório está estabelecida, vamos transitar para o 
 
 ✅ **Indicador de sucesso**: Deve ver os ficheiros do projeto na barra lateral do Explorer e `index.html` disponível para edição na área principal do editor.
 
-![Project loaded in VSCode.dev](../../../../translated_images/pt/project-on-vscode.dev.e79815a9a95ee7fe.png)
+![Project loaded in VSCode.dev](../../../../translated_images/pt/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **O que verá na interface:**
 - **Barra lateral Explorer**: **Exibe** os ficheiros e pastas do seu repositório
@@ -448,7 +448,7 @@ As extensões melhoram a sua experiência de desenvolvimento oferecendo capacida
 **Resultados imediatos após a instalação:**
 Assim que o CodeSwing estiver instalado, verá uma pré-visualização ao vivo do seu website de currículo surgir no editor. Isto permite que veja exatamente como o seu site aparece enquanto faz alterações.
 
-![CodeSwing extension showing live preview](../../../../translated_images/pt/after-codeswing-extension-pb.0ebddddcf73b5509.png)
+![CodeSwing extension showing live preview](../../../../translated_images/pt/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Compreender a interface melhorada:**
 - **Vista dividida**: **Mostra** o seu código de um lado e a pré-visualização do outro

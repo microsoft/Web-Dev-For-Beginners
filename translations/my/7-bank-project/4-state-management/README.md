@@ -188,7 +188,7 @@ Titanic ၏ compartmentalized design ကဲ့သို့၊ ပြဿနာမ
 
 ကျွန်ုပ်တို့သည် **centralized state management** system တစ်ခုကို ဖန်တီးမည်။ ၎င်းသည် အရေးကြီးသောအရာအားလုံးကို စီမံခန့်ခွဲသော တစ်ဦးတည်းသော လူတစ်ဦးကဲ့သို့ဖြစ်သည်:
 
-![HTML, user actions နှင့် state အကြား data flows ကို ပြသသော schema](../../../../translated_images/my/data-flow.fa2354e0908fecc8.png)
+![HTML, user actions နှင့် state အကြား data flows ကို ပြသသော schema](../../../../translated_images/my/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD

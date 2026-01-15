@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 tmrow ਦੀ CO2 ਸਿਗਨਲ API ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਬ੍ਰਾਊਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ ਬਣਾਓ ਜੋ ਤੁਹਾਡੇ ਖੇਤਰ ਵਿੱਚ ਬਿਜਲੀ ਦੀ ਖਪਤ ਕਿੰਨੀ ਜ਼ਿਆਦਾ ਹੈ, ਇਸਨੂੰ ਬ੍ਰਾਊਜ਼ਰ 'ਤੇ ਇੱਕ ਯਾਦ ਦਿਲਾਉਣ ਵਾਲੇ ਤੌਰ 'ਤੇ ਦਿਖਾ ਸਕੇ। ਇਸ ਐਕਸਟੈਂਸ਼ਨ ਨੂੰ ਵਰਤ ਕੇ, ਤੁਸੀਂ ਇਸ ਜਾਣਕਾਰੀ ਦੇ ਆਧਾਰ 'ਤੇ ਆਪਣੀ ਗਤੀਵਿਧੀ ਬਾਰੇ ਫੈਸਲਾ ਕਰ ਸਕਦੇ ਹੋ।
 
-![extension screenshot](../../../../../translated_images/pa/extension-screenshot.0e7f5bfa110e92e3.png)
+![extension screenshot](../../../../../translated_images/pa/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## ਸ਼ੁਰੂਆਤ
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge 'ਤੇ ਇੰਸਟਾਲ ਕਰਨ ਲਈ, ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਸੱਜੇ ਉੱਪਰ "3 ਡਾਟਾਂ" ਵਾਲੇ ਮੀਨੂ 'ਚੋਂ "ਐਕਸਟੈਂਸ਼ਨ" ਪੈਨਲ ਲੱਭੋ। ਉੱਥੇ ਤੋਂ "Load Unpacked" ਚੁਣੋ ਅਤੇ ਨਵਾਂ ਐਕਸਟੈਂਸ਼ਨ ਲੋਡ ਕਰੋ। ਜਦੋਂ ਪ੍ਰੌੰਪਟ ਆਵੇ, ਤਾਂ "dist" ਫੋਲਡਰ ਖੋਲ੍ਹੋ, ਅਤੇ ਐਕਸਟੈਂਸ਼ਨ ਲੋਡ ਹੋ ਜਾਵੇਗਾ। ਇਸਨੂੰ ਵਰਤਣ ਲਈ, ਤੁਹਾਨੂੰ CO2 ਸਿਗਨਲ API ਦੀ API ਕੀ ([ਇੱਥੇ ਈਮੇਲ ਰਾਹੀਂ ਪ੍ਰਾਪਤ ਕਰੋ](https://www.co2signal.com/) - ਇਸ ਪੰਨੇ ਦੇ ਬਾਕਸ ਵਿੱਚ ਆਪਣਾ ਈਮੇਲ ਦਰਜ ਕਰੋ) ਅਤੇ [Electricity Map](https://www.electricitymap.org/map) ਨਾਲ ਮੇਲ ਖਾਂਦੇ [ਤੁਹਾਡੇ ਖੇਤਰ ਲਈ ਕੋਡ](http://api.electricitymap.org/v3/zones) ਦੀ ਲੋੜ ਹੋਵੇਗੀ (ਉਦਾਹਰਣ ਲਈ, ਬੋਸਟਨ ਵਿੱਚ 'US-NEISO' ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ)।
 
-![installing](../../../../../translated_images/pa/install-on-edge.78634f02842c4828.png)
+![installing](../../../../../translated_images/pa/install-on-edge.78634f02842c4828.webp)
 
 ਜਦੋਂ ਤੁਸੀਂ API ਕੀ ਅਤੇ ਖੇਤਰ ਨੂੰ ਐਕਸਟੈਂਸ਼ਨ ਇੰਟਰਫੇਸ ਵਿੱਚ ਦਰਜ ਕਰਦੇ ਹੋ, ਤਾਂ ਬ੍ਰਾਊਜ਼ਰ ਦੇ ਐਕਸਟੈਂਸ਼ਨ ਬਾਰ ਵਿੱਚ ਦਿਖਾਈ ਦੇਣ ਵਾਲਾ ਰੰਗਦਾਰ ਡੌਟ ਬਦਲ ਜਾਂਦਾ ਹੈ। ਇਹ ਤੁਹਾਡੇ ਖੇਤਰ ਦੀ ਬਿਜਲੀ ਦੀ ਖਪਤ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ ਅਤੇ ਇਹ ਸੰਕੇਤ ਦਿੰਦਾ ਹੈ ਕਿ ਕਿਹੜੀਆਂ ਗਤੀਵਿਧੀਆਂ ਲਈ ਬਿਜਲੀ ਦੀ ਲੋੜ ਹੋ ਸਕਦੀ ਹੈ। ਇਸ "ਡੌਟ" ਸਿਸਟਮ ਦਾ ਵਿਚਾਰ ਮੈਨੂੰ ਕੈਲੀਫੋਰਨੀਆ ਦੇ ਉਤਸਰਜਨ ਲਈ ਬਣੇ [Energy Lollipop extension](https://energylollipop.com/) ਤੋਂ ਪ੍ਰੇਰਿਤ ਹੋਇਆ।
 

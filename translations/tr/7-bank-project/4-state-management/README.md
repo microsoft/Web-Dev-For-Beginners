@@ -190,7 +190,7 @@ Titanik'in bölümlere ayrılmış tasarımı gibi, bu sorunları tek tek çözm
 
 Kendi etrafımızda dönmek yerine, **merkezi bir durum yönetim sistemi** oluşturacağız. Bunu, tüm önemli şeylerin sorumluluğunu üstlenen gerçekten organize bir kişi gibi düşünün:
 
-![HTML, kullanıcı eylemleri ve durum arasındaki veri akışını gösteren şema](../../../../translated_images/tr/data-flow.fa2354e0908fecc8.png)
+![HTML, kullanıcı eylemleri ve durum arasındaki veri akışını gösteren şema](../../../../translated_images/tr/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -804,7 +804,7 @@ Bu meydan okuma, hem kullanıcı deneyimini hem de uygulama verimliliğini düş
 
 İşte ödevi tamamladıktan sonra ortaya çıkan bir örnek:
 
-![Bir örnek "İşlem ekleme" diyalog kutusunu gösteren ekran görüntüsü](../../../../translated_images/tr/dialog.93bba104afeb79f1.png)
+![Bir örnek "İşlem ekleme" diyalog kutusunu gösteren ekran görüntüsü](../../../../translated_images/tr/dialog.93bba104afeb79f1.webp)
 
 ---
 

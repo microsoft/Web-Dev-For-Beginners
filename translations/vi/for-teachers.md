@@ -42,10 +42,10 @@ Giáo trình này bao gồm các gói có thể nhập vào để phù hợp v�
   - Moodle Cloud có hỗ trợ hạn chế đối với Common Cartridge. Ưu tiên sử dụng tệp Moodle ở trên, tệp này cũng có thể được tải lên Canvas.
   - Sau khi nhập, hãy xem lại các mô-đun, ngày đến hạn và cài đặt bài kiểm tra để phù hợp với lịch học của bạn.
 
-![Moodle](../../translated_images/vi/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/vi/moodle.94eb93d714a50cb2.webp)
 > Giáo trình trong lớp học Moodle
 
-![Canvas](../../translated_images/vi/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/vi/canvas.fbd605ff8e5b8aff.webp)
 > Giáo trình trong Canvas
 
 ### Sử dụng kho lưu trữ trực tiếp (không dùng Classroom)

@@ -25,7 +25,7 @@ journey
       Îmbunătățește accesibilitatea: 5: Student
       Construiește terariu: 5: Student
 ```
-![Introducere în HTML](../../../../translated_images/ro/webdev101-html.4389c2067af68e98.png)
+![Introducere în HTML](../../../../translated_images/ro/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, sau HyperText Markup Language, este fundația fiecărui site web pe care l-ai vizitat vreodată. Gândește-te la HTML ca scheletul care oferă structură paginilor web – definește unde merge conținutul, cum este organizat și ce reprezintă fiecare element. În timp ce CSS va „îmbrăca” mai târziu HTML-ul tău cu culori și layout-uri, iar JavaScript îl va anima cu interactivitate, HTML oferă structura esențială care face tot restul posibil.
@@ -86,7 +86,7 @@ Vei crea un folder dedicat pentru proiectul terrarium și vei adăuga primul tă
 4. În panoul Explorer, apasă pe pictograma "New File"  
 5. Denumește fișierul `index.html`  
 
-![Explorator VS Code arătând crearea unui fișier nou](../../../../translated_images/ro/vs-code-index.e2986cf919471eb9.png)
+![Explorator VS Code arătând crearea unui fișier nou](../../../../translated_images/ro/vs-code-index.e2986cf919471eb9.webp)
 
 **Opțiunea 2: Folosind Comenzi în Terminal**  
 ```bash

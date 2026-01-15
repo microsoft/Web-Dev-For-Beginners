@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Врати потпуну HTML страницу
     Browser->>User: Прикаже нову страницу (блиц/преузимање)
 ```
-![Update workflow in a multi-page application](../../../../translated_images/sr/mpa.7f7375a1a2d4aa77.png)
+![Update workflow in a multi-page application](../../../../translated_images/sr/mpa.7f7375a1a2d4aa77.webp)
 
 **Зашто је овај приступ деловао нефлексибилно:**
 - Сваки клик је значио обнову целе странице од нуле
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Ажурира одређене елементе странице
     Browser->>User: Приказује ажуриран садржај (без поновног учитавања)
 ```
-![Update workflow in a single-page application](../../../../translated_images/sr/spa.268ec73b41f992c2.png)
+![Update workflow in a single-page application](../../../../translated_images/sr/spa.268ec73b41f992c2.webp)
 
 **Зашто SPA апликације делују много боље:**
 - Само делови који су се стварно променили се ажурирају (паметно, зар не?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Сада када тестирате са неважећим налогом, видећете корисну поруку о грешци директно на страници!
 
-![Снимак екрана који приказује поруку о грешци током пријаве](../../../../translated_images/sr/login-error.416fe019b36a6327.png)
+![Снимак екрана који приказује поруку о грешци током пријаве](../../../../translated_images/sr/login-error.416fe019b36a6327.webp)
 
 #### Корак 4: Будите инклузивни уз приступачност
 
@@ -950,7 +950,7 @@ timeline
 
 Ево како би могла да изгледа уређена контрола табла:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/sr/screen2.123c82a831a1d14a.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/sr/screen2.123c82a831a1d14a.webp)
 
 Не морате да ничим пратите овај пример у потпуности — користите га као инспирацију и направите свој стил!
 

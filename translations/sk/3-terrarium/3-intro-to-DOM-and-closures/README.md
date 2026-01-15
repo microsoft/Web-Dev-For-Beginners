@@ -25,7 +25,7 @@ journey
       Test functionality: 5: Student
       Complete terrarium: 5: Student
 ```
-![DOM a closure](../../../../translated_images/sk/webdev101-js.10280393044d7eaa.png)
+![DOM a closure](../../../../translated_images/sk/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Vitajte v jednej z najpútavejších oblastí webového vývoja – robíme veci interaktívnymi! Document Object Model (DOM) je ako most medzi vaším HTML a JavaScriptom, a dnes ho použijeme na oživenie vášho terrária. Keď Tim Berners-Lee vytvoril prvý webový prehliadač, predstavoval si web, kde môžu byť dokumenty dynamické a interaktívne – DOM túto víziu umožňuje.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Reprezentácia DOM stromu](../../../../translated_images/sk/dom-tree.7daf0e763cbbba92.png)
+![Reprezentácia DOM stromu](../../../../translated_images/sk/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentácia DOM a HTML značkovania, ktoré naň odkazuje. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Pochopenie Closures**: Closures sú významnou témou v JavaScripte a mnoho vývojárov ich používa roky, než úplne pochopia všetky teoretické aspekty. Dnes sa zameriame na praktickú aplikáciu – closures prirodzene uvidíte vzniknúť počas budovania našich interaktívnych funkcií. Pochopenie sa vyvinie, ako uvidíte, ako riešia skutočné problémy.
 
-![Reprezentácia DOM stromu](../../../../translated_images/sk/dom-tree.7daf0e763cbbba92.png)
+![Reprezentácia DOM stromu](../../../../translated_images/sk/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentácia DOM a HTML značkovania, ktoré naň odkazuje. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Teraz otestujte svoje interaktívne terárium! Otvorte súbor `index.html` vo we
 - **Podpora zariadení**: Funguje na desktopoch aj mobiloch
 - **Výkonová uvedomelosť**: Žiadne úniky pamäte alebo nadbytočné výpočty
 
-![finished terrarium](../../../../translated_images/sk/terrarium-final.0920f16e87c13a84.png)
+![finished terrarium](../../../../translated_images/sk/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

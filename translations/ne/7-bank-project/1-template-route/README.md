@@ -614,7 +614,7 @@ sequenceDiagram
 
 `history.pushState` प्रयोग गरेर ब्राउजरको नेभिगेसन history मा नयाँ प्रविष्टिहरू सिर्जना हुन्छ। तपाईंले आफ्नो ब्राउजरको *back button* थिचेर जाँच गर्न सक्नुहुन्छ, यसले केही यस्तो देखाउनु पर्छ:
 
-![नेभिगेसन history को स्क्रिनशट](../../../../translated_images/ne/history.7fdabbafa521e064.png)
+![नेभिगेसन history को स्क्रिनशट](../../../../translated_images/ne/history.7fdabbafa521e064.webp)
 
 यदि तपाईं back बटन केही पटक क्लिक गर्नुहुन्छ भने, तपाईं देख्नुहुनेछ कि हालको URL परिवर्तन हुन्छ र history अपडेट हुन्छ, तर उही template प्रदर्शन भइरहन्छ।
 

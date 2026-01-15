@@ -25,7 +25,7 @@ journey
       Побољшајте приступачност: 5: Student
       Направите тераријум: 5: Student
 ```
-![Introduction to HTML](../../../../translated_images/sr/webdev101-html.4389c2067af68e98.png)
+![Introduction to HTML](../../../../translated_images/sr/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, ili HyperText Markup Language, je osnova svake web stranice koju ste ikada posetili. Zamislite HTML kao kostur koji daje strukturu veb stranicama – on definiše gde sadržaj ide, kako je organizovan i šta svaki deo predstavlja. Dok će CSS kasnije "ukrasiti" vaš HTML bojama i rasporedima, a JavaScript oživeti interaktivnošću, HTML pruža osnovnu strukturu koja sve ostalo omogućava.
@@ -86,7 +86,7 @@ Napravite poseban folder za projekat terarijuma i dodajte svoj prvi HTML fajl. E
 4. U Explorer panelu kliknite na ikonu "New File"
 5. Imenovajte fajl `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/sr/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/sr/vs-code-index.e2986cf919471eb9.webp)
 
 **Opcija 2: Korišćenje komandne linije**
 ```bash

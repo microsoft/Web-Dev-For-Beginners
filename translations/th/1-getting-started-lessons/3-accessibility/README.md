@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # สร้างหน้าเว็บที่เข้าถึงได้
 
-![ทุกอย่างเกี่ยวกับการเข้าถึง](../../../../translated_images/th/webdev101-a11y.8ef3025c858d897a.png)
+![ทุกอย่างเกี่ยวกับการเข้าถึง](../../../../translated_images/th/webdev101-a11y.8ef3025c858d897a.webp)
 > สเก็ตช์โน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

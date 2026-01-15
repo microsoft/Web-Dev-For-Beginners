@@ -292,7 +292,7 @@ Först, låt oss se vad som händer med grundläggande formulärinlämning:
 2. Observera ändringarna i webbläsarens adressfält
 3. Lägg märke till hur sidan laddas om och data visas i URL:en
 
-![Skärmdump på webbläsarens URL-ändring efter klick på Registrera-knappen](../../../../translated_images/sv/click-register.e89a30bf0d4bc9ca.png)
+![Skärmdump på webbläsarens URL-ändring efter klick på Registrera-knappen](../../../../translated_images/sv/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Jämförelse av HTTP-metoder
 
@@ -346,7 +346,7 @@ Låt oss konfigurera ditt registreringsformulär för att kommunicera korrekt me
 2. **Klicka** på "Skapa Konto"-knappen
 3. **Observera** serverns svar i din webbläsare
 
-![Ett webbläsarfönster med adressen localhost:5000/api/accounts, som visar en JSON-sträng med användardata](../../../../translated_images/sv/form-post.61de4ca1b964d91a.png)
+![Ett webbläsarfönster med adressen localhost:5000/api/accounts, som visar en JSON-sträng med användardata](../../../../translated_images/sv/form-post.61de4ca1b964d91a.webp)
 
 **Det du bör se:**
 - **Webbläsaren omdirigerar** till API-slutpunkts-URL:en
@@ -609,7 +609,7 @@ async function register() {
 3. **Klicka** på "Create Account"
 4. **Observera** konsolmeddelanden och användarfeedback
 
-![Screenshot showing log message in the browser console](../../../../translated_images/sv/browser-console.efaf0b51aaaf6778.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/sv/browser-console.efaf0b51aaaf6778.webp)
 
 **Vad du bör se:**
 - **Laddningstillstånd** visas på skicka-knappen
@@ -783,7 +783,7 @@ Låt oss förfina ditt registreringsformulär med robust validering som erbjuder
 3. **Försök** använda specialtecken i användarnamnsfältet
 4. **Fyll i** ett negativt saldo
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/sv/validation-error.8bd23e98d416c22f.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/sv/validation-error.8bd23e98d416c22f.webp)
 
 **Vad du kommer att se:**
 - **Webbläsaren visar** inbyggda valideringsmeddelanden
@@ -943,7 +943,7 @@ Visa ett felmeddelande i HTML om användaren redan finns.
 
 Här är ett exempel på hur den slutliga inloggningssidan kan se ut efter lite styling:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/sv/result.96ef01f607bf856a.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/sv/result.96ef01f607bf856a.webp)
 
 ## Quiz efter föreläsningen
 

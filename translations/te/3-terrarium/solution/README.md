@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 స్వల్పమైన డ్రాగ్ అండ్ డ్రాప్ కోడ్-మెడిటేషన్. కొద్దిగా HTML, JS మరియు CSS తో, మీరు ఒక వబ్ ఇంటర్‌ఫేస్‌ని తయారుచేయవచ్చు, దాన్ని శోభాయమానంగా మార్చవచ్చు మరియు ఒక ఇంటరాక్షన్ చేర్చవచ్చు.
 
-![my terrarium](../../../../translated_images/te/screenshot_gray.0c796099a1f9f25e.png)
+![my terrarium](../../../../translated_images/te/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## క్రెడిట్స్
 

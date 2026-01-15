@@ -29,7 +29,7 @@ journey
       การออกแบบตอบสนอง: 5: Student
       การสะท้อนของแก้ว: 5: Student
 ```
-![Introduction to CSS](../../../../translated_images/th/webdev101-css.3f7af5991bf53a20.png)
+![Introduction to CSS](../../../../translated_images/th/webdev101-css.3f7af5991bf53a20.webp)
 > สเก็ตช์โน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 จำได้ไหมว่า Terrarium HTML ของคุณดูเรียบง่ายมาก? CSS คือที่ที่เราจะเปลี่ยนโครงสร้างธรรมดานั้นให้กลายเป็นสิ่งที่ดูน่าดึงดูดทางสายตา
@@ -202,7 +202,7 @@ body {
 
 เปิดเครื่องมือสำหรับนักพัฒนาในบราวเซอร์ของคุณ (F12) ไปที่แท็บ Elements แล้วตรวจสอบองค์ประกอบ `<h1>` คุณจะเห็นว่ามันได้รับการสืบทอดฟอนต์จาก body:
 
-![inherited font](../../../../translated_images/th/1.cc07a5cbe114ad1d.png)
+![inherited font](../../../../translated_images/th/1.cc07a5cbe114ad1d.webp)
 
 ✅ **เวลาทดลอง**: ลองตั้งค่าคุณสมบัติที่สืบทอดได้อื่นๆ บน `<body>` เช่น `color`, `line-height`, หรือ `text-align` ดูสิว่า heading และองค์ประกอบอื่นๆ จะเปลี่ยนอย่างไร
 

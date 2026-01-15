@@ -25,7 +25,7 @@ journey
       Forbedre tilgjengelighet: 5: Student
       Bygg terrarium: 5: Student
 ```
-![Introduksjon til HTML](../../../../translated_images/no/webdev101-html.4389c2067af68e98.png)
+![Introduksjon til HTML](../../../../translated_images/no/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, eller HyperText Markup Language, er grunnlaget for alle nettsider du noen gang har besøkt. Tenk på HTML som skjelettet som gir struktur til nettsider – det definerer hvor innhold går, hvordan det organiseres, og hva hver del representerer. Mens CSS senere "kler opp" ditt HTML med farger og oppsett, og JavaScript bringer det til liv med interaktivitet, gir HTML den nødvendige strukturen som gjør alt annet mulig.
@@ -86,7 +86,7 @@ Du skal lage en dedikert mappe for terrarium-prosjektet ditt og legge til din f�
 4. I Explorer-panelet, klikk på ikonet for "New File"
 5. Gi filen navnet `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/no/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/no/vs-code-index.e2986cf919471eb9.webp)
 
 **Alternativ 2: Bruke terminalkommandoer**
 ```bash

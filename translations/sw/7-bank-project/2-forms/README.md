@@ -292,7 +292,7 @@ Kwanza, tazama kinachotokea kwa uwasilishaji wa fomu wa kawaida:
 2. Angalia mabadiliko kwenye upau wa anwani wa kivinjari chako
 3. Angalia jinsi ukurasa unavyojazwa upya na data kuonekana kwenye URL
 
-![Screenshot ya mabadiliko ya URL ya kivinjari baada ya kubofya kitufe cha Register](../../../../translated_images/sw/click-register.e89a30bf0d4bc9ca.png)
+![Screenshot ya mabadiliko ya URL ya kivinjari baada ya kubofya kitufe cha Register](../../../../translated_images/sw/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Mlinganisho wa Mbinu za HTTP
 
@@ -346,7 +346,7 @@ Tuweke usajili wako wa fomu kuwasiliana ipasavyo na API ya nyuma kwa kutumia mbi
 2. **Bofya** kitufe cha "Create Account"
 3. **Angalia** majibu ya seva katika kivinjari chako
 
-![Dirisha la kivinjari kwenye anwani localhost:5000/api/accounts, linaonyesha mfuatano wa JSON na data ya mtumiaji](../../../../translated_images/sw/form-post.61de4ca1b964d91a.png)
+![Dirisha la kivinjari kwenye anwani localhost:5000/api/accounts, linaonyesha mfuatano wa JSON na data ya mtumiaji](../../../../translated_images/sw/form-post.61de4ca1b964d91a.webp)
 
 **Unachotakiwa kuona:**
 - **Kivinjari kinageuza** kwenye URL ya nukta ya API
@@ -609,7 +609,7 @@ async function register() {
 3. **Bonyeza** "Create Account"
 4. **Tazama** ujumbe wa koni na mrejesho wa mtumiaji
 
-![Screenshot showing log message in the browser console](../../../../translated_images/sw/browser-console.efaf0b51aaaf6778.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/sw/browser-console.efaf0b51aaaf6778.webp)
 
 **Utaona nini:**
 - **Hali ya kupakia** inaonekana kwenye kitufe cha kuwasilisha
@@ -783,7 +783,7 @@ Tuimarishie fomu yako ya usajili na uthibitishaji imara ambao hutoa uzoefu bora 
 3. **Jaribu** herufi za kipekee kwenye sehemu ya jina la mtumiaji
 4. **Weka** kiasi chenye salio hasi
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/sw/validation-error.8bd23e98d416c22f.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/sw/validation-error.8bd23e98d416c22f.webp)
 
 **Utakayoyaona:**
 - **Kivinjari kinaonyesha** ujumbe wa uthibitishaji wa wenyeji
@@ -943,7 +943,7 @@ Onyesha ujumbe wa kosa katika HTML ikiwa mtumiaji tayari yupo.
 
 Hapa kuna mfano wa jinsi ukurasa wa kuingia unaweza kuonekana baada ya kubadilishwa mitindo kidogo:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/sw/result.96ef01f607bf856a.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/sw/result.96ef01f607bf856a.webp)
 
 ## Mtihani wa Baada ya Maktaba
 

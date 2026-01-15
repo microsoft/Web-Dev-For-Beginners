@@ -25,7 +25,7 @@ journey
       Izboljšaj dostopnost: 5: Študent
       Zgradi terarij: 5: Študent
 ```
-![Uvod v HTML](../../../../translated_images/sl/webdev101-html.4389c2067af68e98.png)
+![Uvod v HTML](../../../../translated_images/sl/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML oziroma HyperText Markup Language je temelj vsake spletne strani, ki ste jo kdaj obiskali. HTML si predstavljajte kot ogrodje, ki daje strukturo spletnim stranem – določa, kam gre vsebina, kako je organizirana in kaj vsak del predstavlja. Medtem ko bo CSS kasneje "oblekel" vaš HTML z barvami in postavitvami, bo JavaScript prinesel interaktivnost, HTML pa zagotavlja osnovno strukturo, ki omogoča vse ostalo.
@@ -86,7 +86,7 @@ Ustvarili boste namensko mapo za vaš terarijski projekt in dodali prvo HTML dat
 4. V Explorer oknu kliknite na ikono "New File"
 5. Vaši datoteki dajte ime `index.html`
 
-![Explorer Visual Studio Code prikazuje ustvarjanje nove datoteke](../../../../translated_images/sl/vs-code-index.e2986cf919471eb9.png)
+![Explorer Visual Studio Code prikazuje ustvarjanje nove datoteke](../../../../translated_images/sl/vs-code-index.e2986cf919471eb9.webp)
 
 **Možnost 2: Uporaba terminalskih ukazov**
 ```bash

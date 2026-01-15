@@ -78,7 +78,7 @@ VSCode.dev'in bir depoyu açması için en az bir dosya gerektirdiğinden, web d
 4. Bir commit mesajı yazın: "Add initial HTML structure"
 5. Değişikliklerinizi kaydetmek için "Commit new file" düğmesine **tıklayın**
 
-![GitHub'da ilk dosyayı oluşturma](../../../../translated_images/tr/new-file-github.com.c886796d800e8056.png)
+![GitHub'da ilk dosyayı oluşturma](../../../../translated_images/tr/new-file-github.com.c886796d800e8056.webp)
 
 **Bu başlangıç kurulumu şunları sağlar:**
 - HTML5 belge yapısını semantik öğelerle **oluşturur**
@@ -104,7 +104,7 @@ Depo temeliniz oluşturulduğuna göre, ana geliştirme çalışmaları için VS
 
 ✅ **Başarı göstergesi**: Proje dosyalarınızı Explorer yan çubuğunda ve `index.html` dosyasını düzenleme için ana düzenleyici alanında görmelisiniz.
 
-![VSCode.dev'de yüklenen proje](../../../../translated_images/tr/project-on-vscode.dev.e79815a9a95ee7fe.png)
+![VSCode.dev'de yüklenen proje](../../../../translated_images/tr/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Arayüzde göreceğiniz şeyler:**
 - **Explorer yan çubuğu**: Depo dosyalarınızı ve klasör yapınızı **gösterir**
@@ -448,7 +448,7 @@ Uzantılar, geliştirme deneyiminizi iyileştirerek canlı önizleme yetenekleri
 **Yükleme sonrası anında sonuçlar:**
 CodeSwing yüklendikten sonra, özgeçmiş web sitenizin canlı önizlemesi düzenleyicide görünür. Bu, siteyi düzenlerken tam olarak nasıl göründüğünü görmenizi sağlar.
 
-![CodeSwing uzantısı canlı önizleme gösteriyor](../../../../translated_images/tr/after-codeswing-extension-pb.0ebddddcf73b5509.png)
+![CodeSwing uzantısı canlı önizleme gösteriyor](../../../../translated_images/tr/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Geliştirilmiş arayüzü anlama:**
 - **Bölünmüş görünüm**: Kodunuzu bir tarafta ve canlı önizlemeyi diğer tarafta **gösterir**

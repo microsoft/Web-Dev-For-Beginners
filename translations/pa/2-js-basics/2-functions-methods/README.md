@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ: ਮੈਥਡਸ ਅਤੇ ਫੰਕਸ਼ਨ
 
-![ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ - ਫੰਕਸ਼ਨ](../../../../translated_images/pa/webdev101-js-functions.be049c4726e94f8b.png)
+![ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ - ਫੰਕਸ਼ਨ](../../../../translated_images/pa/webdev101-js-functions.be049c4726e94f8b.webp)
 > ਸਕੈਚਨੋਟ [ਟੋਮੋਮੀ ਇਮੁਰਾ](https://twitter.com/girlie_mac) ਦੁਆਰਾ
 
 ```mermaid

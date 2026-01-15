@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਸਹੀ ਵੈੱਬਸਾਈਟ ਬਣਾਉਣਾ
 
-![ਸਹੀ ਵੈੱਬਸਾਈਟ ਬਾਰੇ ਸਭ ਕੁਝ](../../../../translated_images/pa/webdev101-a11y.8ef3025c858d897a.png)
+![ਸਹੀ ਵੈੱਬਸਾਈਟ ਬਾਰੇ ਸਭ ਕੁਝ](../../../../translated_images/pa/webdev101-a11y.8ef3025c858d897a.webp)
 > ਸਕੈਚਨੋਟ [ਟੋਮੋਮੀ ਇਮੁਰਾ](https://twitter.com/girlie_mac) ਦੁਆਰਾ
 
 ```mermaid

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Temelleri: Veri Türleri
 
-![JavaScript Temelleri - Veri Türleri](../../../../translated_images/tr/webdev101-js-datatypes.4cc470179730702c.png)
+![JavaScript Temelleri - Veri Türleri](../../../../translated_images/tr/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

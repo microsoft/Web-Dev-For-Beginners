@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 Dưới đây là hình ảnh dự án hoàn chỉnh của bạn:
 
-![Giao diện ứng dụng chat hiển thị cuộc trò chuyện giữa người dùng và trợ lý AI](../../../translated_images/vi/screenshot.0a1ee0d123df681b.png)
+![Giao diện ứng dụng chat hiển thị cuộc trò chuyện giữa người dùng và trợ lý AI](../../../translated_images/vi/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Hành trình học tập của bạn qua phát triển ứng dụng AI
 
@@ -194,7 +194,7 @@ mindmap
 
 **Nguyên tắc cốt lõi**: Phát triển ứng dụng AI kết hợp các kỹ năng phát triển web truyền thống với tích hợp dịch vụ AI, tạo ra các ứng dụng thông minh mang lại cảm giác tự nhiên và phản hồi nhanh cho người dùng.
 
-![Giao diện GitHub Models AI Playground với khu vực chọn mô hình và thử nghiệm](../../../translated_images/vi/playground.d2b927122224ff8f.png)
+![Giao diện GitHub Models AI Playground với khu vực chọn mô hình và thử nghiệm](../../../translated_images/vi/playground.d2b927122224ff8f.webp)
 
 **Dưới đây là những gì làm cho playground trở nên hữu ích:**
 - **Thử nghiệm** các mô hình AI khác nhau như GPT-4o-mini, Claude và các mô hình khác (tất cả đều miễn phí!)
@@ -204,7 +204,7 @@ mindmap
 
 Sau khi bạn đã thử nghiệm một chút, chỉ cần nhấp vào tab "Code" và chọn ngôn ngữ lập trình của bạn để nhận mã triển khai mà bạn cần.
 
-![Lựa chọn playground hiển thị các tùy chọn tạo mã cho các ngôn ngữ lập trình khác nhau](../../../translated_images/vi/playground-choice.1d23ba7d407f4758.png)
+![Lựa chọn playground hiển thị các tùy chọn tạo mã cho các ngôn ngữ lập trình khác nhau](../../../translated_images/vi/playground-choice.1d23ba7d407f4758.webp)
 
 ## Thiết lập tích hợp backend Python
 
@@ -2352,14 +2352,14 @@ Bạn muốn thử dự án này trong môi trường phát triển trên đám 
 - **Đi tới** [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Nhấn** "Use this template" ở góc trên bên phải (đảm bảo bạn đã đăng nhập vào GitHub)  
 
-![Giao diện tạo từ mẫu hiển thị nút "Use this template" màu xanh lá cây](../../../translated_images/vi/template.67ad477109d29a2b.png)  
+![Giao diện tạo từ mẫu hiển thị nút "Use this template" màu xanh lá cây](../../../translated_images/vi/template.67ad477109d29a2b.webp)  
 
 **Bước 2: Khởi chạy Codespaces**  
 - **Mở** repository vừa tạo của bạn  
 - **Nhấn** nút "Code" màu xanh lá cây và chọn "Codespaces"  
 - **Chọn** "Create codespace on main" để bắt đầu môi trường phát triển của bạn  
 
-![Giao diện tạo codespace với các tùy chọn khởi chạy môi trường phát triển trên đám mây](../../../translated_images/vi/codespace.bcecbdf5d2747d3d.png)  
+![Giao diện tạo codespace với các tùy chọn khởi chạy môi trường phát triển trên đám mây](../../../translated_images/vi/codespace.bcecbdf5d2747d3d.webp)  
 
 **Bước 3: Cấu hình môi trường**  
 Khi Codespace của bạn tải xong, bạn sẽ có quyền truy cập vào:  

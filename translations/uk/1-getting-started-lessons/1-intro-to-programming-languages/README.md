@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Сьогодні ми дослідимо неймовірні інструменти, які роблять сучасну веб-розробку не просто можливою, а дійсно захоплюючою. Я говорю про ті самі редактори, браузери та робочі процеси, які розробники Netflix, Spotify та твоєї улюбленої студії інді-додатків використовують щодня. І ось частина, яка змусить тебе танцювати від радості: більшість із цих професійних, стандартних для галузі інструментів абсолютно безкоштовні!
 
-![Intro Programming](../../../../translated_images/uk/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/uk/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Скетчнот від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

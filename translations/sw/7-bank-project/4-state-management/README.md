@@ -187,7 +187,7 @@ Kama muundo wa sehemu za Titanic ulioonekana imara hadi sehemu nyingi kuzama kwa
 
 Badala ya kuzunguka kwa kutafuta mwishowe, tutaunda **mfumo wa usimamizi wa hali uliolengwa katikati**. Fikiria kama mtu mmoja aliyepangwa vizuri anayehudumia vitu vyote muhimu:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/sw/data-flow.fa2354e0908fecc8.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/sw/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Changamoto hii itakusaidia kufikiri kama mtaalamu anayeangalia uzoefu wa mtumiaj
 
 Huu ni mfano wa matokeo baada ya kukamilisha kazi:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/sw/dialog.93bba104afeb79f1.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/sw/dialog.93bba104afeb79f1.webp)
 
 ---
 

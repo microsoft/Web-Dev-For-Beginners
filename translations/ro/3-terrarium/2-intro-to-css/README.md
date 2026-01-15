@@ -29,7 +29,7 @@ journey
       Design responsiv: 5: Student
       Reflexii pe sticlă: 5: Student
 ```
-![Introducere în CSS](../../../../translated_images/ro/webdev101-css.3f7af5991bf53a20.png)
+![Introducere în CSS](../../../../translated_images/ro/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote realizat de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Îți amintești cum arăta terrariul tău HTML destul de simplu? CSS este locul unde transformăm acea structură simplă într-un ceva atrăgător vizual.
@@ -202,7 +202,7 @@ body {
 
 Deschide unelte pentru dezvoltatori în browserul tău (F12), navighează la fila Elements, și inspectează elementul `<h1>`. Vei vedea că acesta moștenește familia fontului de la body:
 
-![font moștenit](../../../../translated_images/ro/1.cc07a5cbe114ad1d.png)
+![font moștenit](../../../../translated_images/ro/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Experiment**: Încearcă să setezi alte proprietăți moștenitoare pe `<body>` precum `color`, `line-height` sau `text-align`. Ce se întâmplă cu titlul și celelalte elemente?
 
@@ -594,7 +594,7 @@ Ești gata să îmbunătățești terrariul cu reflecții realiste de sticlă? A
 
 Vei crea accente subtile care simulează modul în care lumina se reflectă pe suprafețele de sticlă. Această abordare este similară cu modul în care pictorii Renașterii, precum Jan van Eyck, foloseau lumina și reflectarea pentru a face sticla pictată să pară tridimensională. Iată ce vizezi:
 
-![finished terrarium](../../../../translated_images/ro/terrarium-final.2f07047ffc597d0a.png)
+![finished terrarium](../../../../translated_images/ro/terrarium-final.2f07047ffc597d0a.webp)
 
 **Provocarea ta:**
 - **Creează** forme ovale albe sau deschise la culoare pentru reflexiile sticlei

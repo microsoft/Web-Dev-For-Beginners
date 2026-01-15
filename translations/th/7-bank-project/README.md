@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ในโปรเจกต์นี้ คุณจะได้เรียนรู้วิธีสร้างธนาคารสมมติ บทเรียนเหล่านี้จะรวมถึงคำแนะนำเกี่ยวกับการออกแบบเว็บแอปและการกำหนดเส้นทาง การสร้างฟอร์ม การจัดการสถานะ และการดึงข้อมูลจาก API ที่คุณสามารถใช้เพื่อดึงข้อมูลของธนาคารได้
 
-| ![Screen1](../../../translated_images/th/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/th/screen2.123c82a831a1d14a.png) |
+| ![Screen1](../../../translated_images/th/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/th/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## บทเรียน

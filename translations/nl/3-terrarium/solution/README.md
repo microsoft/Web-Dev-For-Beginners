@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Een kleine drag-and-drop code-meditatie. Met een beetje HTML, JS en CSS kun je een webinterface bouwen, deze stylen en interactie toevoegen.
 
-![mijn terrarium](../../../../translated_images/nl/screenshot_gray.0c796099a1f9f25e.png)
+![mijn terrarium](../../../../translated_images/nl/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Credits
 

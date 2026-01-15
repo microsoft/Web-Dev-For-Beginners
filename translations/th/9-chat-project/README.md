@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 นี่คือลักษณะโปรเจกต์สำเร็จรูปของคุณ:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/th/screenshot.0a1ee0d123df681b.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/th/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ การเดินทางเรียนรู้ของคุณผ่านการพัฒนาแอป AI
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **หลักการสำคัญ**: การพัฒนาแอป AI ผสมผสานทักษะการพัฒนาเว็บแบบดั้งเดิมกับการผสานบริการ AI สร้างแอปอัจฉริยะที่ตอบสนองและเป็นธรรมชาติต่อผู้ใช้
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/th/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/th/playground.d2b927122224ff8f.webp)
 
 **นี่คือเหตุผลที่ playground มีประโยชน์มาก:**
 - **ลองใช้งาน** โมเดล AI ต่าง ๆ เช่น GPT-4o-mini, Claude และอื่น ๆ (ฟรีทั้งหมด!)
@@ -199,7 +199,7 @@ mindmap
 
 เมื่อลองเล่นสักพัก แค่คลิกแท็บ "Code" และเลือกภาษาการเขียนโปรแกรมเพื่อรับโค้ดสำหรับใช้งานจริง
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/th/playground-choice.1d23ba7d407f4758.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/th/playground-choice.1d23ba7d407f4758.webp)
 
 ## การตั้งค่า Python Backend Integration
 
@@ -2354,14 +2354,14 @@ mindmap
 - **ไปที่** [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **คลิก** "Use this template" ที่มุมขวาบน (ตรวจสอบว่าคุณเข้าสู่ระบบ GitHub แล้ว)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/th/template.67ad477109d29a2b.png)  
+![Create from template interface showing the green "Use this template" button](../../../translated_images/th/template.67ad477109d29a2b.webp)  
 
 **ขั้นตอนที่ 2: เปิด Codespaces**  
 - **เปิด** รีโพซิทอรีที่คุณสร้างขึ้นใหม่  
 - **คลิก** ปุ่มสีเขียว "Code" และเลือก "Codespaces"  
 - **เลือก** "Create codespace on main" เพื่อเริ่มสภาพแวดล้อมการพัฒนาของคุณ  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/th/codespace.bcecbdf5d2747d3d.png)  
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/th/codespace.bcecbdf5d2747d3d.webp)  
 
 **ขั้นตอนที่ 3: การตั้งค่าสภาพแวดล้อม**  
 เมื่อ Codespace ของคุณโหลด คุณจะสามารถเข้าถึง:  

@@ -123,7 +123,7 @@ flowchart LR
 
 Poskusimo to. Odprite spletno stran (Microsoft.com je primerna) in kliknite tisti gumb 'Record'. Zdaj osvežite stran in opazujte, kako profiler zajema vse, kar se dogaja. Ko prenehate snemati, boste videli podroben pregled, kako brskalnik 'skriptira', 'renderira' in 'riše' stran. Spomni me na to, kako nadzor misije spremlja vsak sistem med izstrelitvijo rakete - dobite podatke v realnem času o tem, kaj se dogaja in kdaj.
 
-![Edge profiler](../../../../translated_images/sl/profiler.5a4a62479c5df01c.png)
+![Edge profiler](../../../../translated_images/sl/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Microsoftova dokumentacija](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) ima še veliko več podrobnosti, če želite poglobiti znanje
 
@@ -133,11 +133,11 @@ Izberite elemente časovnice profila, da povečate dogodke, ki se zgodijo med na
 
 Dobite posnetek zmogljivosti strani tako, da izberete del časovnice in pogledate povzetek:
 
-![Edge profiler snapshot](../../../../translated_images/sl/snapshot.97750180ebcad737.png)
+![Edge profiler snapshot](../../../../translated_images/sl/snapshot.97750180ebcad737.webp)
 
 Preverite podokno Dnevnik dogodkov, da vidite, ali je kateri dogodek trajal dlje od 15 ms:
 
-![Edge event log](../../../../translated_images/sl/log.804026979f3707e0.png)
+![Edge event log](../../../../translated_images/sl/log.804026979f3707e0.webp)
 
 ✅ Spoznajte svoj profiler! Odprite orodja za razvijalce na tej strani in preverite, ali obstajajo ozka grla. Katera datoteka se nalaga najpočasneje? Najhitrejše?
 

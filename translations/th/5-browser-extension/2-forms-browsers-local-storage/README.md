@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: ลบข้อมูลที่เก็บไว้
     ClearStorage --> FirstTime: กลับไปตั้งค่า
 ```
-![Local storage pane](../../../../translated_images/th/localstorage.472f8147b6a3f8d1.png)
+![Local storage pane](../../../../translated_images/th/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **ข้อพิจารณาด้านความปลอดภัย**: ในแอปพลิเคชันจริง การเก็บกุญแจ API ใน LocalStorage มีความเสี่ยงทางความปลอดภัยเพราะ JavaScript เข้าถึงข้อมูลนี้ได้ สำหรับการเรียนรู้วิธีนี้ใช้ได้ แต่แอปจริงควรเก็บข้อมูลลับอย่างปลอดภัยบนเซิร์ฟเวอร์
 

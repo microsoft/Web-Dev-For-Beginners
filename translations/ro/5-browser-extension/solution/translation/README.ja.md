@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Construiește o extensie de browser care utilizează API-ul CO2 Signal de la tmrow pentru a urmări consumul de energie și pentru a afișa, ca un memento, cât de intens este consumul de energie în regiunea ta. Folosind această extensie în mod ad-hoc, poți lua decizii informate cu privire la activitățile tale pe baza acestor informații.
 
-![extension screenshot](../../../../../translated_images/ro/extension-screenshot.0e7f5bfa110e92e3.png)
+![extension screenshot](../../../../../translated_images/ro/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Introducere
 
@@ -31,7 +31,7 @@ npm run build
 
 Pentru a instala pe Edge, găsește panoul „Extensii” din meniul „trei puncte” din colțul din dreapta sus al browserului. De acolo, selectează „Load Unpacked” pentru a încărca noua extensie. Când apare promptul, deschide folderul „dist” și extensia va fi încărcată. Pentru utilizare, vei avea nevoie de o cheie API pentru CO2 Signal ([obține una aici prin email](https://www.co2signal.com/) - introdu adresa ta de email în caseta de pe această pagină) și de [codul corespunzător regiunii tale](http://api.electricitymap.org/v3/zones) de pe [Electricity Map](https://www.electricitymap.org/map) (de exemplu, pentru Boston, folosește 'US-NEISO').
 
-![installing](../../../../../translated_images/ro/install-on-edge.78634f02842c4828.png)
+![installing](../../../../../translated_images/ro/install-on-edge.78634f02842c4828.webp)
 
 După ce introduci cheia API și regiunea în interfața extensiei, punctul colorat afișat în bara extensiei browserului se va schimba pentru a reflecta consumul de energie din regiunea ta. Acesta îți va indica ce tip de activități care necesită energie sunt potrivite în acel moment. Conceptul acestui sistem de „puncte” mi-a fost inspirat de extensia [Energy Lollipop](https://energylollipop.com/) pentru emisiile din California.
 

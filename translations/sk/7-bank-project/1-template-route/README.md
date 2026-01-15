@@ -644,7 +644,7 @@ sequenceDiagram
 
 Použitie `history.pushState` vytvára nové zápisy v histórii prehliadača. Môžete to overiť podržaním *tlačidla späť* vo vašom prehliadači, malo by vám to zobraziť niečo takéto:
 
-![Screenshot of navigation history](../../../../translated_images/sk/history.7fdabbafa521e064.png)
+![Screenshot of navigation history](../../../../translated_images/sk/history.7fdabbafa521e064.webp)
 
 Ak kliknete na tlačidlo späť niekoľkokrát, uvidíte, že sa mení aktuálna URL a história sa aktualizuje, ale stále sa zobrazuje tá istá šablóna.
 

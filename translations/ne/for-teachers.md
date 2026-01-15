@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud मा सीमित Common Cartridge समर्थन छ। माथिको Moodle फाइललाई प्राथमिकता दिनुहोस्, जसलाई Canvas मा पनि अपलोड गर्न सकिन्छ।
   - आयातपछि, आफ्नो टर्म तालिकासँग मेल खाने गरी मोड्युलहरू, म्यादहरू, र क्विज सेटिङहरू समीक्षा गर्नुहोस्।
 
-![Moodle](../../translated_images/ne/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/ne/moodle.94eb93d714a50cb2.webp)
 > Moodle कक्षामा पाठ्यक्रम
 
-![Canvas](../../translated_images/ne/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/ne/canvas.fbd605ff8e5b8aff.webp)
 > Canvas मा पाठ्यक्रम
 
 ### रिपोजिटरीलाई प्रत्यक्ष रूपमा प्रयोग गर्नुहोस् (Classroom बिना)

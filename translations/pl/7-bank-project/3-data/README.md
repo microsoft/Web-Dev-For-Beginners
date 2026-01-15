@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Zwraca kompletną stronę HTML
     Browser->>User: Wyświetla nową stronę (flash/przeładowanie)
 ```
-![Proces aktualizacji w aplikacji wielostronicowej](../../../../translated_images/pl/mpa.7f7375a1a2d4aa77.png)
+![Proces aktualizacji w aplikacji wielostronicowej](../../../../translated_images/pl/mpa.7f7375a1a2d4aa77.webp)
 
 **Dlaczego to było niewygodne:**
 - Każde kliknięcie powodowało całkowite przeładowanie strony
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Aktualizuje konkretne elementy strony
     Browser->>User: Wyświetla zaktualizowaną zawartość (bez przeładowania)
 ```
-![Proces aktualizacji w aplikacji jednowstronicowej](../../../../translated_images/pl/spa.268ec73b41f992c2.png)
+![Proces aktualizacji w aplikacji jednowstronicowej](../../../../translated_images/pl/spa.268ec73b41f992c2.webp)
 
 **Dlaczego SPAs działają dużo lepiej:**
 - Aktualizują tylko zmienione fragmenty (sprytne, prawda?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Teraz, gdy przetestujesz z nieprawidłowym kontem, zobaczysz pomocny komunikat o błędzie bezpośrednio na stronie!
 
-![Zrzut ekranu pokazujący komunikat o błędzie podczas logowania](../../../../translated_images/pl/login-error.416fe019b36a6327.png)
+![Zrzut ekranu pokazujący komunikat o błędzie podczas logowania](../../../../translated_images/pl/login-error.416fe019b36a6327.webp)
 
 #### Krok 4: Być inkluzywnym dzięki dostępności
 
@@ -950,7 +950,7 @@ Gotowy podnieść swoją aplikację bankową na wyższy poziom? Sprawmy, żeby w
 
 Tak może wyglądać dopracowany panel:
 
-![Zrzut ekranu przykładowego wyniku panelu po stylizacji](../../../../translated_images/pl/screen2.123c82a831a1d14a.png)
+![Zrzut ekranu przykładowego wyniku panelu po stylizacji](../../../../translated_images/pl/screen2.123c82a831a1d14a.webp)
 
 Nie czuj presji, by dokładnie to odwzorować – użyj tego jako inspiracji i dostosuj do siebie!
 

@@ -123,7 +123,7 @@ For å åpne Utviklerverktøy i Edge, klikk på de tre prikkene øverst til høy
 
 La oss prøve dette. Åpne et nettsted (Microsoft.com fungerer bra for dette) og trykk på 'Spill inn'-knappen. Last deretter siden på nytt og se profilereren fange alt som skjer. Når du stopper opptaket, vil du se en detaljert oversikt over hvordan nettleseren 'skriver skript', 'renderer' og 'maler' siden. Det minner meg om hvordan oppdragskontrollen overvåker hvert system under en rakettoppskyting – du får sanntidsdata på eksakt hva som skjer og når.
 
-![Edge profiler](../../../../translated_images/no/profiler.5a4a62479c5df01c.png)
+![Edge profiler](../../../../translated_images/no/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Microsoft-dokumentasjonen](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) har mange flere detaljer hvis du vil dykke dypere.
 
@@ -133,11 +133,11 @@ Velg elementer på profiltidslinjen for å zoome inn på hendelser som skjer men
 
 Få et øyeblikksbilde av sidens ytelse ved å velge deler av tidslinjen og se på oppsummeringspanelet:
 
-![Edge snapshot](../../../../translated_images/no/snapshot.97750180ebcad737.png)
+![Edge snapshot](../../../../translated_images/no/snapshot.97750180ebcad737.webp)
 
 Sjekk hendelsesloggen for å se om noen hendelser tok lengre tid enn 15 ms:
 
-![Edge event log](../../../../translated_images/no/log.804026979f3707e0.png)
+![Edge event log](../../../../translated_images/no/log.804026979f3707e0.webp)
 
 ✅ Bli kjent med profilereren din! Åpne utviklerverktøyene på dette nettstedet og se om det finnes noen flaskehalser. Hva er den tregest lastende ressursen? Den raskeste?
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kuunda Kurasa za Wavuti Zenye Ufikiaji Rahisi
 
-![Yote Kuhusu Ufikiaji Rahisi](../../../../translated_images/sw/webdev101-a11y.8ef3025c858d897a.png)
+![Yote Kuhusu Ufikiaji Rahisi](../../../../translated_images/sw/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

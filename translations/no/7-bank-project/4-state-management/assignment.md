@@ -112,7 +112,7 @@ Se [server-API-dokumentasjonen](../api/README.md) for:
 **Forventet resultat:**
 Etter å ha fullført denne oppgaven, skal bankappen din ha en fullt funksjonell "Legg til transaksjon"-funksjon som ser profesjonell ut og fungerer som den skal:
 
-![Skjermbilde som viser et eksempel på "Legg til transaksjon"-dialog](../../../../translated_images/no/dialog.93bba104afeb79f1.png)
+![Skjermbilde som viser et eksempel på "Legg til transaksjon"-dialog](../../../../translated_images/no/dialog.93bba104afeb79f1.webp)
 
 ## Testing av implementeringen
 

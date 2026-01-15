@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![grila canvas-ului](../../../../translated_images/ro/canvas_grid.5f209da785ded492.png)
+![grila canvas-ului](../../../../translated_images/ro/canvas_grid.5f209da785ded492.webp)
 > Imagine de la [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Pentru a desena pe elementul canvas, vei urma același proces în trei pași care formează baza tuturor graficilor canvas. Odată ce îl faci de câteva ori, devine ceva natural:
@@ -323,11 +323,11 @@ Vei construi o pagină web cu un element Canvas. Aceasta ar trebui să redea un 
 
 - Nava eroului
 
-   ![Nava eroului](../../../../translated_images/ro/player.dd24c1afa8c71e9b.png)
+   ![Nava eroului](../../../../translated_images/ro/player.dd24c1afa8c71e9b.webp)
 
 - Monstru 5*5
 
-   ![Nava monstrului](../../../../translated_images/ro/enemyShip.5df2a822c16650c2.png)
+   ![Nava monstrului](../../../../translated_images/ro/enemyShip.5df2a822c16650c2.webp)
 
 ### Pași Recomandați pentru a începe dezvoltarea
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Rezultatul final ar trebui să arate astfel:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/ro/partI-solution.36c53b48c9ffae2a.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/ro/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Soluție
 

@@ -42,10 +42,10 @@ Detta kursmaterial innehåller importbara paket för vanliga LMS-arbetsflöden.
   - Moodle Cloud har begränsat stöd för Common Cartridge. Föredra Moodle-filen ovan, som också kan laddas upp i Canvas.
   - Efter import, granska moduler, förfallodatum och quizinställningar för att matcha ditt terminschema.
 
-![Moodle](../../translated_images/sv/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/sv/moodle.94eb93d714a50cb2.webp)
 > Kursmaterialet i ett Moodle-klassrum
 
-![Canvas](../../translated_images/sv/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/sv/canvas.fbd605ff8e5b8aff.webp)
 > Kursmaterialet i Canvas
 
 ### Använd repot direkt (utan Classroom)

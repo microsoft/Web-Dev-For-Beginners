@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Основи JavaScript-а: Методи и функције
 
-![JavaScript Basics - Functions](../../../../translated_images/sr/webdev101-js-functions.be049c4726e94f8b.png)
+![JavaScript Basics - Functions](../../../../translated_images/sr/webdev101-js-functions.be049c4726e94f8b.webp)
 > Скетчнот аутора [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

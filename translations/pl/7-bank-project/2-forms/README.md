@@ -292,7 +292,7 @@ Najpierw obserwujmy, co się dzieje przy podstawowym wysyłaniu formularza:
 2. Zwróć uwagę na zmiany w pasku adresu przeglądarki
 3. Zauważ jak strona odświeża się i dane pojawiają się w URL
 
-![Zrzut ekranu zmiany URL przeglądarki po kliknięciu przycisku Zarejestruj się](../../../../translated_images/pl/click-register.e89a30bf0d4bc9ca.png)
+![Zrzut ekranu zmiany URL przeglądarki po kliknięciu przycisku Zarejestruj się](../../../../translated_images/pl/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Porównanie metod HTTP
 
@@ -346,7 +346,7 @@ Skonfiguruj swój formularz rejestracji tak, aby poprawnie komunikował się z b
 2. **Kliknij** przycisk "Utwórz konto"
 3. **Obserwuj** odpowiedź serwera w przeglądarce
 
-![Okno przeglądarki pod adresem localhost:5000/api/accounts, pokazujące ciąg JSON z danymi użytkownika](../../../../translated_images/pl/form-post.61de4ca1b964d91a.png)
+![Okno przeglądarki pod adresem localhost:5000/api/accounts, pokazujące ciąg JSON z danymi użytkownika](../../../../translated_images/pl/form-post.61de4ca1b964d91a.webp)
 
 **Co powinieneś zobaczyć:**
 - **Przeglądarka przekierowuje** na adres endpointu API
@@ -609,7 +609,7 @@ async function register() {
 3. **Kliknij** "Utwórz konto"
 4. **Obserwuj** komunikaty w konsoli i informacje zwrotne dla użytkownika
 
-![Screenshot showing log message in the browser console](../../../../translated_images/pl/browser-console.efaf0b51aaaf6778.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/pl/browser-console.efaf0b51aaaf6778.webp)
 
 **Co powinno się pojawić:**
 - **Stan ładowania** na przycisku wysyłania
@@ -783,7 +783,7 @@ Dodajmy do twojego formularza rejestracji solidną walidację, oferującą dosko
 3. **Użyj** znaków specjalnych w polu nazwy użytkownika
 4. **Wpisz** ujemną kwotę salda
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/pl/validation-error.8bd23e98d416c22f.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/pl/validation-error.8bd23e98d416c22f.webp)
 
 **Co zauważysz:**
 - **Przeglądarka wyświetla** natywne komunikaty walidacji
@@ -943,7 +943,7 @@ Pokaż komunikat o błędzie w HTML, jeśli użytkownik już istnieje.
 
 Oto przykład, jak może wyglądać końcowa strona logowania po dodaniu stylów:
 
-![Zrzut ekranu strony logowania po dodaniu stylów CSS](../../../../translated_images/pl/result.96ef01f607bf856a.png)
+![Zrzut ekranu strony logowania po dodaniu stylów CSS](../../../../translated_images/pl/result.96ef01f607bf856a.webp)
 
 ## Quiz po wykładzie
 

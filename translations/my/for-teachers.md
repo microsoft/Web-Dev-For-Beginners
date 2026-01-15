@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud တွင် Common Cartridge support အကန့်အသတ်ရှိသည်။ Canvas တွင်လည်း upload လုပ်နိုင်သော Moodle file ကို အသုံးပြုရန် ဦးစားပေးပါ။
   - Import ပြီးနောက် modules, due dates, quiz settings များကို သင်၏ term schedule နှင့် ကိုက်ညီစေရန် ပြန်လည်သုံးသပ်ပါ။
 
-![Moodle](../../translated_images/my/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/my/moodle.94eb93d714a50cb2.webp)
 > Moodle classroom အတွင်းရှိ သင်ခန်းစာများ
 
-![Canvas](../../translated_images/my/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/my/canvas.fbd605ff8e5b8aff.webp)
 > Canvas အတွင်းရှိ သင်ခန်းစာများ
 
 ### Repo ကို တိုက်ရိုက်အသုံးပြုခြင်း (Classroom မပါ)

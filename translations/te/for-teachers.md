@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle క్లౌడ్‌కు పరిమిత కామన్ కార్ట్రిడ్జ్ మద్దతు ఉంటుంది. పై Moodle ఫైల్ ప్రాధాన్యత ఇవ్వండి, అదే ఫైల్ Canvas లో కూడా అప్‌లోడ్ చేయవచ్చు.
   - దిగుమతి చేశాక, మీ కాలప్రమాణానికి అనుగుణంగా మాడ్యూల్స్, సమయాలు మరియు క్విజ్ సిద్ధతలను పునర్ సమీక్షించండి.
 
-![Moodle](../../translated_images/te/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/te/moodle.94eb93d714a50cb2.webp)
 > Moodle క్లాస్‌రూమ్‌లో పాఠ్యపుస్తకం
 
-![Canvas](../../translated_images/te/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/te/canvas.fbd605ff8e5b8aff.webp)
 > Canvas లోని పాఠ్యపుస్తకం
 
 ### రీపోను నేరుగా ఉపయోగించు (క్లాస్‌రూమ్ లేదు)

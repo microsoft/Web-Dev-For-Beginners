@@ -187,7 +187,7 @@ mindmap
 
 நாம் தலை சுற்றி ஓடுவதைவிட, ஒரு **மைய நிலை நிர்வாக** அமைப்பை உருவாக்கப்போகிறோம். முக்கியமான அனைத்து விஷயங்களையும் ஒருவரே ஒழுங்குபடுத்துவார் போல கற்பனை செய்யுங்கள்:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/ta/data-flow.fa2354e0908fecc8.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/ta/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -802,7 +802,7 @@ timeline
 
 பணியை முடித்த பின் ஒரு உதாரண முடிவு:  
 
-![ஒரு உதாரண "பரிவர்த்தனைச் சேர்" உரையாடலைக் காண்கிற ஸ்கிரீன் ஷாட்](../../../../translated_images/ta/dialog.93bba104afeb79f1.png)
+![ஒரு உதாரண "பரிவர்த்தனைச் சேர்" உரையாடலைக் காண்கிற ஸ்கிரீன் ஷாட்](../../../../translated_images/ta/dialog.93bba104afeb79f1.webp)
 
 ---
 

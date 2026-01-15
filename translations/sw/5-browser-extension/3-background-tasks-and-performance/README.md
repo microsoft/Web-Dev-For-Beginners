@@ -123,7 +123,7 @@ Ili kufungua Zana za Wavumbuzi katika Edge, bonyeza vidoti vitatu hapo juu kulia
 
 Tujaribu hili. Fungua tovuti (Microsoft.com inafanya kazi vizuri) na bonyeza kitufe cha 'Record'. Sasa refreshing ukurasa na angalia profaaili ikichukua kila kinachoendelea. Ukimaliza kurekodi, utaona maelezo ya kina ya jinsi kivinjari kinavyofanya 'scripts', 'renders', na 'paints' tovuti. Inanikumbusha jinsi kituo cha udhibiti cha misheni kinavyofuata kila mfumo wakati wa uzinduzi wa roketi - unapata data halisi kwa wakati halisi kuhusu kinachotokea na lini.
 
-![Edge profiler](../../../../translated_images/sw/profiler.5a4a62479c5df01c.png)
+![Edge profiler](../../../../translated_images/sw/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Hati ya Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) ina maelezo mengi zaidi ikiwa unataka kifahamike zaidi
 
@@ -133,11 +133,11 @@ Chagua vipengele vya ratiba ya profaili kupanua matukio yanayotokea wakati ukura
 
 Pata picha ya utendaji wa ukurasa wako kwa kuchagua sehemu ya ratiba ya profaili na kuangalia dirisha la muhtasari:
 
-![Edge profiler snapshot](../../../../translated_images/sw/snapshot.97750180ebcad737.png)
+![Edge profiler snapshot](../../../../translated_images/sw/snapshot.97750180ebcad737.webp)
 
 Angalia dirisha la Log la Tukio kuona kama tukio lolote limechukua zaidi ya ms 15:
 
-![Edge event log](../../../../translated_images/sw/log.804026979f3707e0.png)
+![Edge event log](../../../../translated_images/sw/log.804026979f3707e0.webp)
 
 ✅ Jifunze profaaili yako! Fungua zana za msanidi kwenye tovuti hii na ona kama kuna vikwazo yoyote. Nini ni mali ambayo inapakia polepole zaidi? Haraka zaidi?
 

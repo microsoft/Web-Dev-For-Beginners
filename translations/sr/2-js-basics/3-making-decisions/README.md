@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Основе ЈаваСкрипта: Доношење одлука
 
-![Основе ЈаваСкрипта - Доношење одлука](../../../../translated_images/sr/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![Основе ЈаваСкрипта - Доношење одлука](../../../../translated_images/sr/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Скетчнот од [Томоми Имура](https://twitter.com/girlie_mac)
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Crearea Paginilor Web Accesibile
 
-![Totul Despre Accesibilitate](../../../../translated_images/ro/webdev101-a11y.8ef3025c858d897a.png)
+![Totul Despre Accesibilitate](../../../../translated_images/ro/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

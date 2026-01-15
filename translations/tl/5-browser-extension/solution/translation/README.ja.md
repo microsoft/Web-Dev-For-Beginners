@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Gagamitin natin ang CO2 Signal API ng tmrow upang subaybayan ang paggamit ng kuryente sa iyong lugar at ipapakita ito bilang paalala sa iyong browser. Sa pamamagitan ng browser extension na ito, maaari mong gamitin ang impormasyong ito upang magdesisyon sa iyong mga aktibidad.
 
-![screenshot ng extension](../../../../../translated_images/tl/extension-screenshot.0e7f5bfa110e92e3.png)
+![screenshot ng extension](../../../../../translated_images/tl/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Panimula
 
@@ -31,7 +31,7 @@ npm run build
 
 Upang mai-install sa Edge, hanapin ang "Extensions" panel mula sa menu na "tatlong tuldok" sa kanang itaas ng browser. Piliin ang "Load Unpacked" at i-load ang bagong extension. Sa prompt, buksan ang "dist" folder upang ma-load ang extension. Upang magamit ito, kakailanganin mo ng API key mula sa CO2 Signal API ([kumuha dito sa pamamagitan ng email](https://www.co2signal.com/) - ilagay ang iyong email sa kahon sa pahinang iyon) at ang [code para sa iyong rehiyon](http://api.electricitymap.org/v3/zones) na tugma sa [Electricity Map](https://www.electricitymap.org/map) (halimbawa, sa Boston, ginagamit ang 'US-NEISO').
 
-![pag-install](../../../../../translated_images/tl/install-on-edge.78634f02842c4828.png)
+![pag-install](../../../../../translated_images/tl/install-on-edge.78634f02842c4828.webp)
 
 Kapag nailagay mo na ang API key at rehiyon sa interface ng extension, magbabago ang kulay ng dot na makikita sa extension bar ng iyong browser. Ang kulay ng dot ay sumasalamin sa paggamit ng enerhiya sa iyong lugar at nagbibigay ng ideya kung anong mga aktibidad ang angkop batay sa pangangailangan ng enerhiya. Ang konsepto ng "dot" system na ito ay inspirasyon ng [Energy Lollipop extension](https://energylollipop.com/) para sa emissions sa California.
 

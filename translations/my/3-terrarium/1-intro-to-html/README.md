@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![HTML ကိုမိတ်ဆက်ခြင်း](../../../../translated_images/my/webdev101-html.4389c2067af68e98.png)
+![HTML ကိုမိတ်ဆက်ခြင်း](../../../../translated_images/my/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, သို့မဟုတ် HyperText Markup Language ဟာ သင်သွားရောက်ခဲ့တဲ့ website တစ်ခုချင်းစီရဲ့ အခြေခံအဆောက်အအုံပဲဖြစ်ပါတယ်။ HTML ကို website ရဲ့ အရိုးတစ်ခုလိုပဲ စဉ်းစားနိုင်ပါတယ် – content ကိုဘယ်မှာထားမလဲ၊ ဘယ်လိုစီမံမလဲ၊ အစိတ်အပိုင်းတစ်ခုချင်းစီက ဘာကိုကိုယ်စားပြုလဲဆိုတာကို သတ်မှတ်ပေးပါတယ်။ CSS က HTML ကို အရောင်နဲ့ layout တွေဖြင့် "အဝတ်အစား" ဝတ်ပေးမှာဖြစ်ပြီး၊ JavaScript ကတော့ interactivity ဖြင့် "အသက်" ပေးမှာဖြစ်ပါတယ်။ HTML က အခြေခံအဆောက်အအုံကိုပေးပြီး အခြားအရာတွေကိုဖြစ်နိုင်စေပါတယ်။
@@ -88,7 +88,7 @@ HTML code ကိုစတင်မလုပ်ခင်မှာ သင့် te
 4. Explorer pane မှာ "New File" icon ကို click လုပ်ပါ
 5. သင့် file ကို `index.html` လို့အမည်ပေးပါ
 
-![VS Code Explorer showing new file creation](../../../../translated_images/my/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/my/vs-code-index.e2986cf919471eb9.webp)
 
 **Option 2: Terminal Commands ကိုအသုံးပြုခြင်း**
 ```bash

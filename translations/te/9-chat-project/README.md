@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 మీ పూర్తయిన ప్రాజెక్ట్ ఇలా కనిపిస్తుంది:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/te/screenshot.0a1ee0d123df681b.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/te/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ AI అనువర్తన అభివృద్ధి ద్వారా మీ నేర్చుకునే ప్రయాణం
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **మూల సూత్రం**: AI అనువర్తన అభివృద్ధి సంప్రదాయ వెబ్ అభివృద్ధి నైపుణ్యాలను AI సేవల సమ్మిళితంతో కలిపి, వినియోగదారులకు సహజమైన, స్పందన చూపించే ఇంటెలిజెంట్ అనువర్తనాలు సృష్టిస్తుంది.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/te/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/te/playground.d2b927122224ff8f.webp)
 
 **ప్లేగ్రౌండ్‌ని చాలా ఉపయోగకరం చేసే అంశాలు:**
 - GPT-4o-mini, Claude వంటివి వంటివి ఉచితమైన వివిధ AI మోడల్స్ ప్రయత్నించండి
@@ -199,7 +199,7 @@ mindmap
 
 కొద్దిగా ఆడుకున్న తర్వాత, సాదాగా "Code" ట్యాబ్‌ను క్లిక్ చేసి, అవసరమైన ప్రోగ్రామింగ్ భాషను ఎంచుకుని అమలుకాల కోడ్ తీసుకోండి.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/te/playground-choice.1d23ba7d407f4758.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/te/playground-choice.1d23ba7d407f4758.webp)
 
 ## Python బ్యాక్ ఎండ్ సమ్మిళితాన్ని అమలు చేయడం
 
@@ -2351,14 +2351,14 @@ mindmap
 - [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners) కు **నావిగేట్ అవ్వండి**  
 - పై-కుడి మూలలో "Use this template" పై **క్లిక్ చేయండి** (GitHubలో లాగిన్ అయి ఉండాలి)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/te/template.67ad477109d29a2b.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/te/template.67ad477109d29a2b.webp)
 
 **దశ 2: Codespaces ప్రారంభం**  
 - మీ కొత్తగా సృష్టించిన రిపాజిటరీని **తొక్కండి**  
 - ఆకుపచ్చ "Code" బటన్‌పై **క్లిక్ చేయండి** మరియు "Codespaces" ను ఎంచుకోండి  
 - "Create codespace on main"ని ఎంచుకొని అభివృద్ధి వాతావరణాన్ని ప్రారంభించండి  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/te/codespace.bcecbdf5d2747d3d.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/te/codespace.bcecbdf5d2747d3d.webp)
 
 **దశ 3: వాతావరణం కాన్ఫిగరేషన్**  
 మీ Codespace లోడ్ అయిన వెంటనే, మీరు పొందగలిగేది:  

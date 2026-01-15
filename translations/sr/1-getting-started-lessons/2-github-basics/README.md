@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ову ћемо авантуру проћи заједно, корак по корак. Без журбе, без притиска – само ти, ја и неки стварно кул алати који ће ускоро постати твоји нови најбољи пријатељи!
 
-![Intro to GitHub](../../../../translated_images/sr/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/sr/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ flowchart TD
 
 ✅ Добар начин за проналажење „пријатељских за почетнике“ репозиторијума је да [претражите по тагу 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](../../../../translated_images/sr/clone_repo.5085c48d666ead57.png)
+![Copy a repo locally](../../../../translated_images/sr/clone_repo.5085c48d666ead57.webp)
 
 Постоји више начина да копирате код. Један од начина је да „клонирате“ садржај репозиторијума, користећи HTTPS, SSH или GitHub CLI (Command Line Interface).
 

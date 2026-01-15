@@ -29,7 +29,7 @@ journey
       Muundo unaojibu: 5: Student
       Mwangaza wa glasi: 5: Student
 ```
-![Utangulizi wa CSS](../../../../translated_images/sw/webdev101-css.3f7af5991bf53a20.png)
+![Utangulizi wa CSS](../../../../translated_images/sw/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Kumbuka jinsi terrarium yako ya HTML ilivyoonekana ya kawaida? CSS ndio tunapobadilisha muundo huo rahisi kuwa kitu kinachovutia kwa macho.
@@ -202,7 +202,7 @@ body {
 
 Fungua zana za maendeleo za kivinjari chako (F12), nenda kwenye tab ya Elements, na kagua kipengele chako cha `<h1>`. Utaona kinarithi familia ya fonti kutoka kwa mwili:
 
-![inherited font](../../../../translated_images/sw/1.cc07a5cbe114ad1d.png)
+![inherited font](../../../../translated_images/sw/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Jaribu**: Jaribu kuweka mali nyingine zinazorithiwa kwenye `<body>` kama `color`, `line-height`, au `text-align`. Nini kinakutokea kwa kichwa chako na vipengele vingine?
 
@@ -594,7 +594,7 @@ Je, uko tayari kuboresha terrarium yako kwa mwangaza wa kioo halisi? Mbinu hii i
 
 Utaunda mwanga mdogo unaoiga jinsi mwanga unavyoakisi uso wa kioo. Mbinu hii ni sawa na jinsi wachoraji wa Renaissance kama Jan van Eyck walivyotumia mwanga na mng'ao kuifanya kioo chenye mchoro kuonekana cha tatu-kidimensioni. Haya ndio unayolenga:
 
-![terrarium iliyokamilika](../../../../translated_images/sw/terrarium-final.2f07047ffc597d0a.png)
+![terrarium iliyokamilika](../../../../translated_images/sw/terrarium-final.2f07047ffc597d0a.webp)
 
 **Changamoto yako:**
 - **Tengeneza** maumbo madogo meupe au yenye rangi nyepesi ya mviringo kwa mwanga wa kioo

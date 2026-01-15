@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Panimula sa HTML](../../../../translated_images/tl/webdev101-html.4389c2067af68e98.png)
+![Panimula sa HTML](../../../../translated_images/tl/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Ang HTML, o HyperText Markup Language, ang pundasyon ng bawat website na iyong binisita. Isipin ang HTML bilang balangkas na nagbibigay ng istruktura sa mga web page – ito ang nagtatakda kung saan ilalagay ang nilalaman, paano ito iaayos, at ano ang kinakatawan ng bawat bahagi. Habang ang CSS ang magpapaganda sa iyong HTML gamit ang mga kulay at layout, at ang JavaScript ang magdadagdag ng interaktibidad, ang HTML ang nagbibigay ng mahalagang istruktura na nagpapahintulot sa lahat ng iba pang aspeto na maging posible.
@@ -88,7 +88,7 @@ Gagawa ka ng dedikadong folder para sa iyong proyekto ng terrarium at magdadagda
 4. Sa Explorer pane, i-click ang "New File" icon
 5. Pangalanan ang iyong file na `index.html`
 
-![VS Code Explorer na nagpapakita ng paggawa ng bagong file](../../../../translated_images/tl/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer na nagpapakita ng paggawa ng bagong file](../../../../translated_images/tl/vs-code-index.e2986cf919471eb9.webp)
 
 **Opsyon 2: Gamit ang Terminal Commands**
 ```bash

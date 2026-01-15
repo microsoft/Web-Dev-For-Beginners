@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Workflow ng pag-update sa multi-page application](../../../../translated_images/tl/mpa.7f7375a1a2d4aa77.png)
+![Workflow ng pag-update sa multi-page application](../../../../translated_images/tl/mpa.7f7375a1a2d4aa77.webp)
 
 **Bakit pakiramdam na clunky ang approach na ito:**
 - Bawat click ay nangangahulugan ng pag-rebuild ng buong page mula sa simula
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Workflow ng pag-update sa single-page application](../../../../translated_images/tl/spa.268ec73b41f992c2.png)
+![Workflow ng pag-update sa single-page application](../../../../translated_images/tl/spa.268ec73b41f992c2.webp)
 
 **Bakit mas maganda ang pakiramdam ng SPAs:**
 - Ang mga bahagi lang na talagang nagbago ang na-update (matalino, di ba?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Ngayon, kapag sinubukan mong mag-login gamit ang invalid na account, makikita mo ang isang kapaki-pakinabang na mensahe ng error sa mismong pahina!
 
-![Screenshot na nagpapakita ng mensahe ng error na lumalabas sa pag-login](../../../../translated_images/tl/login-error.416fe019b36a6327.png)
+![Screenshot na nagpapakita ng mensahe ng error na lumalabas sa pag-login](../../../../translated_images/tl/login-error.416fe019b36a6327.webp)
 
 #### Hakbang 4: Pagiging Inclusive sa Accessibility
 
@@ -961,7 +961,7 @@ Handa ka na bang dalhin ang iyong banking app sa susunod na antas? Gawin natin i
 
 Ganito ang maaaring hitsura ng isang polished na dashboard:
 
-![Screenshot ng isang halimbawa ng resulta ng dashboard pagkatapos ng styling](../../../../translated_images/tl/screen2.123c82a831a1d14a.png)
+![Screenshot ng isang halimbawa ng resulta ng dashboard pagkatapos ng styling](../../../../translated_images/tl/screen2.123c82a831a1d14a.webp)
 
 Huwag kang mag-alala kung hindi mo ito eksaktong ma-match - gamitin ito bilang inspirasyon at gawin itong sarili mo!
 

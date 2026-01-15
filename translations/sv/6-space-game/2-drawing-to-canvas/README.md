@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![the canvas's grid](../../../../translated_images/sv/canvas_grid.5f209da785ded492.png)
+![the canvas's grid](../../../../translated_images/sv/canvas_grid.5f209da785ded492.webp)
 > Bild från [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 För att rita på canvas-elementet följer du samma trestegsprocess som utgör grunden för all canvas-grafik. När du väl har gjort detta några gånger blir det andra natur:
@@ -323,11 +323,11 @@ Du ska bygga en webbsida med ett Canvas-element. Det ska visa en svart skärm `1
 
 - Hjälteskepp
 
-   ![Hero ship](../../../../translated_images/sv/player.dd24c1afa8c71e9b.png)
+   ![Hero ship](../../../../translated_images/sv/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 monster
 
-   ![Monster ship](../../../../translated_images/sv/enemyShip.5df2a822c16650c2.png)
+   ![Monster ship](../../../../translated_images/sv/enemyShip.5df2a822c16650c2.webp)
 
 ### Rekommenderade steg för att börja utvecklingen
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Det färdiga resultatet bör se ut så här:
 
-![Svart skärm med en hjälte och 5*5 monster](../../../../translated_images/sv/partI-solution.36c53b48c9ffae2a.png)
+![Svart skärm med en hjälte och 5*5 monster](../../../../translated_images/sv/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Lösning
 

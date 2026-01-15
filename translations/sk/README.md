@@ -72,13 +72,13 @@ Nezmeškajte náš nový učebný plán Generatívnej AI!
 
 Začnite na [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/sk/background.148a8d43afde5730.png)
+![Background](../../translated_images/sk/background.148a8d43afde5730.webp)
 
 - Lekcie pokrývajú všetko od základov po RAG.
 - Interakcia s historickými postavami pomocou GenAI a našej sprievodnej aplikácie.
 - Zábavný a pútavý príbeh, budete cestovať časom!
 
-![character](../../translated_images/sk/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/sk/character.5c0dd8e067ffd693.webp)
 
 Každá lekcia obsahuje úlohu na dokončenie, kontrolu vedomostí aj výzvu, ktoré vás prevedú učením tém ako:
 - Promptovanie a inžinierstvo promptov
@@ -114,7 +114,7 @@ Postupujte podľa krokov:
 
 Vo vašej skopírovanej verzii repozitára kliknite na tlačidlo **Code** a vyberte **Open with Codespaces**. Toto vytvorí nový Codespace, kde budete pracovať.
 
-![Codespace](../../translated_images/sk/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/sk/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Spustenie učebného plánu lokálne na počítači
 

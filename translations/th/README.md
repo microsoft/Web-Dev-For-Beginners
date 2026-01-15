@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 เยี่ยมชม [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) เพื่อเริ่มต้น!
 
-![Background](../../translated_images/th/background.148a8d43afde5730.png)
+![Background](../../translated_images/th/background.148a8d43afde5730.webp)
 
 - บทเรียนครอบคลุมตั้งแต่พื้นฐานจนถึง RAG
 - มีปฏิสัมพันธ์กับตัวละครในประวัติศาสตร์โดยใช้ GenAI และแอปช่วยเหลือของเรา
 - เรื่องเล่าสนุก ๆ และน่าติดตาม คุณจะได้เดินทางข้ามเวลา!
 
-![character](../../translated_images/th/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/th/character.5c0dd8e067ffd693.webp)
 
 แต่ละบทเรียนมีการมอบหมายงานให้ทำ การตรวจสอบความรู้ และความท้าทายเพื่อแนะนำคุณในการเรียนรู้หัวข้อต่าง ๆ เช่น:
 - การกระตุ้นและการออกแบบคำกระตุ้น (prompt engineering)
@@ -112,7 +112,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ในสำเนาของที่เก็บนี้ที่คุณสร้างขึ้น คลิกปุ่ม **Code** และเลือก **Open with Codespaces** ซึ่งจะสร้าง Codespace ใหม่ให้คุณใช้งาน
 
-![Codespace](../../translated_images/th/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/th/createcodespace.0238bbf4d7a8d955.webp)
 
 #### ใช้งานหลักสูตรในเครื่องคอมพิวเตอร์ของคุณ
 

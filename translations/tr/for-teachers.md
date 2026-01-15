@@ -42,10 +42,10 @@ Bu müfredat, yaygın LMS iş akışları için içe aktarılabilir paketler iç
   - Moodle Cloud, Common Cartridge desteği sınırlıdır. Yukarıdaki Moodle dosyasını tercih edin; bu dosya ayrıca Canvas'a da yüklenebilir.
   - İçe aktarma işleminden sonra modülleri, teslim tarihlerini ve quiz ayarlarını dönem programınıza uygun şekilde gözden geçirin.
 
-![Moodle](../../translated_images/tr/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/tr/moodle.94eb93d714a50cb2.webp)
 > Moodle sınıfında müfredat
 
-![Canvas](../../translated_images/tr/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/tr/canvas.fbd605ff8e5b8aff.webp)
 > Canvas'ta müfredat
 
 ### Depoyu Doğrudan Kullanma (Classroom Olmadan)

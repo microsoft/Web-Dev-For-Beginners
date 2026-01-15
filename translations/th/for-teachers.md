@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud มีการรองรับ Common Cartridge ที่จำกัด ควรใช้ไฟล์ Moodle ด้านบน ซึ่งสามารถอัปโหลดเข้า Canvas ได้เช่นกัน
   - หลังการนำเข้า ให้ตรวจสอบโมดูล วันที่กำหนดส่ง และการตั้งค่าแบบทดสอบให้ตรงกับตารางเรียนของคุณ
 
-![Moodle](../../translated_images/th/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/th/moodle.94eb93d714a50cb2.webp)
 > หลักสูตรในห้องเรียน Moodle
 
-![Canvas](../../translated_images/th/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/th/canvas.fbd605ff8e5b8aff.webp)
 > หลักสูตรใน Canvas
 
 ### การใช้งาน repo โดยตรง (ไม่ใช้ Classroom)

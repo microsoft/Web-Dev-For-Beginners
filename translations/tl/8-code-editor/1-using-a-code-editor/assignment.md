@@ -78,7 +78,7 @@ Dahil ang VSCode.dev ay nangangailangan ng kahit isang file upang buksan ang rep
 4. **Maglagay** ng commit message: "Magdagdag ng initial HTML structure"
 5. **I-click** ang "Commit new file" upang i-save ang iyong mga pagbabago
 
-![Paglikha ng initial file sa GitHub](../../../../translated_images/tl/new-file-github.com.c886796d800e8056.png)
+![Paglikha ng initial file sa GitHub](../../../../translated_images/tl/new-file-github.com.c886796d800e8056.webp)
 
 **Narito ang nagagawa ng initial setup na ito:**
 - **Nag-eestablish** ng tamang HTML5 document structure gamit ang semantic elements
@@ -104,7 +104,7 @@ Ngayon na ang pundasyon ng iyong repository ay na-set up, lumipat tayo sa VSCode
 
 ✅ **Indicator ng Tagumpay**: Makikita mo ang mga file ng iyong proyekto sa Explorer sidebar at ang `index.html` na available para i-edit sa pangunahing editor area.
 
-![Proyekto na naka-load sa VSCode.dev](../../../../translated_images/tl/project-on-vscode.dev.e79815a9a95ee7fe.png)
+![Proyekto na naka-load sa VSCode.dev](../../../../translated_images/tl/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Ano ang makikita mo sa interface:**
 - **Explorer sidebar**: **Ipinapakita** ang mga file ng iyong repository at istruktura ng folder
@@ -448,7 +448,7 @@ Ang mga extension ay nagpapahusay sa iyong development experience sa pamamagitan
 **Mga agarang resulta pagkatapos ng pag-install:**
 Kapag na-install ang CodeSwing, makikita mo ang live preview ng iyong resume website na lumalabas sa editor. Pinapayagan ka nitong makita kung paano eksaktong magmumukha ang iyong site habang gumagawa ng mga pagbabago.
 
-![CodeSwing extension na nagpapakita ng live preview](../../../../translated_images/tl/after-codeswing-extension-pb.0ebddddcf73b5509.png)
+![CodeSwing extension na nagpapakita ng live preview](../../../../translated_images/tl/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Pag-unawa sa pinahusay na interface:**
 - **Split view**: **Ipinapakita** ang iyong code sa isang bahagi at ang live preview sa kabila

@@ -182,7 +182,7 @@ Rovnako ako telefón Alexandra Grahama Bella spojil vzdialené lokality, prepoje
 
 Keď sa všetko načíta, uvidíte krásne čisté pracovisko navrhnuté tak, aby ste sa mohli sústrediť na to najdôležitejšie – váš kód!
 
-![Default VSCode.dev interface](../../../../translated_images/sk/default-vscode-dev.5d06881d65c1b323.png)
+![Default VSCode.dev interface](../../../../translated_images/sk/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Tu je prehliadka vašej štvrte:**
 - **Aktivitný panel** (ten pásik naľavo): Hlavná navigácia s Explorer 📁, Hľadaním 🔍, Zdrojovým ovládaním 🌿, Rozšíreniami 🧩 a Nastaveniami ⚙️
@@ -229,7 +229,7 @@ Táto je ideálna, keď začínate vo VSCode.dev a chcete otvoriť konkrétny re
 1. Choďte na [vscode.dev](https://vscode.dev), ak tam ešte nie ste
 2. Na uvítacej obrazovke kliknite na tlačidlo „Open Remote Repository“
 
-   ![Open remote repository](../../../../translated_images/sk/open-remote-repository.bd9c2598b8949e7f.png)
+   ![Open remote repository](../../../../translated_images/sk/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Vložte URL ľubovoľného GitHub repozitára (vyskúšajte napríklad: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Stlačte Enter a sledujte, ako sa otvorí!
@@ -238,7 +238,7 @@ Táto je ideálna, keď začínate vo VSCode.dev a chcete otvoriť konkrétny re
 
 Chcete sa cítiť ako kúzelník kódovania? Vyskúšajte túto klávesovú skratku: Ctrl+Shift+P (alebo Cmd+Shift+P na Macu) pre otvorenie Command Paletty:
 
-![Command Palette](../../../../translated_images/sk/palette-menu.4946174e07f42622.png)
+![Command Palette](../../../../translated_images/sk/palette-menu.4946174e07f42622.webp)
 
 **Command Palette je ako vyhľadávač na všetko, čo môžete urobiť:**
 - Napíšte „open remote“ a nájde vám otvárač repozitárov
@@ -300,7 +300,7 @@ Rovnako ako organizovanie plánov v kancelárii architekta, tvorba súborov vo V
 3. Zadajte názov súboru vrátane prípony (`style.css`, `script.js`, `index.html`)
 4. Stlačte Enter pre vytvorenie súboru
 
-![Creating a new file](../../../../translated_images/sk/create-new-file.2814e609c2af9aeb.png)
+![Creating a new file](../../../../translated_images/sk/create-new-file.2814e609c2af9aeb.webp)
 
 **Názvoslovie:**
 - Používajte popisné mená, ktoré naznačujú účel súboru
@@ -318,7 +318,7 @@ Tu začína pravé zábavné kódovanie! Editor VSCode.dev je nabitý užitočn�
 2. Začnite písať a sledujte, ako vám VSCode.dev pomáha farbami, návrhmi a odhaľovaním chýb
 3. Uložte svoju prácu pomocou Ctrl+S (Windows/Linux) alebo Cmd+S (Mac) – aj keď editor automaticky ukladá!
 
-![Editing files in VSCode.dev](../../../../translated_images/sk/edit-a-file.52c0ee665ef19f08.png)
+![Editing files in VSCode.dev](../../../../translated_images/sk/edit-a-file.52c0ee665ef19f08.webp)
 
 **Skvelé veci, ktoré sa dejú počas kódovania:**
 - Váš kód je krásne farebne zvýraznený, takže sa ľahko číta
@@ -339,7 +339,7 @@ Rovnako ako archeológovia vytvárajú detailné záznamy o vrstvách vykopávok
 2. Upravené súbory sa zobrazujú v sekcii „Changes“
 3. Farebné kódovanie označuje typ zmien: zelená pre prírastky, červená pre zmazania
 
-![Viewing changes in Source Control](../../../../translated_images/sk/working-tree.c58eec08e6335c79.png)
+![Viewing changes in Source Control](../../../../translated_images/sk/working-tree.c58eec08e6335c79.webp)
 
 **Ukladanie práce (workflow commitovania):**
 
@@ -431,7 +431,7 @@ Trhovisko rozšírení je veľmi dobre usporiadané, takže sa nestratíte pri h
 2. Prehliadajte si alebo vyhľadajte niečo konkrétne
 3. Kliknite na čokoľvek zaujímavé, aby ste sa o tom dozvedeli viac
 
-![Rozhranie trhoviska rozšírení](../../../../translated_images/sk/extensions.eca0e0c7f59a10b5.png)
+![Rozhranie trhoviska rozšírení](../../../../translated_images/sk/extensions.eca0e0c7f59a10b5.webp)
 
 **Čo tam uvidíte:**
 
@@ -484,7 +484,7 @@ Väčšina rozšírení má nastavenia, ktoré môžete upraviť, aby fungovali 
 3. Vyberte „Nastavenia rozšírenia“ z rozbaľovacej ponuky
 4. Upravte veci, kým nebude pracovný tok presne podľa vás
 
-![Prispôsobenie nastavení rozšírenia](../../../../translated_images/sk/extension-settings.21c752ae4f4cdb78.png)
+![Prispôsobenie nastavení rozšírenia](../../../../translated_images/sk/extension-settings.21c752ae4f4cdb78.webp)
 
 **Bežné veci, ktoré možno budete chcieť upraviť:**
 - Ako sa formátuje váš kód (taby vs medzery, dĺžka riadkov a pod.)

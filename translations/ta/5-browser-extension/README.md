@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### க்ரெடிட்ஸ்
 
-![ஒரு பச்சை உலாவி நீட்டிப்பு](../../../translated_images/ta/extension-screenshot.0e7f5bfa110e92e3.png)
+![ஒரு பச்சை உலாவி நீட்டிப்பு](../../../translated_images/ta/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## க்ரெடிட்ஸ்
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Bu projede, hayali bir banka nasıl kurulur öğreneceksiniz. Bu dersler, bir web uygulamasının nasıl tasarlanacağı ve yönlendirmelerin nasıl sağlanacağı, formların nasıl oluşturulacağı, durumun nasıl yönetileceği ve bir API'den banka verilerini nasıl çekeceğiniz gibi konularda talimatlar içerir.
 
-| ![Ekran1](../../../translated_images/tr/screen1.baccbba0f1f93364.png) | ![Ekran2](../../../translated_images/tr/screen2.123c82a831a1d14a.png) |
+| ![Ekran1](../../../translated_images/tr/screen1.baccbba0f1f93364.webp) | ![Ekran2](../../../translated_images/tr/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Dersler

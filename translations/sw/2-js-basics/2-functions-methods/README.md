@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Misingi ya JavaScript: Mbinu na Zana
 
-![JavaScript Basics - Functions](../../../../translated_images/sw/webdev101-js-functions.be049c4726e94f8b.png)
+![JavaScript Basics - Functions](../../../../translated_images/sw/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -29,7 +29,7 @@ journey
       Design responsivo: 5: Student
       Reflexos em vidro: 5: Student
 ```
-![Introdução ao CSS](../../../../translated_images/pt/webdev101-css.3f7af5991bf53a20.png)
+![Introdução ao CSS](../../../../translated_images/pt/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Lembras-te como o teu terrário HTML parecia bastante básico? O CSS é onde transformamos essa estrutura simples numa coisa visualmente apelativa.
@@ -202,7 +202,7 @@ body {
 
 Abre as ferramentas de desenvolvedor do teu navegador (F12), vai ao separador Elements (Elementos) e inspeciona o teu elemento `<h1>`. Vais ver que herda a família de fontes do body:
 
-![font herdada](../../../../translated_images/pt/1.cc07a5cbe114ad1d.png)
+![font herdada](../../../../translated_images/pt/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Hora do Experimento**: Experimenta definir outras propriedades herdáveis no `<body>` como `color`, `line-height` ou `text-align`. O que acontece ao teu título e a outros elementos?
 
@@ -594,7 +594,7 @@ Preparado para melhorar o teu terrário com reflexos realistas de vidro? Esta t�
 
 Vais criar destaques subtis que simulam como a luz se reflete em superfícies de vidro. Esta abordagem é semelhante à utilizada por pintores renascentistas como Jan van Eyck, que usavam luz e reflexão para tornar o vidro pintado tridimensional. Eis o que queres alcançar:
 
-![terrário acabado](../../../../translated_images/pt/terrarium-final.2f07047ffc597d0a.png)
+![terrário acabado](../../../../translated_images/pt/terrarium-final.2f07047ffc597d0a.webp)
 
 **O teu desafio:**
 - **Criar** formas ovais subtis brancas ou de cores claras para os reflexos no vidro

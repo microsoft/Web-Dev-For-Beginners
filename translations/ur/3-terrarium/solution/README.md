@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ایک چھوٹا سا ڈریگ اینڈ ڈراپ کوڈ-میڈیٹیشن۔ تھوڑے سے HTML، JS اور CSS کے ساتھ، آپ ایک ویب انٹرفیس بنا سکتے ہیں، اسے اسٹائل دے سکتے ہیں، اور اس میں انٹریکشن شامل کر سکتے ہیں۔
 
-![میرا ٹیریریم](../../../../translated_images/ur/screenshot_gray.0c796099a1f9f25e.png)
+![میرا ٹیریریم](../../../../translated_images/ur/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## کریڈٹس
 

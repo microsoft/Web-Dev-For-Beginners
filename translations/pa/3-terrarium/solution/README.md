@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਇੱਕ ਛੋਟਾ ਡ੍ਰੈਗ ਅਤੇ ਡ੍ਰਾਪ ਕੋਡ-ਮੈਡੀਟੇਸ਼ਨ। ਥੋੜ੍ਹਾ ਜਿਹਾ HTML, JS ਅਤੇ CSS ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਤੁਸੀਂ ਇੱਕ ਵੈੱਬ ਇੰਟਰਫੇਸ ਬਣਾਉਣ, ਇਸਨੂੰ ਸਜਾਉਣ ਅਤੇ ਇਸ ਵਿੱਚ ਇੰਟਰੈਕਸ਼ਨ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।
 
-![ਮੇਰਾ ਟੈਰੀਰੀਅਮ](../../../../translated_images/pa/screenshot_gray.0c796099a1f9f25e.png)
+![ਮੇਰਾ ਟੈਰੀਰੀਅਮ](../../../../translated_images/pa/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## ਸ਼੍ਰੇਯ
 

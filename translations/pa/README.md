@@ -72,13 +72,13 @@ Azure AI Foundry Discord Community ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋਵੋ
 
 ਸ਼ੁਰੂਆਤ ਕਰਨ ਲਈ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ਤੇ ਜਾਓ!
 
-![Background](../../translated_images/pa/background.148a8d43afde5730.png)
+![Background](../../translated_images/pa/background.148a8d43afde5730.webp)
 
 - ਬੁਨਿਆਦੀਂ ਤੱਕ RAG ਤੱਕ ਸਾਰੇ ਪਾਠ ਸ਼ਾਮਲ ਹਨ।
 - ਇਤিহাসਕ ਪਾਤਰਾਂ ਨਾਲ GenAI ਅਤੇ ਸਾਡੇ ਸਾਥੀ ਐਪ ਵਰਤ ਕੇ ਇੰਤrotateੈਕਟ ਕਰੋ।
 - ਮਨੋਰੰਜਕ ਅਤੇ ਦਿਲਚਸਪ ਕਹਾਣੀ, ਤੁਸੀਂ ਸਮੇਂ ਦਾ ਯਾਤਰੀ ਹੋਵੋ!
 
-![character](../../translated_images/pa/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/pa/character.5c0dd8e067ffd693.webp)
 
 ਹਰ ਪਾਠ ਵਿੱਚ ਅਸਾਈਨਮੈਂਟ, ਗਿਆਨ ਜਾਂਚ ਅਤੇ ਚੈਲੰਜ ਸ਼ਾਮਲ ਹੁੰਦੇ ਹਨ ਜਿਹੜੇ ਤੁਹਾਨੂੰ ਸਿੱਖਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ ਜਿਵੇਂ:
 - ਪ੍ਰੌਂਪਟਿੰਗ ਅਤੇ ਪ੍ਰੌਂਪਟ ਇੰਜੀਨੀਅਰਿੰਗ
@@ -114,7 +114,7 @@ Azure AI Foundry Discord Community ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋਵੋ
 
 ਆਪਣੇ ਬਣਾਏ ਕਾਪੀ ਵਿੱਚ, **Code** ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਅਤੇ **Open with Codespaces** ਚੁਣੋ। ਇਹ ਤੁਹਾਡੇ ਲਈ ਨਵਾਂ Codespace ਬਣਾ ਦੇਵੇਗਾ ਜਿਸ ਵਿੱਚ ਤੁਸੀਂ ਕੰਮ ਕਰ ਸਕਦੇ ਹੋ।
 
-![Codespace](../../translated_images/pa/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/pa/createcodespace.0238bbf4d7a8d955.webp)
 
 #### ਆਪਣੇ ਕੰਪਿਊਟਰ 'ਤੇ ਕੋਰਸ ਚਲਾਉਣਾ
 

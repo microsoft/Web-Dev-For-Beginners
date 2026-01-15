@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: 返回完整的HTML页面
     Browser->>User: 显示新页面（闪烁/重载）
 ```
-![多页面应用的更新流程](../../../../translated_images/zh/mpa.7f7375a1a2d4aa77.png)
+![多页面应用的更新流程](../../../../translated_images/zh/mpa.7f7375a1a2d4aa77.webp)
 
 **这种方式为何显得笨重：**
 - 每次点击都要重新构建整页
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: 更新特定页面元素
     Browser->>User: 显示更新内容（无刷新）
 ```
-![单页面应用的更新流程](../../../../translated_images/zh/spa.268ec73b41f992c2.png)
+![单页面应用的更新流程](../../../../translated_images/zh/spa.268ec73b41f992c2.webp)
 
 **为何SPA体验更佳：**
 - 只更新实际变化部分（聪明吧？）
@@ -516,7 +516,7 @@ if (data.error) {
 
 现在测试输入无效账号时，页面上会出现有用的错误提示！
 
-![登录时显示错误消息的截图](../../../../translated_images/zh/login-error.416fe019b36a6327.png)
+![登录时显示错误消息的截图](../../../../translated_images/zh/login-error.416fe019b36a6327.webp)
 
 #### 第四步：兼顾无障碍访问
 
@@ -950,7 +950,7 @@ timeline
 
 这是美化后仪表盘的示例：
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/zh/screen2.123c82a831a1d14a.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/zh/screen2.123c82a831a1d14a.webp)
 
 不必完全照搬——以此为灵感，打造属于你自己的风格！
 

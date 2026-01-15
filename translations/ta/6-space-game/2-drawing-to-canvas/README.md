@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![கன்வாஸ் பட்டு](../../../../translated_images/ta/canvas_grid.5f209da785ded492.png)
+![கன்வாஸ் பட்டு](../../../../translated_images/ta/canvas_grid.5f209da785ded492.webp)
 > படம் இதிலிருந்து [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 கன்வாஸ் கூறில் வரைவு செய்வதற்கு, அனைத்து கன்வாஸ் கிராபிக்ஸ் அடிப்படையாக மாறும் மூன்று படிகள் உள்ளன. இதை மீண்டும் மீண்டும் செய்து பார்க்கும்போது இது இயல்பானதாக மாறும்:
@@ -323,11 +323,11 @@ Canvas கூறுடன் கூடிய ஒரு வலைப்பக்�
 
 - ஹீரோ கப்பல்
 
-   ![Hero ship](../../../../translated_images/ta/player.dd24c1afa8c71e9b.png)
+   ![Hero ship](../../../../translated_images/ta/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 பேய் அணி
 
-   ![Monster ship](../../../../translated_images/ta/enemyShip.5df2a822c16650c2.png)
+   ![Monster ship](../../../../translated_images/ta/enemyShip.5df2a822c16650c2.webp)
 
 ### வளர்ச்சியைத் தொடங்க பரிந்துரைகள்
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 செய்த முடிவு இதுபோல் தோன்ற வேண்டும்:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/ta/partI-solution.36c53b48c9ffae2a.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/ta/partI-solution.36c53b48c9ffae2a.webp)
 
 ## தீர்வு
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 基础知识：数组和循环
 
-![JavaScript Basics - Arrays](../../../../translated_images/zh/webdev101-js-arrays.439d7528b8a29455.png)
+![JavaScript Basics - Arrays](../../../../translated_images/zh/webdev101-js-arrays.439d7528b8a29455.webp)
 > 速写笔记，作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

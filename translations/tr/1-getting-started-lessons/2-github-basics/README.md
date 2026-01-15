@@ -17,7 +17,7 @@ Başta bu biraz fazla gibi gelebilir – açıkçası, ilk GitHub sayfama bakark
 
 Bu yolculuğu birlikte, adım adım gerçekleştireceğiz. Acele yok, baskı yok – sadece sen, ben ve birazdan en iyi arkadaşların olacak gerçekten harika araçlar!
 
-![GitHub'a Giriş](../../../../translated_images/tr/webdev101-github.8846d7971abef6f9.png)
+![GitHub'a Giriş](../../../../translated_images/tr/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ Burada sadece kod yazmayı öğrenmiyorsunuz – dijital dünyayı biraz daha iy
 
 ✅ 'Yeni başlayanlar için uygun' depoları bulmanın iyi bir yolu [‘good-first-issue’ etiketiyle arama yapmak](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)dır.
 
-![Bir depoyu yerel olarak kopyalama](../../../../translated_images/tr/clone_repo.5085c48d666ead57.png)
+![Bir depoyu yerel olarak kopyalama](../../../../translated_images/tr/clone_repo.5085c48d666ead57.webp)
 
 Kod kopyalamanın birkaç yolu vardır. Bir yol, HTTPS, SSH veya GitHub CLI (Komut Satırı Arayüzü) kullanarak depo içeriğini "klonlamaktır".
 

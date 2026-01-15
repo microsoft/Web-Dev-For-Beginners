@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Takto bude vyzerať váš hotový projekt:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/sk/screenshot.0a1ee0d123df681b.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/sk/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Vaša cesta učenia sa vývoja AI aplikácií
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Základný princíp**: Vývoj AI aplikácií kombinuje tradičné webové vývojárske zručnosti s integráciou AI služieb, čím vytvára inteligentné aplikácie, ktoré pôsobia prirodzene a reagujú na používateľov.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/sk/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/sk/playground.d2b927122224ff8f.webp)
 
 **Čo robí playground tak užitočným:**
 - **Vyskúšajte** rôzne AI modely ako GPT-4o-mini, Claude a ďalšie (všetky zadarmo!)
@@ -199,7 +199,7 @@ mindmap
 
 Keď si trošku pohrajete, stačí kliknúť na záložku "Code" a vybrať programovací jazyk, aby ste získali implementačný kód, ktorý budete potrebovať.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/sk/playground-choice.1d23ba7d407f4758.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/sk/playground-choice.1d23ba7d407f4758.webp)
 
 ## Nastavenie backendovej integrácie v Pythone
 
@@ -2354,14 +2354,14 @@ Chcete si tento projekt vyskúšať v cloudovom vývojovom prostredí? GitHub Co
 - **Prejdite** na [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Kliknite** na "Use this template" v pravom hornom rohu (uistite sa, že ste prihlásení do GitHubu)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/sk/template.67ad477109d29a2b.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/sk/template.67ad477109d29a2b.webp)
 
 **Krok 2: Spustite Codespaces**
 - **Otvorte** práve vytvorený repozitár
 - **Kliknite** na zelené tlačidlo "Code" a vyberte "Codespaces"
 - **Zvoľte** "Create codespace on main" pre spustenie vývojového prostredia
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/sk/codespace.bcecbdf5d2747d3d.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/sk/codespace.bcecbdf5d2747d3d.webp)
 
 **Krok 3: Konfigurácia prostredia**
 Po načítaní Codespace budete mať prístup k:

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Temelleri: Karar Verme
 
-![JavaScript Temelleri - Karar Verme](../../../../translated_images/tr/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScript Temelleri - Karar Verme](../../../../translated_images/tr/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 

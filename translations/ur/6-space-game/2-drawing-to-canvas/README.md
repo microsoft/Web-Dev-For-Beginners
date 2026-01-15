@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![کینوس کا گرڈ](../../../../translated_images/ur/canvas_grid.5f209da785ded492.png)
+![کینوس کا گرڈ](../../../../translated_images/ur/canvas_grid.5f209da785ded492.webp)
 > تصویر [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) سے
 
 کینوس عنصر پر ڈرائنگ کرنے کے لیے، آپ وہی تین قدمی عمل اپنائیں گے جو تمام کینوس گرافکس کی بنیاد بناتا ہے۔ ایک بار جب آپ یہ چند بار کریں گے، تو یہ آپ کے لیے آسان ہو جائے گا:
@@ -181,7 +181,7 @@ ctx.fillRect(0, 0, 200, 200); // x, y, width, height
 
 حتمی نتیجہ کچھ اس طرح نظر آنا چاہیے:  
 
-![کالا اسکرین جس پر ایک ہیرو اور 5*5 مونسٹرز ہیں](../../../../translated_images/ur/partI-solution.36c53b48c9ffae2a.png)  
+![کالا اسکرین جس پر ایک ہیرو اور 5*5 مونسٹرز ہیں](../../../../translated_images/ur/partI-solution.36c53b48c9ffae2a.webp)  
 
 ## حل  
 

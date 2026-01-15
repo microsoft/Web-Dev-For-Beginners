@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Cơ bản về JavaScript: Mảng và Vòng lặp
 
-![Cơ bản về JavaScript - Mảng](../../../../translated_images/vi/webdev101-js-arrays.439d7528b8a29455.png)
+![Cơ bản về JavaScript - Mảng](../../../../translated_images/vi/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

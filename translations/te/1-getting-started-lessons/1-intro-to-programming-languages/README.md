@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ఈ రోజు, ఆధునిక వెబ్ డెవలప్మెంట్‌ను సాధ్యం చేసే అత్యద్భుతమైన టూల్స్ ని పరిశీలించబోతున్నాము, ఇవి చాలా ఇబ్బందిదాయకం కాకుండా అలూజిపోతాయి. నేను చెబుతున్నది Netflix, Spotify మరియు మీ ఇష్టమైన ఇండి యాప్ స్టూడియోలో డెవలపర్లు ప్రతిరోజు ఉపయోగించే అదే ఎడిటర్లు, బ్రౌజర్లు మరియు వర్క్‌ఫ్లోలు. మరియు ఇది మీకు సంతోష డ్యాన్స్ చేయించే భాగం: ఈ మోస్ట్ ప్రొఫెషనల్ గ్రేడ్, ఇండస్ట్రీ-స్టాండర్డ్ టూల్స్ చాలా కాలిగా ఉచితం!
 
-![Intro Programming](../../../../translated_images/te/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/te/webdev101-programming.d6e3f98e61ac4bff.webp)
 > స్కెచ్‌నోట్ [Tomomi Imura](https://twitter.com/girlie_mac) రూపొందించారు
 
 ```mermaid

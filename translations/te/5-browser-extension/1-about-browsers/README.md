@@ -25,7 +25,7 @@ journey
       ఇబ్బందులను డీబగ్ చేయండి: 4: Student
       అనుభవాన్ని మెరుగు పరచండి: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/te/browser.60317c9be8b7f84a.jpg)
+![Browser sketchnote](../../../../translated_images/te/browser.60317c9be8b7f84a.webp)
 > స్కెచ్నోట్ ద్వారా [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## ప్రీ-లెక్చర్ క్విజ్
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **చిన్న చరిత్ర**: మొదటి బ్రౌజర్ 'WorldWideWeb' అని పిలవబడింది మరియు ఇది సర్ టిమోథీ బర్నర్స్-లీ 1990లో సృష్టించారు.
 
-![early browsers](../../../../translated_images/te/earlybrowsers.d984b711cdf3a42d.jpg)
+![early browsers](../../../../translated_images/te/earlybrowsers.d984b711cdf3a42d.webp)
 > కొన్ని ప్రారంభ బ్రౌజర్లు, [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) ద్వారా
 
 ### బ్రౌజర్లు వెబ్ కంటెంట్‌ను ఎలా ప్రాసెస్ చేస్తాయి
@@ -194,7 +194,7 @@ quadrantChart
 
 ఎక్స్‌టెన్షన్ ఇన్‌స్టాలేషన్ ప్రక్రియను అర్థం చేసుకోవడం, ప్రజలు మీరు తయారు చేసిన ఎక్స్‌టెన్షన్‌ను ఇన్‌స్టాల్ చేయేటప్పుడు ఉపయోగపడే అనుభవాన్ని ఊహించడానికి సహాయం చేస్తుంది. ఆధునిక బ్రౌజర్లలో ఈ ఇన్‌స్టాలేషన్ ప్రక్రియ సాధారణంగా ఉంటుంది, చర్యల రూపరేఖలో స్వల్ప మార్పులుంటాయి.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/te/install-on-edge.d68781acaf0b3d3d.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/te/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **మరియు ముఖ్యమైనది**: మీ స్వంత ఎక్స్‌టెన్షన్లను పరీక్షించే సమయంలో డెవలపర్ మోడ్ ఆన్ చేసి, ఇతర స్టోర్స్ నుంచి ఎక్స్‌టెన్షన్స్ అనుమతి ఇవ్వడం మర్చిపోకండి.
 
@@ -308,10 +308,10 @@ project-root/
 ### ఎక్స్‌టెన్షన్ వీక్షణల అవలోకనం
 
 **సెట్టప్ వీక్షణ** - మొదటి సారి ఉపయోగించే యూజర్ సెటప్:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/te/1.b6da8c1394b07491.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/te/1.b6da8c1394b07491.webp)
 
 **ఫలితాల వీక్షణ** - కార్బన్ ఫుట్‌ప్రింట్ డేటాను చూపిస్తుంది:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/te/2.1dae52ff08042246.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/te/2.1dae52ff08042246.webp)
 
 ### సెటప్ ఫారం నిర్మించడం
 

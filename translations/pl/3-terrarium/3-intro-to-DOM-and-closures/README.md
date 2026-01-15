@@ -25,7 +25,7 @@ journey
       Testuj funkcjonalność: 5: Student
       Ukończ terrarium: 5: Student
 ```
-![DOM i zamknięcie](../../../../translated_images/pl/webdev101-js.10280393044d7eaa.png)
+![DOM i zamknięcie](../../../../translated_images/pl/webdev101-js.10280393044d7eaa.webp)
 > Sketchnotka autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Witamy w jednym z najbardziej angażujących aspektów tworzenia stron internetowych – tworzeniu interaktywności! Model Obiektowy Dokumentu (DOM) jest jak most łączący twój HTML z JavaScript, a dziś użyjemy go, aby ożywić twoje terrarium. Gdy Tim Berners-Lee stworzył pierwszą przeglądarkę internetową, wyobrażał sobie sieć, gdzie dokumenty mogą być dynamiczne i interaktywne – to właśnie DOM sprawia, że ta wizja jest możliwa.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Reprezentacja drzewa DOM](../../../../translated_images/pl/dom-tree.7daf0e763cbbba92.png)
+![Reprezentacja drzewa DOM](../../../../translated_images/pl/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentacja DOM i powiązanego znacznika HTML. Źródło: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Zrozumienie zamknięć**: Zamknięcia to istotny temat w JavaScript i wielu programistów używa ich przez lata, zanim w pełni zrozumie teoretyczne aspekty. Dzisiaj skupimy się na praktycznym zastosowaniu – zobaczysz, jak zamknięcia naturalnie pojawiają się podczas budowania interaktywnych funkcji. Zrozumienie rozwinie się, gdy zobaczysz, jak rozwiązują rzeczywiste problemy.
 
-![Reprezentacja drzewa DOM](../../../../translated_images/pl/dom-tree.7daf0e763cbbba92.png)
+![Reprezentacja drzewa DOM](../../../../translated_images/pl/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentacja DOM i powiązanego znacznika HTML. Źródło: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Teraz przetestuj swoje interaktywne terrarium! Otwórz plik `index.html` w przeg
 - **Wsparcie wieloplatformowe**: Działa na desktopie i urządzeniach mobilnych
 - **Uważność na wydajność**: Brak wycieków pamięci lub zbędnych obliczeń
 
-![finished terrarium](../../../../translated_images/pl/terrarium-final.0920f16e87c13a84.png)
+![finished terrarium](../../../../translated_images/pl/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

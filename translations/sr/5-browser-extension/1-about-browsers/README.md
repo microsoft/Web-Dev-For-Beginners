@@ -25,7 +25,7 @@ journey
       Отkloniti грешке: 4: Student
       Побољшати искуство: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/sr/browser.60317c9be8b7f84a.jpg)
+![Browser sketchnote](../../../../translated_images/sr/browser.60317c9be8b7f84a.webp)
 > Скетчнот од [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Квиз пре предавања
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **Мало историје**: Први прегледач назван је 'WorldWideWeb' и креирао га је сер Тимоти Бернерс-Ли 1990. године.
 
-![early browsers](../../../../translated_images/sr/earlybrowsers.d984b711cdf3a42d.jpg)
+![early browsers](../../../../translated_images/sr/earlybrowsers.d984b711cdf3a42d.webp)
 > Неки рани прегледачи, преко [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Како прегледачи обрађују веб садржај
@@ -194,7 +194,7 @@ quadrantChart
 
 Разумевање процеса инсталације проширења помаже да предвидите корисничко искуство када људи инсталирају ваше проширење. Процес инсталације је стандардизован у модерним прегледачима, уз мање разлике у дизајну интерфејса.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sr/install-on-edge.d68781acaf0b3d3d.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sr/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Важно**: Обавезно укључите режим програмера и дозволите проширења из других продавница када тестирате сопствена проширења.
 
@@ -308,10 +308,10 @@ project-root/
 ### Преглед приказа проширења
 
 **Приказ подешавања** – конфигурација новог корисника:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sr/1.b6da8c1394b07491.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sr/1.b6da8c1394b07491.webp)
 
 **Приказ резултата** – приказ података о угљеничном отиску:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sr/2.1dae52ff08042246.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sr/2.1dae52ff08042246.webp)
 
 ### Креирање формулара за подешавање
 

@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![siatka canvas](../../../../translated_images/pl/canvas_grid.5f209da785ded492.png)
+![siatka canvas](../../../../translated_images/pl/canvas_grid.5f209da785ded492.webp)
 > Obraz z [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Aby rysować na elemencie canvas, wykonasz ten sam trzyetapowy proces, który jest podstawą całej grafiki na canvasie. Po kilku próbach stanie się to drugą naturą:
@@ -323,11 +323,11 @@ Zbudujesz stronę internetową z elementem Canvas. Powinna wyświetlać czarny e
 
 - Statek bohatera
 
-   ![Statek bohatera](../../../../translated_images/pl/player.dd24c1afa8c71e9b.png)
+   ![Statek bohatera](../../../../translated_images/pl/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 potworów
 
-   ![Statek potwora](../../../../translated_images/pl/enemyShip.5df2a822c16650c2.png)
+   ![Statek potwora](../../../../translated_images/pl/enemyShip.5df2a822c16650c2.webp)
 
 ### Zalecane kroki rozpoczęcia pracy
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Gotowy efekt powinien wyglądać tak:
 
-![Czarny ekran z bohaterem i 5*5 potworów](../../../../translated_images/pl/partI-solution.36c53b48c9ffae2a.png)
+![Czarny ekran z bohaterem i 5*5 potworów](../../../../translated_images/pl/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Rozwiązanie
 

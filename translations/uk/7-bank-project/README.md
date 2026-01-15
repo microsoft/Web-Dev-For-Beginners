@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 У цьому проєкті ви навчитеся створювати вигаданий банк. Ці уроки включають інструкції щодо створення макету веб-додатку, налаштування маршрутів, створення форм, управління станом і отримання даних з API, з якого можна отримати дані банку.
 
-| ![Screen1](../../../translated_images/uk/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/uk/screen2.123c82a831a1d14a.png) |
+| ![Screen1](../../../translated_images/uk/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/uk/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Уроки
