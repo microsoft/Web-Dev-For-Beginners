@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript बेसिक्स: मेथड्स और फंक्शन्स
 
-![JavaScript बेसिक्स - फंक्शन्स](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.hi.png)
+![JavaScript बेसिक्स - फंक्शन्स](../../../../translated_images/hi/webdev101-js-functions.be049c4726e94f8b.png)
 > स्केचनोट द्वारा [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

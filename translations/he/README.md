@@ -52,13 +52,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 בקרו ב-[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) כדי להתחיל!
 
-![Background](../../translated_images/background.148a8d43afde5730.he.png)
+![Background](../../translated_images/he/background.148a8d43afde5730.png)
 
 - שיעורים המכסים הכל מהבסיס ועד RAG.
 - אינטראקציה עם דמויות היסטוריות באמצעות GenAI והאפליקציה המלווית שלנו.
 - נרטיב מהנה ומרתק, שבו תטיילו בזמן!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.he.png)
+![character](../../translated_images/he/character.5c0dd8e067ffd693.png)
 
 כל שיעור כולל משימה להשלמה, בדיקת ידע ואתגר להנחות אתכם בנושאים כמו:
 - הוראות והנדסת הוראות
@@ -94,7 +94,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 בעותק שלכם של מאגר זה שיצרתם, לחצו על כפתור **Code** ובחרו **Open with Codespaces**. פעולה זו תיצור Codespace חדש עבור עבודה בו.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.he.png)
+![Codespace](../../translated_images/he/createcodespace.0238bbf4d7a8d955.png)
 
 #### הרצת התוכנית מקומית במחשב
 

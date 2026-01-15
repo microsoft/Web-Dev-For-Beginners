@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 हम इस यात्रा को साथ-साथ कदम दर कदम तय करेंगे। कोई जल्दी नहीं, कोई दबाव नहीं – सिर्फ आप, मैं, और कुछ बहुत ही बढ़िया टूल्स जो आपके नए सबसे अच्छे दोस्त बनने वाले हैं!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.hi.png)
+![Intro to GitHub](../../../../translated_images/hi/webdev101-github.8846d7971abef6f9.png)
 > स्केचनोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid
@@ -606,7 +606,7 @@ flowchart TD
 
 ✅ 'beginner-friendly' रिपॉजिटरी खोजने का एक अच्छा तरीका है [‘good-first-issue’ टैग से खोजें](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)।
 
-![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57.hi.png)
+![Copy a repo locally](../../../../translated_images/hi/clone_repo.5085c48d666ead57.png)
 
 कोड कॉपी करने के कई तरीके हैं। एक तरीका है रिपॉजिटरी के कंटेंट को "क्लोन" करना, HTTPS, SSH, या GitHub CLI (कमांड लाइन इंटरफ़ेस) का उपयोग करके।
 

@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. एक कमिट संदेश लिखें: "Add initial HTML structure"  
 5. अपनी परिवर्तनों को सहेजने के लिए "Commit new file" क्लिक करें
 
-![GitHub पर प्रारंभिक फ़ाइल बनाते हुए](../../../../translated_images/new-file-github.com.c886796d800e8056.hi.png)
+![GitHub पर प्रारंभिक फ़ाइल बनाते हुए](../../../../translated_images/hi/new-file-github.com.c886796d800e8056.png)
 
 **यह प्रारंभिक सेटअप जो करता है:**  
 - उचित HTML5 दस्तावेज़ संरचना स्थापित करता है सेमांटिक तत्वों के साथ  
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **सफलता संकेत:** आपको एक्सप्लोरर साइडबार में अपनी परियोजना फ़ाइलें और मुख्य संपादक क्षेत्र में `index.html` संपादन के लिए दिखाई देगा। 
 
-![VSCode.dev में परियोजना लोड हुई](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.hi.png)
+![VSCode.dev में परियोजना लोड हुई](../../../../translated_images/hi/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **इंटरफ़ेस में आप क्या देखेंगे:**  
 - **Explorer साइडबार**: आपकी रिपॉजिटरी फ़ाइलें और फोल्डर संरचना दिखाता है  
@@ -449,7 +449,7 @@ li:before {
 **इंस्टॉल के तुरंत बाद परिणाम:**  
 CodeSwing इंस्टॉल होने के बाद, आप अपने रिज्यूम वेबसाइट का लाइव प्रीव्यू संपादक में देखेंगे। इससे आप ठीक वैसे ही देख सकते हैं कि आपकी साइट कैसी दिखती है जैसे आप बदलाव करते हैं।
 
-![CodeSwing एक्सटेंशन live preview दिखा रहा है](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.hi.png)
+![CodeSwing एक्सटेंशन live preview दिखा रहा है](../../../../translated_images/hi/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **बढ़े हुए इंटरफ़ेस को समझना:**  
 - **स्प्लिट व्यू**: एक तरफ आपका कोड और दूसरी तरफ लाइव प्रीव्यू दिखाता है  

@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **כתוב** הודעת commit: "Add initial HTML structure"
 5. **לחץ** "Commit new file" כדי לשמור את השינויים שלך
 
-![יצירת קובץ ראשוני ב-GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.he.png)
+![יצירת קובץ ראשוני ב-GitHub](../../../../translated_images/he/new-file-github.com.c886796d800e8056.png)
 
 **הנה מה שההגדרה הראשונית הזו משיגה:**
 - **מבססת** מבנה מסמך HTML5 נכון עם אלמנטים סמנטיים
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **אינדיקטור הצלחה**: אתה אמור לראות את קבצי הפרויקט שלך בסרגל הצד של Explorer ואת `index.html` זמין לעריכה באזור העורך הראשי.
 
-![פרויקט נטען ב-VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.he.png)
+![פרויקט נטען ב-VSCode.dev](../../../../translated_images/he/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **מה שתראה בממשק:**
 - **סרגל הצד של Explorer**: **מציג** את קבצי המאגר שלך ומבנה התיקיות
@@ -448,7 +448,7 @@ li:before {
 **תוצאות מיידיות לאחר ההתקנה:**
 לאחר התקנת CodeSwing, תראה תצוגה מקדימה חיה של אתר הקורות חיים שלך מופיעה בעורך. זה מאפשר לך לראות בדיוק איך האתר שלך נראה בזמן שאתה מבצע שינויים.
 
-![תוסף CodeSwing מציג תצוגה מקדימה חיה](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.he.png)
+![תוסף CodeSwing מציג תצוגה מקדימה חיה](../../../../translated_images/he/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **הבנת הממשק המשופר:**
 - **תצוגה מפוצלת**: **מציגה** את הקוד שלך בצד אחד ואת התצוגה המקדימה בצד השני

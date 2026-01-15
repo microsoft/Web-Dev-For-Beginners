@@ -25,7 +25,7 @@ journey
       मुद्दों का डिबग करें: 4: Student
       अनुभव को पॉलिश करें: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.hi.jpg)
+![Browser sketchnote](../../../../translated_images/hi/browser.60317c9be8b7f84a.jpg)
 > स्केचनोट द्वारा [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## प्री-लेक्चर क्विज़
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **थोड़ा इतिहास**: पहला ब्राउज़र 'WorldWideWeb' था और इसे सर टिमोथी बर्नर्स-ली ने 1990 में बनाया था।
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.hi.jpg)
+![early browsers](../../../../translated_images/hi/earlybrowsers.d984b711cdf3a42d.jpg)
 > कुछ शुरुआती ब्राउज़र्स, द्वारा [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### ब्राउज़र्स वेब सामग्री को कैसे प्रोसेस करते हैं
@@ -194,7 +194,7 @@ quadrantChart
 
 एक्सटेंशन इंस्टॉलेशन प्रक्रिया को समझना आपको यह पूर्वानुमान लगाने में मदद करता है कि उपयोगकर्ता आपके एक्सटेंशन को इंस्टॉल करते समय क्या अनुभव करेंगे। इंस्टॉलेशन प्रक्रिया आधुनिक ब्राउज़रों में मानकीकृत है, इंटरफ़ेस डिज़ाइन में केवल मामूली अंतर होते हैं।
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.hi.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/hi/install-on-edge.d68781acaf0b3d3d.png)
 
 > **महत्वपूर्ण**: सुनिश्चित करें कि "डेवलपर मोड" चालू है और जब अपने एक्सटेंशन्स का परीक्षण कर रहे हों तो अन्य स्टोर से एक्सटेंशन्स की अनुमति दें।
 
@@ -308,10 +308,10 @@ project-root/
 ### एक्सटेंशन व्यूज़ का अवलोकन
 
 **सेटअप व्यू** - पहली बार उपयोगकर्ता की कॉन्फ़िगरेशन:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.hi.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/hi/1.b6da8c1394b07491.png)
 
 **परिणाम व्यू** - कार्बन पदचिह्न डेटा प्रदर्शन:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.hi.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/hi/2.1dae52ff08042246.png)
 
 ### कॉन्फ़िगरेशन फॉर्म बनाना
 

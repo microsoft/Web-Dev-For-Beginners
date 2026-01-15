@@ -187,7 +187,7 @@ mindmap
 
 不再蛇行亂撞，而是建立 **集中式狀態管理** 系統。想像有一名非常有組織的專責人員主控所有重要事物：
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.hk.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/hk/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 以下為完成作業後的示範結果：
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.hk.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/hk/dialog.93bba104afeb79f1.png)
 
 ---
 

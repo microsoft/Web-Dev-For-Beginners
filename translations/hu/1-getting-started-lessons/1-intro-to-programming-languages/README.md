@@ -17,7 +17,7 @@ Tudom, hogy a programozás most még ijesztőnek tűnhet. Amikor én kezdtem, t�
 
 Ma meg fogjuk nézni azokat a hihetetlen eszközöket, amik nemcsak lehetővé teszik, hanem nagyon addiktívvá teszik a modern webfejlesztést. Pont azokat az editorokat, böngészőket és munkafolyamatokat, amelyeket a Netflix, a Spotify és a kedvenc indie app stúdiód fejlesztői használnak minden nap. És most jön a rész, amire majd örülni fogsz: ezeknek a professzionális, iparági szabvány eszközöknek a többsége teljesen ingyenes!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.hu.png)
+![Intro Programming](../../../../translated_images/hu/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote készítette [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

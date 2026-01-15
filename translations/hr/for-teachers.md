@@ -42,10 +42,10 @@ Ovaj kurikulum uključuje pakete za uvoz koji su kompatibilni s uobičajenim LMS
   - Moodle Cloud ima ograničenu podršku za Common Cartridge. Preferirajte gore navedenu Moodle datoteku, koja se također može učitati u Canvas.
   - Nakon uvoza, pregledajte module, datume dospijeća i postavke kvizova kako bi odgovarali vašem rasporedu semestra.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.hr.png)
+![Moodle](../../translated_images/hr/moodle.94eb93d714a50cb2.png)
 > Kurikulum u Moodle učionici
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.hr.png)
+![Canvas](../../translated_images/hr/canvas.fbd605ff8e5b8aff.png)
 > Kurikulum u Canvasu
 
 ### Korištenje repozitorija direktno (bez Classrooma)

@@ -17,7 +17,7 @@ Tudom, hogy kezdetben soknak tűnhet – emlékszem, hogy az első GitHub oldala
 
 Ezt az utat együtt tesszük meg, lépésről lépésre. Nem kell sietni, nincs nyomás – csak te, én és néhány igazán klassz eszköz, amelyek a legjobb barátaiddá válnak!
 
-![Bevezetés a GitHubhoz](../../../../translated_images/webdev101-github.8846d7971abef6f9.hu.png)
+![Bevezetés a GitHubhoz](../../../../translated_images/hu/webdev101-github.8846d7971abef6f9.png)
 > Vázlatkép készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ Először találjunk egy tárolót (repo-t) GitHubon, ami érdekel, és amelyhez
 
 ✅ Jó módszer kezdőbarát repók megtalálására a [good-first-issue címkével való keresés](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Másolj helyileg egy repót](../../../../translated_images/clone_repo.5085c48d666ead57.hu.png)
+![Másolj helyileg egy repót](../../../../translated_images/hu/clone_repo.5085c48d666ead57.png)
 
 Több módja is van a kód átmásolásának. Az egyik módszer a repó tartalmának "klónozása" HTTPS, SSH vagy a GitHub CLI (parancssoros felület) használatával.
 

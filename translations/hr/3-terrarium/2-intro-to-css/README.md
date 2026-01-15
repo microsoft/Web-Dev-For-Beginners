@@ -29,7 +29,7 @@ journey
       Responsivni dizajn: 5: Student
       Stakleni odrazi: 5: Student
 ```
-![Uvod u CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.hr.png)
+![Uvod u CSS](../../../../translated_images/hr/webdev101-css.3f7af5991bf53a20.png)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Sjećaš li se kako je tvoj HTML terrarij izgledao prilično osnovno? CSS je mjesto gdje tu običnu strukturu pretvaramo u nešto vizualno privlačno.
@@ -202,7 +202,7 @@ body {
 
 Otvori alate za razvoj preglednika (F12), idi na tab Elements i pregledaj svoj `<h1>` element. Vidjet ćeš da nasljeđuje font-family od body:
 
-![naslijeđeni font](../../../../translated_images/1.cc07a5cbe114ad1d.hr.png)
+![naslijeđeni font](../../../../translated_images/hr/1.cc07a5cbe114ad1d.png)
 
 ✅ **Vrijeme za eksperiment**: Pokušaj postaviti druga nasljediva svojstva na `<body>` kao `color`, `line-height` ili `text-align`. Što se događa s naslovom i ostalim elementima?
 
@@ -332,7 +332,7 @@ U našem terrariju, svaka biljka treba sličnu stilizaciju, ali i individualno p
 **Ovo je HTML struktura za svaku biljku:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.hr.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/hr/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Spremni za povećanje realizma terarija s realističnim odrazima stakla? Ova teh
 
 Kreirat ćete suptilne naglaske koji simuliraju kako se svjetlo reflektira na staklenim površinama. Ovaj pristup sliči načinu na koji su renesansni slikari poput Jana van Eycka koristili svjetlo i odraze da bi naslikano staklo izgledalo trodimenzionalno. Evo što želite postići:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.hr.png)
+![finished terrarium](../../../../translated_images/hr/terrarium-final.2f07047ffc597d0a.png)
 
 **Vaš zadatak:**
 - **Napravite** suptilne bijele ili svijetle ovalne oblike za odraze stakla

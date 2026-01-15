@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: पूर्ण HTML पृष्ठ लौटाता है
     Browser->>User: नया पृष्ठ दिखाता है (फ्लैश/रिलोड)
 ```  
-![बहु-पृष्ठ एप्लिकेशन में अपडेट वर्कफ़्लो](../../../../translated_images/mpa.7f7375a1a2d4aa77.hi.png)
+![बहु-पृष्ठ एप्लिकेशन में अपडेट वर्कफ़्लो](../../../../translated_images/hi/mpa.7f7375a1a2d4aa77.png)
 
 **यह तरीका क्यों बोझिल लगता था:**  
 - हर क्लिक का मतलब था पूरा पेज फिर से बनाना  
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: विशिष्ट पृष्ठ तत्वों को अपडेट करता है
     Browser->>User: अपडेट किया गया सामग्री दिखाता है (कोई पुनः लोड नहीं)
 ```  
-![एक-पृष्ठ एप्लिकेशन में अपडेट वर्कफ़्लो](../../../../translated_images/spa.268ec73b41f992c2.hi.png)
+![एक-पृष्ठ एप्लिकेशन में अपडेट वर्कफ़्लो](../../../../translated_images/hi/spa.268ec73b41f992c2.png)
 
 **SPAs क्यों बेहतर महसूस होते हैं:**  
 - केवल वही भाग अपडेट होते हैं जो वास्तव में परिवर्तित हुए हैं (चतुर, है ना?)  
@@ -516,7 +516,7 @@ if (data.error) {
 
 अब जब आप अमान्य अकाउंट से परीक्षण करेंगे, तो आप पेज पर एक सहायक त्रुटि संदेश देखेंगे!
 
-![लॉगिन के दौरान दिखाए जाने वाले त्रुटि संदेश का स्क्रीनशॉट](../../../../translated_images/login-error.416fe019b36a6327.hi.png)
+![लॉगिन के दौरान दिखाए जाने वाले त्रुटि संदेश का स्क्रीनशॉट](../../../../translated_images/hi/login-error.416fe019b36a6327.png)
 
 #### चरण 4: पहुँच के लिए समावेशी होना
 
@@ -950,7 +950,7 @@ timeline
 
 इस तरह एक सौंदर्यपूर्ण डैशबोर्ड दिख सकता है:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.hi.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/hi/screen2.123c82a831a1d14a.png)
 
 आपको इसे बिल्कुल मिलाने की आवश्यकता नहीं है - इसे प्रेरणा के रूप में लें और इसे अपना बनाएं!
 

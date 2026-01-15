@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![הרשת של הקנבס](../../../../translated_images/canvas_grid.5f209da785ded492.he.png)
+![הרשת של הקנבס](../../../../translated_images/he/canvas_grid.5f209da785ded492.png)
 > תמונה מ-[MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 כדי לצייר על אלמנט הקנבס, תעקבו אחר אותו תהליך בן שלושה שלבים שמרכיב את הבסיס לכל גרפיקת הקנבס. ברגע שתעשו זאת כמה פעמים, זה יהפוך לטבע שני:
@@ -329,11 +329,11 @@ flowchart TD
 
 - ספינת גיבור
 
-   ![ספינת גיבור](../../../../translated_images/player.dd24c1afa8c71e9b.he.png)
+   ![ספינת גיבור](../../../../translated_images/he/player.dd24c1afa8c71e9b.png)
 
 - 5*5 מפלצות
 
-   ![ספינת מפלצת](../../../../translated_images/enemyShip.5df2a822c16650c2.he.png)
+   ![ספינת מפלצת](../../../../translated_images/he/enemyShip.5df2a822c16650c2.png)
 
 ### צעדים מומלצים להתחלת הפיתוח
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 התוצאה הסופית צריכה להיראות כך:  
 
-![מסך שחור עם גיבור ו-5*5 מפלצות](../../../../translated_images/partI-solution.36c53b48c9ffae2a.he.png)  
+![מסך שחור עם גיבור ו-5*5 מפלצות](../../../../translated_images/he/partI-solution.36c53b48c9ffae2a.png)  
 
 ## פתרון  
 

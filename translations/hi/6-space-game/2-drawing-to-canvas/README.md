@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![कैनवास का ग्रिड](../../../../translated_images/canvas_grid.5f209da785ded492.hi.png)
+![कैनवास का ग्रिड](../../../../translated_images/hi/canvas_grid.5f209da785ded492.png)
 > छवि [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) से
 
 कैनवास तत्व पर ड्रॉ करने के लिए, आप तीन चरणों की प्रक्रिया का पालन करेंगे जो सभी कैनवास ग्राफिक्स की नींव है। जब आप इसे कुछ बार करते हैं, तो यह सहज हो जाता है:
@@ -323,11 +323,11 @@ flowchart TD
 
 - हीरो जहाज़
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.hi.png)
+   ![Hero ship](../../../../translated_images/hi/player.dd24c1afa8c71e9b.png)
 
 - 5*5 दानव
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.hi.png)
+   ![Monster ship](../../../../translated_images/hi/enemyShip.5df2a822c16650c2.png)
 
 ### विकास शुरू करने के लिए अनुशंसित कदम
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 पूरा परिणाम इस प्रकार दिखना चाहिए:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.hi.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/hi/partI-solution.36c53b48c9ffae2a.png)
 
 ## समाधान
 

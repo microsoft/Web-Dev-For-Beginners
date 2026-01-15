@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: 返回完整的 HTML 頁面
     Browser->>User: 顯示新頁面（閃爍/重載）
 ```
-![多頁面應用的更新流程](../../../../translated_images/mpa.7f7375a1a2d4aa77.hk.png)
+![多頁面應用的更新流程](../../../../translated_images/hk/mpa.7f7375a1a2d4aa77.png)
 
 **這方法令人覺得笨拙的原因：**
 - 每次點擊都重建整個頁面
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: 更新指定的頁面元素
     Browser->>User: 顯示更新內容（無需重新載入）
 ```
-![單頁應用的更新流程](../../../../translated_images/spa.268ec73b41f992c2.hk.png)
+![單頁應用的更新流程](../../../../translated_images/hk/spa.268ec73b41f992c2.png)
 
 **SPA 感覺更好的原因：**
 - 只更新實際改變的部分（很聰明吧？）
@@ -516,7 +516,7 @@ if (data.error) {
 
 以後測試錯誤帳號，你會立刻在頁面看到有幫助的錯誤訊息！
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.hk.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/hk/login-error.416fe019b36a6327.png)
 
 #### 第四步：考慮無障礙使用
 
@@ -950,7 +950,7 @@ timeline
 
 呢度係一個經過樣式化嘅儀表板嘅示例：
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.hk.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/hk/screen2.123c82a831a1d14a.png)
 
 唔使死乞白賴要完全一樣，用嚟做靈感，打造屬於你嘅風格！
 

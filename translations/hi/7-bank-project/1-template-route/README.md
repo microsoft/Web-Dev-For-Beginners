@@ -644,7 +644,7 @@ sequenceDiagram
 
 `history.pushState` का उपयोग ब्राउज़र के नेविगेशन इतिहास में नई प्रविष्टियां बनाता है। आप इसे तब जांच सकते हैं जब आप ब्राउज़र के *बैक बटन* को दबाए रखें, यह आपको कुछ ऐसा दिखाना चाहिए:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.hi.png)
+![Screenshot of navigation history](../../../../translated_images/hi/history.7fdabbafa521e064.png)
 
 यदि आप कुछ बार बैक बटन क्लिक करते हैं, तो आप देखेंगे कि वर्तमान URL बदल जाता है और इतिहास अपडेट होता है, लेकिन वही टेम्पलेट प्रदर्शित होता रहता है।
 

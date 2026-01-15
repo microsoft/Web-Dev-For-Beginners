@@ -72,13 +72,13 @@ Ne propustite naš novi nastavni plan o Generativnoj AI!
 
 Posjetite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) i započnite!
 
-![Background](../../translated_images/background.148a8d43afde5730.hr.png)
+![Background](../../translated_images/hr/background.148a8d43afde5730.png)
 
 - Lekcije pokrivaju sve, od osnova do RAG-a.
 - Komunicirajte s povijesnim likovima koristeći GenAI i naš prateći app.
 - Zabavna i zanimljiva naracija, putovat ćete kroz vrijeme!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.hr.png)
+![character](../../translated_images/hr/character.5c0dd8e067ffd693.png)
 
 
 Svaka lekcija uključuje zadatak za dovršetak, provjeru znanja i izazov koji vas vodi kroz teme poput:
@@ -115,7 +115,7 @@ Slijedite ove korake:
 
 U vašoj kopiji ovog spremišta koju ste stvorili, kliknite gumb **Code** i odaberite **Open with Codespaces**. Time će se kreirati novi Codespace u kojem ćete raditi.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.hr.png)
+![Codespace](../../translated_images/hr/createcodespace.0238bbf4d7a8d955.png)
 
 #### Pokretanje nastavnog plana lokalno na vašem računalu
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 בפרויקט הזה תלמדו איך לבנות בנק פיקטיבי. השיעורים כוללים הוראות על איך לעצב אפליקציית ווב ולספק נתיבים, לבנות טפסים, לנהל מצב, ולמשוך נתונים מ-API שממנו תוכלו לקבל את נתוני הבנק.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.he.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.he.png) |
+| ![Screen1](../../../translated_images/he/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/he/screen2.123c82a831a1d14a.png) |
 |--------------------------------|--------------------------------|
 
 ## שיעורים

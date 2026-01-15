@@ -79,7 +79,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **輸入**提交訊息：「Add initial HTML structure」
 5. **點擊**「Commit new file」儲存變更
 
-![在 GitHub 建立初始檔案](../../../../translated_images/new-file-github.com.c886796d800e8056.hk.png)
+![在 GitHub 建立初始檔案](../../../../translated_images/hk/new-file-github.com.c886796d800e8056.png)
 
 **這初始設置達成的效果：**
 - **建立**正確的 HTML5 文件結構，使用語意標籤
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **成功指標**：你會看到專案檔案呈現在側邊欄中，且能在主要編輯區編輯 `index.html`。
 
-![專案載入 VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.hk.png)
+![專案載入 VSCode.dev](../../../../translated_images/hk/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **介面中你將看到：**
 - **Explorer 側邊欄**：**顯示**版本庫檔案與資料夾結構
@@ -450,7 +450,7 @@ li:before {
 **安裝後的即時效果：**
 安裝完成後，你會在編輯器看到履歷網站的即時預覽，方便你隨時檢視網站外觀。
 
-![CodeSwing 即時預覽](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.hk.png)
+![CodeSwing 即時預覽](../../../../translated_images/hk/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **強化介面說明：**
 - **分割檢視**：一側顯示程式碼，一側顯示即時預覽

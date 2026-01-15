@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Vraća kompletnu HTML stranicu
     Browser->>User: Prikazuje novu stranicu (kašalj/ponovno učitavanje)
 ```
-![Radni tijek ažuriranja u više-straničnoj aplikaciji](../../../../translated_images/mpa.7f7375a1a2d4aa77.hr.png)
+![Radni tijek ažuriranja u više-straničnoj aplikaciji](../../../../translated_images/hr/mpa.7f7375a1a2d4aa77.png)
 
 **Zašto je taj pristup djelovao nezgrapno:**
 - Svaki klik značio je potpuno ponovno građenje stranice od nule
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Ažurira određene elemente stranice
     Browser->>User: Prikazuje ažurirani sadržaj (bez ponovnog učitavanja)
 ```
-![Radni tijek ažuriranja u jedno-straničnoj aplikaciji](../../../../translated_images/spa.268ec73b41f992c2.hr.png)
+![Radni tijek ažuriranja u jedno-straničnoj aplikaciji](../../../../translated_images/hr/spa.268ec73b41f992c2.png)
 
 **Zašto SPA aplikacije djeluju puno bolje:**
 - Ažuriraju samo dijelove koji su stvarno promijenjeni (pametno, zar ne?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Sada, kad testirate s nevažećim računom, vidjet ćete korisnu poruku o pogrešci direktno na stranici!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.hr.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/hr/login-error.416fe019b36a6327.png)
 
 #### Korak 4: Biti Uključiv s Pristupačnošću
 
@@ -950,7 +950,7 @@ Spremni da podignete svoju bankarsku aplikaciju na sljedeću razinu? Učinite da
 
 Evo kako bi mogao izgledati dotjerani kontrolni panel:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.hr.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/hr/screen2.123c82a831a1d14a.png)
 
 Nemojte osjećati potrebu da točno replicirate – upotrijebite ga kao inspiraciju i prilagodite po svom ukusu!
 

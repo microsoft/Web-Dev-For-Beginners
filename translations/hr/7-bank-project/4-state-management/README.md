@@ -187,7 +187,7 @@ Poput dizajna Titanica s dijeljenim pretincima koji se činilo čvrstim dok se n
 
 Umjesto da jurnjamo u krug, stvorit ćemo **centralizirani sustav upravljanja stanjem**. Zamislite to kao ako imate jednu stvarno organiziranu osobu koja vodi sve važne stvari:
 
-![Schema prikazuje protoke podataka između HTML-a, korisničkih radnji i stanja](../../../../translated_images/data-flow.fa2354e0908fecc8.hr.png)
+![Schema prikazuje protoke podataka između HTML-a, korisničkih radnji i stanja](../../../../translated_images/hr/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Ovaj izazov pomoći će vam da razmišljate kao profesionalni programer koji uva
 
 Evo primjera rezultata nakon završetka zadatka:
 
-![Snimka zaslona koja prikazuje primjer dijaloga "Dodaj transakciju"](../../../../translated_images/dialog.93bba104afeb79f1.hr.png)
+![Snimka zaslona koja prikazuje primjer dijaloga "Dodaj transakciju"](../../../../translated_images/hr/dialog.93bba104afeb79f1.png)
 
 ---
 

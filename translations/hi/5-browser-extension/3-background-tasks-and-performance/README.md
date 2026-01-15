@@ -123,7 +123,7 @@ flowchart LR
 
 आइए इसे आज़माएँ। कोई वेबसाइट खोलें (Microsoft.com अच्छा विकल्प है) और 'रिकॉर्ड' बटन पर क्लिक करें। अब पेज रिफ्रेश करें और प्रोफाइलर को सब कुछ कैप्चर करते देखें। जब आप रिकॉर्डिंग बंद करेंगे, तो आपको ब्राउज़र के 'स्क्रिप्ट', 'रेंडर' और 'पेंट' करने के विस्तृत विवरण दिखाई देंगे। यह मुझे याद दिलाता है कि कैसे मिशन कंट्रोल एक रॉकेट लॉन्च के दौरान हर सिस्टम की निगरानी करता है - आपको वास्तविक समय के डेटा मिलते हैं कि क्या हो रहा है और कब।
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.hi.png)
+![Edge profiler](../../../../translated_images/hi/profiler.5a4a62479c5df01c.png)
 
 ✅ [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) में और भी बहुत जानकारी है यदि आप गहराई से जानना चाहते हैं
 
@@ -133,11 +133,11 @@ flowchart LR
 
 प्रोफ़ाइल टाइमलाइन का हिस्सा चुनकर अपने पेज के प्रदर्शन का स्नैपशॉट प्राप्त करें और सारांश पैन देखें:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.hi.png)
+![Edge profiler snapshot](../../../../translated_images/hi/snapshot.97750180ebcad737.png)
 
 देखें कि ईवेंट लॉग पैनल में कोई घटना 15 मिलीसेकंड से अधिक समय तो नहीं ले रही है:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.hi.png)
+![Edge event log](../../../../translated_images/hi/log.804026979f3707e0.png)
 
 ✅ अपने प्रोफाइलर को जानें! इस साइट पर डेवलपर टूल खोलें और देखें कि क्या कोई बाधा है। सबसे धीमा लोड होने वाला संसाधन कौन सा है? सबसे तेज़?
 

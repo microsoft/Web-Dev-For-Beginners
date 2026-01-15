@@ -29,7 +29,7 @@ journey
       उत्तरदायी डिजाइन: 5: Student
       ग्लास परावर्तक: 5: Student
 ```
-![CSS का परिचय](../../../../translated_images/webdev101-css.3f7af5991bf53a20.hi.png)
+![CSS का परिचय](../../../../translated_images/hi/webdev101-css.3f7af5991bf53a20.png)
 > स्केचनोट द्वारा [टोमोमी इमुरा](https://twitter.com/girlie_mac)
 
 याद है आपका HTML टेरारियम कितना साधारण दिखता था? CSS वह जगह है जहाँ हम उस सादे ढांचे को कुछ और आकर्षक रूप में बदलते हैं।
@@ -202,7 +202,7 @@ body {
 
 अपने ब्राउज़र के डेवलपर टूल्स (F12) खोलें, Elements टैब में जाएं, और अपने `<h1>` एलिमेंट का निरीक्षण करें। आप देखेंगे कि यह बॉडी से फ़ॉन्ट परिवार विरासत में लेता है:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.hi.png)
+![inherited font](../../../../translated_images/hi/1.cc07a5cbe114ad1d.png)
 
 ✅ **प्रयोग का समय**: बॉडी पर `color`, `line-height`, या `text-align` जैसे अन्य विरासत में मिलने वाले गुण सेट करके देखें। आपके हेडिंग और अन्य एलिमेंट्स पर क्या प्रभाव पड़ता है?
 
@@ -332,7 +332,7 @@ ID सेलेक्टर्स `#` सिंबल का उपयोग क
 **यहाँ हर पौधे की HTML संरचना है:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.hi.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/hi/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 आप सूक्ष्म हाइलाइट बनाएंगे जो दिखाते हैं कि प्रकाश कैसे कांच की सतहों से परावर्तित होता है। यह तरीका पुनर्जागरण चित्रकार जन वैन ऐक की त्रि-आयामी कांच तस्वीरें बनाने के लिए प्रकाश और परावर्तन के उपयोग जैसा है। यह रहा आपका लक्ष्य:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.hi.png)
+![finished terrarium](../../../../translated_images/hi/terrarium-final.2f07047ffc597d0a.png)
 
 **आपकी चुनौती:**
 - **बनाएं** कांच के परावर्तन के लिए सूक्ष्म सफेद या हल्के रंग के अंडाकार आकार

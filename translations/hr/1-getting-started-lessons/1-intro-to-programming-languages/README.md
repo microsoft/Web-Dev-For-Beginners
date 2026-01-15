@@ -17,7 +17,7 @@ Pogledaj, potpuno razumijem ako ti se programiranje sada čini zastrašujuće. K
 
 Danas ćemo istražiti nevjerojatne alate koji čine moderni web razvoj ne samo mogućim, već i ozbiljno zaraznim. Govorim o točno istim uređivačima, preglednicima i radnim procesima koje koriste developeri u Netflixu, Spotifyu i tvom omiljenom indie studiju svaki dan. I evo dijela koji će te natjerati da zaplešeš od sreće: većina ovih profesionalnih, industrijskih alata je potpuno besplatna!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.hr.png)
+![Intro Programming](../../../../translated_images/hr/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
