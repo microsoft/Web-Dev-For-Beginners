@@ -295,7 +295,7 @@ Laten we eerst observeren wat er gebeurt bij een basisformulierverzending:
 2. Observeer de veranderingen in de adresbalk van je browser
 3. Merk op hoe de pagina opnieuw laadt en gegevens in de URL verschijnen
 
-![Screenshot van de URL-verandering in de browser na het klikken op de Registreren-knop](../../../../translated_images/click-register.e89a30bf0d4bc9ca.nl.png)
+![Screenshot van de URL-verandering in de browser na het klikken op de Registreren-knop](../../../../translated_images/nl/click-register.e89a30bf0d4bc9ca.png)
 
 ### Vergelijking van HTTP-methoden
 
@@ -350,7 +350,7 @@ Laten we je registratieformulier configureren om correct te communiceren met de 
 2. **Klik** op de knop "Account aanmaken"
 3. **Observeer** de serverrespons in je browser
 
-![Een browservenster op het adres localhost:5000/api/accounts, met een JSON-string met gebruikersgegevens](../../../../translated_images/form-post.61de4ca1b964d91a.nl.png)
+![Een browservenster op het adres localhost:5000/api/accounts, met een JSON-string met gebruikersgegevens](../../../../translated_images/nl/form-post.61de4ca1b964d91a.png)
 
 **Wat je zou moeten zien:**
 - **Browser verwijst** naar de API-eindpunt-URL
@@ -615,7 +615,7 @@ async function register() {
 3. **Klik** op "Account aanmaken"
 4. **Observeer** de consoleberichten en gebruikersfeedback
 
-![Screenshot met logbericht in de browserconsole](../../../../translated_images/browser-console.efaf0b51aaaf6778.nl.png)
+![Screenshot met logbericht in de browserconsole](../../../../translated_images/nl/browser-console.efaf0b51aaaf6778.png)
 
 **Wat je zou moeten zien:**
 - **Laadstatus** verschijnt op de verzendknop
@@ -790,7 +790,7 @@ Laten we je registratieformulier verbeteren met robuuste validatie die een uitst
 3. **Probeer** speciale tekens in het gebruikersnaamveld
 4. **Voer** een negatief saldo in
 
-![Screenshot met validatiefout bij het proberen het formulier in te dienen](../../../../translated_images/validation-error.8bd23e98d416c22f.nl.png)
+![Screenshot met validatiefout bij het proberen het formulier in te dienen](../../../../translated_images/nl/validation-error.8bd23e98d416c22f.png)
 
 **Wat je zult zien:**
 - **Browser toont** native validatiemeldingen
@@ -952,7 +952,7 @@ Toon een foutmelding in de HTML als de gebruiker al bestaat.
 
 Hier is een voorbeeld van hoe de uiteindelijke inlogpagina eruit kan zien na wat styling:
 
-![Screenshot van de inlogpagina na het toevoegen van CSS-stijlen](../../../../translated_images/result.96ef01f607bf856a.nl.png)
+![Screenshot van de inlogpagina na het toevoegen van CSS-stijlen](../../../../translated_images/nl/result.96ef01f607bf856a.png)
 
 ## Quiz na de les
 

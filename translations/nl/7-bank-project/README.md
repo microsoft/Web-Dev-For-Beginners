@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 In dit project leer je hoe je een fictieve bank kunt bouwen. Deze lessen bevatten instructies over hoe je een webapp kunt opzetten en routes kunt toevoegen, formulieren kunt bouwen, de status kunt beheren en gegevens kunt ophalen van een API waarmee je de gegevens van de bank kunt ophalen.
 
-| ![Scherm1](../../../translated_images/screen1.baccbba0f1f93364.nl.png) | ![Scherm2](../../../translated_images/screen2.123c82a831a1d14a.nl.png) |
+| ![Scherm1](../../../translated_images/nl/screen1.baccbba0f1f93364.png) | ![Scherm2](../../../translated_images/nl/screen2.123c82a831a1d14a.png) |
 |--------------------------------|--------------------------------|
 
 ## Lessen

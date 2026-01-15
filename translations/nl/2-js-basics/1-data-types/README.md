@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basisprincipes: Gegevenstypen
 
-![JavaScript Basisprincipes - Gegevenstypen](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.nl.png)
+![JavaScript Basisprincipes - Gegevenstypen](../../../../translated_images/nl/webdev101-js-datatypes.4cc470179730702c.png)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

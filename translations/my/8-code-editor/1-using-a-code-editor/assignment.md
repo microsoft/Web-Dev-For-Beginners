@@ -78,7 +78,7 @@ VSCode.dev သည် Repository ကို ဖွင့်ရန် အနည်�
 4. Commit Message ရေးပါ: "Add initial HTML structure"
 5. "Commit new file" ကို Click လုပ်ပြီး သင့်ပြောင်းလဲမှုများကို Save လုပ်ပါ
 
-![Creating initial file on GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.my.png)
+![Creating initial file on GitHub](../../../../translated_images/my/new-file-github.com.c886796d800e8056.png)
 
 **ဒီ Initial Setup က ဘာတွေကို အကောင်အထည်ဖော်ထားသလဲ:**
 - HTML5 Document Structure ကို Semantic Elements ဖြင့် Properly Establish လုပ်ထားသည်
@@ -104,7 +104,7 @@ VSCode.dev သည် Repository ကို ဖွင့်ရန် အနည်�
 
 ✅ **Success Indicator**: Explorer Sidebar တွင် သင့် Project Files တွေကို မြင်ရပြီး Main Editor Area တွင် `index.html` ကို Edit လုပ်နိုင်ပါမည်။
 
-![Project loaded in VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.my.png)
+![Project loaded in VSCode.dev](../../../../translated_images/my/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **Interface တွင် မြင်ရမည့်အရာများ:**
 - **Explorer Sidebar**: **သင့် Repository Files နှင့် Folder Structure ကို ပြသသည်**
@@ -448,7 +448,7 @@ Extensions များသည် Development Experience ကို တိုး�
 **Installation ပြီးနောက် ရရှိသော ရလဒ်များ:**
 CodeSwing Install ပြီးပါက သင့် Resume Website ၏ Live Preview ကို Editor တွင် မြင်ရပါမည်။ သင့် Site ရဲ့ အလှပဆုံးပုံစံကို Changes များလုပ်နေစဉ် မြင်နိုင်ပါသည်။
 
-![CodeSwing extension showing live preview](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.my.png)
+![CodeSwing extension showing live preview](../../../../translated_images/my/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **Enhanced Interface ကို နားလည်ခြင်း:**
 - **Split View**: **Code ကို တစ်ဖက်၊ Live Preview ကို တစ်ဖက်တွင် ပြသသည်**

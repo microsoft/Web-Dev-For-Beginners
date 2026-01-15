@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Grunnleggende: Arrays og Løkker
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.no.png)
+![JavaScript Basics - Arrays](../../../../translated_images/no/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

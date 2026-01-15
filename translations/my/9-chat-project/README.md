@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 သင့်ရဲ့ အပြီးသတ် project ဟာ ဒီလိုပုံစံရှိပါမယ်:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.my.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/my/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ AI Application Development ရဲ့ သင့်ရဲ့ လေ့လာရေးခရီး
 
@@ -194,7 +194,7 @@ mindmap
 
 **Core Principle**: AI application development ဟာ traditional web development skills တွေကို AI service integration နဲ့ ပေါင်းစပ်ပြီး သုံးစွဲသူတွေကို သဘာဝနဲ့ တုံ့ပြန်မှုကောင်းတဲ့ intelligent applications တွေ ဖန်တီးပေးပါတယ်။
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.my.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/my/playground.d2b927122224ff8f.png)
 
 **Playground ရဲ့ အသုံးဝင်မှု**:
 - **စမ်းသပ်**: GPT-4o-mini, Claude နဲ့ အခြား AI models တွေကို စမ်းသပ်နိုင်တယ် (အခမဲ့!)
@@ -204,7 +204,7 @@ mindmap
 
 Playground ကို အနည်းငယ် စမ်းသပ်ပြီးရင် "Code" tab ကို နှိပ်ပြီး သင့် programming language ကို ရွေးပြီး implementation code ကို ရယူနိုင်ပါတယ်။
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.my.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/my/playground-choice.1d23ba7d407f4758.png)
 
 ## Python Backend Integration ကို Setup လုပ်ခြင်း
 
@@ -2107,14 +2107,14 @@ mindmap
 - [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners) သို့ **သွားပါ**  
 - GitHub တွင် login လုပ်ထားသည်ကို သေချာစွာ **စစ်ဆေးပြီး** "Use this template" ကို အပေါ်ယံညာဘက်တွင် **နှိပ်ပါ**  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.my.png)  
+![Create from template interface showing the green "Use this template" button](../../../translated_images/my/template.67ad477109d29a2b.png)  
 
 **အဆင့် ၂: Codespaces ကို စတင်ပါ**  
 - သင့် newly created repository ကို **ဖွင့်ပါ**  
 - အစိမ်းရောင် "Code" ခလုတ်ကို **နှိပ်ပြီး** "Codespaces" ကို **ရွေးပါ**  
 - "Create codespace on main" ကို **ရွေးပြီး** development environment ကို စတင်ပါ  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.my.png)  
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/my/codespace.bcecbdf5d2747d3d.png)  
 
 **အဆင့် ၃: Environment Configuration**  
 သင့် Codespace load ပြီးလျှင် သင်သည် အောက်ပါအရာများကို အသုံးပြုနိုင်ပါမည်-  

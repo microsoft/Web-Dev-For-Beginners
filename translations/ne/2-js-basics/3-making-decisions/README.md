@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जाभास्क्रिप्ट आधारभूत: निर्णय लिनु
 
-![जाभास्क्रिप्ट आधारभूत - निर्णय लिनु](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ne.png)
+![जाभास्क्रिप्ट आधारभूत - निर्णय लिनु](../../../../translated_images/ne/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 

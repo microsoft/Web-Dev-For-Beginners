@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 हामी यो यात्रा सँगै गर्नेछौं, एक कदममा। कुनै हतार छैन, कुनै दबाब छैन – केवल तपाईं, म, र केही साँच्चै चिसो उपकरणहरू जुन तपाईंको नयाँ साथी बन्नेछन्!
 
-![GitHub परिचय](../../../../translated_images/webdev101-github.8846d7971abef6f9.ne.png)
+![GitHub परिचय](../../../../translated_images/ne/webdev101-github.8846d7971abef6f9.png)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid
@@ -594,7 +594,7 @@ flowchart TD
 
 ✅ 'सुरुवाती-अनुकूल' रिपोजिटरीहरू खोज्नको लागि [ट्याग 'good-first-issue' द्वारा खोज्नुहोस्](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)।
 
-![रिपो स्थानीय रूपमा प्रतिलिपि गर्नुहोस्](../../../../translated_images/clone_repo.5085c48d666ead57.ne.png)
+![रिपो स्थानीय रूपमा प्रतिलिपि गर्नुहोस्](../../../../translated_images/ne/clone_repo.5085c48d666ead57.png)
 
 कोड प्रतिलिपि गर्ने धेरै तरिकाहरू छन्। एउटा तरिका भनेको रिपोजिटरीको सामग्री "क्लोन" गर्नु हो, HTTPS, SSH, वा GitHub CLI (कमाण्ड लाइन इन्टरफेस) प्रयोग गरेर।
 

@@ -25,7 +25,7 @@ journey
       Test funksjonalitet: 5: Student
       Fullfør terrarium: 5: Student
 ```
-![DOM and a closure](../../../../translated_images/webdev101-js.10280393044d7eaa.no.png)
+![DOM and a closure](../../../../translated_images/no/webdev101-js.10280393044d7eaa.png)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Velkommen til en av de mest engasjerende aspektene ved webutvikling – å gjøre ting interaktive! Document Object Model (DOM) er som en bro mellom din HTML og JavaScript, og i dag skal vi bruke den til å bringe terrariet ditt til liv. Da Tim Berners-Lee laget den første nettleseren, forestilte han seg et nett der dokumenter kunne være dynamiske og interaktive – DOM gjør denne visjonen mulig.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM tree representation](../../../../translated_images/dom-tree.7daf0e763cbbba92.no.png)
+![DOM tree representation](../../../../translated_images/no/dom-tree.7daf0e763cbbba92.png)
 
 > En representasjon av DOM og HTML-markup som refererer til den. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Forstå closures**: Closures er et viktig tema i JavaScript, og mange utviklere bruker dem i mange år før de fullt ut forstår alle teoretiske aspekter. I dag fokuserer vi på praktisk anvendelse – du vil se closures naturlig dukke opp når vi bygger våre interaktive funksjoner. Forståelsen utvikler seg mens du ser hvordan de løser virkelige problemer.
 
-![DOM tree representation](../../../../translated_images/dom-tree.7daf0e763cbbba92.no.png)
+![DOM tree representation](../../../../translated_images/no/dom-tree.7daf0e763cbbba92.png)
 
 > En representasjon av DOM og HTML-markup som refererer til den. Fra [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Nå kan du teste ditt interaktive terrarium! Åpne `index.html`-filen i en nettl
 - **Tverrplattformstøtte**: Fungerer på desktop og mobil
 - **Ytelsesbevisst**: Ingen minnelekkasjer eller unødvendige beregninger
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.no.png)
+![finished terrarium](../../../../translated_images/no/terrarium-final.0920f16e87c13a84.png)
 
 ---
 
