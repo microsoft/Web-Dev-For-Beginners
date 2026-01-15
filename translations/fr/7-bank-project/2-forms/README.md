@@ -292,7 +292,7 @@ Commençons par observer ce qui se passe avec la soumission basique d’un formu
 2. Observez les changements dans la barre d’adresse de votre navigateur
 3. Notez comment la page se recharge et les données apparaissent dans l’URL
 
-![Capture d’écran du changement d’URL du navigateur après avoir cliqué sur le bouton S’inscrire](../../../../translated_images/click-register.e89a30bf0d4bc9ca.fr.png)
+![Capture d’écran du changement d’URL du navigateur après avoir cliqué sur le bouton S’inscrire](../../../../translated_images/fr/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Comparaison des méthodes HTTP
 
@@ -346,7 +346,7 @@ Configurons votre formulaire d’inscription pour communiquer correctement avec 
 2. **Cliquez** sur le bouton "Créer un compte"
 3. **Observez** la réponse du serveur dans votre navigateur
 
-![Une fenêtre de navigateur à l’adresse localhost:5000/api/accounts, affichant une chaîne JSON avec des données utilisateur](../../../../translated_images/form-post.61de4ca1b964d91a.fr.png)
+![Une fenêtre de navigateur à l’adresse localhost:5000/api/accounts, affichant une chaîne JSON avec des données utilisateur](../../../../translated_images/fr/form-post.61de4ca1b964d91a.webp)
 
 **Ce que vous devriez voir :**
 - **Le navigateur redirige** vers l’URL du point de terminaison API
@@ -609,7 +609,7 @@ async function register() {
 3. **Cliquez** sur "Créer un compte"
 4. **Observez** les messages dans la console et les retours utilisateurs
 
-![Capture d’écran montrant le message de log dans la console du navigateur](../../../../translated_images/browser-console.efaf0b51aaaf6778.fr.png)
+![Capture d’écran montrant le message de log dans la console du navigateur](../../../../translated_images/fr/browser-console.efaf0b51aaaf6778.webp)
 
 **Ce que vous devriez voir :**
 - **État de chargement** visible sur le bouton de soumission
@@ -783,7 +783,7 @@ Améliorons votre formulaire d’inscription avec une validation robuste offrant
 3. **Essayez** des caractères spéciaux dans le champ nom d’utilisateur
 4. **Indiquez** un montant de solde négatif
 
-![Capture d’écran montrant l’erreur de validation lors de la tentative de soumission du formulaire](../../../../translated_images/validation-error.8bd23e98d416c22f.fr.png)
+![Capture d’écran montrant l’erreur de validation lors de la tentative de soumission du formulaire](../../../../translated_images/fr/validation-error.8bd23e98d416c22f.webp)
 
 **Ce que vous observerez :**
 - **Le navigateur affiche** les messages natifs de validation
@@ -943,7 +943,7 @@ Affichez un message d'erreur dans le HTML si l'utilisateur existe déjà.
 
 Voici un exemple de l'apparence que peut avoir la page de connexion finale après un peu de stylisation :
 
-![Capture d'écran de la page de connexion après l'ajout des styles CSS](../../../../translated_images/result.96ef01f607bf856a.fr.png)
+![Capture d'écran de la page de connexion après l'ajout des styles CSS](../../../../translated_images/fr/result.96ef01f607bf856a.webp)
 
 ## Quiz post-conférence
 

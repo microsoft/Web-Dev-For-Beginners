@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptin perusteet: Taulukot ja silmukat
 
-![JavaScriptin perusteet - Taulukot](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.fi.png)
+![JavaScriptin perusteet - Taulukot](../../../../translated_images/fi/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

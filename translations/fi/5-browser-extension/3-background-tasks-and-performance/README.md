@@ -126,7 +126,7 @@ Avaa Edge-selaimen kehitystyökalut klikkaamalla oikeassa yläkulmassa olevia ko
 
 Kokeillaan tätä. Avaa verkkosivusto (Microsoft.com toimii hyvin tähän) ja klikkaa 'Tallenna'-painiketta. Päivitä sivu ja katso, kuinka profiilintyökalu tallentaa kaiken, mitä tapahtuu. Kun lopetat tallennuksen, näet yksityiskohtaisen erittelyn siitä, kuinka selain 'skriptasi', 'renderöi' ja 'maalasi' sivuston. Se muistuttaa minua siitä, kuinka ohjauskeskus seuraa jokaista järjestelmää raketin laukaisun aikana – saat reaaliaikaista dataa siitä, mitä tapahtuu ja milloin.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.fi.png)
+![Edge profiler](../../../../translated_images/fi/profiler.5a4a62479c5df01c.png)
 
 ✅ [Microsoftin dokumentaatio](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) sisältää paljon lisätietoa, jos haluat syventyä aiheeseen.
 
@@ -136,11 +136,11 @@ Valitse profiilin aikajanan osia zoomataksesi tapahtumiin, jotka tapahtuvat sivu
 
 Saat yleiskuvan sivusi suorituskyvystä valitsemalla osan profiilin aikajanasta ja katsomalla yhteenvetopaneelia:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.fi.png)
+![Edge profiler snapshot](../../../../translated_images/fi/snapshot.97750180ebcad737.png)
 
 Tarkista Tapahtumaloki-paneeli nähdäksesi, kestikö jokin tapahtuma yli 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.fi.png)
+![Edge event log](../../../../translated_images/fi/log.804026979f3707e0.png)
 
 ✅ Tutustu profiilityökaluusi! Avaa kehitystyökalut tällä sivustolla ja katso, onko pullonkauloja. Mikä on hitaimmin latautuva resurssi? Nopein?
 

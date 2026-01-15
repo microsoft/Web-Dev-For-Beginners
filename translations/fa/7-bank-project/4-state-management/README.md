@@ -187,7 +187,7 @@ mindmap
 
 به جای دور خود چرخیدن، می‌خواهیم یک سیستم **مدیریت وضعیت متمرکز** بسازیم. مثل داشتن یک نفر بسیار منظم در مسئولیت همه امور مهم:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.fa.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/fa/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 نمونه نتیجه پس از تکمیل تکلیف:
 
-![تصویری از گفتگو نمونه "افزودن تراکنش"](../../../../translated_images/dialog.93bba104afeb79f1.fa.png)
+![تصویری از گفتگو نمونه "افزودن تراکنش"](../../../../translated_images/fa/dialog.93bba104afeb79f1.webp)
 
 ---
 

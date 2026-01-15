@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![شبکه کانواس](../../../../translated_images/canvas_grid.5f209da785ded492.fa.png)
+![شبکه کانواس](../../../../translated_images/fa/canvas_grid.5f209da785ded492.webp)
 > تصویر از [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 برای کشیدن روی عنصر کانواس، شما همان فرایند سه مرحله‌ای را دنبال می‌کنید که اساس همه گرافیک‌های کانواس است. وقتی چند بار این کار را انجام دهید، عادتتان می‌شود:
@@ -323,11 +323,11 @@ flowchart TD
 
 - کشتی قهرمان
 
-   ![کشتی قهرمان](../../../../translated_images/player.dd24c1afa8c71e9b.fa.png)
+   ![کشتی قهرمان](../../../../translated_images/fa/player.dd24c1afa8c71e9b.webp)
 
 - هیولا ۵ در ۵
 
-   ![کشتی هیولا](../../../../translated_images/enemyShip.5df2a822c16650c2.fa.png)
+   ![کشتی هیولا](../../../../translated_images/fa/enemyShip.5df2a822c16650c2.webp)
 
 ### مراحل پیشنهادی برای شروع توسعه
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 نتیجه نهایی باید به این شکل باشد:
 
-![صفحه سیاه با یک قهرمان و ۵*۵ هیولا](../../../../translated_images/partI-solution.36c53b48c9ffae2a.fa.png)
+![صفحه سیاه با یک قهرمان و ۵*۵ هیولا](../../../../translated_images/fa/partI-solution.36c53b48c9ffae2a.webp)
 
 ## راه‌حل
 

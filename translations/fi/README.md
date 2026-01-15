@@ -72,13 +72,13 @@ Uusi AI-avustajaprojekti juuri lisätty, tutustu projektiin [tästä](./9-chat-p
 
 Käy osoitteessa [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) aloittaaksesi!
 
-![Background](../../translated_images/background.148a8d43afde5730.fi.png)
+![Background](../../translated_images/fi/background.148a8d43afde5730.png)
 
 - Oppitunnit kattavat kaiken perusteista RAG:iin.
 - Vuorovaikutus historiallisten hahmojen kanssa GenAI:n ja lisäsovelluksemme kautta.
 - Hauska ja mukaansatempaava tarinankerronta, matkustat ajassa!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.fi.png)
+![character](../../translated_images/fi/character.5c0dd8e067ffd693.png)
 
 
 Jokaisessa oppitunnissa on tehtävä suoritettavaksi, tietoarviointi ja haaste, jotka ohjaavat sinua oppimaan aiheista kuten:
@@ -115,7 +115,7 @@ Noudata näitä ohjeita:
 
 Omassa kopiossasi tästä repositoriosta, jonka loit, klikkaa **Code** ja valitse **Open with Codespaces**. Tämä luo sinulle uuden Codespace-työtilan.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.fi.png)
+![Codespace](../../translated_images/fi/createcodespace.0238bbf4d7a8d955.png)
 
 #### Opetussuunnitelman suorittaminen paikallisesti tietokoneella
 

@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **یک پیام کامیت بنویسید:** "Add initial HTML structure"
 5. **روی** "Commit new file" کلیک کنید تا تغییرات ذخیره شود
 
-![ایجاد فایل اولیه در GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.fa.png)
+![ایجاد فایل اولیه در GitHub](../../../../translated_images/fa/new-file-github.com.c886796d800e8056.webp)
 
 **این تنظیمات اولیه چه کار می‌کند:**
 - **ایجاد** ساختار درست سند HTML5 با عناصر معنایی
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **نشانه موفقیت**: شما باید فایل‌های پروژه را در نوار کناری Explorer ببینید و `index.html` برای ویرایش در ناحیه اصلی باز باشد.
 
-![پروژه بارگذاری شده در VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.fa.png)
+![پروژه بارگذاری شده در VSCode.dev](../../../../translated_images/fa/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **چه چیزی در رابط کاربری مشاهده خواهید کرد:**
 - **نوار کناری Explorer**: **نمایش** فایل‌های مخزن و ساختار پوشه‌ای
@@ -448,7 +448,7 @@ li:before {
 **نتایج فوری پس از نصب:**
 پس از نصب CodeSwing، پیش‌نمایش زنده وب‌سایت رزومه در ویرایشگر ظاهر می‌شود. این امکان را به شما می‌دهد که دقیقاً ببینید تغییرات سایت چگونه است.
 
-![افزونه CodeSwing که پیش‌نمایش زنده را نشان می‌دهد](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.fa.png)
+![افزونه CodeSwing که پیش‌نمایش زنده را نشان می‌دهد](../../../../translated_images/fa/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **درک رابط کاربری پیشرفته:**
 - **نمایش تقسیم شده:** **نمایش** کد در یک طرف و پیش‌نمایش زنده در طرف دیگر

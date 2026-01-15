@@ -17,7 +17,7 @@ Tu connais ce moment où tu utilises ton application préférée et tout s’emb
 
 Aujourd’hui, nous allons explorer les outils incroyables qui rendent le développement web moderne non seulement possible, mais carrément addictif. Je parle exactement des éditeurs, navigateurs et flux de travail que les développeurs de Netflix, Spotify et ton studio d’applications indie préféré utilisent chaque jour. Et voici la partie qui va te faire danser de joie : la plupart de ces outils professionnels, standards de l’industrie, sont complètement gratuits !
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.fr.png)
+![Intro Programming](../../../../translated_images/fr/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

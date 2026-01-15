@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptin perusteet: Tietotyypit
 
-![JavaScriptin perusteet - Tietotyypit](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.fi.png)
+![JavaScriptin perusteet - Tietotyypit](../../../../translated_images/fi/webdev101-js-datatypes.4cc470179730702c.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

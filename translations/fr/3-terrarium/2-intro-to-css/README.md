@@ -29,7 +29,7 @@ journey
       Design réactif: 5: Student
       Reflets de verre: 5: Student
 ```
-![Introduction au CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.fr.png)
+![Introduction au CSS](../../../../translated_images/fr/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Vous vous souvenez comment votre terrarium HTML avait l’air assez basique ? Le CSS est ce qui transforme cette structure simple en quelque chose de visuellement attrayant.
@@ -202,7 +202,7 @@ body {
 
 Ouvrez les outils de développement de votre navigateur (F12), allez dans l’onglet Éléments, et inspectez votre élément `<h1>`. Vous verrez qu’il hérite de la famille de polices du body :
 
-![police héritée](../../../../translated_images/1.cc07a5cbe114ad1d.fr.png)
+![police héritée](../../../../translated_images/fr/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Temps d’expérimentation** : Essayez de définir d’autres propriétés héritables sur le `<body>` comme `color`, `line-height` ou `text-align`. Que se passe-t-il pour votre titre et les autres éléments ?
 
@@ -332,7 +332,7 @@ Dans notre terrarium, chaque plante nécessite un style similaire mais doit auss
 **Voici la structure HTML pour chaque plante :**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.fr.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/fr/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Prêt à améliorer votre terrarium avec des reflets de verre réalistes ? Cette
 
 Vous allez créer des reflets subtils qui simulent la façon dont la lumière se reflète sur les surfaces de verre. Cette approche est similaire à celle utilisée par les peintres de la Renaissance comme Jan van Eyck qui utilisaient lumière et réflexion pour donner un aspect tridimensionnel au verre peint. Voici ce que vous devrez viser :
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.fr.png)
+![finished terrarium](../../../../translated_images/fr/terrarium-final.2f07047ffc597d0a.webp)
 
 **Votre défi :**
 - **Créer** des formes ovales blanches ou claires subtiles pour les reflets du verre

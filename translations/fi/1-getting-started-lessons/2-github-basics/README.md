@@ -17,7 +17,7 @@ Tiedän, että tämä voi tuntua aluksi paljolta – muistan itsekin tuijottanee
 
 Otamme tämän matkan yhdessä, askel kerrallaan. Ei kiirettä, ei painetta – vain sinä, minä ja muutama todella siisti työkalu, joista tulee pian uusia parhaita ystäviäsi!
 
-![Johdanto GitHubiin](../../../../translated_images/webdev101-github.8846d7971abef6f9.fi.png)
+![Johdanto GitHubiin](../../../../translated_images/fi/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ Etsi ensin GitHubista repositorio (tai **repo**), joka kiinnostaa sinua ja johon
 
 ✅ Hyvä tapa löytää 'aloittelijaystävällisiä' repoja on [etsiä tagilla 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopioi repo paikallisesti](../../../../translated_images/clone_repo.5085c48d666ead57.fi.png)
+![Kopioi repo paikallisesti](../../../../translated_images/fi/clone_repo.5085c48d666ead57.png)
 
 Koodin kopioimiseen on useita tapoja. Yksi tapa on "klonata" repositorion sisältö HTTPS:n, SSH:n tai GitHub CLI:n (komentoriviliittymän) avulla.
 

@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Système de score** : Chaque vaisseau ennemi détruit rapporte 100 points (les nombres ronds sont plus faciles à calculer mentalement pour les joueurs). Le score s’affiche en bas à gauche.
-- **Compteur de vies** : Votre héros commence avec trois vies – une norme fixée par les premiers jeux d’arcade pour équilibrer défi et jouabilité. Chaque collision avec un ennemi coûte une vie. Nous afficherons les vies restantes en bas à droite à l’aide d’icônes de vaisseau ![life image](../../../../translated_images/life.6fb9f50d53ee0413.fr.png).
+- **Compteur de vies** : Votre héros commence avec trois vies – une norme fixée par les premiers jeux d’arcade pour équilibrer défi et jouabilité. Chaque collision avec un ennemi coûte une vie. Nous afficherons les vies restantes en bas à droite à l’aide d’icônes de vaisseau ![life image](../../../../translated_images/fr/life.6fb9f50d53ee0413.webp).
 
 ## C’est parti !
 

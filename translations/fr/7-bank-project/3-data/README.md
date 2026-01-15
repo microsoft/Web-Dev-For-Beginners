@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Renvoie la page HTML complète
     Browser->>User: Affiche la nouvelle page (clignotement/rechargement)
 ```
-![Flux de mise à jour dans une application multi-page](../../../../translated_images/mpa.7f7375a1a2d4aa77.fr.png)
+![Flux de mise à jour dans une application multi-page](../../../../translated_images/fr/mpa.7f7375a1a2d4aa77.webp)
 
 **Pourquoi cette approche semblait lourde :**  
 - Chaque clic impliquait de reconstruire toute la page depuis le début  
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Met à jour des éléments spécifiques de la page
     Browser->>User: Affiche le contenu mis à jour (sans rechargement)
 ```
-![Flux de mise à jour dans une application monpage](../../../../translated_images/spa.268ec73b41f992c2.fr.png)
+![Flux de mise à jour dans une application monpage](../../../../translated_images/fr/spa.268ec73b41f992c2.webp)
 
 **Pourquoi les SPA sont tellement mieux ressenties :**  
 - Seules les parties effectivement modifiées sont mises à jour (intelligent, non ?)  
@@ -516,7 +516,7 @@ if (data.error) {
 
 Maintenant, lorsque vous testez avec un compte invalide, vous verrez un message d’erreur utile directement sur la page !
 
-![Capture d'écran montrant le message d'erreur affiché lors de la connexion](../../../../translated_images/login-error.416fe019b36a6327.fr.png)
+![Capture d'écran montrant le message d'erreur affiché lors de la connexion](../../../../translated_images/fr/login-error.416fe019b36a6327.webp)
 
 #### Étape 4 : Être inclusif avec l'accessibilité
 
@@ -950,7 +950,7 @@ Prêt à faire passer votre application bancaire au niveau supérieur ? Donnons-
 
 Voici à quoi pourrait ressembler un tableau de bord élégant :
 
-![Capture d'écran d'un exemple de résultat du tableau de bord après stylisation](../../../../translated_images/screen2.123c82a831a1d14a.fr.png)
+![Capture d'écran d'un exemple de résultat du tableau de bord après stylisation](../../../../translated_images/fr/screen2.123c82a831a1d14a.webp)
 
 Ne vous sentez pas obligé de correspondre exactement à ça – utilisez-le comme source d’inspiration et faites-le vôtre !
 

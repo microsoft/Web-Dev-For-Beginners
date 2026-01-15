@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Käyttämällä tmrow'n CO2 Signal -API:ta sähkönkulutuksen seuraamiseen, luo selainlaajennus, joka muistuttaa sinua suoraan selaimessasi alueesi sähkönkulutuksesta. Tämän ad hoc -laajennuksen käyttö auttaa sinua tekemään päätöksiä toimintasi suhteen näiden tietojen perusteella.
 
-![laajennuksen kuvakaappaus](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.fi.png)
+![laajennuksen kuvakaappaus](../../../../../translated_images/fi/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## Aloittaminen
 
@@ -31,7 +31,7 @@ npm run build
 
 Asentaaksesi laajennuksen Edge-selaimeen, käytä selaimen oikean yläkulman 'kolmen pisteen' valikkoa löytääksesi Laajennukset-paneelin. Valitse sieltä 'Lataa purkamaton laajennus' ladataksesi uuden laajennuksen. Avaa 'dist'-kansio kehotteessa, ja laajennus latautuu. Käyttääksesi laajennusta tarvitset API-avaimen CO2 Signal -API:lle ([hanki avain sähköpostitse täältä](https://www.co2signal.com/) - syötä sähköpostiosoitteesi sivun laatikkoon) sekä [alueesi koodin](http://api.electricitymap.org/v3/zones), joka vastaa [Electricity Map -karttaa](https://www.electricitymap.org/map) (esimerkiksi Bostonissa käytän 'US-NEISO').
 
-![asennus](../../../../../translated_images/install-on-edge.78634f02842c4828.fi.png)
+![asennus](../../../../../translated_images/fi/install-on-edge.78634f02842c4828.png)
 
 Kun API-avain ja alue on syötetty laajennuksen käyttöliittymään, selaimen laajennuspalkin värillisen pisteen tulisi muuttua heijastamaan alueesi energiankulutusta ja antaa sinulle vihjeen siitä, millaisia energiaintensiivisiä toimintoja olisi sopivaa tehdä. Tämän 'pistejärjestelmän' konsepti on saanut inspiraationsa [Energy Lollipop -laajennuksesta](https://energylollipop.com/) Kalifornian päästöjen osalta.
 

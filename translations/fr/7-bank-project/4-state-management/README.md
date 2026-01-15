@@ -187,7 +187,7 @@ La [gestion d’état](https://fr.wikipedia.org/wiki/Gestion_d%27%C3%A9tat) cons
 
 Au lieu de courir après notre queue, nous allons créer un système de **gestion d’état centralisé**. Pensez-y comme avoir une personne vraiment organisée en charge de toutes les choses importantes :
 
-![Schéma montrant les flux de données entre le HTML, les actions utilisateur et l’état](../../../../translated_images/data-flow.fa2354e0908fecc8.fr.png)
+![Schéma montrant les flux de données entre le HTML, les actions utilisateur et l’état](../../../../translated_images/fr/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Ce défi vous aidera à penser comme un développeur professionnel mêlant expé
 
 Voici un exemple de résultat après avoir complété le devoir :  
 
-![Capture d'écran montrant un exemple de boîte de dialogue "Ajouter une transaction"](../../../../translated_images/dialog.93bba104afeb79f1.fr.png)
+![Capture d'écran montrant un exemple de boîte de dialogue "Ajouter une transaction"](../../../../translated_images/fr/dialog.93bba104afeb79f1.webp)
 
 ---
 

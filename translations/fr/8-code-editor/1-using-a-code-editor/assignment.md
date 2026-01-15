@@ -78,7 +78,7 @@ Puisque VSCode.dev requiert au moins un fichier pour ouvrir un dépôt, nous all
 4. **Écrivez** un message de commit : « Add initial HTML structure »
 5. **Cliquez** sur « Commit new file » pour sauvegarder vos modifications
 
-![Création du fichier initial sur GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.fr.png)
+![Création du fichier initial sur GitHub](../../../../translated_images/fr/new-file-github.com.c886796d800e8056.webp)
 
 **Voici ce que cette configuration initiale accomplit :**
 - **Établit** une structure de document HTML5 correcte avec des éléments sémantiques
@@ -105,7 +105,7 @@ Maintenant que les fondations de votre dépôt sont posées, passons à VSCode.d
 
 ✅ **Indicateur de réussite** : Vous devriez voir les fichiers de votre projet dans la barre latérale de l’Explorateur et `index.html` disponible à l’édition dans la zone principale.
 
-![Projet chargé dans VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.fr.png)
+![Projet chargé dans VSCode.dev](../../../../translated_images/fr/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Ce que vous verrez dans l’interface :**
 - **Barre latérale Explorateur** : **Affiche** les fichiers et dossiers de votre dépôt
@@ -450,7 +450,7 @@ Les extensions améliorent votre expérience de développement en fournissant de
 **Résultats immédiats après installation :**
 Une fois CodeSwing installé, vous verrez une prévisualisation en direct de votre site de CV apparaître dans l’éditeur. Cela vous permet de voir exactement à quoi ressemble votre site au fur et à mesure des modifications.
 
-![Extension CodeSwing affichant la prévisualisation en direct](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.fr.png)
+![Extension CodeSwing affichant la prévisualisation en direct](../../../../translated_images/fr/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Comprendre l’interface améliorée :**
 - **Vue en double** : **Montre** votre code d’un côté et la prévisualisation en direct de l’autre

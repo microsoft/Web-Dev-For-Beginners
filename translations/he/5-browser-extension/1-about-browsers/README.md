@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![שרטוט דפדפן](../../../../translated_images/browser.60317c9be8b7f84a.he.jpg)
+![שרטוט דפדפן](../../../../translated_images/he/browser.60317c9be8b7f84a.jpg)
 > שרטוט מאת [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## שאלון לפני השיעור
@@ -79,7 +79,7 @@ mindmap
 
 ✅ **קצת היסטוריה**: הדפדפן הראשון נקרא 'WorldWideWeb' ונוצר על ידי סר טימותי ברנרס-לי בשנת 1990.
 
-![דפדפנים מוקדמים](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.he.jpg)
+![דפדפנים מוקדמים](../../../../translated_images/he/earlybrowsers.d984b711cdf3a42d.jpg)
 > כמה דפדפנים מוקדמים, דרך [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### איך דפדפנים מעבדים תוכן אינטרנטי
@@ -198,7 +198,7 @@ quadrantChart
 
 הבנת תהליך התקנת ההרחבות עוזרת לכם לצפות את חוויית המשתמש כאשר אנשים מתקינים את ההרחבה שלכם. תהליך ההתקנה סטנדרטי בדפדפנים מודרניים, עם וריאציות קלות בעיצוב הממשק.
 
-![צילום מסך של דפדפן Edge שמציג את דף ניהול ההרחבות edge://extensions ואת תפריט ההגדרות הפתוח](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.he.png)
+![צילום מסך של דפדפן Edge שמציג את דף ניהול ההרחבות edge://extensions ואת תפריט ההגדרות הפתוח](../../../../translated_images/he/install-on-edge.d68781acaf0b3d3d.png)
 
 > **חשוב**: ודאו שאתם מפעילים מצב מפתחים ומאפשרים הרחבות מחנויות אחרות כאשר אתם בודקים את ההרחבות שלכם.
 
@@ -313,10 +313,10 @@ project-root/
 ### סקירת תצוגות ההרחבה
 
 **תצוגת הגדרות** - הגדרת משתמש בפעם הראשונה:
-![צילום מסך של ההרחבה המושלמת פתוחה בדפדפן, מציגה טופס עם שדות להזנת שם אזור ומפתח API.](../../../../translated_images/1.b6da8c1394b07491.he.png)
+![צילום מסך של ההרחבה המושלמת פתוחה בדפדפן, מציגה טופס עם שדות להזנת שם אזור ומפתח API.](../../../../translated_images/he/1.b6da8c1394b07491.png)
 
 **תצוגת תוצאות** - הצגת נתוני טביעת רגל פחמנית:
-![צילום מסך של ההרחבה המושלמת מציגה ערכים לשימוש פחמן ואחוז דלקים מאובנים עבור אזור US-NEISO.](../../../../translated_images/2.1dae52ff08042246.he.png)
+![צילום מסך של ההרחבה המושלמת מציגה ערכים לשימוש פחמן ואחוז דלקים מאובנים עבור אזור US-NEISO.](../../../../translated_images/he/2.1dae52ff08042246.png)
 
 ### בניית טופס ההגדרות
 

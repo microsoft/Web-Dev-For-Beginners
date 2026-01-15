@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 پروژه نهایی شما به این شکل خواهد بود:
 
-![رابط اپلیکیشن چت که مکالمه بین کاربر و دستیار هوش مصنوعی را نشان می‌دهد](../../../translated_images/screenshot.0a1ee0d123df681b.fa.png)
+![رابط اپلیکیشن چت که مکالمه بین کاربر و دستیار هوش مصنوعی را نشان می‌دهد](../../../translated_images/fa/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ مسیر یادگیری شما در توسعه اپلیکیشن‌های هوش مصنوعی
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **اصل اصلی**: توسعه اپلیکیشن‌های هوش مصنوعی ترکیبی از مهارت‌های سنتی توسعه وب با ادغام سرویس‌های هوش مصنوعی است که برنامه‌هایی هوشمند و پاسخگو برای کاربران ایجاد می‌کند.
 
-![رابط GitHub Models AI Playground با انتخاب مدل و بخش تست](../../../translated_images/playground.d2b927122224ff8f.fa.png)
+![رابط GitHub Models AI Playground با انتخاب مدل و بخش تست](../../../translated_images/fa/playground.d2b927122224ff8f.webp)
 
 **دلایلی که محیط بازیابی بسیار مفید است:**
 - **آزمایش** مدل‌های مختلف هوش مصنوعی مثل GPT-4o-mini، Claude و دیگران (همه رایگان!)
@@ -199,7 +199,7 @@ mindmap
 
 وقتی بازی کردید، کافی است روی تب "Code" کلیک کنید و زبان برنامه‌نویسی خود را انتخاب کنید تا کد پیاده‌سازی مورد نیاز را دریافت نمایید.
 
-![انتخاب در Playground که گزینه‌های تولید کد برای زبان‌های مختلف را نشان می‌دهد](../../../translated_images/playground-choice.1d23ba7d407f4758.fa.png)
+![انتخاب در Playground که گزینه‌های تولید کد برای زبان‌های مختلف را نشان می‌دهد](../../../translated_images/fa/playground-choice.1d23ba7d407f4758.webp)
 
 ## راه‌اندازی ادغام پشت‌صحنه پایتون
 
@@ -2350,14 +2350,14 @@ mindmap
 - **مراجعه** به مخزن [Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **کلیک** روی "Use this template" در گوشه بالا سمت راست (اطمینان حاصل کنید که وارد حساب GitHub شده‌اید)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.fa.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/fa/template.67ad477109d29a2b.webp)
 
 **مرحله 2: راه‌اندازی Codespaces**  
 - **باز کردن** مخزن تازه ساخته شده  
 - **کلیک** روی دکمه سبز "Code" و انتخاب "Codespaces"  
 - **انتخاب** "Create codespace on main" برای شروع محیط توسعه شما  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.fa.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/fa/codespace.bcecbdf5d2747d3d.webp)
 
 **مرحله 3: پیکربندی محیط**  
 پس از بارگذاری Codespace، به موارد زیر دسترسی خواهید داشت:  

@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Supprimer les données sauvegardées
     ClearStorage --> FirstTime: Retour à l'installation
 ```
-![Volet de stockage local](../../../../translated_images/localstorage.472f8147b6a3f8d1.fr.png)
+![Volet de stockage local](../../../../translated_images/fr/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Considération de sécurité** : Dans les applications en production, stocker les clés API dans LocalStorage présente des risques de sécurité puisque JavaScript peut accéder à ces données. Pour l’apprentissage, cette approche fonctionne bien, mais les applications réelles doivent utiliser un stockage sécurisé côté serveur pour les informations sensibles.
 

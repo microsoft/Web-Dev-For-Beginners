@@ -185,7 +185,7 @@ Aivan kuten Alexander Graham Bellin puhelin yhdisti etäisiä paikkoja, GitHub-t
 
 Kun kaikki on latautunut, näet kauniin ja selkeän työtilan, joka on suunniteltu pitämään sinut keskittyneenä siihen, mikä on tärkeää – koodisi!
 
-![VSCode.dev:n oletuskäyttöliittymä](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.fi.png)
+![VSCode.dev:n oletuskäyttöliittymä](../../../../translated_images/fi/default-vscode-dev.5d06881d65c1b323.png)
 
 **Tässä on kierros naapurustossa:**
 - **Toimintopalkki** (vasemmalla oleva kaistale): Päänavigointisi, jossa on Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩 ja Settings ⚙️
@@ -233,7 +233,7 @@ Tämä on täydellinen, kun aloitat VSCode.devissä ja haluat avata tietyn repos
 1. Siirry osoitteeseen [vscode.dev](https://vscode.dev), jos et ole jo siellä
 2. Etsi "Open Remote Repository" -painike aloitusnäytöltä ja klikkaa sitä
 
-   ![Avaa etärepositorio](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.fi.png)
+   ![Avaa etärepositorio](../../../../translated_images/fi/open-remote-repository.bd9c2598b8949e7f.png)
 
 3. Liitä mikä tahansa GitHub-repositorion URL (kokeile tätä: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Paina Enter ja katso, kuinka taikuus tapahtuu!
@@ -242,7 +242,7 @@ Tämä on täydellinen, kun aloitat VSCode.devissä ja haluat avata tietyn repos
 
 Haluatko tuntea itsesi koodausvelhoksi? Kokeile tätä näppäinyhdistelmää: Ctrl+Shift+P (tai Cmd+Shift+P Macilla) avataksesi komentopalettin:
 
-![Komentopaletti](../../../../translated_images/palette-menu.4946174e07f42622.fi.png)
+![Komentopaletti](../../../../translated_images/fi/palette-menu.4946174e07f42622.png)
 
 **Komentopaletti on kuin hakukone kaikelle, mitä voit tehdä:**
 - Kirjoita "open remote", ja se löytää repositorion avaajan puolestasi
@@ -304,7 +304,7 @@ Aivan kuten arkkitehdin toimistossa piirustusten järjestäminen, tiedostojen lu
 3. Syötä tiedoston nimi, mukaan lukien oikea tiedostopääte (`style.css`, `script.js`, `index.html`)
 4. Paina Enter luodaksesi tiedoston
 
-![Uuden tiedoston luominen](../../../../translated_images/create-new-file.2814e609c2af9aeb.fi.png)
+![Uuden tiedoston luominen](../../../../translated_images/fi/create-new-file.2814e609c2af9aeb.png)
 
 **Nimeämiskäytännöt:**
 - Käytä kuvailevia nimiä, jotka kertovat tiedoston tarkoituksen
@@ -322,7 +322,7 @@ Tässä alkaa todellinen hauskuus! VSCode.dev:n editori on täynnä hyödyllisi�
 2. Aloita kirjoittaminen ja katso, kuinka VSCode.dev auttaa sinua väreillä, ehdotuksilla ja virheiden tunnistamisella
 3. Tallenna työsi Ctrl+S (Windows/Linux) tai Cmd+S (Mac) – vaikka se tallentaa automaattisesti!
 
-![Tiedostojen muokkaaminen VSCode.devissä](../../../../translated_images/edit-a-file.52c0ee665ef19f08.fi.png)
+![Tiedostojen muokkaaminen VSCode.devissä](../../../../translated_images/fi/edit-a-file.52c0ee665ef19f08.png)
 
 **Siistit jutut, jotka tapahtuvat koodatessasi:**
 - Koodisi saa kauniin värikoodauksen, joten sitä on helppo lukea
@@ -398,7 +398,7 @@ Laajennusmarkkinapaikka on todella hyvin järjestetty, joten et eksy etsiessäsi
 2. Selaa tai etsi jotain tiettyä
 3. Klikkaa mitä tahansa kiinnostavaa saadaksesi lisätietoja
 
-![Laajennusmarkkinapaikan käyttöliittymä](../../../../translated_images/extensions.eca0e0c7f59a10b5.fi.png)
+![Laajennusmarkkinapaikan käyttöliittymä](../../../../translated_images/fi/extensions.eca0e0c7f59a10b5.png)
 
 **Mitä siellä näet:**
 
@@ -451,7 +451,7 @@ Useimmissa laajennuksissa on asetuksia, joita voit säätää, jotta ne toimivat
 3. Valitse "Laajennuksen asetukset" pudotusvalikosta
 4. Säädä asetuksia, kunnes ne tuntuvat sopivilta työnkulullesi
 
-![Laajennusasetusten räätälöinti](../../../../translated_images/extension-settings.21c752ae4f4cdb78.fi.png)
+![Laajennusasetusten räätälöinti](../../../../translated_images/fi/extension-settings.21c752ae4f4cdb78.png)
 
 **Yleisiä asioita, joita saatat haluta säätää:**
 - Miten koodisi muotoillaan (välilehdet vs välilyönnit, rivin pituus jne.)

@@ -266,7 +266,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Paikallisen tallennuksen näkymä](../../../../translated_images/localstorage.472f8147b6a3f8d1.fi.png)
+![Paikallisen tallennuksen näkymä](../../../../translated_images/fi/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **Tietoturvahuomio**: Tuotantosovelluksissa API-avainten tallentaminen LocalStorageen aiheuttaa tietoturvariskejä, koska JavaScript voi käyttää näitä tietoja. Oppimiskäyttöön tämä lähestymistapa toimii hyvin, mutta oikeissa sovelluksissa tulisi käyttää turvallista palvelinpuolen tallennusta arkaluontoisille tunnuksille.
 

@@ -644,7 +644,7 @@ sequenceDiagram
 
 استفاده از `history.pushState` ورودی‌های جدیدی در تاریخچه ناوبری مرورگر ایجاد می‌کند. می‌توانید این را با نگه داشتن دکمه *بازگشت* مرورگر خود امتحان کنید، باید چیزی شبیه این ببینید:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.fa.png)
+![Screenshot of navigation history](../../../../translated_images/fa/history.7fdabbafa521e064.webp)
 
 اگر چند بار روی دکمه برگشت کلیک کنید، می‌بینید که URL فعلی تغییر می‌کند و تاریخچه به‌روزرسانی می‌شود، اما همان قالب نمایش داده می‌شود.
 
