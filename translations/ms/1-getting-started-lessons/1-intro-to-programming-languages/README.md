@@ -17,7 +17,7 @@ Dengar, saya faham sepenuhnya jika pengaturcaraan terasa menakutkan sekarang. Ke
 
 Hari ini, kita akan meneroka alat luar biasa yang menjadikan pembangunan web moden bukan sahaja mungkin, tetapi sangat menyeronokkan. Saya bercakap tentang editor, pelayar, dan aliran kerja yang sama yang digunakan oleh pembangun di Netflix, Spotify, dan studio aplikasi indie kegemaran anda setiap hari. Dan inilah bahagian yang akan membuatkan anda menari kegembiraan: kebanyakan alat profesional ini adalah percuma!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.ms.png)
+![Intro Programming](../../../../translated_images/ms/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

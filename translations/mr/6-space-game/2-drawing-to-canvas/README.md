@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![कॅनव्हासचा ग्रिड](../../../../translated_images/canvas_grid.5f209da785ded492.mr.png)
+![कॅनव्हासचा ग्रिड](../../../../translated_images/mr/canvas_grid.5f209da785ded492.png)
 > प्रतिमा [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) वरून
 
 कॅनव्हास घटकावर काढण्यासाठी, तुम्ही कॅनव्हास ग्राफिक्सच्या सर्व मूलभूत गोष्टी तयार करणारी तीच तीन-चरण प्रक्रिया अनुसरण कराल. तुम्ही हे काही वेळा केल्यानंतर, ते सहज होईल:
@@ -329,11 +329,11 @@ flowchart TD
 
 - हिरो शिप
 
-   ![हिरो शिप](../../../../translated_images/player.dd24c1afa8c71e9b.mr.png)
+   ![हिरो शिप](../../../../translated_images/mr/player.dd24c1afa8c71e9b.png)
 
 - 5*5 मॉन्स्टर
 
-   ![मॉन्स्टर शिप](../../../../translated_images/enemyShip.5df2a822c16650c2.mr.png)
+   ![मॉन्स्टर शिप](../../../../translated_images/mr/enemyShip.5df2a822c16650c2.png)
 
 ### विकास सुरू करण्यासाठी शिफारस केलेली पावले
 
@@ -393,7 +393,7 @@ npm start
 
 अंतिम परिणाम असा दिसायला हवा:
 
-![काळा स्क्रीन ज्यामध्ये एक हिरो आणि 5*5 मॉन्स्टर्स आहेत](../../../../translated_images/partI-solution.36c53b48c9ffae2a.mr.png)
+![काळा स्क्रीन ज्यामध्ये एक हिरो आणि 5*5 मॉन्स्टर्स आहेत](../../../../translated_images/mr/partI-solution.36c53b48c9ffae2a.png)
 
 ## उपाय
 

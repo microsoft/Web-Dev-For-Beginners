@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Asas JavaScript: Kaedah dan Fungsi
 
-![Asas JavaScript - Fungsi](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ms.png)
+![Asas JavaScript - Fungsi](../../../../translated_images/ms/webdev101-js-functions.be049c4726e94f8b.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

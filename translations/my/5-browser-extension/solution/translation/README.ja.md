@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 tmrow ရဲ့ C02 Signal API ကို အသုံးပြုပြီး သင့်ဒေသရဲ့ လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို ဘရောက်ဇာပေါ်မှာ သတိပေးချက်အဖြစ် ပြသနိုင်ရန် အက်စ်တင်ရှင်းတစ်ခုကို တည်ဆောက်ပါ။ ဒီအက်စ်တင်ရှင်းကို အလွတ်သုံးနိုင်ပြီး ဒီအချက်အလက်အပေါ် အခြေခံပြီး သင့်လုပ်ဆောင်မှုများကို ဆုံးဖြတ်နိုင်ပါသည်။
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.my.png)
+![extension screenshot](../../../../../translated_images/my/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## စတင်ရန်
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge မှာ ထည့်သွင်းဖို့အတွက် ဘရောက်ဇာရဲ့ အပေါ်ဘက်ညာဖက်မှာရှိတဲ့ "၃ ခုတိုင်" menu ကို နှိပ်ပြီး "Extensions" panel ကို ရှာပါ။ အဲဒီနေရာက "Load Unpacked" ကို ရွေးပြီး အက်စ်တင်ရှင်းအသစ်ကို load လုပ်ပါ။ prompt မှာ "dist" ဖိုလ်ဒါကို ဖွင့်ပါ။ အက်စ်တင်ရှင်းကို load လုပ်ပြီးပါပြီ။ အသုံးပြုဖို့ CO2 Signal API ရဲ့ API key ([ဒီမှာ email နဲ့ ရယူပါ](https://www.co2signal.com/) - ဒီစာမျက်နှာမှာ email ကို box ထဲထည့်ပါ) နဲ့ [Electricity Map](https://www.electricitymap.org/map) ရဲ့ သင့်ဒေသအတွက် [code](http://api.electricitymap.org/v3/zones) လိုအပ်ပါတယ် (ဥပမာ - Boston မှာ 'US-NEISO' ကို အသုံးပြုပါတယ်)။
 
-![installing](../../../../../translated_images/install-on-edge.78634f02842c4828.my.png)
+![installing](../../../../../translated_images/my/install-on-edge.78634f02842c4828.png)
 
 API key နဲ့ ဒေသ code ကို အက်စ်တင်ရှင်း interface မှာ ထည့်သွင်းပြီးရင် ဘရောက်ဇာရဲ့ extension bar မှာ ပြသတဲ့ အရောင်အမှတ်လေးက သင့်ဒေသရဲ့ လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို အခြေခံပြီး သင့်လုပ်ဆောင်မှုအတွက် သင့်တော်တဲ့ အချက်အလက်ကို ပြသပေးပါမယ်။ ဒီ "dot" system ရဲ့ အကြံဉာဏ်ကို ကယ်လီဖိုးနီးယားပြည်နယ်ရဲ့ [Energy Lollipop extension](https://energylollipop.com/) ကပေးခဲ့တာဖြစ်ပါတယ်။
 

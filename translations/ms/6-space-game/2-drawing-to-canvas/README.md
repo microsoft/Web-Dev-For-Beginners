@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![grid kanvas](../../../../translated_images/canvas_grid.5f209da785ded492.ms.png)
+![grid kanvas](../../../../translated_images/ms/canvas_grid.5f209da785ded492.png)
 > Imej dari [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Untuk melukis pada elemen kanvas, anda akan mengikuti proses tiga langkah yang sama yang membentuk asas semua grafik kanvas. Setelah anda melakukannya beberapa kali, ia menjadi kebiasaan:
@@ -329,11 +329,11 @@ Anda akan membina halaman web dengan elemen Kanvas. Ia harus memaparkan skrin hi
 
 - Kapal hero
 
-   ![Kapal hero](../../../../translated_images/player.dd24c1afa8c71e9b.ms.png)
+   ![Kapal hero](../../../../translated_images/ms/player.dd24c1afa8c71e9b.png)
 
 - 5*5 raksasa
 
-   ![Kapal raksasa](../../../../translated_images/enemyShip.5df2a822c16650c2.ms.png)
+   ![Kapal raksasa](../../../../translated_images/ms/enemyShip.5df2a822c16650c2.png)
 
 ### Langkah yang Disyorkan untuk Memulakan Pembangunan
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Hasil akhir sepatutnya kelihatan seperti ini:
 
-![Skrin hitam dengan seorang hero dan 5*5 raksasa](../../../../translated_images/partI-solution.36c53b48c9ffae2a.ms.png)
+![Skrin hitam dengan seorang hero dan 5*5 raksasa](../../../../translated_images/ms/partI-solution.36c53b48c9ffae2a.png)
 
 ## Penyelesaian
 

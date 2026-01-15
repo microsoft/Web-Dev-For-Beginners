@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### श्रेय
 
-![एक हिरव्या रंगाचा ब्राउझर एक्स्टेंशन](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.mr.png)
+![एक हिरव्या रंगाचा ब्राउझर एक्स्टेंशन](../../../translated_images/mr/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## श्रेय
 

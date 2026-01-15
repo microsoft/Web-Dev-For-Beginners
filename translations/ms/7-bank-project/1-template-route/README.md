@@ -652,7 +652,7 @@ sequenceDiagram
 
 Menggunakan `history.pushState` mencipta entri baru dalam sejarah navigasi pelayar. Anda boleh memeriksanya dengan menahan *butang mundur* pelayar anda, ia seharusnya memaparkan sesuatu seperti ini:
 
-![Tangkap layar sejarah navigasi](../../../../translated_images/history.7fdabbafa521e064.ms.png)
+![Tangkap layar sejarah navigasi](../../../../translated_images/ms/history.7fdabbafa521e064.png)
 
 Jika anda cuba klik pada butang mundur beberapa kali, anda akan melihat bahawa URL semasa berubah dan sejarah dikemas kini, tetapi templat yang sama terus dipaparkan.
 

@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Sketchnote Penyemak Imbas](../../../../translated_images/browser.60317c9be8b7f84a.ms.jpg)
+![Sketchnote Penyemak Imbas](../../../../translated_images/ms/browser.60317c9be8b7f84a.jpg)
 > Sketchnote oleh [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Kuiz Pra-Kuliah
@@ -79,7 +79,7 @@ Proses ini mencerminkan bagaimana penyemak imbas pertama, WorldWideWeb, direka o
 
 ✅ **Sedikit sejarah**: Penyemak imbas pertama dipanggil 'WorldWideWeb' dan dicipta oleh Sir Timothy Berners-Lee pada tahun 1990.
 
-![penyemak imbas awal](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.ms.jpg)
+![penyemak imbas awal](../../../../translated_images/ms/earlybrowsers.d984b711cdf3a42d.jpg)
 > Beberapa penyemak imbas awal, melalui [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Bagaimana Penyemak Imbas Memproses Kandungan Web
@@ -198,7 +198,7 @@ quadrantChart
 
 Memahami proses pemasangan sambungan membantu anda menjangkakan pengalaman pengguna apabila orang memasang sambungan anda. Proses pemasangan adalah standard merentas penyemak imbas moden, dengan sedikit variasi dalam reka bentuk antara muka.
 
-![tangkapan skrin penyemak imbas Edge menunjukkan halaman edge://extensions yang terbuka dan menu tetapan yang terbuka](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.ms.png)
+![tangkapan skrin penyemak imbas Edge menunjukkan halaman edge://extensions yang terbuka dan menu tetapan yang terbuka](../../../../translated_images/ms/install-on-edge.d68781acaf0b3d3d.png)
 
 > **Penting**: Pastikan untuk menghidupkan mod pembangun dan benarkan sambungan daripada kedai lain semasa menguji sambungan anda sendiri.
 
@@ -313,10 +313,10 @@ Ini mengikuti prinsip pendedahan progresif yang digunakan dalam reka bentuk anta
 ### Gambaran Keseluruhan Paparan Sambungan
 
 **Paparan Persediaan** - Konfigurasi pengguna kali pertama:
-![tangkapan skrin sambungan yang lengkap dibuka dalam penyemak imbas, memaparkan borang dengan input untuk nama kawasan dan kunci API.](../../../../translated_images/1.b6da8c1394b07491.ms.png)
+![tangkapan skrin sambungan yang lengkap dibuka dalam penyemak imbas, memaparkan borang dengan input untuk nama kawasan dan kunci API.](../../../../translated_images/ms/1.b6da8c1394b07491.png)
 
 **Paparan Hasil** - Paparan data jejak karbon:
-![tangkapan skrin sambungan yang lengkap memaparkan nilai penggunaan karbon dan peratusan bahan api fosil untuk kawasan US-NEISO.](../../../../translated_images/2.1dae52ff08042246.ms.png)
+![tangkapan skrin sambungan yang lengkap memaparkan nilai penggunaan karbon dan peratusan bahan api fosil untuk kawasan US-NEISO.](../../../../translated_images/ms/2.1dae52ff08042246.png)
 
 ### Membina Borang Konfigurasi
 

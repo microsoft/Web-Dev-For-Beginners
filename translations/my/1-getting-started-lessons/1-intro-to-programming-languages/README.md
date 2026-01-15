@@ -17,7 +17,7 @@ Programming ကို စတင်လေ့လာတဲ့အချိန်မ�
 
 ဒီနေ့မှာတော့ ခေတ်မီ Web Development ကို မဖြစ်မနေဖြစ်စေတဲ့ Tools တွေကို ရှာဖွေတွေ့ရှိကြမယ်။ Netflix, Spotify, သင့်အကြိုက်ဆုံး Indie App Studio တွေမှာ Developer တွေက နေ့စဉ်အသုံးပြုနေတဲ့ Editors, Browsers, Workflows တွေကို ပြောတာပါ။ အခုတော့ သင့်ကို Dance လုပ်ချင်စေမယ့်အပိုင်းက – ဒီ Professional-grade, Industry-standard Tools တွေက အခမဲ့ပဲဆိုတာပါ!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.my.png)
+![Intro Programming](../../../../translated_images/my/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

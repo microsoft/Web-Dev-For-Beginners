@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript အခြေခံ: ဒေတာအမျိုးအစားများ
 
-![JavaScript အခြေခံ - ဒေတာအမျိုးအစားများ](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.my.png)
+![JavaScript အခြေခံ - ဒေတာအမျိုးအစားများ](../../../../translated_images/my/webdev101-js-datatypes.4cc470179730702c.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

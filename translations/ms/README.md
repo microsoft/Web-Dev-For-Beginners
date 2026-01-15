@@ -72,13 +72,13 @@ Jangan terlepas kurikulum AI Generatif baru kami!
 
 Lawati [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) untuk bermula!
 
-![Latar Belakang](../../translated_images/background.148a8d43afde5730.ms.png)
+![Latar Belakang](../../translated_images/ms/background.148a8d43afde5730.png)
 
 - Pelajaran merangkumi segala-galanya dari asas kepada RAG.
 - Berinteraksi dengan watak sejarah menggunakan GenAI dan aplikasi pendamping kami.
 - Naratif yang menyeronokkan dan menarik, anda akan mengembara waktu!
 
-![watak](../../translated_images/character.5c0dd8e067ffd693.ms.png)
+![watak](../../translated_images/ms/character.5c0dd8e067ffd693.png)
 
 Setiap pelajaran termasuk tugasan untuk diselesaikan, pemeriksaan pengetahuan dan cabaran untuk membimbing anda dalam mempelajari topik seperti:
 - Prompting dan kejuruteraan prompt
@@ -114,7 +114,7 @@ Ikuti langkah ini:
 
 Dalam salinan repositori yang anda buat, klik butang **Code** dan pilih **Open with Codespaces**. Ini akan mencipta Codespace baru untuk anda bekerja.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ms.png)
+![Codespace](../../translated_images/ms/createcodespace.0238bbf4d7a8d955.png)
 
 #### Menjalankan kurikulum secara lokal di komputer anda
 
