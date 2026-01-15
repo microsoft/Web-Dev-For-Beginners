@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Кредити
 
-![зелено браузър разширение](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.bg.png)
+![зелено браузър разширение](../../../translated_images/bg/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## Кредити
 

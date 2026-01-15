@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![مقدمة في CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.ar.png)
+![مقدمة في CSS](../../../../translated_images/ar/webdev101-css.3f7af5991bf53a20.webp)
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 هل تتذكر كيف كان شكل التيراريوم الخاص بك بسيطًا جدًا؟ CSS هو المكان الذي نحول فيه هذا الهيكل البسيط إلى شيء جذاب بصريًا.
@@ -205,7 +205,7 @@ body {
 
 افتح أدوات المطور في المتصفح (F12)، انتقل إلى علامة التبويب العناصر، وقم بفحص عنصر `<h1>` الخاص بك. سترى أنه يرث نوع الخط من body:
 
-![الخط الموروث](../../../../translated_images/1.cc07a5cbe114ad1d.ar.png)
+![الخط الموروث](../../../../translated_images/ar/1.cc07a5cbe114ad1d.webp)
 
 ✅ **وقت التجربة**: حاول تعيين خصائص أخرى قابلة للوراثة على `<body>` مثل `color`، `line-height`، أو `text-align`. ماذا يحدث لعناوينك والعناصر الأخرى؟
 
@@ -335,7 +335,7 @@ h1 {
 **إليك هيكل HTML لكل نبتة:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.ar.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/ar/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.png" />
 </div>
 ```
 
@@ -599,7 +599,7 @@ flowchart LR
 
 ستقوم بإنشاء لمسات خفيفة تحاكي كيفية انعكاس الضوء على الأسطح الزجاجية. هذه الطريقة مشابهة لكيفية استخدام رسامي عصر النهضة مثل جان فان إيك الضوء والانعكاس لجعل الزجاج المرسوم يبدو ثلاثي الأبعاد. إليك ما تهدف إليه:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.ar.png)
+![finished terrarium](../../../../translated_images/ar/terrarium-final.2f07047ffc597d0a.webp)
 
 **تحديك:**
 - **قم بإنشاء** أشكال بيضاوية بيضاء أو فاتحة اللون للانعكاسات الزجاجية

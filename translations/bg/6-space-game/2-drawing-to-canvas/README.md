@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![мрежата на canvas](../../../../translated_images/canvas_grid.5f209da785ded492.bg.png)
+![мрежата на canvas](../../../../translated_images/bg/canvas_grid.5f209da785ded492.png)
 > Изображение от [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 За да рисувате върху canvas елемента, ще следвате същия тристепенен процес, който образува основата на цялата canvas графика. След като го направите няколко пъти, това ще стане втора природа:
@@ -323,11 +323,11 @@ flowchart TD
 
 - Геройски кораб
 
-   ![Геройски кораб](../../../../translated_images/player.dd24c1afa8c71e9b.bg.png)
+   ![Геройски кораб](../../../../translated_images/bg/player.dd24c1afa8c71e9b.png)
 
 - 5*5 чудовища
 
-   ![Чудовище](../../../../translated_images/enemyShip.5df2a822c16650c2.bg.png)
+   ![Чудовище](../../../../translated_images/bg/enemyShip.5df2a822c16650c2.png)
 
 ### Препоръчителни стъпки за започване на разработка
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Крайният резултат трябва да изглежда така:
 
-![Черноекран с герой и 5*5 чудовища](../../../../translated_images/partI-solution.36c53b48c9ffae2a.bg.png)
+![Черноекран с герой и 5*5 чудовища](../../../../translated_images/bg/partI-solution.36c53b48c9ffae2a.png)
 
 ## Решение
 

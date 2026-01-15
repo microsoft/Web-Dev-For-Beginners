@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # أساسيات JavaScript: المصفوفات والحلقات
 
-![أساسيات JavaScript - المصفوفات](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ar.png)
+![أساسيات JavaScript - المصفوفات](../../../../translated_images/ar/webdev101-js-arrays.439d7528b8a29455.webp)
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

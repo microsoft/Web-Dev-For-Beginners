@@ -187,7 +187,7 @@ mindmap
 
 Вместо да се лутаме безцелно, ще създадем **централизирана система за управление на състоянието**. Представете си я като един наистина организиран човек, който отговаря за цялата важна информация:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.bg.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/bg/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 Ето примерен резултат след завършване на задачата:
 
-![Екранна снимка на примерен диалог „Добавяне на транзакция“](../../../../translated_images/dialog.93bba104afeb79f1.bg.png)
+![Екранна снимка на примерен диалог „Добавяне на транзакция“](../../../../translated_images/bg/dialog.93bba104afeb79f1.png)
 
 ---
 

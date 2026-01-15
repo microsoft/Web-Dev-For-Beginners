@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # জাভাস্ক্রিপ্টের বুনিয়াদি: ডেটা টাইপ
 
-![জাভাস্ক্রিপ্টের বুনিয়াদি - ডেটা টাইপ](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.bn.png)
+![জাভাস্ক্রিপ্টের বুনিয়াদি - ডেটা টাইপ](../../../../translated_images/bn/webdev101-js-datatypes.4cc470179730702c.png)
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

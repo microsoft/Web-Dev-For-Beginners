@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 سنخوض هذه الرحلة معًا، خطوة بخطوة. لا استعجال، لا ضغط – فقط أنت وأنا وبعض الأدوات الرائعة التي ستصبح أصدقائك الجدد!
 
-![مقدمة إلى GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.ar.png)
+![مقدمة إلى GitHub](../../../../translated_images/ar/webdev101-github.8846d7971abef6f9.webp)
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -603,7 +603,7 @@ flowchart TD
 
 ✅ طريقة جيدة للعثور على مستودعات "مناسبة للمبتدئين" هي [البحث باستخدام الوسم 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![نسخ مستودع محليًا](../../../../translated_images/clone_repo.5085c48d666ead57.ar.png)
+![نسخ مستودع محليًا](../../../../translated_images/ar/clone_repo.5085c48d666ead57.webp)
 
 هناك عدة طرق لنسخ الأكواد. إحدى الطرق هي "استنساخ" محتويات المستودع باستخدام HTTPS، SSH، أو باستخدام GitHub CLI (واجهة سطر الأوامر).
 

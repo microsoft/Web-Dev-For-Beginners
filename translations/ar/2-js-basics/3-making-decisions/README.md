@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # أساسيات JavaScript: اتخاذ القرارات
 
-![أساسيات JavaScript - اتخاذ القرارات](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ar.png)
+![أساسيات JavaScript - اتخاذ القرارات](../../../../translated_images/ar/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 

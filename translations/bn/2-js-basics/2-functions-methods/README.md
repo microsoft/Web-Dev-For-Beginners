@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # জাভাস্ক্রিপ্টের বেসিক: মেথড এবং ফাংশন
 
-![জাভাস্ক্রিপ্ট বেসিক - ফাংশন](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.bn.png)
+![জাভাস্ক্রিপ্ট বেসিক - ফাংশন](../../../../translated_images/bn/webdev101-js-functions.be049c4726e94f8b.png)
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

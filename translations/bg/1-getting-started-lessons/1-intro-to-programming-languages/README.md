@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Днес ще разгледаме невероятните инструменти, които правят съвременното уеб разработване не само възможно, но и наистина пристрастяващо. Говоря за същите редактори, браузъри и работни процеси, които разработчиците в Netflix, Spotify и любимото ти инди студио използват всеки ден. И ето и частта, която ще те накара да се зарадваш: повечето от тези професионални, индустриални инструменти са напълно безплатни!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.bg.png)
+![Intro Programming](../../../../translated_images/bg/webdev101-programming.d6e3f98e61ac4bff.png)
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
