@@ -72,13 +72,13 @@ Huwag palampasin ang aming bagong Generative AI kurikulum!
 
 Bisitahin ang [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para makapagsimula!
 
-![Background](../../translated_images/background.148a8d43afde5730.tl.png)
+![Background](../../translated_images/tl/background.148a8d43afde5730.png)
 
 - Mga aralin mula sa mga batayan hanggang sa RAG.
 - Makipag-ugnayan sa mga makasaysayang karakter gamit ang GenAI at aming companion app.
 - Masaya at nakakaaliw na kuwento, tulad ng paglalakbay sa panahon!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.tl.png)
+![character](../../translated_images/tl/character.5c0dd8e067ffd693.png)
 
 
 Bawat aralin ay may nakalakip na asignatura, pagsusuri ng kaalaman, at hamon upang gabayan ka sa pag-aaral ng mga paksang tulad ng:
@@ -115,7 +115,7 @@ Sundin ang mga hakbang na ito:
 
 Sa iyong kopya ng repositoryo na ginawa mo, i-click ang **Code** button at piliin ang **Open with Codespaces**. Lilikha ito ng bagong Codespace para magtrabaho ka.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.tl.png)
+![Codespace](../../translated_images/tl/createcodespace.0238bbf4d7a8d955.png)
 
 #### Pagpapatakbo ng kurikulum lokal sa iyong kompyuter
 

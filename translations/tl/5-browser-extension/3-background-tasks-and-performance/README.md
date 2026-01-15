@@ -126,7 +126,7 @@ Upang buksan ang Developer Tools sa Edge, i-click ang tatlong tuldok sa kanang i
 
 Subukan natin ito. Buksan ang isang website (Microsoft.com ay maganda para dito) at i-click ang 'Record' button. Ngayon i-refresh ang pahina at panoorin ang profiler na kinukuha ang lahat ng nangyayari. Kapag tumigil ka sa pag-record, makikita mo ang detalyadong breakdown kung paano 'scripts', 'renders', at 'paints' ng browser ang site. Parang kung paano mino-monitor ng mission control ang bawat sistema sa panahon ng paglulunsad ng rocket - makakakuha ka ng real-time na data sa eksaktong nangyayari at kailan.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.tl.png)
+![Edge profiler](../../../../translated_images/tl/profiler.5a4a62479c5df01c.png)
 
 ✅ Ang [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) ay may maraming detalye kung nais mong mas malalim na pag-aralan.
 
@@ -136,11 +136,11 @@ Piliin ang mga elemento ng profile timeline upang mag-zoom in sa mga event na na
 
 Kumuha ng snapshot ng performance ng iyong pahina sa pamamagitan ng pagpili ng bahagi ng profile timeline at pagtingin sa summary pane:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.tl.png)
+![Edge profiler snapshot](../../../../translated_images/tl/snapshot.97750180ebcad737.png)
 
 Suriin ang Event Log pane upang makita kung may anumang event na tumagal ng higit sa 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.tl.png)
+![Edge event log](../../../../translated_images/tl/log.804026979f3707e0.png)
 
 ✅ Kilalanin ang iyong profiler! Buksan ang developer tools sa site na ito at tingnan kung may mga bottleneck. Ano ang pinakamabagal na naglo-load na asset? Ang pinakamabilis?
 

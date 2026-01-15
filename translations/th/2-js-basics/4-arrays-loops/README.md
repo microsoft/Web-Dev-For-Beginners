@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basics: Arrays and Loops
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.th.png)
+![JavaScript Basics - Arrays](../../../../translated_images/th/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote โดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -652,7 +652,7 @@ sequenceDiagram
 
 Ang paggamit ng `history.pushState` ay lumilikha ng mga bagong entry sa navigation history ng browser. Maaari mong suriin iyon sa pamamagitan ng pag-hold sa *back button* ng iyong browser, dapat itong magpakita ng ganito:
 
-![Screenshot ng navigation history](../../../../translated_images/history.7fdabbafa521e064.tl.png)
+![Screenshot ng navigation history](../../../../translated_images/tl/history.7fdabbafa521e064.png)
 
 Kung susubukan mong mag-click sa back button nang ilang beses, makikita mo na nagbabago ang kasalukuyang URL at na-update ang history, ngunit ang parehong template ang patuloy na ipinapakita.
 

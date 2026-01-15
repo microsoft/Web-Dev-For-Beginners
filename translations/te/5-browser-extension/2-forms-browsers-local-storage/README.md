@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: నిల్వ డేటాను తొలగించు
     ClearStorage --> FirstTime: సెటప్ కు తిరుగు
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.te.png)
+![Local storage pane](../../../../translated_images/te/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **భద్రతా పరామర్శ**: ఉత్పత్తి అనువర్తనాల్లో, API కీలు LocalStorage లో నిల్వ చేయడం భద్రతా ప్రమాదాలను కలిగిస్తుంది ఎందుకంటే జావాస్క్రిప్ట్ ఈ డేటాకు యాక్సెస్ చేయగలదు. పాఠశాలలో ఈ విధానం సరైనది, కానీ నిజమైన అనువర్తనాలు సున్నితమైన ధారవాహికలకు సురక్షిత సర్వర్-సైడ్ నిల్వను ఉపయోగించాలి.
 

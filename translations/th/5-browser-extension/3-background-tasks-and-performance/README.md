@@ -123,7 +123,7 @@ flowchart LR
 
 ลองทำกัน เปิดเว็บไซต์ (เช่น Microsoft.com) แล้วคลิก 'Record' ตอนนี้รีเฟรชหน้าและดูโปรไฟล์เลอร์จับภาพทุกอย่างที่เกิดขึ้น เมื่อคุณหยุดบันทึก คุณจะเห็นการแจกแจงรายละเอียดว่าตัวเบราว์เซอร์ 'รันสคริปต์' 'เรนเดอร์' และ 'เพ้นท์' หน้าอย่างไร มันทำให้นึกถึงวิธีที่ศูนย์ควบคุมภารกิจติดตามระบบทุกอย่างในช่วงปล่อยจรวด — คุณจะได้ข้อมูลเรียลไทม์เกี่ยวกับสิ่งที่เกิดขึ้นและเมื่อไหร่
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.th.png)
+![Edge profiler](../../../../translated_images/th/profiler.5a4a62479c5df01c.png)
 
 ✅ [เอกสาร Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) มีรายละเอียดมากมายหากคุณอยากค้นลึกลงไป
 
@@ -133,11 +133,11 @@ flowchart LR
 
 ดูภาพรวมประสิทธิภาพของหน้าด้วยการเลือกช่วงหนึ่งของไทม์ไลน์โปรไฟล์และดูที่แผงสรุป:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.th.png)
+![Edge profiler snapshot](../../../../translated_images/th/snapshot.97750180ebcad737.png)
 
 ตรวจสอบแผง Event Log เพื่อดูว่าเหตุการณ์ไหนใช้เวลานานเกิน 15 มิลลิวินาทีหรือไม่:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.th.png)
+![Edge event log](../../../../translated_images/th/log.804026979f3707e0.png)
 
 ✅ ทำความรู้จักกับโปรไฟล์เลอร์ของคุณ! เปิด developer tools บนไซต์นี้แล้วดูว่ามีคอขวดไหนหรือไม่ ทรัพย์สินที่โหลดช้าที่สุดคืออะไร? อันที่เร็วที่สุด?
 

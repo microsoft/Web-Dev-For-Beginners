@@ -17,7 +17,7 @@ Alam mo, naiintindihan ko kung bakit nakakatakot ang programming sa simula. Noon
 
 Ngayon, sisilipin natin ang mga kamangha-manghang tools na ginagawang posible ang modernong web development – at sobrang nakakaadik! Pinag-uusapan natin ang parehong editors, browsers, at workflows na ginagamit ng mga developer sa Netflix, Spotify, at sa paborito mong indie app studio araw-araw. At eto ang magpapasayaw sa'yo: karamihan sa mga propesyonal-grade, industry-standard tools na ito ay ganap na libre!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.tl.png)
+![Intro Programming](../../../../translated_images/tl/webdev101-programming.d6e3f98e61ac4bff.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

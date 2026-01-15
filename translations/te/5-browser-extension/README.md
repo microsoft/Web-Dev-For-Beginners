@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### క్రెడిట్స్
 
-![a green browser extension](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.te.png)
+![a green browser extension](../../../translated_images/te/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## క్రెడిట్స్
 

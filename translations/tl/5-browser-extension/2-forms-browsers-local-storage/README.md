@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.tl.png)
+![Local storage pane](../../../../translated_images/tl/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **Pagsasaalang-alang sa Seguridad**: Sa mga production application, ang pag-iimbak ng API keys sa LocalStorage ay may panganib sa seguridad dahil maa-access ito ng JavaScript. Para sa layunin ng pag-aaral, ang approach na ito ay maayos, ngunit ang mga totoong application ay dapat gumamit ng secure server-side storage para sa mga sensitibong credentials.
 

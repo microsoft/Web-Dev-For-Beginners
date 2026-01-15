@@ -17,7 +17,7 @@ Alam kong maaaring nakakatakot ito sa simula – naalala ko pa noong una kong ti
 
 Sama-sama nating tatahakin ang paglalakbay na ito, hakbang-hakbang. Walang pagmamadali, walang pressure – ikaw, ako, at ilang napakagandang tool na magiging bago mong matalik na kaibigan!
 
-![Panimula sa GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.tl.png)
+![Panimula sa GitHub](../../../../translated_images/tl/webdev101-github.8846d7971abef6f9.png)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ Una, maghanap tayo ng repository (o **repo**) sa GitHub na interesado ka at kung
 
 ✅ Isang magandang paraan para makahanap ng 'beginner-friendly' na mga repo ay [maghanap gamit ang tag na 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopyahin ang repo sa lokal](../../../../translated_images/clone_repo.5085c48d666ead57.tl.png)
+![Kopyahin ang repo sa lokal](../../../../translated_images/tl/clone_repo.5085c48d666ead57.png)
 
 May ilang paraan para kopyahin ang code. Isa sa mga paraan ay "i-clone" ang nilalaman ng repository, gamit ang HTTPS, SSH, o gamit ang GitHub CLI (Command Line Interface).
 

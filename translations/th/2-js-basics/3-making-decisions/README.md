@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # พื้นฐาน JavaScript: การตัดสินใจ
 
-![JavaScript Basics - Making decisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.th.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/th/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > สเก็ตช์โน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 

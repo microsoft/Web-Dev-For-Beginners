@@ -187,7 +187,7 @@ mindmap
 
 แทนที่จะวิ่งไล่ตามหางตัวเอง เราจะสร้างระบบ **จัดการสถานะแบบรวมศูนย์** เปรียบเสมือนคนที่จัดการเรื่องสำคัญๆ ทั้งหมดอย่างเป็นระเบียบคนเดียว:
 
-![แผนภาพแสดงการไหลของข้อมูลระหว่าง HTML การกระทำของผู้ใช้และสถานะ](../../../../translated_images/data-flow.fa2354e0908fecc8.th.png)
+![แผนภาพแสดงการไหลของข้อมูลระหว่าง HTML การกระทำของผู้ใช้และสถานะ](../../../../translated_images/th/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 นี่คือตัวอย่างผลลัพธ์หลังจากทำการบ้านเสร็จ:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.th.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/th/dialog.93bba104afeb79f1.png)
 
 ---
 

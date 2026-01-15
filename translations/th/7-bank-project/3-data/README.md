@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: ส่งหน้าครบถ้วน HTML กลับ
     Browser->>User: แสดงหน้าผลใหม่ (กระพริบ/รีโหลด)
 ```
-![ลำดับการอัพเดตในแอพหลายหน้า](../../../../translated_images/mpa.7f7375a1a2d4aa77.th.png)
+![ลำดับการอัพเดตในแอพหลายหน้า](../../../../translated_images/th/mpa.7f7375a1a2d4aa77.png)
 
 **ทำไมวิธีนี้รู้สึกเกะกะ:**
 - ทุกคลิกหมายถึงการสร้างหน้าใหม่ทั้งหมด
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: อัปเดตองค์ประกอบหน้าเพจเฉพาะ
     Browser->>User: แสดงเนื้อหาที่อัปเดต (ไม่มีการโหลดใหม่)
 ```
-![ลำดับการอัพเดตในแอพหน้าเดียว](../../../../translated_images/spa.268ec73b41f992c2.th.png)
+![ลำดับการอัพเดตในแอพหน้าเดียว](../../../../translated_images/th/spa.268ec73b41f992c2.png)
 
 **ทำไม SPA ถึงรู้สึกดีกว่า:**
 - แค่ส่วนที่เปลี่ยนจริงๆ เท่านั้นที่อัพเดต (เจ๋งใช่ไหม?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 ตอนนี้เมื่อคุณทดสอบกับบัญชีไม่ถูกต้อง จะเห็นข้อความข้อผิดพลาดที่แสดงบนหน้าได้เลย!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.th.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/th/login-error.416fe019b36a6327.png)
 
 #### ขั้นตอนที่ 4: ใส่ใจการเข้าถึง (Accessibility)
 
@@ -950,7 +950,7 @@ timeline
 
 นี่คือตัวอย่างของแดชบอร์ดที่ผ่านการตกแต่งแล้ว:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.th.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/th/screen2.123c82a831a1d14a.png)
 
 ไม่ต้องรู้สึกว่าต้องทำตามนี้เป๊ะๆ ใช้มันเป็นแรงบันดาลใจและปรับแต่งให้เป็นของคุณเอง!
 

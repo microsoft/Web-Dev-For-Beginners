@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 วันนี้ เราจะสำรวจเครื่องมือสุดเจ๋งที่จะทำให้การพัฒนาเว็บสมัยใหม่ไม่เพียงเป็นไปได้ แต่ยังน่าติดใจอย่างจริงจัง ผมกำลังพูดถึงตัวแก้ไขโค้ด, เบราว์เซอร์, และเวิร์กโฟลว์เดียวกับที่นักพัฒนาของ Netflix, Spotify, และสตูดิโอแอปอินดี้ที่คุณชอบใช้ทุกวัน และนี่แหละสิ่งที่จะทำให้คุณพลิ้วไหวดีใจ: เครื่องมือระดับมืออาชีพเหล่านี้ส่วนใหญ่ใช้ฟรีทั้งหมด!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.th.png)
+![Intro Programming](../../../../translated_images/th/webdev101-programming.d6e3f98e61ac4bff.png)
 > สเก็ตช์โน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

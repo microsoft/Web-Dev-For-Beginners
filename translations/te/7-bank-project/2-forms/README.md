@@ -292,7 +292,7 @@ graph TD
 2. బ్రౌజర్ అడ్రస్ బార్ మార్పులను గమనించండి
 3. పేజీ రీలోడ్ అవ్వడం మరియు URL లో డేటా కనిపించడం చూసి స్టేట్ గుర్తించండి
 
-![Register బటన్ క్లిక్ చేసిన తరువాత బ్రౌజర్ URL మార్పు స్క్రీన్‌షాట్](../../../../translated_images/click-register.e89a30bf0d4bc9ca.te.png)
+![Register బటన్ క్లిక్ చేసిన తరువాత బ్రౌజర్ URL మార్పు స్క్రీన్‌షాట్](../../../../translated_images/te/click-register.e89a30bf0d4bc9ca.png)
 
 ### HTTP పద్ధతుల సరిపోలిక
 
@@ -346,7 +346,7 @@ graph TD
 2. "ఖాతా సృష్టించు" బటన్‌ను నొక్కండి
 3. బ్రౌజర్‌లో సర్వర్ స్పందనను గమనించండి
 
-![localhost:5000/api/accounts అడ్రస్ విండోలో వినియోగదారు డేటా JSON స్ట్రింగ్](../../../../translated_images/form-post.61de4ca1b964d91a.te.png)
+![localhost:5000/api/accounts అడ్రస్ విండోలో వినియోగదారు డేటా JSON స్ట్రింగ్](../../../../translated_images/te/form-post.61de4ca1b964d91a.png)
 
 **మీకు కనిపించే విషయాలు:**
 - **బ్రౌజర్ API ఎండ్పాయింట్ URLకి రీడైరెక్ట్ అవుతుంది**
@@ -609,7 +609,7 @@ async function register() {
 3. **"Create Account"పై నొక్కండి**
 4. **కన్సోల్ సందేశాలు మరియు వినియోగదారుని ఫీడ్బ్యాక్‌ని గమనించండి**
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.te.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/te/browser-console.efaf0b51aaaf6778.png)
 
 **మీరు చూడాల్సింది:**
 - సబ్మిట్ బటన్ పై లోడింగ్ స్థితి కనిపిస్తుంది
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. యూజర్నేమ్ ఫీల్డ్‌లో ప్రత్యేక అక్షరాలు ప్రయత్నించండి
 4. నెగటివ్ బ్యాలెన్స్ విలువ ఎంటర్ చేయండి
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.te.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/te/validation-error.8bd23e98d416c22f.png)
 
 **మీరు గమనించేది:**
 - బ్రౌజర్ ఒక లోకల్ వెరిఫికేషన్ సందేశాలను చూపిస్తుంది
@@ -943,7 +943,7 @@ Use the Agent mode to complete the following challenge:
 
 CSS శైలీకరణ తరువాత తుది లాగిన్ పేజీ ఇలా కనిపించవచ్చు:
 
-![CSS శైలీలను జోడించిన తరువాత లాగిన్ పేజీ స్క్రీన్‌షాట్](../../../../translated_images/result.96ef01f607bf856a.te.png)
+![CSS శైలీలను జోడించిన తరువాత లాగిన్ పేజీ స్క్రీన్‌షాట్](../../../../translated_images/te/result.96ef01f607bf856a.png)
 
 ## పాఠం తర్వాత క్విజ్
 

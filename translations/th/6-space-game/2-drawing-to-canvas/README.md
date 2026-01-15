@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![กริดของแคนวาส](../../../../translated_images/canvas_grid.5f209da785ded492.th.png)
+![กริดของแคนวาส](../../../../translated_images/th/canvas_grid.5f209da785ded492.png)
 > ภาพจาก [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 ในการวาดบนองค์ประกอบแคนวาส คุณจะทำตามกระบวนการสามขั้นตอนพื้นฐานนี้ซึ่งเป็นรากฐานของกราฟิกบนแคนวาส เมื่อคุณทำได้สักพักจะกลายเป็นเรื่องง่าย:
@@ -323,11 +323,11 @@ flowchart TD
 
 - เรือฮีโร่
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.th.png)
+   ![Hero ship](../../../../translated_images/th/player.dd24c1afa8c71e9b.png)
 
 - มอนสเตอร์ขนาด 5*5
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.th.png)
+   ![Monster ship](../../../../translated_images/th/enemyShip.5df2a822c16650c2.png)
 
 ### ขั้นตอนแนะนำสำหรับเริ่มพัฒนา
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 ผลลัพธ์ที่เสร็จสมบูรณ์ควรมีลักษณะดังนี้:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.th.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/th/partI-solution.36c53b48c9ffae2a.png)
 
 ## วิธีแก้ปัญหา
 
