@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 Tältä valmis projektisi näyttää:
 
-![Keskustelusovelluksen käyttöliittymä, jossa näkyy keskustelu käyttäjän ja tekoälyavustajan välillä](../../../translated_images/fi/screenshot.0a1ee0d123df681b.png)
+![Keskustelusovelluksen käyttöliittymä, jossa näkyy keskustelu käyttäjän ja tekoälyavustajan välillä](../../../translated_images/fi/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Oppimismatka tekoälysovellusten kehittämiseen
 
@@ -194,7 +194,7 @@ mindmap
 
 **Keskeinen periaate**: Tekoälysovellusten kehitys yhdistää perinteiset verkkokehitystaidot tekoälypalveluiden integrointiin, luoden älykkäitä sovelluksia, jotka tuntuvat käyttäjille luonnollisilta ja reagoivilta.
 
-![GitHub Models AI Playground -käyttöliittymä, jossa mallin valinta ja testausalue](../../../translated_images/fi/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground -käyttöliittymä, jossa mallin valinta ja testausalue](../../../translated_images/fi/playground.d2b927122224ff8f.webp)
 
 **Mikä tekee Playgroundista niin hyödyllisen:**
 - **Kokeile** eri tekoälymalleja, kuten GPT-4o-mini, Claude ja muita (kaikki ilmaisia!)
@@ -204,7 +204,7 @@ mindmap
 
 Kun olet kokeillut hieman, klikkaa vain "Code"-välilehteä ja valitse ohjelmointikieli saadaksesi toteutuskoodin, jota tarvitset.
 
-![Playground-vaihtoehto, jossa näkyy koodin generointivaihtoehdot eri ohjelmointikielille](../../../translated_images/fi/playground-choice.1d23ba7d407f4758.png)
+![Playground-vaihtoehto, jossa näkyy koodin generointivaihtoehdot eri ohjelmointikielille](../../../translated_images/fi/playground-choice.1d23ba7d407f4758.webp)
 
 ## Python-taustaintegraation asettaminen
 
@@ -2141,14 +2141,14 @@ Haluatko kokeilla tätä projektia pilvipohjaisessa kehitysympäristössä? GitH
 - **Siirry** [Web Dev For Beginners -repositoryyn](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Klikkaa** "Use this template" oikeassa yläkulmassa (varmista, että olet kirjautunut GitHubiin)  
 
-![Luo mallista -käyttöliittymä, jossa näkyy vihreä "Use this template" -painike](../../../translated_images/fi/template.67ad477109d29a2b.png)  
+![Luo mallista -käyttöliittymä, jossa näkyy vihreä "Use this template" -painike](../../../translated_images/fi/template.67ad477109d29a2b.webp)  
 
 **Vaihe 2: Käynnistä Codespaces**  
 - **Avaa** juuri luomasi repository  
 - **Klikkaa** vihreää "Code"-painiketta ja valitse "Codespaces"  
 - **Valitse** "Create codespace on main" aloittaaksesi kehitysympäristön  
 
-![Luo Codespace -käyttöliittymä, jossa näkyy vaihtoehdot pilvipohjaisen kehitysympäristön käynnistämiseen](../../../translated_images/fi/codespace.bcecbdf5d2747d3d.png)  
+![Luo Codespace -käyttöliittymä, jossa näkyy vaihtoehdot pilvipohjaisen kehitysympäristön käynnistämiseen](../../../translated_images/fi/codespace.bcecbdf5d2747d3d.webp)  
 
 **Vaihe 3: Ympäristön konfigurointi**  
 Kun Codespace latautuu, sinulla on käytössäsi:  

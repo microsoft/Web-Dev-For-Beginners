@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # অ্যাক্সেসযোগ্য ওয়েবপেজ তৈরি করা
 
-![অ্যাক্সেসিবিলিটি সম্পর্কে সবকিছু](../../../../translated_images/bn/webdev101-a11y.8ef3025c858d897a.png)
+![অ্যাক্সেসিবিলিটি সম্পর্কে সবকিছু](../../../../translated_images/bn/webdev101-a11y.8ef3025c858d897a.webp)
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

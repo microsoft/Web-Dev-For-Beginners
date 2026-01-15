@@ -23,7 +23,7 @@ Jūs sukursite naršyklės plėtinį, kuris veikia Edge, Chrome ir Firefox narš
 
 ### Kreditas
 
-![žalias naršyklės plėtinys](../../../translated_images/lt/extension-screenshot.0e7f5bfa110e92e3.png)
+![žalias naršyklės plėtinys](../../../translated_images/lt/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kreditas
 

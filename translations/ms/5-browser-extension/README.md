@@ -23,7 +23,7 @@ Sambungan ini boleh dipanggil secara ad hoc oleh pengguna setelah kunci API dan 
 
 ### Kredit
 
-![sambungan pelayar berwarna hijau](../../../translated_images/ms/extension-screenshot.0e7f5bfa110e92e3.png)
+![sambungan pelayar berwarna hijau](../../../translated_images/ms/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kredit
 

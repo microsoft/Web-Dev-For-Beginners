@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Премахване на запазените данни
     ClearStorage --> FirstTime: Връщане към настройките
 ```
-![Local storage pane](../../../../translated_images/bg/localstorage.472f8147b6a3f8d1.png)
+![Local storage pane](../../../../translated_images/bg/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Съображения за сигурността**: В продукционни приложения съхраняването на API ключове в LocalStorage представлява риск за сигурността, защото JavaScript може да има достъп до тези данни. За учебни цели този подход е приемлив, но реалните приложения трябва да използват защитено сървърно съхранение за чувствителни данни.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ: നിരകളും ലൂപ്പുകളും
 
-![JavaScript Basics - Arrays](../../../../translated_images/ml/webdev101-js-arrays.439d7528b8a29455.png)
+![JavaScript Basics - Arrays](../../../../translated_images/ml/webdev101-js-arrays.439d7528b8a29455.webp)
 > സ്കെച്ച്നോട്ട് \- [ടോമോമി ഇമുറ](https://twitter.com/girlie_mac)
 
 ```mermaid

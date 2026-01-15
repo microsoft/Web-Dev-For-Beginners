@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScripti alused: otsuste tegemine
 
-![JavaScripti alused - otsuste tegemine](../../../../translated_images/et/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScripti alused - otsuste tegemine](../../../../translated_images/et/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote autorilt [Tomomi Imura](https://twitter.com/girlie_mac)
 

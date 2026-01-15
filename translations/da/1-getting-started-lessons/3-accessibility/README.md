@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Oprettelse af Tilgængelige Websider
 
-![Alt om Tilgængelighed](../../../../translated_images/da/webdev101-a11y.8ef3025c858d897a.png)
+![Alt om Tilgængelighed](../../../../translated_images/da/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -645,7 +645,7 @@ sequenceDiagram
 
 Η χρήση του `history.pushState` δημιουργεί νέες καταχωρήσεις στο ιστορικό πλοήγησης. Μπορείτε να το ελέγξετε κρατώντας πατημένο το *κουμπί πίσω* του προγράμματος περιήγησης, θα εμφανιστεί κάτι παρόμοιο με αυτό:
 
-![Screenshot of navigation history](../../../../translated_images/el/history.7fdabbafa521e064.png)
+![Screenshot of navigation history](../../../../translated_images/el/history.7fdabbafa521e064.webp)
 
 Αν δοκιμάσετε να πατήσετε το κουμπί πίσω μερικές φορές, θα δείτε ότι αλλάζει το τρέχον URL και το ιστορικό ενημερώνεται, αλλά το ίδιο πρότυπο συνεχίζει να εμφανίζεται.
 

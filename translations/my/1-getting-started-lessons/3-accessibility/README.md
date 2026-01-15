@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ဝင်ရောက်နိုင်သော ဝဘ်စာမျက်နှာများ ဖန်တီးခြင်း
 
-![Accessibility အကြောင်းအားလုံး](../../../../translated_images/my/webdev101-a11y.8ef3025c858d897a.png)
+![Accessibility အကြောင်းအားလုံး](../../../../translated_images/my/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

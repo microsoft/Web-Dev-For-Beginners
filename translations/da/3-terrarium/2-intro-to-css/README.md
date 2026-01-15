@@ -29,7 +29,7 @@ journey
       Responsivt design: 5: Student
       Glasreflektioner: 5: Student
 ```
-![Introduktion til CSS](../../../../translated_images/da/webdev101-css.3f7af5991bf53a20.png)
+![Introduktion til CSS](../../../../translated_images/da/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Kan du huske, hvordan dit HTML-terrarium så temmelig grundlæggende ud? CSS er stedet, hvor vi forvandler den enkle struktur til noget visuelt tiltalende.
@@ -202,7 +202,7 @@ body {
 
 Åbn din browsers udviklerværktøjer (F12), gå til Elements fanen, og undersøg dit `<h1>` element. Du vil se, at det arver font-familien fra body:
 
-![arvet font](../../../../translated_images/da/1.cc07a5cbe114ad1d.png)
+![arvet font](../../../../translated_images/da/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Eksperimenter**: Prøv at sætte andre arvelige egenskaber på `<body>` som `color`, `line-height` eller `text-align`. Hvad sker der med din overskrift og andre elementer?
 
@@ -594,7 +594,7 @@ Klar til at forbedre dit terrarium med realistiske glasreflektioner? Denne tekni
 
 Du vil skabe subtile highlights, der simulerer, hvordan lys reflekteres på glasoverflader. Denne metode svarer til, hvordan renæssancens malere som Jan van Eyck brugte lys og refleksion til at få malet glas til at fremstå tredimensionelt. Sådan skal resultatet se ud:
 
-![færdigt terrarium](../../../../translated_images/da/terrarium-final.2f07047ffc597d0a.png)
+![færdigt terrarium](../../../../translated_images/da/terrarium-final.2f07047ffc597d0a.webp)
 
 **Din udfordring:**
 - **Opret** subtile hvide eller lyse ovale former til glasreflektionerne

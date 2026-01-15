@@ -652,7 +652,7 @@ sequenceDiagram
 
 使用 `history.pushState` 創建瀏覽器導航歷史中的新條目。您可以通過按住瀏覽器的*後退按鈕*來檢查，它應顯示如下內容：
 
-![導航歷史截圖](../../../../translated_images/mo/history.7fdabbafa521e064.png)
+![導航歷史截圖](../../../../translated_images/mo/history.7fdabbafa521e064.webp)
 
 如果您嘗試多次點擊後退按鈕，您會看到當前 URL 發生了變化，歷史記錄已更新，但顯示的模板保持不變。
 

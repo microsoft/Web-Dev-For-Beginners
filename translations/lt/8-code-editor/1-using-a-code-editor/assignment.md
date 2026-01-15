@@ -78,7 +78,7 @@ Kadangi VSCode.dev reikalauja bent vieno failo, kad būtų galima atidaryti saug
 4. Parašykite įsipareigojimo žinutę: „Pridėti pradinę HTML struktūrą“
 5. **Paspauskite** „Commit new file“, kad išsaugotumėte pakeitimus
 
-![Naujo failo kūrimas GitHub](../../../../translated_images/lt/new-file-github.com.c886796d800e8056.png)
+![Naujo failo kūrimas GitHub](../../../../translated_images/lt/new-file-github.com.c886796d800e8056.webp)
 
 **Šis pradinis nustatymas įgyvendina:**
 - **Sukuria** tinkamą HTML5 dokumento struktūrą su semantiniais elementais
@@ -104,7 +104,7 @@ Dabar, kai jūsų saugyklos pagrindas yra parengtas, pereikime prie VSCode.dev p
 
 ✅ **Sėkmės indikatorius**: Jūs matysite savo projekto failus „Explorer“ šoninėje juostoje, o `index.html` bus atidarytas redagavimui pagrindinėje redaktoriaus srityje.
 
-![Projektas užkrautas VSCode.dev](../../../../translated_images/lt/project-on-vscode.dev.e79815a9a95ee7fe.png)
+![Projektas užkrautas VSCode.dev](../../../../translated_images/lt/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Sąsajoje matysite:**
 - **Explorer šoninę juostą**: rodo jūsų saugyklos failus ir aplankų struktūrą
@@ -449,7 +449,7 @@ Plėtiniai pagerina jūsų kūrimo patirtį suteikdami gyvos peržiūros galimyb
 **Tiesioginiai rezultatai po įdiegimo:**
 Įdiegus CodeSwing, redaktoriuje pasirodys gyvos peržiūros langas su jūsų gyvenimo aprašymo svetaine. Galėsite matyti, kaip atrodo svetainė redaguojant turinį.
 
-![CodeSwing plėtinys rodo gyvą peržiūrą](../../../../translated_images/lt/after-codeswing-extension-pb.0ebddddcf73b5509.png)
+![CodeSwing plėtinys rodo gyvą peržiūrą](../../../../translated_images/lt/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Patobulintos sąsajos funkcijos:**
 - Atskiras vaizdas: rodo kodą vienoje pusėje ir gyvą peržiūrą kitoje

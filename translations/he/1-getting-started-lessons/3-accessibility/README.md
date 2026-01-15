@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # יצירת דפי אינטרנט נגישים
 
-![הכל על נגישות](../../../../translated_images/he/webdev101-a11y.8ef3025c858d897a.png)
+![הכל על נגישות](../../../../translated_images/he/webdev101-a11y.8ef3025c858d897a.webp)
 > איור מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

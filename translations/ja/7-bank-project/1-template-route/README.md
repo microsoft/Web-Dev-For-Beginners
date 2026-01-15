@@ -635,7 +635,7 @@ sequenceDiagram
 
 `history.pushState`を使用するとブラウザのナビゲーション履歴に新しいエントリが作成されます。ブラウザの*戻るボタン*を押し続けると、次のような履歴が表示されるはずです:
 
-![ナビゲーション履歴のスクリーンショット](../../../../translated_images/ja/history.7fdabbafa521e064.png)
+![ナビゲーション履歴のスクリーンショット](../../../../translated_images/ja/history.7fdabbafa521e064.webp)
 
 戻るボタンを数回クリックしてみると、現在のURLが変更され履歴が更新されますが、同じテンプレートが表示され続けます。
 

@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![mreža canvasa](../../../../translated_images/hr/canvas_grid.5f209da785ded492.png)
+![mreža canvasa](../../../../translated_images/hr/canvas_grid.5f209da785ded492.webp)
 > Slika s [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Za crtanje na canvas elementu slijedit ćete isti trostupanjski proces koji tvori temelj svih grafika na canvasu. Nakon što to učinite nekoliko puta, postat će vam druga priroda:
@@ -323,11 +323,11 @@ Izradit ćete web stranicu s canvas elementom. Trebala bi prikazivati crni ekran
 
 - Herojski brod
 
-   ![Herojski brod](../../../../translated_images/hr/player.dd24c1afa8c71e9b.png)
+   ![Herojski brod](../../../../translated_images/hr/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 čudovišta
 
-   ![Čudovište](../../../../translated_images/hr/enemyShip.5df2a822c16650c2.png)
+   ![Čudovište](../../../../translated_images/hr/enemyShip.5df2a822c16650c2.webp)
 
 ### Preporučeni koraci za početak razvoja
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Gotovi rezultat trebao bi izgledati ovako:
 
-![Crni zaslon s herojem i 5*5 čudovišta](../../../../translated_images/hr/partI-solution.36c53b48c9ffae2a.png)
+![Crni zaslon s herojem i 5*5 čudovišta](../../../../translated_images/hr/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Rješenje
 

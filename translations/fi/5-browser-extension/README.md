@@ -23,7 +23,7 @@ Tätä laajennusta käyttäjä voi kutsua ad hoc -tyyliin, kun API-avain ja alue
 
 ### Kiitokset
 
-![vihreä selaimen laajennus](../../../translated_images/fi/extension-screenshot.0e7f5bfa110e92e3.png)
+![vihreä selaimen laajennus](../../../translated_images/fi/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kiitokset
 

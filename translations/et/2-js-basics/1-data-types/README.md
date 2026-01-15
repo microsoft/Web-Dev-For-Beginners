@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScripti põhialused: andmetüübid
 
-![JavaScripti põhialused - Andmetüübid](../../../../translated_images/et/webdev101-js-datatypes.4cc470179730702c.png)
+![JavaScripti põhialused - Andmetüübid](../../../../translated_images/et/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote autorilt [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Δημιουργία Προσβάσιμων Ιστοσελίδων
 
-![Όλα για την Προσβασιμότητα](../../../../translated_images/el/webdev101-a11y.8ef3025c858d897a.png)
+![Όλα για την Προσβασιμότητα](../../../../translated_images/el/webdev101-a11y.8ef3025c858d897a.webp)
 > Σχεδιάγραμμα από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

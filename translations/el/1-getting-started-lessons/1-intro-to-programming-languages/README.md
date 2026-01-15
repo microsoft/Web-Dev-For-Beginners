@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Σήμερα, θα εξερευνήσουμε τα απίστευτα εργαλεία που κάνουν την σύγχρονη ανάπτυξη ιστοσελίδων όχι μόνο δυνατή, αλλά και σοβαρά εθιστική. Μιλάω για τους ίδιους ακριβώς επεξεργαστές, προγράμματα περιήγησης και ροές εργασίας που χρησιμοποιούν οι προγραμματιστές στη Netflix, Spotify και το αγαπημένο σου indie studio εφαρμογών κάθε μέρα. Και να το μέρος που θα σε κάνει να χορέψεις από χαρά: τα περισσότερα από αυτά τα επαγγελματικά, βιομηχανικά πρότυπα εργαλεία είναι εντελώς δωρεάν!
 
-![Intro Programming](../../../../translated_images/el/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/el/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Σκέτς από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

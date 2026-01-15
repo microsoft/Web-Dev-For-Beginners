@@ -187,7 +187,7 @@ Kaip Titaniko skirsniai atrodė labai tvirti, kol keli skyriai nebuvo užpildyti
 
 Vietoje to, kad vaikytumėmės savo uodegos, kursime **centralizuotą būsenos valdymo** sistemą. Įsivaizduokite, kad turite vieną labai organizuotą asmenį, kuris tvarko viską svarbų:
 
-![Schema, rodanti duomenų srautus tarp HTML, vartotojo veiksmų ir būsenos](../../../../translated_images/lt/data-flow.fa2354e0908fecc8.png)
+![Schema, rodanti duomenų srautus tarp HTML, vartotojo veiksmų ir būsenos](../../../../translated_images/lt/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Kaip šachmatų meistrai, kurie atskiria svarbias figūras nuo menkaverčių pė
 
 Čia pateikiamas pavyzdinis rezultatas po namų darbo atlikimo:
 
-![Ekrano nuotrauka su pavyzdiniu "Pridėti transakciją" dialogu](../../../../translated_images/lt/dialog.93bba104afeb79f1.png)
+![Ekrano nuotrauka su pavyzdiniu "Pridėti transakciją" dialogu](../../../../translated_images/lt/dialog.93bba104afeb79f1.webp)
 
 ---
 

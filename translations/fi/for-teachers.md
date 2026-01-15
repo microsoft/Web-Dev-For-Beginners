@@ -42,10 +42,10 @@ Tämä opetusohjelma sisältää tuontipaketteja yleisiin LMS-työnkulkuihin.
   - Moodle Cloud tukee rajoitetusti Common Cartridgea. Suosi yllä olevaa Moodle-tiedostoa, joka voidaan myös ladata Canvasiin.
   - Tuonnin jälkeen tarkista moduulit, määräajat ja visailuasetukset, jotta ne vastaavat lukukautesi aikataulua.
 
-![Moodle](../../translated_images/fi/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/fi/moodle.94eb93d714a50cb2.webp)
 > Opetusohjelma Moodle-luokassa
 
-![Canvas](../../translated_images/fi/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/fi/canvas.fbd605ff8e5b8aff.webp)
 > Opetusohjelma Canvasissa
 
 ### Repositorion käyttö suoraan (ilman Classroomia)

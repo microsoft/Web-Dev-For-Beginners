@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 এই প্রকল্পে, আপনি একটি কাল্পনিক ব্যাংক তৈরি করার পদ্ধতি শিখবেন। এই পাঠগুলোতে একটি ওয়েব অ্যাপের লেআউট এবং রুট তৈরি, ফর্ম তৈরি, স্টেট পরিচালনা এবং API থেকে ব্যাংকের ডেটা সংগ্রহ করার পদ্ধতি শেখানো হয়েছে।
 
-| ![Screen1](../../../translated_images/bn/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/bn/screen2.123c82a831a1d14a.png) |
+| ![Screen1](../../../translated_images/bn/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/bn/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## পাঠসমূহ

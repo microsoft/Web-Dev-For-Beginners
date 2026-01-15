@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptin perusteet: Päätöksenteko
 
-![JavaScriptin perusteet - Päätöksenteko](../../../../translated_images/fi/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScriptin perusteet - Päätöksenteko](../../../../translated_images/fi/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 

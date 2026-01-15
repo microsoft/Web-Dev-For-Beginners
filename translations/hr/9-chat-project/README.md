@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Evo kako će vaš završeni projekt izgledati:
 
-![Chat aplikacija koja prikazuje razgovor između korisnika i AI asistenta](../../../translated_images/hr/screenshot.0a1ee0d123df681b.png)
+![Chat aplikacija koja prikazuje razgovor između korisnika i AI asistenta](../../../translated_images/hr/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Vaše putovanje učenjem kroz razvoj AI aplikacija
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Temeljno načelo**: razvoj AI aplikacija kombinira tradicionalne vještine web razvoja s integracijom AI usluga, stvarajući inteligentne aplikacije koje korisnicima djeluju prirodno i responzivno.
 
-![GitHub Models AI Playground sučelje s odabirom modela i testnim područjem](../../../translated_images/hr/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground sučelje s odabirom modela i testnim područjem](../../../translated_images/hr/playground.d2b927122224ff8f.webp)
 
 **Evo što čini playground tako korisnim:**
 - **Isprobajte** različite AI modele poput GPT-4o-mini, Claudea i drugih (svi besplatni!)
@@ -199,7 +199,7 @@ mindmap
 
 Kad malo eksperimentirate, jednostavno kliknite karticu "Code" i odaberite svoj programski jezik da dobijete kod koji vam treba.
 
-![Izbor u playgroundu koji prikazuje opcije generiranja koda za različite programske jezike](../../../translated_images/hr/playground-choice.1d23ba7d407f4758.png)
+![Izbor u playgroundu koji prikazuje opcije generiranja koda za različite programske jezike](../../../translated_images/hr/playground-choice.1d23ba7d407f4758.webp)
 
 ## Postavljanje Python pozadinske integracije
 
@@ -2353,14 +2353,14 @@ Vještine koje ste razvili u ovoj lekciji direktno su primjenjive u modernim kar
 - **Idite** na [Web Dev For Beginners spremište](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Kliknite** "Use this template" u gornjem desnom kutu (pobrinite se da ste prijavljeni na GitHub)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/hr/template.67ad477109d29a2b.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/hr/template.67ad477109d29a2b.webp)
 
 **Korak 2: Pokrenite Codespaces**
 - **Otvorite** svoje novo spremište
 - **Kliknite** zeleni gumb "Code" i odaberite "Codespaces"
 - **Odaberite** "Create codespace on main" za pokretanje razvojnog okruženja
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/hr/codespace.bcecbdf5d2747d3d.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/hr/codespace.bcecbdf5d2747d3d.webp)
 
 **Korak 3: Konfiguracija okoline**
 Kada se vaš Codespace učita, imat ćete pristup:

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Създаване на достъпни уебстраници
 
-![Всичко за достъпността](../../../../translated_images/bg/webdev101-a11y.8ef3025c858d897a.png)
+![Всичко за достъпността](../../../../translated_images/bg/webdev101-a11y.8ef3025c858d897a.webp)
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

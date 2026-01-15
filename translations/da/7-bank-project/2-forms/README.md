@@ -292,7 +292,7 @@ Først, lad os observere hvad der sker ved basal formularafsendelse:
 2. Observer ændringerne i din browsers adressebjælke
 3. Læg mærke til, hvordan siden genindlæses og data vises i URL’en
 
-![Skærmbillede af browserens URL-ændring efter klik på Registrer-knappen](../../../../translated_images/da/click-register.e89a30bf0d4bc9ca.png)
+![Skærmbillede af browserens URL-ændring efter klik på Registrer-knappen](../../../../translated_images/da/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP Metoder Sammenligning
 
@@ -346,7 +346,7 @@ Lad os sætte din registreringsformular til at kommunikere korrekt med backend A
 2. **Klik** på "Opret Konto" knappen
 3. **Observer** serverens svar i din browser
 
-![Et browservindue på adressen localhost:5000/api/accounts, der viser en JSON streng med brugerdata](../../../../translated_images/da/form-post.61de4ca1b964d91a.png)
+![Et browservindue på adressen localhost:5000/api/accounts, der viser en JSON streng med brugerdata](../../../../translated_images/da/form-post.61de4ca1b964d91a.webp)
 
 **Det du bør se:**
 - **Browseren omdirigerer** til API endpoint URL’en
@@ -609,7 +609,7 @@ async function register() {
 3. **Klik** på "Opret konto"
 4. **Observer** konsolmeddelelser og brugerfeedback
 
-![Screenshot showing log message in the browser console](../../../../translated_images/da/browser-console.efaf0b51aaaf6778.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/da/browser-console.efaf0b51aaaf6778.webp)
 
 **Det du bør se:**
 - **Indlæsningsstatus** vises på submit-knappen
@@ -783,7 +783,7 @@ Lad os forbedre din registreringsformular med robust validering, der giver fremr
 3. **Prøv** specialtegn i brugernavnfeltet
 4. **Indtast** et negativt beløb i saldo-feltet
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/da/validation-error.8bd23e98d416c22f.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/da/validation-error.8bd23e98d416c22f.webp)
 
 **Det du vil observere:**
 - **Browseren viser** native valideringsmeddelelser
@@ -943,7 +943,7 @@ Vis en fejlmeddelelse i HTML, hvis brugeren allerede eksisterer.
 
 Her er et eksempel på, hvordan den endelige login-side kan se ud efter lidt styling:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/da/result.96ef01f607bf856a.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/da/result.96ef01f607bf856a.webp)
 
 ## Post-Lecture Quiz
 

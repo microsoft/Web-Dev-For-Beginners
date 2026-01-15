@@ -23,7 +23,7 @@ Ekstenzija se može koristiti ad hoc od strane korisnika nakon što se unesu API
 
 ### Zasluge
 
-![zelena ekstenzija za preglednik](../../../translated_images/hr/extension-screenshot.0e7f5bfa110e92e3.png)
+![zelena ekstenzija za preglednik](../../../translated_images/hr/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Zasluge
 

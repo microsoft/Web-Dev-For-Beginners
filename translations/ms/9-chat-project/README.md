@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 Inilah rupa projek siap anda:
 
-![Antara muka aplikasi chat menunjukkan perbualan antara pengguna dan pembantu AI](../../../translated_images/ms/screenshot.0a1ee0d123df681b.png)
+![Antara muka aplikasi chat menunjukkan perbualan antara pengguna dan pembantu AI](../../../translated_images/ms/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Perjalanan Pembelajaran Anda Melalui Pembangunan Aplikasi AI
 
@@ -194,7 +194,7 @@ mindmap
 
 **Prinsip Teras**: Pembangunan aplikasi AI menggabungkan kemahiran pembangunan web tradisional dengan integrasi perkhidmatan AI, mencipta aplikasi pintar yang terasa semula jadi dan responsif kepada pengguna.
 
-![Antara muka GitHub Models AI Playground dengan pilihan model dan kawasan ujian](../../../translated_images/ms/playground.d2b927122224ff8f.png)
+![Antara muka GitHub Models AI Playground dengan pilihan model dan kawasan ujian](../../../translated_images/ms/playground.d2b927122224ff8f.webp)
 
 **Inilah yang membuatkan playground sangat berguna:**
 - **Cuba** model AI yang berbeza seperti GPT-4o-mini, Claude, dan lain-lain (semuanya percuma!)
@@ -204,7 +204,7 @@ mindmap
 
 Setelah anda bermain-main sedikit, hanya klik tab "Code" dan pilih bahasa pengaturcaraan anda untuk mendapatkan kod pelaksanaan yang anda perlukan.
 
-![Pilihan playground menunjukkan pilihan penjanaan kod untuk bahasa pengaturcaraan yang berbeza](../../../translated_images/ms/playground-choice.1d23ba7d407f4758.png)
+![Pilihan playground menunjukkan pilihan penjanaan kod untuk bahasa pengaturcaraan yang berbeza](../../../translated_images/ms/playground-choice.1d23ba7d407f4758.webp)
 
 ## Menyediakan Integrasi Backend Python
 
@@ -2363,14 +2363,14 @@ Ingin mencuba projek ini dalam persekitaran pembangunan awan? GitHub Codespaces 
 - **Navigasi** ke [repositori Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Klik** "Use this template" di sudut kanan atas (pastikan anda log masuk ke GitHub)
 
-![Antara muka cipta dari templat menunjukkan butang hijau "Use this template"](../../../translated_images/ms/template.67ad477109d29a2b.png)
+![Antara muka cipta dari templat menunjukkan butang hijau "Use this template"](../../../translated_images/ms/template.67ad477109d29a2b.webp)
 
 **Langkah 2: Lancarkan Codespaces**
 - **Buka** repositori yang baru anda cipta
 - **Klik** butang hijau "Code" dan pilih "Codespaces"
 - **Pilih** "Create codespace on main" untuk memulakan persekitaran pembangunan anda
 
-![Antara muka cipta codespace dengan pilihan untuk melancarkan persekitaran pembangunan awan](../../../translated_images/ms/codespace.bcecbdf5d2747d3d.png)
+![Antara muka cipta codespace dengan pilihan untuk melancarkan persekitaran pembangunan awan](../../../translated_images/ms/codespace.bcecbdf5d2747d3d.webp)
 
 **Langkah 3: Konfigurasi Persekitaran**
 Sebaik sahaja Codespace anda dimuatkan, anda akan mempunyai akses kepada:

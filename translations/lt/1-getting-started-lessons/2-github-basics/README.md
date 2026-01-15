@@ -17,7 +17,7 @@ Sveikas, būsimasis programuotojau! 👋 Pasiruošęs prisijungti prie milijonų
 
 Mes šią kelionę eisime kartu, žingsnis po žingsnio. Jokio skubėjimo, jokio spaudimo – tik tu, aš ir keli labai šaunūs įrankiai, kurie netrukus taps tavo naujais geriausiais draugais!
 
-![Intro to GitHub](../../../../translated_images/lt/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/lt/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ Pirmiausia raskime GitHub atviro kodo repozitoriją, kuri jus domina ir prie kur
 
 ✅ Geras būdas rasti „pradedantiesiems draugiškus“ repozitorijus yra [paieška pagal žymą 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopijuokite repozitoriją vietoje](../../../../translated_images/lt/clone_repo.5085c48d666ead57.png)
+![Kopijuokite repozitoriją vietoje](../../../../translated_images/lt/clone_repo.5085c48d666ead57.webp)
 
 Yra keletas būdų, kaip kopijuoti kodą. Vienas būdų yra „klonuoti“ repozitorijos turinį, naudojant HTTPS, SSH ar GitHub CLI (Komandų eilutės sąsają).
 

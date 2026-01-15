@@ -72,13 +72,13 @@ Nezmeškejte náš nový kurz o generativní AI!
 
 Navštivte [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) a začněte!
 
-![Background](../../translated_images/cs/background.148a8d43afde5730.png)
+![Background](../../translated_images/cs/background.148a8d43afde5730.webp)
 
 - Lekce pokrývají vše od základů po RAG.
 - Komunikujte s historickými postavami pomocí GenAI a naší doprovodné aplikace.
 - Zábavné a poutavé vyprávění, budete cestovat časem!
 
-![character](../../translated_images/cs/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/cs/character.5c0dd8e067ffd693.webp)
 
 Každá lekce obsahuje úkol k dokončení, ověření znalostí a výzvu, která vás provede tématy jako:
 - Promptování a inženýrství promptů
@@ -112,7 +112,7 @@ Postupujte podle těchto kroků:
 
 Ve své kopii repozitáře klikněte na tlačítko **Code** a vyberte **Open with Codespaces**. Tím se vám vytvoří nový Codespace k práci.
 
-![Codespace](../../translated_images/cs/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/cs/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Spuštění kurzu lokálně na vašem počítači
 

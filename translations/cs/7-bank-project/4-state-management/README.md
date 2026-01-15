@@ -187,7 +187,7 @@ Stejně jako třída Titanicu s oddíly, jež se zdála robustní, dokud se nena
 
 Místo běhání dokola vytvoříme **centralizovaný systém správy stavu**. Představte si to jako opravdu organizovanou osobu, která má na starosti všechny důležité věci:
 
-![Schema ukazující datové toky mezi HTML, uživatelskými akcemi a stavem](../../../../translated_images/cs/data-flow.fa2354e0908fecc8.png)
+![Schema ukazující datové toky mezi HTML, uživatelskými akcemi a stavem](../../../../translated_images/cs/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Tato výzva vám pomůže myslet jako profesionální vývojář, který zohled�
 
 Zde je ukázkový výsledek po dokončení zadání:
 
-![Screenshot zobrazující ukázkový dialog „Přidat transakci“](../../../../translated_images/cs/dialog.93bba104afeb79f1.png)
+![Screenshot zobrazující ukázkový dialog „Přidat transakci“](../../../../translated_images/cs/dialog.93bba104afeb79f1.webp)
 
 ---
 

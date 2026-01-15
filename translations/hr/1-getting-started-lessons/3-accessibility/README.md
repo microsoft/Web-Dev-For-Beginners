@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Izrada pristupačnih web stranica
 
-![Sve o pristupačnosti](../../../../translated_images/hr/webdev101-a11y.8ef3025c858d897a.png)
+![Sve o pristupačnosti](../../../../translated_images/hr/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

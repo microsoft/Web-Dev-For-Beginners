@@ -126,7 +126,7 @@ Para abrir as Ferramentas de Desenvolvedor no Edge, clique nos três pontos no c
 
 Vamos experimentar isso. Abra um site (Microsoft.com funciona bem para isso) e clique no botão 'Gravar'. Agora atualize a página e observe o profiler capturar tudo o que acontece. Quando você parar a gravação, verá um detalhamento de como o navegador 'escreve scripts', 'renderiza' e 'pinta' o site. Isso me lembra como o controle da missão monitora cada sistema durante o lançamento de um foguete - você obtém dados em tempo real sobre exatamente o que está acontecendo e quando.
 
-![Profiler do Edge](../../../../translated_images/br/profiler.5a4a62479c5df01c.png)
+![Profiler do Edge](../../../../translated_images/br/profiler.5a4a62479c5df01c.webp)
 
 ✅ A [Documentação da Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) tem muitos mais detalhes se você quiser se aprofundar.
 
@@ -136,11 +136,11 @@ Selecione elementos da linha do tempo do perfil para ampliar os eventos que acon
 
 Obtenha um instantâneo do desempenho da sua página selecionando uma parte da linha do tempo do perfil e olhando para o painel de resumo:
 
-![Instantâneo do profiler do Edge](../../../../translated_images/br/snapshot.97750180ebcad737.png)
+![Instantâneo do profiler do Edge](../../../../translated_images/br/snapshot.97750180ebcad737.webp)
 
 Verifique o painel de Log de Eventos para ver se algum evento levou mais de 15 ms:
 
-![Log de eventos do Edge](../../../../translated_images/br/log.804026979f3707e0.png)
+![Log de eventos do Edge](../../../../translated_images/br/log.804026979f3707e0.webp)
 
 ✅ Familiarize-se com seu profiler! Abra as ferramentas de desenvolvedor neste site e veja se há algum gargalo. Qual é o ativo que carrega mais lentamente? O mais rápido?
 

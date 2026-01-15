@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 建立無障礙網頁
 
-![All About Accessibility](../../../../translated_images/hk/webdev101-a11y.8ef3025c858d897a.png)  
+![All About Accessibility](../../../../translated_images/hk/webdev101-a11y.8ef3025c858d897a.webp)  
 > 筆記作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

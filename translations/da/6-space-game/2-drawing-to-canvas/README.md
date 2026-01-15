@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![canvas gitteret](../../../../translated_images/da/canvas_grid.5f209da785ded492.png)
+![canvas gitteret](../../../../translated_images/da/canvas_grid.5f209da785ded492.webp)
 > Billede fra [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 For at tegne på canvas-elementet følger du den samme tre-trins proces, som udgør fundamentet for al canvas grafik. Når du har gjort det et par gange, bliver det anden natur:
@@ -323,11 +323,11 @@ Du skal bygge en webside med et Canvas-element. Det skal gengive en sort skærm 
 
 - Helteskib
 
-   ![Helteskib](../../../../translated_images/da/player.dd24c1afa8c71e9b.png)
+   ![Helteskib](../../../../translated_images/da/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 monstre
 
-   ![Monster skib](../../../../translated_images/da/enemyShip.5df2a822c16650c2.png)
+   ![Monster skib](../../../../translated_images/da/enemyShip.5df2a822c16650c2.webp)
 
 ### Anbefalede trin for at starte udviklingen
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Det færdige resultat burde se sådan ud:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/da/partI-solution.36c53b48c9ffae2a.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/da/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Løsning
 

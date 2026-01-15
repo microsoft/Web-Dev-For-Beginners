@@ -644,7 +644,7 @@ sequenceDiagram
 
 使用 `history.pushState` 會在瀏覽器導航歷史中新增條目。你可按住瀏覽器「返回按鈕」，會看到類似這樣的視窗：
 
-![截圖：導航歷史](../../../../translated_images/hk/history.7fdabbafa521e064.png)
+![截圖：導航歷史](../../../../translated_images/hk/history.7fdabbafa521e064.webp)
 
 若連按幾次返回按鈕，你會發現目前 URL 改變、歷史更新，但模板不斷顯示相同內容。
 

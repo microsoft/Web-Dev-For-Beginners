@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Základy JavaScriptu: Pole a smyčky
 
-![JavaScript Basics - Arrays](../../../../translated_images/cs/webdev101-js-arrays.439d7528b8a29455.png)
+![JavaScript Basics - Arrays](../../../../translated_images/cs/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![ブラウザのスケッチノート](../../../../translated_images/ja/browser.60317c9be8b7f84a.jpg)
+![ブラウザのスケッチノート](../../../../translated_images/ja/browser.60317c9be8b7f84a.webp)
 > スケッチノート: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## 講義前クイズ
@@ -79,7 +79,7 @@ mindmap
 
 ✅ **少し歴史を振り返る**: 最初のブラウザは「WorldWideWeb」と呼ばれ、1990年にサー・ティモシー・バーナーズ＝リーによって作成されました。
 
-![初期のブラウザ](../../../../translated_images/ja/earlybrowsers.d984b711cdf3a42d.jpg)
+![初期のブラウザ](../../../../translated_images/ja/earlybrowsers.d984b711cdf3a42d.webp)
 > 初期のブラウザのいくつか, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### ブラウザがウェブコンテンツを処理する方法
@@ -198,7 +198,7 @@ quadrantChart
 
 拡張機能のインストールプロセスを理解することで、ユーザーが拡張機能をインストールする際の体験を予測できます。インストールプロセスは、モダンブラウザ間で標準化されていますが、インターフェースデザインに若干の違いがあります。
 
-![Edgeブラウザのスクリーンショット: edge://extensions ページと設定メニューが開いている](../../../../translated_images/ja/install-on-edge.d68781acaf0b3d3d.png)
+![Edgeブラウザのスクリーンショット: edge://extensions ページと設定メニューが開いている](../../../../translated_images/ja/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **重要**: 開発者モードをオンにし、自分の拡張機能をテストする際には他のストアからの拡張機能を許可してください。
 
@@ -313,10 +313,10 @@ project-root/
 ### 拡張機能ビューの概要
 
 **設定ビュー** - 初回ユーザー設定:
-![完成した拡張機能がブラウザで開かれ、地域名とAPIキーの入力フォームを表示しているスクリーンショット](../../../../translated_images/ja/1.b6da8c1394b07491.png)
+![完成した拡張機能がブラウザで開かれ、地域名とAPIキーの入力フォームを表示しているスクリーンショット](../../../../translated_images/ja/1.b6da8c1394b07491.webp)
 
 **結果ビュー** - カーボンフットプリントデータの表示:
-![完成した拡張機能がUS-NEISO地域のカーボン使用量と化石燃料割合の値を表示しているスクリーンショット](../../../../translated_images/ja/2.1dae52ff08042246.png)
+![完成した拡張機能がUS-NEISO地域のカーボン使用量と化石燃料割合の値を表示しているスクリーンショット](../../../../translated_images/ja/2.1dae52ff08042246.webp)
 
 ### 設定フォームの構築
 

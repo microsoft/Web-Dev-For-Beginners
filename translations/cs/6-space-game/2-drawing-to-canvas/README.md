@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![the canvas's grid](../../../../translated_images/cs/canvas_grid.5f209da785ded492.png)
+![the canvas's grid](../../../../translated_images/cs/canvas_grid.5f209da785ded492.webp)
 > Obrázek z [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Kreslení na prvek canvas probíhá podle tří kroků, které tvoří základ všech grafických operací. Když si je zopakujete několikrát, stane se to naprosto přirozeným:
@@ -323,11 +323,11 @@ Vytvoříte webovou stránku s prvkem Canvas. Měla by vykreslit černou obrazov
 
 - Hrdinský lodní plavidlo
 
-   ![Hero ship](../../../../translated_images/cs/player.dd24c1afa8c71e9b.png)
+   ![Hero ship](../../../../translated_images/cs/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 formace příšer
 
-   ![Monster ship](../../../../translated_images/cs/enemyShip.5df2a822c16650c2.png)
+   ![Monster ship](../../../../translated_images/cs/enemyShip.5df2a822c16650c2.webp)
 
 ### Doporučené kroky pro začátek vývoje
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Hotový výsledek by měl vypadat takto:
 
-![Černá obrazovka s hrdinou a 5*5 monstry](../../../../translated_images/cs/partI-solution.36c53b48c9ffae2a.png)
+![Černá obrazovka s hrdinou a 5*5 monstry](../../../../translated_images/cs/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Řešení
 

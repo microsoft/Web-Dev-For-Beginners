@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 我們會一步步一起走這趟旅程，沒有急躁，沒有壓力——只有你我和一些超酷的工具，它們將成為你新的好朋友！
 
-![Intro to GitHub](../../../../translated_images/hk/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/hk/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ flowchart TD
 
 ✅ 找到「新手友好」的 repo 一個好方法是[使用 'good-first-issue' 標籤搜尋](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)。
 
-![Copy a repo locally](../../../../translated_images/hk/clone_repo.5085c48d666ead57.png)
+![Copy a repo locally](../../../../translated_images/hk/clone_repo.5085c48d666ead57.webp)
 
 複製代碼有好幾種方式。最常見的是使用 HTTPS、SSH 或 GitHub CLI（命令列工具）「克隆」該儲存庫內容。
 

@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### കൃതങ്ങൾ
 
-![a green browser extension](../../../translated_images/ml/extension-screenshot.0e7f5bfa110e92e3.png)
+![a green browser extension](../../../translated_images/ml/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## കൃതങ്ങൾ
 

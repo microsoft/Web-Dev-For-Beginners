@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![HTML পরিচিতি](../../../../translated_images/bn/webdev101-html.4389c2067af68e98.png)
+![HTML পরিচিতি](../../../../translated_images/bn/webdev101-html.4389c2067af68e98.webp)
 > স্কেচনোট [Tomomi Imura](https://twitter.com/girlie_mac) দ্বারা
 
 HTML, বা HyperText Markup Language, প্রতিটি ওয়েবসাইটের ভিত্তি যা আপনি কখনও পরিদর্শন করেছেন। HTML কে ওয়েব পৃষ্ঠার কাঠামো হিসেবে ভাবুন – এটি নির্ধারণ করে কোথায় বিষয়বস্তু যাবে, কীভাবে এটি সংগঠিত হবে এবং প্রতিটি অংশ কী প্রতিনিধিত্ব করে। CSS পরে আপনার HTML-কে রঙ এবং লেআউট দিয়ে সাজাবে, এবং JavaScript এটিকে ইন্টারঅ্যাক্টিভিটি দিয়ে প্রাণবন্ত করবে, HTML সেই মৌলিক কাঠামো প্রদান করে যা সবকিছু সম্ভব করে তোলে।
@@ -88,7 +88,7 @@ HTML কোডে ডুব দেওয়ার আগে, আপনার ট
 4. Explorer প্যানেলে, "New File" আইকনে ক্লিক করুন
 5. আপনার ফাইলের নাম দিন `index.html`
 
-![VS Code Explorer নতুন ফাইল তৈরি দেখাচ্ছে](../../../../translated_images/bn/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer নতুন ফাইল তৈরি দেখাচ্ছে](../../../../translated_images/bn/vs-code-index.e2986cf919471eb9.webp)
 
 **অপশন ২: টার্মিনাল কমান্ড ব্যবহার করে**
 ```bash

@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Vrací kompletní HTML stránku
     Browser->>User: Zobrazuje novou stránku (bliknutí/obnovení)
 ```
-![Update workflow in a multi-page application](../../../../translated_images/cs/mpa.7f7375a1a2d4aa77.png)
+![Update workflow in a multi-page application](../../../../translated_images/cs/mpa.7f7375a1a2d4aa77.webp)
 
 **Proč tento přístup působil neohrabaně:**
 - Každé kliknutí znamenalo znovu vytvořit celou stránku od základů
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Aktualizuje specifické prvky stránky
     Browser->>User: Zobrazuje aktualizovaný obsah (bez načítání)
 ```
-![Update workflow in a single-page application](../../../../translated_images/cs/spa.268ec73b41f992c2.png)
+![Update workflow in a single-page application](../../../../translated_images/cs/spa.268ec73b41f992c2.webp)
 
 **Proč se SPA cítí mnohem lépe:**
 - Aktualizují se jen skutečně změněné části (chytře, že?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Po vyzkoušení s neplatným účtem se na stránce zobrazí užitečná chybová zpráva!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/cs/login-error.416fe019b36a6327.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/cs/login-error.416fe019b36a6327.webp)
 
 #### Krok 4: Zahrnutí přístupnosti
 
@@ -950,7 +950,7 @@ Jste připraveni posunout svou bankovní aplikaci na vyšší úroveň? Udělejm
 
 Takto by mohl vypadat vyleštěný dashboard:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/cs/screen2.123c82a831a1d14a.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/cs/screen2.123c82a831a1d14a.webp)
 
 Nemusíte to přesně kopírovat – použijte to jako inspiraci a udělejte si to po svém!
 

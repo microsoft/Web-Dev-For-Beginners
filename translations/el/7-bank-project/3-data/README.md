@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Επιστρέφει πλήρη σελίδα HTML
     Browser->>User: Εμφανίζει νέα σελίδα (αστραπή/επανεκκίνηση)
 ```  
-![Ροή εργασίας ενημέρωσης σε εφαρμογή πολλών σελίδων](../../../../translated_images/el/mpa.7f7375a1a2d4aa77.png)
+![Ροή εργασίας ενημέρωσης σε εφαρμογή πολλών σελίδων](../../../../translated_images/el/mpa.7f7375a1a2d4aa77.webp)
 
 **Γιατί αυτή η προσέγγιση φαινόταν αδέξια:**  
 - Κάθε κλικ σήμαινε ανακατασκευή ολόκληρης της σελίδας από την αρχή  
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Ενημερώνει συγκεκριμένα στοιχεία σελίδας
     Browser->>User: Εμφανίζει ενημερωμένο περιεχόμενο (χωρίς ανανέωση)
 ```  
-![Ροή εργασίας ενημέρωσης σε εφαρμογή μίας σελίδας](../../../../translated_images/el/spa.268ec73b41f992c2.png)
+![Ροή εργασίας ενημέρωσης σε εφαρμογή μίας σελίδας](../../../../translated_images/el/spa.268ec73b41f992c2.webp)
 
 **Γιατί οι SPA φαίνονται πολύ καλύτερες:**  
 - Ενημερώνει μόνο τα μέρη που πραγματικά άλλαξαν (έξυπνο, έτσι;)  
@@ -516,7 +516,7 @@ if (data.error) {
 
 Τώρα, όταν δοκιμάζετε με έναν άκυρο λογαριασμό, θα δείτε ένα χρήσιμο μήνυμα σφάλματος απευθείας στη σελίδα!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/el/login-error.416fe019b36a6327.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/el/login-error.416fe019b36a6327.webp)
 
 #### Βήμα 4: Να Είστε Περιεκτικοί με την Προσβασιμότητα
 
@@ -950,7 +950,7 @@ timeline
 
  Να πώς θα μπορούσε να μοιάζει ένα τελειοποιημένο dashboard:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/el/screen2.123c82a831a1d14a.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/el/screen2.123c82a831a1d14a.webp)
 
 Μην νιώθετε ότι πρέπει να το αντιγράψετε ακριβώς - χρησιμοποιήστε το ως έμπνευση και κάντε το δικό σας!
 

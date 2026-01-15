@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Ukloni pohranjene podatke
     ClearStorage --> FirstTime: Povratak na postavljanje
 ```
-![Prozor lokalne pohrane](../../../../translated_images/hr/localstorage.472f8147b6a3f8d1.png)
+![Prozor lokalne pohrane](../../../../translated_images/hr/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Sigurnosna napomena**: U proizvodnim aplikacijama pohranjivanje API ključeva u LocalStorage predstavlja sigurnosni rizik jer JavaScript može pristupiti tim podacima. Za svrhe učenja je ovaj pristup dobar, ali prave aplikacije trebaju koristiti sigurnu pohranu na strani servera za osjetljive vjerodajnice.
 

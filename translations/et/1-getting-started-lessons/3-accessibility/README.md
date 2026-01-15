@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Ligipääsetavate Veebilehtede Loomine
 
-![Kõigest Ligipääsetavusest](../../../../translated_images/et/webdev101-a11y.8ef3025c858d897a.png)
+![Kõigest Ligipääsetavusest](../../../../translated_images/et/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

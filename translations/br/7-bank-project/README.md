@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Neste projeto, você aprenderá como construir um banco fictício. Estas lições incluem instruções sobre como estruturar um aplicativo web e fornecer rotas, criar formulários, gerenciar estado e buscar dados de uma API da qual você pode obter as informações do banco.
 
-| ![Screen1](../../../translated_images/br/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/br/screen2.123c82a831a1d14a.png) |
+| ![Screen1](../../../translated_images/br/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/br/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Lições

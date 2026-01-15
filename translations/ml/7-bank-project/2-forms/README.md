@@ -293,7 +293,7 @@ graph TD
 2. ബ്രൗസറിന്റെ അഡ്രസ് ബാറിലെ മാറ്റം ശ്രദ്ധിക്കുക
 3. പേജ് റീലോഡ് ആകുകയും URL-ൽ ഡാറ്റ കാണപ്പെടുകയും ചെയ്യുന്നുവെന്ന് ശ്രദ്ധിക്കുക
 
-![Register ബട്ടൺ ക്ലിക്കുചെയ്യുന്നതിന് ശേഷം ബ്രൗസറിന്റെ URL മാറ്റം സ്ക്രീൻഷോട്ട്](../../../../translated_images/ml/click-register.e89a30bf0d4bc9ca.png)
+![Register ബട്ടൺ ക്ലിക്കുചെയ്യുന്നതിന് ശേഷം ബ്രൗസറിന്റെ URL മാറ്റം സ്ക്രീൻഷോട്ട്](../../../../translated_images/ml/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP മെഥഡുകൾ താരതമ്യം
 
@@ -347,7 +347,7 @@ graph TD
 2. "Create Account" ബട്ടൺ അമർത്തുക
 3. നിങ്ങളുടെ ബ്രൗസറിൽ സർവർ പ്രതികരണം ശ്രദ്ധിക്കുക
 
-![localhost:5000/api/accounts ലൊക്കേഷൻ വഴി ബ്രൗസർ വിൻഡോ, ഉപയോക്തൃ ഡാറ്റയോടെ JSON സ്റ്റ്രിംഗ് കാണിക്കുന്നു](../../../../translated_images/ml/form-post.61de4ca1b964d91a.png)
+![localhost:5000/api/accounts ലൊക്കേഷൻ വഴി ബ്രൗസർ വിൻഡോ, ഉപയോക്തൃ ഡാറ്റയോടെ JSON സ്റ്റ്രിംഗ് കാണിക്കുന്നു](../../../../translated_images/ml/form-post.61de4ca1b964d91a.webp)
 
 **നിങ്ങൾ കാണേണ്ടത്:**
 - **ബ്ലൗസർ API എൻഡ്‌പോയിന്റിലേക്ക് റീഡയറക്ട് ചെയ്യുന്നു**
@@ -610,7 +610,7 @@ async function register() {
 3. **"Create Account" ക്ലിക്ക് ചെയ്യുക**
 4. **കോൺസോൾ സന്ദേശങ്ങളും ഉപയോക്തൃ പ്രതികരണങ്ങളും കണ്ട് ആസ്വദിക്കുക**
 
-![Browser console-ൽ ലോഗ് സന്ദേശം കാണിക്കുന്ന സ്‌ക്രീൻഷോട്ട്](../../../../translated_images/ml/browser-console.efaf0b51aaaf6778.png)
+![Browser console-ൽ ലോഗ് സന്ദേശം കാണിക്കുന്ന സ്‌ക്രീൻഷോട്ട്](../../../../translated_images/ml/browser-console.efaf0b51aaaf6778.webp)
 
 **നിങ്ങൾ കാണേണ്ടത്:**
 - **സബ്‌മിറ്റ് ബട്ടണിൽ ലോഡിംഗ് സ്വീകരണം**
@@ -784,7 +784,7 @@ input:focus:invalid {
 3. **യൂസർനെയിം ഫീൽഡിൽ പ്രത്യേക ചിഹ്നങ്ങൾ ഉപയോഗിക്കാൻ ശ്രമിക്കുക**
 4. **നെഗറ്റീവ് ബാലൻസ് നൽകുക**
 
-![ഫോർം സബ്‌മിറ്റ് ചെയ്യാൻ ശ്രമിക്കുമ്പോൾ നടന്ന സാധുത പിശക് സ്‌ക്രീൻഷോട്ട്](../../../../translated_images/ml/validation-error.8bd23e98d416c22f.png)
+![ഫോർം സബ്‌മിറ്റ് ചെയ്യാൻ ശ്രമിക്കുമ്പോൾ നടന്ന സാധുത പിശക് സ്‌ക്രീൻഷോട്ട്](../../../../translated_images/ml/validation-error.8bd23e98d416c22f.webp)
 
 **നിങ്ങൾ കാണുന്നതെന്താണെന്ന്:**
 - **ബ്രൗസർ സ്വതന്ത്ര സാധുത സന്ദേശങ്ങൾ പ്രദർശിപ്പിക്കുന്നു**
@@ -944,7 +944,7 @@ timeline
 
 ചെറിയൊരു സ്റ്റൈലിങ്ങ് ചെയ്ത് അവസാന ലോഗിൻ പേജ് നോക്കിനോക്കൂ:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/ml/result.96ef01f607bf856a.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/ml/result.96ef01f607bf856a.webp)
 
 ## പോസ്റ്റ് ലക്ചർ ക്വിസ്
 

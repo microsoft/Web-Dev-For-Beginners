@@ -295,7 +295,7 @@ Primeiro, vamos observar o que acontece com o envio básico de formulários:
 2. Observe as mudanças na barra de endereço do navegador
 3. Note como a página recarrega e os dados aparecem na URL
 
-![Captura de tela da mudança de URL do navegador após clicar no botão Registrar](../../../../translated_images/br/click-register.e89a30bf0d4bc9ca.png)
+![Captura de tela da mudança de URL do navegador após clicar no botão Registrar](../../../../translated_images/br/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Comparação de Métodos HTTP
 
@@ -350,7 +350,7 @@ Vamos configurar seu formulário de registro para se comunicar corretamente com 
 2. **Clique** no botão "Criar Conta"
 3. **Observe** a resposta do servidor no seu navegador
 
-![Uma janela do navegador no endereço localhost:5000/api/accounts, mostrando uma string JSON com dados do usuário](../../../../translated_images/br/form-post.61de4ca1b964d91a.png)
+![Uma janela do navegador no endereço localhost:5000/api/accounts, mostrando uma string JSON com dados do usuário](../../../../translated_images/br/form-post.61de4ca1b964d91a.webp)
 
 **O que você deve ver:**
 - **Redirecionamento do navegador** para a URL do endpoint da API
@@ -615,7 +615,7 @@ async function register() {
 3. **Clique** em "Criar Conta"
 4. **Observe** as mensagens do console e o feedback ao usuário
 
-![Captura de tela mostrando mensagem de log no console do navegador](../../../../translated_images/br/browser-console.efaf0b51aaaf6778.png)
+![Captura de tela mostrando mensagem de log no console do navegador](../../../../translated_images/br/browser-console.efaf0b51aaaf6778.webp)
 
 **O que você deve ver:**
 - **Estado de carregamento** aparece no botão de envio
@@ -790,7 +790,7 @@ Vamos aprimorar seu formulário de registro com validação robusta que oferece 
 3. **Tente** caracteres especiais no campo de nome de usuário
 4. **Insira** um valor de saldo negativo
 
-![Captura de tela mostrando o erro de validação ao tentar enviar o formulário](../../../../translated_images/br/validation-error.8bd23e98d416c22f.png)
+![Captura de tela mostrando o erro de validação ao tentar enviar o formulário](../../../../translated_images/br/validation-error.8bd23e98d416c22f.webp)
 
 **O que você observará:**
 - **O navegador exibe** mensagens de validação nativas
@@ -952,7 +952,7 @@ Mostre uma mensagem de erro no HTML se o usuário já existir.
 
 Aqui está um exemplo de como a página de login final pode ficar após um pouco de estilização:
 
-![Captura de tela da página de login após adicionar estilos CSS](../../../../translated_images/br/result.96ef01f607bf856a.png)
+![Captura de tela da página de login após adicionar estilos CSS](../../../../translated_images/br/result.96ef01f607bf856a.webp)
 
 ## Quiz Pós-Aula
 

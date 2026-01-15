@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ebben a projektben megtanulhatod, hogyan építs fel egy képzeletbeli bankot. Ezek a leckék útmutatást adnak egy webalkalmazás elrendezéséhez és útvonalainak kialakításához, űrlapok létrehozásához, állapot kezeléséhez, valamint adatok lekéréséhez egy API-ból, amelyből elérheted a bank adatait.
 
-| ![Screen1](../../../translated_images/hu/screen1.baccbba0f1f93364.png) | ![Screen2](../../../translated_images/hu/screen2.123c82a831a1d14a.png) |
+| ![Screen1](../../../translated_images/hu/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/hu/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Leckék

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # सुलभ वेबपेज बनाना
 
-![सभी के लिए सुलभता](../../../../translated_images/hi/webdev101-a11y.8ef3025c858d897a.png)
+![सभी के लिए सुलभता](../../../../translated_images/hi/webdev101-a11y.8ef3025c858d897a.webp)
 > स्केचनोट: [टोमोमी इमुरा](https://twitter.com/girlie_mac)
 
 ```mermaid

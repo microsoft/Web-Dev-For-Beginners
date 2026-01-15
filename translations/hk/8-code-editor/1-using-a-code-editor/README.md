@@ -182,7 +182,7 @@ VSCode.dev 將這些功能帶入瀏覽器：
 
 一切載入後，你將看到一個簡潔美觀的工作區，設計來幫助你專注於重要的事——你的程式碼！
 
-![Default VSCode.dev interface](../../../../translated_images/hk/default-vscode-dev.5d06881d65c1b323.png)
+![Default VSCode.dev interface](../../../../translated_images/hk/default-vscode-dev.5d06881d65c1b323.webp)
 
 **這是你的區域導覽：**
 - **活動欄**（左側條）：主導航含資源管理器 📁、搜尋 🔍、原始碼控制 🌿、擴充功能 🧩、設定 ⚙️
@@ -229,7 +229,7 @@ flowchart TB
 1. 如果還沒在，先前往 [vscode.dev](https://vscode.dev)
 2. 在歡迎頁尋找「Open Remote Repository」按鈕並點擊
 
-   ![Open remote repository](../../../../translated_images/hk/open-remote-repository.bd9c2598b8949e7f.png)
+   ![Open remote repository](../../../../translated_images/hk/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. 貼上任何 GitHub 倉庫網址（試試這個：`https://github.com/microsoft/Web-Dev-For-Beginners`）
 4. 按 Enter，見證魔法發生！
@@ -238,7 +238,7 @@ flowchart TB
 
 想感受成為編碼魔法師的感覺？試試這個鍵盤快捷鍵：Ctrl+Shift+P（Mac 上為 Cmd+Shift+P），開啟指令面板：
 
-![Command Palette](../../../../translated_images/hk/palette-menu.4946174e07f42622.png)
+![Command Palette](../../../../translated_images/hk/palette-menu.4946174e07f42622.webp)
 
 **指令面板就像你所有操作的搜尋引擎：**
 - 輸入「open remote」立刻找到開啟遠端倉庫功能
@@ -300,7 +300,7 @@ flowchart TB
 3. 輸入包含正確副檔名的檔名（如 `style.css`、`script.js`、`index.html`）
 4. 按 Enter 建立檔案
 
-![Creating a new file](../../../../translated_images/hk/create-new-file.2814e609c2af9aeb.png)
+![Creating a new file](../../../../translated_images/hk/create-new-file.2814e609c2af9aeb.webp)
 
 **命名規範：**
 - 使用描述性名稱以表明檔案用途
@@ -318,7 +318,7 @@ flowchart TB
 2. 開始輸入，觀看 VSCode.dev 為你提供顏色標示、建議及錯誤提示
 3. 用 Ctrl+S（Windows/Linux）或 Cmd+S（Mac）保存工作——但它也會自動保存！
 
-![Editing files in VSCode.dev](../../../../translated_images/hk/edit-a-file.52c0ee665ef19f08.png)
+![Editing files in VSCode.dev](../../../../translated_images/hk/edit-a-file.52c0ee665ef19f08.webp)
 
 **編碼時有趣的事情：**
 - 程式碼會被漂亮地著色，閱讀方便
@@ -339,7 +339,7 @@ flowchart TB
 2. 已修改檔案會出現在「Changes」區域
 3. 顏色標示變更類型：綠色代表新增，紅色代表刪除
 
-![Viewing changes in Source Control](../../../../translated_images/hk/working-tree.c58eec08e6335c79.png)
+![Viewing changes in Source Control](../../../../translated_images/hk/working-tree.c58eec08e6335c79.webp)
 
 **保存工作（提交工作流程）：**
 
@@ -431,7 +431,7 @@ mindmap
 2. 瀏覽或搜尋特定項目
 3. 點擊任何看起來有趣的項目以了解更多
 
-![Extension marketplace interface](../../../../translated_images/hk/extensions.eca0e0c7f59a10b5.png)
+![Extension marketplace interface](../../../../translated_images/hk/extensions.eca0e0c7f59a10b5.webp)
 
 **你會看到的內容：**
 
@@ -484,7 +484,7 @@ mindmap
 3. 從下拉選單中選「擴充功能設定」
 4. 依照工作流程調整到自己喜歡的狀態
 
-![Customizing extension settings](../../../../translated_images/hk/extension-settings.21c752ae4f4cdb78.png)
+![Customizing extension settings](../../../../translated_images/hk/extension-settings.21c752ae4f4cdb78.webp)
 
 **常見調整項目：**
 - 程式碼格式設定（tab 或空白鍵、最大行長等）

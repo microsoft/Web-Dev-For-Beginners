@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ще изминаем това пътешествие заедно, стъпка по стъпка. Без бързане, без натиск – само ти, аз и някои много яки инструменти, които ще станат твоите най-добри приятели!
 
-![Intro to GitHub](../../../../translated_images/bg/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/bg/webdev101-github.8846d7971abef6f9.webp)
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ flowchart TD
 
 ✅ Един добър начин да намерите 'начинаещи-приятелски' репота е да [търсите по етикет 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Копиране на репо локално](../../../../translated_images/bg/clone_repo.5085c48d666ead57.png)
+![Копиране на репо локално](../../../../translated_images/bg/clone_repo.5085c48d666ead57.webp)
 
 Има няколко начина да копирате кода. Един от тях е да "клонирате" съдържанието на репозитория, използвайки HTTPS, SSH или с помощта на GitHub CLI (Интерфейс на командния ред).
 

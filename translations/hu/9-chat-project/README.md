@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Így fog kinézni a kész projekted:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/hu/screenshot.0a1ee0d123df681b.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/hu/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Tanulási utad az MI alkalmazásfejlesztésben
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Alapelv**: Az MI alkalmazásfejlesztés a hagyományos webfejlesztési készségeket ötvözi MI szolgáltatás integrációval, így olyan intelligens alkalmazásokat hoz létre, amelyek természetesnek és reagálónak érződnek a felhasználók számára.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/hu/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/hu/playground.d2b927122224ff8f.webp)
 
 **Ez teszi a playgroundot olyan hasznossá:**
 - **Próbálj ki** különböző MI modelleket, mint a GPT-4o-mini, Claude és mások (mind ingyen!)
@@ -199,7 +199,7 @@ mindmap
 
 Miután játszottál egy kicsit, csak kattints a "Code" fülre, és válaszd ki a programozási nyelved, hogy megkapd a szükséges implementációs kódot.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/hu/playground-choice.1d23ba7d407f4758.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/hu/playground-choice.1d23ba7d407f4758.webp)
 
 ## Python backend integráció beállítása
 
@@ -2352,14 +2352,14 @@ Szeretnéd kipróbálni ezt a projektet egy felhő alapú fejlesztői környezet
 - **Navigálj** a [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners) oldalra
 - **Kattints** a jobb felső sarokban a "Use this template" gombra (győződj meg róla, hogy be vagy jelentkezve GitHub-ra)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/hu/template.67ad477109d29a2b.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/hu/template.67ad477109d29a2b.webp)
 
 **2. lépés: Codespaces indítása**
 - **Nyisd meg** az újonnan létrehozott repository-t
 - **Kattints** a zöld "Code" gombra, és válaszd a "Codespaces" lehetőséget
 - **Válaszd** a "Create codespace on main" opciót a fejlesztői környezet indításához
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/hu/codespace.bcecbdf5d2747d3d.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/hu/codespace.bcecbdf5d2747d3d.webp)
 
 **3. lépés: Környezet beállítása**
 Amint betölt a Codespace, hozzáférést kapsz:

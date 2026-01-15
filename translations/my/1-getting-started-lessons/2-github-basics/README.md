@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ဒီခရီးကို အတူတူ လျှောက်ကြမယ်၊ တစ်ဆင့်ချင်းစီနဲ့။ အလျင်မပြေးပါနဲ့၊ ဖိအားမပေးပါနဲ့ – သင်၊ ငါနဲ့ သင့်ရဲ့ အကောင်းဆုံးသူငယ်ချင်းအသစ်ဖြစ်လာမယ့် အလွန်အမင်းအေးချမ်းတဲ့ tools တွေပါ!
 
-![GitHub အကြောင်းမိတ်ဆက်](../../../../translated_images/my/webdev101-github.8846d7971abef6f9.png)
+![GitHub အကြောင်းမိတ်ဆက်](../../../../translated_images/my/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -441,7 +441,7 @@ flowchart TD
 
 ✅ 'beginner-friendly' repo တွေကို [good-first-issue tag ကို search လုပ်ပြီး](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/) ရှာဖွေပါ။
 
-![Repo ကို ဒေသခံမှာ copy လုပ်ပါ](../../../../translated_images/my/clone_repo.5085c48d666ead57.png)
+![Repo ကို ဒေသခံမှာ copy လုပ်ပါ](../../../../translated_images/my/clone_repo.5085c48d666ead57.webp)
 
 Code ကို copy လုပ်ဖို့ နည်းလမ်းအများကြီးရှိပါတယ်။ Repository ရဲ့ content ကို HTTPS, SSH, GitHub CLI (Command Line Interface) ကို အသုံးပြုပြီး "clone" လုပ်နိုင်ပါတယ်။
 

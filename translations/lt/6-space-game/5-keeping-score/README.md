@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Taškų sistema**: Kiekvienas sunaikintas priešo laivas suteikia 100 taškų (apvalūs skaičiai žaidėjams lengvesni protui). Rezultatas rodomas apatiniame kairiajame kampe.
-- **Gyvybių skaitiklis**: Jūsų herojus pradeda turėdamas tris gyvybes – standartą, nustatytą ankstyvuose arkadiniuose žaidimuose, siekiant suderinti iššūkį su žaidžiamumu. Kiekvienas susidūrimas su priešu kainuoja vieną gyvybę. Likusios gyvybės rodomos apatiniame dešiniajame kampe, naudojant laivo ikonas ![life image](../../../../translated_images/lt/life.6fb9f50d53ee0413.png).
+- **Gyvybių skaitiklis**: Jūsų herojus pradeda turėdamas tris gyvybes – standartą, nustatytą ankstyvuose arkadiniuose žaidimuose, siekiant suderinti iššūkį su žaidžiamumu. Kiekvienas susidūrimas su priešu kainuoja vieną gyvybę. Likusios gyvybės rodomos apatiniame dešiniajame kampe, naudojant laivo ikonas ![life image](../../../../translated_images/lt/life.6fb9f50d53ee0413.webp).
 
 ## Pradėkime kurti!
 

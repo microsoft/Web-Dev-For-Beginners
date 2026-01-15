@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # জাভাস্ক্রিপ্টের মৌলিক বিষয়: সিদ্ধান্ত গ্রহণ
 
-![জাভাস্ক্রিপ্টের মৌলিক বিষয় - সিদ্ধান্ত গ্রহণ](../../../../translated_images/bn/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![জাভাস্ক্রিপ্টের মৌলিক বিষয় - সিদ্ধান্ত গ্রহণ](../../../../translated_images/bn/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 

@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Sinu lõpetatud projekt näeb välja selline:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/et/screenshot.0a1ee0d123df681b.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/et/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Sinu õpiteek läbi AI-rakenduste arenduse
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Põhialus**: AI rakenduste arendus ühendab traditsioonilised veebiarenduse oskused AI teenuste integratsiooniga, luues nutikaid rakendusi, mis mõistavad loomulikult kasutajate vajadusi.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/et/playground.d2b927122224ff8f.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/et/playground.d2b927122224ff8f.webp)
 
 **Mida teeb mänguväljaku nii kasulikuks:**
 - **Proovi** erinevaid AI mudeleid nagu GPT-4o-mini, Claude jpt (kõik tasuta!)
@@ -199,7 +199,7 @@ mindmap
 
 Kui oled natuke mänginud, klõpsa "Code" vahekaardile ja vali programmeerimiskeel, et saada vajaminev kood.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/et/playground-choice.1d23ba7d407f4758.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/et/playground-choice.1d23ba7d407f4758.webp)
 
 ## Python tagapõhja integratsiooni seadistamine
 
@@ -2351,14 +2351,14 @@ Tahad proovida seda projekti pilvearenduskeskkonnas? GitHub Codespaces pakub tä
 - **Mine** aadressile [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Vajuta** paremas ülanurgas nuppu "Use this template" (vesi, et oled GitHubi sisse logitud)  
 
-![Loo mallist liides, kus roheline "Use this template" nupp on nähtav](../../../translated_images/et/template.67ad477109d29a2b.png)  
+![Loo mallist liides, kus roheline "Use this template" nupp on nähtav](../../../translated_images/et/template.67ad477109d29a2b.webp)  
 
 **2. samm: Käivita Codespaces**  
 - **Ava** äsja loodud repositoorium  
 - **Vajuta** rohelist "Code" nuppu ja vali "Codespaces"  
 - **Vali** "Create codespace on main", et alustada oma arenduskeskkonda  
 
-![Codespace loomise liides valikutega pilvearenduse keskkonna käivitamiseks](../../../translated_images/et/codespace.bcecbdf5d2747d3d.png)  
+![Codespace loomise liides valikutega pilvearenduse keskkonna käivitamiseks](../../../translated_images/et/codespace.bcecbdf5d2747d3d.webp)  
 
 **3. samm: Keskkonna seadistamine**  
 Kui su Codespace käivitub, on sulle kättesaadav:  

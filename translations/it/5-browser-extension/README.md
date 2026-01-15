@@ -23,7 +23,7 @@ Questa estensione può essere utilizzata ad hoc da un utente una volta che una c
 
 ### Crediti
 
-![un'estensione per browser verde](../../../translated_images/it/extension-screenshot.0e7f5bfa110e92e3.png)
+![un'estensione per browser verde](../../../translated_images/it/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Crediti
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Membuat Halaman Web yang Dapat Diakses
 
-![Semua Tentang Aksesibilitas](../../../../translated_images/id/webdev101-a11y.8ef3025c858d897a.png)
+![Semua Tentang Aksesibilitas](../../../../translated_images/id/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಮೂಲಭूतಗಳು: ನಿರ್ಧಾರಗಳನ್ನು ಕೈಗೊಳ್ಳುವುದು
 
-![JavaScript Basics - Making decisions](../../../../translated_images/kn/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/kn/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > ಸ್ಕೆಚ್‌ನೋಟ್ [Tomomi Imura](https://twitter.com/girlie_mac) ಅವರಿಂದ
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Byg en browser-udvidelse, der fungerer som en påmindelse om, hvor meget energi der bruges i dit område, ved at spore strømforbruget med tmrow's CO2 Signal API. Ved at bruge denne udvidelse ad hoc kan du træffe beslutninger om dine aktiviteter baseret på denne information.
 
-![extension screenshot](../../../../../translated_images/da/extension-screenshot.0e7f5bfa110e92e3.png)
+![extension screenshot](../../../../../translated_images/da/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kom godt i gang
 
@@ -31,7 +31,7 @@ npm run build
 
 For at installere på Edge skal du finde "Udvidelser"-panelet via "tre prikker"-menuen øverst til højre i browseren. Derfra vælger du "Load Unpacked" og indlæser den nye udvidelse. Når du bliver bedt om det, skal du åbne "dist"-mappen, og udvidelsen vil blive indlæst. For at bruge den skal du have en API-nøgle til CO2 Signal API ([få en her via e-mail](https://www.co2signal.com/) - indtast din e-mail i boksen på siden) og en [kode for din region](http://api.electricitymap.org/v3/zones), som er kompatibel med [Electricity Map](https://www.electricitymap.org/map) (for eksempel bruges 'US-NEISO' i Boston).
 
-![installing](../../../../../translated_images/da/install-on-edge.78634f02842c4828.png)
+![installing](../../../../../translated_images/da/install-on-edge.78634f02842c4828.webp)
 
 Når du har indtastet API-nøglen og din region i udvidelsens interface, vil en farvet prik vises i browserens udvidelsesbjælke. Denne prik ændrer farve for at afspejle energiforbruget i dit område og hjælper dig med at vurdere, hvilke aktiviteter der kræver energi, der er passende at udføre. Konceptet med dette "prik"-system blev inspireret af [Energy Lollipop extension](https://energylollipop.com/) for emissioner i Californien.
 

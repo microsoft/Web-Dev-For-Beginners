@@ -72,13 +72,13 @@ Azure AI Foundry Discord Community യിൽ ചേരൂ
 
 ആരംഭിക്കാൻ സന്ദർശിക്കുക [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/ml/background.148a8d43afde5730.png)
+![Background](../../translated_images/ml/background.148a8d43afde5730.webp)
 
 - അടിസ്ഥാന കാര്യങ്ങളിൽ നിന്നാരംഭിച്ച് RAG വരെ ഉൾക്കൊള്ളുന്ന പാഠങ്ങൾ.
 - GenAIയും നമ്മുടെ സഹപാഠിയുള്ള ആപ്പും ഉപയോഗിച്ച് ചരിത്രപ്രസിദ്ധ വ്യക്തികളുമായി തൽസമയ സംവാദം.
 - രസകരമായ കഥാരൂപകഥ, നിങ്ങൾകാലയാത്ര ചെയ്യുന്നു!
 
-![character](../../translated_images/ml/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/ml/character.5c0dd8e067ffd693.webp)
 
 
 ഓരോ പാഠത്തിലും പൂർത്തിയാക്കാനുള്ള അസൈൻമെന്റ്, അറിവ് പരിശോധന, വെല്ലുവിളി എന്നിവയുണ്ട്, പഠിക്കാനുള്ള വിഷയങ്ങൾ ഉൾക്കൊള്ളുന്നു:
@@ -115,7 +115,7 @@ Azure AI Foundry Discord Community യിൽ ചേരൂ
 
 നിങ്ങൾ സൃഷ്ടിച്ച റിപോസിറ്ററിയിൽ, **Code** ബട്ടൺ ക്ലിക്ക് ചെയ്ത് **Open with Codespaces** തിരഞ്ഞെടുക്കുക. പുതിയ ഒരു Codespace നിങ്ങൾക്കായി സൃഷ്ടിക്കും.
 
-![Codespace](../../translated_images/ml/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/ml/createcodespace.0238bbf4d7a8d955.webp)
 
 #### നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ കോറിക്കുലം ലോക്കലായി ഓടിക്കുക
 

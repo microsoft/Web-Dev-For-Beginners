@@ -190,7 +190,7 @@ La [gestione dello stato](https://en.wikipedia.org/wiki/State_management) riguar
 
 Invece di inseguire i nostri errori, creeremo un sistema di **gestione dello stato centralizzato**. Pensalo come avere una persona davvero organizzata incaricata di tutte le cose importanti:
 
-![Schema che mostra i flussi di dati tra HTML, azioni dell'utente e stato](../../../../translated_images/it/data-flow.fa2354e0908fecc8.png)
+![Schema che mostra i flussi di dati tra HTML, azioni dell'utente e stato](../../../../translated_images/it/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -804,7 +804,7 @@ Questa sfida ti aiuterà a pensare come uno sviluppatore professionista che cons
 
 Ecco un esempio di risultato dopo aver completato il compito:
 
-![Screenshot che mostra un esempio di finestra di dialogo "Aggiungi transazione"](../../../../translated_images/it/dialog.93bba104afeb79f1.png)
+![Screenshot che mostra un esempio di finestra di dialogo "Aggiungi transazione"](../../../../translated_images/it/dialog.93bba104afeb79f1.webp)
 
 ---
 

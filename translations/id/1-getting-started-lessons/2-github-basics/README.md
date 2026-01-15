@@ -17,7 +17,7 @@ Saya tahu ini mungkin terasa banyak pada awalnya – saya ingat saat pertama kal
 
 Kita akan menjalani perjalanan ini bersama, langkah demi langkah. Tidak perlu terburu-buru, tidak ada tekanan – hanya Anda, saya, dan beberapa alat keren yang akan menjadi sahabat baru Anda!
 
-![Intro to GitHub](../../../../translated_images/id/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/id/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -610,7 +610,7 @@ Pertama, mari kita temukan repositori (atau **repo**) di GitHub yang menarik bag
 
 ✅ Cara yang baik untuk menemukan repo 'ramah pemula' adalah dengan [mencari berdasarkan tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Salin repo secara lokal](../../../../translated_images/id/clone_repo.5085c48d666ead57.png)
+![Salin repo secara lokal](../../../../translated_images/id/clone_repo.5085c48d666ead57.webp)
 
 Ada beberapa cara untuk menyalin kode. Salah satunya adalah dengan "mengkloning" isi repositori, menggunakan HTTPS, SSH, atau menggunakan GitHub CLI (Command Line Interface).
 

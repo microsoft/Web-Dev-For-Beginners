@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Sebuah meditasi kode kecil dengan fitur seret dan lepas. Dengan sedikit HTML, JS, dan CSS, Anda dapat membangun antarmuka web, menatanya, dan menambahkan interaksi.
 
-![terrarium saya](../../../../translated_images/id/screenshot_gray.0c796099a1f9f25e.png)
+![terrarium saya](../../../../translated_images/id/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Kredit
 

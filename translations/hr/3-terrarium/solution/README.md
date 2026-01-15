@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Mala vježba povuci i ispusti. Uz malo HTML-a, JS-a i CSS-a, možete izgraditi web sučelje, stilizirati ga i dodati interakciju.
 
-![moj terarij](../../../../translated_images/hr/screenshot_gray.0c796099a1f9f25e.png)
+![moj terarij](../../../../translated_images/hr/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Zasluge
 

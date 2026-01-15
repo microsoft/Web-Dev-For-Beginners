@@ -25,7 +25,7 @@ journey
       Parandage ligipääsetavust: 5: Student
       Ehitage terrarium: 5: Student
 ```
-![Sissejuhatus HTML-i](../../../../translated_images/et/webdev101-html.4389c2067af68e98.png)
+![Sissejuhatus HTML-i](../../../../translated_images/et/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote autorilt [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML ehk hüperteksti märgistuskeel on iga veebilehe aluseks, mida sa kunagi külastanud oled. Mõtle HTML-ile kui skeletile, mis annab veebilehtedele struktuuri – see määrab, kuhu sisu läheb, kuidas see on organiseeritud ja mida iga osa esindab. Kuigi CSS "riietab" su HTML-i hiljem värvide ja paigutustega ning JavaScript toob selle ellu interaktiivsusega, annab HTML vajaliku põhistruktuuri, mis muudab muu võimalikuks.
@@ -86,7 +86,7 @@ Sa lood spetsiaalse kausta terrariumiprojekti jaoks ja lisad esimese HTML-faili.
 4. Avastusaknas klõpsa "Uus fail" ikoonile
 5. Nyimesta oma fail nimega `index.html`
 
-![VS Code Exploreri ekraanipilt, kus luuakse uus fail](../../../../translated_images/et/vs-code-index.e2986cf919471eb9.png)
+![VS Code Exploreri ekraanipilt, kus luuakse uus fail](../../../../translated_images/et/vs-code-index.e2986cf919471eb9.webp)
 
 **Võimalus 2: Terminalikäskluste kasutamine**
 ```bash

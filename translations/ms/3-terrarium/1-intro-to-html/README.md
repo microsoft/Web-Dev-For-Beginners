@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![Pengenalan kepada HTML](../../../../translated_images/ms/webdev101-html.4389c2067af68e98.png)
+![Pengenalan kepada HTML](../../../../translated_images/ms/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, atau HyperText Markup Language, adalah asas kepada setiap laman web yang pernah anda lawati. Fikirkan HTML sebagai rangka yang memberikan struktur kepada halaman web – ia menentukan di mana kandungan diletakkan, bagaimana ia diatur, dan apa yang setiap bahagian wakili. Walaupun CSS nanti akan "menghias" HTML anda dengan warna dan susunan, dan JavaScript akan menghidupkannya dengan interaktiviti, HTML menyediakan struktur penting yang menjadikan segalanya mungkin.
@@ -88,7 +88,7 @@ Anda akan mencipta folder khusus untuk projek terrarium anda dan menambah fail H
 4. Dalam panel Explorer, klik ikon "New File"
 5. Namakan fail anda `index.html`
 
-![Explorer VS Code menunjukkan penciptaan fail baru](../../../../translated_images/ms/vs-code-index.e2986cf919471eb9.png)
+![Explorer VS Code menunjukkan penciptaan fail baru](../../../../translated_images/ms/vs-code-index.e2986cf919471eb9.webp)
 
 **Pilihan 2: Menggunakan Perintah Terminal**
 ```bash

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove JavaScripta: Tipovi podataka
 
-![JavaScript Basics - Data types](../../../../translated_images/hr/webdev101-js-datatypes.4cc470179730702c.png)
+![JavaScript Basics - Data types](../../../../translated_images/hr/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

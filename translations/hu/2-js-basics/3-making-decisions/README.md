@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Alapok: Döntéshozás
 
-![JavaScript Alapok - Döntéshozás](../../../../translated_images/hu/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScript Alapok - Döntéshozás](../../../../translated_images/hu/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote készítője: [Tomomi Imura](https://twitter.com/girlie_mac)
 

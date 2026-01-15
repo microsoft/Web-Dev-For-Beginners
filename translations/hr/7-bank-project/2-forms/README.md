@@ -292,7 +292,7 @@ Prvo, promatrat ćemo što se događa s osnovnim slanjem obrasca:
 2. Promatrajte promjene u adresnoj traci vašeg preglednika
 3. Primijetite kako se stranica osvježava i podaci pojavljuju u URL-u
 
-![Snimka zaslona promjene URL-a preglednika nakon klika na gumb Registriraj](../../../../translated_images/hr/click-register.e89a30bf0d4bc9ca.png)
+![Snimka zaslona promjene URL-a preglednika nakon klika na gumb Registriraj](../../../../translated_images/hr/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Usporedba HTTP metoda
 
@@ -346,7 +346,7 @@ Konfigurirajmo obrazac za registraciju da pravilno komunicira s backend API-jem 
 2. **Kliknite** gumb "Kreiraj račun"
 3. **Promatrajte** odgovor servera u pregledniku
 
-![Prozor preglednika na adresi localhost:5000/api/accounts, prikazujući JSON niz s podacima korisnika](../../../../translated_images/hr/form-post.61de4ca1b964d91a.png)
+![Prozor preglednika na adresi localhost:5000/api/accounts, prikazujući JSON niz s podacima korisnika](../../../../translated_images/hr/form-post.61de4ca1b964d91a.webp)
 
 **Što biste trebali vidjeti:**
 - **Preglednik preusmjerava** na URL API endpointa
@@ -609,7 +609,7 @@ async function register() {
 3. **Kliknite** "Create Account"
 4. **Promatrajte** poruke u konzoli i povratne informacije korisniku
 
-![Snimka zaslona koja prikazuje poruku u konzoli preglednika](../../../../translated_images/hr/browser-console.efaf0b51aaaf6778.png)
+![Snimka zaslona koja prikazuje poruku u konzoli preglednika](../../../../translated_images/hr/browser-console.efaf0b51aaaf6778.webp)
 
 **Što biste trebali vidjeti:**
 - **Stanje učitavanja** pojavljuje se na gumbu za slanje
@@ -783,7 +783,7 @@ Unaprijedimo vaš obrazac za registraciju robustnom validacijom koja pruža izvr
 3. **Pokušajte** s posebnim znakovima u polju korisničkog imena
 4. **Unesite** negativan iznos stanja
 
-![Snimka zaslona koja prikazuje grešku validacije prilikom pokušaja slanja obrasca](../../../../translated_images/hr/validation-error.8bd23e98d416c22f.png)
+![Snimka zaslona koja prikazuje grešku validacije prilikom pokušaja slanja obrasca](../../../../translated_images/hr/validation-error.8bd23e98d416c22f.webp)
 
 **Što ćete primijetiti:**
 - **Preglednik prikazuje** nativne poruke o grešci validacije
@@ -943,7 +943,7 @@ Prikažite poruku o pogrešci u HTML-u ako korisnik već postoji.
 
 Evo primjera kako završna stranica za prijavu može izgledati nakon malo stiliziranja:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/hr/result.96ef01f607bf856a.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/hr/result.96ef01f607bf856a.webp)
 
 ## Kviz nakon predavanja
 

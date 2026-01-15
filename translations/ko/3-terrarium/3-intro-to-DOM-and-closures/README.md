@@ -25,7 +25,7 @@ journey
       Test functionality: 5: Student
       Complete terrarium: 5: Student
 ```
-![DOM과 클로저](../../../../translated_images/ko/webdev101-js.10280393044d7eaa.png)
+![DOM과 클로저](../../../../translated_images/ko/webdev101-js.10280393044d7eaa.webp)
 > 스케치노트 작성자 [Tomomi Imura](https://twitter.com/girlie_mac)
 
 웹 개발에서 가장 흥미로운 부분 중 하나에 오신 것을 환영합니다 - 바로 인터랙션 구현입니다! 문서 객체 모델(DOM)은 HTML과 JavaScript 사이의 다리와 같으며, 오늘은 이를 이용해 테라리움을 생동감 있게 만들어 보겠습니다. 팀 버너스리(Tim Berners-Lee)가 최초의 웹 브라우저를 만들었을 때, 문서가 동적이고 상호작용 가능할 수 있는 웹을 꿈꿨습니다 - DOM이 그 비전을 실현하게 합니다.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM 트리 표현](../../../../translated_images/ko/dom-tree.7daf0e763cbbba92.png)
+![DOM 트리 표현](../../../../translated_images/ko/dom-tree.7daf0e763cbbba92.webp)
 
 > DOM과 이를 참조하는 HTML 마크업의 표현. 출처: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **클로저 이해하기**: 클로저는 JavaScript에서 중요한 주제로, 많은 개발자들이 제대로 이해하기까지 오랜 시간이 걸립니다. 오늘은 실용적 적용에 집중할 것입니다 - 인터랙티브 기능을 구현하면서 클로저가 자연스럽게 등장하는 모습을 보게 될 것입니다. 문제를 해결하는 방식을 통해 이해가 깊어질 것입니다.
 
-![DOM 트리 표현](../../../../translated_images/ko/dom-tree.7daf0e763cbbba92.png)
+![DOM 트리 표현](../../../../translated_images/ko/dom-tree.7daf0e763cbbba92.webp)
 
 > DOM과 이를 참조하는 HTML 마크업의 표현. 출처: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ function stopElementDrag() {
 - **기기별 호환:** 데스크톱과 모바일 모두 지원
 - **성능 고려:** 메모리 누수 및 불필요한 계산 없음
 
-![finished terrarium](../../../../translated_images/ko/terrarium-final.0920f16e87c13a84.png)
+![finished terrarium](../../../../translated_images/ko/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

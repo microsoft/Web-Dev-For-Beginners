@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Maža vilkimo ir numetimo kodavimo meditacija. Naudodami šiek tiek HTML, JS ir CSS, galite sukurti internetinę sąsają, ją stilizuoti ir pridėti interaktyvumo.
 
-![mano terariumas](../../../../translated_images/lt/screenshot_gray.0c796099a1f9f25e.png)
+![mano terariumas](../../../../translated_images/lt/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Kreditas
 

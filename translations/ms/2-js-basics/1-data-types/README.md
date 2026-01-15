@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Asas JavaScript: Jenis Data
 
-![Asas JavaScript - Jenis Data](../../../../translated_images/ms/webdev101-js-datatypes.4cc470179730702c.png)
+![Asas JavaScript - Jenis Data](../../../../translated_images/ms/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

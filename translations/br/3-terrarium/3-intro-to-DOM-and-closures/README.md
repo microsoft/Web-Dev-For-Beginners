@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM e um closure](../../../../translated_images/br/webdev101-js.10280393044d7eaa.png)
+![DOM e um closure](../../../../translated_images/br/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Bem-vindo a um dos aspectos mais envolventes do desenvolvimento web - tornar as coisas interativas! O Modelo de Objeto de Documento (DOM) é como uma ponte entre seu HTML e JavaScript, e hoje vamos usá-lo para dar vida ao seu terrário. Quando Tim Berners-Lee criou o primeiro navegador web, ele imaginou uma web onde os documentos poderiam ser dinâmicos e interativos - o DOM torna essa visão possível.
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![Representação da árvore DOM](../../../../translated_images/br/dom-tree.7daf0e763cbbba92.png)
+![Representação da árvore DOM](../../../../translated_images/br/dom-tree.7daf0e763cbbba92.webp)
 
 > Uma representação do DOM e da marcação HTML que o referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **Entendendo Closures**: Closures são um tópico significativo em JavaScript, e muitos desenvolvedores os utilizam por anos antes de compreender totalmente todos os aspectos teóricos. Hoje, estamos focando na aplicação prática - você verá closures surgirem naturalmente enquanto construímos nossos recursos interativos. A compreensão se desenvolverá à medida que você perceber como eles resolvem problemas reais.
 
-![Representação da árvore DOM](../../../../translated_images/br/dom-tree.7daf0e763cbbba92.png)
+![Representação da árvore DOM](../../../../translated_images/br/dom-tree.7daf0e763cbbba92.webp)
 
 > Uma representação do DOM e da marcação HTML que o referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ Agora teste seu terrário interativo! Abra seu arquivo `index.html` em um navega
 - **Suporte entre dispositivos**: Funciona em desktop e dispositivos móveis
 - **Consciente do desempenho**: Sem vazamentos de memória ou cálculos redundantes
 
-![terrário finalizado](../../../../translated_images/br/terrarium-final.0920f16e87c13a84.png)
+![terrário finalizado](../../../../translated_images/br/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

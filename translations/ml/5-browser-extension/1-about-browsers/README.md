@@ -25,7 +25,7 @@ journey
       പ്രശ്നങ്ങൾ ഡീബഗ് ചെയ്യുക: 4: Student
       അനുഭവം മെച്ചപ്പെടുത്തുക: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/ml/browser.60317c9be8b7f84a.jpg)
+![Browser sketchnote](../../../../translated_images/ml/browser.60317c9be8b7f84a.webp)
 > സ്കെച്ച്നോട്ട് [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)ലെ
 
 ## പ്രീ-ലക്ചർ ക്വിസ്
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **ചെറിയ ചരിത്രം**: ആദ്യ ബ്രൗസർ 'WorldWideWeb' എന്നായിരുന്നു, 1990-ൽ സാർ ടിമോത്തി ബേർണേഴ്‌സ്-ലിയുടെ സൃഷ്ടി.
 
-![early browsers](../../../../translated_images/ml/earlybrowsers.d984b711cdf3a42d.jpg)
+![early browsers](../../../../translated_images/ml/earlybrowsers.d984b711cdf3a42d.webp)
 > ചില പ്രാരംഭ ബ്രൗസറുകൾ, [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) വഴി
 
 ### ബ്രൗസറുകൾ വെബ് ഉള്ളടക്കം എങ്ങനെ പ്രോസസ്സുചെയ്യുന്നു
@@ -194,7 +194,7 @@ quadrantChart
 
 എക്സ്റ്റെൻഷൻ ഇൻസ്റ്റാളേഷൻ പ്രക്രിയ മനസ്സിലാക്കുന്നത് ഉപയോക്തൃ അനുഭവം പ്രതീക്ഷിക്കാനും സഹായിക്കുന്നു. ഇന്നത്തെ ആധുനിക ബ്രൗസറുകളിൽ ഈ പ്രക്രിയ മാനദണ്ഡം പോലെ സാന്ദ്രമായി ഈന്റർഫെയ്‌സ് രൂപകല്‍പ്പനയിൽ ചെറിയ വ്യത്യാസങ്ങളോടെ ഉണ്ട്.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/ml/install-on-edge.d68781acaf0b3d3d.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/ml/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **പ്രധാനത്തിന്**: നിങ്ങളുടെ സ്വന്തം എക്സ്റ്റെൻഷനുകൾ പരീക്ഷിക്കുമ്പോൾ ഡെവലപ്പർ മോഡ് സ്വിച്ച് ഓണാക്കി മറ്റു സ്റ്റോറുകളിൽ നിന്ന് എക്സ്റ്റെൻഷനുകൾ അനുവദിക്കുക.
 
@@ -308,10 +308,10 @@ project-root/
 ### എക്സ്റ്റെൻഷൻ കാഴ്ചകൾ അവലോകനം
 
 **സെറ്റപ്പ് കാഴ്ച** - ആദ്യകാല ഉപയോക്തൃ ക്രമീകരണം:  
-![സെറ്റപ്പ് കാഴ്ച](../../../../translated_images/ml/1.b6da8c1394b07491.png)
+![സെറ്റപ്പ് കാഴ്ച](../../../../translated_images/ml/1.b6da8c1394b07491.webp)
 
 **ഫല കാഴ്ച** - കാർബൺ പാദച്ചിഹ്ന ഡാറ്റാ പ്രദർശനം:  
-![ഫല കാഴ്ച](../../../../translated_images/ml/2.1dae52ff08042246.png)
+![ഫല കാഴ്ച](../../../../translated_images/ml/2.1dae52ff08042246.webp)
 
 ### ക്രമീകരണ ഫോം നിർമ്മിക്കല്‍
 

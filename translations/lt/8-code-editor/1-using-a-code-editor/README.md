@@ -182,7 +182,7 @@ Kaip Aleksandras Grahamas Bellas telefono dėka jungė atstumais esančias vieta
 
 Kai viskas užsikraus, pamatysite švariai išdėstytą darbo vietą, kuri sukurta taip, kad būtumėte susikoncentravę į svarbiausia – kodą!
 
-![Numatytasis VSCode.dev sąsajos vaizdas](../../../../translated_images/lt/default-vscode-dev.5d06881d65c1b323.png)
+![Numatytasis VSCode.dev sąsajos vaizdas](../../../../translated_images/lt/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Apžvalga jūsų rajono:**
 - **Veiklos juosta** (kairėje esanti juosta): pagrindinė jūsų navigacija su Naršyklė 📁, Paieška 🔍, Versijų valdymas 🌿, Plėtiniai 🧩 ir Nustatymai ⚙️
@@ -229,7 +229,7 @@ Tai puikus būdas pradėti darbą VSCode.dev ir atidaryti konkretų saugyklą. P
 1. Eikite į [vscode.dev](https://vscode.dev), jei dar ten nesate
 2. Paspauskite mygtuką "Open Remote Repository" pasveikinimo ekrane
 
-   ![Atidaryti nuotolinę saugyklą](../../../../translated_images/lt/open-remote-repository.bd9c2598b8949e7f.png)
+   ![Atidaryti nuotolinę saugyklą](../../../../translated_images/lt/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Įklijuokite bet kokį GitHub saugyklos URL (išbandykite šį: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Paspauskite Enter ir stebėkite magiją!
@@ -238,7 +238,7 @@ Tai puikus būdas pradėti darbą VSCode.dev ir atidaryti konkretų saugyklą. P
 
 Norite jaustis tarsi programavimo žinovas? Išbandykite šį klaviatūros spartųjį klavišą: Ctrl+Shift+P (ar Cmd+Shift+P Mac) atidaryti Komandų paletę:
 
-![Komandų paletė](../../../../translated_images/lt/palette-menu.4946174e07f42622.png)
+![Komandų paletė](../../../../translated_images/lt/palette-menu.4946174e07f42622.webp)
 
 **Komandų paletė yra tarsi paieškos variklis viskam, ką galite daryti:**
 - Įveskite "open remote" ir ji suras, kaip atidaryti saugyklą
@@ -300,7 +300,7 @@ Kaip architekto biure tvarkomi brėžiniai, taip pat ir VSCode.dev failų kūrim
 3. Įrašykite failo pavadinimą su tinkamu plėtiniu (`style.css`, `script.js`, `index.html`)
 4. Paspauskite Enter, kad sukurtumėte failą
 
-![Naujo failo kūrimas](../../../../translated_images/lt/create-new-file.2814e609c2af9aeb.png)
+![Naujo failo kūrimas](../../../../translated_images/lt/create-new-file.2814e609c2af9aeb.webp)
 
 **Vardų taisyklės:**
 - Naudokite aprašomuosius pavadinimus, nurodančius failo paskirtį
@@ -318,7 +318,7 @@ Kaip architekto biure tvarkomi brėžiniai, taip pat ir VSCode.dev failų kūrim
 2. Pradėkite rašyti ir stebėkite, kaip VSCode.dev padeda spalvomis, pasiūlymais ir klaidų aptikimu
 3. Išsaugokite darbą su Ctrl+S (Windows/Linux) arba Cmd+S (Mac) – nors automatinis įrašymas yra taip pat!
 
-![Failų redagavimas VSCode.dev](../../../../translated_images/lt/edit-a-file.52c0ee665ef19f08.png)
+![Failų redagavimas VSCode.dev](../../../../translated_images/lt/edit-a-file.52c0ee665ef19f08.webp)
 
 **Įdomybės programuojant:**
 - Jūsų kodas gražiai spalvinamas, kad būtų lengviau skaityti
@@ -339,7 +339,7 @@ Kaip archeologai detaliai fiksuoja kasinėjimų sluoksnius, taip Git seka jūsų
 2. Modifikuoti failai rodomi „Changes“ skiltyje
 3. Spalvų žymėjimas nurodo pakeitimų tipus: žalia priedams, raudona ištrynimams
 
-![Pakeitimų peržiūra Versijų valdyme](../../../../translated_images/lt/working-tree.c58eec08e6335c79.png)
+![Pakeitimų peržiūra Versijų valdyme](../../../../translated_images/lt/working-tree.c58eec08e6335c79.webp)
 
 **Kaip įrašyti pakeitimus (įsipareigojimo eiga):**
 
@@ -431,7 +431,7 @@ Papildinių rinka yra labai gerai organizuota, tad nesuklysite ieškodami reikal
 2. Naršykite arba ieškokite konkretaus dalyko
 3. Spauskite ant įdomių elementų, kad sužinotumėte daugiau
 
-![Papildinių rinkos sąsaja](../../../../translated_images/lt/extensions.eca0e0c7f59a10b5.png)
+![Papildinių rinkos sąsaja](../../../../translated_images/lt/extensions.eca0e0c7f59a10b5.webp)
 
 **Ką ten rasite:**
 
@@ -484,7 +484,7 @@ Dauguma plėtinių turi nustatymus, kuriuos galite keisti, kad jie veiktų tiksl
 3. Pasirinkite „Extension Settings“ iš išskleidžiamojo meniu
 4. Koreguokite nustatymus tol, kol darbo eiga atitiks jūsų poreikius
 
-![Kuriant plėtinių nustatymus](../../../../translated_images/lt/extension-settings.21c752ae4f4cdb78.png)
+![Kuriant plėtinių nustatymus](../../../../translated_images/lt/extension-settings.21c752ae4f4cdb78.webp)
 
 **Dažniausiai norimos keisti dalykai:**
 - Kaip formatuojamas kodas (tarpai ar tabuliacijos, eilučių ilgis ir pan.)

@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![കാൻവാസിന്റെ ഗ്രിഡ്](../../../../translated_images/ml/canvas_grid.5f209da785ded492.png)
+![കാൻവാസിന്റെ ഗ്രിഡ്](../../../../translated_images/ml/canvas_grid.5f209da785ded492.webp)
 > ചിത്രം [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 കാൻവാസ് ഘടകത്തിൽ വരയ്ക്കാൻ, നിങ്ങൾ എല്ലാ കാൻവാസ് ഗ്രാഫിക്സിന്റെയും അടിസ്ഥാനമായ മൂന്ന് പടികളുടെ പ്രക്രിയ പിന്തുടരും. ഇത് കുറച്ച് പ്രാവശ്യം ചെയ്താൽ എളുപ്പത്തിൽ മനസ്സിലാക്കാം:
@@ -323,11 +323,11 @@ flowchart TD
 
 - ഹീറോ ഷിപ്പ്
 
-   ![Hero ship](../../../../translated_images/ml/player.dd24c1afa8c71e9b.png)
+   ![Hero ship](../../../../translated_images/ml/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 ഭീകരൻ
 
-   ![Monster ship](../../../../translated_images/ml/enemyShip.5df2a822c16650c2.png)
+   ![Monster ship](../../../../translated_images/ml/enemyShip.5df2a822c16650c2.webp)
 
 ### വികസനം തുടങ്ങാനുള്ള ശുപാർശ ചെയ്ത ഘട്ടങ്ങൾ
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 പരിപൂർണ്ണമായ ഫലം വേണ്ട വിധത്തിൽ ഇങ്ങനെ കാണുന്നതാണ്:  
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/ml/partI-solution.36c53b48c9ffae2a.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/ml/partI-solution.36c53b48c9ffae2a.webp)
 
 ## പരിഹാരം
 

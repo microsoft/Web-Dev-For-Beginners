@@ -112,7 +112,7 @@ Katso [palvelimen API-dokumentaatio](../api/README.md) saadaksesi tietoa:
 **Odotettu tulos:**
 Tehtävän suorittamisen jälkeen pankkisovelluksessasi pitäisi olla täysin toimiva "Lisää tapahtuma" -ominaisuus, joka näyttää ja käyttäytyy ammattimaisesti:
 
-![Näyttökuva esimerkkidialogista "Lisää tapahtuma"](../../../../translated_images/fi/dialog.93bba104afeb79f1.png)
+![Näyttökuva esimerkkidialogista "Lisää tapahtuma"](../../../../translated_images/fi/dialog.93bba104afeb79f1.webp)
 
 ## Toteutuksen testaus
 

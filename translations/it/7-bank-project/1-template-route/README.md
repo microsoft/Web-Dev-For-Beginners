@@ -652,7 +652,7 @@ sequenceDiagram
 
 Utilizzando `history.pushState` si creano nuove voci nella cronologia di navigazione del browser. Puoi verificarlo tenendo premuto il *pulsante indietro* del tuo browser, dovrebbe mostrare qualcosa del genere:
 
-![Screenshot della cronologia di navigazione](../../../../translated_images/it/history.7fdabbafa521e064.png)
+![Screenshot della cronologia di navigazione](../../../../translated_images/it/history.7fdabbafa521e064.webp)
 
 Se provi a cliccare sul pulsante indietro alcune volte, vedrai che l'URL corrente cambia e la cronologia viene aggiornata, ma lo stesso template continua a essere visualizzato.
 

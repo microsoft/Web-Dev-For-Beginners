@@ -292,7 +292,7 @@ graph TD
 2. 브라우저 주소창 변화 관찰
 3. 페이지가 새로고침 되고 URL에 데이터가 표시됨을 확인
 
-![가입하기 버튼 클릭 후 브라우저 URL 변화 스크린샷](../../../../translated_images/ko/click-register.e89a30bf0d4bc9ca.png)
+![가입하기 버튼 클릭 후 브라우저 URL 변화 스크린샷](../../../../translated_images/ko/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP 메서드 비교
 
@@ -346,7 +346,7 @@ graph TD
 2. "계정 생성" 버튼 클릭
 3. 브라우저에서 서버 응답 관찰
 
-![localhost:5000/api/accounts 주소의 JSON 문자열이 포함된 브라우저 창](../../../../translated_images/ko/form-post.61de4ca1b964d91a.png)
+![localhost:5000/api/accounts 주소의 JSON 문자열이 포함된 브라우저 창](../../../../translated_images/ko/form-post.61de4ca1b964d91a.webp)
 
 **확인할 사항:**
 - **브라우저가 API 엔드포인트 URL로 리다이렉트 됨**
@@ -609,7 +609,7 @@ async function register() {
 3. **"계정 만들기" 클릭**
 4. **콘솔 메시지 및 사용자 피드백 관찰**
 
-![브라우저 콘솔에 로그 메시지가 표시된 스크린샷](../../../../translated_images/ko/browser-console.efaf0b51aaaf6778.png)
+![브라우저 콘솔에 로그 메시지가 표시된 스크린샷](../../../../translated_images/ko/browser-console.efaf0b51aaaf6778.webp)
 
 **보여야 할 내용:**
 - **제출 버튼에 로딩 상태 표시**
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **사용자명에 특수 문자 입력 시도**
 4. **음수 잔액 입력**
 
-![폼 제출 시 유효성 검사 오류가 표시된 스크린샷](../../../../translated_images/ko/validation-error.8bd23e98d416c22f.png)
+![폼 제출 시 유효성 검사 오류가 표시된 스크린샷](../../../../translated_images/ko/validation-error.8bd23e98d416c22f.webp)
 
 **관찰할 점:**
 - **브라우저 기본 유효성 검사 메시지 표시**
@@ -943,7 +943,7 @@ timeline
 
 약간의 스타일링 후 최종 로그인 페이지가 어떻게 보일 수 있는지에 대한 예시는 다음과 같습니다:
 
-![CSS 스타일을 추가한 후 로그인 페이지 스크린샷](../../../../translated_images/ko/result.96ef01f607bf856a.png)
+![CSS 스타일을 추가한 후 로그인 페이지 스크린샷](../../../../translated_images/ko/result.96ef01f607bf856a.webp)
 
 ## 강의 후 퀴즈
 

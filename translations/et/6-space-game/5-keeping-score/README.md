@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Skoorisüsteem**: Iga hävitatud vaenlase laev annab 100 punkti (ümarad numbrid on mängijatele kergemini vaimselt arvutatavad). Skoor kuvatakse vasakus alanurgas.
-- **Elude lugur**: Sinu kangelane alustab kolme eluga - see on varaste arcade-mängude poolt kehtestatud standard mängimise väljakutse ja tasakaalu jaoks. Iga kokkupõrge vaenlasega maksab ühe elu. Jääke näitame paremas alanurgas laevaikoonidega ![elu pilt](../../../../translated_images/et/life.6fb9f50d53ee0413.png).
+- **Elude lugur**: Sinu kangelane alustab kolme eluga - see on varaste arcade-mängude poolt kehtestatud standard mängimise väljakutse ja tasakaalu jaoks. Iga kokkupõrge vaenlasega maksab ühe elu. Jääke näitame paremas alanurgas laevaikoonidega ![elu pilt](../../../../translated_images/et/life.6fb9f50d53ee0413.webp).
 
 ## Hakame ehitama!
 

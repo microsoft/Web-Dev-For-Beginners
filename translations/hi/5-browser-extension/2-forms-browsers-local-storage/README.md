@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: सहेजा गया डेटा हटाएँ
     ClearStorage --> FirstTime: सेटअप पर वापस जाएं
 ```
-![Local storage pane](../../../../translated_images/hi/localstorage.472f8147b6a3f8d1.png)
+![Local storage pane](../../../../translated_images/hi/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **सुरक्षा विचार**: प्रोडक्शन एप्लिकेशन में API कुंजी लोकलस्टोरेज में रखना सुरक्षा जोखिम पैदा करता है क्योंकि जावास्क्रिप्ट इस डेटा तक पहुँच सकता है। सीखने के लिए यह ठीक है, लेकिन असली एप्लिकेशन संवेदनशील क्रेडेंशियल्स के लिए सुरक्षित सर्वर-साइड स्टोरेज का उपयोग करना चाहिए।
 

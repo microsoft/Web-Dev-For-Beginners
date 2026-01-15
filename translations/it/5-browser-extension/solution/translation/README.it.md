@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Si utilizzerà l'API Signal CO2 di tmrow per monitorare l'utilizzo dell'elettricità e creare un'estensione per il browser che fornisca un promemoria diretto su quanto sia intenso l'uso di elettricità nella propria regione. L'utilizzo di questa estensione personalizzata aiuterà a valutare le proprie attività in base a queste informazioni.
 
-![videata dell'estensione](../../../../../translated_images/it/extension-screenshot.0e7f5bfa110e92e3.png)
+![videata dell'estensione](../../../../../translated_images/it/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Per iniziare
 
@@ -31,7 +31,7 @@ npm run build
 
 Per installare su Edge, utilizzare il menu "tre punti" nell'angolo in alto a destra del browser per accedere al pannello Estensioni. Se non è già attiva, abilitare la Modalità sviluppatore (in basso a sinistra). Selezionare "Carica decompressa" per aggiungere una nuova estensione. Aprire la cartella "dist" al prompt e l'estensione verrà caricata. Per utilizzarla, sarà necessario ottenere una chiave API per l'API di CO2 Signal (si può [richiedere qui via e-mail](https://www.co2signal.com/) - inserire la propria e-mail nella casella presente in questa pagina) e il [codice della propria regione](http://api.electricitymap.org/v3/zones) corrispondente alla [mappa elettrica](https://www.electricitymap.org/map) (ad esempio, per Boston, "US-NEISO").
 
-![installazione](../../../../../translated_images/it/install-on-edge.78634f02842c4828.png)
+![installazione](../../../../../translated_images/it/install-on-edge.78634f02842c4828.webp)
 
 Una volta inseriti la chiave API e il codice della regione nell'interfaccia dell'estensione, il punto colorato nella barra dell'estensione del browser dovrebbe cambiare per riflettere l'utilizzo di energia della regione e fornire indicazioni su quali attività ad alto consumo energetico sarebbero più appropriate da eseguire. Il concetto alla base di questo sistema a "punti" è stato ispirato dall'[estensione Energy Lollipop](https://energylollipop.com/) per le emissioni della California.
 

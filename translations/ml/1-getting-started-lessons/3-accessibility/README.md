@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ആക്‌സസിബിൾ വെബ്പേജുകൾ സൃഷ്ടിക്കൽ
 
-![ആക്‌സസിബിലിറ്റിയെക്കുറിച്ചു മുഴുവൻ](../../../../translated_images/ml/webdev101-a11y.8ef3025c858d897a.png)
+![ആക്‌സസിബിലിറ്റിയെക്കുറിച്ചു മുഴുവൻ](../../../../translated_images/ml/webdev101-a11y.8ef3025c858d897a.webp)
 > സ്കെച്‌നോട്ട് [ടോമോമി ഇമൂറ](https://twitter.com/girlie_mac) ഉത്ഘാടനം
 
 ```mermaid

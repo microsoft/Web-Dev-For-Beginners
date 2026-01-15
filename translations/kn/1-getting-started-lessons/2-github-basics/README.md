@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ನಾವು ಈ ಪ್ರಯಾಣವನ್ನು ಒಂದೊಂದು ಹಂತವಾಗಿ ಹೋಗೋಣ. ಬೇಗನೆ ಮಾಡಲು ಬೇಡ, ಒತ್ತಡ ಮಾಡಬೇಡ – ನಿಮ್ಮ ಹಾಗೂ ನನ್ನ ನಡುವೆ ಮತ್ತು ನಿಮ್ಮ ಹೊಸ ಅತ್ಯುತ್ತಮ ಸ್ನೇಹಿತರಾದ ಕೆಲವು ಅಬ್ಬರದ ಉಪಕರಣಗಳ ಜೊತೆ!
 
-![Intro to GitHub](../../../../translated_images/kn/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/kn/webdev101-github.8846d7971abef6f9.webp)
 > ಸ್ಕೆಚ್ನೋಟ್: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ flowchart TD
 
 ✅ 'ಬಗ್ಗೆ ಪರಿಚಯದ' ರೆಪೊಗಳನ್ನು ಕಂಡುಹಿಡಿಯಲು ಉತ್ತಮ ಮಾರ್ಗವಾಗಿದೆ [ ‘good-first-issue’ ಟ್ಯಾಗ್ ಮೂಲಕ ಹುಡುಕಿ](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![ನಿಮ್ಮ ಲೊಕಲ್ ಗೆ ರೆಪೊ ನಕಲಿಸಿ](../../../../translated_images/kn/clone_repo.5085c48d666ead57.png)
+![ನಿಮ್ಮ ಲೊಕಲ್ ಗೆ ರೆಪೊ ನಕಲಿಸಿ](../../../../translated_images/kn/clone_repo.5085c48d666ead57.webp)
 
 ಕೋಡ್ ನಕಲಿಸುವ ಹಲವಾರು ವಿಧಾನಗಳಿವೆ. ಒಂದು ವಿಧಾನವೆಂದರೆ “ಕ್ಲೋನ್” ಮಾಡುವುದು, ಅದು https, SSH ಅಥವಾ GitHub CLI (ಕಮಾಂಡ್ ಲೈನ್ ಇಂಟರ್ಫೇಸ್) ಬಳಸಿ ರೆಪೊ ಸಹಿತದ ವಿಷಯವನ್ನು ನಕಲಿಸುವುದು.
 

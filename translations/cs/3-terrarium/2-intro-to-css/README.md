@@ -29,7 +29,7 @@ journey
       Responzivní design: 5: Student
       Skleněné odrazy: 5: Student
 ```
-![Úvod do CSS](../../../../translated_images/cs/webdev101-css.3f7af5991bf53a20.png)
+![Úvod do CSS](../../../../translated_images/cs/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Vzpomínáte si, jak vaše HTML terrárium vypadalo docela základně? CSS je místo, kde přeměníme tu obyčejnou strukturu v něco vizuálně přitažlivého.
@@ -202,7 +202,7 @@ body {
 
 Otevřete nástroje pro vývojáře prohlížeče (F12), přejděte na záložku Elements a prohlédněte si váš `<h1>` element. Uvidíte, že dědí font family od těla:
 
-![děděný font](../../../../translated_images/cs/1.cc07a5cbe114ad1d.png)
+![děděný font](../../../../translated_images/cs/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Zkouška**: Vyzkoušejte nastavit další děditelné vlastnosti na element `<body>`, např. `color`, `line-height` nebo `text-align`. Co se stane s vaším nadpisem a dalšími prvky?
 
@@ -594,7 +594,7 @@ Připraveni vylepšit vaše terárium o realistické skleněné odlesky? Tato te
 
 Vytvoříte jemné odlesky, které simulují, jak se světlo odráží od skleněných povrchů. Tento přístup je podobný tomu, jak renesanční malíři jako Jan van Eyck používali světlo a odraz k vytvoření trojrozměrného dojmu malovaného skla. Takto to chcete dosáhnout:
 
-![finished terrarium](../../../../translated_images/cs/terrarium-final.2f07047ffc597d0a.png)
+![finished terrarium](../../../../translated_images/cs/terrarium-final.2f07047ffc597d0a.webp)
 
 **Vaše výzva:**
 - **Vytvořit** jemné bílé nebo světlé oválné tvary pro skleněné odlesky

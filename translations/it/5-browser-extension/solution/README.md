@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Utilizzando l'API CO2 Signal di tmrow per monitorare il consumo di elettricità, crea un'estensione per browser che ti permetta di avere un promemoria direttamente nel tuo browser su quanto è intenso il consumo di elettricità nella tua regione. Usare questa estensione in modo occasionale ti aiuterà a prendere decisioni sulle tue attività basandoti su queste informazioni.
 
-![screenshot dell'estensione](../../../../translated_images/it/extension-screenshot.0e7f5bfa110e92e3.png)
+![screenshot dell'estensione](../../../../translated_images/it/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Per iniziare
 
@@ -31,7 +31,7 @@ npm run build
 
 Per installare su Edge, utilizza il menu con i 'tre puntini' nell'angolo in alto a destra del browser per trovare il pannello delle Estensioni. Da lì, seleziona 'Carica non impacchettato' per caricare una nuova estensione. Apri la cartella 'dist' quando richiesto e l'estensione verrà caricata. Per utilizzarla, avrai bisogno di una chiave API per l'API di CO2 Signal ([richiedila qui via email](https://www.co2signal.com/) - inserisci il tuo indirizzo email nella casella su questa pagina) e del [codice della tua regione](http://api.electricitymap.org/v3/zones) corrispondente alla [Electricity Map](https://www.electricitymap.org/map) (a Boston, ad esempio, utilizzo 'US-NEISO').
 
-![installazione](../../../../translated_images/it/install-on-edge.78634f02842c4828.png)
+![installazione](../../../../translated_images/it/install-on-edge.78634f02842c4828.webp)
 
 Una volta inseriti la chiave API e il codice della regione nell'interfaccia dell'estensione, il punto colorato nella barra delle estensioni del browser dovrebbe cambiare per riflettere il consumo energetico della tua regione e darti un'indicazione su quali attività ad alto consumo energetico sarebbero appropriate da svolgere. Il concetto dietro questo sistema a 'punti' mi è stato ispirato dall'estensione [Energy Lollipop](https://energylollipop.com/) per le emissioni della California.
 

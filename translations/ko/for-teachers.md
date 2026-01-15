@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud는 Common Cartridge 지원이 제한적입니다. 위의 Moodle 파일을 사용하는 것이 좋으며, 이는 Canvas에도 업로드할 수 있습니다.
   - 가져온 후, 모듈, 마감일, 퀴즈 설정을 학기 일정에 맞게 검토하세요.
 
-![Moodle](../../translated_images/ko/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/ko/moodle.94eb93d714a50cb2.webp)
 > Moodle 교실에서의 커리큘럼
 
-![Canvas](../../translated_images/ko/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/ko/canvas.fbd605ff8e5b8aff.webp)
 > Canvas에서의 커리큘럼
 
 ### 저장소를 직접 사용하기 (GitHub Classroom 없이)

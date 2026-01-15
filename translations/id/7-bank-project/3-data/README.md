@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![Alur pembaruan dalam aplikasi multi-halaman](../../../../translated_images/id/mpa.7f7375a1a2d4aa77.png)
+![Alur pembaruan dalam aplikasi multi-halaman](../../../../translated_images/id/mpa.7f7375a1a2d4aa77.webp)
 
 **Mengapa pendekatan ini terasa kaku:**
 - Setiap klik berarti membangun ulang seluruh halaman dari awal
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![Alur pembaruan dalam aplikasi satu halaman](../../../../translated_images/id/spa.268ec73b41f992c2.png)
+![Alur pembaruan dalam aplikasi satu halaman](../../../../translated_images/id/spa.268ec73b41f992c2.webp)
 
 **Mengapa SPA terasa jauh lebih baik:**
 - Hanya bagian yang benar-benar berubah yang diperbarui (cerdas, bukan?)
@@ -523,7 +523,7 @@ if (data.error) {
 
 Sekarang ketika Anda menguji dengan akun yang tidak valid, Anda akan melihat pesan kesalahan yang berguna langsung di halaman!
 
-![Screenshot menunjukkan pesan kesalahan yang ditampilkan saat login](../../../../translated_images/id/login-error.416fe019b36a6327.png)
+![Screenshot menunjukkan pesan kesalahan yang ditampilkan saat login](../../../../translated_images/id/login-error.416fe019b36a6327.webp)
 
 #### Langkah 4: Menjadi Inklusif dengan Aksesibilitas
 
@@ -961,7 +961,7 @@ Siap membawa aplikasi perbankan Anda ke tingkat berikutnya? Mari buat aplikasi i
 
 Berikut tampilan dashboard yang sudah dipoles:
 
-![Screenshot dari contoh hasil dashboard setelah styling](../../../../translated_images/id/screen2.123c82a831a1d14a.png)
+![Screenshot dari contoh hasil dashboard setelah styling](../../../../translated_images/id/screen2.123c82a831a1d14a.webp)
 
 Jangan merasa harus meniru ini persis - gunakan sebagai inspirasi dan buat versi Anda sendiri!
 

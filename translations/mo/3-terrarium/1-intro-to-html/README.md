@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![HTML入門](../../../../translated_images/mo/webdev101-html.4389c2067af68e98.png)
+![HTML入門](../../../../translated_images/mo/webdev101-html.4389c2067af68e98.webp)
 > 手繪筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 HTML，即超文本標記語言，是您曾經瀏覽過的每個網站的基礎。可以將HTML想像成網頁的骨架——它定義了內容的位置、組織方式以及每個部分的意義。雖然CSS稍後會用顏色和佈局來“裝飾”您的HTML，JavaScript則會通過互動性使其“活起來”，但HTML提供了使其他一切成為可能的基本結構。
@@ -88,7 +88,7 @@ mindmap
 4. 在Explorer面板中，點擊“New File”圖標
 5. 將文件命名為`index.html`
 
-![VS Code Explorer顯示新文件創建](../../../../translated_images/mo/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer顯示新文件創建](../../../../translated_images/mo/vs-code-index.e2986cf919471eb9.webp)
 
 **選項2：使用終端命令**
 ```bash

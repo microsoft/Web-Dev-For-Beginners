@@ -126,7 +126,7 @@ flowchart LR
 
 讓我們來試試看。打開一個網站（Microsoft.com 是個不錯的選擇），然後點擊「記錄」按鈕。現在刷新網頁，觀察分析器捕捉到的所有活動。停止記錄後，您將看到瀏覽器如何「腳本化」、「渲染」和「繪製」網站的詳細分解。這讓我想起了任務控制中心在火箭發射期間監控每個系統的方式——您可以獲得實時的數據，了解每件事情的發生時間和過程。
 
-![Edge profiler](../../../../translated_images/mo/profiler.5a4a62479c5df01c.png)
+![Edge profiler](../../../../translated_images/mo/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Microsoft 文件](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) 有更多詳細資訊，供您深入了解。
 
@@ -136,11 +136,11 @@ flowchart LR
 
 通過選擇剖析時間線的一部分並查看摘要窗格，獲得網頁效能的快照：
 
-![Edge profiler snapshot](../../../../translated_images/mo/snapshot.97750180ebcad737.png)
+![Edge profiler snapshot](../../../../translated_images/mo/snapshot.97750180ebcad737.webp)
 
 檢查事件日誌窗格，查看是否有任何事件超過 15 毫秒：
 
-![Edge event log](../../../../translated_images/mo/log.804026979f3707e0.png)
+![Edge event log](../../../../translated_images/mo/log.804026979f3707e0.webp)
 
 ✅ 熟悉您的分析器！在此網站上打開開發者工具，看看是否有任何瓶頸。哪個資產加載最慢？最快？
 

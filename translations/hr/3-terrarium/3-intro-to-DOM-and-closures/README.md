@@ -25,7 +25,7 @@ journey
       Testirati funkcionalnost: 5: Student
       Završiti terarij: 5: Student
 ```
-![DOM i zatvaranje](../../../../translated_images/hr/webdev101-js.10280393044d7eaa.png)
+![DOM i zatvaranje](../../../../translated_images/hr/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Dobrodošli u jedan od najzanimljivijih aspekata web razvoja - stvaranje interaktivnosti! Document Object Model (DOM) je poput mosta između vašeg HTML-a i JavaScripta, a danas ćemo ga koristiti da oživimo vaš terrarij. Kada je Tim Berners-Lee stvorio prvi web preglednik, zamislio je web na kojem dokumenti mogu biti dinamični i interaktivni - DOM tu viziju čini mogućom.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Reprezentacija DOM stabla](../../../../translated_images/hr/dom-tree.7daf0e763cbbba92.png)
+![Reprezentacija DOM stabla](../../../../translated_images/hr/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentacija DOM-a i HTML oznaka koje ga referenciraju. Iz [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Razumijevanje Zatvaranja**: Zatvaranja su važna tema u JavaScriptu, a mnogi programeri ih koriste godinama prije nego što u potpunosti shvate sve teorijske aspekte. Danas se fokusiramo na praktičnu primjenu - vidjet ćete zatvaranja prirodno kako se pojavljuju dok gradimo naše interaktivne značajke. Razumijevanje će se razvijati kako budete vidjeli kako rješavaju stvarne probleme.
 
-![Reprezentacija DOM stabla](../../../../translated_images/hr/dom-tree.7daf0e763cbbba92.png)
+![Reprezentacija DOM stabla](../../../../translated_images/hr/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentacija DOM-a i HTML oznaka koje ga referenciraju. Iz [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Sada testirajte svoj interaktivni terarij! Otvorite datoteku `index.html` u web 
 - **Podrška za uređaje**: Radi na desktopu i mobilnim uređajima
 - **Svijest o izvedbi**: Nema curenja memorije ili suvišnih izračuna
 
-![finished terrarium](../../../../translated_images/hr/terrarium-final.0920f16e87c13a84.png)
+![finished terrarium](../../../../translated_images/hr/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

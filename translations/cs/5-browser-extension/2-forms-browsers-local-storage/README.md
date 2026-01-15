@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Odstranit uložená data
     ClearStorage --> FirstTime: Návrat ke konfiguraci
 ```
-![Panel místního úložiště](../../../../translated_images/cs/localstorage.472f8147b6a3f8d1.png)
+![Panel místního úložiště](../../../../translated_images/cs/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Bezpečnostní upozornění**: Ve výrobních aplikacích ukládání API klíčů do LocalStorage představuje bezpečnostní rizika, protože k těmto datům může přistupovat JavaScript. Pro výukové účely tento přístup stačí, ale reálné aplikace by měly používat bezpečné serverové úložiště pro citlivé údaje.
 

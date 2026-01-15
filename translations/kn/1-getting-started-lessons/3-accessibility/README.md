@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ಪ್ರವೇಶಿಸಲು ಅನುವುಮಾಡಿದ ವೆಬ್‌ಪೇಜ್‌ಗಳ ಸೃಷ್ಟಿ
 
-![ಎಲ್ಲಾ ಪ್ರವೇಶಾಸಾಧ್ಯತೆಯ ಬಗ್ಗೆ](../../../../translated_images/kn/webdev101-a11y.8ef3025c858d897a.png)
+![ಎಲ್ಲಾ ಪ್ರವೇಶಾಸಾಧ್ಯತೆಯ ಬಗ್ಗೆ](../../../../translated_images/kn/webdev101-a11y.8ef3025c858d897a.webp)
 > ಸ್ಕೆಚ್ನೋಟ್ [ಟೊಮೊಮಿ ಇಮುರಾ](https://twitter.com/girlie_mac) ಅವರಿಂದ
 
 ```mermaid

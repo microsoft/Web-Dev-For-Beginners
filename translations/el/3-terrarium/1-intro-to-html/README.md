@@ -25,7 +25,7 @@ journey
       Βελτίωση προσβασιμότητας: 5: Student
       Δημιουργία τεραρίου: 5: Student
 ```
-![Εισαγωγή στο HTML](../../../../translated_images/el/webdev101-html.4389c2067af68e98.png)
+![Εισαγωγή στο HTML](../../../../translated_images/el/webdev101-html.4389c2067af68e98.webp)
 > Σημείωση σκίτσου από την [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Το HTML, ή HyperText Markup Language, είναι το θεμέλιο κάθε ιστότοπου που έχετε επισκεφθεί ποτέ. Σκεφτείτε το HTML ως το σκελετό που δίνει δομή στις ιστοσελίδες – καθορίζει πού πάει το περιεχόμενο, πώς οργανώνεται και τι αντιπροσωπεύει κάθε κομμάτι. Ενώ το CSS αργότερα θα "ντύσει" το HTML σας με χρώματα και διατάξεις, και η JavaScript θα του δώσει ζωή με διαδραστικότητα, το HTML παρέχει την ουσιαστική δομή που κάνει τα πάντα δυνατά.
@@ -86,7 +86,7 @@ mindmap
 4. Στο παράθυρο Explorer, κάνε κλικ στο εικονίδιο "New File"
 5. Ονόμασε το αρχείο σου `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/el/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/el/vs-code-index.e2986cf919471eb9.webp)
 
 **Επιλογή 2: Χρήση Εντολών Τερματικού**
 ```bash

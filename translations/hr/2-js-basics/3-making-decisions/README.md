@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove JavaScripta: Donošenje odluka
 
-![Osnove JavaScripta - Donošenje odluka](../../../../translated_images/hr/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![Osnove JavaScripta - Donošenje odluka](../../../../translated_images/hr/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
 

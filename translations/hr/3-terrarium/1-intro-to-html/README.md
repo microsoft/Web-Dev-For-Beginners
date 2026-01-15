@@ -25,7 +25,7 @@ journey
       Enhance accessibility: 5: Student
       Build terrarium: 5: Student
 ```
-![Uvod u HTML](../../../../translated_images/hr/webdev101-html.4389c2067af68e98.png)
+![Uvod u HTML](../../../../translated_images/hr/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote autora [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, ili HyperText Markup Language, temelj je svake web stranice koju ste ikada posjetili. Zamislite HTML kao kostur koji daje strukturu web stranicama – on definira gdje sadržaj ide, kako je organiziran i što svaki dio predstavlja. Dok će CSS kasnije "ofarbati" vaš HTML bojama i rasporedima, a JavaScript će ga oživjeti interaktivnošću, HTML pruža osnovnu strukturu koja omogućuje sve ostalo.
@@ -86,7 +86,7 @@ Napravit ćete posebnu mapu za vaš terarij projekt i dodati prvu HTML datoteku.
 4. U Explorer panelu kliknite na ikonu "New File"
 5. Nazovite svoju datoteku `index.html`
 
-![VS Code Explorer prikazuje stvaranje nove datoteke](../../../../translated_images/hr/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer prikazuje stvaranje nove datoteke](../../../../translated_images/hr/vs-code-index.e2986cf919471eb9.webp)
 
 **Opcija 2: Korištenje naredbi u Terminalu**
 ```bash

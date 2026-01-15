@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![מבוא ל-HTML](../../../../translated_images/he/webdev101-html.4389c2067af68e98.png)
+![מבוא ל-HTML](../../../../translated_images/he/webdev101-html.4389c2067af68e98.webp)
 > סקיצה מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, או HyperText Markup Language, הוא הבסיס לכל אתר שביקרת בו אי פעם. חשבו על HTML כשלד שמעניק מבנה לדפי אינטרנט – הוא מגדיר היכן התוכן נמצא, איך הוא מאורגן ומה כל חלק מייצג. בעוד ש-CSS "ילביש" את ה-HTML בצבעים ובפריסות, ו-JavaScript יעניק לו חיים עם אינטראקטיביות, HTML מספק את המבנה הבסיסי שמאפשר את כל השאר.
@@ -88,7 +88,7 @@ mindmap
 4. בלוח ה-Explorer, לחצו על אייקון "New File"
 5. תנו לקובץ את השם `index.html`
 
-![VS Code Explorer מציג יצירת קובץ חדש](../../../../translated_images/he/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer מציג יצירת קובץ חדש](../../../../translated_images/he/vs-code-index.e2986cf919471eb9.webp)
 
 **אפשרות 2: שימוש בפקודות טרמינל**
 ```bash

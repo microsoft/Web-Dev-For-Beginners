@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![CSS入門](../../../../translated_images/ja/webdev101-css.3f7af5991bf53a20.png)
+![CSS入門](../../../../translated_images/ja/webdev101-css.3f7af5991bf53a20.webp)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTMLで作ったテラリウムが少しシンプルすぎると感じませんでしたか？CSSを使えば、その基本的な構造を視覚的に魅力的なものに変えることができます。
@@ -205,7 +205,7 @@ body {
 
 ブラウザの開発者ツール（F12）を開き、Elementsタブに移動して`<h1>`要素を検査してください。`body`からフォントファミリーを継承していることがわかります:
 
-![継承されたフォント](../../../../translated_images/ja/1.cc07a5cbe114ad1d.png)
+![継承されたフォント](../../../../translated_images/ja/1.cc07a5cbe114ad1d.webp)
 
 ✅ **実験タイム**: `<body>`に`color`、`line-height`、`text-align`などの他の継承可能なプロパティを設定してみてください。見出しや他の要素に何が起こるでしょうか？
 
@@ -562,7 +562,7 @@ Agentモードを使用して次のチャレンジを完了してください:
 
 ガラス表面に光が反射する様子をシミュレートする微妙なハイライトを作成します。このアプローチは、ルネサンスの画家ヤン・ファン・エイクが光と反射を使って描かれたガラスを三次元的に見せた方法に似ています。目指すべきものは以下の通りです:
 
-![完成したテラリウム](../../../../translated_images/ja/terrarium-final.2f07047ffc597d0a.png)
+![完成したテラリウム](../../../../translated_images/ja/terrarium-final.2f07047ffc597d0a.webp)
 
 **チャレンジ内容:**
 - **作成** ガラスの反射をシミュレートする微妙な白または明るい色の楕円形

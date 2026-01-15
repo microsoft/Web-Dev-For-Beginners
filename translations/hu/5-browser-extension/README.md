@@ -23,7 +23,7 @@ Ez a bővítmény ad hoc módon hívható meg a felhasználó által, miután eg
 
 ### Köszönetnyilvánítás
 
-![egy zöld böngészőbővítmény](../../../translated_images/hu/extension-screenshot.0e7f5bfa110e92e3.png)
+![egy zöld böngészőbővítmény](../../../translated_images/hu/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Köszönetnyilvánítás
 

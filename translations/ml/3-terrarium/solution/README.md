@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ഒരു ചെറിയ ഡ്രാഗ് ആൻഡ് ഡ്രോപ്പ് കോഡ്-ധ്യാനം. ചെറിയ HTML, JS, CSS ഉപയോഗിച്ച്, നിങ്ങൾക്ക് ഒരു വെബ് ഇന്റർഫേസ് നിർമ്മിക്കാൻ, അതിനെ സ്റ്റൈൽ ചെയ്യാൻ, ഒരു ഇന്ററാക്ഷൻ ചേർക്കാൻ കഴിയും.
 
-![my terrarium](../../../../translated_images/ml/screenshot_gray.0c796099a1f9f25e.png)
+![my terrarium](../../../../translated_images/ml/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## ക്രെഡിറ്റുകൾ
 

@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Pengantar CSS](../../../../translated_images/id/webdev101-css.3f7af5991bf53a20.png)
+![Pengantar CSS](../../../../translated_images/id/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Ingat bagaimana terrarium HTML Anda terlihat cukup sederhana? CSS adalah tempat kita mengubah struktur polos itu menjadi sesuatu yang menarik secara visual.
@@ -205,7 +205,7 @@ body {
 
 Buka alat pengembang browser Anda (F12), navigasikan ke tab Elemen, dan inspeksi elemen `<h1>` Anda. Anda akan melihat bahwa elemen tersebut mewarisi keluarga font dari body:
 
-![font yang diwarisi](../../../../translated_images/id/1.cc07a5cbe114ad1d.png)
+![font yang diwarisi](../../../../translated_images/id/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Waktu Eksperimen**: Cobalah mengatur properti lain yang dapat diwarisi pada `<body>` seperti `color`, `line-height`, atau `text-align`. Apa yang terjadi pada heading dan elemen lainnya?
 
@@ -599,7 +599,7 @@ Siap meningkatkan terrarium Anda dengan refleksi kaca yang realistis? Teknik ini
 
 Anda akan membuat sorotan halus yang mensimulasikan bagaimana cahaya memantul dari permukaan kaca. Pendekatan ini mirip dengan bagaimana pelukis Renaisans seperti Jan van Eyck menggunakan cahaya dan refleksi untuk membuat kaca yang dilukis tampak tiga dimensi. Berikut adalah tujuan Anda:
 
-![finished terrarium](../../../../translated_images/id/terrarium-final.2f07047ffc597d0a.png)
+![finished terrarium](../../../../translated_images/id/terrarium-final.2f07047ffc597d0a.webp)
 
 **Tantangan Anda:**
 - **Buat** bentuk oval putih atau berwarna terang untuk refleksi kaca

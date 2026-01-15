@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Akadálymentes weboldalak készítése
 
-![Mindent az akadálymentességről](../../../../translated_images/hu/webdev101-a11y.8ef3025c858d897a.png)
+![Mindent az akadálymentességről](../../../../translated_images/hu/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote [Tomomi Imura](https://twitter.com/girlie_mac) műve
 
 ```mermaid

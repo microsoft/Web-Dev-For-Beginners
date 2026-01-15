@@ -17,7 +17,7 @@ Sveikas, būsimasis kūrėjau! 👋 Ar galiu tau pasakyti kažką, kas vis dar k
 
 Šiandien pažvelgsime į neįtikėtinas priemones, kurios daro šiuolaikinį žiniatinklio kūrimą ne tik įmanomu, bet ir labai priklausomybę sukeliančiu užsiėmimu. Kalbu apie tuos pačius redaktorius, naršykles ir darbo eigas, kuriomis kasdien naudojasi kūrėjai Netflix, Spotify bei tavo mėgstamoje nepriklausomoje programėlių studijoje. Ir štai kas privers tave šokti iš džiaugsmo: dauguma šių profesionalių, pramonės standartų įrankių yra visiškai nemokami!
 
-![Intro Programming](../../../../translated_images/lt/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/lt/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

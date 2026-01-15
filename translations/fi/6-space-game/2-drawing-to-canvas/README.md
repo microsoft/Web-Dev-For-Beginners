@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![canvasin ruudukko](../../../../translated_images/fi/canvas_grid.5f209da785ded492.png)
+![canvasin ruudukko](../../../../translated_images/fi/canvas_grid.5f209da785ded492.webp)
 > Kuva [MDN:stä](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Canvas-elementille piirtäminen noudattaa samaa kolmen vaiheen prosessia, joka muodostaa kaikkien canvas-grafiikoiden perustan. Kun teet tämän muutaman kerran, se muuttuu toiseksi luonteeksi:
@@ -329,11 +329,11 @@ Sinun tulee rakentaa verkkosivu, jossa on Canvas-elementti. Sen tulisi näyttä�
 
 - Sankarilaiva
 
-   ![Sankarilaiva](../../../../translated_images/fi/player.dd24c1afa8c71e9b.png)
+   ![Sankarilaiva](../../../../translated_images/fi/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 hirviöjoukko
 
-   ![Hirviölaiva](../../../../translated_images/fi/enemyShip.5df2a822c16650c2.png)
+   ![Hirviölaiva](../../../../translated_images/fi/enemyShip.5df2a822c16650c2.webp)
 
 ### Suositellut kehitysvaiheet
 
@@ -467,7 +467,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Valmis tulos näyttää tältä:
 
-![Musta ruutu, jossa sankari ja 5*5 hirviötä](../../../../translated_images/fi/partI-solution.36c53b48c9ffae2a.png)
+![Musta ruutu, jossa sankari ja 5*5 hirviötä](../../../../translated_images/fi/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Ratkaisu
 

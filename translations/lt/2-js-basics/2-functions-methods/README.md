@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript pagrindai: metodai ir funkcijos
 
-![JavaScript pagrindai – funkcijos](../../../../translated_images/lt/webdev101-js-functions.be049c4726e94f8b.png)
+![JavaScript pagrindai – funkcijos](../../../../translated_images/lt/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Prieinamų svetainių kūrimas
 
-![Viskas apie prieinamumą](../../../../translated_images/lt/webdev101-a11y.8ef3025c858d897a.png)
+![Viskas apie prieinamumą](../../../../translated_images/lt/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

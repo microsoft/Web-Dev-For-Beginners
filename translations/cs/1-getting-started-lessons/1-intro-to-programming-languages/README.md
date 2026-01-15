@@ -17,7 +17,7 @@ Podívejte, chápu, že programování může být zatím zastrašující. Když
 
 Dnes si prozkoumáme úžasné nástroje, které činí moderní webový vývoj nejen možným, ale doopravdy návykovým. Mluvím o stejných editorech, prohlížečích a pracovních postupech, které používají vývojáři ve Netflixu, Spotify a ve vašem oblíbeném indie studiu každý den. A tady je část, která vás nadchne: většina těchto profesionálních, průmyslových standardů je úplně zdarma!
 
-![Intro Programming](../../../../translated_images/cs/webdev101-programming.d6e3f98e61ac4bff.png)
+![Intro Programming](../../../../translated_images/cs/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

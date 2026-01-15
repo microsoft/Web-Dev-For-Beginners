@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Pomocí API C02 Signal od tmrow pro sledování spotřeby elektřiny vytvořte rozšíření prohlížeče, které vám umožní mít přímo v prohlížeči připomínku o spotřebě elektřiny ve vaší oblasti. Používání tohoto ad hoc rozšíření vám pomůže činit rozhodnutí o vašich aktivitách na základě těchto informací.
 
-![snímek rozšíření](../../../../../translated_images/cs/extension-screenshot.0e7f5bfa110e92e3.png)
+![snímek rozšíření](../../../../../translated_images/cs/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Začínáme
 
@@ -31,7 +31,7 @@ npm run build
 
 Pro instalaci na Edge použijte nabídku „tři tečky“ v pravém horním rohu prohlížeče a najděte panel Rozšíření. Odtud vyberte „Načíst nekomprimované rozšíření“ pro přidání nového rozšíření. Při výzvě otevřete složku „dist“ a rozšíření se načte. Pro jeho použití budete potřebovat API klíč pro API CO2 Signal ([získejte jej zde e-mailem](https://www.co2signal.com/) – zadejte svůj e-mail do pole na této stránce) a [kód pro vaši oblast](http://api.electricitymap.org/v3/zones) odpovídající [Mapě elektřiny](https://www.electricitymap.org/map) (například v Bostonu používám „US-NEISO“).
 
-![instalace](../../../../../translated_images/cs/install-on-edge.78634f02842c4828.png)
+![instalace](../../../../../translated_images/cs/install-on-edge.78634f02842c4828.webp)
 
 Jakmile zadáte API klíč a region do rozhraní rozšíření, barevný bod v liště rozšíření prohlížeče by se měl změnit tak, aby odrážel spotřebu energie ve vaší oblasti, a poskytl vám indikátor, jaké energeticky náročné aktivity by bylo vhodné provádět. Koncept tohoto systému „bodů“ jsem převzal z [rozšíření Energy Lollipop](https://energylollipop.com/) pro kalifornské emise.
 

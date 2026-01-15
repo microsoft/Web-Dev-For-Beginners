@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![drobės tinklelis](../../../../translated_images/lt/canvas_grid.5f209da785ded492.png)
+![drobės tinklelis](../../../../translated_images/lt/canvas_grid.5f209da785ded492.webp)
 > Nuotrauka iš [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Norint piešti ant drobės elemento, laikysitės to paties trijų žingsnių proceso, kuris sudaro visos drobės grafikos pagrindą. Kai tai padarysite kelis kartus, tai taps labiau įgūdžiu nei mokymusi:
@@ -323,11 +323,11 @@ Sukursite tinklalapį su drobės elementu. Jame bus nupieštas juodas ekranas `1
 
 - Herojaus laivas
 
-   ![Herojaus laivas](../../../../translated_images/lt/player.dd24c1afa8c71e9b.png)
+   ![Herojaus laivas](../../../../translated_images/lt/player.dd24c1afa8c71e9b.webp)
 
 - 5x5 monstrų grupė
 
-   ![Monstro laivas](../../../../translated_images/lt/enemyShip.5df2a822c16650c2.png)
+   ![Monstro laivas](../../../../translated_images/lt/enemyShip.5df2a822c16650c2.webp)
 
 ### Rekomenduojami žingsniai pradėti kūrimą
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Galutinis rezultatas turėtų atrodyti taip:
 
-![Juodas ekranas su herojumi ir 5*5 monstrais](../../../../translated_images/lt/partI-solution.36c53b48c9ffae2a.png)
+![Juodas ekranas su herojumi ir 5*5 monstrais](../../../../translated_images/lt/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Sprendimas
 

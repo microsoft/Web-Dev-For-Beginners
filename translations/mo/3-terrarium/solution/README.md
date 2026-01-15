@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 一個小型的拖放式程式冥想。只需一些 HTML、JS 和 CSS，你就可以建立一個網頁介面，設計它，並添加互動功能。
 
-![我的微型植物園](../../../../translated_images/mo/screenshot_gray.0c796099a1f9f25e.png)
+![我的微型植物園](../../../../translated_images/mo/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## 致謝
 

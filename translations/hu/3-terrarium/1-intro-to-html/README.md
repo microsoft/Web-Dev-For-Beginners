@@ -25,7 +25,7 @@ journey
       Enhance accessibility: 5: Student
       Build terrarium: 5: Student
 ```
-![Bevezetés az HTML-be](../../../../translated_images/hu/webdev101-html.4389c2067af68e98.png)
+![Bevezetés az HTML-be](../../../../translated_images/hu/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote készítette [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Az HTML, vagyis a HyperText Markup Language, minden általad valaha látogatott weboldal alapja. Gondolj az HTML-re úgy, mint a weboldalak vázára – ez határozza meg, hogy hová kerül a tartalom, hogyan van szervezve, és mit jelképez minden egyes elem. Míg a CSS később „felöltözteti” az HTML-t színekkel és elrendezéssel, és a JavaScript életre kelti interaktivitással, az HTML biztosítja azt az alapvető szerkezetet, amely minden mást lehetővé tesz.
@@ -86,7 +86,7 @@ Létrehozol egy külön mappát a terrárium projekthez, és hozzáadod az első
 4. Az Explorer panelen kattints az „Új fájl” ikonra
 5. Nevezd el a fájlt `index.html`-nek
 
-![VS Code Explorer új fájl létrehozása](../../../../translated_images/hu/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer új fájl létrehozása](../../../../translated_images/hu/vs-code-index.e2986cf919471eb9.webp)
 
 **2. lehetőség: Parancssoros parancsok használata**
 ```bash

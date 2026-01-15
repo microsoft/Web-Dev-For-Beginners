@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript मूलभूत गोष्टी: डेटा प्रकार
 
-![JavaScript Basics - Data types](../../../../translated_images/mr/webdev101-js-datatypes.4cc470179730702c.png)
+![JavaScript Basics - Data types](../../../../translated_images/mr/webdev101-js-datatypes.4cc470179730702c.webp)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांनी तयार केले आहे
 
 ```mermaid

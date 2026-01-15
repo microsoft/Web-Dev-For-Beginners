@@ -25,7 +25,7 @@ journey
       Enhance accessibility: 5: Student
       Build terrarium: 5: Student
 ```
-![Introduction to HTML](../../../../translated_images/ko/webdev101-html.4389c2067af68e98.png)
+![Introduction to HTML](../../../../translated_images/ko/webdev101-html.4389c2067af68e98.webp)
 > 스케치노트 작성자 [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML 또는 하이퍼텍스트 마크업 언어는 여러분이 방문한 모든 웹사이트의 기반입니다. HTML을 웹 페이지에 구조를 부여하는 골격으로 생각해보세요. 어떤 콘텐츠가 어디에 배치되고, 어떻게 조직되며, 각 부분이 무엇을 의미하는지 정의합니다. CSS는 나중에 HTML에 색상과 레이아웃을 입히고, JavaScript는 상호작용을 통해 생명을 불어넣지만, HTML은 모든 것을 가능하게 하는 필수적인 구조를 제공합니다.
@@ -86,7 +86,7 @@ HTML 코드를 작성하기 전에 테라리움 프로젝트를 위한 적절한
 4. 탐색기 창에서 "새 파일" 아이콘을 클릭합니다.
 5. 파일명을 `index.html`로 지정합니다.
 
-![VS Code 탐색기에서 새 파일 생성 모습](../../../../translated_images/ko/vs-code-index.e2986cf919471eb9.png)
+![VS Code 탐색기에서 새 파일 생성 모습](../../../../translated_images/ko/vs-code-index.e2986cf919471eb9.webp)
 
 **옵션 2: 터미널 명령어 사용하기**
 ```bash

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 접근성 높은 웹페이지 만들기
 
-![접근성에 관한 모든 것](../../../../translated_images/ko/webdev101-a11y.8ef3025c858d897a.png)
+![접근성에 관한 모든 것](../../../../translated_images/ko/webdev101-a11y.8ef3025c858d897a.webp)
 > 스케치노트 by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

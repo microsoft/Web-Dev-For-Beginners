@@ -190,7 +190,7 @@ mindmap
 
 與其徒勞無功地追逐問題，我們將創建一個**集中式狀態管理**系統。可以將其想像成一個非常有條理的人，負責所有重要的事情：
 
-![顯示HTML、用戶操作和狀態之間數據流的架構圖](../../../../translated_images/mo/data-flow.fa2354e0908fecc8.png)
+![顯示HTML、用戶操作和狀態之間數據流的架構圖](../../../../translated_images/mo/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -804,7 +804,7 @@ timeline
 
 以下是完成作業後的示例結果：
 
-![顯示示例“添加交易”對話框的截圖](../../../../translated_images/mo/dialog.93bba104afeb79f1.png)
+![顯示示例“添加交易”對話框的截圖](../../../../translated_images/mo/dialog.93bba104afeb79f1.webp)
 
 ---
 

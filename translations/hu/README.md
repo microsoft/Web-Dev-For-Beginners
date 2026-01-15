@@ -72,13 +72,13 @@ Ne hagyd ki új Generatív AI tananyagunkat!
 
 Látogass el ide: [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) hogy elindulj!
 
-![Background](../../translated_images/hu/background.148a8d43afde5730.png)
+![Background](../../translated_images/hu/background.148a8d43afde5730.webp)
 
 - Leckék az alapoktól a RAG-ig.
 - Interakció történelmi karakterekkel GenAI és társalkalmazásunk segítségével.
 - Szórakoztató és lebilincselő narratíva, időutazás!
 
-![character](../../translated_images/hu/character.5c0dd8e067ffd693.png)
+![character](../../translated_images/hu/character.5c0dd8e067ffd693.webp)
 
 
 Minden lecke tartalmaz egy feladatot, tudásellenőrzést és egy kihívást, hogy eligazodj olyan témákban, mint:
@@ -115,7 +115,7 @@ Kövesd a lépéseket:
 
 A létrehozott repository példányában kattints a **Code** gombra, majd válaszd az **Open with Codespaces** lehetőséget. Ez létrehoz egy új Codespace-t a munkához.
 
-![Codespace](../../translated_images/hu/createcodespace.0238bbf4d7a8d955.png)
+![Codespace](../../translated_images/hu/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Tananyag futtatása helyileg a számítógépen
 

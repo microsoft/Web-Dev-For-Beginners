@@ -190,7 +190,7 @@ mindmap
 
 無駄な努力をする代わりに、**集中型状態管理**システムを作成します。これは、すべての重要なものを整理する1人の非常に組織的な人がいるようなものです:
 
-![HTML、ユーザーアクション、状態間のデータフローを示すスキーマ](../../../../translated_images/ja/data-flow.fa2354e0908fecc8.png)
+![HTML、ユーザーアクション、状態間のデータフローを示すスキーマ](../../../../translated_images/ja/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kasutades tmrow CO2 Signal API-d elektritarbimise jälgimiseks, looge brauserilaiendus, mis tuletab teile meelde, kui suur on teie piirkonna elektritarbimine. Selle laienduse juhuslik kasutamine aitab teil teha teadlikke otsuseid oma tegevuste kohta, lähtudes sellest teabest.
 
-![laienduse ekraanipilt](../../../../translated_images/et/extension-screenshot.0e7f5bfa110e92e3.png)
+![laienduse ekraanipilt](../../../../translated_images/et/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Alustamine
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge'i brauseris paigaldamiseks kasutage brauseri paremas ülanurgas asuvat 'kolme punkti' menüüd, et leida laienduste paneel. Sealt valige 'Laadi lahti pakkimata', et laadida uus laiendus. Avage 'dist' kaust, kui seda küsitakse, ja laiendus laaditakse. Selle kasutamiseks vajate CO2 Signal API jaoks API-võtit ([hankige see siit e-posti teel](https://www.co2signal.com/) - sisestage oma e-posti aadress sellel lehel olevasse kasti) ja [oma piirkonna koodi](http://api.electricitymap.org/v3/zones), mis vastab [Electricity Map](https://www.electricitymap.org/map) kaardile (näiteks Bostonis kasutan 'US-NEISO').
 
-![paigaldamine](../../../../translated_images/et/install-on-edge.78634f02842c4828.png)
+![paigaldamine](../../../../translated_images/et/install-on-edge.78634f02842c4828.webp)
 
 Kui API-võti ja piirkonna kood on laienduse liidesesse sisestatud, peaks brauserilaienduse ribal olev värviline täpp muutuma, et kajastada teie piirkonna energiatarbimist, ning andma teile vihjeid, millised energiamahukad tegevused oleksid sobivad. Selle 'täpi' süsteemi idee sain [Energy Lollipop laiendusest](https://energylollipop.com/) California heitkoguste jaoks.
 

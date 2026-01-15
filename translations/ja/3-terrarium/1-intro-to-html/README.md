@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![HTML入門](../../../../translated_images/ja/webdev101-html.4389c2067af68e98.png)
+![HTML入門](../../../../translated_images/ja/webdev101-html.4389c2067af68e98.webp)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML（HyperText Markup Language）は、これまで訪れたすべてのウェブサイトの基盤です。HTMLはウェブページの骨格のようなもので、コンテンツの配置、構造、各部分の意味を定義します。後でCSSが色やレイアウトでHTMLを「装飾」し、JavaScriptがインタラクティブ性を加えることで「命を吹き込む」役割を果たしますが、HTMLはすべての基礎を提供します。
@@ -88,7 +88,7 @@ HTMLコードに取り掛かる前に、テラリウムプロジェクトの適�
 4. エクスプローラペインで「新しいファイル」アイコンをクリック
 5. ファイル名を`index.html`にする
 
-![VS Codeエクスプローラで新しいファイル作成を表示](../../../../translated_images/ja/vs-code-index.e2986cf919471eb9.png)
+![VS Codeエクスプローラで新しいファイル作成を表示](../../../../translated_images/ja/vs-code-index.e2986cf919471eb9.webp)
 
 **オプション2: ターミナルコマンドを使用する場合**
 ```bash

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जावास्क्रिप्ट मूलभूत गोष्टी: पद्धती आणि फंक्शन्स
 
-![जावास्क्रिप्ट मूलभूत गोष्टी - फंक्शन्स](../../../../translated_images/mr/webdev101-js-functions.be049c4726e94f8b.png)
+![जावास्क्रिप्ट मूलभूत गोष्टी - फंक्शन्स](../../../../translated_images/mr/webdev101-js-functions.be049c4726e94f8b.webp)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांनी तयार केले आहे
 
 ```mermaid

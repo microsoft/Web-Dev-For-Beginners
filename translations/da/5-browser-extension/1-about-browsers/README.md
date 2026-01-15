@@ -25,7 +25,7 @@ journey
       Fejlret problemer: 4: Student
       Finpuds oplevelse: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/da/browser.60317c9be8b7f84a.jpg)
+![Browser sketchnote](../../../../translated_images/da/browser.60317c9be8b7f84a.webp)
 > Sketchnote af [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Forudgående Quiz
@@ -77,7 +77,7 @@ Denne proces afspejler, hvordan den første webbrowser, WorldWideWeb, blev desig
 
 ✅ **Lidt historie**: Den første browser hed 'WorldWideWeb' og blev skabt af Sir Timothy Berners-Lee i 1990.
 
-![early browsers](../../../../translated_images/da/earlybrowsers.d984b711cdf3a42d.jpg)
+![early browsers](../../../../translated_images/da/earlybrowsers.d984b711cdf3a42d.webp)
 > Nogle tidlige browsere, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Hvordan Browsere Behandler Webindhold
@@ -194,7 +194,7 @@ quadrantChart
 
 At forstå installationsprocessen for udvidelser hjælper dig med at forudse brugeroplevelsen, når folk installerer din udvidelse. Installationsprocessen er standardiseret på tværs af moderne browsere med mindre variationer i grænsefladedesign.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/da/install-on-edge.d68781acaf0b3d3d.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/da/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Vigtigt**: Sørg for at slå udviklertilstand til og tillade udvidelser fra andre butikker, når du tester dine egne udvidelser.
 
@@ -308,10 +308,10 @@ Dette følger princippet om gradvis afsløring, brugt i interface design siden d
 ### Oversigt over Udvidelsesvisninger
 
 **Opsætningsvisning** – første gangs bruger-konfiguration:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/da/1.b6da8c1394b07491.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/da/1.b6da8c1394b07491.webp)
 
 **Resultatvisning** – visning af kulstofaftrykdata:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/da/2.1dae52ff08042246.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/da/2.1dae52ff08042246.webp)
 
 ### Bygning af Konfigurationsformularen
 

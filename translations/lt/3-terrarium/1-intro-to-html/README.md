@@ -25,7 +25,7 @@ journey
       Pagerinti prieinamumą: 5: Studentas
       Sukurti terariumą: 5: Studentas
 ```
-![Įvadas į HTML](../../../../translated_images/lt/webdev101-html.4389c2067af68e98.png)
+![Įvadas į HTML](../../../../translated_images/lt/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML arba HyperText Markup Language yra kiekvieno jūsų lankyto interneto svetainės pagrindas. Galvokite apie HTML kaip apie skeletą, kuris suteikia struktūrą tinklalapiams – jis apibrėžia, kur dedamas turinys, kaip jis organizuotas ir ką kiekvienas elementas reiškia. Nors CSS vėliau „papuoš“ jūsų HTML spalvomis ir išdėstymu, o JavaScript suteiks jam gyvybės su interaktyvumu, HTML suteikia būtiną struktūrą, dėl kurios visa kita tampa įmanoma.
@@ -86,7 +86,7 @@ Sukursite atskirą aplanką savo terariumo projektui ir pridėsite pirmąjį HTM
 4. „Explorer“ lange spauskite „New File“ ikoną  
 5. Pavadinkite savo failą `index.html`
 
-![VS Code Explorer rodo naujo failo kūrimą](../../../../translated_images/lt/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer rodo naujo failo kūrimą](../../../../translated_images/lt/vs-code-index.e2986cf919471eb9.webp)
 
 **Variantas 2: Naudojant terminalo komandas**  
 ```bash

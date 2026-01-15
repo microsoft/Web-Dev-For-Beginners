@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # प्रवेशयोग्य वेबपृष्ठ तयार करणे
 
-![सर्व काही प्रवेशयोग्यतेबद्दल](../../../../translated_images/mr/webdev101-a11y.8ef3025c858d897a.png)
+![सर्व काही प्रवेशयोग्यतेबद्दल](../../../../translated_images/mr/webdev101-a11y.8ef3025c858d897a.webp)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांनी तयार केले आहे
 
 ```mermaid

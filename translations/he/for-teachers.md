@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - ל-Moodle Cloud יש תמיכה מוגבלת ב-Common Cartridge. העדיפו את קובץ Moodle לעיל, שניתן גם להעלות ל-Canvas.
   - לאחר הייבוא, בדקו מודולים, תאריכי יעד והגדרות מבחנים כדי להתאים ללוח הזמנים של הסמסטר שלכם.
 
-![Moodle](../../translated_images/he/moodle.94eb93d714a50cb2.png)
+![Moodle](../../translated_images/he/moodle.94eb93d714a50cb2.webp)
 > תוכנית הלימודים בכיתה של Moodle
 
-![Canvas](../../translated_images/he/canvas.fbd605ff8e5b8aff.png)
+![Canvas](../../translated_images/he/canvas.fbd605ff8e5b8aff.webp)
 > תוכנית הלימודים ב-Canvas
 
 ### שימוש במאגר ישירות (ללא Classroom)

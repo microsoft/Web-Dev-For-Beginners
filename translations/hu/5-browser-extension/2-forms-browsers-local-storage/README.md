@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Mentett adatok törlése
     ClearStorage --> FirstTime: Vissza a beállításhoz
 ```
-![Local storage panel](../../../../translated_images/hu/localstorage.472f8147b6a3f8d1.png)
+![Local storage panel](../../../../translated_images/hu/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Biztonsági megfontolás**: Termelési alkalmazásokban az API kulcsok LocalStorage-ben történő tárolása biztonsági kockázatokat rejt, mivel JavaScript hozzáférhet ezekhez az adatokhoz. Tanulási céllal ez az eljárás elfogadható, de éles alkalmazások esetén biztonságos szerveroldali tárolás javasolt.
 

@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 함께 한 걸음씩 천천히 배워 나가 보겠습니다. 서두르지 않고, 압박감 없이 – 여러분과 저, 그리고 여러분의 새 친구가 될 몇 가지 멋진 도구들만 있을 거예요!
 
-![Intro to GitHub](../../../../translated_images/ko/webdev101-github.8846d7971abef6f9.png)
+![Intro to GitHub](../../../../translated_images/ko/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ flowchart TD
 
 ✅ '초보자 친화적인' 저장소를 찾는 좋은 방법은 [‘good-first-issue’ 태그로 검색하기](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)입니다.
 
-![Copy a repo locally](../../../../translated_images/ko/clone_repo.5085c48d666ead57.png)
+![Copy a repo locally](../../../../translated_images/ko/clone_repo.5085c48d666ead57.webp)
 
 코드를 복사하는 방법은 여러 가지가 있습니다. 한 가지 방법은 저장소 내용을 HTTPS, SSH, 또는 GitHub CLI(명령줄 인터페이스)를 사용하여 "clone"하는 것입니다.
 

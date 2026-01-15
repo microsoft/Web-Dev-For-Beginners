@@ -644,7 +644,7 @@ sequenceDiagram
 
 `history.pushState`를 사용하면 브라우저 내비게이션 히스토리에 새 항목이 만들어집니다. 브라우저의 *뒤로 버튼*을 길게 누르면 다음과 같은 내비게이션 히스토리 목록을 볼 수 있습니다:
 
-![Screenshot of navigation history](../../../../translated_images/ko/history.7fdabbafa521e064.png)
+![Screenshot of navigation history](../../../../translated_images/ko/history.7fdabbafa521e064.webp)
 
 뒤로 버튼을 몇 번 눌러 보면 현재 URL은 바뀌고 히스토리가 업데이트되지만, 여전히 같은 템플릿만 표시되는 것을 볼 수 있습니다.
 

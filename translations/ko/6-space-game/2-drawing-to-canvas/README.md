@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![the canvas's grid](../../../../translated_images/ko/canvas_grid.5f209da785ded492.png)
+![the canvas's grid](../../../../translated_images/ko/canvas_grid.5f209da785ded492.webp)
 > 이미지 출처 [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 캔버스에 그림을 그리려면, 모든 캔버스 그래픽의 토대가 되는 세 단계 과정을 따라야 합니다. 몇 번 해보면 자연스러워집니다:
@@ -323,11 +323,11 @@ Canvas 요소가 있는 웹 페이지를 만듭니다. 검은색 배경에 크�
 
 - 영웅 우주선
 
-   ![Hero ship](../../../../translated_images/ko/player.dd24c1afa8c71e9b.png)
+   ![Hero ship](../../../../translated_images/ko/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 몬스터 편대
 
-   ![Monster ship](../../../../translated_images/ko/enemyShip.5df2a822c16650c2.png)
+   ![Monster ship](../../../../translated_images/ko/enemyShip.5df2a822c16650c2.webp)
 
 ### 개발 시작을 위한 권장 단계
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 완성된 결과는 다음과 같이 보여야 합니다:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/ko/partI-solution.36c53b48c9ffae2a.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/ko/partI-solution.36c53b48c9ffae2a.webp)
 
 ## 해결책
 

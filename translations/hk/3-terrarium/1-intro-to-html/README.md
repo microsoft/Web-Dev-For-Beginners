@@ -25,7 +25,7 @@ journey
       Enhance accessibility: 5: Student
       Build terrarium: 5: Student
 ```
-![Introduction to HTML](../../../../translated_images/hk/webdev101-html.4389c2067af68e98.png)
+![Introduction to HTML](../../../../translated_images/hk/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote 由 [Tomomi Imura](https://twitter.com/girlie_mac) 製作
 
 HTML，或稱超文字標記語言，是你曾造訪過的每個網站的基礎。將 HTML 想像成提供網頁結構的骨架——它定義內容的位置、組織方式以及每個部分的意義。雖然稍後 CSS 會為你的 HTML 加上顏色與版面配置，JavaScript 則會讓它具有互動性，但 HTML 提供了讓一切成為可能的必要結構。
@@ -86,7 +86,7 @@ mindmap
 4. 在檔案總管側邊欄，點擊「新增檔案」圖示
 5. 將檔案命名為 `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/hk/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/hk/vs-code-index.e2986cf919471eb9.webp)
 
 **方案二：使用終端機指令**
 ```bash

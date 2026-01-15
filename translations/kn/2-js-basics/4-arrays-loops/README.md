@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript ಮೂಲಭೂತಗಳು: ಅರೆಗಳು ಮತ್ತು ಲೂಪ್ಗಳು
 
-![JavaScript ಮೂಲಭೂತಗಳು - ಅರೆಗಳು](../../../../translated_images/kn/webdev101-js-arrays.439d7528b8a29455.png)
+![JavaScript ಮೂಲಭೂತಗಳು - ಅರೆಗಳು](../../../../translated_images/kn/webdev101-js-arrays.439d7528b8a29455.webp)
 > ಟೊಮೊಮಿ ಇಮುರುವವರಿಂದ ಸ್ಕೆಚ್ ನೋಟ್ [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

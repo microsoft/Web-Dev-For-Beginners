@@ -78,7 +78,7 @@ VSCode.devではリポジトリを開くために少なくとも1つのファイ
 4. コミットメッセージを記入：「初期HTML構造を追加」
 5. 「Commit new file」をクリックして変更を保存
 
-![GitHubで初期ファイルを作成](../../../../translated_images/ja/new-file-github.com.c886796d800e8056.png)
+![GitHubで初期ファイルを作成](../../../../translated_images/ja/new-file-github.com.c886796d800e8056.webp)
 
 **この初期設定で達成されること：**
 - **HTML5ドキュメント構造**をセマンティック要素で確立
@@ -104,7 +104,7 @@ VSCode.devではリポジトリを開くために少なくとも1つのファイ
 
 ✅ **成功の指標**: Explorerサイドバーにプロジェクトファイルが表示され、メインエディタエリアで`index.html`が編集可能になります。
 
-![VSCode.devでプロジェクトを読み込む](../../../../translated_images/ja/project-on-vscode.dev.e79815a9a95ee7fe.png)
+![VSCode.devでプロジェクトを読み込む](../../../../translated_images/ja/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **インターフェースで見えるもの：**
 - **Explorerサイドバー**: リポジトリのファイルとフォルダ構造を表示
@@ -448,7 +448,7 @@ li:before {
 **インストール後の即時結果：**
 CodeSwingがインストールされると、履歴書ウェブサイトのライブプレビューがエディタに表示されます。これにより、変更を加えるたびにサイトの外観を正確に確認できます。
 
-![CodeSwing拡張機能によるライブプレビュー](../../../../translated_images/ja/after-codeswing-extension-pb.0ebddddcf73b5509.png)
+![CodeSwing拡張機能によるライブプレビュー](../../../../translated_images/ja/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **強化されたインターフェースの理解：**
 - **分割ビュー**: コードとライブプレビューを並べて表示

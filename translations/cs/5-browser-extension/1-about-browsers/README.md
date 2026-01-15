@@ -25,7 +25,7 @@ journey
       Ladit problémy: 4: Student
       Vylepšit uživatelský zážitek: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/cs/browser.60317c9be8b7f84a.jpg)
+![Browser sketchnote](../../../../translated_images/cs/browser.60317c9be8b7f84a.webp)
 > Sketchnote od [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Přednáškový kvíz
@@ -77,7 +77,7 @@ Tento proces odráží, jak byl první webový prohlížeč, WorldWideWeb, navr�
 
 ✅ **Trocha historie**: První prohlížeč se jmenoval 'WorldWideWeb' a vytvořil ho Sir Timothy Berners-Lee v roce 1990.
 
-![early browsers](../../../../translated_images/cs/earlybrowsers.d984b711cdf3a42d.jpg)
+![early browsers](../../../../translated_images/cs/earlybrowsers.d984b711cdf3a42d.webp)
 > Některé rané prohlížeče, podle [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Jak prohlížeče zpracovávají webový obsah
@@ -194,7 +194,7 @@ quadrantChart
 
 Porozumění procesu instalace rozšíření vám pomůže předvídat uživatelský zážitek při instalaci vašeho rozšíření. Proces instalace je standardizovaný v moderních prohlížečích s drobnými rozdíly v designu rozhraní.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/cs/install-on-edge.d68781acaf0b3d3d.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/cs/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Důležité**: Při testování vlastních rozšíření nezapomeňte zapnout režim vývojáře a povolit rozšíření z jiných obchodů.
 
@@ -308,10 +308,10 @@ Toto následuje princip postupného odhalování v designu rozhraní používan�
 ### Přehled zobrazení rozšíření
 
 **Nastavení** - konfigurace prvního použití:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/cs/1.b6da8c1394b07491.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/cs/1.b6da8c1394b07491.webp)
 
 **Výsledky** - zobrazení dat uhlíkové stopy:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/cs/2.1dae52ff08042246.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/cs/2.1dae52ff08042246.webp)
 
 ### Vytvoření konfiguračního formuláře
 

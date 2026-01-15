@@ -25,7 +25,7 @@ journey
       Подобряване на достъпността: 5: Student
       Създаване на терариум: 5: Student
 ```
-![Introduction to HTML](../../../../translated_images/bg/webdev101-html.4389c2067af68e98.png)
+![Introduction to HTML](../../../../translated_images/bg/webdev101-html.4389c2067af68e98.webp)
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML или HyperText Markup Language е основата на всеки уебсайт, който някога сте посещавали. Помислете за HTML като за скелета, който дава структура на уеб страниците – той определя къде да отиде съдържанието, как е организирано и какво представлява всяка част. Докато CSS по-късно „облича“ вашия HTML с цветове и оформления, а JavaScript го оживява с интерактивност, HTML осигурява съществената структура, която прави всичко останало възможно.
@@ -86,7 +86,7 @@ mindmap
 4. В панела Explorer кликнете иконата за "New File"
 5. Наименувайте файла си `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/bg/vs-code-index.e2986cf919471eb9.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/bg/vs-code-index.e2986cf919471eb9.webp)
 
 **Опция 2: Използване на команди в терминала**
 ```bash

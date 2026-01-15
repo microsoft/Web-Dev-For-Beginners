@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 기초: 의사 결정
 
-![JavaScript Basics - Making decisions](../../../../translated_images/ko/webdev101-js-decisions.69e1b20f272dd1f0.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/ko/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > 스케치노트 작성자 [Tomomi Imura](https://twitter.com/girlie_mac)
 

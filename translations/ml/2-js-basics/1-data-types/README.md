@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ: ഡേറ്റാ ടൈപ്പുകൾ
 
-![JavaScript Basics - Data types](../../../../translated_images/ml/webdev101-js-datatypes.4cc470179730702c.png)
+![JavaScript Basics - Data types](../../../../translated_images/ml/webdev101-js-datatypes.4cc470179730702c.webp)
 > സ്കെച്ഛ് നോട്ടു [Tomomi Imura](https://twitter.com/girlie_mac) tarafından hazırlandı.
 
 ```mermaid

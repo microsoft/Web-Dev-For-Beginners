@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 आपण एकत्रितपणे हा प्रवास करू, एक पाऊल एकावेळी. घाई नाही, दबाव नाही – फक्त तुम्ही, मी आणि काही खरोखर छान साधने जी तुमचे नवीन सर्वोत्तम मित्र बनणार आहेत!
 
-![GitHub परिचय](../../../../translated_images/mr/webdev101-github.8846d7971abef6f9.png)
+![GitHub परिचय](../../../../translated_images/mr/webdev101-github.8846d7971abef6f9.webp)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांच्याकडून
 
 ```mermaid
@@ -562,7 +562,7 @@ flowchart TD
 
 ✅ 'नवशिक्यांसाठी अनुकूल' रेपॉजिटरी शोधण्याचा चांगला मार्ग म्हणजे [टॅग 'good-first-issue' द्वारे शोधा](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![रेपो स्थानिक स्तरावर कॉपी करा](../../../../translated_images/mr/clone_repo.5085c48d666ead57.png)
+![रेपो स्थानिक स्तरावर कॉपी करा](../../../../translated_images/mr/clone_repo.5085c48d666ead57.webp)
 
 कोड कॉपी करण्याचे अनेक मार्ग आहेत. एक मार्ग म्हणजे रेपॉजिटरीची सामग्री "क्लोन" करणे, HTTPS, SSH किंवा GitHub CLI (कमांड लाइन इंटरफेस) वापरून.
 

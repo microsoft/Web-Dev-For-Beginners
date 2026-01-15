@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![canvas'i võrk](../../../../translated_images/et/canvas_grid.5f209da785ded492.png)
+![canvas'i võrk](../../../../translated_images/et/canvas_grid.5f209da785ded492.webp)
 > Pilt pärit [MDN-ist](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Canvas elemendi joonistamiseks järgid kolme sammuga protsessi, mis moodustab kõigi canvas graafika aluse. Kui seda mõned korrad teha, saab see loomuomaseks:
@@ -323,11 +323,11 @@ Ehitad veebilehe Canvas elemendiga. See kuvab musta taustaga ekraani mõõtmeteg
 
 - Kangelase laev
 
-   ![Hero ship](../../../../translated_images/et/player.dd24c1afa8c71e9b.png)
+   ![Hero ship](../../../../translated_images/et/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 koletise laev
 
-   ![Monster ship](../../../../translated_images/et/enemyShip.5df2a822c16650c2.png)
+   ![Monster ship](../../../../translated_images/et/enemyShip.5df2a822c16650c2.webp)
 
 ### Soovitatud arengusammud
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Lõpetatud tulemus peaks välja nägema selline:
 
-![Musta taustaga ekraan kangelase ja 5*5 monsterdega](../../../../translated_images/et/partI-solution.36c53b48c9ffae2a.png)
+![Musta taustaga ekraan kangelase ja 5*5 monsterdega](../../../../translated_images/et/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Lahendus
 

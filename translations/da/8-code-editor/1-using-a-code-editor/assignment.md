@@ -78,7 +78,7 @@ Da VSCode.dev kræver mindst én fil for at åbne et repository, opretter vi vor
 4. **Skriv** en commit-besked: "Tilføj indledende HTML-struktur"
 5. **Klik** på "Commit new file" for at gemme dine ændringer
 
-![Oprettelse af indledende fil på GitHub](../../../../translated_images/da/new-file-github.com.c886796d800e8056.png)
+![Oprettelse af indledende fil på GitHub](../../../../translated_images/da/new-file-github.com.c886796d800e8056.webp)
 
 **Dette opnår den indledende opsætning:**
 - **Etablerer** korrekt HTML5-dokumentstruktur med semantiske elementer
@@ -104,7 +104,7 @@ Nu hvor fundamentet for dit repository er etableret, lad os skifte til VSCode.de
 
 ✅ **Succesindikator**: Du bør se dine projektfiler i Explorer-sidepanelet og `index.html` tilgængelig for redigering i hovededitorområdet.
 
-![Projekt indlæst i VSCode.dev](../../../../translated_images/da/project-on-vscode.dev.e79815a9a95ee7fe.png)
+![Projekt indlæst i VSCode.dev](../../../../translated_images/da/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Hvad du vil se i grænsefladen:**
 - **Explorer-sidepanel**: **Viser** dine repository-filer og mappestruktur
@@ -448,7 +448,7 @@ Udvidelser forbedrer din udviklingsoplevelse ved at give live preview-muligheder
 **Umiddelbare resultater efter installation:**
 Når CodeSwing er installeret, vil du se et live preview af din CV-hjemmeside vises i editoren. Dette giver dig mulighed for at se præcis, hvordan din side ser ud, mens du foretager ændringer.
 
-![CodeSwing-udvidelse viser live preview](../../../../translated_images/da/after-codeswing-extension-pb.0ebddddcf73b5509.png)
+![CodeSwing-udvidelse viser live preview](../../../../translated_images/da/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Forstå den forbedrede grænseflade:**
 - **Split view**: **Viser** din kode på den ene side og live preview på den anden

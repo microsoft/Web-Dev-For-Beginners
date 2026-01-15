@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Returnerer komplet HTML-side
     Browser->>User: Viser ny side (flash/genindlæsning)
 ```
-![Opdateringsworkflow i en multi-side applikation](../../../../translated_images/da/mpa.7f7375a1a2d4aa77.png)
+![Opdateringsworkflow i en multi-side applikation](../../../../translated_images/da/mpa.7f7375a1a2d4aa77.webp)
 
 **Hvorfor denne tilgang føltes klodset:**
 - Hvert klik betød, at hele siden skulle bygges op fra bunden
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Opdaterer specifikke sideelementer
     Browser->>User: Viser opdateret indhold (ingen genindlæsning)
 ```
-![Opdateringsworkflow i en single-page applikation](../../../../translated_images/da/spa.268ec73b41f992c2.png)
+![Opdateringsworkflow i en single-page applikation](../../../../translated_images/da/spa.268ec73b41f992c2.webp)
 
 **Hvorfor SPAs føles meget bedre:**
 - Kun de dele, der rent faktisk ændrer sig, opdateres (smart, ikke?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Når du nu tester med en ugyldig konto, vil du se en hjælpsom fejlmeddelelse direkte på siden!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/da/login-error.416fe019b36a6327.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/da/login-error.416fe019b36a6327.webp)
 
 #### Trin 4: Vær inkluderende med tilgængelighed
 
@@ -950,7 +950,7 @@ Klar til at tage din bankapp til næste niveau? Lad os få den til at se ud og f
 
 Sådan kunne et poleret dashboard se ud:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/da/screen2.123c82a831a1d14a.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/da/screen2.123c82a831a1d14a.webp)
 
 Føl dig ikke forpligtet til at matche det præcist – brug det som inspiration og gør det til dit eget!
 

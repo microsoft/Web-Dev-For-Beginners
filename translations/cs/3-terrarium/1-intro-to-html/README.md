@@ -25,7 +25,7 @@ journey
       Zlepšit přístupnost: 5: Student
       Postavit terárium: 5: Student
 ```
-![Úvod do HTML](../../../../translated_images/cs/webdev101-html.4389c2067af68e98.png)
+![Úvod do HTML](../../../../translated_images/cs/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, neboli HyperText Markup Language, je základem každé webové stránky, kterou jste kdy navštívili. Představte si HTML jako kostru, která dodává webovým stránkám strukturu – definuje, kam obsah patří, jak je uspořádán a co který prvek představuje. Zatímco CSS později „oblékne“ váš HTML do barev a rozvržení a JavaScript ho oživí interaktivitou, HTML poskytuje základní strukturu, díky níž je vše ostatní možné.
@@ -86,7 +86,7 @@ Vytvoříte dedikovanou složku pro váš teráriový projekt a přidáte první
 4. V panelu Průzkumník klikněte na ikonu „Nový soubor“
 5. Pojmenujte svůj soubor `index.html`
 
-![Průzkumník VS Code ukazující vytvoření nového souboru](../../../../translated_images/cs/vs-code-index.e2986cf919471eb9.png)
+![Průzkumník VS Code ukazující vytvoření nového souboru](../../../../translated_images/cs/vs-code-index.e2986cf919471eb9.webp)
 
 **Možnost 2: Použití příkazového řádku**
 ```bash
