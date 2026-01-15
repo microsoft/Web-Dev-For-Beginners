@@ -292,7 +292,7 @@ Először nézzük meg, mi történik alapvető űrlap beküldéssel:
 2. Figyeld meg a böngésző címsávjának változását
 3. Jegyezd meg, hogy az oldal újratöltődik és az adatok megjelennek az URL-ben
 
-![Képernyőkép a böngésző URL változásáról a Regisztráció gomb kattintása után](../../../../translated_images/click-register.e89a30bf0d4bc9ca.hu.png)
+![Képernyőkép a böngésző URL változásáról a Regisztráció gomb kattintása után](../../../../translated_images/hu/click-register.e89a30bf0d4bc9ca.png)
 
 ### HTTP metódusok összehasonlítása
 
@@ -346,7 +346,7 @@ Konfiguráljuk a regisztrációs űrlapodat, hogy megfelelően kommunikáljon a 
 2. **Kattints** a "Fiók létrehozása" gombra
 3. **Figyeld meg** a szerver válaszát a böngésződben
 
-![Böngésző ablak a localhost:5000/api/accounts címen, amely egy JSON sztringet mutat felhasználói adatokkal](../../../../translated_images/form-post.61de4ca1b964d91a.hu.png)
+![Böngésző ablak a localhost:5000/api/accounts címen, amely egy JSON sztringet mutat felhasználói adatokkal](../../../../translated_images/hu/form-post.61de4ca1b964d91a.png)
 
 **Amit látnod kell:**
 - **Böngésző átirányít** az API végpont URL-jére
@@ -609,7 +609,7 @@ async function register() {
 3. **Kattints** a „Fiók létrehozása” gombra
 4. **Figyeld** a konzol üzeneteket és a felhasználói visszajelzést
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.hu.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/hu/browser-console.efaf0b51aaaf6778.png)
 
 **Mit kell látnod:**
 - **Betöltési állapot** jelenik meg a küldés gombon
@@ -783,7 +783,7 @@ Fejlesszük tovább a regisztrációs űrlapodat robusztus validációval, ami k
 3. **Próbálj meg** különleges karaktereket a felhasználónév mezőbe
 4. **Add meg** negatív egyenleg értéket
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.hu.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/hu/validation-error.8bd23e98d416c22f.png)
 
 **Mit fogsz tapasztalni:**
 - **A böngésző megjeleníti** a natív validációs üzeneteket
@@ -943,7 +943,7 @@ Mutass meg egy hibaüzenetet az HTML-ben, ha a felhasználó már létezik.
 
 Íme egy példa arra, hogy nézhet ki a végleges bejelentkezési oldal egy kis stílus hozzáadása után:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.hu.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/hu/result.96ef01f607bf856a.png)
 
 ## Óra utáni kvíz
 

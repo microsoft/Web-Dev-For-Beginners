@@ -42,10 +42,10 @@ Kurikulum ini mencakup paket yang dapat diimpor untuk alur kerja LMS umum.
   - Moodle Cloud memiliki dukungan Common Cartridge yang terbatas. Lebih baik gunakan file Moodle di atas, yang juga dapat diunggah ke Canvas.
   - Setelah diimpor, tinjau modul, tanggal jatuh tempo, dan pengaturan kuis agar sesuai dengan jadwal semester Anda.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.id.png)
+![Moodle](../../translated_images/id/moodle.94eb93d714a50cb2.png)
 > Kurikulum di kelas Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.id.png)
+![Canvas](../../translated_images/id/canvas.fbd605ff8e5b8aff.png)
 > Kurikulum di Canvas
 
 ### Penggunaan repositori secara langsung (tanpa Classroom)

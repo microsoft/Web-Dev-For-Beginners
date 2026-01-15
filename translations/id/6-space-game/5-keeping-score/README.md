@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Sistem skor**: Setiap kapal musuh yang dihancurkan memberikan 100 poin (angka bulat lebih mudah dihitung secara mental oleh pemain). Skor ditampilkan di sudut kiri bawah.
-- **Penghitung nyawa**: Pahlawan Anda memulai dengan tiga nyawa - standar yang ditetapkan oleh game arcade awal untuk menyeimbangkan tantangan dengan kemampuan bermain. Setiap tabrakan dengan musuh mengurangi satu nyawa. Kita akan menampilkan nyawa yang tersisa di sudut kanan bawah menggunakan ikon kapal ![gambar nyawa](../../../../translated_images/life.6fb9f50d53ee0413.id.png).
+- **Penghitung nyawa**: Pahlawan Anda memulai dengan tiga nyawa - standar yang ditetapkan oleh game arcade awal untuk menyeimbangkan tantangan dengan kemampuan bermain. Setiap tabrakan dengan musuh mengurangi satu nyawa. Kita akan menampilkan nyawa yang tersisa di sudut kanan bawah menggunakan ikon kapal ![gambar nyawa](../../../../translated_images/id/life.6fb9f50d53ee0413.png).
 
 ## Mari Mulai Membangun!
 

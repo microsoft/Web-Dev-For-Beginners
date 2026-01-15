@@ -123,7 +123,7 @@ Az Edge fejlesztői eszközeinek megnyitásához kattints a jobb felső sarokban
 
 Próbáljuk ki! Nyiss meg egy weboldalt (a Microsoft.com jól működik ehhez), és kattints a 'Felvétel' gombra. Most frissítsd az oldalt, és figyeld, ahogy a profiler felveszi, mi történik. Amikor leállítod a felvételt, részletes bontást látsz arról, hogyan 'szkriptel', 'renderel' és 'fest' a böngésző. Ez olyan, mint amikor a küldetésirányítás minden rendszert figyel egy űrrakéta indításakor – valós idejű adatokat kapsz arról, mi történik és mikor.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.hu.png)
+![Edge profiler](../../../../translated_images/hu/profiler.5a4a62479c5df01c.png)
 
 ✅ A [Microsoft dokumentáció](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) rengeteg további részletet tartalmaz, ha mélyebben bele akarsz nézni
 
@@ -133,11 +133,11 @@ Jelölj ki a profil idővonalából eseményeket, hogy közelről lásd a betöl
 
 Készíts pillanatképet az oldal teljesítményéről az idővonal egy részének kijelölésével, és nézd meg az összefoglaló panelt:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.hu.png)
+![Edge profiler snapshot](../../../../translated_images/hu/snapshot.97750180ebcad737.png)
 
 Nézd meg az Eseménynapló panelt, hogy történt-e 15 ms-nál hosszabb esemény:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.hu.png)
+![Edge event log](../../../../translated_images/hu/log.804026979f3707e0.png)
 
 ✅ Ismerkedj meg a profilerrel! Nyisd meg a fejlesztői eszközöket ezen az oldalon, és nézd meg, van-e valahol szűk keresztmetszet. Melyik a leglassabban betöltődő erőforrás? A leggyorsabb?
 

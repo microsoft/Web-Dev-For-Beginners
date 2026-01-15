@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Alapok: Tömbök és Ciklusok
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.hu.png)
+![JavaScript Basics - Arrays](../../../../translated_images/hu/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

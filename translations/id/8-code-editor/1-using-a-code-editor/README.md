@@ -185,7 +185,7 @@ Seperti bagaimana telepon Alexander Graham Bell menghubungkan lokasi yang jauh, 
 
 Setelah semuanya dimuat, Anda akan melihat ruang kerja yang bersih dan indah yang dirancang untuk membuat Anda fokus pada hal yang penting – kode Anda!
 
-![Antarmuka default VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.id.png)
+![Antarmuka default VSCode.dev](../../../../translated_images/id/default-vscode-dev.5d06881d65c1b323.png)
 
 **Berikut tur singkatnya:**
 - **Activity Bar** (strip di sebelah kiri): Navigasi utama Anda dengan Explorer 📁, Pencarian 🔍, Source Control 🌿, Ekstensi 🧩, dan Pengaturan ⚙️
@@ -233,7 +233,7 @@ Ini sempurna saat Anda memulai dari awal di VSCode.dev dan ingin membuka reposit
 1. Pergi ke [vscode.dev](https://vscode.dev) jika Anda belum ada di sana
 2. Cari tombol "Open Remote Repository" di layar selamat datang dan klik
 
-   ![Buka repositori remote](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.id.png)
+   ![Buka repositori remote](../../../../translated_images/id/open-remote-repository.bd9c2598b8949e7f.png)
 
 3. Tempelkan URL repositori GitHub mana pun (coba yang ini: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Tekan Enter dan lihat keajaibannya!
@@ -242,7 +242,7 @@ Ini sempurna saat Anda memulai dari awal di VSCode.dev dan ingin membuka reposit
 
 Ingin merasa seperti penyihir kode? Coba pintasan keyboard ini: Ctrl+Shift+P (atau Cmd+Shift+P di Mac) untuk membuka Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.id.png)
+![Command Palette](../../../../translated_images/id/palette-menu.4946174e07f42622.png)
 
 **Command Palette seperti mesin pencari untuk semua yang bisa Anda lakukan:**
 - Ketik "open remote" dan itu akan menemukan pembuka repositori untuk Anda
@@ -304,7 +304,7 @@ Seperti mengatur cetak biru di kantor arsitek, pembuatan file di VSCode.dev meng
 3. Masukkan nama file termasuk ekstensi yang sesuai (`style.css`, `script.js`, `index.html`)
 4. Tekan Enter untuk membuat file
 
-![Membuat file baru](../../../../translated_images/create-new-file.2814e609c2af9aeb.id.png)
+![Membuat file baru](../../../../translated_images/id/create-new-file.2814e609c2af9aeb.png)
 
 **Konvensi penamaan:**
 - Gunakan nama deskriptif yang menunjukkan tujuan file
@@ -322,7 +322,7 @@ Di sinilah kesenangan sebenarnya dimulai! Editor VSCode.dev penuh dengan fitur y
 2. Mulai mengetik dan lihat VSCode.dev membantu Anda dengan warna, saran, dan deteksi kesalahan
 3. Simpan pekerjaan Anda dengan Ctrl+S (Windows/Linux) atau Cmd+S (Mac) – meskipun juga menyimpan otomatis!
 
-![Mengedit file di VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.id.png)
+![Mengedit file di VSCode.dev](../../../../translated_images/id/edit-a-file.52c0ee665ef19f08.png)
 
 **Hal keren yang terjadi saat Anda mengkode:**
 - Kode Anda diberi warna sehingga mudah dibaca
@@ -343,7 +343,7 @@ Seperti bagaimana arkeolog membuat catatan rinci tentang lapisan penggalian, Git
 2. File yang dimodifikasi muncul di bagian "Changes"
 3. Kode warna menunjukkan jenis perubahan: hijau untuk penambahan, merah untuk penghapusan
 
-![Melihat perubahan di Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.id.png)
+![Melihat perubahan di Source Control](../../../../translated_images/id/working-tree.c58eec08e6335c79.png)
 
 **Menyimpan pekerjaan Anda (alur kerja commit):**
 
@@ -438,7 +438,7 @@ Marketplace ekstensi sangat terorganisir, jadi Anda tidak akan tersesat saat men
 2. Jelajahi atau cari sesuatu yang spesifik
 3. Klik apa pun yang terlihat menarik untuk mempelajari lebih lanjut
 
-![Antarmuka marketplace ekstensi](../../../../translated_images/extensions.eca0e0c7f59a10b5.id.png)
+![Antarmuka marketplace ekstensi](../../../../translated_images/id/extensions.eca0e0c7f59a10b5.png)
 
 **Apa yang akan Anda temukan di sana:**
 
@@ -491,7 +491,7 @@ Sebagian besar ekstensi memiliki pengaturan yang dapat Anda sesuaikan agar beker
 3. Pilih "Pengaturan Ekstensi" dari dropdown
 4. Sesuaikan hingga terasa pas untuk alur kerja Anda
 
-![Menyesuaikan pengaturan ekstensi](../../../../translated_images/extension-settings.21c752ae4f4cdb78.id.png)
+![Menyesuaikan pengaturan ekstensi](../../../../translated_images/id/extension-settings.21c752ae4f4cdb78.png)
 
 **Hal-hal umum yang mungkin ingin Anda sesuaikan:**
 - Bagaimana kode Anda diformat (tab vs spasi, panjang baris, dll.)

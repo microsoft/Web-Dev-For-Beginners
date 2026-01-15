@@ -295,7 +295,7 @@ Per prima cosa, osserviamo cosa accade con l'invio di un modulo di base:
 2. Osserva i cambiamenti nella barra degli indirizzi del browser
 3. Nota come la pagina si ricarica e i dati appaiono nell'URL
 
-![Screenshot della modifica dell'URL del browser dopo aver cliccato sul pulsante Registrati](../../../../translated_images/click-register.e89a30bf0d4bc9ca.it.png)
+![Screenshot della modifica dell'URL del browser dopo aver cliccato sul pulsante Registrati](../../../../translated_images/it/click-register.e89a30bf0d4bc9ca.png)
 
 ### Confronto tra Metodi HTTP
 
@@ -350,7 +350,7 @@ Configuriamo il tuo modulo di registrazione per comunicare correttamente con l'A
 2. **Clicca** sul pulsante "Crea Account"
 3. **Osserva** la risposta del server nel tuo browser
 
-![Una finestra del browser all'indirizzo localhost:5000/api/accounts, che mostra una stringa JSON con i dati dell'utente](../../../../translated_images/form-post.61de4ca1b964d91a.it.png)
+![Una finestra del browser all'indirizzo localhost:5000/api/accounts, che mostra una stringa JSON con i dati dell'utente](../../../../translated_images/it/form-post.61de4ca1b964d91a.png)
 
 **Cosa dovresti vedere:**
 - **Il browser si reindirizza** all'URL del punto finale dell'API
@@ -615,7 +615,7 @@ async function register() {
 3. **Clicca** su "Crea Account"
 4. **Osserva** i messaggi della console e il feedback dell'utente
 
-![Screenshot che mostra il messaggio di log nella console del browser](../../../../translated_images/browser-console.efaf0b51aaaf6778.it.png)
+![Screenshot che mostra il messaggio di log nella console del browser](../../../../translated_images/it/browser-console.efaf0b51aaaf6778.png)
 
 **Cosa dovresti vedere:**
 - **Stato di caricamento** appare sul pulsante di invio
@@ -790,7 +790,7 @@ Miglioriamo il tuo modulo di registrazione con una validazione robusta che offre
 3. **Prova** caratteri speciali nel campo nome utente
 4. **Inserisci** un importo di saldo negativo
 
-![Screenshot che mostra l'errore di validazione quando si tenta di inviare il modulo](../../../../translated_images/validation-error.8bd23e98d416c22f.it.png)
+![Screenshot che mostra l'errore di validazione quando si tenta di inviare il modulo](../../../../translated_images/it/validation-error.8bd23e98d416c22f.png)
 
 **Cosa osserverai:**
 - **Il browser mostra** messaggi di validazione nativi
@@ -952,7 +952,7 @@ Mostra un messaggio di errore nell'HTML se l'utente esiste già.
 
 Ecco un esempio di come potrebbe apparire la pagina di login finale dopo un po' di styling:
 
-![Screenshot della pagina di login dopo aver aggiunto gli stili CSS](../../../../translated_images/result.96ef01f607bf856a.it.png)
+![Screenshot della pagina di login dopo aver aggiunto gli stili CSS](../../../../translated_images/it/result.96ef01f607bf856a.png)
 
 ## Quiz post-lezione
 

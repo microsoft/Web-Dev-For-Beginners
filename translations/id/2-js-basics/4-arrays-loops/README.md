@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Dasar-Dasar JavaScript: Array dan Loop
 
-![Dasar-Dasar JavaScript - Array](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.id.png)
+![Dasar-Dasar JavaScript - Array](../../../../translated_images/id/webdev101-js-arrays.439d7528b8a29455.png)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

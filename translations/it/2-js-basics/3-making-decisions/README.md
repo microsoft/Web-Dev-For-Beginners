@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fondamenti di JavaScript: Prendere decisioni
 
-![Fondamenti di JavaScript - Prendere decisioni](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.it.png)
+![Fondamenti di JavaScript - Prendere decisioni](../../../../translated_images/it/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 

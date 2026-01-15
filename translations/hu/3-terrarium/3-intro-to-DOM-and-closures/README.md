@@ -25,7 +25,7 @@ journey
       Teszteld a funkciókat: 5: Student
       Fejezd be a terráriumot: 5: Student
 ```
-![DOM és egy closure](../../../../translated_images/webdev101-js.10280393044d7eaa.hu.png)
+![DOM és egy closure](../../../../translated_images/hu/webdev101-js.10280393044d7eaa.png)
 > Vázlatrajz készítette [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Üdvözlünk a webfejlesztés egyik legizgalmasabb részénél – a dolgok interaktívvá tételénél! A Document Object Model (DOM) olyan, mint egy híd az HTML-ed és a JavaScript-ed között, és ma ezt fogjuk használni, hogy életre keltsük a terráriumodat. Amikor Tim Berners-Lee megalkotta az első webböngészőt, egy olyan webet képzelt el, ahol a dokumentumok dinamikusak és interaktívak lehetnek – a DOM teszi lehetővé ezt a látomást.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM fa ábrázolás](../../../../translated_images/dom-tree.7daf0e763cbbba92.hu.png)
+![DOM fa ábrázolás](../../../../translated_images/hu/dom-tree.7daf0e763cbbba92.png)
 
 > A DOM és az azt hivatkozó HTML jelölés ábrázolása. Forrás: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Closure-ök megértése**: A closure-ök jelentős téma a JavaScript-ben, és sok fejlesztő évekig használja őket anélkül, hogy minden elméleti részletet teljesen átlátna. Ma a gyakorlati alkalmazásra fókuszálunk – meglátod, hogy a closure-ök természetes módon jelennek meg, miközben interaktív funkciókat építünk. A megértés fejlődni fog, miközben látod, hogyan oldanak meg valódi problémákat.
 
-![DOM fa ábrázolás](../../../../translated_images/dom-tree.7daf0e763cbbba92.hu.png)
+![DOM fa ábrázolás](../../../../translated_images/hu/dom-tree.7daf0e763cbbba92.png)
 
 > A DOM és az azt hivatkozó HTML jelölés ábrázolása. Forrás: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Most teszteld az interaktív terráriumodat! Nyisd meg az `index.html` fájlodat
 - **Eszközök közötti támogatás**: Asztali és mobil támogatás
 - **Teljesítménytudatosság**: Nincs memóriaszivárgás vagy fölösleges számítás
 
-![befejezett terrárium](../../../../translated_images/terrarium-final.0920f16e87c13a84.hu.png)
+![befejezett terrárium](../../../../translated_images/hu/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

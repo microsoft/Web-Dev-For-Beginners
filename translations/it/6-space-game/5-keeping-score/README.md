@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Sistema di punteggio**: Ogni nave nemica distrutta assegna 100 punti (i numeri tondi sono più facili da calcolare mentalmente per i giocatori). Il punteggio viene mostrato nell'angolo in basso a sinistra.
-- **Contatore delle vite**: Il tuo eroe parte con tre vite - uno standard stabilito dai primi giochi arcade per bilanciare la sfida con la giocabilità. Ogni collisione con un nemico costa una vita. Mostreremo le vite rimanenti nell'angolo in basso a destra usando icone di navi ![immagine vita](../../../../translated_images/life.6fb9f50d53ee0413.it.png).
+- **Contatore delle vite**: Il tuo eroe parte con tre vite - uno standard stabilito dai primi giochi arcade per bilanciare la sfida con la giocabilità. Ogni collisione con un nemico costa una vita. Mostreremo le vite rimanenti nell'angolo in basso a destra usando icone di navi ![immagine vita](../../../../translated_images/it/life.6fb9f50d53ee0413.png).
 
 ## Cominciamo a Costruire!
 

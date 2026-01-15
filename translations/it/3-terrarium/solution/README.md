@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Una piccola meditazione di codice con drag and drop. Con un po' di HTML, JS e CSS, puoi creare un'interfaccia web, stilizzarla e aggiungere un'interazione.
 
-![il mio terrario](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.it.png)
+![il mio terrario](../../../../translated_images/it/screenshot_gray.0c796099a1f9f25e.png)
 
 ## Crediti
 

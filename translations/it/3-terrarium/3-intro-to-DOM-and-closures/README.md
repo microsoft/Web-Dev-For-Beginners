@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM e una closure](../../../../translated_images/webdev101-js.10280393044d7eaa.it.png)
+![DOM e una closure](../../../../translated_images/it/webdev101-js.10280393044d7eaa.png)
 > Sketchnote di [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Benvenuti in uno degli aspetti più coinvolgenti dello sviluppo web: rendere le cose interattive! Il Document Object Model (DOM) è come un ponte tra il tuo HTML e JavaScript, e oggi lo useremo per dare vita al tuo terrarium. Quando Tim Berners-Lee ha creato il primo browser web, immaginava un web in cui i documenti potessero essere dinamici e interattivi - il DOM rende possibile questa visione.
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![Rappresentazione dell'albero DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.it.png)
+![Rappresentazione dell'albero DOM](../../../../translated_images/it/dom-tree.7daf0e763cbbba92.png)
 
 > Una rappresentazione del DOM e del markup HTML che lo fa riferimento. Da [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **Comprendere le Closures**: Le closures sono un argomento significativo in JavaScript, e molti sviluppatori le usano per anni prima di comprendere appieno tutti gli aspetti teorici. Oggi ci concentreremo sull'applicazione pratica - vedrai che le closures emergono naturalmente mentre costruiamo le nostre funzionalità interattive. La comprensione si svilupperà man mano che vedrai come risolvono problemi reali.
 
-![Rappresentazione dell'albero DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.it.png)
+![Rappresentazione dell'albero DOM](../../../../translated_images/it/dom-tree.7daf0e763cbbba92.png)
 
 > Una rappresentazione del DOM e del markup HTML che lo fa riferimento. Da [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ Ora testa il tuo terrario interattivo! Apri il file `index.html` in un browser w
 - **Supporto cross-device**: Funziona su desktop e dispositivi mobili
 - **Consapevolezza delle prestazioni**: Nessuna perdita di memoria o calcoli ridondanti
 
-![terrario finito](../../../../translated_images/terrarium-final.0920f16e87c13a84.it.png)
+![terrario finito](../../../../translated_images/it/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

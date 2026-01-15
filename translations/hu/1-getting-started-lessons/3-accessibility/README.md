@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Akadálymentes weboldalak készítése
 
-![Mindent az akadálymentességről](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.hu.png)
+![Mindent az akadálymentességről](../../../../translated_images/hu/webdev101-a11y.8ef3025c858d897a.png)
 > Sketchnote [Tomomi Imura](https://twitter.com/girlie_mac) műve
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Az oldalodon található minden képnek célja van. E cél megértése segít jo
 
 **Tájékoztató képek** - fontos információt közvetítenek:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.hu.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/hu/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Dekoratív képek** - kizárólag vizuálisak, információértékkel nem bírnak:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.hu.png" alt="" role="presentation">
+<img src="../../../../translated_images/hu/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Funkcionális képek** - gombként vagy vezérlőként szolgálnak:
@@ -1066,7 +1066,7 @@ Az oldalodon található minden képnek célja van. E cél megértése segít jo
 
 **Összetett képek** - diagramok, grafikonok, infografikák:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.hu.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/hu/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Az oldalodon található minden képnek célja van. E cél megértése segít jo
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.hu.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/hu/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Teljes HTML oldalt ad vissza
     Browser->>User: Megjeleníti az új oldalt (villanás/újratöltés)
 ```
-![Frissítési folyamat sokoldalas alkalmazásban](../../../../translated_images/mpa.7f7375a1a2d4aa77.hu.png)
+![Frissítési folyamat sokoldalas alkalmazásban](../../../../translated_images/hu/mpa.7f7375a1a2d4aa77.png)
 
 **Miért volt kényelmetlen ez az eljárás:**
 - Minden kattintás az egész oldal újraépítését jelentette
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Frissíti a konkrét oldal elemeket
     Browser->>User: Megjeleníti a frissített tartalmat (újratöltés nélkül)
 ```
-![Frissítési folyamat egylapos alkalmazásban](../../../../translated_images/spa.268ec73b41f992c2.hu.png)
+![Frissítési folyamat egylapos alkalmazásban](../../../../translated_images/hu/spa.268ec73b41f992c2.png)
 
 **Miért jobb az SPA:**
 - Csak a ténylegesen változott részek frissülnek (okosan, ugye?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Most, ha hibás fiókkal próbálkozol, egy segítőkész hibaüzenetet fogsz látni az oldalon!
 
-![Képernyőkép a bejelentkezés közben megjelenő hibaüzenetről](../../../../translated_images/login-error.416fe019b36a6327.hu.png)
+![Képernyőkép a bejelentkezés közben megjelenő hibaüzenetről](../../../../translated_images/hu/login-error.416fe019b36a6327.png)
 
 #### 4. lépés: Legyél befogadó az akadálymentesítéssel
 
@@ -950,7 +950,7 @@ Készen állsz, hogy a banki alkalmazásodat a következő szintre emeld? Tegyü
 
 Így nézhet ki egy kidolgozott dashboard:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.hu.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/hu/screen2.123c82a831a1d14a.png)
 
 Nem kell pontosan ezt másolnod – használd inspirációnak és alakítsd saját ízlésed szerint!
 

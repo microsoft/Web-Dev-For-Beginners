@@ -187,7 +187,7 @@ Az [állapotkezelés](https://en.wikipedia.org/wiki/State_management) valójába
 
 Ahelyett, hogy körbe-körbe futnánk, létrehozunk egy **központosított állapotkezelő** rendszert. Gondolj rá úgy, mint egy igazán rendezett személyre, aki az összes fontos dologért felelős:
 
-![Séma az adatfolyamatokról a HTML, felhasználói műveletek és az állapot között](../../../../translated_images/data-flow.fa2354e0908fecc8.hu.png)
+![Séma az adatfolyamatokról a HTML, felhasználói műveletek és az állapot között](../../../../translated_images/hu/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Ez a kihívás segít neked úgy gondolkodni, mint egy professzionális fejleszt
 
 Íme egy példa eredmény a feladat elvégzése után:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.hu.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/hu/dialog.93bba104afeb79f1.png)
 
 ---
 

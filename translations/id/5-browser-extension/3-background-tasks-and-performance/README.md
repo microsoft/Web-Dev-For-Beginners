@@ -126,7 +126,7 @@ Untuk membuka Developer Tools di Edge, klik tiga titik di sudut kanan atas, lalu
 
 Mari kita coba ini. Buka sebuah situs web (Microsoft.com bekerja dengan baik untuk ini) dan klik tombol 'Record'. Sekarang segarkan halaman dan lihat profiler menangkap semua yang terjadi. Ketika Anda berhenti merekam, Anda akan melihat rincian mendetail tentang bagaimana browser 'menyusun', 'merender', dan 'melukis' situs tersebut. Ini mengingatkan saya pada bagaimana pusat kendali misi memantau setiap sistem selama peluncuran roket - Anda mendapatkan data waktu nyata tentang apa yang terjadi dan kapan.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.id.png)
+![Edge profiler](../../../../translated_images/id/profiler.5a4a62479c5df01c.png)
 
 ✅ [Dokumentasi Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) memiliki banyak detail jika Anda ingin mendalami lebih jauh
 
@@ -136,11 +136,11 @@ Pilih elemen dari timeline profil untuk memperbesar peristiwa yang terjadi saat 
 
 Dapatkan snapshot performa halaman Anda dengan memilih bagian dari timeline profil dan melihat panel ringkasan:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.id.png)
+![Edge profiler snapshot](../../../../translated_images/id/snapshot.97750180ebcad737.png)
 
 Periksa panel Event Log untuk melihat apakah ada peristiwa yang memakan waktu lebih dari 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.id.png)
+![Edge event log](../../../../translated_images/id/log.804026979f3707e0.png)
 
 ✅ Kenali profiler Anda! Buka developer tools di situs ini dan lihat apakah ada hambatan. Apa aset yang paling lambat dimuat? Yang tercepat?
 

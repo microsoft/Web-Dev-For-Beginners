@@ -182,7 +182,7 @@ Ahogyan Alexander Graham Bell telefonja távoli helyeket kötött össze, a GitH
 
 Miután minden betöltődött, egy gyönyörűen letisztult munkaterületet látsz, ami úgy van tervezve, hogy a fontos dolgokra – a kódodra! – koncentrálhass!
 
-![Alapértelmezett VSCode.dev felület](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.hu.png)
+![Alapértelmezett VSCode.dev felület](../../../../translated_images/hu/default-vscode-dev.5d06881d65c1b323.png)
 
 **Íme, a városrész bemutatója:**
 - **Aktivitás sáv** (bal oldali csík): a fő navigációd az Explorer 📁, Keresés 🔍, Forrás vezérlés 🌿, Kiegészítők 🧩 és Beállítások ⚙️ között
@@ -229,7 +229,7 @@ Ez tökéletes, ha frissen indulsz a VSCode.dev-ben és meg akarsz nyitni egy ko
 1. Lépj a [vscode.dev](https://vscode.dev) oldalra, ha még nem vagy ott
 2. Keresd meg a "Open Remote Repository" gombot a kezdőképernyőn, és kattints rá
 
-   ![Távoli tárhely megnyitása](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.hu.png)
+   ![Távoli tárhely megnyitása](../../../../translated_images/hu/open-remote-repository.bd9c2598b8949e7f.png)
 
 3. Illeszd be bármely GitHub tárhely URL-jét (próbáld ki ezt: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Nyomj Entert és figyeld a varázslatot!
@@ -238,7 +238,7 @@ Ez tökéletes, ha frissen indulsz a VSCode.dev-ben és meg akarsz nyitni egy ko
 
 Szeretnél kódvarázslónak érezni magad? Próbáld ezt a billentyűkombinációt: Ctrl+Shift+P (Macen Cmd+Shift+P), hogy megnyisd a Parancspalettát:
 
-![Parancspaletta](../../../../translated_images/palette-menu.4946174e07f42622.hu.png)
+![Parancspaletta](../../../../translated_images/hu/palette-menu.4946174e07f42622.png)
 
 **A Parancspaletta olyan, mint egy keresőmotor mindennek, amit csinálhatsz:**
 - Írd be, hogy "open remote", és megtalálja a távoli tárhely megnyitóját
@@ -300,7 +300,7 @@ Ahogy egy építész irodájában a tervrajzok rendszerezettek, úgy a fájl lé
 3. Írd be a fájl nevét a megfelelő kiterjesztéssel (`style.css`, `script.js`, `index.html`)
 4. Nyomj Entert a fájl létrehozásához
 
-![Új fájl létrehozása](../../../../translated_images/create-new-file.2814e609c2af9aeb.hu.png)
+![Új fájl létrehozása](../../../../translated_images/hu/create-new-file.2814e609c2af9aeb.png)
 
 **Névzési szabályok:**
 - Használj leíró neveket, amelyek jelzik a fájl célját
@@ -318,7 +318,7 @@ Itt kezdődik az igazi móka! A VSCode.dev szerkesztője tele van hasznos funkci
 2. Kezdj el gépelni és nézd, hogyan segít a VSCode.dev színekkel, javaslatokkal és hibafelismeréssel
 3. Mentsd el munkád Ctrl+S (Windows/Linux) vagy Cmd+S (Mac) billentyűkkel – de van automatikus mentés is!
 
-![Fájlok szerkesztése a VSCode.dev-ben](../../../../translated_images/edit-a-file.52c0ee665ef19f08.hu.png)
+![Fájlok szerkesztése a VSCode.dev-ben](../../../../translated_images/hu/edit-a-file.52c0ee665ef19f08.png)
 
 **Ügyes dolgok, amik közben történnek:**
 - Kódod gyönyörűen színezett, hogy könnyen olvasható legyen
@@ -339,7 +339,7 @@ Ahogy a régészek részletes feljegyzéseket készítenek a feltárás rétegei
 2. A módosított fájlok megjelennek a "Changes" (Változások) részben
 3. Színkódok jelzik a változtatások típusát: zöld a hozzáadások, piros a törlések
 
-![Változások megtekintése a Forráskezelőben](../../../../translated_images/working-tree.c58eec08e6335c79.hu.png)
+![Változások megtekintése a Forráskezelőben](../../../../translated_images/hu/working-tree.c58eec08e6335c79.png)
 
 **Munkád mentése (commit munkafolyamat):**
 
@@ -431,7 +431,7 @@ A kiterjesztés piactér nagyon jól szervezett, így nem fogsz eltévedni, amik
 2. Böngéssz, vagy keress valami konkrétat
 3. Kattints bármire, ami érdekesnek tűnik, hogy többet megtudj róla
 
-![Extension marketplace interface](../../../../translated_images/extensions.eca0e0c7f59a10b5.hu.png)
+![Extension marketplace interface](../../../../translated_images/hu/extensions.eca0e0c7f59a10b5.png)
 
 **Mit látsz ott:**
 
@@ -484,7 +484,7 @@ A legtöbb kiterjesztés beállításokkal rendelkezik, amelyeket módosíthatsz
 3. Válaszd az "Extension Settings" menüpontot a legördülőből
 4. Állítsd be, amíg a munkafolyamatodhoz pont megfelelőnek érzed
 
-![Customizing extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78.hu.png)
+![Customizing extension settings](../../../../translated_images/hu/extension-settings.21c752ae4f4cdb78.png)
 
 **Gyakori beállítási lehetőségek:**
 - Hogyan formázódjon a kódod (tabulátorok vagy szóközök, sorhossz, stb.)

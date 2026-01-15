@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```  
-![a canvas rácsa](../../../../translated_images/canvas_grid.5f209da785ded492.hu.png)  
+![a canvas rácsa](../../../../translated_images/hu/canvas_grid.5f209da785ded492.png)  
 > Kép az [MDN-ről](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 A canvas elemre való rajzolás egy háromlépéses folyamatot követ, amely az összes canvas grafika alapját képezi. Ha párszor elvégzed, természetes lesz:
@@ -323,11 +323,11 @@ Egy weboldalt fogsz építeni egy Canvas elemmel, ami egy 1024*768-as fekete ké
 
 - Hős űrhajó
 
-   ![Hős űrhajó](../../../../translated_images/player.dd24c1afa8c71e9b.hu.png)
+   ![Hős űrhajó](../../../../translated_images/hu/player.dd24c1afa8c71e9b.png)
 
 - 5x5-ös szörnyraj
 
-   ![Szörny űrhajó](../../../../translated_images/enemyShip.5df2a822c16650c2.hu.png)
+   ![Szörny űrhajó](../../../../translated_images/hu/enemyShip.5df2a822c16650c2.png)
 
 ### Fejlesztési lépések ajánlása
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 A kész eredmény így nézzen ki:
 
-![Fekete képernyő egy hőssel és 5*5 szörnnyel](../../../../translated_images/partI-solution.36c53b48c9ffae2a.hu.png)
+![Fekete képernyő egy hőssel és 5*5 szörnnyel](../../../../translated_images/hu/partI-solution.36c53b48c9ffae2a.png)
 
 ## Megoldás
 
