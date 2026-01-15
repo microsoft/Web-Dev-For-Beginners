@@ -29,7 +29,7 @@ journey
       பதிலளிக்கும் வடிவமைப்பு: 5: Student
       கண்ணாடி பிரதிபலிப்புகள்: 5: Student
 ```
-![CSS அறிமுகம்](../../../../translated_images/webdev101-css.3f7af5991bf53a20.ta.png)
+![CSS அறிமுகம்](../../../../translated_images/ta/webdev101-css.3f7af5991bf53a20.png)
 > ஸ்கெட்ச் நோட் [Tomomi Imura](https://twitter.com/girlie_mac) அவர்களின்
 
 உங்கள் HTML டெர்ரேரியம் எவ்வாறு அடிப்படையாகத் தெரியப்பட்டது என்பதை நினைவிருக்கிறதா? CSS என்பது அந்த சுலபமான அமைப்பை கண்ணுக்கு அழகான ஒன்றாக மாற்றும் இடமாகும்.
@@ -202,7 +202,7 @@ body {
 
 உங்கள் உலாவியின் டெவலப்பர் கருவிகள் (F12) திறந்து, Elements தாவலைத் திறந்து உங்கள் `<h1>` கூறைக் கண்காணிக்கவும். அது <body> இல் இருந்து மரபுரிமையோடு கொண்டுள்ள எழுத்துரு குடும்பத்தை காண்பிக்கும்:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.ta.png)
+![inherited font](../../../../translated_images/ta/1.cc07a5cbe114ad1d.png)
 
 ✅ **சோதனை நேரம்**: `<body>` இல் நீங்கள் மற்ற மரபுரிமை பெறக்கூடிய பண்புகளை அமைத்துப் பார்க்கலாம், உதாரணமாக `color`, `line-height`, அல்லது `text-align`. உங்கள் தலைப்பு மற்றும் பிற கூறுகளுக்கு என்ன நடக்கும்?
 
@@ -332,7 +332,7 @@ ID தேர்வீடுகள் `#` அடையாளத்துடன்
 **ஒவ்வொரு செடியின் HTML அமைப்பு:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.ta.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/ta/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Agent முறையைப் பயன்படுத்தி கீழ்க
 
 கண்ணாடி மேற்பரப்புகளில் வெளிச்சம் எப்படி பிரதிபலிக்கிறது என்பதை போல மென்மையான வெளிச்சங்களை உருவாக்க வேண்டியிருக்கும். இந்த முறையை ரெனசான்ஸ் ஓவியர்கள் ஜான் வான் ஐக் போன்றோர் படவணக்க கண்ணாடி மூலமான வெளிச்சங்களைக் காட்சிப்படுத்த பயன்படுத்தினர். நீங்கள் நோக்கி செல்ல வேண்டியது இதுதான்:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.ta.png)
+![finished terrarium](../../../../translated_images/ta/terrarium-final.2f07047ffc597d0a.png)
 
 **உங்கள் சவால்:**
 - **மென்மையான வெள்ளை அல்லது இலகுவான நிற oval வடிவங்களை** கண்ணாடி பிரதிபலிப்புகளுக்கு உருவாக்கவும்

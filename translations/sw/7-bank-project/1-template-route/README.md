@@ -644,7 +644,7 @@ sequenceDiagram
 
 Kutumia `history.pushState` huunda rekodi mpya kwenye historia ya uelekezaji ya kivinjari. Unaweza kuona hili kwa kushikilia *kitufe cha nyuma* cha kivinjari chako, kinapaswa kuonyesha kitu kama hiki:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.sw.png)
+![Screenshot of navigation history](../../../../translated_images/sw/history.7fdabbafa521e064.png)
 
 Ikiwa utajaribu kubofya kitufe cha nyuma mara kadhaa, utaona URL ya sasa inabadilika na historia inasasishwa, lakini template ile ile inaendelea kuonyeshwa.
 

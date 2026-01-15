@@ -25,7 +25,7 @@ journey
       Debug issues: 4: Student
       Polish experience: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.sw.jpg)
+![Browser sketchnote](../../../../translated_images/sw/browser.60317c9be8b7f84a.jpg)
 > Sketchnote na [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Mtihani wa Kabla ya Mahadhara
@@ -77,7 +77,7 @@ Mchakato huu unaendana na jinsi kivinjari cha kwanza cha wavuti, WorldWideWeb, k
 
 ✅ **Historia Kidogo**: Kivinjari cha kwanza kilikuwa kinaitwa 'WorldWideWeb' na kilifanywa na Sir Timothy Berners-Lee mwaka 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.sw.jpg)
+![early browsers](../../../../translated_images/sw/earlybrowsers.d984b711cdf3a42d.jpg)
 > Baadhi ya vivinjari vya awali, kupitia [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Jinsi Vivinjari Vinavyosindika Maudhui ya Wavuti
@@ -194,7 +194,7 @@ quadrantChart
 
 Kuelewa mchakato wa usakinishaji wa kiendelezi hukusaidia kutarajia uzoaji wa mtumiaji wakati watu wanaposakinisha kiendelezi chako. Mchakato wa usakinishaji umeboreshwa kwa vivinjari vya kisasa, na tofauti ndogo ndogo katika muundo wa interface.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.sw.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sw/install-on-edge.d68781acaf0b3d3d.png)
 
 > **Muhimu**: Hakikisha umeamilisha mode ya mwendelezaji na kuruhusu viendelezi kutoka maduka mengine wakati unajaribu viendelezi vyako binafsi.
 
@@ -308,10 +308,10 @@ Hii inafuata kanuni ya kufunua hatua kwa hatua inayotumika katika ubunifu wa int
 ### Muhtasari wa Maoni ya Kiendelezi
 
 **Muonekano wa Usanidi** - usanidi kwa mtumiaji mara ya kwanza:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.sw.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sw/1.b6da8c1394b07491.png)
 
 **Muonekano wa Matokeo** - maonyesho ya data ya athari ya kaboni:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.sw.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sw/2.1dae52ff08042246.png)
 
 ### Kujenga Fomu ya Usanidi
 

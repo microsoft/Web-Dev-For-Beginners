@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![gridi ya canvas](../../../../translated_images/canvas_grid.5f209da785ded492.sw.png)
+![gridi ya canvas](../../../../translated_images/sw/canvas_grid.5f209da785ded492.png)
 > Picha kutoka [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Ili kuchora kwenye kipengele cha canvas, utafuata mchakato wa hatua tatu unaounda msingi wa michoro yote ya canvas. Mara unavyofanya mara kadhaa, hutakuwa jambo gumu tena:
@@ -323,11 +323,11 @@ Utajenga ukurasa wa wavuti wenye kipengele cha Canvas. Inapaswa kuonyesha skrini
 
 - Meli ya shujaa
 
-   ![Meli ya shujaa](../../../../translated_images/player.dd24c1afa8c71e9b.sw.png)
+   ![Meli ya shujaa](../../../../translated_images/sw/player.dd24c1afa8c71e9b.png)
 
 - 5*5 monster
 
-   ![Meli ya monster](../../../../translated_images/enemyShip.5df2a822c16650c2.sw.png)
+   ![Meli ya monster](../../../../translated_images/sw/enemyShip.5df2a822c16650c2.png)
 
 ### Hatua zilizopendekezwa kuanza maendeleo
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Matokeo yaliyokamilika yanapaswa kuonekana kama ifuatavyo:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.sw.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/sw/partI-solution.36c53b48c9ffae2a.png)
 
 ## Suluhisho
 

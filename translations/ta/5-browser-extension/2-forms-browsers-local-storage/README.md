@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: சேமிக்கப்பட்ட தரவை அகற்று
     ClearStorage --> FirstTime: அமைப்பிற்கு திரும்பு
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.ta.png)
+![Local storage pane](../../../../translated_images/ta/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **பாதுகாப்பு கவனம்**: உற்பத்தி பயன்பாடுகளில், API விசைகளை LocalStorageயில் வைக்குவது பாதுகாப்பு ஆபத்துக்களை உருவாக்கும், ஏனெனில் JavaScript இவைகளை அணுக முடியும். கற்றலுக்கான நோக்கில் இது சரி, ஆனால் உண்மையான பயன்பாடுகள் நுண்ணறிந்த கிரிடென்ஷியல்களுக்கு பாதுகாப்பான சர்வர் பக்க சேமிப்பை பயன்படுத்த வேண்டும்.
 

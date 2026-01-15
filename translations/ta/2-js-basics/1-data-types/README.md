@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript அடிப்படைகள்: தரவுத் தரவுகள்
 
-![JavaScript அடிப்படைகள் - தரவுத் தரவுகள்](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.ta.png)
+![JavaScript அடிப்படைகள் - தரவுத் தரவுகள்](../../../../translated_images/ta/webdev101-js-datatypes.4cc470179730702c.png)
 > ஓவியம் [Tomomi Imura](https://twitter.com/girlie_mac) அவர்களால்
 
 ```mermaid

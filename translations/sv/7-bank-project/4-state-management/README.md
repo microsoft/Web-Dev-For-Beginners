@@ -187,7 +187,7 @@ Som Titanics delade design som verkade robust förrän flera fack samtidigt öve
 
 Istället för att jaga våra egna svansar ska vi skapa ett **centraliserat tillståndshanteringssystem**. Tänk på det som att ha en riktigt organiserad person som har hand om allt det viktiga:
 
-![Schema som visar dataflöden mellan HTML, användaråtgärder och tillstånd](../../../../translated_images/data-flow.fa2354e0908fecc8.sv.png)
+![Schema som visar dataflöden mellan HTML, användaråtgärder och tillstånd](../../../../translated_images/sv/data-flow.fa2354e0908fecc8.png)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Denna utmaning hjälper dig att tänka som en professionell utvecklare som beakt
 
 Här är ett exempelresultat efter att uppgiften är genomförd:
 
-![Skärmdump som visar ett exempel på dialogen "Lägg till transaktion"](../../../../translated_images/dialog.93bba104afeb79f1.sv.png)
+![Skärmdump som visar ett exempel på dialogen "Lägg till transaktion"](../../../../translated_images/sv/dialog.93bba104afeb79f1.png)
 
 ---
 

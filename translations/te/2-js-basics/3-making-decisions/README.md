@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # జావాస్క్రిప్ట్ బేసిక్స్: నిర్ణయాలు తీసుకోవడం
 
-![JavaScript Basics - Making decisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.te.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/te/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > స్కేట్ఛ్‌‌నోట్ [Tomomi Imura](https://twitter.com/girlie_mac) రచన
 

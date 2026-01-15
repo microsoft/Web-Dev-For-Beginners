@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # జావాస్క్రిప్ట్ బేసిక్స్: మెల్యాళ్లు మరియు ఫంక్షన్లు
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.te.png)
+![JavaScript Basics - Functions](../../../../translated_images/te/webdev101-js-functions.be049c4726e94f8b.png)
 > స్కెచ్ నోట్ చేసిన [టోమోమి ఇమురా](https://twitter.com/girlie_mac)
 
 ```mermaid

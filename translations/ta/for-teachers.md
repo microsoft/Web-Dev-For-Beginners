@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud-க்கு வரையறுக்கப்பட்ட Common Cartridge ஆதரவு உள்ளது. மேலே உள்ள Moodle கோப்பை விரும்பவும், இது Canvas-ல் கூட ஏற்றப்படலாம்.
   - இறக்குமதி செய்த பிறகு, உங்கள் கால அட்டவணைக்கு பொருந்த மாட்யூல்கள், கடைசித் தேதிகள் மற்றும் வினா அமைப்புகளை மதிப்பாய்வு செய்யவும்.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ta.png)
+![Moodle](../../translated_images/ta/moodle.94eb93d714a50cb2.png)
 > Moodle வகுப்பறையில் உள்ள பாடத்திட்டம்
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ta.png)
+![Canvas](../../translated_images/ta/canvas.fbd605ff8e5b8aff.png)
 > Canvas-ல் உள்ள பாடத்திட்டம்
 
 ### Repo-வை நேரடியாக பயன்படுத்துதல் (Classroom இல்லாமல்)

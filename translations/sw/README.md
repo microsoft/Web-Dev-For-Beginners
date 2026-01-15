@@ -72,13 +72,13 @@ Usikose mtaala wetu mpya wa AI Inayozalisha!
 
 Tembelea [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) kuanza!
 
-![Background](../../translated_images/background.148a8d43afde5730.sw.png)
+![Background](../../translated_images/sw/background.148a8d43afde5730.png)
 
 - Masomo yanayofunika kila kitu kutoka misingi hadi RAG.
 - Shirikiana na wahusika wa kihistoria ukitumia GenAI na programu yetu ya msaidizi.
 - Hadithi za kufurahisha na kuvutia, utasafiri kwa wakati!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.sw.png)
+![character](../../translated_images/sw/character.5c0dd8e067ffd693.png)
 
 
 Kila somo lina kazi ya kukamilisha, ukaguzi wa maarifa na changamoto ya kukuongoza kujifunza mada kama:
@@ -115,7 +115,7 @@ Fuata hatua hizi:
 
 Katika nakala yako ya repositori uliyounda, bonyeza kitufe cha **Code** na chagua **Fungua na Codespaces**. Hii itaunda Codespace mpya ya kufanya kazi ndani yake.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.sw.png)
+![Codespace](../../translated_images/sw/createcodespace.0238bbf4d7a8d955.png)
 
 #### Kuendesha mtaala ndani ya kompyuta yako
 

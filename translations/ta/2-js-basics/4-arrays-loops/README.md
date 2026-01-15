@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ஜாவாஸ்கிரிப்ட் அடிப்படைகள்: வரிசைகள் மற்றும் லூப்புகள்
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ta.png)
+![JavaScript Basics - Arrays](../../../../translated_images/ta/webdev101-js-arrays.439d7528b8a29455.png)
 > ஸ்கெட்ச்நோட் [தொமோமி இமுரா](https://twitter.com/girlie_mac) அவர்களால்
 
 ```mermaid

@@ -42,10 +42,10 @@ Mtaala huu unajumuisha pakiti zinazoweza kuingizwa kwa kazi za kawaida za LMS.
   - Moodle Cloud ina msaada mdogo wa Common Cartridge. Pendekeza faili ya Moodle hapo juu, ambayo pia inaweza kupakiwa kwenye Canvas.
   - Baada ya kuingiza, hakiki moduli, tarehe za mwisho, na mipangilio ya majaribio ili kuendana na ratiba ya muhula wako.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.sw.png)
+![Moodle](../../translated_images/sw/moodle.94eb93d714a50cb2.png)
 > Mtaala katika darasa la Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.sw.png)
+![Canvas](../../translated_images/sw/canvas.fbd605ff8e5b8aff.png)
 > Mtaala katika Canvas
 
 ### Kutumia hifadhi moja kwa moja (bila Classroom)

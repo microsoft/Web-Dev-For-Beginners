@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript அடிப்படைகள்: முடிவெடுப்பது
 
-![JavaScript அடிப்படைகள் - முடிவெடுப்பது](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ta.png)
+![JavaScript அடிப்படைகள் - முடிவெடுப்பது](../../../../translated_images/ta/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > ஸ்கெட்ச்னோட் [டொமோமி இமுறை](https://twitter.com/girlie_mac) அவர்களால்
 

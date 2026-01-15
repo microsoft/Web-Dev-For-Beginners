@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Så här kommer ditt färdiga projekt att se ut:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.sv.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/sv/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ Din läranderesa genom AI-applikationsutveckling
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Kärnprincip**: AI-applikationsutveckling kombinerar traditionella webbutvecklingsfärdigheter med AI-tjänsteintegration för att skapa intelligenta applikationer som känns naturliga och lyhörda för användare.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.sv.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/sv/playground.d2b927122224ff8f.png)
 
 **Det som gör playgrounden så användbar:**
 - **Testa** olika AI-modeller som GPT-4o-mini, Claude och fler (alla gratis!)
@@ -199,7 +199,7 @@ mindmap
 
 När du experimenterat klart klickar du bara på fliken "Code" och väljer programmeringsspråk för att få implementeringskoden du behöver.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.sv.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/sv/playground-choice.1d23ba7d407f4758.png)
 
 ## Sätta upp Python-backend-integration
 
@@ -2352,14 +2352,14 @@ Vill du prova detta projekt i en molnbaserad utvecklingsmiljö? GitHub Codespace
 - **Navigera** till [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Klicka** på "Use this template" uppe till höger (se till att du är inloggad på GitHub)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.sv.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/sv/template.67ad477109d29a2b.png)
 
 **Steg 2: Starta Codespaces**
 - **Öppna** ditt nyss skapade repository
 - **Klicka** på gröna "Code"-knappen och välj "Codespaces"
 - **Välj** "Create codespace on main" för att starta din utvecklingsmiljö
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.sv.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/sv/codespace.bcecbdf5d2747d3d.png)
 
 **Steg 3: Miljökonfiguration**
 När din Codespace är laddad får du tillgång till:

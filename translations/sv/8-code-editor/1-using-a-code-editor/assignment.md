@@ -78,7 +78,7 @@ Eftersom VSCode.dev kräver minst en fil för att öppna ett repository, kommer 
 4. **Skriv** ett commit-meddelande: "Lägg till initial HTML-struktur"
 5. **Klicka** på "Commit new file" för att spara dina ändringar
 
-![Skapa initial fil på GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.sv.png)
+![Skapa initial fil på GitHub](../../../../translated_images/sv/new-file-github.com.c886796d800e8056.png)
 
 **Det här uppnår den initiala inställningen:**
 - **Etablerar** korrekt HTML5-dokumentstruktur med semantiska element
@@ -104,7 +104,7 @@ Nu när grunden för ditt repository är etablerad, låt oss gå över till VSCo
 
 ✅ **Indikator för framgång**: Du bör se dina projektfiler i Explorer-sidofältet och `index.html` tillgänglig för redigering i huvudredigeringsområdet.
 
-![Projekt laddat i VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.sv.png)
+![Projekt laddat i VSCode.dev](../../../../translated_images/sv/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **Vad du kommer att se i gränssnittet:**
 - **Explorer-sidofält**: **Visar** dina repository-filer och mappstruktur
@@ -448,7 +448,7 @@ Tillägg förbättrar din utvecklingsupplevelse genom att tillhandahålla live-f
 **Omedelbara resultat efter installation:**
 När CodeSwing är installerat kommer du att se en live-förhandsgranskning av din CV-webbplats visas i editorn. Detta låter dig se exakt hur din webbplats ser ut medan du gör ändringar.
 
-![CodeSwing-tillägg visar live-förhandsgranskning](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.sv.png)
+![CodeSwing-tillägg visar live-förhandsgranskning](../../../../translated_images/sv/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **Förstå det förbättrade gränssnittet:**
 - **Delad vy**: **Visar** din kod på ena sidan och live-förhandsgranskning på den andra

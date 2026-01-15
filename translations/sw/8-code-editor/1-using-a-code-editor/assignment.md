@@ -78,7 +78,7 @@ Kwa kuwa VSCode.dev inahitaji angalau faili moja kufungua hifadhi, tutaunda fail
 4. **Andika** ujumbe wa kujitolea: "Ongeza muundo wa awali wa HTML"
 5. **Bonyeza** "Commit new file" ili kuhifadhi mabadiliko yako
 
-![Kuunda faili ya awali kwenye GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.sw.png)
+![Kuunda faili ya awali kwenye GitHub](../../../../translated_images/sw/new-file-github.com.c886796d800e8056.png)
 
 **Hiki ndicho uanzishaji huu wa awali unakamilisha:**
 - **Unaunda** muundo sahihi wa hati ya HTML5 na vipengele vya kimantiki
@@ -104,7 +104,7 @@ Sasa kwa kuwa msingi wa hifadhi yako umeanzishwa, hebu tubadilishe kwa VSCode.de
 
 ✅ **Kiashiria cha mafanikio**: Unapaswa kuona faili za mradi wako kwenye upau wa kando wa Explorer na `index.html` ikipatikana kwa kuhariri kwenye eneo kuu la mhariri.
 
-![Mradi umepakiwa kwenye VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.sw.png)
+![Mradi umepakiwa kwenye VSCode.dev](../../../../translated_images/sw/project-on-vscode.dev.e79815a9a95ee7fe.png)
 
 **Unachokiona kwenye kiolesura:**
 - **Upau wa kando wa Explorer**: **Unaonyesha** faili za hifadhi yako na muundo wa folda
@@ -448,7 +448,7 @@ Viendelezi vinaboresha uzoefu wako wa maendeleo kwa kutoa uwezo wa hakikisho la 
 **Matokeo ya haraka baada ya usakinishaji:**
 Mara tu CodeSwing itakaposakinishwa, utaona hakikisho la moja kwa moja la tovuti yako ya resume likijitokeza kwenye mhariri. Hii inakuwezesha kuona jinsi tovuti yako inavyoonekana unavyofanya mabadiliko.
 
-![Kiendelezi cha CodeSwing kikionyesha hakikisho la moja kwa moja](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.sw.png)
+![Kiendelezi cha CodeSwing kikionyesha hakikisho la moja kwa moja](../../../../translated_images/sw/after-codeswing-extension-pb.0ebddddcf73b5509.png)
 
 **Kuelewa kiolesura kilichoboreshwa:**
 - **Muonekano wa mgawanyiko**: **Unaonyesha** msimbo wako upande mmoja na hakikisho la moja kwa moja upande mwingine
