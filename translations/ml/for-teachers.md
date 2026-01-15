@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloudയ്ക്ക് Common Cartridge പിന്തുണ കുറവാണ്. മുകളില്‍ പറയുന്ന Moodle ഫയല്‍ ഉപയോഗിക്കുക, അത് Canvas-ലും അപ്ലോഡ് ചെയ്യാം.
   - ഇറക്കുമതി ചെയ്ത ശേഷം, നിങ്ങളുടെ ടേം ഷെഡ്യൂളിന് അനുയോജ്യമായി മോഡ്യൂളുകളും, തീയ്യതികളും, ക്വിസുകളുടെ ക്രമീകരണങ്ങളും പരിശോധിക്കുക.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.ml.png)
+![Moodle](../../translated_images/ml/moodle.94eb93d714a50cb2.png)
 > Moodle ക്ലാസ്സില്‍ പാഠ്യക്രമം
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.ml.png)
+![Canvas](../../translated_images/ml/canvas.fbd605ff8e5b8aff.png)
 > Canvas-ൽ പാഠ്യക്രമം
 
 ### ക്ലാസ്സ്‌റൂം ഇല്ലാതെ ഈ റിപ്പോ നേരിട്ട് ഉപയോഗിക്കുക

@@ -123,7 +123,7 @@ flowchart LR
 
 ഇത് പരീക്ഷിക്കാം. ഒരു വെബ്‌സൈറ്റ് തുറക്കൂ (Microsoft.com നല്ലതാണ്) 'Record' ബട്ടൺ അമർത്തൂ. പിന്നീട് പേജ് റിഫ്രഷ് ചെയ്ത് പ്രൊഫൈലർ എല്ലാം രേഖപ്പെടുത്തിയതിൽ ശ്രദ്ധിക്കൂ. റെക്കോർഡ് നിർത്തുമ്പോൾ ബ്രൗസർ സൈറ്റിനെ 'സ്ക്രിപ്റ്റ്', 'റെൻഡർ', 'പെയിന്റ്' ചെയ്യുന്ന രീതിയുടെ വിശദാംശം കാണിക്കും. ഇത് മിസൺ കൺട്രോൾ ഒരു റോക്കറ്റ് വിന്യാസ സമയത്ത് ഓരോ സിസ്റ്റത്തെയും നിരീക്ഷിക്കുന്നതുപോലെയാണ് - നിങ്ങൾക്ക് യഥാർത്ഥ സമയം സംഭവിക്കുന്നതും എപ്പോഴാണെന്നും ഡാറ്റ ലഭിക്കുന്നു.  
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.ml.png)  
+![Edge profiler](../../../../translated_images/ml/profiler.5a4a62479c5df01c.png)  
 
 ✅ കൂടുതൽ വിശദാംശങ്ങൾക്ക് [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) കാണുക  
 
@@ -133,11 +133,11 @@ flowchart LR
 
 പ്രൊഫൈല് ടൈംലൈന്റെ ഒരു ഭാഗം തിരഞ്ഞെടുക്കുക, സംഗ്രഹ പാനൽ കാണുക:  
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.ml.png)  
+![Edge profiler snapshot](../../../../translated_images/ml/snapshot.97750180ebcad737.png)  
 
 ഇവന്റ് ലോഗ് പാനലിൽ 15 മില്ലിസെക്കൻഡിനും മുകളിൽ സമയം എടുത്ത ഇവന്റുകൾ പരിശോധിക്കുക:  
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.ml.png)  
+![Edge event log](../../../../translated_images/ml/log.804026979f3707e0.png)  
 
 ✅ നിങ്ങളുടെ പ്രൊഫൈലറിനെ പരിചയപ്പെടൂ! ഈ സൈറ്റിൽ ഡവലപ്പർ ടൂൾസ് തുറന്നിട്ട് ബോട്ടിൽനെക്കുകൾക്കുള്ള സാധ്യത നോക്കൂ. ഏറ്റവും സ്ലോ ആയി ലോഡ് ചെയ്യുന്ന ആസറ്റോ? ഏറ്റവും വേഗം?
 

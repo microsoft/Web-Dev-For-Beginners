@@ -25,7 +25,7 @@ journey
       Išbandyti funkcionalumą: 5: Studentas
       Užbaigti terariumą: 5: Studentas
 ```
-![DOM ir uždarymas](../../../../translated_images/webdev101-js.10280393044d7eaa.lt.png)
+![DOM ir uždarymas](../../../../translated_images/lt/webdev101-js.10280393044d7eaa.png)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Sveiki atvykę į vieną įdomiausių žiniatinklio kūrimo aspektų – padaryti dalykus interaktyviais! Dokumento objektų modelis (DOM) yra tarsi tiltas tarp jūsų HTML ir JavaScript, ir šiandien naudosime jį, kad įkvėptume jūsų terariumą gyvybės. Kai Tim Berners-Lee sukūrė pirmą naršyklę, jis įsivaizdavo internetą, kuriame dokumentai gali būti dinamiški ir interaktyvūs – DOM padaro šią viziją įmanoma.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM medžio atvaizdavimas](../../../../translated_images/dom-tree.7daf0e763cbbba92.lt.png)
+![DOM medžio atvaizdavimas](../../../../translated_images/lt/dom-tree.7daf0e763cbbba92.png)
 
 > DOM ir jį nurodančio HTML žymėjimo atvaizdas. Iš [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Uždarymų supratimas:** Uždarymai yra svarbi JavaScript tema, ir daugelis programuotojų juos naudoja metų metus, kol pilnai supranta visas teorines puses. Šiandien mes dėmesį skiriame praktiniam pritaikymui – pamatysite, kaip uždarymai natūraliai atsiranda, kai kuriame interaktyvias funkcijas. Supratimas atsiras, kai matysite, kaip jie sprendžia tikras problemas.
 
-![DOM medžio atvaizdavimas](../../../../translated_images/dom-tree.7daf0e763cbbba92.lt.png)
+![DOM medžio atvaizdavimas](../../../../translated_images/lt/dom-tree.7daf0e763cbbba92.png)
 
 > DOM ir jį nurodančio HTML žymėjimo atvaizdas. Iš [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Dabar išbandykite savo interaktyvų terariumą! Atidarykite savo `index.html` n
 - **Kryžminė įranga**: veikia tiek kompiuteriuose, tiek mobiliuosiuose įrenginiuose
 - **Veikimo sąmoningumas**: nėra atminties nutekėjimų ar perteklinių skaičiavimų
 
-![baigtas terariumas](../../../../translated_images/terrarium-final.0920f16e87c13a84.lt.png)
+![baigtas terariumas](../../../../translated_images/lt/terrarium-final.0920f16e87c13a84.png)
 
 ---
 

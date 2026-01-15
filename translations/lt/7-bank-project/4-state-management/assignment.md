@@ -112,7 +112,7 @@ Pasižiūrėkite į [serverio API dokumentaciją](../api/README.md), kur rasite:
 **Laukiamas rezultatas:**
 Baigus šią užduotį, jūsų banko programa turės visiškai veikiantį „Pridėti sandorį“ funkcionalumą, kuris atrodo ir veikia profesionaliai:
 
-![Ekrano nuotrauka, rodanti pavyzdinį „Pridėti sandorį“ dialogą](../../../../translated_images/dialog.93bba104afeb79f1.lt.png)
+![Ekrano nuotrauka, rodanti pavyzdinį „Pridėti sandorį“ dialogą](../../../../translated_images/lt/dialog.93bba104afeb79f1.png)
 
 ## Testavimas
 

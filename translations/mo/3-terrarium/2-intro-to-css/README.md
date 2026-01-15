@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![CSS入門](../../../../translated_images/webdev101-css.3f7af5991bf53a20.mo.png)
+![CSS入門](../../../../translated_images/mo/webdev101-css.3f7af5991bf53a20.png)
 > 手繪筆記由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 
 還記得你的HTML微型生態瓶看起來非常基本嗎？CSS就是用來將這個簡單的結構轉變成視覺上更吸引人的東西。
@@ -205,7 +205,7 @@ body {
 
 打開瀏覽器的開發者工具（F12），導航到“元素”選項卡，檢查你的`<h1>`元素。你會看到它繼承了`body`的字體：
 
-![繼承的字體](../../../../translated_images/1.cc07a5cbe114ad1d.mo.png)
+![繼承的字體](../../../../translated_images/mo/1.cc07a5cbe114ad1d.png)
 
 ✅ **實驗時間**：嘗試在`<body>`上設置其他可繼承屬性，例如`color`、`line-height`或`text-align`。你的標題和其他元素會發生什麼變化？
 
@@ -335,7 +335,7 @@ ID選擇器使用`#`符號，定位具有特定`id`屬性的元素。由於ID在
 **以下是每個植物的HTML結構：**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.mo.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/mo/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.png" />
 </div>
 ```
 
@@ -599,7 +599,7 @@ flowchart LR
 
 你將創建微妙的高光，模擬光線如何在玻璃表面反射。這種方法類似於文藝復興時期的畫家如 Jan van Eyck 如何使用光線和反射使繪製的玻璃看起來具有三維效果。以下是你的目標：
 
-![完成的玻璃瓶](../../../../translated_images/terrarium-final.2f07047ffc597d0a.mo.png)
+![完成的玻璃瓶](../../../../translated_images/mo/terrarium-final.2f07047ffc597d0a.png)
 
 **你的挑戰：**
 - **創建** 微妙的白色或淺色橢圓形作為玻璃反射效果

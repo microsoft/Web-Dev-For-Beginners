@@ -25,7 +25,7 @@ journey
       Trigubinti klaidas: 4: Student
       Tobulinti patirtį: 5: Student
 ```
-![Naršyklės sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.lt.jpg)
+![Naršyklės sketchnote](../../../../translated_images/lt/browser.60317c9be8b7f84a.jpg)
 > Sketchnote autorius [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Įvadinis testas prieš paskaitą
@@ -77,7 +77,7 @@ Interneto naršyklė iš esmės yra sudėtinga dokumentų interpretuoklė. Kai �
 
 ✅ **Trumpa istorija**: Pirmoji naršyklė buvo pavadinta „WorldWideWeb“ ir ją sukūrė seras Timothy Berners-Lee 1990 metais.
 
-![ankstyvos naršyklės](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.lt.jpg)
+![ankstyvos naršyklės](../../../../translated_images/lt/earlybrowsers.d984b711cdf3a42d.jpg)
 > Kai kurios ankstyvos naršyklės, pagal [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Kaip naršyklės apdoroja interneto turinį
@@ -194,7 +194,7 @@ quadrantChart
 
 Supratimas apie plėtinių diegimo procesą padės numatyti naudotojo patirtį, kai žmonės diegia jūsų plėtinį. Diegimo procesas yra standartizuotas šiuolaikinėse naršyklėse, nors vartotojo sąsajoje gali būti nedideli skirtumai.
 
-![aštrumo nuotrauka Edge naršyklės, rodanti atidarytą edge://extensions puslapį ir atidarytą nustatymų meniu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.lt.png)
+![aštrumo nuotrauka Edge naršyklės, rodanti atidarytą edge://extensions puslapį ir atidarytą nustatymų meniu](../../../../translated_images/lt/install-on-edge.d68781acaf0b3d3d.png)
 
 > **Svarbu**: Įsitikinkite, kad įjungėte kūrėjo režimą ir leidžiate plėtinius iš kitų parduotuvių, kai testuojate savo plėtinius.
 
@@ -308,10 +308,10 @@ Tai atitinka progresyvios informacijos teikimo principą, naudojamą sąsajų di
 ### Plėtinio vaizdų apžvalga
 
 **Nustatymų vaizdas** – pirmą kartą naudojančio nustatymai:
-![baigto plėtinio ekrano nuotrauka, atidarytas naršyklėje, rodanti formą su įvestimis regiono pavadinimui ir API raktui.](../../../../translated_images/1.b6da8c1394b07491.lt.png)
+![baigto plėtinio ekrano nuotrauka, atidarytas naršyklėje, rodanti formą su įvestimis regiono pavadinimui ir API raktui.](../../../../translated_images/lt/1.b6da8c1394b07491.png)
 
 **Rezultatų vaizdas** – anglies pėdsako duomenų rodymas:
-![baigto plėtinio ekrano nuotrauka, rodanti anglies naudojimo ir iškastinio kuro procentą US-NEISO regione.](../../../../translated_images/2.1dae52ff08042246.lt.png)
+![baigto plėtinio ekrano nuotrauka, rodanti anglies naudojimo ir iškastinio kuro procentą US-NEISO regione.](../../../../translated_images/lt/2.1dae52ff08042246.png)
 
 ### Kuriame konfigūracijos formą
 

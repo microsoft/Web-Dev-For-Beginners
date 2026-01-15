@@ -644,7 +644,7 @@ sequenceDiagram
   
 `history.pushState` ഉപയോഗിച്ചുകൊണ്ട് ബ്രൗസറിന്റെ നാവിഗേഷൻ ചരിത്രത്തിൽ പുതിയ എൻട്രികൾ സൃഷ്ടിക്കുന്നു. ബ്രൗസറിന്റെ പിന്നിലെ ബട്ടൺ നാളെ നീട്ടി നോക്കിയാൽ കാണാനാകും:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.ml.png)
+![Screenshot of navigation history](../../../../translated_images/ml/history.7fdabbafa521e064.png)
 
 പിന്നിലെ ബട്ടൺ കുറേക്കാലം അമർത്തി നോക്കിയാൽ നിലവിലെ URL മാറി, ചരിത്രം അപ്‌ഡേറ്റ് ആയാലും അടുത്ത ടേംപ്ലേറ്റ് ഒരുപോലെയാണ് കാണിക്കുന്നത്.
 

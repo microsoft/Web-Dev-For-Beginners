@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 നിങ്ങളുടെ ഫിനിഷഡ് പ്രോജക്ട് ഹീറാണ്:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.ml.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/ml/screenshot.0a1ee0d123df681b.png)
 
 ## 🗺️ എഐ ആപ്ലിക്കേഷൻ വികസനത്തിലൂടെ നിങ്ങളുടെ പഠനയാത്ര
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **അടിസ്ഥാന സിദ്ധാന്തം**: എഐ ആപ്ലിക്കേഷൻ വികസനം പരമ്പരാഗത വെബ് ഡവലപ്പ്മെന്റ് കഴിവുകളെ എഐ സേവന സംയോജനത്തോടെ സംയോജിപ്പിക്കുന്നു, ഉപയോക്താവിന് സ്വാഭാവികവും പ്രതികരണശീലമുള്ളതുമായ ബുദ്ധിമുട്ടില്ലാത്ത ആപ്ലിക്കേഷനുകൾ സൃഷ്ടിക്കുന്നു.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.ml.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/ml/playground.d2b927122224ff8f.png)
 
 **പ്ലേഗ്രൗണ്ട് ഇത്രയും ഉപകാരത്തിന് ഇടയായത് എന്തുകൊണ്ട്:**
 - **വിഭിന്ന എഐ മോഡലുകൾ** പോലുള്ള GPT-4o-mini, Claude തുടങ്ങിയവ പരീക്ഷിക്കാൻ (ഇവ എല്ലാവും मुफ़ത്!)
@@ -199,7 +199,7 @@ mindmap
 
 കുറച്ച് കളിച്ച് കഴിഞ്ഞാൽ "Code" ടാബിൽ ക്ലിക്ക് ചെയ്ത് നിങ്ങളുടെ പ്രോഗ്രാമിങ് ഭാഷ തിരഞ്ഞെടുക്കുക, തുടർനടപടികൾക്കുള്ള കോഡ് ലഭിക്കും.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.ml.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/ml/playground-choice.1d23ba7d407f4758.png)
 
 ## പൈത്തൺ ബാക്ക്എൻഡ് ഇന്റഗ്രേഷൻ സജ്ജമാക്കൽ
 
@@ -2351,14 +2351,14 @@ mindmap
 - [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners) സന്ദർശിക്കുക
 - മുകളിൽ-दക്ഷിണ കോണിൽ "Use this template" ക്ലിക്കുചെയ്യുക (GitHub ലോഗിൻ ചെയ്തിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.ml.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/ml/template.67ad477109d29a2b.png)
 
 **പടിയൊന്ന്: Codespaces തുറക്കുക**
 - പുതിയതായി സൃഷ്ടിച്ച റിപോസിറ്ററി തുറക്കുക
 - പച്ച "Code" ബട്ടൺ ക്ലിക്ക് ചെയ്ത് "Codespaces" തിരഞ്ഞെടുക്കുക
 - "Create codespace on main" തിരഞ്ഞെടുക്കുക നിങ്ങളുടെ ഡെവലപ്പ്മെന്റ് പരിസരം ആരംഭിക്കാൻ
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.ml.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/ml/codespace.bcecbdf5d2747d3d.png)
 
 **പടിയൊന്ന്: പരിസരം ക്രമീകരിക്കൽ**
 നിങ്ങളുടെ Codespace ലോഡാകുമ്പോൾ ലഭ്യമാകും:

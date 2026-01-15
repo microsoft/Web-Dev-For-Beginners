@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: സംഭരിച്ച ഡാറ്റ നീക്കം ചെയ്യുക
     ClearStorage --> FirstTime: ക്രമീകരണത്തിലേക്ക് മടങ്ങുക
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.ml.png)
+![Local storage pane](../../../../translated_images/ml/localstorage.472f8147b6a3f8d1.png)
 
 > ⚠️ **സുരക്ഷാ പരിഗണന**: ഉത്പാദന പ്രയോഗങ്ങളിൽ, API കീകൾ LocalStorage-ൽ സൂക്ഷിക്കുന്നത് സുരക്ഷാ അപകടങ്ങൾ ഉണ്ടാക്കാം, കാരണം ജാവാസ്ക്രിപ്റ്റ് ഈ ഡാറ്റ ആക്സസ് ചെയ്യാം. പഠനത്തിന് ഇത് ശരിയാണെങ്കിലും, യാഥാർത്ഥ്യ հավելു മാത്രം കുട്ടികളായ ക്രെഡൻഷ്യലുകൾ സർവർ-സൈഡ് സംഭരണം ഉപയോഗിക്കണം.
 

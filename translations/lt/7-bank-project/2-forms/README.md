@@ -292,7 +292,7 @@ Pirmiausia pažiūrėkime, kas vyksta su paprastu formos siuntimu:
 2. Stebėkite pakeitimus naršyklės adreso juostoje
 3. Atkreipkite dėmesį, kaip puslapis persikrauna ir duomenys atsiranda URL
 
-![Naršyklės adreso juostos pakeitimo ekrano nuotrauka paspaudus Registruotis mygtuką](../../../../translated_images/click-register.e89a30bf0d4bc9ca.lt.png)
+![Naršyklės adreso juostos pakeitimo ekrano nuotrauka paspaudus Registruotis mygtuką](../../../../translated_images/lt/click-register.e89a30bf0d4bc9ca.png)
 
 ### HTTP metodų palyginimas
 
@@ -346,7 +346,7 @@ Konfigūruokime registracijos formą taip, kad ji tinkamai bendrautų su užpaka
 2. **Spustelėkite** "Sukurti paskyrą" mygtuką
 3. **Stebėkite** serverio atsaką naršyklėje
 
-![Naršyklės langas adresu localhost:5000/api/accounts, rodantis JSON eilutę su vartotojo duomenimis](../../../../translated_images/form-post.61de4ca1b964d91a.lt.png)
+![Naršyklės langas adresu localhost:5000/api/accounts, rodantis JSON eilutę su vartotojo duomenimis](../../../../translated_images/lt/form-post.61de4ca1b964d91a.png)
 
 **Ką turėtumėte pamatyti:**
 - **Naršyklė nukreipia** į API galinį tašką URL
@@ -609,7 +609,7 @@ async function register() {
 3. **Paspauskite** „Create Account“
 4. **Stebėkite** konsolės žinutes ir vartotojo atsiliepimą
 
-![Ekrano kopija, rodanti konsolės pranešimą naršyklėje](../../../../translated_images/browser-console.efaf0b51aaaf6778.lt.png)
+![Ekrano kopija, rodanti konsolės pranešimą naršyklėje](../../../../translated_images/lt/browser-console.efaf0b51aaaf6778.png)
 
 **Ką turėtumėte pamatyti:**
 - **Įkėlimo būsena** matoma ant pateikimo mygtuko
@@ -783,7 +783,7 @@ Patobulinkime jūsų registracijos formą su stipriu tikrinimu, kuris užtikrina
 3. **Pabandykite** specialius simbolius slapyvardžio lauke
 4. **Įveskite** neigiamą balanso reikšmę
 
-![Ekrano kopija rodanti tikrinimo klaidą kuriant formą](../../../../translated_images/validation-error.8bd23e98d416c22f.lt.png)
+![Ekrano kopija rodanti tikrinimo klaidą kuriant formą](../../../../translated_images/lt/validation-error.8bd23e98d416c22f.png)
 
 **Ką pastebėsite:**
 - **Naršyklė rodo** vietinius tikrinimo pranešimus
@@ -943,7 +943,7 @@ HTML faile parodykite klaidos žinutę, jei vartotojas jau egzistuoja.
 
 Štai pavyzdys, kaip gali atrodyti galutinis prisijungimo puslapis po šiek tiek stiliaus taikymo:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.lt.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/lt/result.96ef01f607bf856a.png)
 
 ## Po paskaitos quizas
 

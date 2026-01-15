@@ -123,7 +123,7 @@ Norėdami atidaryti Kūrėjo įrankius Edge naršyklėje, spustelėkite tris ta�
 
 Pabandykime. Atidarykite svetainę (Microsoft.com tinka gerai) ir spustelėkite mygtuką „Įrašyti“. Dabar atnaujinkite puslapį ir stebėkite, kaip profiliuotojas užfiksuoja viską, kas vyksta. Kai sustabdysite įrašymą, pamatysite išsamią naršyklės veiklos, „scripts“, „renders“ ir „paints“, analizę. Tai primena misijų valdymo centrą, kuris seka kiekvieną sistemą raketos paleidimo metu – gaunate realaus laiko duomenis, kas vyksta ir kada.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.lt.png)
+![Edge profiler](../../../../translated_images/lt/profiler.5a4a62479c5df01c.png)
 
 ✅ [Microsoft dokumentacija](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) turi daug daugiau detalių, jei norite gilintis
 
@@ -133,11 +133,11 @@ Pasirinkite profilio laiko linijos dalis, kad priartintumėte įvykius, vykstan�
 
 Gaukite puslapio našumo momentinę nuotrauką pasirinkdami profilio laiko linijos dalį ir pažvelgdami į santraukos langą:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.lt.png)
+![Edge profiler snapshot](../../../../translated_images/lt/snapshot.97750180ebcad737.png)
 
 Peržiūrėkite Įvykių žurnalo langą, ar kuris nors įvykis užtruko ilgiau nei 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.lt.png)
+![Edge event log](../../../../translated_images/lt/log.804026979f3707e0.png)
 
 ✅ Susipažinkite su savo profiliuotoju! Atidarykite kūrėjo įrankius šioje svetainėje ir pažiūrėkite, ar yra kokių nors kliūčių. Koks greičiausiai užsikrauna turtas? O lėčiausias?
 

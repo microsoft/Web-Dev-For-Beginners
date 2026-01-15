@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ: തീരുമാനങ്ങൾ എടുക്കൽ
 
-![JavaScript Basics - Making decisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ml.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/ml/webdev101-js-decisions.69e1b20f272dd1f0.png)
 
 > സ്കെച്ച് നോട്ട് [Tomomi Imura](https://twitter.com/girlie_mac) രചിച്ചത്
 

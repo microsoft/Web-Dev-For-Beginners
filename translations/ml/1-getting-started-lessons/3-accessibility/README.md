@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ആക്‌സസിബിൾ വെബ്പേജുകൾ സൃഷ്ടിക്കൽ
 
-![ആക്‌സസിബിലിറ്റിയെക്കുറിച്ചു മുഴുവൻ](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ml.png)
+![ആക്‌സസിബിലിറ്റിയെക്കുറിച്ചു മുഴുവൻ](../../../../translated_images/ml/webdev101-a11y.8ef3025c858d897a.png)
 > സ്കെച്‌നോട്ട് [ടോമോമി ഇമൂറ](https://twitter.com/girlie_mac) ഉത്ഘാടനം
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "സാധാരണ ARIA ഉപയോഗ പാറ്റേണുക�
 
 **വിവരമുഖ ചിതറുകൾ** - പ്രധാന വിവരങ്ങൾ കൈമാറുന്നു:  
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.ml.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/ml/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
   
 **ആലങ്കാരിക ചിത്രങ്ങൾ** - നിരൂപണ മൂല്യമില്ലാത്ത ദൃശ്യങ്ങൾ:  
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.ml.png" alt="" role="presentation">
+<img src="../../../../translated_images/ml/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
   
 **പ്രയോഗാത്മക ചിത്രങ്ങൾ** - ബട്ടണുകളോ നിയന്ത്രണങ്ങളോ ആയി ഉപയോഗിക്കുന്നു:  
@@ -1066,7 +1066,7 @@ pie title "സാധാരണ ARIA ഉപയോഗ പാറ്റേണുക�
   
 **സങ്കീർണ ചിത്രങ്ങൾ** - ചാർട്ടുകൾ, വീഴ്‍വിളക്കങ്ങൾ, വിവരചിത്രങ്ങൾ:  
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.ml.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/ml/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "സാധാരണ ARIA ഉപയോഗ പാറ്റേണുക�
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.ml.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/ml/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
   

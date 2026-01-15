@@ -644,7 +644,7 @@ sequenceDiagram
 
 Naudojant `history.pushState`, sukuriami nauji įrašai naršyklės navigacijos istorijoje. Galite patikrinti tai paspausdami ir palaikydami naršyklės *atgal* mygtuką, jis turėtų parodyti kažką panašaus:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.lt.png)
+![Screenshot of navigation history](../../../../translated_images/lt/history.7fdabbafa521e064.png)
 
 Jei kelis kartus spustelėsite atgal mygtuką, pamatysite, kad esamas URL keičiasi ir istorija atnaujinama, tačiau tas pats šablonas vis dar rodomas.
 

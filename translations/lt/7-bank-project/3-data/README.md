@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Grąžina pilną HTML puslapį
     Browser->>User: Rodo naują puslapį (mirksėjimas/perkrovimas)
 ```
-![Atnaujinimo eiga daugiasvetyje programėlėje](../../../../translated_images/mpa.7f7375a1a2d4aa77.lt.png)
+![Atnaujinimo eiga daugiasvetyje programėlėje](../../../../translated_images/lt/mpa.7f7375a1a2d4aa77.png)
 
 **Kodėl toks metodas atrodė nepatogus:**
 - Kiekvienas paspaudimas reiškė viso puslapio perkūrimą nuo nulio
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Atnaujina konkrečius puslapio elementus
     Browser->>User: Rodo atnaujintą turinį (nereikia perkrovimo)
 ```
-![Atnaujinimo eiga vieno puslapio programėlėje](../../../../translated_images/spa.268ec73b41f992c2.lt.png)
+![Atnaujinimo eiga vieno puslapio programėlėje](../../../../translated_images/lt/spa.268ec73b41f992c2.png)
 
 **Kodėl SPA atrodo daug geriau:**
 - Atnaujinamos tik iš tikrųjų pasikeitusios dalys (protinga, tiesa?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Dabar, kai testuosite neteisingu paskyros duomenimis, matysite naudingą klaidos pranešimą tiesiog puslapyje!
 
-![Prisijungimo klaidos pranešimo vaizdas](../../../../translated_images/login-error.416fe019b36a6327.lt.png)
+![Prisijungimo klaidos pranešimo vaizdas](../../../../translated_images/lt/login-error.416fe019b36a6327.png)
 
 #### 4 žingsnis: įtraukiantis prieinamumas
 
@@ -950,7 +950,7 @@ Pasiruošę pakelti savo bankinę programėlę į kitą lygmenį? Padarykime ją
 
 Štai kaip galėtų atrodyti išbaigta suvestinė:
 
-![Dashboard pavyzdžio ekrano kopija po stiliaus pritaikymo](../../../../translated_images/screen2.123c82a831a1d14a.lt.png)
+![Dashboard pavyzdžio ekrano kopija po stiliaus pritaikymo](../../../../translated_images/lt/screen2.123c82a831a1d14a.png)
 
 Nereikia tiksliai kopijuoti – naudokite tai kaip įkvėpimą ir pritaikykite sau!
 

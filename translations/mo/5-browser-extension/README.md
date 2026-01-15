@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 致謝
 
-![一個綠色的瀏覽器擴充功能](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.mo.png)
+![一個綠色的瀏覽器擴充功能](../../../translated_images/mo/extension-screenshot.0e7f5bfa110e92e3.png)
 
 ## 致謝
 
