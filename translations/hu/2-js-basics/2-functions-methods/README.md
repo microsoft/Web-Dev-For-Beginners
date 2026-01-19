@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Alapok: Metódusok és Függvények
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.hu.png)
+![JavaScript Basics - Functions](../../../../translated_images/hu/webdev101-js-functions.be049c4726e94f8b.webp)
 > Vázlat Tomomi Imura tollából ([Tomomi Imura](https://twitter.com/girlie_mac))
 
 ```mermaid

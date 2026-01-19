@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle ಕ್ಲೌಡ್‌ಗೆ Common Cartridge ಬೆಂಬಲ ಸೀಮಿತವಾಗಿದೆ. ಮೇಲಿನ Moodle ಫೈಲ್‌ನ್ನು ವಿಷಯಪ್ರಕಾರ Canvas ಗೆ ಅಪ್ಲೋಡ್ ಮಾಡಬಹುದು.
   - ಆಮದು ನಂತರ, ನೀವು ಉಪನ್ಯಾಸ ಸಮಯಕ್ಕೆ ಸರಿಹೊಂದುವಂತೆ ಮೊಡ್ಯೂಲ್‌ಗಳು, ದಿನಾಂಕಗಳು ಮತ್ತು ಕ್ವಿಜ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.kn.png)
+![Moodle](../../translated_images/kn/moodle.94eb93d714a50cb2.webp)
 > Moodle ತರಗತಿಯಲ್ಲಿ ಪಠ್ಯಕ್ರಮ
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.kn.png)
+![Canvas](../../translated_images/kn/canvas.fbd605ff8e5b8aff.webp)
 > Canvas ನಲ್ಲಿ ಪಠ್ಯಕ್ರಮ
 
 ### ರಿಪೊ ಅನ್ನು ನೇರವಾಗಿ ಬಳಸಿ (Classroom ಇಲ್ಲದೆ)

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Bazele JavaScript: Tipuri de date
 
-![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.ro.png)
+![JavaScript Basics - Data types](../../../../translated_images/ro/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote realizat de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

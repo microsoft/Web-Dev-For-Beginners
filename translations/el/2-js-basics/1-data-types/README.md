@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Βασικά στοιχεία JavaScript: Τύποι Δεδομένων
 
-![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.el.png)
+![JavaScript Basics - Data types](../../../../translated_images/el/webdev101-js-datatypes.4cc470179730702c.webp)
 > Σημείωση από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

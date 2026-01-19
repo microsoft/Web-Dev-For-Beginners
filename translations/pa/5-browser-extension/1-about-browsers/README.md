@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![ਬ੍ਰਾਊਜ਼ਰ ਸਕੈਚਨੋਟ](../../../../translated_images/browser.60317c9be8b7f84a.pa.jpg)
+![ਬ੍ਰਾਊਜ਼ਰ ਸਕੈਚਨੋਟ](../../../../translated_images/pa/browser.60317c9be8b7f84a.webp)
 > ਸਕੈਚਨੋਟ [ਵਾਸਿਮ ਚੇਘਮ](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob) ਦੁਆਰਾ
 
 ## ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
@@ -79,7 +79,7 @@ mindmap
 
 ✅ **ਥੋੜ੍ਹਾ ਇਤਿਹਾਸ**: ਪਹਿਲਾ ਬ੍ਰਾਊਜ਼ਰ 'ਵਰਲਡਵਾਈਡਵੈੱਬ' ਕਿਹਾ ਜਾਂਦਾ ਸੀ ਅਤੇ ਇਹ 1990 ਵਿੱਚ ਸਰ ਟਿਮੋਥੀ ਬਰਨਰਜ਼-ਲੀ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਸੀ।
 
-![ਪੁਰਾਣੇ ਬ੍ਰਾਊਜ਼ਰ](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.pa.jpg)
+![ਪੁਰਾਣੇ ਬ੍ਰਾਊਜ਼ਰ](../../../../translated_images/pa/earlybrowsers.d984b711cdf3a42d.webp)
 > ਕੁਝ ਪੁਰਾਣੇ ਬ੍ਰਾਊਜ਼ਰ, [ਕੈਰਨ ਮੈਕਗ੍ਰੇਨ](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) ਦੁਆਰਾ
 
 ### ਬ੍ਰਾਊਜ਼ਰ ਵੈੱਬ ਸਮੱਗਰੀ ਨੂੰ ਕਿਵੇਂ ਪ੍ਰਕਿਰਿਆ ਕਰਦੇ ਹਨ
@@ -198,7 +198,7 @@ quadrantChart
 
 ਐਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲੇਸ਼ਨ ਪ੍ਰਕਿਰਿਆ ਨੂੰ ਸਮਝਣਾ ਤੁਹਾਨੂੰ ਇਹ ਅਨੁਮਾਨ ਲਗਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਲੋਕ ਤੁਹਾਡਾ ਐਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲ ਕਰਦੇ ਸਮੇਂ ਕਿਹੜਾ ਅਨੁਭਵ ਕਰਦੇ ਹਨ। ਆਧੁਨਿਕ ਬ੍ਰਾਊਜ਼ਰਾਂ ਵਿੱਚ ਇੰਸਟਾਲੇਸ਼ਨ ਪ੍ਰਕਿਰਿਆ ਮਿਆਰੀ ਹੈ, ਇੰਟਰਫੇਸ ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਥੋੜ੍ਹੇ ਫਰਕਾਂ ਨਾਲ।
 
-![Edge ਬ੍ਰਾਊਜ਼ਰ ਦਾ ਸਕ੍ਰੀਨਸ਼ਾਟ ਜਿਸ ਵਿੱਚ edge://extensions ਪੇਜ ਅਤੇ ਸੈਟਿੰਗ ਮੈਨੂ ਖੁੱਲ੍ਹਾ ਹੈ](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.pa.png)
+![Edge ਬ੍ਰਾਊਜ਼ਰ ਦਾ ਸਕ੍ਰੀਨਸ਼ਾਟ ਜਿਸ ਵਿੱਚ edge://extensions ਪੇਜ ਅਤੇ ਸੈਟਿੰਗ ਮੈਨੂ ਖੁੱਲ੍ਹਾ ਹੈ](../../../../translated_images/pa/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **ਮਹੱਤਵਪੂਰਨ**: ਜਦੋਂ ਤੁਸੀਂ ਆਪਣੇ ਐਕਸਟੈਂਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰ ਰਹੇ ਹੋ ਤਾਂ ਡਿਵੈਲਪਰ ਮੋਡ ਨੂੰ ਚਾਲੂ ਕਰਨਾ ਅਤੇ ਹੋਰ ਸਟੋਰਾਂ ਤੋਂ ਐਕਸਟੈਂਸ਼ਨ ਦੀ ਆਗਿਆ ਦੇਣਾ ਯਕੀਨੀ ਬਣਾਓ।
 

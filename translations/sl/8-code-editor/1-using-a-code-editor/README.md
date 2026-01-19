@@ -182,7 +182,7 @@ Tako kot je telefon Alexandra Grahama Bella povezoval oddaljene lokacije, se s p
 
 Ko se vse naloži, boste videli lepo urejeno delovno okolje, zasnovano tako, da vas osredotoči na tisto, kar šteje – vašo kodo!
 
-![Privzeti vmesnik VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.sl.png)
+![Privzeti vmesnik VSCode.dev](../../../../translated_images/sl/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Tukaj je vaš ogled po bližnji okolici:**  
 - **Vrstica aktivnosti** (ta trak na levi): vaša glavna navigacija z Explorerjem 📁, Iskanjem 🔍, Source Control 🌿, Razširitvami 🧩 in Nastavitvami ⚙️  
@@ -229,7 +229,7 @@ Popolno, kadar začnete v VSCode.dev in želite odpreti določeno skladišče. J
 1. Obiščite [vscode.dev](https://vscode.dev), če še niste tam  
 2. Poiščite gumb »Open Remote Repository« na uvodnem zaslonu in kliknite nanj
 
-   ![Odpri oddaljeno skladišče](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.sl.png)
+   ![Odpri oddaljeno skladišče](../../../../translated_images/sl/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Prilepite katerikoli URL GitHub skladišča (poskusite tega: `https://github.com/microsoft/Web-Dev-For-Beginners`)  
 4. Pritisnite Enter in opazujte čarovnijo!
@@ -238,7 +238,7 @@ Popolno, kadar začnete v VSCode.dev in želite odpreti določeno skladišče. J
 
 Želite se počutiti kot čarovnik kodiranja? Poskusite to bližnjico na tipkovnici: Ctrl+Shift+P (ali Cmd+Shift+P na Macu), da odprete Ukazno paleto:
 
-![Ukazna paleta](../../../../translated_images/palette-menu.4946174e07f42622.sl.png)
+![Ukazna paleta](../../../../translated_images/sl/palette-menu.4946174e07f42622.webp)
 
 **Ukazna paleta je kot iskalnik za vse, kar zmorete:**  
 - Vtipkajte »open remote« in našel vam bo odpiranje skladišč  
@@ -300,7 +300,7 @@ Tako kot arhitekt ureja načrte v pisarni, ustvarjanje datotek v VSCode.dev sled
 3. Vnesite ime datoteke skupaj z ustrezno pripono (`style.css`, `script.js`, `index.html`)  
 4. Pritisnite Enter za ustvarjanje datoteke
 
-![Ustvarjanje nove datoteke](../../../../translated_images/create-new-file.2814e609c2af9aeb.sl.png)
+![Ustvarjanje nove datoteke](../../../../translated_images/sl/create-new-file.2814e609c2af9aeb.webp)
 
 **Pravila poimenovanja:**  
 - Uporabljajte opisna imena, ki povedo namen datoteke  
@@ -318,7 +318,7 @@ Tu se začne prava zabava! Urejevalnik VSCode.dev je poln koristnih funkcij, ki 
 2. Začnite tipkati in opazujte, kako vam VSCode.dev pomaga z barvami, predlogi in zaznavanjem napak  
 3. Shranite delo s Ctrl+S (Windows/Linux) ali Cmd+S (Mac) – pa vendar se tudi samodejno shranjuje!
 
-![Urejanje datotek v VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.sl.png)
+![Urejanje datotek v VSCode.dev](../../../../translated_images/sl/edit-a-file.52c0ee665ef19f08.webp)
 
 **Kul stvari, ki se dogajajo med kodiranjem:**  
 - Vaša koda je lepo barvno označena, kar olajša branje  
@@ -339,7 +339,7 @@ Tako kot arheologi ustvarjajo podrobne zapise plasti izkopavanj, Git spremlja sp
 2. Spremenjene datoteke so prikazane v razdelku »Changes«  
 3. Barvno označevanje kaže vrste sprememb: zeleno za dodatke, rdeče za odstranitve
 
-![Pregled sprememb v Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.sl.png)
+![Pregled sprememb v Source Control](../../../../translated_images/sl/working-tree.c58eec08e6335c79.webp)
 
 **Shranjevanje dela (postopek commitiranja):**
 
@@ -431,7 +431,7 @@ Trgovina z razširitvami je zelo dobro organizirana, zato se ne boste izgubili, 
 2. Brskajte ali poiščite kaj konkretnega
 3. Kliknite karkoli, kar vam je zanimivo, da izveste več
 
-![Uporabniški vmesnik trgovine z razširitvami](../../../../translated_images/extensions.eca0e0c7f59a10b5.sl.png)
+![Uporabniški vmesnik trgovine z razširitvami](../../../../translated_images/sl/extensions.eca0e0c7f59a10b5.webp)
 
 **Kaj boste tam videli:**
 
@@ -484,7 +484,7 @@ Večina razširitev ima nastavitve, ki jih lahko prilagodite, da delujejo točno
 3. Izberite "Extension Settings" iz spustnega menija
 4. Nastavite stvari, dokler ne bo vse točno tako, kot želite za svoj potek dela
 
-![Prilagajanje nastavitev razširitve](../../../../translated_images/extension-settings.21c752ae4f4cdb78.sl.png)
+![Prilagajanje nastavitev razširitve](../../../../translated_images/sl/extension-settings.21c752ae4f4cdb78.webp)
 
 **Pogoste stvari, ki jih boste morda želeli prilagoditi:**
 - Kako se vaša koda oblikuje (tabulatorji proti presledkom, dolžina vrstic itd.)

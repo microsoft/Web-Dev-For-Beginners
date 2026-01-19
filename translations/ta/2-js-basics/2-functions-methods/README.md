@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ஜாவாஸ்கிரிப்ட் அடிப்படைகள்: முறைகள் மற்றும் செயல்பாடுகள்
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ta.png)
+![JavaScript Basics - Functions](../../../../translated_images/ta/webdev101-js-functions.be049c4726e94f8b.webp)
 > [டோமொமி இமுரா](https://twitter.com/girlie_mac) அவர்களின் ஸ்கெட்ச் நோட்
 
 ```mermaid

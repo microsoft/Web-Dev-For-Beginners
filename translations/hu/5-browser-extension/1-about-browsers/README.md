@@ -25,7 +25,7 @@ journey
       Debug issues: 4: Student
       Polish experience: 5: Student
 ```
-![Böngésző vázlatjegyzet](../../../../translated_images/browser.60317c9be8b7f84a.hu.jpg)
+![Böngésző vázlatjegyzet](../../../../translated_images/hu/browser.60317c9be8b7f84a.webp)
 > Vázlatjegyzet készítője: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Előadás előtti kvíz
@@ -77,7 +77,7 @@ Ez a folyamat tükrözi azt, ahogyan az első webes böngészőt, a WorldWideWeb
 
 ✅ **Egy kis történelem**: Az első böngészőt 'WorldWideWeb'-nek hívták, és Sir Timothy Berners-Lee készítette 1990-ben.
 
-![korai böngészők](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.hu.jpg)
+![korai böngészők](../../../../translated_images/hu/earlybrowsers.d984b711cdf3a42d.webp)
 > Néhány korai böngésző, forrás: [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Hogyan dolgozza fel a böngésző a webes tartalmat
@@ -194,7 +194,7 @@ quadrantChart
 
 A bővítmény telepítési folyamatának ismerete segít előre látni a felhasználói élményt, amikor a felhasználók telepítik a bővítményedet. A telepítési folyamat egységes a modern böngészőkben, kisebb felületbeli különbségekkel.
 
-![képernyőkép az Edge böngészőről, megnyitott edge://extensions oldal és beállítási menü](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.hu.png)
+![képernyőkép az Edge böngészőről, megnyitott edge://extensions oldal és beállítási menü](../../../../translated_images/hu/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Fontos**: Győződj meg róla, hogy bekapcsoltad a fejlesztői módot és engedélyezted a más áruházból származó bővítményeket, amikor saját bővítményeidet teszteled.
 
@@ -308,10 +308,10 @@ Ez a fokozatos információfeltárás elve, amit az interfésztervezés már a s
 ### Bővítmény nézetek áttekintése
 
 **Beállítási nézet** – Első alkalommal használók konfigurációja:
-![képernyőkép a kész bővítményről böngészőben, egy űrlappal a régió név és API kulcs megadására.](../../../../translated_images/1.b6da8c1394b07491.hu.png)
+![képernyőkép a kész bővítményről böngészőben, egy űrlappal a régió név és API kulcs megadására.](../../../../translated_images/hu/1.b6da8c1394b07491.webp)
 
 **Eredmény nézet** – Szénlábnyom adat megjelenítése:
-![képernyőkép a kész bővítményről, amely szénlábnyom és fosszilis üzemanyag százalék értékeket mutat az US-NEISO régióra.](../../../../translated_images/2.1dae52ff08042246.hu.png)
+![képernyőkép a kész bővítményről, amely szénlábnyom és fosszilis üzemanyag százalék értékeket mutat az US-NEISO régióra.](../../../../translated_images/hu/2.1dae52ff08042246.webp)
 
 ### A konfigurációs űrlap építése
 

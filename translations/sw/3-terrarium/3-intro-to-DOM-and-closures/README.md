@@ -25,7 +25,7 @@ journey
       Jaribu utendakazi: 5: Student
       Kamilisha terrarium: 5: Student
 ```
-![DOM na kifunga](../../../../translated_images/webdev101-js.10280393044d7eaa.sw.png)
+![DOM na kifunga](../../../../translated_images/sw/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Karibu katika mojawapo ya sehemu zinazovutia zaidi za maendeleo ya wavuti - kufanya mambo kuwa ya kuingiliana! Mfano wa Kitu cha Nyaraka (DOM) ni kama daraja kati ya HTML yako na JavaScript, na leo tutautumia kuleta terrarium yako kuishi. Wakati Tim Berners-Lee aliuumba kivinjari cha kwanza cha wavuti, aliona wavuti ambako nyaraka zinaweza kuwa za mabadiliko na kuingiliana - DOM hufanikisha maono hayo.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Uwawakilishi wa mti wa DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.sw.png)
+![Uwawakilishi wa mti wa DOM](../../../../translated_images/sw/dom-tree.7daf0e763cbbba92.webp)
 
 > Uwawakilishi wa DOM na alama za HTML zinazomrejelea. Kutoka kwa [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Kuelewa Mifungo**: Mifungo ni mada muhimu katika JavaScript, na wengi wa watengenezaji huwatumia kwa miaka kabla ya kuelewa pande zote za nadharia. Leo, tutazingatia matumizi ya vitendo - utaona mifungo ikitokea asili unapotengeneza vipengele vyetu vinavyoingiliana. Uelewa utaendelea unapoona jinsi zinavyotatua matatizo halisi.
 
-![Uwawakilishi wa mti wa DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.sw.png)
+![Uwawakilishi wa mti wa DOM](../../../../translated_images/sw/dom-tree.7daf0e763cbbba92.webp)
 
 > Uwawakilishi wa DOM na alama za HTML zinazomrejelea. Kutoka kwa [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Sasa jaribu terrarium yako ya kijamii! Fungua faili yako ya `index.html` kwenye 
 - **Msaada wa kifaa chochote**: Hufanya kazi kwenye kompyuta na simu
 - **Uelewa wa utendaji**: Hakuna uvujaji wa kumbukumbu au mahesabu ya ziada
 
-![terrarium iliyokamilika](../../../../translated_images/terrarium-final.0920f16e87c13a84.sw.png)
+![terrarium iliyokamilika](../../../../translated_images/sw/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

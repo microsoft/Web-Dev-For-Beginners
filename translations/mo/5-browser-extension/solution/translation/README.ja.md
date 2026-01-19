@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 使用 tmrow 的 C02 Signal API 來追蹤電力使用情況，並在瀏覽器中顯示您所在地區的電力使用量作為提醒。透過這個瀏覽器擴充功能，您可以根據這些資訊來判斷自己的行動。
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.mo.png)
+![extension screenshot](../../../../../translated_images/mo/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## 開始使用
 
@@ -31,7 +31,7 @@ npm run build
 
 若要安裝到 Edge，請在瀏覽器右上角的「三點」選單中找到「擴充功能」面板。從那裡選擇「Load Unpacked」，然後載入新的擴充功能。在提示中打開「dist」資料夾，擴充功能就會被載入。要使用此功能，您需要 CO2 Signal API 的 API 金鑰 ([在這裡透過電子郵件獲取](https://www.co2signal.com/) - 在該頁面的框中輸入您的電子郵件)，以及 [Electricity Map](https://www.electricitymap.org/map) 對應的 [您所在地區的代碼](http://api.electricitymap.org/v3/zones)（例如，在波士頓，使用 'US-NEISO'）。
 
-![installing](../../../../../translated_images/install-on-edge.78634f02842c4828.mo.png)
+![installing](../../../../../translated_images/mo/install-on-edge.78634f02842c4828.webp)
 
 在擴充介面中輸入 API 金鑰和地區代碼後，瀏覽器擴充工具列中的彩色圓點會隨之變化，反映您所在地區的能源使用情況，並提示您進行哪些活動是適合的。這個「圓點」系統的概念靈感來自於加州排放量的 [Energy Lollipop 擴充功能](https://energylollipop.com/)。
 

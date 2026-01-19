@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript基础：做出决策
 
-![JavaScript Basics - Making decisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.zh.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/zh/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > 速写笔记由 [Tomomi Imura](https://twitter.com/girlie_mac) 提供
 

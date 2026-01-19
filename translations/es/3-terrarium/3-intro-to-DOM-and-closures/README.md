@@ -25,7 +25,7 @@ journey
       Test functionality: 5: Student
       Complete terrarium: 5: Student
 ```
-![DOM y un closure](../../../../translated_images/webdev101-js.10280393044d7eaa.es.png)
+![DOM y un closure](../../../../translated_images/es/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Bienvenido a uno de los aspectos más atractivos del desarrollo web: ¡hacer que las cosas sean interactivas! El Modelo de Objetos del Documento (DOM) es como un puente entre tu HTML y JavaScript, y hoy lo usaremos para dar vida a tu terrario. Cuando Tim Berners-Lee creó el primer navegador web, imaginó una web donde los documentos pudieran ser dinámicos e interactivos; el DOM hace posible esa visión.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Representación del árbol DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.es.png)
+![Representación del árbol DOM](../../../../translated_images/es/dom-tree.7daf0e763cbbba92.webp)
 
 > Una representación del DOM y el marcado HTML que lo referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Entendiendo los Closures**: Los closures son un tema importante en JavaScript, y muchos desarrolladores los usan durante años antes de comprender completamente todos sus aspectos teóricos. Hoy nos concentramos en la aplicación práctica: verás closures emerger naturalmente mientras construimos nuestras características interactivas. La comprensión se desarrollará a medida que veas cómo solucionan problemas reales.
 
-![Representación del árbol DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.es.png)
+![Representación del árbol DOM](../../../../translated_images/es/dom-tree.7daf0e763cbbba92.webp)
 
 > Una representación del DOM y el marcado HTML que lo referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Nuestro sistema de arrastre manipula dos propiedades clave de CSS:
 - **Soporte multi-dispositivo**: Funciona en escritorio y móvil
 - **Conciencia de rendimiento**: Sin fugas de memoria ni cálculos redundantes
 
-![terrario terminado](../../../../translated_images/terrarium-final.0920f16e87c13a84.es.png)
+![terrario terminado](../../../../translated_images/es/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

@@ -644,7 +644,7 @@ sequenceDiagram
 
 Funktsioon `history.pushState` loob uusi kirjeid brauseri ajaloos. Seda näeb, kui hoiate all oma brauseri *tagasi-nuppu*, mis peaks kuvama midagi sellist:
 
-![Navigatsiooniajaloo ekraanipilt](../../../../translated_images/history.7fdabbafa521e064.et.png)
+![Navigatsiooniajaloo ekraanipilt](../../../../translated_images/et/history.7fdabbafa521e064.webp)
 
 Kui proovite tunnustada tagasi-nuppu mitu korda, näete, et praegune URL muutub ja ajalugu uuendatakse, kuid sama mall jääb kuvatuks.
 

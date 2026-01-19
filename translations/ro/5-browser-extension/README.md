@@ -23,7 +23,7 @@ Această extensie poate fi utilizată ad-hoc de un utilizator, odată ce o cheie
 
 ### Credite
 
-![o extensie verde pentru browser](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ro.png)
+![o extensie verde pentru browser](../../../translated_images/ro/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Credite
 

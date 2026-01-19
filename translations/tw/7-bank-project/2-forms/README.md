@@ -292,7 +292,7 @@ graph TD
 2. 觀察瀏覽器網址列變化
 3. 注意頁面重載且資料顯示在 URL 中
 
-![點擊註冊按鈕後瀏覽器 URL 變化截圖](../../../../translated_images/click-register.e89a30bf0d4bc9ca.tw.png)
+![點擊註冊按鈕後瀏覽器 URL 變化截圖](../../../../translated_images/tw/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP 方法比較
 
@@ -346,7 +346,7 @@ graph TD
 2. **點擊**「建立帳號」按鈕
 3. **觀察**伺服器回應在瀏覽器中
 
-![瀏覽器視窗位於 localhost:5000/api/accounts，顯示帶有使用者資料的 JSON 字串](../../../../translated_images/form-post.61de4ca1b964d91a.tw.png)
+![瀏覽器視窗位於 localhost:5000/api/accounts，顯示帶有使用者資料的 JSON 字串](../../../../translated_images/tw/form-post.61de4ca1b964d91a.webp)
 
 **你應該看到：**
 - **瀏覽器導向**至 API 端點網址
@@ -609,7 +609,7 @@ async function register() {
 3. **點擊**「建立帳號」
 4. **觀察** 控制台訊息與使用者反饋
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.tw.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/tw/browser-console.efaf0b51aaaf6778.webp)
 
 **你應該會看到：**
 - **提交按鈕** 顯示載入狀態
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **使用者名稱欄位試輸入特殊字元**
 4. **輸入負數餘額**
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.tw.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/tw/validation-error.8bd23e98d416c22f.webp)
 
 **你會看到：**
 - **瀏覽器顯示** 原生驗證訊息
@@ -943,7 +943,7 @@ timeline
 
 下面是經過一些樣式設計後，登入頁面的範例：
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.tw.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/tw/result.96ef01f607bf856a.webp)
 
 ## 課後小考
 

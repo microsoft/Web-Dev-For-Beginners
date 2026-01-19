@@ -17,7 +17,7 @@ Uite, înțeleg perfect dacă programarea pare intimidantă acum. Când am înce
 
 Astăzi, vom explora uneltele incredibile care fac dezvoltarea web modernă nu doar posibilă, ci și foarte captivantă. Vorbesc despre exact aceiași editori, browsere și workflow-uri pe care le folosesc zilnic dezvoltatorii de la Netflix, Spotify și studioul tău indie preferat de aplicații. Și iată partea care te va face să dansezi de bucurie: majoritatea acestor unelte profesionale, standard în industrie, sunt complet gratuite!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.ro.png)
+![Intro Programming](../../../../translated_images/ro/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mga Pangunahing Kaalaman sa JavaScript: Mga Pamamaraan at Function
 
-![Mga Pangunahing Kaalaman sa JavaScript - Mga Function](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.tl.png)
+![Mga Pangunahing Kaalaman sa JavaScript - Mga Function](../../../../translated_images/tl/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Малка медитация с влачене и пускане на код. С малко HTML, JS и CSS можете да създадете уеб интерфейс, да го стилизирате и да добавите интеракция.
 
-![моето терариумче](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.bg.png)
+![моето терариумче](../../../../translated_images/bg/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Кредити
 

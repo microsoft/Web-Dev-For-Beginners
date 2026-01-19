@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### קרדיטים
 
-![תוסף דפדפן ירוק](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.he.png)
+![תוסף דפדפן ירוק](../../../translated_images/he/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## קרדיטים
 

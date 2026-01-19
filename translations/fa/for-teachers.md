@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud پشتیبانی محدودی از Common Cartridge دارد. فایل Moodle بالا را ترجیح دهید که همچنین می‌تواند در Canvas بارگذاری شود.
   - پس از وارد کردن، ماژول‌ها، تاریخ‌های سررسید و تنظیمات آزمون را بررسی کنید تا با برنامه ترم شما مطابقت داشته باشد.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.fa.png)
+![Moodle](../../translated_images/fa/moodle.94eb93d714a50cb2.webp)
 > برنامه درسی در کلاس Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.fa.png)
+![Canvas](../../translated_images/fa/canvas.fbd605ff8e5b8aff.webp)
 > برنامه درسی در Canvas
 
 ### استفاده مستقیم از مخزن (بدون Classroom)

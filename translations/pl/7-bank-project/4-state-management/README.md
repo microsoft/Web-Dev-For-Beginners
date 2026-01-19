@@ -187,7 +187,7 @@ Podobnie jak projekt Titanica z podziałem na przedziały, który wydawał się 
 
 Zamiast biegać w kółko, stworzymy system **scentralizowanego zarządzania stanem**. Wyobraź to sobie jak jedną naprawdę zorganizowaną osobę odpowiedzialną za wszystko, co ważne:
 
-![Schemat pokazujący przepływ danych między HTML, akcjami użytkownika i stanem](../../../../translated_images/data-flow.fa2354e0908fecc8.pl.png)
+![Schemat pokazujący przepływ danych między HTML, akcjami użytkownika i stanem](../../../../translated_images/pl/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ To wyzwanie pomoże Ci myśleć jak profesjonalny programista, który bierze pod
 
 Oto przykładowy efekt po ukończeniu zadania:
 
-![Zrzut ekranu pokazujący przykładowy dialog „Dodaj transakcję”](../../../../translated_images/dialog.93bba104afeb79f1.pl.png)
+![Zrzut ekranu pokazujący przykładowy dialog „Dodaj transakcję”](../../../../translated_images/pl/dialog.93bba104afeb79f1.webp)
 
 ---
 

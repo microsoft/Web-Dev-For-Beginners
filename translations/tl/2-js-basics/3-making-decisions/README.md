@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mga Pangunahing Kaalaman sa JavaScript: Paggawa ng Desisyon
 
-![Mga Pangunahing Kaalaman sa JavaScript - Paggawa ng Desisyon](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.tl.png)
+![Mga Pangunahing Kaalaman sa JavaScript - Paggawa ng Desisyon](../../../../translated_images/tl/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 

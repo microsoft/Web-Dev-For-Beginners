@@ -113,7 +113,7 @@ CO_OP_TRANSLATOR_METADATA:
 **പ്രതീക്ഷിച്ച ഫലം:**
 ഈ അസൈൻമെന്റ് പൂര്‍ത്തിയാക്കിയതിനു ശേഷം നിങ്ങളുടെ ബാങ്കിങ് ആപ്പിൽ പ്രൊഫഷണൽ രൂപത്തിലുള്ള ഒരു പൂർണ്ണമായ "Add Transaction" ഫീച്ചർ ഉണ്ടായിരിക്കണം:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.ml.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/ml/dialog.93bba104afeb79f1.webp)
 
 ## നിങ്ങളുടെ നടപ്പാക്കൽ ടെസ്റ്റ് ചെയ്യുക
 

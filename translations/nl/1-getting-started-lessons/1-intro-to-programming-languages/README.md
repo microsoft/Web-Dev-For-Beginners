@@ -17,7 +17,7 @@ Luister, ik snap het helemaal als programmeren nu nog intimiderend lijkt. Toen i
 
 Vandaag gaan we de geweldige tools verkennen die moderne webontwikkeling niet alleen mogelijk maken, maar ook verslavend leuk. Ik heb het over dezelfde editors, browsers en workflows die ontwikkelaars bij Netflix, Spotify en je favoriete indie-appstudio elke dag gebruiken. En hier komt het deel dat je een vreugdedansje laat doen: de meeste van deze professionele, industrienorm-tools zijn helemaal gratis!
 
-![Intro Programmering](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.nl.png)
+![Intro Programmering](../../../../translated_images/nl/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

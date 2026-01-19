@@ -292,7 +292,7 @@ graph TD
 2. สังเกตการเปลี่ยนแปลงในแถบที่อยู่ของเบราว์เซอร์
 3. สังเกตว่าหน้าดีโหลดใหม่และข้อมูลปรากฏใน URL
 
-![ภาพหน้าจอการเปลี่ยน URL ของเบราว์เซอร์หลังคลิกปุ่ม Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca.th.png)
+![ภาพหน้าจอการเปลี่ยน URL ของเบราว์เซอร์หลังคลิกปุ่ม Register](../../../../translated_images/th/click-register.e89a30bf0d4bc9ca.webp)
 
 ### การเปรียบเทียบวิธี HTTP
 
@@ -346,7 +346,7 @@ graph TD
 2. **คลิก** ปุ่ม "Create Account"
 3. **สังเกต** การตอบสนองจากเซิร์ฟเวอร์ในเบราว์เซอร์ของคุณ
 
-![หน้าต่างเบราว์เซอร์ที่อยู่ localhost:5000/api/accounts แสดงสตริง JSON พร้อมข้อมูลผู้ใช้](../../../../translated_images/form-post.61de4ca1b964d91a.th.png)
+![หน้าต่างเบราว์เซอร์ที่อยู่ localhost:5000/api/accounts แสดงสตริง JSON พร้อมข้อมูลผู้ใช้](../../../../translated_images/th/form-post.61de4ca1b964d91a.webp)
 
 **สิ่งที่คุณควรเห็น:**
 - **เบราว์เซอร์เปลี่ยนเส้นทาง** ไปที่ URL ของ API
@@ -609,7 +609,7 @@ async function register() {
 3. **คลิก** "สร้างบัญชี"
 4. **สังเกต** ข้อความในคอนโซลและข้อเสนอแนะสำหรับผู้ใช้
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.th.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/th/browser-console.efaf0b51aaaf6778.webp)
 
 **สิ่งที่คุณควรเห็น:**
 - **สถานะโหลด** ปรากฏบนปุ่มส่ง
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **ลอง** ป้อนอักขระพิเศษในฟิลด์ชื่อผู้ใช้
 4. **ป้อน** ยอดคงเหลือลบ
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.th.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/th/validation-error.8bd23e98d416c22f.webp)
 
 **สิ่งที่คุณจะเห็น:**
 - **เบราว์เซอร์แสดง** ข้อความตรวจสอบพื้นฐานที่มีในตัว
@@ -943,7 +943,7 @@ timeline
 
 นี่คือตัวอย่างของหน้าล็อกอินสุดท้ายที่ดูได้หลังจากเพิ่มสไตล์ CSS เล็กน้อย:
 
-![ภาพหน้าจอของหน้าล็อกอินหลังจากเพิ่มสไตล์ CSS](../../../../translated_images/result.96ef01f607bf856a.th.png)
+![ภาพหน้าจอของหน้าล็อกอินหลังจากเพิ่มสไตล์ CSS](../../../../translated_images/th/result.96ef01f607bf856a.webp)
 
 ## แบบทดสอบหลังบรรยาย
 

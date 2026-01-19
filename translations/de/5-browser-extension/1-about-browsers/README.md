@@ -25,7 +25,7 @@ journey
       Probleme debuggen: 4: Student
       Benutzererlebnis optimieren: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.de.jpg)
+![Browser sketchnote](../../../../translated_images/de/browser.60317c9be8b7f84a.webp)
 > Sketchnote von [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
@@ -77,7 +77,7 @@ Dieser Prozess spiegelt wider, wie der erste Webbrowser, WorldWideWeb, von Tim B
 
 ✅ **Ein wenig Geschichte**: Der erste Browser hieß 'WorldWideWeb' und wurde 1990 von Sir Timothy Berners-Lee geschaffen.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.de.jpg)
+![early browsers](../../../../translated_images/de/earlybrowsers.d984b711cdf3a42d.webp)
 > Einige frühe Browser, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Wie Browser Webinhalte verarbeiten
@@ -194,7 +194,7 @@ quadrantChart
 
 Das Verständnis des Installationsprozesses von Erweiterungen hilft Ihnen, die Nutzererfahrung beim Installieren Ihrer Erweiterung besser zu verstehen. Der Installationsprozess ist bei modernen Browsern standardisiert, mit geringfügigen Unterschieden im Interface-Design.
 
-![Screenshot des Edge-Browsers, der die geöffnete Seite edge://extensions und das geöffnete Einstellungsmenü zeigt](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.de.png)
+![Screenshot des Edge-Browsers, der die geöffnete Seite edge://extensions und das geöffnete Einstellungsmenü zeigt](../../../../translated_images/de/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Wichtig**: Aktivieren Sie beim Testen eigener Erweiterungen unbedingt den Entwicklermodus und erlauben Sie Erweiterungen aus anderen Stores.
 
@@ -308,10 +308,10 @@ Dies folgt dem Prinzip der progressiven Offenbarung, das seit den Anfängen der 
 ### Überblick über Erweiterungsansichten
 
 **Setup-Ansicht** – Ersteinrichtung für Nutzer:
-![Screenshot der fertigen Erweiterung, geöffnet im Browser, zeigt ein Formular mit Eingaben für Regionsname und API-Schlüssel.](../../../../translated_images/1.b6da8c1394b07491.de.png)
+![Screenshot der fertigen Erweiterung, geöffnet im Browser, zeigt ein Formular mit Eingaben für Regionsname und API-Schlüssel.](../../../../translated_images/de/1.b6da8c1394b07491.webp)
 
 **Ergebnis-Ansicht** – Anzeige der CO2-Fußabdruckdaten:
-![Screenshot der fertigen Erweiterung, zeigt Werte für CO2-Verbrauch und fossilen Brennstoffanteil für die Region US-NEISO.](../../../../translated_images/2.1dae52ff08042246.de.png)
+![Screenshot der fertigen Erweiterung, zeigt Werte für CO2-Verbrauch und fossilen Brennstoffanteil für die Region US-NEISO.](../../../../translated_images/de/2.1dae52ff08042246.webp)
 
 ### Aufbau des Konfigurationsformulars
 

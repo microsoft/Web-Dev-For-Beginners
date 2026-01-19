@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### ಕ್ರೆಡಿಟ್ಸ್
 
-![ಹಸಿರು ಬ್ರೌಸರ್ ಎಕ್ಸ್ಟೆನ್‌ಶನ್](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.kn.png)
+![ಹಸಿರು ಬ್ರೌಸರ್ ಎಕ್ಸ್ಟೆನ್‌ಶನ್](../../../translated_images/kn/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## ಕ್ರೆಡಿಟ್ಸ್
 

@@ -42,10 +42,10 @@ Questo curriculum include pacchetti importabili per flussi di lavoro comuni su L
   - Moodle Cloud ha un supporto limitato per Common Cartridge. Preferite il file Moodle sopra, che può anche essere caricato in Canvas.
   - Dopo l'importazione, rivedete i moduli, le date di scadenza e le impostazioni dei quiz per adattarli al vostro calendario.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.it.png)
+![Moodle](../../translated_images/it/moodle.94eb93d714a50cb2.webp)
 > Il curriculum in una classe Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.it.png)
+![Canvas](../../translated_images/it/canvas.fbd605ff8e5b8aff.webp)
 > Il curriculum in Canvas
 
 ### Utilizzo diretto del repository (senza Classroom)

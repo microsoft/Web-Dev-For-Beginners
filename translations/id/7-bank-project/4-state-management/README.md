@@ -190,7 +190,7 @@ Seperti desain kompartemen Titanic yang tampak kokoh hingga beberapa kompartemen
 
 Alih-alih mengejar ekor kita sendiri, kita akan membuat sistem **manajemen state terpusat**. Anggap saja seperti memiliki satu orang yang sangat terorganisir yang bertanggung jawab atas semua hal penting:
 
-![Skema yang menunjukkan aliran data antara HTML, tindakan pengguna, dan state](../../../../translated_images/data-flow.fa2354e0908fecc8.id.png)
+![Skema yang menunjukkan aliran data antara HTML, tindakan pengguna, dan state](../../../../translated_images/id/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -804,7 +804,7 @@ Tantangan ini akan membantu Anda berpikir seperti pengembang profesional yang me
 
 Berikut adalah contoh hasil setelah menyelesaikan tugas:
 
-![Screenshot menunjukkan contoh dialog "Tambah transaksi"](../../../../translated_images/dialog.93bba104afeb79f1.id.png)
+![Screenshot menunjukkan contoh dialog "Tambah transaksi"](../../../../translated_images/id/dialog.93bba104afeb79f1.webp)
 
 ---
 

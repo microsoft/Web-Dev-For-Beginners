@@ -25,7 +25,7 @@ journey
       문제 디버깅하기: 4: Student
       사용자 경험 다듬기: 5: Student
 ```
-![브라우저 스케치노트](../../../../translated_images/browser.60317c9be8b7f84a.ko.jpg)
+![브라우저 스케치노트](../../../../translated_images/ko/browser.60317c9be8b7f84a.webp)
 > 스케치노트 작성자: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## 강의 전 퀴즈
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **간단한 역사**: 최초의 브라우저는 'WorldWideWeb'이라 불렸으며, 1990년 팀 버너스-리가 만들었습니다.
 
-![초기 브라우저들](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.ko.jpg)
+![초기 브라우저들](../../../../translated_images/ko/earlybrowsers.d984b711cdf3a42d.webp)
 > 초기 몇몇 브라우저, 출처: [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### 브라우저가 웹 콘텐츠를 처리하는 방식
@@ -194,7 +194,7 @@ quadrantChart
 
 확장 설치 과정을 이해하면 사용자가 확장 설치 시 경험을 예측할 수 있습니다. 설치 과정은 현대 브라우저 전반에 걸쳐 표준화되어 있으나 UI 디자인에 약간의 차이가 있습니다.
 
-![엣지 브라우저에서 edge://extensions 페이지와 설정 메뉴를 보여주는 스크린샷](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.ko.png)
+![엣지 브라우저에서 edge://extensions 페이지와 설정 메뉴를 보여주는 스크린샷](../../../../translated_images/ko/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **중요**: 직접 개발한 확장 프로그램을 테스트할 때는 개발자 모드를 활성화하고 다른 스토어의 확장 허용을 꼭 켜두세요.
 
@@ -308,10 +308,10 @@ project-root/
 ### 확장 뷰 개요
 
 **설정 뷰** - 처음 사용자 설정 표시:
-![브라우저에서 확장 프로그램이 열려 지역명과 API 키 입력 폼을 표시하는 완성된 화면의 스크린샷](../../../../translated_images/1.b6da8c1394b07491.ko.png)
+![브라우저에서 확장 프로그램이 열려 지역명과 API 키 입력 폼을 표시하는 완성된 화면의 스크린샷](../../../../translated_images/ko/1.b6da8c1394b07491.webp)
 
 **결과 뷰** - 탄소 발자국 데이터 표시:
-![US-NEISO 지역의 탄소 사용량과 화석연료 비율 값을 표시하는 완성된 확장 프로그램의 스크린샷](../../../../translated_images/2.1dae52ff08042246.ko.png)
+![US-NEISO 지역의 탄소 사용량과 화석연료 비율 값을 표시하는 완성된 확장 프로그램의 스크린샷](../../../../translated_images/ko/2.1dae52ff08042246.webp)
 
 ### 설정 폼 만들기
 

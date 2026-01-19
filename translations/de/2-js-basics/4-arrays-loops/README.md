@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Grundlagen: Arrays und Schleifen
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.de.png)
+![JavaScript Basics - Arrays](../../../../translated_images/de/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

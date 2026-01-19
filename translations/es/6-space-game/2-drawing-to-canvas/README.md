@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![grilla del canvas](../../../../translated_images/canvas_grid.5f209da785ded492.es.png)
+![grilla del canvas](../../../../translated_images/es/canvas_grid.5f209da785ded492.webp)
 > Imagen de [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Para dibujar en el elemento canvas, seguirás el mismo proceso de tres pasos que forma la base de todos los gráficos en canvas. Una vez que lo hagas unas cuantas veces, se vuelve algo natural:
@@ -323,11 +323,11 @@ Construirás una página web con un elemento Canvas. Debe mostrar una pantalla n
 
 - Nave héroe
 
-   ![Nave héroe](../../../../translated_images/player.dd24c1afa8c71e9b.es.png)
+   ![Nave héroe](../../../../translated_images/es/player.dd24c1afa8c71e9b.webp)
 
 - Monstruo 5x5
 
-   ![Nave monstruo](../../../../translated_images/enemyShip.5df2a822c16650c2.es.png)
+   ![Nave monstruo](../../../../translated_images/es/enemyShip.5df2a822c16650c2.webp)
 
 ### Pasos recomendados para comenzar desarrollo
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 El resultado final debería verse así:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.es.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/es/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Solución
 

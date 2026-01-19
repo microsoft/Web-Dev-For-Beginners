@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove JavaScripta: Tabele in zanke
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.sl.png)
+![JavaScript Basics - Arrays](../../../../translated_images/sl/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote avtorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

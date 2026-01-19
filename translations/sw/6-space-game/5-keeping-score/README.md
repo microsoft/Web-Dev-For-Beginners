@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Mfumo wa alama**: Kila meli ya adui iliyoharibiwa huleta pointi 100 (nambari za mduara ni rahisi kwa wachezaji kuhesabu kichwani). Alama zinaonyeshwa upande wa chini kushoto.
-- **Kihesabu maisha**: Shujaa wako anaanza na maisha matatu - kiwango kilichowekwa na michezo ya awali ya arcade kulingana na changamoto na urahisi wa kucheza. Kila mgongano na adui hukupotezea maisha moja. Tutaonyesha maisha yaliyobaki upande wa chini kulia kwa kutumia ikoni za meli ![life image](../../../../translated_images/life.6fb9f50d53ee0413.sw.png).
+- **Kihesabu maisha**: Shujaa wako anaanza na maisha matatu - kiwango kilichowekwa na michezo ya awali ya arcade kulingana na changamoto na urahisi wa kucheza. Kila mgongano na adui hukupotezea maisha moja. Tutaonyesha maisha yaliyobaki upande wa chini kulia kwa kutumia ikoni za meli ![life image](../../../../translated_images/sw/life.6fb9f50d53ee0413.webp).
 
 ## Twende Kwenye Ujenzi!
 

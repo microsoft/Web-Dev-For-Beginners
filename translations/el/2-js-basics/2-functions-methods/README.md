@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basics: Μέθοδοι και Συναρτήσεις
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.el.png)
+![JavaScript Basics - Functions](../../../../translated_images/el/webdev101-js-functions.be049c4726e94f8b.webp)
 > Σημείωση από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

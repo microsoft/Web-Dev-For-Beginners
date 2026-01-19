@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![لوحة التخزين المحلي](../../../../translated_images/localstorage.472f8147b6a3f8d1.ar.png)
+![لوحة التخزين المحلي](../../../../translated_images/ar/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **اعتبار أمني**: في التطبيقات الإنتاجية، تخزين مفاتيح API في LocalStorage يشكل مخاطر أمنية لأن JavaScript يمكنه الوصول إلى هذه البيانات. لأغراض التعلم، هذا النهج يعمل بشكل جيد، لكن التطبيقات الحقيقية يجب أن تستخدم تخزين آمن على الخادم للمعلومات الحساسة.
 

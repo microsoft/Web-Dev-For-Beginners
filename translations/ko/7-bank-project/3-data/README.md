@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: 완전한 HTML 페이지 반환
     Browser->>User: 새 페이지 표시 (깜박임/새로고침)
 ```
-![다중 페이지 애플리케이션의 업데이트 워크플로우](../../../../translated_images/mpa.7f7375a1a2d4aa77.ko.png)
+![다중 페이지 애플리케이션의 업데이트 워크플로우](../../../../translated_images/ko/mpa.7f7375a1a2d4aa77.webp)
 
 **이 방식이 답답하게 느껴진 이유:**
 - 클릭할 때마다 페이지 전체를 새로 만들어야 했음
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: 특정 페이지 요소 업데이트
     Browser->>User: 업데이트된 내용 표시 (새로고침 없음)
 ```
-![단일 페이지 애플리케이션의 업데이트 워크플로우](../../../../translated_images/spa.268ec73b41f992c2.ko.png)
+![단일 페이지 애플리케이션의 업데이트 워크플로우](../../../../translated_images/ko/spa.268ec73b41f992c2.webp)
 
 **SPA가 훨씬 좋은 이유:**
 - 실제로 변경된 부분만 업데이트 (똑똑하죠?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 이제 잘못된 계정으로 테스트하면 페이지에 도움 되는 오류 메시지가 바로 보일 것입니다!
 
-![로그인 중 표시되는 오류 메시지 스크린샷](../../../../translated_images/login-error.416fe019b36a6327.ko.png)
+![로그인 중 표시되는 오류 메시지 스크린샷](../../../../translated_images/ko/login-error.416fe019b36a6327.webp)
 
 #### 4단계: 접근성 포함하기
 
@@ -950,7 +950,7 @@ timeline
 
 다음은 스타일링 후 다듬어진 대시보드 예시입니다:
 
-![스타일링 후 대시보드 결과 예시 스크린샷](../../../../translated_images/screen2.123c82a831a1d14a.ko.png)
+![스타일링 후 대시보드 결과 예시 스크린샷](../../../../translated_images/ko/screen2.123c82a831a1d14a.webp)
 
 꼭 똑같이 만들 필요는 없습니다 - 영감을 받아 자신만의 스타일로 만드세요!
 

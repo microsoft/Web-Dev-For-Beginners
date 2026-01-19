@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 以下是完成的專案外觀：
 
-![聊天應用程式介面顯示用戶與 AI 助手之間的對話](../../../translated_images/screenshot.0a1ee0d123df681b.mo.png)
+![聊天應用程式介面顯示用戶與 AI 助手之間的對話](../../../translated_images/mo/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ AI應用程式開發的學習旅程
 
@@ -194,7 +194,7 @@ mindmap
 
 **核心原則**：AI應用程式開發結合了傳統的網頁開發技能與AI服務整合，創造出智能化且對用戶自然且反應迅速的應用程式。
 
-![GitHub Models AI Playground介面，顯示模型選擇和測試區域](../../../translated_images/playground.d2b927122224ff8f.mo.png)
+![GitHub Models AI Playground介面，顯示模型選擇和測試區域](../../../translated_images/mo/playground.d2b927122224ff8f.webp)
 
 **Playground的實用之處：**
 - **嘗試**不同的AI模型，例如GPT-4o-mini、Claude等（全部免費！）
@@ -204,7 +204,7 @@ mindmap
 
 玩了一會兒後，只需點擊 "Code" 標籤，選擇你的程式語言，即可獲得所需的實現程式碼。
 
-![Playground選擇顯示不同程式語言的程式碼生成選項](../../../translated_images/playground-choice.1d23ba7d407f4758.mo.png)
+![Playground選擇顯示不同程式語言的程式碼生成選項](../../../translated_images/mo/playground-choice.1d23ba7d407f4758.webp)
 
 ## 設置 Python 後端整合
 
@@ -2364,14 +2364,14 @@ mindmap
 - **導航**到 [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **點擊**右上角的 "Use this template"（確保你已登錄 GitHub）  
 
-![顯示綠色 "Use this template" 按鈕的模板創建界面](../../../translated_images/template.67ad477109d29a2b.mo.png)  
+![顯示綠色 "Use this template" 按鈕的模板創建界面](../../../translated_images/mo/template.67ad477109d29a2b.webp)  
 
 **步驟 2：啟動 Codespaces**  
 - **打開**你新創建的倉庫  
 - **點擊**綠色的 "Code" 按鈕並選擇 "Codespaces"  
 - **選擇** "Create codespace on main" 以啟動你的開發環境  
 
-![顯示啟動雲端開發環境選項的 Codespace 創建界面](../../../translated_images/codespace.bcecbdf5d2747d3d.mo.png)  
+![顯示啟動雲端開發環境選項的 Codespace 創建界面](../../../translated_images/mo/codespace.bcecbdf5d2747d3d.webp)  
 
 **步驟 3：環境配置**  
 當你的 Codespace 加載完成後，你將擁有以下功能：  

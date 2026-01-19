@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![canvas 网格](../../../../translated_images/canvas_grid.5f209da785ded492.zh.png)
+![canvas 网格](../../../../translated_images/zh/canvas_grid.5f209da785ded492.webp)
 > 图片来自 [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 要在 canvas 元素上绘图，你需要遵循所有画布图形基础的三个步骤。重复几次后，会变得很自然：
@@ -323,11 +323,11 @@ flowchart TD
 
 - 英雄飞船
 
-   ![英雄飞船](../../../../translated_images/player.dd24c1afa8c71e9b.zh.png)
+   ![英雄飞船](../../../../translated_images/zh/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 怪物阵型
 
-   ![怪物飞船](../../../../translated_images/enemyShip.5df2a822c16650c2.zh.png)
+   ![怪物飞船](../../../../translated_images/zh/enemyShip.5df2a822c16650c2.webp)
 
 ### 推荐开发步骤
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 完成的结果应如下所示：
 
-![带有英雄和 5*5 怪物的黑屏](../../../../translated_images/partI-solution.36c53b48c9ffae2a.zh.png)
+![带有英雄和 5*5 怪物的黑屏](../../../../translated_images/zh/partI-solution.36c53b48c9ffae2a.webp)
 
 ## 解决方案
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 tmrow च्या C02 सिग्नल API चा वापर करून, तुमच्या प्रदेशातील वीज वापर किती आहे हे ब्राउझरवर स्मरणपत्र म्हणून दाखवण्यासाठी ब्राउझर विस्तार तयार करा. या विस्ताराचा उपयोग करून, तुम्ही या माहितीच्या आधारे तुमच्या क्रियाकलापांचा निर्णय घेऊ शकता.
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.mr.png)
+![extension screenshot](../../../../../translated_images/mr/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## सुरुवात
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge मध्ये स्थापित करण्यासाठी, ब्राउझरच्या उजव्या कोपऱ्यातील "तीन डॉट्स" मेनूमधून "Extensions" पॅनेल शोधा. तिथून "Load Unpacked" निवडा आणि नवीन विस्तार लोड करा. प्रॉम्प्टमध्ये "dist" फोल्डर उघडा, ज्यामुळे विस्तार लोड होईल. वापरण्यासाठी, तुम्हाला CO2 सिग्नल API चा API की ([इथे ईमेलद्वारे मिळवा](https://www.co2signal.com/) - या पृष्ठावरील बॉक्समध्ये तुमचा ईमेल टाका) आणि [Electricity Map](https://www.electricitymap.org/map) साठी तुमच्या प्रदेशाशी संबंधित [code for your region](http://api.electricitymap.org/v3/zones) आवश्यक आहे (उदाहरणार्थ, बोस्टनसाठी 'US-NEISO' वापरले जाते).
 
-![installing](../../../../../translated_images/install-on-edge.78634f02842c4828.mr.png)
+![installing](../../../../../translated_images/mr/install-on-edge.78634f02842c4828.webp)
 
 API की आणि प्रदेश विस्तार इंटरफेसमध्ये प्रविष्ट केल्यावर, ब्राउझरच्या विस्तार बारमध्ये दिसणारा रंगीत डॉट बदलतो आणि तुमच्या प्रदेशातील ऊर्जा वापर प्रतिबिंबित करतो. यामुळे तुम्हाला कोणत्या प्रकारच्या ऊर्जेची आवश्यकता असलेल्या क्रियाकलाप करणे योग्य आहे हे समजते. या "डॉट" प्रणालीची कल्पना मला कॅलिफोर्नियाच्या उत्सर्जनासाठी [Energy Lollipop extension](https://energylollipop.com/) कडून मिळाली.
 

@@ -123,7 +123,7 @@ To open Developer Tools for Edge, click di three dots for top right corner, then
 
 Make we try am. Open website (Microsoft.com good for this) and click 'Record' button. Now refresh di page and watch di profiler record everything wey dey happen. When you stop recording, you go see detailed breakdown of how browser 'scripts', 'renders', and 'paints' di site. E dey remind me how mission control dey monitor every system during rocket launch - you go get real-time data on exactly wetin dey happen and when.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.pcm.png)
+![Edge profiler](../../../../translated_images/pcm/profiler.5a4a62479c5df01c.webp)
 
 ✅ Di [Microsoft Documentation](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) get plenty details if you wan deep dive
 
@@ -133,11 +133,11 @@ Select elements for profile timeline to zoom on events wey happen while your pag
 
 Get snapshot of your page performance by selecting part of profile timeline and look summary pane:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.pcm.png)
+![Edge profiler snapshot](../../../../translated_images/pcm/snapshot.97750180ebcad737.webp)
 
 Check Event Log pane to see if any event carry pass 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.pcm.png)
+![Edge event log](../../../../translated_images/pcm/log.804026979f3707e0.webp)
 
 ✅ Get to sabi your profiler! Open developer tools for this site and check if any bottlenecks dey. Wetin be slowest-loading asset? Di fastest?
 

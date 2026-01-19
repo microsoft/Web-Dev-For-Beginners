@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Sa proyektong ito, matututo kang gumawa ng isang kathang-isip na bangko. Kasama sa mga araling ito ang mga tagubilin kung paano mag-layout ng isang web app at magbigay ng mga ruta, gumawa ng mga form, pamahalaan ang estado, at kumuha ng data mula sa isang API kung saan maaari mong makuha ang datos ng bangko.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.tl.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.tl.png) |
+| ![Screen1](../../../translated_images/tl/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/tl/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Mga Aralin

@@ -25,7 +25,7 @@ journey
       Enhance accessibility: 5: Student
       Build terrarium: 5: Student
 ```
-![Introduction to HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.pcm.png)
+![Introduction to HTML](../../../../translated_images/pcm/webdev101-html.4389c2067af68e98.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML, or HyperText Markup Language, na di foundation of every website wey you don ever visit. Think of HTML as di skeleton wey dey give structure to web pages – e dey define where content go, how e dey organized, and wetin each piece mean. While CSS go later "dress up" your HTML with colors and layouts, and JavaScript go bring am to life wit interactivity, HTML na di essential structure wey dey make everything else possible.
@@ -86,7 +86,7 @@ You go create dedicated folder for your terrarium project and add your first HTM
 4. For Explorer pane, click "New File" icon
 5. Name your file `index.html`
 
-![VS Code Explorer showing new file creation](../../../../translated_images/vs-code-index.e2986cf919471eb9.pcm.png)
+![VS Code Explorer showing new file creation](../../../../translated_images/pcm/vs-code-index.e2986cf919471eb9.webp)
 
 **Option 2: Using Terminal Commands**
 ```bash

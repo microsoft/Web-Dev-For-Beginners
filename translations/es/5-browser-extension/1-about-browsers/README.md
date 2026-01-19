@@ -25,7 +25,7 @@ journey
       Debug issues: 4: Student
       Polish experience: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.es.jpg)
+![Browser sketchnote](../../../../translated_images/es/browser.60317c9be8b7f84a.webp)
 > Sketchnote por [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
@@ -77,7 +77,7 @@ Este proceso refleja cómo se diseñó el primer navegador web, WorldWideWeb, po
 
 ✅ **Un poco de historia**: El primer navegador se llamó 'WorldWideWeb' y fue creado por Sir Timothy Berners-Lee en 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.es.jpg)
+![early browsers](../../../../translated_images/es/earlybrowsers.d984b711cdf3a42d.webp)
 > Algunos navegadores tempranos, vía [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Cómo los Navegadores Procesan Contenido Web
@@ -194,7 +194,7 @@ quadrantChart
 
 Entender el proceso de instalación de extensiones te ayuda a anticipar la experiencia del usuario cuando las personas instalen tu extensión. El proceso de instalación está estandarizado en navegadores modernos, con ligeras variaciones en el diseño de interfaz.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.es.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/es/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Importante**: Asegúrate de activar el modo desarrollador y permitir extensiones de otras tiendas al probar tus propias extensiones.
 
@@ -308,10 +308,10 @@ Esto sigue el principio de divulgación progresiva usado en diseño de interface
 ### Visión General de Vistas de la Extensión
 
 **Vista de Configuración** - Configuración inicial para usuarios primerizos:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.es.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/es/1.b6da8c1394b07491.webp)
 
 **Vista de Resultados** - Visualización de datos de huella de carbono:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.es.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/es/2.1dae52ff08042246.webp)
 
 ### Construyendo el Formulario de Configuración
 

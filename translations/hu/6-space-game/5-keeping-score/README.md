@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Pontozási rendszer**: Minden legyőzött ellenséges hajó 100 pontot ér (a kerek számok a játékosoknak könnyebben fejben számolhatók). A pontszám a bal alsó sarokban jelenik meg.
-- **Élet számláló**: A hősöd három élettel indul – ez egy korai arcade játékok által lefektetett standard, hogy egyensúlyban tartsa a kihívást és a játszhatóságot. Minden találkozás az ellenséggel egy életet elvesz. A megmaradt életeket jobb alsó sarokban hajó ikonokkal fogjuk megjeleníteni ![life image](../../../../translated_images/life.6fb9f50d53ee0413.hu.png).
+- **Élet számláló**: A hősöd három élettel indul – ez egy korai arcade játékok által lefektetett standard, hogy egyensúlyban tartsa a kihívást és a játszhatóságot. Minden találkozás az ellenséggel egy életet elvesz. A megmaradt életeket jobb alsó sarokban hajó ikonokkal fogjuk megjeleníteni ![life image](../../../../translated_images/hu/life.6fb9f50d53ee0413.webp).
 
 ## Kezdjük az építkezést!
 

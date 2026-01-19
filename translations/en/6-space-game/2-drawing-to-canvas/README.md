@@ -35,7 +35,7 @@ In the code above, we are setting the `id`, `width`, and `height`.
 
 The canvas uses a Cartesian coordinate system to draw shapes. This means it uses an x-axis and y-axis to determine where things are placed. The position `0,0` is the top-left corner, and the bottom-right corner corresponds to the `width` and `height` of the canvas.
 
-![the canvas's grid](../../../../translated_images/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.en.png)
+![the canvas's grid](../../../../translated_images/en/canvas_grid.5f209da785ded492a01ece440e3032afe51efa500cc2308e5ea4252487ceaf0b.png)
 > Image from [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 To draw on the canvas, follow these steps:
@@ -132,11 +132,11 @@ You will create a webpage with a canvas element. The canvas should display a bla
 
 - Hero ship:
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.en.png)
+   ![Hero ship](../../../../translated_images/en/player.dd24c1afa8c71e9b82b2958946d4bad13308681392d4b5ddcc61a0e818ef8088.png)
 
 - 5x5 monster grid:
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.en.png)
+   ![Monster ship](../../../../translated_images/en/enemyShip.5df2a822c16650c2fb3c06652e8ec8120cdb9122a6de46b9a1a56d54db22657f.png)
 
 ### Recommended steps to start development
 
@@ -200,7 +200,7 @@ Add the necessary code to `your-work/app.js` to complete the following tasks:
 
 The final result should look like this:
 
-![Black screen with a hero and 5x5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.en.png)
+![Black screen with a hero and 5x5 monsters](../../../../translated_images/en/partI-solution.36c53b48c9ffae2a5e15496b23b604ba5393433e4bf91608a7a0a020eb7a2691.png)
 
 ## Solution
 

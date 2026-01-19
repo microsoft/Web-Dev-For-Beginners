@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Panel penyimpanan tempatan](../../../../translated_images/localstorage.472f8147b6a3f8d1.ms.png)
+![Panel penyimpanan tempatan](../../../../translated_images/ms/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Pertimbangan Keselamatan**: Dalam aplikasi pengeluaran, menyimpan kunci API dalam LocalStorage menimbulkan risiko keselamatan kerana JavaScript boleh mengakses data ini. Untuk tujuan pembelajaran, pendekatan ini berfungsi dengan baik, tetapi aplikasi sebenar harus menggunakan penyimpanan pelayan yang selamat untuk kelayakan sensitif.
 

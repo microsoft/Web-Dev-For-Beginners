@@ -25,7 +25,7 @@ journey
       Odpravljajte napake: 4: Student
       Izboljšajte izkušnjo: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.sl.jpg)
+![Browser sketchnote](../../../../translated_images/sl/browser.60317c9be8b7f84a.webp)
 > Sketchnote avtorja [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Predpredavanje Kviz
@@ -77,7 +77,7 @@ Ta proces odraža, kako je prvi spletni brskalnik, WorldWideWeb, načrtoval Tim 
 
 ✅ **Malo zgodovine**: Prvi brskalnik se je imenoval 'WorldWideWeb' in ga je leta 1990 ustvaril Sir Timothy Berners-Lee.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.sl.jpg)
+![early browsers](../../../../translated_images/sl/earlybrowsers.d984b711cdf3a42d.webp)
 > Nekateri zgodnji brskalniki, preko [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Kako brskalniki obdelujejo spletno vsebino
@@ -194,7 +194,7 @@ quadrantChart
 
 Razumevanje procesa namestitve razširitev vam pomaga predvideti uporabniško izkušnjo, ko ljudje namestijo vašo razširitev. Proces namestitve je standardiziran v sodobnih brskalnikih, z manjšimi razlikami v oblikovanju vmesnika.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.sl.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sl/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Pomembno**: Prepričajte se, da pri testiranju svojih razširitev omogočite razvojni način in dovolite razširitve iz drugih trgovin.
 
@@ -308,10 +308,10 @@ To sledi principu postopnega razkrivanja, ki se uporablja že od zgodnjih dni ra
 ### Pregled pogledov razširitve
 
 **Pogled nastavitve** - konfiguracija ob prvi uporabi:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.sl.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sl/1.b6da8c1394b07491.webp)
 
 **Pogled rezultatov** - prikaz podatkov o ogljičnem odtisu:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.sl.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sl/2.1dae52ff08042246.webp)
 
 ### Izdelava obrazca za nastavitve
 

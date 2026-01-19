@@ -37,7 +37,7 @@ In games, the concept of "life" is simply a number. In a space game, it's common
 Let's add the following features to your game:
 
 - **Game score**: Award points for every enemy ship destroyed. We suggest 100 points per ship. The score should be displayed in the bottom left corner.
-- **Life**: Your ship starts with three lives. You lose a life whenever an enemy ship collides with you. Lives should be displayed in the bottom right corner using the following graphic: ![life image](../../../../translated_images/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.en.png).
+- **Life**: Your ship starts with three lives. You lose a life whenever an enemy ship collides with you. Lives should be displayed in the bottom right corner using the following graphic: ![life image](../../../../translated_images/en/life.6fb9f50d53ee0413cd91aa411f7c296e10a1a6de5c4a4197c718b49bf7d63ebf.png).
 
 ## Recommended steps
 

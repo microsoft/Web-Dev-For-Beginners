@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 این سفر را با هم قدم به قدم طی می‌کنیم. بدون عجله، بدون فشار – فقط تو، من و ابزارهای واقعاً باحالی که قرار است بهترین دوستان جدیدت شوند!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.fa.png)
+![Intro to GitHub](../../../../translated_images/fa/webdev101-github.8846d7971abef6f9.webp)
 > یادداشت تصویری توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ flowchart TD
 
 ✅ یک راه خوب برای پیدا کردن مخازن 'مناسب برای مبتدیان' این است که به [جستجو بر اساس برچسب 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/) بپردازید.
 
-![کپی کردن مخزن به صورت محلی](../../../../translated_images/clone_repo.5085c48d666ead57.fa.png)
+![کپی کردن مخزن به صورت محلی](../../../../translated_images/fa/clone_repo.5085c48d666ead57.webp)
 
 روش‌های مختلفی برای کپی کردن کد وجود دارد. یک روش این است که محتویات مخزن را "clone" کنید، از طریق HTTPS، SSH، یا با استفاده از رابط خط فرمان GitHub (CLI).
 

@@ -644,7 +644,7 @@ sequenceDiagram
 
 Użycie `history.pushState` tworzy nowe wpisy w historii nawigacji przeglądarki. Możesz to sprawdzić, przytrzymując *przycisk wstecz* w przeglądarce — powinno się pokazać coś takiego:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.pl.png)
+![Screenshot of navigation history](../../../../translated_images/pl/history.7fdabbafa521e064.webp)
 
 Jeśli spróbujesz kilka razy kliknąć przycisk wstecz, zauważysz, że aktualny URL się zmienia, a historia jest aktualizowana, ale nadal wyświetlany jest ten sam szablon.
 

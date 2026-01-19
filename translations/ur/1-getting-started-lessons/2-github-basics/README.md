@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ہم یہ سفر ایک ساتھ کریں گے، ایک قدم بہ ایک قدم۔ کوئی جلدی نہیں، کوئی دباؤ نہیں – بس آپ، میں، اور کچھ واقعی زبردست ٹولز جو آپ کے نئے بہترین دوست بننے والے ہیں!
 
-![GitHub کا تعارف](../../../../translated_images/webdev101-github.8846d7971abef6f9.ur.png)
+![GitHub کا تعارف](../../../../translated_images/ur/webdev101-github.8846d7971abef6f9.webp)
 > اسکیچ نوٹ از [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -583,7 +583,7 @@ flowchart TD
 
 ✅ 'beginner-friendly' ریپوزٹریز تلاش کرنے کا ایک اچھا طریقہ [tag 'good-first-issue' کے ذریعے تلاش کرنا](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/) ہے۔
 
-![ریپو کو لوکل کاپی کریں](../../../../translated_images/clone_repo.5085c48d666ead57.ur.png)
+![ریپو کو لوکل کاپی کریں](../../../../translated_images/ur/clone_repo.5085c48d666ead57.webp)
 
 کوڈ کو کاپی کرنے کے کئی طریقے ہیں۔ ایک طریقہ یہ ہے کہ ریپوزٹری کے مواد کو "کلون" کریں، HTTPS، SSH، یا GitHub CLI (کمانڈ لائن انٹرفیس) کا استعمال کرتے ہوئے۔
 

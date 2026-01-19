@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 tmrow ရဲ့ C02 Signal API ကို အသုံးပြုပြီး လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို စောင့်ကြည့်နိုင်ရန် browser extension တစ်ခု တည်ဆောက်ပါ။ ဒါက region ရဲ့ လျှပ်စစ်ဓာတ်အားအသုံးပြုမှု အလေးအနက်ကို သတိပေးချက်အဖြစ် browser ထဲမှာ ရှိနေစေမှာဖြစ်ပါတယ်။ ဒီ extension ကို အခါအားလျော်စွာ အသုံးပြုခြင်းက သင့်ရဲ့ လုပ်ဆောင်မှုများအပေါ် အချက်အလက်အခြေခံပြီး ဆုံးဖြတ်ချက်များ ချမှတ်နိုင်ရန် အထောက်အကူဖြစ်စေပါမယ်။
 
-![extension screenshot](../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.my.png)
+![extension screenshot](../../../../translated_images/my/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## စတင်အသုံးပြုခြင်း
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge browser မှာ install လုပ်ရန်အတွက် browser ရဲ့ အပေါ်ဘက်ညာထောင့်မှာရှိတဲ့ 'three dot' menu ကို အသုံးပြုပြီး Extensions panel ကို ရှာပါ။ 'Load Unpacked' ကို ရွေးချယ်ပြီး extension အသစ်တစ်ခုကို load လုပ်ပါ။ prompt မှာ 'dist' folder ကို ဖွင့်ပြီး extension ကို load လုပ်ပါ။ အသုံးပြုရန်အတွက် CO2 Signal ရဲ့ API key ([ဒီမှာ email ဖြင့် ရယူပါ](https://www.co2signal.com/) - ဒီ page မှာ သင့် email ကို box ထဲမှာ ထည့်ပါ) နှင့် [Electricity Map](https://www.electricitymap.org/map) ရဲ့ [region code](http://api.electricitymap.org/v3/zones) ကို ထည့်ရန် လိုအပ်ပါမယ်။ ဥပမာအားဖြင့် Boston မှာ 'US-NEISO' ကို အသုံးပြုပါတယ်။
 
-![installing](../../../../translated_images/install-on-edge.78634f02842c4828.my.png)
+![installing](../../../../translated_images/my/install-on-edge.78634f02842c4828.webp)
 
 API key နှင့် region code ကို extension interface ထဲမှာ input လုပ်ပြီးနောက် browser extension bar ရဲ့ အရောင် dot က region ရဲ့ လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို ပြသပြီး သင့်အတွက် လျှပ်စစ်ဓာတ်အားများအသုံးပြုရမည့် လုပ်ဆောင်မှုများအပေါ် pointer တစ်ခု ပေးပါမယ်။ ဒီ 'dot' system ရဲ့ concept ကို [Energy Lollipop extension](https://energylollipop.com/) မှ California emissions အတွက် ရရှိခဲ့ပါတယ်။
 

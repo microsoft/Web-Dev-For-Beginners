@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Sustav bodovanja**: Svaki uništeni neprijateljski brod donosi 100 bodova (zaokruženi brojevi lakši su igračima za mentalno računanje). Rezultat se prikazuje u donjem lijevom kutu.
-- **Brojač života**: Vaš junak počinje s tri života - standard uspostavljen od ranih arkadnih igara za balansiranje izazova i igrivosti. Svaka kolizija s neprijateljem oduzima jedan život. Preostale živote prikazat ćemo u donjem desnom kutu koristeći ikone brodova ![life image](../../../../translated_images/life.6fb9f50d53ee0413.hr.png).
+- **Brojač života**: Vaš junak počinje s tri života - standard uspostavljen od ranih arkadnih igara za balansiranje izazova i igrivosti. Svaka kolizija s neprijateljem oduzima jedan život. Preostale živote prikazat ćemo u donjem desnom kutu koristeći ikone brodova ![life image](../../../../translated_images/hr/life.6fb9f50d53ee0413.webp).
 
 ## Krenimo s izradom!
 

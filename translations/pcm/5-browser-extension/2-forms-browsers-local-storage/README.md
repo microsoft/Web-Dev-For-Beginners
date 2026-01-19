@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Remove saved data
     ClearStorage --> FirstTime: Come back to setup
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.pcm.png)
+![Local storage pane](../../../../translated_images/pcm/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Security Consideration**: For production apps, to store API keys for LocalStorage fit cause security risks since JavaScript fit access dis data. For learning, dis way good, but real apps suppose use secure server-side storage for sensitive credentials.
 

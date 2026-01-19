@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Невелика вправа з перетягування елементів. За допомогою трохи HTML, JS і CSS ви можете створити веб-інтерфейс, стилізувати його та додати взаємодію.
 
-![мій тераріум](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.uk.png)
+![мій тераріум](../../../../translated_images/uk/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Авторство
 

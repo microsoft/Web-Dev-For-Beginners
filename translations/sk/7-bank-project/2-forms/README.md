@@ -292,7 +292,7 @@ Najprv si všimnime, čo sa deje pri základnom odoslaní formulára:
 2. Sledujte zmenu URL v adresnom riadku prehliadača
 3. Všimnite si, ako stránka obnoví a údaje sa zobrazia v URL
 
-![Screenshot zmeny URL v prehliadači po kliknutí na tlačidlo Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca.sk.png)
+![Screenshot zmeny URL v prehliadači po kliknutí na tlačidlo Register](../../../../translated_images/sk/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Porovnanie HTTP metód
 
@@ -346,7 +346,7 @@ Nakonfigurujme váš registračný formulár tak, aby správne komunikoval so ba
 2. **Kliknite** na tlačidlo "Create Account"
 3. **Sledujte** odpoveď servera v prehliadači
 
-![Okno prehliadača na adrese localhost:5000/api/accounts s JSON reťazcom obsahujúcim údaje o používateľovi](../../../../translated_images/form-post.61de4ca1b964d91a.sk.png)
+![Okno prehliadača na adrese localhost:5000/api/accounts s JSON reťazcom obsahujúcim údaje o používateľovi](../../../../translated_images/sk/form-post.61de4ca1b964d91a.webp)
 
 **Čo by ste mali vidieť:**
 - **Prehliadač sa presmeruje** na URL API endpointu
@@ -609,7 +609,7 @@ async function register() {
 3. **Kliknite** na "Vytvoriť účet"
 4. **Sledujte** správy v konzole a spätnú väzbu používateľa
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.sk.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/sk/browser-console.efaf0b51aaaf6778.webp)
 
 **Čo by ste mali vidieť:**
 - **Stav načítavania** sa zobrazí na tlačidle odoslania
@@ -783,7 +783,7 @@ Vylepšime váš registračný formulár robustnou validáciou, ktorá zabezpeč
 3. **Vyskúšajte** špeciálne znaky v poli užívateľského mena
 4. **Zadajte** zápornú hodnotu zostatku
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.sk.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/sk/validation-error.8bd23e98d416c22f.webp)
 
 **Čo uvidíte:**
 - **Prehliadač zobrazí** natívne validačné správy
@@ -943,7 +943,7 @@ Zobrazte chybové hlásenie v HTML, ak užívateľ už existuje.
 
 Tu je príklad, ako môže konečná prihlasovacia stránka vyzerať po miernom úprave štýlov:
 
-![Snímka obrazovky prihlasovacej stránky po pridaní CSS štýlov](../../../../translated_images/result.96ef01f607bf856a.sk.png)
+![Snímka obrazovky prihlasovacej stránky po pridaní CSS štýlov](../../../../translated_images/sk/result.96ef01f607bf856a.webp)
 
 ## Kvíz po prednáške
 

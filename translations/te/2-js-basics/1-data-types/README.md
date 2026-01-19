@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # జావాస్క్రిప్ట్ మౌలికాలు: డేటా రకాలు
 
-![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.te.png)
+![JavaScript Basics - Data types](../../../../translated_images/te/webdev101-js-datatypes.4cc470179730702c.webp)
 > స్కెచ్ నోట్ ద్వారా [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

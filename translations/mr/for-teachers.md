@@ -42,10 +42,10 @@ CO_OP_TRANSLATOR_METADATA:
   - Moodle Cloud मध्ये Common Cartridge साठी मर्यादित समर्थन आहे. वरील Moodle फाइलला प्राधान्य द्या, जी Canvas मध्ये देखील अपलोड केली जाऊ शकते.
   - आयात केल्यानंतर, तुमच्या टर्म शेड्यूलशी जुळण्यासाठी मॉड्यूल्स, देय तारखा आणि क्विझ सेटिंग्ज पुनरावलोकन करा.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.mr.png)
+![Moodle](../../translated_images/mr/moodle.94eb93d714a50cb2.webp)
 > Moodle वर्गात अभ्यासक्रम
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.mr.png)
+![Canvas](../../translated_images/mr/canvas.fbd605ff8e5b8aff.webp)
 > Canvas मध्ये अभ्यासक्रम
 
 ### थेट रिपॉझिटरी वापरा (Classroom न वापरता)

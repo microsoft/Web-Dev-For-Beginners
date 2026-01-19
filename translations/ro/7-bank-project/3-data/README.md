@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Returnează pagina HTML completă
     Browser->>User: Afișează pagina nouă (clipire/reîncărcare)
 ```
-![Fluxul de actualizare într-o aplicație multi-pagină](../../../../translated_images/mpa.7f7375a1a2d4aa77.ro.png)
+![Fluxul de actualizare într-o aplicație multi-pagină](../../../../translated_images/ro/mpa.7f7375a1a2d4aa77.webp)
 
 **De ce această abordare părea stângace:**
 - Fiecare clic implica reconstruirea completă a paginii de la zero
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Actualizează elemente specifice ale paginii
     Browser->>User: Afișează conținut actualizat (fără reîncărcare)
 ```
-![Fluxul de actualizare într-o aplicație single-page](../../../../translated_images/spa.268ec73b41f992c2.ro.png)
+![Fluxul de actualizare într-o aplicație single-page](../../../../translated_images/ro/spa.268ec73b41f992c2.webp)
 
 **De ce SPA-urile se simt mult mai bine:**
 - Doar părțile care s-au schimbat de fapt sunt actualizate (inteligent, nu?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Acum, când testezi cu un cont invalid, vei vedea un mesaj de eroare util chiar pe pagină!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.ro.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/ro/login-error.416fe019b36a6327.webp)
 
 #### Pasul 4: Incluzivitate și Accesibilitate
 
@@ -950,7 +950,7 @@ Ești gata să duci aplicația ta bancară la nivelul următor? Hai să o facem 
 
 Iată cum ar putea arăta un dashboard finisat:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.ro.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/ro/screen2.123c82a831a1d14a.webp)
 
 Nu trebuie să se potrivească exact - folosește-l ca inspirație și fă-l să fie al tău!
 

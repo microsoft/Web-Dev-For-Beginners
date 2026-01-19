@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: 回傳完整的 HTML 頁面
     Browser->>User: 顯示新頁面（閃爍/重新載入）
 ```
-![多頁應用的更新流程](../../../../translated_images/mpa.7f7375a1a2d4aa77.tw.png)
+![多頁應用的更新流程](../../../../translated_images/tw/mpa.7f7375a1a2d4aa77.webp)
 
 **這種方式的笨重之處：**
 - 每次點擊都要重新載入整頁
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: 更新特定的頁面元素
     Browser->>User: 顯示更新內容（無重新載入）
 ```
-![單頁應用的更新流程](../../../../translated_images/spa.268ec73b41f992c2.tw.png)
+![單頁應用的更新流程](../../../../translated_images/tw/spa.268ec73b41f992c2.webp)
 
 **SPA 讓使用體驗更好的原因：**
 - 只更新真的改變的部分（很聰明！）
@@ -516,7 +516,7 @@ if (data.error) {
 
 現在測試無效帳號，就會看到頁面上的錯誤訊息囉！
 
-![登入時顯示錯誤訊息的截圖](../../../../translated_images/login-error.416fe019b36a6327.tw.png)
+![登入時顯示錯誤訊息的截圖](../../../../translated_images/tw/login-error.416fe019b36a6327.webp)
 
 #### 第四步：做出無障礙友善設計
 
@@ -950,7 +950,7 @@ timeline
 
 這是經過樣式美化後的儀表板範例：
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.tw.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/tw/screen2.123c82a831a1d14a.webp)
 
 不用一定要一模一樣，拿來當靈感並做出自己的風格吧！
 

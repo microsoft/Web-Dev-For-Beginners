@@ -292,7 +292,7 @@ graph TD
 2. Παρατηρήστε τις αλλαγές στη γραμμή διευθύνσεων του browser
 3. Δείτε πώς η σελίδα φορτώνει ξανά και εμφανίζονται δεδομένα στο URL
 
-![Screenshot of the browser's URL change after clicking the Register button](../../../../translated_images/click-register.e89a30bf0d4bc9ca.el.png)
+![Screenshot of the browser's URL change after clicking the Register button](../../../../translated_images/el/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Σύγκριση Μεθόδων HTTP
 
@@ -346,7 +346,7 @@ graph TD
 2. **Κάντε κλικ** στο κουμπί "Δημιουργία Λογαριασμού"
 3. **Παρατηρήστε** την απόκριση του διακομιστή στον browser σας
 
-![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](../../../../translated_images/form-post.61de4ca1b964d91a.el.png)
+![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](../../../../translated_images/el/form-post.61de4ca1b964d91a.webp)
 
 **Τι πρέπει να δείτε:**
 - **Ο browser ανακατευθύνει** στη διεύθυνση endpoint του API
@@ -609,7 +609,7 @@ async function register() {
 3. **Πατήστε** "Create Account"
 4. **Παρατηρήστε** τα μηνύματα της κονσόλας και το feedback προς το χρήστη
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.el.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/el/browser-console.efaf0b51aaaf6778.webp)
 
 **Τι θα δείτε:**
 - **Κατάσταση φόρτωσης** εμφανίζεται στο κουμπί υποβολής
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **Δοκιμάστε** ειδικούς χαρακτήρες στο πεδίο ονόματος χρήστη
 4. **Πληκτρολογήστε** αρνητικό ποσό υπολοίπου
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.el.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/el/validation-error.8bd23e98d416c22f.webp)
 
 **Τι θα παρατηρήσετε:**
 - **Ο browser εμφανίζει** ενσωματωμένα μηνύματα επικύρωσης
@@ -943,7 +943,7 @@ timeline
 
 Παρακάτω είναι ένα παράδειγμα για το πως μπορεί να μοιάζει η τελική σελίδα σύνδεσης μετά από λίγη διαμόρφωση στυλ:
 
-![Στιγμιότυπο οθόνης της σελίδας σύνδεσης μετά την προσθήκη στυλ CSS](../../../../translated_images/result.96ef01f607bf856a.el.png)
+![Στιγμιότυπο οθόνης της σελίδας σύνδεσης μετά την προσθήκη στυλ CSS](../../../../translated_images/el/result.96ef01f607bf856a.webp)
 
 ## Μετά την Διάλεξη Quiz
 

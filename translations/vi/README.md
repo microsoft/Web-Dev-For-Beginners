@@ -72,13 +72,13 @@ Dự án Trợ lý AI mới vừa được thêm, xem ngay [dự án](./9-chat-p
 
 Truy cập [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) để bắt đầu!
 
-![Background](../../translated_images/background.148a8d43afde5730.vi.png)
+![Background](../../translated_images/vi/background.148a8d43afde5730.webp)
 
 - Các bài học bao phủ từ cơ bản đến RAG.
 - Tương tác với các nhân vật lịch sử bằng GenAI và ứng dụng đồng hành của chúng tôi.
 - Câu chuyện thú vị và hấp dẫn, bạn sẽ du hành thời gian!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.vi.png)
+![character](../../translated_images/vi/character.5c0dd8e067ffd693.webp)
 
 Mỗi bài học bao gồm một bài tập hoàn thành, kiểm tra kiến thức và một thử thách để hướng dẫn bạn học các chủ đề như:
 - Lời nhắc và kỹ thuật tạo lời nhắc
@@ -114,7 +114,7 @@ Thực hiện theo các bước:
 
 Trong bản sao kho lưu trữ bạn đã tạo, nhấp nút **Code** và chọn **Open with Codespaces**. Điều này sẽ tạo Codespace mới để bạn làm việc.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.vi.png)
+![Codespace](../../translated_images/vi/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Chạy chương trình trên máy tính của bạn
 

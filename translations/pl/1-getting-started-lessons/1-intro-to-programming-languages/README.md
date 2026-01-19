@@ -17,7 +17,7 @@ Słuchaj, całkowicie rozumiem, jeśli programowanie wydaje się teraz przeraża
 
 Dziś poznamy niesamowite narzędzia, które sprawiają, że nowoczesne tworzenie stron internetowych jest nie tylko możliwe, ale też niesamowicie wciągające. Mówię o tych samych edytorach, przeglądarkach i przepływach pracy, z których korzystają programiści Netflixa, Spotify oraz Twojego ulubionego studia indie tworzącego aplikacje każdego dnia. I oto część, która sprawi, że zatańczysz z radości: większość tych profesjonalnych, standardowych narzędzi jest całkowicie darmowa!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.pl.png)
+![Intro Programming](../../../../translated_images/pl/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

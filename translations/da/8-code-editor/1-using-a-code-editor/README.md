@@ -182,7 +182,7 @@ Ligesom Alexander Graham Bells telefon forbandt fjerne steder, forbinder det at 
 
 Når alt er indlæst, vil du se et smukt rent arbejdsområde designet til at holde dig fokuseret på det, der betyder noget – din kode!
 
-![Default VSCode.dev interface](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.da.png)
+![Default VSCode.dev interface](../../../../translated_images/da/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Her er din rundvisning i nabolaget:**
 - **Aktivitetslinje** (den stribe til venstre): Din primære navigation med Explorer 📁, Søg 🔍, Kildekontrol 🌿, Extensions 🧩 og Indstillinger ⚙️
@@ -229,7 +229,7 @@ Den er perfekt, når du starter frisk i VSCode.dev og vil åbne et specifikt rep
 1. Gå til [vscode.dev](https://vscode.dev), hvis du ikke allerede er der
 2. Find knappen "Open Remote Repository" på velkomstskærmen og klik på den
 
-   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.da.png)
+   ![Open remote repository](../../../../translated_images/da/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Indsæt en hvilken som helst GitHub repository URL (prøv denne: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Tryk Enter og se magien ske!
@@ -238,7 +238,7 @@ Den er perfekt, når du starter frisk i VSCode.dev og vil åbne et specifikt rep
 
 Vil du føle dig som en kode-troldmand? Prøv denne tastaturgenvej: Ctrl+Shift+P (eller Cmd+Shift+P på Mac) for at åbne Kommandopalletten:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.da.png)
+![Command Palette](../../../../translated_images/da/palette-menu.4946174e07f42622.webp)
 
 **Kommandopalletten er som en søgemaskine til alt, hvad du kan gøre:**
 - Skriv "open remote" og den finder repository-åbneren for dig
@@ -300,7 +300,7 @@ Ligesom at organisere blåtryk på en arkitekts kontor følger filoprettelse i V
 3. Indtast filnavnet inklusive den korrekte filendelse (`style.css`, `script.js`, `index.html`)
 4. Tryk Enter for at oprette filen
 
-![Creating a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb.da.png)
+![Creating a new file](../../../../translated_images/da/create-new-file.2814e609c2af9aeb.webp)
 
 **Navngivningskonventioner:**
 - Brug beskrivende navne, der angiver filens formål
@@ -318,7 +318,7 @@ Her begynder det sjove! VSCode.dev’s editor er fyldt med hjælpsomme funktione
 2. Begynd at skrive og se, hvordan VSCode.dev hjælper dig med farver, forslag og fejlregistrering
 3. Gem dit arbejde med Ctrl+S (Windows/Linux) eller Cmd+S (Mac) – selvom det også autosaves!
 
-![Editing files in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.da.png)
+![Editing files in VSCode.dev](../../../../translated_images/da/edit-a-file.52c0ee665ef19f08.webp)
 
 **De seje ting, der sker under kodning:**
 - Din kode bliver smukt farvekodet, så den er nem at læse
@@ -339,7 +339,7 @@ Ligesom arkæologer laver detaljerede optegnelser over udgravningslag, sporer Gi
 2. Ændrede filer vises i sektionen "Ændringer"
 3. Farvekodning angiver ændringstyper: grøn for tilføjelser, rød for sletninger
 
-![Viewing changes in Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.da.png)
+![Viewing changes in Source Control](../../../../translated_images/da/working-tree.c58eec08e6335c79.webp)
 
 **Gem dit arbejde (commit-arbejdsgang):**
 
@@ -431,7 +431,7 @@ Udvidelsesmarkedspladsen er virkelig godt organiseret, så du ikke mister overbl
 2. Gå på opdagelse eller søg efter noget specifikt
 3. Klik på alt, der ser interessant ud for at lære mere om det
 
-![Extension marketplace interface](../../../../translated_images/extensions.eca0e0c7f59a10b5.da.png)
+![Extension marketplace interface](../../../../translated_images/da/extensions.eca0e0c7f59a10b5.webp)
 
 **Det vil du se derinde:**
 
@@ -484,7 +484,7 @@ De fleste udvidelser kommer med indstillinger, som du kan justere, så de funger
 3. Vælg "Extension Settings" i dropdown-menuen
 4. Juster ting, indtil det passer perfekt til dit workflow
 
-![Customizing extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78.da.png)
+![Customizing extension settings](../../../../translated_images/da/extension-settings.21c752ae4f4cdb78.webp)
 
 **Almindelige ting, du måske vil justere:**
 - Hvordan din kode formateres (tabs vs mellemrum, linjelængde osv.)

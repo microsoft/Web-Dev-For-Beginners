@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Använd tmrow:s C02 Signal API för att spåra elförbrukning och bygg en webbläsartillägg så att du kan få en påminnelse direkt i din webbläsare om hur tung elförbrukningen är i din region. Genom att använda detta tillägg spontant kan du fatta beslut om dina aktiviteter baserat på denna information.
 
-![extension screenshot](../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sv.png)
+![extension screenshot](../../../../translated_images/sv/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kom igång
 
@@ -31,7 +31,7 @@ npm run build
 
 För att installera på Edge, använd menyn med 'tre punkter' i det övre högra hörnet av webbläsaren för att hitta panelen för Tillägg. Därifrån väljer du 'Ladda upp packat' för att ladda ett nytt tillägg. Öppna mappen 'dist' när du blir ombedd, och tillägget kommer att laddas. För att använda det behöver du en API-nyckel för CO2 Signal:s API ([skaffa en här via e-post](https://www.co2signal.com/) - ange din e-post i rutan på denna sida) och koden för din region ([hitta den här](http://api.electricitymap.org/v3/zones)) som motsvarar [Electricity Map](https://www.electricitymap.org/map) (i Boston, till exempel, använder jag 'US-NEISO').
 
-![installing](../../../../translated_images/install-on-edge.78634f02842c4828.sv.png)
+![installing](../../../../translated_images/sv/install-on-edge.78634f02842c4828.webp)
 
 När API-nyckeln och regionen har angetts i tilläggets gränssnitt, bör den färgade pricken i webbläsartilläggsfältet ändras för att återspegla din regions energiförbrukning och ge dig en indikation på vilka energikrävande aktiviteter som är lämpliga att utföra. Konceptet bakom detta 'prick'-system fick jag från [Energy Lollipop-tillägget](https://energylollipop.com/) för utsläpp i Kalifornien.
 

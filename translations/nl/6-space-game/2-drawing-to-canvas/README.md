@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![het raster van de canvas](../../../../translated_images/canvas_grid.5f209da785ded492.nl.png)
+![het raster van de canvas](../../../../translated_images/nl/canvas_grid.5f209da785ded492.webp)
 > Afbeelding van [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Om op het canvas-element te tekenen, volg je hetzelfde drie-stappenproces dat de basis vormt van alle canvasgraphics. Zodra je dit een paar keer hebt gedaan, wordt het een tweede natuur:
@@ -329,11 +329,11 @@ Je gaat een webpagina maken met een Canvas-element. Het moet een zwart scherm va
 
 - Heldenschip
 
-   ![Heldenschip](../../../../translated_images/player.dd24c1afa8c71e9b.nl.png)
+   ![Heldenschip](../../../../translated_images/nl/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 monster
 
-   ![Monsterschip](../../../../translated_images/enemyShip.5df2a822c16650c2.nl.png)
+   ![Monsterschip](../../../../translated_images/nl/enemyShip.5df2a822c16650c2.webp)
 
 ### Aanbevolen stappen om te beginnen met ontwikkelen
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Het eindresultaat zou er zo uit moeten zien:  
 
-![Zwart scherm met een held en 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.nl.png)  
+![Zwart scherm met een held en 5*5 monsters](../../../../translated_images/nl/partI-solution.36c53b48c9ffae2a.webp)  
 
 ## Oplossing  
 

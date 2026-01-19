@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Ево како ће завршени пројекат изгледати:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.sr.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/sr/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Ваш Пут Кроз Развој AI Апликација
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Основни Принцип**: Развој AI апликација комбинује традиционалне вештине веб развоја са интеграцијом AI сервиса, креирајући интелигентне апликације које делују природно и реагују на кориснике.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.sr.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/sr/playground.d2b927122224ff8f.webp)
 
 **Ево шта чини игралиште тако корисним:**
 - **Испробајте** различите AI моделе као GPT-4o-mini, Claude и друге (сви бесплатно!)
@@ -199,7 +199,7 @@ mindmap
 
 Када се мало поиграте, једноставно кликните на таб "Code" и изаберите свој програмски језик да бисте добили код за имплементацију.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.sr.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/sr/playground-choice.1d23ba7d407f4758.webp)
 
 ## Подешавање Python Бекенд Интеграције
 
@@ -2350,14 +2350,14 @@ mindmap
 - **Идите** на [Web Dev For Beginners репозиторијум](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **Кликните** на "Use this template" у горњем десном углу (проверите да ли сте пријављени на GitHub)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.sr.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/sr/template.67ad477109d29a2b.webp)
 
 **Корак 2: Покретање Codespaces**
 - **Отворите** свој новокреирани репозиторијум
 - **Кликните** зелено дугме "Code" и изаберите "Codespaces"
 - **Изаберите** "Create codespace on main" за покретање развојног окружења
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.sr.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/sr/codespace.bcecbdf5d2747d3d.webp)
 
 **Корак 3: Конфигурација окружења**
 Када се ваш Codespace учита, имате приступ:

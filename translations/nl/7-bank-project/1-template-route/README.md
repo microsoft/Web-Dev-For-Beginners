@@ -652,7 +652,7 @@ sequenceDiagram
 
 Het gebruik van `history.pushState` creëert nieuwe invoeren in de navigatiegeschiedenis van de browser. Je kunt dat controleren door de *terugknop* van je browser ingedrukt te houden, het zou er ongeveer zo uit moeten zien:
 
-![Screenshot van navigatiegeschiedenis](../../../../translated_images/history.7fdabbafa521e064.nl.png)
+![Screenshot van navigatiegeschiedenis](../../../../translated_images/nl/history.7fdabbafa521e064.webp)
 
 Als je een paar keer op de terugknop klikt, zie je dat de huidige URL verandert en de geschiedenis wordt bijgewerkt, maar dezelfde template blijft worden weergegeven.
 

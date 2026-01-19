@@ -23,7 +23,7 @@ Kiendelezi hiki kinaweza kuitwa na mtumiaji wakati wowote baada ya kuingiza API 
 
 ### Shukrani
 
-![kiendelezi cha kivinjari cha kijani](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sw.png)
+![kiendelezi cha kivinjari cha kijani](../../../translated_images/sw/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Shukrani
 

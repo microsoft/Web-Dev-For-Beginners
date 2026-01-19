@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Inarudisha ukurasa kamili wa HTML
     Browser->>User: Inaonyesha ukurasa mpya (mwanga/upya)
 ```
-![Mtiririko wa sasisho katika programu ya kurasa nyingi](../../../../translated_images/mpa.7f7375a1a2d4aa77.sw.png)
+![Mtiririko wa sasisho katika programu ya kurasa nyingi](../../../../translated_images/sw/mpa.7f7375a1a2d4aa77.webp)
 
 **Kwa nini njia hii ilihisi polepole:**
 - Kila bonyeza lilimaanisha kujenga ukurasa mzima upya kutoka mwanzoni
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Husaidia vipengele maalum vya ukurasa
     Browser->>User: Inaonyesha yaliyosasishwa (hakuna upyaaji)
 ```
-![Mtiririko wa sasisho katika programu ya ukurasa mmoja](../../../../translated_images/spa.268ec73b41f992c2.sw.png)
+![Mtiririko wa sasisho katika programu ya ukurasa mmoja](../../../../translated_images/sw/spa.268ec73b41f992c2.webp)
 
 **Kwa nini SPA zinahisi bora zaidi:**
 - Sehemu tu zilizobadilika ndizo zinazosasishwa (tajiri, sivyo?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Sasa unapojaribu na akaunti isiyo halali, utaona ujumbe wa kosa unaosaidia moja kwa moja kwenye ukurasa!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.sw.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/sw/login-error.416fe019b36a6327.webp)
 
 #### Hatua ya 4: Kuwajumuisha kwa Upatikanaji
 
@@ -952,7 +952,7 @@ Uko tayari kupeleka programu yako ya benki kwa ngazi inayofuata? Tufanye ionekan
 
 Huu hapa muonekano wa dashibodi iliyopambwa vizuri:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.sw.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/sw/screen2.123c82a831a1d14a.webp)
 
 Usijisikie lazima ulingane nalo kwa usahihi - tumia kama msukumo na uibadilishe ipasavyo!
 

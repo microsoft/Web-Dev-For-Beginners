@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 V tomto projekte sa naučíte, ako vytvoriť fiktívnu banku. Tieto lekcie obsahujú pokyny, ako navrhnúť webovú aplikáciu a poskytnúť trasy, vytvoriť formuláre, spravovať stav a získavať údaje z API, z ktorého môžete načítať údaje banky.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.sk.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.sk.png) |
+| ![Screen1](../../../translated_images/sk/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/sk/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Lekcie

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Terrarium Project Part 1: Introduction to HTML
 
-![Introduction to HTML](../../../../translated_images/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.en.png)
+![Introduction to HTML](../../../../translated_images/en/webdev101-html.4389c2067af68e98280c1bde52b6c6269f399eaae3659b7c846018d8a7b0bbd9.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
@@ -32,7 +32,7 @@ In this lesson, we'll use HTML to structure the 'framework' of our virtual terra
 
 On your computer, create a folder named 'terrarium' and inside it, a file called 'index.html'. You can do this in Visual Studio Code by opening a new VS Code window, clicking 'open folder', and navigating to your new folder. Then, click the small 'file' button in the Explorer pane to create the new file:
 
-![explorer in VS Code](../../../../translated_images/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.en.png)
+![explorer in VS Code](../../../../translated_images/en/vs-code-index.e2986cf919471eb984a0afef231380c8b132b000635105f2397bd2754d1b689c.png)
 
 Alternatively, you can use these commands in Git Bash:
 * `mkdir terrarium`

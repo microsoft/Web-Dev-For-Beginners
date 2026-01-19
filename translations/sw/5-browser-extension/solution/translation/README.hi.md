@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kutumia API ya CO2 Signal ya tmrow kufuatilia matumizi ya umeme, tunajenga kiongezo cha kivinjari ili kukukumbusha jinsi matumizi ya umeme katika eneo lako yalivyo mazito kupitia kivinjari chako. Kutumia kiongezo hiki kwa muda mfupi kutakusaidia kufanya maamuzi kuhusu shughuli zako kulingana na taarifa hii.
 
-![Picha ya skrini ya kiongezo](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sw.png)
+![Picha ya skrini ya kiongezo](../../../../../translated_images/sw/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kuanza
 
@@ -31,7 +31,7 @@ npm run build
 
 Ili kusakinisha kwenye Edge, tumia menyu ya 'nukta tatu' kwenye kona ya juu kulia ya kivinjari ili kupata paneli ya viongezo. Kutoka hapo, chagua 'Load unpacked' ili kupakia kiongezo kipya. Fungua folda ya 'dist' kwenye prompt, na kiongezo kitapakiwa. Ili kutumia, utahitaji API key ya CO2 Signal ([ipate kupitia barua pepe hapa](https://www.co2snal.com/) - weka barua pepe yako kwenye kisanduku cha ukurasa huo) na [msimbo wa eneo lako](http://api.electricitymap.org/v3/zones) kutoka [ramani ya umeme](https://www.electricitymap.org/map) (kwa mfano, huko Boston, ninatumia 'US-NEISO').
 
-![kusakinisha](../../../../../translated_images/install-on-edge.78634f02842c4828.sw.png)
+![kusakinisha](../../../../../translated_images/sw/install-on-edge.78634f02842c4828.webp)
 
 Baada ya API key na msimbo wa eneo kuingizwa kwenye kiolesura cha kiongezo, nukta ya rangi kwenye bar ya viongezo vya kivinjari inapaswa kubadilika ili kuonyesha matumizi ya nishati ya eneo lako na kukupa kiashiria cha shughuli nzito za nishati zinazofaa kwa utendaji wako. Wazo la mfumo huu wa 'nukta' lilinipatia na [kiongezo cha Energy Lollipop](https://energylollipop.com/) kwa uzalishaji wa California.
 

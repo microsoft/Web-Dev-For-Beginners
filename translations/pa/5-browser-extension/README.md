@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### ਸ਼੍ਰੇਯ
 
-![ਹਰਾ ਬ੍ਰਾਊਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.pa.png)
+![ਹਰਾ ਬ੍ਰਾਊਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ](../../../translated_images/pa/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## ਸ਼੍ਰੇਯ
 

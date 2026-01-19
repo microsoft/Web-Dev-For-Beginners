@@ -42,10 +42,10 @@ Dis curriculum get importable packages for common LMS workflows.
   - Moodle Cloud limited for Common Cartridge support. Better make you use di Moodle file wey dey on top, wey you fit still upload inside Canvas.
   - After you import, check modules, due dates, and quiz settings make e match your term schedule.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.pcm.png)
+![Moodle](../../translated_images/pcm/moodle.94eb93d714a50cb2.webp)
 > Di curriculum for Moodle classroom
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.pcm.png)
+![Canvas](../../translated_images/pcm/canvas.fbd605ff8e5b8aff.webp)
 > Di curriculum for Canvas
 
 ### Use di repo directly (no Classroom)

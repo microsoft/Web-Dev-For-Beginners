@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript pagrindai: masyvai ir ciklai
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.lt.png)
+![JavaScript Basics - Arrays](../../../../translated_images/lt/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

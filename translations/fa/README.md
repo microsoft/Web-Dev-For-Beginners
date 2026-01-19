@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 برای شروع به [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) مراجعه کنید!
 
-![Background](../../translated_images/background.148a8d43afde5730.fa.png)
+![Background](../../translated_images/fa/background.148a8d43afde5730.webp)
 
 - درس‌هایی که از اصول پایه تا RAG را پوشش می‌دهد.
 - تعامل با شخصیت‌های تاریخی با استفاده از GenAI و اپلیکیشن همراه ما.
 - روایت سرگرم‌کننده و جذاب، شما را در سفر در زمان می‌برد!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.fa.png)
+![character](../../translated_images/fa/character.5c0dd8e067ffd693.webp)
 
 
 هر درس شامل یک تکلیف برای تکمیل، یک آزمون دانش و یک چالش برای راهنمایی شما در مباحث مانند:
@@ -115,7 +115,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 در نسخه‌ای که از این مخزن ساخته‌اید، دکمه **Code** را بزنید و گزینه **Open with Codespaces** را انتخاب کنید. این یک Codespace جدید برای کار کردن شما ایجاد می‌کند.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.fa.png)
+![Codespace](../../translated_images/fa/createcodespace.0238bbf4d7a8d955.webp)
 
 #### اجرای برنامه به صورت محلی روی رایانه شما
 

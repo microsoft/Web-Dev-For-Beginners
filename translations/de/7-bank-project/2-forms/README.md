@@ -292,7 +292,7 @@ Schauen wir uns an, was bei der einfachen Formularübergabe passiert:
 2. Beobachte die Veränderungen in der Adresszeile deines Browsers
 3. Sieh, wie die Seite neu lädt und Daten in der URL erscheinen
 
-![Screenshot der URL-Änderung im Browser nach Klick auf die „Registrieren“-Taste](../../../../translated_images/click-register.e89a30bf0d4bc9ca.de.png)
+![Screenshot der URL-Änderung im Browser nach Klick auf die „Registrieren“-Taste](../../../../translated_images/de/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Vergleich der HTTP-Methoden
 
@@ -346,7 +346,7 @@ Konfigurieren wir dein Registrierungsformular, um mit der Backend-API sicher per
 2. **Klicke** den Button „Konto erstellen“
 3. **Beobachte** die Antwort des Servers in deinem Browser
 
-![Ein Browserfenster an Adresse localhost:5000/api/accounts mit einer JSON-Zeichenkette der Benutzerdaten](../../../../translated_images/form-post.61de4ca1b964d91a.de.png)
+![Ein Browserfenster an Adresse localhost:5000/api/accounts mit einer JSON-Zeichenkette der Benutzerdaten](../../../../translated_images/de/form-post.61de4ca1b964d91a.webp)
 
 **Das solltest du sehen:**
 - **Browser leitet** zur API-Endpunkt-URL weiter
@@ -609,7 +609,7 @@ async function register() {
 3. **Klicke** auf "Account erstellen"
 4. **Beobachte** die Konsolenmeldungen und das Nutzerfeedback
 
-![Screenshot zeigt Logmeldung in der Browser-Konsole](../../../../translated_images/browser-console.efaf0b51aaaf6778.de.png)
+![Screenshot zeigt Logmeldung in der Browser-Konsole](../../../../translated_images/de/browser-console.efaf0b51aaaf6778.webp)
 
 **Das solltest du sehen:**
 - **Ladezustand** erscheint auf dem Absende-Button
@@ -783,7 +783,7 @@ Verbessern wir dein Registrierungsformular mit robuster Validierung, die hervorr
 3. **Probiere** Sonderzeichen im Benutzername-Feld
 4. **Gib** eine negative Guthaben-Summe ein
 
-![Screenshot zeigt Validierungsfehler beim Versuch, das Formular abzusenden](../../../../translated_images/validation-error.8bd23e98d416c22f.de.png)
+![Screenshot zeigt Validierungsfehler beim Versuch, das Formular abzusenden](../../../../translated_images/de/validation-error.8bd23e98d416c22f.webp)
 
 **Das wirst du beobachten:**
 - **Browser zeigt** native Validierungsnachrichten an
@@ -943,7 +943,7 @@ Zeigen Sie eine Fehlermeldung im HTML an, wenn der Benutzer bereits existiert.
 
 Hier ist ein Beispiel, wie die finale Anmeldeseite nach ein wenig Styling aussehen kann:
 
-![Screenshot der Anmeldeseite nach Hinzufügen von CSS-Stilen](../../../../translated_images/result.96ef01f607bf856a.de.png)
+![Screenshot der Anmeldeseite nach Hinzufügen von CSS-Stilen](../../../../translated_images/de/result.96ef01f607bf856a.webp)
 
 ## Post-Vorlesungs-Quiz
 

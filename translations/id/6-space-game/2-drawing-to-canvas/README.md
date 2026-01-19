@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![grid canvas](../../../../translated_images/canvas_grid.5f209da785ded492.id.png)
+![grid canvas](../../../../translated_images/id/canvas_grid.5f209da785ded492.webp)
 > Gambar dari [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Untuk menggambar di elemen canvas, Anda akan mengikuti proses tiga langkah yang sama yang membentuk dasar dari semua grafik canvas. Setelah Anda melakukannya beberapa kali, ini menjadi kebiasaan:
@@ -329,11 +329,11 @@ Anda akan membuat halaman web dengan elemen Canvas. Halaman tersebut harus menam
 
 - Kapal pahlawan
 
-   ![Kapal pahlawan](../../../../translated_images/player.dd24c1afa8c71e9b.id.png)
+   ![Kapal pahlawan](../../../../translated_images/id/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 monster
 
-   ![Kapal monster](../../../../translated_images/enemyShip.5df2a822c16650c2.id.png)
+   ![Kapal monster](../../../../translated_images/id/enemyShip.5df2a822c16650c2.webp)
 
 ### Langkah-langkah yang Direkomendasikan untuk Memulai Pengembangan
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Hasil akhir seharusnya terlihat seperti ini:
 
-![Layar hitam dengan seorang pahlawan dan 5*5 monster](../../../../translated_images/partI-solution.36c53b48c9ffae2a.id.png)
+![Layar hitam dengan seorang pahlawan dan 5*5 monster](../../../../translated_images/id/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Solusi
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Uma pequena meditação de código com arrastar e soltar. Com um pouco de HTML, JS e CSS, você pode criar uma interface web, estilizar e adicionar interatividade.
 
-![meu terrário](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.br.png)
+![meu terrário](../../../../translated_images/br/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Créditos
 

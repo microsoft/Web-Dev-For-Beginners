@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove JavaScripta: Metode i funkcije
 
-![JavaScript Osnove - Funkcije](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.hr.png)
+![JavaScript Osnove - Funkcije](../../../../translated_images/hr/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote autorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

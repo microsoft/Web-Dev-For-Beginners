@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 באמצעות ה-API של CO2 Signal מבית tmrow למעקב אחר צריכת חשמל, ניתן ליצור הרחבת דפדפן שתספק תזכורת ישירה בדפדפן לגבי צריכת החשמל באזור שלך. השימוש בהרחבה זו יעזור לך לקבל החלטות בנוגע לפעילויות שלך בהתבסס על מידע זה.
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.he.png)
+![extension screenshot](../../../../../translated_images/he/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.png)
 
 ## התחלה
 
@@ -31,7 +31,7 @@ npm run build
 
 להתקנה ב-Edge, השתמש בתפריט 'שלוש הנקודות' בפינה הימנית העליונה של הדפדפן כדי למצוא את לוח ההרחבות. משם, בחר 'טען ללא אריזה' כדי לטעון הרחבה חדשה. פתח את תיקיית 'dist' כאשר תתבקש, וההרחבה תיטען. כדי להשתמש בה, תצטרך מפתח API ל-API של CO2 Signal ([קבל אחד כאן באמצעות דוא"ל](https://www.co2signal.com/) - הזן את כתובת הדוא"ל שלך בתיבה שבדף זה) ואת [הקוד לאזור שלך](http://api.electricitymap.org/v3/zones) המתאים ל-[מפת החשמל](https://www.electricitymap.org/map) (לדוגמה, בבוסטון אני משתמש ב-'US-NEISO').
 
-![installing](../../../../../translated_images/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.he.png)
+![installing](../../../../../translated_images/he/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.png)
 
 לאחר הזנת מפתח ה-API והאזור בממשק ההרחבה, הנקודה הצבעונית בסרגל ההרחבות של הדפדפן אמורה להשתנות כדי לשקף את צריכת האנרגיה באזור שלך ולספק לך אינדיקציה לגבי פעילויות עתירות אנרגיה שיהיו מתאימות עבורך. הרעיון מאחורי מערכת ה"נקודות" הזו הגיע אליי מה-[הרחבת Energy Lollipop](https://energylollipop.com/) עבור פליטות בקליפורניה.
 

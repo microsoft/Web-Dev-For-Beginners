@@ -17,7 +17,7 @@ Ik weet dat dit in het begin misschien wat overweldigend lijkt – ik herinner m
 
 We gaan deze reis samen maken, stap voor stap. Geen haast, geen druk – alleen jij, ik, en een paar echt coole tools die je nieuwe beste vrienden gaan worden!
 
-![Intro tot GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.nl.png)
+![Intro tot GitHub](../../../../translated_images/nl/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ Laten we eerst een repository (of **repo**) op GitHub vinden die je interesseert
 
 ✅ Een goede manier om 'beginner-vriendelijke' repos te vinden is door [te zoeken op de tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Een repo lokaal kopiëren](../../../../translated_images/clone_repo.5085c48d666ead57.nl.png)
+![Een repo lokaal kopiëren](../../../../translated_images/nl/clone_repo.5085c48d666ead57.webp)
 
 Er zijn verschillende manieren om code te kopiëren. Een manier is om de inhoud van de repository te "clonen", met behulp van HTTPS, SSH, of de GitHub CLI (Command Line Interface).
 

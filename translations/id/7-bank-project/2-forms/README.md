@@ -295,7 +295,7 @@ Pertama, mari kita amati apa yang terjadi dengan pengiriman formulir dasar:
 2. Amati perubahan di bilah alamat browser Anda
 3. Perhatikan bagaimana halaman memuat ulang dan data muncul di URL
 
-![Screenshot perubahan URL browser setelah mengklik tombol Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca.id.png)
+![Screenshot perubahan URL browser setelah mengklik tombol Register](../../../../translated_images/id/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Perbandingan Metode HTTP
 
@@ -350,7 +350,7 @@ Mari kita konfigurasi formulir registrasi Anda untuk berkomunikasi dengan benar 
 2. **Klik** tombol "Create Account"
 3. **Amati** respons server di browser Anda
 
-![Jendela browser di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/form-post.61de4ca1b964d91a.id.png)
+![Jendela browser di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/id/form-post.61de4ca1b964d91a.webp)
 
 **Apa yang harus Anda lihat:**
 - **Browser mengarahkan** ke URL endpoint API
@@ -615,7 +615,7 @@ async function register() {
 3. **Klik** "Buat Akun"
 4. **Amati** pesan konsol dan umpan balik pengguna
 
-![Screenshot menunjukkan pesan log di konsol browser](../../../../translated_images/browser-console.efaf0b51aaaf6778.id.png)
+![Screenshot menunjukkan pesan log di konsol browser](../../../../translated_images/id/browser-console.efaf0b51aaaf6778.webp)
 
 **Apa yang harus Anda lihat:**
 - **Status pemuatan** muncul di tombol kirim
@@ -790,7 +790,7 @@ Mari tingkatkan formulir registrasi Anda dengan validasi yang kuat yang memberik
 3. **Coba** karakter khusus di bidang nama pengguna
 4. **Masukkan** jumlah saldo negatif
 
-![Screenshot menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/validation-error.8bd23e98d416c22f.id.png)
+![Screenshot menunjukkan kesalahan validasi saat mencoba mengirimkan formulir](../../../../translated_images/id/validation-error.8bd23e98d416c22f.webp)
 
 **Apa yang akan Anda amati:**
 - **Browser menampilkan** pesan validasi bawaan
@@ -952,7 +952,7 @@ Tampilkan pesan kesalahan di HTML jika pengguna sudah ada.
 
 Berikut adalah contoh tampilan halaman login setelah ditambahkan beberapa gaya CSS:
 
-![Screenshot halaman login setelah menambahkan gaya CSS](../../../../translated_images/result.96ef01f607bf856a.id.png)
+![Screenshot halaman login setelah menambahkan gaya CSS](../../../../translated_images/id/result.96ef01f607bf856a.webp)
 
 ## Kuis Pasca-Pelajaran
 

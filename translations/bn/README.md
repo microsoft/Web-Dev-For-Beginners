@@ -53,13 +53,13 @@ Azure AI Foundry Discord কমিউনিটিতে যোগ দিন
 
 শুরু করতে ভিজিট করুন [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/background.148a8d43afde5730.bn.png)
+![Background](../../translated_images/bn/background.148a8d43afde5730.webp)
 
 - বেসিক থেকে শুরু করে RAG পর্যন্ত সবকিছু শেখানো হয়।
 - GenAI এবং আমাদের কম্প্যানিয়ন অ্যাপ ব্যবহার করে ঐতিহাসিক চরিত্রদের সাথে ইন্টারঅ্যাক্ট করুন।
 - মজাদার এবং আকর্ষণীয় কাহিনি, আপনাকে সময়ে ভ্রমণ করানো হবে!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.bn.png)
+![character](../../translated_images/bn/character.5c0dd8e067ffd693.webp)
 
 প্রতিটি পাঠে একটি কাজ, জ্ঞানের পরীক্ষা এবং একটি চ্যালেঞ্জ থাকে, যা আপনাকে নিম্নলিখিত বিষয় শিখতে সাহায্য করবে:
 - প্রম্পটিং এবং প্রম্পট ইঞ্জিনিয়ারিং
@@ -93,7 +93,7 @@ Azure AI Foundry Discord কমিউনিটিতে যোগ দিন
 
 আপনি যে কপি তৈরি করেছেন সেখানে **Code** বোতামে ক্লিক করে **Open with Codespaces** নির্বাচন করুন। এটি আপনার জন্য একটি নতুন Codespace তৈরি করবে যেখানে আপনি কাজ করবেন।
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.bn.png)
+![Codespace](../../translated_images/bn/createcodespace.0238bbf4d7a8d955.webp)
 
 #### আপনার কম্পিউটারে লোকালি পাঠক্রম চালানো
 

@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 आपका पूरा प्रोजेक्ट ऐसा दिखेगा:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.hi.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/hi/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ AI एप्लिकेशन विकास के माध्यम से आपकी सीखने की यात्रा
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **मूल सिद्धांत**: AI एप्लिकेशन विकास पारंपरिक वेब विकास कौशल को AI सेवा इंटीग्रेशन के साथ संयोजित करता है, जिससे उपयोगकर्ताओं के लिए स्वाभाविक और उत्तरदायी बुद्धिमान एप्लिकेशन बनते हैं।
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.hi.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/hi/playground.d2b927122224ff8f.webp)
 
 **प्लेग्राउंड को इतना उपयोगी बनाने वाली बातें:**
 - GPT-4o-mini, Claude, और अन्य (सभी मुफ़्त!) जैसे विभिन्न AI मॉडल आज़माएं
@@ -199,7 +199,7 @@ mindmap
 
 जब आप थोड़ा प्रयोग कर लें, तो बस "Code" टैब पर क्लिक करें और अपनी प्रोग्रामिंग भाषा चुनें ताकि आपको आवश्यक कार्यान्वयन कोड मिल सके।
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.hi.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/hi/playground-choice.1d23ba7d407f4758.webp)
 
 ## Python बैकएंड इंटीग्रेशन सेट करना
 
@@ -2354,14 +2354,14 @@ mindmap
 - [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners) पर जाएं  
 - शीर्ष-दाएँ कोने में "Use this template" पर क्लिक करें (सुनिश्चित करें कि आप GitHub में लॉग इन हैं)  
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.hi.png)  
+![Create from template interface showing the green "Use this template" button](../../../translated_images/hi/template.67ad477109d29a2b.webp)  
 
 **चरण 2: Codespaces लॉन्च करें**  
 - अपने नए बनाए गए रिपॉजिटरी को खोलें  
 - हरे "Code" बटन पर क्लिक करें और "Codespaces" चुनें  
 - "Create codespace on main" चुनें ताकि आपका विकास पर्यावरण शुरू हो सके  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.hi.png)  
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/hi/codespace.bcecbdf5d2747d3d.webp)  
 
 **चरण 3: पर्यावरण कॉन्फ़िगरेशन**  
 एक बार आपका Codespace लोड हो जाने पर, आपको मिलेगा:  

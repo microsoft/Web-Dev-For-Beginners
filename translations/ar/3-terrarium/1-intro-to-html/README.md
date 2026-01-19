@@ -26,7 +26,7 @@ journey
       Build terrarium: 5: Student
 ```
 
-![مقدمة إلى HTML](../../../../translated_images/webdev101-html.4389c2067af68e98.ar.png)
+![مقدمة إلى HTML](../../../../translated_images/ar/webdev101-html.4389c2067af68e98.webp)
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 HTML، أو لغة ترميز النص التشعبي، هي الأساس لكل موقع ويب قمت بزيارته. فكر في HTML كهيكل عظمي يمنح الصفحات الإلكترونية بنيتها – فهو يحدد مكان المحتوى، وكيف يتم تنظيمه، وما الذي يمثله كل جزء. بينما ستقوم CSS لاحقًا "بتزيين" HTML بالألوان والتصميمات، وستجعل JavaScript الصفحات تفاعلية، فإن HTML يوفر الهيكل الأساسي الذي يجعل كل شيء ممكنًا.
@@ -88,7 +88,7 @@ mindmap
 4. في لوحة Explorer، انقر على أيقونة "New File"
 5. قم بتسمية ملفك `index.html`
 
-![مستكشف VS Code يظهر إنشاء ملف جديد](../../../../translated_images/vs-code-index.e2986cf919471eb9.ar.png)
+![مستكشف VS Code يظهر إنشاء ملف جديد](../../../../translated_images/ar/vs-code-index.e2986cf919471eb9.webp)
 
 **الخيار الثاني: باستخدام أوامر الطرفية**
 ```bash
@@ -239,48 +239,48 @@ flowchart TD
 <div id="page">
 	<div id="left-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/plant1.d87946a2ca70cc4316bda6e6c3af7210fbe9ada5539a7885141a9ce0efaf7be3.ar.png" />
+			<img class="plant" alt="plant" id="plant1" src="../../../../translated_images/ar/plant1.d87946a2ca70cc4316bda6e6c3af7210fbe9ada5539a7885141a9ce0efaf7be3.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/plant2.8daa1606c9c1ad896bb171212c7d1d882e504b76b8ec3a2d1c337d775cf50dc3.ar.png" />
+			<img class="plant" alt="plant" id="plant2" src="../../../../translated_images/ar/plant2.8daa1606c9c1ad896bb171212c7d1d882e504b76b8ec3a2d1c337d775cf50dc3.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/plant3.8b0d484381a2a2a77c5c06ad97ab6ae5b7023da8c6c7678b0183bc0e46ea17a7.ar.png" />
+			<img class="plant" alt="plant" id="plant3" src="../../../../translated_images/ar/plant3.8b0d484381a2a2a77c5c06ad97ab6ae5b7023da8c6c7678b0183bc0e46ea17a7.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/plant4.656e16ae1df37be2af5f4e7b5ab6c5decc432c3d3ec2eb98b904ddbecad49db0.ar.png" />
+			<img class="plant" alt="plant" id="plant4" src="../../../../translated_images/ar/plant4.656e16ae1df37be2af5f4e7b5ab6c5decc432c3d3ec2eb98b904ddbecad49db0.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/plant5.2b41b9355f11ebccd62d327f5f14e56531ecda9c6f970bc89e386ee9f0273bb0.ar.png" />
+			<img class="plant" alt="plant" id="plant5" src="../../../../translated_images/ar/plant5.2b41b9355f11ebccd62d327f5f14e56531ecda9c6f970bc89e386ee9f0273bb0.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/plant6.3d1827d03b6569946be13ae5da1f32947ae56732638a43757a7c616a6adccc5d.ar.png" />
+			<img class="plant" alt="plant" id="plant6" src="../../../../translated_images/ar/plant6.3d1827d03b6569946be13ae5da1f32947ae56732638a43757a7c616a6adccc5d.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/plant7.8152c302ac97f621a6c595bdf3939103568f9efc7d3b06a0f02a1ea66f479de0.ar.png" />
+			<img class="plant" alt="plant" id="plant7" src="../../../../translated_images/ar/plant7.8152c302ac97f621a6c595bdf3939103568f9efc7d3b06a0f02a1ea66f479de0.png" />
 		</div>
 	</div>
 	<div id="right-container" class="container">
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/plant8.38d6428174ffa850a47cd1b81d528fa528adda7d23f3ae0bb42f4a27356ca5e6.ar.png" />
+			<img class="plant" alt="plant" id="plant8" src="../../../../translated_images/ar/plant8.38d6428174ffa850a47cd1b81d528fa528adda7d23f3ae0bb42f4a27356ca5e6.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/plant9.f0e38d3327c37fc29cd2734d48d20c2cf69300898ece6d46708829e02ce540e3.ar.png" />
+			<img class="plant" alt="plant" id="plant9" src="../../../../translated_images/ar/plant9.f0e38d3327c37fc29cd2734d48d20c2cf69300898ece6d46708829e02ce540e3.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/plant10.b159d6d6e985595f56d86b4b38061b8e7b4c9969c210c199fe967269cf935e7f.ar.png" />
+			<img class="plant" alt="plant" id="plant10" src="../../../../translated_images/ar/plant10.b159d6d6e985595f56d86b4b38061b8e7b4c9969c210c199fe967269cf935e7f.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/plant11.2a03a1c2ec8ea84ef3a80c06cc6883f3960fbb669f2c0b0bd824ba33d7eb7d32.ar.png" />
+			<img class="plant" alt="plant" id="plant11" src="../../../../translated_images/ar/plant11.2a03a1c2ec8ea84ef3a80c06cc6883f3960fbb669f2c0b0bd824ba33d7eb7d32.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/plant12.60e9b53e538fbaf3e5797ebf800acb483baf5639e6cf378292ac2321ab8a5ea9.ar.png" />
+			<img class="plant" alt="plant" id="plant12" src="../../../../translated_images/ar/plant12.60e9b53e538fbaf3e5797ebf800acb483baf5639e6cf378292ac2321ab8a5ea9.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/plant13.07a51543c820bcf57f67a9a6c0acbd6211ff795e2e67a42a9718224534e95fab.ar.png" />
+			<img class="plant" alt="plant" id="plant13" src="../../../../translated_images/ar/plant13.07a51543c820bcf57f67a9a6c0acbd6211ff795e2e67a42a9718224534e95fab.png" />
 		</div>
 		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/plant14.6e486371ba7d36ba3520d9828887993cb4c3edad8bdd8ff9b1b315717ff8cb63.ar.png" />
+			<img class="plant" alt="plant" id="plant14" src="../../../../translated_images/ar/plant14.6e486371ba7d36ba3520d9828887993cb4c3edad8bdd8ff9b1b315717ff8cb63.png" />
 		</div>
 	</div>
 </div>

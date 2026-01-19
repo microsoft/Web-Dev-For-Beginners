@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Основе JavaScript-а: Низови и Петље
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.sr.png)
+![JavaScript Basics - Arrays](../../../../translated_images/sr/webdev101-js-arrays.439d7528b8a29455.webp)
 > Скетчнот од [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

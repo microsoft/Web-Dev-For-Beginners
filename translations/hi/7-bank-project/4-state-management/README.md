@@ -187,7 +187,7 @@ mindmap
 
 हम अपनी पूंछ के पीछे दोड़ने के बजाय, एक **केद्रित स्टेट मैनेजमेंट** सिस्टम बनाएंगे। इसे ऐसे सोचिए जैसे एक बहुत ही व्यवस्थित व्यक्ति सभी महत्वपूर्ण चीज़ों का ज़िम्मा संभाल रहा हो:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.hi.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/hi/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 असाइनमेंट पूरा करने के बाद यहाँ एक उदाहरण परिणाम है:
 
-![“लेन-देन जोड़ें” डायलॉग दिखाने वाला स्क्रीनशॉट](../../../../translated_images/dialog.93bba104afeb79f1.hi.png)
+![“लेन-देन जोड़ें” डायलॉग दिखाने वाला स्क्रीनशॉट](../../../../translated_images/hi/dialog.93bba104afeb79f1.webp)
 
 ---
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptの基本: メソッドと関数
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ja.png)
+![JavaScript Basics - Functions](../../../../translated_images/ja/webdev101-js-functions.be049c4726e94f8b.webp)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

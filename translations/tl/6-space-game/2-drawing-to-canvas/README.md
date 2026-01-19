@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![ang grid ng canvas](../../../../translated_images/canvas_grid.5f209da785ded492.tl.png)
+![ang grid ng canvas](../../../../translated_images/tl/canvas_grid.5f209da785ded492.webp)
 > Imahe mula sa [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Para mag-drawing sa canvas element, susundin mo ang parehong tatlong hakbang na proseso na bumubuo sa pundasyon ng lahat ng canvas graphics. Kapag nagawa mo ito nang ilang beses, magiging natural na ito:
@@ -329,11 +329,11 @@ Gagawa ka ng web page na may Canvas element. Dapat itong mag-render ng black scr
 
 - Hero ship
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.tl.png)
+   ![Hero ship](../../../../translated_images/tl/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 monster
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.tl.png)
+   ![Monster ship](../../../../translated_images/tl/enemyShip.5df2a822c16650c2.webp)
 
 ### Mga Inirerekomendang Hakbang para Simulan ang Development
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Ang tapos na resulta ay dapat magmukhang ganito:
 
-![Itim na screen na may isang bayani at 5*5 na mga halimaw](../../../../translated_images/partI-solution.36c53b48c9ffae2a.tl.png)
+![Itim na screen na may isang bayani at 5*5 na mga halimaw](../../../../translated_images/tl/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Solusyon
 

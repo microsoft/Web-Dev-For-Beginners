@@ -187,7 +187,7 @@ Som Titanics afdelingsopdeling, der virkede robust indtil flere skibsrum pludsel
 
 I stedet for at løbe i ring, vil vi skabe et **centraliseret tilstandsstyringssystem**. Tænk på det som én virkelig organiseret person, der har ansvaret for alt det vigtige:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.da.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/da/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Denne udfordring hjælper dig med at tænke som en professionel udvikler, som b�
 
 Her er et eksempel på resultat efter opgaven er gennemført:
 
-![Screenshot viser et eksempel på dialogen "Tilføj transaktion"](../../../../translated_images/dialog.93bba104afeb79f1.da.png)
+![Screenshot viser et eksempel på dialogen "Tilføj transaktion"](../../../../translated_images/da/dialog.93bba104afeb79f1.webp)
 
 ---
 

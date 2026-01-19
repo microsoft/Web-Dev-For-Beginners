@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ဝင်ရောက်နိုင်သော ဝဘ်စာမျက်နှာများ ဖန်တီးခြင်း
 
-![Accessibility အကြောင်းအားလုံး](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.my.png)
+![Accessibility အကြောင်းအားလုံး](../../../../translated_images/my/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -830,12 +830,12 @@ Website ရဲ့ ပုံတစ်ပုံချင်းစီမှာ ရ�
 
 **Informative images** - အရေးကြီးသော အချက်အလက်ကို ဖော်ပြခြင်း:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.my.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/my/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Decorative images** - သာမန် visual ဖြစ်ပြီး အချက်အလက်မပါဝင်ခြင်း:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.my.png" alt="" role="presentation">
+<img src="../../../../translated_images/my/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.png" alt="" role="presentation">
 ```
 
 **Functional images** - button သို့မဟုတ် control အဖြစ် အသုံးပြုခြင်း:
@@ -847,7 +847,7 @@ Website ရဲ့ ပုံတစ်ပုံချင်းစီမှာ ရ�
 
 **Complex images** - charts, diagrams, infographics:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.my.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/my/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -887,7 +887,7 @@ Website ရဲ့ ပုံတစ်ပုံချင်းစီမှာ ရ�
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.my.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/my/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

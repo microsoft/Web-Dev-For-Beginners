@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # जाभास्क्रिप्ट आधारभूत: एरेहरू र लूपहरू
 
-![जाभास्क्रिप्ट आधारभूत - एरेहरू](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ne.png)
+![जाभास्क्रिप्ट आधारभूत - एरेहरू](../../../../translated_images/ne/webdev101-js-arrays.439d7528b8a29455.webp)
 > स्केच नोट [टोमोमी इमुरा](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid

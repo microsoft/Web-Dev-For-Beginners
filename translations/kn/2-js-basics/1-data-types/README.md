@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಮೂಲತತ್ವಗಳು: ಡೇಟಾ ಪ್ರಕಾರಗಳು
 
-![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.kn.png)  
+![JavaScript Basics - Data types](../../../../translated_images/kn/webdev101-js-datatypes.4cc470179730702c.webp)  
 > ಪರಿಚಿತ್ರಣ: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

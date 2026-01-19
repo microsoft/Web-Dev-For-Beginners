@@ -187,7 +187,7 @@ Kot potop Titanica, ki je bil zasnovan z več ločenimi predelki, ki so naenkrat
 
 Namesto da bi se lovili v začaranem krogu, bomo ustvarili **centraliziran sistem upravljanja stanja**. Predstavljajte si, da imate eno zelo organizirano osebo, ki je odgovorna za vse pomembne stvari:
 
-![Shema, ki prikazuje podatkovne tokove med HTML, uporabniškimi dejanji in stanjem](../../../../translated_images/data-flow.fa2354e0908fecc8.sl.png)
+![Shema, ki prikazuje podatkovne tokove med HTML, uporabniškimi dejanji in stanjem](../../../../translated_images/sl/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Ta izziv vam bo pomagal razmišljati kot profesionalni razvijalec, ki upošteva 
 
 Tukaj je primer rezultata po dokončani domači nalogi:
 
-![Posnetek zaslona, ki prikazuje primer dialoga "Dodaj transakcijo"](../../../../translated_images/dialog.93bba104afeb79f1.sl.png)
+![Posnetek zaslona, ki prikazuje primer dialoga "Dodaj transakcijo"](../../../../translated_images/sl/dialog.93bba104afeb79f1.webp)
 
 ---
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Se va utiliza API-ul Signal CO2 de la tmrow pentru a monitoriza utilizarea energiei electrice, cu scopul de a crea o extensie de browser care să ofere un memento direct în browser despre cât de intensă este utilizarea energiei electrice în regiunea ta. Utilizarea acestei extensii personalizate va ajuta la evaluarea activităților proprii pe baza acestor informații.
 
-![captură de ecran a extensiei](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ro.png)
+![captură de ecran a extensiei](../../../../../translated_images/ro/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Pentru a începe
 
@@ -31,7 +31,7 @@ npm run build
 
 Pentru a instala pe Edge, folosește meniul „trei puncte” din colțul din dreapta sus al browserului pentru a accesa panoul Extensii. Dacă nu este deja activată, activează Modul dezvoltator (în partea de jos, stânga). Selectează „Încarcă necomprimat” pentru a adăuga o nouă extensie. Deschide folderul „dist” la prompt, iar extensia va fi încărcată. Pentru a o utiliza, vei avea nevoie de o cheie API pentru API-ul CO2 Signal (poți [obține una prin e-mail aici](https://www.co2signal.com/) - introdu adresa ta de e-mail în caseta de pe această pagină) și de [codul pentru regiunea ta](http://api.electricitymap.org/v3/zones) corespunzător [hărții electrice](https://www.electricitymap.org/map) (de exemplu, pentru Boston, „US-NEISO”).
 
-![instalare](../../../../../translated_images/install-on-edge.78634f02842c4828.ro.png)
+![instalare](../../../../../translated_images/ro/install-on-edge.78634f02842c4828.webp)
 
 După ce cheia API și regiunea au fost introduse în interfața extensiei, punctul colorat din bara extensiei browserului ar trebui să se schimbe pentru a reflecta utilizarea energiei din regiune și să ofere o sugestie despre ce activități cu consum ridicat de energie ar fi potrivite de realizat. Conceptul din spatele acestui sistem de „puncte” a fost inspirat de [extensia Energy Lollipop](https://energylollipop.com/) pentru emisiile din California.
 

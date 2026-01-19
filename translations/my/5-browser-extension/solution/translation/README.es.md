@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 tmrow ရဲ့ C02 Signal API ကို အသုံးပြုပြီး လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို ခြေရာခံနိုင်တဲ့ browser extension တစ်ခုကို ဖန်တီးပါ။ ဒီ extension ကို သင့် browser မှတစ်ဆင့် တိုက်ရိုက်အသုံးပြုနိုင်မယ့် reminder အနေနဲ့ ရရှိမှာဖြစ်ပါတယ်။ ဒီ extension ကို အသုံးပြုခြင်းက သင့်ရဲ့ လုပ်ဆောင်မှုများအပေါ် အချက်အလက်အခြေခံပြီး ဆုံးဖြတ်ချက်များကို ချမှတ်နိုင်စေမှာဖြစ်ပါတယ်။
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.my.png)
+![extension screenshot](../../../../../translated_images/my/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.png)
 
 ## စတင်ခြင်း
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge မှာ install လုပ်ဖို့အတွက် browser ရဲ့ အပေါ်ဘက်ညာထောင့်မှာရှိတဲ့ 'သုံးချက်' menu ကို အသုံးပြုပြီး Extensions panel ကို ရှာပါ။ အဲဒီနေရာက 'Load unpacked' ကို ရွေးချယ်ပြီး extension အသစ်တစ်ခုကို load လုပ်ပါ။ ဖိုလ်ဒါ 'dist' ကို ဖွင့်ပြီး extension ကို load လုပ်ပါ။ အသုံးပြုဖို့အတွက် CO2 Signal API အတွက် API key ([ဒီမှာ email ဖြင့် ရယူပါ](https://www.co2signal.com/) - ဒီစာမျက်နှာမှာ email ကို ထည့်ပါ) နဲ့ [Electricity Map](https://www.electricitymap.org/map) ရဲ့ [region code](http://api.electricitymap.org/v3/zones) ကို ရယူဖို့ လိုအပ်ပါတယ်။ ဥပမာ Boston မှာ 'US-NEISO' ကို အသုံးပြုပါတယ်။
 
-![installing](../../../../../translated_images/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.my.png)
+![installing](../../../../../translated_images/my/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.png)
 
 API key နဲ့ region ကို extension interface မှာ ထည့်ပြီးနောက် browser extension bar ရဲ့ အရောင်အမှတ်တစ်ခုက သင့် region ရဲ့ လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို ပြသပြီး သင့်အတွက် အမြင့်မားတဲ့ လျှပ်စစ်ဓာတ်အားအသုံးပြုမှု လုပ်ဆောင်မှုများအတွက် သင့်တော်မှုကို အညွှန်းပေးပါလိမ့်မယ်။ ဒီ "အမှတ်" စနစ်ရဲ့ အကြံအတင်ကို [Energy Lollipop extension](https://energylollipop.com/) မှ California emissions အတွက် ရရှိခဲ့ပါတယ်။
 

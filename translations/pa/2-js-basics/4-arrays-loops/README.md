@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੁਨਿਆਦੀਆਂ: ਐਰੇ ਅਤੇ ਲੂਪ
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.pa.png)
+![JavaScript Basics - Arrays](../../../../translated_images/pa/webdev101-js-arrays.439d7528b8a29455.webp)
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਵੱਲੋਂ
 
 ```mermaid

@@ -29,7 +29,7 @@ journey
       Ανταποκρινόμενος σχεδιασμός: 5: Student
       Αντανακλάσεις γυαλιού: 5: Student
 ```
-![Εισαγωγή στο CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.el.png)
+![Εισαγωγή στο CSS](../../../../translated_images/el/webdev101-css.3f7af5991bf53a20.webp)
 > Σχεδιοσημείωση από την [Τομομι Ιμούρα](https://twitter.com/girlie_mac)
 
 Θυμάστε πώς φαινόταν το HTML terrarium σας αρκετά βασικό; Το CSS είναι το εργαλείο όπου μετατρέπουμε αυτήν την απλή δομή σε κάτι οπτικά ελκυστικό.
@@ -202,7 +202,7 @@ body {
 
 Ανοίξτε τα εργαλεία ανάπτυξης του περιηγητή σας (F12), πηγαίνετε στην καρτέλα Elements και επιθεωρήστε το στοιχείο `<h1>`. Θα δείτε ότι κληρονομεί την οικογένεια γραμματοσειράς από το `body`:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.el.png)
+![inherited font](../../../../translated_images/el/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Δοκιμή Πειράματος**: Δοκιμάστε να ορίσετε άλλες κληρονομούμενες ιδιότητες στο `<body>` όπως `color`, `line-height` ή `text-align`. Τι συμβαίνει με τον τίτλο σας και άλλα στοιχεία;
 
@@ -332,7 +332,7 @@ h1 {
 **Αυτή είναι η δομή HTML για κάθε φυτό:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.el.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/el/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 Θα δημιουργήσετε διακριτικά φωτεινά σημεία που προσομοιώνουν πώς το φως αντανακλάται στις γυάλινες επιφάνειες. Αυτή η προσέγγιση είναι παρόμοια με το πώς οι ζωγράφοι της Αναγέννησης όπως ο Jan van Eyck χρησιμοποιούσαν το φως και την αντανάκλαση για να κάνουν το ζωγραφισμένο γυαλί να φαίνεται τρισδιάστατο. Αυτό στοχεύετε:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.el.png)
+![finished terrarium](../../../../translated_images/el/terrarium-final.2f07047ffc597d0a.webp)
 
 **Η πρόκλησή σας:**
 - **Δημιουργήστε** διακριτικούς λευκούς ή ανοιχτόχρωμους οβάλ σχηματισμούς για τις αντανακλάσεις του γυαλιού

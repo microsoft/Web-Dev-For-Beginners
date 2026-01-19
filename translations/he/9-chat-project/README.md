@@ -61,7 +61,7 @@ print(response.choices[0].message.content)
 
 כך ייראה הפרויקט המוגמר שלכם:
 
-![ממשק אפליקציית צ'אט המציג שיחה בין משתמש לעוזר AI](../../../translated_images/screenshot.0a1ee0d123df681b.he.png)
+![ממשק אפליקציית צ'אט המציג שיחה בין משתמש לעוזר AI](../../../translated_images/he/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ מסע הלמידה שלכם בפיתוח אפליקציות AI
 
@@ -194,7 +194,7 @@ mindmap
 
 **עיקרון מרכזי**: פיתוח אפליקציות AI משלב כישורי פיתוח אינטרנט מסורתיים עם אינטגרציית שירותי AI, ליצירת אפליקציות חכמות שמרגישות טבעיות ומגיבות למשתמשים.
 
-![ממשק GitHub Models AI Playground עם בחירת מודלים ואזור בדיקה](../../../translated_images/playground.d2b927122224ff8f.he.png)
+![ממשק GitHub Models AI Playground עם בחירת מודלים ואזור בדיקה](../../../translated_images/he/playground.d2b927122224ff8f.webp)
 
 **מה הופך את ה-Playground לכל כך שימושי:**
 - **נסו** מודלים שונים של AI כמו GPT-4o-mini, Claude ואחרים (כולם חינמיים!)
@@ -204,7 +204,7 @@ mindmap
 
 אחרי שתשחקו קצת, פשוט לחצו על לשונית "Code" ובחרו את שפת התכנות שלכם כדי לקבל את קוד היישום שתצטרכו.
 
-![בחירת Playground המציגה אפשרויות יצירת קוד לשפות תכנות שונות](../../../translated_images/playground-choice.1d23ba7d407f4758.he.png)
+![בחירת Playground המציגה אפשרויות יצירת קוד לשפות תכנות שונות](../../../translated_images/he/playground-choice.1d23ba7d407f4758.webp)
 
 ## הגדרת אינטגרציה בצד השרת עם Python
 
@@ -2333,14 +2333,14 @@ mindmap
 - **נווט** ל-[מאגר Web Dev For Beginners](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **לחץ** על "Use this template" בפינה הימנית העליונה (ודא שאתה מחובר ל-GitHub)  
 
-![ממשק יצירה מתבנית המציג את כפתור "Use this template" הירוק](../../../translated_images/template.67ad477109d29a2b.he.png)  
+![ממשק יצירה מתבנית המציג את כפתור "Use this template" הירוק](../../../translated_images/he/template.67ad477109d29a2b.webp)  
 
 **שלב 2: הפעלת Codespaces**  
 - **פתח** את המאגר החדש שיצרת  
 - **לחץ** על כפתור "Code" הירוק ובחר "Codespaces"  
 - **בחר** "Create codespace on main" כדי להתחיל את סביבת הפיתוח שלך  
 
-![ממשק יצירת Codespace עם אפשרויות להפעלת סביבת פיתוח בענן](../../../translated_images/codespace.bcecbdf5d2747d3d.he.png)  
+![ממשק יצירת Codespace עם אפשרויות להפעלת סביבת פיתוח בענן](../../../translated_images/he/codespace.bcecbdf5d2747d3d.webp)  
 
 **שלב 3: הגדרת הסביבה**  
 ברגע ש-Codespace נטען, תהיה לך גישה ל:  

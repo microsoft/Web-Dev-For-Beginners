@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 在這個專案中，你將學習如何建立一個虛構的銀行。這些課程包含了如何設計網頁應用程式的佈局和路由、建立表單、管理狀態，以及從 API 獲取銀行數據的教學。
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.mo.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.mo.png) |
+| ![Screen1](../../../translated_images/mo/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/mo/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## 課程

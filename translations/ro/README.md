@@ -72,13 +72,13 @@ Nu rata noul nostru curriculum pentru Generative AI!
 
 Vizitează [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) pentru a începe!
 
-![Background](../../translated_images/background.148a8d43afde5730.ro.png)
+![Background](../../translated_images/ro/background.148a8d43afde5730.webp)
 
 - Lecții acoperind totul, de la elementele de bază până la RAG.
 - Interacționează cu personaje istorice folosind GenAI și aplicația noastră companion.
 - Narațiune distractivă și captivantă, vei călători în timp!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.ro.png)
+![character](../../translated_images/ro/character.5c0dd8e067ffd693.webp)
 
 
 Fiecare lecție include o temă de completat, o verificare a cunoștințelor și o provocare pentru a te ghida în învățarea unor subiecte precum:
@@ -115,7 +115,7 @@ Urmărește acești pași:
 
 În copia ta de repository pe care ai creat-o, dă click pe butonul **Code** și selectează **Open with Codespaces**. Aceasta va crea un nou Codespace pentru tine unde să lucrezi.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ro.png)
+![Codespace](../../translated_images/ro/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Rularea curriculum-ului local pe calculatorul tău
 

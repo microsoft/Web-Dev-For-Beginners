@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਅੱਜ, ਅਸੀਂ ਉਹ ਸ਼ਾਨਦਾਰ ਟੂਲਜ਼ ਦੀ ਖੋਜ ਕਰਨ ਜਾ ਰਹੇ ਹਾਂ ਜੋ ਆਧੁਨਿਕ ਵੈੱਬ ਡਿਵੈਲਪਮੈਂਟ ਨੂੰ ਸਿਰਫ ਸੰਭਵ ਹੀ ਨਹੀਂ ਬਲਕਿ ਗੰਭੀਰ ਤੌਰ 'ਤੇ ਆਕਰਸ਼ਕ ਬਣਾਉਂਦੇ ਹਨ। ਮੈਂ ਉਹੀ ਸੰਪਾਦਕਾਂ, ਬ੍ਰਾਊਜ਼ਰਾਂ ਅਤੇ ਵਰਕਫਲੋਜ਼ ਬਾਰੇ ਗੱਲ ਕਰ ਰਿਹਾ ਹਾਂ ਜੋ Netflix, Spotify, ਅਤੇ ਤੁਹਾਡੇ ਮਨਪਸੰਦ ਇੰਡੀ ਐਪ ਸਟੂਡੀਓ ਦੇ ਡਿਵੈਲਪਰ ਹਰ ਰੋਜ਼ ਵਰਤਦੇ ਹਨ। ਅਤੇ ਇਹ ਹੈ ਉਹ ਹਿੱਸਾ ਜੋ ਤੁਹਾਨੂੰ ਖੁਸ਼ੀ ਨਾਲ ਨੱਚਣ ਲਈ ਮਜਬੂਰ ਕਰੇਗਾ: ਇਹਨਾਂ ਵਿੱਚੋਂ ਜ਼ਿਆਦਾਤਰ ਪੇਸ਼ੇਵਰ-ਗਰੇਡ, ਉਦਯੋਗ-ਮਿਆਰੀ ਟੂਲਜ਼ ਪੂਰੀ ਤਰ੍ਹਾਂ ਮੁਫ਼ਤ ਹਨ!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.pa.png)
+![Intro Programming](../../../../translated_images/pa/webdev101-programming.d6e3f98e61ac4bff.webp)
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਦੁਆਰਾ
 
 ```mermaid

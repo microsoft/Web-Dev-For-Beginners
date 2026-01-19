@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: 移除已儲存資料
     ClearStorage --> FirstTime: 返回設定
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.hk.png)
+![Local storage pane](../../../../translated_images/hk/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **安全注意**：在正式應用中，將 API 金鑰儲存在 LocalStorage 有安全風險，因為任何 JavaScript 都能讀取。學習用途可以暫時使用，但實際應用應採用安全的伺服器端儲存敏感憑證。
 

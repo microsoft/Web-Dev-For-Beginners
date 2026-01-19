@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # அணுகக்கூடிய வலைப் பக்கங்களை உருவாக்குதல்
 
-![அணுகல் பற்றி அனைத்தும்](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.ta.png)
+![அணுகல் பற்றி அனைத்தும்](../../../../translated_images/ta/webdev101-a11y.8ef3025c858d897a.webp)
 > [Tomomi Imura](https://twitter.com/girlie_mac) அவர்களின் ஸ்கெட்ச்நோட்
 
 ```mermaid
@@ -1047,12 +1047,12 @@ pie title "பொதுவான ARIA பயன்பாட்டு முற�
 
 **தகவல் கொடுக்கும் படங்கள்** - முக்கிய தகவலை வழங்கும்:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.ta.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/ta/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **அலங்கார படங்கள்** - நிறைவான தகவல் இல்லாத purely காட்சி படங்கள்:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.ta.png" alt="" role="presentation">
+<img src="../../../../translated_images/ta/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **செயல்பாட்டு படங்கள்** - பட்டன்கள் அல்லது கட்டுப்பாடுகள்:
@@ -1064,7 +1064,7 @@ pie title "பொதுவான ARIA பயன்பாட்டு முற�
 
 **சிக்கலான படங்கள்** - பட்டியல், வரைபடம், தகவல் வரைபடங்கள்:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.ta.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/ta/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1104,7 +1104,7 @@ pie title "பொதுவான ARIA பயன்பாட்டு முற�
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.ta.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/ta/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

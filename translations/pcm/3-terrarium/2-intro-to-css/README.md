@@ -29,7 +29,7 @@ journey
       Responsive design: 5: Student
       Glass reflections: 5: Student
 ```
-![Introduction to CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.pcm.png)
+![Introduction to CSS](../../../../translated_images/pcm/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Memba how your HTML terrarium bin fine simple? CSS na di place wey we go take change dat plain structure come one wey fine for eye.
@@ -202,7 +202,7 @@ body {
 
 Open browser developer tools (F12), go Elements tab, inspect your `<h1>` element. You go see say e inherit font family from body:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.pcm.png)
+![inherited font](../../../../translated_images/pcm/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Experiment Time**: Try set other inheritable properties for `<body>` like `color`, `line-height`, or `text-align`. Wetin happen to your heading and other elements?
 

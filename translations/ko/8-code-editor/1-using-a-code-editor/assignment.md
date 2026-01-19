@@ -78,7 +78,7 @@ VSCode.dev는 리포지토리에 최소한 하나의 파일이 있어야 열리�
 4. 커밋 메시지로 "Add initial HTML structure"를 작성하세요
 5. "Commit new file" 버튼을 클릭하여 변경 사항을 저장하세요
 
-![GitHub에서 초기 파일 생성](../../../../translated_images/new-file-github.com.c886796d800e8056.ko.png)
+![GitHub에서 초기 파일 생성](../../../../translated_images/ko/new-file-github.com.c886796d800e8056.webp)
 
 **이 초기 설정을 통해 달성되는 것:**
 - 시맨틱 요소를 활용한 올바른 HTML5 문서 구조 수립
@@ -104,7 +104,7 @@ VSCode.dev는 리포지토리에 최소한 하나의 파일이 있어야 열리�
 
 ✅ **성공 표시**: 탐색기 사이드바에 프로젝트 파일들이 나타나고, `index.html`을 편집할 수 있는 화면이 보입니다.
 
-![VSCode.dev에서 불러온 프로젝트](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.ko.png)
+![VSCode.dev에서 불러온 프로젝트](../../../../translated_images/ko/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **인터페이스에서 볼 수 있는 것:**
 - **탐색기 사이드바**: 리포지토리 파일과 폴더 구조 표시
@@ -448,7 +448,7 @@ li:before {
 **설치 직후 결과:**
 CodeSwing 설치 후 편집기에 이력서 웹사이트의 라이브 미리보기가 나타납니다. 변경사항을 실시간으로 바로 볼 수 있습니다.
 
-![CodeSwing 확장 기능 라이브 미리보기](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.ko.png)
+![CodeSwing 확장 기능 라이브 미리보기](../../../../translated_images/ko/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **강화된 인터페이스 이해:**
 - **분할 뷰**: 코드 편집 화면과 라이브 미리보기를 동시에 표시

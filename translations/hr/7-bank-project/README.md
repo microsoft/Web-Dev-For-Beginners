@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 U ovom projektu naučit ćete kako izgraditi fiktivnu banku. Ove lekcije uključuju upute o tome kako postaviti web aplikaciju i definirati rute, izraditi forme, upravljati stanjem i dohvatiti podatke s API-ja od kojeg možete preuzeti podatke banke.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.hr.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.hr.png) |
+| ![Screen1](../../../translated_images/hr/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/hr/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Lekcije

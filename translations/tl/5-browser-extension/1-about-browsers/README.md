@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.tl.jpg)
+![Browser sketchnote](../../../../translated_images/tl/browser.60317c9be8b7f84a.webp)
 > Sketchnote ni [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
@@ -79,7 +79,7 @@ Ang prosesong ito ay sumasalamin sa disenyo ng unang web browser, ang WorldWideW
 
 ✅ **Kaunting Kasaysayan**: Ang unang browser ay tinawag na 'WorldWideWeb' at nilikha ni Sir Timothy Berners-Lee noong 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.tl.jpg)
+![early browsers](../../../../translated_images/tl/earlybrowsers.d984b711cdf3a42d.webp)
 > Ilang maagang browser, mula kay [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Paano Pinoproseso ng Mga Browser ang Web Content
@@ -198,7 +198,7 @@ quadrantChart
 
 Ang pag-unawa sa proseso ng pag-install ng extension ay tumutulong sa iyo na ma-anticipate ang karanasan ng user kapag ini-install nila ang iyong extension. Ang proseso ng pag-install ay standardized sa mga modernong browser, na may kaunting pagkakaiba sa disenyo ng interface.
 
-![screenshot ng Edge browser na nagpapakita ng bukas na edge://extensions page at bukas na settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.tl.png)
+![screenshot ng Edge browser na nagpapakita ng bukas na edge://extensions page at bukas na settings menu](../../../../translated_images/tl/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Mahalaga**: Siguraduhing i-toggle ang developer mode at payagan ang mga extension mula sa ibang mga tindahan kapag sinusubukan ang iyong sariling mga extension.
 
@@ -313,10 +313,10 @@ Ito ay sumusunod sa prinsipyo ng progressive disclosure na ginagamit sa disenyo 
 ### Overview ng Extension Views
 
 **Setup View** - Paunang configuration ng user:
-![screenshot ng tapos na extension na bukas sa browser, nagpapakita ng form na may mga input para sa pangalan ng rehiyon at API key.](../../../../translated_images/1.b6da8c1394b07491.tl.png)
+![screenshot ng tapos na extension na bukas sa browser, nagpapakita ng form na may mga input para sa pangalan ng rehiyon at API key.](../../../../translated_images/tl/1.b6da8c1394b07491.webp)
 
 **Results View** - Pagpapakita ng data ng carbon footprint:
-![screenshot ng tapos na extension na nagpapakita ng mga halaga para sa carbon usage at fossil fuel percentage para sa rehiyong US-NEISO.](../../../../translated_images/2.1dae52ff08042246.tl.png)
+![screenshot ng tapos na extension na nagpapakita ng mga halaga para sa carbon usage at fossil fuel percentage para sa rehiyong US-NEISO.](../../../../translated_images/tl/2.1dae52ff08042246.webp)
 
 ### Pagbuo ng Configuration Form
 

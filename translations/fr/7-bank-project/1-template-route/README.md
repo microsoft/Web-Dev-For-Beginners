@@ -644,7 +644,7 @@ sequenceDiagram
 
 L’utilisation de `history.pushState` crée de nouvelles entrées dans l’historique de navigation du navigateur. Vous pouvez vérifier cela en maintenant appuyé le *bouton retour* de votre navigateur, cela devrait afficher quelque chose comme ceci :
 
-![Capture d’écran de l’historique de navigation](../../../../translated_images/history.7fdabbafa521e064.fr.png)
+![Capture d’écran de l’historique de navigation](../../../../translated_images/fr/history.7fdabbafa521e064.webp)
 
 Si vous cliquez plusieurs fois sur le bouton retour, vous verrez que l’URL change et que l'historique est mis à jour, mais que le même template reste affiché.
 

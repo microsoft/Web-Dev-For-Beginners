@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Μια μικρή άσκηση drag and drop. Με λίγη HTML, JS και CSS, μπορείτε να δημιουργήσετε μια διαδικτυακή διεπαφή, να την διαμορφώσετε και να προσθέσετε αλληλεπίδραση.
 
-![το τεραριούμ μου](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.el.png)
+![το τεραριούμ μου](../../../../translated_images/el/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Πιστώσεις
 

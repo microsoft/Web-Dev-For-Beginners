@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Sistem mata**: Setiap kapal musuh yang dimusnahkan memberikan 100 mata (nombor bulat lebih mudah untuk pemain kira secara mental). Mata dipaparkan di sudut kiri bawah.
-- **Pengiraan nyawa**: Wira anda bermula dengan tiga nyawa - satu standard yang ditetapkan oleh permainan arked awal untuk mengimbangi cabaran dengan kebolehmainan. Setiap perlanggaran dengan musuh mengurangkan satu nyawa. Kita akan memaparkan nyawa yang tinggal di sudut kanan bawah menggunakan ikon kapal ![imej nyawa](../../../../translated_images/life.6fb9f50d53ee0413.ms.png).
+- **Pengiraan nyawa**: Wira anda bermula dengan tiga nyawa - satu standard yang ditetapkan oleh permainan arked awal untuk mengimbangi cabaran dengan kebolehmainan. Setiap perlanggaran dengan musuh mengurangkan satu nyawa. Kita akan memaparkan nyawa yang tinggal di sudut kanan bawah menggunakan ikon kapal ![imej nyawa](../../../../translated_images/ms/life.6fb9f50d53ee0413.webp).
 
 ## Mari Mula Membina!
 

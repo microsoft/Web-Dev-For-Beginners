@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Dasar-Dasar JavaScript: Tipe Data
 
-![Dasar-Dasar JavaScript - Tipe Data](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.id.png)
+![Dasar-Dasar JavaScript - Tipe Data](../../../../translated_images/id/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

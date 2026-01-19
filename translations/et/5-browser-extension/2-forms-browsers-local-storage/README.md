@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Eemaldab salvestatud andmed
     ClearStorage --> FirstTime: Tagasi seadistusse
 ```
-![Lokaalse salvestuse paneel](../../../../translated_images/localstorage.472f8147b6a3f8d1.et.png)
+![Lokaalse salvestuse paneel](../../../../translated_images/et/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Turvalisuse kaalutlus**: Produktionsrakendustes tähendab API võtmete salvestamine LocalStorage’is turvariske, sest JavaScript saab neid andmeid lugeda. Õppimise eesmärgil see lähenemine sobib, aga päris rakendustes tuleb tundlikud võtmed hoida turvaliselt serveripoolses salvestuses.
 

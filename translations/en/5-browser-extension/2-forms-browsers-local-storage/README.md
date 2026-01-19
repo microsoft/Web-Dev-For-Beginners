@@ -110,7 +110,7 @@ Before proceeding, it's helpful to learn about an important browser concept: [Lo
 
 You can set your APIKey to have a string value, for example, and view it in Edge by "inspecting" a web page (right-click to inspect) and navigating to the Applications tab to see the storage.
 
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.en.png)
+![Local storage pane](../../../../translated_images/en/localstorage.472f8147b6a3f8d141d9551c95a2da610ac9a3c6a73d4a1c224081c98bae09d9.png)
 
 ✅ Consider situations where you would NOT want to store certain data in LocalStorage. Generally, storing API Keys in LocalStorage is a bad idea! Can you understand why? In our case, since this app is purely for learning and won't be published in an app store, we'll use this method.
 

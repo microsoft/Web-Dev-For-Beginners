@@ -72,13 +72,13 @@ Ne manquez pas notre nouveau programme IA Générative !
 
 Visitez [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) pour commencer !
 
-![Fond](../../translated_images/background.148a8d43afde5730.fr.png)
+![Fond](../../translated_images/fr/background.148a8d43afde5730.webp)
 
 - Leçons couvrant tout, des bases au RAG.
 - Interagissez avec des personnages historiques grâce à GenAI et notre application compagnon.
 - Narration ludique et engageante, vous ferez un voyage dans le temps !
 
-![personnage](../../translated_images/character.5c0dd8e067ffd693.fr.png)
+![personnage](../../translated_images/fr/character.5c0dd8e067ffd693.webp)
 
 
 Chaque leçon inclut un devoir à compléter, un contrôle des connaissances et un défi pour vous guider dans l’apprentissage de sujets comme :
@@ -115,7 +115,7 @@ Suivez ces étapes :
 
 Dans votre copie de ce dépôt que vous avez créée, cliquez sur le bouton **Code** et sélectionnez **Open with Codespaces**. Cela créera un nouveau Codespace pour que vous puissiez y travailler.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.fr.png)
+![Codespace](../../translated_images/fr/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Exécuter le programme localement sur votre ordinateur
 

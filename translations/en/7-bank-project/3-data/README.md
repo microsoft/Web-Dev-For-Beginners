@@ -36,11 +36,11 @@ curl http://localhost:5000/api
 
 Traditional websites update their content when users click a link or submit a form by reloading the entire HTML page. Each time new data is needed, the web server sends back a fresh HTML page, which the browser processes. This interrupts the user's current action and limits interactions during the reload. This approach is known as a *Multi-Page Application* or *MPA*.
 
-![Update workflow in a multi-page application](../../../../translated_images/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.en.png)
+![Update workflow in a multi-page application](../../../../translated_images/en/mpa.7f7375a1a2d4aa779d3f928a2aaaf9ad76bcdeb05cfce2dc27ab126024050f51.png)
 
 As web applications became more interactive and complex, a technique called [AJAX (Asynchronous JavaScript and XML)](https://en.wikipedia.org/wiki/Ajax_(programming)) was introduced. AJAX allows web apps to send and retrieve data from a server asynchronously using JavaScript, without reloading the HTML page. This results in faster updates and smoother user experiences. Once new data is received, JavaScript can update the current HTML page using the [DOM](https://developer.mozilla.org/docs/Web/API/Document_Object_Model) API. Over time, this approach evolved into what is now known as a [*Single-Page Application* or *SPA*](https://en.wikipedia.org/wiki/Single-page_application).
 
-![Update workflow in a single-page application](../../../../translated_images/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.en.png)
+![Update workflow in a single-page application](../../../../translated_images/en/spa.268ec73b41f992c2a21ef9294235c6ae597b3c37e2c03f0494c2d8857325cc57.png)
 
 Initially, the only API available for asynchronous data fetching was [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest). However, modern browsers now support the more convenient and powerful [`Fetch` API](https://developer.mozilla.org/docs/Web/API/Fetch_API), which uses promises and is better suited for handling JSON data.
 
@@ -166,7 +166,7 @@ if (data.error) {
 
 Now, if you try to log in with an invalid account, you'll see something like this:
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.en.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/en/login-error.416fe019b36a63276764c2349df5d99e04ebda54fefe60c715ee87a28d5d4ad0.png)
 
 While the error text is visually displayed, screen readers won't announce it. To ensure dynamically added text is accessible to screen readers, we need to use a [Live Region](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). We'll use a specific type of live region called an alert:
 
@@ -331,7 +331,7 @@ Work together to make the dashboard page resemble a real banking app. If you've 
 
 Here's an example of a styled dashboard page:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.en.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/en/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.png)
 
 ## Post-Lecture Quiz
 

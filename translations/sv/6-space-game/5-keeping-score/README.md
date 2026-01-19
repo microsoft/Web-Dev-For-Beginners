@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Poängsystem**: Varje förstört fiendeskepp ger 100 poäng (runda siffror är lättare för spelare att räkna mental). Poängen visas i nedre vänstra hörnet.
-- **Livräknare**: Din hjälte börjar med tre liv – en standard satt av tidiga arkadspel för att balansera utmaning och spelbarhet. Varje kollision med en fiende kostar ett liv. Vi visar återstående liv nere till höger med skeppsikoner ![life image](../../../../translated_images/life.6fb9f50d53ee0413.sv.png).
+- **Livräknare**: Din hjälte börjar med tre liv – en standard satt av tidiga arkadspel för att balansera utmaning och spelbarhet. Varje kollision med en fiende kostar ett liv. Vi visar återstående liv nere till höger med skeppsikoner ![life image](../../../../translated_images/sv/life.6fb9f50d53ee0413.webp).
 
 ## Nu kör vi igång!
 

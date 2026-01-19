@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ: മെത്തഡുകളും ഫങ്ഷനുകളും
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ml.png)
+![JavaScript Basics - Functions](../../../../translated_images/ml/webdev101-js-functions.be049c4726e94f8b.webp)
 > സ്‌കെച്ച്നോട്ട് [Tomomi Imura](https://twitter.com/girlie_mac) tərəfindən
 
 ```mermaid

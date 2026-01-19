@@ -112,7 +112,7 @@ Pozrite si [dokumentáciu serverového API](../api/README.md) pre:
 **Očakávaný výsledok:**
 Po dokončení tejto úlohy by vaša banková aplikácia mala mať plne funkčnú funkciu "Pridať transakciu", ktorá vyzerá a správa sa profesionálne:
 
-![Screenshot zobrazujúci príklad dialógu "Pridať transakciu"](../../../../translated_images/dialog.93bba104afeb79f1.sk.png)
+![Screenshot zobrazujúci príklad dialógu "Pridať transakciu"](../../../../translated_images/sk/dialog.93bba104afeb79f1.webp)
 
 ## Testovanie vašej implementácie
 

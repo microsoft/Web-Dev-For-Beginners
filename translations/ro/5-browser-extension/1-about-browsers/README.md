@@ -25,7 +25,7 @@ journey
       Depanează problemele: 4: Student
       Perfecționează experiența: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.ro.jpg)
+![Browser sketchnote](../../../../translated_images/ro/browser.60317c9be8b7f84a.webp)
 > Sketchnote de [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Chestionar Pre-Prelegere
@@ -77,7 +77,7 @@ Acest proces reflectă modul în care primul browser web, WorldWideWeb, a fost p
 
 ✅ **Puțină istorie**: Primul browser se numea 'WorldWideWeb' și a fost creat de Sir Timothy Berners-Lee în 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.ro.jpg)
+![early browsers](../../../../translated_images/ro/earlybrowsers.d984b711cdf3a42d.webp)
 > Unele browsere timpurii, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Cum Processează Browserele Conținutul Web
@@ -194,7 +194,7 @@ quadrantChart
 
 Înțelegerea procesului de instalare a extensiilor te ajută să anticipezi experiența utilizatorului când oamenii își instalează extensia ta. Procesul de instalare este standardizat în browserele moderne, cu variații minore în designul interfeței.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.ro.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/ro/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Important**: Asigură-te că activezi modul dezvoltator și permiți extensiile din alte magazine când testezi extensiile proprii.
 
@@ -308,10 +308,10 @@ Aceasta urmează principiul dezvăluirii progresive folosit în designul interfe
 ### Prezentarea Vederilor Extensiei
 
 **Vederea de configurare** - Configurare inițială pentru utilizatorii noi:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.ro.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/ro/1.b6da8c1394b07491.webp)
 
 **Vederea de rezultate** - Afișarea datelor despre amprenta de carbon:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.ro.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/ro/2.1dae52ff08042246.webp)
 
 ### Construirea Formularului de Configurare
 

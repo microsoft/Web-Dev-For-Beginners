@@ -187,7 +187,7 @@ Ca designul compartimentalizat al Titanicului care părea robust până când ma
 
 În loc să ne învârtim în cerc, vom crea un sistem **centralizat de gestionare a stării**. Gândește-te la asta ca la o persoană foarte organizată care răspunde de toate lucrurile importante:
 
-![Schema care arată fluxurile de date între HTML, acțiunile utilizatorului și stare](../../../../translated_images/data-flow.fa2354e0908fecc8.ro.png)
+![Schema care arată fluxurile de date între HTML, acțiunile utilizatorului și stare](../../../../translated_images/ro/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Această provocare vă va ajuta să gândiți ca un dezvoltator profesionist, ca
 
 Iată un exemplu de rezultat după finalizarea temei:
 
-![Captură de ecran care arată un exemplu de dialog „Adaugă tranzacție”](../../../../translated_images/dialog.93bba104afeb79f1.ro.png)
+![Captură de ecran care arată un exemplu de dialog „Adaugă tranzacție”](../../../../translated_images/ro/dialog.93bba104afeb79f1.webp)
 
 ---
 

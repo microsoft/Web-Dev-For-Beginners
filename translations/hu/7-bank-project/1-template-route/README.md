@@ -644,7 +644,7 @@ sequenceDiagram
 
 A `history.pushState` új bejegyzéseket hoz létre a böngésző navigációs előzményeiben. Ezt ellenőrizheted úgy, hogy lenyomod a böngésződ *vissza gombját*, ilyesmit fogsz látni:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.hu.png)
+![Screenshot of navigation history](../../../../translated_images/hu/history.7fdabbafa521e064.webp)
 
 Ha néhányszor megnyomod a vissza gombot, látni fogod, hogy a jelenlegi URL változik és az előzmények frissülnek, de ugyanaz a sablon jelenik meg továbbra is.
 

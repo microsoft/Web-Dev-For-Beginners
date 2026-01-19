@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Misingi ya JavaScript: Aina za Data
 
-![Misingi ya JavaScript - Aina za data](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.sw.png)  
+![Misingi ya JavaScript - Aina za data](../../../../translated_images/sw/webdev101-js-datatypes.4cc470179730702c.webp)  
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

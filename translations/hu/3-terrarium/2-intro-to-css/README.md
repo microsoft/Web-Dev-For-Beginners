@@ -29,7 +29,7 @@ journey
       Reszponzív tervezés: 5: Student
       Üveg visszatükröződés: 5: Student
 ```
-![Bemutatás a CSS-hez](../../../../translated_images/webdev101-css.3f7af5991bf53a20.hu.png)
+![Bemutatás a CSS-hez](../../../../translated_images/hu/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote szerzője: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Emlékszel, hogy a HTML terráriumod meglehetősen egyszerűnek tűnt? A CSS az, ahol azt az egyszerű szerkezetet vizuálisan vonzóvá alakítjuk.
@@ -202,7 +202,7 @@ body {
 
 Nyisd meg a böngésződ fejlesztői eszközeit (F12), menj az Elements fülre, és nézd meg a `<h1>` elemedet. Láthatod, hogy a betűtípust a `body`-tól örökli:
 
-![örökölt betűtípus](../../../../translated_images/1.cc07a5cbe114ad1d.hu.png)
+![örökölt betűtípus](../../../../translated_images/hu/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Kísérlet**: Próbálj meg más öröklődő tulajdonságokat is beállítani a `<body>`-n, mint a `color`, `line-height` vagy `text-align`. Mi történik a címmel és más elemekkel?
 
@@ -332,7 +332,7 @@ A terráriumunkban minden növény hasonló stílust igényel, de egyedi elhelye
 **Az egyes növények HTML szerkezete:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.hu.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/hu/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Készen állsz élethű üveg fényvisszaverődésekkel gazdagítani a terráriu
 
 Finom fénypontokat készítesz, amelyek szimulálják, hogyan tükröződik a fény az üvegfelületen. Ez hasonló ahhoz, ahogy a reneszánsz festők, például Jan van Eyck fénnyel és visszatükröződéssel teszik térhatásúvá az üvegvázlatokat. Itt egy cél, amit meg akarsz valósítani:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.hu.png)
+![finished terrarium](../../../../translated_images/hu/terrarium-final.2f07047ffc597d0a.webp)
 
 **A kihívásod:**
 - **Hozz létre** finom, fehér vagy világos ovális alakzatokat az üveg fényvisszaverődéséhez

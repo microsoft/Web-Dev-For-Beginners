@@ -644,7 +644,7 @@ sequenceDiagram
 
 Folosirea `history.pushState` creează intrări noi în istoricul de navigare al browserului. Poți verifica ținând apăsat *butonul înapoi* al browserului, ar trebui să afișeze ceva de genul:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.ro.png)
+![Screenshot of navigation history](../../../../translated_images/ro/history.7fdabbafa521e064.webp)
 
 Dacă apeși butonul înapoi de câteva ori, vei vedea că URL-ul se schimbă și istoricul este actualizat, dar același șablon continuă să fie afișat.
 

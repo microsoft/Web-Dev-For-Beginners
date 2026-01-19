@@ -29,7 +29,7 @@ After completing this assignment, you will learn how to:
 
 Click the `creating a new file` link, type the name `index.html`, and select the `Commit new file` button.
 
-![Create a new file on github.com](../../../../translated_images/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.en.png)
+![Create a new file on github.com](../../../../translated_images/en/new-file-github.com.c886796d800e8056561829a181be1382c5303da9d902d8b2dd82b68a4806e21f.png)
 
 **Step 3:** Open [VSCode.dev](https://vscode.dev) and select the `Open Remote Repository` button.
 
@@ -43,7 +43,7 @@ https://github.com/your-username/my-resume
 
 ✅ If successful, you’ll see your project and the `index.html` file open in the text editor in your browser.
 
-![Create a new file](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.en.png)
+![Create a new file](../../../../translated_images/en/project-on-vscode.dev.e79815a9a95ee7feac72ebe5c941c91279716be37c575dbdbf2f43bea2c7d8b6.png)
 
 **Step 4:** Open the `index.html` file, paste the code below into your code area, and save.
 
@@ -225,7 +225,7 @@ Click the _`Extensions`_ icon on the activity bar and type in Codeswing. Either 
 
 This is what you will see on your screen after installing the extension.
 
-![Codeswing extension in action](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.en.png)
+![Codeswing extension in action](../../../../translated_images/en/after-codeswing-extension-pb.0ebddddcf73b550994947a9084e35e2836c713ae13839d49628e3c764c1cfe83.png)
 
 If you’re satisfied with the changes you made, hover over the `Changes` folder and click the `+` button to stage the changes.
 

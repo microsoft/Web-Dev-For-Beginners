@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.my.jpg)
+![Browser sketchnote](../../../../translated_images/my/browser.60317c9be8b7f84a.webp)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## မိမိကိုယ်ကိုစမ်းမေးမေးခွန်း
@@ -79,7 +79,7 @@ Web browser ဆိုတာက အလွန်တိုးတက်တဲ့ doc
 
 ✅ **သမိုင်းအနည်းငယ်**: ပထမဆုံး browser ကို 'WorldWideWeb' လို့ခေါ်ပြီး Sir Timothy Berners-Lee က 1990 ခုနှစ်မှာ ဖန်တီးခဲ့ပါတယ်။
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.my.jpg)
+![early browsers](../../../../translated_images/my/earlybrowsers.d984b711cdf3a42d.webp)
 > Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Web Content ကို Browser တွေ ဘယ်လိုလုပ်ဆောင်သလဲ
@@ -198,7 +198,7 @@ quadrantChart
 
 Extension installation လုပ်ဆောင်မှုကို နားလည်ခြင်းက သင့် extension ကို install လုပ်တဲ့ user တွေရဲ့ အတွေ့အကြုံကို ခန့်မှန်းနိုင်စေပါတယ်။ Installation လုပ်ဆောင်မှုက ခေတ်မီ browser တွေမှာ interface design အနည်းငယ်ကွဲပြားမှုနဲ့ standardized ဖြစ်ပါတယ်။
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.my.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/my/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **အရေးကြီး**: Developer mode ကို toggle လုပ်ပြီး သင့်ကိုယ်တိုင်ဖန်တီးတဲ့ extensions တွေကို စမ်းသပ်တဲ့အခါ၊ အခြား store တွေက extensions တွေကို ခွင့်ပြုပါ။
 
@@ -313,10 +313,10 @@ User interface components တွေကို ဖန်တီးပါမယ်�
 ### Extension Views Overview
 
 **Setup View** - First-time user configuration:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.my.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/my/1.b6da8c1394b07491.webp)
 
 **Results View** - Carbon footprint data display:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.my.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/my/2.1dae52ff08042246.webp)
 
 ### Configuration Form ကို ဖန်တီးခြင်း
 

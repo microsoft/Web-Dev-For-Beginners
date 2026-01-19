@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # অ্যাক্সেসযোগ্য ওয়েবপেজ তৈরি করা
 
-![অ্যাক্সেসিবিলিটি সম্পর্কে সবকিছু](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.bn.png)
+![অ্যাক্সেসিবিলিটি সম্পর্কে সবকিছু](../../../../translated_images/bn/webdev101-a11y.8ef3025c858d897a.webp)
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -756,12 +756,12 @@ pie title "Common ARIA Usage Patterns"
 
 **তথ্যপূর্ণ ছবি** - গুরুত্বপূর্ণ তথ্য প্রদান করে:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.bn.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/bn/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **ডেকোরেটিভ ছবি** - শুধুমাত্র ভিজ্যুয়াল, কোনো তথ্যমূলক মূল্য নেই:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.bn.png" alt="" role="presentation">
+<img src="../../../../translated_images/bn/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.png" alt="" role="presentation">
 ```
 
 **ফাংশনাল ছবি** - বোতাম বা নিয়ন্ত্রণ হিসাবে কাজ করে:
@@ -773,7 +773,7 @@ pie title "Common ARIA Usage Patterns"
 
 **জটিল ছবি** - চার্ট, ডায়াগ্রাম, ইনফোগ্রাফিক:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.bn.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/bn/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -813,7 +813,7 @@ pie title "Common ARIA Usage Patterns"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.bn.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/bn/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

@@ -292,7 +292,7 @@ Esiteks vaatleme, mis juhtub lihtsa vormi esitamisega:
 2. Jälgige muudatusi oma brauseri aadressireal
 3. Märkake, kuidas leht laaditakse uuesti ja andmed ilmuvad aadressireale
 
-![Ekraanipilt brauseri URL-i muutusest peale „Registreeri“ nupu vajutamist](../../../../translated_images/click-register.e89a30bf0d4bc9ca.et.png)
+![Ekraanipilt brauseri URL-i muutusest peale „Registreeri“ nupu vajutamist](../../../../translated_images/et/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP meetodite võrdlus
 
@@ -346,7 +346,7 @@ Seadistame oma registreerimisvormi, et see korrektselt suhtleks tagapõhja API-g
 2. **Vajutage** nuppu "Loo konto"
 3. **Vaadake** brauserist serveri vastust
 
-![Brauseriaknas aadressil localhost:5000/api/accounts kuvatakse JSON-string kasutaja andmetega](../../../../translated_images/form-post.61de4ca1b964d91a.et.png)
+![Brauseriaknas aadressil localhost:5000/api/accounts kuvatakse JSON-string kasutaja andmetega](../../../../translated_images/et/form-post.61de4ca1b964d91a.webp)
 
 **Mida peaks nägema:**
 - **Brauser suunab** API lõpp-punkti URL-ile
@@ -609,7 +609,7 @@ async function register() {
 3. **Klõpsake** "Loo konto"
 4. **Jälgige** konsooli sõnumeid ja kasutajale tagasisidet
 
-![Ekraanipilt, mis näitab logisõnumit brauserikonsoolis](../../../../translated_images/browser-console.efaf0b51aaaf6778.et.png)
+![Ekraanipilt, mis näitab logisõnumit brauserikonsoolis](../../../../translated_images/et/browser-console.efaf0b51aaaf6778.webp)
 
 **Mida peaksite nägema:**
 - **Laadimisolek** ilmub esitamisklipile
@@ -783,7 +783,7 @@ Täiustame teie registreerimisvormi tugeva valideerimisega, mis pakub suurepära
 3. **Sisestage** kasutajanime välja erimärgid
 4. **Sisestage** negatiivne saldosumma
 
-![Ekraanipilt, mis näitab valideerimisviga vormi esitamisel](../../../../translated_images/validation-error.8bd23e98d416c22f.et.png)
+![Ekraanipilt, mis näitab valideerimisviga vormi esitamisel](../../../../translated_images/et/validation-error.8bd23e98d416c22f.webp)
 
 **Mida täheldate:**
 - **Brauser kuvab** oma staatilisi valideerimissõnumeid
@@ -943,7 +943,7 @@ Kuva HTML-is veateade, kui kasutaja juba eksisteerib.
 
 Näide sellest, kuidas lõplik sisselogimisleht võib välja näha pärast veidi kujundamist:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.et.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/et/result.96ef01f607bf856a.webp)
 
 ## Loengujärgne viktoriin
 

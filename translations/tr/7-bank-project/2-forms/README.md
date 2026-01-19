@@ -295,7 +295,7 @@ Birisi gönder düğmesine tıkladığında gerçekte ne olduğunu inceleyelim.
 2. Tarayıcınızın adres çubuğundaki değişiklikleri gözlemleyin
 3. Sayfanın yeniden yüklendiğini ve verilerin URL'de göründüğünü fark edin
 
-![Kayıt Ol düğmesine tıkladıktan sonra tarayıcının URL değişikliğini gösteren ekran görüntüsü](../../../../translated_images/click-register.e89a30bf0d4bc9ca.tr.png)
+![Kayıt Ol düğmesine tıkladıktan sonra tarayıcının URL değişikliğini gösteren ekran görüntüsü](../../../../translated_images/tr/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP Yöntemleri Karşılaştırması
 
@@ -350,7 +350,7 @@ Kayıt formunuzu POST yöntemi kullanarak arka uç API ile doğru şekilde ileti
 2. **"Hesap Oluştur"** düğmesine tıklayın
 3. **Sunucu yanıtını** tarayıcınızda gözlemleyin
 
-![localhost:5000/api/accounts adresinde bir tarayıcı penceresi, kullanıcı verileri içeren bir JSON dizesini gösteriyor](../../../../translated_images/form-post.61de4ca1b964d91a.tr.png)
+![localhost:5000/api/accounts adresinde bir tarayıcı penceresi, kullanıcı verileri içeren bir JSON dizesini gösteriyor](../../../../translated_images/tr/form-post.61de4ca1b964d91a.webp)
 
 **Görmeniz gerekenler:**
 - **Tarayıcı** API uç noktasının URL'sine yönlendirme yapar
@@ -615,7 +615,7 @@ async function register() {
 3. **"Hesap Oluştur" düğmesine tıklayın**
 4. **Konsol mesajlarını ve kullanıcı geri bildirimlerini gözlemleyin**
 
-![Tarayıcı konsolunda günlük mesajını gösteren ekran görüntüsü](../../../../translated_images/browser-console.efaf0b51aaaf6778.tr.png)
+![Tarayıcı konsolunda günlük mesajını gösteren ekran görüntüsü](../../../../translated_images/tr/browser-console.efaf0b51aaaf6778.webp)
 
 **Görmeniz gerekenler:**
 - **Gönder düğmesinde** yükleme durumu görünür
@@ -790,7 +790,7 @@ Kayıt formunuzu mükemmel bir kullanıcı deneyimi ve veri kalitesi sağlayan s
 3. **Kullanıcı adı alanına özel karakterler deneyin**
 4. **Negatif bir bakiye miktarı girin**
 
-![Formu göndermeye çalışırken doğrulama hatasını gösteren ekran görüntüsü](../../../../translated_images/validation-error.8bd23e98d416c22f.tr.png)
+![Formu göndermeye çalışırken doğrulama hatasını gösteren ekran görüntüsü](../../../../translated_images/tr/validation-error.8bd23e98d416c22f.webp)
 
 **Gözlemleyecekleriniz:**
 - **Tarayıcı** yerel doğrulama mesajlarını gösterir
@@ -938,7 +938,7 @@ Kullanıcı zaten varsa HTML'de bir hata mesajı gösterin.
 
 İşte biraz stil ekledikten sonra son giriş sayfasının nasıl görünebileceğine dair bir örnek:
 
-![CSS stilleri eklendikten sonra giriş sayfasının ekran görüntüsü](../../../../translated_images/result.96ef01f607bf856a.tr.png)
+![CSS stilleri eklendikten sonra giriş sayfasının ekran görüntüsü](../../../../translated_images/tr/result.96ef01f607bf856a.webp)
 
 ## Ders Sonrası Test
 

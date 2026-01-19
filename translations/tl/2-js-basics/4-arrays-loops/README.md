@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Mga Pangunahing Kaalaman sa JavaScript: Arrays at Loops
 
-![Mga Pangunahing Kaalaman sa JavaScript - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.tl.png)
+![Mga Pangunahing Kaalaman sa JavaScript - Arrays](../../../../translated_images/tl/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

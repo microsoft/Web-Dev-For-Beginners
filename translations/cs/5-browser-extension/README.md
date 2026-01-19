@@ -23,7 +23,7 @@ Toto rozšíření může být uživatelem ad hoc vyvoláno poté, co je do form
 
 ### Poděkování
 
-![zelené rozšíření prohlížeče](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.cs.png)
+![zelené rozšíření prohlížeče](../../../translated_images/cs/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Poděkování
 

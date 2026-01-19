@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 या प्रकल्पात, तुम्ही काल्पनिक बँक कशी तयार करायची ते शिकाल. या धड्यांमध्ये वेब अ‍ॅप कसे मांडायचे आणि रूट्स प्रदान करायचे, फॉर्म तयार करायचे, स्टेट व्यवस्थापित करायचे, आणि API मधून डेटा कसा आणायचा ज्यामधून तुम्ही बँकेचा डेटा मिळवू शकता याचे मार्गदर्शन दिले आहे.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.mr.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.mr.png) |
+| ![Screen1](../../../translated_images/mr/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/mr/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## धडे

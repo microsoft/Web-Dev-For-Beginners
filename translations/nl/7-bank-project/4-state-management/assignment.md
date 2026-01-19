@@ -112,7 +112,7 @@ Raadpleeg de [server API-documentatie](../api/README.md) voor:
 **Verwacht Resultaat:**
 Na het voltooien van deze opdracht moet je bankapp een volledig functionele "Transactie Toevoegen"-functie hebben die er professioneel uitziet en zich professioneel gedraagt:
 
-![Screenshot van een voorbeeld "Transactie Toevoegen" dialoog](../../../../translated_images/dialog.93bba104afeb79f1.nl.png)
+![Screenshot van een voorbeeld "Transactie Toevoegen" dialoog](../../../../translated_images/nl/dialog.93bba104afeb79f1.webp)
 
 ## Testen van je Implementatie
 

@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Fjern gemte data
     ClearStorage --> FirstTime: Tilbage til opsætning
 ```
-![Lokal lagringspanel](../../../../translated_images/localstorage.472f8147b6a3f8d1.da.png)
+![Lokal lagringspanel](../../../../translated_images/da/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Sikkerhedsovervejelse**: I produktionsapplikationer udgør lagring af API-nøgler i LocalStorage sikkerhedsrisici, da JavaScript kan tilgå disse data. Til læringsformål fungerer dette fint, men rigtige applikationer bør bruge sikker server-side lagring til følsomme oplysninger.
 

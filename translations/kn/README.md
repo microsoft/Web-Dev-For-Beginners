@@ -72,13 +72,13 @@ Azure AI Foundry Discord ಸಮುದಾಯವನ್ನು ಸೇರಿ
 
 ಪ್ರಾರಂಭಿಸಲು [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ಗೆ ಭೇಟಿ ನೀಡಿ!
 
-![Background](../../translated_images/background.148a8d43afde5730.kn.png)
+![Background](../../translated_images/kn/background.148a8d43afde5730.webp)
 
 - ಮೂಲಭೂತದಿಂದ RAG ವರೆಗೆ ಎಲ್ಲವನ್ನೂ ಆವರಿಸುವ ಪಾಠಗಳು.  
 - ಜನರೇಟಿವ್ AI ಮತ್ತು ನಮ್ಮ ಸಹಯೋಗಿ ಅಪ್ಲಿಕೇಶನ್ ಮೂಲಕ ಐತಿಹಾಸಿಕ ಪಾತ್ರಗಳೊಂದಿಗೆ ಸಂವಾದ.  
 - ಮನರಂಜನೆ ಮತ್ತು ಆಕರ್ಷಕ ಕಥನ, ನೀವು ಕಾಲ ಯಾತ್ರೆಯಲ್ಲಿ ಹೋಗುತ್ತೀರಿ!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.kn.png)
+![character](../../translated_images/kn/character.5c0dd8e067ffd693.webp)
 
 ಪ್ರತಿಪಾಠದಲ್ಲಿ ಪೂರ್ಣಗೊಳಿಸುವ ಅಸೈನ್ಮೆಂಟ್, ಜ್ಞಾನ ಪರಿಶೀಲನೆ ಮತ್ತು ಸವಾಲು ಇರುತ್ತದೆ, ಇವುಡಿ ಕಲಿಕೆಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತವೆ ಹೀಗೆ:  
 - ಪ್ರಾಂಪ್ಟ್ ಮತ್ತು ಪ್ರಾಂಪ್ಟ್ ಇಂಜಿನಿಯರಿಂಗ್  
@@ -114,7 +114,7 @@ Azure AI Foundry Discord ಸಮುದಾಯವನ್ನು ಸೇರಿ
 
 ನೀವು ಸೃಷ್ಟಿಸಿದ ರೆಪೊಸಿಟರಿಯಲ್ಲಿ, **Code** ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು **Open with Codespaces** ಆಯ್ಕೆಮಾಡಿ. ಇದು ನಿಮಗಾಗಿ ಹೊಸ Codespace ಸೃಷ್ಟಿಸುವುದು.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.kn.png)
+![Codespace](../../translated_images/kn/createcodespace.0238bbf4d7a8d955.webp)
 
 #### ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿ ಸ್ಥಳೀಯವಾಗಿ ಪಠ್ಯಕ್ರಮವನ್ನು ಓಡಿಸುವುದು
 

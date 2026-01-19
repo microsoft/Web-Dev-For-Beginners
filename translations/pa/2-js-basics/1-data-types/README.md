@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ: ਡਾਟਾ ਟਾਈਪਸ
 
-![JavaScript Basics - Data types](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.pa.png)
+![JavaScript Basics - Data types](../../../../translated_images/pa/webdev101-js-datatypes.4cc470179730702c.webp)
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਵੱਲੋਂ
 
 ```mermaid

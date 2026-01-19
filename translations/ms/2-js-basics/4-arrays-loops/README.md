@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Asas JavaScript: Array dan Gelung
 
-![Asas JavaScript - Array](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.ms.png)
+![Asas JavaScript - Array](../../../../translated_images/ms/webdev101-js-arrays.439d7528b8a29455.webp)
 > Nota sketsa oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

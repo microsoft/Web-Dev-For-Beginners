@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOM at isang closure](../../../../translated_images/webdev101-js.10280393044d7eaa.tl.png)
+![DOM at isang closure](../../../../translated_images/tl/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Maligayang pagdating sa isa sa mga pinaka-kapanapanabik na aspeto ng web development - ang paggawa ng mga bagay na interactive! Ang Document Object Model (DOM) ay parang tulay sa pagitan ng iyong HTML at JavaScript, at ngayon gagamitin natin ito upang buhayin ang iyong terrarium. Nang likhain ni Tim Berners-Lee ang unang web browser, inisip niya ang isang web kung saan ang mga dokumento ay maaaring maging dynamic at interactive - ang DOM ang nagpapaganap ng pangitain na iyon.
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![Representasyon ng DOM tree](../../../../translated_images/dom-tree.7daf0e763cbbba92.tl.png)
+![Representasyon ng DOM tree](../../../../translated_images/tl/dom-tree.7daf0e763cbbba92.webp)
 
 > Isang representasyon ng DOM at ang HTML markup na tumutukoy dito. Mula kay [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **Pag-unawa sa Closures**: Ang closures ay isang mahalagang paksa sa JavaScript, at maraming developer ang gumagamit nito sa loob ng maraming taon bago lubos na maunawaan ang lahat ng teoretikal na aspeto. Ngayon, magpo-focus tayo sa praktikal na aplikasyon - makikita mo ang closures na natural na lumilitaw habang binubuo natin ang ating mga interactive na feature. Ang pag-unawa ay lalago habang nakikita mo kung paano nila nilulutas ang mga totoong problema.
 
-![Representasyon ng DOM tree](../../../../translated_images/dom-tree.7daf0e763cbbba92.tl.png)
+![Representasyon ng DOM tree](../../../../translated_images/tl/dom-tree.7daf0e763cbbba92.webp)
 
 > Isang representasyon ng DOM at ang HTML markup na tumutukoy dito. Mula kay [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -598,7 +598,7 @@ Ngayon, subukan ang iyong interactive terrarium! Buksan ang iyong `index.html` f
 - **Suporta sa iba't ibang device**: Gumagana sa desktop at mobile
 - **Performance conscious**: Walang memory leaks o redundant calculations
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.tl.png)
+![finished terrarium](../../../../translated_images/tl/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

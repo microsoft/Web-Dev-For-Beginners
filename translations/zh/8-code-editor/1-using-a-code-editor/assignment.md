@@ -79,7 +79,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **填写** 提交信息：“Add initial HTML structure”
 5. **点击** “Commit new file” 保存更改
 
-![在 GitHub 上创建初始文件](../../../../translated_images/new-file-github.com.c886796d800e8056.zh.png)
+![在 GitHub 上创建初始文件](../../../../translated_images/zh/new-file-github.com.c886796d800e8056.webp)
 
 **此初始设置功效：**
 - **建立** 合适的 HTML5 文档结构及语义元素
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **成功标志**：您将在资源管理器侧边栏看到项目文件，并可在主编辑区打开 `index.html` 进行编辑。
 
-![VSCode.dev 中的项目加载界面](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.zh.png)
+![VSCode.dev 中的项目加载界面](../../../../translated_images/zh/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **界面包含内容：**
 - **资源管理器侧边栏**：显示仓库文件及目录结构
@@ -450,7 +450,7 @@ li:before {
 **安装后即时效果：**
 安装完成后，编辑器内会显示简历网站的实时预览，方便您边编辑边查看网站实际效果。
 
-![CodeSwing 扩展实时预览](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.zh.png)
+![CodeSwing 扩展实时预览](../../../../translated_images/zh/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **增强界面解析：**
 - **分屏视图**：左侧显示代码，右侧实时预览

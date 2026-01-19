@@ -50,7 +50,7 @@ Visit **[VSCode.dev](https://vscode.dev)**—no installation or downloads requir
 
 After loading, your workspace will look like this:
 
-![Default VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.en.png)
+![Default VSCode.dev](../../../../translated_images/en/default-vscode-dev.5d06881d65c1b3234ce50cd9ed3b0028e6031ad5f5b441bcbed96bfa6311f6d0.png)
 
 It has three main sections from left to right:
 - **Activity bar:** Icons like 🔎 (Search), ⚙️ (Settings), files, source control, etc.
@@ -67,11 +67,11 @@ Click through the icons to explore features, but return to the _Explorer_ to sta
 
 1. Go to [VSCode.dev](https://vscode.dev). Click **"Open Remote Repository."**
 
-   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.en.png)
+   ![Open remote repository](../../../../translated_images/en/open-remote-repository.bd9c2598b8949e7fc283cdfc8f4050c6205a7c7c6d3f78c4b135115d037d6fa2.png)
 
 2. Use the _Command Palette_ (Ctrl-Shift-P, or Cmd-Shift-P on Mac).
 
-   ![Palette Menu](../../../../translated_images/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.en.png)
+   ![Palette Menu](../../../../translated_images/en/palette-menu.4946174e07f426226afcdad707d19b8d5150e41591c751c45b5dee213affef91.png)
 
    - Select "Open remote repository."
    - Paste your GitHub repo URL (e.g., `https://github.com/microsoft/Web-Dev-For-Beginners`) and press Enter.
@@ -101,14 +101,14 @@ Once your repository is open, you can:
 - Click the _‘New file ...’_ icon.
 - Name your file, press **Enter**, and it will appear instantly.
 
-![Create a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.en.png)
+![Create a new file](../../../../translated_images/en/create-new-file.2814e609c2af9aeb6c6fd53156c503ac91c3d538f9cac63073b2dd4a7631f183.png)
 
 ### 2. **Edit and Save Files**
 - Click on a file in the *Explorer* to open it in the code area.
 - Make your changes as needed.
 - VSCode.dev automatically saves your changes, but you can press Ctrl+S to save manually.
 
-![Edit a file](../../../../translated_images/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.en.png)
+![Edit a file](../../../../translated_images/en/edit-a-file.52c0ee665ef19f08119d62d63f395dfefddc0a4deb9268d73bfe791f52c5807a.png)
 
 ### 3. **Track & Commit Changes with Version Control**
 
@@ -116,7 +116,7 @@ VSCode.dev includes integrated **Git** version control!
 
 - Click the _'Source Control'_ icon to view all changes made.
 - Files in the `Changes` folder show additions (green) and deletions (red).  
-  ![View changes](../../../../translated_images/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.en.png)
+  ![View changes](../../../../translated_images/en/working-tree.c58eec08e6335c79cc708c0c220c0b7fea61514bd3c7fb7471905a864aceac7c.png)
 
 - Stage changes by clicking the `+` next to files to prepare for commit.
 - **Discard** unwanted changes by clicking the undo icon.
@@ -124,7 +124,7 @@ VSCode.dev includes integrated **Git** version control!
 
 To return to your repository on GitHub, select the hamburger menu at the top left.
 
-![Stage & commit changes](../../../../translated_images/edit-vscode-dev.2a58bb663e7d19e04e7ccdc9fc645155a15de1e6e9797056df7cca697a3cf7b6.en.png)
+![Stage & commit changes](../../../../translated_images/en/edit-vscode-dev.2a58bb663e7d19e04e7ccdc9fc645155a15de1e6e9797056df7cca697a3cf7b6.png)
 
 ***
 
@@ -137,13 +137,13 @@ Extensions allow you to add languages, themes, debuggers, and productivity tools
 - Click the **Extensions icon** on the activity bar.
 - Search for an extension in the _'Search Extensions in Marketplace'_ box.
 
-  ![Extension details](../../../../translated_images/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.en.png)
+  ![Extension details](../../../../translated_images/en/extension-details.9f8f1fd4e9eb2de5069ae413119eb8ee43172776383ebe2f7cf640e11df2e106.png)
 
   - **Installed**: All extensions you’ve added
   - **Popular**: Industry favorites
   - **Recommended**: Tailored to your workflow
 
-  ![View extensions](../../../../translated_images/view-extensions.2eed53221678066045e3684b9dabaafff07f590c7dfaec736457d0ac0017e867.en.png)
+  ![View extensions](../../../../translated_images/en/view-extensions.2eed53221678066045e3684b9dabaafff07f590c7dfaec736457d0ac0017e867.png)
 
 ***
 
@@ -152,14 +152,14 @@ Extensions allow you to add languages, themes, debuggers, and productivity tools
 - Enter the extension’s name in the search bar, click it, and review details in the editor.
 - Hit the **blue Install button** in the sidebar _or_ in the main code area.
 
-  ![Install extensions](../../../../translated_images/install-extension.84dd866e187d79492aa2c41b18f3878eeadaa70fece7a11ef63e2627dcc8792c.en.png)
+  ![Install extensions](../../../../translated_images/en/install-extension.84dd866e187d79492aa2c41b18f3878eeadaa70fece7a11ef63e2627dcc8792c.png)
 
 ### 2. **Customize Extensions**
 
 - Find your installed extension.
 - Click the **Gear icon** → select _Extension Settings_ to adjust behaviors to your preferences.
 
-  ![Modify extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.en.png)
+  ![Modify extension settings](../../../../translated_images/en/extension-settings.21c752ae4f4cdb78a867f140ccd0680e04619d0c44bb4afb26373e54b829d934.png)
 
 ### 3. **Manage Extensions**
 You can:

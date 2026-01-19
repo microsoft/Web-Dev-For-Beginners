@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![сітка canvas](../../../../translated_images/canvas_grid.5f209da785ded492.uk.png)
+![сітка canvas](../../../../translated_images/uk/canvas_grid.5f209da785ded492.webp)
 > Зображення з [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Щоб малювати на елементі canvas, ви будете дотримуватися того самого триетапного процесу, який є основою всієї графіки canvas. Після кількох спроб це стане для вас природним:
@@ -329,11 +329,11 @@ flowchart TD
 
 - Корабель героя
 
-   ![Корабель героя](../../../../translated_images/player.dd24c1afa8c71e9b.uk.png)
+   ![Корабель героя](../../../../translated_images/uk/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 монстрів
 
-   ![Корабель монстра](../../../../translated_images/enemyShip.5df2a822c16650c2.uk.png)
+   ![Корабель монстра](../../../../translated_images/uk/enemyShip.5df2a822c16650c2.webp)
 
 ### Рекомендовані кроки для початку розробки
 
@@ -455,7 +455,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Готовий результат має виглядати так:
 
-![Чорний екран з героєм і 5*5 монстрами](../../../../translated_images/partI-solution.36c53b48c9ffae2a.uk.png)
+![Чорний екран з героєм і 5*5 монстрами](../../../../translated_images/uk/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Рішення
 

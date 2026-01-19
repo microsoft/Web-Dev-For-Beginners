@@ -160,7 +160,7 @@ sequenceDiagram
     Browser->>User: Displays new page (flash/reload)
 ```
 
-![多頁應用程式的更新工作流程](../../../../translated_images/mpa.7f7375a1a2d4aa77.mo.png)
+![多頁應用程式的更新工作流程](../../../../translated_images/mo/mpa.7f7375a1a2d4aa77.webp)
 
 **為什麼這種方法感覺很笨重：**
 - 每次點擊都意味著完全重建整個頁面
@@ -187,7 +187,7 @@ sequenceDiagram
     Browser->>User: Shows updated content (no reload)
 ```
 
-![單頁應用程式的更新工作流程](../../../../translated_images/spa.268ec73b41f992c2.mo.png)
+![單頁應用程式的更新工作流程](../../../../translated_images/mo/spa.268ec73b41f992c2.webp)
 
 **為什麼 SPA 感覺更好：**
 - 只有實際更改的部分會被更新（聰明吧？）
@@ -523,7 +523,7 @@ if (data.error) {
 
 現在，當你使用無效帳號進行測試時，會在頁面上看到有用的錯誤訊息！
 
-![顯示登入錯誤訊息的截圖](../../../../translated_images/login-error.416fe019b36a6327.mo.png)
+![顯示登入錯誤訊息的截圖](../../../../translated_images/mo/login-error.416fe019b36a6327.webp)
 
 #### 步驟 4：注重無障礙設計
 
@@ -961,7 +961,7 @@ timeline
 
 以下是一個精美儀表板的示例：
 
-![儀表板樣例結果的截圖](../../../../translated_images/screen2.123c82a831a1d14a.mo.png)
+![儀表板樣例結果的截圖](../../../../translated_images/mo/screen2.123c82a831a1d14a.webp)
 
 不必完全匹配此設計——將其作為靈感，創造屬於你的風格！
 

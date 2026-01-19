@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Pašalinti išsaugotus duomenis
     ClearStorage --> FirstTime: Grįžti prie nustatymo
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.lt.png)
+![Local storage pane](../../../../translated_images/lt/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Saugumo perspėjimas**: komerciniuose sprendimuose API raktų saugojimas LocalStorage kelia saugumo riziką, nes JavaScript gali prieiti prie šių duomenų. Mokymosi tikslais šis būdas tinka, tačiau tikrose programose jautrių kredencialų saugojimui reikia naudoti saugų serverio pusės saugojimą.
 

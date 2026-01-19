@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Using the CO2 Signal API tmrow to detect electricity usage, build a browser extension so you fit get reminder for your browser about how heavy your region electricity use be. Using this extension specifically go help you make decisions about your activity based on this information.
 
-![browser extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.pcm.png)
+![browser extension screenshot](../../../../../translated_images/pcm/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Start Here
 
@@ -31,7 +31,7 @@ npm run build
 
 To install for Edge, use the 'three dots' menu for the top right corner of browser to find Extensions panel. From there, choose 'Load Unpacked' to load new extension. Open the 'dist' folder on request and the extension go load. To use am, you need API key for CO2 Signal API ([get one here via email](https://www.co2signal.com/) - enter your email inside the box for this page) and [code for your region](http://api.electricitymap.org/v3/zones) wey match the [Electricity Map](https://www.electricitymap.org/map) (for Boston, for example, I use 'US-NEISO').
 
-![downloading](../../../../../translated_images/install-on-edge.78634f02842c4828.pcm.png)
+![downloading](../../../../../translated_images/pcm/install-on-edge.78634f02842c4828.webp)
 
 Once the API key and region don enter into the extension interface, the coloured dot for the browser extension bar go change to show your region electricity usage and give you idea about the kind heavy activities wey make sense for you to do. The concept behind the 'dot' system dem give me from [Energy Lollipop browser extension](https://energylollipop.com/) for California emissions.
 

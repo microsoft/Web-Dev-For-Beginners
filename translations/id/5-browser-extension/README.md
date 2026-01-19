@@ -23,7 +23,7 @@ Ekstensi ini dapat digunakan secara ad hoc oleh pengguna setelah kunci API dan k
 
 ### Kredit
 
-![ekstensi browser berwarna hijau](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.id.png)
+![ekstensi browser berwarna hijau](../../../translated_images/id/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Kredit
 

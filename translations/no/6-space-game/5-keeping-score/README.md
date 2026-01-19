@@ -155,7 +155,7 @@ sequenceDiagram
     end
 ```
 - **Poengsystem**: Hvert ødelagte fiendeskip belønner med 100 poeng (runde tall er lettere for spillerne å regne på mentalt). Poengsummen vises nederst til venstre.
-- **Livsteller**: Helten din starter med tre liv – en standard etablert av tidlige arkadespill for å balansere utfordring med spillbarhet. Hver kollisjon med en fiende koster ett liv. Vi viser gjenværende liv nederst til høyre med skipsikoner ![life image](../../../../translated_images/life.6fb9f50d53ee0413.no.png).
+- **Livsteller**: Helten din starter med tre liv – en standard etablert av tidlige arkadespill for å balansere utfordring med spillbarhet. Hver kollisjon med en fiende koster ett liv. Vi viser gjenværende liv nederst til høyre med skipsikoner ![life image](../../../../translated_images/no/life.6fb9f50d53ee0413.webp).
 
 ## La oss bygge!
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Kuunda Kurasa za Wavuti Zenye Ufikiaji Rahisi
 
-![Yote Kuhusu Ufikiaji Rahisi](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.sw.png)
+![Yote Kuhusu Ufikiaji Rahisi](../../../../translated_images/sw/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuand
 
 **Picha za taarifa** - zinaeleza taarifa muhimu:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.sw.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/sw/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Picha za mapambo** - ni za kuona tu na haina thamani ya taarifa:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.sw.png" alt="" role="presentation">
+<img src="../../../../translated_images/sw/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Picha za kazi** - hutumika kama vitufe au vidhibiti:
@@ -1066,7 +1066,7 @@ Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuand
 
 **Picha ngumu** - chati, michoro, infographics:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.sw.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/sw/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Kila picha kwenye tovuti yako ina kusudi. Kuelewa kusudi hilo kunakusaidia kuand
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.sw.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/sw/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 एक छोटासा ड्रॅग आणि ड्रॉप कोड-मेडिटेशन. थोडं HTML, JS आणि CSS वापरून तुम्ही एक वेब इंटरफेस तयार करू शकता, त्याला स्टाइल देऊ शकता, आणि त्यात इंटरॅक्शन जोडू शकता.
 
-![माझं टेरॅरियम](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.mr.png)
+![माझं टेरॅरियम](../../../../translated_images/mr/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## श्रेय
 

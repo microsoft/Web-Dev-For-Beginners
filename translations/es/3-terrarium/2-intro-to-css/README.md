@@ -29,7 +29,7 @@ journey
       Diseño responsivo: 5: Student
       Reflexiones de vidrio: 5: Student
 ```
-![Introducción a CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.es.png)
+![Introducción a CSS](../../../../translated_images/es/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ¿Recuerdas cómo se veía tu terrario HTML bastante básico? CSS es donde transformamos esa estructura simple en algo visualmente atractivo.
@@ -202,7 +202,7 @@ body {
 
 Abre las herramientas de desarrollo de tu navegador (F12), navega a la pestaña de Elementos, e inspecciona tu `<h1>`. Verás que hereda la familia tipográfica del body:
 
-![fuente heredada](../../../../translated_images/1.cc07a5cbe114ad1d.es.png)
+![fuente heredada](../../../../translated_images/es/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Tiempo de Experimento**: Prueba establecer otras propiedades heredables en el `<body>` como `color`, `line-height` o `text-align`. ¿Qué pasa con tu encabezado y otros elementos?
 
@@ -332,7 +332,7 @@ En nuestro terrario, cada planta necesita un estilo similar pero también necesi
 **Esta es la estructura HTML para cada planta:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.es.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/es/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Aprende más sobre [modo agent](https://code.visualstudio.com/blogs/2025/02/24/i
 
 Crearás reflejos sutiles que simulan cómo la luz se refleja en las superficies de vidrio. Este enfoque es similar a cómo los pintores renacentistas como Jan van Eyck usaban la luz y reflexión para dar volumen tridimensional a los vidrios pintados. Esto es lo que buscas lograr:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.es.png)
+![finished terrarium](../../../../translated_images/es/terrarium-final.2f07047ffc597d0a.webp)
 
 **Tu desafío:**
 - **Crear** formas ovaladas sutiles blancas o de colores claros para los reflejos del vidrio

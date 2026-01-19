@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 మనం కలసి ఈ ప్రయాణం తీసుకుందాం, ఒక్కో స్టెప్పులో ఒక్కోసారి. తొందరగా లేదు, ఒత్తిడి లేదు – కేవలం మీరు, నేను, మరియు మీరు త్వరలో మీ కొత్త మిత్రులయ్యే అద్భుతమైన టూల్స్‌!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.te.png)
+![Intro to GitHub](../../../../translated_images/te/webdev101-github.8846d7971abef6f9.webp)
 > స్కెచ్ నోట్ [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -607,7 +607,7 @@ flowchart TD
 
 ✅ 'beginner-friendly' రిపోలను కనుగొనడానికి మంచి మార్గం అంటే [‘good-first-issue’ ట్యాగ్‌తో శోధించడం](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/) ఇది.
 
-![కాపీ చెయ్యడానికి రిపోని స్థానికంగా క్లోన్ చేయడం](../../../../translated_images/clone_repo.5085c48d666ead57.te.png)
+![కాపీ చెయ్యడానికి రిపోని స్థానికంగా క్లోన్ చేయడం](../../../../translated_images/te/clone_repo.5085c48d666ead57.webp)
 
 కోడ్ కాపీ చేసుకునే అనేక మార్గాలు ఉన్నాయి. ఒక మార్గం "క్లోన్" చేయడం, దీనికి HTTPS, SSH లేదా GitHub CLI (కమాండ్ లైన్ ఇంటర్ఫేస్) ఉపయోగిస్తారు.
 

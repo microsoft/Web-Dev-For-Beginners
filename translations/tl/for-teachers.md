@@ -42,10 +42,10 @@ Kasama sa kurikulum na ito ang mga importable na package para sa karaniwang mga 
   - Limitado ang suporta ng Moodle Cloud para sa Common Cartridge. Mas mainam gamitin ang Moodle file sa itaas, na maaari ring i-upload sa Canvas.
   - Pagkatapos ng import, suriin ang mga module, petsa ng due, at mga setting ng pagsusulit upang tumugma sa iskedyul ng inyong term.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.tl.png)
+![Moodle](../../translated_images/tl/moodle.94eb93d714a50cb2.webp)
 > Ang kurikulum sa isang Moodle classroom
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.tl.png)
+![Canvas](../../translated_images/tl/canvas.fbd605ff8e5b8aff.webp)
 > Ang kurikulum sa Canvas
 
 ### Direktang paggamit ng repositoryo (walang Classroom)

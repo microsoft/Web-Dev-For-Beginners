@@ -78,7 +78,7 @@ Ponieważ VSCode.dev wymaga co najmniej jednego pliku do otwarcia repozytorium, 
 4. **Napisz** komunikat commita: "Add initial HTML structure"  
 5. **Kliknij** "Commit new file", aby zapisać zmiany
 
-![Tworzenie pliku początkowego na GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.pl.png)
+![Tworzenie pliku początkowego na GitHub](../../../../translated_images/pl/new-file-github.com.c886796d800e8056.webp)
 
 **Co osiąga ta początkowa konfiguracja:**  
 - **Ustala** poprawną strukturę dokumentu HTML5 z semantycznymi elementami  
@@ -104,7 +104,7 @@ Gdy podstawy repozytorium są już gotowe, przejdźmy do VSCode.dev aby wykonać
 
 ✅ **Wskaźnik sukcesu**: Powinieneś zobaczyć pliki projektu w panelu Explorer oraz `index.html` dostępny do edycji na głównym ekranie.
 
-![Projekt załadowany w VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.pl.png)
+![Projekt załadowany w VSCode.dev](../../../../translated_images/pl/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Co zobaczysz w interfejsie:**  
 - **Panel Explorer**: **Wyświetla** pliki i strukturę folderów repozytorium  
@@ -448,7 +448,7 @@ Rozszerzenia wzbogacają Twoje środowisko pracy, oferując m.in. podgląd na ż
 **Natychmiastowe efekty po instalacji:**  
 Po zainstalowaniu CodeSwing zobaczysz podgląd swojego CV na żywo w edytorze. Pozwala to dokładnie widzieć, jak wygląda strona podczas wprowadzania zmian.
 
-![Rozszerzenie CodeSwing pokazujące podgląd na żywo](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.pl.png)
+![Rozszerzenie CodeSwing pokazujące podgląd na żywo](../../../../translated_images/pl/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Zrozumienie ulepszonego interfejsu:**  
 - **Widok podzielony**: **Pokazuje** kod po jednej stronie i podgląd na żywo po drugiej  

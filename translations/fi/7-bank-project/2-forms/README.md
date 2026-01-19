@@ -295,7 +295,7 @@ Ensiksi tarkastellaan, mitä tapahtuu peruslomakkeen lähetyksessä:
 2. Tarkkaile muutoksia selaimesi osoiterivillä
 3. Huomaa, kuinka sivu latautuu uudelleen ja tiedot näkyvät URL-osoitteessa
 
-![Kuvakaappaus selaimen URL-osoitteen muutoksesta Rekisteröidy-painikkeen klikkauksen jälkeen](../../../../translated_images/click-register.e89a30bf0d4bc9ca.fi.png)
+![Kuvakaappaus selaimen URL-osoitteen muutoksesta Rekisteröidy-painikkeen klikkauksen jälkeen](../../../../translated_images/fi/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP-menetelmien vertailu
 
@@ -350,7 +350,7 @@ Konfiguroidaan rekisteröintilomakkeesi kommunikoimaan oikein taustapalvelimen A
 2. **Klikkaa** "Luo tili" -painiketta
 3. **Tarkkaile** palvelimen vastausta selaimessasi
 
-![Selaimen ikkuna osoitteessa localhost:5000/api/accounts, jossa näkyy JSON-merkkijono käyttäjätiedoilla](../../../../translated_images/form-post.61de4ca1b964d91a.fi.png)
+![Selaimen ikkuna osoitteessa localhost:5000/api/accounts, jossa näkyy JSON-merkkijono käyttäjätiedoilla](../../../../translated_images/fi/form-post.61de4ca1b964d91a.webp)
 
 **Mitä sinun pitäisi nähdä:**
 - **Selaimen uudelleenohjaus** API-päätepisteen URL-osoitteeseen
@@ -554,7 +554,7 @@ async function register() {
 3. **Klikkaa** "Luo tili"
 4. **Tarkkaile** konsoliviestejä ja käyttäjäpalautetta
 
-![Näyttökuva, jossa näkyy lokiviesti selaimen konsolissa](../../../../translated_images/browser-console.efaf0b51aaaf6778.fi.png)
+![Näyttökuva, jossa näkyy lokiviesti selaimen konsolissa](../../../../translated_images/fi/browser-console.efaf0b51aaaf6778.webp)
 
 **Mitä sinun pitäisi nähdä:**
 - **Lataustila** näkyy lähetyspainikkeessa
@@ -729,7 +729,7 @@ Parannetaan rekisteröintilomakettasi vankalla validoinnilla, joka tarjoaa erino
 3. **Kokeile** erikoismerkkejä käyttäjänimi-kentässä
 4. **Anna** negatiivinen saldo
 
-![Näyttökuva, jossa näkyy validointivirhe lomakkeen lähettämisen yhteydessä](../../../../translated_images/validation-error.8bd23e98d416c22f.fi.png)
+![Näyttökuva, jossa näkyy validointivirhe lomakkeen lähettämisen yhteydessä](../../../../translated_images/fi/validation-error.8bd23e98d416c22f.webp)
 
 **Mitä huomaat:**
 - **Selaimen näyttämät** natiivivalidointiviestit
@@ -859,7 +859,7 @@ Näytä virheilmoitus HTML:ssä, jos käyttäjä on jo olemassa.
 
 Tässä on esimerkki siitä, miltä lopullinen kirjautumissivu voi näyttää pienen tyylittelyn jälkeen:
 
-![Näyttökuva kirjautumissivusta CSS-tyylien lisäämisen jälkeen](../../../../translated_images/result.96ef01f607bf856a.fi.png)
+![Näyttökuva kirjautumissivusta CSS-tyylien lisäämisen jälkeen](../../../../translated_images/fi/result.96ef01f607bf856a.webp)
 
 ## Luentojälkeinen kysely
 

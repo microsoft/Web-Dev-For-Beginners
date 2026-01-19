@@ -123,7 +123,7 @@ Edge arendajatööriistade avamiseks klõpsa paremas ülanurgas kolmele punktile
 
 Proovime seda. Ava veebileht (näiteks Microsoft.com sobib hästi) ja vajuta 'Salvestus' nuppu. Nüüd värskenda lehte ja jälgi, kuidas profiler kõike jäädvustab. Kui salvestuse lõpetad, näed detailset ülevaadet sellest, kuidas brauser saidi 'skriptib', 'renderdab' ja 'maalib'. See meenutab missioonikontrolli, mis jälgib iga süsteemi raketi stardi ajal – saad reaalajas andmeid täpselt, mis toimub ja millal.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.et.png)
+![Edge profiler](../../../../translated_images/et/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Microsofti dokumentatsioonis](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) on veel palju detaile, kui tahad süvitsi minna
 
@@ -133,11 +133,11 @@ Vali profiili ajajoone osad, et suumida sündmusi, mis lehe laadimise ajal toimu
 
 Saavuta oma lehe jõudlusest kiire ülevaade, valides ajajoone osa ja vaadates kokkuvõttepaneeli:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.et.png)
+![Edge profiler snapshot](../../../../translated_images/et/snapshot.97750180ebcad737.webp)
 
 Vaata Sündmuste logi paneeli, et näha, kas mõni sündmus kestis kauem kui 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.et.png)
+![Edge event log](../../../../translated_images/et/log.804026979f3707e0.webp)
 
 ✅ Tutvu oma profileriga! Ava sellel saidil arendajatööriistad ja vaata, kas on kitsaskohti. Milline ressurss laeb kõige aeglasemalt? Mis kiiremini?
 

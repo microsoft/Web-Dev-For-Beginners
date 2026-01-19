@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Met behulp van de CO2-signaal-API van tmrow om het elektriciteitsverbruik te volgen, maak je een browserextensie zodat je direct in je browser een herinnering hebt over het elektriciteitsverbruik in jouw regio. Het gebruik van deze ad-hocextensie helpt je om beslissingen te nemen over je activiteiten op basis van deze informatie.
 
-![extensie screenshot](../../../../../translated_images/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.nl.png)
+![extensie screenshot](../../../../../translated_images/nl/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.png)
 
 ## Aan de slag
 
@@ -31,7 +31,7 @@ npm run build
 
 Om de extensie in Edge te installeren, gebruik je het menu met de 'drie puntjes' in de rechterbovenhoek van de browser om het Extensiepaneel te vinden. Selecteer daar 'Uitgepakte extensie laden' om een nieuwe extensie te laden. Open de map 'dist' wanneer hierom wordt gevraagd, en de extensie wordt geladen. Om het te gebruiken, heb je een API-sleutel nodig voor de CO2 Signal API ([verkrijg er hier via e-mail een](https://www.co2signal.com/) - voer je e-mailadres in het veld op deze pagina in) en de [code voor jouw regio](http://api.electricitymap.org/v3/zones) die overeenkomt met de [Electricity Map](https://www.electricitymap.org/map) (in Boston gebruik ik bijvoorbeeld 'US-NEISO').
 
-![installeren](../../../../../translated_images/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.nl.png)
+![installeren](../../../../../translated_images/nl/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.png)
 
 Zodra de API-sleutel en de regio in de extensie-interface zijn ingevoerd, zou het gekleurde punt in de extensiebalk van de browser moeten veranderen om het energieverbruik in jouw regio weer te geven. Het geeft je een indicatie van welke activiteiten met een hoog energieverbruik geschikt zijn. Het concept achter dit "puntensysteem" is geïnspireerd door de [Energy Lollipop-extensie](https://energylollipop.com/) voor de emissies in Californië.
 

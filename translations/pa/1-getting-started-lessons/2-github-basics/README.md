@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ਅਸੀਂ ਇਹ ਯਾਤਰਾ ਇਕੱਠੇ ਕਰਾਂਗੇ, ਇੱਕ ਕਦਮ ਵਿੱਚ। ਕੋਈ ਜਲਦੀ ਨਹੀਂ, ਕੋਈ ਦਬਾਅ ਨਹੀਂ – ਸਿਰਫ ਤੁਸੀਂ, ਮੈਂ, ਅਤੇ ਕੁਝ ਬਹੁਤ ਹੀ ਸ਼ਾਨਦਾਰ ਟੂਲ ਜੋ ਤੁਹਾਡੇ ਨਵੇਂ ਸਭ ਤੋਂ ਵਧੀਆ ਦੋਸਤ ਬਣਨ ਜਾ ਰਹੇ ਹਨ!
 
-![GitHub ਦਾ ਪਰਚੇ](../../../../translated_images/webdev101-github.8846d7971abef6f9.pa.png)
+![GitHub ਦਾ ਪਰਚੇ](../../../../translated_images/pa/webdev101-github.8846d7971abef6f9.webp)
 > ਸਕੈਚਨੋਟ [Tomomi Imura](https://twitter.com/girlie_mac) ਦੁਆਰਾ
 
 ## ਪਾਠ ਤੋਂ ਪਹਿਲਾਂ ਕਵਿਜ਼
@@ -337,7 +337,7 @@ flowchart TD
 
 ✅ 'ਸ਼ੁਰੂਆਤੀ-ਦੋਸਤਾਨਾ' ਰਿਪੋਜ਼ਟਰੀ ਲੱਭਣ ਦਾ ਇੱਕ ਵਧੀਆ ਤਰੀਕਾ ਹੈ [ਟੈਗ 'good-first-issue' ਦੁਆਰਾ ਖੋਜ ਕਰਨਾ](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)।
 
-![ਰਿਪੋ ਨੂੰ ਲੋਕਲ ਤੌਰ 'ਤੇ ਕਾਪੀ ਕਰੋ](../../../../translated_images/clone_repo.5085c48d666ead57.pa.png)
+![ਰਿਪੋ ਨੂੰ ਲੋਕਲ ਤੌਰ 'ਤੇ ਕਾਪੀ ਕਰੋ](../../../../translated_images/pa/clone_repo.5085c48d666ead57.webp)
 
 ਕੋਡ ਕਾਪੀ ਕਰਨ ਦੇ ਕਈ ਤਰੀਕੇ ਹਨ। ਇੱਕ ਤਰੀਕਾ ਹੈ ਰਿਪੋਜ਼ਟਰੀ ਦੀ ਸਮੱਗਰੀ ਨੂੰ "ਕਲੋਨ" ਕਰਨਾ, HTTPS, SSH ਜਾਂ GitHub CLI (ਕਮਾਂਡ ਲਾਈਨ ਇੰਟਰਫੇਸ) ਦੀ ਵਰਤੋਂ ਕਰਕੇ।
 

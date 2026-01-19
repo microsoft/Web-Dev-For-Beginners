@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Основи JavaScript: Масиви та Цикли
 
-![Основи JavaScript - Масиви](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.uk.png)
+![Основи JavaScript - Масиви](../../../../translated_images/uk/webdev101-js-arrays.439d7528b8a29455.webp)
 > Скетчнот від [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

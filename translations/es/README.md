@@ -72,13 +72,13 @@ Nuevo proyecto de Asistente de IA agregado, revisa el [proyecto](./9-chat-projec
 
 Visita [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para comenzar!
 
-![Fondo](../../translated_images/background.148a8d43afde5730.es.png)
+![Fondo](../../translated_images/es/background.148a8d43afde5730.webp)
 
 - Lecciones que cubren todo desde lo básico hasta RAG.
 - Interactúa con personajes históricos usando GenAI y nuestra app compañera.
 - Narrativa divertida y atractiva, ¡viajarás en el tiempo!
 
-![personaje](../../translated_images/character.5c0dd8e067ffd693.es.png)
+![personaje](../../translated_images/es/character.5c0dd8e067ffd693.webp)
 
 
 Cada lección incluye una tarea para completar, una revisión de conocimientos y un desafío para guiarte en tópicos como:
@@ -115,7 +115,7 @@ Sigue estos pasos:
 
 En tu copia de este repositorio que creaste, haz clic en el botón **Code** y selecciona **Abrir con Codespaces**. Esto creará un nuevo Codespace para que trabajes dentro.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.es.png)
+![Codespace](../../translated_images/es/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Ejecutando el currículo localmente en tu computadora
 

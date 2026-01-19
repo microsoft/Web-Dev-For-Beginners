@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![la griglia del canvas](../../../../translated_images/canvas_grid.5f209da785ded492.it.png)
+![la griglia del canvas](../../../../translated_images/it/canvas_grid.5f209da785ded492.webp)
 > Immagine da [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Per disegnare sull'elemento canvas, seguirai lo stesso processo in tre fasi che forma la base di tutta la grafica del canvas. Una volta fatto alcune volte, diventa naturale:
@@ -329,11 +329,11 @@ Creerai una pagina web con un elemento Canvas. Dovrebbe rendere uno schermo nero
 
 - Nave eroica
 
-   ![Nave eroica](../../../../translated_images/player.dd24c1afa8c71e9b.it.png)
+   ![Nave eroica](../../../../translated_images/it/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 mostri
 
-   ![Nave mostro](../../../../translated_images/enemyShip.5df2a822c16650c2.it.png)
+   ![Nave mostro](../../../../translated_images/it/enemyShip.5df2a822c16650c2.webp)
 
 ### Passaggi Consigliati per Iniziare lo Sviluppo
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Il risultato finale dovrebbe apparire così:  
 
-![Schermo nero con un eroe e 5*5 mostri](../../../../translated_images/partI-solution.36c53b48c9ffae2a.it.png)  
+![Schermo nero con un eroe e 5*5 mostri](../../../../translated_images/it/partI-solution.36c53b48c9ffae2a.webp)  
 
 ## Soluzione  
 

@@ -185,7 +185,7 @@ Giống như cách điện thoại của Alexander Graham Bell kết nối các 
 
 Khi mọi thứ đã tải lên, bạn sẽ thấy một không gian làm việc sạch sẽ được thiết kế để giúp bạn tập trung vào điều quan trọng – mã của bạn!
 
-![Giao diện mặc định của VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.vi.png)
+![Giao diện mặc định của VSCode.dev](../../../../translated_images/vi/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Đây là chuyến tham quan khu vực của bạn:**
 - **Thanh Hoạt Động** (dải bên trái): Điều hướng chính của bạn với Explorer 📁, Tìm kiếm 🔍, Source Control 🌿, Tiện ích 🧩, và Cài đặt ⚙️
@@ -233,7 +233,7 @@ Khả năng này cho phép truy cập ngay lập tức vào bất kỳ kho công
 1. Truy cập [vscode.dev](https://vscode.dev) nếu bạn chưa ở đó
 2. Tìm nút "Open Remote Repository" trên màn hình chào mừng và nhấp vào nó
 
-   ![Mở kho từ xa](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.vi.png)
+   ![Mở kho từ xa](../../../../translated_images/vi/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Dán vào bất kỳ URL kho GitHub nào (thử cái này: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Nhấn Enter và xem điều kỳ diệu xảy ra!
@@ -242,7 +242,7 @@ Khả năng này cho phép truy cập ngay lập tức vào bất kỳ kho công
 
 Muốn cảm thấy như một phù thủy lập trình? Thử phím tắt này: Ctrl+Shift+P (hoặc Cmd+Shift+P trên Mac) để mở Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.vi.png)
+![Command Palette](../../../../translated_images/vi/palette-menu.4946174e07f42622.webp)
 
 **Command Palette giống như có một công cụ tìm kiếm cho mọi thứ bạn có thể làm:**
 - Gõ "open remote" và nó sẽ tìm trình mở kho cho bạn
@@ -304,7 +304,7 @@ Giống như việc tổ chức các bản vẽ trong văn phòng kiến trúc s
 3. Nhập tên tệp bao gồm phần mở rộng phù hợp (`style.css`, `script.js`, `index.html`)
 4. Nhấn Enter để tạo tệp
 
-![Tạo tệp mới](../../../../translated_images/create-new-file.2814e609c2af9aeb.vi.png)
+![Tạo tệp mới](../../../../translated_images/vi/create-new-file.2814e609c2af9aeb.webp)
 
 **Quy ước đặt tên:**
 - Sử dụng tên mô tả chỉ ra mục đích của tệp
@@ -322,7 +322,7 @@ Giống như việc tổ chức các bản vẽ trong văn phòng kiến trúc s
 2. Bắt đầu gõ và xem VSCode.dev hỗ trợ bạn với màu sắc, gợi ý và phát hiện lỗi
 3. Lưu công việc của bạn bằng Ctrl+S (Windows/Linux) hoặc Cmd+S (Mac) – mặc dù nó cũng tự động lưu!
 
-![Chỉnh sửa tệp trong VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.vi.png)
+![Chỉnh sửa tệp trong VSCode.dev](../../../../translated_images/vi/edit-a-file.52c0ee665ef19f08.webp)
 
 **Những điều thú vị xảy ra khi bạn lập trình:**
 - Mã của bạn được tô màu đẹp mắt để dễ đọc
@@ -343,7 +343,7 @@ Giống như cách các nhà khảo cổ tạo hồ sơ chi tiết về các l�
 2. Các tệp đã chỉnh sửa xuất hiện trong phần "Changes"
 3. Mã màu chỉ ra loại thay đổi: xanh lá cho bổ sung, đỏ cho xóa
 
-![Xem các thay đổi trong Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.vi.png)
+![Xem các thay đổi trong Source Control](../../../../translated_images/vi/working-tree.c58eec08e6335c79.webp)
 
 **Lưu công việc của bạn (quy trình commit):**
 
@@ -438,7 +438,7 @@ Marketplace của extensions được tổ chức rất tốt, vì vậy bạn s
 2. Duyệt qua hoặc tìm kiếm một thứ gì đó cụ thể
 3. Nhấp vào bất kỳ thứ gì trông thú vị để tìm hiểu thêm về nó
 
-![Giao diện marketplace của extensions](../../../../translated_images/extensions.eca0e0c7f59a10b5.vi.png)
+![Giao diện marketplace của extensions](../../../../translated_images/vi/extensions.eca0e0c7f59a10b5.webp)
 
 **Những gì bạn sẽ thấy ở đó:**
 
@@ -491,7 +491,7 @@ Hầu hết các extensions đi kèm với các cài đặt bạn có thể đi�
 3. Chọn "Extension Settings" từ menu thả xuống
 4. Điều chỉnh mọi thứ cho đến khi cảm thấy phù hợp với quy trình làm việc của bạn
 
-![Tùy chỉnh cài đặt extension](../../../../translated_images/extension-settings.21c752ae4f4cdb78.vi.png)
+![Tùy chỉnh cài đặt extension](../../../../translated_images/vi/extension-settings.21c752ae4f4cdb78.webp)
 
 **Những điều phổ biến bạn có thể muốn điều chỉnh:**
 - Cách mã của bạn được định dạng (tab so với khoảng trắng, độ dài dòng, v.v.)

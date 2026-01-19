@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Sistema ng puntos**: Ang bawat nasirang barko ng kalaban ay nagbibigay ng 100 puntos (mas madaling kalkulahin ng mga manlalaro ang mga bilog na numero). Ang score ay makikita sa ibabang kaliwang sulok.
-- **Counter ng buhay**: Ang iyong hero ay magsisimula sa tatlong buhay - isang pamantayan na itinatag ng mga unang arcade games para balansehin ang hamon at kasiyahan sa paglalaro. Ang bawat banggaan sa kalaban ay magbabawas ng isang buhay. Ipapakita natin ang natitirang buhay sa ibabang kanan gamit ang mga icon ng barko ![life image](../../../../translated_images/life.6fb9f50d53ee0413.tl.png).
+- **Counter ng buhay**: Ang iyong hero ay magsisimula sa tatlong buhay - isang pamantayan na itinatag ng mga unang arcade games para balansehin ang hamon at kasiyahan sa paglalaro. Ang bawat banggaan sa kalaban ay magbabawas ng isang buhay. Ipapakita natin ang natitirang buhay sa ibabang kanan gamit ang mga icon ng barko ![life image](../../../../translated_images/tl/life.6fb9f50d53ee0413.webp).
 
 ## Simulan na Natin ang Paggawa!
 

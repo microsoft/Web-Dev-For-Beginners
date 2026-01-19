@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Δείτε πώς θα μοιάζει το τελικό σας έργο:
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.el.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/el/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Το Ταξίδι Μάθησής σας Μέσα από την Ανάπτυξη Εφαρμογών AI
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Κεντρική Αρχή**: Η ανάπτυξη εφαρμογών AI συνδυάζει τις παραδοσιακές δεξιότητες ανάπτυξης web με την ολοκλήρωση υπηρεσιών AI, δημιουργώντας έξυπνες εφαρμογές που φαίνονται φυσικές και ανταποκρίνονται στους χρήστες.
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.el.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/el/playground.d2b927122224ff8f.webp)
 
 **Τι κάνει το playground τόσο χρήσιμο:**
 - **Δοκιμάστε** διαφορετικά μοντέλα AI όπως GPT-4o-mini, Claude και άλλα (όλα δωρεάν!)
@@ -199,7 +199,7 @@ mindmap
 
 Μόλις παίξετε λίγο, απλώς επιλέξτε την καρτέλα "Code" και διαλέξτε τη γλώσσα προγραμματισμού σας για να πάρετε τον κώδικα υλοποίησης που χρειάζεστε.
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.el.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/el/playground-choice.1d23ba7d407f4758.webp)
 
 ## Ρύθμιση της Ολοκλήρωσης Backend με Python
 
@@ -2353,14 +2353,14 @@ mindmap
 - **Πλοηγηθείτε** στο [Web Dev For Beginners αποθετήριο](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Κάντε κλικ** στο "Use this template" στην πάνω δεξιά γωνία (βεβαιωθείτε ότι έχετε συνδεθεί στο GitHub)
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.el.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/el/template.67ad477109d29a2b.webp)
 
 **Βήμα 2: Εκκίνηση Codespaces**  
 - **Ανοίξτε** το νεοδημιουργημένο αποθετήριο σας  
 - **Κάντε κλικ** στο πράσινο κουμπί "Code" και επιλέξτε "Codespaces"  
 - **Επιλέξτε** "Create codespace on main" για να ξεκινήσετε το αναπτυξιακό σας περιβάλλον  
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.el.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/el/codespace.bcecbdf5d2747d3d.webp)
 
 **Βήμα 3: Ρύθμιση Περιβάλλοντος**  
 Μόλις φορτώσει ο Codespace σας, θα έχετε πρόσβαση σε:  

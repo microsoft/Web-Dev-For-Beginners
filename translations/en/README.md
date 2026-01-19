@@ -58,13 +58,13 @@ Explore our new Generative AI curriculum!
 
 Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get started!
 
-![Background](../../translated_images/background.148a8d43afde57303419a663f50daf586681bc2fabf833f66ef6954073983c66.en.png)
+![Background](../../translated_images/en/background.148a8d43afde57303419a663f50daf586681bc2fabf833f66ef6954073983c66.png)
 
 - Lessons covering everything from the basics to Retrieval-Augmented Generation (RAG).
 - Interact with historical characters using GenAI and our companion app.
 - A fun and engaging narrative—you'll be traveling through time!
 
-![character](../../translated_images/character.5c0dd8e067ffd693c16e2c5b7412ab075a2215ce31f998305639fa3a05e14fbe.en.png)
+![character](../../translated_images/en/character.5c0dd8e067ffd693c16e2c5b7412ab075a2215ce31f998305639fa3a05e14fbe.png)
 
 Each lesson includes assignments, knowledge checks, and challenges to help you learn topics like:
 - Prompting and prompt engineering
@@ -98,7 +98,7 @@ Follow these steps:
 
 In your copy of this repository, click the **Code** button and select **Open with Codespaces**. This will create a new Codespace for you to work in.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955fa8fa7f7b6602a3cb6499a24708fbee589f83211c5a613b7.en.png)
+![Codespace](../../translated_images/en/createcodespace.0238bbf4d7a8d955fa8fa7f7b6602a3cb6499a24708fbee589f83211c5a613b7.png)
 
 #### Running the Curriculum Locally on Your Computer
 

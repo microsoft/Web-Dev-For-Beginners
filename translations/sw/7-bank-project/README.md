@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Katika mradi huu, utajifunza jinsi ya kujenga benki ya kufikirika. Masomo haya yanajumuisha maelekezo ya jinsi ya kupanga programu ya wavuti na kutoa njia, kujenga fomu, kusimamia hali (state), na kupata data kutoka kwa API ambayo unaweza kutumia kupata data ya benki.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.sw.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.sw.png) |
+| ![Screen1](../../../translated_images/sw/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/sw/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Masomo

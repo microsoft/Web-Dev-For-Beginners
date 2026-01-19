@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Koristit ćemo API Signal CO2 od tmrow za praćenje potrošnje električne energije kako bismo stvorili proširenje za preglednik koje će vam omogućiti da imate podsjetnik direktno u svom pregledniku o tome koliko je intenzivna potrošnja električne energije u vašoj regiji. Korištenje ovog prilagođenog proširenja pomoći će vam da procijenite svoje aktivnosti na temelju tih informacija.
 
-![screenshot proširenja](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.hr.png)
+![screenshot proširenja](../../../../../translated_images/hr/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Za početak
 
@@ -31,7 +31,7 @@ npm run build
 
 Za instalaciju na Edge, koristite izbornik "tri točke" u gornjem desnom kutu preglednika kako biste pronašli panel Proširenja. Ako već nije aktiviran, uključite Način za razvojne programere (dolje lijevo). Odaberite "Učitaj raspakirano" kako biste učitali novo proširenje. Otvorite mapu "dist" na upitu i proširenje će biti učitano. Za korištenje, trebat će vam API ključ za CO2 Signal API (možete ga [dobiti ovdje putem e-maila](https://www.co2signal.com/) - unesite svoju e-mail adresu u polje na toj stranici) i [kod za svoju regiju](http://api.electricitymap.org/v3/zones) koji odgovara [električnoj karti](https://www.electricitymap.org/map) (na primjer, za Boston, "US-NEISO").
 
-![instalacija](../../../../../translated_images/install-on-edge.78634f02842c4828.hr.png)
+![instalacija](../../../../../translated_images/hr/install-on-edge.78634f02842c4828.webp)
 
 Nakon što unesete API ključ i regiju u sučelje proširenja, obojena točka na traci proširenja preglednika trebala bi se promijeniti kako bi odražavala potrošnju energije u regiji i pružila smjernice o tome koje aktivnosti s visokim energetskim intenzitetom bi bile prikladne za izvođenje. Koncept iza ovog sustava "točaka" inspiriran je [proširenjem Energy Lollipop](https://energylollipop.com/) za emisije u Kaliforniji.
 

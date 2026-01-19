@@ -72,13 +72,13 @@ Nepraleiskite mūsų naujos Generatyvinės DI mokymo programos!
 
 Aplankykite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) pradėti!
 
-![Background](../../translated_images/background.148a8d43afde5730.lt.png)
+![Background](../../translated_images/lt/background.148a8d43afde5730.webp)
 
 - Pamokos apimančios viską nuo pagrindų iki RAG.
 - Bendravimas su istorijų veikėjais naudojant GenAI ir mūsų companion programėlę.
 - Įdomi ir įtraukianti istorija – keliausite laiku!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.lt.png)
+![character](../../translated_images/lt/character.5c0dd8e067ffd693.webp)
 
 
 Kiekviena pamoka apima užduotį atlikti, žinių patikrinimą ir iššūkį, kurie padeda mokytis tokių temų kaip:
@@ -115,7 +115,7 @@ Atlikite šiuos veiksmus:
 
 Jūsų sukurtos šios saugyklos kopijos lange, spustelėkite mygtuką **Code** ir pasirinkite **Open with Codespaces**. Tai sukurs naują Codespace aplinką darbui.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.lt.png)
+![Codespace](../../translated_images/lt/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Programa vietoje, jūsų kompiuteryje
 

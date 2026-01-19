@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Креирање приступачних веб страница
 
-![Све о приступачности](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.sr.png)
+![Све о приступачности](../../../../translated_images/sr/webdev101-a11y.8ef3025c858d897a.webp)
 > Скетчнот од [Томоми Имура](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "Уобичајени обрасци употребе АРИА"
 
 **Информативне слике** - преносе важне информације:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.sr.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/sr/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Декоративне слике** - искључиво визуелне, без информативне вредности:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.sr.png" alt="" role="presentation">
+<img src="../../../../translated_images/sr/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Функционалне слике** - служе као дугмад или контроле:
@@ -1066,7 +1066,7 @@ pie title "Уобичајени обрасци употребе АРИА"
 
 **Комплексне слике** - графикони, дијаграми, инфографике:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.sr.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/sr/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "Уобичајени обрасци употребе АРИА"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.sr.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/sr/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

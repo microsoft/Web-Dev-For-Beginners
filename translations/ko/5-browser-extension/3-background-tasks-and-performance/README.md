@@ -123,7 +123,7 @@ Edge에서 개발자 도구를 열려면, 오른쪽 상단의 점 세 개를 클
 
 해봅시다. 웹사이트(예: Microsoft.com)를 열고 'Record' 버튼을 클릭하세요. 이제 페이지를 새로 고침하고 프로파일러가 발생하는 모든 작업을 캡처하는 것을 지켜보세요. 녹화를 중단하면 브라우저가 사이트를 '스크립트', '렌더링', '페인팅' 하는 세부 분석 결과를 볼 수 있습니다. 이는 우주선 발사 시 미션 컨트롤이 모든 시스템을 모니터링하는 것과 비슷합니다 - 무엇이 언제 어떻게 일어나는지 실시간 데이터를 얻습니다.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.ko.png)
+![Edge profiler](../../../../translated_images/ko/profiler.5a4a62479c5df01c.webp)
 
 ✅ 더 깊이 배우고 싶다면 [Microsoft 문서](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon)를 참고하세요.
 
@@ -133,11 +133,11 @@ Edge에서 개발자 도구를 열려면, 오른쪽 상단의 점 세 개를 클
 
 프로파일 타임라인의 일부를 선택하고 요약 창을 보면 페이지 성능의 스냅샷을 얻을 수 있습니다:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.ko.png)
+![Edge profiler snapshot](../../../../translated_images/ko/snapshot.97750180ebcad737.webp)
 
 이벤트 로그 창에서 15ms 이상 걸린 이벤트가 있는지 확인하세요:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.ko.png)
+![Edge event log](../../../../translated_images/ko/log.804026979f3707e0.webp)
 
 ✅ 프로파일러에 익숙해지세요! 이 사이트에서 개발자 도구를 열어 병목 현상이 있는지 확인해 보세요. 가장 느린 로딩 자원은 무엇인가요? 가장 빠른 것은요?
 

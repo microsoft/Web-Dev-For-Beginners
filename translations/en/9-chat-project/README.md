@@ -13,7 +13,7 @@ This chat project demonstrates how to build a Chat Assistant using GitHub Models
 
 Here's what the completed project looks like:
 
-![Chat app](../../../translated_images/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.en.png)
+![Chat app](../../../translated_images/en/screenshot.0a1ee0d123df681b4501eb53ffb267519fcc20aa653eabecef1e7561ddfb1cab.png)
 
 To provide some context, building Chat Assistants with generative AI is an excellent way to start learning about AI. In this lesson, you'll learn how to integrate generative AI into a web app. Let's get started.
 
@@ -21,11 +21,11 @@ To provide some context, building Chat Assistants with generative AI is an excel
 
 For the backend, we're using GitHub Models. It's a fantastic service that allows you to use AI for free. Visit its playground and grab the code corresponding to your preferred backend language. Here's what it looks like at [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground).
 
-![GitHub Models AI Playground](../../../translated_images/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.en.png)
+![GitHub Models AI Playground](../../../translated_images/en/playground.d2b927122224ff8ff4028fc842176e353c339147d8925455f36c92fb1655c477.png)
 
 As mentioned, select the "Code" tab and your preferred runtime.
 
-![Playground choice](../../../translated_images/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.en.png)
+![Playground choice](../../../translated_images/en/playground-choice.1d23ba7d407f47584c9f446c77f0bcf70cae794cc9c8d7849a3cca4a3693e6c4.png)
 
 ### Using Python
 
@@ -386,11 +386,11 @@ Congratulations! You've learned how to create a personal assistant using AI from
 - Navigate to: [Web Dev For Beginners repo](https://github.com/microsoft/Web-Dev-For-Beginners).
 - Create a new repository from the template (make sure you're logged into GitHub) by clicking the button in the top-right corner:
 
-    ![Create from template](../../../translated_images/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.en.png)
+    ![Create from template](../../../translated_images/en/template.67ad477109d29a2b04599a83c964c87fcde041256d4f04d3589cbb00c696f76c.png)
 
 - Once you're in your repository, create a Codespace:
 
-    ![Create codespace](../../../translated_images/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.en.png)
+    ![Create codespace](../../../translated_images/en/codespace.bcecbdf5d2747d3d17da67a78ad911c8853d68102e34748ec372cde1e9236e1d.png)
 
     This will launch an environment where you can start working.
 

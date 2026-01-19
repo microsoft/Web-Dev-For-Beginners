@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # জাভাস্ক্রিপ্টের বেসিক: অ্যারে এবং লুপ
 
-![জাভাস্ক্রিপ্ট বেসিক - অ্যারে](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.bn.png)
+![জাভাস্ক্রিপ্ট বেসিক - অ্যারে](../../../../translated_images/bn/webdev101-js-arrays.439d7528b8a29455.webp)
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

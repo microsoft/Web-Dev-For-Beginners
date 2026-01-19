@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Захвалнице
 
-![зелена екстензија за прегледач](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sr.png)
+![зелена екстензија за прегледач](../../../translated_images/sr/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Захвалнице
 

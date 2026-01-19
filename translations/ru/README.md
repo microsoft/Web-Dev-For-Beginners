@@ -52,13 +52,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 Посетите [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), чтобы начать!
 
-![Фон](../../translated_images/background.148a8d43afde5730.ru.png)
+![Фон](../../translated_images/ru/background.148a8d43afde5730.webp)
 
 - Уроки охватывают всё от основ до RAG.
 - Взаимодействуйте с историческими персонажами с помощью GenAI и нашего сопутствующего приложения.
 - Забавный и увлекательный сюжет, вы будете путешествовать во времени!
 
-![персонаж](../../translated_images/character.5c0dd8e067ffd693.ru.png)
+![персонаж](../../translated_images/ru/character.5c0dd8e067ffd693.webp)
 
 Каждый урок включает задание для выполнения, проверку знаний и вызов, чтобы помочь вам освоить такие темы, как:
 - Формулировка запросов и проектирование запросов
@@ -93,7 +93,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 В вашей копии репозитория нажмите кнопку **Code** и выберите **Open with Codespaces**. Это создаст для вас новый Codespace для работы.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ru.png)
+![Codespace](../../translated_images/ru/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Запуск учебной программы локально на вашем компьютере
 

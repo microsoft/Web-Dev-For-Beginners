@@ -17,7 +17,7 @@ Kuule, ma saan täiesti aru, kui programmeerimine tundub praegu hirmutav. Kui ma
 
 Täna uurime uskumatuid tööriistu, mis teevad kaasaegse veebi arendamise mitte ainult võimalikuks, vaid väga sõltuvust tekitavaks. Räägin täpselt nendest samadest editoridest, brauseritest ja töövoogudest, mida kasutavad Netflixi, Spotify ja sinu lemmik sõltumatu rakenduse stuudio arendajad iga päev. Ja siin on osa, mis paneb sind rõõmust tantsima: enamik neist professionaalsest klassist ja tööstusharu standarditest tööriistadest on täiesti tasuta!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.et.png)
+![Intro Programming](../../../../translated_images/et/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

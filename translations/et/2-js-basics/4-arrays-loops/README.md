@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Põhitõed: Massiivid ja Tsüklid
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.et.png)
+![JavaScript Basics - Arrays](../../../../translated_images/et/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

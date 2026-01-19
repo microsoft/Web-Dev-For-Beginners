@@ -17,7 +17,7 @@ Se, jeg forstår fuldt ud, hvis programmering føles skræmmende lige nu. Da jeg
 
 I dag skal vi udforske de utrolige værktøjer, der gør moderne webudvikling ikke bare mulig, men også seriøst vanedannende. Jeg taler om de nøjagtige redaktører, browsere og arbejdsprocesser, som udviklere hos Netflix, Spotify og dit yndlings indie app-studie bruger hver eneste dag. Og her er den del, der vil få dig til at lave en glad dans: de fleste af disse professionelle, branchestandard-værktøjer er helt gratis!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.da.png)
+![Intro Programming](../../../../translated_images/da/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote af [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

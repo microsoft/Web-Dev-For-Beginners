@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 Επισκεφθείτε [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) για να ξεκινήσετε!
 
-![Background](../../translated_images/background.148a8d43afde5730.el.png)
+![Background](../../translated_images/el/background.148a8d43afde5730.webp)
 
 - Μαθήματα που καλύπτουν από βασικά μέχρι RAG.
 - Αλληλεπιδράστε με ιστορικούς χαρακτήρες χρησιμοποιώντας GenAI και την εφαρμογή συνοδού μας.
 - Διασκεδαστικό και συναρπαστικό αφήγημα, θα ταξιδεύετε στο χρόνο!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.el.png)
+![character](../../translated_images/el/character.5c0dd8e067ffd693.webp)
 
 
 Κάθε μάθημα περιλαμβάνει μια εργασία για ολοκλήρωση, έναν έλεγχο γνώσεων και μια πρόκληση για να σας καθοδηγήσει στη μάθηση θεμάτων όπως:
@@ -115,7 +115,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Στο αντίγραφό σας αυτού του αποθετηρίου που δημιουργήσατε, κάντε κλικ στο κουμπί **Code** και επιλέξτε **Open with Codespaces**. Αυτό θα δημιουργήσει ένα νέο Codespace για να εργαστείτε μέσα.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.el.png)
+![Codespace](../../translated_images/el/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Εκτέλεση του προγράμματος σπουδών τοπικά στον υπολογιστή σας
 

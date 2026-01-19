@@ -78,7 +78,7 @@ Omdat VSCode.dev ten minste één bestand nodig heeft om een repository te opene
 4. **Schrijf** een commitbericht: "Voeg initiële HTML-structuur toe"
 5. **Klik op** "Commit new file" om je wijzigingen op te slaan
 
-![Een initiëel bestand maken op GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.nl.png)
+![Een initiëel bestand maken op GitHub](../../../../translated_images/nl/new-file-github.com.c886796d800e8056.webp)
 
 **Wat deze initiële setup bereikt:**
 - **Stelt** een correcte HTML5-documentstructuur in met semantische elementen
@@ -104,7 +104,7 @@ Nu de basis van je repository is opgezet, schakelen we over naar VSCode.dev voor
 
 ✅ **Succesindicator**: Je zou je projectbestanden moeten zien in de Explorer-zijbalk en `index.html` beschikbaar voor bewerking in het hoofdeditorgebied.
 
-![Project geladen in VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.nl.png)
+![Project geladen in VSCode.dev](../../../../translated_images/nl/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Wat je ziet in de interface:**
 - **Explorer-zijbalk**: **Toont** je repository-bestanden en mapstructuur
@@ -448,7 +448,7 @@ Extensies verbeteren je ontwikkelervaring door live preview-mogelijkheden en ver
 **Directe resultaten na installatie:**
 Zodra CodeSwing is geïnstalleerd, zie je een live preview van je CV-website verschijnen in de editor. Hierdoor kun je precies zien hoe je site eruitziet terwijl je wijzigingen aanbrengt.
 
-![CodeSwing-extensie met live preview](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.nl.png)
+![CodeSwing-extensie met live preview](../../../../translated_images/nl/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Begrip van de verbeterde interface:**
 - **Gesplitst scherm**: **Toont** je code aan de ene kant en een live preview aan de andere kant

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # प्रवेशयोग्य वेबपृष्ठ तयार करणे
 
-![सर्व काही प्रवेशयोग्यतेबद्दल](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.mr.png)
+![सर्व काही प्रवेशयोग्यतेबद्दल](../../../../translated_images/mr/webdev101-a11y.8ef3025c858d897a.webp)
 > स्केच नोट [Tomomi Imura](https://twitter.com/girlie_mac) यांनी तयार केले आहे
 
 ```mermaid
@@ -907,12 +907,12 @@ pie title "Common ARIA Usage Patterns"
 
 **माहितीपूर्ण प्रतिमा** - महत्त्वाची माहिती देतात:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.mr.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/mr/chart.31c7eb0eb5c4450deba10b6f236732dfee8e8a11f6c0d8f31d2c2efb9d4c00ef.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **सजावटीच्या प्रतिमा** - फक्त दृश्यात्मक, कोणतेही माहितीपूर्ण मूल्य नाही:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.mr.png" alt="" role="presentation">
+<img src="../../../../translated_images/mr/decorative-border.b2f3c4d6634fb79d57fb6357835906c16938df3d5651c1314c196c3b1c52df98.png" alt="" role="presentation">
 ```
 
 **कार्यात्मक प्रतिमा** - बटणे किंवा नियंत्रण म्हणून कार्य करतात:
@@ -924,7 +924,7 @@ pie title "Common ARIA Usage Patterns"
 
 **जटिल प्रतिमा** - चार्ट, आकृतिबंध, माहितीपूर्ण ग्राफिक्स:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.mr.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/mr/complex-chart.c831f461a363b446a688be5ccacde20d011221758c902cb082cfd4293534ef17.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -964,7 +964,7 @@ pie title "Common ARIA Usage Patterns"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.mr.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/mr/small-chart.c50c7b1bbcce43d8d24fbfbab8f691fe47d8f25fb7c70857c9eae21d5f22862e.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

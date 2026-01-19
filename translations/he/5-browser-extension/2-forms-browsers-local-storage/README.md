@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.he.png)
+![Local storage pane](../../../../translated_images/he/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **שיקול אבטחה**: באפליקציות ייצור, אחסון מפתחות API ב-LocalStorage מהווה סיכון אבטחה מכיוון ש-JavaScript יכול לגשת לנתונים אלה. למטרות לימוד, הגישה הזו מתאימה, אבל באפליקציות אמיתיות יש להשתמש באחסון מאובטח בצד השרת עבור אישורים רגישים.
 

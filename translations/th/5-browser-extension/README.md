@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### เครดิต
 
-![ส่วนขยายเบราว์เซอร์สีเขียว](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.th.png)
+![ส่วนขยายเบราว์เซอร์สีเขียว](../../../translated_images/th/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## เครดิต
 

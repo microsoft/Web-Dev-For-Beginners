@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScriptin perusteet: metodit ja funktiot
 
-![JavaScript Basics - Functions](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.fi.png)
+![JavaScript Basics - Functions](../../../../translated_images/fi/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

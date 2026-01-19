@@ -182,7 +182,7 @@ Como el teléfono de Alexander Graham Bell conectó lugares remotos, vincular tu
 
 Una vez que todo cargue, verás un espacio de trabajo limpio y hermoso diseñado para mantenerte enfocado en lo que importa: ¡tu código!
 
-![Interfaz por defecto de VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.es.png)
+![Interfaz por defecto de VSCode.dev](../../../../translated_images/es/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Aquí tienes tu recorrido por el vecindario:**
 - **Barra de Actividades** (esa franja a la izquierda): Tu navegación principal con Explorador 📁, Búsqueda 🔍, Control de Código Fuente 🌿, Extensiones 🧩 y Configuración ⚙️
@@ -229,7 +229,7 @@ Perfecto cuando comienzas fresco en VSCode.dev y quieres abrir un repositorio es
 1. Ve a [vscode.dev](https://vscode.dev) si aún no estás allí
 2. Busca el botón "Open Remote Repository" en la pantalla de bienvenida y haz clic
 
-   ![Abrir repositorio remoto](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.es.png)
+   ![Abrir repositorio remoto](../../../../translated_images/es/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Pega cualquier URL de repositorio de GitHub (prueba este: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Presiona Enter y observa la magia suceder
@@ -238,7 +238,7 @@ Perfecto cuando comienzas fresco en VSCode.dev y quieres abrir un repositorio es
 
 ¿Quieres sentirte como un mago del código? Prueba este atajo de teclado: Ctrl+Shift+P (o Cmd+Shift+P en Mac) para abrir el Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.es.png)
+![Command Palette](../../../../translated_images/es/palette-menu.4946174e07f42622.webp)
 
 **El Command Palette es como tener un motor de búsqueda para todo lo que puedes hacer:**
 - Escribe "open remote" y encontrarás el abridor de repositorios
@@ -300,7 +300,7 @@ Como organizar planos en la oficina de un arquitecto, la creación de archivos e
 3. Escribe el nombre del archivo incluyendo la extensión apropiada (`style.css`, `script.js`, `index.html`)
 4. Presiona Enter para crear el archivo
 
-![Creando un archivo nuevo](../../../../translated_images/create-new-file.2814e609c2af9aeb.es.png)
+![Creando un archivo nuevo](../../../../translated_images/es/create-new-file.2814e609c2af9aeb.webp)
 
 **Convenciones de nombres:**
 - Usa nombres descriptivos que indiquen el propósito del archivo
@@ -318,7 +318,7 @@ Como organizar planos en la oficina de un arquitecto, la creación de archivos e
 2. Comienza a teclear y observa cómo VSCode.dev te ayuda con colores, sugerencias y detección de errores
 3. Guarda tu trabajo con Ctrl+S (Windows/Linux) o Cmd+S (Mac), ¡aunque también guarda automáticamente!
 
-![Editando archivos en VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.es.png)
+![Editando archivos en VSCode.dev](../../../../translated_images/es/edit-a-file.52c0ee665ef19f08.webp)
 
 **Lo genial que sucede mientras codificas:**
 - Tu código se colorea bellamente para facilitar la lectura
@@ -339,7 +339,7 @@ Así como los arqueólogos crean registros detallados de capas de excavación, G
 2. Los archivos modificados aparecen en la sección "Changes"
 3. La codificación por colores indica tipos de cambios: verde para adiciones, rojo para eliminaciones
 
-![Viendo cambios en Control de Código Fuente](../../../../translated_images/working-tree.c58eec08e6335c79.es.png)
+![Viendo cambios en Control de Código Fuente](../../../../translated_images/es/working-tree.c58eec08e6335c79.webp)
 
 **Guardar tu trabajo (flujo de commits):**
 
@@ -431,7 +431,7 @@ El mercado de extensiones está muy bien organizado, así que no te perderás in
 2. Navega o busca algo específico
 3. Haz clic en cualquier cosa que parezca interesante para aprender más sobre ella
 
-![Interfaz del mercado de extensiones](../../../../translated_images/extensions.eca0e0c7f59a10b5.es.png)
+![Interfaz del mercado de extensiones](../../../../translated_images/es/extensions.eca0e0c7f59a10b5.webp)
 
 **Qué verás allí:**
 
@@ -484,7 +484,7 @@ La mayoría de las extensiones vienen con configuraciones que puedes ajustar par
 3. Escoge "Configuración de la extensión" en el menú desplegable
 4. Ajusta las cosas hasta que se sientan perfectas para tu flujo de trabajo
 
-![Personalizando la configuración de extensiones](../../../../translated_images/extension-settings.21c752ae4f4cdb78.es.png)
+![Personalizando la configuración de extensiones](../../../../translated_images/es/extension-settings.21c752ae4f4cdb78.webp)
 
 **Cosas comunes que quizás quieras ajustar:**
 - Cómo se formatea tu código (tabs vs espacios, longitud de línea, etc.)

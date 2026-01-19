@@ -25,7 +25,7 @@ journey
       Testa funktionalitet: 5: Student
       Slutför terrarium: 5: Student
 ```
-![DOM och en closure](../../../../translated_images/webdev101-js.10280393044d7eaa.sv.png)
+![DOM och en closure](../../../../translated_images/sv/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Välkommen till en av de mest engagerande aspekterna av webbutveckling – att göra saker interaktiva! Document Object Model (DOM) är som en bro mellan din HTML och JavaScript, och idag ska vi använda den för att ge liv åt ditt terrarium. När Tim Berners-Lee skapade den första webbläsaren, såg han framför sig en web där dokument kunde vara dynamiska och interaktiva – DOM gör denna vision möjlig.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM-trädrepresentation](../../../../translated_images/dom-tree.7daf0e763cbbba92.sv.png)
+![DOM-trädrepresentation](../../../../translated_images/sv/dom-tree.7daf0e763cbbba92.webp)
 
 > En representation av DOM och HTML-markupen som refererar till den. Från [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Förstå closures**: Closures är ett stort ämne inom JavaScript, och många utvecklare använder dem i åratal innan de fullt förstår alla teoretiska delar. Idag fokuserar vi på praktisk tillämpning – du kommer naturligt att se closures uppstå när vi bygger våra interaktiva funktioner. Förståelsen växer när du ser hur de löser verkliga problem.
 
-![DOM-trädrepresentation](../../../../translated_images/dom-tree.7daf0e763cbbba92.sv.png)
+![DOM-trädrepresentation](../../../../translated_images/sv/dom-tree.7daf0e763cbbba92.webp)
 
 > En representation av DOM och HTML-markupen som refererar till den. Från [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Testa nu ditt interaktiva terrarium! Öppna din `index.html`-fil i en webbläsar
 - **Stöd för alla enheter**: Fungerar på desktop och mobil
 - **Prestandamedvetenhet**: Inga minnesläckor eller onödiga beräkningar
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.sv.png)
+![finished terrarium](../../../../translated_images/sv/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

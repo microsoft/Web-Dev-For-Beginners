@@ -190,7 +190,7 @@ Kuten Titanicin osastoitu rakenne, joka vaikutti vankalta, kunnes useat osastot 
 
 Sen sijaan, että juoksisimme ympyrää, luomme **keskitetyn tilanhallintajärjestelmän**. Ajattele sitä kuin yhtä todella järjestelmällistä henkilöä, joka vastaa kaikesta tärkeästä:
 
-![Kaavio, joka näyttää datavirrat HTML:n, käyttäjän toimien ja tilan välillä](../../../../translated_images/data-flow.fa2354e0908fecc8.fi.png)
+![Kaavio, joka näyttää datavirrat HTML:n, käyttäjän toimien ja tilan välillä](../../../../translated_images/fi/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD

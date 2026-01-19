@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 เราจะเดินทางร่วมกันทีละก้าว ไม่มีเร่ง ไม่มีแรงกดดัน – แค่คุณ ฉัน และเครื่องมือเจ๋ง ๆ ที่กำลังจะเป็นเพื่อนใหม่ของคุณ!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.th.png)
+![Intro to GitHub](../../../../translated_images/th/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ flowchart TD
 
 ✅ วิธีที่ดีในการหาคลัง 'เหมาะสำหรับผู้เริ่มต้น' คือ [ค้นหาตามแท็ก 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)
 
-![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57.th.png)
+![Copy a repo locally](../../../../translated_images/th/clone_repo.5085c48d666ead57.webp)
 
 มีหลายวิธีในการคัดลอกโค้ด วิธีหนึ่งคือการ "clone" เนื้อหาของรีโปโดยใช้ HTTPS, SSH หรือใช้ GitHub CLI (Command Line Interface)
 

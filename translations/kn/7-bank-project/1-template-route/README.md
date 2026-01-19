@@ -644,7 +644,7 @@ sequenceDiagram
 
 `history.pushState` ಬಳಕೆ ಬ್ರೌಸರ್ ನ ನ್ಯಾವಿಗೇಶನ್ ಇತಿಹಾಸದಲ್ಲಿ ಹೊಸ ದಾಖಲೆಗಳನ್ನು ಸೃಷ್ಟಿಸುತ್ತದೆ. ನೀವು ಇದನ್ನು ಪರೀಕ್ಷಿಸಲು ಬ್ರೌಸರ್‌ನ ಹಿಂಬದಿ ಬಟನ್ ಒತ್ತಿ ಹಿಡಿದುಕೊಳ್ಳಬಹುದು, ಇದರಲ್ಲಿ ಹೀಗೆ ಕಾಣಬಹುದು:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.kn.png)
+![Screenshot of navigation history](../../../../translated_images/kn/history.7fdabbafa521e064.webp)
 
 ಹಿಂಬದಿ ಬಟನ್ ಮೇಲೆ ಕೆಲವೊಮ್ಮೆ ಕ್ಲಿಕ್ ಮಾಡಿದರೆ, ಪ್ರಸ್ತುತ URL ಬದಲಾಗುತ್ತದೆ ಮತ್ತು ಇತಿಹಾಸ ನವೀಕರಿಸಲಾಗುತ್ತದೆ, ಆದರೆ ಅದೇ ಟೆಂಪ್ಲೇಟ್ ಪ್ರದರ್ಶನವಾಗುತ್ತಿರುತ್ತದೆ.
 

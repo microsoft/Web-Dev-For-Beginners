@@ -126,7 +126,7 @@ flowchart LR
 
 Hãy thử điều này. Mở một trang web (Microsoft.com hoạt động tốt cho việc này) và nhấp vào nút 'Record'. Bây giờ làm mới trang và xem profiler ghi lại mọi thứ xảy ra. Khi bạn dừng ghi, bạn sẽ thấy một phân tích chi tiết về cách trình duyệt 'scripts', 'renders', và 'paints' trang web. Nó làm tôi nhớ đến cách trung tâm điều khiển giám sát mọi hệ thống trong một lần phóng tên lửa - bạn nhận được dữ liệu thời gian thực về chính xác những gì đang xảy ra và khi nào.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.vi.png)
+![Edge profiler](../../../../translated_images/vi/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Tài liệu Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) có rất nhiều chi tiết nếu bạn muốn tìm hiểu sâu hơn
 
@@ -136,11 +136,11 @@ Chọn các phần của dòng thời gian profile để phóng to các sự ki�
 
 Lấy một ảnh chụp nhanh về hiệu suất trang của bạn bằng cách chọn một phần của dòng thời gian profile và nhìn vào bảng tóm tắt:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.vi.png)
+![Edge profiler snapshot](../../../../translated_images/vi/snapshot.97750180ebcad737.webp)
 
 Kiểm tra bảng Event Log để xem liệu có sự kiện nào mất hơn 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.vi.png)
+![Edge event log](../../../../translated_images/vi/log.804026979f3707e0.webp)
 
 ✅ Làm quen với profiler của bạn! Mở công cụ dành cho nhà phát triển trên trang này và xem liệu có bất kỳ nút thắt nào không. Tài nguyên nào tải chậm nhất? Nhanh nhất?
 

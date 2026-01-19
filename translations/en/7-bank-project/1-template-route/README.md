@@ -273,7 +273,7 @@ Try clicking these links—you should now be able to navigate between the differ
 
 Using `history.pushState` creates new entries in the browser’s navigation history. You can check this by holding the *back button* in your browser—it should display something like this:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.en.png)
+![Screenshot of navigation history](../../../../translated_images/en/history.7fdabbafa521e06455b738d3dafa3ff41d3071deae60ead8c7e0844b9ed987d8.png)
 
 If you try clicking the back button a few times, you’ll notice that the current URL changes and the history is updated, but the same template keeps being displayed.
 

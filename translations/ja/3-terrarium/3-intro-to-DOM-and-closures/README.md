@@ -26,7 +26,7 @@ journey
       Complete terrarium: 5: Student
 ```
 
-![DOMとクロージャ](../../../../translated_images/webdev101-js.10280393044d7eaa.ja.png)
+![DOMとクロージャ](../../../../translated_images/ja/webdev101-js.10280393044d7eaa.webp)
 > スケッチノート: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ウェブ開発の最も魅力的な側面の一つへようこそ！インタラクティブな要素を作ることです。Document Object Model (DOM) は、HTMLとJavaScriptをつなぐ橋のようなもので、今日はこれを使ってテラリウムを動かします。ティム・バーナーズ＝リーが最初のウェブブラウザを作ったとき、彼は動的でインタラクティブなドキュメントを想像していました。そのビジョンを可能にするのがDOMです。
@@ -105,7 +105,7 @@ flowchart TD
     style Q fill:#ffebee
 ```
 
-![DOMツリーの表現](../../../../translated_images/dom-tree.7daf0e763cbbba92.ja.png)
+![DOMツリーの表現](../../../../translated_images/ja/dom-tree.7daf0e763cbbba92.webp)
 
 > DOMとそれを参照するHTMLマークアップの表現。出典: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -150,7 +150,7 @@ flowchart LR
 
 > 💡 **クロージャの理解**: クロージャはJavaScriptの重要なトピックであり、多くの開発者が理論的な側面を完全に理解する前に何年も使用します。今日は実践的な応用に焦点を当てます。インタラクティブな機能を構築する中で、自然にその仕組みが見えてくるでしょう。理解は実際の問題を解決する方法を見ることで深まります。
 
-![DOMツリーの表現](../../../../translated_images/dom-tree.7daf0e763cbbba92.ja.png)
+![DOMツリーの表現](../../../../translated_images/ja/dom-tree.7daf0e763cbbba92.webp)
 
 > DOMとそれを参照するHTMLマークアップの表現。出典: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -589,7 +589,7 @@ function stopElementDrag() {
 - **デバイス間の互換性**: デスクトップとモバイルで動作
 - **パフォーマンス意識**: メモリリークや冗長な計算なし
 
-![完成したテラリウム](../../../../translated_images/terrarium-final.0920f16e87c13a84.ja.png)
+![完成したテラリウム](../../../../translated_images/ja/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

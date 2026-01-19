@@ -112,7 +112,7 @@ CO_OP_TRANSLATOR_METADATA:
 **예상 결과:**
 과제를 마치면, 당신의 뱅킹 앱은 전문적인 모양과 동작을 갖춘 완전한 "거래 추가" 기능을 갖추게 됩니다:
 
-!["거래 추가" 대화 상자 예시 스크린샷](../../../../translated_images/dialog.93bba104afeb79f1.ko.png)
+!["거래 추가" 대화 상자 예시 스크린샷](../../../../translated_images/ko/dialog.93bba104afeb79f1.webp)
 
 ## 구현 테스트
 

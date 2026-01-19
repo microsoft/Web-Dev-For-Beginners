@@ -72,13 +72,13 @@ Azure AI Foundry Discord சமுதாயத்தில் சேரவும
 
 தொடங்க, [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) பார்க்கவும்!
 
-![Background](../../translated_images/background.148a8d43afde5730.ta.png)
+![Background](../../translated_images/ta/background.148a8d43afde5730.webp)
 
 - அடிப்படை முதல் RAG வரை ஆய்வுகள் உள்ளன.
 - GenAI மற்றும் எங்களுடைய கூட்டாளி செயலியுடன் வரலாற்று காட்சிகளுடன் தொடர்பு கொள்ளவும்.
 - பொழுதுபோக்கான மற்றும் ஈர்க்கக்கூடிய கதை, கால பயணம் செய்யும் அனுபவம்!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.ta.png)
+![character](../../translated_images/ta/character.5c0dd8e067ffd693.webp)
 
 
 ஒவ்வொரு பாடத்திலும் ஒரு பணியை முடிக்கவும், அறிவு பரிசோதனை மற்றும் சவால்களை உள்ளடக்கியது, இவற்றை வழிநடத்தி நீங்கள் கீழ்க்காணும் தலைப்புகளை கற்றுக் கொள்ளலாம்:
@@ -115,7 +115,7 @@ Azure AI Foundry Discord சமுதாயத்தில் சேரவும
 
 நீங்கள் உருவாக்கிய இந்தக் கோப்பகத்தின் நகலில், **Code** பொத்தானை கிளிக் செய்து **Open with Codespaces** ஐத் தேர்ந்தெடுக்கவும். இது உங்களுக்கான புதிய Codespace ஐ உருவாக்கும்.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ta.png)
+![Codespace](../../translated_images/ta/createcodespace.0238bbf4d7a8d955.webp)
 
 #### உங்கள் கணினியில் பாடத்திட்டத்தை இயக்குதல்
 

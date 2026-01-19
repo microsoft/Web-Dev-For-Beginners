@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basis: Arrays en Lussen
 
-![JavaScript Basis - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.nl.png)
+![JavaScript Basis - Arrays](../../../../translated_images/nl/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

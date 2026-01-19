@@ -25,7 +25,7 @@ journey
       Test functionality: 5: Student
       Complete terrarium: 5: Student
 ```
-![DOM a closure](../../../../translated_images/webdev101-js.10280393044d7eaa.cs.png)
+![DOM a closure](../../../../translated_images/cs/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Vítejte u jednoho z nejpoutavějších aspektů vývoje webu – vytváření interaktivity! Document Object Model (DOM) je jako most mezi vaším HTML a JavaScriptem a dnes jej použijeme, aby vaše terrárium ožilo. Když Tim Berners-Lee vytvořil první webový prohlížeč, představoval si web, kde dokumenty mohou být dynamické a interaktivní – DOM toto vize umožňuje.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Reprezentace DOM stromu](../../../../translated_images/dom-tree.7daf0e763cbbba92.cs.png)
+![Reprezentace DOM stromu](../../../../translated_images/cs/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentace DOM a HTML značkování, které na něj odkazuje. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Pochopení closures**: Closures jsou významné téma v JavaScriptu a mnoho vývojářů je používá roky, než úplně pochopí všechny teoretické aspekty. Dnes se zaměříme na praktické použití – closure uvidíte přirozeně vznikat, jak budeme stavět naše interaktivní funkce. Pochopení se vyvine, jakmile uvidíte, jak řeší skutečné problémy.
 
-![Reprezentace DOM stromu](../../../../translated_images/dom-tree.7daf0e763cbbba92.cs.png)
+![Reprezentace DOM stromu](../../../../translated_images/cs/dom-tree.7daf0e763cbbba92.webp)
 
 > Reprezentace DOM a HTML značkování, které na něj odkazuje. Od [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Nyní otestujte své interaktivní terárium! Otevřete soubor `index.html` v pr
 - **Podpora více zařízení**: Funguje na desktopu i mobilech
 - **Vědomí výkonu**: Žádné úniky paměti nebo zbytečné výpočty
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.cs.png)
+![finished terrarium](../../../../translated_images/cs/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Благодарности
 
-![зеленое расширение для браузера](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.ru.png)
+![зеленое расширение для браузера](../../../translated_images/ru/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Благодарности
 

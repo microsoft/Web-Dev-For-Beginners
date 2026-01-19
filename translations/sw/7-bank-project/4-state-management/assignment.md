@@ -112,7 +112,7 @@ Rejelea [nyaraka za API ya seva](../api/README.md) kwa:
 **Matokeo Yanayotarajiwa:**
 Baada ya kukamilisha kazi hii, programu yako ya benki inapaswa kuwa na kipengele kamili cha "Ongeza Muamala" ambacho kinaonekana na kinafanya kazi kitaalamu:
 
-![Picha ya skrini inayoonyesha mfano wa dialogi ya "Ongeza muamala"](../../../../translated_images/dialog.93bba104afeb79f1.sw.png)
+![Picha ya skrini inayoonyesha mfano wa dialogi ya "Ongeza muamala"](../../../../translated_images/sw/dialog.93bba104afeb79f1.webp)
 
 ## Kupima Utekelezaji Wako
 

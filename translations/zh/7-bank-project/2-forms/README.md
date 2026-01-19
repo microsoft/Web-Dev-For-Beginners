@@ -292,7 +292,7 @@ graph TD
 2. 观察浏览器地址栏的变化
 3. 注意页面如何重新加载，数据出现在 URL 中
 
-![点击注册按钮后浏览器 URL 变化截图](../../../../translated_images/click-register.e89a30bf0d4bc9ca.zh.png)
+![点击注册按钮后浏览器 URL 变化截图](../../../../translated_images/zh/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP 方法对比
 
@@ -346,7 +346,7 @@ graph TD
 2. **点击**“创建账户”按钮
 3. **观察**浏览器中的服务器响应
 
-![浏览器窗口访问 localhost:5000/api/accounts，显示包含用户数据的 JSON 字符串](../../../../translated_images/form-post.61de4ca1b964d91a.zh.png)
+![浏览器窗口访问 localhost:5000/api/accounts，显示包含用户数据的 JSON 字符串](../../../../translated_images/zh/form-post.61de4ca1b964d91a.webp)
 
 **你应该看到：**
 - **浏览器跳转到 API 端点 URL**
@@ -609,7 +609,7 @@ async function register() {
 3. **点击** “创建账户”
 4. **观察** 控制台信息和用户反馈
 
-![浏览器控制台日志截图](../../../../translated_images/browser-console.efaf0b51aaaf6778.zh.png)
+![浏览器控制台日志截图](../../../../translated_images/zh/browser-console.efaf0b51aaaf6778.webp)
 
 **你应该看到：**
 - **加载状态** 出现在提交按钮上
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **尝试** 在用户名字段使用特殊字符
 4. **输入** 负余额数值
 
-![尝试提交表单时显示验证错误截图](../../../../translated_images/validation-error.8bd23e98d416c22f.zh.png)
+![尝试提交表单时显示验证错误截图](../../../../translated_images/zh/validation-error.8bd23e98d416c22f.webp)
 
 **你会看到：**
 - **浏览器显示** 原生验证消息
@@ -943,7 +943,7 @@ timeline
 
 下面是经过一些样式调整后最终登录页面的示例：
 
-![添加 CSS 样式后登录页面的截图](../../../../translated_images/result.96ef01f607bf856a.zh.png)
+![添加 CSS 样式后登录页面的截图](../../../../translated_images/zh/result.96ef01f607bf856a.webp)
 
 ## 课后测验
 

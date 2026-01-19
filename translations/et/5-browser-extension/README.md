@@ -23,7 +23,7 @@ Seda laiendit saab kasutaja vajadusel käivitada, kui vormi sisestatakse API-võ
 
 ### Tunnustused
 
-![roheline brauserilaiend](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.et.png)
+![roheline brauserilaiend](../../../translated_images/et/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Tunnustused
 

@@ -25,7 +25,7 @@ journey
       Testirati funkcionalnost: 5: Student
       Dokončati terarij: 5: Student
 ```
-![DOM in zaprtje](../../../../translated_images/webdev101-js.10280393044d7eaa.sl.png)
+![DOM in zaprtje](../../../../translated_images/sl/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote avtorja [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Dobrodošli v eni najbolj zanimivih vidikov spletnega razvoja - ustvarjanje interaktivnosti! Model dokumenta (DOM) je kot most med vašo HTML in JavaScript, danes ga bomo uporabili, da vašemu terrariju vdihnemo življenje. Ko je Tim Berners-Lee ustvaril prvi spletni brskalnik, si je zamislil splet, kjer so lahko dokumenti dinamični in interaktivni – DOM omogoča uresničitev te vizije.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Predstavitev DOM drevesa](../../../../translated_images/dom-tree.7daf0e763cbbba92.sl.png)
+![Predstavitev DOM drevesa](../../../../translated_images/sl/dom-tree.7daf0e763cbbba92.webp)
 
 > Predstavitev DOM in HTML označbe, ki nanj kaže. Avtor: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Razumevanje zaprtij**: Zaprtja so pomembna tema v JavaScriptu in veliko razvijalcev jih uporablja več let, preden v celoti razume vse teoretične vidike. Danes se osredotočamo na prakso – zaprtja boste razumeli naravno, ko bomo gradili interaktivne funkcije. Razumevanje se bo razvijalo, ko boste videli, kako rešujejo resnične probleme.
 
-![Predstavitev DOM drevesa](../../../../translated_images/dom-tree.7daf0e763cbbba92.sl.png)
+![Predstavitev DOM drevesa](../../../../translated_images/sl/dom-tree.7daf0e763cbbba92.webp)
 
 > Predstavitev DOM in HTML označbe, ki nanj kaže. Avtor: [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Zdaj preizkusite svoj interaktivni terarij! Odprite datoteko `index.html` v sple
 - **Podpora različnim napravam**: Deluje na namizju in mobilnih napravah
 - **Zavedanje o zmogljivosti**: Brez uhajanja pomnilnika ali odvečnih izračunov
 
-![finished terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.sl.png)
+![finished terrarium](../../../../translated_images/sl/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

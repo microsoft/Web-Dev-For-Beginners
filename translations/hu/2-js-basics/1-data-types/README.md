@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript alapok: Adattípusok
 
-![JavaScript alapok - Adattípusok](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.hu.png)
+![JavaScript alapok - Adattípusok](../../../../translated_images/hu/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote készítette: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

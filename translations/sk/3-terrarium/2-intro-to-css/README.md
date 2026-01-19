@@ -29,7 +29,7 @@ journey
       Responzívny dizajn: 5: Student
       Sklenené odrazy: 5: Student
 ```
-![Úvod do CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.sk.png)
+![Úvod do CSS](../../../../translated_images/sk/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Pamätáš si, ako tvoje HTML terárium vyzeralo celkom jednoducho? CSS je miesto, kde túto základnú štruktúru premeníme na niečo vizuálne príťažlivé.
@@ -202,7 +202,7 @@ body {
 
 Otvori si nástroje pre vývojárov v prehliadači (F12), prejdí do záložky Elements a pozri si element `<h1>`. Uvidíš, že zdedil rodinu písma z body:
 
-![dedičné písmo](../../../../translated_images/1.cc07a5cbe114ad1d.sk.png)
+![dedičné písmo](../../../../translated_images/sk/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Čas na experiment**: Skús nastaviť na `<body>` iné dedičné vlastnosti ako `color`, `line-height` alebo `text-align`. Čo sa stane s nadpisom a ďalšími elementmi?
 
@@ -332,7 +332,7 @@ V našom teráriu každá rastlina potrebuje podobné štýly, ale aj individuá
 **Tu je HTML štruktúra pre každú rastlinu:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.sk.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/sk/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Ste pripravení vylepšiť svoj terárium realistickými odrazmi skla? Táto tec
 
 Vytvoríte jemné svetlé zvýraznenia, ktoré simulujú, ako sa svetlo odráža od sklenených plôch. Tento prístup je podobný tomu, ako renesanční maliari ako Jan van Eyck používali svetlo a odraz na vytvorenie trojrozmerného dojmu maľovaného skla. Tu je cieľ:
 
-![hotové terárium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.sk.png)
+![hotové terárium](../../../../translated_images/sk/terrarium-final.2f07047ffc597d0a.webp)
 
 **Vaša výzva:**
 - **Vytvorte** jemné biele alebo svetlé oválne tvary pre odrazy skla

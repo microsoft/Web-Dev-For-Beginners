@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 আমরা একসাথে এই যাত্রা শুরু করব, এক ধাপে এক ধাপে। কোনো তাড়াহুড়ো নেই, কোনো চাপ নেই – শুধু তুমি, আমি, এবং কিছু দারুণ টুল যা তোমার নতুন সেরা বন্ধু হতে চলেছে!
 
-![গিটহাব পরিচিতি](../../../../translated_images/webdev101-github.8846d7971abef6f9.bn.png)
+![গিটহাব পরিচিতি](../../../../translated_images/bn/webdev101-github.8846d7971abef6f9.webp)
 > স্কেচনোট করেছেন [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -588,7 +588,7 @@ flowchart TD
 
 ✅ 'শিক্ষানবিস-বান্ধব' রিপো খুঁজে পাওয়ার একটি ভালো উপায় হলো [ট্যাগ 'good-first-issue' দ্বারা অনুসন্ধান করা](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)।
 
-![রিপো লোকালি কপি করুন](../../../../translated_images/clone_repo.5085c48d666ead57.bn.png)
+![রিপো লোকালি কপি করুন](../../../../translated_images/bn/clone_repo.5085c48d666ead57.webp)
 
 কোড কপি করার বিভিন্ন উপায় রয়েছে। একটি উপায় হলো রিপোজিটরির বিষয়বস্তু "ক্লোন" করা, HTTPS, SSH, অথবা GitHub CLI (কমান্ড লাইন ইন্টারফেস) ব্যবহার করে।
 

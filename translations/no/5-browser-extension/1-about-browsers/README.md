@@ -25,7 +25,7 @@ journey
       Feilsøk problemer: 4: Student
       Poler opplevelsen: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.no.jpg)
+![Browser sketchnote](../../../../translated_images/no/browser.60317c9be8b7f84a.webp)
 > Sketchnote av [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz før forelesning
@@ -77,7 +77,7 @@ Denne prosessen speiler hvordan den første nettleseren, WorldWideWeb, ble desig
 
 ✅ **Litt historie**: Den første nettleseren het 'WorldWideWeb' og ble laget av Sir Timothy Berners-Lee i 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.no.jpg)
+![early browsers](../../../../translated_images/no/earlybrowsers.d984b711cdf3a42d.webp)
 > Noen tidlige nettlesere, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Hvordan Nettlesere Behandler Nettinnhold
@@ -194,7 +194,7 @@ quadrantChart
 
 Å forstå installasjonsprosessen for utvidelser hjelper deg å forutse brukeropplevelsen når folk installerer din utvidelse. Installasjonsprosessen er standardisert på tvers av moderne nettlesere, med små variasjoner i brukergrensesnitt.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.no.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/no/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Viktig**: Husk å skru på utviklermodus og tillate utvidelser fra andre butikker når du tester dine egne utvidelser.
 
@@ -308,10 +308,10 @@ Dette følger prinsippet om gradvis avsløring som har vært brukt i grensesnitt
 ### Oversikt over Utvidelsens Visninger
 
 **Oppsettvisning** - Konfigurering for første gangs bruk:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.no.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/no/1.b6da8c1394b07491.webp)
 
 **Resultatvisning** - Visning av karbonavtrykkdata:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.no.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/no/2.1dae52ff08042246.webp)
 
 ### Lage Konfigurasjonsskjemaet
 

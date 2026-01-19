@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Misingi ya JavaScript: Mfululizo na Mizunguko
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.sw.png)
+![JavaScript Basics - Arrays](../../../../translated_images/sw/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

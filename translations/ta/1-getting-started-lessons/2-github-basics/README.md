@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 நாம் இந்த பயணத்தை ஒன்றாகச் செய்கிறோம், ஒரு படி ஒருவிதமாக. வேகமடைய வேண்டாம், அழுத்தம் வேண்டாம் – நீ, நான், மற்றும் உன் புதிய நல்ல நண்பர்களாக இருக்கும் சில அற்புதமான கருவிகள்!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.ta.png)
+![Intro to GitHub](../../../../translated_images/ta/webdev101-github.8846d7971abef6f9.webp)
 > ஸ்கெட்ச் நோட்டு: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ flowchart TD
 
 ✅ 'புதியவர்களுக்கு ஏற்ற' ரெப்போக்களை கண்டுபிடிக்கும் நல்ல வழி [முதல் நல்ல பிரச்சனை குறிச்சொல்லின் மூலம் தேடல்](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/) ஆகும்.
 
-![ஒரு ரெப்போவை உள்ளூரில் நகலெடு](../../../../translated_images/clone_repo.5085c48d666ead57.ta.png)
+![ஒரு ரெப்போவை உள்ளூரில் நகலெடு](../../../../translated_images/ta/clone_repo.5085c48d666ead57.webp)
 
 குறியீட்டை நகலெடுக்க பல வழிகள் உள்ளன. ஒன்று, HTTPS, SSH அல்லது GitHub CLI (கமாண்ட் லைன் இன்டர்ஃபெஸ்) பயன்படுத்தி அந்த ரெப்போவின் உள்ளடக்கங்களை "க்ளோன்" செய்யும் முறையாகும்.
 

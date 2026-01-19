@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Puanlama sistemi**: Yok edilen her düşman gemisi 100 puan kazandırır (yuvarlak sayılar oyuncuların zihinsel olarak hesaplamasını kolaylaştırır). Puan, sol alt köşede gösterilir.
-- **Can sayacı**: Kahramanınız üç canla başlar - erken dönem arcade oyunlarının zorluk ile oynanabilirlik arasında denge kurmak için belirlediği bir standart. Düşmanla her çarpışma bir cana mal olur. Kalan canları sağ altta gemi ikonlarıyla göstereceğiz ![can görseli](../../../../translated_images/life.6fb9f50d53ee0413.tr.png).
+- **Can sayacı**: Kahramanınız üç canla başlar - erken dönem arcade oyunlarının zorluk ile oynanabilirlik arasında denge kurmak için belirlediği bir standart. Düşmanla her çarpışma bir cana mal olur. Kalan canları sağ altta gemi ikonlarıyla göstereceğiz ![can görseli](../../../../translated_images/tr/life.6fb9f50d53ee0413.webp).
 
 ## Hadi İnşa Edelim!
 

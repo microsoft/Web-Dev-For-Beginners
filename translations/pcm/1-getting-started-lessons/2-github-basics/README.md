@@ -17,7 +17,7 @@ I sabi sey e fit feel like plenti tins at first – heck, I remember sey I look 
 
 We go take dis travel together, one step at a time. No rush, no pressure – na just you, me, and some really cool tools wey go turn your new best friends!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.pcm.png)
+![Intro to GitHub](../../../../translated_images/pcm/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ First, make we find one repository (or **repo**) for GitHub wey you like and wey
 
 ✅ Better way to find 'beginner-friendly' repos na to [search by di tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57.pcm.png)
+![Copy a repo locally](../../../../translated_images/pcm/clone_repo.5085c48d666ead57.webp)
 
 Plenti way dey to copy code. One way na to "clone" di contents of di repository, using HTTPS, SSH, or GitHub CLI (Command Line Interface). 
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basics: Making Decisions
 
-![JavaScript Basics - Making decisions](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.pcm.png)
+![JavaScript Basics - Making decisions](../../../../translated_images/pcm/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 

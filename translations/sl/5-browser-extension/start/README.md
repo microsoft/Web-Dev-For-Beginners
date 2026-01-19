@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Z uporabo tmrow API-ja C02 Signal za spremljanje porabe električne energije ustvarite razširitev za brskalnik, ki vam bo v brskalniku služila kot opomnik o tem, kako obremenjena je poraba električne energije v vaši regiji. Občasna uporaba te razširitve vam bo pomagala sprejemati odločitve o vaših dejavnostih na podlagi teh informacij.
 
-![posnetek zaslona razširitve](../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.sl.png)
+![posnetek zaslona razširitve](../../../../translated_images/sl/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Začetek
 
@@ -31,7 +31,7 @@ npm run build
 
 Za namestitev v Edge uporabite meni 'tri pike' v zgornjem desnem kotu brskalnika, da odprete ploščo z razširitvami. Tam izberite 'Naloži nepakirano', da naložite novo razširitev. Na pozivu odprite mapo 'dist' in razširitev se bo naložila. Za uporabo boste potrebovali API ključ za CO2 Signal API ([pridobite ga tukaj preko e-pošte](https://www.co2signal.com/) - vnesite svoj e-poštni naslov v polje na tej strani) in [kodo za vašo regijo](http://api.electricitymap.org/v3/zones), ki ustreza [Electricity Map](https://www.electricitymap.org/map) (na primer v Bostonu uporabljam 'US-NEISO').
 
-![namestitev](../../../../translated_images/install-on-edge.78634f02842c4828.sl.png)
+![namestitev](../../../../translated_images/sl/install-on-edge.78634f02842c4828.webp)
 
 Ko vmesnik razširitve vnesete API ključ in regijo, bi se morala barvna pika v vrstici razširitev brskalnika spremeniti, da odraža porabo energije v vaši regiji, ter vam dati namig, katere dejavnosti, ki porabijo veliko energije, bi bile primerne za izvedbo. Koncept za ta sistem 'pik' sem dobil pri [Energy Lollipop razširitvi](https://energylollipop.com/) za emisije v Kaliforniji.
 

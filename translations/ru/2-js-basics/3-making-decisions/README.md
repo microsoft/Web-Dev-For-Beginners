@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Основы JavaScript: принятие решений
 
-![Основы JavaScript - Принятие решений](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ru.png)
+![Основы JavaScript - Принятие решений](../../../../translated_images/ru/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 

@@ -60,13 +60,13 @@ Uus AI assistendi projekt just lisatud, vaata [projekti](./9-chat-project/README
 
 Alusta siit: [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
-![Taust](../../translated_images/background.148a8d43afde5730.et.png)
+![Taust](../../translated_images/et/background.148a8d43afde5730.webp)
 
 - Tunnid katavad kõike alates põhialustest kuni RAGini.
 - Suhtle ajalooliste tegelastega kasutades GenAI-d ja meie kaasrakendust.
 - Lõbus ja kaasahaarav jutustus, rändad ajas!
 
-![tegelane](../../translated_images/character.5c0dd8e067ffd693.et.png)
+![tegelane](../../translated_images/et/character.5c0dd8e067ffd693.webp)
 
 Iga tund sisaldab ülesannet, teadmiste kontrolli ja väljakutset, mis juhatavad teid järgmiste teemade õppimisel:
 - Promptide ja prompt-engineeringi kasutamine
@@ -101,7 +101,7 @@ Järgige neid samme:
 
 Teie loodud koopia repositsioonist klõpsake nuppu **Code** ja valige **Open with Codespaces**. See loob teile uue Codespace'i, kus töötada.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.et.png)
+![Codespace](../../translated_images/et/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Õppekava kohapealne käivitamine oma arvutis
 

@@ -295,7 +295,7 @@ Pertama, mari kita perhatikan apa yang berlaku dengan penghantaran borang asas:
 2. Perhatikan perubahan dalam bar alamat pelayar anda
 3. Perhatikan bagaimana halaman dimuat semula dan data muncul dalam URL
 
-![Tangkapan skrin perubahan URL pelayar selepas klik butang Daftar](../../../../translated_images/click-register.e89a30bf0d4bc9ca.ms.png)
+![Tangkapan skrin perubahan URL pelayar selepas klik butang Daftar](../../../../translated_images/ms/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Perbandingan Kaedah HTTP
 
@@ -350,7 +350,7 @@ Mari kita konfigurasikan borang pendaftaran anda untuk berkomunikasi dengan betu
 2. **Klik** butang "Buat Akaun"
 3. **Perhatikan** respons pelayan dalam pelayar anda
 
-![Tetingkap pelayar di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/form-post.61de4ca1b964d91a.ms.png)
+![Tetingkap pelayar di alamat localhost:5000/api/accounts, menunjukkan string JSON dengan data pengguna](../../../../translated_images/ms/form-post.61de4ca1b964d91a.webp)
 
 **Apa yang anda harus lihat:**
 - **Pelayar mengarahkan** ke URL endpoint API
@@ -615,7 +615,7 @@ async function register() {
 3. **Klik** "Buat Akaun"
 4. **Perhatikan** mesej konsol dan maklum balas pengguna
 
-![Tangkapan skrin menunjukkan mesej log dalam konsol pelayar](../../../../translated_images/browser-console.efaf0b51aaaf6778.ms.png)
+![Tangkapan skrin menunjukkan mesej log dalam konsol pelayar](../../../../translated_images/ms/browser-console.efaf0b51aaaf6778.webp)
 
 **Apa yang anda patut lihat:**
 - **Keadaan pemuatan** muncul pada butang hantar
@@ -790,7 +790,7 @@ Mari tingkatkan borang pendaftaran anda dengan pengesahan yang kukuh yang member
 3. **Cuba** aksara khas dalam medan nama pengguna
 4. **Masukkan** jumlah baki negatif
 
-![Tangkapan skrin menunjukkan ralat pengesahan apabila cuba menghantar borang](../../../../translated_images/validation-error.8bd23e98d416c22f.ms.png)
+![Tangkapan skrin menunjukkan ralat pengesahan apabila cuba menghantar borang](../../../../translated_images/ms/validation-error.8bd23e98d416c22f.webp)
 
 **Apa yang anda akan perhatikan:**
 - **Pelayar memaparkan** mesej pengesahan asli
@@ -952,7 +952,7 @@ Tunjukkan mesej ralat dalam HTML jika pengguna sudah wujud.
 
 Berikut adalah contoh bagaimana halaman log masuk akhir boleh kelihatan selepas sedikit gaya:
 
-![Tangkapan skrin halaman log masuk selepas menambah gaya CSS](../../../../translated_images/result.96ef01f607bf856a.ms.png)
+![Tangkapan skrin halaman log masuk selepas menambah gaya CSS](../../../../translated_images/ms/result.96ef01f607bf856a.webp)
 
 ## Kuiz Selepas Kuliah
 

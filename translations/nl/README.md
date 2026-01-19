@@ -88,7 +88,7 @@ Volg de volgende stappen:
 
 Klik in jouw eigen repository op de knop **Code** en selecteer **Open with Codespaces**. Dit maakt een nieuwe Codespace aan waarin je kunt werken.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.nl.png)
+![Codespace](../../translated_images/nl/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Het curriculum lokaal draaien op je computer
 

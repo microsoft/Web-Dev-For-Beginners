@@ -123,7 +123,7 @@ Za otvaranje Developer Tools u Edgeu kliknite na tri točkice u gornjem desnom k
 
 Isprobajmo ovo. Otvorite neku web stranicu (Microsoft.com dobro funkcionira za to) i kliknite gumb 'Record'. Sada osvježite stranicu i promatrajte kako profiler bilježi sve što se događa. Kad zaustavite snimanje, vidjet ćete detaljan prikaz kako preglednik 'skriptira', 'renderira' i 'crtaju' stranicu. Podsjeća me na to kako misijski kontrolori prate svaki sustav tijekom lansiranja rakete - dobivate podatke u realnom vremenu o tome što se točno događa i kada.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.hr.png)
+![Edge profiler](../../../../translated_images/hr/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Microsoft Dokumentacija](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) ima mnogo više detalja ako želite dublje zaroniti
 
@@ -133,11 +133,11 @@ Odaberite elemente vremenske linije profila da zumirate događaje koji se odvija
 
 Dobijte snimku performansi vaše stranice odabirom dijela vremenske linije profila i pogledajte sažetak:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.hr.png)
+![Edge profiler snapshot](../../../../translated_images/hr/snapshot.97750180ebcad737.webp)
 
 Provjerite panel Dnevnik događaja (Event Log) da vidite je li neki događaj trajao duže od 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.hr.png)
+![Edge event log](../../../../translated_images/hr/log.804026979f3707e0.webp)
 
 ✅ Upoznajte se s profilerom! Otvorite developer tools na ovoj stranici i provjerite postoje li uska grla. Koji je najsporiji resurs za učitavanje? Koji najbrži?
 

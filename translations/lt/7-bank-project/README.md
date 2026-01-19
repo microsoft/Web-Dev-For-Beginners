@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Šiame projekte išmoksite, kaip sukurti fiktyvų banką. Šios pamokos apima instrukcijas, kaip sukurti internetinės programos išdėstymą ir maršrutus, kurti formas, valdyti būseną ir gauti duomenis iš API, iš kurios galėsite gauti banko duomenis.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.lt.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.lt.png) |
+| ![Screen1](../../../translated_images/lt/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/lt/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Pamokos

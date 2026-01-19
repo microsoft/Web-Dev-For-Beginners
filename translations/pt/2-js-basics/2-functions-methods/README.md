@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Fundamentos do JavaScript: Métodos e Funções
 
-![Fundamentos do JavaScript - Funções](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.pt.png)
+![Fundamentos do JavaScript - Funções](../../../../translated_images/pt/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

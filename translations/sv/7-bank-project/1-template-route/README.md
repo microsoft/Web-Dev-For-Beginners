@@ -644,7 +644,7 @@ sequenceDiagram
 
 Användningen av `history.pushState` skapar nya poster i webbläsarens navigationshistorik. Du kan kontrollera detta genom att hålla inne *tillbaka-knappen* i din webbläsare, den bör visa något liknande:
 
-![Screenshot av historik](../../../../translated_images/history.7fdabbafa521e064.sv.png)
+![Screenshot av historik](../../../../translated_images/sv/history.7fdabbafa521e064.webp)
 
 Om du klickar på tillbaka-knappen några gånger kommer du se att den aktuella URL:en ändras och historiken uppdateras, men samma template fortsätter att visas.
 

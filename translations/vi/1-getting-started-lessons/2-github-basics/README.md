@@ -17,7 +17,7 @@ Mình biết điều này có thể khiến bạn cảm thấy hơi quá tải l
 
 Chúng ta sẽ cùng nhau đi qua hành trình này, từng bước một. Không vội vàng, không áp lực – chỉ có bạn, mình, và một số công cụ cực kỳ thú vị sắp trở thành người bạn thân mới của bạn!
 
-![Giới thiệu về GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.vi.png)
+![Giới thiệu về GitHub](../../../../translated_images/vi/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -610,7 +610,7 @@ Bạn không chỉ học cách viết mã ở đây – bạn đang chuẩn bị
 
 ✅ Một cách tốt để tìm các repo 'thân thiện với người mới bắt đầu' là [tìm kiếm theo thẻ 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Sao chép repo về máy](../../../../translated_images/clone_repo.5085c48d666ead57.vi.png)
+![Sao chép repo về máy](../../../../translated_images/vi/clone_repo.5085c48d666ead57.webp)
 
 Có nhiều cách để sao chép mã. Một cách là "clone" nội dung của repository, sử dụng HTTPS, SSH, hoặc GitHub CLI (Command Line Interface).
 

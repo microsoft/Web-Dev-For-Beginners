@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 - **Puntensysteem**: Elk vernietigd vijandelijk schip levert 100 punten op (ronde getallen zijn gemakkelijker voor spelers om mentaal te berekenen). De score wordt weergegeven in de linkerbenedenhoek.
-- **Leventeller**: Je held begint met drie levens - een standaard die door vroege arcadespellen werd vastgesteld om uitdaging en speelbaarheid in balans te brengen. Elke botsing met een vijand kost één leven. We tonen de resterende levens in de rechterbenedenhoek met scheepsiconen ![life image](../../../../translated_images/life.6fb9f50d53ee0413.nl.png).
+- **Leventeller**: Je held begint met drie levens - een standaard die door vroege arcadespellen werd vastgesteld om uitdaging en speelbaarheid in balans te brengen. Elke botsing met een vijand kost één leven. We tonen de resterende levens in de rechterbenedenhoek met scheepsiconen ![life image](../../../../translated_images/nl/life.6fb9f50d53ee0413.webp).
 
 ## Laten we beginnen met bouwen!
 

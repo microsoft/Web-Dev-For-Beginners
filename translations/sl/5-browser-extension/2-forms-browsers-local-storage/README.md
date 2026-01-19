@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Odstrani shranjene podatke
     ClearStorage --> FirstTime: Nazaj na nastavitev
 ```
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.sl.png)
+![Local storage pane](../../../../translated_images/sl/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Varnostno opozorilo**: V produkcijskih aplikacijah hranjenje API ključev v LocalStorage predstavlja varnostno tveganje, saj lahko JavaScript dostopa do teh podatkov. Za namene učenja je ta pristop sprejemljiv, v resničnih aplikacijah pa je treba občutljive poverilnice hraniti varno na strežniški strani.
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Prieinamų svetainių kūrimas
 
-![Viskas apie prieinamumą](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.lt.png)
+![Viskas apie prieinamumą](../../../../translated_images/lt/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote autorius [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Kiekvienas jūsų svetainės vaizdas turi paskirtį. Supratimas apie ją padeda 
 
 **Informaciniai vaizdai** – perteikia svarbią informaciją:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.lt.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/lt/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Dekoratyviniai vaizdai** – grynai vizualūs, be informacinės vertės:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.lt.png" alt="" role="presentation">
+<img src="../../../../translated_images/lt/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Funkciniai vaizdai** – veikia kaip mygtukai ar valdymo elementai:
@@ -1066,7 +1066,7 @@ Kiekvienas jūsų svetainės vaizdas turi paskirtį. Supratimas apie ją padeda 
 
 **Sudėtingi vaizdai** – grafikai, schemos, infografika:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.lt.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/lt/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Kiekvienas jūsų svetainės vaizdas turi paskirtį. Supratimas apie ją padeda 
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.lt.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/lt/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

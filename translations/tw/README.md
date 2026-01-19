@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
 
-![Background](../../translated_images/background.148a8d43afde5730.tw.png)
+![Background](../../translated_images/tw/background.148a8d43afde5730.webp)
 
 - 授課內容涵蓋從基礎至 RAG。
 - 使用生成式 AI 與我們的伴隨應用程式與歷史人物互動。
 - 有趣且引人入勝的敘事，你會穿越時光！
 
-![character](../../translated_images/character.5c0dd8e067ffd693.tw.png)
+![character](../../translated_images/tw/character.5c0dd8e067ffd693.webp)
 
 每堂課皆含作業、知識測驗及挑戰，引導你學習：
 - 提示語和提示工程
@@ -114,7 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 在你建立的此儲存庫副本中，點擊 **Code** 按鈕，並選擇 **Open with Codespaces**，系統將為你建立一個新的 Codespace 讓你作業。
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.tw.png)
+![Codespace](../../translated_images/tw/createcodespace.0238bbf4d7a8d955.webp)
 
 #### 在本機執行課程
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 A tmrow CO2 Signal API-ját használva az áramfogyasztás nyomon követésére, készíts egy böngészőbővítményt, amely emlékeztetőt ad a böngésződben arról, hogy mennyire terhelt az áramfogyasztás a régiódban. Az ad hoc használat segít abban, hogy az információk alapján döntéseket hozz a tevékenységeidről.
 
-![bővítmény képernyőkép](../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.hu.png)
+![bővítmény képernyőkép](../../../../translated_images/hu/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Első lépések
 
@@ -31,7 +31,7 @@ npm run build
 
 Edge böngészőn való telepítéshez használd a böngésző jobb felső sarkában található 'három pont' menüt, hogy megtaláld a Bővítmények panelt. Ott válaszd a 'Kicsomagolt betöltése' opciót egy új bővítmény betöltéséhez. A megjelenő ablakban nyisd meg a 'dist' mappát, és a bővítmény betöltődik. A használathoz szükséged lesz egy API kulcsra a CO2 Signal API-hoz ([itt szerezhetsz egyet e-mailben](https://www.co2signal.com/) - add meg az e-mail címedet az oldalon található mezőben), valamint a régiódhoz tartozó [kódra](http://api.electricitymap.org/v3/zones), amely megfelel az [Electricity Map](https://www.electricitymap.org/map) térképének (például Bostonban én az 'US-NEISO' kódot használom).
 
-![telepítés](../../../../translated_images/install-on-edge.78634f02842c4828.hu.png)
+![telepítés](../../../../translated_images/hu/install-on-edge.78634f02842c4828.webp)
 
 Miután az API kulcsot és a régiót megadtad a bővítmény felületén, a böngészőbővítmény sávjában lévő színes pontnak meg kell változnia, hogy tükrözze a régiód energiafogyasztását, és iránymutatást adjon arról, hogy milyen energiaigényes tevékenységek lennének megfelelőek számodra. Ennek a 'pont' rendszernek az ötletét a [Energy Lollipop bővítmény](https://energylollipop.com/) adta, amely a kaliforniai kibocsátásokat követi.
 

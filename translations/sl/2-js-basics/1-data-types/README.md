@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Osnove JavaScripta: podatkovne vrste
 
-![Osnove JavaScripta - podatkovne vrste](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.sl.png)
+![Osnove JavaScripta - podatkovne vrste](../../../../translated_images/sl/webdev101-js-datatypes.4cc470179730702c.webp)
 > Sketchnote avtorice [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

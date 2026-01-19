@@ -112,7 +112,7 @@ Siehe die [Server-API-Dokumentation](../api/README.md) für:
 **Erwartetes Ergebnis:**
 Nach Abschluss dieser Aufgabe verfügt deine Banking-App über eine voll funktionsfähige "Transaktion hinzufügen"-Funktion, die professionell aussieht und funktioniert:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.de.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/de/dialog.93bba104afeb79f1.webp)
 
 ## Testen deiner Implementierung
 

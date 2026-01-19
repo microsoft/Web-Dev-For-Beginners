@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **اكتب** رسالة الالتزام: "إضافة هيكل HTML الأولي"
 5. **انقر** على "Commit new file" لحفظ التغييرات
 
-![إنشاء ملف أولي على GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.ar.png)
+![إنشاء ملف أولي على GitHub](../../../../translated_images/ar/new-file-github.com.c886796d800e8056.webp)
 
 **ما الذي يحققه هذا الإعداد الأولي:**
 - **يؤسس** هيكل مستند HTML5 الصحيح باستخدام العناصر الدلالية
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **مؤشر النجاح**: يجب أن ترى ملفات مشروعك في الشريط الجانبي للمستكشف و`index.html` متاحًا للتحرير في منطقة المحرر الرئيسية.
 
-![المشروع محمل في VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.ar.png)
+![المشروع محمل في VSCode.dev](../../../../translated_images/ar/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **ما ستراه في الواجهة:**
 - **الشريط الجانبي للمستكشف**: **يعرض** ملفات المستودع وهيكل المجلدات
@@ -448,7 +448,7 @@ li:before {
 **النتائج الفورية بعد التثبيت:**
 بمجرد تثبيت CodeSwing، سترى معاينة مباشرة لموقع السيرة الذاتية الخاص بك تظهر في المحرر. يتيح لك ذلك رؤية كيف يبدو موقعك بالضبط أثناء إجراء التغييرات.
 
-![امتداد CodeSwing يعرض معاينة مباشرة](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.ar.png)
+![امتداد CodeSwing يعرض معاينة مباشرة](../../../../translated_images/ar/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **فهم الواجهة المحسنة:**
 - **عرض مقسم**: **يعرض** الكود على جانب واحد والمعاينة المباشرة على الجانب الآخر

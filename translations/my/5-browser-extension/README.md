@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### အားကျမှုများ
 
-![အစိမ်းရောင် ဘရောက်ဇာ အက်စတင်ရှင်း](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.my.png)
+![အစိမ်းရောင် ဘရောက်ဇာ အက်စတင်ရှင်း](../../../translated_images/my/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## အားကျမှုများ
 

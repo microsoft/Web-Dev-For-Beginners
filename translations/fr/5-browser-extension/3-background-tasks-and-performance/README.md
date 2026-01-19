@@ -123,7 +123,7 @@ Pour ouvrir les Outils de développement dans Edge, cliquez sur ces trois points
 
 Essayons cela. Ouvrez un site web (Microsoft.com fonctionne bien) et cliquez sur ce bouton « Enregistrer ». Maintenant, rafraîchissez la page et regardez le profileur capturer tout ce qui se passe. Quand vous arrêtez l’enregistrement, vous verrez une répartition détaillée de comment le navigateur « script », « rend » et « peint » le site. Cela me fait penser à la manière dont le centre de contrôle de mission surveille chaque système durant le lancement d’une fusée - vous obtenez des données en temps réel sur ce qui se passe et quand.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.fr.png)
+![Edge profiler](../../../../translated_images/fr/profiler.5a4a62479c5df01c.webp)
 
 ✅ La [Documentation Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) propose beaucoup plus de détails si vous souhaitez approfondir
 
@@ -133,11 +133,11 @@ Sélectionnez des éléments dans la timeline du profil pour zoomer sur des év�
 
 Prenez un instantané des performances de votre page en sélectionnant une partie de la timeline du profil et en regardant le panneau de résumé :
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.fr.png)
+![Edge profiler snapshot](../../../../translated_images/fr/snapshot.97750180ebcad737.webp)
 
 Consultez le panneau du journal des événements pour voir si un événement a duré plus de 15 ms :
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.fr.png)
+![Edge event log](../../../../translated_images/fr/log.804026979f3707e0.webp)
 
 ✅ Familiarisez-vous avec votre profileur ! Ouvrez les outils de développement sur ce site et voyez s’il y a des goulots d’étranglement. Quel est l’actif qui charge le plus lentement ? Le plus rapidement ?
 

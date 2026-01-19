@@ -182,7 +182,7 @@ Wie Alexander Graham Bells Telefon entfernte Orte verband, verbindet dein GitHub
 
 Sobald alles geladen ist, siehst du einen schön aufgeräumten Arbeitsbereich, der dich auf das Wesentliche – deinen Code – fokussieren lässt!
 
-![Standard VSCode.dev-Oberfläche](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.de.png)
+![Standard VSCode.dev-Oberfläche](../../../../translated_images/de/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Hier deine Tour durch die Nachbarschaft:**  
 - **Activity Bar** (die Leiste links): Deine Hauptnavigation mit Explorer 📁, Suche 🔍, Source Control 🌿, Erweiterungen 🧩 und Einstellungen ⚙️  
@@ -229,7 +229,7 @@ Perfekt, wenn du frisch mit VSCode.dev startest und ein bestimmtes Repository ö
 1. Gehe zu [vscode.dev](https://vscode.dev), falls du nicht schon dort bist  
 2. Suche auf dem Willkommensbildschirm die Schaltfläche „Open Remote Repository“ und klicke sie an  
 
-   ![Remote-Repository öffnen](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.de.png)  
+   ![Remote-Repository öffnen](../../../../translated_images/de/open-remote-repository.bd9c2598b8949e7f.webp)  
 
 3. Füge eine beliebige GitHub-Repository-URL ein (probier diese: `https://github.com/microsoft/Web-Dev-For-Beginners`)  
 4. Drücke Enter und sieh zu, wie die Magie passiert!
@@ -238,7 +238,7 @@ Perfekt, wenn du frisch mit VSCode.dev startest und ein bestimmtes Repository ö
 
 Willst du dich wie ein Programmierzauberer fühlen? Probiere diese Tastenkombination: Ctrl+Shift+P (oder Cmd+Shift+P auf Mac), um die Kommando-Palette zu öffnen:  
 
-![Kommando-Palette](../../../../translated_images/palette-menu.4946174e07f42622.de.png)  
+![Kommando-Palette](../../../../translated_images/de/palette-menu.4946174e07f42622.webp)  
 
 **Die Kommando-Palette ist wie eine Suchmaschine für alles, was du tun kannst:**  
 - Tippe „open remote“ und sie findet den Repository-Öffner für dich  
@@ -300,7 +300,7 @@ Wie Architekten ihre Pläne organisieren, folgt das Erstellen von Dateien in VSC
 3. Gib den Dateinamen einschließlich der passenden Endung ein (`style.css`, `script.js`, `index.html`)  
 4. Drücke Enter, um die Datei zu erstellen  
 
-![Neue Datei erstellen](../../../../translated_images/create-new-file.2814e609c2af9aeb.de.png)
+![Neue Datei erstellen](../../../../translated_images/de/create-new-file.2814e609c2af9aeb.webp)
 
 **Benennungskonventionen:**  
 - Verwende aussagekräftige Namen, die den Zweck der Datei anzeigen  
@@ -318,7 +318,7 @@ Jetzt beginnt der richtige Spaß! Der Editor von VSCode.dev ist vollgepackt mit 
 2. Fang an zu tippen und sieh zu, wie VSCode.dev dich mit Farben, Vorschlägen und Fehlererkennung unterstützt  
 3. Speichere deine Arbeit mit Ctrl+S (Windows/Linux) oder Cmd+S (Mac) – allerdings gibt es auch eine Auto-Save-Funktion!  
 
-![Dateien in VSCode.dev bearbeiten](../../../../translated_images/edit-a-file.52c0ee665ef19f08.de.png)
+![Dateien in VSCode.dev bearbeiten](../../../../translated_images/de/edit-a-file.52c0ee665ef19f08.webp)
 
 **Coole Dinge, die beim Coden passieren:**  
 - Dein Code wird farblich ansprechend hervorgehoben und ist dadurch leichter lesbar  
@@ -339,7 +339,7 @@ Wie Archäologen sorgfältige Aufzeichnungen von Ausgrabungsschichten anlegen, v
 2. Geänderte Dateien erscheinen im Bereich „Changes“  
 3. Farblich gekennzeichnete Änderungstypen: grün für Hinzufügungen, rot für Löschungen  
 
-![Changes im Source Control ansehen](../../../../translated_images/working-tree.c58eec08e6335c79.de.png)
+![Changes im Source Control ansehen](../../../../translated_images/de/working-tree.c58eec08e6335c79.webp)
 
 **So speicherst du deine Arbeit (Commit-Workflow):**
 
@@ -431,7 +431,7 @@ Der Erweiterungs-Marktplatz ist wirklich gut organisiert, so dass Sie sich nicht
 2. Stöbern Sie oder suchen Sie gezielt nach etwas  
 3. Klicken Sie auf alles, was interessant aussieht, um mehr darüber zu erfahren  
 
-![Extension marketplace interface](../../../../translated_images/extensions.eca0e0c7f59a10b5.de.png)  
+![Extension marketplace interface](../../../../translated_images/de/extensions.eca0e0c7f59a10b5.webp)  
 
 **Das finden Sie dort:**  
 
@@ -484,7 +484,7 @@ Die meisten Erweiterungen besitzen Einstellungen, die Sie anpassen können, dami
 3. Wählen Sie im Dropdown „Erweiterungseinstellungen“  
 4. Passen Sie alles an, bis es perfekt zu Ihrem Arbeitsablauf passt  
 
-![Customizing extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78.de.png)  
+![Customizing extension settings](../../../../translated_images/de/extension-settings.21c752ae4f4cdb78.webp)  
 
 **Häufige Dinge, die Sie anpassen möchten:**  
 - Wie Ihr Code formatiert wird (Tabs vs. Leerzeichen, Zeilenlänge, etc.)  

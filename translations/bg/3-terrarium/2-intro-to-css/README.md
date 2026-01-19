@@ -29,7 +29,7 @@ journey
       Адаптивен дизайн: 5: Student
       Стъклени отражения: 5: Student
 ```
-![Въведение в CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.bg.png)
+![Въведение в CSS](../../../../translated_images/bg/webdev101-css.3f7af5991bf53a20.webp)
 > Скетчноут от [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Спомняте ли си как вашият HTML терариум изглеждаше доста основен? CSS е мястото, където преобразяваме тази обикновена структура във визуално привлекателна.
@@ -202,7 +202,7 @@ body {
 
 Отворете инструменти за разработчици на вашия браузър (F12), отидете на раздел Elements и инспектирайте вашия `<h1>` елемент. Ще видите, че той наследява шрифтa от body:
 
-![наследен шрифт](../../../../translated_images/1.cc07a5cbe114ad1d.bg.png)
+![наследен шрифт](../../../../translated_images/bg/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Време за експеримент**: Опитайте да зададете други наследяеми свойства на `<body>`, като `color`, `line-height` или `text-align`. Какво се случва с вашия заглавен елемент и други елементи?
 
@@ -332,7 +332,7 @@ h1 {
 **Ето HTML структурата за всяко растение:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.bg.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/bg/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 Ще създадете нежни отблясъци, които симулират как светлината се отразява от стъклени повърхности. Този подход е подобен на техниката на ренесансови художници като Ян ван Ейк, които използвали светлина и отражения, за да направят изрисуваното стъкло триизмерно. Ето какво трябва да постигнете:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.bg.png)
+![finished terrarium](../../../../translated_images/bg/terrarium-final.2f07047ffc597d0a.webp)
 
 **Вашата задача:**
 - **Създайте** нежни бели или светли овални форми за отражения върху стъклото

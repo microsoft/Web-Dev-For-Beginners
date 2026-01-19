@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Giới thiệu về CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.vi.png)
+![Giới thiệu về CSS](../../../../translated_images/vi/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Bạn còn nhớ terrarium HTML của mình trông khá đơn giản chứ? CSS chính là nơi chúng ta biến cấu trúc cơ bản đó thành một thứ hấp dẫn về mặt thị giác.
@@ -205,7 +205,7 @@ body {
 
 Mở công cụ phát triển của trình duyệt (F12), điều hướng đến tab Elements, và kiểm tra phần tử `<h1>` của bạn. Bạn sẽ thấy rằng nó thừa hưởng font family từ body:
 
-![font thừa hưởng](../../../../translated_images/1.cc07a5cbe114ad1d.vi.png)
+![font thừa hưởng](../../../../translated_images/vi/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Thời gian thử nghiệm**: Hãy thử đặt các thuộc tính có thể thừa hưởng khác trên `<body>` như `color`, `line-height`, hoặc `text-align`. Điều gì xảy ra với tiêu đề và các phần tử khác?
 
@@ -335,7 +335,7 @@ Trong terrarium của chúng ta, mỗi cây cần kiểu tương tự nhưng cũ
 **Đây là cấu trúc HTML cho mỗi cây:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.vi.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/vi/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.png" />
 </div>
 ```
 
@@ -599,7 +599,7 @@ Sẵn sàng nâng cấp terrarium của bạn với hiệu ứng phản chiếu 
 
 Bạn sẽ tạo các điểm sáng tinh tế mô phỏng cách ánh sáng phản chiếu trên bề mặt thủy tinh. Cách tiếp cận này tương tự như cách các họa sĩ thời Phục hưng như Jan van Eyck sử dụng ánh sáng và phản chiếu để làm cho thủy tinh được vẽ trông như ba chiều. Đây là mục tiêu của bạn:
 
-![terrarium hoàn thiện](../../../../translated_images/terrarium-final.2f07047ffc597d0a.vi.png)
+![terrarium hoàn thiện](../../../../translated_images/vi/terrarium-final.2f07047ffc597d0a.webp)
 
 **Thử thách của bạn:**
 - **Tạo** các hình oval màu trắng hoặc sáng để làm hiệu ứng phản chiếu thủy tinh

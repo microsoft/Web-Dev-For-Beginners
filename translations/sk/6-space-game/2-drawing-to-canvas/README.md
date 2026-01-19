@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![mriežka canvasu](../../../../translated_images/canvas_grid.5f209da785ded492.sk.png)
+![mriežka canvasu](../../../../translated_images/sk/canvas_grid.5f209da785ded492.webp)
 > Obrázok z [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Na kreslenie na prvok canvas nasledujete rovnaký trojkrokový proces, ktorý tvorí základ všetkých canvas grafík. Keď to urobíte niekoľkokrát, stane sa to pre vás prirodzené:
@@ -323,11 +323,11 @@ Vytvoríte webovú stránku s prvkom Canvas. Mali by ste vykresliť čiernu obra
 
 - Hrdina loď
 
-   ![Hrdina loď](../../../../translated_images/player.dd24c1afa8c71e9b.sk.png)
+   ![Hrdina loď](../../../../translated_images/sk/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 príšery
 
-   ![Loď príšery](../../../../translated_images/enemyShip.5df2a822c16650c2.sk.png)
+   ![Loď príšery](../../../../translated_images/sk/enemyShip.5df2a822c16650c2.webp)
 
 ### Odporúčané kroky na začiatok vývoja
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Hotový výsledok by mal vyzerať takto:
 
-![Čierna obrazovka s hrdinom a 5*5 príšerami](../../../../translated_images/partI-solution.36c53b48c9ffae2a.sk.png)
+![Čierna obrazovka s hrdinom a 5*5 príšerami](../../../../translated_images/sk/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Riešenie
 

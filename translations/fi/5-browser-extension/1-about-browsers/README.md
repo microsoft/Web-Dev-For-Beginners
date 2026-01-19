@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Selaimen luonnos](../../../../translated_images/browser.60317c9be8b7f84a.fi.jpg)
+![Selaimen luonnos](../../../../translated_images/fi/browser.60317c9be8b7f84a.webp)
 > Luonnos: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Ennakkokysely
@@ -79,7 +79,7 @@ Tämä prosessi muistuttaa, kuinka ensimmäinen selain, WorldWideWeb, suunnitelt
 
 ✅ **Pieni historia**: Ensimmäinen selain oli nimeltään 'WorldWideWeb' ja sen loi Sir Timothy Berners-Lee vuonna 1990.
 
-![varhaiset selaimet](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.fi.jpg)
+![varhaiset selaimet](../../../../translated_images/fi/earlybrowsers.d984b711cdf3a42d.webp)
 > Joitakin varhaisia selaimia, lähde: [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Kuinka selaimet käsittelevät verkkosisältöä
@@ -198,7 +198,7 @@ quadrantChart
 
 Laajennuksen asennusprosessin ymmärtäminen auttaa sinua ennakoimaan käyttäjäkokemusta, kun ihmiset asentavat laajennuksesi. Asennusprosessi on standardoitu moderneissa selaimissa, pienillä käyttöliittymäsuunnittelun eroilla.
 
-![kuvakaappaus Edge-selaimesta, jossa edge://extensions-sivu ja asetukset-valikko ovat avoinna](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.fi.png)
+![kuvakaappaus Edge-selaimesta, jossa edge://extensions-sivu ja asetukset-valikko ovat avoinna](../../../../translated_images/fi/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Tärkeää**: Varmista, että kehittäjätila on kytketty päälle ja salli laajennusten asentaminen muista kaupoista testatessasi omia laajennuksiasi.
 
@@ -313,10 +313,10 @@ Tämä noudattaa progressiivisen paljastamisen periaatetta, jota on käytetty k�
 ### Laajennusnäkymien yleiskatsaus
 
 **Asetusnäkymä** - Ensimmäisen käyttökerran asetukset:
-![kuvakaappaus valmiista laajennuksesta avoinna selaimessa, jossa näkyy lomake alueen nimen ja API-avaimen syöttämiseksi.](../../../../translated_images/1.b6da8c1394b07491.fi.png)
+![kuvakaappaus valmiista laajennuksesta avoinna selaimessa, jossa näkyy lomake alueen nimen ja API-avaimen syöttämiseksi.](../../../../translated_images/fi/1.b6da8c1394b07491.webp)
 
 **Tulosnäkymä** - Hiilijalanjälkitietojen näyttö:
-![kuvakaappaus valmiista laajennuksesta, joka näyttää hiilen käytön ja fossiilisten polttoaineiden prosenttiosuuden US-NEISO-alueelle.](../../../../translated_images/2.1dae52ff08042246.fi.png)
+![kuvakaappaus valmiista laajennuksesta, joka näyttää hiilen käytön ja fossiilisten polttoaineiden prosenttiosuuden US-NEISO-alueelle.](../../../../translated_images/fi/2.1dae52ff08042246.webp)
 
 ### Asetuslomakkeen rakentaminen
 

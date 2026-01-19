@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # أساسيات JavaScript: أنواع البيانات
 
-![أساسيات JavaScript - أنواع البيانات](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.ar.png)
+![أساسيات JavaScript - أنواع البيانات](../../../../translated_images/ar/webdev101-js-datatypes.4cc470179730702c.webp)
 > رسم توضيحي بواسطة [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -17,7 +17,7 @@ Nghe này, tôi hoàn toàn hiểu nếu lập trình có vẻ đáng sợ ngay 
 
 Hôm nay, chúng ta sẽ khám phá những công cụ tuyệt vời làm cho phát triển web hiện đại không chỉ khả thi mà còn thực sự gây nghiện. Tôi đang nói về chính những trình soạn thảo, trình duyệt và quy trình làm việc mà các nhà phát triển tại Netflix, Spotify, và studio ứng dụng indie yêu thích của bạn sử dụng mỗi ngày. Và đây là phần sẽ khiến bạn nhảy múa vui vẻ: hầu hết các công cụ chuyên nghiệp, tiêu chuẩn ngành này đều hoàn toàn miễn phí!
 
-![Giới thiệu Lập trình](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.vi.png)
+![Giới thiệu Lập trình](../../../../translated_images/vi/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

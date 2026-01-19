@@ -17,7 +17,7 @@ Vím, že to může ze začátku působit jako hodně – hele, pamatuju si, jak
 
 Vyrazíme na tuto cestu spolu, krok za krokem. Bez spěchu, bez tlaku – jen ty, já a pár opravdu skvělých nástrojů, které se právě stanou tvými novými nejlepšími přáteli!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.cs.png)
+![Intro to GitHub](../../../../translated_images/cs/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ Nejprve najděte na GitHubu repozitář (nebo **repo**) zajímavý pro vás, do 
 
 ✅ Dobrý způsob, jak najít repozitáře vhodné pro začátečníky, je [vyhledat podle štítku 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Zkopírování repozitáře lokálně](../../../../translated_images/clone_repo.5085c48d666ead57.cs.png)
+![Zkopírování repozitáře lokálně](../../../../translated_images/cs/clone_repo.5085c48d666ead57.webp)
 
 Existuje několik způsobů, jak zkopírovat kód. Jedním z nich je "klonování" obsahu repozitáře přes HTTPS, SSH nebo pomocí GitHub CLI (Command Line Interface).
 

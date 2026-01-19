@@ -644,7 +644,7 @@ sequenceDiagram
 
 การใช้ `history.pushState` สร้างรายการใหม่ในประวัติการนำทางของเบราว์เซอร์ คุณสามารถตรวจสอบได้โดยการกดปุ่ม *ย้อนกลับ* ค้างไว้ เบราว์เซอร์จะแสดงประวัติประมาณนี้:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.th.png)
+![Screenshot of navigation history](../../../../translated_images/th/history.7fdabbafa521e064.webp)
 
 ถ้าคุณลองกดปุ่มย้อนกลับหลายครั้ง คุณจะเห็นว่า URL ปัจจุบันเปลี่ยนและประวัติได้รับการอัปเดต แต่เทมเพลตเดิมยังคงแสดงอยู่
 

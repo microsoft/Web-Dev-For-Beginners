@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # جاوا اسکرپٹ کی بنیادی باتیں: ڈیٹا کی اقسام
 
-![جاوا اسکرپٹ کی بنیادی باتیں - ڈیٹا کی اقسام](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.ur.png)
+![جاوا اسکرپٹ کی بنیادی باتیں - ڈیٹا کی اقسام](../../../../translated_images/ur/webdev101-js-datatypes.4cc470179730702c.webp)
 > اسکیچ نوٹ [Tomomi Imura](https://twitter.com/girlie_mac) کی طرف سے
 
 ```mermaid

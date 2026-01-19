@@ -26,7 +26,7 @@ journey
       Polish experience: 5: Student
 ```
 
-![Tarayıcı sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.tr.jpg)
+![Tarayıcı sketchnote](../../../../translated_images/tr/browser.60317c9be8b7f84a.webp)
 > Sketchnote: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Ders Öncesi Test
@@ -79,7 +79,7 @@ Bu süreç, Tim Berners-Lee'nin 1990 yılında herkesin hiper bağlantılı belg
 
 ✅ **Biraz tarih**: İlk tarayıcı 'WorldWideWeb' olarak adlandırıldı ve 1990 yılında Sir Timothy Berners-Lee tarafından oluşturuldu.
 
-![erken tarayıcılar](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.tr.jpg)
+![erken tarayıcılar](../../../../translated_images/tr/earlybrowsers.d984b711cdf3a42d.webp)
 > Bazı erken tarayıcılar, [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) aracılığıyla
 
 ### Tarayıcılar Web İçeriğini Nasıl İşler?
@@ -198,7 +198,7 @@ quadrantChart
 
 Uzantı yükleme sürecini anlamak, insanların uzantınızı yüklediğinde yaşayacakları kullanıcı deneyimini tahmin etmenize yardımcı olur. Yükleme süreci modern tarayıcılar arasında standartlaştırılmıştır, arayüz tasarımında küçük farklılıklar vardır.
 
-![Edge tarayıcısının edge://extensions sayfasını ve açık ayarlar menüsünü gösteren ekran görüntüsü](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.tr.png)
+![Edge tarayıcısının edge://extensions sayfasını ve açık ayarlar menüsünü gösteren ekran görüntüsü](../../../../translated_images/tr/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Önemli**: Kendi uzantılarınızı test ederken geliştirici modunu açmayı ve diğer mağazalardan uzantılara izin vermeyi unutmayın.
 
@@ -313,10 +313,10 @@ Bu, bilgi ve seçenekleri mantıklı bir sırayla ortaya çıkararak kullanıcı
 ### Uzantı Görünümleri Genel Bakış
 
 **Kurulum Görünümü** - İlk kez kullanıcı yapılandırması:
-![Tamamlanmış uzantının bir tarayıcıda açık olduğu, bölge adı ve API anahtarı için girişler içeren bir formun görüntülendiği ekran görüntüsü.](../../../../translated_images/1.b6da8c1394b07491.tr.png)
+![Tamamlanmış uzantının bir tarayıcıda açık olduğu, bölge adı ve API anahtarı için girişler içeren bir formun görüntülendiği ekran görüntüsü.](../../../../translated_images/tr/1.b6da8c1394b07491.webp)
 
 **Sonuç Görünümü** - Karbon ayak izi veri görüntüleme:
-![Tamamlanmış uzantının US-NEISO bölgesi için karbon kullanımı ve fosil yakıt yüzdesi değerlerini görüntülediği ekran görüntüsü.](../../../../translated_images/2.1dae52ff08042246.tr.png)
+![Tamamlanmış uzantının US-NEISO bölgesi için karbon kullanımı ve fosil yakıt yüzdesi değerlerini görüntülediği ekran görüntüsü.](../../../../translated_images/tr/2.1dae52ff08042246.webp)
 
 ### Yapılandırma Formunu Oluşturma
 

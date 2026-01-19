@@ -644,7 +644,7 @@ sequenceDiagram
 
 Der Aufruf von `history.pushState` erzeugt neue Einträge im Browser-Verlauf. Du kannst das überprüfen, indem du den *Zurück-Button* im Browser gedrückt hältst – es wird so etwas angezeigt wie:
 
-![Screenshot des Navigationsverlaufs](../../../../translated_images/history.7fdabbafa521e064.de.png)
+![Screenshot des Navigationsverlaufs](../../../../translated_images/de/history.7fdabbafa521e064.webp)
 
 Wenn du mehrmals auf den Zurück-Button klickst, siehst du, dass sich die aktuelle URL ändert und der Verlauf aktualisiert wird, aber immer das gleiche Template bleibt angezeigt.
 

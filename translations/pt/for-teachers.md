@@ -42,10 +42,10 @@ Este currículo inclui pacotes importáveis para fluxos de trabalho comuns em LM
   - O Moodle Cloud tem suporte limitado para Common Cartridge. Prefira o ficheiro do Moodle acima, que também pode ser carregado no Canvas.
   - Após a importação, reveja os módulos, datas de entrega e configurações de questionários para ajustar ao calendário do seu período letivo.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2.pt.png)
+![Moodle](../../translated_images/pt/moodle.94eb93d714a50cb2.webp)
 > O currículo numa sala de aula Moodle
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff.pt.png)
+![Canvas](../../translated_images/pt/canvas.fbd605ff8e5b8aff.webp)
 > O currículo no Canvas
 
 ### Utilizar o repositório diretamente (sem Classroom)

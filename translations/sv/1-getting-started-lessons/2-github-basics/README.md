@@ -17,7 +17,7 @@ Jag vet att det här kan kännas mycket i början – jag minns att jag stirrade
 
 Vi kommer att ta den här resan tillsammans, steg för steg. Ingen stress, inget tryck – bara du, jag och några riktigt coola verktyg som snart kommer att bli dina nya bästa vänner!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.sv.png)
+![Intro to GitHub](../../../../translated_images/sv/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ Först, låt oss hitta ett repository (eller **repo**) på GitHub som intressera
 
 ✅ Ett bra sätt att hitta "nybörjarvänliga" repos är att [söka efter taggen 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Kopiera ett repo lokalt](../../../../translated_images/clone_repo.5085c48d666ead57.sv.png)
+![Kopiera ett repo lokalt](../../../../translated_images/sv/clone_repo.5085c48d666ead57.webp)
 
 Det finns flera sätt att kopiera kod. Ett sätt är att "klona" innehållet i repot, med HTTPS, SSH eller med GitHub CLI (Command Line Interface).
 

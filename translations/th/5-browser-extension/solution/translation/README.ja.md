@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 สร้างส่วนขยายเบราว์เซอร์ที่สามารถแสดงการแจ้งเตือนบนเบราว์เซอร์เกี่ยวกับการใช้พลังงานในพื้นที่ของคุณ โดยใช้ API ของ C02 Signal จาก tmrow เพื่อช่วยติดตามการใช้พลังงานของคุณ คุณสามารถใช้ส่วนขยายนี้เพื่อช่วยตัดสินใจกิจกรรมของคุณตามข้อมูลที่ได้รับ
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.th.png)
+![extension screenshot](../../../../../translated_images/th/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## เริ่มต้น
 
@@ -31,7 +31,7 @@ npm run build
 
 ในการติดตั้งบน Edge ให้ไปที่เมนู "จุดสามจุด" ที่มุมขวาบนของเบราว์เซอร์ แล้วค้นหาแผง "ส่วนขยาย" จากนั้นเลือก "Load Unpacked" เพื่อโหลดส่วนขยายใหม่ เมื่อมีการแจ้งเตือน ให้เปิดโฟลเดอร์ "dist" และส่วนขยายจะถูกโหลดขึ้นมา ในการใช้งาน คุณจะต้องมี API Key ของ CO2 Signal ([รับได้ที่นี่ผ่านอีเมล](https://www.co2signal.com/) - เพียงกรอกอีเมลในกล่องบนหน้านั้น) และ [รหัสสำหรับพื้นที่ของคุณ](http://api.electricitymap.org/v3/zones) ที่รองรับโดย [Electricity Map](https://www.electricitymap.org/map) (ตัวอย่างเช่น ในบอสตัน ใช้ 'US-NEISO')
 
-![installing](../../../../../translated_images/install-on-edge.78634f02842c4828.th.png)
+![installing](../../../../../translated_images/th/install-on-edge.78634f02842c4828.webp)
 
 เมื่อคุณป้อน API Key และรหัสพื้นที่ในอินเทอร์เฟซของส่วนขยายแล้ว จุดสีที่แสดงในแถบส่วนขยายของเบราว์เซอร์จะเปลี่ยนไปตามการใช้พลังงานในพื้นที่ของคุณ จุดสีนี้จะช่วยบอกว่ากิจกรรมใดที่เหมาะสมกับการใช้พลังงานในขณะนั้น แนวคิดของระบบ "จุดสี" นี้ได้รับแรงบันดาลใจจาก [Energy Lollipop extension](https://energylollipop.com/) สำหรับการปล่อยก๊าซในแคลิฟอร์เนีย
 

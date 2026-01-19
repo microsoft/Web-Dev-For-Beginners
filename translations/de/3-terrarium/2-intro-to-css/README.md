@@ -29,7 +29,7 @@ journey
       Responsives Design: 5: Student
       Glasreflexionen: 5: Student
 ```
-![Einführung in CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.de.png)
+![Einführung in CSS](../../../../translated_images/de/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Erinnere dich daran, wie dein HTML-Terrarium ziemlich einfach aussah? CSS ist der Bereich, in dem wir diese schlichte Struktur in etwas Visuell Ansprechendes verwandeln.
@@ -202,7 +202,7 @@ body {
 
 Öffne die Entwickler-Tools deines Browsers (F12), gehe zum Tab „Elemente“ und inspiziere dein `<h1>`-Element. Du wirst sehen, dass es die Schriftfamilie vom Body erbt:
 
-![inherente Schrift](../../../../translated_images/1.cc07a5cbe114ad1d.de.png)
+![inherente Schrift](../../../../translated_images/de/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Experimentierzeit**: Versuche andere vererbbare Eigenschaften auf dem `<body>` wie `color`, `line-height` oder `text-align` zu setzen. Was passiert mit deiner Überschrift und anderen Elementen?
 
@@ -332,7 +332,7 @@ In unserem Terrarium braucht jede Pflanze ein ähnliches Styling, aber auch indi
 **Hier ist die HTML-Struktur für jede Pflanze:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.de.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/de/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ Bereit, dein Terrarium mit realistischen Glasreflexen aufzuwerten? Diese Technik
 
 Du erzeugst subtile Highlights, die simulieren, wie Licht auf Glasflächen reflektiert wird. Dieser Ansatz ähnelt Renaissance-Malern wie Jan van Eyck, die Licht und Reflexion nutzten, um gemaltes Glas dreidimensional wirken zu lassen. Hier ist dein Ziel:
 
-![fertiges Terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.de.png)
+![fertiges Terrarium](../../../../translated_images/de/terrarium-final.2f07047ffc597d0a.webp)
 
 **Deine Aufgabe:**
 - **Erstelle** dezente weiße oder hellfarbige ovale Formen für die Glasreflexe

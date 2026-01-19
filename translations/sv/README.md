@@ -56,13 +56,13 @@ Missa inte vår nya läroplan för Generativ AI!
 
 Besök [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) för att komma igång!
 
-![Bakgrund](../../translated_images/background.148a8d43afde5730.sv.png)
+![Bakgrund](../../translated_images/sv/background.148a8d43afde5730.webp)
 
 - Lektioner som täcker allt från grunder till RAG.
 - Interagera med historiska karaktärer med GenAI och vår följeslagsapp.
 - Rolig och engagerande berättelse, du kommer att tidsresande!
 
-![karaktär](../../translated_images/character.5c0dd8e067ffd693.sv.png)
+![karaktär](../../translated_images/sv/character.5c0dd8e067ffd693.webp)
 
 
 Varje lektion inkluderar en uppgift att slutföra, en kunskapskontroll och en utmaning för att guida dig i att lära dig ämnen som:
@@ -99,7 +99,7 @@ Följ dessa steg:
 
 I din kopia av detta arkiv som du skapade, klicka på **Code**-knappen och välj **Open with Codespaces**. Detta skapar en ny Codespace för dig att arbeta i.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.sv.png)
+![Codespace](../../translated_images/sv/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Köra läroplanen lokalt på din dator
 

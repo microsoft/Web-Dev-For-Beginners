@@ -25,7 +25,7 @@ journey
       Veatõrje: 4: Student
       Viimistlege kogemust: 5: Student
 ```
-![Brauseri sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.et.jpg)
+![Brauseri sketchnote](../../../../translated_images/et/browser.60317c9be8b7f84a.webp)
 > Sketchnote autorilt [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Esimene viktoriin enne loengut
@@ -77,7 +77,7 @@ See protsess peegeldab, kuidas esimene veebibrauser, WorldWideWeb, kavandas Tim 
 
 ✅ **Veidi ajalugu**: Esimene brauser kandis nime 'WorldWideWeb' ja selle lõi Sir Timothy Berners-Lee 1990. aastal.
 
-![varased brauserid](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.et.jpg)
+![varased brauserid](../../../../translated_images/et/earlybrowsers.d984b711cdf3a42d.webp)
 > Mõned varased brauserid, allikas [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Kuidas brauserid veebisisu töötlevad
@@ -194,7 +194,7 @@ quadrantChart
 
 Laienduste paigaldamise protsessi mõistmine aitab sul ette näha kasutajakogemust, kui inimesed paigaldavad sinu laienduse. Paigaldamine on standardiseeritud kaasaegsetes brauserid, väikeste erinevustega liidese kujunduses.
 
-![kuvatõmmis Edge brauserist, kus on avatud leht edge://extensions ja seadete menüü](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.et.png)
+![kuvatõmmis Edge brauserist, kus on avatud leht edge://extensions ja seadete menüü](../../../../translated_images/et/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Oluline**: Veendu, et lülitad sisse arendajarežiimi ja lubad laiendusi teistest poodidest, kui testid oma laiendusi.
 
@@ -308,10 +308,10 @@ See järgib progressiivse avaldamise põhimõtet, mida kasutatakse liidese disai
 ### Laiendi ülevaated
 
 **Seadistamise vaade** – kasutaja esimese sõidu konfigureerimine:
-![kuvatõmmis valminud laiendusest brauseris, mis kuvab vormi regiooni nime ja API võtme sisenditega.](../../../../translated_images/1.b6da8c1394b07491.et.png)
+![kuvatõmmis valminud laiendusest brauseris, mis kuvab vormi regiooni nime ja API võtme sisenditega.](../../../../translated_images/et/1.b6da8c1394b07491.webp)
 
 **Tulemuste vaade** – süsiniku jalajälje andmete kuvamine:
-![kuvatõmmis valminud laiendusest, mis näitab süsiniku kasutust ja fossiilkütuste protsenti regiooni US-NEISO kohta.](../../../../translated_images/2.1dae52ff08042246.et.png)
+![kuvatõmmis valminud laiendusest, mis näitab süsiniku kasutust ja fossiilkütuste protsenti regiooni US-NEISO kohta.](../../../../translated_images/et/2.1dae52ff08042246.webp)
 
 ### Seadistusvormi ehitamine
 

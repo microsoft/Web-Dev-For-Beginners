@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Noțiuni de bază JavaScript: Metode și Funcții
 
-![Noțiuni de bază JavaScript - Funcții](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.ro.png)
+![Noțiuni de bază JavaScript - Funcții](../../../../translated_images/ro/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

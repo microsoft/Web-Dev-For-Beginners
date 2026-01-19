@@ -292,7 +292,7 @@ graph TD
 2. अपने ब्राउज़र के एड्रेस बार में बदलाव देखें
 3. देखें कि पेज कैसे रीलोड होता है और डेटा URL में आता है
 
-![Register बटन पर क्लिक करने के बाद ब्राउज़र के URL में बदलाव का स्क्रीनशॉट](../../../../translated_images/click-register.e89a30bf0d4bc9ca.hi.png)
+![Register बटन पर क्लिक करने के बाद ब्राउज़र के URL में बदलाव का स्क्रीनशॉट](../../../../translated_images/hi/click-register.e89a30bf0d4bc9ca.webp)
 
 ### HTTP मेथड्स की तुलना
 
@@ -346,7 +346,7 @@ graph TD
 2. "Create Account" बटन पर क्लिक करें
 3. अपने ब्राउज़र में सर्वर प्रतिक्रिया देखें
 
-![localhost:5000/api/accounts एड्रेस पर ब्राउज़र विंडो, जिसमें उपयोगकर्ता डेटा के साथ JSON स्ट्रिंग दिखाई दे रही है](../../../../translated_images/form-post.61de4ca1b964d91a.hi.png)
+![localhost:5000/api/accounts एड्रेस पर ब्राउज़र विंडो, जिसमें उपयोगकर्ता डेटा के साथ JSON स्ट्रिंग दिखाई दे रही है](../../../../translated_images/hi/form-post.61de4ca1b964d91a.webp)
 
 **आपको क्या देखना चाहिए:**
 - ब्राउज़र API एंडपॉइंट URL पर रीडायरेक्ट करता है
@@ -609,7 +609,7 @@ async function register() {
 3. **"Create Account" क्लिक करें**
 4. **कंसोल संदेशों और उपयोगकर्ता प्रतिक्रिया देखें**
 
-![ब्राउज़र कंसोल में लॉग संदेश दिखाते स्क्रीनशॉट](../../../../translated_images/browser-console.efaf0b51aaaf6778.hi.png)
+![ब्राउज़र कंसोल में लॉग संदेश दिखाते स्क्रीनशॉट](../../../../translated_images/hi/browser-console.efaf0b51aaaf6778.webp)
 
 **आपको क्या देखना चाहिए:**
 - **लोडिंग स्टेट** सबमिट बटन पर दिखाई देता है
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **उपयोगकर्ता नाम फ़ील्ड में विशेष वर्ण आज़माएं**
 4. **नकारात्मक शेष राशि दर्ज करें**
 
-![फॉर्म सबमिट करने पर सत्यापन त्रुटि दिखाने वाला स्क्रीनशॉट](../../../../translated_images/validation-error.8bd23e98d416c22f.hi.png)
+![फॉर्म सबमिट करने पर सत्यापन त्रुटि दिखाने वाला स्क्रीनशॉट](../../../../translated_images/hi/validation-error.8bd23e98d416c22f.webp)
 
 **आप क्या देखेंगे:**
 - **ब्राउज़र स्वदेशी सत्यापन संदेश प्रदर्शित करता है**
@@ -943,7 +943,7 @@ timeline
 
 यहां एक उदाहरण है कि अंतिम लॉगिन पृष्ठ कैसा दिख सकता है कुछ CSS स्टाइलिंग के बाद:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.hi.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/hi/result.96ef01f607bf856a.webp)
 
 ## पोस्ट-लेक्चर क्विज़
 

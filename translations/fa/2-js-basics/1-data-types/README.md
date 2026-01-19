@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # مبانی جاوااسکریپت: نوع داده‌ها
 
-![مبانی جاوااسکریپت - نوع داده‌ها](../../../../translated_images/webdev101-js-datatypes.4cc470179730702c.fa.png)
+![مبانی جاوااسکریپت - نوع داده‌ها](../../../../translated_images/fa/webdev101-js-datatypes.4cc470179730702c.webp)
 > اسکچ‌نوت توسط [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

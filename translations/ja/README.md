@@ -72,13 +72,13 @@ Azure AI Foundry Discordコミュニティに参加
 
 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)で今すぐ始めましょう！
 
-![Background](../../translated_images/background.148a8d43afde5730.ja.png)
+![Background](../../translated_images/ja/background.148a8d43afde5730.webp)
 
 - 基礎からRAGまでをカバーするレッスン。
 - GenAIと連携アプリで歴史上の人物と対話。
 - 楽しく魅力的な物語形式でタイムトラベル体験！
 
-![character](../../translated_images/character.5c0dd8e067ffd693.ja.png)
+![character](../../translated_images/ja/character.5c0dd8e067ffd693.webp)
 
 
 各レッスンには課題、知識チェック、チャレンジが含まれており、以下のようなトピックを学びます：
@@ -115,7 +115,7 @@ Azure AI Foundry Discordコミュニティに参加
 
 作成したリポジトリのコピーで、**Code**ボタンをクリックし、**Open with Codespaces**を選択すると、新しいCodespaceが作成されます。
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ja.png)
+![Codespace](../../translated_images/ja/createcodespace.0238bbf4d7a8d955.webp)
 
 #### ご自身のコンピューターでカリキュラムを実行する
 

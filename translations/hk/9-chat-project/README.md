@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 以下是你完成的專案外觀：
 
-![Chat app interface showing conversation between user and AI assistant](../../../translated_images/screenshot.0a1ee0d123df681b.hk.png)
+![Chat app interface showing conversation between user and AI assistant](../../../translated_images/hk/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ 你的 AI 應用開發學習之旅
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **核心原則**：AI 應用開發結合傳統網頁技能與 AI 服務整合，創建智能且自然、回應迅速的應用。
 
-![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/playground.d2b927122224ff8f.hk.png)
+![GitHub Models AI Playground interface with model selection and testing area](../../../translated_images/hk/playground.d2b927122224ff8f.webp)
 
 **playground 特別實用的原因：**
 - **試用** 不同的 AI 模型，如 GPT-4o-mini、Claude 等（全部免費！）
@@ -199,7 +199,7 @@ mindmap
 
 玩過一會兒後，點擊「Code」頁籤，選擇程式語言，即可取得你需要的實作程式碼。
 
-![Playground choice showing code generation options for different programming languages](../../../translated_images/playground-choice.1d23ba7d407f4758.hk.png)
+![Playground choice showing code generation options for different programming languages](../../../translated_images/hk/playground-choice.1d23ba7d407f4758.webp)
 
 ## 設定 Python 後端整合
 
@@ -2353,14 +2353,14 @@ mindmap
 - **前往** [Web Dev For Beginners repository](https://github.com/microsoft/Web-Dev-For-Beginners)
 - **點擊** 右上角的「Use this template」（確保已登入 GitHub）
 
-![Create from template interface showing the green "Use this template" button](../../../translated_images/template.67ad477109d29a2b.hk.png)
+![Create from template interface showing the green "Use this template" button](../../../translated_images/hk/template.67ad477109d29a2b.webp)
 
 **步驟 2：啟動 Codespaces**
 - **打開** 剛建立的儲存庫
 - **點擊** 綠色「Code」按鈕，選擇「Codespaces」
 - **選擇** 「Create codespace on main」開始你的開發環境
 
-![Create codespace interface with options for launching cloud development environment](../../../translated_images/codespace.bcecbdf5d2747d3d.hk.png)
+![Create codespace interface with options for launching cloud development environment](../../../translated_images/hk/codespace.bcecbdf5d2747d3d.webp)
 
 **步驟 3：環境配置**
 你的 Codespace 載入後，即可使用：

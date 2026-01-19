@@ -78,7 +78,7 @@ Vì VSCode.dev yêu cầu ít nhất một tệp để mở kho lưu trữ, chú
 4. **Viết** thông điệp commit: "Thêm cấu trúc HTML ban đầu"
 5. **Nhấn** "Commit new file" để lưu thay đổi của bạn
 
-![Tạo tệp ban đầu trên GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.vi.png)
+![Tạo tệp ban đầu trên GitHub](../../../../translated_images/vi/new-file-github.com.c886796d800e8056.webp)
 
 **Những gì thiết lập ban đầu này đạt được:**
 - **Thiết lập** cấu trúc tài liệu HTML5 đúng chuẩn với các phần tử ngữ nghĩa
@@ -104,7 +104,7 @@ Bây giờ nền tảng kho lưu trữ của bạn đã được thiết lập, 
 
 ✅ **Chỉ báo thành công**: Bạn sẽ thấy các tệp dự án của mình trong thanh bên Explorer và `index.html` có sẵn để chỉnh sửa trong khu vực chỉnh sửa chính.
 
-![Dự án được tải trong VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.vi.png)
+![Dự án được tải trong VSCode.dev](../../../../translated_images/vi/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Những gì bạn sẽ thấy trong giao diện:**
 - **Thanh bên Explorer**: **Hiển thị** các tệp và cấu trúc thư mục của kho lưu trữ
@@ -448,7 +448,7 @@ Các tiện ích mở rộng cải thiện trải nghiệm phát triển của b
 **Kết quả ngay sau khi cài đặt:**
 Khi CodeSwing được cài đặt, bạn sẽ thấy một bản xem trước trực tiếp của website sơ yếu lý lịch xuất hiện trong trình chỉnh sửa. Điều này cho phép bạn thấy chính xác cách website của bạn trông như thế nào khi thực hiện các thay đổi.
 
-![Tiện ích CodeSwing hiển thị bản xem trước trực tiếp](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.vi.png)
+![Tiện ích CodeSwing hiển thị bản xem trước trực tiếp](../../../../translated_images/vi/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Hiểu giao diện được cải tiến:**
 - **Chế độ xem chia đôi**: **Hiển thị** mã của bạn ở một bên và bản xem trước trực tiếp ở bên kia

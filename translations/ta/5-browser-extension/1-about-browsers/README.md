@@ -25,7 +25,7 @@ journey
       பிழைகளைத் திருத்து: 4: Student
       அனுபவத்தை சீமை செய்யவும்: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.ta.jpg)
+![Browser sketchnote](../../../../translated_images/ta/browser.60317c9be8b7f84a.webp)
 > ஸ்கெட்நோட்: [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## முன்னேற்கல்வி வினாடி-வினா
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **சிறிய வரலாறு**: முதல் உலாவி 'WorldWideWeb' என்று அழைக்கப்பட்டது மற்றும் 1990-இல் சர Тимothy Berners-Lee உருவாக்கினார்.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.ta.jpg)
+![early browsers](../../../../translated_images/ta/earlybrowsers.d984b711cdf3a42d.webp)
 > சில ஆரம்ப உலாவிகள், [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing) மூலம்
 
 ### உலாவிகள் வலை உள்ளடக்கத்தை எப்படிச் செயலாக்குகின்றன
@@ -194,7 +194,7 @@ quadrantChart
 
 நீடிப்புரு நிறுவல் செயல்முறையைப் புரிந்துகொள்வது உங்கள் நீடிப்புரு பயனர் அனுபவத்தை கணிக்க உதவும். நிறுவல் செயல்முறை நவீன உலாவிகளில் ஒரே மாதிரியாக உள்ளது, இடைமுக வடிவமைப்பில் சிறிய வேறுபாடுகளுடன்.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.ta.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/ta/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **முக்கியம்**: உங்கள் நீடிப்புருகளை சோதிக்கும் போது உருவாக்குநர் முறையை இயக்கவும் மற்றும் பிற கடைகளிலிருந்து நீடிப்புருக்களை அனுமதிக்கவும்.
 
@@ -308,10 +308,10 @@ project-root/
 ### நீடிப்புரு பார்வை சுருக்கம்
 
 **அமைப்பு பார்வை** - முதல் முறையாக பயனர் அமைப்பு:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.ta.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/ta/1.b6da8c1394b07491.webp)
 
 **முடிவுகள் பார்வை** - கார்பன் பாதைபாதை தரவு காட்டுதல்:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.ta.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/ta/2.1dae52ff08042246.webp)
 
 ### அமைப்பு படிவத்தை உருவாக்குதல்
 

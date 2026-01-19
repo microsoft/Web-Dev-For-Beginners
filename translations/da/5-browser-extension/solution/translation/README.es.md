@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ved at bruge tmrow's CO2-signal API til at spore elforbrug, kan du oprette en browserudvidelse, der giver dig en påmindelse direkte i din browser om elforbruget i din region. Brug af denne ad hoc-udvidelse vil hjælpe dig med at træffe beslutninger om dine aktiviteter baseret på denne information.
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.da.png)
+![extension screenshot](../../../../../translated_images/da/extension-screenshot.352c4c3ba54e4041ad2f6af749d562cc5705f527b5826efd53d11c3528f5ae45.png)
 
 ## Kom godt i gang
 
@@ -31,7 +31,7 @@ npm run build
 
 For at installere i Edge skal du bruge menuen med 'tre prikker' i øverste højre hjørne af browseren for at finde panelet Udvidelser. Derfra skal du vælge 'Indlæs udpakket' for at tilføje en ny udvidelse. Åbn mappen 'dist', når du bliver bedt om det, og udvidelsen vil blive indlæst. For at bruge den skal du have en API-nøgle til CO2 Signal API ([få en her via e-mail](https://www.co2signal.com/) - indtast din e-mail i feltet på denne side) og koden for din region ([find den her](http://api.electricitymap.org/v3/zones)) svarende til [Electricity Map](https://www.electricitymap.org/map) (i Boston bruger jeg for eksempel 'US-NEISO').
 
-![installing](../../../../../translated_images/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.da.png)
+![installing](../../../../../translated_images/da/install-on-edge.8bd0ee3ca7dcda1c5334b5195603a43c864e3b38d088b03d57376d25e77b9459.png)
 
 Når API-nøglen og regionen er indtastet i udvidelsens grænseflade, bør farvepunktet i browserens udvidelsesbjælke ændre sig for at afspejle energiforbruget i din region og give dig en indikator for, hvilke aktiviteter med højt energiforbrug der ville være passende for dig. Konceptet bag dette "punkt"-system blev inspireret af [Energy Lollipop-udvidelsen](https://energylollipop.com/) for Californiens emissioner.
 

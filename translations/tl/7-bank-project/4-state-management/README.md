@@ -190,7 +190,7 @@ Ang [state management](https://en.wikipedia.org/wiki/State_management) ay tungko
 
 Sa halip na maguluhan, gagawa tayo ng **centralized state management** system. Isipin ito na parang may isang organisadong tao na namamahala sa lahat ng mahahalagang bagay:
 
-![Schema na nagpapakita ng daloy ng data sa pagitan ng HTML, mga aksyon ng user, at estado](../../../../translated_images/data-flow.fa2354e0908fecc8.tl.png)
+![Schema na nagpapakita ng daloy ng data sa pagitan ng HTML, mga aksyon ng user, at estado](../../../../translated_images/tl/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -803,7 +803,7 @@ Ang hamon na ito ay makakatulong sa iyo na mag-isip tulad ng isang propesyonal n
 
 Narito ang isang halimbawa ng resulta pagkatapos makumpleto ang assignment:
 
-![Screenshot na nagpapakita ng halimbawa ng "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.tl.png)
+![Screenshot na nagpapakita ng halimbawa ng "Add transaction" dialog](../../../../translated_images/tl/dialog.93bba104afeb79f1.webp)
 
 ---
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 In this project, you'll learn how to create a fictional bank. These lessons include instructions on designing a web app layout, setting up routes, building forms, managing state, and retrieving data from an API to access the bank's information.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.en.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.en.png) |
+| ![Screen1](../../../translated_images/en/screen1.baccbba0f1f93364672eb250d2fbd21574bb1caf79a2155022dc098a741cbdfe.png) | ![Screen2](../../../translated_images/en/screen2.123c82a831a1d14ab2061994be2fa5de9cec1ce651047217d326d4773a6348e4.png) |
 |--------------------------------|--------------------------------|
 
 ## Lessons

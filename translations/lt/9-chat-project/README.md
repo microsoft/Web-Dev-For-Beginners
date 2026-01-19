@@ -60,7 +60,7 @@ print(response.choices[0].message.content)
 
 Štai kaip atrodys jūsų baigtas projektas:
 
-![Pokalbių programos sąsaja rodanti naudotojo ir DI asistento pokalbį](../../../translated_images/screenshot.0a1ee0d123df681b.lt.png)
+![Pokalbių programos sąsaja rodanti naudotojo ir DI asistento pokalbį](../../../translated_images/lt/screenshot.0a1ee0d123df681b.webp)
 
 ## 🗺️ Jūsų mokymosi kelionė DI programų kūrime
 
@@ -189,7 +189,7 @@ mindmap
 ```
 **Pagrindinė taisyklė**: DI programų kūrimas derina tradicinius interneto kūrimo įgūdžius su DI paslaugų integracija, kuri formuoja protingas programas, kurios atrodo natūralios ir jautrios vartotojams.
 
-![GitHub Models AI Playground sąsaja su modelio pasirinkimu ir testavimo zona](../../../translated_images/playground.d2b927122224ff8f.lt.png)
+![GitHub Models AI Playground sąsaja su modelio pasirinkimu ir testavimo zona](../../../translated_images/lt/playground.d2b927122224ff8f.webp)
 
 **Kodėl žaidimų aikštelė tokia naudinga:**
 - **Išbandykite** skirtingus DI modelius kaip GPT-4o-mini, Claude ir kitus (visi nemokami!)
@@ -199,7 +199,7 @@ mindmap
 
 Kai šiek tiek pažaistumėte, tiesiog spustelėkite skirtuką „Code“ ir pasirinkite programavimo kalbą, kad gautumėte įgyvendinimo kodą, kurio jums prireiks.
 
-![Žaidimų aikštelės pasirinkimas su kodo generavimo galimybėmis skirtingomis programavimo kalbomis](../../../translated_images/playground-choice.1d23ba7d407f4758.lt.png)
+![Žaidimų aikštelės pasirinkimas su kodo generavimo galimybėmis skirtingomis programavimo kalbomis](../../../translated_images/lt/playground-choice.1d23ba7d407f4758.webp)
 
 ## Python backend integracijos nustatymas
 
@@ -2353,14 +2353,14 @@ Norite išbandyti šį projektą debesijos kūrimo aplinkoje? GitHub Codespaces 
 - **Eikite į** [Web Dev For Beginners saugyklą](https://github.com/microsoft/Web-Dev-For-Beginners)  
 - **Spauskite** „Use this template“ viršutiniame dešiniajame kampe (įsitikinkite, kad esate prisijungę prie GitHub)
 
-![Sukūrimo iš šablono sąsaja su žaliu mygtuku "Use this template"](../../../translated_images/template.67ad477109d29a2b.lt.png)
+![Sukūrimo iš šablono sąsaja su žaliu mygtuku "Use this template"](../../../translated_images/lt/template.67ad477109d29a2b.webp)
 
 **2 žingsnis: Paleiskite Codespaces**  
 - **Atidarykite** ką tik sukurtą saugyklą  
 - **Paspauskite** žalią "Code" mygtuką ir pasirinkite "Codespaces"  
 - **Pasirinkite** "Create codespace on main" pradėti kūrimo aplinką
 
-![Codespace kūrimo sąsaja su pasirinkimais debesijos kūrimo aplinkai paleisti](../../../translated_images/codespace.bcecbdf5d2747d3d.lt.png)
+![Codespace kūrimo sąsaja su pasirinkimais debesijos kūrimo aplinkai paleisti](../../../translated_images/lt/codespace.bcecbdf5d2747d3d.webp)
 
 **3 žingsnis: Aplinkos konfigūracija**  
 Kai Codespace pasikrauna, turėsite prieigą prie:  

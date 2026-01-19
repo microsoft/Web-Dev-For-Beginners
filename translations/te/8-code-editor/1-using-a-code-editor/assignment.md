@@ -78,7 +78,7 @@ VSCode.dev లో రిపోజిటరీ ఓపెన్ చేయడాన
 4. "Add initial HTML structure" అనే కమిట్ మెసేజ్ రాయండి  
 5. "Commit new file" క్లిక్ చేసి మీ మార్పులను సురక్షితం చేయండి  
 
-![Creating initial file on GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.te.png)
+![Creating initial file on GitHub](../../../../translated_images/te/new-file-github.com.c886796d800e8056.webp)
 
 **ఈ ప్రారంభ సెటప్ ఏమి అందిస్తుంది:**
 - సెమాంటిక్ అంశాలతో సరైన HTML5 డాక్యుమెంట్ నిర్మాణం ఏర్పాటు  
@@ -104,7 +104,7 @@ VSCode.dev లో రిపోజిటరీ ఓపెన్ చేయడాన
 
 ✅ **సక్సెస్ సూచిక**: ఎక్స్ప్లోరర్ సైడ్‌బార్‌లో మీ ప్రాజెక్ట్ ఫైళ్లు కనిపించాలి మరియు `index.html` ఎడిట్ చేయడానికి అందుబాటులో ఉండాలి.
 
-![Project loaded in VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.te.png)
+![Project loaded in VSCode.dev](../../../../translated_images/te/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **ఇంటర్‌ఫేస్‌లో మీరు చూడగలిగేది:**
 - **ఎక్స్ప్లోరర్ సైడ్‌బార్**: మీ రిపోజిటరీ ఫైళ్లను మరియు ఫోల్డర్ నిర్మాణాన్ని ప్రదర్శిస్తుంది  
@@ -449,7 +449,7 @@ li:before {
 **ఇన్‌స్టాలేషన్ తర్వాత తక్షణ ఫలితాలు:**
 CodeSwing ఇన్‌స్టాల్ అయిన వెంటనే, మీరు మీ రిజ్యూమ్ వెబ్‌సైట్ ప్రత్యక్ష ప్రివ్యూకు ఎడిటర్‌లో కనిపిస్తుంది. ఇది మార్పులు చేసినపుడు మీ సైట్ ఎలా కనిపిస్తోంది అనేది స్పష్టంగా చూసుకోవడానికీ సహాయపడుతుంది.
 
-![CodeSwing extension showing live preview](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.te.png)
+![CodeSwing extension showing live preview](../../../../translated_images/te/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **మెరుగైన ఇంటర్‌ఫేస్ అవగాహన:**
 - **స్ప్లిట్ వ్యూస్**: ఒకవైపు కోడ్, మరొకవైపు ప్రత్యక్ష ప్రివ్యూ చూపిస్తుంది  

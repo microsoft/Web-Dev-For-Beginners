@@ -187,7 +187,7 @@ mindmap
 
 Αντί να κυνηγάμε την ουρά μας, θα δημιουργήσουμε ένα **κεντρικό σύστημα διαχείρισης κατάστασης**. Σκεφτείτε το σαν να έχετε ένα πραγματικά οργανωμένο άτομο υπεύθυνο για όλα τα σημαντικά:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.el.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/el/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 Εδώ ένα παράδειγμα αποτελέσματος μετά την ολοκλήρωση της ανάθεσης:
 
-![Στιγμιότυπο που δείχνει παράδειγμα διαλόγου "Προσθήκη συναλλαγής"](../../../../translated_images/dialog.93bba104afeb79f1.el.png)
+![Στιγμιότυπο που δείχνει παράδειγμα διαλόγου "Προσθήκη συναλλαγής"](../../../../translated_images/el/dialog.93bba104afeb79f1.webp)
 
 ---
 

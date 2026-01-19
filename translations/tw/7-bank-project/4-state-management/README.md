@@ -187,7 +187,7 @@ mindmap
 
 不用再東奔西跑，我們要建立一個**集中式狀態管理**系統。想像它是一位非常有組織的人，負責所有重要事項：
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.tw.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/tw/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ timeline
 
 完成作業後範例呈現：
 
-![截圖顯示範例「新增交易」對話框](../../../../translated_images/dialog.93bba104afeb79f1.tw.png)
+![截圖顯示範例「新增交易」對話框](../../../../translated_images/tw/dialog.93bba104afeb79f1.webp)
 
 ---
 

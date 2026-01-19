@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript Basis: Beslissingen nemen
 
-![JavaScript Basis - Beslissingen nemen](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.nl.png)
+![JavaScript Basis - Beslissingen nemen](../../../../translated_images/nl/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote door [Tomomi Imura](https://twitter.com/girlie_mac)
 

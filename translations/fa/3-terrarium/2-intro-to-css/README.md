@@ -29,7 +29,7 @@ journey
       طراحی واکنش‌گرا: 5: Student
       بازتاب‌های شیشه‌ای: 5: Student
 ```
-![معرفی CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.fa.png)
+![معرفی CSS](../../../../translated_images/fa/webdev101-css.3f7af5991bf53a20.webp)
 > اسکچ‌نوت توسط [تومومی ایمورا](https://twitter.com/girlie_mac)
 
 یادتان هست که تراریوم HTML شما چقدر ساده به نظر می‌رسید؟ CSS همان جایی است که آن ساختار ساده را به چیزی جذاب و دیدنی تبدیل می‌کنیم.
@@ -202,7 +202,7 @@ body {
 
 ابزار توسعه‌دهنده مرورگر خود را باز کنید (F12)، به تب Elements بروید و عنصر `<h1>` خود را بررسی کنید. خواهید دید که خانواده فونت را از body به ارث می‌برد:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.fa.png)
+![inherited font](../../../../translated_images/fa/1.cc07a5cbe114ad1d.webp)
 
 ✅ **زمان آزمایش**: سعی کنید ویژگی‌های ارث‌برنده دیگری مانند `color`، `line-height` یا `text-align` را روی `<body>` تنظیم کنید. چه اتفاقی برای عنوان و سایر عناصر می‌افتد؟
 
@@ -332,7 +332,7 @@ h1 {
 **اینجا ساختار HTML برای هر گیاه است:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.fa.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/fa/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 شما نقاط برجسته ملایمی ایجاد خواهید کرد که بازتاب نور از سطوح شیشه را شبیه‌سازی می‌کند. این روش مشابه نحوه استفاده نقاشان رنسانس مانند جان فان آیک از نور و بازتاب برای واقعی به نظر رسیدن شیشه نقاشی شده است. هدف شما این است:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.fa.png)
+![finished terrarium](../../../../translated_images/fa/terrarium-final.2f07047ffc597d0a.webp)
 
 **چالش شما:**  
 - **ایجاد** اشکال بیضی سفید یا رنگ روشن برای بازتاب شیشه  

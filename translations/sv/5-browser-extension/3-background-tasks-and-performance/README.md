@@ -123,7 +123,7 @@ För att öppna utvecklarverktygen i Edge klickar du på de tre prickarna uppe t
 
 Låt oss prova. Öppna en webbplats (Microsoft.com fungerar bra för detta) och klicka på 'Spela in'-knappen. Uppdatera sidan och se hur profileraren fångar allt som händer. När du stoppar inspelningen ser du en detaljerad sammanställning av hur webbläsaren 'skriver skript', 'renderar' och 'målar' sidan. Det påminner om hur mission control övervakar varje system under en raketuppskjutning – du får realtidsdata på exakt vad som händer och när.
 
-![Edge profilerer](../../../../translated_images/profiler.5a4a62479c5df01c.sv.png)
+![Edge profilerer](../../../../translated_images/sv/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Microsoft Dokumentationen](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) har massor mer detaljer om du vill fördjupa dig
 
@@ -133,11 +133,11 @@ Välj delar av profiler-tidslinjen för att zooma in på händelser som sker med
 
 Få en ögonblicksbild av din sidas prestanda genom att välja en del av profiler-tidslinjen och titta i sammanfattningspanelen:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.sv.png)
+![Edge profiler snapshot](../../../../translated_images/sv/snapshot.97750180ebcad737.webp)
 
 Kolla i Event Log-panelen för att se om något event tog längre än 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.sv.png)
+![Edge event log](../../../../translated_images/sv/log.804026979f3707e0.webp)
 
 ✅ Lär känna din profiler! Öppna utvecklarverktygen på denna sida och se om det finns några flaskhalsar. Vad är den långsammaste tillgången att ladda? Den snabbaste?
 

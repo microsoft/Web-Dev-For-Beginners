@@ -17,7 +17,7 @@ Tazama, naelewa kabisa kama programu inakuletea hofu sasa hivi. Nilipoanza, nili
 
 Leo, tutaangalia zana za ajabu zinazofanya maendeleo ya wavuti wa kisasa siyo tu kuwawezekana, bali kuwa kitu cha kuvutia sana. Ninazungumzia wahariri, vivinjari na njia za kazi sawa na zile zinazotumika na waendelezaji wa Netflix, Spotify, na studio yako ya programu unayopenda kila siku. Na hapa ni sehemu itakayokupeleka kucheza kwa furaha: wengi wa zana hizi za kitaalamu za kiwango cha viwanda ni bure kabisa!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.sw.png)
+![Intro Programming](../../../../translated_images/sw/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

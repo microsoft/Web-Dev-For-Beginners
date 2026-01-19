@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### ক্রেডিটস
 
-![একটি সবুজ ব্রাউজার এক্সটেনশন](../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.bn.png)
+![একটি সবুজ ব্রাউজার এক্সটেনশন](../../../translated_images/bn/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## ক্রেডিটস
 

@@ -187,7 +187,7 @@ La [gestión de estado](https://en.wikipedia.org/wiki/State_management) trata re
 
 En lugar de perseguir nuestra cola, vamos a crear un sistema de **gestión de estado centralizada**. Piénsalo como tener una persona realmente organizada encargada de todas las cosas importantes:
 
-![Esquema que muestra el flujo de datos entre el HTML, acciones del usuario y estado](../../../../translated_images/data-flow.fa2354e0908fecc8.es.png)
+![Esquema que muestra el flujo de datos entre el HTML, acciones del usuario y estado](../../../../translated_images/es/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ Este desafío te ayudará a pensar como un desarrollador profesional que conside
 
 Aquí un ejemplo de resultado tras completar la tarea:
 
-![Captura de pantalla mostrando un ejemplo de diálogo "Agregar transacción"](../../../../translated_images/dialog.93bba104afeb79f1.es.png)
+![Captura de pantalla mostrando un ejemplo de diálogo "Agregar transacción"](../../../../translated_images/es/dialog.93bba104afeb79f1.webp)
 
 ---
 

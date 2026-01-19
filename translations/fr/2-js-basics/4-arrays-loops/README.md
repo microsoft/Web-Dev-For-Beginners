@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Les bases de JavaScript : Tableaux et Boucles
 
-![Les bases de JavaScript - Tableaux](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.fr.png)
+![Les bases de JavaScript - Tableaux](../../../../translated_images/fr/webdev101-js-arrays.439d7528b8a29455.webp)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

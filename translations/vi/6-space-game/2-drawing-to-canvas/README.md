@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![lưới của canvas](../../../../translated_images/canvas_grid.5f209da785ded492.vi.png)
+![lưới của canvas](../../../../translated_images/vi/canvas_grid.5f209da785ded492.webp)
 > Hình ảnh từ [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Để vẽ trên phần tử canvas, bạn sẽ làm theo quy trình ba bước giống nhau, tạo nền tảng cho tất cả đồ họa canvas. Một khi bạn làm điều này vài lần, nó sẽ trở thành bản năng:
@@ -329,11 +329,11 @@ Bạn sẽ xây dựng một trang web với một phần tử Canvas. Nó sẽ 
 
 - Tàu nhân vật chính
 
-   ![Tàu nhân vật chính](../../../../translated_images/player.dd24c1afa8c71e9b.vi.png)
+   ![Tàu nhân vật chính](../../../../translated_images/vi/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 quái vật
 
-   ![Tàu quái vật](../../../../translated_images/enemyShip.5df2a822c16650c2.vi.png)
+   ![Tàu quái vật](../../../../translated_images/vi/enemyShip.5df2a822c16650c2.webp)
 
 ### Các bước được khuyến nghị để bắt đầu phát triển
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Kết quả hoàn chỉnh sẽ trông như sau:  
 
-![Màn hình đen với một nhân vật chính và 5*5 quái vật](../../../../translated_images/partI-solution.36c53b48c9ffae2a.vi.png)  
+![Màn hình đen với một nhân vật chính và 5*5 quái vật](../../../../translated_images/vi/partI-solution.36c53b48c9ffae2a.webp)  
 
 ## Giải pháp  
 

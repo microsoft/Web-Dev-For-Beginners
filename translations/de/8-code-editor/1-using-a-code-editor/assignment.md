@@ -78,7 +78,7 @@ Da VSCode.dev mindestens eine Datei im Repository zum Öffnen benötigt, erstell
 4. **Schreibe** eine Commit-Botschaft: "Add initial HTML structure"
 5. **Klicke** auf "Commit new file", um deine Änderungen zu speichern
 
-![Erstellung der initialen Datei auf GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.de.png)
+![Erstellung der initialen Datei auf GitHub](../../../../translated_images/de/new-file-github.com.c886796d800e8056.webp)
 
 **Folgendes erreicht diese initiale Einrichtung:**
 - **Stellt** eine korrekte HTML5-Dokumentenstruktur mit semantischen Elementen bereit
@@ -105,7 +105,7 @@ Jetzt, wo dein Repository-Grundgerüst steht, wechseln wir zu VSCode.dev für di
 
 ✅ **Erfolgsanzeige**: Du solltest deine Projektdateien in der Explorer-Seitenleiste sehen und `index.html` im Haupteditor-Bereich zur Bearbeitung verfügbar haben.
 
-![Projekt geladen in VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.de.png)
+![Projekt geladen in VSCode.dev](../../../../translated_images/de/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Das siehst du in der Benutzeroberfläche:**
 - **Explorer-Seitenleiste**: Zeigt deine Repository-Dateien und Ordnerstruktur an
@@ -450,7 +450,7 @@ Erweiterungen verbessern dein Entwicklungserlebnis, indem sie Live-Preview-Funkt
 **Sofortige Ergebnisse nach Installation:**
 Sobald CodeSwing installiert ist, erscheint eine Live-Vorschau deiner Lebenslauf-Website im Editor. So siehst du genau, wie deine Seite während der Bearbeitung aussieht.
 
-![CodeSwing-Erweiterung zeigt Livevorschau](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.de.png)
+![CodeSwing-Erweiterung zeigt Livevorschau](../../../../translated_images/de/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Verständnis der erweiterten Oberfläche:**
 - **Split-Ansicht**: Zeigt deinen Code auf einer Seite und die Live-Vorschau auf der anderen

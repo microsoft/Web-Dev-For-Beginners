@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 This lesson introduces the basics of GitHub, a platform for hosting and managing changes to your code.
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.en.png)
+![Intro to GitHub](../../../../translated_images/en/webdev101-github.8846d7971abef6f947909b4f9d343e2a23778aa716ca6b9d71df7174ee5009ac.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
@@ -289,7 +289,7 @@ First, find a repository (or **repo**) on GitHub that interests you and to which
 
 ✅ A great way to find 'beginner-friendly' repositories is to [search by the tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copy a repo locally](../../../../translated_images/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.en.png)
+![Copy a repo locally](../../../../translated_images/en/clone_repo.5085c48d666ead57664f050d806e325d7f883be6838c821e08bc823ab7c66665.png)
 
 There are several ways to copy code. One way is to "clone" the repository’s contents using HTTPS, SSH, or the GitHub CLI (Command Line Interface).
 

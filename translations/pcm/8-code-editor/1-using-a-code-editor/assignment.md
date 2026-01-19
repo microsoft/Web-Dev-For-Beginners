@@ -78,7 +78,7 @@ Because VSCode.dev need at least one file to open repository, we go create our m
 4. **Write** commit message: "Add initial HTML structure"
 5. **Click** "Commit new file" to save your work
 
-![Creating initial file on GitHub](../../../../translated_images/new-file-github.com.c886796d800e8056.pcm.png)
+![Creating initial file on GitHub](../../../../translated_images/pcm/new-file-github.com.c886796d800e8056.webp)
 
 **Wetin this initial setup dey do:**
 - **Establishes** correct HTML5 document structure with semantic elements
@@ -104,7 +104,7 @@ Now we don set your repository foundation, make we move go VSCode.dev to do the 
 
 ✅ **Success indicator**: You go see your project files for Explorer sidebar and `index.html` ready for editing for main editor
 
-![Project loaded in VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.pcm.png)
+![Project loaded in VSCode.dev](../../../../translated_images/pcm/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Wetin you go see for interface:**
 - **Explorer sidebar**: **Shows** your repository files and folder structure
@@ -448,7 +448,7 @@ Extensions go improve your development experience by giving live preview and bet
 **After you install am immediately:**
 You go see live preview of your resume website inside editor. This one go help you see exactly how your site dey look as you dey make changes.
 
-![CodeSwing extension showing live preview](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.pcm.png)
+![CodeSwing extension showing live preview](../../../../translated_images/pcm/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **How the new interface dey work:**
 - **Split view**: **Show** your code for one side and live preview for the other

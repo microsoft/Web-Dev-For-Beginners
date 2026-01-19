@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 我们将一步步一起出发。没有急躁，没有压力——只有你我和一些即将成为你新朋友的酷炫工具！
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.zh.png)
+![Intro to GitHub](../../../../translated_images/zh/webdev101-github.8846d7971abef6f9.webp)
 > 速记图由 [Tomomi Imura](https://twitter.com/girlie_mac) 制作
 
 ```mermaid
@@ -604,7 +604,7 @@ flowchart TD
 
 ✅ 一个很好的寻找“初学者友好”仓库的方法是[通过“good-first-issue”标签搜索](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/)。
 
-![在本地复制仓库](../../../../translated_images/clone_repo.5085c48d666ead57.zh.png)
+![在本地复制仓库](../../../../translated_images/zh/clone_repo.5085c48d666ead57.webp)
 
 有几种方式可以复制代码。一种是使用 HTTPS、SSH，或者 GitHub CLI（命令行界面）“克隆”仓库内容。
 

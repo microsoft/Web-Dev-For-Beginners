@@ -112,7 +112,7 @@ Vaata [serveri API dokumentatsiooni](../api/README.md) kohta:
 **Oodatav tulemus:**
 Pärast selle ülesande lõpetamist peaks su pangarakendus omama täielikult toimivat "Lisa tehing" funktsionaalsust, mis näeb välja ja toimib professionaalselt:
 
-![Ekraanipilt näidates eeskuju "Lisa tehing" dialoogist](../../../../translated_images/dialog.93bba104afeb79f1.et.png)
+![Ekraanipilt näidates eeskuju "Lisa tehing" dialoogist](../../../../translated_images/et/dialog.93bba104afeb79f1.webp)
 
 ## Oma rakenduse testimine
 

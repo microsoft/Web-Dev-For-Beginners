@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Asas JavaScript: Membuat Keputusan
 
-![Asas JavaScript - Membuat keputusan](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ms.png)
+![Asas JavaScript - Membuat keputusan](../../../../translated_images/ms/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 

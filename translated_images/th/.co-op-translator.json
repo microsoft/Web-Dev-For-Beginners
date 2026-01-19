@@ -1,0 +1,860 @@
+{
+  "1.b6da8c1394b07491.webp": {
+    "original_hash": "6b12479c2e6a54160867fa8945c04082",
+    "translation_date": "2026-01-15T18:34:19+00:00",
+    "source_file": "5-browser-extension/1-about-browsers/images/1.png",
+    "language_code": "th"
+  },
+  "1.cc07a5cbe114ad1d.webp": {
+    "original_hash": "fc436b6749801dd90d0558ae92d56b60",
+    "translation_date": "2026-01-15T18:38:37+00:00",
+    "source_file": "3-terrarium/2-intro-to-css/images/1.png",
+    "language_code": "th"
+  },
+  "2.1dae52ff08042246.webp": {
+    "original_hash": "3995628a6a986308859d0cb6eed8d787",
+    "translation_date": "2026-01-15T18:33:49+00:00",
+    "source_file": "5-browser-extension/1-about-browsers/images/2.png",
+    "language_code": "th"
+  },
+  "after-codeswing-extension-pb.0ebddddcf73b5509.webp": {
+    "original_hash": "861d59ec65a7334c5f3a4c02dfe22ceb",
+    "translation_date": "2026-01-15T18:29:21+00:00",
+    "source_file": "8-code-editor/images/after-codeswing-extension-pb.png",
+    "language_code": "th"
+  },
+  "background.148a8d43afde5730.webp": {
+    "original_hash": "5a50f015fb466782c69063ffebb256de",
+    "translation_date": "2026-01-15T18:22:43+00:00",
+    "source_file": "images/background.png",
+    "language_code": "th"
+  },
+  "backgroundColor.e19c3c60768150c8.webp": {
+    "original_hash": "b3e10fe033f615ec9d3580cce61eae09",
+    "translation_date": "2026-01-15T18:32:38+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/Background/backgroundColor.png",
+    "language_code": "th"
+  },
+  "browser-console.efaf0b51aaaf6778.webp": {
+    "original_hash": "8d6c5077d1f133d27c65c0014ef503a9",
+    "translation_date": "2026-01-15T18:35:05+00:00",
+    "source_file": "7-bank-project/2-forms/images/browser-console.png",
+    "language_code": "th"
+  },
+  "browser.60317c9be8b7f84a.webp": {
+    "original_hash": "aa4461fec006d86899864d991b50cc74",
+    "translation_date": "2026-01-15T18:23:06+00:00",
+    "source_file": "sketchnotes/browser.jpg",
+    "language_code": "th"
+  },
+  "canvas.fbd605ff8e5b8aff.webp": {
+    "original_hash": "29556305738d345dd023554d788d5477",
+    "translation_date": "2026-01-15T18:21:09+00:00",
+    "source_file": "teaching-files/canvas.png",
+    "language_code": "th"
+  },
+  "canvas_grid.5f209da785ded492.webp": {
+    "original_hash": "8da354720ffbfd778571aa17402de890",
+    "translation_date": "2026-01-15T18:32:07+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/canvas_grid.png",
+    "language_code": "th"
+  },
+  "character.5c0dd8e067ffd693.webp": {
+    "original_hash": "076bbb4d25a17982c81973b8dba9d4fa",
+    "translation_date": "2026-01-15T18:22:29+00:00",
+    "source_file": "images/character.png",
+    "language_code": "th"
+  },
+  "click-register.e89a30bf0d4bc9ca.webp": {
+    "original_hash": "ef9688313524664fad6ab9b0e080c758",
+    "translation_date": "2026-01-15T18:34:48+00:00",
+    "source_file": "7-bank-project/2-forms/images/click-register.png",
+    "language_code": "th"
+  },
+  "clone_repo.5085c48d666ead57.webp": {
+    "original_hash": "28c00f3d5861ab95d188b4f6a2d337df",
+    "translation_date": "2026-01-15T18:38:42+00:00",
+    "source_file": "1-getting-started-lessons/2-github-basics/images/clone_repo.png",
+    "language_code": "th"
+  },
+  "clone_repo.6a202fb230ab6bdd.webp": {
+    "original_hash": "9261d014674312eece91deae958538cf",
+    "translation_date": "2026-01-15T18:22:36+00:00",
+    "source_file": "images/clone_repo.png",
+    "language_code": "th"
+  },
+  "codespace.bcecbdf5d2747d3d.webp": {
+    "original_hash": "ff86a65511122ddb448e092969566b0a",
+    "translation_date": "2026-01-15T18:38:48+00:00",
+    "source_file": "9-chat-project/assets/codespace.png",
+    "language_code": "th"
+  },
+  "create-a-fork.297ab42b4bd0af99.webp": {
+    "original_hash": "10712b80e3dcfa7c44fb8820a6ff3ad3",
+    "translation_date": "2026-01-15T18:30:07+00:00",
+    "source_file": "8-code-editor/images/create-a-fork.png",
+    "language_code": "th"
+  },
+  "create-new-file-pb.0797800d977ec3eb.webp": {
+    "original_hash": "c149c42e04132f2409651425d6924ffa",
+    "translation_date": "2026-01-15T18:28:30+00:00",
+    "source_file": "8-code-editor/images/create-new-file-pb.png",
+    "language_code": "th"
+  },
+  "create-new-file.2814e609c2af9aeb.webp": {
+    "original_hash": "cf6df76faeac2d92904e5d877b7bdf69",
+    "translation_date": "2026-01-15T18:28:23+00:00",
+    "source_file": "8-code-editor/images/create-new-file.png",
+    "language_code": "th"
+  },
+  "createcodespace.0238bbf4d7a8d955.webp": {
+    "original_hash": "4f504323085308f4a0e7b5bfb37e16d7",
+    "translation_date": "2026-01-15T18:22:16+00:00",
+    "source_file": "images/createcodespace.png",
+    "language_code": "th"
+  },
+  "data-flow.fa2354e0908fecc8.webp": {
+    "original_hash": "c9b82b42fa1973b3b7bfad9c7128c24c",
+    "translation_date": "2026-01-15T18:35:30+00:00",
+    "source_file": "7-bank-project/4-state-management/images/data-flow.png",
+    "language_code": "th"
+  },
+  "default-vscode-dev.5d06881d65c1b323.webp": {
+    "original_hash": "146fecc3a9da37cb1d5c9d628cd94996",
+    "translation_date": "2026-01-15T18:31:06+00:00",
+    "source_file": "8-code-editor/images/default-vscode-dev.png",
+    "language_code": "th"
+  },
+  "dialog.93bba104afeb79f1.webp": {
+    "original_hash": "c56b5ad7eb8c4df4b3ed8a99bf67e6e2",
+    "translation_date": "2026-01-15T18:35:24+00:00",
+    "source_file": "7-bank-project/4-state-management/images/dialog.png",
+    "language_code": "th"
+  },
+  "dom-tree.7daf0e763cbbba92.webp": {
+    "original_hash": "579f4ae298ff15a357def7f442671847",
+    "translation_date": "2026-01-15T18:35:45+00:00",
+    "source_file": "3-terrarium/3-intro-to-DOM-and-closures/images/dom-tree.png",
+    "language_code": "th"
+  },
+  "earlybrowsers.d984b711cdf3a42d.webp": {
+    "original_hash": "810a4d2348668e25289029c5cfcb67bd",
+    "translation_date": "2026-01-15T18:33:39+00:00",
+    "source_file": "5-browser-extension/1-about-browsers/images/earlybrowsers.jpg",
+    "language_code": "th"
+  },
+  "edit-a-file-pb.263555922c14fc52.webp": {
+    "original_hash": "5c52723d35259eadd110d0c720a87b04",
+    "translation_date": "2026-01-15T18:30:31+00:00",
+    "source_file": "8-code-editor/images/edit-a-file-pb.png",
+    "language_code": "th"
+  },
+  "edit-a-file.52c0ee665ef19f08.webp": {
+    "original_hash": "c28903236d60be6bba3f3848ea368c63",
+    "translation_date": "2026-01-15T18:32:03+00:00",
+    "source_file": "8-code-editor/images/edit-a-file.png",
+    "language_code": "th"
+  },
+  "enemyShip.035a46787bff658c.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:24+00:00",
+    "source_file": "6-space-game/5-keeping-score/solution/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.1a1354d7988de290.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:21+00:00",
+    "source_file": "6-space-game/6-end-condition/solution/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.22cbee6ea27a5809.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:16+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/your-work/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.321ecb1b4eb21f2c.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:23+00:00",
+    "source_file": "6-space-game/5-keeping-score/your-work/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.4fbf2889e6129db4.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:19+00:00",
+    "source_file": "6-space-game/6-end-condition/your-work/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.5df2a822c16650c2.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:17+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/solution/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.62983ed4bfb2220f.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:46+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/solution/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.add7036e1c3c3014.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:14+00:00",
+    "source_file": "6-space-game/4-collision-detection/solution/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.b39a140287683bf7.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:44+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/your-work/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.b9626ed228a17a32.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:12+00:00",
+    "source_file": "6-space-game/4-collision-detection/your-work/assets/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyShip.deb0477a7312f54d.webp": {
+    "original_hash": "2a41854e0eaa974e8619298f3b333e11",
+    "translation_date": "2026-01-15T18:32:32+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/enemyShip.png",
+    "language_code": "th"
+  },
+  "enemyUFO.bf8585e4e8dcdb68.webp": {
+    "original_hash": "18198bef76e4882928e4092344d0fb98",
+    "translation_date": "2026-01-15T18:32:35+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/enemyUFO.png",
+    "language_code": "th"
+  },
+  "extension-details.9f8f1fd4e9eb2de5.webp": {
+    "original_hash": "f57d2e246e6ba8a58463d7573640d714",
+    "translation_date": "2026-01-15T18:31:51+00:00",
+    "source_file": "8-code-editor/images/extension-details.png",
+    "language_code": "th"
+  },
+  "extension-screenshot.0e7f5bfa110e92e3.webp": {
+    "original_hash": "4fdd1d3fdbc9ac2c2932f83847a5e4b8",
+    "translation_date": "2026-01-15T18:21:59+00:00",
+    "source_file": "5-browser-extension/extension-screenshot.png",
+    "language_code": "th"
+  },
+  "extension-settings.21c752ae4f4cdb78.webp": {
+    "original_hash": "fd7ebcb5d84c78047026ab3337908306",
+    "translation_date": "2026-01-15T18:28:45+00:00",
+    "source_file": "8-code-editor/images/extension-settings.png",
+    "language_code": "th"
+  },
+  "extensions.eca0e0c7f59a10b5.webp": {
+    "original_hash": "a6c9c8f51d3edd917262e53664f08441",
+    "translation_date": "2026-01-15T18:30:14+00:00",
+    "source_file": "8-code-editor/images/extensions.png",
+    "language_code": "th"
+  },
+  "favicon.37b561214b36d454.webp": {
+    "original_hash": "228faa6584f8ba1f7e9a75e3200112e9",
+    "translation_date": "2026-01-15T18:22:20+00:00",
+    "source_file": "images/favicon.png",
+    "language_code": "th"
+  },
+  "form-post.61de4ca1b964d91a.webp": {
+    "original_hash": "7e95c76a8ea2e82bceea70aae89f2360",
+    "translation_date": "2026-01-15T18:34:50+00:00",
+    "source_file": "7-bank-project/2-forms/images/form-post.png",
+    "language_code": "th"
+  },
+  "history.7fdabbafa521e064.webp": {
+    "original_hash": "445d71bea6a747dfe547df7eea846439",
+    "translation_date": "2026-01-15T18:34:27+00:00",
+    "source_file": "7-bank-project/1-template-route/history.png",
+    "language_code": "th"
+  },
+  "install-on-edge.78634f02842c4828.webp": {
+    "original_hash": "6224aad8f1cd252da83c2808ff5c7a4e",
+    "translation_date": "2026-01-15T18:21:39+00:00",
+    "source_file": "5-browser-extension/install-on-edge.png",
+    "language_code": "th"
+  },
+  "install-on-edge.d68781acaf0b3d3d.webp": {
+    "original_hash": "6224aad8f1cd252da83c2808ff5c7a4e",
+    "translation_date": "2026-01-15T18:34:04+00:00",
+    "source_file": "5-browser-extension/1-about-browsers/images/install-on-edge.png",
+    "language_code": "th"
+  },
+  "laserGreen.89904f0f49945560.webp": {
+    "original_hash": "ddf7102c86fc3ec46037714c60091851",
+    "translation_date": "2026-01-15T18:32:34+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/laserGreen.png",
+    "language_code": "th"
+  },
+  "laserGreenShot.e4fbfc4714c08a5b.webp": {
+    "original_hash": "cb6ed500c16736a41998e4cd0c467df7",
+    "translation_date": "2026-01-15T18:32:33+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/laserGreenShot.png",
+    "language_code": "th"
+  },
+  "laserRed.2040e11f55c0a40a.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:20+00:00",
+    "source_file": "6-space-game/6-end-condition/solution/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.381bc5555491ce67.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:44+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/your-work/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.69730edd76f0b3bd.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:18+00:00",
+    "source_file": "6-space-game/6-end-condition/your-work/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.b583dc1728eb8581.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:24+00:00",
+    "source_file": "6-space-game/5-keeping-score/solution/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.cae9ab24ea9b18fd.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:14+00:00",
+    "source_file": "6-space-game/4-collision-detection/solution/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.d81ce4986f87c251.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:32+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.e58ef8db2585dfbe.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:22+00:00",
+    "source_file": "6-space-game/5-keeping-score/your-work/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.e66e29ace6666064.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:45+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/solution/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRed.e86e8fb629c6026e.webp": {
+    "original_hash": "6f0626e9839beb9d9a82ff40699aabfd",
+    "translation_date": "2026-01-15T18:32:12+00:00",
+    "source_file": "6-space-game/4-collision-detection/your-work/assets/laserRed.png",
+    "language_code": "th"
+  },
+  "laserRedShot.c39d066745996a71.webp": {
+    "original_hash": "1f1048184aab9d405e9f7d067a57af01",
+    "translation_date": "2026-01-15T18:32:34+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/laserRedShot.png",
+    "language_code": "th"
+  },
+  "life.27144b6d4bfdea76.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:33+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/life.png",
+    "language_code": "th"
+  },
+  "life.2a159298dd98f4ef.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:24+00:00",
+    "source_file": "6-space-game/5-keeping-score/your-work/assets/life.png",
+    "language_code": "th"
+  },
+  "life.466df3b1692a244a.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:13+00:00",
+    "source_file": "6-space-game/4-collision-detection/your-work/assets/life.png",
+    "language_code": "th"
+  },
+  "life.65a2aaceca875284.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:15+00:00",
+    "source_file": "6-space-game/4-collision-detection/solution/assets/life.png",
+    "language_code": "th"
+  },
+  "life.6fb9f50d53ee0413.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:26+00:00",
+    "source_file": "6-space-game/5-keeping-score/solution/assets/life.png",
+    "language_code": "th"
+  },
+  "life.78b6e96a3003767e.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:20+00:00",
+    "source_file": "6-space-game/6-end-condition/your-work/assets/life.png",
+    "language_code": "th"
+  },
+  "life.86d843ce9c23289c.webp": {
+    "original_hash": "9a5d93e699071693b15b7b157f760a90",
+    "translation_date": "2026-01-15T18:32:22+00:00",
+    "source_file": "6-space-game/6-end-condition/solution/assets/life.png",
+    "language_code": "th"
+  },
+  "localstorage.472f8147b6a3f8d1.webp": {
+    "original_hash": "7706ccb87a13a08250f315f03140bc61",
+    "translation_date": "2026-01-15T18:32:50+00:00",
+    "source_file": "5-browser-extension/2-forms-browsers-local-storage/images/localstorage.png",
+    "language_code": "th"
+  },
+  "log.804026979f3707e0.webp": {
+    "original_hash": "4c5e39f339781db01641b77b6b2d6026",
+    "translation_date": "2026-01-15T18:33:32+00:00",
+    "source_file": "5-browser-extension/3-background-tasks-and-performance/images/log.png",
+    "language_code": "th"
+  },
+  "login-error.416fe019b36a6327.webp": {
+    "original_hash": "ea96ed372d7a4c37ee2df3f0352f79d1",
+    "translation_date": "2026-01-15T18:35:10+00:00",
+    "source_file": "7-bank-project/3-data/images/login-error.png",
+    "language_code": "th"
+  },
+  "meteorBig.1e452b3ad7af50ad.webp": {
+    "original_hash": "07f37816512f563dd68780fdee2e30a6",
+    "translation_date": "2026-01-15T18:32:31+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/meteorBig.png",
+    "language_code": "th"
+  },
+  "meteorSmall.0d729bc71c12d41f.webp": {
+    "original_hash": "ebabf6690cc614f9e33f019c356166fa",
+    "translation_date": "2026-01-15T18:32:31+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/meteorSmall.png",
+    "language_code": "th"
+  },
+  "moodle.94eb93d714a50cb2.webp": {
+    "original_hash": "0d04a6ef1ac524b452d5a0aae3f45bee",
+    "translation_date": "2026-01-15T18:20:47+00:00",
+    "source_file": "teaching-files/moodle.png",
+    "language_code": "th"
+  },
+  "mpa.7f7375a1a2d4aa77.webp": {
+    "original_hash": "021255b74f0b79b0c286c163c210ef3d",
+    "translation_date": "2026-01-15T18:35:14+00:00",
+    "source_file": "7-bank-project/3-data/images/mpa.png",
+    "language_code": "th"
+  },
+  "nebula.55c2933d36d035d3.webp": {
+    "original_hash": "e0fa4f86653c6fe97bc77271c46241c2",
+    "translation_date": "2026-01-15T18:32:43+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/Background/nebula.png",
+    "language_code": "th"
+  },
+  "new-file-github.com.c886796d800e8056.webp": {
+    "original_hash": "2e0ddd0dad4734e3968b70907df9c052",
+    "translation_date": "2026-01-15T18:31:18+00:00",
+    "source_file": "8-code-editor/images/new-file-github.com.png",
+    "language_code": "th"
+  },
+  "open-palette-menu.46dda01084738da8.webp": {
+    "original_hash": "1860e80bf0534b9d54ef0fcb7e1a9f9e",
+    "translation_date": "2026-01-15T18:31:00+00:00",
+    "source_file": "8-code-editor/images/open-palette-menu.png",
+    "language_code": "th"
+  },
+  "open-remote-repository.bd9c2598b8949e7f.webp": {
+    "original_hash": "777c01a9242da7d5d0e1b037df9c86f9",
+    "translation_date": "2026-01-15T18:30:11+00:00",
+    "source_file": "8-code-editor/images/open-remote-repository.png",
+    "language_code": "th"
+  },
+  "palette-menu.4946174e07f42622.webp": {
+    "original_hash": "7387b91076790084ec8828866e88c6ce",
+    "translation_date": "2026-01-15T18:30:56+00:00",
+    "source_file": "8-code-editor/images/palette-menu.png",
+    "language_code": "th"
+  },
+  "partI-solution.36c53b48c9ffae2a.webp": {
+    "original_hash": "fbbd263368f61f8ed3a86c4571e6810b",
+    "translation_date": "2026-01-15T18:32:10+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/partI-solution.png",
+    "language_code": "th"
+  },
+  "plant1.a876180d8659acb9.webp": {
+    "original_hash": "e08f9b0f46f6d9d7c9949d4c3e590694",
+    "translation_date": "2026-01-15T18:36:44+00:00",
+    "source_file": "3-terrarium/solution/images/plant1.png",
+    "language_code": "th"
+  },
+  "plant10.2f2c47804ae52dd3.webp": {
+    "original_hash": "dba97454882c2796c52a33c403db61f7",
+    "translation_date": "2026-01-15T18:37:28+00:00",
+    "source_file": "3-terrarium/solution/images/plant10.png",
+    "language_code": "th"
+  },
+  "plant11.0ce0081b0ef17aa1.webp": {
+    "original_hash": "68346dbd1ae03331b0a87025c3e8e9e2",
+    "translation_date": "2026-01-15T18:37:15+00:00",
+    "source_file": "3-terrarium/solution/images/plant11.png",
+    "language_code": "th"
+  },
+  "plant12.6b934c4312a00228.webp": {
+    "original_hash": "dafacde8e7a0b56c4baaabe88b4f90e2",
+    "translation_date": "2026-01-15T18:38:25+00:00",
+    "source_file": "3-terrarium/solution/images/plant12.png",
+    "language_code": "th"
+  },
+  "plant13.37d6ab2e2481421f.webp": {
+    "original_hash": "5cac561d7596ee631c4d02436d8f6998",
+    "translation_date": "2026-01-15T18:37:40+00:00",
+    "source_file": "3-terrarium/solution/images/plant13.png",
+    "language_code": "th"
+  },
+  "plant14.908791477a46eb7f.webp": {
+    "original_hash": "349b8e5a33d1221bef4a4ac3bb439bb9",
+    "translation_date": "2026-01-15T18:36:53+00:00",
+    "source_file": "3-terrarium/solution/images/plant14.png",
+    "language_code": "th"
+  },
+  "plant2.9e45efea224115b0.webp": {
+    "original_hash": "24beefd3dcca66085b44d3ae5d9758e1",
+    "translation_date": "2026-01-15T18:38:16+00:00",
+    "source_file": "3-terrarium/solution/images/plant2.png",
+    "language_code": "th"
+  },
+  "plant3.06efdd0fa0c4b115.webp": {
+    "original_hash": "7e40e6f14cf52f7d75ed42320817b044",
+    "translation_date": "2026-01-15T18:38:00+00:00",
+    "source_file": "3-terrarium/solution/images/plant3.png",
+    "language_code": "th"
+  },
+  "plant4.3b78072b427727c6.webp": {
+    "original_hash": "c523205855d0691a9a0161c6abca983c",
+    "translation_date": "2026-01-15T18:37:52+00:00",
+    "source_file": "3-terrarium/solution/images/plant4.png",
+    "language_code": "th"
+  },
+  "plant5.8ec58b18ac336fa8.webp": {
+    "original_hash": "bcf5f2eacd7da3fe6b07c857d7f5a2ce",
+    "translation_date": "2026-01-15T18:38:07+00:00",
+    "source_file": "3-terrarium/solution/images/plant5.png",
+    "language_code": "th"
+  },
+  "plant6.ca4ff8372e6676b1.webp": {
+    "original_hash": "6932fdb455fcae5b324b129367d2f56a",
+    "translation_date": "2026-01-15T18:37:05+00:00",
+    "source_file": "3-terrarium/solution/images/plant6.png",
+    "language_code": "th"
+  },
+  "plant7.194d5a42fcf5a88c.webp": {
+    "original_hash": "b7a1e35f9946cb04440ce620c34f201d",
+    "translation_date": "2026-01-15T18:36:00+00:00",
+    "source_file": "3-terrarium/solution/images/plant7.png",
+    "language_code": "th"
+  },
+  "plant8.7b247809ab0eb492.webp": {
+    "original_hash": "3eb38c747aaf33ce7aa70b58a31b62a8",
+    "translation_date": "2026-01-15T18:36:28+00:00",
+    "source_file": "3-terrarium/solution/images/plant8.png",
+    "language_code": "th"
+  },
+  "plant9.8fe614c01ded1b1e.webp": {
+    "original_hash": "a9655c162938a27c63d48ac675061e2b",
+    "translation_date": "2026-01-15T18:36:13+00:00",
+    "source_file": "3-terrarium/solution/images/plant9.png",
+    "language_code": "th"
+  },
+  "player.137ee0e47f895ffc.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:21+00:00",
+    "source_file": "6-space-game/6-end-condition/solution/assets/player.png",
+    "language_code": "th"
+  },
+  "player.2887422f6982c3cd.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:23+00:00",
+    "source_file": "6-space-game/5-keeping-score/your-work/assets/player.png",
+    "language_code": "th"
+  },
+  "player.391fed427ede24f5.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:25+00:00",
+    "source_file": "6-space-game/5-keeping-score/solution/assets/player.png",
+    "language_code": "th"
+  },
+  "player.3c4f50182552a73a.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:45+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/your-work/assets/player.png",
+    "language_code": "th"
+  },
+  "player.47bc9de0714c723d.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:17+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/your-work/assets/player.png",
+    "language_code": "th"
+  },
+  "player.57b3107c03012695.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:33+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/player.png",
+    "language_code": "th"
+  },
+  "player.606f85953e5e564e.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:19+00:00",
+    "source_file": "6-space-game/6-end-condition/your-work/assets/player.png",
+    "language_code": "th"
+  },
+  "player.680ea4c619b54fe1.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:13+00:00",
+    "source_file": "6-space-game/4-collision-detection/your-work/assets/player.png",
+    "language_code": "th"
+  },
+  "player.bfe14f110bddf56d.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:46+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/solution/assets/player.png",
+    "language_code": "th"
+  },
+  "player.c99c25d54a615ca0.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:15+00:00",
+    "source_file": "6-space-game/4-collision-detection/solution/assets/player.png",
+    "language_code": "th"
+  },
+  "player.dd24c1afa8c71e9b.webp": {
+    "original_hash": "952e66c2dd458cfd6e82052f7123a97b",
+    "translation_date": "2026-01-15T18:32:18+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/solution/assets/player.png",
+    "language_code": "th"
+  },
+  "playerDamaged.181703f652fd5176.webp": {
+    "original_hash": "9d71aebe7303edd536064fb0f5e2ae82",
+    "translation_date": "2026-01-15T18:32:37+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/playerDamaged.png",
+    "language_code": "th"
+  },
+  "playerLeft.0f928412e66ba5d9.webp": {
+    "original_hash": "40a42047b8ee49c6dd87c981e98d4d2e",
+    "translation_date": "2026-01-15T18:32:38+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/playerLeft.png",
+    "language_code": "th"
+  },
+  "playerRight.e4825f489e29f737.webp": {
+    "original_hash": "1c7b03f73e1d6ed74955357680cb05cb",
+    "translation_date": "2026-01-15T18:32:37+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/playerRight.png",
+    "language_code": "th"
+  },
+  "playground-choice.1d23ba7d407f4758.webp": {
+    "original_hash": "1c2e88cad7aad10922b4de1e87f1a47f",
+    "translation_date": "2026-01-15T18:39:18+00:00",
+    "source_file": "9-chat-project/assets/playground-choice.png",
+    "language_code": "th"
+  },
+  "playground.d2b927122224ff8f.webp": {
+    "original_hash": "4152bb8cd5f23e73d58b3beb52919477",
+    "translation_date": "2026-01-15T18:39:00+00:00",
+    "source_file": "9-chat-project/assets/playground.png",
+    "language_code": "th"
+  },
+  "preview.9215f0a010074476.webp": {
+    "original_hash": "6eaab6a69de1fa433e822578652c7287",
+    "translation_date": "2026-01-15T18:32:28+00:00",
+    "source_file": "6-space-game/solution/spaceArt/preview.jpg",
+    "language_code": "th"
+  },
+  "profiler.5a4a62479c5df01c.webp": {
+    "original_hash": "40b8a4d9f47e2f3e18aa2e814a15356c",
+    "translation_date": "2026-01-15T18:33:10+00:00",
+    "source_file": "5-browser-extension/3-background-tasks-and-performance/images/profiler.png",
+    "language_code": "th"
+  },
+  "project-on-vscode.dev.e79815a9a95ee7fe.webp": {
+    "original_hash": "35de4bc32ea66a11f919671558e07d52",
+    "translation_date": "2026-01-15T18:31:11+00:00",
+    "source_file": "8-code-editor/images/project-on-vscode.dev.png",
+    "language_code": "th"
+  },
+  "result.96ef01f607bf856a.webp": {
+    "original_hash": "e83c44a0fcaa7720ce32eb71d53d5250",
+    "translation_date": "2026-01-15T18:34:59+00:00",
+    "source_file": "7-bank-project/2-forms/images/result.png",
+    "language_code": "th"
+  },
+  "screen1.baccbba0f1f93364.webp": {
+    "original_hash": "92c8fa2dbe566c4e19c98a9e7de6faa6",
+    "translation_date": "2026-01-15T18:34:32+00:00",
+    "source_file": "7-bank-project/images/screen1.png",
+    "language_code": "th"
+  },
+  "screen2.123c82a831a1d14a.webp": {
+    "original_hash": "43b7f2857d5f758394e443df8fbc31cf",
+    "translation_date": "2026-01-15T18:34:43+00:00",
+    "source_file": "7-bank-project/images/screen2.png",
+    "language_code": "th"
+  },
+  "screenshot.0a1ee0d123df681b.webp": {
+    "original_hash": "f909b463a14ff6542a816470f68bfac3",
+    "translation_date": "2026-01-15T18:39:33+00:00",
+    "source_file": "9-chat-project/assets/screenshot.png",
+    "language_code": "th"
+  },
+  "screenshot.e7a5ad659e364568.webp": {
+    "original_hash": "c562c1fdc9d73658456e02b873e4dff9",
+    "translation_date": "2026-01-15T18:22:51+00:00",
+    "source_file": "images/screenshot.png",
+    "language_code": "th"
+  },
+  "screenshot_gray.0c796099a1f9f25e.webp": {
+    "original_hash": "324b7bff7867c38e100d0acad18ed53d",
+    "translation_date": "2026-01-15T18:35:34+00:00",
+    "source_file": "3-terrarium/images/screenshot_gray.png",
+    "language_code": "th"
+  },
+  "shield.1b9412b7ca6610ab.webp": {
+    "original_hash": "a672dc1a5f905918272bb58f1e236340",
+    "translation_date": "2026-01-15T18:32:36+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/shield.png",
+    "language_code": "th"
+  },
+  "snapshot.97750180ebcad737.webp": {
+    "original_hash": "9db2fa7afcc1d258ec1a130cef145f94",
+    "translation_date": "2026-01-15T18:32:58+00:00",
+    "source_file": "5-browser-extension/3-background-tasks-and-performance/images/snapshot.png",
+    "language_code": "th"
+  },
+  "spa.268ec73b41f992c2.webp": {
+    "original_hash": "3d3d7273070c2ddab04458fbb084ad4a",
+    "translation_date": "2026-01-15T18:35:19+00:00",
+    "source_file": "7-bank-project/3-data/images/spa.png",
+    "language_code": "th"
+  },
+  "speedLine.5bcabb93f48b5ae1.webp": {
+    "original_hash": "ef791dbe8ea2e21cf697831e203803d5",
+    "translation_date": "2026-01-15T18:32:42+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/Background/speedLine.png",
+    "language_code": "th"
+  },
+  "spritesheet.bec82852290b14ee.webp": {
+    "original_hash": "d593b0f366e9efd2f2b3ef18e7eb2d0c",
+    "translation_date": "2026-01-15T18:32:11+00:00",
+    "source_file": "6-space-game/solution/spritesheet.png",
+    "language_code": "th"
+  },
+  "starBackground.a897b8acb1b0587d.webp": {
+    "original_hash": "cca00ba0b9e73859ab5bb928d5ca2fa2",
+    "translation_date": "2026-01-15T18:32:40+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/Background/starBackground.png",
+    "language_code": "th"
+  },
+  "starBig.72e9c6d0d18f363d.webp": {
+    "original_hash": "4e8f1abc8b48d75990117ea8b6207842",
+    "translation_date": "2026-01-15T18:32:39+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/Background/starBig.png",
+    "language_code": "th"
+  },
+  "starSmall.ed78b961dbcd0898.webp": {
+    "original_hash": "609bf88a971475818f95816b8cf71508",
+    "translation_date": "2026-01-15T18:32:42+00:00",
+    "source_file": "6-space-game/solution/spaceArt/png/Background/starSmall.png",
+    "language_code": "th"
+  },
+  "template.67ad477109d29a2b.webp": {
+    "original_hash": "a184e4c012fd4fca9ab3c552df87bd0c",
+    "translation_date": "2026-01-15T18:39:24+00:00",
+    "source_file": "9-chat-project/assets/template.png",
+    "language_code": "th"
+  },
+  "terrarium-final.0920f16e87c13a84.webp": {
+    "original_hash": "324b7bff7867c38e100d0acad18ed53d",
+    "translation_date": "2026-01-15T18:35:53+00:00",
+    "source_file": "3-terrarium/3-intro-to-DOM-and-closures/images/terrarium-final.png",
+    "language_code": "th"
+  },
+  "terrarium-final.2f07047ffc597d0a.webp": {
+    "original_hash": "c669f9222e16690bb2015ce86bb4739c",
+    "translation_date": "2026-01-15T18:38:31+00:00",
+    "source_file": "3-terrarium/2-intro-to-css/images/terrarium-final.png",
+    "language_code": "th"
+  },
+  "validation-error.8bd23e98d416c22f.webp": {
+    "original_hash": "d614ce6b24e2583901da9038297fe327",
+    "translation_date": "2026-01-15T18:34:55+00:00",
+    "source_file": "7-bank-project/2-forms/images/validation-error.png",
+    "language_code": "th"
+  },
+  "vs-code-index.e2986cf919471eb9.webp": {
+    "original_hash": "ed8437cb2629b95551fff5e5d72ef4f5",
+    "translation_date": "2026-01-15T18:35:38+00:00",
+    "source_file": "3-terrarium/1-intro-to-html/images/vs-code-index.png",
+    "language_code": "th"
+  },
+  "webdev101-a11y.8ef3025c858d897a.webp": {
+    "original_hash": "3f5220c5d502a906028b8a85245cc6da",
+    "translation_date": "2026-01-15T18:26:43+00:00",
+    "source_file": "sketchnotes/webdev101-a11y.png",
+    "language_code": "th"
+  },
+  "webdev101-css.3f7af5991bf53a20.webp": {
+    "original_hash": "9de1dc14864697c82395b02f31a72aec",
+    "translation_date": "2026-01-15T18:25:25+00:00",
+    "source_file": "sketchnotes/webdev101-css.png",
+    "language_code": "th"
+  },
+  "webdev101-github.8846d7971abef6f9.webp": {
+    "original_hash": "412ec8fc404fead25f314e2fdb564548",
+    "translation_date": "2026-01-15T18:25:00+00:00",
+    "source_file": "sketchnotes/webdev101-github.png",
+    "language_code": "th"
+  },
+  "webdev101-html.4389c2067af68e98.webp": {
+    "original_hash": "23bf24ecb0e72f0c6c835824dec5ee54",
+    "translation_date": "2026-01-15T18:23:38+00:00",
+    "source_file": "sketchnotes/webdev101-html.png",
+    "language_code": "th"
+  },
+  "webdev101-js-arrays.439d7528b8a29455.webp": {
+    "original_hash": "564c9e2d7f8e5a3b7e23570df300c732",
+    "translation_date": "2026-01-15T18:28:06+00:00",
+    "source_file": "sketchnotes/webdev101-js-arrays.png",
+    "language_code": "th"
+  },
+  "webdev101-js-datatypes.4cc470179730702c.webp": {
+    "original_hash": "20fda1612cc0e8d20e6be01ffc28e5f7",
+    "translation_date": "2026-01-15T18:27:15+00:00",
+    "source_file": "sketchnotes/webdev101-js-datatypes.png",
+    "language_code": "th"
+  },
+  "webdev101-js-decisions.69e1b20f272dd1f0.webp": {
+    "original_hash": "5e49a0b9b4149f782a4378354ba7fd56",
+    "translation_date": "2026-01-15T18:26:16+00:00",
+    "source_file": "sketchnotes/webdev101-js-decisions.png",
+    "language_code": "th"
+  },
+  "webdev101-js-functions.be049c4726e94f8b.webp": {
+    "original_hash": "ec4279b1b2191fa07a83e78a97e81f29",
+    "translation_date": "2026-01-15T18:25:53+00:00",
+    "source_file": "sketchnotes/webdev101-js-functions.png",
+    "language_code": "th"
+  },
+  "webdev101-js.10280393044d7eaa.webp": {
+    "original_hash": "fe1f154de74b31fdeb9a6df40e7ad5e1",
+    "translation_date": "2026-01-15T18:27:42+00:00",
+    "source_file": "sketchnotes/webdev101-js.png",
+    "language_code": "th"
+  },
+  "webdev101-programming.d6e3f98e61ac4bff.webp": {
+    "original_hash": "adf4dac4d350592773dbdba8ebaaa262",
+    "translation_date": "2026-01-15T18:24:29+00:00",
+    "source_file": "sketchnotes/webdev101-programming.png",
+    "language_code": "th"
+  },
+  "working-tree-pb.6cd43e5076f23ba3.webp": {
+    "original_hash": "f6b14887694745dd143a09bd60b74185",
+    "translation_date": "2026-01-15T18:31:40+00:00",
+    "source_file": "8-code-editor/images/working-tree-pb.png",
+    "language_code": "th"
+  },
+  "working-tree.c58eec08e6335c79.webp": {
+    "original_hash": "bf2608b4302123a00a8e7b1b6a430b4a",
+    "translation_date": "2026-01-15T18:31:31+00:00",
+    "source_file": "8-code-editor/images/working-tree.png",
+    "language_code": "th"
+  }
+}

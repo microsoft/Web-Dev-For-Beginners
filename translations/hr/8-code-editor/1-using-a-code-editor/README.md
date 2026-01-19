@@ -182,7 +182,7 @@ Baš kao što je telefon Alexandera Grahama Bella povezivao udaljena mjesta, pov
 
 Kad se sve učita, vidjet ćete prelijepo čist radni prostor dizajniran da vas usredotoči na ono najvažnije – vaš kod!
 
-![Zadano sučelje VSCode.dev-a](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.hr.png)
+![Zadano sučelje VSCode.dev-a](../../../../translated_images/hr/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Evo ture po susjedstvu:**  
 - **Traka aktivnosti** (ona traka s lijeve strane): Glavna navigacija s Explorerom 📁, Pretraživanjem 🔍, Kontrolom izvora 🌿, Ekstenzijama 🧩 i Postavkama ⚙️  
@@ -229,7 +229,7 @@ Savršena je kada tek započinjete u VSCode.dev-u i želite otvoriti određeni r
 1. Otiđite na [vscode.dev](https://vscode.dev) ako već niste tamo  
 2. Potražite gumb "Open Remote Repository" na početnom zaslonu i kliknite ga  
 
-   ![Otvaranje udaljenog repozitorija](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.hr.png)
+   ![Otvaranje udaljenog repozitorija](../../../../translated_images/hr/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Zalijepite bilo koji URL GitHub repozitorija (probajte ovaj: `https://github.com/microsoft/Web-Dev-For-Beginners`)  
 4. Pritisnite Enter i gledajte čaroliju!
@@ -238,7 +238,7 @@ Savršena je kada tek započinjete u VSCode.dev-u i želite otvoriti određeni r
 
 Želite li se osjećati kao čarobnjak kodiranja? Isprobajte ovaj prečac na tipkovnici: Ctrl+Shift+P (ili Cmd+Shift+P na Macu) za otvaranje Command Palette-a:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.hr.png)
+![Command Palette](../../../../translated_images/hr/palette-menu.4946174e07f42622.webp)
 
 **Command Palette je kao tražilica za sve što možete napraviti:**  
 - Upisite "open remote" i pronaći će otvoritelj repozitorija za vas  
@@ -300,7 +300,7 @@ Baš kao što se plovila u arhitektovom uredu organiziraju, kreiranje datoteka u
 3. Unesite ime datoteke uključujući odgovarajuću ekstenziju (`style.css`, `script.js`, `index.html`)  
 4. Pritisnite Enter za stvaranje datoteke
 
-![Kreiranje nove datoteke](../../../../translated_images/create-new-file.2814e609c2af9aeb.hr.png)
+![Kreiranje nove datoteke](../../../../translated_images/hr/create-new-file.2814e609c2af9aeb.webp)
 
 **Konvencije imenovanja:**  
 - Koristite opisna imena koja označavaju svrhu datoteke  
@@ -317,7 +317,7 @@ Evo gdje prava zabava počinje! Uređivač VSCode.dev je prepun korisnih značaj
 2. Počnite tipkati i gledajte kako vam VSCode.dev pomaže bojama, sugestijama i pronalaženjem pogrešaka  
 3. Spremite posao sa Ctrl+S (Windows/Linux) ili Cmd+S (Mac) – iako se automatski sprema!
 
-![Uređivanje datoteka u VSCode.dev-u](../../../../translated_images/edit-a-file.52c0ee665ef19f08.hr.png)
+![Uređivanje datoteka u VSCode.dev-u](../../../../translated_images/hr/edit-a-file.52c0ee665ef19f08.webp)
 
 **Hladne stvari koje se događaju dok kodirate:**  
 - Vaš kod je prekrasno obojen za lakše čitanje  
@@ -337,7 +337,7 @@ Baš kao što arheolozi stvaraju detaljne zapise slojeva iskapanja, Git prati pr
 2. Izmijenjene datoteke pojavljuju se u odjeljku "Promjene"  
 3. Boje označavaju tip promjene: zeleno za dodan tekst, crveno za izbrisano
 
-![Pregled promjena u Kontroli izvora](../../../../translated_images/working-tree.c58eec08e6335c79.hr.png)
+![Pregled promjena u Kontroli izvora](../../../../translated_images/hr/working-tree.c58eec08e6335c79.webp)
 
 **Spremanje rada (workflow za commit):**
 
@@ -429,7 +429,7 @@ Tržište proširenja je zaista dobro organizirano, pa se nećete izgubiti traž
 2. Pregledavajte ili pretražujte nešto specifično  
 3. Kliknite na bilo što što izgleda zanimljivo da biste saznali više  
 
-![Sučelje tržišta proširenja](../../../../translated_images/extensions.eca0e0c7f59a10b5.hr.png)  
+![Sučelje tržišta proširenja](../../../../translated_images/hr/extensions.eca0e0c7f59a10b5.webp)  
 
 **Što ćete tamo vidjeti:**  
 
@@ -482,7 +482,7 @@ Većina proširenja dolazi s postavkama koje možete podesiti kako bi radila to�
 3. Izaberite "Extension Settings" iz padajućeg izbornika  
 4. Prilagodite dok vam radni tok ne odgovara savršeno  
 
-![Prilagođavanje postavki proširenja](../../../../translated_images/extension-settings.21c752ae4f4cdb78.hr.png)  
+![Prilagođavanje postavki proširenja](../../../../translated_images/hr/extension-settings.21c752ae4f4cdb78.webp)  
 
 **Česte stvari koje ćete možda htjeti podesiti:**  
 - Kako se vaš kod formatira (tabovi vs razmaci, duljina linije, itd.)  

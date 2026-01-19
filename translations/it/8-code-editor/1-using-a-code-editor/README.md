@@ -185,7 +185,7 @@ Proprio come il telefono di Alexander Graham Bell collegava luoghi distanti, col
 
 Una volta caricato tutto, vedrai uno spazio di lavoro pulito e progettato per mantenerti concentrato su ciò che conta – il tuo codice!
 
-![Interfaccia predefinita di VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.it.png)
+![Interfaccia predefinita di VSCode.dev](../../../../translated_images/it/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Ecco il tuo tour del quartiere:**
 - **Barra delle attività** (quella striscia a sinistra): La tua navigazione principale con Esplora 📁, Cerca 🔍, Controllo sorgente 🌿, Estensioni 🧩 e Impostazioni ⚙️
@@ -233,7 +233,7 @@ Questo è perfetto quando inizi da zero in VSCode.dev e vuoi aprire un repositor
 1. Vai su [vscode.dev](https://vscode.dev) se non ci sei già
 2. Cerca il pulsante "Apri repository remoto" nella schermata di benvenuto e cliccaci sopra
 
-   ![Apri repository remoto](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.it.png)
+   ![Apri repository remoto](../../../../translated_images/it/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Incolla l'URL di un repository GitHub (prova questo: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Premi Invio e guarda la magia accadere!
@@ -242,7 +242,7 @@ Questo è perfetto quando inizi da zero in VSCode.dev e vuoi aprire un repositor
 
 Vuoi sentirti un mago della programmazione? Prova questa scorciatoia da tastiera: Ctrl+Shift+P (o Cmd+Shift+P su Mac) per aprire il Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.it.png)
+![Command Palette](../../../../translated_images/it/palette-menu.4946174e07f42622.webp)
 
 **Il Command Palette è come avere un motore di ricerca per tutto ciò che puoi fare:**
 - Digita "open remote" e troverà l'apertura del repository per te
@@ -304,7 +304,7 @@ Proprio come organizzare i progetti in uno studio di architettura, la creazione 
 3. Inserisci il nome del file incluso l'estensione appropriata (`style.css`, `script.js`, `index.html`)
 4. Premi Invio per creare il file
 
-![Creare un nuovo file](../../../../translated_images/create-new-file.2814e609c2af9aeb.it.png)
+![Creare un nuovo file](../../../../translated_images/it/create-new-file.2814e609c2af9aeb.webp)
 
 **Convenzioni di denominazione:**
 - Usa nomi descrittivi che indicano lo scopo del file
@@ -322,7 +322,7 @@ Qui inizia il vero divertimento! L'editor di VSCode.dev è ricco di funzionalit�
 2. Inizia a digitare e osserva VSCode.dev aiutarti con colori, suggerimenti e rilevamento degli errori
 3. Salva il tuo lavoro con Ctrl+S (Windows/Linux) o Cmd+S (Mac) – anche se salva automaticamente!
 
-![Modificare file in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.it.png)
+![Modificare file in VSCode.dev](../../../../translated_images/it/edit-a-file.52c0ee665ef19f08.webp)
 
 **Le cose interessanti che accadono mentre programmi:**
 - Il tuo codice viene evidenziato con colori bellissimi, rendendolo facile da leggere
@@ -343,7 +343,7 @@ Proprio come gli archeologi creano registri dettagliati degli strati di scavo, G
 2. I file modificati appaiono nella sezione "Modifiche"
 3. La codifica a colori indica i tipi di modifica: verde per le aggiunte, rosso per le eliminazioni
 
-![Visualizzare le modifiche nel controllo della sorgente](../../../../translated_images/working-tree.c58eec08e6335c79.it.png)
+![Visualizzare le modifiche nel controllo della sorgente](../../../../translated_images/it/working-tree.c58eec08e6335c79.webp)
 
 **Salvare il tuo lavoro (il flusso di lavoro di commit):**
 
@@ -438,7 +438,7 @@ Il marketplace delle estensioni è davvero ben organizzato, quindi non ti perder
 2. Sfoglia o cerca qualcosa di specifico
 3. Clicca su ciò che ti sembra interessante per saperne di più
 
-![Interfaccia del marketplace delle estensioni](../../../../translated_images/extensions.eca0e0c7f59a10b5.it.png)
+![Interfaccia del marketplace delle estensioni](../../../../translated_images/it/extensions.eca0e0c7f59a10b5.webp)
 
 **Cosa troverai lì dentro:**
 
@@ -491,7 +491,7 @@ La maggior parte delle estensioni ha impostazioni che puoi modificare per farle 
 3. Scegli "Impostazioni Estensione" dal menu a tendina
 4. Regola le impostazioni finché non si adattano perfettamente al tuo workflow
 
-![Personalizzare le impostazioni delle estensioni](../../../../translated_images/extension-settings.21c752ae4f4cdb78.it.png)
+![Personalizzare le impostazioni delle estensioni](../../../../translated_images/it/extension-settings.21c752ae4f4cdb78.webp)
 
 **Cose comuni che potresti voler modificare:**
 - Come viene formattato il codice (tab vs spazi, lunghezza delle righe, ecc.)

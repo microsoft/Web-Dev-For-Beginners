@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # جاوا اسکرپٹ کی بنیادی باتیں: فیصلے کرنا
 
-![جاوا اسکرپٹ کی بنیادی باتیں - فیصلے کرنا](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.ur.png)
+![جاوا اسکرپٹ کی بنیادی باتیں - فیصلے کرنا](../../../../translated_images/ur/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > اسکیچ نوٹ از [Tomomi Imura](https://twitter.com/girlie_mac)
 

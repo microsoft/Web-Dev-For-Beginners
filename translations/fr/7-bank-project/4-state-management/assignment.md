@@ -112,7 +112,7 @@ Référez-vous à la [documentation API serveur](../api/README.md) pour :
 **Résultat attendu :**
 Après avoir réalisé cette tâche, votre application bancaire doit disposer d’une fonctionnalité "Ajouter une transaction" complètement fonctionnelle, professionnelle en apparence et en comportement :
 
-![Capture d'écran montrant un exemple de boîte de dialogue "Ajouter une transaction"](../../../../translated_images/dialog.93bba104afeb79f1.fr.png)
+![Capture d'écran montrant un exemple de boîte de dialogue "Ajouter une transaction"](../../../../translated_images/fr/dialog.93bba104afeb79f1.webp)
 
 ## Tester votre implémentation
 

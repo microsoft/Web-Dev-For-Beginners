@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Мала вежба са превлачењем и пуштањем. Уз мало HTML-а, JS-а и CSS-а, можете направити веб интерфејс, стилизовати га и додати интеракцију.
 
-![мој тераријум](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.sr.png)
+![мој тераријум](../../../../translated_images/sr/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Кредити
 

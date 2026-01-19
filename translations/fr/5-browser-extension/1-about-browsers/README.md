@@ -25,7 +25,7 @@ journey
       Déboguer les problèmes: 4: Student
       Affiner l’expérience: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.fr.jpg)
+![Browser sketchnote](../../../../translated_images/fr/browser.60317c9be8b7f84a.webp)
 > Sketchnote par [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Quiz avant la leçon
@@ -77,7 +77,7 @@ Ce processus reflète la conception du premier navigateur web, WorldWideWeb, cr�
 
 ✅ **Un peu d'histoire** : Le premier navigateur s'appelait 'WorldWideWeb' et a été créé par Sir Timothy Berners-Lee en 1990.
 
-![navigateurs anciens](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.fr.jpg)
+![navigateurs anciens](../../../../translated_images/fr/earlybrowsers.d984b711cdf3a42d.webp)
 > Quelques navigateurs anciens, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Comment les navigateurs traitent le contenu web
@@ -194,7 +194,7 @@ quadrantChart
 
 Comprendre le processus d'installation d'une extension vous aide à anticiper l'expérience utilisateur lorsque des personnes installent votre extension. Le processus d'installation est standardisé sur les navigateurs modernes, avec de légères variations dans la conception de l'interface.
 
-![capture d'écran du navigateur Edge montrant la page ouverte edge://extensions et le menu des paramètres ouvert](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.fr.png)
+![capture d'écran du navigateur Edge montrant la page ouverte edge://extensions et le menu des paramètres ouvert](../../../../translated_images/fr/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Important** : Assurez-vous d'activer le mode développeur et d'autoriser les extensions provenant d'autres magasins lors du test de vos propres extensions.
 
@@ -308,10 +308,10 @@ Cela suit le principe de divulgation progressive utilisé dans la conception d'i
 ### Vue d'ensemble des vues de l'extension
 
 **Vue de configuration** - Configuration utilisateur initiale :  
-![capture d'écran de l'extension terminée ouverte dans un navigateur, affichant un formulaire avec des champs pour le nom de région et la clé API.](../../../../translated_images/1.b6da8c1394b07491.fr.png)
+![capture d'écran de l'extension terminée ouverte dans un navigateur, affichant un formulaire avec des champs pour le nom de région et la clé API.](../../../../translated_images/fr/1.b6da8c1394b07491.webp)
 
 **Vue des résultats** - Affichage des données d'empreinte carbone :  
-![capture d'écran de l'extension terminée affichant les valeurs d'utilisation carbone et le pourcentage d'énergies fossiles pour la région US-NEISO.](../../../../translated_images/2.1dae52ff08042246.fr.png)
+![capture d'écran de l'extension terminée affichant les valeurs d'utilisation carbone et le pourcentage d'énergies fossiles pour la région US-NEISO.](../../../../translated_images/fr/2.1dae52ff08042246.webp)
 
 ### Création du formulaire de configuration
 

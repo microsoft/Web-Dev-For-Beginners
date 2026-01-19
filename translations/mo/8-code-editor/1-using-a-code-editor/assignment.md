@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **撰寫**提交訊息：「添加初始 HTML 結構」
 5. **點擊**「Commit new file」保存更改
 
-![在 GitHub 上建立初始檔案](../../../../translated_images/new-file-github.com.c886796d800e8056.mo.png)
+![在 GitHub 上建立初始檔案](../../../../translated_images/mo/new-file-github.com.c886796d800e8056.webp)
 
 **以下是此初始設置的作用：**
 - **建立**具有語義元素的正確 HTML5 文件結構
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **成功指標**：您應該能在 Explorer 側邊欄中看到您的專案檔案，並在主編輯區域中編輯 `index.html`。
 
-![在 VSCode.dev 中載入專案](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.mo.png)
+![在 VSCode.dev 中載入專案](../../../../translated_images/mo/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **您在介面中會看到：**
 - **Explorer 側邊欄**：**顯示**您的儲存庫檔案和文件結構
@@ -448,7 +448,7 @@ li:before {
 **安裝後的即時效果：**
 安裝 CodeSwing 後，您將看到履歷網站的即時預覽出現在編輯器中。這讓您能夠在進行更改時即時查看網站的外觀。
 
-![CodeSwing 擴展顯示即時預覽](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.mo.png)
+![CodeSwing 擴展顯示即時預覽](../../../../translated_images/mo/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **理解增強的介面：**
 - **分屏視圖**：**顯示**一側的程式碼和另一側的即時預覽

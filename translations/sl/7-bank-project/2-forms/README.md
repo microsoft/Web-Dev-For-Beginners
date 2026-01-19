@@ -292,7 +292,7 @@ Najprej opazimo, kaj se zgodi pri osnovni oddaji obrazca:
 2. Opazujte spremembe v naslovni vrstici brskalnika
 3. Ugotovite, kako se stran osveži in podatki pokažejo v URL-ju
 
-![Posnetek zaslona spremembe URL-ja v brskalniku po kliku na gumb Registriraj](../../../../translated_images/click-register.e89a30bf0d4bc9ca.sl.png)
+![Posnetek zaslona spremembe URL-ja v brskalniku po kliku na gumb Registriraj](../../../../translated_images/sl/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Primerjava HTTP metod
 
@@ -346,7 +346,7 @@ Nastavimo vaš registracijski obrazec, da komunicira pravilno z backend API z up
 2. **Kliknite** gumb "Ustvari račun"
 3. **Opazujte** odgovor strežnika v brskalniku
 
-![Okno brskalnika na naslovu localhost:5000/api/accounts, prikazuje JSON niz z uporabniškimi podatki](../../../../translated_images/form-post.61de4ca1b964d91a.sl.png)
+![Okno brskalnika na naslovu localhost:5000/api/accounts, prikazuje JSON niz z uporabniškimi podatki](../../../../translated_images/sl/form-post.61de4ca1b964d91a.webp)
 
 **Kaj bi morali videti:**
 - **Brskalnik preusmeri** na URL API končne točke
@@ -609,7 +609,7 @@ async function register() {
 3. **Kliknite** "Create Account"
 4. **Opazujte** sporočila v konzoli in povratne informacije za uporabnika
 
-![Posnetek zaslona z log sporočilom v konzoli brskalnika](../../../../translated_images/browser-console.efaf0b51aaaf6778.sl.png)
+![Posnetek zaslona z log sporočilom v konzoli brskalnika](../../../../translated_images/sl/browser-console.efaf0b51aaaf6778.webp)
 
 **Kaj bi morali videti:**
 - **Stanje nalaganja** se pojavi na gumbu za oddajo
@@ -783,7 +783,7 @@ Izboljšajmo vaš registracijski obrazec z robustno validacijo, ki zagotavlja od
 3. **Poskusite** posebne znake v polju za uporabniško ime
 4. **Vnesite** negativno stanje računa
 
-![Posnetek zaslona s sporočilom o napaki validacije pri poskusu oddaje obrazca](../../../../translated_images/validation-error.8bd23e98d416c22f.sl.png)
+![Posnetek zaslona s sporočilom o napaki validacije pri poskusu oddaje obrazca](../../../../translated_images/sl/validation-error.8bd23e98d416c22f.webp)
 
 **Kaj boste opazili:**
 - **Brskalnik prikaže** izvorna validacijska sporočila
@@ -943,7 +943,7 @@ V HTML prikažite sporočilo o napaki, če uporabnik že obstaja.
 
 Tukaj je primer, kako lahko končna prijavna stran izgleda po dodani nekaj oblikovalskih spremembah:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.sl.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/sl/result.96ef01f607bf856a.webp)
 
 ## Kvize po predavanju
 

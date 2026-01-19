@@ -187,7 +187,7 @@ Nagu Titanic'i kambrite jaotus, mis tundus tugev kuni mitme kambri samaaegne upp
 
 Selle asemel, et oma saba taga ajada, loome **tsentraliseeritud oleku juhtimise** süsteemi. Mõtle sellele kui ühele väga organiseeritud inimesele, kes haldab kõike olulist:
 
-![Skeem, mis näitab andmevooge HTML-i, kasutaja tegevuste ja oleku vahel](../../../../translated_images/data-flow.fa2354e0908fecc8.et.png)
+![Skeem, mis näitab andmevooge HTML-i, kasutaja tegevuste ja oleku vahel](../../../../translated_images/et/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -798,7 +798,7 @@ See väljakutse aitab sul mõelda professionaalse arendajana, kes võtab arvesse
 
 Siin on näidis tulemus peale ülesande täitmist:
 
-![Ekraanipilt näidates "Lisa tehingu" dialoogi](../../../../translated_images/dialog.93bba104afeb79f1.et.png)
+![Ekraanipilt näidates "Lisa tehingu" dialoogi](../../../../translated_images/et/dialog.93bba104afeb79f1.webp)
 
 ---
 

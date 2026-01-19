@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Tvorba přístupných webových stránek
 
-![Vše o přístupnosti](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.cs.png)
+![Vše o přístupnosti](../../../../translated_images/cs/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ Každý obrázek na vašem webu má svůj účel. Porozumění tomuto účelu v�
 
 **Informační obrázky** - předávají důležité informace:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.cs.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/cs/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **Dekorační obrázky** - čistě vizuální, bez informační hodnoty:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.cs.png" alt="" role="presentation">
+<img src="../../../../translated_images/cs/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **Funkční obrázky** - slouží jako tlačítka nebo ovládací prvky:
@@ -1066,7 +1066,7 @@ Každý obrázek na vašem webu má svůj účel. Porozumění tomuto účelu v�
 
 **Složité obrázky** - grafy, diagramy, infografiky:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.cs.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/cs/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ Každý obrázek na vašem webu má svůj účel. Porozumění tomuto účelu v�
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.cs.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/cs/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

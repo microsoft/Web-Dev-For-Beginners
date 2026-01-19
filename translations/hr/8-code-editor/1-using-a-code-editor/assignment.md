@@ -78,7 +78,7 @@ Budući da VSCode.dev zahtijeva barem jednu datoteku za otvaranje repozitorija, 
 4. **Napišite** poruku za commit: "Dodaj početnu HTML strukturu"
 5. **Kliknite** "Commit new file" za spremanje promjena
 
-![Kreiranje početne datoteke na GitHubu](../../../../translated_images/new-file-github.com.c886796d800e8056.hr.png)
+![Kreiranje početne datoteke na GitHubu](../../../../translated_images/hr/new-file-github.com.c886796d800e8056.webp)
 
 **Što se postiže ovim početnim postavljanjem:**
 - **Postavlja** pravilnu HTML5 strukturu dokumenta sa semantičkim elementima
@@ -104,7 +104,7 @@ Sada kada je temelj vašeg repozitorija postavljen, prebacimo se na VSCode.dev z
 
 ✅ **Indikator uspjeha**: Trebali biste vidjeti datoteke svog projekta u bočnoj traci Explorer i `index.html` dostupan za uređivanje u glavnom području uređivača.
 
-![Projekt učitan u VSCode.dev](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.hr.png)
+![Projekt učitan u VSCode.dev](../../../../translated_images/hr/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **Što ćete vidjeti u sučelju:**
 - **Bočna traka Explorer**: **Prikazuje** datoteke i strukturu mapa vašeg repozitorija
@@ -448,7 +448,7 @@ Ekstenzije poboljšavaju vaše iskustvo razvoja pružajući mogućnosti za pregl
 **Rezultati odmah nakon instalacije:**
 Nakon instalacije CodeSwinga, vidjet ćete pregled uživo vaše web stranice za životopis u uređivaču. To vam omogućuje da vidite kako vaša stranica izgleda dok unosite promjene.
 
-![Ekstenzija CodeSwing prikazuje pregled uživo](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.hr.png)
+![Ekstenzija CodeSwing prikazuje pregled uživo](../../../../translated_images/hr/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **Razumijevanje poboljšanog sučelja:**
 - **Podijeljeni prikaz**: **Prikazuje** vaš kod na jednoj strani i pregled uživo na drugoj

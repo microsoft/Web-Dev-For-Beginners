@@ -29,7 +29,7 @@ journey
       响应式设计: 5: Student
       玻璃反光: 5: Student
 ```
-![Introduction to CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.zh.png)
+![Introduction to CSS](../../../../translated_images/zh/webdev101-css.3f7af5991bf53a20.webp)
 > 速写笔记作者 [Tomomi Imura](https://twitter.com/girlie_mac)
 
 还记得你的 HTML 生态瓶看起来很基础吗？CSS 就是把那个普通的结构变成视觉上更吸引人的东西。
@@ -202,7 +202,7 @@ body {
 
 打开浏览器开发者工具（F12），切换到 Elements 面板，检查 `<h1>` 元素，你会看到它继承自 body 的字体：
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d.zh.png)
+![inherited font](../../../../translated_images/zh/1.cc07a5cbe114ad1d.webp)
 
 ✅ **试验时间**：尝试给 `<body>` 设置其他可继承属性如 `color`，`line-height` 或 `text-align`。你的标题和其他元素会发生什么变化？
 
@@ -332,7 +332,7 @@ ID 选择器用 `#` 符号，定位具有唯一 `id` 属性的元素。ID 在页
 **各植物的 HTML 结构如下：**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f.zh.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/zh/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 你将创建细腻的高光，模拟光在玻璃表面的反射。这与文艺复兴画家扬·凡·艾克（Jan van Eyck）使用光线和反射使绘画玻璃呈现三维感的手法类似。你的目标如下：
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.zh.png)
+![finished terrarium](../../../../translated_images/zh/terrarium-final.2f07047ffc597d0a.webp)
 
 **你的挑战：**
 - **创建** 微妙的白色或浅色椭圆形反光

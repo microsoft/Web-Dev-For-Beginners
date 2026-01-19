@@ -78,7 +78,7 @@ CO_OP_TRANSLATOR_METADATA:
 4. **একটি কমিট বার্তা লিখুন**: "Add initial HTML structure"
 5. **"Commit new file" ক্লিক করুন** আপনার পরিবর্তনগুলি সংরক্ষণ করতে
 
-![GitHub-এ প্রাথমিক ফাইল তৈরি করা](../../../../translated_images/new-file-github.com.c886796d800e8056.bn.png)
+![GitHub-এ প্রাথমিক ফাইল তৈরি করা](../../../../translated_images/bn/new-file-github.com.c886796d800e8056.webp)
 
 **এই প্রাথমিক সেটআপ যা অর্জন করে:**
 - **HTML5 ডকুমেন্ট গঠন প্রতিষ্ঠা করে** সেমান্টিক এলিমেন্ট সহ
@@ -104,7 +104,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ✅ **সফলতার সূচক**: আপনি আপনার প্রকল্প ফাইলগুলি Explorer সাইডবারে এবং `index.html` প্রধান এডিটর এলাকায় দেখতে পাবেন।
 
-![VSCode.dev-এ প্রকল্প লোড করা](../../../../translated_images/project-on-vscode.dev.e79815a9a95ee7fe.bn.png)
+![VSCode.dev-এ প্রকল্প লোড করা](../../../../translated_images/bn/project-on-vscode.dev.e79815a9a95ee7fe.webp)
 
 **ইন্টারফেসে যা আপনি দেখতে পাবেন:**
 - **Explorer সাইডবার**: **প্রদর্শন করে** আপনার রিপোজিটরি ফাইল এবং ফোল্ডার গঠন
@@ -448,7 +448,7 @@ li:before {
 **ইনস্টলেশনের পরপরই ফলাফল:**
 CodeSwing ইনস্টল করার পরে, আপনি আপনার রিজিউম ওয়েবসাইটের একটি লাইভ প্রিভিউ এডিটরে দেখতে পাবেন। এটি আপনাকে আপনার সাইটটি কেমন দেখাচ্ছে তা পরিবর্তন করার সাথে সাথে দেখতে দেয়।
 
-![CodeSwing এক্সটেনশন লাইভ প্রিভিউ দেখাচ্ছে](../../../../translated_images/after-codeswing-extension-pb.0ebddddcf73b5509.bn.png)
+![CodeSwing এক্সটেনশন লাইভ প্রিভিউ দেখাচ্ছে](../../../../translated_images/bn/after-codeswing-extension-pb.0ebddddcf73b5509.webp)
 
 **উন্নত ইন্টারফেস বোঝা:**
 - **স্প্লিট ভিউ**: **আপনার কোড এক পাশে এবং লাইভ প্রিভিউ অন্য পাশে দেখায়**

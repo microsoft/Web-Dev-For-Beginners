@@ -292,7 +292,7 @@ graph TD
 2. Наблюдавайте промените в адресната лента на браузъра
 3. Забележете как страницата се презарежда и данните се появяват в URL адреса
 
-![Екранна снимка на промяната в URL на браузъра след кликване на бутона Register](../../../../translated_images/click-register.e89a30bf0d4bc9ca.bg.png)
+![Екранна снимка на промяната в URL на браузъра след кликване на бутона Register](../../../../translated_images/bg/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Сравнение на HTTP методите
 
@@ -346,7 +346,7 @@ graph TD
 2. **Натиснете** бутона „Create Account“
 3. **Наблюдавайте** отговора от сървъра в браузъра си
 
-![Прозорец на браузър на адрес localhost:5000/api/accounts, показващ JSON низ с потребителски данни](../../../../translated_images/form-post.61de4ca1b964d91a.bg.png)
+![Прозорец на браузър на адрес localhost:5000/api/accounts, показващ JSON низ с потребителски данни](../../../../translated_images/bg/form-post.61de4ca1b964d91a.webp)
 
 **Какво трябва да виждате:**
 - **Браузърът пренасочва** към URL адреса на API endpoint-а
@@ -609,7 +609,7 @@ async function register() {
 3. **Натиснете** "Create Account"
 4. **Проследете** съобщенията в конзолата и обратната връзка към потребителя
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf6778.bg.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/bg/browser-console.efaf0b51aaaf6778.webp)
 
 **Какво трябва да видите:**
 - **Появява се състояние на зареждане** на бутонът за изпращане
@@ -783,7 +783,7 @@ input:focus:invalid {
 3. **Опитайте** специални символи в полето за потребителско име
 4. **Въведете** отрицателна стойност в баланса
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f.bg.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/bg/validation-error.8bd23e98d416c22f.webp)
 
 **Какво ще забележите:**
 - **Браузърът показва** вградени съобщения за валидация
@@ -943,7 +943,7 @@ timeline
 
 Ето един пример как може да изглежда финалната страница за вход след малко стилизиране:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856a.bg.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/bg/result.96ef01f607bf856a.webp)
 
 ## Квиз след лекцията
 

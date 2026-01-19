@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # सुलभ वेबपेज बनाना
 
-![सभी के लिए सुलभता](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.hi.png)
+![सभी के लिए सुलभता](../../../../translated_images/hi/webdev101-a11y.8ef3025c858d897a.webp)
 > स्केचनोट: [टोमोमी इमुरा](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "सामान्य ARIA उपयोग पैटर्न"
 
 **सूचनात्मक छवियाँ** - महत्वपूर्ण जानकारी प्रदान करती हैं:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.hi.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/hi/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **सजावटी छवियाँ** - केवल दृश्यात्मक होती हैं, जिनमें कोई सूचना नहीं होती:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.hi.png" alt="" role="presentation">
+<img src="../../../../translated_images/hi/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **कार्यात्मक छवियाँ** - बटन या नियंत्रण के रूप में काम करती हैं:
@@ -1066,7 +1066,7 @@ pie title "सामान्य ARIA उपयोग पैटर्न"
 
 **जटिल छवियाँ** - चार्ट, आरेख, इन्फोग्राफिक्स:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.hi.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/hi/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "सामान्य ARIA उपयोग पैटर्न"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.hi.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/hi/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

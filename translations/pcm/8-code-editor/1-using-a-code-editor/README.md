@@ -182,7 +182,7 @@ Like Alexander Graham Bell telephone connect far places, connecting your GitHub 
 
 Once e don load finish, you go see clean workspace wey design to help you focus on wetin important – your code!
 
-![Default VSCode.dev interface](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.pcm.png)
+![Default VSCode.dev interface](../../../../translated_images/pcm/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Here na your neighborhood tour:**
 - **Activity Bar** (di left strip): Na your main navigation, get Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩, and Settings ⚙️
@@ -229,7 +229,7 @@ Dis one good when you dey start new inside VSCode.dev and you wan open one speci
 1. Go [vscode.dev](https://vscode.dev) if you never enter 
 2. Find "Open Remote Repository" button for welcome screen, click am
 
-   ![Open remote repository](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.pcm.png)
+   ![Open remote repository](../../../../translated_images/pcm/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Paste any GitHub repo URL (try dis one: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Press Enter, make magic happen!
@@ -238,7 +238,7 @@ Dis one good when you dey start new inside VSCode.dev and you wan open one speci
 
 Wanna feel like coding wizard? Try keyboard shortcut: Ctrl+Shift+P (or Cmd+Shift+P for Mac) to open Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.pcm.png)
+![Command Palette](../../../../translated_images/pcm/palette-menu.4946174e07f42622.webp)
 
 **Command Palette na like search engine for everything you fit do:**
 - Type "open remote" and e go find the repository opener for you
@@ -300,7 +300,7 @@ Like how architect organize blueprints for office, file creation for VSCode.dev 
 3. Type filename with correct extension (`style.css`, `script.js`, `index.html`)
 4. Press Enter to create am
 
-![Creating a new file](../../../../translated_images/create-new-file.2814e609c2af9aeb.pcm.png)
+![Creating a new file](../../../../translated_images/pcm/create-new-file.2814e609c2af9aeb.webp)
 
 **Name rules:**
 - Use descriptive names wey show file purpose
@@ -318,7 +318,7 @@ Now di real fun don start! VSCode.dev editor get plenty helper features wey dey 
 2. Start to type and watch VSCode.dev help you with colors, suggestions, and error alerts
 3. Save with Ctrl+S (Windows/Linux) or Cmd+S (Mac) – but e also auto-saves
 
-![Editing files in VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.pcm.png)
+![Editing files in VSCode.dev](../../../../translated_images/pcm/edit-a-file.52c0ee665ef19f08.webp)
 
 **The cool things wey dey happen as you code:**
 - Your code dey color-coded well so e easy to read
@@ -339,7 +339,7 @@ Like how archaeologists dey keep detailed record of their excavation layers, Git
 2. Files wey you change go show for "Changes" section
 3. Colors show type of changes: green for additions, red for deletions
 
-![Viewing changes in Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.pcm.png)
+![Viewing changes in Source Control](../../../../translated_images/pcm/working-tree.c58eec08e6335c79.webp)
 
 **How to save your work (commit process):**
 
@@ -431,7 +431,7 @@ Di extension marketplace organize well well, so you no go lost trying find wetin
 2. Browse around or search for wetin you want
 3. Click on anything wey look interesting to learn more about am
 
-![Extension marketplace interface](../../../../translated_images/extensions.eca0e0c7f59a10b5.pcm.png)
+![Extension marketplace interface](../../../../translated_images/pcm/extensions.eca0e0c7f59a10b5.webp)
 
 **Wetin you go see inside:**
 
@@ -484,7 +484,7 @@ Most extensions get settings wey you fit adjust make dem work exactly how you wa
 3. Choose "Extension Settings" from di dropdown
 4. Change tins till e feel right for your workflow
 
-![Customizing extension settings](../../../../translated_images/extension-settings.21c752ae4f4cdb78.pcm.png)
+![Customizing extension settings](../../../../translated_images/pcm/extension-settings.21c752ae4f4cdb78.webp)
 
 **Common tins wey you fit want change:**
 - How your code go be formatted (tabs or spaces, line length, etc.)

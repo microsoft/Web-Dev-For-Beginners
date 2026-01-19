@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Majhna vaja z vlečenjem in spuščanjem. Z nekaj HTML, JS in CSS lahko zgradite spletni vmesnik, ga oblikujete in dodate interakcijo.
 
-![moj terarij](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.sl.png)
+![moj terarij](../../../../translated_images/sl/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Zasluge
 

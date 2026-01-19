@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![сетка холста](../../../../translated_images/canvas_grid.5f209da785ded492.ru.png)
+![сетка холста](../../../../translated_images/ru/canvas_grid.5f209da785ded492.webp)
 > Изображение с [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Чтобы рисовать на элементе canvas, вы будете следовать тому же трехэтапному процессу, который составляет основу всей графики на холсте. Как только вы сделаете это несколько раз, это станет привычным:
@@ -329,11 +329,11 @@ flowchart TD
 
 - Корабль героя
 
-   ![Корабль героя](../../../../translated_images/player.dd24c1afa8c71e9b.ru.png)
+   ![Корабль героя](../../../../translated_images/ru/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 монстров
 
-   ![Корабль монстра](../../../../translated_images/enemyShip.5df2a822c16650c2.ru.png)
+   ![Корабль монстра](../../../../translated_images/ru/enemyShip.5df2a822c16650c2.webp)
 
 ### Рекомендуемые шаги для начала разработки
 
@@ -470,7 +470,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Готовый результат должен выглядеть так:
 
-![Черный экран с героем и 5*5 монстрами](../../../../translated_images/partI-solution.36c53b48c9ffae2a.ru.png)
+![Черный экран с героем и 5*5 монстрами](../../../../translated_images/ru/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Решение
 

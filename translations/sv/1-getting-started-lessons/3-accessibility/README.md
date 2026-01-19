@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Skapa tillgängliga webbsidor
 
-![Allt om tillgänglighet](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.sv.png)
+![Allt om tillgänglighet](../../../../translated_images/sv/webdev101-a11y.8ef3025c858d897a.webp)
 > Sketchnote av [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1050,12 +1050,12 @@ Varje bild på din webbplats har ett syfte. Att förstå detta syfte hjälper di
 
 **Informativa bilder** - förmedlar viktig information:  
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.sv.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/sv/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
   
 **Dekorativa bilder** - rent visuella utan informationsvärde:  
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.sv.png" alt="" role="presentation">
+<img src="../../../../translated_images/sv/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
   
 **Funktionella bilder** - fungerar som knappar eller kontroller:  
@@ -1067,7 +1067,7 @@ Varje bild på din webbplats har ett syfte. Att förstå detta syfte hjälper di
   
 **Komplexa bilder** - diagram, scheman, informationsgrafik:  
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.sv.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/sv/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1107,7 +1107,7 @@ Varje bild på din webbplats har ett syfte. Att förstå detta syfte hjälper di
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.sv.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/sv/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
   

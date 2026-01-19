@@ -268,7 +268,7 @@ stateDiagram-v2
     ClearStorage --> FirstTime: Back to setup
 ```
 
-![Local storage pane](../../../../translated_images/localstorage.472f8147b6a3f8d1.my.png)
+![Local storage pane](../../../../translated_images/my/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Security Consideration**: Production application တွေမှာ LocalStorage မှာ API key တွေကိုသိမ်းဆည်းထားခြင်းက security risk ဖြစ်ပါတယ်။ JavaScript က data ကို access လုပ်နိုင်တဲ့အတွက်ပါ။ သင်ယူရေးအတွက်တော့ ဒီနည်းလမ်းကအဆင်ပြေပါတယ်၊ ဒါပေမယ့် အစစ်အမှန် application တွေမှာ sensitive credentials တွေကို secure server-side storage မှာသိမ်းဆည်းသင့်ပါတယ်။
 

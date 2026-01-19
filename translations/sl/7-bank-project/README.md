@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 V tem projektu se boste naučili, kako zgraditi izmišljeno banko. Te lekcije vključujejo navodila za postavitev spletne aplikacije in zagotavljanje poti, izdelavo obrazcev, upravljanje stanja ter pridobivanje podatkov iz API-ja, iz katerega lahko pridobite podatke banke.
 
-| ![Screen1](../../../translated_images/screen1.baccbba0f1f93364.sl.png) | ![Screen2](../../../translated_images/screen2.123c82a831a1d14a.sl.png) |
+| ![Screen1](../../../translated_images/sl/screen1.baccbba0f1f93364.webp) | ![Screen2](../../../translated_images/sl/screen2.123c82a831a1d14a.webp) |
 |--------------------------------|--------------------------------|
 
 ## Lekcije

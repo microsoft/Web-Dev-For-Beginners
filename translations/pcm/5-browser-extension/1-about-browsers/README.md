@@ -25,7 +25,7 @@ journey
       Debug issues: 4: Student
       Polish experience: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.pcm.jpg)
+![Browser sketchnote](../../../../translated_images/pcm/browser.60317c9be8b7f84a.webp)
 > Sketchnote by [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Pre-Lecture Quiz
@@ -77,7 +77,7 @@ This process dey like how first web browser, WorldWideWeb, Tim Berners-Lee desig
 
 ✅ **Small history**: Di first browser na 'WorldWideWeb' an e be Tim Berners-Lee create am for 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.pcm.jpg)
+![early browsers](../../../../translated_images/pcm/earlybrowsers.d984b711cdf3a42d.webp)
 > Some early browsers, via [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### How Browsers Process Web Content
@@ -194,7 +194,7 @@ quadrantChart
 
 To sabi extension installation process go help you sabi how user experience go be when people dey install your extension. Installation process dey similar for all modern browsers, only small design differences.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.pcm.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/pcm/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Important**: Make sure say developer mode dey on and you allow extensions wey come from other stores when you dey test your own extensions.
 
@@ -308,10 +308,10 @@ This follow progressive disclosure principle inside interface design since early
 ### Extension Views Overview
 
 **Setup View** - Configuration for first time user:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.pcm.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/pcm/1.b6da8c1394b07491.webp)
 
 **Results View** - Carbon footprint data display:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.pcm.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/pcm/2.1dae52ff08042246.webp)
 
 ### Building the Configuration Form
 

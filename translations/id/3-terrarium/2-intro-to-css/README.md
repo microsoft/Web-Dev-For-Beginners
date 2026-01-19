@@ -30,7 +30,7 @@ journey
       Glass reflections: 5: Student
 ```
 
-![Pengantar CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a20.id.png)
+![Pengantar CSS](../../../../translated_images/id/webdev101-css.3f7af5991bf53a20.webp)
 > Sketchnote oleh [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Ingat bagaimana terrarium HTML Anda terlihat cukup sederhana? CSS adalah tempat kita mengubah struktur polos itu menjadi sesuatu yang menarik secara visual.
@@ -205,7 +205,7 @@ body {
 
 Buka alat pengembang browser Anda (F12), navigasikan ke tab Elemen, dan inspeksi elemen `<h1>` Anda. Anda akan melihat bahwa elemen tersebut mewarisi keluarga font dari body:
 
-![font yang diwarisi](../../../../translated_images/1.cc07a5cbe114ad1d.id.png)
+![font yang diwarisi](../../../../translated_images/id/1.cc07a5cbe114ad1d.webp)
 
 ✅ **Waktu Eksperimen**: Cobalah mengatur properti lain yang dapat diwarisi pada `<body>` seperti `color`, `line-height`, atau `text-align`. Apa yang terjadi pada heading dan elemen lainnya?
 
@@ -335,7 +335,7 @@ Di terrarium kita, setiap tanaman membutuhkan gaya yang serupa tetapi juga membu
 **Inilah struktur HTML untuk setiap tanaman:**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.id.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/id/plant1.d18b18ffe73da18f8b1ac7aba73b4050af52f4a0c9174aeac464b85123fc2850.png" />
 </div>
 ```
 
@@ -599,7 +599,7 @@ Siap meningkatkan terrarium Anda dengan refleksi kaca yang realistis? Teknik ini
 
 Anda akan membuat sorotan halus yang mensimulasikan bagaimana cahaya memantul dari permukaan kaca. Pendekatan ini mirip dengan bagaimana pelukis Renaisans seperti Jan van Eyck menggunakan cahaya dan refleksi untuk membuat kaca yang dilukis tampak tiga dimensi. Berikut adalah tujuan Anda:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a.id.png)
+![finished terrarium](../../../../translated_images/id/terrarium-final.2f07047ffc597d0a.webp)
 
 **Tantangan Anda:**
 - **Buat** bentuk oval putih atau berwarna terang untuk refleksi kaca

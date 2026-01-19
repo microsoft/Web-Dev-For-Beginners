@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Returnerar komplett HTML-sida
     Browser->>User: Visar ny sida (blinkning/uppdatering)
 ```
-![Uppdateringsflöde i en multipage-applikation](../../../../translated_images/mpa.7f7375a1a2d4aa77.sv.png)
+![Uppdateringsflöde i en multipage-applikation](../../../../translated_images/sv/mpa.7f7375a1a2d4aa77.webp)
 
 **Varför detta tillvägagångssätt kändes tungrott:**
 - Varje klick innebar att hela sidan byggdes om från scratch
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Uppdaterar specifika sidkomponenter
     Browser->>User: Visar uppdaterat innehåll (ingen omladdning)
 ```
-![Uppdateringsflöde i en enkel-sidig applikation](../../../../translated_images/spa.268ec73b41f992c2.sv.png)
+![Uppdateringsflöde i en enkel-sidig applikation](../../../../translated_images/sv/spa.268ec73b41f992c2.webp)
 
 **Varför SPA känns så mycket bättre:**
 - Endast de delar som faktiskt ändrats uppdateras (smart, eller hur?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Nu när du testar med ett ogiltigt konto, ser du ett hjälpsamt felmeddelande direkt på sidan!
 
-![Screenshot showing the error message displayed during login](../../../../translated_images/login-error.416fe019b36a6327.sv.png)
+![Screenshot showing the error message displayed during login](../../../../translated_images/sv/login-error.416fe019b36a6327.webp)
 
 #### Steg 4: Inkluderande med tillgänglighet
 
@@ -950,7 +950,7 @@ Redo att ta din bankapp till nästa nivå? Låt oss göra den till något du fak
 
 Så här kan en snygg kontrollpanel se ut:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.sv.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/sv/screen2.123c82a831a1d14a.webp)
 
 Känn inte att du måste efterlikna detta exakt – använd det som inspiration och gör det till ditt eget!
 

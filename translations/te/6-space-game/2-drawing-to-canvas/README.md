@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```
-![the canvas's grid](../../../../translated_images/canvas_grid.5f209da785ded492.te.png)
+![the canvas's grid](../../../../translated_images/te/canvas_grid.5f209da785ded492.webp)
 > చిత్రం [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) నుండి
 
 కేన్వాస్ ఎలిమెంట్ పై డ్రా చేయడానికి, మీరు కేన్వాస్ గ్రాఫిక్స్ బేసిక్ మూలాధారమైన మూడు-దశల ప్రక్రియను అనుసరిస్తారు. మీరు దీనిని కొన్ని సార్లు చేస్తే, ఇది సహజంగా మారుతుంది:
@@ -323,11 +323,11 @@ flowchart TD
 
 - హీరో షిప్
 
-   ![Hero ship](../../../../translated_images/player.dd24c1afa8c71e9b.te.png)
+   ![Hero ship](../../../../translated_images/te/player.dd24c1afa8c71e9b.webp)
 
 - 5*5 మానవులు
 
-   ![Monster ship](../../../../translated_images/enemyShip.5df2a822c16650c2.te.png)
+   ![Monster ship](../../../../translated_images/te/enemyShip.5df2a822c16650c2.webp)
 
 ### అభివృద్ధి ప్రారంభించడానికి సిఫార్సు చేసిన దశలు
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 సంపూర్ణ ఫలితం ఈ విధంగా ఉండాలి:
 
-![Black screen with a hero and 5*5 monsters](../../../../translated_images/partI-solution.36c53b48c9ffae2a.te.png)
+![Black screen with a hero and 5*5 monsters](../../../../translated_images/te/partI-solution.36c53b48c9ffae2a.webp)
 
 ## పరిష్కారం
 

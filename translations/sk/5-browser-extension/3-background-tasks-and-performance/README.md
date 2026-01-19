@@ -123,7 +123,7 @@ Ak chcete otvoriť Nástroje vývojára v Edge, kliknite na tie tri bodky v prav
 
 Poďme to vyskúšať. Otvorte nejakú webovú stránku (napríklad Microsoft.com funguje dobre) a kliknite na tlačidlo 'Nahrávanie'. Teraz obnovte stránku a sledujte, ako profiler zaznamenáva všetko, čo sa deje. Keď zastavíte nahrávanie, uvidíte podrobný rozpis, ako prehliadač 'spúšťa skripty', 'vykresľuje' a 'maľuje' stránku. Pripomína mi to, ako riadiace stredisko monitoruje každý systém počas štartu rakety – máte dáta v reálnom čase o tom, čo sa presne deje a kedy.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.sk.png)
+![Edge profiler](../../../../translated_images/sk/profiler.5a4a62479c5df01c.webp)
 
 ✅ Dokumentácia [Microsoftu](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) obsahuje množstvo detailov, ak chcete ísť viac do hĺbky
 
@@ -133,11 +133,11 @@ Vyberte prvky časovej osi profilu, aby ste sa priblížili na udalosti, ktoré 
 
 Získajte rýchly prehľad o výkone stránky výberom časti časovej osi profilu a zobrazením sumárneho panelu:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.sk.png)
+![Edge profiler snapshot](../../../../translated_images/sk/snapshot.97750180ebcad737.webp)
 
 Skontrolujte panel Záznam udalostí, či sa niektorá udalosť nepretiahla nad 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.sk.png)
+![Edge event log](../../../../translated_images/sk/log.804026979f3707e0.webp)
 
 ✅ Spoznajte svoj profiler! Otvorte nástroje vývojára na tejto stránke a zistite, či sú nejaké úzke miesta. Ktorý zdroj sa načítava najpomalšie? Ktorý najsrýchlejšie?
 

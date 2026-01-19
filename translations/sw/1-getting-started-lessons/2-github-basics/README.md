@@ -17,7 +17,7 @@ Najua linaweza kuhisi mengi mwanzoni – hata mimi nilikumbuka nikitazama ukuras
 
 Tutachukua safari hii pamoja, hatua kwa hatua. Hakuna haraka, hakuna msongo – ni wewe, mimi, na zana mzuri zitakazokufanya marafiki wako wapya!
 
-![Utangulizi wa GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.sw.png)
+![Utangulizi wa GitHub](../../../../translated_images/sw/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote na [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -605,7 +605,7 @@ Kwanza, tukutafute hifadhidata (au **repo**) kwenye GitHub inayokuvutia na unayo
 
 ✅ Njia nzuri ya kupata repozitori zinazofaa wanaoanza ni [kutafuta kwa alama 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Nakili repo kiasili](../../../../translated_images/clone_repo.5085c48d666ead57.sw.png)
+![Nakili repo kiasili](../../../../translated_images/sw/clone_repo.5085c48d666ead57.webp)
 
 Kuna njia kadhaa za kunakili msimbo. Njia moja ni "clone" yaliyomo kwenye hifadhidata, ukitumia HTTPS, SSH, au CLI ya GitHub (Kiolesura cha Amri).
 

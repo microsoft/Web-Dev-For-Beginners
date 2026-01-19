@@ -25,7 +25,7 @@ journey
       调试问题: 4: Student
       优化体验: 5: Student
 ```
-![浏览器手绘笔记](../../../../translated_images/browser.60317c9be8b7f84a.zh.jpg)
+![浏览器手绘笔记](../../../../translated_images/zh/browser.60317c9be8b7f84a.webp)
 > 手绘笔记作者：[Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## 课前测验
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **一点历史**：第一款浏览器名为“WorldWideWeb”，由蒂姆·伯纳斯-李爵士于1990年创建。
 
-![早期浏览器](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.zh.jpg)
+![早期浏览器](../../../../translated_images/zh/earlybrowsers.d984b711cdf3a42d.webp)
 > 一些早期浏览器，来源：[Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### 浏览器如何处理网页内容
@@ -194,7 +194,7 @@ quadrantChart
 
 了解扩展安装过程，有助于你预见用户安装你扩展时的体验。现代浏览器的安装流程标准化，界面设计略有差异。
 
-![Edge 浏览器扩展页面打开及设置菜单截图](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.zh.png)
+![Edge 浏览器扩展页面打开及设置菜单截图](../../../../translated_images/zh/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **重要提示**：测试自己的扩展时，务必开启开发者模式并允许来自其他商店的扩展。
 
@@ -308,10 +308,10 @@ project-root/
 ### 扩展视图概览
 
 **设置视图** - 首次用户配置：
-![扩展完整界面截图，显示包含地区名称和 API 密钥输入的表单](../../../../translated_images/1.b6da8c1394b07491.zh.png)
+![扩展完整界面截图，显示包含地区名称和 API 密钥输入的表单](../../../../translated_images/zh/1.b6da8c1394b07491.webp)
 
 **结果视图** - 碳足迹数据显示：
-![扩展显示 US-NEISO 区域碳使用量和化石燃料百分比的截图](../../../../translated_images/2.1dae52ff08042246.zh.png)
+![扩展显示 US-NEISO 区域碳使用量和化石燃料百分比的截图](../../../../translated_images/zh/2.1dae52ff08042246.webp)
 
 ### 构建配置表单
 

@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Cơ bản về JavaScript: Phương thức và Hàm
 
-![Cơ bản về JavaScript - Hàm](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.vi.png)
+![Cơ bản về JavaScript - Hàm](../../../../translated_images/vi/webdev101-js-functions.be049c4726e94f8b.webp)
 > Sketchnote bởi [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

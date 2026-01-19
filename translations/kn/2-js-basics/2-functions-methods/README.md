@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript ಮೂಲಗಳು: ವಿಧಾನಗಳು ಮತ್ತು ಕಾರ್ಯಗಳು
 
-![JavaScript ಮೂಲಗಳು - ಕಾರ್ಯಗಳು](../../../../translated_images/webdev101-js-functions.be049c4726e94f8b.kn.png)
+![JavaScript ಮೂಲಗಳು - ಕಾರ್ಯಗಳು](../../../../translated_images/kn/webdev101-js-functions.be049c4726e94f8b.webp)
 > ಸ್ಕೆಚ್ ನೋಟು [Tomomi Imura](https://twitter.com/girlie_mac) ಅವರಿಂದ
 
 ```mermaid

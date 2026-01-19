@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # יסודות JavaScript: מערכים ולולאות
 
-![JavaScript Basics - Arrays](../../../../translated_images/webdev101-js-arrays.439d7528b8a29455.he.png)
+![JavaScript Basics - Arrays](../../../../translated_images/he/webdev101-js-arrays.439d7528b8a29455.webp)
 > סקיצה מאת [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

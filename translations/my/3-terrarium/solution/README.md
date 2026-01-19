@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 အနည်းငယ်သော drag and drop code-meditation ဖြစ်ပါတယ်။ HTML, JS နှင့် CSS အနည်းငယ်ကို အသုံးပြုပြီး web interface တစ်ခုကို တည်ဆောက်၊ အလှဆင်ပြီး အပြန်အလှန်လုပ်ဆောင်မှုများ ထည့်သွင်းနိုင်ပါတယ်။
 
-![my terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.my.png)
+![my terrarium](../../../../translated_images/my/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## အကျေးဇူးတင်စကား
 

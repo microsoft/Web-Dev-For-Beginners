@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Vráti kompletnú HTML stránku
     Browser->>User: Zobrazí novú stránku (bliknutie/obnovenie)
 ```
-![Pracovný postup aktualizácie vo viacstránkovej aplikácii](../../../../translated_images/mpa.7f7375a1a2d4aa77.sk.png)
+![Pracovný postup aktualizácie vo viacstránkovej aplikácii](../../../../translated_images/sk/mpa.7f7375a1a2d4aa77.webp)
 
 **Prečo tento prístup pôsobil neohrabane:**
 - Každým kliknutím sa celé znovu načítavala stránka
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Aktualizuje konkrétne prvky stránky
     Browser->>User: Zobrazuje aktualizovaný obsah (bez obnovenia)
 ```
-![Pracovný postup aktualizácie v jednostránkovej aplikácii](../../../../translated_images/spa.268ec73b41f992c2.sk.png)
+![Pracovný postup aktualizácie v jednostránkovej aplikácii](../../../../translated_images/sk/spa.268ec73b41f992c2.webp)
 
 **Prečo sa SPA cítia omnoho lepšie:**
 - Aktualizujú sa len zmenené časti (šikovné, však?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Teraz, keď otestujete s neplatným účtom, uvidíte na stránke užitočnú chybovú správu!
 
-![Screenshot zobrazujúci chybovú správu počas prihlásenia](../../../../translated_images/login-error.416fe019b36a6327.sk.png)
+![Screenshot zobrazujúci chybovú správu počas prihlásenia](../../../../translated_images/sk/login-error.416fe019b36a6327.webp)
 
 #### Krok 4: Buďte inkluzívni v prístupnosti
 
@@ -950,7 +950,7 @@ Ste pripravený posunúť svoju bankovú aplikáciu o úroveň vyššie? Spravme
 
 Takto by mohol vyzerať vyleštený dashboard:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.sk.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/sk/screen2.123c82a831a1d14a.webp)
 
 Nemusíte to presne kopírovať - použite to ako inšpiráciu a spravte si to po svojom!
 

@@ -25,7 +25,7 @@ journey
       Funktionalität testen: 5: Student
       Terrarium abschließen: 5: Student
 ```
-![DOM und eine Closure](../../../../translated_images/webdev101-js.10280393044d7eaa.de.png)
+![DOM und eine Closure](../../../../translated_images/de/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote von [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Willkommen zu einem der faszinierendsten Aspekte der Webentwicklung – Dinge interaktiv zu machen! Das Document Object Model (DOM) ist wie eine Brücke zwischen deinem HTML und JavaScript, und heute werden wir es nutzen, um dein Terrarium zum Leben zu erwecken. Als Tim Berners-Lee den ersten Webbrowser entwickelte, stellte er sich ein Web vor, in dem Dokumente dynamisch und interaktiv sein könnten – das DOM macht diese Vision möglich.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![DOM-Baum-Darstellung](../../../../translated_images/dom-tree.7daf0e763cbbba92.de.png)
+![DOM-Baum-Darstellung](../../../../translated_images/de/dom-tree.7daf0e763cbbba92.webp)
 
 > Eine Darstellung des DOM und des HTML-Markups, das darauf verweist. Von [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Closures verstehen**: Closures sind ein bedeutendes Thema in JavaScript, und viele Entwickler nutzen sie jahrelang, bevor sie alle theoretischen Aspekte vollständig verstehen. Heute konzentrieren wir uns auf die praktische Anwendung – du wirst sehen, wie Closures ganz natürlich entstehen, während wir unsere interaktiven Funktionen bauen. Das Verständnis wird sich vertiefen, wenn du siehst, wie sie echte Probleme lösen.
 
-![DOM-Baum-Darstellung](../../../../translated_images/dom-tree.7daf0e763cbbba92.de.png)
+![DOM-Baum-Darstellung](../../../../translated_images/de/dom-tree.7daf0e763cbbba92.webp)
 
 > Eine Darstellung des DOM und des HTML-Markups, das darauf verweist. Von [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Teste jetzt dein interaktives Terrarium! Öffne deine `index.html` Datei in eine
 - **Geräteübergreifende Unterstützung**: Funktioniert auf Desktop und Mobilgeräten
 - **Leistungsbewusstsein**: Keine Speicherlecks oder redundante Berechnungen
 
-![fertiges Terrarium](../../../../translated_images/terrarium-final.0920f16e87c13a84.de.png)
+![fertiges Terrarium](../../../../translated_images/de/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

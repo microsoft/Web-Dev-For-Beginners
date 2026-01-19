@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ഈ യാത്ര ഞങ്ങൾ ഒന്നിച്ച് കാൽ ചവിട്ടി തുടരും. വേഗം വേണ്ട, സമ്മർദ്ദം വേണ്ട – നിങ്ങൾക്കും, എനിക്കും, ഇനി നിങ്ങളുടെ പുതിയ മികച്ച കൂട്ടുകാരായി മാറാൻ പോകുന്ന ചില മികച്ച ഉപകരണങ്ങൾക്കുമൊത്ത്!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.ml.png)
+![Intro to GitHub](../../../../translated_images/ml/webdev101-github.8846d7971abef6f9.webp)
 > സ്കെച്ച്നോട്ട് [Tomomi Imura](https://twitter.com/girlie_mac) द्वारा
 
 ```mermaid
@@ -603,7 +603,7 @@ flowchart TD
 
 ✅ 'beginner-friendly' റിപോസിറ്ററികൾ കണ്ടെത്താൻ മികച്ച മാർഗം [good-first-issue ടാഗ് ഉപയോഗിച്ച് തെരയുക](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/) .
 
-![ഒരു റിപോ ലോക്കലായി കോപ്പി ചെയ്യുക](../../../../translated_images/clone_repo.5085c48d666ead57.ml.png)
+![ഒരു റിപോ ലോക്കലായി കോപ്പി ചെയ്യുക](../../../../translated_images/ml/clone_repo.5085c48d666ead57.webp)
 
 കോഡ് കോപ്പി ചെയ്യാനുള്ള പല മാർഗ്ഗങ്ങളുണ്ട്. ഒരു മാർഗ്ഗം "clone" ചെയ്യുക എന്നതാണ്, HTTPS, SSH അല്ലെങ്കിൽ GitHub CLI (കമാൻഡ് ലൈൻ ഇന്റർഫേസ്) ഉപയോക്തൃ ഇനങ്ങളിലൂടെ.
 

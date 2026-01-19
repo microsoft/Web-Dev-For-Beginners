@@ -187,7 +187,7 @@ Like how Titanic get compartment system wey look strong until plenty compartment
 
 Instead to dey run round everywhere, we go create **centralized state management** system. Think am like one organized person wey dey control everything wey important:
 
-![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/data-flow.fa2354e0908fecc8.pcm.png)
+![Schema showing the data flows between the HTML, user actions and state](../../../../translated_images/pcm/data-flow.fa2354e0908fecc8.webp)
 
 ```mermaid
 flowchart TD
@@ -801,7 +801,7 @@ Dis challenge go train you to think like professional dev wey sabi balance user 
 
 Here na example result after you finish the assignment:
 
-![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/dialog.93bba104afeb79f1.pcm.png)
+![Screenshot showing an example "Add transaction" dialog](../../../../translated_images/pcm/dialog.93bba104afeb79f1.webp)
 
 ---
 

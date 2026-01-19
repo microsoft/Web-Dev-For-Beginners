@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Θα κάνουμε αυτό το ταξίδι μαζί, βήμα-βήμα. Χωρίς βιασύνη, χωρίς πίεση – απλά εσύ, εγώ, και κάποια πολύ ωραία εργαλεία που σύντομα θα γίνουν οι νέοι σου καλύτεροι φίλοι!
 
-![Intro to GitHub](../../../../translated_images/webdev101-github.8846d7971abef6f9.el.png)
+![Intro to GitHub](../../../../translated_images/el/webdev101-github.8846d7971abef6f9.webp)
 > Σκιτσάκι από [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -606,7 +606,7 @@ flowchart TD
 
 ✅ Ένας καλός τρόπος να βρείτε repos φιλικά για αρχάριους είναι να [αναζητήσετε με την ετικέτα 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Αντιγραφή αποθετηρίου τοπικά](../../../../translated_images/clone_repo.5085c48d666ead57.el.png)
+![Αντιγραφή αποθετηρίου τοπικά](../../../../translated_images/el/clone_repo.5085c48d666ead57.webp)
 
 Υπάρχουν διάφοροι τρόποι για να αντιγράψετε κώδικα. Ένας τρόπος είναι να "κλωνοποιήσετε" τα περιεχόμενα του αποθετηρίου, χρησιμοποιώντας HTTPS, SSH ή το GitHub CLI (Διεπαφή Γραμμής Εντολών).
 

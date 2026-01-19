@@ -25,7 +25,7 @@ journey
       Debug issues: 4: Student
       Polish experience: 5: Student
 ```
-![Browser sketchnote](../../../../translated_images/browser.60317c9be8b7f84a.sk.jpg)
+![Browser sketchnote](../../../../translated_images/sk/browser.60317c9be8b7f84a.webp)
 > Sketchnote od [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob)
 
 ## Kvíz pred prednáškou
@@ -77,7 +77,7 @@ Tento proces odráža spôsob, akým bol prvý webový prehliadač WorldWideWeb 
 
 ✅ **Trocha histórie**: Prvý prehliadač sa volal 'WorldWideWeb' a vytvoril ho Sir Timothy Berners-Lee v roku 1990.
 
-![early browsers](../../../../translated_images/earlybrowsers.d984b711cdf3a42d.sk.jpg)
+![early browsers](../../../../translated_images/sk/earlybrowsers.d984b711cdf3a42d.webp)
 > Niektoré skoré prehliadače, podľa [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### Ako prehliadače spracovávajú webový obsah
@@ -194,7 +194,7 @@ quadrantChart
 
 Pochopenie procesu inštalácie rozšírenia vám pomôže predvídať používateľský zážitok, keď si ľudia inštalujú vaše rozšírenie. Proces inštalácie je štandardizovaný vo väčšine moderných prehliadačov, s drobnými rozdielmi v dizajne rozhrania.
 
-![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/install-on-edge.d68781acaf0b3d3d.sk.png)
+![screenshot of the Edge browser showing the open edge://extensions page and open settings menu](../../../../translated_images/sk/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **Dôležité**: Uistite sa, že máte zapnutý režim vývojára a povolené rozšírenia z iných obchodov, keď testujete vlastné rozšírenia.
 
@@ -308,10 +308,10 @@ Toto nasleduje princíp postupného odhaľovania, ktorý sa používa v dizajne 
 ### Prehľad pohľadov rozšírenia
 
 **Zobrazenie nastavenia** – Konfigurácia pre používateľov pri prvom použití:
-![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/1.b6da8c1394b07491.sk.png)
+![screenshot of the completed extension open in a browser, displaying a form with inputs for region name and API key.](../../../../translated_images/sk/1.b6da8c1394b07491.webp)
 
 **Zobrazenie výsledkov** – Zobrazenie údajov uhlíkovej stopy:
-![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/2.1dae52ff08042246.sk.png)
+![screenshot of the completed extension displaying values for carbon usage and fossil fuel percentage for the US-NEISO region.](../../../../translated_images/sk/2.1dae52ff08042246.webp)
 
 ### Vytvorenie konfiguračného formulára
 

@@ -105,7 +105,7 @@ quadrantChart
     Power-up: [0.7, 0.6]
     UI Elements: [0.9, 0.1]
 ```  
-![das Raster des Canvas](../../../../translated_images/canvas_grid.5f209da785ded492.de.png)  
+![das Raster des Canvas](../../../../translated_images/de/canvas_grid.5f209da785ded492.webp)  
 > Bild von [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
 Um auf das Canvas-Element zu zeichnen, folgst du dem gleichen dreistufigen Prozess, der die Grundlage aller Canvas-Grafiken bildet. Nachdem du das ein paar Mal gemacht hast, geht es in Fleisch und Blut über:
@@ -323,11 +323,11 @@ Du erstellst eine Webseite mit einem Canvas-Element. Es soll einen schwarzen Bil
 
 - Helden-Raumschiff
 
-   ![Heldenschiff](../../../../translated_images/player.dd24c1afa8c71e9b.de.png)
+   ![Heldenschiff](../../../../translated_images/de/player.dd24c1afa8c71e9b.webp)
 
 - 5×5 Monster
 
-   ![Monsterschiff](../../../../translated_images/enemyShip.5df2a822c16650c2.de.png)
+   ![Monsterschiff](../../../../translated_images/de/enemyShip.5df2a822c16650c2.webp)
 
 ### Empfohlene Schritte für den Entwicklungsstart
 
@@ -463,7 +463,7 @@ for (let x = START_X; x < STOP_X; x += ENEMY_SPACING) {
 
 Das fertige Ergebnis sollte so aussehen:
 
-![Schwarzer Bildschirm mit einem Helden und 5*5 Monstern](../../../../translated_images/partI-solution.36c53b48c9ffae2a.de.png)
+![Schwarzer Bildschirm mit einem Helden und 5*5 Monstern](../../../../translated_images/de/partI-solution.36c53b48c9ffae2a.webp)
 
 ## Lösung
 

@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: ارسال صفحه کامل HTML
     Browser->>User: نمایش صفحه جدید (فلش/بارگذاری مجدد)
 ```  
-![جریان به‌روزرسانی در برنامه چندصفحه‌ای](../../../../translated_images/mpa.7f7375a1a2d4aa77.fa.png)
+![جریان به‌روزرسانی در برنامه چندصفحه‌ای](../../../../translated_images/fa/mpa.7f7375a1a2d4aa77.webp)
 
 **چرا این روش کند و زمخت به نظر می‌رسید:**  
 - هر کلیک به معنای ساختن کل صفحه از نو بود  
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: به‌روزرسانی عناصر خاص صفحه
     Browser->>User: نمایش محتوای به‌روزشده (بدون بارگذاری مجدد)
 ```  
-![جریان به‌روزرسانی در برنامه تک‌صفحه‌ای](../../../../translated_images/spa.268ec73b41f992c2.fa.png)
+![جریان به‌روزرسانی در برنامه تک‌صفحه‌ای](../../../../translated_images/fa/spa.268ec73b41f992c2.webp)
 
 **چرا SPAها اینقدر بهتر به نظر می‌رسند:**  
 - فقط بخش‌هایی که واقعاً تغییر کرده‌اند به‌روزرسانی می‌شوند (هوشمندانه، درست است؟)  
@@ -516,7 +516,7 @@ if (data.error) {
 
 حالا وقتی با حساب نامعتبر تست کنید، پیام خطای مفیدی درست روی صفحه می‌بینید!
 
-![اسکرین‌شات نمایش پیام خطا در هنگام ورود](../../../../translated_images/login-error.416fe019b36a6327.fa.png)
+![اسکرین‌شات نمایش پیام خطا در هنگام ورود](../../../../translated_images/fa/login-error.416fe019b36a6327.webp)
 
 #### مرحله ۴: توجه به دسترسی
 
@@ -950,7 +950,7 @@ timeline
 
 این تصویری از یک داشبورد صیقلی شده پس از استایل‌دهی است:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/screen2.123c82a831a1d14a.fa.png)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/fa/screen2.123c82a831a1d14a.webp)
 
 نمی‌خواهیم دقیقاً همین را پیاده کنید - از آن به عنوان الهام استفاده کنید و آن را به سبک خودتان بسازید!
 

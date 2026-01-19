@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 오늘은 최신 웹 개발을 가능하게 할 뿐 아니라 정말 중독성 강한 놀라운 도구들을 탐험할 거예요. 넷플릭스, 스포티파이, 좋아하는 인디 앱 스튜디오의 개발자들이 매일 같이 쓰는 똑같은 편집기, 브라우저, 작업 흐름들을 말이죠. 그리고 여러분이 춤추게 만들 부분: 이 전문적인 수준의 산업 표준 도구들 대부분이 완전 무료라는 사실이에요!
 
-![Intro Programming](../../../../translated_images/webdev101-programming.d6e3f98e61ac4bff.ko.png)
+![Intro Programming](../../../../translated_images/ko/webdev101-programming.d6e3f98e61ac4bff.webp)
 > 스케치노트 by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

@@ -182,7 +182,7 @@ Așa cum telefonul lui Alexander Graham Bell conecta locații îndepărtate, con
 
 Odată ce totul s-a încărcat, vei vedea un spațiu de lucru frumos curat, conceput să te mențină concentrat pe ceea ce contează – codul tău!
 
-![Interfața implicită VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.ro.png)
+![Interfața implicită VSCode.dev](../../../../translated_images/ro/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Iată un tur al cartierului:**  
 - **Bară de Activitate** (această bandă din stânga): Navigarea ta principală cu Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩 și Settings ⚙️  
@@ -229,7 +229,7 @@ Perfectă când începi în VSCode.dev și vrei să deschizi un depozit specific
 1. Mergi la [vscode.dev](https://vscode.dev) dacă nu ești deja acolo  
 2. Caută butonul "Open Remote Repository" pe ecranul de bun venit și dă click pe el  
 
-   ![Deschide depozit la distanță](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.ro.png)  
+   ![Deschide depozit la distanță](../../../../translated_images/ro/open-remote-repository.bd9c2598b8949e7f.webp)  
 
 3. Lipsește orice URL GitHub de depozit (încearcă asta: `https://github.com/microsoft/Web-Dev-For-Beginners`)  
 4. Apasă Enter și privește magia!
@@ -238,7 +238,7 @@ Perfectă când începi în VSCode.dev și vrei să deschizi un depozit specific
 
 Vrei să te simți ca un vrăjitor al codului? Încearcă comanda rapidă Ctrl+Shift+P (sau Cmd+Shift+P pe Mac) pentru a deschide Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.ro.png)
+![Command Palette](../../../../translated_images/ro/palette-menu.4946174e07f42622.webp)
 
 **Command Palette este ca un motor de căutare pentru tot ce poți face:**  
 - Tastează „open remote” și va găsi deschizătorul de depozite pentru tine  
@@ -300,7 +300,7 @@ Ca atunci când organizezi planuri într-un birou de arhitect, crearea fișierel
 3. Introdu numele fișierului cu extensia potrivită (`style.css`, `script.js`, `index.html`)  
 4. Apasă Enter pentru a crea fișierul  
 
-![Crearea unui fișier nou](../../../../translated_images/create-new-file.2814e609c2af9aeb.ro.png)
+![Crearea unui fișier nou](../../../../translated_images/ro/create-new-file.2814e609c2af9aeb.webp)
 
 **Convenții de denumire:**  
 - Folosește nume descriptive care indică scopul fișierului  
@@ -318,7 +318,7 @@ Aici începe distracția adevărată! Editorul VSCode.dev este plin de caracteri
 2. Începe să tastezi și privește cum VSCode.dev te ajută cu culori, sugestii și detectarea erorilor  
 3. Salvează-ți munca cu Ctrl+S (Windows/Linux) sau Cmd+S (Mac) – deși editorul salvează automat!  
 
-![Editarea unui fișier în VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.ro.png)
+![Editarea unui fișier în VSCode.dev](../../../../translated_images/ro/edit-a-file.52c0ee665ef19f08.webp)
 
 **Ce se întâmplă în timp ce codezi:**  
 - Codul tău este frumos colorat pentru o lectură ușoară  
@@ -339,7 +339,7 @@ Așa cum arheologii creează înregistrări detaliate ale straturilor de săpăt
 2. Fișierele modificate apar în secțiunea „Changes”  
 3. Codarea color indică tipurile de schimbări: verde pentru adaosuri, roșu pentru ștergeri  
 
-![Vizualizarea modificărilor în Source Control](../../../../translated_images/working-tree.c58eec08e6335c79.ro.png)
+![Vizualizarea modificărilor în Source Control](../../../../translated_images/ro/working-tree.c58eec08e6335c79.webp)
 
 **Salvarea muncii tale (fluxul de commit):**
 
@@ -431,7 +431,7 @@ Marketplace-ul extensiilor este foarte bine organizat, astfel încât să nu te 
 2. Răsfoiește sau caută ceva anume
 3. Apasă pe orice arată interesant ca să afli mai multe
 
-![Interfața marketplace-ului de extensii](../../../../translated_images/extensions.eca0e0c7f59a10b5.ro.png)
+![Interfața marketplace-ului de extensii](../../../../translated_images/ro/extensions.eca0e0c7f59a10b5.webp)
 
 **Ce vei vedea acolo:**
 
@@ -484,7 +484,7 @@ Majoritatea extensiilor vin cu setări pe care le poți ajusta ca să funcțione
 3. Alege „Extension Settings” din meniul derulant
 4. Ajustează ce trebuie până când se potrivește perfect fluxului tău de lucru
 
-![Personalizarea setărilor extensiei](../../../../translated_images/extension-settings.21c752ae4f4cdb78.ro.png)
+![Personalizarea setărilor extensiei](../../../../translated_images/ro/extension-settings.21c752ae4f4cdb78.webp)
 
 **Setări comune pe care s-ar putea să vrei să le modifici:**
 - Cum este formatat codul tău (taburi vs spații, lungimea liniei etc.)

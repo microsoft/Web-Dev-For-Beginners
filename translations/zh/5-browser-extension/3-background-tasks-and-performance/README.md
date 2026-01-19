@@ -123,7 +123,7 @@ flowchart LR
 
 试试吧。打开一个网站（例如 Microsoft.com），点击“录制”然后刷新页面，查看性能分析器捕捉的一切。当停止录制，你会看到浏览器如何“脚本执行”（scripts）、“渲染”（renders）和“绘制”（paints）的详细分解。这让我想起火箭发射时指挥中心监控所有系统——你获取实时且详细的操作数据。
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.zh.png)
+![Edge profiler](../../../../translated_images/zh/profiler.5a4a62479c5df01c.webp)
 
 ✅ 若想深入了解，请查阅 [微软文档](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon)
 
@@ -133,11 +133,11 @@ flowchart LR
 
 通过选取时间线片段，查看摘要面板，获得页面性能快照：
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.zh.png)
+![Edge profiler snapshot](../../../../translated_images/zh/snapshot.97750180ebcad737.webp)
 
 查看事件日志面板是否有事件耗时超过15毫秒：
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.zh.png)
+![Edge event log](../../../../translated_images/zh/log.804026979f3707e0.webp)
 
 ✅ 熟悉你的分析器！在本站打开开发者工具，看看是否存在瓶颈。加载最慢和最快的资源分别是什么？
 

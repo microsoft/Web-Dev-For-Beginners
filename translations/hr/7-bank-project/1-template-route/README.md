@@ -644,7 +644,7 @@ sequenceDiagram
 
 Korištenjem `history.pushState` stvaraju se novi unosi u povijest preglednika. To možete provjeriti držanjem *tipke za povratak* u pregledniku, trebala bi se prikazati povijest poput ovoga:
 
-![Screenshot of navigation history](../../../../translated_images/history.7fdabbafa521e064.hr.png)
+![Screenshot of navigation history](../../../../translated_images/hr/history.7fdabbafa521e064.webp)
 
 Ako pokušate nekoliko puta kliknuti gumb za povratak, vidjet ćete da se trenutni URL mijenja i povijest se ažurira, ali se prikazuje isti predložak.
 

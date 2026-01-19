@@ -114,7 +114,7 @@ Now that we have a functional UI, the next step is to send the data to the serve
 
 Did you notice the change in your browser's URL?
 
-![Screenshot of the browser's URL change after clicking the Register button](../../../../translated_images/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.en.png)
+![Screenshot of the browser's URL change after clicking the Register button](../../../../translated_images/en/click-register.e89a30bf0d4bc9ca867dc537c4cea679a7c26368bd790969082f524fed2355bc.png)
 
 By default, a `<form>` submits data to the current server URL using the [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3), appending the form data to the URL. However, this method has limitations:
 
@@ -136,7 +136,7 @@ Add `action` and `method` attributes to the registration form:
 
 Now try registering a new account with your name. After clicking the *Register* button, you should see something like this:
 
-![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](../../../../translated_images/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.en.png)
+![A browser window at the address localhost:5000/api/accounts, showing a JSON string with user data](../../../../translated_images/en/form-post.61de4ca1b964d91a9e338416e19f218504dd0af5f762fbebabfe7ae80edf885f.png)
 
 If everything works correctly, the server will respond with a [JSON](https://www.json.org/json-en.html) object containing the created account data.
 
@@ -236,7 +236,7 @@ async function register() {
 
 That was a lot, but we made it! Open your [browser developer tools](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools) and try registering a new account. You won't see any changes on the page, but a message will appear in the console confirming that everything works.
 
-![Screenshot showing log message in the browser console](../../../../translated_images/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.en.png)
+![Screenshot showing log message in the browser console](../../../../translated_images/en/browser-console.efaf0b51aaaf67782a29e1a0bb32cc063f189b18e894eb5926e02f1abe864ec2.png)
 
 ✅ Do you think the data is sent securely? What if someone intercepts the request? Learn more about [HTTPS](https://en.wikipedia.org/wiki/HTTPS) for secure data communication.
 
@@ -278,7 +278,7 @@ Add a `maxlength` attribute to the text fields:
 
 Now, if you press the *Register* button and a field does not comply with a validation rule we defined, you should see something like this:
 
-![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.en.png)
+![Screenshot showing the validation error when trying to submit the form](../../../../translated_images/en/validation-error.8bd23e98d416c22f80076d04829a4bb718e0e550fd622862ef59008ccf0d5dce.png)
 
 Validation like this, performed *before* sending any data to the server, is called **client-side** validation. However, note that it's not always possible to perform all checks without sending the data. For example, we cannot verify here if an account already exists with the same username without sending a request to the server. Additional validation performed on the server is called **server-side** validation.
 
@@ -292,7 +292,7 @@ Display an error message in the HTML if the user already exists.
 
 Here's an example of what the final login page might look like after applying some styling:
 
-![Screenshot of the login page after adding CSS styles](../../../../translated_images/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.en.png)
+![Screenshot of the login page after adding CSS styles](../../../../translated_images/en/result.96ef01f607bf856aa9789078633e94a4f7664d912f235efce2657299becca483.png)
 
 ## Post-Lecture Quiz
 

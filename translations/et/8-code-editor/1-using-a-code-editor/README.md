@@ -182,7 +182,7 @@ Nii nagu Alexander Graham Bell ühendaski kaugustes kohad telefoni abil, seob Gi
 
 Kui kõik laeb, näed ilusat ja puhtat töölaua keskkonda, mis on loodud sind keskenduma olulisele – koodile!
 
-![Vaikimisi VSCode.devi liides](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.et.png)
+![Vaikimisi VSCode.devi liides](../../../../translated_images/et/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Siin on ülevaade su ümbrusest:**
 - **Activity Bar** (vasakul olev riba): Sinu peamine navigeerimisriba, kus on Explorer 📁, Search 🔍, Source Control 🌿, Extensions 🧩 ja Settings ⚙️
@@ -229,7 +229,7 @@ Sobib ideaalselt, kui alustad VSCode.devis nullist ja soovid konkreetset hoidlat
 1. Mine aadressile [vscode.dev](https://vscode.dev), kui sa pole seal veel
 2. Otsi tervituslehel nuppu "Open Remote Repository" ja klõpsa
 
-   ![Ava kaughoidla](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.et.png)
+   ![Ava kaughoidla](../../../../translated_images/et/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Kleebi siia mistahes GitHubi hoidla URL (proovi seda: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Vajuta Enter ja vaata imet!
@@ -238,7 +238,7 @@ Sobib ideaalselt, kui alustad VSCode.devis nullist ja soovid konkreetset hoidlat
 
 Tahad tunda end nagu koodimise võlur? Proovi klaviatuuri otseteed Ctrl+Shift+P (või Cmd+Shift+P Macil), et avada Command Palette:
 
-![Command Palette](../../../../translated_images/palette-menu.4946174e07f42622.et.png)
+![Command Palette](../../../../translated_images/et/palette-menu.4946174e07f42622.webp)
 
 **Command Palette on nagu otsingumootor kõigile sinu tehtavatele asjadele:**
 - Kirjuta "open remote" ja see leiab hoidla avaja sinu eest
@@ -300,7 +300,7 @@ Nii nagu arhitekti kontoris sinised trükid organiseeritud on, järgib faililoom
 3. Sisesta failinimi koos sobiva laiendiga (`style.css`, `script.js`, `index.html`)
 4. Vajuta Enter, et fail luua
 
-![Uue faili loomine](../../../../translated_images/create-new-file.2814e609c2af9aeb.et.png)
+![Uue faili loomine](../../../../translated_images/et/create-new-file.2814e609c2af9aeb.webp)
 
 **Nimeandmise soovitused:**
 - Kasuta kirjeldavaid nimesid, mis viitavad faili eesmärgile
@@ -318,7 +318,7 @@ Siin algab tõeline lõbu! VSCode.devi redaktor on täis abistavaid omadusi, mis
 2. Hakka kirjutama ja jälgi, kuidas VSCode.dev aitab värvide, soovituste ja vigade leidmisega
 3. Salvesta töö Ctrl+S (Windows/Linux) või Cmd+S (Mac) – kuigi see salvestab ka automaatselt!
 
-![Faili redigeerimine VSCode.devis](../../../../translated_images/edit-a-file.52c0ee665ef19f08.et.png)
+![Faili redigeerimine VSCode.devis](../../../../translated_images/et/edit-a-file.52c0ee665ef19f08.webp)
 
 **Mis toimub, kui koodid:**
 - Sinu kood saab kaunilt värvitud ja on lihtsam lugeda
@@ -339,7 +339,7 @@ Nii nagu arheoloogid teevad täpseid kirjeid kaevamiskihistest, jälgib Git sinu
 2. Muudetud failid ilmuvad jaotises "Changes"
 3. Värvikood näitab muudatuste liike: roheline lisandumised, punane kustutamised
 
-![Muudatuste vaatamine Source Control paneelis](../../../../translated_images/working-tree.c58eec08e6335c79.et.png)
+![Muudatuste vaatamine Source Control paneelis](../../../../translated_images/et/working-tree.c58eec08e6335c79.webp)
 
 **Töö salvestamine (commit töövoog):**
 
@@ -431,7 +431,7 @@ Laienduste turg on tõesti hästi organiseeritud, seega sa ei eksle, kui otsid, 
 2. Sirvi või otsi midagi kindlat
 3. Klõpsa kõigile huvitavatele laiendustele, et rohkem teada saada
 
-![Laienduste turu liides](../../../../translated_images/extensions.eca0e0c7f59a10b5.et.png)
+![Laienduste turu liides](../../../../translated_images/et/extensions.eca0e0c7f59a10b5.webp)
 
 **Mida seal näed:**
 
@@ -484,7 +484,7 @@ Enamikul laiendustest on seaded, mida saad muuta, et need töötaksid just nii n
 3. Vali rippmenüüst "Extension Settings"
 4. Muuda seadeid, kuni need sobivad su töövooga ideaalselt
 
-![Laienduste seadete kohandamine](../../../../translated_images/extension-settings.21c752ae4f4cdb78.et.png)
+![Laienduste seadete kohandamine](../../../../translated_images/et/extension-settings.21c752ae4f4cdb78.webp)
 
 **Tavalised asjad, mida võid tahtagi sättida:**
 - Kuidas su kood vormindatakse (tabid vs tühikud, rea pikkus jms)

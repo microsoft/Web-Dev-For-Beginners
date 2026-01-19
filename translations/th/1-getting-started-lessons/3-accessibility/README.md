@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # สร้างหน้าเว็บที่เข้าถึงได้
 
-![ทุกอย่างเกี่ยวกับการเข้าถึง](../../../../translated_images/webdev101-a11y.8ef3025c858d897a.th.png)
+![ทุกอย่างเกี่ยวกับการเข้าถึง](../../../../translated_images/th/webdev101-a11y.8ef3025c858d897a.webp)
 > สเก็ตช์โน้ตโดย [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "รูปแบบการใช้งาน ARIA ทั่วไป
 
 **ภาพให้ข้อมูล** - ถ่ายทอดข้อมูลสำคัญ:
 ```html
-<img src="../../../../translated_images/chart.31c7eb0eb5c4450d.th.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/th/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **ภาพตกแต่ง** - แค่ภาพที่มีคุณค่าแค่ในเชิงมองเห็น ไม่มีข้อมูล:
 ```html
-<img src="../../../../translated_images/decorative-border.b2f3c4d6634fb79d.th.png" alt="" role="presentation">
+<img src="../../../../translated_images/th/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **ภาพเชิงฟังก์ชัน** - ทำหน้าที่เป็นปุ่มหรือควบคุม:
@@ -1066,7 +1066,7 @@ pie title "รูปแบบการใช้งาน ARIA ทั่วไป
 
 **ภาพซับซ้อน** - แผนภูมิ, แผนภาพ, อินโฟกราฟิก:
 ```html
-<img src="../../../../translated_images/complex-chart.c831f461a363b446.th.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/th/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "รูปแบบการใช้งาน ARIA ทั่วไป
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/small-chart.c50c7b1bbcce43d8.th.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/th/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

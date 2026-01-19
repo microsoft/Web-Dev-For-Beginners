@@ -123,7 +123,7 @@ Pro otevření Nástrojů pro vývojáře v Edge klikněte na tři tečky vpravo
 
 Vyzkoušejme to. Otevřete nějakou webovou stránku (Microsoft.com je pro to dobrá) a klikněte na tlačítko 'Nahrávat'. Teď obnovte stránku a sledujte, jak profilovací nástroj zaznamená, co se děje. Když nahrávání zastavíte, uvidíte detailní rozpis, jak prohlížeč 'spouští skripty', 'vykresluje' a 'maluje' stránku. Připomíná mi to, jak řídící středisko sleduje každý systém během startu rakety – máte data v reálném čase o tom, co a kdy se děje.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.cs.png)
+![Edge profiler](../../../../translated_images/cs/profiler.5a4a62479c5df01c.webp)
 
 ✅ [Dokumentace Microsoftu](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) nabízí spoustu dalších detailů, pokud se chcete hlouběji ponořit
 
@@ -133,11 +133,11 @@ Vyberte části časové osy profilu pro přiblížení událostí, které se ob
 
 Získejte přehled o výkonu vaší stránky výběrem části časové osy profilu a pohledem do přehledového panelu:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.cs.png)
+![Edge profiler snapshot](../../../../translated_images/cs/snapshot.97750180ebcad737.webp)
 
 Zkontrolujte panel Protokol událostí, zda nějaká událost netrvala déle než 15 ms:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.cs.png)
+![Edge event log](../../../../translated_images/cs/log.804026979f3707e0.webp)
 
 ✅ Seznamte se se svým profilovým nástrojem! Otevřete vývojářské nástroje na této stránce a zjistěte, zda jsou nějaká „hmatatelná“ místa zpomalení. Který prostředek se nejdéle načítá? A který nejrychleji?
 

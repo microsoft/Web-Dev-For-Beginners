@@ -25,7 +25,7 @@ journey
       Tester la fonctionnalité: 5: Student
       Compléter le terrarium: 5: Student
 ```
-![DOM et une closure](../../../../translated_images/webdev101-js.10280393044d7eaa.fr.png)
+![DOM et une closure](../../../../translated_images/fr/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote par [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Bienvenue dans l'un des aspects les plus passionnants du développement web - rendre les choses interactives ! Le Document Object Model (DOM) est comme un pont entre votre HTML et JavaScript, et aujourd'hui nous l'utiliserons pour donner vie à votre terrarium. Lorsque Tim Berners-Lee a créé le premier navigateur web, il imaginait un web où les documents pourraient être dynamiques et interactifs - le DOM rend cette vision possible.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Représentation de l'arbre DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.fr.png)
+![Représentation de l'arbre DOM](../../../../translated_images/fr/dom-tree.7daf0e763cbbba92.webp)
 
 > Une représentation du DOM et du balisage HTML qui le référence. Par [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Comprendre les Closures** : Les closures sont un sujet important en JavaScript, et beaucoup de développeurs les utilisent pendant des années avant de maîtriser tous les aspects théoriques. Aujourd'hui, nous nous concentrons sur l'application pratique - vous verrez les closures émerger naturellement au fur et à mesure que nous construisons nos fonctionnalités interactives. La compréhension se développera en voyant comment elles résolvent des problèmes réels.
 
-![Représentation de l'arbre DOM](../../../../translated_images/dom-tree.7daf0e763cbbba92.fr.png)
+![Représentation de l'arbre DOM](../../../../translated_images/fr/dom-tree.7daf0e763cbbba92.webp)
 
 > Une représentation du DOM et du balisage HTML qui le référence. Par [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Testez maintenant votre terrarium interactif ! Ouvrez votre fichier `index.html`
 - **Compatibilité multi-appareils** : fonctionne sur bureau et mobile
 - **Conscience de la performance** : pas de fuites mémoire ni calculs redondants
 
-![terrarium fini](../../../../translated_images/terrarium-final.0920f16e87c13a84.fr.png)
+![terrarium fini](../../../../translated_images/fr/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

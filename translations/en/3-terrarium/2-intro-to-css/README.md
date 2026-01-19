@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Terrarium Project Part 2: Introduction to CSS
 
-![Introduction to CSS](../../../../translated_images/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.en.png)
+![Introduction to CSS](../../../../translated_images/en/webdev101-css.3f7af5991bf53a200d79e7257e5e450408d8ea97f5b531d31b2e3976317338ee.png)
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
@@ -83,7 +83,7 @@ body {
 
 Open your browser's console and inspect the 'Elements' tab. Observe the font of the `<h1>` tag. You’ll see that it inherits the font from the body, as indicated by the browser:
 
-![inherited font](../../../../translated_images/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.en.png)
+![inherited font](../../../../translated_images/en/1.cc07a5cbe114ad1d4728c35134584ac1b87db688eff83cf75985cf31fe0ed95c.png)
 
 ✅ Can you make a nested style inherit a different property?
 
@@ -259,7 +259,7 @@ We’re also using `rem` for the border-radius, a font-relative unit. Learn more
 
 Add a "bubble" shine to the bottom-left area of the jar to make it look more like glass. Style the `.jar-glossy-long` and `.jar-glossy-short` to create a reflective shine. Here’s the final result:
 
-![finished terrarium](../../../../translated_images/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.en.png)
+![finished terrarium](../../../../translated_images/en/terrarium-final.2f07047ffc597d0a06b06cab28a77801a10dd12fdb6c7fc630e9c40665491c53.png)
 
 To complete the post-lecture quiz, explore this Learn module: [Style your HTML app with CSS](https://docs.microsoft.com/learn/modules/build-simple-website/4-css-basics/?WT.mc_id=academic-77807-sagibbon)
 

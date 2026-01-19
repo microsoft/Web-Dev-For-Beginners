@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 قم بزيارة [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) للبدء!
 
-![Background](../../translated_images/background.148a8d43afde5730.ar.png)
+![Background](../../translated_images/ar/background.148a8d43afde5730.webp)
 
 - دروس تغطي كل شيء من الأساسيات إلى RAG.
 - تفاعل مع شخصيات تاريخية باستخدام GenAI وتطبيقنا المصاحب.
 - سرد ممتع وجذاب، ستسافر عبر الزمن!
 
-![character](../../translated_images/character.5c0dd8e067ffd693.ar.png)
+![character](../../translated_images/ar/character.5c0dd8e067ffd693.webp)
 
 
 كل درس يتضمن مهمة يجب إتمامها، اختبار معرفة، وتحدي لتوجيهك في تعلم موضوعات مثل:
@@ -115,7 +115,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 في نسختك من هذا المستودع التي أنشأتها، انقر على زر **Code** واختر **Open with Codespaces**. سيُنشئ هذا Codespace جديدًا لتعمل فيه.
 
-![Codespace](../../translated_images/createcodespace.0238bbf4d7a8d955.ar.png)
+![Codespace](../../translated_images/ar/createcodespace.0238bbf4d7a8d955.webp)
 
 #### تشغيل المنهج محليًا على جهازك
 

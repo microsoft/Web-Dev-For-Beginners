@@ -126,7 +126,7 @@ flowchart LR
 
 دعونا نجرب هذا. افتح موقعًا (Microsoft.com يعمل جيدًا لهذا) وانقر على زر "تسجيل". الآن قم بتحديث الصفحة وشاهد المحلل يلتقط كل ما يحدث. عندما تتوقف عن التسجيل، سترى تفصيلًا دقيقًا لكيفية قيام المتصفح بـ "البرمجة"، "التقديم"، و"الرسم" للموقع. يذكرني هذا بكيفية مراقبة مركز التحكم لكل نظام أثناء إطلاق الصاروخ - تحصل على بيانات في الوقت الفعلي حول ما يحدث ومتى.
 
-![Edge profiler](../../../../translated_images/profiler.5a4a62479c5df01c.ar.png)
+![Edge profiler](../../../../translated_images/ar/profiler.5a4a62479c5df01c.webp)
 
 ✅ يحتوي [توثيق Microsoft](https://docs.microsoft.com/microsoft-edge/devtools-guide/performance/?WT.mc_id=academic-77807-sagibbon) على الكثير من التفاصيل إذا كنت تريد التعمق أكثر.
 
@@ -136,11 +136,11 @@ flowchart LR
 
 احصل على لقطة لأداء صفحتك عن طريق تحديد جزء من خط الزمن الخاص بالملف الشخصي والنظر إلى لوحة الملخص:
 
-![Edge profiler snapshot](../../../../translated_images/snapshot.97750180ebcad737.ar.png)
+![Edge profiler snapshot](../../../../translated_images/ar/snapshot.97750180ebcad737.webp)
 
 تحقق من لوحة سجل الأحداث لترى إذا كان أي حدث استغرق أكثر من 15 مللي ثانية:
 
-![Edge event log](../../../../translated_images/log.804026979f3707e0.ar.png)
+![Edge event log](../../../../translated_images/ar/log.804026979f3707e0.webp)
 
 ✅ تعرف على المحلل الخاص بك! افتح أدوات المطور على هذا الموقع وانظر إذا كانت هناك أي اختناقات. ما هو الأصل الذي يتم تحميله ببطء؟ الأسرع؟
 

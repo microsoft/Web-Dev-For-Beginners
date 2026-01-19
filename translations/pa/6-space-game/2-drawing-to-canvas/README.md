@@ -108,7 +108,7 @@ quadrantChart
     UI Elements: [0.9, 0.1]
 ```
 
-![ਕੈਨਵਸ ਦਾ ਗ੍ਰਿਡ](../../../../translated_images/canvas_grid.5f209da785ded492.pa.png)
+![ਕੈਨਵਸ ਦਾ ਗ੍ਰਿਡ](../../../../translated_images/pa/canvas_grid.5f209da785ded492.webp)
 > ਚਿੱਤਰ [MDN](https://developer.mozilla.org/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) ਤੋਂ
 
 ਕੈਨਵਸ ਤੱਤ 'ਤੇ ਡਰਾਇੰਗ ਕਰਨ ਲਈ, ਤੁਸੀਂ ਉਹੀ ਤਿੰਨ-ਕਦਮ ਪ੍ਰਕਿਰਿਆ ਅਪਣਾਉਂਦੇ ਹੋ ਜੋ ਸਾਰੇ ਕੈਨਵਸ ਗ੍ਰਾਫਿਕਸ ਦੀ ਬੁਨਿਆਦ ਬਣਦੀ ਹੈ। ਜਦ ਤੁਸੀਂ ਇਹ ਕੁਝ ਵਾਰ ਕਰਦੇ ਹੋ, ਇਹ ਦੂਸਰੀ ਕੁਦਰਤ ਬਣ ਜਾਂਦੀ ਹੈ:
@@ -301,7 +301,7 @@ async function renderGameScreen() {
 
 ਅੰਤਮ ਨਤੀਜਾ ਇਸ ਤਰ੍ਹਾਂ ਦਿਖਾਈ ਦੇਣਾ ਚਾਹੀਦਾ ਹੈ:  
 
-![ਕਾਲੀ ਸਕ੍ਰੀਨ ਜਿਸ ਵਿੱਚ ਇੱਕ ਹੀਰੋ ਅਤੇ 5*5 ਮੋਨਸਟਰ ਹਨ](../../../../translated_images/partI-solution.36c53b48c9ffae2a.pa.png)  
+![ਕਾਲੀ ਸਕ੍ਰੀਨ ਜਿਸ ਵਿੱਚ ਇੱਕ ਹੀਰੋ ਅਤੇ 5*5 ਮੋਨਸਟਰ ਹਨ](../../../../translated_images/pa/partI-solution.36c53b48c9ffae2a.webp)  
 
 ## ਹੱਲ  
 

@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 En liten drag-och-släpp-kodmeditation. Med lite HTML, JS och CSS kan du bygga ett webbgränssnitt, styla det och lägga till interaktion.
 
-![mitt terrarium](../../../../translated_images/screenshot_gray.0c796099a1f9f25e.sv.png)
+![mitt terrarium](../../../../translated_images/sv/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Krediter
 

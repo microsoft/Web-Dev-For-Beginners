@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Ondoa data iliyohifadhiwa
     ClearStorage --> FirstTime: Rudi kwenye usanidi
 ```
-![Dirisha la hifadhi ya ndani](../../../../translated_images/localstorage.472f8147b6a3f8d1.sw.png)
+![Dirisha la hifadhi ya ndani](../../../../translated_images/sw/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Tafakari za Usalama:** Katika programu za uzalishaji, kuhifadhi funguo za API ndani ya LocalStorage kuna hatari za usalama kwa sababu JavaScript inaweza kufikia data hii. Kwa madhumuni ya kujifunza, njia hii inafanya kazi vizuri, lakini programu halisi zinapaswa kutumia hifadhi salama upande wa seva kwa nyaraka nyeti.
 

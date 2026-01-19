@@ -42,10 +42,10 @@ This curriculum includes importable packages for common LMS workflows.
   - Moodle Cloud has limited support for Common Cartridge files. Prefer the Moodle file above, which can also be uploaded into Canvas.
   - After importing, review modules, due dates, and quiz settings to align with your term schedule.
 
-![Moodle](../../translated_images/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.en.png)
+![Moodle](../../translated_images/en/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.png)
 > The curriculum displayed in a Moodle classroom
 
-![Canvas](../../translated_images/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.en.png)
+![Canvas](../../translated_images/en/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.png)
 > The curriculum displayed in Canvas
 
 ### Using the Repository Directly (Without GitHub Classroom)

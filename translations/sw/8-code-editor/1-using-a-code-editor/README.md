@@ -182,7 +182,7 @@ Kama vile simu ya Alexander Graham Bell ilivyowezesha mawasiliano ya mbali, kuun
 
 Mara kila kitu kinapopakuliwa, utaona eneo la kazi safi na la kuvutia lililoundwa kukuweka makini na kinachohitajika – msimbo wako!
 
-![Muonekano wa kawaida wa VSCode.dev](../../../../translated_images/default-vscode-dev.5d06881d65c1b323.sw.png)
+![Muonekano wa kawaida wa VSCode.dev](../../../../translated_images/sw/default-vscode-dev.5d06881d65c1b323.webp)
 
 **Hapa ni ziara yako ya mtaa:**
 - **Ukuta wa Shughuli** (ukingo wa kushoto): Urambazaji wako mkuu una Explorer 📁, Tafuta 🔍, Udhibiti wa Chanzo 🌿, Nyongeza 🧩, na Mipangilio ⚙️
@@ -229,7 +229,7 @@ Hii ni bora unapoanza mpya kwenye VSCode.dev na unataka kufungua hifadhidata maa
 1. Nenda kwenye [vscode.dev](https://vscode.dev) kama bado hujafika
 2. Tafuta kitufe cha "Open Remote Repository" kwenye skrini ya kuanza na kubofya
 
-   ![Fungua hifadhidata ya mbali](../../../../translated_images/open-remote-repository.bd9c2598b8949e7f.sw.png)
+   ![Fungua hifadhidata ya mbali](../../../../translated_images/sw/open-remote-repository.bd9c2598b8949e7f.webp)
 
 3. Bandika URL yoyote ya hifadhidata ya GitHub (jaribu hii: `https://github.com/microsoft/Web-Dev-For-Beginners`)
 4. Bonyeza Enter na angalia uchawi unavyotokea!
@@ -238,7 +238,7 @@ Hii ni bora unapoanza mpya kwenye VSCode.dev na unataka kufungua hifadhidata maa
 
 Unataka kujisikia kama mchawi wa kuandika msimbo? Jaribu mkato huu wa kibodi: Ctrl+Shift+P (au Cmd+Shift+P kwa Mac) kufungua Komandi ya Palette:
 
-![Komandi ya Palette](../../../../translated_images/palette-menu.4946174e07f42622.sw.png)
+![Komandi ya Palette](../../../../translated_images/sw/palette-menu.4946174e07f42622.webp)
 
 **Komandi ya Palette ni kama kuwa na injini ya utafutaji ya kila jambo unaloweza kufanya:**
 - Andika "open remote" na itakupata kifungua hifadhidata
@@ -300,7 +300,7 @@ Kama kupanga ramani za majengo ofisini mwa mbuni wa majengo, uundaji wa faili nd
 3. Andika jina la faili pamoja na kiendelezi kinachofaa (`style.css`, `script.js`, `index.html`)
 4. Bonyeza Enter kuunda faili
 
-![Kuunda faili mpya](../../../../translated_images/create-new-file.2814e609c2af9aeb.sw.png)
+![Kuunda faili mpya](../../../../translated_images/sw/create-new-file.2814e609c2af9aeb.webp)
 
 **Kanuni za kuitia majina:**
 - Tumia majina ya kueleweka yanayoonyesha matumizi ya faili
@@ -318,7 +318,7 @@ Hapa ndipo furaha ya kweli inaanza! Mhariri wa VSCode.dev umejaa vipengele vya k
 2. Anza kuandika na uangalie VSCode.dev ikikuongezea rangi, mapendekezo, na kugundua makosa
 3. Hifadhi kazi kwa Ctrl+S (Windows/Linux) au Cmd+S (Mac) – ingawa huhifadhi moja kwa moja pia!
 
-![Kuhariri faili kwenye VSCode.dev](../../../../translated_images/edit-a-file.52c0ee665ef19f08.sw.png)
+![Kuhariri faili kwenye VSCode.dev](../../../../translated_images/sw/edit-a-file.52c0ee665ef19f08.webp)
 
 **Mambo mazuri yanayotokea unapoandika msimbo:**
 - Msimbo wako unatolewa kwa rangi nzuri ili uwe rahisi kusoma
@@ -339,7 +339,7 @@ Kama wachimbaji wa kumbukumbu wanavyotengeneza kumbukumbu za kina za tabaka za k
 2. Faili zilizobadilishwa zinaonekana katika sehemu ya "Mabadiliko"
 3. Rangi hutambulisha aina za mabadiliko: kijani kwa nyongeza, nyekundu kwa ufutaji
 
-![Kutazama mabadiliko katika Udhibiti wa Chanzo](../../../../translated_images/working-tree.c58eec08e6335c79.sw.png)
+![Kutazama mabadiliko katika Udhibiti wa Chanzo](../../../../translated_images/sw/working-tree.c58eec08e6335c79.webp)
 
 **Kuhifadhi kazi yako (mtiririko wa kufanya commit):**
 
@@ -431,7 +431,7 @@ Soko la vipengele limepangiliwa vyema, hivyo hutapotea ukitafuta unachohitaji. L
 2. Vinjari au tafuta kitu maalum
 3. Bonyeza chochote kinachovutia kujifunza zaidi
 
-![Kiolesura cha soko la vipengele](../../../../translated_images/extensions.eca0e0c7f59a10b5.sw.png)
+![Kiolesura cha soko la vipengele](../../../../translated_images/sw/extensions.eca0e0c7f59a10b5.webp)
 
 **Utakachoona humo:**
 
@@ -484,7 +484,7 @@ Vipengele vingi huja na mipangilio unayoweza kubadilisha ili kufanya kazi jinsi 
 3. Chagua "Extension Settings" kutoka kwenye menyu ya kushuka chini
 4. Rekebisha vitu hadi viwe vinakufaa kabisa kwa mtiririko wako wa kazi
 
-![Kubinafsisha mipangilio ya kiendelezaji](../../../../translated_images/extension-settings.21c752ae4f4cdb78.sw.png)
+![Kubinafsisha mipangilio ya kiendelezaji](../../../../translated_images/sw/extension-settings.21c752ae4f4cdb78.webp)
 
 **Vitu vya kawaida ambavyo unaweza kutaka kubadilisha:**
 - Jinsi msimbo wako unavyoandaliwa (taps vs nafasi, urefu wa mstari, n.k.)

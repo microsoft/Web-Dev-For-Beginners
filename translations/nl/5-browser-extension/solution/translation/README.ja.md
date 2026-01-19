@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Bouw een browserextensie die, met behulp van de CO2 Signal API van tmrow, het energieverbruik in jouw regio bijhoudt en dit als een herinnering op je browser weergeeft. Door deze extensie ad-hoc te gebruiken, kun je je activiteiten baseren op deze informatie.
 
-![extension screenshot](../../../../../translated_images/extension-screenshot.0e7f5bfa110e92e3.nl.png)
+![extension screenshot](../../../../../translated_images/nl/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Aan de slag
 
@@ -31,7 +31,7 @@ npm run build
 
 Om de extensie in Edge te installeren, ga je naar het "drie stippen"-menu rechtsboven in de browser en zoek je het paneel "Extensies". Kies daar "Load Unpacked" en laad de nieuwe extensie. Wanneer je wordt gevraagd, open je de "dist"-map om de extensie te laden. Om de extensie te gebruiken, heb je een API-sleutel van de CO2 Signal API nodig ([hier via e-mail verkrijgen](https://www.co2signal.com/) - voer je e-mailadres in het vak op die pagina in) en een [code voor jouw regio](http://api.electricitymap.org/v3/zones) die overeenkomt met de [Electricity Map](https://www.electricitymap.org/map) (bijvoorbeeld, voor Boston gebruik je 'US-NEISO').
 
-![installing](../../../../../translated_images/install-on-edge.78634f02842c4828.nl.png)
+![installing](../../../../../translated_images/nl/install-on-edge.78634f02842c4828.webp)
 
 Wanneer je de API-sleutel en regio invoert in de extensie-interface, verandert de gekleurde stip die in de extensiebalk van je browser wordt weergegeven. Deze stip weerspiegelt het energieverbruik in jouw regio en geeft aan welke activiteiten geschikt zijn op basis van het energieverbruik. Het concept van dit "stip"-systeem is geïnspireerd door de [Energy Lollipop extension](https://energylollipop.com/) voor emissies in Californië.
 

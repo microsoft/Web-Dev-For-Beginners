@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # Podstawy JavaScript: Podejmowanie decyzji
 
-![JavaScript Basics - Podejmowanie decyzji](../../../../translated_images/webdev101-js-decisions.69e1b20f272dd1f0.pl.png)
+![JavaScript Basics - Podejmowanie decyzji](../../../../translated_images/pl/webdev101-js-decisions.69e1b20f272dd1f0.webp)
 
 > Sketchnote autorstwa [Tomomi Imura](https://twitter.com/girlie_mac)
 
