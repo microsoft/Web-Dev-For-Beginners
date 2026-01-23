@@ -544,6 +544,8 @@ JavaScript has some behaviors that can catch developers off guard. Here's a clas
 
 This represents one of many JavaScript behaviors worth understanding. Familiarity with these quirks will help you write more reliable code and debug issues more effectively.
 
+There is a diffrent between `var` and `let` and `cost`, it doesn't matter where you use a variable defibed by `var` syntax, but when you define a variable with keyword `let` you should use it after declaration, unless you will face undefined exception. it's called `Temporal dead zone (TDZ)` you can red more about it here: [Temporal dead zone (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
+
 ## Post-Lecture Quiz
 [Post-lecture quiz](https://ff-quizzes.netlify.app)
 
