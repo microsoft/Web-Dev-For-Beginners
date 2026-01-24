@@ -35,36 +35,38 @@ const displayCarbonUsage = async (apiKey, region) => {
 	try {
 		await axios
 			.get('https://api.co2signal.com/v1/latest', {
-				params: {
-					countryCode: region,
-				},
-				headers: {
-					//please get your own token from CO2Signal https://www.co2signal.com/
-					'auth-token': apiKey,
-				},
+				params: { countryCode: region },
+				headers: { 'auth-token': apiKey },
 			})
 			.then((response) => {
-				let CO2 = Math.floor(response.data.data.carbonIntensity);
+				const data = response?.data?.data;
 
+				// ✅ Validate required data before using
+				if (data?.carbonIntensity == null || data?.fossilFuelPercentage == null) {
+					throw new Error('Missing carbon intensity or fossil fuel data');
+				}
+
+				let CO2 = Math.floor(data.carbonIntensity);
 				calculateColor(CO2);
 
 				loading.style.display = 'none';
 				form.style.display = 'none';
 				myregion.textContent = region;
 				usage.textContent =
-					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
+					Math.round(data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
 				fossilfuel.textContent =
-					response.data.data.fossilFuelPercentage.toFixed(2) +
+					data.fossilFuelPercentage.toFixed(2) +
 					'% (percentage of fossil fuels used to generate electricity)';
 				results.style.display = 'block';
 			});
 	} catch (error) {
-		console.log(error);
+		console.warn('Data fetch failed:', error.message);
 		loading.style.display = 'none';
 		results.style.display = 'none';
-		errors.textContent = 'Sorry, we have no data for the region you have requested.';
+		errors.textContent = 'Sorry, data unavailable for the selected region.';
 	}
 };
+
 
 // set up api key and region
 const setUpUser = async (apiKey, region) => {
