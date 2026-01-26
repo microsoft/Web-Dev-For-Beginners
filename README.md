@@ -77,7 +77,7 @@ Each lesson includes an assignment to complete, a knowledge check and a challeng
 - Text and image app generation
 - Search apps
 
-Visit [https://aka.ms/genai-js-course]([https://aka.ms/genai-js-course) to get started!
+Visit [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) to get started!
 
 
 
