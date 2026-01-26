@@ -86,7 +86,7 @@ Minden lecke tartalmaz egy feladatot, tudásellenőrzést és egy kihívást, ho
 - Szöveges és képes alkalmazás générálás
 - Keresőalkalmazások
 
-Látogass el ide: [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) hogy elindulj!
+Látogass el ide: [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) hogy elindulj!
 
 
 

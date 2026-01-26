@@ -86,7 +86,7 @@ Kila somo lina kazi ya kukamilisha, ukaguzi wa maarifa na changamoto ya kukuongo
 - Uundaji wa programu za maandishi na picha
 - Programu za utafutaji
 
-Tembelea [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) kuanza!
+Tembelea [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) kuanza!
 
 
 

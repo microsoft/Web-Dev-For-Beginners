@@ -86,7 +86,7 @@ Azure AI Foundry Discordコミュニティに参加
 - テキストおよび画像のアプリ生成
 - 検索アプリ
 
-[https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)で今すぐ始めましょう！
+[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)で今すぐ始めましょう！
 
 
 

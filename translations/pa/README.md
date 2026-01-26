@@ -85,7 +85,7 @@ Azure AI Foundry Discord Community ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋਵੋ
 - ਪਾਠ ਅਤੇ ਚਿੱਤਰ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਉਣਾ
 - ਖੋਜ ਐਪਸ
 
-ਸ਼ੁਰੂਆਤ ਕਰਨ ਲਈ [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) ਤੇ ਜਾਓ!
+ਸ਼ੁਰੂਆਤ ਕਰਨ ਲਈ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ਤੇ ਜਾਓ!
 
 
 

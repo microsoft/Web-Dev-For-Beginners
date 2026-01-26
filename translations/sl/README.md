@@ -86,7 +86,7 @@ Vsaka lekcija vključuje nalogo za dokončanje, preverjanje znanja in izziv, ki 
 - Generiranje besedilnih in slikovnih aplikacij
 - Iskalne aplikacije
 
-Obišči [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) za začetek!
+Obišči [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) za začetek!
 
 
 

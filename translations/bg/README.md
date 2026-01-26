@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 - Генериране на приложения за текст и изображения
 - Търсещи приложения
 
-Посетете [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course), за да започнете!
+Посетете [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), за да започнете!
 
 
 

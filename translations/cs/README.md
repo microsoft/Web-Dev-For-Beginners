@@ -85,7 +85,7 @@ Každá lekce obsahuje úkol k dokončení, ověření znalostí a výzvu, kter�
 - Generování textových a obrazových aplikací
 - Vyhledávací aplikace
 
-Navštivte [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) a začněte!
+Navštivte [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) a začněte!
 
 ## 🌱 Začínáme
 

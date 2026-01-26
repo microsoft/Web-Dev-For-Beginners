@@ -35,3 +35,12 @@
   - [22](../7-bank-project/2-forms/README.md)
   - [23](../7-bank-project/3-data/README.md)
   - [24](../7-bank-project/4-state-management/README.md)
+
+- Code Editor
+  - [25](../8-code-editor/1-using-a-code-editor/README.md)
+
+- Chat Project
+  - [26](../9-chat-project/README.md)
+
+- AI Framework Project
+  - [27](../10-ai-framework-project/README.md)
