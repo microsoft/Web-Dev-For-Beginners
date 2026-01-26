@@ -85,7 +85,7 @@ Mỗi bài học bao gồm một bài tập hoàn thành, kiểm tra kiến th�
 - Tạo ứng dụng văn bản và hình ảnh
 - Ứng dụng tìm kiếm
 
-Truy cập [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) để bắt đầu!
+Truy cập [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) để bắt đầu!
 
 
 

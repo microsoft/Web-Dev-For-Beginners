@@ -73,7 +73,7 @@ Iga tund sisaldab ülesannet, teadmiste kontrolli ja väljakutset, mis juhatavad
 - Teksti- ja pildirakenduste genereerimine
 - Otsingurakendused
 
-Alusta siit: [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)
+Alusta siit: [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
 ## 🌱 Alustamine
 

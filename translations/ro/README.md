@@ -86,7 +86,7 @@ Fiecare lecție include o temă de completat, o verificare a cunoștințelor și
 - Generarea de aplicații text și imagine
 - Aplicații de căutare
 
-Vizitează [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) pentru a începe!
+Vizitează [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) pentru a începe!
 
 
 

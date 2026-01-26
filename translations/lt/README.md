@@ -86,7 +86,7 @@ Kiekviena pamoka apima užduotį atlikti, žinių patikrinimą ir iššūkį, ku
 - Teksto ir vaizdų programų generavimas
 - Paieškos programos
 
-Aplankykite [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) pradėti!
+Aplankykite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) pradėti!
 
 
 

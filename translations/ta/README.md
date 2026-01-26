@@ -86,7 +86,7 @@ Azure AI Foundry Discord சமுதாயத்தில் சேரவும
 - உரை மற்றும் படம் செயலி உருவாக்குதல்
 - தேடல் செயலிகள்
 
-தொடங்க [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) பார்க்கவும்!
+தொடங்க [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) பார்க்கவும்!
 
 
 

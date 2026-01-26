@@ -86,7 +86,7 @@ Cada lección incluye una tarea para completar, una revisión de conocimientos y
 - Generación de aplicaciones de texto e imagen
 - Aplicaciones de búsqueda
 
-Visita [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) para comenzar!
+Visita [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para comenzar!
 
 
 

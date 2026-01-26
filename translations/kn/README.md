@@ -85,7 +85,7 @@ Azure AI Foundry Discord ಸಮುದಾಯವನ್ನು ಸೇರಿ
 - ಪಠ್ಯ ಮತ್ತು ಚಿತ್ರ ಆಪ್ ಸೃಷ್ಟಿ  
 - ಹುಡುಕು ಆಪ್ ಗಳು
 
-ಪ್ರಾರಂಭಿಸಲು [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) ಗೆ ಭೇಟಿ ನೀಡಿ!
+ಪ್ರಾರಂಭಿಸಲು [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ಗೆ ಭೇಟಿ ನೀಡಿ!
 
 
 

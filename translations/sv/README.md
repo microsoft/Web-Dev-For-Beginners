@@ -70,7 +70,7 @@ Varje lektion inkluderar en uppgift att slutföra, en kunskapskontroll och en ut
 - Text- och bildappsgenerering
 - Sökappar
 
-Besök [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) för att komma igång!
+Besök [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) för att komma igång!
 
 
 

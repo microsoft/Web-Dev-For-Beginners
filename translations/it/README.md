@@ -69,7 +69,7 @@ Ogni lezione include un compito da completare, un controllo della conoscenza e u
 - Generazione di app di testo e immagini
 - App di ricerca
 
-Visita [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) per iniziare!
+Visita [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) per iniziare!
 
 ## 🌱 Come Iniziare
 

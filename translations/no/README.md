@@ -86,7 +86,7 @@ Hver leksjon inkluderer en oppgave å fullføre, en kunnskapssjekk og en utfordr
 - Tekst- og bildeapp-generering
 - Søk-apper
 
-Besøk [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) for å komme i gang!
+Besøk [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) for å komme i gang!
 
 
 

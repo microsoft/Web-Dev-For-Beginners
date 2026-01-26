@@ -71,7 +71,7 @@ Azure AI Foundry Discord समुदाय में शामिल हों
 - टेक्स्ट और छवि ऐप निर्माण
 - खोज ऐप्स
 
-शुरू करने के लिए [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) पर जाएं!
+शुरू करने के लिए [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) पर जाएं!
 
 
 

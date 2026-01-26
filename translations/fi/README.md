@@ -86,7 +86,7 @@ Jokaisessa oppitunnissa on tehtävä suoritettavaksi, tietoarviointi ja haaste, 
 - Teksti- ja kuva-applikaatioiden generointi
 - Hakusovellukset
 
-Käy osoitteessa [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) aloittaaksesi!
+Käy osoitteessa [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) aloittaaksesi!
 
 
 

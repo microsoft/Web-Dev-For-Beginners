@@ -65,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 - יצירת אפליקציות טקסט ותמונה
 - אפליקציות חיפוש
 
-בקרו ב-[https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) כדי להתחיל!
+בקרו ב-[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) כדי להתחיל!
 
 
 

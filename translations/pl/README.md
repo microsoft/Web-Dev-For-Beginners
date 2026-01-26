@@ -85,7 +85,7 @@ Każda lekcja zawiera zadanie do wykonania, sprawdzanie wiedzy oraz wyzwanie, kt
 - Generowanie aplikacji tekstowych i obrazkowych
 - Aplikacje do wyszukiwania
 
-Odwiedź [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course), aby zacząć!
+Odwiedź [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), aby zacząć!
 
 ## 🌱 Pierwsze kroki
 

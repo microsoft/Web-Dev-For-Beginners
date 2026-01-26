@@ -86,7 +86,7 @@ Svaka lekcija uključuje zadatak za dovršetak, provjeru znanja i izazov koji va
 - Generiranje aplikacija za tekst i slike
 - Pretraživačke aplikacije
 
-Posjetite [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) i započnite!
+Posjetite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) i započnite!
 
 
 

@@ -86,7 +86,7 @@ Hver lektion inkluderer en opgave, en vidensprøve og en udfordring, der guider 
 - Tekst- og billedapp-generation
 - Søg-apps
 
-Besøg [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) for at komme i gang!
+Besøg [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) for at komme i gang!
 
 
 

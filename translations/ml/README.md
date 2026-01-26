@@ -86,7 +86,7 @@ Azure AI Foundry Discord Community യിൽ ചേരൂ
 - ടെക്സ്റ്റ് ആൻഡ് ഇമേജ് ആപ്പ് സൃഷ്ടി
 - തിരച്ചിൽ ആപ്പുകൾ
 
-ആരംഭിക്കാൻ സന്ദർശിക്കുക [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)
+ആരംഭിക്കാൻ സന്ദർശിക്കുക [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
 
 

@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 - إنشاء تطبيقات النصوص والصور
 - تطبيقات البحث
 
-قم بزيارة [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) للبدء!
+قم بزيارة [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) للبدء!
 
 
 

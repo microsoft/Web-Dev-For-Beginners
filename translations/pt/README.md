@@ -85,7 +85,7 @@ Cada lição inclui uma tarefa para completares, um teste de conhecimento e um d
 - Aplicações de geração de texto e imagem
 - Aplicações de pesquisa
 
-Visita [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) para começares!
+Visita [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para começares!
 
 
 

@@ -86,7 +86,7 @@ Bawat aralin ay may nakalakip na asignatura, pagsusuri ng kaalaman, at hamon upa
 - Pagbuo ng text at image app
 - Mga search app
 
-Bisitahin ang [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) para makapagsimula!
+Bisitahin ang [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para makapagsimula!
 
 
 

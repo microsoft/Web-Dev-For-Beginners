@@ -86,7 +86,7 @@ Jede Lektion beinhaltet eine Aufgabe, einen Wissenstest und eine Herausforderung
 - Text- und Bild-App-Generierung  
 - Such-Apps
 
-Besuche [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course), um zu starten!
+Besuche [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), um zu starten!
 
 
 

@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 - تولید اپلیکیشن‌های متنی و تصویری
 - اپلیکیشن‌های جستجو
 
-برای شروع به [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) مراجعه کنید!
+برای شروع به [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) مراجعه کنید!
 
 
 

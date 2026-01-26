@@ -86,7 +86,7 @@ Azure AI Foundry Discord समुदायात सामील व्हा
 - मजकूर आणि प्रतिमा अॅप निर्मिती
 - शोध अनुप्रयोग
 
-प्रारंभ करण्यासाठी भेट द्या [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)!
+प्रारंभ करण्यासाठी भेट द्या [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
 
 
