@@ -86,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 - టెక్స్ట్ మరియు ఇమేజ్ యాప్ జనరేషన్
 - శోధన యాప్స్
 
-ప్రారంభించేందుకు సందర్శించండి [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)
+ప్రారంభించేందుకు సందర్శించండి [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
 
 

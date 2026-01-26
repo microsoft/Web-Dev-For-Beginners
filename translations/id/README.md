@@ -86,7 +86,7 @@ Setiap pelajaran mencakup tugas untuk diselesaikan, pemeriksaan pengetahuan, dan
 - Pembuatan aplikasi teks dan gambar
 - Aplikasi pencarian
 
-Kunjungi [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) untuk memulai!
+Kunjungi [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) untuk memulai!
 
 
 

@@ -85,7 +85,7 @@ Setiap pelajaran termasuk tugasan untuk diselesaikan, pemeriksaan pengetahuan da
 - Penjanaan aplikasi teks dan imej
 - Aplikasi carian
 
-Lawati [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) untuk bermula!
+Lawati [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) untuk bermula!
 
 
 
