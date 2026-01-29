@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
-  "translation_date": "2025-10-03T16:01:11+00:00",
-  "source_file": "Git-Basics/README.md",
-  "language_code": "lt"
-}
--->
 ## GIT pagrindai pradedantiesiems web kūrėjams👶
 
 ## Kas yra `Git`?

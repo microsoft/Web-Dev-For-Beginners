@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2026-01-07T13:27:39+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "ta"
-}
--->
 # உங்கள் வங்கி செயலியை நவீன CSS மூலம் ஸ்டைல் செய்யுங்கள்
 
 ## திட்ட ஒவர்வியூ

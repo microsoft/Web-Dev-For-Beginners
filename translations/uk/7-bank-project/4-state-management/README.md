@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-06T13:39:44+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "uk"
-}
--->
 # Створення банківського додатку, частина 4: Концепції управління станом
 
 ## ⚡ Що можна зробити за наступні 5 хвилин

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-28T11:13:46+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "lt"
-}
--->
 # Microsoft Atvirojo Kodo Elgesio Kodeksas
 
 Šis projektas priėmė [Microsoft Atvirojo Kodo Elgesio Kodeksą](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon).

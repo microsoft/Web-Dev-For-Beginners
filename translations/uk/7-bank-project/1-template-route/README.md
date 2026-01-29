@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-06T13:44:23+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "uk"
-}
--->
 # Створення банківського додатку, частина 1: HTML-шаблони та маршрути у веб-додатку
 
 ```mermaid

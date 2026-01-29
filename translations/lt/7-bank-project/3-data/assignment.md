@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
-  "translation_date": "2026-01-07T11:57:48+00:00",
-  "source_file": "7-bank-project/3-data/assignment.md",
-  "language_code": "lt"
-}
--->
 # Kodo Refaktorizavimo ir Dokumentacijos Užduotis
 
 ## Mokymosi Tikslai

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "947ca5ce7c94aee9c7de7034e762bc17",
-  "translation_date": "2026-01-07T13:44:53+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/assignment.md",
-  "language_code": "ta"
-}
--->
 # DOM உறுப்புக் கண்காணிப்பு பணிப் பதிவு
 
 ## மேம்படி

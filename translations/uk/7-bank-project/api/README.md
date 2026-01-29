@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9884f8c8a61cf56214450f8b16a094ce",
-  "translation_date": "2025-08-27T22:01:38+00:00",
-  "source_file": "7-bank-project/api/README.md",
-  "language_code": "uk"
-}
--->
 # Bank API
 
 > Bank API створений за допомогою [Node.js](https://nodejs.org) + [Express](https://expressjs.com/).

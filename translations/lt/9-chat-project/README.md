@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-07T10:59:27+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "lt"
-}
--->
 # Sukurkite pokalbių asistentą su DI
 
 Prisiminkite „Star Trek“, kai įgula laisvai kalbėdavosi su laivo kompiuteriu, užduodama sudėtingus klausimus ir gaudama apgalvotus atsakymus? Tai, kas 1960-aisiais atrodė kaip mokslinė fantastika, dabar yra kažkas, ką galite sukurti naudodami jau žinomas interneto technologijas.

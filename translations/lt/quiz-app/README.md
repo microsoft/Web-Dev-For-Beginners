@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-28T11:54:10+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "lt"
-}
--->
 # Viktorinos programa
 
 Šios viktorinos yra prieš ir po paskaitų skirtos duomenų mokslo mokymo programai adresu https://aka.ms/webdev-beginners

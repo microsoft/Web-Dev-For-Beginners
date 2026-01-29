@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T10:55:13+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "lt"
-}
--->
 # Dirbtinio intelekto pagrindas
 
 Ar kada nors jautėtės priblokšti bandydami sukurti dirbtinio intelekto programas nuo nulio? Jūs nesate vieni! Dirbtinio intelekto pagrindai yra tarsi Šveicariškas armijos peilis dirbtinio intelekto kūrimui – tai galingi įrankiai, kurie gali sutaupyti laiko ir galvos skausmo kuriant išmanias programas. Įsivaizduokite dirbtinio intelekto pagrindą kaip gerai organizuotą biblioteką: ji suteikia iš anksto paruoštas sudedamąsias dalis, standartizuotus API ir išmanias abstrakcijas, todėl galite koncentruotis į problemų sprendimą, o ne į implementacijos detales.

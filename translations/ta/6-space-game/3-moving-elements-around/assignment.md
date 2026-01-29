@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
-  "translation_date": "2026-01-07T13:15:54+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/assignment.md",
-  "language_code": "ta"
-}
--->
 # உங்கள் குறியீட்டிற்கான கருத்துக்கள்
 
 ## வழிமுறைகள்

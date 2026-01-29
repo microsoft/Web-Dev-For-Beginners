@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6fd645e97c48cd5eb5a3d290815ec8b5",
-  "translation_date": "2026-01-07T12:45:55+00:00",
-  "source_file": "2-js-basics/1-data-types/assignment.md",
-  "language_code": "ta"
-}
--->
 # Data Types Practice: E-commerce Shopping Cart
 
 ## Instructions

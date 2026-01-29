@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bcd2c2bbaae71151b1ed1b9170aa78af",
-  "translation_date": "2025-10-11T11:54:48+00:00",
-  "source_file": "9-chat-project/solution/backend/README.md",
-  "language_code": "ta"
-}
--->
 உங்கள் ரன்டைமை தேர்ந்தெடுக்கவும்
 
 - [Python](./python/README.md)

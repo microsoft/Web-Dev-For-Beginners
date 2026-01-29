@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T11:17:53+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "lt"
-}
--->
 # Naudojimasis Kodo Redaktoriumi: VSCode.dev Įvaldymas
 
 Prisiminkite, kaip *The Matrix* filmuke Neo turėjo prisijungti prie milžiniško kompiuterio terminalo, norėdamas patekti į skaitmeninį pasaulį? Šiuolaikiniai žiniatinklio kūrimo įrankiai yra visiškai priešingas pasakojimas – nepaprastai galingi įrankiai, prieinami bet kur. VSCode.dev yra naršyklėje veikiantis kodo redaktorius, kuris atneša profesionalius kūrimo įrankius į bet kurį įrenginį, turintį interneto ryšį.

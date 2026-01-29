@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
-  "translation_date": "2026-01-07T14:00:20+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
-  "language_code": "ta"
-}
--->
 # பணியின் தலைப்பு: நவீன வலை மேம்பாட்டு கருவிகளை ஆராய்தல்
 
 ## அறிவுறுத்தல்கள்

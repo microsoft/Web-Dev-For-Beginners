@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T12:02:05+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "lt"
-}
--->
 # Žaidimo kūrimas naudojant įvykius
 
 Ar kada nors susimąstėte, kaip svetainės žino, kai paspaudžiate mygtuką ar rašote teksto laukelyje? Tai yra įvykių valdomos programavimo magija! Koks geresnis būdas išmokti šį svarbų įgūdį nei sukurti ką nors naudingo – rašymo greičio žaidimą, kuris reaguoja į kiekvieną jūsų paspaustą klavišą.

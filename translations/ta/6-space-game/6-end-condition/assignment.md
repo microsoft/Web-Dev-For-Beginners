@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "232d592791465c1678cab3a2bb6cd3e8",
-  "translation_date": "2026-01-07T13:09:20+00:00",
-  "source_file": "6-space-game/6-end-condition/assignment.md",
-  "language_code": "ta"
-}
--->
 # ஒரு மாதிரிப் போட்டியை கட்டமைக்கவும்
 
 ## பணிகள் பார்வை

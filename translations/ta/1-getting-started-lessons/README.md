@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-11T11:48:35+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "ta"
-}
--->
 # வலை வளர்ச்சியைத் தொடங்குதல்
 
 இந்த பாடத்திட்டத்தின் இந்த பகுதியில், ஒரு தொழில்முறை டெவலப்பராக மாற முக்கியமான, திட்டமில்லாத கருத்துக்கள் அறிமுகப்படுத்தப்படும்.

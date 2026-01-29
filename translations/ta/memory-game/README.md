@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
-  "translation_date": "2025-10-11T11:48:21+00:00",
-  "source_file": "memory-game/README.md",
-  "language_code": "ta"
-}
--->
 இது [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) மூலம் உருவாக்கப்பட்ட [Next.js](https://nextjs.org) திட்டம்.
 
 ## தொடங்குவது எப்படி

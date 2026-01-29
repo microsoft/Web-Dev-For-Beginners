@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2026-01-07T13:07:04+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "ta"
-}
--->
 # விண்வெளி விளையாட்டு கட்டும் பகுதி 6: முடிவு மற்றும் மறுதொடக்கம்
 
 ```mermaid
