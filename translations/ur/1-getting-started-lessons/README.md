@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:25:49+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "ur"
-}
--->
 # ویب ڈویلپمنٹ کے ساتھ شروعات
 
 اس نصاب کے اس حصے میں، آپ کو ان غیر پروجیکٹ پر مبنی تصورات سے متعارف کرایا جائے گا جو ایک پیشہ ور ڈویلپر بننے کے لیے اہم ہیں۔

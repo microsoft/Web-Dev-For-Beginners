@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-25T21:31:58+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ur"
-}
--->
 # جاوا اسکرپٹ کا تعارف
 
 جاوا اسکرپٹ ویب کی زبان ہے۔ ان چار اسباق میں، آپ اس کی بنیادی باتیں سیکھیں گے۔

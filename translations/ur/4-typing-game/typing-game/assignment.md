@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3eac59d70e2532a677a2ce6bf765485a",
-  "translation_date": "2025-10-22T15:07:02+00:00",
-  "source_file": "4-typing-game/typing-game/assignment.md",
-  "language_code": "ur"
-}
--->
 # ایک نیا کی بورڈ گیم بنائیں
 
 ## ہدایات

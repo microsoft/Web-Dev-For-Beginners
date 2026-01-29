@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "947ca5ce7c94aee9c7de7034e762bc17",
-  "translation_date": "2025-10-22T14:53:12+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/assignment.md",
-  "language_code": "ur"
-}
--->
 # DOM عنصر کی تحقیق کا اسائنمنٹ
 
 ## جائزہ

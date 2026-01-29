@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-03T12:59:41+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "ur"
-}
--->
 # پروگرامنگ زبانوں اور جدید ڈیولپر ٹولز کا تعارف
 
 ہیلو، مستقبل کے ڈیولپر! 👋 کیا میں آپ کو کچھ بتا سکتا ہوں جو مجھے ہر دن حیران کر دیتا ہے؟ آپ یہ دریافت کرنے والے ہیں کہ پروگرامنگ صرف کمپیوٹرز کے بارے میں نہیں ہے – یہ آپ کے سب سے منفرد خیالات کو حقیقت میں بدلنے کی طاقت ہے!

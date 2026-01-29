@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-03T13:37:22+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "ur"
-}
--->
 # خلائی کھیل بنائیں حصہ 5: اسکورنگ اور زندگیاں
 
 ```mermaid

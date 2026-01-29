@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-26T00:54:31+00:00",
-  "source_file": "4-typing-game/solution/README.md",
-  "language_code": "ur"
-}
--->
 یہ ایک جگہ دار ہے، جان بوجھ کر خالی چھوڑا گیا ہے۔
 
 **ڈسکلیمر**:  
