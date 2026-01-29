@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
-  "translation_date": "2025-11-03T16:05:45+00:00",
-  "source_file": "2-js-basics/2-functions-methods/README.md",
-  "language_code": "pa"
-}
--->
 # ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ: ਮੈਥਡਸ ਅਤੇ ਫੰਕਸ਼ਨ
 
 ![ਜਾਵਾਸਕ੍ਰਿਪਟ ਬੇਸਿਕਸ - ਫੰਕਸ਼ਨ](../../../../translated_images/pa/webdev101-js-functions.be049c4726e94f8b.webp)

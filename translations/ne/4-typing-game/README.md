@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2025-11-03T15:46:44+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "ne"
-}
--->
 # इभेन्ट-ड्रिभन प्रोग्रामिङ - टाइपिङ खेल बनाउनुहोस्
 
 ```mermaid

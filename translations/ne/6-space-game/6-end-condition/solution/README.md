@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-25T22:40:06+00:00",
-  "source_file": "6-space-game/6-end-condition/solution/README.md",
-  "language_code": "ne"
-}
--->
 यो एक प्लेसहोल्डर हो, उद्देश्यपूर्ण रूपमा खाली छोडिएको।
 
 **अस्वीकरण**:  

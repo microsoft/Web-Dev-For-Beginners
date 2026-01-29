@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-03T16:41:53+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "pa"
-}
--->
 # ਬੈਂਕਿੰਗ ਐਪ ਬਣਾਉਣਾ ਭਾਗ 1: ਵੈੱਬ ਐਪ ਵਿੱਚ HTML ਟੈਂਪਲੇਟ ਅਤੇ ਰੂਟਸ
 
 ```mermaid

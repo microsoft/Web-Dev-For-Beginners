@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
-  "translation_date": "2025-10-03T11:21:36+00:00",
-  "source_file": "AGENTS.md",
-  "language_code": "mr"
-}
--->
 # AGENTS.md
 
 ## प्रकल्पाचा आढावा

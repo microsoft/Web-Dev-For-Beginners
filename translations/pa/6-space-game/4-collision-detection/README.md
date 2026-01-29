@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-03T16:54:58+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "pa"
-}
--->
 # ਸਪੇਸ ਗੇਮ ਬਣਾਓ ਭਾਗ 4: ਲੇਜ਼ਰ ਸ਼ਾਮਲ ਕਰਨਾ ਅਤੇ ਟਕਰਾਅ ਦੀ ਪਛਾਣ ਕਰਨਾ
 
 ## ਪੂਰਵ-ਵਿਚਾਰ ਕਵਿਜ਼

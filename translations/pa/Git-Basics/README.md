@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
-  "translation_date": "2025-10-03T15:50:22+00:00",
-  "source_file": "Git-Basics/README.md",
-  "language_code": "pa"
-}
--->
 ## ਵੈੱਬ-ਡਿਵੈਲਪਰ ਸ਼ੁਰੂਆਤੀ ਲਈ GIT ਦੇ ਬੁਨਿਆਦੀ ਪਾਠ👶
 
 ## `Git` ਕੀ ਹੈ?

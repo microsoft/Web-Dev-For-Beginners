@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
-  "translation_date": "2025-11-03T15:14:28+00:00",
-  "source_file": "2-js-basics/3-making-decisions/README.md",
-  "language_code": "ne"
-}
--->
 # जाभास्क्रिप्ट आधारभूत: निर्णय लिनु
 
 ![जाभास्क्रिप्ट आधारभूत - निर्णय लिनु](../../../../translated_images/ne/webdev101-js-decisions.69e1b20f272dd1f0.webp)

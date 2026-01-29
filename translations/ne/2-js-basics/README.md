@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-25T21:32:26+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ne"
-}
--->
 # जाभास्क्रिप्टको परिचय
 
 जाभास्क्रिप्ट वेबको भाषा हो। यी चार पाठहरूमा, तपाईं यसको आधारभूत कुराहरू सिक्नुहुनेछ।

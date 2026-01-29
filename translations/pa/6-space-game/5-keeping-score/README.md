@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-03T16:58:05+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "pa"
-}
--->
 # ਸਪੇਸ ਗੇਮ ਬਣਾਓ ਭਾਗ 5: ਸਕੋਰਿੰਗ ਅਤੇ ਜ਼ਿੰਦਗੀਆਂ
 
 ```mermaid

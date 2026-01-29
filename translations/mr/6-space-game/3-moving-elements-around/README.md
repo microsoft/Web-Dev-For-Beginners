@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8c55a2bd4bc0ebe4c88198fd563a9e09",
-  "translation_date": "2025-11-03T14:55:19+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/README.md",
-  "language_code": "mr"
-}
--->
 # स्पेस गेम तयार करा भाग 3: गती जोडणे
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-25T23:57:49+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "mr"
-}
--->
 # Carbon Trigger ब्राउझर विस्तार: पूर्ण कोड
 
 tmrow च्या C02 Signal API चा वापर करून वीज वापराचे निरीक्षण करा आणि तुमच्या ब्राउझरमध्ये थेट तुमच्या प्रदेशातील वीज वापराची आठवण देणारी एक ब्राउझर विस्तार तयार करा. या विस्ताराचा वापर तुम्हाला या माहितीच्या आधारे तुमच्या क्रियाकलापांवर निर्णय घेण्यास मदत करेल.

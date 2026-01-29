@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-25T21:32:17+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "mr"
-}
--->
 # जावास्क्रिप्टची ओळख
 
 जावास्क्रिप्ट ही वेबची भाषा आहे. या चार धड्यांमध्ये, तुम्ही याचे मूलभूत ज्ञान शिकाल.

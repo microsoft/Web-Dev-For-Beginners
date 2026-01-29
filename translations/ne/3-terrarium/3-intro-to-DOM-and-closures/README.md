@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
-  "translation_date": "2025-11-03T15:33:04+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
-  "language_code": "ne"
-}
--->
 # टेरारियम परियोजना भाग ३: DOM म्यानिपुलेसन र जाभास्क्रिप्ट क्लोजर
 
 ```mermaid

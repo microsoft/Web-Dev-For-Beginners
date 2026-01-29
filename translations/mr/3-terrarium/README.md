@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-06T17:22:36+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "mr"
-}
--->
 ## तुमचे टेरारियम डिप्लॉय करा
 
 तुम्ही **Azure Static Web Apps** वापरून तुमचे टेरारियम वेबवर डिप्लॉय किंवा प्रकाशित करू शकता.

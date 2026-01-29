@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a203e560e58ccc6ba68bffc40c7c8676",
-  "translation_date": "2025-10-22T18:14:10+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/assignment.md",
-  "language_code": "pa"
-}
--->
 # ਸਾਈਟ ਦੇ ਪ੍ਰਦਰਸ਼ਨ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ
 
 ## ਅਸਾਈਨਮੈਂਟ ਝਲਕ

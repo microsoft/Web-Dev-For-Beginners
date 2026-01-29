@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e6d0f456dfc22afb41bbdefeb5ec179d",
-  "translation_date": "2025-10-20T21:19:40+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/assignment.md",
-  "language_code": "mr"
-}
--->
 # व्यापक वेबसाइट प्रवेशयोग्यता ऑडिट
 
 ## सूचना

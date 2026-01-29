@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T01:12:22+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "mr"
-}
--->
 # क्विझ अ‍ॅप
 
 हे क्विझेस डेटा सायन्स अभ्यासक्रमासाठीच्या व्याख्यानांपूर्वी आणि नंतरचे क्विझेस आहेत. अधिक माहितीसाठी https://aka.ms/webdev-beginners येथे भेट द्या.

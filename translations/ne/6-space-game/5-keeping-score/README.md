@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-03T15:55:38+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "ne"
-}
--->
 # स्पेस गेम बनाउनुहोस् भाग ५: स्कोरिङ र जीवनहरू
 
 ```mermaid
