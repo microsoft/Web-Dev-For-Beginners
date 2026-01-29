@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T09:01:05+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "ja"
-}
--->
 ### 教育者向け
 
 このカリキュラムは、教室で自由に使用できます。GitHub Classroomや主要なLMSプラットフォームとスムーズに連携し、または単独のリポジトリとして学生と一緒に使用することも可能です。

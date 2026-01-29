@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-06T13:04:03+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "ja"
-}
--->
 # 宇宙ゲームを作ろう パート4: レーザーの追加と衝突検出
 
 ```mermaid

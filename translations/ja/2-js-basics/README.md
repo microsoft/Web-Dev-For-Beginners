@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-23T22:37:03+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ja"
-}
--->
 # JavaScript入門
 
 JavaScriptはウェブの言語です。この4つのレッスンで、その基本を学びます。

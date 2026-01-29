@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2025-11-06T13:10:34+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "ja"
-}
--->
 # ブラウザ拡張プロジェクト パート1: ブラウザについて
 
 ```mermaid

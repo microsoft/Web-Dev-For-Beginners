@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
-  "translation_date": "2025-11-06T12:27:52+00:00",
-  "source_file": "2-js-basics/3-making-decisions/README.md",
-  "language_code": "ja"
-}
--->
 # JavaScriptの基本: 判断をする
 
 ![JavaScript Basics - Making decisions](../../../../translated_images/ja/webdev101-js-decisions.69e1b20f272dd1f0.webp)

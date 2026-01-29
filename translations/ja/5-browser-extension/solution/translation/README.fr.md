@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-23T23:52:24+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "ja"
-}
--->
 # Carbon Triggerブラウザ拡張機能: 完成したコード
 
 tmrowのC02 Signal APIを使用して電力消費を追跡し、地域の電力消費に関するリマインダーをブラウザ内で直接表示するブラウザ拡張機能を作成します。このアドホックな拡張機能を使用することで、これらの情報に基づいて活動を判断する助けになります。

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-06T12:50:08+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ja"
-}
--->
 # 銀行アプリを作成する 第4部: 状態管理の概念
 
 ## ⚡ 次の5分間でできること

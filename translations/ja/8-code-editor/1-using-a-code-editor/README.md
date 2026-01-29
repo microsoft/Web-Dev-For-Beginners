@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-06T12:29:39+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "ja"
-}
--->
 # コードエディターの使い方: VSCode.devをマスターしよう
 
 『マトリックス』でネオが巨大なコンピュータ端末に接続してデジタル世界にアクセスする必要があったのを覚えていますか？今日のウェブ開発ツールはその逆の話です。どこからでもアクセス可能な驚くほど強力な機能を提供します。VSCode.devはブラウザベースのコードエディターで、インターネット接続があるデバイスならどこでもプロフェッショナルな開発ツールを提供します。

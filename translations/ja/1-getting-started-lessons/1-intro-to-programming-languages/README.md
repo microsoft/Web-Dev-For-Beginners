@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-06T12:32:35+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "ja"
-}
--->
 # プログラミング言語と現代の開発ツールの紹介
 
 こんにちは、未来の開発者さん！👋 毎日ワクワクすることをお伝えしてもいいですか？プログラミングは単なるコンピューターの操作ではなく、自分のアイデアを形にするための実際のスーパーパワーを手に入れることなんです！

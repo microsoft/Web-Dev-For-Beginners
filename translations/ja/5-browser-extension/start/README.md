@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-23T23:41:50+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "ja"
-}
--->
 # Carbon Trigger ブラウザー拡張機能: スターターコード
 
 tmrowのC02 Signal APIを使用して電力使用量を追跡し、地域の電力使用状況がどれほど重いかをブラウザーで直接確認できるリマインダーを作成するブラウザー拡張機能を構築します。この拡張機能を臨時で使用することで、この情報に基づいて活動に関する判断を下す助けになります。
