@@ -17,7 +17,7 @@ Eu sei que isso pode parecer muito no começo – eu mesmo lembro de olhar para 
 
 Vamos embarcar nessa jornada juntos, passo a passo. Sem pressa, sem pressão – apenas você, eu e algumas ferramentas muito legais que estão prestes a se tornar suas melhores amigas!
 
-![Introdução ao GitHub](../../../../translated_images/br/webdev101-github.8846d7971abef6f9.webp)
+![Introdução ao GitHub](../../../../translated_images/pt-BR/webdev101-github.8846d7971abef6f9.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
@@ -604,7 +604,7 @@ Primeiro, vamos encontrar um repositório (ou **repo**) no GitHub que seja do se
 
 ✅ Uma boa maneira de encontrar repositórios 'amigáveis para iniciantes' é [buscar pela tag 'good-first-issue'](https://github.blog/2020-01-22-browse-good-first-issues-to-start-contributing-to-open-source/).
 
-![Copiar um repositório localmente](../../../../translated_images/br/clone_repo.5085c48d666ead57.webp)
+![Copiar um repositório localmente](../../../../translated_images/pt-BR/clone_repo.5085c48d666ead57.webp)
 
 Existem várias maneiras de copiar código. Uma delas é "clonar" o conteúdo do repositório, usando HTTPS, SSH ou o GitHub CLI (Interface de Linha de Comando).
 

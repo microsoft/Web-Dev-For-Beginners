@@ -156,7 +156,7 @@ sequenceDiagram
     Server->>Browser: Devolve página HTML completa
     Browser->>User: Mostra nova página (flash/recarregamento)
 ```
-![Fluxo de atualização numa aplicação de múltiplas páginas](../../../../translated_images/pt/mpa.7f7375a1a2d4aa77.webp)
+![Fluxo de atualização numa aplicação de múltiplas páginas](../../../../translated_images/pt-PT/mpa.7f7375a1a2d4aa77.webp)
 
 **Porque este método parecia pesado:**
 - Cada clique implicava reconstruir a página inteira do zero
@@ -182,7 +182,7 @@ sequenceDiagram
     JavaScript->>Browser: Actualiza elementos específicos da página
     Browser->>User: Mostra conteúdo actualizado (sem recarregar)
 ```
-![Fluxo de atualização numa aplicação de página única](../../../../translated_images/pt/spa.268ec73b41f992c2.webp)
+![Fluxo de atualização numa aplicação de página única](../../../../translated_images/pt-PT/spa.268ec73b41f992c2.webp)
 
 **Porque é que as SPAs parecem muito melhores:**
 - Só as partes que realmente mudaram são atualizadas (inteligente, certo?)
@@ -516,7 +516,7 @@ if (data.error) {
 
 Agora, quando testar com uma conta inválida, verá uma mensagem de erro útil diretamente na página!
 
-![Screenshot mostrando a mensagem de erro exibida durante o login](../../../../translated_images/pt/login-error.416fe019b36a6327.webp)
+![Screenshot mostrando a mensagem de erro exibida durante o login](../../../../translated_images/pt-PT/login-error.416fe019b36a6327.webp)
 
 #### Passo 4: Ser Inclusivo com Acessibilidade
 
@@ -950,7 +950,7 @@ Pronto para levar a sua aplicação bancária para o próximo nível? Vamos torn
 
 Aqui está como um painel polido poderia parecer:
 
-![Screenshot of an example result of the dashboard after styling](../../../../translated_images/pt/screen2.123c82a831a1d14a.webp)
+![Screenshot of an example result of the dashboard after styling](../../../../translated_images/pt-PT/screen2.123c82a831a1d14a.webp)
 
 Não sinta que tem de corresponder exatamente a isto – use como inspiração e torne-o seu!
 

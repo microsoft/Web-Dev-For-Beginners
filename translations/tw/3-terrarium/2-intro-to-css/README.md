@@ -29,7 +29,7 @@ journey
       響應式設計: 5: Student
       玻璃反射: 5: Student
 ```
-![Introduction to CSS](../../../../translated_images/tw/webdev101-css.3f7af5991bf53a20.webp)
+![Introduction to CSS](../../../../translated_images/zh-TW/webdev101-css.3f7af5991bf53a20.webp)
 > 筆記作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 還記得你的 HTML 陸地生態箱看起來相當簡單嗎？CSS 正是我們將這個樸素結構轉變成視覺吸引之物的關鍵所在。
@@ -202,7 +202,7 @@ body {
 
 打開瀏覽器開發者工具（F12），切換到元素檢視，查看你的 `<h1>` 元素。你會看到它繼承了 body 的字型：
 
-![inherited font](../../../../translated_images/tw/1.cc07a5cbe114ad1d.webp)
+![inherited font](../../../../translated_images/zh-TW/1.cc07a5cbe114ad1d.webp)
 
 ✅ **實驗時間**：試著在 `<body>` 設定其他可繼承屬性，如 `color`、`line-height`、`text-align`。你的標題和其他元素會有什麼變化？
 
@@ -332,7 +332,7 @@ ID 選擇器以 `#` 開頭，選取帶有指定 `id` 屬性的元素。因為 ID
 **植物的 HTML 結構如下：**
 ```html
 <div class="plant-holder">
-  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/tw/plant1.d18b18ffe73da18f.png" />
+  <img class="plant" alt="Decorative plant for terrarium" id="plant1" src="../../../../translated_images/zh-TW/plant1.d18b18ffe73da18f.png" />
 </div>
 ```
 
@@ -594,7 +594,7 @@ flowchart LR
 
 你將製作細膩高光，模擬光線如何在玻璃表面反射。此作法類似文藝復興畫家揚·范艾克運用光與反射使玻璃畫作呈現立體感。目標如下：
 
-![finished terrarium](../../../../translated_images/tw/terrarium-final.2f07047ffc597d0a.webp)
+![finished terrarium](../../../../translated_images/zh-TW/terrarium-final.2f07047ffc597d0a.webp)
 
 **你的挑戰：**
 - **製作** 細膩的白色或淺色橢圓形反光

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T07:53:58+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "es"
-}
--->
 # Crear un juego usando eventos
 
 ¿Alguna vez te has preguntado cómo saben los sitios web cuándo haces clic en un botón o escribes en un cuadro de texto? ¡Esa es la magia de la programación orientada a eventos! ¿Qué mejor manera de aprender esta habilidad esencial que construyendo algo útil: un juego de velocidad de escritura que reacciona a cada pulsación de tecla que haces?

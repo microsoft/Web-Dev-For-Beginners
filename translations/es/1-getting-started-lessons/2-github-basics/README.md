@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-06T08:12:27+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "es"
-}
--->
 # Introducción a GitHub
 
 ¡Hola, futuro desarrollador! 👋 ¿Listo para unirte a millones de programadores en todo el mundo? Estoy realmente emocionado de presentarte GitHub – piensa en ello como la plataforma de redes sociales para programadores, excepto que en lugar de compartir fotos de tu almuerzo, compartimos código y construimos cosas increíbles juntos.

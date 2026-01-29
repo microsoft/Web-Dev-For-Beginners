@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-06T08:20:23+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "de"
-}
--->
 ## Stellen Sie Ihr Terrarium bereit
 
 Sie können Ihr Terrarium im Web mit **Azure Static Web Apps** bereitstellen oder veröffentlichen.

@@ -25,7 +25,7 @@ journey
       Testar funcionalidade: 5: Student
       Completar terrário: 5: Student
 ```
-![DOM e um closure](../../../../translated_images/pt/webdev101-js.10280393044d7eaa.webp)
+![DOM e um closure](../../../../translated_images/pt-PT/webdev101-js.10280393044d7eaa.webp)
 > Sketchnote por [Tomomi Imura](https://twitter.com/girlie_mac)
 
 Bem-vindo a um dos aspetos mais envolventes do desenvolvimento web - tornar as coisas interativas! O Modelo de Objeto de Documento (DOM) é como uma ponte entre o seu HTML e JavaScript, e hoje iremos usá-lo para dar vida ao seu terrário. Quando Tim Berners-Lee criou o primeiro navegador web, ele imaginou uma web onde os documentos poderiam ser dinâmicos e interativos - o DOM torna essa visão possível.
@@ -102,7 +102,7 @@ flowchart TD
     style P fill:#ffebee
     style Q fill:#ffebee
 ```
-![Representação da árvore DOM](../../../../translated_images/pt/dom-tree.7daf0e763cbbba92.webp)
+![Representação da árvore DOM](../../../../translated_images/pt-PT/dom-tree.7daf0e763cbbba92.webp)
 
 > Uma representação do DOM e da marcação HTML que o referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -146,7 +146,7 @@ flowchart LR
 ```
 > 💡 **Compreender Closures**: Closures são um tema importante em JavaScript, e muitos programadores usam-nas durante anos antes de entenderem completamente todos os aspetos teóricos. Hoje, estamos focados na aplicação prática - verá as closures surgir naturalmente enquanto construímos as funcionalidades interativas. A compreensão desenvolver-se-á à medida que perceber como resolvem problemas reais.
 
-![Representação da árvore DOM](../../../../translated_images/pt/dom-tree.7daf0e763cbbba92.webp)
+![Representação da árvore DOM](../../../../translated_images/pt-PT/dom-tree.7daf0e763cbbba92.webp)
 
 > Uma representação do DOM e da marcação HTML que o referencia. De [Olfa Nasraoui](https://www.researchgate.net/publication/221417012_Profile-Based_Focused_Crawler_for_Social_Media-Sharing_Websites)
 
@@ -591,7 +591,7 @@ Agora teste o seu terrário interativo! Abra o ficheiro `index.html` num browser
 - **Suporte multi-dispositivo**: Funciona em desktop e móvel
 - **Consciência de desempenho**: Sem fugas de memória ou cálculos redundantes
 
-![terrário terminado](../../../../translated_images/pt/terrarium-final.0920f16e87c13a84.webp)
+![terrário terminado](../../../../translated_images/pt-PT/terrarium-final.0920f16e87c13a84.webp)
 
 ---
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-24T13:19:41+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "de"
-}
--->
 # Carbon Trigger Browser-Erweiterung: Fertiger Code
 
 Verwenden Sie die CO2 Signal API von tmrow, um den Stromverbrauch zu verfolgen, und erstellen Sie eine Browser-Erweiterung, damit Sie direkt in Ihrem Browser eine Erinnerung daran haben, wie hoch der Stromverbrauch in Ihrer Region ist. Die gelegentliche Nutzung dieser Erweiterung hilft Ihnen, Entscheidungen über Ihre Aktivitäten basierend auf diesen Informationen zu treffen.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2026-01-06T06:08:32+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "fr"
-}
--->
 # Prise de décisions : Traitement des notes des étudiants
 
 ## Objectifs d'apprentissage

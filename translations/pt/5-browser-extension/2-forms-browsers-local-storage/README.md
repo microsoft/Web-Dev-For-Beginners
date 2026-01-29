@@ -263,7 +263,7 @@ stateDiagram-v2
     Reset --> ClearStorage: Remover dados guardados
     ClearStorage --> FirstTime: Voltar à configuração
 ```
-![Painel de armazenamento local](../../../../translated_images/pt/localstorage.472f8147b6a3f8d1.webp)
+![Painel de armazenamento local](../../../../translated_images/pt-PT/localstorage.472f8147b6a3f8d1.webp)
 
 > ⚠️ **Consideração de Segurança**: Em aplicações de produção, armazenar chaves API no LocalStorage implica riscos de segurança, pois o JavaScript pode aceder a estes dados. Para fins de aprendizagem, esta abordagem funciona bem, mas aplicações reais devem usar armazenamento seguro do lado do servidor para credenciais sensíveis.
 

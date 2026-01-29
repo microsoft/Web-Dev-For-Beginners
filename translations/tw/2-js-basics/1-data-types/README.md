@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # JavaScript 基礎：資料型別
 
-![JavaScript 基礎 - 資料型別](../../../../translated_images/tw/webdev101-js-datatypes.4cc470179730702c.webp)
+![JavaScript 基礎 - 資料型別](../../../../translated_images/zh-TW/webdev101-js-datatypes.4cc470179730702c.webp)
 > 手繪筆記作者：[Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid

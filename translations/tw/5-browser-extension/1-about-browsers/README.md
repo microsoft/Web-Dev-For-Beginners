@@ -25,7 +25,7 @@ journey
       偵錯問題: 4: Student
       打磨使用體驗: 5: Student
 ```
-![瀏覽器速寫筆記](../../../../translated_images/tw/browser.60317c9be8b7f84a.webp)
+![瀏覽器速寫筆記](../../../../translated_images/zh-TW/browser.60317c9be8b7f84a.webp)
 > 速寫筆記由 [Wassim Chegham](https://dev.to/wassimchegham/ever-wondered-what-happens-when-you-type-in-a-url-in-an-address-bar-in-a-browser-3dob) 製作
 
 ## 課前測驗
@@ -77,7 +77,7 @@ mindmap
 
 ✅ **小歷史**：第一個瀏覽器叫做「WorldWideWeb」，由 Sir Timothy Berners-Lee 於 1990 年創建。
 
-![早期瀏覽器](../../../../translated_images/tw/earlybrowsers.d984b711cdf3a42d.webp)
+![早期瀏覽器](../../../../translated_images/zh-TW/earlybrowsers.d984b711cdf3a42d.webp)
 > 一些早期瀏覽器，圖片來源 [Karen McGrane](https://www.slideshare.net/KMcGrane/week-4-ixd-history-personal-computing)
 
 ### 瀏覽器如何處理網頁內容
@@ -194,7 +194,7 @@ quadrantChart
 
 了解擴充功能安裝流程，能幫助您預期使用者安裝時的體驗。安裝流程在現代瀏覽器中有標準化，介面設計上略有差異。
 
-![Edge瀏覽器截圖，顯示打開的 edge://extensions 頁面和設定選單](../../../../translated_images/tw/install-on-edge.d68781acaf0b3d3d.webp)
+![Edge瀏覽器截圖，顯示打開的 edge://extensions 頁面和設定選單](../../../../translated_images/zh-TW/install-on-edge.d68781acaf0b3d3d.webp)
 
 > **重要提示**：測試自己開發的擴充功能時，請務必開啟開發者模式，並允許來自其他商店的擴充功能。
 
@@ -308,10 +308,10 @@ project-root/
 ### 擴充功能畫面總覽
 
 **設定畫面** - 初次使用者配置：
-![完成的擴充功能畫面截圖，顯示包含區域名稱和API金鑰輸入欄的表單。](../../../../translated_images/tw/1.b6da8c1394b07491.webp)
+![完成的擴充功能畫面截圖，顯示包含區域名稱和API金鑰輸入欄的表單。](../../../../translated_images/zh-TW/1.b6da8c1394b07491.webp)
 
 **結果畫面** - 碳足跡資料展示：
-![完成的擴充功能結果畫面截圖，顯示 US-NEISO 區域的碳使用數值及化石燃料占比。](../../../../translated_images/tw/2.1dae52ff08042246.webp)
+![完成的擴充功能結果畫面截圖，顯示 US-NEISO 區域的碳使用數值及化石燃料占比。](../../../../translated_images/zh-TW/2.1dae52ff08042246.webp)
 
 ### 建立設定表單
 

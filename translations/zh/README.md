@@ -72,13 +72,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 访问 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 开始学习！
 
-![背景](../../translated_images/zh/background.148a8d43afde5730.webp)
+![背景](../../translated_images/zh-CN/background.148a8d43afde5730.webp)
 
 - 涵盖从基础到 RAG 的课程。
 - 使用生成式 AI 和我们的配套应用与历史人物互动。
 - 趣味且引人入胜的叙事，你将体验时空穿越！
 
-![角色](../../translated_images/zh/character.5c0dd8e067ffd693.webp)
+![角色](../../translated_images/zh-CN/character.5c0dd8e067ffd693.webp)
 
 每节课均包含作业、知识检测和挑战，引导你学习以下主题：
 - 提示词及提示工程
@@ -114,7 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 在你创建的仓库副本中，点击 **Code** 按钮，选择 **Open with Codespaces**。这将创建一个新的 Codespace 供你使用。
 
-![Codespace](../../translated_images/zh/createcodespace.0238bbf4d7a8d955.webp)
+![Codespace](../../translated_images/zh-CN/createcodespace.0238bbf4d7a8d955.webp)
 
 #### 在本地计算机上运行课程
 

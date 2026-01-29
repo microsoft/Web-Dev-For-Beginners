@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T07:48:02+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "es"
-}
--->
 # Construye una App Bancaria Parte 3: Métodos para Obtener y Usar Datos
 
 Piensa en la computadora de la Enterprise en Star Trek: cuando el Capitán Picard pregunta por el estado de la nave, la información aparece al instante sin que toda la interfaz se apague y se reconstruya. Ese flujo constante de información es precisamente lo que estamos construyendo aquí con la obtención dinámica de datos.

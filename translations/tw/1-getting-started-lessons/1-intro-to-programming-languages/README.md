@@ -17,7 +17,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 今天，我們要探討一些令人驚嘆的工具，讓現代網頁開發不僅可能且讓人上癮。我說的正是Netflix、Spotify以及你最愛的獨立應用工作室每天使用的編輯器、瀏覽器和工作流程。這裡最酷的部分是：大多數這些專業級、業界標準的工具完全免費！
 
-![Intro Programming](../../../../translated_images/tw/webdev101-programming.d6e3f98e61ac4bff.webp)
+![Intro Programming](../../../../translated_images/zh-TW/webdev101-programming.d6e3f98e61ac4bff.webp)
 > 筆記圖由 [Tomomi Imura](https://twitter.com/girlie_mac) 製作
 
 ```mermaid

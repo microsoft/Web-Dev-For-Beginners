@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-06T06:13:56+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "fr"
-}
--->
 # Créez un site web de CV avec VSCode.dev
 
 Transformez vos perspectives de carrière en créant un site web de CV professionnel qui met en valeur vos compétences et votre expérience dans un format interactif et moderne. Au lieu d’envoyer des PDF traditionnels, imaginez fournir aux recruteurs un site web élégant et responsive qui démontre à la fois vos qualifications et vos capacités en développement web.

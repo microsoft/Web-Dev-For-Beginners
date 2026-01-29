@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-24T13:26:08+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "de"
-}
--->
 # :dollar: Baue eine Bank
 
 In diesem Projekt lernst du, wie man eine fiktive Bank erstellt. Diese Lektionen enthalten Anleitungen, wie man eine Web-App gestaltet und Routen bereitstellt, Formulare erstellt, den Zustand verwaltet und Daten von einer API abruft, um die Bankdaten zu erhalten.

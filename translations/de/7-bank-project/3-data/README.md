@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T09:04:07+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "de"
-}
--->
 # Erstellen Sie eine Banking-App Teil 3: Methoden zum Abrufen und Verwenden von Daten
 
 Denken Sie an den Computer der Enterprise in Star Trek – wenn Captain Picard nach dem Status des Schiffs fragt, erscheinen die Informationen sofort, ohne dass die gesamte Benutzeroberfläche herunterfährt und sich neu aufbaut. Dieser nahtlose Informationsfluss ist genau das, was wir hier mit dynamischem Datenabruf aufbauen.

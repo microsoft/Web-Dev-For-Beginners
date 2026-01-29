@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-24T12:11:03+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "es"
-}
--->
 # Mi Terrario: Un proyecto para aprender sobre HTML, CSS y manipulación del DOM usando JavaScript 🌵🌱
 
 Un pequeño ejercicio de arrastrar y soltar para meditar con código. Con un poco de HTML, JS y CSS, puedes construir una interfaz web, estilizarla y añadirle interacción.

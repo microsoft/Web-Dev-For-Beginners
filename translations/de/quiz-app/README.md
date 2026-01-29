@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T13:56:13+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "de"
-}
--->
 # Quiz-App
 
 Diese Quizze sind die Vor- und Nachlese-Quizze für den Data-Science-Lehrplan unter https://aka.ms/webdev-beginners

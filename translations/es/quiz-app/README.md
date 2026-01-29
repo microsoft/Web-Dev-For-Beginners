@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T13:56:01+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "es"
-}
--->
 # Aplicación de cuestionarios
 
 Estos cuestionarios son los cuestionarios previos y posteriores a las clases del plan de estudios de ciencia de datos en https://aka.ms/webdev-beginners

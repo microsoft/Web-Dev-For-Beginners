@@ -112,7 +112,7 @@ CO_OP_TRANSLATOR_METADATA:
 **预期效果：**
 完成本作业后，您的银行应用应具备一个功能齐全的“添加交易”功能，外观与行为均专业：
 
-![显示示例“添加交易”对话框的截图](../../../../translated_images/zh/dialog.93bba104afeb79f1.webp)
+![显示示例“添加交易”对话框的截图](../../../../translated_images/zh-CN/dialog.93bba104afeb79f1.webp)
 
 ## 测试您的实现
 

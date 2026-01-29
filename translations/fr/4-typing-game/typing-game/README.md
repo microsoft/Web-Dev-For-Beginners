@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T06:42:11+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "fr"
-}
--->
 # Créer un jeu en utilisant des événements
 
 Vous êtes-vous déjà demandé comment les sites web savent quand vous cliquez sur un bouton ou tapez dans une zone de texte ? C’est la magie de la programmation événementielle ! Quoi de mieux pour apprendre cette compétence essentielle qu’en créant quelque chose d’utile — un jeu de vitesse de frappe qui réagit à chaque touche que vous pressez.

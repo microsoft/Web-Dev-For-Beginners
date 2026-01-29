@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6fd645e97c48cd5eb5a3d290815ec8b5",
-  "translation_date": "2026-01-06T07:15:46+00:00",
-  "source_file": "2-js-basics/1-data-types/assignment.md",
-  "language_code": "es"
-}
--->
 # Práctica de Tipos de Datos: Carrito de Compras de Comercio Electrónico
 
 ## Instrucciones

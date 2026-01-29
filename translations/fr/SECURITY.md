@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-23T22:21:47+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "fr"
-}
--->
 ## Sécurité
 
 Microsoft prend très au sérieux la sécurité de ses produits logiciels et services, y compris tous les dépôts de code source gérés via nos organisations GitHub, qui incluent [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) et [nos organisations GitHub](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

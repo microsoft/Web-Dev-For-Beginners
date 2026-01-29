@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-06T05:53:52+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "fr"
-}
--->
 # Cadre d’IA
 
 Vous vous êtes déjà senti dépassé en essayant de créer des applications d’IA à partir de zéro ? Vous n’êtes pas seul ! Les cadres d’IA sont comme un couteau suisse pour le développement d’IA – ce sont des outils puissants qui peuvent vous faire gagner du temps et éviter bien des maux de tête lors de la création d’applications intelligentes. Pensez à un cadre d’IA comme à une bibliothèque bien organisée : il fournit des composants préconstruits, des API standardisées et des abstractions intelligentes pour que vous puissiez vous concentrer sur la résolution de problèmes au lieu de vous battre avec les détails d’implémentation.

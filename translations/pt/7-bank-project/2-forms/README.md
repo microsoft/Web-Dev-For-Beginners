@@ -292,7 +292,7 @@ Primeiro, observe o que acontece com a submissão básica do formulário:
 2. Observe as mudanças na barra de endereço do navegador
 3. Repare como a página recarrega e os dados aparecem na URL
 
-![Captura de ecrã da alteração da URL do navegador após clicar no botão Registar](../../../../translated_images/pt/click-register.e89a30bf0d4bc9ca.webp)
+![Captura de ecrã da alteração da URL do navegador após clicar no botão Registar](../../../../translated_images/pt-PT/click-register.e89a30bf0d4bc9ca.webp)
 
 ### Comparação dos Métodos HTTP
 
@@ -346,7 +346,7 @@ Vamos configurar o seu formulário de registo para comunicar corretamente com a 
 2. **Clique** no botão "Criar Conta"
 3. **Observe** a resposta do servidor no seu navegador
 
-![Janela do navegador com o endereço localhost:5000/api/accounts, mostrando uma string JSON com dados do utilizador](../../../../translated_images/pt/form-post.61de4ca1b964d91a.webp)
+![Janela do navegador com o endereço localhost:5000/api/accounts, mostrando uma string JSON com dados do utilizador](../../../../translated_images/pt-PT/form-post.61de4ca1b964d91a.webp)
 
 **O que deverá ver:**
 - **O navegador redireciona** para a URL do endpoint da API
@@ -609,7 +609,7 @@ async function register() {
 3. **Clique** em "Criar Conta"
 4. **Observe** as mensagens na consola e o feedback ao utilizador
 
-![Screenshot mostrando mensagem de registo na consola do navegador](../../../../translated_images/pt/browser-console.efaf0b51aaaf6778.webp)
+![Screenshot mostrando mensagem de registo na consola do navegador](../../../../translated_images/pt-PT/browser-console.efaf0b51aaaf6778.webp)
 
 **O que deve observar:**
 - **Estado de carregamento** aparece no botão de envio
@@ -783,7 +783,7 @@ Vamos reforçar o seu formulário de registo com validação robusta que fornece
 3. **Tente** caracteres especiais no campo do nome de utilizador
 4. **Introduza** um valor negativo no saldo
 
-![Captura de ecrã mostrando erro de validação ao tentar submeter o formulário](../../../../translated_images/pt/validation-error.8bd23e98d416c22f.webp)
+![Captura de ecrã mostrando erro de validação ao tentar submeter o formulário](../../../../translated_images/pt-PT/validation-error.8bd23e98d416c22f.webp)
 
 **O que irá observar:**
 - **O navegador exibe** mensagens de validação nativas
@@ -943,7 +943,7 @@ Mostre uma mensagem de erro no HTML se o utilizador já existir.
 
 Aqui está um exemplo de como pode ficar a página de login final após alguma estilização:
 
-![Screenshot da página de login após adicionar estilos CSS](../../../../translated_images/pt/result.96ef01f607bf856a.webp)
+![Screenshot da página de login após adicionar estilos CSS](../../../../translated_images/pt-PT/result.96ef01f607bf856a.webp)
 
 ## Quiz Pós-Lição
 

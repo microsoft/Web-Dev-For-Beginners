@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-06T06:39:39+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "fr"
-}
--->
 # Construire une application bancaire Partie 4 : Concepts de gestion d’état
 
 ## ⚡ Ce que vous pouvez faire dans les 5 prochaines minutes

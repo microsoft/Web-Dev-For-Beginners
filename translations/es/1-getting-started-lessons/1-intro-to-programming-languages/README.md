@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-06T08:08:39+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "es"
-}
--->
 # Introducción a los Lenguajes de Programación y Herramientas Modernas para Desarrolladores
 
 ¡Hola, futuro desarrollador! 👋 ¿Puedo contarte algo que todavía me pone la piel de gallina todos los días? ¡Estás a punto de descubrir que programar no es solo sobre computadoras, sino sobre tener superpoderes reales para dar vida a tus ideas más salvajes!

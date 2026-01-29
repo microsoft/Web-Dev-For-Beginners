@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-06T07:23:40+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "es"
-}
--->
 # Crea un Sitio Web de Currículum Usando VSCode.dev
 
 Transforma tus perspectivas profesionales construyendo un sitio web profesional de currículum que muestre tus habilidades y experiencia en un formato interactivo y moderno. En lugar de enviar PDFs tradicionales, imagina proporcionar a los reclutadores un sitio web elegante y responsive que demuestre tanto tus calificaciones como tus capacidades de desarrollo web.

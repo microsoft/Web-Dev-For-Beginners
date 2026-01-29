@@ -9,7 +9,7 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 # 创建无障碍网页
 
-![无障碍知识全览](../../../../translated_images/zh/webdev101-a11y.8ef3025c858d897a.webp)
+![无障碍知识全览](../../../../translated_images/zh-CN/webdev101-a11y.8ef3025c858d897a.webp)
 > 草图笔记由 [Tomomi Imura](https://twitter.com/girlie_mac) 制作
 
 ```mermaid
@@ -1049,12 +1049,12 @@ pie title "常见的 ARIA 使用模式"
 
 **信息性图像** - 传递重要信息：
 ```html
-<img src="../../../../translated_images/zh/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
+<img src="../../../../translated_images/zh-CN/chart.31c7eb0eb5c4450d.png" alt="Sales increased 25% from Q1 to Q2 2024">
 ```
 
 **装饰性图像** - 纯视觉，无信息价值：
 ```html
-<img src="../../../../translated_images/zh/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
+<img src="../../../../translated_images/zh-CN/decorative-border.b2f3c4d6634fb79d.png" alt="" role="presentation">
 ```
 
 **功能性图像** - 作为按钮或控件：
@@ -1066,7 +1066,7 @@ pie title "常见的 ARIA 使用模式"
 
 **复杂图像** - 图表、图解、信息图：
 ```html
-<img src="../../../../translated_images/zh/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
+<img src="../../../../translated_images/zh-CN/complex-chart.c831f461a363b446.png" alt="Quarterly sales data" aria-describedby="chart-description">
 <div id="chart-description">
   <p>Detailed description: Sales data shows a steady increase across all quarters...</p>
 </div>
@@ -1106,7 +1106,7 @@ pie title "常见的 ARIA 使用模式"
 <picture>
   <source media="(min-width: 800px)" srcset="large-chart.png">
   <source media="(min-width: 400px)" srcset="medium-chart.png">
-  <img src="../../../../translated_images/zh/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
+  <img src="../../../../translated_images/zh-CN/small-chart.c50c7b1bbcce43d8.png" alt="Website traffic increased 40% after accessibility improvements">
 </picture>
 ```
 

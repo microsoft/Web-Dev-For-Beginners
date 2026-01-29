@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T00:23:29+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "fr"
-}
--->
 # Application de quiz
 
 Ces quiz sont les quiz avant et après les cours du programme de science des données disponible sur https://aka.ms/webdev-beginners

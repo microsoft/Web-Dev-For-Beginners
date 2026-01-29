@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-06T07:03:39+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "es"
-}
--->
 # Marco de IA
 
 ¿Alguna vez te has sentido abrumado intentando construir aplicaciones de IA desde cero? ¡No estás solo! Los marcos de IA son como tener una navaja suiza para el desarrollo de IA: son herramientas poderosas que pueden ahorrarte tiempo y dolores de cabeza al crear aplicaciones inteligentes. Piensa en un marco de IA como una biblioteca bien organizada: proporciona componentes preconstruidos, API estandarizadas y abstracciones inteligentes para que puedas concentrarte en resolver problemas en lugar de lidiar con detalles de implementación.

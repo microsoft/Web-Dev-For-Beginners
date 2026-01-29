@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2025-08-24T00:16:04+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "fr"
-}
--->
 # [Sujet de la leçon]
 
 ![Intégrer une vidéo ici](../../../lesson-template/video-url)

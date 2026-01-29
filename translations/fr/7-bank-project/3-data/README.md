@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T06:36:50+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "fr"
-}
--->
 # Construire une application bancaire Partie 3 : Méthodes de récupération et d’utilisation des données
 
 Pensez à l’ordinateur de l’Enterprise dans Star Trek - quand le Capitaine Picard demande l’état du vaisseau, l’information apparaît instantanément sans que toute l’interface ne s’arrête et se reconstruise. Ce flux d’informations fluide est exactement ce que nous construisons ici avec la récupération dynamique des données.
