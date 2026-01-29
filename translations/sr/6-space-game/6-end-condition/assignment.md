@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "232d592791465c1678cab3a2bb6cd3e8",
-  "translation_date": "2025-10-24T23:40:43+00:00",
-  "source_file": "6-space-game/6-end-condition/assignment.md",
-  "language_code": "sr"
-}
--->
 # Направите пример игре
 
 ## Преглед задатка

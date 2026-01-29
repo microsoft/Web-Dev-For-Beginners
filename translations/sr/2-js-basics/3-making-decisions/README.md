@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
-  "translation_date": "2026-01-07T07:47:55+00:00",
-  "source_file": "2-js-basics/3-making-decisions/README.md",
-  "language_code": "sr"
-}
--->
 # Основе ЈаваСкрипта: Доношење одлука
 
 ![Основе ЈаваСкрипта - Доношење одлука](../../../../translated_images/sr/webdev101-js-decisions.69e1b20f272dd1f0.webp)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:29:28+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "ro"
-}
--->
 # Introducere în Dezvoltarea Web
 
 În această secțiune a curriculumului, vei fi introdus în concepte care nu sunt bazate pe proiecte, dar care sunt importante pentru a deveni un dezvoltator profesionist.

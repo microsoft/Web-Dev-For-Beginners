@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-28T10:14:34+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "sr"
-}
--->
 # Направите свемирску игру
 
 Свемирска игра за учење напреднијих основа JavaScript-а

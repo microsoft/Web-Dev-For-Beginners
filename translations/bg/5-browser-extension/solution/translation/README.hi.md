@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-28T07:47:52+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "bg"
-}
--->
 # Carbon Trigger Browser Extension: Завършен код
 
 Използване на API на CO2 Signal от tmrow за проследяване на потреблението на електроенергия, създаване на браузър разширение, което да ви напомня колко натоварено е потреблението на електроенергия във вашия регион. Използването на това разширение ще ви помогне да вземате решения за вашите дейности въз основа на тази информация.

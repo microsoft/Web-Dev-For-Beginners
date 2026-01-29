@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
-  "translation_date": "2026-01-07T05:47:46+00:00",
-  "source_file": "6-space-game/1-introduction/README.md",
-  "language_code": "ro"
-}
--->
 # Construiește un Joc Spațial Partea 1: Introducere
 
 ```mermaid

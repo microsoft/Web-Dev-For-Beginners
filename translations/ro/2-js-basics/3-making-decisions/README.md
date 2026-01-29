@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
-  "translation_date": "2026-01-07T05:35:01+00:00",
-  "source_file": "2-js-basics/3-making-decisions/README.md",
-  "language_code": "ro"
-}
--->
 # Bazele JavaScript: Luarea Deciziilor
 
 ![JavaScript Basics - Making decisions](../../../../translated_images/ro/webdev101-js-decisions.69e1b20f272dd1f0.webp)

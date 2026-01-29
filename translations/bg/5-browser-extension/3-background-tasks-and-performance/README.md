@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2026-01-07T06:58:26+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "bg"
-}
--->
 # Проект за браузър разширение Част 3: Научете за фонови задачи и производителност
 
 ```mermaid

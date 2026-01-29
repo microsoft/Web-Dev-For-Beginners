@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T05:39:08+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "ro"
-}
--->
 # Folosirea unui Editor de Cod: Stăpânirea VSCode.dev
 
 Țineți minte în *The Matrix* când Neo trebuia să se conecteze la un terminal uriaș pentru a accesa lumea digitală? Instrumentele de dezvoltare web de azi spun povestea opusă – capabilități incredibil de puternice accesibile de oriunde. VSCode.dev este un editor de cod bazat pe browser care aduce unelte profesionale de dezvoltare pe orice dispozitiv cu conexiune la internet.

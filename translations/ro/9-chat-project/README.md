@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-07T05:26:35+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "ro"
-}
--->
 # Construiește un Asistent de Chat cu AI
 
 Îți amintești în Star Trek când echipajul purta conversații casual cu computerul navei, punând întrebări complexe și primind răspunsuri bine gândite? Ce părea a fi pură science fiction în anii '60 este acum ceva ce poți construi folosind tehnologiile web pe care deja le cunoști.

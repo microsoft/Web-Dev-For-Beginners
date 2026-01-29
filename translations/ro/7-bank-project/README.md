@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-28T07:30:35+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "ro"
-}
--->
 # :dollar: Construiește o Bancă
 
 În acest proiect, vei învăța cum să construiești o bancă fictivă. Aceste lecții includ instrucțiuni despre cum să creezi structura unei aplicații web și să oferi rute, să construiești formulare, să gestionezi starea, și să obții date de la un API de unde poți prelua informațiile băncii.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9884f8c8a61cf56214450f8b16a094ce",
-  "translation_date": "2025-08-28T10:05:11+00:00",
-  "source_file": "7-bank-project/api/README.md",
-  "language_code": "sr"
-}
--->
 # Bank API
 
 > Bank API направљен уз помоћ [Node.js](https://nodejs.org) + [Express](https://expressjs.com/).

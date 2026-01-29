@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T06:18:32+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "ro"
-}
--->
 # Introducere în Limbaje de Programare și Unelte Moderne pentru Dezvoltatori
 
 Salut, viitorule dezvoltator! 👋 Pot să-ți spun ceva care încă îmi dă fiori în fiecare zi? Ești pe cale să descoperi că programarea nu este doar despre calculatoare – este despre a avea puteri reale ca să aduci la viață cele mai sălbatice idei ale tale!

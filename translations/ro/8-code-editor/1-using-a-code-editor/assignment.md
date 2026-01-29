@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T21:56:34+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "ro"
-}
--->
 # Creează un site de CV folosind VSCode.dev
 
 Transformă-ți perspectivele de carieră construind un site profesional de CV care să îți prezinte abilitățile și experiența într-un format interactiv și modern. În loc să trimiți PDF-uri tradiționale, imaginează-ți că oferi recrutorilor un site web elegant și receptiv care demonstrează atât calificările tale, cât și abilitățile tale de dezvoltare web.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
-  "translation_date": "2026-01-07T06:38:31+00:00",
-  "source_file": "2-js-basics/3-making-decisions/README.md",
-  "language_code": "bg"
-}
--->
 # Основи на JavaScript: Вземане на решения
 
 ![JavaScript Basics - Making decisions](../../../../translated_images/bg/webdev101-js-decisions.69e1b20f272dd1f0.webp)

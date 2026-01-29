@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2026-01-07T06:28:34+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "bg"
-}
--->
 # Програмиране, основано на събития - Създайте игра за писане
 
 ```mermaid

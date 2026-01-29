@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2025-10-24T22:14:38+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "ro"
-}
--->
 # Stilizează aplicația ta bancară cu CSS modern
 
 ## Prezentare generală a proiectului

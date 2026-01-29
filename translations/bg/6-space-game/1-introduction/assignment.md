@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2025-10-24T22:56:53+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "bg"
-}
--->
 # Създаване на игра: Приложение на шаблони за дизайн
 
 ## Преглед на задачата

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T05:23:15+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "ro"
-}
--->
 # Cadru AI
 
 Ți s-a întâmplat vreodată să te simți copleșit încercând să construiești aplicații AI de la zero? Nu ești singur! Cadrele AI sunt ca un cuțit elvețian pentru dezvoltarea AI-ului - sunt instrumente puternice care îți pot economisi timp și dureri de cap când construiești aplicații inteligente. Gândește-te la un cadru AI ca la o bibliotecă bine organizată: oferă componente pre-construite, API-uri standardizate și abstracții inteligente, astfel încât să te poți concentra pe rezolvarea problemelor în loc să te lupți cu detaliile implementării.

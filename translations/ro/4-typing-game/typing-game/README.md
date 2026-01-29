@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T06:07:15+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "ro"
-}
--->
 # Crearea unui joc folosind evenimente
 
 Te-ai întrebat vreodată cum știu site-urile când apeși un buton sau tastezi într-o casetă de text? Asta este magia programării bazate pe evenimente! Ce metodă mai bună de a învăța această abilitate esențială decât construind ceva util - un joc de viteză la tastare care reacționează la fiecare apăsare de tastă pe care o faci.

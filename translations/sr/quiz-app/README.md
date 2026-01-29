@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-28T10:26:05+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "sr"
-}
--->
 # Апликација за квизове
 
 Ови квизови су предавања пре и после лекција у оквиру наставног плана за науку о подацима на https://aka.ms/webdev-beginners

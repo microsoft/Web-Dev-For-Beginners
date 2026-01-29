@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-07T05:59:23+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "ro"
-}
--->
 # Construiește o Aplicație Bancară Partea 1: Șabloane HTML și Rute într-o Aplicație Web
 
 ```mermaid

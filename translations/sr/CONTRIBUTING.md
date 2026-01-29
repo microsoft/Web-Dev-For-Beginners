@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-28T10:02:59+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "sr"
-}
--->
 # Допринос
 
 Овај пројекат поздравља доприносе и предлоге. Већина доприноса захтева да се сагласите са Уговором о лиценци за доприносиоце (CLA), којим потврђујете да имате право и да заиста дајете нама права да користимо ваш допринос. За више детаља, посетите [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

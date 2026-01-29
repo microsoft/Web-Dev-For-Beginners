@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-07T08:16:18+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "sr"
-}
--->
 # Направите банкарску апликацију, део 4: Концепти управљања стањем
 
 ## ⚡ Шта можете урадити у наредних 5 минута

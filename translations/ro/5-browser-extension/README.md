@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-28T07:41:13+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "ro"
-}
--->
 # Construirea unei extensii pentru browser
 
 Construirea extensiilor pentru browser este o modalitate distractivă și interesantă de a analiza performanța aplicațiilor tale, în timp ce creezi un alt tip de resursă web. Acest modul include lecții despre cum funcționează browserele, cum să implementezi o extensie pentru browser, cum să construiești un formular, să apelezi un API, să utilizezi stocarea locală și cum să evaluezi performanța site-ului tău web pentru a o îmbunătăți.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
-  "translation_date": "2025-10-03T11:59:01+00:00",
-  "source_file": "memory-game/README.md",
-  "language_code": "sr"
-}
--->
 Ово је [Next.js](https://nextjs.org) пројекат креиран помоћу [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Почетак рада

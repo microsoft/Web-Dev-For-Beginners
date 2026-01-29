@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
-  "translation_date": "2026-01-07T05:31:26+00:00",
-  "source_file": "2-js-basics/2-functions-methods/README.md",
-  "language_code": "ro"
-}
--->
 # Noțiuni de bază JavaScript: Metode și Funcții
 
 ![Noțiuni de bază JavaScript - Funcții](../../../../translated_images/ro/webdev101-js-functions.be049c4726e94f8b.webp)
