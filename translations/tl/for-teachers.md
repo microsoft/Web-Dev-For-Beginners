@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:22:09+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "tl"
-}
--->
 ### Para sa mga Guro
 
 Malugod kayong inaanyayahan na gamitin ang kurikulum na ito sa inyong klase. Madali itong gamitin kasama ang GitHub Classroom at mga nangungunang LMS platform, at maaari rin itong gamitin bilang isang standalone na repositoryo para sa inyong mga estudyante.

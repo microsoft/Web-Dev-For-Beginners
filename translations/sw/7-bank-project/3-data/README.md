@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T01:54:30+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "sw"
-}
--->
 # Tengeneza Programu ya Benki Sehemu ya 3: Njia za Kupata na Kutumia Data
 
 Fikiria kuhusu kompyuta ya Enterprise katika Star Trek - wakati Kapteni Picard anauliza kuhusu hali ya meli, taarifa zinaonekana mara moja bila kuzuia kiolesura kizima kusimamika na kujijenga upya. Mtiririko wa taarifa usio na mshono ni hasa kile tunachojenga hapa kwa kupata data kwa mabadiliko ya wakati halisi.

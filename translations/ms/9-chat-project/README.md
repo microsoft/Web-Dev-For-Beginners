@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-06T12:08:50+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "ms"
-}
--->
 # Bina Pembantu Chat dengan AI
 
 Ingat dalam Star Trek apabila kru berbual santai dengan komputer kapal, bertanya soalan kompleks dan mendapat jawapan yang bijak? Apa yang kelihatan seperti fiksyen sains semata-mata pada tahun 1960-an kini adalah sesuatu yang anda boleh bina menggunakan teknologi web yang sudah anda ketahui.

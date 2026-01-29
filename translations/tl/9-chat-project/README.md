@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-03T13:53:25+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Chat Assistant gamit ang AI
 
 Naalala mo ba sa Star Trek kung paano nakikipag-usap ang crew sa computer ng barko, nagtatanong ng mahihirap na tanong at nakakatanggap ng makabuluhang sagot? Ang tila purong science fiction noong 1960s ay ngayon ay kaya mo nang gawin gamit ang mga teknolohiyang web na alam mo na.

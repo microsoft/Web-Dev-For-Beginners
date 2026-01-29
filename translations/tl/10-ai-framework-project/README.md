@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-03T13:52:31+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "tl"
-}
--->
 # AI Framework
 
 Naranasan mo na bang ma-overwhelm sa paggawa ng AI applications mula sa simula? Hindi ka nag-iisa! Ang mga AI framework ay parang Swiss Army knife para sa AI development - mga makapangyarihang tool na makakatipid sa iyo ng oras at sakit ng ulo sa paggawa ng mga intelligent na application. Isipin ang AI framework bilang isang maayos na library: nagbibigay ito ng mga pre-built na bahagi, standardized na API, at matatalinong abstraction para makapag-focus ka sa paglutas ng mga problema sa halip na magpakaabala sa mga detalye ng implementasyon.

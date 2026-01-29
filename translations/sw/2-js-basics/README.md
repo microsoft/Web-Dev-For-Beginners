@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-28T04:03:49+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "sw"
-}
--->
 # Utangulizi wa JavaScript
 
 JavaScript ni lugha ya wavuti. Katika masomo haya manne, utajifunza misingi yake.

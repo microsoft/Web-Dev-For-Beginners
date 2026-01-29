@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-27T22:27:39+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "tl"
-}
--->
 # Extension ng Browser Carbon Trigger: Kumpletong Kodigo
 
 Gamit ang API ng CO2 Signal mula sa tmrow para subaybayan ang konsumo ng kuryente, gumawa ng browser extension upang magkaroon ka ng paalala direkta sa iyong browser tungkol sa konsumo ng kuryente sa iyong lugar. Ang paggamit ng extension na ito ay makakatulong sa iyo na magpasya sa iyong mga aktibidad base sa impormasyong ito.

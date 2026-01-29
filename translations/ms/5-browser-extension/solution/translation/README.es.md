@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-27T22:26:23+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "ms"
-}
--->
 # Sambungan Penyemak Imbas Carbon Trigger: Kod Lengkap
 
 Menggunakan API isyarat CO2 daripada tmrow untuk menjejaki penggunaan elektrik, bina sambungan penyemak imbas supaya anda boleh mendapat peringatan terus dalam penyemak imbas anda tentang penggunaan elektrik di kawasan anda. Penggunaan sambungan ad hoc ini akan membantu anda membuat keputusan tentang aktiviti anda berdasarkan maklumat ini.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-28T03:48:34+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "sw"
-}
--->
 # Ugani wa Kivinjari wa Carbon Trigger: Msimbo Uliokamilika
 
 Kwa kutumia API ya C02 Signal kutoka tmrow kufuatilia matumizi ya umeme, tengeneza ugani wa kivinjari ili uweze kupata ukumbusho moja kwa moja kwenye kivinjari chako kuhusu matumizi ya umeme katika eneo lako. Kutumia ugani huu wa dharura kutakusaidia kufanya maamuzi kuhusu shughuli zako kwa kuzingatia taarifa hizi.

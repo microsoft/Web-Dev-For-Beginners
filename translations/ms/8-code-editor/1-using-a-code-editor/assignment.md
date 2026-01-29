@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T14:23:31+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "ms"
-}
--->
 # Buat Laman Web Resume Menggunakan VSCode.dev
 
 Tingkatkan peluang kerjaya anda dengan membina laman web resume profesional yang mempamerkan kemahiran dan pengalaman anda dalam format interaktif dan moden. Daripada menghantar PDF tradisional, bayangkan memberikan kepada perekrut laman web yang responsif dan bergaya yang menunjukkan kelayakan anda serta keupayaan pembangunan web anda.

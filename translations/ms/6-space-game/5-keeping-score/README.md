@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-06T12:22:19+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "ms"
-}
--->
 # Bina Permainan Angkasa Bahagian 5: Mata dan Nyawa
 
 ```mermaid

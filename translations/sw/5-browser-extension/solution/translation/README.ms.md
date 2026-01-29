@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-28T03:48:00+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "sw"
-}
--->
 # Kiendelezi cha Kivinjari cha Carbon Trigger: Msimbo Kamili
 
 Kwa kutumia API ya Ishara ya CO2 ya tmrow kufuatilia matumizi ya umeme, tengeneza kiendelezi cha kivinjari ili uweze kupokea arifa kwenye kivinjari chako kuhusu uzito wa matumizi ya umeme katika eneo lako. Kutumia kiendelezi hiki hasa kutakusaidia kufanya maamuzi kuhusu shughuli zako kulingana na taarifa hizi.

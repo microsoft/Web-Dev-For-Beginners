@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-28T03:45:28+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "sw"
-}
--->
 # Kiongezo cha Kivinjari cha Carbon Trigger: Msimbo Uliokamilika
 
 Kwa kutumia API ya C02 Signal ya tmrow kufuatilia matumizi ya umeme, tengeneza kiongezo cha kivinjari ili uweze kuwa na kikumbusho moja kwa moja kwenye kivinjari chako kuhusu uzito wa matumizi ya umeme katika eneo lako. Kutumia kiongezo hiki kwa njia ya ad hoc kutakusaidia kufanya maamuzi kuhusu shughuli zako kulingana na taarifa hizi.

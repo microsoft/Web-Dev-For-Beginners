@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:28:53+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "tl"
-}
--->
 # Pagsisimula sa Web Development
 
 Sa seksyong ito ng kurikulum, ipapakilala sa iyo ang mga konseptong hindi nakabatay sa proyekto na mahalaga upang maging isang propesyonal na developer.

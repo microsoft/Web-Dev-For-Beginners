@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-27T22:31:59+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "ms"
-}
--->
 # Bina Permainan Angkasa
 
 Permainan angkasa untuk mengajar asas JavaScript yang lebih maju

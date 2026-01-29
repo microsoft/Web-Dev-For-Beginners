@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2025-10-22T15:42:56+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Laro: Mag-apply ng Design Patterns
 
 ## Pangkalahatang-ideya ng Takdang-Aralin

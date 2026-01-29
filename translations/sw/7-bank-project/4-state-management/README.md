@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-07T01:56:56+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "sw"
-}
--->
 # Jenga App ya Benki Sehemu ya 4: Dhana za Usimamizi wa Hali
 
 ## ⚡ Unachoweza Kufanya Katika Dakika 5 Zijazo

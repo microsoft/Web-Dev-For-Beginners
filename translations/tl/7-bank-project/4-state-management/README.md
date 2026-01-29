@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-03T13:58:02+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Banking App Bahagi 4: Mga Konsepto ng State Management
 
 ## ⚡ Ano ang Magagawa Mo sa Loob ng 5 Minuto

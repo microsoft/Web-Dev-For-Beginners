@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-27T22:23:51+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "ms"
-}
--->
 # Sambungan Pelayar Carbon Trigger: Kod Siap
 
 Menggunakan API C02 Signal daripada tmrow untuk menjejak penggunaan elektrik, bina sambungan pelayar supaya anda boleh mendapat peringatan terus di pelayar anda tentang seberapa berat penggunaan elektrik di kawasan anda. Menggunakan sambungan ini secara ad hoc akan membantu anda membuat keputusan berdasarkan maklumat ini.

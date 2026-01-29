@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-27T22:16:22+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "tl"
-}
--->
 # Pagbuo ng browser extension
 
 Ang paggawa ng browser extensions ay isang masaya at kawili-wiling paraan upang pag-isipan ang performance ng iyong mga app habang gumagawa ng ibang uri ng web asset. Ang module na ito ay naglalaman ng mga aralin tungkol sa kung paano gumagana ang mga browser, kung paano mag-deploy ng browser extension, kung paano gumawa ng form, tumawag sa isang API, gumamit ng local storage, at kung paano suriin ang performance ng iyong website at pagbutihin ito.

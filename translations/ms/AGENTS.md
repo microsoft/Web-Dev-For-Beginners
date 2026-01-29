@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
-  "translation_date": "2025-10-03T11:34:42+00:00",
-  "source_file": "AGENTS.md",
-  "language_code": "ms"
-}
--->
 # AGENTS.md
 
 ## Gambaran Projek

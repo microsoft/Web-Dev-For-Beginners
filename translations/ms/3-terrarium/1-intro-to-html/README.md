@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2025-11-06T12:12:38+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "ms"
-}
--->
 # Projek Terrarium Bahagian 1: Pengenalan kepada HTML
 
 ```mermaid

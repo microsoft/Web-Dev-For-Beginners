@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
-  "translation_date": "2025-10-22T15:35:33+00:00",
-  "source_file": "7-bank-project/3-data/assignment.md",
-  "language_code": "tl"
-}
--->
 # Pag-refactor ng Code at Dokumentasyon na Gawain
 
 ## Mga Layunin sa Pagkatuto

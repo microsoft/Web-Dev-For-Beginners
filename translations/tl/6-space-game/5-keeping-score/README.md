@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-03T14:07:23+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Space Game Bahagi 5: Puntos at Buhay
 
 ```mermaid

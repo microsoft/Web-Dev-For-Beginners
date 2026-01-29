@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e39f3a4e3bcccf94639e3af1248f8a4d",
-  "translation_date": "2025-11-06T12:11:44+00:00",
-  "source_file": "3-terrarium/2-intro-to-css/README.md",
-  "language_code": "ms"
-}
--->
 # Projek Terrarium Bahagian 2: Pengenalan kepada CSS
 
 ```mermaid

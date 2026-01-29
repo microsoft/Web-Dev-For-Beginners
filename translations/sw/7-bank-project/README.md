@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-28T03:23:21+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "sw"
-}
--->
 # :dollar: Jenga Benki
 
 Katika mradi huu, utajifunza jinsi ya kujenga benki ya kufikirika. Masomo haya yanajumuisha maelekezo ya jinsi ya kupanga programu ya wavuti na kutoa njia, kujenga fomu, kusimamia hali (state), na kupata data kutoka kwa API ambayo unaweza kutumia kupata data ya benki.

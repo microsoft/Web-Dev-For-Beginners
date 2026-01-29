@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-06T12:03:24+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "ms"
-}
--->
 # Pengenalan kepada Bahasa Pengaturcaraan dan Alat Pembangun Moden
 
 Hai, bakal pembangun! 👋 Boleh saya kongsikan sesuatu yang masih membuatkan saya teruja setiap hari? Anda akan menemui bahawa pengaturcaraan bukan sekadar tentang komputer – ia adalah kuasa luar biasa untuk merealisasikan idea-idea liar anda!

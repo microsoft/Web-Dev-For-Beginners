@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-28T03:38:29+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "sw"
-}
--->
 # Kujenga Kiendelezi cha Kivinjari
 
 Kujenga viendelezi vya vivinjari ni njia ya kufurahisha na ya kuvutia ya kufikiria kuhusu utendaji wa programu zako huku ukijenga aina tofauti ya rasilimali ya wavuti. Moduli hii inajumuisha masomo kuhusu jinsi vivinjari vinavyofanya kazi, jinsi ya kupeleka kiendelezi cha kivinjari, jinsi ya kujenga fomu, kuita API, kutumia hifadhi ya ndani, na jinsi ya kupima utendaji wa tovuti yako na kuiboresha.

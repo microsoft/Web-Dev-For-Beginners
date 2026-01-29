@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-22T15:20:11+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Website ng Resume Gamit ang VSCode.dev
 
 Palawakin ang iyong mga oportunidad sa karera sa pamamagitan ng paggawa ng isang propesyonal na website ng resume na nagpapakita ng iyong mga kakayahan at karanasan sa isang interaktibo at modernong format. Sa halip na magpadala ng tradisyunal na PDF, isipin ang pagbibigay sa mga recruiter ng isang makinis at responsive na website na nagpapakita ng iyong mga kwalipikasyon at kakayahan sa web development.

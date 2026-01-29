@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T01:15:30+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "sw"
-}
--->
 # Muundo wa AI
 
 Umewahi kuhisi kupotezwa ukijaribu kuunda programu za AI kutoka mwanzo? Hauko peke yako! Miundo ya AI ni kama kuwa na kisu cha kijeshi cha Uswisi kwa ajili ya maendeleo ya AI - ni zana zenye nguvu zinazoweza kuokoa muda na vichwa kuumia wakati wa kuunda programu zenye akili. Tafakari muundo wa AI kama maktaba iliyopangwa vizuri: hutoa vipengele vilivyotengenezwa awali, API zilizo sanifu, na ufanisi wa akili ili uweze kuzingatia kutatua matatizo badala ya kushughulikia maelezo ya utekelezaji.

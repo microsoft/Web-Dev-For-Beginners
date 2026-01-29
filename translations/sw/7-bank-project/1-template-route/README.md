@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-07T01:52:22+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "sw"
-}
--->
 # Jenga Programu ya Benki Sehemu ya 1: Violezo vya HTML na Njia katika Programu ya Mtandao
 
 ```mermaid
