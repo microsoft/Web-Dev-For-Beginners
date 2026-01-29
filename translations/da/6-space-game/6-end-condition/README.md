@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2026-01-06T23:38:57+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "da"
-}
--->
 # Byg et rumspil del 6: Afslutning og genstart
 
 ```mermaid

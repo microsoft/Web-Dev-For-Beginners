@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-06T23:15:38+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "sv"
-}
--->
 # Introduktion till programmeringsspråk och moderna utvecklarverktyg
  
 Hej där, framtida utvecklare! 👋 Får jag berätta något som fortfarande ger mig rysningar varje dag? Du är på väg att upptäcka att programmering inte bara handlar om datorer – det handlar om att ha riktiga superkrafter för att förverkliga dina vildaste idéer!

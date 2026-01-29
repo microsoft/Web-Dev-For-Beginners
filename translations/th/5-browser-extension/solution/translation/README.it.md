@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-26T22:50:11+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "th"
-}
--->
 # ส่วนขยายเบราว์เซอร์ Carbon Trigger: โค้ดเริ่มต้น
 
 เราจะใช้ API Signal CO2 ของ tmrow เพื่อติดตามการใช้ไฟฟ้าและสร้างส่วนขยายสำหรับเบราว์เซอร์ เพื่อให้คุณสามารถรับการแจ้งเตือนโดยตรงในเบราว์เซอร์เกี่ยวกับการใช้ไฟฟ้าในภูมิภาคของคุณ การใช้ส่วนขยายนี้จะช่วยให้คุณประเมินกิจกรรมของคุณตามข้อมูลดังกล่าวได้

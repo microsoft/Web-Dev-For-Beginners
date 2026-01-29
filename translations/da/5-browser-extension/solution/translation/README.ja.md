@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-26T22:51:18+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "da"
-}
--->
 # Carbon Trigger Browser-udvidelse: Færdig kode
 
 Byg en browser-udvidelse, der fungerer som en påmindelse om, hvor meget energi der bruges i dit område, ved at spore strømforbruget med tmrow's CO2 Signal API. Ved at bruge denne udvidelse ad hoc kan du træffe beslutninger om dine aktiviteter baseret på denne information.

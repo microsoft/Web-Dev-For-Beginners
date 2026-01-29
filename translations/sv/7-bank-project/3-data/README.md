@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T23:03:38+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "sv"
-}
--->
 # Bygg en bankapp del 3: Metoder för att hämta och använda data
 
 Tänk på Enterprise-datorn i Star Trek – när kapten Picard frågar efter status på skeppet, dyker informationen upp omedelbart utan att hela gränssnittet stängs ner och byggs upp igen. Det sömlösa informationsflödet är exakt vad vi bygger här med dynamisk datahämtning.

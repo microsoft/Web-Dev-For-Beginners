@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-26T21:26:52+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "da"
-}
--->
 ## Sikkerhed
 
 Microsoft tager sikkerheden af vores softwareprodukter og -tjenester alvorligt, hvilket inkluderer alle kildekoderepositorier, der administreres gennem vores GitHub-organisationer, som omfatter [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) og [vores GitHub-organisationer](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

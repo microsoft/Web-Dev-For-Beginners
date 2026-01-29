@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T23:51:58+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "da"
-}
--->
 # Byg en bank-app del 3: Metoder til at hente og bruge data
 
 Tænk på Enterprises computer i Star Trek – når kaptajn Picard spørger efter skibets status, dukker informationen straks op uden at hele interfacet lukker ned og genopbygger sig selv. Den fejlfri informationsstrøm er præcis det, vi bygger her med dynamisk datahentning.

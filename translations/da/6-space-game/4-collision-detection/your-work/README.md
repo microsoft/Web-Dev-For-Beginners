@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-26T22:04:52+00:00",
-  "source_file": "6-space-game/4-collision-detection/your-work/README.md",
-  "language_code": "da"
-}
--->
 Dette er en pladsholder, efterladt tom med vilje
 
 ---

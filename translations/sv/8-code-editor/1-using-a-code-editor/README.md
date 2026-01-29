@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-06T22:45:06+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "sv"
-}
--->
 # Använda en kodredigerare: Bemästra VSCode.dev
 
 Kom ihåg i *The Matrix* när Neo var tvungen att koppla in sig i en massiv datorterminal för att komma åt den digitala världen? Dagens webbverktyg är motsatsen – otroligt kraftfulla möjligheter tillgängliga från var som helst. VSCode.dev är en webbläsarbaserad kodredigerare som tar professionella utvecklingsverktyg till vilken enhet som helst med en internetuppkoppling.

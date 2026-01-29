@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-26T22:50:22+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "sv"
-}
--->
 # Carbon Trigger-webbläsartillägg: kod för att komma igång
 
 Signal C02-API från tmrow kommer att användas för att övervaka elförbrukningen och skapa ett webbläsartillägg så att du kan få en påminnelse direkt i din webbläsare om hur tung elförbrukningen är i din region. Användningen av detta skräddarsydda tillägg hjälper dig att bedöma dina aktiviteter baserat på denna information.

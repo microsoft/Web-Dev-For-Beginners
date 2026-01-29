@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-26T22:50:30+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "da"
-}
--->
 # Carbon Trigger Browserudvidelse: kode til at komme i gang
 
 Du vil bruge tmrow's Signal CO2 API til at overvåge elforbruget og oprette en browserudvidelse, så du kan få en påmindelse direkte i din browser om, hvor tungt elforbruget er i din region. Brug af denne ad hoc-udvidelse vil hjælpe dig med at vurdere dine aktiviteter baseret på disse oplysninger.

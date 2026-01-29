@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2026-01-06T21:46:28+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "th"
-}
--->
 # สร้างเกมอวกาศ ตอนที่ 4: เพิ่มเลเซอร์และตรวจจับการชน
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-26T21:54:59+00:00",
-  "source_file": "6-space-game/5-keeping-score/your-work/README.md",
-  "language_code": "th"
-}
--->
 นี่คือช่องว่างที่ถูกเว้นไว้โดยเจตนา
 
 ---

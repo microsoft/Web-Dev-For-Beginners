@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-26T22:48:08+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "da"
-}
--->
 # Carbon Trigger Browser Extension: Færdiggjort kode
 
 Ved at bruge tmrow's CO2 Signal API til at spore elforbrug, bygger vi en browserudvidelse, der kan minde dig om, hvor belastet strømforbruget i dit område er. Ved at bruge denne udvidelse kan du træffe beslutninger om dine aktiviteter baseret på denne information.

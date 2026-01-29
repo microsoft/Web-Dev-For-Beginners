@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-06T22:09:00+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "th"
-}
--->
 # สร้างแอปธนาคาร ตอนที่ 4: แนวคิดการจัดการสถานะ
 
 ## ⚡ สิ่งที่คุณทำได้ใน 5 นาทีถัดไป

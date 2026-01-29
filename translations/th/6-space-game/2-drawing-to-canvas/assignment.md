@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "87cd43afe5b69dbbffb5c4b209ea6791",
-  "translation_date": "2025-10-23T21:18:43+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
-  "language_code": "th"
-}
--->
 # งาน: สำรวจ Canvas API
 
 ## วัตถุประสงค์การเรียนรู้

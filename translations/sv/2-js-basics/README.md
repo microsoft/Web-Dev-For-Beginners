@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-26T21:39:35+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "sv"
-}
--->
 # Introduktion till JavaScript
 
 JavaScript är webbsidornas språk. I dessa fyra lektioner kommer du att lära dig grunderna.

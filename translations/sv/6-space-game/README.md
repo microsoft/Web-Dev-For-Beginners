@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-26T21:52:23+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "sv"
-}
--->
 # Bygg ett rymdspel
 
 Ett rymdspel för att lära sig mer avancerade JavaScript-grunder

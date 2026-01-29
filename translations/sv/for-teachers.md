@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T09:53:51+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "sv"
-}
--->
 ### För lärare
 
 Du är välkommen att använda detta kursmaterial i ditt klassrum. Det fungerar smidigt med GitHub Classroom och ledande LMS-plattformar, och det kan även användas som en fristående repo med dina elever.

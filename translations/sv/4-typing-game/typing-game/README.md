@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T23:07:36+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "sv"
-}
--->
 # Skapa ett spel med händelser
 
 Har du någonsin undrat hur webbplatser vet när du klickar på en knapp eller skriver i en textruta? Det är magin med händelsestyrd programmering! Vad är ett bättre sätt att lära sig denna viktiga färdighet än genom att bygga något användbart – ett skrivhastighetsspel som reagerar på varje tangenttryckning du gör.

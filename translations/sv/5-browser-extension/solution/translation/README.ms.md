@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-26T22:48:46+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "sv"
-}
--->
 # Carbon Trigger Webbläsartillägg: Komplett Kod
 
 Använd API:n för CO2-signal från tmrow för att övervaka elförbrukning och skapa ett webbläsartillägg som varnar dig om hur tung elförbrukningen är i din region. Genom att använda detta tillägg kan du fatta mer informerade beslut om dina aktiviteter baserat på denna information.
