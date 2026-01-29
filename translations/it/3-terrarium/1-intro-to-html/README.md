@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2025-11-04T00:29:36+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "it"
-}
--->
 # Progetto Terrario Parte 1: Introduzione a HTML
 
 ```mermaid

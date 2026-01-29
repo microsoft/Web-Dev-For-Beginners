@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-04T00:34:04+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "it"
-}
--->
 # Creare un gioco usando gli eventi
 
 Ti sei mai chiesto come fanno i siti web a sapere quando clicchi un pulsante o digiti in una casella di testo? È la magia della programmazione basata sugli eventi! Quale modo migliore per imparare questa abilità essenziale se non costruendo qualcosa di utile: un gioco di velocità di digitazione che reagisce a ogni tasto che premi.

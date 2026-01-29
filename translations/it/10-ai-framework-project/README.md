@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-04T00:25:32+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "it"
-}
--->
 # Framework AI
 
 Ti sei mai sentito sopraffatto nel tentativo di costruire applicazioni AI da zero? Non sei il solo! I framework AI sono come un coltellino svizzero per lo sviluppo di applicazioni intelligenti: strumenti potenti che ti fanno risparmiare tempo e mal di testa. Pensa a un framework AI come a una libreria ben organizzata: offre componenti pre-costruiti, API standardizzate e astrazioni intelligenti, permettendoti di concentrarti sulla risoluzione dei problemi invece di lottare con i dettagli di implementazione.

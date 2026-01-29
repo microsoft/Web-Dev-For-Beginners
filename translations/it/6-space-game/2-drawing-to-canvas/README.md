@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-04T00:35:38+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "it"
-}
--->
 # Costruire un Gioco Spaziale Parte 2: Disegna Eroe e Mostri sul Canvas
 
 ```mermaid

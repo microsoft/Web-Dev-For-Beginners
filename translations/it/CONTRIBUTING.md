@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-25T21:03:29+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "it"
-}
--->
 # Contribuire
 
 Questo progetto accoglie con favore contributi e suggerimenti. La maggior parte dei contributi richiede che tu accetti un Accordo di Licenza per i Contributori (CLA) dichiarando che hai il diritto di, e effettivamente concedi a noi, i diritti di utilizzare il tuo contributo. Per maggiori dettagli, visita [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

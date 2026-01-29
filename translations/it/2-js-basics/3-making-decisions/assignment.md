@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2025-10-22T23:21:05+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "it"
-}
--->
 # Prendere Decisioni: Processore di Voti degli Studenti
 
 ## Obiettivi di Apprendimento

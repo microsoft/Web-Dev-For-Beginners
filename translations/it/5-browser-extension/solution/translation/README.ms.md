@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-25T23:56:43+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "it"
-}
--->
 # Estensione del Browser Carbon Trigger: Codice Completo
 
 Utilizzando l'API CO2 Signal di tmrow per monitorare il consumo di elettricità, costruisci un'estensione del browser che ti avvisi sull'impatto del consumo energetico nella tua regione. Usare questa estensione ti aiuterà a prendere decisioni più consapevoli sulle tue attività in base a queste informazioni.

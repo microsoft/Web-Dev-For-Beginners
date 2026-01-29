@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:27:20+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "it"
-}
--->
 # Introduzione allo Sviluppo Web
 
 In questa sezione del curriculum, verranno introdotti concetti non basati su progetti, importanti per diventare uno sviluppatore professionista.
