@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-25T23:53:17+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "tr"
-}
--->
 # Carbon Trigger Tarayıcı Eklentisi: Tam Kod
 
 Elektrik kullanımını takip etmek için tmrow'un CO2 sinyal API'sini kullanarak, bölgenizdeki elektrik tüketimi hakkında doğrudan tarayıcınızda bir hatırlatıcı almanızı sağlayan bir tarayıcı eklentisi oluşturun. Bu özel eklentiyi kullanmak, bu bilgileri temel alarak aktiviteleriniz hakkında kararlar almanıza yardımcı olacaktır.

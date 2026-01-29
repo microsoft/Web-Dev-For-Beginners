@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-24T13:25:32+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "pl"
-}
--->
 # Rozszerzenie przeglądarki Carbon Trigger: Gotowy kod
 
 Zbuduj rozszerzenie przeglądarki, które wykorzystuje API CO2 Signal od tmrow do śledzenia zużycia energii elektrycznej w Twoim regionie. Rozszerzenie wyświetla przypomnienie na przeglądarce, pokazując, jak intensywne jest zużycie energii w Twojej okolicy. Dzięki temu możesz podejmować decyzje dotyczące swoich działań na podstawie tych informacji.

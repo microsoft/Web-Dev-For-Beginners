@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-26T00:03:46+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "tr"
-}
--->
 # :dollar: Bir Banka Kur
 
 Bu projede, hayali bir banka nasıl kurulur öğreneceksiniz. Bu dersler, bir web uygulamasının nasıl tasarlanacağı ve yönlendirmelerin nasıl sağlanacağı, formların nasıl oluşturulacağı, durumun nasıl yönetileceği ve bir API'den banka verilerini nasıl çekeceğiniz gibi konularda talimatlar içerir.

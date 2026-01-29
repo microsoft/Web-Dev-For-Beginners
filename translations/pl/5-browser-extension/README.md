@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-24T13:08:00+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "pl"
-}
--->
 # Tworzenie rozszerzenia przeglądarki
 
 Tworzenie rozszerzeń przeglądarki to ciekawy i angażujący sposób na analizowanie wydajności swoich aplikacji, jednocześnie budując inny rodzaj zasobu internetowego. Ten moduł zawiera lekcje na temat działania przeglądarek, wdrażania rozszerzenia przeglądarki, tworzenia formularzy, wywoływania API, korzystania z lokalnej pamięci oraz oceny i poprawy wydajności witryny.

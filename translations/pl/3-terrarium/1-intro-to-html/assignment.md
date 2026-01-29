@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
-  "translation_date": "2026-01-06T19:46:53+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/assignment.md",
-  "language_code": "pl"
-}
--->
 # Zadanie praktyczne z HTML: Stwórz makietę bloga
 
 ## Cele nauki

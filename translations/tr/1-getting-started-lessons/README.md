@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:27:33+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "tr"
-}
--->
 # Web Geliştirmeye Başlangıç
 
 Bu müfredat bölümünde, profesyonel bir geliştirici olmak için önemli olan proje tabanlı olmayan kavramlarla tanışacaksınız.

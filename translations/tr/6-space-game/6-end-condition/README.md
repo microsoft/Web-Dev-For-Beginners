@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2025-11-04T01:03:52+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "tr"
-}
--->
 # Uzay Oyunu Yapımı Bölüm 6: Son ve Yeniden Başlatma
 
 ```mermaid

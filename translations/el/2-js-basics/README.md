@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-26T21:39:22+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "el"
-}
--->
 # Εισαγωγή στη JavaScript
 
 Η JavaScript είναι η γλώσσα του διαδικτύου. Σε αυτά τα τέσσερα μαθήματα, θα μάθετε τα βασικά της.

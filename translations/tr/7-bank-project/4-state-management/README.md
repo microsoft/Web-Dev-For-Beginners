@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-04T00:56:44+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "tr"
-}
--->
 # Bankacılık Uygulaması Yapımı Bölüm 4: Durum Yönetimi Kavramları
 
 ## ⚡ Sonraki 5 Dakikada Yapabilecekleriniz

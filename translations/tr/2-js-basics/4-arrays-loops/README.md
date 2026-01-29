@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "1710a50a519a6e4a1b40a5638783018d",
-  "translation_date": "2025-11-04T00:42:41+00:00",
-  "source_file": "2-js-basics/4-arrays-loops/README.md",
-  "language_code": "tr"
-}
--->
 # JavaScript Temelleri: Diziler ve Döngüler
 
 ![JavaScript Temelleri - Diziler](../../../../translated_images/tr/webdev101-js-arrays.439d7528b8a29455.webp)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-06T19:39:18+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "pl"
-}
--->
 # Budowanie aplikacji bankowej Część 4: Koncepcje zarządzania stanem
 
 ## ⚡ Co możesz zrobić w następnych 5 minutach

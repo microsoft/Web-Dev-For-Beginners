@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-22T23:47:14+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "tr"
-}
--->
 # VSCode.dev Kullanarak Özgeçmiş Web Sitesi Oluşturma
 
 Kariyer fırsatlarınızı, becerilerinizi ve deneyimlerinizi interaktif, modern bir formatta sergileyen profesyonel bir özgeçmiş web sitesi oluşturarak dönüştürün. Geleneksel PDF'ler göndermek yerine, niteliklerinizi ve web geliştirme yeteneklerinizi gösteren şık, duyarlı bir web sitesi sunmayı hayal edin.

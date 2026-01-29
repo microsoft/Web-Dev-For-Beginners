@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T23:19:38+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "el"
-}
--->
 # Εφαρμογή Κουίζ
 
 Αυτά τα κουίζ είναι τα κουίζ πριν και μετά τη διάλεξη για το πρόγραμμα σπουδών επιστήμης δεδομένων στο https://aka.ms/webdev-beginners

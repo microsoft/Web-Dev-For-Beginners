@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8c55a2bd4bc0ebe4c88198fd563a9e09",
-  "translation_date": "2026-01-06T20:41:09+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/README.md",
-  "language_code": "el"
-}
--->
 # Δημιουργία ενός Διαστημικού Παιχνιδιού Μέρος 3: Προσθήκη Κίνησης
 
 ```mermaid

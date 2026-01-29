@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-25T23:58:41+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "tr"
-}
--->
 # Carbon Trigger Tarayıcı Uzantısı: Tamamlanmış Kod
 
 Tmrow'un C02 Signal API'sini kullanarak elektrik tüketimini takip edin ve bölgenizdeki elektrik tüketimi hakkında doğrudan tarayıcınızda bir hatırlatıcı almanızı sağlayan bir tarayıcı uzantısı oluşturun. Bu özel uzantıyı kullanmak, bu bilgilere dayanarak aktiviteleriniz hakkında daha bilinçli kararlar vermenize yardımcı olacaktır.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-04T00:51:12+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "tr"
-}
--->
 # AI Çerçevesi
 
 Hiç sıfırdan yapay zeka uygulamaları oluşturmakta zorlandınız mı? Yalnız değilsiniz! Yapay zeka çerçeveleri, yapay zeka geliştirme için bir İsviçre çakısı gibidir - akıllı uygulamalar oluştururken zaman ve sıkıntıdan tasarruf etmenizi sağlayan güçlü araçlardır. Bir yapay zeka çerçevesini iyi organize edilmiş bir kütüphane gibi düşünün: önceden oluşturulmuş bileşenler, standartlaştırılmış API'ler ve akıllı soyutlamalar sunar, böylece uygulama detaylarıyla uğraşmak yerine sorunları çözmeye odaklanabilirsiniz.

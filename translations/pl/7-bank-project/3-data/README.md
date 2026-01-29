@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T19:35:41+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "pl"
-}
--->
 # Budowa aplikacji bankowej, część 3: Metody pobierania i wykorzystywania danych
 
 Pomyśl o komputerze Enterprise ze Star Trek – gdy kapitan Picard pyta o status statku, informacje pojawiają się natychmiast, bez konieczności wyłączania i odbudowy całego interfejsu. Ten płynny przepływ informacji to dokładnie to, co tworzymy tutaj, dzięki dynamicznemu pobieraniu danych.

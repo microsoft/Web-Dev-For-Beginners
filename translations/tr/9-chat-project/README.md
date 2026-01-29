@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-04T00:52:07+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "tr"
-}
--->
 # AI ile Sohbet Asistanı Oluşturma
 
 Star Trek'te mürettebatın geminin bilgisayarıyla rahatça konuşup karmaşık sorular sorduğunu ve düşünceli yanıtlar aldığını hatırlıyor musunuz? 1960'larda saf bilim kurgu gibi görünen şey, artık bildiğiniz web teknolojilerini kullanarak oluşturabileceğiniz bir şey.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2026-01-06T21:06:10+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "el"
-}
--->
 # Έργο Terrarium Μέρος 1: Εισαγωγή στο HTML
 
 ```mermaid

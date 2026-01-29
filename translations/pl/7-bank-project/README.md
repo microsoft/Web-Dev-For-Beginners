@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-24T13:26:24+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "pl"
-}
--->
 # :dollar: Zbuduj Bank
 
 W tym projekcie nauczysz się, jak stworzyć fikcyjny bank. Te lekcje zawierają instrukcje dotyczące tworzenia układu aplikacji webowej, definiowania tras, budowania formularzy, zarządzania stanem oraz pobierania danych z API, z którego można uzyskać dane banku.

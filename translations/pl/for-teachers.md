@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T09:38:34+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "pl"
-}
--->
 ### Dla nauczycieli
 
 Zapraszamy do korzystania z tego programu nauczania w swojej klasie. Doskonale współpracuje z GitHub Classroom i wiodącymi platformami LMS, a także może być używany jako samodzielne repozytorium z uczniami.

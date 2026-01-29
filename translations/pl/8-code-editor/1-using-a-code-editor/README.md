@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-06T19:03:12+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "pl"
-}
--->
 # Korzystanie z edytora kodu: Opanowanie VSCode.dev
 
 Pamiętasz scenę z *Matrixa*, kiedy Neo musiał podłączyć się do ogromnego terminala komputerowego, aby uzyskać dostęp do świata cyfrowego? Narzędzia do tworzenia stron internetowych dzisiaj to zupełnie inna historia – niezwykle potężne możliwości dostępne z dowolnego miejsca. VSCode.dev to edytor kodu działający w przeglądarce, który dostarcza profesjonalne narzędzia programistyczne na każde urządzenie z dostępem do internetu.

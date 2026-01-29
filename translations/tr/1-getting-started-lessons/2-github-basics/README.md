@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-25T17:50:50+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "tr"
-}
--->
 # GitHub'a Giriş
 
 Merhaba, geleceğin geliştiricisi! 👋 Dünyanın dört bir yanındaki milyonlarca kodlayıcıya katılmaya hazır mısın? Seni GitHub ile tanıştırmak için gerçekten çok heyecanlıyım – bunu programcılar için bir sosyal medya platformu gibi düşün, ama öğle yemeği fotoğraflarını paylaşmak yerine kod paylaşıyoruz ve birlikte inanılmaz şeyler inşa ediyoruz!

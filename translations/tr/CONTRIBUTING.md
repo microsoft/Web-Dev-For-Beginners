@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-25T21:03:36+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "tr"
-}
--->
 # Katkıda Bulunma
 
 Bu proje katkılara ve önerilere açıktır. Çoğu katkı, bir Katkıda Bulunma Lisans Anlaşması (CLA) imzalamanızı gerektirir. Bu anlaşma, katkınızı kullanma hakkını bize verdiğinizi ve bu hakkı gerçekten sahip olduğunuzu beyan eder. Daha fazla bilgi için [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon) adresini ziyaret edebilirsiniz.

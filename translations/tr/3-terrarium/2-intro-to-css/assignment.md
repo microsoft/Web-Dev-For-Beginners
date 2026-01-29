@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bee6762d4092a13fc7c338814963f980",
-  "translation_date": "2025-10-22T23:58:49+00:00",
-  "source_file": "3-terrarium/2-intro-to-css/assignment.md",
-  "language_code": "tr"
-}
--->
 # CSS Yeniden Düzenleme Ödevi
 
 ## Amaç

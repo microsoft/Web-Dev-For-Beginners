@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-06T18:46:43+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "pl"
-}
--->
 ## Wdróż swój Terrarium
 
 Możesz wdrożyć lub opublikować swoje Terrarium w sieci za pomocą **Azure Static Web Apps**.

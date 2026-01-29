@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-25T23:27:25+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "tr"
-}
--->
 # Bir tarayıcı uzantısı oluşturma
 
 Tarayıcı uzantıları oluşturmak, uygulamalarınızın performansını düşünürken farklı bir tür web varlığı oluşturmanın eğlenceli ve ilginç bir yoludur. Bu modül, tarayıcıların nasıl çalıştığı ve bir tarayıcı uzantısının nasıl dağıtılacağı, bir formun nasıl oluşturulacağı, bir API'nin nasıl çağrılacağı, yerel depolamanın nasıl kullanılacağı ve web sitenizin performansını nasıl ölçüp iyileştirebileceğiniz hakkında dersler içerir.

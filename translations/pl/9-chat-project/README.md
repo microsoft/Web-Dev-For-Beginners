@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-06T18:46:50+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "pl"
-}
--->
 # Zbuduj Asystenta Czatu z AI
 
 Pamiętasz w Star Treku, kiedy załoga swobodnie rozmawiała z komputerem statku, zadając mu skomplikowane pytania i otrzymując przemyślane odpowiedzi? To, co w latach 60. XX wieku wydawało się czystą fantastyką naukową, dziś możesz zbudować, używając znanych Ci technologii webowych.
