@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
-  "translation_date": "2026-01-08T17:30:54+00:00",
-  "source_file": "7-bank-project/3-data/assignment.md",
-  "language_code": "ml"
-}
--->
 # കോഡ് റിഫാക്ടറിങ്ങും ഡോക്യുമെന്റേഷനും അസൈൻമെന്റ്
 
 ## പഠനലക്ഷ്യങ്ങൾ

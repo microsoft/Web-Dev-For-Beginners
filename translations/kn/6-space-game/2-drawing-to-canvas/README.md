@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2026-01-08T13:44:05+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "kn"
-}
--->
 # ಸ್ಪೇಸ್ ಗೇಮ್ ಭಾಗ 2: ಹೀರೋ ಮತ್ತುಮಾನ್ತ್ರಗಳನ್ನು ಕ್ಯಾನ್‌ವಾಸ್‌ಗೆ ಬಿಡಿಸಿ
 
 ```mermaid

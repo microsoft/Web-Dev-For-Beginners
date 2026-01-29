@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2026-01-08T11:10:27+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "ml"
-}
--->
 # ഒരു സ്പേസ് ഗെയിം നിർമ്മിക്കുക
 
 വളരെ മുന്നേറ്റത്തിലുള്ള ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങളെ പഠിപ്പിക്കാൻ ഒരു സ്പേസ് ഗെയിം

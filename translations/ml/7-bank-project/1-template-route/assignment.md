@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df0dcecddcd28ea8cbf6ede0ad57d673",
-  "translation_date": "2026-01-08T17:11:00+00:00",
-  "source_file": "7-bank-project/1-template-route/assignment.md",
-  "language_code": "ml"
-}
--->
 # റൂട്ടിംഗ് മെച്ചപ്പെടുത്തുക
 
 ## നിർദ്ദേശങ്ങൾ

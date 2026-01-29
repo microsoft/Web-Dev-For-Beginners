@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2026-01-08T15:01:41+00:00",
-  "source_file": "6-space-game/6-end-condition/solution/README.md",
-  "language_code": "ml"
-}
--->
 ഇത് ഒരു പ്ലേസ്ഹോൾഡറാണ്, മനസിലാക്കി ഫലവത്താക്കാൻ വെറുതെ ഒഴിഞ്ഞിട്ടുള്ളത്
 
 ---

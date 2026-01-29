@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2026-01-08T13:55:35+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "kn"
-}
--->
 # ಸ್ಪೇಸ್ ಗೇಮ್ ಭಾಗ 6: ಅಂತ್ಯ ಮತ್ತು ಮರುಪ್ರಾರಂಭ
 
 ```mermaid

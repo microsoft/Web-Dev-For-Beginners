@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9884f8c8a61cf56214450f8b16a094ce",
-  "translation_date": "2026-01-08T16:40:10+00:00",
-  "source_file": "7-bank-project/api/README.md",
-  "language_code": "kn"
-}
--->
 # ಬ್ಯಾಂಕ್ API
 
 > [Node.js](https://nodejs.org) + [Express](https://expressjs.com/) ಬಳಸಿ ನಿರ್ಮಿಸಿರುವ ಬ್ಯಾಂಕ್ API.

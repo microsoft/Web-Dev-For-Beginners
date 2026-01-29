@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-08T17:49:26+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "kn"
-}
--->
 # ಬ್ಯಾಂಕಿಂಗ್ ಅಪ್ಲಿಕೇಶನ್ ನಿರ್ಮಾಣ ಭಾಗ 4: ಸ್ಟೇಟ್ ನಿರ್ವಹಣೆಯ ಸಂಪ್ರದಾಯಗಳು
 
 ## ⚡ ಮುಂದಿನ 5 ನಿಮಿಷಗಳಲ್ಲಿ ನೀವು ಏನು ಮಾಡಬಹುದು

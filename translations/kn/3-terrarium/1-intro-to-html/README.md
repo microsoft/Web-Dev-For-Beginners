@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2026-01-08T18:42:06+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "kn"
-}
--->
 Translation for chunk 1 of 'README.md' skipped due to timeout.
 - **ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ** ಪ್ರತಿ ದೃಶ್ಯಾಂಶದ ಘಟಕಗಳನ್ನು (ಮೇಲ್ಭಾಗ, ಗೋಡೆಗಳು, ಮಣ್ಣು, ಕೆಳಭಾಗ)
 - **ಸಮರ್ಪಿಸುತ್ತದೆ** ಗಾಜಿನ ಪ್ರತಿಬಿಂಬ ಪ್ರಭಾವಗಳಿಗೆ ಫಲಿತಾಂಶಾಂಶಗಳನ್ನು (ತಿಪ್ಪಣಿಯಾದ ಘಟಕಗಳು)

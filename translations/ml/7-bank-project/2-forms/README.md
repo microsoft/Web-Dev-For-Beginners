@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2026-01-08T16:24:10+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "ml"
-}
--->
 # ബാങ്കിങ് ആപ്പ് നിർമ്മിക്കുക ഭാഗം 2: ലോഗിൻ & രജിസ്ട്രേഷൻ ഫോർം നിർമ്മിക്കുക
 
 ```mermaid

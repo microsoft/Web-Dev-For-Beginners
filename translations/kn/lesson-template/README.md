@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2026-01-08T11:41:47+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "kn"
-}
--->
 # [ಪಾಠ ವಿಷಯ]
 
 ![ಇಲ್ಲಿ ವೀಡಿಯೋ ಅನ್ನು ಸೇರಿಸಿ](../../../lesson-template/video-url)

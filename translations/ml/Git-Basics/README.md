@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
-  "translation_date": "2026-01-08T10:47:28+00:00",
-  "source_file": "Git-Basics/README.md",
-  "language_code": "ml"
-}
--->
 ## വെബ്-ഡെവ് തുടങ്ങിയവർക്ക് ഉപകാരപ്രദമായ GIT അടിസ്ഥാനങ്ങൾ👶
 
 

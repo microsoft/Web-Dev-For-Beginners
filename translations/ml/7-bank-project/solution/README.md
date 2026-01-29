@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2026-01-08T18:07:05+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "ml"
-}
--->
 # ബാങ്ക് ആപ്പ്
 
 > വാനില്ല HTML5, CSS, ജാവാസ്‌ക്രിപ്റ്റ് എന്നിവ ഉപയോഗിച്ച് (ഫ്രെയിംവർക്ക്‌കളും ലൈബ്രറിയും ഉപയോഗിക്കാതെ) നിർമ്മിച്ച ബാങ്ക് ആപ്പ് പ്രോജക്റ്റിനുള്ള ഉദാഹരണ പരിഹാരം.

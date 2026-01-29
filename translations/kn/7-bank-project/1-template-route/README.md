@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-08T17:05:35+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "kn"
-}
--->
 # ಬ್ಯಾಂಕಿಂಗ್ ಆ್ಯಪ್ ಭಾಗ 1: ವೆಬ್ ಆ್ಯಪ್‍ನಲ್ಲಿ HTML ಟೆಂಪ್ಲೇಟ್ಗಳು ಮತ್ತು ಮಾರ್ಗಗಳು
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2026-01-08T11:16:42+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ml"
-}
--->
 # ക്വിസ് ആപ്പ്
 
 ഈ ക്വിസുകൾ https://aka.ms/webdev-beginners ൽ ഉള്ള ഡേറ്റാ സയൻസ് പാഠ്യപദ്ധതിയുടേതായി ലെക്ചർക്കു മുമ്പും ശേഷം നടത്തപ്പെടുന്ന ക്വിസുകളാണ്

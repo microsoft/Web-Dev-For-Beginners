@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2026-01-08T10:34:33+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "ml"
-}
--->
 # മൈക്രോസ്‌ഫ്റ്റ് ഓപ്പൺ സോഴ്സ് പെരുമാറ്റ നയം
 
 ഈ പ്രോജക്ട് [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon) സ്വീകരിച്ചിരിക്കുന്നു.

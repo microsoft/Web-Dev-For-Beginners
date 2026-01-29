@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2026-01-08T15:54:42+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "ml"
-}
--->
 # അസൈൻമെന്റ്: നിങ്ങളുടെ ബ്രൗസർ എക്സ്റ്റൻഷൻ റീസ്റ്റൈൽ ചെയ്യുക
 
 ## അവലോകനം

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2026-01-08T14:36:49+00:00",
-  "source_file": "6-space-game/solution/README.md",
-  "language_code": "kn"
-}
--->
 ಇದು ಪ್ಲೇಸ್‌ಹೋಲ್ಡರ್ ಆಗಿದ್ದು, ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಖಾಲಿ ಬಿಡಲಾಗಿದೆ
 
 ---

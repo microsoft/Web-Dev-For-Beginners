@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2026-01-08T15:56:29+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "kn"
-}
--->
 # ಕಾರ್ಯ: ನಿಮ್ಮ ಬ್ರೌಸರ್ ವಿಸ್ತರಣೆ ಮರು obliksilu
 
 ## ಸ್ಪಷ್ಟನೆ

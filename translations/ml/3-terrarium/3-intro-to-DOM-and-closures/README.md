@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
-  "translation_date": "2026-01-08T18:58:02+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
-  "language_code": "ml"
-}
--->
 # ടെറാരിയം പ്രോജക്ട് ഭാഗം 3: DOM മാനിപ്പുലേഷൻയും ജാവാസ്ക്രിപ്റ്റ് ക്ലോസറുകളും
 
 ```mermaid

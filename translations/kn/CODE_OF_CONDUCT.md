@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2026-01-08T10:34:48+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "kn"
-}
--->
 # ಮೈಕ್ರೋಸಾಫ್ಟ್ ಓಪನ್ ಸೋರ್ಸ್ ನಡವಳಿಕೆ ನಿಯಮಾವಳಿ
 
 ಈ ಪ್ರಾಜೆಕ್ಟ್ [ಮೈಕ್ರೋಸಾಫ್ಟ್ ಓಪನ್ ಸೋರ್ಸ್ ನಡವಳಿಕೆ ನಿಯಮಾವಳಿ](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon) ಅನ್ನು ಅಳವಡಿಸಿಕೊಂಡಿದೆ.

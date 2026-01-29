@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
-  "translation_date": "2026-01-08T10:48:32+00:00",
-  "source_file": "Git-Basics/README.md",
-  "language_code": "kn"
-}
--->
 ## ವೆಬ್-ಡೆವ್ ಆರಂಭಿಕರಿಗಾಗಿ GIT ಮೂಲಭೂತಗಳು👶
 
 
