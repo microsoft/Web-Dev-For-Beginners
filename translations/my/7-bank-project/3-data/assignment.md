@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
-  "translation_date": "2025-10-24T16:43:57+00:00",
-  "source_file": "7-bank-project/3-data/assignment.md",
-  "language_code": "my"
-}
--->
 # ကုဒ်ပြုပြင်ခြင်းနှင့်စာရွက်စာတမ်းရေးအလုပ်
 
 ## သင်ယူရမည့်ရည်ရွယ်ချက်များ

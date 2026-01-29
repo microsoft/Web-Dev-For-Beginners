@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T09:25:41+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "hr"
-}
--->
 # Izrada igre pomoću događaja
 
 Jeste li se ikada zapitali kako web stranice znaju kada kliknete na gumb ili upišete nešto u tekstni okvir? To je čarolija programiranja vođenog događajima! Koji je bolji način za naučiti ovu osnovnu vještinu nego izgraditi nešto korisno - igru brzine tipkanja koja reagira na svaki pritisak tipke.

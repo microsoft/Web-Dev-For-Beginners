@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-06T15:01:13+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "my"
-}
--->
 # Space Game တည်ဆောက်ခြင်း အပိုင်း ၄: Laser ထည့်သွင်းခြင်းနှင့် တိုက်မိမှုများကို ရှာဖွေခြင်း
 
 ```mermaid

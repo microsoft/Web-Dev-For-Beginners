@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
-  "translation_date": "2025-10-03T15:59:45+00:00",
-  "source_file": "Git-Basics/README.md",
-  "language_code": "hr"
-}
--->
 ## Osnove GIT-a za početnike u web-razvoju👶
 
 ## Što je `Git`?

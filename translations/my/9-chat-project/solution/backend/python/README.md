@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
-  "translation_date": "2025-10-24T16:31:48+00:00",
-  "source_file": "9-chat-project/solution/backend/python/README.md",
-  "language_code": "my"
-}
--->
 # ကုဒ်ကို အလုပ်လုပ်စေပါ
 
 ## အဆင့်ဆင့် ပြင်ဆင်ခြင်း

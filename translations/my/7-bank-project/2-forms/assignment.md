@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2025-10-24T16:49:19+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "my"
-}
--->
 # သင့်ဘဏ်အက်ပ်ကို ခေတ်မီ CSS ဖြင့် အလှဆင်ပါ
 
 ## ပရောဂျက်အကျဉ်းချုပ်

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6fd645e97c48cd5eb5a3d290815ec8b5",
-  "translation_date": "2025-10-24T16:06:02+00:00",
-  "source_file": "2-js-basics/1-data-types/assignment.md",
-  "language_code": "my"
-}
--->
 # အချက်အလက်အမျိုးအစားများ လေ့ကျင့်ခြင်း: အီး-ကုမ္မဏီ စျေးဝယ်လှည်း
 
 ## ညွှန်ကြားချက်များ

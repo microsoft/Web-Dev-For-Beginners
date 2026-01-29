@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-27T22:18:11+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "hr"
-}
--->
 # Carbon Trigger Browser Ekstenzija: Dovršeni Kod
 
 Koristeći tmrow-ov C02 Signal API za praćenje potrošnje električne energije, izradite ekstenziju za preglednik kako biste imali podsjetnik u svom pregledniku o tome koliko je velika potrošnja električne energije u vašoj regiji. Povremeno korištenje ove ekstenzije pomoći će vam da donesete odluke o svojim aktivnostima na temelju tih informacija.

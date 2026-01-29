@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2025-10-25T00:14:13+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "hr"
-}
--->
 # Izrada igre: Primjena dizajnerskih obrazaca
 
 ## Pregled zadatka

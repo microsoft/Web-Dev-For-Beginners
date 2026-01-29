@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-06T14:52:51+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "my"
-}
--->
 # အဖြစ်အပျက်များကို အသုံးပြု၍ ဂိမ်းတစ်ခု ဖန်တီးခြင်း
 
 တစ်ခါတစ်လေ သင် button ကို click လုပ်တဲ့အခါ၊ သို့မဟုတ် text box ထဲမှာ ရိုက်ထည့်တဲ့အခါ website တွေက ဘယ်လိုသိနိုင်သလဲဆိုတာ စဉ်းစားဖူးပါသလား? ဒါက event-driven programming ရဲ့ မျိုးဆန်းမှုပါ! ဒီအရေးကြီးတဲ့ ကျွမ်းကျင်မှုကို သင်ယူဖို့အတွက် typing speed game တစ်ခုကို ဖန်တီးခြင်းက အကောင်းဆုံးနည်းလမ်းဖြစ်ပါတယ်။ ဒီဂိမ်းက သင်ရိုက်တဲ့ keystroke တစ်ခုချင်းစီကို တုံ့ပြန်ပါမယ်။

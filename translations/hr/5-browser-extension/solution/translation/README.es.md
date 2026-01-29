@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-27T22:20:16+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "hr"
-}
--->
 # Ekstenzija preglednika Carbon Trigger: Potpuni kod
 
 Koristeći API za CO2 Signal od tmrow za praćenje potrošnje električne energije, izradite ekstenziju za preglednik kako biste imali podsjetnik direktno u svom pregledniku o potrošnji električne energije u vašoj regiji. Korištenje ove ad hoc ekstenzije pomoći će vam donositi odluke o vašim aktivnostima na temelju tih informacija.

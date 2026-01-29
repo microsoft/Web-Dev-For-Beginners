@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-27T21:59:00+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "sl"
-}
--->
 ## Varnost
 
 Microsoft jemlje varnost svojih programske opreme in storitev resno, kar vključuje vse repozitorije izvorne kode, ki jih upravljajo naše GitHub organizacije, med katerimi so [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) in [naše GitHub organizacije](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

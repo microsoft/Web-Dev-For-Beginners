@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T11:00:29+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "my"
-}
--->
 ### ဆရာ/ဆရာမများအတွက်
 
 ဤသင်ခန်းစာများကို သင်၏အတန်းထဲတွင် အသုံးပြုနိုင်ပါသည်။ GitHub Classroom နှင့် ထိပ်တန်း LMS ပလက်ဖောင်းများနှင့် အလွယ်တကူ လိုက်ဖက်ပြီး၊ သင်၏ကျောင်းသားများနှင့်အတူ standalone repo အဖြစ်လည်း အသုံးပြုနိုင်ပါသည်။

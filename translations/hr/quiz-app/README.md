@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T22:51:51+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "hr"
-}
--->
 # Aplikacija za kviz
 
 Ovi kvizovi su uvodni i završni kvizovi za kurikulum znanosti o podacima na https://aka.ms/webdev-beginners

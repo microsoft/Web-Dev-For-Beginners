@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-27T22:00:25+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "sl"
-}
--->
 # :dollar: Zgradi banko
 
 V tem projektu se boste naučili, kako zgraditi izmišljeno banko. Te lekcije vključujejo navodila za postavitev spletne aplikacije in zagotavljanje poti, izdelavo obrazcev, upravljanje stanja ter pridobivanje podatkov iz API-ja, iz katerega lahko pridobite podatke banke.

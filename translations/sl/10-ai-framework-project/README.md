@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T09:43:34+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "sl"
-}
--->
 # Okvir za umetno inteligenco
 
 Ste se kdaj počutili preobremenjene, ko ste poskušali zgraditi aplikacije umetne inteligence od začetka? Niste sami! Okviri za umetno inteligenco so kot švicarski nož za razvoj UI - so zmogljiva orodja, ki vam lahko prihranijo čas in glavobole pri gradnji inteligentnih aplikacij. Okvir za umetno inteligenco si predstavljajte kot dobro organizirano knjižnico: zagotavlja vnaprej izdelane komponente, standardizirane API-je in pametne abstrakcije, tako da se lahko osredotočite na reševanje problemov, namesto da se ukvarjate s podrobnostmi implementacije.

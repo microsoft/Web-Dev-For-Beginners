@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-27T21:58:24+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "sl"
-}
--->
 # Prispevanje
 
 Ta projekt pozdravlja prispevke in predloge. Večina prispevkov zahteva, da se strinjate s Pogodbo o licenciranju prispevkov (CLA), s katero izjavljate, da imate pravico in dejansko podeljujete pravice za uporabo vašega prispevka. Za več podrobnosti obiščite [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

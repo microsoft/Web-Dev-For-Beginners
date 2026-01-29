@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-27T22:21:18+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "hr"
-}
--->
 # Proširenje preglednika Carbon Trigger: Završeni kod
 
 Koristeći API C02 Signal od tmrow za praćenje potrošnje električne energije, izradite proširenje preglednika kako biste imali podsjetnik direktno u svom pregledniku o potrošnji električne energije u vašem području. Korištenje ovog prilagođenog proširenja pomoći će vam da donesete odluke o svojim aktivnostima na temelju tih informacija.

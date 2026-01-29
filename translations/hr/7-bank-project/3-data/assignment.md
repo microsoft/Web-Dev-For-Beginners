@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
-  "translation_date": "2025-10-25T00:06:06+00:00",
-  "source_file": "7-bank-project/3-data/assignment.md",
-  "language_code": "hr"
-}
--->
 # Zadatak refaktoriranja koda i dokumentacije
 
 ## Ciljevi učenja

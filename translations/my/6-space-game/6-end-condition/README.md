@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2025-11-06T14:59:25+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "my"
-}
--->
 # အာကာသဂိမ်းတစ်ခုတည်ဆောက်ခြင်း အပိုင်း ၆: အဆုံးနှင့် ပြန်စတင်ခြင်း
 
 ```mermaid

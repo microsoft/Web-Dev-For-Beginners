@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-27T22:36:30+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "my"
-}
--->
 # ကျွန်ုပ်၏ Terrarium: HTML, CSS နှင့် DOM ကို JavaScript အသုံးပြု၍ လေ့လာရန် Project 🌵🌱
 
 အနည်းငယ်သော drag and drop code-meditation ဖြစ်ပါတယ်။ HTML, JS နှင့် CSS အနည်းငယ်ကို အသုံးပြုပြီး web interface တစ်ခုကို တည်ဆောက်၊ အလှဆင်ပြီး အပြန်အလှန်လုပ်ဆောင်မှုများ ထည့်သွင်းနိုင်ပါတယ်။

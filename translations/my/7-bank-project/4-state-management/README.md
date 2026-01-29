@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-06T14:40:56+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "my"
-}
--->
 # ဘဏ်အက်ပ်တည်ဆောက်ခြင်း အပိုင်း ၄: အခြေအနေစီမံခန့်ခွဲမှု၏ အယူအဆများ
 
 ## ⚡ နောက် ၅ မိနစ်အတွင်း သင်လုပ်နိုင်သည့်အရာများ

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2025-11-06T14:38:29+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "my"
-}
--->
 # Terrarium Project Part 1: HTML ကိုမိတ်ဆက်ခြင်း
 
 ```mermaid

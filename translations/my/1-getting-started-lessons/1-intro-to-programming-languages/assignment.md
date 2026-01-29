@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
-  "translation_date": "2025-10-24T16:17:06+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
-  "language_code": "my"
-}
--->
 # အလုပ်အမိန့်: ခေတ်သစ်ဝက်ဘ်ဖွံ့ဖြိုးရေးကိရိယာများကိုလေ့လာခြင်း
 
 ## လမ်းညွှန်ချက်များ

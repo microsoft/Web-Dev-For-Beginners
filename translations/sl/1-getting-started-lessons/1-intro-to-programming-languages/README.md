@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T10:41:52+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "sl"
-}
--->
 # Uvod v programske jezike in sodobna razvojna orodja
 
 Živjo, bodoči razvijalec! 👋 Lahko ti povem nekaj, kar mi še vsak dan povzroči mravljince? Pravkar boš odkril, da programiranje ni samo za računalnike – gre za resnične supermoč, da svoje najbolj divje ideje oživiš!

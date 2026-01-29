@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:54:08+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "hr"
-}
--->
 ### Za edukatore
 
 Slobodno koristite ovaj kurikulum u svojoj učionici. Odlično se integrira s GitHub Classroomom i vodećim LMS platformama, a može se koristiti i kao samostalni repozitorij sa studentima.

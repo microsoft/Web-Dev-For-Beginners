@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-25T00:21:02+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "sl"
-}
--->
 # Ustvarite spletno stran z življenjepisom z uporabo VSCode.dev
 
 Izboljšajte svoje karierne možnosti z izdelavo profesionalne spletne strani z življenjepisom, ki interaktivno in sodobno prikazuje vaše veščine in izkušnje. Namesto pošiljanja tradicionalnih PDF-jev si zamislite, da bi kadrovnikom ponudili elegantno, odzivno spletno stran, ki prikazuje vaše kvalifikacije in sposobnosti spletnega razvoja.
