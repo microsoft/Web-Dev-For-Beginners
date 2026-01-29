@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2026-01-06T15:20:09+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "ko"
-}
--->
 # 과제: 브라우저 확장 프로그램 스타일 재설계
 
 ## 개요

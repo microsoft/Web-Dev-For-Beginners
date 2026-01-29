@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "87cd43afe5b69dbbffb5c4b209ea6791",
-  "translation_date": "2025-10-22T22:01:10+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
-  "language_code": "bn"
-}
--->
 # অ্যাসাইনমেন্ট: ক্যানভাস API অন্বেষণ করুন
 
 ## শেখার লক্ষ্যসমূহ

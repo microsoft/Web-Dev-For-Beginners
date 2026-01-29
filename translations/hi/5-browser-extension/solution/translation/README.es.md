@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-24T13:21:05+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "hi"
-}
--->
 # Carbon Trigger ब्राउज़र एक्सटेंशन: पूरा कोड
 
 tmrow की CO2 Signal API का उपयोग करके बिजली की खपत को ट्रैक करें और एक ब्राउज़र एक्सटेंशन बनाएं ताकि आप अपनी क्षेत्रीय बिजली खपत की जानकारी सीधे अपने ब्राउज़र में देख सकें। इस ऐड-हॉक एक्सटेंशन का उपयोग आपको अपनी गतिविधियों के बारे में निर्णय लेने में मदद करेगा, जो इस जानकारी पर आधारित होंगे।

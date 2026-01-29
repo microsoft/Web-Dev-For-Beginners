@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T00:23:54+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ko"
-}
--->
 # 퀴즈 앱
 
 이 퀴즈들은 데이터 과학 커리큘럼의 강의 전후 퀴즈로, https://aka.ms/webdev-beginners에서 제공됩니다.

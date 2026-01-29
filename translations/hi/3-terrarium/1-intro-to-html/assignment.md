@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
-  "translation_date": "2026-01-06T16:59:54+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/assignment.md",
-  "language_code": "hi"
-}
--->
 # HTML अभ्यास कार्य: ब्लॉग मॉकअप बनाएं
 
 ## सीखने के उद्देश्य

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2026-01-06T14:37:41+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "ko"
-}
--->
 # 이벤트 기반 프로그래밍 - 타이핑 게임 만들기
 
 ```mermaid

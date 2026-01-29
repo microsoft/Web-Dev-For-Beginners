@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-23T23:42:00+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "ko"
-}
--->
 # Carbon Trigger 브라우저 확장 프로그램: 시작 코드
 
 tmrow의 CO2 Signal API를 사용하여 전기 사용량을 추적하고, 브라우저에서 바로 지역의 전기 사용량이 얼마나 많은지 알림을 받을 수 있는 브라우저 확장 프로그램을 만드세요. 이 확장 프로그램을 즉석에서 사용하면 이 정보를 바탕으로 활동에 대한 판단을 내리는 데 도움이 됩니다.

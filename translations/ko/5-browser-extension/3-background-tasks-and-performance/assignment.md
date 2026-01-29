@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a203e560e58ccc6ba68bffc40c7c8676",
-  "translation_date": "2026-01-06T15:18:09+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/assignment.md",
-  "language_code": "ko"
-}
--->
 # 사이트 성능 분석하기
 
 ## 과제 개요

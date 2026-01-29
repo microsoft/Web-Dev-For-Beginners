@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-06T14:43:06+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "ko"
-}
--->
 # AI로 채팅 어시스턴트 만들기
 
 스타트렉에서 승무원들이 우주선 컴퓨터와 편하게 대화하며 복잡한 질문을 하고 깊이 있는 답변을 받던 장면을 기억하시나요? 1960년대에는 순수한 공상과학처럼 보였던 것이 이제 여러분이 이미 알고 있는 웹 기술을 사용해 만들 수 있는 것이 되었습니다.

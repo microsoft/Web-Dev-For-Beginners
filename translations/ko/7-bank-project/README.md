@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-23T23:55:02+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "ko"
-}
--->
 # :dollar: 은행 만들기
 
 이 프로젝트에서는 가상의 은행을 만드는 방법을 배웁니다. 이 강의에서는 웹 앱의 레이아웃을 구성하고 경로를 제공하는 방법, 폼을 구축하는 방법, 상태를 관리하는 방법, API에서 데이터를 가져오는 방법을 포함하여 은행 데이터를 가져오는 방법을 다룹니다.

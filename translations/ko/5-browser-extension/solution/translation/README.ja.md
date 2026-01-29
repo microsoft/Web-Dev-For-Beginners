@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-23T23:54:17+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "ko"
-}
--->
 # 카본 트리거 브라우저 확장 기능: 완성된 코드
 
 tmrow의 CO2 Signal API를 사용하여 전력 사용량을 추적하고, 브라우저에서 지역의 전력 사용량이 얼마나 많은지 알림으로 표시할 수 있는 브라우저 확장 기능을 구축합니다. 이 확장 기능을 활용하면 이 정보를 바탕으로 자신의 활동을 결정할 수 있습니다.

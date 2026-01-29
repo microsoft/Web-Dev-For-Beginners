@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124efddbb65166cddb38075ad6dae324",
-  "translation_date": "2026-01-06T16:20:22+00:00",
-  "source_file": "6-space-game/4-collision-detection/assignment.md",
-  "language_code": "hi"
-}
--->
 # टकरावों का अन्वेषण करें
 
 ## निर्देश

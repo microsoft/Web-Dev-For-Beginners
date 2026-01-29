@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-24T12:26:49+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "hi"
-}
--->
 # स्पेस गेम बनाएं
 
 एक स्पेस गेम जो उन्नत जावास्क्रिप्ट के मूलभूत सिद्धांत सिखाएगा

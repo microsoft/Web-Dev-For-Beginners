@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-06T15:25:42+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "ko"
-}
--->
 # 은행 앱 만들기 3부: 데이터 가져오기와 사용 방법
 
 스타트렉의 엔터프라이즈 컴퓨터를 떠올려보세요 - 피카드 함장이 함선 상태를 물어보면, 인터페이스가 멈췄다가 다시 만들어지지 않고 즉시 정보가 나타납니다. 그런 원활한 정보 흐름이 바로 우리가 동적 데이터 가져오기를 통해 구축하려는 것입니다.

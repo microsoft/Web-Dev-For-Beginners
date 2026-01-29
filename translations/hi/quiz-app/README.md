@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T13:56:55+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "hi"
-}
--->
 # क्विज़ ऐप
 
 ये क्विज़ डेटा साइंस पाठ्यक्रम के लिए प्री- और पोस्ट-लेक्चर क्विज़ हैं, जो https://aka.ms/webdev-beginners पर उपलब्ध है।

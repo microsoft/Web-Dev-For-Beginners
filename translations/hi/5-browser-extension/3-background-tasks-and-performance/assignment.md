@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a203e560e58ccc6ba68bffc40c7c8676",
-  "translation_date": "2026-01-06T16:38:50+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/assignment.md",
-  "language_code": "hi"
-}
--->
 # प्रदर्शन के लिए एक साइट का विश्लेषण करें
 
 ## असाइनमेंट का अवलोकन

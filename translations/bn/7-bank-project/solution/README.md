@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-08-26T00:39:27+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "bn"
-}
--->
 # ব্যাংক অ্যাপ
 
 > ব্যাংক অ্যাপ প্রকল্পের উদাহরণ সমাধান, যা ভ্যানিলা HTML5, CSS এবং JavaScript দিয়ে তৈরি (কোনো ফ্রেমওয়ার্ক বা লাইব্রেরি ব্যবহার করা হয়নি)।

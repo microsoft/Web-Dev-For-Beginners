@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
-  "translation_date": "2025-10-03T11:54:47+00:00",
-  "source_file": "memory-game/README.md",
-  "language_code": "ko"
-}
--->
 이 프로젝트는 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)으로 시작된 [Next.js](https://nextjs.org) 프로젝트입니다.
 
 ## 시작하기

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
-  "translation_date": "2025-10-03T11:54:58+00:00",
-  "source_file": "memory-game/README.md",
-  "language_code": "hi"
-}
--->
 यह एक [Next.js](https://nextjs.org) प्रोजेक्ट है जिसे [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) के साथ शुरू किया गया है।
 
 ## शुरुआत करें

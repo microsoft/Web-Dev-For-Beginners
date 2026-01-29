@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e6d0f456dfc22afb41bbdefeb5ec179d",
-  "translation_date": "2025-10-22T21:36:22+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/assignment.md",
-  "language_code": "bn"
-}
--->
 # ব্যাপক ওয়েবসাইট অ্যাক্সেসিবিলিটি অডিট
 
 ## নির্দেশনা

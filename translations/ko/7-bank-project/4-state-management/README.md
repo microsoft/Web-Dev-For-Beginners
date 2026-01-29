@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-06T15:28:50+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ko"
-}
--->
 # 금융 앱 구축 4부: 상태 관리 개념
 
 ## ⚡ 다음 5분 동안 할 수 있는 일

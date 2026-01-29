@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2025-10-22T21:27:10+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "bn"
-}
--->
 # সিদ্ধান্ত নেওয়া: ছাত্রদের গ্রেড প্রসেসর
 
 ## শেখার লক্ষ্য

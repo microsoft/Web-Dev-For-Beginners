@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2026-01-06T15:05:08+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "ko"
-}
--->
 # 우주 게임 만들기 6부: 종료 및 재시작
 
 ```mermaid

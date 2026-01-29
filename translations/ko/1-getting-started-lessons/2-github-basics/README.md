@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-06T15:49:30+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "ko"
-}
--->
 # Introduction to GitHub
 
 안녕하세요, 미래의 개발자님! 👋 전 세계 수백만 개발자들과 함께할 준비가 되셨나요? 여러분께 GitHub를 소개하게 되어 정말 기쁩니다 – 프로그래머들을 위한 소셜 미디어 플랫폼이라고 생각하세요. 점심 사진을 공유하는 대신, 우리는 코드를 공유하고 함께 놀라운 것들을 만들어가고 있답니다!

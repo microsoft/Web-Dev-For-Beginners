@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-06T14:38:31+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "ko"
-}
--->
 ## Terrarium 배포하기
 
 **Azure Static Web Apps**를 사용하여 Terrarium을 웹에 배포하거나 공개할 수 있습니다.

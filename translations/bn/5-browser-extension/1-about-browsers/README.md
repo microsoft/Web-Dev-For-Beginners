@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2025-11-03T23:09:43+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "bn"
-}
--->
 # ব্রাউজার এক্সটেনশন প্রকল্প পার্ট ১: ব্রাউজার সম্পর্কে সবকিছু
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
-  "translation_date": "2025-10-22T21:48:23+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/assignment.md",
-  "language_code": "bn"
-}
--->
 # HTML প্র্যাকটিস অ্যাসাইনমেন্ট: একটি ব্লগ মকআপ তৈরি করুন
 
 ## শেখার লক্ষ্যসমূহ

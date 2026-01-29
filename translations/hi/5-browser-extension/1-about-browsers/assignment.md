@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2026-01-06T16:41:17+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "hi"
-}
--->
 # असाइनमेंट: अपने ब्राउज़र एक्सटेंशन की स्टाइल बदलें
 
 ## अवलोकन

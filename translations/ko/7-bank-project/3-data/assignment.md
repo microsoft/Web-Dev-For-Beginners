@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
-  "translation_date": "2026-01-06T15:28:28+00:00",
-  "source_file": "7-bank-project/3-data/assignment.md",
-  "language_code": "ko"
-}
--->
 # 코드 리팩토링 및 문서화 과제
 
 ## 학습 목표

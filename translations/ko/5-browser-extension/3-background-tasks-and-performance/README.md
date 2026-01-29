@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2026-01-06T15:16:21+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "ko"
-}
--->
 # Browser Extension Project Part 3: 백그라운드 작업과 성능에 대해 배우기
 
 ```mermaid

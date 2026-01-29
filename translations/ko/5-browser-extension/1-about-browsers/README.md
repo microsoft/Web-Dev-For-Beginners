@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2026-01-06T15:18:27+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "ko"
-}
--->
 # 브라우저 확장 프로그램 프로젝트 1부: 브라우저에 관하여
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2026-01-06T16:11:35+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "hi"
-}
--->
 # निर्णय लेना: छात्र ग्रेड प्रोसेसर
 
 ## सीखने के उद्देश्य

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-08-24T00:10:54+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "ko"
-}
--->
 # 은행 앱
 
 > 은행 앱 프로젝트의 예제 솔루션으로, 순수 HTML5, CSS, JavaScript만을 사용하여 (프레임워크나 라이브러리 없이) 제작되었습니다.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
-  "translation_date": "2025-10-22T21:44:18+00:00",
-  "source_file": "9-chat-project/solution/backend/python/README.md",
-  "language_code": "bn"
-}
--->
 # কোড চালান
 
 ## সেট আপ
