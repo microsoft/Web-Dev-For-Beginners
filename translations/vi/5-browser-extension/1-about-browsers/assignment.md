@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2025-10-24T13:55:06+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "vi"
-}
--->
 # Bài tập: Tạo lại phong cách cho tiện ích mở rộng trình duyệt của bạn
 
 ## Tổng quan

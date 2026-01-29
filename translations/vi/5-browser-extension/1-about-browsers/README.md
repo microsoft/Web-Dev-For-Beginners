@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2025-11-06T11:37:41+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "vi"
-}
--->
 # Dự án Tiện ích Mở rộng Trình duyệt Phần 1: Tất cả về Trình duyệt
 
 ```mermaid

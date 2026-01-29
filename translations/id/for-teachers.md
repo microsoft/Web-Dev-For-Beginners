@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:16:18+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "id"
-}
--->
 ### Untuk Pendidik
 
 Anda dipersilakan menggunakan kurikulum ini di kelas Anda. Kurikulum ini bekerja dengan lancar menggunakan GitHub Classroom dan platform LMS terkemuka, serta dapat digunakan sebagai repositori mandiri bersama siswa Anda.

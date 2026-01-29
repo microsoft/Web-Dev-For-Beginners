@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "50a7783473b39a2e0f133e271a102231",
-  "translation_date": "2025-10-24T13:43:07+00:00",
-  "source_file": "7-bank-project/4-state-management/assignment.md",
-  "language_code": "vi"
-}
--->
 # Triển khai hộp thoại "Thêm giao dịch"
 
 ## Tổng quan

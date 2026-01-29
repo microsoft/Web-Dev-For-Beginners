@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:28:35+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "vi"
-}
--->
 # Bắt đầu với Phát triển Web
 
 Trong phần này của chương trình học, bạn sẽ được giới thiệu các khái niệm không dựa trên dự án nhưng rất quan trọng để trở thành một nhà phát triển chuyên nghiệp.

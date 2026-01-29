@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T23:03:43+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "vi"
-}
--->
 # Ứng dụng Quiz
 
 Các bài quiz này là bài kiểm tra trước và sau bài giảng trong chương trình học khoa học dữ liệu tại https://aka.ms/webdev-beginners

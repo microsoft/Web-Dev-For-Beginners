@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2025-11-06T11:59:02+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "id"
-}
--->
 # Proyek Ekstensi Browser Bagian 2: Memanggil API, menggunakan Penyimpanan Lokal
 
 ```mermaid

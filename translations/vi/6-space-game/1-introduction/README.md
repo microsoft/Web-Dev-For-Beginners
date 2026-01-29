@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
-  "translation_date": "2025-11-06T11:34:23+00:00",
-  "source_file": "6-space-game/1-introduction/README.md",
-  "language_code": "vi"
-}
--->
 # Xây dựng trò chơi không gian Phần 1: Giới thiệu
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3eac59d70e2532a677a2ce6bf765485a",
-  "translation_date": "2025-10-24T14:14:08+00:00",
-  "source_file": "4-typing-game/typing-game/assignment.md",
-  "language_code": "id"
-}
--->
 # Membuat Game Keyboard Baru
 
 ## Instruksi

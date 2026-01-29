@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-06T11:46:11+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "id"
-}
--->
 # Membangun Asisten Chat dengan AI
 
 Ingat dalam Star Trek ketika kru berbicara santai dengan komputer kapal, menanyakan pertanyaan kompleks dan mendapatkan jawaban yang bijaksana? Apa yang tampak seperti fiksi ilmiah murni di tahun 1960-an sekarang adalah sesuatu yang bisa Anda bangun menggunakan teknologi web yang sudah Anda kenal.

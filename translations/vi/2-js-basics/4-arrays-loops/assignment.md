@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8abcada0534e0fb3a7556ea3c5a2a8a4",
-  "translation_date": "2025-10-24T13:28:32+00:00",
-  "source_file": "2-js-basics/4-arrays-loops/assignment.md",
-  "language_code": "vi"
-}
--->
 # Bài tập về Mảng và Vòng lặp
 
 ## Hướng dẫn

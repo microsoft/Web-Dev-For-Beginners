@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-06T11:20:38+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "vi"
-}
--->
 # Xây dựng Trợ lý Chat với AI
 
 Bạn còn nhớ trong Star Trek, khi phi hành đoàn trò chuyện với máy tính của tàu, hỏi những câu hỏi phức tạp và nhận được các câu trả lời sâu sắc? Điều tưởng chừng như khoa học viễn tưởng vào những năm 1960 giờ đây là điều bạn có thể xây dựng bằng các công nghệ web mà bạn đã biết.

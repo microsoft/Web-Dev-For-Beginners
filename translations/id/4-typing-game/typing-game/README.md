@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-06T11:53:56+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "id"
-}
--->
 # Membuat game menggunakan event
 
 Pernahkah Anda bertanya-tanya bagaimana situs web tahu saat Anda mengklik tombol atau mengetik di kotak teks? Itulah keajaiban dari pemrograman berbasis event! Cara terbaik untuk mempelajari keterampilan penting ini adalah dengan membangun sesuatu yang berguna - sebuah game kecepatan mengetik yang merespons setiap ketikan Anda.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-27T22:25:29+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "vi"
-}
--->
 # Tiện ích mở rộng trình duyệt Carbon Trigger: Mã hoàn chỉnh
 
 Xây dựng một tiện ích mở rộng trình duyệt để hiển thị lời nhắc trên trình duyệt về mức độ sử dụng điện trong khu vực của bạn, sử dụng API CO2 Signal của tmrow để theo dõi lượng điện tiêu thụ. Bằng cách sử dụng tiện ích mở rộng này, bạn có thể đưa ra quyết định về các hoạt động của mình dựa trên thông tin này.

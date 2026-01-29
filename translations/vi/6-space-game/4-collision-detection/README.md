@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-06T11:33:40+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "vi"
-}
--->
 # Xây dựng trò chơi không gian Phần 4: Thêm tia laser và phát hiện va chạm
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-04T02:31:25+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "he"
-}
--->
 # בניית אפליקציית בנקאות חלק 1: תבניות HTML ונתיבים באפליקציית ווב
 
 ```mermaid

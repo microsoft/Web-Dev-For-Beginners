@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-27T22:16:03+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "id"
-}
--->
 # Membangun Ekstensi Browser
 
 Membangun ekstensi browser adalah cara yang menyenangkan dan menarik untuk memikirkan kinerja aplikasi Anda sambil membuat jenis aset web yang berbeda. Modul ini mencakup pelajaran tentang cara kerja browser dan cara menerapkan ekstensi browser, cara membuat formulir, memanggil API, menggunakan penyimpanan lokal, serta cara mengukur kinerja situs web Anda dan meningkatkannya.

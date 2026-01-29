@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-06T11:41:21+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "id"
-}
--->
 # Pengantar Bahasa Pemrograman dan Alat Pengembang Modern
 
 Hai, calon pengembang! 👋 Boleh saya ceritakan sesuatu yang masih membuat saya merinding setiap hari? Kamu akan segera menyadari bahwa pemrograman bukan hanya tentang komputer – ini adalah kekuatan super nyata untuk mewujudkan ide-ide terliarmu!

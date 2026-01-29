@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-27T22:26:49+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "id"
-}
--->
 # Sambungan Peramban Carbon Trigger: Kode Lengkap
 
 Menggunakan API Sinyal CO2 dari tmrow untuk memantau penggunaan listrik, buat ekstensi peramban sehingga Anda dapat menerima peringatan di peramban Anda tentang seberapa besar konsumsi listrik di wilayah Anda. Menggunakan ekstensi ini secara khusus akan membantu Anda membuat keputusan tentang aktivitas Anda berdasarkan informasi tersebut.

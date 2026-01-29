@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-06T11:45:25+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "id"
-}
--->
 # Kerangka AI
 
 Pernah merasa kewalahan mencoba membangun aplikasi AI dari awal? Kamu tidak sendirian! Kerangka AI seperti pisau Swiss Army untuk pengembangan AI - alat yang sangat berguna yang dapat menghemat waktu dan mengurangi kerumitan saat membangun aplikasi cerdas. Anggaplah kerangka AI sebagai perpustakaan yang terorganisir dengan baik: ia menyediakan komponen yang sudah dibuat sebelumnya, API standar, dan abstraksi pintar sehingga kamu bisa fokus pada pemecahan masalah daripada bergulat dengan detail implementasi.

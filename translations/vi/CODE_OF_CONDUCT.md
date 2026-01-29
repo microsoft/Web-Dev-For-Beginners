@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-27T22:00:04+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "vi"
-}
--->
 # Quy tắc Ứng xử Mã nguồn Mở của Microsoft
 
 Dự án này đã áp dụng [Quy tắc Ứng xử Mã nguồn Mở của Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon).

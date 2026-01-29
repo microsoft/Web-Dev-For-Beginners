@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-27T22:25:01+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "id"
-}
--->
 # Ekstensi Browser Carbon Trigger: Kode untuk Memulai
 
 Kita akan menggunakan API Signal CO2 dari tmrow untuk memantau penggunaan listrik dan membuat ekstensi browser agar dapat memberikan pengingat langsung di browser tentang seberapa besar penggunaan listrik di wilayah kita. Penggunaan ekstensi ini akan membantu mengevaluasi aktivitas kita berdasarkan informasi tersebut.

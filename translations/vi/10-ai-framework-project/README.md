@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-06T11:19:34+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "vi"
-}
--->
 # Khung AI
 
 Bạn đã bao giờ cảm thấy choáng ngợp khi cố gắng xây dựng ứng dụng AI từ đầu chưa? Bạn không cô đơn đâu! Các khung AI giống như một con dao đa năng Thụy Sĩ dành cho phát triển AI - chúng là những công cụ mạnh mẽ có thể tiết kiệm thời gian và giảm đau đầu khi xây dựng ứng dụng thông minh. Hãy nghĩ về một khung AI như một thư viện được tổ chức tốt: nó cung cấp các thành phần được xây dựng sẵn, API tiêu chuẩn hóa và các trừu tượng thông minh để bạn có thể tập trung vào việc giải quyết vấn đề thay vì vật lộn với các chi tiết triển khai.

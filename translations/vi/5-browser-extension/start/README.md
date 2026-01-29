@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-27T22:22:57+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "vi"
-}
--->
 # Tiện ích mở rộng Carbon Trigger: Mã khởi đầu
 
 Sử dụng API C02 Signal của tmrow để theo dõi mức tiêu thụ điện, bạn sẽ xây dựng một tiện ích mở rộng trình duyệt để có thể nhận được nhắc nhở ngay trong trình duyệt về mức độ tiêu thụ điện năng của khu vực bạn. Việc sử dụng tiện ích này một cách linh hoạt sẽ giúp bạn đưa ra quyết định về các hoạt động của mình dựa trên thông tin này.

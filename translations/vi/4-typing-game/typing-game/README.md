@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-06T11:30:11+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "vi"
-}
--->
 # Tạo một trò chơi sử dụng sự kiện
 
 Bạn đã bao giờ tự hỏi làm thế nào các trang web biết khi bạn nhấp vào một nút hoặc nhập vào một hộp văn bản chưa? Đó là sự kỳ diệu của lập trình hướng sự kiện! Cách tốt nhất để học kỹ năng quan trọng này là xây dựng một thứ gì đó hữu ích - một trò chơi đo tốc độ gõ phản ứng với từng phím bạn nhấn.

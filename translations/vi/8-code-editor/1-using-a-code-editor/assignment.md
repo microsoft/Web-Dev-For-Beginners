@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T13:30:04+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "vi"
-}
--->
 # Tạo Website Sơ Yếu Lý Lịch Bằng VSCode.dev
 
 Nâng cao triển vọng nghề nghiệp của bạn bằng cách xây dựng một website sơ yếu lý lịch chuyên nghiệp, thể hiện kỹ năng và kinh nghiệm của bạn dưới dạng tương tác, hiện đại. Thay vì gửi các tệp PDF truyền thống, hãy tưởng tượng việc cung cấp cho nhà tuyển dụng một website đẹp mắt, đáp ứng tốt, vừa thể hiện trình độ chuyên môn vừa chứng minh khả năng phát triển web của bạn.
