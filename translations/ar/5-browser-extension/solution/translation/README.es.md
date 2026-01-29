@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-25T23:51:50+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "ar"
-}
--->
 # امتداد متصفح Carbon Trigger: الكود الكامل
 
 باستخدام واجهة برمجة التطبيقات CO2 Signal من tmrow لتتبع استخدام الكهرباء، قم بإنشاء امتداد للمتصفح حتى تتمكن من الحصول على تذكير مباشر في متصفحك حول استهلاك الكهرباء في منطقتك. سيساعدك استخدام هذا الامتداد المخصص على اتخاذ قرارات بشأن أنشطتك بناءً على هذه المعلومات.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T13:56:26+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "fa"
-}
--->
 # اپلیکیشن آزمون
 
 این آزمون‌ها، آزمون‌های قبل و بعد از جلسات آموزشی برای برنامه درسی علوم داده در https://aka.ms/webdev-beginners هستند.

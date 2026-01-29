@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T08:35:50+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "ar"
-}
--->
 ### للمعلمين
 
 مرحبًا بكم في استخدام هذا المنهج الدراسي في صفوفكم. يعمل بسلاسة مع GitHub Classroom ومنصات إدارة التعلم (LMS) الرائدة، ويمكن أيضًا استخدامه كمستودع مستقل مع طلابكم.

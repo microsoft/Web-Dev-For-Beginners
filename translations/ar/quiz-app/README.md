@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T01:11:20+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ar"
-}
--->
 # تطبيق الاختبارات
 
 هذه الاختبارات هي اختبارات ما قبل وبعد المحاضرات لمنهج علوم البيانات على الرابط https://aka.ms/webdev-beginners

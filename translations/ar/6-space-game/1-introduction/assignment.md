@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2025-10-22T14:28:17+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "ar"
-}
--->
 # تصميم لعبة: تطبيق أنماط التصميم
 
 ## نظرة عامة على المهمة

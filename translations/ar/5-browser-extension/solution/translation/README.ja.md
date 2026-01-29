@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-26T00:00:44+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "ar"
-}
--->
 # ملحق متصفح كاربون تريجر: الكود المكتمل
 
 قم ببناء ملحق متصفح يعرض تذكيرًا على المتصفح حول مدى كثافة استخدام الطاقة في منطقتك، باستخدام واجهة برمجة التطبيقات CO2 Signal من tmrow لتتبع استهلاك الطاقة. يمكنك استخدام هذا الملحق بشكل مخصص لاتخاذ قرارات بناءً على هذه المعلومات.

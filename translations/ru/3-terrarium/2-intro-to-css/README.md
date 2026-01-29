@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e39f3a4e3bcccf94639e3af1248f8a4d",
-  "translation_date": "2025-11-03T23:21:57+00:00",
-  "source_file": "3-terrarium/2-intro-to-css/README.md",
-  "language_code": "ru"
-}
--->
 # Проект "Террариум", часть 2: Введение в CSS
 
 ```mermaid

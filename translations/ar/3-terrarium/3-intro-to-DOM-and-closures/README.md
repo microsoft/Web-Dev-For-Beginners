@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
-  "translation_date": "2025-11-03T12:35:54+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
-  "language_code": "ar"
-}
--->
 # مشروع التيراريوم الجزء الثالث: التلاعب بـ DOM والإغلاق في JavaScript
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-24T12:12:02+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "fa"
-}
--->
 # مقدمه‌ای بر جاوااسکریپت
 
 جاوااسکریپت زبان وب است. در این چهار درس، با اصول اولیه آن آشنا خواهید شد.

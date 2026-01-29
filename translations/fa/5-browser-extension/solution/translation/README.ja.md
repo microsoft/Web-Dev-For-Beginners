@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-24T13:25:23+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "fa"
-}
--->
 # افزونه مرورگر کربن تریگر: کد کامل
 
 با استفاده از API سیگنال CO2 از tmrow، افزونه‌ای برای مرورگر بسازید که میزان مصرف برق در منطقه شما را به عنوان یک یادآور روی مرورگر نمایش دهد. با استفاده از این افزونه، می‌توانید فعالیت‌های خود را بر اساس این اطلاعات مدیریت کنید.

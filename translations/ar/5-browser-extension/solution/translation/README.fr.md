@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-25T23:57:12+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "ar"
-}
--->
 # ملحق متصفح Carbon Trigger: الكود المكتمل
 
 باستخدام واجهة برمجة التطبيقات C02 Signal من tmrow لتتبع استهلاك الكهرباء، قم بإنشاء ملحق متصفح حتى تتمكن من الحصول على تذكير مباشرة في متصفحك حول استهلاك الكهرباء في منطقتك. استخدام هذا الملحق المخصص سيساعدك على اتخاذ قرارات بشأن أنشطتك بناءً على هذه المعلومات.

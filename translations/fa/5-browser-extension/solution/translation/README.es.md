@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-24T13:20:45+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "fa"
-}
--->
 # افزونه مرورگر Carbon Trigger: کد کامل
 
 با استفاده از API سیگنال CO2 از tmrow برای ردیابی مصرف برق، یک افزونه مرورگر ایجاد کنید تا بتوانید مستقیماً در مرورگر خود یادآوری‌ای درباره مصرف برق منطقه خود داشته باشید. استفاده از این افزونه به شما کمک می‌کند تا تصمیمات خود را بر اساس این اطلاعات تنظیم کنید.

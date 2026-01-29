@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bee6762d4092a13fc7c338814963f980",
-  "translation_date": "2025-10-22T22:21:30+00:00",
-  "source_file": "3-terrarium/2-intro-to-css/assignment.md",
-  "language_code": "ru"
-}
--->
 # Задание по рефакторингу CSS
 
 ## Цель
