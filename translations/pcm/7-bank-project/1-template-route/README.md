@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-08T16:40:22+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "pcm"
-}
--->
 # Build a Banking App Part 1: HTML Templates and Routes in a Web App
 
 ```mermaid

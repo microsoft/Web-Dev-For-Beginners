@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-08T09:43:58+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "et"
-}
--->
 # Mängu loomine sündmuste abil
 
 Kas oled kunagi mõelnud, kuidas veebisaidid teavad, millal sa klõpsad nuppu või tippid tekstikasti? See on sündmustepõhise programmeerimise võlu! Mis oleks parem viis selle olulise oskuse õppimiseks, kui ehitada midagi kasulikku – tippimiskiiruse mäng, mis reageerib iga su tehtud klahvivajutuse peale.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2026-01-08T10:34:19+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "te"
-}
--->
 # మైక్రోసాఫ్ట్ ఓపెన్ సోర్స్ ఆచరణ కోడ్
 
 ఈ ప్రాజెక్టు [మైక్రోసాఫ్ట్ ఓపెన్ సోర్స్ ఆచరణ కోడ్](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon)ను స్వీకరించింది.

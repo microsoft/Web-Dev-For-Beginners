@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2026-01-08T15:52:43+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "te"
-}
--->
 # అసైన్‌మెంట్: మీ బ్రౌజర్ విస్తరణను రీస్టైల్ చేయండి
 
 ## అవలోకనం

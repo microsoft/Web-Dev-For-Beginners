@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-08T11:42:41+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "pcm"
-}
--->
 # Build a Chat Assistant wit AI
 
 Remember wen dem for Star Trek dey casually yarn wit di ship computer, dem dey ask am complex questions an e dey give beta answers? Wetin look like pure science fiction for di 1960s don turn to wetin you fit build wit di web technologies wey you sabi.

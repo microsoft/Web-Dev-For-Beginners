@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2026-01-08T11:09:40+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "pcm"
-}
--->
 # Build a Space Game
 
 Space game wey go teach una more advanced JavaScript fundamentals

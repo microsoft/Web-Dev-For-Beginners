@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5f62ec256c7e43e771f0d3b4e1a9130",
-  "translation_date": "2026-01-08T11:42:13+00:00",
-  "source_file": "lesson-template/assignment.md",
-  "language_code": "te"
-}
--->
 # [అస్సైన్మెంట్ పేరు]
 
 ## సూచనలు

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-08T17:12:03+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "pcm"
-}
--->
 # Build a Banking App Part 3: Methods of Fetching and Using Data
 
 Think about di Enterprise computer for Star Trek - wen Captain Picard ask for ship status, di information show sharp sharp without di whole interface stop to rebuild by itself. Dat smooth flow of information na exactly wetin we dey build here wit dynamic data fetching.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2026-01-08T11:16:05+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "te"
-}
--->
 # Quiz app
 
 ఈ ప్రశ్నా తరగతులు https://aka.ms/webdev-beginners వద్ద డేటా సైన్స్ కారిక్యులం కోసం పూర్వ మరియు అనంతర లెక్చర్ ప్రశ్నలుచే consist అవుతాయి

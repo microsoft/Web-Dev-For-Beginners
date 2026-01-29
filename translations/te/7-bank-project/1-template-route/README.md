@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-08T16:42:24+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "te"
-}
--->
 # బ్యాంకింగ్ యాప్‌ భాగం 1: వెబ్ యాప్‌లో HTML టెంప్లేట్లు మరియు రూట్లు
 
 ```mermaid

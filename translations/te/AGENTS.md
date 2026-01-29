@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
-  "translation_date": "2026-01-08T10:23:14+00:00",
-  "source_file": "AGENTS.md",
-  "language_code": "te"
-}
--->
 # AGENTS.md
 
 ## Project Overview

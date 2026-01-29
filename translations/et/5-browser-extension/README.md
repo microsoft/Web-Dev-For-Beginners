@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-10-11T12:16:09+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "et"
-}
--->
 # Brauserilaiendi loomine
 
 Brauserilaiendite loomine on lõbus ja huvitav viis mõelda oma rakenduste jõudlusele, luues samal ajal teistsuguse veebivara. See moodul sisaldab õppetunde brauserite toimimise kohta, brauserilaiendi juurutamise kohta, vormi loomise, API-ga suhtlemise ja lokaalse salvestuse kasutamise kohta ning veebisaidi jõudluse hindamise ja selle parandamise kohta.

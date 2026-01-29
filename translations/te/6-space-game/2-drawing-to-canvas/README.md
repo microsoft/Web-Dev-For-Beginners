@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2026-01-08T13:39:04+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "te"
-}
--->
 # ఒక స్పేస్ గేమ్ భాగం 2: హీరో మరియు మానవులను కాన్వాస్‌లో డ్రా చేయండి
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-08T20:01:06+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "pcm"
-}
--->
 # Introduction to Programming Languages and Modern Developer Tools
  
 Hey deh, future developer! 👋 Make I yan you wetin dey always give me goosebumps every single day? You dey ready to sabi say programming no be only about computers – e be like say you get actual superpowers to bring your wildest ideas come life!

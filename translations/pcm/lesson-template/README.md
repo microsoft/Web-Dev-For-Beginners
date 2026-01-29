@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2026-01-08T11:40:47+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "pcm"
-}
--->
 # [Lesson Topic]
 
 ![Embed a video here](../../../lesson-template/video-url)

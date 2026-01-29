@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-08T10:00:49+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "et"
-}
--->
 # Sissejuhatus programmeerimiskeeltesse ja kaasaegsesse arendustööriistadesse
 
 Tere tulemast, tulevane arendaja! 👋 Kas tohin sulle midagi rääkida, mis ikka veel igal päeval külmavärinaid tekitab? Sa oled just avastamas, et programmeerimine ei ole ainult arvutite jaoks – see on tegelike supervõimete omandamine oma metsikumaid ideid ellu viimiseks!

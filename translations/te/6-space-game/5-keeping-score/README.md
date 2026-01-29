@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2026-01-08T14:08:34+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "te"
-}
--->
 # ఒక స్పేస్ గేమ్‌ను నిర్మించండి భాగం 5: స్కోరింగ్ మరియు లైఫ్స్
 
 ```mermaid

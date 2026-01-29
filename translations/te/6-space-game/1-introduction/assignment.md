@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2026-01-08T14:29:18+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "te"
-}
--->
 # గేమ్‌ను మాక్ అప్ చేయండి: డిజైన్ ప్యాటరన్లు అప్లై చేయండి
 
 ## అసైన్‌మెంట్ సమీక్ష

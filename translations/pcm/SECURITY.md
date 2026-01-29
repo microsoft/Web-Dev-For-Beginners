@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2026-01-08T10:34:55+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "pcm"
-}
--->
 ## Security
 
 Microsoft dey take the security of our software products and services seriously, wey include all source code repositories wey dey managed through our GitHub organizations, wey include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), and [our GitHub organizations](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

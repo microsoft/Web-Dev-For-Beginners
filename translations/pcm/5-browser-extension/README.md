@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2026-01-08T11:17:54+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "pcm"
-}
--->
 # Building a browser extension
 
 Building browser extensions na fun and interesting way to dey think about how your apps go perform while you dey build different kain web asset. Dis module get lessons on how browsers dey work and how to deploy browser extension, how to build form, call API, and use local storage, plus how to check how your website dey perform and improve am.

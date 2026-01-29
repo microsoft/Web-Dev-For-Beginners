@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-08T08:45:48+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "et"
-}
--->
 # Loo juturobot AI abil
 
 Mäletad, kuidas Star Trekis meeskond mõnuledes laeva arvutiga vestles, esitas keerukaid küsimusi ja sai läbimõeldud vastuseid? See, mis näis 1960ndatel puhtalt ulmena, on nüüd midagi, mida saad ehitada veebitehnoloogiate abil, mida sa juba tunned.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2026-01-08T12:55:07+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "te"
-}
--->
 # నిర్ణయాలు తీసుకోవడం: విద్యార్థి గ్రేడ్ ప్రాసెసర్
 
 ## నేర్చుకునే లక్ష్యాలు

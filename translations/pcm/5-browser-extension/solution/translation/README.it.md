@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2026-01-08T16:16:43+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "pcm"
-}
--->
 # Estensione del browser Carbon Trigger: kòd wey make you fit start
 
 We go use API Signal C02 from tmrow to dey monitor how people dey use electricity to make browser extension wey go dey remind you inside your browser how heavy electricity use be for your area. Dis kind extension go help you to sabi how your activities dey affect electricity use based on dis info.

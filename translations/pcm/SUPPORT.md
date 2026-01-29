@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c9d207ff77b4bb46e46dc2b607a8ec1a",
-  "translation_date": "2026-01-08T10:12:59+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "pcm"
-}
--->
 # Support
 
 ## How to file issues and get help  

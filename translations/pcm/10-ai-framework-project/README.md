@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-08T10:49:01+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "pcm"
-}
--->
 # AI Framework
 
 You ever been confuse tryna build AI applications from scratch? You no dey alone! AI frameworks na like Swiss Army knife for AI development - dem be powerful tools wey fit save you time and stress when you dey build smart applications. Think am like one well-organized library: e dey provide pre-built parts, standard APIs, and smart abstractions so you fit focus on solving wahala instead of struggling with implementation details.

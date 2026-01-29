@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2026-01-08T13:27:23+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "te"
-}
--->
 # స్పేస్ గేమ్ నిర్మాణం భాగం 4: లేజర్‌ను జోడించడం మరియు ఢీకి తెలియజేయడం
 
 ```mermaid

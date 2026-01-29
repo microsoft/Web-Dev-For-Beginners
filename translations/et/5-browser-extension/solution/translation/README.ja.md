@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-10-11T12:18:04+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "et"
-}
--->
 # Carbon Trigger brauserilaiendus: Valmis kood
 
 Ehita brauserilaiendus, mis kasutab tmrow CO2 Signal API-d, et jälgida elektritarbimist ja kuvada meeldetuletusena, kui palju energiat sinu piirkonnas kasutatakse. Selle laienduse ad hoc kasutamine võimaldab sul oma tegevusi vastavalt sellele teabele planeerida.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2026-01-08T15:05:12+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "te"
-}
--->
 # బ్రౌజర్ పొడగింపు ప్రాజెక్ట్ పార్ట్ 2: API ను కాల్ చేయండి, లోకల్ స్టోరేజ్ ఉపయోగించండి
 
 ```mermaid

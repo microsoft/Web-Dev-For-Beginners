@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2026-01-08T18:06:31+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "pcm"
-}
--->
 # Bank app
 
 > Example solution for the bank app project, built with vanilla HTML5, CSS and JavaScript (no frameworks or libraries used).

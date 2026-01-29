@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2026-01-08T16:17:14+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "te"
-}
--->
 # బ్రౌజర్ ఇది Carbon Trigger: ప్రారంభించడానికి కోడ్
 
 ప్రాంతంలోని విద్యుత్ వినియోగాన్ని బ్రౌజర్‌లోనే నేరుగా రిమైండర్‌గా పొందుటకు tmrow యొక్క Signal C02 API ఉపయోగించి బ్రౌజర్ ఎక్స్టెన్షన్ రూపొందించబడుతుంది. ఈ ప్రత్యేకమైన ఎక్స్టెన్షన్ ఉపయోగించడం ద్వారా ఈ సమాచారంతో మీ కార్యకలాపాలను మూల్యాంకనం చేయడం సహాయపడుతుంది.

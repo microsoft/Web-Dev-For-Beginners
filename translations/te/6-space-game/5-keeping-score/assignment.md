@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "81f292dbda01685b91735e0398dc0504",
-  "translation_date": "2026-01-08T14:14:18+00:00",
-  "source_file": "6-space-game/5-keeping-score/assignment.md",
-  "language_code": "te"
-}
--->
 # స్కోరింగ్ గేమ్‌ని నిర్మించండి
 
 ## సూచనలు

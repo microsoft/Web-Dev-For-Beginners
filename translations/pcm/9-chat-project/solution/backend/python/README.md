@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
-  "translation_date": "2026-01-08T20:44:58+00:00",
-  "source_file": "9-chat-project/solution/backend/python/README.md",
-  "language_code": "pcm"
-}
--->
 # Run code
 
 ## Set up

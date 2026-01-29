@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-11T11:48:42+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "et"
-}
--->
 # Veebiarenduse alustamine
 
 Selles õppekava osas tutvustatakse teile projektiväliseid kontseptsioone, mis on olulised professionaalseks arendajaks saamisel.

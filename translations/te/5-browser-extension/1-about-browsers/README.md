@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2026-01-08T15:41:20+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "te"
-}
--->
 # బ్రౌజర్ ఎక్స్‌టెన్షన్ ప్రాజెక్ట్ భాగం 1: బ్రౌజర్ల గురించి అంతా
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2026-01-08T15:02:16+00:00",
-  "source_file": "6-space-game/5-keeping-score/your-work/README.md",
-  "language_code": "te"
-}
--->
 ఇది ఒక ప్లేస్‌హోల్డర్, చైతన్యంగా ఖాళీగా ఉంచబడింది
 
 ---

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "672b0bb6e8b431075f3bdb7130590d2d",
-  "translation_date": "2026-01-08T12:31:40+00:00",
-  "source_file": "2-js-basics/1-data-types/README.md",
-  "language_code": "pcm"
-}
--->
 # JavaScript Basics: Data Types
 
 ![JavaScript Basics - Data types](../../../../translated_images/pcm/webdev101-js-datatypes.4cc470179730702c.webp)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-08T08:41:40+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "et"
-}
--->
 # AI raamistik
 
 Kas oled kunagi tundnud end ülekoormatuna, püüdes AI-rakendusi nullist ehitada? Sa ei ole üksi! AI raamistikud on nagu Šveitsi taskunuga AI arendusele – need on võimsad tööriistad, mis säästavad aega ja peavalu nutikate rakenduste loomisel. Mõtle AI raamistikule kui hästi korraldatud raamatukogule: see pakub eelvalmisteid komponente, standardiseeritud API-sid ja nutikaid abstraktsioone, et saaksid keskenduda probleemide lahendamisele, mitte rakenduse detailide kallal rabelemisele.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2026-01-08T11:29:58+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "pcm"
-}
--->
 # :dollar: Build Bank
 
 For dis project, you go learn how to build one fictional bank. Dem lessons go show you how to layout web app and provide routes, build forms, manage state, plus how to fetch data from API wey you fit use take get di bank data.

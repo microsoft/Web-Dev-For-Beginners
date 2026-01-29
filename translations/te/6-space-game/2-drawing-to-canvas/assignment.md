@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "87cd43afe5b69dbbffb5c4b209ea6791",
-  "translation_date": "2026-01-08T13:47:07+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
-  "language_code": "te"
-}
--->
 # అసైన్‌మెంట్: కాన్వాస్ APIని అన్వేషించండి
 
 ## నేర్చుకునే ఉద్దేశాలు

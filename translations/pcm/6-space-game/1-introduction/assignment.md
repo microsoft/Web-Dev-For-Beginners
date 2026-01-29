@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2026-01-08T14:28:32+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "pcm"
-}
--->
 # Mock up a Game: Apply Design Patterns
 
 ## Assignment Overview

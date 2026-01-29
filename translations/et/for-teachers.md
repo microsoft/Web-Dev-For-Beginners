@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-11T11:36:13+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "et"
-}
--->
 ### Õpetajatele
 
 Olete oodatud kasutama seda õppekava oma klassiruumis. See töötab sujuvalt koos GitHub Classroomi ja juhtivate LMS platvormidega ning seda saab kasutada ka iseseisva repona koos oma õpilastega.

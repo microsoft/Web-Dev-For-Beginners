@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2026-01-08T11:40:03+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "te"
-}
--->
 # వెబ్ డెవలప్‌మెంట్ ప్రారంభం
 
 ఈ పాఠ్యాంశంలో, మీరు ప్రొఫెషనల్ డెవలపర్‌గా మారడానికి అవసరమైన ప్రాజెక్ట్-ఆధారిత కాన్సెప్ట్‌లకు సంబంధించిన కాన్సెప్ట్స్‌ను పరిచయం చేయబడతారు.

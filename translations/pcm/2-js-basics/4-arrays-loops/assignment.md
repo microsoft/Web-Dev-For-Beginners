@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8abcada0534e0fb3a7556ea3c5a2a8a4",
-  "translation_date": "2026-01-08T13:08:57+00:00",
-  "source_file": "2-js-basics/4-arrays-loops/assignment.md",
-  "language_code": "pcm"
-}
--->
 # Arrays and Loops Assignment
 
 ## Instructions

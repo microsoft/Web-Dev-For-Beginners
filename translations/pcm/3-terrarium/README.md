@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-08T11:36:15+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "pcm"
-}
--->
 ## Deploy your Terrarium
 
 You fit deploy, or publish your Terrarium for the web using **Azure Static Web Apps**.

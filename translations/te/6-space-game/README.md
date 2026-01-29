@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2026-01-08T11:10:04+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "te"
-}
--->
 # స్పేస్ గేమ్ ను నిర్మించండి
 
 మరింత ప్రగతిశీలమైన జావాస్క్రిప్ట్ బేసిక్ వివరాలను నేర్పించే ఒక స్పేస్ గేమ్

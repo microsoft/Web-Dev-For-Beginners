@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-08T13:11:41+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "pcm"
-}
--->
 # Using a Code Editor: Mastering VSCode.dev
 
 Remember for *The Matrix* when Neo bin haff plug inside one big computer terminal to waka enter di digital world? Today web development tools na di oda side – plenty power full skill wey anybody fit use from anywhere. VSCode.dev na browser-based code editor wey dey carry professional development tools go any device wey get internet connection.

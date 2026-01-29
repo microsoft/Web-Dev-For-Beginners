@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
-  "translation_date": "2026-01-08T18:49:25+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/assignment.md",
-  "language_code": "te"
-}
--->
 # HTML వ్యాయామ కైసేంద్రం: బ్లాగ్ మాక్‌ప్ తయారు చేయండి
 
 ## అభ్యాస లక్ష్యాలు

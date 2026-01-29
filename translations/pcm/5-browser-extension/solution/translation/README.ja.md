@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2026-01-08T16:13:12+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "pcm"
-}
--->
 # Kaabon Trigger Browser Extension: Di Complete Code
 
 Wi go build browser extension wey go fit show reminder for your browser to track how much power una dey use for your area using tmrow C02 Signal API. Dis extension go help you judge your activities based on dis information if you use am adhoc.

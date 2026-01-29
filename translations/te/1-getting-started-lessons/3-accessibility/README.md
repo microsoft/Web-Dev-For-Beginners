@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7f2c48e04754724123ea100a822765e5",
-  "translation_date": "2026-01-08T19:33:42+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/README.md",
-  "language_code": "te"
-}
--->
 # ప్రాప్యత కలిగిన వెబ్‌పేజీల తయారీ
 
 ![అమ్సర రీత్యా అన్ని సమాచారం](../../../../translated_images/te/webdev101-a11y.8ef3025c858d897a.webp)

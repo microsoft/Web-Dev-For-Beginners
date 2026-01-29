@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-08T09:36:50+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "et"
-}
--->
 # Pangaäpi loomine 3. osa: andmete toomise ja kasutamise meetodid
 
 Mõtle Star Treki Enterprise'i arvutile – kui kapten Picard küsib laeva olekut, ilmub info koheselt ilma kogu liidese sulgemise ja uuesti ülesehitamiseta. See sujuv infovoog ongi täpselt see, mida me siin dünaamilise andmete toomisega ehitame.

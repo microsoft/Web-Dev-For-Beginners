@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-10-11T11:40:55+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "et"
-}
--->
 # Viktoriinirakendus
 
 Need viktoriinid on andmeteaduse õppekava eel- ja järelloengute viktoriinid aadressil https://aka.ms/webdev-beginners
