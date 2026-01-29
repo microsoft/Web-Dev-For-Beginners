@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-28T03:23:38+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "cs"
-}
--->
 # :dollar: Vytvořte banku
 
 V tomto projektu se naučíte, jak vytvořit fiktivní banku. Tyto lekce obsahují pokyny, jak navrhnout webovou aplikaci, vytvořit trasy, sestavit formuláře, spravovat stav a získávat data z API, ze kterého můžete načítat data banky.

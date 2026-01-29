@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-07T05:19:04+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "sk"
-}
--->
 # Úvod do GitHubu
 
 Ahoj, budúci vývojár! 👋 Pripravený sa pripojiť k miliónom programátorov po celom svete? Opravdu sa teším, že ti môžem predstaviť GitHub – predstav si to ako sociálnu sieť pre programátorov, lenže namiesto zdieľania fotiek svojho obeda zdieľame kód a spoločne tvoríme úžasné veci!

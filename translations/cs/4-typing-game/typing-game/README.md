@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T04:01:19+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "cs"
-}
--->
 # Vytváření hry pomocí událostí
 
 Už jste se někdy divili, jak webové stránky poznají, kdy kliknete na tlačítko nebo píšete do textového pole? To je kouzlo programování řízeného událostmi! Co je lepšího způsobu, jak se naučit tuto základní dovednost, než vytvořit něco užitečného – hru na rychlost psaní, která reaguje na každý váš stisk klávesy.

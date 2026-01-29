@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T04:59:23+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "sk"
-}
--->
 # Vytvorte bankovú aplikáciu časť 3: Spôsoby získavania a používania dát
 
 Predstavte si počítač Enterprise zo Star Treku – keď kapitán Picard žiada o stav lode, informácie sa zobrazia okamžite bez toho, aby sa celé rozhranie zastavilo a znovu zostavovalo. Tento plynulý tok informácií je presne to, čo tu vytvárame s dynamickým získavaním dát.

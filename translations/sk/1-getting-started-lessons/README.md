@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:29:19+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "sk"
-}
--->
 # Začíname s vývojom webu
 
 V tejto časti učebného plánu sa oboznámite s konceptmi, ktoré nie sú založené na projektoch, ale sú dôležité pre to, aby ste sa stali profesionálnym vývojárom.

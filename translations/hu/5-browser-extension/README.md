@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-28T03:38:42+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "hu"
-}
--->
 # Böngészőbővítmény készítése
 
 A böngészőbővítmények készítése szórakoztató és érdekes módja annak, hogy más szemszögből gondolkodjunk az alkalmazásaink teljesítményéről, miközben egy eltérő típusú webes eszközt hozunk létre. Ez a modul olyan leckéket tartalmaz, amelyek bemutatják, hogyan működnek a böngészők, hogyan lehet böngészőbővítményt telepíteni, űrlapot készíteni, API-t hívni, helyi tárolót használni, valamint hogyan lehet felmérni és javítani a weboldalad teljesítményét.

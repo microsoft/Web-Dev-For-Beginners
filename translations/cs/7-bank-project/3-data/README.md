@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T03:56:48+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "cs"
-}
--->
 # Vytvoření bankovní aplikace část 3: Způsoby načítání a použití dat
 
 Přemýšlejte o počítači Enterprise ve Star Treku – když kapitán Picard žádá o stav lodi, informace se objeví okamžitě, aniž by se celé rozhraní vypnulo a znovu sestavovalo. Tento plynulý tok informací je přesně to, co zde s dynamickým načítáním dat budujeme.

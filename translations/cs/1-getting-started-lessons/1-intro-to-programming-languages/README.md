@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T04:12:06+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "cs"
-}
--->
 # Úvod do programovacích jazyků a moderních vývojářských nástrojů
  
 Ahoj, budoucí vývojáři! 👋 Můžu vám něco říct, co mi dělá husí kůži každý den? Chystáte se objevovat, že programování není jen o počítačích – je to skutečná superschopnost přivést vaše nejdivočejší nápady k životu!

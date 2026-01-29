@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-28T04:15:32+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "hu"
-}
--->
 # Az én terráriumom: Egy projekt HTML, CSS és DOM manipuláció tanulásához JavaScript segítségével 🌵🌱
 
 Egy kis drag and drop kódmeditáció. Egy kis HTML, JS és CSS használatával létrehozhatsz egy webes felületet, stílusozhatod, és interakciót adhatsz hozzá.

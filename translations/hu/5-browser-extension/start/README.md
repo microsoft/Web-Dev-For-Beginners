@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-28T03:45:07+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "hu"
-}
--->
 # Carbon Trigger böngészőbővítmény: Kezdő kód
 
 A tmrow CO2 Signal API-ját használva követheted az áramfogyasztást, és készíthetsz egy böngészőbővítményt, amely emlékeztetőt ad a böngésződben arról, hogy mennyire terhelt a régiód áramhasználata. Az ilyen jellegű bővítmény segíthet abban, hogy az információk alapján jobban megfontold a tevékenységeidet.

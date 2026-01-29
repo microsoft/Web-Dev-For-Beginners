@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T02:22:17+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "hu"
-}
--->
 ## Telepítse a Terrariumját
 
 A Terrariumot telepítheti vagy közzéteheti a weben az **Azure Static Web Apps** használatával.

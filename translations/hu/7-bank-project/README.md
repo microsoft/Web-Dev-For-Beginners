@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-28T03:23:29+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "hu"
-}
--->
 # :dollar: Bank építése
 
 Ebben a projektben megtanulhatod, hogyan építs fel egy képzeletbeli bankot. Ezek a leckék útmutatást adnak egy webalkalmazás elrendezéséhez és útvonalainak kialakításához, űrlapok létrehozásához, állapot kezeléséhez, valamint adatok lekéréséhez egy API-ból, amelyből elérheted a bank adatait.

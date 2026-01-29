@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2026-01-07T03:47:03+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "cs"
-}
--->
 # Projekt rozšíření prohlížeče část 2: Zavolat API, použít místní úložiště
 
 ```mermaid

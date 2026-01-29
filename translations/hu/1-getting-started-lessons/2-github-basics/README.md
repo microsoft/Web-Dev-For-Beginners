@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-07T03:16:48+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "hu"
-}
--->
 # Bevezetés a GitHubhoz
 
 Szia, jövőbeli fejlesztő! 👋 Készen állsz, hogy csatlakozz a világ millió programozójához? Nagyon izgatott vagyok, hogy bemutathatom neked a GitHubot – gondolj rá úgy, mint a programozók közösségi média platformjára, csak itt nem az ebéded fotóját osztjuk meg, hanem kódokat, és együtt építünk hihetetlen dolgokat!

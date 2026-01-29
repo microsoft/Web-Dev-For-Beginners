@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-28T03:38:54+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "cs"
-}
--->
 # Vytváření rozšíření pro prohlížeč
 
 Vytváření rozšíření pro prohlížeče je zábavný a zajímavý způsob, jak přemýšlet o výkonu vašich aplikací při vytváření jiného typu webového prostředku. Tento modul obsahuje lekce o tom, jak fungují prohlížeče, jak nasadit rozšíření pro prohlížeč, jak vytvořit formulář, volat API, používat místní úložiště a jak hodnotit výkon vašeho webu a zlepšovat ho.

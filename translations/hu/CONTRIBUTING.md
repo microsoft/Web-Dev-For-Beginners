@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-28T03:21:11+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "hu"
-}
--->
 # Hozzájárulás
 
 Ez a projekt örömmel fogadja a hozzájárulásokat és javaslatokat. A legtöbb hozzájárulás esetében szükséges, hogy elfogadj egy Hozzájárulói Licencszerződést (CLA), amelyben kijelented, hogy jogod van és ténylegesen megadod nekünk a jogot, hogy felhasználjuk a hozzájárulásodat. További részletekért látogass el a [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon) oldalra.

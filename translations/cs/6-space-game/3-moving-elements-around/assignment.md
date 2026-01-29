@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
-  "translation_date": "2025-10-24T21:09:35+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/assignment.md",
-  "language_code": "cs"
-}
--->
 # Komentujte svůj kód
 
 ## Pokyny

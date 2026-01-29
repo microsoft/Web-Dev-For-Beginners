@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-27T22:18:33+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "sk"
-}
--->
 # Karbónový spúšťač: Hotový kód pre rozšírenie prehliadača
 
 Použitie API CO2 Signal od tmrow na sledovanie spotreby elektriny, vytvorenie rozšírenia prehliadača, ktoré vám pripomenie, aká náročná je spotreba elektriny vo vašej oblasti. Používanie tohto rozšírenia vám pomôže robiť rozhodnutia o vašich aktivitách na základe týchto informácií.

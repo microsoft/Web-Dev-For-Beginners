@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-07T05:02:06+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "sk"
-}
--->
 # Vytvorte bankovú aplikáciu časť 4: Koncepty správy stavu
 
 ## ⚡ Čo môžete urobiť v nasledujúcich 5 minútach

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:29:12+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "cs"
-}
--->
 # Začínáme s webovým vývojem
 
 V této části kurzu budete seznámeni s koncepty, které nejsou založeny na projektech, ale jsou důležité pro to, abyste se stali profesionálním vývojářem.

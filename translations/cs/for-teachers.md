@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:34:49+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "cs"
-}
--->
 ### Pro pedagogy
 
 Tento učební plán můžete využít ve své třídě. Funguje bez problémů s GitHub Classroom a předními platformami LMS a lze jej také použít jako samostatné úložiště se studenty.

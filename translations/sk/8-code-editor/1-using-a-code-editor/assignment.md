@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T21:21:03+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "sk"
-}
--->
 # Vytvorenie webovej stránky životopisu pomocou VSCode.dev
 
 Zlepšite svoje kariérne vyhliadky vytvorením profesionálnej webovej stránky životopisu, ktorá interaktívne a moderne prezentuje vaše zručnosti a skúsenosti. Namiesto posielania tradičných PDF si predstavte, že poskytujete náborovým pracovníkom elegantnú, responzívnu webovú stránku, ktorá demonštruje vaše kvalifikácie aj schopnosti v oblasti webového vývoja.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T22:51:37+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "sk"
-}
--->
 # Aplikácia kvízov
 
 Tieto kvízy sú prednáškové a po-prednáškové kvízy pre kurikulum dátovej vedy na https://aka.ms/webdev-beginners

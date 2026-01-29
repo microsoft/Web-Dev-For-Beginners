@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-28T04:21:34+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "hu"
-}
--->
 # Kvíz alkalmazás
 
 Ezek a kvízek a data science tananyag előtti és utáni előadásokhoz kapcsolódó kvízek a következő oldalon: https://aka.ms/webdev-beginners
