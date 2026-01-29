@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-04T01:21:49+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "fi"
-}
--->
 # AI-kehys
 
 Oletko koskaan tuntenut olevasi hukassa yrittäessäsi rakentaa tekoälysovelluksia alusta alkaen? Et ole yksin! AI-kehykset ovat kuin monitoimityökalu tekoälykehitykseen – tehokkaita työkaluja, jotka säästävät aikaa ja vaivaa älykkäiden sovellusten rakentamisessa. Ajattele AI-kehystä hyvin järjestettynä kirjastona: se tarjoaa valmiita komponentteja, standardoituja API-rajapintoja ja älykkäitä abstraktioita, jotta voit keskittyä ongelmien ratkaisemiseen sen sijaan, että kamppailisit toteutuksen yksityiskohtien kanssa.

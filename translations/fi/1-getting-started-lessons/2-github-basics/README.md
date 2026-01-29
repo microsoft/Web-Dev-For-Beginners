@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-25T17:55:51+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "fi"
-}
--->
 # Johdanto GitHubiin
 
 Hei tuleva kehittäjä! 👋 Oletko valmis liittymään miljoonien koodareiden joukkoon ympäri maailmaa? Olen todella innoissani saadessani esitellä sinulle GitHubin – ajattele sitä ohjelmoijien sosiaalisen median alustana, mutta sen sijaan että jakaisimme kuvia lounaastamme, jaamme koodia ja rakennamme yhdessä uskomattomia asioita!

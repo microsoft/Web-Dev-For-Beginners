@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-04T01:13:38+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "fi"
-}
--->
 # Käyttämällä koodieditoria: Hallitse VSCode.dev
 
 Muistatko *Matrixista*, kun Neo joutui kytkeytymään massiiviseen tietokoneeseen päästäkseen digitaaliseen maailmaan? Nykyajan web-kehitystyökalut kertovat aivan toisenlaisen tarinan – uskomattoman tehokkaat ominaisuudet ovat saatavilla mistä tahansa. VSCode.dev on selaimessa toimiva koodieditori, joka tuo ammattilaistason kehitystyökalut mihin tahansa laitteeseen, jossa on internetyhteys.

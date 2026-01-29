@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-27T20:20:32+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "fi"
-}
--->
 # Rakenna avaruuspeli
 
 Avaruuspeli, joka opettaa edistyneempiä JavaScriptin perusteita

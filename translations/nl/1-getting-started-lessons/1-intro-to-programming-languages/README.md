@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-04T01:51:13+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "nl"
-}
--->
 # Introductie tot programmeertalen en moderne ontwikkeltools
 
 Hoi daar, toekomstige ontwikkelaar! 👋 Mag ik je iets vertellen dat me elke dag weer kippenvel bezorgt? Je staat op het punt te ontdekken dat programmeren niet alleen over computers gaat – het is alsof je superkrachten krijgt om je wildste ideeën tot leven te brengen!

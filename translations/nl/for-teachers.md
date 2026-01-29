@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:06:52+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "nl"
-}
--->
 ### Voor docenten
 
 U bent van harte welkom om dit lesprogramma in uw klas te gebruiken. Het werkt naadloos met GitHub Classroom en toonaangevende LMS-platforms, en kan ook als een zelfstandige repository met uw studenten worden gebruikt.

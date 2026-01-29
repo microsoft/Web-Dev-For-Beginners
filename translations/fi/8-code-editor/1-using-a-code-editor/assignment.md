@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-23T00:16:03+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "fi"
-}
--->
 # Luo ansioluettelosivusto VSCode.dev:llä
 
 Paranna uramahdollisuuksiasi rakentamalla ammattimainen ansioluettelosivusto, joka esittelee taitosi ja kokemuksesi interaktiivisessa, modernissa muodossa. Perinteisten PDF-tiedostojen lähettämisen sijaan voit tarjota rekrytoijille tyylikkään, responsiivisen verkkosivuston, joka osoittaa sekä pätevyytesi että verkkokehitystaitosi.

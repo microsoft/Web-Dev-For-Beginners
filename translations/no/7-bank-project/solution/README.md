@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-08-26T23:08:08+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "no"
-}
--->
 # Bankapp
 
 > Eksempel på løsning for bankapp-prosjektet, bygget med ren HTML5, CSS og JavaScript (ingen rammeverk eller biblioteker brukt).

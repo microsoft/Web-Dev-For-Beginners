@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-07T00:45:30+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "no"
-}
--->
 # Bygg en bankapp del 4: Konsepter for tilstandshåndtering
 
 ## ⚡ Hva du kan gjøre de neste 5 minuttene

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T00:47:41+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "no"
-}
--->
 # Lage et spill ved hjelp av hendelser
 
 Har du noen gang lurt på hvordan nettsteder vet når du klikker på en knapp eller skriver i en tekstboks? Det er magien ved hendelsesdrevet programmering! Hva er vel en bedre måte å lære denne viktige ferdigheten på enn å bygge noe nyttig – et skrivhastighetsspill som reagerer på hvert tastetrykk du gjør.

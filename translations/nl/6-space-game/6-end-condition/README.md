@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2025-11-04T02:05:22+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "nl"
-}
--->
 # Bouw een Ruimtespel Deel 6: Einde en Herstart
 
 ```mermaid

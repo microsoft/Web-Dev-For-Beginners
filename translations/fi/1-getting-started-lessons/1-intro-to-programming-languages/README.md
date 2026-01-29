@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-04T01:14:39+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "fi"
-}
--->
 # Johdatus ohjelmointikieliin ja moderneihin kehittäjätyökaluihin
 
 Hei tuleva kehittäjä! 👋 Voinko kertoa sinulle jotain, mikä saa minut edelleen innostumaan joka päivä? Olet juuri astumassa maailmaan, jossa ohjelmointi ei ole pelkästään tietokoneiden kanssa puuhastelua – se on supervoima, jonka avulla voit toteuttaa villeimmät ideasi!

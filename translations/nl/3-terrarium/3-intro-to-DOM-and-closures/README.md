@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
-  "translation_date": "2025-11-04T01:57:31+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
-  "language_code": "nl"
-}
--->
 # Terrarium Project Deel 3: DOM-manipulatie en JavaScript Closures
 
 ```mermaid

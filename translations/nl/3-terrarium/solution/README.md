@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-27T20:12:09+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "nl"
-}
--->
 # Mijn Terrarium: Een project om te leren over HTML, CSS en DOM-manipulatie met JavaScript 🌵🌱
 
 Een kleine drag-and-drop code-meditatie. Met een beetje HTML, JS en CSS kun je een webinterface bouwen, deze stylen en interactie toevoegen.

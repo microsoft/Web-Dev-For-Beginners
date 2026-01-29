@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-26T22:46:42+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "no"
-}
--->
 # Karbonutløser Nettleserutvidelse: Fullført Kode
 
 Ved å bruke tmrow sin CO2 Signal API for å spore strømforbruk, kan du lage en nettleserutvidelse som gir deg en påminnelse direkte i nettleseren om hvor tungt strømforbruket er i din region. Å bruke denne utvidelsen sporadisk kan hjelpe deg med å ta bedre vurderinger av aktivitetene dine basert på denne informasjonen.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-26T22:52:06+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "no"
-}
--->
 # :dollar: Bygg en Bank
 
 I dette prosjektet lærer du hvordan du bygger en fiktiv bank. Disse leksjonene inkluderer instruksjoner om hvordan du setter opp en webapp med ruter, bygger skjemaer, håndterer tilstand, og henter data fra en API som gir tilgang til bankens data.

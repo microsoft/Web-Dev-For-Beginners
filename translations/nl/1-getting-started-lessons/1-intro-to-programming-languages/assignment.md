@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
-  "translation_date": "2025-10-23T00:51:28+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
-  "language_code": "nl"
-}
--->
 # Opdracht: Verkennen van moderne webontwikkelingstools
 
 ## Instructies

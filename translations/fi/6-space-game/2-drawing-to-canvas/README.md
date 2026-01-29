@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-04T01:39:23+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "fi"
-}
--->
 # Rakenna avaruuspeli osa 2: Piirrä sankari ja hirviöt kankaalle
 
 ```mermaid

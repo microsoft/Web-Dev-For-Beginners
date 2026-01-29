@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-04T02:07:06+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "nl"
-}
--->
 # Bouw een Ruimtespel Deel 5: Punten en Levens
 
 ```mermaid

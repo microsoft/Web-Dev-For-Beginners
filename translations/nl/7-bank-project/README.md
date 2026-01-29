@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-27T20:54:51+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "nl"
-}
--->
 # :dollar: Bouw een Bank
 
 In dit project leer je hoe je een fictieve bank kunt bouwen. Deze lessen bevatten instructies over hoe je een webapp kunt opzetten en routes kunt toevoegen, formulieren kunt bouwen, de status kunt beheren en gegevens kunt ophalen van een API waarmee je de gegevens van de bank kunt ophalen.

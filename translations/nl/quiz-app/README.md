@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T21:10:37+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "nl"
-}
--->
 # Quiz-app
 
 Deze quizzen zijn de pre- en post-lecture quizzen voor het data science curriculum op https://aka.ms/webdev-beginners

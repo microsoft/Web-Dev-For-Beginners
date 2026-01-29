@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:28:06+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "no"
-}
--->
 # Komme i gang med webutvikling
 
 I denne delen av læreplanen vil du bli introdusert for ikke-prosjektbaserte konsepter som er viktige for å bli en profesjonell utvikler.

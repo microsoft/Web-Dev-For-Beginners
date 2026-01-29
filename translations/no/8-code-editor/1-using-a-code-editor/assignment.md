@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-23T22:18:38+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "no"
-}
--->
 # Lag en CV-nettside med VSCode.dev
 
 Forbedre karrieremulighetene dine ved å lage en profesjonell CV-nettside som viser frem ferdighetene og erfaringene dine i et interaktivt og moderne format. I stedet for å sende tradisjonelle PDF-er, kan du gi rekrutterere en elegant, responsiv nettside som demonstrerer både kvalifikasjonene dine og dine ferdigheter innen webutvikling.

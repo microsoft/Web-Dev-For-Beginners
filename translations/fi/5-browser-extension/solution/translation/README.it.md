@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-27T20:53:45+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "fi"
-}
--->
 # Carbon Trigger -selainlaajennus: koodi alkuun pääsemiseksi
 
 Tässä projektissa käytetään tmrow:n Signal CO2 -rajapintaa sähköenergian käytön seuraamiseen. Tarkoituksena on luoda selainlaajennus, joka muistuttaa suoraan selaimessa, kuinka kuormittavaa sähköenergian käyttö on omalla alueella. Tämän laajennuksen avulla voi arvioida omia toimintojaan näiden tietojen perusteella.

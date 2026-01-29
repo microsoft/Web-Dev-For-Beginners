@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-04T01:37:28+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "fi"
-}
--->
 # Pelin luominen tapahtumien avulla
 
 Oletko koskaan miettinyt, miten verkkosivustot tietävät, kun klikkaat painiketta tai kirjoitat tekstikenttään? Se on tapahtumapohjaisen ohjelmoinnin taikaa! Mikä olisikaan parempi tapa oppia tämä olennainen taito kuin rakentaa jotain hyödyllistä – kirjoitusnopeuspeli, joka reagoi jokaiseen näppäimen painallukseesi.
