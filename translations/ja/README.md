@@ -10,208 +10,206 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# 初心者向けウェブ開発 - カリキュラム
+# 初心者のためのWeb開発 - カリキュラム
 
-Microsoft Cloud Advocatesによる12週間の包括的なコースで、ウェブ開発の基礎を学びましょう。全24レッスンでは、JavaScript、CSS、HTMLを、テラリウム、ブラウザ拡張機能、宇宙ゲームなどの実践プロジェクトを通じて掘り下げます。クイズ、ディスカッション、実践課題にも参加しましょう。効果的なプロジェクトベースの教育法でスキルを高め、知識の定着を最適化します。今日からコーディングの旅を始めましょう！
+Microsoft Cloud Advocatesによる12週間の包括的なコースでWeb開発の基本を学びましょう。全24レッスンでは、テラリウム、ブラウザー拡張機能、宇宙ゲームなどの実践的プロジェクトを通してJavaScript、CSS、HTMLを深掘りします。クイズ、ディスカッション、実践課題にも参加可能。効果的なプロジェクトベースの教育法でスキルを高め、知識の定着を最適化しましょう。今日からコーディングを始めましょう！
 
-Azure AI Foundry Discordコミュニティに参加しよう
+Azure AI Foundry Discordコミュニティに参加しましょう
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-これらのリソースを使い始めるには、以下の手順に従ってください：
-1. **リポジトリをフォークする**：クリック [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **リポジトリをクローンする**： `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Azure AI Foundry Discordに参加して専門家や開発者仲間と交流しよう**](https://discord.com/invite/ByRwuEEgH4)
+これらのリソースの利用開始手順は以下の通りです：
+1. **リポジトリをフォークする**: クリック [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **リポジトリをクローンする**: `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Azure AI Foundry Discordに参加して専門家や他の開発者と会いましょう**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 多言語対応
+### 🌐 多言語サポート
 
-#### GitHub Actionによるサポート（自動化＆常に最新）
+#### GitHub Actionsでサポート（自動かつ常に最新）
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[アラビア語](../ar/README.md) | [ベンガル語](../bn/README.md) | [ブルガリア語](../bg/README.md) | [ビルマ語（ミャンマー）](../my/README.md) | [中国語（簡体字）](../zh-CN/README.md) | [中国語（繁体字、香港）](../zh-HK/README.md) | [中国語（繁体字、マカオ）](../zh-MO/README.md) | [中国語（繁体字、台湾）](../zh-TW/README.md) | [クロアチア語](../hr/README.md) | [チェコ語](../cs/README.md) | [デンマーク語](../da/README.md) | [オランダ語](../nl/README.md) | [エストニア語](../et/README.md) | [フィンランド語](../fi/README.md) | [フランス語](../fr/README.md) | [ドイツ語](../de/README.md) | [ギリシャ語](../el/README.md) | [ヘブライ語](../he/README.md) | [ヒンディー語](../hi/README.md) | [ハンガリー語](../hu/README.md) | [インドネシア語](../id/README.md) | [イタリア語](../it/README.md) | [日本語](./README.md) | [カンナダ語](../kn/README.md) | [韓国語](../ko/README.md) | [リトアニア語](../lt/README.md) | [マレー語](../ms/README.md) | [マラヤーラム語](../ml/README.md) | [マラーティー語](../mr/README.md) | [ネパール語](../ne/README.md) | [ナイジェリア・ピジン](../pcm/README.md) | [ノルウェー語](../no/README.md) | [ペルシア語（ファルシ）](../fa/README.md) | [ポーランド語](../pl/README.md) | [ポルトガル語（ブラジル）](../pt-BR/README.md) | [ポルトガル語（ポルトガル）](../pt-PT/README.md) | [パンジャーブ語（グルムキー）](../pa/README.md) | [ルーマニア語](../ro/README.md) | [ロシア語](../ru/README.md) | [セルビア語（キリル）](../sr/README.md) | [スロバキア語](../sk/README.md) | [スロベニア語](../sl/README.md) | [スペイン語](../es/README.md) | [スワヒリ語](../sw/README.md) | [スウェーデン語](../sv/README.md) | [タガログ語（フィリピン）](../tl/README.md) | [タミル語](../ta/README.md) | [テルグ語](../te/README.md) | [タイ語](../th/README.md) | [トルコ語](../tr/README.md) | [ウクライナ語](../uk/README.md) | [ウルドゥー語](../ur/README.md) | [ベトナム語](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](./README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **ローカルでクローンする方が良いですか？**
+> **ローカルでクローンすることを好みますか？**
 
-> このリポジトリには50以上の言語翻訳が含まれているため、ダウンロードサイズが大幅に増加します。翻訳なしでクローンするには、スパースチェックアウトを使用してください：
+> このリポジトリは50以上の言語翻訳を含んでいるため、ダウンロードサイズが大きくなっています。翻訳なしでクローンするにはスパースチェックアウトを使ってください。  
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
 > cd Web-Dev-For-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> これにより、より高速なダウンロードでコースを完成させるために必要なすべてが手に入ります。
+> これでより速いダウンロードでコースを完了に必要なものがすべて揃います。  
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**追加の翻訳言語が必要な場合は、[こちら](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)をご覧ください。**
+**追加の翻訳言語のサポートを希望される場合は[こちら](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)をご覧ください**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _学生ですか？_
 
-[**Student Hubページ**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon)をご覧ください。初心者向けリソース、学生パック、無料証明書バウチャー取得方法などが見つかります。ここはブックマークして時々チェックしてください。毎月コンテンツが入れ替わります。
+初心者向けのリソース、学生パック、無料の証明書バウチャー取得方法などが見つかる [**Student Hubページ**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) を訪れてみてください。毎月内容を入れ替えますので、定期的にブックマークしてチェックすることをおすすめします。
 
-### 📣 お知らせ - 新しいGitHub Copilot Agentモードのチャレンジ追加！
+### 📣 お知らせ - GitHub Copilot Agentモードのチャレンジ追加！
 
-ほとんどの章に「GitHub Copilot Agent Challenge 🚀」という新しいチャレンジが追加されました。これはGitHub CopilotとAgentモードを使って完了する新しいチャレンジです。Agentモードを使ったことがない場合は、テキスト生成だけでなく、ファイルの作成や編集、コマンドの実行なども可能です。
+「GitHub Copilot Agent Challenge 🚀」という新しいチャレンジが多くの章に追加されました。これはGitHub CopilotとAgentモードを使って完了する新しいチャレンジです。Agentモードを使ったことがなければ、これはテキスト生成だけでなくファイルの作成・編集、コマンド実行なども可能です。
 
-### 📣 お知らせ - _生成AIを使った新プロジェクト_が登場
+### 📣 お知らせ - Generative AIを使った新プロジェクト
 
-新しいAIアシスタントプロジェクトが追加されました。ぜひご覧ください。[プロジェクト](./9-chat-project/README.md)
+新しいAIアシスタントプロジェクトが追加されました。こちらの[プロジェクト](./9-chat-project/README.md) をご覧ください。
 
-### 📣 お知らせ - _JavaScript向け生成AI_の新カリキュラムがリリースされました
+### 📣 お知らせ - JavaScript向けGenerative AIの新カリキュラム公開
 
-新しい生成AIカリキュラムをお見逃しなく！
+私たちの新しいGenerative AIカリキュラムをお見逃しなく！
 
-開始はこちらへ：[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
+開始はこちらから：[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
 ![Background](../../translated_images/ja/background.148a8d43afde5730.webp)
 
-- 基礎からRAGまでカバーするレッスン
-- GenAIと専用アプリを使い歴史上の人物と対話可能
-- 楽しく魅力的なストーリーでタイムトラベル体験！
+- 基本からRAGまでのレッスン
+- Generative AIと専用アプリで歴史上の人物と交流
+- 楽しく魅力的なストーリーでタイムトラベル！
 
 ![character](../../translated_images/ja/character.5c0dd8e067ffd693.webp)
 
+各レッスンには課題、知識確認、チャレンジが含まれており、以下のようなトピックの学習をサポートします：  
+- プロンプトとプロンプトエンジニアリング  
+- テキスト・画像のアプリ生成  
+- 検索用アプリ  
 
-各レッスンには課題、知識チェック、チャレンジが含まれており、以下のトピックの学習をサポートします：
-- プロンプトとプロンプトエンジニアリング
-- テキストおよび画像アプリ生成
-- 検索アプリ
-
-開始はこちらへ：[https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)  
+開始はこちら：[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
 
 
-## 🌱 はじめに
 
-> **教員の方へ**、このカリキュラムの使い方について[いくつかの提案](for-teachers.md)を用意しています。フィードバックは[ディスカッションフォーラム](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)で歓迎します！
+## 🌱 始めるにあたって
 
-**[学習者](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**、各レッスンでは事前クイズから始め、講義資料の読解、様々なアクティビティを完了し、事後クイズで理解度をチェックしてください。
+> **教師の方へ**、このカリキュラムの活用方法についての[提案](for-teachers.md)を含めています。ぜひ[ディスカッションフォーラム](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)でフィードバックをお寄せください！
 
-学習体験を向上させるために、仲間と一緒にプロジェクトに取り組みましょう！ディスカッションは[ディスカッションフォーラム](https://github.com/microsoft/Web-Dev-For-Beginners/discussions)で推奨しており、モデレーターチームが質問に答えます。
+**[学習者](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)** は各レッスン開始前に事前クイズを受け、講義資料を読み、様々なアクティビティを完了し、終了後のクイズで理解度を確認しましょう。
 
-更なる学習のために、追加の教材として[Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon)の利用も強くお勧めします。
+学習効果を高めるために、仲間とつながり一緒にプロジェクトに取り組むことをおすすめします！ディスカッションフォーラム(https://github.com/microsoft/Web-Dev-For-Beginners/discussions)での議論を歓迎しており、モデレーターチームが質問に対応します。
 
-### 📋 環境のセットアップ
+さらに学習を深めたい方は[Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon)の教材もぜひご活用ください。
 
-このカリキュラムではすぐに使える開発環境を用意しています！始める際には、ブラウザベースのインストール不要環境の[Codespace](https://github.com/features/codespaces/)か、[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)などのテキストエディタを使ってローカルPCでの実行を選べます。
+### 📋 環境設定
+
+このカリキュラムでは開発環境がすぐに使える状態に整っています！始めるにあたり、[Codespace](https://github.com/features/codespaces/)（ブラウザベースでインストール不要の環境）で実行するか、[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)などのテキストエディターを使いローカルのPC上で実行することを選べます。
 
 #### リポジトリの作成
-作業を簡単に保存するため、ご自身のリポジトリコピーを作成することをお勧めします。ページ上部の**Use this template**ボタンをクリックすると、GitHubアカウント内にカリキュラムのコピーが新しいリポジトリとして作成されます。
+作業を簡単に保存するために、このリポジトリのコピーを作成することを推奨します。ページ上部にある **Use this template** ボタンをクリックすると、ご自身のGitHubアカウントにこのカリキュラムのコピーが新しいリポジトリとして作成されます。
 
-手順は以下の通り：
-1. **リポジトリのフォーク**：右上の「Fork」ボタンをクリックします。
-2. **リポジトリのクローン**： `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+手順：
+1. **リポジトリをフォークする** : このページ右上の「Fork」ボタンをクリックします。
+2. **リポジトリをクローンする** : `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Codespaceでのカリキュラム実行
+#### Codespaceでカリキュラムを実行
 
-作成したあなたのリポジトリコピーで、**Code**ボタンをクリックし、**Open with Codespaces**を選択。これで作業用の新しいCodespaceが作成されます。
+作成したリポジトリのコピーで **Code** ボタンをクリックし、**Open with Codespaces**を選択します。これで作業用の新しいCodespaceが作成されます。
 
 ![Codespace](../../translated_images/ja/createcodespace.0238bbf4d7a8d955.webp)
 
-#### ローカルPCでのカリキュラム実行
+#### ローカルのパソコンでカリキュラムを実行
 
-ローカルPCで実行するには、テキストエディタ、ブラウザ、コマンドラインツールが必要です。最初のレッスン、[プログラミング言語とツールの紹介](../../1-getting-started-lessons/1-intro-to-programming-languages)では、これらツールの様々なオプションを紹介し、最適なものを選べるよう案内します。
+このカリキュラムをローカルPCで実行するには、テキストエディター、ブラウザ、コマンドラインツールが必要です。最初のレッスン、[プログラミング言語とツールの紹介](../../1-getting-started-lessons/1-intro-to-programming-languages) ではこれらのツールの様々な選択肢を案内します。
 
-推奨エディタは[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)で、組み込みの[ターミナル](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon)も備えています。Visual Studio Codeは[こちら](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)からダウンロード可能です。
+推奨は、[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)というエディターの使用で、内蔵された[ターミナル](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon)も利用可能です。Visual Studio Codeはこちらからダウンロードできます：[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)
 
-1. あなたのリポジトリをPCにクローンします。**Code**ボタンをクリックし、URLをコピーしてください。
+
+1. ご自身のリポジトリをPCにクローンします。**Code** ボタンをクリックし、URLをコピーしてください：
 
     [CodeSpace](./images/createcodespace.png)
-    次に、[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) 内で [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) を開き、以下のコマンドを実行します。`<your-repository-url>` は先ほどコピーしたURLに置き換えてください。
+    次に、[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)内の[ターミナル](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon)を開き、先ほどコピーしたURLで `<your-repository-url>` を置き換えて、次のコマンドを実行します：
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Visual Studio Codeでフォルダを開きます。これは**ファイル** > **フォルダーを開く** をクリックして、クローンしたばかりのフォルダを選択することで行えます。
-
+2. Visual Studio Codeでフォルダーを開きます。これは、**ファイル** > **フォルダーを開く** をクリックし、クローンしたばかりのフォルダーを選択することで行えます。
 
 >  推奨されるVisual Studio Code拡張機能:
 >
 > * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - Visual Studio Code内でHTMLページをプレビューするため
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - コードを書くスピードを上げるために役立ちます
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - コード作成をより速く支援するため
 
-## 📂 各レッスンには以下が含まれます:
+## 📂 各レッスンには以下が含まれます：
 
 - 任意のスケッチノート
 - 任意の補足動画
-- レッスン前のウォームアップクイズ
+- 事前ウォームアップクイズ
 - 書面によるレッスン
-- プロジェクトベースのレッスンでは、プロジェクトの構築方法をステップバイステップで解説
+- プロジェクトベースのレッスンの場合、プロジェクトを構築するためのステップバイステップガイド
 - 知識チェック
 - チャレンジ
-- 補足読書資料
+- 補足読書
 - 課題
-- [レッスン後のクイズ](https://ff-quizzes.netlify.app/web/)
+- [事後クイズ](https://ff-quizzes.netlify.app/web/)
 
-> **クイズに関する注意**: すべてのクイズはQuiz-appフォルダに格納されており、各クイズは3問からなり、合計48問あります。[こちら](https://ff-quizzes.netlify.app/web/)からアクセスでき、クイズアプリはローカルで実行するかAzureにデプロイ可能です。`quiz-app`フォルダの指示に従ってください。
+> **クイズについての注意**：すべてのクイズはQuiz-appフォルダーに収められており、合計48問それぞれ3問のクイズがあります。[こちら](https://ff-quizzes.netlify.app/web/)で利用可能で、クイズアプリはローカルで実行するかAzureにデプロイできます。詳しくは`quiz-app`フォルダー内の指示に従ってください。
 
-## 🗃️ レッスンリスト
+## 🗃️ レッスン一覧
 
-|     |                       プロジェクト名                       |                            教えられるコンセプト                             | 学習目標                                                                                                                 |                                                         関連レッスン                                                          |         著者          |
-| :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     はじめに                       |           プログラミングとツールの基礎           | 多くのプログラミング言語の基本概念とプロの開発者が使用するソフトウェアについて学びます                                               | [プログラミング言語とツールの紹介](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     はじめに                       |             GitHubの基本、チームでの作業を含む             | プロジェクトでのGitHubの使用方法、コードベースでの共同作業方法を学びます                                                        |                            [GitHubの紹介](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     はじめに                       |                             アクセシビリティ                              | ウェブアクセシビリティの基礎を学びます                                                                                               |                       [アクセシビリティの基礎](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        JS基礎                         |                         JavaScriptのデータ型                          | JavaScriptのデータ型の基本                                                                                                 |                                       [データ型](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        JS基礎                         |                         関数とメソッド                          | アプリケーションのロジックフローを管理する関数とメソッドについて学びます                                                             |                              [関数とメソッド](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
-| 06  |                        JS基礎                         |                        JSでの条件分岐                        | 条件分岐メソッドを使ってコード内に条件を作成する方法を学びます                                                           |                                 [条件分岐](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        JS基礎                         |                            配列とループ                            | JavaScriptで配列とループを使ってデータを扱う方法                                                                                 |                                   [配列とループ](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [テラリウム](./3-terrarium/solution/README.md)       |                            HTMLの実践                            | オンライン テラリウムを作るためのHTML構築、レイアウト作成に重点を置く                                                         |                                 [HTML入門](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [テラリウム](./3-terrarium/solution/README.md)       |                            CSSの実践                             | オンライン テラリウムをスタイリングするCSS構築、基本的なCSSとレスポンシブデザインに焦点を当てる                     |                                  [CSS入門](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [テラリウム](./3-terrarium/solution/README.md)            |                 JavaScriptクロージャ、DOM操作                  | ドラッグ＆ドロップのインターフェースとして機能するテラリウム用のJavaScriptを作成、クロージャとDOM操作に焦点を当てる             |                  [JavaScriptクロージャ、DOM操作](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [タイピングゲーム](./4-typing-game/solution/README.md)          |                          タイピングゲームを作る                           | キーボードイベントを使ってJavaScriptアプリのロジックを動かす方法を学びます                                                          |                                [イベント駆動プログラミング](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [グリーンブラウザ拡張](./5-browser-extension/solution/README.md) |                         ブラウザの仕組み                          | ブラウザの仕組み、歴史、ブラウザ拡張機能の最初の要素の構築方法を学びます                               |                               [ブラウザについて](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [グリーンブラウザ拡張](./5-browser-extension/solution/README.md) | フォーム作成、API呼び出し、ローカルストレージへの変数保存 | ローカルストレージに保存された変数を使いAPIを呼び出すブラウザ拡張機能のJavaScript要素を作成                      |                [API、フォーム、ローカルストレージ](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [グリーンブラウザ拡張](./5-browser-extension/solution/README.md) |          ブラウザのバックグラウンド処理、ウェブパフォーマンス          | ブラウザのバックグラウンド処理を使って拡張機能のアイコンを管理し、ウェブパフォーマンスと最適化について学びます   |             [バックグラウンドタスクとパフォーマンス](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [スペースゲーム](./6-space-game/solution/README.md)           |             JavaScriptでの高度なゲーム開発             | クラスとコンポジションの継承およびPub/Subパターンについて学び、ゲーム制作に備える              |                      [高度なゲーム開発入門](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [スペースゲーム](./6-space-game/solution/README.md)           |                           キャンバスへの描画                            | スクリーンに要素を描画するCanvas APIについて学びます                                                                       |                                [キャンバスへの描画](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [スペースゲーム](./6-space-game/solution/README.md)           |                   画面上の要素を移動させる                    | カルテシアン座標とCanvas APIを使って要素に動きを与える方法を学びます                                            |                           [要素を移動させる](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [スペースゲーム](./6-space-game/solution/README.md)           |                          衝突判定                           | 要素同士が衝突し反応するようにし、ゲームのパフォーマンスを確保するためのクールダウン機能を実装    |                              [衝突判定](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [スペースゲーム](./6-space-game/solution/README.md)           |                             スコア計算                              | ゲームの状態とパフォーマンスに基づいた計算を行います                                                                |                                    [スコア管理](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [スペースゲーム](./6-space-game/solution/README.md)           |                     ゲームの終了と再開                     | ゲームの終了と再開について学び、アセットのクリーンアップや変数のリセットを行います                              |                                [終了条件](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
-| 21  |         [バンキングアプリ](./7-bank-project/solution/README.md)          |                 WebアプリのHTMLテンプレートとルーティング                 | 複数ページのウェブサイトの構造をルーティングとHTMLテンプレートを使って構築する方法を学びます                             |                            [HTMLテンプレートとルーティング](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [バンキングアプリ](./7-bank-project/solution/README.md)          |                  ログインと登録フォームの作成                   | フォーム作成とバリデーション処理について学びます                                                                          |                                           [フォーム](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [バンキングアプリ](./7-bank-project/solution/README.md)          |                   データの取得と利用方法                   | アプリのデータの流れ、取得、保存、破棄の方法を学びます                                                 |                                            [データ](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [バンキングアプリ](./7-bank-project/solution/README.md)          |                      ステート管理の概念                      | アプリの状態を保持しプログラム的に管理する方法を学びます                                                              |                                [ステート管理](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [ブラウザ/VScodeコード](../../8-code-editor) | VScodeの使い方 | コードエディタの使用方法を学ぶ | [VScodeコードエディタの使い方](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AIアシスタント](./9-chat-project/README.md) | AIとの連携 | 自分自身のAIアシスタントを作る方法を学ぶ | [AIアシスタントプロジェクト](./9-chat-project/README.md) | Chris |
+|     |                       プロジェクト名                       |                            教えられる概念                             | 学習目標                                                                                                                 |                                                         関連レッスン                                                          |         著者          |
+| :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     はじめに                      |           プログラミングとツールの基礎           | ほとんどのプログラミング言語の基本的な基盤と、プロの開発者が仕事で使用するソフトウェアについて学ぶ | [プログラミング言語とツールの紹介](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     はじめに                      |             GitHubの基本、チームでの作業             | プロジェクトでGitHubを使う方法、コードベースでの共同作業の仕方                                                    |                            [GitHubの紹介](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     はじめに                      |                             アクセシビリティ                              | ウェブアクセシビリティの基礎を学ぶ                                                                                               |                       [アクセシビリティの基本](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        JS基礎                         |                         JavaScriptのデータ型                          | JavaScriptのデータ型の基礎                                                                                                 |                                       [データ型](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        JS基礎                         |                         関数とメソッド                          | アプリケーションのロジックフローを管理する関数とメソッドについて学ぶ                                                             |                              [関数とメソッド](./2-js-basics/2-functions-methods/README.md)                               | JasmineとChristopher |
+| 06  |                        JS基礎                         |                        JavaScriptでの条件分岐                        | 条件分岐の手法を使ってコードの中で条件を作る方法を学ぶ                                                           |                                 [条件分岐](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        JS基礎                         |                            配列とループ                            | JavaScriptで配列やループを使いデータを扱う                                                                                 |                                   [配列とループ](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [テラリウム](./3-terrarium/solution/README.md)       |                            HTML実践                            | オンラインテラリウムを作成するHTMLを構築、レイアウトの構築に注力                                                         |                                 [HTML入門](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [テラリウム](./3-terrarium/solution/README.md)       |                            CSS実践                             | オンラインテラリウムのスタイルを整えるCSSを構築、レスポンシブ対応含むCSSの基礎に注力                     |                                  [CSS入門](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [テラリウム](./3-terrarium/solution/README.md)            |                 JavaScriptのクロージャー、DOM操作                  | ドラッグ＆ドロップのインターフェースとしてテラリウムを動作させるJavaScriptを構築、クロージャーとDOM操作に注力             |                  [JavaScriptのクロージャーとDOM操作](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [タイピングゲーム](./4-typing-game/solution/README.md)          |                          タイピングゲームの構築                           | キーボードイベントを使いJavaScriptアプリのロジックを駆動させる方法を学ぶ                                                          |                                [イベント駆動プログラミング](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [グリーンブラウザー拡張](./5-browser-extension/solution/README.md) |                         ブラウザ作業                          | ブラウザの仕組みと歴史、ブラウザー拡張の最初の要素を作る方法を学ぶ                               |                               [ブラウザについて](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [グリーンブラウザー拡張](./5-browser-extension/solution/README.md) | フォーム作成、API呼び出し、ローカルストレージへの変数保存 | APIを呼び出すブラウザー拡張のJavaScript構築、ローカルストレージに保存された変数を使う                      |                [API、フォーム、ローカルストレージ](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [グリーンブラウザー拡張](./5-browser-extension/solution/README.md) |          ブラウザのバックグラウンド処理、ウェブパフォーマンス          | 拡張機能のアイコン管理にブラウザのバックグラウンド処理を使用、ウェブパフォーマンスと最適化を学ぶ   |             [バックグラウンドタスクとパフォーマンス](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [スペースゲーム](./6-space-game/solution/README.md)           |             JavaScriptによる高度なゲーム開発             | クラスとコンポジションの継承、Pub/Subパターンについて学び、ゲーム開発に備える              |                      [高度なゲーム開発入門](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [スペースゲーム](./6-space-game/solution/README.md)           |                           キャンバスへの描画                            | 画面に要素を描画するためのCanvas APIについて学ぶ                                                                       |                                [キャンバスへの描画](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [スペースゲーム](./6-space-game/solution/README.md)           |                   画面上の要素の移動                    | 要素が直交座標やCanvas APIを使って動きを得る方法を発見                                            |                           [要素の移動](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [スペースゲーム](./6-space-game/solution/README.md)           |                          衝突検出                           | 要素が衝突し反応するようにし、クールダウン機能を実装してゲームのパフォーマンスを確保    |                              [衝突検出](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [スペースゲーム](./6-space-game/solution/README.md)           |                             スコアの保持                              | ゲームの状態とパフォーマンスに基づいて計算を行う                                                                |                                    [スコアの保持](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [スペースゲーム](./6-space-game/solution/README.md)           |                     ゲームの終了と再開                     | ゲームの終了と再開、資産のクリーンアップや変数のリセットについて学ぶ                              |                                [終了条件](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [銀行アプリ](./7-bank-project/solution/README.md)          |                 ウェブアプリのHTMLテンプレートとルーティング                 | ルーティングとHTMLテンプレートを使った複数ページウェブサイトのアーキテクチャの基礎を学ぶ                             |                            [HTMLテンプレートとルート](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [銀行アプリ](./7-bank-project/solution/README.md)          |                  ログイン・登録フォームの構築                   | フォーム制作とバリデーション処理方法について学ぶ                                                                          |                                           [フォーム](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [銀行アプリ](./7-bank-project/solution/README.md)          |                   データ取得・利用の方法                   | アプリ内のデータの流れ、取得・保存・破棄の仕方                                                 |                                            [データ](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 24  |         [銀行アプリ](./7-bank-project/solution/README.md)          |                      状態管理の概念                      | アプリの状態保持とプログラム的管理方法を学ぶ                                                              |                                [状態管理](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [ブラウザ/VScodeコード](../../8-code-editor) | VScodeの使用 | コードエディタの使い方を学ぶ| [VScodeコードエディタの使用](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AIアシスタント](./9-chat-project/README.md) | AIの活用 | 自分のAIアシスタントの構築方法を学ぶ | [AIアシスタントプロジェクト](./9-chat-project/README.md) | Chris |
 
-## 🏫 教育方針
+## 🏫 教育方法
 
-当カリキュラムは2つの主要な教育原則に基づいて設計されています:
-* プロジェクトベースの学習
+当カリキュラムは次の2つの重要な教育理念に基づいて設計されています：
+* プロジェクトベース学習
 * 頻繁なクイズ
 
-本プログラムではJavaScript、HTML、CSSの基礎ならびに現代のウェブ開発者が使用する最新のツールと技術を教えます。受講生はタイピングゲーム、バーチャルテラリウム、エコフレンドリーなブラウザ拡張機能、スペースインベーダースタイルゲーム、ビジネス向けバンキングアプリを作成することで実践的な経験を積めます。シリーズの終わりには、ウェブ開発のしっかりした理解を得られます。
+このプログラムでは、JavaScript、HTML、およびCSSの基礎と、現代のウェブ開発者が使う最新ツールや技術を教えます。学生はタイピングゲーム、仮想テラリウム、環境に優しいブラウザ拡張、スペースインベーダースタイルのゲーム、ビジネス向けの銀行アプリの構築を通じて実践的な経験を積む機会があります。シリーズの最後には、ウェブ開発の確かな理解を得られます。
 
-> 🎓 Microsoft Learnの[Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon)として、本カリキュラムの最初の数レッスンを受講することができます！
+> 🎓 これらの最初の数レッスンは、Microsoft Learnの[学習パス](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon)として受講できます！
 
-内容がプロジェクトと連動していることで、学生の関心を引きつけ、概念の保持が増強されます。またJavaScriptの基礎を導入するスターターレッスンを複数作成し、さらに「[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)」の動画チュートリアルを組み合わせました。その著者の一部も本カリキュラムに貢献しています。
+内容をプロジェクトと連携させることで、学生の興味が高まり、概念の定着が促進されます。また、JavaScript基礎の入門レッスンを数多く用意し、[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon) ビデオチュートリアルのいくつかと併用しました。このシリーズの著者の一部も当カリキュラムに貢献しています。
 
-授業前の低リスクなクイズは学習意図を設定し、授業後のクイズはさらなる理解定着を促します。本カリキュラムは柔軟かつ楽しく受講でき、全体または一部のみ受講可能です。プロジェクトは小規模から始まり、12週間のサイクル終了時には複雑性が増します。
+さらに、授業前の低ストレスなクイズで学習の意図を設置し、授業後の2回目のクイズで理解の定着を図っています。このカリキュラムは柔軟かつ楽しく設計されており、全体を通しても一部だけでも受講可能です。プロジェクトは小規模から始まり、12週間のコース終了時には徐々に複雑になります。
 
-JavaScriptフレームワークの導入は意図的に避け、ウェブ開発者に必要な基本スキルに集中しています。次のステップとしては、別の動画シリーズ「[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)」でNode.jsの学習をおすすめします。
+JavaScriptのフレームワークにあえて触れず、ウェブ開発者として必要な基本スキルに集中していますが、このカリキュラムの次のステップとしては、別の動画シリーズ "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)" でNode.jsについて学ぶことをお勧めします。
 
-> [行動規範](CODE_OF_CONDUCT.md)と[貢献ガイドライン](CONTRIBUTING.md)をご覧ください。建設的なフィードバックをお待ちしています！
-
+> 当プロジェクトの[行動規範](CODE_OF_CONDUCT.md)と[貢献ガイド](CONTRIBUTING.md)をご覧ください。建設的なフィードバックを歓迎します！
 
 ## 🧭 オフラインアクセス
 
-[Docsify](https://docsify.js.org/#/) を使って、このドキュメントをオフラインで閲覧できます。このリポジトリをフォークし、ローカルマシンに[Docsifyをインストール](https://docsify.js.org/#/quickstart)してください。次にこのリポジトリのルートフォルダで `docsify serve` を入力します。ウェブサイトはローカルホストのポート3000で配信されます：`localhost:3000`。
+[Docsify](https://docsify.js.org/#/) を使用してこのドキュメントをオフラインで実行できます。リポジトリをフォークし、ローカルマシンに [Docsifyをインストール](https://docsify.js.org/#/quickstart) し、このリポジトリのルートフォルダーで `docsify serve` と入力します。ウェブサイトはlocalhostのポート3000、すなわち `localhost:3000` で提供されます。
 
 ## 📘 PDF
 
-すべてのレッスンのPDFはこちらから入手可能です: [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+すべてのレッスンのPDFは[こちら](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)で入手できます。
 
-
-## 🎒 他のコース
-私たちのチームは他にもコースを制作しています！ぜひご覧ください：
+## 🎒 その他のコース
+私たちのチームは他のコースも制作しています！ぜひご覧ください：
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
-
+[![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
 ### Azure / Edge / MCP / Agents
@@ -222,7 +220,7 @@ JavaScriptフレームワークの導入は意図的に避け、ウェブ開発�
 
 ---
  
-### ジェネレーティブAIシリーズ
+### 生成AIシリーズ
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -247,23 +245,23 @@ JavaScriptフレームワークの導入は意図的に避け、ウェブ開発�
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## ヘルプを得る
+## ヘルプを得るには
 
-AI アプリの構築で詰まったり、質問がある場合は MCP に関する学習者や経験豊富な開発者と一緒にディスカッションに参加しましょう。質問が歓迎され、知識が自由に共有される支援的なコミュニティです。
+AIアプリの構築で行き詰まったり質問がある場合は、他の学習者や経験豊富な開発者と一緒にMCPに関する議論に参加してください。これは質問が歓迎され、知識が自由に共有される支援的なコミュニティです。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-製品のフィードバックや製品構築時のエラーがある場合は、以下をご覧ください：
+製品フィードバックや構築中のエラーがある場合は、次の場所をご覧ください：
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## ライセンス
 
-このリポジトリは MIT ライセンスの下でライセンスされています。詳細は [LICENSE](../../LICENSE) ファイルをご参照ください。
+このリポジトリはMITライセンスの下で提供されています。詳細は[LICENSE](../../LICENSE)ファイルをご覧ください。
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があります。正式な内容については原文書を権威ある情報源としてご参照ください。重要な情報に関しては、専門の人間による翻訳を推奨いたします。本翻訳の利用により生じたいかなる誤解や解釈違いについても、当方は一切責任を負いかねます。
+本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されています。正確性には努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご了承ください。原文が正式な内容の根拠となります。重要な情報については、専門の翻訳者による翻訳を推奨します。本翻訳の利用により生じた誤解や解釈の相違について、当方は一切責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
