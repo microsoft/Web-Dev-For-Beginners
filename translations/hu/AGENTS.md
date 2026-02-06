@@ -1,43 +1,43 @@
 # AGENTS.md
 
-## Projekt áttekintése
+## Projekt áttekintés
 
-Ez egy oktatási tananyag-tár, amely kezdőknek szóló webfejlesztési alapok oktatására szolgál. A tananyag egy átfogó, 12 hetes kurzus, amelyet a Microsoft Cloud Advocates fejlesztett ki, és 24 gyakorlati leckét tartalmaz JavaScript, CSS és HTML témakörökben.
+Ez egy oktatási tantervi tárhely, amely a webfejlesztés alapjainak kezdőknek történő tanítására szolgál. A tanterv egy átfogó, 12 hetes kurzus, amelyet a Microsoft Cloud Advocates fejlesztett ki, és 24 gyakorlati leckét tartalmaz, amelyek lefedik a JavaScript, CSS és HTML témaköröket.
 
 ### Fő összetevők
 
-- **Oktatási tartalom**: 24 strukturált lecke projektalapú modulokba rendezve
-- **Gyakorlati projektek**: Terrárium, gépelős játék, böngészőbővítmény, űr játék, banki alkalmazás, kódszerkesztő, és AI csevegősegéd
-- **Interaktív kvízek**: 48 kvíz, mindegyik 3 kérdéssel (leckék előtti/utáni értékelés)
-- **Többnyelvű támogatás**: Automatikus fordítás több mint 50 nyelvre GitHub Actions által
+- **Oktatási tartalom**: 24 strukturált lecke projektalapú modulokban
+- **Gyakorlati projektek**: Terrárium, gépelős játék, böngészőbővítmény, űrjáték, banki alkalmazás, kódszerkesztő és AI chat asszisztens
+- **Interaktív kvízek**: 48 kvíz, egyenként 3 kérdéssel (elő- és utóleckés értékelések)
+- **Többnyelvű támogatás**: Automatikus fordítás 50+ nyelvre GitHub Actions segítségével
 - **Technológiák**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (AI projektekhez)
 
 ### Architektúra
 
-- Oktatási tár leckékre bontott szerkezettel
-- Minden lecke mappája tartalmaz README-t, kódpéldákat és megoldásokat
-- Önálló projektek külön könyvtárakban (quiz-app, különböző lecke projektek)
-- Fordító rendszer GitHub Actions-szel (co-op-translator)
-- Dokumentáció Docsify-val szolgáltatva és PDF formátumban elérhető
+- Oktatási tárhely leckék szerinti struktúrával
+- Minden lecke mappában README, kódpéldák és megoldások találhatók
+- Külön projektek külön mappákban (quiz-app, különféle lecke projektek)
+- Fordítási rendszer GitHub Actions-al (co-op-translator)
+- Dokumentáció Docsify segítségével, PDF-ben is elérhető
 
 ## Beállítási parancsok
 
-Ez a tár elsősorban oktatási tartalom fogyasztására szolgál. Specifikus projektekkel való munkához:
+Ez a tárhely elsősorban oktatási tartalom fogyasztására szolgál. Konkrét projektekkel való munka esetén:
 
-### Fő tár beállítás
+### Fő tárhely beállítása
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Kvíz alkalmazás beállítása (Vue 3 + Vite)
+### Quiz App beállítása (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
 npm run dev        # Fejlesztői szerver indítása
-npm run build      # Építés éles környezethez
+npm run build      # Éles verzió készítése
 npm run lint       # ESLint futtatása
 ```
 
@@ -46,8 +46,8 @@ npm run lint       # ESLint futtatása
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # API szerver indítása
-npm run lint       # ESLint futtatása
+npm start          # Indítsa el az API szervert
+npm run lint       # Futtassa az ESLint-et
 npm run format     # Formázás Prettier-rel
 ```
 
@@ -56,18 +56,18 @@ npm run format     # Formázás Prettier-rel
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Kövesse a böngészőspecifikus bővítmény betöltési utasításait
+# Kövesse a böngészőspecifikus bővítménybetöltési utasításokat
 ```
 
-### Űr játék projektek
+### Űrjáték projektek
 
 ```bash
 cd 6-space-game/solution
 npm install
-# Nyissa meg az index.html fájlt a böngészőben vagy használja a Live Server-t
+# Nyisd meg az index.html fájlt a böngészőben vagy használd a Live Server-t
 ```
 
-### Csevegőprojekt (Python backend)
+### Chat projekt (Python backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -78,39 +78,39 @@ python api.py
 
 ## Fejlesztési munkafolyamat
 
-### Tartalomhozzájárulók számára
+### Tartalomszolgáltatók számára
 
-1. **Válaszd le a tárat** a saját GitHub fiókodba
-2. **Klónozd le a saját forkodat** helyileg
-3. **Hozz létre egy új ágat** a változtatásaidnak
-4. Végezz módosításokat a lecke tartalmakban vagy kódpéldákban
-5. Teszteld a kódbeli változtatásokat a releváns projektkönyvtárakban
-6. Küldd be a kérésed a hozzájárulási irányelvek szerint
+1. **Forkold a tárhelyet** a GitHub fiókodba
+2. **Klonozd le a forkot** helyileg
+3. **Hozz létre egy új ágat** a változtatásaidhoz
+4. Végezze el a leckék vagy kódpéldák módosítását
+5. Teszteld a kódváltoztatásokat az érintett projektmappákban
+6. Küldj pull requesteket a hozzájárulási irányelvek szerint
 
 ### Tanulók számára
 
-1. Forkold vagy klónozd le a tárat
-2. Sorban haladj a lecke mappákban
+1. Forkold vagy klónozd le a tárhelyet
+2. Lépj sorban a lecke mappákba
 3. Olvasd el az egyes leckék README fájljait
-4. Teljesítsd a leckék előtti kvízeket az https://ff-quizzes.netlify.app/web/ oldalon
-5. Dolgozz a lecke mappák kódpéldáin
-6. Készítsd el a feladatokat és kihívásokat
-7. Tedd meg a post-lecke kvízeket
+4. Töltsd ki a leckék előtti kvízeket a https://ff-quizzes.netlify.app/web/ oldalon
+5. Dolgozd át a kódpéldákat a lecke mappákban
+6. Teljesítsd a feladatokat és kihívásokat
+7. Töltsd ki az utóleckés kvízeket
 
 ### Élő fejlesztés
 
-- **Dokumentáció**: Futtasd a `docsify serve` parancsot a gyökérben (3000-es port)
-- **Kvíz alkalmazás**: Futtasd a `npm run dev` parancsot a quiz-app mappában
-- **Projektek**: Használd a VS Code Live Server bővítményt HTML projektekhez
-- **API projektek**: Futtasd a `npm start` parancsot a megfelelő API könyvtárakban
+- **Dokumentáció**: Futtasd a `docsify serve` parancsot a gyökérben (port 3000)
+- **Quiz App**: Futtasd az `npm run dev` parancsot a quiz-app mappában
+- **Projektek**: Használj VS Code Live Server bővítményt HTML projektekhez
+- **API projektek**: Futtasd az `npm start` parancsot az adott API mappákban
 
 ## Tesztelési útmutató
 
-### Kvíz alkalmazás tesztelése
+### Quiz App tesztelése
 
 ```bash
 cd quiz-app
-npm run lint       # Ellenőrizze a kódstílus problémákat
+npm run lint       # Ellenőrizze a kódstílus-problémákat
 npm run build      # Ellenőrizze, hogy a build sikeres-e
 ```
 
@@ -124,159 +124,159 @@ node server.js     # Ellenőrizze, hogy a szerver hiba nélkül indul-e
 
 ### Általános tesztelési megközelítés
 
-- Ez egy oktatási tár, nem tartalmaz teljes automatizált teszteket
-- Manuális tesztelés fókuszában:
-  - Kód példák futtatása hibamentesen
-  - Dokumentációban lévő linkek megfelelő működése
-  - Projektek sikeres lefordítása
-  - Példák a legjobb gyakorlatok betartásával
+- Ez egy oktatási tárhely, nincs átfogó automatizált tesztelés
+- Kézi tesztelés fókuszai:
+  - Kódpéldák futtatása hibák nélkül
+  - Dokumentáció hivatkozások működése
+  - Projektek sikeres buildelése
+  - Példák legjobb gyakorlatok betartása
 
-### Beküldés előtti ellenőrzés
+### Beküldés előtti ellenőrzések
 
-- Futtasd az `npm run lint` parancsot a package.json fájlt tartalmazó mappákban
-- Ellenőrizd a markdown linkeket, hogy érvényesek-e
-- Teszteld a kód példákat böngészőben vagy Node.js-ben
-- Bizonyosodj meg róla, hogy a fordítások megtartják az eredeti struktúrát
+- Futtasd az `npm run lint` parancsot a package.json-t tartalmazó mappákban
+- Ellenőrizd a markdown hivatkozásokat
+- Teszteld a kódpéldákat böngészőben vagy Node.js-ben
+- Ellenőrizd, hogy a fordítások megőrzik a megfelelő struktúrát
 
 ## Kódstílus irányelvek
 
 ### JavaScript
 
 - Használj modern ES6+ szintaxist
-- Kövesd a projektekben definiált alap ESLint beállításokat
-- Használj érthető változó- és függvényneveket az oktatási érthetőség érdekében
-- Kommentáld a koncepciókat a tanulók számára
-- Formázd Prettier-rel, ahol van konfigurálva
+- Kövesd az ESLint szabályokat, amelyeket a projektek tartalmaznak
+- Használj értelmes változó- és függvényneveket az oktatási érthetőségért
+- Tegyél megjegyzéseket az elképzelések magyarázatára a tanulók számára
+- Formázd Prettier-rel, ahol be van állítva
 
 ### HTML/CSS
 
-- Szemantikus HTML5 elemek
-- Reszponzív tervezési elvek
-- Egyértelmű osztályelnevezések
-- Kommentek a CSS technikák magyarázatához tanulók számára
+- Szemiantikus HTML5 elemek használata
+- Reszponzív dizájn elvei
+- Egyértelmű osztályelnevezési szabályok
+- Megjegyzések a CSS technikákról a tanulók számára
 
 ### Python
 
-- PEP 8 stílus irányelvek
-- Tiszta, oktatási kód példák
-- Típusjelzések, ahol hasznosak a tanuláshoz
+- PEP 8 stílusirányelvek betartása
+- Tiszta, oktatási kódpéldák
+- Típusjelölések, ahol a tanulást segítik
 
 ### Markdown dokumentáció
 
-- Áttekinthető címsor hierarchia
-- Kódblokkok nyelvi megjelöléssel
-- Hivatkozások további erőforrásokra
-- Képernyőkép és képek az `images/` mappákban
-- Alt szöveg a képekhez az akadálymentességért
+- Egyértelmű címsorszintek
+- Kódblokkok nyelvi specifikációval
+- Hivatkozások további forrásokra
+- Képernyőképek és képek az `images/` mappákban
+- Alt szöveg a képekhez akadálymentesség miatt
 
-### Fájlszervezés
+### Fájlok rendszerezése
 
-- Leckék számozva egymás után (1-getting-started-lessons, 2-js-basics stb.)
-- Minden projektnek vannak `solution/`, és gyakran `start/` vagy `your-work/` mappái
-- Képek a lecke specifikus `images/` mappákban tárolva
+- Leckék számozva egymás után (pl. 1-getting-started-lessons, 2-js-basics stb.)
+- Minden projektnek van `solution/` és gyakran `start/` vagy `your-work/` mappája
+- Képek a lecke-specifikus `images/` mappákban
 - Fordítások a `translations/{language-code}/` struktúrában
 
 ## Build és telepítés
 
-### Kvíz alkalmazás telepítése (Azure Static Web Apps)
+### Quiz App telepítése (Azure Static Web Apps)
 
-A kvíz-app Azure Static Web Apps telepítéshez konfigurált:
+A quiz-app Azure Static Web Apps szolgáltatásra van konfigurálva:
 
 ```bash
 cd quiz-app
 npm run build      # Létrehozza a dist/ mappát
-# Telepítés GitHub Actions munkafolyamaton keresztül a main ágra történő push esetén
+# GitHub Actions munkafolyamattal telepít a main ágra történő push esetén
 ```
 
-Azure Static Web Apps beállítással:
-- **Alkalmazás helye**: `/quiz-app`
+Azure Static Web Apps beállítások:
+- **App helye**: `/quiz-app`
 - **Kimeneti hely**: `dist`
-- **Munkafolyamat**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
+- **Folyamat**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
 ### Dokumentáció PDF generálás
 
 ```bash
-npm install                    # Telepítse a docsify-to-pdf csomagot
-npm run convert               # PDF generálása a docs-ból
+npm install                    # docsify-to-pdf telepítése
+npm run convert               # PDF generálása a docs alapján
 ```
 
 ### Docsify dokumentáció
 
 ```bash
 npm install -g docsify-cli    # Telepítse a Docsify-t globálisan
-docsify serve                 # Szolgáltatás futtatása a localhost:3000 címen
+docsify serve                 # Szolgáltatás localhost:3000 címen
 ```
 
-### Projekt-specifikus build folyamatok
+### Projektspecifikus build folyamatok
 
-Minden projekt könyvtárában lehet saját build folyamat:
-- Vue projektek: `npm run build` gyártási csomagokat hoz létre
-- Statikus projektek: nincs build lépés, fájlokat közvetlenül szolgáltatja
+Minden projekt mappának lehet saját build folyamata:
+- Vue projektek: `npm run build` létrehozza az éles csomagokat
+- Statikus projektek: nincs build lépés, a fájlokat direkt szolgáljuk ki
 
-## Pull Request irányelvek
+## Pull request irányelvek
 
-### Cím formátum
+### Címformátum
 
-Használj világos, leíró címeket, amelyek mutatják a változtatás területét:
+Használj világos, leíró címeket, melyek jelzik a változtatás területét:
 - `[Quiz-app] Új kvíz hozzáadása az X. leckéhez`
-- `[Lesson-3] Elírás javítása terrárium projektben`
+- `[Lesson-3] Elírás javítása a terrárium projektben`
 - `[Translation] Spanyol fordítás hozzáadása az 5. leckéhez`
-- `[Docs] Beállítási utasítások frissítése`
+- `[Docs] Beállítási útmutató frissítése`
 
 ### Kötelező ellenőrzések
 
 PR beküldése előtt:
 
 1. **Kódminőség**:
-   - Futtasd az `npm run lint` parancsot az érintett projektkönyvtárakban
+   - Futtasd az `npm run lint` parancsot az érintett projektmappákban
    - Javítsd az összes lint hibát és figyelmeztetést
 
 2. **Build ellenőrzés**:
-   - Futtasd az `npm run build` parancsot, ha alkalmazható
-   - Bizonyosodj meg arról, hogy nincs build hiba
+   - Futtasd az `npm run build` parancsot, ha van ilyen
+   - Győződj meg, hogy nincs build hiba
 
-3. **Link validálás**:
+3. **Linkek ellenőrzése**:
    - Teszteld az összes markdown linket
-   - Ellenőrizd a képhivatkozások működését
+   - Ellenőrizd a képek hivatkozásait
 
-4. **Tartalom átnézés**:
+4. **Tartalom átvizsgálása**:
    - Ellenőrizd helyesírást és nyelvtant
-   - Győződj meg róla, hogy a kód példák helyesek és oktatók
-   - Ellenőrizd a fordítások helyességét és eredeti jelentés megtartását
+   - Győződj meg, hogy a kódpéldák helyesek és oktatók
+   - Ollózkodj meg a fordítások megfelelőségéről
 
-### Hozzájárulási követelmények
+### Hozzájárulási feltételek
 
-- Fogadd el a Microsoft CLA-t (automatikus ellenőrzés az első PR-nál)
-- Kövesd a [Microsoft nyílt forráskódú magatartási kódexét](https://opensource.microsoft.com/codeofconduct/)
-- Lásd a [CONTRIBUTING.md](./CONTRIBUTING.md) fájlt részletes útmutatásért
-- Hivatkozz az issue számokra a PR leírásában, ha releváns
+- Fogadd el a Microsoft CLA-t (automatikusan ellenőrzik az első PR-nál)
+- Kövesd a [Microsoft Open Source Kódex](https://opensource.microsoft.com/codeofconduct/) szabályait
+- Részletekért lásd a [CONTRIBUTING.md](./CONTRIBUTING.md) fájlt
+- Amennyiben van, hivatkozz PR leírásban issue számokra
 
-### Felülvizsgálati folyamat
+### Áttekintési folyamat
 
-- PR-eket karbantartók és a közösség nézi át
-- Oktatási érthetőség az elsődleges szempont
+- A PR-ket karbantartók és közösség vizsgálja
+- Oktatási érthetőség prioritás
 - Kódpéldák kövessék a jelenlegi legjobb gyakorlatokat
-- Fordításokat pontosság és kulturális megfelelőség szerint ellenőrzik
+- Fordításokat átvizsgálják pontosság és kulturális megfelelőség szempontjából
 
-## Fordító rendszer
+## Fordítási rendszer
 
 ### Automatikus fordítás
 
-- GitHub Actions használatával co-op-translator munkafolyamat
+- GitHub Actions használ co-op-translator munkafolyamatot
 - Több mint 50 nyelvre automatikus fordítás
 - Forrásfájlok a fő könyvtárakban
 - Fordított fájlok a `translations/{language-code}/` könyvtárakban
 
 ### Manuális fordítási javítások hozzáadása
 
-1. Keresd meg a fájlt a `translations/{language-code}/` könyvtárban
-2. Javíts a szövegen a struktúra megtartásával
-3. Gondoskodj róla, hogy a kódpéldák működjenek továbbra is
-4. Teszteld az esetleges lokalizált kvíz tartalmat
+1. Keresd meg a fájlt a `translations/{language-code}/` mappában
+2. Javítsd miközben megtartod a struktúrát
+3. Biztosítsd, hogy a kódpéldák továbbra is működnek
+4. Teszteld az adott nyelvű kvíz tartalmakat
 
-### Fordítási metaadatok
+### Fordítás metaadatok
 
-A fordított fájlok metaadat fejlécet tartalmaznak:
+A fordított fájlok tartalmaznak metaadat fejlécet:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,77 +289,77 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Hibakeresés és hibaelhárítás
+## Hibakeresés és problémaelhárítás
 
-### Gyakoribb problémák
+### Gyakori problémák
 
-**A kvíz alkalmazás nem indul**:
+**Quiz app nem indul el**:
 - Ellenőrizd a Node.js verziót (ajánlott v14+)
-- Töröld a `node_modules` és `package-lock.json` fájlokat, majd futtasd újra az `npm install`-t
-- Ellenőrizd a port ütközést (alapértelmezett: Vite port 5173)
+- Töröld a `node_modules` és `package-lock.json` fájlokat, majd futtasd újra az `npm install` parancsot
+- Ellenőrizd, hogy nincs port ütközés (alapértelmezett port: Vite használja az 5173-at)
 
 **API szerver nem indul**:
-- Ellenőrizd a Node.js minimum verziót (node >=10)
-- Nézd meg, hogy a port nincs-e használatban
-- Győződj meg róla, hogy minden függőség telepítve van az `npm install` után
+- Ellenőrizd a Node.js verzióját (node >=10 minimum)
+- Nézd meg, hogy a port nincs-e már használatban
+- Győződj meg róla, hogy az összes függőség telepítve van az `npm install` által
 
 **Böngészőbővítmény nem töltődik be**:
-- Ellenőrizd, hogy a manifest.json megfelelő formátumú-e
-- Nézd át a böngésző konzolját hibákért
-- Kövesd a böngésző-specifikus bővítmény telepítési útmutatót
+- Ellenőrizd a manifest.json helyes formázását
+- Nézd meg a böngésző konzolját hibák után
+- Kövesd a böngészőspecifikus bővítmény telepítési utasításokat
 
-**Python csevegőprojektnél problémák**:
-- Ellenőrizd, hogy az OpenAI csomag telepítve van-e: `pip install openai`
-- Győződj meg róla, hogy a GITHUB_TOKEN környezeti változó be van állítva
-- Nézd meg a GitHub Modellekhez való hozzáférési jogosultságokat
+**Python chat projekt problémák**:
+- Győződj meg róla, hogy az OpenAI csomag telepítve van: `pip install openai`
+- Ellenőrizd, hogy a GITHUB_TOKEN környezeti változó be van állítva
+- Ellenőrizd a GitHub Models hozzáférési engedélyeket
 
 **Docsify nem szolgáltat dokumentációt**:
 - Telepítsd globálisan a docsify-cli-t: `npm install -g docsify-cli`
-- Futtasd a tár gyökeréből
-- Ellenőrizd, hogy a `docs/_sidebar.md` létezik
+- A tárhely gyökeréből futtasd
+- Ellenőrizd, hogy a `docs/_sidebar.md` fájl létezik
 
-### Fejlesztői környezeti tippek
+### Fejlesztési környezeti tippek
 
-- Használd a VS Code Live Server bővítményét HTML projektekhez
-- Telepíts ESLint és Prettier bővítményeket az egységes formázáshoz
+- Használj VS Code Live Server bővítményt HTML projektekhez
+- Telepítsd az ESLint és Prettier bővítményeket az egységes formázáshoz
 - Használd a böngésző DevTools-t JavaScript hibakereséshez
 - Vue projektekhez telepítsd a Vue DevTools böngészőbővítményt
 
 ### Teljesítmény szempontok
 
-- Nagyszámú fordított fájl (50+ nyelv) miatt a teljes klónozás nagy méretű
-- Használj sekély klónozást, ha csak a tartalmon dolgozol: `git clone --depth 1`
-- Fordításokat ne keresd át angol tartalom szerkesztésekor
-- Build folyamatok lassúak lehetnek első futtatáskor (npm install, Vite build)
+- A sok fordított fájl (50+ nyelv) miatt a teljes klón nagy méretű
+- Használj sekély klónt, ha csak tartalmakkal dolgozol: `git clone --depth 1`
+- Angol tartalmon dolgozáskor zárd ki a fordításokat a keresésekből
+- Build folyamatok lassúak lehetnek az első futtatáskor (npm install, Vite build)
 
 ## Biztonsági szempontok
 
 ### Környezeti változók
 
-- API kulcsokat soha ne kövess a tárba
-- Használj `.env` fájlokat (már a `.gitignore`-ban vannak)
-- Dokumentáld a szükséges környezeti változókat a projekt README-jeiben
+- API kulcsokat soha ne tölts fel a tárhelyre
+- Használj `.env` fájlokat (amelyek `.gitignore`-ba vannak véve)
+- Dokumentáld a szükséges környezeti változókat a projekt README-kben
 
 ### Python projektek
 
-- Használj virtuális környezetet: `python -m venv venv`
+- Használj virtuális környezeteket: `python -m venv venv`
 - Tartsd naprakészen a függőségeket
-- GitHub tokeneknek csak minimálisan szükséges jogosultságokat adj
+- A GitHub tokeneknek minimális jogosultságokkal kell rendelkezniük
 
-### GitHub Modellekhez való hozzáférés
+### GitHub Models hozzáférés
 
-- Személyes hozzáférési tokenek (PAT) szükségesek a GitHub Modellekhez
+- Személyes hozzáférési tokenek (PAT) szükségesek a GitHub Models használatához
 - A tokeneket környezeti változóként tárold
-- Soha ne kövesd be a tokeneket vagy hitelesítő adatokat
+- Tokeneket vagy hitelesítő adatokat soha ne tölts fel
 
 ## Egyéb megjegyzések
 
 ### Célközönség
 
-- Teljes kezdők a webfejlesztésben
-- Tanulók és önálló tanulók
-- Tanárok, akik osztálytermekben használják a tananyagot
-- A tartalom akadálymentességhez és fokozatos készségepítéshez készült
+- Teljesen kezdő webfejlesztők
+- Diákok és önálló tanulók
+- Tanárok, akik az órákon használják a tananyagot
+- A tartalom akadálymentességre és fokozatos készségfejlesztésre lett tervezve
 
 ### Oktatási filozófia
 
@@ -367,42 +367,42 @@ CO_OP_TRANSLATOR_METADATA:
 - Gyakori tudásellenőrzések (kvízek)
 - Gyakorlati kódolási feladatok
 - Valós alkalmazási példák
-- Az alapokra fókuszálás a keretrendszerek előtt
+- Alapokra fókuszálás a keretrendszerek előtt
 
-### Tár karbantartás
+### Tárhely karbantartás
 
-- Aktív tanulói és hozzájárulói közösség
-- Rendszeres frissítések függőségekben és tartalomban
-- Issue-k és beszélgetések figyelemmel kísérése karbantartók által
-- Fordítás frissítések automatizálva GitHub Actions által
+- Aktív közösség tanulókból és hozzájárulókból
+- Függőségek és tartalom rendszeres frissítése
+- Issue-k és viták karbantartói felügyelettel
+- Fordítási frissítések automatizáltak GitHub Actions segítségével
 
 ### Kapcsolódó források
 
 - [Microsoft Learn modulok](https://docs.microsoft.com/learn/)
 - [Student Hub erőforrások](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) ajánlott tanulóknak
-- Egyéb kurzusok: Generative AI, Data Science, ML, IoT tananyagok elérhetők
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) ajánlott a tanulóknak
+- További kurzusok: Generatív AI, Adattudomány, ML, IoT tantervek elérhetők
 
-### Specifikus projektekkel való munka
+### Konkrét projektek kezelése
 
-Részletes útmutató egyes projektekhez a README fájlokban:
-- `quiz-app/README.md` - Vue 3 alapú kvíz alkalmazás
-- `7-bank-project/README.md` - Banki alkalmazás autentikációval
+Részletes utasítások az egyes projektekhez a README fájlokban:
+- `quiz-app/README.md` - Vue 3 kvíz alkalmazás
+- `7-bank-project/README.md` - Banki alkalmazás hitelesítéssel
 - `5-browser-extension/README.md` - Böngészőbővítmény fejlesztés
 - `6-space-game/README.md` - Vászon alapú játék fejlesztés
-- `9-chat-project/README.md` - AI csevegősegéd projekt
+- `9-chat-project/README.md` - AI chat asszisztens projekt
 
 ### Monorepo szerkezet
 
-Bár nem hagyományos monorepóról van szó, ez a tár több önálló projektet tartalmaz:
+Bár nem hagyományos monorepo, ez a tárhely több független projektet tartalmaz:
 - Minden lecke önálló
 - A projektek nem osztanak meg függőségeket
-- Egyéni projekteken dolgozz anélkül, hogy a többire hatnál
-- Klónozd az egész tárat a teljes tanulási élményért
+- Egyes projekteken dolgozhatsz anélkül, hogy másokat érintenél
+- Teljes tantervélményhez klónozd az egész tárhelyet
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordítószolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) használatával fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások tartalmazhatnak hibákat vagy pontatlanságokat. Az eredeti dokumentum a saját nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén szakmai emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Ezt a dokumentumot a [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordító szolgáltatás segítségével fordítottuk. Habár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum anyanyelvű változata tekintendő hivatalos forrásnak. Fontos információk esetén professzionális, emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy félrepontozásért, amely ebből a fordításból ered.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
