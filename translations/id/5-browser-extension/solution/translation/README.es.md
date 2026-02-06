@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-27T22:26:13+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "id"
-}
--->
 # Ekstensi Peramban Carbon Trigger: Kode Lengkap
 
 Dengan menggunakan API sinyal CO2 dari tmrow untuk melacak penggunaan listrik, buatlah sebuah ekstensi peramban agar Anda dapat memiliki pengingat langsung di peramban Anda tentang konsumsi listrik di wilayah Anda. Penggunaan ekstensi ad hoc ini akan membantu Anda membuat keputusan tentang aktivitas Anda berdasarkan informasi tersebut.

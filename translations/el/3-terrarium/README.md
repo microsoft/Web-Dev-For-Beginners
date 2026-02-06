@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-06T20:12:32+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "el"
-}
--->
 ## Αναπτύξτε το Terrarium σας
 
 Μπορείτε να αναπτύξετε ή να δημοσιεύσετε το Terrarium σας στο διαδίκτυο χρησιμοποιώντας τις **Azure Static Web Apps**.

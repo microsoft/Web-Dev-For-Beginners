@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-27T21:58:15+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "ms"
-}
--->
 # Menyumbang
 
 Projek ini mengalu-alukan sumbangan dan cadangan. Kebanyakan sumbangan memerlukan anda

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2026-01-08T11:32:03+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "te"
-}
--->
 # ఈవెంట్-డ్రివెన్ ప్రోగ్రామింగ్ - ఒక టైపింగ్ గేమ్ తయారు చేయండి
 
 ```mermaid

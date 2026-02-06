@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9884f8c8a61cf56214450f8b16a094ce",
-  "translation_date": "2025-10-11T12:03:07+00:00",
-  "source_file": "7-bank-project/api/README.md",
-  "language_code": "et"
-}
--->
 # Panga API
 
 > Panga API, mis on loodud [Node.js](https://nodejs.org) + [Express](https://expressjs.com/) abil.

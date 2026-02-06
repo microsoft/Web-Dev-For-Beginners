@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-10-11T12:03:22+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "et"
-}
--->
 # Panga rakendus
 
 > Näidislahendus panga rakenduse projektile, mis on loodud kasutades ainult HTML5, CSS-i ja JavaScripti (ilma raamistikke või teeke kasutamata).

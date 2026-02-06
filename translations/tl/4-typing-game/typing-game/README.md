@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-03T14:02:32+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "tl"
-}
--->
 # Paggawa ng laro gamit ang mga event
 
 Naisip mo na ba kung paano nalalaman ng mga website kapag nag-click ka sa isang button o nag-type sa isang text box? Iyan ang mahika ng event-driven programming! Ano pa ang mas magandang paraan para matutunan ang mahalagang kasanayang ito kundi ang paggawa ng isang kapaki-pakinabang na bagay - isang typing speed game na tumutugon sa bawat pindot mo sa keyboard.

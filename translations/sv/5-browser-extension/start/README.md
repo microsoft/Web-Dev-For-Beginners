@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-26T22:37:27+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "sv"
-}
--->
 # Carbon Trigger Browser Extension: Startkod
 
 Använd tmrow:s C02 Signal API för att spåra elförbrukning och bygg en webbläsartillägg så att du kan få en påminnelse direkt i din webbläsare om hur tung elförbrukningen är i din region. Att använda detta tillägg ad hoc hjälper dig att fatta beslut om dina aktiviteter baserat på denna information.

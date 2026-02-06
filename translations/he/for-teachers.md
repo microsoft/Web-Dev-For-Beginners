@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:09:20+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "he"
-}
--->
 ### למורים
 
 אתם מוזמנים להשתמש בתוכנית הלימודים הזו בכיתה שלכם. היא משתלבת בצורה חלקה עם GitHub Classroom ופלטפורמות LMS מובילות, וניתן גם להשתמש בה כמאגר עצמאי עם התלמידים שלכם.

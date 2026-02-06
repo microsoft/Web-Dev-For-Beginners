@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T22:28:03+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "uk"
-}
--->
 # Вступ до JavaScript
 
 JavaScript — це мова вебу. У цих чотирьох уроках ви ознайомитеся з її основами.

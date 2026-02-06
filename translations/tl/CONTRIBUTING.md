@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-27T21:58:22+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "tl"
-}
--->
 # Pag-aambag
 
 Malugod na tinatanggap ng proyektong ito ang mga ambag at mungkahi. Karamihan sa mga ambag ay nangangailangan na sumang-ayon ka sa isang Contributor License Agreement (CLA) na nagsasaad na may karapatan ka at aktwal mong ibinibigay sa amin ang mga karapatan upang gamitin ang iyong ambag. Para sa karagdagang detalye, bisitahin ang [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

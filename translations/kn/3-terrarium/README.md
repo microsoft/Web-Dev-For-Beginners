@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-08T11:37:01+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "kn"
-}
--->
 ## ನಿಮ್ಮ ಟೆರೇರಿಯಂ ಅನ್ನು ನಿಯೋಜಿಸಿ
 
 ನೀವು ನಿಮ್ಮ ಟೆರೇರಿಯಂ ಅನ್ನು **ಆಜೂರು ಸ್ಥಿರ ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್ಸ್** ಬಳಸಿ ವೆಬಿನಲ್ಲಿ ನಿಯೋಜಿಸಬಹುದು ಅಥವಾ ಪ್ರಕಟಿಸಬಹುದು.

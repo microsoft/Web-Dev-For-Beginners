@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T02:18:14+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "hu"
-}
--->
 # AI keretrendszer
 
 Érezted már úgy, hogy elárasztanak az AI-alkalmazások fejlesztésével járó feladatok? Nem vagy egyedül! Az AI-keretrendszerek olyanok, mint egy svájci bicska az AI fejlesztéshez – erőteljes eszközök, amelyek időt és fejfájást spórolhatnak meg, amikor intelligens alkalmazásokat építesz. Gondolj egy AI-keretrendszerre úgy, mint egy jól szervezett könyvtárra: előre elkészített összetevőket, szabványosított API-kat és okos absztrakciókat kínál, így probléma megoldására koncentrálhatsz ahelyett, hogy az implementációs részletekkel küzdenél.

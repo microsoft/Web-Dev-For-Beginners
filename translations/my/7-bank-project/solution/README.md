@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-08-27T22:02:13+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "my"
-}
--->
 # ဘဏ်အက်ပ်
 
 > ဘဏ်အက်ပ်ပရောဂျက်အတွက် နမူနာဖြေရှင်းနည်း၊ HTML5, CSS နှင့် JavaScript (frameworks သို့မဟုတ် libraries မပါ) အသုံးပြု၍ တည်ဆောက်ထားသည်။

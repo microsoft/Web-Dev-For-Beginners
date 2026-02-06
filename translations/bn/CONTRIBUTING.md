@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-25T21:02:46+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "bn"
-}
--->
 # অবদান রাখা
 
 এই প্রকল্পে অবদান এবং পরামর্শকে স্বাগত জানানো হয়। বেশিরভাগ অবদান রাখার জন্য আপনাকে একটি Contributor License Agreement (CLA)-তে সম্মতি জানাতে হবে, যা নিশ্চিত করে যে আপনার অবদানের অধিকার আপনার আছে এবং আপনি আমাদের তা ব্যবহারের অধিকার প্রদান করছেন। আরও বিস্তারিত জানতে ভিজিট করুন [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon)।

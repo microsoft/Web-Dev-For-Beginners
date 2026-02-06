@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:30:13+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "lt"
-}
--->
 # Pradžia su interneto kūrimu
 
 Šioje mokymo programos dalyje susipažinsite su ne projektiniais principais, kurie yra svarbūs norint tapti profesionaliu kūrėju.

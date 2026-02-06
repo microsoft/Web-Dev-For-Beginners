@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2026-01-08T10:44:48+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "te"
-}
--->
 # జావాస్క్రిప్ట్ పరిచయం
 
 జావాస్క్రిప్ట్ అనేది వెబ్ భాష. ఈ నాలుగు పాఠాల్లో, మీరు దాని మౌలికాలను నేర్చుకుంటారు.

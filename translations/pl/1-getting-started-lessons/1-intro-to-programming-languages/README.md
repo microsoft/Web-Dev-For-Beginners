@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-06T19:58:04+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "pl"
-}
--->
 # Wprowadzenie do języków programowania i nowoczesnych narzędzi dla programistów
  
 Cześć, przyszły programisto! 👋 Czy mogę Ci powiedzieć coś, co wciąż przyprawia mnie o dreszcze za każdym razem? Zaraz odkryjesz, że programowanie to nie tylko komputery – to prawdziwe supermoce pozwalające wcielić w życie najbardziej dzikie pomysły!

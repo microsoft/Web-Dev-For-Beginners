@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2026-01-08T15:27:43+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "kn"
-}
--->
 # ಬ್ರೌಸರ್ ವಿಸ್ತರಣೆ ಯೋಜನೆ ಭಾಗ 3: ಬ್ಯಾಕ್‌ಗ್ರೌಂಡ್ ಟಾಸ್ಕ್‌ಗಳು ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆ ಬಗ್ಗೆ ಮಾಹಿತಿ ಪಡೆದಿರಿ
 
 ```mermaid

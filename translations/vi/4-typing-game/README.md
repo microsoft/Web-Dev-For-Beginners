@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2025-11-06T11:29:56+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "vi"
-}
--->
 # Lập trình hướng sự kiện - Xây dựng trò chơi đánh máy
 
 ```mermaid

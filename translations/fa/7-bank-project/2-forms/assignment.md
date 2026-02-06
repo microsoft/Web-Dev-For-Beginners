@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2026-01-06T10:23:48+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "fa"
-}
--->
 # زیباسازی اپلیکیشن بانکی خود با CSS مدرن
 
 ## مرور پروژه

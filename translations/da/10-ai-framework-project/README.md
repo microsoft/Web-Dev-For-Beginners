@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-06T23:21:28+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "da"
-}
--->
 # AI-rammeværk
 
 Har du nogensinde følt dig overvældet ved at bygge AI-applikationer fra bunden? Du er ikke alene! AI-rammeværk er som at have en schweizerkniv til AI-udvikling – de er kraftfulde værktøjer, der kan spare dig tid og hovedpiner, når du bygger intelligente applikationer. Tænk på et AI-rammeværk som et velorganiseret bibliotek: det tilbyder forbyggede komponenter, standardiserede API'er og smarte abstraktioner, så du kan fokusere på at løse problemer i stedet for at kæmpe med implementeringsdetaljer.

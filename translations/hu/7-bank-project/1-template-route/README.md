@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-07T02:56:04+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "hu"
-}
--->
 # Banking alkalmazás építése 1. rész: HTML sablonok és útvonalak egy webalkalmazásban
 
 ```mermaid

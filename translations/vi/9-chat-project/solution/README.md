@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
-  "translation_date": "2025-09-01T15:34:31+00:00",
-  "source_file": "9-chat-project/solution/README.md",
-  "language_code": "vi"
-}
--->
 # Chạy giải pháp
 
 1. Khởi động [backend](./backend/README.md)

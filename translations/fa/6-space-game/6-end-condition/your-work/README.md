@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-24T12:44:58+00:00",
-  "source_file": "6-space-game/6-end-condition/your-work/README.md",
-  "language_code": "fa"
-}
--->
 این یک جای‌نگهدار است که عمداً خالی گذاشته شده است
 
 **سلب مسئولیت**:  

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
-  "translation_date": "2025-10-03T15:48:30+00:00",
-  "source_file": "Git-Basics/README.md",
-  "language_code": "ko"
-}
--->
 ## 웹 개발 초보자를 위한 GIT 기본👶
 
 ## `Git`이란?

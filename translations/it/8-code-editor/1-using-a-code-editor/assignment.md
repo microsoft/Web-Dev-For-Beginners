@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-22T23:21:58+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "it"
-}
--->
 # Crea un sito web per il curriculum utilizzando VSCode.dev
 
 Trasforma le tue prospettive di carriera creando un sito web professionale per il tuo curriculum che metta in mostra le tue competenze e la tua esperienza in un formato interattivo e moderno. Invece di inviare PDF tradizionali, immagina di fornire ai recruiter un sito web elegante e reattivo che dimostri sia le tue qualifiche che le tue capacità di sviluppo web.

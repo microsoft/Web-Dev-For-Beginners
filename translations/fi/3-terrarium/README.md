@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T01:03:14+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "fi"
-}
--->
 ## Julkaise Terrariumisi
 
 Voit julkaista Terrariumisi verkossa käyttämällä **Azure Static Web Apps** -palvelua.

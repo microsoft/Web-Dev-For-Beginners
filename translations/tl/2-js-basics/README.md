@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T22:45:15+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "tl"
-}
--->
 # Panimula sa JavaScript
 
 Ang JavaScript ay ang wika ng web. Sa apat na araling ito, matutunan mo ang mga pangunahing kaalaman nito.

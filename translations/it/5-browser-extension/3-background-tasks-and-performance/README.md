@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2025-11-04T00:38:23+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "it"
-}
--->
 # Progetto Estensione Browser Parte 3: Scopri le Attività in Background e le Prestazioni
 
 ```mermaid

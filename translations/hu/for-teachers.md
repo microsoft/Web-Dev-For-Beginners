@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:30:25+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "hu"
-}
--->
 ### Oktatóknak
 
 Örömmel használhatja ezt a tananyagot az osztályában. Zökkenőmentesen működik a GitHub Classroommal és a vezető LMS platformokkal, de önálló repóként is használható a diákjaival.

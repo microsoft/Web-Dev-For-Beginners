@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T23:20:22+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "da"
-}
--->
 # Quiz-app
 
 Disse quizzer er før- og efterforelæsningsquizzer for data science-pensumet på https://aka.ms/webdev-beginners

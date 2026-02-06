@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-27T22:25:48+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "ms"
-}
--->
 # Sambungan Penyemak Imbas Carbon Trigger: Kod Siap
 
 Gunakan API CO2 Signal daripada tmrow untuk menjejak penggunaan tenaga elektrik anda dan memaparkan peringatan di penyemak imbas tentang betapa tinggi penggunaan tenaga di kawasan anda. Sambungan penyemak imbas ini membolehkan anda membuat keputusan berdasarkan maklumat tersebut secara ad hoc.

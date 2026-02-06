@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-26T22:47:12+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "sv"
-}
--->
 # Webbläsartillägg Carbon Trigger: Komplett kod
 
 Med hjälp av tmrows CO2-signal-API för att spåra elförbrukning kan du skapa ett webbläsartillägg som ger dig en påminnelse direkt i din webbläsare om elförbrukningen i din region. Att använda detta ad hoc-tillägg hjälper dig att fatta beslut om dina aktiviteter baserat på denna information.

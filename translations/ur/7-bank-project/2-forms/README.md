@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2025-11-03T13:26:00+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "ur"
-}
--->
 # بینکنگ ایپ بنائیں حصہ 2: لاگ ان اور رجسٹریشن فارم بنائیں
 
 ```mermaid

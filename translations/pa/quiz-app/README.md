@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T01:12:58+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "pa"
-}
--->
 # ਕਵਿਜ ਐਪ
 
 ਇਹ ਕਵਿਜ ਡਾਟਾ ਸਾਇੰਸ ਕਰੀਕੁਲਮ ਲਈ ਲੈਕਚਰ ਤੋਂ ਪਹਿਲਾਂ ਅਤੇ ਬਾਅਦ ਦੇ ਕਵਿਜ ਹਨ, ਜੋ https://aka.ms/webdev-beginners 'ਤੇ ਉਪਲਬਧ ਹਨ।

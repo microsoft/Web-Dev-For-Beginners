@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T00:42:53+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "no"
-}
--->
 # Bygg en bankapp del 3: Metoder for innhenting og bruk av data
 
 Tenk på Enterprise-datamaskinen i Star Trek – når kaptein Picard spør om statusen til skipet, dukker informasjonen opp umiddelbart uten at hele grensesnittet slår seg av og bygger seg opp på nytt. Den sømløse informasjonsflyten er akkurat det vi bygger her med dynamisk datainnhenting.

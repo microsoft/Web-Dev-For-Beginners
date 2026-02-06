@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2026-01-08T11:10:48+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "kn"
-}
--->
 # ಬಾವುಳುವಂತಹ ಒಂದು ಬಾಹ್ಯಾಕಾಶ ಆಟವನ್ನು ನಿರ್ಮಿಸಿ
 
 ಮೆಚ್ಚುಗೆಯಾದ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಮೂಲಭೂತಗಳನ್ನು ಕಲಿಸಲು ಒಂದು ಬಾಹ್ಯಾಕಾಶ ಆಟ

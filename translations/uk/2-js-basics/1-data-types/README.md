@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "672b0bb6e8b431075f3bdb7130590d2d",
-  "translation_date": "2025-11-06T13:12:22+00:00",
-  "source_file": "2-js-basics/1-data-types/README.md",
-  "language_code": "uk"
-}
--->
 # Основи JavaScript: Типи даних
 
 ![Основи JavaScript - Типи даних](../../../../translated_images/uk/webdev101-js-datatypes.4cc470179730702c.webp)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-04T02:13:56+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "he"
-}
--->
 # מבוא לשפות תכנות וכלי פיתוח מודרניים
 
 היי שם, מפתח עתידי! 👋 אפשר לספר לך משהו שעדיין גורם לי להתרגש כל יום מחדש? אתה עומד לגלות שתכנות זה לא רק מחשבים – זה כמו לקבל כוחות-על שמאפשרים לך להפוך את הרעיונות הכי פרועים שלך למציאות!

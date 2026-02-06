@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T02:36:26+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "hu"
-}
--->
 # Kódszerkesztő használata: VSCode.dev mesterfokon
 
 Emlékszel *Mátrix*-ban, amikor Neo-nak egy hatalmas számítógépes terminálhoz kellett csatlakoznia, hogy elérje a digitális világot? A mai webfejlesztő eszközök ennek az ellenkezője – hihetetlenül erőteljes képességek, amik bárhonnan hozzáférhetők. A VSCode.dev egy böngésző alapú kódszerkesztő, amely profi fejlesztői eszközöket hoz bármely internetkapcsolattal rendelkező eszközre.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-27T22:18:56+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "sl"
-}
--->
 # Carbon Trigger Brskalni vtičnik: Končna koda
 
 Uporaba tmrow API-ja C02 Signal za sledenje porabi električne energije, izdelava brskalnega vtičnika, ki vas opomni, kako obremenjena je poraba električne energije v vašem območju. Uporaba tega vtičnika vam bo pomagala sprejemati odločitve o vaših dejavnostih na podlagi teh informacij.

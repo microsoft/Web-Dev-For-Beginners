@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T22:35:47+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "sk"
-}
--->
 # Úvod do JavaScriptu
 
 JavaScript je jazyk webu. V týchto štyroch lekciách sa naučíte jeho základy.

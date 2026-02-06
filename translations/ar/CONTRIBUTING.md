@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-25T21:02:25+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "ar"
-}
--->
 # المساهمة
 
 يرحب هذا المشروع بالمساهمات والاقتراحات. تتطلب معظم المساهمات منك الموافقة على اتفاقية ترخيص المساهم (CLA) التي تؤكد أن لديك الحق في، وبالفعل تقوم، بمنحنا الحقوق لاستخدام مساهمتك. لمزيد من التفاصيل، قم بزيارة [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

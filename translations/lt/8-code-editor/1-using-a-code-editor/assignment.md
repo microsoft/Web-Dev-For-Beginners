@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-07T11:21:02+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "lt"
-}
--->
 # Sukurkite gyvenimo aprašymo svetainę naudodami VSCode.dev
 
 Patobulinkite savo karjeros galimybes kurdami profesionalią gyvenimo aprašymo svetainę, kuri interaktyviu ir šiuolaikišku formatu pristato jūsų įgūdžius ir patirtį. Vietoje tradicinių PDF dokumentų, įsivaizduokite, kad įdarbinimo specialistams pateikiate elegantišką, pritaikytą prie ekranų svetainę, kuri demonstruoja tiek jūsų kvalifikacijas, tiek jūsų svetainių kūrimo gebėjimus.

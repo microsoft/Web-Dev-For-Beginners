@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T22:40:29+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "my"
-}
--->
 # Quiz app
 
 ဒီ quiz တွေက https://aka.ms/webdev-beginners မှာရှိတဲ့ data science curriculum အတွက် သင်ခန်းစာမတိုင်မီနှင့်ပြီးနောက် quiz တွေဖြစ်ပါတယ်။

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2026-01-08T16:36:56+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "ml"
-}
--->
 # നിങ്ങളുടെ ബാങ്ക് ആപ്പ് ആധുനിക CSS ഉപയോഗിച്ച് സ്റ്റൈൽ ചെയ്യുക
 
 ## പ്രോജക്ട് അവലോകനം

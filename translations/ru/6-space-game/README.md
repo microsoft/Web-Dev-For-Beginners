@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-25T22:01:09+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "ru"
-}
--->
 # Создание космической игры
 
 Космическая игра для изучения более сложных основ JavaScript

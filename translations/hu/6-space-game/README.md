@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-28T03:52:11+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "hu"
-}
--->
 # Készíts egy Űrjátékot
 
 Egy űrjáték, amely segít elsajátítani a haladó JavaScript alapokat

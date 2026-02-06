@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2025-08-24T00:16:11+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "ja"
-}
--->
 # [レッスンのトピック]
 
 ![ここに動画を埋め込む](../../../lesson-template/video-url)

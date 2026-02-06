@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:27:27+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "pl"
-}
--->
 # Wprowadzenie do tworzenia stron internetowych
 
 W tej części programu nauczania zostaniesz zapoznany z koncepcjami niezwiązanymi z projektami, które są ważne, aby stać się profesjonalnym programistą.

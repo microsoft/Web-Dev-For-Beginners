@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "232d592791465c1678cab3a2bb6cd3e8",
-  "translation_date": "2026-01-06T16:25:20+00:00",
-  "source_file": "6-space-game/6-end-condition/assignment.md",
-  "language_code": "hi"
-}
--->
 # एक नमूना गेम बनाएं
 
 ## असाइनमेंट अवलोकन

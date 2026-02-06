@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:42:19+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "ro"
-}
--->
 ### Pentru educatori
 
 Sunteți bineveniți să utilizați acest curriculum în sala de clasă. Funcționează perfect cu GitHub Classroom și platformele LMS de top și poate fi folosit și ca un depozit independent împreună cu elevii.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-07T02:22:25+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "hu"
-}
--->
 # Chat asszisztens építése MI segítségével
 
 Emlékszel a Star Trek-re, amikor a legénység lazán beszélgetett a hajó számítógépével, bonyolult kérdéseket tett fel neki, és átgondolt válaszokat kapott? Ami a 1960-as években tiszta sci-fi-nek tűnt, ma már olyan dolog, amit ismert webes technológiákkal megépíthetsz.

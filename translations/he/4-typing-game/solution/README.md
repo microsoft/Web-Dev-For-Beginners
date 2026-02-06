@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-27T21:07:59+00:00",
-  "source_file": "4-typing-game/solution/README.md",
-  "language_code": "he"
-}
--->
 זהו טקסט זמני, הושאר ריק בכוונה
 
 ---

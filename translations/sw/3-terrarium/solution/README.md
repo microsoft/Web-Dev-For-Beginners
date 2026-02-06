@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-28T04:15:22+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "sw"
-}
--->
 # Terrarium Yangu: Mradi wa kujifunza kuhusu HTML, CSS, na udhibiti wa DOM kwa kutumia JavaScript 🌵🌱
 
 Mradi mdogo wa kuburudisha akili kwa kuburuta na kudondosha. Kwa kutumia HTML, JS, na CSS kidogo, unaweza kujenga kiolesura cha wavuti, kukipamba, na kuongeza mwingiliano.

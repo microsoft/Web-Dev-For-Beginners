@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-03T13:47:42+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "tl"
-}
--->
 # Panimula sa Mga Wika ng Programming at Modernong Developer Tools
 
 Kamusta, hinaharap na developer! 👋 Pwede ba akong magbahagi ng isang bagay na palaging nagbibigay sa akin ng kilig araw-araw? Malapit mo nang matuklasan na ang programming ay hindi lang tungkol sa mga computer – ito ay parang pagkakaroon ng superpowers para maisakatuparan ang mga pinakamalupit mong ideya!

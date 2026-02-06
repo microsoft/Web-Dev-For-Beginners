@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e6d0f456dfc22afb41bbdefeb5ec179d",
-  "translation_date": "2026-01-08T19:49:09+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/assignment.md",
-  "language_code": "pcm"
-}
--->
 # Comprehensive Website Accessibility Audit
 
 ## Instructions

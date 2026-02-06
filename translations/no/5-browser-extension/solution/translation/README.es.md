@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-26T22:47:32+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "no"
-}
--->
 # Nettleserutvidelsen Carbon Trigger: Fullstendig kode
 
 Ved å bruke CO2 Signal API fra tmrow for å spore strømforbruk, kan du lage en nettleserutvidelse som gir deg en påminnelse direkte i nettleseren om strømforbruket i din region. Bruken av denne spesialtilpassede utvidelsen vil hjelpe deg med å ta beslutninger om aktivitetene dine basert på denne informasjonen.

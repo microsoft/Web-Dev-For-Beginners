@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-04T00:36:49+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "it"
-}
--->
 # Costruire un Gioco Spaziale Parte 4: Aggiungere un Laser e Rilevare le Collisioni
 
 ```mermaid

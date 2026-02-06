@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T02:08:41+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "sw"
-}
--->
 # Utangulizi wa Lugha za Programu na Vifaa vya Kisasa vya Mwaendelezaji
 
 Hujambo, mtaalamu wa kesho! 👋 Naweza kukuambia kitu kinachoniletea baridi kila siku? Unakaribia kugundua kuwa programu siyo tu kuhusu kompyuta – ni kuhusu kuwa na nguvu za kichawi kuleta mawazo yako shupavu katika maisha!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2026-01-07T12:49:08+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "ta"
-}
--->
 # முடிவெடுப்பது: மாணவர் மதிப்பெண் செயலி
 
 ## கற்றல் குறிக்கோள்கள்

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2026-01-06T22:00:39+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "th"
-}
--->
 # โครงการส่วนขยายเบราว์เซอร์ ตอนที่ 1: ทุกอย่างเกี่ยวกับเบราว์เซอร์
 
 ```mermaid

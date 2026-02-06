@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T22:52:05+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "sl"
-}
--->
 # Aplikacija za kvize
 
 Ti kvizi so predhodni in zaključni kvizi za učni načrt podatkovne znanosti na https://aka.ms/webdev-beginners

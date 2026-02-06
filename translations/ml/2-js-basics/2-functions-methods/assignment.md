@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8328f58f4593b4671656ff8f4b2edbd9",
-  "translation_date": "2026-01-08T12:30:23+00:00",
-  "source_file": "2-js-basics/2-functions-methods/assignment.md",
-  "language_code": "ml"
-}
--->
 # ഫൺ വിത്ത് ഫങ്ഷൻസ്
 
 ## നിർദേശം

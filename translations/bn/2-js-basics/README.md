@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-25T21:32:11+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "bn"
-}
--->
 # জাভাস্ক্রিপ্টের পরিচিতি
 
 জাভাস্ক্রিপ্ট হলো ওয়েবের ভাষা। এই চারটি পাঠে, আপনি এর মৌলিক বিষয়গুলো শিখবেন।

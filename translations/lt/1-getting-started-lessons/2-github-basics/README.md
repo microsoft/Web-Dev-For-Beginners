@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-07T12:24:48+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "lt"
-}
--->
 # Įvadas į GitHub
 
 Sveikas, būsimasis programuotojau! 👋 Pasiruošęs prisijungti prie milijonų programuotojų visame pasaulyje? Aš nuoširdžiai džiaugiuosi galėdamas pristatyti tau GitHub – galvok apie tai kaip apie socialinį tinklą programuotojams, tik vietoje to, kad dalintumėtės savo pietų nuotraukomis, mes dalinamės kodu ir kartu statome neįtikėtinus dalykus!

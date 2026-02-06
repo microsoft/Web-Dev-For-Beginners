@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-25T22:01:25+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "ur"
-}
--->
 # خلائی کھیل بنائیں
 
 ایک خلائی کھیل جو جاوا اسکرپٹ کے مزید جدید اصول سکھانے کے لیے بنایا گیا ہے

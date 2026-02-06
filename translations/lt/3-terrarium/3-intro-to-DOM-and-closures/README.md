@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
-  "translation_date": "2026-01-07T12:08:06+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
-  "language_code": "lt"
-}
--->
 # Terariumo projektas 3 dalis: DOM manipuliacija ir JavaScript uždarymai
 
 ```mermaid

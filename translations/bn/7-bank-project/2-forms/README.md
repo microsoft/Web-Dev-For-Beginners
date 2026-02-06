@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2025-11-03T22:54:47+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "bn"
-}
--->
 # ব্যাংকিং অ্যাপ তৈরি করুন পার্ট ২: লগইন এবং রেজিস্ট্রেশন ফর্ম তৈরি করুন
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:25:26+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "de"
-}
--->
 # Einstieg in die Webentwicklung
 
 In diesem Abschnitt des Lehrplans werden Sie mit nicht projektbezogenen Konzepten vertraut gemacht, die wichtig sind, um ein professioneller Entwickler zu werden.

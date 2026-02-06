@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-27T21:56:50+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "uk"
-}
--->
 # Участь у проекті
 
 Цей проєкт вітає внески та пропозиції. Більшість внесків вимагають від вас погодитися з Угодою про ліцензування внесків (Contributor License Agreement, CLA), яка підтверджує, що ви маєте право і дійсно надаєте нам права на використання вашого внеску. Для отримання додаткової інформації відвідайте [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

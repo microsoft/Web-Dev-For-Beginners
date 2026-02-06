@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-03T14:04:29+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Space Game Bahagi 2: I-drawing ang Hero at Monsters sa Canvas
 
 ```mermaid

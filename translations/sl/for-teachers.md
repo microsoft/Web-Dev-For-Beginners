@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:57:24+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "sl"
-}
--->
 ### Za učitelje
 
 Vabljeni, da uporabite ta učni načrt v svojem razredu. Odlično deluje z GitHub Classroom in vodilnimi platformami LMS, prav tako pa ga lahko uporabljate kot samostojno repozitorij s svojimi učenci.

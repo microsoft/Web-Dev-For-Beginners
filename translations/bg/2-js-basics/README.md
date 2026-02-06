@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-28T08:02:52+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "bg"
-}
--->
 # Въведение в JavaScript
 
 JavaScript е езикът на уеба. В тези четири урока ще научите основите му.

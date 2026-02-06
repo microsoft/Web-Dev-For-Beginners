@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-28T07:29:07+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "bg"
-}
--->
 # Принос
 
 Този проект приветства приноси и предложения. Повечето приноси изискват от вас да се съгласите с Лицензионно споразумение за приносител (CLA), което декларира, че имате правото и наистина предоставяте ни правата да използваме вашия принос. За повече подробности посетете [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

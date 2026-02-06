@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2025-11-03T15:06:41+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "mr"
-}
--->
 # ब्राउझर एक्स्टेंशन प्रोजेक्ट भाग 2: API कॉल करा, लोकल स्टोरेज वापरा
 
 ```mermaid

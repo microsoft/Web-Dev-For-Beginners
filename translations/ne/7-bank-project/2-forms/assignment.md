@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2025-10-22T17:09:56+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "ne"
-}
--->
 # आधुनिक CSS प्रयोग गरेर आफ्नो बैंक एपलाई स्टाइल गर्नुहोस्
 
 ## परियोजना अवलोकन

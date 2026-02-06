@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2025-10-22T16:25:08+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "mr"
-}
--->
 # आपल्या बँक अ‍ॅपला आधुनिक CSS सह स्टाइल करा
 
 ## प्रकल्पाचा आढावा

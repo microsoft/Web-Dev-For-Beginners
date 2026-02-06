@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-06T14:58:19+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "ko"
-}
--->
 # VSCode.dev를 사용하여 이력서 웹사이트 만들기
 
 인터랙티브하고 현대적인 형식으로 여러분의 기술과 경력을 보여주는 전문 이력서 웹사이트를 만들어 경력 전망을 향상시키세요. 전통적인 PDF 대신, 채용 담당자에게 여러분의 자격과 웹 개발 능력을 모두 보여주는 세련되고 반응형인 웹사이트를 제공하는 것을 상상해 보세요.

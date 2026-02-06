@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:26:53+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "ne"
-}
--->
 # वेब विकास सुरु गर्दै
 
 यस पाठ्यक्रमको यस भागमा, तपाईंलाई पेशेवर विकासकर्ता बन्नका लागि महत्त्वपूर्ण तर गैर-परियोजना आधारित अवधारणाहरूको परिचय दिइनेछ।

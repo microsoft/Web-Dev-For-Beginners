@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-04T00:46:36+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "tr"
-}
--->
 # Programlama Dillerine ve Modern Geliştirici Araçlarına Giriş
 
 Merhaba, geleceğin geliştiricisi! 👋 Sana her gün beni heyecanlandıran bir şey söyleyebilir miyim? Programlamanın sadece bilgisayarlarla ilgili olmadığını, aynı zamanda en çılgın fikirlerini hayata geçirebilmek için gerçek süper güçlere sahip olmakla ilgili olduğunu keşfetmek üzeresin!

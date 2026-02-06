@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2025-11-04T01:01:01+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "tr"
-}
--->
 # Olay Tabanlı Programlama - Bir Yazma Oyunu Oluşturun
 
 ```mermaid

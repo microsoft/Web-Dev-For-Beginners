@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2026-01-06T23:37:35+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "da"
-}
--->
 # Byg et rumspil del 2: Tegn helt og monstre på Canvas
 
 ```mermaid

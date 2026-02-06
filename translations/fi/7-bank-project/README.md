@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-27T20:54:43+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "fi"
-}
--->
 # :dollar: Rakenna Pankki
 
 Tässä projektissa opit rakentamaan kuvitteellisen pankin. Näissä oppitunneissa annetaan ohjeita siitä, miten verkkosovellus suunnitellaan ja reitit määritetään, miten lomakkeita rakennetaan, tilaa hallitaan ja tietoja haetaan API:sta, josta voit hakea pankin tiedot.

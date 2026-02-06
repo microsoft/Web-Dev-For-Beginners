@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T01:12:07+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "bn"
-}
--->
 # কুইজ অ্যাপ
 
 এই কুইজগুলো ডেটা সায়েন্স কারিকুলামের প্রাক-লেকচার এবং পোস্ট-লেকচার কুইজ, যা পাওয়া যাবে https://aka.ms/webdev-beginners এ।

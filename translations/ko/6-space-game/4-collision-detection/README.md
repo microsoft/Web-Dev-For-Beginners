@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2026-01-06T15:00:44+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "ko"
-}
--->
 
 - [ ] 충돌 이벤트를 실시간으로 추적하기 위해 `console.log` 문 추가하기
 

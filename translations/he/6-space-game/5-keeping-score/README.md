@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2025-11-04T02:39:47+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "he"
-}
--->
 # בנה משחק חלל חלק 5: ניקוד וחיים
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-27T22:12:23+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "hr"
-}
--->
 # Izrada ekstenzije za preglednik
 
 Izrada ekstenzija za preglednike zabavan je i zanimljiv način razmišljanja o performansama vaših aplikacija dok gradite drugačiju vrstu web resursa. Ovaj modul uključuje lekcije o tome kako preglednici funkcioniraju, kako implementirati ekstenziju za preglednik, kako izraditi obrazac, pozvati API, koristiti lokalnu pohranu te kako procijeniti performanse vaše web stranice i poboljšati ih.

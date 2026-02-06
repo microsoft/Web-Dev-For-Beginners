@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7f2c48e04754724123ea100a822765e5",
-  "translation_date": "2026-01-06T15:41:10+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/README.md",
-  "language_code": "ko"
-}
--->
 # 접근성 높은 웹페이지 만들기
 
 ![접근성에 관한 모든 것](../../../../translated_images/ko/webdev101-a11y.8ef3025c858d897a.webp)

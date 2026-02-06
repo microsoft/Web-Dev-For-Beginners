@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-28T11:28:12+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "lt"
-}
--->
 # Anglies pėdsako naršyklės plėtinys: Baigtas kodas
 
 Naudodami tmrow CO2 Signal API, sukursime naršyklės plėtinį, kuris primins, kiek energijos sunaudojama jūsų regione. Šis plėtinys leis stebėti elektros energijos suvartojimą ir priimti sprendimus, pagrįstus šia informacija.

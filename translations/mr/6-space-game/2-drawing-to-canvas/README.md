@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-03T14:57:22+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "mr"
-}
--->
 # स्पेस गेम तयार करा भाग 2: हिरो आणि मॉन्स्टर्स कॅनव्हासवर काढा
 
 ```mermaid

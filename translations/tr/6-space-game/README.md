@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-25T22:02:32+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "tr"
-}
--->
 # Uzay Oyunu Yapımı
 
 Daha ileri düzey JavaScript temellerini öğretmek için bir uzay oyunu

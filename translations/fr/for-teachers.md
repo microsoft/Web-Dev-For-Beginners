@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T08:22:54+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "fr"
-}
--->
 ### Pour les enseignants
 
 Vous êtes invités à utiliser ce programme dans votre classe. Il fonctionne parfaitement avec GitHub Classroom et les principales plateformes LMS, et peut également être utilisé comme un dépôt autonome avec vos élèves.

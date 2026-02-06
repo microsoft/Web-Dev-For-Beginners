@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2026-01-08T11:40:34+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "kn"
-}
--->
 # ವೆಬ್ ಅಭಿವೃದ್ಧಿಗೆ ಪ್ರಾರಂಭ
 
 ಈ ಪಠ್ಯದ ವಿಭಾಗದಲ್ಲಿ, ವೃತ್ತಿಪರ ಡೆವೆಲಪರ್ ಆಗಲು ಮುಖ್ಯವಾದ ಪ್ರಾಜೆಕ್ಟ್ ಆಧಾರಿತವಲ್ಲದ ಕಲ್ಪನೆಗಳಿಗೆ ಪರಿಚಯ ಮಾಡಲಾಗುತ್ತದೆ.

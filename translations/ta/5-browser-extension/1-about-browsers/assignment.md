@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2026-01-07T13:23:48+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "ta"
-}
--->
 # பணித் தலைவர்: உங்கள் உலாவி விரிவாக்கத்தை மறுவடிவமைக்கவும்
 
 ## முன்னோட்டம்

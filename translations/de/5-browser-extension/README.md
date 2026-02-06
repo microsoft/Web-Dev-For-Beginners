@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-24T13:07:42+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "de"
-}
--->
 # Erstellen einer Browser-Erweiterung
 
 Das Erstellen von Browser-Erweiterungen ist eine unterhaltsame und interessante Möglichkeit, über die Leistung Ihrer Apps nachzudenken, während Sie eine andere Art von Web-Asset entwickeln. Dieses Modul enthält Lektionen darüber, wie Browser funktionieren und wie man eine Browser-Erweiterung bereitstellt, wie man ein Formular erstellt, eine API aufruft und lokalen Speicher verwendet, sowie wie man die Leistung Ihrer Website bewertet und verbessert.

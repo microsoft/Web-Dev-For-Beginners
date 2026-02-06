@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-06T15:57:31+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "hi"
-}
--->
 ## अपना टेरियम तैनात करें
 
 आप **Azure Static Web Apps** का उपयोग करके अपने टेरियम को वेब पर तैनात या प्रकाशित कर सकते हैं।

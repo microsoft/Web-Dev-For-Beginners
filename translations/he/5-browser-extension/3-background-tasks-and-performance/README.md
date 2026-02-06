@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2025-11-04T02:40:18+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "he"
-}
--->
 # פרויקט הרחבת דפדפן חלק 3: למדו על משימות רקע וביצועים
 
 ```mermaid

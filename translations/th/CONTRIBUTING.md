@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-26T21:27:24+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "th"
-}
--->
 # การมีส่วนร่วม
 
 โครงการนี้ยินดีต้อนรับการมีส่วนร่วมและข้อเสนอแนะ การมีส่วนร่วมส่วนใหญ่ต้องการให้คุณตกลงในข้อตกลงใบอนุญาตผู้มีส่วนร่วม (CLA) ซึ่งระบุว่าคุณมีสิทธิ์และได้มอบสิทธิ์ให้เราใช้สิ่งที่คุณมีส่วนร่วม สำหรับรายละเอียดเพิ่มเติม โปรดเยี่ยมชม [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon)

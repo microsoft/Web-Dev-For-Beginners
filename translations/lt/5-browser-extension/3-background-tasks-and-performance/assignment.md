@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a203e560e58ccc6ba68bffc40c7c8676",
-  "translation_date": "2026-01-07T11:44:18+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/assignment.md",
-  "language_code": "lt"
-}
--->
 # Svetainės analizė dėl našumo
 
 ## Užduoties apžvalga

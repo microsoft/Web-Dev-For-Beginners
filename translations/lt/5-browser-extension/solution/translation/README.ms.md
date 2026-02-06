@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-28T11:28:54+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "lt"
-}
--->
 # Naršyklės plėtinys Carbon Trigger: Pilnas kodas
 
 Naudojant tmrow CO2 Signal API, galima stebėti elektros energijos suvartojimą ir sukurti naršyklės plėtinį, kuris įspės jus apie jūsų regiono elektros energijos naudojimo intensyvumą. Šis plėtinys padės priimti sprendimus dėl jūsų veiklos, remiantis šia informacija.

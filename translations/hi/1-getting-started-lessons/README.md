@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:26:31+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "hi"
-}
--->
 # वेब विकास के साथ शुरुआत
 
 इस पाठ्यक्रम के इस भाग में, आपको गैर-प्रोजेक्ट आधारित अवधारणाओं से परिचित कराया जाएगा जो एक पेशेवर डेवलपर बनने के लिए महत्वपूर्ण हैं।

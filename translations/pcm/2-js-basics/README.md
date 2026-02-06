@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2026-01-08T10:44:35+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "pcm"
-}
--->
 # Introduction to JavaScript
 
 JavaScript na di language wey web dey use. For dis four lessons, you go learn im basics.

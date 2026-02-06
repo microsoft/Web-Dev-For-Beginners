@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "81f292dbda01685b91735e0398dc0504",
-  "translation_date": "2026-01-08T14:14:35+00:00",
-  "source_file": "6-space-game/5-keeping-score/assignment.md",
-  "language_code": "ml"
-}
--->
 # സ്കോറിംഗ് ഗെയിം നിർമ്മിക്കുക
 
 ## നിര്‍ദ്ദേശങ്ങള്‍

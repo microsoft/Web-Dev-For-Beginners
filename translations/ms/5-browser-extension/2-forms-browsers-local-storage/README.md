@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2025-11-06T12:23:29+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "ms"
-}
--->
 # Projek Sambungan Pelayar Bahagian 2: Panggil API, gunakan Penyimpanan Tempatan
 
 ```mermaid

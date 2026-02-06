@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:00:12+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "no"
-}
--->
 ### For lærere
 
 Du er velkommen til å bruke dette pensumet i klasserommet ditt. Det fungerer sømløst med GitHub Classroom og ledende LMS-plattformer, og det kan også brukes som et frittstående repo med studentene dine.

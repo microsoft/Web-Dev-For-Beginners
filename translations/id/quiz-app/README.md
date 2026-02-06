@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T23:03:56+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "id"
-}
--->
 # Aplikasi Kuis
 
 Kuis-kuis ini adalah kuis sebelum dan sesudah kuliah untuk kurikulum data science di https://aka.ms/webdev-beginners

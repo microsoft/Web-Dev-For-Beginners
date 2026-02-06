@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
-  "translation_date": "2025-10-24T22:43:08+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/assignment.md",
-  "language_code": "bg"
-}
--->
 # HTML Практическо задание: Създаване на макет на блог
 
 ## Цели на обучението

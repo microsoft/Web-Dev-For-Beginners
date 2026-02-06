@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2025-08-24T00:16:17+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "ko"
-}
--->
 # [강의 주제]
 
 ![여기에 비디오 삽입](../../../lesson-template/video-url)

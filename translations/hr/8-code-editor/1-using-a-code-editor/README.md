@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T08:57:16+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "hr"
-}
--->
 # Korištenje urednika koda: Ovladavanje VSCode.dev
 
 Sjetite se u *The Matrixu* kada se Neo morao spojiti na masivni računalni terminal kako bi pristupio digitalnom svijetu? Današnji alati za web razvoj su sasvim druga priča – nevjerojatno moćne mogućnosti dostupne s bilo kojeg mjesta. VSCode.dev je uređivač koda baziran u pregledniku koji donosi profesionalne razvojne alate na bilo koji uređaj s internet vezom.

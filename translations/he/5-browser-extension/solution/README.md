@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-27T20:51:45+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "he"
-}
--->
 # Carbon Trigger Browser Extension: קוד מושלם
 
 באמצעות ה-API של CO2 Signal של tmrow למעקב אחר צריכת חשמל, ניתן לבנות תוסף לדפדפן שיזכיר לכם ישירות בדפדפן עד כמה צריכת החשמל באזורכם כבדה. שימוש בתוסף זה באופן מזדמן יעזור לכם לקבל החלטות מושכלות על פעילויותיכם בהתבסס על מידע זה.

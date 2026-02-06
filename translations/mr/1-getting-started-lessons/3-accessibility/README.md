@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7f2c48e04754724123ea100a822765e5",
-  "translation_date": "2025-11-03T14:24:00+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/README.md",
-  "language_code": "mr"
-}
--->
 # प्रवेशयोग्य वेबपृष्ठ तयार करणे
 
 ![सर्व काही प्रवेशयोग्यतेबद्दल](../../../../translated_images/mr/webdev101-a11y.8ef3025c858d897a.webp)

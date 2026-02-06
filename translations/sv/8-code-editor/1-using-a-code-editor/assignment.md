@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-23T21:29:19+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "sv"
-}
--->
 # Skapa en CV-webbplats med VSCode.dev
 
 Förbättra dina karriärmöjligheter genom att bygga en professionell CV-webbplats som visar dina färdigheter och erfarenheter i ett interaktivt och modernt format. Istället för att skicka traditionella PDF-filer, tänk dig att ge rekryterare en snygg, responsiv webbplats som både demonstrerar dina kvalifikationer och dina webbutvecklingskunskaper.

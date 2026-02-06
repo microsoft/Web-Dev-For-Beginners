@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c8fc39a014d08247c082878122e2ba73",
-  "translation_date": "2026-01-07T13:13:14+00:00",
-  "source_file": "6-space-game/1-introduction/assignment.md",
-  "language_code": "ta"
-}
--->
 # ஒரு விளையாட்டை உருவாக்கு: வடிவமைப்பு படிமுறைகள் பயன்படுத்தல்
 
 ## பணியின் மேம்பாடு

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T20:12:38+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "he"
-}
--->
 # מבוא ל-JavaScript
 
 JavaScript היא שפת האינטרנט. בארבעה שיעורים אלו תלמדו את היסודות שלה.

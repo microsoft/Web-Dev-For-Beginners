@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-23T22:36:32+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "ko"
-}
--->
 # 나의 테라리움: HTML, CSS, 그리고 JavaScript를 사용한 DOM 조작 학습 프로젝트 🌵🌱
 
 작고 간단한 드래그 앤 드롭 코드 명상. 약간의 HTML, JS, 그리고 CSS만으로 웹 인터페이스를 만들고, 스타일을 입히고, 상호작용을 추가할 수 있습니다.

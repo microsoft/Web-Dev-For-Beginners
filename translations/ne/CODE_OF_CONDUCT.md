@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-25T20:58:23+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "ne"
-}
--->
 # माइक्रोसफ्ट ओपन सोर्स आचारसंहिता
 
 यस परियोजनाले [माइक्रोसफ्ट ओपन सोर्स आचारसंहिता](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon) अपनाएको छ।

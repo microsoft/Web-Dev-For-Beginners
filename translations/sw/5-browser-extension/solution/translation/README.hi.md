@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-28T03:45:59+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "sw"
-}
--->
 # Kiongezo cha Kivinjari cha Carbon Trigger: Msimbo Uliokamilika
 
 Kutumia API ya CO2 Signal ya tmrow kufuatilia matumizi ya umeme, tunajenga kiongezo cha kivinjari ili kukukumbusha jinsi matumizi ya umeme katika eneo lako yalivyo mazito kupitia kivinjari chako. Kutumia kiongezo hiki kwa muda mfupi kutakusaidia kufanya maamuzi kuhusu shughuli zako kulingana na taarifa hii.

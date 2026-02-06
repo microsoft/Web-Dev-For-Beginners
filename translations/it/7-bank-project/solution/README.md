@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-08-26T00:40:01+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "it"
-}
--->
 # App bancaria
 
 > Soluzione di esempio per il progetto dell'app bancaria, sviluppata con HTML5, CSS e JavaScript puro (senza l'uso di framework o librerie).

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
-  "translation_date": "2025-08-28T11:27:08+00:00",
-  "source_file": "5-browser-extension/solution/README.md",
-  "language_code": "lt"
-}
--->
 # Naršyklės plėtinys „Carbon Trigger“: Baigtas kodas
 
 Naudojant tmrow C02 Signal API, skirtą stebėti elektros energijos suvartojimą, sukurkite naršyklės plėtinį, kad galėtumėte gauti priminimą tiesiai savo naršyklėje apie tai, kokia intensyvi yra jūsų regiono elektros energijos apkrova. Naudodami šį plėtinį ad hoc būdu, galėsite priimti sprendimus dėl savo veiklos, remdamiesi šia informacija.

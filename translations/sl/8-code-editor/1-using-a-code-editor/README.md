@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T10:00:00+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "sl"
-}
--->
 # Uporaba urejevalnika kode: obvladovanje VSCode.dev
 
 Se spomnite v *Matriki*, ko se je Neo moral vklopiti v ogromno računalniško terminalno napravo, da je dostopal do digitalnega sveta? Današnja orodja za spletni razvoj so popolna nasprotje – izjemno zmogljive možnosti, dostopne od kjerkoli. VSCode.dev je brskalniški urejevalnik kode, ki prinaša profesionalna razvojna orodja na katerokoli napravo z internetno povezavo.

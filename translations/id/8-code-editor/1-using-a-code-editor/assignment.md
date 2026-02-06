@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T13:58:55+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "id"
-}
--->
 # Membuat Website Resume Menggunakan VSCode.dev
 
 Tingkatkan prospek karier Anda dengan membangun website resume profesional yang menampilkan keterampilan dan pengalaman Anda dalam format interaktif dan modern. Alih-alih mengirimkan PDF tradisional, bayangkan memberikan kepada perekrut sebuah website yang responsif dan menarik yang menunjukkan kualifikasi Anda sekaligus kemampuan pengembangan web Anda.

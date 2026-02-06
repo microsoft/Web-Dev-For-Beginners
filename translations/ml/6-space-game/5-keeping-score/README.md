@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2026-01-08T14:10:21+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "ml"
-}
--->
 # സ്പെയ്‌സ് ഗെയിം പണി 5: സ്കോറിംഗ് ആൻഡ് ലൈവ്‌സ്
 
 ```mermaid

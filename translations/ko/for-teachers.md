@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T09:04:50+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "ko"
-}
--->
 ### 교육자를 위한 안내
 
 이 커리큘럼은 교실에서 자유롭게 활용하실 수 있습니다. GitHub Classroom 및 주요 LMS 플랫폼과 원활하게 작동하며, 학생들과 함께 독립적인 저장소로도 사용할 수 있습니다.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-27T20:27:56+00:00",
-  "source_file": "6-space-game/4-collision-detection/solution/README.md",
-  "language_code": "he"
-}
--->
 זהו מציין מיקום, הושאר ריק בכוונה
 
 ---

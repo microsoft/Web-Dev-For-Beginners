@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df0dcecddcd28ea8cbf6ede0ad57d673",
-  "translation_date": "2025-10-23T01:01:39+00:00",
-  "source_file": "7-bank-project/1-template-route/assignment.md",
-  "language_code": "nl"
-}
--->
 # Verbeter de Routering
 
 ## Instructies

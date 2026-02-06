@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-06T11:14:44+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "vi"
-}
--->
 # Giới thiệu về Ngôn ngữ Lập trình và Công cụ Phát triển Hiện đại
 
 Chào bạn, nhà phát triển tương lai! 👋 Tôi có thể nói với bạn điều gì đó khiến tôi vẫn còn nổi da gà mỗi ngày không? Bạn sắp khám phá ra rằng lập trình không chỉ là về máy tính – mà còn là siêu năng lực thực sự để biến những ý tưởng táo bạo nhất của bạn thành hiện thực!

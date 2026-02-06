@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "232d592791465c1678cab3a2bb6cd3e8",
-  "translation_date": "2025-10-24T16:57:24+00:00",
-  "source_file": "6-space-game/6-end-condition/assignment.md",
-  "language_code": "my"
-}
--->
 # နမူနာဂိမ်းတစ်ခုတည်ဆောက်ခြင်း
 
 ## အလုပ်ပေးအကျဉ်းချုပ်

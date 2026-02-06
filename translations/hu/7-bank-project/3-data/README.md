@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T02:58:24+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "hu"
-}
--->
 # Banki alkalmazás készítése 3. rész: Az adatok lekérésének és használatának módszerei
 
 Gondolj az Enterprise számítógépére a Star Trekből – amikor Picard kapitány megkéri az állapotjelentést, az információ azonnal megjelenik anélkül, hogy az egész felület leállna és újraépülne. Pont ezt a zökkenőmentes adatáramlást építjük most dinamikus adatlekéréssel.

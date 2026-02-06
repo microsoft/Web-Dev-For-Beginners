@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-07T06:22:01+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "ro"
-}
--->
 # Introducere în GitHub
 
 Salut, viitor dezvoltator! 👋 Ești gata să te alături milioanelor de programatori din întreaga lume? Sunt cu adevărat entuziasmat să-ți prezint GitHub – gândește-l ca o platformă de social media pentru programatori, doar că în loc să împărtășim poze cu prânzul nostru, împărtășim cod și construim lucruri incredibile împreună!

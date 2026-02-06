@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2026-01-07T01:32:32+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "sw"
-}
--->
 # Jenga Mchezo wa Anga Sehemu ya 4: Kuongeza Laser na Kugundua Mgongano
 
 ```mermaid

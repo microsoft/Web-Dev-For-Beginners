@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T01:12:40+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ne"
-}
--->
 # क्विज एप
 
 यी क्विजहरू डेटा साइन्स पाठ्यक्रमका लागि प्रि-र र पोस्ट-लेक्चर क्विजहरू हुन्, जुन https://aka.ms/webdev-beginners मा उपलब्ध छ।

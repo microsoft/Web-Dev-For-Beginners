@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-25T20:58:30+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "pa"
-}
--->
 # ਮਾਈਕਰੋਸਾਫਟ ਓਪਨ ਸੋਰਸ ਕੋਡ ਆਫ ਕੰਡਕਟ
 
 ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੇ [ਮਾਈਕਰੋਸਾਫਟ ਓਪਨ ਸੋਰਸ ਕੋਡ ਆਫ ਕੰਡਕਟ](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon) ਨੂੰ ਅਪਨਾਇਆ ਹੈ।

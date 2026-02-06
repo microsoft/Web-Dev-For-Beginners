@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-06T11:49:59+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "id"
-}
--->
 # Membangun Aplikasi Perbankan Bagian 4: Konsep Manajemen State
 
 ## ⚡ Apa yang Bisa Anda Lakukan dalam 5 Menit Berikutnya

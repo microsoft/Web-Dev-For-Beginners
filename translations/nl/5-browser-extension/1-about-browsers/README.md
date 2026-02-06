@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2025-11-04T02:08:40+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "nl"
-}
--->
 # Browser Extensie Project Deel 1: Alles over Browsers
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-06T12:02:35+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "ms"
-}
--->
 # Menggunakan Editor Kod: Menguasai VSCode.dev
 
 Ingat dalam *The Matrix* apabila Neo perlu menyambung ke terminal komputer besar untuk mengakses dunia digital? Alat pembangunan web hari ini adalah cerita sebaliknya – keupayaan yang sangat kuat boleh diakses dari mana-mana sahaja. VSCode.dev ialah editor kod berasaskan pelayar yang membawa alat pembangunan profesional ke mana-mana peranti dengan sambungan internet.

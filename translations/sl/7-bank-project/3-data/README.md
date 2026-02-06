@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T10:24:26+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "sl"
-}
--->
 # Izdelava bančne aplikacije, del 3: Metode pridobivanja in uporabe podatkov
 
 Pomislite na računalnik Enterprise v Star Treku – ko kapitan Picard vpraša za stanje ladje, se informacije pojavijo takoj, brez da bi se celoten vmesnik ustavil in znova zgradil. Ta nemoten pretok informacij je natanko tisto, kar tukaj ustvarjamo z dinamičnim pridobivanjem podatkov.

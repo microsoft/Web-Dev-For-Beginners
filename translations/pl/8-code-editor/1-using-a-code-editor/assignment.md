@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-06T19:06:28+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "pl"
-}
--->
 # Stwórz stronę z CV używając VSCode.dev
 
 Zmień swoje perspektywy zawodowe, tworząc profesjonalną stronę z CV, która prezentuje Twoje umiejętności i doświadczenie w interaktywnym, nowoczesnym formacie. Zamiast wysyłać tradycyjne pliki PDF, wyobraź sobie, że dostarczasz rekruterom elegancką, responsywną stronę internetową, która pokazuje zarówno Twoje kwalifikacje, jak i zdolności programistyczne.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-27T20:52:03+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "nl"
-}
--->
 # Browserextensie Carbon Trigger: Volledige code
 
 Met behulp van de CO2-signaal-API van tmrow om het elektriciteitsverbruik te volgen, maak je een browserextensie zodat je direct in je browser een herinnering hebt over het elektriciteitsverbruik in jouw regio. Het gebruik van deze ad-hocextensie helpt je om beslissingen te nemen over je activiteiten op basis van deze informatie.

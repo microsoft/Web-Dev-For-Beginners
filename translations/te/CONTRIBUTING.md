@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2026-01-08T10:14:14+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "te"
-}
--->
 # కానిక్షణ
 
 ఈ ప్రాజెక్ట్ దానం మరియు సూచనలను స్వాగతిస్తుంది. అత్యధిక దానాలకు మీరు

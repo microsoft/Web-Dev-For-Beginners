@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2025-11-04T01:32:51+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "fi"
-}
--->
 # Rakenna pankkisovellus, osa 3: Tietojen hakeminen ja käyttäminen
 
 Ajattele Star Trekin Enterprise-aluksen tietokonetta - kun kapteeni Picard kysyy aluksen tilasta, tiedot ilmestyvät välittömästi ilman, että koko käyttöliittymä sulkeutuu ja rakentuu uudelleen. Juuri tällaista saumattoman tiedonkulun järjestelmää olemme rakentamassa dynaamisella tiedonhakumenetelmällä.

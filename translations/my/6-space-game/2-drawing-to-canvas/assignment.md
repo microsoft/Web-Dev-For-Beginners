@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "87cd43afe5b69dbbffb5c4b209ea6791",
-  "translation_date": "2025-10-24T16:55:50+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
-  "language_code": "my"
-}
--->
 # အလုပ်ပေးချက်: Canvas API ကိုလေ့လာပါ
 
 ## သင်ယူရမည့်ရည်ရွယ်ချက်များ

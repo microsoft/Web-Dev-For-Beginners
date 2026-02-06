@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-10-11T12:14:00+00:00",
-  "source_file": "6-space-game/4-collision-detection/solution/README.md",
-  "language_code": "et"
-}
--->
 See on kohatäide, jäetud tühjaks tahtlikult
 
 ---

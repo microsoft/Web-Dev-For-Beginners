@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-18T18:42:39+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "ms"
-}
--->
 # Pengenalan kepada GitHub
 
 Hai, bakal pembangun! 👋 Bersedia untuk menyertai jutaan pengaturcara di seluruh dunia? Saya sangat teruja untuk memperkenalkan anda kepada GitHub – anggap ia sebagai platform media sosial untuk pengaturcara, tetapi bukannya berkongsi gambar makan tengah hari, kita berkongsi kod dan membina perkara yang luar biasa bersama-sama!

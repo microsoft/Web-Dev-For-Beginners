@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2025-11-03T23:08:12+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "bn"
-}
--->
 # ব্রাউজার এক্সটেনশন প্রকল্প পার্ট ২: API কল করা, লোকাল স্টোরেজ ব্যবহার করা
 
 ```mermaid

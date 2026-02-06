@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-04T00:20:53+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "it"
-}
--->
 # Utilizzare un Editor di Codice: Padroneggiare VSCode.dev
 
 Ricordi in *Matrix* quando Neo doveva collegarsi a un enorme terminale per accedere al mondo digitale? Gli strumenti di sviluppo web di oggi raccontano una storia completamente diversa: capacità incredibilmente potenti accessibili ovunque. VSCode.dev è un editor di codice basato su browser che porta strumenti di sviluppo professionali su qualsiasi dispositivo connesso a Internet.

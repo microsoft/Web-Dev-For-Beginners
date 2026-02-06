@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2025-10-11T11:48:06+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "et"
-}
--->
 # [Õppetunni teema]
 
 ![Lisa siia video](../../../lesson-template/video-url)

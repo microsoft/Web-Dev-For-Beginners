@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
-  "translation_date": "2025-11-03T22:22:17+00:00",
-  "source_file": "2-js-basics/2-functions-methods/README.md",
-  "language_code": "bn"
-}
--->
 # জাভাস্ক্রিপ্টের বেসিক: মেথড এবং ফাংশন
 
 ![জাভাস্ক্রিপ্ট বেসিক - ফাংশন](../../../../translated_images/bn/webdev101-js-functions.be049c4726e94f8b.webp)

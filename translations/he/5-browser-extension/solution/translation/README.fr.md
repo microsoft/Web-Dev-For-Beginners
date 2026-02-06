@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-27T20:53:34+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "he"
-}
--->
 # Carbon Trigger: קוד להשלמת הרחבת דפדפן
 
 באמצעות ה-API של CO2 Signal מבית tmrow למעקב אחר צריכת חשמל, צרו הרחבת דפדפן שתאפשר לכם לקבל תזכורת ישירות בדפדפן על צריכת החשמל באזורכם. השימוש בהרחבה זו יעזור לכם לקבל החלטות מושכלות לגבי הפעילויות שלכם בהתבסס על מידע זה.

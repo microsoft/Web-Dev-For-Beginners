@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T03:23:57+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "cs"
-}
--->
 ## Nasazení vašeho Terraria
 
 Můžete nasadit, nebo publikovat své Terrarium na web pomocí **Azure Static Web Apps**.

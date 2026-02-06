@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-03T23:03:07+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "bn"
-}
--->
 # স্পেস গেম তৈরি করুন পার্ট ৪: লেজার যোগ করা এবং সংঘর্ষ সনাক্ত করা
 
 ```mermaid

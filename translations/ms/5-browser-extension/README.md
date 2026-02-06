@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-27T22:16:14+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "ms"
-}
--->
 # Membina sambungan pelayar
 
 Membina sambungan pelayar adalah cara yang menyeronokkan dan menarik untuk memikirkan prestasi aplikasi anda sambil membina aset web yang berbeza. Modul ini merangkumi pelajaran tentang bagaimana pelayar berfungsi dan cara untuk melancarkan sambungan pelayar, cara membina borang, memanggil API, menggunakan storan tempatan, serta cara menilai prestasi laman web anda dan meningkatkannya.

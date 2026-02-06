@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-23T22:20:36+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "ko"
-}
--->
 # Microsoft 오픈 소스 행동 강령
 
 이 프로젝트는 [Microsoft 오픈 소스 행동 강령](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon)을 채택했습니다.

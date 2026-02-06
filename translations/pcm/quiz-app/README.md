@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2026-01-08T11:15:28+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "pcm"
-}
--->
 # Quiz app
 
 These quizzes na di pre- and post-lecture quizzes for di data science curriculum for https://aka.ms/webdev-beginners

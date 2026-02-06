@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T08:26:01+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "es"
-}
--->
 ### Para Educadores
 
 Estás invitado a usar este plan de estudios en tu aula. Funciona perfectamente con GitHub Classroom y las principales plataformas LMS, y también puede utilizarse como un repositorio independiente con tus estudiantes.

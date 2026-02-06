@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:26:38+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "bn"
-}
--->
 # ওয়েব ডেভেলপমেন্টের সাথে শুরু করা
 
 এই পাঠক্রমের এই অংশে, আপনাকে প্রকল্পভিত্তিক নয় এমন ধারণাগুলোর সাথে পরিচয় করানো হবে, যা একজন পেশাদার ডেভেলপার হওয়ার জন্য গুরুত্বপূর্ণ।

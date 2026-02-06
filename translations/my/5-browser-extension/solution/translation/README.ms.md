@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-27T22:15:46+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "my"
-}
--->
 # Carbon Trigger Browser Extension: အပြည့်အစုံသော ကုဒ်
 
 CO2 Signal API ကို အသုံးပြု၍ လျှပ်စစ်ဓာတ်အား အသုံးပြုမှုကို စစ်ဆေးပြီး၊ သင့်ဒေသ၏ လျှပ်စစ်ဓာတ်အား အသုံးပြုမှု အခြေအနေကို သတိပေးချက်အဖြစ် သင့် browser မှာ ရရှိနိုင်အောင် browser extension တစ်ခုကို တည်ဆောက်ပါ။ ဒီ extension ကို အသုံးပြုခြင်းက သင့်လုပ်ဆောင်မှုများကို ဒီအချက်အလက်အပေါ် အခြေခံပြီး စဉ်းစားနိုင်ရန် အထောက်အကူဖြစ်စေပါမည်။

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T09:57:07+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "da"
-}
--->
 ### For undervisere
 
 Du er velkommen til at bruge dette pensum i din undervisning. Det fungerer problemfrit med GitHub Classroom og førende LMS-platforme, og det kan også bruges som et selvstændigt repo med dine elever.

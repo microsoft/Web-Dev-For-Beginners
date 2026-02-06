@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T00:13:15+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "no"
-}
--->
 ## Distribuer ditt Terrarium
 
 Du kan distribuere, eller publisere ditt Terrarium på nettet ved å bruke **Azure Static Web Apps**.

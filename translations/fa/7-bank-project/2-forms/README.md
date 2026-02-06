@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2026-01-06T10:21:10+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "fa"
-}
--->
 # ساخت یک اپلیکیشن بانکی قسمت ۲: ساخت فرم ورود و ثبت‌نام
 
 ```mermaid

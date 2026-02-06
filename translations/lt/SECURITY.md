@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-28T11:12:57+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "lt"
-}
--->
 ## Saugumas
 
 „Microsoft“ rimtai žiūri į savo programinės įrangos produktų ir paslaugų saugumą, įskaitant visus šaltinio kodo saugyklas, valdomas per mūsų „GitHub“ organizacijas, tokias kaip [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) ir [mūsų GitHub organizacijas](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

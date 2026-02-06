@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "81f292dbda01685b91735e0398dc0504",
-  "translation_date": "2025-08-26T21:54:22+00:00",
-  "source_file": "6-space-game/5-keeping-score/assignment.md",
-  "language_code": "el"
-}
--->
 # Δημιουργία ενός Παιχνιδιού Βαθμολογίας
 
 ## Οδηγίες

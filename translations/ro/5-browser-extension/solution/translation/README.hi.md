@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-28T07:47:40+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "ro"
-}
--->
 # Extensia de browser Carbon Trigger: Cod finalizat
 
 Construirea unei extensii de browser care utilizează API-ul CO2 Signal de la tmrow pentru a urmări consumul de energie electrică, astfel încât să primiți un memento în browser despre cât de intens este consumul de energie electrică în zona dumneavoastră. Utilizarea acestei extensii vă poate ajuta să luați decizii informate cu privire la activitățile dumneavoastră pe baza acestor informații.

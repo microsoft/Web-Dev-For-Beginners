@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-24T13:26:00+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "es"
-}
--->
 # :dollar: Construye un Banco
 
 En este proyecto, aprenderás a construir un banco ficticio. Estas lecciones incluyen instrucciones sobre cómo diseñar una aplicación web y proporcionar rutas, crear formularios, gestionar el estado y obtener datos de una API desde la cual puedes recuperar los datos del banco.

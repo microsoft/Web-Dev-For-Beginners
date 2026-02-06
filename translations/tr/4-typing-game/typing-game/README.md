@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-04T01:01:15+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "tr"
-}
--->
 # Oyun Oluşturma: Etkinlikler Kullanarak
 
 Hiç web sitelerinin bir düğmeye tıkladığınızda veya bir metin kutusuna yazdığınızda bunu nasıl bildiğini merak ettiniz mi? İşte bu, etkinlik odaklı programlamanın büyüsü! Bu önemli beceriyi öğrenmenin en iyi yolu, her tuş vuruşunuza tepki veren bir yazma hızı oyunu oluşturarak işe koyulmak.

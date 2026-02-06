@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T08:28:59+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "de"
-}
--->
 ### Für Lehrkräfte
 
 Sie können dieses Curriculum gerne in Ihrem Unterricht verwenden. Es funktioniert nahtlos mit GitHub Classroom und führenden LMS-Plattformen und kann auch als eigenständiges Repository mit Ihren Schülern genutzt werden.

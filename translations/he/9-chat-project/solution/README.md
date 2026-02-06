@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
-  "translation_date": "2025-09-01T15:34:02+00:00",
-  "source_file": "9-chat-project/solution/README.md",
-  "language_code": "he"
-}
--->
 # הפעלת הפתרון
 
 1. הפעל את [החלק האחורי](./backend/README.md)  

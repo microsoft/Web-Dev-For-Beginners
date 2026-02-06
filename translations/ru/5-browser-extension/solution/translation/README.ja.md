@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-26T00:00:36+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "ru"
-}
--->
 # Расширение для браузера Carbon Trigger: готовый код
 
 С помощью API CO2 Signal от tmrow вы можете отслеживать потребление электроэнергии в вашем регионе и отображать напоминание об уровне энергопотребления прямо в браузере. Это расширение позволяет вам принимать решения о своей активности, основываясь на этой информации.

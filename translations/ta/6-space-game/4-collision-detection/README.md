@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2026-01-07T13:02:00+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "ta"
-}
--->
 # விண்ணில் விளையாட்டு உருவாக்கம் பகுதி 4: லேசர் சேர்த்து மோதி விழுப்புகளை கண்டறிதல்
 
 ```mermaid

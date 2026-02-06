@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-06T08:16:46+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "de"
-}
--->
 # KI-Framework
 
 Hast du dich jemals überwältigt gefühlt, wenn du versucht hast, KI-Anwendungen von Grund auf neu zu erstellen? Du bist nicht allein! KI-Frameworks sind wie ein Schweizer Taschenmesser für die KI-Entwicklung – sie sind leistungsstarke Werkzeuge, die dir Zeit und Nerven sparen können, wenn du intelligente Anwendungen baust. Stell dir ein KI-Framework wie eine gut organisierte Bibliothek vor: Es stellt vorgefertigte Komponenten, standardisierte APIs und clevere Abstraktionen bereit, sodass du dich auf das Lösen von Problemen konzentrieren kannst, anstatt dich mit Implementierungsdetails herumzuschlagen.

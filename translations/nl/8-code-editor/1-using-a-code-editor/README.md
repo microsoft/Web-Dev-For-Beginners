@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-04T01:50:28+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "nl"
-}
--->
 # Een Code Editor Gebruiken: Meester worden in VSCode.dev
 
 Herinner je je in *The Matrix* hoe Neo moest inpluggen op een gigantische computerterminal om toegang te krijgen tot de digitale wereld? De webontwikkelingstools van vandaag vertellen een ander verhaal – ongelooflijk krachtige mogelijkheden die overal toegankelijk zijn. VSCode.dev is een browsergebaseerde code-editor die professionele ontwikkeltools naar elk apparaat met een internetverbinding brengt.

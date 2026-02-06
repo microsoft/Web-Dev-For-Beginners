@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-06T08:38:26+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "de"
-}
--->
 # Erstelle eine Lebenslauf-Website mit VSCode.dev
 
 Verwandle deine Karrierechancen, indem du eine professionelle Lebenslauf-Website erstellst, die deine Fähigkeiten und Erfahrungen in einem interaktiven, modernen Format präsentiert. Statt traditionelle PDFs zu verschicken, stelle dir vor, du bietest Personalverantwortlichen eine schlanke, responsive Website an, die sowohl deine Qualifikationen als auch deine Webentwicklungsfähigkeiten demonstriert.

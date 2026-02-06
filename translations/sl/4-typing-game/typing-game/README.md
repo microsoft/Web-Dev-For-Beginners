@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T10:30:00+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "sl"
-}
--->
 # Ustvarjanje igre z dogodki
 
 Ste se kdaj spraševali, kako spletna mesta vedo, kdaj kliknete gumb ali vtipkate nekaj v besedilno polje? To je čar programiranja, ki temelji na dogodkih! Kaj bi bilo boljše, kot se naučiti tega bistvenega znanja z izdelavo nečesa uporabnega - igre za merjenje hitrosti tipkanja, ki reagira na vsak vaš pritisk tipke.

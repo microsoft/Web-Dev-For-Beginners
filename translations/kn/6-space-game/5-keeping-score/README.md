@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2026-01-08T14:12:08+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "kn"
-}
--->
 # ಸ್ಪೇಸ್ ಗೇಮ್ ನಿರ್ಮಾಣ ಭಾಗ 5: ಅಂಕೆಗಳು ಮತ್ತು ಜೀವಗಳು
 
 ```mermaid

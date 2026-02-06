@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-27T22:12:13+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "sk"
-}
--->
 # Vytvorenie rozšírenia pre prehliadač
 
 Vytváranie rozšírení pre prehliadače je zábavný a zaujímavý spôsob, ako premýšľať o výkone vašich aplikácií pri vytváraní iného typu webového aktíva. Tento modul obsahuje lekcie o tom, ako fungujú prehliadače, ako nasadiť rozšírenie pre prehliadač, ako vytvoriť formulár, volať API, používať lokálne úložisko, a ako hodnotiť výkon vašej webovej stránky a zlepšiť ho.

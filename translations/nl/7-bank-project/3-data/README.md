@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2025-11-04T02:00:17+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "nl"
-}
--->
 # Een Banking App Bouwen Deel 3: Methoden voor het Ophalen en Gebruiken van Gegevens
 
 Denk aan de computer van de Enterprise in Star Trek - wanneer kapitein Picard vraagt om de status van het schip, verschijnt de informatie direct zonder dat de hele interface opnieuw moet worden opgebouwd. Die naadloze stroom van informatie is precies wat we hier bouwen met dynamisch gegevens ophalen.

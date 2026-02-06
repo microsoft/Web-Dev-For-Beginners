@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2026-01-08T10:45:07+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ml"
-}
--->
 # ജാവാസ്‌ക്രിപ്റ്റ് പരിചയം
 
 ജാവാസ്‌ക്രിപ്റ്റ് വെബിന്റെ ഭാഷയാണ്. ഈ നാല് പാഠങ്ങളിലൂടെ, നിങ്ങൾ അതിന്റെ അടിസ്ഥാനങ്ങൾ പഠിക്കും.

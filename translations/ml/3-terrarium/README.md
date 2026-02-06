@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-08T11:36:46+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "ml"
-}
--->
 ## നിങ്ങളുടെ ടെറിയാറ്യം വിന്യസിക്കുക
 
 നിങ്ങൾക്ക് **Azure Static Web Apps** ഉപയോഗിച്ച് നിങ്ങളുടെ ടെറിയാറ്യം വെബിലെ വെബ്‌സൈറ്റായി വിന്യസിക്കാനും പ്രസിദ്ധീകരിക്കാനും കഴിയും.

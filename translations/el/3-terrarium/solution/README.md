@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-26T21:38:42+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "el"
-}
--->
 # Το Τεραριούμ μου: Ένα έργο για να μάθετε HTML, CSS και χειρισμό DOM με JavaScript 🌵🌱
 
 Μια μικρή άσκηση drag and drop. Με λίγη HTML, JS και CSS, μπορείτε να δημιουργήσετε μια διαδικτυακή διεπαφή, να την διαμορφώσετε και να προσθέσετε αλληλεπίδραση.

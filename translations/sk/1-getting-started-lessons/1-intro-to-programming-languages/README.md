@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T05:15:33+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "sk"
-}
--->
 # Úvod do programovacích jazykov a moderných nástrojov pre vývojárov
 
 Ahoj, budúci vývojár! 👋 Môžem ti povedať niečo, čo mi stále dvíha zimomriavky každý jeden deň? Práve sa chystáš objaviť, že programovanie nie je len o počítačoch – je to o tom, mať skutočné supermocnosti, aby si oživil svoje najdivokejšie nápady!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-26T21:26:23+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "th"
-}
--->
 ## ความปลอดภัย
 
 Microsoft ให้ความสำคัญกับความปลอดภัยของผลิตภัณฑ์และบริการซอฟต์แวร์ของเราอย่างจริงจัง ซึ่งรวมถึงคลังซอร์สโค้ดทั้งหมดที่จัดการผ่านองค์กร GitHub ของเรา เช่น [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) และ [องค์กร GitHub ของเรา](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon)

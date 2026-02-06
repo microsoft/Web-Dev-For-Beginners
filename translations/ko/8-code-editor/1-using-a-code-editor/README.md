@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-06T14:56:02+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "ko"
-}
--->
 # 코드 편집기 사용하기: VSCode.dev 마스터하기
 
 *매트릭스*에서 네오가 디지털 세계에 접속하기 위해 거대한 컴퓨터 터미널에 연결해야 했던 것을 기억하나요? 오늘날의 웹 개발 도구들은 정반대입니다 – 어디서든 접속 가능한 엄청난 기능들입니다. VSCode.dev는 인터넷 연결만 있으면 모든 기기에서 전문 개발 도구를 사용할 수 있도록 해주는 브라우저 기반 코드 편집기입니다.

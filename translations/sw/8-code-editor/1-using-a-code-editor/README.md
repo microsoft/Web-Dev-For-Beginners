@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T01:30:41+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "sw"
-}
--->
 # Kutumia Mhariri wa Msimbo: Kuweza VSCode.dev
 
 Kumbuka katika *The Matrix* pale Neo alipotakiwa kuunganisha kwenye kituo kikubwa cha kompyuta ili kufikia dunia ya kidijitali? Vifaa vya maendeleo ya wavuti vya leo ni hadithi kinyume – uwezo mkubwa sana unaopatikana kutoka mahali popote. VSCode.dev ni mhariri wa msimbo unaotumia kivinjari ambao huleta vifaa vya maendeleo ya kitaalamu kwa kifaa chochote kilicho na muunganisho wa intaneti.

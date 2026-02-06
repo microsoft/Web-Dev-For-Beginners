@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-28T03:23:01+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "sw"
-}
--->
 # Kanuni za Maadili ya Microsoft Open Source
 
 Mradi huu umechukua [Kanuni za Maadili za Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon).

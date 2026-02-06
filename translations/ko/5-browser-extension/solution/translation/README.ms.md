@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-23T23:51:40+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "ko"
-}
--->
 # Carbon Trigger 브라우저 확장 프로그램: 전체 코드
 
 C02 신호 tmrow API를 사용하여 전력 소비를 감지하고, 지역의 전력 사용량에 대한 경고를 브라우저에서 받을 수 있는 확장 프로그램을 만드세요. 이 확장 프로그램을 사용하면 이러한 정보를 바탕으로 활동을 더 신중하게 결정할 수 있습니다.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T15:31:42+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "ko"
-}
--->
 # 이벤트를 사용하여 게임 만들기
 
 버튼을 클릭하거나 텍스트 상자에 입력할 때 웹사이트가 어떻게 그 사실을 아는지 궁금해 본 적 있나요? 그것이 바로 이벤트 기반 프로그래밍의 마법입니다! 이 필수 기술을 배우는 가장 좋은 방법은 유용한 무언가를 만들어 보는 것입니다 — 여러분이 누르는 모든 키에 반응하는 타자 속도 게임을 만드는 것이죠.

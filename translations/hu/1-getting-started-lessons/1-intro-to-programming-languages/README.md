@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T03:13:27+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "hu"
-}
--->
 # Bevezetés a programozási nyelvekbe és a modern fejlesztői eszközökbe
  
 Szia, leendő fejlesztő! 👋 Elmondhatok valamit, ami minden egyes nap kiráz a hideg? Most fogod felfedezni, hogy a programozás nemcsak a számítógépekről szól – hanem arról, hogy valódi szuperképességekkel rendelkezel, hogy életre keltsd a legvadabb ötleteidet!

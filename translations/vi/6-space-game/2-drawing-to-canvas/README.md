@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-06T11:32:09+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "vi"
-}
--->
 # Xây dựng trò chơi không gian Phần 2: Vẽ nhân vật chính và quái vật lên Canvas
 
 ```mermaid

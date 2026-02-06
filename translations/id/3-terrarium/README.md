@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T01:10:57+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "id"
-}
--->
 ## Deploy Terrarium Anda
 
 Anda dapat mendeply, atau menerbitkan Terrarium Anda di web menggunakan **Azure Static Web Apps**.

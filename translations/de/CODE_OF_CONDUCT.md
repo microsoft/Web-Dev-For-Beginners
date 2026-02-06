@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-24T11:55:34+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "de"
-}
--->
 # Microsoft Open Source Verhaltenskodex
 
 Dieses Projekt hat den [Microsoft Open Source Verhaltenskodex](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon) übernommen.

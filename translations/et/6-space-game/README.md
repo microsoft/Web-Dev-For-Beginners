@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-10-11T12:09:53+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "et"
-}
--->
 # Ehita kosmosemäng
 
 Kosmosemäng, et õppida edasijõudnud JavaScripti põhitõdesid

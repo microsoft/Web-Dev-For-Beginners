@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-18T18:39:36+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "id"
-}
--->
 # Pengantar GitHub
 
 Hai, calon pengembang! 👋 Siap bergabung dengan jutaan coder di seluruh dunia? Saya sangat antusias memperkenalkan Anda pada GitHub – anggap saja seperti media sosial untuk programmer, tapi alih-alih berbagi foto makan siang, kita berbagi kode dan membangun hal-hal luar biasa bersama!

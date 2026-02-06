@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-03T13:46:48+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "tl"
-}
--->
 # Paggamit ng Code Editor: Pag-master sa VSCode.dev
 
 Naalala mo ba sa *The Matrix* kung paano kailangang kumonekta si Neo sa isang malaking computer terminal para ma-access ang digital na mundo? Ang mga kasalukuyang tools sa web development ay kabaligtaran – napakalakas na kakayahan na ma-access kahit saan. Ang VSCode.dev ay isang browser-based na code editor na nagdadala ng mga propesyonal na tools sa anumang device na may internet connection.

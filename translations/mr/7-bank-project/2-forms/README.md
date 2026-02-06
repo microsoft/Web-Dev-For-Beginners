@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2025-11-03T14:50:29+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "mr"
-}
--->
 # बँकिंग अ‍ॅप तयार करा भाग 2: लॉगिन आणि नोंदणी फॉर्म तयार करा
 
 ```mermaid

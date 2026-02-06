@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-03T13:23:42+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "ur"
-}
--->
 # بینکنگ ایپ بنائیں حصہ 1: ویب ایپ میں HTML ٹیمپلیٹس اور روٹس
 
 ```mermaid

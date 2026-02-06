@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-06T11:25:33+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "vi"
-}
--->
 # Xây dựng ứng dụng ngân hàng Phần 4: Khái niệm về Quản lý trạng thái
 
 ## ⚡ Những gì bạn có thể làm trong 5 phút tiếp theo

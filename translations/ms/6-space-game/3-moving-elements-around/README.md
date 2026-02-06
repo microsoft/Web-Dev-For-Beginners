@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8c55a2bd4bc0ebe4c88198fd563a9e09",
-  "translation_date": "2025-11-06T12:18:35+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/README.md",
-  "language_code": "ms"
-}
--->
 # Bina Permainan Angkasa Bahagian 3: Menambah Pergerakan
 
 ```mermaid

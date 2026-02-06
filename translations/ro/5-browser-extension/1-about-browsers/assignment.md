@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2025-10-24T22:21:18+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "ro"
-}
--->
 # Tema: Restilizează Extensia Ta de Browser
 
 ## Prezentare Generală

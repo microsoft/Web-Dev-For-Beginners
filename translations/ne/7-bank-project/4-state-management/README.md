@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-03T15:38:04+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ne"
-}
--->
 # बैंकिङ एप निर्माण भाग ४: स्टेट म्यानेजमेन्टको अवधारणा
 
 ## ⚡ अर्को ५ मिनेटमा तपाईंले के गर्न सक्नुहुन्छ

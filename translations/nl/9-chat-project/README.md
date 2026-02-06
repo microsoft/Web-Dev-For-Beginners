@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-04T01:55:49+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "nl"
-}
--->
 # Bouw een Chat Assistent met AI
 
 Herinner je je in Star Trek hoe de bemanning casual met de boordcomputer praatte, complexe vragen stelde en doordachte antwoorden kreeg? Wat in de jaren '60 pure sciencefiction leek, kun je nu zelf bouwen met webtechnologieën die je al kent.

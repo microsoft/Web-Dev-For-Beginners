@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T23:50:49+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "hr"
-}
--->
 # Izrada web stranice za životopis pomoću VSCode.dev
 
 Poboljšajte svoje karijerne mogućnosti izradom profesionalne web stranice za životopis koja prikazuje vaše vještine i iskustvo u interaktivnom, modernom formatu. Umjesto slanja tradicionalnih PDF dokumenata, zamislite da regruterima pružate elegantnu, responzivnu web stranicu koja demonstrira vaše kvalifikacije i sposobnosti u web razvoju.

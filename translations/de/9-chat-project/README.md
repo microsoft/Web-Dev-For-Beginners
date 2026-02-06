@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-06T08:20:31+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "de"
-}
--->
 # Erstelle einen Chat-Assistenten mit KI
 
 Erinnerst du dich an Star Trek, als die Crew zwanglos mit dem Computer des Raumschiffs sprach, ihm komplexe Fragen stellte und durchdachte Antworten erhielt? Was in den 1960er Jahren wie reine Science-Fiction erschien, kannst du heute mit den Webtechnologien, die du bereits kennst, selbst bauen.

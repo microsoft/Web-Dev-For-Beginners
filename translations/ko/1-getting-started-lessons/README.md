@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:26:25+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "ko"
-}
--->
 # 웹 개발 시작하기
 
 이 커리큘럼 섹션에서는 전문 개발자가 되기 위해 중요한 비프로젝트 기반 개념들을 소개합니다.

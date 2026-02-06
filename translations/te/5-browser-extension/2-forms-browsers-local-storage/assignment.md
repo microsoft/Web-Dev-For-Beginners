@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "25b8d28b8531352d4eb67291fd7824c4",
-  "translation_date": "2026-01-08T15:17:04+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/assignment.md",
-  "language_code": "te"
-}
--->
 # APIని అంగీకరించండి
 
 ## అవలోకనం

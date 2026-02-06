@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-24T13:07:33+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "es"
-}
--->
 # Creando una extensión de navegador
 
 Crear extensiones de navegador es una forma divertida e interesante de pensar en el rendimiento de tus aplicaciones mientras desarrollas un tipo diferente de recurso web. Este módulo incluye lecciones sobre cómo funcionan los navegadores, cómo implementar una extensión de navegador, cómo construir un formulario, llamar a una API, usar almacenamiento local, y cómo evaluar el rendimiento de tu sitio web y mejorarlo.

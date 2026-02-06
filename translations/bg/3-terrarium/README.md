@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T06:29:37+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "bg"
-}
--->
 ## Разгръщане на вашия Terrarium
 
 Можете да разположите или публикувате своя Terrarium в уеб с помощта на **Azure Static Web Apps**.

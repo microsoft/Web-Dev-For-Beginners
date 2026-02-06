@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-07T08:43:53+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "hr"
-}
--->
 # Izradite chat asistenta s AI-jem
 
 Sjećate li se u Star Treku kada bi posada ležerno razgovarala s računalom broda, postavljala mu složena pitanja i dobivala promišljene odgovore? Ono što je 1960-ih izgledalo kao čista znanstvena fantastika sada je nešto što možete izgraditi koristeći web tehnologije koje već poznajete.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2026-01-07T11:47:36+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "lt"
-}
--->
 # Kurkite bankinę programėlę 2 dalis: Sukurkite prisijungimo ir registracijos formą
 
 ```mermaid

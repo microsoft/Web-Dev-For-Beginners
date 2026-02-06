@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
-  "translation_date": "2026-01-08T19:01:20+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
-  "language_code": "kn"
-}
--->
 # ಟೆರಾರಿಯನ್ ಪ್ರಾಜೆಕ್ಟ್ ಭಾಗ 3: DOM ನಿರ್ವಹಣೆ ಮತ್ತು JavaScript ಕ್ಲೋಶರ್‌ಗಳು
 
 ```mermaid

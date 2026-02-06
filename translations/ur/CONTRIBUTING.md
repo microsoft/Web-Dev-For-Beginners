@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-25T21:02:32+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "ur"
-}
--->
 # تعاون کرنا
 
 یہ منصوبہ تعاون اور تجاویز کا خیر مقدم کرتا ہے۔ زیادہ تر تعاون کے لیے آپ کو ایک Contributor License Agreement (CLA) سے اتفاق کرنا ہوگا، جس میں آپ یہ اعلان کرتے ہیں کہ آپ کے پاس یہ حق ہے اور آپ واقعی ہمیں اپنے تعاون کو استعمال کرنے کے حقوق دیتے ہیں۔ مزید تفصیلات کے لیے [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon) پر جائیں۔

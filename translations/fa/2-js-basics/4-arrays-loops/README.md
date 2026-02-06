@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "1710a50a519a6e4a1b40a5638783018d",
-  "translation_date": "2026-01-06T09:54:04+00:00",
-  "source_file": "2-js-basics/4-arrays-loops/README.md",
-  "language_code": "fa"
-}
--->
 # مبانی جاوااسکریپت: آرایه‌ها و حلقه‌ها
 
 ![مبانی جاوااسکریپت - آرایه‌ها](../../../../translated_images/fa/webdev101-js-arrays.439d7528b8a29455.webp)

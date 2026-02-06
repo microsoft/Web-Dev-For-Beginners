@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-04T00:32:03+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "it"
-}
--->
 # Costruire un'app bancaria Parte 1: Modelli HTML e rotte in un'app web
 
 ```mermaid

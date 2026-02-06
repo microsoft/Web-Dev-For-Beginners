@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:25:17+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "sw"
-}
--->
 ### Kwa Walimu
 
 Unakaribishwa kutumia mtaala huu darasani kwako. Unafanya kazi vizuri na GitHub Classroom na majukwaa maarufu ya LMS, na pia unaweza kutumika kama hifadhi ya pekee na wanafunzi wako.

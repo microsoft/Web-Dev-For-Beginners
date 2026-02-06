@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-24T13:12:26+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "pl"
-}
--->
 # Rozszerzenie przeglądarki Carbon Trigger: Kod początkowy
 
 Korzystając z API C02 Signal od tmrow, możesz śledzić zużycie energii elektrycznej i stworzyć rozszerzenie przeglądarki, które przypomni Ci o obciążeniu energetycznym w Twoim regionie. Używanie tego rozszerzenia ad hoc pomoże Ci podejmować decyzje dotyczące Twoich działań na podstawie tych informacji.

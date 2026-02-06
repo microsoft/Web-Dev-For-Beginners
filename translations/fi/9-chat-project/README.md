@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2025-11-04T01:24:59+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "fi"
-}
--->
 # Rakenna keskusteluavustaja tekoälyn avulla
 
 Muistatko Star Trekistä, kun miehistö keskusteli rennosti aluksen tietokoneen kanssa, esitti monimutkaisia kysymyksiä ja sai harkittuja vastauksia? Se, mikä vaikutti 1960-luvulla puhtaalta tieteiskirjallisuudelta, on nyt jotain, jonka voit rakentaa käyttämällä jo tuntemiasi verkkoteknologioita.

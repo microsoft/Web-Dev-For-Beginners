@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-04T01:55:07+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "nl"
-}
--->
 # AI Framework
 
 Ooit overweldigd gevoeld bij het bouwen van AI-toepassingen vanaf nul? Je bent niet de enige! AI-frameworks zijn als een Zwitsers zakmes voor AI-ontwikkeling - krachtige tools die je tijd en moeite besparen bij het bouwen van intelligente toepassingen. Denk aan een AI-framework als een goed georganiseerde bibliotheek: het biedt vooraf gebouwde componenten, gestandaardiseerde API's en slimme abstracties, zodat je je kunt richten op het oplossen van problemen in plaats van te worstelen met implementatiedetails.

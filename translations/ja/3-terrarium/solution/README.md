@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-23T22:36:25+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "ja"
-}
--->
 # 私のテラリウム: HTML、CSS、そしてJavaScriptを使ったDOM操作を学ぶプロジェクト 🌵🌱
 
 小さなドラッグ＆ドロップのコード瞑想。少しのHTML、JS、CSSを使って、ウェブインターフェースを構築し、スタイルを付け、インタラクションを追加できます。

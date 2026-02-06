@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-27T20:51:54+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "fi"
-}
--->
 # Carbon Trigger -selaimen laajennus: Täydellinen koodi
 
 Käyttämällä tmrow'n CO2 Signal -API:ta sähkönkulutuksen seuraamiseen, luo selaimen laajennus, joka tarjoaa suoraan selaimessasi muistutuksen alueesi sähkönkulutuksesta. Tämän ad hoc -laajennuksen käyttö auttaa sinua tekemään päätöksiä toimistasi perustuen tähän tietoon.

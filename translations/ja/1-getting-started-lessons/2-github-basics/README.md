@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-18T18:44:50+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "ja"
-}
--->
 # GitHubの紹介
 
 こんにちは、未来の開発者さん！👋 世界中の何百万ものコーダーに仲間入りする準備はできていますか？GitHubを紹介できることに本当にワクワクしています。これはプログラマーのためのソーシャルメディアプラットフォームのようなもので、ランチの写真を共有する代わりにコードを共有して一緒に素晴らしいものを作り上げるんです！

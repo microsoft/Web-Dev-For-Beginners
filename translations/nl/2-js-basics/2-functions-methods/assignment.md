@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8328f58f4593b4671656ff8f4b2edbd9",
-  "translation_date": "2025-10-23T00:48:03+00:00",
-  "source_file": "2-js-basics/2-functions-methods/assignment.md",
-  "language_code": "nl"
-}
--->
 # Plezier met Functies
 
 ## Instructies

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7746a470be8fc7f736eb1b43ebb710ee",
-  "translation_date": "2025-10-11T11:55:14+00:00",
-  "source_file": "9-chat-project/solution/frontend/README.md",
-  "language_code": "ta"
-}
--->
 # கோ드를 இயக்கவும்
 
 ```sh

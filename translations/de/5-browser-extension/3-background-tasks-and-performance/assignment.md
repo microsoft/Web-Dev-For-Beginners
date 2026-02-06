@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a203e560e58ccc6ba68bffc40c7c8676",
-  "translation_date": "2026-01-06T08:55:46+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/assignment.md",
-  "language_code": "de"
-}
--->
 # Eine Website auf Leistung analysieren
 
 ## Überblick über die Aufgabe

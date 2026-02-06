@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-24T00:18:02+00:00",
-  "source_file": "4-typing-game/solution/README.md",
-  "language_code": "ko"
-}
--->
 이것은 의도적으로 비워 둔 자리 표시자입니다.
 
 **면책 조항**:  

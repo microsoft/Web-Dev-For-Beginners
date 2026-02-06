@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-23T23:11:05+00:00",
-  "source_file": "6-space-game/solution/README.md",
-  "language_code": "ja"
-}
--->
 これはプレースホルダーであり、意図的に空白のままにされています
 
 **免責事項**:  

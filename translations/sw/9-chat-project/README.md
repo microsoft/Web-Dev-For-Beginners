@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-07T01:18:46+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "sw"
-}
--->
 # Jenga Msaidizi wa Chat kwa AI
 
 Kumbuka kwenye Star Trek wanapotumia mazungumzo ya kawaida na kompyuta ya meli, wakimuuliza maswali magumu na kupata majibu yenye fikira? Kinachokuwa kama hadithi ya sayansi katika miaka ya 1960 sasa ni kitu ambacho unaweza kujenga kwa kutumia teknolojia za wavuti unazozijua tayari.

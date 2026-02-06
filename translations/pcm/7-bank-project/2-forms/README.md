@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2026-01-08T16:18:35+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "pcm"
-}
--->
 # Build a Banking App Part 2: Build a Login and Registration Form
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3eac59d70e2532a677a2ce6bf765485a",
-  "translation_date": "2026-01-08T18:28:27+00:00",
-  "source_file": "4-typing-game/typing-game/assignment.md",
-  "language_code": "ml"
-}
--->
 # പുതിയ കീബോർഡ് ഗെയിം സൃഷ്‌ടിക്കുക
 
 ## നിർദ്ദേശങ്ങൾ

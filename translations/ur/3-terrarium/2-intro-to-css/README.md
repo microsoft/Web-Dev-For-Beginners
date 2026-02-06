@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e39f3a4e3bcccf94639e3af1248f8a4d",
-  "translation_date": "2025-11-03T13:15:52+00:00",
-  "source_file": "3-terrarium/2-intro-to-css/README.md",
-  "language_code": "ur"
-}
--->
 # ٹیریریم پروجیکٹ حصہ 2: CSS کا تعارف
 
 ```mermaid

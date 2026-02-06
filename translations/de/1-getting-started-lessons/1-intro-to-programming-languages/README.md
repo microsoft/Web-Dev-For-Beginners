@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-06T09:24:35+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "de"
-}
--->
 # Einführung in Programmiersprachen und moderne Entwickler-Tools
 
 Hey du, zukünftiger Entwickler! 👋 Darf ich dir etwas erzählen, das mir jeden einzelnen Tag eine Gänsehaut bereitet? Du bist kurz davor zu entdecken, dass Programmieren nicht nur etwas mit Computern zu tun hat – es geht darum, echte Superkräfte zu besitzen, um deine wildesten Ideen zum Leben zu erwecken!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
-  "translation_date": "2026-01-08T20:24:03+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
-  "language_code": "kn"
-}
--->
 # ಅಸೈನ್ಮೆಂಟ್: ಆಧುನಿಕ ವೆಬ್ ಅಭಿವೃದ್ದಿ ಸಾಧನಗಳನ್ನು ಅನ್ವೇಷಿಸುವುದು
 
 ## ಸೂಚನೆಗಳು

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-04T01:59:30+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "nl"
-}
--->
 # Bouw een Bankapp Deel 4: Concepten van State Management
 
 ## ⚡ Wat Je Binnen 5 Minuten Kunt Doen

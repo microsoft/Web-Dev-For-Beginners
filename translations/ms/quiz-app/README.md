@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T23:04:07+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ms"
-}
--->
 # Aplikasi Kuiz
 
 Kuiz-kuiz ini adalah kuiz pra- dan pasca-kuliah untuk kurikulum sains data di https://aka.ms/webdev-beginners

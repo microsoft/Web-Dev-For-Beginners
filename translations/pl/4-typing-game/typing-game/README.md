@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T19:42:32+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "pl"
-}
--->
 # Tworzenie gry z wykorzystaniem zdarzeń
 
 Czy kiedykolwiek zastanawiałeś się, jak strony internetowe wiedzą, kiedy klikniesz przycisk lub wpisujesz tekst w polu? To magia programowania opartego na zdarzeniach! Jaki lepszy sposób na naukę tej niezbędnej umiejętności niż zbudowanie czegoś pożytecznego – gry na szybkość pisania, która reaguje na każdy naciśnięty klawisz.

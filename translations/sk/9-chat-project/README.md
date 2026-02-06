@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-07T04:23:37+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "sk"
-}
--->
 # Vytvorte chat asistenta s AI
 
 Pamätáte si Star Trek, keď posádka voľne komunikovala s počítačom lode, pýtala sa zložité otázky a dostávala premyslené odpovede? To, čo v 60. rokoch vyzeralo ako čistá sci-fi, je dnes niečo, čo môžete vytvoriť pomocou webových technológií, ktoré už poznáte.

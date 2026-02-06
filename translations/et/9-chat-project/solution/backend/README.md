@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bcd2c2bbaae71151b1ed1b9170aa78af",
-  "translation_date": "2025-10-11T11:54:52+00:00",
-  "source_file": "9-chat-project/solution/backend/README.md",
-  "language_code": "et"
-}
--->
 Vali oma käitusaeg
 
 - [Python](./python/README.md)

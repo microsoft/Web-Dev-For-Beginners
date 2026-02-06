@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-23T23:53:06+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "fr"
-}
--->
 # Extension du navigateur Carbon Trigger : code pour commencer
 
 Vous utiliserez l'API Signal CO2 de tmrow pour surveiller l'utilisation de l'électricité et créer une extension de navigateur afin d'avoir un rappel directement dans votre navigateur sur l'impact de l'utilisation de l'électricité dans votre région. L'utilisation de cette extension sur mesure vous aidera à évaluer vos activités en fonction de ces informations.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-28T11:39:24+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "lt"
-}
--->
 # Įvadas į JavaScript
 
 JavaScript yra interneto kalba. Šiose keturiose pamokose išmoksite jos pagrindus.

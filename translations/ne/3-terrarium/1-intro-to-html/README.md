@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2025-11-03T15:36:01+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "ne"
-}
--->
 # टेरारियम परियोजना भाग १: HTML को परिचय
 
 ```mermaid

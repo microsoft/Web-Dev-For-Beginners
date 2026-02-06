@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2026-01-06T22:54:57+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "sv"
-}
--->
 # Webbläsartilläggsprojekt Del 2: Anropa ett API, använd Lokalt Lagringsutrymme
 
 ```mermaid

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2026-01-08T13:32:58+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "kn"
-}
--->
 # ಸ್ಪೇಸ್ ಗೇಮ್ ಭಾಗ 4: ಲೇಸರ್ ಸೇರಿಸುವುದು ಮತ್ತು ಘರ್ಷಣೆಗಳನ್ನು ಪತ್ತೆಮಾಡುವುದು
 
 ```mermaid

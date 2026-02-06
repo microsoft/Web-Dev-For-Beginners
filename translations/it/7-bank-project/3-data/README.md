@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2025-11-04T00:31:04+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "it"
-}
--->
 # Costruire un'app bancaria Parte 3: Metodi per recuperare e utilizzare i dati
 
 Pensa al computer dell'Enterprise in Star Trek: quando il Capitano Picard chiede lo stato della nave, le informazioni appaiono istantaneamente senza che l'interfaccia si blocchi o si ricostruisca completamente. Quel flusso continuo di informazioni è esattamente ciò che stiamo costruendo qui con il recupero dinamico dei dati.

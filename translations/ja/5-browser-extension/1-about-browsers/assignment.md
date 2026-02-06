@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2025-10-24T15:20:10+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "ja"
-}
--->
 # 課題: ブラウザー拡張機能のデザインを改善しよう
 
 ## 概要

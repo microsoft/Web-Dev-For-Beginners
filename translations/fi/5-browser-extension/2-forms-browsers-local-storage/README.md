@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2b6203a48c48d8234e0948353b47d84e",
-  "translation_date": "2025-11-04T01:45:13+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
-  "language_code": "fi"
-}
--->
 # Selaimen laajennusprojekti Osa 2: API-kutsut ja paikallinen tallennus
 
 ```mermaid

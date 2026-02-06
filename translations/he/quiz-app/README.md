@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T21:10:49+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "he"
-}
--->
 # אפליקציית חידונים
 
 החידונים הללו הם חידוני טרום ואחרי הרצאה עבור תוכנית הלימודים למדעי הנתונים בכתובת https://aka.ms/webdev-beginners

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:26:18+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "ja"
-}
--->
 # Web開発の始め方
 
 このカリキュラムのセクションでは、プロフェッショナルな開発者になるために重要な、プロジェクトベースではない概念について紹介します。

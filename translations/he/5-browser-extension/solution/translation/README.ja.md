@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-27T20:54:33+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "he"
-}
--->
 # תוסף דפדפן למעקב אחר פליטת פחמן: קוד מוכן
 
 בנו תוסף לדפדפן שמציג תזכורת על צריכת החשמל באזורכם, באמצעות ה-API של CO2 Signal מבית tmrow. התוסף מאפשר לכם לעקוב אחר צריכת החשמל באזורכם ולהשתמש במידע הזה כדי לקבל החלטות מושכלות לגבי הפעילות שלכם.

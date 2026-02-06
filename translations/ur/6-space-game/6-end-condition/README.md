@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
-  "translation_date": "2025-11-03T13:33:58+00:00",
-  "source_file": "6-space-game/6-end-condition/README.md",
-  "language_code": "ur"
-}
--->
 # اسپیس گیم بنائیں حصہ 6: اختتام اور دوبارہ شروع کریں
 
 ```mermaid

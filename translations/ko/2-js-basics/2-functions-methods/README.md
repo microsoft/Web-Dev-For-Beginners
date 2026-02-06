@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
-  "translation_date": "2026-01-06T14:47:29+00:00",
-  "source_file": "2-js-basics/2-functions-methods/README.md",
-  "language_code": "ko"
-}
--->
 # JavaScript 기초: 메서드와 함수
 
 ![JavaScript Basics - Functions](../../../../translated_images/ko/webdev101-js-functions.be049c4726e94f8b.webp)

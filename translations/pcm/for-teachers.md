@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2026-01-08T10:10:13+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "pcm"
-}
--->
 ### For Educators
 
 Una fit use dis curriculum for una classroom. E dey work well well wit GitHub Classroom and di beta LMS platforms dem, and e fit also be standalone repo wey una fit use wit una students.

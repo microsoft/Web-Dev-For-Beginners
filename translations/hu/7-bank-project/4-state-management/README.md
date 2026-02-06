@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-07T03:01:02+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "hu"
-}
--->
 # Banking alkalmazás készítése 4. rész: Az állapotkezelés fogalmai
 
 ## ⚡ Mit tehetsz a következő 5 percben

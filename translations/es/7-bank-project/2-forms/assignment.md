@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
-  "translation_date": "2026-01-06T07:45:09+00:00",
-  "source_file": "7-bank-project/2-forms/assignment.md",
-  "language_code": "es"
-}
--->
 # Estiliza tu aplicación bancaria con CSS moderno
 
 ## Resumen del proyecto

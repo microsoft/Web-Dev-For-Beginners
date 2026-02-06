@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-08T13:20:50+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "pcm"
-}
--->
 # Create a Resume Website Using VSCode.dev
 
 Transform your career prospects by building a professional resume website wey dey show your skills and experience for interactive, modern format. Instead make you dey send traditional PDFs, think say you fit give recruiters one clean, responsive website wey dey show both your qualifications and your web development skills.

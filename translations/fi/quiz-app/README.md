@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-27T21:10:23+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "fi"
-}
--->
 # Visailusovellus
 
 Nämä visailut ovat ennen ja jälkeen luentojen tehtäviä data-analytiikan opetusohjelmassa osoitteessa https://aka.ms/webdev-beginners

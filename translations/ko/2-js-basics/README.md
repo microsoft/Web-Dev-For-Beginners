@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-23T22:37:10+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ko"
-}
--->
 # JavaScript 소개
 
 JavaScript는 웹의 언어입니다. 이 네 가지 레슨에서 기본적인 내용을 배울 수 있습니다.

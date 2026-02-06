@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-10-11T11:41:49+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ta"
-}
--->
 # ஜாவாஸ்கிரிப்ட் அறிமுகம்
 
 ஜாவாஸ்கிரிப்ட் வலைப்பக்கத்தின் மொழியாகும். இந்த நான்கு பாடங்களில், அதன் அடிப்படைகளை நீங்கள் கற்றுக்கொள்வீர்கள்.

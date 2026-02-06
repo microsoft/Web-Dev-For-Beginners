@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "947ca5ce7c94aee9c7de7034e762bc17",
-  "translation_date": "2025-10-24T16:34:03+00:00",
-  "source_file": "3-terrarium/3-intro-to-DOM-and-closures/assignment.md",
-  "language_code": "my"
-}
--->
 # DOM Element စုံစမ်းမှုအလုပ်ပေးစာ
 
 ## အကျဉ်းချုပ်

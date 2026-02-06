@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2026-01-08T08:59:21+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "et"
-}
--->
 # Otsuste tegemine: õpilaste hinnete töötleja
 
 ## Õpieesmärgid

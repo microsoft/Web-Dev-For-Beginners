@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T01:09:33+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "vi"
-}
--->
 ## Triển khai Terrarium của bạn
 
 Bạn có thể triển khai hoặc xuất bản Terrarium của mình trên web bằng cách sử dụng **Azure Static Web Apps**.

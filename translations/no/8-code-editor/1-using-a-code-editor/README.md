@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T00:24:30+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "no"
-}
--->
 # Bruke en kodeeditor: Mestre VSCode.dev
 
 Husker du i *The Matrix* da Neo måtte koble seg til en enorm dataterminal for å få tilgang til den digitale verden? Dagens webutviklingsverktøy er den motsatte historien – utrolig kraftige verktøy som er tilgjengelige fra hvor som helst. VSCode.dev er en nettleserbasert kodeeditor som bringer profesjonelle utviklingsverktøy til enhver enhet med internettforbindelse.

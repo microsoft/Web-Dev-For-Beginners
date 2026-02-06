@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T12:19:52+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "lt"
-}
--->
 # Įvadas į programavimo kalbas ir modernius kūrėjų įrankius
 
 Sveikas, būsimasis kūrėjau! 👋 Ar galiu tau pasakyti kažką, kas vis dar kasdien sukelia man šiurpuliukus? Tu netrukus suprasi, kad programavimas – tai ne tik apie kompiuterius – tai apie tikrąsias supergalias, kurios leidžia įgyvendinti tavo laukinius sumanymus!

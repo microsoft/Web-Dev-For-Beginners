@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-27T20:42:33+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "fi"
-}
--->
 # Selaimen laajennuksen rakentaminen
 
 Selaimen laajennusten rakentaminen on hauska ja mielenkiintoinen tapa pohtia sovellustesi suorituskykyä samalla kun luot erilaisen verkkovarannon. Tämä moduuli sisältää oppitunteja siitä, miten selaimet toimivat ja miten selaimen laajennus otetaan käyttöön, miten lomake rakennetaan, API kutsutaan ja paikallista tallennusta käytetään, sekä miten verkkosivustosi suorituskykyä arvioidaan ja parannetaan.

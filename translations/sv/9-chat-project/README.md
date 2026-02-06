@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-06T22:32:50+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "sv"
-}
--->
 # Skapa en chattassistent med AI
 
 Kommer du ihåg i Star Trek när besättningen lugnt kunde prata med skeppets dator, ställa komplexa frågor och få genomtänkta svar? Vad som verkade som ren science fiction på 1960-talet är nu något du kan bygga med webbteknologier du redan kan.

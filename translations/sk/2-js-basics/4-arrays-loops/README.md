@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "1710a50a519a6e4a1b40a5638783018d",
-  "translation_date": "2026-01-07T04:34:14+00:00",
-  "source_file": "2-js-basics/4-arrays-loops/README.md",
-  "language_code": "sk"
-}
--->
 # JavaScript základy: Polia a slučky
 
 ![JavaScript základy - Polia](../../../../translated_images/sk/webdev101-js-arrays.439d7528b8a29455.webp)

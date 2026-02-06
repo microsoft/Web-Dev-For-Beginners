@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T19:55:35+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "hu"
-}
--->
 # Készíts egy önéletrajz weboldalt a VSCode.dev segítségével
 
 Fejleszd karrierlehetőségeidet egy professzionális önéletrajz weboldal létrehozásával, amely interaktív, modern formátumban mutatja be készségeidet és tapasztalataidat. A hagyományos PDF-ek küldése helyett képzeld el, hogy egy elegáns, reszponzív weboldalt biztosítasz a toborzóknak, amely nemcsak a képesítéseidet, hanem a webfejlesztési képességeidet is bemutatja.

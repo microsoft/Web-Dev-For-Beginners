@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T09:20:37+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "hr"
-}
--->
 # Izrada bankarske aplikacije - dio 3: Načini dohvaćanja i korištenja podataka
 
 Razmislite o Enterpriseovom računalu u Star Treku - kada kapetan Picard zatraži status broda, informacije se pojavljuju odmah bez da se cijeli sučelje zaustavi i ponovno sastavi. Taj besprijekoran tijek informacija upravo gradimo ovdje s dinamičkim dohvaćanjem podataka.

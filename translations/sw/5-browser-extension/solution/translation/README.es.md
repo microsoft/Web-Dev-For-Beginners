@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-28T03:47:27+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "sw"
-}
--->
 # Upanuzi wa Kivinjari wa Carbon Trigger: Msimbo Kamili
 
 Kwa kutumia API ya CO2 Signal ya tmrow kufuatilia matumizi ya umeme, tengeneza upanuzi wa kivinjari ili uweze kuwa na kikumbusho moja kwa moja kwenye kivinjari chako kuhusu matumizi ya umeme katika eneo lako. Kutumia upanuzi huu wa ad hoc kutakusaidia kufanya maamuzi kuhusu shughuli zako kwa kuzingatia taarifa hii.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6fd645e97c48cd5eb5a3d290815ec8b5",
-  "translation_date": "2026-01-06T08:31:00+00:00",
-  "source_file": "2-js-basics/1-data-types/assignment.md",
-  "language_code": "de"
-}
--->
 # Data Types Practice: E-Commerce-Warenkorb
 
 ## Anweisungen

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2026-01-08T16:11:15+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "pcm"
-}
--->
 # Extension de navigateur Carbon Trigger: Completed Code
 
 En dey use API C02 Signal wey tmrow get to track how electricity dey consume, make you build browser extension so dat you fit get reminder straight for your browser about how much electricity your area dey use. Using dis kind ad hoc extension go help you make better judgment about your activities based on dis info.

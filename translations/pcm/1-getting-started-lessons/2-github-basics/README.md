@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-08T20:24:27+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "pcm"
-}
--->
 # Introduction to GitHub
 
 Hey dia, future developer! 👋 Ready to join millions of coders all over di world? I truly dey excited to introduce you to GitHub – make you think am as social media platform for programmers, but instead of dey share pictures of your lunch, we dey share code and dey build amazing tins together!

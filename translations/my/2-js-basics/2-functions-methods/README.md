@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
-  "translation_date": "2025-11-06T14:04:18+00:00",
-  "source_file": "2-js-basics/2-functions-methods/README.md",
-  "language_code": "my"
-}
--->
 # JavaScript အခြေခံ: Methods နှင့် Functions
 
 ![JavaScript Basics - Functions](../../../../translated_images/my/webdev101-js-functions.be049c4726e94f8b.webp)

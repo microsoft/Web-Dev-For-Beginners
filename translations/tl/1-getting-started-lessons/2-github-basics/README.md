@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-25T11:55:06+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "tl"
-}
--->
 # Panimula sa GitHub
 
 Kamusta, hinaharap na developer! 👋 Handa ka na bang sumali sa milyon-milyong coder sa buong mundo? Talagang excited akong ipakilala sa'yo ang GitHub – isipin mo ito bilang social media platform para sa mga programmer, pero imbes na magbahagi ng mga larawan ng pagkain, nagbabahagi tayo ng code at gumagawa ng mga kamangha-manghang bagay nang sama-sama!

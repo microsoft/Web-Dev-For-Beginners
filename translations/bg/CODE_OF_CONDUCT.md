@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-28T07:30:25+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "bg"
-}
--->
 # Кодекс за поведение на Microsoft за отворен код
 
 Този проект е приел [Кодекса за поведение на Microsoft за отворен код](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon).

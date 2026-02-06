@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T08:40:10+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "hr"
-}
--->
 # Okvir za umjetnu inteligenciju
 
 Jeste li se ikad osjećali preplavljeno pokušavajući izgraditi AI aplikacije od nule? Niste sami! AI okviri su poput švicarskog noža za razvoj umjetne inteligencije - moćni alati koji vam mogu uštedjeti vrijeme i glavobolje pri izgradnji inteligentnih aplikacija. Zamislite AI okvir kao dobro organiziranu biblioteku: on pruža unaprijed izrađene komponente, standardizirane API-je i pametne apstrakcije kako biste se mogli usredotočiti na rješavanje problema umjesto na borbu s detaljima implementacije.

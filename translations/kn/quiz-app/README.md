@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2026-01-08T11:17:25+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "kn"
-}
--->
 # Quiz app
 
 ಈ ಪ್ರಶ್ನೋತ್ತರಗಳು https://aka.ms/webdev-beginners ನಲ್ಲಿ ಡೇಟಾ ಸೈನ್ಸ್ ಪಠ್ಯಕ್ರಮದ ಮುಂಭಾಗ ಮತ್ತು ನಂತರದ ಪ್ರಶ್ನೋತ್ತರಗಳಾಗಿವೆ

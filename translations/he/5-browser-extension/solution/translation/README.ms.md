@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
-  "translation_date": "2025-08-27T20:53:06+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ms.md",
-  "language_code": "he"
-}
--->
 # תוסף דפדפן Carbon Trigger: קוד מלא
 
 באמצעות ה-API של CO2 Signal מבית tmrow לזיהוי צריכת חשמל, ניתן לבנות תוסף לדפדפן שיתריע בפניכם על רמת צריכת החשמל באזורכם. שימוש בתוסף זה יעזור לכם לקבל החלטות מושכלות לגבי הפעילויות שלכם בהתבסס על המידע הזה.

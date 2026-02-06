@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-24T14:49:24+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "ja"
-}
--->
 # VSCode.devを使って履歴書ウェブサイトを作成する
 
 インタラクティブでモダンな形式であなたのスキルや経験をアピールするプロフェッショナルな履歴書ウェブサイトを作成し、キャリアの可能性を広げましょう。従来のPDFを送る代わりに、採用担当者にあなたの資格とウェブ開発能力を示す洗練されたレスポンシブなウェブサイトを提供することを想像してみてください。

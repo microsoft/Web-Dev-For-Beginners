@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-26T22:50:59+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "th"
-}
--->
 # ส่วนขยายเบราว์เซอร์ Carbon Trigger: โค้ดที่เสร็จสมบูรณ์
 
 สร้างส่วนขยายเบราว์เซอร์ที่สามารถแสดงการแจ้งเตือนบนเบราว์เซอร์เกี่ยวกับการใช้พลังงานในพื้นที่ของคุณ โดยใช้ API ของ C02 Signal จาก tmrow เพื่อช่วยติดตามการใช้พลังงานของคุณ คุณสามารถใช้ส่วนขยายนี้เพื่อช่วยตัดสินใจกิจกรรมของคุณตามข้อมูลที่ได้รับ

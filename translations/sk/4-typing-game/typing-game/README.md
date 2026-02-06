@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T05:04:14+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "sk"
-}
--->
 # Vytváranie hry pomocou udalostí
 
 Niekedy ste sa zamýšľali, ako webové stránky vedia, kedy kliknete na tlačidlo alebo napíšete do textového poľa? To je kúzlo programovania riadeného udalosťami! Čo by mohlo byť lepším spôsobom, ako sa naučiť túto základnú zručnosť, než vytvoriť niečo užitočné – hru na rýchlosť písania, ktorá reaguje na každý stlačený kláves.

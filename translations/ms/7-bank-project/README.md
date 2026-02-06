@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-27T22:00:46+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "ms"
-}
--->
 # :dollar: Membina Bank
 
 Dalam projek ini, anda akan belajar cara membina bank fiksyen. Pelajaran ini merangkumi arahan tentang cara menyusun aplikasi web dan menyediakan laluan, membina borang, menguruskan keadaan, dan mendapatkan data daripada API yang membolehkan anda mengambil data bank.

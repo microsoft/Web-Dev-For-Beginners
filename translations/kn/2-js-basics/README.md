@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2026-01-08T10:45:23+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "kn"
-}
--->
 # ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ಪರಿಚಯ
 
 ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್ ವೆಬ್‌ನ ಭಾಷೆ. ಈ ನಾಲ್ಕು ಪಾಠಗಳಲ್ಲಿ, ನೀವು ಅದರ ಮೂಲ ತತ್ವಗಳನ್ನು ಕಲಿಯುತ್ತೀರಿ.

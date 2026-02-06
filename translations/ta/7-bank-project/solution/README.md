@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-10-11T12:03:16+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "ta"
-}
--->
 # வங்கி செயலி
 
 > வங்கி செயலி திட்டத்திற்கான உதாரண தீர்வு, வெறும் HTML5, CSS மற்றும் JavaScript (எந்த frameworks அல்லது libraries பயன்படுத்தப்படவில்லை) கொண்டு உருவாக்கப்பட்டது.

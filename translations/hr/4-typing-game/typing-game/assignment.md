@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3eac59d70e2532a677a2ce6bf765485a",
-  "translation_date": "2025-10-25T00:10:20+00:00",
-  "source_file": "4-typing-game/typing-game/assignment.md",
-  "language_code": "hr"
-}
--->
 # Napravite novu igru na tipkovnici
 
 ## Upute

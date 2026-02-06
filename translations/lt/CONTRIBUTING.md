@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-28T11:12:34+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "lt"
-}
--->
 # Prisidėjimas
 
 Šis projektas kviečia prisidėti ir teikti pasiūlymus. Dauguma indėlių reikalauja, kad jūs

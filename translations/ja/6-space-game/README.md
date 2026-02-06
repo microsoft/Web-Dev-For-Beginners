@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-23T22:51:30+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "ja"
-}
--->
 # 宇宙ゲームを作ろう
 
 より高度なJavaScriptの基礎を学ぶための宇宙ゲーム

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-04T02:03:14+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "nl"
-}
--->
 # Een spel maken met behulp van events
 
 Heb je je ooit afgevraagd hoe websites weten wanneer je op een knop klikt of tekst typt in een tekstvak? Dat is de magie van event-driven programmeren! Wat is een betere manier om deze essentiële vaardigheid te leren dan door iets nuttigs te bouwen - een typ-snelheidsspel dat reageert op elke toetsaanslag die je maakt.

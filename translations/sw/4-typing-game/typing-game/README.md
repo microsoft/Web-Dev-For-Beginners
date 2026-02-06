@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T01:58:59+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "sw"
-}
--->
 # Kuunda mchezo kwa kutumia matukio
 
 Je, umewahi kujiuliza jinsi tovuti zinavyojua wakati unabonyeza kitufe au kuandika kwenye kisanduku cha maandishi? Hiyo ni uchawi wa programu zinazotegemea matukio! Ni njia gani bora zaidi ya kujifunza ujuzi huu muhimu kuliko kujenga kitu cha manufaa - mchezo wa kasi ya kuandika unaojibu kila kitufe unachobonyeza.

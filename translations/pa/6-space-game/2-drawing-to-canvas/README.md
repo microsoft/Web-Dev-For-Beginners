@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-03T16:51:17+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "pa"
-}
--->
 # ਸਪੇਸ ਗੇਮ ਬਣਾਓ ਭਾਗ 2: ਹੀਰੋ ਅਤੇ ਮੌਂਸਟਰਜ਼ ਨੂੰ ਕੈਨਵਸ 'ਤੇ ਡਰਾਇੰਗ ਕਰੋ
 
 ```mermaid

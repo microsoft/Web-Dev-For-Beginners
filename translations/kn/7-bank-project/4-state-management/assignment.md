@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "50a7783473b39a2e0f133e271a102231",
-  "translation_date": "2026-01-08T18:01:29+00:00",
-  "source_file": "7-bank-project/4-state-management/assignment.md",
-  "language_code": "kn"
-}
--->
 # "ಲೆನದ ಪತ್ರವನ್ನು ಸೇರಿಸಿ" ಡೈಲಾಗ್ ಅನುಷ್ಠಾನಗೊಳಿಸಿ
 
 ## ಅವಲೋಕನ

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-23T00:49:50+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "nl"
-}
--->
 # Maak een CV-Website met VSCode.dev
 
 Geef je carrière een boost door een professionele CV-website te bouwen die je vaardigheden en ervaring op een interactieve, moderne manier presenteert. In plaats van traditionele PDF's te versturen, kun je recruiters een strakke, responsieve website aanbieden die zowel je kwalificaties als je webontwikkelingsvaardigheden laat zien.

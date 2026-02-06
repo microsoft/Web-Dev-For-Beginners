@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-04T00:44:00+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "tr"
-}
--->
 # Bir Kod Editörü Kullanmak: VSCode.dev'i Ustalaşmak
 
 *Matrix* filminde Neo'nun dijital dünyaya erişmek için devasa bir bilgisayar terminaline bağlanması gerektiğini hatırlıyor musunuz? Günümüzün web geliştirme araçları tam tersi bir hikaye sunuyor – her yerden erişilebilen inanılmaz güçlü yetenekler. VSCode.dev, internet bağlantısı olan herhangi bir cihazda profesyonel geliştirme araçlarını sunan tarayıcı tabanlı bir kod editörüdür.

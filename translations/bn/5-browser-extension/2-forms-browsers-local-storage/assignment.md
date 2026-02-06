@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "25b8d28b8531352d4eb67291fd7824c4",
-  "translation_date": "2025-10-22T22:06:22+00:00",
-  "source_file": "5-browser-extension/2-forms-browsers-local-storage/assignment.md",
-  "language_code": "bn"
-}
--->
 # একটি API গ্রহণ করুন
 
 ## সংক্ষিপ্ত বিবরণ

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bee6762d4092a13fc7c338814963f980",
-  "translation_date": "2026-01-08T19:27:59+00:00",
-  "source_file": "3-terrarium/2-intro-to-css/assignment.md",
-  "language_code": "te"
-}
--->
 # CSS పునర్నిర్మాణ కేటాయింపు
 
 ## లక్ష్యం

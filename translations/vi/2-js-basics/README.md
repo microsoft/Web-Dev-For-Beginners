@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T22:44:56+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "vi"
-}
--->
 # Giới thiệu về JavaScript
 
 JavaScript là ngôn ngữ của web. Trong bốn bài học này, bạn sẽ học những kiến thức cơ bản về nó.

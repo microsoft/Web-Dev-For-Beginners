@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:28:25+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "he"
-}
--->
 # התחלת עבודה עם פיתוח אתרים
 
 בפרק זה של התוכנית, תיחשפו לרעיונות שאינם מבוססי פרויקטים, אך חשובים כדי להפוך למפתחים מקצועיים.

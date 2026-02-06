@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "81f292dbda01685b91735e0398dc0504",
-  "translation_date": "2025-10-11T12:15:32+00:00",
-  "source_file": "6-space-game/5-keeping-score/assignment.md",
-  "language_code": "ta"
-}
--->
 # ஒரு மதிப்பீட்டு விளையாட்டை உருவாக்குங்கள்
 
 ## வழிமுறைகள்

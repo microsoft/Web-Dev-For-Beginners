@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2025-08-28T04:12:17+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "hu"
-}
--->
 # [Lecke Témája]
 
 ![Videó beágyazása itt](../../../lesson-template/video-url)

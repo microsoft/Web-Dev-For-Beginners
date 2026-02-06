@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-06T23:53:55+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "da"
-}
--->
 # Byg en Bankapp Del 4: Begreber om Tilstandsstyring
 
 ## ⚡ Hvad Du Kan Nå på de Næste 5 Minutter

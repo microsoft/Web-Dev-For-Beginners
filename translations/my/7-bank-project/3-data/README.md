@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2025-11-06T14:43:41+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "my"
-}
--->
 # ဘဏ်အက်ပ်တည်ဆောက်ခြင်း အပိုင်း ၃: ဒေတာကို ရယူခြင်းနှင့် အသုံးပြုခြင်းနည်းလမ်းများ
 
 Star Trek မှ Enterprise ရဲ့ ကွန်ပျူတာကို စဉ်းစားကြည့်ပါ - Captain Picard သင်္ဘောအခြေအနေကို မေးတဲ့အခါမှာ အချက်အလက်တွေ အလျင်အမြန်ပေါ်လာပြီး interface တစ်ခုလုံးကို ပိတ်ပြီး ပြန်တည်ဆောက်ရတာမျိုး မဖြစ်ပါဘူး။ ဒီလို seamless flow of information ကတော့ dynamic data fetching နဲ့ ကျွန်တော်တို့ တည်ဆောက်နေတဲ့အရာပဲ ဖြစ်ပါတယ်။

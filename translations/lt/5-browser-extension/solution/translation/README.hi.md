@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-28T11:27:28+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "lt"
-}
--->
 # Anglies dioksido trigerio naršyklės plėtinys: Baigtas kodas
 
 Naudojant tmrow CO2 Signal API elektros energijos naudojimui stebėti, sukurtas naršyklės plėtinys, kuris primena, kiek intensyviai jūsų regione naudojama elektros energija. Naudodami šį plėtinį, galėsite priimti sprendimus dėl savo veiklos, remdamiesi šia informacija.

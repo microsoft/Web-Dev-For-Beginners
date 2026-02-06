@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-26T21:39:15+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "no"
-}
--->
 # Mitt Terrarium: Et prosjekt for å lære om HTML, CSS og DOM-manipulering med JavaScript 🌵🌱
 
 En liten dra-og-slipp kode-meditasjon. Med litt HTML, JS og CSS kan du lage et webgrensesnitt, style det og legge til interaksjon.

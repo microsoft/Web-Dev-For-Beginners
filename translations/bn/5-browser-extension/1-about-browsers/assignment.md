@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2025-10-22T22:07:46+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "bn"
-}
--->
 # অ্যাসাইনমেন্ট: আপনার ব্রাউজার এক্সটেনশনের ডিজাইন পরিবর্তন করুন
 
 ## সংক্ষিপ্ত বিবরণ

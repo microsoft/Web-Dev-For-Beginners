@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-25T20:58:50+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "tr"
-}
--->
 # Microsoft Açık Kaynak Davranış Kuralları
 
 Bu proje [Microsoft Açık Kaynak Davranış Kuralları](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon)'nı benimsemiştir.

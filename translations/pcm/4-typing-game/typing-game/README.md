@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-08T18:08:21+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "pcm"
-}
--->
 # Creating a game using events
 
 You don waka ever wonder how websites sabi when you click button or type for inside textbox? Na the magic wey dey inside event-driven programming! Wetin better way to learn dis important skill than to build something useful - typing speed game wey dey react to every keystroke wey you do.

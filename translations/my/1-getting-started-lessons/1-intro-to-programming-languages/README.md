@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-06T14:13:11+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "my"
-}
--->
 # ပရိုဂရမ်မင်းဘာသာစကားများနှင့် ခေတ်မီ Developer Tools မိတ်ဆက်
 
 ဟေး၊ အနာဂတ် Developer! 👋 တစ်ခုခုပြောပါရစေ၊ အခုချိန်မှာတောင် ကျွန်တော်ကို အတော်လေးလှုပ်ရှားစေတဲ့အရာတစ်ခုရှိတယ်။ သင်ဟာ Programming ဆိုတာက ကွန်ပျူတာတွေနဲ့ပဲ မသက်ဆိုင်ဘူးဆိုတာ ရှာဖွေတွေ့ရှိတော့မှာပါ – ဒါဟာ သင်ရဲ့ အကြမ်းဆုံးအတွေးအခေါ်တွေကို အကောင်အထည်ဖော်နိုင်တဲ့ အစွမ်းထက်စွမ်းရည်တစ်ခုပါ!

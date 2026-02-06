@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
-  "translation_date": "2025-08-25T23:36:09+00:00",
-  "source_file": "5-browser-extension/start/README.md",
-  "language_code": "tr"
-}
--->
 # Karbon Tetikleyici Tarayıcı Uzantısı: Başlangıç Kodu
 
 Elektrik kullanımını takip etmek için tmrow'un CO2 Signal API'sini kullanarak, bölgenizdeki elektrik kullanımının ne kadar yoğun olduğunu tarayıcınızda hatırlatıcı olarak görebileceğiniz bir tarayıcı uzantısı oluşturun. Bu uzantıyı rastgele kullanmak, bu bilgilere dayanarak aktiviteleriniz hakkında karar vermenize yardımcı olacaktır.

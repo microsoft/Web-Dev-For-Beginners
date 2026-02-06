@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-07T03:20:41+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "cs"
-}
--->
 # AI Framework
 
 Už jste někdy měli pocit, že je příliš složité vytvářet AI aplikace od začátku? Nejste sami! AI frameworky jsou jako švýcarský armádní nůž pro vývoj AI – jsou to silné nástroje, které vám mohou ušetřit čas a bolesti hlavy při vytváření inteligentních aplikací. Představte si AI framework jako dobře uspořádanou knihovnu: poskytuje předpřipravené komponenty, standardizovaná API a chytré abstrakce, abyste se mohli soustředit na řešení problémů místo boje s detaily implementace.

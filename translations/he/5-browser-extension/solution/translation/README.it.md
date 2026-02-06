@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-27T20:54:07+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "he"
-}
--->
 # Carbon Trigger: קוד להתחלת עבודה
 
 נשתמש ב-API של Signal CO2 מבית tmrow כדי לעקוב אחר צריכת החשמל וליצור תוסף לדפדפן, כך שנוכל לקבל תזכורת ישירות בדפדפן על כמה כבדה צריכת החשמל באזור שלנו. השימוש בתוסף הזה יעזור להעריך את הפעילויות שלנו בהתבסס על המידע הזה.

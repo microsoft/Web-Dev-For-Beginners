@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2026-01-08T16:08:59+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "pcm"
-}
--->
 # Carbon Trigger Browser Extension: Full Code
 
 Using tmrow's CO2 signal API to track electricity use, make a browser extension so you fit get reminder directly for your browser about your area's electricity consumption. This kind extension go help you take decisions about your activities based on this information.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-03T14:47:54+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "mr"
-}
--->
 # बँकिंग अ‍ॅप तयार करा भाग 1: HTML टेम्पलेट्स आणि वेब अ‍ॅपमधील रूट्स
 
 ```mermaid

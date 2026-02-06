@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-08-27T22:19:15+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "my"
-}
--->
 # အာကာသဂိမ်းတစ်ခု တည်ဆောက်ခြင်း
 
 JavaScript အခြေခံများကို ပိုမိုရှုထောင့်စေမည့် အာကာသဂိမ်းတစ်ခု

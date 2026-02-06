@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2025-11-03T15:57:11+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "ne"
-}
--->
 # ब्राउजर एक्सटेन्सन परियोजना भाग ३: पृष्ठभूमि कार्यहरू र प्रदर्शनको बारेमा जान्नुहोस्
 
 ```mermaid

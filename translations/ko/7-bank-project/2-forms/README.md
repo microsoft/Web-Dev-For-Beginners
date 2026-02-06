@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
-  "translation_date": "2026-01-06T15:20:29+00:00",
-  "source_file": "7-bank-project/2-forms/README.md",
-  "language_code": "ko"
-}
--->
 # 은행 앱 만들기 2부: 로그인 및 등록 양식 만들기
 
 ```mermaid

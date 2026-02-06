@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:29:59+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "my"
-}
--->
 # ဝဘ်ဖွံ့ဖြိုးရေးကို စတင်လေ့လာခြင်း
 
 ဒီသင်ခန်းစာအပိုင်းမှာ သင်တစ်ဦးတစ်ယောက် ပရော်ဖက်ရှင်နယ် Developer ဖြစ်ဖို့အတွက် အရေးကြီးတဲ့ Non Project-based အကြောင်းအရာများကို မိတ်ဆက်ပေးပါမည်။

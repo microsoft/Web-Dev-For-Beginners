@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2025-11-06T14:10:00+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "my"
-}
--->
 # VSCode.dev ကို အသုံးပြုခြင်း: VSCode.dev ကို ကျွမ်းကျင်စွာ အသုံးပြုပါ
 
 *The Matrix* မှာ Neo က ဒစ်ဂျစ်တယ်ကမ္ဘာကို ဝင်ရောက်ဖို့ ကြီးမားတဲ့ ကွန်ပျူတာ terminal ကို အသုံးပြုရတဲ့အကြောင်းကို သတိရပါ။ ယနေ့ Web Development Tools တွေက အတိအကျ ဆန့်ကျင်ဘက်ပုံပြင်ဖြစ်ပါတယ် – အင်တာနက်ရှိရာနေရာတိုင်းမှာ အလွန်အစွမ်းထက်တဲ့ စွမ်းရည်တွေကို ရရှိနိုင်ပါတယ်။ VSCode.dev က Browser-based Code Editor ဖြစ်ပြီး Professional Development Tools တွေကို အင်တာနက်ချိတ်ဆက်ထားတဲ့ Device များမှာ ရရှိစေပါတယ်။

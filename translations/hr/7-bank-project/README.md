@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-27T22:00:16+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "hr"
-}
--->
 # :dollar: Izgradite Banku
 
 U ovom projektu naučit ćete kako izgraditi fiktivnu banku. Ove lekcije uključuju upute o tome kako postaviti web aplikaciju i definirati rute, izraditi forme, upravljati stanjem i dohvatiti podatke s API-ja od kojeg možete preuzeti podatke banke.

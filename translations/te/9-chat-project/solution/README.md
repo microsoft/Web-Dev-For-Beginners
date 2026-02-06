@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
-  "translation_date": "2026-01-08T20:38:26+00:00",
-  "source_file": "9-chat-project/solution/README.md",
-  "language_code": "te"
-}
--->
 # Run solution
 
 1. ప్రారంభించండి [backend](./backend/README.md)

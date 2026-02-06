@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-08T09:02:53+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "et"
-}
--->
 # Koodi redaktori kasutamine: VSCode.devi valdamine
 
 Kas mäletad filmist *Matrix* seda kohta, kus Neo pidi arvutimaailmaga ühenduse saamiseks suure kooditerminaliga liidestuma? Tänapäeva veebiarendusvahendid on selle vastand – uskumatult võimsad võimalused, mis on ligipääsetavad kõikjalt. VSCode.dev on brauseripõhine koodi redaktor, mis toob professionaalsed arendusvahendid igasse internetiühendusega seadmesse.

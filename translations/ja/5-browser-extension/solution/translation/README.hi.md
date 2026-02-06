@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
-  "translation_date": "2025-08-23T23:50:38+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.hi.md",
-  "language_code": "ja"
-}
--->
 # カーボントリガーブラウザー拡張機能: 完成したコード
 
 電力使用量を追跡するためにtmrowのCO2 Signal APIを利用し、ブラウザー拡張機能を作成しました。この拡張機能は、あなたの地域での電力使用状況がどれほど負荷がかかっているかをブラウザー内で通知します。この情報を基に、活動内容を決定する手助けをします。

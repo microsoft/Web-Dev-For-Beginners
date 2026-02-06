@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e6d0f456dfc22afb41bbdefeb5ec179d",
-  "translation_date": "2026-01-07T13:55:29+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/assignment.md",
-  "language_code": "ta"
-}
--->
 # விரிவான வலைத்தளம் அணுகல் ஆய்வு
 
 ## உத்தரவுகள்

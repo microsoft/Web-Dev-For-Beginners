@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-06T15:45:22+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "ko"
-}
--->
 # 프로그래밍 언어와 최신 개발 도구 소개
 
 안녕하세요, 미래의 개발자님! 👋 매일매일 저를 소름 돋게 하는 이야기를 해도 될까요? 프로그래밍은 단지 컴퓨터에 관한 것이 아니라, 여러분의 가장 대담한 아이디어를 현실로 만드는 진짜 초능력을 갖게 되는 거랍니다!

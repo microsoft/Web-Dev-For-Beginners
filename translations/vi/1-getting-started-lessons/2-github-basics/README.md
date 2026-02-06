@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-18T18:36:54+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "vi"
-}
--->
 # Giới thiệu về GitHub
 
 Chào bạn, nhà phát triển tương lai! 👋 Sẵn sàng tham gia cùng hàng triệu lập trình viên trên khắp thế giới chưa? Mình thực sự rất hào hứng giới thiệu với bạn về GitHub – hãy nghĩ về nó như một mạng xã hội dành cho lập trình viên, nhưng thay vì chia sẻ ảnh bữa trưa, chúng ta chia sẻ mã nguồn và cùng nhau xây dựng những điều tuyệt vời!

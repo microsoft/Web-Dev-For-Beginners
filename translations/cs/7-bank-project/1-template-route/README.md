@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2026-01-07T03:54:25+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "cs"
-}
--->
 # Vytvoření bankovní aplikace Část 1: HTML šablony a směrování ve webové aplikaci
 
 ```mermaid

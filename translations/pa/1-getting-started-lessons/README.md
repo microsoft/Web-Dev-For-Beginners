@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:27:00+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "pa"
-}
--->
 # ਵੈੱਬ ਡਿਵੈਲਪਮੈਂਟ ਨਾਲ ਸ਼ੁਰੂਆਤ
 
 ਇਸ ਪਾਠਕ੍ਰਮ ਦੇ ਹਿੱਸੇ ਵਿੱਚ, ਤੁਹਾਨੂੰ ਉਹ ਗੈਰ-ਪ੍ਰੋਜੈਕਟ ਅਧਾਰਿਤ ਧਾਰਨਾਵਾਂ ਨਾਲ ਜਾਣੂ ਕਰਵਾਇਆ ਜਾਵੇਗਾ ਜੋ ਇੱਕ ਪੇਸ਼ੇਵਰ ਡਿਵੈਲਪਰ ਬਣਨ ਲਈ ਮਹੱਤਵਪੂਰਨ ਹਨ।

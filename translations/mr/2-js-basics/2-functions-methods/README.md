@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
-  "translation_date": "2025-11-03T14:12:55+00:00",
-  "source_file": "2-js-basics/2-functions-methods/README.md",
-  "language_code": "mr"
-}
--->
 # जावास्क्रिप्ट मूलभूत गोष्टी: पद्धती आणि फंक्शन्स
 
 ![जावास्क्रिप्ट मूलभूत गोष्टी - फंक्शन्स](../../../../translated_images/mr/webdev101-js-functions.be049c4726e94f8b.webp)

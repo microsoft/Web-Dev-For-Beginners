@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-03T13:35:53+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "ur"
-}
--->
 # خلائی کھیل بنائیں حصہ 4: لیزر شامل کریں اور تصادم کا پتہ لگائیں
 
 ```mermaid

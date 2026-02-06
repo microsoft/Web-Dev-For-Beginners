@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "00aa85715e1efd4930c17a23e3012e69",
-  "translation_date": "2026-01-08T15:47:54+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/README.md",
-  "language_code": "kn"
-}
--->
 # ಬ್ರೌಸರ ವಿಸ್ತಾರ ಪ್ರಾಜೆಕ್ಟ್ ಭಾಗ 1: ಬ್ರೌಸರಗಳ ಬಗ್ಗೆ ಎಲ್ಲವನ್ನೂ
 
 ```mermaid

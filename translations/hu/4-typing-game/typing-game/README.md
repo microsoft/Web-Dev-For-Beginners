@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-07T03:03:13+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "hu"
-}
--->
 # Egy játék létrehozása eseményekkel
 
 Gondolkodtál már valaha azon, hogyan tudják a weboldalak, mikor kattintasz egy gombra vagy gépelsz egy szövegdobozba? Ez az eseményvezérelt programozás varázsa! Mi lehet jobb módja ennek az alapvető készségnek az elsajátítására, mint egy hasznos dolog készítése – egy gépelési sebesség játék, amely minden billentyűleütésedre reagál.

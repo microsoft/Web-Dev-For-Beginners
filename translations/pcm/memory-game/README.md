@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
-  "translation_date": "2026-01-08T11:28:22+00:00",
-  "source_file": "memory-game/README.md",
-  "language_code": "pcm"
-}
--->
 Dis na [Next.js](https://nextjs.org) project wey dem bootstrapped wit [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

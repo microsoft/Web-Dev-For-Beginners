@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "830359535306594b448db6575ce5cdee",
-  "translation_date": "2025-08-23T23:54:55+00:00",
-  "source_file": "7-bank-project/README.md",
-  "language_code": "ja"
-}
--->
 # :dollar: 銀行を作ろう
 
 このプロジェクトでは、架空の銀行を構築する方法を学びます。このレッスンでは、ウェブアプリのレイアウトとルートの設定方法、フォームの作成、状態管理、そしてAPIから銀行のデータを取得する方法について説明します。

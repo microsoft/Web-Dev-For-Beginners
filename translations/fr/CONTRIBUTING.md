@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
-  "translation_date": "2025-08-23T22:22:42+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "fr"
-}
--->
 # Contribution
 
 Ce projet accueille avec plaisir les contributions et suggestions. La plupart des contributions nécessitent que vous acceptiez un Contrat de Licence de Contributeur (CLA) déclarant que vous avez le droit de, et que vous accordez effectivement, les droits nécessaires pour que nous puissions utiliser votre contribution. Pour plus de détails, visitez [https://cla.microsoft.com](https://cla.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-10-11T11:40:41+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ta"
-}
--->
 # கேள்வி பதில் செயலி
 
 இந்த கேள்வி பதில்கள் https://aka.ms/webdev-beginners என்ற தரவியல் அறிவியல் பாடத்திட்டத்தின் முன் மற்றும் பின் சொற்பொழிவு கேள்வி பதில்கள் ஆகும்.

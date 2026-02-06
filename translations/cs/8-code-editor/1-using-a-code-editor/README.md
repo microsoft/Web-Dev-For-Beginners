@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
-  "translation_date": "2026-01-07T03:36:11+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/README.md",
-  "language_code": "cs"
-}
--->
 # Použití editoru kódu: Ovládnutí VSCode.dev
 
 Pamatujete si ve *The Matrix*, když se Neo musel připojit do obrovského počítačového terminálu, aby získal přístup do digitálního světa? Dnešní nástroje pro vývoj webu jsou úplně opačný příběh – mimořádně výkonné možnosti dostupné odkudkoli. VSCode.dev je prohlížečový editor kódu, který přináší profesionální vývojové nástroje na jakékoli zařízení s připojením k internetu.

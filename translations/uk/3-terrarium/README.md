@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
-  "translation_date": "2026-01-07T10:53:11+00:00",
-  "source_file": "3-terrarium/README.md",
-  "language_code": "uk"
-}
--->
 ## Розгорніть свій Terrarium
 
 Ви можете розгорнути або опублікувати свій Terrarium в Інтернеті за допомогою **Azure Static Web Apps**.

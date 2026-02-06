@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-27T22:58:36+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "ms"
-}
--->
 # Terrarium Saya: Projek untuk belajar tentang HTML, CSS, dan manipulasi DOM menggunakan JavaScript 🌵🌱
 
 Sebuah meditasi kod kecil dengan fungsi seret dan lepas. Dengan sedikit HTML, JS, dan CSS, anda boleh membina antara muka web, menghiasnya, dan menambah interaksi.

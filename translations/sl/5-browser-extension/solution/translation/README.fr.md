@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9361268ca430b2579375009e1eceb5e5",
-  "translation_date": "2025-08-27T22:21:27+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.fr.md",
-  "language_code": "sl"
-}
--->
 # Razširitev brskalnika Carbon Trigger: Dokončana koda
 
 Z uporabo API-ja C02 Signal podjetja tmrow za spremljanje porabe električne energije ustvarite razširitev za brskalnik, ki vam omogoča, da imate neposreden opomnik v brskalniku o porabi električne energije v vaši regiji. Uporaba te namensko razvite razširitve vam bo pomagala sprejemati odločitve o svojih dejavnostih na podlagi teh informacij.

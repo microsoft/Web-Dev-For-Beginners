@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
-  "translation_date": "2025-08-23T23:54:07+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.ja.md",
-  "language_code": "ja"
-}
--->
 # カーボントリガーブラウザ拡張機能：完成したコード
 
 tmrow の CO2 シグナル API を使用して、地域の電力使用量を追跡し、ブラウザ上でリマインダーとして表示する拡張機能を構築します。この拡張機能を使うことで、電力使用量に基づいて日々の活動を調整することができます。

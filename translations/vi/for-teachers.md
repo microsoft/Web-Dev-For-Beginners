@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:13:05+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "vi"
-}
--->
 ### Dành cho giáo viên
 
 Bạn có thể sử dụng giáo trình này trong lớp học của mình. Nó hoạt động mượt mà với GitHub Classroom và các nền tảng LMS hàng đầu, đồng thời cũng có thể được sử dụng như một kho lưu trữ độc lập với học sinh.

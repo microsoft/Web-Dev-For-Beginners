@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
-  "translation_date": "2025-10-24T14:51:36+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
-  "language_code": "ja"
-}
--->
 # 課題: 現代のウェブ開発ツールを探る
 
 ## 指示

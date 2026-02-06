@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-06T14:25:00+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "my"
-}
--->
 # AI Framework
 
 AI အက်ပလီကေးရှင်းတွေကို အစမှစပြီး တည်ဆောက်ဖို့ ကြိုးစားရင်း စိတ်ပျက်စရာတွေ ရှိဖူးလား? သင်တစ်ဦးတည်းမဟုတ်ပါဘူး! AI Frameworks ဆိုတာ AI တိုးတက်မှုအတွက် အထောက်အကူပြုတဲ့ Swiss Army Knife လိုပါပဲ - အချိန်ကုန်သက်သာစေပြီး အကျိုးကျေးဇူးများစွာရရှိစေတဲ့ စွမ်းအားရှိတဲ့ tools တွေဖြစ်ပါတယ်။ AI Framework ကို စနစ်တကျ စီမံထားတဲ့ Library တစ်ခုလို ထင်ပါ - အဆင့်မြင့် components တွေ၊ စံပြ API တွေ၊ အဆင်ပြေတဲ့ abstraction တွေကို ပေးပြီး implementation details တွေနဲ့ အခက်အခဲတွေကို ရင်ဆိုင်မယ့်အစား ပြဿနာတွေကို ဖြေရှင်းဖို့ အာရုံစိုက်နိုင်စေပါတယ်။

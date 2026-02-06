@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "87cd43afe5b69dbbffb5c4b209ea6791",
-  "translation_date": "2026-01-08T13:48:43+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
-  "language_code": "kn"
-}
--->
 # ನಿಯೋಜನೆ: ಕ್ಯಾನ್ವಾಸ್ API ಅನ್ನು ಅನ್ವೇಷಿಸಿ
 
 ## ಕಲಿಕೆಯ ಉದ್ದೇಶಗಳು

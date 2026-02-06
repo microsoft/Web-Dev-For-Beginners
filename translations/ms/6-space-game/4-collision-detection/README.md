@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-06T12:20:54+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "ms"
-}
--->
 # Bina Permainan Angkasa Bahagian 4: Menambah Laser dan Mengesan Perlanggaran
 
 ```mermaid

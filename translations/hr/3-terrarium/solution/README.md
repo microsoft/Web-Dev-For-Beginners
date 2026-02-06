@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-27T22:47:13+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "hr"
-}
--->
 # Moj terarij: Projekt za učenje o HTML-u, CSS-u i manipulaciji DOM-a pomoću JavaScripta 🌵🌱
 
 Mala vježba povuci i ispusti. Uz malo HTML-a, JS-a i CSS-a, možete izgraditi web sučelje, stilizirati ga i dodati interakciju.

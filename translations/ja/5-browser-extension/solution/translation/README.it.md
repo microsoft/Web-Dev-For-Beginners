@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
-  "translation_date": "2025-08-23T23:53:14+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.it.md",
-  "language_code": "ja"
-}
--->
 # カーボントリガー ブラウザ拡張機能: スタートガイド
 
 tmrowのSignal CO2 APIを使用して電力使用量を監視し、自分の地域での電力使用の負荷をブラウザ上で直接確認できるリマインダーを作成するためのブラウザ拡張機能を作成します。この特別な拡張機能を使用することで、これらの情報に基づいて自分の活動を評価するのに役立ちます。

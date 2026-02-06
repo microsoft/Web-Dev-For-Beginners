@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T23:55:37+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "da"
-}
--->
 # Oprettelse af et spil ved hjælp af events
 
 Har du nogensinde spekuleret på, hvordan hjemmesider ved, når du klikker på en knap eller skriver i en tekstboks? Det er magien ved begivenhedsdrevet programmering! Hvad er en bedre måde at lære denne essentielle færdighed på end ved at bygge noget nyttigt - et skrivehastighedsspil, der reagerer på hver eneste tasteanslag, du laver.

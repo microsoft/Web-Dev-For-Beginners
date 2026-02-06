@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2026-01-08T09:05:05+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "et"
-}
--->
 # Loo CV veebileht kasutades VSCode.dev
 
 Muuda oma karjääriväljavaateid, luues professionaalse CV veebilehe, mis tutvustab sinu oskusi ja kogemusi interaktiivses, moodsas vormingus. Traditsiooniliste PDF-de saatmise asemel kujuta ette, et võimaldad värbajatel kasutada stiilset, reageerivat veebilehte, mis demonstreerib nii sinu kvalifikatsiooni kui ka veebiarenduse võimeid.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-04T00:30:12+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "it"
-}
--->
 # Creare un'app bancaria Parte 4: Concetti di gestione dello stato
 
 ## ⚡ Cosa puoi fare nei prossimi 5 minuti

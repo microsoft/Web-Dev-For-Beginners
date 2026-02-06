@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2025-11-04T02:04:47+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "nl"
-}
--->
 # Bouw een Ruimtespel Deel 2: Teken Held en Monsters op Canvas
 
 ```mermaid

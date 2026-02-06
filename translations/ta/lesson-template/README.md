@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-  "translation_date": "2025-10-11T11:47:58+00:00",
-  "source_file": "lesson-template/README.md",
-  "language_code": "ta"
-}
--->
 # [பாடம் தலைப்பு]
 
 ![இங்கே ஒரு வீடியோ இணைக்கவும்](../../../lesson-template/video-url)

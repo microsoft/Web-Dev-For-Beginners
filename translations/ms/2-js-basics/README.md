@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T22:45:09+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ms"
-}
--->
 # Pengenalan kepada JavaScript
 
 JavaScript adalah bahasa untuk web. Dalam empat pelajaran ini, anda akan mempelajari asas-asasnya.

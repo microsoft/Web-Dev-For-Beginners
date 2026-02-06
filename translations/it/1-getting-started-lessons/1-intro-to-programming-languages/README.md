@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2025-11-04T00:21:41+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "it"
-}
--->
 # Introduzione ai Linguaggi di Programmazione e agli Strumenti Moderni per Sviluppatori
 
 Ciao futuro sviluppatore! 👋 Posso dirti qualcosa che mi emoziona ogni giorno? Stai per scoprire che programmare non riguarda solo i computer – è come avere superpoteri per dare vita alle tue idee più folli!

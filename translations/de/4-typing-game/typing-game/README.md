@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2026-01-06T09:10:27+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "de"
-}
--->
 # Erstellung eines Spiels mit Events
 
 Haben Sie sich schon einmal gefragt, wie Websites wissen, wann Sie einen Button anklicken oder in ein Textfeld tippen? Das ist die Magie der ereignisgesteuerten Programmierung! Was gibt es Besseres, um diese wichtige Fähigkeit zu erlernen, als etwas Nützliches zu bauen – ein Tippgeschwindigkeitsspiel, das auf jeden Tastendruck reagiert, den Sie machen.

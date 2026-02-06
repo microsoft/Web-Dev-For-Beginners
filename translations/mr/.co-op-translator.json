@@ -1,0 +1,584 @@
+{
+  "1-getting-started-lessons/1-intro-to-programming-languages/README.md": {
+    "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
+    "translation_date": "2025-11-03T14:20:19+00:00",
+    "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
+    "language_code": "mr"
+  },
+  "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md": {
+    "original_hash": "17b8ec8e85d99e27dcb3f73842e583be",
+    "translation_date": "2025-10-20T21:16:43+00:00",
+    "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/assignment.md",
+    "language_code": "mr"
+  },
+  "1-getting-started-lessons/2-github-basics/README.md": {
+    "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
+    "translation_date": "2025-11-25T12:04:18+00:00",
+    "source_file": "1-getting-started-lessons/2-github-basics/README.md",
+    "language_code": "mr"
+  },
+  "1-getting-started-lessons/3-accessibility/README.md": {
+    "original_hash": "7f2c48e04754724123ea100a822765e5",
+    "translation_date": "2025-11-03T14:24:00+00:00",
+    "source_file": "1-getting-started-lessons/3-accessibility/README.md",
+    "language_code": "mr"
+  },
+  "1-getting-started-lessons/3-accessibility/assignment.md": {
+    "original_hash": "e6d0f456dfc22afb41bbdefeb5ec179d",
+    "translation_date": "2025-10-20T21:19:40+00:00",
+    "source_file": "1-getting-started-lessons/3-accessibility/assignment.md",
+    "language_code": "mr"
+  },
+  "1-getting-started-lessons/README.md": {
+    "original_hash": "770d9f83dddc841c19f210dee5fe0712",
+    "translation_date": "2025-10-03T13:26:45+00:00",
+    "source_file": "1-getting-started-lessons/README.md",
+    "language_code": "mr"
+  },
+  "10-ai-framework-project/README.md": {
+    "original_hash": "3925b6a1c31c60755eaae4d578232c25",
+    "translation_date": "2025-11-03T14:30:40+00:00",
+    "source_file": "10-ai-framework-project/README.md",
+    "language_code": "mr"
+  },
+  "10-ai-framework-project/solution/README.md": {
+    "original_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "translation_date": "2026-01-29T18:03:08+00:00",
+    "source_file": "10-ai-framework-project/solution/README.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/1-data-types/README.md": {
+    "original_hash": "672b0bb6e8b431075f3bdb7130590d2d",
+    "translation_date": "2025-11-03T14:11:07+00:00",
+    "source_file": "2-js-basics/1-data-types/README.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/1-data-types/assignment.md": {
+    "original_hash": "6fd645e97c48cd5eb5a3d290815ec8b5",
+    "translation_date": "2025-10-22T15:47:25+00:00",
+    "source_file": "2-js-basics/1-data-types/assignment.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/2-functions-methods/README.md": {
+    "original_hash": "71f7d7dafa1c7194d79ddac87f669ff9",
+    "translation_date": "2025-11-03T14:12:55+00:00",
+    "source_file": "2-js-basics/2-functions-methods/README.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/2-functions-methods/assignment.md": {
+    "original_hash": "8328f58f4593b4671656ff8f4b2edbd9",
+    "translation_date": "2025-10-22T15:48:06+00:00",
+    "source_file": "2-js-basics/2-functions-methods/assignment.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/3-making-decisions/README.md": {
+    "original_hash": "c688385d15dd3645e924ea0ffee8967f",
+    "translation_date": "2025-11-03T14:15:17+00:00",
+    "source_file": "2-js-basics/3-making-decisions/README.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/3-making-decisions/assignment.md": {
+    "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
+    "translation_date": "2025-10-22T15:49:41+00:00",
+    "source_file": "2-js-basics/3-making-decisions/assignment.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/4-arrays-loops/README.md": {
+    "original_hash": "1710a50a519a6e4a1b40a5638783018d",
+    "translation_date": "2025-11-03T14:14:30+00:00",
+    "source_file": "2-js-basics/4-arrays-loops/README.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/4-arrays-loops/assignment.md": {
+    "original_hash": "8abcada0534e0fb3a7556ea3c5a2a8a4",
+    "translation_date": "2025-10-22T15:48:56+00:00",
+    "source_file": "2-js-basics/4-arrays-loops/assignment.md",
+    "language_code": "mr"
+  },
+  "2-js-basics/README.md": {
+    "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
+    "translation_date": "2025-08-25T21:32:17+00:00",
+    "source_file": "2-js-basics/README.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/1-intro-to-html/README.md": {
+    "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
+    "translation_date": "2025-11-03T14:40:47+00:00",
+    "source_file": "3-terrarium/1-intro-to-html/README.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/1-intro-to-html/assignment.md": {
+    "original_hash": "650e63282e1dfa032890fcf5c1c4119d",
+    "translation_date": "2025-10-22T16:14:55+00:00",
+    "source_file": "3-terrarium/1-intro-to-html/assignment.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/2-intro-to-css/README.md": {
+    "original_hash": "e39f3a4e3bcccf94639e3af1248f8a4d",
+    "translation_date": "2025-11-03T14:39:45+00:00",
+    "source_file": "3-terrarium/2-intro-to-css/README.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/2-intro-to-css/assignment.md": {
+    "original_hash": "bee6762d4092a13fc7c338814963f980",
+    "translation_date": "2025-10-22T16:13:52+00:00",
+    "source_file": "3-terrarium/2-intro-to-css/assignment.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/3-intro-to-DOM-and-closures/README.md": {
+    "original_hash": "973e48ad87d67bf5bb819746c9f8e302",
+    "translation_date": "2025-11-03T14:37:33+00:00",
+    "source_file": "3-terrarium/3-intro-to-DOM-and-closures/README.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/3-intro-to-DOM-and-closures/assignment.md": {
+    "original_hash": "947ca5ce7c94aee9c7de7034e762bc17",
+    "translation_date": "2025-10-22T16:11:54+00:00",
+    "source_file": "3-terrarium/3-intro-to-DOM-and-closures/assignment.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/README.md": {
+    "original_hash": "bc5c5550f79d10add90ce419ee34abb3",
+    "translation_date": "2026-01-06T17:22:36+00:00",
+    "source_file": "3-terrarium/README.md",
+    "language_code": "mr"
+  },
+  "3-terrarium/solution/README.md": {
+    "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
+    "translation_date": "2025-08-25T21:30:53+00:00",
+    "source_file": "3-terrarium/solution/README.md",
+    "language_code": "mr"
+  },
+  "4-typing-game/README.md": {
+    "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
+    "translation_date": "2025-11-03T14:51:46+00:00",
+    "source_file": "4-typing-game/README.md",
+    "language_code": "mr"
+  },
+  "4-typing-game/solution/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-26T00:54:45+00:00",
+    "source_file": "4-typing-game/solution/README.md",
+    "language_code": "mr"
+  },
+  "4-typing-game/typing-game/README.md": {
+    "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
+    "translation_date": "2025-11-03T14:53:04+00:00",
+    "source_file": "4-typing-game/typing-game/README.md",
+    "language_code": "mr"
+  },
+  "4-typing-game/typing-game/assignment.md": {
+    "original_hash": "3eac59d70e2532a677a2ce6bf765485a",
+    "translation_date": "2025-10-22T16:27:46+00:00",
+    "source_file": "4-typing-game/typing-game/assignment.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/1-about-browsers/README.md": {
+    "original_hash": "00aa85715e1efd4930c17a23e3012e69",
+    "translation_date": "2025-11-03T15:08:25+00:00",
+    "source_file": "5-browser-extension/1-about-browsers/README.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/1-about-browsers/assignment.md": {
+    "original_hash": "b6897c02603d0045dd6d8256e8714baa",
+    "translation_date": "2025-10-22T16:38:12+00:00",
+    "source_file": "5-browser-extension/1-about-browsers/assignment.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/2-forms-browsers-local-storage/README.md": {
+    "original_hash": "2b6203a48c48d8234e0948353b47d84e",
+    "translation_date": "2025-11-03T15:06:41+00:00",
+    "source_file": "5-browser-extension/2-forms-browsers-local-storage/README.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/2-forms-browsers-local-storage/assignment.md": {
+    "original_hash": "25b8d28b8531352d4eb67291fd7824c4",
+    "translation_date": "2025-10-22T16:36:35+00:00",
+    "source_file": "5-browser-extension/2-forms-browsers-local-storage/assignment.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/3-background-tasks-and-performance/README.md": {
+    "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
+    "translation_date": "2025-11-03T15:04:54+00:00",
+    "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/3-background-tasks-and-performance/assignment.md": {
+    "original_hash": "a203e560e58ccc6ba68bffc40c7c8676",
+    "translation_date": "2025-10-22T16:35:03+00:00",
+    "source_file": "5-browser-extension/3-background-tasks-and-performance/assignment.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/README.md": {
+    "original_hash": "b121a279a6ab39878491f3e572673515",
+    "translation_date": "2025-08-25T23:26:33+00:00",
+    "source_file": "5-browser-extension/README.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/README.md": {
+    "original_hash": "fab4e6b4f0efcd587a9029d82991f597",
+    "translation_date": "2025-08-25T23:50:41+00:00",
+    "source_file": "5-browser-extension/solution/README.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/translation/README.es.md": {
+    "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
+    "translation_date": "2025-08-25T23:52:27+00:00",
+    "source_file": "5-browser-extension/solution/translation/README.es.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/translation/README.fr.md": {
+    "original_hash": "9361268ca430b2579375009e1eceb5e5",
+    "translation_date": "2025-08-25T23:57:49+00:00",
+    "source_file": "5-browser-extension/solution/translation/README.fr.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/translation/README.hi.md": {
+    "original_hash": "dd58ae1b7707034f055718c1b68bc8de",
+    "translation_date": "2025-08-25T23:54:17+00:00",
+    "source_file": "5-browser-extension/solution/translation/README.hi.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/translation/README.it.md": {
+    "original_hash": "9a6b22a2eff0f499b66236be973b24ad",
+    "translation_date": "2025-08-25T23:59:36+00:00",
+    "source_file": "5-browser-extension/solution/translation/README.it.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/translation/README.ja.md": {
+    "original_hash": "3f5e6821e0febccfc5d05e7c944d9e3d",
+    "translation_date": "2025-08-26T00:01:22+00:00",
+    "source_file": "5-browser-extension/solution/translation/README.ja.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/solution/translation/README.ms.md": {
+    "original_hash": "21b364c158c8e4f698de65eeac16c9fe",
+    "translation_date": "2025-08-25T23:56:01+00:00",
+    "source_file": "5-browser-extension/solution/translation/README.ms.md",
+    "language_code": "mr"
+  },
+  "5-browser-extension/start/README.md": {
+    "original_hash": "26fd39046d264ba185dcb086d3a8cf3e",
+    "translation_date": "2025-08-25T23:35:18+00:00",
+    "source_file": "5-browser-extension/start/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/1-introduction/README.md": {
+    "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
+    "translation_date": "2025-11-03T15:02:35+00:00",
+    "source_file": "6-space-game/1-introduction/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/1-introduction/assignment.md": {
+    "original_hash": "c8fc39a014d08247c082878122e2ba73",
+    "translation_date": "2025-10-22T16:33:46+00:00",
+    "source_file": "6-space-game/1-introduction/assignment.md",
+    "language_code": "mr"
+  },
+  "6-space-game/2-drawing-to-canvas/README.md": {
+    "original_hash": "7994743c5b21fdcceb36307916ef249a",
+    "translation_date": "2025-11-03T14:57:22+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/2-drawing-to-canvas/assignment.md": {
+    "original_hash": "87cd43afe5b69dbbffb5c4b209ea6791",
+    "translation_date": "2025-10-22T16:31:04+00:00",
+    "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
+    "language_code": "mr"
+  },
+  "6-space-game/3-moving-elements-around/README.md": {
+    "original_hash": "8c55a2bd4bc0ebe4c88198fd563a9e09",
+    "translation_date": "2025-11-03T14:55:19+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/3-moving-elements-around/assignment.md": {
+    "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
+    "translation_date": "2025-10-22T16:29:39+00:00",
+    "source_file": "6-space-game/3-moving-elements-around/assignment.md",
+    "language_code": "mr"
+  },
+  "6-space-game/4-collision-detection/README.md": {
+    "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
+    "translation_date": "2025-11-03T15:00:54+00:00",
+    "source_file": "6-space-game/4-collision-detection/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/4-collision-detection/assignment.md": {
+    "original_hash": "124efddbb65166cddb38075ad6dae324",
+    "translation_date": "2025-10-22T16:33:00+00:00",
+    "source_file": "6-space-game/4-collision-detection/assignment.md",
+    "language_code": "mr"
+  },
+  "6-space-game/4-collision-detection/solution/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:28:16+00:00",
+    "source_file": "6-space-game/4-collision-detection/solution/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/4-collision-detection/your-work/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:27:29+00:00",
+    "source_file": "6-space-game/4-collision-detection/your-work/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/5-keeping-score/README.md": {
+    "original_hash": "2ed9145a16cf576faa2a973dff84d099",
+    "translation_date": "2025-11-03T15:03:26+00:00",
+    "source_file": "6-space-game/5-keeping-score/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/5-keeping-score/assignment.md": {
+    "original_hash": "81f292dbda01685b91735e0398dc0504",
+    "translation_date": "2025-08-25T22:06:36+00:00",
+    "source_file": "6-space-game/5-keeping-score/assignment.md",
+    "language_code": "mr"
+  },
+  "6-space-game/5-keeping-score/solution/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:08:27+00:00",
+    "source_file": "6-space-game/5-keeping-score/solution/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/5-keeping-score/your-work/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:07:38+00:00",
+    "source_file": "6-space-game/5-keeping-score/your-work/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/6-end-condition/README.md": {
+    "original_hash": "a4b78043f4d64bf3ee24e0689b8b391d",
+    "translation_date": "2025-11-03T14:59:11+00:00",
+    "source_file": "6-space-game/6-end-condition/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/6-end-condition/assignment.md": {
+    "original_hash": "232d592791465c1678cab3a2bb6cd3e8",
+    "translation_date": "2025-10-22T16:31:56+00:00",
+    "source_file": "6-space-game/6-end-condition/assignment.md",
+    "language_code": "mr"
+  },
+  "6-space-game/6-end-condition/solution/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:40:02+00:00",
+    "source_file": "6-space-game/6-end-condition/solution/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/6-end-condition/your-work/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:39:12+00:00",
+    "source_file": "6-space-game/6-end-condition/your-work/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/README.md": {
+    "original_hash": "c40a698395ee5102715f7880bba3f2e7",
+    "translation_date": "2025-08-25T22:01:50+00:00",
+    "source_file": "6-space-game/README.md",
+    "language_code": "mr"
+  },
+  "6-space-game/solution/README.md": {
+    "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
+    "translation_date": "2025-08-25T22:40:49+00:00",
+    "source_file": "6-space-game/solution/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/1-template-route/README.md": {
+    "original_hash": "351678bece18f07d9daa987a881fb062",
+    "translation_date": "2025-11-03T14:47:54+00:00",
+    "source_file": "7-bank-project/1-template-route/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/1-template-route/assignment.md": {
+    "original_hash": "df0dcecddcd28ea8cbf6ede0ad57d673",
+    "translation_date": "2025-10-22T16:22:42+00:00",
+    "source_file": "7-bank-project/1-template-route/assignment.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/2-forms/README.md": {
+    "original_hash": "7cbdbd132d39a2bb493e85bc2a9387cc",
+    "translation_date": "2025-11-03T14:50:29+00:00",
+    "source_file": "7-bank-project/2-forms/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/2-forms/assignment.md": {
+    "original_hash": "efb01fcafd2ef40c593a6e662fc938a8",
+    "translation_date": "2025-10-22T16:25:08+00:00",
+    "source_file": "7-bank-project/2-forms/assignment.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/3-data/README.md": {
+    "original_hash": "86ee5069f27ea3151389d8687c95fac9",
+    "translation_date": "2025-11-03T14:45:17+00:00",
+    "source_file": "7-bank-project/3-data/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/3-data/assignment.md": {
+    "original_hash": "d0a02cb117e91a5b5f24178080068a3d",
+    "translation_date": "2025-10-22T16:20:23+00:00",
+    "source_file": "7-bank-project/3-data/assignment.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/4-state-management/README.md": {
+    "original_hash": "b807b09df716dc48a2b750835bf8e933",
+    "translation_date": "2025-11-03T14:42:51+00:00",
+    "source_file": "7-bank-project/4-state-management/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/4-state-management/assignment.md": {
+    "original_hash": "50a7783473b39a2e0f133e271a102231",
+    "translation_date": "2025-10-22T16:17:19+00:00",
+    "source_file": "7-bank-project/4-state-management/assignment.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/README.md": {
+    "original_hash": "830359535306594b448db6575ce5cdee",
+    "translation_date": "2025-08-26T00:03:03+00:00",
+    "source_file": "7-bank-project/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/api/README.md": {
+    "original_hash": "9884f8c8a61cf56214450f8b16a094ce",
+    "translation_date": "2025-08-26T00:04:42+00:00",
+    "source_file": "7-bank-project/api/README.md",
+    "language_code": "mr"
+  },
+  "7-bank-project/solution/README.md": {
+    "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
+    "translation_date": "2025-08-26T00:39:34+00:00",
+    "source_file": "7-bank-project/solution/README.md",
+    "language_code": "mr"
+  },
+  "8-code-editor/1-using-a-code-editor/README.md": {
+    "original_hash": "a9a3bcc037a447e2d8994d99e871cd9f",
+    "translation_date": "2025-11-03T14:17:13+00:00",
+    "source_file": "8-code-editor/1-using-a-code-editor/README.md",
+    "language_code": "mr"
+  },
+  "8-code-editor/1-using-a-code-editor/assignment.md": {
+    "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
+    "translation_date": "2025-10-22T15:52:27+00:00",
+    "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
+    "language_code": "mr"
+  },
+  "9-chat-project/README.md": {
+    "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
+    "translation_date": "2025-11-03T14:34:15+00:00",
+    "source_file": "9-chat-project/README.md",
+    "language_code": "mr"
+  },
+  "9-chat-project/solution/README.md": {
+    "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
+    "translation_date": "2025-09-01T15:26:17+00:00",
+    "source_file": "9-chat-project/solution/README.md",
+    "language_code": "mr"
+  },
+  "9-chat-project/solution/backend/README.md": {
+    "original_hash": "bcd2c2bbaae71151b1ed1b9170aa78af",
+    "translation_date": "2025-09-01T15:42:57+00:00",
+    "source_file": "9-chat-project/solution/backend/README.md",
+    "language_code": "mr"
+  },
+  "9-chat-project/solution/backend/python/README.md": {
+    "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
+    "translation_date": "2025-10-22T16:10:10+00:00",
+    "source_file": "9-chat-project/solution/backend/python/README.md",
+    "language_code": "mr"
+  },
+  "9-chat-project/solution/frontend/README.md": {
+    "original_hash": "7746a470be8fc7f736eb1b43ebb710ee",
+    "translation_date": "2025-09-01T15:51:44+00:00",
+    "source_file": "9-chat-project/solution/frontend/README.md",
+    "language_code": "mr"
+  },
+  "AGENTS.md": {
+    "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
+    "translation_date": "2025-10-03T11:21:36+00:00",
+    "source_file": "AGENTS.md",
+    "language_code": "mr"
+  },
+  "CODE_OF_CONDUCT.md": {
+    "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
+    "translation_date": "2025-08-25T20:58:17+00:00",
+    "source_file": "CODE_OF_CONDUCT.md",
+    "language_code": "mr"
+  },
+  "CONTRIBUTING.md": {
+    "original_hash": "777400e9f0336c7ee2f9a1200a88478f",
+    "translation_date": "2025-08-25T21:02:54+00:00",
+    "source_file": "CONTRIBUTING.md",
+    "language_code": "mr"
+  },
+  "Git-Basics/README.md": {
+    "original_hash": "5cf5e1ed51455fefed4895fcc4d6ba2a",
+    "translation_date": "2025-10-03T15:49:33+00:00",
+    "source_file": "Git-Basics/README.md",
+    "language_code": "mr"
+  },
+  "README.md": {
+    "original_hash": "490c83786552d7fab6390991517bef09",
+    "translation_date": "2026-01-29T18:04:58+00:00",
+    "source_file": "README.md",
+    "language_code": "mr"
+  },
+  "SECURITY.md": {
+    "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
+    "translation_date": "2025-08-25T21:00:56+00:00",
+    "source_file": "SECURITY.md",
+    "language_code": "mr"
+  },
+  "SUPPORT.md": {
+    "original_hash": "c9d207ff77b4bb46e46dc2b607a8ec1a",
+    "translation_date": "2025-08-25T20:54:42+00:00",
+    "source_file": "SUPPORT.md",
+    "language_code": "mr"
+  },
+  "_404.md": {
+    "original_hash": "ea9f0804bd62f46d9808e953ec7fc459",
+    "translation_date": "2025-08-25T20:59:18+00:00",
+    "source_file": "_404.md",
+    "language_code": "mr"
+  },
+  "docs/_navbar.md": {
+    "original_hash": "3bd2f51ecf4ac9b39277cba748943793",
+    "translation_date": "2025-08-25T22:00:29+00:00",
+    "source_file": "docs/_navbar.md",
+    "language_code": "mr"
+  },
+  "docs/_sidebar.md": {
+    "original_hash": "655c91b5979de46f1d70d97f0c5f1d14",
+    "translation_date": "2025-08-25T21:58:59+00:00",
+    "source_file": "docs/_sidebar.md",
+    "language_code": "mr"
+  },
+  "for-teachers.md": {
+    "original_hash": "71009af209f81cc01a1f2d324200375f",
+    "translation_date": "2025-10-03T09:15:22+00:00",
+    "source_file": "for-teachers.md",
+    "language_code": "mr"
+  },
+  "lesson-template/README.md": {
+    "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
+    "translation_date": "2025-08-26T00:51:06+00:00",
+    "source_file": "lesson-template/README.md",
+    "language_code": "mr"
+  },
+  "lesson-template/assignment.md": {
+    "original_hash": "b5f62ec256c7e43e771f0d3b4e1a9130",
+    "translation_date": "2025-08-26T00:52:16+00:00",
+    "source_file": "lesson-template/assignment.md",
+    "language_code": "mr"
+  },
+  "memory-game/README.md": {
+    "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
+    "translation_date": "2025-10-03T11:55:14+00:00",
+    "source_file": "memory-game/README.md",
+    "language_code": "mr"
+  },
+  "quiz-app/README.md": {
+    "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
+    "translation_date": "2025-08-26T01:12:22+00:00",
+    "source_file": "quiz-app/README.md",
+    "language_code": "mr"
+  }
+}

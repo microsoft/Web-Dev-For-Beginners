@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T10:03:24+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "fi"
-}
--->
 ### Opettajille
 
 Voit käyttää tätä opetusohjelmaa luokassasi. Se toimii saumattomasti GitHub Classroomin ja johtavien LMS-alustojen kanssa, ja sitä voidaan käyttää myös itsenäisenä repositoriona opiskelijoiden kanssa.

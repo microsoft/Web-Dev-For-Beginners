@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-18T19:05:45+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "my"
-}
--->
 # GitHub အကြောင်းမိတ်ဆက်
 
 ဟေး၊ အနာဂတ် Developer! 👋 ကမ္ဘာတစ်ဝှမ်းရှိ coder သန်းပေါင်းများစွာနဲ့ ပူးပေါင်းဖို့ အဆင်သင့်ဖြစ်ပြီလား? GitHub ကို မိတ်ဆက်ပေးဖို့ တကယ်ပဲ စိတ်လှုပ်ရှားနေပါတယ် – ဒါကို programmer တွေအတွက် social media platform လို့ ထင်ပါ။ ဒါပေမယ့် lunch ရဲ့ ဓာတ်ပုံတွေ မျှဝေတဲ့အစား code တွေကို မျှဝေပြီး အံ့ဖွယ်ရာတွေကို အတူတူ တည်ဆောက်နေကြတာပါ!

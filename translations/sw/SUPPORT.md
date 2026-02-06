@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c9d207ff77b4bb46e46dc2b607a8ec1a",
-  "translation_date": "2025-08-28T03:20:31+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "sw"
-}
--->
 # Msaada
 
 ## Jinsi ya kuripoti matatizo na kupata msaada  

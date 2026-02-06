@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "1710a50a519a6e4a1b40a5638783018d",
-  "translation_date": "2026-01-07T06:40:30+00:00",
-  "source_file": "2-js-basics/4-arrays-loops/README.md",
-  "language_code": "bg"
-}
--->
 # Основи на JavaScript: Масиви и цикли
 
 ![Основи на JavaScript - Масиви](../../../../translated_images/bg/webdev101-js-arrays.439d7528b8a29455.webp)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "461aa4fc74c6b1789c3a13b5d82c0cd9",
-  "translation_date": "2025-08-24T00:10:47+00:00",
-  "source_file": "7-bank-project/solution/README.md",
-  "language_code": "ja"
-}
--->
 # 銀行アプリ
 
 > 銀行アプリプロジェクトの例として作成されたソリューション。純粋なHTML5、CSS、JavaScriptで構築されています（フレームワークやライブラリは使用していません）。

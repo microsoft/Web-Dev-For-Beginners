@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2026-01-06T18:43:07+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "pl"
-}
--->
 # AI Framework
 
 Czy kiedykolwiek czułeś się przytłoczony, próbując budować aplikacje AI od podstaw? Nie jesteś sam! Frameworki AI to jak szwajcarski scyzoryk dla programistów AI – to potężne narzędzia, które mogą zaoszczędzić Ci czas i bóle głowy podczas tworzenia inteligentnych aplikacji. Pomyśl o frameworku AI jak o dobrze zorganizowanej bibliotece: zapewnia gotowe komponenty, ustandaryzowane API i sprytne abstrakcje, dzięki czemu możesz skupić się na rozwiązywaniu problemów zamiast zmagać się ze szczegółami implementacji.

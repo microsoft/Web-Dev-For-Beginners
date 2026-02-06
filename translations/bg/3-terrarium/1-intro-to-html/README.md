@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3fcfa99c4897e051b558b5eaf1e8cc74",
-  "translation_date": "2026-01-07T07:14:47+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/README.md",
-  "language_code": "bg"
-}
--->
 # Terrarium Project Part 1: Въведение в HTML
 
 ```mermaid

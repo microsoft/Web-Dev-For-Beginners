@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-28T04:21:18+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "sw"
-}
--->
 # Programu ya Maswali ya Quiz
 
 Maswali haya ni ya kabla na baada ya mihadhara katika mtaala wa sayansi ya data kwenye https://aka.ms/webdev-beginners

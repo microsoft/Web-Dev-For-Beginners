@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-25T21:00:13+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "ur"
-}
--->
 ## سیکیورٹی
 
 مائیکروسافٹ اپنی سافٹ ویئر مصنوعات اور خدمات کی سیکیورٹی کو سنجیدگی سے لیتا ہے، جس میں ہمارے تمام سورس کوڈ ریپوزیٹریز شامل ہیں جو ہماری GitHub تنظیموں کے ذریعے منظم کیے جاتے ہیں، جن میں [Microsoft](https://github.com/Microsoft)، [Azure](https://github.com/Azure)، [DotNet](https://github.com/dotnet)، [AspNet](https://github.com/aspnet)، [Xamarin](https://github.com/xamarin)، اور [ہمارے GitHub تنظیمیں](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon) شامل ہیں۔

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-03T12:38:18+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ar"
-}
--->
 # بناء تطبيق مصرفي الجزء الرابع: مفاهيم إدارة الحالة
 
 ## ⚡ ما يمكنك القيام به في الدقائق الخمس القادمة

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-23T23:37:32+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "fr"
-}
--->
 # Créer une extension de navigateur
 
 Créer des extensions de navigateur est une manière amusante et intéressante de réfléchir à la performance de vos applications tout en développant un type différent de ressource web. Ce module comprend des leçons sur le fonctionnement des navigateurs, le déploiement d'une extension de navigateur, la création d'un formulaire, l'appel d'une API, l'utilisation du stockage local, ainsi que l'évaluation et l'amélioration des performances de votre site web.

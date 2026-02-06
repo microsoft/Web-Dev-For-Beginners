@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b275fed2c6fc90d2b9b6661a3225faa2",
-  "translation_date": "2025-11-06T11:36:04+00:00",
-  "source_file": "5-browser-extension/3-background-tasks-and-performance/README.md",
-  "language_code": "vi"
-}
--->
 # Dự án Tiện ích Trình duyệt Phần 3: Tìm hiểu về Nhiệm vụ Nền và Hiệu suất
 
 ```mermaid

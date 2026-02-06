@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3925b6a1c31c60755eaae4d578232c25",
-  "translation_date": "2025-11-06T12:07:56+00:00",
-  "source_file": "10-ai-framework-project/README.md",
-  "language_code": "ms"
-}
--->
 # Rangka Kerja AI
 
 Pernah rasa terbeban cuba membina aplikasi AI dari awal? Anda tidak keseorangan! Rangka kerja AI ibarat pisau serbaguna untuk pembangunan AI - ia adalah alat yang hebat yang boleh menjimatkan masa dan mengurangkan tekanan semasa membina aplikasi pintar. Anggaplah rangka kerja AI sebagai perpustakaan yang teratur: ia menyediakan komponen yang telah dibina, API yang standard, dan abstraksi pintar supaya anda boleh fokus menyelesaikan masalah tanpa bergelut dengan butiran pelaksanaan.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-24T12:12:16+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "hi"
-}
--->
 # जावास्क्रिप्ट का परिचय
 
 जावास्क्रिप्ट वेब की भाषा है। इन चार पाठों में, आप इसके मूलभूत सिद्धांत सीखेंगे।

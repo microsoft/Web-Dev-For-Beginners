@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "351678bece18f07d9daa987a881fb062",
-  "translation_date": "2025-11-06T11:27:50+00:00",
-  "source_file": "7-bank-project/1-template-route/README.md",
-  "language_code": "vi"
-}
--->
 # Xây dựng ứng dụng ngân hàng Phần 1: Mẫu HTML và định tuyến trong ứng dụng web
 
 ```mermaid

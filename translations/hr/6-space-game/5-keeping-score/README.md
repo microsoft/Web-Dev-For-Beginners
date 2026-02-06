@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2ed9145a16cf576faa2a973dff84d099",
-  "translation_date": "2026-01-07T09:05:19+00:00",
-  "source_file": "6-space-game/5-keeping-score/README.md",
-  "language_code": "hr"
-}
--->
 # Izrada igre u svemiru, dio 5: Bodovanje i životi
 
 ```mermaid

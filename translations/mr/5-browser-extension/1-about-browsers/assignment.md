@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b6897c02603d0045dd6d8256e8714baa",
-  "translation_date": "2025-10-22T16:38:12+00:00",
-  "source_file": "5-browser-extension/1-about-browsers/assignment.md",
-  "language_code": "mr"
-}
--->
 # असाइनमेंट: तुमच्या ब्राउझर एक्स्टेंशनला नवीन रूप द्या
 
 ## आढावा

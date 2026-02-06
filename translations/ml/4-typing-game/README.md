@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "efa2ab875b8bb5a7883816506da6b6d2",
-  "translation_date": "2026-01-08T11:33:48+00:00",
-  "source_file": "4-typing-game/README.md",
-  "language_code": "ml"
-}
--->
 # ഇവന്റ്-ഡ്രിറെൻ പ്രോഗ്രാമിംഗ് - ടൈപ്പിംഗ് ഗെയിം നിർമ്മിക്കുക
 
 ```mermaid

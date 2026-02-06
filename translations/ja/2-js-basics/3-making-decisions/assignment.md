@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2025-10-24T14:47:46+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "ja"
-}
--->
 # 意思決定: 学生の成績処理プログラム
 
 ## 学習目標

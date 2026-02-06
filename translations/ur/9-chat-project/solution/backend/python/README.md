@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0aaa930f076f2d83cc872ad157f8ffd3",
-  "translation_date": "2025-10-22T14:51:21+00:00",
-  "source_file": "9-chat-project/solution/backend/python/README.md",
-  "language_code": "ur"
-}
--->
 # کوڈ چلائیں
 
 ## ترتیب دیں

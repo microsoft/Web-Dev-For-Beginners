@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2066c17078e9d18b5e309f31d8e8bc24",
-  "translation_date": "2026-01-06T05:56:57+00:00",
-  "source_file": "9-chat-project/README.md",
-  "language_code": "fr"
-}
--->
 # Construire un assistant de chat avec l’IA
 
 Vous souvenez-vous dans Star Trek quand l’équipage discutait tranquillement avec l’ordinateur du vaisseau, lui posant des questions complexes et obtenant des réponses réfléchies ? Ce qui semblait relever de la pure science-fiction dans les années 1960 est désormais quelque chose que vous pouvez construire en utilisant les technologies web que vous connaissez déjà.

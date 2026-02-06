@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-27T23:12:20+00:00",
-  "source_file": "4-typing-game/solution/README.md",
-  "language_code": "vi"
-}
--->
 Đây là một chỗ trống, để trống một cách có chủ đích
 
 ---

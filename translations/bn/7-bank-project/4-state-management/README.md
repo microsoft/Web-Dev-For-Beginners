@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-03T22:48:02+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "bn"
-}
--->
 # একটি ব্যাংকিং অ্যাপ তৈরি করুন অংশ ৪: স্টেট ম্যানেজমেন্টের ধারণা
 
 ## ⚡ পরবর্তী ৫ মিনিটে আপনি কী করতে পারবেন

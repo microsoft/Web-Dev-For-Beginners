@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2025-11-03T23:23:27+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ru"
-}
--->
 # Создание банковского приложения, часть 4: Основы управления состоянием
 
 ## ⚡ Что можно сделать за следующие 5 минут

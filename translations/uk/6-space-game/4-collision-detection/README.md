@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "039b4d8ce65f5edd82cf48d9c3e6728c",
-  "translation_date": "2025-11-06T13:53:26+00:00",
-  "source_file": "6-space-game/4-collision-detection/README.md",
-  "language_code": "uk"
-}
--->
 # Створення космічної гри, частина 4: Додавання лазера та виявлення зіткнень
 
 ```mermaid

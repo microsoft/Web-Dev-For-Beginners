@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-10-11T11:41:55+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "et"
-}
--->
 # Sissejuhatus JavaScripti
 
 JavaScript on veebi keel. Nendes neljas õppetükis õpid selle põhitõdesid.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2026-01-08T10:33:54+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "pcm"
-}
--->
 # Microsoft Open Source Code of Conduct
 
 Dis project don adopt di [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon).

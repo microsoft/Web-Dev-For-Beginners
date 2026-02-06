@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2025-11-03T13:59:01+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "tl"
-}
--->
 # Gumawa ng Banking App Bahagi 3: Mga Paraan ng Pagkuha at Paggamit ng Data
 
 Isipin ang computer ng Enterprise sa Star Trek - kapag tinanong ni Captain Picard ang status ng barko, agad na lumalabas ang impormasyon nang hindi nagre-restart o nagre-rebuild ang buong interface. Ang seamless na daloy ng impormasyon na iyon ang eksaktong ginagawa natin dito gamit ang dynamic na pagkuha ng data.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2025-08-28T10:03:11+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "sr"
-}
--->
 ## Безбедност
 
 Мајкрософт озбиљно приступа безбедности својих софтверских производа и услуга, што укључује све репозиторијуме изворног кода којима управљају наше GitHub организације, као што су [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) и [наше GitHub организације](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon).

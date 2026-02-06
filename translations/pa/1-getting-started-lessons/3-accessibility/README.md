@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7f2c48e04754724123ea100a822765e5",
-  "translation_date": "2025-11-03T16:17:27+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/README.md",
-  "language_code": "pa"
-}
--->
 # ਸਹੀ ਵੈੱਬਸਾਈਟ ਬਣਾਉਣਾ
 
 ![ਸਹੀ ਵੈੱਬਸਾਈਟ ਬਾਰੇ ਸਭ ਕੁਝ](../../../../translated_images/pa/webdev101-a11y.8ef3025c858d897a.webp)

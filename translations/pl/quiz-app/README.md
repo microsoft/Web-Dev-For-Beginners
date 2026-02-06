@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-24T13:56:39+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "pl"
-}
--->
 # Aplikacja Quiz
 
 Te quizy to quizy przed i po wykładach w ramach programu nauczania data science dostępnego na stronie https://aka.ms/webdev-beginners

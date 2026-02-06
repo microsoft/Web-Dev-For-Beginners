@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4ecc3bf2e27983d4c780be6f26ee6228",
-  "translation_date": "2026-01-08T10:35:45+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "kn"
-}
--->
 ## ಭದ್ರತೆ
 
 Microsoft ನಮ್ಮ ಸಾಫ್ಟ್‌ವೇರ್ ಉತ್ಪನ್ನಗಳು ಮತ್ತು ಸೇವೆಗಳ ಭದ್ರತೆಯನ್ನು ಗಂಭೀರವಾಗಿ ತೆಗೆದುಕೊಳ್ಳುತ್ತದೆ, ಇದರಲ್ಲಿ ನಮ್ಮ GitHub ಸಂಸ್ಥೆಗಳ ಮೂಲಕ ನಿರ್ವಹಿಸಲಾದ ಎಲ್ಲಾ ಮೂಲಕೋಡ್ ರೆಪೊಸಿಟರಿಗಳು ಸೇರಿವೆ, ಇದರಲ್ಲಿ [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), ಮತ್ತು [ನಮ್ಮ GitHub ಸಂಸ್ಥೆಗಳು](https://opensource.microsoft.com/?WT.mc_id=academic-77807-sagibbon) ಸೇರಿವೆ.

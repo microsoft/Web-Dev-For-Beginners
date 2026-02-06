@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c162b3b3a1cafc1483c8015e9b266f0d",
-  "translation_date": "2025-10-24T23:39:22+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/assignment.md",
-  "language_code": "sr"
-}
--->
 # Коментаришите свој код
 
 ## Упутства

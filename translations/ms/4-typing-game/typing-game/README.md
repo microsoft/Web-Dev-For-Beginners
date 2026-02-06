@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "da8bc72041a2bb3826a54654ee1a8844",
-  "translation_date": "2025-11-06T12:17:42+00:00",
-  "source_file": "4-typing-game/typing-game/README.md",
-  "language_code": "ms"
-}
--->
 # Membina permainan menggunakan acara
 
 Pernahkah anda tertanya-tanya bagaimana laman web tahu bila anda klik butang atau menaip dalam kotak teks? Itulah keajaiban pengaturcaraan berasaskan acara! Apa cara yang lebih baik untuk mempelajari kemahiran penting ini daripada membina sesuatu yang berguna - permainan kelajuan menaip yang bertindak balas terhadap setiap keystroke anda.

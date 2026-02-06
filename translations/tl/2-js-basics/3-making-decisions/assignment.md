@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ffe366b2d1f037b99fbadbe1dc81083d",
-  "translation_date": "2025-10-22T15:19:07+00:00",
-  "source_file": "2-js-basics/3-making-decisions/assignment.md",
-  "language_code": "tl"
-}
--->
 # Paggawa ng Desisyon: Tagaproseso ng Grado ng Mag-aaral
 
 ## Mga Layunin sa Pagkatuto

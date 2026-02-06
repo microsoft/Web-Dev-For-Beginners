@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7f2c48e04754724123ea100a822765e5",
-  "translation_date": "2025-11-06T12:05:02+00:00",
-  "source_file": "1-getting-started-lessons/3-accessibility/README.md",
-  "language_code": "ms"
-}
--->
 # Membuat Laman Web yang Mesra Akses
 
 ![Semua Tentang Kebolehcapaian](../../../../translated_images/ms/webdev101-a11y.8ef3025c858d897a.webp)

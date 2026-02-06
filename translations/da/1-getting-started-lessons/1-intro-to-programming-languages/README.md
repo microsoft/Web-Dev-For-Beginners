@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-  "translation_date": "2026-01-07T00:03:59+00:00",
-  "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
-  "language_code": "da"
-}
--->
 # Introduktion til programmeringssprog og moderne udviklerværktøjer
  
 Hej der, kommende udvikler! 👋 Må jeg fortælle dig noget, der stadig giver mig kuldegysninger hver eneste dag? Du er ved at opdage, at programmering ikke bare handler om computere – det handler om at have ægte superkræfter til at bringe dine vildeste idéer til live!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "effe56ba51c38d7bdfad1ea38288666b",
-  "translation_date": "2025-10-23T21:55:05+00:00",
-  "source_file": "8-code-editor/1-using-a-code-editor/assignment.md",
-  "language_code": "da"
-}
--->
 # Opret en CV-hjemmeside med VSCode.dev
 
 Forbedr dine karrieremuligheder ved at bygge en professionel CV-hjemmeside, der præsenterer dine færdigheder og erfaringer i et interaktivt og moderne format. I stedet for at sende traditionelle PDF'er, kan du give rekrutteringsfolk en elegant, responsiv hjemmeside, der både viser dine kvalifikationer og dine evner inden for webudvikling.

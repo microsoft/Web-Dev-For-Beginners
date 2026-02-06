@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2026-01-08T11:39:49+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "pcm"
-}
--->
 # How to Start with Web Development
 
 For dis section of di curriculum, we go introduce you to non project-based tins wey important to become professional developer.

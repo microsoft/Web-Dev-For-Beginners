@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b0a9b4cccd918195f58224d5793da1a6",
-  "translation_date": "2025-08-26T21:25:28+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "sv"
-}
--->
 # Microsoft Open Source Uppförandekod
 
 Det här projektet har antagit [Microsoft Open Source Uppförandekod](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-77807-sagibbon).

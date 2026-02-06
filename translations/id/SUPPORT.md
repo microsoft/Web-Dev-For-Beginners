@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c9d207ff77b4bb46e46dc2b607a8ec1a",
-  "translation_date": "2025-08-27T21:57:24+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "id"
-}
--->
 # Dukungan
 
 ## Cara Melaporkan Masalah dan Mendapatkan Bantuan  

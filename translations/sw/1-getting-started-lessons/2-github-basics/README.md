@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-07T02:11:42+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "sw"
-}
--->
 # Utangulizi wa GitHub
 
 Hujambo, msanidi programu wa baadaye! 👋 Uko tayari kuungana na mamilioni ya wapenzi wa programu duniani kote? Nina hamu sana kukutambulisha kwa GitHub – fikiria kama jukwaa la mitandao ya kijamii kwa wapenzi wa programu, isipokuwa badala ya kushiriki picha za chakula chako, tunashiriki msimbo na kuunda mambo mazuri pamoja!

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "068cbb9b3c10a96d503f6cdd6c9ace8c",
-  "translation_date": "2025-08-23T22:54:27+00:00",
-  "source_file": "6-space-game/5-keeping-score/your-work/README.md",
-  "language_code": "ko"
-}
--->
 이것은 자리 표시자로, 의도적으로 비워둔 것입니다
 
 **면책 조항**:  

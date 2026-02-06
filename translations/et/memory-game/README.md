@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ff47271e53637b2ba6ba72ad2b70f6d7",
-  "translation_date": "2025-10-11T11:48:29+00:00",
-  "source_file": "memory-game/README.md",
-  "language_code": "et"
-}
--->
 See on [Next.js](https://nextjs.org) projekt, mis on loodud [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) abil.
 
 ## Alustamine

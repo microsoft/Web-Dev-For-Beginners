@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c40a698395ee5102715f7880bba3f2e7",
-  "translation_date": "2025-10-11T12:09:44+00:00",
-  "source_file": "6-space-game/README.md",
-  "language_code": "ta"
-}
--->
 # விண்வெளி விளையாட்டை உருவாக்குங்கள்
 
 மேம்பட்ட ஜாவாஸ்கிரிப்ட் அடிப்படைகளை கற்பதற்கான விண்வெளி விளையாட்டு

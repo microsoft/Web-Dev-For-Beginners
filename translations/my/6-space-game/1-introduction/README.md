@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a6332a7bb4d0be3bfd24199c83993777",
-  "translation_date": "2025-11-06T15:03:16+00:00",
-  "source_file": "6-space-game/1-introduction/README.md",
-  "language_code": "my"
-}
--->
 # အာကာသဂိမ်းတည်ဆောက်ခြင်း အပိုင်း ၁: အကျဉ်းချုပ်
 
 ```mermaid

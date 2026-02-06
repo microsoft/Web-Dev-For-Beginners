@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-27T20:12:32+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "nl"
-}
--->
 # Introductie tot JavaScript
 
 JavaScript is de taal van het web. In deze vier lessen leer je de basis.

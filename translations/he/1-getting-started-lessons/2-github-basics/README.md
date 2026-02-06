@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2025-11-25T18:05:30+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "he"
-}
--->
 # מבוא ל-GitHub
 
 היי, מפתח עתידי! 👋 מוכן להצטרף למיליוני מתכנתים ברחבי העולם? אני באמת מתרגש להכיר לך את GitHub – תחשוב על זה כמו רשת חברתית למתכנתים, אבל במקום לשתף תמונות של ארוחת הצהריים שלך, אנחנו משתפים קוד ובונים דברים מדהימים יחד!

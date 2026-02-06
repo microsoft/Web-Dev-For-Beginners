@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2026-01-08T19:09:12+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "pcm"
-}
--->
 # My Terrarium: A project to learn about HTML, CSS, and DOM manipulation using JavaScript 🌵🌱
 
 Na small drag and drop code-meditation. Wit small HTML, JS and CSS, you fit build web interface, style am, and add interaction.

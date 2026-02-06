@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cb549dcad8eea3221cb89793aeaa3bb3",
-  "translation_date": "2025-10-11T11:54:43+00:00",
-  "source_file": "9-chat-project/solution/README.md",
-  "language_code": "et"
-}
--->
 # Käivita lahendus
 
 1. Käivita [taustsüsteem](./backend/README.md)

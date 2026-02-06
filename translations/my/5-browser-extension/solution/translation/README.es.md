@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cbaf73f94a9ab4c680a10ef871e92948",
-  "translation_date": "2025-08-27T22:15:26+00:00",
-  "source_file": "5-browser-extension/solution/translation/README.es.md",
-  "language_code": "my"
-}
--->
 # Carbon Trigger Browser Extension: အပြည့်အစုံသောကုဒ်
 
 tmrow ရဲ့ C02 Signal API ကို အသုံးပြုပြီး လျှပ်စစ်ဓာတ်အားအသုံးပြုမှုကို ခြေရာခံနိုင်တဲ့ browser extension တစ်ခုကို ဖန်တီးပါ။ ဒီ extension ကို သင့် browser မှတစ်ဆင့် တိုက်ရိုက်အသုံးပြုနိုင်မယ့် reminder အနေနဲ့ ရရှိမှာဖြစ်ပါတယ်။ ဒီ extension ကို အသုံးပြုခြင်းက သင့်ရဲ့ လုပ်ဆောင်မှုများအပေါ် အချက်အလက်အခြေခံပြီး ဆုံးဖြတ်ချက်များကို ချမှတ်နိုင်စေမှာဖြစ်ပါတယ်။

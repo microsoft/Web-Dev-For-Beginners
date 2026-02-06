@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124efddbb65166cddb38075ad6dae324",
-  "translation_date": "2025-10-22T16:33:00+00:00",
-  "source_file": "6-space-game/4-collision-detection/assignment.md",
-  "language_code": "mr"
-}
--->
 # टक्करांचा अभ्यास करा
 
 ## सूचना

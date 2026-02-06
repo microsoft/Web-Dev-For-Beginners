@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5c383cc2cc23bb164b06417d1c107a44",
-  "translation_date": "2026-01-07T10:46:03+00:00",
-  "source_file": "1-getting-started-lessons/2-github-basics/README.md",
-  "language_code": "sl"
-}
--->
 # Uvod v GitHub
 
 Hej, bodoči razvijalec! 👋 Pripravljen, da se pridružiš milijonom programerjev po vsem svetu? Resnično sem navdušen, da ti predstavim GitHub – pomisli na to kot družbeno medijsko platformo za programerje, ampak namesto da bi delili slike svojega kosila, delimo kodo in skupaj ustvarjamo neverjetne stvari!

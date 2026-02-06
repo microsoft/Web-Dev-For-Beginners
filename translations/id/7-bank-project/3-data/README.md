@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2025-11-06T11:50:49+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "id"
-}
--->
 # Membangun Aplikasi Perbankan Bagian 3: Metode Mengambil dan Menggunakan Data
 
 Bayangkan komputer Enterprise di Star Trek - ketika Kapten Picard meminta status kapal, informasi muncul seketika tanpa seluruh antarmuka mati dan dibangun ulang. Aliran informasi yang mulus itulah yang sedang kita bangun di sini dengan pengambilan data yang dinamis.

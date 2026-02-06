@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5301875c55bb305e6046bed3a4fd06d2",
-  "translation_date": "2025-08-26T01:11:05+00:00",
-  "source_file": "quiz-app/README.md",
-  "language_code": "ru"
-}
--->
 # Приложение для викторин
 
 Эти викторины предназначены для предварительных и итоговых тестов в рамках учебной программы по науке о данных на https://aka.ms/webdev-beginners

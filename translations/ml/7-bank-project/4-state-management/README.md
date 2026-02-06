@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-08T17:46:18+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ml"
-}
--->
 # ബാങ്കിംഗ് ആപ്പ് നിർമ്മാണം ഭാഗം 4: സ്റ്റേറ്റ് മാനേജ്മെന്റ് ആശയങ്ങൾ
 
 ## ⚡ അടുത്ത 5 മിനുട്ടിൽ നിങ്ങൾ ചെയ്യാൻ പറ്റുന്നത്

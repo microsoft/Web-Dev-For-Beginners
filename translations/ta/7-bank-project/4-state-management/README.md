@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b807b09df716dc48a2b750835bf8e933",
-  "translation_date": "2026-01-07T13:34:22+00:00",
-  "source_file": "7-bank-project/4-state-management/README.md",
-  "language_code": "ta"
-}
--->
 # வங்கி செயலியை உருவாக்குதல் பகுதி 4: நிலை பராமரிப்புக் கருத்துக்கள்
 
 ## ⚡ அடுத்த 5 நிமிடங்களில் நீங்கள் செய்யக்கூடியவை

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-10-11T11:55:46+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "et"
-}
--->
 # Minu Terrarium: Projekt HTML-i, CSS-i ja DOM-i manipuleerimise õppimiseks JavaScripti abil 🌵🌱
 
 Väike lohistamise ja kodeerimise harjutus. Natukese HTML-i, JS-i ja CSS-i abil saad luua veebiliidese, kujundada selle ja lisada interaktsiooni.

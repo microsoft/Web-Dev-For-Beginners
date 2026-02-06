@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7994743c5b21fdcceb36307916ef249a",
-  "translation_date": "2026-01-07T13:04:21+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/README.md",
-  "language_code": "ta"
-}
--->
 # இடைவெளி விளையாட்டு பாகம் 2: ஹீரோ மற்றும் பேய்களை கன்வாஸில் வரைவோம்
 
 ```mermaid

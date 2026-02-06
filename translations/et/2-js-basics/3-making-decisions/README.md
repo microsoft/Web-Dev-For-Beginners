@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c688385d15dd3645e924ea0ffee8967f",
-  "translation_date": "2026-01-08T08:56:41+00:00",
-  "source_file": "2-js-basics/3-making-decisions/README.md",
-  "language_code": "et"
-}
--->
 # JavaScripti alused: otsuste tegemine
 
 ![JavaScripti alused - otsuste tegemine](../../../../translated_images/et/webdev101-js-decisions.69e1b20f272dd1f0.webp)

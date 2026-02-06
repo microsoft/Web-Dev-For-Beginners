@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-28T08:02:45+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "ro"
-}
--->
 # Introducere în JavaScript
 
 JavaScript este limbajul web-ului. În aceste patru lecții, vei învăța elementele sale de bază.

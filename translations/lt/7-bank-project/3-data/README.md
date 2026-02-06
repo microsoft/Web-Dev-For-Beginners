@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "86ee5069f27ea3151389d8687c95fac9",
-  "translation_date": "2026-01-07T11:54:20+00:00",
-  "source_file": "7-bank-project/3-data/README.md",
-  "language_code": "lt"
-}
--->
 # Sukurkite bankinę programėlę 3 dalis: Duomenų gavimo ir naudojimo metodai
 
 Pagalvokite apie „Enterprise“ kompiuterį „Star Trek“ – kai Kapitonas Pikardas klausia apie laivo būseną, informacija atsiranda akimirksniu, neperkraunant visos sąsajos ir jos neperkuriant iš naujo. Toks sklandus informacijos srautas yra būtent tai, ką čia kuriame su dinamišku duomenų gavimu.

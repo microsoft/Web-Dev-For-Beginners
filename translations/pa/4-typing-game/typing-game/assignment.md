@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3eac59d70e2532a677a2ce6bf765485a",
-  "translation_date": "2025-10-22T18:04:49+00:00",
-  "source_file": "4-typing-game/typing-game/assignment.md",
-  "language_code": "pa"
-}
--->
 # ਨਵਾਂ ਕੀਬੋਰਡ ਗੇਮ ਬਣਾਓ
 
 ## ਹਦਾਇਤਾਂ
