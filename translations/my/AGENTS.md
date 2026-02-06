@@ -1,28 +1,28 @@
 # AGENTS.md
 
-## ပရောဂျက်အကျဉ်းချုပ်
+## Project Overview
 
-ဤသည်မှာ ဝက်ဘ်ဖွံ့ဖြိုးတိုးတက်မှုအခြေခံများကို စတင်လေ့လာသူများကို သင်ကြားရန်အတွက် ပညာရေးသင်ခန်းစာများကို စုစည်းထားသော repository ဖြစ်သည်။ Microsoft Cloud Advocates မှ ဖွံ့ဖြိုးတိုးတက်ထားသော 12 ပတ်ကြာသင်တန်းအစီအစဉ်တစ်ခုဖြစ်ပြီး JavaScript, CSS, နှင့် HTML ကို အကျိုးရှိစွာ လက်တွေ့ကျကျ သင်ကြားနိုင်သော သင်ခန်းစာ 24 ခုပါဝင်သည်။
+ဤသည်မှာ ဝက်ဘ်ဖွံ့ဖြိုးတိုးတက်မှု အခြေခံများကို စတင်သူများအား သင်ကြားပေးရန် အတွက် ပညာပေး သင်ရိုးညွှန်းတမ်း စုစည်းမှု ဖြစ်သည်။ သင်ရိုးညွှန်းတမ်းသည် Microsoft Cloud Advocates မှ တီထွင်ထားသော ၁၂ ပတ်ကြာ သင်တန်း အပြည့်အစုံဖြစ်ပြီး၊ JavaScript၊ CSS နှင့် HTML を ကိုက်ညီသော လက်တွေ့ သင်ခန်းစာ ၂၄ ခု ပါဝင်သည်။
 
-### အဓိကအစိတ်အပိုင်းများ
+### Key Components
 
-- **ပညာရေးအကြောင်းအရာ**: ပရောဂျက်အခြေခံ module များအဖြစ် စီစဉ်ထားသော သင်ခန်းစာ 24 ခု
-- **လက်တွေ့ပရောဂျက်များ**: Terrarium, Typing Game, Browser Extension, Space Game, Banking App, Code Editor, နှင့် AI Chat Assistant
-- **အပြန်အလှန်မေးခွန်းများ**: သင်ခန်းစာမတိုင်မီ/ပြီးနောက် အကဲဖြတ်မှုများအတွက် မေးခွန်း 3 ခုပါဝင်သော မေးခွန်း 48 ခု
-- **ဘာသာစကားများအထောက်အပံ့**: GitHub Actions မှတဆင့် ဘာသာစကား 50+ ကို အလိုအလျောက် ဘာသာပြန်
-- **နည်းပညာများ**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (AI ပရောဂျက်များအတွက်)
+- **ပညာရေး အကြောင်းအရာများ**: ပရောဂျက် အခြေပြု မော်ဂျူး များ အပြည့်အစုံဖြင့် စီစဉ်ထားသော သင်ခန်းစာ ၂၄ ခု
+- **လက်တွေ့ ပရောဂျက်များ**: Terrarium၊ Typing Game၊ Browser Extension၊ Space Game၊ Banking App၊ Code Editor နှင့် AI Chat Assistant
+- **အပြန်အလှန် ဖြေဆိုမေးခွန်းများ**: မေးခွန်း ၃ မျိုး ပါဝင်သည့် ၄၈ ပတ်လည် စစ်တမ်းများ (သင်ခန်းစာ မတိုင်မီ/ပြီးနောက် အကဲဖြတ်ရန်)
+- **ဘာသာစကားစုံ ထောက်ခံမှု**: GitHub Actions မှ တက်အလိုက် ဘာသာစကား ၅၀ ကျော်အတွက် အလိုအလျှောက် ဘာသာပြန်ချက်များ
+- **နည်းပညာများ**: HTML၊ CSS၊ JavaScript၊ Vue.js 3၊ Vite၊ Node.js၊ Express၊ Python (AI ပရောဂျက်များအတွက်)
 
-### ဖွဲ့စည်းပုံ
+### Architecture
 
-- သင်ခန်းစာအခြေခံဖွဲ့စည်းပုံရှိသော ပညာရေး repository
-- သင်ခန်းစာ folder တစ်ခုစီတွင် README, code နမူနာများနှင့် ဖြေရှင်းချက်များပါဝင်သည်
-- သီးသန့်ပရောဂျက်များကို အထူး directory များတွင် (quiz-app, သင်ခန်းစာပရောဂျက်များ) ထည့်ထားသည်
-- GitHub Actions (co-op-translator) ကို အသုံးပြုသော ဘာသာပြန်စနစ်
-- Docsify မှတဆင့် documentation ကို ဖော်ပြပြီး PDF အဖြစ်လည်း ရရှိနိုင်သည်
+- သင်ခန်းစာအခြေပြု ပညာရေး စုစည်းမှု
+- သင်ခန်းစာ တစ်ခုချင်းလျှင် README၊ ကုဒ်နမူနာနှင့် ဖြေရှင်းချက်များ ပါရှိသည်
+- အခြားပရောဂျက်များကို သီးသန့်လမ်းကြောင်းများတွင် ထားရှိသည် (quiz-app နှင့် သင်ခန်းစာ ပရောဂျက်များအတော်များများ)
+- GitHub Actions ဖြင့် ဘာသာပြန်စနစ် (co-op-translator)
+- Docsify မှ တင်သွင်းခဲ့သော စာရွက်စာတမ်းများကို PDF အဖြစ်လည်း ရနိုင်သည်
 
 ## Setup Commands
 
-ဤ repository သည် ပညာရေးအကြောင်းအရာများကို အသုံးပြုရန်အဓိကဖြစ်သည်။ သီးသန့်ပရောဂျက်များနှင့် အလုပ်လုပ်ရန်အတွက်:
+ဤ repository သည် မူလက ပညာရေး အကြောင်းအရာ အသုံးပြုမှု အတွက် ဖြစ်သည်။ အထူးပြု ပရောဂျက်များနှင့် တွဲဖက် အသုံးပြုရန်အတွက်:
 
 ### Main Repository Setup
 
@@ -36,9 +36,9 @@ cd Web-Dev-For-Beginners
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run lint       # Run ESLint
+npm run dev        # ဖွံ့ဖြိုးတိုးတက်မှု ဆာဗာ စတင်ပါ
+npm run build      # ထုတ်လုပ်မှုပိုင်းအတွက် တည်ဆောက်ပါ
+npm run lint       # ESLint ကို အလုပ်လုပ်ပါ
 ```
 
 ### Bank Project API (Node.js + Express)
@@ -46,9 +46,9 @@ npm run lint       # Run ESLint
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Start API server
-npm run lint       # Run ESLint
-npm run format     # Format with Prettier
+npm start          # API ဆာဗာ စတင်ပါ
+npm run lint       # ESLint ကို လုပ်ဆောင်ပါ
+npm run format     # Prettier ဖြင့် အမျိုးအစား ပြုပြင်ပါ
 ```
 
 ### Browser Extension Projects
@@ -56,7 +56,7 @@ npm run format     # Format with Prettier
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Follow browser-specific extension loading instructions
+# Browser အမျိုးအစားကို သတ်မှတ်သည့် extension တွေကို တင်သွင်းနည်းကို လိုက်နာပါ။
 ```
 
 ### Space Game Projects
@@ -64,7 +64,7 @@ npm install
 ```bash
 cd 6-space-game/solution
 npm install
-# Open index.html in browser or use Live Server
+# browser တွင် index.html ကိုဖွင့်ပါ သို့မဟုတ် Live Server ကိုအသုံးပြုပါ
 ```
 
 ### Chat Project (Python Backend)
@@ -72,123 +72,123 @@ npm install
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# Set GITHUB_TOKEN environment variable
+# GITHUB_TOKEN ပတ်ဝန်းကျင်အပြောင်းအလဲကို သတ်မှတ်ပါ
 python api.py
 ```
 
-## ဖွံ့ဖြိုးတိုးတက်မှုလုပ်ငန်းစဉ်
+## Development Workflow
 
-### Content Contributors အတွက်
+### For Content Contributors
 
-1. **Repository ကို Fork လုပ်ပါ** GitHub အကောင့်သို့
-2. **Fork ကို locally Clone လုပ်ပါ**
-3. **သင့်ပြောင်းလဲမှုများအတွက် branch အသစ်တစ်ခု Create လုပ်ပါ**
-4. သင်ခန်းစာအကြောင်းအရာများ သို့မဟုတ် code နမူနာများကို ပြောင်းလဲပါ
-5. သက်ဆိုင်ရာပရောဂျက် directory များတွင် code ပြောင်းလဲမှုများကို စမ်းသပ်ပါ
-6. Contribution guidelines ကို လိုက်နာပြီး pull requests တင်ပါ
+1. **တင်သွင်းသူအနေဖြင့် repository ကို fork ပြုလုပ်ပါ**
+2. **ထို fork ကို လုပ်ငန်းစဉ်တစ်ခုအနေဖြင့် clone ပြုလုပ်ပါ**
+3. **ပြောင်းလဲမှုများအတွက် အဆင့်အသစ် တည်ဆောက်ပါ**
+4. သင်ခန်းစာ အကြောင်းအရာ သို့မဟုတ် ကုဒ် နမူနာများ ပြင်ဆင်ပါ
+5. သက်ဆိုင်ရာ ပရောဂျက် လမ်းကြောင်းများတွင် ကုဒ်ပြင်ဆင်မှုများ စမ်းသပ်ပါ
+6. ဆောင်ရွက်မှု လမ်းညွှန်ချက်များနှင့်ကိုက်ညီစွာ pull request တင်ပြပါ
 
-### Learners အတွက်
+### For Learners
 
-1. Repository ကို Fork သို့မဟုတ် Clone လုပ်ပါ
-2. သင်ခန်းစာ directory များကို အစဉ်လိုက်သွားပါ
-3. သင်ခန်းစာတစ်ခုစီ၏ README ဖိုင်များကို ဖတ်ပါ
-4. https://ff-quizzes.netlify.app/web/ တွင် သင်ခန်းစာမတိုင်မီမေးခွန်းများကို ပြီးစီးပါ
-5. သင်ခန်းစာ folder များတွင် code နမူနာများကို လေ့လာပါ
-6. အလုပ်များနှင့် စိန်ခေါ်မှုများကို ပြီးစီးပါ
-7. သင်ခန်းစာပြီးနောက်မေးခွန်းများကို ပြုလုပ်ပါ
+1. Repository ကို fork သို့ clone ပြုလုပ်ပါ
+2. သင်ခန်းစာ လမ်းကြောင်းများကို ဆက်တိုက် သွားပါ
+3. သင်ခန်းစာ တစ်ခုပြီးတစ်ခု README ဖိုင်များ ဖတ်ရှုပါ
+4. https://ff-quizzes.netlify.app/web/ တွင် သင်ခန်းစာမတိုင်မီ စစ်တမ်းများ ဖြေဆိုပါ
+5. သင်ခန်းစာ ဖိုလ်ဒါများတွင် ကုဒ်နမူနာများ ဖြေရှင်းပါ
+6. အပ်ဒိတ်များနှင့် စိန်ခေါ်မှုများ အကောင်အထည်ဖော်ပါ
+7. သင်ခန်းစာပြီးနောက် စစ်တမ်းများ ဖြေဆိုပါ
 
 ### Live Development
 
-- **Documentation**: root တွင် `docsify serve` ကို run လုပ်ပါ (port 3000)
-- **Quiz App**: quiz-app directory တွင် `npm run dev` ကို run လုပ်ပါ
-- **Projects**: HTML ပရောဂျက်များအတွက် VS Code Live Server extension ကို အသုံးပြုပါ
-- **API Projects**: သက်ဆိုင်ရာ API directory များတွင် `npm start` ကို run လုပ်ပါ
+- **စာရွက်စာတမ်းများ**: မွမ်းမံရေးရာ root တွင် `docsify serve` လုပ်ပါ (port 3000)
+- **Quiz App**: quiz-app လမ်းကြောင်း၌ `npm run dev` လုပ်ပါ
+- **ပရောဂျက်များ**: HTML ပရောဂျက်များအတွက် VS Code Live Server extension ကို အသုံးပြုပါ
+- **API ပရောဂျက်များ**: အသီးသီး API လမ်းကြောင်းများတွင် `npm start` လုပ်ပါ
 
-## စမ်းသပ်မှုညွှန်ကြားချက်များ
+## Testing Instructions
 
 ### Quiz App Testing
 
 ```bash
 cd quiz-app
-npm run lint       # Check for code style issues
-npm run build      # Verify build succeeds
+npm run lint       # ကုဒ်စတိုင်ပြဿနာများကို စစ်ဆေးပါ
+npm run build      # ဆောက်လုပ်မှု အောင်မြင်မှုကို စစ်ဆေးပါ
 ```
 
 ### Bank API Testing
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Check for code style issues
-node server.js     # Verify server starts without errors
+npm run lint       # ကုတ်စံနှုန်းပြဿနာများကို စစ်ဆေးပါ
+node server.js     # အမှားမရှိဘဲ ဆာဗာစတင်သည်ကို စစ်ဆေးပါ
 ```
 
 ### General Testing Approach
 
-- ဤသည်မှာ automated tests များကို အပြည့်အဝမပါဝင်သော ပညာရေး repository ဖြစ်သည်
-- လက်တွေ့စမ်းသပ်မှုများအဓိကထားသည်:
-  - Code နမူနာများ error မရှိဘဲ run လုပ်နိုင်သည်
-  - Documentation တွင် link များမှန်ကန်စွာအလုပ်လုပ်သည်
-  - Project build များအောင်မြင်စွာပြီးစီးသည်
-  - နမူနာများသည် အကောင်းဆုံးအလေ့အကျင့်များကို လိုက်နာသည်
+- ဤသည် ပညာရေး စုဆောင်းမှုဖြစ်ကာ အလိုအလျောက် စမ်းသပ်မှု မပြည့်စုံပါ
+- လက်လုပ်စမ်းသပ်မှု အများအားဖြင့် အောက်ပါများကို ဦးတည်သည် -
+  - ကုဒ်နမူနာများ အမှားကင်းစွာ လည်ပတ်နိုင်ခြင်း
+  - စာရွက်စာတမ်းများရှိ link များ မှန်ကန်မှုရှိခြင်း
+  - ပရောဂျက် များ အောင်မြင်စွာ တည်ဆောက်ခြင်း
+  - နမူနာများသည် ထိရောက်ဆုံးနည်းလမ်းများကို လိုက်နာခြင်း
 
 ### Pre-submission Checks
 
-- package.json ပါသော directory များတွင် `npm run lint` ကို run လုပ်ပါ
-- markdown link များမှန်ကန်ကြောင်းအတည်ပြုပါ
-- browser သို့မဟုတ် Node.js တွင် code နမူနာများကို စမ်းသပ်ပါ
-- ဘာသာပြန်ချက်များသည် သင့်တော်သောဖွဲ့စည်းပုံကို ထိန်းသိမ်းထားကြောင်းစစ်ဆေးပါ
+- package.json ပါဝင်သည့် လမ်းကြောင်းများတွင် `npm run lint` လုပ်ပါ
+- markdown link များ မှန်ကန်ကြောင်း စစ်ဆေးပါ
+- ဘရိုက်ဇာသို့ node.js တွင် ကုဒ်နမူနာများ စမ်းသပ်ပါ
+- ဘာသာပြန်ချက်များ၏ ဖွဲ့စည်းမှု ကို ထိန်းသိမ်းထားမှုကို စစ်ဆေးပါ
 
 ## Code Style Guidelines
 
 ### JavaScript
 
-- ES6+ syntax ကို အသုံးပြုပါ
-- Project များတွင်ပေးထားသော standard ESLint configurations ကို လိုက်နာပါ
-- ပညာရေးအတွက် ရှင်းလင်းသော variable နှင့် function အမည်များကို အသုံးပြုပါ
-- Learners အတွက် concept များကို ရှင်းပြသော comment များထည့်ပါ
-- Prettier ကို configuration ရှိသောနေရာတွင် format လုပ်ပါ
+- အခေတ်သစ် ES6+ စနစ် အသုံးပြုပါ
+- ပရောဂျက်များတွင် ပါဝင်သည့် standard ESLint ဖိုင်များကို လိုက်နာပါ
+- ပညာရေးအတွက် သိသာသော variable နှင့် function နာမည်များ အသုံးပြုပါ
+- သင်ယူသူများအတွက် လေ့လာရန် မှတ်ချက်များ ထည့်သွင်းပါ
+- Prettier ဖြင့် ဖော်မတ်လုပ်ခြင်း
 
 ### HTML/CSS
 
-- Semantic HTML5 elements
-- Responsive design principles
-- ရှင်းလင်းသော class naming conventions
-- Learners အတွက် CSS နည်းလမ်းများကို ရှင်းပြသော comment များ
+- Semantic HTML5 element များ အသုံးပြုပါ
+- ပြန်လည်တုံ့ပြန်မှု ဒီဇိုင်း အရေးပါသည်
+- သန့်ရှင်းသော class နာမည်ပုံစံများ
+- CSS နည်းလမ်းများကို သင်ယူသူများအတွက် ရှင်းလင်း ဖော်ပြထားသော မှတ်ချက်များ
 
 ### Python
 
-- PEP 8 style guidelines
-- ရှင်းလင်းသော ပညာရေး code နမူနာများ
-- Learning အတွက် အထောက်အကူဖြစ်သော Type hints
+- PEP 8 စတိုင်လ် လမ်းညွှန်ချက်များ
+- ပညာရေးအတွက် ရှင်းလင်းသော ကုဒ် နမူနာများ
+- သင်ယူမှု အတွက် အချို့နေရာများတွင် type hints ထည့်သွင်းထားသည်
 
 ### Markdown Documentation
 
-- ရှင်းလင်းသော heading hierarchy
-- language specification ပါသော code blocks
-- အပိုဆောင်း resources link များ
-- `images/` directory များတွင် screenshots နှင့် images
-- Accessibility အတွက် images အတွက် alt text
+- အကြောင်းအရာ ဖော်ပြရာတွင် ခေါင်းစဉ်သွေးကြောင်း ထားရှိခြင်း
+- ဘာသာပြန်မှု ရှိသော code block များ
+- နောက်ထပ် အရင်းအမြစ်များ သို့လင့်ခ်များ
+- `images/` ဖိုလ်ဒါများတွင် ရှုပ်ထွေးချက်နှင့် ပုံများ
+- သက်ဆိုင်ရာ Accessiblity အတွက် ပုံများ၏ Alt စာသားများ
 
 ### File Organization
 
-- သင်ခန်းစာများကို အစဉ်လိုက်နံပါတ်များဖြင့် (1-getting-started-lessons, 2-js-basics, စသည်) စီစဉ်ထားသည်
-- ပရောဂျက်တစ်ခုစီတွင် `solution/` နှင့် `start/` သို့မဟုတ် `your-work/` directory များပါဝင်သည်
-- Images များကို သင်ခန်းစာ-specific `images/` folder များတွင် သိမ်းဆည်းထားသည်
-- ဘာသာပြန်ချက်များကို `translations/{language-code}/` ဖွဲ့စည်းပုံတွင် သိမ်းဆည်းထားသည်
+- သင်ခန်းစာများကို နံပါတ်ခွဲ စီစဉ်ထားသည် (1-getting-started-lessons, 2-js-basics, စသည်)
+- ပရောဂျက် တစ်ခုချင်းစီတွင် `solution/` နှင့် မကြာခဏ `start/` သို့မဟုတ် `your-work/` ဖိုလ်ဒါများ ပါဝင်သည်
+- သင်ခန်းစာ အလိုက် `images/` ဖိုလ်ဒါများတွင် ပုံများ သိမ်းဆည်းထားသည်
+- ဘာသာပြန်ချက်များကို `translations/{language-code}/` ဖိုလ်ဒါများတွင် ထားရှိသည်
 
-## Build နှင့် Deployment
+## Build and Deployment
 
 ### Quiz App Deployment (Azure Static Web Apps)
 
-quiz-app ကို Azure Static Web Apps deployment အတွက် configure လုပ်ထားသည်:
+quiz-app ကို Azure Static Web Apps တွင် တင်ရန် စတင်ပြင်ဆင်ထားသည်:
 
 ```bash
 cd quiz-app
-npm run build      # Creates dist/ folder
-# Deploys via GitHub Actions workflow on push to main
+npm run build      # dist/ ဖိုလ်ဒါကို ဖန်တီးသည်
+# main သို့ ပို့ပြီးနောက် GitHub Actions workflow ဖြင့် တပ်ဆင်သည်
 ```
 
-Azure Static Web Apps configuration:
+Azure Static Web Apps စနစ်:
 - **App location**: `/quiz-app`
 - **Output location**: `dist`
 - **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
@@ -196,28 +196,28 @@ Azure Static Web Apps configuration:
 ### Documentation PDF Generation
 
 ```bash
-npm install                    # Install docsify-to-pdf
-npm run convert               # Generate PDF from docs
+npm install                    # docsify-to-pdf ကို ထည့်သွင်းပါ
+npm run convert               # docs မှ PDF ဖိုင် ပေါ်ထွက်ပါ
 ```
 
 ### Docsify Documentation
 
 ```bash
-npm install -g docsify-cli    # Install Docsify globally
-docsify serve                 # Serve on localhost:3000
+npm install -g docsify-cli    # Docsify ကို ထိပ်တန်းမှာ ထည့်သွင်းပါ
+docsify serve                 # localhost:3000 တွင် ဝန်ဆောင်မှု ပေးပါ
 ```
 
 ### Project-specific Builds
 
-Project directory တစ်ခုစီတွင် သီးသန့် build process ရှိနိုင်သည်:
-- Vue projects: `npm run build` သည် production bundles ကို ဖန်တီးသည်
-- Static projects: build အဆင့်မရှိ၊ ဖိုင်များကို တိုက်ရိုက် serve လုပ်ပါ
+ပရောဂျက်တိုင်းမှာ ကိုယ်ပိုင် build လုပ်စနစ် ရှိနိုင်သည် -
+- Vue ပရောဂျက်များ: `npm run build` ဖြင့် production bundle များ ဖန်တီးသည်
+- Static ပရောဂျက်များ: build လုပ်စဉ် မရှိ၊ ဖိုင်များကို တိုက်ရိုက် ပေးဆောင်သည်
 
 ## Pull Request Guidelines
 
 ### Title Format
 
-ပြောင်းလဲမှုဧရိယာကို ဖော်ပြသော ရှင်းလင်းသော title များကို အသုံးပြုပါ:
+ပြောင်းလဲမှု ရှိသော နေရာကို ပြောကြားသော ပြတ်သားရှင်းလင်းသော ခေါင်းစဉ်အသုံးပြုပါ:
 - `[Quiz-app] Add new quiz for lesson X`
 - `[Lesson-3] Fix typo in terrarium project`
 - `[Translation] Add Spanish translation for lesson 5`
@@ -225,58 +225,58 @@ Project directory တစ်ခုစီတွင် သီးသန့် build 
 
 ### Required Checks
 
-PR တင်မီ:
+PR တင်ပြမည်မဆို အောက်ပါများကို အရင်စစ်ဆေးရန် -
 
-1. **Code Quality**:
-   - သက်ဆိုင်ရာ project directory များတွင် `npm run lint` ကို run လုပ်ပါ
-   - linting error နှင့် warning များအားလုံးကို ပြင်ပါ
+1. **ကုဒ်အရည်အသွေး**:
+   - သက်ဆိုင်ရာ ပရောဂျက် လမ်းကြောင်းများတွင် `npm run lint` လုပ်ပါ
+   - အမှားများ နှင့် သတိပေးချက်များကို ပြင်ဆင်ပါ
 
-2. **Build Verification**:
-   - သက်ဆိုင်ရာ build process ကို run လုပ်ပါ
-   - build error မရှိကြောင်းအတည်ပြုပါ
+2. **Build စစ်ဆေးခြင်း**:
+   - လိုအပ်လျှင် `npm run build` လုပ်ပါ
+   - Build အမှား မရှိကြောင်း သေချာပါစေ
 
-3. **Link Validation**:
-   - markdown link များကို စမ်းသပ်ပါ
-   - image reference များအလုပ်လုပ်ကြောင်းအတည်ပြုပါ
+3. **Link များ စစ်ဆေးခြင်း**:
+   - markdown link များအားလုံး စစ်ဆေးပါ
+   - ပုံ ရှိ/မရှိကို စစ်ဆေးပါ
 
-4. **Content Review**:
-   - စာလုံးပေါင်းနှင့် သဒ္ဒါအမှားများကို proofread လုပ်ပါ
-   - code နမူနာများမှန်ကန်ပြီး ပညာရေးအတွက် အသုံးဝင်ကြောင်းအတည်ပြုပါ
-   - ဘာသာပြန်ချက်များသည် အဓိပ္ပာယ်မပြောင်းလဲကြောင်းအတည်ပြုပါ
+4. **အကြောင်းအရာ သုံးသပ်ခြင်း**:
+   - သရုပ်ဖော်ချက် နှင့် သဒ္ဒါ ပြင်ဆင်ပါ
+   - ကုဒ်နမူနာများမှန်ကန်၍ ပညာရေး အတွက် အသုံးဝင်မှုရှိကြောင်း သေချာပါစေ
+   - ဘာသာပြန်ချက် မူလ အနက်ရည်ကို ထိန်းသိမ်းထားသည်
 
 ### Contribution Requirements
 
-- Microsoft CLA ကို သဘောတူပါ (ပထမဆုံး PR တွင် automated check)
-- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) ကို လိုက်နာပါ
-- [CONTRIBUTING.md](./CONTRIBUTING.md) တွင် အသေးစိတ်ညွှန်ကြားချက်များကို ကြည့်ပါ
-- PR description တွင် issue နံပါတ်များကို ရည်ညွှန်းပါ (လိုအပ်ပါက)
+- Microsoft CLA ကို သဘောတူမှတ်ချက် ပြုလုပ်ထားရမည် (ပထမဆုံး PR မှာ အလိုအလျောက် စစ်ဆေးသည်)
+- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) ကို လိုက်နာရမည်
+- အသေးစိတ် လမ်းညွှန်ချက်များအတွက် [CONTRIBUTING.md](./CONTRIBUTING.md) ကို ကြည့်ရှုပါ
+- PR ဖော်ပြချက်တွင် issue နံပါတ်များ ပါဝင်မှု ရှိသင့်သည်
 
 ### Review Process
 
-- PR များကို maintainers နှင့် community မှ review လုပ်သည်
-- ပညာရေးအတွက် ရှင်းလင်းမှုကို ဦးစားပေးသည်
-- code နမူနာများသည် လက်ရှိအကောင်းဆုံးအလေ့အကျင့်များကို လိုက်နာရမည်
-- ဘာသာပြန်ချက်များကို တိကျမှုနှင့် ယဉ်ကျေးမှုသင့်တော်မှုအတွက် review လုပ်သည်
+- PR များကို ထိန်းသိမ်းသူများနှင့် အသိုင်းအဝိုင်းမှ ပြန်လည် သုံးသပ်ကြမည်
+- ပညာရေးအစဉ့်ကြေညာမှုကို ဦးစားပေးသည်
+- ကုဒ်နမူနာများမှာ ခေတ်မီပြီး အကောင်းဆုံး နည်းလုပ်ပုံများအတိုင်း ဖြစ်သင့်သည်
+- ဘာသာပြန်ချက်များကို တိကျမှုနှင့် ယဉ်ကျေးမှုသေချာမှုအရ သုံးသပ်သည်
 
 ## Translation System
 
 ### Automated Translation
 
-- co-op-translator workflow ဖြင့် GitHub Actions ကို အသုံးပြုသည်
-- ဘာသာစကား 50+ ကို အလိုအလျောက် ဘာသာပြန်သည်
-- main directory များတွင် source ဖိုင်များ
-- `translations/{language-code}/` directory များတွင် ဘာသာပြန်ဖိုင်များ
+- GitHub Actions အား co-op-translator workflow ဖြင့် အသုံးပြုသည်
+- ၅၀ ကျော် ဘာသာစကားများကို အလိုအလျောက် ဘာသာပြန်သည်
+- မူလ ဖိုင်များသည် ပဋိညာဉ် လမ်းကြောင်းများတွင် ရှိသည်
+- ဘာသာပြန်ထုတ်ဖိုင်များကို `translations/{language-code}/` တွင် သိမ်းဆည်းသည်
 
 ### Adding Manual Translation Improvements
 
-1. `translations/{language-code}/` တွင် ဖိုင်ကို ရှာပါ
-2. ဖွဲ့စည်းပုံကို ထိန်းသိမ်းထားပြီး တိုးတက်မှုများပြုလုပ်ပါ
-3. code နမူနာများအလုပ်လုပ်နေဆဲဖြစ်ကြောင်းအတည်ပြုပါ
-4. localized quiz content များကို စမ်းသပ်ပါ
+1. `translations/{language-code}/` ထဲမှ ဖိုင်ကို ရှာဖွေပါ
+2. ဖွဲ့စည်းမှုကို ထိန်းသိမ်း၍ တိုးတက်အောင် ပြင်ဆင်ပါ
+3. ကုဒ် နမူနာများ လုပ်ငန်းမှန်ကြောင်း သေချာပါစေ
+4. ဒေသိယ quiz အကြောင်းအရာများကို စမ်းသပ်ပါ
 
 ### Translation Metadata
 
-ဘာသာပြန်ဖိုင်များတွင် metadata header ပါဝင်သည်:
+ဘာသာပြန် ဖိုင်များတွင် မီတာဒေတာ ခေါင်းစီးများ ပါဝင်သည် -
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,114 +289,120 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Debugging နှင့် Troubleshooting
+## Debugging and Troubleshooting
 
 ### Common Issues
 
-**Quiz app fails to start**:
-- Node.js version ကိုစစ်ပါ (v14+ အကြံပြုသည်)
-- `node_modules` နှင့် `package-lock.json` ကို ဖျက်ပြီး `npm install` ကို ထပ်လုပ်ပါ
-- port conflict များကိုစစ်ပါ (default: Vite သည် port 5173 ကို အသုံးပြုသည်)
+**Quiz app မစတင်နိုင်ခြင်း**:
+- Node.js ဗားရှင်း (v14+) ဖြစ်ကြောင်း စစ်ဆေးပါ
+- `node_modules` နှင့် `package-lock.json` ကို ဖျက်ပြီး `npm install` ပြန်မှတ်ပါ
+- port တွေအပြိုင်အဆိုင် ဖြစ်ခြင်းကို စစ်ဆေးပါ (Vite သည် default အနေနဲ့ port 5173 ကို အသုံးပြုသည်)
 
-**API server won't start**:
-- Node.js version သက်ဆိုင်ရာကိုစစ်ပါ (node >=10)
-- port သုံးနေမှုရှိ/မရှိကိုစစ်ပါ
-- `npm install` ဖြင့် dependency အားလုံးကို install လုပ်ထားကြောင်းအတည်ပြုပါ
+**API စာပို့ဆာဗာ မစတင်နိုင်ခြင်း**:
+- Node.js ဗားရှင်း လုံလောက်သည် (node >=10) ခုနှစ် ဖြစ်ကြောင်း ချက်ချင်း စစ်ဆေးပါ
+- port မဟုတ်မဖြစ် ဘယ်သူမှ အသုံးမပြုနေပါစေ
+- ကျန်ရှိသော မလိုက်လျောညီထွေ dependency များကို `npm install` ဖြင့် ထည့်သွင်းပါ
 
-**Browser extension won't load**:
-- manifest.json သက်ဆိုင်ရာ format ရှိကြောင်းစစ်ပါ
-- browser console တွင် error များကိုစစ်ပါ
-- browser-specific extension installation instruction များကို လိုက်နာပါ
+**Browser extension မလုပ်ဆောင်နိုင်ခြင်း**:
+- manifest.json သည် မှန်ကန်စွာ ဖော်ပြထားသည်ကို စစ်ဆေးပါ
+- browser console မှ အမှားများ စစ်ဆေးပါ
+- browser အသီးသီး၏ extension 설치 လမ်းညွှန်ချက်များကို လိုက်နာပါ
 
-**Python chat project issues**:
-- OpenAI package install လုပ်ထားကြောင်းအတည်ပြုပါ: `pip install openai`
-- GITHUB_TOKEN environment variable ကို set လုပ်ထားကြောင်းစစ်ပါ
-- GitHub Models access permission များကိုစစ်ပါ
+**Python chat project ပြဿနာများ**:
+- OpenAI package ထည့်သွင်းထားသည်: `pip install openai`
+- GITHUB_TOKEN environment variable သတ်မှတ်ထားရန်
+- GitHub Models access သတ်မှတ်ချက်များ စစ်ဆေးပါ
 
-**Docsify not serving docs**:
-- docsify-cli ကို globally install လုပ်ပါ: `npm install -g docsify-cli`
+**Docsify မှ စာရွက်စာတမ်း မပြသခြင်း**:
+- docsify-cli ကို ကမ္ဘာ့အဆင့်တွင် ထည့်သွင်းထားရန်: `npm install -g docsify-cli`
 - repository root directory မှ run လုပ်ပါ
-- `docs/_sidebar.md` ရှိကြောင်းစစ်ပါ
+- `docs/_sidebar.md` ဖိုင် ရှိမှုကို ကောက်ချက်ထုတ်ပါ
 
 ### Development Environment Tips
 
-- HTML ပရောဂျက်များအတွက် VS Code နှင့် Live Server extension ကို အသုံးပြုပါ
-- ESLint နှင့် Prettier extension များကို install လုပ်ပါ formatting consistency အတွက်
-- JavaScript debugging အတွက် browser DevTools ကို အသုံးပြုပါ
-- Vue project များအတွက် Vue DevTools browser extension ကို install လုပ်ပါ
+- HTML ပရောဂျက်များအတွက် VS Code Live Server extension အသုံးပြုပါ
+- ESLint နှင့် Prettier extension များ ထည့်သွင်းပါ
+- JavaScript debugging အတွက် browser DevTools အသုံးပြုပါ
+- Vue ပရောဂျက်များအတွက် Vue DevTools browser extension ထည့်သွင်းပါ
 
 ### Performance Considerations
 
-- ဘာသာပြန်ဖိုင်များ (50+ ဘာသာစကား) အများကြီးရှိသောကြောင့် full clone များသည် file size ကြီးမားသည်
-- content အပေါ်သာ အလုပ်လုပ်မည်ဆိုပါက shallow clone ကို အသုံးပြုပါ: `git clone --depth 1`
-- English content အပေါ် အလုပ်လုပ်နေစဉ် ဘာသာပြန်ချက်များကို search မှထုတ်ပယ်ပါ
-- ပထမဆုံး run လုပ်စဉ် build process များနှေးကွေးနိုင်သည် (npm install, Vite build)
+- ဘာသာပြန်ဖိုင် အရေအတွက်များသောကြောင့် (ဘာသာစကား ၅၀+), clone အပြည့်အဝ ကြီးမားလိမ့်မည်
+- မကြီးမားသော clone အတွက် `git clone --depth 1` ကို အသုံးပြုပါ
+- English content အတွက် လုပ်ရာတွင် ဘာသာပြန်ချက်များကို ရှာဖွေမှုမှ ရုပ်သိမ်းပါ
+- ပထမဆုံးစတင် run တွင် build လုပ်ငန်းများ နှေးကွေးနိုင်သည် (npm install, Vite build)
 
 ## Security Considerations
 
 ### Environment Variables
 
-- API key များကို repository တွင် commit မလုပ်သင့်ပါ
-- `.env` ဖိုင်များကို အသုံးပြုပါ (`.gitignore` တွင်ပြီးသားပါဝင်သည်)
-- project README များတွင် လိုအပ်သော environment variable များကို documentation ပြုလုပ်ပါ
+- API key များကို repository ထဲတွင် မသိမ်းဆည်းရ။
+- `.env` ဖိုင်များ အသုံးပြုပါ (.gitignore တွင် ကျော်လွန်ထားပြီး)
+- လိုအပ်သော environment variable များကို project README များတွင် ဖော်ပြထားသည်
 
 ### Python Projects
 
-- virtual environment များကို အသုံးပြုပါ: `python -m venv venv`
+- virtual environments အသုံးပြုပါ: `python -m venv venv`
 - dependency များကို update လုပ်ထားပါ
-- GitHub token များသည် လိုအပ်သော permission အနည်းဆုံးသာ ရှိရမည်
+- GitHub tokens များသည် လိုအပ်သည့် permission အနည်းဆုံးသာ ရှိရမည်
 
 ### GitHub Models Access
 
-- GitHub Models အတွက် Personal Access Tokens (PAT) လိုအပ်သည်
-- token များကို environment variable အဖြစ် သိမ်းဆည်းထားရမည်
-- token သို့မဟုတ် credential များကို commit မလုပ်သင့်ပါ
+- GitHub Models အတွက် Personal Access Tokens (PAT) လို
+- token များကို environment variable များအဖြစ် သိမ်းဆည်းပါ
+- token များ သို့မဟုတ် credentials များကို repository တွင် commit မလုပ်ရ
 
-## အပိုဆောင်းမှတ်ချက်များ
+## Additional Notes
 
 ### Target Audience
 
-- ဝက်ဘ်ဖွံ့ဖြိုးတိုးတက်မှုကို စတင်လေ့လာသူများ
-- ကျောင်းသားများနှင့် ကိုယ်တိုင်လေ့လာသူများ
-- သင်ခန်းစာများကို classroom တွင် အသုံးပြုသောဆရာများ
-- အဆင့်လိုက်လေ့လာမှုနှင့် accessibility အတွက် design ပြုလုပ်ထားသည်
+- ဝက်ဘ် ဖွံ့ဖြိုးတိုးတက်မှု အတွက် စတင်သူများ
+- ကျောင်းသားများနှင့် ကိုယ်တိုင်သင်ယူလိုသူများ
+- ကျောင်းအတွင်း သင်ရိုးညွှန်းတမ်း အသုံးပြုသူ ဆရာ/ဆရာမများ
+- ချိတ်ဆက်ရလွယ်ကူပြီး အဆင့်လိုက် ကျွမ်းကျင်မှု တိုးတက်မှုအတွက် ဒီဇိုင်းဆွဲထားသည်
 
 ### Educational Philosophy
 
-- ပရောဂျက်အခြေခံသင်ကြားမှုနည်းလမ်း
-- အကြိမ်ကြိမ် knowledge checks (quizzes)
-- လက်တွေ့ coding လေ့ကျင့်မှုများ
-- အမှန်တကယ်အသုံးဝင်သော application နမူနာများ
-- framework မတိုင်မီ အခြေခံများကို အဓိကထားသည်
+- ပရောဂျက် အခြေပြု သင်ယူမှု နည်းစနစ်
+- ပုံမှန် စစ်ဆေးပေးမှုများ (quizzes)
+- လက်တွေ့ ကုဒ်ရေးခြင်း လေ့ကျင့်မှုများ
+- ဘာသာရပ်နှင့် သက်ဆိုင်သော အကောင်အထည်ဖော်နည်းများ
+- Framework မတိုင်မီ အခြေခံအတိုးအကျယ်ကို အလေးထားသည်
 
 ### Repository Maintenance
 
-- Learners နှင့် contributors များ၏ active community
-- dependency နှင့် content များကို regular update ပြုလုပ်သည်
-- maintainers မှ issue နှင့် discussion များကို စောင့်ကြည့်သည်
-- GitHub Actions မှတဆင့် ဘာသာပြန် update များကို အလိုအလျောက်ပြုလုပ်သည်
+- တက်ကြွသော သင်ယူသူများနှင့် တင်သွင်းသူများ အသိုင်းအဝိုင်းရှိသည်
+- dependency များနှင့် အကြောင်းအရာများကို သက်ဆိုင်ရာ အချိန်နှင့်အမျှ ပြင်ဆင်နေသည်
+- အဆင်မပြေမှုများနှင့် ဆွေးနွေးမှုများကို ထိန်းသိမ်းသူများ ကြီးကြပ်သည်
+- ဘာသာပြန်သွင်းချက်များကို GitHub Actions ဖြင့် အလိုအလျောက် ပြုလုပ်သည်
 
 ### Related Resources
 
 - [Microsoft Learn modules](https://docs.microsoft.com/learn/)
 - [Student Hub resources](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) ကို learners အတွက် အကြံပြုသည်
-- အပိုဆောင်းသင်တန်းများ: Generative AI, Data Science, ML, IoT curricula ရရှိနိုင်သည်
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) ကို သင်ယူသူများအတွက် 推奨
+- အပို သင်တန်းများ: Generative AI, Data Science, ML, IoT သင်ရိုးညွှန်းတမ်းများ ရှိသည်
 
 ### Working with Specific Projects
 
-သီးသန့်ပရောဂျက်များအတွက် အသေးစိတ်ညွှန်ကြားချက်များကို README ဖိုင်များတွင် ကြည့်ပါ:
+ပရောဂျက် သီးသန့် အသေးစိတ် လမ်းညွှန်ချက်များအတွက် README ဖိုင်များ ကိုကြည့်ရှုပါ -
 - `quiz-app/README.md` - Vue 3 quiz application
-- `7-bank-project/README.md` - authentication ပါသော Banking application
+- `7-bank-project/README.md` - Banking application with authentication
 - `5-browser-extension/README.md` - Browser extension development
 - `6-space-game/README.md` - Canvas-based game development
 - `9-chat-project/README.md` - AI chat assistant project
 
 ### Monorepo Structure
 
-ဤ repository သည် traditional monorepo မဟုတ်သော်လည်း သီးသန့်ပရောဂျက်များ
+ဤ repository သည် ပုံမှန် monorepo မဟုတ်ပေမယ့် ပရောဂျက် အများအပြား ကိုယ်ပိုင်ထားရှိသည် -
+- သင်ခန်းစာ တစ်ခုချင်းစီ ကိုယ်တိုင် ပြီးစီးသည်
+- ပရောဂျက်များမှာ dependency များကို မမျှဝေကြပါ
+- တစ်ခုချင်း ပရောဂျက် များတွင် လုပ်ငန်းဆက် ဆက်လုပ်နိုင်သည်
+- သင့်အတွက် ပညာရေး အပြည့်အစုံ ကို လိုအပ်လျှင် အကုန်တစ်ခုပြီး Clone ပြုလုပ်နိုင်သည်
 
 ---
 
-**အကြောင်းကြားချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူရင်းဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတည်သော ရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော နားလည်မှုမှားများ သို့မဟုတ် အဓိပ္ပာယ်မှားများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**မူရင်းအကြောင်းကြားချက်**  
+ဤစာတမ်းကို AI ဘာသာပြန်ဆော့ဖ်ဝဲဖြစ်သော [Co-op Translator](https://github.com/Azure/co-op-translator) အသုံးပြုပြီး ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် မှန်ကန်မှုကို မျှော်လင့်နေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ချက်များတွင် မှားယွင်းမှု သို့မဟုတ် အတိအကျမမှန်ကန်မှုများ ရှိနိုင်သည်ကို သတိပြုပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို စနစ်တကျ အသုံးပြုခဲ့သင့်သော အကြောင်းအရာ အရင်းအမြစ်အဖြစ် ယူဆရမည်။ အရေးကြီးသော သတင်းအချက်အလက်များအတွက် သင့်လျော်သည့် လူမှုဆက်ဆံရေး ဘာသာပြန်ဌာနမှ အတည်ပြုခြင်း လိုအပ်ပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုခြင်းကြောင့် ဖြစ်ပေါ်လာနိုင်သည့် နားမလည်မှုများ သို့မဟုတ် မှားယွင်းသောဖော်ပြချက်များအတွက် ကျွန်ုပ်တို့သည် တာဝန်မပေးပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
