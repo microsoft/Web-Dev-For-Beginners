@@ -2,53 +2,53 @@
 
 ## Projectoverzicht
 
-Dit is een educatieve curriculumrepository voor het onderwijzen van de basisprincipes van webontwikkeling aan beginners. Het curriculum is een uitgebreide 12-weekse cursus ontwikkeld door Microsoft Cloud Advocates, met 24 praktische lessen over JavaScript, CSS en HTML.
+Dit is een educatief curriculumrepository voor het onderwijzen van webontwikkelingsbasisprincipes aan beginners. Het curriculum is een uitgebreide cursus van 12 weken ontwikkeld door Microsoft Cloud Advocates, met 24 praktische lessen over JavaScript, CSS en HTML.
 
-### Belangrijke onderdelen
+### Belangrijkste Onderdelen
 
-- **Educatieve inhoud**: 24 gestructureerde lessen georganiseerd in projectgebaseerde modules
-- **Praktische projecten**: Terrarium, Typingspel, Browserextensie, Ruimtespel, Bankapp, Code-editor en AI-chatassistent
-- **Interactieve quizzen**: 48 quizzen met elk 3 vragen (voorafgaande/naderhandse lesbeoordelingen)
-- **Meertalige ondersteuning**: Geautomatiseerde vertalingen in meer dan 50 talen via GitHub Actions
+- **Educatieve Inhoud**: 24 gestructureerde lessen georganiseerd in projectgebaseerde modules
+- **Praktische Projecten**: Terrarium, Typvaardigheidspel, Browserextensie, Ruimtespel, Bankapp, Code-editor en AI-chatassistent
+- **Interactieve Quizzen**: 48 quizzen met elk 3 vragen (voor- en na-les beoordelingen)
+- **Meertalige Ondersteuning**: Geautomatiseerde vertalingen voor 50+ talen via GitHub Actions
 - **Technologieën**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (voor AI-projecten)
 
 ### Architectuur
 
 - Educatieve repository met lesgebaseerde structuur
-- Elke lesmap bevat een README, codevoorbeelden en oplossingen
-- Zelfstandige projecten in aparte mappen (quiz-app, diverse lesprojecten)
-- Vertalingssysteem met GitHub Actions (co-op-translator)
-- Documentatie beschikbaar via Docsify en als PDF
+- Elke lesmap bevat README, codevoorbeelden en oplossingen
+- Op zichzelf staande projecten in aparte mappen (quiz-app, diverse lesprojecten)
+- Vertalingssysteem via GitHub Actions (co-op-translator)
+- Documentatie geserveerd via Docsify en beschikbaar als PDF
 
 ## Setup-commando's
 
-Deze repository is primair bedoeld voor het consumeren van educatieve inhoud. Voor het werken met specifieke projecten:
+Deze repository is voornamelijk bedoeld voor het consumeren van educatieve inhoud. Voor werken met specifieke projecten:
 
-### Hoofdrepository instellen
+### Hoofdrepository Setup
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Quiz-app instellen (Vue 3 + Vite)
+### Quiz-app Setup (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run lint       # Run ESLint
+npm run dev        # Start ontwikkelserver
+npm run build      # Bouw voor productie
+npm run lint       # Voer ESLint uit
 ```
 
-### Bankproject-API (Node.js + Express)
+### Bankproject API (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Start API server
-npm run lint       # Run ESLint
-npm run format     # Format with Prettier
+npm start          # Start API-server
+npm run lint       # Voer ESLint uit
+npm run format     # Formatteren met Prettier
 ```
 
 ### Browserextensieprojecten
@@ -56,7 +56,7 @@ npm run format     # Format with Prettier
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Follow browser-specific extension loading instructions
+# Volg browser-specifieke instructies voor het laden van extensies
 ```
 
 ### Ruimtespelprojecten
@@ -64,219 +64,219 @@ npm install
 ```bash
 cd 6-space-game/solution
 npm install
-# Open index.html in browser or use Live Server
+# Open index.html in de browser of gebruik Live Server
 ```
 
-### Chatproject (Python-backend)
+### Chatproject (Python Backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# Set GITHUB_TOKEN environment variable
+# Stel de omgevingsvariabele GITHUB_TOKEN in
 python api.py
 ```
 
 ## Ontwikkelworkflow
 
-### Voor inhoudsbijdraaiers
+### Voor Inhoudbijdragers
 
 1. **Fork de repository** naar je GitHub-account
 2. **Clone je fork** lokaal
 3. **Maak een nieuwe branch** voor je wijzigingen
-4. Breng wijzigingen aan in lesinhoud of codevoorbeelden
+4. Maak wijzigingen aan lesinhoud of codevoorbeelden
 5. Test eventuele codewijzigingen in relevante projectmappen
-6. Dien pull requests in volgens de richtlijnen voor bijdragen
+6. Dien pull requests in volgens de bijdrage-richtlijnen
 
-### Voor leerlingen
+### Voor Leerlingen
 
 1. Fork of clone de repository
-2. Navigeer naar lesmappen in volgorde
-3. Lees README-bestanden voor elke les
-4. Maak voorafgaande quizzen op https://ff-quizzes.netlify.app/web/
-5. Werk door codevoorbeelden in lesmappen
-6. Voltooi opdrachten en uitdagingen
-7. Maak naderhandse quizzen
+2. Navigeer sequentieel door de lesmappen
+3. Lees de README-bestanden van elke les
+4. Maak pre-les quizzen op https://ff-quizzes.netlify.app/web/ af
+5. Werk codevoorbeelden in lesmappen door
+6. Maak opdrachten en uitdagingen af
+7. Maak post-les quizzen
 
-### Live ontwikkeling
+### Live Ontwikkeling
 
-- **Documentatie**: Voer `docsify serve` uit in de root (poort 3000)
-- **Quiz-app**: Voer `npm run dev` uit in de quiz-app-map
-- **Projecten**: Gebruik de Live Server-extensie van VS Code voor HTML-projecten
-- **API-projecten**: Voer `npm start` uit in de respectieve API-mappen
+- **Documentatie**: Voer `docsify serve` uit in de hoofdmap (poort 3000)
+- **Quiz-app**: Voer `npm run dev` uit in de quiz-app map
+- **Projecten**: Gebruik VS Code Live Server extensie voor HTML-projecten
+- **API-projecten**: Voer `npm start` uit in respectievelijke API-mappen
 
 ## Testinstructies
 
-### Quiz-app testen
+### Quiz-app Testing
 
 ```bash
 cd quiz-app
-npm run lint       # Check for code style issues
-npm run build      # Verify build succeeds
+npm run lint       # Controleer op problemen met de code-stijl
+npm run build      # Verifieer dat de build slaagt
 ```
 
-### Bank-API testen
+### Bank API Testing
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Check for code style issues
-node server.js     # Verify server starts without errors
+npm run lint       # Controleer op code stijlproblemen
+node server.js     # Verifieer dat de server zonder fouten start
 ```
 
-### Algemene testaanpak
+### Algemene Testaanpak
 
 - Dit is een educatieve repository zonder uitgebreide geautomatiseerde tests
-- Handmatige tests richten zich op:
-  - Codevoorbeelden draaien zonder fouten
+- Handmatig testen richt zich op:
+  - Codevoorbeelden zonder fouten uitvoeren
   - Links in documentatie werken correct
-  - Projecten bouwen succesvol
+  - Project builds worden succesvol voltooid
   - Voorbeelden volgen best practices
 
-### Controle vóór indiening
+### Pre-submissie Controles
 
 - Voer `npm run lint` uit in mappen met package.json
-- Controleer of markdown-links geldig zijn
-- Test codevoorbeelden in de browser of Node.js
-- Controleer of vertalingen de juiste structuur behouden
+- Controleer of Markdown-links geldig zijn
+- Test codevoorbeelden in browser of Node.js
+- Controleer dat vertalingen de juiste structuur behouden
 
-## Richtlijnen voor codestijl
+## Code Stijlrichtlijnen
 
 ### JavaScript
 
 - Gebruik moderne ES6+ syntax
-- Volg standaard ESLint-configuraties die in projecten worden geleverd
+- Volg standaard ESLint-configuraties in projecten
 - Gebruik betekenisvolle variabele- en functienamen voor educatieve duidelijkheid
 - Voeg opmerkingen toe die concepten uitleggen voor leerlingen
-- Formatteer met Prettier waar geconfigureerd
+- Format met Prettier waar geconfigureerd
 
 ### HTML/CSS
 
 - Semantische HTML5-elementen
-- Responsieve ontwerpprincipes
-- Duidelijke klassennaamgeving
+- Responsive designprincipes
+- Duidelijke classnaamconventies
 - Opmerkingen die CSS-technieken uitleggen voor leerlingen
 
 ### Python
 
 - PEP 8-stijlrichtlijnen
 - Duidelijke, educatieve codevoorbeelden
-- Type hints waar nuttig voor leren
+- Type hints waar nuttig voor het leren
 
-### Markdown-documentatie
+### Markdown Documentatie
 
 - Duidelijke koppenhiërarchie
 - Codeblokken met taalspecificatie
 - Links naar aanvullende bronnen
-- Screenshots en afbeeldingen in `images/`-mappen
+- Screenshots en afbeeldingen in `images/` mappen
 - Alt-tekst voor afbeeldingen voor toegankelijkheid
 
 ### Bestandsorganisatie
 
-- Lessen genummerd in volgorde (1-getting-started-lessons, 2-js-basics, enz.)
-- Elk project heeft `solution/` en vaak `start/` of `your-work/`-mappen
-- Afbeeldingen opgeslagen in les-specifieke `images/`-mappen
-- Vertalingen in `translations/{language-code}/`-structuur
+- Lessen genummerd in volgorde (1-getting-started-lessons, 2-js-basics, etc.)
+- Elk project heeft `solution/` en vaak `start/` of `your-work/` mappen
+- Afbeeldingen opgeslagen in les-specifieke `images/` mappen
+- Vertalingen in `translations/{language-code}/` structuur
 
-## Build en deployment
+## Build en Deployment
 
-### Quiz-app deployment (Azure Static Web Apps)
+### Quiz-app Deployment (Azure Static Web Apps)
 
 De quiz-app is geconfigureerd voor Azure Static Web Apps deployment:
 
 ```bash
 cd quiz-app
-npm run build      # Creates dist/ folder
-# Deploys via GitHub Actions workflow on push to main
+npm run build      # Maakt dist/ map aan
+# Zet uit via GitHub Actions workflow bij push naar main
 ```
 
-Azure Static Web Apps-configuratie:
+Azure Static Web Apps configuratie:
 - **App-locatie**: `/quiz-app`
 - **Output-locatie**: `dist`
 - **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Documentatie PDF-generatie
+### Documentatie PDF Generatie
 
 ```bash
-npm install                    # Install docsify-to-pdf
-npm run convert               # Generate PDF from docs
+npm install                    # Installeer docsify-to-pdf
+npm run convert               # Genereer PDF van docs
 ```
 
-### Docsify-documentatie
+### Docsify Documentatie
 
 ```bash
-npm install -g docsify-cli    # Install Docsify globally
-docsify serve                 # Serve on localhost:3000
+npm install -g docsify-cli    # Installeer Docsify wereldwijd
+docsify serve                 # Serveren op localhost:3000
 ```
 
-### Projectspecifieke builds
+### Project-specifieke Builds
 
 Elke projectmap kan zijn eigen buildproces hebben:
-- Vue-projecten: `npm run build` maakt productie-bundels
+- Vue-projecten: `npm run build` maakt productie-bundels aan
 - Statische projecten: Geen buildstap, bestanden direct serveren
 
-## Richtlijnen voor pull requests
+## Pull Request Richtlijnen
 
 ### Titelindeling
 
-Gebruik duidelijke, beschrijvende titels die het gebied van wijziging aangeven:
-- `[Quiz-app] Nieuwe quiz toevoegen voor les X`
-- `[Les-3] Typfout corrigeren in terrariumproject`
-- `[Vertaling] Spaanse vertaling toevoegen voor les 5`
-- `[Docs] Setup-instructies bijwerken`
+Gebruik duidelijke, beschrijvende titels die het wijzigingsgebied aangeven:
+- `[Quiz-app] Voeg nieuwe quiz toe voor les X`
+- `[Lesson-3] Corrigeer typefout in terrarium project`
+- `[Translation] Voeg Spaanse vertaling toe voor les 5`
+- `[Docs] Update setupinstructies`
 
-### Vereiste controles
+### Vereiste Controles
 
-Voordat je een PR indient:
+Voor het indienen van een PR:
 
 1. **Codekwaliteit**:
-   - Voer `npm run lint` uit in de getroffen projectmappen
-   - Los alle lintingfouten en -waarschuwingen op
+   - Voer `npm run lint` uit in betrokken projectmappen
+   - Los alle lintfouten en waarschuwingen op
 
-2. **Buildverificatie**:
+2. **Build Verificatie**:
    - Voer `npm run build` uit indien van toepassing
-   - Zorg ervoor dat er geen buildfouten zijn
+   - Zorg dat er geen buildfouten zijn
 
 3. **Linkvalidatie**:
    - Test alle markdown-links
-   - Controleer of afbeeldingsverwijzingen werken
+   - Controleer of afbeeldingsreferenties werken
 
-4. **Inhoudscontrole**:
-   - Controleer op spelling en grammatica
-   - Zorg ervoor dat codevoorbeelden correct en educatief zijn
-   - Controleer of vertalingen de oorspronkelijke betekenis behouden
+4. **Inhoud Review**:
+   - Controleer spelling en grammatica
+   - Zorg dat codevoorbeelden correct en educatief zijn
+   - Verifieer dat vertalingen de oorspronkelijke betekenis behouden
 
-### Bijdragevereisten
+### Bijdragereisen
 
 - Ga akkoord met Microsoft CLA (automatische controle bij eerste PR)
-- Volg de [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- Volg de [Microsoft Open Source Gedragscode](https://opensource.microsoft.com/codeofconduct/)
 - Zie [CONTRIBUTING.md](./CONTRIBUTING.md) voor gedetailleerde richtlijnen
-- Verwijs naar issuetickets in de PR-beschrijving indien van toepassing
+- Verwijs indien van toepassing naar issuetitels in PR-beschrijving
 
 ### Reviewproces
 
 - PR's worden beoordeeld door maintainers en de community
-- Educatieve duidelijkheid heeft prioriteit
-- Codevoorbeelden moeten huidige best practices volgen
+- Educatieve duidelijkheid staat voorop
+- Codevoorbeelden dienen de huidige best practices te volgen
 - Vertalingen worden beoordeeld op nauwkeurigheid en culturele geschiktheid
 
 ## Vertalingssysteem
 
-### Geautomatiseerde vertaling
+### Geautomatiseerde Vertaling
 
 - Gebruikt GitHub Actions met co-op-translator workflow
-- Vertaalt automatisch naar meer dan 50 talen
-- Bronbestanden in hoofdmap
-- Vertaalde bestanden in `translations/{language-code}/`-mappen
+- Vertaalt automatisch naar 50+ talen
+- Bronbestanden in hoofddirectories
+- Vertaalde bestanden in `translations/{language-code}/` mappen
 
-### Handmatige verbeteringen aan vertalingen toevoegen
+### Handmatige Verbeteringen Toevoegen
 
-1. Zoek bestand in `translations/{language-code}/`
-2. Breng verbeteringen aan terwijl je de structuur behoudt
-3. Zorg ervoor dat codevoorbeelden functioneel blijven
-4. Test eventuele gelokaliseerde quizinhoud
+1. Zoek het bestand in `translations/{language-code}/`
+2. Breng verbeteringen aan terwijl de structuur behouden blijft
+3. Zorg dat codevoorbeelden blijven werken
+4. Test eventuele gelokaliseerde quiz-inhoud
 
-### Metadata van vertalingen
+### Vertaalmetadata
 
-Vertaalde bestanden bevatten een metadata-header:
+Vertaalde bestanden bevatten metadatakoppen:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,56 +289,56 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Debugging en probleemoplossing
+## Debuggen en Probleemoplossing
 
-### Veelvoorkomende problemen
+### Veelvoorkomende Problemen
 
 **Quiz-app start niet**:
 - Controleer Node.js-versie (v14+ aanbevolen)
-- Verwijder `node_modules` en `package-lock.json`, voer `npm install` opnieuw uit
+- Verwijder `node_modules` en `package-lock.json`, voer opnieuw `npm install` uit
 - Controleer op poortconflicten (standaard: Vite gebruikt poort 5173)
 
 **API-server start niet**:
-- Controleer of Node.js-versie voldoet aan minimumvereisten (node >=10)
+- Controleer of Node.js-versie minimaal is (node >=10)
 - Controleer of poort al in gebruik is
-- Zorg ervoor dat alle afhankelijkheden zijn geïnstalleerd met `npm install`
+- Zorg dat alle afhankelijkheden zijn geïnstalleerd met `npm install`
 
 **Browserextensie laadt niet**:
 - Controleer of manifest.json correct is geformatteerd
-- Controleer browserconsole op fouten
-- Volg browser-specifieke installatie-instructies voor extensies
+- Controleer de browserconsole op fouten
+- Volg browser-specifieke instructies voor het installeren van extensies
 
-**Python-chatprojectproblemen**:
-- Zorg ervoor dat OpenAI-pakket is geïnstalleerd: `pip install openai`
-- Controleer of GITHUB_TOKEN-omgevingsvariabele is ingesteld
-- Controleer toegangsmachtigingen voor GitHub Models
+**Python chatprojectproblemen**:
+- Zorg dat het OpenAI pakket is geïnstalleerd: `pip install openai`
+- Controleer of de GITHUB_TOKEN omgevingsvariabele is ingesteld
+- Controleer GitHub Models toegangsrechten
 
-**Docsify serveert geen docs**:
+**Docsify serveert geen documentatie**:
 - Installeer docsify-cli globaal: `npm install -g docsify-cli`
-- Voer uit vanuit de rootmap van de repository
-- Controleer of `docs/_sidebar.md` bestaat
+- Start vanuit de rootmap van de repository
+- Controleer dat `docs/_sidebar.md` bestaat
 
-### Tips voor ontwikkelomgeving
+### Tips voor Ontwikkelomgeving
 
-- Gebruik VS Code met Live Server-extensie voor HTML-projecten
-- Installeer ESLint- en Prettier-extensies voor consistente opmaak
+- Gebruik VS Code met de Live Server extensie voor HTML-projecten
+- Installeer ESLint en Prettier extensies voor consistente formattering
 - Gebruik browser DevTools voor het debuggen van JavaScript
-- Voor Vue-projecten, installeer Vue DevTools-browserextensie
+- Voor Vue-projecten, installeer Vue DevTools browser extensie
 
 ### Prestatieoverwegingen
 
-- Groot aantal vertaalde bestanden (50+ talen) betekent dat volledige clones groot zijn
-- Gebruik een shallow clone als je alleen aan inhoud werkt: `git clone --depth 1`
-- Sluit vertalingen uit van zoekopdrachten bij het werken aan Engelse inhoud
-- Buildprocessen kunnen traag zijn bij de eerste run (npm install, Vite build)
+- Groot aantal vertaalde bestanden (50+ talen) betekent grote volledige clones
+- Gebruik shallow clone als je alleen aan inhoud werkt: `git clone --depth 1`
+- Sluit vertalingen uit van zoekacties bij werken in Engelse inhoud
+- Buildprocessen kunnen traag zijn bij eerste run (npm install, Vite build)
 
 ## Veiligheidsoverwegingen
 
 ### Omgevingsvariabelen
 
-- API-sleutels mogen nooit in de repository worden opgenomen
-- Gebruik `.env`-bestanden (al in `.gitignore`)
-- Documenteer vereiste omgevingsvariabelen in project-README's
+- API-sleutels mogen nooit in de repository worden gecommit
+- Gebruik `.env` bestanden (staan al in `.gitignore`)
+- Documenteer vereiste omgevingsvariabelen in project-READMEs
 
 ### Python-projecten
 
@@ -346,61 +346,63 @@ CO_OP_TRANSLATOR_METADATA:
 - Houd afhankelijkheden up-to-date
 - GitHub-tokens moeten minimale vereiste machtigingen hebben
 
-### Toegang tot GitHub Models
+### GitHub Models Toegang
 
-- Persoonlijke toegangstokens (PAT) vereist voor GitHub Models
-- Tokens moeten worden opgeslagen als omgevingsvariabelen
-- Nooit tokens of inloggegevens opnemen in de repository
+- Persoonlijke toegangstokens (PAT) zijn vereist voor GitHub Models
+- Tokens moeten als omgevingsvariabele worden opgeslagen
+- Tokens of inloggegevens nooit commiten
 
-## Aanvullende opmerkingen
+## Aanvullende Aantekeningen
 
 ### Doelgroep
 
-- Volledige beginners in webontwikkeling
-- Studenten en zelflerenden
-- Docenten die het curriculum in klaslokalen gebruiken
+- Complete beginners in webontwikkeling
+- Studenten en zelfstudie-lezers
+- Docenten die het curriculum in klassen gebruiken
 - Inhoud is ontworpen voor toegankelijkheid en geleidelijke vaardigheidsopbouw
 
-### Educatieve filosofie
+### Educatieve Filosofie
 
 - Projectgebaseerde leerbenadering
-- Regelmatige kenniscontroles (quizzen)
-- Praktische codeoefeningen
-- Voorbeelden van toepassingen in de echte wereld
+- Regelmatige kennistoetsen (quizzen)
+- Praktische codeeropdrachten
+- Voorbeelden van toepassingen in de praktijk
 - Focus op basisprincipes vóór frameworks
 
-### Onderhoud van de repository
+### Repository Onderhoud
 
 - Actieve community van leerlingen en bijdragers
-- Regelmatige updates van afhankelijkheden en inhoud
+- Reguliere updates van dependencies en inhoud
 - Issues en discussies worden gemonitord door maintainers
-- Vertalingsupdates geautomatiseerd via GitHub Actions
+- Vertaalupdates geautomatiseerd via GitHub Actions
 
-### Gerelateerde bronnen
+### Gerelateerde Bronnen
 
-- [Microsoft Learn-modules](https://docs.microsoft.com/learn/)
-- [Student Hub-bronnen](https://docs.microsoft.com/learn/student-hub/)
+- [Microsoft Learn modules](https://docs.microsoft.com/learn/)
+- [Student Hub bronnen](https://docs.microsoft.com/learn/student-hub/)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) aanbevolen voor leerlingen
-- Aanvullende cursussen: Generatieve AI, Data Science, ML, IoT-curricula beschikbaar
+- Aanvullende cursussen: Generative AI, Data Science, ML, IoT curricula beschikbaar
 
-### Werken met specifieke projecten
+### Werken met Specifieke Projecten
 
 Voor gedetailleerde instructies over individuele projecten, raadpleeg de README-bestanden in:
-- `quiz-app/README.md` - Vue 3 quiz-applicatie
+- `quiz-app/README.md` - Vue 3 quizapplicatie
 - `7-bank-project/README.md` - Bankapplicatie met authenticatie
-- `5-browser-extension/README.md` - Ontwikkeling van browserextensies
-- `6-space-game/README.md` - Canvas-gebaseerde spelontwikkeling
-- `9-chat-project/README.md` - AI-chatassistentproject
+- `5-browser-extension/README.md` - Browserextensie ontwikkeling
+- `6-space-game/README.md` - Canvas-gebaseerd spel
+- `9-chat-project/README.md` - AI chatassistent project
 
-### Monorepo-structuur
+### Monorepo Structuur
 
-Hoewel geen traditionele monorepo, bevat deze repository meerdere onafhankelijke projecten:
+Hoewel dit geen traditionele monorepo is, bevat deze repository meerdere onafhankelijke projecten:
 - Elke les is zelfstandig
-- Projecten delen geen afhankelijkheden
-- Werk aan individuele projecten zonder anderen te beïnvloeden
-- Clone de volledige repo voor de volledige curriculumervaring
+- Projecten delen geen dependencies
+- Werk aan individuele projecten zonder de anderen te beïnvloeden
+- Clone de gehele repo voor de volledige curriculumervaring
 
 ---
 
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel wij streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onjuistheden kunnen bevatten. Het oorspronkelijke document in de oorspronkelijke taal dient als de gezaghebbende bron te worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,53 +2,53 @@
 
 ## Prosjektoversikt
 
-Dette er et utdanningsrepository for å lære nybegynnere grunnleggende webutvikling. Pensumet er et omfattende 12-ukers kurs utviklet av Microsoft Cloud Advocates, med 24 praktiske leksjoner som dekker JavaScript, CSS og HTML.
+Dette er et utdanningskurslager for å lære webutviklingsgrunnlag til nybegynnere. Pensumet er et omfattende 12-ukers kurs utviklet av Microsoft Cloud Advocates, med 24 praktiske leksjoner som dekker JavaScript, CSS og HTML.
 
-### Hovedkomponenter
+### Viktige komponenter
 
 - **Utdanningsinnhold**: 24 strukturerte leksjoner organisert i prosjektbaserte moduler
-- **Praktiske prosjekter**: Terrarium, Skrivespill, Nettleserutvidelse, Romspill, Bankapp, Kodeeditor og AI-chatassistent
-- **Interaktive quizer**: 48 quizer med 3 spørsmål hver (før/etter leksjon)
+- **Praktiske prosjekter**: Terrarium, Typing Game, Nettleserutvidelse, Space Game, Bank-app, Kodeeditor og AI Chat Assistant
+- **Interaktive quizer**: 48 quizer med 3 spørsmål hver (før/etter-leksjon vurderinger)
 - **Flerspråklig støtte**: Automatiserte oversettelser til 50+ språk via GitHub Actions
 - **Teknologier**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (for AI-prosjekter)
 
 ### Arkitektur
 
-- Utdanningsrepository med leksjonsbasert struktur
+- Utdanningslager med leksjonsbasert struktur
 - Hver leksjonsmappe inneholder README, kodeeksempler og løsninger
-- Frittstående prosjekter i separate kataloger (quiz-app, ulike leksjonsprosjekter)
-- Oversettelsessystem ved bruk av GitHub Actions (co-op-translator)
+- Selvstendige prosjekter i separate kataloger (quiz-app, diverse leksjonsprosjekter)
+- Oversettelsessystem med GitHub Actions (co-op-translator)
 - Dokumentasjon levert via Docsify og tilgjengelig som PDF
 
 ## Oppsettskommandoer
 
-Dette repositoryet er primært for konsumering av utdanningsinnhold. For å jobbe med spesifikke prosjekter:
+Dette repositoriet er primært for konsumering av utdanningsinnhold. For arbeid med spesifikke prosjekter:
 
-### Hovedrepository-oppsett
+### Hovedrepositorieoppsett
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Oppsett av Quiz-app (Vue 3 + Vite)
+### Quiz App Oppsett (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run lint       # Run ESLint
+npm run dev        # Start utviklingsserver
+npm run build      # Bygg for produksjon
+npm run lint       # Kjør ESLint
 ```
 
-### Bankprosjekt-API (Node.js + Express)
+### Bankprosjekt API (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Start API server
-npm run lint       # Run ESLint
-npm run format     # Format with Prettier
+npm start          # Start API-server
+npm run lint       # Kjør ESLint
+npm run format     # Formater med Prettier
 ```
 
 ### Nettleserutvidelsesprosjekter
@@ -56,23 +56,23 @@ npm run format     # Format with Prettier
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Follow browser-specific extension loading instructions
+# Følg nettleserspesifikke instruksjoner for lasting av utvidelser
 ```
 
-### Romspillprosjekter
+### Space Game Prosjekter
 
 ```bash
 cd 6-space-game/solution
 npm install
-# Open index.html in browser or use Live Server
+# Åpne index.html i nettleser eller bruk Live Server
 ```
 
-### Chat-prosjekt (Python-backend)
+### Chat-prosjekt (Python Backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# Set GITHUB_TOKEN environment variable
+# Sett miljøvariabelen GITHUB_TOKEN
 python api.py
 ```
 
@@ -80,55 +80,55 @@ python api.py
 
 ### For innholdsbidragsytere
 
-1. **Fork repositoryet** til din GitHub-konto
-2. **Klon din fork** lokalt
-3. **Opprett en ny gren** for endringene dine
+1. **Fork repositoriet** til din GitHub-konto
+2. **Klone ditt fork** lokalt
+3. **Opprett en ny branch** for dine endringer
 4. Gjør endringer i leksjonsinnhold eller kodeeksempler
 5. Test eventuelle kodeendringer i relevante prosjektkataloger
-6. Send inn pull requests i henhold til retningslinjene for bidrag
+6. Send pull requests i henhold til bidragsretningslinjer
 
 ### For lærende
 
-1. Fork eller klon repositoryet
-2. Naviger til leksjonskatalogene i rekkefølge
-3. Les README-filene for hver leksjon
-4. Fullfør før-leksjonsquizer på https://ff-quizzes.netlify.app/web/
-5. Jobb gjennom kodeeksempler i leksjonsmapper
+1. Fork eller klone repositoriet
+2. Naviger sekvensielt gjennom leksjonskataloger
+3. Les README-filer for hver leksjon
+4. Fullfør pre-leksjonsquizer på https://ff-quizzes.netlify.app/web/
+5. Arbeid med kodeeksempler i leksjonsmapper
 6. Fullfør oppgaver og utfordringer
-7. Ta etter-leksjonsquizer
+7. Ta post-leksjonsquizer
 
 ### Live utvikling
 
-- **Dokumentasjon**: Kjør `docsify serve` i rotkatalogen (port 3000)
-- **Quiz-app**: Kjør `npm run dev` i quiz-app-katalogen
-- **Prosjekter**: Bruk VS Code Live Server-utvidelsen for HTML-prosjekter
-- **API-prosjekter**: Kjør `npm start` i respektive API-kataloger
+- **Dokumentasjon**: Kjør `docsify serve` i rot (port 3000)
+- **Quiz App**: Kjør `npm run dev` i quiz-app katalog
+- **Prosjekter**: Bruk VS Code Live Server extension for HTML-prosjekter
+- **API Prosjekter**: Kjør `npm start` i aktuelle API-kataloger
 
 ## Testinstruksjoner
 
-### Testing av Quiz-app
+### Quiz App testing
 
 ```bash
 cd quiz-app
-npm run lint       # Check for code style issues
-npm run build      # Verify build succeeds
+npm run lint       # Sjekk for kode stilproblemer
+npm run build      # Bekreft at byggingen lykkes
 ```
 
-### Testing av Bank-API
+### Bank API testing
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Check for code style issues
-node server.js     # Verify server starts without errors
+npm run lint       # Sjekk for kode stilproblemer
+node server.js     # Verifiser at serveren starter uten feil
 ```
 
 ### Generell testtilnærming
 
-- Dette er et utdanningsrepository uten omfattende automatiserte tester
+- Dette er et utdanningslager uten omfattende automatiserte tester
 - Manuell testing fokuserer på:
   - Kodeeksempler kjører uten feil
-  - Lenker i dokumentasjonen fungerer korrekt
-  - Prosjektbygg fullføres vellykket
+  - Lenker i dokumentasjon fungerer korrekt
+  - Prosjektbygg fullføres uten feil
   - Eksempler følger beste praksis
 
 ### Sjekk før innsending
@@ -138,125 +138,125 @@ node server.js     # Verify server starts without errors
 - Test kodeeksempler i nettleser eller Node.js
 - Sjekk at oversettelser opprettholder riktig struktur
 
-## Retningslinjer for kodestil
+## Kodestil retningslinjer
 
 ### JavaScript
 
 - Bruk moderne ES6+ syntaks
-- Følg standard ESLint-konfigurasjoner som er gitt i prosjektene
-- Bruk meningsfulle variabel- og funksjonsnavn for pedagogisk klarhet
+- Følg standard ESLint-konfigurasjoner gitt i prosjektene
+- Bruk meningsfulle variabel- og funksjonsnavn for pedagogisk tydelighet
 - Legg til kommentarer som forklarer konsepter for lærende
 - Formater med Prettier der det er konfigurert
 
 ### HTML/CSS
 
 - Semantiske HTML5-elementer
-- Prinsipper for responsivt design
-- Klare klassenavnkonvensjoner
-- Kommentarer som forklarer CSS-teknikker for lærende
+- Responsive designprinsipper
+- Klare klassifikasjonsnavnkonvensjoner
+- Kommenterer CSS-teknikker for lærende
 
 ### Python
 
-- PEP 8-stilretningslinjer
+- PEP 8 stilretningslinjer
 - Klare, pedagogiske kodeeksempler
-- Type hints der det er nyttig for læring
+- Typehinting der det er hjelpsomt for læring
 
-### Markdown-dokumentasjon
+### Markdown dokumentasjon
 
-- Klar overskriftsstruktur
+- Klar overskriftshierarki
 - Kodeblokker med språkspecifikasjon
-- Lenker til tilleggsmateriell
-- Skjermbilder og bilder i `images/`-kataloger
+- Lenker til tilleggsressurser
+- Skjermbilder og bilder i `images/` kataloger
 - Alt-tekst for bilder for tilgjengelighet
 
 ### Filorganisering
 
 - Leksjoner nummerert sekvensielt (1-getting-started-lessons, 2-js-basics, osv.)
-- Hvert prosjekt har `solution/` og ofte `start/` eller `your-work/`-kataloger
-- Bilder lagret i leksjonsspesifikke `images/`-mapper
-- Oversettelser i `translations/{language-code}/`-struktur
+- Hvert prosjekt har `solution/` og ofte `start/` eller `your-work/` kataloger
+- Bilder lagret i leksjonsspesifikke `images/` mapper
+- Oversettelser i `translations/{language-code}/` struktur
 
 ## Bygging og distribusjon
 
-### Distribusjon av Quiz-app (Azure Static Web Apps)
+### Quiz App distribusjon (Azure Static Web Apps)
 
-Quiz-appen er konfigurert for distribusjon via Azure Static Web Apps:
+Quiz-app er konfigurert for Azure Static Web Apps distribusjon:
 
 ```bash
 cd quiz-app
-npm run build      # Creates dist/ folder
-# Deploys via GitHub Actions workflow on push to main
+npm run build      # Oppretter dist/-mappe
+# Distribuerer via GitHub Actions workflow ved push til main
 ```
 
-Konfigurasjon for Azure Static Web Apps:
-- **App-plassering**: `/quiz-app`
-- **Output-plassering**: `dist`
+Azure Static Web Apps konfigurasjon:
+- **App-lokasjon**: `/quiz-app`
+- **Output-lokasjon**: `dist`
 - **Arbeidsflyt**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Generering av dokumentasjon som PDF
+### Generering av PDF-dokumentasjon
 
 ```bash
-npm install                    # Install docsify-to-pdf
-npm run convert               # Generate PDF from docs
+npm install                    # Installer docsify-to-pdf
+npm run convert               # Generer PDF fra docs
 ```
 
-### Docsify-dokumentasjon
+### Docsify dokumentasjon
 
 ```bash
-npm install -g docsify-cli    # Install Docsify globally
-docsify serve                 # Serve on localhost:3000
+npm install -g docsify-cli    # Installer Docsify globalt
+docsify serve                 # Server på localhost:3000
 ```
 
 ### Prosjektspesifikke bygg
 
-Hver prosjektkatalog kan ha sin egen byggeprosess:
-- Vue-prosjekter: `npm run build` lager produksjonsbundler
-- Statisk prosjekter: Ingen byggeprosess, server filene direkte
+Hver prosjektkatalog kan ha egen byggprosess:
+- Vue prosjekter: `npm run build` lager produksjonspakker
+- Statisk prosjekter: Ingen byggesteg, server filer direkte
 
 ## Retningslinjer for pull requests
 
 ### Tittelformat
 
-Bruk klare, beskrivende titler som indikerer endringsområdet:
+Bruk klare, beskrivende titler som angir endringsområde:
 - `[Quiz-app] Legg til ny quiz for leksjon X`
 - `[Lesson-3] Rett skrivefeil i terrarium-prosjekt`
 - `[Translation] Legg til spansk oversettelse for leksjon 5`
-- `[Docs] Oppdater oppsettsinstruksjoner`
+- `[Docs] Oppdater oppsettinstruksjoner`
 
-### Nødvendige sjekker
+### Påkrevde sjekker
 
-Før du sender inn en PR:
+Før innsending av PR:
 
 1. **Kodekvalitet**:
    - Kjør `npm run lint` i berørte prosjektkataloger
-   - Rett alle linting-feil og advarsler
+   - Fiks alle linting-feil og advarsler
 
 2. **Byggverifisering**:
    - Kjør `npm run build` hvis aktuelt
-   - Sørg for at det ikke er byggefeil
+   - Sørg for ingen byggefeil
 
 3. **Lenkevalidering**:
    - Test alle markdown-lenker
-   - Verifiser at bildereferanser fungerer
+   - Verifiser bildehenvisninger fungerer
 
 4. **Innholdsrevisjon**:
-   - Korrekturles for stave- og grammatikkfeil
+   - Korrekturles for rettskrivning og grammatikk
    - Sørg for at kodeeksempler er korrekte og pedagogiske
-   - Verifiser at oversettelser opprettholder original mening
+   - Verifiser at oversettelser bevarer original betydning
 
-### Krav til bidrag
+### Bidragskrav
 
 - Godta Microsoft CLA (automatisk sjekk ved første PR)
 - Følg [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
 - Se [CONTRIBUTING.md](./CONTRIBUTING.md) for detaljerte retningslinjer
-- Referer til issuenumre i PR-beskrivelsen hvis aktuelt
+- Referer til issues i PR-beskrivelsen hvis aktuelt
 
 ### Gjennomgangsprosess
 
-- PR-er gjennomgås av vedlikeholdere og fellesskapet
+- PR-er vurderes av vedlikeholdere og fellesskap
 - Pedagogisk klarhet prioriteres
 - Kodeeksempler bør følge gjeldende beste praksis
-- Oversettelser gjennomgås for nøyaktighet og kulturell tilpasning
+- Oversettelser vurderes for nøyaktighet og kulturtilpasning
 
 ## Oversettelsessystem
 
@@ -265,16 +265,16 @@ Før du sender inn en PR:
 - Bruker GitHub Actions med co-op-translator arbeidsflyt
 - Oversetter automatisk til 50+ språk
 - Kildefiler i hovedkataloger
-- Oversatte filer i `translations/{language-code}/`-kataloger
+- Oversatte filer i `translations/{language-code}/` kataloger
 
-### Legge til manuelle forbedringer i oversettelser
+### Legge til manuelle oversettelsesforbedringer
 
-1. Finn filen i `translations/{language-code}/`
-2. Gjør forbedringer mens du opprettholder strukturen
-3. Sørg for at kodeeksempler forblir funksjonelle
-4. Test eventuelt lokaliserte quizinnhold
+1. Finn fil i `translations/{language-code}/`
+2. Gjør forbedringer med strukturintakt
+3. Sørg for at kodeeksempler fortsatt fungerer
+4. Test eventuelt lokalisert quiz-innhold
 
-### Metadata for oversettelser
+### Oversettelsesmetadata
 
 Oversatte filer inkluderer metadata-header:
 ```markdown
@@ -289,87 +289,87 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Feilsøking og problemløsning
+## Feilsøking og problemløsing
 
 ### Vanlige problemer
 
-**Quiz-appen starter ikke**:
-- Sjekk Node.js-versjon (v14+ anbefalt)
+**Quiz app starter ikke**:
+- Sjekk Node.js versjon (v14+ anbefalt)
 - Slett `node_modules` og `package-lock.json`, kjør `npm install` på nytt
-- Sjekk for portkonflikter (standard: Vite bruker port 5173)
+- Sjekk portkonflikter (standard: Vite bruker port 5173)
 
-**API-serveren starter ikke**:
-- Verifiser at Node.js-versjonen oppfyller minimumskravene (node >=10)
-- Sjekk om porten allerede er i bruk
+**API-server starter ikke**:
+- Verifiser Node.js versjon oppfyller minimum (node >=10)
+- Sjekk om port allerede er i bruk
 - Sørg for at alle avhengigheter er installert med `npm install`
 
-**Nettleserutvidelsen laster ikke**:
-- Verifiser at manifest.json er riktig formatert
-- Sjekk nettleserkonsollen for feil
-- Følg nettleserspesifikke instruksjoner for installasjon av utvidelser
+**Nettleserutvidelse lastes ikke**:
+- Sjekk at manifest.json er korrekt formatert
+- Se etter feil i nettleserkonsoll
+- Følg nettleserspesifikke installasjonsinstruksjoner
 
-**Problemer med Python-chatprosjekt**:
-- Sørg for at OpenAI-pakken er installert: `pip install openai`
-- Verifiser at GITHUB_TOKEN miljøvariabelen er satt
-- Sjekk tilgangstillatelser for GitHub Models
+**Python chat-prosjekt problemer**:
+- Kontroller at OpenAI-pakken er installert: `pip install openai`
+- Verifiser at GITHUB_TOKEN miljøvariabel er satt
+- Sjekk GitHub Models tilgangstillatelser
 
 **Docsify serverer ikke dokumentasjon**:
 - Installer docsify-cli globalt: `npm install -g docsify-cli`
-- Kjør fra repositoryets rotkatalog
+- Kjør fra repositories rotkatalog
 - Sjekk at `docs/_sidebar.md` eksisterer
 
 ### Tips for utviklingsmiljø
 
-- Bruk VS Code med Live Server-utvidelsen for HTML-prosjekter
-- Installer ESLint og Prettier-utvidelser for konsistent formatering
-- Bruk nettleserens utviklerverktøy for feilsøking av JavaScript
-- For Vue-prosjekter, installer Vue DevTools nettleserutvidelse
+- Bruk VS Code med Live Server-extension for HTML-prosjekter
+- Installer ESLint og Prettier extensions for jevn formatering
+- Bruk nettleserens utviklerverktøy til å feilsøke JavaScript
+- For Vue prosjekter, installer Vue DevTools nettleserutvidelse
 
-### Ytelseshensyn
+### Ytelsesmessige hensyn
 
-- Et stort antall oversatte filer (50+ språk) betyr at full kloning er stor
-- Bruk grunnleggende kloning hvis du kun jobber med innhold: `git clone --depth 1`
-- Ekskluder oversettelser fra søk når du jobber med engelsk innhold
-- Byggeprosesser kan være trege ved første kjøring (npm install, Vite build)
+- Stort antall oversatte filer (50+ språk) gjør hele kloner store
+- Bruk grunne kloner hvis du kun skal jobbe med innhold: `git clone --depth 1`
+- Ekskluder oversettelser fra søk når du arbeider med engelsk innhold
+- Byggeprosesser kan være trege første gang (npm install, Vite build)
 
 ## Sikkerhetshensyn
 
 ### Miljøvariabler
 
-- API-nøkler skal aldri committes til repositoryet
-- Bruk `.env`-filer (allerede i `.gitignore`)
-- Dokumenter nødvendige miljøvariabler i prosjekt-README-er
+- API-nøkler skal aldri legges i repositoriet
+- Bruk `.env` filer (allereie i `.gitignore`)
+- Dokumenter nødvendige miljøvariabler i prosjektets README-filer
 
 ### Python-prosjekter
 
 - Bruk virtuelle miljøer: `python -m venv venv`
 - Hold avhengigheter oppdatert
-- GitHub-tokens bør ha minimale nødvendige tillatelser
+- GitHub-tokens skal ha minimale nødvendige tillatelser
 
-### Tilgang til GitHub Models
+### GitHub Models tilgang
 
-- Personlige tilgangstokens (PAT) kreves for GitHub Models
-- Tokens bør lagres som miljøvariabler
-- Aldri committ tokens eller legitimasjon
+- Personlige tilgangstokener (PAT) kreves for GitHub Models
+- Tokens skal lagres som miljøvariabler
+- Aldri legg tokens eller legitimasjon inn i repositoriet
 
 ## Tilleggsnotater
 
 ### Målgruppe
 
-- Helt nybegynnere innen webutvikling
-- Studenter og selvstudenter
-- Lærere som bruker pensumet i klasserommet
-- Innholdet er designet for tilgjengelighet og gradvis ferdighetsbygging
+- Fullstendige nybegynnere i webutvikling
+- Studenter og selvlærende
+- Lærere som bruker pensum i klasserommet
+- Innhold designet for tilgjengelighet og gradvis ferdighetsbygging
 
-### Pedagogisk filosofi
+### Utdanningsfilosofi
 
-- Prosjektbasert læringsmetode
+- Prosjektbasert læringstilnærming
 - Hyppige kunnskapssjekker (quizer)
 - Praktiske kodeøvelser
-- Eksempler med reell anvendelse
-- Fokus på grunnleggende før rammeverk
+- Eksempler på virkelige bruksområder
+- Fokuser på grunnleggende før rammeverk
 
-### Vedlikehold av repository
+### Vedlikehold av repositoriet
 
 - Aktivt fellesskap av lærende og bidragsytere
 - Regelmessige oppdateringer av avhengigheter og innhold
@@ -380,27 +380,29 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [Microsoft Learn-moduler](https://docs.microsoft.com/learn/)
 - [Student Hub-ressurser](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) anbefales for lærende
-- Tilleggskurs: Generativ AI, Data Science, ML, IoT-pensum tilgjengelig
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) anbefalt for lærende
+- Tilleggs kurs: Generativ AI, Data Science, ML, IoT pensum tilgjengelig
 
-### Arbeid med spesifikke prosjekter
+### Arbeide med spesifikke prosjekter
 
 For detaljerte instruksjoner om individuelle prosjekter, se README-filene i:
 - `quiz-app/README.md` - Vue 3 quiz-applikasjon
 - `7-bank-project/README.md` - Bankapplikasjon med autentisering
-- `5-browser-extension/README.md` - Utvikling av nettleserutvidelse
+- `5-browser-extension/README.md` - Nettleserutvidelsesutvikling
 - `6-space-game/README.md` - Canvas-basert spillutvikling
-- `9-chat-project/README.md` - AI-chatassistentprosjekt
+- `9-chat-project/README.md` - AI chatteassistent-prosjekt
 
 ### Monorepo-struktur
 
-Selv om det ikke er en tradisjonell monorepo, inneholder dette repositoryet flere uavhengige prosjekter:
+Selv om det ikke er et tradisjonelt monorepo, inneholder dette repositoriet flere uavhengige prosjekter:
 - Hver leksjon er selvstendig
 - Prosjekter deler ikke avhengigheter
 - Arbeid med individuelle prosjekter uten å påvirke andre
-- Klon hele repoet for den fulle pensumopplevelsen
+- Klon hele repo for full pensumopplevelse
 
 ---
 
-**Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfraskrivelse**:
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på originalsproget bør betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi påtar oss ikke ansvar for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
