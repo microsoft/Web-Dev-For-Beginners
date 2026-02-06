@@ -2,36 +2,36 @@
 
 ## Projektoversigt
 
-Dette er et undervisningspensum-arkiv til at undervise nybegyndere i grundlæggende webudvikling. Pensumet er et omfattende 12-ugers kursus udviklet af Microsoft Cloud Advocates, med 24 praktiske lektioner, der dækker JavaScript, CSS og HTML.
+Dette er et uddannelsesmæssigt læseplansdepot til undervisning i webudviklingsgrundlag for begyndere. Læseplanen er et omfattende 12-ugers kursus udviklet af Microsoft Cloud Advocates, med 24 praktiske lektioner, der dækker JavaScript, CSS og HTML.
 
-### Hovedkomponenter
+### Nøglekomponenter
 
-- **Undervisningsindhold**: 24 strukturerede lektioner organiseret i projektbaserede moduler  
-- **Praktiske projekter**: Terrarium, Typing Game, Browser Extension, Space Game, Banking App, Code Editor og AI Chat Assistant  
-- **Interaktive quizzer**: 48 quizzer med 3 spørgsmål hver (før/efter lektion vurderinger)  
-- **Flersproget support**: Automatiske oversættelser til 50+ sprog via GitHub Actions  
-- **Teknologier**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (til AI-projekter)  
+- **Uddannelsesindhold**: 24 strukturerede lektioner organiseret i projektbaserede moduler
+- **Praktiske projekter**: Terrarium, Typing Game, Browser Extension, Space Game, Banking App, Code Editor og AI Chat Assistant
+- **Interaktive quizzer**: 48 quizzer med 3 spørgsmål hver (for/efter lektion evalueringer)
+- **Fler-sprogs støtte**: Automatiske oversættelser til 50+ sprog via GitHub Actions
+- **Teknologier**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (til AI projekter)
 
 ### Arkitektur
 
-- Undervisningsarkiv med lektionbaseret struktur  
-- Hver lektion mappe indeholder README, kodeeksempler og løsninger  
-- Selvstændige projekter i separate mapper (quiz-app, diverse lektionprojekter)  
-- Oversættelsessystem ved hjælp af GitHub Actions (co-op-translator)  
-- Dokumentation serveret via Docsify og tilgængelig som PDF  
+- Uddannelsesrepository med lektion-baseret struktur
+- Hver lektionsmappe indeholder README, kodeeksempler og løsninger
+- Selvstændige projekter i separate mapper (quiz-app, forskellige lektionsprojekter)
+- Oversættelsessystem ved hjælp af GitHub Actions (co-op-translator)
+- Dokumentation serveret via Docsify og tilgængelig som PDF
 
-## Setup-kommandoer
+## Opsætningskommandoer
 
-Dette arkiv er primært til forbrug af undervisningsindhold. For arbejde med specifikke projekter:
+Dette repository er primært til forbrug af uddannelsesindhold. For arbejde med specifikke projekter:
 
-### Hoved Arkiv Setup
+### Hovedrepository opsætning
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
-  
-### Quiz App Setup (Vue 3 + Vite)
+
+### Quiz App Opsætning (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
@@ -40,7 +40,7 @@ npm run dev        # Start udviklingsserver
 npm run build      # Byg til produktion
 npm run lint       # Kør ESLint
 ```
-  
+
 ### Bank Projekt API (Node.js + Express)
 
 ```bash
@@ -50,7 +50,7 @@ npm start          # Start API-server
 npm run lint       # Kør ESLint
 npm run format     # Formater med Prettier
 ```
-  
+
 ### Browser Extension Projekter
 
 ```bash
@@ -58,7 +58,7 @@ cd 5-browser-extension/solution
 npm install
 # Følg browser-specifikke instruktioner til indlæsning af udvidelser
 ```
-  
+
 ### Space Game Projekter
 
 ```bash
@@ -66,7 +66,7 @@ cd 6-space-game/solution
 npm install
 # Åbn index.html i browser eller brug Live Server
 ```
-  
+
 ### Chat Projekt (Python Backend)
 
 ```bash
@@ -75,34 +75,34 @@ pip install openai
 # Indstil miljøvariablen GITHUB_TOKEN
 python api.py
 ```
-  
+
 ## Udviklingsworkflow
 
-### For Indholdsbidragydere
+### For indholds-bidragydere
 
-1. **Fork arkivet** til din GitHub-konto  
-2. **Klon din fork** lokalt  
-3. **Opret en ny gren** til dine ændringer  
-4. Lav ændringer i lektionens indhold eller kodeeksempler  
-5. Test eventuelle kodeændringer i relevante projektmapper  
-6. Indsend pull requests i henhold til bidragsretningslinjer  
+1. **Fork repositoryet** til din GitHub-konto
+2. **Klon din fork** lokalt
+3. **Opret en ny gren** til dine ændringer
+4. Foretag ændringer i lektionsindhold eller kodeeksempler
+5. Test eventuelle kodeændringer i relevante projektmapper
+6. Indsend pull requests efter bidragsretningslinjerne
 
-### For Lærende
+### For elever
 
-1. Fork eller klon arkivet  
-2. Naviger gennem lektionmapper sekventielt  
-3. Læs README-filer for hver lektion  
-4. Gennemfør før-lektions quizzer på https://ff-quizzes.netlify.app/web/  
-5. Arbejd igennem kodeeksempler i lektionsmapper  
-6. Fuldfør opgaver og udfordringer  
-7. Tag efter-lektions quizzer  
+1. Fork eller klon repositoryet
+2. Naviger til lektionsmapper i rækkefølge
+3. Læs README-filer for hver lektion
+4. Gennemfør for-lesson quizzer på https://ff-quizzes.netlify.app/web/
+5. Arbejd med kodeeksempler i lektionsmapper
+6. Fuldfør opgaver og udfordringer
+7. Tag efter-lesson quizzer
 
-### Live Udvikling
+### Live udvikling
 
-- **Dokumentation**: Kør `docsify serve` i roden (port 3000)  
-- **Quiz App**: Kør `npm run dev` i quiz-app mappen  
-- **Projekter**: Brug VS Code Live Server extension til HTML projekter  
-- **API Projekter**: Kør `npm start` i respektive API mapper  
+- **Dokumentation**: Kør `docsify serve` i roden (port 3000)
+- **Quiz App**: Kør `npm run dev` i quiz-app mappen
+- **Projekter**: Brug VS Code Live Server extension til HTML projekter
+- **API Projekter**: Kør `npm start` i respektive API mapper
 
 ## Testinstruktioner
 
@@ -110,173 +110,173 @@ python api.py
 
 ```bash
 cd quiz-app
-npm run lint       # Tjek for kode stil problemer
-npm run build      # Bekræft at bygningen lykkes
+npm run lint       # Tjek for problemer med kodestil
+npm run build      # Bekræft at build lykkes
 ```
-  
+
 ### Bank API Test
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Tjek for kode stil problemer
+npm run lint       # Tjek for problemer med kodestil
 node server.js     # Bekræft at serveren starter uden fejl
 ```
-  
-### Generel Test Tilgang
 
-- Dette er et undervisningsarkiv uden omfattende automatiserede tests  
-- Manuel test fokuserer på:  
-  - Kodeeksempler kører uden fejl  
-  - Links i dokumentationen virker korrekt  
-  - Projekt builds gennemføres succesfuldt  
-  - Eksempler følger bedste praksis  
+### Generel test tilgang
 
-### Før-indsendelses Kontroller
+- Dette er et uddannelsesrepository uden omfattende automatiserede tests
+- Manuel test fokuserer på:
+  - Kodeeksempler kører uden fejl
+  - Links i dokumentationen fungerer korrekt
+  - Projekt builds gennemføres succesfuldt
+  - Eksempler følger bedste praksis
 
-- Kør `npm run lint` i mapper med package.json  
-- Bekræft at markdown-links er valide  
-- Test kodeeksempler i browser eller Node.js  
-- Tjek at oversættelser bevarer korrekt struktur  
+### Forhåndskontrol før indsendelse
 
-## Kode Stil Retningslinjer
+- Kør `npm run lint` i mapper med package.json
+- Verificer at markdown-links er gyldige
+- Test kodeeksempler i browser eller Node.js
+- Kontroller at oversættelser bevarer korrekt struktur
+
+## Kodekonventioner
 
 ### JavaScript
 
-- Brug moderne ES6+ syntaks  
-- Følg standard ESLint konfigurationer leveret i projekterne  
-- Brug meningsfulde variabel- og funktionsnavne for undervisningsklarhed  
-- Tilføj kommentarer der forklarer koncepter for de lærende  
-- Formater med Prettier hvor konfigureret  
+- Brug moderne ES6+ syntaks
+- Følg standard ESLint konfigurationer i projekterne
+- Brug meningsfulde variabel- og funktionsnavne for pædagogisk klarhed
+- Tilføj kommentarer der forklarer koncepter for elever
+- Formater med Prettier hvor konfigureret
 
 ### HTML/CSS
 
-- Semantiske HTML5 elementer  
-- Responsivt design principper  
-- Klare klassifikationsnavne  
-- Kommentarer der forklarer CSS teknikker for de lærende  
+- Semantiske HTML5-elementer
+- Responsive designprincipper
+- Klare class-navngivningskonventioner
+- Kommentarer der forklarer CSS-teknikker for elever
 
 ### Python
 
-- PEP 8 stil retningslinjer  
-- Klare, undervisningsvenlige kodeeksempler  
-- Type hints hvor hjælpsomt for læring  
+- PEP 8 stilretningslinjer
+- Klare, uddannelsesmæssige kodeeksempler
+- Type hints hvor hjælpsomt for læring
 
 ### Markdown Dokumentation
 
-- Klar overskriftshierarki  
-- Kodeblokke med sprog angivelse  
-- Links til yderligere ressourcer  
-- Skærmbilleder og billeder i `images/` mapper  
-- Alternativ tekst til billeder for tilgængelighed  
+- Klar overskriftsstruktur
+- Kodeblokke med sprogspecifikation
+- Links til yderligere ressourcer
+- Screenshots og billeder i `images/` mapper
+- Alt-tekst på billeder til tilgængelighed
 
-### Filorganisation
+### Filerorganisering
 
-- Lektioner nummereret sekventielt (1-getting-started-lessons, 2-js-basics, osv.)  
-- Hvert projekt har `solution/` og ofte `start/` eller `your-work/` mapper  
-- Billeder opbevaret i lektion-specifikke `images/` mapper  
-- Oversættelser i `translations/{language-code}/` struktur  
+- Lektioner nummereret sekventielt (1-getting-started-lessons, 2-js-basics osv.)
+- Hvert projekt har `solution/` og ofte `start/` eller `your-work/` mapper
+- Billeder gemt i lektionsspecifikke `images/` mapper
+- Oversættelser i `translations/{language-code}/` struktur
 
-## Build og Udrulning
+## Build og Deployment
 
-### Quiz App Udrulning (Azure Static Web Apps)
+### Quiz App Deployment (Azure Static Web Apps)
 
-quiz-app er konfigureret til Azure Static Web Apps udrulning:
+quiz-app er konfigureret til Azure Static Web Apps deployment:
 
 ```bash
 cd quiz-app
 npm run build      # Opretter dist/ mappe
 # Udruller via GitHub Actions workflow ved push til main
 ```
-  
-Azure Static Web Apps konfiguration:  
-- **App placering**: `/quiz-app`  
-- **Output placering**: `dist`  
-- **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`  
 
-### Dokumentation PDF Generering
+Azure Static Web Apps konfiguration:
+- **App-placering**: `/quiz-app`
+- **Output placering**: `dist`
+- **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
+
+### Dokumentations PDF Generering
 
 ```bash
 npm install                    # Installer docsify-to-pdf
 npm run convert               # Generer PDF fra docs
 ```
-  
+
 ### Docsify Dokumentation
 
 ```bash
 npm install -g docsify-cli    # Installer Docsify globalt
 docsify serve                 # Server på localhost:3000
 ```
-  
+
 ### Projektspecifikke Builds
 
-Hver projektmappe kan have sin egen buildproces:  
-- Vue projekter: `npm run build` skaber produktionsbundles  
-- Statiske projekter: Intet build trin, servér filer direkte  
+Hver projektmappe kan have sin egen build-proces:
+- Vue projekter: `npm run build` skaber produktionsbundles
+- Statisk projekter: Ingen build-step, filer serveres direkte
 
 ## Pull Request Retningslinjer
 
 ### Titel Format
 
-Brug klare, beskrivende titler, der angiver ændringsområdet:  
-- `[Quiz-app] Tilføj ny quiz til lektion X`  
-- `[Lesson-3] Ret stavefejl i terrarium projekt`  
-- `[Translation] Tilføj spansk oversættelse for lektion 5`  
-- `[Docs] Opdater installationsinstruktioner`  
+Brug klare, beskrivende titler, der angiver ændringsområde:
+- `[Quiz-app] Tilføj ny quiz til lektion X`
+- `[Lesson-3] Ret stavefejl i terrarium projektet`
+- `[Translation] Tilføj spansk oversættelse til lektion 5`
+- `[Docs] Opdater opsætningsinstruktioner`
 
-### Krævede Kontroller
+### Krævede kontroller
 
-Før indsendelse af en PR:
+Før indsendelse af PR:
 
-1. **Kodekvalitet**:  
-   - Kør `npm run lint` i berørte projektmapper  
-   - Ret alle linting-fejl og advarsler  
+1. **Kodekvalitet**:
+   - Kør `npm run lint` i berørte projektmapper
+   - Ret alle lint fejl og advarsler
 
-2. **Build Verifikation**:  
-   - Kør `npm run build` hvis relevant  
-   - Sikr ingen build-fejl  
+2. **Build verifikation**:
+   - Kør `npm run build` hvis relevant
+   - Sørg for ingen build fejl
 
-3. **Linkvalidering**:  
-   - Test alle markdown links  
-   - Bekræft at billedreferencer virker  
+3. **Link validering**:
+   - Test alle markdown links
+   - Verificer billedreferencer fungerer
 
-4. **Indholds Gennemgang**:  
-   - Korrekturlæs for stave- og grammatikefejl  
-   - Sikr at kodeeksempler er korrekte og undervisende  
-   - Bekræft at oversættelser bevarer original mening  
+4. **Indholds gennemgang**:
+   - Korrekturlæs for stavning og grammatik
+   - Sørg for kodeeksempler er korrekte og pædagogiske
+   - Bekræft at oversættelser bevarer oprindelig mening
 
 ### Bidragskrav
 
-- Accepter Microsoft CLA (automatisk kontrol ved første PR)  
-- Følg [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)  
-- Se [CONTRIBUTING.md](./CONTRIBUTING.md) for detaljerede retningslinjer  
-- Henvis til issues i PR-beskrivelse hvor relevant  
+- Accepter Microsoft CLA (automatisk kontrol ved første PR)
+- Følg [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- Se [CONTRIBUTING.md](./CONTRIBUTING.md) for detaljerede retningslinjer
+- Referér issue-numre i PR beskrivelsen hvis relevant
 
-### Review Proces
+### Review proces
 
-- PR'er gennemgås af vedligeholdere og community  
-- Undervisningsklarhed prioriteres  
-- Kodeeksempler skal følge bedste praksis  
-- Oversættelser gennemgås for nøjagtighed og kulturel hensigtsmæssighed  
+- PR’er gennemgås af vedligeholdere og community
+- Pædagogisk klarhed prioriteres
+- Kodeeksempler skal følge gældende bedste praksis
+- Oversættelser gennemgås for nøjagtighed og kulturel korrekthed
 
 ## Oversættelsessystem
 
 ### Automatisk Oversættelse
 
-- Bruger GitHub Actions med co-op-translator workflow  
-- Oversætter til 50+ sprog automatisk  
-- Kildefiler i hovedmapper  
-- Oversatte filer i `translations/{language-code}/` mapper  
+- Bruger GitHub Actions med co-op-translator workflow
+- Oversætter til 50+ sprog automatisk
+- Kilde filer i hovedmapper
+- Oversatte filer i `translations/{language-code}/` mapper
 
-### Tilføjelse af Manuel Oversættelsesforbedring
+### Tilføjelse af manuelle oversættelsesforbedringer
 
-1. Find fil i `translations/{language-code}/`  
-2. Foretag forbedringer mens struktur bevares  
-3. Sikr at kodeeksempler forbliver funktionelle  
-4. Test eventuelt lokaliseret quiz indhold  
+1. Find fil i `translations/{language-code}/`
+2. Foretag forbedringer under bevarelse af struktur
+3. Sørg for kodeeksempler forbliver funktionelle
+4. Test eventuelt lokaliseret quizindhold
 
 ### Oversættelsesmetadata
 
-Oversatte filer indeholder metadata header:  
+Oversatte filer indeholder metadataheader:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -288,121 +288,121 @@ CO_OP_TRANSLATOR_METADATA:
 }
 -->
 ```
-  
-## Fejlfinding og Problemløsning
 
-### Almindelige Problemer
+## Debugging og Fejlfinding
 
-**Quiz app starter ikke**:  
-- Tjek Node.js version (v14+ anbefalet)  
-- Slet `node_modules` og `package-lock.json`, kør `npm install` igen  
-- Tjek for portkonflikter (standard: Vite bruger port 5173)  
+### Almindelige problemer
 
-**API server starter ikke**:  
-- Bekræft Node.js version er minimum (node >=10)  
-- Tjek om port allerede er i brug  
-- Sørg for alle dependencies er installeret med `npm install`  
+**Quiz app starter ikke**:
+- Tjek Node.js version (v14+ anbefales)
+- Slet `node_modules` og `package-lock.json`, kør `npm install` igen
+- Tjek for port konflikter (standard: Vite bruger port 5173)
 
-**Browser extension loader ikke**:  
-- Bekræft manifest.json er korrekt formateret  
-- Tjek browserkonsol for fejl  
-- Følg browser-specifikke installationsinstruktioner for extensions  
+**API server starter ikke**:
+- Bekræft Node.js version minimum (node >=10)
+- Tjek om port allerede er i brug
+- Sørg for alle afhængigheder er installeret med `npm install`
 
-**Python chat projekt problemer**:  
-- Sørg for OpenAI pakken er installeret: `pip install openai`  
-- Bekræft miljøvariablen GITHUB_TOKEN er sat  
-- Tjek GitHub Models adgangstilladelser  
+**Browser extension loader ikke**:
+- Bekræft at manifest.json er korrekt formatteret
+- Tjek browserens konsol for fejl
+- Følg browserspecifikke installationsinstruktioner for extension
 
-**Docsify serverer ikke docs**:  
-- Installer docsify-cli globalt: `npm install -g docsify-cli`  
-- Kør fra arkivets rodmappe  
-- Tjek at `docs/_sidebar.md` findes  
+**Python chat projekt problemer**:
+- Sørg for OpenAI-pakken er installeret: `pip install openai`
+- Bekræft at GITHUB_TOKEN miljøvariablen er sat
+- Tjek adgangstilladelser til GitHub Models
 
-### Udviklingsmiljø Tips
+**Docsify serverer ikke dokumentationen**:
+- Installer docsify-cli globalt: `npm install -g docsify-cli`
+- Kør fra repositorys rodmappe
+- Bekræft at `docs/_sidebar.md` findes
 
-- Brug VS Code med Live Server extension til HTML projekter  
-- Installer ESLint og Prettier extensions for konsistent formatering  
-- Brug browser DevTools til JavaScript debugging  
-- For Vue projekter, installer Vue DevTools browser extension  
+### Udviklingsmiljø tips
 
-### Ydelsesmæssige Overvejelser
+- Brug VS Code med Live Server extension til HTML projekter
+- Installer ESLint og Prettier extensions til konsistent formatering
+- Brug browser DevTools til JavaScript debugging
+- Til Vue projekter, installer Vue DevTools browser extension
 
-- Stort antal oversatte filer (50+ sprog) betyder store fulde kloner  
-- Brug shallow clone hvis du kun arbejder med indhold: `git clone --depth 1`  
-- Ekskluder oversættelser fra søgninger ved arbejde på engelsk indhold  
-- Build processer kan være langsomme ved første kørsel (npm install, Vite build)  
+### Ydelsesovervejelser
+
+- Stort antal oversatte filer (50+ sprog) betyder store fulde kloner
+- Brug shallow clone hvis du kun arbejder med indhold: `git clone --depth 1`
+- Ekskluder oversættelser fra søgninger når du arbejder med engelsk indhold
+- Build-processer kan være langsomme første gang (npm install, Vite build)
 
 ## Sikkerhedsovervejelser
 
 ### Miljøvariabler
 
-- API nøgler må aldrig committes til arkivet  
-- Brug `.env` filer (allerede i `.gitignore`)  
-- Dokumenter nødvendige miljøvariabler i projekt READMEs  
+- API-nøgler må aldrig committes til repository
+- Brug `.env` filer (allerede i `.gitignore`)
+- Dokumenter nødvendige miljøvariabler i projekternes READMEs
 
 ### Python Projekter
 
-- Brug virtuelle miljøer: `python -m venv venv`  
-- Hold dependencies opdaterede  
-- GitHub tokens bør have minimale nødvendige tilladelser  
+- Brug virtuelle miljøer: `python -m venv venv`
+- Hold afhængigheder opdaterede
+- GitHub tokens skal have minimale nødvendige tilladelser
 
 ### GitHub Models Adgang
 
-- Personal Access Tokens (PAT) kræves for GitHub Models  
-- Tokens bør gemmes som miljøvariabler  
-- Committ aldrig tokens eller credentials  
+- Personlige Access Tokens (PAT) kræves til GitHub Models
+- Tokens skal gemmes som miljøvariabler
+- Committ aldrig tokens eller adgangsoplysninger
 
-## Yderligere Noter
+## Yderligere noter
 
 ### Målgruppe
 
-- Absolutte begyndere til webudvikling  
-- Studerende og selvstuderende  
-- Lærere der bruger pensum i klasseværelser  
-- Indhold er designet til tilgængelighed og gradvis færdighedsopbygning  
+- Fuldstændige begyndere til webudvikling
+- Studerende og selvstuderende
+- Lærere, der bruger læseplanen i klasselokaler
+- Indholdet er designet til tilgængelighed og gradvis færdighedsopbygning
 
-### Undervisningsfilosofi
+### Uddannelsesfilosofi
 
-- Projektbaseret læringstilgang  
-- Hyppige videnschecks (quizzer)  
-- Praktiske kodningsøvelser  
-- Virkelige applikationseksempler  
-- Fokus på grundlæggende før frameworks  
+- Projektbaseret læringstilgang
+- Hyppige videnskontrol (quizzer)
+- Praktiske kodningsøvelser
+- Eksempler med virkelige anvendelser
+- Fokus på grundlæggende koncepter før frameworks
 
-### Arkiv Vedligeholdelse
+### Repository vedligeholdelse
 
-- Aktiv community af lærende og bidragydere  
-- Regelmæssige opdateringer af dependencies og indhold  
-- Issues og diskussioner overvåges af vedligeholdere  
-- Oversættelsesopdateringer automatiseres via GitHub Actions  
+- Aktivt community af elever og bidragydere
+- Regelmæssige opdateringer af afhængigheder og indhold
+- Issues og diskussioner overvåges af vedligeholdere
+- Oversættelsesopdateringer automatiseret via GitHub Actions
 
-### Relaterede Ressourcer
+### Relaterede ressourcer
 
-- [Microsoft Learn modules](https://docs.microsoft.com/learn/)  
-- [Student Hub resources](https://docs.microsoft.com/learn/student-hub/)  
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) anbefalet for lærende  
-- Yderligere kurser: Generativ AI, Data Science, ML, IoT pensum tilgængelig  
+- [Microsoft Learn moduler](https://docs.microsoft.com/learn/)
+- [Student Hub ressourcer](https://docs.microsoft.com/learn/student-hub/)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) anbefales til elever
+- Yderligere kurser: Generativ AI, Data Science, ML, IoT læseplaner tilgængelige
 
-### Arbejde med Specifikke Projekter
+### Arbejde med specifikke projekter
 
-For detaljerede instruktioner om individuelle projekter, se README-filer i:  
-- `quiz-app/README.md` - Vue 3 quiz applikation  
-- `7-bank-project/README.md` - Bankapplikation med autentificering  
-- `5-browser-extension/README.md` - Browser extension udvikling  
-- `6-space-game/README.md` - Canvas-baseret spiludvikling  
-- `9-chat-project/README.md` - AI chat assistant projekt  
+For detaljerede instruktioner om individuelle projekter, se README-filer i:
+- `quiz-app/README.md` - Vue 3 quiz applikation
+- `7-bank-project/README.md` - Banking applikation med autentifikation
+- `5-browser-extension/README.md` - Udvikling af browser extension
+- `6-space-game/README.md` - Canvas-baseret spiludvikling
+- `9-chat-project/README.md` - AI chat assistent projekt
 
-### Monorepo Struktur
+### Monorepo struktur
 
-Selvom det ikke er et traditionelt monorepo, indeholder dette arkiv flere uafhængige projekter:  
-- Hver lektion er selvstændig  
-- Projekterne deler ikke dependencies  
-- Arbejd på individuelle projekter uden at påvirke andre  
-- Klon hele repo for fuld pensumerfaring  
+Selvom det ikke er et traditionelt monorepo, indeholder dette repository flere uafhængige projekter:
+- Hver lektion er selvstændig
+- Projekter deler ikke afhængigheder
+- Arbejd på individuelle projekter uden at påvirke andre
+- Klon hele repoet for den fulde læseplansoplevelse
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfraskrivelse**:
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiske oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets modersmål bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, som opstår som følge af brugen af denne oversættelse.
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets oprindelige sprog skal betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os ikke ansvar for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
