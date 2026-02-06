@@ -1,65 +1,65 @@
 # AGENTS.md
 
-## Tổng Quan Dự Án
+## Tổng quan dự án
 
-Đây là khoá học giáo dục dành cho việc dạy các kiến thức cơ bản về phát triển web cho người mới bắt đầu. Chương trình học là một khóa học toàn diện kéo dài 12 tuần được phát triển bởi Microsoft Cloud Advocates, gồm 24 bài học thực hành về JavaScript, CSS và HTML.
+Đây là khoá học giáo dục dùng để dạy các kiến thức cơ bản về phát triển web cho người mới bắt đầu. Chương trình học là một khoá học toàn diện kéo dài 12 tuần do Microsoft Cloud Advocates phát triển, gồm 24 bài học thực hành về JavaScript, CSS và HTML.
 
-### Các Thành Phần Chính
+### Thành phần chính
 
-- **Nội dung giáo dục**: 24 bài học có cấu trúc, tổ chức theo các module dự án
-- **Dự án thực tế**: Terrarium, Trò chơi gõ chữ, Tiện ích mở rộng trình duyệt, Trò chơi không gian, Ứng dụng ngân hàng, Trình soạn thảo mã, và Trợ lý trò chuyện AI
-- **Bài kiểm tra tương tác**: 48 bài kiểm tra với 3 câu hỏi mỗi bài (đánh giá trước và sau bài học)
-- **Hỗ trợ đa ngôn ngữ**: Dịch tự động sang hơn 50 ngôn ngữ qua GitHub Actions
-- **Công nghệ**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (cho các dự án AI)
+- **Nội dung giáo dục**: 24 bài học có cấu trúc được tổ chức thành các mô-đun dựa trên dự án
+- **Dự án thực hành**: Terrarium, Trò chơi gõ phím, Tiện ích trình duyệt, Trò chơi vũ trụ, Ứng dụng ngân hàng, Trình soạn thảo mã, và Trợ lý Chat AI
+- **Bài kiểm tra tương tác**: 48 bài kiểm tra với mỗi bài có 3 câu hỏi (đánh giá trước/sau bài học)
+- **Hỗ trợ đa ngôn ngữ**: Dịch tự động cho hơn 50 ngôn ngữ qua GitHub Actions
+- **Công nghệ**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (cho dự án AI)
 
-### Kiến Trúc
+### Kiến trúc
 
-- Khoá học giáo dục với cấu trúc theo từng bài học
-- Mỗi thư mục bài học chứa tệp README, ví dụ mã và giải pháp
-- Các dự án độc lập trong các thư mục riêng biệt (quiz-app, các dự án bài học khác nhau)
-- Hệ thống dịch sử dụng GitHub Actions (co-op-translator)
-- Tài liệu được phục vụ qua Docsify và có định dạng PDF
+- Khoá học có cấu trúc dựa trên các bài học
+- Mỗi thư mục bài học chứa README, ví dụ mã và giải pháp
+- Các dự án độc lập được đặt trong các thư mục riêng (quiz-app, các dự án bài học khác nhau)
+- Hệ thống dịch thuật dùng GitHub Actions (co-op-translator)
+- Tài liệu được phục vụ qua Docsify và có sẵn dưới dạng PDF
 
-## Lệnh Cài Đặt
+## Lệnh thiết lập
 
-Kho lưu trữ này chủ yếu dùng để học tập nội dung. Để làm việc với các dự án cụ thể:
+Kho chứa này chủ yếu để tiêu thụ nội dung giáo dục. Để làm việc với các dự án cụ thể:
 
-### Cài Đặt Kho Chính
+### Thiết lập kho chính
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Cài Đặt Ứng Dụng Quiz (Vue 3 + Vite)
+### Thiết lập ứng dụng Quiz (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Khởi động máy chủ phát triển
+npm run dev        # Bắt đầu máy chủ phát triển
 npm run build      # Xây dựng cho sản xuất
 npm run lint       # Chạy ESLint
 ```
 
-### API Dự Án Ngân Hàng (Node.js + Express)
+### API dự án Ngân hàng (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
 npm install
 npm start          # Khởi động máy chủ API
 npm run lint       # Chạy ESLint
-npm run format     # Định dạng với Prettier
+npm run format     # Định dạng bằng Prettier
 ```
 
-### Dự Án Tiện Ích Mở Rộng Trình Duyệt
+### Dự án tiện ích trình duyệt
 
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Làm theo hướng dẫn nạp tiện ích mở rộng dành cho trình duyệt cụ thể
+# Làm theo hướng dẫn tải tiện ích mở rộng cụ thể cho trình duyệt
 ```
 
-### Dự Án Trò Chơi Không Gian
+### Dự án trò chơi vũ trụ
 
 ```bash
 cd 6-space-game/solution
@@ -67,7 +67,7 @@ npm install
 # Mở index.html trong trình duyệt hoặc sử dụng Live Server
 ```
 
-### Dự Án Trò Chuyện (Backend Python)
+### Dự án Chat (Backend Python)
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -76,207 +76,207 @@ pip install openai
 python api.py
 ```
 
-## Quy Trình Phát Triển
+## Quy trình phát triển
 
-### Dành Cho Người Đóng Góp Nội Dung
+### Dành cho người đóng góp nội dung
 
 1. **Fork kho lưu trữ** vào tài khoản GitHub của bạn
-2. **Clone fork của bạn** về máy tính
-3. **Tạo nhánh mới** cho các thay đổi của bạn
+2. **Clone kho fork** về máy cục bộ của bạn
+3. **Tạo nhánh mới** để thực hiện thay đổi
 4. Thay đổi nội dung bài học hoặc ví dụ mã
-5. Kiểm tra các thay đổi mã trong các thư mục dự án liên quan
+5. Kiểm tra thay đổi mã trong các thư mục dự án tương ứng
 6. Gửi pull request theo hướng dẫn đóng góp
 
-### Dành Cho Người Học
+### Dành cho người học
 
 1. Fork hoặc clone kho lưu trữ
-2. Truy cập tuần tự vào các thư mục bài học
-3. Đọc tệp README cho từng bài học
+2. Điều hướng tuần tự vào các thư mục bài học
+3. Đọc các file README cho mỗi bài học
 4. Hoàn thành các bài kiểm tra trước bài học tại https://ff-quizzes.netlify.app/web/
-5. Làm theo các ví dụ mã trong các thư mục bài học
-6. Hoàn thành các bài tập và thử thách
+5. Thực hành các ví dụ mã trong thư mục bài học
+6. Hoàn thành bài tập và thách thức
 7. Tham gia các bài kiểm tra sau bài học
 
-### Phát Triển Trực Tiếp
+### Phát triển trực tiếp
 
-- **Tài liệu**: Chạy `docsify serve` tại thư mục gốc (cổng 3000)
+- **Tài liệu**: Chạy `docsify serve` ở thư mục gốc (cổng 3000)
 - **Ứng dụng Quiz**: Chạy `npm run dev` trong thư mục quiz-app
-- **Dự án**: Sử dụng tiện ích mở rộng Live Server của VS Code cho các dự án HTML
+- **Dự án**: Dùng tiện ích mở rộng Live Server của VS Code cho các dự án HTML
 - **Dự án API**: Chạy `npm start` trong các thư mục API tương ứng
 
-## Hướng Dẫn Kiểm Tra
+## Hướng dẫn kiểm thử
 
-### Kiểm Tra Ứng Dụng Quiz
+### Kiểm thử ứng dụng Quiz
 
 ```bash
 cd quiz-app
 npm run lint       # Kiểm tra các vấn đề về phong cách mã
-npm run build      # Xác minh việc xây dựng thành công
+npm run build      # Xác minh xây dựng thành công
 ```
 
-### Kiểm Tra API Ngân Hàng
+### Kiểm thử API Ngân hàng
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Kiểm tra các vấn đề về phong cách mã
-node server.js     # Xác minh máy chủ khởi động không có lỗi
+npm run lint       # Kiểm tra các vấn đề về kiểu mã
+node server.js     # Xác minh máy chủ khởi động mà không có lỗi
 ```
 
-### Cách Thức Kiểm Tra Chung
+### Phương pháp kiểm thử chung
 
-- Đây là khoá học không có các bài kiểm tra tự động toàn diện
-- Kiểm tra thủ công tập trung vào:
+- Đây là kho giáo dục không có bài kiểm thử tự động đầy đủ
+- Kiểm thử thủ công tập trung vào:
   - Ví dụ mã chạy không lỗi
-  - Các liên kết trong tài liệu hoạt động đúng
-  - Dự án được build thành công
-  - Ví dụ tuân theo các thực hành tốt nhất
+  - Các liên kết trong tài liệu hoạt động chính xác
+  - Xây dựng dự án hoàn thành thành công
+  - Ví dụ phù hợp với các thực hành tốt nhất
 
-### Kiểm Tra Trước Khi Gửi
+### Kiểm tra trước khi gửi
 
-- Chạy `npm run lint` trong các thư mục có file package.json
-- Kiểm tra các liên kết markdown hợp lệ
-- Kiểm tra các ví dụ mã trên trình duyệt hoặc Node.js
-- Kiểm tra bảo toàn cấu trúc khi dịch thuật
+- Chạy `npm run lint` trong các thư mục có package.json
+- Xác minh các liên kết markdown hợp lệ
+- Kiểm thử các ví dụ mã trong trình duyệt hoặc Node.js
+- Kiểm tra rằng bản dịch giữ đúng cấu trúc
 
-## Hướng Dẫn Phong Cách Mã
+## Hướng dẫn phong cách mã
 
 ### JavaScript
 
-- Sử dụng cú pháp ES6+ hiện đại
-- Tuân theo cấu hình ESLint tiêu chuẩn có trong dự án
-- Đặt tên biến và hàm có ý nghĩa rõ ràng để dễ hiểu cho người học
-- Thêm chú thích giải thích khái niệm cho học viên
+- Sử dụng cú pháp hiện đại ES6+
+- Tuân theo cấu hình ESLint chuẩn trong các dự án
+- Sử dụng tên biến, hàm rõ ràng, dễ hiểu cho mục đích giáo dục
+- Thêm chú thích giải thích khái niệm cho người học
 - Định dạng bằng Prettier nếu được cấu hình
 
 ### HTML/CSS
 
-- Các phần tử HTML5 ngữ nghĩa
+- Các phần tử HTML5 có ngữ nghĩa
 - Nguyên tắc thiết kế đáp ứng
-- Quy tắc đặt tên class rõ ràng
+- Quy ước đặt tên lớp rõ ràng
 - Chú thích giải thích kỹ thuật CSS cho người học
 
 ### Python
 
-- Tuân thủ hướng dẫn PEP 8
+- Tuân thủ quy chuẩn style PEP 8
 - Ví dụ mã rõ ràng, mang tính giáo dục
-- Gợi ý kiểu dữ liệu nếu có lợi cho việc học
+- Gợi ý type annotation khi hữu ích cho học tập
 
-### Tài Liệu Markdown
+### Tài liệu Markdown
 
 - Cấu trúc tiêu đề rõ ràng
-- Các khối mã kèm định dạng ngôn ngữ
-- Liên kết tới tài nguyên bổ sung
+- Khối mã có chỉ định ngôn ngữ
+- Liên kết đến tài nguyên bổ sung
 - Ảnh chụp màn hình và hình ảnh trong thư mục `images/`
-- Văn bản thay thế cho hình ảnh nhằm hỗ trợ truy cập
+- Văn bản alt cho hình ảnh để hỗ trợ truy cập
 
-### Tổ Chức Tệp Tin
+### Tổ chức file
 
-- Các bài học đánh số theo thứ tự (1-getting-started-lessons, 2-js-basics, v.v.)
+- Bài học đánh số tuần tự (1-getting-started-lessons, 2-js-basics, v.v.)
 - Mỗi dự án có thư mục `solution/` và thường có `start/` hoặc `your-work/`
-- Ảnh được lưu trong các thư mục `images/` riêng cho từng bài học
-- Dịch thuật nằm trong cấu trúc `translations/{language-code}/`
+- Hình ảnh nằm trong thư mục `images/` theo bài học
+- Bản dịch trong cấu trúc `translations/{language-code}/`
 
-## Xây Dựng và Triển Khai
+## Xây dựng và Triển khai
 
-### Triển Khai Ứng Dụng Quiz (Azure Static Web Apps)
+### Triển khai ứng dụng Quiz (Azure Static Web Apps)
 
-Ứng dụng quiz được cấu hình để triển khai trên Azure Static Web Apps:
+Ứng dụng quiz-app được cấu hình cho triển khai Azure Static Web Apps:
 
 ```bash
 cd quiz-app
 npm run build      # Tạo thư mục dist/
-# Triển khai qua quy trình làm việc GitHub Actions khi đẩy lên nhánh chính
+# Triển khai qua workflow GitHub Actions khi đẩy lên nhánh main
 ```
 
 Cấu hình Azure Static Web Apps:
 - **Vị trí ứng dụng**: `/quiz-app`
 - **Vị trí đầu ra**: `dist`
-- **Quy trình làm việc**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
+- **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Tạo Tài Liệu PDF
+### Tạo PDF tài liệu
 
 ```bash
 npm install                    # Cài đặt docsify-to-pdf
-npm run convert               # Tạo file PDF từ docs
+npm run convert               # Tạo PDF từ docs
 ```
 
-### Tài Liệu Docsify
+### Tài liệu Docsify
 
 ```bash
 npm install -g docsify-cli    # Cài đặt Docsify toàn cục
 docsify serve                 # Phục vụ trên localhost:3000
 ```
 
-### Xây Dựng Dự Án Riêng Lẻ
+### Xây dựng dự án riêng
 
 Mỗi thư mục dự án có thể có quy trình xây dựng riêng:
-- Dự án Vue: `npm run build` tạo các gói sản xuất
-- Dự án tĩnh: không có bước xây dựng, phục vụ tệp trực tiếp
+- Dự án Vue: `npm run build` tạo gói sản xuất
+- Dự án tĩnh: không cần bước xây dựng, phục vụ tệp trực tiếp
 
-## Hướng Dẫn Pull Request
+## Hướng dẫn Pull Request
 
-### Định Dạng Tiêu Đề
+### Định dạng tiêu đề
 
-Sử dụng tiêu đề rõ ràng, mô tả vùng thay đổi:
-- `[Quiz-app] Thêm bài quiz mới cho bài học X`
+Sử dụng tiêu đề rõ ràng, mô tả khu vực thay đổi:
+- `[Quiz-app] Thêm bài trắc nghiệm mới cho bài học X`
 - `[Lesson-3] Sửa lỗi chính tả trong dự án terrarium`
 - `[Translation] Thêm bản dịch tiếng Tây Ban Nha cho bài học 5`
-- `[Docs] Cập nhật hướng dẫn cài đặt`
+- `[Docs] Cập nhật hướng dẫn thiết lập`
 
-### Kiểm Tra Bắt Buộc
+### Các kiểm tra bắt buộc
 
 Trước khi gửi PR:
 
-1. **Chất Lượng Mã**:
-   - Chạy `npm run lint` trong các thư mục dự án liên quan
-   - Sửa mọi lỗi và cảnh báo lint
+1. **Chất lượng mã**:
+   - Chạy `npm run lint` trong các thư mục dự án bị ảnh hưởng
+   - Sửa tất cả lỗi và cảnh báo lint
 
-2. **Xác Minh Build**:
-   - Chạy `npm run build` nếu có thể
-   - Đảm bảo không có lỗi build
+2. **Xác minh xây dựng**:
+   - Chạy `npm run build` nếu áp dụng
+   - Đảm bảo không có lỗi khi xây dựng
 
-3. **Kiểm Tra Liên Kết**:
+3. **Xác thực liên kết**:
    - Kiểm tra tất cả liên kết markdown
-   - Xác nhận các tham chiếu ảnh hoạt động
+   - Xác minh tham chiếu hình ảnh hoạt động
 
-4. **Rà Soát Nội Dung**:
-   - Đọc lại chính tả và ngữ pháp
-   - Đảm bảo ví dụ mã đúng và mang tính giáo dục
-   - Đảm bảo bản dịch giữ nguyên ý nghĩa gốc
+4. **Đánh giá nội dung**:
+   - Đọc kỹ chính tả và ngữ pháp
+   - Đảm bảo ví dụ mã chính xác và mang tính giáo dục
+   - Xác minh bản dịch giữ nguyên ý nghĩa gốc
 
-### Yêu Cầu Đóng Góp
+### Yêu cầu đóng góp
 
-- Đồng ý với CLA của Microsoft (kiểm tra tự động khi PR đầu tiên)
-- Tuân theo [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- Đồng ý với Microsoft CLA (kiểm tra tự động khi PR đầu tiên)
+- Tuân thủ [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
 - Xem [CONTRIBUTING.md](./CONTRIBUTING.md) để biết hướng dẫn chi tiết
-- Tham chiếu số issue trong mô tả PR nếu cần
+- Tham chiếu số issue trong mô tả PR nếu có
 
-### Quy Trình Đánh Giá
+### Quy trình xem xét
 
-- PR được duyệt bởi người quản lý và cộng đồng
-- Ưu tiên tính rõ ràng trong giáo dục
-- Ví dụ mã phải tuân theo thực hành tốt nhất hiện nay
-- Dịch thuật được xem xét về độ chính xác và phù hợp văn hóa
+- PR được xem xét bởi duy trì viên và cộng đồng
+- Ưu tiên sự rõ ràng giáo dục
+- Ví dụ mã nên tuân theo các thực hành tốt nhất hiện hành
+- Bản dịch được kiểm tra về độ chính xác và phù hợp văn hóa
 
-## Hệ Thống Dịch Thuật
+## Hệ thống dịch thuật
 
-### Dịch Thuật Tự Động
+### Dịch tự động
 
-- Sử dụng GitHub Actions với quy trình co-op-translator
-- Tự động dịch sang hơn 50 ngôn ngữ
-- Tệp nguồn nằm trong các thư mục chính
-- Tệp dịch nằm trong thư mục `translations/{language-code}/`
+- Sử dụng GitHub Actions với workflow co-op-translator
+- Dịch tự động sang hơn 50 ngôn ngữ
+- Tệp nguồn trong các thư mục chính
+- Tệp dịch trong thư mục `translations/{language-code}/`
 
-### Thêm Cải Tiến Dịch Thuật Thủ Công
+### Thêm cải tiến dịch thủ công
 
-1. Tìm tệp trong `translations/{language-code}/`
-2. Thực hiện cải tiến mà vẫn giữ nguyên cấu trúc
+1. Xác định tệp trong `translations/{language-code}/`
+2. Cải tiến giữ nguyên cấu trúc
 3. Đảm bảo ví dụ mã vẫn hoạt động
-4. Kiểm tra nội dung quiz đã bản địa hóa
+4. Kiểm thử nội dung bài kiểm tra được địa phương hóa
 
-### Metadata Dịch Thuật
+### Metadata bản dịch
 
-Các tệp dịch bao gồm phần đầu metadata:
+Các tệp dịch có đầu mục metadata:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,120 +289,120 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Gỡ Lỗi và Khắc Phục Sự Cố
+## Gỡ lỗi và Khắc phục sự cố
 
-### Các Vấn Đề Thường Gặp
+### Vấn đề phổ biến
 
 **Ứng dụng quiz không khởi động được**:
 - Kiểm tra phiên bản Node.js (khuyến nghị v14+)
-- Xóa `node_modules` và `package-lock.json`, chạy lại `npm install`
-- Kiểm tra xung đột cổng (mặc định: Vite dùng cổng 5173)
+- Xoá `node_modules` và `package-lock.json`, chạy lại `npm install`
+- Kiểm tra xung đột cổng (mặc định Vite dùng cổng 5173)
 
-**API server không khởi động**:
-- Đảm bảo Node.js đáp ứng yêu cầu tối thiểu (node >=10)
-- Kiểm tra xem cổng có đang bị sử dụng không
-- Đảm bảo đã cài đặt đầy đủ dependencies bằng `npm install`
+**Máy chủ API không khởi động được**:
+- Xác minh phiên bản Node.js đủ điều kiện (node >=10)
+- Kiểm tra xem cổng đã được sử dụng chưa
+- Đảm bảo đã cài đặt tất cả phụ thuộc qua `npm install`
 
-**Tiện ích mở rộng trình duyệt không tải được**:
-- Kiểm tra manifest.json hợp lệ
-- Kiểm tra console trình duyệt xem có lỗi
-- Làm theo hướng dẫn cài đặt riêng cho trình duyệt
+**Tiện ích mở rộng trình duyệt không tải**:
+- Kiểm tra manifest.json đúng định dạng
+- Xem console trình duyệt báo lỗi
+- Thực hiện theo hướng dẫn cài tiện ích mở rộng cho từng trình duyệt
 
 **Vấn đề dự án chat Python**:
-- Đảm bảo đã cài đặt gói OpenAI: `pip install openai`
-- Kiểm tra biến môi trường GITHUB_TOKEN đã thiết lập
+- Đảm bảo đã cài OpenAI package: `pip install openai`
+- Xác minh biến môi trường GITHUB_TOKEN đã được đặt
 - Kiểm tra quyền truy cập GitHub Models
 
 **Docsify không phục vụ tài liệu**:
-- Cài đặt docsify-cli toàn cục: `npm install -g docsify-cli`
-- Chạy từ thư mục gốc kho lưu trữ
-- Kiểm tra tồn tại tệp `docs/_sidebar.md`
+- Cài docsify-cli toàn cục: `npm install -g docsify-cli`
+- Chạy ở thư mục gốc kho
+- Kiểm tra file `docs/_sidebar.md` tồn tại
 
-### Mẹo Môi Trường Phát Triển
+### Mẹo môi trường phát triển
 
 - Dùng VS Code với tiện ích Live Server cho dự án HTML
-- Cài đặt tiện ích ESLint và Prettier để định dạng nhất quán
-- Sử dụng DevTools trình duyệt để gỡ lỗi JavaScript
-- Với Vue, cài đặt tiện ích mở rộng Vue DevTools trên trình duyệt
+- Cài ESLint và Prettier để định dạng nhất quán
+- Dùng DevTools trình duyệt để gỡ lỗi JavaScript
+- Với dự án Vue, cài tiện ích Vue DevTools trên trình duyệt
 
-### Cân Nhắc Hiệu Năng
+### Cân nhắc hiệu năng
 
-- Số lượng tệp dịch lớn (50+ ngôn ngữ) khiến việc clone toàn bộ nặng
-- Dùng clone nông nếu chỉ làm việc với nội dung: `git clone --depth 1`
-- Loại trừ thư mục dịch khỏi tìm kiếm khi xử lý nội dung tiếng Anh
+- Số lượng tệp dịch lớn (50+ ngôn ngữ) làm clone đầy đủ nặng
+- Dùng clone nông nếu chỉ làm việc trên nội dung: `git clone --depth 1`
+- Loại trừ bản dịch khỏi tìm kiếm khi làm việc với tiếng Anh
 - Quy trình build có thể chậm lần đầu (npm install, build Vite)
 
-## Cân Nhắc Về Bảo Mật
+## Cân nhắc bảo mật
 
-### Biến Môi Trường
+### Biến môi trường
 
-- Không bao giờ commit khoá API vào kho lưu trữ
-- Sử dụng file `.env` (đã có trong `.gitignore`)
-- Ghi chú biến môi trường cần thiết trong README dự án
+- Khoá API không bao giờ được đưa vào kho
+- Dùng file `.env` (đã nằm trong `.gitignore`)
+- Tài liệu các biến môi trường cần thiết trong README dự án
 
-### Dự Án Python
+### Dự án Python
 
-- Sử dụng môi trường ảo: `python -m venv venv`
-- Cập nhật dependencies thường xuyên
-- Token GitHub nên có quyền tối thiểu cần thiết
+- Dùng môi trường ảo: `python -m venv venv`
+- Cập nhật phụ thuộc thường xuyên
+- Token GitHub chỉ có quyền tối thiểu cần thiết
 
-### Quyền Truy Cập GitHub Models
+### Truy cập GitHub Models
 
-- Cần Personal Access Tokens (PAT) để truy cập GitHub Models
-- Token nên lưu trữ dưới dạng biến môi trường
+- Cần dùng Personal Access Tokens (PAT) cho GitHub Models
+- Token được lưu làm biến môi trường
 - Không bao giờ commit token hoặc thông tin đăng nhập
 
-## Ghi Chú Bổ Sung
+## Ghi chú bổ sung
 
-### Đối Tượng Hướng Đến
+### Đối tượng mục tiêu
 
 - Người mới hoàn toàn với phát triển web
-- Sinh viên và người tự học
-- Giáo viên sử dụng chương trình trong lớp học
-- Nội dung thiết kế để dễ tiếp cận và phát triển kỹ năng tuần tự
+- Học sinh và người tự học
+- Giáo viên dùng chương trình trong lớp học
+- Nội dung thiết kế dễ tiếp cận và xây dựng kỹ năng dần dần
 
-### Triết Lý Giáo Dục
+### Triết lý giáo dục
 
-- Phương pháp học theo dự án
-- Kiểm tra kiến thức thường xuyên (quiz)
-- Bài tập mã hóa thực hành
-- Ví dụ ứng dụng thực tế
-- Tập trung vào nền tảng trước khi học framework
+- Phương pháp học dựa trên dự án
+- Kiểm tra kiến thức thường xuyên (bài kiểm tra)
+- Bài tập mã thực hành
+- Ví dụ áp dụng thực tế
+- Tập trung kiến thức cơ bản trước các framework
 
-### Bảo Trì Kho Lưu Trữ
+### Bảo trì kho
 
-- Cộng đồng học tập và đóng góp tích cực
-- Cập nhật thường xuyên các dependencies và nội dung
-- Theo dõi issues và thảo luận bởi người quản lý
+- Cộng đồng học và đóng góp năng động
+- Cập nhật phụ thuộc và nội dung định kỳ
+- Giám sát issue và thảo luận bởi duy trì viên
 - Cập nhật dịch tự động qua GitHub Actions
 
-### Tài Nguyên Liên Quan
+### Tài nguyên liên quan
 
-- [Modules học Microsoft Learn](https://docs.microsoft.com/learn/)
-- [Tài nguyên Student Hub](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) khuyến nghị cho người học
-- Các khoá học bổ sung: AI Sinh tạo, Khoa học dữ liệu, ML, IoT
+- [Các module Microsoft Learn](https://docs.microsoft.com/learn/)
+- [Tài nguyên Trung tâm Sinh viên](https://docs.microsoft.com/learn/student-hub/)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) khuyên dùng cho người học
+- Các khoá học bổ sung: AI tổng hợp, Khoa học dữ liệu, ML, IoT có sẵn
 
-### Làm Việc Với Các Dự Án Cụ Thể
+### Làm việc với dự án cụ thể
 
-Hướng dẫn chi tiết về các dự án riêng lẻ xem trong tệp README:
+Hướng dẫn chi tiết cho từng dự án xem trong README tại:
 - `quiz-app/README.md` - Ứng dụng quiz Vue 3
-- `7-bank-project/README.md` - Ứng dụng ngân hàng có xác thực
-- `5-browser-extension/README.md` - Phát triển tiện ích mở rộng trình duyệt
-- `6-space-game/README.md` - Phát triển trò chơi Canvas
+- `7-bank-project/README.md` - Ứng dụng ngân hàng với xác thực
+- `5-browser-extension/README.md` - Phát triển tiện ích trình duyệt
+- `6-space-game/README.md` - Phát triển trò chơi canvas
 - `9-chat-project/README.md` - Dự án trợ lý chat AI
 
-### Cấu Trúc Monorepo
+### Cấu trúc Monorepo
 
-Mặc dù không phải là monorepo truyền thống, kho này chứa nhiều dự án độc lập:
-- Mỗi bài học là riêng biệt
-- Các dự án không chia sẻ dependencies
-- Làm việc trên từng dự án riêng không ảnh hưởng lẫn nhau
-- Clone toàn bộ kho để trải nghiệm toàn bộ khóa học
+Mặc dù không phải monorepo truyền thống, kho này chứa nhiều dự án độc lập:
+- Mỗi bài học là tự chứa
+- Dự án không chia sẻ phụ thuộc
+- Làm việc trên dự án riêng mà không ảnh hưởng đến dự án khác
+- Clone toàn bộ kho để trải nghiệm đầy đủ chương trình học
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Tuyên bố từ chối trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng việc dịch tự động có thể chứa lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ gốc nên được xem là nguồn chính xác và uy tín nhất. Đối với những thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm đối với bất kỳ sự hiểu nhầm hay giải thích sai lệch nào phát sinh từ việc sử dụng bản dịch này.
+**Tuyên bố miễn trách nhiệm**:  
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo tính chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ nguyên bản nên được coi là nguồn tin chính thức. Đối với những thông tin quan trọng, khuyến nghị sử dụng dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu nhầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
