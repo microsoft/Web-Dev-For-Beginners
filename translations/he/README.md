@@ -12,252 +12,250 @@
 
 # פיתוח ווב למתחילים - תוכנית לימודים
 
-למד את היסודות של פיתוח ווב עם הקורס המקיף בן 12 השבועות שלנו על ידי Microsoft Cloud Advocates. כל אחד מ-24 השיעורים מתעמק ב-JavaScript, CSS ו-HTML דרך פרויקטים מעשיים כגון טרריום, תוספים לדפדפן ומשחקי חלל. השתתף בחידונים, דיונים ומשימות מעשיות. שפר את הכישורים שלך ואופטימיזציה לשימור הידע שלך עם הפדגוגיה הבסיסית שלנו המבוססת על פרויקטים. התחל את מסע הקידוד שלך היום!
+למדו את יסודות פיתוח הווב עם קורס מקיף בן 12 שבועות בהובלת Microsoft Cloud Advocates. כל אחד מ-24 השיעורים מציע העמקה ב- JavaScript, CSS ו- HTML עם פרויקטים מעשיים כמו טרריומים, הרחבות לדפדפן ומשחקי חלל. השתתפו בחידונים, דיונים ומשימות מעשיות. שפרו את הכישורים שלכם ואופטימיזציה של שימור הידע בעזרת מתודולוגית הפרויקטים שלנו. התחילו את מסלול הקידוד שלכם היום!
 
-הצטרף לקהילת Azure AI Foundry בדיסקורד
+הצטרפו לקהילת Azure AI Foundry ב- Discord
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-עקוב אחרי הצעדים הבאים כדי להתחיל להשתמש במשאבים הללו:
-1. **העתק את המאגר**: לחץ על [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **שכפל את המאגר**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**הצטרף ל-Azure AI Foundry בדיסקורד ופגוש מומחים ומפתחים אחרים**](https://discord.com/invite/ByRwuEEgH4)
+עקבו אחר הצעדים הבאים כדי להתחיל להשתמש במשאבים אלו:
+1. **שכפלו את המאגר Fork**: לחצו על [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **שכפלו את המאגר Clone**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**הצטרפו ל- Azure AI Foundry Discord ופגשו מומחים ומפתחים אחרים**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 תמיכה בריבוי שפות
+### 🌐 תמיכה בשפות מרובות
 
 #### נתמך באמצעות GitHub Action (אוטומטי ותמיד מעודכן)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](./README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **מעדיף לשכפל מקומית?**
+> **מעדיפים לשכפל מקומית?**
 
-> מאגר זה כולל למעלה מ-50 שפות תרגום המגדילות משמעותית את גודל ההורדה. לשכפל ללא תרגומים, השתמש ב־sparse checkout:
+> מאגר זה כולל יותר מ-50 שפות תרגום מה שמגדיל משמעותית את גודל ההורדה. לשכפול ללא תרגומים השתמשו ב-sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
 > cd Web-Dev-For-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> זה נותן לך את כל מה שאתה צריך כדי להשלים את הקורס במהירות הורדה גבוהה יותר.
+> זה נותן לכם הכל הדרוש להשלמת הקורס עם הורדה מהירה יותר.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**אם תרצה ששפות תרגום נוספות יתמכו הן מופיעות [כאן](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**אם ברצונכם לתמוך בשפות תרגום נוספות הרשומות כאן [here](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-#### 🧑‍🎓 _האם אתה סטודנט?_
+#### 🧑‍🎓 _סטודנט?_
 
-בקר ב[**דף מרכז הסטודנט**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) שם תמצא מקורות למתחילים, חבילות לסטודנטים ואפילו דרכים לקבל שובר לתעודה חינמית. זהו הדף שתרצה לסמן ולבדוק מפעם לפעם כשאנו מחליפים תוכן מדי חודש.
+בקרו ב-[**דף הסטודנטים**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) שם תמצאו משאבים למתחילים, חבילות סטודנטים ואפילו דרכים לקבל שוברים לתעודות חינם. זה הדף שכדאי לשמור במועדפים ולבדוק מעת לעת כשאנחנו מחליפים תוכן מדי חודש.
 
-### 📣 הכרזה - אתגרי מצב סוכן GitHub Copilot חדשים להשלים!
+### 📣 הודעה - אתגרי מצב GitHub Copilot Agent חדשים להשלמה!
 
-אתגר חדש נוסף, חפש את "GitHub Copilot Agent Challenge 🚀" ברוב הפרקים. זה אתגר חדש עבורך להשלים בעזרת GitHub Copilot ומצב סוכן. אם לא השתמשת במצב סוכן קודם לכן, הוא מסוגל לא רק לייצר טקסט אלא גם ליצור ולערוך קבצים, להריץ פקודות ועוד.
+אתגר חדש נוסף, חפשו את "GitHub Copilot Agent Challenge 🚀" ברוב הפרקים. זהו אתגר חדש להשלמה תוך שימוש ב-GitHub Copilot ומצב Agent. אם עדיין לא השתמשתם במצב Agent, הוא יכול לא רק לייצר טקסט אלא גם ליצור ולערוך קבצים, להפעיל פקודות ועוד.
 
-### 📣 הכרזה - _פרויקט חדש לבנות בעזרת AI גנרטיבי_
+### 📣 הודעה - _פרויקט חדש לבנייה בעזרת AI גנרטיבי_
 
-פרויקט עוזר AI חדש הוסף זה עתה, בדוק אותו [project](./9-chat-project/README.md)
+פרויקט חדש של עוזר AI נוסף, בדקו את [הפרויקט](./9-chat-project/README.md)
 
-### 📣 הכרזה - _תוכנית לימודים חדשה_ על AI גנרטיבי עבור JavaScript שוחררה זה עתה
+### 📣 הודעה - _תוכנית לימודים חדשה_ ב-AI גנרטיבי עבור JavaScript שיצאה זה עתה
 
-אל תפספס את תוכנית ה-AI הגנרטיבי החדשה שלנו!
+אל תפספסו את תוכנית הלימודים החדשה שלנו ל-AI גנרטיבי!
 
-בקר ב-[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) כדי להתחיל!
+בקרו ב-[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) כדי להתחיל!
 
 ![Background](../../translated_images/he/background.148a8d43afde5730.webp)
 
-- שיעורים המכסים הכל מהבסיס עד RAG.
-- אינטראקציה עם דמויות היסטוריות בעזרת GenAI ואפליקציית הליווי שלנו.
-- סיפור מהנה ומרתק, תצא למסע בזמן!
+- שיעורים הכוללים הכל מהבסיס ועד RAG.
+- אינטראקציה עם דמויות היסטוריות תוך שימוש ב-GenAI והאפליקציה הלוויינית שלנו.
+- נרטיב מהנה ומרתק, אתם תטיילו בזמן!
 
 ![character](../../translated_images/he/character.5c0dd8e067ffd693.webp)
 
 
-כל שיעור כולל משימה להשלים, בדיקת ידע ואתגר שינחה אותך בנושאים כמו:
-- יצירת prompt והנדסת prompt
+כל שיעור כולל משימה להשלים, בדיקת ידע ואתגר שמנחה אתכם בנושאים כמו:
+- prompt ו- prompt engineering
 - יצירת אפליקציות טקסט ותמונה
 - אפליקציות חיפוש
 
-בקר ב-[https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) כדי להתחיל!
+בקרו ב-[https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course) כדי להתחיל!
 
 
 
-## 🌱 התחלה
+## 🌱 להתחלה
 
-> **מורים**, כלולנו [הצעות](for-teachers.md) כיצד להשתמש בתוכנית זו. נשמח למשוב שלכם [בפורום הדיון](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **למורים**, כלול כאן [כמה הצעות](for-teachers.md) לשימוש בתוכנית הלימודים. נשמח לקבל את המשוב שלכם [בפורום הדיונים שלנו](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[לומדים](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, עבור כל שיעור, התחל עם חידון לפני ההרצאה והמשך בקריאת חומר ההרצאה, השלמת הפעילויות השונות ובדוק את הבנתך עם חידון אחרי ההרצאה.
+**[לומדים](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, בכל שיעור, התחילו בחידון לפני ההרצאה והמשיכו בקריאת חומר ההרצאה, השלמת הפעילויות השונות ובדקו את ההבנה שלכם עם חידון לאחר ההרצאה.
 
-כדי לשפר את חוויית הלמידה שלך, התחבר עם חבריך לעבודה על הפרויקטים ביחד! אנו מעודדים דיונים ב[פורום הדיון שלנו](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) שבו צוות המנהלים שלנו יעמוד לרשותך עם תשובות לשאלות.
+כדי לשפר את חוויית הלמידה שלכם, התחברו עם חבריכם לעבודה משותפת על הפרויקטים! עידוד לדיונים בפורום הדיונים שלנו [כאן](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) שבו צוות המנחים שלנו זמין לשאלותיכם.
 
-להעמקת ההשכלה שלך, אנו ממליצים בחום לחקור את [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) עבור חומרים נוספים ללימוד.
+לקידום נוסף של ההשכלה שלכם אנו ממליצים בחום לחקור את [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) לחומרי לימוד נוספים.
 
-### 📋 הגדרת סביבת העבודה שלך
+### 📋 הגדרת סביבת העבודה שלכם
 
-לתוכנית זו יש סביבת פיתוח מוכנה! כאשר אתה מתחיל, תוכל לבחור להפעיל את התוכנית ב-[Codespace](https://github.com/features/codespaces/) (_סביבה מבוססת דפדפן ללא צורך בהתקנות_), או מקומית במחשב שלך בעזרת עורך טקסט כגון [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+לתוכנית הלימודים הזו קיימת סביבת פיתוח מוכנה! כשאתם מתחילים תוכלו לבחור להפעיל את התוכנית ב-[Codespace](https://github.com/features/codespaces/) (_סביבה מבוססת דפדפן ללא צורך בהתקנות_), או מקומית במחשב שלכם בעזרת עורך טקסט כמו [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-#### צור את המאגר שלך
-כדי שתוכל לשמור את העבודה שלך בקלות, מומלץ ליצור עותק משלך של המאגר הזה. ניתן לעשות זאת על ידי לחיצה על כפתור **Use this template** בראש הדף. פעולה זו תיצור מאגר חדש בחשבון GitHub שלך עם עותק של תוכנית הלימודים.
+#### צרו את המאגר שלכם
+כדי שתוכלו לשמור את העבודה שלכם בקלות, מומלץ ליצור עותק משלכם של המאגר. ניתן לעשות זאת על ידי לחיצה על כפתור **Use this template** בפסגת הדף. זה ייצור מאגר חדש בחשבון GitHub שלכם עם עותק של תוכנית הלימודים.
 
-עקוב אחרי הצעדים הבאים:
-1. **העתק את המאגר**: לחץ על כפתור "Fork" בפינה הימנית העליונה של עמוד זה.
-2. **שכפל את המאגר**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+עקבו אחר הצעדים האלה:
+1. **שכפלו את המאגר Fork**: לחצו על כפתור "Fork" בפינה הימנית-עליונה של הדף.
+2. **שכפלו את המאגר Clone**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### הפעלת התוכנית ב-Codespace
+#### הפעלת תוכנית הלימודים ב-Codespace
 
-בעותק שלך של המאגר שיצרת, לחץ על כפתור **Code** ובחר **Open with Codespaces**. פעולה זו תיצור עבורך Codespace חדש לעבודה.
+בעותק שלכם של המאגר שיצרתם, לחצו על כפתור **Code** ובחרו **Open with Codespaces**. זה ייצור עבורכם Codespace חדש לעבודה.
 
 ![Codespace](../../translated_images/he/createcodespace.0238bbf4d7a8d955.webp)
 
-#### הפעלת התוכנית במחשב המקומי שלך
+#### הפעלת התוכנית מקומית במחשב שלכם
 
-כדי להפעיל תוכנית זו במחשב המקומי שלך, תזדקק לעורך טקסט, דפדפן וכלי שורת פקודה. השיעור הראשון שלנו, [מבוא לשפות תכנות וכלי מסחר](../../1-getting-started-lessons/1-intro-to-programming-languages), ידריך אותך דרך אפשרויות שונות של כלים אלו כדי לבחור מה שמתאים לך ביותר.
+כדי להפעיל את התוכנית מקומית, תזדקקו לעורך טקסט, דפדפן וכלי שורת פקודה. השיעור הראשון שלנו, [הקדמה לשפות תכנות וכלי עבודה](../../1-getting-started-lessons/1-intro-to-programming-languages), ילווה אתכם באפשרויות שונות עבור כל אחד מהכלים כדי לבחור את המתאים ביותר עבורכם.
 
-ההמלצה שלנו היא להשתמש ב-[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) כעורך שלך, שמכיל גם [טרמינל](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) מובנה. אתה יכול להוריד את Visual Studio Code [כאן](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+אנו ממליצים להשתמש ב-[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) כעורך שלכם, שכולל גם [טרמינל מובנה](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). ניתן להוריד את Visual Studio Code [כאן](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-
-1. שכפל את המאגר למחשב שלך. ניתן לעשות זאת על ידי לחיצה על כפתור **Code** והעתקת כתובת ה-URL:
+1. שכפלו את המאגר למחשב שלכם. ניתן לעשות זאת על ידי לחיצה על כפתור **Code** והעתקת כתובת ה- URL:
 
     [CodeSpace](./images/createcodespace.png)
-אז פתחו את ה-[טרמינל](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) בתוך [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) והריצו את הפקודה הבאה, כאשר מחליפים את `<your-repository-url>` בכתובת ה-URL שהעתקתם זה עתה:
+ואז, פתח את ה-[טרמינל](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) בתוך [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) והרץ את הפקודה הבאה, כשהחלף את `<your-repository-url>` בכתובת ה-URL שהעתקת:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. פתחו את התיקייה ב-Visual Studio Code. ניתן לעשות זאת על ידי לחיצה על **File** > **Open Folder** ובחירת התיקייה שהעתקת זה עתה.
-
+2. פתח את התיקייה ב-Visual Studio Code. ניתן לעשות זאת על ידי לחיצה על **קובץ** > **פתח תיקייה** ובחירת התיקייה שהעתקת זה עתה.
 
 > הרחבות מומלצות ל-Visual Studio Code:
 >
 > * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - לתצוגה מקדימה של דפי HTML בתוך Visual Studio Code
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - שיעזרו לך לכתוב קוד מהר יותר
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - לעזור לך לכתוב קוד מהר יותר
 
 ## 📂 כל שיעור כולל:
 
 - סקיצה אופציונלית
-- וידאו משלים אופציונלי
-- חידון חימום לפני השיעור
+- וידאו תומך אופציונלי
+- מבחן חימום לפני השיעור
 - שיעור כתוב
-- בשיעורים מבוססי פרויקט, מדריכים שלב-אחר-שלב לבניית הפרויקט
+- עבור שיעורים מבוססי פרויקטים, מדריכים שלב-אחרי-שלב כיצד לבנות את הפרויקט
 - בדיקות ידע
 - אתגר
-- קריאה משולמת
+- קריאה נוספת
 - מטלה
-- [חידון לאחר השיעור](https://ff-quizzes.netlify.app/web/)
+- [מבחן לאחר השיעור](https://ff-quizzes.netlify.app/web/)
 
-> **הערה לגבי חידונים**: כל החידונים נמצאים בתיקיית Quiz-app, סה"כ 48 חידונים עם שלוש שאלות כל אחד. הם זמינים [כאן](https://ff-quizzes.netlify.app/web/) ואפליקציית החידון יכולה לפעול באופן מקומי או להיות מופעלת ב-Azure; עקבו אחר ההוראות בתיקיית `quiz-app`.
+> **הערה לגבי מבחנים**: כל המבחנים נמצאים בתיקיית Quiz-app, 48 מבחנים בסה"כ, כל אחד עם שלוש שאלות. ניתן לגשת אליהם [כאן](https://ff-quizzes.netlify.app/web/). אפליקציית המבחנים יכולה לרוץ מקומית או להיות מפורסת ל-Azure; עקוב אחרי ההוראות בתיקיית `quiz-app`.
 
 ## 🗃️ שיעורים
 
-|     |                       שם הפרויקט                       |                            מושגים הנלמדים                            | מטרות הלמידה                                                                                                                  |                                                         שיעור מקושר                                                          |         מחבר          |
-| :-: | :------------------------------------------------------: | :------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------: |
-| 01  |                     התחלה                      |           מבוא לתכנות וכלי העבודה           | ללמוד את היסודות הבסיסיים שמאחורי רוב שפות התכנות ועל התוכנות המסייעות למפתחים מקצועיים בביצוע עבודתם                    | [מבוא לשפות תכנות וכלי העבודה](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     התחלה                      |             יסודות GitHub, כולל עבודה בצוות             | כיצד להשתמש ב-GitHub בפרויקט שלך, וכיצד לשתף פעולה עם אחרים על בסיס קוד                                                    |                            [מבוא ל-GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     התחלה                      |                             נגישות                              | ללמוד את היסודות של נגישות באינטרנט                                                                                               |                       [יסודות נגישות](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        יסודות JS                         |                         סוגי נתונים ב-JavaScript                          | היסודות של סוגי הנתונים ב-JavaScript                                                                                                 |                                       [סוגי נתונים](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        יסודות JS                         |                         פונקציות ושיטות                          | ללמוד על פונקציות ושיטות לניהול זרימת לוגיקת האפליקציה                                                             |                              [פונקציות ושיטות](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
+|     |                       שם הפרויקט                       |                            המושגים הנלמדים                             | מטרות הלמידה                                                                                                                 |                                                         שיעור מקושר                                                          |         מחבר          |
+| :-: | :----------------------------------------------------: | :--------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------: | :-------------------: |
+| 01  |                     התחלה                              |           מבוא לתכנות וכלי העבודה הבסיסיים           | ללמוד את היסודות הבסיסיים שמאחורי רוב שפות התכנות ועל תוכנה המסייעת למפתחים מקצועיים לבצע את עבודתם | [מבוא לשפות תכנות וכלי עבודה](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     התחלה                              |             יסודות GitHub, כולל עבודה בצוות             | כיצד להשתמש ב-GitHub בפרויקט שלך, כיצד לשתף פעולה עם אחרים על בסיס קוד                                                    |                            [מבוא ל-GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     התחלה                              |                             נגישות                              | ללמוד את יסודות נגישות האתר                                                                                               |                       [יסודות הנגישות](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        יסודות JS                         |                         סוגי נתונים ב-JavaScript                          | היסודות של סוגי הנתונים בג'אווה סקריפט                                                                                                 |                                       [סוגי נתונים](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        יסודות JS                         |                         פונקציות ושיטות                          | ללמוד על פונקציות ושיטות לניהול זרימת הלוגיקה של אפליקציה                                                             |                              [פונקציות ושיטות](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
 | 06  |                        יסודות JS                         |                        קבלת החלטות עם JS                        | ללמוד כיצד ליצור תנאים בקוד שלך באמצעות שיטות קבלת החלטות                                                           |                                 [קבלת החלטות](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        יסודות JS                         |                            מערכים ולולאות                            | עבודה עם נתונים באמצעות מערכים ולולאות ב-JavaScript                                                                                 |                                   [מערכים ולולאות](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML בפרקטיקה                            | בניית ה-HTML ליצירת טרריום מקוון, התמקדות בבניית מיקום                                                         |                                 [מבוא ל-HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS בפרקטיקה                             | בניית ה-CSS לעיצוב הטרריום המקוון, התמקדות ביסודות CSS כולל התאמת העמוד לתצוגה רספונסיבית                     |                                  [מבוא ל-CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 סגירות ב-JavaScript, ניהול DOM                  | בניית קוד ה-JavaScript להפעלת הטרריום כממשק גרירה ושחרור, תוך התמקדות בסגירות וניהול ה-DOM             |                  [סגירות JavaScript, ניהול DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          בניית משחק הקלדה                           | ללמוד כיצד להשתמש באירועי מקלדת כדי לנהל את לוגיקת האפליקציה שלך ב-JavaScript                                                          |                                [תכנות מונחה אירועים](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [תוסף דפדפן ירוק](./5-browser-extension/solution/README.md) |                         עבודה עם דפדפנים                          | ללמוד כיצד דפדפנים פועלים, ההיסטוריה שלהם, וכיצד לבנות את האלמנטים הראשונים של תוסף דפדפן                               |                               [על הדפדפנים](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [תוסף דפדפן ירוק](./5-browser-extension/solution/README.md) | בניית טופס, קריאה ל-API ואחסון משתנים בזיכרון המקומי | בניית רכיבי JavaScript בתוסף הדפדפן שלך לקריאה ל-API תוך שימוש במשתנים המאוחסנים בזיכרון המקומי                      |                [API, טפסים, ואחסון מקומי](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [תוסף דפדפן ירוק](./5-browser-extension/solution/README.md) |          תהליכים ברקע בדפדפן, ביצועי אינטרנט          | שימוש בתהליכים ברקע של הדפדפן לניהול סמליל התוסף; למידת ביצועי אינטרנט וכמה אופטימיזציות לשיפור הביצועים   |             [משימות רקע וביצועים](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [משחק חלל](./6-space-game/solution/README.md)           |             פיתוח מתקדם יותר למשחק עם JavaScript             | ללמוד על ירושה עם מחלקות והרכבה, ועל תבנית הפרסום/ההרשמה, כהכנה לפיתוח משחק              |                      [מבוא לפיתוח משחק מתקדם](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [משחק חלל](./6-space-game/solution/README.md)           |                           ציור על הקנבס                            | ללמוד על API של Canvas, המשמש לציור אלמנטים על המסך                                                                       |                                [ציור על הקנבס](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [משחק חלל](./6-space-game/solution/README.md)           |                   הזזת אלמנטים על המסך                    | לגלות כיצד אלמנטים יכולים לקבל תנועה באמצעות קואורדינטות קרטזיות ו-Canvas API                                            |                           [הזזת אלמנטים](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [משחק חלל](./6-space-game/solution/README.md)           |                          זיהוי התנגשות                           | לגרום לאלמנטים להתנגש ולפעול זה כלפי זה באמצעות לחיצות מקשים ולספק פונקציית קירור כדי להבטיח ביצועים טובים של המשחק    |                              [זיהוי התנגשות](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [משחק חלל](./6-space-game/solution/README.md)           |                             שמירת ניקוד                              | ביצוע חישובים מתמטיים על סמך מצב וביצועי המשחק                                                                |                                    [שמירת ניקוד](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [משחק חלל](./6-space-game/solution/README.md)           |                     סיום והפעלה מחדש של המשחק                     | ללמוד על סיום והפעלה מחדש של המשחק, כולל ניקוי משאבים ואיפוס ערכי משתנים                              |                                [תנאי סיום](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
-| 21  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                 תבניות HTML ונתיבי ניווט באפליקציית אינטרנט                 | ללמוד כיצד ליצור את תצורת מבנה אתר מרובה עמודים באמצעות ניתוב ותבניות HTML                             |                            [תבניות ונתיבי ניווט HTML](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                  בניית טופס התחברות והרשמה                   | ללמוד על בניית טפסים וטיפול בתהליכי אימות                                                                          |                                           [טפסים](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                   שיטות אחזור ושימוש בנתונים                   | כיצד נתונים זורמים לתוך האפליקציה וממנה, כיצד לאחזר, לאחסן ולמחוק אותם                                                 |                                            [נתונים](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 07  |                        יסודות JS                         |                            מערכים ולולאות                            | לעבוד עם נתונים באמצעות מערכים ולולאות בג'אווה סקריפט                                                                                 |                                   [מערכים ולולאות](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML בפועל                            | לבנות את ה-HTML כדי ליצור טרטיום מקוון, עם דגש על בניית פריסה                                                         |                                 [מבוא ל-HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS בפועל                             | לבנות את CSS לעיצוב הטרטיום המקוון, עם דגש על יסודות CSS כולל התאמת תגובה של הדף                     |                                  [מבוא ל-CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 סגירות ב-JavaScript, מניפולציית DOM                  | לבנות את ה-JavaScript כדי לגרום לטרטיום לפעול כממשק גרירה ושחרור, עם דגש על סגירות ומניפולציית DOM             |                  [סגירות ב-JavaScript, מניפולציית DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          לבנות משחק הקלדה                           | ללמוד כיצד להשתמש באירועי מקלדת כדי לנהל את הלוגיקה של אפליקציית ה-JavaScript שלך                                                          |                                [תכנות מונחה אירועים](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [תוסף דפדפן ירוק](./5-browser-extension/solution/README.md) |                         עבודה עם דפדפנים                          | ללמוד כיצד דפדפנים פועלים, ההיסטוריה שלהם, וכיצד לבנות את האלמנטים הראשונים של תוסף דפדפן                               |                               [על דפדפנים](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [תוסף דפדפן ירוק](./5-browser-extension/solution/README.md) | בניית טופס, קריאת API ואחסון משתנים באחסון מקומי | לבנות את אלמנטי ה-JavaScript של תוסף הדפדפן שלך לקרוא API באמצעות משתנים המאוחסנים באחסון המקומי                      |                [APIs, טפסים ואחסון מקומי](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [תוסף דפדפן ירוק](./5-browser-extension/solution/README.md) |          תהליכים ברקע בדפדפן, ביצועי רשת          | להשתמש בתהליכים ברקע של הדפדפן כדי לנהל את סמל התוסף; ללמוד על ביצועי רשת וכמה אופטימיזציות לשיפור   |             [משימות רקע וביצועים](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [משחק חלל](./6-space-game/solution/README.md)           |             פיתוח משחק מתקדם יותר עם JavaScript             | ללמוד על ירושה באמצעות מחלקות וקומפוזיציה ודפוס Pub/Sub, כהכנה לבניית משחק              |                      [מבוא לפיתוח משחק מתקדם](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [משחק חלל](./6-space-game/solution/README.md)           |                           ציור על קנבס                            | ללמוד על API של Canvas, המשמש לציור אלמנטים על המסך                                                                       |                                [ציור על קנבס](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [משחק חלל](./6-space-game/solution/README.md)           |                   הזזת אלמנטים על המסך                    | לגלות כיצד אלמנטים יכולים לקבל תנועה באמצעות קואורדינטות קרטזיות ו-API של Canvas                                            |                           [הזזת אלמנטים סביב](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [משחק חלל](./6-space-game/solution/README.md)           |                          זיהוי התנגשויות                           | לגרום לאלמנטים להתנגש ולהגיב זה לזה באמצעות לחיצות מקשים ולספק פונקציית קירור לוודא ביצועים טובים למשחק    |                              [זיהוי התנגשויות](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [משחק חלל](./6-space-game/solution/README.md)           |                             שמירת ניקוד                              | לבצע חישובים מתמטיים על פי מצב וביצועי המשחק                                                                |                                    [שמירת ניקוד](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [משחק חלל](./6-space-game/solution/README.md)           |                     סיום ואתחול המשחק                     | ללמוד על סיום ואתחול המשחק, כולל ניקוי משאבים ואיפוס ערכי משתנים                              |                                [תנאי הסיום](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                 תבניות HTML ונתיבי ניווט באפליקציית ווב                 | ללמוד כיצד ליצור את מבנה אתר אינטרנט רב דפי באמצעות נתיבים ותבניות HTML                             |                            [תבניות HTML ונתיבי ניווט](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                  לבנות טופס כניסה והרשמה                   | ללמוד על בניית טפסים וטיפול בתהליכי אימות                                                                          |                                           [טפסים](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                   שיטות שליחת וקבלת נתונים                   | כיצד נתונים זורמים פנימה והחוצה מהאפליקציה שלך, כיצד לשלוף, לאחסן ולהיפטר מהם                                                 |                                            [נתונים](./7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [אפליקציית בנקאות](./7-bank-project/solution/README.md)          |                      מושגי ניהול מצב                      | ללמוד כיצד האפליקציה שלך שומרת מצב וכיצד לנהל אותו תכנותית                                                              |                                [ניהול מצב](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [קוד דפדפן/VScode](../../8-code-editor) | עבודה עם VScode | ללמוד כיצד להשתמש בעורך קוד | [שימוש בעורך קוד VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [עוזרי AI](./9-chat-project/README.md) | עבודה עם AI | ללמוד כיצד לבנות עוזר AI אישי | [פרויקט עוזר AI](./9-chat-project/README.md) | Chris |
+| 25 | [עורך קוד לדפדפן/VScode](../../8-code-editor) | עבודה עם VScode | ללמוד כיצד להשתמש בעורך קוד| [שימוש בעורך הקוד VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [עוזרי AI](./9-chat-project/README.md) | עבודה עם AI | ללמוד כיצד לבנות עוזר AI משלך | [פרויקט עוזר AI](./9-chat-project/README.md) | Chris |
 
 ## 🏫 פדגוגיה
 
-תוכנית הלימודים שלנו מתוכננת עם שני עקרונות פדגוגיים מרכזיים:
+תכנית הלימודים שלנו עוצבה עם שני עקרונות פדגוגיים מרכזיים:
 * למידה מבוססת פרויקטים
-* חידונים תכופים
+* מבחנים תכופים
 
-התכנית מלמדת את היסודות של JavaScript, HTML ו-CSS, כמו גם את הכלים והטכניקות העדכניים ביותר בהם משתמשים מפתחי האינטרנט של היום. לסטודנטים תהיה הזדמנות לפתח ניסיון מעשי על ידי בניית משחק הקלדה, טרריום וירטואלי, תוסף דפדפן ידידותי לסביבה, משחק בסגנון Invader מהחלל, ואפליקציית בנקאות לעסקים. בסיום הסדרה, הסטודנטים ירכשו הבנה יציבה של פיתוח אינטרנט.
+התכנית מלמדת את יסודות JavaScript, HTML ו-CSS, כמו גם את הכלים והטכניקות העדכניים ביותר בהם משתמשים מפתחי האתרים של היום. התלמידים יקבלו הזדמנות לפתח ניסיון מעשי על ידי בניית משחק הקלדה, טרטיום וירטואלי, תוסף דפדפן אקולוגי, משחק בסגנון פלישת חלל ואפליקציית בנקאות לעסקים. בסוף הסדרה, התלמידים ירכשו הבנה איתנה של פיתוח אתרים.
 
-> 🎓 ניתן ללמוד את השיעורים הראשונים בתוכנית זו כ-[נתיב למידה](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) באתר Microsoft Learn!
+> 🎓 ניתן לעבור את השיעורים הראשונים בתכנית זו כ-[מסלול למידה](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) ב-Microsoft Learn!
 
-באמצעות הבטחה שהתוכן יתאים לפרויקטים, התהליך נעשה יותר מעניין עבור הסטודנטים ושימור המושגים יתגבר. בנוסף, כתבנו כמה שיעורים התחלתיים ביסודות JavaScript להיכרות עם מושגים, יחד עם וידאו מהאוסף "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" המכיל מדריכי וידאו, חלקם אף תרמו לתוכנית זו.
+על ידי הבטחה שהתוכן מותאם לפרויקטים, התהליך נעשה מעניין יותר לתלמידים והבנת המושגים תוגבר. כתבנו גם מספר שיעורים מבואיים ביסודות JavaScript כדי להציג מושגים, בצירוף וידאו מסדרת ה-[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon), שחלק מהמחברים שלהם תרמו לתכנית זו.
 
-בנוסף, חידון בעל סיכון נמוך לפני השיעור מגדיר את כוונתו של התלמיד ללמוד נושא, בעוד שחידון שני לאחר השיעור מבטיח שימור נוסף. תוכנית הלימודים הזו עוצבה להיות גמישה ומהנה וניתן ללמוד אותה במלואה או בחלקה. הפרויקטים מתחילים קטנים ומתקדמים בצורה מורכבת יותר עד לסיום מחזור 12 השבועות.
+נוסף על כך, מבחן בעל סיכון נמוך לפני השיעור קובע את כוונת התלמיד ללמידת נושא, ואילו מבחן נוסף לאחר השיעור מבטיח המשך שימור הידע. תוכנית הלימודים עוצבה להיות גמישה ומהנה וניתן לקחת אותה בשלמותה או בחלקים. הפרויקטים מתחילים קטנים והולכים ומסובכים יותר עד לסיום מחזור של 12 שבועות.
 
-אמנם החלטנו במודע להימנע מלהציג מסגרות JavaScript כדי להתרכז בכישורים הבסיסיים הנדרשים כמפתח אינטרנט לפני אימוץ מסגרת, צעד טוב להמשך ביצוע תוכנית זו יהיה ללמוד על Node.js באמצעות אוסף וידאו נוסף: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+אמנם נמנענו במכוון מהכנסת מסגרות JavaScript כדי להתמקד בכישורים הבסיסיים הדרושים כמפתחי ווב לפני אימוץ מסגרת, אך הצעד הבא המומלץ לסיום תכנית זו הוא ללמוד על Node.js באמצעות אוסף וידאו נוסף: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> בקרו ב[קוד התנהגות](CODE_OF_CONDUCT.md) וב[הנחיות לתרומה](CONTRIBUTING.md). נשמח למשוב בונה שלכם!
+> בקרו ב-[קוד ההתנהגות שלנו](CODE_OF_CONDUCT.md) ובכללי [התרומה שלנו](CONTRIBUTING.md). נשמח לקבל את המשוב הבונה שלך!
 
 
 ## 🧭 גישה לא מקוונת
 
-ניתן להפעיל תיעוד זה במצב לא מקוון באמצעות [Docsify](https://docsify.js.org/#/). צרפו את הריפוזיטורי הזה, [התקינו את Docsify](https://docsify.js.org/#/quickstart) במחשב המקומי שלכם, ואז בתיקיית השורש של הריפוזיטורי הזה, הקלידו `docsify serve`. האתר יפעל על פורט 3000 ב-localhost שלכם: `localhost:3000`.
+ניתן להריץ תיעוד זה באוף-ליין באמצעות [Docsify](https://docsify.js.org/#/). פצל את המאגר הזה, [התקן את Docsify](https://docsify.js.org/#/quickstart) במחשב המקומי שלך, ולאחר מכן בתיקיית השורש של מאגר זה, הקלד `docsify serve`. האתר יהיה זמין בפורט 3000 במחשב המקומי: `localhost:3000`.
 
 ## 📘 PDF
 
-קובץ PDF של כל השיעורים זמין [כאן](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+קובץ PDF של כל השיעורים ניתן למצוא [כאן](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
 ## 🎒 קורסים נוספים
-הצוות שלנו מייצר קורסים נוספים! בדקו:
+הצוות שלנו מפיק קורסים נוספים! בדקו:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
-[![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
-[![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
-
+[![LangChain4j למתחילים](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![LangChain.js למתחילים](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
+[![LangChain למתחילים](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
-### Azure / Edge / MCP / Agents
-[![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI Agents for Beginners](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
-
----
- 
-### סדרת AI יצירתי
-[![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+### Azure / Edge / MCP / סוכנים
+[![AZD למתחילים](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI למתחילים](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![MCP למתחילים](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![סוכני AI למתחילים](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### לימוד בסיסי
-[![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+### סדרת AI גנרטיבי
+[![AI גנרטיבי למתחילים](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI גנרטיבי (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![AI גנרטיבי (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![AI גנרטיבי (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### סדרת קופיילוט
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### למידה בסיסית
+[![למידת מכונה למתחילים](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![מדעי הנתונים למתחילים](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI למתחילים](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![סייברסקיוריטי למתחילים](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![פיתוח ווב למתחילים](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![אינטרנט של הדברים למתחילים](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![פיתוח XR למתחילים](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+
+---
+ 
+### סדרת Copilot
+[![Copilot לתכנות זוגי בינה מלאכותית](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot ל-C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![הרפתקת Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## לקבלת עזרה
+## קבלת עזרה
 
-אם אתם נתקעים או יש לכם שאלות לגבי בניית אפליקציות AI. הצטרפו ללומדים אחרים ומפתחים מנוסים בדיונים על MCP. זו קהילה תומכת שבה שאלות מתקבלות בברכה והידע משותף בחופשיות.
+אם נתקעתם או יש לכם שאלות לגבי בניית אפליקציות בינה מלאכותית. הצטרפו ללומדים ולמפתחים מנוסים בדיונים על MCP. זוהי קהילה תומכת שבה שאלות מתקבלות בברכה והידע משותף בחופשיות.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-אם יש לכם משוב על המוצר או שגיאות בזמן הבנייה בקרו ב:
+אם יש לכם משוב על המוצר או שגיאות בזמן בנייה בקרו:
 
-[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![פורום מפתחים Microsoft Foundry](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## רישיון
 
@@ -266,6 +264,6 @@
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). בעוד שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב למקור המוסמך. למידע קריטי מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נשא באחריות לכל הבנה שגויה או פרשנות מוטעית הנובעת מהשימוש בתרגום זה.
+**הצהרת אי-אחריות**:  
+מסמך זה תורגם באמצעות שירות תרגום אוטומטי מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). על אף שאנו שואפים לדייק, יש לקחת בחשבון כי תרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית הוא המקור הסמכותי. עבור מידע קריטי מומלץ להשתמש בתרגום מקצועי ובידי אדם. איננו אחראים לכל אי-הבנה או פרשנות שגויה הנובעים משימוש בתרגום זה.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
