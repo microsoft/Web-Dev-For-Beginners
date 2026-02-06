@@ -2,27 +2,27 @@
 
 ## Pregled projekta
 
-To je repozitorij izobraževalnega kurikuluma za učenje osnov spletnega razvoja za začetnike. Kurikulum je obsežen 12-tedenski tečaj, ki ga je razvilo Microsoft Cloud Advocates, z 24 praktičnimi lekcijami, ki pokrivajo JavaScript, CSS in HTML.
+To je repozitorij izobraževalnega kurikuluma za učenje osnov spletnega razvoja za začetnike. Kurikulum je celovit 12-tedenski tečaj, ki ga je razvila skupina Microsoft Cloud Advocates in vsebuje 24 praktičnih lekcij o JavaScriptu, CSS-u in HTML-u.
 
-### Ključne komponente
+### Ključne Komponente
 
-- **Izobraževalna vsebina**: 24 strukturiranih lekcij, organiziranih v module, osnovane na projektih
-- **Praktični projekti**: Terrarium, Igra tipkanja, Razširitev brskalnika, Igra vesolja, Bančna aplikacija, Urejevalnik kode in AI klepetalni asistent
-- **Interaktivni kvizi**: 48 kvizov s po 3 vprašanji (pred- in po-lekcijski preizkusi)
-- **Podpora več jezikom**: Avtomatizirani prevodi za več kot 50 jezikov preko GitHub Actions
+- **Izobraževalna vsebina**: 24 strukturiranih lekcij organiziranih v projektno usmerjene module
+- **Praktični projekti**: Terrarium, Igra tipkanja, Razširitev brskalnika, Igra v vesolju, Bančni app, Urejevalnik kode in AI klepetalni pomočnik
+- **Interaktivni kvizi**: 48 kvizov s po 3 vprašanji (pred/po lekciji)
+- **Večjezična podpora**: avtomatski prevodi za več kot 50 jezikov preko GitHub Actions
 - **Tehnologije**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (za AI projekte)
 
 ### Arhitektura
 
-- Izobraževalni repozitorij z lekcijsko strukturo
-- Vsaka mapa lekcij vsebuje README, kode primere in rešitve
-- Samostojni projekti v ločenih imenikih (quiz-app, različni lekcijski projekti)
-- Sistem prevajanja preko GitHub Actions (co-op-translator)
-- Dokumentacija na voljo preko Docsify in kot PDF
+- Izobraževalni repozitorij z organizacijo po lekcijah
+- Vsaka mapa lekcije vsebuje README, primere kode in rešitve
+- Samostojni projekti v ločenih imenikih (quiz-app, različni projekti lekcij)
+- Sistem za prevode z uporabo GitHub Actions (co-op-translator)
+- Dokumentacija gostovana preko Docsify in na voljo tudi kot PDF
 
 ## Ukazi za nastavitev
 
-Ta repozitorij je namenjen predvsem za uporabo izobraževalne vsebine. Za delo z določenimi projekti:
+Ta repozitorij je namenjen predvsem za porabo izobraževalne vsebine. Za delo s specifičnimi projekti:
 
 ### Nastavitev glavnega repozitorija
 
@@ -36,17 +36,17 @@ cd Web-Dev-For-Beginners
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Začni razvojni strežnik
-npm run build      # Zgradi za produkcijo
+npm run dev        # Zaženi razvojni strežnik
+npm run build      # Izgradi za produkcijo
 npm run lint       # Zaženi ESLint
 ```
 
-### Bančni API projekt (Node.js + Express)
+### Bančni projekt API (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Zaženi API strežnik
+npm start          # Začni API strežnik
 npm run lint       # Zaženi ESLint
 npm run format     # Oblikuj s Prettierjem
 ```
@@ -56,10 +56,10 @@ npm run format     # Oblikuj s Prettierjem
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Sledite navodilom za nalaganje razširitev, specifičnih za brskalnik
+# Sledite navodilom za nalaganje razširitev, značilnih za brskalnik
 ```
 
-### Projekti igre vesolja
+### Projekti igre v vesolju
 
 ```bash
 cd 6-space-game/solution
@@ -67,42 +67,42 @@ npm install
 # Odprite index.html v brskalniku ali uporabite Live Server
 ```
 
-### Klepetalni projekt (Python backend)
+### Klepetalni projekt (Python Backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# Nastavi okoljsko spremenljivko GITHUB_TOKEN
+# Nastavite okoljsko spremenljivko GITHUB_TOKEN
 python api.py
 ```
 
-## Razvojni potek
+## Razvojni potek dela
 
 ### Za prispevatele vsebine
 
-1. **Razvezi repozitorij** na svoj GitHub račun
-2. **Nakloni svoj razvejani repozitorij** lokalno
-3. **Ustvari novo vejo** za svoje spremembe
-4. Spremeni lekcijsko vsebino ali kode primere
-5. Testiraj spremembe kode v ustreznih projektnih mapah
-6. Pošlji pull requeste v skladu s pravili prispevkov
+1. **Forkajte repozitorij** v svoj GitHub račun
+2. **Klonirajte svoj fork** lokalno
+3. **Ustvarite novo vejo** za svoje spremembe
+4. Naredite spremembe lekcijske vsebine ali primerov kode
+5. Testirajte spremembe kode v ustreznih projektnih mapah
+6. Oddajte pull requeste v skladu s pravili prispevkov
 
 ### Za učence
 
-1. Razvezi ali nakloni repozitorij
-2. Postopno pojdi skozi mape lekcij
-3. Preberi README datoteke za vsako lekcijo
-4. Izpolni pred-lekcijske kvize na https://ff-quizzes.netlify.app/web/
-5. Delo po primerih kode v lekcijskih mapah
-6. Reši naloge in izzive
-7. Izpolni po-lekcijske kvize
+1. Forkajte ali klonirajte repozitorij
+2. Postopoma pregledujte mape lekcij
+3. Berite README datoteke za vsako lekcijo
+4. Opravite pred-lesson kvize na https://ff-quizzes.netlify.app/web/
+5. Preizkusite primere kode v mapah lekcij
+6. Izpolnite naloge in izzive
+7. Opravite post-lesson kvize
 
 ### Živ razvoj
 
-- **Dokumentacija**: Zaženi `docsify serve` v korenskem imeniku (vrata 3000)
-- **Quiz App**: Zaženi `npm run dev` v mapi quiz-app
-- **Projekti**: Uporabi VS Code Live Server razširitev za HTML projekte
-- **API projekti**: Zaženi `npm start` v ustreznih API mapah
+- **Dokumentacija**: Zaženite `docsify serve` v korenski mapi (port 3000)
+- **Quiz App**: Zaženite `npm run dev` v mapi quiz-app
+- **Projekti**: Uporabite VS Code Live Server extension za HTML projekte
+- **API projekti**: Zaženite `npm start` v ustreznih API mapah
 
 ## Navodila za testiranje
 
@@ -110,82 +110,82 @@ python api.py
 
 ```bash
 cd quiz-app
-npm run lint       # Preveri težave s slogom kode
-npm run build      # Preveri, ali je izdelava uspešna
+npm run lint       # Preverite težave s slogom kode
+npm run build      # Potrdite uspešnost gradnje
 ```
 
 ### Testiranje Bank API
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Preveri morebitne težave s slogom kode
-node server.js     # Preveri, ali se strežnik zažene brez napak
+npm run lint       # Preveri težave s slogom kode
+node server.js     # Preveri, ali strežnik zažene brez napak
 ```
 
 ### Splošen pristop k testiranju
 
-- Gre za izobraževalni repozitorij brez celovitih avtomatiziranih testov
-- Ročno testiranje fokusira na:
-  - Kode primere delujejo brez napak
+- To je izobraževalni repozitorij brez obsežnih avtomatiziranih testov
+- Ročno testiranje se osredotoča na:
+  - Primeri kode naj se izvajajo brez napak
   - Povezave v dokumentaciji delujejo pravilno
-  - Projekti se uspešno zgradijo
+  - Projekti naj se uspešno zgradijo
   - Primeri sledijo najboljšim praksam
 
-### Kontrole pred oddajo
+### Preverjanje pred oddajo
 
-- Zaženi `npm run lint` v mapah s package.json
-- Preveri, da so oznake v markdown povezavah veljavne
-- Testiraj kode primere v brskalniku ali Node.js
-- Preveri, da prevodi ohranjajo pravilno strukturo
+- Zaženite `npm run lint` v mapah z package.json
+- Preverite veljavnost markdown povezav
+- Testirajte primere kode v brskalniku ali Node.js
+- Preverite, da prevodi ohranjajo pravilno strukturo
 
-## Smernice za slog kode
+## Smernice za stil kode
 
 ### JavaScript
 
-- Uporabljaj sodobno ES6+ sintakso
-- Sledi standardnim ESLint konfiguracijam, ki so v projektih
-- Uporabljaj pomenljive imena spremenljivk in funkcij za jasno učenje
-- Dodaj komentarje za razlago konceptov učencem
-- Oblikuj po Prettier kjer je konfiguriran
+- Uporabljajte sodobno ES6+ sintakso
+- Sledite standardnim ESLint nastavitvam, ki so v projektih
+- Uporabljajte smiselne imena spremenljivk in funkcij za jasnost izobraževanja
+- Dodajte komentarje, ki pojasnjujejo koncepte za učence
+- Oblikujte kodo s Prettier tam, kjer je konfiguriran
 
 ### HTML/CSS
 
 - Semantični HTML5 elementi
-- Principi odzivnega dizajna
-- Jasne konvencije imenovanja razredov
+- Principi odzivnega oblikovanja
+- Jasne konvencije za poimenovanje razredov
 - Komentarji, ki razlagajo CSS tehnike za učence
 
 ### Python
 
-- Smernice sloga PEP 8
-- Jasni, izobraževalni kode primeri
-- Tipni namigi tam, kjer so uporabni za učenje
+- Smernice stila PEP 8
+- Jasni, izobraževalni primeri kode
+- Tipični namigi, kjer so koristni za učenje
 
 ### Markdown dokumentacija
 
 - Jasna hierarhija naslovov
-- Bloki kode z določanjem jezika
+- Bloki kode z določenim jezikom
 - Povezave do dodatnih virov
-- Posnetki zaslona in slike v mapah `images/`
-- Alt besedilo za slike za dostopnost
+- Posnetki zaslona in slike v `images/` mapah
+- Alt besedilo za slike zaradi dostopnosti
 
 ### Organizacija datotek
 
-- Lekcije oštevilčene zaporedno (1-getting-started-lessons, 2-js-basics, itd.)
+- Lekcije oštevilčene zaporedno (1-getting-started-lessons, 2-js-basics itd.)
 - Vsak projekt ima `solution/` in pogosto `start/` ali `your-work/` mape
 - Slike shranjene v lekcijsko specifičnih `images/` mapah
-- Prevodi v `translations/{language-code}/` strukturi
+- Prevedene različice v `translations/{language-code}/` strukturi
 
-## Gradnja in implementacija
+## Gradnja in uvajanje
 
-### Implementacija Quiz App (Azure Static Web Apps)
+### Uvajanje Quiz App (Azure Static Web Apps)
 
-Quiz-app je konfiguriran za implementacijo Azure Static Web Apps:
+Quiz-app je konfiguriran za uvajanje v Azure Static Web Apps:
 
 ```bash
 cd quiz-app
 npm run build      # Ustvari mapo dist/
-# Izvede namestitev preko GitHub Actions delovnega toka ob pushu na main
+# Izvede namestitev prek GitHub Actions poteka ob pushanju na main
 ```
 
 Konfiguracija Azure Static Web Apps:
@@ -197,7 +197,7 @@ Konfiguracija Azure Static Web Apps:
 
 ```bash
 npm install                    # Namestite docsify-to-pdf
-npm run convert               # Ustvarite PDF iz docs
+npm run convert               # Ustvari PDF iz dokumentacije
 ```
 
 ### Dokumentacija Docsify
@@ -207,76 +207,76 @@ npm install -g docsify-cli    # Namestite Docsify globalno
 docsify serve                 # Postrežite na localhost:3000
 ```
 
-### Gradnje specifične za projekt
+### Specifični projekti - gradnje
 
-Vsaka projektna mapa ima lahko svoj build proces:
+Vsaka projektna mapa lahko ima svoj postopek gradnje:
 - Vue projekti: `npm run build` ustvari produkcijske pakete
-- Statični projekti: brez gradnje, datoteke streže neposredno
+- Statični projekti: brez gradbenega koraka, datoteke so služene neposredno
 
 ## Pravila za pull requeste
 
-### Format naslova
+### Oblika naslova
 
-Uporabi jasne, opisne naslove, ki označujejo področje spremembe:
+Uporabljajte jasne, opisne naslove, ki označujejo področje spremembe:
 - `[Quiz-app] Dodaj nov kviz za lekcijo X`
-- `[Lesson-3] Popravi tipkarsko napako v projektu terrarium`
+- `[Lesson-3] Popravi tipkarsko napako v terrarium projektu`
 - `[Translation] Dodaj španski prevod za lekcijo 5`
-- `[Docs] Posodobi navodila za namestitev`
+- `[Docs] Posodobi navodila za nastavitev`
 
 ### Obvezne kontrole
 
-Pred pošiljanjem PR:
+Pred oddajo PR:
 
 1. **Kakovost kode**:
-   - Zaženi `npm run lint` v prizadetih projektnem mapah
-   - Odpravi vse napake in opozorila
+   - Zaženite `npm run lint` v prizadetih projektnih mapah
+   - Odpravite vse napake in opozorila
 
 2. **Preverjanje gradnje**:
-   - Zaženi `npm run build`, če je potrebno
-   - Poskrbi, da ni napak pri gradnji
+   - Zaženite `npm run build`, če velja
+   - Zagotovite, da ni napak pri gradnji
 
 3. **Preverjanje povezav**:
-   - Preizkusi vse markdown povezave
-   - Potrdi, da reference slik delujejo
+   - Testirajte vse markdown povezave
+   - Preverite, da slike delujejo
 
 4. **Pregled vsebine**:
-   - Preveri črkovanje in slovnico
-   - Zagotovi pravilnost in poučnost kode primerov
-   - Preveri, da prevodi ohranjajo prvotni pomen
+   - Preverite pravopis in slovnico
+   - Zagotovite pravilnost in izobraževalno vrednost primerov kode
+   - Preverite, da prevodi ohranjajo pomen
 
-### Zahteve za prispevek
+### Zahteve za prispevanje
 
-- Sprejmi Microsoft CLA (samodejni pregled ob prvem PR)
-- Sledi [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- Preglej [CONTRIBUTING.md](./CONTRIBUTING.md) za podrobna pravila
-- V opisu PR navajaj številke issue-jev, če je potrebno
+- Strinjajte se z Microsoft CLA (avtomatski pregled ob prvem PR)
+- Sledite [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- Preberite [CONTRIBUTING.md](./CONTRIBUTING.md) za podrobne smernice
+- Navedite številke vprašanj v opisu PR, če je potrebno
 
 ### Proces pregleda
 
-- PR pregledujejo vzdrževalci in skupnost
-- Prednost ima jasnost za učenje
-- Code primere naj sledijo najboljšim praksam
-- Prevode pregledajo glede natančnosti in ustreznosti
+- PR-e pregledajo vzdrževalci in skupnost
+- Prednost ima jasnost izobraževanja
+- Primeri kode naj sledijo najboljšim aktualnim praksam
+- Prevodi se pregledajo zaradi natančnosti in kulturne ustreznosti
 
 ## Sistem prevajanja
 
-### Avtomatiziran prevod
+### Avtomatski prevod
 
 - Uporablja GitHub Actions s co-op-translator delovnim tokom
-- Samodejno prevaja v več kot 50 jezikov
-- Izvorne datoteke v glavnih mapah
+- Prevede v več kot 50 jezikov samodejno
+- Izvorne datoteke v glavnih imenikih
 - Prevedene datoteke v `translations/{language-code}/` mapah
 
 ### Dodajanje ročnih izboljšav prevoda
 
-1. Poišči datoteko v `translations/{language-code}/`
-2. Izboljšaj prevod ob ohranitvi strukture
-3. Poskrbi, da so primeri kode še vedno funkcionalni
-4. Testiraj lokalizirano vsebino kviza
+1. Poiščite datoteko v `translations/{language-code}/`
+2. Naredite izboljšave ob ohranitvi strukture
+3. Poskrbite, da primeri kode ostanejo funkcionalni
+4. Testirajte lokalizirano vsebino kvizov
 
 ### Metapodatki prevoda
 
-Prevedene datoteke vključujejo meta podatkovni glavi:
+Prevedene datoteke vključujejo metapodatkovno glavo:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,120 +289,120 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Odpravljanje napak in reševanje težav
+## Odpravljanje napak in težav
 
 ### Pogoste težave
 
-**Quiz app se ne zažene**:
-- Preveri verzijo Node.js (priporočeno v14+)
-- Izbriši `node_modules` in `package-lock.json`, nato zaženi `npm install`
-- Preveri konflikte vrat (privzeto: Vite uporablja vrata 5173)
+**Quiz app ne začne delovati**:
+- Preverite različico Node.js (priporočeno v14+)
+- Izbrišite `node_modules` in `package-lock.json`, nato ponovno zaženite `npm install`
+- Preverite konflikte vrat (privzeto: Vite uporablja vrata 5173)
 
 **API strežnik se ne zažene**:
-- Preveri, če je Node.js verzija vsaj 10 ali višja
-- Preveri, ali vrat že niso zasedena
-- Zagotovi, da so vse odvisnosti nameščene z `npm install`
+- Preverite, da je Node.js verzija vsaj 10
+- Preverite, ali vrata že niso zasedena
+- Prepričajte se, da so vse odvisnosti nameščene z `npm install`
 
 **Razširitev brskalnika se ne naloži**:
-- Preveri, ali je manifest.json pravilno oblikovan
-- Preveri konzolo brskalnika za napake
-- Sledi navodilom za namestitev razširitve za določen brskalnik
+- Preverite pravilno oblikovanje manifest.json
+- Preverite konzolo brskalnika za napake
+- Sledite navodilom za namestitev specifičnim za brskalnik
 
 **Težave s Python klepetalnim projektom**:
-- Preveri, da je paket OpenAI nameščen: `pip install openai`
-- Preveri, da je okoljska spremenljivka GITHUB_TOKEN nastavljena
-- Preveri pravice dostopa do GitHub modelov
+- Preverite, da je nameščena knjižnica OpenAI: `pip install openai`
+- Preverite, da je okoljska spremenljivka GITHUB_TOKEN nastavljena
+- Preverite dovoljenja za dostop do GitHub Models
 
 **Docsify ne streže dokumentacije**:
-- Namesti docsify-cli globalno: `npm install -g docsify-cli`
-- Zaženi iz korenskega imenika repozitorija
-- Preveri, da obstaja `docs/_sidebar.md`
+- Namestite docsify-cli globalno: `npm install -g docsify-cli`
+- Zaženite iz korenske mape repozitorija
+- Preverite, da obstaja `docs/_sidebar.md`
 
 ### Nasveti za razvojno okolje
 
-- Uporabljaj VS Code z Live Server razširitvijo za HTML projekte
-- Namesti razširitve ESLint in Prettier za konsistentno oblikovanje
-- Uporabljaj DevTools v brskalniku za razhroščevanje JavaScript
-- Za Vue projekte namesti Vue DevTools razširitev za brskalnik
+- Uporabljajte VS Code z Live Server razširitvijo za HTML projekte
+- Namestite ESLint in Prettier razširitve za enotno oblikovanje
+- Uporabljajte brskalniška orodja za odpravljanje napak v JavaScriptu
+- Za Vue projekte namestite Vue DevTools razširitev za brskalnik
 
-### Razmišljanja o zmogljivosti
+### Razmisleki o zmogljivosti
 
-- Veliko število prevedenih datotek (50+) pomeni, da so polne kopije velike
-- Uporabi plitvo kloniranje, če delaš samo z vsebino: `git clone --depth 1`
-- Izključi prevode iz iskanj pri delu z angleško vsebino
-- Proces gradnje je lahko počasnejši ob prvem zagonu (npm install, Vite build)
+- Veliko število prevedenih datotek (več kot 50 jezikov) pomeni, da so kloni veliki
+- Uporabite plitek klon, če delate samo na vsebini: `git clone --depth 1`
+- Izključite prevode iz iskanja, če delate na angleški vsebini
+- Gradbeni postopki so lahko počasni ob prvem zagonu (npm install, Vite build)
 
 ## Varnostni vidiki
 
 ### Okoljske spremenljivke
 
-- Ključi API nikoli ne smejo biti s pomočjo commit-a v repozitoriju
-- Uporabljaj `.env` datoteke (že v `.gitignore`)
-- Zahtevane okoljske spremenljivke dokumentiraj v README projektov
+- API ključi se nikoli ne smejo oddajati v repozitorij
+- Uporabljajte `.env` datoteke (že vključeno v `.gitignore`)
+- Dokumentirajte potrebne okoljske spremenljivke v README-ih posameznih projektov
 
 ### Python projekti
 
-- Uporabljaj virtualna okolja: `python -m venv venv`
-- Ohrani odvisnosti posodobljene
-- GitHub žetoni naj imajo minimalne potrebne pravice
+- Uporabljajte virtualna okolja: `python -m venv venv`
+- Ohranjajte odvisnosti posodobljene
+- GitHub žetoni naj imajo minimalna potrebna dovoljenja
 
-### Dostop do GitHub modelov
+### Dostop do GitHub Modelov
 
-- Osebni dostopni žetoni (PAT) so potrebni za GitHub modele
-- Žetoni naj bodo shranjeni kot okoljske spremenljivke
-- Nikoli ne nastavljaj žetonov ali poverilnic v repozitorij
+- Potrebni so osebni dostopni žetoni (PAT) za GitHub Models
+- Žetone shranjujte kot okoljske spremenljivke
+- Žetoni ali poverilnice nikoli ne smejo biti oddani
 
 ## Dodatne opombe
 
 ### Ciljna publika
 
 - Popolni začetniki v spletni razvoj
-- Študentje in samouki
-- Učitelji, ki uporabljajo kurikulum v razredih
-- Vsebina je zasnovana za dostopnost in postopno pridobivanje veščin
+- Študenti in samouki
+- Učitelji, ki uporabljajo kurikulum v razredu
+- Vsebina je zasnovana za dostopnost in postopno nadgrajevanje znanja
 
 ### Izobraževalna filozofija
 
-- Pristop učenja preko projektov
-- Pogoste preveritve znanja (kvizi)
-- Praktične vaje s kodiranjem
-- Resnični primeri uporabe
-- Osredotočanje na osnove pred okvirji
+- Projektno usmerjen pristop k učenju
+- Pogoste kontrole znanja (kvizi)
+- Praktične vaje s kodo
+- Primeri uporabe iz resničnega sveta
+- Osredotočenost na osnove pred okviri
 
 ### Vzdrževanje repozitorija
 
-- Aktivna skupnost učencev in prispevkov
+- Aktivna skupnost učencev in prispevateľev
 - Redne posodobitve odvisnosti in vsebine
-- Spremljanje težav in razprav s strani vzdrževalcev
-- Avtomatizirane posodobitve prevodov preko GitHub Actions
+- Spremljanje vprašanj in razprav s strani vzdrževalcev
+- Samodejne posodobitve prevodov preko GitHub Actions
 
 ### Sorodni viri
 
-- [Moduli Microsoft Learn](https://docs.microsoft.com/learn/)
-- [Viri Student Hub](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) priporočen za učence
-- Dodatni tečaji: Generativna AI, Data Science, ML, IoT kurikulumi na voljo
+- [Microsoft Learn moduli](https://docs.microsoft.com/learn/)
+- [Student Hub viri](https://docs.microsoft.com/learn/student-hub/)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) priporočeno za učence
+- Dodatni tečaji: Generativni AI, Podatkovna znanost, ML, IoT kurikulumi na voljo
 
-### Delo z določenimi projekti
+### Delo s specifičnimi projekti
 
-Za podrobna navodila o posameznih projektih glej README datoteke v:
-- `quiz-app/README.md` - Vue 3 aplikacija za kvize
-- `7-bank-project/README.md` - Bančna aplikacija z avtentikacijo
-- `5-browser-extension/README.md` - Razvoj brskalniške razširitve
+Za podrobna navodila o posameznih projektih glejte README datoteke:
+- `quiz-app/README.md` - Vue 3 aplikacija kviza
+- `7-bank-project/README.md` - Bančna aplikacija z autentikacijo
+- `5-browser-extension/README.md` - Razvoj razširitve brskalnika
 - `6-space-game/README.md` - Razvoj igre na platnu (canvas)
-- `9-chat-project/README.md` - AI klepetalni asistent
+- `9-chat-project/README.md` - Projekt AI klepetalnega pomočnika
 
-### Struktura monorepoja
+### Struktura Monorepo
 
-Čeprav ni tradicionalni monorepo, ta repozitorij vsebuje več samostojnih projektov:
+Čeprav ni tipični monorepo, ta repozitorij vsebuje več neodvisnih projektov:
 - Vsaka lekcija je samostojna
-- Projekti ne uporabljajo skupnih odvisnosti
+- Projekti ne delijo odvisnosti
 - Delo na posameznih projektih brez vpliva na druge
-- Nakloni celoten repozitorij za popolno izkušnjo kurikuluma
+- Klonirajte celoten repozitorij za celotno izkušnjo kurikuluma
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatski prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije je priporočljivo uporabiti strokovni človeški prevod. Nismo odgovorni za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+**Opozorilo**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Kljub prizadevanjem za natančnost vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku naj velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne prevzemamo nobene odgovornosti.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
