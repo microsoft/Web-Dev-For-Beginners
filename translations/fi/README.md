@@ -2,7 +2,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
 [![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 
 [![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
@@ -12,191 +12,193 @@
 
 # Verkkokehitys aloittelijoille - Opetussuunnitelma
 
-Opi verkkokehityksen perusteet 12 viikon kattavalla kurssillamme, jonka on kehittänyt Microsoft Cloud Advocates. Jokainen 24 oppitunnista syventyy JavaScriptiin, CSS:ään ja HTML:ään käytännön projektien kautta, kuten terrariumeihin, selaimen laajennuksiin ja avaruuspeliin. Osallistu visoihin, keskusteluihin ja käytännön tehtäviin. Kehitä taitojasi ja optimoi tiedon säilytyskykyä tehokkaan projektipohjaisen opetusmetodimme avulla. Aloita koodausmatkasi jo tänään!
+Opi verkkokehityksen perusteet kattavassa 12 viikon kurssissamme, jonka järjestävät Microsoft Cloud Advocates -tiimin jäsenet. Jokainen 24 oppitunnista sukeltaa JavaScriptiin, CSS:ään ja HTML:ään käytännön projektien, kuten terrarion, selaimen laajennusten ja avaruuspeliin, kautta. Osallistu tietokilpailuihin, keskusteluihin ja käytännön tehtäviin. Paranna taitojasi ja optimoi oppimisesi tehokkaalla projektipohjaisella opetuksellamme. Aloita koodausmatkasi tänään!
 
 Liity Azure AI Foundry Discord -yhteisöön
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Noudata näitä vaiheita päästäksesi alkuun näiden resurssien kanssa:
-1. **Haarauta repositorio**: Klikkaa [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **Kloonaa repositorio**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+Noudata näitä ohjeita aloittaaksesi näiden resurssien käytön:
+1. **Forkkaa Repository**: Klikkaa [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **Kloonaa Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 3. [**Liity Azure AI Foundry Discordiin ja tapaa asiantuntijoita ja muita kehittäjiä**](https://discord.com/invite/ByRwuEEgH4)
 
 ### 🌐 Monikielinen tuki
 
-#### Tuettu GitHub Actionin kautta (automaattinen ja aina ajan tasalla)
+#### Tuettu GitHub Actionin kautta (Automaattinen & Aina ajan tasalla)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](./README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabia](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaria](../bg/README.md) | [Burma (Myanmar)](../my/README.md) | [Kiina (yksinkertaistettu)](../zh-CN/README.md) | [Kiina (perinteinen, Hongkong)](../zh-HK/README.md) | [Kiina (perinteinen, Macao)](../zh-MO/README.md) | [Kiina (perinteinen, Taiwan)](../zh-TW/README.md) | [Kroatia](../hr/README.md) | [Tsekki](../cs/README.md) | [Tanska](../da/README.md) | [Hollanti](../nl/README.md) | [Viro](../et/README.md) | [Suomi](./README.md) | [Ranska](../fr/README.md) | [Saksa](../de/README.md) | [Kreikka](../el/README.md) | [Heprea](../he/README.md) | [Hindi](../hi/README.md) | [Unkari](../hu/README.md) | [Indonesia](../id/README.md) | [Italia](../it/README.md) | [Japani](../ja/README.md) | [Kannada](../kn/README.md) | [Korea](../ko/README.md) | [Liettua](../lt/README.md) | [Malaiji](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norja](../no/README.md) | [Persia (Farsi)](../fa/README.md) | [Puola](../pl/README.md) | [Portugali (Brasilia)](../pt-BR/README.md) | [Portugali (Portugali)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romania](../ro/README.md) | [Venäjä](../ru/README.md) | [Serbia (kyrillinen)](../sr/README.md) | [Slovakki](../sk/README.md) | [Sloveeni](../sl/README.md) | [Espanja](../es/README.md) | [Swahili](../sw/README.md) | [Ruotsi](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkki](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
 
-> **Haluatko kloonata paikallisesti?**
+> **Haluatko Kloonaa Paikallisesti?**
 
-> Tässä repositoriossa on yli 50 käännöstä, mikä lisää merkittävästi latauskoon. Jos haluat kloonata ilman käännöksiä, käytä sparse checkoutia:
+> Tämä arkisto sisältää yli 50 kielen käännöksiä, jotka lisäävät huomattavasti lataustiedoston kokoa. Jos haluat kloonata ilman käännöksiä, käytä sparse checkout:a:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
 > cd Web-Dev-For-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Tämä antaa sinulle kaiken, mitä tarvitset kurssin suorittamiseen huomattavasti nopeammalla latauksella.
+> Tämä antaa sinulle kaiken tarvittavan kurssin suorittamiseen paljon nopeammalla latauksella.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**Jos haluat lisätä tuettuja käännöskieliä, ne on listattu [tässä](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**Jos haluat lisätä lisää käännettyjä kieliä, tuetut kielet löytyvät [täältä](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
-[![Avaa Visual Studio Codessa](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Avaa%20Visual%20Studio%20Codessa&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Avaa Visual Studio Codessa](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _Oletko opiskelija?_
 
-Vieraile [**Student Hub -sivulla**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), josta löydät aloittelijan resurssit, opiskelijapaketit ja jopa tapoja saada ilmainen sertifikaattikuponki. Tämä on sivu, jonka haluat tallentaa kirjanmerkkeihin ja tarkistaa säännöllisesti, sillä sisältöä vaihdetaan kuukausittain.
+Vieraile [**Student Hub -sivulla**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), josta löydät aloittelijan resurssit, opiskelijapaketit ja jopa tapoja saada ilmainen sertifikaattivoucher. Tämä on sivu, jonka haluat tallentaa kirjanmerkkeihin ja tarkistaa silloin tällöin, sillä sisältömme vaihtuu kuukausittain.
 
-### 📣 Ilmoitus – Uusia GitHub Copilot Agent -tilan haasteita suoritettavaksi!
+### 📣 Ilmoitus - Uudet GitHub Copilot Agent -tilahaasteet suoritettavaksi!
 
-Uusi haaste lisätty, katso "GitHub Copilot Agent Challenge 🚀" useimmista luvuista. Tämä on uusi haaste, jonka voit suorittaa käyttämällä GitHub Copilotia ja Agent-tilaa. Jos et ole aiemmin käyttänyt Agent-tilaa, se pystyy paitsi generoimaan tekstiä, myös luomaan ja muokkaamaan tiedostoja, suorittamaan komentoja ja muuta.
+Uusi haaste lisätty, etsi "GitHub Copilot Agent Challenge 🚀" useimmista luvuista. Tämä on uusi haaste sinulle, joka suoritetaan käyttämällä GitHub Copilotia ja Agent-tilaa. Jos et ole käyttänyt Agent-tilaa aiemmin, se pystyy paitsi tuottamaan tekstiä, myös luomaan ja muokkaamaan tiedostoja, suorittamaan komentoja ja muuta.
 
-### 📣 Ilmoitus – _Uusi generatiiviseen tekoälyyn perustuva projekti rakennettavaksi_
+### 📣 Ilmoitus - _Uusi Generatiivisen tekoälyn projekti rakennettavaksi_
 
-Uusi AI-avustajaprojekti juuri lisätty, tutustu [projektiin](./9-chat-project/README.md)
+Uusi tekoälyavustajaprojekti juuri lisätty, tutustu [projektiin](./9-chat-project/README.md)
 
-### 📣 Ilmoitus – _Uusi Generative AI -opetussuunnitelma JavaScriptille julkaistu_
+### 📣 Ilmoitus - _Uusi opetussuunnitelma_ Generatiivisesta tekoälystä JavaScriptille juuri julkaistu
 
 Älä jää paitsi uudesta Generative AI -opetussuunnitelmastamme!
 
-Aloita [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
+Aloita osoitteessa [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
 ![Tausta](../../translated_images/fi/background.148a8d43afde5730.webp)
 
-- Oppitunteja perusteista RAG-malliin asti.
-- Keskustele historiallisten hahmojen kanssa GenAI:n ja kumppanisovelluksemme avulla.
-- Hauska ja mukaansatempaava tarinankerronta, matkustat ajassa!
+- Oppitunteja kaikesta alkeista RAG:iin asti.
+- Ole vuorovaikutuksessa historiallisten hahmojen kanssa GenAI:n ja kumppanisovelluksemme avulla.
+- Hauska ja mukaansatempaava kertomus, matkustat ajassa!
 
 ![hahmo](../../translated_images/fi/character.5c0dd8e067ffd693.webp)
 
 
-Jokainen oppitunti sisältää tehtävän suoritettavaksi, tietokokeen ja haasteen, jotka ohjaavat sinua oppimaan aiheita, kuten:
-- Promptauksen ja promptinsuunnittelun perusteet
-- Teksti- ja kuvapohjaiset sovellukset
+Jokaisessa oppitunnissa on suoritettava tehtävä, tietotarkistus ja haaste, jotka ohjaavat sinua oppimaan aiheista kuten:
+- Kehote ja kehotteen suunnittelu
+- Tekstin ja kuvan sovellustuotanto
 - Hakusovellukset
 
-Aloita täällä: [https://aka.ms/genai-js-course](../../[https:/aka.ms/genai-js-course)
+Aloita osoitteessa [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
+
+
 
 ## 🌱 Aloittaminen
 
-> **Opettajat**, olemme [sisällyttäneet ehdotuksia](for-teachers.md) tämän opetussuunnitelman käyttöön. Toivomme palautettasi [keskustelufoorumissamme](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Opettajat**, olemme [sisällyttäneet joitain ehdotuksia](for-teachers.md) tämän opetussuunnitelman käytöstä. Haluaisimme saada palautettanne [keskustelufoorumissamme](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Oppijat](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, aloita jokainen oppitunti ennakkokyselyllä ja jatka luentomateriaalin lukemisella, suorita erilaiset aktiviteetit ja testaa ymmärryksesi jälkikyselyllä.
+**[Oppijat](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, aloita jokainen oppitunti ennakkotietovisalla ja jatka sitten luentomateriaalin lukemiseen, erilaisten aktiviteettien suorittamiseen ja ymmärryksesi tarkistamiseen luennon jälkeisellä visalla.
 
-Paranna oppimiskokemustasi liittymällä vertaistesi seuraan projekteissa! Keskustelut ovat tervetulleita [keskustelufoorumillamme](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), jossa moderaattoritiimimme vastaa kysymyksiisi.
+Parantaaksesi oppimiskokemustasi, ota yhteyttä muihin oppijoihin työskennelläksesi projekteissa yhdessä! Keskusteluja kannustetaan [keskustelufoorumissamme](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), jossa moderaattoritiimimme on valmiina vastaamaan kysymyksiisi.
 
-Syvennä osaamistasi tutustumalla myös [Microsoft Learniin](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) lisäopetusmateriaaleja varten.
+Jatka opiskelua tutustumalla suositelloimme [Microsoft Learning -materiaaleihin](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon).
 
-### 📋 Ympäristön asennus
+### 📋 Ympäristön asettaminen
 
-Tämän opetussuunnitelman kehitysympäristö on valmiina! Aloittaessasi voit valita suorittaa opetussuunnitelman [Codespacessa](https://github.com/features/codespaces/) (_selaimessa toimiva, ei asennuksia vaativa ympäristö_) tai paikallisesti tietokoneellasi tekstieditorilla, kuten [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Tässä opetussuunnitelmassa on kehitysympäristö valmiina käyttöön! Alkaessasi voit valita suorittaa opetussuunnitelman [Codespacessa](https://github.com/features/codespaces/) (selainsovellus, johon ei tarvitse asentaa mitään) tai paikallisesti tietokoneella tekstieditorilla, kuten [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
 #### Luo oma repositoriosi
-Jotta voit helposti tallentaa työsi, suosittelemme luomaan oman kopion tästä repositoriosta. Voit tehdä tämän painamalla sivun yläreunassa olevaa **Use this template** -painiketta. Tämä luo uuden repositorion GitHub-tilillesi, joka sisältää kopion opetussuunnitelmasta.
+Jotta voit helposti tallentaa työsi, on suositeltavaa luoda oma kopiosi tästä repositoriosta. Voit tehdä tämän napsauttamalla sivun yläreunassa olevaa **Use this template** -painiketta. Tämä luo uuden repositorion GitHub-tilillesi opetussuunnitelman kopion kera.
 
 Noudata näitä ohjeita:
-1. **Haarauta repositorio**: Klikkaa tämän sivun oikeassa yläkulmassa olevaa "Fork"-painiketta.
-2. **Kloonaa repositorio**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+1. **Forkkaa Repository**: Klikkaa "Fork" -painiketta tämän sivun oikeassa yläkulmassa.
+2. **Kloonaa Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Opetussuunnitelman suorittaminen Codespacessa
+#### Suorita opetussuunnitelma Codespacessa
 
-Oman kopion repositoriosta luomasi jälkeen napsauta **Code**-painiketta ja valitse **Open with Codespaces**. Tämä luo sinulle uuden Codespace-ympäristön työskennellä.
+Oman kopiosi repositoriosta, jonka loit, klikkaa **Code** -painiketta ja valitse **Open with Codespaces**. Tämä luo uuden Codespacen, jossa voit työskennellä.
 
 ![Codespace](../../translated_images/fi/createcodespace.0238bbf4d7a8d955.webp)
 
-#### Opetussuunnitelman suorittaminen paikallisesti tietokoneellasi
+#### Suorita opetussuunnitelma paikallisesti tietokoneellasi
 
-Jos haluat suorittaa opetussuunnitelman paikallisesti tietokoneellasi, tarvitset tekstieditorin, selaimen ja komentorivityökalun. Ensimmäinen oppituntimme, [Johdanto ohjelmointikieliin ja työkaluihin](../../1-getting-started-lessons/1-intro-to-programming-languages), opastaa sinut eri vaihtoehtojen pariin, jotta voit valita itsellesi sopivimmat työkalut.
+Suorittaaksesi opetussuunnitelman paikallisesti tarvitset tekstieditorin, selaimen ja komentorivityökalun. Ensimmäinen oppituntimme, [Ohjelmointikielien ja työkalujen perusasioiden esittely](../../1-getting-started-lessons/1-intro-to-programming-languages), opastaa sinua erilaisten näiden työkalujen vaihtoehtojen valinnassa.
 
-Suosittelemme käyttämään tekstieditorina [Visual Studio Codea](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon), joka sisältää myös sisäänrakennetun [Komentorivin](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Voit ladata Visual Studio Coden [tästä](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Suosituksemme on käyttää tekstieditorina [Visual Studio Codea](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon), jossa on myös sisäänrakennettu [Komentorivi](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Voit ladata Visual Studio Coden [tästä](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-1. Kloonaa oma repositorio tietokoneellesi. Voit tehdä tämän klikkaamalla **Code**-painiketta ja kopioimalla URL-osoitteen:
+1. Kloonaa oma repositoriosi tietokoneellesi. Voit tehdä tämän napsauttamalla **Code** -painiketta ja kopioimalla URL-osoitteen:
 
     [CodeSpace](./images/createcodespace.png)
-    Sitten avaa [Pääte](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) Visual Studio Codessa [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ja suorita seuraava komento korvaten `<your-repository-url>` juuri kopioimallasi URL-osoitteella:
+    Avaa sitten [Terminaali](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) [Visual Studio Codessa](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ja suorita seuraava komento korvaten `<your-repository-url>` juuri kopioimallasi URL-osoitteella:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Avaa kansio Visual Studio Codessa. Voit tehdä tämän valitsemalla **Tiedosto** > **Avaa kansio** ja valitsemalla juuri kloonaamasi kansion.
+2. Avaa kansio Visual Studio Codessa. Voit tehdä tämän napsauttamalla **Tiedosto** > **Avaa kansio** ja valitsemalla juuri kloonaamasi kansion.
 
 
 > Suositellut Visual Studio Code -laajennukset:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - esikatsele HTML-sivuja suoraan Visual Studio Codessa
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - auttaaksesi sinua kirjoittamaan koodia nopeammin
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - HTML-sivujen esikatseluun Visual Studio Codessa
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - koodin kirjoittamisen nopeuttamiseen
 
 ## 📂 Jokainen oppitunti sisältää:
 
-- valinnaisen luonnosmuistion
+- valinnaisen luonnosmuistiinpanon
 - valinnaisen lisävideon
-- ennakkolämmittelykyselyn ennen oppituntia
-- kirjallisen oppitunnin
-- projektilähtöisissä oppitunneissa vaiheittaiset ohjeet projektin rakentamiseen
-- tietotestin
+- ennakkolämmittelykyselyn
+- kirjoitetun oppitunnin
+- projektipohjaisissa oppitunneissa vaiheittaiset ohjeet projektin rakentamiseen
+- tietovarmistukset
 - haasteen
 - lisälukemista
 - tehtävän
 - [oppitunnin jälkeisen kyselyn](https://ff-quizzes.netlify.app/web/)
 
-> **Huomio kyselyistä**: Kaikki kyselyt löytyvät Quiz-app-kansiosta, yhteensä 48 kyselyä joissa jokaisessa kolme kysymystä. Ne ovat saatavilla [tässä](https://ff-quizzes.netlify.app/web/). Kyselysovelluksen voi ajaa paikallisesti tai julkaista Azureen; noudata ohjeita `quiz-app`-kansiossa.
+> **Huomautus kyselyistä**: Kaikki kyselyt on koottu Quiz-app-kansioon, yhteensä 48 kyselyä, joissa kullakin on kolme kysymystä. Ne ovat saatavilla [tässä](https://ff-quizzes.netlify.app/web/). Kyselysovelluksen voi suorittaa paikallisesti tai ottaa käyttöön Azureen; noudata `quiz-app`-kansion ohjeita.
 
 ## 🗃️ Oppitunnit
 
-|     |                       Projektin nimi                       |                            Opitut käsitteet                             | Oppimistavoitteet                                                                                                                 |                                                         Linkitetty oppitunti                                                         |         Tekijä          |
-| :-: | :-------------------------------------------------------: | :--------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Aloittaminen                          |           Johdanto ohjelmointiin ja työkaluihin                        | Opettele lähes kaikkien ohjelmointikielten perusperiaatteet sekä ohjelmistot jotka auttavat ammattilaisia työnsä tekemisessä      | [Ohjelmointikielten ja työkalujen johdanto](./1-getting-started-lessons/1-intro-to-programming-languages/README.md)             |         Jasmine         |
-| 02  |                     Aloittaminen                          |             GitHubin perusteet, tiimityöskentely                       | Miten käytät GitHubia projektissasi ja teet yhteistyötä muiden kanssa koodipohjan parissa                                       |                            [GitHubin johdanto](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     Aloittaminen                          |                             Esteettömyys                               | Opi verkkosivujen esteettömyyden perusteet                                                                                       |                       [Esteettömyyden perusteet](./1-getting-started-lessons/3-accessibility/README.md)                         |       Christopher       |
-| 04  |                        JS Basics                         |                         JavaScriptin tietotyypit                        | JavaScriptin tietotyyppien perusteet                                                                                             |                                       [Tietotyypit](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        JS Basics                         |                         Funktiot ja metodit                           | Opettele funktioista ja metodeista sovelluksen logiikan hallintaan                                                             |                              [Funktiot ja metodit](./2-js-basics/2-functions-methods/README.md)                                   | Jasmine ja Christopher  |
-| 06  |                        JS Basics                         |                        Päätöksenteko JavaScriptillä                    | Opettele luomaan ehtoja koodissa päätöksentekomenetelmien avulla                                                                 |                                 [Päätöksenteko](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        JS Basics                         |                            Taulukot ja silmukat                        | Työskentele tietojen kanssa taulukkojen ja silmukoiden avulla JavaScriptissä                                                    |                                   [Taulukot ja silmukat](./2-js-basics/4-arrays-loops/README.md)                                   |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)      |                            HTML-käytännössä                            | Rakenna HTML verkossa olevaa terrariota varten, keskittyen asettelun rakentamiseen                                               |                                 [Johdanto HTML:ään](./3-terrarium/1-intro-to-html/README.md)                                  |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)      |                            CSS-käytännössä                             | Rakenna CSS tyylittämään verkossa olevaa terrariota, keskittyen CSS:n perusteisiin ja sivun responsiivisuuteen                 |                                  [Johdanto CSS:ään](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScriptin sulkeet, DOM-käsittely                  | Rakenna JavaScript terrariumin vetämis- ja pudotusliittymän toiminnalle, keskittyen sulkuihin ja DOM:n käsittelyyn               |                  [JavaScriptin sulkeet ja DOM-käsittely](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                    |           Jen           |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                         Kirjoituspelin rakentaminen                   | Opi käyttämään näppäimistötapahtumia sovelluksen logiikan ohjaamiseen                                                           |                                [Tapahtumapohjainen ohjelmointi](./4-typing-game/typing-game/README.md)                           |       Christopher       |
-| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Työskentely selainten kanssa                  | Opi miten selaimet toimivat, niiden historia sekä miten rakentaa selaimen laajennuksen ensimmäiset elementit                     |                               [Selaimista](./5-browser-extension/1-about-browsers/README.md)                                   |           Jen           |
-| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Lomakkeen rakentaminen, API-kutsu ja muuttujien tallennus paikalliseen tallennustilaan | Rakenna JavaScript-selaimen laajennuksen elementit API-kutsujen tekemiseen muuttujien avulla, jotka tallennetaan paikalliseen tallennustilaan |                   [API:t, lomakkeet ja paikallinen tallennus](./5-browser-extension/2-forms-browsers-local-storage/README.md)      |           Jen           |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |       Taustaprosessit selaimessa, verkkotehokkuus                     | Hyödynnä selaimen taustaprosesseja laajennuksen kuvakkeen hallinnassa; opi verkkotehokkuudesta ja optimoinneista                |               [Taustatehtävät ja suorituskyky](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [Space Game](./6-space-game/solution/README.md)           |            Kehittyneempi pelikehitys JavaScriptillä                   | Opi perinnöstä luokkien ja koostumuksen avulla sekä Pub/Sub-kuviosta valmistautuaksesi pelin rakentamiseen                       |                      [Johdanto kehittyneeseen pelikehitykseen](./6-space-game/1-introduction/README.md)                          |          Chris          |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                            Piirtäminen canvakselle                     | Opi Canvas API:sta, joka on käytössä ruudulle piirtämisessä                                                                     |                                [Piirtäminen canvakselle](./6-space-game/2-drawing-to-canvas/README.md)                         |          Chris          |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                      Elementtien liikuttaminen ruudulla                | Opi miten elementit liikkuvat karteesisissa koordinaateissa ja Canvas APIn avulla                                                |                           [Elementtien liikuttaminen](./6-space-game/3-moving-elements-around/README.md)                        |          Chris          |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                           Törmäyksentunnistus                         | Tee elementeistä törmäileviä ja reagoivia, käytä näppäinkomentoja ja tarjoa jäähdytysfunktio pelin toiminnan varmistamiseksi  |                              [Törmäyksentunnistus](./6-space-game/4-collision-detection/README.md)                             |          Chris          |
-| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Pisteiden laskeminen                      | Suorita matemaattisia laskutoimituksia pelin tilaan ja suoritukseen perustuen                                                     |                                    [Pisteiden laskeminen](./6-space-game/5-keeping-score/README.md)                            |          Chris          |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                        Pelin lopetus ja uudelleenkäynnistys           | Opi pelin lopettamisesta ja uudelleenkäynnistyksestä, mukaan lukien resurssien siivous ja muuttujien arvon nollaus                 |                                [Lopetusehto](./6-space-game/6-end-condition/README.md)                                        |          Chris          |
-| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 HTML-pohjat ja reitit web-sovelluksessa               | Opi luomaan monisivuisen verkkosivun arkkitehtuurin runko reitityksen ja HTML-pohjien avulla                                       |                            [HTML-pohjat ja reitit](./7-bank-project/1-template-route/README.md)                                   |          Yohan          |
-| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Kirjautumis- ja rekisteröintilomakkeen rakentaminen | Tutustu lomakkeiden rakentamiseen ja validointirutiinien käsittelyyn                                                            |                                           [Lomakkeet](./7-bank-project/2-forms/README.md)                                      |          Yohan          |
-| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Datan hakemisen ja käytön menetelmät                | Miten data virtaa sovellukseesi, miten hakea, tallentaa ja poistaa sitä                                                          |                                            [Data](./7-bank-project/3-data/README.md)                                           |          Yohan          |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Tilanhallinnan käsitteet                         | Opi miten sovelluksesi säilyttää tilansa ja hallitsee sitä ohjelmallisesti                                                       |                                [Tilanhallinta](./7-bank-project/4-state-management/README.md)                                  |          Yohan          |
-| 25 | [Selaimen/VScode koodi](../../8-code-editor) | Työskentely VScoden kanssa | Opi käyttämään koodieditoria| [Käytä VScode koodieditoria](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AI-apulaiset](./9-chat-project/README.md) | Työskentely tekoälyn kanssa | Opi rakentamaan oma tekoälyavustajasi | [AI-avustajaprojekti](./9-chat-project/README.md) | Chris |
+|     |                       Projektin nimi                       |                            Opitut käsitteet                             | Oppimistavoitteet                                                                                                                 |                                                         Linkitetty oppitunti                                                          |         Tekijä          |
+| :-: | :--------------------------------------------------------: | :--------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     Aloittaminen                           |           Johdatus ohjelmointiin ja työkaluihin                        | Opit ohjelmointikielten perustan ja ohjelmistot, jotka auttavat ammattilaiskehittäjiä työssään                                      | [Johdatus ohjelmointikieliin ja työkaluihin](./1-getting-started-lessons/1-intro-to-programming-languages/README.md)            |         Jasmine         |
+| 02  |                     Aloittaminen                           |             GitHubin perusteet, tiimityöskentely                      | Kuinka käyttää GitHubia projektissasi ja tehdä yhteistyötä muiden kanssa koodipohjassa                                            |                                  [Johdatus GitHubiin](./1-getting-started-lessons/2-github-basics/README.md)                     |          Floor          |
+| 03  |                     Aloittaminen                           |                             Saavutettavuus                            | Opit verkkosaavutettavuuden perusteet                                                                                                |                            [Saavutettavuuden perusteet](./1-getting-started-lessons/3-accessibility/README.md)                     |       Christopher       |
+| 04  |                        JS Perusteet                        |                         JavaScriptin tietotyypit                      | JavaScriptin tietotyyppien perusteet                                                                                               |                                 [Tietotyypit](./2-js-basics/1-data-types/README.md)                                              |         Jasmine         |
+| 05  |                        JS Perusteet                        |                         Funktiot ja metodit                           | Opit funktioista ja metodeista sovelluksen logiikan hallinnassa                                                                    |                                 [Funktiot ja metodit](./2-js-basics/2-functions-methods/README.md)                               | Jasmine ja Christopher  |
+| 06  |                        JS Perusteet                        |                        Päätöksenteko JS:llä                          | Opit luomaan olosuhteita koodissasi päätöksentekomenetelmien avulla                                                                 |                                [Päätöksenteko](./2-js-basics/3-making-decisions/README.md)                                     |         Jasmine         |
+| 07  |                        JS Perusteet                        |                            Taulukot ja silmukat                       | Työskentele tietojen kanssa taulukoiden ja silmukoiden avulla JavaScriptissä                                                        |                               [Taulukot ja silmukat](./2-js-basics/4-arrays-loops/README.md)                                       |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML käytännössä                           | Rakenna HTML luodaksesi online-terraariumin, keskittyen asettelun tekemiseen                                                       |                           [Johdatus HTML:ään](./3-terrarium/1-intro-to-html/README.md)                                          |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS käytännössä                            | Rakenna CSS tietoystävän terraariumin tyylittelyä varten, keskittyen CSS:n perusteisiin mukaan lukien responsiivisuus                |                            [Johdatus CSS:ään](./3-terrarium/2-intro-to-css/README.md)                                          |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript sulkeet, DOM-manipulointi                 | Rakenna JavaScript, joka mahdollistaa terraariumin toiminnan drag/drop-käyttöliittymänä, keskittyen sulkeisiin ja DOM-manipulointiin |              [JavaScript sulkeet ja DOM-manipulointi](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                      |           Jen           |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Kirjoituspelin rakentaminen                 | Opit käyttämään näppäimistötapahtumia JavaScript-sovelluksesi logiikan ohjaamiseen                                                  |                            [Tapahtumapohjainen ohjelmointi](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Selainten toiminta                          | Opit miten selaimet toimivat, niiden historian ja miten rakentaa ensimmäiset elementit selainlaajennukseen                          |                          [Tietoa selaimista](./5-browser-extension/1-about-browsers/README.md)                                   |           Jen           |
+| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Lomakkeen rakentaminen, API-kutsut ja muuttujien tallennus          | Rakenna selainlaajennukseesi JavaScript-elementit API-kutsuihin paikallisesti tallennettujen muuttujien avulla                      |                  [APIt, lomakkeet ja paikallinen tallennus](./5-browser-extension/2-forms-browsers-local-storage/README.md)        |           Jen           |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Selaintaustaprosessit, verkkosuorituskyky                   | Käytä selaimen taustaprosesseja hallitsemaan laajennuksen kuvaketta; opi verkkosuorituskyvystä ja optimointikeinoista              |           [Taustatehtävät ja suorituskyky](./5-browser-extension/3-background-tasks-and-performance/README.md)                  |           Jen           |
+| 15  |           [Space Game](./6-space-game/solution/README.md)           |             Edistyneempi pelinkehitys JavaScriptillä                | Opit periytymisestä luokkien ja komposition avulla sekä Pub/Sub-kuvioista valmistautuessasi pelin rakentamiseen                    |                   [Johdatus edistyneeseen pelinkehitykseen](./6-space-game/1-introduction/README.md)                              |          Chris          |
+| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Piirtäminen kankaalle                      | Opit Canvas API:stä, jota käytetään elementtien piirtämiseen näytölle                                                             |                               [Piirtäminen kankaalle](./6-space-game/2-drawing-to-canvas/README.md)                              |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Elementtien liikuttaminen näytöllä                 | Tutustu, miten elementit saavat liikkeen käyttäen karteesisia koordinaatteja ja Canvas API:ta                                      |                        [Elementtien liikuttaminen](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Törmäyksentunnistus                        | Tee, että elementit törmäävät ja reagoivat toisiinsa näppäinyhdistelmillä ja tarjoavat jäähdytystoiminnon pelin suorituskyvyn turvaamiseksi |                          [Törmäyksentunnistus](./6-space-game/4-collision-detection/README.md)                                   |          Chris          |
+| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Pisteiden laskeminen                    | Tee matemaattisia laskelmia pelin tilan ja suorituksen perusteella                                                                 |                                 [Pisteiden laskeminen](./6-space-game/5-keeping-score/README.md)                                  |          Chris          |
+| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Pelin lopettaminen ja uudelleenkäynnistys       | Opit pelin lopettamisesta ja uudelleenkäynnistämisestä, mukaan lukien resurssien siivous ja muuttujien arvojen nollaus               |                              [Lopetusehto](./6-space-game/6-end-condition/README.md)                                            |          Chris          |
+| 21  |         [Pankkisovellus](./7-bank-project/solution/README.md)         |                 HTML-mallit ja reitit web-sovelluksessa             | Opit luomaan monisivuisen verkkosivuston arkkitehtuurin runkoa reitityksen ja HTML-mallien avulla                                    |                          [HTML-mallit ja reitit](./7-bank-project/1-template-route/README.md)                                    |          Yohan          |
+| 22  |         [Pankkisovellus](./7-bank-project/solution/README.md)         |                  Kirjautumis- ja rekisteröitymislomakkeen rakentaminen | Opit lomakkeiden rakentamisesta ja validointirutiinien käsittelystä                                                                 |                                                     [Lomakkeet](./7-bank-project/2-forms/README.md)                         |          Yohan          |
+| 23  |         [Pankkisovellus](./7-bank-project/solution/README.md)         |                   Datan hakeminen ja käyttö                         | Kuinka data virtaa sovellukseesi, miten hakea, tallentaa ja poistaa sitä                                                          |                                                            [Data](./7-bank-project/3-data/README.md)                        |          Yohan          |
+| 24  |         [Pankkisovellus](./7-bank-project/solution/README.md)         |                      Tilanhallinnan käsitteet                       | Opit, miten sovelluksesi säilyttää tilan ja miten hallita sitä ohjelmallisesti                                                     |                                                  [Tilanhallinta](./7-bank-project/4-state-management/README.md)           |          Yohan          |
+| 25 | [Selain/VScode-koodi](../../8-code-editor) | Työskentely VScoden kanssa | Opit käyttämään koodieditoria | [Käytä VScode-koodieditoria](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI Assistants](./9-chat-project/README.md) | Työskentely tekoälyn kanssa | Opit rakentamaan oman tekoälyavustajan | [AI-avustajaprojekti](./9-chat-project/README.md) | Chris |
 
 ## 🏫 Pedagogiikka
 
-Oppimäärämme on suunniteltu kahden keskeisen pedagogisen periaatteen mukaisesti:
-* projektipohjainen oppiminen
-* säännölliset kyselyt
+Oppimateriaalimme on suunniteltu kahden keskeisen pedagogisen periaatteen pohjalta:
+* projektioppiminen
+* usein toistuvat kyselyt
 
-Ohjelma opettaa JavaScriptin, HTML:n ja CSS:n perusteet sekä viimeisimmät työkalut ja tekniikat, joita nykyiset web-kehittäjät käyttävät. Oppilaat saavat käytännön kokemusta rakentamalla kirjoituspelin, virtuaalisen terrariumin, ekologisen selaimen laajennuksen, avaruusmuukalaisaiheisen pelin ja yrityskäyttöön tarkoitetun pankkisovelluksen. Sarjan lopussa oppilaat ovat hankkineet vahvan ymmärryksen verkkokehityksestä.
+Ohjelma opettaa JavaScriptin, HTML:n ja CSS:n perusteet sekä nykyaikaisten web-kehittäjien käyttämiä työkaluja ja tekniikoita. Oppilailla on mahdollisuus kehittää käytännön taitoja rakentamalla kirjoituspeli, virtuaaliterraario, ympäristöystävällinen selainlaajennus, avaruustyyppinen peli ja liiketoiminta-pankkisovellus. Sarjan lopussa opiskelijoilla on vankka ymmärrys web-kehityksestä.
 
-> 🎓 Voit suorittaa tämän oppimäärän ensimmäiset oppitunnit Microsoft Learnin [Oppimispolun](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) kautta!
+> 🎓 Voit suorittaa tämän oppilaitoksen ensimmäiset oppitunnit [Oppimispolku](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon)-muodossa Microsoft Learnissa!
 
-Varmistamalla, että sisältö vastaa projekteja, prosessi tehdään opiskelijoille kiinnostavammaksi ja käsitteiden omaksuminen tehostuu. Kirjoitimme myös useita aloitusoppitunteja JavaScriptin perusteista esittelemään käsitteitä, jotka on yhdistetty videoon "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" -videokokoelmasta, joiden tekijöistä osa osallistui tähän oppimäärään.
+Varmistamalla sisällön yhteensopivuuden projektien kanssa prosessi tulee opiskelijoille mielekkäämmäksi ja käsitteiden omaksuminen tehostuu. Kirjoitimme myös useita aloitusoppitunteja JavaScript-perusteista käynnistämään kokonaisuuden, jotka on yhdistetty videosarjaan "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", joiden tekijät osallistuivat tähän oppimateriaalin kokoamiseen.
 
-Lisäksi kevyt kysely ennen tuntia suuntaa opiskelijan tarkoitusta oppia aihetta, ja toinen kysely tunnin jälkeen takaa lisäomaksumisen. Tämä oppimäärä on suunniteltu joustavaksi ja hauskaksi, ja sen voi suorittaa kokonaan tai osittain. Projektit alkavat pienestä ja monimutkaistuvat vähitellen 12 viikon jakson loppuun mennessä.
+Lisäksi aloituskysely luokkahuoneen edellä asettaa opiskelijan tavoitteen aiheeseen tutustumiselle, ja luokan jälkeinen toinen kysely tukee oppien säilymistä. Tämä oppimateriaali on suunniteltu joustavaksi ja hauskaksi, ja se voidaan suorittaa kokonaisuudessaan tai osittain. Projektit alkavat pienestä ja monimutkaistuvat viimeistään 12 viikon syklin loppuun mennessä.
 
-Vaikka olemme tarkoituksella välttäneet JavaScript-kehysten esittelyä keskittyäksemme perusosaamiseen, joka web-kehittäjällä tulee olla ennen kehysten käyttöönottoa, hyvä seuraava askel oppimäärän suorittamisen jälkeen olisi Node.js:n opiskeluun keskittyvä videokokoelma: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+Vaikka olemme tietoisesti välttäneet JavaScript-kehysten käyttöönottoa keskittyäksemme web-kehittäjän perusvalmiuksiin ennen kehysten omaksumista, hyvä seuraava askel tämän oppimateriaalin suorittamisen jälkeen on oppia Node.js:stä toisen videosarjan avulla: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> Tutustu [käyttäytymissääntöihimme](CODE_OF_CONDUCT.md) ja [osallistumisohjeisiin](CONTRIBUTING.md). Otamme mielellämme vastaan rakentavaa palautettasi!
+> Tutustu myös [käytösohjeisiimme](CODE_OF_CONDUCT.md) ja [osallistumisohjeisiin](CONTRIBUTING.md). Otamme mielellämme vastaan rakentavaa palautettasi!
 
 
 ## 🧭 Offline-käyttö
 
-Voit käyttää tätä dokumentaatiota offline-tilassa käyttämällä [Docsifyä](https://docsify.js.org/#/). Forkkaa tämä repositorio, [asenna Docsify](https://docsify.js.org/#/quickstart) paikalliselle koneellesi, ja aja sitten tämän repojen juuressa komentoa `docsify serve`. Verkkosivusto palvellaan portissa 3000 osoitteessa `localhost:3000`.
+Voit käyttää tätä dokumentaatiota offline-tilassa käyttämällä [Docsifya](https://docsify.js.org/#/). Haarauta tämä repo, [asenna Docsify](https://docsify.js.org/#/quickstart) paikallisesti ja kirjoita tämän repokansion juurikansiossa komento `docsify serve`. Verkkosivusto toimii portissa 3000 paikallisessa koneessasi: `localhost:3000`.
 
 ## 📘 PDF
 
@@ -204,16 +206,16 @@ Kaikkien oppituntien PDF löytyy [täältä](https://microsoft.github.io/Web-Dev
 
 
 ## 🎒 Muut kurssit
-Tiimimme tuottaa myös muita kursseja! Tutustu:
+Tiimimme tuottaa muitakin kursseja! Tutustu:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
-
+[![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
-### Azure / Edge / MCP / Agentit
+### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -221,7 +223,7 @@ Tiimimme tuottaa myös muita kursseja! Tutustu:
 
 ---
  
-### Generatiivinen AI -sarja
+### Generatiivisen tekoälyn sarja
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -229,7 +231,7 @@ Tiimimme tuottaa myös muita kursseja! Tutustu:
 
 ---
  
-### Perusopiskelu
+### Perusteet
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -248,21 +250,21 @@ Tiimimme tuottaa myös muita kursseja! Tutustu:
 
 ## Apua saamaan
 
-Jos jumitut tai sinulla on kysyttävää tekoälysovellusten rakentamisesta, liity muiden oppijoiden ja kokeneiden kehittäjien keskusteluihin MCP:stä. Se on kannustava yhteisö, jossa kysymykset ovat tervetulleita ja tietoa jaetaan vapaasti.
+Jos jumitut tai sinulla on kysyttävää tekoälysovellusten rakentamisesta, liity muiden oppijoiden ja kokeneiden kehittäjien keskusteluihin MCP:stä. Se on tukeva yhteisö, jossa kysymyksiä saa esittää ja tietoa jaetaan vapaasti.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Jos sinulla on tuotepalautetta tai rakentaessa ilmenee virheitä, käy:
+Jos sinulla on tuotteen palautetta tai kohtaat virheitä rakentamisen aikana, käy:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Lisenssi
 
-Tämä arkisto on lisensoitu MIT-lisenssillä. Lisätietoja on tiedostossa [LICENSE](../../LICENSE).
+Tämä arkisto on lisensoitu MIT-lisenssillä. Lisätietoja löytyy tiedostosta [LICENSE](../../LICENSE).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:
-Tämä asiakirja on käännetty tekoälypohjaisella käännöspalvelulla [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattikäännöksissä voi esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä tulee pitää ensisijaisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, ole hyvä ja huomioi, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulisi pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattilaisten tekemää ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinymmärryksistä tai tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

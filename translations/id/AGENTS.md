@@ -2,43 +2,43 @@
 
 ## Gambaran Proyek
 
-Ini adalah repositori kurikulum pendidikan untuk mengajarkan dasar-dasar pengembangan web kepada pemula. Kurikulum ini merupakan kursus komprehensif selama 12 minggu yang dikembangkan oleh Microsoft Cloud Advocates, dengan 24 pelajaran praktis yang mencakup JavaScript, CSS, dan HTML.
+Ini adalah repositori kurikulum pendidikan untuk mengajarkan dasar-dasar pengembangan web kepada pemula. Kurikulum ini merupakan kursus komprehensif selama 12 minggu yang dikembangkan oleh Microsoft Cloud Advocates, menampilkan 24 pelajaran praktis yang mencakup JavaScript, CSS, dan HTML.
 
 ### Komponen Utama
 
-- **Konten Pendidikan**: 24 pelajaran terstruktur yang diorganisasi ke dalam modul berbasis proyek
+- **Konten Pendidikan**: 24 pelajaran terstruktur yang disusun dalam modul berbasis proyek
 - **Proyek Praktis**: Terrarium, Permainan Mengetik, Ekstensi Browser, Permainan Luar Angkasa, Aplikasi Perbankan, Editor Kode, dan Asisten Chat AI
-- **Kuis Interaktif**: 48 kuis dengan masing-masing 3 pertanyaan (penilaian sebelum/sesudah pelajaran)
+- **Kuis Interaktif**: 48 kuis dengan 3 pertanyaan masing-masing (penilaian sebelum/sesudah pelajaran)
 - **Dukungan Multi-bahasa**: Terjemahan otomatis untuk lebih dari 50 bahasa melalui GitHub Actions
 - **Teknologi**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (untuk proyek AI)
 
 ### Arsitektur
 
-- Repositori pendidikan dengan struktur berbasis pelajaran
+- Repositori edukasi dengan struktur berbasis pelajaran
 - Setiap folder pelajaran berisi README, contoh kode, dan solusi
-- Proyek mandiri dalam direktori terpisah (quiz-app, berbagai proyek pelajaran)
-- Sistem terjemahan menggunakan GitHub Actions (co-op-translator)
-- Dokumentasi disajikan melalui Docsify dan tersedia dalam format PDF
+- Proyek mandiri di direktori terpisah (quiz-app, berbagai proyek pelajaran)
+- Sistem penerjemahan menggunakan GitHub Actions (co-op-translator)
+- Dokumentasi disajikan via Docsify dan tersedia dalam format PDF
 
-## Perintah Pengaturan
+## Perintah Setup
 
-Repositori ini terutama untuk konsumsi konten pendidikan. Untuk bekerja dengan proyek tertentu:
+Repositori ini terutama untuk konsumsi konten edukasi. Untuk bekerja dengan proyek tertentu:
 
-### Pengaturan Repositori Utama
+### Setup Repositori Utama
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Pengaturan Aplikasi Kuis (Vue 3 + Vite)
+### Setup Quiz App (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run lint       # Run ESLint
+npm run dev        # Mulai server pengembangan
+npm run build      # Bangun untuk produksi
+npm run lint       # Jalankan ESLint
 ```
 
 ### API Proyek Bank (Node.js + Express)
@@ -46,9 +46,9 @@ npm run lint       # Run ESLint
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Start API server
-npm run lint       # Run ESLint
-npm run format     # Format with Prettier
+npm start          # Mulai server API
+npm run lint       # Jalankan ESLint
+npm run format     # Format dengan Prettier
 ```
 
 ### Proyek Ekstensi Browser
@@ -56,7 +56,7 @@ npm run format     # Format with Prettier
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Follow browser-specific extension loading instructions
+# Ikuti petunjuk pemuatan ekstensi spesifik browser
 ```
 
 ### Proyek Permainan Luar Angkasa
@@ -64,7 +64,7 @@ npm install
 ```bash
 cd 6-space-game/solution
 npm install
-# Open index.html in browser or use Live Server
+# Buka index.html di browser atau gunakan Live Server
 ```
 
 ### Proyek Chat (Backend Python)
@@ -72,7 +72,7 @@ npm install
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# Set GITHUB_TOKEN environment variable
+# Atur variabel lingkungan GITHUB_TOKEN
 python api.py
 ```
 
@@ -84,68 +84,68 @@ python api.py
 2. **Clone fork Anda** secara lokal
 3. **Buat cabang baru** untuk perubahan Anda
 4. Lakukan perubahan pada konten pelajaran atau contoh kode
-5. Uji perubahan kode di direktori proyek terkait
-6. Kirim pull request sesuai panduan kontribusi
+5. Uji setiap perubahan kode di direktori proyek terkait
+6. Ajukan pull request sesuai panduan kontribusi
 
-### Untuk Pelajar
+### Untuk Pembelajar
 
 1. Fork atau clone repositori
-2. Navigasikan ke direktori pelajaran secara berurutan
+2. Navigasi ke direktori pelajaran secara berurutan
 3. Baca file README untuk setiap pelajaran
 4. Selesaikan kuis sebelum pelajaran di https://ff-quizzes.netlify.app/web/
-5. Kerjakan contoh kode di folder pelajaran
+5. Kerjakan contoh kode dalam folder pelajaran
 6. Selesaikan tugas dan tantangan
 7. Ikuti kuis setelah pelajaran
 
 ### Pengembangan Langsung
 
 - **Dokumentasi**: Jalankan `docsify serve` di root (port 3000)
-- **Aplikasi Kuis**: Jalankan `npm run dev` di direktori quiz-app
-- **Proyek**: Gunakan ekstensi Live Server di VS Code untuk proyek HTML
-- **Proyek API**: Jalankan `npm start` di direktori API terkait
+- **Quiz App**: Jalankan `npm run dev` di direktori quiz-app
+- **Proyek**: Gunakan ekstensi VS Code Live Server untuk proyek HTML
+- **API Proyek**: Jalankan `npm start` di direktori API masing-masing
 
 ## Instruksi Pengujian
 
-### Pengujian Aplikasi Kuis
+### Pengujian Quiz App
 
 ```bash
 cd quiz-app
-npm run lint       # Check for code style issues
-npm run build      # Verify build succeeds
+npm run lint       # Periksa masalah gaya kode
+npm run build      # Verifikasi build berhasil
 ```
 
-### Pengujian API Bank
+### Pengujian Bank API
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Check for code style issues
-node server.js     # Verify server starts without errors
+npm run lint       # Periksa masalah gaya kode
+node server.js     # Verifikasi server mulai tanpa kesalahan
 ```
 
 ### Pendekatan Pengujian Umum
 
-- Ini adalah repositori pendidikan tanpa pengujian otomatis yang komprehensif
-- Pengujian manual berfokus pada:
-  - Contoh kode berjalan tanpa kesalahan
-  - Tautan dalam dokumentasi berfungsi dengan benar
-  - Proyek berhasil dibangun
+- Ini adalah repositori edukasi tanpa pengujian otomatis lengkap
+- Pengujian manual fokus pada:
+  - Contoh kode berjalan tanpa error
+  - Tautan di dokumentasi berfungsi dengan benar
+  - Build proyek selesai dengan sukses
   - Contoh mengikuti praktik terbaik
 
-### Pemeriksaan Sebelum Pengiriman
+### Pemeriksaan Pra-pengajuan
 
 - Jalankan `npm run lint` di direktori dengan package.json
 - Verifikasi tautan markdown valid
 - Uji contoh kode di browser atau Node.js
-- Pastikan terjemahan mempertahankan struktur yang benar
+- Periksa bahwa terjemahan mempertahankan struktur yang benar
 
-## Panduan Gaya Kode
+## Pedoman Gaya Kode
 
 ### JavaScript
 
 - Gunakan sintaks ES6+ modern
-- Ikuti konfigurasi ESLint standar yang disediakan dalam proyek
-- Gunakan nama variabel dan fungsi yang bermakna untuk kejelasan pendidikan
-- Tambahkan komentar yang menjelaskan konsep untuk pelajar
+- Ikuti konfigurasi ESLint standar yang disediakan di proyek
+- Gunakan nama variabel dan fungsi yang bermakna untuk kejelasan edukasi
+- Tambahkan komentar menjelaskan konsep untuk pembelajar
 - Format menggunakan Prettier jika dikonfigurasi
 
 ### HTML/CSS
@@ -153,130 +153,130 @@ node server.js     # Verify server starts without errors
 - Elemen HTML5 semantik
 - Prinsip desain responsif
 - Konvensi penamaan kelas yang jelas
-- Komentar yang menjelaskan teknik CSS untuk pelajar
+- Komentar menjelaskan teknik CSS untuk pembelajar
 
 ### Python
 
-- Panduan gaya PEP 8
+- Pedoman gaya PEP 8
 - Contoh kode yang jelas dan edukatif
-- Petunjuk tipe di mana berguna untuk pembelajaran
+- Tipe hint jika membantu pembelajaran
 
 ### Dokumentasi Markdown
 
-- Hierarki judul yang jelas
+- Hierarki heading yang jelas
 - Blok kode dengan spesifikasi bahasa
 - Tautan ke sumber daya tambahan
 - Tangkapan layar dan gambar di direktori `images/`
-- Teks alternatif untuk gambar demi aksesibilitas
+- Teks alternatif untuk gambar guna aksesibilitas
 
-### Organisasi File
+### Organisasi Berkas
 
-- Pelajaran diberi nomor secara berurutan (1-getting-started-lessons, 2-js-basics, dll.)
-- Setiap proyek memiliki direktori `solution/` dan sering kali `start/` atau `your-work/`
+- Pelajaran bernomor berurutan (1-getting-started-lessons, 2-js-basics, dll.)
+- Setiap proyek memiliki direktori `solution/` dan sering `start/` atau `your-work/`
 - Gambar disimpan di folder `images/` khusus pelajaran
-- Terjemahan dalam struktur `translations/{language-code}/`
+- Terjemahan di struktur `translations/{kode-bahasa}/`
 
-## Pembangunan dan Penerapan
+## Build dan Deployment
 
-### Penerapan Aplikasi Kuis (Azure Static Web Apps)
+### Deployment Quiz App (Azure Static Web Apps)
 
-Aplikasi quiz-app dikonfigurasi untuk penerapan Azure Static Web Apps:
+quiz-app dikonfigurasi untuk deployment Azure Static Web Apps:
 
 ```bash
 cd quiz-app
-npm run build      # Creates dist/ folder
-# Deploys via GitHub Actions workflow on push to main
+npm run build      # Membuat folder dist/
+# Menerapkan melalui alur kerja GitHub Actions saat push ke main
 ```
 
 Konfigurasi Azure Static Web Apps:
 - **Lokasi aplikasi**: `/quiz-app`
 - **Lokasi output**: `dist`
-- **Alur kerja**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
+- **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Pembuatan PDF Dokumentasi
+### Generasi PDF Dokumentasi
 
 ```bash
-npm install                    # Install docsify-to-pdf
-npm run convert               # Generate PDF from docs
+npm install                    # Instal docsify-to-pdf
+npm run convert               # Hasilkan PDF dari docs
 ```
 
 ### Dokumentasi Docsify
 
 ```bash
-npm install -g docsify-cli    # Install Docsify globally
-docsify serve                 # Serve on localhost:3000
+npm install -g docsify-cli    # Instal Docsify secara global
+docsify serve                 # Jalankan di localhost:3000
 ```
 
-### Pembangunan Proyek Khusus
+### Build Proyek Spesifik
 
-Setiap direktori proyek mungkin memiliki proses pembangunan sendiri:
-- Proyek Vue: `npm run build` membuat bundel produksi
-- Proyek statis: Tidak ada langkah pembangunan, langsung sajikan file
+Setiap direktori proyek mungkin memiliki proses build sendiri:
+- Proyek Vue: `npm run build` membuat bundle produksi
+- Proyek statis: Tidak ada langkah build, sajikan file langsung
 
 ## Panduan Pull Request
 
 ### Format Judul
 
-Gunakan judul yang jelas dan deskriptif yang menunjukkan area perubahan:
+Gunakan judul yang jelas dan deskriptif menunjukkan area perubahan:
 - `[Quiz-app] Tambahkan kuis baru untuk pelajaran X`
 - `[Lesson-3] Perbaiki typo di proyek terrarium`
-- `[Translation] Tambahkan terjemahan bahasa Spanyol untuk pelajaran 5`
-- `[Docs] Perbarui instruksi pengaturan`
+- `[Translation] Tambahkan terjemahan Spanyol untuk pelajaran 5`
+- `[Docs] Perbarui instruksi setup`
 
-### Pemeriksaan yang Diperlukan
+### Pemeriksaan Wajib
 
-Sebelum mengirimkan PR:
+Sebelum mengajukan PR:
 
 1. **Kualitas Kode**:
-   - Jalankan `npm run lint` di direktori proyek yang terpengaruh
-   - Perbaiki semua kesalahan dan peringatan linting
+   - Jalankan `npm run lint` di direktori proyek terkait
+   - Perbaiki semua error dan peringatan linting
 
-2. **Verifikasi Pembangunan**:
+2. **Verifikasi Build**:
    - Jalankan `npm run build` jika berlaku
-   - Pastikan tidak ada kesalahan pembangunan
+   - Pastikan tidak ada error build
 
 3. **Validasi Tautan**:
    - Uji semua tautan markdown
    - Verifikasi referensi gambar berfungsi
 
-4. **Tinjauan Konten**:
-   - Periksa ejaan dan tata bahasa
+4. **Review Konten**:
+   - Koreksi ejaan dan tata bahasa
    - Pastikan contoh kode benar dan edukatif
    - Verifikasi terjemahan mempertahankan makna asli
 
 ### Persyaratan Kontribusi
 
-- Setuju dengan Microsoft CLA (pemeriksaan otomatis pada PR pertama)
-- Ikuti [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- Lihat [CONTRIBUTING.md](./CONTRIBUTING.md) untuk panduan rinci
-- Referensikan nomor masalah dalam deskripsi PR jika berlaku
+- Setujui Microsoft CLA (pemeriksaan otomatis di PR pertama)
+- Ikuti [Kode Etik Open Source Microsoft](https://opensource.microsoft.com/codeofconduct/)
+- Lihat [CONTRIBUTING.md](./CONTRIBUTING.md) untuk panduan detail
+- Cantumkan nomor isu di deskripsi PR jika berlaku
 
-### Proses Tinjauan
+### Proses Review
 
-- PR ditinjau oleh pemelihara dan komunitas
-- Kejelasan pendidikan diprioritaskan
-- Contoh kode harus mengikuti praktik terbaik terkini
-- Terjemahan ditinjau untuk akurasi dan kesesuaian budaya
+- PR akan direview oleh pemelihara dan komunitas
+- Kejelasan edukasi diutamakan
+- Contoh kode harus mengikuti praktik terbaik saat ini
+- Terjemahan direview untuk keakuratan dan kesesuaian budaya
 
 ## Sistem Terjemahan
 
 ### Terjemahan Otomatis
 
-- Menggunakan GitHub Actions dengan alur kerja co-op-translator
-- Menerjemahkan ke lebih dari 50 bahasa secara otomatis
-- File sumber di direktori utama
-- File terjemahan di direktori `translations/{language-code}/`
+- Menggunakan GitHub Actions dengan workflow co-op-translator
+- Menerjemahkan ke 50+ bahasa secara otomatis
+- Berkas sumber di direktori utama
+- Berkas terjemahan di direktori `translations/{kode-bahasa}/`
 
 ### Menambahkan Perbaikan Terjemahan Manual
 
-1. Temukan file di `translations/{language-code}/`
+1. Temukan berkas di `translations/{kode-bahasa}/`
 2. Lakukan perbaikan sambil mempertahankan struktur
 3. Pastikan contoh kode tetap berfungsi
-4. Uji konten kuis yang dilokalkan
+4. Uji konten kuis yang telah dilokalisasi
 
 ### Metadata Terjemahan
 
-File terjemahan menyertakan header metadata:
+Berkas terjemahan menyertakan header metadata:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -293,114 +293,116 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Masalah Umum
 
-**Aplikasi kuis gagal dimulai**:
+**Quiz app gagal mulai**:
 - Periksa versi Node.js (disarankan v14+)
-- Hapus `node_modules` dan `package-lock.json`, jalankan `npm install` lagi
+- Hapus `node_modules` dan `package-lock.json`, jalankan `npm install` kembali
 - Periksa konflik port (default: Vite menggunakan port 5173)
 
-**Server API tidak dapat dimulai**:
-- Verifikasi versi Node.js memenuhi minimum (node >=10)
-- Periksa apakah port sudah digunakan
-- Pastikan semua dependensi diinstal dengan `npm install`
+**Server API tidak mulai**:
+- Pastikan versi Node.js memenuhi minimal (node >=10)
+- Cek apakah port sudah digunakan
+- Pastikan semua dependensi terpasang dengan `npm install`
 
-**Ekstensi browser tidak dapat dimuat**:
-- Verifikasi manifest.json diformat dengan benar
-- Periksa konsol browser untuk kesalahan
-- Ikuti instruksi instalasi ekstensi spesifik browser
+**Ekstensi browser tidak dimuat**:
+- Pastikan manifest.json diformat dengan benar
+- Periksa konsol browser untuk error
+- Ikuti instruksi instalasi ekstensi khusus browser
 
 **Masalah proyek chat Python**:
-- Pastikan paket OpenAI diinstal: `pip install openai`
-- Verifikasi variabel lingkungan GITHUB_TOKEN diatur
+- Pastikan paket OpenAI terpasang: `pip install openai`
+- Pastikan variabel lingkungan GITHUB_TOKEN diatur
 - Periksa izin akses GitHub Models
 
-**Docsify tidak menyajikan dokumen**:
-- Instal docsify-cli secara global: `npm install -g docsify-cli`
+**Docsify tidak menyajikan docs**:
+- Pasang docsify-cli secara global: `npm install -g docsify-cli`
 - Jalankan dari direktori root repositori
-- Periksa bahwa `docs/_sidebar.md` ada
+- Pastikan `docs/_sidebar.md` ada
 
 ### Tips Lingkungan Pengembangan
 
 - Gunakan VS Code dengan ekstensi Live Server untuk proyek HTML
-- Instal ekstensi ESLint dan Prettier untuk format yang konsisten
+- Pasang ekstensi ESLint dan Prettier untuk format konsisten
 - Gunakan DevTools browser untuk debugging JavaScript
-- Untuk proyek Vue, instal ekstensi Vue DevTools di browser
+- Untuk proyek Vue, pasang ekstensi Vue DevTools di browser
 
 ### Pertimbangan Performa
 
-- Jumlah file terjemahan yang besar (50+ bahasa) membuat clone penuh menjadi besar
-- Gunakan clone dangkal jika hanya bekerja pada konten: `git clone --depth 1`
-- Kecualikan terjemahan dari pencarian saat bekerja pada konten bahasa Inggris
-- Proses pembangunan mungkin lambat pada run pertama (npm install, Vite build)
+- Banyak berkas terjemahan (50+ bahasa) membuat clone penuh besar
+- Gunakan clone dangkal jika hanya mengerjakan konten: `git clone --depth 1`
+- Kecualikan terjemahan dari pencarian saat mengerjakan konten bahasa Inggris
+- Proses build mungkin lambat pada run pertama (npm install, build Vite)
 
 ## Pertimbangan Keamanan
 
 ### Variabel Lingkungan
 
-- Kunci API tidak boleh dikomit ke repositori
-- Gunakan file `.env` (sudah ada di `.gitignore`)
-- Dokumentasikan variabel lingkungan yang diperlukan dalam README proyek
+- Kunci API jangan pernah di-commit ke repositori
+- Gunakan berkas `.env` (sudah ada di `.gitignore`)
+- Dokumentasikan variabel lingkungan yang dibutuhkan di README proyek
 
 ### Proyek Python
 
 - Gunakan lingkungan virtual: `python -m venv venv`
-- Jaga agar dependensi tetap diperbarui
-- Token GitHub harus memiliki izin minimum yang diperlukan
+- Perbarui dependensi secara rutin
+- Token GitHub harus memiliki izin minimal yang diperlukan
 
 ### Akses GitHub Models
 
 - Personal Access Tokens (PAT) diperlukan untuk GitHub Models
-- Token harus disimpan sebagai variabel lingkungan
-- Jangan pernah mengkomit token atau kredensial
+- Token disimpan sebagai variabel lingkungan
+- Jangan pernah commit token atau kredensial
 
 ## Catatan Tambahan
 
-### Target Audiens
+### Sasaran Audiens
 
 - Pemula lengkap dalam pengembangan web
-- Siswa dan pembelajar mandiri
+- Pelajar dan pembelajar mandiri
 - Guru yang menggunakan kurikulum di kelas
 - Konten dirancang untuk aksesibilitas dan pembangunan keterampilan bertahap
 
 ### Filosofi Pendidikan
 
 - Pendekatan pembelajaran berbasis proyek
-- Pemeriksaan pengetahuan yang sering (kuis)
+- Pemeriksaan pengetahuan secara berkala (kuis)
 - Latihan coding langsung
 - Contoh aplikasi dunia nyata
-- Fokus pada dasar-dasar sebelum framework
+- Fokus pada dasar sebelum framework
 
 ### Pemeliharaan Repositori
 
-- Komunitas aktif pelajar dan kontributor
-- Pembaruan rutin untuk dependensi dan konten
-- Masalah dan diskusi dipantau oleh pemelihara
-- Pembaruan terjemahan otomatis melalui GitHub Actions
+- Komunitas pembelajar dan kontributor aktif
+- Pembaruan rutin pada dependensi dan konten
+- Isu dan diskusi dipantau oleh pemelihara
+- Pembaruan terjemahan otomatis via GitHub Actions
 
 ### Sumber Daya Terkait
 
 - [Modul Microsoft Learn](https://docs.microsoft.com/learn/)
-- [Sumber daya Student Hub](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) direkomendasikan untuk pelajar
-- Kursus tambahan: Generative AI, Data Science, ML, IoT tersedia
+- [Sumber Daya Student Hub](https://docs.microsoft.com/learn/student-hub/)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) direkomendasikan untuk pembelajar
+- Kursus tambahan: AI Generatif, Data Science, ML, kurikulum IoT tersedia
 
-### Bekerja dengan Proyek Tertentu
+### Bekerja dengan Proyek Spesifik
 
-Untuk instruksi rinci tentang proyek individual, lihat file README di:
-- `quiz-app/README.md` - Aplikasi kuis Vue 3
-- `7-bank-project/README.md` - Aplikasi perbankan dengan autentikasi
-- `5-browser-extension/README.md` - Pengembangan ekstensi browser
-- `6-space-game/README.md` - Pengembangan permainan berbasis Canvas
-- `9-chat-project/README.md` - Proyek asisten chat AI
+Untuk instruksi rinci tentang proyek individual, lihat README di:
+- `quiz-app/README.md` - aplikasi kuis Vue 3
+- `7-bank-project/README.md` - aplikasi perbankan dengan autentikasi
+- `5-browser-extension/README.md` - pengembangan ekstensi browser
+- `6-space-game/README.md` - pengembangan game berbasis canvas
+- `9-chat-project/README.md` - proyek asisten chat AI
 
 ### Struktur Monorepo
 
 Meskipun bukan monorepo tradisional, repositori ini berisi beberapa proyek independen:
-- Setiap pelajaran bersifat mandiri
+- Setiap pelajaran berdiri sendiri
 - Proyek tidak berbagi dependensi
-- Bekerja pada proyek individual tanpa memengaruhi yang lain
-- Clone seluruh repositori untuk pengalaman kurikulum penuh
+- Kerjakan proyek individual tanpa memengaruhi yang lain
+- Clone seluruh repo untuk pengalaman kurikulum lengkap
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk akurasi, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang salah yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
