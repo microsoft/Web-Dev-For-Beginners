@@ -33,7 +33,7 @@ journey
 
 Before we jump into the fun stuff, I'm curious – what do you already know about this programming world? And listen, if you're looking at these questions thinking "I literally have zero clue about any of this," that's not just okay, it's perfect! That means you're in exactly the right place. Think of this quiz like stretching before a workout – we're just warming up those brain muscles!
 
-[Take the pre-lesson quiz](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
+[Take the pre-lesson quiz](https://ff-quizzes.netlify.app/web/)
 
 
 ## The Adventure We're About to Go On Together
@@ -47,7 +47,7 @@ Okay, I am genuinely bouncing with excitement about what we're going to explore 
 
 > 💡 **Here's the thing**: Don't even think about trying to memorize everything today! Right now, I just want you to feel that spark of excitement about what's possible. The details will stick naturally as we practice together – that's how real learning happens!
 
-> You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
+> You can take this lesson on [Microsoft Learn](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
 ## So What Exactly *Is* Programming?
 
