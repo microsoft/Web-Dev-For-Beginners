@@ -1,28 +1,28 @@
 # AGENTS.md
 
-## Proje Genel Bakışı
+## Proje Genel Bakış
 
-Bu, yeni başlayanlara web gelişimini temel prensipleri öğretmek için hazırlanmış eğitim müfredatı deposudur. Müfredat, Microsoft Bulut Savunucuları tarafından geliştirilen kapsamlı bir 12 haftalık kurstur ve JavaScript, CSS ve HTML içeren 24 uygulamalı ders içermektedir.
+Bu, başlangıç seviyesindeki kişilere web geliştirme temel bilgilerini öğretmek için hazırlanmış eğitici bir müfredat deposudur. Müfredat, Microsoft Cloud Advocates tarafından geliştirilen kapsamlı 12 haftalık bir kurstur ve JavaScript, CSS ve HTML'i kapsayan 24 uygulamalı dersten oluşur.
 
 ### Ana Bileşenler
 
-- **Eğitim İçeriği**: Proje tabanlı modüllere organize edilmiş 24 yapılandırılmış ders
+- **Eğitici İçerik**: Proje bazlı modüllere organize edilmiş 24 yapılandırılmış ders
 - **Pratik Projeler**: Terrarium, Yazma Oyunu, Tarayıcı Uzantısı, Uzay Oyunu, Bankacılık Uygulaması, Kod Editörü ve Yapay Zeka Sohbet Asistanı
 - **Etkileşimli Quizler**: Her biri 3 sorudan oluşan 48 quiz (ders öncesi/sonrası değerlendirmeleri)
-- **Çok Dilli Destek**: GitHub Actions ile 50+ dilde otomatik çeviri
+- **Çok Dilli Destek**: GitHub Actions ile 50+ dilde otomatik çeviriler
 - **Teknolojiler**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (Yapay Zeka projeleri için)
 
 ### Mimari
 
-- Ders temelli yapıya sahip eğitim deposu
+- Ders tabanlı yapıya sahip eğitim deposu
 - Her ders klasörü README, kod örnekleri ve çözümler içerir
-- Ayrı klasörlerde bağımsız projeler (quiz-app, çeşitli ders projeleri)
+- Ayrı dizinlerde bağımsız projeler (quiz-app, çeşitli ders projeleri)
 - GitHub Actions kullanan çeviri sistemi (co-op-translator)
-- Docsify ile sağlanan dökümantasyon ve PDF halinde erişilebilirlik
+- Docsify ile sunulan dokümantasyon ve PDF olarak erişilebilirlik
 
 ## Kurulum Komutları
 
-Bu depo öncelikle eğitim içeriği tüketimi içindir. Belirli projelerle çalışmak için:
+Bu depo esas olarak eğitim içeriğinin tüketimi içindir. Belirli projelerle çalışmak için:
 
 ### Ana Depo Kurulumu
 
@@ -56,7 +56,7 @@ npm run format     # Prettier ile biçimlendir
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Tarayıcıya özel uzantı yükleme talimatlarını izleyin
+# Tarayıcıya özgü uzantı yükleme talimatlarını izleyin
 ```
 
 ### Uzay Oyunu Projeleri
@@ -64,45 +64,45 @@ npm install
 ```bash
 cd 6-space-game/solution
 npm install
-# index.html dosyasını tarayıcıda açın veya Live Server kullanın
+# index.html dosyasını tarayıcıda açın veya Canlı Sunucu kullanın
 ```
 
-### Sohbet Projesi (Python Backend)
+### Sohbet Projesi (Python Arka Uç)
 
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# GITHUB_TOKEN ortam değişkenini ayarla
+# GITHUB_TOKEN ortam değişkenini ayarlayın
 python api.py
 ```
 
 ## Geliştirme İş Akışı
 
-### İçerik Katkıcıları İçin
+### İçerik Katkısı Sağlayanlar için
 
-1. **Depoyu kendi GitHub hesabınıza fork edin**
-2. **Fork’unuzu yerel olarak klonlayın**
-3. **Değişiklikleriniz için yeni bir dal oluşturun**
+1. Depoyu GitHub hesabınıza **forklayın**
+2. Forkladığınız depoyu yerel olarak **klonlayın**
+3. Değişiklikleriniz için yeni bir **dal (branch)** oluşturun
 4. Ders içeriği veya kod örneklerinde değişiklik yapın
 5. İlgili proje klasörlerinde kod değişikliklerini test edin
-6. Katkı yönergelerine uygun şekilde pull request gönderin
+6. Katkı yönergelerini takip ederek pull request gönderin
 
-### Öğrenenler İçin
+### Öğrenenler için
 
-1. Depoyu fork edin veya klonlayın
-2. Ders klasörlerinde sırayla gezin
-3. Her dersin README dosyasını okuyun
-4. https://ff-quizzes.netlify.app/web/ adresinde ders öncesi quizleri tamamlayın
-5. Ders klasörlerindeki kod örnekleri üzerinde çalışın
+1. Depoyu forklayın veya klonlayın
+2. Ders klasörleri arasında sırayla gezin
+3. Her ders için README dosyalarını okuyun
+4. Ders öncesi quizlerini https://ff-quizzes.netlify.app/web/ adresinde tamamlayın
+5. Ders klasörlerindeki kod örneklerini uygulayın
 6. Ödevleri ve zorlukları tamamlayın
-7. Ders sonrası quizleri yapın
+7. Ders sonrası quizlerine katılın
 
 ### Canlı Geliştirme
 
-- **Dökümantasyon**: `docsify serve` komutunu kök dizinde çalıştırın (port 3000)
-- **Quiz Uygulaması**: `quiz-app` dizininde `npm run dev` çalıştırın
+- **Dokümantasyon**: Kök dizinde `docsify serve` çalıştırın (port 3000)
+- **Quiz Uygulaması**: quiz-app dizininde `npm run dev` komutunu çalıştırın
 - **Projeler**: HTML projeleri için VS Code Live Server uzantısını kullanın
-- **API Projeleri**: İlgili API dizinlerinde `npm start` komutunu kullanın
+- **API Projeleri**: İlgili API dizinlerinde `npm start` komutunu çalıştırın
 
 ## Test Talimatları
 
@@ -118,74 +118,74 @@ npm run build      # Derlemenin başarılı olduğunu doğrula
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Kod stil sorunlarını kontrol et
-node server.js     # Sunucunun hatasız başladığını doğrula
+npm run lint       # Kod stili sorunlarını kontrol et
+node server.js     # Sunucunun hatasız başlatıldığını doğrula
 ```
 
 ### Genel Test Yaklaşımı
 
-- Bu eğitim deposunda kapsamlı otomatik test bulunmamaktadır
-- Manuel testler:
-  - Kod örneklerinin hatasız çalışması
-  - Dökümantasyondaki linklerin doğru çalışması
-  - Proje derlemelerinin başarılı olması
-  - Örneklerin en iyi uygulamalara uygun olması
+- Bu, kapsamlı otomatik testler içermeyen bir eğitim deposudur
+- Manuel testler şunlara odaklanır:
+  - Kod örnekleri hatasız çalışmalı
+  - Dokümantasyon linkleri düzgün çalışmalı
+  - Proje derlemeleri başarılı şekilde tamamlanmalı
+  - Örnekler en iyi uygulamaları takip etmeli
 
 ### Gönderim Öncesi Kontroller
 
-- package.json içeren dizinlerde `npm run lint` komutunu çalıştırın
-- Markdown bağlantılarının geçerli olduğundan emin olun
-- Kod örneklerini tarayıcı veya Node.js üzerinde test edin
-- Çevirilerin yapısını koruduğunu kontrol edin
+- package.json olan dizinlerde `npm run lint` çalıştırın
+- Markdown bağlantılarının geçerli olduğunu doğrulayın
+- Kod örneklerini tarayıcıda veya Node.js'de test edin
+- Çevirilerin yapısını koruduğundan emin olun
 
-## Kod Stili Yönergeleri
+## Kod Stili Rehberi
 
 ### JavaScript
 
 - Modern ES6+ sözdizimi kullanın
-- Projelerde sağlanan standart ESLint yapılandırmalarını takip edin
-- Eğitim için anlamlı değişken ve fonksiyon isimleri kullanın
-- Kavramları açıklayan yorumlar ekleyin
-- Prettier kullanılan yerlerde biçimlendirme yapın
+- Projelerde sağlanan standart ESLint yapılandırmalarını uygulayın
+- Eğitim amacıyla anlamlı değişken ve fonksiyon isimleri kullanın
+- Öğrenenlere kavramları açıklayan yorumlar ekleyin
+- Ayarlanmışsa Prettier ile biçimlendirin
 
 ### HTML/CSS
 
-- Semantik HTML5 elemanları kullanın
-- Duyarlı tasarım prensiplerine uyun
-- Açık sınıf isimlendirme konvansiyonları kullanın
-- CSS tekniklerini açıklayan yorumlar ekleyin
+- Anlamsal HTML5 öğeleri
+- Duyarlı tasarım prensipleri
+- Açık sınıf isimlendirme kuralları
+- Öğrenenler için CSS tekniklerini açıklayan yorumlar
 
 ### Python
 
-- PEP 8 stil kurallarına uyun
-- Açık, eğitim amaçlı kod örnekleri sunun
-- Öğrenmeye yardımcı olan yerlerde tip ipuçları kullanın
+- PEP 8 stil yönergeleri
+- Açık, eğitici kod örnekleri
+- Öğrenmeye yardımcı olabilecek tip ipuçları
 
-### Markdown Dökümantasyonu
+### Markdown Dokümantasyonu
 
-- Net başlık hiyerarşisi
-- Dil belirtilmiş kod blokları
-- Ek kaynaklara linkler
-- `images/` dizininde ekran görüntüleri ve görseller
-- Erişilebilirlik için görsellerde alt metin kullanımı
+- Açık başlık hiyerarşisi
+- Dil belirtimi içeren kod blokları
+- Ek kaynak bağlantıları
+- `images/` klasörlerinde ekran görüntüleri ve resimler
+- Erişilebilirlik için görüntülerde alt metin
 
 ### Dosya Organizasyonu
 
-- Dersler sırayla numaralandırılmış (1-getting-started-lessons, 2-js-basics, vb.)
-- Her projenin `solution/` ve çoğunlukla `start/` veya `your-work/` klasörleri var
-- Görseller derslere özel `images/` klasörlerinde tutulur
-- Çeviriler `translations/{language-code}/` yapısında
+- Dersler sıralı numaralandırılmış (1-getting-started-lessons, 2-js-basics, vb.)
+- Her projenin `solution/` ve genellikle `start/` veya `your-work/` klasörleri var
+- Resimler derslere özgü `images/` klasörlerinde saklanır
+- Çeviriler `translations/{dil-kodu}/` yapısında
 
-## Derleme ve Dağıtım
+## Derleme ve Yayınlama
 
-### Quiz Uygulaması Dağıtımı (Azure Static Web Apps)
+### Quiz Uygulaması Yayınlama (Azure Static Web Apps)
 
-quiz-app Azure Static Web Apps dağıtımı için yapılandırılmıştır:
+quiz-app Azure Static Web Apps yayınlama için yapılandırılmıştır:
 
 ```bash
 cd quiz-app
 npm run build      # dist/ klasörü oluşturur
-# main'e push yapıldığında GitHub Actions iş akışıyla dağıtır
+# main dalına push yapıldığında GitHub Actions iş akışıyla dağıtım yapar
 ```
 
 Azure Static Web Apps yapılandırması:
@@ -193,37 +193,37 @@ Azure Static Web Apps yapılandırması:
 - **Çıktı konumu**: `dist`
 - **İş akışı**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Dökümantasyon PDF Oluşturma
+### Dokümantasyon PDF Oluşturma
 
 ```bash
-npm install                    # docsify-to-pdf yükleyin
-npm run convert               # Docs'dan PDF oluşturun
+npm install                    # docsify-to-pdf kur
+npm run convert               # Belgelerden PDF oluştur
 ```
 
-### Docsify Dökümantasyonu
+### Docsify Dokümantasyonu
 
 ```bash
-npm install -g docsify-cli    # Docsify'yi global olarak kur
-docsify serve                 # localhost:3000 üzerinde sun
+npm install -g docsify-cli    # Docsify'ı küresel olarak yükleyin
+docsify serve                 # localhost:3000 üzerinde sunun
 ```
 
-### Proje Bazlı Derlemeler
+### Proje Özel Derlemeler
 
-Her proje dizininde kendi derleme süreci olabilir:
-- Vue projeleri: `npm run build` ile üretim paketleri oluşturulur
-- Statik projeler: Derleme adımı yok, dosyalar doğrudan servis edilir
+Her proje dizini kendi derleme sürecine sahip olabilir:
+- Vue projeleri: `npm run build` üretim paketlerini oluşturur
+- Statik projeler: Derleme işlemi yok, dosyalar doğrudan servis edilir
 
 ## Pull Request Yönergeleri
 
 ### Başlık Formatı
 
-Değişiklik alanını belirtmek için açık ve açıklayıcı başlıklar kullanın:
+Değişiklik alanını açıkça belirten başlıklar kullanın:
 - `[Quiz-app] Ders X için yeni quiz ekle`
-- `[Lesson-3] Terrarium projesinde yazım hatasını düzelt`
-- `[Translation] Ders 5 için İspanyolca çeviri ekle`
-- `[Docs] Kurulum talimatlarını güncelle`
+- `[Lesson-3] Terrarium projesinde yazım hatası düzeltildi`
+- `[Translation] Ders 5 için İspanyolca çeviri eklendi`
+- `[Docs] Kurulum talimatları güncellendi`
 
-### Gereken Kontroller
+### Gerekli Kontroller
 
 PR göndermeden önce:
 
@@ -231,50 +231,50 @@ PR göndermeden önce:
    - Etkilenen proje dizinlerinde `npm run lint` çalıştırın
    - Tüm lint hatalarını ve uyarılarını düzeltin
 
-2. **Derleme Doğrulaması**:
-   - Uygunsa, `npm run build` komutunu çalıştırın
+2. **Derleme Doğrulama**:
+   - Uygun ise `npm run build` çalıştırın
    - Derleme hatası olmadığından emin olun
 
-3. **Link Doğrulama**:
-   - Tüm markdown linklerini test edin
-   - Görsel referansların çalıştığını kontrol edin
+3. **Bağlantı Doğrulama**:
+   - Tüm markdown bağlantılarını test edin
+   - Resim referanslarının çalıştığını kontrol edin
 
 4. **İçerik İncelemesi**:
-   - İmla ve gramer kontrolü yapın
-   - Kod örneklerinin doğru ve öğretici olduğundan emin olun
-   - Çevirilerin orijinal anlamı koruduğunu teyit edin
+   - Yazım ve dil bilgisi denetimi yapın
+   - Kod örneklerinin doğru ve eğitici olduğundan emin olun
+   - Çevirilerin orijinal anlamı koruduğunu doğrulayın
 
-### Katkı Gereksinimleri
+### Katkı Koşulları
 
-- Microsoft CLA’ya (otomatik kontrol ilk PR’da) onay verin
-- [Microsoft Açık Kaynak Davranış Kuralları](https://opensource.microsoft.com/codeofconduct/)’na uyun
-- Detaylı yönergeler için [CONTRIBUTING.md](./CONTRIBUTING.md) dosyasına bakın
-- Uygunsa, PR açıklamasında ilgili issue numaralarını belirtin
+- Microsoft CLA’ya (ilk PR’de otomatik kontrol)
+- [Microsoft Açık Kaynak Davranış Kurallarına](https://opensource.microsoft.com/codeofconduct/) uyun
+- Ayrıntılı yönergeler için [CONTRIBUTING.md](./CONTRIBUTING.md) dosyasına bakın
+- Gerekliyse PR açıklamasında ilgili issue numaralarını belirtin
 
 ### İnceleme Süreci
 
 - PR’lar bakımcılar ve topluluk tarafından incelenir
-- Eğitimsel açıklık önceliklidir
-- Kod örnekleri mevcut en iyi uygulamalara uygun olmalıdır
-- Çeviriler doğruluk ve kültürel uygunluk açısından gözden geçirilir
+- Eğitici açıklık önceliklidir
+- Kod örnekleri güncel en iyi uygulamalara uygun olmalı
+- Çeviriler doğruluk ve kültürel uygunluk için denetlenir
 
 ## Çeviri Sistemi
 
 ### Otomatik Çeviri
 
-- GitHub Actions ile co-op-translator iş akışını kullanır
-- 50+ dile otomatik çeviri yapar
-- Kaynak dosyalar ana dizinlerde
-- Çeviriler `translations/{language-code}/` dizinlerinde
+- GitHub Actions ile co-op-translator iş akışı kullanılır
+- 50+ dile otomatik çeviri yapılır
+- Kaynak dosyalar ana dizinlerde olur
+- Çeviriler `translations/{dil-kodu}/` klasörlerinde bulunur
 
 ### Manuel Çeviri İyileştirmeleri Ekleme
 
-1. `translations/{language-code}/` dizininde dosyayı bulun
+1. Dosyayı `translations/{dil-kodu}/` içinde bulun
 2. Yapıyı koruyarak iyileştirmeler yapın
-3. Kod örneklerinin çalışır durumda kaldığından emin olun
-4. Yerelleştirilmiş quiz içeriklerini test edin
+3. Kod örneklerinin işlevselliğini muhafaza edin
+4. Yerelleştirilmiş quiz içeriğini test edin
 
-### Çeviri Meta Verisi
+### Çeviri Meta Verileri
 
 Çevrilmiş dosyalar meta veri başlığı içerir:
 ```markdown
@@ -294,63 +294,63 @@ CO_OP_TRANSLATOR_METADATA:
 ### Yaygın Sorunlar
 
 **Quiz uygulaması başlamıyor**:
-- Node.js sürümünü kontrol edin (v14+ önerilir)
-- `node_modules` ve `package-lock.json` silip `npm install` komutunu tekrar çalıştırın
-- Port çakışması olup olmadığını kontrol edin (varsayılan: Vite portu 5173)
+- Node.js versiyonunu kontrol edin (v14+ önerilir)
+- `node_modules` ve `package-lock.json` silin, ardından `npm install` çalıştırın
+- Port çakışmalarını kontrol edin (varsayılan: Vite 5173 portunu kullanır)
 
 **API sunucusu başlamıyor**:
-- Node.js sürümünün minimum gereksinimi karşılayıp karşılamadığını kontrol edin (node >=10)
-- Portun kullanımda olup olmadığını kontrol edin
+- Node.js sürümünün minimum (node >=10) olduğundan emin olun
+- Portun kullanımda olmadığını kontrol edin
 - Tüm bağımlılıkların `npm install` ile yüklendiğinden emin olun
 
 **Tarayıcı uzantısı yüklenmiyor**:
-- manifest.json dosyasının doğru formatlandığını kontrol edin
-- Tarayıcı konsolunda hata var mı bakın
-- Tarayıcıya özel uzantı yükleme talimatlarını takip edin
+- manifest.json dosyasının düzgün formatlandığını kontrol edin
+- Tarayıcı konsolundaki hatalara bakın
+- Tarayıcıya özgü uzantı kurulum talimatlarını takip edin
 
-**Python sohbet projesi sorunları**:
-- OpenAI paketi yüklü mü: `pip install openai`
-- GITHUB_TOKEN çevre değişkeninin ayarlı olduğundan emin olun
-- GitHub Modeller erişim izinlerini kontrol edin
+**Python sohbet projesinde sorunlar**:
+- OpenAI paketi kurulu olmalı: `pip install openai`
+- GITHUB_TOKEN çevre değişkeni ayarlı olmalı
+- GitHub Models erişim izinleri kontrol edilmeli
 
-**Docsify dökümantasyonu servis etmiyor**:
-- docsify-cli global olarak yüklü mü: `npm install -g docsify-cli`
+**Docsify dokümanları sunmuyor**:
+- docsify-cli global kurulu değilse: `npm install -g docsify-cli`
 - Depo kök dizininden çalıştırın
-- `docs/_sidebar.md` dosyasının varlığını kontrol edin
+- `docs/_sidebar.md` var mı kontrol edin
 
 ### Geliştirme Ortamı İpuçları
 
 - HTML projeleri için VS Code Live Server uzantısını kullanın
-- Tutarlı biçimlendirme için ESLint ve Prettier uzantılarını kurun
-- JavaScript hata ayıklamak için tarayıcı geliştirici araçlarını kullanın
+- Tutarlı formatlama için ESLint ve Prettier uzantıları yükleyin
+- JavaScript hata ayıklaması için tarayıcı geliştirici araçlarını kullanın
 - Vue projeleri için Vue DevTools tarayıcı uzantısını kurun
 
 ### Performans Dikkatleri
 
-- Çok sayıda çevrilmiş dosya (50+ dil) tam klonlama boyutunu artırır
-- Sadece içerikle çalışıyorsanız sığ klon kullanın: `git clone --depth 1`
+- 50+ dilde çok sayıda çeviri dosyası olması, tam klonlamayı büyük yapar
+- İçerikle çalışıyorsanız sığ klon kullanın: `git clone --depth 1`
 - İngilizce içerikle çalışırken çevirileri aramalardan hariç tutun
-- Derleme süreçleri ilk seferde yavaş olabilir (npm install, Vite build)
+- İlk çalıştırmada kurulum ve derleme süreçleri (npm install, Vite build) yavaş olabilir
 
 ## Güvenlik Dikkatleri
 
 ### Ortam Değişkenleri
 
-- API anahtarları asla depoya gönderilmemelidir
-- `.env` dosyaları kullanılır (zaten `.gitignore` içinde)
-- Gerekli ortam değişkenleri proje README’lerinde belgelenmelidir
+- API anahtarları asla depoya eklenmemeli
+- `.env` dosyaları kullanılmalı (zaten `.gitignore` içinde)
+- Gerekli ortam değişkenleri proje README’lerinde belgelenmeli
 
 ### Python Projeleri
 
-- Sanal ortamlar kullanın: `python -m venv venv`
-- Bağımlılıkları güncel tutun
-- GitHub tokenleri minimum yetkiyle ayarlayın
+- Sanal ortamlar kullanılmalı: `python -m venv venv`
+- Bağımlılıklar güncel tutulmalı
+- GitHub tokenları minimum gerekli izinlere sahip olmalı
 
-### GitHub Modeller Erişimi
+### GitHub Models Erişimi
 
-- GitHub Modeller için Kişisel Erişim Tokenleri (PAT) gerekir
-- Tokenlar çevre değişkeni olarak saklanmalıdır
-- Token veya kimlik bilgileri asla versiyon kontrolüne gönderilmemelidir
+- GitHub Models için Kişisel Erişim Tokenları (PAT) gerekir
+- Tokenlar ortam değişkeni olarak saklanmalı
+- Tokenlar veya kimlik bilgileri asla depoya commit edilmemeli
 
 ## Ek Notlar
 
@@ -358,51 +358,51 @@ CO_OP_TRANSLATOR_METADATA:
 
 - Web geliştirmeye tamamen yeni başlayanlar
 - Öğrenciler ve kendi kendine öğrenenler
-- Müfredatı sınıf ortamında kullanan öğretmenler
-- İçerik erişilebilirlik ve aşamalı beceri geliştirmeye uygun şekilde tasarlanmıştır
+- Müfredatı sınıflarda kullanan öğretmenler
+- İçerik erişilebilirlik ve aşamalı beceri oluşturma için tasarlanmıştır
 
 ### Eğitim Felsefesi
 
-- Proje tabanlı öğrenme yöntemi
-- Sık aralıklarla bilgi ölçümleri (quizler)
-- Uygulamalı kodlama egzersizleri
-- Gerçek dünya uygulaması örnekleri
-- Çerçeveler öncesi temel bilgiler üzerine odaklanma
+- Proje bazlı öğrenme yaklaşımı
+- Sık aralıklarla bilgi kontrolü (quizler)
+- Uygulamalı kodlama alıştırmaları
+- Gerçek dünya uygulama örnekleri
+- Frameworklerden önce temellere odaklanma
 
 ### Depo Bakımı
 
-- Aktif öğrenenler ve katkıcılar topluluğu
+- Aktif öğrenenler ve katkı sağlayanlardan oluşan topluluk
 - Bağımlılık ve içerik düzenli güncellenir
-- Sorunlar ve tartışmalar bakımcılar tarafından izlenir
-- Çeviri güncellemeleri GitHub Actions aracılığıyla otomatik
+- Bakımcılar tarafından sorunlar ve tartışmalar izlenir
+- Çeviri güncellemeleri GitHub Actions ile otomatik yapılır
 
 ### İlgili Kaynaklar
 
 - [Microsoft Learn modülleri](https://docs.microsoft.com/learn/)
-- [Öğrenci Merkezi kaynakları](https://docs.microsoft.com/learn/student-hub/)
+- [Student Hub kaynakları](https://docs.microsoft.com/learn/student-hub/)
 - Öğrenenler için önerilen [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-- Ek kurslar: Üretken AI, Veri Bilimi, ML, Nesnelerin İnterneti müfredatları
+- Ek kurslar: Üretken AI, Veri Bilimi, ML, IoT müfredatları mevcut
 
 ### Belirli Projelerle Çalışma
 
-Bireysel projeler hakkında detaylı talimatlar için README dosyalarına bakın:
+Bireysel projelerle ilgili ayrıntılı talimatlar için README dosyalarına bakınız:
 - `quiz-app/README.md` - Vue 3 quiz uygulaması
 - `7-bank-project/README.md` - Kimlik doğrulamalı bankacılık uygulaması
 - `5-browser-extension/README.md` - Tarayıcı uzantısı geliştirme
 - `6-space-game/README.md` - Canvas tabanlı oyun geliştirme
-- `9-chat-project/README.md` - AI sohbet asistanı projesi
+- `9-chat-project/README.md` - Yapay zeka sohbet asistanı projesi
 
 ### Monorepo Yapısı
 
-Geleneksel bir monorepo olmasa da, bu depo birçok bağımsız proje içerir:
-- Her ders kendi başına bağımsızdır
+Klasik bir monorepo olmasa da bu depo birçok bağımsız projeyi içerir:
+- Her ders kendi içinde bağımsızdır
 - Projeler bağımlılık paylaşmaz
-- Bir projede çalışmak diğerlerini etkilemez
-- Tüm müfredatı deneyimlemek için tüm depo klonlanabilir
+- Bireysel projeler üzerinde diğerlerini etkilemeden çalışabilirsiniz
+- Tam müfredatı deneyimlemek için tüm depo klonlanabilir
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi ana dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi tavsiye edilir. Bu çevirinin kullanımı sonucu oluşabilecek herhangi bir yanlış anlama veya yorumlama nedeniyle sorumluluk kabul edilmemektedir.
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanılması sonucu oluşabilecek yanlış anlaşılmalardan veya yorum hatalarından sorumlu tutulamayız.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
