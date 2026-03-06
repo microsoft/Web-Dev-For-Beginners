@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "71009af209f81cc01a1f2d324200375f",
-  "translation_date": "2025-10-03T08:19:51+00:00",
-  "source_file": "for-teachers.md",
-  "language_code": "en"
-}
--->
 ### For Educators
 
 Feel free to use this curriculum in your classroom. It integrates smoothly with GitHub Classroom and popular LMS platforms, and it can also be used as a standalone repository with your students.
@@ -42,10 +33,10 @@ This curriculum includes importable packages for common LMS workflows.
   - Moodle Cloud has limited support for Common Cartridge files. Prefer the Moodle file above, which can also be uploaded into Canvas.
   - After importing, review modules, due dates, and quiz settings to align with your term schedule.
 
-![Moodle](../../translated_images/en/moodle.94eb93d714a50cb2c97435b408017dee224348b61bc86203ffd43a4f4e57b95f.png)
+![Moodle](../../translated_images/en/moodle.94eb93d714a50cb2.webp)
 > The curriculum displayed in a Moodle classroom
 
-![Canvas](../../translated_images/en/canvas.fbd605ff8e5b8aff567d398528ce113db304446b90b9cad55c654de3fdfcda34.png)
+![Canvas](../../translated_images/en/canvas.fbd605ff8e5b8aff.webp)
 > The curriculum displayed in Canvas
 
 ### Using the Repository Directly (Without GitHub Classroom)

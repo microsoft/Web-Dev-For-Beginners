@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "770d9f83dddc841c19f210dee5fe0712",
-  "translation_date": "2025-10-03T13:25:08+00:00",
-  "source_file": "1-getting-started-lessons/README.md",
-  "language_code": "en"
-}
--->
 # Getting Started with Web Development
 
 In this section of the curriculum, you will learn about non-project-based concepts that are essential for becoming a professional developer.

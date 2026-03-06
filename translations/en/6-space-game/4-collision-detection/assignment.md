@@ -1,25 +1,55 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8a0a097b45e7c75a611e2795e4013f16",
-  "translation_date": "2025-08-28T11:35:34+00:00",
-  "source_file": "6-space-game/4-collision-detection/assignment.md",
-  "language_code": "en"
-}
--->
 # Explore Collisions
 
 ## Instructions
 
-To gain a better understanding of how collisions work, create a small game with a few objects that collide. Make them move using key presses or mouse clicks, and ensure that something happens to one of the objects when it gets hit. For example, it could be a meteor crashing into the earth or bumper cars colliding. Be creative!
+Apply your collision detection knowledge by creating a custom mini-game that demonstrates different types of object interactions. This assignment will help you understand collision mechanics through creative implementation and experimentation.
+
+### Project requirements
+
+**Create a small interactive game featuring:**
+- **Multiple moving objects** that can be controlled via keyboard or mouse input
+- **Collision detection system** using rectangle intersection principles from the lesson
+- **Visual feedback** when collisions occur (object destruction, color changes, effects)
+- **Game rules** that make collisions meaningful and engaging
+
+### Creative suggestions
+
+**Consider implementing one of these scenarios:**
+- **Asteroid field**: Navigate a ship through dangerous space debris
+- **Bumper cars**: Create a physics-based collision arena
+- **Meteor defense**: Protect Earth from incoming space rocks
+- **Collection game**: Gather items while avoiding obstacles
+- **Territory control**: Competing objects trying to claim space
+
+### Technical implementation
+
+**Your solution should demonstrate:**
+- Proper use of rectangle-based collision detection
+- Event-driven programming for user input
+- Object lifecycle management (creation and destruction)
+- Clean code organization with appropriate class structure
+
+### Bonus challenges
+
+**Enhance your game with additional features:**
+- **Particle effects** when collisions occur
+- **Sound effects** for different collision types
+- **Scoring system** based on collision outcomes
+- **Multiple collision types** with different behaviors
+- **Progressive difficulty** that increases over time
 
 ## Rubric
 
-| Criteria | Outstanding                                                                                                              | Satisfactory                   | Needs Improvement |
-| -------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ----------------- |
-|          | A complete, functional code sample is provided, with objects drawn on the canvas, basic collisions occurring, and reactions implemented | Code is incomplete in some way | Code does not work |
+| Criteria | Exemplary | Adequate | Needs Improvement |
+|----------|-----------|----------|-------------------|
+| **Collision Detection** | Implements accurate rectangle-based collision detection with multiple object types and sophisticated interaction rules | Basic collision detection works correctly with simple object interactions | Collision detection has issues or doesn't work consistently |
+| **Code Quality** | Clean, well-organized code with proper class structure, meaningful variable names, and appropriate comments | Code works but could be better organized or documented | Code is difficult to understand or poorly structured |
+| **User Interaction** | Responsive controls with smooth gameplay, clear visual feedback, and engaging mechanics | Basic controls work with adequate feedback | Controls are unresponsive or confusing |
+| **Creativity** | Original concept with unique features, visual polish, and innovative collision behaviors | Standard implementation with some creative elements | Basic functionality without creative enhancements |
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
