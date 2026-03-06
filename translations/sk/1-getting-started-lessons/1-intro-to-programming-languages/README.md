@@ -1,116 +1,116 @@
-# Úvod do programovacích jazykov a moderných nástrojov pre vývojárov
+# Úvod do programovacích jazykov a moderných vývojárskych nástrojov
+ 
+Ahoj, budúci vývojár! 👋 Môžem ti povedať niečo, čo mi každý deň spôsobuje zimomriavky? Chystáš sa objaviť, že programovanie nie je len o počítačoch – je to o skutočných super schopnostiach prebudiť tvoje najdivokejšie nápady k životu!
 
-Ahoj, budúci vývojár! 👋 Môžem ti povedať niečo, čo mi stále dvíha zimomriavky každý jeden deň? Práve sa chystáš objaviť, že programovanie nie je len o počítačoch – je to o tom, mať skutočné supermocnosti, aby si oživil svoje najdivokejšie nápady!
+Vieš ten moment, keď používaš svoju obľúbenú aplikáciu a všetko na seba dokonale nadväzuje? Keď klikneš na tlačidlo a stane sa niečo úplne magické, čo ťa donúti povedať „wau, ako TO urobili?“ Nuž, niekto presne ako ty – pravdepodobne sediaci vo svojej obľúbenej kaviarni o druhej ráno pri treťom espresse – napísal kód, ktorý túto mágiu vytvoril. A tu je niečo, čo ťa úplne ohromí: na konci tejto lekcie nielen pochopíš, ako to urobili, ale budeš sa veľmi chcieť do toho pustiť sám!
 
-Poznáš ten moment, keď používaš svoju obľúbenú aplikáciu a všetko jednoducho dohromady perfektne sedí? Keď klikneš na tlačidlo a stane sa niečo absolútne magické, čo ťa donúti povedať „wow, ako to urobili?“ No, niekto presne ako ty – pravdepodobne sediaci vo svojej obľúbenej kaviarni o 2 ráno s tretím espresom – napísal kód, ktorý vytvoril túto mágiu. A tu je niečo, čo ti vyrazí dych: na konci tejto lekcie nielenže pochopíš, ako to urobili, ale budeš mať obrovskú chuť to vyskúšať sám!
+Pozri, úplne chápem, ak sa ti programovanie teraz zdá zastrašujúce. Keď som začínal, úprimne som si myslel, že musíš byť nejaký matematik génius alebo kódovať od svojich piatich rokov. Ale toto mi úplne zmenilo pohľad: programovanie je presne ako učenie sa viesť rozhovory v novom jazyku. Začínaš s „ahoj“ a „ďakujem“, potom si objednáš kávu a skôr než sa spamätáš, vedieš hlboké filozofické diskusie! Lenže v tomto prípade vedieš rozhovory s počítačmi, a úprimne? Sú to najtrpezlivejší partneri na rozhovor, akých kedy stretneš – nikdy ti nevyčítajú chyby a vždy majú radosť skúsiť to znova!
 
-Pozri, úplne chápem, ak sa ti programovanie teraz zdá zastrašujúce. Keď som začínal ja, úprimne som si myslel, že musíš byť nejaký matematik-genius alebo programovať od svojich piatich rokov. Ale toto mi úplne zmenilo pohľad: programovanie je presne ako naučiť sa viesť rozhovory v novom jazyku. Začneš „ahoj“ a „ďakujem,“ potom si objednáš kávu a skôr ako sa nadáš, vedieš hlboké filozofické debaty! Lenže v tomto prípade vedieš rozhovor s počítačmi a úprimne? Sú to najtrpezlivejší partneri na rozhovor, akých kedy budeš mať – nikdy neodsudzujú tvoje chyby a vždy sa tešia, že môžu skúsiť znova!
-
-Dnes preskúmame úžasné nástroje, ktoré robia moderný webový vývoj nielen možným, ale aj vážne návykovým. Hovorím o presne tých editorech, prehliadačoch a pracovných postupoch, ktoré denno-denne používajú vývojári v Netflixe, Spotify a tvojej obľúbenej indie app štúdiu. A tu je časť, ktorá ťa rozveselí: väčšina týchto profesionálnych, priemyselných nástrojov je úplne zadarmo!
+Dnes si preskúmame neuveriteľné nástroje, ktoré robia moderný vývoj webu nielen možným, ale doslova návykovým. Hovorím o rovnakých editoroch, prehliadačoch a pracovných postupoch, ktoré používajú vývojári v Netflixe, Spotify a tvojom obľúbenom indie štúdiu každý deň. A tu je časť, čo ťa rozveselí: väčšina z týchto profesionálnych, priemyselných štandardných nástrojov je úplne zadarmo!
 
 ![Intro Programming](../../../../translated_images/sk/webdev101-programming.d6e3f98e61ac4bff.webp)
 > Sketchnote od [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
 journey
-    title Vaša programátorská cesta dnes
+    title Vaša dnešná cesta programovaním
     section Objavovanie
       Čo je programovanie: 5: You
       Programovacie jazyky: 4: You
       Prehľad nástrojov: 5: You
     section Preskúmanie
       Editory kódu: 4: You
-      Prehliadače a vývojárske nástroje: 5: You
+      Prehliadače a DevTools: 5: You
       Príkazový riadok: 3: You
-    section Precvičovanie
+    section Prax
       Jazykový detektív: 4: You
       Preskúmanie nástrojov: 5: You
       Spojenie s komunitou: 5: You
 ```
 ## Poďme sa pozrieť, čo už vieš!
 
-Predtým, než skočíme do zábavy, som zvedavý – čo už vieš o tomto programátorskom svete? A pozri, ak sa na tieto otázky pozeráš a myslíš si „takmer nič o tom neviem,“ to je nielen v poriadku, je to perfektné! Znamená to, že si na presne správnom mieste. Predstav si tento kvíz ako rozcvičku pred tréningom – len zahrejeme tie mozgové svaly!
+Predtým než sa pustíme do zábavy, som zvedavý – čo už vieš o tomto svete programovania? A počúvaj, ak sa pozeráš na tieto otázky a myslíš si „o tom nič netuším,“ to nie je len v poriadku, to je perfektné! To znamená, že si presne tam, kde máš byť. Predstav si tento kvíz ako rozcvičku pred tréningom – len zahrievame tie mozgové svaly!
 
-[Vykonaj predbežný kvíz](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
+[Zúčastni sa prednáškového kvízu](https://ff-quizzes.netlify.app/web/)
 
 
 ## Dobrodružstvo, na ktoré sa spolu vydáme
 
-Dobre, naozaj skáčem od nadšenia z toho, čo dnes preskúmame! Fakt, prajem si vidieť tvoju tvár, keď ti niektoré z týchto konceptov do seba zapadnú. Toto je neuveriteľná cesta, ktorou spolu pôjdeme:
+Dobre, som naozaj nadšený z toho, čo dnes preskúmame! Úprimne, prial by som si vidieť tvoj výraz, keď ti niektoré z týchto konceptov zaklikajú. Tu je úžasná cesta, na ktorú sa spolu vydávame:
 
-- **Čo programovanie vlastne je (a prečo je to najcoolovejšia vec vôbec!)** – Objavíme, ako je kód doslova neviditeľná mágia, ktorá poháňa všetko okolo teba, od toho budíka, ktorý nejako vie, že je pondelok ráno, po algoritmus, ktorý dokonale kurátorsky zoraďuje tvoje odporúčania na Netflixe
-- **Programovacie jazyky a ich úžasné osobnosti** – Predstav si párty, kde každý človek má úplne iné supermocnosti a spôsoby riešenia problémov. Taký je svet programovacích jazykov a ty si ich zamiluješ!
-- **Základné stavebné kamene, ktoré umožňujú digitálnu mágiu** – Predstav si ich ako ultimátnu kreatívnu LEGO stavebnicu. Keď pochopíš, ako tieto kúsky do seba zapadajú, uvedomíš si, že doslova môžeš postaviť čokoľvek, čo si tvoja predstavivosť vysníva
-- **Profesionálne nástroje, ktoré ťa budú cítiť ako keby ti práve predali čarodejnícku paličku** – Nie som dramatický – tieto nástroje ťa naozaj presvedčia, že máš supermocnosti, a najlepšie na tom je to, že sú to tie isté nástroje, ktoré používajú profesionáli!
+- **Čo je programovanie vlastne (a prečo je to najúžasnejšia vec vôbec!)** – Objavíme, ako je kód doslova neviditeľná mágia poháňajúca všetko okolo teba, od budíka, ktorý nejako vie, že je pondelok ráno, až po algoritmus, ktorý dokonale vyberá tvoje odporúčania na Netflixe
+- **Programovacie jazyky a ich úžasné osobnosti** – Predstav si, že vstúpiš na párty, kde má každý úplne iné super schopnosti a spôsoby riešenia problémov. Taký je svet programovacích jazykov a budeš ich mať rád!
+- **Základné stavebné kocky, ktoré vytvárajú digitálnu mágiu** – Predstav si ich ako ultimátnu kreatívnu LEGO sadu. Keď pochopíš, ako sa tieto kúsky skladajú dohromady, uvedomíš si, že môžeš postaviť hocičo, na čo si len pomyslíš
+- **Profesionálne nástroje, ktoré ťa prinútia cítiť sa, akoby si dostal čarodejnícku paličku** – Nie som dramatický – tieto nástroje ťa skutočne budú nútiť cítiť sa ako keby si mal super schopnosti, a čo je najlepšie? Sú to tie isté, ktoré používajú profesionáli!
 
-> 💡 **Tu je vec**: Dnes sa nesnaž snažiť si všetko pamätať! Teraz chcem, aby si pocítil iskru nadšenia z toho, čo je možné. Detaily si prirodzene zapamätáš, keď si to spolu vyskúšame – takto sa skutočne učíme!
+> 💡 **Tu je vec:** Nesnaž sa dnes všetko naučiť naspamäť! Teraz chcem len, aby si pocítil iskru nadšenia z toho, čo je možné. Detaily si zapamätáš prirodzene, ako budeme spoločne cvičiť – takto prebieha skutočné učenie!
 
-> Túto lekciu môžeš absolvovať na [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
+> Túto lekciu môžeš absolvovať aj na [Microsoft Learn](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
-## Čo teda vlastne *je* programovanie?
+## Čo vlastne programovanie *je*?
 
-Dobre, pustime sa do miliónovej otázky: čo vlastne programovanie je?
+Dobre, poďme vyriešiť otázku za milión dolárov: čo je programovanie naozaj?
 
-Dám ti príbeh, ktorý úplne zmenil môj pohľad na to. Minulý týždeň som skúšal vysvetliť mame, ako používať náš nový ovládač na smart TV. Chytil som sa, že hovorím veci ako „Stlač červené tlačidlo, ale nie veľké červené, malé červené naľavo... nie, tvoje druhé ľavé... dobre, teraz podrž dve sekundy, nie jednu, nie tri...“ Znie to povedome? 😅
+Poviem ti príbeh, ktorý úplne zmenil môj pohľad na to. Minulý týždeň som sa snažil vysvetliť mame, ako používať náš nový diaľkový ovládač k smart TV. Zachytil som sa, že hovorím veci ako „Stlač červené tlačidlo, ale nie veľké červené, malé červené naľavo... nie, tvoj druhý ľavý... dobre, teraz drž dve sekundy, nie jednu, nie tri...“ Znie to povedome? 😅
 
-To je programovanie! Je to umenie dávať neuveriteľne detailné, krok za krokom pokyny niečomu, čo je veľmi mocné, ale potrebuje, aby bolo všetko presne vysvetlené. Lenže namiesto toho, aby si vysvetľoval mame (ktorá sa môže opýtať „ktoré červené tlačidlo?!“), hovoríš počítaču (ktorý presne urobí, čo povieš, aj keď to nie je úplne to, čo si myslel).
+To je programovanie! Je to umenie dávať neuveriteľne podrobné, krok za krokom inštrukcie niečomu, čo je veľmi výkonné, ale potrebuje, aby bolo všetko dokonale vysvetlené. Lenže namiesto vysvetľovania mame (ktorá sa môže opýtať „ktoré červené tlačidlo?!“) vysvetľuješ počítaču (ktorý presne robí to, čo povieš, aj keď to nie je presne to, čo si myslel).
 
-Tu mi rozum vyletel, keď som sa to prvýkrát naučil: počítače sú vlastne dosť jednoduché vo svojom základe. Rozumejú doslova len dvom veciam – 1 a 0, čo je v podstate len „áno“ a „nie“ alebo „zapnuté“ a „vypnuté.“ To je všetko! Ale tu prichádza tá mágia – nemusíme hovoriť v 1 a 0 ako v Matrixe. Prichádzajú na pomoc **programovacie jazyky**. Sú ako mať najlepšieho prekladateľa na svete, ktorý vezme tvoje úplne normálne ľudské myšlienky a premení ich do počítačového jazyka.
+Tu ma úplne ohromilo, keď som sa to prvýkrát naučil: počítače sú v podstate veľmi jednoduché. Rozumejú len dvom veciam – 1 a 0, čo je v podstate „áno“ a „nie“ alebo „zapnuté“ a „vypnuté.“ To je všetko! Ale tu prichádza mágia – nemáme hovoriť v 1 a 0 ako vo filme Matrix. Preto prichádzajú na scénu **programovacie jazyky**. Sú ako najlepší prekladateľ na svete, ktorý prekladá tvoje úplne normálne ľudské myšlienky do jazyka počítača.
 
-A toto mi stále každý deň ráno dvíha zimomriavky: doslova *všetko* digitálne vo tvojom živote začalo u niekoho ako si ty, pravdepodobne sediaceho v pyžame s šálkou kávy a píšuceho kód na svojom notebooku. Ten Instagramový filter, ktorý ťa robí dokonalým? Niektorý niekto to naprogramoval. Odporúčanie, ktoré ťa dovedie k tvojej novej obľúbenej pesničke? Developer vytvoril tento algoritmus. Aplikácia, ktorá ti pomáha rozdeliť účet za večeru s kamarátmi? Áno, niekto si povedal „toto je otravné, to by som mohol opraviť“ a potom... to spravil!
+A toto mi stále každé ráno spôsobuje zimomriavky: doslova *všetko* digitálne vo tvojom živote začalo u niekoho ako ty, pravdepodobne sediaceho v pyžame s pohárom kávy, píšuceho kód na svojom laptope. Ten Instagram filter, čo ťa robí dokonalým? Niektorý niekto ho naprogramoval. Odporúčanie, ktoré ťa priviedlo k novej obľúbenej pesničke? Developer vytvoril ten algoritmus. Aplikácia, ktorá ti pomáha medziľudsky rozdeliť účty za večeru? Áno, niekto si povedal „to je otravné, ja to spravím lepšie“ a potom... to spravil!
 
-Keď sa naučíš programovať, nezískavaš len novú zručnosť – stávaš sa súčasťou tejto neuveriteľnej komunity riešiteľov problémov, ktorí trávia dni premýšľaním, „Čo keby som mohol vytvoriť niečo, čo niekomu spraví deň o niečo lepším?“ Úprimne, je niečo krajšie?
+Keď sa naučíš programovať, neosvojíš si len novú zručnosť – staneš sa súčasťou úžasnej komunity riešiteľov problémov, ktorí trávia dni tým, že rozmýšľajú: „Čo keby som mohol vytvoriť niečo, čo niekomu trochu zlepší deň?“ Úprimne, je niečo lepšie?
 
-✅ **Zábavná úloha**: Tu je niečo super zaujímavé, čo si môžeš vyhľadať, keď budeš mať chvíľu voľna – kto myslíš, že bol prvým programátorom na svete? Dám ti nápovedu: možno to nie je ten, koho očakávaš! Príbeh tejto osoby je absolútne fascinujúci a ukazuje, že programovanie bolo vždy o kreatívnom riešení problémov a myslení „mimo rámca“.
+✅ **Zábavný fakt:** Tu je niečo super na vyhľadanie, keď budeš mať chvíľku voľna – kto podľa teba bol prvý programátor na svete? Dám ti nápovedu: možno to nie je ten, koho očakávaš! Príbeh tejto osoby je úplne fascinujúci a ukazuje, že programovanie vždy znamenalo kreatívne riešenie problémov a myslenie mimo štandardných rámcov.
 
-### 🧠 **Skontroluj sa: Ako sa cítiš?**
+### 🧠 **Kontrola: Ako sa cítiš?**
 
-**Vezmi si chvíľku na zamyslenie:**
-- Má teraz zmysel predstava „dávať pokyny počítačom“?
-- Vieš si predstaviť nejaký bežný úkon, ktorý by si chcel automatizovať programovaním?
-- Aké otázky ti prichádzajú na um o celom tom programovaní?
+**Zastav sa na chvíľu a zamysli sa:**
+- Dá ti teraz zmysel idea „dávať inštrukcie počítačom“?
+- Vieš si predstaviť nejakú každodennú úlohu, ktorú by si chcel programovaním automatizovať?
+- Aké otázky ti behajú hlavou ohľadom celého programovania?
 
-> **Pamätaj**: Je úplne normálne, ak ti niektoré koncepty teraz prídu zahmlené. Učenie programovania je ako učenie sa nového jazyka – mozog potrebuje čas, aby vybudoval tie neurónové spojenia. Robíš to skvele!
+> **Pamätaj:** Je úplne normálne, ak sa ti niektoré koncepty zdajú teraz nejasné. Učenie sa programovania je ako učenie nového jazyka – tvoj mozog si musí vytvoriť nové neurónové spoje. Robíš to super!
 
-## Programovacie jazyky sú ako rôzne druhy mágie
+## Programovacie jazyky sú ako rôzne chute mágie
 
-Dobre, toto bude znieť divne, ale drž sa ma – programovacie jazyky sú veľmi podobné rôznym typom hudby. Predstav si: máš jazz, ktorý je hladký a improvizačný, rock, ktorý je silný a priamy, klasiku, ktorá je elegantná a štruktúrovaná, a hip-hop, ktorý je kreatívny a expresívny. Každý štýl má svoju atmosféru, svoju komunitu zanietených fanúšikov a každý je perfektný na iné nálady a príležitosti.
+Dobre, toto bude znieť čudne, ale vydrž so mnou – programovacie jazyky sú veľmi podobné rôznym druhom hudby. Premysli si to: máš jazz, ktorý je hladký a improvizačný, rock, čo je silný a priamočiary, klasickú hudbu, ktorá je elegantná a štruktúrovaná, a hip-hop, čo je kreatívny a expresívny. Každý štýl má svoju atmosféru, svoju komunitu zapálených fanúšikov a každý je perfektný na rôzne nálady a príležitosti.
 
-Programovacie jazyky fungujú úplne rovnako! Nepoužil by si rovnaký jazyk na vytvorenie zábavnej mobilnej hry ako na spracovanie obrovského množstva dát o klíme, rovnako ako by si na jogu nehral death metal (no, aspoň tie väčšie jogové hodiny nie! 😄).
+Programovacie jazyky fungujú úplne rovnako! Nepoužil by si ten istý jazyk na vytvorenie zábavnej mobilnej hry, aký by si použil na spracovanie obrovského množstva klimatických dát, rovnako ako by si nehral death metal na jogovej hodine (no, aspoň na väčšine jogových hodín 😄).
 
-Ale toto mi stále vyrazí dych zakaždým, keď na to myslím: tieto jazyky sú ako mať najtrpezlivejšieho a najbystrejšieho tlmočníka na svete sedieť priamo vedľa teba. Môžeš vyjadriť svoje myšlienky spôsobom, ktorý je tvojmu ľudskému mozgu prirodzený a on zvládne všetku neuveriteľne zložitú prácu prevodu do 1 a 0, ktorými počítače skutočne hovoria. Je to ako mať priateľa, ktorý je dokonale plynulý v „ľudskej kreativite“ aj „logike počítača“ – a nikdy sa neunaví, nikdy nepotrebuje prestávky na kávu a nikdy ťa nezačne súdiť, keď sa spýtaš tu istú otázku dvakrát!
+Ale tu je niečo, čo ma zakaždým úplne dostane: tieto jazyky sú ako mať najtrpezlivejšieho, najbystrejšieho tlmočníka sveta sedieť hneď vedľa teba. Môžeš vyjadriť svoje myšlienky spôsobom, ktorý je pre tvoj ľudský mozog prirodzený, a oni zvládnu všetko neuveriteľne zložité preložiť do 1 a 0, ktorým počítače naozaj rozumejú. Je to ako mať priateľa, ktorý je dokonale plynulý v „ľudskej tvorivosti“ aj „počítačovej logike“ – a nikdy nie je unavený, nikdy nepotrebuje pauzu na kávu a nikdy ti nevyčíta, že sa pýtaš na to isté dvakrát!
 
-### Populárne programovacie jazyky a ich využitie
+### Populárne programovacie jazyky a ich použitie
 
 ```mermaid
 mindmap
   root((Programovacie jazyky))
-    Webový vývoj
+    Web Development
       JavaScript
         Frontendová mágia
-        Interaktívne webstránky
+        Interaktívne webové stránky
       TypeScript
-        JavaScript + typy
+        JavaScript + Typy
         Podnikové aplikácie
-    Dáta a AI
+    Data & AI
       Python
-        Dáta a veda
+        Dátová veda
         Strojové učenie
         Automatizácia
       R
         Štatistika
         Výskum
-    Mobilné aplikácie
+    Mobile Apps
       Java
         Android
-        Podnikový
+        Podnikové
       Swift
         iOS
         Apple ekosystém
       Kotlin
         Moderný Android
         Multiplatformový
-    Systémy a výkon
+    Systems & Performance
       C++
         Hry
         Výkonovo kritické
@@ -118,44 +118,44 @@ mindmap
         Bezpečnosť pamäte
         Systémové programovanie
       Go
-        Cloud služby
+        Cloudové služby
         Škálovateľný backend
 ```
 | Jazyk | Najlepšie pre | Prečo je populárny |
 |----------|----------|------------------|
-| **JavaScript** | Webový vývoj, používateľské rozhrania | Beží v prehliadačoch a poháňa interaktívne webové stránky |
-| **Python** | Dáta, automatizácia, AI | Ľahko sa číta a učí, výkonné knižnice |
+| **JavaScript** | Vývoj webu, používateľské rozhrania | Beží v prehliadačoch a poháňa interaktívne weby |
+| **Python** | Dáta, automatizácia, AI | Ľahko čitateľný a naučiteľný, silné knižnice |
 | **Java** | Podnikové aplikácie, Android aplikácie | Nezávislý na platforme, robustný pre veľké systémy |
 | **C#** | Windows aplikácie, vývoj hier | Silná podpora Microsoft ekosystému |
-| **Go** | Cloudové služby, backend systémy | Rýchly, jednoduchý, navrhnutý pre moderné počítanie |
+| **Go** | Cloudové služby, backend systémy | Rýchly, jednoduchý, navrhnutý pre moderné výpočty |
 
-### Vysokoúrovňové vs. nízkoúrovňové jazyky
+### Jazyky na vysokej úrovni vs. nízkej úrovni
 
-Dobre, toto bola úprimne tá idea, ktorá mi pri učení prvýkrát úplne zrušila mozog, tak ti podelím sa o analógiu, ktorá mi to konečne vysvetlila – a naozaj dúfam, že pomôže aj tebe!
+Dobre, toto bola úprimne koncepcia, ktorá mi keď som začínal, úplne rozsypala mozog, tak sa podelím o analógiu, ktorá mi to konečne vysvetlila – a dúfam, že pomôže aj tebe!
 
-Predstav si, že cestuješ do krajiny, kde nehovoríš miestnym jazykom a zúfalo potrebuješ nájsť najbližšie WC (všetci sme tam už boli, však? 😅):
+Predstav si, že navštíviš krajinu, kde nehovoríš jazykom a zúfalo potrebuješ nájsť najbližšie WC (všetci sme tam už boli, že? 😅):
 
-- **Nízkoúrovňové programovanie** je ako tak dobre sa naučiť miestny dialekt, že môžeš rozprávať so starou mamou predávajúcou ovocie na rohu, používajúc kultúrne odkazy, miestny slang a vnútorné vtipy, ktoré pochopí len niekto, kto tam vyrastal. Super impresívne a neuveriteľne efektívne... ak náhodou vieš plynule! Ale dosť mätúce, keď len chceš nájsť WC.
+- **Programovanie nízkej úrovne** je ako naučiť sa miestny dialekt tak dobre, aby si mohol rozprávať s babičkou predávajúcou ovocie na rohu, používať kultúrne odkazy, miestne slangy a vnútorné vtipy, ktoré rozumie len niekto, kto tam vyrastal. Super pôsobivé a veľmi efektívne... keď vieš plynule hovoriť! Ale dosť náročné, keď sa iba snažíš nájsť WC.
 
-- **Vysokoúrovňové programovanie** je ako mať úžasného miestneho kamoša, ktorý ťa dokonale chápe. Môžeš povedať „Naozaj potrebujem nájsť toaletu“ v jednoduchom angličtine a on vyrieši všetky kultúrne rozdiely a dá ti presné, zrozumiteľné smerovanie.
+- **Programovanie vysokej úrovne** je ako mať úžasného miestneho kamaráta, ktorý ťa jednoducho chápe. Povieš „Naozaj potrebujem nájsť toaletu“ v obyčajnej angličtine a on spraví celý kultúrny preklad a dá ti presné smerovanie, ktoré tvoj ne-miestoverständlich mozog pochopí.
 
-V programátorských termínoch:
-- **Nízkoúrovňové jazyky** (ako Assembly alebo C) ti umožnujú mať neuveriteľne detailné rozhovory s priamo hardvérom počítača, ale musíš myslieť ako stroj, čo je... no, povedzme, že to je veľký mentálny presun!
-- **Vysokoúrovňové jazyky** (ako JavaScript, Python alebo C#) ti umožňujú myslieť ako človek, zatiaľ čo ony sa starajú o všetký strojový jazyk v pozadí. Plus majú neuveriteľne priateľské komunity plné ľudí, ktorí nezabudli, aké je to byť nováčikom a naozaj chcú pomôcť!
+V programovaní platí:
+- **Jazyky nízkej úrovne** (ako Assembly alebo C) ti umožňujú viesť neuveriteľne podrobné rozhovory so skutočným hardvérom počítača, ale musíš myslieť ako stroj, čo je... povedzme veľký mentálny presun!
+- **Jazyky vysokej úrovne** (ako JavaScript, Python alebo C#) ti umožňujú myslieť ako človek, zatiaľ čo oni zvládajú všetku strojnú reč v pozadí. Plus majú neuveriteľne priateľské komunity plné ľudí, ktorí si pamätajú, aké to bolo byť nováčikom a skutočne chcú pomôcť!
 
-Tipni si, ktoré ti navrhnem na začiatok? 😉 Vysokoúrovňové jazyky sú ako pomocné kolieska, ktoré vlastne nikdy nechceš dať dole, pretože ti robia celý zážitok oveľa príjemnejším!
+Tipneš si, s ktorými jazykmi ti navrhnem začať? 😉 Jazyky vysokej úrovne sú ako tréningové kolieska, ktoré nikdy vlastne nechceš odložiť, pretože celý zážitok robia oveľa príjemnejším!
 
 ```mermaid
 flowchart TB
     A["👤 Ľudská myšlienka:<br/>'Chcem vypočítať Fibonacciho čísla'"] --> B{Vyberte úroveň jazyka}
     
-    B -->|Vysoká úroveň| C["🌟 JavaScript/Python<br/>Jednoduché na čítanie a písanie"]
-    B -->|Nízka úroveň| D["⚙️ Assembler/C<br/>Priama kontrola hardvéru"]
+    B -->|Vysoká úroveň| C["🌟 JavaScript/Python<br/>Ľahko čitateľné a píšiteľné"]
+    B -->|Nízka úroveň| D["⚙️ Assembly/C<br/>Priama kontrola hardvéru"]
     
     C --> E["📝 Napísať: fibonacci(10)"]
     D --> F["📝 Napísať: mov r0,#00<br/>sub r0,r0,#01"]
     
-    E --> G["🤖 Počítačové porozumenie:<br/>Prekladač zvláda zložitosť"]
+    E --> G["🤖 Porozumenie počítača:<br/>Prekladač zvláda zložitosť"]
     F --> G
     
     G --> H["💻 Rovnaký výsledok:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
@@ -164,18 +164,18 @@ flowchart TB
     style D fill:#fff3e0
     style H fill:#e8f5e8
 ```
-### Ukážem ti, prečo sú vysokoúrovňové jazyky oveľa priateľskejšie
+### Ukážem ti prečo sú jazyky vysokej úrovne také priateľské
 
-Dobre, chystám sa ti ukázať niečo, čo dokonale ilustruje, prečo som sa zamiloval do vysokoúrovňových jazykov, ale najprv – sľúb mi niečo. Keď uvidíš prvý príklad kódu, nezľakni sa! Má vyzerať trochu zastrašujúco. Práve o to ide!
+Dobre, chystám sa ti ukázať niečo, čo dokonale ilustruje, prečo som sa zamiloval do jazykov vysokej úrovne, ale najskôr – sľúb mi niečo. Keď uvidíš prvý kód, nepanikár! Má vyzerať zastrašujúco. Presne o tom hovorím!
 
-Pozrieme sa na rovnakú úlohu napísanú v dvoch úplne odlišných štýloch. Oba vytvárajú takzvanú Fibonacciho postupnosť – krásny matematický vzor, kde každé číslo je súčtom predchádzajúcich dvoch: 0, 1, 1, 2, 3, 5, 8, 13... (Zábavný fakt: tento vzor nájdeš doslova všade v prírode – špirály slnečnicových semien, vzory šišiek, dokonca aj tvarovanie galaxií!)
+Pozrieme sa na úplne rovnaký úkol napísaný v dvoch úplne odlišných štýloch. Oba vytvárajú tzv. Fibonacciho postupnosť – je to krásny matematický vzorec, kde každé číslo je súčtom dvoch predchádzajúcich: 0, 1, 1, 2, 3, 5, 8, 13... (Zábavný fakt: tento vzorec nájdeš doslova všade v prírode – špirály slnečnicových semien, vzory šišiek, dokonca formovanie galaxií!)
 
 Pripravený vidieť rozdiel? Poďme na to!
 
-**Vysokoúrovňový jazyk (JavaScript) – Ľudsky priateľský:**
+**Jazyk vysokej úrovne (JavaScript) – priateľský pre ľudí:**
 
 ```javascript
-// Krok 1: Základné nastavenie Fibonacciho posloupnosti
+// Krok 1: Základné nastavenie Fibonacciho</code>
 const fibonacciCount = 10;
 let current = 0;
 let next = 1;
@@ -183,11 +183,11 @@ let next = 1;
 console.log('Fibonacci sequence:');
 ```
 
-**Tento kód robí toto:**
-- **Deklaruje** konštantu, ktorá špecifikuje, koľko Fibonacciho čísel chceme vygenerovať
-- **Inicializuje** dve premenné na sledovanie aktuálneho a nasledujúceho čísla v postupnosti
-- **Nastaví** počiatočné hodnoty (0 a 1), ktoré definujú Fibonacciho vzor
-- **Zobrazí** hlavičkovú správu na označenie nášho výstupu
+**Čo tento kód robí:**
+- **Deklaruje** konštantu na určenie, koľko Fibonacciho čísel chceme vytvoriť
+- **Inicializuje** dve premenné, ktoré sledujú aktuálne a nasledujúce číslo v postupnosti
+- **Nastaví** počiatočné hodnoty (0 a 1), ktoré definujú Fibonacciho vzorec
+- **Zobrazí** hlavičkovú správu pre identifikáciu výstupu
 
 ```javascript
 // Krok 2: Vygenerujte postupnosť pomocou slučky
@@ -201,11 +201,11 @@ for (let i = 0; i < fibonacciCount; i++) {
 }
 ```
 
-**Rozklad toho, čo sa tu deje:**
-- **Prechádza** každý index v postupnosti pomocou cyklu `for`
-- **Zobrazuje** každé číslo s jeho pozíciou pomocou formátovania šablónového reťazca
-- **Vypočíta** ďalšie Fibonacciho číslo pridaním aktuálnych a nasledujúcich hodnôt
-- **Aktualizuje** sledovacie premenné pre ďalšiu iteráciu
+**Čo sa tu deje po krokoch:**
+- **Prejde** každý prvok postupnosti pomocou cyklu `for`
+- **Zobrazí** každé číslo s jeho pozíciou pomocou formátovania textového reťazca
+- **Vypočíta** ďalšie Fibonacciho číslo sčítaním aktuálneho a nasledujúceho
+- **Aktualizuje** premenné sledovania, aby prešiel na ďalšiu iteráciu
 
 ```javascript
 // Krok 3: Moderný funkčný prístup
@@ -224,13 +224,13 @@ const fibSequence = generateFibonacci(10);
 console.log(fibSequence);
 ```
 
-**V uvedenom kóde sme:**
+**V tomto kóde sme:**
 - **Vytvorili** znovupoužiteľnú funkciu pomocou modernej syntaxe šípky
 - **Vytvorili** pole na uloženie celej postupnosti namiesto zobrazenia po jednom
 - **Použili** indexovanie poľa na výpočet každého nového čísla z predchádzajúcich hodnôt
-- **Vrátili** kompletnú postupnosť na flexibilné použitie v iných častiach nášho programu
+- **Vracia** celú postupnosť pre flexibilné použitie v iných častiach programu
 
-**Nízkoúrovňový jazyk (ARM Assembly) – Počítačový:**
+**Jazyk nízkej úrovne (ARM Assembly) – priateľský pre počítač:**
 
 ```assembly
  area ascen,code,readonly
@@ -257,60 +257,60 @@ back add r0,r1
  end
 ```
 
-Všimni si, ako verzia v JavaScripte číta takmer ako anglické inštrukcie, zatiaľ čo Assembly verzia používa záhadné príkazy, ktoré priamo riadia procesor počítača. Obe dosahujú tú istú úlohu, ale vysokoúrovňový jazyk je pre ľudí oveľa jednoduchšie pochopiť, písať a udržiavať.
+Všimni si, ako verzia JavaScriptu číta takmer ako anglické inštrukcie, zatiaľ čo Assembly verzia používa kryptické príkazy, ktoré priamo ovládajú procesor počítača. Obe vykonávajú tú istú úlohu, ale jazyk vysokej úrovne je oveľa ľahší na pochopenie, písanie a údržbu pre ľudí.
 
 **Kľúčové rozdiely, ktoré si všimneš:**
-- **Čitateľnosť**: JavaScript používa popisné názvy ako `fibonacciCount`, zatiaľ čo Assembly používa záhadné označenia ako `r0`, `r1`
-- **Komentáre**: Vysokoúrovňové jazyky podporujú vysvetľujúce komentáre, ktoré robia kód samodokumentujúcim sa
-- **Štruktúra**: Logický tok JavaScriptu zodpovedá spôsobu, ako ľudia premýšľajú o problémoch krok za krokom
+- **Čitateľnosť**: JavaScript používa opisné názvy ako `fibonacciCount`, zatiaľ čo Assembly používa kryptické označenia ako `r0`, `r1`
+- **Komentáre**: Vyššie programovacie jazyky podporujú vysvetľujúce komentáre, ktoré robia kód samodokumentujúcim
+- **Štruktúra**: Logický tok JavaScriptu zodpovedá tomu, ako ľudia rozmýšľajú o problémoch krok za krokom
 - **Údržba**: Aktualizácia verzie JavaScriptu pre rôzne požiadavky je priamočiara a jasná
 
-✅ **O Fibonacciho postupnosti**: Tento absolútne nádherný číselný vzor (kde každé číslo je súčtom dvoch predchádzajúcich: 0, 1, 1, 2, 3, 5, 8...) sa doslova objavuje *všade* v prírode! Nájdete ho v špirálach slnečníc, vzoroch šišiek, v raste ulít nautilov a dokonca aj v tom, ako rastú konáre stromov. Je dosť úžasné, ako nám matematika a kód môžu pomôcť pochopiť a znovu vytvoriť vzory, ktoré príroda používa na tvorbu krásy!
+✅ **O Fibonacciho postupnosti**: Tento absolútne nádherný číselný vzor (kde každé číslo je súčtom tých dvoch pred ním: 0, 1, 1, 2, 3, 5, 8...) sa objavuje doslova *všade* v prírode! Nájdete ho v špirále slnečnice, v usporiadaní šišiek, v krivkách ulít naplavo a dokonca aj v raste vetiev stromov. Je dosť ohromujúce, ako matematika a kód môžu pomôcť pochopiť a znovu vytvoriť vzory, ktoré príroda používa na vytváranie krásy!
 
 
-## Stavebné kamene, ktoré vytvárajú tú mágiu
+## Stavebné kamene, ktoré vytvárajú magické výsledky
 
-Dobre, teraz keď ste videli, ako vyzerajú programovacie jazyky v akcii, poďme si rozobrať základné kusy, ktoré tvoria doslova každý program, ktorý bol kedy napísaný. Myslite na ne ako na nevyhnutné ingrediencie vo vašom obľúbenom recepte – keď pochopíte, čo každý jeden robí, budete schopní čítať a písať kód v podstate v ktoromkoľvek jazyku!
+Dobre, teraz keď ste videli, ako vyzerajú programovacie jazyky v praxi, rozoberme si základné časti, ktoré tvoria doslova každý napísaný program. Predstavte si ich ako základné ingrediencie vo vašom obľúbenom recepte – keď pochopíte, čo každá robí, budete schopní čítať a písať kód v takmer akomkoľvek jazyku!
 
-Je to niečo ako učiť sa gramatiku programovania. Pamätáte si, keď ste v škole učili o podstatných menách, slovesách a ako skladať vety? Programovanie má svoju vlastnú verziu gramatiky, a úprimne, je oveľa logickejšia a zhovievavejšia než anglická gramatika! 😄
+Je to niečo ako učenie sa gramatiky programovania. Pamätáte si, keď ste sa v škole učili o podstatných menách, slovesách a o tom, ako skladať vety? Programovanie má vlastnú verziu gramatiky a úprimne, je oveľa logickejšia a zhovievavejšia ako anglická gramatika! 😄
 
-### Výrazy: Krok za krokom inštrukcie
+### Príkazy: Pokyny krok za krokom
 
-Začnime s **výrazmi** – tie sú ako jednotlivé vety v rozhovore s vaším počítačom. Každý výraz hovorí počítaču, aby urobil jednu konkrétnu vec, podobne ako dávanie pokynov: „Zatoč tu doľava,“ „Zastav na červenú,“ „Zaparkuj na tom mieste.“
+Začnime s **príkazmi** – tie sú ako jednotlivé vety v rozhovore s vaším počítačom. Každý príkaz hovorí počítaču, aby vykonal jednu konkrétnu vec, niečo ako dávanie pokynov: "Zatoč tu doľava," "Zastav na červenej," "Zaparkuj na tom mieste."
 
-Čo sa mi na výrazoch páči, je ich čitateľnosť. Pozrite sa na toto:
+Čo na príkazoch milujem, je to, aké sú obyčajne čitateľné. Pozrite sa na toto:
 
 ```javascript
-// Základné príkazy, ktoré vykonávajú jednorázové akcie
+// Základné príkazy, ktoré vykonávajú jednotlivé akcie
 const userName = "Alex";                    
 console.log("Hello, world!");              
 const sum = 5 + 3;                         
 ```
 
-**Tu je, čo tento kód robí:**
-- **Deklaruje** konštantnú premennú na uloženie mena používateľa
-- **Zobrazí** uvítaciu správu do konzoly
+**Tento kód robí toto:**
+- **Deklaruje** konštantnú premennú pre uloženie mena používateľa
+- **Zobrazuje** privítaciu správu v konzole
 - **Vypočíta** a uloží výsledok matematickej operácie
 
 ```javascript
-// Výrazy, ktoré interagujú s webovými stránkami
+// Príkazy, ktoré komunikujú s webovými stránkami
 document.title = "My Awesome Website";      
 document.body.style.backgroundColor = "lightblue";
 ```
 
-**Krok po kroku, toto sa deje:**
-- **Upraví** názov webovej stránky, ktorý sa zobrazuje na záložke prehliadača
-- **Zmení** farbu pozadia celého tela stránky
+**Krok za krokom, toto sa deje:**
+- **Upravuje** názov stránky, ktorý sa zobrazí na záložke prehliadača
+- **Mení** farbu pozadia celého tela stránky
 
 ### Premenné: Pamäťový systém vášho programu
 
-Dobre, **premenné** sú úprimne jeden z mojich úplne najobľúbenejších konceptov na vyučovanie, pretože sú veľmi podobné veciam, ktoré už denne používate!
+Dobre, **premenné** sú úprimne jedno z mojich úplne najobľúbenejších tém učiť, pretože sú tak veľmi podobné veciam, ktoré používate každý deň!
 
-Pozrite sa na zoznam kontaktov vo vašom telefóne. Nepamätáte si telefónne čísla všetkých – namiesto toho ukladáte „Mama“, „Najlepší priateľ“ alebo „Pizzeria, ktorá doručuje do 2 rána“ a telefón si zapamätá skutočné čísla. Premenné fungujú presne takto! Sú ako označené nádoby, kde váš program môže uložiť informácie a neskôr ich podľa mena vyhľadať.
+Predstavte si na chvíľu zoznam kontaktov v telefóne. Nepamätáte si telefónne čísla na všetkých – namiesto toho si uložíte "Mamička", "Najlepší kamarát" alebo "Pizzéria, ktorá rozváža do 2 rána" a necháte telefón, aby si pamätal skutočné čísla. Premenné fungujú presne tak isto! Sú ako označené nádoby, kde váš program môže uložiť informácie a neskôr ich vyhľadať podľa názvu, ktorý dáva zmysel.
 
-Čo je na tom skutočne úžasné: premenné sa môžu meniť počas behu programu (odtiaľ názov „premenná“ – vidíte, čo urobili?). Rovnako ako by ste mohli aktualizovať kontakt na pizzeriu, keď objavíte niečo lepšie, premenné sa môžu meniť, keď sa program dozvie nové informácie alebo keď sa situácie zmenia!
+To, čo je na tom naozaj úžasné: premenné sa môžu počas behu programu meniť (odtiaľ ten názov "premenná" – vidíte, čo spravili?). Rovnako ako možno aktualizujete kontakt v pizzérii, keď objavíte lepšiu, premenné môžu byť aktualizované, keď sa program dozvie nové informácie alebo sa situácia zmení!
 
-Ukážem vám, ako to môže byť krásne jednoduché:
+Ukážem vám, aké to môže byť nádherne jednoduché:
 
 ```javascript
 // Krok 1: Vytváranie základných premenných
@@ -320,11 +320,11 @@ let temperature = 75;
 let isRaining = false;                      
 ```
 
-**Porozumenie týmto konceptom:**
-- **Ukladať** nemenné hodnoty do premenných `const` (napríklad názov stránky)
+**Pochopenie týchto konceptov:**
+- **Ukladať** nemenné hodnoty v `const` premenných (napríklad názov stránky)
 - **Používať** `let` pre hodnoty, ktoré sa môžu počas programu meniť
-- **Priraďovať** rôzne dátové typy: reťazce (text), čísla a booleovské hodnoty (true/false)
-- **Vybrať** popisné mená, ktoré vysvetľujú, čo každá premenná obsahuje
+- **Priradiť** rôzne dátové typy: reťazce (text), čísla a booleovské hodnoty (pravda/nepravda)
+- **Vybrať** opisné názvy, ktoré vysvetľujú, čo každá premenná obsahuje
 
 ```javascript
 // Krok 2: Práca s objektmi na zoskupenie súvisiacich údajov
@@ -335,10 +335,10 @@ const weatherData = {
 };
 ```
 
-**V predchádzajúcom sme:**
+**Vyššie sme:**
 - **Vytvorili** objekt na zoskupenie súvisiacich informácií o počasí
-- **Zorganizovali** viacero údajov pod jedným názvom premennej
-- **Použili** kľúč-hodnota páry na jasné označenie každej informácie
+- **Usporiadali** viacero dát pod jedným názvom premennej
+- **Použili** páry kľúč-hodnota na jasné označenie každej informácie
 
 ```javascript
 // Krok 3: Používanie a aktualizácia premenných
@@ -350,32 +350,32 @@ currentWeather = "cloudy";
 temperature = 68;                          
 ```
 
-**Pochopme každú časť:**
+**Pochopenie každej časti:**
 - **Zobraziť** informácie pomocou šablónových literálov so syntaxou `${}`
 - **Pristupovať** k vlastnostiam objektu cez bodkovú notáciu (`weatherData.windSpeed`)
-- **Aktualizovať** premenné deklarované s `let`, aby odrážali meniace sa podmienky
-- **Kombinovať** viac premenných na vytvorenie zmysluplných správ
+- **Aktualizovať** premenné deklarované cez `let` na základe meniacich sa podmienok
+- **Kombinovať** viacero premenných na tvorbu zmysluplných správ
 
 ```javascript
-// Krok 4: Moderné deštrukturalizovanie pre čistejší kód
+// Krok 4: Moderné rozkladanie pre čistejší kód
 const { location, humidity } = weatherData; 
 console.log(`${location} humidity: ${humidity}%`);
 ```
 
-**Čo potrebujete vedieť:**
-- **Extrahovať** konkrétne vlastnosti z objektov pomocou destrukturalizačného priradenia
-- **Vytvoriť** nové premenné automaticky so rovnakými názvami ako kľúče objektu
-- **Zjednodušiť** kód vyhýbaním sa opakovanej bodkovej notácii
+**Čo by ste mali vedieť:**
+- **Extrahovať** konkrétne vlastnosti z objektov pomocou destrukturalizácie
+- **Vytvoriť** nové premenné automaticky s rovnakými názvami ako kľúče objektu
+- **Zjednodušiť** kód vyhnutím sa opakovanej bodkovej notácii
 
-### Riadenie toku: Naučiť váš program myslieť
+### Riadenie toku: Naučte váš program myslieť
 
-Dobre, tu programovanie začne byť absolútne ohromujúce! **Riadenie toku** je v podstate naučiť váš program, ako robiť múdre rozhodnutia, presne tak, ako to robíte vy každý deň, a ani o tom neuvážite.
+Dobre, toto je miesto, kde programovanie naozaj začína ohromovať! **Riadenie toku** je vlastne učenie vášho programu, ako robiť múdre rozhodnutia, presne tak, ako to robíte vy každý deň bez rozmýšľania.
 
-Predstavte si toto: dnes ráno ste asi prešli niečím ako „Ak prší, vezmem si dáždnik. Ak je zima, oblečiem si bundu. Ak meškám, vynechám raňajky a vezmem si kávu na cestu.“ Váš mozog prirodzene nasleduje túto logiku if-then desiatky krát denne!
+Predstavte si toto: dnes ráno ste pravdepodobne prešli niečím ako "Ak prší, vezmem si dáždnik. Ak je zima, oblečiem si bundu. Ak meškám, vynechám raňajky a vezmem si kávu na cestu." Váš mozog prirodzene nasleduje túto if-then logiku desiatky krát denne!
 
-Toto robí programy inteligentnými a živými namiesto toho, aby len nasledovali nudný a predvídateľný scenár. Môžu skutočne pozrieť na situáciu, vyhodnotiť, čo sa deje, a správne zareagovať. Je to ako dať programu mozog, ktorý sa dokáže prispôsobiť a robiť rozhodnutia!
+Toto robí programy inteligentnými a živými, namiesto toho, aby len slepo nasledovali nejaký nudný, predvídateľný scenár. Dokážu sa pozrieť na situáciu, vyhodnotiť, čo sa deje, a primerane zareagovať. Je to ako dať vášmu programu mozog, ktorý sa dokáže prispôsobiť a rozhodovať!
 
-Chcete vidieť, ako krásne to funguje? Ukážem vám to:
+Chcete vidieť, ako krásne to funguje? Pozrite sa:
 
 ```javascript
 // Krok 1: Základná podmienená logika
@@ -389,11 +389,11 @@ if (userAge >= 18) {
 }
 ```
 
-**Čo tento kód robí:**
-- **Skontroluje**, či vek používateľa spĺňa požiadavky na hlasovanie
+**Tento kód robí toto:**
+- **Skontroluje**, či vek používateľa spĺňa požiadavku na hlasovanie
 - **Vykoná** rôzne bloky kódu podľa výsledku podmienky
-- **Vypočíta** a zobrazí, ako dlho zostáva do spôsobilosti na hlasovanie, ak je používateľ mladší ako 18
-- **Poskytne** konkrétnu, užitočnú spätnú väzbu pre každú situáciu
+- **Vypočíta** a zobrazí čas do dosiahnutia veku spôsobilosti hlasovať, ak je pod 18
+- **Poskytne** špecifickú, užitočnú spätnú väzbu pre každú situáciu
 
 ```javascript
 // Krok 2: Viacero podmienok s logickými operátormi
@@ -410,24 +410,24 @@ if (userAge >= 18 && hasPermission) {
 ```
 
 **Rozbor toho, čo sa deje:**
-- **Spojí** viacero podmienok pomocou operátora `&&` (a)
-- **Vytvorí** hierarchiu podmienok pomocou `else if` pre viacero scenárov
-- **Zvládne** všetky možné prípady pomocou záverečného `else` výrazu
-- **Poskytne** jasnú a konateľnú spätnú väzbu pre každú zvláštnu situáciu
+- **Kombinuje** viacero podmienok pomocou operátora `&&` (a)
+- **Vytvára** hierarchiu podmienok pomocou `else if` pre viacero scénarov
+- **Zaobchádza** so všetkými možnosťami pomocou záverečného `else`
+- **Poskytuje** jasnú, praktickú spätnú väzbu pre každú situáciu
 
 ```javascript
-// Krok 3: Stručná podmienka s ternárnym operátorom
+// Krok 3: Stručný podmienkový výraz s ternárnym operátorom
 const votingStatus = userAge >= 18 ? "Can vote" : "Cannot vote yet";
 console.log(`Status: ${votingStatus}`);
 ```
 
-**Čo si treba zapamätať:**
-- **Použiť** ternárny operátor (`? :`) pre jednoduché dve-option podmienky
-- **Napísať** podmienku najprv, potom `?`, potom pravdivý výsledok, potom `:`, potom nepravdivý výsledok
-- **Použiť** tento vzorec, keď potrebujete priradiť hodnoty na základe podmienok
+**Dôležité si zapamätať:**
+- **Používať** ternárny operátor (`? :`) pre jednoduché podmienky s dvoma možnosťami
+- **Napísať** podmienku, potom `?`, následne výsledok pre pravdu, potom `:`, výsledok pre nepravdu
+- **Použiť** tento vzor, keď potrebujete priradiť hodnoty na základe podmienok
 
 ```javascript
-// Krok 4: Spracovanie viacerých konkrétnych prípadov
+// Krok 4: Riešenie viacerých konkrétnych prípadov
 const dayOfWeek = "Tuesday";
 
 switch (dayOfWeek) {
@@ -447,55 +447,55 @@ switch (dayOfWeek) {
 }
 ```
 
-**Tento kód dosahuje nasledovné:**
+**Tento kód robí nasledovné:**
 - **Porovná** hodnotu premennej s viacerými špecifickými prípadmi
-- **Zoskupí** podobné prípady (pracovné dni vs. víkendy)
-- **Spustí** príslušný blok kódu, keď nájde zhodu
-- **Obsahuje** `default` prípady na zvládnutie neočakávaných hodnôt
-- **Používa** príkazy `break` na zabránenie pokračovania do ďalšieho prípadu
+- **Zoskupí** podobné prípady dohromady (pracovné dni vs. víkendy)
+- **Vykoná** príslušný blok kódu, keď nájde zhodu
+- **Obsahuje** `default` prípad na spracovanie neočakávaných hodnôt
+- **Používa** `break`, aby zabránil pokračovaniu kódu do ďalšieho prípadu
 
-> 💡 **Analógia zo skutočného sveta**: Predstavte si riadenie toku ako najtrpezlivejší GPS na svete, ktorý vám dáva pokyny. Možno povie: „Ak je zápcha na Main Street, choď diaľnicou. Ak je na diaľnici stavebná uzávera, skúste scenickú cestu.“ Programy používajú presne tento typ podmienkovej logiky, aby inteligentne reagovali na rôzne situácie a vždy poskytli používateľom čo najlepšiu skúsenosť.
+> 💡 **Reálna analógia**: Predstavte si riadenie toku ako trpezlivý GPS, ktorý vám dáva pokyny. Môže povedať: "Ak je na Main Street dopravná zápcha, choď po diaľnici. Ak je diaľnica zablokovaná výstavbou, skúste panoramatickú cestu." Programy používajú rovnaký typ podmienkovej logiky na inteligentnú reakciu na rôzne situácie a vždy poskytujú používateľom ten najlepší zážitok.
 
-### 🎯 **Kontrola pochopenia: Majstrovstvo stavebných kameňov**
+### 🎯 **Kontrola konceptov: Majstrovstvo stavebných kameňov**
 
-**Pozrime sa, ako vám to ide so základmi:**
-- Viete svojimi slovami vysvetliť rozdiel medzi premennou a výrazom?
-- Vymyslite si reálnu situáciu, kde by ste použili rozhodnutie if-then (napríklad náš príklad s hlasovaním)
-- Čo vás na logike programovania najviac prekvapilo?
+**Pozrime sa, ako to zvládate so základmi:**
+- Dokážete vlastnými slovami vysvetliť rozdiel medzi premennou a príkazom?
+- Premyslite si reálnu situáciu, kde by ste použili rozhodnutie typu if-then (napríklad naše hlasovacie príklad)
+- Čo vás v logike programovania najviac prekvapilo?
 
-**Rýchly posilňovač sebavedomia:**
+**Rýchle povzbudenie:**
 ```mermaid
 flowchart LR
-    A["📝 Príkazy<br/>(Inštrukcie)"] --> B["📦 Premenné<br/>(Ukladanie)"] --> C["🔀 Riadenie priebehu<br/>(Rozhodnutia)"] --> D["🎉 Fungujúci program!"]
+    A["📝 Príkazy<br/>(Inštrukcie)"] --> B["📦 Premenné<br/>(Ukladanie)"] --> C["🔀 Riadenie toku<br/>(Rozhodnutia)"] --> D["🎉 Fungujúci program!"]
     
     style A fill:#ffeb3b
     style B fill:#4caf50
     style C fill:#2196f3
     style D fill:#ff4081
 ```
-✅ **Čo príde ďalej**: Čaká nás absolútny zážitok, keď sa do týchto konceptov ponoríme hlbšie v rámci pokračovania našej neuveriteľnej cesty! Teraz sa sústreďte len na vzrušenie z úžasných možností, ktoré máte pred sebou. Konkrétne zručnosti a techniky si osvojíte prirodzene, keď budeme trénovať spolu – sľubujem, že to bude oveľa zábavnejšie, než možno očakávate!
+✅ **Čo príde ďalej**: Budeme sa skutočne zabávať pri hlbšom ponore do týchto konceptov počas pokračovania tejto neuveriteľnej cesty! Pre teraz sa len zamerajte na to, aby ste cítili nadšenie z množstva úžasných možností pred vami. Konkrétne zručnosti a techniky prídu prirodzene, keď budeme spolu cvičiť – sľubujem, že to bude oveľa zábavnejšie, ako ste čakali!
 
 ## Nástroje remesla
 
-Dobre, toto je úprimne chvíľa, keď sa tak nadchnem, že sa takmer neviem udržať! 🚀 Chystáme sa hovoriť o neuveriteľných nástrojoch, ktoré vám dajú pocit, akoby ste práve dostali kľúče od digitálnej kozmickej lode.
+Dobre, toto je skutočne miesto, kde sa neviem dočkať, som z toho taký nadšený! 🚀 Priblížime si neuveriteľné nástroje, ktoré vám dajú pocit, že máte práve kľúče od digitálnej vesmírnej lode.
 
-Viete, ako má kuchár tie dokonale vyvážené nože, ktoré sú akoby predĺžením jeho rúk? Alebo ako má hudobník tú jednu gitaru, ktorá akonáhle ju vezme do rúk, akoby začala spievať? No, vývojári majú svoju vlastnú verziu týchto magických nástrojov a tu je niečo, čo vám úplne vyrazí dych – väčšina z nich je úplne zadarmo!
+Viete, ako kuchár má tie perfektne vyvážené nože, ktoré sú ako predĺžením jeho ruky? Alebo ako hudobník má tú svoju gitaru, ktorá akoby spievala od momentu, keď sa jej dotkne? Nuž, vývojári majú svoju vlastnú verziu týchto magických nástrojov a tu je to, čo vás úplne prekvapí – väčšina z nich je úplne zadarmo!
 
-Doslova sa vrtím na stoličke, keď o tom hovorím, lebo úplne zmenili spôsob, ako tvoríme softvér. Hovoríme o asistente kódu poháňanom AI, ktorý vám môže pomôcť písať kód (nemyslím si to len tak!), cloudových prostrediach, kde môžete budovať celé aplikácie doslova odkiaľkoľvek s Wi-Fi, a debugovacích nástrojoch tak sofistikovaných, že sú ako mať röntgenový pohľad na vaše programy.
+Doslova sa vrtím na stoličke, keď si predstavujem, že sa s vami o to podelím, lebo tieto nástroje úplne zmenili spôsob, akým tvoríme software. Hovoríme o AI-asistovaných programovacích pomocníkoch, ktorí vám môžu pomôcť písať kód (nie som si ju žartoval!), cloudových prostrediach, kde môžete budovať celé aplikácie doslova odkiaľkoľvek s Wi-Fi, a debugovacích nástrojoch tak sofistikovaných, že sú ako mať röntgenové videnie pre vaše programy.
 
-A tu je časť, ktorá mi stále dvíha zimomriavky: toto nie sú „nástroje pre začiatočníkov“, ktoré prerastiete. Sú to presne tie isté profesionálne nástroje, ktoré používajú developeri v Google, Netflixe a v tom indie štúdiu aplikácií, ktoré milujete, práve teraz. Budete sa cítiť ako profík, keď ich budete používať!
+A toto je časť, ktorá mi stále dáva zimomriavky: nie sú to "nástroje pre začiatočníkov", ktorým čoskoro prerastiete cez hlavu. Sú to úplne rovnaké profesionálne nástroje, aké používajú vývojári v Google, Netflixe a v tom indie štúdiu, ktoré milujete, práve v tejto chvíli. Budete sa cítiť ako profík, keď ich budete používať!
 
 ```mermaid
 graph TD
-    A["💡 Váš Nápad"] --> B["⌨️ Kódovací Editor<br/>(VS Code)"] 
-    B --> C["🌐 Nástroje Prehliadača<br/>(Testovanie a Ladenie)"]
-    C --> D["⚡ Príkazový Riadok<br/>(Automatizácia a Nástroje)"]
-    D --> E["📚 Dokumentácia<br/>(Učenie a Referencie)"]
+    A["💡 Váš Nápad"] --> B["⌨️ Editor Kódu<br/>(VS Code)"] 
+    B --> C["🌐 Vývojárske Nástroje Prehliadača<br/>(Testovanie & Ladenie)"]
+    C --> D["⚡ Príkazový Riadok<br/>(Automatizácia & Nástroje)"]
+    D --> E["📚 Dokumentácia<br/>(Vzdelávanie & Referencia)"]
     E --> F["🚀 Úžasná Webová Aplikácia!"]
     
     B -.-> G["🤖 AI Asistent<br/>(GitHub Copilot)"]
     C -.-> H["📱 Testovanie Zariadení<br/>(Responzívny Dizajn)"]
-    D -.-> I["📦 Správca Balíkov<br/>(npm, yarn)"]
+    D -.-> I["📦 Správcovia Balíčkov<br/>(npm, yarn)"]
     E -.-> J["👥 Komunita<br/>(Stack Overflow)"]
     
     style A fill:#fff59d
@@ -507,94 +507,93 @@ graph TD
 ```
 ### Editory kódu a IDE: Vaši noví digitálni najlepší priatelia
 
-Povedzme si o editoroch kódu – tieto sa majú vážne stať vašimi novými obľúbenými miestami na tvorenie! Myslite na ne ako na vaše osobné útočisko pre kódovanie, kde budete tráviť väčšinu času tvorbou a vylepšovaním vašich digitálnych výtvorov.
+Povedzme si o editoroch kódu – tieto sa stanú vašimi úplne novými obľúbenými miestami na tvorbu! Predstavte si ich ako vaše osobné útočisko kódovania, kde strávite väčšinu svojho času vytváraním a zdokonaľovaním digitálnych diel.
 
-Ale tu je to úplne magické na moderných editoroch: nie sú to len obyčajné textové editory. Sú to ako mať najbystrejšieho, najpodpornejšieho mentora kódovania sediaceho vedľa vás 24/7. Chytia vám preklepy ešte skôr, než si ich všimnete, navrhnú vylepšenia, ktoré vás urobia géniom, pomôžu vám pochopiť, čo každý kúsok kódu robí, a niektoré vám dokážu predpovedať, čo chcete napísať, a ponúknu vám dokončenie myšlienky!
+Ale tu je to, čo je na moderných editoroch úplne magické: nie sú to len pekné textové editory. Sú ako najbystrejší, najpodpornejší mentor programovania sediaci pri vás 24 hodín denne. Opravujú vaše preklepy skôr, ako si ich vôbec všimnete, navrhujú zlepšenia, aby ste vyzerali ako génius, pomáhajú vám pochopiť, čo každý kúsok kódu robí, a niektoré vám dokonca dokážu predpovedať, čo chcete napísať, a ponúknu vám dokončenie!
 
-Pamätám si, keď som objavil automatické dopĺňanie – mal som pocit, že žijem v budúcnosti. Začnete niečo písať a editor povie: „Hej, nechceli ste použiť túto funkciu, ktorá presne robí to, čo potrebujete?“ Je to, akoby ste mali čitateľa myšlienok ako kódovacieho kamaráta!
+Pamätám si, keď som objavil automatické dokončovanie – doslova som mal pocit, že žijem v budúcnosti. Začnete písať niečo a editor povie: "Hej, chcel si použiť túto funkciu, ktorá robí presne to, čo potrebuješ?" Je to ako mať čitateľa myšlienok ako kamaráta na kódovanie!
 
-**Čo robí tieto editory také neuveriteľné?**
+**Čo robí tieto editory tak úžasnými?**
 
-Moderné editory kódu ponúkajú impozantný súbor funkcií navrhnutých na zvýšenie vašej produktivity:
+Moderné editory kódu ponúkajú ohromujúci súbor funkcií na zvýšenie produktivity:
 
 | Funkcia | Čo robí | Prečo pomáha |
 |---------|---------|--------------|
-| **Zvýrazňovanie syntaxe** | Farbenie rôznych častí vášho kódu | Uľahčuje čítanie kódu a odhaľovanie chýb |
-| **Automatické dopĺňanie** | Navrhuje kód počas písania | Urýchľuje kódovanie a znižuje preklepy |
-| **Nástroje na ladenie** | Pomáhajú nájsť a opraviť chyby | Šetria hodiny na hľadaní problémov |
-| **Rozšírenia** | Pridávajú špecializované funkcie | Prispôsobte editor pre akúkoľvek technológiu |
+| **Zvýraznenie syntaxe** | Farebne oddeľuje časti kódu | Uľahčuje čítanie kódu a hľadanie chýb |
+| **Automatické dokončovanie** | Navrhuje kód počas písania | Urýchľuje kódovanie a znižuje preklepy |
+| **Nástroje na ladenie** | Pomáhajú nájsť a opraviť chyby | Šetria hodiny hľadania chýb |
+| **Rozšírenia** | Pridávajú špecializované funkcie | Prispôsobujú editor pre akúkoľvek technológiu |
 | **AI asistenti** | Navrhujú kód a vysvetlenia | Urýchľujú učenie a produktivitu |
 
-> 🎥 **Video zdroj**: Chcete vidieť tieto nástroje v akcii? Pozrite si toto [Video Nástroje remesla](https://youtube.com/watch?v=69WJeXGBdxg) pre komplexný prehľad.
+> 🎥 **Video zdroj**: Chcete vidieť tieto nástroje v akcii? Pozrite si toto [Video Nástrojov remesla](https://youtube.com/watch?v=69WJeXGBdxg) pre komplexný prehľad.
 
-#### Odporúčané editory pre webový vývoj
+#### Odporúčané editory pre vývoj webu
 
 **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (zadarmo)
 - Najpopulárnejší medzi webovými vývojármi
-- Vynikajúci ekosystém rozšírení
-- Vstavaný terminál a integrácia Git
-- **Nezabudnuteľné rozšírenia**:
-  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI-poháňané návrhy kódu
+- Výborný ekosystém rozšírení
+- Integrovaný terminál a správa Git
+- **Povinné rozšírenia**:
+  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI poháňané návrhy kódu
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Spolupráca v reálnom čase
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Automatické formátovanie kódu
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Odhaľovanie preklepov v kóde
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Odhaľuje preklepy v kóde
 
-**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (platený, zadarmo pre študentov)
+**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (platené, zadarmo pre študentov)
 - Pokročilé nástroje na ladenie a testovanie
-- Inteligentné dopĺňanie kódu
-- Vstavaná správa verzií
+- Inteligentné dokončovanie kódu
+- Integrovaná verzovací kontrola
 
 **Cloudové IDE** (rôzne ceny)
-- [GitHub Codespaces](https://github.com/features/codespaces) - Plná verzia VS Code vo vašom prehliadači
+- [GitHub Codespaces](https://github.com/features/codespaces) - Plný VS Code vo vašom prehliadači
 - [Replit](https://replit.com/) - Skvelé na učenie a zdieľanie kódu
 - [StackBlitz](https://stackblitz.com/) - Okamžitý full-stack webový vývoj
 
-> 💡 **Tip na začiatok**: Začnite s Visual Studio Code – je zadarmo, široko používaný v priemysle a má obrovskú komunitu tvoriacu užitočné návody a rozšírenia.
+> 💡 **Tip na začiatok**: Začnite s Visual Studio Code – je zadarmo, široko používaný v priemysle a má obrovskú komunitu vytvárajúcu užitočné tutoriály a rozšírenia.
 
 
 ### Webové prehliadače: Vaša tajná vývojárska laboratórium
 
-Dobre, pripravte sa, že vám úplne vyrazí dych! Viete, ako ste používali prehliadače na prechádzanie sociálnych sietí a sledovanie videí? Ukazuje sa, že celú dobu skrývajú neuveriteľnú tajnú vývojársku laboratórium, ktoré čaká len na to, kým ho objavíte!
+Dobre, pripravte sa nechať kompletne ohromiť! Viete, ako ste používali prehliadače na prechádzanie sociálnych sietí a pozeranie videí? Ukazuje sa, že celý čas ukrývali toto neuveriteľné tajné vývojárske laboratórium, len čakajúce na to, kým ho objavíte!
 
-Kedykoľvek kliknete pravým tlačidlom myši na webovú stránku a vyberiete „Preskúmať prvok“, otvárate skrytý svet vývojárskych nástrojov, ktoré sú úprimne výkonnejšie než niektorý drahý softvér, za ktorý som kedysi platil stovky dolárov. Je to, akoby ste zistili, že vaša obyčajná kuchyňa skrýva za tajnou stenou profesionálnu šéfkuchársku laboratóriu!
-Prvýkrát, keď mi niekto ukázal DevTools v prehliadači, strávil som asi tri hodiny iba klikaním a hovoril som si: „POČKAJ, TOTO TIEŽ VIE?!” Môžete doslova upravovať akúkoľvek webovú stránku v reálnom čase, vidieť presne, ako rýchlo sa všetko načítava, testovať, ako vaša stránka vyzerá na rôznych zariadeniach, a dokonca debugovať JavaScript ako úplný profesionál. Je to úplne ohromujúce!
+Vždy, keď kliknete pravým tlačidlom myši na webovú stránku a vyberiete "Inšpektovať prvok," otvárate skrytý svet vývojárskych nástrojov, ktoré sú úprimne výkonnejšie než niektorý drahý softvér, za ktorý som platil stovky dolárov. Je to ako objaviť, že vaša stará kuchyňa skrýva profesionálnu laboratórium šéfkuchára za tajným panelom!
+Prvýkrát, keď mi niekto ukázal prehliadačové DevTools, som strávil asi tri hodiny len klikajúc a hovoril som si: „POČKAJ, ŽE TO TO MÔŽE AJ TAKTO?!“ Doslova môžete upravovať akúkoľvek webovú stránku v reálnom čase, vidieť presne, ako rýchlo sa všetko načítava, testovať, ako vaša stránka vyzerá na rôznych zariadeniach, a dokonca ladíte JavaScript ako úplný profesionál. Je to proste neuveriteľné!
 
 **Prečo sú prehliadače vašou tajnou zbraňou:**
 
-Keď vytvárate webovú stránku alebo webovú aplikáciu, potrebujete vidieť, ako vyzerá a správa sa vo svete. Prehliadače nielen zobrazujú vašu prácu, ale poskytujú aj podrobné informácie o výkone, prístupnosti a potenciálnych problémoch.
+Keď vytvárate webovú stránku alebo webovú aplikáciu, potrebujete vidieť, ako vyzerá a správa sa v reálnom svete. Prehliadače nielen zobrazujú vašu prácu, ale poskytujú aj podrobné informácie o výkonnosti, prístupnosti a potenciálnych problémoch.
 
 #### Vývojárske nástroje prehliadača (DevTools)
 
-Moderné prehliadače obsahujú komplexné sady nástrojov:
+Moderné prehliadače obsahujú komplexné sady nástrojov pre vývoj:
 
-| Kategória nástroja | Čo robí | Príklad použitia |
-|--------------------|----------|-------------------|
-| **Inšpektor elementov** | Prezerá a upravuje HTML/CSS v reálnom čase | Úprava štýlov pre okamžité výsledky |
+| Kategória nástrojov | Čo robí | Príklad použitia |
+|---------------------|---------|------------------|
+| **Inspektor prvkov** | Zobrazuje a upravuje HTML/CSS v reálnom čase | Upraviť štýl a vidieť okamžité výsledky |
 | **Konzola** | Zobrazuje chybové hlásenia a testuje JavaScript | Ladenie problémov a experimentovanie s kódom |
-| **Monitor siete** | Sleduje načítavanie zdrojov | Optimalizácia výkonu a času načítania |
-| **Kontrola prístupnosti** | Testuje inkluzívny dizajn | Zabezpečuje, aby stránka fungovala pre všetkých |
-| **Simulator zariadenia** | Náhľad na rôznych veľkostiach obrazoviek | Testovanie responzívneho dizajnu bez viacerých zariadení |
+| **Sieťový monitor** | Sleduje načítavanie zdrojov | Optimalizovať výkon a dobu načítania |
+| **Kontrola prístupnosti** | Testuje inkluzívny dizajn | Zabezpečiť, že stránka funguje pre všetkých používateľov |
+| **Simulátor zariadení** | Náhľad na rôzne veľkosti obrazoviek | Testovanie responzívneho dizajnu bez viacerých zariadení |
 
 #### Odporúčané prehliadače na vývoj
 
-- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** - Priemyselný štandard DevTools s rozsiahlymi dokumentáciami
-- **[Firefox](https://developer.mozilla.org/docs/Tools)** - Výborné nástroje pre CSS Grid a prístupnosť
-- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** - Postavený na Chromium s vývojárskymi zdrojmi Microsoftu
+- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** – priemyselný štandard DevTools s rozsiahlymi dokumentáciami
+- **[Firefox](https://developer.mozilla.org/docs/Tools)** – vynikajúce nástroje pre CSS Grid a prístupnosť
+- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** – postavený na Chromium s Microsoftovými zdrojmi pre vývojárov
 
-> ⚠️ **Dôležitý tip na testovanie**: Vždy testujte svoje webové stránky vo viacerých prehliadačoch! To, čo funguje perfektne v Chrome, môže vyzerať inak v Safari alebo Firefox. Profesionálni vývojári testujú vo všetkých hlavných prehliadačoch, aby zabezpečili konzistentný používateľský zážitok.
+> ⚠️ **Dôležitá rada pri testovaní**: Vždy testujte svoje weby vo viacerých prehliadačoch! Čo funguje perfektne v Chrome, môže vyzerať inak v Safari alebo Firefoxe. Profesionálni vývojári testujú vo všetkých hlavných prehliadačoch, aby zabezpečili konzistentný používateľský zážitok.
 
+### Nástroje príkazového riadku: Vaša brána k super schopnostiam vývojára
 
-### Príkazové riadky: Vstupná brána k vývojárskym superschopnostiam
+Dobre, poďme si úprimne povedať pár vecí o príkazovom riadku, pretože chcem, aby ste to počuli od niekoho, kto tomu naozaj rozumie. Keď som ho prvýkrát videl – čierna obrazovka so blikajúcim textom – doslova som si hovoril: „Nie, určite nie! Vyzerá to ako z nejakej hackerovskej 80-tych filmovej scény a ja rozhodne nie som dosť šikovný na toto!“ 😅
 
-Dobre, poďme na úplne úprimný moment ohľadom príkazového riadku, pretože chcem, aby ste to počuli od niekoho, kto tomu naozaj rozumie. Keď som ho prvýkrát videl – iba tú desivú čiernu obrazovku s blikajúcim textom – doslova som si pomyslel: „Nie, rozhodne nie! Vyzerá to ako niečo z hackerovského filmu z 80. rokov, a určite na to nie som dosť šikovný!” 😅
+Ale tu je vec, ktorú by som si prial, aby mi niekto vtedy povedal a čo vám hovorím práve teraz: príkazový riadok nie je strašidelný – je to vlastne ako mať priamy rozhovor so svojim počítačom. Predstavte si, že je to rozdiel medzi objednaním jedla cez peknú aplikáciu s obrázkami a menu (čo je pekné a jednoduché) a tým, že vojdete do svojej obľúbenej miestnej reštaurácie, kde kuchár presne vie, čo máte radi a dokáže pripraviť niečo perfektné len na základe vášho „prekvapte ma niečím úžasným“.
 
-Ale tu je to, čo by mi mal niekto povedať vtedy a čo vám hovorím teraz: príkazový riadok nie je strašidelný – je ako priama konverzácia s vaším počítačom. Predstavte si to ako rozdiel medzi objednaním jedla cez peknú aplikáciu s obrázkami a menu (čo je fajn a jednoduché) a vstúpením do vašej obľúbenej miestnej reštaurácie, kde kuchár presne vie, čo máte radi, a môže vám pripraviť niečo dokonalé len tým, že poviete „prekvap ma niečím úžasným“.
-
-Príkazový riadok je miesto, kam vývojári chodia, aby sa cítili ako kúzelníci. Napíšete pár zdanlivo magických slov (dobre, sú to len príkazy, ale pôsobia magicky!), stlačíte enter a BAM – vytvorili ste celú štruktúru projektu, nainštalovali výkonné nástroje z celého sveta alebo nasadili svoju aplikáciu na internet, aby ju videli milióny ľudí. Keď ochutnáte túto silu prvýkrát, je to naozaj návykové!
+Príkazový riadok je miesto, kde sa vývojári cítia ako čarodejníci. Napíšete pár zdanlivo magických slov (dobre, sú to len príkazy, ale pôsobia magicky!), stlačíte enter a BAM – vytvorili ste celú štruktúru projektu, nainštalovali výkonné nástroje z celého sveta alebo nasadili svoju aplikáciu na internet pre milióny ľudí na zobrazenie. Keď prvýkrát pocítite tú moc, je to úprimne dosť návykové!
 
 **Prečo sa príkazový riadok stane vaším obľúbeným nástrojom:**
 
-Kým grafické rozhrania sú skvelé pre mnoho úloh, príkazový riadok vyniká automatizáciou, presnosťou a rýchlosťou. Mnohé vývojárske nástroje fungujú hlavne cez príkazový riadok a naučiť sa ich efektívne používať môže výrazne zvýšiť vašu produktivitu.
+Zatiaľ čo grafické rozhrania sú super pre mnohé úlohy, príkazový riadok exceluje v automatizácii, presnosti a rýchlosti. Mnoho vývojárskych nástrojov funguje primárne cez príkazový riadok, a naučiť sa ich efektívne používať môže výrazne zlepšiť vašu produktivitu.
 
 ```bash
 # Krok 1: Vytvorte a prejdite do adresára projektu
@@ -603,8 +602,8 @@ cd my-awesome-website
 ```
 
 **Čo tento kód robí:**
-- **Vytvorí** nový adresár s názvom „my-awesome-website“ pre váš projekt
-- **Presunie sa** do novo vytvoreného adresára, aby ste mohli začať pracovať
+- **Vytvorí** nový adresár s názvom "my-awesome-website" pre váš projekt
+- **Prezrie** sa do novo vytvoreného adresára, aby ste mohli začať pracovať
 
 ```bash
 # Krok 2: Inicializujte projekt s package.json
@@ -617,9 +616,9 @@ npm install --save-dev @eslint/js
 
 **Krok za krokom, čo sa deje:**
 - **Inicializuje** nový Node.js projekt s predvolenými nastaveniami pomocou `npm init -y`
-- **Nainštaluje** Vite ako moderný build tool pre rýchly vývoj a produkčné zostavy
+- **Nainštaluje** Vite ako moderný build nástroj pre rýchly vývoj a produkčné zostavenia
 - **Pridá** Prettier pre automatické formátovanie kódu a ESLint pre kontrolu kvality kódu
-- **Použije** príznak `--save-dev`, aby označil tieto závislosti ako vývojové
+- **Použije** príznak `--save-dev` na označenie týchto závislostí ako iba pre vývoj
 
 ```bash
 # Krok 3: Vytvorte štruktúru projektu a súbory
@@ -630,85 +629,84 @@ echo '<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello Wo
 npx vite
 ```
 
-**Čo sme v tom vyššie urobili:**
-- **Usporiadali** náš projekt vytvorením samostatných priečinkov pre zdrojový kód a zdroje
-- **Vygenerovali** základný HTML súbor so správnou štruktúrou dokumentu
-- **Spustili** vývojový server Vite pre živé znovunačítanie a horúcu výmenu modulov
+**Čo sme dosiahli:**
+- **Usporiadali** sme projekt vytvorením samostatných priečinkov pre zdrojový kód a zdroje
+- **Vygenerovali** základný HTML súbor s správnou štruktúrou dokumentu
+- **Spustili** Vite vývojový server pre živé obnovenie a výmenu modulov za behu
 
-#### Zásadné príkazové nástroje pre webový vývoj
+#### Kľúčové nástroje príkazového riadku pre webový vývoj
 
 | Nástroj | Účel | Prečo ho potrebujete |
 |---------|-------|---------------------|
-| **[Git](https://git-scm.com/)** | Verzionovanie | Sledovanie zmien, spolupráca, zálohovanie práce |
-| **[Node.js & npm](https://nodejs.org/)** | JavaScript runtime & správca balíčkov | Spúšťanie JavaScriptu mimo prehliadačov, inštalácia moderných vývojárskych nástrojov |
-| **[Vite](https://vitejs.dev/)** | Build tool & vývojový server | Bleskurýchly vývoj s hot module replacement |
-| **[ESLint](https://eslint.org/)** | Kvalita kódu | Automatické zisťovanie a oprava problémov v JavaScripte |
-| **[Prettier](https://prettier.io/)** | Formátovanie kódu | Zachovanie jednotného formátovania a čitateľnosti kódu |
+| **[Git](https://git-scm.com/)** | Riadenie verzií | Sledujte zmeny, spolupracujte a zálohujte prácu |
+| **[Node.js & npm](https://nodejs.org/)** | Runtime JavaScriptu a správa balíkov | Spúšťajte JavaScript mimo prehliadačov, inštalujte moderné nástroje |
+| **[Vite](https://vitejs.dev/)** | Build nástroj a vývojový server | Bleskurýchly vývoj s hot module replacement |
+| **[ESLint](https://eslint.org/)** | Kvalita kódu | Automaticky nájde a opraví chyby v JavaScript kóde |
+| **[Prettier](https://prettier.io/)** | Formátovanie kódu | Udržiavajte kód konzistentne naformátovaný a čitateľný |
 
-#### Platformovo špecifické možnosti
+#### Možnosti pre rôzne platformy
 
 **Windows:**
-- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Moderný, bohatý terminál
-- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Výkonné skriptovacie prostredie
-- **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 - Tradičný príkazový riadok Windows
+- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** – moderný, bohato vybavený terminál
+- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 – výkonné prostredie pre skripty
+- **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 – tradičný príkazový riadok Windows
 
 **macOS:**
-- **[Terminal](https://support.apple.com/guide/terminal/)** 💻 - Vstavaná terminálová aplikácia
-- **[iTerm2](https://iterm2.com/)** - Vylepšený terminál s pokročilými funkciami
+- **[Terminal](https://support.apple.com/guide/terminal/)** 💻 – vstavaná terminálová aplikácia
+- **[iTerm2](https://iterm2.com/)** – rozšírený terminál s pokročilými funkciami
 
 **Linux:**
-- **[Bash](https://www.gnu.org/software/bash/)** 💻 - Štandardná Linuxová shell
-- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** - Pokročilý terminálový emulátor
+- **[Bash](https://www.gnu.org/software/bash/)** 💻 – štandardný Linux shell
+- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** – pokročilý terminálový emulátor
 
 > 💻 = Predinštalované v operačnom systéme
 
-> 🎯 **Cesta učenia**: Začnite so základnými príkazmi ako `cd` (zmena adresára), `ls` alebo `dir` (zobrazenie súborov) a `mkdir` (vytvorenie priečinka). Cvičte s modernými príkazmi pracovného toku ako `npm install`, `git status` a `code .` (otvorí aktuálny adresár vo VS Code). Ako sa budete cítiť istejší, prirodzene sa naučíte pokročilejšie príkazy a techniky automatizácie.
+> 🎯 **Cesta učenia**: Začnite so základnými príkazmi ako `cd` (zmena adresára), `ls` alebo `dir` (zobrazenie súborov) a `mkdir` (vytvorenie priečinka). Cvičte moderné príkazy pracovného postupu ako `npm install`, `git status` a `code .` (otvára aktuálny adresár vo VS Code). Ako si budete viac istí, prirodzene si osvojíte aj pokročilejšie príkazy a automatizačné techniky.
 
+### Dokumentácia: Váš vždy dostupný učiteľ
 
-### Dokumentácia: Váš neustále dostupný mentor učenia
+Dobre, prezradím vám malý tajný tip, ktorý vám spraví oveľa lepšie pocity z toho, že ste začiatočník: aj tí najskúsenejší vývojári trávia obrovské množstvo času čítaním dokumentácie. A nie je to preto, že by nevedeli, čo robia – je to vlastne znak múdrosti!
 
-Dobre, prezradím vám malé tajomstvo, ktoré vám pomôže cítiť sa oveľa lepšie ako začiatočník: aj tí najskúsenejší vývojári trávia veľkú časť svojho času čítaním dokumentácie. A nie je to preto, že by nevedeli, čo robia – je to vlastne znak múdrosti!
+Dokumentácia je ako prístup k najtrpezlivejším a najpovolanejším učiteľom na svete, ktorí sú vám k dispozícii 24/7. Máte problém o druhej ráno? Dokumentácia je tu s virtuálnym teplým objatím a presne tou odpoveďou, ktorú potrebujete. Chcete sa dozvedieť o nejakej novej úžasnej funkcii, o ktorej všetci hovoria? Dokumentácia vám poskytne podrobné príklady krok za krokom. Snažíte sa pochopiť, prečo niečo funguje tak, ako funguje? Tušili ste to – dokumentácia vám to vysvetlí spôsobom, ktorý úplne pochopíte!
 
-Myslite na dokumentáciu ako na prístup k najtrpezlivejším a najschopnejším učiteľom na svete, ktorí sú k dispozícii 24/7. Ste zaseknutý pri probléme o druhej ráno? Dokumentácia je tu s virtuálnym teplým objatím a presne s tou odpoveďou, ktorú potrebujete. Chcete sa naučiť niečo nové, o čom všetci hovoria? Dokumentácia vám pomôže s krok za krokom príkladmi. Snažíte sa pochopiť, prečo niečo funguje tak, ako funguje? Uhádli ste – dokumentácia vám to vysvetlí spôsobom, ktorý vám konečne dá zmysel!
-
-Niečo, čo úplne zmenilo môj pohľad: svet webového vývoja sa pohybuje neuveriteľne rýchlo a nikto (myslím absolútne nikto!) si všetko nezapamätá. Viděl som skúsených vývojárov s viac ako 15-ročnou praxou, ako si vyhľadávajú základnú syntax, a viete čo? Nie je to trápne – je to múdre! Nie je to o dokonalom pamätaní si, ale o tom, vedieť rýchlo nájsť spoľahlivé odpovede a vedieť ich aplikovať.
+Niečo, čo mi úplne zmenilo uhol pohľadu: svet webového vývoja sa pohybuje neuveriteľne rýchlo a nikto (myslím skutočne nikto!) nemá všetko z hlavy. Pozeral som senior vývojárov s 15+ rokmi praxe, ako si vyhľadávajú základnú syntax, a viete čo? Nije to trápne – je to múdre! Nejde o perfektnú pamäť; ide o vedomie, kde rýchlo nájsť spoľahlivé odpovede a vedieť ich aplikovať.
 
 **Tu sa deje tá pravá mágia:**
 
-Profesionálni vývojári venujú značnú časť svojho času čítaniu dokumentácie – nie preto, že by nevedeli, čo robia, ale preto, že svet webového vývoja sa tak rýchlo vyvíja, že zostať aktuálnym vyžaduje neustále učenie. Skvelá dokumentácia vám pomôže pochopiť nielen *ako* niečo používať, ale *prečo* a *kedy* to používať.
+Profesionálni vývojári trávia veľkú časť času čítaním dokumentácie – nie preto, že by nevedeli, čo robia, ale preto, že oblasť webového vývoja sa vyvíja tak rýchlo, že zostať v obraze vyžaduje neustále učenie. Skvelá dokumentácia vám pomôže pochopiť nie len *ako* niečo použiť, ale aj *prečo* a *kedy* to použiť.
 
-#### Základné zdroje dokumentácie
+#### Kľúčové zdroje dokumentácie
 
 **[Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web)**
-- Zlatý štandard dokumentácie pre webové technológie
-- Obsiahle návody pre HTML, CSS a JavaScript
+- Zlatý štandard pre dokumentáciu webových technológií
+- Komplexné návody pre HTML, CSS a JavaScript
 - Obsahuje informácie o kompatibilite prehliadačov
 - Ponúka praktické príklady a interaktívne ukážky
 
 **[Web.dev](https://web.dev)** (od Google)
-- Najlepšie praktiky moderného webového vývoja
+- Najlepšie postupy moderného webového vývoja
 - Návody na optimalizáciu výkonu
 - Princípy prístupnosti a inkluzívneho dizajnu
-- Prípadové štúdie z reálnych projektov
+- Prípady použitia z reálnych projektov
 
 **[Microsoft Developer Documentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)**
-- Vývojárske zdroje pre prehliadač Edge
-- Návody pre progresívne webové aplikácie
-- Prehľady o multiplatformovom vývoji
+- Zdroje pre vývoj v Edge prehliadači
+- Návody na progresívne webové aplikácie
+- Postrehy o multiplatformovom vývoji
 
 **[Frontend Masters Learning Paths](https://frontendmasters.com/learn/)**
 - Štruktúrované učebné plány
-- Videokurzy od expertov v odbore
-- Praktické cvičenia s kódovaním
+- Video kurzy od odborníkov z praxe
+- Praktické cvičenia s kódom
 
-> 📚 **Študijná stratégia**: Nesnažte sa dokumentáciu pamätať naspamäť – namiesto toho sa naučte, ako ju efektívne prechádzať. Ukladajte si často používané odkazy a cvičte vyhľadávanie, aby ste rýchlo našli konkrétne informácie.
+> 📚 **Študijná taktika**: Nesnažte sa dokumentáciu pamätať naspamäť – radšej sa naučte, ako v nej efektívne vyhľadávať. Vytvorte si záložky často používaných odkazov a cvičte vyhľadávanie presných informácií.
 
-### 🔧 **Kontrola ovládania nástrojov: Čo na vás zapôsobilo?**
+### 🔧 **Kontrola ovládania nástrojov: Čo na vás najviac zapôsobilo?**
 
-**Zamyslite sa na chvíľu:**
-- Ktorý nástroj vás najviac zaujíma vyskúšať ako prvý? (Nemôžete sa pomýliť!)
-- Zdá sa vám príkazový riadok stále zastrašujúci, alebo ste zvedaví?
-- Viete si predstaviť, že by ste použili DevTools prehliadača na nazretie „za oponu“ vašich obľúbených stránok?
+**Zamyslite sa:**
+- Ktorý nástroj chcete vyskúšať ako prvý? (Nie je správna ani nesprávna odpoveď!)
+- Stále sa vám príkazový riadok zdá zastrašujúci, alebo ste už zvedaví?
+- Viete si predstaviť, že by ste používali DevTools na „nahliadnutie za oponu“ vašich obľúbených webov?
 
 ```mermaid
 pie title "Čas vývojára strávený s nástrojmi"
@@ -718,17 +716,17 @@ pie title "Čas vývojára strávený s nástrojmi"
     "Čítanie dokumentácie" : 15
     "Ladenie" : 5
 ```
-> **Zaujímavý fakt**: Väčšina vývojárov trávi asi 40 % svojho času v editore kódu, no všimnite si, koľko času ide na testovanie, učenie a riešenie problémov. Programovanie nie je len o písaní kódu – je to o tvorbe zážitkov!
+> **Zaujímavý postreh**: Väčšina vývojárov trávi asi 40 % svojho času v editore kódu, ale všimnite si, koľko času ide na testovanie, učenie sa a riešenie problémov. Programovanie nie je len o písaní kódu – je to o tvorbe zážitkov!
 
-✅ **Na zamyslenie**: Tu je zaujímavá otázka – ako si myslíte, že sa nástroje na tvorbu webov (vývoj) líšia od nástrojov na dizajn ich vzhľadu (dizajn)? Je to ako rozdiel medzi architektom, ktorý navrhuje krásny dom, a stavebným dodávateľom, ktorý ho naozaj postaví. Obe sú kľúčové, no vyžadujú rôzne súpravy nástrojov! Toto myslenie vám skutočne pomôže vidieť širší obraz toho, ako weby ožívajú.
+✅ **Na zamyslenie**: Tu je niečo zaujímavé – ako si myslíte, že sa líšia nástroje na vývoj webu (vývoj) od nástrojov na dizajn vzhľadu? Je to ako rozdiel medzi architektom, ktorý navrhuje krásny dom, a stavebným dodávateľom, ktorý ho naozaj postaví. Obidve sú dôležité, ale potrebujú rôzne sady nástrojov! Takéto myslenie vám pomôže vidieť širší obraz toho, ako weby ožívajú.
 
 ## Výzva GitHub Copilot Agenta 🚀
 
 Použite režim Agenta na splnenie nasledujúcej výzvy:
 
-**Popis:** Preskúmajte funkcie moderného editora kódu alebo IDE a demonštrujte, ako môže zlepšiť váš pracovný tok ako webového vývojára.
+**Popis:** Preskúmajte funkcie moderného kódového editora alebo IDE a ukážte, ako môže zlepšiť váš pracovný proces ako webového vývojára.
 
-**Návod:** Vyberte si editor kódu alebo IDE (napríklad Visual Studio Code, WebStorm alebo cloudové IDE). Uveďte tri funkcie alebo rozšírenia, ktoré vám pomáhajú efektívnejšie písať, ladiť alebo udržiavať kód. Ku každej krátko vysvetlite, ako zlepšuje váš pracovný tok.
+**Úloha:** Vyberte si kódový editor alebo IDE (napríklad Visual Studio Code, WebStorm alebo cloudové IDE). Uveďte tri funkcie alebo rozšírenia, ktoré vám pomáhajú efektívnejšie písať, ladiť alebo spravovať kód. Ku každej krátko vysvetlite, ako zlepšuje váš pracovný proces.
 
 ---
 
@@ -736,101 +734,103 @@ Použite režim Agenta na splnenie nasledujúcej výzvy:
 
 **Dobre, detektív, pripravený na svoj prvý prípad?**
 
-Teraz, keď máte tento skvelý základ, mám pre vás dobrodružstvo, ktoré vám pomôže vidieť, aký neuveriteľne rôznorodý a fascinujúci svet programovania je. A počúvajte – nejde zatiaľ o písanie kódu, takže žiadny tlak! Predstavte si, že ste detektív programovacích jazykov na vašom úplne prvom vzrušujúcom prípade!
+Teraz, keď máte tento úžasný základ, mám pre vás dobrodružstvo, ktoré vám pomôže vidieť, aký neuveriteľne rozmanitý a fascinujúci je programátorský svet. A počúvajte – ešte to nie je o písaní kódu, tak žiadny stres! Predstavte si, že ste detektív programovacích jazykov na svojom úplne prvom vzrušujúcom prípade!
 
-**Vaša misia, ak ju prijmete:**
-1. **Staňte sa prieskumníkom jazykov**: Vyberte tri programovacie jazyky z úplne odlišných svetov – možno jeden na tvorbu webov, druhý na mobilné aplikácie a tretí na spracovanie dát pre vedcov. Nájdite príklady toho istého jednoduchého úlohy napísanej v každom jazyku. Sľubujem, že budete úplne ohromený, ako veľmi sa môžu líšiť, aj keď robia presne to isté!
+**Vaša misia, ak sa rozhodnete ju prijať:**
+1. **Staňte sa prieskumníkom jazykov**: Vyberte si tri programovacie jazyky z úplne odlišných svetov – napríklad jeden na tvorbu webov, jeden na mobilné aplikácie a jeden na vedeckú prácu s dátami. Nájdite príklady toho istého jednoduchého úlohy vo všetkých troch jazykoch. Sľubujem, že budete úplne ohromení, ako veľmi sa môžu líšiť, pritom robia presne to isté!
 
-2. **Objavte ich pôvodné príbehy:** Čo robí každý jazyk špeciálnym? Tu je zaujímavý fakt – každý jediný programovací jazyk vznikol, pretože si niekto povedal: „Vieš čo? Musí existovať lepší spôsob, ako vyriešiť tento konkrétny problém.“ Dokážete prísť na to, aké problémy to boli? Niektoré z týchto príbehov sú naozaj fascinujúce!
+2. **Odhaľte ich pôvodné príbehy**: Čo robí každý jazyk špeciálnym? Tu je zaujímavosť – každý programovací jazyk vznikol, pretože niekto si povedal: „Vieš čo? Musí byť lepší spôsob, ako vyriešiť tento konkrétny problém.“ Dokážete zistiť, aké problémy to boli? Niektoré z týchto príbehov sú naozaj fascinujúce!
 
-3. **Spoznajte komunity:** Pozrite sa, ako priateľské a vášnivé sú komunity okolo každého jazyka. Niektoré majú milióny vývojárov, ktorí zdieľajú vedomosti a pomáhajú si navzájom, iné sú menšie, ale nesmierne zjednotené a podporujúce. Určite vás bude baviť spoznávať rôzne osobnosti týchto komunít!
+3. **Spoznajte komunity**: Pozrite sa, ako priateľská a vášnivá je komunita každého jazyka. Niektoré majú milióny vývojárov, ktorí si vymieňajú znalosti a pomáhajú si navzájom, iné sú menšie, ale veľmi zblížené a podporné. Určite vás bude baviť vidieť rozdielne osobnosti týchto komunít!
 
-4. **Nasledujte svoje pocity:** Ktorý jazyk sa vám teraz zdá najprístupnejší? Nesnažte sa urobiť „dokonalú“ voľbu – len počúvajte svoju intuíciu! Naozaj tu nie je zlý výber a kedykoľvek sa môžete pozrieť aj na iné.
+4. **Nasledujte svoj pocit**: Ktorý jazyk vám teraz pripadá najprístupnejší? Nezabúdajte, že neexistuje „správna“ voľba – stačí počúvať svoju intuíciu! A vždy môžete skúmať aj iné jazyky neskôr.
 
-**Bonusová detektívna úloha:** Skúste zistiť, ktoré hlavné weby alebo aplikácie sú vytvorené s každým jazykom. Zaručujem, že budete šokovaní, čo poháňa Instagram, Netflix alebo tú mobilnú hru, ktorú neviete prestať hrať!
+**Bonusová detektívna úloha:** Skúste zistiť, ktoré veľké weby alebo aplikácie sú postavené v každom z týchto jazykov. Garantujem, že budete šokovaní, keď zistíte, čo poháňa Instagram, Netflix alebo tú mobilnú hru, ktorú nemôžete prestať hrať!
 
-> 💡 **Pamätajte:** Nepokúšate sa dnes stať odborníkom v žiadnom z týchto jazykov. Len spoznávate okolie, než sa rozhodnete, kde si založíte pôsobisko. Dajte si čas, bavte sa a nechajte sa viesť svojou zvedavosťou!
+> 💡 **Pamätajte:** Nemusíte sa dnes stať expertom v žiadnom z týchto jazykov. Len spoznávate okolie, predtým než si vyberiete, kde chcete „postaviť svoj obchod“. Dajte si na čas, bavte sa a nechajte svoje zvedavé ja viesť vás!
 
-## Oslávme to, čo ste objavili!
+## Oslávme, čo ste objavili!
 
-Panečku, dnes ste načerpali toľko neuveriteľných informácií! Som naozaj nadšený, koľko z tejto úžasnej cesty vám zostalo v pamäti. A nezabudnite – toto nie je test, kde musíte všetko vedieť na sto percent. Toto je skôr oslava všetkého super, čo ste sa dozvedeli o tomto fascinujúcom svete, do ktorého sa chystáte ponoriť!
+Sakra, dnes ste nasali toľko úžasných informácií! Úprimne sa teším, koľko z tejto úžasnej cesty vám zostalo v pamäti. A nezabudnite – toto nie je test, kde musíte byť dokonalí. Je to skôr oslava všetkého toho super, čo ste sa o tomto fascinujúcom svete, do ktorého sa chystáte ponoriť, dozvedeli!
 
-[Otestujte sa v poprednom kvíze](https://ff-quizzes.netlify.app/web/)
-## Review & Self Study
+[Prejdite si kvíz po lekcii](https://ff-quizzes.netlify.app/web/)
 
-**Neponáhľajte sa a užívajte si to!**
+## Prehľad a samostatné štúdium
 
-Dnes ste prešli veľa a na to môžete byť hrdí! Teraz prichádza tá zábavná časť – objavovanie tém, ktoré vzbudili vašu zvedavosť. Pamätajte, toto nie je domáca úloha – je to dobrodružstvo!
+**Dajte si čas na preskúmanie a bavte sa pri tom!**
+Dnes ste toho prešli naozaj veľa, a to je niečo, na čo môžete byť hrdí! Teraz prichádza zábavná časť – skúmanie tém, ktoré vo vás vzbudili zvedavosť. Pamätajte, že toto nie je domáca úloha – je to dobrodružstvo!
 
-**Ponorte sa hlbšie do toho, čo vás zaujíma:**
+**Ponorte sa hlbšie do toho, čo vás nadchýna:**
 
-**Vyskúšajte programovacie jazyky prakticky:**
-- Navštívte oficiálne webové stránky 2 až 3 jazykov, ktoré vás zaujali. Každý z nich má svoju vlastnú osobnosť a príbeh!
-- Vyskúšajte online kódovacie „pieskoviská“ ako [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) alebo [Replit](https://replit.com/). Nebojte sa experimentovať – nič nepokazíte!
-- Prečítajte si o tom, ako váš obľúbený jazyk vznikol. Niektoré z týchto príbehov pôvodu sú naozaj fascinujúce a pomôžu vám pochopiť, prečo jazyky fungujú tak, ako fungujú.
+**Vyskúšajte si programovacie jazyky prakticky:**
+- Navštívte oficiálne webové stránky 2-3 jazykov, ktoré vás zaujali. Každý má svoju vlastnú osobnosť a príbeh!
+- Vyskúšajte online kódovacie hračkárske prostredia ako [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) alebo [Replit](https://replit.com/). Nebojte sa experimentovať – nič nepokazíte!
+- Prečítajte si, ako váš obľúbený jazyk vznikol. Naozaj, niektoré z týchto príbehov pôvodu sú fascinujúce a pomôžu vám pochopiť, prečo jazyky fungujú tak, ako fungujú.
 
-**Zoznámte sa s vašimi novými nástrojmi:**
-- Ak ste tak ešte nespravili, stiahnite si Visual Studio Code – je zadarmo a určite si ho zamilujete!
-- Strávte pár minút prehliadaním trhu rozšírení. Je to ako obchod s aplikáciami pre váš kódový editor!
-- Otvorte si nástroje pre vývojárov vo vašom prehliadači a klikajte. Nemusíte všetko rozumieť – len sa zoznámte s tým, čo tam je.
+**Zozoznámte sa s novými nástrojmi:**
+- Stiahnite si Visual Studio Code, ak ste tak ešte nespravili – je zadarmo a bude sa vám páčiť!
+- Strávte pár minút prehliadaním marketplace rozšírení. Je to ako obchod s aplikáciami pre váš kódový editor!
+- Otvorte si vývojárske nástroje vo vašom prehliadači a klikajte. Nemusíte všetko rozumieť – len sa zoznámte s tým, čo tam je.
 
 **Pridajte sa ku komunite:**
-- Sledujte niektoré vývojárske komunity na [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) alebo [GitHub](https://github.com/). Programátorská komunita je veľmi priateľská k nováčikom!
-- Pozrite si začiatočnícke video návody na YouTube. Existuje veľa skvelých tvorcov, ktorí vedia, aké to je začínať.
-- Zvážte pripojenie k lokálnym meet-upom alebo online komunitám. Verím, že vývojári milujú pomáhať nováčikom!
+- Sledujte niektoré vývojárske komunity na [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) alebo [GitHub](https://github.com/). Programátorská komunita je nesmierne priateľská k nováčikom!
+- Pozerajte videá na YouTube určené pre začiatočníkov. Existuje veľa skvelých tvorcov, ktorí si pamätajú, aké to je začínať.
+- Zvážte účasť na miestnych stretnutiach alebo online komunitách. Verte, vývojári radi pomáhajú nováčikom!
 
-> 🎯 **Počúvajte, toto si pamätajte**: Neočakáva sa od vás, že sa zo dňa na deň stanete kódovacím mágom! Práve teraz sa iba zoznamujete s týmto úžasným novým svetom, do ktorého sa chystáte vstúpiť. Neponáhľajte sa, užívajte si cestu a pamätajte – každý jeden vývojár, ktorého obdivujete, kedysi sedel presne tam, kde ste vy, cítil sa nadšene a možno trochu zahltený. To je úplne normálne a znamená to, že to robíte správne!
+> 🎯 **Počúvajte, toto si chcem, aby ste si zapamätali**: Neočakáva sa od vás, že sa zo dňa na deň stanete kúzelníkom programovania! Práve teraz sa iba zoznamujete s týmto úžasným novým svetom, ktorého súčasťou sa čoskoro stanete. Dajte si čas, užite si cestu a pamätajte – každý jeden vývojár, ktorého obdivujete, sedel raz presne tam, kde ste teraz vy, cítil sa nadšene a možno aj trochu preťažený. To je úplne normálne a znamená to, že to robíte správne!
 
-## Assignment
+
+
+## Úloha
 
 [Reading the Docs](assignment.md)
 
-> 💡 **Malé povzbudenie k zadaniu**: Veľmi rád by som vás videl, ako objavujete nástroje, o ktorých sme ešte nerozprávali! Preskočte editory, prehliadače a príkazové nástroje, o ktorých sme už hovorili – existuje celý úžasný vesmír vývojárskych nástrojov, ktoré čakajú na objavenie. Hľadajte také, ktoré sa aktívne udržiavajú a majú živé, ochotné komunity (tie majú zvyčajne tie najlepšie návody a najpodpornejších ľudí, keď sa náhodou zaseknete a potrebujete priateľskú pomoc).
+> 💡 **Malý impulz pre vašu úlohu**: Veľmi rád by som vás videl objavovať niektoré nástroje, o ktorých sme ešte nehovorili! Vynechajte editory, prehliadače a príkazové nástroje, o ktorých sme už hovorili – existuje celý tento úžasný vesmír skvelých vývojárskych nástrojov, ktoré čakajú, aby ste ich objavili. Hľadajte tie, ktoré sú aktívne udržiavané a majú živé, užitočné komunity (tie majú zvyčajne tie najlepšie návody a najpodpornejších ľudí, keď sa zaseknete a potrebujete pomocnú ruku).
 
 ---
 
-## 🚀 Your Programming Journey Timeline
+## 🚀 Váš časový plán programovacej cesty
 
-### ⚡ **Čo môžete spraviť v najbližších 5 minútach**
-- [ ] Záložkujte 2-3 webové stránky programovacích jazykov, ktoré vás zaujali
-- [ ] Stiahnite si Visual Studio Code, ak ste tak ešte nespravili
-- [ ] Otvorte si DevTools vo vašom prehliadači (F12) a klikajte na ľubovoľnú stránku
-- [ ] Pridajte sa k nejakej programátorskej komunite (Dev.to, Reddit r/webdev alebo Stack Overflow)
+### ⚡ **Čo môžete urobiť v nasledujúcich 5 minútach**
+- [ ] Pridať do záložiek 2-3 webové stránky programovacích jazykov, ktoré vás zaujali
+- [ ] Stiahnuť Visual Studio Code, ak ste tak ešte nespravili
+- [ ] Otvoriť vo vašom prehliadači DevTools (F12) a kliknúť okolo akéhokoľvek webu
+- [ ] Pridať sa do jednej programátorskej komunity (Dev.to, Reddit r/webdev alebo Stack Overflow)
 
-### ⏰ **Čo môžete dosiahnuť za túto hodinu**
-- [ ] Dokončite kvíz po lekcii a zamyslite sa nad svojimi odpoveďami
-- [ ] Nastavte VS Code s rozšírením GitHub Copilot
-- [ ] Vyskúšajte "Hello World" príklad v 2 rôznych programovacích jazykoch online
-- [ ] Pozrite si video "Deň v živote vývojára" na YouTube
-- [ ] Začnite s detektívnou prácou o programovacích jazykoch (z výzvy)
+### ⏰ **Čo môžete dosiahnuť v tomto hodine**
+- [ ] Dokončiť kvíz po lekcii a zamyslieť sa nad odpoveďami
+- [ ] Nastaviť VS Code s rozšírením GitHub Copilot
+- [ ] Vyskúšať si príklad "Hello World" v 2 rôznych programovacích jazykoch online
+- [ ] Pozrieť si video "Deň v živote vývojára" na YouTube
+- [ ] Začať vašu detektívnu prácu so zvoleným programovacím jazykom (z výzvy)
 
 ### 📅 **Vaše týždenné dobrodružstvo**
-- [ ] Dokončite zadanie a preskúmajte 3 nové vývojárske nástroje
-- [ ] Sledujte 5 vývojárov alebo programátorské účty na sociálnych sieťach
-- [ ] Skúste niečo malé postaviť v CodePen alebo Replit (aj len “Hello, [vaše meno]!”)
-- [ ] Prečítajte si jeden blogový príspevok o ceste nejakého vývojára
-- [ ] Pridajte sa k virtuálnemu meetup-u alebo si pozrite programátorské prednášky
-- [ ] Začnite sa učiť vybraný jazyk cez online tutoriály
+- [ ] Dokončiť úlohu a preskúmať 3 nové vývojárske nástroje
+- [ ] Sledovať 5 vývojárov alebo účtov o programovaní na sociálnych sieťach
+- [ ] Pokúsiť sa vytvoriť niečo drobné v CodePen alebo Replit (aj len "Hello, [Vaše Meno]!")
+- [ ] Prečítať si jeden vývojársky blog o niečej programátorskej ceste
+- [ ] Pridať sa na virtuálne stretnutie alebo pozrieť programátorskú prednášku
+- [ ] Začať sa učiť váš zvolený jazyk cez online tutoriály
 
-### 🗓️ **Vaša mesačná transformácia**
-- [ ] Vybudujte svoj prvý malý projekt (aj jednoduchá webová stránka sa počíta!)
-- [ ] Prispievajte do open-source projektu (začnite napríklad opravou dokumentácie)
-- [ ] Mentorujte niekoho, kto práve začína svoju programátorskú cestu
-- [ ] Vytvorte si vlastné portfólio vývojára na webe
-- [ ] Spojte sa s lokálnymi vývojárskymi komunitami alebo študijnými skupinami
-- [ ] Začnite plánovať svoj ďalší vzdelávací míľnik
+### 🗓️ **Vaša mesačná premena**
+- [ ] Vytvoriť svoj prvý malý projekt (aj jednoduchá webstránka sa počíta!)
+- [ ] Prispieť do open-source projektu (začnite opravou dokumentácie)
+- [ ] Mentorovať niekoho, kto práve začína s programovaním
+- [ ] Vytvoriť si vlastnú webovú stránku portfólia
+- [ ] Spojiť sa s miestnymi vývojárskymi komunitami alebo študijnými skupinami
+- [ ] Začať plánovať svoju ďalšiu vzdelávaciu métu
 
-### 🎯 **Záverečné zamyslenie**
+### 🎯 **Záverečné reflexné overenie**
 
-**Predtým, než budete pokračovať, oslávte to:**
-- Čo vás dnes na programovaní najviac nadchlo?
-- Ktorý nástroj alebo koncept chcete skúmať ako prvý?
-- Ako sa cítite pri štarte tejto programátorskej cesty?
-- Akú jednu otázku by ste teraz chceli položiť vývojárovi?
+**Predtým, než budete pokračovať, dajte si chvíľu na oslavu:**
+- Čo je jedna vec o programovaní, ktorá vás dnes nadchla?
+- Ktorý nástroj alebo koncept chcete preskúmať ako prvý?
+- Ako sa cítite na začiatku tejto programátorskej cesty?
+- Akú jednu otázku by ste chceli práve teraz položiť vývojárovi?
 
 ```mermaid
 journey
-    title Vaša cesta k budovaniu sebavedomia
+    title Tvoja cesta k budovaniu sebadôvery
     section Dnes
       Curious: 3: You
       Overwhelmed: 4: You
@@ -844,11 +844,11 @@ journey
       Confident: 5: You
       Helping Others: 5: You
 ```
-> 🌟 **Pamätajte**: Každý expert bol raz začiatočníkom. Každý seniorský vývojár sa kedysi cítil presne ako vy teraz – nadšene, možno trochu zahltený, a určite zvedavý na to, čo všetko je možné. Ste v úžasnej spoločnosti a táto cesta bude fantastická. Vitajte v nádhernom svete programovania! 🎉
+> 🌟 **Pamätajte**: Každý odborník bol raz začiatočník. Každý senior vývojár sa kedysi cítil presne tak, ako sa cítite vy – nadšene, možno trochu preťažený, a určite zvedavý, čo je možné. Ste v úžasnej spoločnosti a táto cesta bude neuveriteľná. Vitajte v nádhernom svete programovania! 🎉
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Zrieknutie sa zodpovednosti**:
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, vezmite prosím na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Za akékoľvek nedorozumenia alebo nesprávne interpretácie vzniknuté použitím tohto prekladu nenesieme zodpovednosť.
+**Zrieknutie sa zodpovednosti**:  
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, mali by ste mať na vedomí, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za akékoľvek nedorozumenia alebo nesprávne výklady vyplývajúce z použitia tohto prekladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

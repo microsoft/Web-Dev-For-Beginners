@@ -1,26 +1,26 @@
 # AGENTS.md
 
-## Prezentare generală a proiectului
+## Prezentarea Proiectului
 
-Acesta este un depozit educațional pentru predarea fundamentelor dezvoltării web începătorilor. Curriculumul este un curs cuprinzător de 12 săptămâni dezvoltat de Microsoft Cloud Advocates, cuprinzând 24 de lecții practice despre JavaScript, CSS și HTML.
+Acesta este un depozit curricular educațional pentru predarea fundamentelor dezvoltării web începătorilor. Curriculumul este un curs cuprinzător de 12 săptămâni dezvoltat de Microsoft Cloud Advocates, cuprinzând 24 de lecții practice care acoperă JavaScript, CSS și HTML.
 
-### Componente cheie
+### Componente Cheie
 
 - **Conținut educațional**: 24 de lecții structurate organizate în module bazate pe proiecte
-- **Proiecte practice**: Terrarium, Joc de tastare, Extensie de browser, Joc spațial, Aplicație bancară, Editor de cod și Asistent AI pentru chat
-- **Teste interactive**: 48 de teste cu câte 3 întrebări fiecare (evaluări pre/post-lesson)
-- **Suport multilingv**: Traduceri automate în peste 50 de limbi prin GitHub Actions
+- **Proiecte practice**: Terrarium, Joc de tastare, Extensie de browser, Joc spațial, Aplicație bancară, Editor de cod și Asistent AI chat
+- **Chestionare interactive**: 48 de chestionare cu câte 3 întrebări fiecare (evaluări pre/post-lecție)
+- **Suport multilingv**: Traduceri automate pentru peste 50 de limbi prin GitHub Actions
 - **Tehnologii**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (pentru proiecte AI)
 
 ### Arhitectură
 
-- Depozit educațional cu structură bazată pe lecții
-- Fiecare folder de lecție conține README, exemple de cod și soluții
-- Proiecte autonome în directoare separate (quiz-app, diverse proiecte de lecții)
+- Depozit educațional cu structură pe bază de lecții
+- Fiecare dosar de lecție conține README, exemple de cod și soluții
+- Proiecte autonome în directoare separate (quiz-app, diverse proiecte de lecție)
 - Sistem de traducere folosind GitHub Actions (co-op-translator)
-- Documentația este servită prin Docsify și disponibilă ca PDF
+- Documentație servită prin Docsify și disponibilă ca PDF
 
-## Comenzi de configurare
+## Comenzi de Configurare
 
 Acest depozit este destinat în principal consumului de conținut educațional. Pentru lucru cu proiecte specifice:
 
@@ -41,7 +41,7 @@ npm run build      # Construiește pentru producție
 npm run lint       # Rulează ESLint
 ```
 
-### API pentru proiectul bancar (Node.js + Express)
+### API Proiect Bancar (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
@@ -51,7 +51,7 @@ npm run lint       # Rulează ESLint
 npm run format     # Formatează cu Prettier
 ```
 
-### Proiecte extensii de browser
+### Proiecte Extensie Browser
 
 ```bash
 cd 5-browser-extension/solution
@@ -59,7 +59,7 @@ npm install
 # Urmați instrucțiunile specifice browserului pentru încărcarea extensiilor
 ```
 
-### Proiecte joc spațial
+### Proiecte Joc Spațial
 
 ```bash
 cd 6-space-game/solution
@@ -67,7 +67,7 @@ npm install
 # Deschide index.html în browser sau folosește Live Server
 ```
 
-### Proiect chat (backend Python)
+### Proiect Chat (Backend Python)
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -76,90 +76,90 @@ pip install openai
 python api.py
 ```
 
-## Flux de dezvoltare
+## Flux de Dezvoltare
 
-### Pentru contribuitorii de conținut
+### Pentru Contribuitori de Conținut
 
-1. **Fă fork al depozitului** în contul tău GitHub
+1. **Fork la depozit** în contul tău GitHub
 2. **Clonează fork-ul** local
-3. **Crează un branch nou** pentru modificările tale
-4. Modifică conținutul lecțiilor sau exemplele de cod
-5. Testează orice modificare de cod în directoarele proiectelor relevante
-6. Trimite pull requests conform ghidurilor de contribuție
+3. **Creează un branch nou** pentru modificările tale
+4. Fă modificări în conținutul lecțiilor sau în exemplele de cod
+5. Testează orice modificări de cod în directoarele proiectelor relevante
+6. Trimite pull request-uri urmând ghidurile de contribuție
 
-### Pentru cursanți
+### Pentru Învățăcei
 
 1. Fă fork sau clonează depozitul
-2. Navighează în ordine prin directoarele lecțiilor
+2. Navighează secvențial prin directoarele lecțiilor
 3. Citește fișierele README pentru fiecare lecție
-4. Completează testele pre-lesson la https://ff-quizzes.netlify.app/web/
-5. Lucrează prin exemplele de cod din folderele lecțiilor
-6. Finalizează temele și provocările
-7. Susține testele post-lesson
+4. Completează chestionarele pre-lecție la https://ff-quizzes.netlify.app/web/
+5. Parcurge exemplele de cod din dosarele lecțiilor
+6. Realizează temele și provocările
+7. Completează chestionarele post-lecție
 
-### Dezvoltare live
+### Dezvoltare Live
 
-- **Documentație**: Rulează `docsify serve` din directorul rădăcină (port 3000)
+- **Documentație**: Rulează `docsify serve` la rădăcină (port 3000)
 - **Quiz App**: Rulează `npm run dev` în directorul quiz-app
 - **Proiecte**: Folosește extensia VS Code Live Server pentru proiectele HTML
 - **Proiecte API**: Rulează `npm start` în directoarele API respective
 
-## Instrucțiuni de testare
+## Instrucțiuni de Testare
 
-### Testare Quiz App
+### Testarea Quiz App
 
 ```bash
 cd quiz-app
-npm run lint       # Verifică problemele de stil ale codului
-npm run build      # Verifică dacă compilarea reușește
+npm run lint       # Verifică problemele legate de stilul codului
+npm run build      # Verifică dacă build-ul reușește
 ```
 
-### Testare API Bancar
+### Testarea API Bancar
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Verificați problemele legate de stilul codului
-node server.js     # Verificați dacă serverul pornește fără erori
+npm run lint       # Verifica problemele de stil ale codului
+node server.js     # Verifică dacă serverul pornește fără erori
 ```
 
-### Abordare generală de testare
+### Abordare Generală de Testare
 
 - Acesta este un depozit educațional fără teste automate complete
 - Testarea manuală se concentrează pe:
-  - Exemplele de cod rulează fără erori
-  - Legăturile din documentație funcționează corect
-  - Construirea proiectului se finalizează cu succes
-  - Exemplele respectă bunele practici
+  - Executarea corectă a exemplelor de cod fără erori
+  - Funcționarea corectă a linkurilor în documentație
+  - Finalizarea cu succes a construziunilor proiectelor
+  - Urmarea celor mai bune practici în exemple
 
-### Verificări înainte de trimitere
+### Verificări înainte de Trimitere
 
 - Rulează `npm run lint` în directoarele cu package.json
-- Verifică dacă linkurile markdown sunt valide
+- Verifică validitatea linkurilor markdown
 - Testează exemplele de cod în browser sau Node.js
-- Verifică dacă traducerile păstrează structura corectă
+- Verifică că traducerile păstrează structura corectă
 
-## Ghid de stil pentru cod
+## Ghid de Stil pentru Cod
 
 ### JavaScript
 
 - Folosește sintaxa modernă ES6+
-- Urmează configurațiile ESLint standard oferite în proiecte
+- Respectă configurațiile standard ESLint oferite în proiecte
 - Folosește nume semnificative de variabile și funcții pentru claritate educațională
-- Adaugă comentarii care explică conceptele pentru cursanți
-- Formatează folosind Prettier unde este configurat
+- Adaugă comentarii care explică conceptele pentru învățăcei
+- Formatează cu Prettier unde este configurat
 
 ### HTML/CSS
 
 - Elemente semantice HTML5
 - Principii de design responsive
 - Convenții clare de denumire a claselor
-- Comentarii care explică tehnicile CSS pentru cursanți
+- Comentarii care explică tehnicile CSS pentru învățăcei
 
 ### Python
 
-- Urmează ghidul de stil PEP 8
-- Exemple clare, educaționale de cod
-- Hint-uri de tip unde sunt utile pentru învățare
+- Respectă ghidurile stil PEP 8
+- Exemple clare și educaționale de cod
+- Hinturi de tipuri acolo unde sunt utile pentru învățare
 
 ### Documentație Markdown
 
@@ -169,34 +169,34 @@ node server.js     # Verificați dacă serverul pornește fără erori
 - Capturi de ecran și imagini în directoarele `images/`
 - Text alternativ pentru imagini pentru accesibilitate
 
-### Organizarea fișierelor
+### Organizarea Fișierelor
 
-- Lecții numerotate secvențial (1-getting-started-lessons, 2-js-basics etc.)
-- Fiecare proiect are directoare `solution/` și deseori `start/` sau `your-work/`
-- Imaginile stocate în foldere specifice lecțiilor `images/`
+- Lecțiile numerotate secvențial (1-getting-started-lessons, 2-js-basics, etc.)
+- Fiecare proiect are directoare `solution/` și adesea `start/` sau `your-work/`
+- Imaginile stocate în foldere specifice lecțiilor, `images/`
 - Traduceri în structura `translations/{language-code}/`
 
-## Construire și distribuire
+## Construire și Desfășurare
 
-### Distribuire Quiz App (Azure Static Web Apps)
+### Desfășurarea Quiz App (Azure Static Web Apps)
 
-quiz-app este configurat pentru distribuire pe Azure Static Web Apps:
+quiz-app este configurat pentru desfășurare în Azure Static Web Apps:
 
 ```bash
 cd quiz-app
 npm run build      # Creează folderul dist/
-# Depune prin workflow-ul GitHub Actions la push în main
+# Desfășoară prin fluxul de lucru GitHub Actions la push către main
 ```
 
-Configurație Azure Static Web Apps:
-- **Locație aplicație**: `/quiz-app`
-- **Locație output**: `dist`
+Configurare Azure Static Web Apps:
+- **Locația aplicației**: `/quiz-app`
+- **Locația outputului**: `dist`
 - **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Generare PDF pentru documentație
+### Generare PDF Documentație
 
 ```bash
-npm install                    # Instalare docsify-to-pdf
+npm install                    # Instalează docsify-to-pdf
 npm run convert               # Generează PDF din docs
 ```
 
@@ -207,76 +207,76 @@ npm install -g docsify-cli    # Instalează Docsify global
 docsify serve                 # Servește pe localhost:3000
 ```
 
-### Build-uri specifice proiectelor
+### Construiri specifice proiectului
 
-Fiecare director de proiect poate avea propriul proces de build:
-- Proiecte Vue: `npm run build` creează pachete pentru producție
-- Proiecte statice: Fără pas de build, se servesc fișierele direct
+Fiecare director de proiect poate avea propriul proces de construire:
+- Proiecte Vue: `npm run build` creează bundle-uri de producție
+- Proiecte statice: fără pas de construire, fișiere servite direct
 
-## Ghid pentru Pull Request-uri
+## Ghid pentru Pull Requests
 
-### Format titlu
+### Formatul Titlului
 
-Folosește titluri clare, descriptive care indică aria de modificare:
-- `[Quiz-app] Adaugă noul quiz pentru lecția X`
-- `[Lesson-3] Corectează typo în proiectul terrarium`
-- `[Translation] Adaugă traducere în spaniolă pentru lecția 5`
+Folosește titluri clare, descriptive care indică aria modificării:
+- `[Quiz-app] Adaugă chestionar nou pentru lecția X`
+- `[Lesson-3] Corectează greșeală în proiectul terrarium`
+- `[Translation] Adaugă traducerea în spaniolă pentru lecția 5`
 - `[Docs] Actualizează instrucțiunile de configurare`
 
-### Verificări necesare
+### Verificări Necesare
 
 Înainte de a trimite un PR:
 
-1. **Calitatea codului**:
+1. **Calitate cod**:
    - Rulează `npm run lint` în directoarele proiectelor afectate
-   - Corectează toate erorile și avertismentele
+   - Rezolvă toate erorile și avertismentele lint
 
-2. **Verificare build**:
+2. **Verificare construire**:
    - Rulează `npm run build` dacă este cazul
-   - Asigură-te că nu există erori la build
+   - Asigură-te că nu apar erori la construire
 
 3. **Validare linkuri**:
    - Testează toate linkurile markdown
-   - Verifică dacă referințele la imagini funcționează
+   - Verifică referințele imaginii funcționează
 
-4. **Revizuirea conținutului**:
-   - Corectează gramatica și ortografia
-   - Asigură-te că exemplele de cod sunt corecte și educaționale
-   - Verifică dacă traducerile păstrează sensul original
+4. **Revizuire conținut**:
+   - Corectează ortografia și gramatica
+   - Asigură integritatea și claritatea educațională a exemplelor
+   - Verifică că traducerile păstrează sensul original
 
-### Cerințe pentru contribuție
+### Cerințe de Contribuție
 
 - Acceptă Microsoft CLA (verificare automată la primul PR)
-- Urmează [Codul de conduită pentru surse deschise Microsoft](https://opensource.microsoft.com/codeofconduct/)
-- Vezi [CONTRIBUTING.md](./CONTRIBUTING.md) pentru ghiduri detaliate
-- Referințe numerele issue-urilor în descrierea PR-ului dacă este cazul
+- Respectă [Codul de Conduită Open Source Microsoft](https://opensource.microsoft.com/codeofconduct/)
+- Consultă [CONTRIBUTING.md](./CONTRIBUTING.md) pentru ghiduri detaliate
+- Referințează numere de issue în descrierea PR-ului dacă este cazul
 
-### Proces de revizuire
+### Procesul de Revizuire
 
 - PR-urile sunt revizuite de mentori și comunitate
-- Claritatea educațională este prioritară
+- Se prioritizează claritatea educațională
 - Exemplele de cod trebuie să urmeze cele mai bune practici actuale
 - Traducerile sunt revizuite pentru acuratețe și adecvare culturală
 
-## Sistem de traducere
+## Sistemul de Traducere
 
-### Traducere automată
+### Traducere Automată
 
 - Folosește GitHub Actions cu workflow-ul co-op-translator
 - Traduce automat în peste 50 de limbi
-- Fișierele sursă sunt în directoarele principale
-- Fișierele traduse sunt în directoarele `translations/{language-code}/`
+- Fișiere sursă în directoarele principale
+- Fișiere traduse în structura `translations/{language-code}/`
 
-### Adăugarea îmbunătățirilor manuale de traducere
+### Adăugarea Îmbunătățirilor Manuale la Traducere
 
 1. Localizează fișierul în `translations/{language-code}/`
 2. Fă îmbunătățiri păstrând structura
 3. Asigură-te că exemplele de cod rămân funcționale
-4. Testează orice conținut localizat pentru quiz
+4. Testează orice conținut localizat de chestionar
 
-### Metadata traducere
+### Metadate Traducere
 
-Fișierele traduse includ antet cu metadata:
+Fișierele traduse includ antet cu metadate:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,110 +289,110 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Depanare și rezolvare probleme
+## Depanare și Rezolvare Probleme
 
-### Probleme comune
+### Probleme Comune
 
 **Quiz app nu pornește**:
 - Verifică versiunea Node.js (recomandat v14+)
 - Șterge `node_modules` și `package-lock.json`, rulează din nou `npm install`
-- Verifică dacă există conflicte de port (implicit: Vite folosește port 5173)
+- Verifică conflicte de port (implicit: Vite folosește port 5173)
 
-**Serverul API nu pornește**:
-- Verifică dacă versiunea Node.js este minimă (node >=10)
-- Verifică dacă portul este deja ocupat
-- Asigură-te că toate dependențele sunt instalate cu `npm install`
+**Server API nu pornește**:
+- Asigură versiunea minimă Node.js (node >=10)
+- Verifică dacă portul este deja folosit
+- Asigură instalarea dependențelor cu `npm install`
 
 **Extensia browser nu se încarcă**:
-- Verifică dacă manifest.json este corect formatat
-- Verifică consola browserului pentru erori
-- Urmează instrucțiunile specifice browserului pentru instalarea extensiei
+- Verifică formatul corect al manifest.json
+- Verifică consola browser pentru erori
+- Urmează instrucțiunile specifice browser-ului pentru instalare extensie
 
 **Probleme proiect chat Python**:
-- Asigură-te că pachetul OpenAI este instalat: `pip install openai`
-- Verifică dacă variabila de mediu GITHUB_TOKEN este setată
-- Verifică permisiunile de acces la GitHub Models
+- Asigură pachetul OpenAI instalat: `pip install openai`
+- Verifică că variabila de mediu GITHUB_TOKEN este setată
+- Verifică permisiunile de acces GitHub Models
 
 **Docsify nu servește documentația**:
 - Instalează docsify-cli global: `npm install -g docsify-cli`
 - Rulează din directorul rădăcină al depozitului
-- Verifică dacă există `docs/_sidebar.md`
+- Verifică existența fișierului `docs/_sidebar.md`
 
-### Sfaturi pentru mediul de dezvoltare
+### Sfaturi pentru Mediu de Dezvoltare
 
-- Folosește VS Code cu extensia Live Server pentru proiecte HTML
-- Instalează extensiile ESLint și Prettier pentru formatări consecvente
+- Folosește VS Code cu extensia Live Server pentru proiectele HTML
+- Instalează extensiile ESLint și Prettier pentru formatare constantă
 - Folosește DevTools din browser pentru depanare JavaScript
 - Pentru proiecte Vue, instalează extensia Vue DevTools pentru browser
 
-### Considerații de performanță
+### Considerații de Performanță
 
-- Numărul mare de fișiere traduse (50+ limbi) înseamnă clone complete mari
-- Folosește clone superficial dacă lucrezi doar pe conținut: `git clone --depth 1`
+- Numărul mare de fișiere traduse (peste 50 de limbi) înseamnă că clonările complete sunt mari
+- Folosește shallow clone dacă lucrezi doar pe conținut: `git clone --depth 1`
 - Exclude traducerile din căutări când lucrezi pe conținut în engleză
-- Procesele de build pot fi lente la prima rulare (npm install, build Vite)
+- Procesele de construire pot fi lente la prima execuție (npm install, construcție Vite)
 
-## Considerații de securitate
+## Considerații de Securitate
 
-### Variabile de mediu
+### Variabile de Mediu
 
 - Cheile API nu trebuie niciodată comise în depozit
-- Folosește fișiere `.env` (inclus deja în `.gitignore`)
+- Folosește fișiere `.env` (deja incluse în `.gitignore`)
 - Documentează variabilele de mediu necesare în README-urile proiectelor
 
 ### Proiecte Python
 
 - Folosește medii virtuale: `python -m venv venv`
-- Păstrează dependențele actualizate
-- Token-urile GitHub trebuie să aibă permisiuni minime necesare
+- Menține dependențele actualizate
+- Tokenii GitHub trebuie să aibă permisiuni minime necesare
 
 ### Acces GitHub Models
 
-- Sunt necesare Personal Access Tokens (PAT) pentru GitHub Models
-- Token-urile trebuie stocate ca variabile de mediu
-- Nu comite niciodată token-uri sau credențiale
+- Se cer Tokenuri Personale de Acces (PAT) pentru GitHub Models
+- Tokenii trebuie stocați ca variabile de mediu
+- Nu comite niciodată tokenuri sau credențiale
 
-## Note suplimentare
+## Note Suplimentare
 
-### Public țintă
+### Public Țintă
 
-- Începători compleți în dezvoltarea web
+- Începători compleți în dezvoltare web
 - Studenți și autodidacți
 - Profesori care folosesc curriculumul în săli de clasă
-- Conținut pentru accesibilitate și dezvoltarea graduală a abilităților
+- Conținut conceput pentru accesibilitate și dezvoltare graduală a abilităților
 
-### Filosofie educațională
+### Filosofie Educațională
 
-- Abordare bazată pe învățare prin proiecte
-- Verificări frecvente ale cunoștințelor (teste)
-- Exerciții practice de codare
-- Exemple de aplicații din lumea reală
-- Accent pe baze înainte de framework-uri
+- Abordare bazată pe învățarea prin proiecte
+- Verificări frecvente ale cunoștințelor (chestionare)
+- Exerciții practice de programare
+- Exemple de aplicare în lumea reală
+- Accent pe fundamente înainte de framework-uri
 
-### Mentenanță depozit
+### Mentenanța Depozitului
 
-- Comunitate activă de cursanți și contribuitori
-- Actualizări regulate ale dependențelor și conținutului
+- Comunitate activă de învățăcei și contribuitori
+- Actualizări regulate la dependențe și conținut
 - Probleme și discuții monitorizate de mentori
-- Actualizări automate ale traducerilor prin GitHub Actions
+- Actualizări traduceri automate prin GitHub Actions
 
-### Resurse conexe
+### Resurse Relatate
 
 - [Module Microsoft Learn](https://docs.microsoft.com/learn/)
 - [Resurse Student Hub](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) recomandat pentru cursanți
-- Cursuri adiționale: AI generativă, Data Science, ML, IoT
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) recomandat pentru învățăcei
+- Cursuri suplimentare: AI Generativ, Data Science, ML, curricula IoT disponibile
 
-### Lucrul cu proiecte specifice
+### Lucrul cu Proiecte Specifice
 
-Pentru instrucțiuni detaliate privind proiectele individuale, consultă fișierele README din:
-- `quiz-app/README.md` - aplicație de quiz Vue 3
+Pentru instrucțiuni detaliate despre proiecte individuale, consultă fișierele README în:
+- `quiz-app/README.md` - aplicație quiz Vue 3
 - `7-bank-project/README.md` - aplicație bancară cu autentificare
-- `5-browser-extension/README.md` - dezvoltare extensii browser
+- `5-browser-extension/README.md` - dezvoltare extensie browser
 - `6-space-game/README.md` - dezvoltare joc pe canvas
 - `9-chat-project/README.md` - proiect asistent AI chat
 
-### Structura monorepo
+### Structura Monorepo
 
 Deși nu este un monorepo tradițional, acest depozit conține mai multe proiecte independente:
 - Fiecare lecție este autonomă
@@ -404,5 +404,5 @@ Deși nu este un monorepo tradițional, acest depozit conține mai multe proiect
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Declinare de responsabilitate**:
-Acest document a fost tradus folosind serviciul de traducere automată AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să oferim o traducere corectă, vă rugăm să aveți în vedere că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite ce pot rezulta din utilizarea acestei traduceri.
+Acest document a fost tradus folosind serviciul de traducere automată [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventuale neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

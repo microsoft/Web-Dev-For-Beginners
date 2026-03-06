@@ -1,7 +1,7 @@
 {
   "1-getting-started-lessons/1-intro-to-programming-languages/README.md": {
-    "original_hash": "d45ddcc54eb9232a76d08328b09d792e",
-    "translation_date": "2026-01-07T06:18:32+00:00",
+    "original_hash": "bec5e35642176d9e483552bfc82996d8",
+    "translation_date": "2026-03-06T13:21:56+00:00",
     "source_file": "1-getting-started-lessons/1-intro-to-programming-languages/README.md",
     "language_code": "ro"
   },
@@ -493,7 +493,7 @@
   },
   "AGENTS.md": {
     "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
-    "translation_date": "2026-02-06T18:31:13+00:00",
+    "translation_date": "2026-03-06T13:32:45+00:00",
     "source_file": "AGENTS.md",
     "language_code": "ro"
   },
@@ -516,8 +516,8 @@
     "language_code": "ro"
   },
   "README.md": {
-    "original_hash": "6d6385fd098088cb2d690fb0a6cdaedc",
-    "translation_date": "2026-02-06T18:23:04+00:00",
+    "original_hash": "a2c9eed480687319517c08a6319e5536",
+    "translation_date": "2026-03-06T13:17:57+00:00",
     "source_file": "README.md",
     "language_code": "ro"
   },
