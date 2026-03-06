@@ -493,7 +493,7 @@
   },
   "AGENTS.md": {
     "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
-    "translation_date": "2025-10-03T11:15:19+00:00",
+    "translation_date": "2026-02-06T15:59:48+00:00",
     "source_file": "AGENTS.md",
     "language_code": "fa"
   },
@@ -516,9 +516,15 @@
     "language_code": "fa"
   },
   "README.md": {
-    "original_hash": "490c83786552d7fab6390991517bef09",
-    "translation_date": "2026-01-29T17:40:06+00:00",
+    "original_hash": "6d6385fd098088cb2d690fb0a6cdaedc",
+    "translation_date": "2026-02-06T15:55:30+00:00",
     "source_file": "README.md",
+    "language_code": "fa"
+  },
+  "Roadmap.md": {
+    "original_hash": "28bf6185fd7f27b62ddc210514366192",
+    "translation_date": "2026-02-06T15:56:13+00:00",
+    "source_file": "Roadmap.md",
     "language_code": "fa"
   },
   "SECURITY.md": {
