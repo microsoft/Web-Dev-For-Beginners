@@ -1,25 +1,29 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ccfcd8c2932761359fbaff3d6b01ace4",
-  "translation_date": "2025-08-28T11:33:10+00:00",
-  "source_file": "6-space-game/3-moving-elements-around/assignment.md",
-  "language_code": "en"
-}
--->
 # Comment Your Code
 
 ## Instructions
 
-Review your current /app.js file in your game folder and look for ways to add comments and organize it better. Code can easily become messy, so this is a great opportunity to add comments to make it more readable and easier to work with in the future.
+Clean, well-documented code is essential for maintaining and sharing your projects. In this assignment, you'll practice one of the most important habits of professional developers: writing clear, helpful comments that explain your code's purpose and functionality.
+
+Go over your current `app.js` file in your game folder, and find ways to comment it and tidy it up. It's very easy for code to get out of control, and now's a good chance to add comments to ensure that you have readable code so that you can use it later.
+
+**Your task includes:**
+- **Add comments** explaining what each major section of code does
+- **Document functions** with clear descriptions of their purpose and parameters
+- **Organize code** into logical blocks with section headers
+- **Remove** any unused or redundant code
+- **Use consistent** naming conventions for variables and functions
 
 ## Rubric
 
-| Criteria | Outstanding                                                       | Satisfactory                         | Needs Improvement                                              |
-| -------- | ----------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------- |
-|          | `app.js` code is thoroughly commented and structured into clear sections | `app.js` code has sufficient comments | `app.js` code is somewhat unorganized and lacks meaningful comments |
+| Criteria | Exemplary | Adequate | Needs Improvement |
+| -------- | --------- | -------- | ----------------- |
+| **Code Documentation** | `app.js` code is fully commented with clear, helpful explanations for all major sections and functions | `app.js` code is adequately commented with basic explanations for most sections | `app.js` code has minimal comments and lacks clear explanations |
+| **Code Organization** | Code is organized into logical blocks with clear section headers and consistent structure | Code has some organization with basic grouping of related functionality | Code is somewhat disorganized and difficult to follow |
+| **Code Quality** | All variables and functions use descriptive names, no unused code, follows consistent conventions | Most code follows good naming practices with minimal unused code | Variable names are unclear, contains unused code, inconsistent style |
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

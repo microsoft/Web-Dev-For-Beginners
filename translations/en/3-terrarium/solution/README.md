@@ -1,17 +1,8 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6329fbe8bd936068debd78cca6f09c0a",
-  "translation_date": "2025-08-28T11:50:16+00:00",
-  "source_file": "3-terrarium/solution/README.md",
-  "language_code": "en"
-}
--->
 # My Terrarium: A project to learn about HTML, CSS, and DOM manipulation using JavaScript 🌵🌱
 
 A small drag-and-drop coding exercise. With a bit of HTML, JS, and CSS, you can create a web interface, style it, and add interactivity.
 
-![my terrarium](../../../../translated_images/en/screenshot_gray.0c796099a1f9f25e40aa55ead81f268434c00af30d7092490759945eda63067d.png)
+![my terrarium](../../../../translated_images/en/screenshot_gray.0c796099a1f9f25e.webp)
 
 ## Credits
 

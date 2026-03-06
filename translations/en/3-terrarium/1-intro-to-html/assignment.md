@@ -1,53 +1,145 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "5a764667bbe82aa72ac0a67f4c97ff4a",
-  "translation_date": "2025-10-03T08:22:44+00:00",
-  "source_file": "3-terrarium/1-intro-to-html/assignment.md",
-  "language_code": "en"
-}
--->
 # HTML Practice Assignment: Build a Blog Mockup
 
-## Objective
+## Learning Objectives
 
-Create and hand-code the HTML structure for a personal blog homepage. This task will help you practice using semantic HTML, planning layouts, and organizing your code.
+Apply your HTML knowledge by designing and coding a complete blog homepage structure. This hands-on assignment will reinforce semantic HTML concepts, accessibility best practices, and professional code organization skills that you'll use throughout your web development journey.
 
-## Instructions
+**By completing this assignment, you will:**
+- Practice planning website layouts before coding
+- Apply semantic HTML elements appropriately
+- Create accessible, well-structured markup
+- Develop professional coding habits with comments and organization
 
-1. **Design Your Blog Mockup**
-   - Draw a visual representation of your blog homepage. Include essential sections like the header, navigation, main content, sidebar, and footer.
-   - You can sketch it on paper and scan it, or use digital tools (e.g., Figma, Adobe XD, Canva, or even PowerPoint).
+## Project Requirements
 
-2. **Identify HTML Elements**
-   - Make a list of the HTML elements you intend to use for each section (e.g., `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<footer>`, `<section>`, `<h1>`–`<h6>`, `<p>`, `<img>`, `<ul>`, `<li>`, `<a>`, etc.).
+### Part 1: Design Planning (Visual Mockup)
 
-3. **Write the HTML Markup**
-   - Hand-code the HTML for your mockup, focusing on semantic structure and best practices.
-   - Use at least 10 different HTML elements.
-   - Add comments to explain your choices and structure.
+**Create a visual mockup of your blog homepage that includes:**
+- Header with site title and navigation
+- Main content area with at least 2-3 blog post previews
+- Sidebar with additional information (about section, recent posts, categories)
+- Footer with contact information or links
 
-4. **Submit Your Work**
-   - Upload your sketch/mockup along with your HTML file.
-   - Optionally, write a short reflection (2–3 sentences) about your design decisions.
+**Mockup Creation Options:**
+- **Hand-drawn sketch**: Use paper and pencil, then photograph or scan your design
+- **Digital tools**: Figma, Adobe XD, Canva, PowerPoint, or any drawing application
+- **Wireframe tools**: Balsamiq, MockFlow, or similar wireframing software
 
-## Rubric
+**Label your mockup sections** with the HTML elements you plan to use (e.g., "Header - `<header>`", "Blog Posts - `<article>`").
 
-| Criteria         | Outstanding                                                                               | Satisfactory                                                                     | Needs Improvement                                                               |
-|------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Visual Mockup    | Detailed and clear mockup with labeled sections and a thoughtful layout                   | Basic mockup with some labeled sections                                          | Incomplete or unclear mockup; missing section labels                            |
-| HTML Elements    | Includes 10+ semantic HTML elements; shows understanding of structure and best practices  | Includes 5–9 HTML elements; some semantic structure                              | Includes fewer than 5 elements; lacks semantic structure                        |
-| Code Quality     | Code is well-organized, readable, and includes comments; adheres to HTML standards        | Code is mostly organized; few comments                                           | Code is disorganized; lacks comments                                            |
-| Reflection       | Provides meaningful insights into design choices and challenges                          | Offers a basic reflection                                                        | No reflection or lacks relevance                                                |
+### Part 2: HTML Element Planning
 
-## Tips
+**Create a list mapping each section of your mockup to specific HTML elements:**
 
-- Use semantic HTML tags to improve accessibility and SEO.
-- Organize your code with proper indentation and comments.
-- Refer to [MDN HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) for guidance.
-- Consider how your layout could be expanded or styled in future assignments.
+```
+Example:
+- Site Header → <header>
+- Main Navigation → <nav> with <ul> and <li>
+- Blog Post → <article> with <h2>, <p>, <time>
+- Sidebar → <aside> with <section> elements
+- Page Footer → <footer>
+```
+
+**Required Elements to Include:**
+Your HTML must contain at least 10 different semantic elements from this list:
+- `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`
+- `<h1>`, `<h2>`, `<h3>`, `<p>`, `<ul>`, `<li>`, `<a>`
+- `<img>`, `<time>`, `<blockquote>`, `<strong>`, `<em>`
+
+### Part 3: HTML Implementation
+
+**Code your blog homepage following these standards:**
+
+1. **Document Structure**: Include proper DOCTYPE, html, head, and body elements
+2. **Semantic Markup**: Use HTML elements for their intended purpose
+3. **Accessibility**: Include proper alt text for images and meaningful link text
+4. **Code Quality**: Use consistent indentation and meaningful comments
+5. **Content**: Include realistic blog content (you can use placeholder text)
+
+**Sample HTML Structure:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+</head>
+<body>
+    <!-- Main site header -->
+    <header>
+        <h1>My Blog Title</h1>
+        <nav>
+            <!-- Navigation menu -->
+        </nav>
+    </header>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Blog posts go here -->
+    </main>
+    
+    <!-- Sidebar content -->
+    <aside>
+        <!-- Additional information -->
+    </aside>
+    
+    <!-- Site footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
+```
+
+### Part 4: Reflection
+
+**Write a brief reflection (3-5 sentences) addressing:**
+- Which HTML elements were you most confident using?
+- What challenges did you encounter while planning or coding?
+- How did semantic HTML help organize your content?
+- What would you do differently in your next HTML project?
+
+## Submission Checklist
+
+**Before submitting, ensure you have:**
+- [ ] Visual mockup with labeled HTML elements
+- [ ] Complete HTML file with proper document structure
+- [ ] At least 10 different semantic HTML elements used appropriately
+- [ ] Meaningful comments explaining your code structure
+- [ ] Valid HTML syntax (test in a browser)
+- [ ] Written reflection addressing the prompt questions
+
+## Assessment Rubric
+
+| Criteria | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
+|----------|---------------|----------------|----------------|---------------|
+| **Planning & Design** | Detailed, well-labeled mockup showing clear understanding of layout and HTML semantic structure | Clear mockup with most sections labeled appropriately | Basic mockup with some labeling, shows general understanding | Minimal or unclear mockup, lacks proper section identification |
+| **Semantic HTML Usage** | Uses 10+ semantic elements appropriately, demonstrates deep understanding of HTML structure and accessibility | Uses 8-9 semantic elements correctly, shows good understanding of semantic markup | Uses 6-7 semantic elements, some confusion about appropriate usage | Uses fewer than 6 elements or misuses semantic elements |
+| **Code Quality & Organization** | Exceptionally well-organized, properly indented code with comprehensive comments and perfect HTML syntax | Well-organized code with good indentation, helpful comments, and valid syntax | Mostly organized code with some comments, minor syntax issues | Poor organization, minimal comments, multiple syntax errors |
+| **Accessibility & Best Practices** | Excellent accessibility considerations, meaningful alt text, proper heading hierarchy, follows all modern HTML best practices | Good accessibility features, appropriate use of headings and alt text, follows most best practices | Some accessibility considerations, basic alt text and heading structure | Limited accessibility features, poor heading structure, doesn't follow best practices |
+| **Reflection & Learning** | Insightful reflection demonstrating deep understanding of HTML concepts and thoughtful analysis of the learning process | Good reflection showing understanding of key concepts and some self-awareness of learning | Basic reflection with limited insight into HTML concepts or learning process | Minimal or missing reflection, shows little understanding of concepts learned |
+
+## Learning Resources
+
+**Essential References:**
+- [MDN HTML Elements Reference](https://developer.mozilla.org/docs/Web/HTML/Element) - Complete guide to all HTML elements
+- [HTML5 Semantic Elements](https://developer.mozilla.org/docs/Web/HTML/Element#content_sectioning) - Understanding semantic markup
+- [Web Accessibility Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Creating accessible web content
+- [HTML Validator](https://validator.w3.org/) - Check your HTML syntax
+
+**Pro Tips for Success:**
+- Start with your mockup before writing any code
+- Use the browser's developer tools to inspect your HTML structure
+- Test your page with different screen sizes (even without CSS)
+- Read your HTML aloud to check if the structure makes logical sense
+- Consider how a screen reader would interpret your page structure
+
+> 💡 **Remember**: This assignment focuses on HTML structure and semantics. Don't worry about visual styling – that's what CSS is for! Your page might look plain, but it should be well-structured and meaningful.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

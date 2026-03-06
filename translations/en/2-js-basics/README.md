@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "cc9e70a2f096c67389c8acff1521fc27",
-  "translation_date": "2025-08-28T11:39:19+00:00",
-  "source_file": "2-js-basics/README.md",
-  "language_code": "en"
-}
--->
 # Introduction to JavaScript
 
 JavaScript is the language of the web. In these four lessons, you'll learn the basics.

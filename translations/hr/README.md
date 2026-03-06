@@ -10,203 +10,212 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# Web razvoj za početnike - Kurikulum
+# Razvoj weba za početnike - Nastavni plan
 
-Naučite osnove web razvoja uz naš opsežni 12-tjedni tečaj od Microsoft Cloud zagovornika. Svaka od 24 lekcije produbljuje znanje JavaScripta, CSS-a i HTML-a kroz praktične projekte poput terarija, proširenja za preglednik i svemirskih igara. Sudjelujte u kvizovima, raspravama i praktičnim zadacima. Poboljšajte svoje vještine i optimizirajte zadržavanje znanja uz našu učinkovitu pedagogiju baziranu na projektima. Započnite svoje putovanje kodiranja već danas!
+Naučite osnove web razvoja kroz naš sveobuhvatni 12-tjedni tečaj kojeg vode Microsoft Cloud Advocatei. Svaka od 24 lekcije detaljno obrađuje JavaScript, CSS i HTML kroz praktične projekte poput terarija, proširenja za preglednike i svemirskih igara. Uključite se u kvizove, rasprave i praktične zadatke. Unaprijedite svoje vještine i optimizirajte usvajanje znanja pomoću naše učinkovite pedagoške metode temeljenje na projektima. Započnite svoje programersko putovanje već danas!
 
 Pridružite se Azure AI Foundry Discord zajednici
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Slijedite ove korake da započnete s korištenjem ovih resursa:
-1. **Napravite Fork repozitorija**: Kliknite [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **Klonirajte Repozitorij**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Pridružite se Azure AI Foundry Discord-u i upoznajte stručnjake i druge developere**](https://discord.com/invite/ByRwuEEgH4)
+Slijedite ove korake da biste započeli s korištenjem ovih resursa:
+1. **Forkajte repozitorij**: Kliknite [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **Klonirajte repozitorij**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Pridružite se Azure AI Foundry Discordu i upoznajte stručnjake i kolege developere**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 Višejezična podrška
+### 🌐 Podrška za više jezika
 
-#### Podržano putem GitHub Action-a (automatizirano i uvijek ažurno)
+#### Podržano putem GitHub akcija (Automatski i uvijek ažurirano)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabijski](../ar/README.md) | [Bengalski](../bn/README.md) | [Bugarski](../bg/README.md) | [Burmanski (Myanmar)](../my/README.md) | [Kineski (pojednostavljeni)](../zh-CN/README.md) | [Kineski (tradicionalni, Hong Kong)](../zh-HK/README.md) | [Kineski (tradicionalni, Macau)](../zh-MO/README.md) | [Kineski (tradicionalni, Tajvan)](../zh-TW/README.md) | [Hrvatski](./README.md) | [Češki](../cs/README.md) | [Danski](../da/README.md) | [Nizozemski](../nl/README.md) | [Estonski](../et/README.md) | [Finski](../fi/README.md) | [Francuski](../fr/README.md) | [Njemački](../de/README.md) | [Grčki](../el/README.md) | [Hebrejski](../he/README.md) | [Hindi](../hi/README.md) | [Mađarski](../hu/README.md) | [Indonezijski](../id/README.md) | [Talijanski](../it/README.md) | [Japanski](../ja/README.md) | [Kannada](../kn/README.md) | [Korejski](../ko/README.md) | [Litvanski](../lt/README.md) | [Malezijski](../ms/README.md) | [Malajalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Nigerijski pidgin](../pcm/README.md) | [Norveški](../no/README.md) | [Persijski (Farsi)](../fa/README.md) | [Poljski](../pl/README.md) | [Portugalski (Brazil)](../pt-BR/README.md) | [Portugalski (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumunjski](../ro/README.md) | [Ruski](../ru/README.md) | [Srpski (ćirilica)](../sr/README.md) | [Slovački](../sk/README.md) | [Slovenski](../sl/README.md) | [Španjolski](../es/README.md) | [Svahili](../sw/README.md) | [Švedski](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Tajlandski](../th/README.md) | [Turski](../tr/README.md) | [Ukrajinski](../uk/README.md) | [Urdu](../ur/README.md) | [Vijetnamski](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](./README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **Preferirate kloniranje lokalno?**
-
-> Ovaj repozitorij uključuje preko 50 prijevoda jezika što značajno povećava veličinu preuzimanja. Za kloniranje bez prijevoda, koristite sparse checkout:
+> **Radije klonirati lokalno?**
+>
+> Ovaj repozitorij uključuje više od 50 prijevoda što značajno povećava veličinu preuzimanja. Za kloniranje bez prijevoda, koristite sparse checkout:
+>
+> **Bash / macOS / Linux:**
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
 > cd Web-Dev-For-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Ovo vam daje sve što vam treba da dovršite tečaj s mnogo bržim preuzimanjem.
+>
+> **CMD (Windows):**
+> ```cmd
+> git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
+> cd Web-Dev-For-Beginners
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+>
+> Ovo vam daje sve što vam treba za dovršetak tečaja s puno bržim preuzimanjem.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**Ako želite da dodatni prijevodi jezika budu podržani, navedeni su [ovdje](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**Ako želite da budu podržani dodatni jezici za prijevod, oni su navedeni [ovdje](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Otvorite%20u%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _Jeste li student?_
 
-Posjetite [**Student Hub stranicu**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) gdje ćete pronaći početničke izvore, studentske pakete i čak načine kako dobiti besplatni certifikat. Ovo je stranica koju želite označiti i povremeno provjeravati jer mijenjamo sadržaj mjesečno.
+Posjetite [**Student Hub stranicu**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) gdje ćete pronaći resurse za početnike, studentske pakete pa čak i načine kako dobiti besplatni certifikat. Ovo je stranica koju želite označiti i povremeno provjeravati jer mjesečno mijenjamo sadržaje.
 
-### 📣 Najava - Novi izazovi za GitHub Copilot Agent mode!
+### 📣 Objavljeno - Novi izazovi uz GitHub Copilot Agent mode!
 
-Dodan je novi izazov, potražite "GitHub Copilot Agent Challenge 🚀" u većini poglavlja. To je novi izazov za vas za dovršiti koristeći GitHub Copilot i Agent mode. Ako ranije niste koristili Agent mode, on može ne samo generirati tekst, već i stvarati i uređivati datoteke, izvršavati naredbe i još mnogo toga.
+Dodani su novi izazovi, potražite "GitHub Copilot Agent Challenge 🚀" u većini poglavlja. To je novi izazov koji možete dovršiti koristeći GitHub Copilot i Agent mode. Ako niste ranije koristili Agent mode, on ne samo da generira tekst već može i kreirati i uređivati datoteke, izvršavati naredbe i još mnogo toga.
 
-### 📣 Najava - _Novi projekt za izgradnju koristeći Generativni AI_
+### 📣 Objavljeno - _Novi projekt za izgradnju korištenjem generativne AI_
 
-Novi AI Assistant projekt upravo dodan, pogledajte [projekt](./9-chat-project/README.md)
+Upravo dodat novi AI Assistant projekt, pogledajte [projekt](./9-chat-project/README.md)
 
-### 📣 Najava - _Novi Kurikulum_ o Generativnom AI za JavaScript upravo je objavljen
+### 📣 Objavljeno - _Novi nastavni plan_ o generativnoj AI za JavaScript upravo je objavljen
 
-Ne propustite naš novi Generativni AI kurikulum!
+Ne propustite naš novi nastavni plan o generativnoj AI!
 
-Posjetite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) i započnite!
+Posjetite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) za početak!
 
 ![Background](../../translated_images/hr/background.148a8d43afde5730.webp)
 
-- Lekcije koje pokrivaju sve od osnova do RAG-a.
-- Komunicirajte s povijesnim likovima koristeći GenAI i našu pratilac aplikaciju.
-- Zabavna i zanimljiva naracija, putovat ćete kroz vrijeme!
+- Lekcije pokrivaju sve od osnova do RAG-a.
+- Interakcija s povijesnim likovima kroz GenAI i našu prateću aplikaciju.
+- Zabavno i zanimljivo pripovijedanje, putovat ćete kroz vrijeme!
 
 ![character](../../translated_images/hr/character.5c0dd8e067ffd693.webp)
 
 
-Svaka lekcija uključuje zadatak za dovršiti, provjeru znanja i izazov koji vas vodi kroz teme poput:
-- Izrada upita i inženjerstvo promptova
+Svaka lekcija uključuje zadatak za dovršiti, provjeru znanja i izazov za učenje tema poput:
+- Promptanje i prompt inženjering
 - Generiranje tekstualnih i slikovnih aplikacija
-- Aplikacije za pretraživanje
+- Pretraživačke aplikacije
 
-Posjetite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) i započnite!
+Posjetite [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) za početak!
 
 
 
-## 🌱 Početak rada
+## 🌱 Početak
 
-> **Nastavnici**, uključili smo [neke prijedloge](for-teachers.md) o tome kako koristiti ovaj kurikulum. Voljeli bismo vaše povratne informacije [u našem forumu za raspravu](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Nastavnici**, uključili smo [neke prijedloge](for-teachers.md) kako koristiti ovaj nastavni plan. Voljeli bismo vaše povratne informacije [na našem forumu za rasprave](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Učenici](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, za svaku lekciju započnite s predpredavanjem kvizom i nastavite čitanjem nastavnog materijala, dovršavanjem različitih aktivnosti te provjerite svoje razumijevanje postpredavanjem kvizom.
+**[Učenici](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, za svaku lekciju započnite s pred-lecture kvizom, zatim pročitajte predavanje, dovršite različite aktivnosti i provjerite svoje razumijevanje pomoću post-lecture kviza.
 
-Za poboljšanje iskustva učenja, povežite se sa svojim kolegama i zajedno radite na projektima! Rasprave su dobrodošle na našem [forumu za raspravu](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) gdje je naš tim moderatora dostupan za odgovore na vaša pitanja.
+Za povećanje svog iskustva učenja, povezujte se s kolegama i radite projekte zajedno! Poticanje rasprava je u našem [forumu za rasprave](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) gdje je naš tim moderatora dostupan za odgovaranje na vaša pitanja.
 
-Za daljnje obrazovanje, toplo preporučujemo istraživanje [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) za dodatne studijske materijale.
+Za daljnje obrazovanje, toplo preporučujemo istraživanje [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) za dodatne materijale za učenje.
 
-### 📋 Postavljanje okruženja
+### 📋 Postavljanje vašeg okruženja
 
-Ovaj kurikulum već ima spremno razvojno okruženje! Kad započnete, možete odabrati pokretanje kurikuluma u [Codespace-u](https://github.com/features/codespaces/) (_browserskom okruženju bez potrebe za instalacijom_), ili lokalno na svom računalu koristeći uređivač teksta poput [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Ovaj nastavni plan ima spremno razvojno okruženje! Kada započnete, možete odabrati pokretanje nastavnog plana u [Codespaceu](https://github.com/features/codespaces/) (_okruženje bazirano na pregledniku bez potrebe za instalacijama_), ili lokalno na vašem računalu koristeći tekstualni uređivač poput [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
 #### Kreirajte svoj repozitorij
-Da biste lakše spremili svoj rad, preporučuje se da napravite vlastitu kopiju ovog repozitorija. To možete učiniti klikom na gumb **Use this template** na vrhu stranice. Time ćete kreirati novi repozitorij u svom GitHub računu s kopijom kurikuluma.
+Kako biste jednostavno spremili svoj rad, preporučuje se da kreirate vlastitu kopiju ovog repozitorija. To možete učiniti klikom na gumb **Use this template** na vrhu stranice. Time će se u vašem GitHub računu kreirati novi repozitorij s kopijom nastavnog plana.
 
 Slijedite ove korake:
-1. **Fork Repozitorija**: Kliknite gumb "Fork" u gornjem desnom kutu ove stranice.
-2. **Klonirajte Repozitorij**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+1. **Forkajte repozitorij**: Kliknite na gumb "Fork" u gornjem desnom kutu ove stranice.
+2. **Klonirajte repozitorij**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Pokretanje kurikuluma u Codespace-u
+#### Pokretanje nastavnog plana u Codespaceu
 
-U svojoj kopiji repozitorija koju ste kreirali kliknite gumb **Code** i odaberite **Open with Codespaces**. Time ćete kreirati novi Codespace u kojem ćete raditi.
+U vašoj kopiji ovog repozitorija kliknite na gumb **Code** i odaberite **Open with Codespaces**. Time će se kreirati novi Codespace u kojem ćete raditi.
 
 ![Codespace](../../translated_images/hr/createcodespace.0238bbf4d7a8d955.webp)
 
-#### Pokretanje kurikuluma lokalno na svom računalu
+#### Pokretanje nastavnog plana lokalno na vašem računalu
 
-Za pokretanje ovog kurikuluma lokalno na vašem računalu, trebat će vam uređivač teksta, preglednik i alat naredbenog retka. Naša prva lekcija, [Uvod u programske jezike i alate zanata](../../1-getting-started-lessons/1-intro-to-programming-languages), provest će vas kroz različite opcije za svaki od ovih alata kako biste odabrali što vam najviše odgovara.
+Da biste ovaj nastavni plan pokrenuli lokalno na računalu, trebat će vam tekstualni uređivač, preglednik i alat za naredbenu liniju. Naša prva lekcija, [Uvod u programske jezike i alate](../../1-getting-started-lessons/1-intro-to-programming-languages), provest će vas kroz različite opcije za svaki od ovih alata kako biste odabrali što vam najviše odgovara.
 
-Naša preporuka je korištenje [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) kao uređivač, koji također ima ugrađeni [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Visual Studio Code možete preuzeti [ovdje](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-
-
-1. Klonirajte svoj repozitorij na računalo. To možete učiniti klikom na gumb **Code** i kopiranjem URL-a:
+Naša preporuka je da koristite [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) kao uređivač koji također ima ugrađeni [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Visual Studio Code možete preuzeti [ovdje](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+1. Klonirajte vaš repozitorij na računalo. To možete učiniti klikom na gumb **Code** i kopiranjem URL-a:
 
     [CodeSpace](./images/createcodespace.png)
+
     Zatim otvorite [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) unutar [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) i pokrenite sljedeću naredbu, zamjenjujući `<your-repository-url>` s URL-om koji ste upravo kopirali:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Otvorite mapu u Visual Studio Code. To možete učiniti klikom na **Datoteka** > **Otvori mapu** i odabirom mape koju ste upravo klonirali.
+2. Otvorite mapu u Visual Studio Code. To možete učiniti klikom na **File** > **Open Folder** i odabirom mape koju ste upravo klonirali.
 
 
->  Preporučeni Visual Studio Code dodaci:
+>  Preporučeni dodaci za Visual Studio Code:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - za pregled HTML stranica unutar Visual Studio Code-a
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - za pregled HTML stranica unutar Visual Studio Codea
 > * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - za pomoć pri bržem pisanju koda
 
 ## 📂 Svaka lekcija uključuje:
 
-- opcionalnu sketchnote
-- opcionalni dodatni video
+- neobaveznu skicu
+- neobavezni dodatni video
 - kviz za zagrijavanje prije lekcije
 - pisanu lekciju
-- za lekcije temeljene na projektu, korak-po-korak vodiče kako izgraditi projekt
+- za lekcije temeljene na projektima, korak-po-korak vodiče za izgradnju projekta
 - provjere znanja
 - izazov
-- dodatno štivo
+- dodatno čitanje
 - zadatak
 - [kviz nakon lekcije](https://ff-quizzes.netlify.app/web/)
 
-> **Napomena o kvizovima**: Svi kvizovi nalaze se u mapi Quiz-app, ukupno 48 kvizova sa po tri pitanja. Dostupni su [ovdje](https://ff-quizzes.netlify.app/web/), aplikacija kvizova može se pokrenuti lokalno ili implementirati na Azure; slijedite upute u mapi `quiz-app`.
+> **Napomena o kvizovima**: Svi kvizovi su u mapi Quiz-app, ukupno 48 kvizova s po tri pitanja. Dostupni su [ovdje](https://ff-quizzes.netlify.app/web/); aplikacija kviza može se pokrenuti lokalno ili implementirati u Azure; slijedite upute u mapi `quiz-app`.
 
 ## 🗃️ Lekcije
 
-|     |                       Naziv Projekta                       |                            Koncepti Koje Se Podučavaju                             | Ciljevi Učenja                                                                                                                 |                                                         Povezana Lekcija                                                          |         Autor          |
-| :-: | :---------------------------------------------------------: | :-------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Početak                                  |           Uvod u programiranje i alate zanata                                   | Naučite osnovne osnove većine programskih jezika i o softveru koji pomaže profesionalnim programerima u radu                      | [Uvod u programske jezike i alate zanata](./1-getting-started-lessons/1-intro-to-programming-languages/README.md)                |         Jasmine         |
-| 02  |                     Početak                                  |             Osnove GitHuba, uključujući rad u timu                             | Kako koristiti GitHub u vašem projektu, kako surađivati s drugima na kodu                                                        |                            [Uvod u GitHub](./1-getting-started-lessons/2-github-basics/README.md)                                 |          Floor          |
-| 03  |                     Početak                                  |                             Pristupačnost                                      | Naučite osnove pristupačnosti weba                                                                                                |                       [Osnove pristupačnosti](./1-getting-started-lessons/3-accessibility/README.md)                              |       Christopher       |
-| 04  |                        Osnove JS                            |                         JavaScript Tipovi Podataka                            | Osnove tipova podataka u JavaScriptu                                                                                             |                                       [Tipovi podataka](./2-js-basics/1-data-types/README.md)                                      |         Jasmine         |
-| 05  |                        Osnove JS                            |                         Funkcije i metode                                    | Naučite o funkcijama i metodama za upravljanje logikom aplikacije                                                                |                              [Funkcije i metode](./2-js-basics/2-functions-methods/README.md)                                   | Jasmine i Christopher   |
-| 06  |                        Osnove JS                            |                        Donošenje odluka s JS                                 | Naučite kako stvarati uvjete u vašem kodu koristeći metode donošenja odluka                                                        |                                 [Donošenje odluka](./2-js-basics/3-making-decisions/README.md)                                   |         Jasmine         |
-| 07  |                        Osnove JS                            |                            Nizovi i petlje                                   | Rad s podacima koristeći nizove i petlje u JavaScriptu                                                                            |                                   [Nizovi i petlje](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)        |                            HTML u praksi                                    | Izgradite HTML za stvaranje online terarija, fokusirajući se na izgradnju rasporeda                                                |                                 [Uvod u HTML](./3-terrarium/1-intro-to-html/README.md)                                        |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)        |                            CSS u praksi                                     | Izgradite CSS za stiliziranje online terarija, fokusirajući se na osnove CSS-a uključujući prilagodbu stranice                   |                                  [Uvod u CSS](./3-terrarium/2-intro-to-css/README.md)                                         |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)   |                 JavaScript zatvaranja, manipulacija DOM-om                   | Izgradite JavaScript koji omogućuje terariju funkciju drag/drop sučelja, fokusirajući se na zatvaranja i manipulaciju DOM-om      |                  [JavaScript zatvaranja, manipulacija DOM-om](./3-terrarium/3-intro-to-DOM-and-closures/README.md)               |           Jen           |
-| 11  |          [Igra tipkanja](./4-typing-game/solution/README.md)|                          Izrada igre tipkanja                               | Naučite kako koristiti događaje s tipkovnice za upravljanje logikom vaše JavaScript aplikacije                                   |                                [Programiranje vođeno događajima](./4-typing-game/typing-game/README.md)                          |       Christopher       |
-| 12  | [Zelena proširenje preglednika](./5-browser-extension/solution/README.md) |                         Rad s preglednicima                             | Naučite kako preglednici rade, njihovu povijest i kako postaviti prve elemente proširenja preglednika                             |                               [O preglednicima](./5-browser-extension/1-about-browsers/README.md)                                 |           Jen           |
-| 13  | [Zelena proširenje preglednika](./5-browser-extension/solution/README.md) | Izrada obrasca, pozivanje API-ja i spremanje varijabli u lokalnu pohranu    | Izgradite JavaScript elemente vašeg proširenja preglednika za pozivanje API-ja koristeći varijable pohranjene u lokalnu pohranu  |                [API-ji, obrasci i lokalna pohrana](./5-browser-extension/2-forms-browsers-local-storage/README.md)              |           Jen           |
-| 14  | [Zelena proširenje preglednika](./5-browser-extension/solution/README.md) |          Pozadinski procesi u pregledniku, web performanse                | Koristite pozadinske procese preglednika za upravljanje ikonom proširenja; naučite o web performansama i nekim optimizacijama   |             [Pozadinski zadaci i performanse](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [Igra u svemiru](./6-space-game/solution/README.md) |             Napredniji razvoj igara s JavaScriptom                       | Naučite o nasljeđivanju koristeći klase i kompoziciju te Pub/Sub obrazac, u pripremi za izradu igre                              |                      [Uvod u napredni razvoj igara](./6-space-game/1-introduction/README.md)                                   |          Chris          |
-| 16  |           [Igra u svemiru](./6-space-game/solution/README.md) |                           Crtanje na platnu (canvas)                    | Naučite o Canvas API-ju, korištenom za crtanje elemenata na zaslonu                                                            |                                [Crtanje na platnu](./6-space-game/2-drawing-to-canvas/README.md)                              |          Chris          |
-| 17  |           [Igra u svemiru](./6-space-game/solution/README.md) |                   Pomicanje elemenata po zaslonu                        | Otkrijte kako elementi mogu dobiti pokret koristeći kartezijanske koordinate i Canvas API                                         |                           [Pomicanje elemenata](./6-space-game/3-moving-elements-around/README.md)                             |          Chris          |
-| 18  |           [Igra u svemiru](./6-space-game/solution/README.md) |                          Detekcija sudara                               | Neka se elementi sudaraju i reagiraju jedni na druge koristeći pritiske tipki i osigurajte funkciju hlađenja radi performansi igre|                              [Detekcija sudara](./6-space-game/4-collision-detection/README.md)                                |          Chris          |
-| 19  |           [Igra u svemiru](./6-space-game/solution/README.md) |                             Vođenje rezultata                            | Izvodite matematičke izračune na temelju statusa i performansi igre                                                              |                                    [Vođenje rezultata](./6-space-game/5-keeping-score/README.md)                                 |          Chris          |
-| 20  |           [Igra u svemiru](./6-space-game/solution/README.md) |                        Završavanje i ponovno pokretanje igre             | Naučite o završavanju i ponovnom pokretanju igre, uključujući čišćenje resursa i resetiranje varijabli                           |                                [Uvjet završetka](./6-space-game/6-end-condition/README.md)                                     |          Chris          |
-| 21  |         [Bankarska aplikacija](./7-bank-project/solution/README.md) |                 HTML predlošci i rute u web aplikaciji                 | Naučite kako stvoriti okvir arhitekture višestranične web stranice koristeći rutiranje i HTML predloške                          |                            [HTML predlošci i rute](./7-bank-project/1-template-route/README.md)                                |          Yohan          |
-| 22  |         [Bankarska aplikacija](./7-bank-project/solution/README.md) |                  Izgradnja obrasca za prijavu i registraciju           | Naučite o izradi obrazaca i rukovanju rutinama validacije                                                                        |                                           [Obrasci](./7-bank-project/2-forms/README.md)                                      |          Yohan          |
-| 23  |         [Bankarska aplikacija](./7-bank-project/solution/README.md) |                   Metode dohvaćanja i upotrebe podataka               | Kako podaci ulaze i izlaze iz vaše aplikacije, kako ih dohvatiti, pohraniti i ukloniti                                             |                                            [Podaci](./7-bank-project/3-data/README.md)                                        |          Yohan          |
-| 24  |         [Bankarska aplikacija](./7-bank-project/solution/README.md) |                      Koncepti upravljanja stanjem                      | Naučite kako vaša aplikacija zadržava stanje i kako ga programatski upravljati                                                    |                                [Upravljanje stanjem](./7-bank-project/4-state-management/README.md)                              |          Yohan          |
-| 25  | [Browser/VScode kod](../../8-code-editor) | Rad s VScode | Naučite kako koristiti uređivač koda | [Korištenje VScode uređivača koda](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26  | [AI Asistenti](./9-chat-project/README.md) | Rad s AI | Naučite kako izgraditi vlastitog AI asistenta | [Projekt AI asistenta](./9-chat-project/README.md) | Chris |
+|     |                       Naziv projekta                      |                            Koncepti koji se podučavaju                             | Ciljevi učenja                                                                                                                 |                                                         Povezana lekcija                                                          |         Autor          |
+| :-: | :-------------------------------------------------------: | :--------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------ | :-----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     Početak rada                          |           Uvod u programiranje i alate trgovine                                    | Naučite osnovne temelje iza većine programskih jezika i o softveru koji pomaže profesionalnim programerima u njihovom radu      | [Uvod u programske jezike i alate](./1-getting-started-lessons/1-intro-to-programming-languages/README.md)                        |         Jasmine         |
+| 02  |                     Početak rada                          |             Osnove GitHub-a, uključuje rad u timu                                  | Kako koristiti GitHub u vašem projektu, kako surađivati s drugima na bazi koda                                                  |                            [Uvod u GitHub](./1-getting-started-lessons/2-github-basics/README.md)                                    |          Floor          |
+| 03  |                     Početak rada                          |                             Pristupačnost                                           | Naučite osnove pristupačnosti weba                                                                                              |                       [Osnove pristupačnosti](./1-getting-started-lessons/3-accessibility/README.md)                                |       Christopher       |
+| 04  |                        Osnove JS                          |                         JavaScript tipovi podataka                                | Osnove tipova podataka u JavaScriptu                                                                                            |                                       [Tipovi podataka](./2-js-basics/1-data-types/README.md)                                       |         Jasmine         |
+| 05  |                        Osnove JS                          |                         Funkcije i metode                                        | Naučite o funkcijama i metodama za upravljanje tokom logike aplikacije                                                         |                              [Funkcije i metode](./2-js-basics/2-functions-methods/README.md)                                      | Jasmine i Christopher   |
+| 06  |                        Osnove JS                          |                        Donošenje odluka u JS                                     | Naučite kako kreirati uvjete u vašem kodu koristeći metode za donošenje odluka                                                 |                                 [Donošenje odluka](./2-js-basics/3-making-decisions/README.md)                                   |         Jasmine         |
+| 07  |                        Osnove JS                          |                            Nizovi i petlje                                       | Radite s podacima koristeći nizove i petlje u JavaScriptu                                                                       |                                   [Nizovi i petlje](./2-js-basics/4-arrays-loops/README.md)                                     |         Jasmine         |
+| 08  |       [Terrarij](./3-terrarium/solution/README.md)       |                            HTML u praksi                                         | Izgradite HTML za online terarij, fokusirajući se na izradu rasporeda                                                          |                                 [Uvod u HTML](./3-terrarium/1-intro-to-html/README.md)                                          |           Jen           |
+| 09  |       [Terrarij](./3-terrarium/solution/README.md)       |                            CSS u praksi                                          | Izgradite CSS za stiliziranje online terarija, fokusirajući se na osnove CSS-a uključujući responsivni dizajn stranice           |                                  [Uvod u CSS](./3-terrarium/2-intro-to-css/README.md)                                          |           Jen           |
+| 10  |            [Terrarij](./3-terrarium/solution/README.md)            |                 JavaScript closures, manipulacija DOM-om                        | Izgradite JavaScript koji omogućava funkcionalnost terarija kao povuci-i-ispusti sučelja, fokusirajući se na closures i DOM     |                  [JavaScript closures, manipulacija DOM-om](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                |           Jen           |
+| 11  |          [Igra tipkanja](./4-typing-game/solution/README.md)          |                          Izradite igru tipkanja                                  | Naučite koristiti događaje tipkovnice za upravljanje logikom vaše JavaScript aplikacije                                         |                                [Programiranje vođeno događajima](./4-typing-game/typing-game/README.md)                          |       Christopher       |
+| 12  | [Ekstenzija za zeleno pregledavanje](./5-browser-extension/solution/README.md) |                         Rad s preglednicima                                    | Naučite kako preglednici rade, njihovu povijest i kako izgraditi prve elemente ekstenzije preglednika                            |                               [O preglednicima](./5-browser-extension/1-about-browsers/README.md)                                  |           Jen           |
+| 13  | [Ekstenzija za zeleno pregledavanje](./5-browser-extension/solution/README.md) | Izrada obrasca, pozivanje API-ja i pohrana varijabli u lokalnu pohranu          | Izradite JavaScript elemente vaše ekstenzije za preglednik za pozivanje API-ja koristeći varijable pohranjene u lokalnu pohranu |                [API-ji, obrasci i lokalna pohrana](./5-browser-extension/2-forms-browsers-local-storage/README.md)               |           Jen           |
+| 14  | [Ekstenzija za zeleno pregledavanje](./5-browser-extension/solution/README.md) |          Pozadinski procesi u pregledniku, web performanse                     | Koristite pozadinske procese preglednika za upravljanje ikonom ekstenzije; naučite o web performansama i nekim optimizacijama  |             [Pozadinski zadaci i performanse](./5-browser-extension/3-background-tasks-and-performance/README.md)               |           Jen           |
+| 15  |           [Igra u svemiru](./6-space-game/solution/README.md)           |             Naprednija izrada igara s JavaScriptom                            | Naučite o nasljeđivanju koristeći i klase i kompoziciju te Pub/Sub obrascu, kao pripremu za izradu igre                         |                      [Uvod u naprednu izradu igara](./6-space-game/1-introduction/README.md)                                     |          Chris          |
+| 16  |           [Igra u svemiru](./6-space-game/solution/README.md)           |                           Crtanje na platnu                                   | Naučite o Canvas API-ju, koji se koristi za crtanje elemenata na zaslonu                                                      |                                [Crtanje na platnu](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Igra u svemiru](./6-space-game/solution/README.md)           |                   Pomicanje elemenata po zaslonu                              | Otkrijte kako elementi mogu dobiti gibanje koristeći kartezijanske koordinate i Canvas API                                       |                           [Pomicanje elemenata](./6-space-game/3-moving-elements-around/README.md)                             |          Chris          |
+| 18  |           [Igra u svemiru](./6-space-game/solution/README.md)           |                          Detekcija sudara                                    | Neka se elementi sudaraju i međusobno reagiraju korištenjem pritisaka tipki i izvedite funkciju cooldown za osiguranje performansi igre |                              [Detekcija sudara](./6-space-game/4-collision-detection/README.md)                                |          Chris          |
+| 19  |           [Igra u svemiru](./6-space-game/solution/README.md)           |                             Vođenje rezultata                                 | Izvršite matematičke izračune temeljene na statusu igre i izvedbi                                                            |                                    [Vođenje rezultata](./6-space-game/5-keeping-score/README.md)                                  |          Chris          |
+| 20  |           [Igra u svemiru](./6-space-game/solution/README.md)           |                     Završetak i ponovno pokretanje igre                       | Naučite o završavanju i ponovnom pokretanju igre, uključujući čišćenje resursa i resetiranje vrijednosti varijabli             |                                [Uvjet završetka](./6-space-game/6-end-condition/README.md)                                      |          Chris          |
+| 21  |         [Bankarska aplikacija](./7-bank-project/solution/README.md)          |                 HTML predlošci i rute u web aplikaciji                      | Naučite kako napraviti arhitekturu višestranične web stranice koristeći rutiranje i HTML predloške                           |                            [HTML predlošci i rute](./7-bank-project/1-template-route/README.md)                                 |          Yohan          |
+| 22  |         [Bankarska aplikacija](./7-bank-project/solution/README.md)          |                  Izrada obrasca za prijavu i registraciju                    | Naučite o izradi obrazaca i rukovanju procedurama validacije                                                                 |                                           [Obrasci](./7-bank-project/2-forms/README.md)                                    |          Yohan          |
+| 23  |         [Bankarska aplikacija](./7-bank-project/solution/README.md)          |                   Metode dohvaćanja i korištenja podataka                   | Kako podaci ulaze i izlaze iz vaše aplikacije, kako ih dohvatiti, pohraniti i odbaciti                                        |                                            [Podaci](./7-bank-project/3-data/README.md)                                         |          Yohan          |
+| 24  |         [Bankarska aplikacija](./7-bank-project/solution/README.md)          |                      Koncepti upravljanja stanjem                           | Naučite kako vaša aplikacija zadržava stanje i kako ga upravljati programatski                                              |                                [Upravljanje stanjem](./7-bank-project/4-state-management/README.md)                              |          Yohan          |
+| 25 | [Browser/VScode Code](../../8-code-editor) | Rad s VScode | Naučite kako koristiti uređivač koda | [Korištenje VScode uređivača](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI asistenti](./9-chat-project/README.md) | Rad s AI | Naučite kako izgraditi vlastitog AI asistenta | [AI projekt asistenta](./9-chat-project/README.md) | Chris |
 
 ## 🏫 Pedagogija
 
-Naš nastavni plan dizajniran je s dvije ključne pedagoške smjernice na umu:
+Naš kurikulum je dizajniran s dvije ključne pedagoške smjernice:
 * učenje temeljeno na projektima
-* česti kvizovi
+* učestali kvizovi
 
-Program poučava osnove JavaScripta, HTML-a i CSS-a, kao i najnovije alate i tehnike koje koriste današnji web programeri. Studenti će imati priliku razvijati praktično iskustvo izradom igre tipkanja, virtualnog terarija, ekološki prihvatljivog proširenja preglednika, igre u stilu space-invadera i bankarske aplikacije za tvrtke. Na kraju serije studenti će steći solidno razumijevanje web razvoja.
+Program uči osnove JavaScripta, HTML-a i CSS-a, kao i najnovije alate i tehnike koje koriste današnji web programeri. Studenti će imati priliku razviti praktično iskustvo izradom igre tipkanja, virtualnog terarija, ekološki prihvatljive proširenje za preglednik, igre u stilu space invadera i bankarske aplikacije za poduzeća. Na kraju serije, studenti će imati čvrsto razumijevanje web razvoja.
 
-> 🎓 Prve lekcije ovog kurikuluma možete proći kao [Put učenja](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) na Microsoft Learn!
+> 🎓 Prve lekcije ovog kurikuluma možete proći kao [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) na Microsoft Learn!
 
-Osiguravanjem usklađenosti sadržaja s projektima proces je angažiraniji za studente, a zadržavanje koncepata će se pojačati. Također smo napisali nekoliko uvodnih lekcija o osnovama JavaScripta za uvođenje koncepata, uparene s videom iz zbirke "[Serija za početnike u: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", čiji su neki autori dali doprinos ovom kurikulumu.
+Osiguravanjem podudarnosti sadržaja s projektima, proces je angažiraniji za studente i zadržavanje koncepata će biti poboljšano. Također smo napisali nekoliko uvodnih lekcija o osnovama JavaScripta za upoznavanje s konceptima, uparene s videom iz zbirke video tutorijala "[Početnička serija za: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", od kojih su neki autori doprinijeli ovom kurikulumu.
 
-Nadalje, kviz s niskim ulogom prije nastave postavlja namjeru učenika prema učenju teme, dok drugi kviz nakon nastave osigurava dodatno zadržavanje gradiva. Ovaj kurikulum je osmišljen kao fleksibilan i zabavan i može se pohađati u cijelosti ili djelomično. Projekti počinju mali i postaju sve složeniji do kraja ciklusa od 12 tjedana.
+Osim toga, kviz s niskim ulozima prije sata usmjerava namjeru učenika prema učenju teme, dok drugi kviz nakon predavanja osigurava dodatno zadržavanje. Ovaj kurikulum je dizajniran da bude fleksibilan i zabavan te može se pohađati u cjelini ili djelomično. Projekti počinju mali i postaju sve složeniji do kraja 12-tjednog ciklusa.
 
-Iako smo namjerno izbjegavali uvođenje JavaScript frameworka kako bismo se posvetili osnovnim vještinama potrebnim web programeru prije usvajanja frameworka, dobar sljedeći korak nakon ovog kurikuluma bilo bi učenje o Node.js putem druge zbirke videozapisa: "[Serija za početnike u: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+Iako smo namjerno izbjegavali uvođenje JavaScript frameworka kako bismo se koncentrirali na osnovne vještine potrebne kao web programer prije usvajanja frameworka, dobar sljedeći korak u dovršetku ovog kurikuluma bilo bi učenje o Node.js putem druge zbirke videozapisa: "[Početnička serija za: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> Posjetite naše smjernice za [Kodeks ponašanja](CODE_OF_CONDUCT.md) i [Doprinos](CONTRIBUTING.md). Dobrodošli su vaši konstruktivni komentari!
+> Posjetite naše smjernice [Kodeksa ponašanja](CODE_OF_CONDUCT.md) i [Doprinos](CONTRIBUTING.md). Dobrodošli su vaši konstruktivni komentari!
 
 
-## 🧭 Pristup bez interneta
+## 🧭 Pristup izvan mreže
 
-Ovu dokumentaciju možete pokrenuti offline koristeći [Docsify](https://docsify.js.org/#/). Razgranajte ovaj repozitorij, [instalirajte Docsify](https://docsify.js.org/#/quickstart) na lokalni stroj, a zatim u korijenskoj mapi ovog repozitorija unesite `docsify serve`. Web stranica će biti dostupna na portu 3000 na vašem localhostu: `localhost:3000`.
+Ovu dokumentaciju možete pokrenuti izvan mreže koristeći [Docsify](https://docsify.js.org/#/). Forkajte ovaj repozitorij, [instalirajte Docsify](https://docsify.js.org/#/quickstart) na svoje lokalno računalo, a zatim u korijenskoj mapi ovog repozitorija upišite `docsify serve`. Web stranica će se poslužiti na portu 3000 na vašem localhostu: `localhost:3000`.
 
 ## 📘 PDF
-
 PDF svih lekcija možete pronaći [ovdje](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
-## 🎒 Ostali tečajevi
+## 🎒 Drugi tečajevi
+
 Naš tim proizvodi i druge tečajeve! Pogledajte:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
@@ -232,7 +241,7 @@ Naš tim proizvodi i druge tečajeve! Pogledajte:
 
 ---
  
-### Osnovno Učenje
+### Osnovno učenje
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -251,21 +260,21 @@ Naš tim proizvodi i druge tečajeve! Pogledajte:
 
 ## Dobivanje pomoći
 
-Ako zapnete ili imate pitanja o izradi AI aplikacija. Pridružite se kolegama učenicima i iskusnim programerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla, a znanje se slobodno dijeli.
+Ako zapnete ili imate bilo kakvih pitanja o izradi AI aplikacija, pridružite se ostalim polaznicima i iskusnim developerima u raspravama o MCP-u. To je podržavajuća zajednica gdje su pitanja dobrodošla, a znanje se slobodno dijeli.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ako imate povratne informacije o proizvodu ili greške tijekom izrade posjetite:
+Ako imate povratne informacije o proizvodu ili prijavite greške tijekom izrade, posjetite:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licenca
 
-Ovaj repozitorij je licenciran pod MIT licencom. Pogledajte datoteku [LICENSE](../../LICENSE) za više informacija.
+Ovo spremište licencirano je pod MIT licencom. Pogledajte datoteku [LICENSE](../../LICENSE) za više informacija.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Izjava o odricanju odgovornosti**:
-Ovaj dokument preveden je pomoću AI prevoditeljske usluge [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati službenim i autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakve nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+**Odricanje od odgovornosti**:
+Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za važne informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

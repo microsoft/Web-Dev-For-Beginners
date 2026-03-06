@@ -1,25 +1,74 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ca1cf78a4c60df77ab32a154ec024d7f",
-  "translation_date": "2025-08-28T11:36:56+00:00",
-  "source_file": "6-space-game/2-drawing-to-canvas/assignment.md",
-  "language_code": "en"
-}
--->
-# Experiment with the Canvas API
+# Assignment: Explore the Canvas API
+
+## Learning Objectives
+
+By completing this assignment, you will demonstrate your understanding of Canvas API fundamentals and apply creative problem-solving to build visual elements using JavaScript and HTML5 canvas.
 
 ## Instructions
 
-Choose one feature of the Canvas API and build something creative with it. Can you design a small galaxy of repeated stars? Or perhaps an intriguing texture made of colorful lines? Feel free to browse CodePen for ideas (but avoid copying).
+Choose one aspect of the Canvas API that interests you and create an engaging visual project around it. This assignment encourages you to experiment with the drawing capabilities you've learned while building something uniquely yours.
+
+### Project Ideas to Inspire You
+
+**Geometric Patterns:**
+- **Create** a galaxy of animated twinkling stars using random positioning
+- **Design** an interesting texture using repeated geometric shapes
+- **Build** a kaleidoscope effect with rotating, colorful patterns
+
+**Interactive Elements:**
+- **Develop** a drawing tool that responds to mouse movements
+- **Implement** shapes that change color when clicked
+- **Design** a simple animation loop with moving elements
+
+**Game-Related Graphics:**
+- **Craft** a scrolling background for a space game
+- **Build** particle effects like explosions or magic spells
+- **Create** animated sprites with multiple frames
+
+### Development Guidelines
+
+**Research and Inspiration:**
+- **Browse** CodePen for creative canvas examples (for inspiration, not copying)
+- **Study** the [Canvas API documentation](https://developer.mozilla.org/docs/Web/API/Canvas_API) for additional methods
+- **Experiment** with different drawing functions, colors, and animations
+
+**Technical Requirements:**
+- **Use** proper canvas setup with `getContext('2d')`
+- **Include** meaningful comments explaining your approach
+- **Test** your code thoroughly to ensure it runs without errors
+- **Apply** modern JavaScript syntax (const/let, arrow functions)
+
+**Creative Expression:**
+- **Focus** on one Canvas API feature but explore it deeply
+- **Add** your own creative twist to make the project personal
+- **Consider** how your creation could be part of a larger application
+
+### Submission Guidelines
+
+Submit your completed project as a single HTML file with embedded CSS and JavaScript, or as separate files in a folder. Include a brief comment explaining your creative choices and the Canvas API features you explored.
 
 ## Rubric
 
-| Criteria | Outstanding                                               | Satisfactory                       | Needs Improvement     |
-| -------- | --------------------------------------------------------- | ----------------------------------- | --------------------- |
-|          | Code is submitted showcasing an engaging texture or shape | Code is submitted, but it doesn't work | Code is not submitted |
+| Criteria | Exemplary | Adequate | Needs Improvement |
+|----------|-----------|----------|-------------------|
+| **Technical Implementation** | Canvas API used creatively with multiple features, code runs flawlessly, modern JavaScript syntax applied | Canvas API used correctly, code runs with minor issues, basic implementation | Canvas API attempted but code has errors or doesn't execute |
+| **Creativity and Design** | Highly original concept with polished visual appeal, demonstrates deep exploration of chosen Canvas feature | Good use of Canvas features with some creative elements, solid visual result | Basic implementation with minimal creativity or visual appeal |
+| **Code Quality** | Well-organized, commented code following best practices, efficient algorithms | Clean code with some comments, follows basic coding standards | Code lacks organization, minimal comments, inefficient implementation |
+
+## Reflection Questions
+
+After completing your project, consider these questions:
+
+1. **What Canvas API feature did you choose and why?**
+2. **What challenges did you encounter while building your project?**
+3. **How could you extend this project into a larger application or game?**
+4. **What other Canvas API features would you like to explore next?**
+
+> 💡 **Pro Tip**: Start simple and gradually add complexity. A well-executed simple project is better than an overly ambitious project that doesn't work properly!
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

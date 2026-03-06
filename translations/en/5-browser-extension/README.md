@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b121a279a6ab39878491f3e572673515",
-  "translation_date": "2025-08-28T11:22:58+00:00",
-  "source_file": "5-browser-extension/README.md",
-  "language_code": "en"
-}
--->
 # Building a browser extension
 
 Creating browser extensions is an enjoyable and engaging way to explore app performance while developing a unique type of web asset. This module includes lessons on how browsers function, how to deploy a browser extension, how to create a form, interact with an API, utilize local storage, and assess and enhance your website's performance.
@@ -23,7 +14,7 @@ Users can manually activate this extension by entering an API key and region cod
 
 ### Credits
 
-![a green browser extension](../../../translated_images/en/extension-screenshot.0e7f5bfa110e92e3875e1bc9405edd45a3d2e02963e48900adb91926a62a5807.png)
+![a green browser extension](../../../translated_images/en/extension-screenshot.0e7f5bfa110e92e3.webp)
 
 ## Credits
 
