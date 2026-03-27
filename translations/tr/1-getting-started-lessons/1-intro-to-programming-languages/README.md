@@ -1,15 +1,15 @@
 # Programlama Dillerine ve Modern Geliştirici Araçlarına Giriş
 
-Merhaba, geleceğin geliştiricisi! 👋 Sana her gün hala tüylerimi ürperten bir şeyi söyleyebilir miyim? Programlamanın sadece bilgisayarlarla ilgili olmadığını keşfetmek üzeresin – gerçekten en çılgın fikirlerini gerçeğe dönüştürmek için süper güçlere sahip olmakla ilgili!
+Merhaba, geleceğin geliştiricisi! 👋 Sana her gün tüylerimi diken diken eden bir şey söyleyebilir miyim? Programlama sadece bilgisayarlarla ilgili değil – hayallerindeki en çılgın fikirleri gerçeğe dönüştürme süper güçlerine sahip olmakla ilgili!
 
-Favori uygulamanı kullanırken her şeyin mükemmel şekilde oturduğu o anı biliyor musun? Bir düğmeye dokunduğunda, "vay canına, bunu nasıl yaptılar?" dedirten sihirli bir şey oluyor ya işte, o sihri yaratan kodu yazan biri senin gibi biri – muhtemelen gece 2’de en sevdiği kahve dükkanında üçüncü espressosunu içerken. Ve işte seni şaşırtacak şey: bu dersin sonunda sadece nasıl yaptıklarını anlamakla kalmayacak, kendin denemek için sabırsızlanacaksın!
+Favori uygulamanı kullanırken her şeyin mükemmel şekilde oturduğu o anı biliyor musun? Bir butona dokunduğunda öyle sihirli bir şey oluyor ki “vay, bunu NASIL yaptılar?” diye düşünüyorsun? İşte aynen senin gibi biri – muhtemelen en sevdiği kahve dükkanında sabah 2’de, üçüncü espressosunu içerken – o sihri yaratan kodu yazdı. Ve işte aklını başından alacak şey: bu dersin sonunda sadece onların nasıl yaptığını anlamakla kalmayacak, kendin de denemek için sabırsızlanacaksın!
 
-Bak, programlama şu an gözünde korkutucu geliyorsa bunu tamamen anlıyorum. Ben başladığımda, dürüst olmak gerekirse, ya beş yaşından beri kodlama yapan biri olmam gerektiğini ya da bir matematik dâhisi olmam gerektiğini düşünüyordum. Ama perspektifimi kökten değiştiren şey şuydu: programlama, yeni bir dilde konuşmayı öğrenmek gibidir. Önce "merhaba" ve "teşekkür ederim" ile başlarsın, sonra kahve siparişi vermeye geçersin ve bir süre sonra derin felsefi tartışmalar yaparsın! Buradaki fark, bilgisayarlarla konuşuyor olman ve dürüst olmak gerekirse onlar en sabırlı sohbet arkadaşlarıdır – hatalarını asla yargılamazlar ve tekrar denemek için her zaman heyecan duyarlar!
+Bak, programlama şu an gözünü korkutuyorsa bunu tamamen anlıyorum. Ben başladığımda, dürüst olmak gerekirse, bunun için biraz matematik dahisi olman ya da daha beş yaşındayken kodlama yapıyor olman gerektiğini düşünüyordum. Ama bakış açımı tamamen değiştiren şey şu oldu: programlama, yeni bir dilde konuşmayı öğrenmek gibidir. “Merhaba” ve “teşekkür ederim” ile başlarsın, sonra kahve siparişi vermeye geçersin ve farkına varmadan derin felsefi sohbetler yapıyor olursun! Ama burada, bilgisayarlarla konuşuyorsun ve gerçekten mi? Onlar hiç sabırsızlanmayan en sabırlı sohbet ortaklarıdır – hatalarını asla yargılamazlar ve tekrar denemek için her zaman heyecanlıdırlar!
 
-Bugün, modern web geliştirmeyi sadece mümkün kılmakla kalmayan, aynı zamanda ciddi şekilde bağımlılık yapan inanılmaz araçları keşfedeceğiz. Netflix, Spotify ve sevdiğin bağımsız uygulama stüdyosundaki geliştiricilerin her gün kullandığı tam da aynı editörlerden, tarayıcılardan ve iş akışlarından bahsediyorum. Ve işte seni mutlu dansa kaldıracak kısmı: bu profesyonel seviyedeki, endüstri standardı araçların çoğu tamamen ücretsiz!
+Bugün, modern web geliştirmeyi sadece mümkün kılmakla kalmayan, aynı zamanda gerçekten bağımlılık yapan inanılmaz araçları keşfedeceğiz. Netflix, Spotify ve favori bağımsız uygulama stüdyolarındaki geliştiricilerin her gün kullandığı aynı metin editörleri, tarayıcılar ve iş akışları hakkında konuşacağız. Ve işte seni mutlu edecek kısım: çoğu bu profesyonel kalitedeki, endüstri standardı araçların tamamı tamamen ücretsiz!
 
 ![Intro Programming](../../../../translated_images/tr/webdev101-programming.d6e3f98e61ac4bff.webp)
-> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
+> Sketchnote: [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
 journey
@@ -17,8 +17,8 @@ journey
     section Keşfet
       Programlama Nedir: 5: You
       Programlama Dilleri: 4: You
-      Araçlar Genel Bakış: 5: You
-    section Keşfet
+      Araçlara Genel Bakış: 5: You
+    section İncele
       Kod Editörleri: 4: You
       Tarayıcılar ve Geliştirici Araçları: 5: You
       Komut Satırı: 3: You
@@ -27,58 +27,58 @@ journey
       Araç Keşfi: 5: You
       Topluluk Bağlantısı: 5: You
 ```
-## Zaten Neler Bildiğine Bir Bakalım!
+## Zaten Neler Biliyorsun Bir Bakalım!
 
-Eğlenceli kısmına atlamadan önce merak ediyorum – bu programlama dünyası hakkında neler biliyorsun? Ve bak, bu sorulara "bunun hakkında hiç fikrim yok" diye düşünüyorsan, bu sadece sorun değil, tam tersine mükemmel! Bu demektir ki tam doğru yerdesin. Bu sınavı bir antrenmandan önce esneme gibi düşün – sadece beynini ısıtıyoruz!
+Eğlenceli kısma geçmeden önce merak ediyorum – programlama dünyası hakkında şimdiden neler biliyorsun? Ve bak, bu sorulara bakıp “Bunların hiçbirinden anlamıyorum” diye düşünüyorsan, bu sadece tamam değil, mükemmel! Bu demektir ki tam da doğru yerdesin. Bu sınavı egzersiz öncesi ısınma gibi düşün – beyin kaslarımızı ısıtıyoruz sadece!
 
-[Ön ders sınavını çöz](https://ff-quizzes.netlify.app/web/)
+[Derse başlamadan önce testi çöz](https://ff-quizzes.netlify.app/web/)
 
 
 ## Birlikte Çıkacağımız Macera
 
-Tamam, bugün keşfedeceklerimiz konusunda gerçekten heyecanlıyım! Cidden, bu kavramlardan bazıları sana oturduğunda yüzünü görebilmeyi isterdim. İşte birlikte yapacağımız inanılmaz yolculuk:
+Tamam, bugün keşfedeceklerimize gerçekten çok heyecanlanıyorum! Cidden, bazı kavramlar yerine oturduğunda yüzünün ifadesini görmek isterdim. İşte birlikte çıkacağımız inanılmaz yolculuk:
 
-- **Programlama nedir gerçekten (ve neden en havalı şeydir!)** – Algoritmanın, o Pazartesi sabahı alarmından tut Netflix önerilerini kusursuzca hazırlayan algoritmaya kadar her şeyi nasıl görünmez bir sihir gibi güçlendirdiğini keşfedeceğiz
-- **Programlama dilleri ve onların muhteşem kişilikleri** – Her birinin tamamen farklı süper güçleri ve problem çözme yolları olan bir partiye girdiğini hayal et. İşte programlama dili dünyası böyle ve onları tanımaya bayılacaksın!
-- **Dijital sihri oluşturan temel yapı taşları** – Bunları en yaratıcı LEGO setin gibi düşün. Bu parçaların nasıl uyduğunu anladığında, hayal gücünün hayal ettiği her şeyi gerçek anlamda inşa edebileceğini fark edeceksin
-- **Sana bir büyücünün asasını vermiş gibi hissettirecek profesyonel araçlar** – Abartmıyorum – bu araçlar gerçekten sana süper güçler vermiş gibi hissettirecek ve en güzel tarafı? Profesyonellerin kullandığı aynı araçlar!
+- **Programlama nedir (ve neden en havalı şeydir!)** – Kodun, etrafındaki her şeyin görünmez sihirli gücü olduğunu keşfedeceğiz; Pazartesi sabahını bilen alarmdan, Netflix öneri algoritmasına kadar
+- **Programlama dilleri ve onların harika kişilikleri** – Her kişinin farklı süper güçleri ve problem çözme yöntemleri olan bir partiye girdiğini hayal et. Programlama dili dünyası tam olarak böyle ve tanışmanı çok seveceksin!
+- **Dijital sihrin temel yapı taşları** – Bunu mükemmel bir yaratıcı LEGO seti olarak düşün. Bu parçaların nasıl birleştiğini anladığında, hayal gücünün hayalini kurduğu her şeyi gerçekten inşa edebileceğini fark edeceksin
+- **Sihirbazın asasını eline vermiş gibi hissettirecek profesyonel araçlar** – Abartmıyorum – bu araçlar gerçek anlamda süper güçlerin varmış gibi hissettirecek ve en güzel kısmı? Aynı araçları profesyoneller kullanıyor!
 
-> 💡 **Şöyle diyeyim**: Bugün her şeyi ezberlemeye çalışma! Şu an sadece olasılıklara dair o heyecan kıvılcımını hissetmeni istiyorum. Detaylar birlikte pratik yaparken doğal şekilde yerleşecek – gerçek öğrenme böyle olur!
+> 💡 **Şu önemli:** Bugün her şeyi ezberlemeye çalışma! Şu an sadece mümkün olan şeyler hakkında o heyecan kıvılcımını hissetmeni istiyorum. Detaylar birlikte pratik yaptıkça doğal olarak oturacak – gerçek öğrenme böyle olur!
 
-> Bu dersi [Microsoft Learn](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon) sitesinde de alabilirsin!
+> Bu dersi ayrıca [Microsoft Learn](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)’de de alabilirsin!
 
 ## Peki Programlama Tam Olarak *Nedir*?
 
-Tamam, o milyon dolarlık soruyu ele alalım: programlama gerçekten nedir?
+Tamam, milyon dolarlık soruya geçelim: programlama gerçekten nedir?
 
-Bakış açımı tamamen değiştiren bir hikaye vereceğim sana. Geçen hafta anneme yeni akıllı TV kumandamızı nasıl kullanacağını açıklamaya çalışıyordum. "Kırmızı düğmeye bas, ama büyük kırmızı değil, sol taraftaki küçük kırmızı düğmeye... hayır, diğer solun... tamam, şimdi iki saniye basılı tut, bir değil, üç değil..." diye söylerken yakaladım kendimi. Tanıdık geldi mi? 😅
+Bu konuda düşüncemi tamamen değiştiren bir hikaye anlatayım. Geçen hafta anneme yeni akıllı televizyon kumandamızı nasıl kullanacağını anlatmaya çalışıyordum. Kendi kendime “Kırmızı tuşa bas, ama büyük kırmızı tuş değil, soldaki küçük kırmızı tuş... hayır, diğer solun... tamam, şimdi iki saniye basılı tut, bir değil, üç değil...” gibi şeyler söylüyordum. Tanıdık geliyor mu? 😅
 
-İşte programlama budur! Bir şeye, çok güçlü ama her şeyin mükemmel şekilde açıklanması gereken bir şeye, inanılmaz ayrıntılı, adım adım talimatlar verme sanatıdır. Ama anneni açıklamak yerine (ki "hangi kırmızı düğme?!" sorusunu sorabilir), bilgisayara anlatıyorsun (bilgisayar tam olarak sen ne söylersen onu yapar, hatta sen demek istediğin şeyi tam söylememiş olsan bile).
+İşte programlama bu! Çok güçlü ama her şeyi tam olarak adım adım anlatman gereken bir şeye inanılmaz detaylı talimatlar vermek sanatı. Ama annenin aksine (ki “hangi kırmızı tuş?!” diye sorabilir), bilgisayara anlatıyorsun (bilgisayar tam olarak söylediğin şeyi yapar, hatta söylediklerin tam olarak ne demek istediğin değilse bile).
 
-Ben ilk öğrendiğimde aklımı başımdan alan şey şuydu: bilgisayarlar aslında çekirdeğinde oldukça basittir. Aslında sadece iki şeyi anlarlar – 1 ve 0, ki bu temelde "evet" ve "hayır" veya "açık" ve "kapalı" demektir. Hepsi bu! Ama işte işin sihirli kısmı – matris filmindeymişiz gibi 1’ler ve 0’lar ile konuşmak zorunda değiliz. Bunu sağlayan şey **programlama dilleri**. Onlar, mükemmel normal insan düşüncelerini bilgisayar diline çeviren dünyanın en iyi tercümanı gibidir.
+İlk öğrendiğimde aklımı başımdan alan şu oldu: bilgisayarlar aslında temelde çok basit varlıklar. Aslında sadece iki şeyi anlarlar – 1 ve 0, yani temel olarak “evet” ve “hayır” ya da “açık” ve “kapalı.” Hepsi bu! Ama işte sihir tam burada başlıyor – biz 1 ve 0’larla “Matrix”teymişiz gibi konuşmak zorunda değiliz. İşte burada **programlama dilleri** devreye giriyor. Onlar senin tamamen normal, insan düşüncelerini bilgisayar diline çeviren dünyanın en iyi tercümanı gibi düşünülebilir.
 
-Ve hala her sabah uyandığımda tüylerimi ürperten şey şu: hayatındaki dijital *her şey* senin gibi biri tarafından, muhtemelen pijamalarla, elinde bir fincan kahve laptop’unun başında kod yazarken başlamış. Mükemmel görünmeni sağlayan o Instagram filtresi? Birileri onu kodladı. Yeni favori şarkını bulmana sebep olan öneri? O algoritmayı bir geliştirici yarattı. Akşam yemek faturalarını arkadaşlarla bölmene yardımcı olan uygulama? Evet, biri "bu sinir bozucu, bunu ben çözerim" diye düşündü ve sonra... çözdü!
+Ve bu beni her sabah hala tüylerim diken diken eden şey: hayatındaki *her şey* dijital, muhtemelen pijamalı bir halde, elinde kahveyle oturan sıradan biri tarafından yazılan kodla başladı. Mükemmel görünmeni sağlayan Instagram filtresi? Biri o kodu yazdı. Yeni favori şarkını bulmana yol açan öneri? Geliştirici o algoritmayı oluşturdu. Arkadaşlarla hesabı bölmene yardım eden uygulama? Evet, biri “bu sinir bozucu, bunu kesinlikle düzeltebilirim” diye düşündü ve sonra... yaptı!
 
-Programlamayı öğrendiğinde, sadece yeni bir beceri edinmekle kalmazsın – günlerini "Ya birinin gününü biraz daha iyi yapacak bir şey inşa etsem?" diye düşünen inanılmaz problem çözücü topluluğunun bir parçası olursun. Açıkçası, bundan daha havalı bir şey var mı?
+Programlamayı öğrendiğinde sadece yeni bir beceri edinmiyorsun – aynı zamanda her gün “Birinin gününü biraz daha iyi yapacak bir şey inşa etsem?” diye düşünen inanılmaz bir problem çözücü topluluğunun parçası oluyorsun. Dürüst olmak gerekirse, bundan daha havalı bir şey olabilir mi?
 
-✅ **Eğlenceli Gerçek Avı**: Boş bir zamanın olduğunda çok havalı bir şeyi araştır – dünyadaki ilk bilgisayar programcısı kimdi sence? Sana bir ipucu vereyim: beklentilerin dışında olabilir! Bu kişinin hikayesi kesinlikle büyüleyici ve programlamanın her zaman yaratıcı problem çözme ve sınırların dışını düşünmekle ilgili olduğunu gösteriyor.
+✅ **Eğlenceli Gerçek Avı:** Boş bir anında mutlaka bakmanı önerdiğim harika bir şey var – dünyadaki ilk bilgisayar programcısı kimdir? Sana ipucu vereyim: beklediğin kişi olmayabilir! Bu kişinin hikayesi tamamen büyüleyici ve programlamanın her zaman yaratıcı problem çözme ve kalıpların dışına çıkmakla ilgili olduğunu gösteriyor.
 
-### 🧠 **Kontrol Zamanı: Kendini Nasıl Hissediyorsun?**
+### 🧠 **İyi misin? Ne hissediyorsun?**
 
 **Bir an durup düşün:**
-- "Bilgisayarlara talimat vermek" fikri şimdi mantıklı geliyor mu?
-- Günlük bir görevi programlama ile otomatikleştirmek istediğin bir şey var mı?
-- Programlama hakkında kafanı kurcalayan hangi sorular çıkıyor?
+- “Bilgisayarlara talimat vermek” fikri şimdi senin için mantıklı mı?
+- Günlük bir işi programlama ile otomatikleştirmek istediğin bir şey var mı?
+- Bu programlama meselesiyle ilgili kafanda kaynayan sorular neler?
 
-> **Unutma**: Bazı kavramlar şu an bulanık geliyorsa bu tamamen normal. Programlama öğrenmek yeni bir dil öğrenmek gibidir – beyninin sinir yollarını kurması zaman alır. İyi gidiyorsun!
+> **Unutma:** Bazı kavramları şu an bulanık hissetmen tamamen normal. Programlama öğrenmek yeni bir dil öğrenmek gibidir – beyninin sinirsel bağlantılar oluşturması zaman alır. Çok iyi gidiyorsun!
 
-## Programlama Dilleri Birer Farklı Sihir Türü Gibidir
+## Programlama Dilleri, Farklı Sihir Tatları Gibidir
 
-Tamam, kulağa garip gelecek ama sakın bırakma beni – programlama dilleri farklı müzik türleri gibidir. Düşünsene: ışıl ışıl doğaçlama caz, güçlü ve doğrudan rock, zarif ve yapılandırılmış klasik müzik, yaratıcı ve ifadesi güçlü hiphop. Her türün kendine has bir havası, tutkulu bir hayran kitlesi vardır ve her biri farklı ruh hallerine ve durumlara çok uygundur.
+Tamam, bu biraz garip gelecek ama beni dinle – programlama dilleri farklı müzik türlerine çok benzer. Düşün: caz, akıcı ve doğaçlama, rock güçlü ve direkt, klasik zarif ve yapılandırılmış, hip-hop yaratıcı ve ifadeli. Her tarzın kendi atmosferi, tutkulu takipçileri ve farklı ruh halleri ile durumlar için uygun olan kendine has bir yapısı vardır.
 
-Programlama dilleri de aynen böyle çalışır! Devasa iklim verilerini analiz etmek için aynı dili kullanmazsın, eğlenceli bir mobil oyun yapmak için kullanacağın dil aynı olmaz, tıpkı yoga derslerinde death metal dinlememen gerektiği gibi (en azından çoğu yoga dersinde! 😄).
+Programlama dilleri de tam olarak böyle çalışır! Aynı dili, devasa iklim verilerini analiz etmek için kullanmazsın, aynı şekilde eğlenceli bir mobil oyun geliştirmek için de kullanmazsın; tıpkı yoga sınıfında death metal çalmazsın (çoğu yoga sınıfında en azından! 😄).
 
-Ama her düşündüğümde aklımı başımdan alan şey şu: bu diller, dünyanın en sabırlı, akıllı tercümanını yanınızda oturtmak gibi. İnsan beynine doğal gelen biçimde fikirlerini ifade edebilirsin ve onlar o fikirleri bilgisayarların gerçekten konuştuğu 1 ve 0’lara çevirir. Hem "insan yaratıcılığına" hem de "bilgisayar mantığına" kusursuz hakim dostun var ve bu dost asla yorulmaz, kahve molası vermez, aynı soruyu iki kez sorduğun için seni yargılamaz!
+Ama yazmayı her düşündüğümde beni şaşkına çeviren şey şu: bu diller, dünyanın en sabırlı, parlak tercümanının tam yanındaki yerde oturması gibi. Sen fikirlerini insan beynine doğal gelen şekilde ifade edebilirsin ve onlar bunu bilgisayarların anladığı 1 ve 0’a çevirmek için inanılmaz karmaşık işleri üstlenir. “İnsan yaratıcılığı” ve “bilgisayar mantığı”na tamamen hakim bir arkadaşın varmış gibi – hiç yorulmazlar, kahve molası vermezler ve aynı soruyu iki kez sormanı asla yargılamazlar!
 
 ### Popüler Programlama Dilleri ve Kullanım Alanları
 
@@ -109,7 +109,7 @@ mindmap
         Apple Ekosistemi
       Kotlin
         Modern Android
-        Çok Platformlu
+        Çoklu Platform
     Sistemler & Performans
       C++
         Oyunlar
@@ -121,33 +121,33 @@ mindmap
         Bulut Servisleri
         Ölçeklenebilir Arka Uç
 ```
-| Dil | En İyi Olduğu Alanlar | Neden Popüler |
+| Dil | En İyi Olduğu Alan | Popüler Olma Nedeni |
 |----------|----------|------------------|
-| **JavaScript** | Web geliştirme, kullanıcı arayüzleri | Tarayıcılarda çalışır ve etkileşimli web sitelerine güç verir |
+| **JavaScript** | Web geliştirme, kullanıcı arayüzleri | Tarayıcılarda çalışır ve interaktif web sitelerini güçlendirir |
 | **Python** | Veri bilimi, otomasyon, yapay zeka | Okuması ve öğrenmesi kolay, güçlü kütüphaneler |
 | **Java** | Kurumsal uygulamalar, Android uygulamaları | Platform bağımsız, büyük sistemler için sağlam |
 | **C#** | Windows uygulamaları, oyun geliştirme | Güçlü Microsoft ekosistemi desteği |
-| **Go** | Bulut servisleri, arka uç sistemler | Hızlı, basit, modern hesaplamaya yönelik tasarlanmış |
+| **Go** | Bulut servisleri, arka uç sistemleri | Hızlı, basit, modern bilişim için tasarlanmış |
 
-### Yüksek Seviye vs. Düşük Seviye Diller
+### Yüksek Seviyeli ve Düşük Seviyeli Diller
 
-Tamam, bu açıkçası ben öğrenmeye başladığımda beynimi yakan kavramdı, o yüzden sonunda benim için netleşen benzetmeyi paylaşacağım – umarım sana da yardımcı olur!
+Tamam, açıkçası bu ilk öğrendiğimde beynimi yakan konseptti, bu yüzden sonunda benim için tık diye oturan benzetmeyi paylaşacağım – ve umarım senin için de faydalı olur!
 
-Dilini bilmediğin bir ülkeyi ziyaret ettiğini ve acilen en yakın banyoyu bulman gerektiğini hayal et (hepimiz yaşadık, değil mi? 😅):
+Bir ülkede bulunduğunu düşün, o ülkenin dilini bilmiyorsun ve çaresizce en yakın tuvaleti bulman gerekiyor (hepimiz bu durumda kaldık değil mi? 😅):
 
-- **Düşük seviyeli programlama**, meyve satan büyükannenle yerel lehçede kültürel göndermeler, yerel argolar ve sadece orada yaşayanların anlayabileceği esprilerle sohbet edebilecek kadar iyi konuşmak gibidir. Süper etkileyici ve inanılmaz verimlidir... eğer akıcıysan! Ama sadece bir banyo bulmaya çalışırken biraz bunaltıcıdır.
+- **Düşük seviyeli programlama**, semtte meyve satan büyükannenle kültürel referanslar, yerel argo ve sadece orada yetişen birinin anlayacağı iç şakalarla sohbet edecek kadar yerel dili öğrenmek gibidir. Çok etkileyici ve inanılmaz verimli... eğer akıcıysan! Ama sadece tuvaleti bulmaya çalışıyorsan oldukça karmaşık.
 
-- **Yüksek seviyeli programlama**, seni hemen anlayan harika yerel arkadaş gibidir. İngilizce olarak "Gerçekten bir tuvalet bulmam lazım" dersen, onlar tüm kültürel çeviriyi yapar ve beyninin kolayca anladığı şekilde yol tarif eder.
+- **Yüksek seviyeli programlama** ise harika, seni anlayan bir yerel arkadaşın olması gibidir. Düz İngilizceyle “Gerçekten tuvaleti bulmam lazım” diyorsun ve o bütün kültürel çeviriyi yapıp, senin dışarıdan gelen beynine son derece mantıklı olacak şekilde yol gösteriyor.
 
 Programlama terimleriyle:
-- **Düşük seviyeli diller** (Assembly veya C gibi) bilgisayarın gerçek donanımıyla çok ayrıntılı konuşmana izin verir, ama bir makine gibi düşünmen gerekir ki… söyleyelim, büyük bir zihinsel geçiş!
-- **Yüksek seviyeli diller** (JavaScript, Python veya C# gibi) insan gibi düşünmene izin verirken, makine diliyle arka planda onlar ilgilenir. Ayrıca, içinde yeni olanların ne hissettiğini unutmayan ve gerçekten yardım etmek isteyen inanılmaz misafirperver toplulukları vardır!
+- **Düşük seviyeli diller** (Assembly ya da C gibi) bilgisayarın gerçek donanımıyla çok detaylı konuşmanı sağlar ama makine gibi düşünmen gerekir ki... bu büyük bir zihinsel değişim demektir!
+- **Yüksek seviyeli diller** (JavaScript, Python veya C# gibi) senin insan gibi düşünmene izin verir, arkada tüm makine dilini onlar halleder. Üstelik, bu dillere ait inanılmaz sıcak topluluklar vardır – bunlar yeni başlayanların halini hatırlar ve gerçekten yardımcı olmak ister!
 
-Tahmin et hangileriyle başlamanı öneriyorum? 😉 Yüksek seviyeli diller, deneyimi çok daha keyifli hale getirdikleri için aslında asla bırakmak istemediğin böyle eğitim tekerlekleri gibidir!
+Tahmin et, başlangıçta hangilerini öneriyorum? 😉 Yüksek seviyeli diller, daha keyifli bir deneyim yaşaman için aslında asla bırakmak istemeyeceğin küçük destek tekerlekleri gibidir!
 
 ```mermaid
 flowchart TB
-    A["👤 İnsan Düşüncesi:<br/>'Fibonacci sayıları hesaplamak istiyorum'"] --> B{Dil Seviyesi Seç}
+    A["👤 İnsan Düşüncesi:<br/>'Fibonacci sayılarını hesaplamak istiyorum'"] --> B{Dil Seviyesi Seç}
     
     B -->|Yüksek Seviye| C["🌟 JavaScript/Python<br/>Okuması ve yazması kolay"]
     B -->|Düşük Seviye| D["⚙️ Assembly/C<br/>Doğrudan donanım kontrolü"]
@@ -155,7 +155,7 @@ flowchart TB
     C --> E["📝 Yaz: fibonacci(10)"]
     D --> F["📝 Yaz: mov r0,#00<br/>sub r0,r0,#01"]
     
-    E --> G["🤖 Bilgisayar Anlayışı:<br/>Çevirmen karmaşıklığı yönetir"]
+    E --> G["🤖 Bilgisayar Anlayışı:<br/>Çevirici karmaşıklığı yönetir"]
     F --> G
     
     G --> H["💻 Aynı Sonuç:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
@@ -164,18 +164,18 @@ flowchart TB
     style D fill:#fff3e0
     style H fill:#e8f5e8
 ```
-### Yüksek Seviyeli Dillerin Neden Bu Kadar Dostça Olduğunu Sana Gösteriyim
+### Neden Yüksek Seviyeli Diller Daha Dostane Gösteriyorum?
 
-Tamam, yüksek seviyeli dillere neden aşık olduğumu mükemmel gösteren bir şeyi göstermek üzereyim, ama önce benden bir şey istemen lazım. İlk kod örneğini görünce panik yapma! Korkutucu görünmesi gerekiyor. Tam da vurgulamak istediğim şey bu!
+Tamam, şimdi yüksek seviyeli dilleri neden sevdiğimi mükemmel gösteren bir şey göstereceğim ama önce bir söz vermeni istiyorum. İlk kod örneğini gördüğünde panik yapma! Gözünü korkutması lazım, tam da bunun için orada!
 
-Aynı görevin tamamen iki farklı tarzda yazılmış haline bakacağız. İkisi de Fibonacci dizisi denen bir matematiksel deseni yaratır – her sayı kendinden önce gelen iki sayının toplamıdır: 0, 1, 1, 2, 3, 5, 8, 13... (Eğlenceli gerçek: bu desen doğada her yerde bulunur – ayçiçeği tohum spiralleri, çam kozalağı desenleri, hatta galaksilerin oluşumu!)
+İki tamamen farklı stil ile yazılmış aynı göreve bakacağız. İkisi de Fibonacci dizisini oluşturuyor – bu, her sayının kendisinden önceki iki sayının toplamı olduğu güzel bir matematiksel örüntü: 0, 1, 1, 2, 3, 5, 8, 13... (Eğlenceli gerçek: Bu örüntüyü doğada her yerde görürsün – ayçiçeği tohum spiralleri, kozalak desenleri, hatta galaksilerin oluşumunda bile!)
 
-Farkı görmeye hazır mısın? Hadi başlayalım!
+Farkı görmek ister misin? Hadi bakalım!
 
 **Yüksek seviyeli dil (JavaScript) – İnsan dostu:**
 
 ```javascript
-// Adım 1: Temel Fibonacci kurulumu
+// Adım 1: Temel Fibonacci ayarı
 const fibonacciCount = 10;
 let current = 0;
 let next = 1;
@@ -183,11 +183,11 @@ let next = 1;
 console.log('Fibonacci sequence:');
 ```
 
-**Bu kod şunları yapar:**
-- Fibonacci sayılarının kaç tane üretileceğini belirtmek için bir sabit **tanımlar**
-- Dizideki geçerli ve sonraki sayıları takip etmek için iki değişkeni **başlatır**
-- Fibonacci desenini tanımlayan başlangıç değerlerini (0 ve 1) **ayarlar**
-- Çıktımızı tanımlayan bir başlık mesajı **gösterir**
+**Bu kod ne yapar:**
+- İstediğimiz Fibonacci sayısı miktarını belirtmek için bir sabit **tanımlar**
+- Dizideki mevcut ve sonraki sayıları takip etmek için iki değişkeni **başlatır**
+- Fibonacci modelini tanımlayan başlangıç değerlerini (0 ve 1) **ayarlar**
+- Çıktıyı tanımlamak için bir başlık mesajı **gösterir**
 
 ```javascript
 // Adım 2: Döngü ile diziyi oluştur
@@ -201,11 +201,11 @@ for (let i = 0; i < fibonacciCount; i++) {
 }
 ```
 
-**Burada neler oluyor, detaylandırmak gerekirse:**
-- `for` döngüsü kullanarak dizideki her pozisyonda **dolaşır**
-- Her sayıyı ve pozisyonunu şablon metin biçimlendirmesiyle **gösterir**
+**Burada olanları parçalayalım:**
+- `for` döngüsü kullanarak dizideki her pozisyonda **döner**
+- Her sayıyı yer numarasıyla birlikte şablon dizisi biçiminde **gösterir**
 - Mevcut ve sonraki değerleri toplayarak bir sonraki Fibonacci sayısını **hesaplar**
-- Takip değişkenlerini bir sonraki iterasyona geçecek şekilde **günceller**
+- Bir sonraki yinelemeye geçmek için takip değişkenlerini **günceller**
 
 ```javascript
 // Adım 3: Modern fonksiyonel yaklaşım
@@ -224,11 +224,11 @@ const fibSequence = generateFibonacci(10);
 console.log(fibSequence);
 ```
 
-**Yukarıdaki kodda biz:**
-- Modern ok fonksiyonu sözdizimi kullanarak yeniden kullanılabilir bir fonksiyon **yarattık**
-- Tüm diziyi depolamak için bir dizi oluşturduk, tek tek göstermek yerine
-- Önceki değerlerden her yeni sayıyı **hesaplamak için dizi indekslemesi kullandık**
-- Diziyi esnek kullanım için programımızın diğer bölümlerine **döndürdük**
+**Yukarıda şunları yaptık:**
+- Modern ok fonksiyonu söz dizimiyle tekrar kullanılabilir bir fonksiyon **oluşturduk**
+- Sıralamayı teker teker göstermek yerine tamamını tutacak bir dizi **inşa ettik**
+- Önceki değerlerden her yeni sayıyı hesaplamak için dizi indekslemeyi **kullandık**
+- Programımızın başka bölümlerinde esnek kullanım için tam diziyi **döndürdük**
 
 **Düşük seviyeli dil (ARM Assembly) – Bilgisayar dostu:**
 
@@ -257,60 +257,59 @@ back add r0,r1
  end
 ```
 
-JavaScript versiyonu neredeyse İngilizce talimatlar gibi okunurken, Assembly versiyonu bilgisayarın işlemcisini doğrudan kontrol eden gizemli komutlar kullanır. İkisi de aynı görevi yapar, ama yüksek seviyeli dil insanların anlaması, yazması ve sürdürmesi çok daha kolaydır.
+JavaScript sürümü neredeyse İngilizce talimatlar gibi okunurken, Assembly sürümü bilgisayarın işlemcisini doğrudan kontrol eden şifreli komutlar kullanır. İkisi de aynı görevi yapar ama yüksek seviyeli dil insanın anlaması, yazması ve sürdürmesi çok daha kolaydır.
 
-**Fark edeceğin ana farklar:**
-- **Okunabilirlik**: JavaScript `fibonacciCount` gibi açıklayıcı isimler kullanırken, Assembly `r0`, `r1` gibi gizemli etiketler kullanır
-- **Yorumlar**: Yüksek seviyeli diller, kodun kendi kendini belgeleyen açıklayıcı yorumları teşvik eder
-- **Yapı**: JavaScript'in mantıksal akışı, insanların problemleri adım adım düşünme şekline uyum sağlar
-- **Bakım**: Farklı gereksinimler için JavaScript sürümünü güncellemek basit ve nettir
+**Dikkat edeceğin temel farklar:**
+- **Okunabilirlik**: JavaScript, `fibonacciCount` gibi açıklayıcı isimler kullanırken Assembly, `r0`, `r1` gibi gizemli etiketler kullanır  
+- **Yorumlar**: Üst düzey diller, kodu kendini belgeleyen hâle getiren açıklayıcı yorumları teşvik eder  
+- **Yapı**: JavaScript'in mantıksal akışı, insanların problemleri adım adım düşünme şekline uyar  
+- **Bakım**: JavaScript sürümünü farklı gereksinimler için güncellemek açık ve basittir  
 
-✅ **Fibonacci dizisi hakkında**: Bu kesinlikle harika sayı deseni (her sayının kendinden önceki iki sayının toplamı olduğu: 0, 1, 1, 2, 3, 5, 8...) doğada hemen hemen *her yerde* ortaya çıkar! Günebakan spirallerinde, çam kozalağı desenlerinde, nautilus kabuklarının kıvrımında ve hatta ağaç dallarının büyüme şeklinde bulabilirsiniz. Matematik ve kodun doğanın güzelliği yaratmak için kullandığı desenleri anlamamıza ve yeniden yaratmamıza nasıl yardımcı olabileceği gerçekten şaşırtıcı!
+✅ **Fibonacci dizisi hakkında**: Bu kesinlikle muhteşem sayı dizisi (her sayı kendisinden önceki iki sayının toplamına eşittir: 0, 1, 1, 2, 3, 5, 8...) doğada kelimenin tam anlamıyla *her yerde* ortaya çıkar! Ayçiçeği spirallerinde, çam kozalağı desenlerinde, nautilus kabuklarının kıvrımında ve hatta ağaç dallarının büyüme şeklinde bulabilirsiniz. Matematik ve kodun doğanın güzelliği yaratmak için kullandığı desenleri anlamamıza ve yeniden üretmemize nasıl yardımcı olabileceği gerçekten büyüleyici!  
 
+## Büyünün Gerçekleşmesini Sağlayan Yapı Taşları  
 
-## Büyünün Gerçekleşmesini Sağlayan Temel Parçalar
+Tamam, şimdi programlama dillerinin nasıl göründüğünü gördüğünüze göre, yazılmış olan her programı oluşturan temel parçaları parçalayalım. Bunları favori tarifinizdeki temel malzemeler gibi düşünün – her birinin ne işe yaradığını anladığınızda, hemen hemen her dilde kod okuyup yazabilirsiniz!  
 
-Tamam, programlama dillerinin gerçek hayatta nasıl göründüğünü gördüğünüze göre, şimdi yazılmış her programın temel parçalarını parçalayalım. Bunları en sevdiğiniz tarifin temel bileşenleri olarak düşünün – her birinin ne işe yaradığını anladığınızda, hemen hemen her dilde kod okuyup yazabileceksiniz!
+Bu, programlamanın dilbilgisini öğrenmek gibi bir şey. Okulda isimleri, fiilleri ve cümlelerin nasıl birleştirildiğini öğrendiğinizi hatırlıyor musunuz? Programlamanın kendi dilbilgisi var ve dürüst olmak gerekirse, İngilizce dilbilgisinden çok daha mantıklı ve affedicidir! 😄  
 
-Bu, programlamanın dilbilgisini öğrenmek gibidir. Okulda isimler, fiiller ve cümle kurmayı öğrendiğiniz zamanı hatırlayın. Programlamanın kendi dilbilgisi versiyonu var ve dürüst olmak gerekirse, İngilizce dilbilgisinden çok daha mantıklı ve bağışlayıcı! 😄
+### İfadeler: Adım Adım Talimatlar  
 
-### İfadeler: Adım Adım Talimatlar
+**İfadeler** ile başlayalım – bunlar bilgisayarınızla yapılan konuşmadaki bireysel cümleler gibidir. Her ifade bilgisayara belli bir işi yapmasını söyler, bir anlamda "Burada sola dön," "Kırmızı ışıkta dur," "Şu park yerine park et" gibi talimatlar vermek gibidir.  
 
-Hadi **ifadeler** ile başlayalım – bunlar bilgisayarınızla kurduğunuz bir konuşmadaki bireysel cümleler gibidir. Her ifade bilgisayara spesifik bir işi yapmasını söyler, tıpkı yön tarifleri vermek gibi: "Buradan sola dön," "Kırmızı ışıkta dur," "Şu park yerine park et."
-
-İfadelerde sevdiğim şey onların genellikle ne kadar okunabilir olması. Şuna bak:
+İfadelerin okunabilir olmasını seviyorum. Şuna bakın:  
 
 ```javascript
-// Tek eylem gerçekleştiren temel ifadeler
+// Tek bir işlem gerçekleştiren temel ifadeler
 const userName = "Alex";                    
 console.log("Hello, world!");              
 const sum = 5 + 3;                         
 ```
-
-**Bu kodun yaptığı şeyler:**
-- Bir kullanıcının adını saklamak için sabit değişken **bildir**  
-- Konsol çıktısına bir selamlama mesajı **göster**  
-- Matematiksel bir işlemin sonucunu **hesapla** ve sakla
+  
+**Bu kodun yaptığı şeyler:**  
+- Bir kullanıcının adını saklamak için sabit değişken **tanımla**  
+- Konsol çıkışında bir selamlama mesajı **göster**  
+- Bir matematiksel işlemin sonucunu **hesapla** ve sakla  
 
 ```javascript
-// Web sayfalarıyla etkileşime geçen ifadeler
+// Web sayfalarıyla etkileşimde bulunan ifadeler
 document.title = "My Awesome Website";      
 document.body.style.backgroundColor = "lightblue";
 ```
+  
+**Adım adım olanlar:**  
+- Tarayıcı sekmesinde görünen web sayfasının başlığını **değiştir**  
+- Sayfa gövdesinin arka plan rengini **değiştir**  
 
-**Adım adım olanlar:**
-- Tarayıcı sekmesinde görünen sayfa başlığını **değiştir**  
-- Sayfa gövdesinin arka plan rengini **ayarla**
+### Değişkenler: Programınızın Hafıza Sistemi  
 
-### Değişkenler: Programınızın Bellek Sistemi
+Tamam, **değişkenler** doğrusu öğretebileceğim en sevdiğim kavramlardan çünkü her gün zaten kullandığınız şeylere çok benziyorlar!  
 
-Tamam, **değişkenler** gerçekten öğretmekten en çok zevk aldığım kavramlardan biri çünkü zaten her gün kullandığınız şeylere çok benziyorlar!
+Telefonunuzun rehberini düşünün bir saniye. Herkesin telefon numarasını ezberlemezsiniz – bunun yerine "Anne," "En İyi Arkadaş," ya da "Sabaha Kadar Paket Servisi Yapan Pizza" gibi isimler kaydedersiniz ve telefon numaraları sizin için hatırlar. Değişkenler de aynı şekilde çalışır! Programınızın bilgi saklayıp daha sonra anlamlı bir isimle geri çağırabileceği etiketlenmiş kaplar gibidir.  
 
-Telefonunuzdaki kişi listesini düşünün bir saniye. Herkesin telefon numarasını ezberlemezsiniz – onun yerine "Anne", "En İyi Arkadaş" veya "Gece 2'ye Kadar Servis Yapan Pizza Yeri" gibi isimleri kaydedersiniz ve telefon gerçek numaraları hatırlar. Değişkenler tam olarak aynı şekilde işlev görür! Programınızın bilgi saklayabileceği ve onu akıllı bir isimle daha sonra çağırabileceği etiketli kaplar gibidir.
+Asıl güzel olan şu ki: değişkenler programınız çalışırken değişebilir (buna değişken denmesinin sebebi budur – fark ettiniz mi?). Nasıl ki daha iyi bir pizza yeri keşfedince telefon rehberinizi güncelliyorsanız, değişkenler de programınız yeni bilgi öğrendikçe ya da durumlar değiştikçe güncellenebilir!  
 
-Asıl harika olan şu: değişkenler program çalışırken değişebilir (bu yüzden isimleri "değişken" – fark ettiniz mi?). Nasıl ki daha iyi bir pizzacı keşfedip kaydınızı güncelliyorsanız, değişkenler de programınız yeni bilgiler öğrenip koşullar değiştikçe güncellenebilir!
-
-Size bunun ne kadar güzel ve basit olduğunu göstereyim:
+Ne kadar kolay olduğunu göstereyim:  
 
 ```javascript
 // Adım 1: Temel değişkenlerin oluşturulması
@@ -319,26 +318,26 @@ let currentWeather = "sunny";
 let temperature = 75;                       
 let isRaining = false;                      
 ```
-
-**Bu kavramları anlamak için:**  
-- Değişmeyen değerleri `const` ile sakla (örneğin site adı)  
-- Programa göre değişebilecek değerler için `let` kullan  
-- Farklı veri türleri ata: string (metin), sayılar, boolean (true/false)  
-- Her değişkenin içeriğini açıklayan açıklayıcı isimler seç
+  
+**Bu kavramlar şunlar demektir:**  
+- Sabit değerleri `const` değişkenlerde **sakla** (site adı gibi)  
+- Program boyunca değişebilecek değerler için `let` **kullan**  
+- Farklı veri tiplerini ata: stringler (metin), sayılar ve booleanlar (doğru/yanlış)  
+- Her değişkenin ne içerdiğini anlatan açıklayıcı isimler **seç**  
 
 ```javascript
-// Adım 2: İlgili verileri gruplamak için nesnelerle çalışma
+// Adım 2: İlgili verileri gruplamak için nesnelerle çalışmak
 const weatherData = {                       
   location: "San Francisco",
   humidity: 65,
   windSpeed: 12
 };
 ```
-
-**Yukarıda:**
-- İlgili hava durumu bilgilerini bir nesnede **grupladık**  
-- Birden fazla bilgiyi tek bir değişken adı altında **organize ettik**  
-- Anahtar-değer çiftleri kullanarak her bilginin başlığını netleştirdik
+  
+**Yukarıda şunları yaptık:**  
+- İlgili hava durumu bilgilerini gruplamak için bir nesne **oluşturduk**  
+- Birden fazla veriyi tek bir değişken adı altında **düzenledik**  
+- Her bilgi parçasını açıkça etiketlemek için anahtar-değer çiftleri **kullandık**  
 
 ```javascript
 // Adım 3: Değişkenleri kullanma ve güncelleme
@@ -349,33 +348,33 @@ console.log(`Wind speed: ${weatherData.windSpeed} mph`);
 currentWeather = "cloudy";                  
 temperature = 68;                          
 ```
-
-**Her parçayı anlayalım:**
-- `${}` sözdizimi ile şablon metin kullanarak bilgi **göster**  
-- Nesne özelliklerine dot notasyonu ile eriş (`weatherData.windSpeed`)  
-- `let` ile tanımlanan değişkenleri güncelleyerek koşullara göre **değiştir**  
-- Anlamlı mesajlar oluşturmak için birden fazla değişkeni **birleştir**
+  
+**Her parçayı anlama:**  
+- `${}` sözdizimiyle şablon dizeleri kullanarak bilgi **görüntüle**  
+- Nokta gösterimi (`weatherData.windSpeed`) ile nesne özelliklerine **eriş**  
+- Değişen koşulları yansıtmak için `let` ile tanımlanan değişkenleri **güncelle**  
+- Anlamlı mesajlar oluşturmak için birden fazla değişkeni **birleştir**  
 
 ```javascript
-// Adım 4: Daha temiz kod için modern yapı bozma
+// Adım 4: Daha temiz kod için modern parçalama
 const { location, humidity } = weatherData; 
 console.log(`${location} humidity: ${humidity}%`);
 ```
+  
+**Bilmeniz gerekenler:**  
+- Nesnelerden belirli özellikleri ayıklamak için yapı bozunumu ataması **kullan**  
+- Nesne anahtarlarıyla aynı isimde yeni değişkenler otomatik olarak **oluştur**  
+- Tekrarlayan nokta gösterimini önleyerek kodu **basitleştir**  
 
-**Bilmen gerekenler:**
-- Nesnelerden spesifik özellikleri yıkıcı atama ile **çıkar**  
-- Nesne anahtarları ile aynı isimlerde yeni değişkenler **oluştur**  
-- Tekrarlayan dot notasyonunu kullanmaktan kaçınarak kodu **sadeleştir**
+### Kontrol Akışı: Programınıza Düşünmeyi Öğretmek  
 
-### Kontrol Akışı: Programınıza Nasıl Düşüneceğini Öğretmek
+Tamam, burası programlamanın gerçekten akıl almaz olduğu kısım! **Kontrol akışı**, temelde programınıza sizin her gün farkında bile olmadan yaptığınız gibi akıllıca kararlar vermeyi öğretmektir.  
 
-Tamam, şimdi programlamanın gerçekten akıl almaz kısmına geldik! **Kontrol akışı**, programınıza akıllı kararlar nasıl alacağını öğretmektir, tıpkı sizin her gün farkında olmadan yaptığınız gibi.
+Şunu hayal edin: bugün sabah muhtemelen şöyle bir şey yaptınız; "Eğer yağmur yağıyorsa şemsiye alırım. Eğer hava soğuksa ceket giyerim. Eğer geç kalıyorsam kahvaltıyı atlar ve yolda kahve alırım." Beyniniz bu if-o halde mantığını onlarca kez doğal olarak takip ediyor!  
 
-Diyelim ki bugün sabah şöyle düşündünüz: "Eğer yağmur varsa şemsiye alırım. Eğer soğuksa ceket giyerim. Eğer geç kalıyorsam kahvaltıyı atlar yolda kahve alırım." Beyniniz bu if-then mantığını gün içinde onlarca kez otomatik olarak gerçekleştirir!
+Programların zeki ve canlı hissettiren tarafı burasıdır; yani sadece sıkıcı, önceden belli bir senaryoyu takip eden scriptler değiller. Durumu görüp değerlendirebilir ve uygun şekilde tepki verebilirler. Programınıza uygun şekilde uyum sağlayıp seçim yapabilen bir beyin vermek gibi!  
 
-İşte programları sıkıcı, öngörülebilir komutlardan alıp canlı ve zeki yapan şey budur. Durumu görebilir, ne olduğunu değerlendirebilir ve uygun şekilde tepki verebilirler. Programınıza düşünebilen ve seçim yapabilen bir zihin vermek gibidir!
-
-Bunun nasıl harika çalıştığını göstereyim:
+Bunun ne kadar güzel çalıştığını görmek ister misiniz? Gösteriyorum:  
 
 ```javascript
 // Adım 1: Temel koşullu mantık
@@ -388,15 +387,15 @@ if (userAge >= 18) {
   console.log(`You'll be able to vote in ${yearsToWait} year(s).`);
 }
 ```
-
-**Bu kodun yaptığı şeyler:**
-- Kullanıcının yaşının oy kullanma şartını karşılayıp karşılamadığını **kontrol et**  
+  
+**Bu kodun yaptığı şeyler:**  
+- Kullanıcının yaşının oy kullanma şartlarını karşılayıp karşılamadığını **kontrol et**  
 - Koşul sonucuna göre farklı kod blokları **çalıştır**  
-- 18 yaşından küçükse oy kullanmaya ne kadar süre kaldığını **hesapla** ve göster  
-- Her durum için spesifik, faydalı geri bildirim **ver**
+- 18 yaş altındaysa oy kullanmaya ne kadar zaman kaldığını **hesapla** ve göster  
+- Her senaryo için spesifik ve faydalı geri bildirim **ver**  
 
 ```javascript
-// Adım 2: Mantıksal operatörlerle çoklu koşullar
+// Adım 2: Mantıksal operatörlerle birden fazla koşul
 const userAge = 17;
 const hasPermission = true;
 
@@ -408,26 +407,26 @@ if (userAge >= 18 && hasPermission) {
   console.log("Sorry, you must be at least 16 years old.");
 }
 ```
-
-**Burada olanları parçalara ayıralım:**
-- `&&` (ve) operatörü ile birden fazla koşulu **birleştir**  
-- Birden fazla senaryo için `else if` ile koşul hiyerarşisi **oluştur**  
-- Tüm olası durumları son `else` ifadesi ile **ele al**  
-- Her farklı durum için net, uygulanabilir geri bildirim **ver**
+  
+**Burada olanların çözümlemesi:**  
+- `&&` (ve) operatörü ile birden çok koşulu **birleştir**  
+- Çoklu durumlar için `else if` kullanarak koşulların hiyerarşisini **oluştur**  
+- Tüm olası durumları son `else` ifadesiyle **ele al**  
+- Her farklı durum için net ve uygulanabilir geri bildirim sağla  
 
 ```javascript
-// Adım 3: Üçlü operatör ile kısa koşul ifadeleri
+// Adım 3: Üçlü operatör ile özlü koşul
 const votingStatus = userAge >= 18 ? "Can vote" : "Cannot vote yet";
 console.log(`Status: ${votingStatus}`);
 ```
-
-**Unutma:**
-- Basit iki seçenekli koşullar için ternary operatörünü (`? :`) **kullan**  
-- Koşulu önce yaz, ardından `?`, sonra doğru sonuç, sonra `:`, sonra yanlış sonucu yaz  
-- Koşullara bağlı değer atama gerektiğinde bu kalıbı **uygula**
+  
+**Unutulmaması gerekenler:**  
+- Basit iki seçenekli koşullar için Ternary operatörü (`? :`) **kullan**  
+- Önce koşulu yaz, ardından `?`, sonra doğru sonucu, sonra `:`, sonra yanlış sonucu yaz  
+- Değer ataması gereken durumlarda bu kalıbı **uygula**  
 
 ```javascript
-// Adım 4: Birden çok belirli durumların işlenmesi
+// Adım 4: Birden fazla belirli durumu ele alma
 const dayOfWeek = "Tuesday";
 
 switch (dayOfWeek) {
@@ -446,24 +445,24 @@ switch (dayOfWeek) {
     console.log("Invalid day of the week");
 }
 ```
+  
+**Bu kod şu işleri yapıyor:**  
+- Değişken değerini birden çok özel durumla **eşleştir**  
+- Benzer durumları (hafta içi vs. hafta sonu) **gruplandır**  
+- Eşleşme bulununca ilgili kod bloğunu **çalıştır**  
+- Beklenmedik değerleri ele almak için `default` durumunu **dahil et**  
+- Sonraki duruma geçmemesi için `break` ifadelerini **kullan**  
 
-**Bu kod şunları yapar:**
-- Değişkenin değerini birden fazla özel durumla **eşleştir**  
-- Benzer durumları (haftaiçi ve hafta sonu gibi) **gruplandır**  
-- Eşleşme bulununca uygun kod bloğunu **çalıştır**  
-- Beklenmeyen değerler için `default` durumunu **inclue et**  
-- Diğer duruma geçişi engellemek için `break` ifadelerini **kullan**
+> 💡 **Gerçek dünya benzetmesi**: Kontrol akışını, size dünyanın en sabırlı GPS cihazının yol göstermesi gibi düşünün. "Ana cadde üzerinde trafik varsa otoyolu kullan," "Otoyolda yol çalışması varsa manzaralı yoldan git" diyebilir. Programlar farklı durumlara akıllıca yanıt vermek ve kullanıcıya en iyi deneyimi sağlamak için aynı tür koşullu mantığı kullanır.  
 
-> 💡 **Gerçek dünya benzetmesi**: Kontrol akışını, size sabırla yön veren dünyanın en sabırlı GPS'i gibi düşünün. "Eğer ana yolda trafik varsa otobana git. Eğer otoban kapalıysa manzaralı yoldan git" diyebilir. Programlar tam olarak bu tür koşullu mantığı kullanarak farklı durumlara akıllıca yanıt verir ve kullanıcıya her zaman en iyi deneyimi sunar.
+### 🎯 **Kavram Sınama: Yapı Taşlarında Ustalık**  
 
-### 🎯 **Kavram Kontrolü: Temel Parçalar Ustası**
+**Temeller konusunda durum nasıl bakıyoruz:**  
+- Kendi kelimelerinizle bir değişken ile bir ifade arasındaki farkı açıklayabilir misiniz?  
+- Bir if-o halde kararını gerçek hayatta nerede kullanabileceğinizi düşünün (oy verme örneğimiz gibi)  
+- Programlama mantığı hakkında sizi şaşırtan bir şey neydi?  
 
-**Temellerde ne durumda olduğuna bakalım:**  
-- Kendi kelimelerinle bir değişken ile ifade arasındaki farkı açıklayabilir misin?  
-- Gerçek hayattan bir if-then kararı örneği düşün (örneğin oy kullanma örneğimiz gibi)  
-- Programlama mantığı hakkında seni şaşırtan bir şey nedir?
-
-**Hızlı özgüven artırıcı:**
+**Hızlı güven artırıcı:**  
 ```mermaid
 flowchart LR
     A["📝 İfadeler<br/>(Talimatlar)"] --> B["📦 Değişkenler<br/>(Depolama)"] --> C["🔀 Kontrol Akışı<br/>(Kararlar)"] --> D["🎉 Çalışan Program!"]
@@ -472,28 +471,28 @@ flowchart LR
     style B fill:#4caf50
     style C fill:#2196f3
     style D fill:#ff4081
-```
-✅ **Sırada ne var**: Bu inanılmaz yolculuğa birlikte dalmaya devam ederken bu kavramları çok daha derinlemesine keşfedeceğiz! Şu anda sadece önünüzdeki harika olanaklar için heyecanlanmaya odaklan. Spesifik beceri ve teknikler pratik yaptıkça doğal olarak oturacak – sana söz veriyorum bu düşündüğünden çok daha eğlenceli olacak!
+```  
+✅ **Sırada ne var:** Bu inanılmaz yolculuğa birlikte devam ederken bu kavramların derinlerine dalmak çok eğlenceli olacak! Şu anda, önünüzdeki tüm harika olasılıklar için heyecanınızı hissetmeye odaklanın. Özelleşmiş beceriler ve teknikler, birlikte pratik yaparken doğal şekilde yerleşecek – bu, düşündüğünüzden çok daha eğlenceli olacak, söz veriyorum!  
 
-## İşi Kolaylaştıran Araçlar
+## Ticaretin Araçları  
 
-Tamam, burası gerçekten heyecandan yerimde duramadığım yer! 🚀 Dijital bir uzay gemisinin anahtarları elinize verilmiş gibi hissettirecek inanılmaz araçlardan bahsedeceğiz.
+Tamam, burası gerçekten heyecanımı gizleyemediğim yer! 🚀 Size dijital bir uzay gemisinin anahtarlarını yeni almışsınız gibi hissettirecek inanılmaz araçlardan bahsedeceğiz.  
 
-Bir şefin elinin uzantısı gibi mükemmel dengelenmiş bıçakları olduğunu ya da bir müzisyenin dokunduğu anda şarkı söyleyen o gitarı olduğunu biliyorsunuzdur. İşte geliştiricilerin de buna benzer sihirli araçları var ve burada sizi gerçekten çok şaşırtacak olan – çoğu tamamen ücretsiz!
+Bir şefin elinin uzantısı gibi hissettiren mükemmel dengedeki bıçakları olduğunu bilirsiniz ya da bir müzisyenin ona dokunduğu anda sanki şarkı söyleyen gitarı gibi? İşte geliştiricilerin de kendi sihirli araçlarının versiyonu var ve sizi kesinlikle çok şaşırtacak bir şey – bunların çoğu tamamen ücretsiz!  
 
-Bu araçları sizinle paylaşmayı düşünürken sandalyemde zıplıyorum çünkü yazılım geliştirme şeklimizi kökten değiştirdiler. Kod yazmanıza yardımcı olan yapay zeka destekli asistanlar (şaka yapmıyorum!), Wi-Fi olan her yerden tam uygulamalar oluşturabileceğiniz bulut ortamları ve programlarınız için röntgen görüşü gibi gelişmiş hata ayıklama araçlarından bahsediyoruz.
+Bunları sizle paylaşacak olmaktan neredeyse yerimde duramıyorum çünkü yazılım geliştirme şeklimizi tamamen devrim yarattılar. Kodunuzu yazmanıza yardım eden yapay zeka destekli asistanlardan (şaka yapmıyorum!), Wi-Fi ile her yerden tüm uygulamalar inşa edebileceğiniz bulut ortamlarına ve programlarınıza röntgen vizyonu gibi detaylarla hata ayıklama araçlarına kadar bahsediyoruz.  
 
-Ve hala beni ürperten kısmı: Bunlar sizin büyüyüp bırakacağınız "başlangıç araçları" değil. Google, Netflix gibi firmalarda ve sevdiğiniz o bağımsız uygulama stüdyosunda şu anda kullanılan profesyonel seviyedeki aynı araçlar. Onları kullanırken kendinizi tam bir profesyonel gibi hissedeceksiniz!
+Ve hâlâ tüylerimi diken diken eden kısım: bunlar "yeni başlayan araçları" değil. Google, Netflix ve sevdiğiniz o bağımsız uygulama stüdyosunda geliştiricilerin tam şu anda kullandığı tam profesyonel seviyedeki araçlar. Onları kullanırken kendinizi tam bir profesyonel gibi hissedeceksiniz!  
 
 ```mermaid
 graph TD
     A["💡 Fikriniz"] --> B["⌨️ Kod Editörü<br/>(VS Code)"] 
-    B --> C["🌐 Tarayıcı Geliştirici Araçları<br/>(Test & Hata Ayıklama)"]
-    C --> D["⚡ Komut Satırı<br/>(Otomasyon & Araçlar)"]
-    D --> E["📚 Dokümantasyon<br/>(Öğrenme & Referans)"]
+    B --> C["🌐 Tarayıcı Geliştirici Araçları<br/>(Test ve Hata Ayıklama)"]
+    C --> D["⚡ Komut Satırı<br/>(Otomasyon ve Araçlar)"]
+    D --> E["📚 Dokümantasyon<br/>(Öğrenme ve Referans)"]
     E --> F["🚀 Harika Web Uygulaması!"]
     
-    B -.-> G["🤖 Yapay Zeka Asistanı<br/>(GitHub Copilot)"]
+    B -.-> G["🤖 AI Asistan<br/>(GitHub Copilot)"]
     C -.-> H["📱 Cihaz Testi<br/>(Duyarlı Tasarım)"]
     D -.-> I["📦 Paket Yöneticileri<br/>(npm, yarn)"]
     E -.-> J["👥 Topluluk<br/>(Stack Overflow)"]
@@ -504,64 +503,63 @@ graph TD
     style H fill:#f3e5f5
     style I fill:#ffccbc
     style J fill:#e8eaf6
-```
-### Kod Editörleri ve IDE’ler: Yeni Dijital En İyi Dostlarınız
+```  
+### Kod Editörleri ve IDE'ler: Yeni Dijital En İyi Arkadaşlarınız  
 
-Kod editörlerinden bahsedelim – bunlar yakında en sevdiğiniz yeni mekanlar olacak! Onları kişisel kodlama sığınağınız olarak düşünün, zamanınızın çoğunu dijital eserlerinizi oluşturup mükemmelleştirerek burada geçireceksiniz.
+Kod editörlerinden bahsedelim – bunlar ciddi anlamda yeni favori takılma yeriniz olmaya çok yakın! Onları, dijital yaratıcılığınızı şekillendirip mükemmelleştirmek için en çok zaman geçireceğiniz kişisel kodlama sığınağınız gibi düşünün.  
 
-Ama modern editörleri özel yapan şey şu: sadece şık metin editörleri değiller. 7/24 yanınızda oturan en zeki, destekleyici kodlama akıl hocanız gibiler. Hatalarınızı fark etmeden önce yakalar, sizi dahi gösteren önerilerde bulunur, her satır kodun ne yaptığını anlamanıza yardım eder ve bazen yazacaklarınızı tahmin edip cümlenizi tamamlarlar!
+Ama modern editörlerin en büyüleyici yanı şu: sadece gösterişli metin editörleri değiller. Onlar, 7/24 yanınızda oturan en parlak ve destekleyici kodlama eğitmeni gibiler. Hatalarınızı fark etmeden önce yakalarlar, sizi dahi gibi gösterecek geliştirme önerileri sunarlar, her satırın ne yaptığını anlamanıza yardım ederler ve hatta bazılarınız yazmakta olduğunuz şeyi tahmin edip düşüncelerinizi bitirmeyi teklif ederler!  
 
-Otomatik tamamlama ilk keşfettiğimde kendimi gelecekteymişim gibi hissetmiştim. Bir şeyler yazmaya başlarsınız ve editör der ki: "Hey, tam ihtiyacın olan şeyi düşünüyordun değil mi?" Kod yazarken zihin okuyucu bir arkadaşınız gibi!
+İlk otomatik tamamlama özelliğini keşfettiğim günü hatırlıyorum – gelecekte yaşıyormuşum gibi hissediyordum. Bir şey yazmaya başlıyorsun, editörün "Hey, tam ihtiyacın olan fonksiyon bu muydu?" diye soruyor. Resmen kodlama yoldaşı olarak bir zihin okuyucunuz var!  
 
-**Bu editörleri bu kadar inanılmaz yapan ne?**
+**Bu editörleri bu kadar muhteşem yapan nedir?**  
 
-Modern kod editörleri üretkenliğinizi artırmaya yönelik etkileyici özellikler sunar:
+Modern kod editörleri üretkenliğinizi artırmak için etkileyici özellikler sunar:  
 
-| Özellik | Ne Yapar | Neden İşe Yarar |
-|---------|----------|-----------------|
-| **Sözdizimi Vurgulama** | Kodun farklı parçalarını renklendirir | Kodun okunmasını ve hata tespiti kolay olur |
-| **Otomatik Tamamlama** | Yazarken kod önerir | Kodlamayı hızlandırır ve yazım hatalarını azaltır |
-| **Hata Ayıklama Araçları** | Hataları bulup düzeltmeye yardım eder | Sorun giderme süresini saatlerce kısaltır |
-| **Eklentiler** | Uzmanlaşmış özellikler ekler | Her teknolojiye göre editörü özelleştirir |
-| **Yapay Zeka Asistanları** | Kod ve açıklamalar önerir | Öğrenme ve üretkenliği hızlandırır |
+| Özellik | Yaptığı Şey | Neden Yardımcıdır |  
+|---------|-------------|-------------------|  
+| **Sözdizimi Vurgulama** | Kodunuzun farklı kısımlarını renklendirir | Kodu okumayı ve hata bulmayı kolaylaştırır |  
+| **Otomatik Tamamlama** | Yazarken kod önerir | Kodlamayı hızlandırır ve yazım hatalarını azaltır |  
+| **Hata Ayıklama Araçları** | Hataları bulup düzeltmenize yardımcı olur | Sorun giderme süresinden saatler kazandırır |  
+| **Eklentiler** | Özel özellikler ekler | Editörünüzü her teknolojiye göre özelleştirir |  
+| **Yapay Zeka Asistanları** | Kod ve açıklama önerir | Öğrenmeyi ve üretkenliği hızlandırır |  
 
-> 🎥 **Video Kaynağı**: Bu araçları eylemde görmek ister misiniz? Bu kapsamlı bakış için [Tools of the Trade videosuna](https://youtube.com/watch?v=69WJeXGBdxg) göz atın.
+> 🎥 **Video Kaynağı**: Bu araçları canlı görmeyi ister misiniz? Kapsamlı bir genel bakış için şu [Tools of the Trade video](https://youtube.com/watch?v=69WJeXGBdxg) bağlantısını inceleyin.  
 
-#### Web Geliştirme İçin Önerilen Editörler
+#### Web Geliştirme için Önerilen Editörler  
 
 **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (Ücretsiz)  
-- Web geliştiriciler arasında en popüler  
+- Web geliştiricileri arasında en popüler  
 - Mükemmel eklenti ekosistemi  
 - Yerleşik terminal ve Git entegrasyonu  
 - **Olmazsa olmaz eklentiler**:  
   - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - Yapay zeka destekli kod önerileri  
   - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Gerçek zamanlı iş birliği  
-  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Otomatik kod biçimlendirme  
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Kodunuzdaki yazım hatalarını yakalar
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Otomatik kod formatlama  
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Kodunuzdaki yazım hatalarını yakalar  
 
 **[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (Ücretli, öğrenciler için ücretsiz)  
 - Gelişmiş hata ayıklama ve test araçları  
 - Akıllı kod tamamlama  
-- Yerleşik versiyon kontrol
+- Yerleşik sürüm kontrolü  
 
-**Bulut Tabanlı IDE’ler** (Farklı fiyatlandırmalar)  
+**Bulut Tabanlı IDE'ler** (Farklı fiyatlandırmalar)  
 - [GitHub Codespaces](https://github.com/features/codespaces) - Tarayıcınızda tam VS Code  
-- [Replit](https://replit.com/) - Kod öğrenmek ve paylaşmak için harika  
-- [StackBlitz](https://stackblitz.com/) - Anında tam yığın web geliştirme
+- [Replit](https://replit.com/) - Kod öğrenme ve paylaşma için harika  
+- [StackBlitz](https://stackblitz.com/) - Anında tam yığın web geliştirme  
 
-> 💡 **Başlangıç İpucu**: Visual Studio Code ile başlayın – ücretsiz, sektörde yaygın kullanılır ve büyük bir topluluk tarafından desteklenen sayısız faydalı rehber ve eklenti bulunuyor.
+> 💡 **Başlarken İpucu**: Visual Studio Code ile başlayın – ücretsiz, sektörde yaygın kullanılıyor ve devasa bir topluluk faydalı eğitimler ve eklentiler oluşturuyor.  
 
+### Web Tarayıcıları: Gizli Geliştirme Laboratuvarınız  
 
-### Web Tarayıcıları: Gizli Geliştirme Laboratuvarınız
+Tamam, aklınız tamamen karışmaya hazır olun! Sosyal medyada gezinmek veya video izlemek için tarayıcılar kullandığınızı biliyorsunuz değil mi? Aslında bu araçlar, sizin keşfetmenizi bekleyen inanılmaz bir gizli geliştirici laboratuvarını tüm bu zaman boyunca saklıyormuş!  
 
-Tamam, aklınız başınızdan gidecek! Sosyal medyada gezinmek ve video izlemek için kullandığınız tarayıcılar aslında sizi bekleyen muazzam gizli bir geliştirici laboratuvarı saklıyormuş!
+Her defasında bir web sayfasına sağ tıklayıp "Öğeyi İncele" seçeneğini tıklıyorsunuz; işte bu, gerçekten pahalı bazı yazılımlardan çok daha güçlü olan gizli geliştirici araçlarının kapısını açıyor. Sıradan mutfağınızın gizli bir panelin ardında profesyonel bir şefin laboratuvarı olduğunu keşfetmek gibi!
+Birisi bana ilk kez tarayıcı Geliştirici Araçlarını gösterdiğinde, üç saat boyunca etrafta tıklayıp "BEKLE, ONU DA MI YAPABİLİYOR?!" diye hayret ettim. Gerçek zamanlı olarak herhangi bir web sitesini düzenleyebilir, her şeyin ne kadar hızlı yüklendiğini tam olarak görebilir, sitenizin farklı cihazlarda nasıl göründüğünü test edebilir ve hatta JavaScript’i tam bir profesyonel gibi hata ayıklayabilirsiniz. Bu kesinlikle akıl almaz!
 
-Herhangi bir sayfada sağ tıklayıp "Öğeyi incele"yi seçtiğinizde aslında yüzlerce dolar harcadığım bazı pahalı yazılımlardan daha güçlü geliştirici araçlarının olduğu gizli bir dünyayı açıyorsunuz. Bu, sıradan eski mutfağınızın arkasındaki gizli panelin profesyonel bir şefin laboratuvarına açılması gibi!
-İlk kez biri bana tarayıcı DevTools’u gösterdiğinde, yaklaşık üç saat sadece tıklayıp durdum ve "BEKLE, BU DA MI YAPIYOR?!" diye bağırıyordum. Gerçek zamanlı olarak herhangi bir web sitesini düzenleyebilir, her şeyin ne kadar hızlı yüklendiğini tam olarak görebilir, sitenizin farklı cihazlarda nasıl göründüğünü test edebilir ve hatta JavaScript’i tam bir profesyonel gibi hata ayıklayabilirsiniz. Bu tamamen akıl almaz bir şey!
+**İşte tarayıcıların senin gizli silahın olmasının nedeni:**
 
-**İşte tarayıcıların sizin gizli silahınız olmasının nedeni:**
-
-Bir web sitesi ya da web uygulaması oluşturduğunuzda, onun gerçek hayatta nasıl göründüğünü ve davrandığını görmeniz gerekir. Tarayıcılar sadece işinizi göstermekle kalmaz, aynı zamanda performans, erişilebilirlik ve olası sorunlar hakkında detaylı geri bildirim sağlar.
+Bir web sitesi veya web uygulaması oluşturduğunda, gerçek dünyada nasıl göründüğünü ve davrandığını görmen gerekir. Tarayıcılar yalnızca eserini göstermez, aynı zamanda performans, erişilebilirlik ve olası problemler hakkında ayrıntılı geri bildirim sunar.
 
 #### Tarayıcı Geliştirici Araçları (DevTools)
 
@@ -569,56 +567,57 @@ Modern tarayıcılar kapsamlı geliştirme paketleri içerir:
 
 | Araç Kategorisi | Ne Yapar | Örnek Kullanım Durumu |
 |-----------------|----------|----------------------|
-| **Element Denetleyicisi** | HTML/CSS’i gerçek zamanlı görüntüleyip düzenleme | Stil düzenleyerek anında sonuçları görme |
-| **Konsol** | Hata mesajlarını görüntüleme ve JavaScript testi | Sorunları hata ayıklama ve kod ile deneme yapma |
-| **Ağ İzleyici** | Kaynakların nasıl yüklendiğini takip etme | Performans ve yükleme sürelerini optimize etme |
-| **Erişilebilirlik Denetleyicisi** | Kapsayıcı tasarımı test etme | Sitenizin herkes için çalıştığından emin olma |
-| **Cihaz Simülatörü** | Farklı ekran boyutlarında önizleme | Çoklu cihaz olmadan duyarlı tasarımı test etme |
+| **Element Denetleyicisi** | HTML/CSS’i gerçek zamanlı görüntüle ve düzenle | Hemen sonuç görmek için stil ayarlarını değiştir |
+| **Konsol** | Hata mesajlarını gör ve JavaScript test et | Problemleri hata ayıkla ve kodla denemeler yap |
+| **Ağ İzleyicisi** | Kaynakların nasıl yüklendiğini takip et | Performansı ve yükleme sürelerini optimize et |
+| **Erişebilirlik Denetleyicisi** | Kapsayıcı tasarımı test et | Sitenin tüm kullanıcılar için çalışmasını sağla |
+| **Cihaz Simülatörü** | Farklı ekran boyutlarında önizleme yap | Çoklu cihaz kullanmadan duyarlı tasarımı test et |
 
-#### Geliştirme İçin Önerilen Tarayıcılar
+#### Geliştirme için Önerilen Tarayıcılar
 
-- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** - Kapsamlı dökümantasyonlu endüstri standardı DevTools
-- **[Firefox](https://developer.mozilla.org/docs/Tools)** - Mükemmel CSS Grid ve erişilebilirlik araçları
-- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** - Microsoft’un geliştirme kaynaklarıyla Chromium tabanlı
+- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** – Kapsamlı dokümantasyona sahip endüstri standardı DevTools
+- **[Firefox](https://developer.mozilla.org/docs/Tools)** – Mükemmel CSS Grid ve erişilebilirlik araçları
+- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** – Microsoft’un geliştirici kaynaklarıyla Chromium tabanlı
 
-> ⚠️ **Önemli Test İpucu**: Web sitelerinizi her zaman birden fazla tarayıcıda test edin! Chrome’da mükemmel çalışan bir şey Safari veya Firefox’ta farklı görünebilir. Profesyonel geliştiriciler tutarlı kullanıcı deneyimleri için tüm büyük tarayıcılarda test yapar.
+> ⚠️ **Önemli Test İpucu**: Web sitelerinizi mutlaka birden fazla tarayıcıda test edin! Chrome’da mükemmel çalışan şey Safari veya Firefox’ta farklı görünebilir. Profesyonel geliştiriciler, tutarlı kullanıcı deneyimleri sağlamak için tüm büyük tarayıcılarda test yapar.
 
-### Komut Satırı Araçları: Geliştirici Süper Güçlerine Açılan Kapınız
 
-Tamam, burada komut satırıyla ilgili tamamen dürüst bir an geçirelim çünkü bunu gerçekten anlayan birinden duymanızı istiyorum. İlk kez gördüğümde – sadece bu korkutucu, siyah ekran ve yanıp sönen metin – kelimenin tam anlamıyla düşündüm ki: "Hayır, kesinlikle hayır! Bu sanki 1980’ler hacker filmi gibi ve ben kesinlikle bunun için yeterince zeki değilim!" 😅
+### Komut Satırı Araçları: Geliştirici Süper Güçlerine Giriş Kapınız
 
-Ama keşke biri bana o zamanlar şunu söyleseydi ve şimdi size söylüyorum: komut satırı korkutucu değildir – aslında bilgisayarınızla doğrudan konuşmak gibidir. Bunu, resimlerin ve menülerin olduğu şık bir uygulama aracılığıyla yemek sipariş etmekle (ki bu kolaydır) vs. favori yerel restoranınıza gidip, aşçının tam olarak ne sevdiğinizi bilip sadece "beni harika bir şeyle şaşırt" demenizle kıyaslayın.
+Tamamen dürüst bir an yaşayalım; komut satırını gerçekten anlayan birinden bunu duymanı istiyorum. İlk gördüğümde – sadece karanlık, kırpışan metinli korkutucu bir ekran – gerçek anlamda düşündüm ki, "Hayır, kesinlikle hayır! Bu 1980’lerin hacker filmi gibi görünüyor ve kesinlikle buna yeterince akıllı değilim!" 😅
 
-Komut satırı, geliştiricilerin kendilerini tam anlamıyla büyücü gibi hissettikleri yerdir. Birkaç sihirli kelime (tamam, bunlar sadece komut ama sihirliymiş gibi hissediliyor!), enter tuşuna basarsınız ve BOOM – tam projeler oluşturur, dünyadan güçlü araçlar indirir veya uygulamanızı milyonlarca kişinin görebilmesi için internete yüklersiniz. Bu gücün tadına varınca, gerçekten bağımlılık yapıyor!
+Ama şimdi sana söylemek istediğim ve o zaman biri bana söyleseydi keşke dediğim şey şu: komut satırı korkutucu değil – aslında bilgisayarınla doğrudan konuşmak gibi. Bunu, resimli ve menülü şık bir uygulama üzerinden yemek siparişi vermen (ki bu kolay ve hoş) ile en sevdiğin yerel restorana gidip şefi tam ne sevdiğini bilen ve sadece "bana harika bir şey sürpriz yap" de diyerek mükemmel bir şey hazırlatan kişi olarak düşün.
 
-**Komut satırının favori aracınız olmasının nedenleri:**
+Komut satırı geliştiricilerin kendilerini sihirbaz gibi hissettikleri yerdir. Birkaç büyülü kelime (tamam, sadece komut ama büyülüymüş gibi hissettirir!) yazarsın, enter’a basarsın ve BAM – tüm proje yapılarını oluşturdun, dünyadan güçlü araçlar yükledin ya da uygulamanı milyonlarca kişinin görmesi için internete dağıttın. O gücün tadına bir kez varınca, açıkçası bağımlılık yapıyor!
 
-Grafiksel arayüzler birçok görev için iyidir, ancak komut satırı otomasyon, hassasiyet ve hızda ustadır. Birçok geliştirme aracı öncelikle komut satırı arayüzüyle çalışır ve onları verimli öğrenmek üretkenliğinizi dramatik şekilde artırabilir.
+**Neden komut satırı favori aracın olacak:**
+
+Grafik arayüzler birçok görev için iyidir, ancak komut satırı otomasyon, hassasiyet ve hızda üstündür. Birçok geliştirme aracı öncelikle komut satırı arayüzü ile çalışır ve bunları verimli kullanmayı öğrenmek üretkenliğini dramatik şekilde artırabilir.
 
 ```bash
-# Adım 1: Proje dizinini oluşturun ve içine gidin
+# Adım 1: Proje dizini oluşturun ve içine gidin
 mkdir my-awesome-website
 cd my-awesome-website
 ```
 
-**Bu kod ne yapıyor:**
-- Projeniz için "my-awesome-website" adlı yeni bir dizin oluşturur
-- Yeni oluşturulan dizine geçip çalışmaya başlar
+**Bu kodun yaptığı şey:**
+- Projen için "my-awesome-website" adında yeni bir dizin oluşturur
+- Çalışmaya başlamak için yeni oluşturulan dizine girer
 
 ```bash
 # Adım 2: package.json ile projeyi başlat
 npm init -y
 
-# Modern geliştirme araçlarını yükle
+# Modern geliştirme araçlarını kur
 npm install --save-dev vite prettier eslint
 npm install --save-dev @eslint/js
 ```
 
-**Adım adım olanlar:**
-- `npm init -y` ile varsayılan ayarlarla yeni bir Node.js projesi başlatılır
-- Hızlı geliştirme ve üretim yapıları için modern yapım aracı Vite kurulur
-- Otomatik kod biçimlendirme için Prettier ve kod kalitesi için ESLint eklenir
-- Bu araçlar sadece geliştirme bağımlılıkları olarak `--save-dev` bayrağı ile işaretlenir
+**Adım adım, olanlar:**
+- `npm init -y` ile varsayılan ayarlarla yeni bir Node.js projesi başlatır
+- Hızlı geliştirme ve üretim yapıları için modern bir derleme aracı olan Vite’i yükler
+- Otomatik kod biçimlendirme için Prettier ve kod kalitesi kontrolleri için ESLint ekler
+- Bunları sadece geliştirme bağımlılığı olarak işaretlemek için `--save-dev` bayrağı kullanılır
 
 ```bash
 # Adım 3: Proje yapısını ve dosyaları oluşturun
@@ -629,84 +628,85 @@ echo '<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello Wo
 npx vite
 ```
 
-**Yukarıdaki işlemlerde:**
-- Projemizi kaynak kod ve varlıklar için ayrı klasörlerle organize ettik
-- Uygun belge yapısına sahip temel bir HTML dosyası oluşturduk
-- Canlı yenileme ve sıcak modül değişimi için Vite geliştirme sunucusunu başlattık
+**Yukarıdakilerde:**
+- Projemizi kaynak kodu ve varlıklar için ayrı klasörler oluşturarak organize ettik
+- Doğru belge yapısına sahip temel bir HTML dosyası oluşturduk
+- Canlı yeniden yükleme ve sıcak modül değişimi için Vite geliştirme sunucusunu başlattık
 
-#### Web Geliştirme İçin Temel Komut Satırı Araçları
+#### Web Geliştirme için Temel Komut Satırı Araçları
 
-| Araç | Amaç | Neden Gerekiyor |
-|------|-------|-----------------|
-| **[Git](https://git-scm.com/)** | Sürüm kontrolü | Değişiklikleri takip etme, işbirliği yapma, yedeğini alma |
-| **[Node.js & npm](https://nodejs.org/)** | JavaScript çalışma zamanı ve paket yönetimi | JavaScript’i tarayıcı dışında çalıştırma, modern araçlar yükleme |
-| **[Vite](https://vitejs.dev/)** | Yapım aracı ve geliştirme sunucusu | Çok hızlı geliştirme ve sıcak modül değişimi |
-| **[ESLint](https://eslint.org/)** | Kod kalitesi | JavaScript’teki sorunları otomatik bulup düzeltme |
-| **[Prettier](https://prettier.io/)** | Kod biçimlendirme | Kodunuzu tutarlı ve okunabilir hale getirme |
+| Araç | Amacı | Neden İhtiyacın Var |
+|------|-------|---------------------|
+| **[Git](https://git-scm.com/)** | Versiyon kontrolü | Değişiklikleri takip et, başkalarıyla iş birliği yap, yedekle |
+| **[Node.js & npm](https://nodejs.org/)** | JavaScript çalışma zamanı & paket yönetimi | JavaScript’i tarayıcı dışı çalıştır, modern geliştirme araçları yükle |
+| **[Vite](https://vitejs.dev/)** | Derleme aracı & geliştirme sunucusu | Yıldırım hızında geliştirme ve sıcak modül değişimi |
+| **[ESLint](https://eslint.org/)** | Kod kalitesi | JavaScript’ndeki problemleri otomatik bul ve düzelt |
+| **[Prettier](https://prettier.io/)** | Kod biçimlendirme | Kodun tutarlı biçimlendirilmiş ve okunabilir kalsın |
 
 #### Platforma Özel Seçenekler
 
 **Windows:**
-- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Modern ve zengin özellikli terminal
-- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Güçlü betik yazma ortamı
-- **[Komut İstemi](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 - Geleneksel Windows komut satırı
+- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** – Modern, özellik zengini terminal
+- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 – Güçlü betik ortamı
+- **[Komut İstemi](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands)** 💻 – Geleneksel Windows komut satırı
 
 **macOS:**
-- **[Terminal](https://support.apple.com/guide/terminal/)** 💻 - Yerleşik terminal uygulaması
-- **[iTerm2](https://iterm2.com/)** - Gelişmiş özelliklerle zenginleştirilmiş terminal
+- **[Terminal](https://support.apple.com/guide/terminal/)** 💻 – Dahili terminal uygulaması
+- **[iTerm2](https://iterm2.com/)** – Gelişmiş özelliklere sahip yükseltilmiş terminal
 
 **Linux:**
-- **[Bash](https://www.gnu.org/software/bash/)** 💻 - Standart Linux kabuğu
-- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** - İleri seviye terminal emülatörü
+- **[Bash](https://www.gnu.org/software/bash/)** 💻 – Standart Linux kabuğu
+- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** – Gelişmiş terminal emülatörü
 
-> 💻 = İşletim sistemine ön yüklü
+> 💻 = İşletim sistemine önceden kurulmuş
 
-> 🎯 **Öğrenme Yolu**: Öncelikle `cd` (dizin değiştir), `ls` veya `dir` (dosyaları listele), `mkdir` (klasör oluştur) gibi temel komutlarla başlayın. `npm install`, `git status` ve `code .` (şu anki dizini VS Code’da açar) gibi modern iş akışı komutları üzerinde pratik yapın. Rahat geldikçe daha gelişmiş komutları ve otomasyon tekniklerini doğal olarak öğreneceksiniz.
+> 🎯 **Öğrenme Yolu**: Öncelikle `cd` (dizin değiştir), `ls` veya `dir` (dosya listele), ve `mkdir` (klasör oluştur) gibi temel komutlarla başla. `npm install`, `git status` ve `code .` (şu anki dizini VS Code’da aç) gibi modern iş akışı komutlarıyla pratik yap. Rahatlaştıkça daha karmaşık komutları ve otomasyon tekniklerini doğal olarak öğrenirsin.
 
-### Dokümantasyon: Her Zaman Yanınızda Olan Öğrenme Mentorunuz
 
-Tamam, size başlangıçta olduğunuzu hissetmenizi çok daha iyi hale getirecek küçük bir sır vereyim: En deneyimli geliştiriciler bile zamanlarının büyük bir kısmını dokümantasyon okuyarak geçirir. Ve bu, ne yaptıklarını bilmedikleri için değil – aslında bu bir bilgelik işaretidir!
+### Dokümantasyon: Her Zaman Erişilebilir Öğrenme Mentörün
 
-Dokümantasyonu, dünyanın en sabırlı, bilgili öğretmenlerine 7/24 erişiminiz olarak düşünebilirsiniz. Saat 2’de bir problemle mi takıldınız? Dokümantasyon size sıcak bir sanal kucaklama ile tam gereken cevabı verir. Herkesin konuştuğu yeni bir özellik hakkında mı öğrenmek istiyorsunuz? Dokümantasyon adım adım örneklerle yanınızdadır. Bir şeyin neden böyle çalıştığını anlamaya mı çalışıyorsunuz? Tahmin edin – dokümantasyon bunu size nihayet anlar hale getirir!
+Tamam, sana acemi olmaktan kendini çok daha iyi hissettirecek küçük bir sır vereyim: en deneyimli geliştiriciler bile zamanlarının büyük bölümünü dokümantasyon okuyarak geçirirler. Bunu ne yaptıklarını bilmedikleri için yapmazlar – aslında bu bilgelik işaretidir!
 
-Perspektifimi tamamen değiştiren bir şey: Web geliştirme dünyası inanılmaz hızlı hareket ediyor ve hiç kimse (kesinlikle kimse!) her şeyi ezberliyor değil. 15+ yıllık kıdemli geliştiricilerin bile temel sözdizimini aradığını gördüm ve biliyor musunuz? Bu utanılacak bir şey değil – bu zekice! Mükemmel hafıza olmak değil, güvenilir cevapları hızlıca nereden bulacağını bilmek ve onları nasıl uygulayacağını anlamak önemli.
+Dokümantasyonu, dünyanın en sabırlı, en bilgili öğretmenlerine 7/24 erişim gibi düşün. Saat gece 2’de bir problemle takıldın mı? Dokümantasyon sana sıcak, sanal bir kucaklama ve tam istediğin cevabı sunar. Herkesin bahsettiği harika yeni bir özellik mi öğrenmek istiyorsun? Adım adım örneklerle dokümantasyon arkanızda. Bir şeyin neden böyle çalıştığını anlamaya mı çalışıyorsun? Tahmin ettin – dokümantasyon bunu nihayet anlayacağın şekilde açıklar!
 
-**Asıl sihir burada oluyor:**
+Bana perspektifimi tamamen değiştiren bir şey var: web geliştirme dünyası inanılmaz hızlı hareket ediyor ve hiç kimse (kesinlikle hiç kimse!) her şeyi ezberlemez. 15+ yıllık deneyime sahip kıdemli geliştiricilerin temel sözdizimini aradığını gördüm ve biliyor musun? Bu utanılacak değil, akıllıcadır! Bu mükemmel hafıza meselesi değil; hızlıca güvenilir cevapları nerede bulacağını bilmek ve bunları nasıl uygulayacağını anlamaktır.
 
-Profesyonel geliştiriciler zamanlarının büyük bölümünü dokümantasyon okuyarak geçirirler – çünkü web geliştirme ortamı o kadar hızlı değişir ki güncel kalmak sürekli öğrenmeyi gerektirir. Harika dokümantasyon, sadece *nasıl* kullanılır değil, *neden* ve *ne zaman* kullanılacağını da anlamanıza yardımcı olur.
+**Gerçek sihrin olduğu yer:**
+
+Profesyonel geliştiriciler zamanlarının önemli bir kısmını dokümantasyon okuyarak geçirir – ne yaptıklarını bilmedikleri için değil, web geliştirme alanı çok hızla evrildiği için sürekli öğrenmek gerekir. Harika dokümantasyon sadece *nasıl* kullanılacağını değil, *neden* ve *ne zaman* kullanılacağını anlamana yardımcı olur.
 
 #### Temel Dokümantasyon Kaynakları
 
 **[Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web)**
-- Web teknolojileri dokümantasyonunun altın standardı
-- HTML, CSS ve JavaScript için kapsamlı kılavuzlar
-- Tarayıcı uyumluluk bilgileri içerir
+- Web teknolojisi dokümantasyonu için altın standart
+- HTML, CSS ve JavaScript için kapsamlı rehberler
+- Tarayıcı uyumluluk bilgisi içerir
 - Pratik örnekler ve etkileşimli demolar sunar
 
 **[Web.dev](https://web.dev)** (Google tarafından)
 - Modern web geliştirme en iyi uygulamaları
 - Performans optimizasyon rehberleri
-- Erişilebilirlik ve kapsayıcı tasarım prensipleri
+- Erişilebilirlik ve kapsayıcı tasarım ilkeleri
 - Gerçek dünya projelerinden vaka çalışmaları
 
 **[Microsoft Developer Documentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)**
 - Edge tarayıcı geliştirme kaynakları
-- Progresif Web Uygulama rehberleri
-- Platformlar arası geliştirme içgörüleri
+- İlerici Web Uygulaması rehberleri
+- Platformlar arası geliştirme bilgileri
 
-**[Frontend Masters Öğrenme Yolları](https://frontendmasters.com/learn/)**
+**[Frontend Masters Learning Paths](https://frontendmasters.com/learn/)**
 - Yapılandırılmış öğrenme müfredatları
-- Sektör uzmanlarından video kurslar
-- Uygulamalı kodlama egzersizleri
+- Sektör uzmanlarından video kursları
+- Uygulamalı kodlama alıştırmaları
 
-> 📚 **Çalışma Stratejisi**: Dokümantasyonu ezberlemeye çalışmayın – bunun yerine verimli gezmeyi öğrenin. Sık kullandığınız referansları yer imlerine ekleyin ve belirli bilgileri hızlı bulmak için arama fonksiyonlarını kullanarak pratik yapın.
+> 📚 **Çalışma Stratejisi**: Dokümantasyonu ezberlemeye çalışma – bunun yerine verimli gezinmeyi öğren. Sık kullanılan başvuruları yer imlerine ekle ve arama fonksiyonlarıyla hızlıca belirli bilgi bulma pratiği yap.
 
-### 🔧 **Araç Ustalığı Kontrolü: Size Ne Çarpıyor?**
+### 🔧 **Araç Ustalığı Kontrolü: Hangi Araç Sana Hitap Ediyor?**
 
-**Bir an düşünün:**
-- İlk olarak hangi aracı denemek için en çok heyecanlanıyorsunuz? (Yanlış cevap yok!)
-- Komut satırı hâlâ korkutucu mu geliyor yoksa merak mı ettiriyor?
-- Tarayıcı DevTools’u kullanarak favori web sitelerinizin perde arkasına bakmayı hayal edebiliyor musunuz?
+**Bir an durup düşün:**
+- Öncelikle hangi aracı denemek istersin? (Yanlış cevap yok!)
+- Komut satırı hala seni korkutuyor mu, yoksa merak ediyor musun?
+- Favori web sitelerinin perde arkasını görmek için tarayıcı DevTools kullanmayı hayal edebiliyor musun?
 
 ```mermaid
 pie title "Geliştiricinin Araçlarla Geçirdiği Zaman"
@@ -716,137 +716,139 @@ pie title "Geliştiricinin Araçlarla Geçirdiği Zaman"
     "Doküman Okuma" : 15
     "Hata Ayıklama" : 5
 ```
-> **Eğlenceli bir bilgi**: Çoğu geliştirici zamanlarının yaklaşık %40’ını kod editöründe geçirir, ama test etme, öğrenme ve problem çözmeye ne kadar zaman harcandığını fark edin. Programlama sadece kod yazmak değil – deneyimler yaratmaktır!
+> **Eğlenceli bir bilgi**: Çoğu geliştirici kod editöründe zamanının yaklaşık %40’ını geçirir, ama test, öğrenme ve problem çözmeye ne kadar zaman ayrıldığına dikkat et. Programlama sadece kod yazmak değil – deneyimler yaratmaktır!
 
-✅ **Düşünmek için yiyecek**: Düşünmeniz için ilginç bir şey – web siteleri oluşturmanın araçları (geliştirme) ile onların nasıl göründüğünü tasarlamanın araçları (tasarım) nasıl farklı olabilir? Bu, güzel bir ev tasarlayan bir mimar ile onu gerçekten inşa eden müteahhit arasındaki fark gibidir. İkisi de kritik, ama farklı alet kutularına ihtiyaç duyar! Bu tarz düşünme, web sitelerinin nasıl hayat bulduğunu anlamanızda büyük resmi görmenizi sağlayacak.
+✅ **Düşünmeye değer bir konu**: İnşa etme araçlarının (geliştirme) ve görünüm tasarlama araçlarının (tasarım) nasıl farklı olabileceğini düşün. Bu, güzel bir evi tasarlayan bir mimar ile evi aslında inşa eden müteahhit arasındaki fark gibidir. İkisi de çok önemli ama farklı alet kutularına ihtiyaçları var! Bu tür düşünceler, web sitelerinin nasıl hayata geçtiğini daha iyi görmene gerçekten yardımcı olur.
 
-## GitHub Copilot Agent Meydan Okuması 🚀
+## GitHub Copilot Agent Challenge 🚀
 
-Agent modunu kullanarak aşağıdaki meydan okumayı tamamlayın:
+Agent modunu kullanarak aşağıdaki meydan okumayı tamamla:
 
-**Açıklama:** Modern bir kod editörü veya IDE’nin özelliklerini keşfedin ve bir web geliştiricisi olarak iş akışınızı nasıl geliştirebileceğini gösterin.
+**Açıklama:** Modern bir kod editörü veya IDE’nin özelliklerini keşfet ve bir web geliştiricisi olarak iş akışını nasıl geliştirebileceğini göster.
 
-**İstek:** Bir kod editörü veya IDE seçin (örneğin Visual Studio Code, WebStorm veya bulut tabanlı IDE). Kod yazmayı, hata ayıklamayı veya kod bakımı yapmayı daha verimli hale getiren üç özellik veya eklenti listeleyin. Her biri için iş akışınıza sağladığı faydayı kısa açıklayın.
+**İstek:** Bir kod editörü veya IDE seç (örneğin Visual Studio Code, WebStorm veya bulut tabanlı bir IDE). Kodu daha verimli yazmana, hata ayıklamana veya sürdürmene yardımcı olan üç özellik veya uzantı listele. Her biri için iş akışına nasıl fayda sağladığını kısaca açıkla.
 
 ---
 
 ## 🚀 Meydan Okuma
 
-**Tamam, dedektif, ilk davan için hazır mısın?**
+**Tamam, dedektif, ilk vakana hazır mısın?**
 
-Artık bu harika temele sahipsin, sana programlama dünyasının ne kadar çeşitli ve heyecan verici olduğunu gösterecek bir macera hazırladım. Ve dinle – bu henüz kod yazmakla ilgili değil, yani baskı yok! Kendini çok heyecanlı ilk davanda programlama dili dedektifi gibi düşün!
+Artık bu harika temele sahip olduğuna göre, programlama dünyasının ne kadar çeşitli ve büyüleyici olduğunu görmeni sağlayacak bir maceram var. Ve dinle – bu henüz kod yazmakla ilgili değil, yani baskı yok! Kendini ilk heyecan verici vakan olan bir programlama dili dedektifi gibi düşün!
 
-**İşi, kabul edersen:**
-1. **Bir dil gezgini ol:** Tamamen farklı üç programlama dili seç – belki biri web sitesi yapar, biri mobil uygulama oluşturur, biri bilim insanları için veri işler. Aynı basit görevin her dille yazılmış örneklerini bulun. Sizi kesinlikle şaşırtacak, çünkü aynı şeyi yaparken ne kadar farklı görünebileceklerini göreceksiniz!
+**Görevini kabul edersen:**
+1. **Dil kaşifi ol**: Tamamen farklı evrenlerden üç programlama dili seç – belki biri web siteleri yapıyor, diğeri mobil uygulamalar geliştiriyor, diğeri bilim insanları için veri işliyor. Aynı basit görevin her dilde yazılmış örneklerini bul. Sana söz veriyorum, aynı işi yaparken ne kadar farklı gözüktüklerine kesinlikle şaşıracaksın!
 
-2. **Köken hikayelerini ortaya çıkar:** Her dili özel yapan ne? Şöyle güzel bir gerçek – her programlama dili birileri, “Biliyor musunuz? Bu belirli sorunu çözmenin daha iyi bir yolu olmalı” diye düşündüğü için yaratıldı. Bu sorunların neler olduğunu çözebilir misiniz? Bazıları gerçekten büyüleyici hikayeler!
+2. **Köken hikayelerini keşfet**: Her dili özel kılan nedir? İşte harika bir gerçek – her programlama dili, biri "Biliyor musun? Bu özel sorunu çözmek için daha iyi bir yol var" diye düşündüğü için yaratıldı. Bu sorunların ne olduğunu bulabilir misin? Bazı hikayeler gerçekten büyüleyici!
 
-3. **Topluluklarla tanış:** Her dilin topluluğu ne kadar samimi ve tutkulu? Bazılarının milyonlarca geliştirici bilgi paylaşıyor ve yardım ediyor, bazıları küçük ama çok sıkı ve destekleyici. Bu farklı kişilikleri görmek çok keyifli olacak!
+3. **Topluluklarla tanış**: Her dilin topluluğunun ne kadar misafirperver ve tutkulu olduğunu kontrol et. Bazılarının milyonlarca geliştirici bilgiyi paylaşıyor ve birbirine destek oluyor, diğerleri daha küçük ama inanılmaz samimi ve destekleyici. Bu toplulukların farklı kişiliklerini görmek çok hoşuna gidecek!
 
-4. **İçgüdülerinize güven:** Şu anda hangi dil size en erişilebilir görünüyor? “Mükemmel” seçimi yapmaya çalışmayın – sadece sezgilerinizi dinleyin! Burada yanlış cevap yok, istediğiniz zaman başka dilleri de keşfedebilirsiniz.
+4. **İçgüdülerini dinle**: Şu anda sana en yakın gelen dil hangisi? “Mükemmel” kararı vermek için stres yapma – sadece içgüdülerini dinle! Burada yanlış cevap yok ve her zaman diğerlerini sonra keşfedebilirsin.
 
-**Bonus dedektif çalışması:** Her dil ile hangi büyük web sitelerinin veya uygulamaların yapıldığını keşfedebilir misiniz? Instagram, Netflix veya hiç durmadan oynadığınız o mobil oyunun hangi dil(ler)le yapıldığını öğrenince kesinlikle şaşıracaksınız!
+**Bonus dedektif işi**: Her dil ile hangi büyük web siteleri ya da uygulamaların yapıldığını bulabilir misin? Instagram, Netflix veya bırakamadığın o mobil oyunun hangi dille yapıldığını öğrendiğinde şok olacağına garanti veriyorum!
 
-> 💡 **Unutmayın**: Bugün bu dillerin uzmanı olmaya çalışmıyorsunuz. Sadece mahalleyi tanıyorsunuz, nerede yerleşeceğinize karar vermeden önce. Acele etmeyin, eğlenin ve merakınıza izin verin!
+> 💡 **Unutma**: Bugün bu dillerde uzman olmaya çalışmıyorsun. Sadece hangi mahallede yaşamak istediğine karar vermeden önce çevreyi tanıyorsun. Zamanını al, keyif al ve merakını rehber edin!
 
-## Keşfettiklerinizi Kutlayalım!
+## Keşfettiklerini Kutlayalım!
 
-Vay be, bugün inanılmaz çok bilgi absorbe ettiniz! Gerçekten bu muhteşem yolculuktan ne kadar şey öğrenmiş olduğunuzu görmek için heyecanlıyım. Ve unutmayın – bu her şeyi tamamen doğru yapmak zorunda olduğunuz bir test değil. Bu, dalmaya hazır olduğunuz bu büyüleyici dünya hakkında öğrendiğiniz tüm harika şeyleri kutlamak gibi!
+Vay canına, bugün inanılmaz çok bilgi edindin! Bu muhteşem yolculuktan ne kadarının aklına kazındığını samimiyetle görmek için sabırsızlanıyorum. Ve unutma – bu her şeyi mükemmel yapman gereken bir sınav değil. Bu, dalmaya hazırlandığın bu büyüleyici dünyayla ilgili öğrendiğin tüm harika şeylerin kutlaması!
 
-[Ders sonrası sınava katılın](https://ff-quizzes.netlify.app/web/)
+[Ders sonrası sınavı çöz](https://ff-quizzes.netlify.app/web/)
 
-## Gözden Geçirme ve Kendi Kendine Çalışma
+## Gözden Geçirme & Kendi Kendine Çalışma
 
-**Keşfetmek için zaman ayırın ve eğlenin!**
-Bugün çok şey öğrendiniz ve bu gurur duyulacak bir şey! Şimdi eğlenceli kısım geliyor – merakınızı tetikleyen konuları keşfetmek. Unutmayın, bu ödev değil – bu bir macera!
+**Kendi hızında keşfet ve keyfini çıkar!**
+Bugün çok yol kat ettiniz ve bu gurur duyulacak bir şey! Şimdi eğlenceli kısmı geliyor – merakınızı tetikleyen konuları keşfetmek. Unutmayın, bu ödev değil – bu bir macera!
 
-**İlginizi çeken konulara derinlemesine dalın:**
+**Sizi heyecanlandıran konulara daha derin dalın:**
 
-**Programlama dilleriyle pratiğe başlayın:**
-- Dikkatinizi çeken 2-3 dilin resmi web sitelerini ziyaret edin. Her birinin kendine özgü bir kişiliği ve hikayesi var!
-- [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) veya [Replit](https://replit.com/) gibi çevrimiçi kod yazma ortamlarını deneyin. Denemekten çekinmeyin – hiçbir şeyi bozamazsınız!
-- Sevdiğiniz dilin nasıl ortaya çıktığını okuyun. Cidden, bazı başlangıç hikayeleri çok ilginç ve dillerin neden böyle çalıştığını anlamanıza yardımcı olacak.
+**Programlama dilleriyle pratik yapın:**
+- Dikkatinizi çeken 2-3 dilin resmi web sitelerini ziyaret edin. Her birinin kendine özgü kişiliği ve hikayesi vardır!
+- [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) veya [Replit](https://replit.com/) gibi çevrimiçi kod oyun alanlarında deney yapın. Denemekten çekinmeyin – hiçbir şeyi bozamazsınız!
+- Favori dilinizin nasıl ortaya çıktığını okuyun. Cidden, bazı başlangıç hikayeleri çok ilgi çekici ve dillerin nasıl çalıştığını anlamanıza yardımcı olacak.
 
 **Yeni araçlarınıza alışın:**
-- Eğer indirip kurmadıysanız Visual Studio Code'u indirin – ücretsizdir ve çok seveceksiniz!
-- Uzantılar pazaryerinde birkaç dakika gezin. Burası kod editörünüz için bir uygulama mağazası gibi!
-- Tarayıcınızın Geliştirici Araçlarını açın ve etrafa tıklayın. Her şeyi anlamaya çalışmayın – orada neler olduğunu keşfedin.
+- Henüz indirmediyseniz Visual Studio Code’u indirin – ücretsizdir ve bayılacaksınız!
+- Uzantılar pazarını birkaç dakika gözden geçirin. Kendi kod editörünüz için bir uygulama mağazası gibi!
+- Tarayıcınızın Geliştirici Araçlarını açın ve sadece tıklayın. Her şeyi anlamaya çalışmayın – orada neler olduğunu tanımaya başlayın.
 
 **Topluluğa katılın:**
-- [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) veya [GitHub](https://github.com/) gibi geliştirici topluluklarını takip edin. Programlama topluluğu yeni başlayanlara inanılmaz derecede dostça yaklaşır!
-- YouTube’da yeni başlayanlara yönelik kodlama videoları izleyin. Başlayanların nasıl hissettiğini bilen çok harika yaratıcılar var.
-- Yerel buluşmalara veya çevrimiçi topluluklara katılmayı düşünün. İnanın bana, geliştiriciler yeni başlayanlara yardım etmeyi çok sever!
+- [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) veya [GitHub](https://github.com/) gibi geliştirici topluluklarını takip edin. Programlama topluluğu yeni başlayanlara inanılmaz derecede hoşgörülüdür!
+- YouTube’da yeni başlayanlara yönelik kodlama videoları izleyin. Orada başlangıçta olmanın nasıl bir şey olduğunuzu bilen harika içerik üreticileri var.
+- Yerel buluşmalara veya çevrimiçi topluluklara katılmayı düşünün. Güvenin bana, geliştiriciler yeni başlayanlara yardım etmeyi çok sever!
 
-> 🎯 **Dinle, aklında tutman gereken şudur**: Bir anda kodlama büyücüsü olman beklenmiyor! Şu anda sadece bu harika yeni dünyayı tanımaya başlıyorsun. Acele etme, yolculuğun tadını çıkar, ve unutma – hayran olduğun her geliştirici bir zamanlar tam senin şu an bulunduğun yerde oturuyor, heyecanlı ve belki biraz da şaşkın hissediyordu. Bu tamamen normal ve doğru bir yoldasın!
+> 🎯 **Dinleyin, işte hatırlamanızı istediğim şey:** Bir gecede kodlama sihirbazı olmanızı beklemiyoruz! Şu an burada, dahil olacağınız bu muhteşem yeni dünyayı tanımaya başlıyorsunuz. Acele etmeyin, yolculuğun tadını çıkarın ve unutmayın – hayran olduğunuz her bir geliştirici bir zamanlar tam olarak sizin oturduğunuz yerdeydi, heyecanlı ve belki biraz da bunalmış hissediyordu. Bu tamamen normal ve doğru yolda olduğunuzun işaretidir!
+
+
 
 ## Ödev
 
-[Reading the Docs](assignment.md)
+[Belgelere Bakmak](assignment.md)
 
-> 💡 **Ödevin için küçük bir teşvik**: Henüz keşfetmediğimiz bazı araçları senin araştırmanı çok isterim! Daha önce konuştuğumuz editörler, tarayıcılar ve komut satırı araçlarını atla – dışarıda keşfedilmeyi bekleyen inanılmaz bir geliştirme aracı evreni var. Aktif geliştirilen ve canlı, yardımsever topluluklara sahip olanları ara (bu tür araçlar genellikle en iyi öğreticilere ve takıldığında destek olabilecek en dost canlısı insanlara sahiptir).
+> 💡 **Ödeviniz için küçük bir teşvik:** Henüz keşfetmediğimiz bazı araçları keşfetmenizi çok isterim! Zaten konuştuğumuz editörleri, tarayıcıları ve komut satırı araçlarını atlayın – keşfedilmeyi bekleyen muazzam bir gelişim araçları evreni var. Aktif olarak güncellenen ve canlı, yardımcı topluluklara sahip olanları arayın (bu araçların en iyi öğreticilere ve takıldığınızda yardım edecek en destekleyici insanlara sahip olma eğilimi vardır).
 
 ---
 
-## 🚀 Programlama Yolculuğun Zaman Çizelgesi
+## 🚀 Programlama Yolculuğunuzun Zaman Çizelgesi
 
-### ⚡ **Önümüzdeki 5 Dakikada Yapabileceklerin**
-- [ ] İlginizi çeken 2-3 programlama dili web sitesini yer işareti olarak kaydedin
-- [ ] Henüz indirmediysen Visual Studio Code'u indirin
-- [ ] Tarayıcınızın Geliştirici Araçlarını (F12) açıp herhangi bir web sitesinde tıklayın
+### ⚡ **Önümüzdeki 5 Dakikada Yapabilecekleriniz**
+- [ ] Dikkatinizi çeken 2-3 programlama dili web sitesini işaretleyin
+- [ ] Henüz yapmadıysanız Visual Studio Code’u indirin
+- [ ] Tarayıcınızın Geliştirici Araçlarını (F12) açın ve herhangi bir sitede tıklayın
 - [ ] Bir programlama topluluğuna katılın (Dev.to, Reddit r/webdev veya Stack Overflow)
 
-### ⏰ **Bu Saatte Başarabileceklerin**
-- [ ] Dersten sonra ki quiz’i tamamlayın ve cevaplarınızı değerlendirin
-- [ ] VS Code'u GitHub Copilot uzantısıyla kurun
-- [ ] Çevrimiçi olarak 2 farklı programlama dilinde "Hello World" örneği yapın
+### ⏰ **Bu Saatte Başarabilecekleriniz**
+- [ ] Ders sonrası quizini tamamlayın ve cevaplarınızı değerlendirin
+- [ ] GitHub Copilot uzantısı ile VS Code’u kurun
+- [ ] Çevrimiçi olarak 2 farklı programlama dilinde "Hello World" örneği deneyin
 - [ ] YouTube’da "Bir Geliştiricinin Günü" videosu izleyin
-- [ ] Programlama dili dedektifliğine başlayın (zorluktan)
+- [ ] Programlama dili dedektiflik çalışmalarınıza başlayın (zorluktan)
 
 ### 📅 **Haftalık Maceranız**
-- [ ] Ödevi tamamlayın ve 3 yeni geliştirme aracını keşfedin
-- [ ] Sosyal medyada 5 geliştirici veya programlama hesabını takip edin
-- [ ] CodePen veya Replit’te küçük bir şey inşa etmeyi deneyin (hatta sadece "Merhaba, [Adınız]!" bile olabilir!)
+- [ ] Ödevinizi tamamlayın ve 3 yeni geliştirme aracını keşfedin
+- [ ] Sosyal medyada 5 geliştiriciyi veya programlama hesabını takip edin
+- [ ] CodePen veya Replit’te küçük bir şey inşa etmeyi deneyin (hatta sadece "Merhaba, [Adınız]!")
 - [ ] Bir geliştiricinin kodlama yolculuğu hakkında bir blog yazısı okuyun
 - [ ] Sanal bir buluşmaya katılın veya bir programlama konuşması izleyin
 - [ ] Seçtiğiniz dili çevrimiçi eğitimlerle öğrenmeye başlayın
 
 ### 🗓️ **Aylık Dönüşümünüz**
-- [ ] İlk küçük projenizi oluşturun (basit bir web sayfası bile geçerli!)
-- [ ] Açık kaynak bir projeye katkıda bulunun (önce dokümantasyon düzeltmeleriyle başlayın)
-- [ ] Programlamaya yeni başlayan birine mentorluk yapın
-- [ ] Geliştirici portföy web sitenizi oluşturun
+- [ ] İlk küçük projenizi oluşturun (basit bir web sayfası bile sayılır!)
+- [ ] Açık kaynak bir projeye katkıda bulunun (önce belge düzeltmeleriyle başlayın)
+- [ ] Programlama yolculuğuna yeni başlayan birine rehberlik edin
+- [ ] Kendi geliştirici portföy web sitenizi oluşturun
 - [ ] Yerel geliştirici toplulukları veya çalışma gruplarıyla bağlantı kurun
-- [ ] Sonraki öğrenme aşamanızı planlamaya başlayın
+- [ ] Bir sonraki öğrenme hedefinizi planlamaya başlayın
 
 ### 🎯 **Son Yansıma Kontrolü**
 
 **İlerlemeden önce bir an durup kutlayın:**
-- Bugün programlama hakkında sizi heyecanlandıran neydi?
-- Hangi araç ya da kavramı önce keşfetmek istiyorsunuz?
-- Bu programlama yolculuğuna başlamayı nasıl hissediyorsunuz?
-- Şu anda bir geliştiriciye sormak istediğiniz bir soru var mı?
+- Bugün programlamayla ilgili sizi heyecanlandıran bir şey neydi?
+- Önce hangi araç ya da kavramı keşfetmek istiyorsunuz?
+- Bu programlama yolculuğuna başlamak hakkında nasıl hissediyorsunuz?
+- Şu anda bir geliştiriciye sormak istediğiniz bir soru nedir?
 
 ```mermaid
 journey
-    title Kendine Güven İnşa Etme Yolculuğunuz
+    title Güveninizi Artırma Yolculuğunuz
     section Bugün
       Meraklı: 3: You
       Bunalmış: 4: You
       Heyecanlı: 5: You
     section Bu Hafta
-      Keşfediyor: 4: You
-      Öğreniyor: 5: You
-      Bağlanıyor: 4: You
+      Keşfetme: 4: You
+      Öğrenme: 5: You
+      Bağlantı Kurma: 4: You
     section Gelecek Ay
-      İnşa Ediyor: 5: You
+      İnşa Etme: 5: You
       Kendinden Emin: 5: You
-      Başkalarına Yardım Ediyor: 5: You
+      Başkalarına Yardım Etme: 5: You
 ```
-> 🌟 **Unutmayın**: Her uzman bir zamanlar acemiydi. Her kıdemli geliştirici tam sizin şu an hissettiğiniz gibi – heyecanlı, belki biraz şaşkın ve kesinlikle mümkün olanlara meraklıydı. Harika bir topluluğun içindesiniz ve bu yolculuk inanılmaz olacak. Programlama dünyasına hoş geldiniz! 🎉
+> 🌟 **Unutmayın**: Her uzman bir zamanlar acemiydi. Her kıdemli geliştirici tam şu anda olduğunuz gibi heyecanlı, belki biraz bunalmış ve kesinlikle mümkün olanlar hakkında meraklı hissediyordu. Harika bir topluluktasınız ve bu yolculuk inanılmaz olacak. Programlamanın harika dünyasına hoş geldiniz! 🎉
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğa özen göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Önemli bilgiler için profesyonel insan çevirisi önerilmektedir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi diliyle yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek herhangi bir yanlış anlama veya yanlış yorumdan dolayı sorumluluk kabul edilmemektedir.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
