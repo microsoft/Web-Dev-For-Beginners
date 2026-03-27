@@ -2,27 +2,27 @@
 
 ## Prehľad projektu
 
-Toto je vzdelávacia učebná osnova na výučbu základov webového vývoja pre začiatočníkov. Učebná osnova je komplexný 12-týždňový kurz vyvinutý Microsoft Cloud Advocates, obsahujúci 24 praktických lekcií pokrývajúcich JavaScript, CSS a HTML.
+Toto je edukačné úložisko kurikula určené na výučbu základov webového vývoja pre začiatočníkov. Kurikulum je komplexný 12-týždňový kurz vyvinutý Microsoft Cloud Advocates, zahŕňajúci 24 praktických lekcií pokrývajúcich JavaScript, CSS a HTML.
 
-### Kľúčové komponenty
+### Hlavné komponenty
 
-- **Vzdelávací obsah**: 24 štruktúrovaných lekcií organizovaných do projektovo orientovaných modulov
-- **Praktické projekty**: Terrárium, Hra na písanie, Rozšírenie prehliadača, Hra v priestore, Banková aplikácia, Kódovací editor a AI Chat asistent
-- **Interaktívne kvízy**: 48 kvízov s 3 otázkami v každom (pred a po lekcii)
-- **Podpora viacerých jazykov**: Automatizované preklady do viac než 50 jazykov prostredníctvom GitHub Actions
+- **Edukačný obsah**: 24 štruktúrovaných lekcií organizovaných do modulov založených na projektoch
+- **Praktické projekty**: Terrárium, Hra na písanie, Rozšírenie prehliadača, Vesmírna hra, Banková aplikácia, Kódový editor a AI Chat asistent
+- **Interaktívne kvízy**: 48 kvízov so 3 otázkami každý (pred a po lekcii)
+- **Viacjazyčná podpora**: Automatické preklady do 50+ jazykov pomocou GitHub Actions
 - **Technológie**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (pre AI projekty)
 
 ### Architektúra
 
-- Vzdelávacie úložisko so štruktúrou založenou na lekciách
-- Každá zložka lekcie obsahuje README, príklady kódu a riešenia
-- Samostatné projekty v samostatných adresároch (quiz-app, rôzne lekčné projekty)
+- Edukačné úložisko so štruktúrou založenou na lekciách
+- Každá lekcia obsahuje README, ukážky kódu a riešenia
+- Samostatné projekty v oddelených adresároch (quiz-app, rôzne lekčné projekty)
 - Prekladový systém využívajúci GitHub Actions (co-op-translator)
-- Dokumentácia poskytovaná cez Docsify a dostupná ako PDF
+- Dokumentácia poskytovaná cez Docsify a dostupná aj vo formáte PDF
 
 ## Príkazy na nastavenie
 
-Toto úložisko je primárne na konzumáciu vzdelávacieho obsahu. Pre prácu s konkrétnymi projektmi:
+Toto úložisko je primárne určené na štúdium edukačného obsahu. Pre prácu so špecifickými projektmi:
 
 ### Nastavenie hlavného úložiska
 
@@ -31,24 +31,24 @@ git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Nastavenie quiz aplikácie (Vue 3 + Vite)
+### Nastavenie Quiz App (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
 npm run dev        # Spustiť vývojový server
-npm run build      # Vytvoriť zostavu pre produkciu
+npm run build      # Vytvoriť produkčnú verziu
 npm run lint       # Spustiť ESLint
 ```
 
-### API banka projekt (Node.js + Express)
+### Bankový projekt API (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
 npm install
 npm start          # Spustiť API server
 npm run lint       # Spustiť ESLint
-npm run format     # Formátovať pomocou Prettier
+npm run format     # Naformátovať pomocou Prettier
 ```
 
 ### Projekty rozšírení prehliadača
@@ -59,7 +59,7 @@ npm install
 # Postupujte podľa pokynov na načítanie rozšírení špecifických pre prehliadač
 ```
 
-### Projekty hry v priestore
+### Projekty vesmírnej hry
 
 ```bash
 cd 6-space-game/solution
@@ -67,7 +67,7 @@ npm install
 # Otvorte index.html v prehliadači alebo použite Live Server
 ```
 
-### Chat projekt (Python Backend)
+### Chat projekt (Python backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -76,37 +76,37 @@ pip install openai
 python api.py
 ```
 
-## Vývojový workflow
+## Vývojový pracovný tok
 
 ### Pre prispievateľov obsahu
 
-1. **Forknite úložisko** do svojho GitHub účtu
+1. **Vytvorte fork úložiska** na svoj GitHub účet
 2. **Naklonujte svoj fork** lokálne
-3. **Vytvorte nový branch** pre svoje zmeny
-4. Upravujte obsah lekcií alebo príklady kódu
-5. Testujte akékoľvek kódové zmeny v príslušných projektových adresároch
-6. Podajte pull requesty podľa smerníc pre prispievanie
+3. **Vytvorte novú vetvu** pre svoje zmeny
+4. Upraviť obsah lekcií alebo ukážky kódu
+5. Otestujte zmeny kódu v relevantných projektových adresároch
+6. Odoslať pull requesty podľa pravidiel prispievania
 
 ### Pre študentov
 
-1. Forknite alebo naklonujte úložisko
-2. Postupujte sekvenčne do adresárov lekcií
+1. Forknite alebo klonujte úložisko
+2. Postupujte sekvenčne adresáre s lekciami
 3. Čítajte README súbory ku každej lekcii
-4. Vyplňte predlekčné kvízy na https://ff-quizzes.netlify.app/web/
-5. Pracujte na príkladoch v adresároch lekcií
-6. Dokončite úlohy a výzvy
-7. Vyplňte post-lekčné kvízy
+4. Vykonajte predlekcné kvízy na https://ff-quizzes.netlify.app/web/
+5. Prejdite si kódové ukážky vo vnútri lekčných adresárov
+6. Splňte zadania a výzvy
+7. Vykonajte po lekcii kvízy
 
-### Živý vývoj
+### Live vývoj
 
 - **Dokumentácia**: Spustite `docsify serve` v koreňovom adresári (port 3000)
-- **Quiz aplikácia**: Spustite `npm run dev` v adresári quiz-app
-- **Projekty**: Použite VS Code Live Server rozšírenie pre HTML projekty
-- **API projekty**: Spustite `npm start` v príslušných API adresároch
+- **Quiz App**: Spustite `npm run dev` v adresári quiz-app
+- **Projekty**: Použite VS Code rozšírenie Live Server pre HTML projekty
+- **API projekty**: Spustite `npm start` v príslušných adresároch API
 
-## Testovacie pokyny
+## Inštrukcie na testovanie
 
-### Testovanie quiz aplikácie
+### Testovanie Quiz App
 
 ```bash
 cd quiz-app
@@ -114,78 +114,78 @@ npm run lint       # Skontrolujte problémy so štýlom kódu
 npm run build      # Overte úspešnosť zostavenia
 ```
 
-### Testovanie bankového API
+### Testovanie Bank API
 
 ```bash
 cd 7-bank-project/api
 npm run lint       # Skontrolujte problémy so štýlom kódu
-node server.js     # Overte, či server štartuje bez chýb
+node server.js     # Overte, či sa server spustí bez chýb
 ```
 
-### Všeobecný prístup k testovaniu
+### Všeobecný testovací postup
 
-- Toto je vzdelávacie úložisko bez komplexných automatizovaných testov
+- Ide o edukačné úložisko bez komplexných automatizovaných testov
 - Manuálne testovanie sa zameriava na:
-  - Spustenie príkladov kódu bez chýb
-  - Funkčnosť odkazov v dokumentácii
-  - Úspešné zostavenie projektov
-  - Dodržiavanie najlepších praktík v príkladoch
+  - Kódové ukážky sa spúšťajú bez chybných hlásení
+  - Odkazy v dokumentácii fungujú správne
+  - Projekty sa úspešne zostavujú
+  - Ukážky dodržiavajú osvedčené postupy
 
-### Kontroly pred zaslaním PR
+### Kontroly pred odoslaním
 
-- Spustite `npm run lint` v adresároch s package.json
-- Overte platnosť markdown odkazov
-- Otestujte príklady kódu v prehliadači alebo Node.js
+- Spustite `npm run lint` v adresároch, kde je package.json
+- Overte, že markdown odkazy sú platné
+- Otestujte ukážky kódu v prehliadači alebo Node.js
 - Skontrolujte, či preklady zachovávajú správnu štruktúru
 
-## Návody na štýl kódu
+## Pravidlá štýlu kódu
 
 ### JavaScript
 
-- Používajte modernú ES6+ syntax
-- Dodržiavajte štandardné ESLint konfigurácie poskytnuté v projektoch
-- Používajte významné mená premenných a funkcií pre vzdelávaciu jasnosť
+- Používajte moderný ES6+ syntax
+- Dodržiavajte štandardné ESLint konfigurácie definované v projektoch
+- Používajte zrozumiteľné názvy premenných a funkcií pre lepšie pochopenie
 - Pridávajte komentáre vysvetľujúce koncepty pre študentov
-- Formátujte pomocou Prettier tam, kde je nastavený
+- Formátujte kód pomocou Prettier tam, kde je nastavený
 
 ### HTML/CSS
 
-- Sémantické HTML5 elementy
-- Zásady responzívneho dizajnu
-- Jasné pomenovanie tried
+- Používajte sémantické HTML5 prvky
+- Dodržiavajte princípy responzívneho dizajnu
+- Jasné pomenovanie CSS tried
 - Komentáre vysvetľujúce CSS techniky pre študentov
 
 ### Python
 
-- Štýlové smernice PEP 8
-- Jasné, vzdelávacie príklady kódu
-- Používanie typových anotácií tam, kde pomáhajú výučbe
+- Dodržiavajte štandard PEP 8
+- Jasné, edukačné ukážky kódu
+- Používajte typové anotácie tam, kde sú užitočné pre učenie
 
 ### Markdown dokumentácia
 
 - Jasná hierarchia nadpisov
-- Kódové bloky so špecifikáciou jazyka
+- Bloky kódu so špecifikáciou jazyka
 - Odkazy na ďalšie zdroje
-- Snímky obrazovky a obrázky v `images/` adresároch
-- Alternatívny text pre obrázky na prístupnosť
+- Screenshoty a obrázky v adresároch `images/`
+- Alt text pre obrázky pre zlepšenie prístupnosti
 
 ### Organizácia súborov
 
-- Lekcie číslované sekvenčne (1-getting-started-lessons, 2-js-basics a pod.)
-- Každý projekt má `solution/` a často `start/` alebo `your-work/` adresáre
-- Obrázky uložené v špecifických `images/` priečinkoch lekcií
-- Preklady v štruktúre `translations/{language-code}/`
+- Lekcie číslované postupne (1-getting-started-lessons, 2-js-basics atď.)
+- Každý projekt má adresáre `solution/` a často aj `start/` alebo `your-work/`
+- Obrázky uložené v lekciových `images/` zložkách
+- Preklady v štruktúre `translations/{jazykový-kód}/`
 
-## Zostavenie a nasadenie
+## Sestavenie a nasadenie
 
-### Nasadenie quiz aplikácie (Azure Static Web Apps)
+### Nasadenie Quiz App (Azure Static Web Apps)
 
-Quiz-app je nakonfigurovaný pre nasadenie na Azure Static Web Apps:
+Quiz-app je nakonfigurovaná pre nasadenie na Azure Static Web Apps:
 
 ```bash
 cd quiz-app
 npm run build      # Vytvára priečinok dist/
-# Nasadzuje pomocou workflow GitHub Actions pri pushnutí do main
+# Nasadzuje cez workflow GitHub Actions pri pushi do main
 ```
 
 Konfigurácia Azure Static Web Apps:
@@ -200,83 +200,83 @@ npm install                    # Nainštalujte docsify-to-pdf
 npm run convert               # Vygenerujte PDF z docs
 ```
 
-### Docsify dokumentácia
+### Dokumentácia cez Docsify
 
 ```bash
 npm install -g docsify-cli    # Nainštalujte Docsify globálne
 docsify serve                 # Spustiť na localhost:3000
 ```
 
-### Zostavenie špecifické pre projekt
+### Špecifické zostavenia projektov
 
-Každý projektový adresár môže mať vlastný proces zostavenia:
-- Vue projekty: `npm run build` vytvára produkčné balíčky
-- Statické projekty: Žiadny build krok, súbory sa poskytujú priamo
+Každý projektový adresár môže mať vlastný build proces:
+- Vue projekty: `npm run build` vytvára produkčné balíky
+- Statické projekty: Bez build kroku, súbory servované priamo
 
-## Smernice pre pull requesty
+## Pravidlá pre pull requesty
 
-### Formát názvu
+### Formát nadpisu
 
-Používajte jasné, popisné názvy označujúce oblasť zmeny:
+Používajte jasné, popisné názvy vyjadrujúce oblasť zmeny:
 - `[Quiz-app] Pridanie nového kvízu pre lekciu X`
-- `[Lesson-3] Oprava preklepu v projekte terrarium`
+- `[Lesson-3] Oprava preklepu v projekte terrárium`
 - `[Translation] Pridanie španielskeho prekladu pre lekciu 5`
 - `[Docs] Aktualizácia inštrukcií na nastavenie`
 
-### Povinné kontroly
+### Požadované kontroly
 
 Pred odoslaním PR:
 
 1. **Kvalita kódu**:
-   - Spustite `npm run lint` v ovplyvnených projektových adresároch
-   - Opravte všetky chyby a varovania lintera
+   - Spustite `npm run lint` v dotknutých projektových adresároch
+   - Opravte všetky linting chyby a varovania
 
-2. **Overenie build-u**:
+2. **Overenie buildu**:
    - Spustite `npm run build`, ak je to relevantné
-   - Uistite sa, že nie sú žiadne chyby zostavenia
+   - Uistite sa, že nie sú chyby v build procese
 
 3. **Validácia odkazov**:
    - Otestujte všetky markdown odkazy
-   - Overte fungovanie referencií na obrázky
+   - Overte správne fungovanie odkazov na obrázky
 
 4. **Kontrola obsahu**:
    - Korektúra pravopisu a gramatiky
-   - Overenie správnosti a vzdelávacieho aspektu príkladov kódu
-   - Kontrola, či preklady zachovávajú pôvodný význam
+   - Overenie správnosti a edukačnej hodnoty kódových príkladov
+   - Overenie, že preklady zachovávajú pôvodný význam
 
-### Požiadavky na príspevok
+### Požiadavky na prispievateľov
 
-- Súhlas so zmluvou Microsoft CLA (automatická kontrola pri prvom PR)
-- Dodržiavanie [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- Viac detailov v [CONTRIBUTING.md](./CONTRIBUTING.md)
-- Referencia na čísla issue v popise PR, ak je to relevantné
+- Súhlas s Microsoft CLA (automatická kontrola pri prvom PR)
+- Dodržiavať [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- Viac info v [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Uvádzať čísla issues v popise PR, ak sa to týka
 
-### Proces preskúmania
+### Proces revízie
 
-- PR prehliadajú správci a komunita
-- Prioritou je vzdelávacia zrozumiteľnosť
-- Príklady kódu by mali dodržiavať súčasné najlepšie praktiky
-- Preklady sú preskúmavané na presnosť a kultúrnu vhodnosť
+- PR prehliadajú správcovia a komunita
+- Priorita je edukačná zrozumiteľnosť
+- Kódové príklady by mali dodržiavať aktuálne osvedčené postupy
+- Preklady sa kontrolujú z hľadiska presnosti a kultúrnej vhodnosti
 
 ## Prekladový systém
 
 ### Automatizovaný preklad
 
-- Používa GitHub Actions so workflow co-op-translator
-- Prekladá do viac než 50 jazykov automaticky
-- Zdrojové súbory sú v hlavných adresároch
-- Preložené súbory sú v `translations/{language-code}/` adresároch
+- Využíva GitHub Actions so workflow co-op-translator
+- Automaticky prekladá do 50+ jazykov
+- Zdrojové súbory v hlavných adresároch
+- Preložené súbory v `translations/{jazykový-kód}/`
 
-### Pridávanie manuálnych zlepšení prekladu
+### Pridávanie manuálnych vylepšení prekladu
 
-1. Nájdite súbor v `translations/{language-code}/`
-2. Zlepšite obsah pri zachovaní štruktúry
-3. Zabezpečte, že príklady kódu zostanú funkčné
-4. Otestujte lokalizovaný obsah kvízov
+1. Nájdite súbor v `translations/{jazykový-kód}/`
+2. Vykonajte úpravy pri zachovaní štruktúry
+3. Uistite sa, že kódové príklady zostávajú funkčné
+4. Otestujte lokalizovaný obsah kvízu
 
 ### Metadata prekladu
 
-Preložené súbory obsahujú hlavičku s metadátami:
+Preložené súbory obsahujú hlavičku metadata:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -293,100 +293,100 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Bežné problémy
 
-**Quiz aplikácia sa nespustí**:
-- Skontrolujte verziu Node.js (odporúča sa v14+)
-- Vymažte `node_modules` a `package-lock.json`, znovu spustite `npm install`
-- Overte konflikty portov (predvolené: Vite používa port 5173)
+**Quiz app sa nespúšťa**:
+- Skontrolujte verziu Node.js (odporúčaná v14+)
+- Odstráňte `node_modules` a `package-lock.json`, spustite `npm install` znova
+- Skontrolujte konflikt portov (predvolené: Vite používa port 5173)
 
-**API server sa nespustí**:
-- Skontrolujte, či verzia Node.js spĺňa minimálne požiadavky (node >=10)
-- Overte, či port nie je už obsadený
+**API server sa nespúšťa**:
+- Overte minimálnu požadovanú verziu Node.js (node >=10)
+- Skontrolujte, či port nie je už obsadený
 - Uistite sa, že všetky závislosti sú nainštalované cez `npm install`
 
 **Rozšírenie prehliadača sa nenačíta**:
-- Overte správne formátovanie manifest.json
-- Skontrolujte konzolu prehliadača na chyby
-- Postupujte podľa inštrukcií pre inštaláciu rozšírení špecifických pre prehliadač
+- Skontrolujte správne formátovanie manifest.json
+- Prezrite konzolu prehliadača kvôli chybám
+- Dodržiavajte inštrukcie inštalácie rozšírení pre daný prehliadač
 
 **Problémy s Python chat projektom**:
 - Overte, či je nainštalovaný balík OpenAI: `pip install openai`
-- Skontrolujte nastavenie environmentálnej premennej GITHUB_TOKEN
-- Skontrolujte prístupové práva k GitHub Models
+- Skontrolujte, či je nastavená premenná prostredia GITHUB_TOKEN
+- Overte prístupové práva k GitHub Models
 
-**Docsify neposkytuje dokumentáciu**:
+**Docsify neservíruje dokumentáciu**:
 - Nainštalujte docsify-cli globálne: `npm install -g docsify-cli`
-- Spustite z koreňového adresára úložiska
-- Overte, že existuje `docs/_sidebar.md`
+- Spúšťajte z koreňového adresára repo
+- Overte, že existuje súbor `docs/_sidebar.md`
 
 ### Tipy pre vývojové prostredie
 
 - Používajte VS Code s rozšírením Live Server pre HTML projekty
-- Nainštalujte rozšírenia ESLint a Prettier pre konzistentné formátovanie
-- Používajte DevTools prehliadača na ladenie JavaScriptu
-- Pre Vue projekty nainštalujte rozšírenie Vue DevTools do prehliadača
+- Inštalujte ESLint a Prettier rozšírenia pre konzistentné formátovanie
+- Používajte prehliadačové DevTools na ladenie JavaScriptu
+- Pre Vue projekty nainštalujte Vue DevTools rozšírenie prehliadača
 
 ### Výkonnostné úvahy
 
-- Veľké množstvo preložených súborov (50+ jazykov) znamená, že úplné klony sú veľké
-- Používajte shallow clone, ak pracujete iba s obsahom: `git clone --depth 1`
-- Pri práci s anglickým obsahom vylúčte preklady z vyhľadávania
-- Build procesy môžu byť pri prvom spustení pomalé (npm install, Vite build)
+- Veľké množstvo prekladaných súborov (50+ jazykov) spôsobuje veľké clone repozitára
+- Používajte shallow clone, ak pracujete len s obsahom: `git clone --depth 1`
+- Vynechávajte preklady z vyhľadávania pri práci v angličtine
+- Sestavovacie procesy môžu byť pomalé pri prvom spustení (npm install, Vite build)
 
-## Bezpečnostné upozornenia
+## Bezpečnostné opatrenia
 
-### Environmentálne premenne
+### Premenné prostredia
 
-- API kľúče by nikdy nemali byť commitnuté do repozitára
+- API kľúče by nikdy nemali byť commitované do úložiska
 - Používajte `.env` súbory (už v `.gitignore`)
-- Dokumentujte potrebné environmentálne premenne v README projektov
+- Dokumentujte požadované premenné prostredia v README projektov
 
 ### Python projekty
 
 - Používajte virtuálne prostredia: `python -m venv venv`
-- Udržiavajte závislosti aktualizované
-- GitHub tokeny by mali mať minimálne potrebné povolenia
+- Udržiavajte závislosti aktuálne
+- GitHub tokeny by mali mať minimálne potrebné oprávnenia
 
 ### Prístup k GitHub Models
 
-- Osobné prístupové tokeny (PAT) sú vyžadované pre GitHub Models
-- Tokeny by mali byť uložené ako environmentálne premenne
+- Potrebné sú Personal Access Tokens (PAT)
+- Tokeny ukladajte ako environmentálne premenné
 - Nikdy necommitujte tokeny alebo prihlasovacie údaje
 
-## Dodatočné poznámky
+## Ďalšie poznámky
 
-### Cieľové publikum
+### Cieľová skupina
 
 - Úplní začiatočníci vo webovom vývoji
 - Študenti a samoukovia
-- Učitelia používajúci osnovu vo vyučovaní
-- Obsah navrhnutý pre prístupnosť a postupné budovanie zručností
+- Učitelia používajúci kurikulum v triedach
+- Obsah navrhnutý pre prístupnosť a postupné nadobúdanie zručností
 
-### Vzdelávacia filozofia
+### Edukačná filozofia
 
-- Projektovo orientované učenie
-- Časté kontroly poznatkov (kvízy)
-- Praktické kódovacie cvičenia
-- Príklady aplikácií z reálneho sveta
-- Dôraz na základy pred frameworkmi
+- Prístup založený na projektoch
+- Časté kontrolné otázky (kvízy)
+- Praktické programovacie cvičenia
+- Príklady z reálneho sveta
+- Dôraz na základy pred frameworkami
 
 ### Údržba úložiska
 
 - Aktívna komunita študentov a prispievateľov
 - Pravidelné aktualizácie závislostí a obsahu
-- Issue a diskusie monitorované správcom
-- Aktualizácie prekladov automatizované cez GitHub Actions
+- Správa issues a diskusií od správcov
+- Automatické aktualizácie prekladov cez GitHub Actions
 
 ### Súvisiace zdroje
 
 - [Microsoft Learn moduly](https://docs.microsoft.com/learn/)
 - [Student Hub zdroje](https://docs.microsoft.com/learn/student-hub/)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) odporúčaný pre študentov
-- Ďalšie kurzy: Generatívna AI, Data Science, ML, IoT učebné osnovy dostupné
+- Ďalšie kurzy: Generatívna AI, Data Science, ML, IoT kurikulum dostupné
 
-### Práca s konkrétnymi projektmi
+### Práca so špecifickými projektmi
 
 Pre podrobné inštrukcie k jednotlivým projektom si pozrite README súbory v:
-- `quiz-app/README.md` - Vue 3 quiz aplikácia
+- `quiz-app/README.md` - Vue 3 kvízová aplikácia
 - `7-bank-project/README.md` - Banková aplikácia s autentifikáciou
 - `5-browser-extension/README.md` - Vývoj rozšírení prehliadača
 - `6-space-game/README.md` - Vývoj hry založenej na Canvas
@@ -394,15 +394,15 @@ Pre podrobné inštrukcie k jednotlivým projektom si pozrite README súbory v:
 
 ### Štruktúra monorepa
 
-Aj keď nejde o tradičné monorepo, toto úložisko obsahuje niekoľko nezávislých projektov:
+Aj keď nejde o tradičné monorepo, toto úložisko obsahuje viacero nezávislých projektov:
 - Každá lekcia je samostatná
 - Projekty nezdieľajú závislosti
-- Pracujte na jednotlivých projektoch bez vplyvu na ostatné
-- Naklonujte celé repozitárum pre kompletný zážitok z osnovy
+- Pracujte na jednotlivých projektoch bez ovplyvnenia ostatných
+- Naklonujte celé repo pre plné kurikulumové skúsenosti
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vymedzenie zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme zabezpečiť presnosť, majte prosím na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu nenesieme zodpovednosť.
+**Upozornenie**:  
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, treba mať na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vzniknuté z použitia tohto prekladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

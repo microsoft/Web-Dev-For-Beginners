@@ -1,105 +1,105 @@
-# Panimula sa Mga Wika ng Programming at Modernong Developer Tools
+# Panimula sa Programming Languages at Modernong Developer Tools
 
-Kamusta, hinaharap na developer! 👋 Pwede ba akong magbahagi ng isang bagay na palaging nagbibigay sa akin ng kilig araw-araw? Malapit mo nang matuklasan na ang programming ay hindi lang tungkol sa mga computer – ito ay parang pagkakaroon ng superpowers para maisakatuparan ang mga pinakamalupit mong ideya!
+Kumusta, hinaharap na developer! 👋 Pwede ba kitang sabihing isang bagay na nagpapamanhid sa akin araw-araw? Malapit mo nang matuklasan na ang programming ay hindi lang tungkol sa mga kompyuter – ito ay tungkol sa pagkakaroon ng tunay na mga superpowers para buhayin ang pinakakatiwang-tawang ideya mo!
 
-Alam mo yung sandali na ginagamit mo ang paborito mong app at parang ang lahat ay perpektong gumagana? Kapag pinindot mo ang isang button at may nangyayaring sobrang astig na magpapaisip sa'yo ng "wow, paano nila NAGAWA yun?" Well, may isang tao na katulad mo – marahil nakaupo sa paborito nilang coffee shop ng alas-dos ng umaga na may pangatlong tasa ng espresso – ang nagsulat ng code na lumikha ng mahika na iyon. At eto ang magpapasabog ng utak mo: sa pagtatapos ng araling ito, hindi mo lang maiintindihan kung paano nila ginawa iyon, kundi magiging excited ka na subukan ito mismo!
+Alam mo ba yung sandali kapag ginagamit mo ang paborito mong app at lahat ay perpektong nagkakasya? Kapag itinap mo ang isang button at may mangyaring isang bagay na kahima-himala na magpapasabi sa'yo ng, "wow, paano nila 'yun ginawa?" Aba, isang taong katulad mo – malamang nasa paboritong coffee shop niya ng alas-dos ng umaga na may pangatlong espresso – ang nagsulat ng code na gumawa ng magic na 'yon. At heto ang magpapakuha ng iyong hininga: sa pagtatapos ng aralin na ito, hindi lang mo mauunawaan kung paano nila ginawa iyon, kundi ikaw ay magkakaroon ng kagustuhang subukan ito mismo!
 
-Alam mo, naiintindihan ko kung bakit nakakatakot ang programming sa simula. Noong nagsimula ako, akala ko kailangan mong maging isang math genius o marunong mag-code mula limang taong gulang. Pero eto ang nagbago ng pananaw ko: ang programming ay parang pag-aaral ng bagong wika. Nagsisimula ka sa "hello" at "thank you," tapos natututo kang mag-order ng kape, at bago mo malaman, nakikipag-usap ka na tungkol sa malalalim na pilosopikal na usapan! Pero sa kasong ito, nakikipag-usap ka sa mga computer, at sa totoo lang? Sila ang pinaka-pasensyosong kausap – hindi sila humuhusga sa mga pagkakamali mo at palaging handang subukan ulit!
+Tingnan mo, nauunawaan ko kung ang programming ay nakakatakot sa ngayon. Noong nagsimula ako, inisip ko talaga na kailangan mong maging isang math genius o kaya ay nagsimula ka nang mag-code mula pagkabata. Pero heto ang nagbago sa pananaw ko: ang programming ay katulad ng pag-aaral makipag-usap sa isang bagong wika. Nagsisimula ka sa "hello" at "thank you," pagkatapos ay hanggang sa umorder ng kape, at hindi mo namamalayan, nakikipag-usap ka na sa mga malalalim na pilosopikal na usapan! Pero sa kasong ito, nakikipag-usap ka sa mga kompyuter, at totoo? Sila ang pinakapasyenteng kasamahan sa usapan na makakasama mo – hindi nila hinuhusgahan ang iyong mga pagkakamali at palaging excited na subukan muli!
 
-Ngayon, sisilipin natin ang mga kamangha-manghang tools na ginagawang posible ang modernong web development – at sobrang nakakaadik! Pinag-uusapan natin ang parehong editors, browsers, at workflows na ginagamit ng mga developer sa Netflix, Spotify, at sa paborito mong indie app studio araw-araw. At eto ang magpapasayaw sa'yo: karamihan sa mga propesyonal-grade, industry-standard tools na ito ay ganap na libre!
+Ngayon, sisilipin natin ang mga kamangha-manghang tools na nagpapaganap ng modernong web development — hindi lang posible, kundi nakakaadik pa. Pinag-uusapan ko mismo ang mga eksaktong editors, browsers, at workflows na ginagamit ng mga developer sa Netflix, Spotify, at paborito mong indie app studio araw-araw. At heto ang bahagi na magpapasayaw sa'yo sa tuwa: karamihan sa mga professional-grade, industry-standard tools na ito ay ganap na libre!
 
 ![Intro Programming](../../../../translated_images/tl/webdev101-programming.d6e3f98e61ac4bff.webp)
-> Sketchnote ni [Tomomi Imura](https://twitter.com/girlie_mac)
+> Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
 journey
-    title Your Programming Journey Today
-    section Discover
-      What is Programming: 5: You
-      Programming Languages: 4: You
-      Tools Overview: 5: You
-    section Explore
-      Code Editors: 4: You
-      Browsers & DevTools: 5: You
+    title Ang Iyong Paglalakbay sa Programming Ngayon
+    section Tuklasin
+      Ano ang Programming: 5: You
+      Mga Wika ng Programming: 4: You
+      Pangkalahatang-ideya ng Mga Kasangkapan: 5: You
+    section Galugarin
+      Mga Editor ng Code: 4: You
+      Mga Browser at DevTools: 5: You
       Command Line: 3: You
-    section Practice
+    section Magpraktis
       Language Detective: 4: You
-      Tool Exploration: 5: You
-      Community Connection: 5: You
+      Pagsisiyasat ng Kasangkapan: 5: You
+      Koneksyon sa Komunidad: 5: You
 ```
+## Tingnan Natin Kung Ano Na ang Alam Mo!
 
-## Tingnan Natin Kung Ano na ang Alam Mo!
+Bago tayo sumabak sa mga masayang bahagi, nais kong malaman – ano na ba ang alam mo tungkol sa mundo ng programming? At pakinggan mo, kung tinitingnan mo ang mga tanong na ito at iniisip mong "Wala talaga akong alam dito," ayos lang 'yan, perpekto nga! Ibig sabihin, nasa tamang lugar ka. Isipin mo ang quiz na ito bilang pag-stretch bago mag-ehersisyo – nagpapainit lang tayo ng brain muscles!
 
-Bago tayo sumabak sa masayang bahagi, curious ako – ano na ang alam mo tungkol sa mundo ng programming? At pakinggan mo, kung tinitingnan mo ang mga tanong na ito at iniisip na "Wala akong ideya sa kahit ano dito," hindi lang okay iyon, kundi perpekto! Ibig sabihin nasa tamang lugar ka. Isipin ang quiz na ito na parang stretching bago mag-workout – pinapainit lang natin ang mga brain muscles!
+[Take the pre-lesson quiz](https://ff-quizzes.netlify.app/web/)
 
-[Kunin ang pre-lesson quiz](https://forms.office.com/r/dru4TE0U9n?origin=lprLink)
 
-## Ang Pakikipagsapalaran na Pupuntahan Natin Magkasama
+## Ang Pakikipagsapalaran na Sasamahan Natin Ngayon
 
-Okay, sobrang excited ako sa mga bagay na matutuklasan natin ngayon! Seryoso, gusto kong makita ang mukha mo kapag naintindihan mo ang ilang mga konsepto. Narito ang kamangha-manghang paglalakbay na pupuntahan natin:
+Okay, sobra akong excited sa kung ano ang ating susuriin ngayon! Seryoso, sana makita ko ang iyong reaksiyon kapag may mga konsepto na biglang lumalabas sa iyo. Heto ang kahanga-hangang paglalakbay na sasamahan natin:
 
-- **Ano ang programming (at bakit ito ang pinakamalupit na bagay kailanman!)** – Matutuklasan natin kung paano ang code ay literal na invisible magic na nagpapagana sa lahat ng bagay sa paligid mo, mula sa alarm na somehow alam na Lunes ng umaga hanggang sa algorithm na perpektong pumipili ng mga rekomendasyon sa Netflix mo
-- **Mga wika ng programming at ang kanilang mga kahanga-hangang personalidad** – Isipin mo na parang pumasok ka sa isang party kung saan ang bawat tao ay may iba't ibang superpowers at paraan ng paglutas ng mga problema. Ganyan ang mundo ng programming languages, at magugustuhan mo silang makilala!
-- **Ang mga pangunahing bahagi na gumagawa ng digital magic** – Isipin mo ito na parang ultimate creative LEGO set. Kapag naintindihan mo kung paano magkasya ang mga piraso, mare-realize mo na pwede kang gumawa ng kahit ano na iniisip mo
-- **Mga propesyonal na tools na magpaparamdam sa'yo na parang binigyan ka ng wand ng wizard** – Hindi ako nagiging dramatic dito – ang mga tools na ito ay talagang magpaparamdam sa'yo na may superpowers ka, at ang pinakamagandang bahagi? Pareho ang ginagamit ng mga propesyonal!
+- **Ano ba talaga ang programming (at bakit ito ang pinakakulit na bagay!)** – Tuklasin natin kung paano ang code ay literal na invisible magic na nagpapagana sa lahat ng bagay sa paligid mo, mula sa alarm na somehow alam na Lunes na ngayong umaga hanggang sa algorithm na perpektong pinipili ang mga rekomendasyon mo sa Netflix
+- **Mga programming language at ang kanilang mga kamangha-manghang personalidad** – Isipin na pumapasok ka sa isang party kung saan bawat tao ay may iba't ibang superpowers at paraan ng paglutas ng problema. Ganyan ang mundo ng programming languages, at magugustuhan mo silang makilala!
+- **Mga pangunahing sangkap na bumubuo ng digital magic** – Isipin mo ito bilang pinaka-kamangha-manghang LEGO set. Kapag naintindihan mo kung paano nag-uugnay ang mga piyesa, malalaman mong literally kayang itayo ang kahit ano na naiisip ng iyong imahinasyon
+- **Mga propesyonal na tools na magpaparamdam sa'yo na para kang nabigyan ng wand ng wizard** – Hindi ako nagbibitiw ng drama dito – gagawing parang may superpowers ka talaga ng mga tools na ito, at ang pinakamahusay pa? Gamit din ito ng mga pro!
 
-> 💡 **Eto ang bagay**: Huwag mo nang isipin na kailangan mong kabisaduhin ang lahat ngayon! Sa ngayon, gusto ko lang maramdaman mo ang excitement tungkol sa kung ano ang posible. Ang mga detalye ay natural na tatatak habang nagpa-practice tayo – ganito ang tunay na pag-aaral!
+> 💡 **Heto ang mahalaga**: Huwag mo munang subukang tandaan ang lahat ngayon! Sa ngayon, gusto ko lang maramdaman mo ang spark ng excitement sa mga posibilidad. Kusang tatatak sa iyo ang mga detalye habang tayo ay nagsasanay nang magkasama – ganyan ang totoong pagkatuto!
 
-> Pwede mong kunin ang araling ito sa [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
+> Pwede mong kunin ang araling ito sa [Microsoft Learn](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
-## Ano nga ba ang *Programming*?
+## Ano Nga Ba Talaga ang Programming?
 
-Sige, sagutin natin ang tanong na milyon ang halaga: ano nga ba ang programming?
+Sige, sagutin natin ang mahalagang tanong: ano ba talaga ang programming?
 
-Magbibigay ako ng kwento na nagbago ng pananaw ko tungkol dito. Noong nakaraang linggo, sinubukan kong ipaliwanag sa nanay ko kung paano gamitin ang bagong remote ng aming smart TV. Nahuli ko ang sarili kong nagsasabi ng mga bagay tulad ng "Pindutin ang pulang button, pero hindi yung malaking pulang button, yung maliit na pulang button sa kaliwa... hindi, sa kabila mong kaliwa... okay, ngayon pindutin mo ng dalawang segundo, hindi isa, hindi tatlo..." Pamilyar ba? 😅
+Ibibigay ko sa'yo ang isang kuwento na nagbago nang lubusan ng pananaw ko tungkol dito. Noong nakaraang linggo, sinubukan kong ipaliwanag sa nanay ko kung paano gamitin ang bagong smart TV remote namin. Napansin kong nasasabi ko ng mga katulad nito, "Pindutin ang pulang button, pero hindi yung malaking pulang button, yung maliit na pulang button sa kaliwa... hindi, yung kabila mong kaliwa... okay, hawakan mo ngayon ng dalawang segundo, hindi isa, hindi tiga..." Pamilyar ba ito? 😅
 
-Yan ang programming! Ito ang sining ng pagbibigay ng sobrang detalyado, step-by-step na mga instruksyon sa isang bagay na napaka-powerful pero kailangan ng lahat ng bagay na ipaliwanag nang perpekto. Pero sa halip na ipaliwanag sa nanay mo (na pwedeng magtanong ng "alin sa pulang button?!"), ipinaliwanag mo ito sa computer (na gagawin lang ang eksaktong sinabi mo, kahit na hindi eksaktong iyon ang ibig mong sabihin).
+Iyan ang programming! Sining ng pagbibigay ng sobrang detalyadong mga hakbang-hakbang na tagubilin sa isang bagay na napakalakas ngunit kailangan ng lahat ng nasa detalye. Ngunit imbes na ipaliwanag mo ito sa nanay mo (na pwedeng magtanong ng "Aling pulang button?!"), ipinaliwanag mo ito sa kompyuter (na ginagawa lang ng eksakto ang sinasabi mo, kahit hindi mo ibig sabihin ng husto).
 
-Eto ang nagpasabog ng utak ko noong una kong natutunan ito: ang mga computer ay talagang simple sa kanilang core. Literal na naiintindihan lang nila ang dalawang bagay – 1 at 0, na basically ay "oo" at "hindi" o "on" at "off." Yun lang! Pero eto ang nagiging magical – hindi natin kailangang magsalita sa 1s at 0s na parang nasa The Matrix tayo. Dito pumapasok ang **programming languages**. Parang pagkakaroon ng pinakamahusay na tagasalin sa mundo na nagko-convert ng mga normal na human thoughts mo sa computer language.
+Hele, ito ang nagpahanga sa akin nang una kong matutunan ito: ang mga kompyuter ay talagang simple sa pinakapangunahing antas. Naiintindihan lang nila ang dalawa – 1 at 0, na halos "oo" at "hindi" o "bukas" at "patay." Iyon na lang! Ngunit dito nagiging mahika – hindi natin kailangang magsalita sa 1s at 0s na parang nasa The Matrix tayo. Dito pumapasok ang **programming languages** para tumulong. Sila ang parang pinakamahusay na tagapagsalin ng mundo na kinukuha ang iyong normal na mga ideya at isinasalin ito sa wika ng kompyuter.
 
-At eto ang nagbibigay pa rin sa akin ng kilig tuwing umaga: literal na *lahat* ng digital sa buhay mo ay nagsimula sa isang tao na katulad mo, marahil nakasuot ng pajama na may tasa ng kape, nagta-type ng code sa kanilang laptop. Yung Instagram filter na nagpapaganda sa'yo? May nag-code niyan. Yung rekomendasyon na nagdala sa'yo sa bagong paborito mong kanta? Isang developer ang gumawa ng algorithm na iyon. Yung app na tumutulong sa'yo na hatiin ang bayarin sa hapunan kasama ang mga kaibigan? Yep, may nag-isip ng "ang hassle nito, siguro pwede ko itong ayusin" at pagkatapos... ginawa nila!
+At heto ang nagbibigay sa akin ng tunay na kilabot tuwing umaga pag gising ko: literal na *lahat* ng digital sa iyong buhay ay nagsimula sa isang tao na katulad mo, malamang nakaupo sa kanilang pajama na may tasa ng kape, nagtatype ng code sa kanilang laptop. Yung Instagram filter na nagpapaganda sayo? May gumawa niyan. Yung rekomendasyong nagdala sa'yo sa bagong paborito mong kanta? Ang developer ang gumawa ng algorithm na iyon. Yung app na tutulong sa'yo hatiin ang bayarin sa hapunan kasama ang mga kaibigan? Oo, may nag-isip ng "naiinis ako dito, kaya kaya kong ayusin ito" at nagawa!
 
-Kapag natutunan mong mag-program, hindi ka lang nakakakuha ng bagong skill – nagiging bahagi ka ng kamangha-manghang komunidad ng mga problem-solvers na iniisip araw-araw, "Paano kaya kung makakagawa ako ng isang bagay na magpapasaya sa araw ng iba?" Sa totoo lang, may mas cool pa ba sa ganun?
+Kapag natutunan mong mag-program, hindi ka lang natututo ng bagong kasanayan – nagiging bahagi ka ng isang kahanga-hangang komunidad ng mga tagalutas ng problema na ginugugol ang araw nila sa pag-iisip, "Paano kaya makabuo ako ng isang bagay na gagawing mas maganda ang araw ng isang tao?" Seryoso, may mas cool pa ba d'yan?
 
-✅ **Huntahan ng Fun Fact**: Eto ang sobrang astig na hanapin kapag may libreng oras ka – sino sa tingin mo ang unang computer programmer sa mundo? Bibigyan kita ng hint: baka hindi mo inaasahan! Ang kwento sa likod ng taong ito ay sobrang fascinating at nagpapakita na ang programming ay palaging tungkol sa creative problem-solving at pag-iisip sa labas ng kahon.
+✅ **Fun Fact Hunt**: Heto ang isang napaka-cool na dapat mong hanapin kapag may libreng oras ka – sino kaya ang unang computer programmer sa mundo? Bibigyan kita ng hint: hindi ito yung inaasahan mo! Ang kuwento tungkol sa taong ito ay kamangha-mangha at nagpapakita na ang programming ay palaging tungkol sa malikhaing paglutas ng problema at pag-iisip sa labas ng kahon.
 
-### 🧠 **Check-in Time: Kamusta ang Pakiramdam Mo?**
+### 🧠 **Oras ng Check-in: Kumusta Ka Na?**
 
-**Mag-reflect saglit:**
-- Naiintindihan mo na ba ang ideya ng "pagbibigay ng instruksyon sa mga computer"?
-- May maisip ka bang pang-araw-araw na gawain na gusto mong i-automate gamit ang programming?
-- Anong mga tanong ang bumubuo sa isip mo tungkol sa programming?
+**Maglaan ng sandali at pag-isipan:**
+- Naiintindihan mo na ba ang ideya ng "pagbibigay ng tagubilin sa mga kompyuter" ngayon?
+- Ano ang isang araw-araw na gawain na gusto mong automate gamit ang programming?
+- Ano ang mga tanong na sumisibol sa isipan mo tungkol sa programming?
 
-> **Tandaan**: Normal lang kung may mga konsepto na medyo malabo pa ngayon. Ang pag-aaral ng programming ay parang pag-aaral ng bagong wika – kailangan ng oras para mabuo ng utak mo ang mga neural pathways. Ang galing mo!
+> **Tandaan**: Normal lang kung medyo malabo pa ang ilang konsepto ngayon. Ang pag-aaral ng programming ay parang pag-aaral ng bagong wika – kailangan ng oras para mabuo ng utak mo ang mga neural pathways. Magaling ka na!
 
-## Ang Mga Programming Languages ay Parang Iba't Ibang Flavors ng Mahika
+## Ang Programming Languages ay Parang Iba't Ibang Lasa ng Mahika
 
-Okay, medyo weird ito pero sundan mo ako – ang mga programming languages ay parang iba't ibang uri ng musika. Isipin mo: may jazz, na smooth at improvisational, rock na powerful at straightforward, classical na elegant at structured, at hip-hop na creative at expressive. Ang bawat style ay may sariling vibe, sariling komunidad ng passionate fans, at bawat isa ay perpekto para sa iba't ibang mood at okasyon.
+Okay, medyo kakaiba itong marinig, pero sundan mo lang ako – ang programming languages ay parang iba't ibang uri ng musika. Isipin mo: meron kang jazz na smooth at improbisasyonal, rock na makapangyarihan at direktang pakinggan, classical na elegante at may istruktura, at hip-hop na malikhain at ekspresibo. Ang bawat estilo ay may kanya-kanyang vibe, komunidad ng mahihilig, at tama para sa iba't ibang mood at okasyon.
 
-Ganyan din ang programming languages! Hindi mo gagamitin ang parehong language para gumawa ng masayang mobile game na gagamitin mo para mag-crunch ng massive na climate data, tulad ng hindi mo tutugtugin ang death metal sa yoga class (well, karamihan ng yoga classes anyway! 😄).
+Ganyan din ang pag-andar ng programming languages! Hindi mo gagamitin ang parehong wika para gumawa ng masayang mobile game na gagamitin mo naman sa pagproseso ng napakalaking datos ng klima, katulad ng di mo aawitin ang death metal sa yoga class (kahit karamihan ng yoga classes lang! 😄).
 
-Pero eto ang sobrang nakakabaliw tuwing iniisip ko ito: ang mga languages na ito ay parang pagkakaroon ng pinaka-pasensyosong, pinakamatalinong interpreter sa mundo na laging nasa tabi mo. Pwede mong ipahayag ang mga ideya mo sa paraang natural sa utak ng tao, at sila ang bahala sa sobrang komplikadong trabaho ng pag-convert nito sa 1s at 0s na naiintindihan ng mga computer. Parang may kaibigan ka na fluent sa parehong "human creativity" at "computer logic" – at hindi sila napapagod, hindi kailangan ng coffee breaks, at hindi ka hinuhusgahan sa paulit-ulit na tanong!
+Pero ito ang palaging nagpapahanga sa akin tuwing naiisip ko ito: ang mga wikang ito ay parang may pinaka-pasyenteng, matalinong interpreter sa mundo na nakaupo sa tabi mo. Puwede mong ipahayag ang mga ideya mo sa paraan na natural sa tao mong utak, at sila ang humahawak sa napaka-komplikadong gawain ng pagsasalin nito sa 1s at 0s na talagang nauunawaan ng kompyuter. Parang may kaibigang dalubhasa sa parehong "human creativity" at "computer logic" – at hindi sila napapagod, hindi kailangan ng coffee breaks, at hindi ka hinuhusgahan kapag paulit-ulit mong tinanong ang parehong tanong!
 
-### Mga Popular na Programming Languages at Kanilang Gamit
+### Mga Sikat na Programming Languages at Kanilang Gamit
 
 ```mermaid
 mindmap
   root((Programming Languages))
     Web Development
       JavaScript
-        Frontend Magic
+        Salamangka sa Frontend
         Interactive Websites
       TypeScript
         JavaScript + Types
         Enterprise Apps
     Data & AI
       Python
-        Data Science
+        Agham ng Datos
         Machine Learning
-        Automation
+        Awtomasyon
       R
-        Statistics
-        Research
+        Estadistika
+        Pananaliksik
     Mobile Apps
       Java
         Android
@@ -108,76 +108,74 @@ mindmap
         iOS
         Apple Ecosystem
       Kotlin
-        Modern Android
+        Makabagong Android
         Cross-platform
     Systems & Performance
       C++
-        Games
+        Laro
         Performance Critical
       Rust
-        Memory Safety
+        Kaligtasan sa Memorya
         System Programming
       Go
         Cloud Services
         Scalable Backend
 ```
-
-| Wika | Pinakamahusay Para sa | Bakit Popular |
-|------|-----------------------|---------------|
-| **JavaScript** | Web development, user interfaces | Tumatakbo sa browsers at nagpapagana ng interactive websites |
-| **Python** | Data science, automation, AI | Madaling basahin at matutunan, malalakas na libraries |
+| Language | Pinakamainam Para sa | Bakit Ito Popular |
+|----------|----------------------|-------------------|
+| **JavaScript** | Web development, user interfaces | Tumatakbo sa browsers at nagpapatakbo ng interactive websites |
+| **Python** | Data science, automation, AI | Madaling basahin at pag-aralan, maraming makapangyarihang libraries |
 | **Java** | Enterprise applications, Android apps | Platform-independent, matibay para sa malalaking sistema |
 | **C#** | Windows applications, game development | Malakas na suporta mula sa Microsoft ecosystem |
-| **Go** | Cloud services, backend systems | Mabilis, simple, dinisenyo para sa modernong computing |
+| **Go** | Cloud services, backend systems | Mabilis, simple, disenyo para sa modernong computing |
 
 ### High-Level vs. Low-Level Languages
 
-Okay, eto ang konsepto na talagang nagpaikot ng utak ko noong nagsimula ako, kaya ibabahagi ko ang analogy na nagpa-click sa akin – at sana makatulong din sa'yo!
+Okay, ito ang konsepto na sumira sa utak ko nung una akong nagsimula, kaya ibabahagi ko ang analogy na sa wakas ay naintindihan ko – sana makatulong din ito sa'yo!
 
-Isipin mo na bumisita ka sa isang bansa kung saan hindi mo alam ang wika, at desperately kailangan mong hanapin ang pinakamalapit na banyo (lahat tayo napunta na sa ganitong sitwasyon, di ba? 😅):
+Isipin mong bumisita ka sa isang bansa kung saan hindi ka marunong magsalita ng wika, at desperado kang hanapin ang pinakamalapit na banyo (naranasan na nating lahat ito, 'di ba? 😅):
 
-- **Low-level programming** ay parang pag-aaral ng lokal na dialect nang sobrang husay na kaya mong makipag-usap sa lola na nagtitinda ng prutas sa kanto gamit ang cultural references, lokal na slang, at inside jokes na naiintindihan lang ng mga lumaki doon. Sobrang impressive at sobrang efficient... kung fluent ka! Pero medyo overwhelming kapag naghahanap ka lang ng banyo.
+- **Low-level programming** ay parang pag-aaral ng lokal na dialekto nang husto upang makipag-usap sa lola na nagtitinda ng prutas na gumagamit ng mga lokal na salita, slang, at mga biro na tanging mga tunay na lumaki doon lang ang makakaintindi. Sobrang kahanga-hanga at epektibo... kung bihasa ka nga! Pero sobrang overwhelming kung ang hanap mo lang ay banyo.
 
-- **High-level programming** ay parang pagkakaroon ng amazing na lokal na kaibigan na gets ka. Pwede mong sabihin "Kailangan ko talagang hanapin ang restroom" sa plain English, at sila ang bahala sa cultural translation at magbibigay ng direksyon sa paraang naiintindihan ng utak mo.
+- **High-level programming** ay parang may kamangha-manghang lokal na kaibigan na nakakaintindi sa'yo. Puwede mong sabihin sa plain English na "Kailangan ko talaga ng banyo," at siya ang hahawak sa pagsasalin ng kultura at pagbibigay ng direksyon sa paraang maiintindihan ng iyong utak na hindi lokal.
 
-Sa programming terms:
-- **Low-level languages** (tulad ng Assembly o C) ay nagbibigay-daan sa'yo na magkaroon ng sobrang detalyadong usapan sa actual hardware ng computer, pero kailangan mong mag-isip na parang makina, na... well, sabihin na lang natin na malaking mental shift ito!
-- **High-level languages** (tulad ng JavaScript, Python, o C#) ay nagbibigay-daan sa'yo na mag-isip na parang tao habang sila ang bahala sa machine-speak sa likod ng eksena. Plus, may mga sobrang welcoming na komunidad na puno ng mga tao na naaalala kung paano maging bago at talagang gustong tumulong!
+Sa programming:
+- **Low-level languages** (tulad ng Assembly o C) ay nagbibigay daan sa'yo na magkaroon ng napakadetalyadong pag-uusap sa hardware ng kompyuter mismo, pero kailangan mong mag-isip na parang makina, at well, malaking mental shift 'yan!
+- **High-level languages** (tulad ng JavaScript, Python, o C#) ay pinapayagan kang mag-isip gaya ng tao habang sila ang nag-aasikaso ng pagsasalita ng makina sa likod ng mga eksena. Bukod dito, may mga napaka-welcoming na komunidad ng mga tao na naaalala kung paano maging baguhan at talagang nais tumulong!
 
-Hulaan mo kung alin ang irerekomenda kong simulan mo? 😉 Ang high-level languages ay parang training wheels na hindi mo gustong tanggalin dahil mas enjoyable ang buong experience!
+Hulaan mo kung alin ang ire-rekomenda kong simulang gamitin? 😉 Ang high-level languages ay parang may training wheels ka na ayaw mo nang tanggalin dahil ginagawa nitong mas masaya ang buong experience!
 
 ```mermaid
 flowchart TB
-    A["👤 Human Thought:<br/>'I want to calculate Fibonacci numbers'"] --> B{Choose Language Level}
+    A["👤 Kaisipan ng Tao:<br/>'Gusto kong kwentahin ang mga Fibonacci number'"] --> B{Piliin ang Antas ng Wika}
     
-    B -->|High-Level| C["🌟 JavaScript/Python<br/>Easy to read and write"]
-    B -->|Low-Level| D["⚙️ Assembly/C<br/>Direct hardware control"]
+    B -->|Mataas na Antas| C["🌟 JavaScript/Python<br/>Madaling basahin at isulat"]
+    B -->|Mababang Antas| D["⚙️ Assembly/C<br/>Direktang kontrol sa hardware"]
     
-    C --> E["📝 Write: fibonacci(10)"]
-    D --> F["📝 Write: mov r0,#00<br/>sub r0,r0,#01"]
+    C --> E["📝 Isulat: fibonacci(10)"]
+    D --> F["📝 Isulat: mov r0,#00<br/>sub r0,r0,#01"]
     
-    E --> G["🤖 Computer Understanding:<br/>Translator handles complexity"]
+    E --> G["🤖 Pag-unawa ng Kompyuter:<br/>Tagasalin ang humahawak ng komplikasyon"]
     F --> G
     
-    G --> H["💻 Same Result:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
+    G --> H["💻 Parehong Resulta:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
     
     style C fill:#e1f5fe
     style D fill:#fff3e0
     style H fill:#e8f5e8
 ```
+### Ipapakita Ko Sa Iyo Kung Bakit Mas Friendly ang High-Level Languages
 
-### Ipakita Ko sa'yo Kung Bakit Mas Friendly ang High-Level Languages
+Sige, ipapakita ko sa'yo ang isang bagay na malinaw na nagpapakita kung bakit na-in love ako sa high-level languages, pero bago iyon – kailangan mo munang pangako. Kapag nakita mo ang unang halimbawa ng code, huwag kang mag-panic! Nakakakita ito ng nakakatakot. Iyan ang eksaktong punto na gusto kong ipakita!
 
-Alright, ipapakita ko sa'yo ang isang bagay na perpektong nagpapakita kung bakit na-inlove ako sa high-level languages, pero una – kailangan mo akong pangakuan ng isang bagay. Kapag nakita mo ang unang code example, huwag kang mag-panic! Dapat itong mukhang intimidating. Yan ang punto na ginagawa ko!
+Titingnan natin ang parehong gawain na isinulat sa dalawang ganap na magkaibang estilo. Pareho nilang nililikha ang tinatawag na Fibonacci sequence – isang magandang pattern sa matematika kung saan ang bawat numero ay ang kabuuan ng dalawang nauna: 0, 1, 1, 2, 3, 5, 8, 13... (Fun fact: makikita mo ang pattern na ito kahit saan sa kalikasan – sa spiral ng mga sunflower seeds, pattern ng mga pinecones, pati sa pagkabuo ng mga galaxy!)
 
-Titingnan natin ang parehong task na isinulat sa dalawang magkaibang style. Parehong gumagawa ng tinatawag na Fibonacci sequence – ito ay isang magandang mathematical pattern kung saan ang bawat numero ay ang kabuuan ng dalawang nauna: 0, 1, 1, 2, 3, 5, 8, 13... (Fun fact: makikita mo ang pattern na ito literal na kahit saan sa kalikasan – sunflower seed spirals, pinecone patterns, kahit ang paraan ng pagbuo ng mga galaxy!)
+Handa ka nang makita ang pagkakaiba? Tara!
 
-Handa ka na bang makita ang pagkakaiba? Tara na!
-
-**High-level language (JavaScript) – Friendly sa Tao:**
+**High-level language (JavaScript) – Madaling maintindihan:**
 
 ```javascript
-// Step 1: Basic Fibonacci setup
+// Hakbang 1: Pangunahing pagsasaayos ng Fibonacci
 const fibonacciCount = 10;
 let current = 0;
 let next = 1;
@@ -185,32 +183,32 @@ let next = 1;
 console.log('Fibonacci sequence:');
 ```
 
-**Eto ang ginagawa ng code na ito:**
-- **Magdeklara** ng constant para tukuyin kung ilang Fibonacci numbers ang gusto nating i-generate
-- **Mag-initialize** ng dalawang variables para i-track ang kasalukuyan at susunod na numero sa sequence
-- **Mag-set up** ng starting values (0 at 1) na nagde-define ng Fibonacci pattern
-- **Mag-display** ng header message para tukuyin ang output natin
+**Ito ang ginagawa ng code na ito:**
+- **Nagdeklara** ng constant para tukuyin kung ilang Fibonacci numbers ang gustong gawin
+- **Nag-initialize** ng dalawang variables para subaybayan ang kasalukuyan at susunod na numero sa sequence
+- **Nagdagdag** ng panimulang halaga (0 at 1) na tumutukoy sa Fibonacci pattern
+- **Nagpakita** ng header message para malaman ang output
 
 ```javascript
-// Step 2: Generate the sequence with a loop
+// Hakbang 2: Bumuo ng sunod-sunod gamit ang loop
 for (let i = 0; i < fibonacciCount; i++) {
   console.log(`Position ${i + 1}: ${current}`);
   
-  // Calculate next number in sequence
+  // Kalkulahin ang susunod na numero sa sunod-sunod
   const sum = current + next;
   current = next;
   next = sum;
 }
 ```
 
-**Paghiwa-hiwalay ng nangyayari dito:**
-- **Mag-loop** sa bawat posisyon sa sequence gamit ang `for` loop
-- **Mag-display** ng bawat numero kasama ang posisyon nito gamit ang template literal formatting
-- **Mag-calculate** ng susunod na Fibonacci number sa pamamagitan ng pagdagdag ng kasalukuyan at susunod na values
-- **Mag-update** ng tracking variables para lumipat sa susunod na iteration
+**Paglabag sa mga nangyayaring ito:**
+- **Ulit-ulitin** ang bawat posisyon sa sequence gamit ang `for` loop
+- **Ipakita** ang bawat numero kasama ang posisyon gamit ang template literal formatting
+- **Kalkulahin** ang susunod na Fibonacci number sa pagdaragdag ng kasalukuyan at susunod na halaga
+- **I-update** ang mga variable na sumusubaybay upang lumipat sa susunod na iteration
 
 ```javascript
-// Step 3: Modern functional approach
+// Hakbang 3: Makabagong functional na pamamaraan
 const generateFibonacci = (count) => {
   const sequence = [0, 1];
   
@@ -221,18 +219,18 @@ const generateFibonacci = (count) => {
   return sequence;
 };
 
-// Usage example
+// Halimbawa ng paggamit
 const fibSequence = generateFibonacci(10);
 console.log(fibSequence);
 ```
 
-**Sa itaas, ginawa natin ang:**
-- **Paglikha** ng reusable function gamit ang modernong arrow function syntax
-- **Pagbuo** ng array para i-store ang buong sequence sa halip na i-display isa-isa
-- **Paggamit** ng array indexing para i-calculate ang bawat bagong numero mula sa mga naunang values
-- **Pag-return** ng buong sequence para sa flexible na paggamit sa ibang bahagi ng programa
+**Sa itaas, ginawa natin:**
+- **Gumawa** ng reusable na function gamit ang modernong arrow function syntax
+- **Nagtayo** ng array para i-store ang buong sequence sa halip na ipakita isa-isa
+- **Ginamit** ang array indexing para kalkulahin ang bawat bagong numero mula sa mga naunang halaga
+- **Ibinalik** ang buong sequence para sa flexible na paggamit sa ibang bahagi ng programa natin
 
-**Low-level language (ARM Assembly) – Friendly sa Computer:**
+**Low-level language (ARM Assembly) – Para sa kompyuter:**
 
 ```assembly
  area ascen,code,readonly
@@ -259,127 +257,127 @@ back add r0,r1
  end
 ```
 
-Pansinin kung paano ang JavaScript version ay parang English instructions, habang ang Assembly version ay gumagamit ng cryptic commands na direktang kumokontrol sa processor ng computer. Parehong nagagawa ang parehong task, pero ang high-level language ay mas madaling maintindihan, isulat, at i-maintain.
+Pansinin kung paano ang JavaScript version ay halos parang English instructions habang ang Assembly version ay gumagamit ng mga cryptic na command na direktang kumokontrol sa processor ng kompyuter. Parehong nagagawa ang parehong gawain, pero ang high-level language ay mas madali maintindihan, isulat, at i-maintain ng mga tao.
 
-**Mga pangunahing pagkakaiba na mapapansin mo:**
-- **Readability**: Ang JavaScript ay gumagamit ng mga descriptive names tulad ng `fibonacciCount` habang ang Assembly ay gumagamit ng cryptic labels tulad ng `r0`, `r1`
-- **Mga Komento**: Ang mga high-level na wika ay nagtataguyod ng mga paliwanag na komento na nagpapadali sa pag-unawa ng code.
-- **Estruktura**: Ang lohikal na daloy ng JavaScript ay tumutugma sa paraan ng pag-iisip ng tao tungkol sa mga problema nang hakbang-hakbang.
-- **Pagpapanatili**: Ang pag-update ng bersyon ng JavaScript para sa iba't ibang pangangailangan ay madali at malinaw.
+**Pangunahing pagkakaiba na mapapansin mo:**
+- **Nababasa nang madali**: Gumagamit ang JavaScript ng mga naglalarawang pangalan tulad ng `fibonacciCount` habang ang Assembly ay gumagamit ng cryptic na mga label tulad ng `r0`, `r1`
+- **Mga Komento**: Hinikayat ng mga high-level na wika ang mga paliwanag na komento na nagpapadokumentaryo sa code mismo
+- **Estruktura**: Ang lohikal na daloy ng JavaScript ay tumutugma sa paraan ng pag-iisip ng mga tao ng sunud-sunod na hakbang ng problema
+- **Pagpapanatili**: Ang pag-update ng bersyon ng JavaScript para sa iba't ibang mga pangangailangan ay diretso at malinaw
 
-✅ **Tungkol sa Fibonacci sequence**: Ang napakagandang pattern ng numero na ito (kung saan ang bawat numero ay katumbas ng kabuuan ng dalawang nauna: 0, 1, 1, 2, 3, 5, 8...) ay literal na makikita *kahit saan* sa kalikasan! Makikita mo ito sa mga spiral ng sunflower, mga pattern ng pinecone, ang kurba ng mga shell ng nautilus, at maging sa paraan ng paglaki ng mga sanga ng puno. Nakakamangha kung paano nakakatulong ang matematika at code sa pag-unawa at paglikha ng mga pattern na ginagamit ng kalikasan upang lumikha ng kagandahan!
+✅ **Tungkol sa Fibonacci sequence**: Ang kahanga-hangang pattern na numerong ito (kung saan ang bawat numero ay katumbas ng suma ng dalawang nauna nito: 0, 1, 1, 2, 3, 5, 8...) ay literal na makikita *kahit saan* sa kalikasan! Makikita mo ito sa mga spiral ng sunflower, pattern ng pinecone, paraan ng pagkakurba ng nautilus shell, at maging sa paraan ng paglaki ng mga sanga ng puno. Nakakamangha kung paano makatutulong ang matematika at code upang maunawaan at makalikha muli ng mga pattern na ginagamit ng kalikasan para lumikha ng kagandahan!
 
-## Ang Mga Pundasyon na Gumagawa ng Mahika
+## Ang Mga Pangunahing Bahagi na Nagbibigay ng Salamangka
 
-Sige, ngayong nakita mo na kung paano gumagana ang mga programming language, talakayin natin ang mga pangunahing bahagi na bumubuo sa bawat program na kailanman isinulat. Isipin ang mga ito bilang mahahalagang sangkap sa iyong paboritong recipe – kapag naintindihan mo kung ano ang ginagawa ng bawat isa, magagawa mong magbasa at magsulat ng code sa halos anumang wika!
+Sige, ngayon na nakita mo na kung ano ang hitsura ng mga programming language sa aksyon, pag-usapan natin ang mga pundamental na bahagi ng halos bawat programang naisulat kailanman. Isipin mo ito bilang mga mahalagang sangkap sa iyong paboritong ulam – kapag naintindihan mo kung ano ang ginagawa ng bawat isa, magagawa mong magbasa at magsulat ng code sa halos anumang wika!
 
-Parang pag-aaral ng grammar ng programming. Naalala mo ba noong nasa paaralan ka at natutunan mo ang tungkol sa mga pangngalan, pandiwa, at kung paano bumuo ng mga pangungusap? Ang programming ay may sarili nitong bersyon ng grammar, at sa totoo lang, mas lohikal at mas madaling intindihin kaysa sa grammar ng Ingles! 😄
+Para itong pag-aaral ng gramatika ng programming. Naalala mo noong nasa paaralan ka pa at natutunan ang tungkol sa mga pangngalan, pandiwa, at kung paano gumawa ng mga pangungusap? Ang programming ay may sarili nitong bersyon ng gramatika, at sa totoo lang, mas lohikal at maawain ito kumpara sa gramatika ng Ingles! 😄
 
-### Mga Pahayag: Ang Hakbang-hakbang na Instruksyon
+### Mga Pahayag: Mga Hakbang-hakbang na Tagubilin
 
-Magsimula tayo sa **mga pahayag** – ang mga ito ay parang mga indibidwal na pangungusap sa isang pag-uusap sa iyong computer. Ang bawat pahayag ay nagsasabi sa computer na gawin ang isang partikular na bagay, parang nagbibigay ng direksyon: "Lumiko sa kaliwa dito," "Huminto sa pulang ilaw," "Mag-park sa lugar na iyon."
+Simulan natin sa **mga pahayag** – parang mga indibidwal na pangungusap sa isang pag-uusap sa iyong computer. Bawat pahayag ay nagsasabi sa computer na gawin ang isang partikular na bagay, parang nagbibigay ng mga direksyon: "Lumiko ka sa kaliwa dito," "Huminto sa pulang ilaw," "Mag-park sa lugar na iyon."
 
-Ang gusto ko sa mga pahayag ay kung gaano kadaling basahin ang mga ito. Tingnan mo ito:
+Ang gusto ko sa mga pahayag ay ang karaniwang pagiging madaling basahin nila. Tingnan mo ito:
 
 ```javascript
-// Basic statements that perform single actions
+// Mga pangunahing pahayag na nagsasagawa ng iisang aksyon
 const userName = "Alex";                    
 console.log("Hello, world!");              
 const sum = 5 + 3;                         
 ```
-
-**Narito ang ginagawa ng code na ito:**
-- **Magdeklara** ng constant variable para mag-imbak ng pangalan ng user
-- **Magpakita** ng greeting message sa console output
-- **Magkalkula** at mag-imbak ng resulta ng isang mathematical operation
+  
+**Ganito ang ginagawa ng code na ito:**  
+- **Magdeklara** ng isang constant variable para sa pangalan ng user  
+- **Ipakita** ang greeting message sa console output  
+- **Kalkulahin** at iimbak ang resulta ng isang matematikal na operasyon  
 
 ```javascript
-// Statements that interact with web pages
+// Mga pahayag na nakikipag-ugnayan sa mga pahina ng web
 document.title = "My Awesome Website";      
 document.body.style.backgroundColor = "lightblue";
 ```
-
-**Hakbang-hakbang, narito ang nangyayari:**
-- **Baguhin** ang pamagat ng webpage na lumalabas sa browser tab
-- **Palitan** ang kulay ng background ng buong page body
+  
+**Sunod-sunod, ito ang nangyayari:**  
+- **Baguhin** ang pamagat ng webpage na nakikita sa browser tab  
+- **Palitan** ang kulay ng background ng buong katawan ng pahina  
 
 ### Mga Variable: Sistema ng Memorya ng Iyong Programa
 
-Okay, **mga variable** ay isa sa mga paborito kong konsepto na ituro dahil ang mga ito ay parang mga bagay na ginagamit mo na araw-araw!
+O sige, ang **mga variable** ay isa sa mga paborito kong konsepto na ituro dahil talagang parang mga bagay na ginagamit mo na araw-araw!
 
-Isipin ang listahan ng mga contact sa iyong telepono. Hindi mo naman kabisado ang mga numero ng lahat – sa halip, sine-save mo ang "Nanay," "Best Friend," o "Pizza Place na Bukas Hanggang 2 AM" at hinahayaan ang telepono mo na tandaan ang aktwal na mga numero. Ganito rin gumagana ang mga variable! Ang mga ito ay parang mga lalagyan na may label kung saan maaaring mag-imbak ng impormasyon ang iyong programa at kunin ito gamit ang pangalan na may kahulugan.
+Isipin mo ang listahan ng kontak sa iyong telepono. Hindi mo kailangang alalahanin ang bawat numero ng telepono – sa halip, sine-save mo ang "Nanay," "Pinakamatalik na Kaibigan," o "Pizza Place That Delivers Until 2 AM" at hinahayaan mong alalahanin ng iyong telepono ang aktwal na mga numero. Ganon din ang mga variable! Mga lalagyan na may label kung saan pwedeng mag-imbak ng impormasyon ang iyong programa at kunin ito mamaya gamit ang pangalang madaling maintindihan.
 
-Narito ang talagang cool: ang mga variable ay maaaring magbago habang tumatakbo ang iyong programa (kaya nga tinawag na "variable" – gets mo ba?). Parang ina-update mo ang contact ng pizza place kapag nakahanap ka ng mas maganda, ang mga variable ay maaaring ma-update habang natututo ang iyong programa ng bagong impormasyon o habang nagbabago ang mga sitwasyon!
+Ang talagang astig dito: maaaring magbago ang mga variable habang tumatakbo ang iyong programa (kaya 'variable' ang pangalan – nakikita mo?). Parang pag-update mo ng contact sa pizza place kapag may mas magandang napuntahan, puwedeng baguhin ang mga variable habang natututo ang programa ng bagong impormasyon o nagbabago ang mga sitwasyon!
 
-Hayaan mo akong ipakita kung gaano kasimple ito:
+Ipakikita ko sa'yo kung gaano ito kapadaling gawin:
 
 ```javascript
-// Step 1: Creating basic variables
+// Hakbang 1: Gumagawa ng mga pangunahing variable
 const siteName = "Weather Dashboard";        
 let currentWeather = "sunny";               
 let temperature = 75;                       
 let isRaining = false;                      
 ```
-
-**Pag-unawa sa mga konsepto:**
-- **Mag-imbak** ng mga hindi nagbabagong halaga sa `const` variables (tulad ng pangalan ng site)
-- **Gamitin** ang `let` para sa mga halaga na maaaring magbago sa buong programa
-- **Mag-assign** ng iba't ibang uri ng data: strings (text), numbers, at booleans (true/false)
-- **Pumili** ng mga deskriptibong pangalan na nagpapaliwanag kung ano ang nilalaman ng bawat variable
+  
+**Pag-unawa sa mga konseptong ito:**  
+- **Imbak** ang mga hindi nagbabagong halaga gamit ang `const` variables (tulad ng pangalan ng site)  
+- **Gamitin** ang `let` para sa mga halagang puwedeng magbago habang tumatakbo ang programa  
+- **Mag-assign** ng iba't ibang uri ng data: strings (teksto), numero, at boolean (true/false)  
+- **Pumili** ng mga naglalarawang pangalan na nagpapaliwanag kung ano ang nilalaman ng bawat variable  
 
 ```javascript
-// Step 2: Working with objects to group related data
+// Hakbang 2: Paggawa sa mga object para pagsamahin ang magkakaugnay na datos
 const weatherData = {                       
   location: "San Francisco",
   humidity: 65,
   windSpeed: 12
 };
 ```
-
-**Sa itaas, ginawa natin ang:**
-- **Lumikha** ng object para pagsama-samahin ang mga kaugnay na impormasyon ng panahon
-- **Ayusin** ang maraming piraso ng data sa ilalim ng isang pangalan ng variable
-- **Gamitin** ang key-value pairs para malinaw na ma-label ang bawat piraso ng impormasyon
+  
+**Sa itaas, ginawa natin:**  
+- **Lumikha** ng isang object para pagsamahin ang mga kaugnay na impormasyon ng weather  
+- **Iayos** ang maraming piraso ng data sa ilalim ng iisang pangalan ng variable  
+- **Gamitin** ang mga key-value pairs para malinaw na pangalanan ang bawat bahagi ng impormasyon  
 
 ```javascript
-// Step 3: Using and updating variables
+// Hakbang 3: Paggamit at pag-update ng mga variable
 console.log(`${siteName}: Today is ${currentWeather} and ${temperature}°F`);
 console.log(`Wind speed: ${weatherData.windSpeed} mph`);
 
-// Updating changeable variables
+// Pag-update ng mga nababagong variable
 currentWeather = "cloudy";                  
 temperature = 68;                          
 ```
-
-**Unawain natin ang bawat bahagi:**
-- **Ipakita** ang impormasyon gamit ang template literals na may `${}` syntax
-- **I-access** ang mga property ng object gamit ang dot notation (`weatherData.windSpeed`)
-- **I-update** ang mga variable na dineklara gamit ang `let` para ipakita ang nagbabagong kondisyon
-- **Pagsamahin** ang maraming variable para makagawa ng makabuluhang mga mensahe
+  
+**Unawain natin bawat bahagi:**  
+- **Ipakita** ang impormasyon gamit ang template literals na may `${}` syntax  
+- **I-access** ang mga property ng object gamit ang dot notation (`weatherData.windSpeed`)  
+- **I-update** ang mga variable na dineklara gamit ang `let` para ipakita ang nagbabagong kalagayan  
+- **Pagsamahin** ang maraming variable para makalikha ng makahulugang mga mensahe  
 
 ```javascript
-// Step 4: Modern destructuring for cleaner code
+// Hakbang 4: Modernong destructuring para sa mas malinis na kodigo
 const { location, humidity } = weatherData; 
 console.log(`${location} humidity: ${humidity}%`);
 ```
+  
+**Mga kailangang malaman:**  
+- **I-extract** ang mga espesyal na property mula sa mga object gamit ang destructuring assignment  
+- **Lumikha** ng mga bagong variable nang awtomatiko gamit ang mga parehong pangalan tulad ng mga key ng object  
+- **Papasimplehin** ang code sa pamamagitan ng pag-iwas sa paulit-ulit na dot notation  
 
-**Ang kailangan mong malaman:**
-- **Kunwari** ang mga partikular na property mula sa mga object gamit ang destructuring assignment
-- **Lumikha** ng mga bagong variable nang awtomatiko gamit ang parehong mga pangalan ng key ng object
-- **Pagandahin** ang code sa pamamagitan ng pag-iwas sa paulit-ulit na dot notation
+### Control Flow: Pagtuturo sa Iyong Programa na Mag-isip
 
-### Control Flow: Turuan ang Iyong Programa na Mag-isip
+Sige, dito talagang nakakamangha ang programming! Ang **control flow** ay parang pagtuturo sa iyong programa kung paano gumawa ng matalinong mga desisyon, katulad ng ginagawa mo araw-araw kahit hindi mo iniisip.
 
-Okay, dito nagiging sobrang kamangha-mangha ang programming! **Control flow** ay ang pagtuturo sa iyong programa kung paano gumawa ng matatalinong desisyon, katulad ng ginagawa mo araw-araw nang hindi mo namamalayan.
+Isipin mo ito: kaninang umaga marahil nag-isip ka ng mga katulad nito, "Kung umuulan, kukuha ako ng payong. Kung malamig, magsusuot ako ng jacket. Kung nahuhuli ako, hindi na ako kakain ng almusal at kukuha na lang ng kape sa daan." Natural na sinusunod ng iyong utak ang ganitong if-then logic nang maraming beses bawat araw!
 
-Isipin ito: ngayong umaga malamang na dumaan ka sa ganito, "Kung umuulan, magdadala ako ng payong. Kung malamig, magsusuot ako ng jacket. Kung late na ako, hindi na ako mag-aalmusal at bibili na lang ng kape sa daan." Ang utak mo ay natural na sumusunod sa ganitong if-then logic nang maraming beses araw-araw!
+Ito ang dahilan kung bakit parang may katalinuhan ang mga programa at hindi lang sumusunod sa nakababagot, predictable na script. Kaya nilang tingnan ang sitwasyon, suriin ang nangyayari, at tumugon ng naaayon. Parang binibigyan mo ang iyong programa ng utak na kaya nitong mag-adapt at gumawa ng mga pagpili!
 
-Ito ang nagpaparamdam sa mga programa na matalino at buhay sa halip na sumusunod lang sa isang boring na script. Maaari nilang tingnan ang isang sitwasyon, suriin kung ano ang nangyayari, at tumugon nang naaangkop. Parang binibigyan mo ang iyong programa ng utak na maaaring umangkop at gumawa ng mga desisyon!
-
-Gusto mo bang makita kung gaano kaganda ang gumagana nito? Hayaan mo akong ipakita:
+Gusto mo bang makita kung gaano ito kaganda gumana? Ipakikita ko sa’yo:
 
 ```javascript
-// Step 1: Basic conditional logic
+// Hakbang 1: Pangunahing lohika ng kundisyon
 const userAge = 17;
 
 if (userAge >= 18) {
@@ -389,15 +387,15 @@ if (userAge >= 18) {
   console.log(`You'll be able to vote in ${yearsToWait} year(s).`);
 }
 ```
-
-**Narito ang ginagawa ng code na ito:**
-- **Suriin** kung ang edad ng user ay nakakatugon sa kinakailangan para bumoto
-- **Ipatupad** ang iba't ibang code blocks batay sa resulta ng kondisyon
-- **Kalkulahin** at ipakita kung gaano katagal bago maging kwalipikado sa pagboto kung wala pang 18
-- **Magbigay** ng tiyak at kapaki-pakinabang na feedback para sa bawat sitwasyon
+  
+**Ganito ang ginagawa ng code na ito:**  
+- **Suriin** kung ang edad ng user ay sapat na para bumoto  
+- **Isakatuparan** ang iba't ibang mga block ng code depende sa resulta ng kondisyon  
+- **Kalkulahin** at ipakita kung gaano katagal hanggang maging karapat-dapat sa pagboto kung wala pa sa 18  
+- **Magbigay** ng tiyak at kapaki-pakinabang na feedback para sa bawat scenario  
 
 ```javascript
-// Step 2: Multiple conditions with logical operators
+// Hakbang 2: Maramihang mga kondisyon gamit ang mga lohikal na operator
 const userAge = 17;
 const hasPermission = true;
 
@@ -409,26 +407,26 @@ if (userAge >= 18 && hasPermission) {
   console.log("Sorry, you must be at least 16 years old.");
 }
 ```
-
-**Paghiwa-hiwalay kung ano ang nangyayari dito:**
-- **Pagsamahin** ang maraming kondisyon gamit ang `&&` (and) operator
-- **Lumikha** ng hierarchy ng mga kondisyon gamit ang `else if` para sa maraming sitwasyon
-- **I-handle** ang lahat ng posibleng kaso gamit ang huling `else` statement
-- **Magbigay** ng malinaw at maaksiyong feedback para sa bawat iba't ibang sitwasyon
+  
+**Suriin natin kung ano ang nangyayari dito:**  
+- **Pagsamahin** ang maraming kondisyon gamit ang `&&` (at) operator  
+- **Gumawa** ng hierarchy ng mga kondisyon gamit ang `else if` para sa iba't ibang mga scenario  
+- **Hawakan** ang lahat ng posibleng kaso gamit ang huling `else` na pahayag  
+- **Magbigay** ng malinaw at maaksyong feedback para sa bawat ibang sitwasyon  
 
 ```javascript
-// Step 3: Concise conditional with ternary operator
+// Hakbang 3: Maikling kondisyon gamit ang ternary operator
 const votingStatus = userAge >= 18 ? "Can vote" : "Cannot vote yet";
 console.log(`Status: ${votingStatus}`);
 ```
-
-**Ang kailangan mong tandaan:**
-- **Gamitin** ang ternary operator (`? :`) para sa simpleng dalawang opsyon na kondisyon
-- **Isulat** ang kondisyon muna, kasunod ang `?`, pagkatapos ang true result, pagkatapos ang `:`, pagkatapos ang false result
-- **I-apply** ang pattern na ito kapag kailangan mong mag-assign ng mga halaga batay sa mga kondisyon
+  
+**Kailangang tandaan:**  
+- **Gamitin** ang ternary operator (`? :`) para sa simpleng dalawang-opisyong mga kondisyon  
+- **Isulat** ang kondisyon muna, sinusundan ng `?`, pagkatapos ang true result, pagkatapos ay `:`, at pagkatapos ang false result  
+- **I-apply** ang pattern na ito kapag kailangan mong mag-assign ng halaga base sa mga kondisyon  
 
 ```javascript
-// Step 4: Handling multiple specific cases
+// Hakbang 4: Paghawak ng maraming partikular na kaso
 const dayOfWeek = "Tuesday";
 
 switch (dayOfWeek) {
@@ -447,58 +445,57 @@ switch (dayOfWeek) {
     console.log("Invalid day of the week");
 }
 ```
+  
+**Nagagawa ng code na ito:**  
+- **Itugma** ang halaga ng variable sa maraming tiyak na kaso  
+- **I-grupo** ang magkatulad na mga kaso (mga araw sa trabaho vs. weekend)  
+- **Isagawa** ang angkop na block ng code kapag may nahanap na tugma  
+- **Isama** ang `default` na kaso para hawakan ang hindi inaasahang mga halaga  
+- **Gamitin** ang mga `break` na pahayag upang pigilan ang code na magpatuloy sa susunod na kaso  
 
-**Ang code na ito ay nagagawa ang mga sumusunod:**
-- **Itugma** ang halaga ng variable sa maraming partikular na kaso
-- **Pagsamahin** ang mga magkatulad na kaso (weekdays vs. weekends)
-- **Ipatupad** ang naaangkop na code block kapag may natagpuang tugma
-- **Isama** ang `default` case para sa mga hindi inaasahang halaga
-- **Gamitin** ang `break` statements para pigilan ang code na magpatuloy sa susunod na kaso
+> 💡 **Halimbawa mula sa totoong mundo**: Isipin ang control flow na parang pinaka-mapagpasensyang GPS sa mundo na nagbibigay sa'yo ng mga direksyon. Sabi nito, "Kung may traffic sa Main Street, dumaan ka na lang sa highway. Kung may konstruksiyon na sumasakop sa highway, subukan mo ang tanawin na ruta." Ginagamit ng mga programa ang eksaktong ganitong conditional logic upang tumugon nang matalino sa mga iba't ibang sitwasyon at palaging ibigay ang pinakamahusay na karanasan sa mga gumagamit.
 
-> 💡 **Analohiya sa Totoong Buhay**: Isipin ang control flow na parang ang pinaka-mahinahon na GPS na nagbibigay sa iyo ng direksyon. Maaari nitong sabihin, "Kung may trapiko sa Main Street, dumaan sa highway. Kung may construction sa highway, subukan ang scenic route." Ang mga programa ay gumagamit ng eksaktong parehong uri ng conditional logic para tumugon nang matalino sa iba't ibang sitwasyon at palaging magbigay sa mga user ng pinakamahusay na karanasan.
+### 🎯 **Pagsusulit sa Konsepto: Pagsasanay ng Mga Pangunahing Bahagi**
 
-### 🎯 **Pag-check ng Konsepto: Mastery ng Mga Pundasyon**
+**Tingnan natin kung paano mo nauunawaan ang mga pundasyon:**  
+- Kaya mo bang ipaliwanag ang pagkakaiba ng variable at pahayag gamit ang sarili mong salita?  
+- Mag-isip ng tunay na sitwasyon kung saan gagamitin mo ang if-then decision (tulad ng halimbawa tungkol sa pagboto)  
+- Ano ang isang bagay tungkol sa lohika ng programming na ikinagulat mo?  
 
-**Tingnan natin kung paano ka sa mga pundasyon:**
-- Kaya mo bang ipaliwanag ang pagkakaiba ng variable at pahayag sa sarili mong mga salita?
-- Mag-isip ng isang sitwasyon sa totoong buhay kung saan gagamit ka ng if-then na desisyon (tulad ng halimbawa sa pagboto)
-- Ano ang isang bagay tungkol sa lohika ng programming na nagulat ka?
-
-**Mabilis na pampalakas ng kumpiyansa:**
+**Mabilis na pampalakas ng loob:**  
 ```mermaid
 flowchart LR
-    A["📝 Statements<br/>(Instructions)"] --> B["📦 Variables<br/>(Storage)"] --> C["🔀 Control Flow<br/>(Decisions)"] --> D["🎉 Working Program!"]
+    A["📝 Mga Pahayag<br/>(Mga Panuto)"] --> B["📦 Mga Baryabol<br/>(Imbakan)"] --> C["🔀 Daloy ng Kontrol<br/>(Mga Desisyon)"] --> D["🎉 Gumaganang Programa!"]
     
     style A fill:#ffeb3b
     style B fill:#4caf50
     style C fill:#2196f3
     style D fill:#ff4081
-```
+```  
+✅ **Ano ang susunod na darating**: Magkakaroon tayo ng malaking saya habang lalalim pa tayo sa mga konseptong ito habang nagpapatuloy ang ating kamangha-manghang paglalakbay! Sa ngayon, ituon mo muna ang sarili sa excitement tungkol sa lahat ng mga kamangha-manghang posibilidad na naghihintay sa'yo. Kusang matututunan ang mga espesipikong kasanayan at teknik habang magkasama tayong nagsasanay – nangangako ako na magiging mas masaya ito kaysa sa inaasahan mo!
 
-✅ **Ang susunod na darating**: Magkakaroon tayo ng sobrang saya sa paglalim sa mga konseptong ito habang patuloy ang kamangha-manghang paglalakbay na ito! Sa ngayon, mag-focus lang sa pakiramdam ng excitement tungkol sa lahat ng mga kamangha-manghang posibilidad sa hinaharap. Ang mga partikular na kasanayan at teknika ay natural na mananatili habang tayo ay nagsasanay nang magkasama – ipinapangako ko na magiging mas masaya ito kaysa sa inaasahan mo!
+## Mga Kagamitan sa Trabaho
 
-## Mga Kasangkapan sa Trabaho
+Sige, dito na talaga ako nagiging sobrang excited na halos hindi ko na mapigilan ang sarili ko! 🚀 Pag-uusapan natin ang mga kahanga-hangang kagamitan na magpaparamdam sa'yo na parang nabigyan ka ng susi sa isang digital na spaceship.
 
-Sige, dito ako sobrang excited na halos hindi ko mapigilan ang sarili ko! 🚀 Pag-uusapan natin ang mga kamangha-manghang kasangkapan na magpaparamdam sa iyo na parang binigyan ka ng susi sa isang digital spaceship.
+Alam mo kung paano ang chef ay may mga perpektong balanse na kutsilyo na parang bahagi na ng kanilang mga kamay? O kung paanong ang isang musikero ay may gitarang parang kumakanta sa galaw lamang ng kanilang kamay? Sa mga developer, meron kaming sariling bersyon ng mga ganitong mahikang kagamitan, at ito ang magpapahanga sa’yo nang labis – karamihan sa mga ito ay libre!
 
-Alam mo kung paano ang isang chef ay may mga perpektong balanseng kutsilyo na parang extension ng kanilang mga kamay? O kung paano ang isang musikero ay may isang gitara na parang kumakanta sa sandaling hawakan nila ito? Well, ang mga developer ay may sarili naming bersyon ng mga mahiwagang kasangkapan, at narito ang magpapamangha sa iyo – karamihan sa mga ito ay ganap na libre!
+Halos tumatalon ako sa upuan sa saya na maibahagi ito sa'yo dahil binago nito nang husto kung paano tayo bumubuo ng software. Pinag-uusapan natin ang mga AI-powered na katuwang sa pagsulat ng code (hindi ako nagbibiro!), mga cloud environments kung saan maaari kang bumuo ng buong applications mula sa kahit saan basta may Wi-Fi, at mga debugging tools na sobrang sopistikado na parang may X-ray vision ka para sa iyong mga programa.
 
-Halos tumatalon ako sa upuan ko sa pag-iisip na ibahagi ang mga ito sa iyo dahil lubos nilang binago kung paano kami bumubuo ng software. Pinag-uusapan natin ang mga AI-powered coding assistants na maaaring tumulong sa pagsulat ng iyong code (hindi ako nagbibiro!), mga cloud environment kung saan maaari kang bumuo ng buong aplikasyon mula sa kahit saan basta may Wi-Fi, at mga debugging tools na sobrang sopistikado na parang may X-ray vision para sa iyong mga programa.
-
-At narito ang bahagi na nagbibigay pa rin sa akin ng kilabot: ang mga ito ay hindi "beginner tools" na iyong lalampasan. Ang mga ito ay eksaktong parehong mga kasangkapan na ginagamit ng mga developer sa Google, Netflix, at sa indie app studio na gusto mo sa mismong sandaling ito. Magiging pakiramdam mo na parang isang pro sa paggamit ng mga ito!
+At ito ang bahagi na nagpapahanga sa akin: hindi ito mga "kagamitan para sa nagsisimula" na lalampasan mo lang. Ito ang eksaktong mga professional-grade na kagamitan na ginagamit ng mga developer sa Google, Netflix, at sa indie app studio na paborito mo sa kasalukuyan. Parang sobra kang magiging propesyonal sa paggamit nila!
 
 ```mermaid
 graph TD
-    A["💡 Your Idea"] --> B["⌨️ Code Editor<br/>(VS Code)"] 
-    B --> C["🌐 Browser DevTools<br/>(Testing & Debugging)"]
-    C --> D["⚡ Command Line<br/>(Automation & Tools)"]
-    D --> E["📚 Documentation<br/>(Learning & Reference)"]
-    E --> F["🚀 Amazing Web App!"]
+    A["💡 Ang Iyong Ideya"] --> B["⌨️ Code Editor<br/>(VS Code)"] 
+    B --> C["🌐 Browser DevTools<br/>(Pagsusuri at Pag-debug)"]
+    C --> D["⚡ Command Line<br/>(Awtomasyon at Mga Kasangkapan)"]
+    D --> E["📚 Dokumentasyon<br/>(Pagkatuto at Sanggunian)"]
+    E --> F["🚀 Kamangha-manghang Web App!"]
     
     B -.-> G["🤖 AI Assistant<br/>(GitHub Copilot)"]
-    C -.-> H["📱 Device Testing<br/>(Responsive Design)"]
+    C -.-> H["📱 Pagsusuri ng Device<br/>(Responsive Design)"]
     D -.-> I["📦 Package Managers<br/>(npm, yarn)"]
-    E -.-> J["👥 Community<br/>(Stack Overflow)"]
+    E -.-> J["👥 Komunidad<br/>(Stack Overflow)"]
     
     style A fill:#fff59d
     style F fill:#c8e6c9
@@ -506,156 +503,155 @@ graph TD
     style H fill:#f3e5f5
     style I fill:#ffccbc
     style J fill:#e8eaf6
-```
+```  
+### Mga Code Editor at IDE: Mga Bagong Digital na Kaibigan Mo
 
-### Mga Code Editor at IDE: Ang Iyong Bagong Digital na Kaibigan
+Pag-usapan natin ang mga code editor – ito talaga ang magiging bagong paborito mong lugar na titirhan! Isipin mo ito bilang iyong personal na sanctuary sa coding kung saan mo ginugugol ang karamihan ng oras mo sa paglikha at pagpapahusay ng iyong mga digital na likha.
 
-Pag-usapan natin ang mga code editor – ang mga ito ay seryosong magiging iyong bagong paboritong lugar na tambayan! Isipin ang mga ito bilang iyong personal na coding sanctuary kung saan gugugol ka ng karamihan ng iyong oras sa paglikha at pagperpekto ng iyong mga digital na likha.
+Ngunit ang talagang mahika ng mga modernong editor: hindi lang sila basta mga magandang text editor. Parang may pinakamahusay na sumusuportang mentor sa coding na nakaupo lang sa tabi mo 24/7. Nahuhuli nila ang iyong mga typo bago mo pa mapansin, nagmumungkahi ng mga pag-ayos na magpapagawa sa'yo na parang henyo, tinutulungan kang maintindihan kung ano ang ginagawa ng bawat bahagi ng code, at may ilan na maaari pang hulaan kung ano ang susulat mo at nag-aalok na tapusin ang mga naiisip mo!
 
-Pero narito ang talagang mahiwaga tungkol sa mga modernong editor: hindi lang sila magarbong text editor. Parang may pinakamatalino, supportive na coding mentor na nakaupo sa tabi mo 24/7. Nahuhuli nila ang iyong mga typo bago mo pa mapansin, nagmumungkahi ng mga pagpapabuti na magpaparamdam sa iyo na parang henyo, tumutulong sa iyo na maunawaan kung ano ang ginagawa ng bawat piraso ng code, at ang ilan sa kanila ay maaaring hulaan pa kung ano ang susunod mong itatype at mag-alok na tapusin ang iyong iniisip!
+Naalala ko noong unang beses kong natuklasan ang auto-completion – ang pakiramdam ko ay para akong nasa hinaharap. Sisimulan mo lang magsulat, saka sasabihin ng editor, "Uy, ito ba ang function na iniisip mo na gumagawa ng eksaktong kailangan mo?" Parang may reader ng isip bilang coding buddy mo!
 
-Naalala ko noong una kong natuklasan ang auto-completion – literal na pakiramdam ko ay nasa hinaharap na ako. Nagsisimula kang mag-type ng isang bagay, at sinasabi ng editor mo, "Hoy, iniisip mo ba ang function na ito na eksaktong kailangan mo?" Parang may mind reader bilang coding buddy mo!
+**Ano ang gumagawa sa mga editor na ito na kamangha-mangha?**
 
-**Ano ang nagpapaganda sa mga editor na ito?**
+Nag-aalok ang mga modernong code editor ng kahanga-hangang mga katangian na idinisenyo para mapabilis ang iyong produktibidad:
 
-Ang mga modernong code editor ay nag-aalok ng kahanga-hangang hanay ng mga tampok na idinisenyo upang mapalakas ang iyong produktibidad:
+| Katangian | Ano ang Ginagawa Nito | Bakit Ito Nakakatulong |  
+|---------|--------------|--------------|  
+| **Syntax Highlighting** | Kulayan ang iba't ibang bahagi ng iyong code | Ginagawa itong mas madaling basahin at tuklasin ang mga error |  
+| **Auto-completion** | Nagmumungkahi ng code habang nagsusulat ka | Pinapabilis ang coding at binabawasan ang typo |  
+| **Debugging Tools** | Tinutulungan kang mahanap at ayusin ang mga error | Nagtitipid ng oras sa pag-troubleshoot |  
+| **Extensions** | Nagdaragdag ng mga specialized na feature | Inaangkop ang iyong editor para sa anumang teknolohiya |  
+| **AI Assistants** | Nagmumungkahi ng code at paliwanag | Pinapabilis ang pagkatuto at produktibidad |  
 
-| Tampok | Ano ang Ginagawa Nito | Bakit Ito Nakakatulong |
-|-------|-----------------------|-----------------------|
-| **Syntax Highlighting** | Kulayan ang iba't ibang bahagi ng iyong code | Ginagawang mas madali ang pagbabasa ng code at makita ang mga error |
-| **Auto-completion** | Nagmumungkahi ng code habang nagta-type ka | Pinapabilis ang pag-code at binabawasan ang mga typo |
-| **Mga Tool sa Debugging** | Tumutulong sa paghahanap at pag-aayos ng mga error | Nakakatipid ng oras sa pag-troubleshoot |
-| **Mga Extension** | Nagdaragdag ng mga espesyal na tampok | I-customize ang editor para sa anumang teknolohiya |
-| **AI Assistants** | Nagmumungkahi ng code at mga paliwanag | Pinapabilis ang pag-aaral at produktibidad |
+> 🎥 **Video Resource**: Gusto mo bang makita ang mga gamit na ito sa aksyon? Tignan ang [Tools of the Trade video](https://youtube.com/watch?v=69WJeXGBdxg) para sa isang komprehensibong overview.
 
-> 🎥 **Video Resource**: Gusto mo bang makita ang mga tool na ito sa aksyon? Tingnan ang [Tools of the Trade video](https://youtube.com/watch?v=69WJeXGBdxg) para sa isang komprehensibong overview.
+#### Mga Inirekomendang Editor para sa Web Development
 
-#### Mga Inirerekomendang Editor para sa Web Development
+**[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (Libre)  
+- Pinaka-popular sa mga web developer  
+- Mahusay na ecosystem ng extension  
+- Built-in na terminal at Git integration  
+- **Mga kailangang extension**:  
+  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI-powered na mga mungkahing code  
+  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Kooperasyon sa real-time  
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Automatic na pag-format ng code  
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Tagahanap ng typo sa code  
 
-**[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (Libre)
-- Pinakapopular sa mga web developer
-- Napakahusay na extension ecosystem
-- Built-in terminal at Git integration
-- **Mga kailangang extension**:
-  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI-powered code suggestions
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Real-time collaboration
-  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Automatic code formatting
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Nag-detect ng mga typo sa iyong code
+**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (Bayad, libre para sa mga estudyante)  
+- Advanced na debugging at testing tools  
+- Matalinong auto completion ng code  
+- Built-in na version control  
 
-**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (May bayad, libre para sa mga estudyante)
-- Advanced debugging at testing tools
-- Intelligent code completion
-- Built-in version control
+**Cloud-Based IDEs** (Iba't ibang presyo)  
+- [GitHub Codespaces](https://github.com/features/codespaces) - Buong VS Code sa browser mo  
+- [Replit](https://replit.com/) - Magaling para sa pag-aaral at pagbabahagi ng code  
+- [StackBlitz](https://stackblitz.com/) - Instant, full-stack na web development  
 
-**Cloud-Based IDEs** (Iba't ibang presyo)
-- [GitHub Codespaces](https://github.com/features/codespaces) - Buong VS Code sa iyong browser
-- [Replit](https://replit.com/) - Maganda para sa pag-aaral at pagbabahagi ng code
-- [StackBlitz](https://stackblitz.com/) - Instant, full-stack web development
+> 💡 **Tip sa Pagsisimula**: Magsimula sa Visual Studio Code – libre ito, malawak ang paggamit sa industriya, at may malaking komunidad na gumagawa ng mga kapaki-pakinabang na tutorial at extension.
 
-> 💡 **Tip sa Pagsisimula**: Magsimula sa Visual Studio Code – ito ay libre, malawakang ginagamit sa industriya, at may malaking komunidad na gumagawa ng mga kapaki-pakinabang na tutorial at extension.
+### Mga Web Browser: Iyong Sekretong Laboratoryo sa Pag-unlad
 
-### Mga Web Browser: Ang Iyong Lihim na Laboratoryo sa Pag-develop
+O sige, maghanda kang ma-wow nang husto! Alam mo kung paano mo ginagamit ang mga browser para mag-scroll sa social media at manood ng mga video? Ito pala ay itinago ang isang kahanga-hangang sekretong laboratoryo para sa mga developer na buong panahon ay naghihintay lang na madiskubre mo!
 
-Okay, maghanda para sa isang mind-blowing na karanasan! Alam mo kung paano mo ginagamit ang mga browser para mag-scroll sa social media at manood ng mga video? Well, lumalabas na may tinatago silang kamangha-manghang lihim na laboratoryo ng developer na naghihintay lang na matuklasan mo!
+Tuwing nag-right-click ka sa isang webpage at pinili ang "Inspect Element," binubuksan mo ang isang nakatagong mundo ng mga developer tools na tunay na mas makapangyarihan kaysa sa ilang mahal na software na dating binabayaran ko ng daan-daang dolyar. Para itong matuklasan na ang karaniwan mong kusina ay may itinatagong propesyonal na laboratoryo ng chef sa likod ng isang lihim na panel!
+Nang unang ipakita sa akin ng isang tao ang browser DevTools, ginugol ko ang halos tatlong oras na nagki-click lang at nagsabing "HINTAY, KAYA NITO YAN?!" Literal mong ma-e-edit ang kahit anong website nang real-time, makita kung gaano kabilis mag-load ang lahat, subukan kung paano itsura ang site mo sa iba't ibang device, at maging debug ang JavaScript na parang pro na talaga. Talagang nakakagulat!
 
-Tuwing mag-right-click ka sa isang webpage at piliin ang "Inspect Element," binubuksan mo ang isang nakatagong mundo ng mga developer tools na mas makapangyarihan pa kaysa sa ilang mahal na software na dati kong binabayaran ng daan-daang dolyar. Parang natuklasan mo na ang iyong ordinaryong kusina ay may nakatagong laboratoryo ng propesyonal na chef sa likod ng isang lihim na panel!
-Noong unang ipinakita sa akin ang browser DevTools, ginugol ko ang halos tatlong oras sa kakaklik at sinasabi, "WAIT, KAYA NIYA RIN YUN?!" Literal na pwede mong i-edit ang kahit anong website nang real-time, makita kung gaano kabilis mag-load ang lahat, subukan kung paano ang hitsura ng site mo sa iba't ibang device, at kahit i-debug ang JavaScript na parang isang pro. Talagang nakakagulat!
+**Ito ang dahilan kung bakit browsers ang iyong lihim na sandata:**
 
-**Narito kung bakit ang mga browser ang iyong lihim na sandata:**
+Kapag gumawa ka ng website o web application, kailangan mong makita kung paano ito itsura at asal sa totoong mundo. Hindi lang ipinapakita ng browsers ang iyong gawa, nagbibigay din ito ng detalyadong feedback tungkol sa performance, accessibility, at mga posibleng isyu.
 
-Kapag gumagawa ka ng website o web application, kailangan mong makita kung paano ito tumatakbo sa totoong mundo. Hindi lang ipinapakita ng mga browser ang iyong gawa, nagbibigay din sila ng detalyadong feedback tungkol sa performance, accessibility, at mga posibleng isyu.
+#### Browser Developer Tools (DevTools)
 
-#### Mga Tool ng Browser Developer (DevTools)
+Kasama sa mga modernong browser ang kumpletong development suites:
 
-Ang mga modernong browser ay may kasamang komprehensibong development suites:
-
-| Kategorya ng Tool | Ano ang Ginagawa Nito | Halimbawa ng Paggamit |
-|--------------------|-----------------------|-----------------------|
-| **Element Inspector** | Tingnan at i-edit ang HTML/CSS nang real-time | Ayusin ang styling para makita agad ang resulta |
-| **Console** | Tingnan ang mga error message at subukan ang JavaScript | I-debug ang mga problema at mag-eksperimento sa code |
+| Tool Category | Ano ang Ginagawa Nito | Halimbawa ng Paggamit |
+|---------------|----------------------|----------------------|
+| **Element Inspector** | Tingnan at i-edit ang HTML/CSS nang real-time | Ayusin ang estilo para makita agad ang resulta |
+| **Console** | Tingnan ang mga error message at subukan ang JavaScript | I-debug ang mga problema at magsubok ng code |
 | **Network Monitor** | Subaybayan kung paano naglo-load ang mga resources | I-optimize ang performance at oras ng pag-load |
-| **Accessibility Checker** | Subukan ang inclusive design | Siguraduhing gumagana ang site mo para sa lahat ng user |
-| **Device Simulator** | I-preview sa iba't ibang laki ng screen | Subukan ang responsive design nang hindi kailangan ng maraming device |
+| **Accessibility Checker** | Subukan ang inclusive design | Siguraduhing gumagana ang site para sa lahat ng user |
+| **Device Simulator** | Tingnan sa iba't ibang sukat ng screen | Subukan ang responsive design nang hindi nangangailangan ng maraming device |
 
 #### Mga Inirerekomendang Browser para sa Development
 
-- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** - Standard na DevTools sa industriya na may malawak na dokumentasyon
-- **[Firefox](https://developer.mozilla.org/docs/Tools)** - Mahusay na CSS Grid at accessibility tools
-- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** - Batay sa Chromium na may mga resource mula sa Microsoft para sa mga developer
+- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** - Industry-standard DevTools na may malawak na dokumentasyon
+- **[Firefox](https://developer.mozilla.org/docs/Tools)** - Napakahusay sa CSS Grid at accessibility tools
+- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** - Naka-base sa Chromium na may mga developer resources ng Microsoft
 
-> ⚠️ **Mahalagang Tip sa Pagsusuri**: Laging subukan ang iyong mga website sa iba't ibang browser! Ang gumagana nang perpekto sa Chrome ay maaaring magmukhang iba sa Safari o Firefox. Ang mga propesyonal na developer ay nagsusuri sa lahat ng pangunahing browser upang matiyak ang pare-parehong karanasan ng user.
+> ⚠️ **Mahalagang Tip sa Pagsusuri**: Palaging subukan ang iyong mga website sa maraming browser! Ang gumagana nang perpekto sa Chrome ay maaaring magmukhang iba sa Safari o Firefox. Sinusubukan ng mga propesyonal na developer sa lahat ng pangunahing browser para siguraduhin ang consistent na karanasan.
 
-### Mga Tool sa Command Line: Ang Iyong Gateway sa Developer Superpowers
+### Mga Command Line Tools: Ang Iyong Gate papuntang Developer Superpowers
 
-Okay, magpakatotoo tayo tungkol sa command line, dahil gusto kong marinig mo ito mula sa isang taong talagang nakakaintindi. Noong una ko itong nakita – isang nakakatakot na itim na screen na may kumikislap na teksto – literal na naisip ko, "Hindi, hindi talaga! Mukha itong galing sa pelikula ng hacker noong 1980s, at siguradong hindi ako matalino para dito!" 😅
+Sige, magkaroon tayo ng isang tapat na usapan tungkol sa command line, dahil gusto kong marinig mo ito mula sa isang taong tunay na nakakaintindi. Nang una kong makita ito – yung nakakatakot na itim na screen na kumikislap ang text – literal kong inisip, "Hindi, hindi talaga! Para ito sa pelikula ng hacker noong 1980s, at hindi ako sapat ang talino para dito!" 😅
 
-Pero narito ang gusto kong sana sinabi sa akin noon, at sinasabi ko sa'yo ngayon: ang command line ay hindi nakakatakot – para kang nakikipag-usap nang direkta sa iyong computer. Isipin mo ito na parang pagkakaiba ng pag-order ng pagkain sa isang fancy app na may mga larawan at menu (na maganda at madali) kumpara sa pagpunta sa paborito mong lokal na restaurant kung saan alam ng chef ang gusto mo at kayang magluto ng perpekto sa simpleng pagsabi mo ng "surprise me with something amazing."
+Pero heto ang gusto kong sana ay nasabi sa akin noon, at ngayon sinasabi ko sa iyo: hindi nakakatakot ang command line – parang isang direktang pag-uusap mo sa iyong computer ito. Isipin mo ito na parang pagkakaiba ng pag-order ng pagkain sa isang fancy na app na may mga larawan at menu (na madali at maganda) kumpara sa pagpasok mo sa paborito mong local na kainan kung saan kilala ng chef ang gusto mo at kayang lutuin agad ang espesyal na sorpresa sa sinabi mo lang na "surprise me with something amazing."
 
-Ang command line ang lugar kung saan ang mga developer ay parang wizard. Magta-type ka ng ilang tila mahiwagang salita (okay, mga command lang sila, pero parang mahiwaga!), pindutin ang enter, at BOOM – nakagawa ka ng buong istruktura ng proyekto, naka-install ng makapangyarihang mga tool mula sa iba't ibang panig ng mundo, o na-deploy ang app mo sa internet para makita ng milyon-milyong tao. Kapag naranasan mo ang kapangyarihang iyon, talagang nakakaadik!
+Dito sa command line pumupunta ang mga developer para maramdaman ang kanilang kapangyarihan. Magta-type ka lang ng ilang tila mahiwagang salita (okay, mga command lang sila, pero parang mahiwaga!), pindutin ang enter, at BOOM – nakagawa ka na ng buong project structure, naka-install ng mga makapangyarihang tools mula sa buong mundo, o nailunsad ang app mo sa internet para makita ng milyun-milyong tao. Kapag natikman mo na ang kapangyarihang iyon, adik ka na talaga!
 
-**Bakit magiging paborito mo ang command line:**
+**Bakit magiging paborito mong tool ang command line:**
 
-Habang maganda ang graphical interfaces para sa maraming gawain, ang command line ay mahusay sa automation, precision, at bilis. Maraming development tools ang pangunahing gumagana sa pamamagitan ng command line interfaces, at ang pag-aaral kung paano gamitin ang mga ito nang epektibo ay maaaring lubos na mapabuti ang iyong produktibidad.
+Habang maganda ang graphical interfaces para sa maraming gawain, nangingibabaw ang command line sa automation, katumpakan, at bilis. Maraming development tools ang gumagana gamit ang command line interfaces, at ang pag-aaral gamitin ito nang mahusay ay makakapagpataas nang husto ng iyong produktibidad.
 
 ```bash
-# Step 1: Create and navigate to project directory
+# Hakbang 1: Gumawa at mag-navigate sa direktoryo ng proyekto
 mkdir my-awesome-website
 cd my-awesome-website
 ```
 
 **Ano ang ginagawa ng code na ito:**
-- **Gumawa** ng bagong directory na tinatawag na "my-awesome-website" para sa iyong proyekto
-- **Mag-navigate** sa bagong directory para simulan ang trabaho
+- **Gumawa** ng bagong direktoryo na tinatawag na "my-awesome-website" para sa iyong proyekto
+- **Pumaroon** sa bagong likhang direktoryo para simulan ang trabaho
 
 ```bash
-# Step 2: Initialize project with package.json
+# Hakbang 2: I-initialize ang proyekto gamit ang package.json
 npm init -y
 
-# Install modern development tools
+# Mag-install ng mga modernong kasangkapan sa pag-develop
 npm install --save-dev vite prettier eslint
 npm install --save-dev @eslint/js
 ```
 
-**Hakbang-hakbang, narito ang nangyayari:**
-- **I-initialize** ang bagong Node.js project gamit ang default settings sa pamamagitan ng `npm init -y`
+**Hakbang-hakbang, ganito ang nangyayari:**
+- **I-initialize** ang bagong Node.js project gamit ang default na settings gamit ang `npm init -y`
 - **I-install** ang Vite bilang modernong build tool para sa mabilis na development at production builds
-- **Magdagdag** ng Prettier para sa automatic code formatting at ESLint para sa code quality checks
-- **Gamitin** ang `--save-dev` flag para markahan ang mga ito bilang development-only dependencies
+- **Idagdag** ang Prettier para sa automatic na pag-format ng code at ESLint para sa pagsusuri ng kalidad ng code
+- **Gamitin** ang flag na `--save-dev` para markahan ito bilang development-only na dependencies
 
 ```bash
-# Step 3: Create project structure and files
+# Hakbang 3: Gumawa ng istruktura ng proyekto at mga file
 mkdir src assets
 echo '<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello World</h1></body></html>' > index.html
 
-# Start development server
+# Simulan ang development server
 npx vite
 ```
 
-**Sa itaas, ginawa natin ang:**
-- **Inayos** ang proyekto sa pamamagitan ng paggawa ng hiwalay na mga folder para sa source code at assets
-- **Nag-generate** ng basic HTML file na may tamang istruktura ng dokumento
+**Sa itaas, ginawa namin ang mga sumusunod:**
+- **Inayos** ang proyekto sa pamamagitan ng paggawa ng hiwalay na folders para sa source code at assets
+- **Nagawa** ng basic na HTML file na may tamang istruktura ng dokumento
 - **Sinimulan** ang Vite development server para sa live reloading at hot module replacement
 
 #### Mahahalagang Command Line Tools para sa Web Development
 
 | Tool | Layunin | Bakit Kailangan Mo Ito |
-|------|---------|-------------------------|
-| **[Git](https://git-scm.com/)** | Version control | Subaybayan ang mga pagbabago, makipagtulungan sa iba, i-backup ang iyong trabaho |
-| **[Node.js & npm](https://nodejs.org/)** | JavaScript runtime & package management | Patakbuhin ang JavaScript sa labas ng browser, mag-install ng modernong development tools |
-| **[Vite](https://vitejs.dev/)** | Build tool & dev server | Napakabilis na development na may hot module replacement |
-| **[ESLint](https://eslint.org/)** | Code quality | Awtomatikong hanapin at ayusin ang mga problema sa iyong JavaScript |
-| **[Prettier](https://prettier.io/)** | Code formatting | Panatilihing maayos at nababasa ang iyong code |
+|------|---------|-----------------------|
+| **[Git](https://git-scm.com/)** | Version control | Subaybayan ang mga pagbabago, makipagtulungan, at backup ang trabaho |
+| **[Node.js & npm](https://nodejs.org/)** | JavaScript runtime at package management | Patakbuhin ang JavaScript sa labas ng browser, i-install ang modernong development tools |
+| **[Vite](https://vitejs.dev/)** | Build tool at dev server | Napakabilis na development na may hot module replacement |
+| **[ESLint](https://eslint.org/)** | Kalidad ng code | Awtomatikong hanapin at ayusin ang mga problema sa iyong JavaScript |
+| **[Prettier](https://prettier.io/)** | Pag-format ng code | Panatilihing konsistent ang format at nababasang mabuti ang code |
 
-#### Mga Opsyon na Specific sa Platform
+#### Mga Platform-Specific na Opsyon
 
 **Windows:**
-- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Moderno, mayaman sa feature na terminal
-- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Makapangyarihang scripting environment
+- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Moderno at maraming feature na terminal
+- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Malakas na scripting environment
 - **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 - Tradisyunal na Windows command line
 
 **macOS:**
 - **[Terminal](https://support.apple.com/guide/terminal/)** 💻 - Built-in na terminal application
-- **[iTerm2](https://iterm2.com/)** - Pinahusay na terminal na may advanced features
+- **[iTerm2](https://iterm2.com/)** - Pinalawak na terminal na may advanced features
 
 **Linux:**
 - **[Bash](https://www.gnu.org/software/bash/)** 💻 - Standard na Linux shell
@@ -663,194 +659,194 @@ npx vite
 
 > 💻 = Pre-installed sa operating system
 
-> 🎯 **Learning Path**: Simulan sa mga basic na command tulad ng `cd` (change directory), `ls` o `dir` (list files), at `mkdir` (gumawa ng folder). Magpraktis gamit ang mga modernong workflow command tulad ng `npm install`, `git status`, at `code .` (binubuksan ang kasalukuyang directory sa VS Code). Habang nagiging komportable ka, natural mong matututunan ang mas advanced na mga command at automation techniques.
+> 🎯 **Learning Path**: Magsimula sa mga basic command tulad ng `cd` (palitan ng directory), `ls` o `dir` (ipakita ang mga files), at `mkdir` (gumawa ng folder). Mag-ensayo gamit ang modernong workflow commands gaya ng `npm install`, `git status`, at `code .` (bubuksan ang kasalukuyang directory sa VS Code). Kapag naging komportable ka na, natural mong matututunan ang mas advanced na mga command at automation techniques.
 
-### Dokumentasyon: Ang Iyong Palaging Available na Mentor sa Pag-aaral
+### Dokumentasyon: Ang Iyong Laging Nariyan na Learning Mentor
 
-Okay, hayaan mo akong magbahagi ng isang lihim na magpapagaan ng pakiramdam mo bilang baguhan: kahit ang pinaka-experienced na mga developer ay gumugugol ng malaking bahagi ng kanilang oras sa pagbabasa ng dokumentasyon. At hindi ito dahil hindi nila alam ang kanilang ginagawa – ito ay tanda ng karunungan!
+Sige, ibabahagi ko sa iyo ang isang maliit na sikreto na magpapagaan ng loob mo bilang isang baguhan: kahit ang pinaka-experienced na developer ay gumugugol ng malaking bahagi ng kanilang oras sa pagbabasa ng dokumentasyon. At hindi ito dahil hindi nila alam ang ginagawa nila – ito ay palatandaan ng karunungan!
 
-Isipin ang dokumentasyon na parang may access ka sa mga pinaka-mahinahon at may kaalaman na guro sa mundo na available 24/7. Nahihirapan sa isang problema ng alas-dos ng umaga? Nandiyan ang dokumentasyon na may mainit na virtual na yakap at eksaktong sagot na kailangan mo. Gusto mong matutunan ang isang cool na bagong feature na pinag-uusapan ng lahat? Nandiyan ang dokumentasyon na may step-by-step na mga halimbawa. Sinusubukang intindihin kung bakit gumagana ang isang bagay sa ganitong paraan? Tama ka – handa ang dokumentasyon na ipaliwanag ito sa paraang magpapaklik sa'yo!
+Isipin ang dokumentasyon na parang may access ka sa mga pinakapasyenteng at madalas sanang mga guro na available 24/7. Nabarahan ka ng problema sa alas-dos ng madaling araw? Naroon ang dokumentasyon na may mainit-init na virtual na yakap at eksaktong sagot na kailangan mo. Gusto mong matutunan ang tungkol sa pinakabagong feature na pinag-uusapan ng lahat? Sagot ka ng dokumentasyon na may step-by-step na mga halimbawa. Sinusubukan mong intindihin kung bakit gumagana ang isang bagay sa ganoong paraan? Siyempre, nandiyan ang dokumentasyon para ipaliwanag ito nang sa wakas ay mag-click sa iyo!
 
-Narito ang isang bagay na lubos na nagbago ng aking pananaw: ang mundo ng web development ay gumagalaw nang napakabilis, at walang sinuman (ibig sabihin, wala talaga!) ang nagtatago ng lahat sa memorya. Nakita ko ang mga senior developer na may 15+ taon ng karanasan na naghahanap ng basic syntax, at alam mo kung ano? Hindi iyon nakakahiya – iyon ay matalino! Hindi ito tungkol sa pagkakaroon ng perpektong memorya; ito ay tungkol sa pag-alam kung saan makakahanap ng maaasahang sagot nang mabilis at pag-unawa kung paano ito ilapat.
+Narito ang isang bagay na talagang nagbago ng aking pananaw: ang mundo ng web development ay napakabilis ang takbo, at wala (ibig sabihin, walang sinuman!) ang naka-memorize lahat. Nakita ko na ang mga senior developers na may higit 15 taong karanasan ay naghahanap pa rin ng basic syntax, at alam mo ba? Hindi ito nakakahiya – ito ay matalino! Hindi ito tungkol sa perfect memory; ito ay tungkol sa kung saan mabilis kang makakahanap ng maaasahang sagot at kung paano ito ilalapat.
 
-**Narito kung saan nangyayari ang tunay na magic:**
+**Dito nagaganap ang tunay na mahika:**
 
-Ang mga propesyonal na developer ay gumugugol ng malaking bahagi ng kanilang oras sa pagbabasa ng dokumentasyon – hindi dahil hindi nila alam ang kanilang ginagawa, kundi dahil ang web development landscape ay mabilis na nagbabago kaya't ang pananatiling updated ay nangangailangan ng patuloy na pag-aaral. Ang mahusay na dokumentasyon ay tumutulong sa iyo na maunawaan hindi lang *paano* gamitin ang isang bagay, kundi *bakit* at *kailan* ito gamitin.
+Ang mga propesyonal na developer ay gumugugol ng malaking bahagi ng kanilang oras sa pagbabasa ng dokumentasyon – hindi dahil hindi nila alam ang ginagawa nilang trabaho, kundi dahil napakabilis na nagbabago ang landscape ng web development kaya't ang manatiling up-to-date ay nangangailangan ng patuloy na pag-aaral. Mahusay na dokumentasyon ang tumutulong sa iyo na maintindihan hindi lang *paano* gagamitin ang isang bagay, kundi *bakit* at *kailan* gagamitin ito.
 
-#### Mahahalagang Dokumentasyon na Resources
+#### Mahahalagang Documentation Resources
 
 **[Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web)**
-- Ang gold standard para sa dokumentasyon ng web technology
+- Ang gold standard para sa web technology documentation
 - Komprehensibong gabay para sa HTML, CSS, at JavaScript
-- May kasamang impormasyon sa browser compatibility
-- Nagtatampok ng mga praktikal na halimbawa at interactive na demo
+- Kasama ang impormasyon tungkol sa compatibility ng browser
+- May praktikal na mga halimbawa at interactive demos
 
-**[Web.dev](https://web.dev)** (by Google)
-- Mga modernong best practices sa web development
-- Mga gabay sa performance optimization
+**[Web.dev](https://web.dev)** (mula sa Google)
+- Mga best practice para sa modernong web development
+- Mga gabay sa pag-optimize ng performance
 - Mga prinsipyo ng accessibility at inclusive design
-- Mga case study mula sa mga totoong proyekto
+- Mga case study mula sa totoong proyekto
 
 **[Microsoft Developer Documentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)**
-- Mga resource para sa Edge browser development
-- Mga gabay sa Progressive Web App
-- Mga insight sa cross-platform development
+- Mga resources para sa pag-develop ng Edge browser
+- Mga gabay para sa Progressive Web Apps
+- Insights sa cross-platform development
 
 **[Frontend Masters Learning Paths](https://frontendmasters.com/learn/)**
-- Mga structured learning curricula
-- Mga video course mula sa mga eksperto sa industriya
+- Structured na mga kurikulum sa pag-aaral
+- Mga video courses mula sa eksperto sa industriya
 - Mga hands-on coding exercises
 
-> 📚 **Study Strategy**: Huwag subukang i-memorize ang dokumentasyon – sa halip, matutong i-navigate ito nang epektibo. I-bookmark ang mga madalas gamitin na reference at magpraktis sa paggamit ng search functions para mabilis na mahanap ang partikular na impormasyon.
+> 📚 **Strategiya sa Pag-aaral**: Huwag subukang i-memorize ang dokumentasyon – sa halip, matutong mag-navigate nito nang mahusay. I-bookmark ang mga madalas gamitin na references at magsanay sa paggamit ng search functions para mabilis makahanap ng partikular na impormasyon.
 
-### 🔧 **Tool Mastery Check: Ano ang Nakakaengganyo sa Iyo?**
+### 🔧 **Tool Mastery Check: Ano ang Pinakanakakaresonate sa Iyo?**
 
-**Maglaan ng sandali para pag-isipan:**
-- Aling tool ang pinaka-nakaka-excite subukan muna? (Walang maling sagot!)
-- Ang command line ba ay nakakatakot pa rin, o interesado ka na dito?
-- Naiisip mo bang gamitin ang browser DevTools para silipin ang likod ng paborito mong mga website?
+**Maglaan ng sandali para isipin:**
+- Aling tool ang pinakagusto mong subukan muna? (Walang maling sagot!)
+- Nakakatakot pa rin ba ang command line, o naiintriga ka na ba rito?
+- Maiimagine mo bang gamitin ang browser DevTools para tignan ang likod ng mga paborito mong website?
 
 ```mermaid
-pie title "Developer Time Spent With Tools"
-    "Code Editor" : 40
-    "Browser Testing" : 25
-    "Command Line" : 15
-    "Reading Docs" : 15
-    "Debugging" : 5
+pie title "Oras na Ginugol ng Developer sa mga Kagamitan"
+    "Editor ng Kodigo" : 40
+    "Pagsubok sa Browser" : 25
+    "Linyang Pangkomando" : 15
+    "Pagbabasa ng Dokumento" : 15
+    "Pag-aayos ng Mali" : 5
 ```
+> **Masayang insight**: Karamihan sa mga developer ay gumugugol ng mga 40% ng kanilang oras sa code editor, pero mapapansin mo na malaking bahagi ng oras ay napupunta sa pagsubok, pag-aaral, at paglutas ng problema. Ang programming ay hindi lang tungkol sa pagsusulat ng code – ito ay tungkol sa paggawa ng mga karanasan!
 
-> **Nakakatuwang insight**: Karamihan sa mga developer ay gumugugol ng halos 40% ng kanilang oras sa kanilang code editor, pero pansinin kung gaano karaming oras ang napupunta sa pagsusuri, pag-aaral, at paglutas ng problema. Ang programming ay hindi lang tungkol sa pagsusulat ng code – ito ay tungkol sa paglikha ng mga karanasan!
+✅ **Saloobin na dapat pag-isipan**: Narito ang isang bagay na dapat mong pagnilayan – paano kaya nagkakaiba ang mga tools para sa paggawa ng website (development) sa mga tools para sa pagdisenyo ng hitsura nito (design)? Para itong pagkakaiba ng arkitekto na nagdidisenyo ng magandang bahay at ng kontraktor na gumagawa nito. Parehong mahalaga, pero kailangan nila ng magkakaibang toolbox! Ang ganitong paraan ng pag-iisip ay talagang makakatulong sa iyo na makita ang mas malaking larawan kung paano nabubuo ang mga website.
 
-✅ **Pag-isipan ito**: Narito ang isang kawili-wiling bagay na pag-isipan – paano mo iniisip na ang mga tool para sa paggawa ng mga website (development) ay maaaring naiiba sa mga tool para sa pagdidisenyo kung paano ito magmumukha (design)? Parang ang pagkakaiba ng pagiging arkitekto na nagdidisenyo ng magandang bahay at ang kontraktor na talagang gumagawa nito. Parehong mahalaga, pero kailangan ng magkaibang toolbox! Ang ganitong uri ng pag-iisip ay talagang makakatulong sa iyo na makita ang mas malaking larawan kung paano nabubuo ang mga website.
+## GitHub Copilot Agent Challenge 🚀
 
-## Hamon ng GitHub Copilot Agent 🚀
+Gamitin ang Agent mode para tapusin ang sumusunod na hamon:
 
-Gamitin ang Agent mode para kumpletuhin ang sumusunod na hamon:
+**Deskripsyon:** Tuklasin ang mga tampok ng isang modernong code editor o IDE at ipakita kung paano nito mapapabuti ang iyong workflow bilang web developer.
 
-**Deskripsyon:** Tuklasin ang mga feature ng isang modernong code editor o IDE at ipakita kung paano nito mapapabuti ang iyong workflow bilang isang web developer.
-
-**Prompt:** Pumili ng code editor o IDE (tulad ng Visual Studio Code, WebStorm, o isang cloud-based IDE). Maglista ng tatlong feature o extension na tumutulong sa iyo na magsulat, mag-debug, o mag-maintain ng code nang mas epektibo. Para sa bawat isa, magbigay ng maikling paliwanag kung paano ito nakakatulong sa iyong workflow.
+**Prompt:** Pumili ng code editor o IDE (tulad ng Visual Studio Code, WebStorm, o isang cloud-based IDE). Ilahad ang tatlong features o extensions na tumutulong sa iyo na magsulat, mag-debug, o mag-maintain ng code nang mas epektibo. Para sa bawat isa, magbigay ng maikling paliwanag kung paano nito pinapabuti ang iyong workflow.
 
 ---
 
 ## 🚀 Hamon
 
-**Alright, detective, handa ka na ba sa iyong unang kaso?**
+**Sige, detective, handa ka na ba sa iyong unang kaso?**
 
-Ngayon na mayroon kang kahanga-hangang pundasyon, mayroon akong adventure na makakatulong sa iyo na makita kung gaano ka-diverse at kamangha-mangha ang programming world. At pakinggan mo – hindi pa ito tungkol sa pagsusulat ng code, kaya walang pressure doon! Isipin mo ang sarili mo bilang isang programming language detective sa iyong unang exciting na kaso!
+Ngayon na meron ka nang napakagandang pundasyon, may isang adventure ako na makakatulong sa iyo na makita kung gaano talaga kahalaga at kaiba-iba ang mundo ng programming. At tandaan – hindi pa ito tungkol sa pagsusulat ng code, kaya walang pressure! Isipin mo ang sarili mo bilang isang programming language detective sa iyong unang kapanapanabik na kaso!
 
-**Ang iyong misyon, kung pipiliin mong tanggapin ito:**
-1. **Maging isang language explorer**: Pumili ng tatlong programming languages mula sa ganap na magkaibang mundo – marahil isa na gumagawa ng mga website, isa na gumagawa ng mga mobile app, at isa na nagpoproseso ng data para sa mga siyentipiko. Maghanap ng mga halimbawa ng parehong simpleng gawain na isinulat sa bawat wika. Pangako, mamamangha ka sa kung gaano sila kaiba habang ginagawa ang parehong bagay!
+**Ang iyong misyon, kung tatanggapin mo ito:**
+1. **Maging isang language explorer**: Pumili ng tatlong programming languages mula sa ganap na magkakaibang uniberso – siguro isang ginagamit para gumawa ng website, isang para sa paggawa ng mobile apps, at isang para sa pagproseso ng data para sa siyentipiko. Humanap ng mga halimbawa ng parehong simpleng gawain na nakasulat sa bawat wika. Pahangaing talaga ang sarili mo kung gaano sila kaiba habang pareho ang ginagawa!
 
-2. **Tuklasin ang kanilang origin stories**: Ano ang nagpapasikat sa bawat wika? Narito ang isang cool na fact – bawat programming language ay nilikha dahil may nag-isip, "Alam mo ba? Dapat may mas magandang paraan para lutasin ang partikular na problemang ito." Kaya mo bang alamin kung ano ang mga problemang iyon? Ang ilan sa mga kuwentong ito ay talagang nakakatuwa!
+2. **Alamin ang kanilang mga pinagmulan**: Ano ang nagpapaspecial sa bawat wika? Narito ang isang cool na katotohanan – bawat programming language ay ginawa dahil may nag-isip, "Alam mo, dapat may mas maganda pang paraan para lutasin ang partikular na problemang ito." Maiintindihan mo ba kung ano ang mga problemang iyon? Ang ilan sa mga kuwentong ito ay talagang nakakapanabik!
 
-3. **Kilalanin ang mga komunidad**: Tingnan kung gaano ka-welcoming at passionate ang komunidad ng bawat wika. Ang iba ay may milyon-milyong developer na nagbabahagi ng kaalaman at tumutulong sa isa't isa, ang iba naman ay mas maliit pero sobrang close-knit at supportive. Magugustuhan mo ang makakita ng iba't ibang personalidad ng mga komunidad na ito!
+3. **Kilalanin ang mga community**: Tingnan kung gaano kasarap at passionate ang bawat community ng mga language na ito. Ang iba ay may milyon-milyong developer na nagbabahagi ng kaalaman at nagtutulungan, ang iba naman ay mas maliit pero napakalapit at supportive. Magugustuhan mo ang iba't ibang personalidad ng mga komunidad na ito!
 
-4. **Sundin ang iyong kutob**: Aling wika ang pinaka-approachable para sa iyo ngayon? Huwag mag-stress sa paggawa ng "perpektong" pagpili – sundin lang ang iyong instincts! Walang maling sagot dito, at palagi mong pwedeng tuklasin ang iba sa hinaharap.
+4. **Sundin ang gut feeling mo**: Aling language ang pinaka-comfortable sa pakiramdam mo ngayon? Huwag mag-alala tungkol sa paggawa ng "perfect" na desisyon – pakinggan lang ang instincts mo! Talagang walang maling sagot dito, at maaari kang mag-explore ng iba pang wika mamaya.
 
-**Bonus detective work**: Subukan mong tuklasin kung anong mga major websites o apps ang ginawa gamit ang bawat wika. Sigurado akong magugulat ka sa malaman kung ano ang nagpapatakbo sa Instagram, Netflix, o sa mobile game na hindi mo matigil sa paglalaro!
+**Bonus detective work**: Tingnan kung makikita mo kung anong mga major websites o apps ang ginawa gamit ang bawat language. Garantiya, magugulat ka sa malalaman mo kung ano ang nagpapagana sa Instagram, Netflix, o yung mobile game na hindi mo mapigilang laruin!
 
-> 💡 **Tandaan**: Hindi mo sinusubukang maging eksperto sa alinman sa mga wikang ito ngayon. Kilalanin mo lang ang lugar bago ka magdesisyon kung saan mo gustong mag-setup. Maglaan ng oras, mag-enjoy, at hayaan ang iyong curiosity na gabayan ka!
+> 💡 **Tandaan**: Hindi mo kailangang maging eksperto sa alinman sa mga wikang ito ngayon. Kilalanin mo lang muna ang paligid bago ka magdesisyon kung saan ka magtatayo ng shop. Maglaan ng oras, magsaya, at hayaan ang iyong curiosity ang maggabay sa iyo!
 
-## Ipagdiwang ang Iyong Natuklasan!
+## Ipagdiwang natin ang Iyong Natuklasan!
 
-Grabe, ang dami mong natutunan ngayong araw! Excited akong makita kung gaano karami sa kahanga-hangang paglalakbay na ito ang nanatili sa iyo. At tandaan – hindi ito isang pagsusulit kung saan kailangan mong maging perpekto. Mas parang selebrasyon ito ng lahat ng cool na bagay na natutunan mo tungkol sa kamangha-manghang mundong papasukin mo!
+Grabe, ang dami mong natutunan na kahanga-hanga ngayon! Talagang excited ako na makita kung gaano karami ang tumatak sa iyo sa kahanga-hangang paglalakbay na ito. At tandaan – hindi ito isang pagsusulit kung saan kailangang perfect ang iyong sagot. Isa itong selebrasyon ng lahat ng cool na bagay na natutunan mo tungkol sa kahanga-hangang mundong ito na iyong susubukan!
 
-[Kunin ang post-lesson quiz](https://ff-quizzes.netlify.app/web/)
-## Review & Pag-aaral sa Sarili
+[Take the post-lesson quiz](https://ff-quizzes.netlify.app/web/)
 
-**Maglaan ng oras para mag-explore at mag-enjoy!**
+## Review & Self Study
 
-Marami kang natutunan ngayong araw, at dapat mo itong ipagmalaki! Ngayon ang masayang bahagi – ang pag-explore sa mga paksa na nagpasiklab ng iyong interes. Tandaan, hindi ito takdang-aralin – ito ay isang pakikipagsapalaran!
+**Maglaan ng oras para mag-explore at magsaya!**
+Nasaklaw mo ang maraming bagay ngayon, at iyon ay isang bagay na dapat ipagmalaki! Ngayon naman ay ang masayang bahagi – ang pagsaliksik sa mga paksang nagpalakas ng iyong kuryosidad. Tandaan, ito ay hindi takdang-aralin – ito ay isang pakikipagsapalaran!
 
-**Mas malalim na pag-aaral sa mga bagay na kinagigiliwan mo:**
+**Sumisid nang mas malalim sa mga bagay na nagpapasaya sa iyo:**
 
-**Subukan ang mga programming language:**
-- Bisitahin ang mga opisyal na website ng 2-3 programming language na nagustuhan mo. Bawat isa ay may sariling personalidad at kwento!
-- Subukan ang mga online coding playground tulad ng [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), o [Replit](https://replit.com/). Huwag matakot mag-eksperimento – wala kang masisira!
-- Magbasa tungkol sa kung paano nagsimula ang paborito mong programming language. Totoo, ang ilan sa mga kwentong ito ay nakakatuwa at makakatulong sa iyong maunawaan kung bakit gumagana ang mga language sa ganitong paraan.
+**Magsanay gamit ang mga programming language:**
+- Bisitahin ang mga opisyal na website ng 2-3 na mga lengguwaheng nakatawag-pansin sa iyo. Bawat isa ay may kanya-kanyang personalidad at kwento!
+- Subukan ang ilang online coding playgrounds tulad ng [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), o [Replit](https://replit.com/). Huwag matakot mag-eksperimento – hindi mo masisira ang kahit ano!
+- Basahin kung paano nagsimula ang iyong paboritong lengguwahe. Talaga, ang ilan sa mga kwento ng pinagmulan ay kawili-wili at makakatulong sa iyo na maunawaan kung bakit gumagana ang mga lengguwahe sa ganoong paraan.
 
-**Sanayin ang sarili sa mga bagong tools:**
-- I-download ang Visual Studio Code kung hindi mo pa nagagawa – libre ito at magugustuhan mo ito!
-- Maglaan ng ilang minuto para mag-browse sa Extensions marketplace. Para itong app store para sa iyong code editor!
-- Buksan ang Developer Tools ng iyong browser at mag-click-click lang. Huwag mag-alala kung hindi mo pa naiintindihan ang lahat – magpakilala ka lang sa kung ano ang nandiyan.
+**Magsanay gamit ang mga bagong kagamitan:**
+- I-download ang Visual Studio Code kung hindi mo pa nagagawa – libre ito at tiyak na magugustuhan mo!
+- Maglaan ng ilang minuto sa pag-browse sa Extensions marketplace. Parang app store ito para sa iyong code editor!
+- Buksan ang Developer Tools ng iyong browser at mag-click-click lang. Huwag mag-alala kung hindi mo maintindihan lahat – maging pamilyar ka lang sa mga naroon.
 
 **Sumali sa komunidad:**
-- Sundan ang ilang developer communities sa [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/), o [GitHub](https://github.com/). Ang programming community ay sobrang welcoming sa mga baguhan!
-- Manood ng mga beginner-friendly coding videos sa YouTube. Maraming magagaling na creators na naaalala kung paano magsimula.
-- Isaalang-alang ang pagsali sa mga local meetups o online communities. Maniwala ka, mahilig tumulong ang mga developer sa mga baguhan!
+- Sundan ang ilang mga developer communities sa [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/), o [GitHub](https://github.com/). Napaka-welcome ng komunidad ng programming sa mga bagong salta!
+- Manood ng mga beginner-friendly coding videos sa YouTube. Maraming mahusay na mga creator na naaalala kung ano ang maging nagsisimula pa lang.
+- Isaalang-alang ang pagsali sa mga lokal na meetups o online communities. Maniwala ka, gustong-gusto ng mga developer na tumulong sa mga bagong salta!
 
-> 🎯 **Pakinggan, ito ang gusto kong tandaan mo**: Hindi inaasahan na magiging coding wizard ka agad-agad! Sa ngayon, kinikilala mo pa lang ang kamangha-manghang mundo na magiging bahagi mo. Maglaan ng oras, mag-enjoy sa paglalakbay, at tandaan – bawat developer na hinahangaan mo ay minsan ding nasa eksaktong posisyon mo ngayon, excited at maaaring medyo nalilito. Normal lang yan, at ibig sabihin tama ang ginagawa mo!
+> 🎯 **Pakinggan, ito ang nais kong tandaan mo**: Hindi inaasahan na maging coding wizard ka agad-agad! Sa ngayon, nakikilala mo pa lang ang kahanga-hangang bagong mundong ito na papasukan mo. Huwag magmadali, sulitin ang paglalakbay, at tandaan – bawat developer na hinahangaan mo ay minsang nakaupo mismo kung saan ka naroon ngayon, masaya at baka medyo nala-loka pa. Normal iyon, at nangangahulugan na tama ang ginagawa mo!
 
 
 
-## Takdang-Aralin
+## Assignment
 
-[Pagbabasa ng Docs](assignment.md)
+[Reading the Docs](assignment.md)
 
-> 💡 **Kaunting tulong para sa iyong takdang-aralin**: Gustung-gusto kong makita kang mag-explore ng mga tools na hindi pa natin napag-uusapan! Iwasan ang mga editors, browsers, at command line tools na natalakay na natin – mayroong buong kamangha-manghang uniberso ng mga development tools na naghihintay na ma-discover. Hanapin ang mga actively maintained tools na may vibrant at helpful na communities (karaniwang may pinakamahusay na tutorials at supportive na tao kapag kailangan mo ng tulong).
+> 💡 **Isang maliit na paalala para sa iyong takdang-aralin**: Gustong-gusto kong makita kang magsaliksik ng ilang mga tool na hindi pa natin natalakay! I-skip muna ang mga editor, browser, at command line tools na napagusapan na natin – mayroong isang buong kamangha-manghang uniberso ng mga kahanga-hangang development tools na naghihintay lang na matuklasan. Maghanap ng mga aktibong pinapanatili at may buhay at tumutulong na komunidad (karaniwan silang may pinakamahusay na mga tutorial at pinakamatulungin na tao kapag ikaw ay natigil at kailangang humingi ng tulong).
 
 ---
 
-## 🚀 Timeline ng Iyong Programming Journey
+## 🚀 Ang Iyong Timeline sa Paglalakbay sa Programming
 
-### ⚡ **Ano ang Pwede Mong Gawin sa Susunod na 5 Minuto**
-- [ ] I-bookmark ang 2-3 programming language websites na nagustuhan mo
+### ⚡ **Mga Magagawa Mo sa Susunod na 5 Minuto**
+- [ ] I-bookmark ang 2-3 na mga website ng programming languages na nakatawag-pansin sa iyo
 - [ ] I-download ang Visual Studio Code kung hindi mo pa nagagawa
-- [ ] Buksan ang DevTools ng iyong browser (F12) at mag-click-click sa kahit anong website
+- [ ] Buksan ang DevTools ng iyong browser (F12) at mag-click sa kahit anong website
 - [ ] Sumali sa isang programming community (Dev.to, Reddit r/webdev, o Stack Overflow)
 
-### ⏰ **Ano ang Pwede Mong Makamit sa Loob ng Isang Oras**
-- [ ] Kumpletuhin ang post-lesson quiz at pag-isipan ang iyong mga sagot
-- [ ] I-set up ang VS Code gamit ang GitHub Copilot extension
-- [ ] Subukan ang "Hello World" example sa 2 magkaibang programming language online
-- [ ] Manood ng "Day in the Life of a Developer" video sa YouTube
-- [ ] Simulan ang iyong programming language detective work (mula sa challenge)
+### ⏰ **Mga Magagawa Mo na Sa Isang Oras na Ito**
+- [ ] Tapusin ang post-lesson quiz at magmuni-muni sa iyong mga sagot
+- [ ] I-setup ang VS Code gamit ang extension na GitHub Copilot
+- [ ] Subukan ang isang "Hello World" na halimbawa sa 2 magkaibang programming languages online
+- [ ] Manood ng video na "Day in the Life of a Developer" sa YouTube
+- [ ] Simulan ang iyong pagtuklas sa programming language (mula sa hamon)
 
-### 📅 **Ang Iyong Pakikipagsapalaran sa Loob ng Isang Linggo**
-- [ ] Kumpletuhin ang takdang-aralin at mag-explore ng 3 bagong development tools
-- [ ] Sundan ang 5 developers o programming accounts sa social media
-- [ ] Subukan ang paggawa ng isang maliit na bagay sa CodePen o Replit (kahit "Hello, [Your Name]!")
-- [ ] Magbasa ng isang developer blog post tungkol sa coding journey ng isang tao
-- [ ] Sumali sa isang virtual meetup o manood ng programming talk
-- [ ] Simulan ang pag-aaral ng napiling language gamit ang online tutorials
+### 📅 **Iyong Linggong Pakikipagsapalaran**
+- [ ] Tapusin ang takdang-aralin at tuklasin ang 3 bagong development tools
+- [ ] Sundan ang 5 developer o programming accounts sa social media
+- [ ] Subukang gumawa ng maliit na proyekto sa CodePen o Replit (kahit "Hello, [Your Name]!" lang!)
+- [ ] Basahin ang isang developer blog post tungkol sa paglalakbay ng isang programmer
+- [ ] Sumali sa virtual meetup o manood ng programming talk
+- [ ] Simulan ang pag-aaral ng napiling lengguwahe gamit ang mga online tutorials
 
-### 🗓️ **Ang Iyong Transformasyon sa Loob ng Isang Buwan**
-- [ ] Gumawa ng iyong unang maliit na proyekto (kahit simpleng webpage ay pwede!)
-- [ ] Mag-contribute sa isang open-source project (simulan sa documentation fixes)
-- [ ] Mag-mentor ng isang tao na nagsisimula pa lang sa programming journey
-- [ ] Gumawa ng iyong developer portfolio website
-- [ ] Kumonekta sa mga local developer communities o study groups
+### 🗓️ **Buwanang Pagbabago Mo**
+- [ ] Gumawa ng iyong unang maliit na proyekto (kahit simpleng webpage lang!)
+- [ ] Mag-ambag sa isang open-source project (simulan sa mga dokumentasyon)
+- [ ] Mag-mentor ng isang taong nagsisimula pa lang sa programming
+- [ ] Gumawa ng portfolio website para sa developer mo
+- [ ] Kumonekta sa mga lokal na komunidad ng developer o study groups
 - [ ] Simulan ang pagpaplano ng iyong susunod na learning milestone
 
-### 🎯 **Final Reflection Check-in**
+### 🎯 **Panghuling Pagmumuni-muni**
 
-**Bago ka magpatuloy, maglaan ng sandali para magdiwang:**
-- Ano ang isang bagay tungkol sa programming na nagpasaya sa iyo ngayong araw?
-- Aling tool o konsepto ang gusto mong i-explore muna?
-- Ano ang nararamdaman mo tungkol sa pagsisimula ng programming journey na ito?
+**Bago ka magpatuloy, maglaan ng sandali upang magdiwang:**
+- Ano ang isa sa mga bagay tungkol sa programming na nagpasiya sa iyo ngayon?
+- Anong tool o konsepto ang gusto mong tuklasin muna?
+- Paano ang pakiramdam mo tungkol sa pagsisimula ng paglalakbay na ito sa programming?
 - Ano ang isang tanong na gusto mong itanong sa isang developer ngayon?
 
 ```mermaid
 journey
-    title Your Confidence Building Journey
-    section Today
-      Curious: 3: You
-      Overwhelmed: 4: You
+    title Ang Iyong Paglalakbay sa Pagpapalakas ng Kumpiyansa
+    section Ngayon
+      Mausisa: 3: You
+      Nawala sa Lakas ng Damdamin: 4: You
       Excited: 5: You
-    section This Week
-      Exploring: 4: You
-      Learning: 5: You
-      Connecting: 4: You
-    section Next Month
-      Building: 5: You
-      Confident: 5: You
-      Helping Others: 5: You
+    section Sa Linggong Ito
+      Nag-eeksplora: 4: You
+      Nag-aaral: 5: You
+      Nakikipag-ugnayan: 4: You
+    section Sa Susunod na Buwan
+      Nagtatayo: 5: You
+      Kumpiyansa: 5: You
+      Tumatulong sa Iba: 5: You
 ```
-
-> 🌟 **Tandaan**: Bawat eksperto ay minsang naging baguhan. Bawat senior developer ay minsang naramdaman ang eksaktong nararamdaman mo ngayon – excited, maaaring medyo nalilito, at tiyak na curious sa mga posibilidad. Nasa maganda kang kumpanya, at ang paglalakbay na ito ay magiging kamangha-mangha. Maligayang pagdating sa kahanga-hangang mundo ng programming! 🎉
+> 🌟 **Tandaan**: Bawat eksperto ay minsang nagsimula bilang baguhan. Bawat senior developer ay minsang naramdaman ang eksaktong nararamdaman mo ngayon – excited, maaaring medyo natalo, at siguradong mausisa tungkol sa mga posibleng gawin. Kasama ka sa kahanga-hangang grupo, at ang paglalakbay na ito ay magiging pambihira. Maligayang pagdating sa kahanga-hangang mundo ng programming! 🎉
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na mapagkakatiwalaang pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pahayag ng Pagsuway**:
+Ang dokumentong ito ay naisalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakitandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na bahagi. Ang orihinal na dokumento sa kanyang sariling wika ang dapat ituring na pangunahing sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

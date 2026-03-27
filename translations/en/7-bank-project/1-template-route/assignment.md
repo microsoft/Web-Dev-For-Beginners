@@ -1,28 +1,51 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8223e429218befa731dd5bfd22299520",
-  "translation_date": "2025-08-28T11:22:44+00:00",
-  "source_file": "7-bank-project/1-template-route/assignment.md",
-  "language_code": "en"
-}
--->
-# Improve the routing
+# Improve the Routing
 
 ## Instructions
 
-The route declarations currently only specify the template ID to use. However, when displaying a new page, additional functionality is sometimes required. Let's enhance our routing implementation with two new features:
+Now that you've built a basic routing system, it's time to enhance it with professional features that improve user experience and provide better developer tools. Real-world applications need more than just template switching – they require dynamic page titles, lifecycle hooks, and extensible architectures.
 
-- Assign titles to each template and update the browser's window title with the new title whenever the template changes.
-- Include an option to execute some code after the template changes. For example, we want to log `'Dashboard is shown'` in the developer console every time the dashboard page is displayed.
+In this assignment, you'll extend your routing implementation with two essential features that are commonly found in production web applications. These enhancements will make your banking app feel more polished and provide a foundation for future functionality.
+
+The routes declaration contains currently only the template ID to use. But when displaying a new page, a bit more is needed sometimes. Let's improve our routing implementation with two additional features:
+
+### Feature 1: Dynamic Page Titles
+**Objective:** Give titles to each template and update the window title with this new title when the template changes.
+
+**Why this matters:**
+- **Improves** user experience by showing descriptive browser tab titles
+- **Enhances** accessibility for screen readers and assistive technologies  
+- **Provides** better bookmarking and browser history context
+- **Follows** professional web development best practices
+
+**Implementation approach:**
+- **Extend** the routes object to include title information for each route
+- **Modify** the `updateRoute()` function to update `document.title` dynamically
+- **Test** that titles change correctly when navigating between screens
+
+### Feature 2: Route Lifecycle Hooks  
+**Objective:** Add an option to run some code after the template changes. We want to print `'Dashboard is shown'` in the developer console every time the dashboard page is displayed.
+
+**Why this matters:**
+- **Enables** custom logic execution when specific routes load
+- **Provides** hooks for analytics, logging, or initialization code
+- **Creates** a foundation for more complex route behaviors
+- **Demonstrates** the observer pattern in web development
+
+**Implementation approach:**
+- **Add** an optional callback function property to route configurations
+- **Execute** the callback function (if present) after template rendering completes
+- **Ensure** the feature works for any route with a defined callback
+- **Test** that the console message appears when visiting the dashboard
 
 ## Rubric
 
-| Criteria | Outstanding                                                                                                                       | Satisfactory                                                                                                                                                                             | Needs Improvement                                       |
+| Criteria | Exemplary                                                                                                                          | Adequate                                                                                                                                                                                  | Needs Improvement                                       |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-|          | Both features are implemented and functional. Titles and code execution also work for any new route added to the `routes` declaration. | Both features work, but the behavior is hardcoded and cannot be configured through the `routes` declaration. Adding a third route with title and code execution either doesn't work or works partially. | One of the features is missing or not functioning correctly. |
+|          | The two features are implemented and working. Title and code addition also work for a new route added in the `routes` declaration. | The two features work, but the behavior is hardcoded and not configurable via the `routes` declaration. Adding a third route with title and code addition does not work or works partially. | One of the features is missing or not working properly. |
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the definitive source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

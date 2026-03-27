@@ -2,27 +2,27 @@
 
 ## Muhtasari wa Mradi
 
-Hii ni hifadhidata ya mtaala wa elimu kwa kufundisha misingi ya maendeleo ya wavuti kwa wanaoanza. Mtaala ni kozi kamilifu ya wiki 12 iliyotengenezwa na Wakili wa Wingu wa Microsoft, ukiwa na masomo 24 ya vitendo yanayohusisha JavaScript, CSS, na HTML.
+Hii ni hifadhidata ya mtaala wa kielimu kwa kufundisha misingi ya maendeleo ya wavuti kwa wanaoanza. Mtaala huu ni kozi kamili ya wiki 12 iliyotengenezwa na Wakili wa Microsoft Cloud, ikiwa na masomo 24 ya vitendo yanayohusisha JavaScript, CSS, na HTML.
 
-### Vipengele Muhimu
+### Sehemu Muhimu
 
-- **Yaliyomo ya Kielimu**: Masomo 24 yaliyoandaliwa kwa muundo wa miradi
-- **Miradi ya Vitendo**: Terrarium, Mchezo wa Kuandika, Kiendelezi cha Kivinjari, Mchezo wa Anga, App ya Benki, Mhariri wa Nambari, na Msaidizi wa Chat wa AI
-- **Mitihani ya Kuingiliana**: Mitihani 48 yenye maswali 3 kila moja (uchunguzi kabla/baada ya somo)
+- **Maudhui ya Kielimu**: Masomo 24 yaliyopangwa katika moduli za miradi
+- **Miradi ya Vitendo**: Terrarium, Mchezo wa Kutaipa, Kiongezi cha Kivinjari, Mchezo wa Anga, Programu ya Benki, Mhariri wa Msimbo, na Msaidizi wa Mazungumzo wa AI
+- **Mitozo ya Kuingiliana**: Mitozo 48 yenye maswali 3 kila mmoja (vipimo kabla/baada ya somo)
 - **Msaada wa Lugha Nyingi**: Tafsiri za kiotomatiki kwa lugha 50+ kupitia GitHub Actions
 - **Teknolojia**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (kwa miradi ya AI)
 
-### Muundo
+### Miundo
 
-- Hifadhidata ya kielimu yenye muundo wa somo
+- Hifadhidata ya kielimu yenye muundo wa masomo
 - Kila folda ya somo ina README, mifano ya msimbo, na suluhisho
-- Miradi huru katika folda tofauti (quiz-app, miradi mbalimbali ya somo)
+- Miradi huru katika folda tofauti (quiz-app, miradi mbalimbali ya masomo)
 - Mfumo wa tafsiri ukitumia GitHub Actions (co-op-translator)
-- Nyaraka hutolewa kupitia Docsify na zinapatikana kama PDF
+- Hati hutolewa kupitia Docsify na zinapatikana pia kama PDF
 
 ## Amri za Kuanzisha
 
-Hifadhidata hii ni kwa lengo la matumizi ya yaliyomo kielimu. Kwa kazi na miradi maalum:
+Hifadhidata hii ni kwa ajili ya matumizi ya maudhui ya kielimu hasa. Kwa kufanya kazi na miradi maalum:
 
 ### Kuanzisha Hifadhidata Kuu
 
@@ -31,7 +31,7 @@ git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Kuanzisha Quiz App (Vue 3 + Vite)
+### Kuanzisha App ya Mitozo (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
@@ -48,15 +48,15 @@ cd 7-bank-project/api
 npm install
 npm start          # Anza seva ya API
 npm run lint       # Endesha ESLint
-npm run format     # Panga kwa Prettier
+npm run format     # Panga na Prettier
 ```
 
-### Miradi ya Kiendelezi cha Kivinjari
+### Miradi ya Kiongezi cha Kivinjari
 
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Fuata maelekezo ya upakiaji wa programu-jalizi maalum za kivinjari
+# Fuata maelekezo ya kupakia viendelezi maalum kwa kivinjari
 ```
 
 ### Miradi ya Mchezo wa Anga
@@ -64,10 +64,10 @@ npm install
 ```bash
 cd 6-space-game/solution
 npm install
-# Fungua index.html katika kivinjari au tumia Live Server
+# Fungua index.html kwenye kivinjari au tumia Live Server
 ```
 
-### Mradi wa Chat (Python Backend)
+### Mradi wa Mazungumzo (Python Backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -78,114 +78,114 @@ python api.py
 
 ## Mtiririko wa Maendeleo
 
-### Kwa Wasaidizi wa Maudhui
+### Kwa Wachangia Maudhui
 
-1. **Fungua 'fork' ya hifadhidata** kwenye akaunti yako ya GitHub
-2. **Nakili fork yako** ndani ya kompyuta
+1. **Fungua hifadhidata** kwenye akaunti yako ya GitHub
+2. **Nakili hifadhidata ya macho** kwa kompyuta yako
 3. **Tengeneza tawi jipya** kwa mabadiliko yako
-4. Fanya mabadiliko kwa yaliyomo ya somo au mifano ya msimbo
-5. Jaribu mabadiliko yoyote ya msimbo katika folda zinazohusiana za mradi
-6. Wasilisha mahitaji ya kusukuma ikifuata miongozo ya michango
+4. Fanya mabadiliko kwa maudhui ya somo au mifano ya msimbo
+5. Jaribu mabadiliko yoyote ya msimbo katika folda husika za miradi
+6. Wasilisha ombi la kuunganisha (pull request) ukizingatia miongozo ya mchango
 
 ### Kwa Wanafunzi
 
-1. Fikia 'fork' au nakili hifadhidata
-2. Tembea folda za masomo kwa mfuatano
-3. Soma faili za README kwa kila somo
-4. Kamilisha mitihani ya kabla ya somo kwenye https://ff-quizzes.netlify.app/web/
-5. Fanya kazi kupitia mifano ya msimbo kwenye folda za masomo
+1. Fungua au nakili hifadhidata
+2. Vuka kwenye folda za somo mfululizo
+3. Soma faili za README za kila somo
+4. Kamilisha mitihani kabla ya somo katika https://ff-quizzes.netlify.app/web/
+5. Fanya kazi na mifano ya msimbo katika folda za masomo
 6. Kamilisha majukumu na changamoto
-7. Fanya mitihani ya baada ya somo
+7. Fanya mitihani baada ya somo
 
 ### Maendeleo ya Moja kwa Moja
 
-- **Nyaraka**: Endesha `docsify serve` kwenye mzizi (bandari 3000)
-- **Quiz App**: Endesha `npm run dev` kwenye folda ya quiz-app
-- **Miradi**: Tumia VS Code Live Server kwa miradi ya HTML
-- **Miradi ya API**: Endesha `npm start` kwenye folda husika za API
+- **Nyaraka**: Endesha `docsify serve` kutoka mzizi (bandari 3000)
+- **App ya Mitozo**: Endesha `npm run dev` katika folda ya quiz-app
+- **Miradi**: Tumia ugani wa VS Code Live Server kwa miradi ya HTML
+- **Miradi ya API**: Endesha `npm start` katika folda husika za API
 
-## Maelekezo ya Upimaji
+## Maelekezo ya Kupima
 
-### Upimaji wa Quiz App
+### Kupima App ya Mitozo
 
 ```bash
 cd quiz-app
 npm run lint       # Angalia matatizo ya mtindo wa msimbo
-npm run build      # Thibitisha ujenzi unafanikiwa
+npm run build      # Hakiki ujenzi unafanikiwa
 ```
 
-### Upimaji wa API ya Benki
+### Kupima API ya Benki
 
 ```bash
 cd 7-bank-project/api
 npm run lint       # Angalia matatizo ya mtindo wa msimbo
-node server.js     # Thibitisha server inaanza bila makosa
+node server.js     # Hakiki seva inaanza bila makosa
 ```
 
-### Mbinu ya Upimaji kwa Juu
+### Njia ya Kupima kwa Ujumla
 
-- Hii ni hifadhidata ya elimu bila majaribio ya kiotomatiki ya kina
-- Upimaji wa mkono unazingatia:
-  - Mifano ya msimbo inatimia bila makosa
-  - Viungo kwenye nyaraka vinatumika ipasavyo
-  - Ujenzi wa mradi hufanyika kwa mafanikio
-  - Mifano inafuata mbinu bora
+- Hii ni hifadhidata ya kielimu bila vipimo vya kiotomatiki kwa kina
+- Ukaguzi wa mkono unalenga:
+  - Mifano ya msimbo ifanyike bila makosa
+  - Viungo katika nyaraka vifanye kazi ipasavyo
+  - Ujenzi wa miradi ukamilike bila matatizo
+  - Mifano ifuatane na mbinu bora
 
-### Ukaguzi wa Kabla ya Kuwasilisha
+### Ukaguzi Kabla ya Kuwasilisha
 
 - Endesha `npm run lint` katika folda zenye package.json
-- Hakiki viungo vya markdown ni sahihi
-- Jaribu mifano ya msimbo katika kivinjari au Node.js
-- Angalia tafsiri zinahifadhi muundo mzuri
+- Hakiki viungo vya markdown
+- Jaribu mifano ya msimbo kwenye kivinjari au Node.js
+- Hakiki tafsiri ziendelee na muundo sahihi
 
 ## Miongozo ya Mtindo wa Msimbo
 
 ### JavaScript
 
-- Tumia sintaksia ya kisasa ya ES6+
-- Fuata usanidi wa ESLint uliowekwa katika miradi
-- Tumia majina ya maana kwa mabadiliko na kazi kwa ufafanuzi wa kielimu
+- Tumia msimbo wa kisasa ES6+
+- Fuata mipangilio ya ESLint iliyopewa katika miradi
+- Tumia majina yenye maana kwa mabadiliko na kazi kwa ufafanuzi wa kielimu
 - Ongeza maelezo kuelezea dhana kwa wanafunzi
-- Panga kwa Prettier pale panapopangizwa
+- Panga msimbo kwa Prettier pale panapopangwa
 
 ### HTML/CSS
 
-- Vipengele vya semantic vya HTML5
-- Kanuni za muundo unaobadilika (responsive)
-- Mazingira ya majina ya darasa yaliyobainishwa wazi
-- Maelezo ya mbinu za CSS kwa wanafunzi
+- Matumizi ya vipengele vya semantic HTML5
+- Kanuni za muundo unaojibadilisha (responsive design)
+- Mamlaka ya jina la daraja kwa uwazi
+- Maelezo yanayoelezea mbinu za CSS kwa wanafunzi
 
 ### Python
 
 - Miongozo ya mtindo wa PEP 8
-- Mifano wazi, ya kielimu
-- Vidokezo vya aina walivyonufaika na kujifunza
+- Mifano wazi, ya kielimu ya msimbo
+- Maelezo ya aina (type hints) mahali panaposaidia kujifunza
 
 ### Nyaraka za Markdown
 
-- Hieraki ya vichwa vya habari
-- Sehemu za msimbo zenye lugha
-- Viungo vya rasilimali za ziada
-- Picha na manyumbulizo kwenye folda za `images/`
-- Nyaraka za alt kwa picha kwa upatikanaji
+- Mipangilio wazi ya vichwa vya habari
+- Vipande vya msimbo vyenye ufafanuzi wa lugha
+- Viungo kwa rasilimali za ziada
+- Picha na skrini katika folda za `images/`
+- Maelezo ya alt kwa picha kwa upatikanaji
 
 ### Mpangilio wa Faili
 
-- Masomo namba mfuatano (1-getting-started-lessons, 2-js-basics, n.k)
-- Mradi wowote una folda za `solution/` na mara nyingi `start/` au `your-work/`
-- Picha huhifadhiwa katika folda maalum za masomo `images/`
-- Tafsiri katika muundo wa `translations/{language-code}/`
+- Masomo yamepangiwa nambari mfululizo (1-getting-started-lessons, 2-js-basics, n.k.)
+- Kila mradi una folda za `solution/` na mara nyingi `start/` au `your-work/`
+- Picha zinahifadhiwa katika folda za somo maalum `images/`
+- Tafsiri zinapatikana katika muundo wa `translations/{language-code}/`
 
 ## Ujenzi na Uenezaji
 
-### Uenezaji wa Quiz App (Azure Static Web Apps)
+### Uenezaji wa App ya Mitozo (Azure Static Web Apps)
 
-quiz-app imepangiliwa kwa uenezaji wa Azure Static Web Apps:
+App ya quiz imewekwa kwa ajili ya uenezaji wa Azure Static Web Apps:
 
 ```bash
 cd quiz-app
 npm run build      # Inaunda folda ya dist/
-# Inaweka kupitia mtiririko wa kazi wa GitHub Actions wakati wa kusukuma kwenye main
+# Inaendesha kupitia mtiririko wa GitHub Actions wakati wa kusukuma kwenye main
 ```
 
 Mipangilio ya Azure Static Web Apps:
@@ -193,17 +193,17 @@ Mipangilio ya Azure Static Web Apps:
 - **Mahali pa Matokeo**: `dist`
 - **Mtiririko wa Kazi**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
-### Uundaji wa PDF za Nyaraka
+### Kutengeneza PDF ya Nyaraka
 
 ```bash
-npm install                    # Sanidi docsify-to-pdf
+npm install                    # Sakinisha docsify-to-pdf
 npm run convert               # Tengeneza PDF kutoka kwa docs
 ```
 
 ### Nyaraka za Docsify
 
 ```bash
-npm install -g docsify-cli    # Sakinisha Docsify kwa ulimwengu mzima
+npm install -g docsify-cli    # Sakinisha Docsify kote
 docsify serve                 # Hudumia kwenye localhost:3000
 ```
 
@@ -211,72 +211,72 @@ docsify serve                 # Hudumia kwenye localhost:3000
 
 Kila folda ya mradi inaweza kuwa na mchakato wake wa ujenzi:
 - Miradi ya Vue: `npm run build` huunda vifurushi vya uzalishaji
-- Miradi ya static: Hakuna hatua ya ujenzi, tengeneza faili moja kwa moja
+- Miradi ya statiki: Hakuna hatua ya kujenga, anuguza faili moja kwa moja
 
-## Miongozo ya Ombi la Kujoshea (Pull Request)
+## Miongozo ya Maombi ya Kuunganisha
 
 ### Muundo wa Kichwa
 
-Tumia vichwa wazi na vinaonesha eneo la mabadiliko:
+Tumia vichwa wazi, vinavyoelezea sehemu ya mabadiliko:
 - `[Quiz-app] Ongeza mtihani mpya kwa somo X`
-- `[Lesson-3] Rekebisha kosa la tahajia katika mradi wa terrarium`
+- `[Lesson-3] Rekebisha tahajia katika mradi wa terrarium`
 - `[Translation] Ongeza tafsiri ya Kihispania kwa somo 5`
 - `[Docs] Sasisha maelekezo ya kuanzisha`
 
-### Uchunguzi Unaohitajika
+### Ukaguzi Unaotakiwa
 
 Kabla ya kuwasilisha PR:
 
 1. **Ubora wa Msimbo**:
-   - Endesha `npm run lint` katika folda za miradi zilizohusika
+   - Endesha `npm run lint` katika folda za miradi zilizoathirika
    - Rekebisha makosa na onyo zote za lint
 
-2. **Uhakiki wa Ujenzi**:
+2. **Thibitisha Ujenzi**:
    - Endesha `npm run build` inapohitajika
    - Hakikisha hakuna makosa ya ujenzi
 
-3. **Uhakiki wa Viungo**:
+3. **Thibitisha Viungo**:
    - Jaribu viungo vyote vya markdown
-   - Thibitisha marejeleo ya picha yanatumika
+   - Thibitisha marejeleo ya picha yanafanya kazi
 
-4. **Mapitio ya Maudhui**:
-   - Soma kwa usahihi ya tahajia na sarufi
+4. **Uhakiki wa Maudhui**:
+   - Soma kwa tahajia na sarufi
    - Hakikisha mifano ya msimbo ni sahihi na ya kielimu
-   - Hakikisha tafsiri zinahifadhi maana asili
+   - Thibitisha tafsiri zinadumisha maana halisi
 
-### Mahitaji ya Michango
+### Mahitaji ya Mchango
 
 - Kubali Microsoft CLA (ukaguzi wa kiotomatiki kwenye PR ya kwanza)
 - Fuata [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- Angalia [CONTRIBUTING.md](./CONTRIBUTING.md) kwa miongozo kamili
-- Rejelea nambari za masuala katika maelezo ya PR kama zinahusika
+- Tazama [CONTRIBUTING.md](./CONTRIBUTING.md) kwa miongozo kamili
+- Taja nambari za masuala kwenye maelezo ya PR inapobidi
 
-### Mchakato wa Mapitio
+### Mchakato wa Ukaguzi
 
-- PR hupitiwa na wasimamizi na jamii
-- Uwazi wa elimu unaheshimiwa
-- Mifano ya msimbo inapaswa kufuata mbinu bora za sasa
-- Tafsiri hupitiwa kwa usahihi na utamaduni unaofaa
+- PR hukaguliwa na watunzaji na jamii
+- Uwafafanuzi wa kielimu unazingatiwa zaidi
+- Mifano ya msimbo ifuatane na mbinu bora za sasa
+- Tafsiri hurejelewa kwa usahihi na muafaka wa kitamaduni
 
 ## Mfumo wa Tafsiri
 
 ### Tafsiri ya Kiotomatiki
 
 - Inatumia GitHub Actions na mtiririko wa co-op-translator
-- Hutoa tafsiri kwa lugha zaidi ya 50 kiotomatiki
-- Faili za asili ziko katika folda kuu
-- Faili za tafsiri ziko `translations/{language-code}/`
+- Hufasiri kwa lugha 50+ moja kwa moja
+- Faili chanzo ziko kwenye folda kuu
+- Faili zilizotafsiriwa ziko katika `translations/{language-code}/`
 
 ### Kuongeza Maboresho ya Tafsiri ya Mkono
 
 1. Tafuta faili katika `translations/{language-code}/`
-2. Fanya maboresho huku ukihifadhi muundo
-3. Hakikisha mifano ya msimbo inabaki kazi
-4. Jaribu maudhui ya mtihani uliobadilishwa kwa lugha husika
+2. Fanya maboresho bila kubadilisha muundo
+3. Hakikisha mifano ya msimbo bado inafanya kazi
+4. Jaribu maudhui ya mtihani yaliyobinafsishwa
 
 ### Metadata ya Tafsiri
 
-Faili za tafsiri zina kiambatisho cha metadata:
+Faili zilizotafsiriwa zina kichwa cha metadata:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -289,120 +289,120 @@ CO_OP_TRANSLATOR_METADATA:
 -->
 ```
 
-## Ufungaji na Utatuzi wa Matatizo
+## Ugunduzi na Urekebishaji
 
 ### Masuala ya Kawaida
 
-**Quiz app haianzi**:
-- Angalia toleo la Node.js (v14+ inashauriwa)
+**App ya mitihani haianzi**:
+- Angalia toleo la Node.js (v14+ linapendekezwa)
 - Futa `node_modules` na `package-lock.json`, endesha tena `npm install`
 - Angalia migongano ya bandari (kawaida: Vite hutumia bandari 5173)
 
-**Server ya API haianzi**:
-- Thibitisha toleo la Node.js linakidhi (node >=10)
+**Seva ya API haianzi**:
+- Hakiki toleo la Node.js kuwa la chini kabisa (node >=10)
 - Angalia kama bandari tayari inatumika
-- Hakikisha utegemezi wote umewekwa kwa `npm install`
+- Hakikisha tegemezi zote zimesakinishwa kwa `npm install`
 
-**Kiendelezi cha kivinjari hakifungui**:
-- Thibitisha manifest.json imeandikwa vizuri
-- Angalia console ya kivinjari kwa makosa
-- Fuata maelekezo maalum ya usakinishaji wa kiendelezi cha kivinjari
+**Kiongezi cha kivinjari hakifanyi kazi**:
+- Hakikisha manifest.json imeandikwa vizuri
+- Angalia makosa kwenye konsole ya kivinjari
+- Fuata maelekezo ya usakinishaji ya kivinjari husika
 
-**Matatizo ya mradi wa chat wa Python**:
-- Hakikisha kifurushi cha OpenAI kimesakinishwa: `pip install openai`
-- Thibitisha GITHUB_TOKEN imewekwa kwa mazingira
-- Angalia ruhusa za kupata GitHub Models
+**Masuala ya mradi wa mazungumzo ya Python**:
+- Hakikisha kifurushi cha OpenAI kimesanikishwa: `pip install openai`
+- Hakiki mazingira ya GITHUB_TOKEN yamewekwa
+- Angalia ruhusa za upatikanaji wa GitHub Models
 
-**Docsify haionyeshi nyaraka**:
-- Sakinisha docsify-cli kimataifa: `npm install -g docsify-cli`
-- Endesha kutoka folda ya mzizi ya hifadhidata
-- Hakiki kuwepo kwa `docs/_sidebar.md`
+**Docsify haileti nyaraka**:
+- Sakinisha docsify-cli ulimwenguni: `npm install -g docsify-cli`
+- Endesha kutoka folda ya hifadhidata mzizi
+- Hakiki kuwa `docs/_sidebar.md` ipo
 
 ### Vidokezo vya Mazingira ya Maendeleo
 
-- Tumia VS Code yenye upanuzi wa Live Server kwa miradi ya HTML
-- Sakinisha upanuzi wa ESLint na Prettier kwa muundo thabiti
-- Tumia zana za DevTools za kivinjari kutatua masuala ya JavaScript
-- Kwa miradi ya Vue, sakinisha upanuzi wa Vue DevTools wa kivinjari
+- Tumia VS Code na ugani wa Live Server kwa miradi ya HTML
+- Sakinisha ugani za ESLint na Prettier kwa panga msimbo mzuri
+- Tumia DevTools za kivinjari kwa kufuatilia JavaScript
+- Kwa miradi ya Vue, install ugani wa Vue DevTools wa kivinjari
 
-### Mambo ya Kuangalia Utendaji
+### Mambo ya Kufikiria Kuhusu Utendaji
 
-- Idadi kubwa ya faili za tafsiri (lugha 50+) maana clones kamili zina ukubwa mkubwa
-- Tumia clone dhaifu ukifanya kazi tu na yaliyomo: `git clone --depth 1`
-- Epuka tafutiza tafsiri unapotaka kufanya kazi na maudhui ya Kiingereza
-- Mchakato wa ujenzi unaweza kuchukua muda kwenye mwanzoni (npm install, ujenzi Vite)
+- Idadi kubwa ya faili zilizotafsiriwa (lugha 50+) husababisha nakala nzito
+- Tumia shallow clone kama unafanya kazi tu na maudhui: `git clone --depth 1`
+- Zuia tafsiri katika utafutaji unapotumia maudhui ya Kiingereza
+- Mchakato wa ujenzi unaweza kuwa polepole mara ya kwanza (npm install, ujenzi wa Vite)
 
 ## Masuala ya Usalama
 
-### Vigezo vya Mazingira
+### Mabadiliko ya Mazingira
 
-- Funguo za API hazipaswi kuwekwa kwenye hifadhidata
-- Tumia faili za `.env` (zimenaswa katika `.gitignore`)
-- Eleza vigezo vya mazingira vinavyohitajika katika README za miradi
+- Funguo za API hazipaswi kuwekwa hifadhidatani
+- Tumia faili za `.env` (siku hizi ziko `.gitignore`)
+- Elezea mabadiliko ya mazingira yanayohitajika kwenye README za miradi
 
 ### Miradi ya Python
 
-- Tumia mazingira ya kudanganya (virtual environments): `python -m venv venv`
-- Sasisha utegemezi mara kwa mara
-- Tokeni za GitHub ziwe na ruhusa ndogo inayohitajika
+- Tumia mazingira ya mtandao wa virtual: `python -m venv venv`
+- Sasisha tegemezi mara kwa mara
+- Tokeni za GitHub ziwe na idhini kidogo inayohitajika
 
-### Kufikia GitHub Models
+### Upatikanaji wa GitHub Models
 
-- Tokeni za Ufikiaji wa Kibinafsi (PAT) zinahitajika kwa GitHub Models
-- Tokeni zihifadhiwe kama vigezo vya mazingira
-- Usiwekee tokeni au nyaraka kwenye hifadhidata
+- Tokens za Upatikanaji wa Kibinafsi (PAT) zinahitajika kwa GitHub Models
+- Tokens ziwekewe kama mabadiliko ya mazingira (environment variables)
+- Usiweze kuweka tokens au nyaraka za usalama hifadhidatani
 
 ## Vidokezo Zaidi
 
 ### Walengwa
 
-- Wanaoanza kabisa kwenye maendeleo ya wavuti
+- Wanaoanza kabisa katika maendeleo ya wavuti
 - Wanafunzi na wanaojifunza peke yao
 - Walimu wanaotumia mtaala darasani
-- Yaliyomo yameundwa kwa njia inayofanikisha upatikanaji na kujifunza hatua kwa hatua
+- Maudhui yameundwa kwa upatikanaji na uelekezaji wa hatua kwa hatua
 
 ### Falsafa ya Elimu
 
-- Njia ya kujifunza kupitia miradi
-- Mikakati ya mara kwa mara ya kukagua maarifa (mitihani)
-- Mazoezi ya vitendo vya uandishi wa msimbo
-- Mifano halisi ya matumizi
-- Kuzingatia misingi kabla ya mifumo ya kazi (frameworks)
+- Mbinu ya kujifunza kwa miradi
+- Ukaguzi wa mara kwa mara wa maarifa (mitihani)
+- Mazoezi ya msimbo ya vitendo
+- Mifano halisi ya utekelezaji
+- Lengo la msingi kabla ya majukwaa
 
-### Usimamizi wa Hifadhidata
+### Matunzo ya Hifadhidata
 
-- Jamii hai ya wanafunzi na wasaidizi
-- Sasisho la mara kwa mara la utegemezi na yaliyomo
-- Masuala na majadiliano yanadhibitiwa na wasimamizi
-- Sasisho za tafsiri kwa kutumia GitHub Actions kiotomatiki
+- Jamii hai ya wanafunzi na wachangiaji
+- Sasisho la mara kwa mara kwa tegemezi na maudhui
+- Masuala na mijadala ikifuatiliwa na watunzaji
+- Sasisho za tafsiri kwa njia ya kiotomatiki kupitia GitHub Actions
 
 ### Rasilimali Zinazohusiana
 
-- [Microsoft Learn modules](https://docs.microsoft.com/learn/)
+- [Moduli za Microsoft Learn](https://docs.microsoft.com/learn/)
 - [Rasilimali za Student Hub](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) inayopendekezwa kwa wanafunzi
-- Kozi za ziada: AI ya Kutengeneza, Sayansi ya Data, ML, kozi za IoT zinapatikana
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) inapendekezwa kwa wanaojifunza
+- Kozi za ziada: AI ya Asili, Sayansi ya Takwimu, ML, na mtaala wa IoT zinapatikana
 
-### Kazi na Miradi Maalum
+### Kufanya Kazi na Miradi Maalum
 
-Kwa maelekezo ya kina kuhusu miradi binafsi, rejelea faili za README katika:
-- `quiz-app/README.md` - Programu ya quiz ya Vue 3
+Kwa maelekezo ya kina juu ya miradi binafsi, rejelea faili za README katika:
+- `quiz-app/README.md` - Programu ya mtihani ya Vue 3
 - `7-bank-project/README.md` - Programu ya benki yenye uthibitishaji
-- `5-browser-extension/README.md` - Maendeleo ya kiendelezi cha kivinjari
-- `6-space-game/README.md` - Maendeleo ya mchezo wa Canvas
-- `9-chat-project/README.md` - Mradi wa msaidizi wa chat AI
+- `5-browser-extension/README.md` - Ukuaji wa kiongezi cha kivinjari
+- `6-space-game/README.md` - Ukuaji wa mchezo wa Canvas
+- `9-chat-project/README.md` - Mradi wa msaidizi wa mazungumzo wa AI
 
 ### Muundo wa Monorepo
 
-Ingawa sio monorepo ya kawaida, hifadhidata hii ina miradi kadhaa huru:
-- Kila somo lina muundo wake
-- Miradi haishiriki utegemezi
+Ingawa si monorepo ya kawaida, hifadhidata hii ina miradi huru mingi:
+- Kila somo ni huru
+- Miradi haiungi mkono tegemezi zao
 - Fanya kazi kwenye miradi binafsi bila kuathiri mingine
-- Nakili hifadhidata nzima kwa uzoefu kamili wa mtaala
+- Nakili hifadhidata yote kwa uzoefu kamili wa mtaala
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kipengele cha Kutolewa Wajibu**:
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au usahihi mdogo. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya mtaalamu wa binadamu inapendekezwa. Hatuwezi kuwajibika kwa kutoelewana au tafsiri potovu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifu cha Kutokujali**:  
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali kumbuka kuwa tafsiri za moja kwa moja zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya mama inapaswa kuchukuliwa kama chanzo halali. Kwa taarifa muhimu, tafsiri ya mtaalamu wa kibinadamu inapendekezwa. Hatutawajibika kwa changamoto au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
