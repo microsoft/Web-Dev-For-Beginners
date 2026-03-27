@@ -2,45 +2,45 @@
 
 ## Projekto apžvalga
 
-Tai yra edukacinio kurso saugykla, skirta pradedantiesiems mokyti pagrindų apie žiniatinklio kūrimą. Kursas yra išsamus 12 savaičių kursas, sukurtas Microsoft Cloud Advocates komandos, turintis 24 praktines pamokas, apimančias JavaScript, CSS ir HTML.
+Tai mokomasis mokymo planas, skirtas pradedantiesiems mokyti pagrindus apie interneto kūrimą. Šis mokymo planas yra išsamus 12 savaičių kursas, sukurtas Microsoft Cloud Advocates komandos, apimantis 24 praktinius užsiėmimus apie JavaScript, CSS ir HTML.
 
-### Pagrindiniai komponentai
+### Pagrindinės dalys
 
-- **Edukacinis turinys**: 24 struktūruotos pamokos, organizuotos į projektinius modulius
-- **Praktiniai projektai**: Terariumas, Rašymo žaidimas, Naršyklės plėtinys, Kosminis žaidimas, Banko programa, Kodo redaktorius ir DI pokalbių asistentas
-- **Interaktyvūs testai**: 48 testai po 3 klausimus kiekvienas (prieš- ir po pamokos vertinimai)
-- **Daugiakalbė palaikymas**: Automatiniai vertimai į 50+ kalbų per GitHub Actions
-- **Technologijos**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (DI projektams)
+- **Mokomoji medžiaga**: 24 struktūrizuoti užsiėmimai, suskirstyti į projektinius modulius  
+- **Praktiniai projektai**: Terariumas, Spausdinimo žaidimas, Naršyklės plėtinys, Kosmoso žaidimas, Banko programa, Kodo redaktorius ir AI pokalbių asistentas  
+- **Interaktyvūs testai**: 48 testai po 3 klausimus kiekviename (prieš ir po pamokos vertinimai)  
+- **Daugiakalbė palaikymas**: Automatiniai vertimai į daugiau nei 50 kalbų per GitHub Actions  
+- **Technologijos**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (AI projektams)  
 
 ### Architektūra
 
-- Edukacinė saugykla su pamokų struktūra
-- Kiekvienos pamokos aplanke yra README, kodo pavyzdžiai ir sprendimai
-- Atskirti savarankiški projektai atskiruose kataloguose (quiz-app, įvairūs pamokų projektai)
-- Vertimų sistema naudojanti GitHub Actions (co-op-translator)
-- Dokumentacija teikiama per Docsify ir prieinama PDF formatu
+- Mokomasis saugykla su pamokų struktūra  
+- Kiekviename pamokos kataloge yra README, kodo pavyzdžiai ir sprendimai  
+- Atskiri savarankiški projektai skirtinguose kataloguose (quiz-app, įvairūs pamokų projektai)  
+- Vertimų sistema, naudojanti GitHub Actions (co-op-translator)  
+- Dokumentacija teikiama per Docsify ir prieinama PDF formatu  
 
-## Nustatymo komandos
+## Sąrankos komandos
 
-Ši saugykla skirta daugiausia edukaciniam turiniui vartoti. Norint dirbti su specifiniais projektais:
+Ši saugykla pirmiausia skirta mokomosios medžiagos naudojimui. Darbas su konkrečiais projektais:
 
-### Pagrindinės saugyklos nustatymas
+### Pagrindinė saugyklos sąranka
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
-
-### Apklaustuko programėlės nustatymas (Vue 3 + Vite)
+  
+### Quiz App sąranka (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
 npm run dev        # Paleisti kūrimo serverį
-npm run build      # Sukurti gamybai
-npm run lint       # Paleisti ESLint
+npm run build      # Statyti gamybai
+npm run lint       # Vykdyti ESLint
 ```
-
+  
 ### Banko projekto API (Node.js + Express)
 
 ```bash
@@ -50,24 +50,24 @@ npm start          # Paleisti API serverį
 npm run lint       # Vykdyti ESLint
 npm run format     # Formatuoti su Prettier
 ```
-
+  
 ### Naršyklės plėtinių projektai
 
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Vadovaukitės naršyklės specifinėmis plėtinių įkėlimo instrukcijomis
+# Laikykitės naršyklės specifinių plėtinių įkėlimo instrukcijų
 ```
-
-### Kosminio žaidimo projektai
+  
+### Kosmoso žaidimo projektai
 
 ```bash
 cd 6-space-game/solution
 npm install
 # Atidarykite index.html naršyklėje arba naudokite Live Server
 ```
-
-### Pokalbių projekto (Python backend) nustatymai
+  
+### Pokalbių projekto (Python backend) sąranka
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -75,208 +75,208 @@ pip install openai
 # Nustatykite GITHUB_TOKEN aplinkos kintamąjį
 python api.py
 ```
+  
+## Kūrimo darbo eiga
 
-## Vystymo darbo eiga
+### Turinio prisidedantiems
 
-### Turinio bendradarbiams
+1. **Sukurti atšaką** saugyklos savo GitHub paskyroje  
+2. **Klonuoti atšaką** lokaliai  
+3. **Sukurti naują šaką** savo pakeitimams  
+4. Redaguoti pamokų turinį arba kodo pavyzdžius  
+5. Išbandyti kodo pakeitimus atitinkamuose projekto kataloguose  
+6. Pateikti pakeitimų užklausas pagal prisidėjimo gaires  
 
-1. **Padarykite fork’ą** saugyklos į savo GitHub paskyrą
-2. **Klonuokite savo fork’ą** vietoje
-3. **Sukurkite naują šaką** savo pakeitimams
-4. Keiskite pamokų turinį arba kodo pavyzdžius
-5. Išbandykite kodo pakeitimus atitinkamuose projekto kataloguose
-6. Pateikite pull request’us pagal indėlio taisykles
+### Mokiniams
 
-### Besimokantiems
+1. Atšaka arba klonas saugyklos  
+2. Sekti pamokų katalogus eilės tvarka  
+3. Skaityti kiekvieno užsiėmimo README failus  
+4. Atlikti testus prieš pamoką adresu https://ff-quizzes.netlify.app/web/  
+5. Dirbti su kodo pavyzdžiais pamokų kataloguose  
+6. Atlikti užduotis ir iššūkius  
+7. Atlikti testus po pamokos  
 
-1. Padarykite fork arba klonuokite saugyklą
-2. Nuosekliai pereikite per pamokų katalogus
-3. Skaitykite kiekvienos pamokos README failus
-4. Atlikite priešpamokinius testus adresu https://ff-quizzes.netlify.app/web/
-5. Dirbkite su kodo pavyzdžiais pamokų aplankuose
-6. Atlikite užduotis ir iššūkius
-7. Atlikite postpamokinius testus
+### Tiesioginis kūrimas
 
-### Gyvas vystymas
-
-- **Dokumentacija**: Paleiskite `docsify serve` šakniniame aplanke (3000 prievadas)
-- **Apklaustuko programėlė**: Paleiskite `npm run dev` quiz-app kataloge
-- **Projektai**: Naudokite VS Code Live Server plėtinį HTML projektams
-- **API projektai**: Paleiskite `npm start` atitinkuose API kataloguose
+- **Dokumentacija**: paleisti `docsify serve` šakniniame kataloge (prievadas 3000)  
+- **Quiz App**: paleisti `npm run dev` quiz-app kataloge  
+- **Projektai**: naudoti VS Code Live Server plėtinį HTML projektams  
+- **API projektai**: paleisti `npm start` atitinkamuose API kataloguose  
 
 ## Testavimo instrukcijos
 
-### Apklaustuko programėlės testavimas
+### Quiz App testavimas
 
 ```bash
 cd quiz-app
-npm run lint       # Patikrinkite kodo stiliaus klaidas
-npm run build      # Patikrinkite, ar statyba sėkminga
+npm run lint       # Patikrinkite kodo stiliaus problemas
+npm run build      # Patvirtinkite, kad kūrimas sėkmingas
 ```
-
+  
 ### Banko API testavimas
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Patikrinkite kodo stiliaus klaidas
-node server.js     # Patikrinkite, ar serveris paleidžiamas be klaidų
+npm run lint       # Patikrinti kodo stiliaus problemas
+node server.js     # Patvirtinti, kad serveris startuoja be klaidų
 ```
-
+  
 ### Bendras testavimo požiūris
 
-- Tai edukacinė saugykla be išsamios automatizuotos testavimo sistemos
-- Rankinis testavimas apima:
-  - Kodo pavyzdžiai veikia be klaidų
-  - Dokumentacijos nuorodos veikia tinkamai
-  - Projektų kompiliacijos vyksta sėkmingai
-  - Pavyzdžiai atitinka gerąsias praktikas
+- Tai mokomasis saugykla be išsamių automatinių testų  
+- Rankinis testavimas daugiausia sutelktas į:  
+  - Kodo pavyzdžiai veikia be klaidų  
+  - Dokumentacijos nuorodos veikia tinkamai  
+  - Projektų kūrimas sėkmingas  
+  - Pavyzdžiai atitinka gerąsias praktikas  
 
-### Patikrinimai prieš pateikiant
+### Prieš pateikiant patikrinimai
 
-- Paleiskite `npm run lint` kataloguose su package.json
-- Patikrinkite markdown nuorodų galiojimą
-- Išbandykite kodo pavyzdžius naršyklėje arba Node.js
-- Įsitikinkite, kad vertimai išlaiko tinkamą struktūrą
+- Paleisti `npm run lint` kataloguose su package.json  
+- Patikrinti, ar markdown nuorodos galioja  
+- Išbandyti kodo pavyzdžius naršyklėje arba Node.js  
+- Patvirtinti, kad vertimai išlaiko tinkamą struktūrą  
 
 ## Kodo stiliaus gairės
 
 ### JavaScript
 
-- Naudokite modernią ES6+ sintaksę
-- Laikykitės standartinių ESLint konfigūracijų projektuose
-- Naudokite prasmingus kintamųjų ir funkcijų pavadinimus mokymosi tikslams
-- Pridėkite komentarus, paaiškinančius koncepcijas mokiniams
-- Formatuokite naudodami Prettier, kur nustatyta
+- Naudoti modernią ES6+ sintaksę  
+- Laikytis standartinių ESLint konfigūracijų projektuose  
+- Naudoti prasmingus kintamųjų ir funkcijų pavadinimus mokymuisi  
+- Pridėti komentarus, paaiškinančius sąvokas mokiniams  
+- Formatuoti naudojant Prettier, kur tai konfigūruota  
 
 ### HTML/CSS
 
-- Semantiški HTML5 elementai
-- Responvyvaus dizaino principai
-- Aiškios klasės pavadinimų konvencijos
-- Komentarai, paaiškinantys CSS technikas mokiniams
+- Semantiški HTML5 elementai  
+- Reaguojantis dizainas  
+- Aiškios klasių pavadinimų konvencijos  
+- Komentarai, paaiškinantys CSS metodikas mokiniams  
 
 ### Python
 
-- PEP 8 stiliaus gairės
-- Aiškūs, edukaciniai kodo pavyzdžiai
-- Tipų anotacijos, jei naudingos mokymuisi
+- PEP 8 stiliaus gairės  
+- Aiškūs, mokomieji kodo pavyzdžiai  
+- Rekomenduojami tipų užuominomis, kur naudingas mokymuisi  
 
 ### Markdown dokumentacija
 
-- Aiški antraščių hierarchija
-- Kodo blokai su kalbos nurodymu
-- Nuorodos į papildomus išteklius
-- Ekrano nuotraukos ir paveikslėliai `images/` kataloguose
-- Alt tekstas paveikslėliams prieinamumui užtikrinti
+- Aiški antraščių hierarchija  
+- Kodo blokai su kalbos nurodymu  
+- Nuorodos į papildomus išteklius  
+- Ekrano nuotraukos ir vaizdai `images/` kataloguose  
+- Alternatyvus tekstas vaizdams prieinamumui  
 
-### Failų organizacija
+### Failų organizavimas
 
-- Pamokos numeruojamos nuosekliai (1-getting-started-lessons, 2-js-basics ir kt.)
-- Kiekviename projekte yra `solution/` ir dažnai `start/` arba `your-work/` katalogai
-- Paveikslėliai saugomi pamokų specifiniuose `images/` aplankuose
-- Vertimai saugomi `translations/{language-code}/` struktūroje
+- Pamokos numeruotos seka (1-getting-started-lessons, 2-js-basics ir t.t.)  
+- Kiekviename projekte yra `solution/` ir dažnai `start/` arba `your-work/` katalogai  
+- Vaizdai saugomi konkrečių pamokų `images/` aplankuose  
+- Vertimai `translations/{language-code}/` struktūroje  
 
 ## Kūrimas ir diegimas
 
-### Apklaustuko programėlės diegimas (Azure Static Web Apps)
+### Quiz App diegimas (Azure Static Web Apps)
 
-quiz-app yra sukonfigūruotas Azure Static Web Apps diegimui:
+quiz-app konfigūruotas Azure Static Web Apps diegimui:
 
 ```bash
 cd quiz-app
 npm run build      # Sukuria dist/ aplanką
-# Diegia per GitHub Actions darbo eigą, kai pushinama į main šaką
+# Diegia per GitHub Actions darbo eigą į pagrindinę šaką paspaudus
 ```
+  
+Azure Static Web Apps konfigūracija:  
+- **Programos vieta**: `/quiz-app`  
+- **Išvesties vieta**: `dist`  
+- **Darbo eiga**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`  
 
-Azure Static Web Apps konfigūracija:
-- **Programėlės vieta**: `/quiz-app`
-- **Išvesties vieta**: `dist`
-- **Vykdymo eiga**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
-
-### Dokumentacijos PDF kūrimas
+### Dokumentacijos PDF generavimas
 
 ```bash
 npm install                    # Įdiekite docsify-to-pdf
-npm run convert               # Sugeneruokite PDF iš docs
+npm run convert               # Sugeneruokite PDF iš dokumentų
 ```
-
+  
 ### Docsify dokumentacija
 
 ```bash
-npm install -g docsify-cli    # Įdiegti Docsify globaliai
-docsify serve                 # Tarnauti localhost:3000
+npm install -g docsify-cli    # Įdiekite Docsify globaliai
+docsify serve                 # Aptarnauti localhost:3000
 ```
+  
+### Projektų specifiniai kūrimo procesai
 
-### Projektui būdingi kūrimo procesai
+Kiekvienas projekto katalogas gali turėti savą kūrimo procesą:  
+- Vue projektai: `npm run build` sukuria produkcinius paketus  
+- Statiniai projektai: Nereikia kūrimo žingsnio, failai tiekiami tiesiogiai  
 
-Kiekvienas projekto katalogas gali turėti savo kūrimo procesą:
-- Vue projektai: `npm run build` sukuria produkcinius paketus
-- Statiniai projektai: be kūrimo žingsnio, failai pateikiami tiesiogiai
-
-## Pull request gairės
+## Pull Request gairės
 
 ### Pavadinimo formatas
 
-Naudokite aiškius, apibūdinančius pakeitimus pavadinimus:
-- `[Quiz-app] Pridėti naują testą pamokai X`
-- `[Lesson-3] Ištaisyta rašybos klaida terrarium projekte`
-- `[Translation] Pridėtas ispanų kalbos vertimas pamokai 5`
-- `[Docs] Atnaujintos nustatymo instrukcijos`
+Naudoti aiškius, apibūdinančius pavadinimus, nurodančius pakeitimo sritį:  
+- `[Quiz-app] Add new quiz for lesson X`  
+- `[Lesson-3] Fix typo in terrarium project`  
+- `[Translation] Add Spanish translation for lesson 5`  
+- `[Docs] Update setup instructions`  
 
-### Būtini patikrinimai
+### Reikalingi patikrinimai
 
-Prieš pateikiant PR:
+Prieš pateikiant PR:  
 
-1. **Kodo kokybė**:
-   - Paleiskite `npm run lint` atitinkamuose projekto kataloguose
-   - Ištaisyti visus lint klaidas ir įspėjimus
+1. **Kodo kokybė**:  
+   - Paleisti `npm run lint` paveiktuose projekto kataloguose  
+   - Ištaisyti visas lint klaidas ir įspėjimus  
 
-2. **Kūrimo patikrinimas**:
-   - Jei taikoma, paleiskite `npm run build`
-   - Užtikrinkite, kad nėra kūrimo klaidų
+2. **Kūrimo patikra**:  
+   - Jeigu taikoma, paleisti `npm run build`  
+   - Užtikrinti, kad nebūtų kūrimo klaidų  
 
-3. **Nuorodų patikra**:
-   - Patikrinkite visas markdown nuorodas
-   - Patikrinkite paveikslėlių nuorodas
+3. **Nuorodų tikrinimas**:  
+   - Išbandyti visas markdown nuorodas  
+   - Patikrinti, ar vaizdų nuorodos veikia  
 
-4. **Turinio peržiūra**:
-   - Korektūra dėl rašybos ir gramatikos
-   - Užtikrinkite, kad kodo pavyzdžiai yra teisingi ir edukaciniai
-   - Patikrinkite, kad vertimai išlaiko originalią prasmę
+4. **Turinio peržiūra**:  
+   - Taisyti rašybos ir gramatikos klaidas  
+   - Užtikrinti, kad kodo pavyzdžiai būtų teisingi ir mokomieji  
+   - Patikrinti, kad vertimai atitinka originalią prasmę  
 
-### Indėlio reikalavimai
+### Prisidėjimo reikalavimai
 
-- Sutikite su Microsoft CLA (automatinis patikrinimas pirmojo PR metu)
-- Laikykitės [Microsoft atvirojo kodo elgesio taisyklių](https://opensource.microsoft.com/codeofconduct/)
-- Matykite [CONTRIBUTING.md](./CONTRIBUTING.md) išsamioms gairėms
-- Jei taikoma, nurodykite problemų numerius PR apraše
+- Sutikti su Microsoft CLA (automatinis patikrinimas pirmo PR metu)  
+- Laikytis [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)  
+- Perskaityti [CONTRIBUTING.md](./CONTRIBUTING.md) išsamioms gairėms  
+- Nurodyti atitinkamus problemų numerius PR aprašyme, jei taikoma  
 
 ### Peržiūros procesas
 
-- PR peržiūri prižiūrėtojai ir bendruomenė
-- Prioritetas suteikiamas edukaciniam aiškumui
-- Kodo pavyzdžiai turi atitikti šiuolaikines gerąsias praktikas
-- Vertimai peržiūrimi dėl tikslumo ir kultūrinio tinkamumo
+- PR peržiūri prižiūrėtojai ir bendruomenė  
+- Prioritetas skiriamas mokymosi aiškumui  
+- Kodo pavyzdžiai turi atitikti dabartines gerąsias praktikas  
+- Vertimai tikrinami dėl tikslumo ir kultūrinio atitikimo  
 
 ## Vertimų sistema
 
-### Automatizuotas vertimas
+### Automatizuoti vertimai
 
-- Naudoja GitHub Actions su co-op-translator workflow
-- Automatiškai verčia į daugiau nei 50 kalbų
-- Šaltinių failai pagrindiniuose kataloguose
-- Išverstieji failai saugomi `translations/{language-code}/` kataloguose
+- Naudoja GitHub Actions su co-op-translator darbo eiga  
+- Automatiškai verčia į daugiau nei 50 kalbų  
+- Šaltinių failai pagrindiniuose kataloguose  
+- Išversti failai `translations/{language-code}/` kataloguose  
 
-### Rankinių vertimo patobulinimų pridėjimas
+### Rankinių vertimų patobulinimų pridėjimas
 
-1. Raskite failą `translations/{language-code}/` kataloge
-2. Atlikite patobulinimus išlaikydami struktūrą
-3. Užtikrinkite, kad kodo pavyzdžiai lieka veikiantys
-4. Išbandykite lokalizuotą testų turinį
+1. Rasti failą `translations/{language-code}/` kataloge  
+2. Atlikti pataisas, išlaikant struktūrą  
+3. Užtikrinti, kad kodo pavyzdžiai veiktų  
+4. Išbandyti lokalizuotą testų turinį  
 
-### Vertimų meta duomenys
+### Vertimų metaduomenys
 
-Išverstieji failai turi meta antraštę:
+Išversti failai turi metaduomenų antraštę:  
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -288,121 +288,121 @@ CO_OP_TRANSLATOR_METADATA:
 }
 -->
 ```
-
+  
 ## Derinimas ir trikčių šalinimas
 
 ### Dažnos problemos
 
-**Apklaustuko programėlė nepaleidžiama**:
-- Patikrinkite Node.js versiją (rekomenduojama v14+)
-- Ištrinkite `node_modules` ir `package-lock.json`, tada paleiskite `npm install` iš naujo
-- Patikrinkite, ar nėra prievado konfliktų (numatytasis: Vite naudoja prievadą 5173)
+**Quiz app nepaleidžiamas**:  
+- Patikrinti Node.js versiją (rekomenduojama v14+)  
+- Ištrinti `node_modules` ir `package-lock.json`, paleisti `npm install` iš naujo  
+- Patikrinti prievadų konfliktus (numatyta: Vite naudoja 5173 prievadą)  
 
-**API serveris nepaleidžiamas**:
-- Įsitikinkite, kad Node.js versija atitinka minimalų reikalavimą (node >=10)
-- Patikrinkite, ar prievadas nėra užimtas
-- Užtikrinkite, kad visos priklausomybės įdiegtos per `npm install`
+**API serveris nepaleidžiamas**:  
+- Patvirtinti, kad Node.js versija atitinka reikalavimus (node >=10)  
+- Patikrinti, ar prievadas nėra užimtas  
+- Įsitikinti, kad visos priklausomybės įdiegtos su `npm install`  
 
-**Naršyklės plėtinys nesikrauna**:
-- Patikrinkite, ar manifest.json yra tinkamai suformatuotas
-- Patikrinkite naršyklės konsolę dėl klaidų
-- Sekite naršyklės specifines plėtinių diegimo instrukcijas
+**Naršyklės plėtinys neužsikrauna**:  
+- Patikrinti, ar manifest.json formatas teisingas  
+- Peržiūrėti naršyklės konsolę klaidų  
+- Vadovautis naršyklės plėtinio diegimo instrukcijomis  
 
-**Python pokalbių projekto problemos**:
-- Įsitikinkite, kad įdiegta OpenAI paketas: `pip install openai`
-- Patikrinkite, ar nustatytas GITHUB_TOKEN aplinkos kintamasis
-- Patikrinkite prieigą prie GitHub modelių
+**Python pokalbių projekto problemos**:  
+- Įsitikinti, kad įdiegta OpenAI biblioteka: `pip install openai`  
+- Patikrinti, ar nustatytas GITHUB_TOKEN aplinkos variable  
+- Patikrinti GitHub Models prieigos leidimus  
 
-**Docsify neišveda dokumentacijos**:
-- Įdiekite docsify-cli globaliai: `npm install -g docsify-cli`
-- Paleiskite iš saugyklos šaknies katalogo
-- Patikrinkite, ar egzistuoja `docs/_sidebar.md`
+**Docsify nedemonstruoja dokumentų**:  
+- Įdiegti docsify-cli globaliai: `npm install -g docsify-cli`  
+- Paleisti iš saugyklos šaknies  
+- Patikrinti, ar egzistuoja `docs/_sidebar.md`  
 
-### Vystymo aplinkos patarimai
+### Kūrimo aplinkos patarimai
 
-- Naudokite VS Code su Live Server plėtiniu HTML projektams
-- Įdiekite ESLint ir Prettier plėtinius nuosekliam formatavimui
-- Naudokitės naršyklės kūrimo įrankiais JavaScript derinimui
-- Vue projektams įdiekite Vue DevTools naršyklės plėtinį
+- Naudoti VS Code su Live Server plėtiniu HTML projektams  
+- Įdiegti ESLint ir Prettier plėtinius nuosekliam formatavimui  
+- Naudoti naršyklės DevTools JavaScript derinimui  
+- Vue projektams įdiegti Vue DevTools naršyklės plėtinį  
 
 ### Veikimo našumas
 
-- Daug išverstų failų (50+ kalbų) reiškia dideles pilnas kopijas
-- Naudokite švelnų klonavimą, jei dirbate tik su turiniu: `git clone --depth 1`
-- Išskirkite vertimus paieškose dirbdami su anglišku turiniu
-- Kūrimo procesai gali būti lėti pirmame paleidime (npm install, Vite build)
+- Daug išverstų failų (daugiau nei 50 kalbų) reiškia didelius klonus  
+- Naudoti sekliu klonavimą, jei dirbama tik su turiniu: `git clone --depth 1`  
+- Išskirti vertimus paieškose dirbant su anglų kalba  
+- Kūrimo procesai gali būti lėti pirmo paleidimo metu (npm install, Vite build)  
 
-## Saugumo svarstymai
+## Saugumo aspektai
 
 ### Aplinkos kintamieji
 
-- API raktai neturi būti įtraukti į saugyklą
-- Naudokite `.env` failus (jau įtraukti į `.gitignore`)
-- Dokumentuokite reikiamus aplinkos kintamuosius projektuose README
+- API raktai neturi būti saugomi saugykloje  
+- Naudoti `.env` failus (jau įtraukta į `.gitignore`)  
+- Dokumentuoti reikalingus aplinkos kintamuosius README failuose  
 
 ### Python projektai
 
-- Naudokite virtualias aplinkas: `python -m venv venv`
-- Laikykite priklausomybes atnaujintas
-- GitHub token’ai turi turėti minimalias reikalingas teises
+- Naudoti virtualias aplinkas: `python -m venv venv`  
+- Laikyti priklausomybes atnaujintas  
+- GitHub tokenai turi turėti minimalias reikalingas teises  
 
-### GitHub modelių prieiga
+### GitHub Models prieiga
 
-- Reikalingi asmeniniai prieigos token’ai (PAT) GitHub modeliams
-- Token’ai saugomi kaip aplinkos kintamieji
-- Niekada neįtraukite token’ų ar prisijungimo duomenų į saugyklą
+- Reikalingi asmeniniai prieigos tokenai (PAT) GitHub Models  
+- Tokenai laikomi aplinkos kintamuosiuose  
+- Niekuomet neįtraukti tokenų ar prisijungimo duomenų į saugyklą  
 
 ## Papildomos pastabos
 
 ### Tikslinė auditorija
 
-- Visiškai pradedantieji žiniatinklio kūrime
-- Studentai ir savarankiški besimokantieji
-- Mokytojai, naudojantys kursą klasėse
-- Turinys sukurtas prieinamumui ir palaipsniui įgūdžių tobulinimui
+- Absoliutūs pradedantieji interneto kūrime  
+- Studentai ir savarankiški mokymosi dalyviai  
+- Mokytojai, naudojantys mokymo planą klasėse  
+- Turinys pritaikytas prieinamumui ir palaipsniui įgūdžių ugdymui  
 
-### Edukacinė filosofija
+### Mokymosi filosofija
 
-- Mokymasis projekte pagrindu
-- Dažni žinių patikrinimai (testai)
-- Praktinės kodo užduotys
-- Realūs pavyzdžiai ir taikymas
-- Akcentas į pagrindus prieš karkasus
+- Projektinis mokymasis  
+- Dažni žinių patikrinimai (testai)  
+- Praktiniai programavimo užsiėmimai  
+- Realūs taikymo pavyzdžiai  
+- Dėmesys pagrindams prieš karkasus  
 
 ### Saugyklos priežiūra
 
-- Aktyvi besimokančiųjų ir bendradarbių bendruomenė
-- Reguliarūs atnaujinimai priklausomybėms ir turiniui
-- Problemos ir diskusijos prižiūrimos migratorių
-- Vertimų atnaujinimai automatizuoti per GitHub Actions
+- Aktyvi mokinių ir prisidedančių bendruomenė  
+- Reguliarūs priklausomybių ir turinio atnaujinimai  
+- Problemos ir diskusijos prižiūrimos vykdytojų  
+- Vertimų atnaujinimai automatizuoti per GitHub Actions  
 
 ### Susiję ištekliai
 
-- [Microsoft Learn moduliai](https://docs.microsoft.com/learn/)
-- [Studentų centras](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) rekomenduojamas besimokantiesiems
-- Papildomi kursai: Generatyvioji DI, Duomenų mokslas, ML, IoT kursai
+- [Microsoft Learn moduliai](https://docs.microsoft.com/learn/)  
+- [Studentų centro ištekliai](https://docs.microsoft.com/learn/student-hub/)  
+- Rekomenduojama naudoti [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) mokymuisi  
+- Papildomi kursai: generatyvus AI, duomenų mokslas, ML, IoT   
 
-### Darbas su specifiniais projektais
+### Darbas su konkrečiais projektais
 
-Išsamios instrukcijos apie atskirus projektus yra README failuose:
-- `quiz-app/README.md` - Vue 3 apklaustuko programa
-- `7-bank-project/README.md` - Banko programa su autentifikacija
-- `5-browser-extension/README.md` - Naršyklės plėtinių kūrimas
-- `6-space-game/README.md` - Canvas pagrindu sukurtas žaidimas
-- `9-chat-project/README.md` - DI pokalbių asistento projektas
+Išsamias instrukcijas apie atskirus projektus žr. README failuose:  
+- `quiz-app/README.md` - Vue 3 viktorinos programa  
+- `7-bank-project/README.md` - Banko programa su autentifikacija  
+- `5-browser-extension/README.md` - Naršyklės plėtinių kūrimas  
+- `6-space-game/README.md` - Canvas pagrindu veikiantis žaidimas  
+- `9-chat-project/README.md` - AI pokalbių asistento projektas  
 
 ### Monorepo struktūra
 
-Nors tai nėra tradicinis monorepo, ši saugykla apima kelis nepriklausomus projektus:
-- Kiekviena pamoka yra savarankiška
-- Projektai nesidalina priklausomybėmis
-- Dirbkite su atskiromis projekto dalimis nesukeldami poveikio kitiems
-- Klonuokite visą saugyklą pilnam kurso patyrimui
+Nors nėra tradicinė monorepo saugykla, ši saugykla talpina kelis nepriklausomus projektus:  
+- Kiekviena pamoka savaime užbaigta  
+- Projektai nesidalina priklausomybėmis  
+- Galima dirbti su atskirais projektais nepaveikiant kitų  
+- Norint gauti pilną mokymo patirtį, rekomenduojama klonuoti visą saugyklą  
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatizuotuose vertimuose gali pasitaikyti klaidų ar netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudotis profesionalaus žmogaus vertimu. Mes neprisiimame atsakomybės už bet kokius nesusipratimus ar neteisingas interpretacijas, kylančias dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatizuoti vertimai gali turėti klaidų arba netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritiniais atvejais rekomenduojama naudotis profesionalių žmonių vertimais. Mes neatsakome už bet kokius nesusipratimus ar neteisingas interpretacijas, kylančias iš šio vertimo naudojimo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
