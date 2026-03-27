@@ -1,98 +1,98 @@
 # Sissejuhatus programmeerimiskeeltesse ja kaasaegsetesse arendustööriistadesse
  
-Tere, tulevane arendaja! 👋 Kas ma võin sulle midagi rääkida, mis paneb mind iga päev külmavärinaid saama? Sa oled peagi avastamas, et programmeerimine pole lihtsalt arvutite kohta – see on tõeliste supervõimete omandamine, et ellu viia oma metsikumaid ideid!
+Hei, tulevane arendaja! 👋 Kas tohin sulle midagi öelda, mis paneb mind iga päev siiani külmavärinaid saama? Sa oled peaaegu avastamas, et programmeerimine ei puuduta ainult arvuteid – see tähendab tõelisi supervõimeid, millega tuua ellu oma kõige pöörasemad ideed!
 
-Sa tead seda hetke, kui kasutad oma lemmikrakendust ja kõik lihtsalt klapib täpselt? Kui vajutad nuppu ja midagi täiesti maagilist juhtub, mis paneb sind mõtlema „wow, kuidas nad SEDA tegid?” Noh, keegi täpselt nagu sina – tõenäoliselt istudes oma lemmikkohvikus kell 2 öösel oma kolmanda espresso kõrval – kirjutas selle võlu loova koodi. Ja siin on see, mis su mõistuse lööb: selle tunni lõpuks sa mitte ainult ei mõista, kuidas nad seda tegid, vaid sul on suur tahtmine seda ise proovida!
+Sa tead seda hetke, kui kasutad oma lemmikrakendust ja kõik klapib täiuslikult? Kui toksad nuppu ja juhtub midagi täiesti maagilist, mille peale mõtled "vau, kuidas nad SEDA ka tegid?" Noh, keegi täpselt nagu sina – tõenäoliselt oma lemmikkohvikus kell 2 öösel oma kolmandat espresso võttes – kirjutas selle koodi, mis selle maagia lõi. Ja siin on see, mis su meele lõhki lööb: selle tunni lõpuks sa mitte ainult ei saa aru, kuidas nad selle tegid, vaid sul hakkab kohe tuhin sees seda ise proovida!
 
-Kuula, ma saan täiesti aru, kui programmeerimine tundub praegu hirmutav. Kui ma alustasin, arvasin ausalt, et selleks peab olema mingi matemaatikageenius või olema koodinud alates viieaastasest. Aga siin on see, mis täielikult muutis mu perspektiivi: programmeerimine on täpselt nagu uue keele konversatsiooni õppimine. Sa hakkad öeldes „tere” ja „aitäh,” seejärel tellid kohvi, ja enne kui arvad, käid juba sügavaid filosoofilisi arutelusid! Ainult et siin vestled arvutitega ja ausalt? Nad on kõige kannatlikumad vestluskaaslased, kellega sul kunagi on vedanud – nad ei mõista kunagi su vigu hukka ja nad on alati elevil uuesti proovida!
+Kuule, ma saan täiesti aru, kui programmeerimine tundub hetkel hirmutav. Kui mina alustasin, arvasin tõepoolest, et selleks pead olema mingisugune matemaatikageenius või kodeerinud juba alates viieaastasest. Aga siin on see, mis minu vaatenurka täielikult muutis: programmeerimine on täpselt nagu uue keele vestluste õppimine. Sa alustad "tere" ja "aitäh" ütlemisest, siis tellid kohvi ning enne kui arugi saad, pead sügavaid filosoofilisi vestlusi! Välja arvatud et seekord räägid sa arvutitega, ja ausalt? Nad on kõige kannatlikumad vestluskaaslased, keda võid saada – nad ei hinda sind maha su vigade pärast ning on alati elevil, et proovida uuesti!
 
-Täna uurime uskumatuid tööriistu, mis muudavad kaasaegse veebiarenduse mitte ainult võimalikuks, vaid lausa sõltuvust tekitavaks. Ma räägin täpselt samadest redaktoritest, brauseritest ja töövoogudest, mida Netflixi, Spotify ja su lemmiku indie-rakenduste stuudio arendajad kasutavad iga päev. Ja siin on see osa, mis paneb sind rõõmust tantsima: enamus neist professionaalse taseme, tööstusstandarditega tööriistadest on täiesti tasuta!
+Täna uurime hämmastavaid tööriistu, mis teevad kaasaegse veebiarenduse mitte ainult võimalikuks, vaid tõeliselt sõltuvust tekitavaks. Ma räägin täpselt samadest redigeerijatest, brauseritest ja töövoogudest, mida kasutavad arendajad Netflixis, Spotifys ja sinu lemmik indie rakenduse stuudios iga päev. Ja siin on see osa, mis paneb sind rõõmust tantsima: enamus nendest professionaalse taseme, tööstusstandardite tööriistadest on täiesti TASUTA!
 
 ![Intro Programming](../../../../translated_images/et/webdev101-programming.d6e3f98e61ac4bff.webp)
-> Sketchnote autorilt [Tomomi Imura](https://twitter.com/girlie_mac)
+> Sketchnote autor [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ```mermaid
 journey
-    title Teie programmeerimisteekond täna
+    title Sinu programmeerimise teekond täna
     section Avastamine
       Mis on programmeerimine: 5: You
       Programmeerimiskeeled: 4: You
       Tööriistade ülevaade: 5: You
     section Uurimine
       Koodi redaktorid: 4: You
-      Brauserid & arendajatööriistad: 5: You
-      Käsklusrida: 3: You
+      Brauserid ja arendajatööriistad: 5: You
+      Käsurida: 3: You
     section Harjutamine
-      Keeledetektiiv: 4: You
+      Keelendetektiiv: 4: You
       Tööriistade uurimine: 5: You
-      Ühiskonna ühendus: 5: You
+      Kogukonnaga ühenduse loomine: 5: You
 ```
 ## Vaatame, mida sa juba tead!
 
-Enne kui sukeldume põnevasse maailma, olen uudishimulik – mida sa juba tead sellest programmeerimise maailmast? Ja kuula, kui sa vaatad neid küsimusi ja mõtled „mul pole tegelikult õrna aimugi,” siis see pole mitte ainult okei, see on ideaalne! See tähendab, et oled täiesti õiges kohas. Mõtle sellele viktoriinile kui soojendusele enne trenni – me soojendame lihtsalt neid aju lihaseid!
+Enne lõbusamate teemade juurde hüppamist olen uudishimulik – mida sa sellest programmeerimise maailmast juba tead? Ja kuule, kui sa vaatad neid küsimusi ja mõtled "Mul pole sellest absoluutselt aimugi", siis see pole mitte ainult okei, see on ideaalne! See tähendab, et oled täiesti õiges kohas. Mõtle selle lõbusa testi peale kui venitussoojendus enne treeningut – me lihtsalt alustame aju lihaste soojendamist!
 
-[Osale eeltunnis viktoriinis](https://ff-quizzes.netlify.app/web/)
+[Võta ette ülesehitus-eeskatsetus](https://ff-quizzes.netlify.app/web/)
 
 
-## Seiklus, millele me koos asume
+## Seiklus, millele me koos lähme
 
-Okei, ma olen tõeliselt elevil selle üle, mida me täna uurime! Tõsiselt, sooviksin näha su nägu, kui mõned neist mõistetest lõpuks klapivad. Siin on uskumatult põnev teekond, millele me koos asume:
+Okei, ma olen siiralt põnevil selle üle, mida täna uurime! Ausalt, ma soovin, et ma saaksin su nägu näha, kui mõni nendest kontseptsioonidest arusaamisele jõuab. Siin on selle uskumatult laheda teekonna kokkuvõte, mille me koos võtame:
 
-- **Mis programmeerimine tegelikult on (ja miks see on kõige lahedam asi maailmas!)** – Avastame, kuidas kood on sõna otseses mõttes nähtamatu võlu, mis paneb kõike su ümber tööle, alates äratusest, mis kuidagi teab, et on esmaspäeva hommik, kuni algoritmini, mis täpselt kureerib su Netflixi soovitusi
-- **Programmeerimiskeeled ja nende hämmastavad isiksused** – Kujuta ette, et sisened peole, kus igal inimesel on täiesti erinevad supervõimed ja probleemide lahendamise viisid. Selline on programmeerimiskeelte maailm ja sa armastad neid kohtuda!
-- **Põhilised ehitusplokid, mis teevad digitaalse võlu võimalikuks** – Mõtle neile kui ülimale loomingulisele LEGO komplektile. Kui sa mõistad, kuidas need tükid kokku sobivad, märkad, et saad ehitada ükskõik mida, mida su kujutlusvõime unistab
-- **Professionaalsed tööriistad, mis panevad sind tundma nagu oleksid just saanud võluri pulga kätte** – Ma pole draamategija – need tööriistad teevad sind tõesti tundma, nagu sul oleksid supervõimed, ja parim osa? Need on täpselt samad, mida kasutavad professionaalid!
+- **Mis programmeerimine tegelikult on (ja miks see on kõige lahedam asi üldse!)** – Avastame, kuidas kood on tõepoolest nähtamatu maagia, mis paneb kõik su ümber toimima, alates äratusest, mis kuidagi teab, et on esmaspäeva hommik, kuni algoritmini, mis täiuslikult kureerib su Netflixi soovitusi
+- **Programmeerimiskeeled ja nende hämmastavad iseloomud** – Kujuta ette, et astud peole, kus igal inimesel on täiesti erinevad supervõimed ja probleemide lahendamise viisid. Nii ongi programmeerimiskeelte maailm ning sa armud neisse kohtudes!
+- **Põhilised ehitusplokid, mis loovad digitaalse maagia** – Mõtle nendele kui ülimale loomingulisele LEGO komplektile. Kui sa mõistad, kuidas see tükkideks sobib, saad sa tegelikult ehitada kõike, mida su fantaasia välja mõelda suudab
+- **Professionaalsed tööriistad, mis panevad sind tundma nagu oleksid saanud võlurikepi** – Ma pole siinkohal liialdades – need tööriistad panevad sind tõesti tundma supervõimetega, ja parim osa? Need on samad, mida proffid kasutavad!
 
-> 💡 **Siin on asi**: Ära proovi kõike täna pähe õppida! Praegu tahan ainult, et tunneksid seda põnevuse sädet selle üle, mis on võimalik. Detailid jäävad loomulikult meelde, kui harjutame koos – nii toimub tõeline õppimine!
+> 💡 **Asi on selles**: ära isegi mõtle kõike täna pähe tuupima hakata! Praegu tahan lihtsalt, et tunneksid põnevust selle üle, mis võimalik on. Detailid jäävad sulle loomulikult meelde, kui me koos harjutame – nii käib päris õppimine!
 
-> Sa võid selle tunni teha ka [Microsoft Learn'is](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
+> Selle tunni võid läbida ka [Microsoft Learnis](https://learn.microsoft.com/en-us/learn/modules/web-development-101/introduction-programming/?WT.mc_id=academic-77807-sagibbon)!
 
-## Niisiis, mis see *täpselt* programmeerimine on?
+## Mis siis täpselt *on* programmeerimine?
 
-Okei, võtame käsile miljonidollari küsimuse: mis see programmeerimine päriselt on?
+Nüüd võtame käsile miljonidollari küsimuse: mis tegelikult on programmeerimine?
 
-Ma räägin sulle loo, mis täielikult muutis minu arusaama sellest. Eelmisel nädalal proovisin selgitada oma emale, kuidas kasutada meie uut nutikat teleri puldit. Ma tabasin end ütlemast asju nagu „Vajuta punast nuppu, aga mitte suurt punast nuppu, väikest punast nuppu vasakul... ei, su teist vasakut... okei, hoia seda nüüd kaks sekundit, mitte üks, mitte kolm...” Kõlab tuttavalt? 😅
+Ma räägin sulle loo, mis täielikult muutis minu arusaama. Eelmisel nädalal püüdsin oma emale seletada, kuidas meie uut nutikat teleri kaugjuhtimispulti kasutada. Ma tabasin end ütlemas asju nagu "Vajuta punast nuppu, aga mitte suurt punast nuppu, väikest punast nuppu vasakul... ei, sinu teine vasak... okei, nüüd hoia seda kaks sekundit, mitte üks, mitte kolm..." Kas see kõlab tuttavalt? 😅
 
-See ongi programmeerimine! See on kunst anda äärmiselt detailseid, samm-sammult juhiseid millelegi, mis on väga võimas, aga vajab kõike väga täpselt välja kirjutatuna. Ainult et selle asemel, et seletada emale (kes võis küsida „millise punase nupu?!“), seletad arvutile (kes lihtsalt teeb täpselt seda, mida sa ütled, isegi kui see pole päriselt see, mida sa mõtlesid).
+See on programmeerimine! See on kunst anda uskumatult detailsed, samm-sammult juhised millelegi, mis on väga võimas, aga vajab kõike täpselt väljaütlemist. Välja arvatud, et sa ei selgita oma emale (kes võib küsida "millist punast nuppu?!"), vaid sa selgitad arvutile (kes lihtsalt teeb täpselt seda, mida sa ütled, isegi kui sa tegelikult mõtlesid midagi muud).
 
-Siin on see, mis mind raputas, kui ma selle asja esimest korda õppisin: arvutid on tegelikult väga lihtsad oma olemuselt. Nad mõistavad sõna otseses mõttes ainult kahte asja – 1 ja 0, mis on põhimõtteliselt „jah“ ja „ei“ või „sees“ ja „väljas“. See on kõik! Aga siin muutub see maagiliseks – me ei pea rääkima ainult 1-des ja 0-des nagu me oleksime Matrixis. Siin tulevad appi **programmeerimiskeeled**. Need on nagu maailma parim tõlk, kes võtab su täiesti normaalsed inimmõtted ja tõlgib need arvuti keelde.
+Siin on see, mis mind alguses valla ajas: arvutid on oma südamelt tegelikult üsna lihtsad. Nad mõistavad sõna otseses mõttes ainult kahte asja – 1 ja 0, mis on põhimõtteliselt „jah” ja „ei” või „sees” ja „väljas”. See ongi kõik! Aga siin tulebki maagia – meie ei pea rääkima ainult 1-des ja 0-des nagu filmis Matrix. Siin tulevad appi **programmeerimiskeeled**. Need on nagu maailma parimad tõlkijad, kes võtavad sinu täiesti normaalsed inimmõtted ja teisendavad need arvutikeelde.
 
-Ja siin on see, mis paneb mind iga hommik ärgates ikka külmavärinaid saama: sõna otseses mõttes *kõik* digitaalne sinu elus algas kellegi täpselt nagu sina poolt, tõenäoliselt istudes oma pidžaamas kohvitassi kõrval ja toksides koodi sülearvutis. See Instagrami filter, mis paneb sind ideaalsena välja nägema? Keegi kirjutas selle koodi. Soovitus, mis viis sind sinu uue lemmiklauluni? Üks arendaja ehitas selle algoritmi. Rakendus, mis aitab sõpradega õhtusöögi arve jagada? Jep, keegi mõtles „see on tüütu, ma võiksin selle korda teha“ ja siis... ta tegigi!
+Ja siin on see, mis mind siiani iga hommik tõeliselt külmavärinaid paneb: sõna otseses mõttes *kõik* digitaalne sinu elus algas kellegagi, nagu sina, tõenäoliselt pidžaamas, tass kohvi käes, tippides koodi sülearvutisse. See Instagrami filter, mis paneb sind täiuslikuna välja nägema? Keegi programmeeris selle. Soovitus, mis viis sind su uue lemmiklauluni? Arendaja lõi selle algoritmi. Rakendus, mis aitab sul õhtusöögiarved sõpradega jagada? Jep, keegi mõtles "see on tüütu, ma arvan, et saan selle korda teha" ja siis... ta tegigi!
 
-Kui õpid programmeerima, ei omanda sa lihtsalt uut oskust – sa saad osaks sellest uskumatu probleemide lahendajate kogukonnast, kes veedavad oma päevi mõeldes: „Mis siis, kui ma looksin midagi, mis teeb kellegi päeva natuke paremaks?“ Ausõna, kas on midagi lahedamat kui see?
+Kui sa õpid programmeerima, siis sa ei omanda lihtsalt uut oskust – sa liitud selle uskumatult vahva probleemilahendajate kogukonnaga, kes veedavad oma päevad mõeldes: "Mis siis, kui ma saaks ehitada midagi, mis teeb kellegi päeva pisut paremaks?" Ausalt, kas on midagi lahedamat?
 
-✅ **Lõbus faktihunt**: Siin on midagi väga lahedat, mida saad uurida, kui sul on vaba hetk – kes oli sinu arvates maailma esimene arvutiprogrammeerija? Ma annan sulle vihje: see ei pruugi olla see, keda sa ootad! Selle inimese lugu on tõeliselt põnev ja näitab, et programmeerimine on alati olnud loominguline probleemide lahendamine ja kastist välja mõtlemine.
+✅ **Lõbus faktimäng**: Siin on midagi üliväga põnevat, mida võid uurida kui sul on vaba hetk – kes sa arvad oli maailma esimene arvutiprogrammeerija? Ma annan sulle vihje: tõenäoliselt ei ole see see, keda sa ootad! Selle inimese lugu on lihtsalt lummav ja näitab, et programmeerimine on alati olnud loominguline probleemilahendus ja kastist välja mõtlemine.
 
-### 🧠 **Peatus: Kuidas sa end tunned?**
+### 🧠 **Kuidas sul läheb?**
 
-**Võta hetk, et mõelda:**
-- Kas idee „anda arvutile juhiseid“ on nüüd arusaadav?
-- Kas suudad mõelda igapäevasele tegevusele, mida sooviksid programmeerimisega automatiseerida?
-- Millised küsimused sul programmeerimisest praegu mõtteis keerlevad?
+**Võta hetk peegeldamiseks:**
+- Kas idee „anda arvutile juhiseid” tundub nüüd mõistlik?
+- Kas suudad mõelda mõne igapäevase ülesande, mida tahaksid programmeerimise abil automatiseerida?
+- Millised küsimused sul selle kogu programmeerimise asja kohta peas keerlevad?
 
-> **Mäleta**: On täiesti normaalne, kui mõned mõisted tunduvad praegu ähmased. Programmeerimist õppida on nagu uut keelt õppida – aju vajab aega, et luua närvivõrgustikke. Sa lähed väga hästi!
+> **Pea meeles**: on täiesti normaalne, kui mõni kontseptsioon tundub praegu hägune. Programmeerimist õppida on nagu uut keelt õppida – aju vajab aega, et luua need neurovõrgustikud. Sa teed suurepärast tööd!
 
-## Programmeerimiskeeled on nagu erinevad maagia maitsed
+## Programmeerimiskeeled on nagu erinevad maagilised maitsed
 
-Okei, see kõlab veidralt, aga jää minuga – programmeerimiskeeled on väga sarnased muusika erinevate žanritega. Mõtle sellele: sul on džäss, mis on sujuv ja improviseeriv, rock, mis on võimas ja otsekohene, klassikaline, mis on elegantne ja struktureeritud, ning hip-hop, mis on loov ja väljendusrikas. Igal stiilil on oma tuju, oma kirglike fännide kogukond ja igaüks sobib erinevateks hetkeks ja meeleoludeks.
+Okei, see kõlab imelikult, aga ära pöördu ära – programmeerimiskeeled on väga sarnased erinevate muusikastiilidega. Mõtle sellele: sul on jazz, mis on sujuv ja improviseeriv, rock, mis on võimas ja sirgjooneline, klassikaline, mis on elegantne ja struktureeritud, ning hip-hop, mis on loominguline ja väljendusrikas. Igal stiilil on oma vibe, oma kirglike fännide kogukond ja igaüht sobib erinevatesse olukordadesse ja tunnetesse.
 
-Programmeerimiskeeled toimivad täpselt samamoodi! Sa ei kasuta sama keelt lõbusa mobiilimängu ehitamiseks, mida kasutaksid tohutute kliimandmete arvutamiseks, just nagu sa ei mängiks death metal'i joogatunnis (noh, enamikes joogatundides kindlasti mitte! 😄).
+Programmeerimiskeeled töötavad täpselt samamoodi! Sa ei kasuta sama keelt lõbusa mobiilimängu tegemiseks, mida kasutad tohutute kliimaandmete töötlemiseks, just nagu sa ei mängiks death metalit joogatunnis (no vähemalt enamikes joogatundides! 😄).
 
-Aga siin on see, mis mind iga kord täiesti mõistust võtab: need keeled on nagu kõige kannatlikumad ja geniaalsemad tõlkijad maailmas, kes istuvad su kõrval. Sa saad väljendada oma ideid viisil, mis tundub loomulik su inimmõistusele, ja nemad teevad kogu väga keeruka töö, et tõlkida see 1-ks ja 0-ks, mida arvutid tegelikult räägivad. See on nagu sõber, kes on täiuslikult kahe keele – „inimloovuse“ ja „arvutilogiika“ – valdamises, ja ta ei väsi kunagi, ei vaja kohvipause ega mõista sind hukka, kui küsid sama küsimust kaks korda!
+Aga siin on see, mis paneb mind iga kord imestama: need keeled on nagu maailmanadil kannatlik ja geniaalne tõlk, kes istub otse kõrval. Sa saad väljendada oma ideid viisil, mis su inimese ajule loomulik tundub, ja nemad teevad kogu uskumatult keeruka töö, tõlkides selle 1-deks ja 0-deks, mida arvutid tegelikult räägivad. See on nagu sõber, kes valdab perfektselt nii „inimese loomingulisust” kui ka „arvuti loogikat” – ja ta ei väsi kunagi, ei vaja kohvipause ega hinda sind maha selle eest, et esitad sama küsimust kaks korda!
 
-### Populaarsed programmeerimiskeeled ja nende kasutusalad
+### Populaarsed programmeerimiskeeled ja nende kasutus
 
 ```mermaid
 mindmap
   root((Programmeerimiskeeled))
     Veebiarendus
       JavaScript
-        Frontendi Võlud
-        Interaktiivsed Veebisaidid
+        Esikülje Võlu
+        Interaktiivsed Veebilehed
       TypeScript
         JavaScript + Tüübid
-        Ettevõtte Rakendused
-    Andmed & TE
+        Ärirakendused
+    Andmed & Tehisintellekt
       Python
         Andmeteadus
         Masinõpe
@@ -103,79 +103,79 @@ mindmap
     Mobiilirakendused
       Java
         Android
-        Ettevõte
+        Äri
       Swift
         iOS
-        Apple Ökosüsteem
+        Apple'i Ökosüsteem
       Kotlin
         Moodne Android
         Platvormideülene
-    Süsteemid & Tulemuslikkus
+    Süsteemid & Jõudlus
       C++
         Mängud
-        Tulemuslikkusele Oluline
+        Jõudluskriitiline
       Rust
         Mälu Turvalisus
         Süsteemiprogrammeerimine
       Go
         Pilveteenused
-        Skaalautuv Tagaplaan
+        Skaaleeritav Tagaplaan
 ```
-| Keel | Parim kasutusala | Miks see on populaarne |
+| Keel | Parim kasutamiseks | Miks see populaarne on |
 |----------|----------|------------------|
-| **JavaScript** | Veebiarendus, kasutajaliidesed | Jookseb brauserites ja paneb tööle interaktiivsed veebilehed |
-| **Python** | Andmeteadus, automaatika, tehisintellekt | Lihtne lugeda ja õppida, võimsad teegid |
-| **Java** | Ettevõtte rakendused, Androidi rakendused | Platvormiülene, tugev suurtele süsteemidele |
+| **JavaScript** | Veebiarendus, kasutajaliidesed | Jookseb brauserites ja toetab interaktiivseid veebisaite |
+| **Python** | Andmeteadus, automatiseerimine, tehisintellekt | Lihtne lugeda ja õppida, võimsad raamatukogud |
+| **Java** | Ettevõtte rakendused, Androidi äpid | Platvormist sõltumatu, tugev suurte süsteemide jaoks |
 | **C#** | Windowsi rakendused, mänguarendus | Tugev Microsofti ökosüsteemi tugi |
-| **Go** | Pilveteenused, tagapõhjasüsteemid | Kiire, lihtne, loodud kaasaegseks arvutamiseks |
+| **Go** | Pilveteenused, backend süsteemid | Kiire, lihtne, loodud kaasaegse arvutamise jaoks |
 
-### Kõrgtaseme vs madalatasemel keeled
+### Kõrgetasemelised vs madalatasemelised keeled
 
-Okei, see oli ausalt see mõiste, mis mu aju murdis, kui ma õppima hakkasin, nii et jagan analoogiat, mis lõpuks mu jaoks kõik klappis – ja loodan väga, et see aitab ka sind!
+Okei, see oli ausalt kontseptsioon, mis mind alguses peaaegu murdis, nii et jagan analoogiat, mis lõpuks selle mulle seletavaks tegi – ja loodan väga, et see aitab sindki!
 
-Kujuta ette, et sa oled riigis, kus sa keelt ei räägi ja sul on väga kiireks vaja leida lähim tualett (me oleme kõik seda kogenud, eks? 😅):
+Kujuta ette, et sa oled riigis, kus sa keelt ei oska, ja sul on hullult vaja leida lähim tualett (me kõik oleme ju seal olnud, eks? 😅):
 
-- **Madalatasemeline programmeerimine** on nagu õppida nii hästi kohaliku murret, et saad vestelda vanaemaga, kes müüb nurgatänaval puuvilju, kasutades kultuuriviiteid, kohalikku slängi ja nali, mida mõistaks vaid keegi, kes seal kasvas. Väga muljetavaldav ja äärmiselt tõhus... kui sul kogemusi on! Aga üsna üle jõu käiv, kui sa lihtsalt püüad tualetti leida.
+- **Madalatasemeline programmeerimine** on nagu kohalikku murret nii hästi õppida, et saad rääkida vanaemaga, kes müüb nurga peal puuvilju, kasutades kultuuriviiteid, kohalikke slangisõnu ja seesuguseid nalju, mida mõistab ainult keegi, kes on seal üles kasvanud. Ülimalt muljetavaldav ja efektiivne... kui oled sellest keeleliselt juba täiesti selgeks saanud! Aga päris hull võib olla siis, kui sa lihtsalt tualetti otsid.
 
-- **Kõrgtaseme programmeerimine** on nagu see hämmastav kohalik sõber, kes lihtsalt saab su mõttest aru. Sa ütled otse inglise keeles „Ma tõesti pean tualetti leidma“ ja tema teeb kogu kultuurilise tõlke ning annab sulle juhised viisil, mis mõistab su mitte-kohalik aju täielikult.
+- **Kõrgetasemeline programmeerimine** on nagu see imeline kohalik sõber, kes sind lihtsalt mõistab. Sa ütled "ma tõesti pean tualetti leidma" tavalises inglise keeles ja tema teeb kogu kultuurilise tõlke ning juhatab sind tee pealt viisil, mis su mittekohalisel ajul täiesti arusaadav on.
 
-Programmeerimise keeles:
-- **Madalatasemel keeled** (nagu Assembly või C) lubavad sul arutada väga detailsetel teemadel arvuti riistvaraga, aga sa pead mõtlema nagu masin, mis on... no öelgem nii, et see on suur vaimne hüpe!
-- **Kõrgtasemel keeled** (nagu JavaScript, Python või C#) lubavad sul mõelda nagu inimene, samal ajal kui nad teevad kogu masinakeele taga töötleva töö. Pealegi on neil imelised toetavad kogukonnad täis inimesi, kes mäletavad, mida tähendab olla algaja ja kes tõesti tahavad aidata!
+Programmeerimises:
+- **Madalatasemelised keeled** (nagu Assembly või C) lasevad sul rääkida väga üksikasjalikke vestlusi arvuti riistvaraga, aga sa pead mõtlema nagu masin, mis on... ütleme nii, üsna suur vaimne nihkepunkt!
+- **Kõrgetasemelised keeled** (nagu JavaScript, Python või C#) lasevad sul mõelda nagu inimene, samal ajal kui nemad korraldavad kogu masina-sõna tahaotsa. Lisaks on neil tohutult külalislahked kogukonnad täis inimesi, kes mäletavad, mis tunne on uus olla, ja kes tõesti tahavad aidata!
 
-Aru saad, milliseid ma soovitan alustada? 😉 Kõrgtasemel keeled on nagu treeningratastega jalgratas, mida sa tegelikult ei taha kunagi eemaldada, sest need muudavad kogu kogemuse nii mõnusaks!
+Arva ära, milliseid ma soovitan sul alustada? 😉 Kõrgetasemelised keeled on nagu abirattad, mida sa tegelikult kunagi maha võtta ei taha, sest nad muudavad kogu kogemuse palju nauditavamaks!
 
 ```mermaid
 flowchart TB
-    A["👤 Inimese mõte:<br/>'Ma tahan arvutada Fibonacci arve'"] --> B{Vali keeltesäte}
+    A["👤 Inimese Mõte:<br/>'Ma tahan arvutada Fibonacci arve'"] --> B{Vali Keeletase}
     
-    B -->|Kõrgetasemeline| C["🌟 JavaScript/Python<br/>Lihtne lugeda ja kirjutada"]
-    B -->|Madalatase| D["⚙️ Assembly/C<br/>Otsene riistvara kontroll"]
+    B -->|Kõrgtase| C["🌟 JavaScript/Python<br/>Lihtne lugeda ja kirjutada"]
+    B -->|Madaltase| D["⚙️ Assembly/C<br/>Otsene riistvarakontroll"]
     
     C --> E["📝 Kirjuta: fibonacci(10)"]
     D --> F["📝 Kirjuta: mov r0,#00<br/>sub r0,r0,#01"]
     
-    E --> G["🤖 Arvuti mõistmine:<br/>Tõlkija käsitleb keerukust"]
+    E --> G["🤖 Arvuti Mõistmine:<br/>Tõlkija haldab keerukust"]
     F --> G
     
-    G --> H["💻 Sama tulemus:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
+    G --> H["💻 Sama Tulemus:<br/>0, 1, 1, 2, 3, 5, 8, 13..."]
     
     style C fill:#e1f5fe
     style D fill:#fff3e0
     style H fill:#e8f5e8
 ```
-### Näitan sulle, miks kõrgtasemel keeled on palju sõbralikumad
+### Näitan sulle, miks kõrgetasemelised keeled on palju sõbralikumad
 
-Okei, ma näitan sulle midagi, mis täiesti demonstreerib, miks ma armusin kõrgtaseme keeltesse, aga kõigepealt – ma tahan, et lubaksid mulle üht asja. Kui sa näed esimest koodinäidet, ära pabista! See peabki esialgu tunduma hirmutav. Täpselt selle peale ma rõhutan!
+Okei, ma näitan nüüd sulle midagi, mis täiesti näitab, miks ma armusin kõrgetasemelisse keeltesse, aga kõigepealt – ma vajan sinult lubadust. Kui sa näed seda esimest koodinäidet, ära ehmu! Selle peamine ülesanne on näida hirmutav. Just seda ma tahangi näidata!
 
-Vaatame täpselt sama ülesannet, mis on kirjutatud kahel täiesti erineval moel. Mõlemad loovad Fibonacci jada – see on ilus matemaatiline muster, kus iga number on kahe eelneva summa: 0, 1, 1, 2, 3, 5, 8, 13... (Lõbus fakt: seda mustrit leiad sõna otseses mõttes kõikjalt loodusest – päevalille seemnete spiraalid, männikäbide mustrid, isegi galaktikate moodustumine!)
+Vaatame täpselt sama ülesannet kirjutatuna kahes täiesti erinevas stiilis. Mõlemad loovad Fibonacci jada – see on ilus matemaatiline muster, kus iga number on kahe eelmise summa: 0, 1, 1, 2, 3, 5, 8, 13... (Lõbus fakt: seda mustrit leiad tõesti kõikjalt loodusest – päevalille seemne keerud, käbide mustrid, isegi galaktikate moodustumine!)
 
-Valmis erinevust nägema? Lähme!
+Valmis nägema erinevust? Alustame!
 
-**Kõrgtasemel keel (JavaScript) – Inimeste-sõbralik:**
+**Kõrgetasemeline keel (JavaScript) – inimesele sõbralik:**
 
 ```javascript
-// Samm 1: Põhiline Fibonacci seadistus
+// 1. samm: Põhiline Fibonacci seadistus
 const fibonacciCount = 10;
 let current = 0;
 let next = 1;
@@ -183,32 +183,32 @@ let next = 1;
 console.log('Fibonacci sequence:');
 ```
 
-**See kood teeb järgnevat:**
-- **Deklaratsioonib** konstanti, et määratleda, kui palju Fibonacci numbreid tahame genereerida
-- **Algatab** kaks muutujat, et jälgida järjestuse praegust ja järgmist numbrit
-- **Seab** algväärtused (0 ja 1), mis defineerivad Fibonacci mustri
-- **Kuvab** pealkirja sõnumi väljundi identifitseerimiseks
+**See kood teeb järgmist:**
+- **Deklareerib** konstandi, mis määrab, mitu Fibonacci numbrit me genereerime
+- **Initsialiseerib** kaks muutujat, mis jälgivad jadas praegust ja järgmist numbrit
+- **Seab** algväärtused (0 ja 1), mis määravad Fibonacci mustri
+- **Kuvab** päise, mis näitab meie väljundit
 
 ```javascript
-// Samm 2: Järjestuse genereerimine tsükliga
+// Samm 2: Genereeri järjestus tsükliga
 for (let i = 0; i < fibonacciCount; i++) {
   console.log(`Position ${i + 1}: ${current}`);
   
-  // Arvuta järgmine arv jadas
+  // Arvuta järjestuse järgmine number
   const sum = current + next;
   current = next;
   next = sum;
 }
 ```
 
-**Mis siin toimub:**
-- **Tsüklitame** järjestuse kõiki positsioone kasutades `for` tsüklit
-- **Kuvame** iga numbri koos asukohaga, kasutades mallstringe
-- **Arvutame** järgmise Fibonacci numbri praeguse ja järgmise summa abil
-- **Uuendame** jälgivaid muutujaid, et liikuda järgmise iteratsiooni juurde
+**Siin toimub:**
+- **Tsükkel** läbib iga positsiooni jadast, kasutades `for` tsüklit
+- **Kuvab** iga numbri koos positsiooniga, kasutades malliteksti vormindust
+- **Arvutab** uue Fibonacci numbri, liites praeguse ja järgmise väärtuse
+- **Uuendab** jälgimismuutujaid, et liikuda järgmisesse iteratsiooni
 
 ```javascript
-// 3. samm: Moodne funktsionaalne lähenemine
+// Samm 3: Moodne funktsionaalne lähenemine
 const generateFibonacci = (count) => {
   const sequence = [0, 1];
   
@@ -224,13 +224,13 @@ const fibSequence = generateFibonacci(10);
 console.log(fibSequence);
 ```
 
-**Ülal oleme:**
-- **Loomis** taaskasutatavat funktsiooni, kasutades kaasaegset noolefunktsiooni süntaksit
-- **Ehitanud** massiivi, mis salvestab kogu jadana selle asemel, et kuvada ükshaaval
-- **Kasutanud** massiivi indeksit, et arvutada iga uus arv eelnevate põhjal
-- **Tagastanud** kogu jada, et seda saaks paindlikult kasutada programmis muudes osades
+**Ülalolevas me:**
+- **Loodsime** taaskasutatava funktsiooni, kasutades kaasaegset noolfunktsiooni süntaksit
+- **Raamisime** massiivi, mis hoiab kogu jada, selle asemel et kuvada numbreid ükshaaval
+- **Kasutame** massiivi indekseerimist, et arvutada iga uus number eelnevatest väärtustest
+- **Tagastame** kogu jada, et seda saaks kasutada mujal programmis paindlikult
 
-**Madalatasemeline keel (ARM Assembly) – Arvuti-sõbralik:**
+**Madalatasemeline keel (ARM Assembly) – arvutile sõbralik:**
 
 ```assembly
  area ascen,code,readonly
@@ -257,39 +257,38 @@ back add r0,r1
  end
 ```
 
-Tähtis märgata, kuidas JavaScripti versioon loeb peaaegu nagu ingliskeelsed juhised, samas kui Assembly versioon kasutab krüptilisi käske, mis juhivad otse arvuti protsessorit. Mõlemad täidavad täpselt sama ülesande, kuid kõrgtasemel keel on inimestele palju kergemini mõistetav, kirjutatav ja hooldatav.
+Pane tähele, kuidas JavaScripti versioon loeb peaaegu nagu ingliskeelsed juhised, samas kui Assembly versioon kasutab krüptilisi käske, mis otseselt kontrollivad arvuti protsessorit. Mõlemad täidavad täpselt sama ülesande, kuid kõrgetasemeline keel on inimestele palju lihtsam mõista, kirjutada ja hooldada.
 
 **Peamised erinevused, mida märkad:**
-- **Lugemisvõime**: JavaScript kasutab kirjeldavaid nimesid nagu `fibonacciCount`, samal ajal kui Assembly kasutab krüptilisi silte nagu `r0`, `r1`
-- **Kommentaarid**: Kõrgtasemel keeltes julgustatakse seletavaid kommentaare, mis muudavad koodi isedokumenteerivaks
-- **Struktuur**: JavaScripti loogiline voog järgib seda, kuidas inimesed mõtlevad probleemide peale samm-sammult
-- **Hooldus**: JavaScripti versiooni uuendamine erinevate nõudmiste jaoks on lihtne ja selge
+- **Lugemise mugavus**: JavaScript kasutab kirjeldavaid nimesid nagu `fibonacciCount`, samas kui Assembly kasutab krüptilisi silte nagu `r0`, `r1`.
+- **Kommentaarid**: Kõrgetasemelised keeled soodustavad selgitavaid kommentaare, mis teevad koodi isedokumenteerivaks.
+- **Struktuur**: JavaScripti loogiline voog vastab sellele, kuidas inimesed probleeme samm-sammult mõtlevad.
+- **Hooldus**: JavaScripti versiooni uuendamine erinevate nõudmiste jaoks on lihtne ja arusaadav.
 
-✅ **Fibonacci jada kohta**: See tõeliselt kaunis numbrimuster (kus iga number on kahe eelneva summa: 0, 1, 1, 2, 3, 5, 8...) esineb sõna otseses mõttes *kõigis* looduses! Leiad seda päevalille keeristes, männikäbide mustrites, nutilusete kooriku kumeruses ja isegi puuharude kasvus. On üsna hämmastav, kuidas matemaatika ja kood aitavad meil mõista ja taastoota mustreid, mida loodus kasutab ilu loomisel!
+✅ **Fibonacci jada kohta**: See täiesti imeilus numbrimuster (kus iga number võrdub kahe eelneva summaga: 0, 1, 1, 2, 3, 5, 8...) esineb sõna otseses mõttes *kõiges* looduses! Sa leiad seda päevalille spiraalides, männikäbide mustrites, nautiluse kestade kõveruses ja isegi selles, kuidas puude oksad kasvavad. On päris uskumatu, kuidas matemaatika ja kood võivad aidata meil mõista ja taastoota mustreid, mida loodus kasutab ilu loomiseks!
 
+## Ehitusplokid, mis teevad võlu reaalsuseks
 
-## Ehitusplokid, mis teevad maagia võimalikuks
+Nüüd, kui oled näinud, millised programmeerimiskeeled tegelikult välja näevad, vaatame üle põhilised osad, mis moodustavad sõna otseses mõttes iga kunagi kirjutatud programmi. Mõtle nendele kui olulistele koostisosadele sinu lemmikretseptis – kui sa tead, mida igaüks teeb, oskad lugeda ja kirjutada koodi peaaegu igas keeles!
 
-Ok, nüüd, kui oled näinud, kuidas programmeerimiskeeled toimivad praktikas, vaatame põhiosasid, mis moodustavad sõna otseses mõttes iga kirjutatud programmi. Mõtle neile kui olulistele koostisosadele sinu lemmikretseptis – kui sa mõistad, mida igaüks teeb, suudad lugeda ja kirjutada koodi peaaegu igas keeles!
+See on natuke nagu programmeerimise grammatika õppimine. Mäletad, koolis õpid nimisõnu, tegusõnu ja kuidas lauseid moodustada? Programmeerimisel on oma grammatikasüsteem ja ausalt öeldes on see palju loogilisem ja halastamatum kui inglise keel kunagi oli! 😄
 
-See on veidi nagu programmeerimise grammatika õppimine. Mäletad koolist, kui õppisid nimisõnu, tegusõnu ja kuidas lauseid kokku panna? Programmeerimisel on oma grammatika versioon, ja ausalt öeldes on see palju loogilisem ja andestavam kui inglise keele grammatika kunagi oli! 😄
+### Avaldused: samm-sammulised juhised
 
-### Avaldused: Juhised samm-sammult
+Alustame **avaldustega** – need on nagu üksikud laused arvutiga vestluses. Iga avaldus ütleb arvutile teha üks kindel asi, nagu juhiste andmine: "Pööra siin vasakule," "Peatu punase tule juures," "Pargi sellesse kohta."
 
-Alustame **avaldustest** – need on nagu üksikud laused vestluses arvutiga. Iga avaldus käsib arvutil teha üht konkreetset asja, nagu juhiste andmine: "Pööra siin vasakule," "Peatu punase tule juures," "Parki sinna kohta."
-
-Mulle meeldib avalduste puhul eriti see, kui loetavad nad tavaliselt on. Vaata seda:
+Mulle meeldib avalduste juures see, kui loetavad nad enamasti on. Vaata seda:
 
 ```javascript
-// Põhilised avaldused, mis teevad ühe toimingu
+// Põhilised avaldused, mis sooritavad üksikuid toiminguid
 const userName = "Alex";                    
 console.log("Hello, world!");              
 const sum = 5 + 3;                         
 ```
 
-**Mis see kood teeb:**
-- **Deklareerib** konstantsena muutuja, kuhu salvestatakse kasutaja nimi
-- ** Kuvab** tervitussõnumi konsoolil
+**See kood teeb järgmist:**
+- **Deklareerib** konstandi, mis hoiab kasutaja nime
+- **Kuvab** tervitussõnumi konsoolile
 - **Arvutab** ja salvestab matemaatilise operatsiooni tulemuse
 
 ```javascript
@@ -298,36 +297,36 @@ document.title = "My Awesome Website";
 document.body.style.backgroundColor = "lightblue";
 ```
 
-**Samm-sammult, mis toimub:**
+**Samm-sammult toimub:**
 - **Muudab** veebilehe tiitlit, mis kuvatakse brauseri vahekaardil
-- **Muutab** kogu lehe keha taustavärvi
+- **Vahetab** kogu lehe keha taustavärvi
 
-### Muutujad: Sinu programmi mälu süsteem
+### Muutujad: su programmi mälusüsteem
 
-Olgu, **muutujad** on ausalt öeldes üks minu lemmikkontseptsioone õpetada, sest need on väga sarnased asjadele, mida sa kasutad iga päev!
+Okei, **muutujad** on ausalt üks mu lemmikkontseptsioone õpetada, sest need on nii sarnased asjadele, mida sa igapäevaselt kasutad!
 
-Mõtle hetkeks oma telefoni kontaktidele. Sa ei õpi kõigi numbreid pähe – selle asemel salvestad "Ema," "Parim sõber" või "Pizzakoht, mis toob kuni kella 2-ni" ja las telefon mäletab tegelikke numbreid. Muutujad töötavad täpselt samamoodi! Need on nagu sildistatud anumad, kuhu su programm saab salvestada informatsiooni ja hiljem seda nime abil hõlpsalt leida.
+Mõtle korraks oma telefoni kontaktiloendile. Sa ei mäleta iga numbri ära – sa salvestad "Ema," "Parim sõber" või "Pitsa, mis toob koju kella 2-ni" ja las telefon mäletab numbreid. Muutujad töötavad täpselt samamoodi! Need on nagu sildistatud anumad, kuhu su programm saab infot salvestada ja hiljem nime järgi kätte otsida.
 
-Siin on see tõeliselt lahe: muutujad võivad programmi jooksu ajal muutuda (seetõttu nimi "muutuja" – näed, mis nad tegid?). Nagu sa võid uuendada pizzakoha kontakti, kui avastad mõne veel parema, võivad muutujad muutuda, kui su programm saab uut teavet või olukord muutub!
+Mis on eriti lahe: muutujad võivad programmi jooksu ajal muutuda (seetõttu ka nimetus "muutuja" – näed, kuidas nad mängisid sõnadega?). Nagu sa võid uuendada seda pitsakohta kontaktis, kui leiad parema, saavad muutujad värskendada end vastavalt uuele infole või muutuvatele tingimustele!
 
-Las ma näitan, kui ilusasti lihtne see võib olla:
+Näitan sulle, kui kaunilt lihtne see võib olla:
 
 ```javascript
-// 1. samm: Põhiliste muutujate loomine
+// Samm 1: Põhiliste muutujate loomine
 const siteName = "Weather Dashboard";        
 let currentWeather = "sunny";               
 let temperature = 75;                       
 let isRaining = false;                      
 ```
 
-**Nende mõistete mõistmine:**
-- **Salvesta** muutumatud väärtused `const` muutujatesse (näiteks saidi nimi)
+**Need mõisted tähendavad:**
+- **Salvesta** muutumatud väärtused `const` muutujatesse (nt saidi nimi)
 - **Kasuta** `let` väärtuste jaoks, mis võivad programmi jooksul muutuda
-- **Määra** erinevaid andmetüüpe: stringid (tekst), numbrid ja booleanid (true/false)
+- **Määra** erinevaid andmetüüpe: stringid (tekst), numbrid ja booleanid (tõene/vale)
 - **Vali** kirjeldavad nimed, mis selgitavad, mida iga muutuja sisaldab
 
 ```javascript
-// Samm 2: Objektidega töötamine seotud andmete rühmitamiseks
+// 2. samm: Objektidega töötamine seotud andmete rühmitamiseks
 const weatherData = {                       
   location: "San Francisco",
   humidity: 65,
@@ -335,50 +334,50 @@ const weatherData = {
 };
 ```
 
-**Ülal oleme:**
-- **Loonud** objekti, mis grupeerib seotud ilmastikuinfo kokku
-- **Korraldanud** mitu andmeosist ühe muutuja nime alla
-- **Kasutanud** võtme-väärtuse paare, et selgelt sildistada iga info osa
+**Ülalolevas oleme:**
+- **Loonud** objekti, et grupeerida seotud ilmaandmeid
+- **Korraldanud** mitu info osa ühe muutujanime alla
+- **Kasutame** võtme-väärtuse paarid, et info selgelt märgistada
 
 ```javascript
 // Samm 3: Muutujate kasutamine ja uuendamine
 console.log(`${siteName}: Today is ${currentWeather} and ${temperature}°F`);
 console.log(`Wind speed: ${weatherData.windSpeed} mph`);
 
-// Muutuvate muutujate uuendamine
+// Muutuva väärtusega muutujate uuendamine
 currentWeather = "cloudy";                  
 temperature = 68;                          
 ```
 
-**Selgitame iga osa:**
-- **Kuva** infot mallimustritega `${}` süntaksis
-- **Juurdu pääsema** objekti omadustele punksümboli (`weatherData.windSpeed`) abil
-- **Uuenda** `let`-iga deklareeritud muutujaid, et kajastada muutuvaid tingimusi
-- **Kombineeri** mitut muutujat tähenduslike sõnumite loomiseks
+**Vaatame iga osa lähemalt:**
+- **Kuva** infot mallilised stringid `${}` süntaksiga
+- **Juurdepääs** objekti omadustele punktnotatsiooniga (`weatherData.windSpeed`)
+- **Uuenda** `let` deklareeritud muutujaid muutuvate tingimuste peegeldamiseks
+- **Kombineeri** mitut muutujat, et luua tähendusrikkaid sõnumeid
 
 ```javascript
-// Samm 4: Moodne destruktureerimine puhtama koodi jaoks
+// Samm 4: Kaasaegne lagundamine puhtama koodi jaoks
 const { location, humidity } = weatherData; 
 console.log(`${location} humidity: ${humidity}%`);
 ```
 
-**Mida pead teadma:**
-- **Eralda** objekti omadusi, kasutades destruktureerivat määramist
-- **Loo** automaatselt uusi muutujaid samade nimedega nagu objekti võtmed
-- **Lihtsusta** koodi vältides korduvat punksümboli kasutamist
+**Oluline teada:**
+- **Eralda** objekti omadusi destruktureeriva määramisega
+- **Loo** uued muutujad automaatselt, kasutades objektivõtmete nimesid
+- **Lihtsusta** koodi, vältides korduvat punktnotatsiooni
 
-### Kontrollvoog: Õpi oma programm mõtlema
+### Kontrollvoog: õpetades su programmi mõtlema
 
-Ok, siin muutub programmeerimine täiesti vapustavaks! **Kontrollvoog** tähendabki õpetamist sinu programmile, kuidas teha nutikaid otsuseid, täpselt nii nagu sina seda iga päev ilma mõtlemata teed.
+Okei, siin hakkab programmeerimine vabalt võttes täiesti hämmastavaks minema! **Kontrollvoog** on põhimõtteliselt su programmi õpetamine tegema nutikaid otsuseid, täpselt nagu sina teed iga päev ilma mõtlemata.
 
-Kujutle: täna hommikul läksid läbi midagi sellist nagu "Kui sajab, võtan vihmavarju. Kui on külm, panen jope selga. Kui hilinen, jätan hommikusöögi vahele ja võtan kohvi teel." Su aju järgib loogikat "kui-siis" tosinatel kordadel päevas!
+Kujuta ette: täna hommikul käisid ilmselt midagi sellist läbi – "Kui sajab, võtaks vihmavarju. Kui on külm, paneks jope selga. Kui hiljaks jään, jätaks hommikusöögi vahele ja võtaks kohvi teel." Sinu aju järgib loomulikult seda kui-siis loogikat kümneid kordi päevas!
 
-See on põhjus, miks programmid tunduvad targad ja elavad, mitte lihtsalt jälgivad igavat, etteaimatavat stsenaariumi. Nad saavad olukorda analüüsida, hinnata toimuvat ja vastata sobivalt. See on nagu anda sinu programmile aju, mis kohaneb ja teeb valikuid!
+See teeb programmidest targad ja elusad, mitte ainult mõne igava, etteaimatava stsenaariumi järgijad. Nad oskavad olukorda hinnata, mõelda, mis toimub, ja reageerida vastavalt. See on nagu anda su programmile ajuke, mis suudab kohaneda ja otsuseid langetada!
 
-Tahad näha, kuidas see kenasti töötab? Näitan sulle:
+Tahad näha, kui kenasti see töötab? Lase näidata:
 
 ```javascript
-// Samm 1: Põhiline tingimusloogika
+// 1. samm: Põhiline tingimusloogika
 const userAge = 17;
 
 if (userAge >= 18) {
@@ -389,14 +388,14 @@ if (userAge >= 18) {
 }
 ```
 
-**Mis see kood teeb:**
-- **Kontrollib**, kas kasutaja vanus vastab hääleõigus nõudele
-- **Täidab** erinevaid koodiplokke tingimuse tulemusel
-- **Arvutab** ja kuvab, kui kaua veel hääletamisõigust oodata, kui alla 18
-- **Annab** konkreetse ja abistava tagasiside igaks juhtumiks
+**See kood teeb järgmist:**
+- **Kontrollib**, kas kasutaja vanus vastab hääletamise nõudele
+- **Täidab** erinevaid koodiblokke sõltuvalt tingimuse tulemusest
+- **Arvutab** ja kuvab, kui kaua veel hääletamisõiguseni peab ootama, kui on alla 18
+- **Annab** konkreetset ja kasulikku tagasisidet iga stsenaariumi korral
 
 ```javascript
-// 2. samm: Mitmed tingimused koos loogikaliste operaatoritega
+// Samm 2: Mitmed tingimused loogikate operaatoritega
 const userAge = 17;
 const hasPermission = true;
 
@@ -409,22 +408,22 @@ if (userAge >= 18 && hasPermission) {
 }
 ```
 
-**Siin tehakse järgmised asjad:**
-- **Kombineeritakse** mitmeid tingimusi `&&` (ja) operaatoriga
-- **Luuakse** tingimuste hierarhia `else if` abil mitme stsenaariumi jaoks
-- **Käsitletakse** kõiki võimalikke juhtumeid lõpliku `else` lausungi abil
-- **Antakse** iga erineva situatsiooni puhul selge ja tegevusele suunatud tagasiside
+**Mis siin toimub?**
+- **Ühenda** mitu tingimust operaatoriga `&&` (ja)
+- **Loo** tingimusthierarhia `else if` abil mitmete stsenaariumite jaoks
+- **Käsitle** kõiki võimalikke juhtumeid lõpliku `else` avaldusega
+- **Anna** selget, toimivat tagasisidet igas olukorras
 
 ```javascript
-// Samm 3: Lühendatud tingimus kolmikoperaatoriga
+// Samm 3: Lühike tingimuslik lause ternaaroperaatoriga
 const votingStatus = userAge >= 18 ? "Can vote" : "Cannot vote yet";
 console.log(`Status: ${votingStatus}`);
 ```
 
-**Mida pead meeles pidama:**
-- **Kasuta** ternaarset operaatorit (`? :`) lihtsate kahe valikuga tingimuste jaoks
-- **Kirjuta** kõigepealt tingimus, siis `?`, pärast tõene tulemus, siis `:`, lõpuks väär tulemus
-- **Rakenda** seda mustrit siis, kui pead tingimustest sõltuvalt väärtusi määrama
+**Pea meeles:**
+- **Kasuta** ternaarset operaatorit (`? :`) lihtsate kahe-valikuga tingimuste jaoks
+- **Kirjuta** tingimus, siis `?`, seejärel tõene tulemus, `:`, ja väär tulemus
+- **Rakenda** seda mustrit, kui vajad väärtuste määramist tingimuste põhjal
 
 ```javascript
 // Samm 4: Mitme konkreetse juhtumi käsitlemine
@@ -448,20 +447,20 @@ switch (dayOfWeek) {
 ```
 
 **See kood teeb järgmist:**
-- **Võrdleb** muutuja väärtust mitme spetsiifilise juhtumiga
-- **Grupib** sarnased juhtumid (nädalapäevad vs nädalavahetused)
-- **Täidab** sobiva koodiploki, kui sobiv juhtum on leitud
-- **Lisa-** `default` juhtum ootamatute väärtuste jaoks
-- **Kasuta** `break` lauseid, et takistada järgmise juhtumi täidet-
+- **Võrdleb** muutuja väärtust mitme konkreetse juhtumiga
+- **Grupeerib** sarnased juhtumid (argipäevad vs nädalavahetused)
+- **Täidab** sobiva koodibloki, kui leitakse vastavus
+- **Sisaldab** `default` juhtumit ootamatute väärtuste jaoks
+- **Kasutab** `break` avaldusi, et takistada koodi jätkumist järgmise juhtumini
 
-> 💡 **Tegeliku elu näide**: Mõtle kontrollvoogu kui kõige kannatlikumale GPS-ile, mis annab sulle juhiseid. See võib öelda "Kui Main Streetil on ummik, võta kiirtee. Kui kiirteed blokeerib ehitus, proovi kaunist marsruuti." Programmid kasutavad täpselt sellist tingimusloogikat, et nutikalt erinevatele olukordadele vastata ja alati kasutajale parima kogemuse pakkuda.
+> 💡 **Tegeliku elu võrdlus**: Mõtle kontrollvoolule nagu maailma kõige kannatlikum GPS, mis juhendab sind. See võib öelda: "Kui Main Streetil on ummik, võta kiirtee. Kui kiirteed ehitatakse kinni, proovi vaadetee." Programmid kasutavad täpselt sellist tingimusloogikat, et inteligentselt olukordadele reageerida ja alati pakkuda kasutajatele parimat kogemust.
 
-### 🎯 **Konseptsiooni kontroll: Ehitusplokkide valdamine**
+### 🎯 **Kontseptide kontroll: ehitusplokkide valdamine**
 
-**Vaatame, kuidas sul fundamentaalides läheb:**
-- Kas suudad omasõnades selgitada muutujate ja avalduste vahet?
-- Mõtle reaalsele olukorrale, kus kasutaksid if-siis otsust (nagu meie hääletamise näites)
-- Mis üllatas sind programmeerimisloogika juures kõige rohkem?
+**Vaatame, kuidas sul põhiteadmised selged on:**
+- Kas suudad oma sõnadega selgitada vahet muutuja ja avalduse vahel?
+- Mõtle välja mõni tegelik olukord, kus kasutad kui-siis otsust (nagu meie hääletamise näide)
+- Mis oli üks asi programmeerimisloogika juures, mis sind üllatas?
 
 **Kiire enesekindluse tõstja:**
 ```mermaid
@@ -473,30 +472,30 @@ flowchart LR
     style C fill:#2196f3
     style D fill:#ff4081
 ```
-✅ **Mis järgmiseks tuleb**: Meil on ees tõeliselt lõbus sukelduda sügavamale neisse kontseptsioonidesse, jätkates seda uskumatut teekonda koos! Praegu keskendu lihtsalt sellele põnevusele kõigi nende imeliste võimaluste ees. Spetsiifilised oskused ja tehnikad tulevad loomulikult, kui harjutame koos – luban, et see saab olema palju lõbusam, kui oskad oodata!
+✅ **Järgmine samm**: Läheme süvitsi nendesse kontseptsioonidesse ühise imelise teekonna jätkudes! Praegu keskendu sellele põnevale tunnetusele kõigist võimalustest, mis sind ees ootavad. Konkreetsed oskused ja tehnikad jäävad loomulikult külge, kui harjutame koos – ma luban, see saab olema palju toredam kui sa oskad arvata!
 
-## Tööriistad tööstuses
+## Tööriistad, millega kaubelda
 
-Ok, ausalt öeldes tunnen end sellepärast nii elevil, et vaevalt suudan ennast tagasi hoida! 🚀 Räägime uskumatuist tööriistadest, mis panevad sind tundma, et oled just saanud käepidemed digitaalsele kosmoselaevale.
+Nüüd, siin muutun ma ausalt nii elevile, et vaevu suudan ennast tagasi hoida! 🚀 Räägime vapustavatest tööriistadest, mis panevad sind tundma, nagu oleksid saanud digitaalse kosmoselaeva võtmepakisid.
 
-Sa tead, kuidas kokal on need ideaalselt tasakaalustatud noad, mis tunduvad osana tema kätest? Või kuidas muusikul on see üks kitarr, mis hakkab laulma kohe, kui ta seda puudutab? Arendajatel on meie enda versioon neist maagilistest tööriistadest ja siin on see, mis su vaimu täiesti raputab – enamik neist on täiesti tasuta!
+Sa tead, kuidas kokal on ideaalselt tasakaalus noad, mis tunduvad nagu tema käe pikendus? Või kuidas muusikul on üks kitarr, mis tundub laulvat kohe, kui ta seda puudutab? Arendajatel on sarnased maagilised tööriistad ja siin tuleb sinu mõistusepimestav osa – enamik neist on täiesti tasuta!
 
-Praktiliselt hüppan tugitoolis, mõeldes, et jagan neid sinuga, sest need on täielikult revolutsioonistanud, kuidas me tarkvara ehitame. Räägime AI-toega koodiassistentidest, mis aitavad sinu koodi kirjutada (ja ma ei naljaga tee!), pilvekeskkondadest, kus saad ehitada äppe sõna otseses mõttes kõikjalt Wi-Fi abil, ning silumise tööriistadest, mis on nii arenenud, nagu oleksid saanud oma programmide jaoks röntgenivisioni.
+Ma olen peaaegu toolil hüppamas, kui mõtlen nende jagamisele, sest need on täielikult muutnud, kuidas me tarkvara ehitame. Räägime tehisintellekti abil töötavatest abimeestest, kes aitavad sul koodi kirjutada (ausalt!), pilvekeskkondadest, kus saad ehitada terveid rakendusi ükskõik kus Wifi juures, ning silumisvahenditest, mis on nii nutikad nagu röntgen su programmidele.
 
-Ja siin on see osa, mis jätab mind külmavärinate sisse: need ei ole "algajate tööriistad", mida sa kunagi välja kasvatad. Need on samad professionaalse taseme tööriistad, mida kasutavad Google’i, Netflix’i ja selle indie-äpi stuudio arendajad just praegu. Sa tunned end sellise professionaalina, kui neid kasutad!
+Ja nüüd osa, mis paneb mind ikka veel kihvama: need ei ole "algajate tööriistad", mida sa kunagi kasutamisest välja kasvad. Need on täpselt samad professionaalse taseme vahendid, mida Google’i, Netflixi ja sinu lemmiku indie-rakenduste stuudio arendajad praegu kasutavad. Sa tunned end nagu tõeline pro, kui neid kasutad!
 
 ```mermaid
 graph TD
-    A["💡 Sinu idee"] --> B["⌨️ Koodi redaktor<br/>(VS Code)"] 
+    A["💡 Teie idee"] --> B["⌨️ Koodi redaktor<br/>(VS Code)"] 
     B --> C["🌐 Brauseri arendustööriistad<br/>(Testimine ja silumine)"]
-    C --> D["⚡ Käsklusrida<br/>(Automatiseerimine ja tööriistad)"]
-    D --> E["📚 Dokumentatsioon<br/>(Õppimine ja viide)"]
-    E --> F["🚀 Hämmastav veebiäpp!"]
+    C --> D["⚡ Käsurida<br/>(Automatiseerimine ja tööriistad)"]
+    D --> E["📚 Dokumentatsioon<br/>(Õppimine ja viited)"]
+    E --> F["🚀 Hämmastav veebirakendus!"]
     
-    B -.-> G["🤖 Tehisintellekti assistent<br/>(GitHub Copilot)"]
-    C -.-> H["📱 Seadme testimine<br/>(Reageeriv disain)"]
+    B -.-> G["🤖 AI abiline<br/>(GitHub Copilot)"]
+    C -.-> H["📱 Seadmete testimine<br/>(Reageeriv disain)"]
     D -.-> I["📦 Pakihaldurid<br/>(npm, yarn)"]
-    E -.-> J["👥 Ühendus<br/>(Stack Overflow)"]
+    E -.-> J["👥 Kogukond<br/>(Stack Overflow)"]
     
     style A fill:#fff59d
     style F fill:#c8e6c9
@@ -505,109 +504,109 @@ graph TD
     style I fill:#ffccbc
     style J fill:#e8eaf6
 ```
-### Koodi redaktorid ja IDEd: Sinu uued digitaalsed parimad sõbrad
+### Koodi redaktorid ja IDE-d: su uued digitaalsed parimad sõbrad
 
-Räägime koodi redaktoritest – need saavad tõesti sinu uueks lemmikkohtadeks, kus aega veeta! Mõtle neile kui oma isiklikule koodi pühamukohale, kus veedad suurema osa ajast digitaalsete loomingute meisterdamisel ja lihvimisel.
+Räägime koodi redaktoritest – need saavad kindlasti sinu uueks lemmikkohaks, kuhu kirjutaja paigud! Mõtle neile kui isiklikule kodeerimispühamule, kus veedad enamiku ajast oma digitaalsete loomingute vormimisel ja täiuslikustamisel.
 
-Aga siin on see, mis on moodsa redaktori puhul tõeliselt maagiline: nad ei ole lihtsalt uhked tekstiredaktorid. Nad on nagu kõige geniaalsem, toetavam koodi mentor, kes istub sinu kõrval 24/7. Nad tabavad trükivead enne, kui ise märkad, pakuvad täiustusi, mis panevad sind geniaalseks tundma, aitavad mõista, mida iga koodiosa teeb, ja mõned suudavad isegi ära arvata, mida kavatset ra kirjutada ja pakkuda mõtteid lõpetada!
+Aga siin on tõeliselt maagiline asi tänapäevaste redaktorite juures: need ei ole pelgalt uhked tekstiredaktorid. Need on nagu kõige geniaalsem ja toetavam kodeerimismentor, kes istub sinuga kõrval 24/7. Nad tabavad kirjavead enne, kui oled neid tähele pannud, pakuvad täiustusi, mis paneb sind geeniuseks tundma, aitavad mõista iga kooditöö osa ja mõned isegi ennustavad, mida sa hakkad kirjutama, ning pakuvad mõtted lõpetada!
 
-Mäletan, kui avastasin esmakordselt automaatse täitmise – ma tundsin end elavat tulevikus. Sa alustad midagi kirjutama ja su redaktor ütleb: "Hei, kas sa mõtlesid sellele funktsioonile, mis teeb täpselt seda, mida vajad?" See on nagu mõtte lugeja oleks sinu koodi sõber!
+Mäletan, kui avastasin automaatse täiendamise – tundsin, et elan tulevikus. Sa hakkad midagi kirjutama ja su redaktor ütleb: "Hei, kas sa mõtlesid sellele funktsioonile, mis teeb täpselt seda, mida vajad?" See on nagu mõtetelugeja, kes on su kodeerimissõber!
 
-**Mis teeb need redaktorid nii hämmastavaks?**
+**Mis teeb need redaktorid nii uskumatuks?**
 
-Moodsaid koodi redaktoreid iseloomustavad muljetavaldavad funktsioonid, mis tõstavad su tootlikkust:
+Tänapäeva koodi redaktorid pakuvad muljetavaldavat valikut funktsioone, mis tõstavad sinu tootlikkust:
 
-| Funktsioon | Mida see teeb | Miks see aitab |
-|------------|---------------|----------------|
-| **Süntaksi esiletõstmine** | Värvib koodi erinevad osad | Muudab koodi kergemini loetavaks ja vead nähtavaks |
-| **Automaatne täitmine** | Pakub koodi kirjutamisel soovitusi | Kiirendab kirjutamist ja vähendab trükivigu |
-| **Silumisvahendid** | Aitab leida ja parandada vigu | Säästab tunde tõrkeotsingut |
-| **Pikendused** | Lisavad spetsiaalseid funktsioone | Kohanda redaktorit mis tahes tehnoloogia jaoks |
-| **AI assistendid** | Pakuvad koodi ja seletusi | Kiirendab õppimist ja töö efektiivsust |
+| Funktsioon | Mida ta teeb | Miks see aitab |
+|------------|--------------|----------------|
+| **Süntaksi esiletõstmine** | Värvib koodi erinevad osad | Muudab koodi kergemini loetavaks ja vigade leidmise lihtsamaks |
+| **Automaattäiendamine** | Pakub koodi kirjutamise ajal | Kiirendab kodeerimist ja vähendab trükkimisvigu |
+| **Silumisvahendid** | Aitab vigasid leida ja parandada | Säästab tunde veaotsingu aega |
+| **Laiendused** | Lisab spetsialiseeritud funktsioone | Kohanda redaktorit vastavalt tehnoloogiale |
+| **Tehisintellekti abimehed** | Pakkuda koodi ja selgitusi | Kiirendab õppimist ja tootlikkust |
 
-> 🎥 **Videoresurss**: Tahad näha neid tööriistu tegevuses? Vaata seda [Tools of the Trade video](https://youtube.com/watch?v=69WJeXGBdxg) põhjalikku ülevaadet.
+> 🎥 **Videoallikas**: Tahad neid tööriistu tegevuses näha? Vaata seda [Tools of the Trade videot](https://youtube.com/watch?v=69WJeXGBdxg) põhjaliku ülevaate jaoks.
 
-#### Soovitatud redaktorid veebiarenduseks
+#### Veebiarenduse soovitatud redaktorid
 
 **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)** (tasuta)
 - Kõige populaarsem veebiarendajate seas
-- Suurepärane pikendustepood
+- Suurepärane laienduste ökosüsteem
 - Sisseehitatud terminal ja Git integratsioon
-- **Peamised lisad**:
-  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI-toega koodisoovitused
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - Reaalajas koostöö
-  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Automaatne koodi vormindamine
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - Koodis trükivigade leidmine
+- **Kohustuslikud laiendused**:
+  - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - tehisintellekti juhitud koodisoovitused
+  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) - reaalajas koostöö
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - automaatne koodi vormindamine
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - koodis trükivigade tuvastaja
 
-**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (tasuline, tudengitele tasuta)
+**[JetBrains WebStorm](https://www.jetbrains.com/webstorm/)** (tasuline, tasuta õpilastele)
 - Täiustatud silumis- ja testimisvahendid
-- Intelligentsed koodi lõpetamise võimalused
+- Intelligentsed koodi lõpetamise funktsioonid
 - Sisseehitatud versioonihaldus
 
-**Pilvepõhised IDEd** (erinevad hinnad)
-- [GitHub Codespaces](https://github.com/features/codespaces) - Täielik VS Code otse brauseris
-- [Replit](https://replit.com/) - Suurepärane õppimiseks ja koodi jagamiseks
-- [StackBlitz](https://stackblitz.com/) - Kohene täispaketti veebiarendus
+**Pilvepõhised IDE-d** (erinevad hinnad)
+- [GitHub Codespaces](https://github.com/features/codespaces) - täis VS Code brauseris
+- [Replit](https://replit.com/) - suurepärane õppimiseks ja koodi jagamiseks
+- [StackBlitz](https://stackblitz.com/) - hetkeline täis-virna veebiarendus
 
-> 💡 **Alguse soovitus**: Alusta Visual Studio Code’ga – see on tasuta, laialt tööstuses kasutatav ja omab tohutut kogukonda, kes loob abistavaid õpetusi ja lisasid.
+> 💡 **Alustamise näpunäide**: Alusta Visual Studio Code’iga – see on tasuta, tööstuses laialdaselt kasutatav ning suure kogukonnaga, kes loob kasulikke juhendeid ja laiendusi.
 
 
-### Veebibrauserid: Sinu salajane arenduslabor
+### Veebibrauserid: su salajane arenduslabor
 
-Olgu, valmista end täielikuks vaimustusks! Sa tead, et oled kasutanud brausereid sotsiaalmeedias sirvimiseks ja videote vaatamiseks? Selgub, et nad on kogu selle aja varjanud seda imelist salajast arenduslaborit, mis ootab, et sa selle avastaksid!
+Okei, valmista end ette täielikuks mõistusepuhastuseks! Sa tead, et kasutad brausereid sotsiaalmeedias kerimiseks ja videote vaatamiseks? Noh, selgub, et nad on kogu selle aja varjanud ühte uskumatut salajast arenduslaborit, mis ootab sind avastama!
 
-Iga kord, kui sa paremklõpsad veebilehel ja valid "Inspect Element", avad endale arendajate tööriistade varjatud maailma, mis on ausalt öeldes võimsamad kui mõni kallis tarkvara, mille eest ma varem sadu dollareid maksisn. See on nagu avastada, et sinu tavaline köök on peitnud professionaalse koka labori salajase paneeli taha!
-Esimest korda, kui keegi mulle brauseri DevTools'i näitas, veetsin ma umbes kolm tundi lihtsalt ringi klikkides ja öeldes „OOTA, KAS TA OSKAB KA SEDA?!“ Sa saad reaalselt igat veebilehte otse muuta, näha täpselt, kui kiiresti kõik laadib, testida, kuidas su sait erinevates seadmetes välja näeb, ja isegi JavaScripti nagu tõeline proff siluda. See on täiesti hämmastav!
+Iga kord, kui sa parema hiireklahviga veebilehel klikid ja valid "Inspekteeri elementi", avad sa peidetud arendajatööriistade maailma, mis on ausalt öeldes võimsamad kui mõni kallis tarkvara, mille eest ma varem sadu eurosid maksin. See on nagu avastada, et sinu tavaline köök on varjanud professionaalse koka laborit saladuspaneeli taga!
+Esimest korda, kui keegi mulle brauseri DevToolse näitas, veetsin ma umbes kolm tundi lihtsalt ringi klõpsides ja mõeldes „OOT, SEE SUUDAB KA SEDA?!“ Saad sõna otseses mõttes igat veebilehte reaalajas muuta, näha täpselt, kui kiiresti kõik laeb, testida, kuidas su sait erinevatel seadmetel välja näeb, ja isegi JavaScripti nagu tõeline proff siluda. See on täiesti uskumatu!
 
-**Siin on, miks brauserid on su salarelv:**
+**Siin on, miks brauserid on sinu salarelv:**
 
-Kui sa lood veebilehte või veebiäppi, pead nägema, kuidas see reaalses maailmas välja näeb ja käitub. Brauserid ei näita mitte ainult su tööd, vaid annavad ka põhjalikku tagasisidet jõudluse, ligipääsetavuse ja võimalike probleemide kohta.
+Kui sa lood veebisaiti või veebiäppi, pead nägema, kuidas see reaalses maailmas välja näeb ja käitub. Brauserid mitte ainult ei kuva su tööd, vaid annavad ka detailselt tagasisidet jõudluse, ligipääsetavuse ja võimalike probleemide kohta.
 
-#### Brauseri arendustööriistad (DevTools)
+#### Brauseri arendaja tööriistad (DevTools)
 
-Tänapäeva brauserid sisaldavad põhjalikke arendusvahendite komplekte:
+Kaasaegsed brauserid sisaldavad kõikehõlmavaid arenduskomplekte:
 
-| Tööriista kategooria | Mida see teeb | Näidiskasutus |
-|----------------------|---------------|---------------|
-| **Elementide inspekteerija** | Vaata ja muuda HTML/CSS reaalajas | Kohanda stiili, et näha koheseid tulemusi |
-| **Konsol** | Vaata veateateid ja testi JavaScripti | Silu probleeme ja katseta koodiga |
-| **Võrgu jälgija** | Jälgi ressursside laadimist | Optimeeri jõudlust ja laadimisaegu |
-| **Ligipääsetavuse kontrollija** | Testi kaasava disaini põhimõtteid | Veendu, et su sait töötab kõigile kasutajatele |
-| **Seadmesimulaator** | Eelvaade erinevate ekraanisuuruste peal | Testi reageerivat disaini ilma mitme seadmeta |
+| Tööriista kategooria | Mida see teeb | Näidis kasutusjuhtum |
+|----------------------|---------------|---------------------|
+| **Elementide uurija** | Vaata ja muuda HTML/CSS-i reaalajas | Kohanda stiili, et kohe tulemusi näha |
+| **Konsool** | Vaata veateateid ja testi JavaScripti | Silu probleeme ja katseta koodi |
+| **Võrgu jälgija** | Jälgi, kuidas ressursid laaditakse | Optimeeri jõudlust ja laadimisaegu |
+| **Ligipääsetavuse kontrollija** | Testi kaasavat disaini | Veendu, et su sait töötab kõigi kasutajatega |
+| **Seadmesimulaator** | Vaata erinevatel ekraanisuurustel | Testi reageerivat disaini ilma mitme seadmeta |
 
 #### Soovitatud brauserid arenduseks
 
-- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** – tööstusstandard DevTools koos põhjaliku dokumentatsiooniga
+- **[Chrome](https://developers.google.com/web/tools/chrome-devtools/)** – tööstusharu standard DevTools koos põhjaliku dokumentatsiooniga
 - **[Firefox](https://developer.mozilla.org/docs/Tools)** – suurepärased CSS Gridi ja ligipääsetavuse tööriistad
-- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** – ehitatud Chromiumile koos Microsofti arendajate ressurssidega
+- **[Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/?WT.mc_id=academic-77807-sagibbon)** – Chromiumi põhine Microsofti arendajatööriistadega
 
-> ⚠️ **Tähtis testimisnipp**: Testi alati oma veebisaite mitmes brauseris! See, mis töötab ideaalselt Chrome'is, võib Safaris või Firefoxis välja näha teistmoodi. Professionaalsed arendajad testivad kõigis suuremates brauserites, et tagada kasutajakogemuse järjepidevus.
+> ⚠️ **Oluline testimisnipp**: testi alati oma veebisaite mitmes brauseris! Mis töötab perfektselt Chromes, võib paista teistmoodi Safaris või Firefoxis. Professionaalsed arendajad testivad kõigis suuremates brauserites, et tagada ühtlane kasutajakogemus.
 
 
-### Käsurea tööriistad: sinu sissepääs arendaja supervõimetesse
+### Käsureatööriistad: sinu värav arendaja supervõimeteni
 
-Olgu, olgem nüüd täiesti ausad käsurea suhtes, sest tahan, et sa kuulaksid seda inimeselt, kellel on sellest tõesti arusaamine. Kui ma seda esimest korda nägin – lihtsalt see hirmutav musta taustaga, vilkuva tekstiga ekraan – siis mõtlesin sõna otseses mõttes: „Ei, absoluutselt mitte! See näeb välja nagu midagi 1980. aastate häkkerifilmist, ja ma pole kindlasti piisavalt tark selle jaoks!“ 😅
+Olgu, räägime nüüd täiesti ausalt käsureast, sest tahan, et sa kuulaksid seda inimeselt, kes tõesti sellest aru saab. Kui ma seda esimest korda nägin – lihtsalt see hirmutav must ekraan vilkuvate tähtedega – mõtlesin ma sõna otseses mõttes: „Ei, kindlasti mitte! See tundub nagu midagi 1980ndate häkkerifilmist ja ma ei ole kindlasti piisavalt nutikas selle jaoks!“ 😅
 
-Aga siin on see, mida ma soovin, et keegi oleks mulle tol ajal öelnud ja mida ma räägin sulle praegu: käsurida pole hirmuäratav – see on tegelikult nagu otsepöördumine oma arvutiga. Mõtle sellele kui vahe Eesti moodsate toidu tellimise äppide pildi- ja menüüvalikute (mis on mõnus ja lihtne) ning su lemmik kohaliku restorani kõndimise vahele, kus kokk teab täpselt, mida sa armastad, ja suudab valmistada midagi perfektselt ainult sinu sõnadega „üllata mind millegagi imelisega.“
+Aga siit tuleb see, mida ma sooviks, et mulle oleks tol ajal öeldud, ja mida ma nüüd sulle ütlen: käsurida ei ole hirmutav – see on tegelikult nagu vahetu vestlus sinu arvutiga. Mõtle sellele kui vahele, milles tellid toitu uhke rakenduse kaudu piltide ja menüüdega (mis on mugav ja lihtne) versus sisse astumine oma lemmik kohaliku restorani, kus kokk teab täpselt, mis sulle meeldib ja võib lihtsalt öeldes „üllata mind millegi vingega“ midagi täiuslikku valmis teha.
 
-Käsurida on koht, kuhu arendajad lähevad, et tunda end tõeliste võluritena. Sa kirjutad mõned näiliselt maagilised sõnad (okei, need on lihtsalt käsud, aga need tunduvad maagilised!), vajutad enterit ja BOOM – oled loonud terve projekti struktuuri, installinud võimsaid tööriistu üle maailma või deployinud oma äpi internetti miljonite nägemiseks. Kui sa saad sellest võimust esimest korda maitse suhu, siis see on ausalt öeldes väga sõltuvust tekitav!
+Käsurida on koht, kuhu arendajad lähevad, et tunda end tõeliste võluritena. Sa trükid mõned näiliselt maagilised sõnad (okei, need on lihtsalt käsud, aga nad tunduvad maagilised!), vajutad enterit ja BOOM – oled loonud terveid projektistruktuure, paigaldanud võimsaid tööriistu üle maailma või avaldanud oma äpi internetis miljonitele inimestele. Kui sa tunned esimest korda selle võimu maitset, on see ausalt öeldes üsna sõltuvust tekitav!
 
 **Miks käsurida saab sinu lemmiktööriistaks:**
 
-Kuigi graafilised kasutajaliidesed sobivad paljude ülesannete jaoks hästi, on käsurida ülim automaatika, täpsuse ja kiiruse osas. Paljud arendustööriistad töötavad peamiselt käsurea kaudu ja nende efektiivne kasutamine võib oluliselt tõsta su tootlikkust.
+Kuigi graafilised liidesed sobivad paljudele ülesannetele, paistab käsurida silma automatiseerimises, täpsuses ja kiiruses. Paljud arendustööriistad toimivad peamiselt käsurealiideste kaudu ning nende efektiivne kasutamine võib oluliselt suurendada su tootlikkust.
 
 ```bash
-# Samm 1: Loo ja liigu projekti kataloogi
+# 1. samm: loo projektikataloog ja liigu sinna
 mkdir my-awesome-website
 cd my-awesome-website
 ```
 
-**Mida see kood teeb:**
-- **Loo** uus kaust nimega „my-awesome-website“ su projekti jaoks
-- **Liigu** loodud kausta, et alustada tööd
+**Siin on, mida see kood teeb:**
+- **Loo** uus kataloog nimega „my-awesome-website“ oma projekti jaoks
+- **Liigu** äsja loodud kataloogi, et tööd alustada
 
 ```bash
-# Samm 2: Algata projekt failiga package.json
+# 2. samm: Projekteeri initsialiseerimine package.json abil
 npm init -y
 
 # Paigalda kaasaegsed arendustööriistad
@@ -615,14 +614,14 @@ npm install --save-dev vite prettier eslint
 npm install --save-dev @eslint/js
 ```
 
-**Samm-sammult toimub järgmist:**
-- **Algatamine** uuest Node.js projektist vaikeseadetega kasutades `npm init -y`
-- **Installimine** Vite moodsa build-tööriistana kiireks arenduseks ja toodanguks
-- **Lisamine** Prettier automaatseks koodi vormindamiseks ja ESLint koodi kvaliteedi kontrollimiseks
-- **Kasutamine** `--save-dev` lipuga, et märkida need ainult arendamise sõltuvustena
+**Samm-sammult, siin toimub:**
+- **Algata** uus Node.js projekt vaikeseadetega käsuga `npm init -y`
+- **Paigalda** Vite kui moodsat ehitustööriista kiireks arenduseks ja tootmisvõimsaks ehitamiseks
+- **Lisa** Prettier automaatseks koodi vormindamiseks ja ESLint koodi kvaliteedikontrolliks
+- **Kasuta** lippu `--save-dev`, et märkida need ainult arendussõltuvusteks
 
 ```bash
-# 3. samm: Loo projekti struktuur ja failid
+# Samm 3: Loo projekti struktuur ja failid
 mkdir src assets
 echo '<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello World</h1></body></html>' > index.html
 
@@ -630,225 +629,227 @@ echo '<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello Wo
 npx vite
 ```
 
-**Ülaltoodud toimingutes:**
-- **Korraldasime** oma projekti, luues eraldi kaustad lähtekoodile ja varadele
-- **Genereerisime** lihtsa HTML faili õige dokumendi struktuuriga
-- **Käivitame** Vite arendusteenuse live reload’i ja hot module replacement’iga
+**Ülaltoodud puhul oleme:**
+- **Korraldanud** oma projekti, luues eraldi kaustad lähtekoodile ja varadele
+- **Genereerinud** põhilise HTML-faili õige dokumendistruktuuriga
+- **Käivitanud** Vite arendusserveri live reloadi ja kuuma mooduli asenduse jaoks
 
-#### Olulised käsurea tööriistad veebiarenduses
+#### Olulised käsureatööriistad veebiarenduseks
 
-| Tööriist | Eesmärk | Miks sul seda vaja on |
-|----------|---------|-----------------------|
+| Tööriist | Eesmärk | Miks seda vajad |
+|----------|---------|-----------------|
 | **[Git](https://git-scm.com/)** | Versioonihaldus | Jälgi muudatusi, tee koostööd, varunda oma tööd |
-| **[Node.js & npm](https://nodejs.org/)** | JavaScripti runtime & pakendihaldus | Käivita JavaScript brauseri väliselt, installi moodsad arendustööriistad |
-| **[Vite](https://vitejs.dev/)** | Build-tööriist ja arendusserver | Välkkiire arendus koos kuuma mooduli asendusega |
+| **[Node.js & npm](https://nodejs.org/)** | JavaScripti käituskeskkond ja pakettide haldamine | Käivita JavaScripti väljaspool brausereid, paigalda kaasaegseid arendustööriistu |
+| **[Vite](https://vitejs.dev/)** | Ehitus- ja arendusserver | Välkkiire arendus kuuma mooduli asendusega |
 | **[ESLint](https://eslint.org/)** | Koodi kvaliteet | Leia ja paranda automaatselt JavaScripti probleemid |
-| **[Prettier](https://prettier.io/)** | Koodi vormindamine | Hoia oma kood ühtlaselt vormindatud ja loetav |
+| **[Prettier](https://prettier.io/)** | Koodi vormindamine | Hoia oma kood ühtlaselt vormindatud ja loetav
 
 #### Platvormipõhised valikud
 
 **Windows:**
-- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** – moodne, rikkalike funktsioonidega terminal
-- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 – võimas skriptimiskeskkond
-- **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 – traditsiooniline Windowsi käsurida
+- **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** – kaasaegne, funktsiooniderikas terminal
+- **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 – võimas skriptikeskkond
+- **[Command Prompt](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands)** 💻 – traditsiooniline Windowsi käsurida
 
 **macOS:**
-- **[Terminal](https://support.apple.com/guide/terminal/)** 💻 – sisseehitatud terminali rakendus
+- **[Terminal](https://support.apple.com/guide/terminal/)** 💻 – sisseehitatud terminalirakendus
 - **[iTerm2](https://iterm2.com/)** – täiustatud terminal täiendavate funktsioonidega
 
 **Linux:**
-- **[Bash](https://www.gnu.org/software/bash/)** 💻 – standardne Linuxi shell
-- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** – täiustatud terminali emulaator
+- **[Bash](https://www.gnu.org/software/bash/)** 💻 – Linuxi standard-shell
+- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** – arenenud terminali emulaator
 
-> 💻 = Operatsioonisüsteemiga eelinstallitud
+> 💻 = operatsioonisüsteemi poolt eelinstallitud
 
-> 🎯 **Õppeteekond**: Alusta põhiliste käskudega nagu `cd` (kausta vahetus), `ls` või `dir` (failide nimekiri) ja `mkdir` (kausta loomine). Harjuta tänapäevaste töövoo käskudega nagu `npm install`, `git status` ja `code .` (avatakse praegune kaust VS Code’is). Mida mugavamaks saad, seda loomulikult haarad juurde täpsemaid käske ja automatiseerimisvõtteid.
+> 🎯 **Õppimisrada**: Alusta põhilistest käskudest nagu `cd` (muuda kataloogi), `ls` või `dir` (failide nimekiri) ja `mkdir` (loo kaust). Harjuta kaasaegseid töövookäske nagu `npm install`, `git status` ja `code .` (avab praeguse kataloogi VS Code’is). Kui muutud mugavamaks, omandad loomulikult keerukamad käsud ja automatiseerimistehnikad.
 
 
-### Dokumentatsioon: sinu alati saadaval olev õppemaa
+### Dokumentatsioon: sinu alati kättesaadav õppemeister
 
-Olgu, jagan sinuga väikest saladust, mis paneb sind tundma ennast palju paremini algajana: ka kõige kogenumad arendajad veedavad tohutu osa oma ajast dokumentatsiooni lugedes. Ja see pole seepärast, et nad ei teakliks, mida teevad – see on hoopis tarkuse märk!
+Olgu, jagan väikest saladust, mis paneb sind tundma palju paremini, kui oled algaja: isegi kõige kogenumad arendajad veedavad tohutult aega dokumentatsiooni lugedes. Ja see pole sellepärast, et nad ei teaks, mida nad teevad – see on tegelikult tarkuse märk!
 
-Mõtle dokumentatsioonile kui ligipääsule maailma kõige kannatlikumatele ja teadlikumatele õpetajatele, kes on olemas 24/7. Jääd verdama kella kahe ajal öösel? Dokumentatsioon on seal soojalt virtuaalselt embamas ja just vastusega, mida vajad. Tahad õppida mõnda lahedat uut funktsiooni, millest kõigil räägitakse? Dokumentatsioon toetab sind samm-sammult näidistega. Üritad aru saada, miks midagi nii toimib nagu ta toimib? Eks arvasidki – dokumentatsioon on valmis selgitama seda nii, et see lõpuks klapib!
+Mõtle dokumentatsioonile kui juurdepääs maailma kõige kannatlikumatele ja teadlikumatele õpetajatele, kes on 24/7 saadaval. Jääd kella kaheni öösel probleemi otsa kinni? Dokumentatsioon on seal soojalt virtuaalselt sind kallistamas ja täpselt õige vastusega. Tahad õppida mõnda lahedat uut funktsiooni, millest kõik räägivad? Dokumentatsioon on su seljatagune samm-sammult näidetega. Üritad aru saada, miks miski töötab just nii? Arvasid õigesti – dokumentatsioon on valmis seda seletama nii, et see lõpuks klapib!
 
-Siin on midagi, mis muutis kogu minu vaatenurka: veebiarenduse maailm liigub uskumatult kiiresti ja keegi (ma mõtlen täiesti kedagi!) ei hoia kõike meeles. Olen näinud, kuidas 15+ aastase kogemusega vanemad arendajad otsivad üles lihtsat süntaksit, ja tead mis? See pole piinlik – see on nutikas! Asi ei ole ideaalses mälus; asi on selles, et tead, kust leida usaldusväärseid vastuseid kiiresti ja oskad neid rakendada.
+Siin on üks asi, mis muutis mu perspektiivi täielikult: veebiarenduse maailm liigub uskumatult kiiresti ja keegi (ma mõtlen absoluutselt kedagi!) ei pea kõike meeles. Olen näinud 15+ aastase kogemusega tipp-arendajaid otsimas põhisüntaksit ja tead, mis? See ei ole piinlik – see on tark! Asi pole ideaalses mälus; asi on teadmine, kust kiiresti leida usaldusväärseid vastuseid ja mõistmine, kuidas neid rakendada.
 
-**Siin toimub tõeline võlu:**
+**Siin toimub päris võlu:**
 
-Professionaalsed arendajad veedavad olulise osa oma ajast dokumentatsiooni lugedes – mitte kuna nad ei teaks, mida teevad, vaid kuna veebiarenduse maastik muutub nii kiiresti, et ajakohasena püsimine nõuab pidevat õppimist. Hea dokumentatsioon aitab mõista mitte ainult seda, *kuidas* midagi kasutada, vaid ka *miks* ja *millal* seda teha.
+Professionaalsed arendajad veedavad märkimisväärse osa oma ajast dokumentatsiooni lugedes – mitte sellepärast, et nad ei teaks, mida teevad, vaid sellepärast, et veebiarenduse maastik areneb nii kiiresti, et kaasas käimiseks on vaja pidevat õppimist. Hea dokumentatsioon aitab sind mõista, mitte ainult *kuidas* midagi kasutada, vaid *miks* ja *millal* seda kasutada.
 
 #### Olulised dokumentatsiooni ressursid
 
 **[Mozilla Developer Network (MDN)](https://developer.mozilla.org/docs/Web)**
-- Veebitehnoloogiate kulla standard dokumentatsioonis
-- Põhjalikud juhendid HTML, CSS ja JavaScripti kohta
-- Sisaldab brauserite ühilduvuse infot
-- Pakub praktilisi näiteid ja interaktiivseid demosid
+- veebitehnoloogia kullastandard dokumentatsioonis
+- põhjalikud juhendid HTML-i, CSS-i ja JavaScripti jaoks
+- sisaldab brauserite ühilduvuse infot
+- praktilised näited ja interaktiivsed demo’d
 
 **[Web.dev](https://web.dev)** (Google’i poolt)
-- Kaasaegsed veebiarenduse parimad praktikad
-- Jõudluse optimeerimise juhendid
-- Ligipääsetavus ja kaasava disaini põhimõtted
-- Juhtumiuuringud pärisprojektidest
+- kaasaegsed veebiarenduse parimad tavad
+- jõudluse optimeerimise juhendid
+- ligipääsetavuse ja kaasava disaini põhimõtted
+- juhtumiuuringud pärismaailmast
 
 **[Microsoft Developer Documentation](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers)**
-- Edge brauseri arendusressursid
-- Progressiivsete veebirakenduste juhendid
-- Mitmeplatvormiliste arenduste ülevaated
+- Edge brauseri arendajate ressursid
+- progressiivsete veebiäppide juhendid
+- platvormideülese arenduse teadmised
 
 **[Frontend Masters Learning Paths](https://frontendmasters.com/learn/)**
-- Struktureeritud õppemoodulid
-- Videokursused tööstuse ekspertidelt
-- Praktilised kodeerimise harjutused
+- struktureeritud õppematerjalid
+- videosessioonid tööstuse ekspertidelt
+- praktilised kodeerimisülesanded
 
-> 📚 **Õppestrateegia**: Ära proovi dokumentatsiooni pähe õppida – õpi pigem seda efektiivselt navigeerima. Märgista tihti kasutatavad viited ja harjuta otsingufunktsioonide kasutamist kiire info leidmiseks.
+> 📚 **Õppimisstrateegia**: Ära proovi dokumentatsiooni pähe õppida – õpi sellel oskuslikult orienteeruma. Ära unusta järjehoidjatesse lisada sageli kasutatavaid allikaid ja harjuta otsingut funktsioonide abil, et kiiresti spetsiifilist infot leida.
 
-### 🔧 **Tööriista valdamise kontroll: Mis sinuga kõnetab?**
+### 🔧 **Tööriistade valdamise kontroll: Mis sind kõnetab?**
 
 **Võta hetk ja mõtle:**
-- Millist tööriista tahad kõigepealt proovida? (Vale vastust pole!)
-- Kas käsurida tundub endiselt hirmutav või oled selle vastu uudishimulik?
-- Kas saad ette kujutada, et kasutad brauseri DevTools'i, et piiluda oma lemmikveebisaitide telgitaguseid?
+- Millist tööriista tahaksid kõigepealt proovida? (Õiget ega valet vastust pole!)
+- Kas käsurida tundub endiselt hirmutav või oled nüüd uudishimulik?
+- Kas suudad ette kujutada brauseri DevToolsiga oma lemmikveebilehtede telgitaguseid piilumas?
 
 ```mermaid
 pie title "Arendaja aeg tööriistadega"
-    "Koodiredaktor" : 40
+    "Koodi redaktor" : 40
     "Brauseri testimine" : 25
-    "Käsurida" : 15
-    "Dokumentatsiooni lugemine" : 15
+    "Käsurea kasutamine" : 15
+    "Dokumentide lugemine" : 15
     "Silumine" : 5
 ```
-> **Lõbus fakt**: Enamik arendajaid veedab umbes 40% ajast oma koodiredaktoris, aga märka, kui palju aega kulub testimisele, õppimisele ja probleemide lahendamisele. Programmeerimine ei ole lihtsalt koodi kirjutamine – see on kogemuste loomine!
+> **Lõbus fakt**: Enamik arendajaid veedab umbes 40% ajast koodi-redaktoris, aga märka, kui palju aega kulub testimisele, õppimisele ja probleemide lahendamisele. Programmeerimine ei ole pelgalt koodi kirjutamine – see on kogemuste loomine!
 
-✅ **Toit mõtlemiseks**: Siin on midagi huvitavat – kuidas sa arvad, et veebisaitide ehitamise tööriistad (arendus) võivad erineda tööriistadest, millega kujundada, kuidas need välja näevad (disain)? See on nagu vahe arhitekti vahel, kes disainib kaunist maja, ja ehitaja vahel, kes selle tegelikult üles ehitab. Mõlemad on olulised, kuid neil on erinevad tööriistakapid! Selline mõtteviis aitab sul tõesti näha suuremat pilti, kuidas veebisaidid elule ärkavad.
+✅ **Mõtteainet**: Siin on midagi huvitavat, mida mõelda – kuidas sa arvad, kas tööriistad veebisaitide ehitamiseks (arendus) erinevad tööriistadest, millega kujundatakse nende välimus (disain)? See on nagu vahe arhitekti vahel, kes disainib kauni maja, ja alltöövõtja vahel, kes selle tegelikult üles ehitab. Mõlemad on olulised, aga neil on erinevad tööriistakomplektid! Selline mõtlemine aitab sul paremini näha suurt pilti, kuidas veebisaidid ellu ärkavad.
 
-## GitHub Copilot Agent väljakutse 🚀
+## GitHub Copilot Agendi väljakutse 🚀
 
-Kasuta Agent režiimi, et lõpetada järgmine väljakutse:
+Kasuta Agendi režiimi, et täita järgmine väljakutse:
 
-**Kirjeldus:** Uuri moodsate koodiredaktorite või IDE omadusi ja näita, kuidas need võivad parandada sinu töövoogu veebiarendajana.
+**Kirjeldus:** Uuri kaasaegse koodi redaktori või IDE funktsioone ja demonstreeri, kuidas see võib parandada sinu töövoogu veebiarendajana.
 
-**Käsk:** Vali koodiredaktor või IDE (näiteks Visual Studio Code, WebStorm või pilvepõhine IDE). Tõesta kolme omaduse või laiendusega, mis aitavad sul kodeerida, siluda või koodi hooldada efektiivsemalt. Igaühe juures anna lühike selgitus, kuidas see sinu tööd parandab.
+**Juhis:** Vali koodi redaktor või IDE (näiteks Visual Studio Code, WebStorm või pilvepõhine IDE). Näita kolme funktsiooni või laiendust, mis aitavad sul koodi kirjutada, siluda või hooldada tõhusamalt. Igaühe juures anna lühike selgitus, kuidas see su töövoogu parandab.
 
 ---
 
 ## 🚀 Väljakutse
 
-**Olgu, detektiiv, kas oled valmis oma esimeseks juhtumiks?**
+**Olgu, detektiiv, valmis oma esimeseks juhtumiks?**
 
-Nüüd, kui sul on see äge alus olemas, on mul seiklus, mis aitab sul näha, kui uskumatu mitmekesine ja põnev programmeerimise maailm tegelikult on. Ja kuula – see ei ole veel koodi kirjutamise kohta, nii et mitte midagi stressi! Mõtle end programmeerimiskeelte detektiivina oma esimesel põneval juhtumil!
+Nüüd, kui sul on see vinge alus, on mul seiklus, mis aitab sul näha, kui erakordselt mitmekesine ja põnev programmeerimise maailm tegelikult on. Ja kuula – see pole veel koodi kirjutamine, seega ei pea pingutama! Mõtle end programmeerimiskeelte detektiivina oma esimesel põneval juhtumil!
 
-**Sinu missioon, kui sa selle vastu võtad:**
-1. **Saavuta keeleuurija staatus:** Vali kolm programmeerimiskeelt täiesti erinevatest universumitest – äkki üks veebilehtede loomiseks, üks mobiilirakenduste tegemiseks ja üks teadlaste andmete töötlemiseks. Leia näited samast lihtsast ülesandest, mis on kirjutatud neis keeltes. Luban, et sa jääd uskumatusse, kui erinevalt nad võivad välja näha, kuigi teevad täpselt sama asja!
+**Sinu missioon, kui otsustad selle vastu võtta:**
+1. **Saavuta keeleteadlane**: vali kolm programmeerimiskeelt täiesti erinevatest maailmadest – ehk üks veebisaitide loomiseks, teine mobiilirakenduste jaoks ja kolmas teadlaste andmetöötluseks. Leia näited ühest ja samast lihtsast ülesandest kõigis keeltes. Luban, et sa oled täiesti hämmastunud, kuidas need võivad sama asja jaoks väga erinevad olla!
 
-2. **Uuri nende päritolulugusid:** Mis teeb iga keele eriliseks? Siin on üks lahe fakt – iga programmeerimiskeel loodi, sest keegi mõtles, „Sa tead, peab olema parem viis selle konkreetse probleemi lahendamiseks.“ Kas suudad välja uurida, mis need probleemid olid? Mõned lood on tõeliselt huvitavad!
+2. **Uuri nende päritolu**: mis teeb iga keele eriliseks? Siin on lahe fakt – iga programmeerimiskeel loodi sellepärast, et keegi mõtles: „Tead, peab olema parem viis selle konkreetse probleemi lahendamiseks.“ Kas saad aru, mis need probleemid olid? Mõned lood on tõeliselt põnevad!
 
-3. **Tutvu kogukondadega:** Vaata, kui sõbralikud ja põnevad on iga keele kogukonnad. Mõnel on miljoneid arendajaid teadmisi jagamas ja teineteist aidamas, teised on väiksemad, aga väga tihedalt seotud ja toetavad. Sul saab olema tore näha, millised isiksused need kogukonnad on!
+3. **Tutvu kogukondadega**: vaata, kui külalislahked ja kirglikud on iga keele kogukonnad. Mõnel on miljoneid arendajaid, kes jagavad teadmisi ja aitavad üksteist, teised on väiksemad, aga väga omavahel tihedalt seotud ja toetavad. Sa hakkad nautima eri kogukondade erinevaid iseloomejooni!
 
-4. **Jälgi oma sisetunnet:** Milline keel tundub sulle praegu kõige ligipääsetavam? Ära stressa „täiusliku“ valiku pärast – lihtsalt kuula oma instinkte! Siin pole valesti vastuseid ja sul on alati võimalus hiljem teisi uurida.
+4. **Kuula oma sisetunnet**: milline keel tundub sulle hetkel kõige ligipääsetavam? Ära muretse „täiusliku“ valiku pärast – kuula lihtsalt oma instinkte! Ausalt, siin ei ole vale vastust ja alati saad hiljem teisi uurida.
 
-**Boonus detektiivitöö:** Uuri, kas suudad leida, millised suuremad veebisaidid või rakendused on iga keelega tehtud. Ma garanteerin, et sind šokeerib, mis annab Instagrami, Netflixi või selle mobiilimängu, mida sa ei suuda käest panna, jõu!
+**Boonus detektiivitöö:** vaata, kas suudad välja uurida, millised suuremad veebisaidid või äpid on iga keelega ehitatud. Garantii, et tunned šokki, kui saad teada, mis annab jõu näiteks Instagramile, Netflixile või sellele mobiilimängule, mida sa ei suuda käest panna!
 
-> 💡 **Pea meeles:** Sa ei püüa täna saada ühekski nendest keeltest eksperdiks. Sa lihtsalt tutvud naabruskonnaga enne, kui otsustad, kus oma baasi rajad. Võta aega, naudi ja lase uudishimul end juhatada!
+> 💡 **Pea meeles**: Sa ei püüa täna neist keeltes ekspert olla. Sa lihtsalt tutvud naabruskonnaga, enne kui otsustad, kuhu oma pesa tahad rajada. Võta aega, naudi ja lase uudishimul end juhatada!
 
-## Tähistame su avastusi!
+## Tähistame sinu avastusi!
 
-Issand jumal, sa oled täna omandanud nii palju hämmastavat teavet! Ma olen siiralt põnevil, et näha, kui suur osa sellest lahedast teekonnast on sinuni jõudnud. Ja pea meeles – see pole test, kus pead kõik täiuslikult ära tegema. See on pigem tähistamine kõigist lahedatest asjadest, mida oled selle põneva maailma kohta õppinud, kuhu sa just suundud!
+Issand, sa oled täna nii palju uskumatut infot omandanud! Ma olen tõeliselt põnevil, et näen, kui palju sellest ägedast teekonnast on sul külge jäänud. Ja pea meeles – see ei ole test, kus pead kõik täiuslikult õigesti tegema. See on pigem tähistamine kõigist lahedatest asjadest, mida sa selle põneva maailma kohta õppisid, kuhu sa nüüd sukeldud!
 
-[Teeme järelkontrolli viktoriini](https://ff-quizzes.netlify.app/web/)
+[Soorita õppetööjärgne viktoriin](https://ff-quizzes.netlify.app/web/)
 
-## Kordamine ja iseseisev õppimine
+## Kordamine & iseseisev õppimine
 
-**Võta aega, uurides ja nautides!**
-Sa oled täna palju ära teinud, ja selle üle võib uhke olla! Nüüd saab lõbus osa alguse – uurida teemasid, mis sinu uudishimu sütitavad. Pea meeles, see ei ole kodutöö – see on seiklus!
+**Võta aega, avasta ja naudi!**
+Sa oled täna palju ära teinud ning see on midagi, mille üle tasub uhke olla! Nüüd tuleb lõbus osa – uurida teemasid, mis sinu uudishimu äratasid. Pea meeles, see ei ole kodutöö – see on seiklus!
 
-**Sukeldu sügavamale selles, mis sind köidab:**
+**Sukeldu sügavamale sellesse, mis sind köidab:**
 
-**Tööta käed küljes programmeerimiskeeltega:**
-- Külasta ametlikke lehti 2–3 keele kohta, mis sinu tähelepanu püüdsid. Igal keelel on oma iseloom ja lugu!
-- Proovi mõnda veebipõhist kodeerimisalad nagu [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) või [Replit](https://replit.com/). Ära karda katsetada – sa ei saa midagi ära rikkuda!
-- Loe, kuidas sinu lemmik keel tekkis. Tõsiselt, mõned neist päritolulugudest on väga põnevad ja aitavad sul mõista, miks keeled töötavad nii nagu töötavad.
+**Saa praktiliselt kätte programmeerimiskeeltega töötamine:**
+- Külasta ametlikke veebisaite 2-3 keelest, mis sinu tähelepanu pälvisid. Igal neist on oma iseloom ja lugu!
+- Proovi mõnda veebipõhist kodeerimisplatvormi nagu [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) või [Replit](https://replit.com/). Ära karda katsetada – sa ei saa midagi rikkuda!
+- Loe, kuidas sinu lemmik keel tekkis. Tõsiselt, mõned nende päritolulood on põnevad ja aitavad mõista, miks keeled toimivad nii, nagu nad toimivad.
 
-**Tutu uute tööriistadega:**
-- Laadi alla Visual Studio Code, kui sa seda veel pole teinud – see on tasuta ja sulle meeldib see kindlasti!
-- Veeda paar minutit Extensions'i turuosa uurides. See on nagu rakenduste pood sinu koodiredaktorile!
-- Ava oma brauseri Developer Tools ja klõpsa ringi. Ära muretse, et kõike vahetult kohe aru saad – lihtsalt harjuta, mis seal on.
+**Leia mugavus oma uute tööriistadega:**
+- Laadi alla Visual Studio Code, kui sa pole seda veel teinud – see on tasuta ja sulle hakkab see meeldima!
+- Võta paar minutit, et sirvida Extensionide turgu. See on nagu rakenduste pood su koodiredaktorile!
+- Ava oma brauseri arendajavahendid ja kliki natuke ringi. Ära muretse, kui kõike kohe ei mõista – lihtsalt saa tuttavaks, mis seal on.
 
 **Liitu kogukonnaga:**
-- Jälgi mõnda arendajate kogukonda nagu [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) või [GitHub](https://github.com/). Programmeerijate kogukond on seal algajatele väga avatud!
-- Vaata mõnda algajatele suunatud kodeerimise videot YouTube’is. Seal on nii palju suurepäraseid loojad, kes mäletavad hästi, mida tähendab alguses olla.
-- Mõtle kohalikesse kohtumistes või veebikogukondadesse liitumisele. Usu mind, arendajad armastavad algajaid aidata!
+- Jälgi arendajakogukondi [Dev.to](https://dev.to/), [Stack Overflow](https://stackoverflow.com/) või [GitHub](https://github.com/) keskkondades. Programmeerijate kogukond on algajatele väga sõbralik!
+- Vaata mõnda algajatele sobivat kodeerimisteemalist videot YouTube’is. Seal on palju suurepäraseid sisuloojaid, kes teavad, mis tunne on alustada.
+- Mõtle kohalike kohtumiste või veebipõhiste kogukondadega liitumisele. Usu mind, arendajad armastavad algajaid aidata!
 
-> 🎯 **Kuula, siin on mida tahan, et sa meeles peaksid**: Sinu käest ei oodata, et sa saaksid üleöö koodimaagiks! Praegu sa lihtsalt õpid tundma seda imelist uut maailma, mille osaks hakkad saama. Võta aega, naudi teekonda ja pea meeles – iga arendaja, keda sa imetled, istus kunagi täpselt seal, kus sina nüüd oled, tundes elevust ja võib-olla natuke hirmu või ärevust. See on täiesti normaalne ja see näitab, et sa teed asju õigesti!
+> 🎯 **Kuula, siin on see, mida tahan, et meeles peaksid**: Sinult ei oodata, et sa õpiksite koodi kirjutama üleöö! Praegu oled sa lihtsalt tutvumas selle imelise uue maailmaga, kuhu sa hakkad kuuluma. Võta oma aeg, naudi teekonda ja pea meeles – iga arendaja, keda sa imetled, istus kord täpselt seal, kus sina praegu oled, tundes elevust ja võib-olla veidi ülekoormatuna. See on täiesti normaalne ja tähendab, et teed õigesti!
+
+
 
 ## Ülesanne
 
 [Reading the Docs](assignment.md)
 
-> 💡 **Väike tõuk sellest ülesandest**: Ma tõesti tahaksin näha, kuidas sa uurid mõningaid tööriistu, millest me pole veel rääkinud! Väldi redaktoreid, brausereid ja käsurea tööriistu, millest me juba rääkinud oleme – seal on terve uskumatu arengutööriistade universum, mis ootab avastamist. Otsi neid, mida aktiivselt hooldatakse ja kelle ümber on elujõuline ja abivalmis kogukond (need kipuvad omama parimaid juhendeid ja kõige toetavamaid inimesi, kui sa juhuslikult kinni jääd ja vajad sõbralikku abi).
+> 💡 **Väike tõuge su ülesande jaoks**: Ma tahaksin väga, et sa uuriksid mõnda tööriista, millest me pole veel rääkinud! Jäta vahele tekstiredaktorid, brauserid ja käsureatööriistad, millest oleme juba rääkinud – seal on terve hämmastav universum suurepäraseid arendustööriistu, mis ootavad avastamist. Otsi neid, mida hoitakse aktiivselt ja millel on elujõulised ning abivalmid kogukonnad (sellistel on tavaliselt parimad juhendid ja sõbralikumad inimesed, kui sa väidetavalt kinni jääd ja vajad toetavat kätt).
 
 ---
 
-## 🚀 Sinu programmeerimise teekonna ajakava
+## 🚀 Sinu programmeerimisteekonna ajakava
 
 ### ⚡ **Mida saad teha järgmise 5 minutiga**
-- [ ] Lisa järjehoidjatesse 2–3 programmeerimiskeele veebisaiti, mis sind köitsid
-- [ ] Laadi alla Visual Studio Code, kui sa pole seda veel teinud
-- [ ] Ava oma brauseri DevTools (F12) ja klõpsa ringi mõnel veebilehel
+- [ ] Lisa järjehoidjana 2-3 programmeerimiskeele veebisaiti, mis sinu tähelepanu pälvisid
+- [ ] Laadi alla Visual Studio Code, kui seda veel pole
+- [ ] Ava oma brauseri DevTools (F12) ja kliki ringi mõnel veebisaidil
 - [ ] Liitu ühe programmeerijate kogukonnaga (Dev.to, Reddit r/webdev või Stack Overflow)
 
-### ⏰ **Mida saad saavutada selle tunni jooksul**
-- [ ] Tee läbi tunni järeltest ja mõtiskle vastuste üle
-- [ ] Sea VS Code üles koos GitHub Copilot laiendusega
-- [ ] Proovi "Hello World" näidet 2 erinevas programmeerimiskeeles veebis
-- [ ] Vaata YouTube’is videot "Päev arendaja elus"
-- [ ] Alusta oma programmeerimiskeele uurimistööd (väljakutse raames)
+### ⏰ **Mida saad selle tunni jooksul saavutada**
+- [ ] Tee läbi õppetunni järgne viktoriin ja mõtiskle oma vastuste üle
+- [ ] Sea üles VS Code koos GitHub Copilot laiendiga
+- [ ] Proovi „Hello World“ näidet 2 erinevas programmeerimiskeeles veebis
+- [ ] Vaata YouTube’is videot „Päev arendaja elus“
+- [ ] Alusta oma programmeerimiskeele detektiivitööd (väljakutsest)
 
-### 📅 **Sinu nädalapikkune seiklus**
-- [ ] Tee ülesanne ära ja uuri 3 uut arendustööriista
+### 📅 **Sinu nädalane seiklus**
+- [ ] Tee ülesanne valmis ja avasta 3 uut arendustööriista
 - [ ] Jälgi 5 arendajat või programmeerimise kontot sotsiaalmeedias
-- [ ] Proovi midagi väikest ehitada CodePen’is või Replit’is (isegi lihtsalt „Tere, [Sinu nimi]!”)
-- [ ] Loe ühte arendaja blogipostitust kellegi programmeerimisteekonnast
-- [ ] Liitu virtuaalse kohtumisega või vaata programmeerimisloengut
+- [ ] Proovi midagi väikest luua CodePenis või Replitis (isegi kui vaid „Hello, [Sinu nimi]!“)
+- [ ] Loe ühte arendajate blogipostitust kellegi kodeerimisteekonnast
+- [ ] Liitu virtuaalse kohtumisega või vaata programmeerimiskõnet
 - [ ] Alusta oma valitud keele õppimist veebipõhiste juhenditega
 
-### 🗓️ **Sinu kuupikkune muutumine**
-- [ ] Tee oma esimene väike projekt valmis (isegi lihtne veebileht kõlbab!)
-- [ ] Panusta avatud lähtekoodiga projekti (alusta dokumentatsiooniparandustega)
-- [ ] Ole mentorkeeleks kellelegi, kes alles alustab oma programmeerimisrännaku algust
-- [ ] Loo oma arendaja portfoolio veebileht
-- [ ] Ühendu kohalike arendajate kogukondade või õpperühmadega
-- [ ] Alusta järgmise õpimooduli kavandamist
+### 🗓️ **Sinu kuuajaline muutus**
+- [ ] Ehita oma esimene väike projekt (isegi lihtne veebileht loeb!)
+- [ ] Panusta avatud lähtekoodiga projekti (alusta dokumentatsiooni parandamisest)
+- [ ] Ole mentor kellelegi, kes on alles programmeerimisteekonnal alustamas
+- [ ] Loo oma arendajaportfoolio veebileht
+- [ ] Loo ühendused kohalike arendajate kogukondade või õppimisrühmadega
+- [ ] Alusta järgmise õpieesmärgi planeerimist
 
-### 🎯 **Lõpumõtisklus**
+### 🎯 **Lõpumõtisklus enne edasi liikumist**
 
-**Enne edasi minemist veeda hetk tähistamiseks:**
-- Mis on üks asi programmeerimises, mis täna sind elevile ajas?
-- Millist tööriista või mõistet tahaksid kõigepealt uurida?
-- Kuidas sa end tunned selle programmeerimise teekonna alustamisel?
-- Mis on üks küsimus, mida tahaksid praegu arendajalt küsida?
+**Võta hetk ja tähista:**
+- Mis oli täna üks asi programmeerimises, mis sind erutas?
+- Millist tööriista või mõistet tahad kõigepealt uurida?
+- Kuidas sa tunned end, alustades seda programmeerimisteekonda?
+- Mis oleks üks küsimus, mida sa sooviksid praegu arendajalt küsida?
 
 ```mermaid
 journey
-    title Sinu Enesekindluse Tõstmise Teekond
+    title Sinu Enesekindluse Loomise Teekond
     section Täna
       Uudishimulik: 3: You
       Ülekoormatud: 4: You
-      Põnevil: 5: You
-    section See Nädal
+      Elevil: 5: You
+    section Käesolev Nädal
       Avastamas: 4: You
       Õppimas: 5: You
-      Ühendamas: 4: You
+      Ühenduses: 4: You
     section Järgmine Kuu
-      Ehitamas: 5: You
+      Loomas: 5: You
       Enesekindel: 5: You
-      Teisi Aitamas: 5: You
+      Aitamas Teisi: 5: You
 ```
-> 🌟 **Pea meeles**: Iga ekspert on olnud kord algaja. Iga kogenud arendaja on tundnud end just nii nagu sina praegu – elevil, võib-olla veidi hätta sattununa ja kindlasti uudishimulikuna võimaluste suhtes. Sa oled imelises seltskonnas ja see teekond saab olema imeline. Tere tulemast programmeerimise imedemaale! 🎉
+> 🌟 **Pea meeles**: Iga ekspert oli kunagi algaja. Iga vanem arendaja on tundnud end täpselt nagu sina praegu – põnevil, võib-olla veidi ülekoormatuna ja kindlasti uudishimulikuna, mis on võimalik. Sa oled imelises seltskonnas ning see teekond saab olema hämmastav. Tere tulemast programmeerimise imelisse maailma! 🎉
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastutusest loobumine**:
-See dokument on tõlgitud tehisintellekti tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame täpsust, tuleb arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument oma emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste või valesti mõistmiste eest.
+**Vastutusest loobumine**:  
+See dokument on tõlgitud kasutades tehisintellekti tõlke teenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüame täpsust, tuleb arvestada, et automatiseeritud tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse professionaalset inimtõlget. Me ei vastuta tõlke kasutamisest tingitud arusaamatuste või valesti mõistmiste eest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
