@@ -8,6 +8,6 @@ jobs:
   lock:
     runs-on: ubuntu-latest
     steps:
-    - uses: OSDKDev/lock-issues@v1.1
+    - uses: OSDKDev/lock-issues@2372e7b39b61a49bb1980dbd3544837d7d40f01d # v1.1
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
