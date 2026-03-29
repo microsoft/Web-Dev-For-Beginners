@@ -293,7 +293,7 @@ const sum = 5 + 3;
 - **Calculate** and store the result of a mathematical operation
 
 ```javascript
-// Statements that interact with web pages
+// Instructions that interact with web pages
 document.title = "My Awesome Website";      
 document.body.style.backgroundColor = "lightblue";
 ```
@@ -597,7 +597,7 @@ The command line is where developers go to feel like absolute wizards. You type 
 While graphical interfaces are great for many tasks, the command line excels at automation, precision, and speed. Many development tools work primarily through command line interfaces, and learning to use them efficiently can dramatically improve your productivity.
 
 ```bash
-# Step 1: Create and navigate to project directory
+# Step 1: Create and navigate to the project directory
 mkdir my-awesome-website
 cd my-awesome-website
 ```
@@ -650,7 +650,7 @@ npx vite
 **Windows:**
 - **[Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-77807-sagibbon)** - Modern, feature-rich terminal
 - **[PowerShell](https://docs.microsoft.com/powershell/?WT.mc_id=academic-77807-sagibbon)** 💻 - Powerful scripting environment
-- **[Command Prompt](https://docs.microsoft.com/windows-server/administration/windows-commands/?WT.mc_id=academic-77807-sagibbon)** 💻 - Traditional Windows command line
+- **[Command Prompt](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands)** 💻 - Traditional Windows command line
 
 **macOS:**
 - **[Terminal](https://support.apple.com/guide/terminal/)** 💻 - Built-in terminal application
@@ -851,6 +851,6 @@ journey
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+**Disclaimer**:  
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

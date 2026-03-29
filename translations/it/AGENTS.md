@@ -2,27 +2,27 @@
 
 ## Panoramica del Progetto
 
-Questo è un repository curriculum educativo per insegnare le basi dello sviluppo web ai principianti. Il curriculum è un corso completo di 12 settimane sviluppato dai Microsoft Cloud Advocates, con 24 lezioni pratiche che coprono JavaScript, CSS e HTML.
+Questo è un repository per un curriculum educativo per insegnare le basi dello sviluppo web ai principianti. Il curriculum è un corso completo di 12 settimane sviluppato dai Microsoft Cloud Advocates, con 24 lezioni pratiche che coprono JavaScript, CSS e HTML.
 
 ### Componenti Chiave
 
-- **Contenuti Educativi**: 24 lezioni strutturate organizzate in moduli basati su progetti
-- **Progetti Pratici**: Terrarium, Gioco di Digitazione, Estensione del Browser, Gioco Spaziale, App Bancaria, Editor di Codice e Assistente Chat AI
-- **Quiz Interattivi**: 48 quiz con 3 domande ciascuno (valutazioni pre/post-lezione)
-- **Supporto Multilingue**: Traduzioni automatiche per oltre 50 lingue tramite GitHub Actions
+- **Contenuto Educativo**: 24 lezioni strutturate organizzate in moduli basati su progetti
+- **Progetti Pratici**: Terrarium, Gioco di Digitazione, Estensione per Browser, Gioco Spaziale, App Bancaria, Editor di Codice e Assistente Chat AI
+- **Quiz Interattivi**: 48 quiz con 3 domande ciascuno (valutazioni pre/post lezione)
+- **Supporto Multilingue**: Traduzioni automatizzate per più di 50 lingue tramite GitHub Actions
 - **Tecnologie**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (per progetti AI)
 
 ### Architettura
 
 - Repository educativo con struttura basata sulle lezioni
-- Ogni cartella delle lezioni contiene README, esempi di codice e soluzioni
+- Ogni cartella lezione contiene README, esempi di codice e soluzioni
 - Progetti autonomi in directory separate (quiz-app, vari progetti di lezione)
 - Sistema di traduzione tramite GitHub Actions (co-op-translator)
 - Documentazione servita tramite Docsify e disponibile in PDF
 
 ## Comandi di Configurazione
 
-Questo repository è principalmente destinato al consumo di contenuti educativi. Per lavorare con progetti specifici:
+Questo repository è principalmente per il consumo di contenuti educativi. Per lavorare con progetti specifici:
 
 ### Configurazione Principale del Repository
 
@@ -41,7 +41,7 @@ npm run build      # Compila per la produzione
 npm run lint       # Esegui ESLint
 ```
 
-### API del Progetto Bancario (Node.js + Express)
+### API Progetto Bancario (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
@@ -78,35 +78,35 @@ python api.py
 
 ## Flusso di Lavoro per lo Sviluppo
 
-### Per i Collaboratori di Contenuti
+### Per i Collaboratori dei Contenuti
 
-1. **Effettuare il fork del repository** sul proprio account GitHub
-2. **Clonare il fork** localmente
-3. **Creare un nuovo branch** per le modifiche
-4. Apportare modifiche ai contenuti delle lezioni o agli esempi di codice
-5. Testare eventuali modifiche al codice nelle directory di progetto rilevanti
-6. Inviare pull request seguendo le linee guida di contributo
+1. **Fork del repository** nel tuo account GitHub
+2. **Clona il tuo fork** in locale
+3. **Crea un nuovo branch** per le tue modifiche
+4. Modifica contenuti delle lezioni o esempi di codice
+5. Testa eventuali modifiche al codice nelle directory di progetto rilevanti
+6. Invia pull request seguendo le linee guida di contributo
 
 ### Per gli Studenti
 
-1. Fare il fork o clonare il repository
-2. Navigare sequenzialmente nelle directory delle lezioni
-3. Leggere i file README di ogni lezione
-4. Completare i quiz pre-lezione su https://ff-quizzes.netlify.app/web/
-5. Lavorare sugli esempi di codice nelle cartelle delle lezioni
-6. Completare compiti e sfide
-7. Sostenere i quiz post-lezione
+1. Fai fork o clona il repository
+2. Naviga nelle cartelle delle lezioni in ordine
+3. Leggi i file README di ogni lezione
+4. Completa i quiz pre-lezione su https://ff-quizzes.netlify.app/web/
+5. Lavora sugli esempi di codice nelle cartelle delle lezioni
+6. Completa compiti e sfide
+7. Sostieni i quiz post-lezione
 
-### Sviluppo Live
+### Sviluppo in Diretta
 
-- **Documentazione**: Eseguire `docsify serve` nella root (porta 3000)
-- **Quiz App**: Eseguire `npm run dev` nella directory quiz-app
-- **Progetti**: Usare l’estensione Live Server di VS Code per progetti HTML
-- **Progetti API**: Eseguire `npm start` nelle rispettive directory API
+- **Documentazione**: esegui `docsify serve` nella root (porta 3000)
+- **Quiz App**: esegui `npm run dev` nella directory quiz-app
+- **Progetti**: usa l’estensione Live Server di VS Code per i progetti HTML
+- **Progetti API**: esegui `npm start` nelle directory API corrispondenti
 
-## Istruzioni per il Testing
+## Istruzioni per il Test
 
-### Testing Quiz App
+### Test Quiz App
 
 ```bash
 cd quiz-app
@@ -114,66 +114,66 @@ npm run lint       # Controlla problemi di stile del codice
 npm run build      # Verifica che la compilazione abbia successo
 ```
 
-### Testing API Bancaria
+### Test API Bancaria
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Controlla la presenza di problemi nello stile del codice
+npm run lint       # Controlla problemi di stile del codice
 node server.js     # Verifica che il server si avvii senza errori
 ```
 
-### Approccio Generale al Testing
+### Approccio Generale ai Test
 
 - Questo è un repository educativo senza test automatizzati completi
-- Il testing manuale si concentra su:
-  - Esecuzione degli esempi di codice senza errori
+- I test manuali si concentrano su:
+  - Esecuzione senza errori degli esempi di codice
   - Funzionamento corretto dei link nella documentazione
-  - Completamento con successo delle build dei progetti
-  - Aderenza degli esempi alle migliori pratiche
+  - Build dei progetti completati con successo
+  - Gli esempi seguono le migliori pratiche
 
-### Controlli Pre-Invio
+### Controlli Pre-Consegna
 
-- Eseguire `npm run lint` nelle directory con package.json
-- Verificare che i link markdown siano validi
-- Testare gli esempi di codice nel browser o in Node.js
-- Controllare che le traduzioni mantengano la struttura corretta
+- Esegui `npm run lint` nelle directory con package.json
+- Verifica che i link markdown siano validi
+- Testa esempi di codice in browser o Node.js
+- Controlla che le traduzioni mantengano la struttura corretta
 
-## Linee Guida per lo Stile del Codice
+## Linee Guida di Stile del Codice
 
 ### JavaScript
 
-- Usare sintassi moderna ES6+
-- Seguire le configurazioni standard ESLint fornite nei progetti
-- Usare nomi di variabili e funzioni significativi per chiarezza educativa
-- Aggiungere commenti che spiegano i concetti per gli studenti
-- Formattare usando Prettier dove configurato
+- Usa sintassi moderna ES6+
+- Segui le configurazioni ESLint standard fornite nei progetti
+- Usa nomi di variabili e funzioni significativi per chiarezza educativa
+- Aggiungi commenti che spiegano i concetti agli studenti
+- Format con Prettier dove configurato
 
 ### HTML/CSS
 
-- Elementi semantici HTML5
-- Principi di design responsivo
-- Convenzioni chiare per la denominazione delle classi
+- Elementi HTML5 semantici
+- Principi di design responsive
+- Convenzioni chiare per nomi delle classi
 - Commenti che spiegano tecniche CSS per studenti
 
 ### Python
 
 - Linee guida di stile PEP 8
-- Esempi di codice chiari ed educativi
-- Annotazioni di tipo dove utili per l’apprendimento
+- Esempi di codice chiari e didattici
+- Hint tipi dove utile per l’apprendimento
 
 ### Documentazione Markdown
 
-- Chiara gerarchia delle intestazioni
-- Blocchi di codice con specificazione del linguaggio
+- Gerarchia chiara delle intestazioni
+- Blocchi di codice con specifica di linguaggio
 - Link a risorse aggiuntive
-- Screenshot e immagini nelle directory `images/`
-- Testo alternativo per le immagini per accessibilità
+- Screenshot e immagini nelle cartelle `images/`
+- Testo alternativo per immagini per accessibilità
 
 ### Organizzazione dei File
 
-- Lezioni numerate progressivamente (1-getting-started-lessons, 2-js-basics, ecc.)
-- Ogni progetto ha cartelle `solution/` e spesso `start/` o `your-work/`
-- Immagini conservate nelle cartelle `images/` specifiche delle lezioni
+- Lezioni numerate sequenzialmente (1-getting-started-lessons, 2-js-basics, ecc.)
+- Ogni progetto ha directory `solution/` e spesso `start/` o `your-work/`
+- Immagini archiviate in cartelle `images/` specifiche per lezione
 - Traduzioni nella struttura `translations/{language-code}/`
 
 ## Build e Distribuzione
@@ -185,7 +185,7 @@ La quiz-app è configurata per la distribuzione su Azure Static Web Apps:
 ```bash
 cd quiz-app
 npm run build      # Crea la cartella dist/
-# Effettua il deploy tramite il workflow di GitHub Actions al push su main
+# Esegue il deployment tramite workflow GitHub Actions al push su main
 ```
 
 Configurazione Azure Static Web Apps:
@@ -204,23 +204,23 @@ npm run convert               # Genera PDF da docs
 
 ```bash
 npm install -g docsify-cli    # Installa Docsify globalmente
-docsify serve                 # Servi su localhost:3000
+docsify serve                 # Serve su localhost:3000
 ```
 
-### Build Specifiche dei Progetti
+### Build Specifici per Progetto
 
-Ogni directory di progetto può avere il proprio processo di build:
+Ogni directory progetto può avere un proprio processo di build:
 - Progetti Vue: `npm run build` crea bundle di produzione
-- Progetti statici: Nessun passaggio di build, servire file direttamente
+- Progetti statici: Nessun passaggio di build, servire i file direttamente
 
 ## Linee Guida per le Pull Request
 
 ### Formato del Titolo
 
-Usare titoli chiari e descrittivi indicando l’area di modifica:
-- `[Quiz-app] Aggiungi nuovo quiz per la lezione X`
+Usa titoli chiari e descrittivi che indicano l’area di modifica:
+- `[Quiz-app] Aggiungi nuovo quiz per lezione X`
 - `[Lesson-3] Correggi errore di battitura nel progetto terrarium`
-- `[Translation] Aggiungi traduzione spagnola per la lezione 5`
+- `[Translation] Aggiungi traduzione spagnola per lezione 5`
 - `[Docs] Aggiorna istruzioni di configurazione`
 
 ### Controlli Richiesti
@@ -228,33 +228,33 @@ Usare titoli chiari e descrittivi indicando l’area di modifica:
 Prima di inviare una PR:
 
 1. **Qualità del Codice**:
-   - Eseguire `npm run lint` nelle directory di progetto interessate
-   - Correggere tutti gli errori e avvertimenti lint
+   - Esegui `npm run lint` nelle directory di progetto interessate
+   - Risolvi tutti gli errori e avvisi di linting
 
-2. **Verifica della Build**:
-   - Eseguire `npm run build` se applicabile
-   - Assicurarsi che non vi siano errori di build
+2. **Verifica Build**:
+   - Esegui `npm run build` se applicabile
+   - Assicurati che non ci siano errori di build
 
 3. **Validazione Link**:
-   - Testare tutti i link markdown
-   - Verificare che i riferimenti alle immagini funzionino
+   - Testa tutti i link markdown
+   - Verifica che i riferimenti alle immagini funzionino
 
 4. **Revisione Contenuto**:
-   - Correggere ortografia e grammatica
-   - Assicurarsi che gli esempi di codice siano corretti ed educativi
-   - Verificare che le traduzioni mantengano il significato originale
+   - Controlla ortografia e grammatica
+   - Assicurati che gli esempi di codice siano corretti e didattici
+   - Verifica che le traduzioni mantengano il significato originale
 
-### Requisiti di Contributo
+### Requisiti per il Contributo
 
-- Accettare il CLA Microsoft (controllo automatico alla prima PR)
-- Seguire il [Codice di Condotta Open Source Microsoft](https://opensource.microsoft.com/codeofconduct/)
-- Consultare [CONTRIBUTING.md](./CONTRIBUTING.md) per linee guida dettagliate
-- Fare riferimento ai numeri delle issue nella descrizione PR se applicabile
+- Accetta il CLA Microsoft (controllo automatico alla prima PR)
+- Segui il [Codice di Condotta Open Source Microsoft](https://opensource.microsoft.com/codeofconduct/)
+- Consulta [CONTRIBUTING.md](./CONTRIBUTING.md) per linee guida dettagliate
+- Riferisci i numeri degli issue nella descrizione della PR se applicabile
 
 ### Processo di Revisione
 
-- Le PR sono revisionate dai responsabili e dalla community
-- Si dà priorità alla chiarezza educativa
+- Le PR sono revisionate da manutentori e comunità
+- Priorità alla chiarezza educativa
 - Gli esempi di codice devono seguire le migliori pratiche correnti
 - Le traduzioni sono revisionate per accuratezza e adeguatezza culturale
 
@@ -265,18 +265,18 @@ Prima di inviare una PR:
 - Usa GitHub Actions con workflow co-op-translator
 - Traduce automaticamente in oltre 50 lingue
 - File sorgente nelle directory principali
-- File tradotti in directory `translations/{language-code}/`
+- File tradotti nelle directory `translations/{language-code}/`
 
-### Aggiunta di Miglioramenti Manuali alle Traduzioni
+### Aggiunta di Miglioramenti Manuali alla Traduzione
 
-1. Trovare il file in `translations/{language-code}/`
-2. Apportare miglioramenti mantenendo la struttura
-3. Assicurarsi che gli esempi di codice restino funzionanti
-4. Testare eventuali contenuti del quiz localizzati
+1. Trova il file in `translations/{language-code}/`
+2. Effettua miglioramenti mantenendo la struttura
+3. Assicurati che gli esempi di codice rimangano funzionanti
+4. Testa eventuale contenuto quiz localizzato
 
 ### Metadati della Traduzione
 
-I file tradotti includono intestazione metadata:
+I file tradotti includono header metadati:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -294,102 +294,102 @@ CO_OP_TRANSLATOR_METADATA:
 ### Problemi Comuni
 
 **Quiz app non si avvia**:
-- Controllare versione Node.js (consigliata v14+)
-- Cancellare `node_modules` e `package-lock.json`, eseguire di nuovo `npm install`
-- Verificare conflitti di porta (default: Vite usa porta 5173)
+- Controlla versione Node.js (consigliato v14+)
+- Elimina `node_modules` e `package-lock.json`, esegui di nuovo `npm install`
+- Controlla conflitti di porta (default: Vite usa porta 5173)
 
 **Server API non si avvia**:
-- Verificare che la versione Node.js sia minima (node >=10)
-- Controllare se la porta è già in uso
-- Assicurarsi che tutte le dipendenze siano installate con `npm install`
+- Verifica versione minima Node.js (node >=10)
+- Controlla se la porta è già in uso
+- Assicurati che tutte le dipendenze siano installate con `npm install`
 
 **Estensione browser non si carica**:
-- Verificare che manifest.json sia formattato correttamente
-- Controllare la console del browser per errori
-- Seguire le istruzioni specifiche del browser per l’installazione delle estensioni
+- Controlla che manifest.json sia formattato correttamente
+- Controlla la console del browser per errori
+- Segui istruzioni specifiche per installazione estensioni browser
 
 **Problemi progetto chat Python**:
-- Assicurarsi che il pacchetto OpenAI sia installato: `pip install openai`
-- Verificare che la variabile d’ambiente GITHUB_TOKEN sia impostata
-- Controllare i permessi di accesso ai modelli GitHub
+- Assicurati che il pacchetto OpenAI sia installato: `pip install openai`
+- Verifica che la variabile ambiente GITHUB_TOKEN sia impostata
+- Controlla permessi di accesso GitHub Models
 
 **Docsify non serve la documentazione**:
-- Installare docsify-cli globalmente: `npm install -g docsify-cli`
-- Eseguire dalla directory root del repository
-- Verificare che `docs/_sidebar.md` esista
+- Installa docsify-cli globalmente: `npm install -g docsify-cli`
+- Esegui dalla directory root del repository
+- Controlla che `docs/_sidebar.md` esista
 
 ### Consigli per l’Ambiente di Sviluppo
 
-- Usare VS Code con estensione Live Server per progetti HTML
-- Installare estensioni ESLint e Prettier per formattazione coerente
-- Usare gli strumenti DevTools del browser per il debug di JavaScript
-- Per progetti Vue, installare l’estensione Vue DevTools per browser
+- Usa VS Code con estensione Live Server per progetti HTML
+- Installa estensioni ESLint e Prettier per formattazione coerente
+- Usa DevTools del browser per il debug JavaScript
+- Per progetti Vue, installa estensione browser Vue DevTools
 
 ### Considerazioni sulle Prestazioni
 
-- L’elevato numero di file tradotti (oltre 50 lingue) rende le clone complete grandi
-- Usare clone superficiale se si lavora solo sui contenuti: `git clone --depth 1`
-- Escludere le traduzioni dalle ricerche quando si lavora su contenuti in inglese
-- I processi di build possono essere lenti al primo avvio (npm install, build Vite)
+- Il gran numero di file tradotti (oltre 50 lingue) rende i clone completi grandi
+- Usa clone superficiale se lavori solo sui contenuti: `git clone --depth 1`
+- Escludi traduzioni dalle ricerche quando lavori sui contenuti in inglese
+- I processi di build possono essere lenti alla prima esecuzione (npm install, build Vite)
 
 ## Considerazioni sulla Sicurezza
 
-### Variabili di Ambiente
+### Variabili d’Ambiente
 
-- Le chiavi API non devono mai essere inserite nel repository
-- Usare file `.env` (già inclusi in `.gitignore`)
-- Documentare le variabili di ambiente richieste nei README dei progetti
+- Le chiavi API non devono mai essere committate nel repository
+- Usa file `.env` (già in `.gitignore`)
+- Documenta le variabili ambiente richieste nei README dei progetti
 
 ### Progetti Python
 
-- Usare ambienti virtuali: `python -m venv venv`
-- Mantenere aggiornate le dipendenze
+- Usa ambienti virtuali: `python -m venv venv`
+- Mantieni aggiornate le dipendenze
 - I token GitHub devono avere permessi minimi necessari
 
-### Accesso Modelli GitHub
+### Accesso ai Modelli GitHub
 
-- Sono necessari Personal Access Tokens (PAT) per i modelli GitHub
-- I token devono essere conservati come variabili di ambiente
-- Non commettere mai token o credenziali
+- Sono necessari Personal Access Tokens (PAT) per i Modelli GitHub
+- I token devono essere conservati come variabili ambiente
+- Non committare mai token o credenziali
 
 ## Note Aggiuntive
 
-### Pubblico di Destinazione
+### Pubblico Target
 
 - Principianti completi nello sviluppo web
 - Studenti e autodidatti
-- Insegnanti che usano il curriculum in aula
-- Contenuti progettati per accessibilità e acquisizione graduale delle competenze
+- Insegnanti che utilizzano il curriculum in classe
+- Contenuti progettati per accessibilità e crescita graduale delle competenze
 
 ### Filosofia Educativa
 
-- Approccio di apprendimento basato su progetti
-- Verifiche frequenti delle conoscenze (quiz)
-- Esercizi di programmazione pratici
-- Esempi applicativi reali
-- Focus sui fondamenti prima dei framework
+- Approccio basato su apprendimento tramite progetto
+- Controlli di conoscenza frequenti (quiz)
+- Esercizi pratici di programmazione
+- Esempi di applicazione reali
+- Focus sulle fondamenta prima dei framework
 
 ### Manutenzione del Repository
 
 - Comunità attiva di studenti e collaboratori
 - Aggiornamenti regolari di dipendenze e contenuti
-- Issue e discussioni monitorate dai manutentori
-- Aggiornamenti delle traduzioni automatizzati tramite GitHub Actions
+- Monitoraggio di issue e discussioni da parte dei manutentori
+- Aggiornamenti traduzioni automatizzati tramite GitHub Actions
 
 ### Risorse Correlate
 
 - [Moduli Microsoft Learn](https://docs.microsoft.com/learn/)
 - [Risorse Student Hub](https://docs.microsoft.com/learn/student-hub/)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) consigliato per studenti
-- Corsi aggiuntivi: AI Generativa, Data Science, ML, curricoli IoT disponibili
+- Corsi aggiuntivi: AI generativa, Data Science, ML, curricula IoT disponibili
 
 ### Lavorare con Progetti Specifici
 
-Per istruzioni dettagliate su singoli progetti, consultare i file README in:
+Per istruzioni dettagliate sui progetti singoli, consulta i file README in:
 - `quiz-app/README.md` - Applicazione quiz Vue 3
 - `7-bank-project/README.md` - Applicazione bancaria con autenticazione
-- `5-browser-extension/README.md` - Sviluppo estensione browser
-- `6-space-game/README.md` - Sviluppo gioco basato su canvas
+- `5-browser-extension/README.md` - Sviluppo estensione per browser
+- `6-space-game/README.md` - Sviluppo gioco basato su Canvas
 - `9-chat-project/README.md` - Progetto assistente chat AI
 
 ### Struttura Monorepo
@@ -397,12 +397,12 @@ Per istruzioni dettagliate su singoli progetti, consultare i file README in:
 Pur non essendo un monorepo tradizionale, questo repository contiene più progetti indipendenti:
 - Ogni lezione è autonoma
 - I progetti non condividono dipendenze
-- Lavorare su singoli progetti senza influenzare gli altri
-- Clonare l’intero repository per l’esperienza completa del curriculum
+- Lavora su singoli progetti senza influire sugli altri
+- Clona l'intero repository per l’esperienza completa del curriculum
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Dichiarazione di non responsabilità**:
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda la traduzione professionale effettuata da un umano. Non siamo responsabili per eventuali fraintendimenti o interpretazioni errate derivanti dall’uso di questa traduzione.
+**Disclaimer**:  
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o inesattezze. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un esperto umano. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
