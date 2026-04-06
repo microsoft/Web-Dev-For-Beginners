@@ -10,29 +10,29 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# 初學者的網頁開發課程
+# 新手入門網頁開發課程
 
-透過微軟雲端推廣員的 12 週全面課程，學習網頁開發的基礎知識。24 個課程單元透過實作專案如生態瓶、瀏覽器擴充功能及太空遊戲，深入探討 JavaScript、CSS 和 HTML。參與測驗、討論及實務作業。利用我們高效的專案導向教學法，強化技能並優化知識吸收。立即展開你的程式設計之旅！
+透過微軟雲端推廣團隊帶來的為期12週綜合課程，學習網頁開發的基礎知識。這24堂課會深入探討JavaScript、CSS與HTML，並且透過各種動手專案，例如微型生態瓶、瀏覽器擴充功能以及太空遊戲。參與小測驗、討論與實作作業。運用我們有效的專案導向教學法，提升你的技能並優化知識吸收。今天就開始你的程式設計旅程吧！
 
 加入 Azure AI Foundry Discord 社群
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-按照以下步驟開始使用這些資源：
-1. **派生本倉庫**：點擊 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **複製本倉庫**：   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**加入 Azure AI Foundry Discord，與專家及其他開發者互動**](https://discord.com/invite/ByRwuEEgH4)
+開始使用這些資源的步驟如下：
+1. **Fork 該儲存庫**：點擊 [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **Clone 該儲存庫**：   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**加入 Azure AI Foundry Discord，與專家及其他開發者交流合作**](https://discord.com/invite/ByRwuEEgH4)
 
 ### 🌐 多語言支援
 
-#### 透過 GitHub Action 實現（自動且持續更新）
+#### 透過 GitHub Action 支援（自動且保持最新）
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[阿拉伯語](../ar/README.md) | [孟加拉語](../bn/README.md) | [保加利亞語](../bg/README.md) | [緬甸語](../my/README.md) | [中文（簡體）](../zh-CN/README.md) | [中文（繁體，香港）](../zh-HK/README.md) | [中文（繁體，澳門）](../zh-MO/README.md) | [中文（繁體，台灣）](./README.md) | [克羅埃西亞語](../hr/README.md) | [捷克語](../cs/README.md) | [丹麥語](../da/README.md) | [荷蘭語](../nl/README.md) | [愛沙尼亞語](../et/README.md) | [芬蘭語](../fi/README.md) | [法語](../fr/README.md) | [德語](../de/README.md) | [希臘語](../el/README.md) | [希伯來語](../he/README.md) | [印地語](../hi/README.md) | [匈牙利語](../hu/README.md) | [印尼語](../id/README.md) | [義大利語](../it/README.md) | [日語](../ja/README.md) | [卡納達語](../kn/README.md) | [韓語](../ko/README.md) | [立陶宛語](../lt/README.md) | [馬來語](../ms/README.md) | [馬拉亞拉姆語](../ml/README.md) | [馬拉地語](../mr/README.md) | [尼泊爾語](../ne/README.md) | [奈及利亞洋腔](../pcm/README.md) | [挪威語](../no/README.md) | [波斯語 (法爾西)](../fa/README.md) | [波蘭語](../pl/README.md) | [葡萄牙語 (巴西)](../pt-BR/README.md) | [葡萄牙語 (葡萄牙)](../pt-PT/README.md) | [旁遮普語 (Gurmukhi)](../pa/README.md) | [羅馬尼亞語](../ro/README.md) | [俄語](../ru/README.md) | [塞爾維亞語 (西里爾字母)](../sr/README.md) | [斯洛伐克語](../sk/README.md) | [斯洛文尼亞語](../sl/README.md) | [西班牙語](../es/README.md) | [斯瓦希里語](../sw/README.md) | [瑞典語](../sv/README.md) | [他加祿語 (菲律賓語)](../tl/README.md) | [泰米爾語](../ta/README.md) | [泰盧固語](../te/README.md) | [泰語](../th/README.md) | [土耳其語](../tr/README.md) | [烏克蘭語](../uk/README.md) | [烏爾都語](../ur/README.md) | [越南語](../vi/README.md)
+[阿拉伯文](../ar/README.md) | [孟加拉文](../bn/README.md) | [保加利亞文](../bg/README.md) | [緬甸語](../my/README.md) | [中文（簡體）](../zh-CN/README.md) | [中文（繁體，香港）](../zh-HK/README.md) | [中文（繁體，澳門）](../zh-MO/README.md) | [中文（繁體，台灣）](./README.md) | [克羅埃西亞文](../hr/README.md) | [捷克文](../cs/README.md) | [丹麥文](../da/README.md) | [荷蘭文](../nl/README.md) | [愛沙尼亞文](../et/README.md) | [芬蘭文](../fi/README.md) | [法文](../fr/README.md) | [德文](../de/README.md) | [希臘文](../el/README.md) | [希伯來文](../he/README.md) | [印地文](../hi/README.md) | [匈牙利文](../hu/README.md) | [印尼文](../id/README.md) | [義大利文](../it/README.md) | [日文](../ja/README.md) | [卡納達文](../kn/README.md) | [高棉文](../km/README.md) | [韓文](../ko/README.md) | [立陶宛文](../lt/README.md) | [馬來文](../ms/README.md) | [馬拉雅拉姆文](../ml/README.md) | [馬拉地文](../mr/README.md) | [尼泊爾文](../ne/README.md) | [奈及利亞派金語](../pcm/README.md) | [挪威文](../no/README.md) | [波斯文（法爾西語）](../fa/README.md) | [波蘭文](../pl/README.md) | [葡萄牙文（巴西）](../pt-BR/README.md) | [葡萄牙文（葡萄牙）](../pt-PT/README.md) | [旁遮普文（古魯穆奇體）](../pa/README.md) | [羅馬尼亞文](../ro/README.md) | [俄文](../ru/README.md) | [塞爾維亞文（西里爾字母）](../sr/README.md) | [斯洛伐克文](../sk/README.md) | [斯洛文尼亞文](../sl/README.md) | [西班牙文](../es/README.md) | [斯瓦希里文](../sw/README.md) | [瑞典文](../sv/README.md) | [他加祿文（菲律賓語）](../tl/README.md) | [坦米爾文](../ta/README.md) | [泰盧固文](../te/README.md) | [泰文](../th/README.md) | [土耳其文](../tr/README.md) | [烏克蘭文](../uk/README.md) | [烏爾都文](../ur/README.md) | [越南文](../vi/README.md)
 
-> **偏好本機複製？**
+> **想要本機複製？**
 >
-> 本倉庫包含 50 多種語言翻譯，會大幅增加下載大小。若想不包含翻譯檔複製，請使用稀疏簽出：
+> 此儲存庫包含50多種語言的翻譯，顯著增加下載大小。想要不含翻譯的複製，可以使用稀疏檢出：
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -48,175 +48,174 @@
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> 這可幫助你用更快速度下載並擁有完成課程所需的一切資料。
+> 這會讓你快速下載所需完成課程的所有內容。
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**若希望支援更多翻譯語言，可查看[此處](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**若你希望新增其他翻譯語言，支援語言列表見[此處](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _你是學生嗎？_
 
-請造訪[**學生專區頁面**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon)，這裡提供初學者資源、學生套件，甚至免費證書代金券兌換方式。請收藏此頁，並定期瀏覽，我們會每月更新內容。
+請造訪[<strong>學生中心頁面</strong>](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon)，你會找到初學資源、學生套件，甚至取得免費證書憑證的方式。這是你想要收藏並時常關注的網頁，因為我們會每月更換內容。
 
-### 📣 公告 - 新增 GitHub Copilot 代理模式挑戰關卡！
+### 📣 公告 - 新增 GitHub Copilot Agent 模式挑戰任務！
 
-新挑戰已加入，大多數章節中可見 "GitHub Copilot Agent Challenge 🚀"。這是使用 GitHub Copilot 與代理模式完成的全新挑戰。如果你還沒用過代理模式，它不僅能生成文字，還能建立與編輯檔案、執行指令等。
+新增挑戰任務，請在多數章節中尋找「GitHub Copilot Agent Challenge 🚀」。這是使用 GitHub Copilot 與 Agent 模式完成的新挑戰。如果你從未使用過 Agent 模式，它不僅能生成文字，還可建立與編輯檔案、執行指令等等。
 
-### 📣 公告 - _新增使用生成式 AI 建置的專案_ 
+### 📣 公告 - _新增使用生成式 AI 的專案_
 
-最新 AI 助理專案已推出，詳見[專案](./9-chat-project/README.md)
+新 AI 助理專案已新增，請查看該[專案](./9-chat-project/README.md)
 
-### 📣 公告 - _全新生成式 AI JavaScript 課程大公開_
+### 📣 公告 - _新推出 JavaScript 生成式 AI 課程_
 
-別錯過我們的全新生成式 AI 課程！
+別錯過我們全新的生成式 AI 課程！
 
-造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
+請造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
 
-![背景](../../translated_images/zh-TW/background.148a8d43afde5730.webp)
+![Background](../../translated_images/zh-TW/background.148a8d43afde5730.webp)
 
-- 課程涵蓋從基礎到 RAG 技術。
-- 使用生成式 AI 與伴隨應用互動，與歷史人物對話。
-- 趣味且引人入勝的故事情節，你將展開時光之旅！
+- 課程涵蓋從基礎到 RAG（檢索增強生成）
+- 利用生成式 AI 與我們的伴隨應用互動歷史人物
+- 有趣且引人入勝的敘事，你將穿越時空！
 
-![角色](../../translated_images/zh-TW/character.5c0dd8e067ffd693.webp)
+![character](../../translated_images/zh-TW/character.5c0dd8e067ffd693.webp)
 
+每課皆包含一項作業、知識測試與挑戰，引導你學習以下主題：
+- 提示及提示工程
+- 文字與圖像應用程式生成
+- 搜尋應用程式
 
-每堂課均包含作業、知識測試及挑戰，協助你學習以下主題：
-- 提示語及提示語工程
-- 文字與圖片應用生成
-- 搜尋應用
-
-造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
+請造訪 [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) 開始學習！
 
 
 
 ## 🌱 開始使用
 
-> **老師們**，我們有[包含一些建議](for-teachers.md)來協助您使用此課程。歡迎您在[討論區](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)給予回饋！
+> <strong>老師們</strong>，我們提供 [使用此課程的一些建議](for-teachers.md)。非常歡迎您在[討論區](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)分享您的反饋！
 
-**[學習者](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**，每堂課從課前測驗開始，接著閱讀課程內容，完成各種活動，並以課後測驗檢驗理解度。
+**[學習者](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**，每堂課，請先完成課前小測驗，接著閱讀講義材料，完成各項活動，最後以課後小測驗檢視理解。
 
-為強化學習體驗，請與同儕合作專案！我們歡迎在[討論區](https://github.com/microsoft/Web-Dev-For-Beginners/discussions)分享並討論，管理員團隊會協助解答你的問題。
+為提升學習體驗，建議與夥伴合作完成專案！鼓勵您在我們的[討論區](https://github.com/microsoft/Web-Dev-For-Beginners/discussions)中互動，我們的版主團隊將隨時為您解答問題。
 
-若想進一步進修，强烈推薦探索[Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon)提供的額外學習資源。
+若想進一步學習，強烈建議探索[Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon)以取得更多學習資源。
 
-### 📋 環境設定
+### 📋 設定你的開發環境
 
-本課程提供一整套開發環境！開始時，你可以選擇在 [Codespace](https://github.com/features/codespaces/) 中執行（基於瀏覽器，無需安裝軟體），或在本機電腦上使用文字編輯器，如 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)。
+此課程已有準備好開發環境！開始時，你可以選擇使用 [Codespace](https://github.com/features/codespaces/)（瀏覽器執行、免安裝環境），或是使用文字編輯器（例如 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)）在本機電腦執行。
 
-#### 建立你的代碼庫
-為方便儲存作業，建議你建立本倉庫的個人副本。按下頁面頂端的 **Use this template** 按鈕，系統會在你的 GitHub 帳號內建立包含課程內容的新代碼庫。
+#### 建立你的儲存庫
+為方便儲存你的作品，建議你建立此儲存庫的個人複本。你可以點選頁面頂端的 **Use this template** 按鈕，這將在你的 GitHub 帳號中建立一個帶有課程內容的全新儲存庫。
 
-執行步驟如下：
-1. **派生本倉庫**：點擊本頁右上角的「Fork」按鈕。
-2. **複製本倉庫**：   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+操作步驟如下：
+1. **Fork 該儲存庫**：點擊本頁面右上方的「Fork」按鈕。
+2. **Clone 該儲存庫**：   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### 在 Codespace 執行課程
+#### 在 Codespace 中運行課程
 
-於持有的此倉庫副本中點擊 **Code** 按鈕，選擇 **Open with Codespaces**，系統即為你建立新的 Codespace 工作環境。
+在你建立的複本中，點擊 **Code** 按鈕並選擇 **Open with Codespaces**。系統將建立一個新的 Codespace 供你使用。
 
 ![Codespace](../../translated_images/zh-TW/createcodespace.0238bbf4d7a8d955.webp)
 
-#### 在本機電腦執行課程
+#### 在本機電腦上運行課程
 
-欲在本機運行課程，需準備文字編輯器、瀏覽器及命令列工具。我們的第一堂課，[程式語言與開發工具入門](../../1-getting-started-lessons/1-intro-to-programming-languages) 將引導你檢視各種選項，選擇最適合你的工具。
+若要在本機電腦上運行本課程，你需要文字編輯工具、瀏覽器及命令列工具。我們的第一課，[程式語言與開發工具簡介](../../1-getting-started-lessons/1-intro-to-programming-languages)，會帶你了解各種這些工具的選項，讓你挑選最適合自己的。
 
-建議使用 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) 作為編輯器，其內建[終端機](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon)功能。你可在此處下載 Visual Studio Code：[https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) 。
-1. 將您的存放庫複製到您的電腦。您可以點擊 **Code** 按鈕並複製 URL：
+我們推薦使用 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) 作為你的編輯器，它也內建有 [終端機](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon)。你可以從這裡下載 Visual Studio Code：[連結](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)。
+1. 將您的儲存庫複製到您的電腦。您可以點擊 **Code** 按鈕並複製 URL：
 
     [CodeSpace](./images/createcodespace.png)
 
-    接著，在 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) 中開啟 [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) 並執行以下指令，將 `<your-repository-url>` 替換成剛剛複製的 URL：
+    然後，在 [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) 中打開 [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) 並執行以下命令，將 `<your-repository-url>` 替換為剛才複製的網址：
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. 在 Visual Studio Code 中開啟資料夾。您可以點擊 **File** > **Open Folder** 並選擇剛剛複製的資料夾。
+2. 在 Visual Studio Code 中打開該資料夾。您可以點擊 **File** > **Open Folder** 並選擇剛剛複製的資料夾。
 
 
 >  推薦的 Visual Studio Code 擴充功能：
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - 在 Visual Studio Code 內預覽 HTML 頁面
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - 幫助您加快寫程式碼的速度
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - 用於在 Visual Studio Code 中預覽 HTML 頁面
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - 幫助您更快地撰寫程式碼
 
-## 📂 每堂課包含：
+## 📂 每個課程包括：
 
-- 選擇性手繪筆記
-- 選擇性補充影片
-- 課前熱身小測驗
+- 可選的手繪筆記
+- 可選的補充影片
+- 課前暖身測驗
 - 書面課程內容
-- 專案導向課程會有逐步專案建立指南
-- 知識檢核
+- 專案導向課程包含逐步指引如何建置專案
+- 知識檢查
 - 挑戰題
 - 補充閱讀材料
 - 作業
 - [課後測驗](https://ff-quizzes.netlify.app/web/)
 
-> **關於測驗的註解**：所有測驗均包含在 Quiz-app 資料夾中，共 48 場測驗，每場三題。可在[此處](https://ff-quizzes.netlify.app/web/)取得。測驗應用可以在本機運行或部署至 Azure；詳細說明請參考 quiz-app 資料夾。
+> <strong>關於測驗的備註</strong>：所有測驗都包含在 Quiz-app 資料夾中，總共有 48 個測驗，每個測驗三個問題。可於[這裡](https://ff-quizzes.netlify.app/web/)使用，這個測驗應用程式可在本地執行或部署到 Azure；請遵循 `quiz-app` 資料夾中的說明。
 
 ## 🗃️ 課程列表
 
 |     |                       專案名稱                       |                            教授概念                             | 學習目標                                                                                                                 |                                                         連結課程                                                          |         作者          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     開始入門                      |           程式設計與開發工具導論           | 學習大部分程式語言的基礎原理以及協助專業開發者工作的軟體 | [程式語言與開發工具導論](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     開始入門                      |             GitHub 基礎，包含團隊協作             | 如何在專案中使用 GitHub，如何與他人協作程式碼庫                                                    |                            [GitHub 入門](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     開始入門                      |                             無障礙設計                              | 學習網頁無障礙設計的基本概念                                                                                               |                       [無障礙基礎](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        JS 基礎                         |                         JavaScript 資料型別                          | JavaScript 資料型別基礎                                                                                                 |                                       [資料型別](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        JS 基礎                         |                         函數與方法                          | 了解如何使用函數及方法管理應用程式的邏輯流程                                                             |                              [函數與方法](./2-js-basics/2-functions-methods/README.md)                               | Jasmine 和 Christopher |
-| 06  |                        JS 基礎                         |                        使用 JS 做決策                        | 學習使用決策方法建立程式條件                                                           |                                 [做決策](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        JS 基礎                         |                            陣列與迴圈                            | 使用 JavaScript 陣列與迴圈操作資料                                                                                 |                                   [陣列與迴圈](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML 實務                            | 建置 HTML 製作線上生態缸，專注於網頁排版                                                         |                                 [HTML入門](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS 實務                             | 建置 CSS 來設計線上生態缸，專注於基礎 CSS 及響應式網頁設計                     |                                  [CSS入門](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript 閉包與 DOM 操作                  | 建置 JavaScript 使完整生態缸具拖拉介面功能，專注閉包與 DOM 操作             |                  [JavaScript 閉包與 DOM 操作](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [打字遊戲](./4-typing-game/solution/README.md)          |                          建立打字遊戲                           | 學習如何使用鍵盤事件驅動 JavaScript 應用邏輯                                                          |                                [事件驅動程式設計](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [綠色瀏覽器擴充功能](./5-browser-extension/solution/README.md) |                         瀏覽器工作原理                          | 了解瀏覽器如何運作及其歷史，並架構瀏覽器擴充功能的基本元素                               |                               [認識瀏覽器](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [綠色瀏覽器擴充功能](./5-browser-extension/solution/README.md) | 建立表單、呼叫 API 並儲存變數於本地儲存 | 建立瀏覽器擴充功能的 JavaScript 元素，使用本地儲存的變數呼叫 API                      |                [API、表單與本地儲存](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [綠色瀏覽器擴充功能](./5-browser-extension/solution/README.md) |          瀏覽器背景程序與網頁效能          | 使用瀏覽器背景程序來管理擴充圖示；學習網頁效能與優化方式   |             [背景作業與效能](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [太空遊戲](./6-space-game/solution/README.md)           |             進階的 JavaScript 遊戲開發             | 了解繼承、類別與組合以及 Pub/Sub 模式，為建立遊戲做準備              |                      [進階遊戲開發入門](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [太空遊戲](./6-space-game/solution/README.md)           |                           畫到畫布                            | 學習 Canvas API，用於繪製畫面元素                                                                       |                                [畫到 Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [太空遊戲](./6-space-game/solution/README.md)           |                   移動畫面上的元素                    | 探索元素如何透過笛卡兒座標與 Canvas API 產生運動                                            |                           [移動畫素](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [太空遊戲](./6-space-game/solution/README.md)           |                          碰撞偵測                           | 讓元素相互碰撞並做出反應，使用按鍵事件並提供冷卻功能以確保遊戲順暢    |                              [碰撞偵測](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [太空遊戲](./6-space-game/solution/README.md)           |                             計分                              | 根據遊戲狀態與表現進行數學計算                                                                |                                    [計分](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [太空遊戲](./6-space-game/solution/README.md)           |                     遊戲結束與重新開始                     | 了解遊戲結束與重新開始，包括清理資源與重設變數                              |                                [結束條件](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
-| 21  |         [銀行應用程式](./7-bank-project/solution/README.md)          |                 HTML 範本與網頁路由                 | 學習如何建立多頁網站架構，使用路由與 HTML 範本                             |                            [HTML 範本與路由](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [銀行應用程式](./7-bank-project/solution/README.md)          |                  建立登入與註冊表單                   | 了解建立表單及處理驗證程序                                                                          |                                           [表單](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [銀行應用程式](./7-bank-project/solution/README.md)          |                   資料抓取與使用                   | 了解資料在應用程式中的流動，如何抓取、儲存與處理                                                 |                                            [資料](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [銀行應用程式](./7-bank-project/solution/README.md)          |                      狀態管理概念                      | 學習應用程式如何保持狀態並以程式方式管理                                                              |                                [狀態管理](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [瀏覽器/VSCode 程式碼](../../8-code-editor) | 使用 VSCode | 學習如何使用程式碼編輯器 | [使用 VSCode 程式碼編輯器](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AI 助理](./9-chat-project/README.md) | 使用 AI | 學習如何打造自己的 AI 助理 | [AI 助理專案](./9-chat-project/README.md) | Chris |
+| 01  |                     Getting Started                      |           程式設計入門與工具介紹           | 學習多數程式語言的基本原理與協助專業開發者工作的軟體                         | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     Getting Started                      |             GitHub 基本操作與團隊協作             | 如何在您的專案中使用 GitHub 並與他人協作                                     |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     Getting Started                      |                             無障礙設計基礎                              | 學習網頁無障礙設計基礎                                                                               |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        JS Basics                         |                         JavaScript 資料型態                          | JavaScript 資料型態的基礎                                                                         |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        JS Basics                         |                         函數與方法                          | 學習如何使用函數與方法管理應用程式中的邏輯流                                                                  |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
+| 06  |                        JS Basics                         |                        使用 JS 做決策判斷                        | 學習如何在程式碼中使用判斷條件                                                                                    |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        JS Basics                         |                            陣列與迴圈                            | 使用 JavaScript 中的陣列與迴圈操作資料                                                                             |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML 實作                            | 建立 HTML 以創建線上生態箱，專注於版面設計                                                                             |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS 實作                             | 編寫 CSS 以美化線上生態箱，專注於 CSS 基礎及使頁面具備響應式                                                                        |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript 閉包與 DOM 操作                  | 編寫 JavaScript 使生態箱具備拖放功能，專注於閉包與 DOM 操作                                                                       |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          建置打字遊戲                           | 學習如何使用鍵盤事件驅動 JavaScript 應用邏輯                                                          |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         瀏覽器運作                          | 瞭解瀏覽器運作原理、歷史以及如何架構第一個瀏覽器擴充功能元素                                              |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | 建立表單、呼叫 API 及使用本機端儲存變數 | 編寫瀏覽器擴充功能的 JavaScript 元素，使用儲存於本機端的變數呼叫 API                                          |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          瀏覽器背景程序與網頁效能優化          | 利用瀏覽器背景程序管理擴充功能圖示；了解網頁效能及部分優化技巧                                            |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [Space Game](./6-space-game/solution/README.md)           |             進階 JavaScript 遊戲開發             | 學習使用類別繼承、組合與公佈/訂閱 (Pub/Sub) 模式，為建置遊戲做準備                                          |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Canvas 繪圖                            | 認識 Canvas API，用於畫面元素繪製                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   移動畫面中的元素                    | 探索如何使用笛卡兒坐標與 Canvas API 來讓元素產生移動效果                                            |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          碰撞偵測                           | 使元素能相互碰撞且反應，利用按鍵事件並提供冷卻功能確保遊戲效能                                           |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             計分                              | 根據遊戲狀態與表現進行數學計算                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     結束及重新開始遊戲                     | 了解如何結束並重啟遊戲，包括清理資源與重設變數值                                                         |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 網頁應用中的 HTML 模板與路由                 | 學習如何使用路由與 HTML 模板建立多頁網站架構                             |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  建立登入與註冊表單                   | 學習建立表單及處理驗證流程                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   資料抓取與使用方法                   | 資料如何流入流出您的應用，如何抓取、儲存與處理                                                     |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      狀態管理概念                      | 瞭解您的應用如何保留狀態及如何以程式方式管理狀態                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [Browser/VScode Code](../../8-code-editor) | 使用 VScode | 學習如何使用程式碼編輯器 | [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI Assistants](./9-chat-project/README.md) | 使用 AI | 學習如何打造自己的 AI 助手 | [AI Assistant project](./9-chat-project/README.md) | Chris |
 
 ## 🏫 教學法
 
-我們的課程設計基於兩項重要的教學原理：
+我們的課程設計基於兩個關鍵教學原則：
 * 專案導向學習
-* 頻繁測驗
+* 頻繁的測驗
 
-本課程教授 JavaScript、HTML 和 CSS 的基礎，以及現今網頁開發者常用的最新工具與技術。學生將有機會透過實作打造打字遊戲、虛擬生態缸、環保瀏覽器擴充功能、太空侵略者風格遊戲及銀行業務應用。課程結束時，學生將具備紮實的網頁開發理解。
+該計畫涵蓋 JavaScript、HTML 及 CSS 的基礎，以及當前網頁開發人員所使用的最新工具與技術。學生將有機會透過建構打字遊戲、虛擬生態箱、環保瀏覽器擴充功能、太空入侵者風格遊戲和企業銀行應用程式來累積實作經驗。課程結束時，學生將對網頁開發獲得扎實的理解。
 
-> 🎓 您可以將本課程的前幾堂課以 Microsoft Learn 的[學習路徑](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon)形式來學習！
+> 🎓 您也可以在 Microsoft Learn 上以此課程的[學習路徑](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon)開始前幾課！
 
-確保課程內容配合專案，使學習過程更具吸引力並提升概念記憶。我們也撰寫多堂 JavaScript 基礎入門課程搭配「[JavaScript 初學者系列](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)」影片教學，其中多位作者參與本課程。
+透過確保內容與專案緊密對應，學習過程對學生來說更具吸引力且概念吸收更佳。我們也撰寫了多堂 JavaScript 基礎入門課程，搭配「[JavaScript 新手系列](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)」的教學影片，其中部分作者也參與本課程內容的編撰。
 
-此外，課前低難度測驗設立學習目標，課後第二次測驗確保加強記憶。這課程設計靈活有趣，可以完整學習或部分學習。專案從簡單開始，12 週課程結束時逐步變得複雜。
+此外，每堂課前的低壓力測驗幫助學生專心學習主題，而課後的測驗則促進進一步的概念鞏固。此課程設計靈活有趣，可全程參與或分段學習。專案由淺入深，逐漸增加難度，包含一個 12 週的循環課程。
 
-我們特意避免介紹 JavaScript 框架，專注培養基本技能，學習者後續可利用另一系列影片「[Node.js 初學者系列](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)」來深入 Node.js。
+雖然我們刻意避免介紹 JavaScript 框架，以便先專注於成為網頁開發人員所需的基本技能，再採用框架，接下來的好選擇是透過另一系列教學影片學習 Node.js：「[Node.js 新手系列](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)」。
 
-> 請參閱我們的[行為準則](CODE_OF_CONDUCT.md)與[貢獻指南](CONTRIBUTING.md)。歡迎您提供建設性回饋！
+> 請參考我們的[行為準則](CODE_OF_CONDUCT.md)及[貢獻指南](CONTRIBUTING.md)。我們歡迎您提出建設性的回饋！
 
 
-## 🧭 離線使用
+## 🧭 離線存取
 
-您可透過 [Docsify](https://docsify.js.org/#/) 離線瀏覽本文件。將此倉庫分支，於本機安裝 [Docsify](https://docsify.js.org/#/quickstart)，接著在此倉庫根目錄執行 `docsify serve`。網站將在本機的 3000 埠提供服務：`localhost:3000`。
+您可以使用 [Docsify](https://docsify.js.org/#/) 離線瀏覽本文件。請 fork 此儲存庫，在本機安裝 [Docsify](https://docsify.js.org/#/quickstart)，然後於本儲存庫根目錄輸入 `docsify serve`。網站將透過本地主機的 3000 埠提供服務：`localhost:3000`。
 
 ## 📘 PDF
-所有課程的 PDF 可在[這裡](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)找到。
+所有課程的 PDF 版本可在[此處](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)下載。
 
 
 ## 🎒 其他課程
 
-我們團隊還製作其他課程！請參考：
+我們團隊還製作了其他課程！請參考：
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -260,21 +259,21 @@
 
 ## 尋求協助
 
-如果你遇到困難或對建立 AI 應用有任何疑問，歡迎加入 MCP 的學習者和資深開發者討論群。這是一個支持性社群，歡迎提出問題並自由分享知識。
+如果你遇到困難或對建置 AI 應用程式有任何疑問，歡迎加入其他學習者及經驗豐富開發者，參與 MCP 的討論。這裏是一個支持性強的社群，歡迎提問並自由分享知識。
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-如果你在開發過程中有產品回饋或錯誤，請造訪：
+如果你在建置過程中有產品回饋或錯誤，請造訪：
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
-## 授權
+## 授權條款
 
-本專案庫採用 MIT 授權。詳情請參閱 [LICENSE](../../LICENSE) 檔案。
+本專案庫採用 MIT 授權條款。詳情請參閱[LICENSE](../../LICENSE)檔案。
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：  
-本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件之母語版本應被視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯所引起的任何誤解或誤譯承擔責任。
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或曲解承擔責任。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
