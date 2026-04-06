@@ -10,29 +10,29 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# ویب ڈیولپمنٹ برائے ابتدائی - ایک نصاب
+# ویب ڈیولپمنٹ برائے ابتدائی افراد - ایک نصاب
 
-Microsoft Cloud Advocates کی طرف سے ہمارا 12 ہفتوں کا جامع کورس کے ساتھ ویب ڈیولپمنٹ کی بنیادیں سیکھیں۔ 24 اسباق میں سے ہر ایک JavaScript، CSS، اور HTML میں ہاتھ سے تجرباتی پروجیکٹس جیسے کہ ٹیریریمز، براؤزر ایکسٹینشنز، اور اسپیس گیمز کے ذریعے وارد ہوتا ہے۔ کوئزز، مباحثے، اور عملی اسائنمنٹس میں حصہ لیں۔ اپنی مہارتیں بڑھائیں اور ہمارے مؤثر پروجیکٹ پر مبنی پیڈاگوگی کے ساتھ اپنے علم کو بہتر بنائیں۔ آج ہی اپنی کوڈنگ سفر شروع کریں!
+مائیکروسافٹ کلاؤڈ ایڈووکیٹس کے ذریعہ ہمارے 12 ہفتوں کے جامع کورس کے ساتھ ویب ڈیولپمنٹ کی بنیادی باتیں سیکھیں۔ 24 اسباق میں سے ہر ایک جاوا اسکرپٹ، CSS، اور HTML کی گہرائی میں جا کر عملی منصوبوں جیسے ٹیراریمز، براؤزر ایکسٹینشنز، اور اسپیس گیمز پر کام کرتا ہے۔ کوئزز، مباحثوں، اور عملی اسائنمنٹس میں شامل ہوں۔ اپنی مہارتوں کو بہتر بنائیں اور ہمارے مؤثر پروجیکٹ پر مبنی تدریسی طریقہ کار کے ساتھ اپنی معلومات کو بہتر طور پر محفوظ کریں۔ آج ہی اپنی کوڈنگ کی سفر شروع کریں!
 
 Azure AI Foundry Discord کمیونٹی میں شامل ہوں
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-ان وسائل کو استعمال شروع کرنے کے لیے یہ اقدامات کریں:
-1. **رفوسٹری کو فورک کریں**: کلک کریں [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **رفوسٹری کو کلون کریں**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Azure AI Foundry Discord میں شامل ہوں اور ماہرین اور دیگر ڈویلپرز سے ملاقات کریں**](https://discord.com/invite/ByRwuEEgH4)
+ان وسائل کو استعمال کرنا شروع کرنے کے لیے یہ اقدامات کریں:
+1. **ریپوزیٹری کو فورک کریں**: کلک کریں [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **ریپوزیٹری کو کلون کریں**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Azure AI Foundry Discord میں شامل ہوں اور ماہرین اور دیگر ڈیولپرز سے ملیں**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 کثیرالزبانی تعاون
+### 🌐 کثیراللسانی حمایت
 
-#### GitHub Action کے ذریعہ حمایت یافتہ (خودکار اور ہمیشہ جدید)
+#### GitHub ایکشن کے ذریعے معاونت (خودکار اور ہمیشہ تازہ ترین)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](./README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](./README.md) | [Vietnamese](../vi/README.md)
 
-> **مقامی طور پر کلون کرنا پسند کریں؟**
+> **کیا آپ لوکل طور پر کلون کرنا پسند کرتے ہیں؟**
 >
-> یہ رفوسٹری 50+ زبانوں کے تراجم شامل کرتی ہے جس سے ڈاؤن لوڈ کا سائز بہت بڑھ جاتا ہے۔ بغیر تراجم کی کلوننگ کے لیے sparse checkout استعمال کریں:
+> اس ریپوزیٹری میں 50+ زبانوں میں ترجمے شامل ہیں جو ڈاؤن لوڈ کے سائز کو کافی بڑھا دیتے ہیں۔ بغیر ترجموں کے کلون کرنے کے لیے sparse checkout استعمال کریں:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -48,170 +48,171 @@ Azure AI Foundry Discord کمیونٹی میں شامل ہوں
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> اس سے آپ کو تیزی سے کورس مکمل کرنے کے لیے سب کچھ مل جائے گا۔
+> اس سے آپ کو کورس مکمل کرنے کے لیے درکار سب کچھ تیز تر ڈاؤن لوڈ کے ساتھ مل جائے گا۔
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**اگر آپ مزید ترجمہ شدہ زبانیں شامل کرانا چاہتے ہیں تو وہ یہاں ملاحظہ کریں [here](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**اگر آپ چاہیں کہ اضافی ترجمہ شدہ زبانوں کی حمایت کی جائے تو وہ یہاں فہرست وار دستیاب ہیں [here](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _کیا آپ طالب علم ہیں؟_
 
-وزٹ کریں [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) جہاں آپ کو ابتدائی وسائل، طالب علم پیکس، اور مفت سرٹیفیکیٹ واؤچر حاصل کرنے کے طریقے ملیں گے۔ یہ وہ صفحہ ہے جو آپ کو بک مارک کرنا چاہیے اور وقتاً فوقتاً چیک کرنا چاہیے کیونکہ ہم ماہانہ مواد کو تبدیل کرتے ہیں۔
+وزٹ کریں [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) جہاں آپ کو ابتدائی وسائل، طالب علم پیکس اور مفت سرٹیفکیٹ واؤچر حاصل کرنے کے طریقے ملیں گے۔ یہ وہ صفحہ ہے جسے آپ کو نشان زد کرنا چاہیے اور وقتاً فوقتاً جانچنا چاہیے کیونکہ ہم ماہانہ مواد تبدیل کرتے ہیں۔
 
-### 📣 اعلان - مکمل کرنے کے لیے نئے GitHub Copilot Agent موڈ چیلنجز!
+### 📣 اعلان - نئے GitHub Copilot Agent موڈ چیلنجز مکمل کرنے کے لیے!
 
-نیا چیلنج شامل کیا گیا ہے، زیادہ تر ابواب میں "GitHub Copilot Agent Challenge 🚀" تلاش کریں۔ یہ آپ کے لیے GitHub Copilot اور Agent موڈ استعمال کرنے کا نیا چیلنج ہے۔ اگر آپ نے پہلے Agent موڈ استعمال نہیں کیا، تو یہ صرف متن تخلیق کرنے کے علاوہ فائلیں بنانے اور ایڈٹ کرنے، کمانڈز چلانے اور مزید کر سکتا ہے۔
+نیا چیلنج شامل کیا گیا ہے، زیادہ تر ابواب میں "GitHub Copilot Agent Challenge 🚀" دیکھیں۔ یہ آپ کے لیے GitHub Copilot اور Agent موڈ استعمال کرتے ہوئے مکمل کرنے کا نیا چیلنج ہے۔ اگر آپ نے پہلے Agent موڈ استعمال نہیں کیا ہے تو یہ صرف متن تیار کرنے کی صلاحیت نہیں رکھتا بلکہ فائلز بنانے، ترمیم کرنے، کمانڈز چلانے اور بہت کچھ کر سکتا ہے۔
 
-### 📣 اعلان - _جنریٹو AI کی مدد سے نیا پروجیکٹ بنانے کا موقع_
+### 📣 اعلان - _نیا پروجیکٹ جنریٹو AI استعمال کرتے ہوئے بنانے کے لیے_ 
 
-نیا AI Assistant پروجیکٹ ابھی شامل کیا گیا ہے، اسے چیک کریں [project](./9-chat-project/README.md)
+نیا AI اسسٹنٹ پروجیکٹ ابھی شامل کیا گیا ہے، چیک کریں [project](./9-chat-project/README.md)
 
-### 📣 اعلان - _جنریٹو AI کے لیے نیا نصاب جے ایس پر ابھی جاری ہوا ہے_
+### 📣 اعلان - _جاوا اسکرپٹ کے لیے جنریٹو AI پر نیا نصاب جاری کیا گیا ہے_
 
 ہمارا نیا جنریٹو AI نصاب مت چھوڑیں!
 
-شروع کرنے کے لیے ملاحظہ کریں [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
+شروع کرنے کے لیے وزٹ کریں [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) !
 
 ![Background](../../translated_images/ur/background.148a8d43afde5730.webp)
 
-- بنیادی سے لے کر RAG تک تمام موضوعات کا احاطہ۔
-- تاریخی شخصیات سے GenAI اور ہمارا ساتھ دینے والا ایپ کے ذریعے بات چیت کریں۔
-- مزیدار اور دلچسپ کہانی، آپ وقت میں سفر کریں گے!
+- اسباق جو بنیادی باتوں سے لے کر RAG تک کور کرتے ہیں۔
+- GenAI اور ہمارے کمپینین ایپ کے ساتھ تاریخی کرداروں سے بات چیت کریں۔
+- مزے دار اور دلچسپ قصہ، آپ وقت میں سفر کریں گے!
 
 ![character](../../translated_images/ur/character.5c0dd8e067ffd693.webp)
 
-ہر سبق میں ایک اسائنمنٹ، ایک نالج چیک، اور چیلنج شامل ہے جو آپ کو درج ذیل موضوعات سیکھنے میں رہنمائی کرے گا:
+
+ہر سبق میں مکمل کرنے کے لیے اسائنمنٹ، نالج چیک اور چیلنج شامل ہے تاکہ آپ کو درج ذیل موضوعات سیکھنے میں مدد ملے:
 - پرامپٹنگ اور پرامپٹ انجینئرنگ
 - ٹیکسٹ اور امیج ایپ جنریشن
 - سرچ ایپس
 
-شروع کرنے کے لیے ملاحظہ کریں [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
+شروع کرنے کے لیے وزٹ کریں [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) !
 
 
 
 ## 🌱 شروع کریں
 
-> **اساتذہ**، ہم نے [کچھ تجاویز شامل کی ہیں](for-teachers.md) کہ اس نصاب کو کیسے استعمال کیا جائے۔ آپ کی رائے ہمارے لیے قیمتی ہے [ڈسکشن فورم میں](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)۔
+> **اساتذہ**، ہم نے [کچھ تجاویز شامل کی ہیں](for-teachers.md) کہ اس نصاب کو کیسے استعمال کیا جائے۔ ہمیں آپ کی رائے کا انتظار رہے گا [ہماری مباحثہ فورم](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) میں!
 
-**[سیکھنے والے](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**، ہر سبق کے لیے، پری لیکچر کوئز سے شروع کریں، لیکچر مواد پڑھیں، مختلف سرگرمیاں مکمل کریں اور پوسٹ لیکچر کوئز سے اپنی سمجھ کا جائزہ لیں۔
+**[سیکھنے والے](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**، ہر سبق کے لیے، پری لیکچر کوئز سے شروع کریں اور لیکچر کے مواد کو پڑھیں، مختلف سرگرمیاں مکمل کریں اور پوسٹ لیکچر کوئز کے ذریعے اپنی سمجھ کو چیک کریں۔
 
-اپنے تعلیمی تجربے کو بہتر بنانے کے لیے، اپنے ساتھیوں سے مل کر پروجیکٹس پر کام کریں! مباحثے کے لیے ہماری [ڈسکشن فورم](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) میں حصہ لیں جہاں ہمارے ماڈریٹرز کی ٹیم آپ کے سوالات کے جوابات دینے کے لیے موجود ہوگی۔
+اپنے تعلیمی تجربے کو بڑھانے کے لیے، اپنے ساتھیوں سے جڑیں اور منصوبوں پر مل کر کام کریں! مباحثے ہمارے [مباحثہ فورم](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) میں خوش آئند ہیں جہاں ہمارے ماڈریٹرز آپ کے سوالات کے جواب دینے کے لیے دستیاب ہوں گے۔
 
-اپنی تعلیم کو مزید بڑھانے کے لیے، ہم آپ کو تجویز کرتے ہیں کہ اضافی تعلیمی مواد کے لیے [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) دریافت کریں۔
+اپنی تعلیم کو مزید آگے بڑھانے کے لیے، ہم تجویز کرتے ہیں کہ آپ [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) پر اضافی مطالعہ کے مواد کو دریافت کریں۔
 
-### 📋 اپنا ماحول تیار کرنا
+### 📋 اپنا ماحول سیٹ اپ کریں
 
-اس نصاب کے ساتھ ایک تیار شدہ ڈویلپمنٹ ماحول موجود ہے! شروع کرتے وقت آپ کورس کو [Codespace](https://github.com/features/codespaces/) (_ایک براؤزر پر مبنی، بغیر انسٹالیشن والے ماحول_) پر یا اپنے کمپیوٹر پر لوکل طور پر [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) جیسے ٹیکسٹ ایڈیٹر کے ساتھ چلا سکتے ہیں۔
+یہ نصاب ایک تیار ترقیاتی ماحول کے ساتھ آتا ہے! شروع کرتے وقت آپ انتخاب کر سکتے ہیں کہ آپ نصاب کو [Codespace](https://github.com/features/codespaces/) میں چلائیں (جو براؤزر بیسڈ، بغیر انسٹال کے چلنے والا ماحول ہے)، یا اپنے کمپیوٹر پر لوکل طور پر ایک متن کے ایڈیٹر جیسے کہ [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) استعمال کر کے چلائیں۔
 
-#### اپنی رفوسٹری بنائیں
-اپنا کام آسانی سے محفوظ کرنے کے لیے، یہ مشورہ دیا جاتا ہے کہ آپ اس رفوسٹری کی اپنی کاپی بنائیں۔ یہ کرنے کے لیے صفحہ کے اوپری حصے میں **Use this template** بٹن پر کلک کریں۔ اس سے آپ کے GitHub اکاؤنٹ میں نصاب کی ایک نئی کاپی کے ساتھ ایک نئی رفوسٹری بن جائے گی۔
+#### اپنی ریپوزیٹری بنائیں
+اپنا کام آسانی سے محفوظ کرنے کے لیے، یہ تجویز کیا جاتا ہے کہ آپ اس ریپوزیٹری کی اپنی کاپی بنائیں۔ یہ کرنے کے لیے صفحہ کے اوپر موجود **Use this template** بٹن پر کلک کریں۔ اس سے آپ کے GitHub اکاؤنٹ میں نصاب کی ایک کاپی کے ساتھ ایک نئی ریپوزیٹری بن جائے گی۔
 
 یہ اقدامات کریں:
-1. **رفوسٹری کو فورک کریں**: اس صفحہ کے دائیں بالائی کونے میں "Fork" بٹن پر کلک کریں۔
-2. **رفوسٹری کلون کریں**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+1. **ریپوزیٹری کو فورک کریں**: اس صفحہ کے اوپری دائیں کونے میں "Fork" بٹن پر کلک کریں۔
+2. **ریپوزیٹری کو کلون کریں**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Codespace میں نصاب چلانا
+#### نصاب کو Codespace میں چلانا
 
-اپنی بنائی ہوئی رفوسٹری میں **Code** بٹن پر کلک کریں اور **Open with Codespaces** منتخب کریں۔ یہ آپ کے لئے نیا Codespace تیار کرے گا جس میں آپ کام کر سکیں گے۔
+جو کاپی آپ نے بنائی ہے اس میں، **Code** بٹن پر کلک کریں اور **Open with Codespaces** منتخب کریں۔ یہ آپ کے لیے نیا Codespace بنائے گا جہاں آپ کام کر سکیں گے۔
 
 ![Codespace](../../translated_images/ur/createcodespace.0238bbf4d7a8d955.webp)
 
-#### اپنے کمپیوٹر پر لوکل طور پر نصاب چلانا
+#### نصاب کو اپنے کمپیوٹر پر لوکل چلانا
 
-اپنے کمپیوٹر پر اس نصاب کو چلانے کے لیے آپ کو ایک ٹیکسٹ ایڈیٹر، براؤزر اور کمانڈ لائن ٹول کی ضرورت ہوگی۔ ہمارا پہلا سبق، [Introduction to Programming Languages and Tools of the Trade](../../1-getting-started-lessons/1-intro-to-programming-languages)، آپ کو ان مختلف اختیارات کے بارے میں رہنمائی دے گا تاکہ آپ اپنے لیے بہترین منتخب کر سکیں۔
+اپنے کمپیوٹر پر اس نصاب کو چلانے کے لیے، آپ کو ایک متن کا ایڈیٹر، ایک براؤزر، اور کمانڈ لائن ٹول درکار ہوں گے۔ ہمارا پہلا سبق، [Introduction to Programming Languages and Tools of the Trade](../../1-getting-started-lessons/1-intro-to-programming-languages)، آپ کو مختلف اختیارات سے گزرتا ہے تاکہ آپ کے لیے بہترین ٹول منتخب کیا جا سکے۔
 
-ہم آپ کو یہ مشورہ دیتے ہیں کہ [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ایڈیٹر استعمال کریں، جس میں ایک بلٹ ان [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) بھی شامل ہے۔ آپ Visual Studio Code یہاں سے ڈاؤن لوڈ کر سکتے ہیں [here](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)۔
-1. اپنے ریپوزٹری کو اپنے کمپیوٹر پر کلون کریں۔ آپ یہ **Code** بٹن پر کلک کر کے اور URL کو کاپی کر کے کر سکتے ہیں:
+ہماری تجویز ہے کہ آپ بطور ایڈیٹر [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) استعمال کریں، جس میں ایک بلٹ ان [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) بھی شامل ہے۔ آپ Visual Studio Code یہاں سے ڈاؤن لوڈ کر سکتے ہیں [here](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)۔
+1. اپنے ریپوزیٹری کو اپنے کمپیوٹر پر کلون کریں۔ آپ یہ کام **Code** بٹن پر کلک کر کے اور URL کو کاپی کر کے کر سکتے ہیں:
 
     [CodeSpace](./images/createcodespace.png)
 
-    پھر، [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) کے اندر [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) کھولیں اور درج ذیل کمانڈ چلائیں، `<your-repository-url>` کو اس URL سے بدلیں جو آپ نے ابھی کاپی کیا ہے:
+    پھر، [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) کے اندر [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) کھولیں اور درج ذیل کمانڈ چلائیں، جہاں `<your-repository-url>` کی جگہ وہ URL ڈالیں جو آپ نے ابھی کاپی کیا ہے:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Visual Studio Code میں فولڈر کھولیں۔ آپ یہ **File** > **Open Folder** پر کلک کر کے اور اس فولڈر کو منتخب کر کے کر سکتے ہیں جو آپ نے ابھی کلون کیا ہے۔
+2. فولڈر کو Visual Studio Code میں کھولیں۔ یہ کام آپ **File** > **Open Folder** پر کلک کر کے اور اس فولڈر کو منتخب کر کے کر سکتے ہیں جسے آپ نے ابھی کلون کیا ہے۔
 
->  تجویز کردہ Visual Studio Code کے اضافی پلگ ان:
+>  تجویز کردہ Visual Studio Code ایکسٹینشنز:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - Visual Studio Code کے اندر HTML صفحات کا پیش نظارہ کرنے کے لیے
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - آپ کو تیزی سے کوڈ لکھنے میں مدد فراہم کرنے کے لیے
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - Visual Studio Code میں HTML صفحات کا پیش نظارہ کرنے کے لیے
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - کوڈ لکھنے میں تیزی کے لیے مددگار
 
 ## 📂 ہر سبق میں شامل ہیں:
 
-- اختیاری اسکیچنوٹ
+- اختیاری خاکہ نوٹ
 - اختیاری اضافی ویڈیو
 - سبق سے پہلے وارم اپ کوئز
 - تحریری سبق
-- پروجیکٹ پر مبنی اسباق کے لیے، پروجیکٹ بنانے پر مرحلہ وار رہنما
-- معلومات کی جانچ
+- پروجیکٹ کی بنیاد پر اسباق کے لیے، پروجیکٹ بنانے کے لیے مرحلہ وار رہنمائی
+- علم کی جانچ
 - ایک چیلنج
 - اضافی مطالعہ
-- اسباق کے بعد کا کوئز ([post-lesson quiz](https://ff-quizzes.netlify.app/web/))
+- اسباق کے بعد کا کوئز [post-lesson quiz](https://ff-quizzes.netlify.app/web/)
 
-> **کوئزز کے بارے میں ایک نوٹ**: تمام کوئزز Quiz-app فولڈر میں محفوظ ہیں، کل 48 کوئزز جن میں ہر ایک میں تین سوالات ہوتے ہیں۔ یہ [یہاں](https://ff-quizzes.netlify.app/web/) دستیاب ہیں، کوئز ایپ مقامی طور پر چلائی جا سکتی ہے یا Azure پر بھی تعینات کی جا سکتی ہے؛ `quiz-app` فولڈر میں دی گئی ہدایات پر عمل کریں۔
+> **کوئزز کے بارے میں ایک نوٹ**: تمام کوئزز Quiz-app فولڈر میں موجود ہیں، کل 48 کوئزز، ہر ایک میں تین سوالات ہیں۔ یہ [یہاں](https://ff-quizzes.netlify.app/web/) دستیاب ہیں۔ کوئز ایپ کو مقامی طور پر چلایا جا سکتا ہے یا Azure پر ڈیپلائے کیا جا سکتا ہے؛ `quiz-app` فولڈر میں ہدایات پر عمل کریں۔
 
 ## 🗃️ اسباق
 
-|     |                       پروجیکٹ کا نام                       |                            سکھائے جانے والے تصورات                             | تعلیم کے مقاصد                                                                                                                 |                                                         متعلقہ سبق                                                          |         مصنف          |
+|     |                       پروجیکٹ کا نام                       |                            پڑھائے گئے تصورات                             | تعلیمی مقاصد                                                                                                                 |                                                         منسلک سبق                                                          |         مصنف          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Getting Started                      |           پروگرامنگ اور اس کے اوزار کا تعارف           | زیادہ تر پروگرامنگ زبانوں اور پیشہ ورانہ ترقی کاروں کی مدد کرنے والے سافٹ ویئر کی بنیادی باتیں سیکھیں | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     Getting Started                      |             GitHub کی بنیادی باتیں، ٹیم کے ساتھ کام کرنا             | اپنے پروجیکٹ میں GitHub کو کیسے استعمال کریں، اور دوسروں کے ساتھ ایک کوڈ بیس پر کس طرح تعاون کریں                                                    |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     Getting Started                      |                             Accessibility                              | ویب ایکسیسبلٹی کی بنیادی باتیں سیکھیں                                                                                               |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        JS Basics                         |                         جاوااسکرپٹ ڈیٹا کی اقسام                          | جاوا اسکرپٹ ڈیٹا کی اقسام کی بنیادی باتیں                                                                                                 |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        JS Basics                         |                         فنکشنز اور میتھڈز                          | ایپلیکیشن کے منطق کے بہاؤ کو منظم کرنے کے لیے فنکشنز اور میتھڈز کے بارے میں سیکھیں                                                             |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine and Christopher |
-| 06  |                        JS Basics                         |                        JS میں فیصلے کرنا                        | اپنے کوڈ میں فیصلہ سازی کے طریقے استعمال کرتے ہوئے شرائط بنانے کے بارے میں سیکھیں                                                           |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        JS Basics                         |                            Arrays اور Loops                            | جاوا اسکرپٹ میں arrays اور loops کے ذریعہ ڈیٹا کے ساتھ کام کریں                                                                                 |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML عملی طور پر                            | آن لائن ٹیریریم بنانے کے لیے HTML تیار کریں، لے آؤٹ بنانے پر توجہ دیں                                                         |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS عملی طور پر                             | آن لائن ٹیریریم کو اسٹائل کرنے کے لیے CSS تیار کریں، CSS کی بنیادی باتوں پر توجہ دیں بشمول صفحے کا ردعمل دینا                     |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 جاوا اسکرپٹ Closures، DOM میں ترمیم                  | ٹیریریم کو ڈریگ/ڈراپ انٹرفیس کے طور پر فعال بنانے کے لیے جاوا اسکرپٹ بنائیں، closures اور DOM میں ترمیم پر توجہ دیں             |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          ٹائپنگ گیم بنائیں                           | جاوا اسکرپٹ ایپ کے منطقی بہاؤ کے لیے کی بورڈ ایونٹس کو کیسے استعمال کریں                                                            |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         براؤزر کے ساتھ کام کرنا                          | براؤزر کیسے کام کرتے ہیں، ان کی تاریخ، اور براؤزر ایکسٹینشن کے پہلا عناصر کس طرح تیار کرتے ہیں                               |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | فارم بنانا، API کال کرنا اور لوکل اسٹوریج میں متغیرات محفوظ کرنا | اپنے براؤزر ایکسٹینشن کے جاوا اسکرپٹ عناصر تیار کریں تاکہ API کال کی جا سکے جو لوکل اسٹوریج میں محفوظ متغیرات استعمال کرتے ہیں                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          براؤزر کے پس منظر کے مراحل، ویب کی کارکردگی          | ایکسٹینشن کے آئیکن کو منظم کرنے کے لیے براؤزر کے پس منظر کے مراحل استعمال کریں؛ ویب کارکردگی اور کچھ اصلاحات سیکھیں تاکہ کارکردگی بڑھائی جا سکے   |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [Space Game](./6-space-game/solution/README.md)           |             جاوا اسکرپٹ کے ساتھ مزید جدید کھیل کی ترقی             | کلاسز اور کمپوزیشن دونوں استعمال کرتے ہوئے وراثت اور Pub/Sub پیٹرن کے بارے میں سیکھیں، گیم بنانے کی تیاری کے لیے              |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           کینوس پر ڈرائنگ                            | کینوس API کے بارے میں سیکھیں، جو سیریز پر عناصر ڈرائنگ کے لیے استعمال ہوتا ہے                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   اسکرین پر عناصر کو حرکت دینا                    | دریافت کریں کہ کس طرح عناصر کو کارٹیسیئن کوآرڈی نیٹس اور کینوس API کی مدد سے حرکت دی جا سکتی ہے                                            |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          تصادم کا پتہ لگانا                           | عناصر کو آپس میں ٹکرائیں اور ایک دوسرے کے ردعمل کو یقینی بنانے کے لیے keypresses استعمال کریں؛ گیم کی کارکردگی کو یقینی بنانے کے لیے cooldown فنکشن فراہم کریں    |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             سکور رکھنا                              | گیم کی حالت اور کارکردگی کی بنیاد پر ریاضی کے حسابات کریں                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     گیم کا اختتام اور دوبارہ شروع کرنا                     | گیم کا اختتام اور دوبارہ شروع کرنے کے بارے میں سیکھیں، بشمول اثاثوں کی صفائی اور متغیرات کی ری سیٹ کرنا                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
-| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 ویب ایپ میں HTML ٹیمپلیٹس اور روٹس                 | ملٹی پیج ویب سائٹ کے فن تعمیر کی اسکافولڈنگ کو روٹنگ اور HTML ٹیمپلیٹس کا استعمال کر کے سیکھیں                             |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  لاگ ان اور رجسٹریشن فارم بنائیں                   | فارم بنانے اور ویلیڈیشن کے طریقہ کار کے بارے میں سیکھیں                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   ڈیٹا حاصل کرنے اور استعمال کرنے کے طریقے                   | آپ کی ایپ میں ڈیٹا کیسے آتا اور جاتا ہے، اسے کیسے حاصل کریں، محفوظ کریں، اور ختم کریں                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      اسٹیٹ مینجمنٹ کے تصورات                      | اپنی ایپ میں اسٹیٹ کو کیسے برقرار رکھا جاتا ہے اور پروگرام کے ذریعے اسے کیسے منظم کیا جاتا ہے                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [Browser/VScode Code](../../8-code-editor) | VScode کے ساتھ کام کرنا | کوڈ ایڈیٹر استعمال کرنا سیکھیں| [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AI Assistants](./9-chat-project/README.md) | AI کے ساتھ کام کرنا | اپنا AI اسسٹنٹ بنانا سیکھیں | [AI Assistant project](./9-chat-project/README.md) | Chris |
+| 01  |                     شروع کرنا                      |           پروگرامنگ اور ٹولز کا تعارف           | بیشتر پروگرامنگ زبانوں کے بنیادی اصول اور ایسے سافٹ ویئر کے بارے میں جانیں جو پیشہ ور ڈویلپرز کو ان کے کام میں مدد دیتے ہیں | [پروگرامنگ زبانوں اور ٹولز کا تعارف](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     شروع کرنا                      |             GitHub کی بنیادی باتیں، ٹیم کے ساتھ کام کرنا             | اپنے پروجیکٹ میں GitHub کا استعمال کیسے کریں، اور دوسروں کے ساتھ کوڈ بیس پر تعاون کیسے کریں                                                    |                            [GitHub کا تعارف](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     شروع کرنا                      |                             رسائی (Accessibility)                              | ویب رسائی کی بنیادی باتیں سیکھیں                                                                                               |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        JS بنیادی باتیں                         |                         JavaScript کے ڈیٹا ٹائپس                          | جاوا اسکرپٹ کے ڈیٹا ٹائپس کی بنیادی باتیں                                                                                                 |                                       [ڈیٹا ٹائپس](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        JS بنیادی باتیں                         |                         فنکشنز اور طریقہ کار                          | ایپلیکیشن کے لاجک فلو کو منظم کرنے کے لیے فنکشنز اور طریقہ کار کے بارے میں جانیں                                                             |                              [فنکشنز اور طریقہ کار](./2-js-basics/2-functions-methods/README.md)                               | Jasmine اور Christopher |
+| 06  |                        JS بنیادی باتیں                         |                        JS میں فیصلے کرنا                        | اپنے کوڈ میں فیصلے کرنے کے طریقے بنانا سیکھیں                                                           |                                 [فیصلے کرنا](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        JS بنیادی باتیں                         |                            Arrays اور Loops                            | جاوا اسکرپٹ میں ڈیٹا کو Arrays اور Loops کے ذریعے سنبھالنا                                                                                 |                                   [Arrays اور Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML کی مشق                            | آن لائن ٹیریریم بنانے کے لیے HTML بنائیں، خاص طور پر لے آؤٹ بنانے پر توجہ دیں                                                         |                                 [HTML کا تعارف](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS کی مشق                             | آن لائن ٹیریریم کو اسٹائل کرنے کے لیے CSS بنائیں، CSS کی بنیادی باتوں پر توجہ دیں بشمول صفحہ کو ذمہ دار بنانا                     |                                  [CSS کا تعارف](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript کلوزرز، DOM کی ترمیم                  | JavaScript بنائیں تاکہ ٹیریریم ڈریگ/ڈراپ انٹرفیس کے طور پر کام کرے، کلوزرز اور DOM ترمیم پر توجہ دیں             |                  [JavaScript کلوزرز، DOM کی ترمیم](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          ٹائپنگ گیم بنائیں                           | اپنے JavaScript ایپ کے لاجک کو چلانے کے لیے کی بورڈ ایونٹس کا استعمال سیکھیں                                                          |                                [ایونٹ ڈرائیون پروگرامنگ](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         براؤزرز کے ساتھ کام کرنا                          | براؤزرز کیسے کام کرتے ہیں، ان کی تاریخ، اور براؤزر ایکسٹینشن کے پہلے عناصر کو کیسے بنائیں                               |                               [براؤزرز کے بارے میں](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | فارم بنانا، API کال کرنا اور لوکل اسٹوریج میں متغیرات محفوظ کرنا | اپنی براؤزر ایکسٹینشن کے JavaScript عناصر بنائیں تاکہ API کال کریں اور لوکل اسٹوریج میں ذخیرہ کیے گئے متغیرات کا استعمال کریں                      |                [APIs، فارم اور لوکل اسٹوریج](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          براؤزر میں پس منظر کے عمل، ویب کی کارکردگی          | ایکسٹینشن کے آئیکن کو منظم کرنے کے لیے براؤزر کے پس منظر کے عمل استعمال کریں؛ ویب کی کارکردگی اور بہتر بنانے کے لیے کچھ اصلاحات سیکھیں   |             [پس منظر کے کام اور کارکردگی](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [Space Game](./6-space-game/solution/README.md)           |             JavaScript کے ساتھ مزید اعلیٰ سطحی گیم ڈویلپمنٹ             | وراثت کے بارے میں جانیں، کلاسز اور کمپوزیشن دونوں کے استعمال سے، اور Pub/Sub نمونہ، گیم بنانے کی تیاری کے لیے              |                      [اعلیٰ سطحی گیم ڈویلپمنٹ کا تعارف](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           کینوس پر ڈرائنگ                            | Canvas API کے بارے میں سیکھیں، جو اسکرین پر عناصر ڈرائنگ کے لیے استعمال ہوتی ہے                                                                       |                                [کینوس پر ڈرائنگ](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   اسکرین پر عناصر کو حرکت دینا                    | دریافت کریں کہ عناصر کو کس طرح Cartesian کوآرڈینیٹس اور Canvas API استعمال کرتے ہوئے حرکت دی جا سکتی ہے                                            |                           [عناصر کو حرکت دینا](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          ٹکراؤ کی شناخت                           | عناصر کو آپس میں ٹکرانے دیں اور Keypresses استعمال کرتے ہوئے رد عمل ظاہر کریں، اور گیم کی کارکردگی کو یقینی بنانے کے لیے ایک cooldown فنکشن فراہم کریں    |                              [ٹکراؤ کی شناخت](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             اسکور رکھنا                              | گیم کی حالت اور کارکردگی کی بنیاد پر ریاضیاتی حسابات انجام دیں                                                                |                                    [اسکور رکھنا](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     گیم ختم کرنا اور دوبارہ شروع کرنا                     | گیم کو ختم کرنے اور دوبارہ شروع کرنے کے بارے میں جانیں، بشمول اثاثوں کی صفائی اور ویریبل قدروں کو ری سیٹ کرنا                              |                                [اختتامی حالت](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 ویب ایپ میں HTML ٹیمپلیٹس اور راستے                 | ملٹی پیج ویب سائٹ کی ساخت بنانے کے لیے روٹنگ اور HTML ٹیمپلیٹس کا استعمال سیکھیں                             |                            [HTML ٹیمپلیٹس اور راستے](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  لاگ ان اور رجسٹریشن فارم بنائیں                   | فارم بنانے اور ویلیڈیشن کی ہینڈلنگ کے بارے میں جانیں                                                                          |                                           [فارم](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   ڈیٹا حاصل کرنے اور استعمال کرنے کے طریقے                   | آپ کی ایپ میں ڈیٹا کے بہاؤ، اسے حاصل کرنے، ذخیرہ کرنے، اور خارج کرنے کے طریقے                                                 |                                            [ڈیٹا](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      اسٹیٹ مینجمنٹ کے تصورات                      | اپنی ایپ میں اسٹیٹ کو برقرار رکھنے اور پروگرام کے ذریعے اسے سنبھالنے کے بارے میں سیکھیں                                                              |                                [اسٹیٹ مینجمنٹ](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [Browser/VScode Code](../../8-code-editor) | VScode کے ساتھ کام کرنا | کوڈ ایڈیٹر استعمال کرنا سیکھیں| [VScode کوڈ ایڈیٹر استعمال کریں](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI Assistants](./9-chat-project/README.md) | AI کے ساتھ کام کرنا | اپنا AI اسسٹنٹ بنانا سیکھیں | [AI اسسٹنٹ پروجیکٹ](./9-chat-project/README.md) | Chris |
 
-## 🏫 تعلیم
+## 🏫 تدریس کا طریقہ کار
 
-ہمارا نصاب دو اہم تعلیمی اصولوں کو مدنظر رکھتے ہوئے ڈیزائن کیا گیا ہے:
-* پروجیکٹ پر مبنی سیکھنا
-* کثرت سے کوئزز
+ہمارا نصاب دو اہم تدریسی اصولوں پر مبنی ہے:
+* پروجیکٹ کی بنیاد پر سیکھنا
+* بار بار ہونے والے کوئزز
 
-یہ پروگرام جاوا اسکرپٹ، HTML، اور CSS کی بنیادیں سکھاتا ہے، نیز آج کے ویب ڈویلپرز کی طرف سے استعمال ہونے والے جدید اوزار اور تکنیکس بھی۔ طلباء کو ٹائپنگ گیم، ورچوئل ٹیریریم، ماحولیاتی براؤزر ایکسٹینشن، اسپیس انویڈر طرز کا گیم، اور کاروباری بنکنگ ایپ بنانے کا عملی تجربہ حاصل کرنے کا موقع ملے گا۔ سیریز کے آخر تک، طلباء کو ویب ڈویلپمنٹ کی ایک مضبوط سمجھ حاصل ہو جائے گی۔
+یہ پروگرام جاوا اسکرپٹ، HTML، اور CSS کی بنیادی باتیں سکھاتا ہے، نیز موجودہ دور کے ویب ڈویلپرز کے ذریعہ استعمال ہونے والے جدید ٹولز اور تکنیکیں بھی۔ طلباء کو موقع ملے گا کہ وہ ٹائپنگ گیم، ورچول ٹیریریم، ماحولیاتی دوست براؤزر ایکسٹینشن، اسپیس ایونڈر انداز کا گیم، اور کاروباری بینکاری ایپ بنا کر عملی تجربہ حاصل کریں۔ سلسلے کے آخر تک، طلباء کو ویب ڈویلپمنٹ کی مضبوط سمجھ حاصل ہوگی۔
 
-> 🎓 آپ اس نصاب کے ابتدائی چند اسباق کو مائیکروسافٹ لرن پر [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) کے طور پر لے سکتے ہیں!
+> 🎓 آپ اس نصاب کے پہلے چند اسباق کو Microsoft Learn پر [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) کے طور پر لے سکتے ہیں!
 
-یہ یقینی بنا کر کہ مواد پروجیکٹس کے مطابق ہو، عمل طلباء کے لیے زیادہ دلچسپ بنایا جاتا ہے اور تصورات کی یادداشت میں بہتری آتی ہے۔ ہم نے جاوا اسکرپٹ کی بنیادوں میں کئی ابتدائی اسباق لکھے ہیں تاکہ تصورات متعارف کرائیں، جن کے ساتھ ویڈیو "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" کی ویڈیو ٹیوٹوریل سیریز کا استعمال کیا گیا ہے، جن کے کچھ مصنفین نے اس نصاب میں مدد کی ہے۔
+پروجیکٹس کے ساتھ مواد کے مطابقت کو یقینی بنا کر، طلباء کے لیے یہ عمل زیادہ دلچسپ بنایا گیا ہے اور تصورات کو یاد رکھنے میں مدد ملے گی۔ ہم نے جاوا اسکرپٹ کی بنیادیات کے کئی ابتدائی اسباق بھی لکھے ہیں تاکہ تصورات متعارف کروائے جا سکیں، اور انہیں "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" ویڈیو ٹیوٹوریلز کے مجموعہ کی ویڈیو کے ساتھ جوڑا گیا ہے، جن کے کچھ مصنفین نے اس نصاب میں تعاون بھی کیا ہے۔
 
-اس کے علاوہ، کلاس سے پہلے ایک کم دباؤ والا کوئز طالب علم کے لیے یک موضوع سیکھنے کے ارادے کو متعین کرتا ہے، جبکہ کلاس کے بعد دوسرا کوئز بہتر یادداشت کو یقینی بناتا ہے۔ یہ نصاب لچکدار اور خوشگوار بنانے کے لیے ڈیزائن کیا گیا ہے اور مکمل یا جزوی طور پر لیا جا سکتا ہے۔ پروجیکٹس چھوٹے سے شروع ہو کر 12 ہفتوں کے سائیکل کے آخر میں زیادہ پیچیدہ ہو جاتے ہیں۔
+اس کے علاوہ، کلاس کے شروع میں ایک کم دباؤ والا کوئز طالب علم کے لیے ایک موضوع سیکھنے کی نیت قائم کرتا ہے، جبکہ کلاس کے بعد دوسرا کوئز مزید یادداشت کو یقینی بناتا ہے۔ یہ نصاب لچکدار اور تفریحی ہے اور اسے مکمل یا جزوی طور پر لیا جا سکتا ہے۔ پروجیکٹس چھوٹے سے شروع ہوتے ہیں اور 12 ہفتوں کے آخر تک بتدریج پیچیدہ ہوتے جاتے ہیں۔
 
-اگرچہ ہم نے جاوااسکرپٹ فریم ورکس کو جان بوجھ کر شامل نہیں کیا تاکہ بنیادی مہارتوں پر توجہ دی جا سکے جو ویب ڈویلپر کے لیے ضروری ہیں، اگلا اچھا قدم اس نصاب کو مکمل کرنے کے بعد Node.js کے بارے میں سیکھنا ہو گا، جس کے لیے ویڈیوز کی ایک اور سیریز موجود ہے: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)"۔
+اگرچہ ہم نے جان بوجھ کر جاوا اسکرپٹ فریم ورکس متعارف نہیں کروائے تاکہ ایک ویب ڈویلپر کے لیے بنیادی مہارتوں پر توجہ دی جا سکے اس سے پہلے کہ کوئی فریم ورک اپنایا جائے، اس نصاب کو مکمل کرنے کا ایک اچھا اگلا قدم Node.js کے بارے میں سیکھنا ہوگا، جو ایک اور ویڈیو مجموعہ "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)" کے ذریعے ممکن ہے۔
 
-> ہمارا [Code of Conduct](CODE_OF_CONDUCT.md) اور [Contributing](CONTRIBUTING.md) رہنما خطوط ملاحظہ کریں۔ ہم آپ کی تعمیری آراء کے خیرمقدم کے منتظر ہیں!
+> ہمارے [Code of Conduct](CODE_OF_CONDUCT.md) اور [Contributing](CONTRIBUTING.md) ہدایات ملاحظہ کریں۔ ہم آپ کی تعمیری آراء کا خیرمقدم کرتے ہیں!
 
 ## 🧭 آف لائن رسائی
 
-آپ اس دستاویز کو آف لائن [Docsify](https://docsify.js.org/#/) کے ذریعہ چلا سکتے ہیں۔ اس ریپو کو فورک کریں، اپنی مقامی مشین پر [Docsify انسٹال کریں](https://docsify.js.org/#/quickstart)، پھر اس ریپو کے روٹ فولڈر میں `docsify serve` ٹائپ کریں۔ ویب سائٹ آپ کے لوکل ہوسٹ پر پورٹ 3000 پر چلے گی: `localhost:3000`۔
+آپ اس دستاویز کو آف لائن [Docsify](https://docsify.js.org/#/) کے ذریعے چلا سکتے ہیں۔ اس ریپو کو فورک کریں، اپنے مقامی مشین پر [Docsify انسٹال کریں](https://docsify.js.org/#/quickstart)، اور پھر اس ریپو کے روٹ فولڈر میں کمانڈ `docsify serve` چلائیں۔ ویب سائٹ آپ کے لوکل ہوسٹ پر پورٹ 3000 پر دستیاب ہوگی: `localhost:3000`۔
 
 ## 📘 PDF
-تمام اسباق کا ایک پی ڈی ایف [یہاں](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf) دستیاب ہے۔
+تمام اسباق کا پی ڈی ایف یہاں مل سکتا ہے [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)۔
 
 ## 🎒 دیگر کورسز
 
-ہماری ٹیم دیگر کورسز بھی تیار کرتی ہے! دیکھیں:
+ہماری ٹیم دوسرے کورسز بھی فراہم کرتی ہے! چیک کریں:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -227,7 +228,7 @@ Azure AI Foundry Discord کمیونٹی میں شامل ہوں
 [![AI Agents for Beginners](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
+ 
 ### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
@@ -235,8 +236,8 @@ Azure AI Foundry Discord کمیونٹی میں شامل ہوں
 [![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
-
-### Core Learning
+ 
+### بنیادی تعلیم
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -246,8 +247,8 @@ Azure AI Foundry Discord کمیونٹی میں شامل ہوں
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
-### Copilot Series
+ 
+### کوپائلٹ سیریز
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
@@ -255,21 +256,21 @@ Azure AI Foundry Discord کمیونٹی میں شامل ہوں
 
 ## مدد حاصل کریں
 
-اگر آپ پھنس جائیں یا AI ایپس بنانے کے بارے میں کوئی سوال ہو تو۔ MCP کے بارے میں بحث میں دیگر سیکھنے والوں اور تجربہ کار ڈویلپرز سے شامل ہوں۔ یہ ایک معاون کمیونٹی ہے جہاں سوالات خوش آمدید ہیں اور علم آزادانہ طور پر شیئر کیا جاتا ہے۔
+اگر آپ رکاوٹ کا سامنا کرتے ہیں یا AI ایپس بنانے کے حوالے سے کوئی سوال ہے تو MCP کے بارے میں بحث میں شامل ہوں۔ یہ ایک معاون کمیونٹی ہے جہاں سوالات خوش آمدید ہیں اور علم آزادانہ طور پر شیئر کیا جاتا ہے۔
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-اگر آپ کو کسی پروڈکٹ کا فیڈبیک ہو یا تعمیر کے دوران کوئی خرابی ہو تو ملاحظہ کریں:
+اگر آپ کے پاس کوئی پروڈکٹ فیڈ بیک ہے یا آپ کو کام بناتے وقت کوئی غلطی پیش آتی ہے تو یہاں جائیں:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## لائسنس
 
-یہ ریپوزٹری MIT لائسنس کے تحت ہے۔ مزید معلومات کے لیے [LICENSE](../../LICENSE) فائل دیکھیں۔
+یہ ذخیرہ MIT لائسنس کے تحت لائسنس یافتہ ہے۔ مزید معلومات کے لیے [LICENSE](../../LICENSE) فائل دیکھیں۔
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**دستیابی کی اطلاع**:  
-یہ دستاویز AI ترجمہ خدمت [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کی کوشش کرتے ہیں، براہ کرم آگاہ رہیں کہ خودکار ترجموں میں غلطیاں یا کمیاں ہو سکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں مستند ماخذ سمجھی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ورانہ انسانی ترجمہ کی سفارش کی جاتی ہے۔ اس ترجمہ کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا تشریح کی ذمہ داری ہم پر نہیں ہوگی۔
+**ڈس کلیمر**:
+اس دستاویز کا ترجمہ AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے کیا گیا ہے۔ اگرچہ ہم درستگی کے لیے کوشاں ہیں، براہ کرم یہ بات ذہن میں رکھیں کہ خودکار تراجم میں غلطیاں یا کمی بیشی ہو سکتی ہے۔ اصل دستاویز اپنی مادری زبان میں ہی مستند ماخذ شمار کی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ کو ترجیح دی جانی چاہیے۔ ہم اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تعبیر کے لیے ذمہ دار نہیں ہیں۔
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
