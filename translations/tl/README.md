@@ -10,29 +10,29 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# Pagsisimula sa Web Development - Isang Kurikulum
+# Web Development para sa mga Nagsisimula - Isang Kurikulum
 
-Matutunan ang mga pundasyon ng web development sa aming 12-linggong komprehensibong kurso mula sa Microsoft Cloud Advocates. Bawat isa sa 24 na aralin ay sumisid sa JavaScript, CSS, at HTML sa pamamagitan ng mga hands-on na proyekto tulad ng terrariums, browser extensions, at space games. Makilahok sa mga pagsusulit, talakayan, at praktikal na gawain. Pahusayin ang iyong mga kakayahan at i-optimize ang pag-alala ng kaalaman gamit ang aming epektibong project-based pedagogy. Simulan ang iyong paglalakbay sa pag-coding ngayon!
+Matutunan ang mga pundasyon ng web development sa aming 12-linggong masusing kurso mula sa Microsoft Cloud Advocates. Bawat isa sa 24 na aralin ay sumisid sa JavaScript, CSS, at HTML sa pamamagitan ng mga praktikal na proyekto tulad ng terrariums, browser extensions, at mga space games. Makilahok sa mga pagsusulit, diskusyon, at praktikal na mga takdang-aralin. Paunlarin ang iyong kakayahan at pagbutihin ang iyong pagkatuto gamit ang aming epektibong metodolohiyang nakabase sa proyekto. Simulan ang iyong paglalakbay sa coding ngayon!
 
 Sumali sa Azure AI Foundry Discord Community
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Sundin ang mga hakbang na ito para makapagsimula gamit ang mga resources na ito:
-1. **I-Fork ang Repository**: I-click ang [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **I-Clone ang Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Sumali sa Azure AI Foundry Discord at makilala ang mga eksperto at kapwa mga developer**](https://discord.com/invite/ByRwuEEgH4)
+Sundan ang mga hakbang na ito upang makapagsimula gamit ang mga resource na ito:
+1. **I-fork ang Repository**: I-click ang [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **I-clone ang Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Sumali sa Azure AI Foundry Discord at makipagkilala sa mga eksperto at kapwa developer**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 Suporta para sa Maramihang Wika
+### 🌐 Suportang Maraming Wika
 
-#### Sinusuportahan sa pamamagitan ng GitHub Action (Automated at Palaging Napapanahon)
+#### Sinusuportahan sa pamamagitan ng GitHub Action (Automatiko at Palaging Napapanahon)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](./README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](./README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **Mas gusto mo bang Mag-Clone Locally?**
+> **Mas gusto mo bang i-clone nang lokal?**
 >
-> Ang repository na ito ay naglalaman ng 50+ na pagsasalin sa wika na nagpapalaki ng laki ng pag-download. Para mag-clone nang walang mga pagsasalin, gamitin ang sparse checkout:
+> Kasama sa repository na ito ang 50+ na salin ng mga wika na lubhang nagpapalaki ng laki ng pag-download. Upang mag-clone nang walang mga salin, gamitin ang sparse checkout:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -48,172 +48,173 @@ Sundin ang mga hakbang na ito para makapagsimula gamit ang mga resources na ito:
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> Binibigyan ka nito ng lahat ng kailangan mo para matapos ang kurso nang mas mabilis ang pag-download.
+> Makukuha mo lahat ng kailangan mo upang tapusin ang kurso nang mas mabilis ang pag-download.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**Kung nais mo ng karagdagang mga suportadong wika ng pagsasalin ay naka-lista [dito](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**Kung nais mong magkaroon ng suportang karagdagang mga wika ng pagsasalin, nakalista ito [dito](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _Estudyante ka ba?_
 
-Bisitahin ang [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) kung saan makikita mo ang mga panimulang resources, Student packs at pati na rin ang mga paraan para makakuha ng libreng certificate voucher. Ito ang pahina na dapat mong i-bookmark at balikan paminsan-minsan dahil buwan-buwan naming pinapalitan ang mga nilalaman.
+Bisitahin ang [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) kung saan makakakita ka ng mga materyales para sa mga nagsisimula, mga Student packs at mga paraan para makakuha ng libreng sertipiko voucher. Ito ang pahinang dapat mong i-bookmark at tingnan paminsan-minsan dahil ang nilalaman ay ini-update buwan-buwan.
 
-### 📣 Anunsyo - Bagong GitHub Copilot Agent mode challenges na dapat tapusin!
+### 📣 Anunsyo - Mga bagong hamon sa GitHub Copilot Agent mode na dapat tapusin!
 
-May bagong Challenge na idinagdag, hanapin ang "GitHub Copilot Agent Challenge 🚀" sa karamihan ng mga kabanata. Ito ay isang bagong hamon para sa iyo na tapusin gamit ang GitHub Copilot at Agent mode. Kung hindi mo pa nagamit ang Agent mode dati, kaya nitong hindi lang bumuo ng teksto kundi lumikha at mag-edit ng mga file, magpatakbo ng mga command at marami pang iba.
+May bagong hamon, hanapin ang "GitHub Copilot Agent Challenge 🚀" sa karamihan ng mga kabanata. Ito ay isang bagong hamon na maaari mong tapusin gamit ang GitHub Copilot at Agent mode. Kung hindi mo pa nagagamit ang Agent mode, kaya nitong hindi lamang gumawa ng teksto kundi lumikha at mag-edit ng mga file, magpatakbo ng mga utos, at marami pa.
 
-### 📣 Anunsyo - _Bagong Proyekto na gagawin gamit ang Generative AI_ 
+### 📣 Anunsyo - _Bagong Proyekto na bubuuin gamit ang Generative AI_ 
 
-Kamakailan ay nadagdag ang bagong AI Assistant project, tingnan ito sa [proyekto](./9-chat-project/README.md)
+Bagong AI Assistant project ang idinagdag, silipin ito [proyekto](./9-chat-project/README.md)
 
-### 📣 Anunsyo - _Bagong Kurikulum_ sa Generative AI para sa JavaScript ay bagong inilabas na
+### 📣 Anunsyo - _Bagong Kurikulum_ sa Generative AI para sa JavaScript ay inilabas na
 
-Huwag palampasin ang aming bagong Generative AI curriculum!
+Huwag palampasin ang aming bagong kurikulum sa Generative AI!
 
-Bisitahin ang [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para makapagsimula!
+Bisitahin ang [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) upang makapagsimula!
 
 ![Background](../../translated_images/tl/background.148a8d43afde5730.webp)
 
-- Mga aralin na sumasaklaw mula sa mga batayan hanggang sa RAG.
-- Makipag-ugnayan sa mga makasaysayang tauhan gamit ang GenAI at ang kasama naming app.
-- Masaya at nakakaaliw na kwento, maglalakbay ka sa panahon!
+- Mga aralin mula sa mga batayan hanggang sa RAG.
+- Makipag-ugnayan sa mga makasaysayang karakter gamit ang GenAI at ang aming companion app.
+- Masaya at kapana-panabik na salaysay, parang naglalakbay ka sa oras!
 
 ![character](../../translated_images/tl/character.5c0dd8e067ffd693.webp)
 
 
-Bawat aralin ay may kasamang gawain na dapat tapusin, pagsusulit sa kaalaman at hamon upang gabayan ka sa pag-aaral ng mga paksang tulad ng:
-- Pagbuo ng prompt at prompt engineering
-- Pagbuo ng apps para sa teksto at larawan
-- Search apps
+Bawat aralin ay may kasamang takdang-aralin, pagsusuri ng kaalaman, at hamon upang gabayan ka sa pag-aaral ng mga paksa tulad ng:
+- Prompting at prompt engineering
+- Pagbuo ng mga app para sa teksto at imahe
+- Mga search apps
 
-Bisitahin ang [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) para makapagsimula!
+Bisitahin ang [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) upang makapagsimula!
 
 
 
-## 🌱 Paano Magsimula
+## 🌱 Pagsisimula
 
-> **Guro**, mayroong kaming [ilang mga mungkahi](for-teachers.md) kung paano gamitin ang kurikulum na ito. Masaya kaming marinig ang iyong puna [sa aming discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Mga Guro**, may [ilang suhestiyon kami](for-teachers.md) kung paano gamitin ang kurikulum na ito. Nais naming marinig ang inyong feedback [sa aming discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Mga Mag-aaral](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, sa bawat aralin, simulan sa isang pre-lecture quiz at sundan ito sa pagbasa ng lecture material, pagtapos ng iba't ibang mga aktibidad at pagtsek ng iyong pag-unawa gamit ang post-lecture quiz.
+**[Mga Mag-aaral](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, sa bawat aralin, simulan sa isang pre-lecture quiz at sundan ito sa pagbabasa ng mga materyales ng lektura, pagtapos ng iba't ibang aktibidad, at suriin ang inyong pag-unawa gamit ang post-lecture quiz.
 
-Para mapahusay ang iyong karanasan sa pag-aaral, makipag-ugnayan sa iyong mga kapwa mag-aaral upang magtrabaho sa mga proyekto nang magkakasama! Ang mga diskusyon ay hinihikayat sa aming [discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) kung saan ang aming mga moderator ay nasa handang sumagot sa iyong mga tanong.
+Para mapabuti ang iyong karanasan sa pag-aaral, makipag-ugnayan sa iyong mga kaklase upang magtrabaho sa mga proyekto nang magkakasama! Hinihikayat ang mga diskusyon sa aming [discussion forum](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) kung saan naroroon ang aming mga moderator upang sagutin ang iyong mga katanungan.
 
-Para lalong mapalawak ang iyong edukasyon, lubos naming inirerekomenda ang pag-explore sa [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) para sa karagdagang mga materyales sa pag-aaral.
+Para sa mas malalim na pag-aaral, mariin naming inirerekomenda ang [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) para sa karagdagang mga materyales pang-aral.
 
-### 📋 Pagsasaayos ng iyong kapaligiran
+### 📋 Pagse-setup ng iyong kapaligiran
 
-Ang kurikulum na ito ay may nakahandang development environment! Sa pag-simula, maaari kang pumili na patakbuhin ang kurikulum sa isang [Codespace](https://github.com/features/codespaces/) (_isang browser-based, hindi na kailangan ng install na environment_), o lokal sa iyong computer gamit ang text editor tulad ng [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+May nakahandang development environment ang kurikulum na ito! Habang nagsisimula, maaari kang pumili na patakbuhin ang kurikulum sa isang [Codespace](https://github.com/features/codespaces/) (_browser-based na kapaligiran na hindi kailangan ng install_), o lokal sa iyong computer gamit ang isang text editor tulad ng [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-#### Gumawa ng iyong repositoryo
-Para madali mong masave ang iyong trabaho, inirerekomenda na gumawa ka ng sarili mong kopya ng repositoryo na ito. Maaari mong gawin ito sa pamamagitan ng pag-click sa button na **Use this template** sa itaas ng pahina. Lilikha ito ng bagong repositoryo sa iyong GitHub account na may kopya ng kurikulum.
+#### Gumawa ng iyong repository
+Para madali mong masave ang iyong trabaho, inirerekomenda na gumawa ka ng sarili mong kopya ng repository na ito. Maaari mo itong gawin sa pamamagitan ng pag-click sa **Use this template** button sa itaas ng pahina. Lilikha ito ng bagong repository sa iyong GitHub account na may kopya ng kurikulum.
 
-Sundin ang mga hakbang na ito:
-1. **I-Fork ang Repository**: I-click ang "Fork" na button sa itaas-kanang bahagi ng pahinang ito.
-2. **I-Clone ang Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+Sundan ang mga hakbang na ito:
+1. **I-fork ang Repository**: I-click ang "Fork" na button sa kanang itaas na bahagi ng pahinang ito.
+2. **I-clone ang Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Pagpapatakbo ng kurikulum sa isang Codespace
+#### Patakbuhin ang kurikulum sa Codespace
 
-Sa kopya mo ng repositoryo na ginawa mo, i-click ang button na **Code** at piliin ang **Open with Codespaces**. Lilikha ito ng bagong Codespace para sa iyong trabaho.
+Sa kopya ng repository na iyong ginawa, i-click ang **Code** button at piliin ang **Open with Codespaces**. Lilikha ito ng bagong Codespace para sa iyo upang magtrabaho.
 
 ![Codespace](../../translated_images/tl/createcodespace.0238bbf4d7a8d955.webp)
 
-#### Pagpapatakbo ng kurikulum lokal sa iyong computer
+#### Patakbuhin ang kurikulum lokal sa iyong computer
 
-Para mapatakbo ang kurikulum na ito lokal sa iyong computer, kakailanganin mo ng isang text editor, isang browser at isang command line tool. Ang unang aralin namin, [Introduction to Programming Languages and Tools of the Trade](../../1-getting-started-lessons/1-intro-to-programming-languages), ay gagabay sa iyo sa iba't ibang mga opsyon para sa bawat isa sa mga ito upang mapili mo kung ano ang pinakamahusay para sa iyo.
+Para patakbuhin ang kurikulum na ito lokal sa iyong computer, kakailanganin mo ang isang text editor, isang browser at isang command line tool. Ang aming unang aralin, [Introduction to Programming Languages and Tools of the Trade](../../1-getting-started-lessons/1-intro-to-programming-languages), ay gagabay sa iyo sa iba't ibang opsyon para sa bawat isa sa mga tool na ito upang piliin mo kung ano ang pinakamabisa para sa iyo.
 
 Ang aming rekomendasyon ay gamitin ang [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) bilang editor mo, na may kasamang built-in na [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Maaari mong i-download ang Visual Studio Code [dito](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-1. I-clone ang iyong repositoryo sa iyong computer. Magagawa mo ito sa pamamagitan ng pag-click sa **Code** na button at pagkopya ng URL:
+1. I-clone ang iyong repository sa iyong computer. Magagawa mo ito sa pamamagitan ng pag-click sa **Code** button at pagkopya ng URL:
 
     [CodeSpace](./images/createcodespace.png)
 
-    Pagkatapos, buksan ang [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) sa loob ng [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) at patakbuhin ang sumusunod na utos, palitan ang `<your-repository-url>` ng URL na iyong kinopya:
+    Pagkatapos, buksan ang [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) sa loob ng [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) at patakbuhin ang sumusunod na command, palitan ang `<your-repository-url>` ng URL na iyong kinopya:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Buksan ang folder sa Visual Studio Code. Magagawa mo ito sa pamamagitan ng pag-click sa **File** > **Open Folder** at pagpili ng folder na kaklone mo lang.
+2. Buksan ang folder sa Visual Studio Code. Magagawa mo ito sa pamamagitan ng pag-click sa **File** > **Open Folder** at piliin ang folder na kaklone mo lang.
 
 
->  Inirerekomendang mga extension sa Visual Studio Code:
+>  Inirerekomendang mga extension ng Visual Studio Code:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - para i-preview ang mga HTML na pahina sa loob ng Visual Studio Code
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - para tulungan kang magsulat ng code nang mas mabilis
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - para ma-preview ang mga pahinang HTML sa loob ng Visual Studio Code
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - para matulungan kang magsulat ng code nang mas mabilis
 
-## 📂 Kasama sa bawat aralin:
+## 📂 Ang bawat aralin ay nagsasama ng:
 
 - opsyonal na sketchnote
-- opsyonal na dagdag na video
-- pre-lesson warmup na pagsusulit
+- opsyonal na karagdagang video
+- pre-lesson warmup quiz
 - nakasulat na aralin
-- para sa mga araling nakabatay sa proyekto, mga hakbang-hakbang na gabay kung paano gawin ang proyekto
-- pagsusuri ng kaalaman
+- para sa mga project-based na aralin, mga step-by-step na gabay sa paggawa ng proyekto
+- mga pagsusuri ng kaalaman
 - isang hamon
-- dagdag na babasahin
+- karagdagang babasahin
 - takdang-aralin
 - [post-lesson quiz](https://ff-quizzes.netlify.app/web/)
 
-> **Tungkol sa mga pagsusulit**: Lahat ng mga pagsusulit ay nasa Quiz-app na folder, may kabuuang 48 pagsusulit na tig-tatlong tanong bawat isa. Makikita ang mga ito [dito](https://ff-quizzes.netlify.app/web/); ang quiz app ay maaaring patakbuhin nang lokal o ideploy sa Azure; sundin ang mga tagubilin sa `quiz-app` na folder.
+> **Isang paalala tungkol sa mga pagsusulit**: Lahat ng pagsusulit ay nasa Quiz-app na folder, may 48 kabuuang pagsusulit na tig-3 tanong bawat isa. Available ang mga ito [dito](https://ff-quizzes.netlify.app/web/) at ang quiz app ay maaaring patakbuhin nang lokal o ideploy sa Azure; sundin ang mga tagubilin sa `quiz-app` folder.
 
 ## 🗃️ Mga Aralin
 
-|     |                       Pangalan ng Proyekto                       |                            Mga Konsepto na Itinuturo                             | Mga Layunin sa Pagkatuto                                                                                                                 |                                                         Nauugnay na Aralin                                                          |         May Awtor          |
-| :-: | :---------------------------------------------------------------: | :------------------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :------------------------: |
-| 01  |                     Pagsisimula                      |           Panimula sa Programming at Mga Kagamitan sa Trabaho           | Matutunan ang mga pangunahing pundasyon sa likod ng karamihan ng mga programming language at tungkol sa software na tumutulong sa mga propesyonal na developer sa kanilang trabaho | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     Pagsisimula                      |             Mga Batayan ng GitHub, kasama ang pakikipagtulungan sa grupo             | Paano gamitin ang GitHub sa iyong proyekto, paano makipagtulungan sa iba sa isang code base                                                    |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     Pagsisimula                      |                             Accessibility                              | Matutunan ang mga batayan ng web accessibility                                                                                               |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        Mga Batayan ng JS                         |                         Mga Uri ng Datos sa JavaScript                          | Mga batayan ng mga uri ng datos sa JavaScript                                                                                                 |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        Mga Batayan ng JS                         |                         Mga Function at Método                          | Matuto tungkol sa mga function at método upang pamahalaan ang daloy ng lohika ng aplikasyon                                                             |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine at Christopher |
-| 06  |                        Mga Batayan ng JS                         |                        Paggawa ng mga Desisyon gamit ang JS                        | Matutunan kung paano gumawa ng mga kundisyon sa iyong code gamit ang mga pamamaraan sa paggawa ng desisyon                                                           |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        Mga Batayan ng JS                         |                            Mga Arrays at Loops                            | Gumamit ng datos gamit ang mga array at loops sa JavaScript                                                                                 |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            Praktis sa HTML                            | Buuhin ang HTML para gumawa ng online terrarium, na nakatuon sa paggawa ng layout                                                         |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            Praktis sa CSS                             | Buuhin ang CSS para istayl ang online terrarium, na nakatuon sa mga batayan ng CSS kabilang ang paggawa ng responsive na pahina                     |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript Closures, DOM manipulation                  | Buuhin ang JavaScript para gawing gumana ang terrarium bilang drag/drop interface, na nakatuon sa closures at DOM manipulation             |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Gumawa ng Typing Game                           | Matutunan kung paano gamitin ang mga keyboard events upang patakbuhin ang lohika ng iyong JavaScript app                                                          |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Paggamit ng mga Browser                          | Matutunan kung paano gumagana ang mga browser, ang kasaysayan nito, at paano mag-scaffold ng mga unang elemento ng isang browser extension                               |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Paggawa ng form, pagtawag ng API at pag-iimbak ng mga variable sa local storage | Buuhin ang mga elemento ng JavaScript ng iyong browser extension upang tumawag ng API gamit ang mga variable na nakaimbak sa local storage                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Mga background process sa browser, performance ng web          | Gamitin ang mga background process ng browser para pamahalaan ang icon ng extension; matuto tungkol sa performance ng web at ilang optimizations para mapabuti   |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [Space Game](./6-space-game/solution/README.md)           |             Mas advanced na pag-develop ng laro gamit ang JavaScript             | Matuto tungkol sa Inheritance gamit parehong Classes at Composition at ang Pub/Sub pattern, bilang paghahanda sa paggawa ng laro              |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Pagdibuho sa canvas                            | Matutunan ang Canvas API, na ginagamit sa pagguhit ng mga elemento sa screen                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Paggalaw ng mga elemento sa screen                    | Tuklasin kung paano nagkakaroon ng galaw ang mga elemento gamit ang cartesian coordinates at ang Canvas API                                            |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Collision detection                           | Gawing magbanggaan at mag-react ang mga elemento sa isa't isa gamit ang keypresses at magbigay ng cooldown function para mapanatili ang performance ng laro    |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Pagbantay ng score                              | Gawin ang mga kalkulasyon batay sa status at performance ng laro                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Pagtatapos at muling pagsisimula ng laro                     | Matutunan ang pagtatapos at muling pagsisimula ng laro, kabilang ang paglilinis ng mga asset at pag-reset ng mga halaga ng variable                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
-| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 Mga HTML Template at Ruta sa isang Web App                 | Matutunan kung paano gumawa ng scaffold ng arkitektura ng isang multipage website gamit ang routing at mga HTML template                             |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Gumawa ng Login at Registration Form                   | Matutunan ang paggawa ng mga form at paghawak ng mga validation routines                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Mga Pamamaraan ng Pagkuha at Paggamit ng Datos                   | Paano dumadaloy ang mga datos papasok at palabas ng iyong app, paano ito kunin, imbakin, at itapon                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Mga Konsepto ng Pamamahala ng Estado                      | Matutunan kung paano pinapanatili ng iyong app ang estado at paano ito pamahalaan sa programmatic na paraan                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [Browser/VScode Code](../../8-code-editor) | Paggamit ng VScode | Matutunan kung paano Gamitin ang isang code editor| [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+|     |                       Pangalan ng Proyekto                       |                            Mga Konseptong Itinuturo                             | Mga Layunin sa Pagkatuto                                                                                                                 |                                                         Nakalink na Aralin                                                          |         May-akda          |
+| :-: | :--------------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     Getting Started                              |           Panimula sa Programming at Mga Kasangkapan           | Matutunan ang mga pangunahing pundasyon ng karamihan sa mga programming language at tungkol sa software na tumutulong sa mga propesyonal na developer sa kanilang trabaho | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     Getting Started                              |             Mga Pangunahing Kaalaman sa GitHub, kasama ang pagtatrabaho sa isang koponan             | Kung paano gamitin ang GitHub sa iyong proyekto, paano makipagtulungan sa iba sa isang code base                                                    |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     Getting Started                              |                             Accessibility                              | Matutunan ang mga pangunahing konsepto ng web accessibility                                                                                               |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        JS Basics                                 |                         Mga Uri ng Data sa JavaScript                          | Mga pangunahing kaalaman tungkol sa mga uri ng data sa JavaScript                                                                                                 |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        JS Basics                                 |                         Mga Function at Mga Metodo                          | Matutunan ang tungkol sa mga function at mga method para pamahalaan ang daloy ng lohika ng isang aplikasyon                                                             |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine at Christopher |
+| 06  |                        JS Basics                                 |                        Paggawa ng mga Desisyon gamit ang JS                        | Matutunan kung paano gumawa ng mga kondisyon sa iyong code gamit ang mga pamamaraang pampagpapasya                                                           |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        JS Basics                                 |                            Mga Array at Loop                            | Magtrabaho gamit ang data gamit ang mga array at loop sa JavaScript                                                                                 |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)             |                            Praktis sa HTML                            | Gumawa ng HTML para lumikha ng online terrarium, nakatuon sa paggawa ng layout                                                         |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)             |                            Praktis sa CSS                             | Gumawa ng CSS para i-style ang online terrarium, nakatuon sa mga batayan ng CSS kabilang ang paggawa ng pahina na responsive                     |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)        |                 JavaScript Closures, DOM manipulation                  | Gumawa ng JavaScript para paganahin ang terrarium bilang isang drag/drop interface, nakatuon sa closures at DOM manipulation             |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)       |                          Gumawa ng Isang Typing Game                           | Matutunan kung paano gamitin ang mga keyboard events upang paandarin ang lohika ng iyong JavaScript app                                                          |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Paggawa sa mga Browser                          | Matutunan kung paano gumagana ang mga browser, ang kanilang kasaysayan, at paano gumawa ng mga unang elemento ng isang browser extension                               |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Gumawa ng form, tumawag ng API at mag-imbak ng mga variable sa local storage | Gumawa ng mga elemento ng JavaScript ng iyong browser extension para tumawag ng API gamit ang mga variable na naka-imbak sa lokal na imbakan                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Mga background process sa browser, pagganap ng web          | Gamitin ang background processes ng browser para pamahalaan ang icon ng extension; matutunan ang tungkol sa web performance at ilang mga optimizations para mapabuti   |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [Space Game](./6-space-game/solution/README.md)        |             Mas Advanced na Pag-develop ng Laro gamit ang JavaScript             | Matutunan ang tungkol sa Inheritance gamit ang parehong Classes at Composition at ang Pub/Sub pattern, bilang paghahanda sa paggawa ng laro              |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [Space Game](./6-space-game/solution/README.md)        |                           Pagdodrawing sa canvas                            | Matutunan ang tungkol sa Canvas API, na ginagamit para mag-drawing ng mga elemento sa screen                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)        |                   Paggalaw ng mga elemento sa paligid ng screen                    | Tuklasin kung paano magkakaroon ng galaw ang mga elemento gamit ang mga cartesian coordinates at ang Canvas API                                            |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Space Game](./6-space-game/solution/README.md)        |                          Pagtuklas ng banggaan                           | Pahintulutan ang mga elemento na magbanggaan at tumugon sa isa't isa gamit ang mga keypress at magbigay ng cooldown function para matiyak ang performance ng laro    |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Space Game](./6-space-game/solution/README.md)        |                             Pagpapanatili ng iskor                              | Gumawa ng mga kalkulasyon sa matematika batay sa status at performance ng laro                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [Space Game](./6-space-game/solution/README.md)        |                     Pagtatapos at pag-restart ng laro                     | Matutunan ang tungkol sa pagtatapos at pag-restart ng laro, kabilang ang paglilinis ng mga assets at pag-reset ng mga halaga ng variable                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [Banking App](./7-bank-project/solution/README.md)       |                 HTML Templates at Routes sa isang Web App                 | Matutunan kung paano gumawa ng balangkas ng multipage website na arkitektura gamit ang routing at HTML templates                             |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [Banking App](./7-bank-project/solution/README.md)       |                  Gumawa ng Login at Registration Form                   | Matutunan ang tungkol sa paggawa ng mga form at pamamahala ng mga validation routine                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [Banking App](./7-bank-project/solution/README.md)       |                   Mga Metodo ng Pagkuha at Paggamit ng Data                   | Paano dumadaloy ang data papasok at palabas ng iyong app, paano ito kunin, iimbak, at alisin                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 24  |         [Banking App](./7-bank-project/solution/README.md)       |                      Mga Konsepto ng Pamamahala ng Estado                      | Matutunan kung paano pinananatili ng iyong app ang estado at paano ito pamahalaan programmatically                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [Browser/VScode Code](../../8-code-editor) | Paggamit ng VScode | Matutunan kung paano gumamit ng isang code editor| [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
 | 26 | [AI Assistants](./9-chat-project/README.md) | Paggamit ng AI | Matutunan kung paano gumawa ng sarili mong AI assistant | [AI Assistant project](./9-chat-project/README.md) | Chris |
 
 ## 🏫 Pedagohiya
 
-Ang aming kurikulum ay dinisenyo na may dalawang pangunahing prinsipyo sa pagtuturo:
-* pagkatuto batay sa proyekto
+Ang aming kurikulum ay dinisenyo gamit ang dalawang pangunahing prinsipyo sa pagtuturo:
+* pagkatuto na nakabatay sa proyekto
 * madalas na pagsusulit
 
-Itinuturo ng programa ang mga pundasyon ng JavaScript, HTML, at CSS, pati na rin ang mga pinakabagong kagamitan at teknik na ginagamit ng mga web developer sa kasalukuyan. Magkakaroon ang mga estudyante ng pagkakataon na magkaroon ng praktikal na karanasan sa pamamagitan ng paggawa ng isang typing game, virtual terrarium, eco-friendly browser extension, space-invader-style na laro, at isang banking app para sa mga negosyo. Sa pagtatapos ng serye, magkakaroon ang mga estudyante ng matibay na pag-unawa sa web development.
+Itinuturo ng programa ang mga pundamental ng JavaScript, HTML, at CSS, pati na rin ang pinakabagong mga kasangkapan at teknik na ginagamit ng mga web developer ngayon. Magkakaroon ng pagkakataon ang mga estudyante na magkaroon ng praktikal na karanasan sa pamamagitan ng paggawa ng isang typing game, virtual terrarium, eco-friendly browser extension, space-invader-style na laro, at isang banking app para sa mga negosyo. Sa pagtatapos ng serye, magkakaroon ang mga estudyante ng matibay na pag-unawa sa web development.
 
-> 🎓 Maari mong kunin ang mga unang ilang aralin sa kurikulum na ito bilang isang [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) sa Microsoft Learn!
+> 🎓 Maaari mong kunin ang unang ilang mga aralin sa kurikulum na ito bilang isang [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) sa Microsoft Learn!
 
-Sa pamamagitan ng pagtiyak na ang nilalaman ay naaayon sa mga proyekto, ginagawang mas nakaka-engganyo ang proseso para sa mga estudyante at mapapalakas ang pag-alala sa mga konsepto. Nagsulat din kami ng ilang mga panimulang aralin sa mga batayan ng JavaScript upang ipakilala ang mga konsepto, na sinamahan ng video mula sa koleksyon ng video tutorial na "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", na ilan sa mga may-akda nito ay nag-ambag sa kurikulum na ito.
+Sa pagtitiyak na ang nilalaman ay naka-align sa mga proyekto, nagiging mas kapana-panabik ang proseso para sa mga estudyante at napapalakas ang pag-alala sa mga konsepto. Nagsulat din kami ng ilang mga panimulang aralin sa basics ng JavaScript para ipakilala ang mga konsepto, na ipinares sa isang video mula sa koleksyon ng video tutorial na "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", na ilan sa mga may-akda nito ay nag-ambag sa kurikulum na ito.
 
-Bukod dito, ang isang mababang-peligro na pagsusulit bago ang klase ay nagtatalaga ng layunin ng estudyante patungkol sa pag-aaral ng isang paksa, habang ang pangalawang pagsusulit pagkatapos ng klase ay nagsisiguro ng mas matagal na pag-alala. Dinisenyo ang kurikulum na ito upang maging flexible at masaya at maaaring kunin nang buo o bahagi lamang. Ang mga proyekto ay nagsisimula sa maliit at nagiging mas kumplikado sa pagtatapos ng 12-linggong siklo.
+Dagdag pa, ang isang low-stakes quiz bago ang klase ay nagtatakda ng intensyon ng estudyante sa pag-aaral ng isang paksa, habang ang pangalawang quiz pagkatapos ng klase ay nagsisiguro ng karagdagang pag-alala. Ang kurikulum na ito ay dinisenyo upang maging flexible at masaya at maaaring kunin nang buo o bahagya lamang. Ang mga proyekto ay nagsisimula sa maliit at nagiging mas kumplikado sa pagtatapos ng 12-linggong siklo.
 
-Habang sinadya naming iwasan ang pagpapakilala ng JavaScript frameworks upang magpokus sa mga pangunahing kasanayan na kailangan bilang isang web developer bago gumamit ng framework, isang magandang susunod na hakbang sa pagtapos ng kurikulum na ito ay ang pag-aaral tungkol sa Node.js sa pamamagitan ng isa pang koleksyon ng mga video: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+Bagaman sinadya naming iwasan ang pagpapakilala ng mga JavaScript framework upang magpokus sa mga pangunahing kasanayan na kailangan bilang isang web developer bago mag-adopt ng framework, isang magandang susunod na hakbang sa pagtapos ng kurikulum na ito ay ang pag-aaral tungkol sa Node.js gamit ang isa pang koleksyon ng mga video: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
 > Bisitahin ang aming [Code of Conduct](CODE_OF_CONDUCT.md) at [Contributing](CONTRIBUTING.md) na mga gabay. Tinatanggap namin ang iyong makabuluhang puna!
 
-## 🧭 Offline na pag-access
 
-Maaari mong patakbuhin ang dokumentasyong ito offline gamit ang [Docsify](https://docsify.js.org/#/). I-fork ang repo na ito, [i-install ang Docsify](https://docsify.js.org/#/quickstart) sa iyong lokal na makina, at sa root folder ng repo na ito, i-type ang `docsify serve`. Ang website ay ihahain sa port 3000 sa iyong localhost: `localhost:3000`.
+## 🧭 Offline access
+
+Maaari mong patakbuhin ang dokumentasyong ito offline gamit ang [Docsify](https://docsify.js.org/#/). I-fork ang repo na ito, [i-install ang Docsify](https://docsify.js.org/#/quickstart) sa iyong lokal na makina, at pagkatapos sa root folder ng repo na ito, i-type ang `docsify serve`. Ang website ay irerender sa port 3000 sa iyong localhost: `localhost:3000`.
 
 ## 📘 PDF
-Maaaring mahanap ang PDF ng lahat ng mga aralin [dito](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+Isang PDF ng lahat ng mga aralin ay matatagpuan [dito](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
-## 🎒 Iba Pang Kurso
+## 🎒 Iba Pang Mga Kurso
 
 Ang aming koponan ay gumagawa ng iba pang mga kurso! Tingnan ang:
 
@@ -259,21 +260,21 @@ Ang aming koponan ay gumagawa ng iba pang mga kurso! Tingnan ang:
 
 ## Pagkuha ng Tulong
 
-Kung ikaw ay naipit o may mga tanong tungkol sa paggawa ng mga AI app. Sumali sa mga kapwa mag-aaral at may karanasang mga developer sa talakayan tungkol sa MCP. Ito ay isang sumusuportang komunidad kung saan malugod ang mga tanong at malayang ibinabahagi ang kaalaman.
+Kung ikaw ay na-stuck o may mga tanong tungkol sa paggawa ng AI apps. Sumali sa kapwa mga nag-aaral at mga batikang developer sa mga talakayan tungkol sa MCP. Isa itong suportadong komunidad kung saan malugod na tinatanggap ang mga tanong at malayang ibinabahagi ang kaalaman.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Kung mayroon kang puna sa produkto o mga error habang nagtatayo, bisitahin:
+Kung mayroon kang feedback sa produkto o mga error habang nagtatayo, bisitahin:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Lisensya
 
-Ang repositoryong ito ay lisensyado sa ilalim ng MIT license. Tingnan ang [LICENSE](../../LICENSE) na file para sa karagdagang impormasyon.
+Ang repositoryong ito ay lisensyado sa ilalim ng MIT license. Tingnan ang file na [LICENSE](../../LICENSE) para sa karagdagang impormasyon.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Pababala**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat aming pinagsisikapan ang kawastuhan, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na bahagi. Ang orihinal na dokumento sa wikang likas nito ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+**Paunawa**:
+Ang dokumentong ito ay isinalin gamit ang serbisyong AI na pagsasalin na [Co-op Translator](https://github.com/Azure/co-op-translator). Habang nagsusumikap kami para sa katumpakan, pakitandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga mali o pagkakamali. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mga mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaintindihan o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
