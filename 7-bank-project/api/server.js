@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors')
+const cors = require('cors');
 const crypto = require('crypto');
+const Tokens = require('csrf');
 const pkg = require('./package.json');
 
 // App constants
@@ -9,8 +10,9 @@ const port = process.env.PORT || 5000;
 const apiPrefix = '/api';
 
 // Store data in-memory, not suited for production use!
-const db = {
-  test: {
+// Using Map instead of a plain object to prevent prototype pollution attacks.
+const db = new Map([
+  ['test', {
     user: 'test',
     currency: '$',
     description: `Test account`,
@@ -20,8 +22,8 @@ const db = {
       { id: '2', date: '2020-10-03', object: 'Book', amount: -10 },
       { id: '3', date: '2020-10-04', object: 'Sandwich', amount: -5 }
     ],
-  }
-};
+  }]
+]);
 
 // Create the Express app & setup middlewares
 const app = express();
@@ -32,12 +34,62 @@ app.options('*', cors());
 
 // ***************************************************************************
 
+// API key for authentication (set API_SECRET env variable in production)
+const apiKey = process.env.API_SECRET || crypto.randomBytes(32).toString('hex');
+if (!process.env.API_SECRET) {
+  console.log(`\n⚠️  No API_SECRET environment variable set.`);
+  console.log(`   Generated temporary API key for this session: ${apiKey}\n`);
+  console.log(`   Pass it via the X-API-Key request header.\n`);
+}
+
+// CSRF token utility (csrf package)
+const csrfTokens = new Tokens();
+const csrfSecret = process.env.CSRF_SECRET || crypto.randomBytes(32).toString('hex');
+
+// Authentication middleware — validates X-API-Key header on every route
+function authenticate(req, res, next) {
+  const key = req.headers['x-api-key'];
+  if (!key || key !== apiKey) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  next();
+}
+
+// CSRF protection middleware — validates X-CSRF-Token header on state-changing requests
+function csrfProtect(req, res, next) {
+  if (['POST', 'PUT', 'PATCH', 'DELETE'].includes(req.method)) {
+    const token = req.headers['x-csrf-token'];
+    if (!token || !csrfTokens.verify(csrfSecret, token)) {
+      return res.status(403).json({ error: 'Forbidden: invalid CSRF token' });
+    }
+  }
+  next();
+}
+
+// Sanitize object key to prevent prototype pollution attacks
+function isSafeKey(key) {
+  const blocked = ['__proto__', 'constructor', 'prototype'];
+  return typeof key === 'string' && key.length > 0 && !blocked.includes(key);
+}
+
 // Configure routes
 const router = express.Router();
+
+// Require authentication and CSRF protection for all routes
+router.use(authenticate);
+router.use(csrfProtect);
 
 // Get server infos
 router.get('/', (req, res) => {
   return res.send(`${pkg.description} v${pkg.version}`);
+});
+
+// ----------------------------------------------
+
+// Issue a CSRF token — clients must include this in the X-CSRF-Token header
+// for all state-changing requests (POST, PUT, PATCH, DELETE)
+router.get('/csrf-token', (req, res) => {
+  return res.json({ csrfToken: csrfTokens.create(csrfSecret) });
 });
 
 // ----------------------------------------------
@@ -49,8 +101,13 @@ router.post('/accounts', (req, res) => {
     return res.status(400).json({ error: 'Missing parameters' });
   }
 
+  // Prevent prototype pollution via user-supplied account key
+  if (!isSafeKey(req.body.user)) {
+    return res.status(400).json({ error: 'Invalid username' });
+  }
+
   // Check if account already exists
-  if (db[req.body.user]) {
+  if (db.has(req.body.user)) {
     return res.status(409).json({ error: 'User already exists' });
   }
 
@@ -71,7 +128,7 @@ router.post('/accounts', (req, res) => {
     balance: balance || 0,
     transactions: [],
   };
-  db[req.body.user] = account;
+  db.set(req.body.user, account);
 
   return res.status(201).json(account);
 });
@@ -80,7 +137,10 @@ router.post('/accounts', (req, res) => {
 
 // Get all data for the specified account
 router.get('/accounts/:user', (req, res) => {
-  const account = db[req.params.user];
+  if (!isSafeKey(req.params.user)) {
+    return res.status(400).json({ error: 'Invalid username' });
+  }
+  const account = db.get(req.params.user);
 
   // Check if account exists
   if (!account) {
@@ -94,7 +154,10 @@ router.get('/accounts/:user', (req, res) => {
 
 // Remove specified account
 router.delete('/accounts/:user', (req, res) => {
-  const account = db[req.params.user];
+  if (!isSafeKey(req.params.user)) {
+    return res.status(400).json({ error: 'Invalid username' });
+  }
+  const account = db.get(req.params.user);
 
   // Check if account exists
   if (!account) {
@@ -102,7 +165,7 @@ router.delete('/accounts/:user', (req, res) => {
   }
 
   // Removed account
-  delete db[req.params.user];
+  db.delete(req.params.user);
 
   res.sendStatus(204);
 });
@@ -111,7 +174,10 @@ router.delete('/accounts/:user', (req, res) => {
 
 // Add a transaction to a specific account
 router.post('/accounts/:user/transactions', (req, res) => {
-  const account = db[req.params.user];
+  if (!isSafeKey(req.params.user)) {
+    return res.status(400).json({ error: 'Invalid username' });
+  }
+  const account = db.get(req.params.user);
 
   // Check if account exists
   if (!account) {
@@ -164,7 +230,10 @@ router.post('/accounts/:user/transactions', (req, res) => {
 
 // Remove specified transaction from account
 router.delete('/accounts/:user/transactions/:id', (req, res) => {
-  const account = db[req.params.user];
+  if (!isSafeKey(req.params.user)) {
+    return res.status(400).json({ error: 'Invalid username' });
+  }
+  const account = db.get(req.params.user);
 
   // Check if account exists
   if (!account) {
